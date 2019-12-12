@@ -1,7 +1,7 @@
 ## `teamspeak:latest`
 
 ```console
-$ docker pull teamspeak@sha256:d64353ffd70972b483917d60d58fb6aae3f57381e5dd30a43d0459f9ccc58d63
+$ docker pull teamspeak@sha256:699fddc2a5fbb16345bb82344cb6d6c18f408363176e1d435206fceb978891b8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull teamspeak@sha256:d64353ffd70972b483917d60d58fb6aae3f57381e5dd30a43
 ### `teamspeak:latest` - linux; amd64
 
 ```console
-$ docker pull teamspeak@sha256:00d0d2d6aa106abacccbc230e6fb92da35cd3fe45e4eaee0d82c54179904601f
+$ docker pull teamspeak@sha256:309ca9f65475a45d0db859965adc17f0449067d7e49968246502ee677f244e36
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **12.3 MB (12293616 bytes)**  
+-	Total Size: **12.3 MB (12293714 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4a293e233001b3dd3e8cdf2f85f20ad0ac5c1df68ca8c8b1ff20d6b65269106d`
+-	Image ID: `sha256:237d8cfd786f9d7bde4bcab63ebfb62408195ddca245f8c247ad6ef03f3f7ca3`
 -	Entrypoint: `["entrypoint.sh"]`
 -	Default Command: `["ts3server"]`
 
@@ -46,11 +46,11 @@ VOLUME [/var/ts3server/]
 WORKDIR /var/ts3server/
 # Tue, 26 Nov 2019 00:26:55 GMT
 EXPOSE 10011 30033 9987/udp
-# Tue, 26 Nov 2019 00:26:55 GMT
-COPY file:968760da5966fc06dc1fa72278569adca3c85d8cc25825fad2f13b2dcf4261c4 in /opt/ts3server 
-# Tue, 26 Nov 2019 00:26:56 GMT
+# Wed, 11 Dec 2019 22:23:38 GMT
+COPY file:6d1cf26aa3141617a27d9a975d3a4ef216e03df89fc20159d5734f178aab0e88 in /opt/ts3server 
+# Wed, 11 Dec 2019 22:23:38 GMT
 ENTRYPOINT ["entrypoint.sh"]
-# Tue, 26 Nov 2019 00:26:56 GMT
+# Wed, 11 Dec 2019 22:23:39 GMT
 CMD ["ts3server"]
 ```
 
@@ -71,7 +71,7 @@ CMD ["ts3server"]
 		Last Modified: Tue, 26 Nov 2019 00:27:04 GMT  
 		Size: 8.7 MB (8740545 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f5b2f496278b659cb3558cc46f50ffab3b9c7e06ca782b65e7bd93b7579379e3`  
-		Last Modified: Tue, 26 Nov 2019 00:27:03 GMT  
-		Size: 1.5 KB (1465 bytes)  
+	-	`sha256:b57cfa0688234444349a3b1595fbd956f8aba23617818df75a541379aa12067a`  
+		Last Modified: Wed, 11 Dec 2019 22:23:45 GMT  
+		Size: 1.6 KB (1563 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
