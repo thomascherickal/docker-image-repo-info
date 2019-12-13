@@ -1,7 +1,7 @@
 ## `wordpress:php7.2-apache`
 
 ```console
-$ docker pull wordpress@sha256:ecfe49674b490e1e432764f1aed6fa16f0d0572ad9f1019344074de1d9e48641
+$ docker pull wordpress@sha256:23aca332c69f9f56d308790ee6ca3acc02505655ac360777cc83b9bdcd1761e0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -209,14 +209,14 @@ CMD ["apache2-foreground"]
 ### `wordpress:php7.2-apache` - linux; arm variant v5
 
 ```console
-$ docker pull wordpress@sha256:f973072f3ee1a660f02a192914332b97c64d5718300b69099300711e20589d36
+$ docker pull wordpress@sha256:f0a54d925d87cdbf545eb6f5fb9eff0e72cf483c2c817bfa3c224ef8e8fc2621
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **164.1 MB (164050753 bytes)**  
+-	Total Size: **164.1 MB (164067812 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ce925d72c01903ecee30e55d28b78ee437c6cf111e71cba9c1dcb2d22f86bea8`
+-	Image ID: `sha256:ce91fb46cdc752a25259856f807b622bfd1712e2487ce3d2c246ce4cf60f28c5`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -299,17 +299,17 @@ RUN { 		echo 'error_reporting = E_ERROR | E_WARNING | E_PARSE | E_CORE_ERROR | E
 RUN set -eux; 	a2enmod rewrite expires; 		a2enmod remoteip; 	{ 		echo 'RemoteIPHeader X-Forwarded-For'; 		echo 'RemoteIPTrustedProxy 10.0.0.0/8'; 		echo 'RemoteIPTrustedProxy 172.16.0.0/12'; 		echo 'RemoteIPTrustedProxy 192.168.0.0/16'; 		echo 'RemoteIPTrustedProxy 169.254.0.0/16'; 		echo 'RemoteIPTrustedProxy 127.0.0.0/8'; 	} > /etc/apache2/conf-available/remoteip.conf; 	a2enconf remoteip; 	find /etc/apache2 -type f -name '*.conf' -exec sed -ri 's/([[:space:]]*LogFormat[[:space:]]+"[^"]*)%h([^"]*")/\1%a\2/g' '{}' +
 # Fri, 06 Dec 2019 03:08:08 GMT
 VOLUME [/var/www/html]
-# Fri, 06 Dec 2019 03:08:09 GMT
-ENV WORDPRESS_VERSION=5.3
-# Fri, 06 Dec 2019 03:08:11 GMT
-ENV WORDPRESS_SHA1=e3edcb1131e539c2b2e10fed37f8b6683c824a98
-# Fri, 06 Dec 2019 03:08:18 GMT
+# Fri, 13 Dec 2019 22:53:43 GMT
+ENV WORDPRESS_VERSION=5.3.1
+# Fri, 13 Dec 2019 22:53:44 GMT
+ENV WORDPRESS_SHA1=3c635c9f6546782e0bb315784d4663d0e47f872e
+# Fri, 13 Dec 2019 22:53:50 GMT
 RUN set -ex; 	curl -o wordpress.tar.gz -fSL "https://wordpress.org/wordpress-${WORDPRESS_VERSION}.tar.gz"; 	echo "$WORDPRESS_SHA1 *wordpress.tar.gz" | sha1sum -c -; 	tar -xzf wordpress.tar.gz -C /usr/src/; 	rm wordpress.tar.gz; 	chown -R www-data:www-data /usr/src/wordpress
-# Fri, 06 Dec 2019 03:08:19 GMT
-COPY file:2413d0c63f9d7b1d114697b18317719a02eadaaa61fc5d0c1edd96c027bc57a4 in /usr/local/bin/ 
-# Fri, 06 Dec 2019 03:08:20 GMT
+# Fri, 13 Dec 2019 22:53:51 GMT
+COPY file:d93be233af180b81b8838a1d00e9f930eb82172c751ffaafb4732db4a09a7534 in /usr/local/bin/ 
+# Fri, 13 Dec 2019 22:53:52 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 06 Dec 2019 03:08:21 GMT
+# Fri, 13 Dec 2019 22:53:52 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -390,26 +390,26 @@ CMD ["apache2-foreground"]
 		Last Modified: Fri, 06 Dec 2019 03:37:42 GMT  
 		Size: 19.5 KB (19485 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4af9e5721480979a7cd92f6189741daacf0cd48d972e821600120dbebdf0deeb`  
-		Last Modified: Fri, 06 Dec 2019 03:37:54 GMT  
-		Size: 12.2 MB (12209316 bytes)  
+	-	`sha256:9e425ddd0d218ed8dfd53b2e082e66a585af5a36d6572d1603d352e7bbce55ae`  
+		Last Modified: Fri, 13 Dec 2019 22:56:03 GMT  
+		Size: 12.2 MB (12226377 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:71c13017047e550f1ae4a62ec8ba6f8f14c3ce20c271a1ec3fe6b5b427fad061`  
-		Last Modified: Fri, 06 Dec 2019 03:37:42 GMT  
-		Size: 3.9 KB (3897 bytes)  
+	-	`sha256:f2b39b39a401a3aa535d05da3f8aa487b3568bc5ca41a31cb269763439496d47`  
+		Last Modified: Fri, 13 Dec 2019 22:55:57 GMT  
+		Size: 3.9 KB (3895 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `wordpress:php7.2-apache` - linux; arm variant v7
 
 ```console
-$ docker pull wordpress@sha256:ff25a41d406949242f589c0fa835a69682716f4a24687cd93bb687c394766f23
+$ docker pull wordpress@sha256:23806a80ef0e8ceee08aa6455758151556e203818042634c296945cd319f0783
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **160.1 MB (160085818 bytes)**  
+-	Total Size: **160.1 MB (160102871 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:05ed583c73a899746d2605f7cca2cff5a3bb8404b850456d8e4d5d84fda8d8a3`
+-	Image ID: `sha256:14eb257c7c5e53519ff9cd9be08cfb9c3ed01767cd2db190b5dcd64bc70cbfe0`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -492,17 +492,17 @@ RUN { 		echo 'error_reporting = E_ERROR | E_WARNING | E_PARSE | E_CORE_ERROR | E
 RUN set -eux; 	a2enmod rewrite expires; 		a2enmod remoteip; 	{ 		echo 'RemoteIPHeader X-Forwarded-For'; 		echo 'RemoteIPTrustedProxy 10.0.0.0/8'; 		echo 'RemoteIPTrustedProxy 172.16.0.0/12'; 		echo 'RemoteIPTrustedProxy 192.168.0.0/16'; 		echo 'RemoteIPTrustedProxy 169.254.0.0/16'; 		echo 'RemoteIPTrustedProxy 127.0.0.0/8'; 	} > /etc/apache2/conf-available/remoteip.conf; 	a2enconf remoteip; 	find /etc/apache2 -type f -name '*.conf' -exec sed -ri 's/([[:space:]]*LogFormat[[:space:]]+"[^"]*)%h([^"]*")/\1%a\2/g' '{}' +
 # Fri, 06 Dec 2019 03:10:35 GMT
 VOLUME [/var/www/html]
-# Fri, 06 Dec 2019 03:10:36 GMT
-ENV WORDPRESS_VERSION=5.3
-# Fri, 06 Dec 2019 03:10:37 GMT
-ENV WORDPRESS_SHA1=e3edcb1131e539c2b2e10fed37f8b6683c824a98
-# Fri, 06 Dec 2019 03:10:44 GMT
+# Fri, 13 Dec 2019 23:12:08 GMT
+ENV WORDPRESS_VERSION=5.3.1
+# Fri, 13 Dec 2019 23:12:09 GMT
+ENV WORDPRESS_SHA1=3c635c9f6546782e0bb315784d4663d0e47f872e
+# Fri, 13 Dec 2019 23:12:16 GMT
 RUN set -ex; 	curl -o wordpress.tar.gz -fSL "https://wordpress.org/wordpress-${WORDPRESS_VERSION}.tar.gz"; 	echo "$WORDPRESS_SHA1 *wordpress.tar.gz" | sha1sum -c -; 	tar -xzf wordpress.tar.gz -C /usr/src/; 	rm wordpress.tar.gz; 	chown -R www-data:www-data /usr/src/wordpress
-# Fri, 06 Dec 2019 03:10:46 GMT
-COPY file:2413d0c63f9d7b1d114697b18317719a02eadaaa61fc5d0c1edd96c027bc57a4 in /usr/local/bin/ 
-# Fri, 06 Dec 2019 03:10:47 GMT
+# Fri, 13 Dec 2019 23:12:17 GMT
+COPY file:d93be233af180b81b8838a1d00e9f930eb82172c751ffaafb4732db4a09a7534 in /usr/local/bin/ 
+# Fri, 13 Dec 2019 23:12:18 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 06 Dec 2019 03:10:49 GMT
+# Fri, 13 Dec 2019 23:12:18 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -583,26 +583,26 @@ CMD ["apache2-foreground"]
 		Last Modified: Fri, 06 Dec 2019 03:55:11 GMT  
 		Size: 19.5 KB (19498 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5d03d77d6391789d1597e636e7e85cb76cd8348e3a67f2bdfe009b06fbb20c51`  
-		Last Modified: Fri, 06 Dec 2019 03:55:17 GMT  
-		Size: 12.2 MB (12209322 bytes)  
+	-	`sha256:ae92d4f0465b5806e672713a07d4cdcb12da2165597720660f491fff18b33f52`  
+		Last Modified: Fri, 13 Dec 2019 23:15:54 GMT  
+		Size: 12.2 MB (12226377 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9d3b8adaf406e6470942c7007286e48f6a9b7eeac5373cdbc62a3cdbd618a360`  
-		Last Modified: Fri, 06 Dec 2019 03:55:10 GMT  
-		Size: 3.9 KB (3897 bytes)  
+	-	`sha256:58b763f9146d4e025e32c175abc69034d2abfdeeaed3d5ed70909c09f45cee51`  
+		Last Modified: Fri, 13 Dec 2019 23:15:50 GMT  
+		Size: 3.9 KB (3895 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `wordpress:php7.2-apache` - linux; arm64 variant v8
 
 ```console
-$ docker pull wordpress@sha256:0b497c78b3fc477ff67a84ead5292e6b6457ebeaeb9d98e636be191b44f86fe5
+$ docker pull wordpress@sha256:7d692c5c22b195361547c986a3a051f8a839ddbfc88df4e6b946199b9172e134
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **177.7 MB (177691004 bytes)**  
+-	Total Size: **177.7 MB (177708060 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:9b05788d1526ad2c10d42d6c6caa861ba94750a62bdcf6f4422f64016ee7484c`
+-	Image ID: `sha256:033fccb12ed02abac1e1b09c9eb27d99b7843f2bc1617a92025ef997f0f390d0`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -685,17 +685,17 @@ RUN { 		echo 'error_reporting = E_ERROR | E_WARNING | E_PARSE | E_CORE_ERROR | E
 RUN set -eux; 	a2enmod rewrite expires; 		a2enmod remoteip; 	{ 		echo 'RemoteIPHeader X-Forwarded-For'; 		echo 'RemoteIPTrustedProxy 10.0.0.0/8'; 		echo 'RemoteIPTrustedProxy 172.16.0.0/12'; 		echo 'RemoteIPTrustedProxy 192.168.0.0/16'; 		echo 'RemoteIPTrustedProxy 169.254.0.0/16'; 		echo 'RemoteIPTrustedProxy 127.0.0.0/8'; 	} > /etc/apache2/conf-available/remoteip.conf; 	a2enconf remoteip; 	find /etc/apache2 -type f -name '*.conf' -exec sed -ri 's/([[:space:]]*LogFormat[[:space:]]+"[^"]*)%h([^"]*")/\1%a\2/g' '{}' +
 # Fri, 06 Dec 2019 02:47:23 GMT
 VOLUME [/var/www/html]
-# Fri, 06 Dec 2019 02:47:24 GMT
-ENV WORDPRESS_VERSION=5.3
-# Fri, 06 Dec 2019 02:47:35 GMT
-ENV WORDPRESS_SHA1=e3edcb1131e539c2b2e10fed37f8b6683c824a98
-# Fri, 06 Dec 2019 02:47:41 GMT
+# Fri, 13 Dec 2019 22:42:21 GMT
+ENV WORDPRESS_VERSION=5.3.1
+# Fri, 13 Dec 2019 22:42:22 GMT
+ENV WORDPRESS_SHA1=3c635c9f6546782e0bb315784d4663d0e47f872e
+# Fri, 13 Dec 2019 22:42:27 GMT
 RUN set -ex; 	curl -o wordpress.tar.gz -fSL "https://wordpress.org/wordpress-${WORDPRESS_VERSION}.tar.gz"; 	echo "$WORDPRESS_SHA1 *wordpress.tar.gz" | sha1sum -c -; 	tar -xzf wordpress.tar.gz -C /usr/src/; 	rm wordpress.tar.gz; 	chown -R www-data:www-data /usr/src/wordpress
-# Fri, 06 Dec 2019 02:47:42 GMT
-COPY file:2413d0c63f9d7b1d114697b18317719a02eadaaa61fc5d0c1edd96c027bc57a4 in /usr/local/bin/ 
-# Fri, 06 Dec 2019 02:47:44 GMT
+# Fri, 13 Dec 2019 22:42:29 GMT
+COPY file:d93be233af180b81b8838a1d00e9f930eb82172c751ffaafb4732db4a09a7534 in /usr/local/bin/ 
+# Fri, 13 Dec 2019 22:42:29 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 06 Dec 2019 02:47:47 GMT
+# Fri, 13 Dec 2019 22:42:30 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -776,13 +776,13 @@ CMD ["apache2-foreground"]
 		Last Modified: Fri, 06 Dec 2019 03:29:36 GMT  
 		Size: 19.5 KB (19500 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d063f3d495ebce917124baad706acde8fa8f0293b557e96d47311b5d570c8585`  
-		Last Modified: Fri, 06 Dec 2019 03:29:40 GMT  
-		Size: 12.2 MB (12209317 bytes)  
+	-	`sha256:b30e4ee677e6cfc3046881af4181ebf01bcfc082bc18aa5348bf57eb348db259`  
+		Last Modified: Fri, 13 Dec 2019 22:46:07 GMT  
+		Size: 12.2 MB (12226378 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:434e93b678eab9f0588cd4aff4ed9daeca86e29df61230f26b29c51da4c3c54c`  
-		Last Modified: Fri, 06 Dec 2019 03:29:37 GMT  
-		Size: 3.9 KB (3897 bytes)  
+	-	`sha256:cbea77b4da6f8c8e500a1f7e604fe753d323b656b300bc1931858d5b96f12861`  
+		Last Modified: Fri, 13 Dec 2019 22:46:03 GMT  
+		Size: 3.9 KB (3892 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `wordpress:php7.2-apache` - linux; 386
