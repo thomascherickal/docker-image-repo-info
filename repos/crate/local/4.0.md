@@ -36,8 +36,6 @@ Source:
 ```console
 $ yumdownloader --quiet --source --urls acl-2.2.51-14.el7
 Enabling epel-source repository
-https://d2lzkl7pfhq30w.cloudfront.net/pub/epel/7/SRPMS/repodata/repomd.xml: [Errno 14] HTTPS Error 404 - Not Found
-Trying other mirror.
 Enabling updates-source repository
 Enabling base-source repository
 Enabling ius-source repository
