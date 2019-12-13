@@ -1979,14 +1979,9 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-core
 - `dlmalloc`
 - `mingw-runtime`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris git=1:2.7.4-0ubuntu1.6
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.7.4-0ubuntu1.6.dsc' git_2.7.4-0ubuntu1.6.dsc 2881 SHA256:12c0658a451f77defeeea504e0fe6672199d750f8d126fb6fd76a04123c989c3
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.7.4.orig.tar.xz' git_2.7.4.orig.tar.xz 3909636 SHA256:dee574defbe05ec7356a0842ddbda51315926f2fa7e39c2539f2c3dcc52e457b
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.7.4-0ubuntu1.6.debian.tar.xz' git_2.7.4-0ubuntu1.6.debian.tar.xz 534912 SHA256:d388f2034849e89385be14e3f4243f8d8d10808f85bd6c9eb7a9b68dc07d999f
-```
 
 ### `dpkg` source package: `gl2ps=1.3.8-1.2`
 
@@ -4384,14 +4379,9 @@ Licenses: (parsed from: `/usr/share/doc/libssh-gcrypt-4/copyright`)
 - `LGPL-2.1`
 - `LGPL-2.1+~OpenSSL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libssh=0.6.3-4.3ubuntu0.2
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.6.3-4.3ubuntu0.2.dsc' libssh_0.6.3-4.3ubuntu0.2.dsc 2429 SHA256:438da30b2f31ead76074870c4aef844bc55bec9f0a0c2a35dde9230e74b864dc
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.6.3.orig.tar.xz' libssh_0.6.3.orig.tar.xz 279492 SHA256:2bb5d7c595059f990a8915c190169257328ffa828ced0c05b09bbe186092cacb
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.6.3-4.3ubuntu0.2.debian.tar.xz' libssh_0.6.3-4.3ubuntu0.2.debian.tar.xz 27584 SHA256:31c2d7c311723c8fb78afebb847da6272e7469f26a9c55ab84995f69cc05caec
-```
 
 ### `dpkg` source package: `libsys-hostname-long-perl=1.5-1`
 

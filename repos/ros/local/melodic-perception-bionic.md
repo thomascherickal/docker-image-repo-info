@@ -2429,14 +2429,9 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 - `dlmalloc`
 - `mingw-runtime`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris git=1:2.17.1-1ubuntu0.4
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.17.1-1ubuntu0.4.dsc' git_2.17.1-1ubuntu0.4.dsc 2943 SHA256:15b2496e63c2234fd6e9a4b03dac9e93bb6939bc5e432917afaf6b93a082224d
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.17.1.orig.tar.xz' git_2.17.1.orig.tar.xz 5015484 SHA256:79136e7aa83abae4d8a25c8111f113d3c5a63aeb5fd93cc72c26d49c6d5ba65e
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.17.1-1ubuntu0.4.debian.tar.xz' git_2.17.1-1ubuntu0.4.debian.tar.xz 574144 SHA256:58099c54314f64626f42a3e03469ffff9e63c877b0452818c8aebfb93b0fc7a0
-```
 
 ### `dpkg` source package: `gl2ps=1.4.0+dfsg1-1`
 
@@ -5393,14 +5388,9 @@ Licenses: (parsed from: `/usr/share/doc/libssh-gcrypt-4/copyright`)
 - `LGPL-2.1+~OpenSSL`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libssh=0.8.0~20170825.94fa1e38-1ubuntu0.2
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.8.0~20170825.94fa1e38-1ubuntu0.2.dsc' libssh_0.8.0~20170825.94fa1e38-1ubuntu0.2.dsc 2518 SHA256:589e0a6a37b54688f542cc118bc816cab17bf9e2c5ba34d8c3e22b3a05f49274
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.8.0~20170825.94fa1e38.orig.tar.xz' libssh_0.8.0~20170825.94fa1e38.orig.tar.xz 381176 SHA256:48cbcc4c946380f08c024fbc1898b1efd6edff66a5ec4b536695926f0ea055a8
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.8.0~20170825.94fa1e38-1ubuntu0.2.debian.tar.xz' libssh_0.8.0~20170825.94fa1e38-1ubuntu0.2.debian.tar.xz 27372 SHA256:4183d352ad02010dac86f1aa1ec2e0b27ca3825c471bc39b843f555bbdbb8ebf
-```
 
 ### `dpkg` source package: `libsys-hostname-long-perl=1.5-1`
 
@@ -6515,15 +6505,9 @@ Licenses: (parsed from: `/usr/share/doc/dmsetup/copyright`, `/usr/share/doc/libd
 - `GPL-2`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris lvm2=2.02.176-4.1ubuntu3.18.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lvm2/lvm2_2.02.176-4.1ubuntu3.18.04.1.dsc' lvm2_2.02.176-4.1ubuntu3.18.04.1.dsc 3513 SHA256:9af352d395b62e362a978f78b408502e36ccec332607a5417b6f912115b34210
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lvm2/lvm2_2.02.176.orig.tar.gz' lvm2_2.02.176.orig.tar.gz 2371438 SHA256:dece83628c2c78a267a126ce6046d506582185ae5d40fb8d59b56547fccea473
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lvm2/lvm2_2.02.176.orig.tar.gz.asc' lvm2_2.02.176.orig.tar.gz.asc 198 SHA256:51c66e6bdebb6ac5b9882b8082ac9816a8555c2d472d7763e0f867c5c8c10b89
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lvm2/lvm2_2.02.176-4.1ubuntu3.18.04.1.debian.tar.xz' lvm2_2.02.176-4.1ubuntu3.18.04.1.debian.tar.xz 44556 SHA256:12a574fe60b523d081e4d720d6590b2b2583daf5cc0a2a7b10f07a3f7ac6ec43
-```
 
 ### `dpkg` source package: `lz4=0.0~r131-2ubuntu3`
 
