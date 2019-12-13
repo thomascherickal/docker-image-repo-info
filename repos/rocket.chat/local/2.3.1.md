@@ -1,10 +1,10 @@
-# `rocket.chat:2.2.0`
+# `rocket.chat:2.3.1`
 
 ## Docker Metadata
 
-- Image ID: `sha256:87f276876aed26304b881703550d82c82969cb01355f81323652d86fd620516a`
-- Created: `2019-11-23T00:55:45.022539065Z`
-- Virtual Size: ~ 718.56 Mb  
+- Image ID: `sha256:497b36a9e0f86576c9b41f9c383cc42871877a4ebacfdb095ad7047bae186741`
+- Created: `2019-12-10T22:29:14.415387234Z`
+- Virtual Size: ~ 723.27 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["node","main.js"]`
@@ -12,7 +12,7 @@
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `NODE_VERSION=8.15.1`
   - `NODE_ENV=production`
-  - `RC_VERSION=2.2.0`
+  - `RC_VERSION=2.3.1`
   - `DEPLOY_METHOD=docker-official`
   - `MONGO_URL=mongodb://db:27017/meteor`
   - `HOME=/tmp`
@@ -619,6 +619,31 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/e2fsprogs/1.42.12-2+deb8u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/e2fsprogs/1.42.12-2+deb8u1/ (for access to the source package after it no longer exists in the archive)
 
+### `dpkg` source package: `expat=2.1.0-6+deb8u6`
+
+Binary Packages:
+
+- `libexpat1:amd64=2.1.0-6+deb8u6`
+
+**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
+If source is available (seen below), check the contents of `debian/copyright` within it.
+
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris expat=2.1.0-6+deb8u6
+'http://security.debian.org/debian-security/pool/updates/main/e/expat/expat_2.1.0-6+deb8u6.dsc' expat_2.1.0-6+deb8u6.dsc 2292 SHA256:b54613edbbacde7b879be9d21b5d711c2cb2c90ed3d5e0968bdaf4c55bbcd8be
+'http://security.debian.org/debian-security/pool/updates/main/e/expat/expat_2.1.0.orig.tar.gz' expat_2.1.0.orig.tar.gz 562616 SHA256:823705472f816df21c8f6aa026dd162b280806838bb55b3432b0fb1fcca7eb86
+'http://security.debian.org/debian-security/pool/updates/main/e/expat/expat_2.1.0-6+deb8u6.debian.tar.xz' expat_2.1.0-6+deb8u6.debian.tar.xz 23672 SHA256:7d61123e76076598e3026fff5570ccdfbb90a540a1fdd310e13224b28e52c24a
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/expat/2.1.0-6+deb8u6/ (for browsing the source)
+- https://sources.debian.net/src/expat/2.1.0-6+deb8u6/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/expat/2.1.0-6+deb8u6/ (for access to the source package after it no longer exists in the archive)
+
 ### `dpkg` source package: `findutils=4.4.2-9`
 
 Binary Packages:
@@ -644,6 +669,91 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/findutils/4.4.2-9/ (for browsing the source)
 - https://sources.debian.net/src/findutils/4.4.2-9/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/findutils/4.4.2-9/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `fontconfig=2.11.0-6.3+deb8u1`
+
+Binary Packages:
+
+- `fontconfig=2.11.0-6.3+deb8u1`
+- `fontconfig-config=2.11.0-6.3+deb8u1`
+- `libfontconfig1:amd64=2.11.0-6.3+deb8u1`
+
+**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
+If source is available (seen below), check the contents of `debian/copyright` within it.
+
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris fontconfig=2.11.0-6.3+deb8u1
+'http://deb.debian.org/debian/pool/main/f/fontconfig/fontconfig_2.11.0-6.3+deb8u1.dsc' fontconfig_2.11.0-6.3+deb8u1.dsc 2235 SHA256:c496170e75ece48a19c5b60745eef5522b62ae1a817c23125ebd9745bc255fcd
+'http://deb.debian.org/debian/pool/main/f/fontconfig/fontconfig_2.11.0.orig.tar.xz' fontconfig_2.11.0.orig.tar.xz 319652 SHA256:f19c7366d59dc4e79eaf3eedabd44b6375b238f29316db5020a183c7d9a78db9
+'http://deb.debian.org/debian/pool/main/f/fontconfig/fontconfig_2.11.0-6.3+deb8u1.debian.tar.xz' fontconfig_2.11.0-6.3+deb8u1.debian.tar.xz 1073796 SHA256:a8140c4576a2c43614930e8a307966018551ae71ad448af5f75faf4f47f70173
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/fontconfig/2.11.0-6.3+deb8u1/ (for browsing the source)
+- https://sources.debian.net/src/fontconfig/2.11.0-6.3+deb8u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/fontconfig/2.11.0-6.3+deb8u1/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `fonts-dejavu=2.34-1`
+
+Binary Packages:
+
+- `fonts-dejavu-core=2.34-1`
+
+Licenses: (parsed from: `/usr/share/doc/fonts-dejavu-core/copyright`)
+
+- `GPL-2`
+- `GPL-2+`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris fonts-dejavu=2.34-1
+'http://deb.debian.org/debian/pool/main/f/fonts-dejavu/fonts-dejavu_2.34-1.dsc' fonts-dejavu_2.34-1.dsc 2484 SHA256:843b22fff349667b83f66cf3ab2e93a187ff016f4bd90fbfbe9001bf82a9d66d
+'http://deb.debian.org/debian/pool/main/f/fonts-dejavu/fonts-dejavu_2.34.orig.tar.bz2' fonts-dejavu_2.34.orig.tar.bz2 11329547 SHA256:b5ca9e671635a9fe04c791cdc82c707ba57380c2cc8de3f92451a039134b9027
+'http://deb.debian.org/debian/pool/main/f/fonts-dejavu/fonts-dejavu_2.34-1.debian.tar.gz' fonts-dejavu_2.34-1.debian.tar.gz 11231 SHA256:46044164bdc385037a1694a07e8c5a1c183511cb68743914219ebb93750dac19
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/fonts-dejavu/2.34-1/ (for browsing the source)
+- https://sources.debian.net/src/fonts-dejavu/2.34-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/fonts-dejavu/2.34-1/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `freetype=2.5.2-3+deb8u4`
+
+Binary Packages:
+
+- `libfreetype6:amd64=2.5.2-3+deb8u4`
+
+Licenses: (parsed from: `/usr/share/doc/libfreetype6/copyright`)
+
+- `BSD-2-Clause`
+- `BSD-3-Clause`
+- `Catharon-OSL`
+- `FTL`
+- `GPL-2`
+- `GPL-2+`
+- `GZip`
+- `OpenGroup-BSD-like`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris freetype=2.5.2-3+deb8u4
+'http://security.debian.org/debian-security/pool/updates/main/f/freetype/freetype_2.5.2-3+deb8u4.dsc' freetype_2.5.2-3+deb8u4.dsc 1783 SHA256:ba32ac993642ed5e1712b064b6072f0f67c95c01eafcaa3d5a1d63b2c03c9e5d
+'http://security.debian.org/debian-security/pool/updates/main/f/freetype/freetype_2.5.2.orig.tar.gz' freetype_2.5.2.orig.tar.gz 1971155 SHA256:5fda4996e43cfdf9b602a0eb5abde014f1a3c3b2d82bbb9b86942011c63f5c3a
+'http://security.debian.org/debian-security/pool/updates/main/f/freetype/freetype_2.5.2-3+deb8u4.diff.gz' freetype_2.5.2-3+deb8u4.diff.gz 72104 SHA256:9160b5c1069c763e2b3b55a8e825fa46f054764bf37d8d2d4df3b003859b7e21
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/freetype/2.5.2-3+deb8u4/ (for browsing the source)
+- https://sources.debian.net/src/freetype/2.5.2-3+deb8u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/freetype/2.5.2-3+deb8u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gcc-4.8=4.8.4-1`
 
@@ -1195,6 +1305,31 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/liblocale-gettext-perl/1.05-8/ (for browsing the source)
 - https://sources.debian.net/src/liblocale-gettext-perl/1.05-8/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/liblocale-gettext-perl/1.05-8/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `libpng=1.2.50-2+deb8u3`
+
+Binary Packages:
+
+- `libpng12-0:amd64=1.2.50-2+deb8u3`
+
+Licenses: (parsed from: `/usr/share/doc/libpng12-0/copyright`)
+
+- `GPL-2`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris libpng=1.2.50-2+deb8u3
+'http://deb.debian.org/debian/pool/main/libp/libpng/libpng_1.2.50-2+deb8u3.dsc' libpng_1.2.50-2+deb8u3.dsc 2036 SHA256:0db1eafb75ca276bc5b3e69810149ab53cc7344effa67e94269cde0c162fc720
+'http://deb.debian.org/debian/pool/main/libp/libpng/libpng_1.2.50.orig.tar.xz' libpng_1.2.50.orig.tar.xz 539152 SHA256:4724f81f8c92ac7f360ad1fbf173396ea7c535923424db9fbaff07bfd9d8e8e7
+'http://deb.debian.org/debian/pool/main/libp/libpng/libpng_1.2.50-2+deb8u3.debian.tar.xz' libpng_1.2.50-2+deb8u3.debian.tar.xz 21788 SHA256:b47238628a87fac02640b05bb4af5ada003c5180958a143ef670780ad4208cd7
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/libpng/1.2.50-2+deb8u3/ (for browsing the source)
+- https://sources.debian.net/src/libpng/1.2.50-2+deb8u3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libpng/1.2.50-2+deb8u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libselinux=2.3-2`
 
@@ -2068,6 +2203,30 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tzdata/2019c-0+deb8u1/ (for browsing the source)
 - https://sources.debian.net/src/tzdata/2019c-0+deb8u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tzdata/2019c-0+deb8u1/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `ucf=3.0030`
+
+Binary Packages:
+
+- `ucf=3.0030`
+
+Licenses: (parsed from: `/usr/share/doc/ucf/copyright`)
+
+- `GPL-2`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris ucf=3.0030
+'http://deb.debian.org/debian/pool/main/u/ucf/ucf_3.0030.dsc' ucf_3.0030.dsc 1300 SHA256:7e1861964217317a6be7fe83c1baaeb578e27a33850c33f14d168e40811b9115
+'http://deb.debian.org/debian/pool/main/u/ucf/ucf_3.0030.tar.xz' ucf_3.0030.tar.xz 63524 SHA256:65b681c509f49bca586f12d57c5244ad93cf0d047f886e307fb2018abf3d802d
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/ucf/3.0030/ (for browsing the source)
+- https://sources.debian.net/src/ucf/3.0030/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/ucf/3.0030/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ustr=1.0.4-3`
 
