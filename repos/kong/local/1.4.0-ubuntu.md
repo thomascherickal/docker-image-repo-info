@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:48cd3079a5861ea80426885feaea0ebe87088a9b2a3977590f17f699b6ebea35`
-- Created: `2019-12-04T00:22:55.310112808Z`
+- Image ID: `sha256:688cf71d61680bb9ae541d3b336b37f331d80543b791bcf89c886df6a2f9f06e`
+- Created: `2019-12-11T22:20:45.471352022Z`
 - Virtual Size: ~ 246.19 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -11,7 +11,7 @@
 - Command: `["kong","docker-start"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `KONG_VERSION=1.4.1`
+  - `KONG_VERSION=1.4.2`
 - Labels:
   - `maintainer=Kong Core Team <team-core@konghq.com>`
 
@@ -658,11 +658,11 @@ $ apt-get source -qq --print-uris kmod=22-1ubuntu5.2
 'http://archive.ubuntu.com/ubuntu/pool/main/k/kmod/kmod_22-1ubuntu5.2.debian.tar.xz' kmod_22-1ubuntu5.2.debian.tar.xz 14524 SHA256:f8dd1134e6cff72a458e66d2e86ef413be07a29cc66c87d02544bb5c2037bfb7
 ```
 
-### `dpkg` source package: `kong=1.4.1`
+### `dpkg` source package: `kong=1.4.2`
 
 Binary Packages:
 
-- `kong=1.4.1`
+- `kong=1.4.2`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
