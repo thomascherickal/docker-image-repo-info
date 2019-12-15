@@ -1,10 +1,10 @@
-# `mongo:4.2.1-bionic`
+# `mongo:4.2.2-bionic`
 
 ## Docker Metadata
 
-- Image ID: `sha256:965553e202a44592bc26d8c076eafef996a6dfc0de5bb2c1cf1795cd3b3a7373`
-- Created: `2019-11-01T00:35:30.899770643Z`
-- Virtual Size: ~ 362.71 Mb  
+- Image ID: `sha256:9979235fc5040f227d6192dc2c364b343a67dcbbc774526c7c5aa87a5d4411b5`
+- Created: `2019-12-13T00:20:26.566384219Z`
+- Virtual Size: ~ 363.72 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -17,7 +17,7 @@
   - `MONGO_PACKAGE=mongodb-org`
   - `MONGO_REPO=repo.mongodb.org`
   - `MONGO_MAJOR=4.2`
-  - `MONGO_VERSION=4.2.1`
+  - `MONGO_VERSION=4.2.2`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -1191,15 +1191,15 @@ $ apt-get source -qq --print-uris mawk=1.3.3-17ubuntu3
 'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.3-17ubuntu3.diff.gz' mawk_1.3.3-17ubuntu3.diff.gz 64052 SHA256:d1be148525885cb1869e35514f55005b5043f3310b08c444625005a3e14c81fc
 ```
 
-### `dpkg` source package: `mongodb-org=4.2.1`
+### `dpkg` source package: `mongodb-org=4.2.2`
 
 Binary Packages:
 
-- `mongodb-org=4.2.1`
-- `mongodb-org-mongos=4.2.1`
-- `mongodb-org-server=4.2.1`
-- `mongodb-org-shell=4.2.1`
-- `mongodb-org-tools=4.2.1`
+- `mongodb-org=4.2.2`
+- `mongodb-org-mongos=4.2.2`
+- `mongodb-org-server=4.2.2`
+- `mongodb-org-shell=4.2.2`
+- `mongodb-org-tools=4.2.2`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
