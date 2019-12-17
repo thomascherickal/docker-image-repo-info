@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:d4364e0a62717d8062fa0d42a7a1903ab2101f0ba178025808b439a33894912a`
-- Created: `2019-12-12T23:37:26.330640057Z`
+- Image ID: `sha256:73b2d56d832aad7470774d39796788af9a44540a0768bca35daf32a301d6d23c`
+- Created: `2019-12-14T00:31:43.821207084Z`
 - Virtual Size: ~ 1.30 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -21,8 +21,8 @@
   - `LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib`
   - `GPG_KEYS=05AB33110949707C93A279E3D3EFE6B686867BA6 07E48665A34DCAFAE522E5E6266191C37C037D42 47309207D818FFD8DCD3F83F1931D684307A10A5 541FBE7D8F78B25E055DDEE13C370389288584E7 61B832AC2F1C5A90F0F9B00A1C506407564C17A3 713DA88BE50911535FE716F5208B0AB1D63011C7 79F7026C690BAA50B92CD8B66A3AD3F4F22C4FED 9BA44C2621385CB966EBA586F72C284D731FABEE A27677289986DB50844682F8ACB77FC2E86E29AC A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243 F3A04C595DB5B6A5F1ECA43E3B7BBB100D811BBE F7DA48BB64BCB84ECBA7EE6935CD23C10D498E23`
   - `TOMCAT_MAJOR=8`
-  - `TOMCAT_VERSION=8.5.49`
-  - `TOMCAT_SHA512=263480a91a3678120bd3150e6a2b4cc48881bfe110eeb91c01f89ee13e2ef3c9f149bc7bdcbb3187f80ecaa3bad42c77ad38d56675b64af1afc4c4ca1d1eb9e6`
+  - `TOMCAT_VERSION=8.5.50`
+  - `TOMCAT_SHA512=ffca86027d298ba107c7d01c779318c05b61ba48767cc5967ee6ce5a88271bb6ec8eed60708d45453f30eeedddcaedd1a369d6df1b49eea2cd14fa40832cfb90`
   - `XWIKI_VERSION=11.10.1`
   - `XWIKI_URL_PREFIX=https://maven.xwiki.org/releases/org/xwiki/platform/xwiki-platform-distribution-war/11.10.1`
   - `XWIKI_DOWNLOAD_SHA256=531c105af1848274185f3472a2d0f1c6de9c046ea64d0efba4f657545fc247be`
@@ -3369,19 +3369,24 @@ $ apt-get source -qq --print-uris nspr=2:4.18-1ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/n/nspr/nspr_4.18-1ubuntu1.debian.tar.xz' nspr_4.18-1ubuntu1.debian.tar.xz 19520 SHA256:712cd17e174defbae082724ba3278164218cd77f4fa322d5f376c0bec111b70c
 ```
 
-### `dpkg` source package: `nss=2:3.35-2ubuntu2.3`
+### `dpkg` source package: `nss=2:3.35-2ubuntu2.6`
 
 Binary Packages:
 
-- `libnss3:amd64=2:3.35-2ubuntu2.3`
+- `libnss3:amd64=2:3.35-2ubuntu2.6`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris nss=2:3.35-2ubuntu2.6
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nss/nss_3.35-2ubuntu2.6.dsc' nss_3.35-2ubuntu2.6.dsc 2331 SHA256:e1634eb8e3dea8b7d4f2d6e5b8989dd248b1ecd2715c3c3b698ec485c42c951b
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nss/nss_3.35.orig.tar.gz' nss_3.35.orig.tar.gz 9620041 SHA256:f4127de09bede39f5fd0f789d33c3504c5d261e69ea03022d46b319b3e32f6fa
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nss/nss_3.35-2ubuntu2.6.debian.tar.xz' nss_3.35-2ubuntu2.6.debian.tar.xz 43964 SHA256:83e03f40182645dd9e12319155c943504858d7502f0f981596fb9ab34b5ef352
+```
 
 ### `dpkg` source package: `openldap=2.4.45+dfsg-1ubuntu1.4`
 
@@ -3696,15 +3701,15 @@ $ apt-get source -qq --print-uris python3-defaults=3.6.7-1~18.04
 'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-defaults/python3-defaults_3.6.7-1~18.04.tar.gz' python3-defaults_3.6.7-1~18.04.tar.gz 137600 SHA256:df14f4993ac87537415f1abaa69d80790fb01e51033416bc123038f731286ed4
 ```
 
-### `dpkg` source package: `python3.6=3.6.8-1~18.04.3`
+### `dpkg` source package: `python3.6=3.6.9-1~18.04`
 
 Binary Packages:
 
-- `libpython3.6:amd64=3.6.8-1~18.04.3`
-- `libpython3.6-minimal:amd64=3.6.8-1~18.04.3`
-- `libpython3.6-stdlib:amd64=3.6.8-1~18.04.3`
-- `python3.6=3.6.8-1~18.04.3`
-- `python3.6-minimal=3.6.8-1~18.04.3`
+- `libpython3.6:amd64=3.6.9-1~18.04`
+- `libpython3.6-minimal:amd64=3.6.9-1~18.04`
+- `libpython3.6-stdlib:amd64=3.6.9-1~18.04`
+- `python3.6=3.6.9-1~18.04`
+- `python3.6-minimal=3.6.9-1~18.04`
 
 Licenses: (parsed from: `/usr/share/doc/libpython3.6/copyright`, `/usr/share/doc/libpython3.6-minimal/copyright`, `/usr/share/doc/libpython3.6-stdlib/copyright`, `/usr/share/doc/python3.6/copyright`, `/usr/share/doc/python3.6-minimal/copyright`)
 
@@ -3729,10 +3734,10 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.6/copyright`, `/usr/share/doc
 Source:
 
 ```console
-$ apt-get source -qq --print-uris python3.6=3.6.8-1~18.04.3
-'http://security.ubuntu.com/ubuntu/pool/main/p/python3.6/python3.6_3.6.8-1~18.04.3.dsc' python3.6_3.6.8-1~18.04.3.dsc 3442 SHA256:e2c90a908ea841a600b86b48e2972614acbf3f599ade8fe820cb6ee2451ff9ce
-'http://security.ubuntu.com/ubuntu/pool/main/p/python3.6/python3.6_3.6.8.orig.tar.xz' python3.6_3.6.8.orig.tar.xz 17212420 SHA256:35446241e995773b1bed7d196f4b624dadcadc8429f26282e756b2fb8a351193
-'http://security.ubuntu.com/ubuntu/pool/main/p/python3.6/python3.6_3.6.8-1~18.04.3.debian.tar.xz' python3.6_3.6.8-1~18.04.3.debian.tar.xz 219568 SHA256:471019002d17b33edfa6e4dd4a18b22b9602ab39d87077ac94886f7243b6ad94
+$ apt-get source -qq --print-uris python3.6=3.6.9-1~18.04
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.6/python3.6_3.6.9-1~18.04.dsc' python3.6_3.6.9-1~18.04.dsc 3459 SHA256:bce2658efe1049ac11b6abf4f48e6891ec2ea633377b081a18db9280478ab425
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.6/python3.6_3.6.9.orig.tar.xz' python3.6_3.6.9.orig.tar.xz 17212164 SHA256:5e2f5f554e3f8f7f0296f7e73d8600c4e9acbaee6b2555b83206edf5153870da
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.6/python3.6_3.6.9-1~18.04.debian.tar.xz' python3.6_3.6.9-1~18.04.debian.tar.xz 214508 SHA256:5096a758dae76f406c05cd208b912e9562e7f88e84b6adc8ceeb3aa118707a42
 ```
 
 ### `dpkg` source package: `raptor2=2.0.14-1build1`
