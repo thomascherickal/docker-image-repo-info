@@ -1,7 +1,7 @@
 ## `ros:eloquent`
 
 ```console
-$ docker pull ros@sha256:4a8c32208c42d5abc9e912ad442abe85064c095d0db95e4e0af7e79999109200
+$ docker pull ros@sha256:4ee7671bdf6856ec75cd7e667fef0465fb697b0700b1423e929dd9a816793d8c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -13,14 +13,14 @@ $ docker pull ros@sha256:4a8c32208c42d5abc9e912ad442abe85064c095d0db95e4e0af7e79
 ### `ros:eloquent` - linux; amd64
 
 ```console
-$ docker pull ros@sha256:66326fb21ca61791e554158539c8dd04c0753c6ac54b57820e065dbf4ffd67a0
+$ docker pull ros@sha256:ac136d6885b3829e7f9c7d6348f7c6db14bb9faadc5ff1d7acf2a1c0a9e690dc
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **285.1 MB (285053392 bytes)**  
+-	Total Size: **285.6 MB (285608882 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a89e728883af39048713e36e23cdd75aa3030978286aebd95745db8b1ebe846f`
+-	Image ID: `sha256:b544b7f9ea521869846affd04190de7fd9d9911fe9c4c18f699eed4381ee5f5f`
 -	Entrypoint: `["\/ros_entrypoint.sh"]`
 -	Default Command: `["bash"]`
 
@@ -57,16 +57,16 @@ RUN colcon mixin add default       https://raw.githubusercontent.com/colcon/colc
 RUN pip3 install -U     argcomplete
 # Wed, 27 Nov 2019 23:22:52 GMT
 ENV ROS_DISTRO=eloquent
-# Wed, 27 Nov 2019 23:24:05 GMT
-RUN apt-get update && apt-get install -y     ros-eloquent-ros-core=0.8.3-1*     && rm -rf /var/lib/apt/lists/*
-# Wed, 27 Nov 2019 23:24:06 GMT
+# Mon, 16 Dec 2019 23:28:32 GMT
+RUN apt-get update && apt-get install -y     ros-eloquent-ros-core=0.8.4-1*     && rm -rf /var/lib/apt/lists/*
+# Mon, 16 Dec 2019 23:28:33 GMT
 COPY file:57f71198b74c2c1967889acdfddb85d428137580d18be4211971fc7381557b6c in / 
-# Wed, 27 Nov 2019 23:24:06 GMT
+# Mon, 16 Dec 2019 23:28:33 GMT
 ENTRYPOINT ["/ros_entrypoint.sh"]
-# Wed, 27 Nov 2019 23:24:06 GMT
+# Mon, 16 Dec 2019 23:28:33 GMT
 CMD ["bash"]
-# Wed, 27 Nov 2019 23:24:28 GMT
-RUN apt-get update && apt-get install -y     ros-eloquent-ros-base=0.8.3-1*     && rm -rf /var/lib/apt/lists/*
+# Mon, 16 Dec 2019 23:28:45 GMT
+RUN apt-get update && apt-get install -y     ros-eloquent-ros-base=0.8.4-1*     && rm -rf /var/lib/apt/lists/*
 ```
 
 -	Layers:
@@ -118,30 +118,30 @@ RUN apt-get update && apt-get install -y     ros-eloquent-ros-base=0.8.3-1*     
 		Last Modified: Thu, 31 Oct 2019 23:59:37 GMT  
 		Size: 94.9 KB (94909 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:71e5ae1adee49401d8aed2893e4e59deaa8e968559cb86a59355c2b148516dee`  
-		Last Modified: Wed, 27 Nov 2019 23:25:04 GMT  
-		Size: 72.0 MB (71960774 bytes)  
+	-	`sha256:a97089b92da5d6c8325e36b447e3114d61451d0b7d60d1396ee00554852a021f`  
+		Last Modified: Mon, 16 Dec 2019 23:30:27 GMT  
+		Size: 72.5 MB (72516550 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7459bab33c6a852d22fc9953364f7b720707e6ef8dc46e27b55961fcec18cc66`  
-		Last Modified: Wed, 27 Nov 2019 23:24:49 GMT  
-		Size: 195.0 B  
+	-	`sha256:234c3fa76c8ca8d9bea99348f725852362fbb4e29ad2149e34e130a968237a2e`  
+		Last Modified: Mon, 16 Dec 2019 23:30:11 GMT  
+		Size: 194.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b988faf6c9c4c7c78876f9f15d3fe489a209ebe5f2347cf1fbb79747e83a302b`  
-		Last Modified: Wed, 27 Nov 2019 23:25:10 GMT  
-		Size: 4.6 MB (4601737 bytes)  
+	-	`sha256:2f71a06296ea89714cdb4b3f42e8678e8361d815bdf50c7debe535cd775a754b`  
+		Last Modified: Mon, 16 Dec 2019 23:30:32 GMT  
+		Size: 4.6 MB (4601452 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ros:eloquent` - linux; arm variant v7
 
 ```console
-$ docker pull ros@sha256:a2e1dd29278ad1ef55e701e7431ec37354045e707fd2d26a7ddc9834eb8ffffb
+$ docker pull ros@sha256:91209b5d039b9ef461180799d58c472cb8d0f60e02ebd4f6b4fdc7dc4d3f3dc0
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **237.1 MB (237100942 bytes)**  
+-	Total Size: **237.6 MB (237553860 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:92df13c5094712740e319d9331852456f97a90397f713a1067b8d40c2f9b6ff7`
+-	Image ID: `sha256:63e4b3eec2d3a2c3939ee981d909e668dcff0a7d9dff53ef57b4794ec7222c91`
 -	Entrypoint: `["\/ros_entrypoint.sh"]`
 -	Default Command: `["bash"]`
 
@@ -178,16 +178,16 @@ RUN colcon mixin add default       https://raw.githubusercontent.com/colcon/colc
 RUN pip3 install -U     argcomplete
 # Thu, 28 Nov 2019 00:03:51 GMT
 ENV ROS_DISTRO=eloquent
-# Thu, 28 Nov 2019 00:05:13 GMT
-RUN apt-get update && apt-get install -y     ros-eloquent-ros-core=0.8.3-1*     && rm -rf /var/lib/apt/lists/*
-# Thu, 28 Nov 2019 00:05:18 GMT
+# Tue, 17 Dec 2019 00:44:28 GMT
+RUN apt-get update && apt-get install -y     ros-eloquent-ros-core=0.8.4-1*     && rm -rf /var/lib/apt/lists/*
+# Tue, 17 Dec 2019 00:44:49 GMT
 COPY file:57f71198b74c2c1967889acdfddb85d428137580d18be4211971fc7381557b6c in / 
-# Thu, 28 Nov 2019 00:05:19 GMT
+# Tue, 17 Dec 2019 00:44:59 GMT
 ENTRYPOINT ["/ros_entrypoint.sh"]
-# Thu, 28 Nov 2019 00:05:20 GMT
+# Tue, 17 Dec 2019 00:45:03 GMT
 CMD ["bash"]
-# Thu, 28 Nov 2019 00:05:56 GMT
-RUN apt-get update && apt-get install -y     ros-eloquent-ros-base=0.8.3-1*     && rm -rf /var/lib/apt/lists/*
+# Tue, 17 Dec 2019 00:46:34 GMT
+RUN apt-get update && apt-get install -y     ros-eloquent-ros-base=0.8.4-1*     && rm -rf /var/lib/apt/lists/*
 ```
 
 -	Layers:
@@ -239,30 +239,30 @@ RUN apt-get update && apt-get install -y     ros-eloquent-ros-base=0.8.3-1*     
 		Last Modified: Thu, 28 Nov 2019 00:06:19 GMT  
 		Size: 105.7 KB (105735 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7f3a3d1010efc8abeb3980b1377aceaaae8504897de1752121bc2e6f6ced325b`  
-		Last Modified: Thu, 28 Nov 2019 00:06:40 GMT  
-		Size: 50.9 MB (50896087 bytes)  
+	-	`sha256:85e768833718921e59f9bffa739072eb04563e70bdc8a8f6c954140c6c0a3852`  
+		Last Modified: Tue, 17 Dec 2019 00:48:24 GMT  
+		Size: 51.3 MB (51347905 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d3f7d18b4d1a0df15b90a34e49b7b6f689472c91231c6342ce2041faba85b45c`  
-		Last Modified: Thu, 28 Nov 2019 00:06:19 GMT  
+	-	`sha256:a77d0cd346635b5a0aed6978239261fc78592fe0b2c5b6e7f04b6f2363ce2e8c`  
+		Last Modified: Tue, 17 Dec 2019 00:48:02 GMT  
 		Size: 195.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a3d55340a7272ff3bcefab2524ba595554a3f5fee3f93fe6f1e12db2b733a1c9`  
-		Last Modified: Thu, 28 Nov 2019 00:07:07 GMT  
-		Size: 3.5 MB (3516037 bytes)  
+	-	`sha256:0537751595c692d538988cb48b37b386a7e7d11556aa78db10ad4f76af731f97`  
+		Last Modified: Tue, 17 Dec 2019 00:48:37 GMT  
+		Size: 3.5 MB (3517137 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ros:eloquent` - linux; arm64 variant v8
 
 ```console
-$ docker pull ros@sha256:e3f22b93401132f6a186e134b127996b673a37cc810e41f8d11386ad73c7ab0f
+$ docker pull ros@sha256:acb2eb39ba95187065da0f8d9815604d9b5a3f3c2c7a82e1a855a99001142a1d
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **212.6 MB (212552771 bytes)**  
+-	Total Size: **213.1 MB (213074956 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ad67ed8a0f9747e5149555de7bc151c5329541d520ce24fc9904602adc65215c`
+-	Image ID: `sha256:d09bda8b8d751e32a08d081c9055339382b11c0d6a84078bda8cc2597b7ef16e`
 -	Entrypoint: `["\/ros_entrypoint.sh"]`
 -	Default Command: `["bash"]`
 
@@ -299,16 +299,16 @@ RUN colcon mixin add default       https://raw.githubusercontent.com/colcon/colc
 RUN pip3 install -U     argcomplete
 # Wed, 27 Nov 2019 23:41:14 GMT
 ENV ROS_DISTRO=eloquent
-# Wed, 27 Nov 2019 23:43:10 GMT
-RUN apt-get update && apt-get install -y     ros-eloquent-ros-core=0.8.3-1*     && rm -rf /var/lib/apt/lists/*
-# Wed, 27 Nov 2019 23:43:13 GMT
+# Tue, 17 Dec 2019 00:15:07 GMT
+RUN apt-get update && apt-get install -y     ros-eloquent-ros-core=0.8.4-1*     && rm -rf /var/lib/apt/lists/*
+# Tue, 17 Dec 2019 00:15:09 GMT
 COPY file:57f71198b74c2c1967889acdfddb85d428137580d18be4211971fc7381557b6c in / 
-# Wed, 27 Nov 2019 23:43:13 GMT
+# Tue, 17 Dec 2019 00:15:11 GMT
 ENTRYPOINT ["/ros_entrypoint.sh"]
-# Wed, 27 Nov 2019 23:43:14 GMT
+# Tue, 17 Dec 2019 00:15:12 GMT
 CMD ["bash"]
-# Wed, 27 Nov 2019 23:43:46 GMT
-RUN apt-get update && apt-get install -y     ros-eloquent-ros-base=0.8.3-1*     && rm -rf /var/lib/apt/lists/*
+# Tue, 17 Dec 2019 00:15:56 GMT
+RUN apt-get update && apt-get install -y     ros-eloquent-ros-base=0.8.4-1*     && rm -rf /var/lib/apt/lists/*
 ```
 
 -	Layers:
@@ -360,15 +360,15 @@ RUN apt-get update && apt-get install -y     ros-eloquent-ros-base=0.8.3-1*     
 		Last Modified: Thu, 31 Oct 2019 23:57:15 GMT  
 		Size: 95.0 KB (95038 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f3a9b648513ba920f43c42fbc6c681dd0adc292a76a44deba25362702f69b90e`  
-		Last Modified: Wed, 27 Nov 2019 23:44:37 GMT  
-		Size: 59.0 MB (59049288 bytes)  
+	-	`sha256:6c9d6629452340db008836d42f5140006c663d5520c43e95e88f74d3808b4fe8`  
+		Last Modified: Tue, 17 Dec 2019 00:18:21 GMT  
+		Size: 59.6 MB (59571626 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8d0778faf8b4f05f53de21e6f9f17612affb9c425af77a91a38302b1b5a7bd4b`  
-		Last Modified: Wed, 27 Nov 2019 23:44:16 GMT  
+	-	`sha256:174f5f0816548b73561472df3e00def59a47185f6176dc935a432b7a40986004`  
+		Last Modified: Tue, 17 Dec 2019 00:17:55 GMT  
 		Size: 195.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4c086b57faaf303972096e14f8fe3cfe7b4d22a524b66cdb7b3e9bd46c6ba829`  
-		Last Modified: Wed, 27 Nov 2019 23:44:45 GMT  
-		Size: 4.0 MB (3953643 bytes)  
+	-	`sha256:6e8fc85c769167d3d3a0e7b0e82e3b754d23931e5e231593ee2f562fb9ecd508`  
+		Last Modified: Tue, 17 Dec 2019 00:18:47 GMT  
+		Size: 4.0 MB (3953490 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
