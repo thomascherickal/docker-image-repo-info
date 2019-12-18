@@ -1,10 +1,10 @@
-# `convertigo:7.6.5-openj9`
+# `convertigo:7.6.6-openj9`
 
 ## Docker Metadata
 
-- Image ID: `sha256:b98563e4b7172a2f19b3de010c9bddb969e30dc035fb7ae3cbbc5ec47d549df6`
-- Created: `2019-11-26T23:22:00.539658304Z`
-- Virtual Size: ~ 467.49 Mb  
+- Image ID: `sha256:1f0aa1f41a49264d41e453b9699959e0ddecedd95b7dd9fdb40e3b34bd0f348b`
+- Created: `2019-12-18T02:18:05.609125612Z`
+- Virtual Size: ~ 472.43 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["tini","--","/docker-entrypoint.sh"]`
@@ -22,15 +22,15 @@
   - `LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib`
   - `GPG_KEYS=05AB33110949707C93A279E3D3EFE6B686867BA6 07E48665A34DCAFAE522E5E6266191C37C037D42 47309207D818FFD8DCD3F83F1931D684307A10A5 541FBE7D8F78B25E055DDEE13C370389288584E7 61B832AC2F1C5A90F0F9B00A1C506407564C17A3 713DA88BE50911535FE716F5208B0AB1D63011C7 79F7026C690BAA50B92CD8B66A3AD3F4F22C4FED 9BA44C2621385CB966EBA586F72C284D731FABEE A27677289986DB50844682F8ACB77FC2E86E29AC A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243 F3A04C595DB5B6A5F1ECA43E3B7BBB100D811BBE F7DA48BB64BCB84ECBA7EE6935CD23C10D498E23`
   - `TOMCAT_MAJOR=7`
-  - `TOMCAT_VERSION=7.0.96`
-  - `TOMCAT_SHA512=a7ab7627ebafab8c5e5b1b09cff3a6e760f45dbc9b9ab235e14532357e47cf3bb6bbcfbdd92cd94561fe471296fd734d221ba8d59e1216a8369d2c39b1a80c98`
+  - `TOMCAT_VERSION=7.0.99`
+  - `TOMCAT_SHA512=f53fb4fe6e568afe03fcf23043a3125b0c0ad99872146ff150a30333be92e6322b2278bfcfb2cce67112f09c3aa464086442bb8a79280548b179127ed1abbca9`
   - `SWT_GTK3=0`
   - `GOSU_VERSION=1.11`
   - `GOSU_GPG_KEYS=B42F6819007F00F88E364FD4036A9C25BF357DD4`
   - `TINI_VERSION=0.18.0`
   - `TINI_GPG_KEYS=6380DC428747F6C393FEACA59A84159D7001A4E5`
-  - `CONVERTIGO_VERSION=7.6.5`
-  - `CONVERTIGO_WAR_URL=https://github.com/convertigo/convertigo/releases/download/7.6.5/convertigo-7.6.5.war`
+  - `CONVERTIGO_VERSION=7.6.6`
+  - `CONVERTIGO_WAR_URL=https://github.com/convertigo/convertigo/releases/download/7.6.6/convertigo-7.6.6.war`
   - `CONVERTIGO_GPG_KEYS=6A7779BB78FE368DF74B708FD4DA8FBEB64BF75F`
 
 ## `dpkg` (`.deb`-based packages)
@@ -1417,7 +1417,6 @@ $ apt-get source -qq --print-uris openldap=2.4.45+dfsg-1ubuntu1.4
 
 Binary Packages:
 
-- `libssl1.1:amd64=1.1.1-1ubuntu2.1~18.04.4`
 - `openssl=1.1.1-1ubuntu2.1~18.04.4`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
@@ -1427,6 +1426,26 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 **WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
 This is *usually* due to a new package version being released and the old version being removed.
 
+
+### `dpkg` source package: `openssl=1.1.1-1ubuntu2.1~18.04.5`
+
+Binary Packages:
+
+- `libssl1.1:amd64=1.1.1-1ubuntu2.1~18.04.5`
+
+**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
+If source is available (seen below), check the contents of `debian/copyright` within it.
+
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris openssl=1.1.1-1ubuntu2.1~18.04.5
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1-1ubuntu2.1~18.04.5.dsc' openssl_1.1.1-1ubuntu2.1~18.04.5.dsc 2751 SHA256:9ee1d4dc064a27657581df4a6f3fc2d27c8e76379df816688c8e0182453b08e7
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1.orig.tar.gz' openssl_1.1.1.orig.tar.gz 8337920 SHA256:2836875a0f89c03d0fdf483941512613a50cfb421d6fd94b9f41d7279d586a3d
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1.orig.tar.gz.asc' openssl_1.1.1.orig.tar.gz.asc 488 SHA256:f3296150114069ea73a72eafbfdcbb295b770e7cbf3266f9590f3d0932498b3e
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1-1ubuntu2.1~18.04.5.debian.tar.xz' openssl_1.1.1-1ubuntu2.1~18.04.5.debian.tar.xz 96024 SHA256:0f7f2ebf8410c5c62465bf981a1d70e007294eac3aebac33c80793bc111cb3fd
+```
 
 ### `dpkg` source package: `p11-kit=0.23.9-2`
 
