@@ -2319,67 +2319,147 @@ CMD ["apache2-foreground"]
 
 ## `joomla:3.9.14`
 
-**does not exist** (yet?)
+```console
+$ docker pull joomla@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `joomla:3.9.14-apache`
 
-**does not exist** (yet?)
+```console
+$ docker pull joomla@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `joomla:3.9.14-fpm`
 
-**does not exist** (yet?)
+```console
+$ docker pull joomla@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `joomla:3.9.14-fpm-alpine`
 
-**does not exist** (yet?)
+```console
+$ docker pull joomla@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `joomla:3.9.14-php7.2`
 
-**does not exist** (yet?)
+```console
+$ docker pull joomla@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `joomla:3.9.14-php7.2-apache`
 
-**does not exist** (yet?)
+```console
+$ docker pull joomla@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `joomla:3.9.14-php7.2-fpm`
 
-**does not exist** (yet?)
+```console
+$ docker pull joomla@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `joomla:3.9.14-php7.2-fpm-alpine`
 
-**does not exist** (yet?)
+```console
+$ docker pull joomla@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `joomla:3.9.14-php7.3`
 
-**does not exist** (yet?)
+```console
+$ docker pull joomla@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `joomla:3.9.14-php7.3-apache`
 
-**does not exist** (yet?)
+```console
+$ docker pull joomla@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `joomla:3.9.14-php7.3-fpm`
 
-**does not exist** (yet?)
+```console
+$ docker pull joomla@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `joomla:3.9.14-php7.3-fpm-alpine`
 
-**does not exist** (yet?)
+```console
+$ docker pull joomla@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `joomla:3.9.14-php7.4`
 
-**does not exist** (yet?)
+```console
+$ docker pull joomla@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `joomla:3.9.14-php7.4-apache`
 
-**does not exist** (yet?)
+```console
+$ docker pull joomla@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `joomla:3.9.14-php7.4-fpm`
 
-**does not exist** (yet?)
+```console
+$ docker pull joomla@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `joomla:3.9.14-php7.4-fpm-alpine`
 
-**does not exist** (yet?)
+```console
+$ docker pull joomla@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `joomla:3.9-apache`
 
