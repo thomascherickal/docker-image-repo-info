@@ -18,7 +18,7 @@
 ## `adminer:4`
 
 ```console
-$ docker pull adminer@sha256:c15822ec7ba7977c385e5ebcda2fcbeb09812edd97bbd61d7737fa8a8e53e3e6
+$ docker pull adminer@sha256:10c219a46e3b5950dd4e5f9c3dfb89a6c44eb9a18f10e6849417c47136493388
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -33,14 +33,14 @@ $ docker pull adminer@sha256:c15822ec7ba7977c385e5ebcda2fcbeb09812edd97bbd61d773
 ### `adminer:4` - linux; amd64
 
 ```console
-$ docker pull adminer@sha256:86ba5afe8fee41c253bf89c258bca85d8640be894ae7716d3e726b9b4047c381
+$ docker pull adminer@sha256:e6d727411f1819b13c88314cf67a5f8a1f22d01fa53a25b493ca93bc12ebe74e
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **31.0 MB (31013555 bytes)**  
+-	Total Size: **31.0 MB (31027461 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:830d96c7612a7e7be76322d5741c2db4944f31f9f4d2cb6991cb242e12f4ae5a`
+-	Image ID: `sha256:b426045b520a8937f9baa8c890e3482996b4cf8f92ef9967738f67073d493407`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php","-S","[::]:8080","-t","\/var\/www\/html"]`
 
@@ -67,57 +67,57 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 01:10:28 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:48:56 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:48:56 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:48:56 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:48:59 GMT
+# Wed, 18 Dec 2019 22:38:21 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:38:21 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:38:21 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:38:24 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:48:59 GMT
+# Wed, 18 Dec 2019 22:38:24 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:55:11 GMT
+# Wed, 18 Dec 2019 22:44:31 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:21:33 GMT
+# Wed, 18 Dec 2019 22:44:32 GMT
 COPY multi:0b7e4a1b9cd5748d214539db3c6bee9b30805d1933690492830b56ffcd31f68d in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:21:35 GMT
+# Wed, 18 Dec 2019 22:44:33 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:21:35 GMT
+# Wed, 18 Dec 2019 22:44:33 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:21:35 GMT
+# Wed, 18 Dec 2019 22:44:33 GMT
 CMD ["php" "-a"]
-# Fri, 06 Dec 2019 01:46:14 GMT
+# Thu, 19 Dec 2019 05:35:45 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 01:46:15 GMT
+# Thu, 19 Dec 2019 05:35:45 GMT
 STOPSIGNAL SIGINT
-# Fri, 06 Dec 2019 01:46:15 GMT
+# Thu, 19 Dec 2019 05:35:46 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 01:46:16 GMT
+# Thu, 19 Dec 2019 05:35:46 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 01:46:16 GMT
+# Thu, 19 Dec 2019 05:35:47 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 01:46:34 GMT
+# Thu, 19 Dec 2019 05:36:05 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 01:46:34 GMT
+# Thu, 19 Dec 2019 05:36:05 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 01:46:35 GMT
+# Thu, 19 Dec 2019 05:36:05 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 01:46:35 GMT
+# Thu, 19 Dec 2019 05:36:06 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 01:46:35 GMT
+# Thu, 19 Dec 2019 05:36:06 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 01:46:36 GMT
+# Thu, 19 Dec 2019 05:36:07 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 01:46:36 GMT
+# Thu, 19 Dec 2019 05:36:07 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:46:37 GMT
+# Thu, 19 Dec 2019 05:36:08 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:46:37 GMT
+# Thu, 19 Dec 2019 05:36:08 GMT
 USER adminer
-# Fri, 06 Dec 2019 01:46:37 GMT
+# Thu, 19 Dec 2019 05:36:08 GMT
 CMD ["php" "-S" "[::]:8080" "-t" "/var/www/html"]
-# Fri, 06 Dec 2019 01:46:37 GMT
+# Thu, 19 Dec 2019 05:36:08 GMT
 EXPOSE 8080
 ```
 
@@ -138,52 +138,52 @@ EXPOSE 8080
 		Last Modified: Mon, 21 Oct 2019 21:44:18 GMT  
 		Size: 222.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c480d86e9f76b9604df41b59ff15c277235e77570c3094e24beea689906d7e85`  
-		Last Modified: Thu, 28 Nov 2019 21:13:22 GMT  
-		Size: 10.3 MB (10250558 bytes)  
+	-	`sha256:b0c3cc2f08e3e093e7f2363216f6414027208adc012c5aa07db197341329fe72`  
+		Last Modified: Thu, 19 Dec 2019 03:00:28 GMT  
+		Size: 10.3 MB (10263892 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f3842726b8d86447ea9f8ca1885524b2ae44cf308c3ae2e11f372aa6db308f32`  
-		Last Modified: Thu, 28 Nov 2019 21:13:21 GMT  
+	-	`sha256:57fb2ca7191a3ef22a9701e838adaf70fdbd265eb24703f14179044284913417`  
+		Last Modified: Thu, 19 Dec 2019 03:00:27 GMT  
 		Size: 498.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:57a451954efdb35ed624196af05c79b645dc444faaccc19d9d45d112f6de4061`  
-		Last Modified: Thu, 28 Nov 2019 21:13:24 GMT  
-		Size: 14.6 MB (14589908 bytes)  
+	-	`sha256:719b549f829c694acfed15af4094974701bcb4c0285684f08d92cf8d9ec9bcdc`  
+		Last Modified: Thu, 19 Dec 2019 03:00:33 GMT  
+		Size: 14.6 MB (14590503 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5a0b952c237a06829b97d3ed1d92cacf10888f77fba63726d16867056a4f044c`  
-		Last Modified: Fri, 06 Dec 2019 01:26:49 GMT  
-		Size: 2.2 KB (2216 bytes)  
+	-	`sha256:81e6bc38092826fd2472c7ca1eb2c700fed834bbd765e80ff2a643fd121154d2`  
+		Last Modified: Thu, 19 Dec 2019 03:00:26 GMT  
+		Size: 2.2 KB (2215 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:152b9d9c5ef59610e7b35742bebd1808171b7de2c4ccec2f0731a55a7559360d`  
-		Last Modified: Fri, 06 Dec 2019 01:26:48 GMT  
-		Size: 72.3 KB (72319 bytes)  
+	-	`sha256:a754e64b7156262e64e31a7201d5c625a9db50e96ecac534e504a6393f4e1a9e`  
+		Last Modified: Thu, 19 Dec 2019 03:00:27 GMT  
+		Size: 72.3 KB (72302 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1e64c9abda242b9b4d3a6c1baf781dda52eabbb6ef6d75db40cc72d87f1c4c77`  
-		Last Modified: Fri, 06 Dec 2019 01:47:18 GMT  
-		Size: 308.0 B  
+	-	`sha256:90f3f908ddee8f4ee6c6ca007ced4430786e103eac072c59fee4b402b2d8c388`  
+		Last Modified: Thu, 19 Dec 2019 05:36:51 GMT  
+		Size: 307.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d62f090b0e9efd0bfb9ba692958683cf86a15d423cc82c1609b954876086d6a8`  
-		Last Modified: Fri, 06 Dec 2019 01:47:18 GMT  
+	-	`sha256:857b7e4aae9f2ade154cb505cf91e6521e4099d23159d182a8cbef713c81532b`  
+		Last Modified: Thu, 19 Dec 2019 05:36:51 GMT  
 		Size: 1.4 KB (1372 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:762e247790399e6560e4640ca01701a7fcc2211f8cee51913462b618a25167af`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
-		Size: 1.3 MB (1267207 bytes)  
+	-	`sha256:ace782c3ac09d3f64c77972eafa84fee9f30761a8b9424bb4ffc178f8ebcf1ea`  
+		Last Modified: Thu, 19 Dec 2019 05:36:50 GMT  
+		Size: 1.3 MB (1267197 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0f51bae1177740cf6eec7579667748ed24bec56021cbb74b7210edc18f01be18`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
+	-	`sha256:a67e9e57ebac5385c07290704a48959e42587e9cca35993f56e0ec74384988fd`  
+		Last Modified: Thu, 19 Dec 2019 05:36:50 GMT  
 		Size: 125.7 KB (125657 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:628599883e3cd44a98167c252bdf0ab5a593036911dba0257cc80613a629ba8b`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
-		Size: 1.5 KB (1472 bytes)  
+	-	`sha256:49eb563494c485a889d81dda7ee04ce14f7b22cfa901415e048a5c0c18d2bb0f`  
+		Last Modified: Thu, 19 Dec 2019 05:36:49 GMT  
+		Size: 1.5 KB (1477 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3536dd8cbdfc6bc3a00a8c6e170b6b28329ba806612bca28010703e03746e34e`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
-		Size: 570.4 KB (570378 bytes)  
+	-	`sha256:3b5bc3cefb34ffac141e2420696af773ce85d635ff6d02d406903625b83b3f04`  
+		Last Modified: Thu, 19 Dec 2019 05:36:50 GMT  
+		Size: 570.4 KB (570379 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6eeb0c1100b26366c86db33f094c4a819fc26e55ce4eb2e5f5ab309c4a02edb0`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
+	-	`sha256:b807bb1614467154aa601b40815ea51d330eebb00f281a71b54af161d17b20ec`  
+		Last Modified: Thu, 19 Dec 2019 05:36:49 GMT  
 		Size: 496.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -347,14 +347,14 @@ EXPOSE 8080
 ### `adminer:4` - linux; arm variant v7
 
 ```console
-$ docker pull adminer@sha256:ca8d6b805bd6de4b7ae82a31dcaa1c1eaa16c7170d6a2d8a84390246fb323f1a
+$ docker pull adminer@sha256:45f3f63bea4b53ed6f840b452aad505d813cf99755272303c705731a9c2c1a37
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **28.4 MB (28355059 bytes)**  
+-	Total Size: **28.4 MB (28375258 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6a6a009dde2aee41ade135a5592990a968056ac0ca2903616b3146d78e8df4d4`
+-	Image ID: `sha256:c6fcf1f9bcc93e97da85dddf171a35cc7c3a686b415d320b4737e95e19bcbfec`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php","-S","[::]:8080","-t","\/var\/www\/html"]`
 
@@ -381,57 +381,57 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 00:42:48 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:19:44 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:19:45 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:19:46 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:19:51 GMT
+# Wed, 18 Dec 2019 22:13:45 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:13:46 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:13:46 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:13:50 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:19:52 GMT
+# Wed, 18 Dec 2019 22:13:51 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:22:34 GMT
+# Wed, 18 Dec 2019 22:16:23 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:17:24 GMT
+# Wed, 18 Dec 2019 22:16:24 GMT
 COPY multi:0b7e4a1b9cd5748d214539db3c6bee9b30805d1933690492830b56ffcd31f68d in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:17:29 GMT
+# Wed, 18 Dec 2019 22:16:27 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:17:32 GMT
+# Wed, 18 Dec 2019 22:16:28 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:17:33 GMT
+# Wed, 18 Dec 2019 22:16:28 GMT
 CMD ["php" "-a"]
-# Fri, 06 Dec 2019 04:50:48 GMT
+# Thu, 19 Dec 2019 05:43:15 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 04:50:50 GMT
+# Thu, 19 Dec 2019 05:43:15 GMT
 STOPSIGNAL SIGINT
-# Fri, 06 Dec 2019 04:50:59 GMT
+# Thu, 19 Dec 2019 05:43:18 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 04:51:01 GMT
+# Thu, 19 Dec 2019 05:43:19 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 04:51:06 GMT
+# Thu, 19 Dec 2019 05:43:21 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 04:51:54 GMT
+# Thu, 19 Dec 2019 05:43:50 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 04:51:56 GMT
+# Thu, 19 Dec 2019 05:43:51 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 04:52:00 GMT
+# Thu, 19 Dec 2019 05:43:51 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 04:52:04 GMT
+# Thu, 19 Dec 2019 05:43:52 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 04:52:09 GMT
+# Thu, 19 Dec 2019 05:43:52 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 04:52:23 GMT
+# Thu, 19 Dec 2019 05:43:55 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 04:52:25 GMT
+# Thu, 19 Dec 2019 05:43:56 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 04:52:27 GMT
+# Thu, 19 Dec 2019 05:43:56 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 04:52:29 GMT
+# Thu, 19 Dec 2019 05:43:57 GMT
 USER adminer
-# Fri, 06 Dec 2019 04:52:33 GMT
+# Thu, 19 Dec 2019 05:43:58 GMT
 CMD ["php" "-S" "[::]:8080" "-t" "/var/www/html"]
-# Fri, 06 Dec 2019 04:52:38 GMT
+# Thu, 19 Dec 2019 05:43:58 GMT
 EXPOSE 8080
 ```
 
@@ -452,53 +452,53 @@ EXPOSE 8080
 		Last Modified: Mon, 21 Oct 2019 22:14:00 GMT  
 		Size: 267.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:74d543cc24962e4f8efaef27c314b6c510d9e89795bb3fefc76190c88e6adaa0`  
-		Last Modified: Thu, 28 Nov 2019 20:37:08 GMT  
-		Size: 10.3 MB (10250580 bytes)  
+	-	`sha256:9ca9d33ba72a23b5503797dc37271a4e969f593c1f91fab7b5e8fc9e199a3237`  
+		Last Modified: Thu, 19 Dec 2019 00:23:23 GMT  
+		Size: 10.3 MB (10263922 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:61533199b1c12541ec2c6e8792481ed0bf870ab2614fca26df4472ed7489905b`  
-		Last Modified: Thu, 28 Nov 2019 20:37:06 GMT  
-		Size: 494.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cb40e8b71fdcda892a7fff7b40bd040c14189bdbf81c6900e2506a34d0a5e2a8`  
-		Last Modified: Thu, 28 Nov 2019 20:37:11 GMT  
-		Size: 12.7 MB (12659015 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:73e8322b4997afc76e3d6aded9b6977d019a876387f38bb0c7b20303eb741ea1`  
-		Last Modified: Fri, 06 Dec 2019 01:35:28 GMT  
-		Size: 2.2 KB (2215 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bee10ead90205f4f11c6737cb5e9809cf554b750d259f2bb978806599ff48d4d`  
-		Last Modified: Fri, 06 Dec 2019 01:35:28 GMT  
-		Size: 71.9 KB (71901 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b2343ca0934ccfcf3473bcd86e8769c80a356c838360d24e6c15c8549d8799ff`  
-		Last Modified: Fri, 06 Dec 2019 04:55:13 GMT  
-		Size: 311.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3339cf595876f587528feea8189a242d1eee086d7c129183282e0d0bf5dfec9e`  
-		Last Modified: Fri, 06 Dec 2019 04:55:13 GMT  
-		Size: 1.4 KB (1420 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:273f3098e61dc9b47d64ba9a3e339b88d90351233841e926290aaf8f81b719e8`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
-		Size: 1.1 MB (1098041 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f48a0dca6ba28aa1b4488aa4541f847d05b842f7adfd2fbe4df3d510ea08bb44`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
-		Size: 113.6 KB (113646 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:911b6063ce3a1a087497bb65c33df13aa956676a9977dec81024c9158363b7a1`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
-		Size: 1.5 KB (1474 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c17014746daefe47239efc1403be753dbbd9860da773a322a172487485cb8993`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
-		Size: 570.5 KB (570460 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:87db519a03011aadfd54c42773aed91d48871a3e423f8652ae2fa3c6a201d7f0`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
+	-	`sha256:9abaf2cca6b8f6360c51d0ab64e5733dd6fe54d2160f0b90b2c2b30cc9d09556`  
+		Last Modified: Thu, 19 Dec 2019 00:23:23 GMT  
 		Size: 498.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:0d1c28a483480472543267f13fa560e37c42d398e03258ec10f3259791f26c2b`  
+		Last Modified: Thu, 19 Dec 2019 00:23:26 GMT  
+		Size: 12.7 MB (12665914 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c296b4d3757a3eb5a9eaa1bee6c67b7f85258f295e5d1adfeae082aaa4ffe554`  
+		Last Modified: Thu, 19 Dec 2019 00:23:23 GMT  
+		Size: 2.2 KB (2213 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:3f0c6898b03f711ee9c13adb0e7ac827b235e872574ad2e0466ce38a7006494f`  
+		Last Modified: Thu, 19 Dec 2019 00:23:23 GMT  
+		Size: 71.9 KB (71882 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:85f53d18384dba7127519315cb122ebcc1c8f1420b7359054849ebd5c2eb8501`  
+		Last Modified: Thu, 19 Dec 2019 05:45:20 GMT  
+		Size: 308.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:29ba2b51dd9ec6d55f6dcbd14fd64e4424e17d54d50559b04f7872439fe23c84`  
+		Last Modified: Thu, 19 Dec 2019 05:45:20 GMT  
+		Size: 1.4 KB (1418 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ed774f039edbc14130f2a14cc8a6036a51ebcd1eb96bbfd75d3ac1c581bdb3a2`  
+		Last Modified: Thu, 19 Dec 2019 05:45:18 GMT  
+		Size: 1.1 MB (1098039 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ddbca63dcd496dfe19ebd0ce58453dcf241bca16bd12220566202434e47730ff`  
+		Last Modified: Thu, 19 Dec 2019 05:45:18 GMT  
+		Size: 113.6 KB (113634 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:fdc0c14d20b92cde224999d0a7464e0dd1063ed2fe903a20fc7902d451928868`  
+		Last Modified: Thu, 19 Dec 2019 05:45:19 GMT  
+		Size: 1.5 KB (1477 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:4854bad04d3751dd937dde7badbbe7b0be2baee2b0c0b6e654e45ea0155fd765`  
+		Last Modified: Thu, 19 Dec 2019 05:45:18 GMT  
+		Size: 570.5 KB (570450 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:183711409a19b109d1862eb8f004260effa66c92f58f14f1ad425a474ba8572d`  
+		Last Modified: Thu, 19 Dec 2019 05:45:18 GMT  
+		Size: 499.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adminer:4` - linux; arm64 variant v8
@@ -661,14 +661,14 @@ EXPOSE 8080
 ### `adminer:4` - linux; 386
 
 ```console
-$ docker pull adminer@sha256:3b3b632ad55b7004f6d67004583ca8d4756f52487240d6530977ad9a503ba629
+$ docker pull adminer@sha256:4d9d4d3dba3055adde16332ec8bb9f98fbc264574d8755f161b2c7420f0fb73e
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **31.6 MB (31595367 bytes)**  
+-	Total Size: **31.6 MB (31611527 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1a9e767ae5c65d7fecf62761e3afd0b53184749f9cfcca68ae1c099ed852e137`
+-	Image ID: `sha256:6921567de258c77b202adc3226c7996e1fb5f526f205d6712821a57b84db89ee`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php","-S","[::]:8080","-t","\/var\/www\/html"]`
 
@@ -695,57 +695,57 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 03:40:32 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:03:14 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:03:14 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:03:14 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:03:17 GMT
+# Wed, 18 Dec 2019 23:18:21 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 23:18:22 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 23:18:22 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 23:18:24 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:03:17 GMT
+# Wed, 18 Dec 2019 23:18:25 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:08:51 GMT
+# Wed, 18 Dec 2019 23:27:50 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 00:41:35 GMT
+# Wed, 18 Dec 2019 23:27:51 GMT
 COPY multi:0b7e4a1b9cd5748d214539db3c6bee9b30805d1933690492830b56ffcd31f68d in /usr/local/bin/ 
-# Fri, 06 Dec 2019 00:41:36 GMT
+# Wed, 18 Dec 2019 23:27:53 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 00:41:36 GMT
+# Wed, 18 Dec 2019 23:27:53 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 00:41:36 GMT
+# Wed, 18 Dec 2019 23:27:53 GMT
 CMD ["php" "-a"]
-# Fri, 06 Dec 2019 01:35:26 GMT
+# Thu, 19 Dec 2019 06:02:48 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 01:35:26 GMT
+# Thu, 19 Dec 2019 06:02:48 GMT
 STOPSIGNAL SIGINT
-# Fri, 06 Dec 2019 01:35:27 GMT
+# Thu, 19 Dec 2019 06:02:49 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 01:35:27 GMT
+# Thu, 19 Dec 2019 06:02:49 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 01:35:28 GMT
+# Thu, 19 Dec 2019 06:02:50 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:10 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:10 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:10 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:10 GMT
 USER adminer
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:11 GMT
 CMD ["php" "-S" "[::]:8080" "-t" "/var/www/html"]
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:11 GMT
 EXPOSE 8080
 ```
 
@@ -766,66 +766,66 @@ EXPOSE 8080
 		Last Modified: Mon, 21 Oct 2019 20:16:09 GMT  
 		Size: 221.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7a2f924d5bef762db8a36415395a7d8d645e86c8c10e98670ee6441f4dfffc4b`  
-		Last Modified: Thu, 28 Nov 2019 20:25:40 GMT  
-		Size: 10.3 MB (10250558 bytes)  
+	-	`sha256:8d3c120548e2cc8578bcbc722a1de16f16aa1bbd6f95a3f3f250760ef49d6425`  
+		Last Modified: Thu, 19 Dec 2019 03:54:02 GMT  
+		Size: 10.3 MB (10263911 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d86e42c218805225dcb7fb493e2333b3aa5dbe52acfe920142f7beddb424cf83`  
-		Last Modified: Thu, 28 Nov 2019 20:25:39 GMT  
-		Size: 497.0 B  
+	-	`sha256:6c67772931308b5da9ecd54e42e8b4f0cee6a6ca800c39c9bb90f7935371f173`  
+		Last Modified: Thu, 19 Dec 2019 03:54:01 GMT  
+		Size: 498.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df9403ccfdc695e35b6d3018248acf35d406f0cfafb094c31e3837d69bafd01c`  
-		Last Modified: Thu, 28 Nov 2019 20:25:45 GMT  
-		Size: 15.0 MB (14964307 bytes)  
+	-	`sha256:81de9fd8c68cc661996bb58ab58c8ca7fcc4523d035c2bbfc2835549da0a48ae`  
+		Last Modified: Thu, 19 Dec 2019 03:54:07 GMT  
+		Size: 15.0 MB (14967109 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ec757c77b33207cd2e297fb2ab7146f4245ec36acc52bd38cba1fbd4e3ec0b8b`  
-		Last Modified: Fri, 06 Dec 2019 00:46:31 GMT  
-		Size: 2.2 KB (2220 bytes)  
+	-	`sha256:2cc02e941d1953f8fbbd589f5a7cece48de8e05d8626f4dc9fc7272716e999e9`  
+		Last Modified: Thu, 19 Dec 2019 03:54:01 GMT  
+		Size: 2.2 KB (2211 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4d52ef7bb6d6ca924fc76da53a0d613f171978768e3b572da49a8f77ea6f8d6c`  
-		Last Modified: Fri, 06 Dec 2019 00:46:30 GMT  
+	-	`sha256:8a7864fff700c7ab0ac04ee51707c956b859bd42ce6e4bac9317a0224058ec59`  
+		Last Modified: Thu, 19 Dec 2019 03:54:01 GMT  
 		Size: 71.5 KB (71454 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6e5b781398aa148728fa13f2df2f88fa4d9b3570891ff55a3af9cb50c2098412`  
-		Last Modified: Fri, 06 Dec 2019 01:36:35 GMT  
+	-	`sha256:7274061ca352a1262686abb045838ea905ae178eee118a6a1e23834490af7953`  
+		Last Modified: Thu, 19 Dec 2019 06:03:50 GMT  
 		Size: 308.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:de505ea02604bd909cfaf3b498de539cedd1332bfe778ba03947dce6e0d33d23`  
-		Last Modified: Fri, 06 Dec 2019 01:36:35 GMT  
-		Size: 1.4 KB (1376 bytes)  
+	-	`sha256:e79de5c64323f911324528fcb2f88bc245b69fe50c242865fbb4ac204b52b545`  
+		Last Modified: Thu, 19 Dec 2019 06:03:51 GMT  
+		Size: 1.4 KB (1373 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:14cdb373d56b69e1927e31d36942beeeb400c2632b5bc77e1f73ad115ba8383a`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 1.4 MB (1382441 bytes)  
+	-	`sha256:673d96f2a5b2ca78e58cf695d0dba02cdf0279a1620b9a4b7e62192cb52054a9`  
+		Last Modified: Thu, 19 Dec 2019 06:03:50 GMT  
+		Size: 1.4 MB (1382437 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e4bcc50f7578a489fab996ffee3c7ea194e47a068ad3cae0821f4d60e06986b7`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 128.8 KB (128797 bytes)  
+	-	`sha256:b14ef693e693233cf4fea5d27768673723fdd0ac67859f0740a6e3ca15718406`  
+		Last Modified: Thu, 19 Dec 2019 06:03:49 GMT  
+		Size: 128.8 KB (128815 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5463ed1f22d5ece3465e961d34ec3854c36dfe23261548ab50b89fdd0f775e00`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 1.5 KB (1474 bytes)  
+	-	`sha256:14095c6e1a5c6c8e2eb79a0edb5fba2bfc43757e24a2d5953fc267cf77a178b5`  
+		Last Modified: Thu, 19 Dec 2019 06:03:49 GMT  
+		Size: 1.5 KB (1473 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d98966329f05e112300ee57648333a12079a1cc8a41d15d0e396391c444e67c1`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 570.4 KB (570373 bytes)  
+	-	`sha256:bf75ef62d8952c613219a1462ce69c61b6e6ca742bfe6578d3732a3d97fba9c4`  
+		Last Modified: Thu, 19 Dec 2019 06:03:50 GMT  
+		Size: 570.4 KB (570377 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:adef02fa3ca71fdceafb1fd92ff74960848b5673988dc3f2dc021aeaa943966b`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 496.0 B  
+	-	`sha256:79374c30d550e98acc64a36e936903f0fd6eee39645aef5007145f7860c1d8f9`  
+		Last Modified: Thu, 19 Dec 2019 06:03:49 GMT  
+		Size: 495.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adminer:4` - linux; ppc64le
 
 ```console
-$ docker pull adminer@sha256:c59dc08edbac430c86555d96e000a1d49c59e8a66bc5e9d3b073ed8fd76f08ea
+$ docker pull adminer@sha256:b10e79ba1e7932ac27c0ffb06cc228415b4552687d150f89ed3f21ee08194220
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **32.2 MB (32227844 bytes)**  
+-	Total Size: **32.2 MB (32247973 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:96efedc317d25ffb54f9f12d72c5f57e58d4d511e52b62c3548a5b787d1f3ad5`
+-	Image ID: `sha256:573383ff5140ec4fcaf742c4be6757a0567423c5c5833be7d728669583167bd3`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php","-S","[::]:8080","-t","\/var\/www\/html"]`
 
@@ -852,57 +852,57 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 01:17:40 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:44:14 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:44:17 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:44:19 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:44:32 GMT
+# Wed, 18 Dec 2019 22:43:03 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:43:05 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:43:07 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:43:21 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:44:34 GMT
+# Wed, 18 Dec 2019 22:43:23 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:48:15 GMT
+# Wed, 18 Dec 2019 22:46:52 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:21:52 GMT
+# Wed, 18 Dec 2019 22:46:54 GMT
 COPY multi:0b7e4a1b9cd5748d214539db3c6bee9b30805d1933690492830b56ffcd31f68d in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:22:02 GMT
+# Wed, 18 Dec 2019 22:46:59 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:22:05 GMT
+# Wed, 18 Dec 2019 22:47:01 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:22:06 GMT
+# Wed, 18 Dec 2019 22:47:03 GMT
 CMD ["php" "-a"]
-# Fri, 06 Dec 2019 02:50:03 GMT
+# Thu, 19 Dec 2019 06:27:50 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 02:50:05 GMT
+# Thu, 19 Dec 2019 06:27:55 GMT
 STOPSIGNAL SIGINT
-# Fri, 06 Dec 2019 02:50:19 GMT
+# Thu, 19 Dec 2019 06:28:07 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 02:50:23 GMT
+# Thu, 19 Dec 2019 06:28:11 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 02:50:32 GMT
+# Thu, 19 Dec 2019 06:28:18 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 02:51:03 GMT
+# Thu, 19 Dec 2019 06:28:51 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 02:51:07 GMT
+# Thu, 19 Dec 2019 06:28:54 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 02:51:08 GMT
+# Thu, 19 Dec 2019 06:28:58 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 02:51:12 GMT
+# Thu, 19 Dec 2019 06:28:59 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 02:51:14 GMT
+# Thu, 19 Dec 2019 06:29:03 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 02:51:24 GMT
+# Thu, 19 Dec 2019 06:29:15 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 02:51:27 GMT
+# Thu, 19 Dec 2019 06:29:18 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 02:51:33 GMT
+# Thu, 19 Dec 2019 06:29:20 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 02:51:35 GMT
+# Thu, 19 Dec 2019 06:29:26 GMT
 USER adminer
-# Fri, 06 Dec 2019 02:51:40 GMT
+# Thu, 19 Dec 2019 06:29:30 GMT
 CMD ["php" "-S" "[::]:8080" "-t" "/var/www/html"]
-# Fri, 06 Dec 2019 02:51:44 GMT
+# Thu, 19 Dec 2019 06:29:34 GMT
 EXPOSE 8080
 ```
 
@@ -923,59 +923,59 @@ EXPOSE 8080
 		Last Modified: Mon, 21 Oct 2019 20:21:00 GMT  
 		Size: 269.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f41671226d36c01ec9c7f1ea38cd673556952e7f899f4f4b89c9fbdebd29a53b`  
-		Last Modified: Thu, 28 Nov 2019 21:10:15 GMT  
-		Size: 10.3 MB (10250609 bytes)  
+	-	`sha256:4b579441bf6e92a1a6e81ea93691621e4c87a50d9ffb31d4b378b5df7d32872f`  
+		Last Modified: Thu, 19 Dec 2019 01:42:36 GMT  
+		Size: 10.3 MB (10263942 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1d940bc1bed9725313bbc396a711a790598103f8425780c96a2b8e0b8c314f83`  
-		Last Modified: Thu, 28 Nov 2019 21:10:13 GMT  
-		Size: 498.0 B  
+	-	`sha256:439349ae045fb12b63f4ea12de47a2383371a3189b6e95b5a84693903df9b0a4`  
+		Last Modified: Thu, 19 Dec 2019 01:42:35 GMT  
+		Size: 497.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:02effde3bc9b924c0d25924f0e1f298c9e7644c948efa10ff4d8945399a16b74`  
-		Last Modified: Thu, 28 Nov 2019 21:10:19 GMT  
-		Size: 15.6 MB (15648865 bytes)  
+	-	`sha256:48b07dcdf318b1dc68a37f668ccb781855c62ec5ac7721f9c1149fdb135ba87d`  
+		Last Modified: Thu, 19 Dec 2019 01:42:48 GMT  
+		Size: 15.7 MB (15655717 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e31c94093f50a0b5f297e9da64e47405dbe46f8ec535d000ee7f725a553fc633`  
-		Last Modified: Fri, 06 Dec 2019 01:40:27 GMT  
-		Size: 2.2 KB (2217 bytes)  
+	-	`sha256:c7eab24ff28c16bb245a5237cc4946807bcb8d827d3702b5bb9f74cfd586fece`  
+		Last Modified: Thu, 19 Dec 2019 01:42:35 GMT  
+		Size: 2.2 KB (2210 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:232540856492a6874250c20d02259faf35c4a5b5aa42520d4c9528742d779fd0`  
-		Last Modified: Fri, 06 Dec 2019 01:40:27 GMT  
-		Size: 72.2 KB (72168 bytes)  
+	-	`sha256:8334e4feab309edb35cdf7bec81a8a27169fa44dde213e3030369881eda125f1`  
+		Last Modified: Thu, 19 Dec 2019 01:42:35 GMT  
+		Size: 72.1 KB (72144 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d14842d0c142c0039a7a184b2b3d335b2a01864a6235ea3dda30897e146ad1c6`  
-		Last Modified: Fri, 06 Dec 2019 02:53:43 GMT  
-		Size: 310.0 B  
+	-	`sha256:6e5b8d229e7b1d88a7c021b6c715fb1dc4558108381b5279c56a41a62dbc2261`  
+		Last Modified: Thu, 19 Dec 2019 06:32:06 GMT  
+		Size: 306.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d2190da7f3695c3878621e1660bf04a2c8dbdfef966bffeb6971cf76aed20f16`  
-		Last Modified: Fri, 06 Dec 2019 02:53:43 GMT  
-		Size: 1.4 KB (1414 bytes)  
+	-	`sha256:8a14230d6a9f6580d0617afb712af2aa3a52531275d062968f9876403ef06fb4`  
+		Last Modified: Thu, 19 Dec 2019 06:32:05 GMT  
+		Size: 1.4 KB (1421 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:55e067e4d19dc08989322d9eb8129d7bdbf1bf797725927442cc93bf69ae0d33`  
-		Last Modified: Fri, 06 Dec 2019 02:53:40 GMT  
-		Size: 1.3 MB (1347029 bytes)  
+	-	`sha256:6d0c4ce6bd51ba7c0848bd56478144b0695f576f8ae0678eb62e05ee3559fc42`  
+		Last Modified: Thu, 19 Dec 2019 06:32:03 GMT  
+		Size: 1.3 MB (1347007 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ff1668716d22838ddf256cebcbf1b09ddc48fc942a5842b5e13e6c44e830c394`  
-		Last Modified: Fri, 06 Dec 2019 02:53:39 GMT  
-		Size: 135.8 KB (135823 bytes)  
+	-	`sha256:8f2e3e1cdb6c28b9b5b15dba0737ad3ed00202221c4c671693dc9fc7b7ba77cc`  
+		Last Modified: Thu, 19 Dec 2019 06:32:02 GMT  
+		Size: 135.8 KB (135826 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2a7c9bfcff913dd0e174b7de4290afacf966f43e6be2dd050e56584c94028fe2`  
-		Last Modified: Fri, 06 Dec 2019 02:53:39 GMT  
-		Size: 1.5 KB (1479 bytes)  
+	-	`sha256:43cb845103383d0bd1567a8b09f649e5f523c37b005bd6625351c8dbf52f6976`  
+		Last Modified: Thu, 19 Dec 2019 06:32:01 GMT  
+		Size: 1.5 KB (1473 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:04e9df15d0417b3f6421f2a692de9e7bdfa605d9bf0105088ad284939e459927`  
-		Last Modified: Fri, 06 Dec 2019 02:53:40 GMT  
-		Size: 570.5 KB (570451 bytes)  
+	-	`sha256:2d4d6287f785538118622662e0c60ab299f7a2ae11f5301fa041f86527b24464`  
+		Last Modified: Thu, 19 Dec 2019 06:32:02 GMT  
+		Size: 570.5 KB (570450 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:072c9cb6de1241a262601cb46dc6b10bff853e228b847c61d3443de139fb9ac2`  
-		Last Modified: Fri, 06 Dec 2019 02:53:39 GMT  
-		Size: 498.0 B  
+	-	`sha256:81477a62f96cdc3549a2c6c8ac63f34fc068128715c326c6c916ac7a607475f5`  
+		Last Modified: Thu, 19 Dec 2019 06:32:02 GMT  
+		Size: 497.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `adminer:4.7`
 
 ```console
-$ docker pull adminer@sha256:c15822ec7ba7977c385e5ebcda2fcbeb09812edd97bbd61d7737fa8a8e53e3e6
+$ docker pull adminer@sha256:10c219a46e3b5950dd4e5f9c3dfb89a6c44eb9a18f10e6849417c47136493388
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -990,14 +990,14 @@ $ docker pull adminer@sha256:c15822ec7ba7977c385e5ebcda2fcbeb09812edd97bbd61d773
 ### `adminer:4.7` - linux; amd64
 
 ```console
-$ docker pull adminer@sha256:86ba5afe8fee41c253bf89c258bca85d8640be894ae7716d3e726b9b4047c381
+$ docker pull adminer@sha256:e6d727411f1819b13c88314cf67a5f8a1f22d01fa53a25b493ca93bc12ebe74e
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **31.0 MB (31013555 bytes)**  
+-	Total Size: **31.0 MB (31027461 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:830d96c7612a7e7be76322d5741c2db4944f31f9f4d2cb6991cb242e12f4ae5a`
+-	Image ID: `sha256:b426045b520a8937f9baa8c890e3482996b4cf8f92ef9967738f67073d493407`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php","-S","[::]:8080","-t","\/var\/www\/html"]`
 
@@ -1024,57 +1024,57 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 01:10:28 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:48:56 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:48:56 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:48:56 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:48:59 GMT
+# Wed, 18 Dec 2019 22:38:21 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:38:21 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:38:21 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:38:24 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:48:59 GMT
+# Wed, 18 Dec 2019 22:38:24 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:55:11 GMT
+# Wed, 18 Dec 2019 22:44:31 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:21:33 GMT
+# Wed, 18 Dec 2019 22:44:32 GMT
 COPY multi:0b7e4a1b9cd5748d214539db3c6bee9b30805d1933690492830b56ffcd31f68d in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:21:35 GMT
+# Wed, 18 Dec 2019 22:44:33 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:21:35 GMT
+# Wed, 18 Dec 2019 22:44:33 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:21:35 GMT
+# Wed, 18 Dec 2019 22:44:33 GMT
 CMD ["php" "-a"]
-# Fri, 06 Dec 2019 01:46:14 GMT
+# Thu, 19 Dec 2019 05:35:45 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 01:46:15 GMT
+# Thu, 19 Dec 2019 05:35:45 GMT
 STOPSIGNAL SIGINT
-# Fri, 06 Dec 2019 01:46:15 GMT
+# Thu, 19 Dec 2019 05:35:46 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 01:46:16 GMT
+# Thu, 19 Dec 2019 05:35:46 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 01:46:16 GMT
+# Thu, 19 Dec 2019 05:35:47 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 01:46:34 GMT
+# Thu, 19 Dec 2019 05:36:05 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 01:46:34 GMT
+# Thu, 19 Dec 2019 05:36:05 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 01:46:35 GMT
+# Thu, 19 Dec 2019 05:36:05 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 01:46:35 GMT
+# Thu, 19 Dec 2019 05:36:06 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 01:46:35 GMT
+# Thu, 19 Dec 2019 05:36:06 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 01:46:36 GMT
+# Thu, 19 Dec 2019 05:36:07 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 01:46:36 GMT
+# Thu, 19 Dec 2019 05:36:07 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:46:37 GMT
+# Thu, 19 Dec 2019 05:36:08 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:46:37 GMT
+# Thu, 19 Dec 2019 05:36:08 GMT
 USER adminer
-# Fri, 06 Dec 2019 01:46:37 GMT
+# Thu, 19 Dec 2019 05:36:08 GMT
 CMD ["php" "-S" "[::]:8080" "-t" "/var/www/html"]
-# Fri, 06 Dec 2019 01:46:37 GMT
+# Thu, 19 Dec 2019 05:36:08 GMT
 EXPOSE 8080
 ```
 
@@ -1095,52 +1095,52 @@ EXPOSE 8080
 		Last Modified: Mon, 21 Oct 2019 21:44:18 GMT  
 		Size: 222.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c480d86e9f76b9604df41b59ff15c277235e77570c3094e24beea689906d7e85`  
-		Last Modified: Thu, 28 Nov 2019 21:13:22 GMT  
-		Size: 10.3 MB (10250558 bytes)  
+	-	`sha256:b0c3cc2f08e3e093e7f2363216f6414027208adc012c5aa07db197341329fe72`  
+		Last Modified: Thu, 19 Dec 2019 03:00:28 GMT  
+		Size: 10.3 MB (10263892 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f3842726b8d86447ea9f8ca1885524b2ae44cf308c3ae2e11f372aa6db308f32`  
-		Last Modified: Thu, 28 Nov 2019 21:13:21 GMT  
+	-	`sha256:57fb2ca7191a3ef22a9701e838adaf70fdbd265eb24703f14179044284913417`  
+		Last Modified: Thu, 19 Dec 2019 03:00:27 GMT  
 		Size: 498.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:57a451954efdb35ed624196af05c79b645dc444faaccc19d9d45d112f6de4061`  
-		Last Modified: Thu, 28 Nov 2019 21:13:24 GMT  
-		Size: 14.6 MB (14589908 bytes)  
+	-	`sha256:719b549f829c694acfed15af4094974701bcb4c0285684f08d92cf8d9ec9bcdc`  
+		Last Modified: Thu, 19 Dec 2019 03:00:33 GMT  
+		Size: 14.6 MB (14590503 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5a0b952c237a06829b97d3ed1d92cacf10888f77fba63726d16867056a4f044c`  
-		Last Modified: Fri, 06 Dec 2019 01:26:49 GMT  
-		Size: 2.2 KB (2216 bytes)  
+	-	`sha256:81e6bc38092826fd2472c7ca1eb2c700fed834bbd765e80ff2a643fd121154d2`  
+		Last Modified: Thu, 19 Dec 2019 03:00:26 GMT  
+		Size: 2.2 KB (2215 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:152b9d9c5ef59610e7b35742bebd1808171b7de2c4ccec2f0731a55a7559360d`  
-		Last Modified: Fri, 06 Dec 2019 01:26:48 GMT  
-		Size: 72.3 KB (72319 bytes)  
+	-	`sha256:a754e64b7156262e64e31a7201d5c625a9db50e96ecac534e504a6393f4e1a9e`  
+		Last Modified: Thu, 19 Dec 2019 03:00:27 GMT  
+		Size: 72.3 KB (72302 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1e64c9abda242b9b4d3a6c1baf781dda52eabbb6ef6d75db40cc72d87f1c4c77`  
-		Last Modified: Fri, 06 Dec 2019 01:47:18 GMT  
-		Size: 308.0 B  
+	-	`sha256:90f3f908ddee8f4ee6c6ca007ced4430786e103eac072c59fee4b402b2d8c388`  
+		Last Modified: Thu, 19 Dec 2019 05:36:51 GMT  
+		Size: 307.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d62f090b0e9efd0bfb9ba692958683cf86a15d423cc82c1609b954876086d6a8`  
-		Last Modified: Fri, 06 Dec 2019 01:47:18 GMT  
+	-	`sha256:857b7e4aae9f2ade154cb505cf91e6521e4099d23159d182a8cbef713c81532b`  
+		Last Modified: Thu, 19 Dec 2019 05:36:51 GMT  
 		Size: 1.4 KB (1372 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:762e247790399e6560e4640ca01701a7fcc2211f8cee51913462b618a25167af`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
-		Size: 1.3 MB (1267207 bytes)  
+	-	`sha256:ace782c3ac09d3f64c77972eafa84fee9f30761a8b9424bb4ffc178f8ebcf1ea`  
+		Last Modified: Thu, 19 Dec 2019 05:36:50 GMT  
+		Size: 1.3 MB (1267197 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0f51bae1177740cf6eec7579667748ed24bec56021cbb74b7210edc18f01be18`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
+	-	`sha256:a67e9e57ebac5385c07290704a48959e42587e9cca35993f56e0ec74384988fd`  
+		Last Modified: Thu, 19 Dec 2019 05:36:50 GMT  
 		Size: 125.7 KB (125657 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:628599883e3cd44a98167c252bdf0ab5a593036911dba0257cc80613a629ba8b`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
-		Size: 1.5 KB (1472 bytes)  
+	-	`sha256:49eb563494c485a889d81dda7ee04ce14f7b22cfa901415e048a5c0c18d2bb0f`  
+		Last Modified: Thu, 19 Dec 2019 05:36:49 GMT  
+		Size: 1.5 KB (1477 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3536dd8cbdfc6bc3a00a8c6e170b6b28329ba806612bca28010703e03746e34e`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
-		Size: 570.4 KB (570378 bytes)  
+	-	`sha256:3b5bc3cefb34ffac141e2420696af773ce85d635ff6d02d406903625b83b3f04`  
+		Last Modified: Thu, 19 Dec 2019 05:36:50 GMT  
+		Size: 570.4 KB (570379 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6eeb0c1100b26366c86db33f094c4a819fc26e55ce4eb2e5f5ab309c4a02edb0`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
+	-	`sha256:b807bb1614467154aa601b40815ea51d330eebb00f281a71b54af161d17b20ec`  
+		Last Modified: Thu, 19 Dec 2019 05:36:49 GMT  
 		Size: 496.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -1304,14 +1304,14 @@ EXPOSE 8080
 ### `adminer:4.7` - linux; arm variant v7
 
 ```console
-$ docker pull adminer@sha256:ca8d6b805bd6de4b7ae82a31dcaa1c1eaa16c7170d6a2d8a84390246fb323f1a
+$ docker pull adminer@sha256:45f3f63bea4b53ed6f840b452aad505d813cf99755272303c705731a9c2c1a37
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **28.4 MB (28355059 bytes)**  
+-	Total Size: **28.4 MB (28375258 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6a6a009dde2aee41ade135a5592990a968056ac0ca2903616b3146d78e8df4d4`
+-	Image ID: `sha256:c6fcf1f9bcc93e97da85dddf171a35cc7c3a686b415d320b4737e95e19bcbfec`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php","-S","[::]:8080","-t","\/var\/www\/html"]`
 
@@ -1338,57 +1338,57 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 00:42:48 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:19:44 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:19:45 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:19:46 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:19:51 GMT
+# Wed, 18 Dec 2019 22:13:45 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:13:46 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:13:46 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:13:50 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:19:52 GMT
+# Wed, 18 Dec 2019 22:13:51 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:22:34 GMT
+# Wed, 18 Dec 2019 22:16:23 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:17:24 GMT
+# Wed, 18 Dec 2019 22:16:24 GMT
 COPY multi:0b7e4a1b9cd5748d214539db3c6bee9b30805d1933690492830b56ffcd31f68d in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:17:29 GMT
+# Wed, 18 Dec 2019 22:16:27 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:17:32 GMT
+# Wed, 18 Dec 2019 22:16:28 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:17:33 GMT
+# Wed, 18 Dec 2019 22:16:28 GMT
 CMD ["php" "-a"]
-# Fri, 06 Dec 2019 04:50:48 GMT
+# Thu, 19 Dec 2019 05:43:15 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 04:50:50 GMT
+# Thu, 19 Dec 2019 05:43:15 GMT
 STOPSIGNAL SIGINT
-# Fri, 06 Dec 2019 04:50:59 GMT
+# Thu, 19 Dec 2019 05:43:18 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 04:51:01 GMT
+# Thu, 19 Dec 2019 05:43:19 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 04:51:06 GMT
+# Thu, 19 Dec 2019 05:43:21 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 04:51:54 GMT
+# Thu, 19 Dec 2019 05:43:50 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 04:51:56 GMT
+# Thu, 19 Dec 2019 05:43:51 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 04:52:00 GMT
+# Thu, 19 Dec 2019 05:43:51 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 04:52:04 GMT
+# Thu, 19 Dec 2019 05:43:52 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 04:52:09 GMT
+# Thu, 19 Dec 2019 05:43:52 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 04:52:23 GMT
+# Thu, 19 Dec 2019 05:43:55 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 04:52:25 GMT
+# Thu, 19 Dec 2019 05:43:56 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 04:52:27 GMT
+# Thu, 19 Dec 2019 05:43:56 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 04:52:29 GMT
+# Thu, 19 Dec 2019 05:43:57 GMT
 USER adminer
-# Fri, 06 Dec 2019 04:52:33 GMT
+# Thu, 19 Dec 2019 05:43:58 GMT
 CMD ["php" "-S" "[::]:8080" "-t" "/var/www/html"]
-# Fri, 06 Dec 2019 04:52:38 GMT
+# Thu, 19 Dec 2019 05:43:58 GMT
 EXPOSE 8080
 ```
 
@@ -1409,53 +1409,53 @@ EXPOSE 8080
 		Last Modified: Mon, 21 Oct 2019 22:14:00 GMT  
 		Size: 267.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:74d543cc24962e4f8efaef27c314b6c510d9e89795bb3fefc76190c88e6adaa0`  
-		Last Modified: Thu, 28 Nov 2019 20:37:08 GMT  
-		Size: 10.3 MB (10250580 bytes)  
+	-	`sha256:9ca9d33ba72a23b5503797dc37271a4e969f593c1f91fab7b5e8fc9e199a3237`  
+		Last Modified: Thu, 19 Dec 2019 00:23:23 GMT  
+		Size: 10.3 MB (10263922 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:61533199b1c12541ec2c6e8792481ed0bf870ab2614fca26df4472ed7489905b`  
-		Last Modified: Thu, 28 Nov 2019 20:37:06 GMT  
-		Size: 494.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cb40e8b71fdcda892a7fff7b40bd040c14189bdbf81c6900e2506a34d0a5e2a8`  
-		Last Modified: Thu, 28 Nov 2019 20:37:11 GMT  
-		Size: 12.7 MB (12659015 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:73e8322b4997afc76e3d6aded9b6977d019a876387f38bb0c7b20303eb741ea1`  
-		Last Modified: Fri, 06 Dec 2019 01:35:28 GMT  
-		Size: 2.2 KB (2215 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bee10ead90205f4f11c6737cb5e9809cf554b750d259f2bb978806599ff48d4d`  
-		Last Modified: Fri, 06 Dec 2019 01:35:28 GMT  
-		Size: 71.9 KB (71901 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b2343ca0934ccfcf3473bcd86e8769c80a356c838360d24e6c15c8549d8799ff`  
-		Last Modified: Fri, 06 Dec 2019 04:55:13 GMT  
-		Size: 311.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3339cf595876f587528feea8189a242d1eee086d7c129183282e0d0bf5dfec9e`  
-		Last Modified: Fri, 06 Dec 2019 04:55:13 GMT  
-		Size: 1.4 KB (1420 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:273f3098e61dc9b47d64ba9a3e339b88d90351233841e926290aaf8f81b719e8`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
-		Size: 1.1 MB (1098041 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f48a0dca6ba28aa1b4488aa4541f847d05b842f7adfd2fbe4df3d510ea08bb44`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
-		Size: 113.6 KB (113646 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:911b6063ce3a1a087497bb65c33df13aa956676a9977dec81024c9158363b7a1`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
-		Size: 1.5 KB (1474 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c17014746daefe47239efc1403be753dbbd9860da773a322a172487485cb8993`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
-		Size: 570.5 KB (570460 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:87db519a03011aadfd54c42773aed91d48871a3e423f8652ae2fa3c6a201d7f0`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
+	-	`sha256:9abaf2cca6b8f6360c51d0ab64e5733dd6fe54d2160f0b90b2c2b30cc9d09556`  
+		Last Modified: Thu, 19 Dec 2019 00:23:23 GMT  
 		Size: 498.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:0d1c28a483480472543267f13fa560e37c42d398e03258ec10f3259791f26c2b`  
+		Last Modified: Thu, 19 Dec 2019 00:23:26 GMT  
+		Size: 12.7 MB (12665914 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c296b4d3757a3eb5a9eaa1bee6c67b7f85258f295e5d1adfeae082aaa4ffe554`  
+		Last Modified: Thu, 19 Dec 2019 00:23:23 GMT  
+		Size: 2.2 KB (2213 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:3f0c6898b03f711ee9c13adb0e7ac827b235e872574ad2e0466ce38a7006494f`  
+		Last Modified: Thu, 19 Dec 2019 00:23:23 GMT  
+		Size: 71.9 KB (71882 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:85f53d18384dba7127519315cb122ebcc1c8f1420b7359054849ebd5c2eb8501`  
+		Last Modified: Thu, 19 Dec 2019 05:45:20 GMT  
+		Size: 308.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:29ba2b51dd9ec6d55f6dcbd14fd64e4424e17d54d50559b04f7872439fe23c84`  
+		Last Modified: Thu, 19 Dec 2019 05:45:20 GMT  
+		Size: 1.4 KB (1418 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ed774f039edbc14130f2a14cc8a6036a51ebcd1eb96bbfd75d3ac1c581bdb3a2`  
+		Last Modified: Thu, 19 Dec 2019 05:45:18 GMT  
+		Size: 1.1 MB (1098039 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ddbca63dcd496dfe19ebd0ce58453dcf241bca16bd12220566202434e47730ff`  
+		Last Modified: Thu, 19 Dec 2019 05:45:18 GMT  
+		Size: 113.6 KB (113634 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:fdc0c14d20b92cde224999d0a7464e0dd1063ed2fe903a20fc7902d451928868`  
+		Last Modified: Thu, 19 Dec 2019 05:45:19 GMT  
+		Size: 1.5 KB (1477 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:4854bad04d3751dd937dde7badbbe7b0be2baee2b0c0b6e654e45ea0155fd765`  
+		Last Modified: Thu, 19 Dec 2019 05:45:18 GMT  
+		Size: 570.5 KB (570450 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:183711409a19b109d1862eb8f004260effa66c92f58f14f1ad425a474ba8572d`  
+		Last Modified: Thu, 19 Dec 2019 05:45:18 GMT  
+		Size: 499.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adminer:4.7` - linux; arm64 variant v8
@@ -1618,14 +1618,14 @@ EXPOSE 8080
 ### `adminer:4.7` - linux; 386
 
 ```console
-$ docker pull adminer@sha256:3b3b632ad55b7004f6d67004583ca8d4756f52487240d6530977ad9a503ba629
+$ docker pull adminer@sha256:4d9d4d3dba3055adde16332ec8bb9f98fbc264574d8755f161b2c7420f0fb73e
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **31.6 MB (31595367 bytes)**  
+-	Total Size: **31.6 MB (31611527 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1a9e767ae5c65d7fecf62761e3afd0b53184749f9cfcca68ae1c099ed852e137`
+-	Image ID: `sha256:6921567de258c77b202adc3226c7996e1fb5f526f205d6712821a57b84db89ee`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php","-S","[::]:8080","-t","\/var\/www\/html"]`
 
@@ -1652,57 +1652,57 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 03:40:32 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:03:14 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:03:14 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:03:14 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:03:17 GMT
+# Wed, 18 Dec 2019 23:18:21 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 23:18:22 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 23:18:22 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 23:18:24 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:03:17 GMT
+# Wed, 18 Dec 2019 23:18:25 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:08:51 GMT
+# Wed, 18 Dec 2019 23:27:50 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 00:41:35 GMT
+# Wed, 18 Dec 2019 23:27:51 GMT
 COPY multi:0b7e4a1b9cd5748d214539db3c6bee9b30805d1933690492830b56ffcd31f68d in /usr/local/bin/ 
-# Fri, 06 Dec 2019 00:41:36 GMT
+# Wed, 18 Dec 2019 23:27:53 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 00:41:36 GMT
+# Wed, 18 Dec 2019 23:27:53 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 00:41:36 GMT
+# Wed, 18 Dec 2019 23:27:53 GMT
 CMD ["php" "-a"]
-# Fri, 06 Dec 2019 01:35:26 GMT
+# Thu, 19 Dec 2019 06:02:48 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 01:35:26 GMT
+# Thu, 19 Dec 2019 06:02:48 GMT
 STOPSIGNAL SIGINT
-# Fri, 06 Dec 2019 01:35:27 GMT
+# Thu, 19 Dec 2019 06:02:49 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 01:35:27 GMT
+# Thu, 19 Dec 2019 06:02:49 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 01:35:28 GMT
+# Thu, 19 Dec 2019 06:02:50 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:10 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:10 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:10 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:10 GMT
 USER adminer
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:11 GMT
 CMD ["php" "-S" "[::]:8080" "-t" "/var/www/html"]
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:11 GMT
 EXPOSE 8080
 ```
 
@@ -1723,66 +1723,66 @@ EXPOSE 8080
 		Last Modified: Mon, 21 Oct 2019 20:16:09 GMT  
 		Size: 221.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7a2f924d5bef762db8a36415395a7d8d645e86c8c10e98670ee6441f4dfffc4b`  
-		Last Modified: Thu, 28 Nov 2019 20:25:40 GMT  
-		Size: 10.3 MB (10250558 bytes)  
+	-	`sha256:8d3c120548e2cc8578bcbc722a1de16f16aa1bbd6f95a3f3f250760ef49d6425`  
+		Last Modified: Thu, 19 Dec 2019 03:54:02 GMT  
+		Size: 10.3 MB (10263911 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d86e42c218805225dcb7fb493e2333b3aa5dbe52acfe920142f7beddb424cf83`  
-		Last Modified: Thu, 28 Nov 2019 20:25:39 GMT  
-		Size: 497.0 B  
+	-	`sha256:6c67772931308b5da9ecd54e42e8b4f0cee6a6ca800c39c9bb90f7935371f173`  
+		Last Modified: Thu, 19 Dec 2019 03:54:01 GMT  
+		Size: 498.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df9403ccfdc695e35b6d3018248acf35d406f0cfafb094c31e3837d69bafd01c`  
-		Last Modified: Thu, 28 Nov 2019 20:25:45 GMT  
-		Size: 15.0 MB (14964307 bytes)  
+	-	`sha256:81de9fd8c68cc661996bb58ab58c8ca7fcc4523d035c2bbfc2835549da0a48ae`  
+		Last Modified: Thu, 19 Dec 2019 03:54:07 GMT  
+		Size: 15.0 MB (14967109 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ec757c77b33207cd2e297fb2ab7146f4245ec36acc52bd38cba1fbd4e3ec0b8b`  
-		Last Modified: Fri, 06 Dec 2019 00:46:31 GMT  
-		Size: 2.2 KB (2220 bytes)  
+	-	`sha256:2cc02e941d1953f8fbbd589f5a7cece48de8e05d8626f4dc9fc7272716e999e9`  
+		Last Modified: Thu, 19 Dec 2019 03:54:01 GMT  
+		Size: 2.2 KB (2211 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4d52ef7bb6d6ca924fc76da53a0d613f171978768e3b572da49a8f77ea6f8d6c`  
-		Last Modified: Fri, 06 Dec 2019 00:46:30 GMT  
+	-	`sha256:8a7864fff700c7ab0ac04ee51707c956b859bd42ce6e4bac9317a0224058ec59`  
+		Last Modified: Thu, 19 Dec 2019 03:54:01 GMT  
 		Size: 71.5 KB (71454 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6e5b781398aa148728fa13f2df2f88fa4d9b3570891ff55a3af9cb50c2098412`  
-		Last Modified: Fri, 06 Dec 2019 01:36:35 GMT  
+	-	`sha256:7274061ca352a1262686abb045838ea905ae178eee118a6a1e23834490af7953`  
+		Last Modified: Thu, 19 Dec 2019 06:03:50 GMT  
 		Size: 308.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:de505ea02604bd909cfaf3b498de539cedd1332bfe778ba03947dce6e0d33d23`  
-		Last Modified: Fri, 06 Dec 2019 01:36:35 GMT  
-		Size: 1.4 KB (1376 bytes)  
+	-	`sha256:e79de5c64323f911324528fcb2f88bc245b69fe50c242865fbb4ac204b52b545`  
+		Last Modified: Thu, 19 Dec 2019 06:03:51 GMT  
+		Size: 1.4 KB (1373 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:14cdb373d56b69e1927e31d36942beeeb400c2632b5bc77e1f73ad115ba8383a`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 1.4 MB (1382441 bytes)  
+	-	`sha256:673d96f2a5b2ca78e58cf695d0dba02cdf0279a1620b9a4b7e62192cb52054a9`  
+		Last Modified: Thu, 19 Dec 2019 06:03:50 GMT  
+		Size: 1.4 MB (1382437 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e4bcc50f7578a489fab996ffee3c7ea194e47a068ad3cae0821f4d60e06986b7`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 128.8 KB (128797 bytes)  
+	-	`sha256:b14ef693e693233cf4fea5d27768673723fdd0ac67859f0740a6e3ca15718406`  
+		Last Modified: Thu, 19 Dec 2019 06:03:49 GMT  
+		Size: 128.8 KB (128815 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5463ed1f22d5ece3465e961d34ec3854c36dfe23261548ab50b89fdd0f775e00`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 1.5 KB (1474 bytes)  
+	-	`sha256:14095c6e1a5c6c8e2eb79a0edb5fba2bfc43757e24a2d5953fc267cf77a178b5`  
+		Last Modified: Thu, 19 Dec 2019 06:03:49 GMT  
+		Size: 1.5 KB (1473 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d98966329f05e112300ee57648333a12079a1cc8a41d15d0e396391c444e67c1`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 570.4 KB (570373 bytes)  
+	-	`sha256:bf75ef62d8952c613219a1462ce69c61b6e6ca742bfe6578d3732a3d97fba9c4`  
+		Last Modified: Thu, 19 Dec 2019 06:03:50 GMT  
+		Size: 570.4 KB (570377 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:adef02fa3ca71fdceafb1fd92ff74960848b5673988dc3f2dc021aeaa943966b`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 496.0 B  
+	-	`sha256:79374c30d550e98acc64a36e936903f0fd6eee39645aef5007145f7860c1d8f9`  
+		Last Modified: Thu, 19 Dec 2019 06:03:49 GMT  
+		Size: 495.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adminer:4.7` - linux; ppc64le
 
 ```console
-$ docker pull adminer@sha256:c59dc08edbac430c86555d96e000a1d49c59e8a66bc5e9d3b073ed8fd76f08ea
+$ docker pull adminer@sha256:b10e79ba1e7932ac27c0ffb06cc228415b4552687d150f89ed3f21ee08194220
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **32.2 MB (32227844 bytes)**  
+-	Total Size: **32.2 MB (32247973 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:96efedc317d25ffb54f9f12d72c5f57e58d4d511e52b62c3548a5b787d1f3ad5`
+-	Image ID: `sha256:573383ff5140ec4fcaf742c4be6757a0567423c5c5833be7d728669583167bd3`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php","-S","[::]:8080","-t","\/var\/www\/html"]`
 
@@ -1809,57 +1809,57 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 01:17:40 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:44:14 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:44:17 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:44:19 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:44:32 GMT
+# Wed, 18 Dec 2019 22:43:03 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:43:05 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:43:07 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:43:21 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:44:34 GMT
+# Wed, 18 Dec 2019 22:43:23 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:48:15 GMT
+# Wed, 18 Dec 2019 22:46:52 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:21:52 GMT
+# Wed, 18 Dec 2019 22:46:54 GMT
 COPY multi:0b7e4a1b9cd5748d214539db3c6bee9b30805d1933690492830b56ffcd31f68d in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:22:02 GMT
+# Wed, 18 Dec 2019 22:46:59 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:22:05 GMT
+# Wed, 18 Dec 2019 22:47:01 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:22:06 GMT
+# Wed, 18 Dec 2019 22:47:03 GMT
 CMD ["php" "-a"]
-# Fri, 06 Dec 2019 02:50:03 GMT
+# Thu, 19 Dec 2019 06:27:50 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 02:50:05 GMT
+# Thu, 19 Dec 2019 06:27:55 GMT
 STOPSIGNAL SIGINT
-# Fri, 06 Dec 2019 02:50:19 GMT
+# Thu, 19 Dec 2019 06:28:07 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 02:50:23 GMT
+# Thu, 19 Dec 2019 06:28:11 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 02:50:32 GMT
+# Thu, 19 Dec 2019 06:28:18 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 02:51:03 GMT
+# Thu, 19 Dec 2019 06:28:51 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 02:51:07 GMT
+# Thu, 19 Dec 2019 06:28:54 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 02:51:08 GMT
+# Thu, 19 Dec 2019 06:28:58 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 02:51:12 GMT
+# Thu, 19 Dec 2019 06:28:59 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 02:51:14 GMT
+# Thu, 19 Dec 2019 06:29:03 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 02:51:24 GMT
+# Thu, 19 Dec 2019 06:29:15 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 02:51:27 GMT
+# Thu, 19 Dec 2019 06:29:18 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 02:51:33 GMT
+# Thu, 19 Dec 2019 06:29:20 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 02:51:35 GMT
+# Thu, 19 Dec 2019 06:29:26 GMT
 USER adminer
-# Fri, 06 Dec 2019 02:51:40 GMT
+# Thu, 19 Dec 2019 06:29:30 GMT
 CMD ["php" "-S" "[::]:8080" "-t" "/var/www/html"]
-# Fri, 06 Dec 2019 02:51:44 GMT
+# Thu, 19 Dec 2019 06:29:34 GMT
 EXPOSE 8080
 ```
 
@@ -1880,59 +1880,59 @@ EXPOSE 8080
 		Last Modified: Mon, 21 Oct 2019 20:21:00 GMT  
 		Size: 269.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f41671226d36c01ec9c7f1ea38cd673556952e7f899f4f4b89c9fbdebd29a53b`  
-		Last Modified: Thu, 28 Nov 2019 21:10:15 GMT  
-		Size: 10.3 MB (10250609 bytes)  
+	-	`sha256:4b579441bf6e92a1a6e81ea93691621e4c87a50d9ffb31d4b378b5df7d32872f`  
+		Last Modified: Thu, 19 Dec 2019 01:42:36 GMT  
+		Size: 10.3 MB (10263942 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1d940bc1bed9725313bbc396a711a790598103f8425780c96a2b8e0b8c314f83`  
-		Last Modified: Thu, 28 Nov 2019 21:10:13 GMT  
-		Size: 498.0 B  
+	-	`sha256:439349ae045fb12b63f4ea12de47a2383371a3189b6e95b5a84693903df9b0a4`  
+		Last Modified: Thu, 19 Dec 2019 01:42:35 GMT  
+		Size: 497.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:02effde3bc9b924c0d25924f0e1f298c9e7644c948efa10ff4d8945399a16b74`  
-		Last Modified: Thu, 28 Nov 2019 21:10:19 GMT  
-		Size: 15.6 MB (15648865 bytes)  
+	-	`sha256:48b07dcdf318b1dc68a37f668ccb781855c62ec5ac7721f9c1149fdb135ba87d`  
+		Last Modified: Thu, 19 Dec 2019 01:42:48 GMT  
+		Size: 15.7 MB (15655717 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e31c94093f50a0b5f297e9da64e47405dbe46f8ec535d000ee7f725a553fc633`  
-		Last Modified: Fri, 06 Dec 2019 01:40:27 GMT  
-		Size: 2.2 KB (2217 bytes)  
+	-	`sha256:c7eab24ff28c16bb245a5237cc4946807bcb8d827d3702b5bb9f74cfd586fece`  
+		Last Modified: Thu, 19 Dec 2019 01:42:35 GMT  
+		Size: 2.2 KB (2210 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:232540856492a6874250c20d02259faf35c4a5b5aa42520d4c9528742d779fd0`  
-		Last Modified: Fri, 06 Dec 2019 01:40:27 GMT  
-		Size: 72.2 KB (72168 bytes)  
+	-	`sha256:8334e4feab309edb35cdf7bec81a8a27169fa44dde213e3030369881eda125f1`  
+		Last Modified: Thu, 19 Dec 2019 01:42:35 GMT  
+		Size: 72.1 KB (72144 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d14842d0c142c0039a7a184b2b3d335b2a01864a6235ea3dda30897e146ad1c6`  
-		Last Modified: Fri, 06 Dec 2019 02:53:43 GMT  
-		Size: 310.0 B  
+	-	`sha256:6e5b8d229e7b1d88a7c021b6c715fb1dc4558108381b5279c56a41a62dbc2261`  
+		Last Modified: Thu, 19 Dec 2019 06:32:06 GMT  
+		Size: 306.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d2190da7f3695c3878621e1660bf04a2c8dbdfef966bffeb6971cf76aed20f16`  
-		Last Modified: Fri, 06 Dec 2019 02:53:43 GMT  
-		Size: 1.4 KB (1414 bytes)  
+	-	`sha256:8a14230d6a9f6580d0617afb712af2aa3a52531275d062968f9876403ef06fb4`  
+		Last Modified: Thu, 19 Dec 2019 06:32:05 GMT  
+		Size: 1.4 KB (1421 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:55e067e4d19dc08989322d9eb8129d7bdbf1bf797725927442cc93bf69ae0d33`  
-		Last Modified: Fri, 06 Dec 2019 02:53:40 GMT  
-		Size: 1.3 MB (1347029 bytes)  
+	-	`sha256:6d0c4ce6bd51ba7c0848bd56478144b0695f576f8ae0678eb62e05ee3559fc42`  
+		Last Modified: Thu, 19 Dec 2019 06:32:03 GMT  
+		Size: 1.3 MB (1347007 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ff1668716d22838ddf256cebcbf1b09ddc48fc942a5842b5e13e6c44e830c394`  
-		Last Modified: Fri, 06 Dec 2019 02:53:39 GMT  
-		Size: 135.8 KB (135823 bytes)  
+	-	`sha256:8f2e3e1cdb6c28b9b5b15dba0737ad3ed00202221c4c671693dc9fc7b7ba77cc`  
+		Last Modified: Thu, 19 Dec 2019 06:32:02 GMT  
+		Size: 135.8 KB (135826 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2a7c9bfcff913dd0e174b7de4290afacf966f43e6be2dd050e56584c94028fe2`  
-		Last Modified: Fri, 06 Dec 2019 02:53:39 GMT  
-		Size: 1.5 KB (1479 bytes)  
+	-	`sha256:43cb845103383d0bd1567a8b09f649e5f523c37b005bd6625351c8dbf52f6976`  
+		Last Modified: Thu, 19 Dec 2019 06:32:01 GMT  
+		Size: 1.5 KB (1473 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:04e9df15d0417b3f6421f2a692de9e7bdfa605d9bf0105088ad284939e459927`  
-		Last Modified: Fri, 06 Dec 2019 02:53:40 GMT  
-		Size: 570.5 KB (570451 bytes)  
+	-	`sha256:2d4d6287f785538118622662e0c60ab299f7a2ae11f5301fa041f86527b24464`  
+		Last Modified: Thu, 19 Dec 2019 06:32:02 GMT  
+		Size: 570.5 KB (570450 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:072c9cb6de1241a262601cb46dc6b10bff853e228b847c61d3443de139fb9ac2`  
-		Last Modified: Fri, 06 Dec 2019 02:53:39 GMT  
-		Size: 498.0 B  
+	-	`sha256:81477a62f96cdc3549a2c6c8ac63f34fc068128715c326c6c916ac7a607475f5`  
+		Last Modified: Thu, 19 Dec 2019 06:32:02 GMT  
+		Size: 497.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `adminer:4.7.5`
 
 ```console
-$ docker pull adminer@sha256:c15822ec7ba7977c385e5ebcda2fcbeb09812edd97bbd61d7737fa8a8e53e3e6
+$ docker pull adminer@sha256:10c219a46e3b5950dd4e5f9c3dfb89a6c44eb9a18f10e6849417c47136493388
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1947,14 +1947,14 @@ $ docker pull adminer@sha256:c15822ec7ba7977c385e5ebcda2fcbeb09812edd97bbd61d773
 ### `adminer:4.7.5` - linux; amd64
 
 ```console
-$ docker pull adminer@sha256:86ba5afe8fee41c253bf89c258bca85d8640be894ae7716d3e726b9b4047c381
+$ docker pull adminer@sha256:e6d727411f1819b13c88314cf67a5f8a1f22d01fa53a25b493ca93bc12ebe74e
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **31.0 MB (31013555 bytes)**  
+-	Total Size: **31.0 MB (31027461 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:830d96c7612a7e7be76322d5741c2db4944f31f9f4d2cb6991cb242e12f4ae5a`
+-	Image ID: `sha256:b426045b520a8937f9baa8c890e3482996b4cf8f92ef9967738f67073d493407`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php","-S","[::]:8080","-t","\/var\/www\/html"]`
 
@@ -1981,57 +1981,57 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 01:10:28 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:48:56 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:48:56 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:48:56 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:48:59 GMT
+# Wed, 18 Dec 2019 22:38:21 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:38:21 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:38:21 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:38:24 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:48:59 GMT
+# Wed, 18 Dec 2019 22:38:24 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:55:11 GMT
+# Wed, 18 Dec 2019 22:44:31 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:21:33 GMT
+# Wed, 18 Dec 2019 22:44:32 GMT
 COPY multi:0b7e4a1b9cd5748d214539db3c6bee9b30805d1933690492830b56ffcd31f68d in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:21:35 GMT
+# Wed, 18 Dec 2019 22:44:33 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:21:35 GMT
+# Wed, 18 Dec 2019 22:44:33 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:21:35 GMT
+# Wed, 18 Dec 2019 22:44:33 GMT
 CMD ["php" "-a"]
-# Fri, 06 Dec 2019 01:46:14 GMT
+# Thu, 19 Dec 2019 05:35:45 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 01:46:15 GMT
+# Thu, 19 Dec 2019 05:35:45 GMT
 STOPSIGNAL SIGINT
-# Fri, 06 Dec 2019 01:46:15 GMT
+# Thu, 19 Dec 2019 05:35:46 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 01:46:16 GMT
+# Thu, 19 Dec 2019 05:35:46 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 01:46:16 GMT
+# Thu, 19 Dec 2019 05:35:47 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 01:46:34 GMT
+# Thu, 19 Dec 2019 05:36:05 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 01:46:34 GMT
+# Thu, 19 Dec 2019 05:36:05 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 01:46:35 GMT
+# Thu, 19 Dec 2019 05:36:05 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 01:46:35 GMT
+# Thu, 19 Dec 2019 05:36:06 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 01:46:35 GMT
+# Thu, 19 Dec 2019 05:36:06 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 01:46:36 GMT
+# Thu, 19 Dec 2019 05:36:07 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 01:46:36 GMT
+# Thu, 19 Dec 2019 05:36:07 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:46:37 GMT
+# Thu, 19 Dec 2019 05:36:08 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:46:37 GMT
+# Thu, 19 Dec 2019 05:36:08 GMT
 USER adminer
-# Fri, 06 Dec 2019 01:46:37 GMT
+# Thu, 19 Dec 2019 05:36:08 GMT
 CMD ["php" "-S" "[::]:8080" "-t" "/var/www/html"]
-# Fri, 06 Dec 2019 01:46:37 GMT
+# Thu, 19 Dec 2019 05:36:08 GMT
 EXPOSE 8080
 ```
 
@@ -2052,52 +2052,52 @@ EXPOSE 8080
 		Last Modified: Mon, 21 Oct 2019 21:44:18 GMT  
 		Size: 222.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c480d86e9f76b9604df41b59ff15c277235e77570c3094e24beea689906d7e85`  
-		Last Modified: Thu, 28 Nov 2019 21:13:22 GMT  
-		Size: 10.3 MB (10250558 bytes)  
+	-	`sha256:b0c3cc2f08e3e093e7f2363216f6414027208adc012c5aa07db197341329fe72`  
+		Last Modified: Thu, 19 Dec 2019 03:00:28 GMT  
+		Size: 10.3 MB (10263892 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f3842726b8d86447ea9f8ca1885524b2ae44cf308c3ae2e11f372aa6db308f32`  
-		Last Modified: Thu, 28 Nov 2019 21:13:21 GMT  
+	-	`sha256:57fb2ca7191a3ef22a9701e838adaf70fdbd265eb24703f14179044284913417`  
+		Last Modified: Thu, 19 Dec 2019 03:00:27 GMT  
 		Size: 498.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:57a451954efdb35ed624196af05c79b645dc444faaccc19d9d45d112f6de4061`  
-		Last Modified: Thu, 28 Nov 2019 21:13:24 GMT  
-		Size: 14.6 MB (14589908 bytes)  
+	-	`sha256:719b549f829c694acfed15af4094974701bcb4c0285684f08d92cf8d9ec9bcdc`  
+		Last Modified: Thu, 19 Dec 2019 03:00:33 GMT  
+		Size: 14.6 MB (14590503 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5a0b952c237a06829b97d3ed1d92cacf10888f77fba63726d16867056a4f044c`  
-		Last Modified: Fri, 06 Dec 2019 01:26:49 GMT  
-		Size: 2.2 KB (2216 bytes)  
+	-	`sha256:81e6bc38092826fd2472c7ca1eb2c700fed834bbd765e80ff2a643fd121154d2`  
+		Last Modified: Thu, 19 Dec 2019 03:00:26 GMT  
+		Size: 2.2 KB (2215 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:152b9d9c5ef59610e7b35742bebd1808171b7de2c4ccec2f0731a55a7559360d`  
-		Last Modified: Fri, 06 Dec 2019 01:26:48 GMT  
-		Size: 72.3 KB (72319 bytes)  
+	-	`sha256:a754e64b7156262e64e31a7201d5c625a9db50e96ecac534e504a6393f4e1a9e`  
+		Last Modified: Thu, 19 Dec 2019 03:00:27 GMT  
+		Size: 72.3 KB (72302 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1e64c9abda242b9b4d3a6c1baf781dda52eabbb6ef6d75db40cc72d87f1c4c77`  
-		Last Modified: Fri, 06 Dec 2019 01:47:18 GMT  
-		Size: 308.0 B  
+	-	`sha256:90f3f908ddee8f4ee6c6ca007ced4430786e103eac072c59fee4b402b2d8c388`  
+		Last Modified: Thu, 19 Dec 2019 05:36:51 GMT  
+		Size: 307.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d62f090b0e9efd0bfb9ba692958683cf86a15d423cc82c1609b954876086d6a8`  
-		Last Modified: Fri, 06 Dec 2019 01:47:18 GMT  
+	-	`sha256:857b7e4aae9f2ade154cb505cf91e6521e4099d23159d182a8cbef713c81532b`  
+		Last Modified: Thu, 19 Dec 2019 05:36:51 GMT  
 		Size: 1.4 KB (1372 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:762e247790399e6560e4640ca01701a7fcc2211f8cee51913462b618a25167af`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
-		Size: 1.3 MB (1267207 bytes)  
+	-	`sha256:ace782c3ac09d3f64c77972eafa84fee9f30761a8b9424bb4ffc178f8ebcf1ea`  
+		Last Modified: Thu, 19 Dec 2019 05:36:50 GMT  
+		Size: 1.3 MB (1267197 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0f51bae1177740cf6eec7579667748ed24bec56021cbb74b7210edc18f01be18`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
+	-	`sha256:a67e9e57ebac5385c07290704a48959e42587e9cca35993f56e0ec74384988fd`  
+		Last Modified: Thu, 19 Dec 2019 05:36:50 GMT  
 		Size: 125.7 KB (125657 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:628599883e3cd44a98167c252bdf0ab5a593036911dba0257cc80613a629ba8b`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
-		Size: 1.5 KB (1472 bytes)  
+	-	`sha256:49eb563494c485a889d81dda7ee04ce14f7b22cfa901415e048a5c0c18d2bb0f`  
+		Last Modified: Thu, 19 Dec 2019 05:36:49 GMT  
+		Size: 1.5 KB (1477 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3536dd8cbdfc6bc3a00a8c6e170b6b28329ba806612bca28010703e03746e34e`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
-		Size: 570.4 KB (570378 bytes)  
+	-	`sha256:3b5bc3cefb34ffac141e2420696af773ce85d635ff6d02d406903625b83b3f04`  
+		Last Modified: Thu, 19 Dec 2019 05:36:50 GMT  
+		Size: 570.4 KB (570379 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6eeb0c1100b26366c86db33f094c4a819fc26e55ce4eb2e5f5ab309c4a02edb0`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
+	-	`sha256:b807bb1614467154aa601b40815ea51d330eebb00f281a71b54af161d17b20ec`  
+		Last Modified: Thu, 19 Dec 2019 05:36:49 GMT  
 		Size: 496.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -2261,14 +2261,14 @@ EXPOSE 8080
 ### `adminer:4.7.5` - linux; arm variant v7
 
 ```console
-$ docker pull adminer@sha256:ca8d6b805bd6de4b7ae82a31dcaa1c1eaa16c7170d6a2d8a84390246fb323f1a
+$ docker pull adminer@sha256:45f3f63bea4b53ed6f840b452aad505d813cf99755272303c705731a9c2c1a37
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **28.4 MB (28355059 bytes)**  
+-	Total Size: **28.4 MB (28375258 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6a6a009dde2aee41ade135a5592990a968056ac0ca2903616b3146d78e8df4d4`
+-	Image ID: `sha256:c6fcf1f9bcc93e97da85dddf171a35cc7c3a686b415d320b4737e95e19bcbfec`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php","-S","[::]:8080","-t","\/var\/www\/html"]`
 
@@ -2295,57 +2295,57 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 00:42:48 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:19:44 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:19:45 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:19:46 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:19:51 GMT
+# Wed, 18 Dec 2019 22:13:45 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:13:46 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:13:46 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:13:50 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:19:52 GMT
+# Wed, 18 Dec 2019 22:13:51 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:22:34 GMT
+# Wed, 18 Dec 2019 22:16:23 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:17:24 GMT
+# Wed, 18 Dec 2019 22:16:24 GMT
 COPY multi:0b7e4a1b9cd5748d214539db3c6bee9b30805d1933690492830b56ffcd31f68d in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:17:29 GMT
+# Wed, 18 Dec 2019 22:16:27 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:17:32 GMT
+# Wed, 18 Dec 2019 22:16:28 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:17:33 GMT
+# Wed, 18 Dec 2019 22:16:28 GMT
 CMD ["php" "-a"]
-# Fri, 06 Dec 2019 04:50:48 GMT
+# Thu, 19 Dec 2019 05:43:15 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 04:50:50 GMT
+# Thu, 19 Dec 2019 05:43:15 GMT
 STOPSIGNAL SIGINT
-# Fri, 06 Dec 2019 04:50:59 GMT
+# Thu, 19 Dec 2019 05:43:18 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 04:51:01 GMT
+# Thu, 19 Dec 2019 05:43:19 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 04:51:06 GMT
+# Thu, 19 Dec 2019 05:43:21 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 04:51:54 GMT
+# Thu, 19 Dec 2019 05:43:50 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 04:51:56 GMT
+# Thu, 19 Dec 2019 05:43:51 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 04:52:00 GMT
+# Thu, 19 Dec 2019 05:43:51 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 04:52:04 GMT
+# Thu, 19 Dec 2019 05:43:52 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 04:52:09 GMT
+# Thu, 19 Dec 2019 05:43:52 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 04:52:23 GMT
+# Thu, 19 Dec 2019 05:43:55 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 04:52:25 GMT
+# Thu, 19 Dec 2019 05:43:56 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 04:52:27 GMT
+# Thu, 19 Dec 2019 05:43:56 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 04:52:29 GMT
+# Thu, 19 Dec 2019 05:43:57 GMT
 USER adminer
-# Fri, 06 Dec 2019 04:52:33 GMT
+# Thu, 19 Dec 2019 05:43:58 GMT
 CMD ["php" "-S" "[::]:8080" "-t" "/var/www/html"]
-# Fri, 06 Dec 2019 04:52:38 GMT
+# Thu, 19 Dec 2019 05:43:58 GMT
 EXPOSE 8080
 ```
 
@@ -2366,53 +2366,53 @@ EXPOSE 8080
 		Last Modified: Mon, 21 Oct 2019 22:14:00 GMT  
 		Size: 267.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:74d543cc24962e4f8efaef27c314b6c510d9e89795bb3fefc76190c88e6adaa0`  
-		Last Modified: Thu, 28 Nov 2019 20:37:08 GMT  
-		Size: 10.3 MB (10250580 bytes)  
+	-	`sha256:9ca9d33ba72a23b5503797dc37271a4e969f593c1f91fab7b5e8fc9e199a3237`  
+		Last Modified: Thu, 19 Dec 2019 00:23:23 GMT  
+		Size: 10.3 MB (10263922 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:61533199b1c12541ec2c6e8792481ed0bf870ab2614fca26df4472ed7489905b`  
-		Last Modified: Thu, 28 Nov 2019 20:37:06 GMT  
-		Size: 494.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cb40e8b71fdcda892a7fff7b40bd040c14189bdbf81c6900e2506a34d0a5e2a8`  
-		Last Modified: Thu, 28 Nov 2019 20:37:11 GMT  
-		Size: 12.7 MB (12659015 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:73e8322b4997afc76e3d6aded9b6977d019a876387f38bb0c7b20303eb741ea1`  
-		Last Modified: Fri, 06 Dec 2019 01:35:28 GMT  
-		Size: 2.2 KB (2215 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bee10ead90205f4f11c6737cb5e9809cf554b750d259f2bb978806599ff48d4d`  
-		Last Modified: Fri, 06 Dec 2019 01:35:28 GMT  
-		Size: 71.9 KB (71901 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b2343ca0934ccfcf3473bcd86e8769c80a356c838360d24e6c15c8549d8799ff`  
-		Last Modified: Fri, 06 Dec 2019 04:55:13 GMT  
-		Size: 311.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3339cf595876f587528feea8189a242d1eee086d7c129183282e0d0bf5dfec9e`  
-		Last Modified: Fri, 06 Dec 2019 04:55:13 GMT  
-		Size: 1.4 KB (1420 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:273f3098e61dc9b47d64ba9a3e339b88d90351233841e926290aaf8f81b719e8`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
-		Size: 1.1 MB (1098041 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f48a0dca6ba28aa1b4488aa4541f847d05b842f7adfd2fbe4df3d510ea08bb44`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
-		Size: 113.6 KB (113646 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:911b6063ce3a1a087497bb65c33df13aa956676a9977dec81024c9158363b7a1`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
-		Size: 1.5 KB (1474 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c17014746daefe47239efc1403be753dbbd9860da773a322a172487485cb8993`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
-		Size: 570.5 KB (570460 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:87db519a03011aadfd54c42773aed91d48871a3e423f8652ae2fa3c6a201d7f0`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
+	-	`sha256:9abaf2cca6b8f6360c51d0ab64e5733dd6fe54d2160f0b90b2c2b30cc9d09556`  
+		Last Modified: Thu, 19 Dec 2019 00:23:23 GMT  
 		Size: 498.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:0d1c28a483480472543267f13fa560e37c42d398e03258ec10f3259791f26c2b`  
+		Last Modified: Thu, 19 Dec 2019 00:23:26 GMT  
+		Size: 12.7 MB (12665914 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c296b4d3757a3eb5a9eaa1bee6c67b7f85258f295e5d1adfeae082aaa4ffe554`  
+		Last Modified: Thu, 19 Dec 2019 00:23:23 GMT  
+		Size: 2.2 KB (2213 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:3f0c6898b03f711ee9c13adb0e7ac827b235e872574ad2e0466ce38a7006494f`  
+		Last Modified: Thu, 19 Dec 2019 00:23:23 GMT  
+		Size: 71.9 KB (71882 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:85f53d18384dba7127519315cb122ebcc1c8f1420b7359054849ebd5c2eb8501`  
+		Last Modified: Thu, 19 Dec 2019 05:45:20 GMT  
+		Size: 308.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:29ba2b51dd9ec6d55f6dcbd14fd64e4424e17d54d50559b04f7872439fe23c84`  
+		Last Modified: Thu, 19 Dec 2019 05:45:20 GMT  
+		Size: 1.4 KB (1418 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ed774f039edbc14130f2a14cc8a6036a51ebcd1eb96bbfd75d3ac1c581bdb3a2`  
+		Last Modified: Thu, 19 Dec 2019 05:45:18 GMT  
+		Size: 1.1 MB (1098039 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ddbca63dcd496dfe19ebd0ce58453dcf241bca16bd12220566202434e47730ff`  
+		Last Modified: Thu, 19 Dec 2019 05:45:18 GMT  
+		Size: 113.6 KB (113634 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:fdc0c14d20b92cde224999d0a7464e0dd1063ed2fe903a20fc7902d451928868`  
+		Last Modified: Thu, 19 Dec 2019 05:45:19 GMT  
+		Size: 1.5 KB (1477 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:4854bad04d3751dd937dde7badbbe7b0be2baee2b0c0b6e654e45ea0155fd765`  
+		Last Modified: Thu, 19 Dec 2019 05:45:18 GMT  
+		Size: 570.5 KB (570450 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:183711409a19b109d1862eb8f004260effa66c92f58f14f1ad425a474ba8572d`  
+		Last Modified: Thu, 19 Dec 2019 05:45:18 GMT  
+		Size: 499.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adminer:4.7.5` - linux; arm64 variant v8
@@ -2575,14 +2575,14 @@ EXPOSE 8080
 ### `adminer:4.7.5` - linux; 386
 
 ```console
-$ docker pull adminer@sha256:3b3b632ad55b7004f6d67004583ca8d4756f52487240d6530977ad9a503ba629
+$ docker pull adminer@sha256:4d9d4d3dba3055adde16332ec8bb9f98fbc264574d8755f161b2c7420f0fb73e
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **31.6 MB (31595367 bytes)**  
+-	Total Size: **31.6 MB (31611527 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1a9e767ae5c65d7fecf62761e3afd0b53184749f9cfcca68ae1c099ed852e137`
+-	Image ID: `sha256:6921567de258c77b202adc3226c7996e1fb5f526f205d6712821a57b84db89ee`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php","-S","[::]:8080","-t","\/var\/www\/html"]`
 
@@ -2609,57 +2609,57 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 03:40:32 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:03:14 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:03:14 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:03:14 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:03:17 GMT
+# Wed, 18 Dec 2019 23:18:21 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 23:18:22 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 23:18:22 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 23:18:24 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:03:17 GMT
+# Wed, 18 Dec 2019 23:18:25 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:08:51 GMT
+# Wed, 18 Dec 2019 23:27:50 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 00:41:35 GMT
+# Wed, 18 Dec 2019 23:27:51 GMT
 COPY multi:0b7e4a1b9cd5748d214539db3c6bee9b30805d1933690492830b56ffcd31f68d in /usr/local/bin/ 
-# Fri, 06 Dec 2019 00:41:36 GMT
+# Wed, 18 Dec 2019 23:27:53 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 00:41:36 GMT
+# Wed, 18 Dec 2019 23:27:53 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 00:41:36 GMT
+# Wed, 18 Dec 2019 23:27:53 GMT
 CMD ["php" "-a"]
-# Fri, 06 Dec 2019 01:35:26 GMT
+# Thu, 19 Dec 2019 06:02:48 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 01:35:26 GMT
+# Thu, 19 Dec 2019 06:02:48 GMT
 STOPSIGNAL SIGINT
-# Fri, 06 Dec 2019 01:35:27 GMT
+# Thu, 19 Dec 2019 06:02:49 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 01:35:27 GMT
+# Thu, 19 Dec 2019 06:02:49 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 01:35:28 GMT
+# Thu, 19 Dec 2019 06:02:50 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:10 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:10 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:10 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:10 GMT
 USER adminer
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:11 GMT
 CMD ["php" "-S" "[::]:8080" "-t" "/var/www/html"]
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:11 GMT
 EXPOSE 8080
 ```
 
@@ -2680,66 +2680,66 @@ EXPOSE 8080
 		Last Modified: Mon, 21 Oct 2019 20:16:09 GMT  
 		Size: 221.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7a2f924d5bef762db8a36415395a7d8d645e86c8c10e98670ee6441f4dfffc4b`  
-		Last Modified: Thu, 28 Nov 2019 20:25:40 GMT  
-		Size: 10.3 MB (10250558 bytes)  
+	-	`sha256:8d3c120548e2cc8578bcbc722a1de16f16aa1bbd6f95a3f3f250760ef49d6425`  
+		Last Modified: Thu, 19 Dec 2019 03:54:02 GMT  
+		Size: 10.3 MB (10263911 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d86e42c218805225dcb7fb493e2333b3aa5dbe52acfe920142f7beddb424cf83`  
-		Last Modified: Thu, 28 Nov 2019 20:25:39 GMT  
-		Size: 497.0 B  
+	-	`sha256:6c67772931308b5da9ecd54e42e8b4f0cee6a6ca800c39c9bb90f7935371f173`  
+		Last Modified: Thu, 19 Dec 2019 03:54:01 GMT  
+		Size: 498.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df9403ccfdc695e35b6d3018248acf35d406f0cfafb094c31e3837d69bafd01c`  
-		Last Modified: Thu, 28 Nov 2019 20:25:45 GMT  
-		Size: 15.0 MB (14964307 bytes)  
+	-	`sha256:81de9fd8c68cc661996bb58ab58c8ca7fcc4523d035c2bbfc2835549da0a48ae`  
+		Last Modified: Thu, 19 Dec 2019 03:54:07 GMT  
+		Size: 15.0 MB (14967109 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ec757c77b33207cd2e297fb2ab7146f4245ec36acc52bd38cba1fbd4e3ec0b8b`  
-		Last Modified: Fri, 06 Dec 2019 00:46:31 GMT  
-		Size: 2.2 KB (2220 bytes)  
+	-	`sha256:2cc02e941d1953f8fbbd589f5a7cece48de8e05d8626f4dc9fc7272716e999e9`  
+		Last Modified: Thu, 19 Dec 2019 03:54:01 GMT  
+		Size: 2.2 KB (2211 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4d52ef7bb6d6ca924fc76da53a0d613f171978768e3b572da49a8f77ea6f8d6c`  
-		Last Modified: Fri, 06 Dec 2019 00:46:30 GMT  
+	-	`sha256:8a7864fff700c7ab0ac04ee51707c956b859bd42ce6e4bac9317a0224058ec59`  
+		Last Modified: Thu, 19 Dec 2019 03:54:01 GMT  
 		Size: 71.5 KB (71454 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6e5b781398aa148728fa13f2df2f88fa4d9b3570891ff55a3af9cb50c2098412`  
-		Last Modified: Fri, 06 Dec 2019 01:36:35 GMT  
+	-	`sha256:7274061ca352a1262686abb045838ea905ae178eee118a6a1e23834490af7953`  
+		Last Modified: Thu, 19 Dec 2019 06:03:50 GMT  
 		Size: 308.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:de505ea02604bd909cfaf3b498de539cedd1332bfe778ba03947dce6e0d33d23`  
-		Last Modified: Fri, 06 Dec 2019 01:36:35 GMT  
-		Size: 1.4 KB (1376 bytes)  
+	-	`sha256:e79de5c64323f911324528fcb2f88bc245b69fe50c242865fbb4ac204b52b545`  
+		Last Modified: Thu, 19 Dec 2019 06:03:51 GMT  
+		Size: 1.4 KB (1373 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:14cdb373d56b69e1927e31d36942beeeb400c2632b5bc77e1f73ad115ba8383a`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 1.4 MB (1382441 bytes)  
+	-	`sha256:673d96f2a5b2ca78e58cf695d0dba02cdf0279a1620b9a4b7e62192cb52054a9`  
+		Last Modified: Thu, 19 Dec 2019 06:03:50 GMT  
+		Size: 1.4 MB (1382437 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e4bcc50f7578a489fab996ffee3c7ea194e47a068ad3cae0821f4d60e06986b7`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 128.8 KB (128797 bytes)  
+	-	`sha256:b14ef693e693233cf4fea5d27768673723fdd0ac67859f0740a6e3ca15718406`  
+		Last Modified: Thu, 19 Dec 2019 06:03:49 GMT  
+		Size: 128.8 KB (128815 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5463ed1f22d5ece3465e961d34ec3854c36dfe23261548ab50b89fdd0f775e00`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 1.5 KB (1474 bytes)  
+	-	`sha256:14095c6e1a5c6c8e2eb79a0edb5fba2bfc43757e24a2d5953fc267cf77a178b5`  
+		Last Modified: Thu, 19 Dec 2019 06:03:49 GMT  
+		Size: 1.5 KB (1473 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d98966329f05e112300ee57648333a12079a1cc8a41d15d0e396391c444e67c1`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 570.4 KB (570373 bytes)  
+	-	`sha256:bf75ef62d8952c613219a1462ce69c61b6e6ca742bfe6578d3732a3d97fba9c4`  
+		Last Modified: Thu, 19 Dec 2019 06:03:50 GMT  
+		Size: 570.4 KB (570377 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:adef02fa3ca71fdceafb1fd92ff74960848b5673988dc3f2dc021aeaa943966b`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 496.0 B  
+	-	`sha256:79374c30d550e98acc64a36e936903f0fd6eee39645aef5007145f7860c1d8f9`  
+		Last Modified: Thu, 19 Dec 2019 06:03:49 GMT  
+		Size: 495.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adminer:4.7.5` - linux; ppc64le
 
 ```console
-$ docker pull adminer@sha256:c59dc08edbac430c86555d96e000a1d49c59e8a66bc5e9d3b073ed8fd76f08ea
+$ docker pull adminer@sha256:b10e79ba1e7932ac27c0ffb06cc228415b4552687d150f89ed3f21ee08194220
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **32.2 MB (32227844 bytes)**  
+-	Total Size: **32.2 MB (32247973 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:96efedc317d25ffb54f9f12d72c5f57e58d4d511e52b62c3548a5b787d1f3ad5`
+-	Image ID: `sha256:573383ff5140ec4fcaf742c4be6757a0567423c5c5833be7d728669583167bd3`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php","-S","[::]:8080","-t","\/var\/www\/html"]`
 
@@ -2766,57 +2766,57 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 01:17:40 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:44:14 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:44:17 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:44:19 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:44:32 GMT
+# Wed, 18 Dec 2019 22:43:03 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:43:05 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:43:07 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:43:21 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:44:34 GMT
+# Wed, 18 Dec 2019 22:43:23 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:48:15 GMT
+# Wed, 18 Dec 2019 22:46:52 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:21:52 GMT
+# Wed, 18 Dec 2019 22:46:54 GMT
 COPY multi:0b7e4a1b9cd5748d214539db3c6bee9b30805d1933690492830b56ffcd31f68d in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:22:02 GMT
+# Wed, 18 Dec 2019 22:46:59 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:22:05 GMT
+# Wed, 18 Dec 2019 22:47:01 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:22:06 GMT
+# Wed, 18 Dec 2019 22:47:03 GMT
 CMD ["php" "-a"]
-# Fri, 06 Dec 2019 02:50:03 GMT
+# Thu, 19 Dec 2019 06:27:50 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 02:50:05 GMT
+# Thu, 19 Dec 2019 06:27:55 GMT
 STOPSIGNAL SIGINT
-# Fri, 06 Dec 2019 02:50:19 GMT
+# Thu, 19 Dec 2019 06:28:07 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 02:50:23 GMT
+# Thu, 19 Dec 2019 06:28:11 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 02:50:32 GMT
+# Thu, 19 Dec 2019 06:28:18 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 02:51:03 GMT
+# Thu, 19 Dec 2019 06:28:51 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 02:51:07 GMT
+# Thu, 19 Dec 2019 06:28:54 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 02:51:08 GMT
+# Thu, 19 Dec 2019 06:28:58 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 02:51:12 GMT
+# Thu, 19 Dec 2019 06:28:59 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 02:51:14 GMT
+# Thu, 19 Dec 2019 06:29:03 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 02:51:24 GMT
+# Thu, 19 Dec 2019 06:29:15 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 02:51:27 GMT
+# Thu, 19 Dec 2019 06:29:18 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 02:51:33 GMT
+# Thu, 19 Dec 2019 06:29:20 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 02:51:35 GMT
+# Thu, 19 Dec 2019 06:29:26 GMT
 USER adminer
-# Fri, 06 Dec 2019 02:51:40 GMT
+# Thu, 19 Dec 2019 06:29:30 GMT
 CMD ["php" "-S" "[::]:8080" "-t" "/var/www/html"]
-# Fri, 06 Dec 2019 02:51:44 GMT
+# Thu, 19 Dec 2019 06:29:34 GMT
 EXPOSE 8080
 ```
 
@@ -2837,59 +2837,59 @@ EXPOSE 8080
 		Last Modified: Mon, 21 Oct 2019 20:21:00 GMT  
 		Size: 269.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f41671226d36c01ec9c7f1ea38cd673556952e7f899f4f4b89c9fbdebd29a53b`  
-		Last Modified: Thu, 28 Nov 2019 21:10:15 GMT  
-		Size: 10.3 MB (10250609 bytes)  
+	-	`sha256:4b579441bf6e92a1a6e81ea93691621e4c87a50d9ffb31d4b378b5df7d32872f`  
+		Last Modified: Thu, 19 Dec 2019 01:42:36 GMT  
+		Size: 10.3 MB (10263942 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1d940bc1bed9725313bbc396a711a790598103f8425780c96a2b8e0b8c314f83`  
-		Last Modified: Thu, 28 Nov 2019 21:10:13 GMT  
-		Size: 498.0 B  
+	-	`sha256:439349ae045fb12b63f4ea12de47a2383371a3189b6e95b5a84693903df9b0a4`  
+		Last Modified: Thu, 19 Dec 2019 01:42:35 GMT  
+		Size: 497.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:02effde3bc9b924c0d25924f0e1f298c9e7644c948efa10ff4d8945399a16b74`  
-		Last Modified: Thu, 28 Nov 2019 21:10:19 GMT  
-		Size: 15.6 MB (15648865 bytes)  
+	-	`sha256:48b07dcdf318b1dc68a37f668ccb781855c62ec5ac7721f9c1149fdb135ba87d`  
+		Last Modified: Thu, 19 Dec 2019 01:42:48 GMT  
+		Size: 15.7 MB (15655717 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e31c94093f50a0b5f297e9da64e47405dbe46f8ec535d000ee7f725a553fc633`  
-		Last Modified: Fri, 06 Dec 2019 01:40:27 GMT  
-		Size: 2.2 KB (2217 bytes)  
+	-	`sha256:c7eab24ff28c16bb245a5237cc4946807bcb8d827d3702b5bb9f74cfd586fece`  
+		Last Modified: Thu, 19 Dec 2019 01:42:35 GMT  
+		Size: 2.2 KB (2210 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:232540856492a6874250c20d02259faf35c4a5b5aa42520d4c9528742d779fd0`  
-		Last Modified: Fri, 06 Dec 2019 01:40:27 GMT  
-		Size: 72.2 KB (72168 bytes)  
+	-	`sha256:8334e4feab309edb35cdf7bec81a8a27169fa44dde213e3030369881eda125f1`  
+		Last Modified: Thu, 19 Dec 2019 01:42:35 GMT  
+		Size: 72.1 KB (72144 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d14842d0c142c0039a7a184b2b3d335b2a01864a6235ea3dda30897e146ad1c6`  
-		Last Modified: Fri, 06 Dec 2019 02:53:43 GMT  
-		Size: 310.0 B  
+	-	`sha256:6e5b8d229e7b1d88a7c021b6c715fb1dc4558108381b5279c56a41a62dbc2261`  
+		Last Modified: Thu, 19 Dec 2019 06:32:06 GMT  
+		Size: 306.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d2190da7f3695c3878621e1660bf04a2c8dbdfef966bffeb6971cf76aed20f16`  
-		Last Modified: Fri, 06 Dec 2019 02:53:43 GMT  
-		Size: 1.4 KB (1414 bytes)  
+	-	`sha256:8a14230d6a9f6580d0617afb712af2aa3a52531275d062968f9876403ef06fb4`  
+		Last Modified: Thu, 19 Dec 2019 06:32:05 GMT  
+		Size: 1.4 KB (1421 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:55e067e4d19dc08989322d9eb8129d7bdbf1bf797725927442cc93bf69ae0d33`  
-		Last Modified: Fri, 06 Dec 2019 02:53:40 GMT  
-		Size: 1.3 MB (1347029 bytes)  
+	-	`sha256:6d0c4ce6bd51ba7c0848bd56478144b0695f576f8ae0678eb62e05ee3559fc42`  
+		Last Modified: Thu, 19 Dec 2019 06:32:03 GMT  
+		Size: 1.3 MB (1347007 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ff1668716d22838ddf256cebcbf1b09ddc48fc942a5842b5e13e6c44e830c394`  
-		Last Modified: Fri, 06 Dec 2019 02:53:39 GMT  
-		Size: 135.8 KB (135823 bytes)  
+	-	`sha256:8f2e3e1cdb6c28b9b5b15dba0737ad3ed00202221c4c671693dc9fc7b7ba77cc`  
+		Last Modified: Thu, 19 Dec 2019 06:32:02 GMT  
+		Size: 135.8 KB (135826 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2a7c9bfcff913dd0e174b7de4290afacf966f43e6be2dd050e56584c94028fe2`  
-		Last Modified: Fri, 06 Dec 2019 02:53:39 GMT  
-		Size: 1.5 KB (1479 bytes)  
+	-	`sha256:43cb845103383d0bd1567a8b09f649e5f523c37b005bd6625351c8dbf52f6976`  
+		Last Modified: Thu, 19 Dec 2019 06:32:01 GMT  
+		Size: 1.5 KB (1473 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:04e9df15d0417b3f6421f2a692de9e7bdfa605d9bf0105088ad284939e459927`  
-		Last Modified: Fri, 06 Dec 2019 02:53:40 GMT  
-		Size: 570.5 KB (570451 bytes)  
+	-	`sha256:2d4d6287f785538118622662e0c60ab299f7a2ae11f5301fa041f86527b24464`  
+		Last Modified: Thu, 19 Dec 2019 06:32:02 GMT  
+		Size: 570.5 KB (570450 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:072c9cb6de1241a262601cb46dc6b10bff853e228b847c61d3443de139fb9ac2`  
-		Last Modified: Fri, 06 Dec 2019 02:53:39 GMT  
-		Size: 498.0 B  
+	-	`sha256:81477a62f96cdc3549a2c6c8ac63f34fc068128715c326c6c916ac7a607475f5`  
+		Last Modified: Thu, 19 Dec 2019 06:32:02 GMT  
+		Size: 497.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `adminer:4.7.5-fastcgi`
 
 ```console
-$ docker pull adminer@sha256:32c9e70d68f96c433eefc7a959558b2d7eca29460a2f17e71f68ffb3613a80a0
+$ docker pull adminer@sha256:9e2c982c6dfe8eaaefd23cc5861f3e14e78f2f249b3d6d81ccc2903332c18020
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2904,14 +2904,14 @@ $ docker pull adminer@sha256:32c9e70d68f96c433eefc7a959558b2d7eca29460a2f17e71f6
 ### `adminer:4.7.5-fastcgi` - linux; amd64
 
 ```console
-$ docker pull adminer@sha256:fb61861982d8f821a9612eefdc98c5ad7fba67628272642f0546ce7b8fc810d2
+$ docker pull adminer@sha256:a6fba2c8b8b2aedcc7563a7be20fdba3bed2806ee4ca6bbad9bfe451a247943d
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **31.1 MB (31089366 bytes)**  
+-	Total Size: **31.1 MB (31106050 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:44eba76cc5d76c73c629ebd6d02a2127cd58873c3673f73b71711277e0ebe4dd`
+-	Image ID: `sha256:ce28adb4fe140e43080c7537718777a7893665a109d343d278f2fb4b29a1ab10`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php-fpm"]`
 
@@ -2940,59 +2940,59 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 01:15:45 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:55:28 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:55:29 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:55:29 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:55:31 GMT
+# Wed, 18 Dec 2019 22:44:39 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:44:39 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:44:39 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:44:41 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:55:31 GMT
+# Wed, 18 Dec 2019 22:44:42 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 21:01:42 GMT
+# Wed, 18 Dec 2019 22:53:32 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:21:40 GMT
+# Wed, 18 Dec 2019 22:53:32 GMT
 COPY multi:5581a34bba21fbf2472e857e8cdc8db6d57694020e568954d2fd5901ee074da0 in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:21:42 GMT
+# Wed, 18 Dec 2019 22:53:33 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:21:42 GMT
+# Wed, 18 Dec 2019 22:53:33 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:21:42 GMT
+# Wed, 18 Dec 2019 22:53:33 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 01:21:43 GMT
+# Wed, 18 Dec 2019 22:53:34 GMT
 RUN set -eux; 	cd /usr/local/etc; 	if [ -d php-fpm.d ]; then 		sed 's!=NONE/!=!g' php-fpm.conf.default | tee php-fpm.conf > /dev/null; 		cp php-fpm.d/www.conf.default php-fpm.d/www.conf; 	else 		mkdir php-fpm.d; 		cp php-fpm.conf.default php-fpm.d/www.conf; 		{ 			echo '[global]'; 			echo 'include=etc/php-fpm.d/*.conf'; 		} | tee php-fpm.conf; 	fi; 	{ 		echo '[global]'; 		echo 'error_log = /proc/self/fd/2'; 		echo; echo '; https://github.com/docker-library/php/pull/725#issuecomment-443540114'; echo 'log_limit = 8192'; 		echo; 		echo '[www]'; 		echo '; if we send this to /proc/self/fd/1, it never appears'; 		echo 'access.log = /proc/self/fd/2'; 		echo; 		echo 'clear_env = no'; 		echo; 		echo '; Ensure worker stdout and stderr are sent to the main error log.'; 		echo 'catch_workers_output = yes'; 		echo 'decorate_workers_output = no'; 	} | tee php-fpm.d/docker.conf; 	{ 		echo '[global]'; 		echo 'daemonize = no'; 		echo; 		echo '[www]'; 		echo 'listen = 9000'; 	} | tee php-fpm.d/zz-docker.conf
-# Fri, 06 Dec 2019 01:21:43 GMT
+# Wed, 18 Dec 2019 22:53:34 GMT
 STOPSIGNAL SIGQUIT
-# Fri, 06 Dec 2019 01:21:43 GMT
+# Wed, 18 Dec 2019 22:53:35 GMT
 EXPOSE 9000
-# Fri, 06 Dec 2019 01:21:43 GMT
+# Wed, 18 Dec 2019 22:53:35 GMT
 CMD ["php-fpm"]
-# Fri, 06 Dec 2019 01:46:42 GMT
+# Thu, 19 Dec 2019 05:36:17 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 01:46:43 GMT
+# Thu, 19 Dec 2019 05:36:18 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 01:46:44 GMT
+# Thu, 19 Dec 2019 05:36:19 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 01:47:01 GMT
+# Thu, 19 Dec 2019 05:36:36 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 01:47:01 GMT
+# Thu, 19 Dec 2019 05:36:36 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 01:47:02 GMT
+# Thu, 19 Dec 2019 05:36:36 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 01:47:02 GMT
+# Thu, 19 Dec 2019 05:36:37 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 01:47:02 GMT
+# Thu, 19 Dec 2019 05:36:37 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 01:47:03 GMT
+# Thu, 19 Dec 2019 05:36:38 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 01:47:03 GMT
+# Thu, 19 Dec 2019 05:36:38 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:47:03 GMT
+# Thu, 19 Dec 2019 05:36:38 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:47:04 GMT
+# Thu, 19 Dec 2019 05:36:39 GMT
 USER adminer
-# Fri, 06 Dec 2019 01:47:04 GMT
+# Thu, 19 Dec 2019 05:36:39 GMT
 CMD ["php-fpm"]
 ```
 
@@ -3013,57 +3013,57 @@ CMD ["php-fpm"]
 		Last Modified: Mon, 21 Oct 2019 21:44:18 GMT  
 		Size: 222.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a601c8316c6be88cf4a4644682a7fd958df67c4dccca6ce371527843cc478c7f`  
-		Last Modified: Thu, 28 Nov 2019 21:13:41 GMT  
-		Size: 10.3 MB (10250554 bytes)  
+	-	`sha256:99401fd0ece70360f3ccecf44f844a5a0efdf32146d6c446970c26531752c341`  
+		Last Modified: Thu, 19 Dec 2019 03:00:56 GMT  
+		Size: 10.3 MB (10263900 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fb3804cbe9c1edb0802bb41778e0b051935530870e40f8314aecfcf8e2b21315`  
-		Last Modified: Thu, 28 Nov 2019 21:13:39 GMT  
+	-	`sha256:de913d86f05a50a4c3f792243ec9f24779f57ce0e0238c053c4287d7880a5347`  
+		Last Modified: Thu, 19 Dec 2019 03:00:53 GMT  
 		Size: 497.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3288d779cb3b5cf28ee3e06007de0ff994a17dacf83f4c84e60ebfe31ba948d1`  
-		Last Modified: Thu, 28 Nov 2019 21:13:43 GMT  
-		Size: 14.7 MB (14657297 bytes)  
+	-	`sha256:0f2b5a211ce6ec0d98a72f219b18530d5c25fafc0a7a9a21b7da0330bbbe5797`  
+		Last Modified: Thu, 19 Dec 2019 03:01:00 GMT  
+		Size: 14.7 MB (14660671 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c640bbd2a760395929467de5ee104f09aaeeea47b83dfcfc69da97278e70b945`  
-		Last Modified: Fri, 06 Dec 2019 01:27:11 GMT  
-		Size: 2.2 KB (2219 bytes)  
+	-	`sha256:b0b33dbfafe9a898ff3a2b3e4e1a7af15b797a7c00dd874e9d3c827e395cd43b`  
+		Last Modified: Thu, 19 Dec 2019 03:00:54 GMT  
+		Size: 2.2 KB (2220 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5ce9637f8561c37a2120d04a20e7db57873352d5e5fa53f150a05c15efeb86c4`  
-		Last Modified: Fri, 06 Dec 2019 01:27:11 GMT  
-		Size: 72.3 KB (72319 bytes)  
+	-	`sha256:49e0c9bf0c294f08a2cc44a9197f856fda455f40aa06c532cea2cb79d6877f77`  
+		Last Modified: Thu, 19 Dec 2019 03:00:53 GMT  
+		Size: 72.3 KB (72299 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:178cf949d1df28b308bbfde08ad37ae95550b6e531d123d3bfbf42f8fb630cc9`  
-		Last Modified: Fri, 06 Dec 2019 01:27:11 GMT  
-		Size: 8.4 KB (8416 bytes)  
+	-	`sha256:1aa5c4c9069b45e81276629ede436f3bf5cea9843721c563a1f72553b0d445ec`  
+		Last Modified: Thu, 19 Dec 2019 03:00:54 GMT  
+		Size: 8.4 KB (8409 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4a4176cf6fc0db678f63ad60351550fab8c8f88c4acbdc999b5f146c0abeb2cc`  
-		Last Modified: Fri, 06 Dec 2019 01:47:37 GMT  
-		Size: 310.0 B  
+	-	`sha256:b066b20593318b62a26b9637aa4ab4a2a37c8f397ee9fdba7e79e592e450402f`  
+		Last Modified: Thu, 19 Dec 2019 05:37:01 GMT  
+		Size: 307.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f3ee6614958c36386354c57d02f2707edf448051af00523a696375615ffd4792`  
-		Last Modified: Fri, 06 Dec 2019 01:47:37 GMT  
-		Size: 1.4 KB (1372 bytes)  
+	-	`sha256:640b2caf715bb36f272914262e86e6181fa0510cc8236e55b5a5ff3cd535744d`  
+		Last Modified: Thu, 19 Dec 2019 05:37:01 GMT  
+		Size: 1.4 KB (1373 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:91bb715b44e74412113e259c16cc49f124406bf1fee85491bf055aaa93eb9e6a`  
-		Last Modified: Fri, 06 Dec 2019 01:47:34 GMT  
-		Size: 1.3 MB (1267208 bytes)  
+	-	`sha256:dc66e0562ddf1d4ba9dcaffa1afa1eae778de558f7674bc53c7473b63ac44f22`  
+		Last Modified: Thu, 19 Dec 2019 05:37:00 GMT  
+		Size: 1.3 MB (1267203 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cb970b079b37f6e02d3df5882cd2e3a923fa334ea3abc77fa90c1fc82367e95e`  
-		Last Modified: Fri, 06 Dec 2019 01:47:33 GMT  
+	-	`sha256:b877ea3f3b11a7225696f96d2c7247c2f8b714f79fc03f89f71bebc6b9431424`  
+		Last Modified: Thu, 19 Dec 2019 05:37:00 GMT  
 		Size: 125.7 KB (125656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6baf6eed16971fd51de3f0f170d0b6d4a0378193275c9579659bfa292336f063`  
-		Last Modified: Fri, 06 Dec 2019 01:47:34 GMT  
-		Size: 1.5 KB (1474 bytes)  
+	-	`sha256:014e55e883e88a5a8887682b5c9b8c76b00141600a698701ec3cb97da6380b0f`  
+		Last Modified: Thu, 19 Dec 2019 05:37:00 GMT  
+		Size: 1.5 KB (1475 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ddaf26f3c519006700f20f139a27ab4408d8821c325e8546c03acbda70d3f76f`  
-		Last Modified: Fri, 06 Dec 2019 01:47:34 GMT  
-		Size: 570.4 KB (570382 bytes)  
+	-	`sha256:0ac91ac5b58c527badba4ad4c05ece7bc5954fe9e14a7dd195cc1dc23479603d`  
+		Last Modified: Thu, 19 Dec 2019 05:37:00 GMT  
+		Size: 570.4 KB (570381 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a5f935221cf5489e888bf3acf8b04f178ed625f428fcb84e8d8e4b79a403ed04`  
-		Last Modified: Fri, 06 Dec 2019 01:47:34 GMT  
-		Size: 496.0 B  
+	-	`sha256:2f0eb5db857e60dc084fc2707add56ec223c18d1235477d69daf5a1635a8966d`  
+		Last Modified: Thu, 19 Dec 2019 05:37:00 GMT  
+		Size: 493.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adminer:4.7.5-fastcgi` - linux; arm variant v6
@@ -3234,14 +3234,14 @@ CMD ["php-fpm"]
 ### `adminer:4.7.5-fastcgi` - linux; arm variant v7
 
 ```console
-$ docker pull adminer@sha256:e8a21987f3604277d81acab716a83660516ac8dedfb4265e9e5a315b74855575
+$ docker pull adminer@sha256:fbdfb91799dc6900d61e80c1270b8cfd5e23f5988d759cbed5cd038b1b6baa48
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **28.4 MB (28425499 bytes)**  
+-	Total Size: **28.4 MB (28447463 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0b841f0ed66806ebf1569b0f7f0e7576049cb7aca8423ad68781e4c1b6dd2619`
+-	Image ID: `sha256:23a9b5b061b147ddc1b90ee4b90ece47359fa93b71952e17f8f21fe6b38881f6`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php-fpm"]`
 
@@ -3270,59 +3270,59 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 00:46:21 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:22:49 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:22:50 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:22:50 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:22:54 GMT
+# Wed, 18 Dec 2019 22:16:47 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:16:48 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:16:48 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:16:52 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:22:55 GMT
+# Wed, 18 Dec 2019 22:16:52 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:25:37 GMT
+# Wed, 18 Dec 2019 22:19:17 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:17:43 GMT
+# Wed, 18 Dec 2019 22:19:19 GMT
 COPY multi:5581a34bba21fbf2472e857e8cdc8db6d57694020e568954d2fd5901ee074da0 in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:17:51 GMT
+# Wed, 18 Dec 2019 22:19:21 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:17:52 GMT
+# Wed, 18 Dec 2019 22:19:21 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:17:54 GMT
+# Wed, 18 Dec 2019 22:19:22 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 01:17:57 GMT
+# Wed, 18 Dec 2019 22:19:23 GMT
 RUN set -eux; 	cd /usr/local/etc; 	if [ -d php-fpm.d ]; then 		sed 's!=NONE/!=!g' php-fpm.conf.default | tee php-fpm.conf > /dev/null; 		cp php-fpm.d/www.conf.default php-fpm.d/www.conf; 	else 		mkdir php-fpm.d; 		cp php-fpm.conf.default php-fpm.d/www.conf; 		{ 			echo '[global]'; 			echo 'include=etc/php-fpm.d/*.conf'; 		} | tee php-fpm.conf; 	fi; 	{ 		echo '[global]'; 		echo 'error_log = /proc/self/fd/2'; 		echo; echo '; https://github.com/docker-library/php/pull/725#issuecomment-443540114'; echo 'log_limit = 8192'; 		echo; 		echo '[www]'; 		echo '; if we send this to /proc/self/fd/1, it never appears'; 		echo 'access.log = /proc/self/fd/2'; 		echo; 		echo 'clear_env = no'; 		echo; 		echo '; Ensure worker stdout and stderr are sent to the main error log.'; 		echo 'catch_workers_output = yes'; 		echo 'decorate_workers_output = no'; 	} | tee php-fpm.d/docker.conf; 	{ 		echo '[global]'; 		echo 'daemonize = no'; 		echo; 		echo '[www]'; 		echo 'listen = 9000'; 	} | tee php-fpm.d/zz-docker.conf
-# Fri, 06 Dec 2019 01:17:57 GMT
+# Wed, 18 Dec 2019 22:19:24 GMT
 STOPSIGNAL SIGQUIT
-# Fri, 06 Dec 2019 01:17:58 GMT
+# Wed, 18 Dec 2019 22:19:24 GMT
 EXPOSE 9000
-# Fri, 06 Dec 2019 01:18:00 GMT
+# Wed, 18 Dec 2019 22:19:25 GMT
 CMD ["php-fpm"]
-# Fri, 06 Dec 2019 04:52:58 GMT
+# Thu, 19 Dec 2019 05:44:09 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 04:53:02 GMT
+# Thu, 19 Dec 2019 05:44:11 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 04:53:07 GMT
+# Thu, 19 Dec 2019 05:44:13 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 04:53:56 GMT
+# Thu, 19 Dec 2019 05:44:42 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 04:53:58 GMT
+# Thu, 19 Dec 2019 05:44:43 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 04:54:03 GMT
+# Thu, 19 Dec 2019 05:44:44 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 04:54:06 GMT
+# Thu, 19 Dec 2019 05:44:46 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 04:54:11 GMT
+# Thu, 19 Dec 2019 05:44:47 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 04:54:23 GMT
+# Thu, 19 Dec 2019 05:44:50 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 04:54:27 GMT
+# Thu, 19 Dec 2019 05:44:51 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 04:54:31 GMT
+# Thu, 19 Dec 2019 05:44:52 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 04:54:40 GMT
+# Thu, 19 Dec 2019 05:44:53 GMT
 USER adminer
-# Fri, 06 Dec 2019 04:54:46 GMT
+# Thu, 19 Dec 2019 05:44:53 GMT
 CMD ["php-fpm"]
 ```
 
@@ -3343,57 +3343,57 @@ CMD ["php-fpm"]
 		Last Modified: Mon, 21 Oct 2019 22:14:00 GMT  
 		Size: 267.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bd5b4d8b4543b812d92b5b3c4f25d044a8187acdd7f3b53df3b71f804cac7340`  
-		Last Modified: Thu, 28 Nov 2019 20:37:43 GMT  
-		Size: 10.3 MB (10250580 bytes)  
+	-	`sha256:4eedeb9880bb1f9c73e334a58cb9c46cc6232b53ce736a7589f1ee24686b530c`  
+		Last Modified: Thu, 19 Dec 2019 00:23:59 GMT  
+		Size: 10.3 MB (10263922 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:55de7a9fd1e9272a3a4ff2cbf814a2aef5e9a954c9af9171183f2a12db1a85a5`  
-		Last Modified: Thu, 28 Nov 2019 20:37:40 GMT  
+	-	`sha256:c88c2b531f9e7529ca2b92ebefe77956bef1d3a42d4fac0e1aab9cf7d38d9194`  
+		Last Modified: Thu, 19 Dec 2019 00:23:56 GMT  
 		Size: 497.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:76ab6e8d330e8d16362a233aff02d2ffdbafb3485b6e7145be238ae9d6cc6c02`  
-		Last Modified: Thu, 28 Nov 2019 20:37:45 GMT  
-		Size: 12.7 MB (12721061 bytes)  
+	-	`sha256:5e29f6cb3619d30dfc550358fb1b34b267a7b9d9a349a053e01f34f47154bbfd`  
+		Last Modified: Thu, 19 Dec 2019 00:24:01 GMT  
+		Size: 12.7 MB (12729707 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ba988589c2419f2f60d14b762f8fc5d5fe82fe375e5feedbe47af4c90cd3939e`  
-		Last Modified: Fri, 06 Dec 2019 01:36:01 GMT  
-		Size: 2.2 KB (2220 bytes)  
+	-	`sha256:c76814ed8ddfef8fa79e7196863c601c997e68e9b7d6cc43871f4f82026f8981`  
+		Last Modified: Thu, 19 Dec 2019 00:23:56 GMT  
+		Size: 2.2 KB (2215 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1c3c2872d8caf9ee292f6d5dc746ee6a0f019719be736ef7f7f75a767594635d`  
-		Last Modified: Fri, 06 Dec 2019 01:36:01 GMT  
-		Size: 71.9 KB (71897 bytes)  
+	-	`sha256:f3019562df3384254b5eff7a4c4cfb777574e12603cba999912f173377cd8e01`  
+		Last Modified: Thu, 19 Dec 2019 00:23:56 GMT  
+		Size: 71.9 KB (71882 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fbd45d21777c734579b6af6e024d9df4fc1939be3fa625047eca044f19fa0ddc`  
-		Last Modified: Fri, 06 Dec 2019 01:36:01 GMT  
-		Size: 8.4 KB (8419 bytes)  
+	-	`sha256:1381e38356bda310c22a0249c4cdaa209f53a34577bf9ed64696fdd854988783`  
+		Last Modified: Thu, 19 Dec 2019 00:23:56 GMT  
+		Size: 8.4 KB (8412 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:be4298819eb89def21ff8e9d5d826931901542c502760fda6b8bb1c51c773faf`  
-		Last Modified: Fri, 06 Dec 2019 04:55:36 GMT  
-		Size: 313.0 B  
+	-	`sha256:f13b5156371dc9dbc0a311fae8af8e803a0753d6b245af20e36db65d4ed8f65d`  
+		Last Modified: Thu, 19 Dec 2019 05:45:44 GMT  
+		Size: 307.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0ae7e953ec02b6619fa10ef1ca0111674953b7aacc31171dfe128e5d976dcc1b`  
-		Last Modified: Fri, 06 Dec 2019 04:55:35 GMT  
+	-	`sha256:bb959a30681546d0762debb7004e5fc0c3eb553ad3a319d7130e2c70e8ec2ec4`  
+		Last Modified: Thu, 19 Dec 2019 05:45:43 GMT  
 		Size: 1.4 KB (1417 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:72078331166ccb0cfba22b4e2693699e5b85c0b6a4187589c14b3c019a43a8b9`  
-		Last Modified: Fri, 06 Dec 2019 04:55:33 GMT  
-		Size: 1.1 MB (1098030 bytes)  
+	-	`sha256:b4adbb7af708946c67dbace2146e6036b4ca06d3b6baa7b320791af28ed53b1a`  
+		Last Modified: Thu, 19 Dec 2019 05:45:41 GMT  
+		Size: 1.1 MB (1098039 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6f96e68cf74577ed595e24c862091041b1c67a759723cf554b14bf74912b93da`  
-		Last Modified: Fri, 06 Dec 2019 04:55:33 GMT  
-		Size: 113.6 KB (113638 bytes)  
+	-	`sha256:b89f988b332cf8b5092864935822fc0cfc1946a7eafcfa16b13a1ddda4e938e5`  
+		Last Modified: Thu, 19 Dec 2019 05:45:41 GMT  
+		Size: 113.6 KB (113634 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:454a2e3b78edeb67039002bc5b3d08d704552e1d1b81eb1a216e79908e2f5a79`  
-		Last Modified: Fri, 06 Dec 2019 04:55:34 GMT  
-		Size: 1.5 KB (1474 bytes)  
+	-	`sha256:a2e352e3241ea44c2ab9a19cbd58216982dbcb88bc8be04236d7fbd689f53a90`  
+		Last Modified: Thu, 19 Dec 2019 05:45:40 GMT  
+		Size: 1.5 KB (1475 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:772de545e44a062eeaa2f1ffd40f952415647924cf2eb1cc43ba673d63fb778c`  
-		Last Modified: Fri, 06 Dec 2019 04:55:34 GMT  
-		Size: 570.5 KB (570450 bytes)  
+	-	`sha256:184c931f95290c799bd2ec8cd4b6fdf9e8a34ab7b92e48d4383c26136dcc9179`  
+		Last Modified: Thu, 19 Dec 2019 05:45:41 GMT  
+		Size: 570.5 KB (570454 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:07479bf42f2f435026ecea0bc9599248121172fc4378ef62094029e8a2a85f8b`  
-		Last Modified: Fri, 06 Dec 2019 04:55:33 GMT  
-		Size: 499.0 B  
+	-	`sha256:860fbfcb30cb2e74ab43685c2be66ad5b833f40954fa7d0954ce9b884d3c5c04`  
+		Last Modified: Thu, 19 Dec 2019 05:45:40 GMT  
+		Size: 498.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adminer:4.7.5-fastcgi` - linux; arm64 variant v8
@@ -3564,14 +3564,14 @@ CMD ["php-fpm"]
 ### `adminer:4.7.5-fastcgi` - linux; 386
 
 ```console
-$ docker pull adminer@sha256:696e32f3fe8ded2808300fbbe16224a66699b507a69e237a658e74d3a6c7139a
+$ docker pull adminer@sha256:ddb4ef346f4a51c9da3fc1726a3b756745fa17cb92b81efcd77a9c0637f628eb
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **31.7 MB (31681382 bytes)**  
+-	Total Size: **31.7 MB (31697203 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b62059fecce24a95d9821faf72e1c1a702b1e964bdb645a49eaa7c4fe7e613db`
+-	Image ID: `sha256:0f172a742089b6f88337921724e6c37028004ad70d7ed03b0bf31928e0d07930`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php-fpm"]`
 
@@ -3600,59 +3600,59 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 03:55:38 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:09:01 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:09:01 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:09:01 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:09:04 GMT
+# Wed, 18 Dec 2019 23:28:12 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 23:28:12 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 23:28:13 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 23:28:17 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:09:04 GMT
+# Wed, 18 Dec 2019 23:28:17 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:14:40 GMT
+# Wed, 18 Dec 2019 23:37:38 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 00:41:42 GMT
+# Wed, 18 Dec 2019 23:37:39 GMT
 COPY multi:5581a34bba21fbf2472e857e8cdc8db6d57694020e568954d2fd5901ee074da0 in /usr/local/bin/ 
-# Fri, 06 Dec 2019 00:41:43 GMT
+# Wed, 18 Dec 2019 23:37:41 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 00:41:44 GMT
+# Wed, 18 Dec 2019 23:37:41 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 00:41:44 GMT
+# Wed, 18 Dec 2019 23:37:41 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 00:41:45 GMT
+# Wed, 18 Dec 2019 23:37:42 GMT
 RUN set -eux; 	cd /usr/local/etc; 	if [ -d php-fpm.d ]; then 		sed 's!=NONE/!=!g' php-fpm.conf.default | tee php-fpm.conf > /dev/null; 		cp php-fpm.d/www.conf.default php-fpm.d/www.conf; 	else 		mkdir php-fpm.d; 		cp php-fpm.conf.default php-fpm.d/www.conf; 		{ 			echo '[global]'; 			echo 'include=etc/php-fpm.d/*.conf'; 		} | tee php-fpm.conf; 	fi; 	{ 		echo '[global]'; 		echo 'error_log = /proc/self/fd/2'; 		echo; echo '; https://github.com/docker-library/php/pull/725#issuecomment-443540114'; echo 'log_limit = 8192'; 		echo; 		echo '[www]'; 		echo '; if we send this to /proc/self/fd/1, it never appears'; 		echo 'access.log = /proc/self/fd/2'; 		echo; 		echo 'clear_env = no'; 		echo; 		echo '; Ensure worker stdout and stderr are sent to the main error log.'; 		echo 'catch_workers_output = yes'; 		echo 'decorate_workers_output = no'; 	} | tee php-fpm.d/docker.conf; 	{ 		echo '[global]'; 		echo 'daemonize = no'; 		echo; 		echo '[www]'; 		echo 'listen = 9000'; 	} | tee php-fpm.d/zz-docker.conf
-# Fri, 06 Dec 2019 00:41:45 GMT
+# Wed, 18 Dec 2019 23:37:43 GMT
 STOPSIGNAL SIGQUIT
-# Fri, 06 Dec 2019 00:41:45 GMT
+# Wed, 18 Dec 2019 23:37:43 GMT
 EXPOSE 9000
-# Fri, 06 Dec 2019 00:41:45 GMT
+# Wed, 18 Dec 2019 23:37:43 GMT
 CMD ["php-fpm"]
-# Fri, 06 Dec 2019 01:35:54 GMT
+# Thu, 19 Dec 2019 06:03:16 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 01:35:54 GMT
+# Thu, 19 Dec 2019 06:03:17 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 01:35:56 GMT
+# Thu, 19 Dec 2019 06:03:18 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 01:36:12 GMT
+# Thu, 19 Dec 2019 06:03:37 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 01:36:12 GMT
+# Thu, 19 Dec 2019 06:03:37 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 01:36:13 GMT
+# Thu, 19 Dec 2019 06:03:38 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 01:36:13 GMT
+# Thu, 19 Dec 2019 06:03:38 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 01:36:13 GMT
+# Thu, 19 Dec 2019 06:03:38 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 01:36:14 GMT
+# Thu, 19 Dec 2019 06:03:39 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 01:36:14 GMT
+# Thu, 19 Dec 2019 06:03:39 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:36:15 GMT
+# Thu, 19 Dec 2019 06:03:40 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:36:15 GMT
+# Thu, 19 Dec 2019 06:03:40 GMT
 USER adminer
-# Fri, 06 Dec 2019 01:36:15 GMT
+# Thu, 19 Dec 2019 06:03:40 GMT
 CMD ["php-fpm"]
 ```
 
@@ -3673,70 +3673,70 @@ CMD ["php-fpm"]
 		Last Modified: Mon, 21 Oct 2019 20:16:09 GMT  
 		Size: 221.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:883002e0338b8c513c57d18ab77d82e0caa919bdb1b2946f08ed3b55b72fac1e`  
-		Last Modified: Thu, 28 Nov 2019 20:26:08 GMT  
-		Size: 10.3 MB (10250560 bytes)  
+	-	`sha256:c1e36a5c98d6178a449daf406257e7eff2a8aaa8f7841e89d88aa873d05f19d1`  
+		Last Modified: Thu, 19 Dec 2019 03:54:26 GMT  
+		Size: 10.3 MB (10263910 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e7b0a921118a69174781eb4a78632aeeecae27242523e5cd8f5285edf19fe334`  
-		Last Modified: Thu, 28 Nov 2019 20:26:06 GMT  
+	-	`sha256:4725008c4a17d209ebebf19f78eb56a40450345fe49d5db3485091250aeb99f3`  
+		Last Modified: Thu, 19 Dec 2019 03:54:24 GMT  
 		Size: 498.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b3c1c34bce5f0b20f0e44086f68aaafa99ffc49bdb7dbc66c1c06e24b9955974`  
-		Last Modified: Thu, 28 Nov 2019 20:26:12 GMT  
-		Size: 15.0 MB (15041874 bytes)  
+	-	`sha256:282e1d0766783fa9892cf09cb13c7dad4614d043e3a91d070850cdabefbe5e51`  
+		Last Modified: Thu, 19 Dec 2019 03:54:30 GMT  
+		Size: 15.0 MB (15044382 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c3879df9a92354b1306a7e72620aab8a40a59b92ba45fe1820f1aa46e9b44495`  
-		Last Modified: Fri, 06 Dec 2019 00:46:48 GMT  
-		Size: 2.2 KB (2217 bytes)  
+	-	`sha256:78244b0bf6db52cbb1d03d4475db979cea475dd6d957e745ae8eb04b5fd020f7`  
+		Last Modified: Thu, 19 Dec 2019 03:54:24 GMT  
+		Size: 2.2 KB (2214 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ffef623ce21dc6b94b53c9e218c7559ac372c972028a492b3bec3bf5223ea6bb`  
-		Last Modified: Fri, 06 Dec 2019 00:46:47 GMT  
-		Size: 71.5 KB (71461 bytes)  
+	-	`sha256:ca2f4f3e381507a2e63adb951d6250fd232c07b850b73a6dbcf66951d6cb156d`  
+		Last Modified: Thu, 19 Dec 2019 03:54:24 GMT  
+		Size: 71.5 KB (71454 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9f8859fd4299cfa4ebc4c4abbb5eb35a56168974f7f37bf0243bef6da168cab3`  
-		Last Modified: Fri, 06 Dec 2019 00:46:48 GMT  
-		Size: 8.4 KB (8414 bytes)  
+	-	`sha256:ac7b77f214de306452a069819db22449df52a22007c3d8248782417ae08b39f8`  
+		Last Modified: Thu, 19 Dec 2019 03:54:24 GMT  
+		Size: 8.4 KB (8409 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:527177aba9589b65da398f866482092bc2575d64199cc41526b90da02a5214d8`  
-		Last Modified: Fri, 06 Dec 2019 01:36:47 GMT  
-		Size: 310.0 B  
+	-	`sha256:d095fefaea7a71ae03b685ba31f029a32c7db6cac13b26c56d492cf265fbeddc`  
+		Last Modified: Thu, 19 Dec 2019 06:04:01 GMT  
+		Size: 308.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:08337b4da5150b2191d15017d7aaf7c89552dc0695fc143d5dd34abbe0ac8e95`  
-		Last Modified: Fri, 06 Dec 2019 01:36:48 GMT  
-		Size: 1.4 KB (1377 bytes)  
+	-	`sha256:0db984503d05ea727e8c4f7b5b9785b67ed876b0abd217e21f28d9a0eea9c2c9`  
+		Last Modified: Thu, 19 Dec 2019 06:04:00 GMT  
+		Size: 1.4 KB (1374 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1ee6ab35b23389ef74abbeb0dc8803a7ec232f20836ea215a9ecd9e6962e4921`  
-		Last Modified: Fri, 06 Dec 2019 01:36:46 GMT  
-		Size: 1.4 MB (1382437 bytes)  
+	-	`sha256:8dc49e558523c08d3c6dc7adf5b339d691ba711f70372b584b7c6572ffbb57f2`  
+		Last Modified: Thu, 19 Dec 2019 06:03:59 GMT  
+		Size: 1.4 MB (1382432 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b6fbf218b5ec16408f996fb5e171282d2f6c9a8739d32f265797a376f4c4dc9d`  
-		Last Modified: Fri, 06 Dec 2019 01:36:46 GMT  
-		Size: 128.8 KB (128813 bytes)  
+	-	`sha256:ca63ec82194c3a79b574cd3d57e3a0dc2cba409532b4b5517306a793e499aa02`  
+		Last Modified: Thu, 19 Dec 2019 06:03:59 GMT  
+		Size: 128.8 KB (128808 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:99f52836ac716204cfe561cfb7e5a86eb115cddd251ef236c0afdc5b72c43b2a`  
-		Last Modified: Fri, 06 Dec 2019 01:36:46 GMT  
-		Size: 1.5 KB (1477 bytes)  
+	-	`sha256:3ab8349792bff83587695f7f15ff8dc6c98dee83fa6c803fccd2eb96cf2513a3`  
+		Last Modified: Thu, 19 Dec 2019 06:03:59 GMT  
+		Size: 1.5 KB (1475 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:882438548e91707b129857c72cea5b16853486c9bbb9a8e82b593ba59f58094f`  
-		Last Modified: Fri, 06 Dec 2019 01:36:47 GMT  
+	-	`sha256:dd3cf923130660a45ec692407df896ea2e2996dda2707e20dbacd485f675b412`  
+		Last Modified: Thu, 19 Dec 2019 06:03:59 GMT  
 		Size: 570.4 KB (570380 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:abe5b02e07233ccb28938a3c349125e527f671762692f8cc3f0e8db2569b279d`  
-		Last Modified: Fri, 06 Dec 2019 01:36:46 GMT  
-		Size: 498.0 B  
+	-	`sha256:ed097ef0f5931aecf8b6a435aaf4e3eab4f85073c6e91ba57529c53478e6e413`  
+		Last Modified: Thu, 19 Dec 2019 06:03:59 GMT  
+		Size: 493.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adminer:4.7.5-fastcgi` - linux; ppc64le
 
 ```console
-$ docker pull adminer@sha256:9c025ea58d6b26f90b22a4536cc075de23b68b5c953d6ae4f25cd8b16f498043
+$ docker pull adminer@sha256:f224038dcca7686d91dc09c9ccc47a7c75e0a90ce7fb8f6d1c38f7588f343f71
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **32.3 MB (32317896 bytes)**  
+-	Total Size: **32.3 MB (32339693 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:59105655c2b3bffbd6a9ea758b8fab9823f771080f827fb3943e68ba71b6fa3c`
+-	Image ID: `sha256:8d13c4f641374aadc599476f3f7868f487b1b0ad242a0ccfdb82b58d1417cb9e`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php-fpm"]`
 
@@ -3765,59 +3765,59 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 01:22:06 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:48:39 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:48:42 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:48:45 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:48:57 GMT
+# Wed, 18 Dec 2019 22:47:14 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:47:16 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:47:19 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:47:31 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:48:58 GMT
+# Wed, 18 Dec 2019 22:47:32 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:53:04 GMT
+# Wed, 18 Dec 2019 22:51:02 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:22:18 GMT
+# Wed, 18 Dec 2019 22:51:04 GMT
 COPY multi:5581a34bba21fbf2472e857e8cdc8db6d57694020e568954d2fd5901ee074da0 in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:22:24 GMT
+# Wed, 18 Dec 2019 22:51:10 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:22:26 GMT
+# Wed, 18 Dec 2019 22:51:13 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:22:29 GMT
+# Wed, 18 Dec 2019 22:51:15 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 01:22:36 GMT
+# Wed, 18 Dec 2019 22:51:19 GMT
 RUN set -eux; 	cd /usr/local/etc; 	if [ -d php-fpm.d ]; then 		sed 's!=NONE/!=!g' php-fpm.conf.default | tee php-fpm.conf > /dev/null; 		cp php-fpm.d/www.conf.default php-fpm.d/www.conf; 	else 		mkdir php-fpm.d; 		cp php-fpm.conf.default php-fpm.d/www.conf; 		{ 			echo '[global]'; 			echo 'include=etc/php-fpm.d/*.conf'; 		} | tee php-fpm.conf; 	fi; 	{ 		echo '[global]'; 		echo 'error_log = /proc/self/fd/2'; 		echo; echo '; https://github.com/docker-library/php/pull/725#issuecomment-443540114'; echo 'log_limit = 8192'; 		echo; 		echo '[www]'; 		echo '; if we send this to /proc/self/fd/1, it never appears'; 		echo 'access.log = /proc/self/fd/2'; 		echo; 		echo 'clear_env = no'; 		echo; 		echo '; Ensure worker stdout and stderr are sent to the main error log.'; 		echo 'catch_workers_output = yes'; 		echo 'decorate_workers_output = no'; 	} | tee php-fpm.d/docker.conf; 	{ 		echo '[global]'; 		echo 'daemonize = no'; 		echo; 		echo '[www]'; 		echo 'listen = 9000'; 	} | tee php-fpm.d/zz-docker.conf
-# Fri, 06 Dec 2019 01:22:38 GMT
+# Wed, 18 Dec 2019 22:51:22 GMT
 STOPSIGNAL SIGQUIT
-# Fri, 06 Dec 2019 01:22:41 GMT
+# Wed, 18 Dec 2019 22:51:24 GMT
 EXPOSE 9000
-# Fri, 06 Dec 2019 01:22:42 GMT
+# Wed, 18 Dec 2019 22:51:26 GMT
 CMD ["php-fpm"]
-# Fri, 06 Dec 2019 02:51:58 GMT
+# Thu, 19 Dec 2019 06:29:52 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 02:52:04 GMT
+# Thu, 19 Dec 2019 06:30:00 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 02:52:10 GMT
+# Thu, 19 Dec 2019 06:30:13 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 02:52:38 GMT
+# Thu, 19 Dec 2019 06:30:44 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 02:52:39 GMT
+# Thu, 19 Dec 2019 06:30:46 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 02:52:41 GMT
+# Thu, 19 Dec 2019 06:30:50 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 02:52:44 GMT
+# Thu, 19 Dec 2019 06:30:55 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 02:52:46 GMT
+# Thu, 19 Dec 2019 06:30:57 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 02:52:56 GMT
+# Thu, 19 Dec 2019 06:31:07 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 02:52:57 GMT
+# Thu, 19 Dec 2019 06:31:09 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 02:52:59 GMT
+# Thu, 19 Dec 2019 06:31:13 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 02:53:03 GMT
+# Thu, 19 Dec 2019 06:31:16 GMT
 USER adminer
-# Fri, 06 Dec 2019 02:53:06 GMT
+# Thu, 19 Dec 2019 06:31:20 GMT
 CMD ["php-fpm"]
 ```
 
@@ -3838,63 +3838,63 @@ CMD ["php-fpm"]
 		Last Modified: Mon, 21 Oct 2019 20:21:00 GMT  
 		Size: 269.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:41c52740a44bb4c5748ebce8c86dd706cabeffa8b3d9c4f80f6138b61a1bec08`  
-		Last Modified: Thu, 28 Nov 2019 21:11:13 GMT  
-		Size: 10.3 MB (10250597 bytes)  
+	-	`sha256:b07995cdf934b5efaabafb2fc38e2fd4bcf262d4b3fc0ae854961fb8fe2ccb76`  
+		Last Modified: Thu, 19 Dec 2019 01:43:42 GMT  
+		Size: 10.3 MB (10263942 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dc8deff1ae875178b97c866e9ae37859d9845e0ff78498539ab49c875dfda704`  
-		Last Modified: Thu, 28 Nov 2019 21:11:09 GMT  
+	-	`sha256:562d327a17a47fdf54128aec6fa469dfa1c46299912ceb56802bd2049c87a3cd`  
+		Last Modified: Thu, 19 Dec 2019 01:43:37 GMT  
 		Size: 498.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bef48fb4a39bcc95db1529ddbea9a2810d8f1e6d7a5af0f07960b597759795d4`  
-		Last Modified: Thu, 28 Nov 2019 21:11:14 GMT  
-		Size: 15.7 MB (15730534 bytes)  
+	-	`sha256:b605296e4b54e9e88cf662c48efe74d8375ba1168dfbd4fcf4d5a7157fc036ef`  
+		Last Modified: Thu, 19 Dec 2019 01:43:47 GMT  
+		Size: 15.7 MB (15739016 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cf885e004bbb88c1afad2b587c13689fe51c817b0dc75126fe5ae4de79d033e6`  
-		Last Modified: Fri, 06 Dec 2019 01:41:16 GMT  
-		Size: 2.2 KB (2221 bytes)  
+	-	`sha256:79e919cad484af1a35481675ab017ded09828c347b67ac9ca3fc7222a8f1a08e`  
+		Last Modified: Thu, 19 Dec 2019 01:43:37 GMT  
+		Size: 2.2 KB (2213 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b2c390fe718afab471134ab9da6de24d9c38924b0c4087e34a4fde3dc2844f16`  
-		Last Modified: Fri, 06 Dec 2019 01:41:16 GMT  
-		Size: 72.2 KB (72167 bytes)  
+	-	`sha256:3ac400f228427059d566f1ef2a4d1b98086f260c0f46c0722c32ca80a33b8c9c`  
+		Last Modified: Thu, 19 Dec 2019 01:43:37 GMT  
+		Size: 72.1 KB (72144 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9a2c5b773a13a67885fadc2a9bcaa28f789b7e52696dba93815eedf300ebd4dc`  
-		Last Modified: Fri, 06 Dec 2019 01:41:16 GMT  
-		Size: 8.4 KB (8415 bytes)  
+	-	`sha256:79c3607f5af5bfd11f73d90dbd7743491b17e724bc86e998e28b0a7d55ab337c`  
+		Last Modified: Thu, 19 Dec 2019 01:43:37 GMT  
+		Size: 8.4 KB (8418 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c9067b4b9dddc9ee32be5753ea716eff5b0d07bc48ab282cb504468006a804ce`  
-		Last Modified: Fri, 06 Dec 2019 02:54:19 GMT  
-		Size: 310.0 B  
+	-	`sha256:db6142ebdfb637a6f0452667b383135615574f75a10d106d38d11a54233b4315`  
+		Last Modified: Thu, 19 Dec 2019 06:32:46 GMT  
+		Size: 307.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bbf3022d05dae61d9072aecb7c6a66feff00c293204c566b8a487dbdbe1f504c`  
-		Last Modified: Fri, 06 Dec 2019 02:54:18 GMT  
-		Size: 1.4 KB (1417 bytes)  
+	-	`sha256:5fc105e8ef9fe3cc42aea688712f3186ea449f115ba59145f024b1a0a764b80d`  
+		Last Modified: Thu, 19 Dec 2019 06:32:45 GMT  
+		Size: 1.4 KB (1421 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:60dab794aa767edb8b1a96f18a413f394295e8915f0e5f9c195cef599bbf23c0`  
-		Last Modified: Fri, 06 Dec 2019 02:54:16 GMT  
-		Size: 1.3 MB (1347015 bytes)  
+	-	`sha256:84e6a9290a5d8919085470664c7f18de1370fae8b7595ce7604dc6aa0b047228`  
+		Last Modified: Thu, 19 Dec 2019 06:32:41 GMT  
+		Size: 1.3 MB (1347003 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5eb70d0523c6dfb4d40b28604e02ef10b1ad8214e5ef7aaef9e9b3f7528d28e4`  
-		Last Modified: Fri, 06 Dec 2019 02:54:16 GMT  
-		Size: 135.8 KB (135821 bytes)  
+	-	`sha256:66f43d2506941955932ba61a0fa90e7a0f77acf2ec58e9630457f30371e78c1b`  
+		Last Modified: Thu, 19 Dec 2019 06:32:41 GMT  
+		Size: 135.8 KB (135820 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d88606c7efae5c80d7217038d6e4f82bb12bdfe624738d95e29be225b46e36b5`  
-		Last Modified: Fri, 06 Dec 2019 02:54:16 GMT  
-		Size: 1.5 KB (1473 bytes)  
+	-	`sha256:36a8d852ad8da73568f4223e8e8b9b0b1ca6263a4ca83b8971d624503d4c6659`  
+		Last Modified: Thu, 19 Dec 2019 06:32:40 GMT  
+		Size: 1.5 KB (1475 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:196c812e41d4d3d9d2db2567f346ab4e38246b44f24bcdb8855734d643d38ec2`  
-		Last Modified: Fri, 06 Dec 2019 02:54:16 GMT  
-		Size: 570.4 KB (570448 bytes)  
+	-	`sha256:20584e5ee34a3a4146a6475f2dd13442e8e6a936b323b64250f75db8c0f8800e`  
+		Last Modified: Thu, 19 Dec 2019 06:32:40 GMT  
+		Size: 570.5 KB (570455 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a0fc4ffc5b4b40795919e03393c4d34ee386b5f86fa3517fcec379b99a115ce1`  
-		Last Modified: Fri, 06 Dec 2019 02:54:15 GMT  
-		Size: 497.0 B  
+	-	`sha256:913811a124d54956a4f6d698d0341bd66678dcd4aeac5ae462efce5623dabda2`  
+		Last Modified: Thu, 19 Dec 2019 06:32:40 GMT  
+		Size: 498.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `adminer:4.7.5-standalone`
 
 ```console
-$ docker pull adminer@sha256:c15822ec7ba7977c385e5ebcda2fcbeb09812edd97bbd61d7737fa8a8e53e3e6
+$ docker pull adminer@sha256:10c219a46e3b5950dd4e5f9c3dfb89a6c44eb9a18f10e6849417c47136493388
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3909,14 +3909,14 @@ $ docker pull adminer@sha256:c15822ec7ba7977c385e5ebcda2fcbeb09812edd97bbd61d773
 ### `adminer:4.7.5-standalone` - linux; amd64
 
 ```console
-$ docker pull adminer@sha256:86ba5afe8fee41c253bf89c258bca85d8640be894ae7716d3e726b9b4047c381
+$ docker pull adminer@sha256:e6d727411f1819b13c88314cf67a5f8a1f22d01fa53a25b493ca93bc12ebe74e
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **31.0 MB (31013555 bytes)**  
+-	Total Size: **31.0 MB (31027461 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:830d96c7612a7e7be76322d5741c2db4944f31f9f4d2cb6991cb242e12f4ae5a`
+-	Image ID: `sha256:b426045b520a8937f9baa8c890e3482996b4cf8f92ef9967738f67073d493407`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php","-S","[::]:8080","-t","\/var\/www\/html"]`
 
@@ -3943,57 +3943,57 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 01:10:28 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:48:56 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:48:56 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:48:56 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:48:59 GMT
+# Wed, 18 Dec 2019 22:38:21 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:38:21 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:38:21 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:38:24 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:48:59 GMT
+# Wed, 18 Dec 2019 22:38:24 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:55:11 GMT
+# Wed, 18 Dec 2019 22:44:31 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:21:33 GMT
+# Wed, 18 Dec 2019 22:44:32 GMT
 COPY multi:0b7e4a1b9cd5748d214539db3c6bee9b30805d1933690492830b56ffcd31f68d in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:21:35 GMT
+# Wed, 18 Dec 2019 22:44:33 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:21:35 GMT
+# Wed, 18 Dec 2019 22:44:33 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:21:35 GMT
+# Wed, 18 Dec 2019 22:44:33 GMT
 CMD ["php" "-a"]
-# Fri, 06 Dec 2019 01:46:14 GMT
+# Thu, 19 Dec 2019 05:35:45 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 01:46:15 GMT
+# Thu, 19 Dec 2019 05:35:45 GMT
 STOPSIGNAL SIGINT
-# Fri, 06 Dec 2019 01:46:15 GMT
+# Thu, 19 Dec 2019 05:35:46 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 01:46:16 GMT
+# Thu, 19 Dec 2019 05:35:46 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 01:46:16 GMT
+# Thu, 19 Dec 2019 05:35:47 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 01:46:34 GMT
+# Thu, 19 Dec 2019 05:36:05 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 01:46:34 GMT
+# Thu, 19 Dec 2019 05:36:05 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 01:46:35 GMT
+# Thu, 19 Dec 2019 05:36:05 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 01:46:35 GMT
+# Thu, 19 Dec 2019 05:36:06 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 01:46:35 GMT
+# Thu, 19 Dec 2019 05:36:06 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 01:46:36 GMT
+# Thu, 19 Dec 2019 05:36:07 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 01:46:36 GMT
+# Thu, 19 Dec 2019 05:36:07 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:46:37 GMT
+# Thu, 19 Dec 2019 05:36:08 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:46:37 GMT
+# Thu, 19 Dec 2019 05:36:08 GMT
 USER adminer
-# Fri, 06 Dec 2019 01:46:37 GMT
+# Thu, 19 Dec 2019 05:36:08 GMT
 CMD ["php" "-S" "[::]:8080" "-t" "/var/www/html"]
-# Fri, 06 Dec 2019 01:46:37 GMT
+# Thu, 19 Dec 2019 05:36:08 GMT
 EXPOSE 8080
 ```
 
@@ -4014,52 +4014,52 @@ EXPOSE 8080
 		Last Modified: Mon, 21 Oct 2019 21:44:18 GMT  
 		Size: 222.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c480d86e9f76b9604df41b59ff15c277235e77570c3094e24beea689906d7e85`  
-		Last Modified: Thu, 28 Nov 2019 21:13:22 GMT  
-		Size: 10.3 MB (10250558 bytes)  
+	-	`sha256:b0c3cc2f08e3e093e7f2363216f6414027208adc012c5aa07db197341329fe72`  
+		Last Modified: Thu, 19 Dec 2019 03:00:28 GMT  
+		Size: 10.3 MB (10263892 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f3842726b8d86447ea9f8ca1885524b2ae44cf308c3ae2e11f372aa6db308f32`  
-		Last Modified: Thu, 28 Nov 2019 21:13:21 GMT  
+	-	`sha256:57fb2ca7191a3ef22a9701e838adaf70fdbd265eb24703f14179044284913417`  
+		Last Modified: Thu, 19 Dec 2019 03:00:27 GMT  
 		Size: 498.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:57a451954efdb35ed624196af05c79b645dc444faaccc19d9d45d112f6de4061`  
-		Last Modified: Thu, 28 Nov 2019 21:13:24 GMT  
-		Size: 14.6 MB (14589908 bytes)  
+	-	`sha256:719b549f829c694acfed15af4094974701bcb4c0285684f08d92cf8d9ec9bcdc`  
+		Last Modified: Thu, 19 Dec 2019 03:00:33 GMT  
+		Size: 14.6 MB (14590503 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5a0b952c237a06829b97d3ed1d92cacf10888f77fba63726d16867056a4f044c`  
-		Last Modified: Fri, 06 Dec 2019 01:26:49 GMT  
-		Size: 2.2 KB (2216 bytes)  
+	-	`sha256:81e6bc38092826fd2472c7ca1eb2c700fed834bbd765e80ff2a643fd121154d2`  
+		Last Modified: Thu, 19 Dec 2019 03:00:26 GMT  
+		Size: 2.2 KB (2215 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:152b9d9c5ef59610e7b35742bebd1808171b7de2c4ccec2f0731a55a7559360d`  
-		Last Modified: Fri, 06 Dec 2019 01:26:48 GMT  
-		Size: 72.3 KB (72319 bytes)  
+	-	`sha256:a754e64b7156262e64e31a7201d5c625a9db50e96ecac534e504a6393f4e1a9e`  
+		Last Modified: Thu, 19 Dec 2019 03:00:27 GMT  
+		Size: 72.3 KB (72302 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1e64c9abda242b9b4d3a6c1baf781dda52eabbb6ef6d75db40cc72d87f1c4c77`  
-		Last Modified: Fri, 06 Dec 2019 01:47:18 GMT  
-		Size: 308.0 B  
+	-	`sha256:90f3f908ddee8f4ee6c6ca007ced4430786e103eac072c59fee4b402b2d8c388`  
+		Last Modified: Thu, 19 Dec 2019 05:36:51 GMT  
+		Size: 307.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d62f090b0e9efd0bfb9ba692958683cf86a15d423cc82c1609b954876086d6a8`  
-		Last Modified: Fri, 06 Dec 2019 01:47:18 GMT  
+	-	`sha256:857b7e4aae9f2ade154cb505cf91e6521e4099d23159d182a8cbef713c81532b`  
+		Last Modified: Thu, 19 Dec 2019 05:36:51 GMT  
 		Size: 1.4 KB (1372 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:762e247790399e6560e4640ca01701a7fcc2211f8cee51913462b618a25167af`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
-		Size: 1.3 MB (1267207 bytes)  
+	-	`sha256:ace782c3ac09d3f64c77972eafa84fee9f30761a8b9424bb4ffc178f8ebcf1ea`  
+		Last Modified: Thu, 19 Dec 2019 05:36:50 GMT  
+		Size: 1.3 MB (1267197 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0f51bae1177740cf6eec7579667748ed24bec56021cbb74b7210edc18f01be18`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
+	-	`sha256:a67e9e57ebac5385c07290704a48959e42587e9cca35993f56e0ec74384988fd`  
+		Last Modified: Thu, 19 Dec 2019 05:36:50 GMT  
 		Size: 125.7 KB (125657 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:628599883e3cd44a98167c252bdf0ab5a593036911dba0257cc80613a629ba8b`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
-		Size: 1.5 KB (1472 bytes)  
+	-	`sha256:49eb563494c485a889d81dda7ee04ce14f7b22cfa901415e048a5c0c18d2bb0f`  
+		Last Modified: Thu, 19 Dec 2019 05:36:49 GMT  
+		Size: 1.5 KB (1477 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3536dd8cbdfc6bc3a00a8c6e170b6b28329ba806612bca28010703e03746e34e`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
-		Size: 570.4 KB (570378 bytes)  
+	-	`sha256:3b5bc3cefb34ffac141e2420696af773ce85d635ff6d02d406903625b83b3f04`  
+		Last Modified: Thu, 19 Dec 2019 05:36:50 GMT  
+		Size: 570.4 KB (570379 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6eeb0c1100b26366c86db33f094c4a819fc26e55ce4eb2e5f5ab309c4a02edb0`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
+	-	`sha256:b807bb1614467154aa601b40815ea51d330eebb00f281a71b54af161d17b20ec`  
+		Last Modified: Thu, 19 Dec 2019 05:36:49 GMT  
 		Size: 496.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -4223,14 +4223,14 @@ EXPOSE 8080
 ### `adminer:4.7.5-standalone` - linux; arm variant v7
 
 ```console
-$ docker pull adminer@sha256:ca8d6b805bd6de4b7ae82a31dcaa1c1eaa16c7170d6a2d8a84390246fb323f1a
+$ docker pull adminer@sha256:45f3f63bea4b53ed6f840b452aad505d813cf99755272303c705731a9c2c1a37
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **28.4 MB (28355059 bytes)**  
+-	Total Size: **28.4 MB (28375258 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6a6a009dde2aee41ade135a5592990a968056ac0ca2903616b3146d78e8df4d4`
+-	Image ID: `sha256:c6fcf1f9bcc93e97da85dddf171a35cc7c3a686b415d320b4737e95e19bcbfec`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php","-S","[::]:8080","-t","\/var\/www\/html"]`
 
@@ -4257,57 +4257,57 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 00:42:48 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:19:44 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:19:45 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:19:46 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:19:51 GMT
+# Wed, 18 Dec 2019 22:13:45 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:13:46 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:13:46 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:13:50 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:19:52 GMT
+# Wed, 18 Dec 2019 22:13:51 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:22:34 GMT
+# Wed, 18 Dec 2019 22:16:23 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:17:24 GMT
+# Wed, 18 Dec 2019 22:16:24 GMT
 COPY multi:0b7e4a1b9cd5748d214539db3c6bee9b30805d1933690492830b56ffcd31f68d in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:17:29 GMT
+# Wed, 18 Dec 2019 22:16:27 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:17:32 GMT
+# Wed, 18 Dec 2019 22:16:28 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:17:33 GMT
+# Wed, 18 Dec 2019 22:16:28 GMT
 CMD ["php" "-a"]
-# Fri, 06 Dec 2019 04:50:48 GMT
+# Thu, 19 Dec 2019 05:43:15 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 04:50:50 GMT
+# Thu, 19 Dec 2019 05:43:15 GMT
 STOPSIGNAL SIGINT
-# Fri, 06 Dec 2019 04:50:59 GMT
+# Thu, 19 Dec 2019 05:43:18 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 04:51:01 GMT
+# Thu, 19 Dec 2019 05:43:19 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 04:51:06 GMT
+# Thu, 19 Dec 2019 05:43:21 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 04:51:54 GMT
+# Thu, 19 Dec 2019 05:43:50 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 04:51:56 GMT
+# Thu, 19 Dec 2019 05:43:51 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 04:52:00 GMT
+# Thu, 19 Dec 2019 05:43:51 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 04:52:04 GMT
+# Thu, 19 Dec 2019 05:43:52 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 04:52:09 GMT
+# Thu, 19 Dec 2019 05:43:52 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 04:52:23 GMT
+# Thu, 19 Dec 2019 05:43:55 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 04:52:25 GMT
+# Thu, 19 Dec 2019 05:43:56 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 04:52:27 GMT
+# Thu, 19 Dec 2019 05:43:56 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 04:52:29 GMT
+# Thu, 19 Dec 2019 05:43:57 GMT
 USER adminer
-# Fri, 06 Dec 2019 04:52:33 GMT
+# Thu, 19 Dec 2019 05:43:58 GMT
 CMD ["php" "-S" "[::]:8080" "-t" "/var/www/html"]
-# Fri, 06 Dec 2019 04:52:38 GMT
+# Thu, 19 Dec 2019 05:43:58 GMT
 EXPOSE 8080
 ```
 
@@ -4328,53 +4328,53 @@ EXPOSE 8080
 		Last Modified: Mon, 21 Oct 2019 22:14:00 GMT  
 		Size: 267.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:74d543cc24962e4f8efaef27c314b6c510d9e89795bb3fefc76190c88e6adaa0`  
-		Last Modified: Thu, 28 Nov 2019 20:37:08 GMT  
-		Size: 10.3 MB (10250580 bytes)  
+	-	`sha256:9ca9d33ba72a23b5503797dc37271a4e969f593c1f91fab7b5e8fc9e199a3237`  
+		Last Modified: Thu, 19 Dec 2019 00:23:23 GMT  
+		Size: 10.3 MB (10263922 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:61533199b1c12541ec2c6e8792481ed0bf870ab2614fca26df4472ed7489905b`  
-		Last Modified: Thu, 28 Nov 2019 20:37:06 GMT  
-		Size: 494.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cb40e8b71fdcda892a7fff7b40bd040c14189bdbf81c6900e2506a34d0a5e2a8`  
-		Last Modified: Thu, 28 Nov 2019 20:37:11 GMT  
-		Size: 12.7 MB (12659015 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:73e8322b4997afc76e3d6aded9b6977d019a876387f38bb0c7b20303eb741ea1`  
-		Last Modified: Fri, 06 Dec 2019 01:35:28 GMT  
-		Size: 2.2 KB (2215 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bee10ead90205f4f11c6737cb5e9809cf554b750d259f2bb978806599ff48d4d`  
-		Last Modified: Fri, 06 Dec 2019 01:35:28 GMT  
-		Size: 71.9 KB (71901 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b2343ca0934ccfcf3473bcd86e8769c80a356c838360d24e6c15c8549d8799ff`  
-		Last Modified: Fri, 06 Dec 2019 04:55:13 GMT  
-		Size: 311.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3339cf595876f587528feea8189a242d1eee086d7c129183282e0d0bf5dfec9e`  
-		Last Modified: Fri, 06 Dec 2019 04:55:13 GMT  
-		Size: 1.4 KB (1420 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:273f3098e61dc9b47d64ba9a3e339b88d90351233841e926290aaf8f81b719e8`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
-		Size: 1.1 MB (1098041 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f48a0dca6ba28aa1b4488aa4541f847d05b842f7adfd2fbe4df3d510ea08bb44`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
-		Size: 113.6 KB (113646 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:911b6063ce3a1a087497bb65c33df13aa956676a9977dec81024c9158363b7a1`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
-		Size: 1.5 KB (1474 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c17014746daefe47239efc1403be753dbbd9860da773a322a172487485cb8993`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
-		Size: 570.5 KB (570460 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:87db519a03011aadfd54c42773aed91d48871a3e423f8652ae2fa3c6a201d7f0`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
+	-	`sha256:9abaf2cca6b8f6360c51d0ab64e5733dd6fe54d2160f0b90b2c2b30cc9d09556`  
+		Last Modified: Thu, 19 Dec 2019 00:23:23 GMT  
 		Size: 498.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:0d1c28a483480472543267f13fa560e37c42d398e03258ec10f3259791f26c2b`  
+		Last Modified: Thu, 19 Dec 2019 00:23:26 GMT  
+		Size: 12.7 MB (12665914 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c296b4d3757a3eb5a9eaa1bee6c67b7f85258f295e5d1adfeae082aaa4ffe554`  
+		Last Modified: Thu, 19 Dec 2019 00:23:23 GMT  
+		Size: 2.2 KB (2213 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:3f0c6898b03f711ee9c13adb0e7ac827b235e872574ad2e0466ce38a7006494f`  
+		Last Modified: Thu, 19 Dec 2019 00:23:23 GMT  
+		Size: 71.9 KB (71882 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:85f53d18384dba7127519315cb122ebcc1c8f1420b7359054849ebd5c2eb8501`  
+		Last Modified: Thu, 19 Dec 2019 05:45:20 GMT  
+		Size: 308.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:29ba2b51dd9ec6d55f6dcbd14fd64e4424e17d54d50559b04f7872439fe23c84`  
+		Last Modified: Thu, 19 Dec 2019 05:45:20 GMT  
+		Size: 1.4 KB (1418 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ed774f039edbc14130f2a14cc8a6036a51ebcd1eb96bbfd75d3ac1c581bdb3a2`  
+		Last Modified: Thu, 19 Dec 2019 05:45:18 GMT  
+		Size: 1.1 MB (1098039 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ddbca63dcd496dfe19ebd0ce58453dcf241bca16bd12220566202434e47730ff`  
+		Last Modified: Thu, 19 Dec 2019 05:45:18 GMT  
+		Size: 113.6 KB (113634 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:fdc0c14d20b92cde224999d0a7464e0dd1063ed2fe903a20fc7902d451928868`  
+		Last Modified: Thu, 19 Dec 2019 05:45:19 GMT  
+		Size: 1.5 KB (1477 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:4854bad04d3751dd937dde7badbbe7b0be2baee2b0c0b6e654e45ea0155fd765`  
+		Last Modified: Thu, 19 Dec 2019 05:45:18 GMT  
+		Size: 570.5 KB (570450 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:183711409a19b109d1862eb8f004260effa66c92f58f14f1ad425a474ba8572d`  
+		Last Modified: Thu, 19 Dec 2019 05:45:18 GMT  
+		Size: 499.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adminer:4.7.5-standalone` - linux; arm64 variant v8
@@ -4537,14 +4537,14 @@ EXPOSE 8080
 ### `adminer:4.7.5-standalone` - linux; 386
 
 ```console
-$ docker pull adminer@sha256:3b3b632ad55b7004f6d67004583ca8d4756f52487240d6530977ad9a503ba629
+$ docker pull adminer@sha256:4d9d4d3dba3055adde16332ec8bb9f98fbc264574d8755f161b2c7420f0fb73e
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **31.6 MB (31595367 bytes)**  
+-	Total Size: **31.6 MB (31611527 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1a9e767ae5c65d7fecf62761e3afd0b53184749f9cfcca68ae1c099ed852e137`
+-	Image ID: `sha256:6921567de258c77b202adc3226c7996e1fb5f526f205d6712821a57b84db89ee`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php","-S","[::]:8080","-t","\/var\/www\/html"]`
 
@@ -4571,57 +4571,57 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 03:40:32 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:03:14 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:03:14 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:03:14 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:03:17 GMT
+# Wed, 18 Dec 2019 23:18:21 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 23:18:22 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 23:18:22 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 23:18:24 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:03:17 GMT
+# Wed, 18 Dec 2019 23:18:25 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:08:51 GMT
+# Wed, 18 Dec 2019 23:27:50 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 00:41:35 GMT
+# Wed, 18 Dec 2019 23:27:51 GMT
 COPY multi:0b7e4a1b9cd5748d214539db3c6bee9b30805d1933690492830b56ffcd31f68d in /usr/local/bin/ 
-# Fri, 06 Dec 2019 00:41:36 GMT
+# Wed, 18 Dec 2019 23:27:53 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 00:41:36 GMT
+# Wed, 18 Dec 2019 23:27:53 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 00:41:36 GMT
+# Wed, 18 Dec 2019 23:27:53 GMT
 CMD ["php" "-a"]
-# Fri, 06 Dec 2019 01:35:26 GMT
+# Thu, 19 Dec 2019 06:02:48 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 01:35:26 GMT
+# Thu, 19 Dec 2019 06:02:48 GMT
 STOPSIGNAL SIGINT
-# Fri, 06 Dec 2019 01:35:27 GMT
+# Thu, 19 Dec 2019 06:02:49 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 01:35:27 GMT
+# Thu, 19 Dec 2019 06:02:49 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 01:35:28 GMT
+# Thu, 19 Dec 2019 06:02:50 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:10 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:10 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:10 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:10 GMT
 USER adminer
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:11 GMT
 CMD ["php" "-S" "[::]:8080" "-t" "/var/www/html"]
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:11 GMT
 EXPOSE 8080
 ```
 
@@ -4642,66 +4642,66 @@ EXPOSE 8080
 		Last Modified: Mon, 21 Oct 2019 20:16:09 GMT  
 		Size: 221.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7a2f924d5bef762db8a36415395a7d8d645e86c8c10e98670ee6441f4dfffc4b`  
-		Last Modified: Thu, 28 Nov 2019 20:25:40 GMT  
-		Size: 10.3 MB (10250558 bytes)  
+	-	`sha256:8d3c120548e2cc8578bcbc722a1de16f16aa1bbd6f95a3f3f250760ef49d6425`  
+		Last Modified: Thu, 19 Dec 2019 03:54:02 GMT  
+		Size: 10.3 MB (10263911 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d86e42c218805225dcb7fb493e2333b3aa5dbe52acfe920142f7beddb424cf83`  
-		Last Modified: Thu, 28 Nov 2019 20:25:39 GMT  
-		Size: 497.0 B  
+	-	`sha256:6c67772931308b5da9ecd54e42e8b4f0cee6a6ca800c39c9bb90f7935371f173`  
+		Last Modified: Thu, 19 Dec 2019 03:54:01 GMT  
+		Size: 498.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df9403ccfdc695e35b6d3018248acf35d406f0cfafb094c31e3837d69bafd01c`  
-		Last Modified: Thu, 28 Nov 2019 20:25:45 GMT  
-		Size: 15.0 MB (14964307 bytes)  
+	-	`sha256:81de9fd8c68cc661996bb58ab58c8ca7fcc4523d035c2bbfc2835549da0a48ae`  
+		Last Modified: Thu, 19 Dec 2019 03:54:07 GMT  
+		Size: 15.0 MB (14967109 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ec757c77b33207cd2e297fb2ab7146f4245ec36acc52bd38cba1fbd4e3ec0b8b`  
-		Last Modified: Fri, 06 Dec 2019 00:46:31 GMT  
-		Size: 2.2 KB (2220 bytes)  
+	-	`sha256:2cc02e941d1953f8fbbd589f5a7cece48de8e05d8626f4dc9fc7272716e999e9`  
+		Last Modified: Thu, 19 Dec 2019 03:54:01 GMT  
+		Size: 2.2 KB (2211 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4d52ef7bb6d6ca924fc76da53a0d613f171978768e3b572da49a8f77ea6f8d6c`  
-		Last Modified: Fri, 06 Dec 2019 00:46:30 GMT  
+	-	`sha256:8a7864fff700c7ab0ac04ee51707c956b859bd42ce6e4bac9317a0224058ec59`  
+		Last Modified: Thu, 19 Dec 2019 03:54:01 GMT  
 		Size: 71.5 KB (71454 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6e5b781398aa148728fa13f2df2f88fa4d9b3570891ff55a3af9cb50c2098412`  
-		Last Modified: Fri, 06 Dec 2019 01:36:35 GMT  
+	-	`sha256:7274061ca352a1262686abb045838ea905ae178eee118a6a1e23834490af7953`  
+		Last Modified: Thu, 19 Dec 2019 06:03:50 GMT  
 		Size: 308.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:de505ea02604bd909cfaf3b498de539cedd1332bfe778ba03947dce6e0d33d23`  
-		Last Modified: Fri, 06 Dec 2019 01:36:35 GMT  
-		Size: 1.4 KB (1376 bytes)  
+	-	`sha256:e79de5c64323f911324528fcb2f88bc245b69fe50c242865fbb4ac204b52b545`  
+		Last Modified: Thu, 19 Dec 2019 06:03:51 GMT  
+		Size: 1.4 KB (1373 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:14cdb373d56b69e1927e31d36942beeeb400c2632b5bc77e1f73ad115ba8383a`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 1.4 MB (1382441 bytes)  
+	-	`sha256:673d96f2a5b2ca78e58cf695d0dba02cdf0279a1620b9a4b7e62192cb52054a9`  
+		Last Modified: Thu, 19 Dec 2019 06:03:50 GMT  
+		Size: 1.4 MB (1382437 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e4bcc50f7578a489fab996ffee3c7ea194e47a068ad3cae0821f4d60e06986b7`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 128.8 KB (128797 bytes)  
+	-	`sha256:b14ef693e693233cf4fea5d27768673723fdd0ac67859f0740a6e3ca15718406`  
+		Last Modified: Thu, 19 Dec 2019 06:03:49 GMT  
+		Size: 128.8 KB (128815 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5463ed1f22d5ece3465e961d34ec3854c36dfe23261548ab50b89fdd0f775e00`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 1.5 KB (1474 bytes)  
+	-	`sha256:14095c6e1a5c6c8e2eb79a0edb5fba2bfc43757e24a2d5953fc267cf77a178b5`  
+		Last Modified: Thu, 19 Dec 2019 06:03:49 GMT  
+		Size: 1.5 KB (1473 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d98966329f05e112300ee57648333a12079a1cc8a41d15d0e396391c444e67c1`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 570.4 KB (570373 bytes)  
+	-	`sha256:bf75ef62d8952c613219a1462ce69c61b6e6ca742bfe6578d3732a3d97fba9c4`  
+		Last Modified: Thu, 19 Dec 2019 06:03:50 GMT  
+		Size: 570.4 KB (570377 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:adef02fa3ca71fdceafb1fd92ff74960848b5673988dc3f2dc021aeaa943966b`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 496.0 B  
+	-	`sha256:79374c30d550e98acc64a36e936903f0fd6eee39645aef5007145f7860c1d8f9`  
+		Last Modified: Thu, 19 Dec 2019 06:03:49 GMT  
+		Size: 495.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adminer:4.7.5-standalone` - linux; ppc64le
 
 ```console
-$ docker pull adminer@sha256:c59dc08edbac430c86555d96e000a1d49c59e8a66bc5e9d3b073ed8fd76f08ea
+$ docker pull adminer@sha256:b10e79ba1e7932ac27c0ffb06cc228415b4552687d150f89ed3f21ee08194220
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **32.2 MB (32227844 bytes)**  
+-	Total Size: **32.2 MB (32247973 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:96efedc317d25ffb54f9f12d72c5f57e58d4d511e52b62c3548a5b787d1f3ad5`
+-	Image ID: `sha256:573383ff5140ec4fcaf742c4be6757a0567423c5c5833be7d728669583167bd3`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php","-S","[::]:8080","-t","\/var\/www\/html"]`
 
@@ -4728,57 +4728,57 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 01:17:40 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:44:14 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:44:17 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:44:19 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:44:32 GMT
+# Wed, 18 Dec 2019 22:43:03 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:43:05 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:43:07 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:43:21 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:44:34 GMT
+# Wed, 18 Dec 2019 22:43:23 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:48:15 GMT
+# Wed, 18 Dec 2019 22:46:52 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:21:52 GMT
+# Wed, 18 Dec 2019 22:46:54 GMT
 COPY multi:0b7e4a1b9cd5748d214539db3c6bee9b30805d1933690492830b56ffcd31f68d in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:22:02 GMT
+# Wed, 18 Dec 2019 22:46:59 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:22:05 GMT
+# Wed, 18 Dec 2019 22:47:01 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:22:06 GMT
+# Wed, 18 Dec 2019 22:47:03 GMT
 CMD ["php" "-a"]
-# Fri, 06 Dec 2019 02:50:03 GMT
+# Thu, 19 Dec 2019 06:27:50 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 02:50:05 GMT
+# Thu, 19 Dec 2019 06:27:55 GMT
 STOPSIGNAL SIGINT
-# Fri, 06 Dec 2019 02:50:19 GMT
+# Thu, 19 Dec 2019 06:28:07 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 02:50:23 GMT
+# Thu, 19 Dec 2019 06:28:11 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 02:50:32 GMT
+# Thu, 19 Dec 2019 06:28:18 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 02:51:03 GMT
+# Thu, 19 Dec 2019 06:28:51 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 02:51:07 GMT
+# Thu, 19 Dec 2019 06:28:54 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 02:51:08 GMT
+# Thu, 19 Dec 2019 06:28:58 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 02:51:12 GMT
+# Thu, 19 Dec 2019 06:28:59 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 02:51:14 GMT
+# Thu, 19 Dec 2019 06:29:03 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 02:51:24 GMT
+# Thu, 19 Dec 2019 06:29:15 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 02:51:27 GMT
+# Thu, 19 Dec 2019 06:29:18 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 02:51:33 GMT
+# Thu, 19 Dec 2019 06:29:20 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 02:51:35 GMT
+# Thu, 19 Dec 2019 06:29:26 GMT
 USER adminer
-# Fri, 06 Dec 2019 02:51:40 GMT
+# Thu, 19 Dec 2019 06:29:30 GMT
 CMD ["php" "-S" "[::]:8080" "-t" "/var/www/html"]
-# Fri, 06 Dec 2019 02:51:44 GMT
+# Thu, 19 Dec 2019 06:29:34 GMT
 EXPOSE 8080
 ```
 
@@ -4799,59 +4799,59 @@ EXPOSE 8080
 		Last Modified: Mon, 21 Oct 2019 20:21:00 GMT  
 		Size: 269.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f41671226d36c01ec9c7f1ea38cd673556952e7f899f4f4b89c9fbdebd29a53b`  
-		Last Modified: Thu, 28 Nov 2019 21:10:15 GMT  
-		Size: 10.3 MB (10250609 bytes)  
+	-	`sha256:4b579441bf6e92a1a6e81ea93691621e4c87a50d9ffb31d4b378b5df7d32872f`  
+		Last Modified: Thu, 19 Dec 2019 01:42:36 GMT  
+		Size: 10.3 MB (10263942 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1d940bc1bed9725313bbc396a711a790598103f8425780c96a2b8e0b8c314f83`  
-		Last Modified: Thu, 28 Nov 2019 21:10:13 GMT  
-		Size: 498.0 B  
+	-	`sha256:439349ae045fb12b63f4ea12de47a2383371a3189b6e95b5a84693903df9b0a4`  
+		Last Modified: Thu, 19 Dec 2019 01:42:35 GMT  
+		Size: 497.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:02effde3bc9b924c0d25924f0e1f298c9e7644c948efa10ff4d8945399a16b74`  
-		Last Modified: Thu, 28 Nov 2019 21:10:19 GMT  
-		Size: 15.6 MB (15648865 bytes)  
+	-	`sha256:48b07dcdf318b1dc68a37f668ccb781855c62ec5ac7721f9c1149fdb135ba87d`  
+		Last Modified: Thu, 19 Dec 2019 01:42:48 GMT  
+		Size: 15.7 MB (15655717 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e31c94093f50a0b5f297e9da64e47405dbe46f8ec535d000ee7f725a553fc633`  
-		Last Modified: Fri, 06 Dec 2019 01:40:27 GMT  
-		Size: 2.2 KB (2217 bytes)  
+	-	`sha256:c7eab24ff28c16bb245a5237cc4946807bcb8d827d3702b5bb9f74cfd586fece`  
+		Last Modified: Thu, 19 Dec 2019 01:42:35 GMT  
+		Size: 2.2 KB (2210 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:232540856492a6874250c20d02259faf35c4a5b5aa42520d4c9528742d779fd0`  
-		Last Modified: Fri, 06 Dec 2019 01:40:27 GMT  
-		Size: 72.2 KB (72168 bytes)  
+	-	`sha256:8334e4feab309edb35cdf7bec81a8a27169fa44dde213e3030369881eda125f1`  
+		Last Modified: Thu, 19 Dec 2019 01:42:35 GMT  
+		Size: 72.1 KB (72144 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d14842d0c142c0039a7a184b2b3d335b2a01864a6235ea3dda30897e146ad1c6`  
-		Last Modified: Fri, 06 Dec 2019 02:53:43 GMT  
-		Size: 310.0 B  
+	-	`sha256:6e5b8d229e7b1d88a7c021b6c715fb1dc4558108381b5279c56a41a62dbc2261`  
+		Last Modified: Thu, 19 Dec 2019 06:32:06 GMT  
+		Size: 306.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d2190da7f3695c3878621e1660bf04a2c8dbdfef966bffeb6971cf76aed20f16`  
-		Last Modified: Fri, 06 Dec 2019 02:53:43 GMT  
-		Size: 1.4 KB (1414 bytes)  
+	-	`sha256:8a14230d6a9f6580d0617afb712af2aa3a52531275d062968f9876403ef06fb4`  
+		Last Modified: Thu, 19 Dec 2019 06:32:05 GMT  
+		Size: 1.4 KB (1421 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:55e067e4d19dc08989322d9eb8129d7bdbf1bf797725927442cc93bf69ae0d33`  
-		Last Modified: Fri, 06 Dec 2019 02:53:40 GMT  
-		Size: 1.3 MB (1347029 bytes)  
+	-	`sha256:6d0c4ce6bd51ba7c0848bd56478144b0695f576f8ae0678eb62e05ee3559fc42`  
+		Last Modified: Thu, 19 Dec 2019 06:32:03 GMT  
+		Size: 1.3 MB (1347007 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ff1668716d22838ddf256cebcbf1b09ddc48fc942a5842b5e13e6c44e830c394`  
-		Last Modified: Fri, 06 Dec 2019 02:53:39 GMT  
-		Size: 135.8 KB (135823 bytes)  
+	-	`sha256:8f2e3e1cdb6c28b9b5b15dba0737ad3ed00202221c4c671693dc9fc7b7ba77cc`  
+		Last Modified: Thu, 19 Dec 2019 06:32:02 GMT  
+		Size: 135.8 KB (135826 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2a7c9bfcff913dd0e174b7de4290afacf966f43e6be2dd050e56584c94028fe2`  
-		Last Modified: Fri, 06 Dec 2019 02:53:39 GMT  
-		Size: 1.5 KB (1479 bytes)  
+	-	`sha256:43cb845103383d0bd1567a8b09f649e5f523c37b005bd6625351c8dbf52f6976`  
+		Last Modified: Thu, 19 Dec 2019 06:32:01 GMT  
+		Size: 1.5 KB (1473 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:04e9df15d0417b3f6421f2a692de9e7bdfa605d9bf0105088ad284939e459927`  
-		Last Modified: Fri, 06 Dec 2019 02:53:40 GMT  
-		Size: 570.5 KB (570451 bytes)  
+	-	`sha256:2d4d6287f785538118622662e0c60ab299f7a2ae11f5301fa041f86527b24464`  
+		Last Modified: Thu, 19 Dec 2019 06:32:02 GMT  
+		Size: 570.5 KB (570450 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:072c9cb6de1241a262601cb46dc6b10bff853e228b847c61d3443de139fb9ac2`  
-		Last Modified: Fri, 06 Dec 2019 02:53:39 GMT  
-		Size: 498.0 B  
+	-	`sha256:81477a62f96cdc3549a2c6c8ac63f34fc068128715c326c6c916ac7a607475f5`  
+		Last Modified: Thu, 19 Dec 2019 06:32:02 GMT  
+		Size: 497.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `adminer:4.7-fastcgi`
 
 ```console
-$ docker pull adminer@sha256:32c9e70d68f96c433eefc7a959558b2d7eca29460a2f17e71f68ffb3613a80a0
+$ docker pull adminer@sha256:9e2c982c6dfe8eaaefd23cc5861f3e14e78f2f249b3d6d81ccc2903332c18020
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4866,14 +4866,14 @@ $ docker pull adminer@sha256:32c9e70d68f96c433eefc7a959558b2d7eca29460a2f17e71f6
 ### `adminer:4.7-fastcgi` - linux; amd64
 
 ```console
-$ docker pull adminer@sha256:fb61861982d8f821a9612eefdc98c5ad7fba67628272642f0546ce7b8fc810d2
+$ docker pull adminer@sha256:a6fba2c8b8b2aedcc7563a7be20fdba3bed2806ee4ca6bbad9bfe451a247943d
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **31.1 MB (31089366 bytes)**  
+-	Total Size: **31.1 MB (31106050 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:44eba76cc5d76c73c629ebd6d02a2127cd58873c3673f73b71711277e0ebe4dd`
+-	Image ID: `sha256:ce28adb4fe140e43080c7537718777a7893665a109d343d278f2fb4b29a1ab10`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php-fpm"]`
 
@@ -4902,59 +4902,59 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 01:15:45 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:55:28 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:55:29 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:55:29 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:55:31 GMT
+# Wed, 18 Dec 2019 22:44:39 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:44:39 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:44:39 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:44:41 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:55:31 GMT
+# Wed, 18 Dec 2019 22:44:42 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 21:01:42 GMT
+# Wed, 18 Dec 2019 22:53:32 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:21:40 GMT
+# Wed, 18 Dec 2019 22:53:32 GMT
 COPY multi:5581a34bba21fbf2472e857e8cdc8db6d57694020e568954d2fd5901ee074da0 in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:21:42 GMT
+# Wed, 18 Dec 2019 22:53:33 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:21:42 GMT
+# Wed, 18 Dec 2019 22:53:33 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:21:42 GMT
+# Wed, 18 Dec 2019 22:53:33 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 01:21:43 GMT
+# Wed, 18 Dec 2019 22:53:34 GMT
 RUN set -eux; 	cd /usr/local/etc; 	if [ -d php-fpm.d ]; then 		sed 's!=NONE/!=!g' php-fpm.conf.default | tee php-fpm.conf > /dev/null; 		cp php-fpm.d/www.conf.default php-fpm.d/www.conf; 	else 		mkdir php-fpm.d; 		cp php-fpm.conf.default php-fpm.d/www.conf; 		{ 			echo '[global]'; 			echo 'include=etc/php-fpm.d/*.conf'; 		} | tee php-fpm.conf; 	fi; 	{ 		echo '[global]'; 		echo 'error_log = /proc/self/fd/2'; 		echo; echo '; https://github.com/docker-library/php/pull/725#issuecomment-443540114'; echo 'log_limit = 8192'; 		echo; 		echo '[www]'; 		echo '; if we send this to /proc/self/fd/1, it never appears'; 		echo 'access.log = /proc/self/fd/2'; 		echo; 		echo 'clear_env = no'; 		echo; 		echo '; Ensure worker stdout and stderr are sent to the main error log.'; 		echo 'catch_workers_output = yes'; 		echo 'decorate_workers_output = no'; 	} | tee php-fpm.d/docker.conf; 	{ 		echo '[global]'; 		echo 'daemonize = no'; 		echo; 		echo '[www]'; 		echo 'listen = 9000'; 	} | tee php-fpm.d/zz-docker.conf
-# Fri, 06 Dec 2019 01:21:43 GMT
+# Wed, 18 Dec 2019 22:53:34 GMT
 STOPSIGNAL SIGQUIT
-# Fri, 06 Dec 2019 01:21:43 GMT
+# Wed, 18 Dec 2019 22:53:35 GMT
 EXPOSE 9000
-# Fri, 06 Dec 2019 01:21:43 GMT
+# Wed, 18 Dec 2019 22:53:35 GMT
 CMD ["php-fpm"]
-# Fri, 06 Dec 2019 01:46:42 GMT
+# Thu, 19 Dec 2019 05:36:17 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 01:46:43 GMT
+# Thu, 19 Dec 2019 05:36:18 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 01:46:44 GMT
+# Thu, 19 Dec 2019 05:36:19 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 01:47:01 GMT
+# Thu, 19 Dec 2019 05:36:36 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 01:47:01 GMT
+# Thu, 19 Dec 2019 05:36:36 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 01:47:02 GMT
+# Thu, 19 Dec 2019 05:36:36 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 01:47:02 GMT
+# Thu, 19 Dec 2019 05:36:37 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 01:47:02 GMT
+# Thu, 19 Dec 2019 05:36:37 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 01:47:03 GMT
+# Thu, 19 Dec 2019 05:36:38 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 01:47:03 GMT
+# Thu, 19 Dec 2019 05:36:38 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:47:03 GMT
+# Thu, 19 Dec 2019 05:36:38 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:47:04 GMT
+# Thu, 19 Dec 2019 05:36:39 GMT
 USER adminer
-# Fri, 06 Dec 2019 01:47:04 GMT
+# Thu, 19 Dec 2019 05:36:39 GMT
 CMD ["php-fpm"]
 ```
 
@@ -4975,57 +4975,57 @@ CMD ["php-fpm"]
 		Last Modified: Mon, 21 Oct 2019 21:44:18 GMT  
 		Size: 222.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a601c8316c6be88cf4a4644682a7fd958df67c4dccca6ce371527843cc478c7f`  
-		Last Modified: Thu, 28 Nov 2019 21:13:41 GMT  
-		Size: 10.3 MB (10250554 bytes)  
+	-	`sha256:99401fd0ece70360f3ccecf44f844a5a0efdf32146d6c446970c26531752c341`  
+		Last Modified: Thu, 19 Dec 2019 03:00:56 GMT  
+		Size: 10.3 MB (10263900 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fb3804cbe9c1edb0802bb41778e0b051935530870e40f8314aecfcf8e2b21315`  
-		Last Modified: Thu, 28 Nov 2019 21:13:39 GMT  
+	-	`sha256:de913d86f05a50a4c3f792243ec9f24779f57ce0e0238c053c4287d7880a5347`  
+		Last Modified: Thu, 19 Dec 2019 03:00:53 GMT  
 		Size: 497.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3288d779cb3b5cf28ee3e06007de0ff994a17dacf83f4c84e60ebfe31ba948d1`  
-		Last Modified: Thu, 28 Nov 2019 21:13:43 GMT  
-		Size: 14.7 MB (14657297 bytes)  
+	-	`sha256:0f2b5a211ce6ec0d98a72f219b18530d5c25fafc0a7a9a21b7da0330bbbe5797`  
+		Last Modified: Thu, 19 Dec 2019 03:01:00 GMT  
+		Size: 14.7 MB (14660671 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c640bbd2a760395929467de5ee104f09aaeeea47b83dfcfc69da97278e70b945`  
-		Last Modified: Fri, 06 Dec 2019 01:27:11 GMT  
-		Size: 2.2 KB (2219 bytes)  
+	-	`sha256:b0b33dbfafe9a898ff3a2b3e4e1a7af15b797a7c00dd874e9d3c827e395cd43b`  
+		Last Modified: Thu, 19 Dec 2019 03:00:54 GMT  
+		Size: 2.2 KB (2220 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5ce9637f8561c37a2120d04a20e7db57873352d5e5fa53f150a05c15efeb86c4`  
-		Last Modified: Fri, 06 Dec 2019 01:27:11 GMT  
-		Size: 72.3 KB (72319 bytes)  
+	-	`sha256:49e0c9bf0c294f08a2cc44a9197f856fda455f40aa06c532cea2cb79d6877f77`  
+		Last Modified: Thu, 19 Dec 2019 03:00:53 GMT  
+		Size: 72.3 KB (72299 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:178cf949d1df28b308bbfde08ad37ae95550b6e531d123d3bfbf42f8fb630cc9`  
-		Last Modified: Fri, 06 Dec 2019 01:27:11 GMT  
-		Size: 8.4 KB (8416 bytes)  
+	-	`sha256:1aa5c4c9069b45e81276629ede436f3bf5cea9843721c563a1f72553b0d445ec`  
+		Last Modified: Thu, 19 Dec 2019 03:00:54 GMT  
+		Size: 8.4 KB (8409 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4a4176cf6fc0db678f63ad60351550fab8c8f88c4acbdc999b5f146c0abeb2cc`  
-		Last Modified: Fri, 06 Dec 2019 01:47:37 GMT  
-		Size: 310.0 B  
+	-	`sha256:b066b20593318b62a26b9637aa4ab4a2a37c8f397ee9fdba7e79e592e450402f`  
+		Last Modified: Thu, 19 Dec 2019 05:37:01 GMT  
+		Size: 307.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f3ee6614958c36386354c57d02f2707edf448051af00523a696375615ffd4792`  
-		Last Modified: Fri, 06 Dec 2019 01:47:37 GMT  
-		Size: 1.4 KB (1372 bytes)  
+	-	`sha256:640b2caf715bb36f272914262e86e6181fa0510cc8236e55b5a5ff3cd535744d`  
+		Last Modified: Thu, 19 Dec 2019 05:37:01 GMT  
+		Size: 1.4 KB (1373 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:91bb715b44e74412113e259c16cc49f124406bf1fee85491bf055aaa93eb9e6a`  
-		Last Modified: Fri, 06 Dec 2019 01:47:34 GMT  
-		Size: 1.3 MB (1267208 bytes)  
+	-	`sha256:dc66e0562ddf1d4ba9dcaffa1afa1eae778de558f7674bc53c7473b63ac44f22`  
+		Last Modified: Thu, 19 Dec 2019 05:37:00 GMT  
+		Size: 1.3 MB (1267203 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cb970b079b37f6e02d3df5882cd2e3a923fa334ea3abc77fa90c1fc82367e95e`  
-		Last Modified: Fri, 06 Dec 2019 01:47:33 GMT  
+	-	`sha256:b877ea3f3b11a7225696f96d2c7247c2f8b714f79fc03f89f71bebc6b9431424`  
+		Last Modified: Thu, 19 Dec 2019 05:37:00 GMT  
 		Size: 125.7 KB (125656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6baf6eed16971fd51de3f0f170d0b6d4a0378193275c9579659bfa292336f063`  
-		Last Modified: Fri, 06 Dec 2019 01:47:34 GMT  
-		Size: 1.5 KB (1474 bytes)  
+	-	`sha256:014e55e883e88a5a8887682b5c9b8c76b00141600a698701ec3cb97da6380b0f`  
+		Last Modified: Thu, 19 Dec 2019 05:37:00 GMT  
+		Size: 1.5 KB (1475 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ddaf26f3c519006700f20f139a27ab4408d8821c325e8546c03acbda70d3f76f`  
-		Last Modified: Fri, 06 Dec 2019 01:47:34 GMT  
-		Size: 570.4 KB (570382 bytes)  
+	-	`sha256:0ac91ac5b58c527badba4ad4c05ece7bc5954fe9e14a7dd195cc1dc23479603d`  
+		Last Modified: Thu, 19 Dec 2019 05:37:00 GMT  
+		Size: 570.4 KB (570381 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a5f935221cf5489e888bf3acf8b04f178ed625f428fcb84e8d8e4b79a403ed04`  
-		Last Modified: Fri, 06 Dec 2019 01:47:34 GMT  
-		Size: 496.0 B  
+	-	`sha256:2f0eb5db857e60dc084fc2707add56ec223c18d1235477d69daf5a1635a8966d`  
+		Last Modified: Thu, 19 Dec 2019 05:37:00 GMT  
+		Size: 493.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adminer:4.7-fastcgi` - linux; arm variant v6
@@ -5196,14 +5196,14 @@ CMD ["php-fpm"]
 ### `adminer:4.7-fastcgi` - linux; arm variant v7
 
 ```console
-$ docker pull adminer@sha256:e8a21987f3604277d81acab716a83660516ac8dedfb4265e9e5a315b74855575
+$ docker pull adminer@sha256:fbdfb91799dc6900d61e80c1270b8cfd5e23f5988d759cbed5cd038b1b6baa48
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **28.4 MB (28425499 bytes)**  
+-	Total Size: **28.4 MB (28447463 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0b841f0ed66806ebf1569b0f7f0e7576049cb7aca8423ad68781e4c1b6dd2619`
+-	Image ID: `sha256:23a9b5b061b147ddc1b90ee4b90ece47359fa93b71952e17f8f21fe6b38881f6`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php-fpm"]`
 
@@ -5232,59 +5232,59 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 00:46:21 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:22:49 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:22:50 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:22:50 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:22:54 GMT
+# Wed, 18 Dec 2019 22:16:47 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:16:48 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:16:48 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:16:52 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:22:55 GMT
+# Wed, 18 Dec 2019 22:16:52 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:25:37 GMT
+# Wed, 18 Dec 2019 22:19:17 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:17:43 GMT
+# Wed, 18 Dec 2019 22:19:19 GMT
 COPY multi:5581a34bba21fbf2472e857e8cdc8db6d57694020e568954d2fd5901ee074da0 in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:17:51 GMT
+# Wed, 18 Dec 2019 22:19:21 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:17:52 GMT
+# Wed, 18 Dec 2019 22:19:21 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:17:54 GMT
+# Wed, 18 Dec 2019 22:19:22 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 01:17:57 GMT
+# Wed, 18 Dec 2019 22:19:23 GMT
 RUN set -eux; 	cd /usr/local/etc; 	if [ -d php-fpm.d ]; then 		sed 's!=NONE/!=!g' php-fpm.conf.default | tee php-fpm.conf > /dev/null; 		cp php-fpm.d/www.conf.default php-fpm.d/www.conf; 	else 		mkdir php-fpm.d; 		cp php-fpm.conf.default php-fpm.d/www.conf; 		{ 			echo '[global]'; 			echo 'include=etc/php-fpm.d/*.conf'; 		} | tee php-fpm.conf; 	fi; 	{ 		echo '[global]'; 		echo 'error_log = /proc/self/fd/2'; 		echo; echo '; https://github.com/docker-library/php/pull/725#issuecomment-443540114'; echo 'log_limit = 8192'; 		echo; 		echo '[www]'; 		echo '; if we send this to /proc/self/fd/1, it never appears'; 		echo 'access.log = /proc/self/fd/2'; 		echo; 		echo 'clear_env = no'; 		echo; 		echo '; Ensure worker stdout and stderr are sent to the main error log.'; 		echo 'catch_workers_output = yes'; 		echo 'decorate_workers_output = no'; 	} | tee php-fpm.d/docker.conf; 	{ 		echo '[global]'; 		echo 'daemonize = no'; 		echo; 		echo '[www]'; 		echo 'listen = 9000'; 	} | tee php-fpm.d/zz-docker.conf
-# Fri, 06 Dec 2019 01:17:57 GMT
+# Wed, 18 Dec 2019 22:19:24 GMT
 STOPSIGNAL SIGQUIT
-# Fri, 06 Dec 2019 01:17:58 GMT
+# Wed, 18 Dec 2019 22:19:24 GMT
 EXPOSE 9000
-# Fri, 06 Dec 2019 01:18:00 GMT
+# Wed, 18 Dec 2019 22:19:25 GMT
 CMD ["php-fpm"]
-# Fri, 06 Dec 2019 04:52:58 GMT
+# Thu, 19 Dec 2019 05:44:09 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 04:53:02 GMT
+# Thu, 19 Dec 2019 05:44:11 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 04:53:07 GMT
+# Thu, 19 Dec 2019 05:44:13 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 04:53:56 GMT
+# Thu, 19 Dec 2019 05:44:42 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 04:53:58 GMT
+# Thu, 19 Dec 2019 05:44:43 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 04:54:03 GMT
+# Thu, 19 Dec 2019 05:44:44 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 04:54:06 GMT
+# Thu, 19 Dec 2019 05:44:46 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 04:54:11 GMT
+# Thu, 19 Dec 2019 05:44:47 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 04:54:23 GMT
+# Thu, 19 Dec 2019 05:44:50 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 04:54:27 GMT
+# Thu, 19 Dec 2019 05:44:51 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 04:54:31 GMT
+# Thu, 19 Dec 2019 05:44:52 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 04:54:40 GMT
+# Thu, 19 Dec 2019 05:44:53 GMT
 USER adminer
-# Fri, 06 Dec 2019 04:54:46 GMT
+# Thu, 19 Dec 2019 05:44:53 GMT
 CMD ["php-fpm"]
 ```
 
@@ -5305,57 +5305,57 @@ CMD ["php-fpm"]
 		Last Modified: Mon, 21 Oct 2019 22:14:00 GMT  
 		Size: 267.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bd5b4d8b4543b812d92b5b3c4f25d044a8187acdd7f3b53df3b71f804cac7340`  
-		Last Modified: Thu, 28 Nov 2019 20:37:43 GMT  
-		Size: 10.3 MB (10250580 bytes)  
+	-	`sha256:4eedeb9880bb1f9c73e334a58cb9c46cc6232b53ce736a7589f1ee24686b530c`  
+		Last Modified: Thu, 19 Dec 2019 00:23:59 GMT  
+		Size: 10.3 MB (10263922 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:55de7a9fd1e9272a3a4ff2cbf814a2aef5e9a954c9af9171183f2a12db1a85a5`  
-		Last Modified: Thu, 28 Nov 2019 20:37:40 GMT  
+	-	`sha256:c88c2b531f9e7529ca2b92ebefe77956bef1d3a42d4fac0e1aab9cf7d38d9194`  
+		Last Modified: Thu, 19 Dec 2019 00:23:56 GMT  
 		Size: 497.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:76ab6e8d330e8d16362a233aff02d2ffdbafb3485b6e7145be238ae9d6cc6c02`  
-		Last Modified: Thu, 28 Nov 2019 20:37:45 GMT  
-		Size: 12.7 MB (12721061 bytes)  
+	-	`sha256:5e29f6cb3619d30dfc550358fb1b34b267a7b9d9a349a053e01f34f47154bbfd`  
+		Last Modified: Thu, 19 Dec 2019 00:24:01 GMT  
+		Size: 12.7 MB (12729707 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ba988589c2419f2f60d14b762f8fc5d5fe82fe375e5feedbe47af4c90cd3939e`  
-		Last Modified: Fri, 06 Dec 2019 01:36:01 GMT  
-		Size: 2.2 KB (2220 bytes)  
+	-	`sha256:c76814ed8ddfef8fa79e7196863c601c997e68e9b7d6cc43871f4f82026f8981`  
+		Last Modified: Thu, 19 Dec 2019 00:23:56 GMT  
+		Size: 2.2 KB (2215 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1c3c2872d8caf9ee292f6d5dc746ee6a0f019719be736ef7f7f75a767594635d`  
-		Last Modified: Fri, 06 Dec 2019 01:36:01 GMT  
-		Size: 71.9 KB (71897 bytes)  
+	-	`sha256:f3019562df3384254b5eff7a4c4cfb777574e12603cba999912f173377cd8e01`  
+		Last Modified: Thu, 19 Dec 2019 00:23:56 GMT  
+		Size: 71.9 KB (71882 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fbd45d21777c734579b6af6e024d9df4fc1939be3fa625047eca044f19fa0ddc`  
-		Last Modified: Fri, 06 Dec 2019 01:36:01 GMT  
-		Size: 8.4 KB (8419 bytes)  
+	-	`sha256:1381e38356bda310c22a0249c4cdaa209f53a34577bf9ed64696fdd854988783`  
+		Last Modified: Thu, 19 Dec 2019 00:23:56 GMT  
+		Size: 8.4 KB (8412 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:be4298819eb89def21ff8e9d5d826931901542c502760fda6b8bb1c51c773faf`  
-		Last Modified: Fri, 06 Dec 2019 04:55:36 GMT  
-		Size: 313.0 B  
+	-	`sha256:f13b5156371dc9dbc0a311fae8af8e803a0753d6b245af20e36db65d4ed8f65d`  
+		Last Modified: Thu, 19 Dec 2019 05:45:44 GMT  
+		Size: 307.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0ae7e953ec02b6619fa10ef1ca0111674953b7aacc31171dfe128e5d976dcc1b`  
-		Last Modified: Fri, 06 Dec 2019 04:55:35 GMT  
+	-	`sha256:bb959a30681546d0762debb7004e5fc0c3eb553ad3a319d7130e2c70e8ec2ec4`  
+		Last Modified: Thu, 19 Dec 2019 05:45:43 GMT  
 		Size: 1.4 KB (1417 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:72078331166ccb0cfba22b4e2693699e5b85c0b6a4187589c14b3c019a43a8b9`  
-		Last Modified: Fri, 06 Dec 2019 04:55:33 GMT  
-		Size: 1.1 MB (1098030 bytes)  
+	-	`sha256:b4adbb7af708946c67dbace2146e6036b4ca06d3b6baa7b320791af28ed53b1a`  
+		Last Modified: Thu, 19 Dec 2019 05:45:41 GMT  
+		Size: 1.1 MB (1098039 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6f96e68cf74577ed595e24c862091041b1c67a759723cf554b14bf74912b93da`  
-		Last Modified: Fri, 06 Dec 2019 04:55:33 GMT  
-		Size: 113.6 KB (113638 bytes)  
+	-	`sha256:b89f988b332cf8b5092864935822fc0cfc1946a7eafcfa16b13a1ddda4e938e5`  
+		Last Modified: Thu, 19 Dec 2019 05:45:41 GMT  
+		Size: 113.6 KB (113634 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:454a2e3b78edeb67039002bc5b3d08d704552e1d1b81eb1a216e79908e2f5a79`  
-		Last Modified: Fri, 06 Dec 2019 04:55:34 GMT  
-		Size: 1.5 KB (1474 bytes)  
+	-	`sha256:a2e352e3241ea44c2ab9a19cbd58216982dbcb88bc8be04236d7fbd689f53a90`  
+		Last Modified: Thu, 19 Dec 2019 05:45:40 GMT  
+		Size: 1.5 KB (1475 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:772de545e44a062eeaa2f1ffd40f952415647924cf2eb1cc43ba673d63fb778c`  
-		Last Modified: Fri, 06 Dec 2019 04:55:34 GMT  
-		Size: 570.5 KB (570450 bytes)  
+	-	`sha256:184c931f95290c799bd2ec8cd4b6fdf9e8a34ab7b92e48d4383c26136dcc9179`  
+		Last Modified: Thu, 19 Dec 2019 05:45:41 GMT  
+		Size: 570.5 KB (570454 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:07479bf42f2f435026ecea0bc9599248121172fc4378ef62094029e8a2a85f8b`  
-		Last Modified: Fri, 06 Dec 2019 04:55:33 GMT  
-		Size: 499.0 B  
+	-	`sha256:860fbfcb30cb2e74ab43685c2be66ad5b833f40954fa7d0954ce9b884d3c5c04`  
+		Last Modified: Thu, 19 Dec 2019 05:45:40 GMT  
+		Size: 498.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adminer:4.7-fastcgi` - linux; arm64 variant v8
@@ -5526,14 +5526,14 @@ CMD ["php-fpm"]
 ### `adminer:4.7-fastcgi` - linux; 386
 
 ```console
-$ docker pull adminer@sha256:696e32f3fe8ded2808300fbbe16224a66699b507a69e237a658e74d3a6c7139a
+$ docker pull adminer@sha256:ddb4ef346f4a51c9da3fc1726a3b756745fa17cb92b81efcd77a9c0637f628eb
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **31.7 MB (31681382 bytes)**  
+-	Total Size: **31.7 MB (31697203 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b62059fecce24a95d9821faf72e1c1a702b1e964bdb645a49eaa7c4fe7e613db`
+-	Image ID: `sha256:0f172a742089b6f88337921724e6c37028004ad70d7ed03b0bf31928e0d07930`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php-fpm"]`
 
@@ -5562,59 +5562,59 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 03:55:38 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:09:01 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:09:01 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:09:01 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:09:04 GMT
+# Wed, 18 Dec 2019 23:28:12 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 23:28:12 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 23:28:13 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 23:28:17 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:09:04 GMT
+# Wed, 18 Dec 2019 23:28:17 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:14:40 GMT
+# Wed, 18 Dec 2019 23:37:38 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 00:41:42 GMT
+# Wed, 18 Dec 2019 23:37:39 GMT
 COPY multi:5581a34bba21fbf2472e857e8cdc8db6d57694020e568954d2fd5901ee074da0 in /usr/local/bin/ 
-# Fri, 06 Dec 2019 00:41:43 GMT
+# Wed, 18 Dec 2019 23:37:41 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 00:41:44 GMT
+# Wed, 18 Dec 2019 23:37:41 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 00:41:44 GMT
+# Wed, 18 Dec 2019 23:37:41 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 00:41:45 GMT
+# Wed, 18 Dec 2019 23:37:42 GMT
 RUN set -eux; 	cd /usr/local/etc; 	if [ -d php-fpm.d ]; then 		sed 's!=NONE/!=!g' php-fpm.conf.default | tee php-fpm.conf > /dev/null; 		cp php-fpm.d/www.conf.default php-fpm.d/www.conf; 	else 		mkdir php-fpm.d; 		cp php-fpm.conf.default php-fpm.d/www.conf; 		{ 			echo '[global]'; 			echo 'include=etc/php-fpm.d/*.conf'; 		} | tee php-fpm.conf; 	fi; 	{ 		echo '[global]'; 		echo 'error_log = /proc/self/fd/2'; 		echo; echo '; https://github.com/docker-library/php/pull/725#issuecomment-443540114'; echo 'log_limit = 8192'; 		echo; 		echo '[www]'; 		echo '; if we send this to /proc/self/fd/1, it never appears'; 		echo 'access.log = /proc/self/fd/2'; 		echo; 		echo 'clear_env = no'; 		echo; 		echo '; Ensure worker stdout and stderr are sent to the main error log.'; 		echo 'catch_workers_output = yes'; 		echo 'decorate_workers_output = no'; 	} | tee php-fpm.d/docker.conf; 	{ 		echo '[global]'; 		echo 'daemonize = no'; 		echo; 		echo '[www]'; 		echo 'listen = 9000'; 	} | tee php-fpm.d/zz-docker.conf
-# Fri, 06 Dec 2019 00:41:45 GMT
+# Wed, 18 Dec 2019 23:37:43 GMT
 STOPSIGNAL SIGQUIT
-# Fri, 06 Dec 2019 00:41:45 GMT
+# Wed, 18 Dec 2019 23:37:43 GMT
 EXPOSE 9000
-# Fri, 06 Dec 2019 00:41:45 GMT
+# Wed, 18 Dec 2019 23:37:43 GMT
 CMD ["php-fpm"]
-# Fri, 06 Dec 2019 01:35:54 GMT
+# Thu, 19 Dec 2019 06:03:16 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 01:35:54 GMT
+# Thu, 19 Dec 2019 06:03:17 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 01:35:56 GMT
+# Thu, 19 Dec 2019 06:03:18 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 01:36:12 GMT
+# Thu, 19 Dec 2019 06:03:37 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 01:36:12 GMT
+# Thu, 19 Dec 2019 06:03:37 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 01:36:13 GMT
+# Thu, 19 Dec 2019 06:03:38 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 01:36:13 GMT
+# Thu, 19 Dec 2019 06:03:38 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 01:36:13 GMT
+# Thu, 19 Dec 2019 06:03:38 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 01:36:14 GMT
+# Thu, 19 Dec 2019 06:03:39 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 01:36:14 GMT
+# Thu, 19 Dec 2019 06:03:39 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:36:15 GMT
+# Thu, 19 Dec 2019 06:03:40 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:36:15 GMT
+# Thu, 19 Dec 2019 06:03:40 GMT
 USER adminer
-# Fri, 06 Dec 2019 01:36:15 GMT
+# Thu, 19 Dec 2019 06:03:40 GMT
 CMD ["php-fpm"]
 ```
 
@@ -5635,70 +5635,70 @@ CMD ["php-fpm"]
 		Last Modified: Mon, 21 Oct 2019 20:16:09 GMT  
 		Size: 221.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:883002e0338b8c513c57d18ab77d82e0caa919bdb1b2946f08ed3b55b72fac1e`  
-		Last Modified: Thu, 28 Nov 2019 20:26:08 GMT  
-		Size: 10.3 MB (10250560 bytes)  
+	-	`sha256:c1e36a5c98d6178a449daf406257e7eff2a8aaa8f7841e89d88aa873d05f19d1`  
+		Last Modified: Thu, 19 Dec 2019 03:54:26 GMT  
+		Size: 10.3 MB (10263910 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e7b0a921118a69174781eb4a78632aeeecae27242523e5cd8f5285edf19fe334`  
-		Last Modified: Thu, 28 Nov 2019 20:26:06 GMT  
+	-	`sha256:4725008c4a17d209ebebf19f78eb56a40450345fe49d5db3485091250aeb99f3`  
+		Last Modified: Thu, 19 Dec 2019 03:54:24 GMT  
 		Size: 498.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b3c1c34bce5f0b20f0e44086f68aaafa99ffc49bdb7dbc66c1c06e24b9955974`  
-		Last Modified: Thu, 28 Nov 2019 20:26:12 GMT  
-		Size: 15.0 MB (15041874 bytes)  
+	-	`sha256:282e1d0766783fa9892cf09cb13c7dad4614d043e3a91d070850cdabefbe5e51`  
+		Last Modified: Thu, 19 Dec 2019 03:54:30 GMT  
+		Size: 15.0 MB (15044382 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c3879df9a92354b1306a7e72620aab8a40a59b92ba45fe1820f1aa46e9b44495`  
-		Last Modified: Fri, 06 Dec 2019 00:46:48 GMT  
-		Size: 2.2 KB (2217 bytes)  
+	-	`sha256:78244b0bf6db52cbb1d03d4475db979cea475dd6d957e745ae8eb04b5fd020f7`  
+		Last Modified: Thu, 19 Dec 2019 03:54:24 GMT  
+		Size: 2.2 KB (2214 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ffef623ce21dc6b94b53c9e218c7559ac372c972028a492b3bec3bf5223ea6bb`  
-		Last Modified: Fri, 06 Dec 2019 00:46:47 GMT  
-		Size: 71.5 KB (71461 bytes)  
+	-	`sha256:ca2f4f3e381507a2e63adb951d6250fd232c07b850b73a6dbcf66951d6cb156d`  
+		Last Modified: Thu, 19 Dec 2019 03:54:24 GMT  
+		Size: 71.5 KB (71454 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9f8859fd4299cfa4ebc4c4abbb5eb35a56168974f7f37bf0243bef6da168cab3`  
-		Last Modified: Fri, 06 Dec 2019 00:46:48 GMT  
-		Size: 8.4 KB (8414 bytes)  
+	-	`sha256:ac7b77f214de306452a069819db22449df52a22007c3d8248782417ae08b39f8`  
+		Last Modified: Thu, 19 Dec 2019 03:54:24 GMT  
+		Size: 8.4 KB (8409 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:527177aba9589b65da398f866482092bc2575d64199cc41526b90da02a5214d8`  
-		Last Modified: Fri, 06 Dec 2019 01:36:47 GMT  
-		Size: 310.0 B  
+	-	`sha256:d095fefaea7a71ae03b685ba31f029a32c7db6cac13b26c56d492cf265fbeddc`  
+		Last Modified: Thu, 19 Dec 2019 06:04:01 GMT  
+		Size: 308.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:08337b4da5150b2191d15017d7aaf7c89552dc0695fc143d5dd34abbe0ac8e95`  
-		Last Modified: Fri, 06 Dec 2019 01:36:48 GMT  
-		Size: 1.4 KB (1377 bytes)  
+	-	`sha256:0db984503d05ea727e8c4f7b5b9785b67ed876b0abd217e21f28d9a0eea9c2c9`  
+		Last Modified: Thu, 19 Dec 2019 06:04:00 GMT  
+		Size: 1.4 KB (1374 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1ee6ab35b23389ef74abbeb0dc8803a7ec232f20836ea215a9ecd9e6962e4921`  
-		Last Modified: Fri, 06 Dec 2019 01:36:46 GMT  
-		Size: 1.4 MB (1382437 bytes)  
+	-	`sha256:8dc49e558523c08d3c6dc7adf5b339d691ba711f70372b584b7c6572ffbb57f2`  
+		Last Modified: Thu, 19 Dec 2019 06:03:59 GMT  
+		Size: 1.4 MB (1382432 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b6fbf218b5ec16408f996fb5e171282d2f6c9a8739d32f265797a376f4c4dc9d`  
-		Last Modified: Fri, 06 Dec 2019 01:36:46 GMT  
-		Size: 128.8 KB (128813 bytes)  
+	-	`sha256:ca63ec82194c3a79b574cd3d57e3a0dc2cba409532b4b5517306a793e499aa02`  
+		Last Modified: Thu, 19 Dec 2019 06:03:59 GMT  
+		Size: 128.8 KB (128808 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:99f52836ac716204cfe561cfb7e5a86eb115cddd251ef236c0afdc5b72c43b2a`  
-		Last Modified: Fri, 06 Dec 2019 01:36:46 GMT  
-		Size: 1.5 KB (1477 bytes)  
+	-	`sha256:3ab8349792bff83587695f7f15ff8dc6c98dee83fa6c803fccd2eb96cf2513a3`  
+		Last Modified: Thu, 19 Dec 2019 06:03:59 GMT  
+		Size: 1.5 KB (1475 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:882438548e91707b129857c72cea5b16853486c9bbb9a8e82b593ba59f58094f`  
-		Last Modified: Fri, 06 Dec 2019 01:36:47 GMT  
+	-	`sha256:dd3cf923130660a45ec692407df896ea2e2996dda2707e20dbacd485f675b412`  
+		Last Modified: Thu, 19 Dec 2019 06:03:59 GMT  
 		Size: 570.4 KB (570380 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:abe5b02e07233ccb28938a3c349125e527f671762692f8cc3f0e8db2569b279d`  
-		Last Modified: Fri, 06 Dec 2019 01:36:46 GMT  
-		Size: 498.0 B  
+	-	`sha256:ed097ef0f5931aecf8b6a435aaf4e3eab4f85073c6e91ba57529c53478e6e413`  
+		Last Modified: Thu, 19 Dec 2019 06:03:59 GMT  
+		Size: 493.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adminer:4.7-fastcgi` - linux; ppc64le
 
 ```console
-$ docker pull adminer@sha256:9c025ea58d6b26f90b22a4536cc075de23b68b5c953d6ae4f25cd8b16f498043
+$ docker pull adminer@sha256:f224038dcca7686d91dc09c9ccc47a7c75e0a90ce7fb8f6d1c38f7588f343f71
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **32.3 MB (32317896 bytes)**  
+-	Total Size: **32.3 MB (32339693 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:59105655c2b3bffbd6a9ea758b8fab9823f771080f827fb3943e68ba71b6fa3c`
+-	Image ID: `sha256:8d13c4f641374aadc599476f3f7868f487b1b0ad242a0ccfdb82b58d1417cb9e`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php-fpm"]`
 
@@ -5727,59 +5727,59 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 01:22:06 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:48:39 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:48:42 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:48:45 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:48:57 GMT
+# Wed, 18 Dec 2019 22:47:14 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:47:16 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:47:19 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:47:31 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:48:58 GMT
+# Wed, 18 Dec 2019 22:47:32 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:53:04 GMT
+# Wed, 18 Dec 2019 22:51:02 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:22:18 GMT
+# Wed, 18 Dec 2019 22:51:04 GMT
 COPY multi:5581a34bba21fbf2472e857e8cdc8db6d57694020e568954d2fd5901ee074da0 in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:22:24 GMT
+# Wed, 18 Dec 2019 22:51:10 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:22:26 GMT
+# Wed, 18 Dec 2019 22:51:13 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:22:29 GMT
+# Wed, 18 Dec 2019 22:51:15 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 01:22:36 GMT
+# Wed, 18 Dec 2019 22:51:19 GMT
 RUN set -eux; 	cd /usr/local/etc; 	if [ -d php-fpm.d ]; then 		sed 's!=NONE/!=!g' php-fpm.conf.default | tee php-fpm.conf > /dev/null; 		cp php-fpm.d/www.conf.default php-fpm.d/www.conf; 	else 		mkdir php-fpm.d; 		cp php-fpm.conf.default php-fpm.d/www.conf; 		{ 			echo '[global]'; 			echo 'include=etc/php-fpm.d/*.conf'; 		} | tee php-fpm.conf; 	fi; 	{ 		echo '[global]'; 		echo 'error_log = /proc/self/fd/2'; 		echo; echo '; https://github.com/docker-library/php/pull/725#issuecomment-443540114'; echo 'log_limit = 8192'; 		echo; 		echo '[www]'; 		echo '; if we send this to /proc/self/fd/1, it never appears'; 		echo 'access.log = /proc/self/fd/2'; 		echo; 		echo 'clear_env = no'; 		echo; 		echo '; Ensure worker stdout and stderr are sent to the main error log.'; 		echo 'catch_workers_output = yes'; 		echo 'decorate_workers_output = no'; 	} | tee php-fpm.d/docker.conf; 	{ 		echo '[global]'; 		echo 'daemonize = no'; 		echo; 		echo '[www]'; 		echo 'listen = 9000'; 	} | tee php-fpm.d/zz-docker.conf
-# Fri, 06 Dec 2019 01:22:38 GMT
+# Wed, 18 Dec 2019 22:51:22 GMT
 STOPSIGNAL SIGQUIT
-# Fri, 06 Dec 2019 01:22:41 GMT
+# Wed, 18 Dec 2019 22:51:24 GMT
 EXPOSE 9000
-# Fri, 06 Dec 2019 01:22:42 GMT
+# Wed, 18 Dec 2019 22:51:26 GMT
 CMD ["php-fpm"]
-# Fri, 06 Dec 2019 02:51:58 GMT
+# Thu, 19 Dec 2019 06:29:52 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 02:52:04 GMT
+# Thu, 19 Dec 2019 06:30:00 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 02:52:10 GMT
+# Thu, 19 Dec 2019 06:30:13 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 02:52:38 GMT
+# Thu, 19 Dec 2019 06:30:44 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 02:52:39 GMT
+# Thu, 19 Dec 2019 06:30:46 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 02:52:41 GMT
+# Thu, 19 Dec 2019 06:30:50 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 02:52:44 GMT
+# Thu, 19 Dec 2019 06:30:55 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 02:52:46 GMT
+# Thu, 19 Dec 2019 06:30:57 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 02:52:56 GMT
+# Thu, 19 Dec 2019 06:31:07 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 02:52:57 GMT
+# Thu, 19 Dec 2019 06:31:09 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 02:52:59 GMT
+# Thu, 19 Dec 2019 06:31:13 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 02:53:03 GMT
+# Thu, 19 Dec 2019 06:31:16 GMT
 USER adminer
-# Fri, 06 Dec 2019 02:53:06 GMT
+# Thu, 19 Dec 2019 06:31:20 GMT
 CMD ["php-fpm"]
 ```
 
@@ -5800,63 +5800,63 @@ CMD ["php-fpm"]
 		Last Modified: Mon, 21 Oct 2019 20:21:00 GMT  
 		Size: 269.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:41c52740a44bb4c5748ebce8c86dd706cabeffa8b3d9c4f80f6138b61a1bec08`  
-		Last Modified: Thu, 28 Nov 2019 21:11:13 GMT  
-		Size: 10.3 MB (10250597 bytes)  
+	-	`sha256:b07995cdf934b5efaabafb2fc38e2fd4bcf262d4b3fc0ae854961fb8fe2ccb76`  
+		Last Modified: Thu, 19 Dec 2019 01:43:42 GMT  
+		Size: 10.3 MB (10263942 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dc8deff1ae875178b97c866e9ae37859d9845e0ff78498539ab49c875dfda704`  
-		Last Modified: Thu, 28 Nov 2019 21:11:09 GMT  
+	-	`sha256:562d327a17a47fdf54128aec6fa469dfa1c46299912ceb56802bd2049c87a3cd`  
+		Last Modified: Thu, 19 Dec 2019 01:43:37 GMT  
 		Size: 498.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bef48fb4a39bcc95db1529ddbea9a2810d8f1e6d7a5af0f07960b597759795d4`  
-		Last Modified: Thu, 28 Nov 2019 21:11:14 GMT  
-		Size: 15.7 MB (15730534 bytes)  
+	-	`sha256:b605296e4b54e9e88cf662c48efe74d8375ba1168dfbd4fcf4d5a7157fc036ef`  
+		Last Modified: Thu, 19 Dec 2019 01:43:47 GMT  
+		Size: 15.7 MB (15739016 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cf885e004bbb88c1afad2b587c13689fe51c817b0dc75126fe5ae4de79d033e6`  
-		Last Modified: Fri, 06 Dec 2019 01:41:16 GMT  
-		Size: 2.2 KB (2221 bytes)  
+	-	`sha256:79e919cad484af1a35481675ab017ded09828c347b67ac9ca3fc7222a8f1a08e`  
+		Last Modified: Thu, 19 Dec 2019 01:43:37 GMT  
+		Size: 2.2 KB (2213 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b2c390fe718afab471134ab9da6de24d9c38924b0c4087e34a4fde3dc2844f16`  
-		Last Modified: Fri, 06 Dec 2019 01:41:16 GMT  
-		Size: 72.2 KB (72167 bytes)  
+	-	`sha256:3ac400f228427059d566f1ef2a4d1b98086f260c0f46c0722c32ca80a33b8c9c`  
+		Last Modified: Thu, 19 Dec 2019 01:43:37 GMT  
+		Size: 72.1 KB (72144 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9a2c5b773a13a67885fadc2a9bcaa28f789b7e52696dba93815eedf300ebd4dc`  
-		Last Modified: Fri, 06 Dec 2019 01:41:16 GMT  
-		Size: 8.4 KB (8415 bytes)  
+	-	`sha256:79c3607f5af5bfd11f73d90dbd7743491b17e724bc86e998e28b0a7d55ab337c`  
+		Last Modified: Thu, 19 Dec 2019 01:43:37 GMT  
+		Size: 8.4 KB (8418 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c9067b4b9dddc9ee32be5753ea716eff5b0d07bc48ab282cb504468006a804ce`  
-		Last Modified: Fri, 06 Dec 2019 02:54:19 GMT  
-		Size: 310.0 B  
+	-	`sha256:db6142ebdfb637a6f0452667b383135615574f75a10d106d38d11a54233b4315`  
+		Last Modified: Thu, 19 Dec 2019 06:32:46 GMT  
+		Size: 307.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bbf3022d05dae61d9072aecb7c6a66feff00c293204c566b8a487dbdbe1f504c`  
-		Last Modified: Fri, 06 Dec 2019 02:54:18 GMT  
-		Size: 1.4 KB (1417 bytes)  
+	-	`sha256:5fc105e8ef9fe3cc42aea688712f3186ea449f115ba59145f024b1a0a764b80d`  
+		Last Modified: Thu, 19 Dec 2019 06:32:45 GMT  
+		Size: 1.4 KB (1421 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:60dab794aa767edb8b1a96f18a413f394295e8915f0e5f9c195cef599bbf23c0`  
-		Last Modified: Fri, 06 Dec 2019 02:54:16 GMT  
-		Size: 1.3 MB (1347015 bytes)  
+	-	`sha256:84e6a9290a5d8919085470664c7f18de1370fae8b7595ce7604dc6aa0b047228`  
+		Last Modified: Thu, 19 Dec 2019 06:32:41 GMT  
+		Size: 1.3 MB (1347003 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5eb70d0523c6dfb4d40b28604e02ef10b1ad8214e5ef7aaef9e9b3f7528d28e4`  
-		Last Modified: Fri, 06 Dec 2019 02:54:16 GMT  
-		Size: 135.8 KB (135821 bytes)  
+	-	`sha256:66f43d2506941955932ba61a0fa90e7a0f77acf2ec58e9630457f30371e78c1b`  
+		Last Modified: Thu, 19 Dec 2019 06:32:41 GMT  
+		Size: 135.8 KB (135820 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d88606c7efae5c80d7217038d6e4f82bb12bdfe624738d95e29be225b46e36b5`  
-		Last Modified: Fri, 06 Dec 2019 02:54:16 GMT  
-		Size: 1.5 KB (1473 bytes)  
+	-	`sha256:36a8d852ad8da73568f4223e8e8b9b0b1ca6263a4ca83b8971d624503d4c6659`  
+		Last Modified: Thu, 19 Dec 2019 06:32:40 GMT  
+		Size: 1.5 KB (1475 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:196c812e41d4d3d9d2db2567f346ab4e38246b44f24bcdb8855734d643d38ec2`  
-		Last Modified: Fri, 06 Dec 2019 02:54:16 GMT  
-		Size: 570.4 KB (570448 bytes)  
+	-	`sha256:20584e5ee34a3a4146a6475f2dd13442e8e6a936b323b64250f75db8c0f8800e`  
+		Last Modified: Thu, 19 Dec 2019 06:32:40 GMT  
+		Size: 570.5 KB (570455 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a0fc4ffc5b4b40795919e03393c4d34ee386b5f86fa3517fcec379b99a115ce1`  
-		Last Modified: Fri, 06 Dec 2019 02:54:15 GMT  
-		Size: 497.0 B  
+	-	`sha256:913811a124d54956a4f6d698d0341bd66678dcd4aeac5ae462efce5623dabda2`  
+		Last Modified: Thu, 19 Dec 2019 06:32:40 GMT  
+		Size: 498.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `adminer:4.7-standalone`
 
 ```console
-$ docker pull adminer@sha256:c15822ec7ba7977c385e5ebcda2fcbeb09812edd97bbd61d7737fa8a8e53e3e6
+$ docker pull adminer@sha256:10c219a46e3b5950dd4e5f9c3dfb89a6c44eb9a18f10e6849417c47136493388
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -5871,14 +5871,14 @@ $ docker pull adminer@sha256:c15822ec7ba7977c385e5ebcda2fcbeb09812edd97bbd61d773
 ### `adminer:4.7-standalone` - linux; amd64
 
 ```console
-$ docker pull adminer@sha256:86ba5afe8fee41c253bf89c258bca85d8640be894ae7716d3e726b9b4047c381
+$ docker pull adminer@sha256:e6d727411f1819b13c88314cf67a5f8a1f22d01fa53a25b493ca93bc12ebe74e
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **31.0 MB (31013555 bytes)**  
+-	Total Size: **31.0 MB (31027461 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:830d96c7612a7e7be76322d5741c2db4944f31f9f4d2cb6991cb242e12f4ae5a`
+-	Image ID: `sha256:b426045b520a8937f9baa8c890e3482996b4cf8f92ef9967738f67073d493407`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php","-S","[::]:8080","-t","\/var\/www\/html"]`
 
@@ -5905,57 +5905,57 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 01:10:28 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:48:56 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:48:56 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:48:56 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:48:59 GMT
+# Wed, 18 Dec 2019 22:38:21 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:38:21 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:38:21 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:38:24 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:48:59 GMT
+# Wed, 18 Dec 2019 22:38:24 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:55:11 GMT
+# Wed, 18 Dec 2019 22:44:31 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:21:33 GMT
+# Wed, 18 Dec 2019 22:44:32 GMT
 COPY multi:0b7e4a1b9cd5748d214539db3c6bee9b30805d1933690492830b56ffcd31f68d in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:21:35 GMT
+# Wed, 18 Dec 2019 22:44:33 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:21:35 GMT
+# Wed, 18 Dec 2019 22:44:33 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:21:35 GMT
+# Wed, 18 Dec 2019 22:44:33 GMT
 CMD ["php" "-a"]
-# Fri, 06 Dec 2019 01:46:14 GMT
+# Thu, 19 Dec 2019 05:35:45 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 01:46:15 GMT
+# Thu, 19 Dec 2019 05:35:45 GMT
 STOPSIGNAL SIGINT
-# Fri, 06 Dec 2019 01:46:15 GMT
+# Thu, 19 Dec 2019 05:35:46 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 01:46:16 GMT
+# Thu, 19 Dec 2019 05:35:46 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 01:46:16 GMT
+# Thu, 19 Dec 2019 05:35:47 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 01:46:34 GMT
+# Thu, 19 Dec 2019 05:36:05 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 01:46:34 GMT
+# Thu, 19 Dec 2019 05:36:05 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 01:46:35 GMT
+# Thu, 19 Dec 2019 05:36:05 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 01:46:35 GMT
+# Thu, 19 Dec 2019 05:36:06 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 01:46:35 GMT
+# Thu, 19 Dec 2019 05:36:06 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 01:46:36 GMT
+# Thu, 19 Dec 2019 05:36:07 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 01:46:36 GMT
+# Thu, 19 Dec 2019 05:36:07 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:46:37 GMT
+# Thu, 19 Dec 2019 05:36:08 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:46:37 GMT
+# Thu, 19 Dec 2019 05:36:08 GMT
 USER adminer
-# Fri, 06 Dec 2019 01:46:37 GMT
+# Thu, 19 Dec 2019 05:36:08 GMT
 CMD ["php" "-S" "[::]:8080" "-t" "/var/www/html"]
-# Fri, 06 Dec 2019 01:46:37 GMT
+# Thu, 19 Dec 2019 05:36:08 GMT
 EXPOSE 8080
 ```
 
@@ -5976,52 +5976,52 @@ EXPOSE 8080
 		Last Modified: Mon, 21 Oct 2019 21:44:18 GMT  
 		Size: 222.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c480d86e9f76b9604df41b59ff15c277235e77570c3094e24beea689906d7e85`  
-		Last Modified: Thu, 28 Nov 2019 21:13:22 GMT  
-		Size: 10.3 MB (10250558 bytes)  
+	-	`sha256:b0c3cc2f08e3e093e7f2363216f6414027208adc012c5aa07db197341329fe72`  
+		Last Modified: Thu, 19 Dec 2019 03:00:28 GMT  
+		Size: 10.3 MB (10263892 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f3842726b8d86447ea9f8ca1885524b2ae44cf308c3ae2e11f372aa6db308f32`  
-		Last Modified: Thu, 28 Nov 2019 21:13:21 GMT  
+	-	`sha256:57fb2ca7191a3ef22a9701e838adaf70fdbd265eb24703f14179044284913417`  
+		Last Modified: Thu, 19 Dec 2019 03:00:27 GMT  
 		Size: 498.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:57a451954efdb35ed624196af05c79b645dc444faaccc19d9d45d112f6de4061`  
-		Last Modified: Thu, 28 Nov 2019 21:13:24 GMT  
-		Size: 14.6 MB (14589908 bytes)  
+	-	`sha256:719b549f829c694acfed15af4094974701bcb4c0285684f08d92cf8d9ec9bcdc`  
+		Last Modified: Thu, 19 Dec 2019 03:00:33 GMT  
+		Size: 14.6 MB (14590503 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5a0b952c237a06829b97d3ed1d92cacf10888f77fba63726d16867056a4f044c`  
-		Last Modified: Fri, 06 Dec 2019 01:26:49 GMT  
-		Size: 2.2 KB (2216 bytes)  
+	-	`sha256:81e6bc38092826fd2472c7ca1eb2c700fed834bbd765e80ff2a643fd121154d2`  
+		Last Modified: Thu, 19 Dec 2019 03:00:26 GMT  
+		Size: 2.2 KB (2215 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:152b9d9c5ef59610e7b35742bebd1808171b7de2c4ccec2f0731a55a7559360d`  
-		Last Modified: Fri, 06 Dec 2019 01:26:48 GMT  
-		Size: 72.3 KB (72319 bytes)  
+	-	`sha256:a754e64b7156262e64e31a7201d5c625a9db50e96ecac534e504a6393f4e1a9e`  
+		Last Modified: Thu, 19 Dec 2019 03:00:27 GMT  
+		Size: 72.3 KB (72302 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1e64c9abda242b9b4d3a6c1baf781dda52eabbb6ef6d75db40cc72d87f1c4c77`  
-		Last Modified: Fri, 06 Dec 2019 01:47:18 GMT  
-		Size: 308.0 B  
+	-	`sha256:90f3f908ddee8f4ee6c6ca007ced4430786e103eac072c59fee4b402b2d8c388`  
+		Last Modified: Thu, 19 Dec 2019 05:36:51 GMT  
+		Size: 307.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d62f090b0e9efd0bfb9ba692958683cf86a15d423cc82c1609b954876086d6a8`  
-		Last Modified: Fri, 06 Dec 2019 01:47:18 GMT  
+	-	`sha256:857b7e4aae9f2ade154cb505cf91e6521e4099d23159d182a8cbef713c81532b`  
+		Last Modified: Thu, 19 Dec 2019 05:36:51 GMT  
 		Size: 1.4 KB (1372 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:762e247790399e6560e4640ca01701a7fcc2211f8cee51913462b618a25167af`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
-		Size: 1.3 MB (1267207 bytes)  
+	-	`sha256:ace782c3ac09d3f64c77972eafa84fee9f30761a8b9424bb4ffc178f8ebcf1ea`  
+		Last Modified: Thu, 19 Dec 2019 05:36:50 GMT  
+		Size: 1.3 MB (1267197 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0f51bae1177740cf6eec7579667748ed24bec56021cbb74b7210edc18f01be18`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
+	-	`sha256:a67e9e57ebac5385c07290704a48959e42587e9cca35993f56e0ec74384988fd`  
+		Last Modified: Thu, 19 Dec 2019 05:36:50 GMT  
 		Size: 125.7 KB (125657 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:628599883e3cd44a98167c252bdf0ab5a593036911dba0257cc80613a629ba8b`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
-		Size: 1.5 KB (1472 bytes)  
+	-	`sha256:49eb563494c485a889d81dda7ee04ce14f7b22cfa901415e048a5c0c18d2bb0f`  
+		Last Modified: Thu, 19 Dec 2019 05:36:49 GMT  
+		Size: 1.5 KB (1477 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3536dd8cbdfc6bc3a00a8c6e170b6b28329ba806612bca28010703e03746e34e`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
-		Size: 570.4 KB (570378 bytes)  
+	-	`sha256:3b5bc3cefb34ffac141e2420696af773ce85d635ff6d02d406903625b83b3f04`  
+		Last Modified: Thu, 19 Dec 2019 05:36:50 GMT  
+		Size: 570.4 KB (570379 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6eeb0c1100b26366c86db33f094c4a819fc26e55ce4eb2e5f5ab309c4a02edb0`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
+	-	`sha256:b807bb1614467154aa601b40815ea51d330eebb00f281a71b54af161d17b20ec`  
+		Last Modified: Thu, 19 Dec 2019 05:36:49 GMT  
 		Size: 496.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -6185,14 +6185,14 @@ EXPOSE 8080
 ### `adminer:4.7-standalone` - linux; arm variant v7
 
 ```console
-$ docker pull adminer@sha256:ca8d6b805bd6de4b7ae82a31dcaa1c1eaa16c7170d6a2d8a84390246fb323f1a
+$ docker pull adminer@sha256:45f3f63bea4b53ed6f840b452aad505d813cf99755272303c705731a9c2c1a37
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **28.4 MB (28355059 bytes)**  
+-	Total Size: **28.4 MB (28375258 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6a6a009dde2aee41ade135a5592990a968056ac0ca2903616b3146d78e8df4d4`
+-	Image ID: `sha256:c6fcf1f9bcc93e97da85dddf171a35cc7c3a686b415d320b4737e95e19bcbfec`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php","-S","[::]:8080","-t","\/var\/www\/html"]`
 
@@ -6219,57 +6219,57 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 00:42:48 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:19:44 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:19:45 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:19:46 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:19:51 GMT
+# Wed, 18 Dec 2019 22:13:45 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:13:46 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:13:46 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:13:50 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:19:52 GMT
+# Wed, 18 Dec 2019 22:13:51 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:22:34 GMT
+# Wed, 18 Dec 2019 22:16:23 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:17:24 GMT
+# Wed, 18 Dec 2019 22:16:24 GMT
 COPY multi:0b7e4a1b9cd5748d214539db3c6bee9b30805d1933690492830b56ffcd31f68d in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:17:29 GMT
+# Wed, 18 Dec 2019 22:16:27 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:17:32 GMT
+# Wed, 18 Dec 2019 22:16:28 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:17:33 GMT
+# Wed, 18 Dec 2019 22:16:28 GMT
 CMD ["php" "-a"]
-# Fri, 06 Dec 2019 04:50:48 GMT
+# Thu, 19 Dec 2019 05:43:15 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 04:50:50 GMT
+# Thu, 19 Dec 2019 05:43:15 GMT
 STOPSIGNAL SIGINT
-# Fri, 06 Dec 2019 04:50:59 GMT
+# Thu, 19 Dec 2019 05:43:18 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 04:51:01 GMT
+# Thu, 19 Dec 2019 05:43:19 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 04:51:06 GMT
+# Thu, 19 Dec 2019 05:43:21 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 04:51:54 GMT
+# Thu, 19 Dec 2019 05:43:50 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 04:51:56 GMT
+# Thu, 19 Dec 2019 05:43:51 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 04:52:00 GMT
+# Thu, 19 Dec 2019 05:43:51 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 04:52:04 GMT
+# Thu, 19 Dec 2019 05:43:52 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 04:52:09 GMT
+# Thu, 19 Dec 2019 05:43:52 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 04:52:23 GMT
+# Thu, 19 Dec 2019 05:43:55 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 04:52:25 GMT
+# Thu, 19 Dec 2019 05:43:56 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 04:52:27 GMT
+# Thu, 19 Dec 2019 05:43:56 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 04:52:29 GMT
+# Thu, 19 Dec 2019 05:43:57 GMT
 USER adminer
-# Fri, 06 Dec 2019 04:52:33 GMT
+# Thu, 19 Dec 2019 05:43:58 GMT
 CMD ["php" "-S" "[::]:8080" "-t" "/var/www/html"]
-# Fri, 06 Dec 2019 04:52:38 GMT
+# Thu, 19 Dec 2019 05:43:58 GMT
 EXPOSE 8080
 ```
 
@@ -6290,53 +6290,53 @@ EXPOSE 8080
 		Last Modified: Mon, 21 Oct 2019 22:14:00 GMT  
 		Size: 267.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:74d543cc24962e4f8efaef27c314b6c510d9e89795bb3fefc76190c88e6adaa0`  
-		Last Modified: Thu, 28 Nov 2019 20:37:08 GMT  
-		Size: 10.3 MB (10250580 bytes)  
+	-	`sha256:9ca9d33ba72a23b5503797dc37271a4e969f593c1f91fab7b5e8fc9e199a3237`  
+		Last Modified: Thu, 19 Dec 2019 00:23:23 GMT  
+		Size: 10.3 MB (10263922 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:61533199b1c12541ec2c6e8792481ed0bf870ab2614fca26df4472ed7489905b`  
-		Last Modified: Thu, 28 Nov 2019 20:37:06 GMT  
-		Size: 494.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cb40e8b71fdcda892a7fff7b40bd040c14189bdbf81c6900e2506a34d0a5e2a8`  
-		Last Modified: Thu, 28 Nov 2019 20:37:11 GMT  
-		Size: 12.7 MB (12659015 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:73e8322b4997afc76e3d6aded9b6977d019a876387f38bb0c7b20303eb741ea1`  
-		Last Modified: Fri, 06 Dec 2019 01:35:28 GMT  
-		Size: 2.2 KB (2215 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bee10ead90205f4f11c6737cb5e9809cf554b750d259f2bb978806599ff48d4d`  
-		Last Modified: Fri, 06 Dec 2019 01:35:28 GMT  
-		Size: 71.9 KB (71901 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b2343ca0934ccfcf3473bcd86e8769c80a356c838360d24e6c15c8549d8799ff`  
-		Last Modified: Fri, 06 Dec 2019 04:55:13 GMT  
-		Size: 311.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3339cf595876f587528feea8189a242d1eee086d7c129183282e0d0bf5dfec9e`  
-		Last Modified: Fri, 06 Dec 2019 04:55:13 GMT  
-		Size: 1.4 KB (1420 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:273f3098e61dc9b47d64ba9a3e339b88d90351233841e926290aaf8f81b719e8`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
-		Size: 1.1 MB (1098041 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f48a0dca6ba28aa1b4488aa4541f847d05b842f7adfd2fbe4df3d510ea08bb44`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
-		Size: 113.6 KB (113646 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:911b6063ce3a1a087497bb65c33df13aa956676a9977dec81024c9158363b7a1`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
-		Size: 1.5 KB (1474 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c17014746daefe47239efc1403be753dbbd9860da773a322a172487485cb8993`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
-		Size: 570.5 KB (570460 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:87db519a03011aadfd54c42773aed91d48871a3e423f8652ae2fa3c6a201d7f0`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
+	-	`sha256:9abaf2cca6b8f6360c51d0ab64e5733dd6fe54d2160f0b90b2c2b30cc9d09556`  
+		Last Modified: Thu, 19 Dec 2019 00:23:23 GMT  
 		Size: 498.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:0d1c28a483480472543267f13fa560e37c42d398e03258ec10f3259791f26c2b`  
+		Last Modified: Thu, 19 Dec 2019 00:23:26 GMT  
+		Size: 12.7 MB (12665914 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c296b4d3757a3eb5a9eaa1bee6c67b7f85258f295e5d1adfeae082aaa4ffe554`  
+		Last Modified: Thu, 19 Dec 2019 00:23:23 GMT  
+		Size: 2.2 KB (2213 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:3f0c6898b03f711ee9c13adb0e7ac827b235e872574ad2e0466ce38a7006494f`  
+		Last Modified: Thu, 19 Dec 2019 00:23:23 GMT  
+		Size: 71.9 KB (71882 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:85f53d18384dba7127519315cb122ebcc1c8f1420b7359054849ebd5c2eb8501`  
+		Last Modified: Thu, 19 Dec 2019 05:45:20 GMT  
+		Size: 308.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:29ba2b51dd9ec6d55f6dcbd14fd64e4424e17d54d50559b04f7872439fe23c84`  
+		Last Modified: Thu, 19 Dec 2019 05:45:20 GMT  
+		Size: 1.4 KB (1418 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ed774f039edbc14130f2a14cc8a6036a51ebcd1eb96bbfd75d3ac1c581bdb3a2`  
+		Last Modified: Thu, 19 Dec 2019 05:45:18 GMT  
+		Size: 1.1 MB (1098039 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ddbca63dcd496dfe19ebd0ce58453dcf241bca16bd12220566202434e47730ff`  
+		Last Modified: Thu, 19 Dec 2019 05:45:18 GMT  
+		Size: 113.6 KB (113634 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:fdc0c14d20b92cde224999d0a7464e0dd1063ed2fe903a20fc7902d451928868`  
+		Last Modified: Thu, 19 Dec 2019 05:45:19 GMT  
+		Size: 1.5 KB (1477 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:4854bad04d3751dd937dde7badbbe7b0be2baee2b0c0b6e654e45ea0155fd765`  
+		Last Modified: Thu, 19 Dec 2019 05:45:18 GMT  
+		Size: 570.5 KB (570450 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:183711409a19b109d1862eb8f004260effa66c92f58f14f1ad425a474ba8572d`  
+		Last Modified: Thu, 19 Dec 2019 05:45:18 GMT  
+		Size: 499.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adminer:4.7-standalone` - linux; arm64 variant v8
@@ -6499,14 +6499,14 @@ EXPOSE 8080
 ### `adminer:4.7-standalone` - linux; 386
 
 ```console
-$ docker pull adminer@sha256:3b3b632ad55b7004f6d67004583ca8d4756f52487240d6530977ad9a503ba629
+$ docker pull adminer@sha256:4d9d4d3dba3055adde16332ec8bb9f98fbc264574d8755f161b2c7420f0fb73e
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **31.6 MB (31595367 bytes)**  
+-	Total Size: **31.6 MB (31611527 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1a9e767ae5c65d7fecf62761e3afd0b53184749f9cfcca68ae1c099ed852e137`
+-	Image ID: `sha256:6921567de258c77b202adc3226c7996e1fb5f526f205d6712821a57b84db89ee`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php","-S","[::]:8080","-t","\/var\/www\/html"]`
 
@@ -6533,57 +6533,57 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 03:40:32 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:03:14 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:03:14 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:03:14 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:03:17 GMT
+# Wed, 18 Dec 2019 23:18:21 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 23:18:22 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 23:18:22 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 23:18:24 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:03:17 GMT
+# Wed, 18 Dec 2019 23:18:25 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:08:51 GMT
+# Wed, 18 Dec 2019 23:27:50 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 00:41:35 GMT
+# Wed, 18 Dec 2019 23:27:51 GMT
 COPY multi:0b7e4a1b9cd5748d214539db3c6bee9b30805d1933690492830b56ffcd31f68d in /usr/local/bin/ 
-# Fri, 06 Dec 2019 00:41:36 GMT
+# Wed, 18 Dec 2019 23:27:53 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 00:41:36 GMT
+# Wed, 18 Dec 2019 23:27:53 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 00:41:36 GMT
+# Wed, 18 Dec 2019 23:27:53 GMT
 CMD ["php" "-a"]
-# Fri, 06 Dec 2019 01:35:26 GMT
+# Thu, 19 Dec 2019 06:02:48 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 01:35:26 GMT
+# Thu, 19 Dec 2019 06:02:48 GMT
 STOPSIGNAL SIGINT
-# Fri, 06 Dec 2019 01:35:27 GMT
+# Thu, 19 Dec 2019 06:02:49 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 01:35:27 GMT
+# Thu, 19 Dec 2019 06:02:49 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 01:35:28 GMT
+# Thu, 19 Dec 2019 06:02:50 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:10 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:10 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:10 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:10 GMT
 USER adminer
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:11 GMT
 CMD ["php" "-S" "[::]:8080" "-t" "/var/www/html"]
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:11 GMT
 EXPOSE 8080
 ```
 
@@ -6604,66 +6604,66 @@ EXPOSE 8080
 		Last Modified: Mon, 21 Oct 2019 20:16:09 GMT  
 		Size: 221.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7a2f924d5bef762db8a36415395a7d8d645e86c8c10e98670ee6441f4dfffc4b`  
-		Last Modified: Thu, 28 Nov 2019 20:25:40 GMT  
-		Size: 10.3 MB (10250558 bytes)  
+	-	`sha256:8d3c120548e2cc8578bcbc722a1de16f16aa1bbd6f95a3f3f250760ef49d6425`  
+		Last Modified: Thu, 19 Dec 2019 03:54:02 GMT  
+		Size: 10.3 MB (10263911 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d86e42c218805225dcb7fb493e2333b3aa5dbe52acfe920142f7beddb424cf83`  
-		Last Modified: Thu, 28 Nov 2019 20:25:39 GMT  
-		Size: 497.0 B  
+	-	`sha256:6c67772931308b5da9ecd54e42e8b4f0cee6a6ca800c39c9bb90f7935371f173`  
+		Last Modified: Thu, 19 Dec 2019 03:54:01 GMT  
+		Size: 498.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df9403ccfdc695e35b6d3018248acf35d406f0cfafb094c31e3837d69bafd01c`  
-		Last Modified: Thu, 28 Nov 2019 20:25:45 GMT  
-		Size: 15.0 MB (14964307 bytes)  
+	-	`sha256:81de9fd8c68cc661996bb58ab58c8ca7fcc4523d035c2bbfc2835549da0a48ae`  
+		Last Modified: Thu, 19 Dec 2019 03:54:07 GMT  
+		Size: 15.0 MB (14967109 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ec757c77b33207cd2e297fb2ab7146f4245ec36acc52bd38cba1fbd4e3ec0b8b`  
-		Last Modified: Fri, 06 Dec 2019 00:46:31 GMT  
-		Size: 2.2 KB (2220 bytes)  
+	-	`sha256:2cc02e941d1953f8fbbd589f5a7cece48de8e05d8626f4dc9fc7272716e999e9`  
+		Last Modified: Thu, 19 Dec 2019 03:54:01 GMT  
+		Size: 2.2 KB (2211 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4d52ef7bb6d6ca924fc76da53a0d613f171978768e3b572da49a8f77ea6f8d6c`  
-		Last Modified: Fri, 06 Dec 2019 00:46:30 GMT  
+	-	`sha256:8a7864fff700c7ab0ac04ee51707c956b859bd42ce6e4bac9317a0224058ec59`  
+		Last Modified: Thu, 19 Dec 2019 03:54:01 GMT  
 		Size: 71.5 KB (71454 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6e5b781398aa148728fa13f2df2f88fa4d9b3570891ff55a3af9cb50c2098412`  
-		Last Modified: Fri, 06 Dec 2019 01:36:35 GMT  
+	-	`sha256:7274061ca352a1262686abb045838ea905ae178eee118a6a1e23834490af7953`  
+		Last Modified: Thu, 19 Dec 2019 06:03:50 GMT  
 		Size: 308.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:de505ea02604bd909cfaf3b498de539cedd1332bfe778ba03947dce6e0d33d23`  
-		Last Modified: Fri, 06 Dec 2019 01:36:35 GMT  
-		Size: 1.4 KB (1376 bytes)  
+	-	`sha256:e79de5c64323f911324528fcb2f88bc245b69fe50c242865fbb4ac204b52b545`  
+		Last Modified: Thu, 19 Dec 2019 06:03:51 GMT  
+		Size: 1.4 KB (1373 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:14cdb373d56b69e1927e31d36942beeeb400c2632b5bc77e1f73ad115ba8383a`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 1.4 MB (1382441 bytes)  
+	-	`sha256:673d96f2a5b2ca78e58cf695d0dba02cdf0279a1620b9a4b7e62192cb52054a9`  
+		Last Modified: Thu, 19 Dec 2019 06:03:50 GMT  
+		Size: 1.4 MB (1382437 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e4bcc50f7578a489fab996ffee3c7ea194e47a068ad3cae0821f4d60e06986b7`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 128.8 KB (128797 bytes)  
+	-	`sha256:b14ef693e693233cf4fea5d27768673723fdd0ac67859f0740a6e3ca15718406`  
+		Last Modified: Thu, 19 Dec 2019 06:03:49 GMT  
+		Size: 128.8 KB (128815 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5463ed1f22d5ece3465e961d34ec3854c36dfe23261548ab50b89fdd0f775e00`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 1.5 KB (1474 bytes)  
+	-	`sha256:14095c6e1a5c6c8e2eb79a0edb5fba2bfc43757e24a2d5953fc267cf77a178b5`  
+		Last Modified: Thu, 19 Dec 2019 06:03:49 GMT  
+		Size: 1.5 KB (1473 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d98966329f05e112300ee57648333a12079a1cc8a41d15d0e396391c444e67c1`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 570.4 KB (570373 bytes)  
+	-	`sha256:bf75ef62d8952c613219a1462ce69c61b6e6ca742bfe6578d3732a3d97fba9c4`  
+		Last Modified: Thu, 19 Dec 2019 06:03:50 GMT  
+		Size: 570.4 KB (570377 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:adef02fa3ca71fdceafb1fd92ff74960848b5673988dc3f2dc021aeaa943966b`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 496.0 B  
+	-	`sha256:79374c30d550e98acc64a36e936903f0fd6eee39645aef5007145f7860c1d8f9`  
+		Last Modified: Thu, 19 Dec 2019 06:03:49 GMT  
+		Size: 495.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adminer:4.7-standalone` - linux; ppc64le
 
 ```console
-$ docker pull adminer@sha256:c59dc08edbac430c86555d96e000a1d49c59e8a66bc5e9d3b073ed8fd76f08ea
+$ docker pull adminer@sha256:b10e79ba1e7932ac27c0ffb06cc228415b4552687d150f89ed3f21ee08194220
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **32.2 MB (32227844 bytes)**  
+-	Total Size: **32.2 MB (32247973 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:96efedc317d25ffb54f9f12d72c5f57e58d4d511e52b62c3548a5b787d1f3ad5`
+-	Image ID: `sha256:573383ff5140ec4fcaf742c4be6757a0567423c5c5833be7d728669583167bd3`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php","-S","[::]:8080","-t","\/var\/www\/html"]`
 
@@ -6690,57 +6690,57 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 01:17:40 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:44:14 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:44:17 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:44:19 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:44:32 GMT
+# Wed, 18 Dec 2019 22:43:03 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:43:05 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:43:07 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:43:21 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:44:34 GMT
+# Wed, 18 Dec 2019 22:43:23 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:48:15 GMT
+# Wed, 18 Dec 2019 22:46:52 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:21:52 GMT
+# Wed, 18 Dec 2019 22:46:54 GMT
 COPY multi:0b7e4a1b9cd5748d214539db3c6bee9b30805d1933690492830b56ffcd31f68d in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:22:02 GMT
+# Wed, 18 Dec 2019 22:46:59 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:22:05 GMT
+# Wed, 18 Dec 2019 22:47:01 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:22:06 GMT
+# Wed, 18 Dec 2019 22:47:03 GMT
 CMD ["php" "-a"]
-# Fri, 06 Dec 2019 02:50:03 GMT
+# Thu, 19 Dec 2019 06:27:50 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 02:50:05 GMT
+# Thu, 19 Dec 2019 06:27:55 GMT
 STOPSIGNAL SIGINT
-# Fri, 06 Dec 2019 02:50:19 GMT
+# Thu, 19 Dec 2019 06:28:07 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 02:50:23 GMT
+# Thu, 19 Dec 2019 06:28:11 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 02:50:32 GMT
+# Thu, 19 Dec 2019 06:28:18 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 02:51:03 GMT
+# Thu, 19 Dec 2019 06:28:51 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 02:51:07 GMT
+# Thu, 19 Dec 2019 06:28:54 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 02:51:08 GMT
+# Thu, 19 Dec 2019 06:28:58 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 02:51:12 GMT
+# Thu, 19 Dec 2019 06:28:59 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 02:51:14 GMT
+# Thu, 19 Dec 2019 06:29:03 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 02:51:24 GMT
+# Thu, 19 Dec 2019 06:29:15 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 02:51:27 GMT
+# Thu, 19 Dec 2019 06:29:18 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 02:51:33 GMT
+# Thu, 19 Dec 2019 06:29:20 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 02:51:35 GMT
+# Thu, 19 Dec 2019 06:29:26 GMT
 USER adminer
-# Fri, 06 Dec 2019 02:51:40 GMT
+# Thu, 19 Dec 2019 06:29:30 GMT
 CMD ["php" "-S" "[::]:8080" "-t" "/var/www/html"]
-# Fri, 06 Dec 2019 02:51:44 GMT
+# Thu, 19 Dec 2019 06:29:34 GMT
 EXPOSE 8080
 ```
 
@@ -6761,59 +6761,59 @@ EXPOSE 8080
 		Last Modified: Mon, 21 Oct 2019 20:21:00 GMT  
 		Size: 269.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f41671226d36c01ec9c7f1ea38cd673556952e7f899f4f4b89c9fbdebd29a53b`  
-		Last Modified: Thu, 28 Nov 2019 21:10:15 GMT  
-		Size: 10.3 MB (10250609 bytes)  
+	-	`sha256:4b579441bf6e92a1a6e81ea93691621e4c87a50d9ffb31d4b378b5df7d32872f`  
+		Last Modified: Thu, 19 Dec 2019 01:42:36 GMT  
+		Size: 10.3 MB (10263942 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1d940bc1bed9725313bbc396a711a790598103f8425780c96a2b8e0b8c314f83`  
-		Last Modified: Thu, 28 Nov 2019 21:10:13 GMT  
-		Size: 498.0 B  
+	-	`sha256:439349ae045fb12b63f4ea12de47a2383371a3189b6e95b5a84693903df9b0a4`  
+		Last Modified: Thu, 19 Dec 2019 01:42:35 GMT  
+		Size: 497.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:02effde3bc9b924c0d25924f0e1f298c9e7644c948efa10ff4d8945399a16b74`  
-		Last Modified: Thu, 28 Nov 2019 21:10:19 GMT  
-		Size: 15.6 MB (15648865 bytes)  
+	-	`sha256:48b07dcdf318b1dc68a37f668ccb781855c62ec5ac7721f9c1149fdb135ba87d`  
+		Last Modified: Thu, 19 Dec 2019 01:42:48 GMT  
+		Size: 15.7 MB (15655717 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e31c94093f50a0b5f297e9da64e47405dbe46f8ec535d000ee7f725a553fc633`  
-		Last Modified: Fri, 06 Dec 2019 01:40:27 GMT  
-		Size: 2.2 KB (2217 bytes)  
+	-	`sha256:c7eab24ff28c16bb245a5237cc4946807bcb8d827d3702b5bb9f74cfd586fece`  
+		Last Modified: Thu, 19 Dec 2019 01:42:35 GMT  
+		Size: 2.2 KB (2210 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:232540856492a6874250c20d02259faf35c4a5b5aa42520d4c9528742d779fd0`  
-		Last Modified: Fri, 06 Dec 2019 01:40:27 GMT  
-		Size: 72.2 KB (72168 bytes)  
+	-	`sha256:8334e4feab309edb35cdf7bec81a8a27169fa44dde213e3030369881eda125f1`  
+		Last Modified: Thu, 19 Dec 2019 01:42:35 GMT  
+		Size: 72.1 KB (72144 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d14842d0c142c0039a7a184b2b3d335b2a01864a6235ea3dda30897e146ad1c6`  
-		Last Modified: Fri, 06 Dec 2019 02:53:43 GMT  
-		Size: 310.0 B  
+	-	`sha256:6e5b8d229e7b1d88a7c021b6c715fb1dc4558108381b5279c56a41a62dbc2261`  
+		Last Modified: Thu, 19 Dec 2019 06:32:06 GMT  
+		Size: 306.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d2190da7f3695c3878621e1660bf04a2c8dbdfef966bffeb6971cf76aed20f16`  
-		Last Modified: Fri, 06 Dec 2019 02:53:43 GMT  
-		Size: 1.4 KB (1414 bytes)  
+	-	`sha256:8a14230d6a9f6580d0617afb712af2aa3a52531275d062968f9876403ef06fb4`  
+		Last Modified: Thu, 19 Dec 2019 06:32:05 GMT  
+		Size: 1.4 KB (1421 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:55e067e4d19dc08989322d9eb8129d7bdbf1bf797725927442cc93bf69ae0d33`  
-		Last Modified: Fri, 06 Dec 2019 02:53:40 GMT  
-		Size: 1.3 MB (1347029 bytes)  
+	-	`sha256:6d0c4ce6bd51ba7c0848bd56478144b0695f576f8ae0678eb62e05ee3559fc42`  
+		Last Modified: Thu, 19 Dec 2019 06:32:03 GMT  
+		Size: 1.3 MB (1347007 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ff1668716d22838ddf256cebcbf1b09ddc48fc942a5842b5e13e6c44e830c394`  
-		Last Modified: Fri, 06 Dec 2019 02:53:39 GMT  
-		Size: 135.8 KB (135823 bytes)  
+	-	`sha256:8f2e3e1cdb6c28b9b5b15dba0737ad3ed00202221c4c671693dc9fc7b7ba77cc`  
+		Last Modified: Thu, 19 Dec 2019 06:32:02 GMT  
+		Size: 135.8 KB (135826 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2a7c9bfcff913dd0e174b7de4290afacf966f43e6be2dd050e56584c94028fe2`  
-		Last Modified: Fri, 06 Dec 2019 02:53:39 GMT  
-		Size: 1.5 KB (1479 bytes)  
+	-	`sha256:43cb845103383d0bd1567a8b09f649e5f523c37b005bd6625351c8dbf52f6976`  
+		Last Modified: Thu, 19 Dec 2019 06:32:01 GMT  
+		Size: 1.5 KB (1473 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:04e9df15d0417b3f6421f2a692de9e7bdfa605d9bf0105088ad284939e459927`  
-		Last Modified: Fri, 06 Dec 2019 02:53:40 GMT  
-		Size: 570.5 KB (570451 bytes)  
+	-	`sha256:2d4d6287f785538118622662e0c60ab299f7a2ae11f5301fa041f86527b24464`  
+		Last Modified: Thu, 19 Dec 2019 06:32:02 GMT  
+		Size: 570.5 KB (570450 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:072c9cb6de1241a262601cb46dc6b10bff853e228b847c61d3443de139fb9ac2`  
-		Last Modified: Fri, 06 Dec 2019 02:53:39 GMT  
-		Size: 498.0 B  
+	-	`sha256:81477a62f96cdc3549a2c6c8ac63f34fc068128715c326c6c916ac7a607475f5`  
+		Last Modified: Thu, 19 Dec 2019 06:32:02 GMT  
+		Size: 497.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `adminer:4-fastcgi`
 
 ```console
-$ docker pull adminer@sha256:32c9e70d68f96c433eefc7a959558b2d7eca29460a2f17e71f68ffb3613a80a0
+$ docker pull adminer@sha256:9e2c982c6dfe8eaaefd23cc5861f3e14e78f2f249b3d6d81ccc2903332c18020
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6828,14 +6828,14 @@ $ docker pull adminer@sha256:32c9e70d68f96c433eefc7a959558b2d7eca29460a2f17e71f6
 ### `adminer:4-fastcgi` - linux; amd64
 
 ```console
-$ docker pull adminer@sha256:fb61861982d8f821a9612eefdc98c5ad7fba67628272642f0546ce7b8fc810d2
+$ docker pull adminer@sha256:a6fba2c8b8b2aedcc7563a7be20fdba3bed2806ee4ca6bbad9bfe451a247943d
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **31.1 MB (31089366 bytes)**  
+-	Total Size: **31.1 MB (31106050 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:44eba76cc5d76c73c629ebd6d02a2127cd58873c3673f73b71711277e0ebe4dd`
+-	Image ID: `sha256:ce28adb4fe140e43080c7537718777a7893665a109d343d278f2fb4b29a1ab10`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php-fpm"]`
 
@@ -6864,59 +6864,59 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 01:15:45 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:55:28 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:55:29 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:55:29 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:55:31 GMT
+# Wed, 18 Dec 2019 22:44:39 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:44:39 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:44:39 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:44:41 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:55:31 GMT
+# Wed, 18 Dec 2019 22:44:42 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 21:01:42 GMT
+# Wed, 18 Dec 2019 22:53:32 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:21:40 GMT
+# Wed, 18 Dec 2019 22:53:32 GMT
 COPY multi:5581a34bba21fbf2472e857e8cdc8db6d57694020e568954d2fd5901ee074da0 in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:21:42 GMT
+# Wed, 18 Dec 2019 22:53:33 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:21:42 GMT
+# Wed, 18 Dec 2019 22:53:33 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:21:42 GMT
+# Wed, 18 Dec 2019 22:53:33 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 01:21:43 GMT
+# Wed, 18 Dec 2019 22:53:34 GMT
 RUN set -eux; 	cd /usr/local/etc; 	if [ -d php-fpm.d ]; then 		sed 's!=NONE/!=!g' php-fpm.conf.default | tee php-fpm.conf > /dev/null; 		cp php-fpm.d/www.conf.default php-fpm.d/www.conf; 	else 		mkdir php-fpm.d; 		cp php-fpm.conf.default php-fpm.d/www.conf; 		{ 			echo '[global]'; 			echo 'include=etc/php-fpm.d/*.conf'; 		} | tee php-fpm.conf; 	fi; 	{ 		echo '[global]'; 		echo 'error_log = /proc/self/fd/2'; 		echo; echo '; https://github.com/docker-library/php/pull/725#issuecomment-443540114'; echo 'log_limit = 8192'; 		echo; 		echo '[www]'; 		echo '; if we send this to /proc/self/fd/1, it never appears'; 		echo 'access.log = /proc/self/fd/2'; 		echo; 		echo 'clear_env = no'; 		echo; 		echo '; Ensure worker stdout and stderr are sent to the main error log.'; 		echo 'catch_workers_output = yes'; 		echo 'decorate_workers_output = no'; 	} | tee php-fpm.d/docker.conf; 	{ 		echo '[global]'; 		echo 'daemonize = no'; 		echo; 		echo '[www]'; 		echo 'listen = 9000'; 	} | tee php-fpm.d/zz-docker.conf
-# Fri, 06 Dec 2019 01:21:43 GMT
+# Wed, 18 Dec 2019 22:53:34 GMT
 STOPSIGNAL SIGQUIT
-# Fri, 06 Dec 2019 01:21:43 GMT
+# Wed, 18 Dec 2019 22:53:35 GMT
 EXPOSE 9000
-# Fri, 06 Dec 2019 01:21:43 GMT
+# Wed, 18 Dec 2019 22:53:35 GMT
 CMD ["php-fpm"]
-# Fri, 06 Dec 2019 01:46:42 GMT
+# Thu, 19 Dec 2019 05:36:17 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 01:46:43 GMT
+# Thu, 19 Dec 2019 05:36:18 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 01:46:44 GMT
+# Thu, 19 Dec 2019 05:36:19 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 01:47:01 GMT
+# Thu, 19 Dec 2019 05:36:36 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 01:47:01 GMT
+# Thu, 19 Dec 2019 05:36:36 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 01:47:02 GMT
+# Thu, 19 Dec 2019 05:36:36 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 01:47:02 GMT
+# Thu, 19 Dec 2019 05:36:37 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 01:47:02 GMT
+# Thu, 19 Dec 2019 05:36:37 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 01:47:03 GMT
+# Thu, 19 Dec 2019 05:36:38 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 01:47:03 GMT
+# Thu, 19 Dec 2019 05:36:38 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:47:03 GMT
+# Thu, 19 Dec 2019 05:36:38 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:47:04 GMT
+# Thu, 19 Dec 2019 05:36:39 GMT
 USER adminer
-# Fri, 06 Dec 2019 01:47:04 GMT
+# Thu, 19 Dec 2019 05:36:39 GMT
 CMD ["php-fpm"]
 ```
 
@@ -6937,57 +6937,57 @@ CMD ["php-fpm"]
 		Last Modified: Mon, 21 Oct 2019 21:44:18 GMT  
 		Size: 222.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a601c8316c6be88cf4a4644682a7fd958df67c4dccca6ce371527843cc478c7f`  
-		Last Modified: Thu, 28 Nov 2019 21:13:41 GMT  
-		Size: 10.3 MB (10250554 bytes)  
+	-	`sha256:99401fd0ece70360f3ccecf44f844a5a0efdf32146d6c446970c26531752c341`  
+		Last Modified: Thu, 19 Dec 2019 03:00:56 GMT  
+		Size: 10.3 MB (10263900 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fb3804cbe9c1edb0802bb41778e0b051935530870e40f8314aecfcf8e2b21315`  
-		Last Modified: Thu, 28 Nov 2019 21:13:39 GMT  
+	-	`sha256:de913d86f05a50a4c3f792243ec9f24779f57ce0e0238c053c4287d7880a5347`  
+		Last Modified: Thu, 19 Dec 2019 03:00:53 GMT  
 		Size: 497.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3288d779cb3b5cf28ee3e06007de0ff994a17dacf83f4c84e60ebfe31ba948d1`  
-		Last Modified: Thu, 28 Nov 2019 21:13:43 GMT  
-		Size: 14.7 MB (14657297 bytes)  
+	-	`sha256:0f2b5a211ce6ec0d98a72f219b18530d5c25fafc0a7a9a21b7da0330bbbe5797`  
+		Last Modified: Thu, 19 Dec 2019 03:01:00 GMT  
+		Size: 14.7 MB (14660671 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c640bbd2a760395929467de5ee104f09aaeeea47b83dfcfc69da97278e70b945`  
-		Last Modified: Fri, 06 Dec 2019 01:27:11 GMT  
-		Size: 2.2 KB (2219 bytes)  
+	-	`sha256:b0b33dbfafe9a898ff3a2b3e4e1a7af15b797a7c00dd874e9d3c827e395cd43b`  
+		Last Modified: Thu, 19 Dec 2019 03:00:54 GMT  
+		Size: 2.2 KB (2220 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5ce9637f8561c37a2120d04a20e7db57873352d5e5fa53f150a05c15efeb86c4`  
-		Last Modified: Fri, 06 Dec 2019 01:27:11 GMT  
-		Size: 72.3 KB (72319 bytes)  
+	-	`sha256:49e0c9bf0c294f08a2cc44a9197f856fda455f40aa06c532cea2cb79d6877f77`  
+		Last Modified: Thu, 19 Dec 2019 03:00:53 GMT  
+		Size: 72.3 KB (72299 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:178cf949d1df28b308bbfde08ad37ae95550b6e531d123d3bfbf42f8fb630cc9`  
-		Last Modified: Fri, 06 Dec 2019 01:27:11 GMT  
-		Size: 8.4 KB (8416 bytes)  
+	-	`sha256:1aa5c4c9069b45e81276629ede436f3bf5cea9843721c563a1f72553b0d445ec`  
+		Last Modified: Thu, 19 Dec 2019 03:00:54 GMT  
+		Size: 8.4 KB (8409 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4a4176cf6fc0db678f63ad60351550fab8c8f88c4acbdc999b5f146c0abeb2cc`  
-		Last Modified: Fri, 06 Dec 2019 01:47:37 GMT  
-		Size: 310.0 B  
+	-	`sha256:b066b20593318b62a26b9637aa4ab4a2a37c8f397ee9fdba7e79e592e450402f`  
+		Last Modified: Thu, 19 Dec 2019 05:37:01 GMT  
+		Size: 307.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f3ee6614958c36386354c57d02f2707edf448051af00523a696375615ffd4792`  
-		Last Modified: Fri, 06 Dec 2019 01:47:37 GMT  
-		Size: 1.4 KB (1372 bytes)  
+	-	`sha256:640b2caf715bb36f272914262e86e6181fa0510cc8236e55b5a5ff3cd535744d`  
+		Last Modified: Thu, 19 Dec 2019 05:37:01 GMT  
+		Size: 1.4 KB (1373 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:91bb715b44e74412113e259c16cc49f124406bf1fee85491bf055aaa93eb9e6a`  
-		Last Modified: Fri, 06 Dec 2019 01:47:34 GMT  
-		Size: 1.3 MB (1267208 bytes)  
+	-	`sha256:dc66e0562ddf1d4ba9dcaffa1afa1eae778de558f7674bc53c7473b63ac44f22`  
+		Last Modified: Thu, 19 Dec 2019 05:37:00 GMT  
+		Size: 1.3 MB (1267203 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cb970b079b37f6e02d3df5882cd2e3a923fa334ea3abc77fa90c1fc82367e95e`  
-		Last Modified: Fri, 06 Dec 2019 01:47:33 GMT  
+	-	`sha256:b877ea3f3b11a7225696f96d2c7247c2f8b714f79fc03f89f71bebc6b9431424`  
+		Last Modified: Thu, 19 Dec 2019 05:37:00 GMT  
 		Size: 125.7 KB (125656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6baf6eed16971fd51de3f0f170d0b6d4a0378193275c9579659bfa292336f063`  
-		Last Modified: Fri, 06 Dec 2019 01:47:34 GMT  
-		Size: 1.5 KB (1474 bytes)  
+	-	`sha256:014e55e883e88a5a8887682b5c9b8c76b00141600a698701ec3cb97da6380b0f`  
+		Last Modified: Thu, 19 Dec 2019 05:37:00 GMT  
+		Size: 1.5 KB (1475 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ddaf26f3c519006700f20f139a27ab4408d8821c325e8546c03acbda70d3f76f`  
-		Last Modified: Fri, 06 Dec 2019 01:47:34 GMT  
-		Size: 570.4 KB (570382 bytes)  
+	-	`sha256:0ac91ac5b58c527badba4ad4c05ece7bc5954fe9e14a7dd195cc1dc23479603d`  
+		Last Modified: Thu, 19 Dec 2019 05:37:00 GMT  
+		Size: 570.4 KB (570381 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a5f935221cf5489e888bf3acf8b04f178ed625f428fcb84e8d8e4b79a403ed04`  
-		Last Modified: Fri, 06 Dec 2019 01:47:34 GMT  
-		Size: 496.0 B  
+	-	`sha256:2f0eb5db857e60dc084fc2707add56ec223c18d1235477d69daf5a1635a8966d`  
+		Last Modified: Thu, 19 Dec 2019 05:37:00 GMT  
+		Size: 493.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adminer:4-fastcgi` - linux; arm variant v6
@@ -7158,14 +7158,14 @@ CMD ["php-fpm"]
 ### `adminer:4-fastcgi` - linux; arm variant v7
 
 ```console
-$ docker pull adminer@sha256:e8a21987f3604277d81acab716a83660516ac8dedfb4265e9e5a315b74855575
+$ docker pull adminer@sha256:fbdfb91799dc6900d61e80c1270b8cfd5e23f5988d759cbed5cd038b1b6baa48
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **28.4 MB (28425499 bytes)**  
+-	Total Size: **28.4 MB (28447463 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0b841f0ed66806ebf1569b0f7f0e7576049cb7aca8423ad68781e4c1b6dd2619`
+-	Image ID: `sha256:23a9b5b061b147ddc1b90ee4b90ece47359fa93b71952e17f8f21fe6b38881f6`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php-fpm"]`
 
@@ -7194,59 +7194,59 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 00:46:21 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:22:49 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:22:50 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:22:50 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:22:54 GMT
+# Wed, 18 Dec 2019 22:16:47 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:16:48 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:16:48 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:16:52 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:22:55 GMT
+# Wed, 18 Dec 2019 22:16:52 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:25:37 GMT
+# Wed, 18 Dec 2019 22:19:17 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:17:43 GMT
+# Wed, 18 Dec 2019 22:19:19 GMT
 COPY multi:5581a34bba21fbf2472e857e8cdc8db6d57694020e568954d2fd5901ee074da0 in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:17:51 GMT
+# Wed, 18 Dec 2019 22:19:21 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:17:52 GMT
+# Wed, 18 Dec 2019 22:19:21 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:17:54 GMT
+# Wed, 18 Dec 2019 22:19:22 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 01:17:57 GMT
+# Wed, 18 Dec 2019 22:19:23 GMT
 RUN set -eux; 	cd /usr/local/etc; 	if [ -d php-fpm.d ]; then 		sed 's!=NONE/!=!g' php-fpm.conf.default | tee php-fpm.conf > /dev/null; 		cp php-fpm.d/www.conf.default php-fpm.d/www.conf; 	else 		mkdir php-fpm.d; 		cp php-fpm.conf.default php-fpm.d/www.conf; 		{ 			echo '[global]'; 			echo 'include=etc/php-fpm.d/*.conf'; 		} | tee php-fpm.conf; 	fi; 	{ 		echo '[global]'; 		echo 'error_log = /proc/self/fd/2'; 		echo; echo '; https://github.com/docker-library/php/pull/725#issuecomment-443540114'; echo 'log_limit = 8192'; 		echo; 		echo '[www]'; 		echo '; if we send this to /proc/self/fd/1, it never appears'; 		echo 'access.log = /proc/self/fd/2'; 		echo; 		echo 'clear_env = no'; 		echo; 		echo '; Ensure worker stdout and stderr are sent to the main error log.'; 		echo 'catch_workers_output = yes'; 		echo 'decorate_workers_output = no'; 	} | tee php-fpm.d/docker.conf; 	{ 		echo '[global]'; 		echo 'daemonize = no'; 		echo; 		echo '[www]'; 		echo 'listen = 9000'; 	} | tee php-fpm.d/zz-docker.conf
-# Fri, 06 Dec 2019 01:17:57 GMT
+# Wed, 18 Dec 2019 22:19:24 GMT
 STOPSIGNAL SIGQUIT
-# Fri, 06 Dec 2019 01:17:58 GMT
+# Wed, 18 Dec 2019 22:19:24 GMT
 EXPOSE 9000
-# Fri, 06 Dec 2019 01:18:00 GMT
+# Wed, 18 Dec 2019 22:19:25 GMT
 CMD ["php-fpm"]
-# Fri, 06 Dec 2019 04:52:58 GMT
+# Thu, 19 Dec 2019 05:44:09 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 04:53:02 GMT
+# Thu, 19 Dec 2019 05:44:11 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 04:53:07 GMT
+# Thu, 19 Dec 2019 05:44:13 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 04:53:56 GMT
+# Thu, 19 Dec 2019 05:44:42 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 04:53:58 GMT
+# Thu, 19 Dec 2019 05:44:43 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 04:54:03 GMT
+# Thu, 19 Dec 2019 05:44:44 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 04:54:06 GMT
+# Thu, 19 Dec 2019 05:44:46 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 04:54:11 GMT
+# Thu, 19 Dec 2019 05:44:47 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 04:54:23 GMT
+# Thu, 19 Dec 2019 05:44:50 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 04:54:27 GMT
+# Thu, 19 Dec 2019 05:44:51 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 04:54:31 GMT
+# Thu, 19 Dec 2019 05:44:52 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 04:54:40 GMT
+# Thu, 19 Dec 2019 05:44:53 GMT
 USER adminer
-# Fri, 06 Dec 2019 04:54:46 GMT
+# Thu, 19 Dec 2019 05:44:53 GMT
 CMD ["php-fpm"]
 ```
 
@@ -7267,57 +7267,57 @@ CMD ["php-fpm"]
 		Last Modified: Mon, 21 Oct 2019 22:14:00 GMT  
 		Size: 267.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bd5b4d8b4543b812d92b5b3c4f25d044a8187acdd7f3b53df3b71f804cac7340`  
-		Last Modified: Thu, 28 Nov 2019 20:37:43 GMT  
-		Size: 10.3 MB (10250580 bytes)  
+	-	`sha256:4eedeb9880bb1f9c73e334a58cb9c46cc6232b53ce736a7589f1ee24686b530c`  
+		Last Modified: Thu, 19 Dec 2019 00:23:59 GMT  
+		Size: 10.3 MB (10263922 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:55de7a9fd1e9272a3a4ff2cbf814a2aef5e9a954c9af9171183f2a12db1a85a5`  
-		Last Modified: Thu, 28 Nov 2019 20:37:40 GMT  
+	-	`sha256:c88c2b531f9e7529ca2b92ebefe77956bef1d3a42d4fac0e1aab9cf7d38d9194`  
+		Last Modified: Thu, 19 Dec 2019 00:23:56 GMT  
 		Size: 497.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:76ab6e8d330e8d16362a233aff02d2ffdbafb3485b6e7145be238ae9d6cc6c02`  
-		Last Modified: Thu, 28 Nov 2019 20:37:45 GMT  
-		Size: 12.7 MB (12721061 bytes)  
+	-	`sha256:5e29f6cb3619d30dfc550358fb1b34b267a7b9d9a349a053e01f34f47154bbfd`  
+		Last Modified: Thu, 19 Dec 2019 00:24:01 GMT  
+		Size: 12.7 MB (12729707 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ba988589c2419f2f60d14b762f8fc5d5fe82fe375e5feedbe47af4c90cd3939e`  
-		Last Modified: Fri, 06 Dec 2019 01:36:01 GMT  
-		Size: 2.2 KB (2220 bytes)  
+	-	`sha256:c76814ed8ddfef8fa79e7196863c601c997e68e9b7d6cc43871f4f82026f8981`  
+		Last Modified: Thu, 19 Dec 2019 00:23:56 GMT  
+		Size: 2.2 KB (2215 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1c3c2872d8caf9ee292f6d5dc746ee6a0f019719be736ef7f7f75a767594635d`  
-		Last Modified: Fri, 06 Dec 2019 01:36:01 GMT  
-		Size: 71.9 KB (71897 bytes)  
+	-	`sha256:f3019562df3384254b5eff7a4c4cfb777574e12603cba999912f173377cd8e01`  
+		Last Modified: Thu, 19 Dec 2019 00:23:56 GMT  
+		Size: 71.9 KB (71882 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fbd45d21777c734579b6af6e024d9df4fc1939be3fa625047eca044f19fa0ddc`  
-		Last Modified: Fri, 06 Dec 2019 01:36:01 GMT  
-		Size: 8.4 KB (8419 bytes)  
+	-	`sha256:1381e38356bda310c22a0249c4cdaa209f53a34577bf9ed64696fdd854988783`  
+		Last Modified: Thu, 19 Dec 2019 00:23:56 GMT  
+		Size: 8.4 KB (8412 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:be4298819eb89def21ff8e9d5d826931901542c502760fda6b8bb1c51c773faf`  
-		Last Modified: Fri, 06 Dec 2019 04:55:36 GMT  
-		Size: 313.0 B  
+	-	`sha256:f13b5156371dc9dbc0a311fae8af8e803a0753d6b245af20e36db65d4ed8f65d`  
+		Last Modified: Thu, 19 Dec 2019 05:45:44 GMT  
+		Size: 307.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0ae7e953ec02b6619fa10ef1ca0111674953b7aacc31171dfe128e5d976dcc1b`  
-		Last Modified: Fri, 06 Dec 2019 04:55:35 GMT  
+	-	`sha256:bb959a30681546d0762debb7004e5fc0c3eb553ad3a319d7130e2c70e8ec2ec4`  
+		Last Modified: Thu, 19 Dec 2019 05:45:43 GMT  
 		Size: 1.4 KB (1417 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:72078331166ccb0cfba22b4e2693699e5b85c0b6a4187589c14b3c019a43a8b9`  
-		Last Modified: Fri, 06 Dec 2019 04:55:33 GMT  
-		Size: 1.1 MB (1098030 bytes)  
+	-	`sha256:b4adbb7af708946c67dbace2146e6036b4ca06d3b6baa7b320791af28ed53b1a`  
+		Last Modified: Thu, 19 Dec 2019 05:45:41 GMT  
+		Size: 1.1 MB (1098039 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6f96e68cf74577ed595e24c862091041b1c67a759723cf554b14bf74912b93da`  
-		Last Modified: Fri, 06 Dec 2019 04:55:33 GMT  
-		Size: 113.6 KB (113638 bytes)  
+	-	`sha256:b89f988b332cf8b5092864935822fc0cfc1946a7eafcfa16b13a1ddda4e938e5`  
+		Last Modified: Thu, 19 Dec 2019 05:45:41 GMT  
+		Size: 113.6 KB (113634 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:454a2e3b78edeb67039002bc5b3d08d704552e1d1b81eb1a216e79908e2f5a79`  
-		Last Modified: Fri, 06 Dec 2019 04:55:34 GMT  
-		Size: 1.5 KB (1474 bytes)  
+	-	`sha256:a2e352e3241ea44c2ab9a19cbd58216982dbcb88bc8be04236d7fbd689f53a90`  
+		Last Modified: Thu, 19 Dec 2019 05:45:40 GMT  
+		Size: 1.5 KB (1475 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:772de545e44a062eeaa2f1ffd40f952415647924cf2eb1cc43ba673d63fb778c`  
-		Last Modified: Fri, 06 Dec 2019 04:55:34 GMT  
-		Size: 570.5 KB (570450 bytes)  
+	-	`sha256:184c931f95290c799bd2ec8cd4b6fdf9e8a34ab7b92e48d4383c26136dcc9179`  
+		Last Modified: Thu, 19 Dec 2019 05:45:41 GMT  
+		Size: 570.5 KB (570454 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:07479bf42f2f435026ecea0bc9599248121172fc4378ef62094029e8a2a85f8b`  
-		Last Modified: Fri, 06 Dec 2019 04:55:33 GMT  
-		Size: 499.0 B  
+	-	`sha256:860fbfcb30cb2e74ab43685c2be66ad5b833f40954fa7d0954ce9b884d3c5c04`  
+		Last Modified: Thu, 19 Dec 2019 05:45:40 GMT  
+		Size: 498.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adminer:4-fastcgi` - linux; arm64 variant v8
@@ -7488,14 +7488,14 @@ CMD ["php-fpm"]
 ### `adminer:4-fastcgi` - linux; 386
 
 ```console
-$ docker pull adminer@sha256:696e32f3fe8ded2808300fbbe16224a66699b507a69e237a658e74d3a6c7139a
+$ docker pull adminer@sha256:ddb4ef346f4a51c9da3fc1726a3b756745fa17cb92b81efcd77a9c0637f628eb
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **31.7 MB (31681382 bytes)**  
+-	Total Size: **31.7 MB (31697203 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b62059fecce24a95d9821faf72e1c1a702b1e964bdb645a49eaa7c4fe7e613db`
+-	Image ID: `sha256:0f172a742089b6f88337921724e6c37028004ad70d7ed03b0bf31928e0d07930`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php-fpm"]`
 
@@ -7524,59 +7524,59 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 03:55:38 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:09:01 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:09:01 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:09:01 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:09:04 GMT
+# Wed, 18 Dec 2019 23:28:12 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 23:28:12 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 23:28:13 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 23:28:17 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:09:04 GMT
+# Wed, 18 Dec 2019 23:28:17 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:14:40 GMT
+# Wed, 18 Dec 2019 23:37:38 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 00:41:42 GMT
+# Wed, 18 Dec 2019 23:37:39 GMT
 COPY multi:5581a34bba21fbf2472e857e8cdc8db6d57694020e568954d2fd5901ee074da0 in /usr/local/bin/ 
-# Fri, 06 Dec 2019 00:41:43 GMT
+# Wed, 18 Dec 2019 23:37:41 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 00:41:44 GMT
+# Wed, 18 Dec 2019 23:37:41 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 00:41:44 GMT
+# Wed, 18 Dec 2019 23:37:41 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 00:41:45 GMT
+# Wed, 18 Dec 2019 23:37:42 GMT
 RUN set -eux; 	cd /usr/local/etc; 	if [ -d php-fpm.d ]; then 		sed 's!=NONE/!=!g' php-fpm.conf.default | tee php-fpm.conf > /dev/null; 		cp php-fpm.d/www.conf.default php-fpm.d/www.conf; 	else 		mkdir php-fpm.d; 		cp php-fpm.conf.default php-fpm.d/www.conf; 		{ 			echo '[global]'; 			echo 'include=etc/php-fpm.d/*.conf'; 		} | tee php-fpm.conf; 	fi; 	{ 		echo '[global]'; 		echo 'error_log = /proc/self/fd/2'; 		echo; echo '; https://github.com/docker-library/php/pull/725#issuecomment-443540114'; echo 'log_limit = 8192'; 		echo; 		echo '[www]'; 		echo '; if we send this to /proc/self/fd/1, it never appears'; 		echo 'access.log = /proc/self/fd/2'; 		echo; 		echo 'clear_env = no'; 		echo; 		echo '; Ensure worker stdout and stderr are sent to the main error log.'; 		echo 'catch_workers_output = yes'; 		echo 'decorate_workers_output = no'; 	} | tee php-fpm.d/docker.conf; 	{ 		echo '[global]'; 		echo 'daemonize = no'; 		echo; 		echo '[www]'; 		echo 'listen = 9000'; 	} | tee php-fpm.d/zz-docker.conf
-# Fri, 06 Dec 2019 00:41:45 GMT
+# Wed, 18 Dec 2019 23:37:43 GMT
 STOPSIGNAL SIGQUIT
-# Fri, 06 Dec 2019 00:41:45 GMT
+# Wed, 18 Dec 2019 23:37:43 GMT
 EXPOSE 9000
-# Fri, 06 Dec 2019 00:41:45 GMT
+# Wed, 18 Dec 2019 23:37:43 GMT
 CMD ["php-fpm"]
-# Fri, 06 Dec 2019 01:35:54 GMT
+# Thu, 19 Dec 2019 06:03:16 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 01:35:54 GMT
+# Thu, 19 Dec 2019 06:03:17 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 01:35:56 GMT
+# Thu, 19 Dec 2019 06:03:18 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 01:36:12 GMT
+# Thu, 19 Dec 2019 06:03:37 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 01:36:12 GMT
+# Thu, 19 Dec 2019 06:03:37 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 01:36:13 GMT
+# Thu, 19 Dec 2019 06:03:38 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 01:36:13 GMT
+# Thu, 19 Dec 2019 06:03:38 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 01:36:13 GMT
+# Thu, 19 Dec 2019 06:03:38 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 01:36:14 GMT
+# Thu, 19 Dec 2019 06:03:39 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 01:36:14 GMT
+# Thu, 19 Dec 2019 06:03:39 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:36:15 GMT
+# Thu, 19 Dec 2019 06:03:40 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:36:15 GMT
+# Thu, 19 Dec 2019 06:03:40 GMT
 USER adminer
-# Fri, 06 Dec 2019 01:36:15 GMT
+# Thu, 19 Dec 2019 06:03:40 GMT
 CMD ["php-fpm"]
 ```
 
@@ -7597,70 +7597,70 @@ CMD ["php-fpm"]
 		Last Modified: Mon, 21 Oct 2019 20:16:09 GMT  
 		Size: 221.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:883002e0338b8c513c57d18ab77d82e0caa919bdb1b2946f08ed3b55b72fac1e`  
-		Last Modified: Thu, 28 Nov 2019 20:26:08 GMT  
-		Size: 10.3 MB (10250560 bytes)  
+	-	`sha256:c1e36a5c98d6178a449daf406257e7eff2a8aaa8f7841e89d88aa873d05f19d1`  
+		Last Modified: Thu, 19 Dec 2019 03:54:26 GMT  
+		Size: 10.3 MB (10263910 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e7b0a921118a69174781eb4a78632aeeecae27242523e5cd8f5285edf19fe334`  
-		Last Modified: Thu, 28 Nov 2019 20:26:06 GMT  
+	-	`sha256:4725008c4a17d209ebebf19f78eb56a40450345fe49d5db3485091250aeb99f3`  
+		Last Modified: Thu, 19 Dec 2019 03:54:24 GMT  
 		Size: 498.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b3c1c34bce5f0b20f0e44086f68aaafa99ffc49bdb7dbc66c1c06e24b9955974`  
-		Last Modified: Thu, 28 Nov 2019 20:26:12 GMT  
-		Size: 15.0 MB (15041874 bytes)  
+	-	`sha256:282e1d0766783fa9892cf09cb13c7dad4614d043e3a91d070850cdabefbe5e51`  
+		Last Modified: Thu, 19 Dec 2019 03:54:30 GMT  
+		Size: 15.0 MB (15044382 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c3879df9a92354b1306a7e72620aab8a40a59b92ba45fe1820f1aa46e9b44495`  
-		Last Modified: Fri, 06 Dec 2019 00:46:48 GMT  
-		Size: 2.2 KB (2217 bytes)  
+	-	`sha256:78244b0bf6db52cbb1d03d4475db979cea475dd6d957e745ae8eb04b5fd020f7`  
+		Last Modified: Thu, 19 Dec 2019 03:54:24 GMT  
+		Size: 2.2 KB (2214 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ffef623ce21dc6b94b53c9e218c7559ac372c972028a492b3bec3bf5223ea6bb`  
-		Last Modified: Fri, 06 Dec 2019 00:46:47 GMT  
-		Size: 71.5 KB (71461 bytes)  
+	-	`sha256:ca2f4f3e381507a2e63adb951d6250fd232c07b850b73a6dbcf66951d6cb156d`  
+		Last Modified: Thu, 19 Dec 2019 03:54:24 GMT  
+		Size: 71.5 KB (71454 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9f8859fd4299cfa4ebc4c4abbb5eb35a56168974f7f37bf0243bef6da168cab3`  
-		Last Modified: Fri, 06 Dec 2019 00:46:48 GMT  
-		Size: 8.4 KB (8414 bytes)  
+	-	`sha256:ac7b77f214de306452a069819db22449df52a22007c3d8248782417ae08b39f8`  
+		Last Modified: Thu, 19 Dec 2019 03:54:24 GMT  
+		Size: 8.4 KB (8409 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:527177aba9589b65da398f866482092bc2575d64199cc41526b90da02a5214d8`  
-		Last Modified: Fri, 06 Dec 2019 01:36:47 GMT  
-		Size: 310.0 B  
+	-	`sha256:d095fefaea7a71ae03b685ba31f029a32c7db6cac13b26c56d492cf265fbeddc`  
+		Last Modified: Thu, 19 Dec 2019 06:04:01 GMT  
+		Size: 308.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:08337b4da5150b2191d15017d7aaf7c89552dc0695fc143d5dd34abbe0ac8e95`  
-		Last Modified: Fri, 06 Dec 2019 01:36:48 GMT  
-		Size: 1.4 KB (1377 bytes)  
+	-	`sha256:0db984503d05ea727e8c4f7b5b9785b67ed876b0abd217e21f28d9a0eea9c2c9`  
+		Last Modified: Thu, 19 Dec 2019 06:04:00 GMT  
+		Size: 1.4 KB (1374 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1ee6ab35b23389ef74abbeb0dc8803a7ec232f20836ea215a9ecd9e6962e4921`  
-		Last Modified: Fri, 06 Dec 2019 01:36:46 GMT  
-		Size: 1.4 MB (1382437 bytes)  
+	-	`sha256:8dc49e558523c08d3c6dc7adf5b339d691ba711f70372b584b7c6572ffbb57f2`  
+		Last Modified: Thu, 19 Dec 2019 06:03:59 GMT  
+		Size: 1.4 MB (1382432 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b6fbf218b5ec16408f996fb5e171282d2f6c9a8739d32f265797a376f4c4dc9d`  
-		Last Modified: Fri, 06 Dec 2019 01:36:46 GMT  
-		Size: 128.8 KB (128813 bytes)  
+	-	`sha256:ca63ec82194c3a79b574cd3d57e3a0dc2cba409532b4b5517306a793e499aa02`  
+		Last Modified: Thu, 19 Dec 2019 06:03:59 GMT  
+		Size: 128.8 KB (128808 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:99f52836ac716204cfe561cfb7e5a86eb115cddd251ef236c0afdc5b72c43b2a`  
-		Last Modified: Fri, 06 Dec 2019 01:36:46 GMT  
-		Size: 1.5 KB (1477 bytes)  
+	-	`sha256:3ab8349792bff83587695f7f15ff8dc6c98dee83fa6c803fccd2eb96cf2513a3`  
+		Last Modified: Thu, 19 Dec 2019 06:03:59 GMT  
+		Size: 1.5 KB (1475 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:882438548e91707b129857c72cea5b16853486c9bbb9a8e82b593ba59f58094f`  
-		Last Modified: Fri, 06 Dec 2019 01:36:47 GMT  
+	-	`sha256:dd3cf923130660a45ec692407df896ea2e2996dda2707e20dbacd485f675b412`  
+		Last Modified: Thu, 19 Dec 2019 06:03:59 GMT  
 		Size: 570.4 KB (570380 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:abe5b02e07233ccb28938a3c349125e527f671762692f8cc3f0e8db2569b279d`  
-		Last Modified: Fri, 06 Dec 2019 01:36:46 GMT  
-		Size: 498.0 B  
+	-	`sha256:ed097ef0f5931aecf8b6a435aaf4e3eab4f85073c6e91ba57529c53478e6e413`  
+		Last Modified: Thu, 19 Dec 2019 06:03:59 GMT  
+		Size: 493.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adminer:4-fastcgi` - linux; ppc64le
 
 ```console
-$ docker pull adminer@sha256:9c025ea58d6b26f90b22a4536cc075de23b68b5c953d6ae4f25cd8b16f498043
+$ docker pull adminer@sha256:f224038dcca7686d91dc09c9ccc47a7c75e0a90ce7fb8f6d1c38f7588f343f71
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **32.3 MB (32317896 bytes)**  
+-	Total Size: **32.3 MB (32339693 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:59105655c2b3bffbd6a9ea758b8fab9823f771080f827fb3943e68ba71b6fa3c`
+-	Image ID: `sha256:8d13c4f641374aadc599476f3f7868f487b1b0ad242a0ccfdb82b58d1417cb9e`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php-fpm"]`
 
@@ -7689,59 +7689,59 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 01:22:06 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:48:39 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:48:42 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:48:45 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:48:57 GMT
+# Wed, 18 Dec 2019 22:47:14 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:47:16 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:47:19 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:47:31 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:48:58 GMT
+# Wed, 18 Dec 2019 22:47:32 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:53:04 GMT
+# Wed, 18 Dec 2019 22:51:02 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:22:18 GMT
+# Wed, 18 Dec 2019 22:51:04 GMT
 COPY multi:5581a34bba21fbf2472e857e8cdc8db6d57694020e568954d2fd5901ee074da0 in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:22:24 GMT
+# Wed, 18 Dec 2019 22:51:10 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:22:26 GMT
+# Wed, 18 Dec 2019 22:51:13 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:22:29 GMT
+# Wed, 18 Dec 2019 22:51:15 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 01:22:36 GMT
+# Wed, 18 Dec 2019 22:51:19 GMT
 RUN set -eux; 	cd /usr/local/etc; 	if [ -d php-fpm.d ]; then 		sed 's!=NONE/!=!g' php-fpm.conf.default | tee php-fpm.conf > /dev/null; 		cp php-fpm.d/www.conf.default php-fpm.d/www.conf; 	else 		mkdir php-fpm.d; 		cp php-fpm.conf.default php-fpm.d/www.conf; 		{ 			echo '[global]'; 			echo 'include=etc/php-fpm.d/*.conf'; 		} | tee php-fpm.conf; 	fi; 	{ 		echo '[global]'; 		echo 'error_log = /proc/self/fd/2'; 		echo; echo '; https://github.com/docker-library/php/pull/725#issuecomment-443540114'; echo 'log_limit = 8192'; 		echo; 		echo '[www]'; 		echo '; if we send this to /proc/self/fd/1, it never appears'; 		echo 'access.log = /proc/self/fd/2'; 		echo; 		echo 'clear_env = no'; 		echo; 		echo '; Ensure worker stdout and stderr are sent to the main error log.'; 		echo 'catch_workers_output = yes'; 		echo 'decorate_workers_output = no'; 	} | tee php-fpm.d/docker.conf; 	{ 		echo '[global]'; 		echo 'daemonize = no'; 		echo; 		echo '[www]'; 		echo 'listen = 9000'; 	} | tee php-fpm.d/zz-docker.conf
-# Fri, 06 Dec 2019 01:22:38 GMT
+# Wed, 18 Dec 2019 22:51:22 GMT
 STOPSIGNAL SIGQUIT
-# Fri, 06 Dec 2019 01:22:41 GMT
+# Wed, 18 Dec 2019 22:51:24 GMT
 EXPOSE 9000
-# Fri, 06 Dec 2019 01:22:42 GMT
+# Wed, 18 Dec 2019 22:51:26 GMT
 CMD ["php-fpm"]
-# Fri, 06 Dec 2019 02:51:58 GMT
+# Thu, 19 Dec 2019 06:29:52 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 02:52:04 GMT
+# Thu, 19 Dec 2019 06:30:00 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 02:52:10 GMT
+# Thu, 19 Dec 2019 06:30:13 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 02:52:38 GMT
+# Thu, 19 Dec 2019 06:30:44 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 02:52:39 GMT
+# Thu, 19 Dec 2019 06:30:46 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 02:52:41 GMT
+# Thu, 19 Dec 2019 06:30:50 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 02:52:44 GMT
+# Thu, 19 Dec 2019 06:30:55 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 02:52:46 GMT
+# Thu, 19 Dec 2019 06:30:57 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 02:52:56 GMT
+# Thu, 19 Dec 2019 06:31:07 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 02:52:57 GMT
+# Thu, 19 Dec 2019 06:31:09 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 02:52:59 GMT
+# Thu, 19 Dec 2019 06:31:13 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 02:53:03 GMT
+# Thu, 19 Dec 2019 06:31:16 GMT
 USER adminer
-# Fri, 06 Dec 2019 02:53:06 GMT
+# Thu, 19 Dec 2019 06:31:20 GMT
 CMD ["php-fpm"]
 ```
 
@@ -7762,63 +7762,63 @@ CMD ["php-fpm"]
 		Last Modified: Mon, 21 Oct 2019 20:21:00 GMT  
 		Size: 269.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:41c52740a44bb4c5748ebce8c86dd706cabeffa8b3d9c4f80f6138b61a1bec08`  
-		Last Modified: Thu, 28 Nov 2019 21:11:13 GMT  
-		Size: 10.3 MB (10250597 bytes)  
+	-	`sha256:b07995cdf934b5efaabafb2fc38e2fd4bcf262d4b3fc0ae854961fb8fe2ccb76`  
+		Last Modified: Thu, 19 Dec 2019 01:43:42 GMT  
+		Size: 10.3 MB (10263942 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dc8deff1ae875178b97c866e9ae37859d9845e0ff78498539ab49c875dfda704`  
-		Last Modified: Thu, 28 Nov 2019 21:11:09 GMT  
+	-	`sha256:562d327a17a47fdf54128aec6fa469dfa1c46299912ceb56802bd2049c87a3cd`  
+		Last Modified: Thu, 19 Dec 2019 01:43:37 GMT  
 		Size: 498.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bef48fb4a39bcc95db1529ddbea9a2810d8f1e6d7a5af0f07960b597759795d4`  
-		Last Modified: Thu, 28 Nov 2019 21:11:14 GMT  
-		Size: 15.7 MB (15730534 bytes)  
+	-	`sha256:b605296e4b54e9e88cf662c48efe74d8375ba1168dfbd4fcf4d5a7157fc036ef`  
+		Last Modified: Thu, 19 Dec 2019 01:43:47 GMT  
+		Size: 15.7 MB (15739016 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cf885e004bbb88c1afad2b587c13689fe51c817b0dc75126fe5ae4de79d033e6`  
-		Last Modified: Fri, 06 Dec 2019 01:41:16 GMT  
-		Size: 2.2 KB (2221 bytes)  
+	-	`sha256:79e919cad484af1a35481675ab017ded09828c347b67ac9ca3fc7222a8f1a08e`  
+		Last Modified: Thu, 19 Dec 2019 01:43:37 GMT  
+		Size: 2.2 KB (2213 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b2c390fe718afab471134ab9da6de24d9c38924b0c4087e34a4fde3dc2844f16`  
-		Last Modified: Fri, 06 Dec 2019 01:41:16 GMT  
-		Size: 72.2 KB (72167 bytes)  
+	-	`sha256:3ac400f228427059d566f1ef2a4d1b98086f260c0f46c0722c32ca80a33b8c9c`  
+		Last Modified: Thu, 19 Dec 2019 01:43:37 GMT  
+		Size: 72.1 KB (72144 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9a2c5b773a13a67885fadc2a9bcaa28f789b7e52696dba93815eedf300ebd4dc`  
-		Last Modified: Fri, 06 Dec 2019 01:41:16 GMT  
-		Size: 8.4 KB (8415 bytes)  
+	-	`sha256:79c3607f5af5bfd11f73d90dbd7743491b17e724bc86e998e28b0a7d55ab337c`  
+		Last Modified: Thu, 19 Dec 2019 01:43:37 GMT  
+		Size: 8.4 KB (8418 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c9067b4b9dddc9ee32be5753ea716eff5b0d07bc48ab282cb504468006a804ce`  
-		Last Modified: Fri, 06 Dec 2019 02:54:19 GMT  
-		Size: 310.0 B  
+	-	`sha256:db6142ebdfb637a6f0452667b383135615574f75a10d106d38d11a54233b4315`  
+		Last Modified: Thu, 19 Dec 2019 06:32:46 GMT  
+		Size: 307.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bbf3022d05dae61d9072aecb7c6a66feff00c293204c566b8a487dbdbe1f504c`  
-		Last Modified: Fri, 06 Dec 2019 02:54:18 GMT  
-		Size: 1.4 KB (1417 bytes)  
+	-	`sha256:5fc105e8ef9fe3cc42aea688712f3186ea449f115ba59145f024b1a0a764b80d`  
+		Last Modified: Thu, 19 Dec 2019 06:32:45 GMT  
+		Size: 1.4 KB (1421 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:60dab794aa767edb8b1a96f18a413f394295e8915f0e5f9c195cef599bbf23c0`  
-		Last Modified: Fri, 06 Dec 2019 02:54:16 GMT  
-		Size: 1.3 MB (1347015 bytes)  
+	-	`sha256:84e6a9290a5d8919085470664c7f18de1370fae8b7595ce7604dc6aa0b047228`  
+		Last Modified: Thu, 19 Dec 2019 06:32:41 GMT  
+		Size: 1.3 MB (1347003 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5eb70d0523c6dfb4d40b28604e02ef10b1ad8214e5ef7aaef9e9b3f7528d28e4`  
-		Last Modified: Fri, 06 Dec 2019 02:54:16 GMT  
-		Size: 135.8 KB (135821 bytes)  
+	-	`sha256:66f43d2506941955932ba61a0fa90e7a0f77acf2ec58e9630457f30371e78c1b`  
+		Last Modified: Thu, 19 Dec 2019 06:32:41 GMT  
+		Size: 135.8 KB (135820 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d88606c7efae5c80d7217038d6e4f82bb12bdfe624738d95e29be225b46e36b5`  
-		Last Modified: Fri, 06 Dec 2019 02:54:16 GMT  
-		Size: 1.5 KB (1473 bytes)  
+	-	`sha256:36a8d852ad8da73568f4223e8e8b9b0b1ca6263a4ca83b8971d624503d4c6659`  
+		Last Modified: Thu, 19 Dec 2019 06:32:40 GMT  
+		Size: 1.5 KB (1475 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:196c812e41d4d3d9d2db2567f346ab4e38246b44f24bcdb8855734d643d38ec2`  
-		Last Modified: Fri, 06 Dec 2019 02:54:16 GMT  
-		Size: 570.4 KB (570448 bytes)  
+	-	`sha256:20584e5ee34a3a4146a6475f2dd13442e8e6a936b323b64250f75db8c0f8800e`  
+		Last Modified: Thu, 19 Dec 2019 06:32:40 GMT  
+		Size: 570.5 KB (570455 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a0fc4ffc5b4b40795919e03393c4d34ee386b5f86fa3517fcec379b99a115ce1`  
-		Last Modified: Fri, 06 Dec 2019 02:54:15 GMT  
-		Size: 497.0 B  
+	-	`sha256:913811a124d54956a4f6d698d0341bd66678dcd4aeac5ae462efce5623dabda2`  
+		Last Modified: Thu, 19 Dec 2019 06:32:40 GMT  
+		Size: 498.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `adminer:4-standalone`
 
 ```console
-$ docker pull adminer@sha256:c15822ec7ba7977c385e5ebcda2fcbeb09812edd97bbd61d7737fa8a8e53e3e6
+$ docker pull adminer@sha256:10c219a46e3b5950dd4e5f9c3dfb89a6c44eb9a18f10e6849417c47136493388
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -7833,14 +7833,14 @@ $ docker pull adminer@sha256:c15822ec7ba7977c385e5ebcda2fcbeb09812edd97bbd61d773
 ### `adminer:4-standalone` - linux; amd64
 
 ```console
-$ docker pull adminer@sha256:86ba5afe8fee41c253bf89c258bca85d8640be894ae7716d3e726b9b4047c381
+$ docker pull adminer@sha256:e6d727411f1819b13c88314cf67a5f8a1f22d01fa53a25b493ca93bc12ebe74e
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **31.0 MB (31013555 bytes)**  
+-	Total Size: **31.0 MB (31027461 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:830d96c7612a7e7be76322d5741c2db4944f31f9f4d2cb6991cb242e12f4ae5a`
+-	Image ID: `sha256:b426045b520a8937f9baa8c890e3482996b4cf8f92ef9967738f67073d493407`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php","-S","[::]:8080","-t","\/var\/www\/html"]`
 
@@ -7867,57 +7867,57 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 01:10:28 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:48:56 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:48:56 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:48:56 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:48:59 GMT
+# Wed, 18 Dec 2019 22:38:21 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:38:21 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:38:21 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:38:24 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:48:59 GMT
+# Wed, 18 Dec 2019 22:38:24 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:55:11 GMT
+# Wed, 18 Dec 2019 22:44:31 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:21:33 GMT
+# Wed, 18 Dec 2019 22:44:32 GMT
 COPY multi:0b7e4a1b9cd5748d214539db3c6bee9b30805d1933690492830b56ffcd31f68d in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:21:35 GMT
+# Wed, 18 Dec 2019 22:44:33 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:21:35 GMT
+# Wed, 18 Dec 2019 22:44:33 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:21:35 GMT
+# Wed, 18 Dec 2019 22:44:33 GMT
 CMD ["php" "-a"]
-# Fri, 06 Dec 2019 01:46:14 GMT
+# Thu, 19 Dec 2019 05:35:45 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 01:46:15 GMT
+# Thu, 19 Dec 2019 05:35:45 GMT
 STOPSIGNAL SIGINT
-# Fri, 06 Dec 2019 01:46:15 GMT
+# Thu, 19 Dec 2019 05:35:46 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 01:46:16 GMT
+# Thu, 19 Dec 2019 05:35:46 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 01:46:16 GMT
+# Thu, 19 Dec 2019 05:35:47 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 01:46:34 GMT
+# Thu, 19 Dec 2019 05:36:05 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 01:46:34 GMT
+# Thu, 19 Dec 2019 05:36:05 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 01:46:35 GMT
+# Thu, 19 Dec 2019 05:36:05 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 01:46:35 GMT
+# Thu, 19 Dec 2019 05:36:06 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 01:46:35 GMT
+# Thu, 19 Dec 2019 05:36:06 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 01:46:36 GMT
+# Thu, 19 Dec 2019 05:36:07 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 01:46:36 GMT
+# Thu, 19 Dec 2019 05:36:07 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:46:37 GMT
+# Thu, 19 Dec 2019 05:36:08 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:46:37 GMT
+# Thu, 19 Dec 2019 05:36:08 GMT
 USER adminer
-# Fri, 06 Dec 2019 01:46:37 GMT
+# Thu, 19 Dec 2019 05:36:08 GMT
 CMD ["php" "-S" "[::]:8080" "-t" "/var/www/html"]
-# Fri, 06 Dec 2019 01:46:37 GMT
+# Thu, 19 Dec 2019 05:36:08 GMT
 EXPOSE 8080
 ```
 
@@ -7938,52 +7938,52 @@ EXPOSE 8080
 		Last Modified: Mon, 21 Oct 2019 21:44:18 GMT  
 		Size: 222.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c480d86e9f76b9604df41b59ff15c277235e77570c3094e24beea689906d7e85`  
-		Last Modified: Thu, 28 Nov 2019 21:13:22 GMT  
-		Size: 10.3 MB (10250558 bytes)  
+	-	`sha256:b0c3cc2f08e3e093e7f2363216f6414027208adc012c5aa07db197341329fe72`  
+		Last Modified: Thu, 19 Dec 2019 03:00:28 GMT  
+		Size: 10.3 MB (10263892 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f3842726b8d86447ea9f8ca1885524b2ae44cf308c3ae2e11f372aa6db308f32`  
-		Last Modified: Thu, 28 Nov 2019 21:13:21 GMT  
+	-	`sha256:57fb2ca7191a3ef22a9701e838adaf70fdbd265eb24703f14179044284913417`  
+		Last Modified: Thu, 19 Dec 2019 03:00:27 GMT  
 		Size: 498.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:57a451954efdb35ed624196af05c79b645dc444faaccc19d9d45d112f6de4061`  
-		Last Modified: Thu, 28 Nov 2019 21:13:24 GMT  
-		Size: 14.6 MB (14589908 bytes)  
+	-	`sha256:719b549f829c694acfed15af4094974701bcb4c0285684f08d92cf8d9ec9bcdc`  
+		Last Modified: Thu, 19 Dec 2019 03:00:33 GMT  
+		Size: 14.6 MB (14590503 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5a0b952c237a06829b97d3ed1d92cacf10888f77fba63726d16867056a4f044c`  
-		Last Modified: Fri, 06 Dec 2019 01:26:49 GMT  
-		Size: 2.2 KB (2216 bytes)  
+	-	`sha256:81e6bc38092826fd2472c7ca1eb2c700fed834bbd765e80ff2a643fd121154d2`  
+		Last Modified: Thu, 19 Dec 2019 03:00:26 GMT  
+		Size: 2.2 KB (2215 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:152b9d9c5ef59610e7b35742bebd1808171b7de2c4ccec2f0731a55a7559360d`  
-		Last Modified: Fri, 06 Dec 2019 01:26:48 GMT  
-		Size: 72.3 KB (72319 bytes)  
+	-	`sha256:a754e64b7156262e64e31a7201d5c625a9db50e96ecac534e504a6393f4e1a9e`  
+		Last Modified: Thu, 19 Dec 2019 03:00:27 GMT  
+		Size: 72.3 KB (72302 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1e64c9abda242b9b4d3a6c1baf781dda52eabbb6ef6d75db40cc72d87f1c4c77`  
-		Last Modified: Fri, 06 Dec 2019 01:47:18 GMT  
-		Size: 308.0 B  
+	-	`sha256:90f3f908ddee8f4ee6c6ca007ced4430786e103eac072c59fee4b402b2d8c388`  
+		Last Modified: Thu, 19 Dec 2019 05:36:51 GMT  
+		Size: 307.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d62f090b0e9efd0bfb9ba692958683cf86a15d423cc82c1609b954876086d6a8`  
-		Last Modified: Fri, 06 Dec 2019 01:47:18 GMT  
+	-	`sha256:857b7e4aae9f2ade154cb505cf91e6521e4099d23159d182a8cbef713c81532b`  
+		Last Modified: Thu, 19 Dec 2019 05:36:51 GMT  
 		Size: 1.4 KB (1372 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:762e247790399e6560e4640ca01701a7fcc2211f8cee51913462b618a25167af`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
-		Size: 1.3 MB (1267207 bytes)  
+	-	`sha256:ace782c3ac09d3f64c77972eafa84fee9f30761a8b9424bb4ffc178f8ebcf1ea`  
+		Last Modified: Thu, 19 Dec 2019 05:36:50 GMT  
+		Size: 1.3 MB (1267197 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0f51bae1177740cf6eec7579667748ed24bec56021cbb74b7210edc18f01be18`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
+	-	`sha256:a67e9e57ebac5385c07290704a48959e42587e9cca35993f56e0ec74384988fd`  
+		Last Modified: Thu, 19 Dec 2019 05:36:50 GMT  
 		Size: 125.7 KB (125657 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:628599883e3cd44a98167c252bdf0ab5a593036911dba0257cc80613a629ba8b`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
-		Size: 1.5 KB (1472 bytes)  
+	-	`sha256:49eb563494c485a889d81dda7ee04ce14f7b22cfa901415e048a5c0c18d2bb0f`  
+		Last Modified: Thu, 19 Dec 2019 05:36:49 GMT  
+		Size: 1.5 KB (1477 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3536dd8cbdfc6bc3a00a8c6e170b6b28329ba806612bca28010703e03746e34e`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
-		Size: 570.4 KB (570378 bytes)  
+	-	`sha256:3b5bc3cefb34ffac141e2420696af773ce85d635ff6d02d406903625b83b3f04`  
+		Last Modified: Thu, 19 Dec 2019 05:36:50 GMT  
+		Size: 570.4 KB (570379 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6eeb0c1100b26366c86db33f094c4a819fc26e55ce4eb2e5f5ab309c4a02edb0`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
+	-	`sha256:b807bb1614467154aa601b40815ea51d330eebb00f281a71b54af161d17b20ec`  
+		Last Modified: Thu, 19 Dec 2019 05:36:49 GMT  
 		Size: 496.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -8147,14 +8147,14 @@ EXPOSE 8080
 ### `adminer:4-standalone` - linux; arm variant v7
 
 ```console
-$ docker pull adminer@sha256:ca8d6b805bd6de4b7ae82a31dcaa1c1eaa16c7170d6a2d8a84390246fb323f1a
+$ docker pull adminer@sha256:45f3f63bea4b53ed6f840b452aad505d813cf99755272303c705731a9c2c1a37
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **28.4 MB (28355059 bytes)**  
+-	Total Size: **28.4 MB (28375258 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6a6a009dde2aee41ade135a5592990a968056ac0ca2903616b3146d78e8df4d4`
+-	Image ID: `sha256:c6fcf1f9bcc93e97da85dddf171a35cc7c3a686b415d320b4737e95e19bcbfec`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php","-S","[::]:8080","-t","\/var\/www\/html"]`
 
@@ -8181,57 +8181,57 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 00:42:48 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:19:44 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:19:45 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:19:46 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:19:51 GMT
+# Wed, 18 Dec 2019 22:13:45 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:13:46 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:13:46 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:13:50 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:19:52 GMT
+# Wed, 18 Dec 2019 22:13:51 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:22:34 GMT
+# Wed, 18 Dec 2019 22:16:23 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:17:24 GMT
+# Wed, 18 Dec 2019 22:16:24 GMT
 COPY multi:0b7e4a1b9cd5748d214539db3c6bee9b30805d1933690492830b56ffcd31f68d in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:17:29 GMT
+# Wed, 18 Dec 2019 22:16:27 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:17:32 GMT
+# Wed, 18 Dec 2019 22:16:28 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:17:33 GMT
+# Wed, 18 Dec 2019 22:16:28 GMT
 CMD ["php" "-a"]
-# Fri, 06 Dec 2019 04:50:48 GMT
+# Thu, 19 Dec 2019 05:43:15 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 04:50:50 GMT
+# Thu, 19 Dec 2019 05:43:15 GMT
 STOPSIGNAL SIGINT
-# Fri, 06 Dec 2019 04:50:59 GMT
+# Thu, 19 Dec 2019 05:43:18 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 04:51:01 GMT
+# Thu, 19 Dec 2019 05:43:19 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 04:51:06 GMT
+# Thu, 19 Dec 2019 05:43:21 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 04:51:54 GMT
+# Thu, 19 Dec 2019 05:43:50 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 04:51:56 GMT
+# Thu, 19 Dec 2019 05:43:51 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 04:52:00 GMT
+# Thu, 19 Dec 2019 05:43:51 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 04:52:04 GMT
+# Thu, 19 Dec 2019 05:43:52 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 04:52:09 GMT
+# Thu, 19 Dec 2019 05:43:52 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 04:52:23 GMT
+# Thu, 19 Dec 2019 05:43:55 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 04:52:25 GMT
+# Thu, 19 Dec 2019 05:43:56 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 04:52:27 GMT
+# Thu, 19 Dec 2019 05:43:56 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 04:52:29 GMT
+# Thu, 19 Dec 2019 05:43:57 GMT
 USER adminer
-# Fri, 06 Dec 2019 04:52:33 GMT
+# Thu, 19 Dec 2019 05:43:58 GMT
 CMD ["php" "-S" "[::]:8080" "-t" "/var/www/html"]
-# Fri, 06 Dec 2019 04:52:38 GMT
+# Thu, 19 Dec 2019 05:43:58 GMT
 EXPOSE 8080
 ```
 
@@ -8252,53 +8252,53 @@ EXPOSE 8080
 		Last Modified: Mon, 21 Oct 2019 22:14:00 GMT  
 		Size: 267.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:74d543cc24962e4f8efaef27c314b6c510d9e89795bb3fefc76190c88e6adaa0`  
-		Last Modified: Thu, 28 Nov 2019 20:37:08 GMT  
-		Size: 10.3 MB (10250580 bytes)  
+	-	`sha256:9ca9d33ba72a23b5503797dc37271a4e969f593c1f91fab7b5e8fc9e199a3237`  
+		Last Modified: Thu, 19 Dec 2019 00:23:23 GMT  
+		Size: 10.3 MB (10263922 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:61533199b1c12541ec2c6e8792481ed0bf870ab2614fca26df4472ed7489905b`  
-		Last Modified: Thu, 28 Nov 2019 20:37:06 GMT  
-		Size: 494.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cb40e8b71fdcda892a7fff7b40bd040c14189bdbf81c6900e2506a34d0a5e2a8`  
-		Last Modified: Thu, 28 Nov 2019 20:37:11 GMT  
-		Size: 12.7 MB (12659015 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:73e8322b4997afc76e3d6aded9b6977d019a876387f38bb0c7b20303eb741ea1`  
-		Last Modified: Fri, 06 Dec 2019 01:35:28 GMT  
-		Size: 2.2 KB (2215 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bee10ead90205f4f11c6737cb5e9809cf554b750d259f2bb978806599ff48d4d`  
-		Last Modified: Fri, 06 Dec 2019 01:35:28 GMT  
-		Size: 71.9 KB (71901 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b2343ca0934ccfcf3473bcd86e8769c80a356c838360d24e6c15c8549d8799ff`  
-		Last Modified: Fri, 06 Dec 2019 04:55:13 GMT  
-		Size: 311.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3339cf595876f587528feea8189a242d1eee086d7c129183282e0d0bf5dfec9e`  
-		Last Modified: Fri, 06 Dec 2019 04:55:13 GMT  
-		Size: 1.4 KB (1420 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:273f3098e61dc9b47d64ba9a3e339b88d90351233841e926290aaf8f81b719e8`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
-		Size: 1.1 MB (1098041 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f48a0dca6ba28aa1b4488aa4541f847d05b842f7adfd2fbe4df3d510ea08bb44`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
-		Size: 113.6 KB (113646 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:911b6063ce3a1a087497bb65c33df13aa956676a9977dec81024c9158363b7a1`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
-		Size: 1.5 KB (1474 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c17014746daefe47239efc1403be753dbbd9860da773a322a172487485cb8993`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
-		Size: 570.5 KB (570460 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:87db519a03011aadfd54c42773aed91d48871a3e423f8652ae2fa3c6a201d7f0`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
+	-	`sha256:9abaf2cca6b8f6360c51d0ab64e5733dd6fe54d2160f0b90b2c2b30cc9d09556`  
+		Last Modified: Thu, 19 Dec 2019 00:23:23 GMT  
 		Size: 498.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:0d1c28a483480472543267f13fa560e37c42d398e03258ec10f3259791f26c2b`  
+		Last Modified: Thu, 19 Dec 2019 00:23:26 GMT  
+		Size: 12.7 MB (12665914 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c296b4d3757a3eb5a9eaa1bee6c67b7f85258f295e5d1adfeae082aaa4ffe554`  
+		Last Modified: Thu, 19 Dec 2019 00:23:23 GMT  
+		Size: 2.2 KB (2213 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:3f0c6898b03f711ee9c13adb0e7ac827b235e872574ad2e0466ce38a7006494f`  
+		Last Modified: Thu, 19 Dec 2019 00:23:23 GMT  
+		Size: 71.9 KB (71882 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:85f53d18384dba7127519315cb122ebcc1c8f1420b7359054849ebd5c2eb8501`  
+		Last Modified: Thu, 19 Dec 2019 05:45:20 GMT  
+		Size: 308.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:29ba2b51dd9ec6d55f6dcbd14fd64e4424e17d54d50559b04f7872439fe23c84`  
+		Last Modified: Thu, 19 Dec 2019 05:45:20 GMT  
+		Size: 1.4 KB (1418 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ed774f039edbc14130f2a14cc8a6036a51ebcd1eb96bbfd75d3ac1c581bdb3a2`  
+		Last Modified: Thu, 19 Dec 2019 05:45:18 GMT  
+		Size: 1.1 MB (1098039 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ddbca63dcd496dfe19ebd0ce58453dcf241bca16bd12220566202434e47730ff`  
+		Last Modified: Thu, 19 Dec 2019 05:45:18 GMT  
+		Size: 113.6 KB (113634 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:fdc0c14d20b92cde224999d0a7464e0dd1063ed2fe903a20fc7902d451928868`  
+		Last Modified: Thu, 19 Dec 2019 05:45:19 GMT  
+		Size: 1.5 KB (1477 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:4854bad04d3751dd937dde7badbbe7b0be2baee2b0c0b6e654e45ea0155fd765`  
+		Last Modified: Thu, 19 Dec 2019 05:45:18 GMT  
+		Size: 570.5 KB (570450 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:183711409a19b109d1862eb8f004260effa66c92f58f14f1ad425a474ba8572d`  
+		Last Modified: Thu, 19 Dec 2019 05:45:18 GMT  
+		Size: 499.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adminer:4-standalone` - linux; arm64 variant v8
@@ -8461,14 +8461,14 @@ EXPOSE 8080
 ### `adminer:4-standalone` - linux; 386
 
 ```console
-$ docker pull adminer@sha256:3b3b632ad55b7004f6d67004583ca8d4756f52487240d6530977ad9a503ba629
+$ docker pull adminer@sha256:4d9d4d3dba3055adde16332ec8bb9f98fbc264574d8755f161b2c7420f0fb73e
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **31.6 MB (31595367 bytes)**  
+-	Total Size: **31.6 MB (31611527 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1a9e767ae5c65d7fecf62761e3afd0b53184749f9cfcca68ae1c099ed852e137`
+-	Image ID: `sha256:6921567de258c77b202adc3226c7996e1fb5f526f205d6712821a57b84db89ee`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php","-S","[::]:8080","-t","\/var\/www\/html"]`
 
@@ -8495,57 +8495,57 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 03:40:32 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:03:14 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:03:14 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:03:14 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:03:17 GMT
+# Wed, 18 Dec 2019 23:18:21 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 23:18:22 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 23:18:22 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 23:18:24 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:03:17 GMT
+# Wed, 18 Dec 2019 23:18:25 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:08:51 GMT
+# Wed, 18 Dec 2019 23:27:50 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 00:41:35 GMT
+# Wed, 18 Dec 2019 23:27:51 GMT
 COPY multi:0b7e4a1b9cd5748d214539db3c6bee9b30805d1933690492830b56ffcd31f68d in /usr/local/bin/ 
-# Fri, 06 Dec 2019 00:41:36 GMT
+# Wed, 18 Dec 2019 23:27:53 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 00:41:36 GMT
+# Wed, 18 Dec 2019 23:27:53 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 00:41:36 GMT
+# Wed, 18 Dec 2019 23:27:53 GMT
 CMD ["php" "-a"]
-# Fri, 06 Dec 2019 01:35:26 GMT
+# Thu, 19 Dec 2019 06:02:48 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 01:35:26 GMT
+# Thu, 19 Dec 2019 06:02:48 GMT
 STOPSIGNAL SIGINT
-# Fri, 06 Dec 2019 01:35:27 GMT
+# Thu, 19 Dec 2019 06:02:49 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 01:35:27 GMT
+# Thu, 19 Dec 2019 06:02:49 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 01:35:28 GMT
+# Thu, 19 Dec 2019 06:02:50 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:10 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:10 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:10 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:10 GMT
 USER adminer
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:11 GMT
 CMD ["php" "-S" "[::]:8080" "-t" "/var/www/html"]
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:11 GMT
 EXPOSE 8080
 ```
 
@@ -8566,66 +8566,66 @@ EXPOSE 8080
 		Last Modified: Mon, 21 Oct 2019 20:16:09 GMT  
 		Size: 221.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7a2f924d5bef762db8a36415395a7d8d645e86c8c10e98670ee6441f4dfffc4b`  
-		Last Modified: Thu, 28 Nov 2019 20:25:40 GMT  
-		Size: 10.3 MB (10250558 bytes)  
+	-	`sha256:8d3c120548e2cc8578bcbc722a1de16f16aa1bbd6f95a3f3f250760ef49d6425`  
+		Last Modified: Thu, 19 Dec 2019 03:54:02 GMT  
+		Size: 10.3 MB (10263911 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d86e42c218805225dcb7fb493e2333b3aa5dbe52acfe920142f7beddb424cf83`  
-		Last Modified: Thu, 28 Nov 2019 20:25:39 GMT  
-		Size: 497.0 B  
+	-	`sha256:6c67772931308b5da9ecd54e42e8b4f0cee6a6ca800c39c9bb90f7935371f173`  
+		Last Modified: Thu, 19 Dec 2019 03:54:01 GMT  
+		Size: 498.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df9403ccfdc695e35b6d3018248acf35d406f0cfafb094c31e3837d69bafd01c`  
-		Last Modified: Thu, 28 Nov 2019 20:25:45 GMT  
-		Size: 15.0 MB (14964307 bytes)  
+	-	`sha256:81de9fd8c68cc661996bb58ab58c8ca7fcc4523d035c2bbfc2835549da0a48ae`  
+		Last Modified: Thu, 19 Dec 2019 03:54:07 GMT  
+		Size: 15.0 MB (14967109 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ec757c77b33207cd2e297fb2ab7146f4245ec36acc52bd38cba1fbd4e3ec0b8b`  
-		Last Modified: Fri, 06 Dec 2019 00:46:31 GMT  
-		Size: 2.2 KB (2220 bytes)  
+	-	`sha256:2cc02e941d1953f8fbbd589f5a7cece48de8e05d8626f4dc9fc7272716e999e9`  
+		Last Modified: Thu, 19 Dec 2019 03:54:01 GMT  
+		Size: 2.2 KB (2211 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4d52ef7bb6d6ca924fc76da53a0d613f171978768e3b572da49a8f77ea6f8d6c`  
-		Last Modified: Fri, 06 Dec 2019 00:46:30 GMT  
+	-	`sha256:8a7864fff700c7ab0ac04ee51707c956b859bd42ce6e4bac9317a0224058ec59`  
+		Last Modified: Thu, 19 Dec 2019 03:54:01 GMT  
 		Size: 71.5 KB (71454 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6e5b781398aa148728fa13f2df2f88fa4d9b3570891ff55a3af9cb50c2098412`  
-		Last Modified: Fri, 06 Dec 2019 01:36:35 GMT  
+	-	`sha256:7274061ca352a1262686abb045838ea905ae178eee118a6a1e23834490af7953`  
+		Last Modified: Thu, 19 Dec 2019 06:03:50 GMT  
 		Size: 308.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:de505ea02604bd909cfaf3b498de539cedd1332bfe778ba03947dce6e0d33d23`  
-		Last Modified: Fri, 06 Dec 2019 01:36:35 GMT  
-		Size: 1.4 KB (1376 bytes)  
+	-	`sha256:e79de5c64323f911324528fcb2f88bc245b69fe50c242865fbb4ac204b52b545`  
+		Last Modified: Thu, 19 Dec 2019 06:03:51 GMT  
+		Size: 1.4 KB (1373 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:14cdb373d56b69e1927e31d36942beeeb400c2632b5bc77e1f73ad115ba8383a`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 1.4 MB (1382441 bytes)  
+	-	`sha256:673d96f2a5b2ca78e58cf695d0dba02cdf0279a1620b9a4b7e62192cb52054a9`  
+		Last Modified: Thu, 19 Dec 2019 06:03:50 GMT  
+		Size: 1.4 MB (1382437 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e4bcc50f7578a489fab996ffee3c7ea194e47a068ad3cae0821f4d60e06986b7`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 128.8 KB (128797 bytes)  
+	-	`sha256:b14ef693e693233cf4fea5d27768673723fdd0ac67859f0740a6e3ca15718406`  
+		Last Modified: Thu, 19 Dec 2019 06:03:49 GMT  
+		Size: 128.8 KB (128815 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5463ed1f22d5ece3465e961d34ec3854c36dfe23261548ab50b89fdd0f775e00`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 1.5 KB (1474 bytes)  
+	-	`sha256:14095c6e1a5c6c8e2eb79a0edb5fba2bfc43757e24a2d5953fc267cf77a178b5`  
+		Last Modified: Thu, 19 Dec 2019 06:03:49 GMT  
+		Size: 1.5 KB (1473 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d98966329f05e112300ee57648333a12079a1cc8a41d15d0e396391c444e67c1`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 570.4 KB (570373 bytes)  
+	-	`sha256:bf75ef62d8952c613219a1462ce69c61b6e6ca742bfe6578d3732a3d97fba9c4`  
+		Last Modified: Thu, 19 Dec 2019 06:03:50 GMT  
+		Size: 570.4 KB (570377 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:adef02fa3ca71fdceafb1fd92ff74960848b5673988dc3f2dc021aeaa943966b`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 496.0 B  
+	-	`sha256:79374c30d550e98acc64a36e936903f0fd6eee39645aef5007145f7860c1d8f9`  
+		Last Modified: Thu, 19 Dec 2019 06:03:49 GMT  
+		Size: 495.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adminer:4-standalone` - linux; ppc64le
 
 ```console
-$ docker pull adminer@sha256:c59dc08edbac430c86555d96e000a1d49c59e8a66bc5e9d3b073ed8fd76f08ea
+$ docker pull adminer@sha256:b10e79ba1e7932ac27c0ffb06cc228415b4552687d150f89ed3f21ee08194220
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **32.2 MB (32227844 bytes)**  
+-	Total Size: **32.2 MB (32247973 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:96efedc317d25ffb54f9f12d72c5f57e58d4d511e52b62c3548a5b787d1f3ad5`
+-	Image ID: `sha256:573383ff5140ec4fcaf742c4be6757a0567423c5c5833be7d728669583167bd3`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php","-S","[::]:8080","-t","\/var\/www\/html"]`
 
@@ -8652,57 +8652,57 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 01:17:40 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:44:14 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:44:17 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:44:19 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:44:32 GMT
+# Wed, 18 Dec 2019 22:43:03 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:43:05 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:43:07 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:43:21 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:44:34 GMT
+# Wed, 18 Dec 2019 22:43:23 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:48:15 GMT
+# Wed, 18 Dec 2019 22:46:52 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:21:52 GMT
+# Wed, 18 Dec 2019 22:46:54 GMT
 COPY multi:0b7e4a1b9cd5748d214539db3c6bee9b30805d1933690492830b56ffcd31f68d in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:22:02 GMT
+# Wed, 18 Dec 2019 22:46:59 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:22:05 GMT
+# Wed, 18 Dec 2019 22:47:01 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:22:06 GMT
+# Wed, 18 Dec 2019 22:47:03 GMT
 CMD ["php" "-a"]
-# Fri, 06 Dec 2019 02:50:03 GMT
+# Thu, 19 Dec 2019 06:27:50 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 02:50:05 GMT
+# Thu, 19 Dec 2019 06:27:55 GMT
 STOPSIGNAL SIGINT
-# Fri, 06 Dec 2019 02:50:19 GMT
+# Thu, 19 Dec 2019 06:28:07 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 02:50:23 GMT
+# Thu, 19 Dec 2019 06:28:11 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 02:50:32 GMT
+# Thu, 19 Dec 2019 06:28:18 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 02:51:03 GMT
+# Thu, 19 Dec 2019 06:28:51 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 02:51:07 GMT
+# Thu, 19 Dec 2019 06:28:54 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 02:51:08 GMT
+# Thu, 19 Dec 2019 06:28:58 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 02:51:12 GMT
+# Thu, 19 Dec 2019 06:28:59 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 02:51:14 GMT
+# Thu, 19 Dec 2019 06:29:03 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 02:51:24 GMT
+# Thu, 19 Dec 2019 06:29:15 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 02:51:27 GMT
+# Thu, 19 Dec 2019 06:29:18 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 02:51:33 GMT
+# Thu, 19 Dec 2019 06:29:20 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 02:51:35 GMT
+# Thu, 19 Dec 2019 06:29:26 GMT
 USER adminer
-# Fri, 06 Dec 2019 02:51:40 GMT
+# Thu, 19 Dec 2019 06:29:30 GMT
 CMD ["php" "-S" "[::]:8080" "-t" "/var/www/html"]
-# Fri, 06 Dec 2019 02:51:44 GMT
+# Thu, 19 Dec 2019 06:29:34 GMT
 EXPOSE 8080
 ```
 
@@ -8723,59 +8723,59 @@ EXPOSE 8080
 		Last Modified: Mon, 21 Oct 2019 20:21:00 GMT  
 		Size: 269.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f41671226d36c01ec9c7f1ea38cd673556952e7f899f4f4b89c9fbdebd29a53b`  
-		Last Modified: Thu, 28 Nov 2019 21:10:15 GMT  
-		Size: 10.3 MB (10250609 bytes)  
+	-	`sha256:4b579441bf6e92a1a6e81ea93691621e4c87a50d9ffb31d4b378b5df7d32872f`  
+		Last Modified: Thu, 19 Dec 2019 01:42:36 GMT  
+		Size: 10.3 MB (10263942 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1d940bc1bed9725313bbc396a711a790598103f8425780c96a2b8e0b8c314f83`  
-		Last Modified: Thu, 28 Nov 2019 21:10:13 GMT  
-		Size: 498.0 B  
+	-	`sha256:439349ae045fb12b63f4ea12de47a2383371a3189b6e95b5a84693903df9b0a4`  
+		Last Modified: Thu, 19 Dec 2019 01:42:35 GMT  
+		Size: 497.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:02effde3bc9b924c0d25924f0e1f298c9e7644c948efa10ff4d8945399a16b74`  
-		Last Modified: Thu, 28 Nov 2019 21:10:19 GMT  
-		Size: 15.6 MB (15648865 bytes)  
+	-	`sha256:48b07dcdf318b1dc68a37f668ccb781855c62ec5ac7721f9c1149fdb135ba87d`  
+		Last Modified: Thu, 19 Dec 2019 01:42:48 GMT  
+		Size: 15.7 MB (15655717 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e31c94093f50a0b5f297e9da64e47405dbe46f8ec535d000ee7f725a553fc633`  
-		Last Modified: Fri, 06 Dec 2019 01:40:27 GMT  
-		Size: 2.2 KB (2217 bytes)  
+	-	`sha256:c7eab24ff28c16bb245a5237cc4946807bcb8d827d3702b5bb9f74cfd586fece`  
+		Last Modified: Thu, 19 Dec 2019 01:42:35 GMT  
+		Size: 2.2 KB (2210 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:232540856492a6874250c20d02259faf35c4a5b5aa42520d4c9528742d779fd0`  
-		Last Modified: Fri, 06 Dec 2019 01:40:27 GMT  
-		Size: 72.2 KB (72168 bytes)  
+	-	`sha256:8334e4feab309edb35cdf7bec81a8a27169fa44dde213e3030369881eda125f1`  
+		Last Modified: Thu, 19 Dec 2019 01:42:35 GMT  
+		Size: 72.1 KB (72144 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d14842d0c142c0039a7a184b2b3d335b2a01864a6235ea3dda30897e146ad1c6`  
-		Last Modified: Fri, 06 Dec 2019 02:53:43 GMT  
-		Size: 310.0 B  
+	-	`sha256:6e5b8d229e7b1d88a7c021b6c715fb1dc4558108381b5279c56a41a62dbc2261`  
+		Last Modified: Thu, 19 Dec 2019 06:32:06 GMT  
+		Size: 306.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d2190da7f3695c3878621e1660bf04a2c8dbdfef966bffeb6971cf76aed20f16`  
-		Last Modified: Fri, 06 Dec 2019 02:53:43 GMT  
-		Size: 1.4 KB (1414 bytes)  
+	-	`sha256:8a14230d6a9f6580d0617afb712af2aa3a52531275d062968f9876403ef06fb4`  
+		Last Modified: Thu, 19 Dec 2019 06:32:05 GMT  
+		Size: 1.4 KB (1421 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:55e067e4d19dc08989322d9eb8129d7bdbf1bf797725927442cc93bf69ae0d33`  
-		Last Modified: Fri, 06 Dec 2019 02:53:40 GMT  
-		Size: 1.3 MB (1347029 bytes)  
+	-	`sha256:6d0c4ce6bd51ba7c0848bd56478144b0695f576f8ae0678eb62e05ee3559fc42`  
+		Last Modified: Thu, 19 Dec 2019 06:32:03 GMT  
+		Size: 1.3 MB (1347007 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ff1668716d22838ddf256cebcbf1b09ddc48fc942a5842b5e13e6c44e830c394`  
-		Last Modified: Fri, 06 Dec 2019 02:53:39 GMT  
-		Size: 135.8 KB (135823 bytes)  
+	-	`sha256:8f2e3e1cdb6c28b9b5b15dba0737ad3ed00202221c4c671693dc9fc7b7ba77cc`  
+		Last Modified: Thu, 19 Dec 2019 06:32:02 GMT  
+		Size: 135.8 KB (135826 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2a7c9bfcff913dd0e174b7de4290afacf966f43e6be2dd050e56584c94028fe2`  
-		Last Modified: Fri, 06 Dec 2019 02:53:39 GMT  
-		Size: 1.5 KB (1479 bytes)  
+	-	`sha256:43cb845103383d0bd1567a8b09f649e5f523c37b005bd6625351c8dbf52f6976`  
+		Last Modified: Thu, 19 Dec 2019 06:32:01 GMT  
+		Size: 1.5 KB (1473 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:04e9df15d0417b3f6421f2a692de9e7bdfa605d9bf0105088ad284939e459927`  
-		Last Modified: Fri, 06 Dec 2019 02:53:40 GMT  
-		Size: 570.5 KB (570451 bytes)  
+	-	`sha256:2d4d6287f785538118622662e0c60ab299f7a2ae11f5301fa041f86527b24464`  
+		Last Modified: Thu, 19 Dec 2019 06:32:02 GMT  
+		Size: 570.5 KB (570450 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:072c9cb6de1241a262601cb46dc6b10bff853e228b847c61d3443de139fb9ac2`  
-		Last Modified: Fri, 06 Dec 2019 02:53:39 GMT  
-		Size: 498.0 B  
+	-	`sha256:81477a62f96cdc3549a2c6c8ac63f34fc068128715c326c6c916ac7a607475f5`  
+		Last Modified: Thu, 19 Dec 2019 06:32:02 GMT  
+		Size: 497.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `adminer:fastcgi`
 
 ```console
-$ docker pull adminer@sha256:32c9e70d68f96c433eefc7a959558b2d7eca29460a2f17e71f68ffb3613a80a0
+$ docker pull adminer@sha256:9e2c982c6dfe8eaaefd23cc5861f3e14e78f2f249b3d6d81ccc2903332c18020
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -8790,14 +8790,14 @@ $ docker pull adminer@sha256:32c9e70d68f96c433eefc7a959558b2d7eca29460a2f17e71f6
 ### `adminer:fastcgi` - linux; amd64
 
 ```console
-$ docker pull adminer@sha256:fb61861982d8f821a9612eefdc98c5ad7fba67628272642f0546ce7b8fc810d2
+$ docker pull adminer@sha256:a6fba2c8b8b2aedcc7563a7be20fdba3bed2806ee4ca6bbad9bfe451a247943d
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **31.1 MB (31089366 bytes)**  
+-	Total Size: **31.1 MB (31106050 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:44eba76cc5d76c73c629ebd6d02a2127cd58873c3673f73b71711277e0ebe4dd`
+-	Image ID: `sha256:ce28adb4fe140e43080c7537718777a7893665a109d343d278f2fb4b29a1ab10`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php-fpm"]`
 
@@ -8826,59 +8826,59 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 01:15:45 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:55:28 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:55:29 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:55:29 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:55:31 GMT
+# Wed, 18 Dec 2019 22:44:39 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:44:39 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:44:39 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:44:41 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:55:31 GMT
+# Wed, 18 Dec 2019 22:44:42 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 21:01:42 GMT
+# Wed, 18 Dec 2019 22:53:32 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:21:40 GMT
+# Wed, 18 Dec 2019 22:53:32 GMT
 COPY multi:5581a34bba21fbf2472e857e8cdc8db6d57694020e568954d2fd5901ee074da0 in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:21:42 GMT
+# Wed, 18 Dec 2019 22:53:33 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:21:42 GMT
+# Wed, 18 Dec 2019 22:53:33 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:21:42 GMT
+# Wed, 18 Dec 2019 22:53:33 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 01:21:43 GMT
+# Wed, 18 Dec 2019 22:53:34 GMT
 RUN set -eux; 	cd /usr/local/etc; 	if [ -d php-fpm.d ]; then 		sed 's!=NONE/!=!g' php-fpm.conf.default | tee php-fpm.conf > /dev/null; 		cp php-fpm.d/www.conf.default php-fpm.d/www.conf; 	else 		mkdir php-fpm.d; 		cp php-fpm.conf.default php-fpm.d/www.conf; 		{ 			echo '[global]'; 			echo 'include=etc/php-fpm.d/*.conf'; 		} | tee php-fpm.conf; 	fi; 	{ 		echo '[global]'; 		echo 'error_log = /proc/self/fd/2'; 		echo; echo '; https://github.com/docker-library/php/pull/725#issuecomment-443540114'; echo 'log_limit = 8192'; 		echo; 		echo '[www]'; 		echo '; if we send this to /proc/self/fd/1, it never appears'; 		echo 'access.log = /proc/self/fd/2'; 		echo; 		echo 'clear_env = no'; 		echo; 		echo '; Ensure worker stdout and stderr are sent to the main error log.'; 		echo 'catch_workers_output = yes'; 		echo 'decorate_workers_output = no'; 	} | tee php-fpm.d/docker.conf; 	{ 		echo '[global]'; 		echo 'daemonize = no'; 		echo; 		echo '[www]'; 		echo 'listen = 9000'; 	} | tee php-fpm.d/zz-docker.conf
-# Fri, 06 Dec 2019 01:21:43 GMT
+# Wed, 18 Dec 2019 22:53:34 GMT
 STOPSIGNAL SIGQUIT
-# Fri, 06 Dec 2019 01:21:43 GMT
+# Wed, 18 Dec 2019 22:53:35 GMT
 EXPOSE 9000
-# Fri, 06 Dec 2019 01:21:43 GMT
+# Wed, 18 Dec 2019 22:53:35 GMT
 CMD ["php-fpm"]
-# Fri, 06 Dec 2019 01:46:42 GMT
+# Thu, 19 Dec 2019 05:36:17 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 01:46:43 GMT
+# Thu, 19 Dec 2019 05:36:18 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 01:46:44 GMT
+# Thu, 19 Dec 2019 05:36:19 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 01:47:01 GMT
+# Thu, 19 Dec 2019 05:36:36 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 01:47:01 GMT
+# Thu, 19 Dec 2019 05:36:36 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 01:47:02 GMT
+# Thu, 19 Dec 2019 05:36:36 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 01:47:02 GMT
+# Thu, 19 Dec 2019 05:36:37 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 01:47:02 GMT
+# Thu, 19 Dec 2019 05:36:37 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 01:47:03 GMT
+# Thu, 19 Dec 2019 05:36:38 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 01:47:03 GMT
+# Thu, 19 Dec 2019 05:36:38 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:47:03 GMT
+# Thu, 19 Dec 2019 05:36:38 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:47:04 GMT
+# Thu, 19 Dec 2019 05:36:39 GMT
 USER adminer
-# Fri, 06 Dec 2019 01:47:04 GMT
+# Thu, 19 Dec 2019 05:36:39 GMT
 CMD ["php-fpm"]
 ```
 
@@ -8899,57 +8899,57 @@ CMD ["php-fpm"]
 		Last Modified: Mon, 21 Oct 2019 21:44:18 GMT  
 		Size: 222.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a601c8316c6be88cf4a4644682a7fd958df67c4dccca6ce371527843cc478c7f`  
-		Last Modified: Thu, 28 Nov 2019 21:13:41 GMT  
-		Size: 10.3 MB (10250554 bytes)  
+	-	`sha256:99401fd0ece70360f3ccecf44f844a5a0efdf32146d6c446970c26531752c341`  
+		Last Modified: Thu, 19 Dec 2019 03:00:56 GMT  
+		Size: 10.3 MB (10263900 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fb3804cbe9c1edb0802bb41778e0b051935530870e40f8314aecfcf8e2b21315`  
-		Last Modified: Thu, 28 Nov 2019 21:13:39 GMT  
+	-	`sha256:de913d86f05a50a4c3f792243ec9f24779f57ce0e0238c053c4287d7880a5347`  
+		Last Modified: Thu, 19 Dec 2019 03:00:53 GMT  
 		Size: 497.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3288d779cb3b5cf28ee3e06007de0ff994a17dacf83f4c84e60ebfe31ba948d1`  
-		Last Modified: Thu, 28 Nov 2019 21:13:43 GMT  
-		Size: 14.7 MB (14657297 bytes)  
+	-	`sha256:0f2b5a211ce6ec0d98a72f219b18530d5c25fafc0a7a9a21b7da0330bbbe5797`  
+		Last Modified: Thu, 19 Dec 2019 03:01:00 GMT  
+		Size: 14.7 MB (14660671 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c640bbd2a760395929467de5ee104f09aaeeea47b83dfcfc69da97278e70b945`  
-		Last Modified: Fri, 06 Dec 2019 01:27:11 GMT  
-		Size: 2.2 KB (2219 bytes)  
+	-	`sha256:b0b33dbfafe9a898ff3a2b3e4e1a7af15b797a7c00dd874e9d3c827e395cd43b`  
+		Last Modified: Thu, 19 Dec 2019 03:00:54 GMT  
+		Size: 2.2 KB (2220 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5ce9637f8561c37a2120d04a20e7db57873352d5e5fa53f150a05c15efeb86c4`  
-		Last Modified: Fri, 06 Dec 2019 01:27:11 GMT  
-		Size: 72.3 KB (72319 bytes)  
+	-	`sha256:49e0c9bf0c294f08a2cc44a9197f856fda455f40aa06c532cea2cb79d6877f77`  
+		Last Modified: Thu, 19 Dec 2019 03:00:53 GMT  
+		Size: 72.3 KB (72299 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:178cf949d1df28b308bbfde08ad37ae95550b6e531d123d3bfbf42f8fb630cc9`  
-		Last Modified: Fri, 06 Dec 2019 01:27:11 GMT  
-		Size: 8.4 KB (8416 bytes)  
+	-	`sha256:1aa5c4c9069b45e81276629ede436f3bf5cea9843721c563a1f72553b0d445ec`  
+		Last Modified: Thu, 19 Dec 2019 03:00:54 GMT  
+		Size: 8.4 KB (8409 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4a4176cf6fc0db678f63ad60351550fab8c8f88c4acbdc999b5f146c0abeb2cc`  
-		Last Modified: Fri, 06 Dec 2019 01:47:37 GMT  
-		Size: 310.0 B  
+	-	`sha256:b066b20593318b62a26b9637aa4ab4a2a37c8f397ee9fdba7e79e592e450402f`  
+		Last Modified: Thu, 19 Dec 2019 05:37:01 GMT  
+		Size: 307.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f3ee6614958c36386354c57d02f2707edf448051af00523a696375615ffd4792`  
-		Last Modified: Fri, 06 Dec 2019 01:47:37 GMT  
-		Size: 1.4 KB (1372 bytes)  
+	-	`sha256:640b2caf715bb36f272914262e86e6181fa0510cc8236e55b5a5ff3cd535744d`  
+		Last Modified: Thu, 19 Dec 2019 05:37:01 GMT  
+		Size: 1.4 KB (1373 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:91bb715b44e74412113e259c16cc49f124406bf1fee85491bf055aaa93eb9e6a`  
-		Last Modified: Fri, 06 Dec 2019 01:47:34 GMT  
-		Size: 1.3 MB (1267208 bytes)  
+	-	`sha256:dc66e0562ddf1d4ba9dcaffa1afa1eae778de558f7674bc53c7473b63ac44f22`  
+		Last Modified: Thu, 19 Dec 2019 05:37:00 GMT  
+		Size: 1.3 MB (1267203 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cb970b079b37f6e02d3df5882cd2e3a923fa334ea3abc77fa90c1fc82367e95e`  
-		Last Modified: Fri, 06 Dec 2019 01:47:33 GMT  
+	-	`sha256:b877ea3f3b11a7225696f96d2c7247c2f8b714f79fc03f89f71bebc6b9431424`  
+		Last Modified: Thu, 19 Dec 2019 05:37:00 GMT  
 		Size: 125.7 KB (125656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6baf6eed16971fd51de3f0f170d0b6d4a0378193275c9579659bfa292336f063`  
-		Last Modified: Fri, 06 Dec 2019 01:47:34 GMT  
-		Size: 1.5 KB (1474 bytes)  
+	-	`sha256:014e55e883e88a5a8887682b5c9b8c76b00141600a698701ec3cb97da6380b0f`  
+		Last Modified: Thu, 19 Dec 2019 05:37:00 GMT  
+		Size: 1.5 KB (1475 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ddaf26f3c519006700f20f139a27ab4408d8821c325e8546c03acbda70d3f76f`  
-		Last Modified: Fri, 06 Dec 2019 01:47:34 GMT  
-		Size: 570.4 KB (570382 bytes)  
+	-	`sha256:0ac91ac5b58c527badba4ad4c05ece7bc5954fe9e14a7dd195cc1dc23479603d`  
+		Last Modified: Thu, 19 Dec 2019 05:37:00 GMT  
+		Size: 570.4 KB (570381 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a5f935221cf5489e888bf3acf8b04f178ed625f428fcb84e8d8e4b79a403ed04`  
-		Last Modified: Fri, 06 Dec 2019 01:47:34 GMT  
-		Size: 496.0 B  
+	-	`sha256:2f0eb5db857e60dc084fc2707add56ec223c18d1235477d69daf5a1635a8966d`  
+		Last Modified: Thu, 19 Dec 2019 05:37:00 GMT  
+		Size: 493.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adminer:fastcgi` - linux; arm variant v6
@@ -9120,14 +9120,14 @@ CMD ["php-fpm"]
 ### `adminer:fastcgi` - linux; arm variant v7
 
 ```console
-$ docker pull adminer@sha256:e8a21987f3604277d81acab716a83660516ac8dedfb4265e9e5a315b74855575
+$ docker pull adminer@sha256:fbdfb91799dc6900d61e80c1270b8cfd5e23f5988d759cbed5cd038b1b6baa48
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **28.4 MB (28425499 bytes)**  
+-	Total Size: **28.4 MB (28447463 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0b841f0ed66806ebf1569b0f7f0e7576049cb7aca8423ad68781e4c1b6dd2619`
+-	Image ID: `sha256:23a9b5b061b147ddc1b90ee4b90ece47359fa93b71952e17f8f21fe6b38881f6`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php-fpm"]`
 
@@ -9156,59 +9156,59 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 00:46:21 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:22:49 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:22:50 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:22:50 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:22:54 GMT
+# Wed, 18 Dec 2019 22:16:47 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:16:48 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:16:48 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:16:52 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:22:55 GMT
+# Wed, 18 Dec 2019 22:16:52 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:25:37 GMT
+# Wed, 18 Dec 2019 22:19:17 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:17:43 GMT
+# Wed, 18 Dec 2019 22:19:19 GMT
 COPY multi:5581a34bba21fbf2472e857e8cdc8db6d57694020e568954d2fd5901ee074da0 in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:17:51 GMT
+# Wed, 18 Dec 2019 22:19:21 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:17:52 GMT
+# Wed, 18 Dec 2019 22:19:21 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:17:54 GMT
+# Wed, 18 Dec 2019 22:19:22 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 01:17:57 GMT
+# Wed, 18 Dec 2019 22:19:23 GMT
 RUN set -eux; 	cd /usr/local/etc; 	if [ -d php-fpm.d ]; then 		sed 's!=NONE/!=!g' php-fpm.conf.default | tee php-fpm.conf > /dev/null; 		cp php-fpm.d/www.conf.default php-fpm.d/www.conf; 	else 		mkdir php-fpm.d; 		cp php-fpm.conf.default php-fpm.d/www.conf; 		{ 			echo '[global]'; 			echo 'include=etc/php-fpm.d/*.conf'; 		} | tee php-fpm.conf; 	fi; 	{ 		echo '[global]'; 		echo 'error_log = /proc/self/fd/2'; 		echo; echo '; https://github.com/docker-library/php/pull/725#issuecomment-443540114'; echo 'log_limit = 8192'; 		echo; 		echo '[www]'; 		echo '; if we send this to /proc/self/fd/1, it never appears'; 		echo 'access.log = /proc/self/fd/2'; 		echo; 		echo 'clear_env = no'; 		echo; 		echo '; Ensure worker stdout and stderr are sent to the main error log.'; 		echo 'catch_workers_output = yes'; 		echo 'decorate_workers_output = no'; 	} | tee php-fpm.d/docker.conf; 	{ 		echo '[global]'; 		echo 'daemonize = no'; 		echo; 		echo '[www]'; 		echo 'listen = 9000'; 	} | tee php-fpm.d/zz-docker.conf
-# Fri, 06 Dec 2019 01:17:57 GMT
+# Wed, 18 Dec 2019 22:19:24 GMT
 STOPSIGNAL SIGQUIT
-# Fri, 06 Dec 2019 01:17:58 GMT
+# Wed, 18 Dec 2019 22:19:24 GMT
 EXPOSE 9000
-# Fri, 06 Dec 2019 01:18:00 GMT
+# Wed, 18 Dec 2019 22:19:25 GMT
 CMD ["php-fpm"]
-# Fri, 06 Dec 2019 04:52:58 GMT
+# Thu, 19 Dec 2019 05:44:09 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 04:53:02 GMT
+# Thu, 19 Dec 2019 05:44:11 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 04:53:07 GMT
+# Thu, 19 Dec 2019 05:44:13 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 04:53:56 GMT
+# Thu, 19 Dec 2019 05:44:42 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 04:53:58 GMT
+# Thu, 19 Dec 2019 05:44:43 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 04:54:03 GMT
+# Thu, 19 Dec 2019 05:44:44 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 04:54:06 GMT
+# Thu, 19 Dec 2019 05:44:46 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 04:54:11 GMT
+# Thu, 19 Dec 2019 05:44:47 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 04:54:23 GMT
+# Thu, 19 Dec 2019 05:44:50 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 04:54:27 GMT
+# Thu, 19 Dec 2019 05:44:51 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 04:54:31 GMT
+# Thu, 19 Dec 2019 05:44:52 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 04:54:40 GMT
+# Thu, 19 Dec 2019 05:44:53 GMT
 USER adminer
-# Fri, 06 Dec 2019 04:54:46 GMT
+# Thu, 19 Dec 2019 05:44:53 GMT
 CMD ["php-fpm"]
 ```
 
@@ -9229,57 +9229,57 @@ CMD ["php-fpm"]
 		Last Modified: Mon, 21 Oct 2019 22:14:00 GMT  
 		Size: 267.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bd5b4d8b4543b812d92b5b3c4f25d044a8187acdd7f3b53df3b71f804cac7340`  
-		Last Modified: Thu, 28 Nov 2019 20:37:43 GMT  
-		Size: 10.3 MB (10250580 bytes)  
+	-	`sha256:4eedeb9880bb1f9c73e334a58cb9c46cc6232b53ce736a7589f1ee24686b530c`  
+		Last Modified: Thu, 19 Dec 2019 00:23:59 GMT  
+		Size: 10.3 MB (10263922 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:55de7a9fd1e9272a3a4ff2cbf814a2aef5e9a954c9af9171183f2a12db1a85a5`  
-		Last Modified: Thu, 28 Nov 2019 20:37:40 GMT  
+	-	`sha256:c88c2b531f9e7529ca2b92ebefe77956bef1d3a42d4fac0e1aab9cf7d38d9194`  
+		Last Modified: Thu, 19 Dec 2019 00:23:56 GMT  
 		Size: 497.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:76ab6e8d330e8d16362a233aff02d2ffdbafb3485b6e7145be238ae9d6cc6c02`  
-		Last Modified: Thu, 28 Nov 2019 20:37:45 GMT  
-		Size: 12.7 MB (12721061 bytes)  
+	-	`sha256:5e29f6cb3619d30dfc550358fb1b34b267a7b9d9a349a053e01f34f47154bbfd`  
+		Last Modified: Thu, 19 Dec 2019 00:24:01 GMT  
+		Size: 12.7 MB (12729707 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ba988589c2419f2f60d14b762f8fc5d5fe82fe375e5feedbe47af4c90cd3939e`  
-		Last Modified: Fri, 06 Dec 2019 01:36:01 GMT  
-		Size: 2.2 KB (2220 bytes)  
+	-	`sha256:c76814ed8ddfef8fa79e7196863c601c997e68e9b7d6cc43871f4f82026f8981`  
+		Last Modified: Thu, 19 Dec 2019 00:23:56 GMT  
+		Size: 2.2 KB (2215 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1c3c2872d8caf9ee292f6d5dc746ee6a0f019719be736ef7f7f75a767594635d`  
-		Last Modified: Fri, 06 Dec 2019 01:36:01 GMT  
-		Size: 71.9 KB (71897 bytes)  
+	-	`sha256:f3019562df3384254b5eff7a4c4cfb777574e12603cba999912f173377cd8e01`  
+		Last Modified: Thu, 19 Dec 2019 00:23:56 GMT  
+		Size: 71.9 KB (71882 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fbd45d21777c734579b6af6e024d9df4fc1939be3fa625047eca044f19fa0ddc`  
-		Last Modified: Fri, 06 Dec 2019 01:36:01 GMT  
-		Size: 8.4 KB (8419 bytes)  
+	-	`sha256:1381e38356bda310c22a0249c4cdaa209f53a34577bf9ed64696fdd854988783`  
+		Last Modified: Thu, 19 Dec 2019 00:23:56 GMT  
+		Size: 8.4 KB (8412 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:be4298819eb89def21ff8e9d5d826931901542c502760fda6b8bb1c51c773faf`  
-		Last Modified: Fri, 06 Dec 2019 04:55:36 GMT  
-		Size: 313.0 B  
+	-	`sha256:f13b5156371dc9dbc0a311fae8af8e803a0753d6b245af20e36db65d4ed8f65d`  
+		Last Modified: Thu, 19 Dec 2019 05:45:44 GMT  
+		Size: 307.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0ae7e953ec02b6619fa10ef1ca0111674953b7aacc31171dfe128e5d976dcc1b`  
-		Last Modified: Fri, 06 Dec 2019 04:55:35 GMT  
+	-	`sha256:bb959a30681546d0762debb7004e5fc0c3eb553ad3a319d7130e2c70e8ec2ec4`  
+		Last Modified: Thu, 19 Dec 2019 05:45:43 GMT  
 		Size: 1.4 KB (1417 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:72078331166ccb0cfba22b4e2693699e5b85c0b6a4187589c14b3c019a43a8b9`  
-		Last Modified: Fri, 06 Dec 2019 04:55:33 GMT  
-		Size: 1.1 MB (1098030 bytes)  
+	-	`sha256:b4adbb7af708946c67dbace2146e6036b4ca06d3b6baa7b320791af28ed53b1a`  
+		Last Modified: Thu, 19 Dec 2019 05:45:41 GMT  
+		Size: 1.1 MB (1098039 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6f96e68cf74577ed595e24c862091041b1c67a759723cf554b14bf74912b93da`  
-		Last Modified: Fri, 06 Dec 2019 04:55:33 GMT  
-		Size: 113.6 KB (113638 bytes)  
+	-	`sha256:b89f988b332cf8b5092864935822fc0cfc1946a7eafcfa16b13a1ddda4e938e5`  
+		Last Modified: Thu, 19 Dec 2019 05:45:41 GMT  
+		Size: 113.6 KB (113634 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:454a2e3b78edeb67039002bc5b3d08d704552e1d1b81eb1a216e79908e2f5a79`  
-		Last Modified: Fri, 06 Dec 2019 04:55:34 GMT  
-		Size: 1.5 KB (1474 bytes)  
+	-	`sha256:a2e352e3241ea44c2ab9a19cbd58216982dbcb88bc8be04236d7fbd689f53a90`  
+		Last Modified: Thu, 19 Dec 2019 05:45:40 GMT  
+		Size: 1.5 KB (1475 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:772de545e44a062eeaa2f1ffd40f952415647924cf2eb1cc43ba673d63fb778c`  
-		Last Modified: Fri, 06 Dec 2019 04:55:34 GMT  
-		Size: 570.5 KB (570450 bytes)  
+	-	`sha256:184c931f95290c799bd2ec8cd4b6fdf9e8a34ab7b92e48d4383c26136dcc9179`  
+		Last Modified: Thu, 19 Dec 2019 05:45:41 GMT  
+		Size: 570.5 KB (570454 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:07479bf42f2f435026ecea0bc9599248121172fc4378ef62094029e8a2a85f8b`  
-		Last Modified: Fri, 06 Dec 2019 04:55:33 GMT  
-		Size: 499.0 B  
+	-	`sha256:860fbfcb30cb2e74ab43685c2be66ad5b833f40954fa7d0954ce9b884d3c5c04`  
+		Last Modified: Thu, 19 Dec 2019 05:45:40 GMT  
+		Size: 498.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adminer:fastcgi` - linux; arm64 variant v8
@@ -9450,14 +9450,14 @@ CMD ["php-fpm"]
 ### `adminer:fastcgi` - linux; 386
 
 ```console
-$ docker pull adminer@sha256:696e32f3fe8ded2808300fbbe16224a66699b507a69e237a658e74d3a6c7139a
+$ docker pull adminer@sha256:ddb4ef346f4a51c9da3fc1726a3b756745fa17cb92b81efcd77a9c0637f628eb
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **31.7 MB (31681382 bytes)**  
+-	Total Size: **31.7 MB (31697203 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b62059fecce24a95d9821faf72e1c1a702b1e964bdb645a49eaa7c4fe7e613db`
+-	Image ID: `sha256:0f172a742089b6f88337921724e6c37028004ad70d7ed03b0bf31928e0d07930`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php-fpm"]`
 
@@ -9486,59 +9486,59 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 03:55:38 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:09:01 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:09:01 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:09:01 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:09:04 GMT
+# Wed, 18 Dec 2019 23:28:12 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 23:28:12 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 23:28:13 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 23:28:17 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:09:04 GMT
+# Wed, 18 Dec 2019 23:28:17 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:14:40 GMT
+# Wed, 18 Dec 2019 23:37:38 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 00:41:42 GMT
+# Wed, 18 Dec 2019 23:37:39 GMT
 COPY multi:5581a34bba21fbf2472e857e8cdc8db6d57694020e568954d2fd5901ee074da0 in /usr/local/bin/ 
-# Fri, 06 Dec 2019 00:41:43 GMT
+# Wed, 18 Dec 2019 23:37:41 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 00:41:44 GMT
+# Wed, 18 Dec 2019 23:37:41 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 00:41:44 GMT
+# Wed, 18 Dec 2019 23:37:41 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 00:41:45 GMT
+# Wed, 18 Dec 2019 23:37:42 GMT
 RUN set -eux; 	cd /usr/local/etc; 	if [ -d php-fpm.d ]; then 		sed 's!=NONE/!=!g' php-fpm.conf.default | tee php-fpm.conf > /dev/null; 		cp php-fpm.d/www.conf.default php-fpm.d/www.conf; 	else 		mkdir php-fpm.d; 		cp php-fpm.conf.default php-fpm.d/www.conf; 		{ 			echo '[global]'; 			echo 'include=etc/php-fpm.d/*.conf'; 		} | tee php-fpm.conf; 	fi; 	{ 		echo '[global]'; 		echo 'error_log = /proc/self/fd/2'; 		echo; echo '; https://github.com/docker-library/php/pull/725#issuecomment-443540114'; echo 'log_limit = 8192'; 		echo; 		echo '[www]'; 		echo '; if we send this to /proc/self/fd/1, it never appears'; 		echo 'access.log = /proc/self/fd/2'; 		echo; 		echo 'clear_env = no'; 		echo; 		echo '; Ensure worker stdout and stderr are sent to the main error log.'; 		echo 'catch_workers_output = yes'; 		echo 'decorate_workers_output = no'; 	} | tee php-fpm.d/docker.conf; 	{ 		echo '[global]'; 		echo 'daemonize = no'; 		echo; 		echo '[www]'; 		echo 'listen = 9000'; 	} | tee php-fpm.d/zz-docker.conf
-# Fri, 06 Dec 2019 00:41:45 GMT
+# Wed, 18 Dec 2019 23:37:43 GMT
 STOPSIGNAL SIGQUIT
-# Fri, 06 Dec 2019 00:41:45 GMT
+# Wed, 18 Dec 2019 23:37:43 GMT
 EXPOSE 9000
-# Fri, 06 Dec 2019 00:41:45 GMT
+# Wed, 18 Dec 2019 23:37:43 GMT
 CMD ["php-fpm"]
-# Fri, 06 Dec 2019 01:35:54 GMT
+# Thu, 19 Dec 2019 06:03:16 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 01:35:54 GMT
+# Thu, 19 Dec 2019 06:03:17 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 01:35:56 GMT
+# Thu, 19 Dec 2019 06:03:18 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 01:36:12 GMT
+# Thu, 19 Dec 2019 06:03:37 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 01:36:12 GMT
+# Thu, 19 Dec 2019 06:03:37 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 01:36:13 GMT
+# Thu, 19 Dec 2019 06:03:38 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 01:36:13 GMT
+# Thu, 19 Dec 2019 06:03:38 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 01:36:13 GMT
+# Thu, 19 Dec 2019 06:03:38 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 01:36:14 GMT
+# Thu, 19 Dec 2019 06:03:39 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 01:36:14 GMT
+# Thu, 19 Dec 2019 06:03:39 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:36:15 GMT
+# Thu, 19 Dec 2019 06:03:40 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:36:15 GMT
+# Thu, 19 Dec 2019 06:03:40 GMT
 USER adminer
-# Fri, 06 Dec 2019 01:36:15 GMT
+# Thu, 19 Dec 2019 06:03:40 GMT
 CMD ["php-fpm"]
 ```
 
@@ -9559,70 +9559,70 @@ CMD ["php-fpm"]
 		Last Modified: Mon, 21 Oct 2019 20:16:09 GMT  
 		Size: 221.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:883002e0338b8c513c57d18ab77d82e0caa919bdb1b2946f08ed3b55b72fac1e`  
-		Last Modified: Thu, 28 Nov 2019 20:26:08 GMT  
-		Size: 10.3 MB (10250560 bytes)  
+	-	`sha256:c1e36a5c98d6178a449daf406257e7eff2a8aaa8f7841e89d88aa873d05f19d1`  
+		Last Modified: Thu, 19 Dec 2019 03:54:26 GMT  
+		Size: 10.3 MB (10263910 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e7b0a921118a69174781eb4a78632aeeecae27242523e5cd8f5285edf19fe334`  
-		Last Modified: Thu, 28 Nov 2019 20:26:06 GMT  
+	-	`sha256:4725008c4a17d209ebebf19f78eb56a40450345fe49d5db3485091250aeb99f3`  
+		Last Modified: Thu, 19 Dec 2019 03:54:24 GMT  
 		Size: 498.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b3c1c34bce5f0b20f0e44086f68aaafa99ffc49bdb7dbc66c1c06e24b9955974`  
-		Last Modified: Thu, 28 Nov 2019 20:26:12 GMT  
-		Size: 15.0 MB (15041874 bytes)  
+	-	`sha256:282e1d0766783fa9892cf09cb13c7dad4614d043e3a91d070850cdabefbe5e51`  
+		Last Modified: Thu, 19 Dec 2019 03:54:30 GMT  
+		Size: 15.0 MB (15044382 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c3879df9a92354b1306a7e72620aab8a40a59b92ba45fe1820f1aa46e9b44495`  
-		Last Modified: Fri, 06 Dec 2019 00:46:48 GMT  
-		Size: 2.2 KB (2217 bytes)  
+	-	`sha256:78244b0bf6db52cbb1d03d4475db979cea475dd6d957e745ae8eb04b5fd020f7`  
+		Last Modified: Thu, 19 Dec 2019 03:54:24 GMT  
+		Size: 2.2 KB (2214 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ffef623ce21dc6b94b53c9e218c7559ac372c972028a492b3bec3bf5223ea6bb`  
-		Last Modified: Fri, 06 Dec 2019 00:46:47 GMT  
-		Size: 71.5 KB (71461 bytes)  
+	-	`sha256:ca2f4f3e381507a2e63adb951d6250fd232c07b850b73a6dbcf66951d6cb156d`  
+		Last Modified: Thu, 19 Dec 2019 03:54:24 GMT  
+		Size: 71.5 KB (71454 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9f8859fd4299cfa4ebc4c4abbb5eb35a56168974f7f37bf0243bef6da168cab3`  
-		Last Modified: Fri, 06 Dec 2019 00:46:48 GMT  
-		Size: 8.4 KB (8414 bytes)  
+	-	`sha256:ac7b77f214de306452a069819db22449df52a22007c3d8248782417ae08b39f8`  
+		Last Modified: Thu, 19 Dec 2019 03:54:24 GMT  
+		Size: 8.4 KB (8409 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:527177aba9589b65da398f866482092bc2575d64199cc41526b90da02a5214d8`  
-		Last Modified: Fri, 06 Dec 2019 01:36:47 GMT  
-		Size: 310.0 B  
+	-	`sha256:d095fefaea7a71ae03b685ba31f029a32c7db6cac13b26c56d492cf265fbeddc`  
+		Last Modified: Thu, 19 Dec 2019 06:04:01 GMT  
+		Size: 308.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:08337b4da5150b2191d15017d7aaf7c89552dc0695fc143d5dd34abbe0ac8e95`  
-		Last Modified: Fri, 06 Dec 2019 01:36:48 GMT  
-		Size: 1.4 KB (1377 bytes)  
+	-	`sha256:0db984503d05ea727e8c4f7b5b9785b67ed876b0abd217e21f28d9a0eea9c2c9`  
+		Last Modified: Thu, 19 Dec 2019 06:04:00 GMT  
+		Size: 1.4 KB (1374 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1ee6ab35b23389ef74abbeb0dc8803a7ec232f20836ea215a9ecd9e6962e4921`  
-		Last Modified: Fri, 06 Dec 2019 01:36:46 GMT  
-		Size: 1.4 MB (1382437 bytes)  
+	-	`sha256:8dc49e558523c08d3c6dc7adf5b339d691ba711f70372b584b7c6572ffbb57f2`  
+		Last Modified: Thu, 19 Dec 2019 06:03:59 GMT  
+		Size: 1.4 MB (1382432 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b6fbf218b5ec16408f996fb5e171282d2f6c9a8739d32f265797a376f4c4dc9d`  
-		Last Modified: Fri, 06 Dec 2019 01:36:46 GMT  
-		Size: 128.8 KB (128813 bytes)  
+	-	`sha256:ca63ec82194c3a79b574cd3d57e3a0dc2cba409532b4b5517306a793e499aa02`  
+		Last Modified: Thu, 19 Dec 2019 06:03:59 GMT  
+		Size: 128.8 KB (128808 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:99f52836ac716204cfe561cfb7e5a86eb115cddd251ef236c0afdc5b72c43b2a`  
-		Last Modified: Fri, 06 Dec 2019 01:36:46 GMT  
-		Size: 1.5 KB (1477 bytes)  
+	-	`sha256:3ab8349792bff83587695f7f15ff8dc6c98dee83fa6c803fccd2eb96cf2513a3`  
+		Last Modified: Thu, 19 Dec 2019 06:03:59 GMT  
+		Size: 1.5 KB (1475 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:882438548e91707b129857c72cea5b16853486c9bbb9a8e82b593ba59f58094f`  
-		Last Modified: Fri, 06 Dec 2019 01:36:47 GMT  
+	-	`sha256:dd3cf923130660a45ec692407df896ea2e2996dda2707e20dbacd485f675b412`  
+		Last Modified: Thu, 19 Dec 2019 06:03:59 GMT  
 		Size: 570.4 KB (570380 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:abe5b02e07233ccb28938a3c349125e527f671762692f8cc3f0e8db2569b279d`  
-		Last Modified: Fri, 06 Dec 2019 01:36:46 GMT  
-		Size: 498.0 B  
+	-	`sha256:ed097ef0f5931aecf8b6a435aaf4e3eab4f85073c6e91ba57529c53478e6e413`  
+		Last Modified: Thu, 19 Dec 2019 06:03:59 GMT  
+		Size: 493.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adminer:fastcgi` - linux; ppc64le
 
 ```console
-$ docker pull adminer@sha256:9c025ea58d6b26f90b22a4536cc075de23b68b5c953d6ae4f25cd8b16f498043
+$ docker pull adminer@sha256:f224038dcca7686d91dc09c9ccc47a7c75e0a90ce7fb8f6d1c38f7588f343f71
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **32.3 MB (32317896 bytes)**  
+-	Total Size: **32.3 MB (32339693 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:59105655c2b3bffbd6a9ea758b8fab9823f771080f827fb3943e68ba71b6fa3c`
+-	Image ID: `sha256:8d13c4f641374aadc599476f3f7868f487b1b0ad242a0ccfdb82b58d1417cb9e`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php-fpm"]`
 
@@ -9651,59 +9651,59 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 01:22:06 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:48:39 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:48:42 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:48:45 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:48:57 GMT
+# Wed, 18 Dec 2019 22:47:14 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:47:16 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:47:19 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:47:31 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:48:58 GMT
+# Wed, 18 Dec 2019 22:47:32 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:53:04 GMT
+# Wed, 18 Dec 2019 22:51:02 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:22:18 GMT
+# Wed, 18 Dec 2019 22:51:04 GMT
 COPY multi:5581a34bba21fbf2472e857e8cdc8db6d57694020e568954d2fd5901ee074da0 in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:22:24 GMT
+# Wed, 18 Dec 2019 22:51:10 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:22:26 GMT
+# Wed, 18 Dec 2019 22:51:13 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:22:29 GMT
+# Wed, 18 Dec 2019 22:51:15 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 01:22:36 GMT
+# Wed, 18 Dec 2019 22:51:19 GMT
 RUN set -eux; 	cd /usr/local/etc; 	if [ -d php-fpm.d ]; then 		sed 's!=NONE/!=!g' php-fpm.conf.default | tee php-fpm.conf > /dev/null; 		cp php-fpm.d/www.conf.default php-fpm.d/www.conf; 	else 		mkdir php-fpm.d; 		cp php-fpm.conf.default php-fpm.d/www.conf; 		{ 			echo '[global]'; 			echo 'include=etc/php-fpm.d/*.conf'; 		} | tee php-fpm.conf; 	fi; 	{ 		echo '[global]'; 		echo 'error_log = /proc/self/fd/2'; 		echo; echo '; https://github.com/docker-library/php/pull/725#issuecomment-443540114'; echo 'log_limit = 8192'; 		echo; 		echo '[www]'; 		echo '; if we send this to /proc/self/fd/1, it never appears'; 		echo 'access.log = /proc/self/fd/2'; 		echo; 		echo 'clear_env = no'; 		echo; 		echo '; Ensure worker stdout and stderr are sent to the main error log.'; 		echo 'catch_workers_output = yes'; 		echo 'decorate_workers_output = no'; 	} | tee php-fpm.d/docker.conf; 	{ 		echo '[global]'; 		echo 'daemonize = no'; 		echo; 		echo '[www]'; 		echo 'listen = 9000'; 	} | tee php-fpm.d/zz-docker.conf
-# Fri, 06 Dec 2019 01:22:38 GMT
+# Wed, 18 Dec 2019 22:51:22 GMT
 STOPSIGNAL SIGQUIT
-# Fri, 06 Dec 2019 01:22:41 GMT
+# Wed, 18 Dec 2019 22:51:24 GMT
 EXPOSE 9000
-# Fri, 06 Dec 2019 01:22:42 GMT
+# Wed, 18 Dec 2019 22:51:26 GMT
 CMD ["php-fpm"]
-# Fri, 06 Dec 2019 02:51:58 GMT
+# Thu, 19 Dec 2019 06:29:52 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 02:52:04 GMT
+# Thu, 19 Dec 2019 06:30:00 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 02:52:10 GMT
+# Thu, 19 Dec 2019 06:30:13 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 02:52:38 GMT
+# Thu, 19 Dec 2019 06:30:44 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 02:52:39 GMT
+# Thu, 19 Dec 2019 06:30:46 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 02:52:41 GMT
+# Thu, 19 Dec 2019 06:30:50 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 02:52:44 GMT
+# Thu, 19 Dec 2019 06:30:55 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 02:52:46 GMT
+# Thu, 19 Dec 2019 06:30:57 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 02:52:56 GMT
+# Thu, 19 Dec 2019 06:31:07 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 02:52:57 GMT
+# Thu, 19 Dec 2019 06:31:09 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 02:52:59 GMT
+# Thu, 19 Dec 2019 06:31:13 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 02:53:03 GMT
+# Thu, 19 Dec 2019 06:31:16 GMT
 USER adminer
-# Fri, 06 Dec 2019 02:53:06 GMT
+# Thu, 19 Dec 2019 06:31:20 GMT
 CMD ["php-fpm"]
 ```
 
@@ -9724,63 +9724,63 @@ CMD ["php-fpm"]
 		Last Modified: Mon, 21 Oct 2019 20:21:00 GMT  
 		Size: 269.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:41c52740a44bb4c5748ebce8c86dd706cabeffa8b3d9c4f80f6138b61a1bec08`  
-		Last Modified: Thu, 28 Nov 2019 21:11:13 GMT  
-		Size: 10.3 MB (10250597 bytes)  
+	-	`sha256:b07995cdf934b5efaabafb2fc38e2fd4bcf262d4b3fc0ae854961fb8fe2ccb76`  
+		Last Modified: Thu, 19 Dec 2019 01:43:42 GMT  
+		Size: 10.3 MB (10263942 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dc8deff1ae875178b97c866e9ae37859d9845e0ff78498539ab49c875dfda704`  
-		Last Modified: Thu, 28 Nov 2019 21:11:09 GMT  
+	-	`sha256:562d327a17a47fdf54128aec6fa469dfa1c46299912ceb56802bd2049c87a3cd`  
+		Last Modified: Thu, 19 Dec 2019 01:43:37 GMT  
 		Size: 498.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bef48fb4a39bcc95db1529ddbea9a2810d8f1e6d7a5af0f07960b597759795d4`  
-		Last Modified: Thu, 28 Nov 2019 21:11:14 GMT  
-		Size: 15.7 MB (15730534 bytes)  
+	-	`sha256:b605296e4b54e9e88cf662c48efe74d8375ba1168dfbd4fcf4d5a7157fc036ef`  
+		Last Modified: Thu, 19 Dec 2019 01:43:47 GMT  
+		Size: 15.7 MB (15739016 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cf885e004bbb88c1afad2b587c13689fe51c817b0dc75126fe5ae4de79d033e6`  
-		Last Modified: Fri, 06 Dec 2019 01:41:16 GMT  
-		Size: 2.2 KB (2221 bytes)  
+	-	`sha256:79e919cad484af1a35481675ab017ded09828c347b67ac9ca3fc7222a8f1a08e`  
+		Last Modified: Thu, 19 Dec 2019 01:43:37 GMT  
+		Size: 2.2 KB (2213 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b2c390fe718afab471134ab9da6de24d9c38924b0c4087e34a4fde3dc2844f16`  
-		Last Modified: Fri, 06 Dec 2019 01:41:16 GMT  
-		Size: 72.2 KB (72167 bytes)  
+	-	`sha256:3ac400f228427059d566f1ef2a4d1b98086f260c0f46c0722c32ca80a33b8c9c`  
+		Last Modified: Thu, 19 Dec 2019 01:43:37 GMT  
+		Size: 72.1 KB (72144 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9a2c5b773a13a67885fadc2a9bcaa28f789b7e52696dba93815eedf300ebd4dc`  
-		Last Modified: Fri, 06 Dec 2019 01:41:16 GMT  
-		Size: 8.4 KB (8415 bytes)  
+	-	`sha256:79c3607f5af5bfd11f73d90dbd7743491b17e724bc86e998e28b0a7d55ab337c`  
+		Last Modified: Thu, 19 Dec 2019 01:43:37 GMT  
+		Size: 8.4 KB (8418 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c9067b4b9dddc9ee32be5753ea716eff5b0d07bc48ab282cb504468006a804ce`  
-		Last Modified: Fri, 06 Dec 2019 02:54:19 GMT  
-		Size: 310.0 B  
+	-	`sha256:db6142ebdfb637a6f0452667b383135615574f75a10d106d38d11a54233b4315`  
+		Last Modified: Thu, 19 Dec 2019 06:32:46 GMT  
+		Size: 307.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bbf3022d05dae61d9072aecb7c6a66feff00c293204c566b8a487dbdbe1f504c`  
-		Last Modified: Fri, 06 Dec 2019 02:54:18 GMT  
-		Size: 1.4 KB (1417 bytes)  
+	-	`sha256:5fc105e8ef9fe3cc42aea688712f3186ea449f115ba59145f024b1a0a764b80d`  
+		Last Modified: Thu, 19 Dec 2019 06:32:45 GMT  
+		Size: 1.4 KB (1421 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:60dab794aa767edb8b1a96f18a413f394295e8915f0e5f9c195cef599bbf23c0`  
-		Last Modified: Fri, 06 Dec 2019 02:54:16 GMT  
-		Size: 1.3 MB (1347015 bytes)  
+	-	`sha256:84e6a9290a5d8919085470664c7f18de1370fae8b7595ce7604dc6aa0b047228`  
+		Last Modified: Thu, 19 Dec 2019 06:32:41 GMT  
+		Size: 1.3 MB (1347003 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5eb70d0523c6dfb4d40b28604e02ef10b1ad8214e5ef7aaef9e9b3f7528d28e4`  
-		Last Modified: Fri, 06 Dec 2019 02:54:16 GMT  
-		Size: 135.8 KB (135821 bytes)  
+	-	`sha256:66f43d2506941955932ba61a0fa90e7a0f77acf2ec58e9630457f30371e78c1b`  
+		Last Modified: Thu, 19 Dec 2019 06:32:41 GMT  
+		Size: 135.8 KB (135820 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d88606c7efae5c80d7217038d6e4f82bb12bdfe624738d95e29be225b46e36b5`  
-		Last Modified: Fri, 06 Dec 2019 02:54:16 GMT  
-		Size: 1.5 KB (1473 bytes)  
+	-	`sha256:36a8d852ad8da73568f4223e8e8b9b0b1ca6263a4ca83b8971d624503d4c6659`  
+		Last Modified: Thu, 19 Dec 2019 06:32:40 GMT  
+		Size: 1.5 KB (1475 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:196c812e41d4d3d9d2db2567f346ab4e38246b44f24bcdb8855734d643d38ec2`  
-		Last Modified: Fri, 06 Dec 2019 02:54:16 GMT  
-		Size: 570.4 KB (570448 bytes)  
+	-	`sha256:20584e5ee34a3a4146a6475f2dd13442e8e6a936b323b64250f75db8c0f8800e`  
+		Last Modified: Thu, 19 Dec 2019 06:32:40 GMT  
+		Size: 570.5 KB (570455 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a0fc4ffc5b4b40795919e03393c4d34ee386b5f86fa3517fcec379b99a115ce1`  
-		Last Modified: Fri, 06 Dec 2019 02:54:15 GMT  
-		Size: 497.0 B  
+	-	`sha256:913811a124d54956a4f6d698d0341bd66678dcd4aeac5ae462efce5623dabda2`  
+		Last Modified: Thu, 19 Dec 2019 06:32:40 GMT  
+		Size: 498.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `adminer:latest`
 
 ```console
-$ docker pull adminer@sha256:c15822ec7ba7977c385e5ebcda2fcbeb09812edd97bbd61d7737fa8a8e53e3e6
+$ docker pull adminer@sha256:10c219a46e3b5950dd4e5f9c3dfb89a6c44eb9a18f10e6849417c47136493388
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -9795,14 +9795,14 @@ $ docker pull adminer@sha256:c15822ec7ba7977c385e5ebcda2fcbeb09812edd97bbd61d773
 ### `adminer:latest` - linux; amd64
 
 ```console
-$ docker pull adminer@sha256:86ba5afe8fee41c253bf89c258bca85d8640be894ae7716d3e726b9b4047c381
+$ docker pull adminer@sha256:e6d727411f1819b13c88314cf67a5f8a1f22d01fa53a25b493ca93bc12ebe74e
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **31.0 MB (31013555 bytes)**  
+-	Total Size: **31.0 MB (31027461 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:830d96c7612a7e7be76322d5741c2db4944f31f9f4d2cb6991cb242e12f4ae5a`
+-	Image ID: `sha256:b426045b520a8937f9baa8c890e3482996b4cf8f92ef9967738f67073d493407`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php","-S","[::]:8080","-t","\/var\/www\/html"]`
 
@@ -9829,57 +9829,57 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 01:10:28 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:48:56 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:48:56 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:48:56 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:48:59 GMT
+# Wed, 18 Dec 2019 22:38:21 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:38:21 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:38:21 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:38:24 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:48:59 GMT
+# Wed, 18 Dec 2019 22:38:24 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:55:11 GMT
+# Wed, 18 Dec 2019 22:44:31 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:21:33 GMT
+# Wed, 18 Dec 2019 22:44:32 GMT
 COPY multi:0b7e4a1b9cd5748d214539db3c6bee9b30805d1933690492830b56ffcd31f68d in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:21:35 GMT
+# Wed, 18 Dec 2019 22:44:33 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:21:35 GMT
+# Wed, 18 Dec 2019 22:44:33 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:21:35 GMT
+# Wed, 18 Dec 2019 22:44:33 GMT
 CMD ["php" "-a"]
-# Fri, 06 Dec 2019 01:46:14 GMT
+# Thu, 19 Dec 2019 05:35:45 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 01:46:15 GMT
+# Thu, 19 Dec 2019 05:35:45 GMT
 STOPSIGNAL SIGINT
-# Fri, 06 Dec 2019 01:46:15 GMT
+# Thu, 19 Dec 2019 05:35:46 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 01:46:16 GMT
+# Thu, 19 Dec 2019 05:35:46 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 01:46:16 GMT
+# Thu, 19 Dec 2019 05:35:47 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 01:46:34 GMT
+# Thu, 19 Dec 2019 05:36:05 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 01:46:34 GMT
+# Thu, 19 Dec 2019 05:36:05 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 01:46:35 GMT
+# Thu, 19 Dec 2019 05:36:05 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 01:46:35 GMT
+# Thu, 19 Dec 2019 05:36:06 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 01:46:35 GMT
+# Thu, 19 Dec 2019 05:36:06 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 01:46:36 GMT
+# Thu, 19 Dec 2019 05:36:07 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 01:46:36 GMT
+# Thu, 19 Dec 2019 05:36:07 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:46:37 GMT
+# Thu, 19 Dec 2019 05:36:08 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:46:37 GMT
+# Thu, 19 Dec 2019 05:36:08 GMT
 USER adminer
-# Fri, 06 Dec 2019 01:46:37 GMT
+# Thu, 19 Dec 2019 05:36:08 GMT
 CMD ["php" "-S" "[::]:8080" "-t" "/var/www/html"]
-# Fri, 06 Dec 2019 01:46:37 GMT
+# Thu, 19 Dec 2019 05:36:08 GMT
 EXPOSE 8080
 ```
 
@@ -9900,52 +9900,52 @@ EXPOSE 8080
 		Last Modified: Mon, 21 Oct 2019 21:44:18 GMT  
 		Size: 222.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c480d86e9f76b9604df41b59ff15c277235e77570c3094e24beea689906d7e85`  
-		Last Modified: Thu, 28 Nov 2019 21:13:22 GMT  
-		Size: 10.3 MB (10250558 bytes)  
+	-	`sha256:b0c3cc2f08e3e093e7f2363216f6414027208adc012c5aa07db197341329fe72`  
+		Last Modified: Thu, 19 Dec 2019 03:00:28 GMT  
+		Size: 10.3 MB (10263892 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f3842726b8d86447ea9f8ca1885524b2ae44cf308c3ae2e11f372aa6db308f32`  
-		Last Modified: Thu, 28 Nov 2019 21:13:21 GMT  
+	-	`sha256:57fb2ca7191a3ef22a9701e838adaf70fdbd265eb24703f14179044284913417`  
+		Last Modified: Thu, 19 Dec 2019 03:00:27 GMT  
 		Size: 498.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:57a451954efdb35ed624196af05c79b645dc444faaccc19d9d45d112f6de4061`  
-		Last Modified: Thu, 28 Nov 2019 21:13:24 GMT  
-		Size: 14.6 MB (14589908 bytes)  
+	-	`sha256:719b549f829c694acfed15af4094974701bcb4c0285684f08d92cf8d9ec9bcdc`  
+		Last Modified: Thu, 19 Dec 2019 03:00:33 GMT  
+		Size: 14.6 MB (14590503 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5a0b952c237a06829b97d3ed1d92cacf10888f77fba63726d16867056a4f044c`  
-		Last Modified: Fri, 06 Dec 2019 01:26:49 GMT  
-		Size: 2.2 KB (2216 bytes)  
+	-	`sha256:81e6bc38092826fd2472c7ca1eb2c700fed834bbd765e80ff2a643fd121154d2`  
+		Last Modified: Thu, 19 Dec 2019 03:00:26 GMT  
+		Size: 2.2 KB (2215 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:152b9d9c5ef59610e7b35742bebd1808171b7de2c4ccec2f0731a55a7559360d`  
-		Last Modified: Fri, 06 Dec 2019 01:26:48 GMT  
-		Size: 72.3 KB (72319 bytes)  
+	-	`sha256:a754e64b7156262e64e31a7201d5c625a9db50e96ecac534e504a6393f4e1a9e`  
+		Last Modified: Thu, 19 Dec 2019 03:00:27 GMT  
+		Size: 72.3 KB (72302 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1e64c9abda242b9b4d3a6c1baf781dda52eabbb6ef6d75db40cc72d87f1c4c77`  
-		Last Modified: Fri, 06 Dec 2019 01:47:18 GMT  
-		Size: 308.0 B  
+	-	`sha256:90f3f908ddee8f4ee6c6ca007ced4430786e103eac072c59fee4b402b2d8c388`  
+		Last Modified: Thu, 19 Dec 2019 05:36:51 GMT  
+		Size: 307.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d62f090b0e9efd0bfb9ba692958683cf86a15d423cc82c1609b954876086d6a8`  
-		Last Modified: Fri, 06 Dec 2019 01:47:18 GMT  
+	-	`sha256:857b7e4aae9f2ade154cb505cf91e6521e4099d23159d182a8cbef713c81532b`  
+		Last Modified: Thu, 19 Dec 2019 05:36:51 GMT  
 		Size: 1.4 KB (1372 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:762e247790399e6560e4640ca01701a7fcc2211f8cee51913462b618a25167af`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
-		Size: 1.3 MB (1267207 bytes)  
+	-	`sha256:ace782c3ac09d3f64c77972eafa84fee9f30761a8b9424bb4ffc178f8ebcf1ea`  
+		Last Modified: Thu, 19 Dec 2019 05:36:50 GMT  
+		Size: 1.3 MB (1267197 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0f51bae1177740cf6eec7579667748ed24bec56021cbb74b7210edc18f01be18`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
+	-	`sha256:a67e9e57ebac5385c07290704a48959e42587e9cca35993f56e0ec74384988fd`  
+		Last Modified: Thu, 19 Dec 2019 05:36:50 GMT  
 		Size: 125.7 KB (125657 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:628599883e3cd44a98167c252bdf0ab5a593036911dba0257cc80613a629ba8b`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
-		Size: 1.5 KB (1472 bytes)  
+	-	`sha256:49eb563494c485a889d81dda7ee04ce14f7b22cfa901415e048a5c0c18d2bb0f`  
+		Last Modified: Thu, 19 Dec 2019 05:36:49 GMT  
+		Size: 1.5 KB (1477 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3536dd8cbdfc6bc3a00a8c6e170b6b28329ba806612bca28010703e03746e34e`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
-		Size: 570.4 KB (570378 bytes)  
+	-	`sha256:3b5bc3cefb34ffac141e2420696af773ce85d635ff6d02d406903625b83b3f04`  
+		Last Modified: Thu, 19 Dec 2019 05:36:50 GMT  
+		Size: 570.4 KB (570379 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6eeb0c1100b26366c86db33f094c4a819fc26e55ce4eb2e5f5ab309c4a02edb0`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
+	-	`sha256:b807bb1614467154aa601b40815ea51d330eebb00f281a71b54af161d17b20ec`  
+		Last Modified: Thu, 19 Dec 2019 05:36:49 GMT  
 		Size: 496.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -10109,14 +10109,14 @@ EXPOSE 8080
 ### `adminer:latest` - linux; arm variant v7
 
 ```console
-$ docker pull adminer@sha256:ca8d6b805bd6de4b7ae82a31dcaa1c1eaa16c7170d6a2d8a84390246fb323f1a
+$ docker pull adminer@sha256:45f3f63bea4b53ed6f840b452aad505d813cf99755272303c705731a9c2c1a37
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **28.4 MB (28355059 bytes)**  
+-	Total Size: **28.4 MB (28375258 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6a6a009dde2aee41ade135a5592990a968056ac0ca2903616b3146d78e8df4d4`
+-	Image ID: `sha256:c6fcf1f9bcc93e97da85dddf171a35cc7c3a686b415d320b4737e95e19bcbfec`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php","-S","[::]:8080","-t","\/var\/www\/html"]`
 
@@ -10143,57 +10143,57 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 00:42:48 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:19:44 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:19:45 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:19:46 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:19:51 GMT
+# Wed, 18 Dec 2019 22:13:45 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:13:46 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:13:46 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:13:50 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:19:52 GMT
+# Wed, 18 Dec 2019 22:13:51 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:22:34 GMT
+# Wed, 18 Dec 2019 22:16:23 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:17:24 GMT
+# Wed, 18 Dec 2019 22:16:24 GMT
 COPY multi:0b7e4a1b9cd5748d214539db3c6bee9b30805d1933690492830b56ffcd31f68d in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:17:29 GMT
+# Wed, 18 Dec 2019 22:16:27 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:17:32 GMT
+# Wed, 18 Dec 2019 22:16:28 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:17:33 GMT
+# Wed, 18 Dec 2019 22:16:28 GMT
 CMD ["php" "-a"]
-# Fri, 06 Dec 2019 04:50:48 GMT
+# Thu, 19 Dec 2019 05:43:15 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 04:50:50 GMT
+# Thu, 19 Dec 2019 05:43:15 GMT
 STOPSIGNAL SIGINT
-# Fri, 06 Dec 2019 04:50:59 GMT
+# Thu, 19 Dec 2019 05:43:18 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 04:51:01 GMT
+# Thu, 19 Dec 2019 05:43:19 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 04:51:06 GMT
+# Thu, 19 Dec 2019 05:43:21 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 04:51:54 GMT
+# Thu, 19 Dec 2019 05:43:50 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 04:51:56 GMT
+# Thu, 19 Dec 2019 05:43:51 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 04:52:00 GMT
+# Thu, 19 Dec 2019 05:43:51 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 04:52:04 GMT
+# Thu, 19 Dec 2019 05:43:52 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 04:52:09 GMT
+# Thu, 19 Dec 2019 05:43:52 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 04:52:23 GMT
+# Thu, 19 Dec 2019 05:43:55 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 04:52:25 GMT
+# Thu, 19 Dec 2019 05:43:56 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 04:52:27 GMT
+# Thu, 19 Dec 2019 05:43:56 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 04:52:29 GMT
+# Thu, 19 Dec 2019 05:43:57 GMT
 USER adminer
-# Fri, 06 Dec 2019 04:52:33 GMT
+# Thu, 19 Dec 2019 05:43:58 GMT
 CMD ["php" "-S" "[::]:8080" "-t" "/var/www/html"]
-# Fri, 06 Dec 2019 04:52:38 GMT
+# Thu, 19 Dec 2019 05:43:58 GMT
 EXPOSE 8080
 ```
 
@@ -10214,53 +10214,53 @@ EXPOSE 8080
 		Last Modified: Mon, 21 Oct 2019 22:14:00 GMT  
 		Size: 267.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:74d543cc24962e4f8efaef27c314b6c510d9e89795bb3fefc76190c88e6adaa0`  
-		Last Modified: Thu, 28 Nov 2019 20:37:08 GMT  
-		Size: 10.3 MB (10250580 bytes)  
+	-	`sha256:9ca9d33ba72a23b5503797dc37271a4e969f593c1f91fab7b5e8fc9e199a3237`  
+		Last Modified: Thu, 19 Dec 2019 00:23:23 GMT  
+		Size: 10.3 MB (10263922 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:61533199b1c12541ec2c6e8792481ed0bf870ab2614fca26df4472ed7489905b`  
-		Last Modified: Thu, 28 Nov 2019 20:37:06 GMT  
-		Size: 494.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cb40e8b71fdcda892a7fff7b40bd040c14189bdbf81c6900e2506a34d0a5e2a8`  
-		Last Modified: Thu, 28 Nov 2019 20:37:11 GMT  
-		Size: 12.7 MB (12659015 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:73e8322b4997afc76e3d6aded9b6977d019a876387f38bb0c7b20303eb741ea1`  
-		Last Modified: Fri, 06 Dec 2019 01:35:28 GMT  
-		Size: 2.2 KB (2215 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bee10ead90205f4f11c6737cb5e9809cf554b750d259f2bb978806599ff48d4d`  
-		Last Modified: Fri, 06 Dec 2019 01:35:28 GMT  
-		Size: 71.9 KB (71901 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b2343ca0934ccfcf3473bcd86e8769c80a356c838360d24e6c15c8549d8799ff`  
-		Last Modified: Fri, 06 Dec 2019 04:55:13 GMT  
-		Size: 311.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3339cf595876f587528feea8189a242d1eee086d7c129183282e0d0bf5dfec9e`  
-		Last Modified: Fri, 06 Dec 2019 04:55:13 GMT  
-		Size: 1.4 KB (1420 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:273f3098e61dc9b47d64ba9a3e339b88d90351233841e926290aaf8f81b719e8`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
-		Size: 1.1 MB (1098041 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f48a0dca6ba28aa1b4488aa4541f847d05b842f7adfd2fbe4df3d510ea08bb44`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
-		Size: 113.6 KB (113646 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:911b6063ce3a1a087497bb65c33df13aa956676a9977dec81024c9158363b7a1`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
-		Size: 1.5 KB (1474 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c17014746daefe47239efc1403be753dbbd9860da773a322a172487485cb8993`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
-		Size: 570.5 KB (570460 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:87db519a03011aadfd54c42773aed91d48871a3e423f8652ae2fa3c6a201d7f0`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
+	-	`sha256:9abaf2cca6b8f6360c51d0ab64e5733dd6fe54d2160f0b90b2c2b30cc9d09556`  
+		Last Modified: Thu, 19 Dec 2019 00:23:23 GMT  
 		Size: 498.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:0d1c28a483480472543267f13fa560e37c42d398e03258ec10f3259791f26c2b`  
+		Last Modified: Thu, 19 Dec 2019 00:23:26 GMT  
+		Size: 12.7 MB (12665914 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c296b4d3757a3eb5a9eaa1bee6c67b7f85258f295e5d1adfeae082aaa4ffe554`  
+		Last Modified: Thu, 19 Dec 2019 00:23:23 GMT  
+		Size: 2.2 KB (2213 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:3f0c6898b03f711ee9c13adb0e7ac827b235e872574ad2e0466ce38a7006494f`  
+		Last Modified: Thu, 19 Dec 2019 00:23:23 GMT  
+		Size: 71.9 KB (71882 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:85f53d18384dba7127519315cb122ebcc1c8f1420b7359054849ebd5c2eb8501`  
+		Last Modified: Thu, 19 Dec 2019 05:45:20 GMT  
+		Size: 308.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:29ba2b51dd9ec6d55f6dcbd14fd64e4424e17d54d50559b04f7872439fe23c84`  
+		Last Modified: Thu, 19 Dec 2019 05:45:20 GMT  
+		Size: 1.4 KB (1418 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ed774f039edbc14130f2a14cc8a6036a51ebcd1eb96bbfd75d3ac1c581bdb3a2`  
+		Last Modified: Thu, 19 Dec 2019 05:45:18 GMT  
+		Size: 1.1 MB (1098039 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ddbca63dcd496dfe19ebd0ce58453dcf241bca16bd12220566202434e47730ff`  
+		Last Modified: Thu, 19 Dec 2019 05:45:18 GMT  
+		Size: 113.6 KB (113634 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:fdc0c14d20b92cde224999d0a7464e0dd1063ed2fe903a20fc7902d451928868`  
+		Last Modified: Thu, 19 Dec 2019 05:45:19 GMT  
+		Size: 1.5 KB (1477 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:4854bad04d3751dd937dde7badbbe7b0be2baee2b0c0b6e654e45ea0155fd765`  
+		Last Modified: Thu, 19 Dec 2019 05:45:18 GMT  
+		Size: 570.5 KB (570450 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:183711409a19b109d1862eb8f004260effa66c92f58f14f1ad425a474ba8572d`  
+		Last Modified: Thu, 19 Dec 2019 05:45:18 GMT  
+		Size: 499.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adminer:latest` - linux; arm64 variant v8
@@ -10423,14 +10423,14 @@ EXPOSE 8080
 ### `adminer:latest` - linux; 386
 
 ```console
-$ docker pull adminer@sha256:3b3b632ad55b7004f6d67004583ca8d4756f52487240d6530977ad9a503ba629
+$ docker pull adminer@sha256:4d9d4d3dba3055adde16332ec8bb9f98fbc264574d8755f161b2c7420f0fb73e
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **31.6 MB (31595367 bytes)**  
+-	Total Size: **31.6 MB (31611527 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1a9e767ae5c65d7fecf62761e3afd0b53184749f9cfcca68ae1c099ed852e137`
+-	Image ID: `sha256:6921567de258c77b202adc3226c7996e1fb5f526f205d6712821a57b84db89ee`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php","-S","[::]:8080","-t","\/var\/www\/html"]`
 
@@ -10457,57 +10457,57 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 03:40:32 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:03:14 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:03:14 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:03:14 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:03:17 GMT
+# Wed, 18 Dec 2019 23:18:21 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 23:18:22 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 23:18:22 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 23:18:24 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:03:17 GMT
+# Wed, 18 Dec 2019 23:18:25 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:08:51 GMT
+# Wed, 18 Dec 2019 23:27:50 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 00:41:35 GMT
+# Wed, 18 Dec 2019 23:27:51 GMT
 COPY multi:0b7e4a1b9cd5748d214539db3c6bee9b30805d1933690492830b56ffcd31f68d in /usr/local/bin/ 
-# Fri, 06 Dec 2019 00:41:36 GMT
+# Wed, 18 Dec 2019 23:27:53 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 00:41:36 GMT
+# Wed, 18 Dec 2019 23:27:53 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 00:41:36 GMT
+# Wed, 18 Dec 2019 23:27:53 GMT
 CMD ["php" "-a"]
-# Fri, 06 Dec 2019 01:35:26 GMT
+# Thu, 19 Dec 2019 06:02:48 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 01:35:26 GMT
+# Thu, 19 Dec 2019 06:02:48 GMT
 STOPSIGNAL SIGINT
-# Fri, 06 Dec 2019 01:35:27 GMT
+# Thu, 19 Dec 2019 06:02:49 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 01:35:27 GMT
+# Thu, 19 Dec 2019 06:02:49 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 01:35:28 GMT
+# Thu, 19 Dec 2019 06:02:50 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:10 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:10 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:10 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:10 GMT
 USER adminer
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:11 GMT
 CMD ["php" "-S" "[::]:8080" "-t" "/var/www/html"]
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:11 GMT
 EXPOSE 8080
 ```
 
@@ -10528,66 +10528,66 @@ EXPOSE 8080
 		Last Modified: Mon, 21 Oct 2019 20:16:09 GMT  
 		Size: 221.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7a2f924d5bef762db8a36415395a7d8d645e86c8c10e98670ee6441f4dfffc4b`  
-		Last Modified: Thu, 28 Nov 2019 20:25:40 GMT  
-		Size: 10.3 MB (10250558 bytes)  
+	-	`sha256:8d3c120548e2cc8578bcbc722a1de16f16aa1bbd6f95a3f3f250760ef49d6425`  
+		Last Modified: Thu, 19 Dec 2019 03:54:02 GMT  
+		Size: 10.3 MB (10263911 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d86e42c218805225dcb7fb493e2333b3aa5dbe52acfe920142f7beddb424cf83`  
-		Last Modified: Thu, 28 Nov 2019 20:25:39 GMT  
-		Size: 497.0 B  
+	-	`sha256:6c67772931308b5da9ecd54e42e8b4f0cee6a6ca800c39c9bb90f7935371f173`  
+		Last Modified: Thu, 19 Dec 2019 03:54:01 GMT  
+		Size: 498.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df9403ccfdc695e35b6d3018248acf35d406f0cfafb094c31e3837d69bafd01c`  
-		Last Modified: Thu, 28 Nov 2019 20:25:45 GMT  
-		Size: 15.0 MB (14964307 bytes)  
+	-	`sha256:81de9fd8c68cc661996bb58ab58c8ca7fcc4523d035c2bbfc2835549da0a48ae`  
+		Last Modified: Thu, 19 Dec 2019 03:54:07 GMT  
+		Size: 15.0 MB (14967109 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ec757c77b33207cd2e297fb2ab7146f4245ec36acc52bd38cba1fbd4e3ec0b8b`  
-		Last Modified: Fri, 06 Dec 2019 00:46:31 GMT  
-		Size: 2.2 KB (2220 bytes)  
+	-	`sha256:2cc02e941d1953f8fbbd589f5a7cece48de8e05d8626f4dc9fc7272716e999e9`  
+		Last Modified: Thu, 19 Dec 2019 03:54:01 GMT  
+		Size: 2.2 KB (2211 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4d52ef7bb6d6ca924fc76da53a0d613f171978768e3b572da49a8f77ea6f8d6c`  
-		Last Modified: Fri, 06 Dec 2019 00:46:30 GMT  
+	-	`sha256:8a7864fff700c7ab0ac04ee51707c956b859bd42ce6e4bac9317a0224058ec59`  
+		Last Modified: Thu, 19 Dec 2019 03:54:01 GMT  
 		Size: 71.5 KB (71454 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6e5b781398aa148728fa13f2df2f88fa4d9b3570891ff55a3af9cb50c2098412`  
-		Last Modified: Fri, 06 Dec 2019 01:36:35 GMT  
+	-	`sha256:7274061ca352a1262686abb045838ea905ae178eee118a6a1e23834490af7953`  
+		Last Modified: Thu, 19 Dec 2019 06:03:50 GMT  
 		Size: 308.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:de505ea02604bd909cfaf3b498de539cedd1332bfe778ba03947dce6e0d33d23`  
-		Last Modified: Fri, 06 Dec 2019 01:36:35 GMT  
-		Size: 1.4 KB (1376 bytes)  
+	-	`sha256:e79de5c64323f911324528fcb2f88bc245b69fe50c242865fbb4ac204b52b545`  
+		Last Modified: Thu, 19 Dec 2019 06:03:51 GMT  
+		Size: 1.4 KB (1373 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:14cdb373d56b69e1927e31d36942beeeb400c2632b5bc77e1f73ad115ba8383a`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 1.4 MB (1382441 bytes)  
+	-	`sha256:673d96f2a5b2ca78e58cf695d0dba02cdf0279a1620b9a4b7e62192cb52054a9`  
+		Last Modified: Thu, 19 Dec 2019 06:03:50 GMT  
+		Size: 1.4 MB (1382437 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e4bcc50f7578a489fab996ffee3c7ea194e47a068ad3cae0821f4d60e06986b7`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 128.8 KB (128797 bytes)  
+	-	`sha256:b14ef693e693233cf4fea5d27768673723fdd0ac67859f0740a6e3ca15718406`  
+		Last Modified: Thu, 19 Dec 2019 06:03:49 GMT  
+		Size: 128.8 KB (128815 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5463ed1f22d5ece3465e961d34ec3854c36dfe23261548ab50b89fdd0f775e00`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 1.5 KB (1474 bytes)  
+	-	`sha256:14095c6e1a5c6c8e2eb79a0edb5fba2bfc43757e24a2d5953fc267cf77a178b5`  
+		Last Modified: Thu, 19 Dec 2019 06:03:49 GMT  
+		Size: 1.5 KB (1473 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d98966329f05e112300ee57648333a12079a1cc8a41d15d0e396391c444e67c1`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 570.4 KB (570373 bytes)  
+	-	`sha256:bf75ef62d8952c613219a1462ce69c61b6e6ca742bfe6578d3732a3d97fba9c4`  
+		Last Modified: Thu, 19 Dec 2019 06:03:50 GMT  
+		Size: 570.4 KB (570377 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:adef02fa3ca71fdceafb1fd92ff74960848b5673988dc3f2dc021aeaa943966b`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 496.0 B  
+	-	`sha256:79374c30d550e98acc64a36e936903f0fd6eee39645aef5007145f7860c1d8f9`  
+		Last Modified: Thu, 19 Dec 2019 06:03:49 GMT  
+		Size: 495.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adminer:latest` - linux; ppc64le
 
 ```console
-$ docker pull adminer@sha256:c59dc08edbac430c86555d96e000a1d49c59e8a66bc5e9d3b073ed8fd76f08ea
+$ docker pull adminer@sha256:b10e79ba1e7932ac27c0ffb06cc228415b4552687d150f89ed3f21ee08194220
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **32.2 MB (32227844 bytes)**  
+-	Total Size: **32.2 MB (32247973 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:96efedc317d25ffb54f9f12d72c5f57e58d4d511e52b62c3548a5b787d1f3ad5`
+-	Image ID: `sha256:573383ff5140ec4fcaf742c4be6757a0567423c5c5833be7d728669583167bd3`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php","-S","[::]:8080","-t","\/var\/www\/html"]`
 
@@ -10614,57 +10614,57 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 01:17:40 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:44:14 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:44:17 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:44:19 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:44:32 GMT
+# Wed, 18 Dec 2019 22:43:03 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:43:05 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:43:07 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:43:21 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:44:34 GMT
+# Wed, 18 Dec 2019 22:43:23 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:48:15 GMT
+# Wed, 18 Dec 2019 22:46:52 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:21:52 GMT
+# Wed, 18 Dec 2019 22:46:54 GMT
 COPY multi:0b7e4a1b9cd5748d214539db3c6bee9b30805d1933690492830b56ffcd31f68d in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:22:02 GMT
+# Wed, 18 Dec 2019 22:46:59 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:22:05 GMT
+# Wed, 18 Dec 2019 22:47:01 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:22:06 GMT
+# Wed, 18 Dec 2019 22:47:03 GMT
 CMD ["php" "-a"]
-# Fri, 06 Dec 2019 02:50:03 GMT
+# Thu, 19 Dec 2019 06:27:50 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 02:50:05 GMT
+# Thu, 19 Dec 2019 06:27:55 GMT
 STOPSIGNAL SIGINT
-# Fri, 06 Dec 2019 02:50:19 GMT
+# Thu, 19 Dec 2019 06:28:07 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 02:50:23 GMT
+# Thu, 19 Dec 2019 06:28:11 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 02:50:32 GMT
+# Thu, 19 Dec 2019 06:28:18 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 02:51:03 GMT
+# Thu, 19 Dec 2019 06:28:51 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 02:51:07 GMT
+# Thu, 19 Dec 2019 06:28:54 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 02:51:08 GMT
+# Thu, 19 Dec 2019 06:28:58 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 02:51:12 GMT
+# Thu, 19 Dec 2019 06:28:59 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 02:51:14 GMT
+# Thu, 19 Dec 2019 06:29:03 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 02:51:24 GMT
+# Thu, 19 Dec 2019 06:29:15 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 02:51:27 GMT
+# Thu, 19 Dec 2019 06:29:18 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 02:51:33 GMT
+# Thu, 19 Dec 2019 06:29:20 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 02:51:35 GMT
+# Thu, 19 Dec 2019 06:29:26 GMT
 USER adminer
-# Fri, 06 Dec 2019 02:51:40 GMT
+# Thu, 19 Dec 2019 06:29:30 GMT
 CMD ["php" "-S" "[::]:8080" "-t" "/var/www/html"]
-# Fri, 06 Dec 2019 02:51:44 GMT
+# Thu, 19 Dec 2019 06:29:34 GMT
 EXPOSE 8080
 ```
 
@@ -10685,59 +10685,59 @@ EXPOSE 8080
 		Last Modified: Mon, 21 Oct 2019 20:21:00 GMT  
 		Size: 269.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f41671226d36c01ec9c7f1ea38cd673556952e7f899f4f4b89c9fbdebd29a53b`  
-		Last Modified: Thu, 28 Nov 2019 21:10:15 GMT  
-		Size: 10.3 MB (10250609 bytes)  
+	-	`sha256:4b579441bf6e92a1a6e81ea93691621e4c87a50d9ffb31d4b378b5df7d32872f`  
+		Last Modified: Thu, 19 Dec 2019 01:42:36 GMT  
+		Size: 10.3 MB (10263942 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1d940bc1bed9725313bbc396a711a790598103f8425780c96a2b8e0b8c314f83`  
-		Last Modified: Thu, 28 Nov 2019 21:10:13 GMT  
-		Size: 498.0 B  
+	-	`sha256:439349ae045fb12b63f4ea12de47a2383371a3189b6e95b5a84693903df9b0a4`  
+		Last Modified: Thu, 19 Dec 2019 01:42:35 GMT  
+		Size: 497.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:02effde3bc9b924c0d25924f0e1f298c9e7644c948efa10ff4d8945399a16b74`  
-		Last Modified: Thu, 28 Nov 2019 21:10:19 GMT  
-		Size: 15.6 MB (15648865 bytes)  
+	-	`sha256:48b07dcdf318b1dc68a37f668ccb781855c62ec5ac7721f9c1149fdb135ba87d`  
+		Last Modified: Thu, 19 Dec 2019 01:42:48 GMT  
+		Size: 15.7 MB (15655717 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e31c94093f50a0b5f297e9da64e47405dbe46f8ec535d000ee7f725a553fc633`  
-		Last Modified: Fri, 06 Dec 2019 01:40:27 GMT  
-		Size: 2.2 KB (2217 bytes)  
+	-	`sha256:c7eab24ff28c16bb245a5237cc4946807bcb8d827d3702b5bb9f74cfd586fece`  
+		Last Modified: Thu, 19 Dec 2019 01:42:35 GMT  
+		Size: 2.2 KB (2210 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:232540856492a6874250c20d02259faf35c4a5b5aa42520d4c9528742d779fd0`  
-		Last Modified: Fri, 06 Dec 2019 01:40:27 GMT  
-		Size: 72.2 KB (72168 bytes)  
+	-	`sha256:8334e4feab309edb35cdf7bec81a8a27169fa44dde213e3030369881eda125f1`  
+		Last Modified: Thu, 19 Dec 2019 01:42:35 GMT  
+		Size: 72.1 KB (72144 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d14842d0c142c0039a7a184b2b3d335b2a01864a6235ea3dda30897e146ad1c6`  
-		Last Modified: Fri, 06 Dec 2019 02:53:43 GMT  
-		Size: 310.0 B  
+	-	`sha256:6e5b8d229e7b1d88a7c021b6c715fb1dc4558108381b5279c56a41a62dbc2261`  
+		Last Modified: Thu, 19 Dec 2019 06:32:06 GMT  
+		Size: 306.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d2190da7f3695c3878621e1660bf04a2c8dbdfef966bffeb6971cf76aed20f16`  
-		Last Modified: Fri, 06 Dec 2019 02:53:43 GMT  
-		Size: 1.4 KB (1414 bytes)  
+	-	`sha256:8a14230d6a9f6580d0617afb712af2aa3a52531275d062968f9876403ef06fb4`  
+		Last Modified: Thu, 19 Dec 2019 06:32:05 GMT  
+		Size: 1.4 KB (1421 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:55e067e4d19dc08989322d9eb8129d7bdbf1bf797725927442cc93bf69ae0d33`  
-		Last Modified: Fri, 06 Dec 2019 02:53:40 GMT  
-		Size: 1.3 MB (1347029 bytes)  
+	-	`sha256:6d0c4ce6bd51ba7c0848bd56478144b0695f576f8ae0678eb62e05ee3559fc42`  
+		Last Modified: Thu, 19 Dec 2019 06:32:03 GMT  
+		Size: 1.3 MB (1347007 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ff1668716d22838ddf256cebcbf1b09ddc48fc942a5842b5e13e6c44e830c394`  
-		Last Modified: Fri, 06 Dec 2019 02:53:39 GMT  
-		Size: 135.8 KB (135823 bytes)  
+	-	`sha256:8f2e3e1cdb6c28b9b5b15dba0737ad3ed00202221c4c671693dc9fc7b7ba77cc`  
+		Last Modified: Thu, 19 Dec 2019 06:32:02 GMT  
+		Size: 135.8 KB (135826 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2a7c9bfcff913dd0e174b7de4290afacf966f43e6be2dd050e56584c94028fe2`  
-		Last Modified: Fri, 06 Dec 2019 02:53:39 GMT  
-		Size: 1.5 KB (1479 bytes)  
+	-	`sha256:43cb845103383d0bd1567a8b09f649e5f523c37b005bd6625351c8dbf52f6976`  
+		Last Modified: Thu, 19 Dec 2019 06:32:01 GMT  
+		Size: 1.5 KB (1473 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:04e9df15d0417b3f6421f2a692de9e7bdfa605d9bf0105088ad284939e459927`  
-		Last Modified: Fri, 06 Dec 2019 02:53:40 GMT  
-		Size: 570.5 KB (570451 bytes)  
+	-	`sha256:2d4d6287f785538118622662e0c60ab299f7a2ae11f5301fa041f86527b24464`  
+		Last Modified: Thu, 19 Dec 2019 06:32:02 GMT  
+		Size: 570.5 KB (570450 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:072c9cb6de1241a262601cb46dc6b10bff853e228b847c61d3443de139fb9ac2`  
-		Last Modified: Fri, 06 Dec 2019 02:53:39 GMT  
-		Size: 498.0 B  
+	-	`sha256:81477a62f96cdc3549a2c6c8ac63f34fc068128715c326c6c916ac7a607475f5`  
+		Last Modified: Thu, 19 Dec 2019 06:32:02 GMT  
+		Size: 497.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `adminer:standalone`
 
 ```console
-$ docker pull adminer@sha256:c15822ec7ba7977c385e5ebcda2fcbeb09812edd97bbd61d7737fa8a8e53e3e6
+$ docker pull adminer@sha256:10c219a46e3b5950dd4e5f9c3dfb89a6c44eb9a18f10e6849417c47136493388
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -10752,14 +10752,14 @@ $ docker pull adminer@sha256:c15822ec7ba7977c385e5ebcda2fcbeb09812edd97bbd61d773
 ### `adminer:standalone` - linux; amd64
 
 ```console
-$ docker pull adminer@sha256:86ba5afe8fee41c253bf89c258bca85d8640be894ae7716d3e726b9b4047c381
+$ docker pull adminer@sha256:e6d727411f1819b13c88314cf67a5f8a1f22d01fa53a25b493ca93bc12ebe74e
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **31.0 MB (31013555 bytes)**  
+-	Total Size: **31.0 MB (31027461 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:830d96c7612a7e7be76322d5741c2db4944f31f9f4d2cb6991cb242e12f4ae5a`
+-	Image ID: `sha256:b426045b520a8937f9baa8c890e3482996b4cf8f92ef9967738f67073d493407`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php","-S","[::]:8080","-t","\/var\/www\/html"]`
 
@@ -10786,57 +10786,57 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 01:10:28 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:48:56 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:48:56 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:48:56 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:48:59 GMT
+# Wed, 18 Dec 2019 22:38:21 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:38:21 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:38:21 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:38:24 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:48:59 GMT
+# Wed, 18 Dec 2019 22:38:24 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:55:11 GMT
+# Wed, 18 Dec 2019 22:44:31 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:21:33 GMT
+# Wed, 18 Dec 2019 22:44:32 GMT
 COPY multi:0b7e4a1b9cd5748d214539db3c6bee9b30805d1933690492830b56ffcd31f68d in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:21:35 GMT
+# Wed, 18 Dec 2019 22:44:33 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:21:35 GMT
+# Wed, 18 Dec 2019 22:44:33 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:21:35 GMT
+# Wed, 18 Dec 2019 22:44:33 GMT
 CMD ["php" "-a"]
-# Fri, 06 Dec 2019 01:46:14 GMT
+# Thu, 19 Dec 2019 05:35:45 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 01:46:15 GMT
+# Thu, 19 Dec 2019 05:35:45 GMT
 STOPSIGNAL SIGINT
-# Fri, 06 Dec 2019 01:46:15 GMT
+# Thu, 19 Dec 2019 05:35:46 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 01:46:16 GMT
+# Thu, 19 Dec 2019 05:35:46 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 01:46:16 GMT
+# Thu, 19 Dec 2019 05:35:47 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 01:46:34 GMT
+# Thu, 19 Dec 2019 05:36:05 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 01:46:34 GMT
+# Thu, 19 Dec 2019 05:36:05 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 01:46:35 GMT
+# Thu, 19 Dec 2019 05:36:05 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 01:46:35 GMT
+# Thu, 19 Dec 2019 05:36:06 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 01:46:35 GMT
+# Thu, 19 Dec 2019 05:36:06 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 01:46:36 GMT
+# Thu, 19 Dec 2019 05:36:07 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 01:46:36 GMT
+# Thu, 19 Dec 2019 05:36:07 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:46:37 GMT
+# Thu, 19 Dec 2019 05:36:08 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:46:37 GMT
+# Thu, 19 Dec 2019 05:36:08 GMT
 USER adminer
-# Fri, 06 Dec 2019 01:46:37 GMT
+# Thu, 19 Dec 2019 05:36:08 GMT
 CMD ["php" "-S" "[::]:8080" "-t" "/var/www/html"]
-# Fri, 06 Dec 2019 01:46:37 GMT
+# Thu, 19 Dec 2019 05:36:08 GMT
 EXPOSE 8080
 ```
 
@@ -10857,52 +10857,52 @@ EXPOSE 8080
 		Last Modified: Mon, 21 Oct 2019 21:44:18 GMT  
 		Size: 222.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c480d86e9f76b9604df41b59ff15c277235e77570c3094e24beea689906d7e85`  
-		Last Modified: Thu, 28 Nov 2019 21:13:22 GMT  
-		Size: 10.3 MB (10250558 bytes)  
+	-	`sha256:b0c3cc2f08e3e093e7f2363216f6414027208adc012c5aa07db197341329fe72`  
+		Last Modified: Thu, 19 Dec 2019 03:00:28 GMT  
+		Size: 10.3 MB (10263892 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f3842726b8d86447ea9f8ca1885524b2ae44cf308c3ae2e11f372aa6db308f32`  
-		Last Modified: Thu, 28 Nov 2019 21:13:21 GMT  
+	-	`sha256:57fb2ca7191a3ef22a9701e838adaf70fdbd265eb24703f14179044284913417`  
+		Last Modified: Thu, 19 Dec 2019 03:00:27 GMT  
 		Size: 498.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:57a451954efdb35ed624196af05c79b645dc444faaccc19d9d45d112f6de4061`  
-		Last Modified: Thu, 28 Nov 2019 21:13:24 GMT  
-		Size: 14.6 MB (14589908 bytes)  
+	-	`sha256:719b549f829c694acfed15af4094974701bcb4c0285684f08d92cf8d9ec9bcdc`  
+		Last Modified: Thu, 19 Dec 2019 03:00:33 GMT  
+		Size: 14.6 MB (14590503 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5a0b952c237a06829b97d3ed1d92cacf10888f77fba63726d16867056a4f044c`  
-		Last Modified: Fri, 06 Dec 2019 01:26:49 GMT  
-		Size: 2.2 KB (2216 bytes)  
+	-	`sha256:81e6bc38092826fd2472c7ca1eb2c700fed834bbd765e80ff2a643fd121154d2`  
+		Last Modified: Thu, 19 Dec 2019 03:00:26 GMT  
+		Size: 2.2 KB (2215 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:152b9d9c5ef59610e7b35742bebd1808171b7de2c4ccec2f0731a55a7559360d`  
-		Last Modified: Fri, 06 Dec 2019 01:26:48 GMT  
-		Size: 72.3 KB (72319 bytes)  
+	-	`sha256:a754e64b7156262e64e31a7201d5c625a9db50e96ecac534e504a6393f4e1a9e`  
+		Last Modified: Thu, 19 Dec 2019 03:00:27 GMT  
+		Size: 72.3 KB (72302 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1e64c9abda242b9b4d3a6c1baf781dda52eabbb6ef6d75db40cc72d87f1c4c77`  
-		Last Modified: Fri, 06 Dec 2019 01:47:18 GMT  
-		Size: 308.0 B  
+	-	`sha256:90f3f908ddee8f4ee6c6ca007ced4430786e103eac072c59fee4b402b2d8c388`  
+		Last Modified: Thu, 19 Dec 2019 05:36:51 GMT  
+		Size: 307.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d62f090b0e9efd0bfb9ba692958683cf86a15d423cc82c1609b954876086d6a8`  
-		Last Modified: Fri, 06 Dec 2019 01:47:18 GMT  
+	-	`sha256:857b7e4aae9f2ade154cb505cf91e6521e4099d23159d182a8cbef713c81532b`  
+		Last Modified: Thu, 19 Dec 2019 05:36:51 GMT  
 		Size: 1.4 KB (1372 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:762e247790399e6560e4640ca01701a7fcc2211f8cee51913462b618a25167af`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
-		Size: 1.3 MB (1267207 bytes)  
+	-	`sha256:ace782c3ac09d3f64c77972eafa84fee9f30761a8b9424bb4ffc178f8ebcf1ea`  
+		Last Modified: Thu, 19 Dec 2019 05:36:50 GMT  
+		Size: 1.3 MB (1267197 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0f51bae1177740cf6eec7579667748ed24bec56021cbb74b7210edc18f01be18`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
+	-	`sha256:a67e9e57ebac5385c07290704a48959e42587e9cca35993f56e0ec74384988fd`  
+		Last Modified: Thu, 19 Dec 2019 05:36:50 GMT  
 		Size: 125.7 KB (125657 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:628599883e3cd44a98167c252bdf0ab5a593036911dba0257cc80613a629ba8b`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
-		Size: 1.5 KB (1472 bytes)  
+	-	`sha256:49eb563494c485a889d81dda7ee04ce14f7b22cfa901415e048a5c0c18d2bb0f`  
+		Last Modified: Thu, 19 Dec 2019 05:36:49 GMT  
+		Size: 1.5 KB (1477 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3536dd8cbdfc6bc3a00a8c6e170b6b28329ba806612bca28010703e03746e34e`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
-		Size: 570.4 KB (570378 bytes)  
+	-	`sha256:3b5bc3cefb34ffac141e2420696af773ce85d635ff6d02d406903625b83b3f04`  
+		Last Modified: Thu, 19 Dec 2019 05:36:50 GMT  
+		Size: 570.4 KB (570379 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6eeb0c1100b26366c86db33f094c4a819fc26e55ce4eb2e5f5ab309c4a02edb0`  
-		Last Modified: Fri, 06 Dec 2019 01:47:16 GMT  
+	-	`sha256:b807bb1614467154aa601b40815ea51d330eebb00f281a71b54af161d17b20ec`  
+		Last Modified: Thu, 19 Dec 2019 05:36:49 GMT  
 		Size: 496.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -11066,14 +11066,14 @@ EXPOSE 8080
 ### `adminer:standalone` - linux; arm variant v7
 
 ```console
-$ docker pull adminer@sha256:ca8d6b805bd6de4b7ae82a31dcaa1c1eaa16c7170d6a2d8a84390246fb323f1a
+$ docker pull adminer@sha256:45f3f63bea4b53ed6f840b452aad505d813cf99755272303c705731a9c2c1a37
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **28.4 MB (28355059 bytes)**  
+-	Total Size: **28.4 MB (28375258 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6a6a009dde2aee41ade135a5592990a968056ac0ca2903616b3146d78e8df4d4`
+-	Image ID: `sha256:c6fcf1f9bcc93e97da85dddf171a35cc7c3a686b415d320b4737e95e19bcbfec`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php","-S","[::]:8080","-t","\/var\/www\/html"]`
 
@@ -11100,57 +11100,57 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 00:42:48 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:19:44 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:19:45 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:19:46 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:19:51 GMT
+# Wed, 18 Dec 2019 22:13:45 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:13:46 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:13:46 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:13:50 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:19:52 GMT
+# Wed, 18 Dec 2019 22:13:51 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:22:34 GMT
+# Wed, 18 Dec 2019 22:16:23 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:17:24 GMT
+# Wed, 18 Dec 2019 22:16:24 GMT
 COPY multi:0b7e4a1b9cd5748d214539db3c6bee9b30805d1933690492830b56ffcd31f68d in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:17:29 GMT
+# Wed, 18 Dec 2019 22:16:27 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:17:32 GMT
+# Wed, 18 Dec 2019 22:16:28 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:17:33 GMT
+# Wed, 18 Dec 2019 22:16:28 GMT
 CMD ["php" "-a"]
-# Fri, 06 Dec 2019 04:50:48 GMT
+# Thu, 19 Dec 2019 05:43:15 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 04:50:50 GMT
+# Thu, 19 Dec 2019 05:43:15 GMT
 STOPSIGNAL SIGINT
-# Fri, 06 Dec 2019 04:50:59 GMT
+# Thu, 19 Dec 2019 05:43:18 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 04:51:01 GMT
+# Thu, 19 Dec 2019 05:43:19 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 04:51:06 GMT
+# Thu, 19 Dec 2019 05:43:21 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 04:51:54 GMT
+# Thu, 19 Dec 2019 05:43:50 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 04:51:56 GMT
+# Thu, 19 Dec 2019 05:43:51 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 04:52:00 GMT
+# Thu, 19 Dec 2019 05:43:51 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 04:52:04 GMT
+# Thu, 19 Dec 2019 05:43:52 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 04:52:09 GMT
+# Thu, 19 Dec 2019 05:43:52 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 04:52:23 GMT
+# Thu, 19 Dec 2019 05:43:55 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 04:52:25 GMT
+# Thu, 19 Dec 2019 05:43:56 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 04:52:27 GMT
+# Thu, 19 Dec 2019 05:43:56 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 04:52:29 GMT
+# Thu, 19 Dec 2019 05:43:57 GMT
 USER adminer
-# Fri, 06 Dec 2019 04:52:33 GMT
+# Thu, 19 Dec 2019 05:43:58 GMT
 CMD ["php" "-S" "[::]:8080" "-t" "/var/www/html"]
-# Fri, 06 Dec 2019 04:52:38 GMT
+# Thu, 19 Dec 2019 05:43:58 GMT
 EXPOSE 8080
 ```
 
@@ -11171,53 +11171,53 @@ EXPOSE 8080
 		Last Modified: Mon, 21 Oct 2019 22:14:00 GMT  
 		Size: 267.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:74d543cc24962e4f8efaef27c314b6c510d9e89795bb3fefc76190c88e6adaa0`  
-		Last Modified: Thu, 28 Nov 2019 20:37:08 GMT  
-		Size: 10.3 MB (10250580 bytes)  
+	-	`sha256:9ca9d33ba72a23b5503797dc37271a4e969f593c1f91fab7b5e8fc9e199a3237`  
+		Last Modified: Thu, 19 Dec 2019 00:23:23 GMT  
+		Size: 10.3 MB (10263922 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:61533199b1c12541ec2c6e8792481ed0bf870ab2614fca26df4472ed7489905b`  
-		Last Modified: Thu, 28 Nov 2019 20:37:06 GMT  
-		Size: 494.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cb40e8b71fdcda892a7fff7b40bd040c14189bdbf81c6900e2506a34d0a5e2a8`  
-		Last Modified: Thu, 28 Nov 2019 20:37:11 GMT  
-		Size: 12.7 MB (12659015 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:73e8322b4997afc76e3d6aded9b6977d019a876387f38bb0c7b20303eb741ea1`  
-		Last Modified: Fri, 06 Dec 2019 01:35:28 GMT  
-		Size: 2.2 KB (2215 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bee10ead90205f4f11c6737cb5e9809cf554b750d259f2bb978806599ff48d4d`  
-		Last Modified: Fri, 06 Dec 2019 01:35:28 GMT  
-		Size: 71.9 KB (71901 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b2343ca0934ccfcf3473bcd86e8769c80a356c838360d24e6c15c8549d8799ff`  
-		Last Modified: Fri, 06 Dec 2019 04:55:13 GMT  
-		Size: 311.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3339cf595876f587528feea8189a242d1eee086d7c129183282e0d0bf5dfec9e`  
-		Last Modified: Fri, 06 Dec 2019 04:55:13 GMT  
-		Size: 1.4 KB (1420 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:273f3098e61dc9b47d64ba9a3e339b88d90351233841e926290aaf8f81b719e8`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
-		Size: 1.1 MB (1098041 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f48a0dca6ba28aa1b4488aa4541f847d05b842f7adfd2fbe4df3d510ea08bb44`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
-		Size: 113.6 KB (113646 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:911b6063ce3a1a087497bb65c33df13aa956676a9977dec81024c9158363b7a1`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
-		Size: 1.5 KB (1474 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c17014746daefe47239efc1403be753dbbd9860da773a322a172487485cb8993`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
-		Size: 570.5 KB (570460 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:87db519a03011aadfd54c42773aed91d48871a3e423f8652ae2fa3c6a201d7f0`  
-		Last Modified: Fri, 06 Dec 2019 04:55:11 GMT  
+	-	`sha256:9abaf2cca6b8f6360c51d0ab64e5733dd6fe54d2160f0b90b2c2b30cc9d09556`  
+		Last Modified: Thu, 19 Dec 2019 00:23:23 GMT  
 		Size: 498.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:0d1c28a483480472543267f13fa560e37c42d398e03258ec10f3259791f26c2b`  
+		Last Modified: Thu, 19 Dec 2019 00:23:26 GMT  
+		Size: 12.7 MB (12665914 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c296b4d3757a3eb5a9eaa1bee6c67b7f85258f295e5d1adfeae082aaa4ffe554`  
+		Last Modified: Thu, 19 Dec 2019 00:23:23 GMT  
+		Size: 2.2 KB (2213 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:3f0c6898b03f711ee9c13adb0e7ac827b235e872574ad2e0466ce38a7006494f`  
+		Last Modified: Thu, 19 Dec 2019 00:23:23 GMT  
+		Size: 71.9 KB (71882 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:85f53d18384dba7127519315cb122ebcc1c8f1420b7359054849ebd5c2eb8501`  
+		Last Modified: Thu, 19 Dec 2019 05:45:20 GMT  
+		Size: 308.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:29ba2b51dd9ec6d55f6dcbd14fd64e4424e17d54d50559b04f7872439fe23c84`  
+		Last Modified: Thu, 19 Dec 2019 05:45:20 GMT  
+		Size: 1.4 KB (1418 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ed774f039edbc14130f2a14cc8a6036a51ebcd1eb96bbfd75d3ac1c581bdb3a2`  
+		Last Modified: Thu, 19 Dec 2019 05:45:18 GMT  
+		Size: 1.1 MB (1098039 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ddbca63dcd496dfe19ebd0ce58453dcf241bca16bd12220566202434e47730ff`  
+		Last Modified: Thu, 19 Dec 2019 05:45:18 GMT  
+		Size: 113.6 KB (113634 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:fdc0c14d20b92cde224999d0a7464e0dd1063ed2fe903a20fc7902d451928868`  
+		Last Modified: Thu, 19 Dec 2019 05:45:19 GMT  
+		Size: 1.5 KB (1477 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:4854bad04d3751dd937dde7badbbe7b0be2baee2b0c0b6e654e45ea0155fd765`  
+		Last Modified: Thu, 19 Dec 2019 05:45:18 GMT  
+		Size: 570.5 KB (570450 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:183711409a19b109d1862eb8f004260effa66c92f58f14f1ad425a474ba8572d`  
+		Last Modified: Thu, 19 Dec 2019 05:45:18 GMT  
+		Size: 499.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adminer:standalone` - linux; arm64 variant v8
@@ -11380,14 +11380,14 @@ EXPOSE 8080
 ### `adminer:standalone` - linux; 386
 
 ```console
-$ docker pull adminer@sha256:3b3b632ad55b7004f6d67004583ca8d4756f52487240d6530977ad9a503ba629
+$ docker pull adminer@sha256:4d9d4d3dba3055adde16332ec8bb9f98fbc264574d8755f161b2c7420f0fb73e
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **31.6 MB (31595367 bytes)**  
+-	Total Size: **31.6 MB (31611527 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1a9e767ae5c65d7fecf62761e3afd0b53184749f9cfcca68ae1c099ed852e137`
+-	Image ID: `sha256:6921567de258c77b202adc3226c7996e1fb5f526f205d6712821a57b84db89ee`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php","-S","[::]:8080","-t","\/var\/www\/html"]`
 
@@ -11414,57 +11414,57 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 03:40:32 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:03:14 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:03:14 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:03:14 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:03:17 GMT
+# Wed, 18 Dec 2019 23:18:21 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 23:18:22 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 23:18:22 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 23:18:24 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:03:17 GMT
+# Wed, 18 Dec 2019 23:18:25 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:08:51 GMT
+# Wed, 18 Dec 2019 23:27:50 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 00:41:35 GMT
+# Wed, 18 Dec 2019 23:27:51 GMT
 COPY multi:0b7e4a1b9cd5748d214539db3c6bee9b30805d1933690492830b56ffcd31f68d in /usr/local/bin/ 
-# Fri, 06 Dec 2019 00:41:36 GMT
+# Wed, 18 Dec 2019 23:27:53 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 00:41:36 GMT
+# Wed, 18 Dec 2019 23:27:53 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 00:41:36 GMT
+# Wed, 18 Dec 2019 23:27:53 GMT
 CMD ["php" "-a"]
-# Fri, 06 Dec 2019 01:35:26 GMT
+# Thu, 19 Dec 2019 06:02:48 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 01:35:26 GMT
+# Thu, 19 Dec 2019 06:02:48 GMT
 STOPSIGNAL SIGINT
-# Fri, 06 Dec 2019 01:35:27 GMT
+# Thu, 19 Dec 2019 06:02:49 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 01:35:27 GMT
+# Thu, 19 Dec 2019 06:02:49 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 01:35:28 GMT
+# Thu, 19 Dec 2019 06:02:50 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 01:35:45 GMT
+# Thu, 19 Dec 2019 06:03:08 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:10 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:10 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:10 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:10 GMT
 USER adminer
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:11 GMT
 CMD ["php" "-S" "[::]:8080" "-t" "/var/www/html"]
-# Fri, 06 Dec 2019 01:35:47 GMT
+# Thu, 19 Dec 2019 06:03:11 GMT
 EXPOSE 8080
 ```
 
@@ -11485,66 +11485,66 @@ EXPOSE 8080
 		Last Modified: Mon, 21 Oct 2019 20:16:09 GMT  
 		Size: 221.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7a2f924d5bef762db8a36415395a7d8d645e86c8c10e98670ee6441f4dfffc4b`  
-		Last Modified: Thu, 28 Nov 2019 20:25:40 GMT  
-		Size: 10.3 MB (10250558 bytes)  
+	-	`sha256:8d3c120548e2cc8578bcbc722a1de16f16aa1bbd6f95a3f3f250760ef49d6425`  
+		Last Modified: Thu, 19 Dec 2019 03:54:02 GMT  
+		Size: 10.3 MB (10263911 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d86e42c218805225dcb7fb493e2333b3aa5dbe52acfe920142f7beddb424cf83`  
-		Last Modified: Thu, 28 Nov 2019 20:25:39 GMT  
-		Size: 497.0 B  
+	-	`sha256:6c67772931308b5da9ecd54e42e8b4f0cee6a6ca800c39c9bb90f7935371f173`  
+		Last Modified: Thu, 19 Dec 2019 03:54:01 GMT  
+		Size: 498.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df9403ccfdc695e35b6d3018248acf35d406f0cfafb094c31e3837d69bafd01c`  
-		Last Modified: Thu, 28 Nov 2019 20:25:45 GMT  
-		Size: 15.0 MB (14964307 bytes)  
+	-	`sha256:81de9fd8c68cc661996bb58ab58c8ca7fcc4523d035c2bbfc2835549da0a48ae`  
+		Last Modified: Thu, 19 Dec 2019 03:54:07 GMT  
+		Size: 15.0 MB (14967109 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ec757c77b33207cd2e297fb2ab7146f4245ec36acc52bd38cba1fbd4e3ec0b8b`  
-		Last Modified: Fri, 06 Dec 2019 00:46:31 GMT  
-		Size: 2.2 KB (2220 bytes)  
+	-	`sha256:2cc02e941d1953f8fbbd589f5a7cece48de8e05d8626f4dc9fc7272716e999e9`  
+		Last Modified: Thu, 19 Dec 2019 03:54:01 GMT  
+		Size: 2.2 KB (2211 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4d52ef7bb6d6ca924fc76da53a0d613f171978768e3b572da49a8f77ea6f8d6c`  
-		Last Modified: Fri, 06 Dec 2019 00:46:30 GMT  
+	-	`sha256:8a7864fff700c7ab0ac04ee51707c956b859bd42ce6e4bac9317a0224058ec59`  
+		Last Modified: Thu, 19 Dec 2019 03:54:01 GMT  
 		Size: 71.5 KB (71454 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6e5b781398aa148728fa13f2df2f88fa4d9b3570891ff55a3af9cb50c2098412`  
-		Last Modified: Fri, 06 Dec 2019 01:36:35 GMT  
+	-	`sha256:7274061ca352a1262686abb045838ea905ae178eee118a6a1e23834490af7953`  
+		Last Modified: Thu, 19 Dec 2019 06:03:50 GMT  
 		Size: 308.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:de505ea02604bd909cfaf3b498de539cedd1332bfe778ba03947dce6e0d33d23`  
-		Last Modified: Fri, 06 Dec 2019 01:36:35 GMT  
-		Size: 1.4 KB (1376 bytes)  
+	-	`sha256:e79de5c64323f911324528fcb2f88bc245b69fe50c242865fbb4ac204b52b545`  
+		Last Modified: Thu, 19 Dec 2019 06:03:51 GMT  
+		Size: 1.4 KB (1373 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:14cdb373d56b69e1927e31d36942beeeb400c2632b5bc77e1f73ad115ba8383a`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 1.4 MB (1382441 bytes)  
+	-	`sha256:673d96f2a5b2ca78e58cf695d0dba02cdf0279a1620b9a4b7e62192cb52054a9`  
+		Last Modified: Thu, 19 Dec 2019 06:03:50 GMT  
+		Size: 1.4 MB (1382437 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e4bcc50f7578a489fab996ffee3c7ea194e47a068ad3cae0821f4d60e06986b7`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 128.8 KB (128797 bytes)  
+	-	`sha256:b14ef693e693233cf4fea5d27768673723fdd0ac67859f0740a6e3ca15718406`  
+		Last Modified: Thu, 19 Dec 2019 06:03:49 GMT  
+		Size: 128.8 KB (128815 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5463ed1f22d5ece3465e961d34ec3854c36dfe23261548ab50b89fdd0f775e00`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 1.5 KB (1474 bytes)  
+	-	`sha256:14095c6e1a5c6c8e2eb79a0edb5fba2bfc43757e24a2d5953fc267cf77a178b5`  
+		Last Modified: Thu, 19 Dec 2019 06:03:49 GMT  
+		Size: 1.5 KB (1473 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d98966329f05e112300ee57648333a12079a1cc8a41d15d0e396391c444e67c1`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 570.4 KB (570373 bytes)  
+	-	`sha256:bf75ef62d8952c613219a1462ce69c61b6e6ca742bfe6578d3732a3d97fba9c4`  
+		Last Modified: Thu, 19 Dec 2019 06:03:50 GMT  
+		Size: 570.4 KB (570377 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:adef02fa3ca71fdceafb1fd92ff74960848b5673988dc3f2dc021aeaa943966b`  
-		Last Modified: Fri, 06 Dec 2019 01:36:34 GMT  
-		Size: 496.0 B  
+	-	`sha256:79374c30d550e98acc64a36e936903f0fd6eee39645aef5007145f7860c1d8f9`  
+		Last Modified: Thu, 19 Dec 2019 06:03:49 GMT  
+		Size: 495.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adminer:standalone` - linux; ppc64le
 
 ```console
-$ docker pull adminer@sha256:c59dc08edbac430c86555d96e000a1d49c59e8a66bc5e9d3b073ed8fd76f08ea
+$ docker pull adminer@sha256:b10e79ba1e7932ac27c0ffb06cc228415b4552687d150f89ed3f21ee08194220
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **32.2 MB (32227844 bytes)**  
+-	Total Size: **32.2 MB (32247973 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:96efedc317d25ffb54f9f12d72c5f57e58d4d511e52b62c3548a5b787d1f3ad5`
+-	Image ID: `sha256:573383ff5140ec4fcaf742c4be6757a0567423c5c5833be7d728669583167bd3`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php","-S","[::]:8080","-t","\/var\/www\/html"]`
 
@@ -11571,57 +11571,57 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie
 # Thu, 24 Oct 2019 01:17:40 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 28 Nov 2019 20:44:14 GMT
-ENV PHP_VERSION=7.4.0
-# Thu, 28 Nov 2019 20:44:17 GMT
-ENV PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror
-# Thu, 28 Nov 2019 20:44:19 GMT
-ENV PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42 PHP_MD5=
-# Thu, 28 Nov 2019 20:44:32 GMT
+# Wed, 18 Dec 2019 22:43:03 GMT
+ENV PHP_VERSION=7.4.1
+# Wed, 18 Dec 2019 22:43:05 GMT
+ENV PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror
+# Wed, 18 Dec 2019 22:43:07 GMT
+ENV PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762 PHP_MD5=
+# Wed, 18 Dec 2019 22:43:21 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 28 Nov 2019 20:44:34 GMT
+# Wed, 18 Dec 2019 22:43:23 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 28 Nov 2019 20:48:15 GMT
+# Wed, 18 Dec 2019 22:46:52 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 06 Dec 2019 01:21:52 GMT
+# Wed, 18 Dec 2019 22:46:54 GMT
 COPY multi:0b7e4a1b9cd5748d214539db3c6bee9b30805d1933690492830b56ffcd31f68d in /usr/local/bin/ 
-# Fri, 06 Dec 2019 01:22:02 GMT
+# Wed, 18 Dec 2019 22:46:59 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Dec 2019 01:22:05 GMT
+# Wed, 18 Dec 2019 22:47:01 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Dec 2019 01:22:06 GMT
+# Wed, 18 Dec 2019 22:47:03 GMT
 CMD ["php" "-a"]
-# Fri, 06 Dec 2019 02:50:03 GMT
+# Thu, 19 Dec 2019 06:27:50 GMT
 RUN echo "upload_max_filesize = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-# Fri, 06 Dec 2019 02:50:05 GMT
+# Thu, 19 Dec 2019 06:27:55 GMT
 STOPSIGNAL SIGINT
-# Fri, 06 Dec 2019 02:50:19 GMT
+# Thu, 19 Dec 2019 06:28:07 GMT
 RUN addgroup -S adminer &&	adduser -S -G adminer adminer &&	mkdir -p /var/www/html &&	mkdir -p /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Fri, 06 Dec 2019 02:50:23 GMT
+# Thu, 19 Dec 2019 06:28:11 GMT
 WORKDIR /var/www/html
-# Fri, 06 Dec 2019 02:50:32 GMT
+# Thu, 19 Dec 2019 06:28:18 GMT
 RUN apk add --no-cache libpq
-# Fri, 06 Dec 2019 02:51:03 GMT
+# Thu, 19 Dec 2019 06:28:51 GMT
 RUN set -x &&	apk add --no-cache --virtual .build-deps 	postgresql-dev 	sqlite-dev &&	docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite &&	apk del .build-deps
-# Fri, 06 Dec 2019 02:51:07 GMT
+# Thu, 19 Dec 2019 06:28:54 GMT
 COPY multi:3020a2cf8da93deb4663b2b608f3156b5f8da81b19c0fa615f495168d48abf9c in /var/www/html/ 
-# Fri, 06 Dec 2019 02:51:08 GMT
+# Thu, 19 Dec 2019 06:28:58 GMT
 ENV ADMINER_VERSION=4.7.5
-# Fri, 06 Dec 2019 02:51:12 GMT
+# Thu, 19 Dec 2019 06:28:59 GMT
 ENV ADMINER_DOWNLOAD_SHA256=857351da4d8963ad5621f1a696bd2396b3c28d7f41284ab741fed65dec95539c
-# Fri, 06 Dec 2019 02:51:14 GMT
+# Thu, 19 Dec 2019 06:29:03 GMT
 ENV ADMINER_SRC_DOWNLOAD_SHA256=07f47b70560bb5eaeeb6ffc3d3b53f038e10ffe582e6e16cd218221365f19677
-# Fri, 06 Dec 2019 02:51:24 GMT
+# Thu, 19 Dec 2019 06:29:15 GMT
 RUN set -x &&	curl -fsSL https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	curl -fsSL https://github.com/vrana/adminer/archive/v$ADMINER_VERSION.tar.gz -o source.tar.gz &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" &&	rm source.tar.gz
-# Fri, 06 Dec 2019 02:51:27 GMT
+# Thu, 19 Dec 2019 06:29:18 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Fri, 06 Dec 2019 02:51:33 GMT
+# Thu, 19 Dec 2019 06:29:20 GMT
 ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
-# Fri, 06 Dec 2019 02:51:35 GMT
+# Thu, 19 Dec 2019 06:29:26 GMT
 USER adminer
-# Fri, 06 Dec 2019 02:51:40 GMT
+# Thu, 19 Dec 2019 06:29:30 GMT
 CMD ["php" "-S" "[::]:8080" "-t" "/var/www/html"]
-# Fri, 06 Dec 2019 02:51:44 GMT
+# Thu, 19 Dec 2019 06:29:34 GMT
 EXPOSE 8080
 ```
 
@@ -11642,51 +11642,51 @@ EXPOSE 8080
 		Last Modified: Mon, 21 Oct 2019 20:21:00 GMT  
 		Size: 269.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f41671226d36c01ec9c7f1ea38cd673556952e7f899f4f4b89c9fbdebd29a53b`  
-		Last Modified: Thu, 28 Nov 2019 21:10:15 GMT  
-		Size: 10.3 MB (10250609 bytes)  
+	-	`sha256:4b579441bf6e92a1a6e81ea93691621e4c87a50d9ffb31d4b378b5df7d32872f`  
+		Last Modified: Thu, 19 Dec 2019 01:42:36 GMT  
+		Size: 10.3 MB (10263942 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1d940bc1bed9725313bbc396a711a790598103f8425780c96a2b8e0b8c314f83`  
-		Last Modified: Thu, 28 Nov 2019 21:10:13 GMT  
-		Size: 498.0 B  
+	-	`sha256:439349ae045fb12b63f4ea12de47a2383371a3189b6e95b5a84693903df9b0a4`  
+		Last Modified: Thu, 19 Dec 2019 01:42:35 GMT  
+		Size: 497.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:02effde3bc9b924c0d25924f0e1f298c9e7644c948efa10ff4d8945399a16b74`  
-		Last Modified: Thu, 28 Nov 2019 21:10:19 GMT  
-		Size: 15.6 MB (15648865 bytes)  
+	-	`sha256:48b07dcdf318b1dc68a37f668ccb781855c62ec5ac7721f9c1149fdb135ba87d`  
+		Last Modified: Thu, 19 Dec 2019 01:42:48 GMT  
+		Size: 15.7 MB (15655717 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e31c94093f50a0b5f297e9da64e47405dbe46f8ec535d000ee7f725a553fc633`  
-		Last Modified: Fri, 06 Dec 2019 01:40:27 GMT  
-		Size: 2.2 KB (2217 bytes)  
+	-	`sha256:c7eab24ff28c16bb245a5237cc4946807bcb8d827d3702b5bb9f74cfd586fece`  
+		Last Modified: Thu, 19 Dec 2019 01:42:35 GMT  
+		Size: 2.2 KB (2210 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:232540856492a6874250c20d02259faf35c4a5b5aa42520d4c9528742d779fd0`  
-		Last Modified: Fri, 06 Dec 2019 01:40:27 GMT  
-		Size: 72.2 KB (72168 bytes)  
+	-	`sha256:8334e4feab309edb35cdf7bec81a8a27169fa44dde213e3030369881eda125f1`  
+		Last Modified: Thu, 19 Dec 2019 01:42:35 GMT  
+		Size: 72.1 KB (72144 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d14842d0c142c0039a7a184b2b3d335b2a01864a6235ea3dda30897e146ad1c6`  
-		Last Modified: Fri, 06 Dec 2019 02:53:43 GMT  
-		Size: 310.0 B  
+	-	`sha256:6e5b8d229e7b1d88a7c021b6c715fb1dc4558108381b5279c56a41a62dbc2261`  
+		Last Modified: Thu, 19 Dec 2019 06:32:06 GMT  
+		Size: 306.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d2190da7f3695c3878621e1660bf04a2c8dbdfef966bffeb6971cf76aed20f16`  
-		Last Modified: Fri, 06 Dec 2019 02:53:43 GMT  
-		Size: 1.4 KB (1414 bytes)  
+	-	`sha256:8a14230d6a9f6580d0617afb712af2aa3a52531275d062968f9876403ef06fb4`  
+		Last Modified: Thu, 19 Dec 2019 06:32:05 GMT  
+		Size: 1.4 KB (1421 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:55e067e4d19dc08989322d9eb8129d7bdbf1bf797725927442cc93bf69ae0d33`  
-		Last Modified: Fri, 06 Dec 2019 02:53:40 GMT  
-		Size: 1.3 MB (1347029 bytes)  
+	-	`sha256:6d0c4ce6bd51ba7c0848bd56478144b0695f576f8ae0678eb62e05ee3559fc42`  
+		Last Modified: Thu, 19 Dec 2019 06:32:03 GMT  
+		Size: 1.3 MB (1347007 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ff1668716d22838ddf256cebcbf1b09ddc48fc942a5842b5e13e6c44e830c394`  
-		Last Modified: Fri, 06 Dec 2019 02:53:39 GMT  
-		Size: 135.8 KB (135823 bytes)  
+	-	`sha256:8f2e3e1cdb6c28b9b5b15dba0737ad3ed00202221c4c671693dc9fc7b7ba77cc`  
+		Last Modified: Thu, 19 Dec 2019 06:32:02 GMT  
+		Size: 135.8 KB (135826 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2a7c9bfcff913dd0e174b7de4290afacf966f43e6be2dd050e56584c94028fe2`  
-		Last Modified: Fri, 06 Dec 2019 02:53:39 GMT  
-		Size: 1.5 KB (1479 bytes)  
+	-	`sha256:43cb845103383d0bd1567a8b09f649e5f523c37b005bd6625351c8dbf52f6976`  
+		Last Modified: Thu, 19 Dec 2019 06:32:01 GMT  
+		Size: 1.5 KB (1473 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:04e9df15d0417b3f6421f2a692de9e7bdfa605d9bf0105088ad284939e459927`  
-		Last Modified: Fri, 06 Dec 2019 02:53:40 GMT  
-		Size: 570.5 KB (570451 bytes)  
+	-	`sha256:2d4d6287f785538118622662e0c60ab299f7a2ae11f5301fa041f86527b24464`  
+		Last Modified: Thu, 19 Dec 2019 06:32:02 GMT  
+		Size: 570.5 KB (570450 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:072c9cb6de1241a262601cb46dc6b10bff853e228b847c61d3443de139fb9ac2`  
-		Last Modified: Fri, 06 Dec 2019 02:53:39 GMT  
-		Size: 498.0 B  
+	-	`sha256:81477a62f96cdc3549a2c6c8ac63f34fc068128715c326c6c916ac7a607475f5`  
+		Last Modified: Thu, 19 Dec 2019 06:32:02 GMT  
+		Size: 497.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
