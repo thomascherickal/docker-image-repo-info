@@ -1,7 +1,7 @@
 ## `sonarqube:latest`
 
 ```console
-$ docker pull sonarqube@sha256:64d3a0e6fc899542d9171b0a94135ea7c4b51fbb25842ca782baf0de00f66535
+$ docker pull sonarqube@sha256:929e4ab60b70537e0d40d03143f5f56d6af31c4be3896893095190dafc5a369a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull sonarqube@sha256:64d3a0e6fc899542d9171b0a94135ea7c4b51fbb25842ca78
 ### `sonarqube:latest` - linux; amd64
 
 ```console
-$ docker pull sonarqube@sha256:1e52d358aea62740037447851871cabef06685a73e713d43c7585017264baac0
+$ docker pull sonarqube@sha256:8fd6d6eb88aba93aec7b6479eff2db5107c3d941f51030bf99997f9707f82691
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **283.2 MB (283245600 bytes)**  
+-	Total Size: **286.6 MB (286570697 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ea9ce8f562b52329d48f4f87fc534b5c2e51ad1b4da936f61d112fc1c61670a4`
+-	Image ID: `sha256:558493cb9339f4ec408db1cadddde86932be98e8112ad354bb4b10bd1f200788`
 -	Entrypoint: `[".\/bin\/run.sh"]`
 
 ```dockerfile
@@ -46,25 +46,25 @@ ENV JAVA_URL_VERSION=11.0.5_10
 RUN set -eux; 		dpkgArch="$(dpkg --print-architecture)"; 	case "$dpkgArch" in 		amd64) upstreamArch='x64' ;; 		arm64) upstreamArch='aarch64' ;; 		*) echo >&2 "error: unsupported architecture: $dpkgArch" ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz.asc "${JAVA_BASE_URL}${upstreamArch}_linux_${JAVA_URL_VERSION}.tar.gz.sign"; 	wget -O openjdk.tgz "${JAVA_BASE_URL}${upstreamArch}_linux_${JAVA_URL_VERSION}.tar.gz" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java --version
 # Wed, 04 Dec 2019 00:12:03 GMT
 RUN apt-get update     && apt-get install -y curl gnupg2 unzip     && rm -rf /var/lib/apt/lists/*
-# Wed, 04 Dec 2019 00:12:03 GMT
-ENV SONAR_VERSION=7.9.1 SONARQUBE_HOME=/opt/sonarqube SONARQUBE_JDBC_USERNAME=sonar SONARQUBE_JDBC_PASSWORD=sonar SONARQUBE_JDBC_URL=
-# Wed, 04 Dec 2019 00:12:03 GMT
+# Thu, 19 Dec 2019 04:16:16 GMT
+ENV SONAR_VERSION=7.9.2 SONARQUBE_HOME=/opt/sonarqube SONARQUBE_JDBC_USERNAME=sonar SONARQUBE_JDBC_PASSWORD=sonar SONARQUBE_JDBC_URL=
+# Thu, 19 Dec 2019 04:16:16 GMT
 EXPOSE 9000
-# Wed, 04 Dec 2019 00:12:04 GMT
+# Thu, 19 Dec 2019 04:16:17 GMT
 RUN groupadd -r sonarqube && useradd -r -g sonarqube sonarqube
-# Wed, 04 Dec 2019 00:12:05 GMT
+# Thu, 19 Dec 2019 04:16:18 GMT
 RUN for server in $(shuf -e ha.pool.sks-keyservers.net                             hkp://p80.pool.sks-keyservers.net:80                             keyserver.ubuntu.com                             hkp://keyserver.ubuntu.com:80                             pgp.mit.edu) ; do         gpg --batch --keyserver "$server" --recv-keys F1182E81C792928921DBCAB4CFCA4A29D26468DE && break || : ;     done
-# Wed, 04 Dec 2019 00:12:18 GMT
+# Thu, 19 Dec 2019 04:16:32 GMT
 RUN set -x     && cd /opt     && curl -o sonarqube.zip -fSL https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-$SONAR_VERSION.zip     && curl -o sonarqube.zip.asc -fSL https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-$SONAR_VERSION.zip.asc     && gpg --batch --verify sonarqube.zip.asc sonarqube.zip     && unzip -q sonarqube.zip     && mv sonarqube-$SONAR_VERSION sonarqube     && chown -R sonarqube:sonarqube sonarqube     && rm sonarqube.zip*     && rm -rf $SONARQUBE_HOME/bin/*
-# Wed, 04 Dec 2019 00:12:19 GMT
+# Thu, 19 Dec 2019 04:16:32 GMT
 VOLUME [/opt/sonarqube/data]
-# Wed, 04 Dec 2019 00:12:19 GMT
+# Thu, 19 Dec 2019 04:16:33 GMT
 WORKDIR /opt/sonarqube
-# Wed, 04 Dec 2019 00:12:19 GMT
+# Thu, 19 Dec 2019 04:16:33 GMT
 COPY file:aa007fcc6be4125cbbb27fe345978294add03a4f05e942a5208a37be832addca in /opt/sonarqube/bin/ 
-# Wed, 04 Dec 2019 00:12:19 GMT
+# Thu, 19 Dec 2019 04:16:33 GMT
 USER sonarqube
-# Wed, 04 Dec 2019 00:12:19 GMT
+# Thu, 19 Dec 2019 04:16:33 GMT
 ENTRYPOINT ["./bin/run.sh"]
 ```
 
@@ -89,19 +89,19 @@ ENTRYPOINT ["./bin/run.sh"]
 		Last Modified: Wed, 04 Dec 2019 00:13:51 GMT  
 		Size: 6.0 MB (5984740 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9a775036a9e62d5cb1a8e5ea5d7f5c246139889706b39904d86f97e6293ac3ba`  
-		Last Modified: Wed, 04 Dec 2019 00:13:50 GMT  
+	-	`sha256:f2b73f885df11ab7e39008d2d29f1ec96e45293af7850d830e0d2260adfdf109`  
+		Last Modified: Thu, 19 Dec 2019 04:18:09 GMT  
 		Size: 1.8 KB (1753 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:10640c614c1eed068277da2085f0aae4ae93bfe34541c4996f92defa1062caeb`  
-		Last Modified: Wed, 04 Dec 2019 00:13:50 GMT  
-		Size: 1.8 KB (1761 bytes)  
+	-	`sha256:d2b58376c25781f4361c3983231b269c94fa970a6a0ccde2830ce9e91cf01b01`  
+		Last Modified: Thu, 19 Dec 2019 04:18:09 GMT  
+		Size: 1.8 KB (1763 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0a5459c4b5181c3d4e078e0cf6ab0c15526c0c4fc76a997c45426e63f47a38b8`  
-		Last Modified: Wed, 04 Dec 2019 00:14:03 GMT  
-		Size: 204.8 MB (204809563 bytes)  
+	-	`sha256:6a553db130f66c4268957be08a705747f5c659f9581ff5b2da5ab05e4d69f0c4`  
+		Last Modified: Thu, 19 Dec 2019 04:18:27 GMT  
+		Size: 208.1 MB (208134658 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b68f6850bf3994ebcf1a235a6efd865e59d7a36669fbaf68fb0cb0c3248a6c55`  
-		Last Modified: Wed, 04 Dec 2019 00:13:50 GMT  
+	-	`sha256:65af0d99b5db0072a30f57125fea4976887c2d2970b476556785087ac2affafb`  
+		Last Modified: Thu, 19 Dec 2019 04:18:10 GMT  
 		Size: 787.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
