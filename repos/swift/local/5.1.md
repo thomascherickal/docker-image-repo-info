@@ -1,9 +1,9 @@
-# `swift:5.1.2`
+# `swift:5.1.3`
 
 ## Docker Metadata
 
-- Image ID: `sha256:bfc1fa7b54be44f19d8bc7ec2ddf0e478220123f54f18a1358c18731b1ac068b`
-- Created: `2019-11-09T01:27:22.863660157Z`
+- Image ID: `sha256:0f54e96eb49bc6c32417e95aaca896d36cae9046c20567d95543e0328a5dc852`
+- Created: `2019-12-16T23:32:02.950917984Z`
 - Virtual Size: ~ 1.48 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -12,8 +12,8 @@
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561`
   - `SWIFT_PLATFORM=ubuntu18.04`
-  - `SWIFT_BRANCH=swift-5.1.2-release`
-  - `SWIFT_VERSION=swift-5.1.2-RELEASE`
+  - `SWIFT_BRANCH=swift-5.1.3-release`
+  - `SWIFT_VERSION=swift-5.1.3-RELEASE`
   - `SWIFT_WEBROOT=https://swift.org/builds/`
 - Labels:
   - `Description=Docker Container for the Swift programming language`
@@ -2370,9 +2370,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris python2.7=2.7.15-4ubuntu4~18.04.2
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.15-4ubuntu4~18.04.2.dsc' python2.7_2.7.15-4ubuntu4~18.04.2.dsc 3476 SHA256:3876165628c986dc5f9dc128aeccc1d238cfea95f3dd67ac3ab23f6d00823bdc
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.15.orig.tar.gz' python2.7_2.7.15.orig.tar.gz 17496336 SHA256:18617d1f15a380a919d517630a9cd85ce17ea602f9bbdc58ddc672df4b0239db
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.15-4ubuntu4~18.04.2.diff.gz' python2.7_2.7.15-4ubuntu4~18.04.2.diff.gz 557289 SHA256:f23200e92acf8276eed8c0b90f0f71d9d0956e91efea40d3166f1b468d142ffa
+'http://security.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.15-4ubuntu4~18.04.2.dsc' python2.7_2.7.15-4ubuntu4~18.04.2.dsc 3476 SHA256:3876165628c986dc5f9dc128aeccc1d238cfea95f3dd67ac3ab23f6d00823bdc
+'http://security.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.15.orig.tar.gz' python2.7_2.7.15.orig.tar.gz 17496336 SHA256:18617d1f15a380a919d517630a9cd85ce17ea602f9bbdc58ddc672df4b0239db
+'http://security.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.15-4ubuntu4~18.04.2.diff.gz' python2.7_2.7.15-4ubuntu4~18.04.2.diff.gz 557289 SHA256:f23200e92acf8276eed8c0b90f0f71d9d0956e91efea40d3166f1b468d142ffa
 ```
 
 ### `dpkg` source package: `readline=7.0-3`
