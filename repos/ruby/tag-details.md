@@ -28513,27 +28513,57 @@ CMD ["irb"]
 
 ## `ruby:2.7.0-rc1`
 
-**does not exist** (yet?)
+```console
+$ docker pull ruby@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `ruby:2.7.0-rc1-alpine`
 
-**does not exist** (yet?)
+```console
+$ docker pull ruby@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `ruby:2.7.0-rc1-alpine3.10`
 
-**does not exist** (yet?)
+```console
+$ docker pull ruby@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `ruby:2.7.0-rc1-buster`
 
-**does not exist** (yet?)
+```console
+$ docker pull ruby@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `ruby:2.7.0-rc1-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull ruby@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `ruby:2.7.0-rc1-slim-buster`
 
-**does not exist** (yet?)
+```console
+$ docker pull ruby@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `ruby:2.7-rc`
 
