@@ -1,23 +1,23 @@
-# `ghost:1.26.0-alpine`
+# `ghost:1.26.2-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:4a35440054862944ab5c054ca828ff78e08a45be867bd5cb6527d4165cacd93c`
-- Created: `2019-11-19T19:52:35.678350686Z`
-- Virtual Size: ~ 216.87 Mb  
+- Image ID: `sha256:496b949acbee051739f7feee62631abf535a7460cba043711b3229daa19c65f7`
+- Created: `2019-12-19T03:32:01.375496091Z`
+- Virtual Size: ~ 260.10 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
 - Command: `["node","current/index.js"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/var/lib/ghost/current/node_modules/knex-migrator/bin`
-  - `NODE_VERSION=8.16.2`
-  - `YARN_VERSION=1.19.1`
+  - `NODE_VERSION=8.17.0`
+  - `YARN_VERSION=1.21.1`
   - `NODE_ENV=production`
   - `GHOST_CLI_VERSION=1.13.1`
   - `GHOST_INSTALL=/var/lib/ghost`
   - `GHOST_CONTENT=/var/lib/ghost/content`
-  - `GHOST_VERSION=1.26.0`
+  - `GHOST_VERSION=1.26.2`
 
 ## `apk` (`.apk`-based packages)
 
