@@ -1,7 +1,7 @@
 ## `rethinkdb:latest`
 
 ```console
-$ docker pull rethinkdb@sha256:5f1583119b27167db99303d8ee3551a5e1ddbb1e12581f4eaa70249292fb7e0f
+$ docker pull rethinkdb@sha256:aaf31e57f72e55df235da40676b4cf06abefa679719e35c7d93c0db986ba9608
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull rethinkdb@sha256:5f1583119b27167db99303d8ee3551a5e1ddbb1e12581f4ea
 ### `rethinkdb:latest` - linux; amd64
 
 ```console
-$ docker pull rethinkdb@sha256:b13bca4f7ee5ecae29b24ad354b5492a5cf7047d035881e2c15e6441da1b7401
+$ docker pull rethinkdb@sha256:c528395667f46b8ede88de36cf8d476577e67ff2ed9170ff102625aafd0f69c0
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **51.2 MB (51237751 bytes)**  
+-	Total Size: **51.0 MB (50977656 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3bf9f80966f0c4503144dcf65e4dc476d8b38138a4c2a40e9b854b33735c5092`
+-	Image ID: `sha256:705ba8188cf08d4efb4c27c297e2a2664afd9d0fc167532c9253364787327586`
 -	Default Command: `["rethinkdb","--bind","all"]`
 
 ```dockerfile
@@ -36,17 +36,17 @@ CMD ["/bin/bash"]
 RUN apt-get -qqy update     && apt-get install -y --no-install-recommends ca-certificates gnupg2     && rm -rf /var/lib/apt/lists/*
 # Thu, 19 Dec 2019 08:11:30 GMT
 RUN apt-key adv --keyserver keys.gnupg.net --recv-keys "539A 3A8C 6692 E6E3 F69B 3FE8 1D85 E93F 801B B43F"     && echo "deb https://download.rethinkdb.com/apt bionic main" > /etc/apt/sources.list.d/rethinkdb.list
-# Thu, 19 Dec 2019 08:11:31 GMT
-ENV RETHINKDB_PACKAGE_VERSION=2.3.7~0bionic
-# Thu, 19 Dec 2019 08:11:39 GMT
+# Thu, 19 Dec 2019 23:42:01 GMT
+ENV RETHINKDB_PACKAGE_VERSION=2.4.0~0bionic
+# Thu, 19 Dec 2019 23:42:12 GMT
 RUN apt-get -qqy update 	&& apt-get install -y rethinkdb=$RETHINKDB_PACKAGE_VERSION 	&& rm -rf /var/lib/apt/lists/*
-# Thu, 19 Dec 2019 08:11:39 GMT
+# Thu, 19 Dec 2019 23:42:12 GMT
 VOLUME [/data]
-# Thu, 19 Dec 2019 08:11:39 GMT
+# Thu, 19 Dec 2019 23:42:12 GMT
 WORKDIR /data
-# Thu, 19 Dec 2019 08:11:39 GMT
+# Thu, 19 Dec 2019 23:42:12 GMT
 CMD ["rethinkdb" "--bind" "all"]
-# Thu, 19 Dec 2019 08:11:40 GMT
+# Thu, 19 Dec 2019 23:42:12 GMT
 EXPOSE 28015 29015 8080
 ```
 
@@ -75,11 +75,11 @@ EXPOSE 28015 29015 8080
 		Last Modified: Thu, 19 Dec 2019 08:11:46 GMT  
 		Size: 2.6 KB (2598 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:677900de5c00b24e590ea906ada3df7db75d06f9176b93e532018ebf9e18ffa7`  
-		Last Modified: Thu, 19 Dec 2019 08:11:50 GMT  
-		Size: 17.3 MB (17295753 bytes)  
+	-	`sha256:faeed0d46cc6882043c2ea4472f9b9edd23fa42ebfd4abaf3ebfe2b79d5ab7db`  
+		Last Modified: Thu, 19 Dec 2019 23:42:22 GMT  
+		Size: 17.0 MB (17035658 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7c6f2faef424c664150b037cc8786d02d67a2c0958c358eab813fff34b477b25`  
-		Last Modified: Thu, 19 Dec 2019 08:11:47 GMT  
+	-	`sha256:50971ebbb6718240aae26d01f993e327665d7a39949f4a579c06ba2d3081c8f4`  
+		Last Modified: Thu, 19 Dec 2019 23:42:19 GMT  
 		Size: 93.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
