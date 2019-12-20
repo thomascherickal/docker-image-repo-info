@@ -1,10 +1,10 @@
-# `wordpress:5.3.1-php7.2-fpm-alpine`
+# `wordpress:5.3.2-php7.2-fpm-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:bc8ab70aa6efc15c8ca803bc383ff87f0ba7c81408a3426fe18481143666e89f`
-- Created: `2019-12-14T00:01:45.309590159Z`
-- Virtual Size: ~ 195.18 Mb  
+- Image ID: `sha256:028223050414ee033d909713a9b8e620bc8d65550aa157e4b4353496fb78c91a`
+- Created: `2019-12-20T01:50:25.818619206Z`
+- Virtual Size: ~ 195.22 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -18,13 +18,13 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie`
   - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 B1B44D8F021E4E2D6021E995DC9FF8D3EE5AF27F`
-  - `PHP_VERSION=7.2.25`
-  - `PHP_URL=https://www.php.net/get/php-7.2.25.tar.xz/from/this/mirror`
-  - `PHP_ASC_URL=https://www.php.net/get/php-7.2.25.tar.xz.asc/from/this/mirror`
-  - `PHP_SHA256=746efeedc38e6ff7b1ec1432440f5fa801537adf6cd21e4afb3f040e5b0760a9`
+  - `PHP_VERSION=7.2.26`
+  - `PHP_URL=https://www.php.net/get/php-7.2.26.tar.xz/from/this/mirror`
+  - `PHP_ASC_URL=https://www.php.net/get/php-7.2.26.tar.xz.asc/from/this/mirror`
+  - `PHP_SHA256=1dd3bc875e105f5c9d21fb4dc240670bd2c22037820ff03890f5ab883c88b78d`
   - `PHP_MD5=`
-  - `WORDPRESS_VERSION=5.3.1`
-  - `WORDPRESS_SHA1=3c635c9f6546782e0bb315784d4663d0e47f872e`
+  - `WORDPRESS_VERSION=5.3.2`
+  - `WORDPRESS_SHA1=fded476f112dbab14e3b5acddd2bcfa550e7b01b`
 
 ## `apk` (`.apk`-based packages)
 
@@ -337,16 +337,16 @@ GPL-3.0-or-later
 ### `apk` package: `imagemagick-libs`
 
 ```console
-imagemagick-libs-7.0.8.58-r0 description:
+imagemagick-libs-7.0.8.68-r0 description:
 Collection of tools and libraries for many image formats (libraries)
 
-imagemagick-libs-7.0.8.58-r0 webpage:
+imagemagick-libs-7.0.8.68-r0 webpage:
 https://www.imagemagick.org/
 
-imagemagick-libs-7.0.8.58-r0 installed size:
+imagemagick-libs-7.0.8.68-r0 installed size:
 3260416
 
-imagemagick-libs-7.0.8.58-r0 license:
+imagemagick-libs-7.0.8.68-r0 license:
 ImageMagick
 
 ```
@@ -983,16 +983,16 @@ GPL-3.0+
 ### `apk` package: `sqlite-libs`
 
 ```console
-sqlite-libs-3.28.0-r1 description:
+sqlite-libs-3.28.0-r2 description:
 Sqlite3 library
 
-sqlite-libs-3.28.0-r1 webpage:
+sqlite-libs-3.28.0-r2 webpage:
 https://www.sqlite.org/
 
-sqlite-libs-3.28.0-r1 installed size:
+sqlite-libs-3.28.0-r2 installed size:
 925696
 
-sqlite-libs-3.28.0-r1 license:
+sqlite-libs-3.28.0-r2 license:
 Public-Domain
 
 ```
