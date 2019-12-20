@@ -1,10 +1,10 @@
-# `php:7.4.0-cli-alpine3.10`
+# `php:7.4.1-cli-alpine3.10`
 
 ## Docker Metadata
 
-- Image ID: `sha256:ca98fac4230b222c3cf89b376089b1efa3d0c1cb0e9e54ece1e703df4f457e19`
-- Created: `2019-12-06T01:21:35.359267308Z`
-- Virtual Size: ~ 83.38 Mb  
+- Image ID: `sha256:80fb0f3898e20799aa0a8191dd126084a1cbcb42a7468dc27c1e3cbb45bf66b2`
+- Created: `2019-12-18T22:44:33.624600595Z`
+- Virtual Size: ~ 83.39 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie`
   - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
-  - `PHP_VERSION=7.4.0`
-  - `PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror`
-  - `PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror`
-  - `PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42`
+  - `PHP_VERSION=7.4.1`
+  - `PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror`
+  - `PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror`
+  - `PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762`
   - `PHP_MD5=`
 
 ## `apk` (`.apk`-based packages)
@@ -402,16 +402,16 @@ MIT
 ### `apk` package: `oniguruma`
 
 ```console
-oniguruma-6.9.3-r0 description:
+oniguruma-6.9.4-r0 description:
 a regular expressions library
 
-oniguruma-6.9.3-r0 webpage:
+oniguruma-6.9.4-r0 webpage:
 https://github.com/kkos/oniguruma
 
-oniguruma-6.9.3-r0 installed size:
+oniguruma-6.9.4-r0 installed size:
 561152
 
-oniguruma-6.9.3-r0 license:
+oniguruma-6.9.4-r0 license:
 BSD-2-Clause
 
 ```
@@ -453,16 +453,16 @@ GPL-2.0
 ### `apk` package: `sqlite-libs`
 
 ```console
-sqlite-libs-3.28.0-r1 description:
+sqlite-libs-3.28.0-r2 description:
 Sqlite3 library
 
-sqlite-libs-3.28.0-r1 webpage:
+sqlite-libs-3.28.0-r2 webpage:
 https://www.sqlite.org/
 
-sqlite-libs-3.28.0-r1 installed size:
+sqlite-libs-3.28.0-r2 installed size:
 925696
 
-sqlite-libs-3.28.0-r1 license:
+sqlite-libs-3.28.0-r2 license:
 Public-Domain
 
 ```
