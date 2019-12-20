@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:2fbab0b60b9298baae4db2cc8d4a082f016d05b79bc8cb4ee1036235c181a9ac`
-- Created: `2019-12-16T23:26:44.325863685Z`
-- Virtual Size: ~ 756.45 Mb  
+- Image ID: `sha256:e0698a656f4c860433f64c626099751783552db9ce5cbf2f74e4e1651ac0ed2c`
+- Created: `2019-12-19T08:37:31.181348089Z`
+- Virtual Size: ~ 751.07 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/ros_entrypoint.sh"]`
@@ -2131,19 +2131,24 @@ $ apt-get source -qq --print-uris libzstd=1.3.3+dfsg-2ubuntu1.1
 'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.3.3+dfsg-2ubuntu1.1.debian.tar.xz' libzstd_1.3.3+dfsg-2ubuntu1.1.debian.tar.xz 12808 SHA256:9c7421170f0a1e6234147a89ba7fa5933c0771177423e962e6faf3fd13dcbb64
 ```
 
-### `dpkg` source package: `linux=4.15.0-66.75`
+### `dpkg` source package: `linux=4.15.0-72.81`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=4.15.0-66.75`
+- `linux-libc-dev:amd64=4.15.0-72.81`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris linux=4.15.0-72.81
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-72.81.dsc' linux_4.15.0-72.81.dsc 7304 SHA256:9e788a6a4a4fe7e0282e053cc36666194e70b8c54804ba19ded38ebfd42352d7
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0.orig.tar.gz' linux_4.15.0.orig.tar.gz 157656459 SHA256:c33b8ba5c45a40b689979caa2421c4d933864cd70eb93c00eb69adf43e9a24fc
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-72.81.diff.gz' linux_4.15.0-72.81.diff.gz 8678130 SHA256:3823d6377e28c15c046acda73ef177907b7e557877a62c6b64172a665421622c
+```
 
 ### `dpkg` source package: `lsb=9.20170808ubuntu1`
 
@@ -2562,26 +2567,13 @@ $ apt-get source -qq --print-uris openldap=2.4.45+dfsg-1ubuntu1.4
 'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.45+dfsg-1ubuntu1.4.debian.tar.xz' openldap_2.4.45+dfsg-1ubuntu1.4.debian.tar.xz 177956 SHA256:8b70367ad26d644ca3d832a69683a6b748757593128bf6ab72cd3256ae5aca62
 ```
 
-### `dpkg` source package: `openssl=1.1.1-1ubuntu2.1~18.04.4`
-
-Binary Packages:
-
-- `openssl=1.1.1-1ubuntu2.1~18.04.4`
-
-**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
-If source is available (seen below), check the contents of `debian/copyright` within it.
-
-
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
-
-
 ### `dpkg` source package: `openssl=1.1.1-1ubuntu2.1~18.04.5`
 
 Binary Packages:
 
 - `libssl-dev:amd64=1.1.1-1ubuntu2.1~18.04.5`
 - `libssl1.1:amd64=1.1.1-1ubuntu2.1~18.04.5`
+- `openssl=1.1.1-1ubuntu2.1~18.04.5`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -3516,14 +3508,14 @@ $ apt-get source -qq --print-uris python-snowballstemmer=1.2.1-1
 'http://archive.ubuntu.com/ubuntu/pool/universe/p/python-snowballstemmer/python-snowballstemmer_1.2.1-1.debian.tar.xz' python-snowballstemmer_1.2.1-1.debian.tar.xz 1976 SHA256:d5f3115a2b43b9462a1c0a963a9489e42bfa1ded461ed947ae4f94de79f34d91
 ```
 
-### `dpkg` source package: `python2.7=2.7.15-4ubuntu4~18.04.2`
+### `dpkg` source package: `python2.7=2.7.17-1~18.04`
 
 Binary Packages:
 
-- `libpython2.7-minimal:amd64=2.7.15-4ubuntu4~18.04.2`
-- `libpython2.7-stdlib:amd64=2.7.15-4ubuntu4~18.04.2`
-- `python2.7=2.7.15-4ubuntu4~18.04.2`
-- `python2.7-minimal=2.7.15-4ubuntu4~18.04.2`
+- `libpython2.7-minimal:amd64=2.7.17-1~18.04`
+- `libpython2.7-stdlib:amd64=2.7.17-1~18.04`
+- `python2.7=2.7.17-1~18.04`
+- `python2.7-minimal=2.7.17-1~18.04`
 
 Licenses: (parsed from: `/usr/share/doc/libpython2.7-minimal/copyright`, `/usr/share/doc/libpython2.7-stdlib/copyright`, `/usr/share/doc/python2.7/copyright`, `/usr/share/doc/python2.7-minimal/copyright`)
 
@@ -3547,10 +3539,10 @@ Licenses: (parsed from: `/usr/share/doc/libpython2.7-minimal/copyright`, `/usr/s
 Source:
 
 ```console
-$ apt-get source -qq --print-uris python2.7=2.7.15-4ubuntu4~18.04.2
-'http://security.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.15-4ubuntu4~18.04.2.dsc' python2.7_2.7.15-4ubuntu4~18.04.2.dsc 3476 SHA256:3876165628c986dc5f9dc128aeccc1d238cfea95f3dd67ac3ab23f6d00823bdc
-'http://security.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.15.orig.tar.gz' python2.7_2.7.15.orig.tar.gz 17496336 SHA256:18617d1f15a380a919d517630a9cd85ce17ea602f9bbdc58ddc672df4b0239db
-'http://security.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.15-4ubuntu4~18.04.2.diff.gz' python2.7_2.7.15-4ubuntu4~18.04.2.diff.gz 557289 SHA256:f23200e92acf8276eed8c0b90f0f71d9d0956e91efea40d3166f1b468d142ffa
+$ apt-get source -qq --print-uris python2.7=2.7.17-1~18.04
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.17-1~18.04.dsc' python2.7_2.7.17-1~18.04.dsc 3388 SHA256:6d68c4706e44e567668345435b521190cc8b8e8ee78a38078d16223c19ddb15d
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.17.orig.tar.gz' python2.7_2.7.17.orig.tar.gz 17535962 SHA256:f22059d09cdf9625e0a7284d24a13062044f5bf59d93a7f3382190dfa94cecde
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.17-1~18.04.diff.gz' python2.7_2.7.17-1~18.04.diff.gz 287074 SHA256:d2088da2c791fbdf4e209593f82cc05f08711efa2b9050abc62f204db966e16e
 ```
 
 ### `dpkg` source package: `python3-catkin-pkg-modules=0.4.14-1`
@@ -4009,20 +4001,25 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `python3-stdlib-extensions=3.6.8-1~18.04`
+### `dpkg` source package: `python3-stdlib-extensions=3.6.9-1~18.04`
 
 Binary Packages:
 
-- `python3-distutils=3.6.8-1~18.04`
-- `python3-lib2to3=3.6.8-1~18.04`
+- `python3-distutils=3.6.9-1~18.04`
+- `python3-lib2to3=3.6.9-1~18.04`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris python3-stdlib-extensions=3.6.9-1~18.04
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.6.9-1~18.04.dsc' python3-stdlib-extensions_3.6.9-1~18.04.dsc 2624 SHA256:9e5055cbfdf3e0e904ff12788090e1df88182f6eb178aca0551cbd0fef9f059c
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.6.9.orig.tar.bz2' python3-stdlib-extensions_3.6.9.orig.tar.bz2 4237908 SHA256:124756562de67dda09de9d992d69f7f8bcdbcc04f155f71ebf81a22dcfb77984
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.6.9-1~18.04.debian.tar.xz' python3-stdlib-extensions_3.6.9-1~18.04.debian.tar.xz 16908 SHA256:befdd346165a9baa7fc42b54c24db9b975870651c9578b03d0511e0b77578f84
+```
 
 ### `dpkg` source package: `python3-vcstool=0.2.4-1`
 
@@ -4038,17 +4035,17 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `python3.6=3.6.8-1~18.04.3`
+### `dpkg` source package: `python3.6=3.6.9-1~18.04`
 
 Binary Packages:
 
-- `libpython3.6:amd64=3.6.8-1~18.04.3`
-- `libpython3.6-dev:amd64=3.6.8-1~18.04.3`
-- `libpython3.6-minimal:amd64=3.6.8-1~18.04.3`
-- `libpython3.6-stdlib:amd64=3.6.8-1~18.04.3`
-- `python3.6=3.6.8-1~18.04.3`
-- `python3.6-dev=3.6.8-1~18.04.3`
-- `python3.6-minimal=3.6.8-1~18.04.3`
+- `libpython3.6:amd64=3.6.9-1~18.04`
+- `libpython3.6-dev:amd64=3.6.9-1~18.04`
+- `libpython3.6-minimal:amd64=3.6.9-1~18.04`
+- `libpython3.6-stdlib:amd64=3.6.9-1~18.04`
+- `python3.6=3.6.9-1~18.04`
+- `python3.6-dev=3.6.9-1~18.04`
+- `python3.6-minimal=3.6.9-1~18.04`
 
 Licenses: (parsed from: `/usr/share/doc/libpython3.6/copyright`, `/usr/share/doc/libpython3.6-dev/copyright`, `/usr/share/doc/libpython3.6-minimal/copyright`, `/usr/share/doc/libpython3.6-stdlib/copyright`, `/usr/share/doc/python3.6/copyright`, `/usr/share/doc/python3.6-dev/copyright`, `/usr/share/doc/python3.6-minimal/copyright`)
 
@@ -4073,10 +4070,10 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.6/copyright`, `/usr/share/doc
 Source:
 
 ```console
-$ apt-get source -qq --print-uris python3.6=3.6.8-1~18.04.3
-'http://security.ubuntu.com/ubuntu/pool/main/p/python3.6/python3.6_3.6.8-1~18.04.3.dsc' python3.6_3.6.8-1~18.04.3.dsc 3442 SHA256:e2c90a908ea841a600b86b48e2972614acbf3f599ade8fe820cb6ee2451ff9ce
-'http://security.ubuntu.com/ubuntu/pool/main/p/python3.6/python3.6_3.6.8.orig.tar.xz' python3.6_3.6.8.orig.tar.xz 17212420 SHA256:35446241e995773b1bed7d196f4b624dadcadc8429f26282e756b2fb8a351193
-'http://security.ubuntu.com/ubuntu/pool/main/p/python3.6/python3.6_3.6.8-1~18.04.3.debian.tar.xz' python3.6_3.6.8-1~18.04.3.debian.tar.xz 219568 SHA256:471019002d17b33edfa6e4dd4a18b22b9602ab39d87077ac94886f7243b6ad94
+$ apt-get source -qq --print-uris python3.6=3.6.9-1~18.04
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.6/python3.6_3.6.9-1~18.04.dsc' python3.6_3.6.9-1~18.04.dsc 3459 SHA256:bce2658efe1049ac11b6abf4f48e6891ec2ea633377b081a18db9280478ab425
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.6/python3.6_3.6.9.orig.tar.xz' python3.6_3.6.9.orig.tar.xz 17212164 SHA256:5e2f5f554e3f8f7f0296f7e73d8600c4e9acbaee6b2555b83206edf5153870da
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.6/python3.6_3.6.9-1~18.04.debian.tar.xz' python3.6_3.6.9-1~18.04.debian.tar.xz 214508 SHA256:5096a758dae76f406c05cd208b912e9562e7f88e84b6adc8ceeb3aa118707a42
 ```
 
 ### `dpkg` source package: `pyxdg=0.25-4ubuntu1`
@@ -6186,12 +6183,12 @@ $ apt-get source -qq --print-uris sudo=1.8.21p2-3ubuntu1.1
 'http://archive.ubuntu.com/ubuntu/pool/main/s/sudo/sudo_1.8.21p2-3ubuntu1.1.debian.tar.xz' sudo_1.8.21p2-3ubuntu1.1.debian.tar.xz 33208 SHA256:edc90553872e231e776cb681c077b28924a2191b7e36bb59c062847dab090588
 ```
 
-### `dpkg` source package: `systemd=237-3ubuntu10.31`
+### `dpkg` source package: `systemd=237-3ubuntu10.33`
 
 Binary Packages:
 
-- `libsystemd0:amd64=237-3ubuntu10.31`
-- `libudev1:amd64=237-3ubuntu10.31`
+- `libsystemd0:amd64=237-3ubuntu10.33`
+- `libudev1:amd64=237-3ubuntu10.33`
 
 Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/libudev1/copyright`)
 
@@ -6203,9 +6200,14 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris systemd=237-3ubuntu10.33
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.33.dsc' systemd_237-3ubuntu10.33.dsc 5182 SHA256:78101584287f635d1212912eff26b4fd9bcec505f73e38e2f8fd09506577df55
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237.orig.tar.gz' systemd_237.orig.tar.gz 6871350 SHA256:c83dabbe1c9de6b9db1dafdb7e04140c7d0535705c68842f6c0768653ba4913c
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.33.debian.tar.xz' systemd_237-3ubuntu10.33.debian.tar.xz 237528 SHA256:7530e3de2264645ba057564dbb4d6c23a34362292441ebb075839e11963c38c7
+```
 
 ### `dpkg` source package: `sysvinit=2.88dsf-59.10ubuntu1`
 
