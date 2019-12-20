@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:6ab5f5c1b15766a8d9f85decdfafaaba4ee610bcac1ca905bd65ea4019d832df`
-- Created: `2019-12-06T03:09:02.715143744Z`
-- Virtual Size: ~ 88.20 Mb  
+- Image ID: `sha256:fa1caabbf2d10eed5dd33efa17da6b6e37792393c7ff969f8949bbcd1293653f`
+- Created: `2019-12-19T06:06:55.253309408Z`
+- Virtual Size: ~ 88.23 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/docker-entrypoint.sh"]`
@@ -18,10 +18,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie`
   - `GPG_KEYS=CBAF69F173A0FEA4B537F470D66C9593118BCCB6 F38252826ACD957EF380D39F2F7956BC5DA04B5D`
-  - `PHP_VERSION=7.3.12`
-  - `PHP_URL=https://www.php.net/get/php-7.3.12.tar.xz/from/this/mirror`
-  - `PHP_ASC_URL=https://www.php.net/get/php-7.3.12.tar.xz.asc/from/this/mirror`
-  - `PHP_SHA256=aafe5e9861ad828860c6af8c88cdc1488314785962328eb1783607c1fdd855df`
+  - `PHP_VERSION=7.3.13`
+  - `PHP_URL=https://www.php.net/get/php-7.3.13.tar.xz/from/this/mirror`
+  - `PHP_ASC_URL=https://www.php.net/get/php-7.3.13.tar.xz.asc/from/this/mirror`
+  - `PHP_SHA256=57ac55fe442d2da650abeb9e6fa161bd3a98ba6528c029f076f8bba43dd5c228`
   - `PHP_MD5=`
   - `POSTFIXADMIN_VERSION=3.2.2`
   - `POSTFIXADMIN_SHA512=6c84cb215e69c52c26db0651e5d0d9d8bcb0a63b00d3c197f10fa1f0442a1fde44bb514fb476a1e68a21741d603febac67282961d01270e5969ee13d145121ee`
@@ -594,16 +594,16 @@ GPL-2.0
 ### `apk` package: `sqlite-libs`
 
 ```console
-sqlite-libs-3.28.0-r1 description:
+sqlite-libs-3.28.0-r2 description:
 Sqlite3 library
 
-sqlite-libs-3.28.0-r1 webpage:
+sqlite-libs-3.28.0-r2 webpage:
 https://www.sqlite.org/
 
-sqlite-libs-3.28.0-r1 installed size:
+sqlite-libs-3.28.0-r2 installed size:
 925696
 
-sqlite-libs-3.28.0-r1 license:
+sqlite-libs-3.28.0-r2 license:
 Public-Domain
 
 ```
