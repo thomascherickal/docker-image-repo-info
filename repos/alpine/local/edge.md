@@ -1,9 +1,9 @@
-# `alpine:20191114`
+# `alpine:20191219`
 
 ## Docker Metadata
 
-- Image ID: `sha256:60d63d8e1431962d47b266192f3caa2147c43c3701e2f639d3b5cdb443c5771f`
-- Created: `2019-11-14T22:19:47.728044204Z`
+- Image ID: `sha256:607e613a0a25c1792030d95a93c67b8463ceb5459a13c56965bbdb3545846991`
+- Created: `2019-12-19T23:21:32.209439904Z`
 - Virtual Size: ~ 5.60 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -16,16 +16,16 @@
 ### `apk` package: `alpine-baselayout`
 
 ```console
-alpine-baselayout-3.2.0-r2 description:
+alpine-baselayout-3.2.0-r3 description:
 Alpine base dir structure and init scripts
 
-alpine-baselayout-3.2.0-r2 webpage:
+alpine-baselayout-3.2.0-r3 webpage:
 https://git.alpinelinux.org/cgit/aports/tree/main/alpine-baselayout
 
-alpine-baselayout-3.2.0-r2 installed size:
-409600
+alpine-baselayout-3.2.0-r3 installed size:
+413696
 
-alpine-baselayout-3.2.0-r2 license:
+alpine-baselayout-3.2.0-r3 license:
 GPL-2.0-only
 
 ```
@@ -67,33 +67,33 @@ GPL2
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.31.1-r0 description:
+busybox-1.31.1-r8 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.31.1-r0 webpage:
+busybox-1.31.1-r8 webpage:
 https://busybox.net/
 
-busybox-1.31.1-r0 installed size:
-950272
+busybox-1.31.1-r8 installed size:
+962560
 
-busybox-1.31.1-r0 license:
-GPL-2.0
+busybox-1.31.1-r8 license:
+GPL-2.0-only
 
 ```
 
 ### `apk` package: `ca-certificates-cacert`
 
 ```console
-ca-certificates-cacert-20190108-r0 description:
+ca-certificates-cacert-20191127-r0 description:
 Mozilla bundled certificates
 
-ca-certificates-cacert-20190108-r0 webpage:
+ca-certificates-cacert-20191127-r0 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-cacert-20190108-r0 installed size:
+ca-certificates-cacert-20191127-r0 installed size:
 245760
 
-ca-certificates-cacert-20190108-r0 license:
+ca-certificates-cacert-20191127-r0 license:
 MPL-2.0 GPL-2.0-or-later
 
 ```
@@ -101,16 +101,16 @@ MPL-2.0 GPL-2.0-or-later
 ### `apk` package: `libc-utils`
 
 ```console
-libc-utils-0.7.1-r0 description:
+libc-utils-0.7.2-r0 description:
 Meta package to pull in correct libc
 
-libc-utils-0.7.1-r0 webpage:
+libc-utils-0.7.2-r0 webpage:
 http://alpinelinux.org
 
-libc-utils-0.7.1-r0 installed size:
+libc-utils-0.7.2-r0 installed size:
 4096
 
-libc-utils-0.7.1-r0 license:
+libc-utils-0.7.2-r0 license:
 BSD
 
 ```
@@ -220,17 +220,17 @@ GPL-2.0-only
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.31.1-r0 description:
+ssl_client-1.31.1-r8 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.31.1-r0 webpage:
+ssl_client-1.31.1-r8 webpage:
 https://busybox.net/
 
-ssl_client-1.31.1-r0 installed size:
+ssl_client-1.31.1-r8 installed size:
 28672
 
-ssl_client-1.31.1-r0 license:
-GPL-2.0
+ssl_client-1.31.1-r8 license:
+GPL-2.0-only
 
 ```
 
