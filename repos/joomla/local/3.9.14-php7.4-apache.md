@@ -1,10 +1,10 @@
-# `joomla:3.9.13-php7.4-apache`
+# `joomla:3.9.14-php7.4-apache`
 
 ## Docker Metadata
 
-- Image ID: `sha256:809ff760eec1159a55733ae73964893219ef40720f27387a7979f0846fbae670`
-- Created: `2019-12-06T02:13:35.103238856Z`
-- Virtual Size: ~ 461.34 Mb  
+- Image ID: `sha256:b646e3973326dbef4e6447fb5b90abf7bdc1d243d39b8fdd3c0309bb54020f09`
+- Created: `2019-12-19T03:52:25.125302203Z`
+- Virtual Size: ~ 461.37 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -21,14 +21,14 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie`
   - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
-  - `PHP_VERSION=7.4.0`
-  - `PHP_URL=https://www.php.net/get/php-7.4.0.tar.xz/from/this/mirror`
-  - `PHP_ASC_URL=https://www.php.net/get/php-7.4.0.tar.xz.asc/from/this/mirror`
-  - `PHP_SHA256=9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42`
+  - `PHP_VERSION=7.4.1`
+  - `PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror`
+  - `PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror`
+  - `PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762`
   - `PHP_MD5=`
   - `JOOMLA_INSTALLATION_DISABLE_LOCALHOST_CHECK=1`
-  - `JOOMLA_VERSION=3.9.13`
-  - `JOOMLA_SHA512=366101203f24a19464d3c86472dd937bb4c192b2621f1245f8907a3c5565594417baa79a19002eda84ac939b92376501a5300dc35a64c0c06df163d2e460550f`
+  - `JOOMLA_VERSION=3.9.14`
+  - `JOOMLA_SHA512=e7807256f40330fa857d37bd00b91e76c7a0ee24d21a1c3fbe95af90cf80b01fcee15845b9cbdc75a3eec0e36b140e87d78fbe491ee6851abbc74be621cb719a`
 - Labels:
   - `maintainer=Michael Babker <michael.babker@joomla.org> (@mbabker)`
 

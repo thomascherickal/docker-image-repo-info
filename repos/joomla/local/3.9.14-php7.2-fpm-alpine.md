@@ -1,10 +1,10 @@
-# `joomla:3.9.13-php7.2-fpm-alpine`
+# `joomla:3.9.14-php7.2-fpm-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:53d0dd6d5e7ac41ef9822fc1815a2b2045788e97d9c808c1742291959449a7f8`
-- Created: `2019-12-06T02:05:49.931616908Z`
-- Virtual Size: ~ 129.83 Mb  
+- Image ID: `sha256:430f95fd8369f032e9c02fa96eae50f7e2b26754e3da2635fed4feaf4667ebdb`
+- Created: `2019-12-19T03:42:44.499204314Z`
+- Virtual Size: ~ 129.88 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -18,14 +18,14 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie`
   - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 B1B44D8F021E4E2D6021E995DC9FF8D3EE5AF27F`
-  - `PHP_VERSION=7.2.25`
-  - `PHP_URL=https://www.php.net/get/php-7.2.25.tar.xz/from/this/mirror`
-  - `PHP_ASC_URL=https://www.php.net/get/php-7.2.25.tar.xz.asc/from/this/mirror`
-  - `PHP_SHA256=746efeedc38e6ff7b1ec1432440f5fa801537adf6cd21e4afb3f040e5b0760a9`
+  - `PHP_VERSION=7.2.26`
+  - `PHP_URL=https://www.php.net/get/php-7.2.26.tar.xz/from/this/mirror`
+  - `PHP_ASC_URL=https://www.php.net/get/php-7.2.26.tar.xz.asc/from/this/mirror`
+  - `PHP_SHA256=1dd3bc875e105f5c9d21fb4dc240670bd2c22037820ff03890f5ab883c88b78d`
   - `PHP_MD5=`
   - `JOOMLA_INSTALLATION_DISABLE_LOCALHOST_CHECK=1`
-  - `JOOMLA_VERSION=3.9.13`
-  - `JOOMLA_SHA512=366101203f24a19464d3c86472dd937bb4c192b2621f1245f8907a3c5565594417baa79a19002eda84ac939b92376501a5300dc35a64c0c06df163d2e460550f`
+  - `JOOMLA_VERSION=3.9.14`
+  - `JOOMLA_SHA512=e7807256f40330fa857d37bd00b91e76c7a0ee24d21a1c3fbe95af90cf80b01fcee15845b9cbdc75a3eec0e36b140e87d78fbe491ee6851abbc74be621cb719a`
 - Labels:
   - `maintainer=Michael Babker <michael.babker@joomla.org> (@mbabker)`
 
@@ -646,16 +646,16 @@ GPL-2.0
 ### `apk` package: `sqlite-libs`
 
 ```console
-sqlite-libs-3.28.0-r1 description:
+sqlite-libs-3.28.0-r2 description:
 Sqlite3 library
 
-sqlite-libs-3.28.0-r1 webpage:
+sqlite-libs-3.28.0-r2 webpage:
 https://www.sqlite.org/
 
-sqlite-libs-3.28.0-r1 installed size:
+sqlite-libs-3.28.0-r2 installed size:
 925696
 
-sqlite-libs-3.28.0-r1 license:
+sqlite-libs-3.28.0-r2 license:
 Public-Domain
 
 ```
