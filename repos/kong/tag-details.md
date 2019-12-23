@@ -29,6 +29,7 @@
 -	[`kong:1.4.2`](#kong142)
 -	[`kong:1.4.2-alpine`](#kong142-alpine)
 -	[`kong:1.4.2-centos`](#kong142-centos)
+-	[`kong:1.4.2-ubuntu`](#kong142-ubuntu)
 -	[`kong:1.4-centos`](#kong14-centos)
 -	[`kong:1.4-ubuntu`](#kong14-ubuntu)
 -	[`kong:alpine`](#kongalpine)
@@ -2102,6 +2103,10 @@ CMD ["kong" "docker-start"]
 		Last Modified: Wed, 11 Dec 2019 22:23:02 GMT  
 		Size: 596.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `kong:1.4.2-ubuntu`
+
+**does not exist** (yet?)
 
 ## `kong:1.4-centos`
 
