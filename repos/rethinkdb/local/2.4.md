@@ -1,16 +1,16 @@
-# `rethinkdb:2.3.7`
+# `rethinkdb:2.4.0`
 
 ## Docker Metadata
 
-- Image ID: `sha256:3bf9f80966f0c4503144dcf65e4dc476d8b38138a4c2a40e9b854b33735c5092`
-- Created: `2019-12-19T08:11:40.069782933Z`
-- Virtual Size: ~ 126.41 Mb  
+- Image ID: `sha256:705ba8188cf08d4efb4c27c297e2a2664afd9d0fc167532c9253364787327586`
+- Created: `2019-12-19T23:42:12.786706983Z`
+- Virtual Size: ~ 125.07 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["rethinkdb","--bind","all"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `RETHINKDB_PACKAGE_VERSION=2.3.7~0bionic`
+  - `RETHINKDB_PACKAGE_VERSION=2.4.0~0bionic`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -1508,11 +1508,11 @@ $ apt-get source -qq --print-uris readline=7.0-3
 'http://archive.ubuntu.com/ubuntu/pool/main/r/readline/readline_7.0-3.debian.tar.xz' readline_7.0-3.debian.tar.xz 30012 SHA256:bf166310d6ca7716f2bd0e9e06cee2458b0157f7989d028730fc305643560175
 ```
 
-### `dpkg` source package: `rethinkdb=2.3.7~0bionic`
+### `dpkg` source package: `rethinkdb=2.4.0~0bionic`
 
 Binary Packages:
 
-- `rethinkdb=2.3.7~0bionic`
+- `rethinkdb=2.4.0~0bionic`
 
 Licenses: (parsed from: `/usr/share/doc/rethinkdb/copyright`)
 
