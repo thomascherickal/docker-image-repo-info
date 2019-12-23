@@ -1,10 +1,10 @@
-# `redmine:4.0.5-alpine`
+# `redmine:4.0.6-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:8e6f1d480236349be832d6fdbce846af7aab4a803de19c6ae35c9b31ad0b4fae`
-- Created: `2019-10-22T00:18:36.084287127Z`
-- Virtual Size: ~ 365.54 Mb  
+- Image ID: `sha256:75b8f694ca2d69086b6ebf5735524bbad7efbf36a25d848b24d4d62e3f3abd78`
+- Created: `2019-12-20T20:47:33.332229337Z`
+- Virtual Size: ~ 372.43 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -20,8 +20,8 @@
   - `BUNDLE_APP_CONFIG=/usr/local/bundle`
   - `RAILS_ENV=production`
   - `HOME=/home/redmine`
-  - `REDMINE_VERSION=4.0.5`
-  - `REDMINE_DOWNLOAD_MD5=d25649272a9c347e4368cdd50e039e86`
+  - `REDMINE_VERSION=4.0.6`
+  - `REDMINE_DOWNLOAD_MD5=897bfcaa4a49539b10d0529ce103f919`
 
 ## `apk` (`.apk`-based packages)
 
@@ -334,16 +334,16 @@ GPL
 ### `apk` package: `freetds`
 
 ```console
-freetds-1.1.6-r0 description:
+freetds-1.1.6-r1 description:
 Tabular Datastream Library
 
-freetds-1.1.6-r0 webpage:
+freetds-1.1.6-r1 webpage:
 https://www.freetds.org
 
-freetds-1.1.6-r0 installed size:
+freetds-1.1.6-r1 installed size:
 1814528
 
-freetds-1.1.6-r0 license:
+freetds-1.1.6-r1 license:
 GPL-2.0-or-later, LGPL-2.0-or-later
 
 ```
@@ -589,16 +589,16 @@ Apache-2.0
 ### `apk` package: `imagemagick6-libs`
 
 ```console
-imagemagick6-libs-6.9.10.68-r0 description:
+imagemagick6-libs-6.9.10.69-r0 description:
 A collection of tools and libraries for many image formats (legacy version 6) (libraries)
 
-imagemagick6-libs-6.9.10.68-r0 webpage:
+imagemagick6-libs-6.9.10.69-r0 webpage:
 https://www.imagemagick.org/
 
-imagemagick6-libs-6.9.10.68-r0 installed size:
+imagemagick6-libs-6.9.10.69-r0 installed size:
 6942720
 
-imagemagick6-libs-6.9.10.68-r0 license:
+imagemagick6-libs-6.9.10.69-r0 license:
 Apache-2.0
 
 ```
@@ -963,16 +963,16 @@ Libpng
 ### `apk` package: `libpq`
 
 ```console
-libpq-11.5-r1 description:
+libpq-11.6-r0 description:
 PostgreSQL libraries
 
-libpq-11.5-r1 webpage:
+libpq-11.6-r0 webpage:
 https://www.postgresql.org/
 
-libpq-11.5-r1 installed size:
+libpq-11.6-r0 installed size:
 315392
 
-libpq-11.5-r1 license:
+libpq-11.6-r0 license:
 PostgreSQL
 
 ```
@@ -1694,16 +1694,16 @@ GPL-2.0-or-later
 ### `apk` package: `sqlite-libs`
 
 ```console
-sqlite-libs-3.28.0-r1 description:
+sqlite-libs-3.28.0-r2 description:
 Sqlite3 library
 
-sqlite-libs-3.28.0-r1 webpage:
+sqlite-libs-3.28.0-r2 webpage:
 https://www.sqlite.org/
 
-sqlite-libs-3.28.0-r1 installed size:
+sqlite-libs-3.28.0-r2 installed size:
 925696
 
-sqlite-libs-3.28.0-r1 license:
+sqlite-libs-3.28.0-r2 license:
 Public-Domain
 
 ```
