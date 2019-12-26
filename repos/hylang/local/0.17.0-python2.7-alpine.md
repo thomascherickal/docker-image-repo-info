@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:ab6360635311c6d07623b46e1c2ec1c7ee3408707c7a15db8049c175fcc23100`
-- Created: `2019-11-15T09:48:39.883080242Z`
-- Virtual Size: ~ 69.35 Mb  
+- Image ID: `sha256:844dd9f72c6c795ac45de0e010a92fc4d736f6b3bdf748c2d8049cf725f5812b`
+- Created: `2019-12-21T09:30:23.87418192Z`
+- Virtual Size: ~ 78.67 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["hy"]`
@@ -517,16 +517,16 @@ GPL-2.0
 ### `apk` package: `sqlite-libs`
 
 ```console
-sqlite-libs-3.28.0-r1 description:
+sqlite-libs-3.28.0-r2 description:
 Sqlite3 library
 
-sqlite-libs-3.28.0-r1 webpage:
+sqlite-libs-3.28.0-r2 webpage:
 https://www.sqlite.org/
 
-sqlite-libs-3.28.0-r1 installed size:
+sqlite-libs-3.28.0-r2 installed size:
 925696
 
-sqlite-libs-3.28.0-r1 license:
+sqlite-libs-3.28.0-r2 license:
 Public-Domain
 
 ```
