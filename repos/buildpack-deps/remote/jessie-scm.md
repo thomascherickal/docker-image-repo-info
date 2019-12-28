@@ -1,7 +1,7 @@
 ## `buildpack-deps:jessie-scm`
 
 ```console
-$ docker pull buildpack-deps@sha256:a926b86f7d2a83adf8e16e6d382b866d85c80e02b8ebe8ab7e066d83e718888b
+$ docker pull buildpack-deps@sha256:03ecb98adce19cc66145872ff3ec8b7db7db784edeb9b86ad948c4f5066bb09c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -14,41 +14,41 @@ $ docker pull buildpack-deps@sha256:a926b86f7d2a83adf8e16e6d382b866d85c80e02b8eb
 ### `buildpack-deps:jessie-scm` - linux; amd64
 
 ```console
-$ docker pull buildpack-deps@sha256:eb093cde1d8ff7277f6c7bf8862e1e916699610bbfd2cf8c704a5a32a9197109
+$ docker pull buildpack-deps@sha256:07037fb4f73ae8dc88cc07066b0db4fafbb384ae2a19e244147474456716798c
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **115.3 MB (115253954 bytes)**  
+-	Total Size: **115.3 MB (115254413 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d826f95acf8aa88d77630fce25513449f61ea812a0b8e3d478ba54d7e13641d4`
+-	Image ID: `sha256:0e8e3389b13ee35ce58259381d03a049bb8f3258185405c92f2ec484bcc956f6`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Fri, 22 Nov 2019 14:55:38 GMT
-ADD file:18bb11390491945bbfea4649dddd1446cda25e47ba12b96e1a610004a0c74b05 in / 
-# Fri, 22 Nov 2019 14:55:39 GMT
+# Sat, 28 Dec 2019 04:21:35 GMT
+ADD file:6bea7fdf1d11cd3f2dfa923395205f70d42d388f597b21e289e7f516a2c687f1 in / 
+# Sat, 28 Dec 2019 04:21:35 GMT
 CMD ["bash"]
-# Sat, 23 Nov 2019 00:05:16 GMT
+# Sat, 28 Dec 2019 04:51:00 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	&& rm -rf /var/lib/apt/lists/*
-# Sat, 23 Nov 2019 00:05:17 GMT
+# Sat, 28 Dec 2019 04:51:00 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Sat, 23 Nov 2019 00:07:30 GMT
+# Sat, 28 Dec 2019 04:53:19 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		bzr 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
 ```
 
 -	Layers:
-	-	`sha256:a5019387ad9d245b8302a7878328246d65e3265e0c7a0f692d5ee2a8f883fa10`  
-		Last Modified: Fri, 22 Nov 2019 15:03:06 GMT  
-		Size: 54.4 MB (54389775 bytes)  
+	-	`sha256:a4888a2f4fb02c1971555f590f5c9ef6369e7fa4599e586fb70cdfe80330370b`  
+		Last Modified: Sat, 28 Dec 2019 04:26:07 GMT  
+		Size: 54.4 MB (54389662 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cd07b33abaecbeaf5816c4cd1fb496dcae440956d5cb878758e330409dda92e5`  
-		Last Modified: Sat, 23 Nov 2019 00:18:32 GMT  
-		Size: 17.5 MB (17545098 bytes)  
+	-	`sha256:f7fe6cef1db298eb80da7e99c0df1d8cf44011585831905df6373b5dbb32e0a8`  
+		Last Modified: Sat, 28 Dec 2019 05:02:45 GMT  
+		Size: 17.5 MB (17545463 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4849afe58f7d249a4bcd018f0a3b0c57c34626bd0d1d2f60f95bd7daca678aa6`  
-		Last Modified: Sat, 23 Nov 2019 00:18:51 GMT  
-		Size: 43.3 MB (43319081 bytes)  
+	-	`sha256:7d711a2398cd1349ffa38f874196cbe32d2cc4e6742bec566f58fd70eadd0138`  
+		Last Modified: Sat, 28 Dec 2019 05:02:59 GMT  
+		Size: 43.3 MB (43319288 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `buildpack-deps:jessie-scm` - linux; arm variant v5
