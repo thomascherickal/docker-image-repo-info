@@ -1824,20 +1824,13 @@ Licenses: (parsed from: `/usr/share/doc/imagemagick/copyright`, `/usr/share/doc/
 - `Perllikelicence`
 - `TatcherUlrichPublicDomain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris imagemagick=8:6.8.9.9-5+deb8u18
-'http://security.debian.org/debian-security/pool/updates/main/i/imagemagick/imagemagick_6.8.9.9-5+deb8u18.dsc' imagemagick_6.8.9.9-5+deb8u18.dsc 4054 SHA256:84c294ac4e5efc0a0e5c13360984a54413a41736dd4903f6fe642d8b1ceb843e
-'http://security.debian.org/debian-security/pool/updates/main/i/imagemagick/imagemagick_6.8.9.9.orig.tar.xz' imagemagick_6.8.9.9.orig.tar.xz 7891624 SHA256:a4cccc70179ff2c67550e063cdcb2e62907338ef3e68b45bb1c41931e515b3eb
-'http://security.debian.org/debian-security/pool/updates/main/i/imagemagick/imagemagick_6.8.9.9-5+deb8u18.debian.tar.xz' imagemagick_6.8.9.9-5+deb8u18.debian.tar.xz 313232 SHA256:d9aaa4b141efae5c2e4de94ff1dcdf6b4187f2d50d888479c0a9d078a2aad3cb
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/imagemagick/8:6.8.9.9-5+deb8u18/
 
-- https://sources.debian.net/src/imagemagick/8:6.8.9.9-5+deb8u18/ (for browsing the source)
-- https://sources.debian.net/src/imagemagick/8:6.8.9.9-5+deb8u18/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/imagemagick/8:6.8.9.9-5+deb8u18/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `init-system-helpers=1.22`
 
@@ -3370,20 +3363,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libxml2=2.9.1+dfsg1-5+deb8u7
-'http://security.debian.org/debian-security/pool/updates/main/libx/libxml2/libxml2_2.9.1+dfsg1-5+deb8u7.dsc' libxml2_2.9.1+dfsg1-5+deb8u7.dsc 2764 SHA256:77e5a0b7b1c497eab1cd78595d6028cb7b0e888ab8678a7372e8c4eac9fb0f50
-'http://security.debian.org/debian-security/pool/updates/main/libx/libxml2/libxml2_2.9.1+dfsg1.orig.tar.gz' libxml2_2.9.1+dfsg1.orig.tar.gz 3793894 SHA256:f3ec5256412192f74833286c4490672500b232ed1c9195214db2c641df064a28
-'http://security.debian.org/debian-security/pool/updates/main/libx/libxml2/libxml2_2.9.1+dfsg1-5+deb8u7.debian.tar.xz' libxml2_2.9.1+dfsg1-5+deb8u7.debian.tar.xz 71860 SHA256:090c7342d79a297545e613b315e70d7a47627ea3ea116600ef9056d748f7c3a5
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libxml2/2.9.1+dfsg1-5+deb8u7/
 
-- https://sources.debian.net/src/libxml2/2.9.1+dfsg1-5+deb8u7/ (for browsing the source)
-- https://sources.debian.net/src/libxml2/2.9.1+dfsg1-5+deb8u7/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libxml2/2.9.1+dfsg1-5+deb8u7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libxpm=1:3.5.12-0+deb8u1`
 
