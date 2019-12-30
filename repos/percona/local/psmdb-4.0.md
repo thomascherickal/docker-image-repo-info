@@ -31,8 +31,6 @@ Source:
 
 ```console
 $ yumdownloader --quiet --source --urls acl-2.2.51-14.el7
-http://repos-lax.psychz.net/centos/7.7.1908/updates/x86_64/repodata/repomd.xml: [Errno 12] Timeout on http://repos-lax.psychz.net/centos/7.7.1908/updates/x86_64/repodata/repomd.xml: (28, 'Connection timed out after 30000 milliseconds')
-Trying other mirror.
 Enabling epel-source repository
 https://d2lzkl7pfhq30w.cloudfront.net/pub/epel/7/SRPMS/repodata/repomd.xml: [Errno 14] HTTPS Error 404 - Not Found
 Trying other mirror.
