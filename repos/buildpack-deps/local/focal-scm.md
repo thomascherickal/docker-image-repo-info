@@ -1342,13 +1342,9 @@ Licenses: (parsed from: `/usr/share/doc/lsb-base/copyright`)
 - `BSD-3-clause`
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris lsb=11.1.0ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lsb/lsb_11.1.0ubuntu1.dsc' lsb_11.1.0ubuntu1.dsc 2174 SHA256:2b4f3a7d6bd993b81a2cfd3a20edbca0a30ec2b047a207ed1cec98b4ec343f71
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lsb/lsb_11.1.0ubuntu1.tar.xz' lsb_11.1.0ubuntu1.tar.xz 45976 SHA256:ae4b5d7f9ef24dc56091af589fbe768ca21ac03ab8638efc30925a10305abc95
-```
 
 ### `dpkg` source package: `lz4=1.9.1-2`
 
