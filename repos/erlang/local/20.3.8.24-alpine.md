@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:de7e79bd7cd5f06b70133dba0abc216434e4027bd5125a02586d004515b1e7d5`
-- Created: `2019-11-18T22:10:26.340921741Z`
+- Image ID: `sha256:990918f1a191b72c6ade04cb109e401a3114a5b383624d27b3c448ce9cd870b4`
+- Created: `2019-12-28T00:48:49.161909169Z`
 - Virtual Size: ~ 81.17 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -11,7 +11,7 @@
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `OTP_VERSION=20.3.8.24`
-  - `REBAR3_VERSION=3.12.0`
+  - `REBAR3_VERSION=3.13.0`
 
 ## `apk` (`.apk`-based packages)
 
@@ -137,16 +137,16 @@ BSD
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1d-r0 description:
+libcrypto1.1-1.1.1d-r2 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1d-r0 webpage:
+libcrypto1.1-1.1.1d-r2 webpage:
 https://www.openssl.org
 
-libcrypto1.1-1.1.1d-r0 installed size:
+libcrypto1.1-1.1.1d-r2 installed size:
 2748416
 
-libcrypto1.1-1.1.1d-r0 license:
+libcrypto1.1-1.1.1d-r2 license:
 OpenSSL
 
 ```
@@ -154,16 +154,16 @@ OpenSSL
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1d-r0 description:
+libssl1.1-1.1.1d-r2 description:
 SSL shared libraries
 
-libssl1.1-1.1.1d-r0 webpage:
+libssl1.1-1.1.1d-r2 webpage:
 https://www.openssl.org
 
-libssl1.1-1.1.1d-r0 installed size:
+libssl1.1-1.1.1d-r2 installed size:
 536576
 
-libssl1.1-1.1.1d-r0 license:
+libssl1.1-1.1.1d-r2 license:
 OpenSSL
 
 ```
