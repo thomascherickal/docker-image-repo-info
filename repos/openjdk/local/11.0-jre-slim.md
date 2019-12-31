@@ -2,12 +2,12 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:cacf73bc929e94baf2119d8ae984230dcec4ea40332fd93c30cac7f04ef32691`
-- Created: `2019-11-22T19:17:11.714660323Z`
+- Image ID: `sha256:3f7a31642b9f6393cf036db566e4ff442b353a5b4ca57f582d22afe52e67074d`
+- Created: `2019-12-28T08:56:10.648945157Z`
 - Virtual Size: ~ 204.10 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Command: `["jshell"]`
+- Command: `["bash"]`
 - Environment:
   - `PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=C.UTF-8`
