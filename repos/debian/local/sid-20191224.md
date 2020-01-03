@@ -1318,20 +1318,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libxcrypt=1:4.4.10-7
-'http://deb.debian.org/debian/pool/main/libx/libxcrypt/libxcrypt_4.4.10-7.dsc' libxcrypt_4.4.10-7.dsc 2047 SHA256:28f9ca4978d450e68a5a1343b34194cb8fc08515c110043a26a3822bcfb2f141
-'http://deb.debian.org/debian/pool/main/libx/libxcrypt/libxcrypt_4.4.10.orig.tar.xz' libxcrypt_4.4.10.orig.tar.xz 372652 SHA256:f790a8eac4e4af3124d2844a24a7afb3a972368e4dff63d701599c2f2d065fd3
-'http://deb.debian.org/debian/pool/main/libx/libxcrypt/libxcrypt_4.4.10-7.debian.tar.xz' libxcrypt_4.4.10-7.debian.tar.xz 4516 SHA256:437a9e14bfead35e9770f86a752390f7b74dea72d8e14517cbe75abe795c0cfe
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libxcrypt/1:4.4.10-7/
 
-- https://sources.debian.net/src/libxcrypt/1:4.4.10-7/ (for browsing the source)
-- https://sources.debian.net/src/libxcrypt/1:4.4.10-7/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libxcrypt/1:4.4.10-7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libzstd=1.4.4+dfsg-1`
 
