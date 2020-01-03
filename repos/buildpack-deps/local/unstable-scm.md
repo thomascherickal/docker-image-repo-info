@@ -1372,20 +1372,13 @@ Licenses: (parsed from: `/usr/share/doc/libedit2/copyright`)
 
 - `BSD-3-clause`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libedit=3.1-20191211-1
-'http://deb.debian.org/debian/pool/main/libe/libedit/libedit_3.1-20191211-1.dsc' libedit_3.1-20191211-1.dsc 2129 SHA256:646689d3cfb2c3438ee6141d89c62aacf86691ff62e20fde606523b2966855c8
-'http://deb.debian.org/debian/pool/main/libe/libedit/libedit_3.1-20191211.orig.tar.gz' libedit_3.1-20191211.orig.tar.gz 516620 SHA256:ea51bf76ab18073debbd0d27e4348bb11cc30cbe6ef15debcde7704b115f41d9
-'http://deb.debian.org/debian/pool/main/libe/libedit/libedit_3.1-20191211-1.debian.tar.xz' libedit_3.1-20191211-1.debian.tar.xz 14120 SHA256:bfab0e30c86fec311a720319ef3e78343f31cbe7605b4bce7e5f26da530602ef
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libedit/3.1-20191211-1/
 
-- https://sources.debian.net/src/libedit/3.1-20191211-1/ (for browsing the source)
-- https://sources.debian.net/src/libedit/3.1-20191211-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libedit/3.1-20191211-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `liberror-perl=0.17028-1`
 
@@ -1812,20 +1805,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libxcrypt=1:4.4.10-7
-'http://deb.debian.org/debian/pool/main/libx/libxcrypt/libxcrypt_4.4.10-7.dsc' libxcrypt_4.4.10-7.dsc 2047 SHA256:28f9ca4978d450e68a5a1343b34194cb8fc08515c110043a26a3822bcfb2f141
-'http://deb.debian.org/debian/pool/main/libx/libxcrypt/libxcrypt_4.4.10.orig.tar.xz' libxcrypt_4.4.10.orig.tar.xz 372652 SHA256:f790a8eac4e4af3124d2844a24a7afb3a972368e4dff63d701599c2f2d065fd3
-'http://deb.debian.org/debian/pool/main/libx/libxcrypt/libxcrypt_4.4.10-7.debian.tar.xz' libxcrypt_4.4.10-7.debian.tar.xz 4516 SHA256:437a9e14bfead35e9770f86a752390f7b74dea72d8e14517cbe75abe795c0cfe
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libxcrypt/1:4.4.10-7/
 
-- https://sources.debian.net/src/libxcrypt/1:4.4.10-7/ (for browsing the source)
-- https://sources.debian.net/src/libxcrypt/1:4.4.10-7/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libxcrypt/1:4.4.10-7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libzstd=1.4.4+dfsg-1`
 

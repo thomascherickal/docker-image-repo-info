@@ -1006,14 +1006,9 @@ Licenses: (parsed from: `/usr/share/doc/gir1.2-gdkpixbuf-2.0/copyright`, `/usr/s
 - `LGPL-2+`
 - `MPL-1.1-or-LGPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gdk-pixbuf=2.40.0+dfsg-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gdk-pixbuf/gdk-pixbuf_2.40.0+dfsg-1ubuntu1.dsc' gdk-pixbuf_2.40.0+dfsg-1ubuntu1.dsc 3054 SHA256:2f822e06eeb30a41a2ab0e84d8e2788a5db50e8f6b84c1fe65023c4f0d97e09a
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gdk-pixbuf/gdk-pixbuf_2.40.0+dfsg.orig.tar.xz' gdk-pixbuf_2.40.0+dfsg.orig.tar.xz 5626144 SHA256:bdb3820005dc3c02ec8b1e2916a1d060f65f44d30ba48ab88704c3380d5a47b8
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gdk-pixbuf/gdk-pixbuf_2.40.0+dfsg-1ubuntu1.debian.tar.xz' gdk-pixbuf_2.40.0+dfsg-1ubuntu1.debian.tar.xz 17212 SHA256:08e15573103b97d00db58e2b2dcb63ade2e01bd2e3df4bafc20221af6cf7b5f0
-```
 
 ### `dpkg` source package: `git=1:2.24.0-1ubuntu1`
 
@@ -2207,14 +2202,9 @@ Licenses: (parsed from: `/usr/share/doc/libsemanage-common/copyright`, `/usr/sha
 - `GPL`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libsemanage=2.9-3build1
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsemanage/libsemanage_2.9-3build1.dsc' libsemanage_2.9-3build1.dsc 2675 SHA256:41591809dbc6e9fc69933d3a224325be2807dc09901bcdecd703f4b084225239
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsemanage/libsemanage_2.9.orig.tar.gz' libsemanage_2.9.orig.tar.gz 157690 SHA256:2576349d344492e73b468059767268dec1dabd8c35f3c7222c3ec2448737bc1c
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsemanage/libsemanage_2.9-3build1.debian.tar.xz' libsemanage_2.9-3build1.debian.tar.xz 17276 SHA256:fdd05d88b07e0d3afaddb753f15740471f252f98c6418d9fce700a3df46f065e
-```
 
 ### `dpkg` source package: `libsepol=3.0-1`
 
@@ -2816,15 +2806,9 @@ Licenses: (parsed from: `/usr/share/doc/mercurial/copyright`, `/usr/share/doc/me
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mercurial=4.8.2-1ubuntu4
-'http://archive.ubuntu.com/ubuntu/pool/universe/m/mercurial/mercurial_4.8.2-1ubuntu4.dsc' mercurial_4.8.2-1ubuntu4.dsc 2745 SHA256:9433f69ec5bd1bc98b1b0319b976028b7b4c2ac3bef1d6367ca627d8d1f5d85d
-'http://archive.ubuntu.com/ubuntu/pool/universe/m/mercurial/mercurial_4.8.2.orig.tar.gz' mercurial_4.8.2.orig.tar.gz 6870985 SHA256:6c202cb9cf05e63b86477ebf84d6475eb10b4022ac2cd3a7481fb36d9c45fdb2
-'http://archive.ubuntu.com/ubuntu/pool/universe/m/mercurial/mercurial_4.8.2.orig.tar.gz.asc' mercurial_4.8.2.orig.tar.gz.asc 833 SHA256:ceaf75242740acfd06a96aae53d8a40f3b3f3c4a7119bb53224d0bf6efa65254
-'http://archive.ubuntu.com/ubuntu/pool/universe/m/mercurial/mercurial_4.8.2-1ubuntu4.debian.tar.xz' mercurial_4.8.2-1ubuntu4.debian.tar.xz 66296 SHA256:f55665ce2a6c03eeb3de757826f07aacac41236bb4a457643092e279022dc398
-```
 
 ### `dpkg` source package: `mime-support=3.64ubuntu1`
 

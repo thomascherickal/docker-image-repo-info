@@ -1343,20 +1343,13 @@ Licenses: (parsed from: `/usr/share/doc/libglib2.0-0/copyright`, `/usr/share/doc
 - `GPL-2+`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glib2.0=2.62.3-2
-'http://deb.debian.org/debian/pool/main/g/glib2.0/glib2.0_2.62.3-2.dsc' glib2.0_2.62.3-2.dsc 3395 SHA256:5f1d3b95036c918cdbd5feb405e884407cc6b4afaf1264dab8ad7ec8363d93d3
-'http://deb.debian.org/debian/pool/main/g/glib2.0/glib2.0_2.62.3.orig.tar.xz' glib2.0_2.62.3.orig.tar.xz 4684460 SHA256:4400adc9f0d3ffcfe8e84225210370ce3f9853afb81812ddadb685325aa655c4
-'http://deb.debian.org/debian/pool/main/g/glib2.0/glib2.0_2.62.3-2.debian.tar.xz' glib2.0_2.62.3-2.debian.tar.xz 91464 SHA256:df026aa1ad790950ca5764104f6b8f7eefb2887181adc3bea8621584e113a9a2
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/glib2.0/2.62.3-2/
 
-- https://sources.debian.net/src/glib2.0/2.62.3-2/ (for browsing the source)
-- https://sources.debian.net/src/glib2.0/2.62.3-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/glib2.0/2.62.3-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `glibc=2.29-3`
 
@@ -4686,19 +4679,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3-defaults=3.7.5-1
-'http://deb.debian.org/debian/pool/main/p/python3-defaults/python3-defaults_3.7.5-1.dsc' python3-defaults_3.7.5-1.dsc 2801 SHA256:4a78be455ff51d14a5d3008311557baca9d13a15c504e5f83e018f8b27ffba41
-'http://deb.debian.org/debian/pool/main/p/python3-defaults/python3-defaults_3.7.5-1.tar.gz' python3-defaults_3.7.5-1.tar.gz 137433 SHA256:e50a6332aeaadc64a2c9226086e4da30c79328e27c6fa10d9a5eb367805df7f3
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/python3-defaults/3.7.5-1/
 
-- https://sources.debian.net/src/python3-defaults/3.7.5-1/ (for browsing the source)
-- https://sources.debian.net/src/python3-defaults/3.7.5-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python3-defaults/3.7.5-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `python3-stdlib-extensions=3.8.0-1`
 
@@ -4962,21 +4949,13 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`, `/usr/share/doc
 - `GPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sqlite3=3.30.1-1
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.30.1-1.dsc' sqlite3_3.30.1-1.dsc 2398 SHA256:546c5fc8110776be41bc7f2d3752a4b72e131d53291d39710c3ccaa6514ad51c
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.30.1.orig-www.tar.xz' sqlite3_3.30.1.orig-www.tar.xz 5700856 SHA256:da1965166e3e9aac2cb1e3b5822945b639b78247599bf4cef361cadbc333d8e9
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.30.1.orig.tar.xz' sqlite3_3.30.1.orig.tar.xz 7044280 SHA256:20792693194546c8ae60906fdcda1cd2796d0b6e585e6e5bcf36146f2db2dd4e
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.30.1-1.debian.tar.xz' sqlite3_3.30.1-1.debian.tar.xz 19352 SHA256:340a6d04b85e1858f5631c0493389aa4d11a666de3899b6bae8de50b15e555fe
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/sqlite3/3.30.1-1/
 
-- https://sources.debian.net/src/sqlite3/3.30.1-1/ (for browsing the source)
-- https://sources.debian.net/src/sqlite3/3.30.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sqlite3/3.30.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `subversion=1.13.0-1`
 
