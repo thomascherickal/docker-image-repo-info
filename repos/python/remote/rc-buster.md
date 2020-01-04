@@ -1,7 +1,7 @@
 ## `python:rc-buster`
 
 ```console
-$ docker pull python@sha256:b3d381b79b5861bb606d225ac17455764b8b248269b31061959690db3981c7e6
+$ docker pull python@sha256:4c4dd8e0668006360a1590da664883efbe82a53019557f0a5bcf435076ece373
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -107,14 +107,14 @@ CMD ["python3"]
 ### `python:rc-buster` - linux; arm variant v5
 
 ```console
-$ docker pull python@sha256:a96b2510f9d44e486c66f643dc250fa4750fd4cbd4b539acf2b0785692bac1a0
+$ docker pull python@sha256:1624df37077a53809923f2430324d3b988c515ef035afe90e798b73729151b1e
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **319.9 MB (319942059 bytes)**  
+-	Total Size: **320.3 MB (320271720 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2dd6d2617dff81359caa364d9cdfe2c59cfa7ae9f066fe70d4e26f64bb988597`
+-	Image ID: `sha256:140068ce323c42b01631a56a52a678aee2929ef47909fc03bda2761e35272856`
 -	Default Command: `["python3"]`
 
 ```dockerfile
@@ -134,25 +134,25 @@ RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		auto
 ENV PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Sat, 28 Dec 2019 08:12:59 GMT
 ENV LANG=C.UTF-8
-# Sat, 28 Dec 2019 08:13:18 GMT
-RUN apt-get update && apt-get install -y --no-install-recommends 		tk-dev 		uuid-dev 	&& rm -rf /var/lib/apt/lists/*
-# Sat, 28 Dec 2019 08:13:19 GMT
+# Fri, 03 Jan 2020 22:48:59 GMT
+RUN apt-get update && apt-get install -y --no-install-recommends 		libbluetooth-dev 		tk-dev 		uuid-dev 	&& rm -rf /var/lib/apt/lists/*
+# Fri, 03 Jan 2020 22:49:00 GMT
 ENV GPG_KEY=E3FF2839C048B25C084DEBE9B26995E310250568
-# Sat, 28 Dec 2019 08:13:20 GMT
+# Fri, 03 Jan 2020 22:49:01 GMT
 ENV PYTHON_VERSION=3.9.0a2
-# Sat, 28 Dec 2019 08:24:36 GMT
+# Fri, 03 Jan 2020 23:00:52 GMT
 RUN set -ex 		&& wget -O python.tar.xz "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz" 	&& wget -O python.tar.xz.asc "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz.asc" 	&& export GNUPGHOME="$(mktemp -d)" 	&& gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$GPG_KEY" 	&& gpg --batch --verify python.tar.xz.asc python.tar.xz 	&& { command -v gpgconf > /dev/null && gpgconf --kill all || :; } 	&& rm -rf "$GNUPGHOME" python.tar.xz.asc 	&& mkdir -p /usr/src/python 	&& tar -xJC /usr/src/python --strip-components=1 -f python.tar.xz 	&& rm python.tar.xz 		&& cd /usr/src/python 	&& gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)" 	&& ./configure 		--build="$gnuArch" 		--enable-loadable-sqlite-extensions 		--enable-optimizations 		--enable-option-checking=fatal 		--enable-shared 		--with-system-expat 		--with-system-ffi 		--without-ensurepip 	&& make -j "$(nproc)" 	&& make install 	&& ldconfig 		&& find /usr/local -depth 		\( 			\( -type d -a \( -name test -o -name tests -o -name idle_test \) \) 			-o 			\( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) 		\) -exec rm -rf '{}' + 	&& rm -rf /usr/src/python 		&& python3 --version
-# Sat, 28 Dec 2019 08:24:39 GMT
+# Fri, 03 Jan 2020 23:01:03 GMT
 RUN cd /usr/local/bin 	&& ln -s idle3 idle 	&& ln -s pydoc3 pydoc 	&& ln -s python3 python 	&& ln -s python3-config python-config
-# Sat, 28 Dec 2019 08:24:41 GMT
+# Fri, 03 Jan 2020 23:01:07 GMT
 ENV PYTHON_PIP_VERSION=19.3.1
-# Sat, 28 Dec 2019 08:24:42 GMT
+# Fri, 03 Jan 2020 23:01:10 GMT
 ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/ffe826207a010164265d9cc807978e3604d18ca0/get-pip.py
-# Sat, 28 Dec 2019 08:24:43 GMT
+# Fri, 03 Jan 2020 23:01:13 GMT
 ENV PYTHON_GET_PIP_SHA256=b86f36cc4345ae87bfd4f10ef6b2dbfa7a872fbff70608a1e43944d283fd0eee
-# Sat, 28 Dec 2019 08:24:54 GMT
+# Fri, 03 Jan 2020 23:01:33 GMT
 RUN set -ex; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum --check --strict -; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		"pip==$PYTHON_PIP_VERSION" 	; 	pip --version; 		find /usr/local -depth 		\( 			\( -type d -a \( -name test -o -name tests -o -name idle_test \) \) 			-o 			\( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) 		\) -exec rm -rf '{}' +; 	rm -f get-pip.py
-# Sat, 28 Dec 2019 08:24:56 GMT
+# Fri, 03 Jan 2020 23:01:39 GMT
 CMD ["python3"]
 ```
 
@@ -177,21 +177,21 @@ CMD ["python3"]
 		Last Modified: Sat, 28 Dec 2019 05:51:52 GMT  
 		Size: 171.0 MB (171003316 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1f39aa7ee6ee2abb5c15e1c730b1d92d39bb4643320a6109ce4160fd3009b883`  
-		Last Modified: Sat, 28 Dec 2019 11:40:33 GMT  
-		Size: 5.5 MB (5490267 bytes)  
+	-	`sha256:50c2da8ff94eb32812599ccfa072f52191b9024c23e2858f10951baa8b7a563d`  
+		Last Modified: Sat, 04 Jan 2020 01:37:49 GMT  
+		Size: 5.8 MB (5839397 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dcdbed410290fd3ebd3b7df9aecc959153dad41448ce9a123d2ec2f5239e5acb`  
-		Last Modified: Sat, 28 Dec 2019 11:40:43 GMT  
-		Size: 26.9 MB (26906578 bytes)  
+	-	`sha256:1fcb6c9cbe5eb7b1ec324e162222863bf20f27ad3a477f0b6bbfd1ad6ccf4e98`  
+		Last Modified: Sat, 04 Jan 2020 01:37:59 GMT  
+		Size: 26.9 MB (26887054 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9e23c6763dfd905f808825b58e3dadd5b7c2933eb31fe15a980f8098ae35729c`  
-		Last Modified: Sat, 28 Dec 2019 11:40:32 GMT  
-		Size: 235.0 B  
+	-	`sha256:0c6089b4d82009071391a0b65584915576f21e3c7004bbde4e4bb55628f05557`  
+		Last Modified: Sat, 04 Jan 2020 01:37:48 GMT  
+		Size: 233.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c1f3910a815c6e5ed2e6c0c73a1d657c24f64861b4759aabb3e31f9e3e8f5b5d`  
-		Last Modified: Sat, 28 Dec 2019 11:40:32 GMT  
-		Size: 1.9 MB (1870693 bytes)  
+	-	`sha256:531a884f62ee62c6ec243ddbda84f9fa74d4bdd7ab53b7bd9a55cab7379f66d4`  
+		Last Modified: Sat, 04 Jan 2020 01:37:48 GMT  
+		Size: 1.9 MB (1870750 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `python:rc-buster` - linux; arm variant v7
