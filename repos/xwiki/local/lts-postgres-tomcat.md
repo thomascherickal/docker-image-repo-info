@@ -1,10 +1,10 @@
-# `xwiki:10-postgres-tomcat`
+# `xwiki:11-postgres-tomcat`
 
 ## Docker Metadata
 
-- Image ID: `sha256:72e21d1c403a538177acd77eb3d28c1b702f36fb2c498f9398af6b7796ca5ee5`
-- Created: `2019-12-19T11:35:04.944571714Z`
-- Virtual Size: ~ 1.13 Gb  
+- Image ID: `sha256:488b8232fc17d6559d4895cd496603d319e0f0a9466d570ecd7428c3b9e00bdf`
+- Created: `2020-01-04T06:17:08.654988523Z`
+- Virtual Size: ~ 1.29 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -14,7 +14,7 @@
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk8u232-b09`
+  - `JAVA_VERSION=jdk-11.0.5+10`
   - `JAVA_HOME=/opt/java/openjdk`
   - `CATALINA_HOME=/usr/local/tomcat`
   - `TOMCAT_NATIVE_LIBDIR=/usr/local/tomcat/native-jni-lib`
@@ -23,9 +23,9 @@
   - `TOMCAT_MAJOR=8`
   - `TOMCAT_VERSION=8.5.50`
   - `TOMCAT_SHA512=ffca86027d298ba107c7d01c779318c05b61ba48767cc5967ee6ce5a88271bb6ec8eed60708d45453f30eeedddcaedd1a369d6df1b49eea2cd14fa40832cfb90`
-  - `XWIKI_VERSION=10.11.10`
-  - `XWIKI_URL_PREFIX=https://maven.xwiki.org/releases/org/xwiki/platform/xwiki-platform-distribution-war/10.11.10`
-  - `XWIKI_DOWNLOAD_SHA256=e1feedd24f0a27ba4e36464913a2fcb43a60f9310283a8a6be017a1979618bb7`
+  - `XWIKI_VERSION=11.10.2`
+  - `XWIKI_URL_PREFIX=https://maven.xwiki.org/releases/org/xwiki/platform/xwiki-platform-distribution-war/11.10.2`
+  - `XWIKI_DOWNLOAD_SHA256=a904633ccebb9570c50349479818f67fcb3482c7baa1666616f19f389dacb727`
 
 ## `dpkg` (`.deb`-based packages)
 
