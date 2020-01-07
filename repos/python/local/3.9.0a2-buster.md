@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:6dd14d3fc2a4abaa68cb06734a5cc8d588cee75d23256af6ec7e804ac5e0d3bd`
-- Created: `2019-12-28T05:23:16.71407314Z`
-- Virtual Size: ~ 933.91 Mb  
+- Image ID: `sha256:e462fcf130c22f4e87a95536f2085b5e1252d4035631367217da4ee221e183cc`
+- Created: `2020-01-03T22:28:21.374815353Z`
+- Virtual Size: ~ 934.83 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["python3"]`
@@ -406,6 +406,38 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/binutils/2.31.1-16/ (for browsing the source)
 - https://sources.debian.net/src/binutils/2.31.1-16/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/binutils/2.31.1-16/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `bluez=5.50-1`
+
+Binary Packages:
+
+- `libbluetooth-dev:amd64=5.50-1`
+- `libbluetooth3:amd64=5.50-1`
+
+Licenses: (parsed from: `/usr/share/doc/libbluetooth-dev/copyright`, `/usr/share/doc/libbluetooth3/copyright`)
+
+- `Apache-2.0`
+- `BSD-2-clause`
+- `Expat`
+- `GPL-2`
+- `GPL-2+`
+- `LGPL-2.1`
+- `LGPL-2.1+`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris bluez=5.50-1
+'http://deb.debian.org/debian/pool/main/b/bluez/bluez_5.50-1.dsc' bluez_5.50-1.dsc 2548 SHA256:5a0b702b18b54ca2e5616acebe70a1f634785e47ed2fb56f929626758cf8eee0
+'http://deb.debian.org/debian/pool/main/b/bluez/bluez_5.50.orig.tar.xz' bluez_5.50.orig.tar.xz 1498252 SHA256:289aa3b5ab92ab4ca1b58d034e72b082e7c91b78634f48df6293554eda4d04ec
+'http://deb.debian.org/debian/pool/main/b/bluez/bluez_5.50-1.debian.tar.xz' bluez_5.50-1.debian.tar.xz 32072 SHA256:94a11d7ac7a160635b0d18bea171f8b34a680fa59122aa8a62aa8f968911a0eb
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/bluez/5.50-1/ (for browsing the source)
+- https://sources.debian.net/src/bluez/5.50-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/bluez/5.50-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `bzip2=1.0.6-9.2~deb10u1`
 
