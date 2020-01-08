@@ -1352,20 +1352,13 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 - `dlmalloc`
 - `mingw-runtime`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris git=1:2.1.4-2.1+deb8u7
-'http://security.debian.org/debian-security/pool/updates/main/g/git/git_2.1.4-2.1+deb8u7.dsc' git_2.1.4-2.1+deb8u7.dsc 2846 SHA256:016a2def5434cd2b84af9f42c73a0388c17636b998bc04bb230b047c7547a646
-'http://security.debian.org/debian-security/pool/updates/main/g/git/git_2.1.4.orig.tar.xz' git_2.1.4.orig.tar.xz 3544804 SHA256:a04968b9b10cbcb31a7054aa3a0d11ac47c83556ecd270ddef1987df5d3d053e
-'http://security.debian.org/debian-security/pool/updates/main/g/git/git_2.1.4-2.1+deb8u7.debian.tar.xz' git_2.1.4-2.1+deb8u7.debian.tar.xz 517256 SHA256:f378772b946f89e66b44c9d5b1b1f68a64561f07a1e0e7dbb94a94bbbde44442
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/git/1:2.1.4-2.1+deb8u7/
 
-- https://sources.debian.net/src/git/1:2.1.4-2.1+deb8u7/ (for browsing the source)
-- https://sources.debian.net/src/git/1:2.1.4-2.1+deb8u7/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/git/1:2.1.4-2.1+deb8u7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `glib2.0=2.42.1-1+deb8u3`
 
