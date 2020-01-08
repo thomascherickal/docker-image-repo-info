@@ -12,6 +12,8 @@
 -	[`arangodb:3.4.8`](#arangodb348)
 -	[`arangodb:3.5`](#arangodb35)
 -	[`arangodb:3.5.3`](#arangodb353)
+-	[`arangodb:3.6`](#arangodb36)
+-	[`arangodb:3.6.0`](#arangodb360)
 -	[`arangodb:latest`](#arangodblatest)
 
 ## `arangodb:2.8`
@@ -871,6 +873,14 @@ CMD ["arangod"]
 		Last Modified: Mon, 02 Dec 2019 21:23:39 GMT  
 		Size: 244.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `arangodb:3.6`
+
+**does not exist** (yet?)
+
+## `arangodb:3.6.0`
+
+**does not exist** (yet?)
 
 ## `arangodb:latest`
 
