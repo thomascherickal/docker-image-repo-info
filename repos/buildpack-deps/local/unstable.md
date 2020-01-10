@@ -386,20 +386,13 @@ Licenses: (parsed from: `/usr/share/doc/binutils/copyright`, `/usr/share/doc/bin
 - `GPL`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris binutils=2.33.1-6
-'http://deb.debian.org/debian/pool/main/b/binutils/binutils_2.33.1-6.dsc' binutils_2.33.1-6.dsc 11016 SHA256:baa4056ef1fd739feadb55d2f05071d8a48d5f1cd97ef3bcaacb6ed013a8acc4
-'http://deb.debian.org/debian/pool/main/b/binutils/binutils_2.33.1.orig.tar.xz' binutils_2.33.1.orig.tar.xz 22843896 SHA256:675684a650b3ad67471c6edca30da393630c94a54bc0f889492daa9e57d9db8e
-'http://deb.debian.org/debian/pool/main/b/binutils/binutils_2.33.1-6.debian.tar.xz' binutils_2.33.1-6.debian.tar.xz 89852 SHA256:5f07521217a34a2fee08fd219e6d8fe235fb0d019a5d88794d4f7ee967e8be2a
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/binutils/2.33.1-6/
 
-- https://sources.debian.net/src/binutils/2.33.1-6/ (for browsing the source)
-- https://sources.debian.net/src/binutils/2.33.1-6/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/binutils/2.33.1-6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `brotli=1.0.7-5`
 
@@ -864,21 +857,13 @@ Licenses: (parsed from: `/usr/share/doc/comerr-dev/copyright`, `/usr/share/doc/e
 - `GPL-2`
 - `LGPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris e2fsprogs=1.45.4-1
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.45.4-1.dsc' e2fsprogs_1.45.4-1.dsc 2920 SHA256:170b4c2de6417b5fa380dc1101b672f2bdeaee9ddb343ab53816d3e08eeda045
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.45.4.orig.tar.gz' e2fsprogs_1.45.4.orig.tar.gz 7930961 SHA256:e69c69839cf80cb55afa18b9a99ed8f2e559db0313e3d15ac5497ed7e1a34c4b
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.45.4.orig.tar.gz.asc' e2fsprogs_1.45.4.orig.tar.gz.asc 488 SHA256:4b1777d8ae7907e205f10d2b06459637f467acd14f4e50f0b520cf23cd22f97b
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.45.4-1.debian.tar.xz' e2fsprogs_1.45.4-1.debian.tar.xz 79088 SHA256:b71e98efcd6d2ff58723b092fc4ac4b96b14a3509a040b1b204f37b3f4f1ef86
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/e2fsprogs/1.45.4-1/
 
-- https://sources.debian.net/src/e2fsprogs/1.45.4-1/ (for browsing the source)
-- https://sources.debian.net/src/e2fsprogs/1.45.4-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/e2fsprogs/1.45.4-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `elfutils=0.176-1.1`
 
@@ -3704,21 +3689,13 @@ Licenses: (parsed from: `/usr/share/doc/libmariadb-dev/copyright`, `/usr/share/d
 - `unlimited-free-doc`
 - `zlib/libpng`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mariadb-10.3=1:10.3.21-1
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.21-1.dsc' mariadb-10.3_10.3.21-1.dsc 4780 SHA256:d6b62c61246c68ee1763d7ce97fec31c918ea71aba53c737de39410e2293162f
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.21.orig.tar.gz' mariadb-10.3_10.3.21.orig.tar.gz 72005618 SHA256:f95bd4b670fb86082d1e3f0c4299ebcd40bda856b111e3f02ab647b0e9ba5e8f
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.21.orig.tar.gz.asc' mariadb-10.3_10.3.21.orig.tar.gz.asc 195 SHA256:f41c8ebfe7b9598edc776f271b32643aec2448ac490c36db11d7c6493e395b9f
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.21-1.debian.tar.xz' mariadb-10.3_10.3.21-1.debian.tar.xz 214288 SHA256:08b019319b938a95fa97dd090e689ef37e806fcb9f1a8d24e469de4f11daa39b
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mariadb-10.3/1:10.3.21-1/
 
-- https://sources.debian.net/src/mariadb-10.3/1:10.3.21-1/ (for browsing the source)
-- https://sources.debian.net/src/mariadb-10.3/1:10.3.21-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mariadb-10.3/1:10.3.21-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mawk=1.3.3-17`
 
@@ -3752,21 +3729,13 @@ Licenses: (parsed from: `/usr/share/doc/mercurial/copyright`, `/usr/share/doc/me
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mercurial=5.2.1-1
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.2.1-1.dsc' mercurial_5.2.1-1.dsc 2771 SHA256:45ec2d254165bf09b273aef2255b724db9fb5bf53668cecd738da5775f9d6e1f
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.2.1.orig.tar.gz' mercurial_5.2.1.orig.tar.gz 7332037 SHA256:18b1550abf9872a6905eb67527bc73e13f2a448830cca9be883528b0ce68b3df
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.2.1.orig.tar.gz.asc' mercurial_5.2.1.orig.tar.gz.asc 833 SHA256:a357cdab85c82adccdb083a28c0757b516ea518f0066d3a93c84331fa23f1eab
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.2.1-1.debian.tar.xz' mercurial_5.2.1-1.debian.tar.xz 59488 SHA256:e137f742d4a05d833fdd4c6e56702639fb3babf396174d52f1b0f37acdb38d56
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mercurial/5.2.1-1/
 
-- https://sources.debian.net/src/mercurial/5.2.1-1/ (for browsing the source)
-- https://sources.debian.net/src/mercurial/5.2.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mercurial/5.2.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mime-support=3.64`
 
@@ -4182,21 +4151,13 @@ Licenses: (parsed from: `/usr/share/doc/openssh-client/copyright`)
 - `Powell-BSD-style`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssh=1:8.1p1-2
-'http://deb.debian.org/debian/pool/main/o/openssh/openssh_8.1p1-2.dsc' openssh_8.1p1-2.dsc 3316 SHA256:152f1eb5e1af12b2a92fcf53786ce879d39ad05b58bf18bce20e6fbeb5ea6903
-'http://deb.debian.org/debian/pool/main/o/openssh/openssh_8.1p1.orig.tar.gz' openssh_8.1p1.orig.tar.gz 1625894 SHA256:02f5dbef3835d0753556f973cd57b4c19b6b1f6cd24c03445e23ac77ca1b93ff
-'http://deb.debian.org/debian/pool/main/o/openssh/openssh_8.1p1.orig.tar.gz.asc' openssh_8.1p1.orig.tar.gz.asc 683 SHA256:da3f623f0131b55c8199fbbd86be0748d00c6e1e098dfc0ebea664901c9a7ab4
-'http://deb.debian.org/debian/pool/main/o/openssh/openssh_8.1p1-2.debian.tar.xz' openssh_8.1p1-2.debian.tar.xz 171280 SHA256:2b08ea2c5c33d71816a2d6bd47f752b25f2117ae920ba4bcb9f98b718f63ccda
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/openssh/1:8.1p1-2/
 
-- https://sources.debian.net/src/openssh/1:8.1p1-2/ (for browsing the source)
-- https://sources.debian.net/src/openssh/1:8.1p1-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openssh/1:8.1p1-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssl=1.1.1d-2`
 
@@ -4560,20 +4521,13 @@ Licenses: (parsed from: `/usr/share/doc/libpq-dev/copyright`, `/usr/share/doc/li
 - `nagaysau-ishii`
 - `rijndael`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris postgresql-12=12.1-1
-'http://deb.debian.org/debian/pool/main/p/postgresql-12/postgresql-12_12.1-1.dsc' postgresql-12_12.1-1.dsc 3591 SHA256:ae23cb3e367e1996341e92e7546f8ab5a70bfb3eb6bd2f82fdefd677131fa006
-'http://deb.debian.org/debian/pool/main/p/postgresql-12/postgresql-12_12.1.orig.tar.bz2' postgresql-12_12.1.orig.tar.bz2 20213711 SHA256:a09bf3abbaf6763980d0f8acbb943b7629a8b20073de18d867aecdb7988483ed
-'http://deb.debian.org/debian/pool/main/p/postgresql-12/postgresql-12_12.1-1.debian.tar.xz' postgresql-12_12.1-1.debian.tar.xz 22520 SHA256:c8506ff2de2561a313e5a0daf84ff6f3be537b7777fb2825dde64435e5e38228
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/postgresql-12/12.1-1/
 
-- https://sources.debian.net/src/postgresql-12/12.1-1/ (for browsing the source)
-- https://sources.debian.net/src/postgresql-12/12.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/postgresql-12/12.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `procps=2:3.3.15-2`
 
@@ -5108,20 +5062,13 @@ Licenses: (parsed from: `/usr/share/doc/libtiff-dev/copyright`, `/usr/share/doc/
 
 - `Hylafax`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tiff=4.1.0+git191117-1
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.1.0+git191117-1.dsc' tiff_4.1.0+git191117-1.dsc 2242 SHA256:719b2652bb6ac2bfe0cb6728cfdb267b320a8dc7c1250940ce567e022876b867
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.1.0+git191117.orig.tar.xz' tiff_4.1.0+git191117.orig.tar.xz 1533524 SHA256:67e1d045e994adb7144b0cca228d70dd6d520aaf8c75c342064bc0fd601e6e42
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.1.0+git191117-1.debian.tar.xz' tiff_4.1.0+git191117-1.debian.tar.xz 18896 SHA256:15bfa5a520c58b41a67b6ac211feae21159a02acd45965ceb1831a5fd06ebf33
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tiff/4.1.0+git191117-1/
 
-- https://sources.debian.net/src/tiff/4.1.0+git191117-1/ (for browsing the source)
-- https://sources.debian.net/src/tiff/4.1.0+git191117-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tiff/4.1.0+git191117-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tzdata=2019c-3`
 

@@ -652,21 +652,13 @@ Licenses: (parsed from: `/usr/share/doc/e2fsprogs/copyright`, `/usr/share/doc/li
 - `GPL-2`
 - `LGPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris e2fsprogs=1.45.4-1
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.45.4-1.dsc' e2fsprogs_1.45.4-1.dsc 2920 SHA256:170b4c2de6417b5fa380dc1101b672f2bdeaee9ddb343ab53816d3e08eeda045
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.45.4.orig.tar.gz' e2fsprogs_1.45.4.orig.tar.gz 7930961 SHA256:e69c69839cf80cb55afa18b9a99ed8f2e559db0313e3d15ac5497ed7e1a34c4b
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.45.4.orig.tar.gz.asc' e2fsprogs_1.45.4.orig.tar.gz.asc 488 SHA256:4b1777d8ae7907e205f10d2b06459637f467acd14f4e50f0b520cf23cd22f97b
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.45.4-1.debian.tar.xz' e2fsprogs_1.45.4-1.debian.tar.xz 79088 SHA256:b71e98efcd6d2ff58723b092fc4ac4b96b14a3509a040b1b204f37b3f4f1ef86
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/e2fsprogs/1.45.4-1/
 
-- https://sources.debian.net/src/e2fsprogs/1.45.4-1/ (for browsing the source)
-- https://sources.debian.net/src/e2fsprogs/1.45.4-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/e2fsprogs/1.45.4-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `elfutils=0.176-1.1`
 
@@ -1926,21 +1918,13 @@ Licenses: (parsed from: `/usr/share/doc/mercurial/copyright`, `/usr/share/doc/me
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mercurial=5.2.1-1
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.2.1-1.dsc' mercurial_5.2.1-1.dsc 2771 SHA256:45ec2d254165bf09b273aef2255b724db9fb5bf53668cecd738da5775f9d6e1f
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.2.1.orig.tar.gz' mercurial_5.2.1.orig.tar.gz 7332037 SHA256:18b1550abf9872a6905eb67527bc73e13f2a448830cca9be883528b0ce68b3df
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.2.1.orig.tar.gz.asc' mercurial_5.2.1.orig.tar.gz.asc 833 SHA256:a357cdab85c82adccdb083a28c0757b516ea518f0066d3a93c84331fa23f1eab
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.2.1-1.debian.tar.xz' mercurial_5.2.1-1.debian.tar.xz 59488 SHA256:e137f742d4a05d833fdd4c6e56702639fb3babf396174d52f1b0f37acdb38d56
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mercurial/5.2.1-1/
 
-- https://sources.debian.net/src/mercurial/5.2.1-1/ (for browsing the source)
-- https://sources.debian.net/src/mercurial/5.2.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mercurial/5.2.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mime-support=3.64`
 
@@ -2158,21 +2142,13 @@ Licenses: (parsed from: `/usr/share/doc/openssh-client/copyright`)
 - `Powell-BSD-style`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssh=1:8.1p1-2
-'http://deb.debian.org/debian/pool/main/o/openssh/openssh_8.1p1-2.dsc' openssh_8.1p1-2.dsc 3316 SHA256:152f1eb5e1af12b2a92fcf53786ce879d39ad05b58bf18bce20e6fbeb5ea6903
-'http://deb.debian.org/debian/pool/main/o/openssh/openssh_8.1p1.orig.tar.gz' openssh_8.1p1.orig.tar.gz 1625894 SHA256:02f5dbef3835d0753556f973cd57b4c19b6b1f6cd24c03445e23ac77ca1b93ff
-'http://deb.debian.org/debian/pool/main/o/openssh/openssh_8.1p1.orig.tar.gz.asc' openssh_8.1p1.orig.tar.gz.asc 683 SHA256:da3f623f0131b55c8199fbbd86be0748d00c6e1e098dfc0ebea664901c9a7ab4
-'http://deb.debian.org/debian/pool/main/o/openssh/openssh_8.1p1-2.debian.tar.xz' openssh_8.1p1-2.debian.tar.xz 171280 SHA256:2b08ea2c5c33d71816a2d6bd47f752b25f2117ae920ba4bcb9f98b718f63ccda
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/openssh/1:8.1p1-2/
 
-- https://sources.debian.net/src/openssh/1:8.1p1-2/ (for browsing the source)
-- https://sources.debian.net/src/openssh/1:8.1p1-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openssh/1:8.1p1-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssl=1.1.1d-2`
 

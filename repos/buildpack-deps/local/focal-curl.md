@@ -176,14 +176,13 @@ Licenses: (parsed from: `/usr/share/doc/libbrotli1/copyright`)
 
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris brotli=1.0.7-5
-'http://archive.ubuntu.com/ubuntu/pool/main/b/brotli/brotli_1.0.7-5.dsc' brotli_1.0.7-5.dsc 2491 SHA256:25ff0a01848020e00ecff028df3ab25a5e651670932cc55cec2c93775d6f63da
-'http://archive.ubuntu.com/ubuntu/pool/main/b/brotli/brotli_1.0.7.orig.tar.gz' brotli_1.0.7.orig.tar.gz 23827908 SHA256:4c61bfb0faca87219ea587326c467b95acb25555b53d1a421ffa3c8a9296ee2c
-'http://archive.ubuntu.com/ubuntu/pool/main/b/brotli/brotli_1.0.7-5.debian.tar.xz' brotli_1.0.7-5.debian.tar.xz 4456 SHA256:c1c2475f1acf0b15f75f870120d30c220d9af149cb44d2422f198cf6580648ae
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/brotli/1.0.7-5/
+
 
 ### `dpkg` source package: `bzip2=1.0.8-2`
 
@@ -236,13 +235,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris cdebconf=0.250ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cdebconf/cdebconf_0.250ubuntu1.dsc' cdebconf_0.250ubuntu1.dsc 2858 SHA256:bed77f0e55d2fa9212d108c6be741ff2e19e39e77ae9b3c5d3215b36fe9fed1a
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cdebconf/cdebconf_0.250ubuntu1.tar.xz' cdebconf_0.250ubuntu1.tar.xz 276512 SHA256:00dfbfc507ad5761de0a92580fe7838cce191e667460bfe5cc99cb430fef8626
-```
 
 ### `dpkg` source package: `coreutils=8.30-3ubuntu2`
 
@@ -652,14 +647,9 @@ Licenses: (parsed from: `/usr/share/doc/libasn1-8-heimdal/copyright`, `/usr/shar
 - `custom`
 - `none`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris heimdal=7.5.0+dfsg-3build1
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.5.0+dfsg-3build1.dsc' heimdal_7.5.0+dfsg-3build1.dsc 3628 SHA256:7e971aad47d4518dc4d487c5d9508c3711949509e540d2a84fd8ede16530e67f
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.5.0+dfsg.orig.tar.gz' heimdal_7.5.0+dfsg.orig.tar.gz 8955005 SHA256:489119b7a1a900b88163765654dc59cba9a321b078fafc76629e2b85ef140867
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.5.0+dfsg-3build1.debian.tar.xz' heimdal_7.5.0+dfsg-3build1.debian.tar.xz 461560 SHA256:f5e7d09ab71cdc18ce2776bc1c047681d6daacdc55cb637cb9520bc11f528324
-```
 
 ### `dpkg` source package: `hostname=3.23`
 
