@@ -489,21 +489,13 @@ Licenses: (parsed from: `/usr/share/doc/e2fsprogs/copyright`, `/usr/share/doc/li
 - `GPL-2`
 - `LGPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris e2fsprogs=1.45.4-1
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.45.4-1.dsc' e2fsprogs_1.45.4-1.dsc 2920 SHA256:170b4c2de6417b5fa380dc1101b672f2bdeaee9ddb343ab53816d3e08eeda045
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.45.4.orig.tar.gz' e2fsprogs_1.45.4.orig.tar.gz 7930961 SHA256:e69c69839cf80cb55afa18b9a99ed8f2e559db0313e3d15ac5497ed7e1a34c4b
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.45.4.orig.tar.gz.asc' e2fsprogs_1.45.4.orig.tar.gz.asc 488 SHA256:4b1777d8ae7907e205f10d2b06459637f467acd14f4e50f0b520cf23cd22f97b
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.45.4-1.debian.tar.xz' e2fsprogs_1.45.4-1.debian.tar.xz 79088 SHA256:b71e98efcd6d2ff58723b092fc4ac4b96b14a3509a040b1b204f37b3f4f1ef86
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/e2fsprogs/1.45.4-1/
 
-- https://sources.debian.net/src/e2fsprogs/1.45.4-1/ (for browsing the source)
-- https://sources.debian.net/src/e2fsprogs/1.45.4-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/e2fsprogs/1.45.4-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `findutils=4.7.0-1`
 
