@@ -1,9 +1,9 @@
-# `postfixadmin:3.2.2-fpm-alpine`
+# `postfixadmin:3.2.3-fpm-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:f537da9089d5cd17c67fca44b7718494a1b5d9adde4185a2910ed19ff97bea0f`
-- Created: `2019-12-27T04:06:45.370329394Z`
+- Image ID: `sha256:d6c6f9defd4102203a0f9efc32ac873c2005084a74970d6f4d39709d263eb127`
+- Created: `2020-01-13T21:35:57.7984887Z`
 - Virtual Size: ~ 91.80 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -23,8 +23,8 @@
   - `PHP_ASC_URL=https://www.php.net/get/php-7.3.13.tar.xz.asc/from/this/mirror`
   - `PHP_SHA256=57ac55fe442d2da650abeb9e6fa161bd3a98ba6528c029f076f8bba43dd5c228`
   - `PHP_MD5=`
-  - `POSTFIXADMIN_VERSION=3.2.2`
-  - `POSTFIXADMIN_SHA512=6c84cb215e69c52c26db0651e5d0d9d8bcb0a63b00d3c197f10fa1f0442a1fde44bb514fb476a1e68a21741d603febac67282961d01270e5969ee13d145121ee`
+  - `POSTFIXADMIN_VERSION=3.2.3`
+  - `POSTFIXADMIN_SHA512=d44addb9a3ca830caf55b603363054df561d659957f21cab7523465ebf02ca18abe7fcf298fe718d957d0b7bf5613e2dde69c78c26e0f7f6f595d79b28fe08ab`
 - Labels:
   - `maintainer=David Goodwin <david@codepoets.co.uk> (@DavidGoodwin)`
 
