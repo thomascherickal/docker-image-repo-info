@@ -850,21 +850,13 @@ Licenses: (parsed from: `/usr/share/doc/comerr-dev/copyright`, `/usr/share/doc/e
 - `GPL-2`
 - `LGPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris e2fsprogs=1.45.4-1
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.45.4-1.dsc' e2fsprogs_1.45.4-1.dsc 2920 SHA256:170b4c2de6417b5fa380dc1101b672f2bdeaee9ddb343ab53816d3e08eeda045
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.45.4.orig.tar.gz' e2fsprogs_1.45.4.orig.tar.gz 7930961 SHA256:e69c69839cf80cb55afa18b9a99ed8f2e559db0313e3d15ac5497ed7e1a34c4b
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.45.4.orig.tar.gz.asc' e2fsprogs_1.45.4.orig.tar.gz.asc 488 SHA256:4b1777d8ae7907e205f10d2b06459637f467acd14f4e50f0b520cf23cd22f97b
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.45.4-1.debian.tar.xz' e2fsprogs_1.45.4-1.debian.tar.xz 79088 SHA256:b71e98efcd6d2ff58723b092fc4ac4b96b14a3509a040b1b204f37b3f4f1ef86
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/e2fsprogs/1.45.4-1/
 
-- https://sources.debian.net/src/e2fsprogs/1.45.4-1/ (for browsing the source)
-- https://sources.debian.net/src/e2fsprogs/1.45.4-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/e2fsprogs/1.45.4-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `elfutils=0.176-1.1`
 
@@ -961,21 +953,13 @@ Licenses: (parsed from: `/usr/share/doc/file/copyright`, `/usr/share/doc/libmagi
 - `MIT-Old-Style-with-legal-disclaimer-2`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris file=1:5.37-6
-'http://deb.debian.org/debian/pool/main/f/file/file_5.37-6.dsc' file_5.37-6.dsc 2214 SHA256:9e549c158d657c6345f5a33d4c151a7c4a383953c2ea9c74171e10b942dddd69
-'http://deb.debian.org/debian/pool/main/f/file/file_5.37.orig.tar.gz' file_5.37.orig.tar.gz 887682 SHA256:e9c13967f7dd339a3c241b7710ba093560b9a33013491318e88e6b8b57bae07f
-'http://deb.debian.org/debian/pool/main/f/file/file_5.37.orig.tar.gz.asc' file_5.37.orig.tar.gz.asc 169 SHA256:f73642d84908665dad226f247ae223e6bf52da8b2ca20ca88bd4e4966eef6bc7
-'http://deb.debian.org/debian/pool/main/f/file/file_5.37-6.debian.tar.xz' file_5.37-6.debian.tar.xz 37648 SHA256:a20a1af3ece8b33c6da832d1dd04e3ff8b79a7d4833311b335b3f2c6fa09bd5a
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/file/1:5.37-6/
 
-- https://sources.debian.net/src/file/1:5.37-6/ (for browsing the source)
-- https://sources.debian.net/src/file/1:5.37-6/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/file/1:5.37-6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `findutils=4.7.0-1`
 
@@ -3496,20 +3480,13 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 - `X11`
 - `Xen-interface`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=5.3.15-1
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.3.15-1.dsc' linux_5.3.15-1.dsc 197690 SHA256:93dac7b4919fbfca18891458d074e4bff3a11aa7770fdbffda435a52982f0c20
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.3.15.orig.tar.xz' linux_5.3.15.orig.tar.xz 112805288 SHA256:5c6e245c423e53ccba19ddb22b67d1ad4beca8cba5d07b6dcec909ebc7f14178
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.3.15-1.debian.tar.xz' linux_5.3.15-1.debian.tar.xz 1187612 SHA256:3bb01c611bb061df9c815024efde4fb1c2abb31fa090410700aab0921dba97e5
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/linux/5.3.15-1/
 
-- https://sources.debian.net/src/linux/5.3.15-1/ (for browsing the source)
-- https://sources.debian.net/src/linux/5.3.15-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/5.3.15-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lsb=11.1.0`
 
@@ -3719,21 +3696,13 @@ Licenses: (parsed from: `/usr/share/doc/mercurial/copyright`, `/usr/share/doc/me
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mercurial=5.2.1-1
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.2.1-1.dsc' mercurial_5.2.1-1.dsc 2771 SHA256:45ec2d254165bf09b273aef2255b724db9fb5bf53668cecd738da5775f9d6e1f
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.2.1.orig.tar.gz' mercurial_5.2.1.orig.tar.gz 7332037 SHA256:18b1550abf9872a6905eb67527bc73e13f2a448830cca9be883528b0ce68b3df
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.2.1.orig.tar.gz.asc' mercurial_5.2.1.orig.tar.gz.asc 833 SHA256:a357cdab85c82adccdb083a28c0757b516ea518f0066d3a93c84331fa23f1eab
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.2.1-1.debian.tar.xz' mercurial_5.2.1-1.debian.tar.xz 59488 SHA256:e137f742d4a05d833fdd4c6e56702639fb3babf396174d52f1b0f37acdb38d56
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mercurial/5.2.1-1/
 
-- https://sources.debian.net/src/mercurial/5.2.1-1/ (for browsing the source)
-- https://sources.debian.net/src/mercurial/5.2.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mercurial/5.2.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mime-support=3.64`
 
@@ -4521,20 +4490,13 @@ Licenses: (parsed from: `/usr/share/doc/libpq-dev/copyright`, `/usr/share/doc/li
 - `nagaysau-ishii`
 - `rijndael`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris postgresql-12=12.1-1
-'http://deb.debian.org/debian/pool/main/p/postgresql-12/postgresql-12_12.1-1.dsc' postgresql-12_12.1-1.dsc 3591 SHA256:ae23cb3e367e1996341e92e7546f8ab5a70bfb3eb6bd2f82fdefd677131fa006
-'http://deb.debian.org/debian/pool/main/p/postgresql-12/postgresql-12_12.1.orig.tar.bz2' postgresql-12_12.1.orig.tar.bz2 20213711 SHA256:a09bf3abbaf6763980d0f8acbb943b7629a8b20073de18d867aecdb7988483ed
-'http://deb.debian.org/debian/pool/main/p/postgresql-12/postgresql-12_12.1-1.debian.tar.xz' postgresql-12_12.1-1.debian.tar.xz 22520 SHA256:c8506ff2de2561a313e5a0daf84ff6f3be537b7777fb2825dde64435e5e38228
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/postgresql-12/12.1-1/
 
-- https://sources.debian.net/src/postgresql-12/12.1-1/ (for browsing the source)
-- https://sources.debian.net/src/postgresql-12/12.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/postgresql-12/12.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `procps=2:3.3.15-2`
 
