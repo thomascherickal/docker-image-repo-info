@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:4a2a799c90f887dd5af99bd3a7c32062db309d711494939f962613579ee49ffd`
-- Created: `2019-12-29T08:39:01.922803871Z`
-- Virtual Size: ~ 631.91 Mb  
+- Image ID: `sha256:3fd02d3305d8e1fd29720ef9d0f7b52ec2e2ea3cbb2f43427f6a58fb04916ba8`
+- Created: `2020-01-15T21:58:06.703049682Z`
+- Virtual Size: ~ 632.29 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["sh","-c","sleep 1 && exec clj"]`
@@ -12,9 +12,9 @@
   - `PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=C.UTF-8`
   - `JAVA_HOME=/usr/local/openjdk-11`
-  - `JAVA_VERSION=11.0.5`
-  - `JAVA_BASE_URL=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.5%2B10/OpenJDK11U-jdk_`
-  - `JAVA_URL_VERSION=11.0.5_10`
+  - `JAVA_VERSION=11.0.6`
+  - `JAVA_BASE_URL=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.6%2B10/OpenJDK11U-jdk_`
+  - `JAVA_URL_VERSION=11.0.6_10`
   - `CLOJURE_VERSION=1.10.1.483`
 
 ## `dpkg` (`.deb`-based packages)

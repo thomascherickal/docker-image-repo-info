@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:4464d0049411ebccbe1e4b781d54098d3a01d2517a8962fd3cb81c6f4fceb85b`
-- Created: `2019-12-29T08:37:52.191691441Z`
-- Virtual Size: ~ 668.48 Mb  
+- Image ID: `sha256:5a498c856d4224100df0a3e77700bd22c7fe90bd33c176699858a79be2e98430`
+- Created: `2020-01-15T21:56:50.309903511Z`
+- Virtual Size: ~ 668.86 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["boot","repl"]`
@@ -12,9 +12,9 @@
   - `PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/`
   - `LANG=C.UTF-8`
   - `JAVA_HOME=/usr/local/openjdk-11`
-  - `JAVA_VERSION=11.0.5`
-  - `JAVA_BASE_URL=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.5%2B10/OpenJDK11U-jdk_`
-  - `JAVA_URL_VERSION=11.0.5_10`
+  - `JAVA_VERSION=11.0.6`
+  - `JAVA_BASE_URL=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.6%2B10/OpenJDK11U-jdk_`
+  - `JAVA_URL_VERSION=11.0.6_10`
   - `BOOT_VERSION=2.8.3`
   - `BOOT_INSTALL=/usr/local/bin/`
   - `BOOT_AS_ROOT=yes`

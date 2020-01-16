@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:ff1b69d05c7de5cbace0f1bda40f6fad5440715eb4d3aecce425bbd57b281916`
-- Created: `2019-12-29T08:37:10.146785438Z`
-- Virtual Size: ~ 430.80 Mb  
+- Image ID: `sha256:d6d9fda328e32e07a66b57e1124d02fcbb48535694553e142eb9f0a8e8c33250`
+- Created: `2020-01-15T21:55:44.658517973Z`
+- Virtual Size: ~ 431.18 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["lein","repl"]`
@@ -12,9 +12,9 @@
   - `PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/`
   - `LANG=C.UTF-8`
   - `JAVA_HOME=/usr/local/openjdk-11`
-  - `JAVA_VERSION=11.0.5`
-  - `JAVA_BASE_URL=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.5%2B10/OpenJDK11U-jdk_`
-  - `JAVA_URL_VERSION=11.0.5_10`
+  - `JAVA_VERSION=11.0.6`
+  - `JAVA_BASE_URL=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.6%2B10/OpenJDK11U-jdk_`
+  - `JAVA_URL_VERSION=11.0.6_10`
   - `LEIN_VERSION=2.9.1`
   - `LEIN_INSTALL=/usr/local/bin/`
   - `LEIN_ROOT=1`
