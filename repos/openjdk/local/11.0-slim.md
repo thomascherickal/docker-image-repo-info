@@ -1,10 +1,10 @@
-# `openjdk:11.0.5-jdk-slim-buster`
+# `openjdk:11.0.6-jdk-slim-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:6085fd745c24dce04edcb94d8b420e158ca5c508a873c4bd767499ba98772f44`
-- Created: `2019-12-28T08:55:28.871622032Z`
-- Virtual Size: ~ 401.02 Mb  
+- Image ID: `sha256:affa6c0bfe24fdf56257a124df43df196bb2cbc8cfd9d7815651964083f33707`
+- Created: `2020-01-15T21:29:19.138484087Z`
+- Virtual Size: ~ 401.40 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["jshell"]`
@@ -12,9 +12,9 @@
   - `PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=C.UTF-8`
   - `JAVA_HOME=/usr/local/openjdk-11`
-  - `JAVA_VERSION=11.0.5`
-  - `JAVA_BASE_URL=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.5%2B10/OpenJDK11U-jdk_`
-  - `JAVA_URL_VERSION=11.0.5_10`
+  - `JAVA_VERSION=11.0.6`
+  - `JAVA_BASE_URL=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.6%2B10/OpenJDK11U-jdk_`
+  - `JAVA_URL_VERSION=11.0.6_10`
 
 ## `dpkg` (`.deb`-based packages)
 
