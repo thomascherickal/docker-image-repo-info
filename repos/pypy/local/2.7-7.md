@@ -3524,20 +3524,13 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 - `Unicode-data`
 - `Xen-interface`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=3.16.76-1
-'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_3.16.76-1.dsc' linux_3.16.76-1.dsc 143027 SHA256:6988745d192ca70642abeaa1b44778984c09e80d7c904fdcab4a6b6e02aeed72
-'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_3.16.76.orig.tar.xz' linux_3.16.76.orig.tar.xz 82072428 SHA256:f6d2ad9253cab4725fd97948447055ec56dabb18252d32a7fe55622a7744a912
-'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_3.16.76-1.debian.tar.xz' linux_3.16.76-1.debian.tar.xz 1867528 SHA256:0c2da4c7ea60ffff716cb09c8e1deb9552357b9fa22f3819d164ada01673469b
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/linux/3.16.76-1/
 
-- https://sources.debian.net/src/linux/3.16.76-1/ (for browsing the source)
-- https://sources.debian.net/src/linux/3.16.76-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/3.16.76-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lsb=4.1+Debian13+nmu1`
 
