@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:f6d30a8b03adcdecd19bc4a7e3b7f3b0d4be7492c7e1cbc6a7c27bb80a2d9260`
-- Created: `2019-12-19T09:24:16.286562558Z`
+- Image ID: `sha256:79b6eaa9a7c3c1d29b7369524a5ce9e88aeffb164d2598b61334da448708c594`
+- Created: `2020-01-16T03:01:05.583062417Z`
 - Virtual Size: ~ 1.54 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -1161,11 +1161,11 @@ $ apt-get source -qq --print-uris gnupg=1.4.20-1ubuntu3.3
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg/gnupg_1.4.20-1ubuntu3.3.debian.tar.xz' gnupg_1.4.20-1ubuntu3.3.debian.tar.xz 42452 SHA256:b12190aba71ef462a9ba164f2c5713474f0451c3dd6f1fdabb5f8ecfe4ee2938
 ```
 
-### `dpkg` source package: `gnutls28=3.4.10-4ubuntu1.5`
+### `dpkg` source package: `gnutls28=3.4.10-4ubuntu1.6`
 
 Binary Packages:
 
-- `libgnutls30:amd64=3.4.10-4ubuntu1.5`
+- `libgnutls30:amd64=3.4.10-4ubuntu1.6`
 
 Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 
@@ -1180,9 +1180,14 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 - `The main library is licensed under GNU Lesser`
 - `nonstandard, see below`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris gnutls28=3.4.10-4ubuntu1.6
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.4.10-4ubuntu1.6.dsc' gnutls28_3.4.10-4ubuntu1.6.dsc 3093 SHA256:c987b0a0b88ba31d461adf96458fc16b2098ce02e0da7ea62fa7be511fd682d6
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.4.10.orig.tar.xz' gnutls28_3.4.10.orig.tar.xz 6645892 SHA256:6a32c2b4acbd33ff7eefcbd1357009da04c94c60146ef61320b6c076b1bdf59f
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.4.10-4ubuntu1.6.debian.tar.xz' gnutls28_3.4.10-4ubuntu1.6.debian.tar.xz 109988 SHA256:874de01dff5466abf309bbd5b3b3c0c350ebc5448bcbfc956b02de11ddce7bc6
+```
 
 ### `dpkg` source package: `graphite2=1.3.10-0ubuntu0.16.04.1`
 
@@ -2140,20 +2145,25 @@ $ apt-get source -qq --print-uris libffi=3.2.1-4
 'http://archive.ubuntu.com/ubuntu/pool/main/libf/libffi/libffi_3.2.1-4.debian.tar.xz' libffi_3.2.1-4.debian.tar.xz 8932 SHA256:4d7d5f9172e8a8d3e412ed47e14755e27a0657054a7786b578eb6327b0d08b2d
 ```
 
-### `dpkg` source package: `libgcrypt20=1.6.5-2ubuntu0.5`
+### `dpkg` source package: `libgcrypt20=1.6.5-2ubuntu0.6`
 
 Binary Packages:
 
-- `libgcrypt20:amd64=1.6.5-2ubuntu0.5`
+- `libgcrypt20:amd64=1.6.5-2ubuntu0.6`
 
 Licenses: (parsed from: `/usr/share/doc/libgcrypt20/copyright`)
 
 - `GPL-2`
 - `LGPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris libgcrypt20=1.6.5-2ubuntu0.6
+'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgcrypt20/libgcrypt20_1.6.5-2ubuntu0.6.dsc' libgcrypt20_1.6.5-2ubuntu0.6.dsc 2653 SHA256:9a49e72112a7a42d54960a8f170117970d5751ecad0ccdb186dfea360fdd3fe4
+'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgcrypt20/libgcrypt20_1.6.5.orig.tar.bz2' libgcrypt20_1.6.5.orig.tar.bz2 2549601 SHA256:f49ebc5842d455ae7019def33eb5a014a0f07a2a8353dc3aa50a76fd1dafa924
+'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgcrypt20/libgcrypt20_1.6.5-2ubuntu0.6.debian.tar.xz' libgcrypt20_1.6.5-2ubuntu0.6.debian.tar.xz 38412 SHA256:1024930d785a1d5a4345821e923cde1fe20bdfd1aa3a46689374e9822472df9d
+```
 
 ### `dpkg` source package: `libgpg-error=1.21-2ubuntu1`
 
@@ -3677,20 +3687,25 @@ $ apt-get source -qq --print-uris nspr=2:4.13.1-0ubuntu0.16.04.1
 'http://archive.ubuntu.com/ubuntu/pool/main/n/nspr/nspr_4.13.1-0ubuntu0.16.04.1.debian.tar.xz' nspr_4.13.1-0ubuntu0.16.04.1.debian.tar.xz 18308 SHA256:047734933b7369657df94947858aa40ad38b46cdd7ba7ead6c6e1656739aac13
 ```
 
-### `dpkg` source package: `nss=2:3.28.4-0ubuntu0.16.04.9`
+### `dpkg` source package: `nss=2:3.28.4-0ubuntu0.16.04.10`
 
 Binary Packages:
 
-- `libnss3:amd64=2:3.28.4-0ubuntu0.16.04.9`
-- `libnss3-nssdb=2:3.28.4-0ubuntu0.16.04.9`
+- `libnss3:amd64=2:3.28.4-0ubuntu0.16.04.10`
+- `libnss3-nssdb=2:3.28.4-0ubuntu0.16.04.10`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris nss=2:3.28.4-0ubuntu0.16.04.10
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nss/nss_3.28.4-0ubuntu0.16.04.10.dsc' nss_3.28.4-0ubuntu0.16.04.10.dsc 2432 SHA256:9c93d25bad349d3def5fdaa01588070d507f13c76cbd4dde866886b6197ef926
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nss/nss_3.28.4.orig.tar.gz' nss_3.28.4.orig.tar.gz 7453282 SHA256:d5d4761778b8d4c378b2174c9e13e7abd20a6961f557d4fcc029af723ffd7189
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nss/nss_3.28.4-0ubuntu0.16.04.10.debian.tar.xz' nss_3.28.4-0ubuntu0.16.04.10.debian.tar.xz 45120 SHA256:6c0163e359d5be3e8189dccaafaaf4c4f3107d7c45a4064e73b01ee9f8b60298
+```
 
 ### `dpkg` source package: `numactl=2.0.11-1ubuntu1.1`
 
