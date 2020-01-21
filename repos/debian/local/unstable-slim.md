@@ -1534,21 +1534,13 @@ Licenses: (parsed from: `/usr/share/doc/sysvinit-utils/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sysvinit=2.96-1
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96-1.dsc' sysvinit_2.96-1.dsc 2628 SHA256:1d14c77d86722dbd7a3af566a5a4984d4d827fb27a28e4c9df3c0ca32ce497d8
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96.orig.tar.xz' sysvinit_2.96.orig.tar.xz 122164 SHA256:2a2e26b72aa235a23ab1c8471005f890309ce1196c83fbc9413c57b9ab62b587
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96.orig.tar.xz.asc' sysvinit_2.96.orig.tar.xz.asc 313 SHA256:dfc184b95da12c8c888c8ae6b0f26fe8a23b07fbcdd240f6600a8a78b9439fa0
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96-1.debian.tar.xz' sysvinit_2.96-1.debian.tar.xz 127632 SHA256:6f830bc931d9b110c3b10721d5b7f4e45afdfef5922b77511aaf8db6ed733379
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/sysvinit/2.96-1/
 
-- https://sources.debian.net/src/sysvinit/2.96-1/ (for browsing the source)
-- https://sources.debian.net/src/sysvinit/2.96-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sysvinit/2.96-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tar=1.30+dfsg-6`
 
