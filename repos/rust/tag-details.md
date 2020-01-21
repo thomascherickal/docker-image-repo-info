@@ -7,6 +7,7 @@
 -	[`rust:1.40.0`](#rust1400)
 -	[`rust:1.40.0-alpine`](#rust1400-alpine)
 -	[`rust:1.40.0-alpine3.10`](#rust1400-alpine310)
+-	[`rust:1.40.0-alpine3.11`](#rust1400-alpine311)
 -	[`rust:1.40.0-buster`](#rust1400-buster)
 -	[`rust:1.40.0-slim`](#rust1400-slim)
 -	[`rust:1.40.0-slim-buster`](#rust1400-slim-buster)
@@ -14,6 +15,7 @@
 -	[`rust:1.40.0-stretch`](#rust1400-stretch)
 -	[`rust:1.40-alpine`](#rust140-alpine)
 -	[`rust:1.40-alpine3.10`](#rust140-alpine310)
+-	[`rust:1.40-alpine3.11`](#rust140-alpine311)
 -	[`rust:1.40-buster`](#rust140-buster)
 -	[`rust:1.40-slim`](#rust140-slim)
 -	[`rust:1.40-slim-buster`](#rust140-slim-buster)
@@ -21,6 +23,7 @@
 -	[`rust:1.40-stretch`](#rust140-stretch)
 -	[`rust:1-alpine`](#rust1-alpine)
 -	[`rust:1-alpine3.10`](#rust1-alpine310)
+-	[`rust:1-alpine3.11`](#rust1-alpine311)
 -	[`rust:1-buster`](#rust1-buster)
 -	[`rust:1-slim`](#rust1-slim)
 -	[`rust:1-slim-buster`](#rust1-slim-buster)
@@ -28,6 +31,7 @@
 -	[`rust:1-stretch`](#rust1-stretch)
 -	[`rust:alpine`](#rustalpine)
 -	[`rust:alpine3.10`](#rustalpine310)
+-	[`rust:alpine3.11`](#rustalpine311)
 -	[`rust:buster`](#rustbuster)
 -	[`rust:latest`](#rustlatest)
 -	[`rust:slim`](#rustslim)
@@ -869,6 +873,10 @@ RUN set -eux;     url="https://static.rust-lang.org/rustup/archive/1.20.2/x86_64
 		Last Modified: Thu, 19 Dec 2019 23:41:45 GMT  
 		Size: 94.3 MB (94316888 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `rust:1.40.0-alpine3.11`
+
+**does not exist** (yet?)
 
 ## `rust:1.40.0-buster`
 
@@ -1907,6 +1915,10 @@ RUN set -eux;     url="https://static.rust-lang.org/rustup/archive/1.20.2/x86_64
 		Size: 94.3 MB (94316888 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `rust:1.40-alpine3.11`
+
+**does not exist** (yet?)
+
 ## `rust:1.40-buster`
 
 ```console
@@ -2944,6 +2956,10 @@ RUN set -eux;     url="https://static.rust-lang.org/rustup/archive/1.20.2/x86_64
 		Size: 94.3 MB (94316888 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `rust:1-alpine3.11`
+
+**does not exist** (yet?)
+
 ## `rust:1-buster`
 
 ```console
@@ -3980,6 +3996,10 @@ RUN set -eux;     url="https://static.rust-lang.org/rustup/archive/1.20.2/x86_64
 		Last Modified: Thu, 19 Dec 2019 23:41:45 GMT  
 		Size: 94.3 MB (94316888 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `rust:alpine3.11`
+
+**does not exist** (yet?)
 
 ## `rust:buster`
 
