@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:2d70f7ddddf06d1737cdb21994878c0bbb5858f805e62c94b1bec7fc488d3af7`
-- Created: `2019-12-27T03:59:13.94288323Z`
-- Virtual Size: ~ 143.55 Mb  
+- Image ID: `sha256:32ee9727d086a30fe1e6a52dba26607f49a57e3efa6420c427624482a3da6bdf`
+- Created: `2020-01-18T06:10:19.499096159Z`
+- Virtual Size: ~ 140.12 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -116,16 +116,16 @@ GPL-3.0-or-later
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.31.1-r8 description:
+busybox-1.31.1-r9 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.31.1-r8 webpage:
+busybox-1.31.1-r9 webpage:
 https://busybox.net/
 
-busybox-1.31.1-r8 installed size:
+busybox-1.31.1-r9 installed size:
 962560
 
-busybox-1.31.1-r8 license:
+busybox-1.31.1-r9 license:
 GPL-2.0-only
 
 ```
@@ -422,16 +422,16 @@ GPL LGPL
 ### `apk` package: `libjpeg-turbo`
 
 ```console
-libjpeg-turbo-2.0.3-r0 description:
+libjpeg-turbo-2.0.4-r0 description:
 Accelerated baseline JPEG compression and decompression library
 
-libjpeg-turbo-2.0.3-r0 webpage:
+libjpeg-turbo-2.0.4-r0 webpage:
 https://libjpeg-turbo.org/
 
-libjpeg-turbo-2.0.3-r0 installed size:
+libjpeg-turbo-2.0.4-r0 installed size:
 1355776
 
-libjpeg-turbo-2.0.3-r0 license:
+libjpeg-turbo-2.0.4-r0 license:
 BSD-3-Clause IJG Zlib
 
 ```
@@ -915,16 +915,16 @@ Public-Domain
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.31.1-r8 description:
+ssl_client-1.31.1-r9 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.31.1-r8 webpage:
+ssl_client-1.31.1-r9 webpage:
 https://busybox.net/
 
-ssl_client-1.31.1-r8 installed size:
+ssl_client-1.31.1-r9 installed size:
 28672
 
-ssl_client-1.31.1-r8 license:
+ssl_client-1.31.1-r9 license:
 GPL-2.0-only
 
 ```
