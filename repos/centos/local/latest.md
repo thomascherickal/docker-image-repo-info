@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:589dc4d40385ebd01340594e66c2ead3b193460efd6270f0e2dffd6db0e2f1c4`
-- Created: `2020-01-15T01:19:50.874788817Z`
+- Image ID: `sha256:470671670cac686c7cf0081e0b37da2e9f4f768ddc5f6a26102ccd1c6954c1ee`
+- Created: `2020-01-18T00:26:46.850750902Z`
 - Virtual Size: ~ 237.12 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -11,7 +11,15 @@
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
 - Labels:
-  - `=org.label-schema.schema-version=1.0     org.label-schema.name=CentOS Base Image     org.label-schema.vendor=CentOS     org.label-schema.license=GPLv2     org.label-schema.build-date=20200114     org.opencontainers.image.title=CentOS Base Image     org.opencontainers.image.vendor=CentOS     org.opencontainers.image.licenses=GPL-2.0-only     org.opencontainers.image.created=2020-01-14 00:00:00-08:00`
+  - `org.label-schema.build-date=20200114`
+  - `org.label-schema.license=GPLv2`
+  - `org.label-schema.name=CentOS Base Image`
+  - `org.label-schema.schema-version=1.0`
+  - `org.label-schema.vendor=CentOS`
+  - `org.opencontainers.image.created=2020-01-14 00:00:00-08:00`
+  - `org.opencontainers.image.licenses=GPL-2.0-only`
+  - `org.opencontainers.image.title=CentOS Base Image`
+  - `org.opencontainers.image.vendor=CentOS`
 
 ## `rpm` (`.rpm`-based packages)
 
