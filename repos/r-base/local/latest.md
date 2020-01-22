@@ -271,14 +271,13 @@ Licenses: (parsed from: `/usr/share/doc/r-cran-boot/copyright`)
 
 - `'unlimited distribution'`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris boot=1.3-24-1
-'http://http.debian.net/debian/pool/main/b/boot/boot_1.3-24-1.dsc' boot_1.3-24-1.dsc 1796 SHA256:9b8b32bc44ffc380a34626b43908508cfce5e9581cdf23c40244a3b77ddeddb4
-'http://http.debian.net/debian/pool/main/b/boot/boot_1.3-24.orig.tar.gz' boot_1.3-24.orig.tar.gz 232298 SHA256:89d4596d4a1287155597257372a872b04fbd406cd23fd8436f8e56394ba1607b
-'http://http.debian.net/debian/pool/main/b/boot/boot_1.3-24-1.debian.tar.xz' boot_1.3-24-1.debian.tar.xz 5160 SHA256:3da8771d1f73cfdbd689f98da79f8a9a53e6483c20f52b6aaa4584467b081631
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/boot/1.3-24-1/
+
 
 ### `dpkg` source package: `brotli=1.0.7-5`
 
@@ -940,14 +939,13 @@ Licenses: (parsed from: `/usr/share/doc/r-cran-foreign/copyright`)
 - `GPL`
 - `GPL `
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris foreign=0.8.74-1
-'http://http.debian.net/debian/pool/main/f/foreign/foreign_0.8.74-1.dsc' foreign_0.8.74-1.dsc 1832 SHA256:a617cb351e724b42212e875d18ac6bce7095cd360818be347fe18e683e1242f6
-'http://http.debian.net/debian/pool/main/f/foreign/foreign_0.8.74.orig.tar.gz' foreign_0.8.74.orig.tar.gz 346039 SHA256:f25d01f016b425907328460c1ac620bcbe3394ef13c3de734171465dc539fc10
-'http://http.debian.net/debian/pool/main/f/foreign/foreign_0.8.74-1.debian.tar.xz' foreign_0.8.74-1.debian.tar.xz 4148 SHA256:10c4b6cb1793cabbbb27fcdfdb4021f328608fcabf651d4a042a650ac088c15a
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/foreign/0.8.74-1/
+
 
 ### `dpkg` source package: `freetype=2.10.1-2`
 
@@ -3078,10 +3076,16 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris nlme=3.1.143-1
-'http://http.debian.net/debian/pool/main/n/nlme/nlme_3.1.143-1.dsc' nlme_3.1.143-1.dsc 1837 SHA256:11066b226801f1e3f11c73394aebd8dc9a91c7fedc27c11793c9beb0cf86732b
-'http://http.debian.net/debian/pool/main/n/nlme/nlme_3.1.143.orig.tar.gz' nlme_3.1.143.orig.tar.gz 789415 SHA256:42b48586c3ec4eba7de0cef6312aff63f4596cd92a1f9acb618dae28f4ea318e
-'http://http.debian.net/debian/pool/main/n/nlme/nlme_3.1.143-1.debian.tar.xz' nlme_3.1.143-1.debian.tar.xz 7052 SHA256:2e33d80fa03efbdac847584dc67d0b53db2d6063c6663be19395ff37d5043584
+'http://deb.debian.org/debian/pool/main/n/nlme/nlme_3.1.143-1.dsc' nlme_3.1.143-1.dsc 1837 SHA256:11066b226801f1e3f11c73394aebd8dc9a91c7fedc27c11793c9beb0cf86732b
+'http://deb.debian.org/debian/pool/main/n/nlme/nlme_3.1.143.orig.tar.gz' nlme_3.1.143.orig.tar.gz 789415 SHA256:42b48586c3ec4eba7de0cef6312aff63f4596cd92a1f9acb618dae28f4ea318e
+'http://deb.debian.org/debian/pool/main/n/nlme/nlme_3.1.143-1.debian.tar.xz' nlme_3.1.143-1.debian.tar.xz 7052 SHA256:2e33d80fa03efbdac847584dc67d0b53db2d6063c6663be19395ff37d5043584
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/nlme/3.1.143-1/ (for browsing the source)
+- https://sources.debian.net/src/nlme/3.1.143-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/nlme/3.1.143-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openldap=2.4.48+dfsg-1`
 
@@ -3430,10 +3434,16 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris r-base=3.6.2-2
-'http://http.debian.net/debian/pool/main/r/r-base/r-base_3.6.2-2.dsc' r-base_3.6.2-2.dsc 3016 SHA256:a112dddb39de5bfde7457180cc769871eb769c6ddae3d50f026bf4013779ab2d
-'http://http.debian.net/debian/pool/main/r/r-base/r-base_3.6.2.orig.tar.gz' r-base_3.6.2.orig.tar.gz 33311930 SHA256:bd65a45cddfb88f37370fbcee4ac8dd3f1aebeebe47c2f968fd9770ba2bbc954
-'http://http.debian.net/debian/pool/main/r/r-base/r-base_3.6.2-2.debian.tar.xz' r-base_3.6.2-2.debian.tar.xz 96532 SHA256:a5424948bbddccb4574446d4ba49f3cd3c64d912ef1d510483a6c6b08ee048ae
+'http://deb.debian.org/debian/pool/main/r/r-base/r-base_3.6.2-2.dsc' r-base_3.6.2-2.dsc 3016 SHA256:a112dddb39de5bfde7457180cc769871eb769c6ddae3d50f026bf4013779ab2d
+'http://deb.debian.org/debian/pool/main/r/r-base/r-base_3.6.2.orig.tar.gz' r-base_3.6.2.orig.tar.gz 33311930 SHA256:bd65a45cddfb88f37370fbcee4ac8dd3f1aebeebe47c2f968fd9770ba2bbc954
+'http://deb.debian.org/debian/pool/main/r/r-base/r-base_3.6.2-2.debian.tar.xz' r-base_3.6.2-2.debian.tar.xz 96532 SHA256:a5424948bbddccb4574446d4ba49f3cd3c64d912ef1d510483a6c6b08ee048ae
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/r-base/3.6.2-2/ (for browsing the source)
+- https://sources.debian.net/src/r-base/3.6.2-2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/r-base/3.6.2-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `r-cran-class=7.3-15-1`
 
@@ -3472,14 +3482,13 @@ Licenses: (parsed from: `/usr/share/doc/r-cran-mass/copyright`)
 - `GPL-2`
 - `GPL-2 | GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris r-cran-mass=7.3-51.5-1
-'http://http.debian.net/debian/pool/main/r/r-cran-mass/r-cran-mass_7.3-51.5-1.dsc' r-cran-mass_7.3-51.5-1.dsc 1858 SHA256:342a8c8c8a5223898d19f0fac227d04f2f4c1ff014691ba8f2421559979098d7
-'http://http.debian.net/debian/pool/main/r/r-cran-mass/r-cran-mass_7.3-51.5.orig.tar.gz' r-cran-mass_7.3-51.5.orig.tar.gz 487569 SHA256:464c0615cef01820cde2bb8457e81575d6755ae9b3ac99f3bfaaac47d43d15cc
-'http://http.debian.net/debian/pool/main/r/r-cran-mass/r-cran-mass_7.3-51.5-1.debian.tar.xz' r-cran-mass_7.3-51.5-1.debian.tar.xz 6208 SHA256:5eb100815a894638f5082432901347014f1cb23cd8088c81d793285a889c0561
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/r-cran-mass/7.3-51.5-1/
+
 
 ### `dpkg` source package: `r-cran-nnet=7.3-12-2`
 
@@ -3726,10 +3735,16 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris survival=3.1-8-1
-'http://http.debian.net/debian/pool/main/s/survival/survival_3.1-8-1.dsc' survival_3.1-8-1.dsc 1855 SHA256:7342e026f8dd3bd835569736f0c5a99da4b2bfa7f5e01f8adc9bfb61a0ed9162
-'http://http.debian.net/debian/pool/main/s/survival/survival_3.1-8.orig.tar.gz' survival_3.1-8.orig.tar.gz 7394867 SHA256:cecf393e8e27df79f3bf4aa7bc186d161f0e4b46a8572504e6eb80c09027d295
-'http://http.debian.net/debian/pool/main/s/survival/survival_3.1-8-1.debian.tar.xz' survival_3.1-8-1.debian.tar.xz 5968 SHA256:77d71253794ba63a9379ed1baae61f53f90934aa9a2e40345a29dabaeecd2318
+'http://deb.debian.org/debian/pool/main/s/survival/survival_3.1-8-1.dsc' survival_3.1-8-1.dsc 1855 SHA256:7342e026f8dd3bd835569736f0c5a99da4b2bfa7f5e01f8adc9bfb61a0ed9162
+'http://deb.debian.org/debian/pool/main/s/survival/survival_3.1-8.orig.tar.gz' survival_3.1-8.orig.tar.gz 7394867 SHA256:cecf393e8e27df79f3bf4aa7bc186d161f0e4b46a8572504e6eb80c09027d295
+'http://deb.debian.org/debian/pool/main/s/survival/survival_3.1-8-1.debian.tar.xz' survival_3.1-8-1.debian.tar.xz 5968 SHA256:77d71253794ba63a9379ed1baae61f53f90934aa9a2e40345a29dabaeecd2318
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/survival/3.1-8-1/ (for browsing the source)
+- https://sources.debian.net/src/survival/3.1-8-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/survival/3.1-8-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `systemd=244-3`
 
@@ -3774,21 +3789,13 @@ Licenses: (parsed from: `/usr/share/doc/sysvinit-utils/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sysvinit=2.96-1
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96-1.dsc' sysvinit_2.96-1.dsc 2628 SHA256:1d14c77d86722dbd7a3af566a5a4984d4d827fb27a28e4c9df3c0ca32ce497d8
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96.orig.tar.xz' sysvinit_2.96.orig.tar.xz 122164 SHA256:2a2e26b72aa235a23ab1c8471005f890309ce1196c83fbc9413c57b9ab62b587
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96.orig.tar.xz.asc' sysvinit_2.96.orig.tar.xz.asc 313 SHA256:dfc184b95da12c8c888c8ae6b0f26fe8a23b07fbcdd240f6600a8a78b9439fa0
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96-1.debian.tar.xz' sysvinit_2.96-1.debian.tar.xz 127632 SHA256:6f830bc931d9b110c3b10721d5b7f4e45afdfef5922b77511aaf8db6ed733379
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/sysvinit/2.96-1/
 
-- https://sources.debian.net/src/sysvinit/2.96-1/ (for browsing the source)
-- https://sources.debian.net/src/sysvinit/2.96-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sysvinit/2.96-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tar=1.30+dfsg-6`
 
