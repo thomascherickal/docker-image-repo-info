@@ -1614,14 +1614,9 @@ Licenses: (parsed from: `/usr/share/doc/sysstat/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sysstat=11.2.0-1ubuntu0.2
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sysstat/sysstat_11.2.0-1ubuntu0.2.dsc' sysstat_11.2.0-1ubuntu0.2.dsc 1701 SHA256:8316c4d09df80502825d7e11fb68c966d05a3d571170c630fedc909fe5b4493d
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sysstat/sysstat_11.2.0.orig.tar.xz' sysstat_11.2.0.orig.tar.xz 322660 SHA256:9806b9a662568796d3fb93ecd01ecea10d815e668337a646494953bff4bc4155
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sysstat/sysstat_11.2.0-1ubuntu0.2.debian.tar.xz' sysstat_11.2.0-1ubuntu0.2.debian.tar.xz 35900 SHA256:ebb790cdf019a73edc84aa881529a01e8bcc0e5eda9cc86eb885414703566e3a
-```
 
 ### `dpkg` source package: `systemd=229-4ubuntu21.23`
 
@@ -1895,11 +1890,6 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris zlib=1:1.2.8.dfsg-2ubuntu4.1
-'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.8.dfsg-2ubuntu4.1.dsc' zlib_1.2.8.dfsg-2ubuntu4.1.dsc 2695 SHA256:3d8301274b24b01c8c0b9b019d0321f199c1f8c689bea3d9bed20afbbce63d23
-'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.8.dfsg.orig.tar.gz' zlib_1.2.8.dfsg.orig.tar.gz 361943 SHA256:2caecc2c3f1ef8b87b8f72b128a03e61c307e8c14f5ec9b422ef7914ba75cf9f
-'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.8.dfsg-2ubuntu4.1.debian.tar.xz' zlib_1.2.8.dfsg-2ubuntu4.1.debian.tar.xz 15484 SHA256:1dd06dbca693a414843e9972a1a60f24b987aeb0cf440ae5a4d249eb4c6e3939
-```

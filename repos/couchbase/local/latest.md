@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:6629f63789eed50a8aa3e2bbdda0d7a15f9659a9680abe2cf2edd9f8ec57caee`
-- Created: `2020-01-16T02:28:06.341759484Z`
-- Virtual Size: ~ 965.16 Mb  
+- Image ID: `sha256:5008c3470bf8eb6b1552cc73fb4fad107e55979c73e9530d2d7f00d07951c7f0`
+- Created: `2020-01-21T21:22:14.810347876Z`
+- Virtual Size: ~ 1.17 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -196,9 +196,10 @@ $ apt-get source -qq --print-uris bash=4.3-14ubuntu1.4
 
 Binary Packages:
 
+- `bzip2=1.0.6-8ubuntu0.2`
 - `libbz2-1.0:amd64=1.0.6-8ubuntu0.2`
 
-Licenses: (parsed from: `/usr/share/doc/libbz2-1.0/copyright`)
+Licenses: (parsed from: `/usr/share/doc/bzip2/copyright`, `/usr/share/doc/libbz2-1.0/copyright`)
 
 - `GPL-2`
 
@@ -287,11 +288,11 @@ $ apt-get source -qq --print-uris coreutils=8.25-2ubuntu3~16.04
 'http://archive.ubuntu.com/ubuntu/pool/main/c/coreutils/coreutils_8.25-2ubuntu3~16.04.debian.tar.xz' coreutils_8.25-2ubuntu3~16.04.debian.tar.xz 28336 SHA256:f6fd913f2b0b08df9109308dfd1202b06060e130b8e6bf94daad32e86a3937cf
 ```
 
-### `dpkg` source package: `couchbase-server=6.0.3-2895-1`
+### `dpkg` source package: `couchbase-server=6.5.0-4960-1`
 
 Binary Packages:
 
-- `couchbase-server=6.0.3-2895-1`
+- `couchbase-server=6.5.0-4960-1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -483,25 +484,6 @@ $ apt-get source -qq --print-uris e2fsprogs=1.42.13-1ubuntu1.1
 'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.42.13-1ubuntu1.1.debian.tar.xz' e2fsprogs_1.42.13-1ubuntu1.1.debian.tar.xz 71176 SHA256:2765f0d7ddb32e08b91966376093b833a0b8abec6958d59a715dc1de98f98e82
 ```
 
-### `dpkg` source package: `expat=2.1.0-7ubuntu0.16.04.5`
-
-Binary Packages:
-
-- `libexpat1:amd64=2.1.0-7ubuntu0.16.04.5`
-
-**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
-If source is available (seen below), check the contents of `debian/copyright` within it.
-
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris expat=2.1.0-7ubuntu0.16.04.5
-'http://archive.ubuntu.com/ubuntu/pool/main/e/expat/expat_2.1.0-7ubuntu0.16.04.5.dsc' expat_2.1.0-7ubuntu0.16.04.5.dsc 2387 SHA256:39c54dc2f9fa64fe3d1b2d216e0446de8dc37d2656a5597a8b344070ce2310e2
-'http://archive.ubuntu.com/ubuntu/pool/main/e/expat/expat_2.1.0.orig.tar.gz' expat_2.1.0.orig.tar.gz 562616 SHA256:823705472f816df21c8f6aa026dd162b280806838bb55b3432b0fb1fcca7eb86
-'http://archive.ubuntu.com/ubuntu/pool/main/e/expat/expat_2.1.0-7ubuntu0.16.04.5.debian.tar.xz' expat_2.1.0-7ubuntu0.16.04.5.debian.tar.xz 23116 SHA256:f422e05965440e42c030904fc6605c39cb5477c114ac7b172427ce96d63e97e0
-```
-
 ### `dpkg` source package: `fgetty=0.7-1`
 
 Binary Packages:
@@ -520,30 +502,6 @@ $ apt-get source -qq --print-uris fgetty=0.7-1
 'http://archive.ubuntu.com/ubuntu/pool/universe/f/fgetty/fgetty_0.7-1.dsc' fgetty_0.7-1.dsc 1822 SHA256:abfb578c9e2390344d3c8126736507006d333c6708840d0aa1f68ab96eddd633
 'http://archive.ubuntu.com/ubuntu/pool/universe/f/fgetty/fgetty_0.7.orig.tar.bz2' fgetty_0.7.orig.tar.bz2 17501 SHA256:1a5307e758d30bca2b4f16eb1158778a50fc949907f09e9571ddce8acc0bbac8
 'http://archive.ubuntu.com/ubuntu/pool/universe/f/fgetty/fgetty_0.7-1.debian.tar.xz' fgetty_0.7-1.debian.tar.xz 37072 SHA256:cf5ef06877eed1fffef412ae94b907d8824b0f59dcc91aafb56f4d4bba12c5b8
-```
-
-### `dpkg` source package: `file=1:5.25-2ubuntu1.3`
-
-Binary Packages:
-
-- `file=1:5.25-2ubuntu1.3`
-- `libmagic1:amd64=1:5.25-2ubuntu1.3`
-
-Licenses: (parsed from: `/usr/share/doc/file/copyright`, `/usr/share/doc/libmagic1/copyright`)
-
-- `BSD-2-Clause-alike`
-- `BSD-2-Clause-netbsd`
-- `BSD-2-Clause-regents`
-- `MIT-Old-Style-with-legal-disclaimer-2`
-- `public-domain`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris file=1:5.25-2ubuntu1.3
-'http://archive.ubuntu.com/ubuntu/pool/main/f/file/file_5.25-2ubuntu1.3.dsc' file_5.25-2ubuntu1.3.dsc 2252 SHA256:a6dcb0bd9ce6962897fd16cedb2a189ffc0152eada59e5ece522b67bae71766c
-'http://archive.ubuntu.com/ubuntu/pool/main/f/file/file_5.25.orig.tar.xz' file_5.25.orig.tar.xz 537916 SHA256:8062cae8be640ff8583b8714e394dc73c3127d23f8fe9097f1433cdb36bff31c
-'http://archive.ubuntu.com/ubuntu/pool/main/f/file/file_5.25-2ubuntu1.3.debian.tar.xz' file_5.25-2ubuntu1.3.debian.tar.xz 35184 SHA256:5eafa8f4a72094feb7d212fdea29d9aefcfd3d928788ad0e8ac96a01c8930389
 ```
 
 ### `dpkg` source package: `findutils=4.6.0+git+20160126-2`
@@ -795,25 +753,6 @@ $ apt-get source -qq --print-uris libcap2=1:2.24-12
 'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcap2/libcap2_2.24-12.dsc' libcap2_2.24-12.dsc 2211 SHA256:4db68746bd1fe7df6d29ae15c3605e4e1d0e44723580c05166144735c773ae14
 'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcap2/libcap2_2.24.orig.tar.xz' libcap2_2.24.orig.tar.xz 63264 SHA256:51cd1c568a2baf1e687573bd6117a94b07f33b46a05acaa50ee208792a830b79
 'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcap2/libcap2_2.24-12.debian.tar.xz' libcap2_2.24-12.debian.tar.xz 18704 SHA256:34be2e791ec96095cc0b405e532874e8c79aeb2125981ebc6896a0ad0b999cf2
-```
-
-### `dpkg` source package: `libffi=3.2.1-4`
-
-Binary Packages:
-
-- `libffi6:amd64=3.2.1-4`
-
-Licenses: (parsed from: `/usr/share/doc/libffi6/copyright`)
-
-- `GPL`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris libffi=3.2.1-4
-'http://archive.ubuntu.com/ubuntu/pool/main/libf/libffi/libffi_3.2.1-4.dsc' libffi_3.2.1-4.dsc 1914 SHA256:e2bdb4202f1c8be9d3cec5bf459a4a1619f494241938d982d6029e15a8b1da9e
-'http://archive.ubuntu.com/ubuntu/pool/main/libf/libffi/libffi_3.2.1.orig.tar.gz' libffi_3.2.1.orig.tar.gz 940837 SHA256:d06ebb8e1d9a22d19e38d63fdb83954253f39bedc5d46232a05645685722ca37
-'http://archive.ubuntu.com/ubuntu/pool/main/libf/libffi/libffi_3.2.1-4.debian.tar.xz' libffi_3.2.1-4.debian.tar.xz 8932 SHA256:4d7d5f9172e8a8d3e412ed47e14755e27a0657054a7786b578eb6327b0d08b2d
 ```
 
 ### `dpkg` source package: `libgcrypt20=1.6.5-2ubuntu0.6`
@@ -1168,25 +1107,6 @@ $ apt-get source -qq --print-uris mawk=1.3.3-17ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.3-17ubuntu2.diff.gz' mawk_1.3.3-17ubuntu2.diff.gz 63882 SHA256:670103046767474be29e80f2143dc67e3d0b958972f5942c3df94883f978eded
 ```
 
-### `dpkg` source package: `mime-support=3.59ubuntu1`
-
-Binary Packages:
-
-- `mime-support=3.59ubuntu1`
-
-Licenses: (parsed from: `/usr/share/doc/mime-support/copyright`)
-
-- `Bellcore`
-- `ad-hoc`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris mime-support=3.59ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mime-support/mime-support_3.59ubuntu1.dsc' mime-support_3.59ubuntu1.dsc 1711 SHA256:37703b2273222f23dd8ad048f898a381412df0a76473047e0b7757a8043ff354
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mime-support/mime-support_3.59ubuntu1.tar.gz' mime-support_3.59ubuntu1.tar.gz 37508 SHA256:55ee4350da8425fb65e7c9b60518e20de09c5a72d08148e644fcefe7abf9c83d
-```
-
 ### `dpkg` source package: `ncurses=6.0+20160213-1ubuntu1`
 
 Binary Packages:
@@ -1401,90 +1321,6 @@ $ apt-get source -qq --print-uris procps=2:3.3.10-4ubuntu2.4
 'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_3.3.10-4ubuntu2.4.debian.tar.xz' procps_3.3.10-4ubuntu2.4.debian.tar.xz 44376 SHA256:99854cab3c75853ec70cdda95d09fc22ee431c828e16dcdb9a0feaf65a3f74d1
 ```
 
-### `dpkg` source package: `python-defaults=2.7.12-1~16.04`
-
-Binary Packages:
-
-- `libpython-stdlib:amd64=2.7.12-1~16.04`
-- `python=2.7.12-1~16.04`
-- `python-minimal=2.7.12-1~16.04`
-
-**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
-If source is available (seen below), check the contents of `debian/copyright` within it.
-
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris python-defaults=2.7.12-1~16.04
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python-defaults/python-defaults_2.7.12-1~16.04.dsc' python-defaults_2.7.12-1~16.04.dsc 2659 SHA256:e8a6f2510d07b565a6be42b8e8e05e2f3d30581883934efeb75904026207c5fc
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python-defaults/python-defaults_2.7.12-1~16.04.tar.gz' python-defaults_2.7.12-1~16.04.tar.gz 280070 SHA256:843d90debb74aedf336532f90d181e109a7d685275177e069a1df02faa42d732
-```
-
-### `dpkg` source package: `python-httplib2=0.9.1+dfsg-1`
-
-Binary Packages:
-
-- `python-httplib2=0.9.1+dfsg-1`
-
-Licenses: (parsed from: `/usr/share/doc/python-httplib2/copyright`)
-
-- `BSD-3`
-- `GPL-2`
-- `GPL-2+`
-- `GPL-3`
-- `GPL-3+`
-- `LGPL-2.1`
-- `LGPL-2.1+`
-- `MIT`
-- `MPL-1.1`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris python-httplib2=0.9.1+dfsg-1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python-httplib2/python-httplib2_0.9.1+dfsg-1.dsc' python-httplib2_0.9.1+dfsg-1.dsc 2179 SHA256:94cfe5b99f4ee52700fab635ccd72c6d6d410ef4405f6fe005af199df44aa7d2
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python-httplib2/python-httplib2_0.9.1+dfsg.orig.tar.gz' python-httplib2_0.9.1+dfsg.orig.tar.gz 315219 SHA256:5f46a23d3d9b12c62d86dc01257c489a1392427dabf02291a9cbb16d5a2d2d20
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python-httplib2/python-httplib2_0.9.1+dfsg-1.debian.tar.xz' python-httplib2_0.9.1+dfsg-1.debian.tar.xz 13392 SHA256:5642046ed778521ac341a1b1ff2b45d84751db3a80cdd26100abfbff7861ecba
-```
-
-### `dpkg` source package: `python2.7=2.7.12-1ubuntu0~16.04.9`
-
-Binary Packages:
-
-- `libpython2.7-minimal:amd64=2.7.12-1ubuntu0~16.04.9`
-- `libpython2.7-stdlib:amd64=2.7.12-1ubuntu0~16.04.9`
-- `python2.7=2.7.12-1ubuntu0~16.04.9`
-- `python2.7-minimal=2.7.12-1ubuntu0~16.04.9`
-
-Licenses: (parsed from: `/usr/share/doc/libpython2.7-minimal/copyright`, `/usr/share/doc/libpython2.7-stdlib/copyright`, `/usr/share/doc/python2.7/copyright`, `/usr/share/doc/python2.7-minimal/copyright`)
-
-- `# Licensed to PSF under a Contributor Agreement`
-- `* Permission to use this software in any way is granted without`
-- `Apache`
-- `Apache-2`
-- `Apache-2.0`
-- `Expat`
-- `GPL-2`
-- `ISC`
-- `LGPL-2.1+`
-- `PSF-2`
-- `Permission is hereby granted, free of charge, to any person obtaining`
-- `Python`
-- `This software is provided 'as-is', without any express`
-- `This software is provided as-is, without express`
-- `implied`
-- `see above, some license as Python`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris python2.7=2.7.12-1ubuntu0~16.04.9
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.12-1ubuntu0~16.04.9.dsc' python2.7_2.7.12-1ubuntu0~16.04.9.dsc 3387 SHA256:12ad235b3b09531fdf2f7705a72574a36c53e70251a82feef76b473d89fd4bdc
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.12.orig.tar.gz' python2.7_2.7.12.orig.tar.gz 16935960 SHA256:3cb522d17463dfa69a155ab18cffa399b358c966c0363d6c8b5b3bf1384da4b6
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.12-1ubuntu0~16.04.9.diff.gz' python2.7_2.7.12-1ubuntu0~16.04.9.diff.gz 305578 SHA256:5546459e2591d70af45a7cf1f0d8ce4f0b1fbd6cf39d4079cef3eafff83dc3ca
-```
-
 ### `dpkg` source package: `readline6=6.3-8ubuntu2`
 
 Binary Packages:
@@ -1581,28 +1417,6 @@ $ apt-get source -qq --print-uris shadow=1:4.2-3.1ubuntu5.4
 'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.2-3.1ubuntu5.4.debian.tar.xz' shadow_4.2-3.1ubuntu5.4.debian.tar.xz 506364 SHA256:50ccd266ff5bdc8577fe090b04c9be675340bf59b44fa843cd20174055540a15
 ```
 
-### `dpkg` source package: `sqlite3=3.11.0-1ubuntu1.3`
-
-Binary Packages:
-
-- `libsqlite3-0:amd64=3.11.0-1ubuntu1.3`
-
-Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
-
-- `GPL-2`
-- `GPL-2+`
-- `public-domain`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris sqlite3=3.11.0-1ubuntu1.3
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.11.0-1ubuntu1.3.dsc' sqlite3_3.11.0-1ubuntu1.3.dsc 2609 SHA256:e01bda25539cd0ed16a8c03be7a7a0894bdc9201220feedea163aa56a9bf97e6
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.11.0.orig-www.tar.xz' sqlite3_3.11.0.orig-www.tar.xz 3135012 SHA256:99843a91a1da29cf07269df49b37b0cd8a75035a88aacdb1186f94a9a217bab3
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.11.0.orig.tar.xz' sqlite3_3.11.0.orig.tar.xz 5122440 SHA256:79fb8800b8744337d5317270899a5a40612bb76f81517e131bf496c26b044490
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.11.0-1ubuntu1.3.debian.tar.xz' sqlite3_3.11.0-1ubuntu1.3.debian.tar.xz 38916 SHA256:27519465c095855423a0959c287f32e7d25bbaea1ef1bcc49a6d7f9187dd83e6
-```
-
 ### `dpkg` source package: `sysstat=11.2.0-1ubuntu0.2`
 
 Binary Packages:
@@ -1614,14 +1428,9 @@ Licenses: (parsed from: `/usr/share/doc/sysstat/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sysstat=11.2.0-1ubuntu0.2
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sysstat/sysstat_11.2.0-1ubuntu0.2.dsc' sysstat_11.2.0-1ubuntu0.2.dsc 1701 SHA256:8316c4d09df80502825d7e11fb68c966d05a3d571170c630fedc909fe5b4493d
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sysstat/sysstat_11.2.0.orig.tar.xz' sysstat_11.2.0.orig.tar.xz 322660 SHA256:9806b9a662568796d3fb93ecd01ecea10d815e668337a646494953bff4bc4155
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sysstat/sysstat_11.2.0-1ubuntu0.2.debian.tar.xz' sysstat_11.2.0-1ubuntu0.2.debian.tar.xz 35900 SHA256:ebb790cdf019a73edc84aa881529a01e8bcc0e5eda9cc86eb885414703566e3a
-```
 
 ### `dpkg` source package: `systemd=229-4ubuntu21.23`
 
