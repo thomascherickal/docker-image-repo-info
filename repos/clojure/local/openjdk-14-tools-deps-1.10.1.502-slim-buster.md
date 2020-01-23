@@ -1,21 +1,21 @@
-# `clojure:openjdk-13-tools-deps`
+# `clojure:openjdk-14-tools-deps`
 
 ## Docker Metadata
 
-- Image ID: `sha256:49258ddec3733ee7670f9cc302d2b19d4aaf2175812dbb17fbcfaa02cb7ebe13`
-- Created: `2020-01-15T00:08:01.611361923Z`
-- Virtual Size: ~ 519.39 Mb  
+- Image ID: `sha256:14423a841b1cc8304243386400aafcbe81e7e302fb3845ad6ea975a7d1568662`
+- Created: `2020-01-23T00:30:26.582320695Z`
+- Virtual Size: ~ 521.53 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["sh","-c","sleep 1 && exec clj"]`
 - Environment:
-  - `PATH=/usr/java/openjdk-13/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
+  - `PATH=/usr/java/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=C.UTF-8`
-  - `JAVA_HOME=/usr/java/openjdk-13`
-  - `JAVA_VERSION=13.0.2`
-  - `JAVA_URL=https://download.java.net/java/GA/jdk13.0.2/d4173c853231432d94f001e99d882ca7/8/GPL/openjdk-13.0.2_linux-x64_bin.tar.gz`
-  - `JAVA_SHA256=acc7a6aabced44e62ec3b83e3b5959df2b1aa6b3d610d58ee45f0c21a7821a71`
-  - `CLOJURE_VERSION=1.10.1.483`
+  - `JAVA_HOME=/usr/java/openjdk-14`
+  - `JAVA_VERSION=14-ea+32`
+  - `JAVA_URL=https://download.java.net/java/early_access/jdk14/32/GPL/openjdk-14-ea+32_linux-x64_bin.tar.gz`
+  - `JAVA_SHA256=a5ebd5f004508a1617849b598d8fe8c599ed1b255d34a2c4c4776cb00260a8e5`
+  - `CLOJURE_VERSION=1.10.1.502`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -1443,6 +1443,32 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/lz4/1.8.3-1/ (for browsing the source)
 - https://sources.debian.net/src/lz4/1.8.3-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/lz4/1.8.3-1/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `make-dfsg=4.2.1-1.2`
+
+Binary Packages:
+
+- `make=4.2.1-1.2`
+
+Licenses: (parsed from: `/usr/share/doc/make/copyright`)
+
+- `GPL-3`
+- `GPL-3+`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris make-dfsg=4.2.1-1.2
+'http://deb.debian.org/debian/pool/main/m/make-dfsg/make-dfsg_4.2.1-1.2.dsc' make-dfsg_4.2.1-1.2.dsc 2019 SHA256:0c8a2da5d51e03bf43e2929322d5a8406f08e5ee2d81a71ed6e5a8734f1b05cb
+'http://deb.debian.org/debian/pool/main/m/make-dfsg/make-dfsg_4.2.1.orig.tar.gz' make-dfsg_4.2.1.orig.tar.gz 1485018 SHA256:480405e8995796ea47cc54b281b7855280f0d815d296a1af1993eeeb72074e39
+'http://deb.debian.org/debian/pool/main/m/make-dfsg/make-dfsg_4.2.1-1.2.diff.gz' make-dfsg_4.2.1-1.2.diff.gz 53108 SHA256:80e0b96cee381391a5d3322317075e23d8474c92c5fa4fecd334bc2e0920887b
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/make-dfsg/4.2.1-1.2/ (for browsing the source)
+- https://sources.debian.net/src/make-dfsg/4.2.1-1.2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/make-dfsg/4.2.1-1.2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mawk=1.3.3-17`
 

@@ -1,21 +1,21 @@
-# `clojure:openjdk-13-tools-deps-buster`
+# `clojure:openjdk-14-tools-deps-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:f6be03ce20aa9b1aca2a744e4b9bffcc67e49c4663b0ce1e6a8c523a6d8ba4ee`
-- Created: `2020-01-15T00:08:17.602798331Z`
-- Virtual Size: ~ 689.47 Mb  
+- Image ID: `sha256:020955e5199d854cd6ffbe7fbbba539885cde2aa1074ff79a894386dc998e746`
+- Created: `2020-01-23T00:30:43.211410726Z`
+- Virtual Size: ~ 691.36 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["sh","-c","sleep 1 && exec clj"]`
 - Environment:
-  - `PATH=/usr/java/openjdk-13/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
+  - `PATH=/usr/java/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=C.UTF-8`
-  - `JAVA_HOME=/usr/java/openjdk-13`
-  - `JAVA_VERSION=13.0.2`
-  - `JAVA_URL=https://download.java.net/java/GA/jdk13.0.2/d4173c853231432d94f001e99d882ca7/8/GPL/openjdk-13.0.2_linux-x64_bin.tar.gz`
-  - `JAVA_SHA256=acc7a6aabced44e62ec3b83e3b5959df2b1aa6b3d610d58ee45f0c21a7821a71`
-  - `CLOJURE_VERSION=1.10.1.483`
+  - `JAVA_HOME=/usr/java/openjdk-14`
+  - `JAVA_VERSION=14-ea+32`
+  - `JAVA_URL=https://download.java.net/java/early_access/jdk14/32/GPL/openjdk-14-ea+32_linux-x64_bin.tar.gz`
+  - `JAVA_SHA256=a5ebd5f004508a1617849b598d8fe8c599ed1b255d34a2c4c4776cb00260a8e5`
+  - `CLOJURE_VERSION=1.10.1.502`
 
 ## `dpkg` (`.deb`-based packages)
 

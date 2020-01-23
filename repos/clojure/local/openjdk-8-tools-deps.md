@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:979f97b91ea5eea38a539158a9b944024851d83436853ecd74ef39dcf2273d94`
-- Created: `2019-12-29T08:36:11.774798202Z`
-- Virtual Size: ~ 514.92 Mb  
+- Image ID: `sha256:7f60ac49bd4647ad158f7c9a88897212295aefc5773983091c22e2038682d0ca`
+- Created: `2020-01-23T00:26:32.514847471Z`
+- Virtual Size: ~ 512.24 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["sh","-c","sleep 1 && exec clj"]`
@@ -15,7 +15,7 @@
   - `JAVA_VERSION=8u232`
   - `JAVA_BASE_URL=https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u232-b09/OpenJDK8U-jdk_`
   - `JAVA_URL_VERSION=8u232b09`
-  - `CLOJURE_VERSION=1.10.1.483`
+  - `CLOJURE_VERSION=1.10.1.502`
 
 ## `dpkg` (`.deb`-based packages)
 

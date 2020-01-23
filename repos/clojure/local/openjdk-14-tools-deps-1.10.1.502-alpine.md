@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:98bfc021fb42a5573e1e9c8731b4a6cc9d82b1c456e7a57b86d082848431881b`
-- Created: `2019-11-07T02:23:27.442284703Z`
-- Virtual Size: ~ 364.27 Mb  
+- Image ID: `sha256:b3a829ec75d97082cc602e9111e0f353ab12d07bddcc1546fecf41a44b2b9422`
+- Created: `2020-01-23T00:31:04.670917348Z`
+- Virtual Size: ~ 365.90 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["sh","-c","sleep 1 && exec clj"]`
@@ -14,7 +14,7 @@
   - `JAVA_VERSION=14-ea+15`
   - `JAVA_URL=https://download.java.net/java/early_access/alpine/15/binaries/openjdk-14-ea+15_linux-x64-musl_bin.tar.gz`
   - `JAVA_SHA256=76091da1b6ed29788f0cf85454d23900a4134286e5feb571247e5861f618d3cd`
-  - `CLOJURE_VERSION=1.10.1.483`
+  - `CLOJURE_VERSION=1.10.1.502`
 
 ## `apk` (`.apk`-based packages)
 
@@ -66,6 +66,23 @@ apk-tools-2.10.4-r2 installed size:
 
 apk-tools-2.10.4-r2 license:
 GPL2
+
+```
+
+### `apk` package: `bash`
+
+```console
+bash-5.0.0-r0 description:
+The GNU Bourne Again shell
+
+bash-5.0.0-r0 webpage:
+https://www.gnu.org/software/bash/bash.html
+
+bash-5.0.0-r0 installed size:
+1200128
+
+bash-5.0.0-r0 license:
+GPL-3.0-or-later
 
 ```
 
@@ -171,6 +188,23 @@ ISC
 
 ```
 
+### `apk` package: `make`
+
+```console
+make-4.2.1-r2 description:
+GNU make utility to maintain groups of programs
+
+make-4.2.1-r2 webpage:
+https://www.gnu.org/software/make
+
+make-4.2.1-r2 installed size:
+233472
+
+make-4.2.1-r2 license:
+GPL-3.0-or-later
+
+```
+
 ### `apk` package: `musl`
 
 ```console
@@ -202,6 +236,74 @@ musl-utils-1.1.22-r3 installed size:
 
 musl-utils-1.1.22-r3 license:
 MIT BSD GPL2+
+
+```
+
+### `apk` package: `ncurses-libs`
+
+```console
+ncurses-libs-6.1_p20190518-r0 description:
+Ncurses libraries
+
+ncurses-libs-6.1_p20190518-r0 webpage:
+https://www.gnu.org/software/ncurses/
+
+ncurses-libs-6.1_p20190518-r0 installed size:
+503808
+
+ncurses-libs-6.1_p20190518-r0 license:
+MIT
+
+```
+
+### `apk` package: `ncurses-terminfo`
+
+```console
+ncurses-terminfo-6.1_p20190518-r0 description:
+Console display library (other terminfo files)
+
+ncurses-terminfo-6.1_p20190518-r0 webpage:
+https://www.gnu.org/software/ncurses/
+
+ncurses-terminfo-6.1_p20190518-r0 installed size:
+7307264
+
+ncurses-terminfo-6.1_p20190518-r0 license:
+MIT
+
+```
+
+### `apk` package: `ncurses-terminfo-base`
+
+```console
+ncurses-terminfo-base-6.1_p20190518-r0 description:
+Descriptions of common terminals
+
+ncurses-terminfo-base-6.1_p20190518-r0 webpage:
+https://www.gnu.org/software/ncurses/
+
+ncurses-terminfo-base-6.1_p20190518-r0 installed size:
+94208
+
+ncurses-terminfo-base-6.1_p20190518-r0 license:
+MIT
+
+```
+
+### `apk` package: `readline`
+
+```console
+readline-8.0.0-r0 description:
+GNU readline library
+
+readline-8.0.0-r0 webpage:
+https://tiswww.cwru.edu/php/chet/readline/rltop.html
+
+readline-8.0.0-r0 installed size:
+299008
+
+readline-8.0.0-r0 license:
+GPL
 
 ```
 
