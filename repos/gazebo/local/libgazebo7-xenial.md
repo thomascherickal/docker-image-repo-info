@@ -6440,14 +6440,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris zlib=1:1.2.8.dfsg-2ubuntu4.1
-'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.8.dfsg-2ubuntu4.1.dsc' zlib_1.2.8.dfsg-2ubuntu4.1.dsc 2695 SHA256:3d8301274b24b01c8c0b9b019d0321f199c1f8c689bea3d9bed20afbbce63d23
-'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.8.dfsg.orig.tar.gz' zlib_1.2.8.dfsg.orig.tar.gz 361943 SHA256:2caecc2c3f1ef8b87b8f72b128a03e61c307e8c14f5ec9b422ef7914ba75cf9f
-'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.8.dfsg-2ubuntu4.1.debian.tar.xz' zlib_1.2.8.dfsg-2ubuntu4.1.debian.tar.xz 15484 SHA256:1dd06dbca693a414843e9972a1a60f24b987aeb0cf440ae5a4d249eb4c6e3939
-```
 
 ### `dpkg` source package: `zvbi=0.2.35-10`
 
