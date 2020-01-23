@@ -1,7 +1,7 @@
 ## `lightstreamer:7-jdk8-openjdk`
 
 ```console
-$ docker pull lightstreamer@sha256:daee7fbad6a14c372732d40761b7e6d6e8243e99b7ba00a6c2ad3f3408657402
+$ docker pull lightstreamer@sha256:053ee9877e61a6d00b39ba55271dd638d97711f89f02d43ed17ba865d2cf2da4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull lightstreamer@sha256:daee7fbad6a14c372732d40761b7e6d6e8243e99b7ba0
 ### `lightstreamer:7-jdk8-openjdk` - linux; amd64
 
 ```console
-$ docker pull lightstreamer@sha256:2817f6e35b5e007938c73e0bfa27d181e31b40a0db0a5af868b0e9f35b035a46
+$ docker pull lightstreamer@sha256:409103ad0c4000a90534a2137f6c4a6e6a17bba6ae7189f7d8a28dce37c05d16
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **259.6 MB (259581154 bytes)**  
+-	Total Size: **259.6 MB (259628360 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2aac95449682a46f4976839739e4f6daaab13bada0cfac11a17cf41820e8c3c6`
+-	Image ID: `sha256:0c10e9ea6ea63cf8308f5ad5140696681f21b00456a1f692a6cb798fafd3d00c`
 -	Default Command: `[".\/LS.sh","run"]`
 
 ```dockerfile
@@ -42,31 +42,31 @@ ENV JAVA_HOME=/usr/local/openjdk-8
 ENV PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Sat, 28 Dec 2019 08:56:16 GMT
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
-# Sat, 28 Dec 2019 08:56:16 GMT
-ENV JAVA_VERSION=8u232
-# Sat, 28 Dec 2019 08:56:16 GMT
-ENV JAVA_BASE_URL=https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u232-b09/OpenJDK8U-jdk_
-# Sat, 28 Dec 2019 08:56:16 GMT
-ENV JAVA_URL_VERSION=8u232b09
-# Sat, 28 Dec 2019 08:56:28 GMT
+# Thu, 23 Jan 2020 00:39:51 GMT
+ENV JAVA_VERSION=8u242
+# Thu, 23 Jan 2020 00:39:52 GMT
+ENV JAVA_BASE_URL=https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u242-b08/OpenJDK8U-jdk_
+# Thu, 23 Jan 2020 00:39:52 GMT
+ENV JAVA_URL_VERSION=8u242b08
+# Thu, 23 Jan 2020 00:40:05 GMT
 RUN set -eux; 		dpkgArch="$(dpkg --print-architecture)"; 	case "$dpkgArch" in 		amd64) upstreamArch='x64' ;; 		arm64) upstreamArch='aarch64' ;; 		*) echo >&2 "error: unsupported architecture: $dpkgArch" ;; 	esac; 		wget -O openjdk.tgz.asc "${JAVA_BASE_URL}${upstreamArch}_linux_${JAVA_URL_VERSION}.tar.gz.sign"; 	wget -O openjdk.tgz "${JAVA_BASE_URL}${upstreamArch}_linux_${JAVA_URL_VERSION}.tar.gz" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
-# Sun, 29 Dec 2019 09:10:56 GMT
+# Thu, 23 Jan 2020 03:10:44 GMT
 LABEL maintainer=Lightstreamer Server Development Team <support@lightstreamer.com>
-# Sun, 29 Dec 2019 09:10:59 GMT
+# Thu, 23 Jan 2020 03:10:46 GMT
 RUN gpg --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 9B90BFD14309C7DA5EF58D7D4A8C08966F29B4D2
-# Sun, 29 Dec 2019 09:10:59 GMT
+# Thu, 23 Jan 2020 03:10:47 GMT
 ENV LIGHTSTREAMER_VERSION=7_0_3_20190107
-# Sun, 29 Dec 2019 09:10:59 GMT
+# Thu, 23 Jan 2020 03:10:47 GMT
 ENV LIGHTSTREAMER_URL_DOWNLOAD=http://www.lightstreamer.com/repo/distros/Lightstreamer_7_0_3_20190107.tar.gz
-# Sun, 29 Dec 2019 09:11:03 GMT
+# Thu, 23 Jan 2020 03:10:55 GMT
 RUN set -ex;         mkdir /lightstreamer && cd /lightstreamer         && curl -fSL -o Lightstreamer.tar.gz ${LIGHTSTREAMER_URL_DOWNLOAD}         && curl -fSL -o Lightstreamer.tar.gz.asc ${LIGHTSTREAMER_URL_DOWNLOAD}.asc         && gpg --batch --verify Lightstreamer.tar.gz.asc Lightstreamer.tar.gz         && tar -xvf Lightstreamer.tar.gz --strip-components=1         && sed -i -- 's/\/usr\/jdk1.8.0/$JAVA_HOME/' bin/unix-like/LS.sh         && sed -i -e 's/<appender-ref ref="LSDailyRolling" \/>/<appender-ref ref="LSConsole" \/>/'                   -e '/<logger name="LightstreamerLogger.init/,+2s/<appender-ref ref="LSConsole" \/>/<!-- <appender-ref ref="LSConsole" \/> -->/'                   -e '/<logger name="LightstreamerLogger.license/,+2s/<appender-ref ref="LSConsole" \/>/<!-- <appender-ref ref="LSConsole" \/> -->/'                   -e '/<logger name="LightstreamerProxyAdapters/,+2s/<appender-ref ref="LSConsole" \/>/<!-- <appender-ref ref="LSConsole" \/> -->/'                   conf/lightstreamer_log_conf.xml         && rm -fr /lightstreamer/DOC-SDKs         && groupadd -r -g 10000 lightstreamer         && useradd --no-log-init -r -g lightstreamer -u 10000 lightstreamer         && chown -R lightstreamer:lightstreamer ../lightstreamer         && rm Lightstreamer.tar.gz Lightstreamer.tar.gz.asc
-# Sun, 29 Dec 2019 09:11:03 GMT
+# Thu, 23 Jan 2020 03:10:56 GMT
 USER lightstreamer
-# Sun, 29 Dec 2019 09:11:03 GMT
+# Thu, 23 Jan 2020 03:10:56 GMT
 EXPOSE 8080
-# Sun, 29 Dec 2019 09:11:03 GMT
+# Thu, 23 Jan 2020 03:10:56 GMT
 WORKDIR /lightstreamer/bin/unix-like
-# Sun, 29 Dec 2019 09:11:04 GMT
+# Thu, 23 Jan 2020 03:10:56 GMT
 CMD ["./LS.sh" "run"]
 ```
 
@@ -95,15 +95,15 @@ CMD ["./LS.sh" "run"]
 		Last Modified: Sat, 28 Dec 2019 09:03:01 GMT  
 		Size: 222.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e7873a7ca0fd67b2ad5624aa9efabd6eac45a5da640eb1030a78156b046faa1e`  
-		Last Modified: Sat, 28 Dec 2019 09:03:13 GMT  
-		Size: 104.2 MB (104167780 bytes)  
+	-	`sha256:3f7eaaf7ad75e1a873daa73baf31fe4d8d1e99adeb7043ff308b208d621c2a45`  
+		Last Modified: Thu, 23 Jan 2020 00:42:19 GMT  
+		Size: 104.2 MB (104214743 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:91feaa6963b24107b63b26aeab2a8bcf02155e0e9e8b2b02192c8b229a996228`  
-		Last Modified: Sun, 29 Dec 2019 09:11:42 GMT  
+	-	`sha256:0812c1129c5aa2fba27f1d6348b3588275bcbfae307cf6913e8dcf74ffff2f21`  
+		Last Modified: Thu, 23 Jan 2020 03:11:50 GMT  
 		Size: 2.0 KB (2012 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3122ae9518bce21d45cd642c2acf732d4c7459ff914575c2d594bd153d88f857`  
-		Last Modified: Sun, 29 Dec 2019 09:11:46 GMT  
-		Size: 39.9 MB (39885035 bytes)  
+	-	`sha256:723d27e9bbafc5e4e69c133b57618bb1a31174f4a2179d8cda1803bbf6eb7151`  
+		Last Modified: Thu, 23 Jan 2020 03:12:10 GMT  
+		Size: 39.9 MB (39885278 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
