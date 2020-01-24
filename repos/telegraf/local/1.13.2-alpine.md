@@ -2,16 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:f3211c133020a2fe86b12dd7ee52ff7b121ff95fe437f26a75d7679ffeaf9031`
-- Created: `2020-01-13T21:37:07.03907942Z`
-- Virtual Size: ~ 86.05 Mb  
+- Image ID: `sha256:1df8b81de5ae8c87bf8c3d57287bdbc75e5b57117a72412f4009e9ed1dba348a`
+- Created: `2020-01-24T06:16:11.626728549Z`
+- Virtual Size: ~ 86.04 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
 - Command: `["telegraf"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `TELEGRAF_VERSION=1.13.1`
+  - `TELEGRAF_VERSION=1.13.2`
 
 ## `apk` (`.apk`-based packages)
 
@@ -188,16 +188,16 @@ GPL
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1b-r1 description:
+libcrypto1.1-1.1.1d-r2 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1b-r1 webpage:
+libcrypto1.1-1.1.1d-r2 webpage:
 https://www.openssl.org
 
-libcrypto1.1-1.1.1b-r1 installed size:
+libcrypto1.1-1.1.1d-r2 installed size:
 2748416
 
-libcrypto1.1-1.1.1b-r1 license:
+libcrypto1.1-1.1.1d-r2 license:
 OpenSSL
 
 ```
@@ -239,16 +239,16 @@ GPL-2.0 LGPL-2.1+
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1b-r1 description:
+libssl1.1-1.1.1d-r2 description:
 SSL shared libraries
 
-libssl1.1-1.1.1b-r1 webpage:
+libssl1.1-1.1.1d-r2 webpage:
 https://www.openssl.org
 
-libssl1.1-1.1.1b-r1 installed size:
+libssl1.1-1.1.1d-r2 installed size:
 536576
 
-libssl1.1-1.1.1b-r1 license:
+libssl1.1-1.1.1d-r2 license:
 OpenSSL
 
 ```
@@ -290,16 +290,16 @@ LGPL-2.1+, GPL-2.0+
 ### `apk` package: `musl`
 
 ```console
-musl-1.1.20-r4 description:
+musl-1.1.20-r5 description:
 the musl c library (libc) implementation
 
-musl-1.1.20-r4 webpage:
+musl-1.1.20-r5 webpage:
 http://www.musl-libc.org/
 
-musl-1.1.20-r4 installed size:
+musl-1.1.20-r5 installed size:
 602112
 
-musl-1.1.20-r4 license:
+musl-1.1.20-r5 license:
 MIT
 
 ```
@@ -307,16 +307,16 @@ MIT
 ### `apk` package: `musl-utils`
 
 ```console
-musl-utils-1.1.20-r4 description:
+musl-utils-1.1.20-r5 description:
 the musl c library (libc) implementation
 
-musl-utils-1.1.20-r4 webpage:
+musl-utils-1.1.20-r5 webpage:
 http://www.musl-libc.org/
 
-musl-utils-1.1.20-r4 installed size:
+musl-utils-1.1.20-r5 installed size:
 139264
 
-musl-utils-1.1.20-r4 license:
+musl-utils-1.1.20-r5 license:
 MIT BSD GPL2+
 
 ```
@@ -375,16 +375,16 @@ MIT
 ### `apk` package: `net-snmp-agent-libs`
 
 ```console
-net-snmp-agent-libs-5.8-r0 description:
+net-snmp-agent-libs-5.8-r1 description:
 The NET-SNMP runtime agent libraries
 
-net-snmp-agent-libs-5.8-r0 webpage:
+net-snmp-agent-libs-5.8-r1 webpage:
 http://www.net-snmp.org/
 
-net-snmp-agent-libs-5.8-r0 installed size:
+net-snmp-agent-libs-5.8-r1 installed size:
 1716224
 
-net-snmp-agent-libs-5.8-r0 license:
+net-snmp-agent-libs-5.8-r1 license:
 GPL
 
 ```
@@ -392,16 +392,16 @@ GPL
 ### `apk` package: `net-snmp-libs`
 
 ```console
-net-snmp-libs-5.8-r0 description:
+net-snmp-libs-5.8-r1 description:
 The NET-SNMP runtime client libraries
 
-net-snmp-libs-5.8-r0 webpage:
+net-snmp-libs-5.8-r1 webpage:
 http://www.net-snmp.org/
 
-net-snmp-libs-5.8-r0 installed size:
+net-snmp-libs-5.8-r1 installed size:
 2572288
 
-net-snmp-libs-5.8-r0 license:
+net-snmp-libs-5.8-r1 license:
 GPL
 
 ```
@@ -409,16 +409,16 @@ GPL
 ### `apk` package: `net-snmp-tools`
 
 ```console
-net-snmp-tools-5.8-r0 description:
+net-snmp-tools-5.8-r1 description:
 Network management utilities using SNMP
 
-net-snmp-tools-5.8-r0 webpage:
+net-snmp-tools-5.8-r1 webpage:
 http://www.net-snmp.org/
 
-net-snmp-tools-5.8-r0 installed size:
+net-snmp-tools-5.8-r1 installed size:
 552960
 
-net-snmp-tools-5.8-r0 license:
+net-snmp-tools-5.8-r1 license:
 GPL
 
 ```
@@ -511,16 +511,16 @@ GPL-2.0-only, LGPL-2.1-only
 ### `apk` package: `tzdata`
 
 ```console
-tzdata-2019a-r0 description:
+tzdata-2019c-r0 description:
 Timezone data
 
-tzdata-2019a-r0 webpage:
+tzdata-2019c-r0 webpage:
 https://www.iana.org/time-zones
 
-tzdata-2019a-r0 installed size:
+tzdata-2019c-r0 installed size:
 3538944
 
-tzdata-2019a-r0 license:
+tzdata-2019c-r0 license:
 Public-Domain
 
 ```
