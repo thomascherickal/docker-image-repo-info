@@ -467,14 +467,9 @@ Licenses: (parsed from: `/usr/share/doc/e2fslibs/copyright`, `/usr/share/doc/e2f
 - `GPL-2`
 - `LGPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris e2fsprogs=1.42.13-1ubuntu1.1
-'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.42.13-1ubuntu1.1.dsc' e2fsprogs_1.42.13-1ubuntu1.1.dsc 2606 SHA256:da94f9eb8dc9ecd99a79d2773a95d79b7ab062b3b404f33c25d53f15bfb958a2
-'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.42.13.orig.tar.gz' e2fsprogs_1.42.13.orig.tar.gz 6511931 SHA256:59993ff3a44f82e504561e0ebf95e8c8fa9f9f5746eb6a7182239605d2a4e2d4
-'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.42.13-1ubuntu1.1.debian.tar.xz' e2fsprogs_1.42.13-1ubuntu1.1.debian.tar.xz 71176 SHA256:2765f0d7ddb32e08b91966376093b833a0b8abec6958d59a715dc1de98f98e82
-```
 
 ### `dpkg` source package: `findutils=4.6.0+git+20160126-2`
 
@@ -629,14 +624,9 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 - `The main library is licensed under GNU Lesser`
 - `nonstandard, see below`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gnutls28=3.4.10-4ubuntu1.6
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.4.10-4ubuntu1.6.dsc' gnutls28_3.4.10-4ubuntu1.6.dsc 3093 SHA256:c987b0a0b88ba31d461adf96458fc16b2098ce02e0da7ea62fa7be511fd682d6
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.4.10.orig.tar.xz' gnutls28_3.4.10.orig.tar.xz 6645892 SHA256:6a32c2b4acbd33ff7eefcbd1357009da04c94c60146ef61320b6c076b1bdf59f
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.4.10-4ubuntu1.6.debian.tar.xz' gnutls28_3.4.10-4ubuntu1.6.debian.tar.xz 109988 SHA256:874de01dff5466abf309bbd5b3b3c0c350ebc5448bcbfc956b02de11ddce7bc6
-```
 
 ### `dpkg` source package: `grep=2.25-1~16.04.1`
 
@@ -1734,11 +1724,6 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris zlib=1:1.2.8.dfsg-2ubuntu4.1
-'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.8.dfsg-2ubuntu4.1.dsc' zlib_1.2.8.dfsg-2ubuntu4.1.dsc 2695 SHA256:3d8301274b24b01c8c0b9b019d0321f199c1f8c689bea3d9bed20afbbce63d23
-'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.8.dfsg.orig.tar.gz' zlib_1.2.8.dfsg.orig.tar.gz 361943 SHA256:2caecc2c3f1ef8b87b8f72b128a03e61c307e8c14f5ec9b422ef7914ba75cf9f
-'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.8.dfsg-2ubuntu4.1.debian.tar.xz' zlib_1.2.8.dfsg-2ubuntu4.1.debian.tar.xz 15484 SHA256:1dd06dbca693a414843e9972a1a60f24b987aeb0cf440ae5a4d249eb4c6e3939
-```

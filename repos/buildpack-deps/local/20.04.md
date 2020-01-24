@@ -180,14 +180,9 @@ Licenses: (parsed from: `/usr/share/doc/autoconf/copyright`)
 - `permissive-without-disclaimer`
 - `permissive-without-notices-or-disclaimer`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris autoconf=2.69-11ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/a/autoconf/autoconf_2.69-11ubuntu1.dsc' autoconf_2.69-11ubuntu1.dsc 2100 SHA256:0731cfd07f7453722deac31c9a6059bfa9f8b99d267841f30c9c791d524c0f2f
-'http://archive.ubuntu.com/ubuntu/pool/main/a/autoconf/autoconf_2.69.orig.tar.xz' autoconf_2.69.orig.tar.xz 1214744 SHA256:64ebcec9f8ac5b2487125a86a7760d2591ac9e1d3dbd59489633f9de62a57684
-'http://archive.ubuntu.com/ubuntu/pool/main/a/autoconf/autoconf_2.69-11ubuntu1.debian.tar.xz' autoconf_2.69-11ubuntu1.debian.tar.xz 23684 SHA256:945b2c898c9b2a08979a52cee3f9cd2354e2c8a96aa12506cb5270cb87fa83a6
-```
 
 ### `dpkg` source package: `automake-1.16=1:1.16.1-4ubuntu3`
 
@@ -696,10 +691,10 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris elfutils=0.176-1.1
-'http://archive.ubuntu.com/ubuntu/pool/main/e/elfutils/elfutils_0.176-1.1.dsc' elfutils_0.176-1.1.dsc 2584 SHA256:6d9fa4741e921f58a3e291def1f92a87bed888db15e73d6e29d46fc48b5f615a
+'http://archive.ubuntu.com/ubuntu/pool/main/e/elfutils/elfutils_0.176-1.1build1.dsc' elfutils_0.176-1.1build1.dsc 2633 SHA256:2d0513bda9230c3fc655473b0df0069cf39aaf954bb99b93d147e1d56205148b
 'http://archive.ubuntu.com/ubuntu/pool/main/e/elfutils/elfutils_0.176.orig.tar.bz2' elfutils_0.176.orig.tar.bz2 8646075 SHA256:eb5747c371b0af0f71e86215a5ebb88728533c3a104a43d4231963f308cd1023
 'http://archive.ubuntu.com/ubuntu/pool/main/e/elfutils/elfutils_0.176.orig.tar.bz2.asc' elfutils_0.176.orig.tar.bz2.asc 455 SHA256:51474b579b25fc799de0777e241c83605427d2903f8d28524ef6af42f75931fd
-'http://archive.ubuntu.com/ubuntu/pool/main/e/elfutils/elfutils_0.176-1.1.debian.tar.xz' elfutils_0.176-1.1.debian.tar.xz 31644 SHA256:06d7057e744d3a6138cf43d30237e2b327b6bfe3041a9a4b210414429c1267f1
+'http://archive.ubuntu.com/ubuntu/pool/main/e/elfutils/elfutils_0.176-1.1build1.debian.tar.xz' elfutils_0.176-1.1build1.debian.tar.xz 31696 SHA256:b2af440e20560eb14b8c91493ada2cfeb4f659c52bea22d7f6b3ef741532fd04
 ```
 
 ### `dpkg` source package: `expat=2.2.9-1`
@@ -921,14 +916,9 @@ Licenses: (parsed from: `/usr/share/doc/cpp-9/copyright`, `/usr/share/doc/g++-9/
 - `LGPL`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-9=9.2.1-21ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-9/gcc-9_9.2.1-21ubuntu1.dsc' gcc-9_9.2.1-21ubuntu1.dsc 29805 SHA256:45105a81c792910ffea693969280dcfccc97b53c9cef41b778f8ad5aacfa6a20
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-9/gcc-9_9.2.1.orig.tar.gz' gcc-9_9.2.1.orig.tar.gz 90195906 SHA256:8819e4bbae43592726be676262f81f242bc5b7a50a019012d8ef02d135a1280c
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-9/gcc-9_9.2.1-21ubuntu1.debian.tar.xz' gcc-9_9.2.1-21ubuntu1.debian.tar.xz 879416 SHA256:f7d6484b82e3f0d10e55e1b131ea67ec4451fdc34d4f9d5d4284d5b5c1872308
-```
 
 ### `dpkg` source package: `gcc-defaults=1.185.1ubuntu1`
 
@@ -1605,15 +1595,9 @@ Licenses: (parsed from: `/usr/share/doc/libassuan0/copyright`)
 - `LGPL-3`
 - `LGPL-3+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libassuan=2.5.3-7ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/liba/libassuan/libassuan_2.5.3-7ubuntu1.dsc' libassuan_2.5.3-7ubuntu1.dsc 2647 SHA256:b159f5926df8f52f35f8bf16d83f9354eaad63e7c6226b644f3b14d41b97102e
-'http://archive.ubuntu.com/ubuntu/pool/main/liba/libassuan/libassuan_2.5.3.orig.tar.bz2' libassuan_2.5.3.orig.tar.bz2 572348 SHA256:91bcb0403866b4e7c4bc1cc52ed4c364a9b5414b3994f718c70303f7f765e702
-'http://archive.ubuntu.com/ubuntu/pool/main/liba/libassuan/libassuan_2.5.3.orig.tar.bz2.asc' libassuan_2.5.3.orig.tar.bz2.asc 952 SHA256:53b16a6619a2690b4f22da645a1d0c14b5664825c87b165ca5bd0de32607888a
-'http://archive.ubuntu.com/ubuntu/pool/main/liba/libassuan/libassuan_2.5.3-7ubuntu1.debian.tar.xz' libassuan_2.5.3-7ubuntu1.debian.tar.xz 13872 SHA256:14eb3b76531cbe438fcc8029bb16e9d981a2539c8f299e9eb334ac2cc532184e
-```
 
 ### `dpkg` source package: `libbsd=0.10.0-1`
 
@@ -1806,14 +1790,13 @@ Licenses: (parsed from: `/usr/share/doc/libexif-dev/copyright`, `/usr/share/doc/
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libexif=0.6.21-5.1
-'http://archive.ubuntu.com/ubuntu/pool/main/libe/libexif/libexif_0.6.21-5.1.dsc' libexif_0.6.21-5.1.dsc 2272 SHA256:98676c725f48a1602b50499329df85545c997825705980ce5d27ec77effd7310
-'http://archive.ubuntu.com/ubuntu/pool/main/libe/libexif/libexif_0.6.21.orig.tar.gz' libexif_0.6.21.orig.tar.gz 2081615 SHA256:edb7eb13664cf950a6edd132b75e99afe61c5effe2f16494e6d27bc404b287bf
-'http://archive.ubuntu.com/ubuntu/pool/main/libe/libexif/libexif_0.6.21-5.1.debian.tar.xz' libexif_0.6.21-5.1.debian.tar.xz 13020 SHA256:e026131413e0a951323e8325c9ce175fdb51d7820140c3e79db2a0b25d453c48
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/libexif/0.6.21-5.1/
+
 
 ### `dpkg` source package: `libffi=3.2.1-9`
 
@@ -2262,14 +2245,9 @@ Licenses: (parsed from: `/usr/share/doc/libssh-4/copyright`)
 - `LGPL-2.1+~OpenSSL`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libssh=0.9.0-1ubuntu5
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.9.0-1ubuntu5.dsc' libssh_0.9.0-1ubuntu5.dsc 2530 SHA256:f1dfe8beea41c82c3f7aab10fad0074a5b2b503f88ee3a1159c6c96417fbf79b
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.9.0.orig.tar.xz' libssh_0.9.0.orig.tar.xz 487628 SHA256:25303c2995e663cd169fdd902bae88106f48242d7e96311d74f812023482c7a5
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.9.0-1ubuntu5.debian.tar.xz' libssh_0.9.0-1ubuntu5.debian.tar.xz 37924 SHA256:9f95e62446289df0f47370b5e00e6784fde17c476b6aa439b553494c1adc0210
-```
 
 ### `dpkg` source package: `libtasn1-6=4.14-3`
 
@@ -2684,14 +2662,13 @@ Licenses: (parsed from: `/usr/share/doc/liblzo2-2/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris lzo2=2.10-0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lzo2/lzo2_2.10-0.1.dsc' lzo2_2.10-0.1.dsc 1869 SHA256:49cdf2efab29d7dd8a907730a37c2c5ca312d9c2150f8e37663838b122856aff
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lzo2/lzo2_2.10.orig.tar.gz' lzo2_2.10.orig.tar.gz 600622 SHA256:c0f892943208266f9b6543b3ae308fab6284c5c90e627931446fb49b4221a072
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lzo2/lzo2_2.10-0.1.debian.tar.xz' lzo2_2.10-0.1.debian.tar.xz 6032 SHA256:0d57d800afc09a44180cb323f4c5d77e9a5f29c1ba53a3ebdd5ec225b2d44723
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/lzo2/2.10-0.1/
+
 
 ### `dpkg` source package: `m4=1.4.18-4`
 
@@ -3073,15 +3050,13 @@ Licenses: (parsed from: `/usr/share/doc/openssh-client/copyright`)
 - `Powell-BSD-style`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssh=1:8.1p1-1
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.1p1-1.dsc' openssh_8.1p1-1.dsc 3316 SHA256:01e3152f72f1352078308842357f56f5206edcad7c5228ff8c13be83be69349b
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.1p1.orig.tar.gz' openssh_8.1p1.orig.tar.gz 1625894 SHA256:02f5dbef3835d0753556f973cd57b4c19b6b1f6cd24c03445e23ac77ca1b93ff
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.1p1.orig.tar.gz.asc' openssh_8.1p1.orig.tar.gz.asc 683 SHA256:da3f623f0131b55c8199fbbd86be0748d00c6e1e098dfc0ebea664901c9a7ab4
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.1p1-1.debian.tar.xz' openssh_8.1p1-1.debian.tar.xz 171604 SHA256:d93a83ebd34b917a307c2876d7a3ad778277f745f38634b961cba65bf07cd10c
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/openssh/1:8.1p1-1/
+
 
 ### `dpkg` source package: `openssl=1.1.1c-1ubuntu4`
 
@@ -3095,15 +3070,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssl=1.1.1c-1ubuntu4
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1c-1ubuntu4.dsc' openssl_1.1.1c-1ubuntu4.dsc 2724 SHA256:aea5f309503b93e512f68a9e5f0c15421df854accf41c2645e36e227ff3d52c7
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1c.orig.tar.gz' openssl_1.1.1c.orig.tar.gz 8864262 SHA256:f6fb3079ad15076154eda9413fed42877d668e7069d9b87396d0804fdb3f4c90
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1c.orig.tar.gz.asc' openssl_1.1.1c.orig.tar.gz.asc 833 SHA256:12663f13a236f0ccb4e74fe2d61b7b2dc1dbdeb83767b21505e61af67d2da6b8
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1c-1ubuntu4.debian.tar.xz' openssl_1.1.1c-1ubuntu4.debian.tar.xz 121932 SHA256:8f6b99871e06689026aa0bbb46739915a19ba2d9efd26969f0ae172ad20f664f
-```
 
 ### `dpkg` source package: `p11-kit=0.23.18.1-2`
 
@@ -3659,14 +3628,9 @@ Licenses: (parsed from: `/usr/share/doc/login/copyright`, `/usr/share/doc/passwd
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris shadow=1:4.5-1.1ubuntu4
-'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.5-1.1ubuntu4.dsc' shadow_4.5-1.1ubuntu4.dsc 1761 SHA256:8fff4bad2a5512aebe79427ca3f9e42afbd6ff5efb1080df01ccfd2417697d2e
-'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.5.orig.tar.xz' shadow_4.5.orig.tar.xz 1344524 SHA256:22b0952dc944b163e2370bb911b11ca275fc80ad024267cf21e496b28c23d500
-'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.5-1.1ubuntu4.debian.tar.xz' shadow_4.5-1.1ubuntu4.debian.tar.xz 472436 SHA256:4eaa200a5d65a63bc53761be36ac0f2b972f8758fd47c405714875d14d37d0d4
-```
 
 ### `dpkg` source package: `shared-mime-info=1.10-1`
 
@@ -3828,14 +3792,13 @@ Licenses: (parsed from: `/usr/share/doc/libtiff-dev/copyright`, `/usr/share/doc/
 
 - `Hylafax`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tiff=4.1.0+git191117-1
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.1.0+git191117-1.dsc' tiff_4.1.0+git191117-1.dsc 2242 SHA256:719b2652bb6ac2bfe0cb6728cfdb267b320a8dc7c1250940ce567e022876b867
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.1.0+git191117.orig.tar.xz' tiff_4.1.0+git191117.orig.tar.xz 1533524 SHA256:67e1d045e994adb7144b0cca228d70dd6d520aaf8c75c342064bc0fd601e6e42
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.1.0+git191117-1.debian.tar.xz' tiff_4.1.0+git191117-1.debian.tar.xz 18896 SHA256:15bfa5a520c58b41a67b6ac211feae21159a02acd45965ceb1831a5fd06ebf33
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/tiff/4.1.0+git191117-1/
+
 
 ### `dpkg` source package: `ubuntu-keyring=2018.09.18.1`
 

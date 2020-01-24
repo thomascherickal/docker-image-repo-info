@@ -680,15 +680,9 @@ Licenses: (parsed from: `/usr/share/doc/comerr-dev/copyright`, `/usr/share/doc/e
 - `GPL-2`
 - `LGPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris e2fsprogs=1.44.6-1ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.44.6-1ubuntu0.1.dsc' e2fsprogs_1.44.6-1ubuntu0.1.dsc 3191 SHA256:23f4e363441e35bc27608740a4ec1be9d098119dc6baed2b2cd9390969a2117a
-'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.44.6.orig.tar.gz' e2fsprogs_1.44.6.orig.tar.gz 7624019 SHA256:9bf7200d2737ed13f50a080af285c11529f91b088d84ecb71aae9fac58a8fbee
-'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.44.6.orig.tar.gz.asc' e2fsprogs_1.44.6.orig.tar.gz.asc 488 SHA256:341aec7ef8c296b1e48e616b4978f72992f2394773a7253e1998f977a5103eca
-'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.44.6-1ubuntu0.1.debian.tar.xz' e2fsprogs_1.44.6-1ubuntu0.1.debian.tar.xz 80252 SHA256:489815a32df49287a6301c4ca7e4f05cc8fdefe1adb378de23706a1ebb11f30c
-```
 
 ### `dpkg` source package: `elfutils=0.176-1`
 
