@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:8ca493b95fabdbcd460de51c7363cc41bb013d6127346babbdcea652f1218245`
-- Created: `2020-01-18T05:25:01.791489518Z`
+- Image ID: `sha256:4e4033cf9d0aa8df8f9c4040a5726011139f9dfbb968780647290f59d4ebda2e`
+- Created: `2020-01-24T11:35:57.473039687Z`
 - Virtual Size: ~ 120.03 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -18,10 +18,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie`
   - `GPG_KEYS=CBAF69F173A0FEA4B537F470D66C9593118BCCB6 F38252826ACD957EF380D39F2F7956BC5DA04B5D`
-  - `PHP_VERSION=7.3.13`
-  - `PHP_URL=https://www.php.net/get/php-7.3.13.tar.xz/from/this/mirror`
-  - `PHP_ASC_URL=https://www.php.net/get/php-7.3.13.tar.xz.asc/from/this/mirror`
-  - `PHP_SHA256=57ac55fe442d2da650abeb9e6fa161bd3a98ba6528c029f076f8bba43dd5c228`
+  - `PHP_VERSION=7.3.14`
+  - `PHP_URL=https://www.php.net/get/php-7.3.14.tar.xz/from/this/mirror`
+  - `PHP_ASC_URL=https://www.php.net/get/php-7.3.14.tar.xz.asc/from/this/mirror`
+  - `PHP_SHA256=cc05dd373ca5d36652800762f65c10e828a17de35aaf246262e3efa99d00cdb0`
   - `PHP_MD5=`
   - `FRIENDICA_VERSION=2020.03-dev`
   - `FRIENDICA_ADDONS=2020.03-dev`
