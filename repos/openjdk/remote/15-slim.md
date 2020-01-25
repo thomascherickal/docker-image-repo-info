@@ -1,7 +1,7 @@
 ## `openjdk:15-slim`
 
 ```console
-$ docker pull openjdk@sha256:cd6bd574f01aa91de3310256a59ed5603ed4e37454fb04ade4a0e0e5200c5cf1
+$ docker pull openjdk@sha256:2f9ddc2fc51cb153cccf1be39d90d325cddfc2624c0ad1f6c2b8c7e716b23971
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull openjdk@sha256:cd6bd574f01aa91de3310256a59ed5603ed4e37454fb04ade4a
 ### `openjdk:15-slim` - linux; amd64
 
 ```console
-$ docker pull openjdk@sha256:9f3191023efff23d7c75acbffa1e7e6fa183db816fac7d5c454517a04f15f01e
+$ docker pull openjdk@sha256:a12d1b6d5d9fef7dbd7de8514903ad37d8875f6a14ec8f7cb5fb474495f01544
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **229.7 MB (229697289 bytes)**  
+-	Total Size: **229.7 MB (229737644 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f6501800c11892c5cb0e850914918e745ee905a98bfd28dede5be4765c28e507`
+-	Image ID: `sha256:ecdb2bc6b487b8493b32556f2fde82f25defc87cd2a4453124d14150f6740beb`
 -	Default Command: `["jshell"]`
 
 ```dockerfile
@@ -36,15 +36,15 @@ ENV JAVA_HOME=/usr/java/openjdk-15
 ENV PATH=/usr/java/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Sat, 28 Dec 2019 08:50:15 GMT
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
-# Fri, 17 Jan 2020 23:39:50 GMT
-ENV JAVA_VERSION=15-ea+6
-# Fri, 17 Jan 2020 23:39:51 GMT
-ENV JAVA_URL=https://download.java.net/java/early_access/jdk15/6/GPL/openjdk-15-ea+6_linux-x64_bin.tar.gz
-# Fri, 17 Jan 2020 23:39:51 GMT
-ENV JAVA_SHA256=122a306f4bcf97ab06653d804fb6ff2cba6ef1943331a341193ec5d2b0f87587
-# Fri, 17 Jan 2020 23:40:14 GMT
+# Sat, 25 Jan 2020 02:35:13 GMT
+ENV JAVA_VERSION=15-ea+7
+# Sat, 25 Jan 2020 02:35:13 GMT
+ENV JAVA_URL=https://download.java.net/java/early_access/jdk15/7/GPL/openjdk-15-ea+7_linux-x64_bin.tar.gz
+# Sat, 25 Jan 2020 02:35:13 GMT
+ENV JAVA_SHA256=1e6dce68fd46f21334f33ab68804f7fe4d89180b03dbf4151f61af4d50674e85
+# Sat, 25 Jan 2020 02:35:31 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$JAVA_URL"; 	echo "$JAVA_SHA256 */openjdk.tgz" | sha256sum -c -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Fri, 17 Jan 2020 23:40:14 GMT
+# Sat, 25 Jan 2020 02:35:31 GMT
 CMD ["jshell"]
 ```
 
@@ -61,7 +61,7 @@ CMD ["jshell"]
 		Last Modified: Sat, 28 Dec 2019 08:58:52 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c27e14b94d164426986ffff942573d570a26f2db78b0b1d01e9026fb905a36d4`  
-		Last Modified: Fri, 17 Jan 2020 23:45:56 GMT  
-		Size: 199.4 MB (199355701 bytes)  
+	-	`sha256:eb8e1a661c1b40a9d33e7ae7aa49ab806dc849b78dbe15c95242850011e07b66`  
+		Last Modified: Sat, 25 Jan 2020 02:41:24 GMT  
+		Size: 199.4 MB (199396056 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
