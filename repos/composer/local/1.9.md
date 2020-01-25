@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:9fbd4d96ca1e325010cbe0b523e3a2e29bbf91340a80a49a56bc8bc64f07b5e9`
-- Created: `2020-01-18T05:28:03.775203849Z`
-- Virtual Size: ~ 181.19 Mb  
+- Image ID: `sha256:a2d258d441dffb0d3700abe3c9d11132ab7bf886710023e1171a2da8554bc50a`
+- Created: `2020-01-24T11:01:31.751137914Z`
+- Virtual Size: ~ 181.21 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/bin/sh","/docker-entrypoint.sh"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie`
   - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
-  - `PHP_VERSION=7.4.1`
-  - `PHP_URL=https://www.php.net/get/php-7.4.1.tar.xz/from/this/mirror`
-  - `PHP_ASC_URL=https://www.php.net/get/php-7.4.1.tar.xz.asc/from/this/mirror`
-  - `PHP_SHA256=561bb866bdd509094be00f4ece7c3543ec971c4d878645ee81437e291cffc762`
+  - `PHP_VERSION=7.4.2`
+  - `PHP_URL=https://www.php.net/get/php-7.4.2.tar.xz/from/this/mirror`
+  - `PHP_ASC_URL=https://www.php.net/get/php-7.4.2.tar.xz.asc/from/this/mirror`
+  - `PHP_SHA256=98284deac017da0d426117ecae7599a1f1bf62ae3911e8bc16c4403a8f4bdf13`
   - `PHP_MD5=`
   - `COMPOSER_ALLOW_SUPERUSER=1`
   - `COMPOSER_HOME=/tmp`
