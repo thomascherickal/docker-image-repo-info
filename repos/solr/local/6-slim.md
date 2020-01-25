@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:f10bb5e1d1014b5e821cb952e00a8119f8e511e6cd60aecd6a9d1758fb938a0a`
-- Created: `2019-12-29T08:56:10.843041573Z`
-- Virtual Size: ~ 371.07 Mb  
+- Image ID: `sha256:4ad940cc34a2bdb39720a9aef11f5ae2f5bfb2465cbb98ad732eb1dc1a8c00c5`
+- Created: `2020-01-23T03:47:08.866986741Z`
+- Virtual Size: ~ 371.12 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -13,19 +13,16 @@
   - `PATH=/opt/solr/bin:/opt/docker-solr/scripts:/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=C.UTF-8`
   - `JAVA_HOME=/usr/local/openjdk-8`
-  - `JAVA_VERSION=8u232`
-  - `JAVA_BASE_URL=https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u232-b09/OpenJDK8U-jre_`
-  - `JAVA_URL_VERSION=8u232b09`
+  - `JAVA_VERSION=8u242`
+  - `JAVA_BASE_URL=https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u242-b08/OpenJDK8U-jre_`
+  - `JAVA_URL_VERSION=8u242b08`
   - `SOLR_USER=solr`
   - `SOLR_UID=8983`
   - `SOLR_GROUP=solr`
   - `SOLR_GID=8983`
-  - `SOLR_VERSION=6.6.6`
   - `SOLR_CLOSER_URL=http://www.apache.org/dyn/closer.lua?filename=lucene/solr/6.6.6/solr-6.6.6.tgz&action=download`
   - `SOLR_DIST_URL=https://www.apache.org/dist/lucene/solr/6.6.6/solr-6.6.6.tgz`
   - `SOLR_ARCHIVE_URL=https://archive.apache.org/dist/lucene/solr/6.6.6/solr-6.6.6.tgz`
-  - `SOLR_SHA256=149ec1a7ee950867ab6257a1a96246df79ccda983983389dc639220f3447b6e8`
-  - `SOLR_KEYS=2085660D9C1FCCACC4A479A3BF160FF14992A24C`
   - `GOSU_VERSION=1.11`
   - `GOSU_KEY=B42F6819007F00F88E364FD4036A9C25BF357DD4`
   - `TINI_VERSION=v0.18.0`

@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:17d128775e15feb1d73f64cb6f7723b1c04df3b5834bc4b2da47148c01fe07a6`
-- Created: `2020-01-15T22:22:55.678576455Z`
+- Image ID: `sha256:08b85f4c33e4b246a9b3cc96ea9c9d59abb29719e10532d2b35b8aac38b950e8`
+- Created: `2020-01-22T04:40:06.108286246Z`
 - Virtual Size: ~ 613.38 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -20,12 +20,9 @@
   - `SOLR_UID=8983`
   - `SOLR_GROUP=solr`
   - `SOLR_GID=8983`
-  - `SOLR_VERSION=7.7.2`
   - `SOLR_CLOSER_URL=http://www.apache.org/dyn/closer.lua?filename=lucene/solr/7.7.2/solr-7.7.2.tgz&action=download`
   - `SOLR_DIST_URL=https://www.apache.org/dist/lucene/solr/7.7.2/solr-7.7.2.tgz`
   - `SOLR_ARCHIVE_URL=https://archive.apache.org/dist/lucene/solr/7.7.2/solr-7.7.2.tgz`
-  - `SOLR_SHA256=eb8ee4038f25364328355de3338e46961093e39166c9bcc28b5915ae491320df`
-  - `SOLR_KEYS=2CECBFBA181601547B654B9FFA81AC8A490F538E`
   - `GOSU_VERSION=1.11`
   - `GOSU_KEY=B42F6819007F00F88E364FD4036A9C25BF357DD4`
   - `TINI_VERSION=v0.18.0`
