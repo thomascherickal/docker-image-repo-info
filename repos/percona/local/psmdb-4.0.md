@@ -788,16 +788,7 @@ http://vault.centos.org/centos/7/os/Source//SPackages/iputils-20160308-10.el7.sr
 
 Licenses (from `rpm --query`): MIT and ASL 2.0 and CC-BY and GPLv3
 
-Source:
-
-```console
-$ yumdownloader --quiet --source --urls jq-1.5-1.el7
-Enabling epel-source repository
-Enabling updates-source repository
-Enabling base-source repository
-Enabling extras-source repository
-https://d2lzkl7pfhq30w.cloudfront.net/pub/epel/7/SRPMS//Packages/j/jq-1.5-1.el7.src.rpm
-```
+**WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
 ### `rpm` package: `json-c-0.11-4.el7_0.x86_64`
 
