@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:22ccea1d7411082a0901faee1d9b6747216ca21fc8381849716eb2775408088a`
-- Created: `2019-12-28T20:31:46.530472986Z`
-- Virtual Size: ~ 1.12 Gb  
+- Image ID: `sha256:e09778cb51e628e618b70e6cf9c5cfccf1f8aa29ac1107aa69ac1a045bc2f181`
+- Created: `2020-01-25T01:24:09.654176002Z`
+- Virtual Size: ~ 1.16 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -9443,11 +9443,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/npth/1.6-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/npth/1.6-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `odoo=13.0.20191106`
+### `dpkg` source package: `odoo=13.0.20200121`
 
 Binary Packages:
 
-- `odoo=13.0.20191106`
+- `odoo=13.0.20200121`
 
 Licenses: (parsed from: `/usr/share/doc/odoo/copyright`)
 
@@ -10840,6 +10840,31 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/python-setuptools/40.8.0-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/python-setuptools/40.8.0-1/ (for access to the source package after it no longer exists in the archive)
 
+### `dpkg` source package: `python-slugify=2.0.1-1`
+
+Binary Packages:
+
+- `python3-slugify=2.0.1-1`
+
+Licenses: (parsed from: `/usr/share/doc/python3-slugify/copyright`)
+
+- `Expat`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris python-slugify=2.0.1-1
+'http://deb.debian.org/debian/pool/main/p/python-slugify/python-slugify_2.0.1-1.dsc' python-slugify_2.0.1-1.dsc 1938 SHA256:8391d6430ac2c445f872a2dc0781ba281fa8986f20b7e2f385f45a4e4c59f10b
+'http://deb.debian.org/debian/pool/main/p/python-slugify/python-slugify_2.0.1.orig.tar.gz' python-slugify_2.0.1.orig.tar.gz 8260 SHA256:d8d8ee0a9ba1307b29418ba3929d47921865b2a2eb94ff2d415abfba284b0225
+'http://deb.debian.org/debian/pool/main/p/python-slugify/python-slugify_2.0.1-1.debian.tar.xz' python-slugify_2.0.1-1.debian.tar.xz 2784 SHA256:84708d45153b3cffb7716aa2102e7ce68d1e2dc5dfb64c695cb29b7fdbc54347
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/python-slugify/2.0.1-1/ (for browsing the source)
+- https://sources.debian.net/src/python-slugify/2.0.1-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/python-slugify/2.0.1-1/ (for access to the source package after it no longer exists in the archive)
+
 ### `dpkg` source package: `python-stdnum=1.10-1`
 
 Binary Packages:
@@ -11634,11 +11659,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tar/1.30+dfsg-6/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tar/1.30+dfsg-6/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tiff=4.0.10-4`
+### `dpkg` source package: `tiff=4.1.0+git191117-2~deb10u1`
 
 Binary Packages:
 
-- `libtiff5:amd64=4.0.10-4`
+- `libtiff5:amd64=4.1.0+git191117-2~deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`)
 
@@ -11647,17 +11672,17 @@ Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris tiff=4.0.10-4
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.0.10-4.dsc' tiff_4.0.10-4.dsc 2173 SHA256:3c5d339cd5dbb59c1e97bf8687c36e0ed75aefe79fc248f749931897060a641e
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.0.10.orig.tar.gz' tiff_4.0.10.orig.tar.gz 2402867 SHA256:2c52d11ccaf767457db0c46795d9c7d1a8d8f76f68b0b800a3dfe45786b996e4
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.0.10-4.debian.tar.xz' tiff_4.0.10-4.debian.tar.xz 21580 SHA256:eed80359456ae1437426be3894ed594ac6d6051306afee6093abdc65a07887b0
+$ apt-get source -qq --print-uris tiff=4.1.0+git191117-2~deb10u1
+'http://security.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.1.0+git191117-2~deb10u1.dsc' tiff_4.1.0+git191117-2~deb10u1.dsc 2274 SHA256:fc63d46d3fbc75c2f03b09b79f9297d701a2b08c968bc8b5826f9e71df5180c8
+'http://security.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.1.0+git191117.orig.tar.xz' tiff_4.1.0+git191117.orig.tar.xz 1533524 SHA256:67e1d045e994adb7144b0cca228d70dd6d520aaf8c75c342064bc0fd601e6e42
+'http://security.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.1.0+git191117-2~deb10u1.debian.tar.xz' tiff_4.1.0+git191117-2~deb10u1.debian.tar.xz 19440 SHA256:e9dcc77d338663f6be84efe32ae5d4ec9b48923c731aa939f37aa909e60d9f10
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/tiff/4.0.10-4/ (for browsing the source)
-- https://sources.debian.net/src/tiff/4.0.10-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tiff/4.0.10-4/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/tiff/4.1.0+git191117-2~deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/tiff/4.1.0+git191117-2~deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tiff/4.1.0+git191117-2~deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tzdata=2019c-0+deb10u1`
 
@@ -11736,6 +11761,32 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/underscore/1.9.1~dfsg-1/ (for browsing the source)
 - https://sources.debian.net/src/underscore/1.9.1~dfsg-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/underscore/1.9.1~dfsg-1/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `unidecode=1.0.23-1`
+
+Binary Packages:
+
+- `python3-unidecode=1.0.23-1`
+
+Licenses: (parsed from: `/usr/share/doc/python3-unidecode/copyright`)
+
+- `GPL-2`
+- `GPL-2+`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris unidecode=1.0.23-1
+'http://deb.debian.org/debian/pool/main/u/unidecode/unidecode_1.0.23-1.dsc' unidecode_1.0.23-1.dsc 1976 SHA256:110b6ef83e719de2ae1caddc1e69790048c3d72958919815e47aadec03cde8a2
+'http://deb.debian.org/debian/pool/main/u/unidecode/unidecode_1.0.23.orig.tar.gz' unidecode_1.0.23.orig.tar.gz 210727 SHA256:8b85354be8fd0c0e10adbf0675f6dc2310e56fda43fa8fe049123b6c475e52fb
+'http://deb.debian.org/debian/pool/main/u/unidecode/unidecode_1.0.23-1.debian.tar.xz' unidecode_1.0.23-1.debian.tar.xz 3520 SHA256:95595dedd9b4ffd5ec0318a1b2e427936cc3be521241600d377c58aaf1d8b71e
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/unidecode/1.0.23-1/ (for browsing the source)
+- https://sources.debian.net/src/unidecode/1.0.23-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/unidecode/1.0.23-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `util-linux=2.33.1-0.1`
 
