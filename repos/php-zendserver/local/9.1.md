@@ -2026,14 +2026,9 @@ Licenses: (parsed from: `/usr/share/doc/libmysqlclient20/copyright`, `/usr/share
 - `public-domain`
 - `zlib/libpng`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mysql-5.7=5.7.28-0ubuntu0.16.04.2
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-5.7_5.7.28-0ubuntu0.16.04.2.dsc' mysql-5.7_5.7.28-0ubuntu0.16.04.2.dsc 3393 SHA256:9d3d7f98b59ee11b1de60b01ebf3790b1da6f00ee78727304437701dc8d0594c
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-5.7_5.7.28.orig.tar.gz' mysql-5.7_5.7.28.orig.tar.gz 51409668 SHA256:f16399315212117c08f9bdf8a0d682728b2ce82d691bcfbf25a770f413b6f2da
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-5.7_5.7.28-0ubuntu0.16.04.2.debian.tar.xz' mysql-5.7_5.7.28-0ubuntu0.16.04.2.debian.tar.xz 250808 SHA256:680e84911af63e5e80fe0318b0d2766f0885f99a831f43835aeacb877d1335ea
-```
 
 ### `dpkg` source package: `ncurses=6.0+20160213-1ubuntu1`
 
