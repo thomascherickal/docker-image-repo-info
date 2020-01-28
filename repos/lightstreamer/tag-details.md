@@ -18,6 +18,16 @@
 -	[`lightstreamer:7.0-jdk11-openjdk`](#lightstreamer70-jdk11-openjdk)
 -	[`lightstreamer:7.0-jdk8`](#lightstreamer70-jdk8)
 -	[`lightstreamer:7.0-jdk8-openjdk`](#lightstreamer70-jdk8-openjdk)
+-	[`lightstreamer:7.1`](#lightstreamer71)
+-	[`lightstreamer:7.1.0`](#lightstreamer710)
+-	[`lightstreamer:7.1.0-jdk11`](#lightstreamer710-jdk11)
+-	[`lightstreamer:7.1.0-jdk11-openjdk`](#lightstreamer710-jdk11-openjdk)
+-	[`lightstreamer:7.1.0-jdk8`](#lightstreamer710-jdk8)
+-	[`lightstreamer:7.1.0-jdk8-openjdk`](#lightstreamer710-jdk8-openjdk)
+-	[`lightstreamer:7.1-jdk11`](#lightstreamer71-jdk11)
+-	[`lightstreamer:7.1-jdk11-openjdk`](#lightstreamer71-jdk11-openjdk)
+-	[`lightstreamer:7.1-jdk8`](#lightstreamer71-jdk8)
+-	[`lightstreamer:7.1-jdk8-openjdk`](#lightstreamer71-jdk8-openjdk)
 -	[`lightstreamer:7-jdk11`](#lightstreamer7-jdk11)
 -	[`lightstreamer:7-jdk11-openjdk`](#lightstreamer7-jdk11-openjdk)
 -	[`lightstreamer:7-jdk8`](#lightstreamer7-jdk8)
@@ -2548,6 +2558,46 @@ CMD ["./LS.sh" "run"]
 		Last Modified: Thu, 23 Jan 2020 03:12:10 GMT  
 		Size: 39.9 MB (39885278 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `lightstreamer:7.1`
+
+**does not exist** (yet?)
+
+## `lightstreamer:7.1.0`
+
+**does not exist** (yet?)
+
+## `lightstreamer:7.1.0-jdk11`
+
+**does not exist** (yet?)
+
+## `lightstreamer:7.1.0-jdk11-openjdk`
+
+**does not exist** (yet?)
+
+## `lightstreamer:7.1.0-jdk8`
+
+**does not exist** (yet?)
+
+## `lightstreamer:7.1.0-jdk8-openjdk`
+
+**does not exist** (yet?)
+
+## `lightstreamer:7.1-jdk11`
+
+**does not exist** (yet?)
+
+## `lightstreamer:7.1-jdk11-openjdk`
+
+**does not exist** (yet?)
+
+## `lightstreamer:7.1-jdk8`
+
+**does not exist** (yet?)
+
+## `lightstreamer:7.1-jdk8-openjdk`
+
+**does not exist** (yet?)
 
 ## `lightstreamer:7-jdk11`
 
