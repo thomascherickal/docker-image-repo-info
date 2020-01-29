@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:e107c1233f026d0d0780eb8274a2cb6ca51f65570f5e9d6ca963a5c1f832af5c`
-- Created: `2020-01-23T01:34:13.259776187Z`
+- Image ID: `sha256:0de4bfc89df3e6eb0573ea74a6797e055e9bebdb3809f8284f0f8b9fb2a45a0a`
+- Created: `2020-01-28T01:33:58.834675073Z`
 - Virtual Size: ~ 104.40 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -21,7 +21,6 @@
   - `RABBITMQ_PGP_KEY_ID=0x0A9AF2115F4687BD29803A206B73A36E6026DFCA`
   - `RABBITMQ_HOME=/opt/rabbitmq`
   - `RABBITMQ_LOGS=-`
-  - `RABBITMQ_SASL_LOGS=-`
   - `HOME=/var/lib/rabbitmq`
   - `LANG=C.UTF-8`
   - `LANGUAGE=C.UTF-8`
