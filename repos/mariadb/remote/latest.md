@@ -1,7 +1,7 @@
 ## `mariadb:latest`
 
 ```console
-$ docker pull mariadb@sha256:709465024f7d574afae9501f163fb7406c25fdb74a8baf2663dd3adc0069d9d3
+$ docker pull mariadb@sha256:35446657c35c0d1f8c8c17c79e694f3ea9adb14645283299aad98889c7faf7a2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -13,14 +13,14 @@ $ docker pull mariadb@sha256:709465024f7d574afae9501f163fb7406c25fdb74a8baf2663d
 ### `mariadb:latest` - linux; amd64
 
 ```console
-$ docker pull mariadb@sha256:f452b84c63cd7f71965fbed4a6b39eebbfd6a3cd79111a1a477fd85dfb9310f5
+$ docker pull mariadb@sha256:812c994eb4441e0ca5f1a53f94124e2c74aa90b136ea98aedc17d6813434791b
 ```
 
--	Docker Version: 18.06.1-ce
+-	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **113.2 MB (113178737 bytes)**  
+-	Total Size: **113.3 MB (113301472 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:bc20d5f8d0fe321b956fe317993dc64739cc4b376e62d98fabc2dfc767d21945`
+-	Image ID: `sha256:1f9cfa8dc305f2b35be2c1006e9980bc71b9cf0d8b9f0dd7146c78d5f54adc0d`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mysqld"]`
 
@@ -53,23 +53,23 @@ ENV GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8
 RUN set -ex; 	export GNUPGHOME="$(mktemp -d)"; 	for key in $GPG_KEYS; do 		gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 	done; 	gpg --batch --export $GPG_KEYS > /etc/apt/trusted.gpg.d/mariadb.gpg; 	command -v gpgconf > /dev/null && gpgconf --kill all || :; 	rm -r "$GNUPGHOME"; 	apt-key list
 # Thu, 16 Jan 2020 04:37:25 GMT
 ENV MARIADB_MAJOR=10.4
-# Thu, 16 Jan 2020 04:37:25 GMT
-ENV MARIADB_VERSION=1:10.4.11+maria~bionic
-# Thu, 16 Jan 2020 04:37:26 GMT
+# Wed, 29 Jan 2020 19:25:58 GMT
+ENV MARIADB_VERSION=1:10.4.12+maria~bionic
+# Wed, 29 Jan 2020 19:25:59 GMT
 RUN set -e;	echo "deb http://ftp.osuosl.org/pub/mariadb/repo/$MARIADB_MAJOR/ubuntu bionic main" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Thu, 16 Jan 2020 04:37:54 GMT
+# Wed, 29 Jan 2020 19:26:31 GMT
 RUN set -ex; 	{ 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password password 'unused'; 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y 		"mariadb-server=$MARIADB_VERSION" 		mariadb-backup 		socat 	; 	rm -rf /var/lib/apt/lists/*; 	sed -ri 's/^user\s/#&/' /etc/mysql/my.cnf /etc/mysql/conf.d/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log)/#&/'; 	echo '[mysqld]\nskip-host-cache\nskip-name-resolve' > /etc/mysql/conf.d/docker.cnf
-# Thu, 16 Jan 2020 04:37:54 GMT
+# Wed, 29 Jan 2020 19:26:31 GMT
 VOLUME [/var/lib/mysql]
-# Thu, 16 Jan 2020 04:37:55 GMT
+# Wed, 29 Jan 2020 19:26:31 GMT
 COPY file:e4a8478ac83a333651c27c5a51a24850e0d3c4dc7c17fef2e5674014e3485df8 in /usr/local/bin/ 
-# Thu, 16 Jan 2020 04:37:55 GMT
+# Wed, 29 Jan 2020 19:26:32 GMT
 RUN ln -s usr/local/bin/docker-entrypoint.sh / # backwards compat
-# Thu, 16 Jan 2020 04:37:56 GMT
+# Wed, 29 Jan 2020 19:26:32 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 16 Jan 2020 04:37:56 GMT
+# Wed, 29 Jan 2020 19:26:32 GMT
 EXPOSE 3306
-# Thu, 16 Jan 2020 04:37:56 GMT
+# Wed, 29 Jan 2020 19:26:33 GMT
 CMD ["mysqld"]
 ```
 
@@ -114,21 +114,21 @@ CMD ["mysqld"]
 		Last Modified: Thu, 16 Jan 2020 04:39:53 GMT  
 		Size: 5.0 KB (5024 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a3b7bdee82b32143ac3002ac292ca19af154fb3dcbd6957e7a9e7a51bcf3ee1c`  
-		Last Modified: Thu, 16 Jan 2020 04:39:52 GMT  
-		Size: 325.0 B  
+	-	`sha256:fbf3ad7b2eec9fd908a35f1b007bd1e9ec4109e592197220d522f64bc05854b9`  
+		Last Modified: Wed, 29 Jan 2020 19:28:45 GMT  
+		Size: 326.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dd5eb2e45b9a880c5d86f34a86fb75e9f5d5633d53e88cc6be84421e71ca749f`  
-		Last Modified: Thu, 16 Jan 2020 04:40:20 GMT  
-		Size: 79.9 MB (79891965 bytes)  
+	-	`sha256:22080b3a46be2cfdc790e7b6d92c3d975fc882b8e88fd2b2463c08e731a818f4`  
+		Last Modified: Wed, 29 Jan 2020 19:28:59 GMT  
+		Size: 80.0 MB (80014698 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ca8c80c59b5afcebf5f011e24a98ea52de0d04fd3092e38868e5c39b91b130c8`  
-		Last Modified: Thu, 16 Jan 2020 04:39:53 GMT  
+	-	`sha256:8021ad8acbefcf6a346e7fe5765f59437a146e21079a8e37fdce0f747b355e2d`  
+		Last Modified: Wed, 29 Jan 2020 19:28:46 GMT  
 		Size: 4.7 KB (4710 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4df3d7f35a252387b5fb0280008986a25da11c68c459fdbf0721a23f17c98247`  
-		Last Modified: Thu, 16 Jan 2020 04:39:53 GMT  
-		Size: 120.0 B  
+	-	`sha256:0b1f06407ccd7aa8d80aed6f5574336539835208fb683469b3620bc9ff7e641d`  
+		Last Modified: Wed, 29 Jan 2020 19:28:46 GMT  
+		Size: 121.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:latest` - linux; arm64 variant v8
