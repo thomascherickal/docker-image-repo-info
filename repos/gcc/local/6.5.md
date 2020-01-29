@@ -4831,20 +4831,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris unzip=6.0-16+deb8u5
-'http://security.debian.org/debian-security/pool/updates/main/u/unzip/unzip_6.0-16+deb8u5.dsc' unzip_6.0-16+deb8u5.dsc 1850 SHA256:c2c5301a102b42ce4ea6cfac1818acef2ea96111f043fed0718619ec2cc07201
-'http://security.debian.org/debian-security/pool/updates/main/u/unzip/unzip_6.0.orig.tar.gz' unzip_6.0.orig.tar.gz 1376845 SHA256:036d96991646d0449ed0aa952e4fbe21b476ce994abc276e49d30e686708bd37
-'http://security.debian.org/debian-security/pool/updates/main/u/unzip/unzip_6.0-16+deb8u5.debian.tar.xz' unzip_6.0-16+deb8u5.debian.tar.xz 21024 SHA256:399f7797b26090f57710f081e1baf948b806089e01468448a6546f8471f823a5
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/unzip/6.0-16+deb8u5/
 
-- https://sources.debian.net/src/unzip/6.0-16+deb8u5/ (for browsing the source)
-- https://sources.debian.net/src/unzip/6.0-16+deb8u5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/unzip/6.0-16+deb8u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ustr=1.0.4-3`
 
