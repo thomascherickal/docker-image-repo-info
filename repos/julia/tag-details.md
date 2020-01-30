@@ -23,12 +23,32 @@
 -	[`julia:1.3-stretch`](#julia13-stretch)
 -	[`julia:1.3-windowsservercore-1809`](#julia13-windowsservercore-1809)
 -	[`julia:1.3-windowsservercore-ltsc2016`](#julia13-windowsservercore-ltsc2016)
+-	[`julia:1.4`](#julia14)
+-	[`julia:1.4.0`](#julia140)
+-	[`julia:1.4.0-buster`](#julia140-buster)
+-	[`julia:1.4.0-rc1`](#julia140-rc1)
+-	[`julia:1.4.0-rc1-buster`](#julia140-rc1-buster)
+-	[`julia:1.4.0-rc1-windowsservercore-1809`](#julia140-rc1-windowsservercore-1809)
+-	[`julia:1.4.0-rc1-windowsservercore-ltsc2016`](#julia140-rc1-windowsservercore-ltsc2016)
+-	[`julia:1.4.0-windowsservercore-1809`](#julia140-windowsservercore-1809)
+-	[`julia:1.4.0-windowsservercore-ltsc2016`](#julia140-windowsservercore-ltsc2016)
+-	[`julia:1.4-buster`](#julia14-buster)
+-	[`julia:1.4-rc`](#julia14-rc)
+-	[`julia:1.4-rc-buster`](#julia14-rc-buster)
+-	[`julia:1.4-rc-windowsservercore-1809`](#julia14-rc-windowsservercore-1809)
+-	[`julia:1.4-rc-windowsservercore-ltsc2016`](#julia14-rc-windowsservercore-ltsc2016)
+-	[`julia:1.4-windowsservercore-1809`](#julia14-windowsservercore-1809)
+-	[`julia:1.4-windowsservercore-ltsc2016`](#julia14-windowsservercore-ltsc2016)
 -	[`julia:1-buster`](#julia1-buster)
 -	[`julia:1-stretch`](#julia1-stretch)
 -	[`julia:1-windowsservercore-1809`](#julia1-windowsservercore-1809)
 -	[`julia:1-windowsservercore-ltsc2016`](#julia1-windowsservercore-ltsc2016)
 -	[`julia:buster`](#juliabuster)
 -	[`julia:latest`](#julialatest)
+-	[`julia:rc`](#juliarc)
+-	[`julia:rc-buster`](#juliarc-buster)
+-	[`julia:rc-windowsservercore-1809`](#juliarc-windowsservercore-1809)
+-	[`julia:rc-windowsservercore-ltsc2016`](#juliarc-windowsservercore-ltsc2016)
 -	[`julia:stretch`](#juliastretch)
 -	[`julia:windowsservercore-1809`](#juliawindowsservercore-1809)
 -	[`julia:windowsservercore-ltsc2016`](#juliawindowsservercore-ltsc2016)
@@ -3868,6 +3888,70 @@ CMD ["julia"]
 		Size: 1.2 KB (1189 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `julia:1.4`
+
+**does not exist** (yet?)
+
+## `julia:1.4.0`
+
+**does not exist** (yet?)
+
+## `julia:1.4.0-buster`
+
+**does not exist** (yet?)
+
+## `julia:1.4.0-rc1`
+
+**does not exist** (yet?)
+
+## `julia:1.4.0-rc1-buster`
+
+**does not exist** (yet?)
+
+## `julia:1.4.0-rc1-windowsservercore-1809`
+
+**does not exist** (yet?)
+
+## `julia:1.4.0-rc1-windowsservercore-ltsc2016`
+
+**does not exist** (yet?)
+
+## `julia:1.4.0-windowsservercore-1809`
+
+**does not exist** (yet?)
+
+## `julia:1.4.0-windowsservercore-ltsc2016`
+
+**does not exist** (yet?)
+
+## `julia:1.4-buster`
+
+**does not exist** (yet?)
+
+## `julia:1.4-rc`
+
+**does not exist** (yet?)
+
+## `julia:1.4-rc-buster`
+
+**does not exist** (yet?)
+
+## `julia:1.4-rc-windowsservercore-1809`
+
+**does not exist** (yet?)
+
+## `julia:1.4-rc-windowsservercore-ltsc2016`
+
+**does not exist** (yet?)
+
+## `julia:1.4-windowsservercore-1809`
+
+**does not exist** (yet?)
+
+## `julia:1.4-windowsservercore-ltsc2016`
+
+**does not exist** (yet?)
+
 ## `julia:1-buster`
 
 ```console
@@ -4949,6 +5033,22 @@ CMD ["julia"]
 		Last Modified: Wed, 29 Jan 2020 19:21:59 GMT  
 		Size: 1.2 KB (1182 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `julia:rc`
+
+**does not exist** (yet?)
+
+## `julia:rc-buster`
+
+**does not exist** (yet?)
+
+## `julia:rc-windowsservercore-1809`
+
+**does not exist** (yet?)
+
+## `julia:rc-windowsservercore-ltsc2016`
+
+**does not exist** (yet?)
 
 ## `julia:stretch`
 
