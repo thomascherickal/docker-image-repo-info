@@ -38,8 +38,6 @@ $ yumdownloader --quiet --source --urls acl-2.2.51-14.el7
 Enabling epel-source repository
 https://d2lzkl7pfhq30w.cloudfront.net/pub/epel/7/SRPMS/repodata/repomd.xml: [Errno 14] HTTPS Error 404 - Not Found
 Trying other mirror.
-http://csc.mcs.sdsmt.edu/epel/7/SRPMS/repodata/repomd.xml: [Errno 12] Timeout on http://csc.mcs.sdsmt.edu/epel/7/SRPMS/repodata/repomd.xml: (28, 'Operation too slow. Less than 1000 bytes/sec transferred the last 30 seconds')
-Trying other mirror.
 Enabling updates-source repository
 Enabling base-source repository
 Enabling ius-source repository
