@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:cc1ebe4e601febf183d4a635305ef268853e7f03106bb367c18b6a43c5461a47`
-- Created: `2020-01-25T02:34:35.054761875Z`
+- Image ID: `sha256:5d362fca316091d61ae7a2275b85c2c6da9bd652f23e66a44f51e13dac3987f5`
+- Created: `2020-01-28T21:56:51.394334675Z`
 - Virtual Size: ~ 494.85 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -51,15 +51,15 @@ $ yumdownloader --quiet --source --urls bash-4.2.46-33.el7
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/bash-4.2.46-33.el7.src.rpm
 ```
 
-### `rpm` package: `binutils-2.27-41.base.0.3.el7_7.1.x86_64`
+### `rpm` package: `binutils-2.27-41.base.0.5.el7_7.1.x86_64`
 
 Licenses (from `rpm --query`): GPLv3+
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls binutils-2.27-41.base.0.3.el7_7.1
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/binutils-2.27-41.base.0.3.el7_7.1.src.rpm
+$ yumdownloader --quiet --source --urls binutils-2.27-41.base.0.5.el7_7.1
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/binutils-2.27-41.base.0.5.el7_7.1.src.rpm
 ```
 
 ### `rpm` package: `bzip2-libs-1.0.6-13.el7.x86_64`
@@ -1179,15 +1179,15 @@ $ yumdownloader --quiet --source --urls shared-mime-info-1.8-4.el7
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/shared-mime-info-1.8-4.el7.src.rpm
 ```
 
-### `rpm` package: `sqlite-3.7.17-8.el7.x86_64`
+### `rpm` package: `sqlite-3.7.17-8.el7_7.1.x86_64`
 
 Licenses (from `rpm --query`): Public Domain
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls sqlite-3.7.17-8.el7
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/sqlite-3.7.17-8.el7.src.rpm
+$ yumdownloader --quiet --source --urls sqlite-3.7.17-8.el7_7.1
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/sqlite-3.7.17-8.el7_7.1.src.rpm
 ```
 
 ### `rpm` package: `tar-1.26-35.el7.x86_64`
