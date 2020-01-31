@@ -1,10 +1,10 @@
-# `plone:5.2.0-python2`
+# `plone:5.2.1-python2`
 
 ## Docker Metadata
 
-- Image ID: `sha256:82b7cda9796932958c268f804454c1d57c3c8e91d41bb7edf7091001d72b6845`
-- Created: `2020-01-25T03:57:42.002757851Z`
-- Virtual Size: ~ 606.26 Mb  
+- Image ID: `sha256:ff562b0056a2c2e40568eda435a6e425671b6f656609bc3366f2f680f823db3e`
+- Created: `2020-01-30T23:55:18.12231053Z`
+- Virtual Size: ~ 616.16 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -19,20 +19,20 @@
   - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/42ad3426cb1ef05863521d7988d5f7fec0c99560/get-pip.py`
   - `PYTHON_GET_PIP_SHA256=da288fc002d0bb2b90f6fbabc91048c1fa18d567ad067ee713c6e331d3a32b45`
   - `PIP=19.0.3`
-  - `ZC_BUILDOUT=2.13.1`
+  - `ZC_BUILDOUT=2.13.2`
   - `SETUPTOOLS=41.0.0`
-  - `WHEEL=0.33.1`
+  - `WHEEL=0.33.6`
   - `PLONE_MAJOR=5.2`
-  - `PLONE_VERSION=5.2`
-  - `PLONE_VERSION_RELEASE=5.2.0`
-  - `PLONE_MD5=211ff749422611db2e448dea639e1fba`
+  - `PLONE_VERSION=5.2.1`
+  - `PLONE_VERSION_RELEASE=Plone-5.2.1-UnifiedInstaller-r2`
+  - `PLONE_MD5=42407c0313791d3626dc86e674684efe`
 - Labels:
   - `description=Plone image, based on Unified Installer`
   - `maintainer=Plone Community`
   - `name=Plone 5.2`
   - `os=debian`
   - `os.version=9`
-  - `plone=5.2`
+  - `plone=5.2.1`
 
 ## `dpkg` (`.deb`-based packages)
 

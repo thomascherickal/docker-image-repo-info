@@ -1,10 +1,10 @@
-# `plone:5.2.0-alpine`
+# `plone:5.2.1-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:da3c97e3009fef83e0a7ba45ebfba45104965f95935df5aba72e4a2838ecacce`
-- Created: `2020-01-25T03:54:08.614259819Z`
-- Virtual Size: ~ 496.47 Mb  
+- Image ID: `sha256:385f05a35d1b4409f0539ff960a5c031e7d6e43a8f998fc41acf770a5e198889`
+- Created: `2020-01-30T23:51:42.121958615Z`
+- Virtual Size: ~ 506.36 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -17,21 +17,21 @@
   - `PYTHON_PIP_VERSION=20.0.2`
   - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/42ad3426cb1ef05863521d7988d5f7fec0c99560/get-pip.py`
   - `PYTHON_GET_PIP_SHA256=da288fc002d0bb2b90f6fbabc91048c1fa18d567ad067ee713c6e331d3a32b45`
-  - `PIP=19.0.3`
-  - `ZC_BUILDOUT=2.13.1`
-  - `SETUPTOOLS=41.0.0`
-  - `WHEEL=0.33.1`
+  - `PIP=19.3.1`
+  - `ZC_BUILDOUT=2.13.2`
+  - `SETUPTOOLS=45.0.0`
+  - `WHEEL=0.33.6`
   - `PLONE_MAJOR=5.2`
-  - `PLONE_VERSION=5.2`
-  - `PLONE_VERSION_RELEASE=5.2.0`
-  - `PLONE_MD5=211ff749422611db2e448dea639e1fba`
+  - `PLONE_VERSION=5.2.1`
+  - `PLONE_VERSION_RELEASE=Plone-5.2.1-UnifiedInstaller-r2`
+  - `PLONE_MD5=42407c0313791d3626dc86e674684efe`
 - Labels:
   - `description=Plone image, based on Unified Installer`
   - `maintainer=Plone Community`
   - `name=Plone 5.2`
   - `os=alpine`
-  - `os.version=3.10`
-  - `plone=5.2`
+  - `os.version=3.11`
+  - `plone=5.2.1`
 
 ## `apk` (`.apk`-based packages)
 
