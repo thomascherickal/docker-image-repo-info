@@ -5030,20 +5030,13 @@ Licenses: (parsed from: `/usr/share/doc/wget/copyright`)
 - `GFDL-1.2`
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris wget=1.16-1+deb8u6
-'http://security.debian.org/debian-security/pool/updates/main/w/wget/wget_1.16-1+deb8u6.dsc' wget_1.16-1+deb8u6.dsc 1942 SHA256:df5fb85bc5e7d4230ca5064415f70846d33f7a3222f45156b302d5e699257653
-'http://security.debian.org/debian-security/pool/updates/main/w/wget/wget_1.16.orig.tar.gz' wget_1.16.orig.tar.gz 3325041 SHA256:b977fc10ac7a72d987d48136251aeb332f2dced1aabd50d6d56bdf72e2b79101
-'http://security.debian.org/debian-security/pool/updates/main/w/wget/wget_1.16-1+deb8u6.debian.tar.xz' wget_1.16-1+deb8u6.debian.tar.xz 24260 SHA256:88c778c49633860b8b6fb5966bfaf72e15e543f19dca456892285cb8b37eef16
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/wget/1.16-1+deb8u6/
 
-- https://sources.debian.net/src/wget/1.16-1+deb8u6/ (for browsing the source)
-- https://sources.debian.net/src/wget/1.16-1+deb8u6/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/wget/1.16-1+deb8u6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `x11proto-core=7.0.26-1`
 
