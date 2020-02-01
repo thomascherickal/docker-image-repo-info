@@ -132,13 +132,9 @@ Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris base-files=10.1ubuntu2.7
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_10.1ubuntu2.7.dsc' base-files_10.1ubuntu2.7.dsc 1620 SHA256:86ce800b82d3968e5c81c1b154d4a515778193c0a516e92f17d3bc2d3c6d2457
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_10.1ubuntu2.7.tar.xz' base-files_10.1ubuntu2.7.tar.xz 78340 SHA256:17f7892cf87ec084ac4c8553f8884130127312d6b953345aa3c7e847b2ac4d0b
-```
 
 ### `dpkg` source package: `base-passwd=3.5.44`
 
