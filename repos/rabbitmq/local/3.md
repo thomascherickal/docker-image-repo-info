@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:71feec866f6ae50fd14ec6e838d48a0fdf951acc053a9d85e057c2baa9437b2a`
-- Created: `2020-01-28T01:33:27.330446264Z`
+- Image ID: `sha256:59cc4d5fa02bda7a0976bdcb727621e048c6c924d4ab0a413b49c1a72c0c640d`
+- Created: `2020-01-29T20:37:06.77845379Z`
 - Virtual Size: ~ 150.77 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -14,8 +14,8 @@
   - `OPENSSL_VERSION=1.1.1d`
   - `OPENSSL_SOURCE_SHA256=1e3a91bc1f9dfce01af26026f856e064eab4c8ee0a8f457b5ae30b40b8b711f2`
   - `OPENSSL_PGP_KEY_IDS=0x8657ABB260F056B1E5190839D9C4D26D0E604491 0x5B2545DAB21995F4088CEFAA36CEE4DEB00CFE33 0xED230BEC4D4F2518B9D7DF41F0DB4D21C1D35231 0xC1F33DD8CE1D4CC613AF14DA9195C48241FBF7DD 0x7953AC1FBC3DC8B3B292393ED5E9E43F7DF9EE8C 0xE5E52560DD91C556DDBDA5D02064C53641C25E5D`
-  - `OTP_VERSION=22.2.3`
-  - `OTP_SOURCE_SHA256=8470fff519d9ffa5defba4e42c3c1e64cd86905313040246d4a6e35799a9e614`
+  - `OTP_VERSION=22.2.4`
+  - `OTP_SOURCE_SHA256=7aab2285b46462332a7fdad395d4629e6465d5da324cf7e081e8d62fdb5b38f1`
   - `RABBITMQ_DATA_DIR=/var/lib/rabbitmq`
   - `RABBITMQ_VERSION=3.8.2`
   - `RABBITMQ_PGP_KEY_ID=0x0A9AF2115F4687BD29803A206B73A36E6026DFCA`
@@ -138,13 +138,9 @@ Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris base-files=10.1ubuntu2.7
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_10.1ubuntu2.7.dsc' base-files_10.1ubuntu2.7.dsc 1620 SHA256:86ce800b82d3968e5c81c1b154d4a515778193c0a516e92f17d3bc2d3c6d2457
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_10.1ubuntu2.7.tar.xz' base-files_10.1ubuntu2.7.tar.xz 78340 SHA256:17f7892cf87ec084ac4c8553f8884130127312d6b953345aa3c7e847b2ac4d0b
-```
 
 ### `dpkg` source package: `base-passwd=3.5.44`
 
