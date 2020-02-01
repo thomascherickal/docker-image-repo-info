@@ -246,20 +246,13 @@ Licenses: (parsed from: `/usr/share/doc/binutils/copyright`, `/usr/share/doc/bin
 - `GPL`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris binutils=2.33.1-6
-'http://deb.debian.org/debian/pool/main/b/binutils/binutils_2.33.1-6.dsc' binutils_2.33.1-6.dsc 11016 SHA256:baa4056ef1fd739feadb55d2f05071d8a48d5f1cd97ef3bcaacb6ed013a8acc4
-'http://deb.debian.org/debian/pool/main/b/binutils/binutils_2.33.1.orig.tar.xz' binutils_2.33.1.orig.tar.xz 22843896 SHA256:675684a650b3ad67471c6edca30da393630c94a54bc0f889492daa9e57d9db8e
-'http://deb.debian.org/debian/pool/main/b/binutils/binutils_2.33.1-6.debian.tar.xz' binutils_2.33.1-6.debian.tar.xz 89852 SHA256:5f07521217a34a2fee08fd219e6d8fe235fb0d019a5d88794d4f7ee967e8be2a
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/binutils/2.33.1-6/
 
-- https://sources.debian.net/src/binutils/2.33.1-6/ (for browsing the source)
-- https://sources.debian.net/src/binutils/2.33.1-6/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/binutils/2.33.1-6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `boot=1.3-24-1`
 
@@ -3763,20 +3756,13 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=244-3
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_244-3.dsc' systemd_244-3.dsc 4973 SHA256:3a97846b73eafb99fb040b8797817cb431334c604a2246070a2c822e2a76002c
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_244.orig.tar.gz' systemd_244.orig.tar.gz 8445963 SHA256:2207ceece44108a04bdd5459aa74413d765a829848109da6f5f836c25aa393aa
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_244-3.debian.tar.xz' systemd_244-3.debian.tar.xz 145424 SHA256:1f97bf96707d2293d9e1cfa1c9a3150fa05eede0767f6c1c84e821e5c31c534b
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/systemd/244-3/
 
-- https://sources.debian.net/src/systemd/244-3/ (for browsing the source)
-- https://sources.debian.net/src/systemd/244-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/systemd/244-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sysvinit=2.96-1`
 
