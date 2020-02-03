@@ -1,7 +1,7 @@
 ## `rakudo-star:latest`
 
 ```console
-$ docker pull rakudo-star@sha256:1313a822e65302ae753031981f9de802e29e642d94c02f56a623d259d5d8b4d8
+$ docker pull rakudo-star@sha256:6150c52fdc4584bcd0760cb790339cbd94532b76b58ac3e1dda3edec8baea315
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,67 +12,67 @@ $ docker pull rakudo-star@sha256:1313a822e65302ae753031981f9de802e29e642d94c02f5
 ### `rakudo-star:latest` - linux; amd64
 
 ```console
-$ docker pull rakudo-star@sha256:0762c85e736594095cb149109fde9cc9ed7bc4a212636eabab43ec0ce9c15001
+$ docker pull rakudo-star@sha256:940e7a0ab194ac8a394199ef9bddcbfd071271a3ffcd7ab0d0fe672f8537614b
 ```
 
--	Docker Version: 18.06.1-ce
+-	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **138.2 MB (138203923 bytes)**  
+-	Total Size: **138.2 MB (138201712 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:399bc38fd84fee794065e1ef71f4db2b3d95fe9e977c24bc8366cda326206804`
+-	Image ID: `sha256:09c522d8d49d585aa5fa94bf8a5a3d72e3dfa1d143553e1a913dc835a56b3ba1`
 -	Default Command: `["perl6"]`
 
 ```dockerfile
-# Sat, 28 Dec 2019 04:23:33 GMT
-ADD file:8f7dc710e276f54a3a73d34b6b8fa261950a781d68ceb7401fa18dabc601c5a5 in / 
-# Sat, 28 Dec 2019 04:23:34 GMT
+# Sat, 01 Feb 2020 17:23:41 GMT
+ADD file:8a9218592e5d736a05a1821a6dd38b205cdd8197c26a5aa33f6fc22fbfaa1c4d in / 
+# Sat, 01 Feb 2020 17:23:41 GMT
 CMD ["bash"]
-# Sat, 28 Dec 2019 04:58:32 GMT
+# Sun, 02 Feb 2020 00:33:57 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	&& rm -rf /var/lib/apt/lists/*
-# Sat, 28 Dec 2019 04:58:38 GMT
+# Sun, 02 Feb 2020 00:34:02 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Sat, 28 Dec 2019 04:59:04 GMT
+# Sun, 02 Feb 2020 00:34:28 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		bzr 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 29 Dec 2019 07:24:49 GMT
+# Sun, 02 Feb 2020 20:34:16 GMT
 MAINTAINER Rob Hoelz
-# Sun, 29 Dec 2019 07:24:50 GMT
+# Sun, 02 Feb 2020 20:34:17 GMT
 RUN groupadd -r perl6 && useradd -r -g perl6 perl6
-# Sun, 29 Dec 2019 07:24:50 GMT
+# Sun, 02 Feb 2020 20:34:17 GMT
 ARG rakudo_version=2019.03
-# Sun, 29 Dec 2019 07:24:50 GMT
+# Sun, 02 Feb 2020 20:34:18 GMT
 ENV rakudo_version=2019.03
-# Sun, 29 Dec 2019 07:40:51 GMT
+# Sun, 02 Feb 2020 20:49:51 GMT
 RUN buildDeps='         gcc         libc6-dev         libencode-perl         make     '         url="https://rakudostar.com/files/star/rakudo-star-${rakudo_version}.tar.gz"     keyserver='ha.pool.sks-keyservers.net'     keyfp='ECF8B611205B447E091246AF959E3D6197190DD5 7A6C9EB8809CFEAF0ED4E09F18C438E6FF24326D'     tmpdir="$(mktemp -d)"     && set -x     && export GNUPGHOME="$tmpdir"     && apt-get update     && apt-get --yes install --no-install-recommends $buildDeps     && rm -rf /var/lib/apt/lists/*     && mkdir ${tmpdir}/rakudo         && curl -fsSL ${url}.asc -o ${tmpdir}/rakudo.tar.gz.asc     && curl -fsSL $url -o ${tmpdir}/rakudo.tar.gz     && gpg --batch --keyserver $keyserver --recv-keys $keyfp     && gpg --batch --verify ${tmpdir}/rakudo.tar.gz.asc ${tmpdir}/rakudo.tar.gz         && tar xzf ${tmpdir}/rakudo.tar.gz --strip-components=1 -C ${tmpdir}/rakudo     && (         cd ${tmpdir}/rakudo         && perl Configure.pl --prefix=/usr --gen-moar         && make install     )     && rm -rf $tmpdir     && apt-get purge -y --auto-remove $buildDeps
-# Sun, 29 Dec 2019 07:40:51 GMT
+# Sun, 02 Feb 2020 20:49:51 GMT
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/perl6/site/bin
-# Sun, 29 Dec 2019 07:40:51 GMT
+# Sun, 02 Feb 2020 20:49:52 GMT
 CMD ["perl6"]
 ```
 
 -	Layers:
-	-	`sha256:146bd6a886182fde06fbf747470b1c89814bc8ab1c96fdf1aef6107171959fe6`  
-		Last Modified: Sat, 28 Dec 2019 04:28:25 GMT  
-		Size: 45.4 MB (45380744 bytes)  
+	-	`sha256:3192219afd04f93d90f0af7f89cb527d1af2a16975ea391ea8517c602ad6ddb6`  
+		Last Modified: Sat, 01 Feb 2020 17:28:49 GMT  
+		Size: 45.4 MB (45380658 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9935d0c62ace92b388be202275e222007d6cac10b9c1f2c1ea63af38c09ea7ab`  
-		Last Modified: Sat, 28 Dec 2019 05:04:30 GMT  
-		Size: 10.8 MB (10797221 bytes)  
+	-	`sha256:17c160265e75550c2ed099aa7d3906b3fef0bf046a2aeead136f8e587a015159`  
+		Last Modified: Sun, 02 Feb 2020 00:42:04 GMT  
+		Size: 10.8 MB (10797219 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:db0efb86e80601b5bbdbb7c406426982c4202d339687c14c3941b364527e2249`  
-		Last Modified: Sat, 28 Dec 2019 05:04:28 GMT  
-		Size: 4.3 MB (4340114 bytes)  
+	-	`sha256:cc4fe40d0e618e3319afb689c3570bb87e8e8cf51bca080364d1552317bc66c2`  
+		Last Modified: Sun, 02 Feb 2020 00:42:02 GMT  
+		Size: 4.3 MB (4340216 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e705a4c4fd310b96bfb3d7928428e65f0d3f5bad0cd0bda1434aee1d89418468`  
-		Last Modified: Sat, 28 Dec 2019 05:04:45 GMT  
-		Size: 50.1 MB (50072671 bytes)  
+	-	`sha256:9d647f502a07e6daaee43c23cfac9399501b1d7f55fb4c60d56307e23f0ed5a5`  
+		Last Modified: Sun, 02 Feb 2020 00:42:26 GMT  
+		Size: 50.1 MB (50073989 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b3d5b5eded90d4d2cec6cd3f3b0b2838dfa740424238c9c9ae830bc568151e11`  
-		Last Modified: Sun, 29 Dec 2019 07:41:06 GMT  
-		Size: 1.8 KB (1767 bytes)  
+	-	`sha256:6a50f9d701f4346f7c03c29251980be15b01be0aeaf9f6cfd9380332655c3e16`  
+		Last Modified: Sun, 02 Feb 2020 20:50:04 GMT  
+		Size: 1.8 KB (1764 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2097084a0dab136bd4185f911303f37fa9478cbf4b7a2c866d23df35fa4294e5`  
-		Last Modified: Sun, 29 Dec 2019 07:41:13 GMT  
-		Size: 27.6 MB (27611406 bytes)  
+	-	`sha256:66c3b3e330974725772db3f8414a294ea43a99313ffe98e817b3c142e00e49a1`  
+		Last Modified: Sun, 02 Feb 2020 20:50:10 GMT  
+		Size: 27.6 MB (27607866 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `rakudo-star:latest` - linux; arm64 variant v8
