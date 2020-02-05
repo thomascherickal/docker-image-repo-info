@@ -1,7 +1,7 @@
 ## `kong:centos`
 
 ```console
-$ docker pull kong@sha256:7a3d24cc151c71a3e6b21a0ce1d9abb02319310e27cba574d589fdd9bbe01b42
+$ docker pull kong@sha256:94f9efc544e95c4272994b288ab4705cac33101e091d6f0be4ec8b55a4109b4b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull kong@sha256:7a3d24cc151c71a3e6b21a0ce1d9abb02319310e27cba574d589fd
 ### `kong:centos` - linux; amd64
 
 ```console
-$ docker pull kong@sha256:14d8790ce741f3eff735585bc0d5d9d50987c005dcf36798696d9878781ceda2
+$ docker pull kong@sha256:c8fa4ff0c035afa30e80eb1ab56066876fadee72ab926442060cdf853f14c803
 ```
 
 -	Docker Version: 18.06.1-ce
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **151.0 MB (151015480 bytes)**  
+-	Total Size: **158.2 MB (158205282 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7bb6fd2dfc9a9bb23217d4a96a11150478cb6405b50501065a2940ea27530da8`
+-	Image ID: `sha256:b68221ae244e42b58e051b3d0ca18008663b288f29bfd5b7e2d0979d892b6384`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["kong","docker-start"]`
 
@@ -31,27 +31,23 @@ LABEL org.label-schema.schema-version=1.0 org.label-schema.name=CentOS Base Imag
 CMD ["/bin/bash"]
 # Tue, 12 Nov 2019 02:32:03 GMT
 LABEL maintainer=Kong Core Team <team-core@konghq.com>
-# Tue, 14 Jan 2020 22:20:48 GMT
-ENV KONG_VERSION=1.4.3
-# Tue, 14 Jan 2020 22:20:48 GMT
-ARG SU_EXEC_VERSION=0.2
-# Tue, 14 Jan 2020 22:20:49 GMT
-ARG SU_EXEC_URL=https://github.com/ncopa/su-exec/archive/v0.2.tar.gz
-# Tue, 14 Jan 2020 22:21:30 GMT
-# ARGS: SU_EXEC_URL=https://github.com/ncopa/su-exec/archive/v0.2.tar.gz SU_EXEC_VERSION=0.2
-RUN yum install -y -q gcc make unzip 	&& curl -sL "${SU_EXEC_URL}" | tar -C /tmp -zxf - 	&& make -C "/tmp/su-exec-${SU_EXEC_VERSION}" 	&& cp "/tmp/su-exec-${SU_EXEC_VERSION}/su-exec" /usr/bin 	&& rm -fr "/tmp/su-exec-${SU_EXEC_VERSION}" 	&& yum autoremove -y -q gcc make 	&& yum clean all -q 	&& rm -fr /var/cache/yum/* /tmp/yum_save*.yumtx /root/.pki
-# Tue, 14 Jan 2020 22:21:45 GMT
-# ARGS: SU_EXEC_URL=https://github.com/ncopa/su-exec/archive/v0.2.tar.gz SU_EXEC_VERSION=0.2
-RUN useradd --uid 1337 kong 	&& mkdir -p "/usr/local/kong" 	&& yum install -y https://bintray.com/kong/kong-rpm/download_file?file_path=centos/7/kong-$KONG_VERSION.el7.amd64.rpm 	&& yum clean all 	&& chown -R kong:0 /usr/local/kong 	&& chmod -R g=u /usr/local/kong
-# Tue, 14 Jan 2020 22:21:46 GMT
-COPY file:d93f710041d3a08d241deecc7328da1e955b07a618f0d374125d417e8a7e1640 in /docker-entrypoint.sh 
-# Tue, 14 Jan 2020 22:21:46 GMT
+# Wed, 22 Jan 2020 05:16:25 GMT
+ENV KONG_VERSION=2.0.0
+# Wed, 22 Jan 2020 05:16:31 GMT
+RUN yum install -y -q unzip 	&& yum clean all -q 	&& rm -fr /var/cache/yum/* /tmp/yum_save*.yumtx /root/.pki
+# Wed, 22 Jan 2020 05:16:52 GMT
+RUN useradd kong 	&& mkdir -p "/usr/local/kong" 	&& yum install -y https://bintray.com/kong/kong-rpm/download_file?file_path=centos/7/kong-$KONG_VERSION.el7.amd64.rpm 	&& yum clean all 	&& chown -R kong:0 /usr/local/kong 	&& chmod -R g=u /usr/local/kong
+# Wed, 22 Jan 2020 05:16:52 GMT
+USER kong
+# Wed, 22 Jan 2020 05:16:52 GMT
+COPY file:d4cc11e4d968fd7df92b7b157746b27dc40d08cd20ca769e15cffc687cea9b5c in /docker-entrypoint.sh 
+# Wed, 22 Jan 2020 05:16:53 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Tue, 14 Jan 2020 22:21:46 GMT
+# Wed, 22 Jan 2020 05:16:53 GMT
 EXPOSE 8000 8001 8443 8444
-# Tue, 14 Jan 2020 22:21:46 GMT
+# Wed, 22 Jan 2020 05:16:53 GMT
 STOPSIGNAL SIGQUIT
-# Tue, 14 Jan 2020 22:21:46 GMT
+# Wed, 22 Jan 2020 05:16:53 GMT
 CMD ["kong" "docker-start"]
 ```
 
@@ -60,15 +56,15 @@ CMD ["kong" "docker-start"]
 		Last Modified: Tue, 12 Nov 2019 00:23:38 GMT  
 		Size: 75.8 MB (75780712 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e86b7d4e4b1d66e8816a702601f75950ada5658756a23c92889be69c88f782ac`  
-		Last Modified: Tue, 14 Jan 2020 22:24:33 GMT  
-		Size: 6.5 MB (6509459 bytes)  
+	-	`sha256:33393acb164820849236d8a316b267340d8ea03502e0bfb9c760a92740ec4b52`  
+		Last Modified: Wed, 22 Jan 2020 05:20:12 GMT  
+		Size: 6.6 MB (6569271 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a2b25dc7b909ebc0a174d6c5b5d0649f384105961713922fd66f679805077fc9`  
-		Last Modified: Tue, 14 Jan 2020 22:24:46 GMT  
-		Size: 68.7 MB (68724713 bytes)  
+	-	`sha256:fd358c1ff903f4b77bbf06d91d9532da73bddee5e4d6971ea438149eea106faf`  
+		Last Modified: Wed, 22 Jan 2020 05:20:25 GMT  
+		Size: 75.9 MB (75854944 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:61970c4ef7ea78a93c722ae1546c466f6f15e5b699170c3777dd9e5dd1e9a7c9`  
-		Last Modified: Tue, 14 Jan 2020 22:24:31 GMT  
-		Size: 596.0 B  
+	-	`sha256:2637114431d722670a4c3246ab50aba0bbac9c51f6bceccd8b19f1eed6310417`  
+		Last Modified: Wed, 22 Jan 2020 05:20:10 GMT  
+		Size: 355.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
