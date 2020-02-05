@@ -1,7 +1,7 @@
 ## `gazebo:libgazebo9-stretch`
 
 ```console
-$ docker pull gazebo@sha256:8394931ebc7d517364cfc400e781839d996b6bd1f2cc2c0d190d66c545ce2e56
+$ docker pull gazebo@sha256:ba04407c4723d9d41a3b1c1e3f5a427970bd1b3139c63b3636ad0ef2f8c95712
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -13,70 +13,70 @@ $ docker pull gazebo@sha256:8394931ebc7d517364cfc400e781839d996b6bd1f2cc2c0d190d
 ### `gazebo:libgazebo9-stretch` - linux; amd64
 
 ```console
-$ docker pull gazebo@sha256:6ab806c808d04a2ad4e4dbe75448e9a1ce0ddd7a4f0310271760e3aa1f7b03a3
+$ docker pull gazebo@sha256:954116741a1d08937d256b1beac3e8f4985336790b9e134273b2117b197777d7
 ```
 
--	Docker Version: 18.06.1-ce
+-	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **650.8 MB (650834823 bytes)**  
+-	Total Size: **650.9 MB (650900928 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d32bd16fa48b4cc61cdfa75252153e73b3fb2e94b3642732457a95f9268d5e3b`
+-	Image ID: `sha256:9669e669feee60844051a86c4c9ccd47983d7d38c3b0d4427f6cc13573823918`
 -	Entrypoint: `["\/gzserver_entrypoint.sh"]`
 -	Default Command: `["gzserver"]`
 
 ```dockerfile
-# Sat, 28 Dec 2019 04:23:33 GMT
-ADD file:8f7dc710e276f54a3a73d34b6b8fa261950a781d68ceb7401fa18dabc601c5a5 in / 
-# Sat, 28 Dec 2019 04:23:34 GMT
+# Sat, 01 Feb 2020 17:23:41 GMT
+ADD file:8a9218592e5d736a05a1821a6dd38b205cdd8197c26a5aa33f6fc22fbfaa1c4d in / 
+# Sat, 01 Feb 2020 17:23:41 GMT
 CMD ["bash"]
-# Sat, 28 Dec 2019 23:03:23 GMT
+# Sat, 01 Feb 2020 18:31:04 GMT
 RUN apt-get update && apt-get install -q -y     dirmngr     gnupg2     lsb-release     && rm -rf /var/lib/apt/lists/*
-# Sat, 28 Dec 2019 23:03:28 GMT
+# Sat, 01 Feb 2020 18:31:09 GMT
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys D2486D2DD83DB69272AFE98867170598AF249743
-# Sat, 28 Dec 2019 23:03:29 GMT
+# Sat, 01 Feb 2020 18:31:10 GMT
 RUN . /etc/os-release     && echo "deb http://packages.osrfoundation.org/gazebo/$ID-stable `lsb_release -sc` main" > /etc/apt/sources.list.d/gazebo-latest.list
-# Sat, 28 Dec 2019 23:04:54 GMT
-RUN apt-get update && apt-get install -q -y     gazebo9=9.11.0-1*     && rm -rf /var/lib/apt/lists/*
-# Sat, 28 Dec 2019 23:04:55 GMT
+# Tue, 04 Feb 2020 23:33:01 GMT
+RUN apt-get update && apt-get install -q -y     gazebo9=9.12.0-1*     && rm -rf /var/lib/apt/lists/*
+# Tue, 04 Feb 2020 23:33:01 GMT
 EXPOSE 11345
-# Sat, 28 Dec 2019 23:04:55 GMT
+# Tue, 04 Feb 2020 23:33:02 GMT
 COPY file:b79966dec12c55a0a5c9e673326cc3faf9cbbeee0ea5f172e863df237eb8a601 in / 
-# Sat, 28 Dec 2019 23:04:55 GMT
+# Tue, 04 Feb 2020 23:33:02 GMT
 ENTRYPOINT ["/gzserver_entrypoint.sh"]
-# Sat, 28 Dec 2019 23:04:55 GMT
+# Tue, 04 Feb 2020 23:33:02 GMT
 CMD ["gzserver"]
-# Sat, 28 Dec 2019 23:07:12 GMT
-RUN apt-get update && apt-get install -q -y     libgazebo9-dev=9.11.0-1*     && rm -rf /var/lib/apt/lists/*
+# Tue, 04 Feb 2020 23:34:29 GMT
+RUN apt-get update && apt-get install -q -y     libgazebo9-dev=9.12.0-1*     && rm -rf /var/lib/apt/lists/*
 ```
 
 -	Layers:
-	-	`sha256:146bd6a886182fde06fbf747470b1c89814bc8ab1c96fdf1aef6107171959fe6`  
-		Last Modified: Sat, 28 Dec 2019 04:28:25 GMT  
-		Size: 45.4 MB (45380744 bytes)  
+	-	`sha256:3192219afd04f93d90f0af7f89cb527d1af2a16975ea391ea8517c602ad6ddb6`  
+		Last Modified: Sat, 01 Feb 2020 17:28:49 GMT  
+		Size: 45.4 MB (45380658 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:39ac4b056aa820ccd62eba13490f254fd2e5fd1d5e68d8bc240ec736625ec10c`  
-		Last Modified: Sat, 28 Dec 2019 23:07:40 GMT  
-		Size: 21.1 MB (21095092 bytes)  
+	-	`sha256:b329f82d766c69e9f5f8cd45d02345d8712d15f06c0ff372b1e004cf21ca32a3`  
+		Last Modified: Tue, 04 Feb 2020 23:43:20 GMT  
+		Size: 21.1 MB (21095020 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5bcce2b2d1a628def73ccf25e5786422ad365c4a1e1d466eb1df101e16ef3057`  
-		Last Modified: Sat, 28 Dec 2019 23:07:33 GMT  
-		Size: 1.4 KB (1421 bytes)  
+	-	`sha256:8f9a30b34d65d7bb558fa6a1bd00c831a4018362f0f7226e9fcdc1e3d54880d9`  
+		Last Modified: Tue, 04 Feb 2020 23:43:15 GMT  
+		Size: 1.4 KB (1420 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fb7f6cb2c41a33535075235f2c5b1c881e2a427eae3a402e1f0baa3b6e5c107a`  
-		Last Modified: Sat, 28 Dec 2019 23:07:33 GMT  
-		Size: 5.0 KB (4983 bytes)  
+	-	`sha256:c2b248d8d631a3f33400d84c85843d3a06935e6f106c3a937bab4a7ff8cff2ff`  
+		Last Modified: Tue, 04 Feb 2020 23:43:15 GMT  
+		Size: 5.0 KB (4977 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a1d8dfadfb93faf6007fb99a0c7d8d84085180a82fccce9a0d5f843a07327fa1`  
-		Last Modified: Sat, 28 Dec 2019 23:08:20 GMT  
-		Size: 279.8 MB (279814536 bytes)  
+	-	`sha256:e49613c271c71ec656721624c63b3638377811fe6034138679b0e5f1d6d37ddb`  
+		Last Modified: Tue, 04 Feb 2020 23:44:39 GMT  
+		Size: 279.9 MB (279873927 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:da7e93ebcbeae6a3de80f68c9fda93dfb1476ef85954003844581d131b032e6d`  
-		Last Modified: Sat, 28 Dec 2019 23:07:33 GMT  
+	-	`sha256:c0c83b31a341fc2ed88d67c58482c3b3ca0eee800cd52ec72c123e88009424c7`  
+		Last Modified: Tue, 04 Feb 2020 23:43:15 GMT  
 		Size: 188.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:748952a86dd3c51462e9d48435ff13cc579cd9ce492606b2b6c95cc00d85c2ff`  
-		Last Modified: Sat, 28 Dec 2019 23:09:19 GMT  
-		Size: 304.5 MB (304537859 bytes)  
+	-	`sha256:bc9ef6b40930308063ca6c9e06ba92605a4f34e80da01caf4afb00450f954698`  
+		Last Modified: Tue, 04 Feb 2020 23:45:42 GMT  
+		Size: 304.5 MB (304544738 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `gazebo:libgazebo9-stretch` - linux; arm variant v7
