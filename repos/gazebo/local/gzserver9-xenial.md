@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:b6be7b49a37ba5a29e5257cb0c39a2245fb20816b4bc6966f0e00b653cb06fd1`
-- Created: `2020-01-16T02:01:21.126523126Z`
-- Virtual Size: ~ 691.53 Mb  
+- Image ID: `sha256:ea5954c0b87393dde3d5d871256243cc37c436f6d40b3134ab03b5846c666aa3`
+- Created: `2020-02-04T23:22:25.542661243Z`
+- Virtual Size: ~ 691.76 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/gzserver_entrypoint.sh"]`
@@ -1069,14 +1069,14 @@ $ apt-get source -qq --print-uris game-music-emu=0.6.0-3ubuntu0.16.04.1
 'http://archive.ubuntu.com/ubuntu/pool/universe/g/game-music-emu/game-music-emu_0.6.0-3ubuntu0.16.04.1.debian.tar.xz' game-music-emu_0.6.0-3ubuntu0.16.04.1.debian.tar.xz 5592 SHA256:a4d7a4f5d9df23098abc4c1fe82696ed8f93d893c50bb8fc14a4de84e705810d
 ```
 
-### `dpkg` source package: `gazebo9=9.11.0-1~xenial`
+### `dpkg` source package: `gazebo9=9.12.0-1~xenial`
 
 Binary Packages:
 
-- `gazebo9=9.11.0-1~xenial`
-- `gazebo9-common=9.11.0-1~xenial`
-- `gazebo9-plugin-base=9.11.0-1~xenial`
-- `libgazebo9:amd64=9.11.0-1~xenial`
+- `gazebo9=9.12.0-1~xenial`
+- `gazebo9-common=9.12.0-1~xenial`
+- `gazebo9-plugin-base=9.12.0-1~xenial`
+- `libgazebo9:amd64=9.12.0-1~xenial`
 
 Licenses: (parsed from: `/usr/share/doc/gazebo9/copyright`, `/usr/share/doc/gazebo9-common/copyright`, `/usr/share/doc/gazebo9-plugin-base/copyright`, `/usr/share/doc/libgazebo9/copyright`)
 
@@ -2176,11 +2176,11 @@ $ apt-get source -qq --print-uris libbs2b=3.1.0+dfsg-2.2
 'http://archive.ubuntu.com/ubuntu/pool/universe/libb/libbs2b/libbs2b_3.1.0+dfsg-2.2.debian.tar.xz' libbs2b_3.1.0+dfsg-2.2.debian.tar.xz 4632 SHA256:37d7d8da3d0ab030ca49944e98c83b4ae8a4463d3a70c301af79da20e05b0440
 ```
 
-### `dpkg` source package: `libbsd=0.8.2-1`
+### `dpkg` source package: `libbsd=0.8.2-1ubuntu0.1`
 
 Binary Packages:
 
-- `libbsd0:amd64=0.8.2-1`
+- `libbsd0:amd64=0.8.2-1ubuntu0.1`
 
 Licenses: (parsed from: `/usr/share/doc/libbsd0/copyright`)
 
@@ -2204,10 +2204,10 @@ Licenses: (parsed from: `/usr/share/doc/libbsd0/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libbsd=0.8.2-1
-'http://archive.ubuntu.com/ubuntu/pool/main/libb/libbsd/libbsd_0.8.2-1.dsc' libbsd_0.8.2-1.dsc 1970 SHA256:c620fbc461ea4f78bb2283ed55e36d1d819354ee08980b28577795f512c2948f
+$ apt-get source -qq --print-uris libbsd=0.8.2-1ubuntu0.1
+'http://archive.ubuntu.com/ubuntu/pool/main/libb/libbsd/libbsd_0.8.2-1ubuntu0.1.dsc' libbsd_0.8.2-1ubuntu0.1.dsc 2083 SHA256:6013acffdab3de3fe2422c2fc14fe0eb1d99dd8c36ea6fba5e739de192334cdb
 'http://archive.ubuntu.com/ubuntu/pool/main/libb/libbsd/libbsd_0.8.2.orig.tar.xz' libbsd_0.8.2.orig.tar.xz 344292 SHA256:b2f644cae94a6e2fe109449c20ad79a0f6ee4faec2205b07eefa0020565e250a
-'http://archive.ubuntu.com/ubuntu/pool/main/libb/libbsd/libbsd_0.8.2-1.debian.tar.xz' libbsd_0.8.2-1.debian.tar.xz 14788 SHA256:03e03c6230dc0243aff0535e89f8e1969f2977b247c1ec57a9783cb1094a0906
+'http://archive.ubuntu.com/ubuntu/pool/main/libb/libbsd/libbsd_0.8.2-1ubuntu0.1.debian.tar.xz' libbsd_0.8.2-1ubuntu0.1.debian.tar.xz 15652 SHA256:6477748f804e4fba6f2c050da5a47e6c93553f5da16d2e4a7af06c89829b107e
 ```
 
 ### `dpkg` source package: `libcaca=0.99.beta19-2ubuntu0.16.04.1`
@@ -4073,12 +4073,12 @@ $ apt-get source -qq --print-uris mtdev=1.1.5-1ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/m/mtdev/mtdev_1.1.5-1ubuntu2.debian.tar.xz' mtdev_1.1.5-1ubuntu2.debian.tar.xz 6224 SHA256:daf836ba10f7a870df957d1b5fcdb98dca302cbdc901baae91a3d7f6a5b2dd90
 ```
 
-### `dpkg` source package: `mysql-5.7=5.7.28-0ubuntu0.16.04.2`
+### `dpkg` source package: `mysql-5.7=5.7.29-0ubuntu0.16.04.1`
 
 Binary Packages:
 
-- `libmysqlclient20:amd64=5.7.28-0ubuntu0.16.04.2`
-- `mysql-common=5.7.28-0ubuntu0.16.04.2`
+- `libmysqlclient20:amd64=5.7.29-0ubuntu0.16.04.1`
+- `mysql-common=5.7.29-0ubuntu0.16.04.1`
 
 Licenses: (parsed from: `/usr/share/doc/libmysqlclient20/copyright`, `/usr/share/doc/mysql-common/copyright`)
 
@@ -4096,9 +4096,14 @@ Licenses: (parsed from: `/usr/share/doc/libmysqlclient20/copyright`, `/usr/share
 - `public-domain`
 - `zlib/libpng`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris mysql-5.7=5.7.29-0ubuntu0.16.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-5.7_5.7.29-0ubuntu0.16.04.1.dsc' mysql-5.7_5.7.29-0ubuntu0.16.04.1.dsc 3393 SHA256:6ecffe362fa2d5db48553dbfc05ba49f0cd71c5bc5337fc894acdaf1d0642164
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-5.7_5.7.29.orig.tar.gz' mysql-5.7_5.7.29.orig.tar.gz 51417554 SHA256:00f514124de2bad1ba7b380cbbd46e316cae7fc7bc3a5621456cabf352f27978
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-5.7_5.7.29-0ubuntu0.16.04.1.debian.tar.xz' mysql-5.7_5.7.29-0ubuntu0.16.04.1.debian.tar.xz 251696 SHA256:0e002e59edbe8b018bb60e32a574b0d9390de7c028280194f0f998fd45a64cca
+```
 
 ### `dpkg` source package: `ncurses=6.0+20160213-1ubuntu1`
 
@@ -5323,14 +5328,9 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=229-4ubuntu21.23
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_229-4ubuntu21.23.dsc' systemd_229-4ubuntu21.23.dsc 4610 SHA256:b39984f374bb4f913eb53aacc22135458325d1345d22b9ce941d09d250289c71
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_229.orig.tar.gz' systemd_229.orig.tar.gz 4319173 SHA256:b51b0a48d1beb388d95bd6a98d62be05490335d4bb388aefecdcb576e91e0741
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_229-4ubuntu21.23.debian.tar.xz' systemd_229-4ubuntu21.23.debian.tar.xz 302036 SHA256:632fc97934fef2aad6665c3cf54abc973664847bd0bd97fba955398c96a2453e
-```
 
 ### `dpkg` source package: `sysvinit=2.88dsf-59.3ubuntu2`
 
@@ -5629,14 +5629,9 @@ Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/lib
 - `MIT`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris util-linux=2.27.1-6ubuntu3.9
-'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.27.1-6ubuntu3.9.dsc' util-linux_2.27.1-6ubuntu3.9.dsc 3586 SHA256:184c6e918aab02046b1f8769e488013a4da2c59d9108123447ead31ee9270d72
-'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.27.1.orig.tar.xz' util-linux_2.27.1.orig.tar.xz 3964512 SHA256:0a818fcdede99aec43ffe6ca5b5388bff80d162f2f7bd4541dca94fecb87a290
-'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.27.1-6ubuntu3.9.debian.tar.xz' util-linux_2.27.1-6ubuntu3.9.debian.tar.xz 88260 SHA256:6d82ba9a363e1c5aa96b8ee964808d5678bb1749547bc173a701e70082e223bd
-```
 
 ### `dpkg` source package: `wavpack=4.75.2-2ubuntu0.2`
 

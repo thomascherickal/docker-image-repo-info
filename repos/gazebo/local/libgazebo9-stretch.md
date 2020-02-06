@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:d32bd16fa48b4cc61cdfa75252153e73b3fb2e94b3642732457a95f9268d5e3b`
-- Created: `2019-12-28T23:07:12.637731589Z`
+- Image ID: `sha256:9669e669feee60844051a86c4c9ccd47983d7d38c3b0d4427f6cc13573823918`
+- Created: `2020-02-04T23:34:29.43030717Z`
 - Virtual Size: ~ 1.74 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -1873,15 +1873,15 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/game-music-emu/0.6.0-4/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/game-music-emu/0.6.0-4/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `gazebo9=9.11.0-1~stretch`
+### `dpkg` source package: `gazebo9=9.12.0-1~stretch`
 
 Binary Packages:
 
-- `gazebo9=9.11.0-1~stretch`
-- `gazebo9-common=9.11.0-1~stretch`
-- `gazebo9-plugin-base=9.11.0-1~stretch`
-- `libgazebo9:amd64=9.11.0-1~stretch`
-- `libgazebo9-dev:amd64=9.11.0-1~stretch`
+- `gazebo9=9.12.0-1~stretch`
+- `gazebo9-common=9.12.0-1~stretch`
+- `gazebo9-plugin-base=9.12.0-1~stretch`
+- `libgazebo9:amd64=9.12.0-1~stretch`
+- `libgazebo9-dev:amd64=9.12.0-1~stretch`
 
 Licenses: (parsed from: `/usr/share/doc/gazebo9/copyright`, `/usr/share/doc/gazebo9-common/copyright`, `/usr/share/doc/gazebo9-plugin-base/copyright`, `/usr/share/doc/libgazebo9/copyright`, `/usr/share/doc/libgazebo9-dev/copyright`)
 
@@ -8449,27 +8449,27 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/qhull/2015.2-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/qhull/2015.2-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `qtbase-opensource-src=5.7.1+dfsg-3+deb9u1`
+### `dpkg` source package: `qtbase-opensource-src=5.7.1+dfsg-3+deb9u2`
 
 Binary Packages:
 
-- `libqt5concurrent5:amd64=5.7.1+dfsg-3+deb9u1`
-- `libqt5core5a:amd64=5.7.1+dfsg-3+deb9u1`
-- `libqt5dbus5:amd64=5.7.1+dfsg-3+deb9u1`
-- `libqt5gui5:amd64=5.7.1+dfsg-3+deb9u1`
-- `libqt5network5:amd64=5.7.1+dfsg-3+deb9u1`
-- `libqt5opengl5:amd64=5.7.1+dfsg-3+deb9u1`
-- `libqt5opengl5-dev:amd64=5.7.1+dfsg-3+deb9u1`
-- `libqt5printsupport5:amd64=5.7.1+dfsg-3+deb9u1`
-- `libqt5sql5:amd64=5.7.1+dfsg-3+deb9u1`
-- `libqt5sql5-sqlite:amd64=5.7.1+dfsg-3+deb9u1`
-- `libqt5test5:amd64=5.7.1+dfsg-3+deb9u1`
-- `libqt5widgets5:amd64=5.7.1+dfsg-3+deb9u1`
-- `libqt5xml5:amd64=5.7.1+dfsg-3+deb9u1`
-- `qt5-gtk-platformtheme:amd64=5.7.1+dfsg-3+deb9u1`
-- `qt5-qmake:amd64=5.7.1+dfsg-3+deb9u1`
-- `qtbase5-dev:amd64=5.7.1+dfsg-3+deb9u1`
-- `qtbase5-dev-tools=5.7.1+dfsg-3+deb9u1`
+- `libqt5concurrent5:amd64=5.7.1+dfsg-3+deb9u2`
+- `libqt5core5a:amd64=5.7.1+dfsg-3+deb9u2`
+- `libqt5dbus5:amd64=5.7.1+dfsg-3+deb9u2`
+- `libqt5gui5:amd64=5.7.1+dfsg-3+deb9u2`
+- `libqt5network5:amd64=5.7.1+dfsg-3+deb9u2`
+- `libqt5opengl5:amd64=5.7.1+dfsg-3+deb9u2`
+- `libqt5opengl5-dev:amd64=5.7.1+dfsg-3+deb9u2`
+- `libqt5printsupport5:amd64=5.7.1+dfsg-3+deb9u2`
+- `libqt5sql5:amd64=5.7.1+dfsg-3+deb9u2`
+- `libqt5sql5-sqlite:amd64=5.7.1+dfsg-3+deb9u2`
+- `libqt5test5:amd64=5.7.1+dfsg-3+deb9u2`
+- `libqt5widgets5:amd64=5.7.1+dfsg-3+deb9u2`
+- `libqt5xml5:amd64=5.7.1+dfsg-3+deb9u2`
+- `qt5-gtk-platformtheme:amd64=5.7.1+dfsg-3+deb9u2`
+- `qt5-qmake:amd64=5.7.1+dfsg-3+deb9u2`
+- `qtbase5-dev:amd64=5.7.1+dfsg-3+deb9u2`
+- `qtbase5-dev-tools=5.7.1+dfsg-3+deb9u2`
 
 Licenses: (parsed from: `/usr/share/doc/libqt5concurrent5/copyright`, `/usr/share/doc/libqt5core5a/copyright`, `/usr/share/doc/libqt5dbus5/copyright`, `/usr/share/doc/libqt5gui5/copyright`, `/usr/share/doc/libqt5network5/copyright`, `/usr/share/doc/libqt5opengl5/copyright`, `/usr/share/doc/libqt5opengl5-dev/copyright`, `/usr/share/doc/libqt5printsupport5/copyright`, `/usr/share/doc/libqt5sql5/copyright`, `/usr/share/doc/libqt5sql5-sqlite/copyright`, `/usr/share/doc/libqt5test5/copyright`, `/usr/share/doc/libqt5widgets5/copyright`, `/usr/share/doc/libqt5xml5/copyright`, `/usr/share/doc/qt5-gtk-platformtheme/copyright`, `/usr/share/doc/qt5-qmake/copyright`, `/usr/share/doc/qtbase5-dev/copyright`, `/usr/share/doc/qtbase5-dev-tools/copyright`)
 
@@ -8501,17 +8501,17 @@ Licenses: (parsed from: `/usr/share/doc/libqt5concurrent5/copyright`, `/usr/shar
 Source:
 
 ```console
-$ apt-get source -qq --print-uris qtbase-opensource-src=5.7.1+dfsg-3+deb9u1
-'http://deb.debian.org/debian/pool/main/q/qtbase-opensource-src/qtbase-opensource-src_5.7.1+dfsg-3+deb9u1.dsc' qtbase-opensource-src_5.7.1+dfsg-3+deb9u1.dsc 5027 SHA256:586dd4485c624cec40cee498f25b6c5db2dd73c8f91de7c4092fd889c2dea4bd
-'http://deb.debian.org/debian/pool/main/q/qtbase-opensource-src/qtbase-opensource-src_5.7.1+dfsg.orig.tar.xz' qtbase-opensource-src_5.7.1+dfsg.orig.tar.xz 44783468 SHA256:030a28b1e4e769d5ec4ec980a063d596b1a54a019c281805439763819fa3b7f4
-'http://deb.debian.org/debian/pool/main/q/qtbase-opensource-src/qtbase-opensource-src_5.7.1+dfsg-3+deb9u1.debian.tar.xz' qtbase-opensource-src_5.7.1+dfsg-3+deb9u1.debian.tar.xz 218780 SHA256:2ce5743dd534c6bb5323bb2bc69cad15fa5860242a72a130bf8c667f0d79ac13
+$ apt-get source -qq --print-uris qtbase-opensource-src=5.7.1+dfsg-3+deb9u2
+'http://security.debian.org/debian-security/pool/updates/main/q/qtbase-opensource-src/qtbase-opensource-src_5.7.1+dfsg-3+deb9u2.dsc' qtbase-opensource-src_5.7.1+dfsg-3+deb9u2.dsc 5027 SHA256:4c317c4b742d7a14b9b42107e4bdfe64a3676eb9fa2fc42ce022c0045a200b0d
+'http://security.debian.org/debian-security/pool/updates/main/q/qtbase-opensource-src/qtbase-opensource-src_5.7.1+dfsg.orig.tar.xz' qtbase-opensource-src_5.7.1+dfsg.orig.tar.xz 44783468 SHA256:030a28b1e4e769d5ec4ec980a063d596b1a54a019c281805439763819fa3b7f4
+'http://security.debian.org/debian-security/pool/updates/main/q/qtbase-opensource-src/qtbase-opensource-src_5.7.1+dfsg-3+deb9u2.debian.tar.xz' qtbase-opensource-src_5.7.1+dfsg-3+deb9u2.debian.tar.xz 218868 SHA256:3a0c2ed52bd203a3f3db2d5f14f7c970794ab3ccaf5a46cb9594fd3f990bd62c
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/qtbase-opensource-src/5.7.1+dfsg-3+deb9u1/ (for browsing the source)
-- https://sources.debian.net/src/qtbase-opensource-src/5.7.1+dfsg-3+deb9u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/qtbase-opensource-src/5.7.1+dfsg-3+deb9u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/qtbase-opensource-src/5.7.1+dfsg-3+deb9u2/ (for browsing the source)
+- https://sources.debian.net/src/qtbase-opensource-src/5.7.1+dfsg-3+deb9u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/qtbase-opensource-src/5.7.1+dfsg-3+deb9u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `qtchooser=63-g13a3d08-1`
 
