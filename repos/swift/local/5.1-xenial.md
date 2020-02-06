@@ -1,9 +1,9 @@
-# `swift:5.1.3-xenial`
+# `swift:5.1.4-xenial`
 
 ## Docker Metadata
 
-- Image ID: `sha256:5e73ad98db9fc4e672e50734cff4eac8193009beb523e42afd691c915861550a`
-- Created: `2020-01-16T03:35:34.038055651Z`
+- Image ID: `sha256:b953ffa29b7a706af24cc5aeb926a99ee3d7649303a8e3ef684ba6173e1c9938`
+- Created: `2020-02-04T01:25:29.966885209Z`
 - Virtual Size: ~ 1.51 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -12,8 +12,8 @@
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561`
   - `SWIFT_PLATFORM=ubuntu16.04`
-  - `SWIFT_BRANCH=swift-5.1.3-release`
-  - `SWIFT_VERSION=swift-5.1.3-RELEASE`
+  - `SWIFT_BRANCH=swift-5.1.4-release`
+  - `SWIFT_VERSION=swift-5.1.4-RELEASE`
   - `SWIFT_WEBROOT=https://swift.org/builds/`
 - Labels:
   - `Description=Docker Container for the Swift programming language`
@@ -2559,14 +2559,9 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=229-4ubuntu21.23
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_229-4ubuntu21.23.dsc' systemd_229-4ubuntu21.23.dsc 4610 SHA256:b39984f374bb4f913eb53aacc22135458325d1345d22b9ce941d09d250289c71
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_229.orig.tar.gz' systemd_229.orig.tar.gz 4319173 SHA256:b51b0a48d1beb388d95bd6a98d62be05490335d4bb388aefecdcb576e91e0741
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_229-4ubuntu21.23.debian.tar.xz' systemd_229-4ubuntu21.23.debian.tar.xz 302036 SHA256:632fc97934fef2aad6665c3cf54abc973664847bd0bd97fba955398c96a2453e
-```
 
 ### `dpkg` source package: `sysvinit=2.88dsf-59.3ubuntu2`
 
@@ -2702,14 +2697,9 @@ Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/lib
 - `MIT`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris util-linux=2.27.1-6ubuntu3.9
-'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.27.1-6ubuntu3.9.dsc' util-linux_2.27.1-6ubuntu3.9.dsc 3586 SHA256:184c6e918aab02046b1f8769e488013a4da2c59d9108123447ead31ee9270d72
-'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.27.1.orig.tar.xz' util-linux_2.27.1.orig.tar.xz 3964512 SHA256:0a818fcdede99aec43ffe6ca5b5388bff80d162f2f7bd4541dca94fecb87a290
-'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.27.1-6ubuntu3.9.debian.tar.xz' util-linux_2.27.1-6ubuntu3.9.debian.tar.xz 88260 SHA256:6d82ba9a363e1c5aa96b8ee964808d5678bb1749547bc173a701e70082e223bd
-```
 
 ### `dpkg` source package: `xauth=1:1.0.9-1ubuntu2`
 

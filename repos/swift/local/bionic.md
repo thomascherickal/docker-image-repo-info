@@ -1,9 +1,9 @@
-# `swift:5.1.3`
+# `swift:5.1.4`
 
 ## Docker Metadata
 
-- Image ID: `sha256:45ea7d98d24d8215fa21afcb739617835d304888fa6575beedfc19c402895131`
-- Created: `2020-01-16T03:33:20.719571602Z`
+- Image ID: `sha256:4ed717295c8afd5107414bda990375c4e57b00ecf9aea7a48d855b0e74f3198b`
+- Created: `2020-02-04T01:24:01.878309918Z`
 - Virtual Size: ~ 1.48 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -12,8 +12,8 @@
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561`
   - `SWIFT_PLATFORM=ubuntu18.04`
-  - `SWIFT_BRANCH=swift-5.1.3-release`
-  - `SWIFT_VERSION=swift-5.1.3-RELEASE`
+  - `SWIFT_BRANCH=swift-5.1.4-release`
+  - `SWIFT_VERSION=swift-5.1.4-RELEASE`
   - `SWIFT_WEBROOT=https://swift.org/builds/`
 - Labels:
   - `Description=Docker Container for the Swift programming language`
@@ -2524,14 +2524,9 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=237-3ubuntu10.33
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.33.dsc' systemd_237-3ubuntu10.33.dsc 5182 SHA256:78101584287f635d1212912eff26b4fd9bcec505f73e38e2f8fd09506577df55
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237.orig.tar.gz' systemd_237.orig.tar.gz 6871350 SHA256:c83dabbe1c9de6b9db1dafdb7e04140c7d0535705c68842f6c0768653ba4913c
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.33.debian.tar.xz' systemd_237-3ubuntu10.33.debian.tar.xz 237528 SHA256:7530e3de2264645ba057564dbb4d6c23a34362292441ebb075839e11963c38c7
-```
 
 ### `dpkg` source package: `sysvinit=2.88dsf-59.10ubuntu1`
 
@@ -2642,14 +2637,9 @@ Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/fdi
 - `MIT`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris util-linux=2.31.1-0.4ubuntu3.4
-'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.31.1-0.4ubuntu3.4.dsc' util-linux_2.31.1-0.4ubuntu3.4.dsc 3777 SHA256:a831e841fc31bd3209086f6cbacbd151dc223c0fcbd3c9d6e66130df2787f384
-'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.31.1.orig.tar.xz' util-linux_2.31.1.orig.tar.xz 4514032 SHA256:cfd5789570e9ff75e079471faeca1511ade1607f650523a6ad25d1e26516ae4e
-'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.31.1-0.4ubuntu3.4.debian.tar.xz' util-linux_2.31.1-0.4ubuntu3.4.debian.tar.xz 100008 SHA256:15d990f699466be03ab16e2ff8e30f3629c0314a038aa79f98e02085cc2eebc1
-```
 
 ### `dpkg` source package: `xauth=1:1.0.10-1`
 
