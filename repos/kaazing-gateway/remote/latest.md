@@ -1,7 +1,7 @@
 ## `kaazing-gateway:latest`
 
 ```console
-$ docker pull kaazing-gateway@sha256:d50b754a3fd1531dea625ce5222d7d4db19a8991e9c3bbe0922cae016d3223d2
+$ docker pull kaazing-gateway@sha256:a69d98a86ebb25c24c24eaa019cce9c0fc7fabcdbf67c1c7a2dc897463956499
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,101 +12,101 @@ $ docker pull kaazing-gateway@sha256:d50b754a3fd1531dea625ce5222d7d4db19a8991e9c
 ### `kaazing-gateway:latest` - linux; amd64
 
 ```console
-$ docker pull kaazing-gateway@sha256:7b302c36862174b0b756f77dfe1f2a4ec0fccba5b226462984b3e67d382081f4
+$ docker pull kaazing-gateway@sha256:1da8f3878db376a4417fd3365677776fdbe3f0b51ff4c80ee9b825f6dadfff9a
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **123.0 MB (122978597 bytes)**  
+-	Total Size: **131.0 MB (131034421 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:aa15b000fbcddbe9c91eaa69085c1855b20b95dfc2cb171146d213db1e2ca9d1`
+-	Image ID: `sha256:990870450582112d7745628759875dd17384b1d366d636438b5bfa44756344b6`
 -	Default Command: `["gateway.start"]`
 
 ```dockerfile
-# Sat, 01 Feb 2020 17:23:41 GMT
-ADD file:8a9218592e5d736a05a1821a6dd38b205cdd8197c26a5aa33f6fc22fbfaa1c4d in / 
-# Sat, 01 Feb 2020 17:23:41 GMT
+# Sat, 01 Feb 2020 17:20:38 GMT
+ADD file:a5ec219cbfc4e0c31e7df48cc51abd9a5b92754e15403b2ab726e25042041680 in / 
+# Sat, 01 Feb 2020 17:20:39 GMT
 CMD ["bash"]
-# Sun, 02 Feb 2020 00:33:57 GMT
+# Sun, 02 Feb 2020 00:18:59 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 02 Feb 2020 00:34:02 GMT
+# Sun, 02 Feb 2020 00:19:06 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Sun, 02 Feb 2020 06:27:27 GMT
+# Fri, 07 Feb 2020 01:51:10 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		bzip2 		unzip 		xz-utils 				ca-certificates p11-kit 				fontconfig libfreetype6 	; 	rm -rf /var/lib/apt/lists/*
-# Sun, 02 Feb 2020 06:27:27 GMT
+# Fri, 07 Feb 2020 01:51:11 GMT
 ENV LANG=C.UTF-8
-# Sun, 02 Feb 2020 06:29:03 GMT
+# Fri, 07 Feb 2020 01:52:06 GMT
 ENV JAVA_HOME=/usr/local/openjdk-8
-# Sun, 02 Feb 2020 06:29:03 GMT
+# Fri, 07 Feb 2020 01:52:06 GMT
 ENV PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 02 Feb 2020 06:29:05 GMT
+# Fri, 07 Feb 2020 01:52:07 GMT
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
-# Sun, 02 Feb 2020 06:29:05 GMT
+# Fri, 07 Feb 2020 01:52:08 GMT
 ENV JAVA_VERSION=8u242
-# Sun, 02 Feb 2020 06:29:05 GMT
+# Fri, 07 Feb 2020 01:52:08 GMT
 ENV JAVA_BASE_URL=https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u242-b08/OpenJDK8U-jre_
-# Sun, 02 Feb 2020 06:29:06 GMT
+# Fri, 07 Feb 2020 01:52:08 GMT
 ENV JAVA_URL_VERSION=8u242b08
-# Sun, 02 Feb 2020 06:29:14 GMT
+# Fri, 07 Feb 2020 01:52:15 GMT
 RUN set -eux; 		dpkgArch="$(dpkg --print-architecture)"; 	case "$dpkgArch" in 		amd64) upstreamArch='x64' ;; 		arm64) upstreamArch='aarch64' ;; 		*) echo >&2 "error: unsupported architecture: $dpkgArch" ;; 	esac; 		wget -O openjdk.tgz.asc "${JAVA_BASE_URL}${upstreamArch}_linux_${JAVA_URL_VERSION}.tar.gz.sign"; 	wget -O openjdk.tgz "${JAVA_BASE_URL}${upstreamArch}_linux_${JAVA_URL_VERSION}.tar.gz" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -version
-# Sun, 02 Feb 2020 21:52:18 GMT
+# Fri, 07 Feb 2020 03:34:10 GMT
 MAINTAINER Kaazing Docker Maintainers, contact via github issues: https://github.com/kaazing/gateway.docker/issues
-# Sun, 02 Feb 2020 21:52:21 GMT
+# Fri, 07 Feb 2020 03:34:11 GMT
 RUN gpg --keyserver ha.pool.sks-keyservers.net --recv-keys F8F4B66E022A4668E532DAC03AA0B82C385B4D59
-# Sun, 02 Feb 2020 21:52:21 GMT
+# Fri, 07 Feb 2020 03:34:12 GMT
 ENV KAAZING_GATEWAY_VERSION=5.6.0
-# Sun, 02 Feb 2020 21:52:21 GMT
+# Fri, 07 Feb 2020 03:34:12 GMT
 ENV KAAZING_GATEWAY_URL=https://oss.sonatype.org/content/repositories/releases/org/kaazing/gateway.distribution/5.6.0/gateway.distribution-5.6.0.tar.gz
-# Sun, 02 Feb 2020 21:52:22 GMT
+# Fri, 07 Feb 2020 03:34:12 GMT
 WORKDIR /kaazing-gateway
-# Sun, 02 Feb 2020 21:52:24 GMT
+# Fri, 07 Feb 2020 03:34:16 GMT
 RUN curl -fSL -o gateway.tar.gz $KAAZING_GATEWAY_URL 	&& curl -fSL -o gateway.tar.gz.asc ${KAAZING_GATEWAY_URL}.asc 	&& gpg --verify gateway.tar.gz.asc 	&& tar -xvf gateway.tar.gz --strip-components=1 	&& rm gateway.tar.gz*
-# Sun, 02 Feb 2020 21:52:24 GMT
+# Fri, 07 Feb 2020 03:34:16 GMT
 ENV GATEWAY_OPTS=-Xmx512m -Djava.security.egd=file:/dev/urandom
-# Sun, 02 Feb 2020 21:52:24 GMT
+# Fri, 07 Feb 2020 03:34:16 GMT
 ENV PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/kaazing-gateway/bin
-# Sun, 02 Feb 2020 21:52:24 GMT
+# Fri, 07 Feb 2020 03:34:17 GMT
 EXPOSE 8000
-# Sun, 02 Feb 2020 21:52:24 GMT
+# Fri, 07 Feb 2020 03:34:17 GMT
 CMD ["gateway.start"]
 ```
 
 -	Layers:
-	-	`sha256:3192219afd04f93d90f0af7f89cb527d1af2a16975ea391ea8517c602ad6ddb6`  
-		Last Modified: Sat, 01 Feb 2020 17:28:49 GMT  
-		Size: 45.4 MB (45380658 bytes)  
+	-	`sha256:dc65f448a2e2f2ea557e69ed9ac65aa8ac0e16f1bce68f90de910b4d5a2f1ba1`  
+		Last Modified: Sat, 01 Feb 2020 17:26:04 GMT  
+		Size: 50.4 MB (50379770 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:17c160265e75550c2ed099aa7d3906b3fef0bf046a2aeead136f8e587a015159`  
-		Last Modified: Sun, 02 Feb 2020 00:42:04 GMT  
-		Size: 10.8 MB (10797219 bytes)  
+	-	`sha256:346ffb2b67d7b35729673ced818325ed0ea57284e69de67f8bbc48c2bf294716`  
+		Last Modified: Sun, 02 Feb 2020 00:37:48 GMT  
+		Size: 7.8 MB (7811673 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cc4fe40d0e618e3319afb689c3570bb87e8e8cf51bca080364d1552317bc66c2`  
-		Last Modified: Sun, 02 Feb 2020 00:42:02 GMT  
-		Size: 4.3 MB (4340216 bytes)  
+	-	`sha256:dea4ecac934f71d68d4f5edb171f6cff42588edfa3f70ba8709be56e321eeddc`  
+		Last Modified: Sun, 02 Feb 2020 00:37:49 GMT  
+		Size: 10.0 MB (9996251 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:85dab43aebcc389708bd85956ee317259c9cd8ca66bae7c58d1d8d425606ea0b`  
-		Last Modified: Sun, 02 Feb 2020 06:36:22 GMT  
-		Size: 5.1 MB (5126190 bytes)  
+	-	`sha256:f003f5c25f68e76d7a30f14f5dce60cfe3d74d6bf050d6dbb55356835ac85acf`  
+		Last Modified: Fri, 07 Feb 2020 01:58:05 GMT  
+		Size: 5.5 MB (5529324 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1f184e780c21b5acac5653cce7026a94db6c6a40d0e68ed5de19a99ebe6a86f0`  
-		Last Modified: Sun, 02 Feb 2020 06:38:01 GMT  
-		Size: 219.0 B  
+	-	`sha256:c92ee316420dc43acf210e0105c2778dd97000bb031079e33e38dbed6b55f1e2`  
+		Last Modified: Fri, 07 Feb 2020 02:00:03 GMT  
+		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2a89b6f1aaa18b8d40c9017f8e9cb5e1561a7e85f234ebb3d7af366a4304dd3b`  
-		Last Modified: Sun, 02 Feb 2020 06:38:09 GMT  
-		Size: 40.2 MB (40204004 bytes)  
+	-	`sha256:38a95be757d026695b0295c756dad4e045f668920a953df392432155f49fad15`  
+		Last Modified: Fri, 07 Feb 2020 02:00:12 GMT  
+		Size: 40.2 MB (40187618 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:12b58628432b0496ace01b1431a35b5a62ec41cfd4ad6112363b63149bf9b399`  
-		Last Modified: Sun, 02 Feb 2020 21:52:31 GMT  
-		Size: 3.2 KB (3158 bytes)  
+	-	`sha256:3a15b1fc9beef95261da2d27d4dfed8752ea00de3f289a725d2d09c72b042798`  
+		Last Modified: Fri, 07 Feb 2020 03:34:27 GMT  
+		Size: 2.6 KB (2640 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:730005ec7fe91204d6ac20c7f5c80a6650aadbabe087bb00980ebeca42a90893`  
-		Last Modified: Sun, 02 Feb 2020 21:52:31 GMT  
+	-	`sha256:bbe42cd2cc82dfc7afef1e8bf7bff87166eec650f6d8f725f925133581e276ca`  
+		Last Modified: Fri, 07 Feb 2020 03:34:26 GMT  
 		Size: 104.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fe23121a3f7db92d9a304bc2607673297b29fe3f154b07fc952d34c5e42d57bc`  
-		Last Modified: Sun, 02 Feb 2020 21:52:35 GMT  
-		Size: 17.1 MB (17126829 bytes)  
+	-	`sha256:6422a95539392d7907388589adcc805ca63e0790ec1a120837ebf07365d1d68f`  
+		Last Modified: Fri, 07 Feb 2020 03:34:45 GMT  
+		Size: 17.1 MB (17126830 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `kaazing-gateway:latest` - linux; arm64 variant v8
