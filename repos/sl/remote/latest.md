@@ -1,7 +1,7 @@
 ## `sl:latest`
 
 ```console
-$ docker pull sl@sha256:6376b56c34988d5522c063c59de863975aeeb14d5b374a5563a258d35964a9e4
+$ docker pull sl@sha256:f7c8a43571dabc35f02d731cd1cc3c821bf122d28be41294cfd4858ac4321d8b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,27 +11,27 @@ $ docker pull sl@sha256:6376b56c34988d5522c063c59de863975aeeb14d5b374a5563a258d3
 ### `sl:latest` - linux; amd64
 
 ```console
-$ docker pull sl@sha256:54d4ecbcfaea18666772c861337ce638de98b575fbc49440f5bd36d653552741
+$ docker pull sl@sha256:bf74ea39e4eec8be73ed5aefea9bba7d1f8e5de8d4fca1cf58ffd3679c89aafd
 ```
 
--	Docker Version: 18.06.1-ce
+-	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **66.3 MB (66300705 bytes)**  
+-	Total Size: **66.3 MB (66299763 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7627a7481044a21cd54ea6e2a21c8cb2eaa487d177e463809fbfd17a0df8f517`
+-	Image ID: `sha256:b6d01ef506b05296afc27a8d0acaa8876467a4d2b0e5bcbc2103699da03a0791`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Tue, 07 Jan 2020 23:33:39 GMT
-ADD file:6d36af906ad27b9563549bc1f2ce739341c4ff13d4928fde461267e0f6eae357 in / 
-# Tue, 07 Jan 2020 23:33:40 GMT
-LABEL name=SL7 Base Image vendor=Scientific Linux build-date=20200107
-# Tue, 07 Jan 2020 23:33:40 GMT
+# Fri, 07 Feb 2020 02:49:24 GMT
+ADD file:5057fd52806e05d9e9203713ad0d4becd628352832d3c717ef25d32d8d242ea3 in / 
+# Fri, 07 Feb 2020 02:49:25 GMT
+LABEL name=SL7 Base Image vendor=Scientific Linux build-date=20200204
+# Fri, 07 Feb 2020 02:49:25 GMT
 CMD ["/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:e5ce37e7fe4bfc6beaea9ee8469ac3c494c362dcff3a1f03496f56b3755bb57a`  
-		Last Modified: Tue, 07 Jan 2020 14:43:38 GMT  
-		Size: 66.3 MB (66300705 bytes)  
+	-	`sha256:adf1078ff323c125a8afd4d9f1648720f7b1b5aac73783000f5a07040f7ad9fd`  
+		Last Modified: Tue, 04 Feb 2020 17:26:31 GMT  
+		Size: 66.3 MB (66299763 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
