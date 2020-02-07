@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:6dbb5d8dad860f3798e5e3336f5ded3c43480bedeb72d6a89a8f08286720688f`
-- Created: `2020-01-28T03:31:35.28275666Z`
+- Image ID: `sha256:df02df802c3ecc350d71de112a61841f64a5fc65510f31c1835c6c1b2e64a1e5`
+- Created: `2020-02-06T00:30:19.702824917Z`
 - Virtual Size: ~ 1.29 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -23,9 +23,9 @@
   - `TOMCAT_MAJOR=8`
   - `TOMCAT_VERSION=8.5.50`
   - `TOMCAT_SHA512=ffca86027d298ba107c7d01c779318c05b61ba48767cc5967ee6ce5a88271bb6ec8eed60708d45453f30eeedddcaedd1a369d6df1b49eea2cd14fa40832cfb90`
-  - `XWIKI_VERSION=11.10.2`
-  - `XWIKI_URL_PREFIX=https://maven.xwiki.org/releases/org/xwiki/platform/xwiki-platform-distribution-war/11.10.2`
-  - `XWIKI_DOWNLOAD_SHA256=a904633ccebb9570c50349479818f67fcb3482c7baa1666616f19f389dacb727`
+  - `XWIKI_VERSION=11.10.3`
+  - `XWIKI_URL_PREFIX=https://maven.xwiki.org/releases/org/xwiki/platform/xwiki-platform-distribution-war/11.10.3`
+  - `XWIKI_DOWNLOAD_SHA256=fc959c8641d772d90a53bc1976e86fab907d290364cd802b7b3e0304dcbf008b`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -3961,14 +3961,9 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=237-3ubuntu10.33
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.33.dsc' systemd_237-3ubuntu10.33.dsc 5182 SHA256:78101584287f635d1212912eff26b4fd9bcec505f73e38e2f8fd09506577df55
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237.orig.tar.gz' systemd_237.orig.tar.gz 6871350 SHA256:c83dabbe1c9de6b9db1dafdb7e04140c7d0535705c68842f6c0768653ba4913c
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.33.debian.tar.xz' systemd_237-3ubuntu10.33.debian.tar.xz 237528 SHA256:7530e3de2264645ba057564dbb4d6c23a34362292441ebb075839e11963c38c7
-```
 
 ### `dpkg` source package: `sysvinit=2.88dsf-59.10ubuntu1`
 
@@ -4152,13 +4147,9 @@ Licenses: (parsed from: `/usr/share/doc/libwayland-client0/copyright`, `/usr/sha
 
 - `X11`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris wayland=1.16.0-1ubuntu1.1~18.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/w/wayland/wayland_1.16.0-1ubuntu1.1~18.04.1.dsc' wayland_1.16.0-1ubuntu1.1~18.04.1.dsc 2389 SHA256:3485caf43ff9eafcc275e7d75450985d8592920cc028b107d829a994feb2863a
-'http://archive.ubuntu.com/ubuntu/pool/main/w/wayland/wayland_1.16.0-1ubuntu1.1~18.04.1.tar.gz' wayland_1.16.0-1ubuntu1.1~18.04.1.tar.gz 324969 SHA256:5ea61767340ec029b99186ffd91ad341645b54f6fb8879bac05e756bd42da10d
-```
 
 ### `dpkg` source package: `xkeyboard-config=2.23.1-1ubuntu1.18.04.1`
 
