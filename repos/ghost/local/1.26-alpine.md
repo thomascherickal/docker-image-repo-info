@@ -2,16 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:9be8fa943fed9c9eb39c23565c5c8f62b249598273166b7d5fb3ac09da7ec1da`
-- Created: `2020-01-18T06:18:18.673681643Z`
-- Virtual Size: ~ 267.39 Mb  
+- Image ID: `sha256:3b0c8f1c0fe4a0133acd885b278e58be51d63449cd2f81f7b4a66f090c1639d9`
+- Created: `2020-02-07T00:14:28.795443213Z`
+- Virtual Size: ~ 267.40 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
 - Command: `["node","current/index.js"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/var/lib/ghost/current/node_modules/knex-migrator/bin`
-  - `NODE_VERSION=10.18.1`
+  - `NODE_VERSION=10.19.0`
   - `YARN_VERSION=1.21.1`
   - `NODE_ENV=production`
   - `GHOST_CLI_VERSION=1.13.1`
