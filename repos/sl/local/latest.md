@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:7627a7481044a21cd54ea6e2a21c8cb2eaa487d177e463809fbfd17a0df8f517`
-- Created: `2020-01-07T23:33:40.295723861Z`
+- Image ID: `sha256:b6d01ef506b05296afc27a8d0acaa8876467a4d2b0e5bcbc2103699da03a0791`
+- Created: `2020-02-07T02:49:25.247612726Z`
 - Virtual Size: ~ 176.82 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -11,7 +11,7 @@
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
 - Labels:
-  - `build-date=20200107`
+  - `build-date=20200204`
   - `name=SL7 Base Image`
   - `vendor=Scientific Linux`
 
@@ -1602,18 +1602,11 @@ Enabling repos-source repository
 http://ftp.scientificlinux.org/linux/scientific/7/SRPMS//SL/sl-release-7.7-2.sl7.src.rpm
 ```
 
-### `rpm` package: `sqlite-3.7.17-8.el7.x86_64`
+### `rpm` package: `sqlite-3.7.17-8.el7_7.1.x86_64`
 
 Licenses (from `rpm --query`): Public Domain
 
-Source:
-
-```console
-$ yumdownloader --quiet --source --urls sqlite-3.7.17-8.el7
-Enabling sl-source repository
-Enabling repos-source repository
-http://ftp.scientificlinux.org/linux/scientific/7/SRPMS//vendor/sqlite-3.7.17-8.el7.src.rpm
-```
+**WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
 ### `rpm` package: `systemd-219-67.el7_7.2.x86_64`
 
