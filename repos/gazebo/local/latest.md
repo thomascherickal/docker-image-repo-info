@@ -5149,14 +5149,9 @@ Licenses: (parsed from: `/usr/share/doc/libxml2/copyright`, `/usr/share/doc/libx
 - `ISC`
 - `MIT-1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libxml2=2.9.4+dfsg1-6.1ubuntu1.2
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxml2/libxml2_2.9.4+dfsg1-6.1ubuntu1.2.dsc' libxml2_2.9.4+dfsg1-6.1ubuntu1.2.dsc 3151 SHA256:65ab821da16cb5b2b2e89675364b3023fc14a34585d080e96220aba66b57024b
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxml2/libxml2_2.9.4+dfsg1.orig.tar.xz' libxml2_2.9.4+dfsg1.orig.tar.xz 2446412 SHA256:a74ad55e346aa0b2b41903e66d21f8f3d2a736b3f41e32496376861ab484184e
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxml2/libxml2_2.9.4+dfsg1-6.1ubuntu1.2.debian.tar.xz' libxml2_2.9.4+dfsg1-6.1ubuntu1.2.debian.tar.xz 39036 SHA256:10680785de98ddac3ca7152851b8d6a5222e8d7eeb1f051b69e59e8455318487
-```
 
 ### `dpkg` source package: `libxmu=2:1.1.2-2`
 
@@ -6992,14 +6987,9 @@ Licenses: (parsed from: `/usr/share/doc/libqt5concurrent5/copyright`, `/usr/shar
 - `public-domain`
 - `wintab`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris qtbase-opensource-src=5.9.5+dfsg-0ubuntu2.4
-'http://archive.ubuntu.com/ubuntu/pool/main/q/qtbase-opensource-src/qtbase-opensource-src_5.9.5+dfsg-0ubuntu2.4.dsc' qtbase-opensource-src_5.9.5+dfsg-0ubuntu2.4.dsc 5117 SHA256:d6915282ae6b9a3d6de2c1bda52229c31fce623ef1ccb917e57fc744c929b858
-'http://archive.ubuntu.com/ubuntu/pool/main/q/qtbase-opensource-src/qtbase-opensource-src_5.9.5+dfsg.orig.tar.xz' qtbase-opensource-src_5.9.5+dfsg.orig.tar.xz 44935364 SHA256:09dd1f0b484b6b521181774de0fd13e179dce4614fb5e308f1c9435082750e59
-'http://archive.ubuntu.com/ubuntu/pool/main/q/qtbase-opensource-src/qtbase-opensource-src_5.9.5+dfsg-0ubuntu2.4.debian.tar.xz' qtbase-opensource-src_5.9.5+dfsg-0ubuntu2.4.debian.tar.xz 263620 SHA256:42bd49f39fe3a75d5ea6c6b16977855dfceeda3991acbc90d3016e2dc1bf8bb1
-```
 
 ### `dpkg` source package: `qtchooser=64-ga1b6736-5`
 
