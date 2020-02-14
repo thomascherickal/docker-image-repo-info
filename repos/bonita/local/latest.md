@@ -1,19 +1,19 @@
-# `bonita:7.10.0`
+# `bonita:7.10.1`
 
 ## Docker Metadata
 
-- Image ID: `sha256:33c1a762ccd9aebd89bda3f450a6d2be08b7c93fe937cf3913a9931dbd4c0c18`
-- Created: `2020-01-16T02:48:32.083195659Z`
-- Virtual Size: ~ 451.86 Mb  
+- Image ID: `sha256:1dae2e187f2eacc7137c8eedaf335858aa41a6ecb8d47ba6e4545d98923ad0a7`
+- Created: `2020-02-12T23:19:54.900317479Z`
+- Virtual Size: ~ 451.90 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/opt/files/startup.sh"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `BONITA_VERSION=7.10.0`
-  - `BONITA_SHA256=5ca0a60e3dfd9aa5d82485836b99f08d3f56b4a432ed742a74c51c1e76de3e12`
+  - `BONITA_VERSION=7.10.1`
+  - `BONITA_SHA256=29d79e96aa5ab094d758aeacc7e8d435327fe3d8b651554d1077bae03b14f585`
   - `BASE_URL=https://release.ow2.org/bonita`
-  - `BONITA_URL=https://release.ow2.org/bonita/BonitaCommunity-7.10.0.zip`
+  - `BONITA_URL=https://release.ow2.org/bonita/BonitaCommunity-7.10.1.zip`
 
 ## `dpkg` (`.deb`-based packages)
 
