@@ -865,20 +865,13 @@ Licenses: (parsed from: `/usr/share/doc/iproute2/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris iproute2=5.4.0-1
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.4.0-1.dsc' iproute2_5.4.0-1.dsc 1915 SHA256:02f2a076dbd5cdc78858f3e3a9831a1f5ad7228ceff023f7a56e84a7b00cfb0a
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.4.0.orig.tar.xz' iproute2_5.4.0.orig.tar.xz 741328 SHA256:fe97aa60a0d4c5ac830be18937e18dc3400ca713a33a89ad896ff1e3d46086ae
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.4.0-1.debian.tar.xz' iproute2_5.4.0-1.debian.tar.xz 144304 SHA256:395c403457ca825bce2b82bd501a7811c0c8fea6104ad26d914579ec6203425e
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/iproute2/5.4.0-1/
 
-- https://sources.debian.net/src/iproute2/5.4.0-1/ (for browsing the source)
-- https://sources.debian.net/src/iproute2/5.4.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/iproute2/5.4.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `iptables=1.8.4-2`
 
@@ -1044,20 +1037,13 @@ Licenses: (parsed from: `/usr/share/doc/libcap2/copyright`, `/usr/share/doc/libc
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libcap2=1:2.27-1
-'http://deb.debian.org/debian/pool/main/libc/libcap2/libcap2_2.27-1.dsc' libcap2_2.27-1.dsc 2197 SHA256:4bb4eec00b2378bd1b534ddc1028ce7257166b8970d18b58bbc2717d2dc72905
-'http://deb.debian.org/debian/pool/main/libc/libcap2/libcap2_2.27.orig.tar.xz' libcap2_2.27.orig.tar.xz 67780 SHA256:dac1792d0118bee6aae6ba7fb93ff1602c6a9bda812fd63916eee1435b9c486a
-'http://deb.debian.org/debian/pool/main/libc/libcap2/libcap2_2.27-1.debian.tar.xz' libcap2_2.27-1.debian.tar.xz 26476 SHA256:b8988a52b96a4e7de2ae2b4afcb108fc441c5f016d5f6bcc470e8b4534826d2a
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libcap2/1:2.27-1/
 
-- https://sources.debian.net/src/libcap2/1:2.27-1/ (for browsing the source)
-- https://sources.debian.net/src/libcap2/1:2.27-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libcap2/1:2.27-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libeatmydata=105-7`
 
@@ -1935,20 +1921,13 @@ Licenses: (parsed from: `/usr/share/doc/login/copyright`, `/usr/share/doc/passwd
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris shadow=1:4.8-1
-'http://deb.debian.org/debian/pool/main/s/shadow/shadow_4.8-1.dsc' shadow_4.8-1.dsc 2201 SHA256:1878eff238725e13997042366f3d45c5a92da2cb3050c9f43afdcca00b4ccd19
-'http://deb.debian.org/debian/pool/main/s/shadow/shadow_4.8.orig.tar.xz' shadow_4.8.orig.tar.xz 1609060 SHA256:64b46683b9c1f35b2cd2da9fa87a1383917666e85a56b35e081c7257d10dac64
-'http://deb.debian.org/debian/pool/main/s/shadow/shadow_4.8-1.debian.tar.xz' shadow_4.8-1.debian.tar.xz 74780 SHA256:7b40fb942045d97ec523725df1907eeb90b6faa365188ded76e15b439880cef7
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/shadow/1:4.8-1/
 
-- https://sources.debian.net/src/shadow/1:4.8-1/ (for browsing the source)
-- https://sources.debian.net/src/shadow/1:4.8-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/shadow/1:4.8-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sqlite3=3.31.1-1`
 
@@ -1962,21 +1941,13 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 - `GPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sqlite3=3.31.1-1
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.31.1-1.dsc' sqlite3_3.31.1-1.dsc 2404 SHA256:f1196061e6ed876c98a1bdabb6e2e27708e36f6305c47b8a06fc1ba44cf5c786
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.31.1.orig-www.tar.xz' sqlite3_3.31.1.orig-www.tar.xz 5764424 SHA256:cab01c285fad4eb08bd1e3659cde5a44e17e024badbe9ed01b2de9c625ed0831
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.31.1.orig.tar.xz' sqlite3_3.31.1.orig.tar.xz 7108036 SHA256:dfa6eda312d391d33b7790b061f533d723dc5c30b60720ddd98c89a6fb29272f
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.31.1-1.debian.tar.xz' sqlite3_3.31.1-1.debian.tar.xz 19740 SHA256:1f7fc3fef2826b4ca778763e8bb80a43d759f7e42f49499d09aae65e06f728c8
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/sqlite3/3.31.1-1/
 
-- https://sources.debian.net/src/sqlite3/3.31.1-1/ (for browsing the source)
-- https://sources.debian.net/src/sqlite3/3.31.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sqlite3/3.31.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `systemd=244.1-1`
 

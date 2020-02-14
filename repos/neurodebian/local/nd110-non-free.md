@@ -1668,20 +1668,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openldap=2.4.48+dfsg-1
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.48+dfsg-1.dsc' openldap_2.4.48+dfsg-1.dsc 2879 SHA256:b227535c79454100aac32e526b0f4e2730f05087f0e9ffd4a78f35d81b012e66
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.48+dfsg.orig.tar.gz' openldap_2.4.48+dfsg.orig.tar.gz 4875429 SHA256:8645601c28f094b01baed02a604479b175a45ba010e407212d214313bc6a80ba
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.48+dfsg-1.debian.tar.xz' openldap_2.4.48+dfsg-1.debian.tar.xz 166116 SHA256:bdd3e8ac25748be6a8f248d787aff9ad591e0d3ea0b3e176a5cd54f11dc8e90e
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/openldap/2.4.48+dfsg-1/
 
-- https://sources.debian.net/src/openldap/2.4.48+dfsg-1/ (for browsing the source)
-- https://sources.debian.net/src/openldap/2.4.48+dfsg-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openldap/2.4.48+dfsg-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `p11-kit=0.23.18.1-2`
 
@@ -1927,20 +1920,13 @@ Licenses: (parsed from: `/usr/share/doc/login/copyright`, `/usr/share/doc/passwd
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris shadow=1:4.8-1
-'http://deb.debian.org/debian/pool/main/s/shadow/shadow_4.8-1.dsc' shadow_4.8-1.dsc 2201 SHA256:1878eff238725e13997042366f3d45c5a92da2cb3050c9f43afdcca00b4ccd19
-'http://deb.debian.org/debian/pool/main/s/shadow/shadow_4.8.orig.tar.xz' shadow_4.8.orig.tar.xz 1609060 SHA256:64b46683b9c1f35b2cd2da9fa87a1383917666e85a56b35e081c7257d10dac64
-'http://deb.debian.org/debian/pool/main/s/shadow/shadow_4.8-1.debian.tar.xz' shadow_4.8-1.debian.tar.xz 74780 SHA256:7b40fb942045d97ec523725df1907eeb90b6faa365188ded76e15b439880cef7
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/shadow/1:4.8-1/
 
-- https://sources.debian.net/src/shadow/1:4.8-1/ (for browsing the source)
-- https://sources.debian.net/src/shadow/1:4.8-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/shadow/1:4.8-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sqlite3=3.31.0+really3.30.1+fossil191229-1`
 

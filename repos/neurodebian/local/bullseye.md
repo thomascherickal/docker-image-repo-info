@@ -892,20 +892,13 @@ Licenses: (parsed from: `/usr/share/doc/libxtables12/copyright`)
 - `GPL-2+`
 - `custom`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris iptables=1.8.3-2
-'http://deb.debian.org/debian/pool/main/i/iptables/iptables_1.8.3-2.dsc' iptables_1.8.3-2.dsc 2710 SHA256:c45ea9c603f32117c74ae80ff5a091a742aa79b53d2d0ff712819ebf0f9167cc
-'http://deb.debian.org/debian/pool/main/i/iptables/iptables_1.8.3.orig.tar.bz2' iptables_1.8.3.orig.tar.bz2 716257 SHA256:a23cac034181206b4545f4e7e730e76e08b5f3dd78771ba9645a6756de9cdd80
-'http://deb.debian.org/debian/pool/main/i/iptables/iptables_1.8.3-2.debian.tar.xz' iptables_1.8.3-2.debian.tar.xz 64524 SHA256:2284374e820ec203b7cbac2562366335fb7a2124e139296067c1a1758cd5a7a0
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/iptables/1.8.3-2/
 
-- https://sources.debian.net/src/iptables/1.8.3-2/ (for browsing the source)
-- https://sources.debian.net/src/iptables/1.8.3-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/iptables/1.8.3-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `iputils=3:20190709-2`
 
@@ -1704,21 +1697,13 @@ Licenses: (parsed from: `/usr/share/doc/libp11-kit0/copyright`)
 - `permissive-like-automake-output`
 - `same-as-rest-of-p11kit`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris p11-kit=0.23.18.1-2
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.23.18.1-2.dsc' p11-kit_0.23.18.1-2.dsc 2440 SHA256:608a5664e8a0c379d86e7a5696c1e86b2079e379e4b318103a1b8eb769edac50
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.23.18.1.orig.tar.gz' p11-kit_0.23.18.1.orig.tar.gz 1305755 SHA256:34c3bd8c0050dd7c4e6228aecf0f168de0a1b34562ddbf74a1c70904c2523c6f
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.23.18.1.orig.tar.gz.asc' p11-kit_0.23.18.1.orig.tar.gz.asc 854 SHA256:25e209a0eec76740d9906d86df0120505901f99a813e31f2bb1f7607416ec042
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.23.18.1-2.debian.tar.xz' p11-kit_0.23.18.1-2.debian.tar.xz 21648 SHA256:4f970522a2fdc301879edf8215ef6045423366c0e9b610c6d86b03d2a3e296aa
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/p11-kit/0.23.18.1-2/
 
-- https://sources.debian.net/src/p11-kit/0.23.18.1-2/ (for browsing the source)
-- https://sources.debian.net/src/p11-kit/0.23.18.1-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/p11-kit/0.23.18.1-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pam=1.3.1-5`
 
@@ -1969,20 +1954,13 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 - `GPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sqlite3=3.31.0+really3.30.1+fossil191229-1
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.31.0+really3.30.1+fossil191229-1.dsc' sqlite3_3.31.0+really3.30.1+fossil191229-1.dsc 2330 SHA256:8baf5d40c566efbb474fa4a0aac682ae15ff4949649a3d707b77e4bce769a9ab
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.31.0+really3.30.1+fossil191229.orig.tar.xz' sqlite3_3.31.0+really3.30.1+fossil191229.orig.tar.xz 17399656 SHA256:981e038dd2babe1628bd54c50e4bfc4bb9f794360dce8cc89a14eb5399bbdedc
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.31.0+really3.30.1+fossil191229-1.debian.tar.xz' sqlite3_3.31.0+really3.30.1+fossil191229-1.debian.tar.xz 19704 SHA256:3eaa29e7a65a9f1784fe955be4f5b2e1b2ccab02655eb343ef4f1aeb354786de
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/sqlite3/3.31.0+really3.30.1+fossil191229-1/
 
-- https://sources.debian.net/src/sqlite3/3.31.0+really3.30.1+fossil191229-1/ (for browsing the source)
-- https://sources.debian.net/src/sqlite3/3.31.0+really3.30.1+fossil191229-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sqlite3/3.31.0+really3.30.1+fossil191229-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `systemd=244-3`
 
