@@ -19,7 +19,13 @@
 -	[`mariadb:10.4.12`](#mariadb10412)
 -	[`mariadb:10.4.12-bionic`](#mariadb10412-bionic)
 -	[`mariadb:10.4-bionic`](#mariadb104-bionic)
+-	[`mariadb:10.5`](#mariadb105)
+-	[`mariadb:10.5.1`](#mariadb1051)
+-	[`mariadb:10.5.1-bionic`](#mariadb1051-bionic)
+-	[`mariadb:10.5-bionic`](#mariadb105-bionic)
 -	[`mariadb:10-bionic`](#mariadb10-bionic)
+-	[`mariadb:beta`](#mariadbbeta)
+-	[`mariadb:beta-bionic`](#mariadbbeta-bionic)
 -	[`mariadb:bionic`](#mariadbbionic)
 -	[`mariadb:latest`](#mariadblatest)
 
@@ -6398,6 +6404,22 @@ CMD ["mysqld"]
 		Size: 121.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `mariadb:10.5`
+
+**does not exist** (yet?)
+
+## `mariadb:10.5.1`
+
+**does not exist** (yet?)
+
+## `mariadb:10.5.1-bionic`
+
+**does not exist** (yet?)
+
+## `mariadb:10.5-bionic`
+
+**does not exist** (yet?)
+
 ## `mariadb:10-bionic`
 
 ```console
@@ -6772,6 +6794,14 @@ CMD ["mysqld"]
 		Last Modified: Wed, 29 Jan 2020 19:41:30 GMT  
 		Size: 121.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `mariadb:beta`
+
+**does not exist** (yet?)
+
+## `mariadb:beta-bionic`
+
+**does not exist** (yet?)
 
 ## `mariadb:bionic`
 
