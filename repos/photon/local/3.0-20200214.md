@@ -2,22 +2,22 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:9bf8e3dfef5c248bc8880d228241887a1f411b0d2700150e3eeb6ad8c5763df2`
-- Created: `2020-02-04T01:21:32.843756295Z`
-- Virtual Size: ~ 35.18 Mb  
+- Image ID: `sha256:e6e84a333eca98650afe6e41578464a0b50c9673d848fb730520b932bb3b6ced`
+- Created: `2020-02-15T01:30:46.958327771Z`
+- Virtual Size: ~ 35.22 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
 - Labels:
-  - `build-date=20200202`
+  - `build-date=20200214`
   - `name=Photon OS x86_64/3.0 Base Image`
   - `vendor=VMware`
 
 ## `rpm` (`.rpm`-based packages)
 
-### `rpm` package: `bash-4.4.18-1.ph3.x86_64`
+### `rpm` package: `bash-4.4.18-2.ph3.x86_64`
 
 Licenses (from `rpm --query`): GPLv3
 
@@ -125,7 +125,7 @@ Licenses (from `rpm --query`): MIT
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `libsolv-0.6.35-1.ph3.x86_64`
+### `rpm` package: `libsolv-0.6.35-2.ph3.x86_64`
 
 Licenses (from `rpm --query`): BSD
 
@@ -197,7 +197,7 @@ Licenses (from `rpm --query`): GPLv2+
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `sqlite-libs-3.30.1-1.ph3.x86_64`
+### `rpm` package: `sqlite-libs-3.31.1-1.ph3.x86_64`
 
 Licenses (from `rpm --query`): Public Domain
 
