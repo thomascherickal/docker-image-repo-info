@@ -1,17 +1,17 @@
-# `docker:19.03.5-dind-rootless`
+# `docker:19.03.6-dind-rootless`
 
 ## Docker Metadata
 
-- Image ID: `sha256:384deac7f3c53083e5d29d8e56a0fa57afa7d88db3c4c34a80c774852f789d26`
-- Created: `2020-01-18T04:42:44.782621708Z`
-- Virtual Size: ~ 303.25 Mb  
+- Image ID: `sha256:89527d117bacd314548142760ceabb86b486fdc2e48f7267bf0919452775990a`
+- Created: `2020-02-14T01:20:06.8110548Z`
+- Virtual Size: ~ 304.49 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["dockerd-entrypoint.sh"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `DOCKER_CHANNEL=stable`
-  - `DOCKER_VERSION=19.03.5`
+  - `DOCKER_VERSION=19.03.6`
   - `DOCKER_TLS_CERTDIR=/certs`
   - `DIND_COMMIT=37498f009d8bf25fbb6199e8ccd34bed84f2874b`
   - `ROOTLESSKIT_VERSION=0.7.1`
@@ -191,16 +191,16 @@ GPL-2.0-or-later AND LGPL-2.0-or-later AND BSD-3-Clause AND MIT
 ### `apk` package: `iproute2`
 
 ```console
-iproute2-5.4.0-r0 description:
+iproute2-5.4.0-r1 description:
 IP Routing Utilities
 
-iproute2-5.4.0-r0 webpage:
+iproute2-5.4.0-r1 webpage:
 https://www.linuxfoundation.org/collaborate/workgroups/networking/iproute2
 
-iproute2-5.4.0-r0 installed size:
+iproute2-5.4.0-r1 installed size:
 1728512
 
-iproute2-5.4.0-r0 license:
+iproute2-5.4.0-r1 license:
 GPL-2.0-or-later
 
 ```

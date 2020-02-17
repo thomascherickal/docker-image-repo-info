@@ -1,17 +1,17 @@
-# `docker:19.03.6-rc2-dind`
+# `docker:19.03.6-dind`
 
 ## Docker Metadata
 
-- Image ID: `sha256:1858b6f9b12c2fd4043aa050021a447c595b1a2aef032dacd6bdf1eb59ceb646`
-- Created: `2020-02-07T02:45:25.300246985Z`
+- Image ID: `sha256:a33335bfe8302f4d8a7688bc1fa539f2aba787ec724119be53adc4681702a3e7`
+- Created: `2020-02-14T01:19:45.086984729Z`
 - Virtual Size: ~ 237.95 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["dockerd-entrypoint.sh"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `DOCKER_CHANNEL=test`
-  - `DOCKER_VERSION=19.03.6-rc2`
+  - `DOCKER_CHANNEL=stable`
+  - `DOCKER_VERSION=19.03.6`
   - `DOCKER_TLS_CERTDIR=/certs`
   - `DIND_COMMIT=37498f009d8bf25fbb6199e8ccd34bed84f2874b`
 
