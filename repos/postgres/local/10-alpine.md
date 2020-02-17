@@ -1,10 +1,10 @@
-# `postgres:10.11-alpine`
+# `postgres:10.12-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:fb495265b81ffaa0d3bf8887231b954a1139b2e3d611c3ac3ddeaff72313909c`
-- Created: `2020-01-30T03:34:04.846112163Z`
-- Virtual Size: ~ 72.37 Mb  
+- Image ID: `sha256:31baa2fdbe59e4864afc081961823459cee891ae97fb539806fde30da460ddf9`
+- Created: `2020-02-14T17:36:26.130696915Z`
+- Virtual Size: ~ 72.38 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -13,8 +13,8 @@
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=en_US.utf8`
   - `PG_MAJOR=10`
-  - `PG_VERSION=10.11`
-  - `PG_SHA256=0d5d14ff6b075655f4421038fbde3a5d7b418c26a249a187a4175600d7aecc09`
+  - `PG_VERSION=10.12`
+  - `PG_SHA256=388f7f888c4fbcbdf424ec2bce52535195b426010b720af7bea767e23e594ae7`
   - `PGDATA=/var/lib/postgresql/data`
 
 ## `apk` (`.apk`-based packages)
@@ -311,16 +311,16 @@ GPL-2.0 GPL-2.0-or-later LGPL-2.0-or-later BSD Public-Domain
 ### `apk` package: `libxml2`
 
 ```console
-libxml2-2.9.10-r1 description:
+libxml2-2.9.10-r2 description:
 XML parsing library, version 2
 
-libxml2-2.9.10-r1 webpage:
+libxml2-2.9.10-r2 webpage:
 http://www.xmlsoft.org/
 
-libxml2-2.9.10-r1 installed size:
+libxml2-2.9.10-r2 installed size:
 1220608
 
-libxml2-2.9.10-r1 license:
+libxml2-2.9.10-r2 license:
 MIT
 
 ```

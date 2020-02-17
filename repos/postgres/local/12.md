@@ -1,10 +1,10 @@
-# `postgres:12.1`
+# `postgres:12.2`
 
 ## Docker Metadata
 
-- Image ID: `sha256:cf879a45faaacd2806705321f157c4c77682c7599589fed65d80f19bb61615a6`
-- Created: `2020-02-02T06:07:11.214757598Z`
-- Virtual Size: ~ 393.60 Mb  
+- Image ID: `sha256:0d2531ee3abd6490e88e2293dbe415672685ac5af3a2542812047fcae984d77e`
+- Created: `2020-02-14T17:20:34.187028598Z`
+- Virtual Size: ~ 396.85 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -14,7 +14,7 @@
   - `GOSU_VERSION=1.11`
   - `LANG=en_US.utf8`
   - `PG_MAJOR=12`
-  - `PG_VERSION=12.1-1.pgdg100+1`
+  - `PG_VERSION=12.2-1.pgdg100+1`
   - `PGDATA=/var/lib/postgresql/data`
 
 ## `dpkg` (`.deb`-based packages)
@@ -865,12 +865,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/gnupg2/2.2.12-1+deb10u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/gnupg2/2.2.12-1+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `gnutls28=3.6.7-4`
+### `dpkg` source package: `gnutls28=3.6.7-4+deb10u2`
 
 Binary Packages:
 
-- `libgnutls-dane0:amd64=3.6.7-4`
-- `libgnutls30:amd64=3.6.7-4`
+- `libgnutls-dane0:amd64=3.6.7-4+deb10u2`
+- `libgnutls30:amd64=3.6.7-4+deb10u2`
 
 Licenses: (parsed from: `/usr/share/doc/libgnutls-dane0/copyright`, `/usr/share/doc/libgnutls30/copyright`)
 
@@ -886,13 +886,21 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls-dane0/copyright`, `/usr/share/
 - `The MIT License (MIT)`
 - `The main library is licensed under GNU Lesser`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris gnutls28=3.6.7-4+deb10u2
+'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.7-4+deb10u2.dsc' gnutls28_3.6.7-4+deb10u2.dsc 3354 SHA256:e7d5063186b5773fa91de22fa2ff34a13400a012cbd239b51d882971b2d9efca
+'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.7.orig.tar.xz' gnutls28_3.6.7.orig.tar.xz 8153728 SHA256:5b3409ad5aaf239808730d1ee12fdcd148c0be00262c7edf157af655a8a188e2
+'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.7.orig.tar.xz.asc' gnutls28_3.6.7.orig.tar.xz.asc 534 SHA256:a14d0a7b9295b65ae797a70f8e765024a2e363dca03d008bfce0aec2b3f292b0
+'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.7-4+deb10u2.debian.tar.xz' gnutls28_3.6.7-4+deb10u2.debian.tar.xz 77516 SHA256:72cd1e02b3b3c39c79f69da00a958d906d0332f15067d5c1b4e40bcd897a0d2e
+```
 
-- http://snapshot.debian.org/package/gnutls28/3.6.7-4/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/gnutls28/3.6.7-4+deb10u2/ (for browsing the source)
+- https://sources.debian.net/src/gnutls28/3.6.7-4+deb10u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/gnutls28/3.6.7-4+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gpm=1.20.7-5`
 
@@ -979,11 +987,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/gsasl/1.8.0-8/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/gsasl/1.8.0-8/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `guile-2.2=2.2.4+1-2`
+### `dpkg` source package: `guile-2.2=2.2.4+1-2+deb10u1`
 
 Binary Packages:
 
-- `guile-2.2-libs:amd64=2.2.4+1-2`
+- `guile-2.2-libs:amd64=2.2.4+1-2+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/guile-2.2-libs/copyright`)
 
@@ -992,7 +1000,7 @@ Licenses: (parsed from: `/usr/share/doc/guile-2.2-libs/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris guile-2.2=2.2.4+1-2
+$ apt-get source -qq --print-uris guile-2.2=2.2.4+1-2+deb10u1
 'http://deb.debian.org/debian/pool/main/g/guile-2.2/guile-2.2_2.2.4+1-2+deb10u1.dsc' guile-2.2_2.2.4+1-2+deb10u1.dsc 2171 SHA256:2622b7ae6c2fd59b06fc19d9f68c81e92ccecd550b7097adc6b1040687c40026
 'http://deb.debian.org/debian/pool/main/g/guile-2.2/guile-2.2_2.2.4+1.orig.tar.xz' guile-2.2_2.2.4+1.orig.tar.xz 3241724 SHA256:f10b675cea7c7c6602d2dde26667eb8ef4dca0c0667e02cba57ed1f3ad997e0e
 'http://deb.debian.org/debian/pool/main/g/guile-2.2/guile-2.2_2.2.4+1-2+deb10u1.debian.tar.xz' guile-2.2_2.2.4+1-2+deb10u1.debian.tar.xz 22088 SHA256:e36a8073c8bb410731f93cc60ddcd01140a227e7faae418117466eadd619d52d
@@ -1000,9 +1008,9 @@ $ apt-get source -qq --print-uris guile-2.2=2.2.4+1-2
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/guile-2.2/2.2.4+1-2/ (for browsing the source)
-- https://sources.debian.net/src/guile-2.2/2.2.4+1-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/guile-2.2/2.2.4+1-2/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/guile-2.2/2.2.4+1-2+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/guile-2.2/2.2.4+1-2+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/guile-2.2/2.2.4+1-2+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gzip=1.9-3`
 
@@ -2052,12 +2060,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/mailutils/1:3.5-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/mailutils/1:3.5-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `mariadb-10.3=1:10.3.18-0+deb10u1`
+### `dpkg` source package: `mariadb-10.3=1:10.3.22-0+deb10u1`
 
 Binary Packages:
 
-- `libmariadb3:amd64=1:10.3.18-0+deb10u1`
-- `mariadb-common=1:10.3.18-0+deb10u1`
+- `libmariadb3:amd64=1:10.3.22-0+deb10u1`
+- `mariadb-common=1:10.3.22-0+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/libmariadb3/copyright`, `/usr/share/doc/mariadb-common/copyright`)
 
@@ -2081,13 +2089,21 @@ Licenses: (parsed from: `/usr/share/doc/libmariadb3/copyright`, `/usr/share/doc/
 - `unlimited-free-doc`
 - `zlib/libpng`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris mariadb-10.3=1:10.3.22-0+deb10u1
+'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.22-0+deb10u1.dsc' mariadb-10.3_10.3.22-0+deb10u1.dsc 4812 SHA256:1caa691fc0aa42081f6073134dd7993e923f83e65468ede2d63cb4a2ccb56dc1
+'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.22.orig.tar.gz' mariadb-10.3_10.3.22.orig.tar.gz 72050820 SHA256:3200055dbdc27746981b3bb4bc182e2cb79dcf28ea88014b641a5b81280ccec7
+'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.22.orig.tar.gz.asc' mariadb-10.3_10.3.22.orig.tar.gz.asc 195 SHA256:1ede70600162de2876f875984a1f719665d257334612bae00583ebe658b67ea7
+'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.22-0+deb10u1.debian.tar.xz' mariadb-10.3_10.3.22-0+deb10u1.debian.tar.xz 222676 SHA256:02d3cd28524c640d20226bcca810ca49cc94d8e144f724d77684352211d4bd3b
+```
 
-- http://snapshot.debian.org/package/mariadb-10.3/1:10.3.18-0+deb10u1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/mariadb-10.3/1:10.3.22-0+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/mariadb-10.3/1:10.3.22-0+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/mariadb-10.3/1:10.3.22-0+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mawk=1.3.3-17`
 
@@ -2572,13 +2588,13 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/popt/1.16-12/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/popt/1.16-12/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `postgresql-12=12.1-1.pgdg100+1`
+### `dpkg` source package: `postgresql-12=12.2-1.pgdg100+1`
 
 Binary Packages:
 
-- `libpq5:amd64=12.1-1.pgdg100+1`
-- `postgresql-12=12.1-1.pgdg100+1`
-- `postgresql-client-12=12.1-1.pgdg100+1`
+- `libpq5:amd64=12.2-1.pgdg100+1`
+- `postgresql-12=12.2-1.pgdg100+1`
+- `postgresql-client-12=12.2-1.pgdg100+1`
 
 Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`, `/usr/share/doc/postgresql-12/copyright`, `/usr/share/doc/postgresql-client-12/copyright`)
 
@@ -2601,18 +2617,18 @@ Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`, `/usr/share/doc/postg
 Source:
 
 ```console
-$ apt-get source -qq --print-uris postgresql-12=12.1-1.pgdg100+1
-'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-12/postgresql-12_12.1-1.pgdg100+1.dsc' postgresql-12_12.1-1.pgdg100+1.dsc 2748 SHA256:33ba07c621597b9ffbd42f91f4bfbceaf459ab634bf41cf2b7bf86180d5ccb7c
-'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-12/postgresql-12_12.1.orig.tar.bz2' postgresql-12_12.1.orig.tar.bz2 20213711 SHA256:a09bf3abbaf6763980d0f8acbb943b7629a8b20073de18d867aecdb7988483ed
-'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-12/postgresql-12_12.1-1.pgdg100+1.debian.tar.xz' postgresql-12_12.1-1.pgdg100+1.debian.tar.xz 22496 SHA256:7ede4bb089c4c21d335df6e8647cb7d9c19eda4a34d9e2c9ddf6b755a88eb90f
+$ apt-get source -qq --print-uris postgresql-12=12.2-1.pgdg100+1
+'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-12/postgresql-12_12.2-1.pgdg100+1.dsc' postgresql-12_12.2-1.pgdg100+1.dsc 2748 SHA256:14396167251eb78429f44ea8773a7e55b7fdd1870eba2477801ebf1c0003bf4a
+'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-12/postgresql-12_12.2.orig.tar.bz2' postgresql-12_12.2.orig.tar.bz2 20363545 SHA256:ad1dcc4c4fc500786b745635a9e1eba950195ce20b8913f50345bb7d5369b5de
+'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-12/postgresql-12_12.2-1.pgdg100+1.debian.tar.xz' postgresql-12_12.2-1.pgdg100+1.debian.tar.xz 22840 SHA256:00d35b4d012f046afd153b8be4400a6124c857419bb9a151d3ec5383effe15f1
 ```
 
-### `dpkg` source package: `postgresql-common=210.pgdg100+1`
+### `dpkg` source package: `postgresql-common=212.pgdg100+1`
 
 Binary Packages:
 
-- `postgresql-client-common=210.pgdg100+1`
-- `postgresql-common=210.pgdg100+1`
+- `postgresql-client-common=212.pgdg100+1`
+- `postgresql-common=212.pgdg100+1`
 
 Licenses: (parsed from: `/usr/share/doc/postgresql-client-common/copyright`, `/usr/share/doc/postgresql-common/copyright`)
 
@@ -2622,9 +2638,9 @@ Licenses: (parsed from: `/usr/share/doc/postgresql-client-common/copyright`, `/u
 Source:
 
 ```console
-$ apt-get source -qq --print-uris postgresql-common=210.pgdg100+1
-'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-common_210.pgdg100+1.dsc' postgresql-common_210.pgdg100+1.dsc 1568 SHA256:b4bf4cacf526811751ea4867d588283294a0601fe005808714cad4689b76bd17
-'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-common_210.pgdg100+1.tar.xz' postgresql-common_210.pgdg100+1.tar.xz 216056 SHA256:5c44210477bee2bbfcb4853f2fd0adaf41362a6fc7b528f153cba30562edeb03
+$ apt-get source -qq --print-uris postgresql-common=212.pgdg100+1
+'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-common_212.pgdg100+1.dsc' postgresql-common_212.pgdg100+1.dsc 1568 SHA256:e242cf91cba4d06acd5fb8c6e77fc85b882f6ddc8048923807c6cbbfcaec093a
+'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-common_212.pgdg100+1.tar.xz' postgresql-common_212.pgdg100+1.tar.xz 216228 SHA256:34907d7b6aea3926c7b5f01b71fbbe80d16bcb8181c4c6bc4ae96a3e67724093
 ```
 
 ### `dpkg` source package: `procps=2:3.3.15-2`
