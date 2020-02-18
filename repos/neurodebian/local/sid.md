@@ -886,20 +886,13 @@ Licenses: (parsed from: `/usr/share/doc/libxtables12/copyright`)
 - `GPL-2+`
 - `custom`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris iptables=1.8.4-2
-'http://deb.debian.org/debian/pool/main/i/iptables/iptables_1.8.4-2.dsc' iptables_1.8.4-2.dsc 2715 SHA256:62f7542c4becff34549eec2416bd3edb965832e482facc419729f21dfd023aa1
-'http://deb.debian.org/debian/pool/main/i/iptables/iptables_1.8.4.orig.tar.bz2' iptables_1.8.4.orig.tar.bz2 704312 SHA256:993a3a5490a544c2cbf2ef15cf7e7ed21af1845baf228318d5c36ef8827e157c
-'http://deb.debian.org/debian/pool/main/i/iptables/iptables_1.8.4-2.debian.tar.xz' iptables_1.8.4-2.debian.tar.xz 64440 SHA256:69274a0dc62ab696ab560e6b1bd7d8ec26fd7504e579c8837f9d3906874cc016
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/iptables/1.8.4-2/
 
-- https://sources.debian.net/src/iptables/1.8.4-2/ (for browsing the source)
-- https://sources.debian.net/src/iptables/1.8.4-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/iptables/1.8.4-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `iputils=3:20190709-2`
 
@@ -1447,20 +1440,13 @@ Licenses: (parsed from: `/usr/share/doc/libzstd1/copyright`)
 - `GPL-2+`
 - `zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libzstd=1.4.4+dfsg-1
-'http://deb.debian.org/debian/pool/main/libz/libzstd/libzstd_1.4.4+dfsg-1.dsc' libzstd_1.4.4+dfsg-1.dsc 2285 SHA256:9306fb9c71a3449a4b0bdfa67322f519e8c74efdbcee884f63c66fbd0e2c0377
-'http://deb.debian.org/debian/pool/main/libz/libzstd/libzstd_1.4.4+dfsg.orig.tar.xz' libzstd_1.4.4+dfsg.orig.tar.xz 1357144 SHA256:be9f9bfd3f6816f21e1108869a9acad6efdc4882ed3f7a1f58ec752f67864890
-'http://deb.debian.org/debian/pool/main/libz/libzstd/libzstd_1.4.4+dfsg-1.debian.tar.xz' libzstd_1.4.4+dfsg-1.debian.tar.xz 16040 SHA256:bb6c7e2206c3c0a2c780ce824efb90f03bc94eeb8497c881f6c8dc28d902d103
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libzstd/1.4.4+dfsg-1/
 
-- https://sources.debian.net/src/libzstd/1.4.4+dfsg-1/ (for browsing the source)
-- https://sources.debian.net/src/libzstd/1.4.4+dfsg-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libzstd/1.4.4+dfsg-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lsb=11.1.0`
 
