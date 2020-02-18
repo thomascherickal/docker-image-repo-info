@@ -1371,14 +1371,9 @@ Licenses: (parsed from: `/usr/share/doc/libpam-modules/copyright`, `/usr/share/d
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pam=1.3.1-5ubuntu1.19.10.0
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.3.1-5ubuntu1.19.10.0.dsc' pam_1.3.1-5ubuntu1.19.10.0.dsc 2731 SHA256:7e6f0d1b40d6b741adc020d13e629d2972555582c72892a4e7ff0f0db992fca0
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.3.1.orig.tar.xz' pam_1.3.1.orig.tar.xz 912332 SHA256:eff47a4ecd833fbf18de9686632a70ee8d0794b79aecb217ebd0ce11db4cd0db
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.3.1-5ubuntu1.19.10.0.debian.tar.xz' pam_1.3.1-5ubuntu1.19.10.0.debian.tar.xz 159316 SHA256:7363b23a0088634f1562b16434cdd99074e951a886a3c25c72a3edcc34c2a622
-```
 
 ### `dpkg` source package: `pcre2=10.32-5`
 

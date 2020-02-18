@@ -2474,20 +2474,13 @@ Licenses: (parsed from: `/usr/share/doc/libgd3/copyright`)
 - `WEBP`
 - `XFIG`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libgd2=2.1.0-5+deb8u13
-'http://security.debian.org/debian-security/pool/updates/main/libg/libgd2/libgd2_2.1.0-5+deb8u13.dsc' libgd2_2.1.0-5+deb8u13.dsc 2355 SHA256:13e8b95fd91a2f94e4ead5d72bfab11af75a542ac5bac7ad8f28a7cfdf8bce9b
-'http://security.debian.org/debian-security/pool/updates/main/libg/libgd2/libgd2_2.1.0.orig.tar.xz' libgd2_2.1.0.orig.tar.xz 2004304 SHA256:fa6665dfe3d898019671293c84d77067a3d2ede50884dbcb6df899d508370e5a
-'http://security.debian.org/debian-security/pool/updates/main/libg/libgd2/libgd2_2.1.0-5+deb8u13.debian.tar.xz' libgd2_2.1.0-5+deb8u13.debian.tar.xz 43028 SHA256:943ab2fc94c1193a4d02bf40c4f34cc12da446315dff29bb95804a706b3c4101
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libgd2/2.1.0-5+deb8u13/
 
-- https://sources.debian.net/src/libgd2/2.1.0-5+deb8u13/ (for browsing the source)
-- https://sources.debian.net/src/libgd2/2.1.0-5+deb8u13/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libgd2/2.1.0-5+deb8u13/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libgpg-error=1.17-3`
 

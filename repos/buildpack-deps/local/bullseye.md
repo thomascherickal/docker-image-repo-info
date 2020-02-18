@@ -1824,20 +1824,13 @@ Licenses: (parsed from: `/usr/share/doc/iproute2/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris iproute2=5.4.0-1
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.4.0-1.dsc' iproute2_5.4.0-1.dsc 1915 SHA256:02f2a076dbd5cdc78858f3e3a9831a1f5ad7228ceff023f7a56e84a7b00cfb0a
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.4.0.orig.tar.xz' iproute2_5.4.0.orig.tar.xz 741328 SHA256:fe97aa60a0d4c5ac830be18937e18dc3400ca713a33a89ad896ff1e3d46086ae
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.4.0-1.debian.tar.xz' iproute2_5.4.0-1.debian.tar.xz 144304 SHA256:395c403457ca825bce2b82bd501a7811c0c8fea6104ad26d914579ec6203425e
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/iproute2/5.4.0-1/
 
-- https://sources.debian.net/src/iproute2/5.4.0-1/ (for browsing the source)
-- https://sources.debian.net/src/iproute2/5.4.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/iproute2/5.4.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `iptables=1.8.3-2`
 
@@ -3490,20 +3483,13 @@ Licenses: (parsed from: `/usr/share/doc/libzstd1/copyright`)
 - `GPL-2+`
 - `zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libzstd=1.4.4+dfsg-1
-'http://deb.debian.org/debian/pool/main/libz/libzstd/libzstd_1.4.4+dfsg-1.dsc' libzstd_1.4.4+dfsg-1.dsc 2285 SHA256:9306fb9c71a3449a4b0bdfa67322f519e8c74efdbcee884f63c66fbd0e2c0377
-'http://deb.debian.org/debian/pool/main/libz/libzstd/libzstd_1.4.4+dfsg.orig.tar.xz' libzstd_1.4.4+dfsg.orig.tar.xz 1357144 SHA256:be9f9bfd3f6816f21e1108869a9acad6efdc4882ed3f7a1f58ec752f67864890
-'http://deb.debian.org/debian/pool/main/libz/libzstd/libzstd_1.4.4+dfsg-1.debian.tar.xz' libzstd_1.4.4+dfsg-1.debian.tar.xz 16040 SHA256:bb6c7e2206c3c0a2c780ce824efb90f03bc94eeb8497c881f6c8dc28d902d103
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libzstd/1.4.4+dfsg-1/
 
-- https://sources.debian.net/src/libzstd/1.4.4+dfsg-1/ (for browsing the source)
-- https://sources.debian.net/src/libzstd/1.4.4+dfsg-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libzstd/1.4.4+dfsg-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `linux=5.4.13-1`
 
@@ -4531,20 +4517,13 @@ Licenses: (parsed from: `/usr/share/doc/libpq-dev/copyright`, `/usr/share/doc/li
 - `nagaysau-ishii`
 - `rijndael`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris postgresql-12=12.1-2
-'http://deb.debian.org/debian/pool/main/p/postgresql-12/postgresql-12_12.1-2.dsc' postgresql-12_12.1-2.dsc 3573 SHA256:25b11e411a13f2843098f5af71ece6b9d52d5f9eaa0ca22b11f20ad9403bf696
-'http://deb.debian.org/debian/pool/main/p/postgresql-12/postgresql-12_12.1.orig.tar.bz2' postgresql-12_12.1.orig.tar.bz2 20213711 SHA256:a09bf3abbaf6763980d0f8acbb943b7629a8b20073de18d867aecdb7988483ed
-'http://deb.debian.org/debian/pool/main/p/postgresql-12/postgresql-12_12.1-2.debian.tar.xz' postgresql-12_12.1-2.debian.tar.xz 22648 SHA256:0b428ee02bf96f2277cd2ff02cf76424fa7dd2174235809373b7641e59213ba1
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/postgresql-12/12.1-2/
 
-- https://sources.debian.net/src/postgresql-12/12.1-2/ (for browsing the source)
-- https://sources.debian.net/src/postgresql-12/12.1-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/postgresql-12/12.1-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `procps=2:3.3.15-2`
 
@@ -4959,21 +4938,13 @@ Licenses: (parsed from: `/usr/share/doc/libsvn1/copyright`, `/usr/share/doc/subv
 - `Unicode`
 - `Utfwidth`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris subversion=1.13.0-1
-'http://deb.debian.org/debian/pool/main/s/subversion/subversion_1.13.0-1.dsc' subversion_1.13.0-1.dsc 3642 SHA256:d8f4bc1d90b56e429158bdee1dfa083fcf8713de2a6524d5f91a48dee683bc8f
-'http://deb.debian.org/debian/pool/main/s/subversion/subversion_1.13.0.orig.tar.gz' subversion_1.13.0.orig.tar.gz 11544359 SHA256:daad440c03b8a86fcca804ea82217bb1902cfcae1b7d28c624143c58dcb96931
-'http://deb.debian.org/debian/pool/main/s/subversion/subversion_1.13.0.orig.tar.gz.asc' subversion_1.13.0.orig.tar.gz.asc 2954 SHA256:ed4f87b947b8172fcaa4c741d8ccc7929914b18cf1ccffc32b4f159fdee3070d
-'http://deb.debian.org/debian/pool/main/s/subversion/subversion_1.13.0-1.debian.tar.xz' subversion_1.13.0-1.debian.tar.xz 420392 SHA256:1a25d666bd2f302c4aa2e8c542b9c5b8decd681177d588ef4b6b4471d781e669
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/subversion/1.13.0-1/
 
-- https://sources.debian.net/src/subversion/1.13.0-1/ (for browsing the source)
-- https://sources.debian.net/src/subversion/1.13.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/subversion/1.13.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `systemd=244-3`
 

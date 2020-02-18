@@ -1709,21 +1709,13 @@ Licenses: (parsed from: `/usr/share/doc/libtasn1-6/copyright`)
 - `LGPL`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libtasn1-6=4.15.0-2
-'http://deb.debian.org/debian/pool/main/libt/libtasn1-6/libtasn1-6_4.15.0-2.dsc' libtasn1-6_4.15.0-2.dsc 2586 SHA256:690beb6b600ad0b1ad4640568bf87423458fa3429e242e5c2ecbcda1e85d0564
-'http://deb.debian.org/debian/pool/main/libt/libtasn1-6/libtasn1-6_4.15.0.orig.tar.gz' libtasn1-6_4.15.0.orig.tar.gz 1800713 SHA256:dd77509fe8f5304deafbca654dc7f0ea57f5841f41ba530cff9a5bf71382739e
-'http://deb.debian.org/debian/pool/main/libt/libtasn1-6/libtasn1-6_4.15.0.orig.tar.gz.asc' libtasn1-6_4.15.0.orig.tar.gz.asc 488 SHA256:e4a36c5063effc8b3862608a764f52218c74161a3c593109aee61a761081982a
-'http://deb.debian.org/debian/pool/main/libt/libtasn1-6/libtasn1-6_4.15.0-2.debian.tar.xz' libtasn1-6_4.15.0-2.debian.tar.xz 17684 SHA256:651922233dea3c75e10d322caa978183f63f1a58ab0590fd0c4e8ca3fa83afe3
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libtasn1-6/4.15.0-2/
 
-- https://sources.debian.net/src/libtasn1-6/4.15.0-2/ (for browsing the source)
-- https://sources.debian.net/src/libtasn1-6/4.15.0-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libtasn1-6/4.15.0-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libunistring=0.9.10-2`
 
@@ -1870,20 +1862,13 @@ Licenses: (parsed from: `/usr/share/doc/mawk/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mawk=1.3.4.20200120-1
-'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20200120-1.dsc' mawk_1.3.4.20200120-1.dsc 1915 SHA256:36f4859ccf0bd8d7cfb87cd4994fbb011e7ac0966bb41bf003e5156559f3e503
-'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20200120.orig.tar.gz' mawk_1.3.4.20200120.orig.tar.gz 468855 SHA256:7fd4cd1e1fae9290fe089171181bbc6291dfd9bca939ca804f0ddb851c8b8237
-'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20200120-1.debian.tar.xz' mawk_1.3.4.20200120-1.debian.tar.xz 7360 SHA256:e3249004442c54e7117f231f18e3adc94d70f4e9e74f4c3069cd44a60925e8ad
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mawk/1.3.4.20200120-1/
 
-- https://sources.debian.net/src/mawk/1.3.4.20200120-1/ (for browsing the source)
-- https://sources.debian.net/src/mawk/1.3.4.20200120-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mawk/1.3.4.20200120-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mercurial=5.2.2-1`
 
@@ -1980,19 +1965,13 @@ Licenses: (parsed from: `/usr/share/doc/netbase/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris netbase=6.0
-'http://deb.debian.org/debian/pool/main/n/netbase/netbase_6.0.dsc' netbase_6.0.dsc 1480 SHA256:3b55fea0bb7d06e7a96d573ea218505a2484ad4b54f47418701d244845237d5f
-'http://deb.debian.org/debian/pool/main/n/netbase/netbase_6.0.tar.xz' netbase_6.0.tar.xz 31976 SHA256:692baeb7b76eba5580c7edbc97ce1784a06b5aa4b367c5ed0b39e0ce7a97d594
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/netbase/6.0/
 
-- https://sources.debian.net/src/netbase/6.0/ (for browsing the source)
-- https://sources.debian.net/src/netbase/6.0/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/netbase/6.0/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `nettle=3.5.1+really3.5.1-2`
 

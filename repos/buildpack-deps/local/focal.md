@@ -502,14 +502,9 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.66.0-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.66.0-1ubuntu1.dsc' curl_7.66.0-1ubuntu1.dsc 2761 SHA256:5beec04120a0ee227345d8bfe5f35ba8b12c42207d20682114e4711ee796c866
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.66.0.orig.tar.gz' curl_7.66.0.orig.tar.gz 4066716 SHA256:d0393da38ac74ffac67313072d7fe75b1fa1010eb5987f63f349b024a36b7ffb
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.66.0-1ubuntu1.debian.tar.xz' curl_7.66.0-1ubuntu1.debian.tar.xz 29980 SHA256:39dbe250a139986dfa09ec46fd05daec746927cae74bfbc59f439f0e9d0874cc
-```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2`
 
@@ -743,15 +738,9 @@ Licenses: (parsed from: `/usr/share/doc/comerr-dev/copyright`, `/usr/share/doc/l
 - `GPL-2`
 - `LGPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris e2fsprogs=1.45.3-4ubuntu3
-'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.45.3-4ubuntu3.dsc' e2fsprogs_1.45.3-4ubuntu3.dsc 3259 SHA256:d72a073c62e11d9e88b2528d51d92b98eabfc7c75b1dd95ca63573dd24ebe854
-'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.45.3.orig.tar.gz' e2fsprogs_1.45.3.orig.tar.gz 7926121 SHA256:3a5556e0cb746c214e4c581951a3c21ba5c145eb53008277f88f1f98ae75983d
-'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.45.3.orig.tar.gz.asc' e2fsprogs_1.45.3.orig.tar.gz.asc 488 SHA256:013c21c98dc63a6a6328490a335a1bc6f3a2410f4f6347312bf6b53734faa759
-'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.45.3-4ubuntu3.debian.tar.xz' e2fsprogs_1.45.3-4ubuntu3.debian.tar.xz 189172 SHA256:d7223fa007d531a942eceb4d718cfc1b1c8f5a7cda3f3d105ce1b1345d80e924
-```
 
 ### `dpkg` source package: `elfutils=0.176-1.1build1`
 
@@ -851,14 +840,9 @@ Licenses: (parsed from: `/usr/share/doc/findutils/copyright`)
 - `GFDL-1.3`
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris findutils=4.6.0+git+20190209-2ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/f/findutils/findutils_4.6.0+git+20190209-2ubuntu1.dsc' findutils_4.6.0+git+20190209-2ubuntu1.dsc 2244 SHA256:27c67aa55d3c1adb7793156f06859799e235968fcd710c4dbfd4f3f0e644f811
-'http://archive.ubuntu.com/ubuntu/pool/main/f/findutils/findutils_4.6.0+git+20190209.orig.tar.xz' findutils_4.6.0+git+20190209.orig.tar.xz 1893084 SHA256:6832b3f6ddc0e2718795e6732ea40cc5309b948505f55fb9935919d6aaac7e9d
-'http://archive.ubuntu.com/ubuntu/pool/main/f/findutils/findutils_4.6.0+git+20190209-2ubuntu1.debian.tar.xz' findutils_4.6.0+git+20190209-2ubuntu1.debian.tar.xz 26800 SHA256:75c9b4c324d8b43cd71081987df83145ad915e6929bfeb992df81b165fba123c
-```
 
 ### `dpkg` source package: `fontconfig=2.13.1-2ubuntu2`
 
@@ -2360,15 +2344,13 @@ Licenses: (parsed from: `/usr/share/doc/libtasn1-6/copyright`)
 - `LGPL`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libtasn1-6=4.15.0-2
-'http://archive.ubuntu.com/ubuntu/pool/main/libt/libtasn1-6/libtasn1-6_4.15.0-2.dsc' libtasn1-6_4.15.0-2.dsc 2586 SHA256:690beb6b600ad0b1ad4640568bf87423458fa3429e242e5c2ecbcda1e85d0564
-'http://archive.ubuntu.com/ubuntu/pool/main/libt/libtasn1-6/libtasn1-6_4.15.0.orig.tar.gz' libtasn1-6_4.15.0.orig.tar.gz 1800713 SHA256:dd77509fe8f5304deafbca654dc7f0ea57f5841f41ba530cff9a5bf71382739e
-'http://archive.ubuntu.com/ubuntu/pool/main/libt/libtasn1-6/libtasn1-6_4.15.0.orig.tar.gz.asc' libtasn1-6_4.15.0.orig.tar.gz.asc 488 SHA256:e4a36c5063effc8b3862608a764f52218c74161a3c593109aee61a761081982a
-'http://archive.ubuntu.com/ubuntu/pool/main/libt/libtasn1-6/libtasn1-6_4.15.0-2.debian.tar.xz' libtasn1-6_4.15.0-2.debian.tar.xz 17684 SHA256:651922233dea3c75e10d322caa978183f63f1a58ab0590fd0c4e8ca3fa83afe3
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/libtasn1-6/4.15.0-2/
+
 
 ### `dpkg` source package: `libthai=0.1.28-3`
 
@@ -2966,14 +2948,9 @@ Licenses: (parsed from: `/usr/share/doc/libmysqlclient-dev/copyright`, `/usr/sha
 - `public-domain`
 - `zlib/libpng`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mysql-8.0=8.0.19-0ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.19-0ubuntu2.dsc' mysql-8.0_8.0.19-0ubuntu2.dsc 3388 SHA256:708a1e22d46fb251cb1e31b211aae2b7c6b8e47f6a56ae065a1957ba50d89e08
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.19.orig.tar.gz' mysql-8.0_8.0.19.orig.tar.gz 264147972 SHA256:3622d2a53236ed9ca62de0616a7e80fd477a9a3f862ba09d503da188f53ca523
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.19-0ubuntu2.debian.tar.xz' mysql-8.0_8.0.19-0ubuntu2.debian.tar.xz 157992 SHA256:150f2f8d27636cec555792fa53bc7861a279bf13b78426b848dc34659e5a8ca1
-```
 
 ### `dpkg` source package: `mysql-defaults=1.0.5ubuntu2`
 
@@ -3279,14 +3256,9 @@ Licenses: (parsed from: `/usr/share/doc/libpango-1.0-0/copyright`, `/usr/share/d
 - `TCL`
 - `Unicode`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pango1.0=1.44.7-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pango1.0/pango1.0_1.44.7-1ubuntu1.dsc' pango1.0_1.44.7-1ubuntu1.dsc 3466 SHA256:a0db5cf81a9884b247ffa9dbe982eebca8380e581b4d3046eeb8a5cc94d3d2a9
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pango1.0/pango1.0_1.44.7.orig.tar.xz' pango1.0_1.44.7.orig.tar.xz 521384 SHA256:66a5b6cc13db73efed67b8e933584509f8ddb7b10a8a40c3850ca4a985ea1b1f
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pango1.0/pango1.0_1.44.7-1ubuntu1.debian.tar.xz' pango1.0_1.44.7-1ubuntu1.debian.tar.xz 31616 SHA256:45bb8f79d9802b28d8d3dd5b544abe9c36539be9f0e1f2d150b0767b3ff7b8ef
-```
 
 ### `dpkg` source package: `patch=2.7.6-6`
 
@@ -3848,14 +3820,9 @@ Licenses: (parsed from: `/usr/share/doc/python3-six/copyright`)
 
 - `Expat`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris six=1.13.0-1build1
-'http://archive.ubuntu.com/ubuntu/pool/main/s/six/six_1.13.0-1build1.dsc' six_1.13.0-1build1.dsc 2364 SHA256:a6affba565c1affba04d31adbff831e52b76959a001aea8d9860501880603094
-'http://archive.ubuntu.com/ubuntu/pool/main/s/six/six_1.13.0.orig.tar.gz' six_1.13.0.orig.tar.gz 33726 SHA256:30f610279e8b2578cab6db20741130331735c781b56053c59c4076da27f06b66
-'http://archive.ubuntu.com/ubuntu/pool/main/s/six/six_1.13.0-1build1.debian.tar.xz' six_1.13.0-1build1.debian.tar.xz 4244 SHA256:d209dfafb9d02f1dc347b454ec13ccce0d045c5ce8a9d1565641deaeadc3f2b7
-```
 
 ### `dpkg` source package: `sqlite3=3.30.1-1ubuntu1`
 
@@ -4113,14 +4080,9 @@ Licenses: (parsed from: `/usr/share/doc/libblkid-dev/copyright`, `/usr/share/doc
 - `MIT`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris util-linux=2.34-0.1ubuntu5
-'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.34-0.1ubuntu5.dsc' util-linux_2.34-0.1ubuntu5.dsc 3689 SHA256:61ca7400face39d447e0f502dc2ad2d498aa3ca1a2762c519762b7b38ca57f4e
-'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.34.orig.tar.xz' util-linux_2.34.orig.tar.xz 4974812 SHA256:743f9d0c7252b6db246b659c1e1ce0bd45d8d4508b4dfa427bbb4a3e9b9f62b5
-'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.34-0.1ubuntu5.debian.tar.xz' util-linux_2.34-0.1ubuntu5.debian.tar.xz 87392 SHA256:0110e3beddc9a5dea9e039ea8e579d0f1f48b276146896150ccb09d3e71a70d6
-```
 
 ### `dpkg` source package: `wget=1.20.3-1ubuntu1`
 
