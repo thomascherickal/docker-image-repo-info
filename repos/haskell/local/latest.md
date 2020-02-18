@@ -2075,13 +2075,20 @@ Licenses: (parsed from: `/usr/share/doc/libhogweed4/copyright`, `/usr/share/doc/
 - `other`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris nettle=3.3-1
+'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.3-1.dsc' nettle_3.3-1.dsc 2043 SHA256:3336bc6e8e5b1acad66afa97a05f934e4d758c614fd468d5650b5a38049f1161
+'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.3.orig.tar.gz' nettle_3.3.orig.tar.gz 1887927 SHA256:46942627d5d0ca11720fec18d81fc38f7ef837ea4197c1f630e71ce0d470b11e
+'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.3-1.debian.tar.xz' nettle_3.3-1.debian.tar.xz 19428 SHA256:42fef549318af6cfdf76336eb348501d09454a1d873a84f66440b9a791a0ff1b
+```
 
-- http://snapshot.debian.org/package/nettle/3.3-1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/nettle/3.3-1/ (for browsing the source)
+- https://sources.debian.net/src/nettle/3.3-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/nettle/3.3-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `nghttp2=1.18.1-1+deb9u1`
 
@@ -2099,13 +2106,20 @@ Licenses: (parsed from: `/usr/share/doc/libnghttp2-14/copyright`)
 - `SIL-OFL-1.1`
 - `all-permissive`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris nghttp2=1.18.1-1+deb9u1
+'http://deb.debian.org/debian/pool/main/n/nghttp2/nghttp2_1.18.1-1+deb9u1.dsc' nghttp2_1.18.1-1+deb9u1.dsc 2657 SHA256:fc99fa8d124d322f7cd872c3088a268ea86f42e71229fc98d8a90869950d0a14
+'http://deb.debian.org/debian/pool/main/n/nghttp2/nghttp2_1.18.1.orig.tar.bz2' nghttp2_1.18.1.orig.tar.bz2 1780766 SHA256:5d8bb930eb90c552ec836c7b1862406b69cafcda5520bf266c8f5d914d9b447c
+'http://deb.debian.org/debian/pool/main/n/nghttp2/nghttp2_1.18.1-1+deb9u1.debian.tar.xz' nghttp2_1.18.1-1+deb9u1.debian.tar.xz 12300 SHA256:94cf473ee6a78181ebdddc18676df356fb788540cf426b7eca944573f2808733
+```
 
-- http://snapshot.debian.org/package/nghttp2/1.18.1-1+deb9u1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/nghttp2/1.18.1-1+deb9u1/ (for browsing the source)
+- https://sources.debian.net/src/nghttp2/1.18.1-1+deb9u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/nghttp2/1.18.1-1+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `npth=1.3-1`
 
