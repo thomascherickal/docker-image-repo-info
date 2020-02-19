@@ -1,10 +1,10 @@
-# `groovy:3.0.0-jdk13`
+# `groovy:3.0.1-jdk13`
 
 ## Docker Metadata
 
-- Image ID: `sha256:108d61dc68ed2649b82beeb302a5753b21520d0f52516fd1c9b4e6a933e62e85`
-- Created: `2020-02-11T21:21:42.534908174Z`
-- Virtual Size: ~ 500.63 Mb  
+- Image ID: `sha256:8af2068d603efbaf4c09891c3ab9ae2293942addda054e609b35e2be5745d733`
+- Created: `2020-02-17T20:21:25.323291545Z`
+- Virtual Size: ~ 500.74 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["groovysh"]`
@@ -16,7 +16,7 @@
   - `JAVA_VERSION=jdk-13.0.2+8`
   - `JAVA_HOME=/opt/java/openjdk`
   - `GROOVY_HOME=/opt/groovy`
-  - `GROOVY_VERSION=3.0.0`
+  - `GROOVY_VERSION=3.0.1`
 
 ## `dpkg` (`.deb`-based packages)
 
