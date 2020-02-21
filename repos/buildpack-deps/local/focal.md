@@ -64,15 +64,9 @@ Licenses: (parsed from: `/usr/share/doc/libaprutil1/copyright`)
 
 - `Apache-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apr-util=1.6.1-4build1
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apr-util/apr-util_1.6.1-4build1.dsc' apr-util_1.6.1-4build1.dsc 2838 SHA256:eb38c2580ebca1cb794cac38dc0f38fc1b313b6a95740b9bde3fd0f2aecb1bc1
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apr-util/apr-util_1.6.1.orig.tar.bz2' apr-util_1.6.1.orig.tar.bz2 428595 SHA256:d3e12f7b6ad12687572a3a39475545a072608f4ba03a6ce8a3778f607dd0035b
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apr-util/apr-util_1.6.1.orig.tar.bz2.asc' apr-util_1.6.1.orig.tar.bz2.asc 801 SHA256:47837b605290c0d7659b73734e4a9d5e6c0c24c13185cd4d91837afe63c07ca4
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apr-util/apr-util_1.6.1-4build1.debian.tar.xz' apr-util_1.6.1-4build1.debian.tar.xz 212508 SHA256:62d45d064dabcced9dcf418a5ecaff3de56a082cb8edb064becf89eb2cba05c4
-```
 
 ### `dpkg` source package: `apr=1.6.5-1`
 
@@ -84,15 +78,13 @@ Licenses: (parsed from: `/usr/share/doc/libapr1/copyright`)
 
 - `Apache-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apr=1.6.5-1
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apr/apr_1.6.5-1.dsc' apr_1.6.5-1.dsc 2296 SHA256:80c471107d7f90ab5de012e4211559f4f6852ca2b7fd6911f06420aa66d27ec0
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apr/apr_1.6.5.orig.tar.bz2' apr_1.6.5.orig.tar.bz2 855393 SHA256:a67ca9fcf9c4ff59bce7f428a323c8b5e18667fdea7b0ebad47d194371b0a105
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apr/apr_1.6.5.orig.tar.bz2.asc' apr_1.6.5.orig.tar.bz2.asc 801 SHA256:9beff0bb06f4cbbb006176af93258d946d33b7fb54aac13a4c90cfba1cfd0c88
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apr/apr_1.6.5-1.debian.tar.xz' apr_1.6.5-1.debian.tar.xz 213168 SHA256:cb03a6ad0b8c525c67744e7d3f7c52af446e73bd6d4eeb6fd4622677df60db2b
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/apr/1.6.5-1/
+
 
 ### `dpkg` source package: `apt=1.9.5`
 
@@ -150,14 +142,9 @@ Licenses: (parsed from: `/usr/share/doc/libaudit-common/copyright`, `/usr/share/
 - `GPL-2`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris audit=1:2.8.5-2ubuntu5
-'http://archive.ubuntu.com/ubuntu/pool/main/a/audit/audit_2.8.5-2ubuntu5.dsc' audit_2.8.5-2ubuntu5.dsc 2776 SHA256:1ff233fb68e21fedf44d913c041c99c8ed094db48c19ba4cf5da98484f634275
-'http://archive.ubuntu.com/ubuntu/pool/main/a/audit/audit_2.8.5.orig.tar.gz' audit_2.8.5.orig.tar.gz 1140694 SHA256:0e5d4103646e00f8d1981e1cd2faea7a2ae28e854c31a803e907a383c5e2ecb7
-'http://archive.ubuntu.com/ubuntu/pool/main/a/audit/audit_2.8.5-2ubuntu5.debian.tar.xz' audit_2.8.5-2ubuntu5.debian.tar.xz 18700 SHA256:65c9992f8490a37cf1a502c5d1188ca02d9dac97449291a9bd4e06dca835a2e5
-```
 
 ### `dpkg` source package: `autoconf=2.69-11.1`
 
@@ -344,9 +331,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris brotli=1.0.7-6
-'http://archive.ubuntu.com/ubuntu/pool/main/b/brotli/brotli_1.0.7-6.dsc' brotli_1.0.7-6.dsc 2267 SHA256:5fc1691617c3d77056877f67aacb3ffa44462d6cabd16012bc3905881f44edd2
+'http://archive.ubuntu.com/ubuntu/pool/main/b/brotli/brotli_1.0.7-6build1.dsc' brotli_1.0.7-6build1.dsc 2316 SHA256:6d46dbb44a7eb0442dc9743a803d6297809817c66a269a41e53009169a071257
 'http://archive.ubuntu.com/ubuntu/pool/main/b/brotli/brotli_1.0.7.orig.tar.gz' brotli_1.0.7.orig.tar.gz 23827908 SHA256:4c61bfb0faca87219ea587326c467b95acb25555b53d1a421ffa3c8a9296ee2c
-'http://archive.ubuntu.com/ubuntu/pool/main/b/brotli/brotli_1.0.7-6.debian.tar.xz' brotli_1.0.7-6.debian.tar.xz 4344 SHA256:0717dafec2519f55f4b27f92ada9b5fb2294d8b29f93c3aa4007e4027130147a
+'http://archive.ubuntu.com/ubuntu/pool/main/b/brotli/brotli_1.0.7-6build1.debian.tar.xz' brotli_1.0.7-6build1.debian.tar.xz 4416 SHA256:7346c025427b3466252dc94d8a0d3e87692107a4d2ca49a382ac4de14e2957d5
 ```
 
 ### `dpkg` source package: `bzip2=1.0.8-2`
@@ -699,14 +686,13 @@ Licenses: (parsed from: `/usr/share/doc/python3-dulwich/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris dulwich=0.19.15-1
-'http://archive.ubuntu.com/ubuntu/pool/universe/d/dulwich/dulwich_0.19.15-1.dsc' dulwich_0.19.15-1.dsc 2361 SHA256:8e6b434d23309f17a2090d065e6a716a6a895bb4aec77d87004ebe9cf0ad3d07
-'http://archive.ubuntu.com/ubuntu/pool/universe/d/dulwich/dulwich_0.19.15.orig.tar.gz' dulwich_0.19.15.orig.tar.gz 369491 SHA256:805a9b1932dc28b91f359f529c2e46b7623aec3ab719c96d3f2fc63d0d8d8411
-'http://archive.ubuntu.com/ubuntu/pool/universe/d/dulwich/dulwich_0.19.15-1.debian.tar.xz' dulwich_0.19.15-1.debian.tar.xz 630996 SHA256:e4ae1a96bcd13d0e9cd1c3318439fca25e27afba1fcd80f56a42090fb1679426
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/dulwich/0.19.15-1/
+
 
 ### `dpkg` source package: `e2fsprogs=1.45.3-4ubuntu2`
 
@@ -1534,14 +1520,13 @@ Licenses: (parsed from: `/usr/share/doc/libisl22/copyright`)
 - `LGPL-2.1+`
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris isl=0.22-2
-'http://archive.ubuntu.com/ubuntu/pool/main/i/isl/isl_0.22-2.dsc' isl_0.22-2.dsc 1846 SHA256:c203abb2d44658dc3f5cfa2dc9d7bc301f4ac8ec1c8cb791e781c5e675d14f18
-'http://archive.ubuntu.com/ubuntu/pool/main/i/isl/isl_0.22.orig.tar.xz' isl_0.22.orig.tar.xz 1676992 SHA256:6c8bc56c477affecba9c59e2c9f026967ac8bad01b51bdd07916db40a517b9fa
-'http://archive.ubuntu.com/ubuntu/pool/main/i/isl/isl_0.22-2.debian.tar.xz' isl_0.22-2.debian.tar.xz 25228 SHA256:547c8c8c452a31247be532fcfe65efee98ef9c8351a35662308e6ec385c6a7c9
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/isl/0.22-2/
+
 
 ### `dpkg` source package: `jbigkit=2.1-3.1build1`
 
@@ -2239,14 +2224,13 @@ Licenses: (parsed from: `/usr/share/doc/libsemanage-common/copyright`, `/usr/sha
 - `GPL`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libsemanage=3.0-1
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsemanage/libsemanage_3.0-1.dsc' libsemanage_3.0-1.dsc 2333 SHA256:269c958d0f0a8e8fff34e75c88153c060eb8054127bfadf183903a49c390fd06
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsemanage/libsemanage_3.0.orig.tar.gz' libsemanage_3.0.orig.tar.gz 180745 SHA256:a497b0720d54eac427f1f3f618eed417e50ed8f4e47ed0f7a1d391bd416e84cf
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsemanage/libsemanage_3.0-1.debian.tar.xz' libsemanage_3.0-1.debian.tar.xz 17040 SHA256:d6dd598f84fa642d10d27c5f9ef4155ceef80d8127a48075b3c5a918d93a513a
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/libsemanage/3.0-1/
+
 
 ### `dpkg` source package: `libsepol=3.0-1`
 
@@ -2621,15 +2605,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libxslt=1.1.34-1
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxslt/libxslt_1.1.34-1.dsc' libxslt_1.1.34-1.dsc 2362 SHA256:49e9e59377f866627f219133d581faa671ead56dcf5c7e19b396ddd0a6efe4f7
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxslt/libxslt_1.1.34.orig.tar.gz' libxslt_1.1.34.orig.tar.gz 3552258 SHA256:98b1bd46d6792925ad2dfe9a87452ea2adebf69dcb9919ffd55bf926a7f93f7f
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxslt/libxslt_1.1.34.orig.tar.gz.asc' libxslt_1.1.34.orig.tar.gz.asc 488 SHA256:673d1477552bdd5b0cc665704e77ca70e6be5d2f257e6a5a341c846719d747cf
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxslt/libxslt_1.1.34-1.debian.tar.xz' libxslt_1.1.34-1.debian.tar.xz 19980 SHA256:cb4c0d81f86ae915302c602c9285926da8faf6720b04f8df2c87968bea412a96
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/libxslt/1.1.34-1/
+
 
 ### `dpkg` source package: `libxt=1:1.1.5-1`
 
@@ -2686,14 +2668,13 @@ Licenses: (parsed from: `/usr/share/doc/libzstd1/copyright`)
 - `GPL-2+`
 - `zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libzstd=1.4.4+dfsg-1
-'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.4.4+dfsg-1.dsc' libzstd_1.4.4+dfsg-1.dsc 2285 SHA256:9306fb9c71a3449a4b0bdfa67322f519e8c74efdbcee884f63c66fbd0e2c0377
-'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.4.4+dfsg.orig.tar.xz' libzstd_1.4.4+dfsg.orig.tar.xz 1357144 SHA256:be9f9bfd3f6816f21e1108869a9acad6efdc4882ed3f7a1f58ec752f67864890
-'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.4.4+dfsg-1.debian.tar.xz' libzstd_1.4.4+dfsg-1.debian.tar.xz 16040 SHA256:bb6c7e2206c3c0a2c780ce824efb90f03bc94eeb8497c881f6c8dc28d902d103
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/libzstd/1.4.4+dfsg-1/
+
 
 ### `dpkg` source package: `linux-5.4=5.4.0-12.15`
 
@@ -3009,13 +2990,13 @@ Licenses: (parsed from: `/usr/share/doc/netbase/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris netbase=6.0
-'http://archive.ubuntu.com/ubuntu/pool/main/n/netbase/netbase_6.0.dsc' netbase_6.0.dsc 1480 SHA256:3b55fea0bb7d06e7a96d573ea218505a2484ad4b54f47418701d244845237d5f
-'http://archive.ubuntu.com/ubuntu/pool/main/n/netbase/netbase_6.0.tar.xz' netbase_6.0.tar.xz 31976 SHA256:692baeb7b76eba5580c7edbc97ce1784a06b5aa4b367c5ed0b39e0ce7a97d594
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/netbase/6.0/
+
 
 ### `dpkg` source package: `nettle=3.5.1+really3.5.1-2`
 
@@ -3668,14 +3649,9 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.7-minimal/copyright`, `/usr/s
 - `use in source`
 - `without`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3.7=3.7.6-1ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.7/python3.7_3.7.6-1ubuntu2.dsc' python3.7_3.7.6-1ubuntu2.dsc 3531 SHA256:ad506744f63bbae88e4907ef0e577ac6e4c3c51e52b35039a9d1eb1972e0a0d4
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.7/python3.7_3.7.6.orig.tar.xz' python3.7_3.7.6.orig.tar.xz 17246360 SHA256:55a2cce72049f0794e9a11a84862e9039af9183603b78bc60d89539f82cf533f
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.7/python3.7_3.7.6-1ubuntu2.debian.tar.xz' python3.7_3.7.6-1ubuntu2.debian.tar.xz 211104 SHA256:f3c01f79f7e1b2dcd2888a852aea8950bebf50b2a6ec0c8e7e2f36a13412d01b
-```
 
 ### `dpkg` source package: `readline=8.0-3`
 

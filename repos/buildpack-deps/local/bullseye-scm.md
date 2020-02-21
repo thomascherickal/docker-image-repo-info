@@ -1305,20 +1305,13 @@ Licenses: (parsed from: `/usr/share/doc/libcap2/copyright`, `/usr/share/doc/libc
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libcap2=1:2.27-1
-'http://deb.debian.org/debian/pool/main/libc/libcap2/libcap2_2.27-1.dsc' libcap2_2.27-1.dsc 2197 SHA256:4bb4eec00b2378bd1b534ddc1028ce7257166b8970d18b58bbc2717d2dc72905
-'http://deb.debian.org/debian/pool/main/libc/libcap2/libcap2_2.27.orig.tar.xz' libcap2_2.27.orig.tar.xz 67780 SHA256:dac1792d0118bee6aae6ba7fb93ff1602c6a9bda812fd63916eee1435b9c486a
-'http://deb.debian.org/debian/pool/main/libc/libcap2/libcap2_2.27-1.debian.tar.xz' libcap2_2.27-1.debian.tar.xz 26476 SHA256:b8988a52b96a4e7de2ae2b4afcb108fc441c5f016d5f6bcc470e8b4534826d2a
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libcap2/1:2.27-1/
 
-- https://sources.debian.net/src/libcap2/1:2.27-1/ (for browsing the source)
-- https://sources.debian.net/src/libcap2/1:2.27-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libcap2/1:2.27-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libedit=3.1-20191231-1`
 
