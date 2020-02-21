@@ -6353,14 +6353,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=4.15.0-76.86
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-76.86.dsc' linux_4.15.0-76.86.dsc 7170 SHA256:3c8a6d389cdc7183209873e7a8d82e737800e286cc33efbafdb7da6116e56deb
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0.orig.tar.gz' linux_4.15.0.orig.tar.gz 157656459 SHA256:c33b8ba5c45a40b689979caa2421c4d933864cd70eb93c00eb69adf43e9a24fc
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-76.86.diff.gz' linux_4.15.0-76.86.diff.gz 8884058 SHA256:920517e6ca402ac84a0d0b0639d881389b58d280d4dce35483137fe83c0a2e37
-```
 
 ### `dpkg` source package: `lksctp-tools=1.0.17+dfsg-2`
 
@@ -8107,14 +8102,9 @@ Licenses: (parsed from: `/usr/share/doc/libpq-dev/copyright`, `/usr/share/doc/li
 - `nagaysau-ishii`
 - `rijndael`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris postgresql-10=10.10-0ubuntu0.18.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-10/postgresql-10_10.10-0ubuntu0.18.04.1.dsc' postgresql-10_10.10-0ubuntu0.18.04.1.dsc 3620 SHA256:ff12c7299778f997f1d373c77cb568c89dc7c3c6d9e07a07d2351d5f9babbeaa
-'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-10/postgresql-10_10.10.orig.tar.bz2' postgresql-10_10.10.orig.tar.bz2 19012049 SHA256:ad4f9b8575f98ed6091bf9bb2cb16f0e52795a5f66546c1f499ca5c69b21f253
-'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-10/postgresql-10_10.10-0ubuntu0.18.04.1.debian.tar.xz' postgresql-10_10.10-0ubuntu0.18.04.1.debian.tar.xz 33604 SHA256:19edbc1dbdeddde805b865f8779595d21b69898bb62f6eddf2f14013b18ea131
-```
 
 ### `dpkg` source package: `procps=2:3.3.12-3ubuntu1.2`
 

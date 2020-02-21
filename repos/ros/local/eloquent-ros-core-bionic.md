@@ -3764,14 +3764,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3-colcon-bash=0.4.1-1
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-bash/python3-colcon-bash_0.4.1-1.debian.tar.xz' python3-colcon-bash_0.4.1-1.debian.tar.xz 1080 SHA512:7c9ffe4316e5640ee70f086589c49a9d357fc8955b56e670f85ac0a8394ab3e32f5f1ee7ee7f8a3e56d519b8995ff4887f0fc4152192936e0efe88c1e88bb8d4
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-bash/python3-colcon-bash_0.4.1-1.dsc' python3-colcon-bash_0.4.1-1.dsc 906 SHA512:b2efd146d3e08df4e874989fbd729d415962d77dbe5aee8144f413af50307ab2dfb5b79442a766e7de75566c0723127bf4bfde9c45676ea491ecc05ca4628856
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-bash/python3-colcon-bash_0.4.1.orig.tar.gz' python3-colcon-bash_0.4.1.orig.tar.gz 5657 SHA512:9266704d82de9d62817ce317ac3e959f23a022bf8b0e67eea76528a8c6215478ab0928c150e0e808677910879d5072ba9a0f1aaed5f819eb67a5d949b78c9cb8
-```
 
 ### `dpkg` source package: `python3-colcon-cd=0.1.1-1`
 
@@ -3802,14 +3797,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3-colcon-cmake=0.2.17-1
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-cmake/python3-colcon-cmake_0.2.17-1.debian.tar.xz' python3-colcon-cmake_0.2.17-1.debian.tar.xz 1096 SHA512:c87739483d219d6dac0aa5f15dd4976af2d8a3a903a21c5ba0531a25d32ab6799fdc786842de231a4733cb8fe72175ffd200d119291d09aaa0f20a3574307087
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-cmake/python3-colcon-cmake_0.2.17-1.dsc' python3-colcon-cmake_0.2.17-1.dsc 925 SHA512:98cddbbb0af4b70c3be3a96a434dfae1166fa6833437bb8ec8e81984756e07c00a66d670c4365143e06c2bb640294c1096976f55fdd40f3e9436e4ba611aa8e8
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-cmake/python3-colcon-cmake_0.2.17.orig.tar.gz' python3-colcon-cmake_0.2.17.orig.tar.gz 13669 SHA512:a7dceba3fc17b29425b6b2d636296169fd94a6f6b5d6b78f65424dfda60ecb8cc7c23c2c8a970b9b6a33f9ccb454ba80eea342746222d38aa5b9c555fce7b9f8
-```
 
 ### `dpkg` source package: `python3-colcon-common-extensions=0.2.1-1`
 
@@ -3840,14 +3830,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3-colcon-core=0.5.2-1
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-core/python3-colcon-core_0.5.2-1.debian.tar.xz' python3-colcon-core_0.5.2-1.debian.tar.xz 1568 SHA512:43b043014b34d9be1c6d5c5f1bfe503fb114ce9a5029f1723ad5d8333e7ed7728c973a93b8b9be1b7863f10c25466be29918a2078bda58ce1ae0de8b49d538c3
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-core/python3-colcon-core_0.5.2-1.dsc' python3-colcon-core_0.5.2-1.dsc 913 SHA512:dc552f1bf16ee93fa91b0f6596954b8f6505ac0ec4476e4411a0fa84a83f0a7574251aad7eea5a6821b34a85892f7d2b8d8b83a7ec209197aa80720775db96b9
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-core/python3-colcon-core_0.5.2.orig.tar.gz' python3-colcon-core_0.5.2.orig.tar.gz 98949 SHA512:22759530f27c86ebe820179983bdbd24a78f246361a61f786a24e94d189e267cbbbd22088ed03140223b30b38469573613192cbeb083a8db84bbae41bdc8092c
-```
 
 ### `dpkg` source package: `python3-colcon-defaults=0.2.3-1`
 
@@ -4120,14 +4105,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3-colcon-ros=0.3.14-1
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-ros/python3-colcon-ros_0.3.14-1.debian.tar.xz' python3-colcon-ros_0.3.14-1.debian.tar.xz 1568 SHA512:f7b8c55de8317760663a542b2492cbfeffefb3403c538b8a373e9335ffd193ff5c8246f027eeca0be4c361afb77571ad037cc592e26eb11da9d53f3db1386ff2
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-ros/python3-colcon-ros_0.3.14-1.dsc' python3-colcon-ros_0.3.14-1.dsc 907 SHA512:9d2ca0948d268bbff0bcb529859c4ad5d5e8fe5b8c8d92ebf9c7f28a9ca8917106a1731562d33fde654d1a0c644bc8b2cd25bd6cc60ed4579cb9e54e8f1de797
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-ros/python3-colcon-ros_0.3.14.orig.tar.gz' python3-colcon-ros_0.3.14.orig.tar.gz 13103 SHA512:b906ea4fc3d2262463a796cb67a364b8a96f9501e9f7556c06cd0e116e9a7060522525c1c9334b04a4e0be3b94e41665562d8fee6cb226b09d1ed15a52e31348
-```
 
 ### `dpkg` source package: `python3-colcon-test-result=0.3.8-1`
 
