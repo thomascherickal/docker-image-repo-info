@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:cc04bb4ff7f28462c03b8d0fcd73f1debde79a927f730ca6b7ab47ae76285c29`
-- Created: `2020-02-02T12:33:12.131967047Z`
-- Virtual Size: ~ 543.12 Mb  
+- Image ID: `sha256:b1b338b63bb69a5e9604550b4fcbd5cf873e79b22f04aadba66c2327c8ace511`
+- Created: `2020-02-21T06:23:02.016741132Z`
+- Virtual Size: ~ 543.16 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -21,10 +21,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie`
   - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
-  - `PHP_VERSION=7.4.2`
-  - `PHP_URL=https://www.php.net/get/php-7.4.2.tar.xz/from/this/mirror`
-  - `PHP_ASC_URL=https://www.php.net/get/php-7.4.2.tar.xz.asc/from/this/mirror`
-  - `PHP_SHA256=98284deac017da0d426117ecae7599a1f1bf62ae3911e8bc16c4403a8f4bdf13`
+  - `PHP_VERSION=7.4.3`
+  - `PHP_URL=https://www.php.net/get/php-7.4.3.tar.xz/from/this/mirror`
+  - `PHP_ASC_URL=https://www.php.net/get/php-7.4.3.tar.xz.asc/from/this/mirror`
+  - `PHP_SHA256=cf1f856d877c268124ded1ede40c9fb6142b125fdaafdc54f855120b8bc6982a`
   - `PHP_MD5=`
   - `WORDPRESS_VERSION=5.3.2`
   - `WORDPRESS_SHA1=fded476f112dbab14e3b5acddd2bcfa550e7b01b`
@@ -584,12 +584,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/coreutils/8.30-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/coreutils/8.30-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `cups=2.2.10-6+deb10u1`
+### `dpkg` source package: `cups=2.2.10-6+deb10u2`
 
 Binary Packages:
 
-- `libcups2:amd64=2.2.10-6+deb10u1`
-- `libcupsimage2:amd64=2.2.10-6+deb10u1`
+- `libcups2:amd64=2.2.10-6+deb10u2`
+- `libcupsimage2:amd64=2.2.10-6+deb10u2`
 
 Licenses: (parsed from: `/usr/share/doc/libcups2/copyright`, `/usr/share/doc/libcupsimage2/copyright`)
 
@@ -600,13 +600,21 @@ Licenses: (parsed from: `/usr/share/doc/libcups2/copyright`, `/usr/share/doc/lib
 - `LGPL-2.0 with AOSDL exception`
 - `Zlib`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris cups=2.2.10-6+deb10u2
+'http://deb.debian.org/debian/pool/main/c/cups/cups_2.2.10-6+deb10u2.dsc' cups_2.2.10-6+deb10u2.dsc 3472 SHA256:5bee91b9c8c35ad211d67e2dfe250787dd4bb3a2f5c67db1b2b3f3794a0ec331
+'http://deb.debian.org/debian/pool/main/c/cups/cups_2.2.10.orig.tar.gz' cups_2.2.10.orig.tar.gz 10403568 SHA256:77c8b2b3bb7fe8b5fbfffc307f2c817b2d7ec67b657f261a1dd1c61ab81205bb
+'http://deb.debian.org/debian/pool/main/c/cups/cups_2.2.10.orig.tar.gz.asc' cups_2.2.10.orig.tar.gz.asc 864 SHA256:be235dd0cc526e5bde2a67f0dc2888be5d8dc40d1dfa44ab1a322d83f606e82d
+'http://deb.debian.org/debian/pool/main/c/cups/cups_2.2.10-6+deb10u2.debian.tar.xz' cups_2.2.10-6+deb10u2.debian.tar.xz 360016 SHA256:86f8f8acfd8251602e3f629b5561775a05f41ed9b472752e46eec1e2c930bb33
+```
 
-- http://snapshot.debian.org/package/cups/2.2.10-6+deb10u1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/cups/2.2.10-6+deb10u2/ (for browsing the source)
+- https://sources.debian.net/src/cups/2.2.10-6+deb10u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/cups/2.2.10-6+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `curl=7.64.0-4`
 
@@ -3184,11 +3192,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/numactl/2.0.12-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/numactl/2.0.12-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openjpeg2=2.3.0-2`
+### `dpkg` source package: `openjpeg2=2.3.0-2+deb10u1`
 
 Binary Packages:
 
-- `libopenjp2-7:amd64=2.3.0-2`
+- `libopenjp2-7:amd64=2.3.0-2+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/libopenjp2-7/copyright`)
 
@@ -3202,13 +3210,20 @@ Licenses: (parsed from: `/usr/share/doc/libopenjp2-7/copyright`)
 - `ZLIB`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris openjpeg2=2.3.0-2+deb10u1
+'http://deb.debian.org/debian/pool/main/o/openjpeg2/openjpeg2_2.3.0-2+deb10u1.dsc' openjpeg2_2.3.0-2+deb10u1.dsc 2590 SHA256:a8b1faaf14416687c5cf25bb95662ab4c9e2e552069c226666e685d5fa6cc212
+'http://deb.debian.org/debian/pool/main/o/openjpeg2/openjpeg2_2.3.0.orig.tar.gz' openjpeg2_2.3.0.orig.tar.gz 2074456 SHA256:fd5ca8cf3f195b0a54c56193c5897bb423c00db577afda4033318006769a5833
+'http://deb.debian.org/debian/pool/main/o/openjpeg2/openjpeg2_2.3.0-2+deb10u1.debian.tar.xz' openjpeg2_2.3.0-2+deb10u1.debian.tar.xz 21984 SHA256:9ba5f95157fc8f861ee5bae029ee2956e837e29a701e0212dc7b6bf6c256c707
+```
 
-- http://snapshot.debian.org/package/openjpeg2/2.3.0-2/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/openjpeg2/2.3.0-2+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/openjpeg2/2.3.0-2+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openjpeg2/2.3.0-2+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openldap=2.4.47+dfsg-3+deb10u1`
 

@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:e7785ed5ba4f14cd8036137874db60ad2e3eae07312efb1fcec6bfeacaf17ba3`
-- Created: `2020-01-24T12:47:38.658652827Z`
-- Virtual Size: ~ 140.13 Mb  
+- Image ID: `sha256:e84ce2239a6bd94c7a4d6e76c0f7fc34c3db79b62f98195bc85ee573ded8ff8a`
+- Created: `2020-02-21T06:30:26.694048912Z`
+- Virtual Size: ~ 140.18 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie`
   - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
-  - `PHP_VERSION=7.4.2`
-  - `PHP_URL=https://www.php.net/get/php-7.4.2.tar.xz/from/this/mirror`
-  - `PHP_ASC_URL=https://www.php.net/get/php-7.4.2.tar.xz.asc/from/this/mirror`
-  - `PHP_SHA256=98284deac017da0d426117ecae7599a1f1bf62ae3911e8bc16c4403a8f4bdf13`
+  - `PHP_VERSION=7.4.3`
+  - `PHP_URL=https://www.php.net/get/php-7.4.3.tar.xz/from/this/mirror`
+  - `PHP_ASC_URL=https://www.php.net/get/php-7.4.3.tar.xz.asc/from/this/mirror`
+  - `PHP_SHA256=cf1f856d877c268124ded1ede40c9fb6142b125fdaafdc54f855120b8bc6982a`
   - `PHP_MD5=`
   - `WORDPRESS_CLI_GPG_KEY=63AF7AA15067C05616FDDD88A3A2E8F226F0BC06`
   - `WORDPRESS_CLI_VERSION=2.4.0`
@@ -643,16 +643,16 @@ MIT
 ### `apk` package: `libxml2`
 
 ```console
-libxml2-2.9.10-r1 description:
+libxml2-2.9.10-r2 description:
 XML parsing library, version 2
 
-libxml2-2.9.10-r1 webpage:
+libxml2-2.9.10-r2 webpage:
 http://www.xmlsoft.org/
 
-libxml2-2.9.10-r1 installed size:
+libxml2-2.9.10-r2 installed size:
 1220608
 
-libxml2-2.9.10-r1 license:
+libxml2-2.9.10-r2 license:
 MIT
 
 ```
@@ -677,16 +677,16 @@ BSD-3-Clause
 ### `apk` package: `mariadb-client`
 
 ```console
-mariadb-client-10.4.10-r0 description:
+mariadb-client-10.4.12-r0 description:
 Client for the MariaDB database
 
-mariadb-client-10.4.10-r0 webpage:
+mariadb-client-10.4.12-r0 webpage:
 https://www.mariadb.org/
 
-mariadb-client-10.4.10-r0 installed size:
-29745152
+mariadb-client-10.4.12-r0 installed size:
+29749248
 
-mariadb-client-10.4.10-r0 license:
+mariadb-client-10.4.12-r0 license:
 GPL-2.0-or-later
 
 ```
@@ -694,16 +694,16 @@ GPL-2.0-or-later
 ### `apk` package: `mariadb-common`
 
 ```console
-mariadb-common-10.4.10-r0 description:
+mariadb-common-10.4.12-r0 description:
 MariaDB common files for both server and client
 
-mariadb-common-10.4.10-r0 webpage:
+mariadb-common-10.4.12-r0 webpage:
 https://www.mariadb.org/
 
-mariadb-common-10.4.10-r0 installed size:
+mariadb-common-10.4.12-r0 installed size:
 2265088
 
-mariadb-common-10.4.10-r0 license:
+mariadb-common-10.4.12-r0 license:
 GPL-2.0-or-later
 
 ```
@@ -745,16 +745,16 @@ MIT BSD GPL2+
 ### `apk` package: `mysql-client`
 
 ```console
-mysql-client-10.4.10-r0 description:
+mysql-client-10.4.12-r0 description:
 Dummy package for mysql-client migration
 
-mysql-client-10.4.10-r0 webpage:
+mysql-client-10.4.12-r0 webpage:
 https://www.mariadb.org/
 
-mysql-client-10.4.10-r0 installed size:
+mysql-client-10.4.12-r0 installed size:
 4096
 
-mysql-client-10.4.10-r0 license:
+mysql-client-10.4.12-r0 license:
 GPL-2.0-or-later
 
 ```
