@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:ac7c61d05d5a00bdbb65a566c32eb1d50351b29fbd676e2dc9e3bfb6850eaed0`
-- Created: `2020-02-05T00:19:33.786541263Z`
-- Virtual Size: ~ 181.21 Mb  
+- Image ID: `sha256:d95b3f498002c38d16668671783ce3b0ed76e24badab25c1ff9ab829fd70982d`
+- Created: `2020-02-21T05:04:49.762428742Z`
+- Virtual Size: ~ 181.24 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/bin/sh","/docker-entrypoint.sh"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie`
   - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
-  - `PHP_VERSION=7.4.2`
-  - `PHP_URL=https://www.php.net/get/php-7.4.2.tar.xz/from/this/mirror`
-  - `PHP_ASC_URL=https://www.php.net/get/php-7.4.2.tar.xz.asc/from/this/mirror`
-  - `PHP_SHA256=98284deac017da0d426117ecae7599a1f1bf62ae3911e8bc16c4403a8f4bdf13`
+  - `PHP_VERSION=7.4.3`
+  - `PHP_URL=https://www.php.net/get/php-7.4.3.tar.xz/from/this/mirror`
+  - `PHP_ASC_URL=https://www.php.net/get/php-7.4.3.tar.xz.asc/from/this/mirror`
+  - `PHP_SHA256=cf1f856d877c268124ded1ede40c9fb6142b125fdaafdc54f855120b8bc6982a`
   - `PHP_MD5=`
   - `COMPOSER_ALLOW_SUPERUSER=1`
   - `COMPOSER_HOME=/tmp`
@@ -524,16 +524,16 @@ GPL-2.0 GPL-2.0-or-later LGPL-2.0-or-later BSD Public-Domain
 ### `apk` package: `libxml2`
 
 ```console
-libxml2-2.9.10-r1 description:
+libxml2-2.9.10-r2 description:
 XML parsing library, version 2
 
-libxml2-2.9.10-r1 webpage:
+libxml2-2.9.10-r2 webpage:
 http://www.xmlsoft.org/
 
-libxml2-2.9.10-r1 installed size:
+libxml2-2.9.10-r2 installed size:
 1220608
 
-libxml2-2.9.10-r1 license:
+libxml2-2.9.10-r2 license:
 MIT
 
 ```
