@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:00348da2c7a94af1f88bd9e3e41fc64e52269d51eb6d2f74b484ec0477cba52d`
-- Created: `2020-02-02T11:55:46.016628085Z`
-- Virtual Size: ~ 741.76 Mb  
+- Image ID: `sha256:5d8dcaf30748abcc0d493e176a51e22a348b2e2123f3c626beda7d8912ebd70c`
+- Created: `2020-02-21T04:53:24.311649052Z`
+- Virtual Size: ~ 742.45 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -21,10 +21,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie`
   - `GPG_KEYS=CBAF69F173A0FEA4B537F470D66C9593118BCCB6 F38252826ACD957EF380D39F2F7956BC5DA04B5D`
-  - `PHP_VERSION=7.3.14`
-  - `PHP_URL=https://www.php.net/get/php-7.3.14.tar.xz/from/this/mirror`
-  - `PHP_ASC_URL=https://www.php.net/get/php-7.3.14.tar.xz.asc/from/this/mirror`
-  - `PHP_SHA256=cc05dd373ca5d36652800762f65c10e828a17de35aaf246262e3efa99d00cdb0`
+  - `PHP_VERSION=7.3.15`
+  - `PHP_URL=https://www.php.net/get/php-7.3.15.tar.xz/from/this/mirror`
+  - `PHP_ASC_URL=https://www.php.net/get/php-7.3.15.tar.xz.asc/from/this/mirror`
+  - `PHP_SHA256=de7ae7cf3d1dbb2824975b26b32991dac2b732886ec22075b8c53b261b018166`
   - `PHP_MD5=`
   - `MEDIAWIKI_MAJOR_VERSION=1.34`
   - `MEDIAWIKI_BRANCH=REL1_34`
@@ -824,11 +824,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/cryptsetup/2:2.1.0-5+deb10u2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/cryptsetup/2:2.1.0-5+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `cups=2.2.10-6+deb10u1`
+### `dpkg` source package: `cups=2.2.10-6+deb10u2`
 
 Binary Packages:
 
-- `libcups2:amd64=2.2.10-6+deb10u1`
+- `libcups2:amd64=2.2.10-6+deb10u2`
 
 Licenses: (parsed from: `/usr/share/doc/libcups2/copyright`)
 
@@ -839,13 +839,21 @@ Licenses: (parsed from: `/usr/share/doc/libcups2/copyright`)
 - `LGPL-2.0 with AOSDL exception`
 - `Zlib`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris cups=2.2.10-6+deb10u2
+'http://deb.debian.org/debian/pool/main/c/cups/cups_2.2.10-6+deb10u2.dsc' cups_2.2.10-6+deb10u2.dsc 3472 SHA256:5bee91b9c8c35ad211d67e2dfe250787dd4bb3a2f5c67db1b2b3f3794a0ec331
+'http://deb.debian.org/debian/pool/main/c/cups/cups_2.2.10.orig.tar.gz' cups_2.2.10.orig.tar.gz 10403568 SHA256:77c8b2b3bb7fe8b5fbfffc307f2c817b2d7ec67b657f261a1dd1c61ab81205bb
+'http://deb.debian.org/debian/pool/main/c/cups/cups_2.2.10.orig.tar.gz.asc' cups_2.2.10.orig.tar.gz.asc 864 SHA256:be235dd0cc526e5bde2a67f0dc2888be5d8dc40d1dfa44ab1a322d83f606e82d
+'http://deb.debian.org/debian/pool/main/c/cups/cups_2.2.10-6+deb10u2.debian.tar.xz' cups_2.2.10-6+deb10u2.debian.tar.xz 360016 SHA256:86f8f8acfd8251602e3f629b5561775a05f41ed9b472752e46eec1e2c930bb33
+```
 
-- http://snapshot.debian.org/package/cups/2.2.10-6+deb10u1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/cups/2.2.10-6+deb10u2/ (for browsing the source)
+- https://sources.debian.net/src/cups/2.2.10-6+deb10u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/cups/2.2.10-6+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `curl=7.64.0-4`
 
@@ -4209,11 +4217,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/numactl/2.0.12-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/numactl/2.0.12-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openjpeg2=2.3.0-2`
+### `dpkg` source package: `openjpeg2=2.3.0-2+deb10u1`
 
 Binary Packages:
 
-- `libopenjp2-7:amd64=2.3.0-2`
+- `libopenjp2-7:amd64=2.3.0-2+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/libopenjp2-7/copyright`)
 
@@ -4227,13 +4235,20 @@ Licenses: (parsed from: `/usr/share/doc/libopenjp2-7/copyright`)
 - `ZLIB`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris openjpeg2=2.3.0-2+deb10u1
+'http://deb.debian.org/debian/pool/main/o/openjpeg2/openjpeg2_2.3.0-2+deb10u1.dsc' openjpeg2_2.3.0-2+deb10u1.dsc 2590 SHA256:a8b1faaf14416687c5cf25bb95662ab4c9e2e552069c226666e685d5fa6cc212
+'http://deb.debian.org/debian/pool/main/o/openjpeg2/openjpeg2_2.3.0.orig.tar.gz' openjpeg2_2.3.0.orig.tar.gz 2074456 SHA256:fd5ca8cf3f195b0a54c56193c5897bb423c00db577afda4033318006769a5833
+'http://deb.debian.org/debian/pool/main/o/openjpeg2/openjpeg2_2.3.0-2+deb10u1.debian.tar.xz' openjpeg2_2.3.0-2+deb10u1.debian.tar.xz 21984 SHA256:9ba5f95157fc8f861ee5bae029ee2956e837e29a701e0212dc7b6bf6c256c707
+```
 
-- http://snapshot.debian.org/package/openjpeg2/2.3.0-2/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/openjpeg2/2.3.0-2+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/openjpeg2/2.3.0-2+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openjpeg2/2.3.0-2+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openldap=2.4.47+dfsg-3+deb10u1`
 
@@ -4616,14 +4631,14 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/python3-defaults/3.7.3-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/python3-defaults/3.7.3-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `python3.7=3.7.3-2`
+### `dpkg` source package: `python3.7=3.7.3-2+deb10u1`
 
 Binary Packages:
 
-- `libpython3.7-minimal:amd64=3.7.3-2`
-- `libpython3.7-stdlib:amd64=3.7.3-2`
-- `python3.7=3.7.3-2`
-- `python3.7-minimal=3.7.3-2`
+- `libpython3.7-minimal:amd64=3.7.3-2+deb10u1`
+- `libpython3.7-stdlib:amd64=3.7.3-2+deb10u1`
+- `python3.7=3.7.3-2+deb10u1`
+- `python3.7-minimal=3.7.3-2+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/libpython3.7-minimal/copyright`, `/usr/share/doc/libpython3.7-stdlib/copyright`, `/usr/share/doc/python3.7/copyright`, `/usr/share/doc/python3.7-minimal/copyright`)
 
@@ -4645,13 +4660,20 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.7-minimal/copyright`, `/usr/s
 - `use in source`
 - `without`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris python3.7=3.7.3-2+deb10u1
+'http://deb.debian.org/debian/pool/main/p/python3.7/python3.7_3.7.3-2+deb10u1.dsc' python3.7_3.7.3-2+deb10u1.dsc 3404 SHA256:0ddf97878c8fa2b619d034b88b94c7900d3c506c5c99b8682adaeb8409aa31a3
+'http://deb.debian.org/debian/pool/main/p/python3.7/python3.7_3.7.3.orig.tar.xz' python3.7_3.7.3.orig.tar.xz 17108364 SHA256:da60b54064d4cfcd9c26576f6df2690e62085123826cff2e667e72a91952d318
+'http://deb.debian.org/debian/pool/main/p/python3.7/python3.7_3.7.3-2+deb10u1.debian.tar.xz' python3.7_3.7.3-2+deb10u1.debian.tar.xz 216340 SHA256:21d5287cd148d35c0a7db8cd45fe4f3ad70b2c0606e4a1dc40dd56f272201491
+```
 
-- http://snapshot.debian.org/package/python3.7/3.7.3-2/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/python3.7/3.7.3-2+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/python3.7/3.7.3-2+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/python3.7/3.7.3-2+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `re2c=1.1.1-1`
 
@@ -4869,13 +4891,9 @@ Other potentially useful URLs:
 
 Binary Packages:
 
-- `libpam-systemd:amd64=241-7~deb10u2`
-- `libsystemd0:amd64=241-7~deb10u2`
 - `libudev1:amd64=241-7~deb10u2`
-- `systemd=241-7~deb10u2`
-- `systemd-sysv=241-7~deb10u2`
 
-Licenses: (parsed from: `/usr/share/doc/libpam-systemd/copyright`, `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/libudev1/copyright`, `/usr/share/doc/systemd/copyright`, `/usr/share/doc/systemd-sysv/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libudev1/copyright`)
 
 - `CC0-1.0`
 - `Expat`
@@ -4892,6 +4910,40 @@ The source package *may* still be available for download from:
 
 - http://snapshot.debian.org/package/systemd/241-7~deb10u2/
 
+
+### `dpkg` source package: `systemd=241-7~deb10u3`
+
+Binary Packages:
+
+- `libpam-systemd:amd64=241-7~deb10u3`
+- `libsystemd0:amd64=241-7~deb10u3`
+- `systemd=241-7~deb10u3`
+- `systemd-sysv=241-7~deb10u3`
+
+Licenses: (parsed from: `/usr/share/doc/libpam-systemd/copyright`, `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/systemd/copyright`, `/usr/share/doc/systemd-sysv/copyright`)
+
+- `CC0-1.0`
+- `Expat`
+- `GPL-2`
+- `GPL-2+`
+- `LGPL-2.1`
+- `LGPL-2.1+`
+- `public-domain`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris systemd=241-7~deb10u3
+'http://deb.debian.org/debian/pool/main/s/systemd/systemd_241-7~deb10u3.dsc' systemd_241-7~deb10u3.dsc 4946 SHA256:04ef215da8e05800c587601eacb011f9596dd7138ac85b43f33efdbf6b799a31
+'http://deb.debian.org/debian/pool/main/s/systemd/systemd_241.orig.tar.gz' systemd_241.orig.tar.gz 7640538 SHA256:b2561a8e1d10a2c248253f0dda31a85dd6d69f2b54177de55e02cd1d2778316e
+'http://deb.debian.org/debian/pool/main/s/systemd/systemd_241-7~deb10u3.debian.tar.xz' systemd_241-7~deb10u3.debian.tar.xz 169396 SHA256:54d4d0624c776ab2a375f303ed64bfe25ddc8cb47b5bfe6c2a400ba842420363
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/systemd/241-7~deb10u3/ (for browsing the source)
+- https://sources.debian.net/src/systemd/241-7~deb10u3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/systemd/241-7~deb10u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sysvinit=2.93-8`
 
