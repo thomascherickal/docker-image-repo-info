@@ -1,9 +1,9 @@
-# `matomo:3.13.2-apache`
+# `matomo:3.13.3-apache`
 
 ## Docker Metadata
 
-- Image ID: `sha256:4651858bd557d03de65b4ba8ac444e3bdbe536aa50249d1e8f86731753051078`
-- Created: `2020-02-21T04:40:21.970996005Z`
+- Image ID: `sha256:b6caad7c05b1ca38983015c261c423722a54641456ce21fe54520565bc1b9128`
+- Created: `2020-02-25T01:27:49.402384682Z`
 - Virtual Size: ~ 473.34 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -26,7 +26,7 @@
   - `PHP_ASC_URL=https://www.php.net/get/php-7.4.3.tar.xz.asc/from/this/mirror`
   - `PHP_SHA256=cf1f856d877c268124ded1ede40c9fb6142b125fdaafdc54f855120b8bc6982a`
   - `PHP_MD5=`
-  - `MATOMO_VERSION=3.13.2`
+  - `MATOMO_VERSION=3.13.3`
 - Labels:
   - `maintainer=pierre@piwik.org`
 
