@@ -3,10 +3,10 @@
 # Tags of `fsharp`
 
 -	[`fsharp:10`](#fsharp10)
--	[`fsharp:10.6`](#fsharp106)
--	[`fsharp:10.6.0`](#fsharp1060)
--	[`fsharp:10.6.0-netcore`](#fsharp1060-netcore)
--	[`fsharp:10.6-netcore`](#fsharp106-netcore)
+-	[`fsharp:10.7`](#fsharp107)
+-	[`fsharp:10.7.0`](#fsharp1070)
+-	[`fsharp:10.7.0-netcore`](#fsharp1070-netcore)
+-	[`fsharp:10.7-netcore`](#fsharp107-netcore)
 -	[`fsharp:10-netcore`](#fsharp10-netcore)
 -	[`fsharp:4`](#fsharp4)
 -	[`fsharp:4.1`](#fsharp41)
@@ -17,7 +17,7 @@
 ## `fsharp:10`
 
 ```console
-$ docker pull fsharp@sha256:3e7e6b0c2081baa4b5aeefea29f4597bc4eaf72c329f3e0bb6bfdcd53f8e8514
+$ docker pull fsharp@sha256:bd030b87eb02135ca82fe3f161afef9d97487e333ef44f87ceb5a7289c4602c3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -28,14 +28,14 @@ $ docker pull fsharp@sha256:3e7e6b0c2081baa4b5aeefea29f4597bc4eaf72c329f3e0bb6bf
 ### `fsharp:10` - linux; amd64
 
 ```console
-$ docker pull fsharp@sha256:0b52c0cbf76202963d47ea751b3f198222383953a9ada903ae2b9973bf3933ae
+$ docker pull fsharp@sha256:b06193158dbe30d1c5ff3153d18f8dc98aaaccee7420e1acec61341eee4121f3
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **182.4 MB (182388429 bytes)**  
+-	Total Size: **186.6 MB (186612588 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e99aaf8b18d835cf1073028a878594a0689536e0b9dd48a300dd3355b0b87d87`
+-	Image ID: `sha256:e924a3b906e85c2e6a003b5527f67d17aa3e970af1f2a89de710255086411dc9`
 -	Default Command: `["fsharpi"]`
 
 ```dockerfile
@@ -47,11 +47,11 @@ CMD ["bash"]
 LABEL maintainer=Dave Curylo <dave@curylo.org>, Steve Desmond <steve@stevedesmond.ca>
 # Sun, 02 Feb 2020 05:33:08 GMT
 ENV MONO_THREADS_PER_CPU=50
-# Sun, 02 Feb 2020 05:45:46 GMT
-RUN MONO_VERSION=6.4.0.198 &&     FSHARP_VERSION=10.2.3 &&     FSHARP_BASENAME=fsharp-$FSHARP_VERSION &&     FSHARP_ARCHIVE=$FSHARP_VERSION.tar.gz &&     FSHARP_ARCHIVE_URL=https://github.com/fsharp/fsharp/archive/$FSHARP_VERSION.tar.gz &&     export GNUPGHOME="$(mktemp -d)" &&     apt-get update && apt-get --no-install-recommends install -y gnupg dirmngr ca-certificates apt-transport-https &&     apt-key adv --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF &&     echo "deb https://download.mono-project.com/repo/debian stable-buster/snapshots/$MONO_VERSION main" | tee /etc/apt/sources.list.d/mono-official-stable.list &&     apt-get update -y &&     apt-get --no-install-recommends install -y pkg-config make nuget mono-devel msbuild ca-certificates-mono locales &&     rm -rf /var/lib/apt/lists/* &&     echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen && /usr/sbin/locale-gen &&     mkdir -p /tmp/src &&     cd /tmp/src &&     printf "namespace a { class b { public static void Main(string[] args) { new System.Net.WebClient().DownloadFile(\"%s\", \"%s\");}}}" $FSHARP_ARCHIVE_URL $FSHARP_ARCHIVE > download-fsharp.cs &&     mcs download-fsharp.cs && mono download-fsharp.exe && rm download-fsharp.exe download-fsharp.cs &&     tar xf $FSHARP_ARCHIVE &&     cd $FSHARP_BASENAME &&     make &&     make install &&     cd ~ &&     rm -rf /tmp/src /tmp/NuGetScratch ~/.nuget ~/.config ~/.local "$GNUPGHOME" &&     apt-get purge -y make gnupg dirmngr &&     apt-get clean
-# Sun, 02 Feb 2020 05:45:46 GMT
+# Tue, 25 Feb 2020 16:28:52 GMT
+RUN MONO_VERSION=6.8.0.105 &&     FSHARP_VERSION=10.2.3 &&     FSHARP_BASENAME=fsharp-$FSHARP_VERSION &&     FSHARP_ARCHIVE=$FSHARP_VERSION.tar.gz &&     FSHARP_ARCHIVE_URL=https://github.com/fsharp/fsharp/archive/$FSHARP_VERSION.tar.gz &&     export GNUPGHOME="$(mktemp -d)" &&     apt-get update && apt-get --no-install-recommends install -y gnupg dirmngr ca-certificates apt-transport-https &&     apt-key adv --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF &&     echo "deb https://download.mono-project.com/repo/debian stable-buster/snapshots/$MONO_VERSION main" | tee /etc/apt/sources.list.d/mono-official-stable.list &&     apt-get update -y &&     apt-get --no-install-recommends install -y pkg-config make nuget mono-devel msbuild ca-certificates-mono locales &&     rm -rf /var/lib/apt/lists/* &&     echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen && /usr/sbin/locale-gen &&     mkdir -p /tmp/src &&     cd /tmp/src &&     printf "namespace a { class b { public static void Main(string[] args) { new System.Net.WebClient().DownloadFile(\"%s\", \"%s\");}}}" $FSHARP_ARCHIVE_URL $FSHARP_ARCHIVE > download-fsharp.cs &&     mcs download-fsharp.cs && mono download-fsharp.exe && rm download-fsharp.exe download-fsharp.cs &&     tar xf $FSHARP_ARCHIVE &&     cd $FSHARP_BASENAME &&     make &&     make install &&     cd ~ &&     rm -rf /tmp/src /tmp/NuGetScratch ~/.nuget ~/.config ~/.local "$GNUPGHOME" &&     apt-get purge -y make gnupg dirmngr &&     apt-get clean
+# Tue, 25 Feb 2020 16:28:53 GMT
 WORKDIR /root
-# Sun, 02 Feb 2020 05:45:46 GMT
+# Tue, 25 Feb 2020 16:28:53 GMT
 CMD ["fsharpi"]
 ```
 
@@ -60,22 +60,22 @@ CMD ["fsharpi"]
 		Last Modified: Sat, 01 Feb 2020 17:26:19 GMT  
 		Size: 27.1 MB (27092260 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8d8061e428b698a6685263603eafec645bf790dd48f02c92caaff550c8cfde76`  
-		Last Modified: Sun, 02 Feb 2020 06:03:40 GMT  
-		Size: 155.3 MB (155296169 bytes)  
+	-	`sha256:d1092c96356c7944201309f571731b9a1f91381a3899a7fd3b7d517af2579ddd`  
+		Last Modified: Tue, 25 Feb 2020 16:30:12 GMT  
+		Size: 159.5 MB (159520328 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `fsharp:10` - linux; arm64 variant v8
 
 ```console
-$ docker pull fsharp@sha256:fe562b8f14147c894f6a58f7d68bfbb443777a5872672f14ee1bf3241eb4cafc
+$ docker pull fsharp@sha256:553658f7400ab160669f6d10c045c8750d961962907ab2cca6b4b064b5176bef
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **179.4 MB (179365426 bytes)**  
+-	Total Size: **183.6 MB (183635679 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c2bcd8650e43915042e9ef183ab9081e6b846541dc1717a2ca62bfcd535a7129`
+-	Image ID: `sha256:e50442fb25be61cf0f07d404fc31f26e7bf43919b6556bba3d2c028bd49de4ce`
 -	Default Command: `["fsharpi"]`
 
 ```dockerfile
@@ -87,11 +87,11 @@ CMD ["bash"]
 LABEL maintainer=Dave Curylo <dave@curylo.org>, Steve Desmond <steve@stevedesmond.ca>
 # Sat, 01 Feb 2020 19:41:48 GMT
 ENV MONO_THREADS_PER_CPU=50
-# Sat, 01 Feb 2020 19:58:06 GMT
-RUN MONO_VERSION=6.4.0.198 &&     FSHARP_VERSION=10.2.3 &&     FSHARP_BASENAME=fsharp-$FSHARP_VERSION &&     FSHARP_ARCHIVE=$FSHARP_VERSION.tar.gz &&     FSHARP_ARCHIVE_URL=https://github.com/fsharp/fsharp/archive/$FSHARP_VERSION.tar.gz &&     export GNUPGHOME="$(mktemp -d)" &&     apt-get update && apt-get --no-install-recommends install -y gnupg dirmngr ca-certificates apt-transport-https &&     apt-key adv --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF &&     echo "deb https://download.mono-project.com/repo/debian stable-buster/snapshots/$MONO_VERSION main" | tee /etc/apt/sources.list.d/mono-official-stable.list &&     apt-get update -y &&     apt-get --no-install-recommends install -y pkg-config make nuget mono-devel msbuild ca-certificates-mono locales &&     rm -rf /var/lib/apt/lists/* &&     echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen && /usr/sbin/locale-gen &&     mkdir -p /tmp/src &&     cd /tmp/src &&     printf "namespace a { class b { public static void Main(string[] args) { new System.Net.WebClient().DownloadFile(\"%s\", \"%s\");}}}" $FSHARP_ARCHIVE_URL $FSHARP_ARCHIVE > download-fsharp.cs &&     mcs download-fsharp.cs && mono download-fsharp.exe && rm download-fsharp.exe download-fsharp.cs &&     tar xf $FSHARP_ARCHIVE &&     cd $FSHARP_BASENAME &&     make &&     make install &&     cd ~ &&     rm -rf /tmp/src /tmp/NuGetScratch ~/.nuget ~/.config ~/.local "$GNUPGHOME" &&     apt-get purge -y make gnupg dirmngr &&     apt-get clean
-# Sat, 01 Feb 2020 19:58:13 GMT
+# Tue, 25 Feb 2020 16:59:52 GMT
+RUN MONO_VERSION=6.8.0.105 &&     FSHARP_VERSION=10.2.3 &&     FSHARP_BASENAME=fsharp-$FSHARP_VERSION &&     FSHARP_ARCHIVE=$FSHARP_VERSION.tar.gz &&     FSHARP_ARCHIVE_URL=https://github.com/fsharp/fsharp/archive/$FSHARP_VERSION.tar.gz &&     export GNUPGHOME="$(mktemp -d)" &&     apt-get update && apt-get --no-install-recommends install -y gnupg dirmngr ca-certificates apt-transport-https &&     apt-key adv --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF &&     echo "deb https://download.mono-project.com/repo/debian stable-buster/snapshots/$MONO_VERSION main" | tee /etc/apt/sources.list.d/mono-official-stable.list &&     apt-get update -y &&     apt-get --no-install-recommends install -y pkg-config make nuget mono-devel msbuild ca-certificates-mono locales &&     rm -rf /var/lib/apt/lists/* &&     echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen && /usr/sbin/locale-gen &&     mkdir -p /tmp/src &&     cd /tmp/src &&     printf "namespace a { class b { public static void Main(string[] args) { new System.Net.WebClient().DownloadFile(\"%s\", \"%s\");}}}" $FSHARP_ARCHIVE_URL $FSHARP_ARCHIVE > download-fsharp.cs &&     mcs download-fsharp.cs && mono download-fsharp.exe && rm download-fsharp.exe download-fsharp.cs &&     tar xf $FSHARP_ARCHIVE &&     cd $FSHARP_BASENAME &&     make &&     make install &&     cd ~ &&     rm -rf /tmp/src /tmp/NuGetScratch ~/.nuget ~/.config ~/.local "$GNUPGHOME" &&     apt-get purge -y make gnupg dirmngr &&     apt-get clean
+# Tue, 25 Feb 2020 17:00:00 GMT
 WORKDIR /root
-# Sat, 01 Feb 2020 19:58:13 GMT
+# Tue, 25 Feb 2020 17:00:01 GMT
 CMD ["fsharpi"]
 ```
 
@@ -100,15 +100,15 @@ CMD ["fsharpi"]
 		Last Modified: Sat, 01 Feb 2020 16:46:28 GMT  
 		Size: 25.9 MB (25850659 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3b49ff480c2931a2c1ea4e0c20919ccacc7790c8331560e7df32af0426639aa1`  
-		Last Modified: Sat, 01 Feb 2020 19:59:26 GMT  
-		Size: 153.5 MB (153514767 bytes)  
+	-	`sha256:413c20827284f5a5853c7f0d360e1ba77ed299bcab941310e5d6e3163d6f98f4`  
+		Last Modified: Tue, 25 Feb 2020 17:01:04 GMT  
+		Size: 157.8 MB (157785020 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-## `fsharp:10.6`
+## `fsharp:10.7`
 
 ```console
-$ docker pull fsharp@sha256:3e7e6b0c2081baa4b5aeefea29f4597bc4eaf72c329f3e0bb6bfdcd53f8e8514
+$ docker pull fsharp@sha256:bd030b87eb02135ca82fe3f161afef9d97487e333ef44f87ceb5a7289c4602c3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -116,17 +116,17 @@ $ docker pull fsharp@sha256:3e7e6b0c2081baa4b5aeefea29f4597bc4eaf72c329f3e0bb6bf
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
-### `fsharp:10.6` - linux; amd64
+### `fsharp:10.7` - linux; amd64
 
 ```console
-$ docker pull fsharp@sha256:0b52c0cbf76202963d47ea751b3f198222383953a9ada903ae2b9973bf3933ae
+$ docker pull fsharp@sha256:b06193158dbe30d1c5ff3153d18f8dc98aaaccee7420e1acec61341eee4121f3
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **182.4 MB (182388429 bytes)**  
+-	Total Size: **186.6 MB (186612588 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e99aaf8b18d835cf1073028a878594a0689536e0b9dd48a300dd3355b0b87d87`
+-	Image ID: `sha256:e924a3b906e85c2e6a003b5527f67d17aa3e970af1f2a89de710255086411dc9`
 -	Default Command: `["fsharpi"]`
 
 ```dockerfile
@@ -138,11 +138,11 @@ CMD ["bash"]
 LABEL maintainer=Dave Curylo <dave@curylo.org>, Steve Desmond <steve@stevedesmond.ca>
 # Sun, 02 Feb 2020 05:33:08 GMT
 ENV MONO_THREADS_PER_CPU=50
-# Sun, 02 Feb 2020 05:45:46 GMT
-RUN MONO_VERSION=6.4.0.198 &&     FSHARP_VERSION=10.2.3 &&     FSHARP_BASENAME=fsharp-$FSHARP_VERSION &&     FSHARP_ARCHIVE=$FSHARP_VERSION.tar.gz &&     FSHARP_ARCHIVE_URL=https://github.com/fsharp/fsharp/archive/$FSHARP_VERSION.tar.gz &&     export GNUPGHOME="$(mktemp -d)" &&     apt-get update && apt-get --no-install-recommends install -y gnupg dirmngr ca-certificates apt-transport-https &&     apt-key adv --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF &&     echo "deb https://download.mono-project.com/repo/debian stable-buster/snapshots/$MONO_VERSION main" | tee /etc/apt/sources.list.d/mono-official-stable.list &&     apt-get update -y &&     apt-get --no-install-recommends install -y pkg-config make nuget mono-devel msbuild ca-certificates-mono locales &&     rm -rf /var/lib/apt/lists/* &&     echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen && /usr/sbin/locale-gen &&     mkdir -p /tmp/src &&     cd /tmp/src &&     printf "namespace a { class b { public static void Main(string[] args) { new System.Net.WebClient().DownloadFile(\"%s\", \"%s\");}}}" $FSHARP_ARCHIVE_URL $FSHARP_ARCHIVE > download-fsharp.cs &&     mcs download-fsharp.cs && mono download-fsharp.exe && rm download-fsharp.exe download-fsharp.cs &&     tar xf $FSHARP_ARCHIVE &&     cd $FSHARP_BASENAME &&     make &&     make install &&     cd ~ &&     rm -rf /tmp/src /tmp/NuGetScratch ~/.nuget ~/.config ~/.local "$GNUPGHOME" &&     apt-get purge -y make gnupg dirmngr &&     apt-get clean
-# Sun, 02 Feb 2020 05:45:46 GMT
+# Tue, 25 Feb 2020 16:28:52 GMT
+RUN MONO_VERSION=6.8.0.105 &&     FSHARP_VERSION=10.2.3 &&     FSHARP_BASENAME=fsharp-$FSHARP_VERSION &&     FSHARP_ARCHIVE=$FSHARP_VERSION.tar.gz &&     FSHARP_ARCHIVE_URL=https://github.com/fsharp/fsharp/archive/$FSHARP_VERSION.tar.gz &&     export GNUPGHOME="$(mktemp -d)" &&     apt-get update && apt-get --no-install-recommends install -y gnupg dirmngr ca-certificates apt-transport-https &&     apt-key adv --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF &&     echo "deb https://download.mono-project.com/repo/debian stable-buster/snapshots/$MONO_VERSION main" | tee /etc/apt/sources.list.d/mono-official-stable.list &&     apt-get update -y &&     apt-get --no-install-recommends install -y pkg-config make nuget mono-devel msbuild ca-certificates-mono locales &&     rm -rf /var/lib/apt/lists/* &&     echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen && /usr/sbin/locale-gen &&     mkdir -p /tmp/src &&     cd /tmp/src &&     printf "namespace a { class b { public static void Main(string[] args) { new System.Net.WebClient().DownloadFile(\"%s\", \"%s\");}}}" $FSHARP_ARCHIVE_URL $FSHARP_ARCHIVE > download-fsharp.cs &&     mcs download-fsharp.cs && mono download-fsharp.exe && rm download-fsharp.exe download-fsharp.cs &&     tar xf $FSHARP_ARCHIVE &&     cd $FSHARP_BASENAME &&     make &&     make install &&     cd ~ &&     rm -rf /tmp/src /tmp/NuGetScratch ~/.nuget ~/.config ~/.local "$GNUPGHOME" &&     apt-get purge -y make gnupg dirmngr &&     apt-get clean
+# Tue, 25 Feb 2020 16:28:53 GMT
 WORKDIR /root
-# Sun, 02 Feb 2020 05:45:46 GMT
+# Tue, 25 Feb 2020 16:28:53 GMT
 CMD ["fsharpi"]
 ```
 
@@ -151,22 +151,22 @@ CMD ["fsharpi"]
 		Last Modified: Sat, 01 Feb 2020 17:26:19 GMT  
 		Size: 27.1 MB (27092260 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8d8061e428b698a6685263603eafec645bf790dd48f02c92caaff550c8cfde76`  
-		Last Modified: Sun, 02 Feb 2020 06:03:40 GMT  
-		Size: 155.3 MB (155296169 bytes)  
+	-	`sha256:d1092c96356c7944201309f571731b9a1f91381a3899a7fd3b7d517af2579ddd`  
+		Last Modified: Tue, 25 Feb 2020 16:30:12 GMT  
+		Size: 159.5 MB (159520328 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `fsharp:10.6` - linux; arm64 variant v8
+### `fsharp:10.7` - linux; arm64 variant v8
 
 ```console
-$ docker pull fsharp@sha256:fe562b8f14147c894f6a58f7d68bfbb443777a5872672f14ee1bf3241eb4cafc
+$ docker pull fsharp@sha256:553658f7400ab160669f6d10c045c8750d961962907ab2cca6b4b064b5176bef
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **179.4 MB (179365426 bytes)**  
+-	Total Size: **183.6 MB (183635679 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c2bcd8650e43915042e9ef183ab9081e6b846541dc1717a2ca62bfcd535a7129`
+-	Image ID: `sha256:e50442fb25be61cf0f07d404fc31f26e7bf43919b6556bba3d2c028bd49de4ce`
 -	Default Command: `["fsharpi"]`
 
 ```dockerfile
@@ -178,11 +178,11 @@ CMD ["bash"]
 LABEL maintainer=Dave Curylo <dave@curylo.org>, Steve Desmond <steve@stevedesmond.ca>
 # Sat, 01 Feb 2020 19:41:48 GMT
 ENV MONO_THREADS_PER_CPU=50
-# Sat, 01 Feb 2020 19:58:06 GMT
-RUN MONO_VERSION=6.4.0.198 &&     FSHARP_VERSION=10.2.3 &&     FSHARP_BASENAME=fsharp-$FSHARP_VERSION &&     FSHARP_ARCHIVE=$FSHARP_VERSION.tar.gz &&     FSHARP_ARCHIVE_URL=https://github.com/fsharp/fsharp/archive/$FSHARP_VERSION.tar.gz &&     export GNUPGHOME="$(mktemp -d)" &&     apt-get update && apt-get --no-install-recommends install -y gnupg dirmngr ca-certificates apt-transport-https &&     apt-key adv --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF &&     echo "deb https://download.mono-project.com/repo/debian stable-buster/snapshots/$MONO_VERSION main" | tee /etc/apt/sources.list.d/mono-official-stable.list &&     apt-get update -y &&     apt-get --no-install-recommends install -y pkg-config make nuget mono-devel msbuild ca-certificates-mono locales &&     rm -rf /var/lib/apt/lists/* &&     echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen && /usr/sbin/locale-gen &&     mkdir -p /tmp/src &&     cd /tmp/src &&     printf "namespace a { class b { public static void Main(string[] args) { new System.Net.WebClient().DownloadFile(\"%s\", \"%s\");}}}" $FSHARP_ARCHIVE_URL $FSHARP_ARCHIVE > download-fsharp.cs &&     mcs download-fsharp.cs && mono download-fsharp.exe && rm download-fsharp.exe download-fsharp.cs &&     tar xf $FSHARP_ARCHIVE &&     cd $FSHARP_BASENAME &&     make &&     make install &&     cd ~ &&     rm -rf /tmp/src /tmp/NuGetScratch ~/.nuget ~/.config ~/.local "$GNUPGHOME" &&     apt-get purge -y make gnupg dirmngr &&     apt-get clean
-# Sat, 01 Feb 2020 19:58:13 GMT
+# Tue, 25 Feb 2020 16:59:52 GMT
+RUN MONO_VERSION=6.8.0.105 &&     FSHARP_VERSION=10.2.3 &&     FSHARP_BASENAME=fsharp-$FSHARP_VERSION &&     FSHARP_ARCHIVE=$FSHARP_VERSION.tar.gz &&     FSHARP_ARCHIVE_URL=https://github.com/fsharp/fsharp/archive/$FSHARP_VERSION.tar.gz &&     export GNUPGHOME="$(mktemp -d)" &&     apt-get update && apt-get --no-install-recommends install -y gnupg dirmngr ca-certificates apt-transport-https &&     apt-key adv --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF &&     echo "deb https://download.mono-project.com/repo/debian stable-buster/snapshots/$MONO_VERSION main" | tee /etc/apt/sources.list.d/mono-official-stable.list &&     apt-get update -y &&     apt-get --no-install-recommends install -y pkg-config make nuget mono-devel msbuild ca-certificates-mono locales &&     rm -rf /var/lib/apt/lists/* &&     echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen && /usr/sbin/locale-gen &&     mkdir -p /tmp/src &&     cd /tmp/src &&     printf "namespace a { class b { public static void Main(string[] args) { new System.Net.WebClient().DownloadFile(\"%s\", \"%s\");}}}" $FSHARP_ARCHIVE_URL $FSHARP_ARCHIVE > download-fsharp.cs &&     mcs download-fsharp.cs && mono download-fsharp.exe && rm download-fsharp.exe download-fsharp.cs &&     tar xf $FSHARP_ARCHIVE &&     cd $FSHARP_BASENAME &&     make &&     make install &&     cd ~ &&     rm -rf /tmp/src /tmp/NuGetScratch ~/.nuget ~/.config ~/.local "$GNUPGHOME" &&     apt-get purge -y make gnupg dirmngr &&     apt-get clean
+# Tue, 25 Feb 2020 17:00:00 GMT
 WORKDIR /root
-# Sat, 01 Feb 2020 19:58:13 GMT
+# Tue, 25 Feb 2020 17:00:01 GMT
 CMD ["fsharpi"]
 ```
 
@@ -191,15 +191,15 @@ CMD ["fsharpi"]
 		Last Modified: Sat, 01 Feb 2020 16:46:28 GMT  
 		Size: 25.9 MB (25850659 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3b49ff480c2931a2c1ea4e0c20919ccacc7790c8331560e7df32af0426639aa1`  
-		Last Modified: Sat, 01 Feb 2020 19:59:26 GMT  
-		Size: 153.5 MB (153514767 bytes)  
+	-	`sha256:413c20827284f5a5853c7f0d360e1ba77ed299bcab941310e5d6e3163d6f98f4`  
+		Last Modified: Tue, 25 Feb 2020 17:01:04 GMT  
+		Size: 157.8 MB (157785020 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-## `fsharp:10.6.0`
+## `fsharp:10.7.0`
 
 ```console
-$ docker pull fsharp@sha256:3e7e6b0c2081baa4b5aeefea29f4597bc4eaf72c329f3e0bb6bfdcd53f8e8514
+$ docker pull fsharp@sha256:bd030b87eb02135ca82fe3f161afef9d97487e333ef44f87ceb5a7289c4602c3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -207,17 +207,17 @@ $ docker pull fsharp@sha256:3e7e6b0c2081baa4b5aeefea29f4597bc4eaf72c329f3e0bb6bf
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
-### `fsharp:10.6.0` - linux; amd64
+### `fsharp:10.7.0` - linux; amd64
 
 ```console
-$ docker pull fsharp@sha256:0b52c0cbf76202963d47ea751b3f198222383953a9ada903ae2b9973bf3933ae
+$ docker pull fsharp@sha256:b06193158dbe30d1c5ff3153d18f8dc98aaaccee7420e1acec61341eee4121f3
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **182.4 MB (182388429 bytes)**  
+-	Total Size: **186.6 MB (186612588 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e99aaf8b18d835cf1073028a878594a0689536e0b9dd48a300dd3355b0b87d87`
+-	Image ID: `sha256:e924a3b906e85c2e6a003b5527f67d17aa3e970af1f2a89de710255086411dc9`
 -	Default Command: `["fsharpi"]`
 
 ```dockerfile
@@ -229,11 +229,11 @@ CMD ["bash"]
 LABEL maintainer=Dave Curylo <dave@curylo.org>, Steve Desmond <steve@stevedesmond.ca>
 # Sun, 02 Feb 2020 05:33:08 GMT
 ENV MONO_THREADS_PER_CPU=50
-# Sun, 02 Feb 2020 05:45:46 GMT
-RUN MONO_VERSION=6.4.0.198 &&     FSHARP_VERSION=10.2.3 &&     FSHARP_BASENAME=fsharp-$FSHARP_VERSION &&     FSHARP_ARCHIVE=$FSHARP_VERSION.tar.gz &&     FSHARP_ARCHIVE_URL=https://github.com/fsharp/fsharp/archive/$FSHARP_VERSION.tar.gz &&     export GNUPGHOME="$(mktemp -d)" &&     apt-get update && apt-get --no-install-recommends install -y gnupg dirmngr ca-certificates apt-transport-https &&     apt-key adv --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF &&     echo "deb https://download.mono-project.com/repo/debian stable-buster/snapshots/$MONO_VERSION main" | tee /etc/apt/sources.list.d/mono-official-stable.list &&     apt-get update -y &&     apt-get --no-install-recommends install -y pkg-config make nuget mono-devel msbuild ca-certificates-mono locales &&     rm -rf /var/lib/apt/lists/* &&     echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen && /usr/sbin/locale-gen &&     mkdir -p /tmp/src &&     cd /tmp/src &&     printf "namespace a { class b { public static void Main(string[] args) { new System.Net.WebClient().DownloadFile(\"%s\", \"%s\");}}}" $FSHARP_ARCHIVE_URL $FSHARP_ARCHIVE > download-fsharp.cs &&     mcs download-fsharp.cs && mono download-fsharp.exe && rm download-fsharp.exe download-fsharp.cs &&     tar xf $FSHARP_ARCHIVE &&     cd $FSHARP_BASENAME &&     make &&     make install &&     cd ~ &&     rm -rf /tmp/src /tmp/NuGetScratch ~/.nuget ~/.config ~/.local "$GNUPGHOME" &&     apt-get purge -y make gnupg dirmngr &&     apt-get clean
-# Sun, 02 Feb 2020 05:45:46 GMT
+# Tue, 25 Feb 2020 16:28:52 GMT
+RUN MONO_VERSION=6.8.0.105 &&     FSHARP_VERSION=10.2.3 &&     FSHARP_BASENAME=fsharp-$FSHARP_VERSION &&     FSHARP_ARCHIVE=$FSHARP_VERSION.tar.gz &&     FSHARP_ARCHIVE_URL=https://github.com/fsharp/fsharp/archive/$FSHARP_VERSION.tar.gz &&     export GNUPGHOME="$(mktemp -d)" &&     apt-get update && apt-get --no-install-recommends install -y gnupg dirmngr ca-certificates apt-transport-https &&     apt-key adv --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF &&     echo "deb https://download.mono-project.com/repo/debian stable-buster/snapshots/$MONO_VERSION main" | tee /etc/apt/sources.list.d/mono-official-stable.list &&     apt-get update -y &&     apt-get --no-install-recommends install -y pkg-config make nuget mono-devel msbuild ca-certificates-mono locales &&     rm -rf /var/lib/apt/lists/* &&     echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen && /usr/sbin/locale-gen &&     mkdir -p /tmp/src &&     cd /tmp/src &&     printf "namespace a { class b { public static void Main(string[] args) { new System.Net.WebClient().DownloadFile(\"%s\", \"%s\");}}}" $FSHARP_ARCHIVE_URL $FSHARP_ARCHIVE > download-fsharp.cs &&     mcs download-fsharp.cs && mono download-fsharp.exe && rm download-fsharp.exe download-fsharp.cs &&     tar xf $FSHARP_ARCHIVE &&     cd $FSHARP_BASENAME &&     make &&     make install &&     cd ~ &&     rm -rf /tmp/src /tmp/NuGetScratch ~/.nuget ~/.config ~/.local "$GNUPGHOME" &&     apt-get purge -y make gnupg dirmngr &&     apt-get clean
+# Tue, 25 Feb 2020 16:28:53 GMT
 WORKDIR /root
-# Sun, 02 Feb 2020 05:45:46 GMT
+# Tue, 25 Feb 2020 16:28:53 GMT
 CMD ["fsharpi"]
 ```
 
@@ -242,22 +242,22 @@ CMD ["fsharpi"]
 		Last Modified: Sat, 01 Feb 2020 17:26:19 GMT  
 		Size: 27.1 MB (27092260 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8d8061e428b698a6685263603eafec645bf790dd48f02c92caaff550c8cfde76`  
-		Last Modified: Sun, 02 Feb 2020 06:03:40 GMT  
-		Size: 155.3 MB (155296169 bytes)  
+	-	`sha256:d1092c96356c7944201309f571731b9a1f91381a3899a7fd3b7d517af2579ddd`  
+		Last Modified: Tue, 25 Feb 2020 16:30:12 GMT  
+		Size: 159.5 MB (159520328 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `fsharp:10.6.0` - linux; arm64 variant v8
+### `fsharp:10.7.0` - linux; arm64 variant v8
 
 ```console
-$ docker pull fsharp@sha256:fe562b8f14147c894f6a58f7d68bfbb443777a5872672f14ee1bf3241eb4cafc
+$ docker pull fsharp@sha256:553658f7400ab160669f6d10c045c8750d961962907ab2cca6b4b064b5176bef
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **179.4 MB (179365426 bytes)**  
+-	Total Size: **183.6 MB (183635679 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c2bcd8650e43915042e9ef183ab9081e6b846541dc1717a2ca62bfcd535a7129`
+-	Image ID: `sha256:e50442fb25be61cf0f07d404fc31f26e7bf43919b6556bba3d2c028bd49de4ce`
 -	Default Command: `["fsharpi"]`
 
 ```dockerfile
@@ -269,11 +269,11 @@ CMD ["bash"]
 LABEL maintainer=Dave Curylo <dave@curylo.org>, Steve Desmond <steve@stevedesmond.ca>
 # Sat, 01 Feb 2020 19:41:48 GMT
 ENV MONO_THREADS_PER_CPU=50
-# Sat, 01 Feb 2020 19:58:06 GMT
-RUN MONO_VERSION=6.4.0.198 &&     FSHARP_VERSION=10.2.3 &&     FSHARP_BASENAME=fsharp-$FSHARP_VERSION &&     FSHARP_ARCHIVE=$FSHARP_VERSION.tar.gz &&     FSHARP_ARCHIVE_URL=https://github.com/fsharp/fsharp/archive/$FSHARP_VERSION.tar.gz &&     export GNUPGHOME="$(mktemp -d)" &&     apt-get update && apt-get --no-install-recommends install -y gnupg dirmngr ca-certificates apt-transport-https &&     apt-key adv --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF &&     echo "deb https://download.mono-project.com/repo/debian stable-buster/snapshots/$MONO_VERSION main" | tee /etc/apt/sources.list.d/mono-official-stable.list &&     apt-get update -y &&     apt-get --no-install-recommends install -y pkg-config make nuget mono-devel msbuild ca-certificates-mono locales &&     rm -rf /var/lib/apt/lists/* &&     echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen && /usr/sbin/locale-gen &&     mkdir -p /tmp/src &&     cd /tmp/src &&     printf "namespace a { class b { public static void Main(string[] args) { new System.Net.WebClient().DownloadFile(\"%s\", \"%s\");}}}" $FSHARP_ARCHIVE_URL $FSHARP_ARCHIVE > download-fsharp.cs &&     mcs download-fsharp.cs && mono download-fsharp.exe && rm download-fsharp.exe download-fsharp.cs &&     tar xf $FSHARP_ARCHIVE &&     cd $FSHARP_BASENAME &&     make &&     make install &&     cd ~ &&     rm -rf /tmp/src /tmp/NuGetScratch ~/.nuget ~/.config ~/.local "$GNUPGHOME" &&     apt-get purge -y make gnupg dirmngr &&     apt-get clean
-# Sat, 01 Feb 2020 19:58:13 GMT
+# Tue, 25 Feb 2020 16:59:52 GMT
+RUN MONO_VERSION=6.8.0.105 &&     FSHARP_VERSION=10.2.3 &&     FSHARP_BASENAME=fsharp-$FSHARP_VERSION &&     FSHARP_ARCHIVE=$FSHARP_VERSION.tar.gz &&     FSHARP_ARCHIVE_URL=https://github.com/fsharp/fsharp/archive/$FSHARP_VERSION.tar.gz &&     export GNUPGHOME="$(mktemp -d)" &&     apt-get update && apt-get --no-install-recommends install -y gnupg dirmngr ca-certificates apt-transport-https &&     apt-key adv --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF &&     echo "deb https://download.mono-project.com/repo/debian stable-buster/snapshots/$MONO_VERSION main" | tee /etc/apt/sources.list.d/mono-official-stable.list &&     apt-get update -y &&     apt-get --no-install-recommends install -y pkg-config make nuget mono-devel msbuild ca-certificates-mono locales &&     rm -rf /var/lib/apt/lists/* &&     echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen && /usr/sbin/locale-gen &&     mkdir -p /tmp/src &&     cd /tmp/src &&     printf "namespace a { class b { public static void Main(string[] args) { new System.Net.WebClient().DownloadFile(\"%s\", \"%s\");}}}" $FSHARP_ARCHIVE_URL $FSHARP_ARCHIVE > download-fsharp.cs &&     mcs download-fsharp.cs && mono download-fsharp.exe && rm download-fsharp.exe download-fsharp.cs &&     tar xf $FSHARP_ARCHIVE &&     cd $FSHARP_BASENAME &&     make &&     make install &&     cd ~ &&     rm -rf /tmp/src /tmp/NuGetScratch ~/.nuget ~/.config ~/.local "$GNUPGHOME" &&     apt-get purge -y make gnupg dirmngr &&     apt-get clean
+# Tue, 25 Feb 2020 17:00:00 GMT
 WORKDIR /root
-# Sat, 01 Feb 2020 19:58:13 GMT
+# Tue, 25 Feb 2020 17:00:01 GMT
 CMD ["fsharpi"]
 ```
 
@@ -282,33 +282,33 @@ CMD ["fsharpi"]
 		Last Modified: Sat, 01 Feb 2020 16:46:28 GMT  
 		Size: 25.9 MB (25850659 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3b49ff480c2931a2c1ea4e0c20919ccacc7790c8331560e7df32af0426639aa1`  
-		Last Modified: Sat, 01 Feb 2020 19:59:26 GMT  
-		Size: 153.5 MB (153514767 bytes)  
+	-	`sha256:413c20827284f5a5853c7f0d360e1ba77ed299bcab941310e5d6e3163d6f98f4`  
+		Last Modified: Tue, 25 Feb 2020 17:01:04 GMT  
+		Size: 157.8 MB (157785020 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-## `fsharp:10.6.0-netcore`
+## `fsharp:10.7.0-netcore`
 
 ```console
-$ docker pull fsharp@sha256:323b86df27d941f90f8ab30a0c318da4f919ec201161e34b458ebba0b06abd03
+$ docker pull fsharp@sha256:8fed3edca80206169bf8dbaffc79b99179114ff2e4437aec5572a28cf283fab1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
 -	Platforms:
 	-	linux; amd64
 
-### `fsharp:10.6.0-netcore` - linux; amd64
+### `fsharp:10.7.0-netcore` - linux; amd64
 
 ```console
-$ docker pull fsharp@sha256:31c6a2dd65c689e335b35c4829e4d7f2ce70c6b28b2b406f8fb06cfc02935fef
+$ docker pull fsharp@sha256:61b2168a6bc53d0d48b79f401d14113a7295c5a4da9d705f4f91043b32eb33c0
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **320.3 MB (320287088 bytes)**  
+-	Total Size: **323.7 MB (323674325 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:329bdd634a759e039732de3ca17756f34d4769a684020104f3b4135afba92684`
--	Default Command: `["dotnet","fsi","--readline","-r","\/usr\/lib\/mono\/4.5\/Mono.Posix.dll"]`
+-	Image ID: `sha256:c08081aa8df1336b18431619df95b16039d5eb4e8229e2252620a3055ad7882a`
+-	Default Command: `["dotnet","fsi"]`
 
 ```dockerfile
 # Sat, 01 Feb 2020 17:20:54 GMT
@@ -319,30 +319,28 @@ CMD ["bash"]
 LABEL maintainer=Dave Curylo <dave@curylo.org>, Steve Desmond <steve@stevedesmond.ca>
 # Sun, 02 Feb 2020 05:33:08 GMT
 ENV MONO_THREADS_PER_CPU=50
-# Sun, 02 Feb 2020 05:45:46 GMT
-RUN MONO_VERSION=6.4.0.198 &&     FSHARP_VERSION=10.2.3 &&     FSHARP_BASENAME=fsharp-$FSHARP_VERSION &&     FSHARP_ARCHIVE=$FSHARP_VERSION.tar.gz &&     FSHARP_ARCHIVE_URL=https://github.com/fsharp/fsharp/archive/$FSHARP_VERSION.tar.gz &&     export GNUPGHOME="$(mktemp -d)" &&     apt-get update && apt-get --no-install-recommends install -y gnupg dirmngr ca-certificates apt-transport-https &&     apt-key adv --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF &&     echo "deb https://download.mono-project.com/repo/debian stable-buster/snapshots/$MONO_VERSION main" | tee /etc/apt/sources.list.d/mono-official-stable.list &&     apt-get update -y &&     apt-get --no-install-recommends install -y pkg-config make nuget mono-devel msbuild ca-certificates-mono locales &&     rm -rf /var/lib/apt/lists/* &&     echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen && /usr/sbin/locale-gen &&     mkdir -p /tmp/src &&     cd /tmp/src &&     printf "namespace a { class b { public static void Main(string[] args) { new System.Net.WebClient().DownloadFile(\"%s\", \"%s\");}}}" $FSHARP_ARCHIVE_URL $FSHARP_ARCHIVE > download-fsharp.cs &&     mcs download-fsharp.cs && mono download-fsharp.exe && rm download-fsharp.exe download-fsharp.cs &&     tar xf $FSHARP_ARCHIVE &&     cd $FSHARP_BASENAME &&     make &&     make install &&     cd ~ &&     rm -rf /tmp/src /tmp/NuGetScratch ~/.nuget ~/.config ~/.local "$GNUPGHOME" &&     apt-get purge -y make gnupg dirmngr &&     apt-get clean
-# Sun, 02 Feb 2020 05:45:46 GMT
+# Tue, 25 Feb 2020 16:28:52 GMT
+RUN MONO_VERSION=6.8.0.105 &&     FSHARP_VERSION=10.2.3 &&     FSHARP_BASENAME=fsharp-$FSHARP_VERSION &&     FSHARP_ARCHIVE=$FSHARP_VERSION.tar.gz &&     FSHARP_ARCHIVE_URL=https://github.com/fsharp/fsharp/archive/$FSHARP_VERSION.tar.gz &&     export GNUPGHOME="$(mktemp -d)" &&     apt-get update && apt-get --no-install-recommends install -y gnupg dirmngr ca-certificates apt-transport-https &&     apt-key adv --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF &&     echo "deb https://download.mono-project.com/repo/debian stable-buster/snapshots/$MONO_VERSION main" | tee /etc/apt/sources.list.d/mono-official-stable.list &&     apt-get update -y &&     apt-get --no-install-recommends install -y pkg-config make nuget mono-devel msbuild ca-certificates-mono locales &&     rm -rf /var/lib/apt/lists/* &&     echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen && /usr/sbin/locale-gen &&     mkdir -p /tmp/src &&     cd /tmp/src &&     printf "namespace a { class b { public static void Main(string[] args) { new System.Net.WebClient().DownloadFile(\"%s\", \"%s\");}}}" $FSHARP_ARCHIVE_URL $FSHARP_ARCHIVE > download-fsharp.cs &&     mcs download-fsharp.cs && mono download-fsharp.exe && rm download-fsharp.exe download-fsharp.cs &&     tar xf $FSHARP_ARCHIVE &&     cd $FSHARP_BASENAME &&     make &&     make install &&     cd ~ &&     rm -rf /tmp/src /tmp/NuGetScratch ~/.nuget ~/.config ~/.local "$GNUPGHOME" &&     apt-get purge -y make gnupg dirmngr &&     apt-get clean
+# Tue, 25 Feb 2020 16:28:53 GMT
 WORKDIR /root
-# Sun, 02 Feb 2020 05:45:46 GMT
+# Tue, 25 Feb 2020 16:28:53 GMT
 CMD ["fsharpi"]
-# Sun, 02 Feb 2020 06:02:12 GMT
+# Tue, 25 Feb 2020 16:29:04 GMT
 LABEL maintainer=Dave Curylo <dave@curylo.org>, Steve Desmond <steve@stevedesmond.ca>
-# Sun, 02 Feb 2020 06:02:12 GMT
+# Tue, 25 Feb 2020 16:29:04 GMT
 ENV FrameworkPathOverride=/usr/lib/mono/4.7.2-api/
-# Sun, 02 Feb 2020 06:02:12 GMT
-ENV NUGET_XMLDOC_MODE=skip
-# Sun, 02 Feb 2020 06:02:23 GMT
+# Tue, 25 Feb 2020 16:29:05 GMT
+ENV NUGET_XMLDOC_MODE=skip DOTNET_RUNNING_IN_CONTAINER=true DOTNET_USE_POLLING_FILE_WATCHER=true
+# Tue, 25 Feb 2020 16:29:12 GMT
 RUN apt-get update &&     apt-get --no-install-recommends install -y     curl     libunwind8     gettext     apt-transport-https     libc6     libcurl4     libgcc1     libgssapi-krb5-2     libicu63     liblttng-ust0     libssl1.1     libstdc++6     libunwind8     libuuid1     zlib1g &&     rm -rf /var/lib/apt/lists/*
-# Sun, 02 Feb 2020 06:02:43 GMT
-RUN DOTNET_SDK_VERSION=3.0.100 &&     DOTNET_SDK_DOWNLOAD_URL=https://dotnetcli.blob.core.windows.net/dotnet/Sdk/$DOTNET_SDK_VERSION/dotnet-sdk-$DOTNET_SDK_VERSION-linux-x64.tar.gz &&     DOTNET_SDK_DOWNLOAD_SHA=766da31f9a0bcfbf0f12c91ea68354eb509ac2111879d55b656f19299c6ea1c005d31460dac7c2a4ef82b3edfea30232c82ba301fb52c0ff268d3e3a1b73d8f7 &&     curl -SL $DOTNET_SDK_DOWNLOAD_URL --output dotnet.tar.gz &&     echo "$DOTNET_SDK_DOWNLOAD_SHA dotnet.tar.gz" | sha512sum -c - &&     mkdir -p /usr/share/dotnet &&     tar -zxf dotnet.tar.gz -C /usr/share/dotnet &&     rm dotnet.tar.gz &&     ln -s /usr/share/dotnet/dotnet /usr/bin/dotnet
-# Sun, 02 Feb 2020 06:02:43 GMT
-ENV DOTNET_CLI_TELEMETRY_OPTOUT=1     DOTNET_RUNNING_IN_CONTAINER=true     DOTNET_USE_POLLING_FILE_WATCHER=true     NUGET_XMLDOC_MODE=skip
-# Sun, 02 Feb 2020 06:02:46 GMT
+# Tue, 25 Feb 2020 16:29:29 GMT
+RUN DOTNET_SDK_VERSION=3.1.102 &&     DOTNET_SDK_DOWNLOAD_URL=https://dotnetcli.blob.core.windows.net/dotnet/Sdk/$DOTNET_SDK_VERSION/dotnet-sdk-$DOTNET_SDK_VERSION-linux-x64.tar.gz &&     DOTNET_SDK_DOWNLOAD_SHA=9cacdc9700468a915e6fa51a3e5539b3519dd35b13e7f9d6c4dd0077e298baac0e50ad1880181df6781ef1dc64a232e9f78ad8e4494022987d12812c4ca15f29 &&     curl -SL $DOTNET_SDK_DOWNLOAD_URL --output dotnet.tar.gz &&     echo "$DOTNET_SDK_DOWNLOAD_SHA dotnet.tar.gz" | sha512sum -c - &&     mkdir -p /usr/share/dotnet &&     tar -zxf dotnet.tar.gz -C /usr/share/dotnet &&     rm dotnet.tar.gz &&     ln -s /usr/share/dotnet/dotnet /usr/bin/dotnet
+# Tue, 25 Feb 2020 16:29:31 GMT
 RUN mkdir warmup &&     cd warmup &&     dotnet new &&     cd - &&     rm -rf warmup /tmp/NuGetScratch
-# Sun, 02 Feb 2020 06:02:46 GMT
+# Tue, 25 Feb 2020 16:29:32 GMT
 WORKDIR /root
-# Sun, 02 Feb 2020 06:02:46 GMT
-CMD ["dotnet" "fsi" "--readline" "-r" "/usr/lib/mono/4.5/Mono.Posix.dll"]
+# Tue, 25 Feb 2020 16:29:32 GMT
+CMD ["dotnet" "fsi"]
 ```
 
 -	Layers:
@@ -350,45 +348,45 @@ CMD ["dotnet" "fsi" "--readline" "-r" "/usr/lib/mono/4.5/Mono.Posix.dll"]
 		Last Modified: Sat, 01 Feb 2020 17:26:19 GMT  
 		Size: 27.1 MB (27092260 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8d8061e428b698a6685263603eafec645bf790dd48f02c92caaff550c8cfde76`  
-		Last Modified: Sun, 02 Feb 2020 06:03:40 GMT  
-		Size: 155.3 MB (155296169 bytes)  
+	-	`sha256:d1092c96356c7944201309f571731b9a1f91381a3899a7fd3b7d517af2579ddd`  
+		Last Modified: Tue, 25 Feb 2020 16:30:12 GMT  
+		Size: 159.5 MB (159520328 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:270afdae51456250d21c977f7e15ee8cfb19686e296683ae9d7304537ccec11c`  
-		Last Modified: Sun, 02 Feb 2020 06:04:51 GMT  
-		Size: 17.9 MB (17936475 bytes)  
+	-	`sha256:e9513ff1a3c176baf9bbc2c37c57403f1a1555cfef512edb466530a36ca03353`  
+		Last Modified: Tue, 25 Feb 2020 16:30:21 GMT  
+		Size: 17.2 MB (17200971 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:11dd1e17be529a835ca0a02e96d0bf42dc6f3091a1f3977fc9ad2651d73e98ab`  
-		Last Modified: Sun, 02 Feb 2020 06:05:17 GMT  
-		Size: 116.1 MB (116069384 bytes)  
+	-	`sha256:85c3def20eec05af62aa69ed099463898214d7b0ddab0a5d80b883cb35d5dfed`  
+		Last Modified: Tue, 25 Feb 2020 16:30:36 GMT  
+		Size: 115.9 MB (115919152 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a56133c8515a5678e89bcc53306ca7c3d8df1fac37ac829f4849436ec81eed2c`  
-		Last Modified: Sun, 02 Feb 2020 06:04:46 GMT  
-		Size: 3.9 MB (3892800 bytes)  
+	-	`sha256:43c66d24efed582c0d97db4cf5ea6208b1fccbe76bc53b9e3b9f1aaf754b3a28`  
+		Last Modified: Tue, 25 Feb 2020 16:30:18 GMT  
+		Size: 3.9 MB (3941614 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-## `fsharp:10.6-netcore`
+## `fsharp:10.7-netcore`
 
 ```console
-$ docker pull fsharp@sha256:323b86df27d941f90f8ab30a0c318da4f919ec201161e34b458ebba0b06abd03
+$ docker pull fsharp@sha256:8fed3edca80206169bf8dbaffc79b99179114ff2e4437aec5572a28cf283fab1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
 -	Platforms:
 	-	linux; amd64
 
-### `fsharp:10.6-netcore` - linux; amd64
+### `fsharp:10.7-netcore` - linux; amd64
 
 ```console
-$ docker pull fsharp@sha256:31c6a2dd65c689e335b35c4829e4d7f2ce70c6b28b2b406f8fb06cfc02935fef
+$ docker pull fsharp@sha256:61b2168a6bc53d0d48b79f401d14113a7295c5a4da9d705f4f91043b32eb33c0
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **320.3 MB (320287088 bytes)**  
+-	Total Size: **323.7 MB (323674325 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:329bdd634a759e039732de3ca17756f34d4769a684020104f3b4135afba92684`
--	Default Command: `["dotnet","fsi","--readline","-r","\/usr\/lib\/mono\/4.5\/Mono.Posix.dll"]`
+-	Image ID: `sha256:c08081aa8df1336b18431619df95b16039d5eb4e8229e2252620a3055ad7882a`
+-	Default Command: `["dotnet","fsi"]`
 
 ```dockerfile
 # Sat, 01 Feb 2020 17:20:54 GMT
@@ -399,30 +397,28 @@ CMD ["bash"]
 LABEL maintainer=Dave Curylo <dave@curylo.org>, Steve Desmond <steve@stevedesmond.ca>
 # Sun, 02 Feb 2020 05:33:08 GMT
 ENV MONO_THREADS_PER_CPU=50
-# Sun, 02 Feb 2020 05:45:46 GMT
-RUN MONO_VERSION=6.4.0.198 &&     FSHARP_VERSION=10.2.3 &&     FSHARP_BASENAME=fsharp-$FSHARP_VERSION &&     FSHARP_ARCHIVE=$FSHARP_VERSION.tar.gz &&     FSHARP_ARCHIVE_URL=https://github.com/fsharp/fsharp/archive/$FSHARP_VERSION.tar.gz &&     export GNUPGHOME="$(mktemp -d)" &&     apt-get update && apt-get --no-install-recommends install -y gnupg dirmngr ca-certificates apt-transport-https &&     apt-key adv --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF &&     echo "deb https://download.mono-project.com/repo/debian stable-buster/snapshots/$MONO_VERSION main" | tee /etc/apt/sources.list.d/mono-official-stable.list &&     apt-get update -y &&     apt-get --no-install-recommends install -y pkg-config make nuget mono-devel msbuild ca-certificates-mono locales &&     rm -rf /var/lib/apt/lists/* &&     echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen && /usr/sbin/locale-gen &&     mkdir -p /tmp/src &&     cd /tmp/src &&     printf "namespace a { class b { public static void Main(string[] args) { new System.Net.WebClient().DownloadFile(\"%s\", \"%s\");}}}" $FSHARP_ARCHIVE_URL $FSHARP_ARCHIVE > download-fsharp.cs &&     mcs download-fsharp.cs && mono download-fsharp.exe && rm download-fsharp.exe download-fsharp.cs &&     tar xf $FSHARP_ARCHIVE &&     cd $FSHARP_BASENAME &&     make &&     make install &&     cd ~ &&     rm -rf /tmp/src /tmp/NuGetScratch ~/.nuget ~/.config ~/.local "$GNUPGHOME" &&     apt-get purge -y make gnupg dirmngr &&     apt-get clean
-# Sun, 02 Feb 2020 05:45:46 GMT
+# Tue, 25 Feb 2020 16:28:52 GMT
+RUN MONO_VERSION=6.8.0.105 &&     FSHARP_VERSION=10.2.3 &&     FSHARP_BASENAME=fsharp-$FSHARP_VERSION &&     FSHARP_ARCHIVE=$FSHARP_VERSION.tar.gz &&     FSHARP_ARCHIVE_URL=https://github.com/fsharp/fsharp/archive/$FSHARP_VERSION.tar.gz &&     export GNUPGHOME="$(mktemp -d)" &&     apt-get update && apt-get --no-install-recommends install -y gnupg dirmngr ca-certificates apt-transport-https &&     apt-key adv --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF &&     echo "deb https://download.mono-project.com/repo/debian stable-buster/snapshots/$MONO_VERSION main" | tee /etc/apt/sources.list.d/mono-official-stable.list &&     apt-get update -y &&     apt-get --no-install-recommends install -y pkg-config make nuget mono-devel msbuild ca-certificates-mono locales &&     rm -rf /var/lib/apt/lists/* &&     echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen && /usr/sbin/locale-gen &&     mkdir -p /tmp/src &&     cd /tmp/src &&     printf "namespace a { class b { public static void Main(string[] args) { new System.Net.WebClient().DownloadFile(\"%s\", \"%s\");}}}" $FSHARP_ARCHIVE_URL $FSHARP_ARCHIVE > download-fsharp.cs &&     mcs download-fsharp.cs && mono download-fsharp.exe && rm download-fsharp.exe download-fsharp.cs &&     tar xf $FSHARP_ARCHIVE &&     cd $FSHARP_BASENAME &&     make &&     make install &&     cd ~ &&     rm -rf /tmp/src /tmp/NuGetScratch ~/.nuget ~/.config ~/.local "$GNUPGHOME" &&     apt-get purge -y make gnupg dirmngr &&     apt-get clean
+# Tue, 25 Feb 2020 16:28:53 GMT
 WORKDIR /root
-# Sun, 02 Feb 2020 05:45:46 GMT
+# Tue, 25 Feb 2020 16:28:53 GMT
 CMD ["fsharpi"]
-# Sun, 02 Feb 2020 06:02:12 GMT
+# Tue, 25 Feb 2020 16:29:04 GMT
 LABEL maintainer=Dave Curylo <dave@curylo.org>, Steve Desmond <steve@stevedesmond.ca>
-# Sun, 02 Feb 2020 06:02:12 GMT
+# Tue, 25 Feb 2020 16:29:04 GMT
 ENV FrameworkPathOverride=/usr/lib/mono/4.7.2-api/
-# Sun, 02 Feb 2020 06:02:12 GMT
-ENV NUGET_XMLDOC_MODE=skip
-# Sun, 02 Feb 2020 06:02:23 GMT
+# Tue, 25 Feb 2020 16:29:05 GMT
+ENV NUGET_XMLDOC_MODE=skip DOTNET_RUNNING_IN_CONTAINER=true DOTNET_USE_POLLING_FILE_WATCHER=true
+# Tue, 25 Feb 2020 16:29:12 GMT
 RUN apt-get update &&     apt-get --no-install-recommends install -y     curl     libunwind8     gettext     apt-transport-https     libc6     libcurl4     libgcc1     libgssapi-krb5-2     libicu63     liblttng-ust0     libssl1.1     libstdc++6     libunwind8     libuuid1     zlib1g &&     rm -rf /var/lib/apt/lists/*
-# Sun, 02 Feb 2020 06:02:43 GMT
-RUN DOTNET_SDK_VERSION=3.0.100 &&     DOTNET_SDK_DOWNLOAD_URL=https://dotnetcli.blob.core.windows.net/dotnet/Sdk/$DOTNET_SDK_VERSION/dotnet-sdk-$DOTNET_SDK_VERSION-linux-x64.tar.gz &&     DOTNET_SDK_DOWNLOAD_SHA=766da31f9a0bcfbf0f12c91ea68354eb509ac2111879d55b656f19299c6ea1c005d31460dac7c2a4ef82b3edfea30232c82ba301fb52c0ff268d3e3a1b73d8f7 &&     curl -SL $DOTNET_SDK_DOWNLOAD_URL --output dotnet.tar.gz &&     echo "$DOTNET_SDK_DOWNLOAD_SHA dotnet.tar.gz" | sha512sum -c - &&     mkdir -p /usr/share/dotnet &&     tar -zxf dotnet.tar.gz -C /usr/share/dotnet &&     rm dotnet.tar.gz &&     ln -s /usr/share/dotnet/dotnet /usr/bin/dotnet
-# Sun, 02 Feb 2020 06:02:43 GMT
-ENV DOTNET_CLI_TELEMETRY_OPTOUT=1     DOTNET_RUNNING_IN_CONTAINER=true     DOTNET_USE_POLLING_FILE_WATCHER=true     NUGET_XMLDOC_MODE=skip
-# Sun, 02 Feb 2020 06:02:46 GMT
+# Tue, 25 Feb 2020 16:29:29 GMT
+RUN DOTNET_SDK_VERSION=3.1.102 &&     DOTNET_SDK_DOWNLOAD_URL=https://dotnetcli.blob.core.windows.net/dotnet/Sdk/$DOTNET_SDK_VERSION/dotnet-sdk-$DOTNET_SDK_VERSION-linux-x64.tar.gz &&     DOTNET_SDK_DOWNLOAD_SHA=9cacdc9700468a915e6fa51a3e5539b3519dd35b13e7f9d6c4dd0077e298baac0e50ad1880181df6781ef1dc64a232e9f78ad8e4494022987d12812c4ca15f29 &&     curl -SL $DOTNET_SDK_DOWNLOAD_URL --output dotnet.tar.gz &&     echo "$DOTNET_SDK_DOWNLOAD_SHA dotnet.tar.gz" | sha512sum -c - &&     mkdir -p /usr/share/dotnet &&     tar -zxf dotnet.tar.gz -C /usr/share/dotnet &&     rm dotnet.tar.gz &&     ln -s /usr/share/dotnet/dotnet /usr/bin/dotnet
+# Tue, 25 Feb 2020 16:29:31 GMT
 RUN mkdir warmup &&     cd warmup &&     dotnet new &&     cd - &&     rm -rf warmup /tmp/NuGetScratch
-# Sun, 02 Feb 2020 06:02:46 GMT
+# Tue, 25 Feb 2020 16:29:32 GMT
 WORKDIR /root
-# Sun, 02 Feb 2020 06:02:46 GMT
-CMD ["dotnet" "fsi" "--readline" "-r" "/usr/lib/mono/4.5/Mono.Posix.dll"]
+# Tue, 25 Feb 2020 16:29:32 GMT
+CMD ["dotnet" "fsi"]
 ```
 
 -	Layers:
@@ -430,27 +426,27 @@ CMD ["dotnet" "fsi" "--readline" "-r" "/usr/lib/mono/4.5/Mono.Posix.dll"]
 		Last Modified: Sat, 01 Feb 2020 17:26:19 GMT  
 		Size: 27.1 MB (27092260 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8d8061e428b698a6685263603eafec645bf790dd48f02c92caaff550c8cfde76`  
-		Last Modified: Sun, 02 Feb 2020 06:03:40 GMT  
-		Size: 155.3 MB (155296169 bytes)  
+	-	`sha256:d1092c96356c7944201309f571731b9a1f91381a3899a7fd3b7d517af2579ddd`  
+		Last Modified: Tue, 25 Feb 2020 16:30:12 GMT  
+		Size: 159.5 MB (159520328 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:270afdae51456250d21c977f7e15ee8cfb19686e296683ae9d7304537ccec11c`  
-		Last Modified: Sun, 02 Feb 2020 06:04:51 GMT  
-		Size: 17.9 MB (17936475 bytes)  
+	-	`sha256:e9513ff1a3c176baf9bbc2c37c57403f1a1555cfef512edb466530a36ca03353`  
+		Last Modified: Tue, 25 Feb 2020 16:30:21 GMT  
+		Size: 17.2 MB (17200971 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:11dd1e17be529a835ca0a02e96d0bf42dc6f3091a1f3977fc9ad2651d73e98ab`  
-		Last Modified: Sun, 02 Feb 2020 06:05:17 GMT  
-		Size: 116.1 MB (116069384 bytes)  
+	-	`sha256:85c3def20eec05af62aa69ed099463898214d7b0ddab0a5d80b883cb35d5dfed`  
+		Last Modified: Tue, 25 Feb 2020 16:30:36 GMT  
+		Size: 115.9 MB (115919152 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a56133c8515a5678e89bcc53306ca7c3d8df1fac37ac829f4849436ec81eed2c`  
-		Last Modified: Sun, 02 Feb 2020 06:04:46 GMT  
-		Size: 3.9 MB (3892800 bytes)  
+	-	`sha256:43c66d24efed582c0d97db4cf5ea6208b1fccbe76bc53b9e3b9f1aaf754b3a28`  
+		Last Modified: Tue, 25 Feb 2020 16:30:18 GMT  
+		Size: 3.9 MB (3941614 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `fsharp:10-netcore`
 
 ```console
-$ docker pull fsharp@sha256:323b86df27d941f90f8ab30a0c318da4f919ec201161e34b458ebba0b06abd03
+$ docker pull fsharp@sha256:8fed3edca80206169bf8dbaffc79b99179114ff2e4437aec5572a28cf283fab1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -460,15 +456,15 @@ $ docker pull fsharp@sha256:323b86df27d941f90f8ab30a0c318da4f919ec201161e34b458e
 ### `fsharp:10-netcore` - linux; amd64
 
 ```console
-$ docker pull fsharp@sha256:31c6a2dd65c689e335b35c4829e4d7f2ce70c6b28b2b406f8fb06cfc02935fef
+$ docker pull fsharp@sha256:61b2168a6bc53d0d48b79f401d14113a7295c5a4da9d705f4f91043b32eb33c0
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **320.3 MB (320287088 bytes)**  
+-	Total Size: **323.7 MB (323674325 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:329bdd634a759e039732de3ca17756f34d4769a684020104f3b4135afba92684`
--	Default Command: `["dotnet","fsi","--readline","-r","\/usr\/lib\/mono\/4.5\/Mono.Posix.dll"]`
+-	Image ID: `sha256:c08081aa8df1336b18431619df95b16039d5eb4e8229e2252620a3055ad7882a`
+-	Default Command: `["dotnet","fsi"]`
 
 ```dockerfile
 # Sat, 01 Feb 2020 17:20:54 GMT
@@ -479,30 +475,28 @@ CMD ["bash"]
 LABEL maintainer=Dave Curylo <dave@curylo.org>, Steve Desmond <steve@stevedesmond.ca>
 # Sun, 02 Feb 2020 05:33:08 GMT
 ENV MONO_THREADS_PER_CPU=50
-# Sun, 02 Feb 2020 05:45:46 GMT
-RUN MONO_VERSION=6.4.0.198 &&     FSHARP_VERSION=10.2.3 &&     FSHARP_BASENAME=fsharp-$FSHARP_VERSION &&     FSHARP_ARCHIVE=$FSHARP_VERSION.tar.gz &&     FSHARP_ARCHIVE_URL=https://github.com/fsharp/fsharp/archive/$FSHARP_VERSION.tar.gz &&     export GNUPGHOME="$(mktemp -d)" &&     apt-get update && apt-get --no-install-recommends install -y gnupg dirmngr ca-certificates apt-transport-https &&     apt-key adv --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF &&     echo "deb https://download.mono-project.com/repo/debian stable-buster/snapshots/$MONO_VERSION main" | tee /etc/apt/sources.list.d/mono-official-stable.list &&     apt-get update -y &&     apt-get --no-install-recommends install -y pkg-config make nuget mono-devel msbuild ca-certificates-mono locales &&     rm -rf /var/lib/apt/lists/* &&     echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen && /usr/sbin/locale-gen &&     mkdir -p /tmp/src &&     cd /tmp/src &&     printf "namespace a { class b { public static void Main(string[] args) { new System.Net.WebClient().DownloadFile(\"%s\", \"%s\");}}}" $FSHARP_ARCHIVE_URL $FSHARP_ARCHIVE > download-fsharp.cs &&     mcs download-fsharp.cs && mono download-fsharp.exe && rm download-fsharp.exe download-fsharp.cs &&     tar xf $FSHARP_ARCHIVE &&     cd $FSHARP_BASENAME &&     make &&     make install &&     cd ~ &&     rm -rf /tmp/src /tmp/NuGetScratch ~/.nuget ~/.config ~/.local "$GNUPGHOME" &&     apt-get purge -y make gnupg dirmngr &&     apt-get clean
-# Sun, 02 Feb 2020 05:45:46 GMT
+# Tue, 25 Feb 2020 16:28:52 GMT
+RUN MONO_VERSION=6.8.0.105 &&     FSHARP_VERSION=10.2.3 &&     FSHARP_BASENAME=fsharp-$FSHARP_VERSION &&     FSHARP_ARCHIVE=$FSHARP_VERSION.tar.gz &&     FSHARP_ARCHIVE_URL=https://github.com/fsharp/fsharp/archive/$FSHARP_VERSION.tar.gz &&     export GNUPGHOME="$(mktemp -d)" &&     apt-get update && apt-get --no-install-recommends install -y gnupg dirmngr ca-certificates apt-transport-https &&     apt-key adv --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF &&     echo "deb https://download.mono-project.com/repo/debian stable-buster/snapshots/$MONO_VERSION main" | tee /etc/apt/sources.list.d/mono-official-stable.list &&     apt-get update -y &&     apt-get --no-install-recommends install -y pkg-config make nuget mono-devel msbuild ca-certificates-mono locales &&     rm -rf /var/lib/apt/lists/* &&     echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen && /usr/sbin/locale-gen &&     mkdir -p /tmp/src &&     cd /tmp/src &&     printf "namespace a { class b { public static void Main(string[] args) { new System.Net.WebClient().DownloadFile(\"%s\", \"%s\");}}}" $FSHARP_ARCHIVE_URL $FSHARP_ARCHIVE > download-fsharp.cs &&     mcs download-fsharp.cs && mono download-fsharp.exe && rm download-fsharp.exe download-fsharp.cs &&     tar xf $FSHARP_ARCHIVE &&     cd $FSHARP_BASENAME &&     make &&     make install &&     cd ~ &&     rm -rf /tmp/src /tmp/NuGetScratch ~/.nuget ~/.config ~/.local "$GNUPGHOME" &&     apt-get purge -y make gnupg dirmngr &&     apt-get clean
+# Tue, 25 Feb 2020 16:28:53 GMT
 WORKDIR /root
-# Sun, 02 Feb 2020 05:45:46 GMT
+# Tue, 25 Feb 2020 16:28:53 GMT
 CMD ["fsharpi"]
-# Sun, 02 Feb 2020 06:02:12 GMT
+# Tue, 25 Feb 2020 16:29:04 GMT
 LABEL maintainer=Dave Curylo <dave@curylo.org>, Steve Desmond <steve@stevedesmond.ca>
-# Sun, 02 Feb 2020 06:02:12 GMT
+# Tue, 25 Feb 2020 16:29:04 GMT
 ENV FrameworkPathOverride=/usr/lib/mono/4.7.2-api/
-# Sun, 02 Feb 2020 06:02:12 GMT
-ENV NUGET_XMLDOC_MODE=skip
-# Sun, 02 Feb 2020 06:02:23 GMT
+# Tue, 25 Feb 2020 16:29:05 GMT
+ENV NUGET_XMLDOC_MODE=skip DOTNET_RUNNING_IN_CONTAINER=true DOTNET_USE_POLLING_FILE_WATCHER=true
+# Tue, 25 Feb 2020 16:29:12 GMT
 RUN apt-get update &&     apt-get --no-install-recommends install -y     curl     libunwind8     gettext     apt-transport-https     libc6     libcurl4     libgcc1     libgssapi-krb5-2     libicu63     liblttng-ust0     libssl1.1     libstdc++6     libunwind8     libuuid1     zlib1g &&     rm -rf /var/lib/apt/lists/*
-# Sun, 02 Feb 2020 06:02:43 GMT
-RUN DOTNET_SDK_VERSION=3.0.100 &&     DOTNET_SDK_DOWNLOAD_URL=https://dotnetcli.blob.core.windows.net/dotnet/Sdk/$DOTNET_SDK_VERSION/dotnet-sdk-$DOTNET_SDK_VERSION-linux-x64.tar.gz &&     DOTNET_SDK_DOWNLOAD_SHA=766da31f9a0bcfbf0f12c91ea68354eb509ac2111879d55b656f19299c6ea1c005d31460dac7c2a4ef82b3edfea30232c82ba301fb52c0ff268d3e3a1b73d8f7 &&     curl -SL $DOTNET_SDK_DOWNLOAD_URL --output dotnet.tar.gz &&     echo "$DOTNET_SDK_DOWNLOAD_SHA dotnet.tar.gz" | sha512sum -c - &&     mkdir -p /usr/share/dotnet &&     tar -zxf dotnet.tar.gz -C /usr/share/dotnet &&     rm dotnet.tar.gz &&     ln -s /usr/share/dotnet/dotnet /usr/bin/dotnet
-# Sun, 02 Feb 2020 06:02:43 GMT
-ENV DOTNET_CLI_TELEMETRY_OPTOUT=1     DOTNET_RUNNING_IN_CONTAINER=true     DOTNET_USE_POLLING_FILE_WATCHER=true     NUGET_XMLDOC_MODE=skip
-# Sun, 02 Feb 2020 06:02:46 GMT
+# Tue, 25 Feb 2020 16:29:29 GMT
+RUN DOTNET_SDK_VERSION=3.1.102 &&     DOTNET_SDK_DOWNLOAD_URL=https://dotnetcli.blob.core.windows.net/dotnet/Sdk/$DOTNET_SDK_VERSION/dotnet-sdk-$DOTNET_SDK_VERSION-linux-x64.tar.gz &&     DOTNET_SDK_DOWNLOAD_SHA=9cacdc9700468a915e6fa51a3e5539b3519dd35b13e7f9d6c4dd0077e298baac0e50ad1880181df6781ef1dc64a232e9f78ad8e4494022987d12812c4ca15f29 &&     curl -SL $DOTNET_SDK_DOWNLOAD_URL --output dotnet.tar.gz &&     echo "$DOTNET_SDK_DOWNLOAD_SHA dotnet.tar.gz" | sha512sum -c - &&     mkdir -p /usr/share/dotnet &&     tar -zxf dotnet.tar.gz -C /usr/share/dotnet &&     rm dotnet.tar.gz &&     ln -s /usr/share/dotnet/dotnet /usr/bin/dotnet
+# Tue, 25 Feb 2020 16:29:31 GMT
 RUN mkdir warmup &&     cd warmup &&     dotnet new &&     cd - &&     rm -rf warmup /tmp/NuGetScratch
-# Sun, 02 Feb 2020 06:02:46 GMT
+# Tue, 25 Feb 2020 16:29:32 GMT
 WORKDIR /root
-# Sun, 02 Feb 2020 06:02:46 GMT
-CMD ["dotnet" "fsi" "--readline" "-r" "/usr/lib/mono/4.5/Mono.Posix.dll"]
+# Tue, 25 Feb 2020 16:29:32 GMT
+CMD ["dotnet" "fsi"]
 ```
 
 -	Layers:
@@ -510,21 +504,21 @@ CMD ["dotnet" "fsi" "--readline" "-r" "/usr/lib/mono/4.5/Mono.Posix.dll"]
 		Last Modified: Sat, 01 Feb 2020 17:26:19 GMT  
 		Size: 27.1 MB (27092260 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8d8061e428b698a6685263603eafec645bf790dd48f02c92caaff550c8cfde76`  
-		Last Modified: Sun, 02 Feb 2020 06:03:40 GMT  
-		Size: 155.3 MB (155296169 bytes)  
+	-	`sha256:d1092c96356c7944201309f571731b9a1f91381a3899a7fd3b7d517af2579ddd`  
+		Last Modified: Tue, 25 Feb 2020 16:30:12 GMT  
+		Size: 159.5 MB (159520328 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:270afdae51456250d21c977f7e15ee8cfb19686e296683ae9d7304537ccec11c`  
-		Last Modified: Sun, 02 Feb 2020 06:04:51 GMT  
-		Size: 17.9 MB (17936475 bytes)  
+	-	`sha256:e9513ff1a3c176baf9bbc2c37c57403f1a1555cfef512edb466530a36ca03353`  
+		Last Modified: Tue, 25 Feb 2020 16:30:21 GMT  
+		Size: 17.2 MB (17200971 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:11dd1e17be529a835ca0a02e96d0bf42dc6f3091a1f3977fc9ad2651d73e98ab`  
-		Last Modified: Sun, 02 Feb 2020 06:05:17 GMT  
-		Size: 116.1 MB (116069384 bytes)  
+	-	`sha256:85c3def20eec05af62aa69ed099463898214d7b0ddab0a5d80b883cb35d5dfed`  
+		Last Modified: Tue, 25 Feb 2020 16:30:36 GMT  
+		Size: 115.9 MB (115919152 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a56133c8515a5678e89bcc53306ca7c3d8df1fac37ac829f4849436ec81eed2c`  
-		Last Modified: Sun, 02 Feb 2020 06:04:46 GMT  
-		Size: 3.9 MB (3892800 bytes)  
+	-	`sha256:43c66d24efed582c0d97db4cf5ea6208b1fccbe76bc53b9e3b9f1aaf754b3a28`  
+		Last Modified: Tue, 25 Feb 2020 16:30:18 GMT  
+		Size: 3.9 MB (3941614 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `fsharp:4`
@@ -680,7 +674,7 @@ CMD ["fsharpi"]
 ## `fsharp:latest`
 
 ```console
-$ docker pull fsharp@sha256:3e7e6b0c2081baa4b5aeefea29f4597bc4eaf72c329f3e0bb6bfdcd53f8e8514
+$ docker pull fsharp@sha256:bd030b87eb02135ca82fe3f161afef9d97487e333ef44f87ceb5a7289c4602c3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -691,14 +685,14 @@ $ docker pull fsharp@sha256:3e7e6b0c2081baa4b5aeefea29f4597bc4eaf72c329f3e0bb6bf
 ### `fsharp:latest` - linux; amd64
 
 ```console
-$ docker pull fsharp@sha256:0b52c0cbf76202963d47ea751b3f198222383953a9ada903ae2b9973bf3933ae
+$ docker pull fsharp@sha256:b06193158dbe30d1c5ff3153d18f8dc98aaaccee7420e1acec61341eee4121f3
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **182.4 MB (182388429 bytes)**  
+-	Total Size: **186.6 MB (186612588 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e99aaf8b18d835cf1073028a878594a0689536e0b9dd48a300dd3355b0b87d87`
+-	Image ID: `sha256:e924a3b906e85c2e6a003b5527f67d17aa3e970af1f2a89de710255086411dc9`
 -	Default Command: `["fsharpi"]`
 
 ```dockerfile
@@ -710,11 +704,11 @@ CMD ["bash"]
 LABEL maintainer=Dave Curylo <dave@curylo.org>, Steve Desmond <steve@stevedesmond.ca>
 # Sun, 02 Feb 2020 05:33:08 GMT
 ENV MONO_THREADS_PER_CPU=50
-# Sun, 02 Feb 2020 05:45:46 GMT
-RUN MONO_VERSION=6.4.0.198 &&     FSHARP_VERSION=10.2.3 &&     FSHARP_BASENAME=fsharp-$FSHARP_VERSION &&     FSHARP_ARCHIVE=$FSHARP_VERSION.tar.gz &&     FSHARP_ARCHIVE_URL=https://github.com/fsharp/fsharp/archive/$FSHARP_VERSION.tar.gz &&     export GNUPGHOME="$(mktemp -d)" &&     apt-get update && apt-get --no-install-recommends install -y gnupg dirmngr ca-certificates apt-transport-https &&     apt-key adv --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF &&     echo "deb https://download.mono-project.com/repo/debian stable-buster/snapshots/$MONO_VERSION main" | tee /etc/apt/sources.list.d/mono-official-stable.list &&     apt-get update -y &&     apt-get --no-install-recommends install -y pkg-config make nuget mono-devel msbuild ca-certificates-mono locales &&     rm -rf /var/lib/apt/lists/* &&     echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen && /usr/sbin/locale-gen &&     mkdir -p /tmp/src &&     cd /tmp/src &&     printf "namespace a { class b { public static void Main(string[] args) { new System.Net.WebClient().DownloadFile(\"%s\", \"%s\");}}}" $FSHARP_ARCHIVE_URL $FSHARP_ARCHIVE > download-fsharp.cs &&     mcs download-fsharp.cs && mono download-fsharp.exe && rm download-fsharp.exe download-fsharp.cs &&     tar xf $FSHARP_ARCHIVE &&     cd $FSHARP_BASENAME &&     make &&     make install &&     cd ~ &&     rm -rf /tmp/src /tmp/NuGetScratch ~/.nuget ~/.config ~/.local "$GNUPGHOME" &&     apt-get purge -y make gnupg dirmngr &&     apt-get clean
-# Sun, 02 Feb 2020 05:45:46 GMT
+# Tue, 25 Feb 2020 16:28:52 GMT
+RUN MONO_VERSION=6.8.0.105 &&     FSHARP_VERSION=10.2.3 &&     FSHARP_BASENAME=fsharp-$FSHARP_VERSION &&     FSHARP_ARCHIVE=$FSHARP_VERSION.tar.gz &&     FSHARP_ARCHIVE_URL=https://github.com/fsharp/fsharp/archive/$FSHARP_VERSION.tar.gz &&     export GNUPGHOME="$(mktemp -d)" &&     apt-get update && apt-get --no-install-recommends install -y gnupg dirmngr ca-certificates apt-transport-https &&     apt-key adv --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF &&     echo "deb https://download.mono-project.com/repo/debian stable-buster/snapshots/$MONO_VERSION main" | tee /etc/apt/sources.list.d/mono-official-stable.list &&     apt-get update -y &&     apt-get --no-install-recommends install -y pkg-config make nuget mono-devel msbuild ca-certificates-mono locales &&     rm -rf /var/lib/apt/lists/* &&     echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen && /usr/sbin/locale-gen &&     mkdir -p /tmp/src &&     cd /tmp/src &&     printf "namespace a { class b { public static void Main(string[] args) { new System.Net.WebClient().DownloadFile(\"%s\", \"%s\");}}}" $FSHARP_ARCHIVE_URL $FSHARP_ARCHIVE > download-fsharp.cs &&     mcs download-fsharp.cs && mono download-fsharp.exe && rm download-fsharp.exe download-fsharp.cs &&     tar xf $FSHARP_ARCHIVE &&     cd $FSHARP_BASENAME &&     make &&     make install &&     cd ~ &&     rm -rf /tmp/src /tmp/NuGetScratch ~/.nuget ~/.config ~/.local "$GNUPGHOME" &&     apt-get purge -y make gnupg dirmngr &&     apt-get clean
+# Tue, 25 Feb 2020 16:28:53 GMT
 WORKDIR /root
-# Sun, 02 Feb 2020 05:45:46 GMT
+# Tue, 25 Feb 2020 16:28:53 GMT
 CMD ["fsharpi"]
 ```
 
@@ -723,22 +717,22 @@ CMD ["fsharpi"]
 		Last Modified: Sat, 01 Feb 2020 17:26:19 GMT  
 		Size: 27.1 MB (27092260 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8d8061e428b698a6685263603eafec645bf790dd48f02c92caaff550c8cfde76`  
-		Last Modified: Sun, 02 Feb 2020 06:03:40 GMT  
-		Size: 155.3 MB (155296169 bytes)  
+	-	`sha256:d1092c96356c7944201309f571731b9a1f91381a3899a7fd3b7d517af2579ddd`  
+		Last Modified: Tue, 25 Feb 2020 16:30:12 GMT  
+		Size: 159.5 MB (159520328 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `fsharp:latest` - linux; arm64 variant v8
 
 ```console
-$ docker pull fsharp@sha256:fe562b8f14147c894f6a58f7d68bfbb443777a5872672f14ee1bf3241eb4cafc
+$ docker pull fsharp@sha256:553658f7400ab160669f6d10c045c8750d961962907ab2cca6b4b064b5176bef
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **179.4 MB (179365426 bytes)**  
+-	Total Size: **183.6 MB (183635679 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c2bcd8650e43915042e9ef183ab9081e6b846541dc1717a2ca62bfcd535a7129`
+-	Image ID: `sha256:e50442fb25be61cf0f07d404fc31f26e7bf43919b6556bba3d2c028bd49de4ce`
 -	Default Command: `["fsharpi"]`
 
 ```dockerfile
@@ -750,11 +744,11 @@ CMD ["bash"]
 LABEL maintainer=Dave Curylo <dave@curylo.org>, Steve Desmond <steve@stevedesmond.ca>
 # Sat, 01 Feb 2020 19:41:48 GMT
 ENV MONO_THREADS_PER_CPU=50
-# Sat, 01 Feb 2020 19:58:06 GMT
-RUN MONO_VERSION=6.4.0.198 &&     FSHARP_VERSION=10.2.3 &&     FSHARP_BASENAME=fsharp-$FSHARP_VERSION &&     FSHARP_ARCHIVE=$FSHARP_VERSION.tar.gz &&     FSHARP_ARCHIVE_URL=https://github.com/fsharp/fsharp/archive/$FSHARP_VERSION.tar.gz &&     export GNUPGHOME="$(mktemp -d)" &&     apt-get update && apt-get --no-install-recommends install -y gnupg dirmngr ca-certificates apt-transport-https &&     apt-key adv --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF &&     echo "deb https://download.mono-project.com/repo/debian stable-buster/snapshots/$MONO_VERSION main" | tee /etc/apt/sources.list.d/mono-official-stable.list &&     apt-get update -y &&     apt-get --no-install-recommends install -y pkg-config make nuget mono-devel msbuild ca-certificates-mono locales &&     rm -rf /var/lib/apt/lists/* &&     echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen && /usr/sbin/locale-gen &&     mkdir -p /tmp/src &&     cd /tmp/src &&     printf "namespace a { class b { public static void Main(string[] args) { new System.Net.WebClient().DownloadFile(\"%s\", \"%s\");}}}" $FSHARP_ARCHIVE_URL $FSHARP_ARCHIVE > download-fsharp.cs &&     mcs download-fsharp.cs && mono download-fsharp.exe && rm download-fsharp.exe download-fsharp.cs &&     tar xf $FSHARP_ARCHIVE &&     cd $FSHARP_BASENAME &&     make &&     make install &&     cd ~ &&     rm -rf /tmp/src /tmp/NuGetScratch ~/.nuget ~/.config ~/.local "$GNUPGHOME" &&     apt-get purge -y make gnupg dirmngr &&     apt-get clean
-# Sat, 01 Feb 2020 19:58:13 GMT
+# Tue, 25 Feb 2020 16:59:52 GMT
+RUN MONO_VERSION=6.8.0.105 &&     FSHARP_VERSION=10.2.3 &&     FSHARP_BASENAME=fsharp-$FSHARP_VERSION &&     FSHARP_ARCHIVE=$FSHARP_VERSION.tar.gz &&     FSHARP_ARCHIVE_URL=https://github.com/fsharp/fsharp/archive/$FSHARP_VERSION.tar.gz &&     export GNUPGHOME="$(mktemp -d)" &&     apt-get update && apt-get --no-install-recommends install -y gnupg dirmngr ca-certificates apt-transport-https &&     apt-key adv --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF &&     echo "deb https://download.mono-project.com/repo/debian stable-buster/snapshots/$MONO_VERSION main" | tee /etc/apt/sources.list.d/mono-official-stable.list &&     apt-get update -y &&     apt-get --no-install-recommends install -y pkg-config make nuget mono-devel msbuild ca-certificates-mono locales &&     rm -rf /var/lib/apt/lists/* &&     echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen && /usr/sbin/locale-gen &&     mkdir -p /tmp/src &&     cd /tmp/src &&     printf "namespace a { class b { public static void Main(string[] args) { new System.Net.WebClient().DownloadFile(\"%s\", \"%s\");}}}" $FSHARP_ARCHIVE_URL $FSHARP_ARCHIVE > download-fsharp.cs &&     mcs download-fsharp.cs && mono download-fsharp.exe && rm download-fsharp.exe download-fsharp.cs &&     tar xf $FSHARP_ARCHIVE &&     cd $FSHARP_BASENAME &&     make &&     make install &&     cd ~ &&     rm -rf /tmp/src /tmp/NuGetScratch ~/.nuget ~/.config ~/.local "$GNUPGHOME" &&     apt-get purge -y make gnupg dirmngr &&     apt-get clean
+# Tue, 25 Feb 2020 17:00:00 GMT
 WORKDIR /root
-# Sat, 01 Feb 2020 19:58:13 GMT
+# Tue, 25 Feb 2020 17:00:01 GMT
 CMD ["fsharpi"]
 ```
 
@@ -763,15 +757,15 @@ CMD ["fsharpi"]
 		Last Modified: Sat, 01 Feb 2020 16:46:28 GMT  
 		Size: 25.9 MB (25850659 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3b49ff480c2931a2c1ea4e0c20919ccacc7790c8331560e7df32af0426639aa1`  
-		Last Modified: Sat, 01 Feb 2020 19:59:26 GMT  
-		Size: 153.5 MB (153514767 bytes)  
+	-	`sha256:413c20827284f5a5853c7f0d360e1ba77ed299bcab941310e5d6e3163d6f98f4`  
+		Last Modified: Tue, 25 Feb 2020 17:01:04 GMT  
+		Size: 157.8 MB (157785020 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `fsharp:netcore`
 
 ```console
-$ docker pull fsharp@sha256:323b86df27d941f90f8ab30a0c318da4f919ec201161e34b458ebba0b06abd03
+$ docker pull fsharp@sha256:8fed3edca80206169bf8dbaffc79b99179114ff2e4437aec5572a28cf283fab1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -781,15 +775,15 @@ $ docker pull fsharp@sha256:323b86df27d941f90f8ab30a0c318da4f919ec201161e34b458e
 ### `fsharp:netcore` - linux; amd64
 
 ```console
-$ docker pull fsharp@sha256:31c6a2dd65c689e335b35c4829e4d7f2ce70c6b28b2b406f8fb06cfc02935fef
+$ docker pull fsharp@sha256:61b2168a6bc53d0d48b79f401d14113a7295c5a4da9d705f4f91043b32eb33c0
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **320.3 MB (320287088 bytes)**  
+-	Total Size: **323.7 MB (323674325 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:329bdd634a759e039732de3ca17756f34d4769a684020104f3b4135afba92684`
--	Default Command: `["dotnet","fsi","--readline","-r","\/usr\/lib\/mono\/4.5\/Mono.Posix.dll"]`
+-	Image ID: `sha256:c08081aa8df1336b18431619df95b16039d5eb4e8229e2252620a3055ad7882a`
+-	Default Command: `["dotnet","fsi"]`
 
 ```dockerfile
 # Sat, 01 Feb 2020 17:20:54 GMT
@@ -800,30 +794,28 @@ CMD ["bash"]
 LABEL maintainer=Dave Curylo <dave@curylo.org>, Steve Desmond <steve@stevedesmond.ca>
 # Sun, 02 Feb 2020 05:33:08 GMT
 ENV MONO_THREADS_PER_CPU=50
-# Sun, 02 Feb 2020 05:45:46 GMT
-RUN MONO_VERSION=6.4.0.198 &&     FSHARP_VERSION=10.2.3 &&     FSHARP_BASENAME=fsharp-$FSHARP_VERSION &&     FSHARP_ARCHIVE=$FSHARP_VERSION.tar.gz &&     FSHARP_ARCHIVE_URL=https://github.com/fsharp/fsharp/archive/$FSHARP_VERSION.tar.gz &&     export GNUPGHOME="$(mktemp -d)" &&     apt-get update && apt-get --no-install-recommends install -y gnupg dirmngr ca-certificates apt-transport-https &&     apt-key adv --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF &&     echo "deb https://download.mono-project.com/repo/debian stable-buster/snapshots/$MONO_VERSION main" | tee /etc/apt/sources.list.d/mono-official-stable.list &&     apt-get update -y &&     apt-get --no-install-recommends install -y pkg-config make nuget mono-devel msbuild ca-certificates-mono locales &&     rm -rf /var/lib/apt/lists/* &&     echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen && /usr/sbin/locale-gen &&     mkdir -p /tmp/src &&     cd /tmp/src &&     printf "namespace a { class b { public static void Main(string[] args) { new System.Net.WebClient().DownloadFile(\"%s\", \"%s\");}}}" $FSHARP_ARCHIVE_URL $FSHARP_ARCHIVE > download-fsharp.cs &&     mcs download-fsharp.cs && mono download-fsharp.exe && rm download-fsharp.exe download-fsharp.cs &&     tar xf $FSHARP_ARCHIVE &&     cd $FSHARP_BASENAME &&     make &&     make install &&     cd ~ &&     rm -rf /tmp/src /tmp/NuGetScratch ~/.nuget ~/.config ~/.local "$GNUPGHOME" &&     apt-get purge -y make gnupg dirmngr &&     apt-get clean
-# Sun, 02 Feb 2020 05:45:46 GMT
+# Tue, 25 Feb 2020 16:28:52 GMT
+RUN MONO_VERSION=6.8.0.105 &&     FSHARP_VERSION=10.2.3 &&     FSHARP_BASENAME=fsharp-$FSHARP_VERSION &&     FSHARP_ARCHIVE=$FSHARP_VERSION.tar.gz &&     FSHARP_ARCHIVE_URL=https://github.com/fsharp/fsharp/archive/$FSHARP_VERSION.tar.gz &&     export GNUPGHOME="$(mktemp -d)" &&     apt-get update && apt-get --no-install-recommends install -y gnupg dirmngr ca-certificates apt-transport-https &&     apt-key adv --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF &&     echo "deb https://download.mono-project.com/repo/debian stable-buster/snapshots/$MONO_VERSION main" | tee /etc/apt/sources.list.d/mono-official-stable.list &&     apt-get update -y &&     apt-get --no-install-recommends install -y pkg-config make nuget mono-devel msbuild ca-certificates-mono locales &&     rm -rf /var/lib/apt/lists/* &&     echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen && /usr/sbin/locale-gen &&     mkdir -p /tmp/src &&     cd /tmp/src &&     printf "namespace a { class b { public static void Main(string[] args) { new System.Net.WebClient().DownloadFile(\"%s\", \"%s\");}}}" $FSHARP_ARCHIVE_URL $FSHARP_ARCHIVE > download-fsharp.cs &&     mcs download-fsharp.cs && mono download-fsharp.exe && rm download-fsharp.exe download-fsharp.cs &&     tar xf $FSHARP_ARCHIVE &&     cd $FSHARP_BASENAME &&     make &&     make install &&     cd ~ &&     rm -rf /tmp/src /tmp/NuGetScratch ~/.nuget ~/.config ~/.local "$GNUPGHOME" &&     apt-get purge -y make gnupg dirmngr &&     apt-get clean
+# Tue, 25 Feb 2020 16:28:53 GMT
 WORKDIR /root
-# Sun, 02 Feb 2020 05:45:46 GMT
+# Tue, 25 Feb 2020 16:28:53 GMT
 CMD ["fsharpi"]
-# Sun, 02 Feb 2020 06:02:12 GMT
+# Tue, 25 Feb 2020 16:29:04 GMT
 LABEL maintainer=Dave Curylo <dave@curylo.org>, Steve Desmond <steve@stevedesmond.ca>
-# Sun, 02 Feb 2020 06:02:12 GMT
+# Tue, 25 Feb 2020 16:29:04 GMT
 ENV FrameworkPathOverride=/usr/lib/mono/4.7.2-api/
-# Sun, 02 Feb 2020 06:02:12 GMT
-ENV NUGET_XMLDOC_MODE=skip
-# Sun, 02 Feb 2020 06:02:23 GMT
+# Tue, 25 Feb 2020 16:29:05 GMT
+ENV NUGET_XMLDOC_MODE=skip DOTNET_RUNNING_IN_CONTAINER=true DOTNET_USE_POLLING_FILE_WATCHER=true
+# Tue, 25 Feb 2020 16:29:12 GMT
 RUN apt-get update &&     apt-get --no-install-recommends install -y     curl     libunwind8     gettext     apt-transport-https     libc6     libcurl4     libgcc1     libgssapi-krb5-2     libicu63     liblttng-ust0     libssl1.1     libstdc++6     libunwind8     libuuid1     zlib1g &&     rm -rf /var/lib/apt/lists/*
-# Sun, 02 Feb 2020 06:02:43 GMT
-RUN DOTNET_SDK_VERSION=3.0.100 &&     DOTNET_SDK_DOWNLOAD_URL=https://dotnetcli.blob.core.windows.net/dotnet/Sdk/$DOTNET_SDK_VERSION/dotnet-sdk-$DOTNET_SDK_VERSION-linux-x64.tar.gz &&     DOTNET_SDK_DOWNLOAD_SHA=766da31f9a0bcfbf0f12c91ea68354eb509ac2111879d55b656f19299c6ea1c005d31460dac7c2a4ef82b3edfea30232c82ba301fb52c0ff268d3e3a1b73d8f7 &&     curl -SL $DOTNET_SDK_DOWNLOAD_URL --output dotnet.tar.gz &&     echo "$DOTNET_SDK_DOWNLOAD_SHA dotnet.tar.gz" | sha512sum -c - &&     mkdir -p /usr/share/dotnet &&     tar -zxf dotnet.tar.gz -C /usr/share/dotnet &&     rm dotnet.tar.gz &&     ln -s /usr/share/dotnet/dotnet /usr/bin/dotnet
-# Sun, 02 Feb 2020 06:02:43 GMT
-ENV DOTNET_CLI_TELEMETRY_OPTOUT=1     DOTNET_RUNNING_IN_CONTAINER=true     DOTNET_USE_POLLING_FILE_WATCHER=true     NUGET_XMLDOC_MODE=skip
-# Sun, 02 Feb 2020 06:02:46 GMT
+# Tue, 25 Feb 2020 16:29:29 GMT
+RUN DOTNET_SDK_VERSION=3.1.102 &&     DOTNET_SDK_DOWNLOAD_URL=https://dotnetcli.blob.core.windows.net/dotnet/Sdk/$DOTNET_SDK_VERSION/dotnet-sdk-$DOTNET_SDK_VERSION-linux-x64.tar.gz &&     DOTNET_SDK_DOWNLOAD_SHA=9cacdc9700468a915e6fa51a3e5539b3519dd35b13e7f9d6c4dd0077e298baac0e50ad1880181df6781ef1dc64a232e9f78ad8e4494022987d12812c4ca15f29 &&     curl -SL $DOTNET_SDK_DOWNLOAD_URL --output dotnet.tar.gz &&     echo "$DOTNET_SDK_DOWNLOAD_SHA dotnet.tar.gz" | sha512sum -c - &&     mkdir -p /usr/share/dotnet &&     tar -zxf dotnet.tar.gz -C /usr/share/dotnet &&     rm dotnet.tar.gz &&     ln -s /usr/share/dotnet/dotnet /usr/bin/dotnet
+# Tue, 25 Feb 2020 16:29:31 GMT
 RUN mkdir warmup &&     cd warmup &&     dotnet new &&     cd - &&     rm -rf warmup /tmp/NuGetScratch
-# Sun, 02 Feb 2020 06:02:46 GMT
+# Tue, 25 Feb 2020 16:29:32 GMT
 WORKDIR /root
-# Sun, 02 Feb 2020 06:02:46 GMT
-CMD ["dotnet" "fsi" "--readline" "-r" "/usr/lib/mono/4.5/Mono.Posix.dll"]
+# Tue, 25 Feb 2020 16:29:32 GMT
+CMD ["dotnet" "fsi"]
 ```
 
 -	Layers:
@@ -831,19 +823,19 @@ CMD ["dotnet" "fsi" "--readline" "-r" "/usr/lib/mono/4.5/Mono.Posix.dll"]
 		Last Modified: Sat, 01 Feb 2020 17:26:19 GMT  
 		Size: 27.1 MB (27092260 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8d8061e428b698a6685263603eafec645bf790dd48f02c92caaff550c8cfde76`  
-		Last Modified: Sun, 02 Feb 2020 06:03:40 GMT  
-		Size: 155.3 MB (155296169 bytes)  
+	-	`sha256:d1092c96356c7944201309f571731b9a1f91381a3899a7fd3b7d517af2579ddd`  
+		Last Modified: Tue, 25 Feb 2020 16:30:12 GMT  
+		Size: 159.5 MB (159520328 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:270afdae51456250d21c977f7e15ee8cfb19686e296683ae9d7304537ccec11c`  
-		Last Modified: Sun, 02 Feb 2020 06:04:51 GMT  
-		Size: 17.9 MB (17936475 bytes)  
+	-	`sha256:e9513ff1a3c176baf9bbc2c37c57403f1a1555cfef512edb466530a36ca03353`  
+		Last Modified: Tue, 25 Feb 2020 16:30:21 GMT  
+		Size: 17.2 MB (17200971 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:11dd1e17be529a835ca0a02e96d0bf42dc6f3091a1f3977fc9ad2651d73e98ab`  
-		Last Modified: Sun, 02 Feb 2020 06:05:17 GMT  
-		Size: 116.1 MB (116069384 bytes)  
+	-	`sha256:85c3def20eec05af62aa69ed099463898214d7b0ddab0a5d80b883cb35d5dfed`  
+		Last Modified: Tue, 25 Feb 2020 16:30:36 GMT  
+		Size: 115.9 MB (115919152 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a56133c8515a5678e89bcc53306ca7c3d8df1fac37ac829f4849436ec81eed2c`  
-		Last Modified: Sun, 02 Feb 2020 06:04:46 GMT  
-		Size: 3.9 MB (3892800 bytes)  
+	-	`sha256:43c66d24efed582c0d97db4cf5ea6208b1fccbe76bc53b9e3b9f1aaf754b3a28`  
+		Last Modified: Tue, 25 Feb 2020 16:30:18 GMT  
+		Size: 3.9 MB (3941614 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
