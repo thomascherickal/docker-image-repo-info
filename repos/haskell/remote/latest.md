@@ -1,7 +1,7 @@
 ## `haskell:latest`
 
 ```console
-$ docker pull haskell@sha256:b873e35f1dc327bfd0dbea583f4036cc2ac77c18263bf2229269fd93156d13f4
+$ docker pull haskell@sha256:2b5284a43f516c2f26c467b05baca773d7a628ee04eec97f2b9c57102c3681e2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,37 +11,37 @@ $ docker pull haskell@sha256:b873e35f1dc327bfd0dbea583f4036cc2ac77c18263bf222926
 ### `haskell:latest` - linux; amd64
 
 ```console
-$ docker pull haskell@sha256:22c3f578ecd88254b4bdf4d4ea530010b871ef253d894f71bed3905d7d252ad3
+$ docker pull haskell@sha256:fe192e7290b390d504781577ba4bff6cf756f61a249c985e5d69c25e2b6f26bb
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **332.9 MB (332937409 bytes)**  
+-	Total Size: **332.7 MB (332722715 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:32637ea0119c4140ac9a2327cb6aef29fe756f76f81ae8991bc127f2c4eb042e`
+-	Image ID: `sha256:e3a1d23ed99599337abcafa33649354ea16fd53b68fe4867337c9938e18e5571`
 -	Default Command: `["ghci"]`
 
 ```dockerfile
-# Sat, 01 Feb 2020 17:23:41 GMT
-ADD file:8a9218592e5d736a05a1821a6dd38b205cdd8197c26a5aa33f6fc22fbfaa1c4d in / 
-# Sat, 01 Feb 2020 17:23:41 GMT
+# Wed, 26 Feb 2020 00:41:14 GMT
+ADD file:08c5ab7c53526da155d6be40a9795fc08afc9f47bd333c096e90185fe9fab2b1 in / 
+# Wed, 26 Feb 2020 00:41:14 GMT
 CMD ["bash"]
-# Sun, 02 Feb 2020 00:05:55 GMT
+# Wed, 26 Feb 2020 02:06:12 GMT
 ENV LANG=C.UTF-8
-# Sun, 02 Feb 2020 00:07:19 GMT
+# Wed, 26 Feb 2020 02:07:40 GMT
 RUN apt-get update &&     apt-get install -y --no-install-recommends gnupg ca-certificates dirmngr curl git &&     echo 'deb http://downloads.haskell.org/debian stretch main' > /etc/apt/sources.list.d/ghc.list &&     apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA3CBA3FFE22B574 &&     apt-get update &&     apt-get install -y --no-install-recommends ghc-8.8.1 cabal-install-3.0         zlib1g-dev libtinfo-dev libsqlite3-dev g++ netbase xz-utils make openssh-client &&     curl -fSL https://github.com/commercialhaskell/stack/releases/download/v2.1.3/stack-2.1.3-linux-x86_64.tar.gz -o stack.tar.gz &&     curl -fSL https://github.com/commercialhaskell/stack/releases/download/v2.1.3/stack-2.1.3-linux-x86_64.tar.gz.asc -o stack.tar.gz.asc &&     export GNUPGHOME="$(mktemp -d)" &&     gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys C5705533DA4F78D8664B5DC0575159689BEFB442 &&     gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 2C6A674E85EE3FB896AFC9B965101FF31C5C154D &&     gpg --batch --trusted-key 0x575159689BEFB442 --verify stack.tar.gz.asc stack.tar.gz &&     tar -xf stack.tar.gz -C /usr/local/bin --strip-components=1 &&     /usr/local/bin/stack config set system-ghc --global true &&     /usr/local/bin/stack config set install-ghc --global false &&     rm -rf "$GNUPGHOME" /var/lib/apt/lists/* /stack.tar.gz.asc /stack.tar.gz
-# Sun, 02 Feb 2020 00:07:20 GMT
+# Wed, 26 Feb 2020 02:07:43 GMT
 ENV PATH=/root/.cabal/bin:/root/.local/bin:/opt/cabal/3.0/bin:/opt/ghc/8.8.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 02 Feb 2020 00:07:22 GMT
+# Wed, 26 Feb 2020 02:07:45 GMT
 CMD ["ghci"]
 ```
 
 -	Layers:
-	-	`sha256:3192219afd04f93d90f0af7f89cb527d1af2a16975ea391ea8517c602ad6ddb6`  
-		Last Modified: Sat, 01 Feb 2020 17:28:49 GMT  
-		Size: 45.4 MB (45380658 bytes)  
+	-	`sha256:c0c53f743a403d45480d026864d9611d6eb898e897d60c13ae854ad453d462a4`  
+		Last Modified: Wed, 26 Feb 2020 00:47:05 GMT  
+		Size: 45.4 MB (45375932 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8bb048795449ce0b86a68f3f543f864153de3a67dacdd100fad223a0b18f5968`  
-		Last Modified: Sun, 02 Feb 2020 00:10:34 GMT  
-		Size: 287.6 MB (287556751 bytes)  
+	-	`sha256:a50ef9b5546a426eb1c3e06da5be59b5e7b2d412323ec6e8441e25dd4ab120e6`  
+		Last Modified: Wed, 26 Feb 2020 02:10:22 GMT  
+		Size: 287.3 MB (287346783 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
