@@ -1,7 +1,7 @@
 ## `node:dubnium-stretch-slim`
 
 ```console
-$ docker pull node@sha256:006a727358f895dc5b4da858de5003548ed660c2cb05f2552effa0f8465ee89d
+$ docker pull node@sha256:db7e3c2911524d5fded99ea25589fc2eaaa6613dc967c53aa0e00d39df97fc5b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -15,59 +15,59 @@ $ docker pull node@sha256:006a727358f895dc5b4da858de5003548ed660c2cb05f2552effa0
 ### `node:dubnium-stretch-slim` - linux; amd64
 
 ```console
-$ docker pull node@sha256:300f6e4b6b624f6bff02af087087e0dc23cd7e42ae6fa92cd1b1b3f2e60e1d19
+$ docker pull node@sha256:8a26ebd1e959526ea4060f58c844785bebfd463f1589ce280b61512ead2a0641
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **47.7 MB (47694849 bytes)**  
+-	Total Size: **47.7 MB (47683396 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0af4feea7abf178c6f618a49e6f951fd66ad58e6ee5b20f25b749648acc9a416`
+-	Image ID: `sha256:000100717b615b5503d5ae41b45a154d138ce95b1e17263ee000551586cf7df1`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node"]`
 
 ```dockerfile
-# Sat, 01 Feb 2020 17:23:57 GMT
-ADD file:003d2bac85e72555ed93f77a2b1d595a7fe51c4a9a2401496a82fc673a863fd6 in / 
-# Sat, 01 Feb 2020 17:23:58 GMT
+# Wed, 26 Feb 2020 00:41:38 GMT
+ADD file:1256c62f77a54c982fdb2790d682049b2ad64c8466466e846f3d33ad1ed4035d in / 
+# Wed, 26 Feb 2020 00:41:38 GMT
 CMD ["bash"]
-# Sat, 01 Feb 2020 18:09:59 GMT
+# Wed, 26 Feb 2020 06:41:41 GMT
 RUN groupadd --gid 1000 node   && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
-# Thu, 06 Feb 2020 23:28:07 GMT
+# Wed, 26 Feb 2020 06:54:06 GMT
 ENV NODE_VERSION=10.19.0
-# Wed, 19 Feb 2020 23:33:04 GMT
+# Wed, 26 Feb 2020 06:54:32 GMT
 RUN ARCH= && dpkgArch="$(dpkg --print-architecture)"     && case "${dpkgArch##*-}" in       amd64) ARCH='x64';;       ppc64el) ARCH='ppc64le';;       s390x) ARCH='s390x';;       arm64) ARCH='arm64';;       armhf) ARCH='armv7l';;       i386) ARCH='x86';;       *) echo "unsupported architecture"; exit 1 ;;     esac     && set -ex     && apt-get update && apt-get install -y ca-certificates curl wget gnupg dirmngr xz-utils libatomic1 --no-install-recommends     && rm -rf /var/lib/apt/lists/*     && for key in       94AE36675C464D64BAFA68DD7434390BDBE9B9C5       FD3A5288F042B6850C66B31F09FE44734EB7990E       71DCFD284A79C3B38668286BC97EC7A07EDE3FC1       DD8F2338BAE7501E3DD5AC78C273792F7D83545D       C4F0DFFF4E8C1A8236409D08E73BC641CC11F4C8       B9AE9905FFD7803F25714661B63B535A4C206CA9       77984A986EBC2AA786BC0F66B01FBB92821C587A       8FCCA13FEF1D0C2E91008E09770F7A9A5AE15600       4ED778F539E3634C779C87C6D7062848A1AB005C       A48C2BEE680E841632CD4E44F07496B3EB3C1762       B9E2F5981AA6E0CD28160D9FF13993A75599653C     ; do       gpg --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys "$key" ||       gpg --batch --keyserver hkp://ipv4.pool.sks-keyservers.net --recv-keys "$key" ||       gpg --batch --keyserver hkp://pgp.mit.edu:80 --recv-keys "$key" ;     done     && curl -fsSLO --compressed "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-$ARCH.tar.xz"     && curl -fsSLO --compressed "https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc"     && gpg --batch --decrypt --output SHASUMS256.txt SHASUMS256.txt.asc     && grep " node-v$NODE_VERSION-linux-$ARCH.tar.xz\$" SHASUMS256.txt | sha256sum -c -     && tar -xJf "node-v$NODE_VERSION-linux-$ARCH.tar.xz" -C /usr/local --strip-components=1 --no-same-owner     && rm "node-v$NODE_VERSION-linux-$ARCH.tar.xz" SHASUMS256.txt.asc SHASUMS256.txt     && apt-mark auto '.*' > /dev/null     && find /usr/local -type f -executable -exec ldd '{}' ';'       | awk '/=>/ { print $(NF-1) }'       | sort -u       | xargs -r dpkg-query --search       | cut -d: -f1       | sort -u       | xargs -r apt-mark manual     && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false     && ln -s /usr/local/bin/node /usr/local/bin/nodejs     && node --version     && npm --version
-# Wed, 19 Feb 2020 23:33:04 GMT
+# Wed, 26 Feb 2020 06:54:32 GMT
 ENV YARN_VERSION=1.21.1
-# Wed, 19 Feb 2020 23:33:20 GMT
+# Wed, 26 Feb 2020 06:54:55 GMT
 RUN set -ex   && savedAptMark="$(apt-mark showmanual)"   && apt-get update && apt-get install -y ca-certificates curl wget gnupg dirmngr --no-install-recommends   && rm -rf /var/lib/apt/lists/*   && for key in     6A010C5166006599AA17F08146C2130DFD2497F5   ; do     gpg --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys "$key" ||     gpg --batch --keyserver hkp://ipv4.pool.sks-keyservers.net --recv-keys "$key" ||     gpg --batch --keyserver hkp://pgp.mit.edu:80 --recv-keys "$key" ;   done   && curl -fsSLO --compressed "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz"   && curl -fsSLO --compressed "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz.asc"   && gpg --batch --verify yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz   && mkdir -p /opt   && tar -xzf yarn-v$YARN_VERSION.tar.gz -C /opt/   && ln -s /opt/yarn-v$YARN_VERSION/bin/yarn /usr/local/bin/yarn   && ln -s /opt/yarn-v$YARN_VERSION/bin/yarnpkg /usr/local/bin/yarnpkg   && rm yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz   && apt-mark auto '.*' > /dev/null   && { [ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; }   && find /usr/local -type f -executable -exec ldd '{}' ';'     | awk '/=>/ { print $(NF-1) }'     | sort -u     | xargs -r dpkg-query --search     | cut -d: -f1     | sort -u     | xargs -r apt-mark manual   && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false   && yarn --version
-# Wed, 19 Feb 2020 23:33:20 GMT
+# Wed, 26 Feb 2020 06:54:55 GMT
 COPY file:238737301d47304174e4d24f4def935b29b3069c03c72ae8de97d94624382fce in /usr/local/bin/ 
-# Wed, 19 Feb 2020 23:33:20 GMT
+# Wed, 26 Feb 2020 06:54:56 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Wed, 19 Feb 2020 23:33:20 GMT
+# Wed, 26 Feb 2020 06:54:56 GMT
 CMD ["node"]
 ```
 
 -	Layers:
-	-	`sha256:619014d83c026bca3d21f5eb42a629ac2dbe15bdb37b77f25fc1ac5fbada68e5`  
-		Last Modified: Sat, 01 Feb 2020 17:29:01 GMT  
-		Size: 22.5 MB (22524713 bytes)  
+	-	`sha256:6d28e14ab8c85bf8a4331de0667c27d19ef4092b12531eec0334b5c2a1012668`  
+		Last Modified: Wed, 26 Feb 2020 00:47:21 GMT  
+		Size: 22.5 MB (22513365 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8c5d9aed65fb4440d886ef0385d0d6db5e1a494a70d0bd482f7307c338fe6581`  
-		Last Modified: Sat, 01 Feb 2020 18:23:26 GMT  
-		Size: 4.1 KB (4143 bytes)  
+	-	`sha256:467f76cd7b769c40aeaea9f9aa5b1ba31427fbc0c7543f40e1aaee0933c40f0c`  
+		Last Modified: Wed, 26 Feb 2020 06:58:16 GMT  
+		Size: 4.1 KB (4147 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ac8dc1e3d2f7820d1513fad07e4ef308497048597e112a5db0a5a040bedd3efb`  
-		Last Modified: Wed, 19 Feb 2020 23:39:39 GMT  
-		Size: 22.2 MB (22237390 bytes)  
+	-	`sha256:b94da5c651ba5158cbea88b2a70013df02e4f4aba632320266c13f2f85792bb0`  
+		Last Modified: Wed, 26 Feb 2020 07:01:09 GMT  
+		Size: 22.2 MB (22237407 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:669abdecf73d902281de09fc79fc9c18e97d744e342201c7b85247255ed213f4`  
-		Last Modified: Wed, 19 Feb 2020 23:39:33 GMT  
-		Size: 2.9 MB (2928309 bytes)  
+	-	`sha256:4b1d9b3a1ca91fac93fb566805a857b8d0458c21ea42f423828061642d653026`  
+		Last Modified: Wed, 26 Feb 2020 07:01:03 GMT  
+		Size: 2.9 MB (2928183 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:69c90f5c72fde3ec7d62fc09fa53205c2f794dd49f54d310610c8d6138fcb63b`  
-		Last Modified: Wed, 19 Feb 2020 23:39:33 GMT  
+	-	`sha256:957cf4a5dafaeaba34b9f06ecba21ee94136d58819b69a6a206e36d9491c0cab`  
+		Last Modified: Wed, 26 Feb 2020 07:01:02 GMT  
 		Size: 294.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
