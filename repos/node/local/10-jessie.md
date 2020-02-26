@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:6426860a04cd68a9ad5b4ba4e1adb592c9f5528a69f6c3255d54c5e571575fed`
-- Created: `2020-02-19T23:26:38.626740402Z`
+- Image ID: `sha256:fb945c8b9afee2aeb343bcc9f1fe6e435a20676462ef29a092eff6b9b931b12b`
+- Created: `2020-02-26T06:47:03.084776943Z`
 - Virtual Size: ~ 691.15 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -2375,12 +2375,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libevent/2.0.21-stable-2+deb8u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libevent/2.0.21-stable-2+deb8u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libexif=0.6.21-2`
+### `dpkg` source package: `libexif=0.6.21-2+deb8u1`
 
 Binary Packages:
 
-- `libexif-dev=0.6.21-2`
-- `libexif12:amd64=0.6.21-2`
+- `libexif-dev=0.6.21-2+deb8u1`
+- `libexif12:amd64=0.6.21-2+deb8u1`
 
 Licenses: (parsed from: `/usr/share/doc/libexif-dev/copyright`, `/usr/share/doc/libexif12/copyright`)
 
@@ -2393,17 +2393,17 @@ Licenses: (parsed from: `/usr/share/doc/libexif-dev/copyright`, `/usr/share/doc/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libexif=0.6.21-2
-'http://deb.debian.org/debian/pool/main/libe/libexif/libexif_0.6.21-2.dsc' libexif_0.6.21-2.dsc 2053 SHA256:284942bcd7656949a383f2ee775babb20b50781c30d915b34fe272220f997ea6
-'http://deb.debian.org/debian/pool/main/libe/libexif/libexif_0.6.21.orig.tar.gz' libexif_0.6.21.orig.tar.gz 2081615 SHA256:edb7eb13664cf950a6edd132b75e99afe61c5effe2f16494e6d27bc404b287bf
-'http://deb.debian.org/debian/pool/main/libe/libexif/libexif_0.6.21-2.debian.tar.xz' libexif_0.6.21-2.debian.tar.xz 8628 SHA256:648796d86b17567fb13dd356fc18c4b164b5a598853964d15beb9a32ec1253d8
+$ apt-get source -qq --print-uris libexif=0.6.21-2+deb8u1
+'http://security.debian.org/debian-security/pool/updates/main/libe/libexif/libexif_0.6.21-2+deb8u1.dsc' libexif_0.6.21-2+deb8u1.dsc 1921 SHA256:87e6dc4c3bba660c7e50e1f8a71fc3c75c1534f34bf36025f6ba1766a5f73ca7
+'http://security.debian.org/debian-security/pool/updates/main/libe/libexif/libexif_0.6.21.orig.tar.gz' libexif_0.6.21.orig.tar.gz 2081615 SHA256:edb7eb13664cf950a6edd132b75e99afe61c5effe2f16494e6d27bc404b287bf
+'http://security.debian.org/debian-security/pool/updates/main/libe/libexif/libexif_0.6.21-2+deb8u1.debian.tar.xz' libexif_0.6.21-2+deb8u1.debian.tar.xz 9892 SHA256:554b08a7e6ee583473bb4d0aa7ce91d6470db44d4403443be2313f2e5faec1f2
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/libexif/0.6.21-2/ (for browsing the source)
-- https://sources.debian.net/src/libexif/0.6.21-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libexif/0.6.21-2/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/libexif/0.6.21-2+deb8u1/ (for browsing the source)
+- https://sources.debian.net/src/libexif/0.6.21-2+deb8u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libexif/0.6.21-2+deb8u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libffi=3.1-2+deb8u1`
 
@@ -2457,11 +2457,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libgcrypt20/1.6.3-2+deb8u8/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libgcrypt20/1.6.3-2+deb8u8/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libgd2=2.1.0-5+deb8u13`
+### `dpkg` source package: `libgd2=2.1.0-5+deb8u14`
 
 Binary Packages:
 
-- `libgd3:amd64=2.1.0-5+deb8u13`
+- `libgd3:amd64=2.1.0-5+deb8u14`
 
 Licenses: (parsed from: `/usr/share/doc/libgd3/copyright`)
 
@@ -2477,13 +2477,20 @@ Licenses: (parsed from: `/usr/share/doc/libgd3/copyright`)
 - `WEBP`
 - `XFIG`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris libgd2=2.1.0-5+deb8u14
+'http://security.debian.org/debian-security/pool/updates/main/libg/libgd2/libgd2_2.1.0-5+deb8u14.dsc' libgd2_2.1.0-5+deb8u14.dsc 2355 SHA256:f29cf1be1c2577a55289129cfb7558dc5ccbd9d646aeaab51891bbbed96f3f9f
+'http://security.debian.org/debian-security/pool/updates/main/libg/libgd2/libgd2_2.1.0.orig.tar.xz' libgd2_2.1.0.orig.tar.xz 2004304 SHA256:fa6665dfe3d898019671293c84d77067a3d2ede50884dbcb6df899d508370e5a
+'http://security.debian.org/debian-security/pool/updates/main/libg/libgd2/libgd2_2.1.0-5+deb8u14.debian.tar.xz' libgd2_2.1.0-5+deb8u14.debian.tar.xz 44828 SHA256:4953cdcde1a6f362c44411c9e803832c35d9dc04ecd4d2d8fa69e7c1648aab16
+```
 
-- http://snapshot.debian.org/package/libgd2/2.1.0-5+deb8u13/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/libgd2/2.1.0-5+deb8u14/ (for browsing the source)
+- https://sources.debian.net/src/libgd2/2.1.0-5+deb8u14/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libgd2/2.1.0-5+deb8u14/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libgpg-error=1.17-3`
 
@@ -4258,25 +4265,32 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/pkg-config/0.28-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/pkg-config/0.28-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `postgresql-9.4=9.4.25-0+deb8u1`
+### `dpkg` source package: `postgresql-9.4=9.4.26-0+deb8u1`
 
 Binary Packages:
 
-- `libpq-dev=9.4.25-0+deb8u1`
-- `libpq5:amd64=9.4.25-0+deb8u1`
+- `libpq-dev=9.4.26-0+deb8u1`
+- `libpq5:amd64=9.4.26-0+deb8u1`
 
 Licenses: (parsed from: `/usr/share/doc/libpq-dev/copyright`, `/usr/share/doc/libpq5/copyright`)
 
 - `Tcl`
 - `almost exclusively BSD`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris postgresql-9.4=9.4.26-0+deb8u1
+'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-9.4/postgresql-9.4_9.4.26-0+deb8u1.dsc' postgresql-9.4_9.4.26-0+deb8u1.dsc 3521 SHA256:e96f4d5be48b596e868dcb8b02596a68664db5242d8a75407945435ec34c0d0f
+'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-9.4/postgresql-9.4_9.4.26.orig.tar.bz2' postgresql-9.4_9.4.26.orig.tar.bz2 16871195 SHA256:f5c014fc4a5c94e8cf11314cbadcade4d84213cfcc82081c9123e1b8847a20b9
+'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-9.4/postgresql-9.4_9.4.26-0+deb8u1.debian.tar.xz' postgresql-9.4_9.4.26-0+deb8u1.debian.tar.xz 32408 SHA256:de260323c54611ca8d4af9f5e88358d3a684147f54caf8cec0b0fb099ec57ede
+```
 
-- http://snapshot.debian.org/package/postgresql-9.4/9.4.25-0+deb8u1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/postgresql-9.4/9.4.26-0+deb8u1/ (for browsing the source)
+- https://sources.debian.net/src/postgresql-9.4/9.4.26-0+deb8u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/postgresql-9.4/9.4.26-0+deb8u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `procps=2:3.3.9-9+deb8u1`
 
