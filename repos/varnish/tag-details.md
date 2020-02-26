@@ -16,7 +16,7 @@
 ## `varnish:6`
 
 ```console
-$ docker pull varnish@sha256:3669ea06ee7e0f47bfc8feb58f735603e45c5f6558c32e133cfeecc6c829f61f
+$ docker pull varnish@sha256:f2abecfcefe8bce1839e8f274490bc166fe36f4e4d0940e82d33cb0b86a78c17
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -26,56 +26,56 @@ $ docker pull varnish@sha256:3669ea06ee7e0f47bfc8feb58f735603e45c5f6558c32e133cf
 ### `varnish:6` - linux; amd64
 
 ```console
-$ docker pull varnish@sha256:2696746f50c4d78b0ed14dbf5ca38f72b1491cd1e0da35c9f5beb7066ac6b548
+$ docker pull varnish@sha256:ee1113f9d12f1b56b7ed6eae2e62dbb196dbe6d8913c2522fb5c12e04a616105
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **67.4 MB (67423387 bytes)**  
+-	Total Size: **67.4 MB (67412303 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f9b81057c246da9ad3dd0a29a45c69826d0c7b14b7a78a10f090c42fee3c15c9`
+-	Image ID: `sha256:a1a0ab71af24be8ccd6311d3c641d2fced267ccadfdbabacaa90547d89363de5`
 -	Entrypoint: `["docker-varnish-entrypoint"]`
 -	Default Command: `["varnishd","-F","-f","\/etc\/varnish\/default.vcl"]`
 
 ```dockerfile
-# Sat, 01 Feb 2020 17:23:57 GMT
-ADD file:003d2bac85e72555ed93f77a2b1d595a7fe51c4a9a2401496a82fc673a863fd6 in / 
-# Sat, 01 Feb 2020 17:23:58 GMT
+# Wed, 26 Feb 2020 00:41:38 GMT
+ADD file:1256c62f77a54c982fdb2790d682049b2ad64c8466466e846f3d33ad1ed4035d in / 
+# Wed, 26 Feb 2020 00:41:38 GMT
 CMD ["bash"]
-# Tue, 04 Feb 2020 15:30:04 GMT
+# Wed, 26 Feb 2020 20:12:41 GMT
 ENV VARNISH_VERSION=6.3.2-1~stretch
-# Tue, 04 Feb 2020 15:30:26 GMT
+# Wed, 26 Feb 2020 20:13:05 GMT
 RUN set -ex; 	fetchDeps=" 		dirmngr 		gnupg 	"; 	apt-get update; 	apt-get install -y --no-install-recommends apt-transport-https ca-certificates $fetchDeps; 	key=920A8A7AA7120A8604BCCD294A42CD6EB810E55D; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver http://ha.pool.sks-keyservers.net/ --recv-keys $key; 	gpg --batch --export export $key > /etc/apt/trusted.gpg.d/varnish.gpg; 	gpgconf --kill all; 	rm -rf $GNUPGHOME; 	echo deb https://packagecloud.io/varnishcache/varnish63/debian/ stretch main > /etc/apt/sources.list.d/varnish.list; 	apt-get update; 	apt-get install -y --no-install-recommends varnish=$VARNISH_VERSION; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; 	rm -rf /var/lib/apt/lists/*
-# Tue, 04 Feb 2020 15:30:27 GMT
+# Wed, 26 Feb 2020 20:13:06 GMT
 WORKDIR /etc/varnish
-# Tue, 04 Feb 2020 15:30:27 GMT
+# Wed, 26 Feb 2020 20:13:06 GMT
 COPY file:0301ec458d312e5c085462f916888bc85bb94c134ed6116667d225487db56cac in /usr/local/bin/ 
-# Tue, 04 Feb 2020 15:30:27 GMT
+# Wed, 26 Feb 2020 20:13:06 GMT
 ENTRYPOINT ["docker-varnish-entrypoint"]
-# Tue, 04 Feb 2020 15:30:27 GMT
+# Wed, 26 Feb 2020 20:13:06 GMT
 EXPOSE 80
-# Tue, 04 Feb 2020 15:30:27 GMT
+# Wed, 26 Feb 2020 20:13:06 GMT
 CMD ["varnishd" "-F" "-f" "/etc/varnish/default.vcl"]
 ```
 
 -	Layers:
-	-	`sha256:619014d83c026bca3d21f5eb42a629ac2dbe15bdb37b77f25fc1ac5fbada68e5`  
-		Last Modified: Sat, 01 Feb 2020 17:29:01 GMT  
-		Size: 22.5 MB (22524713 bytes)  
+	-	`sha256:6d28e14ab8c85bf8a4331de0667c27d19ef4092b12531eec0334b5c2a1012668`  
+		Last Modified: Wed, 26 Feb 2020 00:47:21 GMT  
+		Size: 22.5 MB (22513365 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ffc291c73df31fab402d8b605314fffbcd5003e58fc59e7a7b167cc08d21dd29`  
-		Last Modified: Tue, 04 Feb 2020 15:31:16 GMT  
-		Size: 44.9 MB (44898291 bytes)  
+	-	`sha256:eeaaa9cafaa70fa114de2d196cc2b32c684bf5a13afc0590f45345ace2eed011`  
+		Last Modified: Wed, 26 Feb 2020 20:14:00 GMT  
+		Size: 44.9 MB (44898556 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:715baf7fed4ff9a026e19a74045bd47e94949f6e01531565f76b8d55a3648ace`  
-		Last Modified: Tue, 04 Feb 2020 15:31:07 GMT  
-		Size: 383.0 B  
+	-	`sha256:de7fa2123fee52f9d5c936aa063a71f229fbf5993ee30428a88f61ff4373ab0c`  
+		Last Modified: Wed, 26 Feb 2020 20:13:51 GMT  
+		Size: 382.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `varnish:6.0`
 
 ```console
-$ docker pull varnish@sha256:bb6edcc0c06577a23825fdf6fc41a67d2b48a0bf92d7127c582b1165d4705a81
+$ docker pull varnish@sha256:6fca0ca2946aaeb1bed34d64811b4d93a6ae1dd36bb64793d19e5a7f47225bcb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -85,56 +85,56 @@ $ docker pull varnish@sha256:bb6edcc0c06577a23825fdf6fc41a67d2b48a0bf92d7127c582
 ### `varnish:6.0` - linux; amd64
 
 ```console
-$ docker pull varnish@sha256:54f3120e54c08bdd7ced18a79532c59bfc51e0175e3b4850eb61e4f5eb215ab9
+$ docker pull varnish@sha256:bc1215bb451808d6e9a630ea7bc0f0213888d42f0b7a2da20a13599560615f19
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **67.2 MB (67219539 bytes)**  
+-	Total Size: **67.2 MB (67208195 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ce9f97cf5984fca6b4fa6410da855c4dfa856f8c276d6d339eca86cd554bf0c2`
+-	Image ID: `sha256:dc9abde2874739c518e1533e38e737c63924ba32492b553623351a61bfa521bf`
 -	Entrypoint: `["docker-varnish-entrypoint"]`
 -	Default Command: `["varnishd","-F","-f","\/etc\/varnish\/default.vcl"]`
 
 ```dockerfile
-# Sat, 01 Feb 2020 17:23:57 GMT
-ADD file:003d2bac85e72555ed93f77a2b1d595a7fe51c4a9a2401496a82fc673a863fd6 in / 
-# Sat, 01 Feb 2020 17:23:58 GMT
+# Wed, 26 Feb 2020 00:41:38 GMT
+ADD file:1256c62f77a54c982fdb2790d682049b2ad64c8466466e846f3d33ad1ed4035d in / 
+# Wed, 26 Feb 2020 00:41:38 GMT
 CMD ["bash"]
-# Tue, 04 Feb 2020 15:30:32 GMT
+# Wed, 26 Feb 2020 20:13:14 GMT
 ENV VARNISH_VERSION=6.0.6-1~stretch
-# Tue, 04 Feb 2020 15:30:54 GMT
+# Wed, 26 Feb 2020 20:13:38 GMT
 RUN set -ex; 	fetchDeps=" 		dirmngr 		gnupg 	"; 	apt-get update; 	apt-get install -y --no-install-recommends apt-transport-https ca-certificates $fetchDeps; 	key=48D81A24CB0456F5D59431D94CFCFD6BA750EDCD; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver http://ha.pool.sks-keyservers.net/ --recv-keys $key; 	gpg --batch --export export $key > /etc/apt/trusted.gpg.d/varnish.gpg; 	gpgconf --kill all; 	rm -rf $GNUPGHOME; 	echo deb https://packagecloud.io/varnishcache/varnish60lts/debian/ stretch main > /etc/apt/sources.list.d/varnish.list; 	apt-get update; 	apt-get install -y --no-install-recommends varnish=$VARNISH_VERSION; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; 	rm -rf /var/lib/apt/lists/*
-# Tue, 04 Feb 2020 15:30:54 GMT
+# Wed, 26 Feb 2020 20:13:38 GMT
 WORKDIR /etc/varnish
-# Tue, 04 Feb 2020 15:30:54 GMT
+# Wed, 26 Feb 2020 20:13:38 GMT
 COPY file:0301ec458d312e5c085462f916888bc85bb94c134ed6116667d225487db56cac in /usr/local/bin/ 
-# Tue, 04 Feb 2020 15:30:55 GMT
+# Wed, 26 Feb 2020 20:13:39 GMT
 ENTRYPOINT ["docker-varnish-entrypoint"]
-# Tue, 04 Feb 2020 15:30:55 GMT
+# Wed, 26 Feb 2020 20:13:39 GMT
 EXPOSE 80
-# Tue, 04 Feb 2020 15:30:55 GMT
+# Wed, 26 Feb 2020 20:13:39 GMT
 CMD ["varnishd" "-F" "-f" "/etc/varnish/default.vcl"]
 ```
 
 -	Layers:
-	-	`sha256:619014d83c026bca3d21f5eb42a629ac2dbe15bdb37b77f25fc1ac5fbada68e5`  
-		Last Modified: Sat, 01 Feb 2020 17:29:01 GMT  
-		Size: 22.5 MB (22524713 bytes)  
+	-	`sha256:6d28e14ab8c85bf8a4331de0667c27d19ef4092b12531eec0334b5c2a1012668`  
+		Last Modified: Wed, 26 Feb 2020 00:47:21 GMT  
+		Size: 22.5 MB (22513365 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8737e60add224d9031379d210507baccecee4d94e428316a8a0acabe28ab6c13`  
-		Last Modified: Tue, 04 Feb 2020 15:31:31 GMT  
-		Size: 44.7 MB (44694444 bytes)  
+	-	`sha256:9cfb65f89d166776d2e4d51f0b61d8d5b77e2fd384e359e8be6c4e95ac22975c`  
+		Last Modified: Wed, 26 Feb 2020 20:14:15 GMT  
+		Size: 44.7 MB (44694450 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:98d4db90dbc4f2e6053ff6971a862a60dba660127bdfe1e394b5b15cd43783e0`  
-		Last Modified: Tue, 04 Feb 2020 15:31:22 GMT  
-		Size: 382.0 B  
+	-	`sha256:1b867613e54808b6c7235a9814e282571ad4aa9d9e541f3e4cb3efce3ff137b9`  
+		Last Modified: Wed, 26 Feb 2020 20:14:07 GMT  
+		Size: 380.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `varnish:6.0.6`
 
 ```console
-$ docker pull varnish@sha256:bb6edcc0c06577a23825fdf6fc41a67d2b48a0bf92d7127c582b1165d4705a81
+$ docker pull varnish@sha256:6fca0ca2946aaeb1bed34d64811b4d93a6ae1dd36bb64793d19e5a7f47225bcb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -144,56 +144,56 @@ $ docker pull varnish@sha256:bb6edcc0c06577a23825fdf6fc41a67d2b48a0bf92d7127c582
 ### `varnish:6.0.6` - linux; amd64
 
 ```console
-$ docker pull varnish@sha256:54f3120e54c08bdd7ced18a79532c59bfc51e0175e3b4850eb61e4f5eb215ab9
+$ docker pull varnish@sha256:bc1215bb451808d6e9a630ea7bc0f0213888d42f0b7a2da20a13599560615f19
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **67.2 MB (67219539 bytes)**  
+-	Total Size: **67.2 MB (67208195 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ce9f97cf5984fca6b4fa6410da855c4dfa856f8c276d6d339eca86cd554bf0c2`
+-	Image ID: `sha256:dc9abde2874739c518e1533e38e737c63924ba32492b553623351a61bfa521bf`
 -	Entrypoint: `["docker-varnish-entrypoint"]`
 -	Default Command: `["varnishd","-F","-f","\/etc\/varnish\/default.vcl"]`
 
 ```dockerfile
-# Sat, 01 Feb 2020 17:23:57 GMT
-ADD file:003d2bac85e72555ed93f77a2b1d595a7fe51c4a9a2401496a82fc673a863fd6 in / 
-# Sat, 01 Feb 2020 17:23:58 GMT
+# Wed, 26 Feb 2020 00:41:38 GMT
+ADD file:1256c62f77a54c982fdb2790d682049b2ad64c8466466e846f3d33ad1ed4035d in / 
+# Wed, 26 Feb 2020 00:41:38 GMT
 CMD ["bash"]
-# Tue, 04 Feb 2020 15:30:32 GMT
+# Wed, 26 Feb 2020 20:13:14 GMT
 ENV VARNISH_VERSION=6.0.6-1~stretch
-# Tue, 04 Feb 2020 15:30:54 GMT
+# Wed, 26 Feb 2020 20:13:38 GMT
 RUN set -ex; 	fetchDeps=" 		dirmngr 		gnupg 	"; 	apt-get update; 	apt-get install -y --no-install-recommends apt-transport-https ca-certificates $fetchDeps; 	key=48D81A24CB0456F5D59431D94CFCFD6BA750EDCD; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver http://ha.pool.sks-keyservers.net/ --recv-keys $key; 	gpg --batch --export export $key > /etc/apt/trusted.gpg.d/varnish.gpg; 	gpgconf --kill all; 	rm -rf $GNUPGHOME; 	echo deb https://packagecloud.io/varnishcache/varnish60lts/debian/ stretch main > /etc/apt/sources.list.d/varnish.list; 	apt-get update; 	apt-get install -y --no-install-recommends varnish=$VARNISH_VERSION; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; 	rm -rf /var/lib/apt/lists/*
-# Tue, 04 Feb 2020 15:30:54 GMT
+# Wed, 26 Feb 2020 20:13:38 GMT
 WORKDIR /etc/varnish
-# Tue, 04 Feb 2020 15:30:54 GMT
+# Wed, 26 Feb 2020 20:13:38 GMT
 COPY file:0301ec458d312e5c085462f916888bc85bb94c134ed6116667d225487db56cac in /usr/local/bin/ 
-# Tue, 04 Feb 2020 15:30:55 GMT
+# Wed, 26 Feb 2020 20:13:39 GMT
 ENTRYPOINT ["docker-varnish-entrypoint"]
-# Tue, 04 Feb 2020 15:30:55 GMT
+# Wed, 26 Feb 2020 20:13:39 GMT
 EXPOSE 80
-# Tue, 04 Feb 2020 15:30:55 GMT
+# Wed, 26 Feb 2020 20:13:39 GMT
 CMD ["varnishd" "-F" "-f" "/etc/varnish/default.vcl"]
 ```
 
 -	Layers:
-	-	`sha256:619014d83c026bca3d21f5eb42a629ac2dbe15bdb37b77f25fc1ac5fbada68e5`  
-		Last Modified: Sat, 01 Feb 2020 17:29:01 GMT  
-		Size: 22.5 MB (22524713 bytes)  
+	-	`sha256:6d28e14ab8c85bf8a4331de0667c27d19ef4092b12531eec0334b5c2a1012668`  
+		Last Modified: Wed, 26 Feb 2020 00:47:21 GMT  
+		Size: 22.5 MB (22513365 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8737e60add224d9031379d210507baccecee4d94e428316a8a0acabe28ab6c13`  
-		Last Modified: Tue, 04 Feb 2020 15:31:31 GMT  
-		Size: 44.7 MB (44694444 bytes)  
+	-	`sha256:9cfb65f89d166776d2e4d51f0b61d8d5b77e2fd384e359e8be6c4e95ac22975c`  
+		Last Modified: Wed, 26 Feb 2020 20:14:15 GMT  
+		Size: 44.7 MB (44694450 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:98d4db90dbc4f2e6053ff6971a862a60dba660127bdfe1e394b5b15cd43783e0`  
-		Last Modified: Tue, 04 Feb 2020 15:31:22 GMT  
-		Size: 382.0 B  
+	-	`sha256:1b867613e54808b6c7235a9814e282571ad4aa9d9e541f3e4cb3efce3ff137b9`  
+		Last Modified: Wed, 26 Feb 2020 20:14:07 GMT  
+		Size: 380.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `varnish:6.0.6-1`
 
 ```console
-$ docker pull varnish@sha256:bb6edcc0c06577a23825fdf6fc41a67d2b48a0bf92d7127c582b1165d4705a81
+$ docker pull varnish@sha256:6fca0ca2946aaeb1bed34d64811b4d93a6ae1dd36bb64793d19e5a7f47225bcb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -203,56 +203,56 @@ $ docker pull varnish@sha256:bb6edcc0c06577a23825fdf6fc41a67d2b48a0bf92d7127c582
 ### `varnish:6.0.6-1` - linux; amd64
 
 ```console
-$ docker pull varnish@sha256:54f3120e54c08bdd7ced18a79532c59bfc51e0175e3b4850eb61e4f5eb215ab9
+$ docker pull varnish@sha256:bc1215bb451808d6e9a630ea7bc0f0213888d42f0b7a2da20a13599560615f19
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **67.2 MB (67219539 bytes)**  
+-	Total Size: **67.2 MB (67208195 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ce9f97cf5984fca6b4fa6410da855c4dfa856f8c276d6d339eca86cd554bf0c2`
+-	Image ID: `sha256:dc9abde2874739c518e1533e38e737c63924ba32492b553623351a61bfa521bf`
 -	Entrypoint: `["docker-varnish-entrypoint"]`
 -	Default Command: `["varnishd","-F","-f","\/etc\/varnish\/default.vcl"]`
 
 ```dockerfile
-# Sat, 01 Feb 2020 17:23:57 GMT
-ADD file:003d2bac85e72555ed93f77a2b1d595a7fe51c4a9a2401496a82fc673a863fd6 in / 
-# Sat, 01 Feb 2020 17:23:58 GMT
+# Wed, 26 Feb 2020 00:41:38 GMT
+ADD file:1256c62f77a54c982fdb2790d682049b2ad64c8466466e846f3d33ad1ed4035d in / 
+# Wed, 26 Feb 2020 00:41:38 GMT
 CMD ["bash"]
-# Tue, 04 Feb 2020 15:30:32 GMT
+# Wed, 26 Feb 2020 20:13:14 GMT
 ENV VARNISH_VERSION=6.0.6-1~stretch
-# Tue, 04 Feb 2020 15:30:54 GMT
+# Wed, 26 Feb 2020 20:13:38 GMT
 RUN set -ex; 	fetchDeps=" 		dirmngr 		gnupg 	"; 	apt-get update; 	apt-get install -y --no-install-recommends apt-transport-https ca-certificates $fetchDeps; 	key=48D81A24CB0456F5D59431D94CFCFD6BA750EDCD; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver http://ha.pool.sks-keyservers.net/ --recv-keys $key; 	gpg --batch --export export $key > /etc/apt/trusted.gpg.d/varnish.gpg; 	gpgconf --kill all; 	rm -rf $GNUPGHOME; 	echo deb https://packagecloud.io/varnishcache/varnish60lts/debian/ stretch main > /etc/apt/sources.list.d/varnish.list; 	apt-get update; 	apt-get install -y --no-install-recommends varnish=$VARNISH_VERSION; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; 	rm -rf /var/lib/apt/lists/*
-# Tue, 04 Feb 2020 15:30:54 GMT
+# Wed, 26 Feb 2020 20:13:38 GMT
 WORKDIR /etc/varnish
-# Tue, 04 Feb 2020 15:30:54 GMT
+# Wed, 26 Feb 2020 20:13:38 GMT
 COPY file:0301ec458d312e5c085462f916888bc85bb94c134ed6116667d225487db56cac in /usr/local/bin/ 
-# Tue, 04 Feb 2020 15:30:55 GMT
+# Wed, 26 Feb 2020 20:13:39 GMT
 ENTRYPOINT ["docker-varnish-entrypoint"]
-# Tue, 04 Feb 2020 15:30:55 GMT
+# Wed, 26 Feb 2020 20:13:39 GMT
 EXPOSE 80
-# Tue, 04 Feb 2020 15:30:55 GMT
+# Wed, 26 Feb 2020 20:13:39 GMT
 CMD ["varnishd" "-F" "-f" "/etc/varnish/default.vcl"]
 ```
 
 -	Layers:
-	-	`sha256:619014d83c026bca3d21f5eb42a629ac2dbe15bdb37b77f25fc1ac5fbada68e5`  
-		Last Modified: Sat, 01 Feb 2020 17:29:01 GMT  
-		Size: 22.5 MB (22524713 bytes)  
+	-	`sha256:6d28e14ab8c85bf8a4331de0667c27d19ef4092b12531eec0334b5c2a1012668`  
+		Last Modified: Wed, 26 Feb 2020 00:47:21 GMT  
+		Size: 22.5 MB (22513365 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8737e60add224d9031379d210507baccecee4d94e428316a8a0acabe28ab6c13`  
-		Last Modified: Tue, 04 Feb 2020 15:31:31 GMT  
-		Size: 44.7 MB (44694444 bytes)  
+	-	`sha256:9cfb65f89d166776d2e4d51f0b61d8d5b77e2fd384e359e8be6c4e95ac22975c`  
+		Last Modified: Wed, 26 Feb 2020 20:14:15 GMT  
+		Size: 44.7 MB (44694450 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:98d4db90dbc4f2e6053ff6971a862a60dba660127bdfe1e394b5b15cd43783e0`  
-		Last Modified: Tue, 04 Feb 2020 15:31:22 GMT  
-		Size: 382.0 B  
+	-	`sha256:1b867613e54808b6c7235a9814e282571ad4aa9d9e541f3e4cb3efce3ff137b9`  
+		Last Modified: Wed, 26 Feb 2020 20:14:07 GMT  
+		Size: 380.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `varnish:6.3`
 
 ```console
-$ docker pull varnish@sha256:3669ea06ee7e0f47bfc8feb58f735603e45c5f6558c32e133cfeecc6c829f61f
+$ docker pull varnish@sha256:f2abecfcefe8bce1839e8f274490bc166fe36f4e4d0940e82d33cb0b86a78c17
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -262,56 +262,56 @@ $ docker pull varnish@sha256:3669ea06ee7e0f47bfc8feb58f735603e45c5f6558c32e133cf
 ### `varnish:6.3` - linux; amd64
 
 ```console
-$ docker pull varnish@sha256:2696746f50c4d78b0ed14dbf5ca38f72b1491cd1e0da35c9f5beb7066ac6b548
+$ docker pull varnish@sha256:ee1113f9d12f1b56b7ed6eae2e62dbb196dbe6d8913c2522fb5c12e04a616105
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **67.4 MB (67423387 bytes)**  
+-	Total Size: **67.4 MB (67412303 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f9b81057c246da9ad3dd0a29a45c69826d0c7b14b7a78a10f090c42fee3c15c9`
+-	Image ID: `sha256:a1a0ab71af24be8ccd6311d3c641d2fced267ccadfdbabacaa90547d89363de5`
 -	Entrypoint: `["docker-varnish-entrypoint"]`
 -	Default Command: `["varnishd","-F","-f","\/etc\/varnish\/default.vcl"]`
 
 ```dockerfile
-# Sat, 01 Feb 2020 17:23:57 GMT
-ADD file:003d2bac85e72555ed93f77a2b1d595a7fe51c4a9a2401496a82fc673a863fd6 in / 
-# Sat, 01 Feb 2020 17:23:58 GMT
+# Wed, 26 Feb 2020 00:41:38 GMT
+ADD file:1256c62f77a54c982fdb2790d682049b2ad64c8466466e846f3d33ad1ed4035d in / 
+# Wed, 26 Feb 2020 00:41:38 GMT
 CMD ["bash"]
-# Tue, 04 Feb 2020 15:30:04 GMT
+# Wed, 26 Feb 2020 20:12:41 GMT
 ENV VARNISH_VERSION=6.3.2-1~stretch
-# Tue, 04 Feb 2020 15:30:26 GMT
+# Wed, 26 Feb 2020 20:13:05 GMT
 RUN set -ex; 	fetchDeps=" 		dirmngr 		gnupg 	"; 	apt-get update; 	apt-get install -y --no-install-recommends apt-transport-https ca-certificates $fetchDeps; 	key=920A8A7AA7120A8604BCCD294A42CD6EB810E55D; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver http://ha.pool.sks-keyservers.net/ --recv-keys $key; 	gpg --batch --export export $key > /etc/apt/trusted.gpg.d/varnish.gpg; 	gpgconf --kill all; 	rm -rf $GNUPGHOME; 	echo deb https://packagecloud.io/varnishcache/varnish63/debian/ stretch main > /etc/apt/sources.list.d/varnish.list; 	apt-get update; 	apt-get install -y --no-install-recommends varnish=$VARNISH_VERSION; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; 	rm -rf /var/lib/apt/lists/*
-# Tue, 04 Feb 2020 15:30:27 GMT
+# Wed, 26 Feb 2020 20:13:06 GMT
 WORKDIR /etc/varnish
-# Tue, 04 Feb 2020 15:30:27 GMT
+# Wed, 26 Feb 2020 20:13:06 GMT
 COPY file:0301ec458d312e5c085462f916888bc85bb94c134ed6116667d225487db56cac in /usr/local/bin/ 
-# Tue, 04 Feb 2020 15:30:27 GMT
+# Wed, 26 Feb 2020 20:13:06 GMT
 ENTRYPOINT ["docker-varnish-entrypoint"]
-# Tue, 04 Feb 2020 15:30:27 GMT
+# Wed, 26 Feb 2020 20:13:06 GMT
 EXPOSE 80
-# Tue, 04 Feb 2020 15:30:27 GMT
+# Wed, 26 Feb 2020 20:13:06 GMT
 CMD ["varnishd" "-F" "-f" "/etc/varnish/default.vcl"]
 ```
 
 -	Layers:
-	-	`sha256:619014d83c026bca3d21f5eb42a629ac2dbe15bdb37b77f25fc1ac5fbada68e5`  
-		Last Modified: Sat, 01 Feb 2020 17:29:01 GMT  
-		Size: 22.5 MB (22524713 bytes)  
+	-	`sha256:6d28e14ab8c85bf8a4331de0667c27d19ef4092b12531eec0334b5c2a1012668`  
+		Last Modified: Wed, 26 Feb 2020 00:47:21 GMT  
+		Size: 22.5 MB (22513365 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ffc291c73df31fab402d8b605314fffbcd5003e58fc59e7a7b167cc08d21dd29`  
-		Last Modified: Tue, 04 Feb 2020 15:31:16 GMT  
-		Size: 44.9 MB (44898291 bytes)  
+	-	`sha256:eeaaa9cafaa70fa114de2d196cc2b32c684bf5a13afc0590f45345ace2eed011`  
+		Last Modified: Wed, 26 Feb 2020 20:14:00 GMT  
+		Size: 44.9 MB (44898556 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:715baf7fed4ff9a026e19a74045bd47e94949f6e01531565f76b8d55a3648ace`  
-		Last Modified: Tue, 04 Feb 2020 15:31:07 GMT  
-		Size: 383.0 B  
+	-	`sha256:de7fa2123fee52f9d5c936aa063a71f229fbf5993ee30428a88f61ff4373ab0c`  
+		Last Modified: Wed, 26 Feb 2020 20:13:51 GMT  
+		Size: 382.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `varnish:6.3.2`
 
 ```console
-$ docker pull varnish@sha256:3669ea06ee7e0f47bfc8feb58f735603e45c5f6558c32e133cfeecc6c829f61f
+$ docker pull varnish@sha256:f2abecfcefe8bce1839e8f274490bc166fe36f4e4d0940e82d33cb0b86a78c17
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -321,56 +321,56 @@ $ docker pull varnish@sha256:3669ea06ee7e0f47bfc8feb58f735603e45c5f6558c32e133cf
 ### `varnish:6.3.2` - linux; amd64
 
 ```console
-$ docker pull varnish@sha256:2696746f50c4d78b0ed14dbf5ca38f72b1491cd1e0da35c9f5beb7066ac6b548
+$ docker pull varnish@sha256:ee1113f9d12f1b56b7ed6eae2e62dbb196dbe6d8913c2522fb5c12e04a616105
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **67.4 MB (67423387 bytes)**  
+-	Total Size: **67.4 MB (67412303 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f9b81057c246da9ad3dd0a29a45c69826d0c7b14b7a78a10f090c42fee3c15c9`
+-	Image ID: `sha256:a1a0ab71af24be8ccd6311d3c641d2fced267ccadfdbabacaa90547d89363de5`
 -	Entrypoint: `["docker-varnish-entrypoint"]`
 -	Default Command: `["varnishd","-F","-f","\/etc\/varnish\/default.vcl"]`
 
 ```dockerfile
-# Sat, 01 Feb 2020 17:23:57 GMT
-ADD file:003d2bac85e72555ed93f77a2b1d595a7fe51c4a9a2401496a82fc673a863fd6 in / 
-# Sat, 01 Feb 2020 17:23:58 GMT
+# Wed, 26 Feb 2020 00:41:38 GMT
+ADD file:1256c62f77a54c982fdb2790d682049b2ad64c8466466e846f3d33ad1ed4035d in / 
+# Wed, 26 Feb 2020 00:41:38 GMT
 CMD ["bash"]
-# Tue, 04 Feb 2020 15:30:04 GMT
+# Wed, 26 Feb 2020 20:12:41 GMT
 ENV VARNISH_VERSION=6.3.2-1~stretch
-# Tue, 04 Feb 2020 15:30:26 GMT
+# Wed, 26 Feb 2020 20:13:05 GMT
 RUN set -ex; 	fetchDeps=" 		dirmngr 		gnupg 	"; 	apt-get update; 	apt-get install -y --no-install-recommends apt-transport-https ca-certificates $fetchDeps; 	key=920A8A7AA7120A8604BCCD294A42CD6EB810E55D; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver http://ha.pool.sks-keyservers.net/ --recv-keys $key; 	gpg --batch --export export $key > /etc/apt/trusted.gpg.d/varnish.gpg; 	gpgconf --kill all; 	rm -rf $GNUPGHOME; 	echo deb https://packagecloud.io/varnishcache/varnish63/debian/ stretch main > /etc/apt/sources.list.d/varnish.list; 	apt-get update; 	apt-get install -y --no-install-recommends varnish=$VARNISH_VERSION; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; 	rm -rf /var/lib/apt/lists/*
-# Tue, 04 Feb 2020 15:30:27 GMT
+# Wed, 26 Feb 2020 20:13:06 GMT
 WORKDIR /etc/varnish
-# Tue, 04 Feb 2020 15:30:27 GMT
+# Wed, 26 Feb 2020 20:13:06 GMT
 COPY file:0301ec458d312e5c085462f916888bc85bb94c134ed6116667d225487db56cac in /usr/local/bin/ 
-# Tue, 04 Feb 2020 15:30:27 GMT
+# Wed, 26 Feb 2020 20:13:06 GMT
 ENTRYPOINT ["docker-varnish-entrypoint"]
-# Tue, 04 Feb 2020 15:30:27 GMT
+# Wed, 26 Feb 2020 20:13:06 GMT
 EXPOSE 80
-# Tue, 04 Feb 2020 15:30:27 GMT
+# Wed, 26 Feb 2020 20:13:06 GMT
 CMD ["varnishd" "-F" "-f" "/etc/varnish/default.vcl"]
 ```
 
 -	Layers:
-	-	`sha256:619014d83c026bca3d21f5eb42a629ac2dbe15bdb37b77f25fc1ac5fbada68e5`  
-		Last Modified: Sat, 01 Feb 2020 17:29:01 GMT  
-		Size: 22.5 MB (22524713 bytes)  
+	-	`sha256:6d28e14ab8c85bf8a4331de0667c27d19ef4092b12531eec0334b5c2a1012668`  
+		Last Modified: Wed, 26 Feb 2020 00:47:21 GMT  
+		Size: 22.5 MB (22513365 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ffc291c73df31fab402d8b605314fffbcd5003e58fc59e7a7b167cc08d21dd29`  
-		Last Modified: Tue, 04 Feb 2020 15:31:16 GMT  
-		Size: 44.9 MB (44898291 bytes)  
+	-	`sha256:eeaaa9cafaa70fa114de2d196cc2b32c684bf5a13afc0590f45345ace2eed011`  
+		Last Modified: Wed, 26 Feb 2020 20:14:00 GMT  
+		Size: 44.9 MB (44898556 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:715baf7fed4ff9a026e19a74045bd47e94949f6e01531565f76b8d55a3648ace`  
-		Last Modified: Tue, 04 Feb 2020 15:31:07 GMT  
-		Size: 383.0 B  
+	-	`sha256:de7fa2123fee52f9d5c936aa063a71f229fbf5993ee30428a88f61ff4373ab0c`  
+		Last Modified: Wed, 26 Feb 2020 20:13:51 GMT  
+		Size: 382.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `varnish:6.3.2-1`
 
 ```console
-$ docker pull varnish@sha256:3669ea06ee7e0f47bfc8feb58f735603e45c5f6558c32e133cfeecc6c829f61f
+$ docker pull varnish@sha256:f2abecfcefe8bce1839e8f274490bc166fe36f4e4d0940e82d33cb0b86a78c17
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -380,56 +380,56 @@ $ docker pull varnish@sha256:3669ea06ee7e0f47bfc8feb58f735603e45c5f6558c32e133cf
 ### `varnish:6.3.2-1` - linux; amd64
 
 ```console
-$ docker pull varnish@sha256:2696746f50c4d78b0ed14dbf5ca38f72b1491cd1e0da35c9f5beb7066ac6b548
+$ docker pull varnish@sha256:ee1113f9d12f1b56b7ed6eae2e62dbb196dbe6d8913c2522fb5c12e04a616105
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **67.4 MB (67423387 bytes)**  
+-	Total Size: **67.4 MB (67412303 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f9b81057c246da9ad3dd0a29a45c69826d0c7b14b7a78a10f090c42fee3c15c9`
+-	Image ID: `sha256:a1a0ab71af24be8ccd6311d3c641d2fced267ccadfdbabacaa90547d89363de5`
 -	Entrypoint: `["docker-varnish-entrypoint"]`
 -	Default Command: `["varnishd","-F","-f","\/etc\/varnish\/default.vcl"]`
 
 ```dockerfile
-# Sat, 01 Feb 2020 17:23:57 GMT
-ADD file:003d2bac85e72555ed93f77a2b1d595a7fe51c4a9a2401496a82fc673a863fd6 in / 
-# Sat, 01 Feb 2020 17:23:58 GMT
+# Wed, 26 Feb 2020 00:41:38 GMT
+ADD file:1256c62f77a54c982fdb2790d682049b2ad64c8466466e846f3d33ad1ed4035d in / 
+# Wed, 26 Feb 2020 00:41:38 GMT
 CMD ["bash"]
-# Tue, 04 Feb 2020 15:30:04 GMT
+# Wed, 26 Feb 2020 20:12:41 GMT
 ENV VARNISH_VERSION=6.3.2-1~stretch
-# Tue, 04 Feb 2020 15:30:26 GMT
+# Wed, 26 Feb 2020 20:13:05 GMT
 RUN set -ex; 	fetchDeps=" 		dirmngr 		gnupg 	"; 	apt-get update; 	apt-get install -y --no-install-recommends apt-transport-https ca-certificates $fetchDeps; 	key=920A8A7AA7120A8604BCCD294A42CD6EB810E55D; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver http://ha.pool.sks-keyservers.net/ --recv-keys $key; 	gpg --batch --export export $key > /etc/apt/trusted.gpg.d/varnish.gpg; 	gpgconf --kill all; 	rm -rf $GNUPGHOME; 	echo deb https://packagecloud.io/varnishcache/varnish63/debian/ stretch main > /etc/apt/sources.list.d/varnish.list; 	apt-get update; 	apt-get install -y --no-install-recommends varnish=$VARNISH_VERSION; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; 	rm -rf /var/lib/apt/lists/*
-# Tue, 04 Feb 2020 15:30:27 GMT
+# Wed, 26 Feb 2020 20:13:06 GMT
 WORKDIR /etc/varnish
-# Tue, 04 Feb 2020 15:30:27 GMT
+# Wed, 26 Feb 2020 20:13:06 GMT
 COPY file:0301ec458d312e5c085462f916888bc85bb94c134ed6116667d225487db56cac in /usr/local/bin/ 
-# Tue, 04 Feb 2020 15:30:27 GMT
+# Wed, 26 Feb 2020 20:13:06 GMT
 ENTRYPOINT ["docker-varnish-entrypoint"]
-# Tue, 04 Feb 2020 15:30:27 GMT
+# Wed, 26 Feb 2020 20:13:06 GMT
 EXPOSE 80
-# Tue, 04 Feb 2020 15:30:27 GMT
+# Wed, 26 Feb 2020 20:13:06 GMT
 CMD ["varnishd" "-F" "-f" "/etc/varnish/default.vcl"]
 ```
 
 -	Layers:
-	-	`sha256:619014d83c026bca3d21f5eb42a629ac2dbe15bdb37b77f25fc1ac5fbada68e5`  
-		Last Modified: Sat, 01 Feb 2020 17:29:01 GMT  
-		Size: 22.5 MB (22524713 bytes)  
+	-	`sha256:6d28e14ab8c85bf8a4331de0667c27d19ef4092b12531eec0334b5c2a1012668`  
+		Last Modified: Wed, 26 Feb 2020 00:47:21 GMT  
+		Size: 22.5 MB (22513365 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ffc291c73df31fab402d8b605314fffbcd5003e58fc59e7a7b167cc08d21dd29`  
-		Last Modified: Tue, 04 Feb 2020 15:31:16 GMT  
-		Size: 44.9 MB (44898291 bytes)  
+	-	`sha256:eeaaa9cafaa70fa114de2d196cc2b32c684bf5a13afc0590f45345ace2eed011`  
+		Last Modified: Wed, 26 Feb 2020 20:14:00 GMT  
+		Size: 44.9 MB (44898556 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:715baf7fed4ff9a026e19a74045bd47e94949f6e01531565f76b8d55a3648ace`  
-		Last Modified: Tue, 04 Feb 2020 15:31:07 GMT  
-		Size: 383.0 B  
+	-	`sha256:de7fa2123fee52f9d5c936aa063a71f229fbf5993ee30428a88f61ff4373ab0c`  
+		Last Modified: Wed, 26 Feb 2020 20:13:51 GMT  
+		Size: 382.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `varnish:fresh`
 
 ```console
-$ docker pull varnish@sha256:3669ea06ee7e0f47bfc8feb58f735603e45c5f6558c32e133cfeecc6c829f61f
+$ docker pull varnish@sha256:f2abecfcefe8bce1839e8f274490bc166fe36f4e4d0940e82d33cb0b86a78c17
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -439,56 +439,56 @@ $ docker pull varnish@sha256:3669ea06ee7e0f47bfc8feb58f735603e45c5f6558c32e133cf
 ### `varnish:fresh` - linux; amd64
 
 ```console
-$ docker pull varnish@sha256:2696746f50c4d78b0ed14dbf5ca38f72b1491cd1e0da35c9f5beb7066ac6b548
+$ docker pull varnish@sha256:ee1113f9d12f1b56b7ed6eae2e62dbb196dbe6d8913c2522fb5c12e04a616105
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **67.4 MB (67423387 bytes)**  
+-	Total Size: **67.4 MB (67412303 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f9b81057c246da9ad3dd0a29a45c69826d0c7b14b7a78a10f090c42fee3c15c9`
+-	Image ID: `sha256:a1a0ab71af24be8ccd6311d3c641d2fced267ccadfdbabacaa90547d89363de5`
 -	Entrypoint: `["docker-varnish-entrypoint"]`
 -	Default Command: `["varnishd","-F","-f","\/etc\/varnish\/default.vcl"]`
 
 ```dockerfile
-# Sat, 01 Feb 2020 17:23:57 GMT
-ADD file:003d2bac85e72555ed93f77a2b1d595a7fe51c4a9a2401496a82fc673a863fd6 in / 
-# Sat, 01 Feb 2020 17:23:58 GMT
+# Wed, 26 Feb 2020 00:41:38 GMT
+ADD file:1256c62f77a54c982fdb2790d682049b2ad64c8466466e846f3d33ad1ed4035d in / 
+# Wed, 26 Feb 2020 00:41:38 GMT
 CMD ["bash"]
-# Tue, 04 Feb 2020 15:30:04 GMT
+# Wed, 26 Feb 2020 20:12:41 GMT
 ENV VARNISH_VERSION=6.3.2-1~stretch
-# Tue, 04 Feb 2020 15:30:26 GMT
+# Wed, 26 Feb 2020 20:13:05 GMT
 RUN set -ex; 	fetchDeps=" 		dirmngr 		gnupg 	"; 	apt-get update; 	apt-get install -y --no-install-recommends apt-transport-https ca-certificates $fetchDeps; 	key=920A8A7AA7120A8604BCCD294A42CD6EB810E55D; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver http://ha.pool.sks-keyservers.net/ --recv-keys $key; 	gpg --batch --export export $key > /etc/apt/trusted.gpg.d/varnish.gpg; 	gpgconf --kill all; 	rm -rf $GNUPGHOME; 	echo deb https://packagecloud.io/varnishcache/varnish63/debian/ stretch main > /etc/apt/sources.list.d/varnish.list; 	apt-get update; 	apt-get install -y --no-install-recommends varnish=$VARNISH_VERSION; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; 	rm -rf /var/lib/apt/lists/*
-# Tue, 04 Feb 2020 15:30:27 GMT
+# Wed, 26 Feb 2020 20:13:06 GMT
 WORKDIR /etc/varnish
-# Tue, 04 Feb 2020 15:30:27 GMT
+# Wed, 26 Feb 2020 20:13:06 GMT
 COPY file:0301ec458d312e5c085462f916888bc85bb94c134ed6116667d225487db56cac in /usr/local/bin/ 
-# Tue, 04 Feb 2020 15:30:27 GMT
+# Wed, 26 Feb 2020 20:13:06 GMT
 ENTRYPOINT ["docker-varnish-entrypoint"]
-# Tue, 04 Feb 2020 15:30:27 GMT
+# Wed, 26 Feb 2020 20:13:06 GMT
 EXPOSE 80
-# Tue, 04 Feb 2020 15:30:27 GMT
+# Wed, 26 Feb 2020 20:13:06 GMT
 CMD ["varnishd" "-F" "-f" "/etc/varnish/default.vcl"]
 ```
 
 -	Layers:
-	-	`sha256:619014d83c026bca3d21f5eb42a629ac2dbe15bdb37b77f25fc1ac5fbada68e5`  
-		Last Modified: Sat, 01 Feb 2020 17:29:01 GMT  
-		Size: 22.5 MB (22524713 bytes)  
+	-	`sha256:6d28e14ab8c85bf8a4331de0667c27d19ef4092b12531eec0334b5c2a1012668`  
+		Last Modified: Wed, 26 Feb 2020 00:47:21 GMT  
+		Size: 22.5 MB (22513365 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ffc291c73df31fab402d8b605314fffbcd5003e58fc59e7a7b167cc08d21dd29`  
-		Last Modified: Tue, 04 Feb 2020 15:31:16 GMT  
-		Size: 44.9 MB (44898291 bytes)  
+	-	`sha256:eeaaa9cafaa70fa114de2d196cc2b32c684bf5a13afc0590f45345ace2eed011`  
+		Last Modified: Wed, 26 Feb 2020 20:14:00 GMT  
+		Size: 44.9 MB (44898556 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:715baf7fed4ff9a026e19a74045bd47e94949f6e01531565f76b8d55a3648ace`  
-		Last Modified: Tue, 04 Feb 2020 15:31:07 GMT  
-		Size: 383.0 B  
+	-	`sha256:de7fa2123fee52f9d5c936aa063a71f229fbf5993ee30428a88f61ff4373ab0c`  
+		Last Modified: Wed, 26 Feb 2020 20:13:51 GMT  
+		Size: 382.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `varnish:latest`
 
 ```console
-$ docker pull varnish@sha256:3669ea06ee7e0f47bfc8feb58f735603e45c5f6558c32e133cfeecc6c829f61f
+$ docker pull varnish@sha256:f2abecfcefe8bce1839e8f274490bc166fe36f4e4d0940e82d33cb0b86a78c17
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -498,56 +498,56 @@ $ docker pull varnish@sha256:3669ea06ee7e0f47bfc8feb58f735603e45c5f6558c32e133cf
 ### `varnish:latest` - linux; amd64
 
 ```console
-$ docker pull varnish@sha256:2696746f50c4d78b0ed14dbf5ca38f72b1491cd1e0da35c9f5beb7066ac6b548
+$ docker pull varnish@sha256:ee1113f9d12f1b56b7ed6eae2e62dbb196dbe6d8913c2522fb5c12e04a616105
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **67.4 MB (67423387 bytes)**  
+-	Total Size: **67.4 MB (67412303 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f9b81057c246da9ad3dd0a29a45c69826d0c7b14b7a78a10f090c42fee3c15c9`
+-	Image ID: `sha256:a1a0ab71af24be8ccd6311d3c641d2fced267ccadfdbabacaa90547d89363de5`
 -	Entrypoint: `["docker-varnish-entrypoint"]`
 -	Default Command: `["varnishd","-F","-f","\/etc\/varnish\/default.vcl"]`
 
 ```dockerfile
-# Sat, 01 Feb 2020 17:23:57 GMT
-ADD file:003d2bac85e72555ed93f77a2b1d595a7fe51c4a9a2401496a82fc673a863fd6 in / 
-# Sat, 01 Feb 2020 17:23:58 GMT
+# Wed, 26 Feb 2020 00:41:38 GMT
+ADD file:1256c62f77a54c982fdb2790d682049b2ad64c8466466e846f3d33ad1ed4035d in / 
+# Wed, 26 Feb 2020 00:41:38 GMT
 CMD ["bash"]
-# Tue, 04 Feb 2020 15:30:04 GMT
+# Wed, 26 Feb 2020 20:12:41 GMT
 ENV VARNISH_VERSION=6.3.2-1~stretch
-# Tue, 04 Feb 2020 15:30:26 GMT
+# Wed, 26 Feb 2020 20:13:05 GMT
 RUN set -ex; 	fetchDeps=" 		dirmngr 		gnupg 	"; 	apt-get update; 	apt-get install -y --no-install-recommends apt-transport-https ca-certificates $fetchDeps; 	key=920A8A7AA7120A8604BCCD294A42CD6EB810E55D; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver http://ha.pool.sks-keyservers.net/ --recv-keys $key; 	gpg --batch --export export $key > /etc/apt/trusted.gpg.d/varnish.gpg; 	gpgconf --kill all; 	rm -rf $GNUPGHOME; 	echo deb https://packagecloud.io/varnishcache/varnish63/debian/ stretch main > /etc/apt/sources.list.d/varnish.list; 	apt-get update; 	apt-get install -y --no-install-recommends varnish=$VARNISH_VERSION; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; 	rm -rf /var/lib/apt/lists/*
-# Tue, 04 Feb 2020 15:30:27 GMT
+# Wed, 26 Feb 2020 20:13:06 GMT
 WORKDIR /etc/varnish
-# Tue, 04 Feb 2020 15:30:27 GMT
+# Wed, 26 Feb 2020 20:13:06 GMT
 COPY file:0301ec458d312e5c085462f916888bc85bb94c134ed6116667d225487db56cac in /usr/local/bin/ 
-# Tue, 04 Feb 2020 15:30:27 GMT
+# Wed, 26 Feb 2020 20:13:06 GMT
 ENTRYPOINT ["docker-varnish-entrypoint"]
-# Tue, 04 Feb 2020 15:30:27 GMT
+# Wed, 26 Feb 2020 20:13:06 GMT
 EXPOSE 80
-# Tue, 04 Feb 2020 15:30:27 GMT
+# Wed, 26 Feb 2020 20:13:06 GMT
 CMD ["varnishd" "-F" "-f" "/etc/varnish/default.vcl"]
 ```
 
 -	Layers:
-	-	`sha256:619014d83c026bca3d21f5eb42a629ac2dbe15bdb37b77f25fc1ac5fbada68e5`  
-		Last Modified: Sat, 01 Feb 2020 17:29:01 GMT  
-		Size: 22.5 MB (22524713 bytes)  
+	-	`sha256:6d28e14ab8c85bf8a4331de0667c27d19ef4092b12531eec0334b5c2a1012668`  
+		Last Modified: Wed, 26 Feb 2020 00:47:21 GMT  
+		Size: 22.5 MB (22513365 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ffc291c73df31fab402d8b605314fffbcd5003e58fc59e7a7b167cc08d21dd29`  
-		Last Modified: Tue, 04 Feb 2020 15:31:16 GMT  
-		Size: 44.9 MB (44898291 bytes)  
+	-	`sha256:eeaaa9cafaa70fa114de2d196cc2b32c684bf5a13afc0590f45345ace2eed011`  
+		Last Modified: Wed, 26 Feb 2020 20:14:00 GMT  
+		Size: 44.9 MB (44898556 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:715baf7fed4ff9a026e19a74045bd47e94949f6e01531565f76b8d55a3648ace`  
-		Last Modified: Tue, 04 Feb 2020 15:31:07 GMT  
-		Size: 383.0 B  
+	-	`sha256:de7fa2123fee52f9d5c936aa063a71f229fbf5993ee30428a88f61ff4373ab0c`  
+		Last Modified: Wed, 26 Feb 2020 20:13:51 GMT  
+		Size: 382.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `varnish:stable`
 
 ```console
-$ docker pull varnish@sha256:bb6edcc0c06577a23825fdf6fc41a67d2b48a0bf92d7127c582b1165d4705a81
+$ docker pull varnish@sha256:6fca0ca2946aaeb1bed34d64811b4d93a6ae1dd36bb64793d19e5a7f47225bcb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -557,48 +557,48 @@ $ docker pull varnish@sha256:bb6edcc0c06577a23825fdf6fc41a67d2b48a0bf92d7127c582
 ### `varnish:stable` - linux; amd64
 
 ```console
-$ docker pull varnish@sha256:54f3120e54c08bdd7ced18a79532c59bfc51e0175e3b4850eb61e4f5eb215ab9
+$ docker pull varnish@sha256:bc1215bb451808d6e9a630ea7bc0f0213888d42f0b7a2da20a13599560615f19
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **67.2 MB (67219539 bytes)**  
+-	Total Size: **67.2 MB (67208195 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ce9f97cf5984fca6b4fa6410da855c4dfa856f8c276d6d339eca86cd554bf0c2`
+-	Image ID: `sha256:dc9abde2874739c518e1533e38e737c63924ba32492b553623351a61bfa521bf`
 -	Entrypoint: `["docker-varnish-entrypoint"]`
 -	Default Command: `["varnishd","-F","-f","\/etc\/varnish\/default.vcl"]`
 
 ```dockerfile
-# Sat, 01 Feb 2020 17:23:57 GMT
-ADD file:003d2bac85e72555ed93f77a2b1d595a7fe51c4a9a2401496a82fc673a863fd6 in / 
-# Sat, 01 Feb 2020 17:23:58 GMT
+# Wed, 26 Feb 2020 00:41:38 GMT
+ADD file:1256c62f77a54c982fdb2790d682049b2ad64c8466466e846f3d33ad1ed4035d in / 
+# Wed, 26 Feb 2020 00:41:38 GMT
 CMD ["bash"]
-# Tue, 04 Feb 2020 15:30:32 GMT
+# Wed, 26 Feb 2020 20:13:14 GMT
 ENV VARNISH_VERSION=6.0.6-1~stretch
-# Tue, 04 Feb 2020 15:30:54 GMT
+# Wed, 26 Feb 2020 20:13:38 GMT
 RUN set -ex; 	fetchDeps=" 		dirmngr 		gnupg 	"; 	apt-get update; 	apt-get install -y --no-install-recommends apt-transport-https ca-certificates $fetchDeps; 	key=48D81A24CB0456F5D59431D94CFCFD6BA750EDCD; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver http://ha.pool.sks-keyservers.net/ --recv-keys $key; 	gpg --batch --export export $key > /etc/apt/trusted.gpg.d/varnish.gpg; 	gpgconf --kill all; 	rm -rf $GNUPGHOME; 	echo deb https://packagecloud.io/varnishcache/varnish60lts/debian/ stretch main > /etc/apt/sources.list.d/varnish.list; 	apt-get update; 	apt-get install -y --no-install-recommends varnish=$VARNISH_VERSION; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; 	rm -rf /var/lib/apt/lists/*
-# Tue, 04 Feb 2020 15:30:54 GMT
+# Wed, 26 Feb 2020 20:13:38 GMT
 WORKDIR /etc/varnish
-# Tue, 04 Feb 2020 15:30:54 GMT
+# Wed, 26 Feb 2020 20:13:38 GMT
 COPY file:0301ec458d312e5c085462f916888bc85bb94c134ed6116667d225487db56cac in /usr/local/bin/ 
-# Tue, 04 Feb 2020 15:30:55 GMT
+# Wed, 26 Feb 2020 20:13:39 GMT
 ENTRYPOINT ["docker-varnish-entrypoint"]
-# Tue, 04 Feb 2020 15:30:55 GMT
+# Wed, 26 Feb 2020 20:13:39 GMT
 EXPOSE 80
-# Tue, 04 Feb 2020 15:30:55 GMT
+# Wed, 26 Feb 2020 20:13:39 GMT
 CMD ["varnishd" "-F" "-f" "/etc/varnish/default.vcl"]
 ```
 
 -	Layers:
-	-	`sha256:619014d83c026bca3d21f5eb42a629ac2dbe15bdb37b77f25fc1ac5fbada68e5`  
-		Last Modified: Sat, 01 Feb 2020 17:29:01 GMT  
-		Size: 22.5 MB (22524713 bytes)  
+	-	`sha256:6d28e14ab8c85bf8a4331de0667c27d19ef4092b12531eec0334b5c2a1012668`  
+		Last Modified: Wed, 26 Feb 2020 00:47:21 GMT  
+		Size: 22.5 MB (22513365 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8737e60add224d9031379d210507baccecee4d94e428316a8a0acabe28ab6c13`  
-		Last Modified: Tue, 04 Feb 2020 15:31:31 GMT  
-		Size: 44.7 MB (44694444 bytes)  
+	-	`sha256:9cfb65f89d166776d2e4d51f0b61d8d5b77e2fd384e359e8be6c4e95ac22975c`  
+		Last Modified: Wed, 26 Feb 2020 20:14:15 GMT  
+		Size: 44.7 MB (44694450 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:98d4db90dbc4f2e6053ff6971a862a60dba660127bdfe1e394b5b15cd43783e0`  
-		Last Modified: Tue, 04 Feb 2020 15:31:22 GMT  
-		Size: 382.0 B  
+	-	`sha256:1b867613e54808b6c7235a9814e282571ad4aa9d9e541f3e4cb3efce3ff137b9`  
+		Last Modified: Wed, 26 Feb 2020 20:14:07 GMT  
+		Size: 380.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
