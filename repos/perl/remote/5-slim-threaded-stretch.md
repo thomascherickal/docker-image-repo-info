@@ -1,7 +1,7 @@
 ## `perl:5-slim-threaded-stretch`
 
 ```console
-$ docker pull perl@sha256:021e06a82b34739b117d2d2abc084d268e3783c3ffe2920e0316f3ae2e8050a8
+$ docker pull perl@sha256:469baa8b52dfe57b7c78081b26c46272b5cf7146b3718e84f85c1cfaad51f30d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -200,47 +200,47 @@ CMD ["perl5.30.1" "-de0"]
 ### `perl:5-slim-threaded-stretch` - linux; ppc64le
 
 ```console
-$ docker pull perl@sha256:c48f4e03155e9b67c9da45f2eaeb45afa7031a8010f95522269878d4f9a4724e
+$ docker pull perl@sha256:f6dded92cac30dbf8af7e3db63893bee88bf11aec0c1c8b2615bfb82ad687e25
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **37.1 MB (37050990 bytes)**  
+-	Total Size: **37.0 MB (37034707 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:909bf0b79793c664e681d28963a2253f1313392ca128eff54fa478f86bbcfd3c`
+-	Image ID: `sha256:9b238e367283e06647a600ef88233edc4744436b858c646b3881110dba6ef265`
 -	Default Command: `["perl5.30.1","-de0"]`
 
 ```dockerfile
-# Sat, 01 Feb 2020 17:20:38 GMT
-ADD file:8840e8b11ab671d52cc308dfcd68117cbff88d7e5e18e0628683d75699a7c131 in / 
-# Sat, 01 Feb 2020 17:20:49 GMT
+# Wed, 26 Feb 2020 01:37:18 GMT
+ADD file:661513607cf6a4c5038d6048ea16a04dedb05c03ce6c0e33e409f51510562e11 in / 
+# Wed, 26 Feb 2020 01:37:25 GMT
 CMD ["bash"]
-# Sat, 01 Feb 2020 23:22:21 GMT
+# Wed, 26 Feb 2020 09:52:58 GMT
 LABEL maintainer=Peter Martini <PeterCMartini@GMail.com>, Zak B. Elep <zakame@cpan.org>
-# Sat, 01 Feb 2020 23:22:23 GMT
+# Wed, 26 Feb 2020 09:53:00 GMT
 COPY file:15650064fd29deac721f0aa084ddb3d41db77b78e2907775e257bd67e116ade4 in /usr/src/perl/ 
-# Sat, 01 Feb 2020 23:22:25 GMT
+# Wed, 26 Feb 2020 09:53:03 GMT
 WORKDIR /usr/src/perl
-# Sun, 02 Feb 2020 00:07:12 GMT
+# Wed, 26 Feb 2020 10:36:53 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends        bzip2        ca-certificates        curl        dpkg-dev        gcc        libc6-dev        make        netbase        patch        xz-utils     && curl -SL https://www.cpan.org/src/5.0/perl-5.30.1.tar.xz -o perl-5.30.1.tar.xz     && echo '7336cd3ed0535eb61b76a71350effcfa7c88b44faf37d64d70952ced5d38cd35 *perl-5.30.1.tar.xz' | sha256sum -c -     && tar --strip-components=1 -xaf perl-5.30.1.tar.xz -C /usr/src/perl     && rm perl-5.30.1.tar.xz     && cat *.patch | patch -p1     && gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"     && archBits="$(dpkg-architecture --query DEB_BUILD_ARCH_BITS)"     && archFlag="$([ "$archBits" = '64' ] && echo '-Duse64bitall' || echo '-Duse64bitint')"     && ./Configure -Darchname="$gnuArch" "$archFlag" -Dusethreads -Duseshrplib -Dvendorprefix=/usr/local  -des     && make -j$(nproc)     && TEST_JOBS=$(nproc) make test_harness     && make install     && cd /usr/src     && curl -LO https://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7044.tar.gz     && echo '9b60767fe40752ef7a9d3f13f19060a63389a5c23acc3e9827e19b75500f81f3 *App-cpanminus-1.7044.tar.gz' | sha256sum -c -     && tar -xzf App-cpanminus-1.7044.tar.gz && cd App-cpanminus-1.7044 && perl bin/cpanm . && cd /root     && savedPackages="make netbase"     && apt-mark auto '.*' > /dev/null     && apt-mark manual $savedPackages     && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false     && rm -fr /var/cache/apt/* /var/lib/apt/lists/*     && rm -fr ./cpanm /root/.cpanm /usr/src/perl /usr/src/App-cpanminus-1.7044* /tmp/*
-# Sun, 02 Feb 2020 00:07:19 GMT
+# Wed, 26 Feb 2020 10:36:58 GMT
 WORKDIR /
-# Sun, 02 Feb 2020 00:07:21 GMT
+# Wed, 26 Feb 2020 10:37:01 GMT
 CMD ["perl5.30.1" "-de0"]
 ```
 
 -	Layers:
-	-	`sha256:4b12198d119cc40a2102fa8f986f1f3bc6f22967a421939f96b52470129050b9`  
-		Last Modified: Sat, 01 Feb 2020 17:31:15 GMT  
-		Size: 22.8 MB (22800759 bytes)  
+	-	`sha256:21d148b1dce5a6179231486bac7845a111bbaba4fcaf4232bbc39842bf6c5366`  
+		Last Modified: Wed, 26 Feb 2020 02:04:13 GMT  
+		Size: 22.8 MB (22785269 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e16dc85239255cdaa194eb4c0e1159e32dd93365bde62c9c64326ef6790de355`  
-		Last Modified: Sun, 02 Feb 2020 02:07:51 GMT  
+	-	`sha256:9c3cbcbeeb2c913c59aa925fb5c941eef53fb59eeee409ae261f45c75e05ce8a`  
+		Last Modified: Wed, 26 Feb 2020 12:39:55 GMT  
 		Size: 441.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6e93c7ab63fc630a82c424cb46c29cf002b1ec7c05894c7f8c77b28f5f4e8973`  
-		Last Modified: Sun, 02 Feb 2020 02:09:34 GMT  
-		Size: 14.2 MB (14249790 bytes)  
+	-	`sha256:a12b8478aaa7f8887d76114eaabc73b2411097ae277e0698b82b1e7eeb5d3676`  
+		Last Modified: Wed, 26 Feb 2020 12:42:32 GMT  
+		Size: 14.2 MB (14248997 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `perl:5-slim-threaded-stretch` - linux; s390x
