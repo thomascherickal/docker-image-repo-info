@@ -1,18 +1,18 @@
-# `bash:devel-20200214`
+# `bash:devel-20200221`
 
 ## Docker Metadata
 
-- Image ID: `sha256:5fb489f5e97574b0d1a1e1a94b9e9b5adc271c1151682257da6ce8a965a47559`
-- Created: `2020-02-18T00:20:17.507068864Z`
-- Virtual Size: ~ 14.32 Mb  
+- Image ID: `sha256:d1829e8965e36d163326eccd4bb007763dbd758731e0599cccb28834bef7e8b3`
+- Created: `2020-02-26T00:20:12.422547311Z`
+- Virtual Size: ~ 12.18 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
 - Command: `["bash"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `_BASH_COMMIT=89d788fb0152724a93e0fdab8c15116e5c76572b`
-  - `_BASH_COMMIT_DESC=commit bash-20200214 snapshot`
+  - `_BASH_COMMIT=0df4ddca3f371bc258fe4185cdec36fce3e7be7b`
+  - `_BASH_COMMIT_DESC=commit bash-20200221 snapshot`
 
 ## `apk` (`.apk`-based packages)
 
@@ -206,33 +206,16 @@ MIT BSD GPL2+
 ### `apk` package: `ncurses-libs`
 
 ```console
-ncurses-libs-6.1_p20191130-r0 description:
+ncurses-libs-6.1_p20200118-r0 description:
 Ncurses libraries
 
-ncurses-libs-6.1_p20191130-r0 webpage:
+ncurses-libs-6.1_p20200118-r0 webpage:
 https://invisible-island.net/ncurses/
 
-ncurses-libs-6.1_p20191130-r0 installed size:
+ncurses-libs-6.1_p20200118-r0 installed size:
 507904
 
-ncurses-libs-6.1_p20191130-r0 license:
-MIT
-
-```
-
-### `apk` package: `ncurses-terminfo`
-
-```console
-ncurses-terminfo-6.1_p20191130-r0 description:
-Console display library (other terminfo files)
-
-ncurses-terminfo-6.1_p20191130-r0 webpage:
-https://invisible-island.net/ncurses/
-
-ncurses-terminfo-6.1_p20191130-r0 installed size:
-7348224
-
-ncurses-terminfo-6.1_p20191130-r0 license:
+ncurses-libs-6.1_p20200118-r0 license:
 MIT
 
 ```
@@ -240,16 +223,16 @@ MIT
 ### `apk` package: `ncurses-terminfo-base`
 
 ```console
-ncurses-terminfo-base-6.1_p20191130-r0 description:
+ncurses-terminfo-base-6.1_p20200118-r0 description:
 Descriptions of common terminals
 
-ncurses-terminfo-base-6.1_p20191130-r0 webpage:
+ncurses-terminfo-base-6.1_p20200118-r0 webpage:
 https://invisible-island.net/ncurses/
 
-ncurses-terminfo-base-6.1_p20191130-r0 installed size:
+ncurses-terminfo-base-6.1_p20200118-r0 installed size:
 94208
 
-ncurses-terminfo-base-6.1_p20191130-r0 license:
+ncurses-terminfo-base-6.1_p20200118-r0 license:
 MIT
 
 ```
