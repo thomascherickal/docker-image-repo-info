@@ -26,21 +26,13 @@ Licenses: (parsed from: `/usr/share/doc/libacl1/copyright`)
 - `LGPL-2+`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris acl=2.2.53-5
-'http://deb.debian.org/debian/pool/main/a/acl/acl_2.2.53-5.dsc' acl_2.2.53-5.dsc 2336 SHA256:dd721715ea9a0514e90feddd17661b45e21a07415e87047a31d31f5c7ea1aab1
-'http://deb.debian.org/debian/pool/main/a/acl/acl_2.2.53.orig.tar.gz' acl_2.2.53.orig.tar.gz 524300 SHA256:06be9865c6f418d851ff4494e12406568353b891ffe1f596b34693c387af26c7
-'http://deb.debian.org/debian/pool/main/a/acl/acl_2.2.53.orig.tar.gz.asc' acl_2.2.53.orig.tar.gz.asc 833 SHA256:06849bece0b56a6a7269173abe101cff223bb9346d74027a3cd5ff80914abf4b
-'http://deb.debian.org/debian/pool/main/a/acl/acl_2.2.53-5.debian.tar.xz' acl_2.2.53-5.debian.tar.xz 22320 SHA256:e212867beb37f5ec30097b016b81ce4dc45663e1e81845754f8c4974dc19b5ac
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/acl/2.2.53-5/
 
-- https://sources.debian.net/src/acl/2.2.53-5/ (for browsing the source)
-- https://sources.debian.net/src/acl/2.2.53-5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/acl/2.2.53-5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `adduser=3.118`
 
@@ -2640,20 +2632,13 @@ Licenses: (parsed from: `/usr/share/doc/libidn2-0/copyright`, `/usr/share/doc/li
 - `LGPL-3+`
 - `Unicode`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libidn2=2.2.0-2
-'http://deb.debian.org/debian/pool/main/libi/libidn2/libidn2_2.2.0-2.dsc' libidn2_2.2.0-2.dsc 2436 SHA256:a5c5ece3748beaba9ce0a0b29cdab2fe9d861a965a7a96101a49f194acf759d6
-'http://deb.debian.org/debian/pool/main/libi/libidn2/libidn2_2.2.0.orig.tar.gz' libidn2_2.2.0.orig.tar.gz 2110743 SHA256:fc734732b506d878753ec6606982bf7b936e868c25c30ddb0d83f7d7056381fe
-'http://deb.debian.org/debian/pool/main/libi/libidn2/libidn2_2.2.0-2.debian.tar.xz' libidn2_2.2.0-2.debian.tar.xz 11184 SHA256:b38ce002d7eb1abbf2c870ac9570cd06a5087693f359b133defbf44b06f8784d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libidn2/2.2.0-2/
 
-- https://sources.debian.net/src/libidn2/2.2.0-2/ (for browsing the source)
-- https://sources.debian.net/src/libidn2/2.2.0-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libidn2/2.2.0-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libjpeg-turbo=1:1.5.2-2`
 
@@ -3177,21 +3162,13 @@ Licenses: (parsed from: `/usr/share/doc/libltdl-dev/copyright`, `/usr/share/doc/
 - `GFDL`
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libtool=2.4.6-13
-'http://deb.debian.org/debian/pool/main/libt/libtool/libtool_2.4.6-13.dsc' libtool_2.4.6-13.dsc 2500 SHA256:73fa58a7e3bf9bccbbc12f6fd52c79b61fc6c53cce799612ea5e050ddb8dc26f
-'http://deb.debian.org/debian/pool/main/libt/libtool/libtool_2.4.6.orig.tar.xz' libtool_2.4.6.orig.tar.xz 973080 SHA256:7c87a8c2c8c0fc9cd5019e402bed4292462d00a718a7cd5f11218153bf28b26f
-'http://deb.debian.org/debian/pool/main/libt/libtool/libtool_2.4.6.orig.tar.xz.asc' libtool_2.4.6.orig.tar.xz.asc 380 SHA256:ab68ebc45d60128a71fc36167cd29dcf3c3d6d639fd28663905ebaf3e2f43d6a
-'http://deb.debian.org/debian/pool/main/libt/libtool/libtool_2.4.6-13.debian.tar.xz' libtool_2.4.6-13.debian.tar.xz 50768 SHA256:58fd5f3fbbbf46d4ab8551a4fd3d1ded5371ba8dcb6f148a919b11e6931bab01
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libtool/2.4.6-13/
 
-- https://sources.debian.net/src/libtool/2.4.6-13/ (for browsing the source)
-- https://sources.debian.net/src/libtool/2.4.6-13/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libtool/2.4.6-13/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libunistring=0.9.10-2`
 
@@ -3378,20 +3355,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libxcrypt=1:4.4.10-10
-'http://deb.debian.org/debian/pool/main/libx/libxcrypt/libxcrypt_4.4.10-10.dsc' libxcrypt_4.4.10-10.dsc 2049 SHA256:e912895b04fbcfc981b3e17a32e3638209c7d93946ecf2c2b477aad4f664cb5e
-'http://deb.debian.org/debian/pool/main/libx/libxcrypt/libxcrypt_4.4.10.orig.tar.xz' libxcrypt_4.4.10.orig.tar.xz 372652 SHA256:f790a8eac4e4af3124d2844a24a7afb3a972368e4dff63d701599c2f2d065fd3
-'http://deb.debian.org/debian/pool/main/libx/libxcrypt/libxcrypt_4.4.10-10.debian.tar.xz' libxcrypt_4.4.10-10.debian.tar.xz 4984 SHA256:399ef5187a9cc3a9b60d090e361e985d25c5a7eeab660f1b6b740eb31db417bb
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libxcrypt/1:4.4.10-10/
 
-- https://sources.debian.net/src/libxcrypt/1:4.4.10-10/ (for browsing the source)
-- https://sources.debian.net/src/libxcrypt/1:4.4.10-10/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libxcrypt/1:4.4.10-10/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libxdmcp=1:1.1.2-3`
 
@@ -4764,19 +4734,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3-defaults=3.7.5-3
-'http://deb.debian.org/debian/pool/main/p/python3-defaults/python3-defaults_3.7.5-3.dsc' python3-defaults_3.7.5-3.dsc 2797 SHA256:a9542648aaf92b2105ffb0989d5d7f3225be7d6358e1ca6af51c37fac8661f2d
-'http://deb.debian.org/debian/pool/main/p/python3-defaults/python3-defaults_3.7.5-3.tar.gz' python3-defaults_3.7.5-3.tar.gz 138018 SHA256:69b328a86d2155962e2d50f8642285a1816718535ac90be26903770fc9aca172
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/python3-defaults/3.7.5-3/
 
-- https://sources.debian.net/src/python3-defaults/3.7.5-3/ (for browsing the source)
-- https://sources.debian.net/src/python3-defaults/3.7.5-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python3-defaults/3.7.5-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `python3-stdlib-extensions=3.8.0-1`
 
@@ -4789,20 +4753,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3-stdlib-extensions=3.8.0-1
-'http://deb.debian.org/debian/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.8.0-1.dsc' python3-stdlib-extensions_3.8.0-1.dsc 2523 SHA256:3b3c79e49f713337cf3e30f8b67baa9dc4945f42e20f5ea695b9c7c1a486310a
-'http://deb.debian.org/debian/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.8.0.orig.tar.xz' python3-stdlib-extensions_3.8.0.orig.tar.xz 1058456 SHA256:e4a158e0c1571a831c51cff2e785b9c06340b363756ffe9615593b11f63b2a3f
-'http://deb.debian.org/debian/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.8.0-1.debian.tar.xz' python3-stdlib-extensions_3.8.0-1.debian.tar.xz 17240 SHA256:a132c69fab4afb8940c1fc10848edcc8382face3516bde7fe238e574cbe0c958
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/python3-stdlib-extensions/3.8.0-1/
 
-- https://sources.debian.net/src/python3-stdlib-extensions/3.8.0-1/ (for browsing the source)
-- https://sources.debian.net/src/python3-stdlib-extensions/3.8.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python3-stdlib-extensions/3.8.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `python3.7=3.7.6-1`
 
