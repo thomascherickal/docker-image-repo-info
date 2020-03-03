@@ -1,7 +1,7 @@
 ## `friendica:latest`
 
 ```console
-$ docker pull friendica@sha256:0a3ea503ed6510bef4711320a3240a40069b14b065cbec75b15c91fc37a4371e
+$ docker pull friendica@sha256:df7d26e88d0e57dcef2c2465345a290af8fbb4df572258f888a1300c47a31121
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -16,14 +16,14 @@ $ docker pull friendica@sha256:0a3ea503ed6510bef4711320a3240a40069b14b065cbec75b
 ### `friendica:latest` - linux; amd64
 
 ```console
-$ docker pull friendica@sha256:355277a31554f7bb28db1e4e44b54eee09daca87a7102792d0b40de808532a2a
+$ docker pull friendica@sha256:210ee498c053c0637be61ead2f543f8e0c484d246bd58562acad2c1db37519b5
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **215.7 MB (215742550 bytes)**  
+-	Total Size: **215.7 MB (215742537 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:68d9f54d93aba91cea66843d8077aa63331a62c3ad4e63982173699cb3e0f303`
+-	Image ID: `sha256:fc3e36ab9eb1d392776874fb904725236ad9f83a45555eda01562ea0151c5fac`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -108,13 +108,13 @@ ENV FRIENDICA_VERSION=2019.12
 ENV FRIENDICA_ADDONS=2019.12
 # Thu, 27 Feb 2020 04:51:09 GMT
 RUN set -ex;     curl -fsSL -o friendica.tar.gz         "https://github.com/friendica/friendica/archive/${FRIENDICA_VERSION}.tar.gz";     tar -xzf friendica.tar.gz -C /usr/src/;     rm friendica.tar.gz;     mv -f /usr/src/friendica-${FRIENDICA_VERSION}/ /usr/src/friendica;     chmod 777 /usr/src/friendica/view/smarty3;     curl -fsSL -o friendica_addons.tar.gz         "https://github.com/friendica/friendica-addons/archive/${FRIENDICA_ADDONS}.tar.gz";     mkdir -p /usr/src/friendica/proxy;     mkdir -p /usr/src/friendica/addon;     tar -xzf friendica_addons.tar.gz -C /usr/src/friendica/addon --strip-components=1;     rm friendica_addons.tar.gz;     /usr/src/friendica/bin/composer.phar install --no-dev -d /usr/src/friendica;
-# Thu, 27 Feb 2020 04:51:10 GMT
-COPY multi:0a5bdeeeece27826a5344be9215b3de17c80ece34c27fd9cf4c61a0c7e730616 in / 
-# Thu, 27 Feb 2020 04:51:10 GMT
-COPY multi:ccf608c3083a2548ed80248e6308632e395ce7dfbcb83d73bfba22293ecd8ffd in /usr/src/friendica/config/ 
-# Thu, 27 Feb 2020 04:51:11 GMT
+# Tue, 03 Mar 2020 00:21:50 GMT
+COPY multi:ad357b35a2856a4f974a6b9a477f876d72054512cc1ee067869e83b05cf10470 in / 
+# Tue, 03 Mar 2020 00:21:51 GMT
+COPY multi:923de5042cde61ed518a7067985e18cb873d0cd10946593bfb44de6ba9e078ed in /usr/src/friendica/config/ 
+# Tue, 03 Mar 2020 00:21:51 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Thu, 27 Feb 2020 04:51:11 GMT
+# Tue, 03 Mar 2020 00:21:51 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -191,13 +191,13 @@ CMD ["apache2-foreground"]
 		Last Modified: Thu, 27 Feb 2020 04:54:57 GMT  
 		Size: 57.5 MB (57542513 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1ea9cb5495392ea04715c2a27a4eea567092343ced94d4ed1abe00167249e7c9`  
-		Last Modified: Thu, 27 Feb 2020 04:54:49 GMT  
-		Size: 2.2 KB (2180 bytes)  
+	-	`sha256:f65d1abf11298e9896f4ddd305422060fa39c3d25d896d8db12a96f84b036cb2`  
+		Last Modified: Tue, 03 Mar 2020 00:22:31 GMT  
+		Size: 2.2 KB (2185 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:da8b4683d55d3e5701eec3698a86022f3d429ff20775db1985e2b9a9b5a72d8f`  
-		Last Modified: Thu, 27 Feb 2020 04:54:49 GMT  
-		Size: 1.1 KB (1087 bytes)  
+	-	`sha256:071ec429e7cd6f4beeb32eec01a80e20b4d89d456cfebaa696d6701c1d44100d`  
+		Last Modified: Tue, 03 Mar 2020 00:22:31 GMT  
+		Size: 1.1 KB (1069 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `friendica:latest` - linux; arm variant v5
@@ -390,14 +390,14 @@ CMD ["apache2-foreground"]
 ### `friendica:latest` - linux; arm variant v7
 
 ```console
-$ docker pull friendica@sha256:3b432e918e7a1a09b169314fcb3fd4f1c4a5f9d439c19da589cb2fa3674bdfba
+$ docker pull friendica@sha256:77591189433ffab8ccc0c6d0a70f06c025483cdc808263b50242356d1bd53392
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **193.2 MB (193232763 bytes)**  
+-	Total Size: **193.2 MB (193232752 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6bcaf3b07aa99e4461d8e39afbe5bba12879b316dc5b3428999a1aac45a6835b`
+-	Image ID: `sha256:720c82b899163b659ed179ac54bfdbc75dc3814377e68785d933ae10768bd045`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -482,13 +482,13 @@ ENV FRIENDICA_VERSION=2019.12
 ENV FRIENDICA_ADDONS=2019.12
 # Thu, 27 Feb 2020 00:54:09 GMT
 RUN set -ex;     curl -fsSL -o friendica.tar.gz         "https://github.com/friendica/friendica/archive/${FRIENDICA_VERSION}.tar.gz";     tar -xzf friendica.tar.gz -C /usr/src/;     rm friendica.tar.gz;     mv -f /usr/src/friendica-${FRIENDICA_VERSION}/ /usr/src/friendica;     chmod 777 /usr/src/friendica/view/smarty3;     curl -fsSL -o friendica_addons.tar.gz         "https://github.com/friendica/friendica-addons/archive/${FRIENDICA_ADDONS}.tar.gz";     mkdir -p /usr/src/friendica/proxy;     mkdir -p /usr/src/friendica/addon;     tar -xzf friendica_addons.tar.gz -C /usr/src/friendica/addon --strip-components=1;     rm friendica_addons.tar.gz;     /usr/src/friendica/bin/composer.phar install --no-dev -d /usr/src/friendica;
-# Thu, 27 Feb 2020 00:54:12 GMT
-COPY multi:0a5bdeeeece27826a5344be9215b3de17c80ece34c27fd9cf4c61a0c7e730616 in / 
-# Thu, 27 Feb 2020 00:54:13 GMT
-COPY multi:ccf608c3083a2548ed80248e6308632e395ce7dfbcb83d73bfba22293ecd8ffd in /usr/src/friendica/config/ 
-# Thu, 27 Feb 2020 00:54:14 GMT
+# Mon, 02 Mar 2020 23:58:16 GMT
+COPY multi:ad357b35a2856a4f974a6b9a477f876d72054512cc1ee067869e83b05cf10470 in / 
+# Mon, 02 Mar 2020 23:58:17 GMT
+COPY multi:923de5042cde61ed518a7067985e18cb873d0cd10946593bfb44de6ba9e078ed in /usr/src/friendica/config/ 
+# Mon, 02 Mar 2020 23:58:17 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Thu, 27 Feb 2020 00:54:15 GMT
+# Mon, 02 Mar 2020 23:58:18 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -565,13 +565,13 @@ CMD ["apache2-foreground"]
 		Last Modified: Thu, 27 Feb 2020 01:01:53 GMT  
 		Size: 57.5 MB (57542453 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4953e3a7006db18d81b68dcfbaab638824c1ca6fea8087ae431402eabc8b1f61`  
-		Last Modified: Thu, 27 Feb 2020 01:01:33 GMT  
-		Size: 2.2 KB (2179 bytes)  
+	-	`sha256:5a8eb5c90dfa6ad66507ac31129ddb014c5bf444694b21d0f1b17274a31eb332`  
+		Last Modified: Mon, 02 Mar 2020 23:59:24 GMT  
+		Size: 2.2 KB (2185 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0f5cb61141c3d69531ddb7ee8122526974e5e7d116cba5edad549a6585dd0049`  
-		Last Modified: Thu, 27 Feb 2020 01:01:33 GMT  
-		Size: 1.1 KB (1088 bytes)  
+	-	`sha256:53a839dd69b4645f4a2ca7efdf727160412fdd0815a8518f8e2a05a099f89f87`  
+		Last Modified: Mon, 02 Mar 2020 23:59:24 GMT  
+		Size: 1.1 KB (1071 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `friendica:latest` - linux; arm64 variant v8
@@ -951,14 +951,14 @@ CMD ["apache2-foreground"]
 ### `friendica:latest` - linux; ppc64le
 
 ```console
-$ docker pull friendica@sha256:4f849984f13ddacb1609fd9fb046b675cce90d80fa8f85cee7515fa25c199e09
+$ docker pull friendica@sha256:ef44c4d017d36a3a592efbfae385a5c2267e8f1e10a90fc89073933738e56c3c
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **210.0 MB (210035798 bytes)**  
+-	Total Size: **210.0 MB (210035789 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:60c94630f5e368cb01f97d33b528224c5a21ee44b528b9645d24457ebadf2a14`
+-	Image ID: `sha256:2776cf73df86e62568fe88f300d4c194216b9f3ea2f872c06f1b74957185a7ab`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -1043,13 +1043,13 @@ ENV FRIENDICA_VERSION=2019.12
 ENV FRIENDICA_ADDONS=2019.12
 # Thu, 27 Feb 2020 04:55:35 GMT
 RUN set -ex;     curl -fsSL -o friendica.tar.gz         "https://github.com/friendica/friendica/archive/${FRIENDICA_VERSION}.tar.gz";     tar -xzf friendica.tar.gz -C /usr/src/;     rm friendica.tar.gz;     mv -f /usr/src/friendica-${FRIENDICA_VERSION}/ /usr/src/friendica;     chmod 777 /usr/src/friendica/view/smarty3;     curl -fsSL -o friendica_addons.tar.gz         "https://github.com/friendica/friendica-addons/archive/${FRIENDICA_ADDONS}.tar.gz";     mkdir -p /usr/src/friendica/proxy;     mkdir -p /usr/src/friendica/addon;     tar -xzf friendica_addons.tar.gz -C /usr/src/friendica/addon --strip-components=1;     rm friendica_addons.tar.gz;     /usr/src/friendica/bin/composer.phar install --no-dev -d /usr/src/friendica;
-# Thu, 27 Feb 2020 04:55:42 GMT
-COPY multi:0a5bdeeeece27826a5344be9215b3de17c80ece34c27fd9cf4c61a0c7e730616 in / 
-# Thu, 27 Feb 2020 04:55:44 GMT
-COPY multi:ccf608c3083a2548ed80248e6308632e395ce7dfbcb83d73bfba22293ecd8ffd in /usr/src/friendica/config/ 
-# Thu, 27 Feb 2020 04:55:47 GMT
+# Tue, 03 Mar 2020 00:16:41 GMT
+COPY multi:ad357b35a2856a4f974a6b9a477f876d72054512cc1ee067869e83b05cf10470 in / 
+# Tue, 03 Mar 2020 00:16:42 GMT
+COPY multi:923de5042cde61ed518a7067985e18cb873d0cd10946593bfb44de6ba9e078ed in /usr/src/friendica/config/ 
+# Tue, 03 Mar 2020 00:16:44 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Thu, 27 Feb 2020 04:55:51 GMT
+# Tue, 03 Mar 2020 00:16:47 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -1126,11 +1126,11 @@ CMD ["apache2-foreground"]
 		Last Modified: Thu, 27 Feb 2020 05:09:03 GMT  
 		Size: 57.5 MB (57542455 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9ed7649496f3954347459e13039870acb820ca0fbe482ddb2ad1babadde110d8`  
-		Last Modified: Thu, 27 Feb 2020 05:08:53 GMT  
-		Size: 2.2 KB (2180 bytes)  
+	-	`sha256:55d8c670578ff220e10e1756d70c6d9d108be1ae8a2d31fd40136412c6066429`  
+		Last Modified: Tue, 03 Mar 2020 00:18:09 GMT  
+		Size: 2.2 KB (2186 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cbadc902cbcfba091be377af2a5ecca29e1f3119c9c6e070b2d8344347cb326d`  
-		Last Modified: Thu, 27 Feb 2020 05:08:53 GMT  
-		Size: 1.1 KB (1087 bytes)  
+	-	`sha256:4e8add7d7d414ae6230d1b3648b470e0f025113041a56f9a4640f90462c16a9f`  
+		Last Modified: Tue, 03 Mar 2020 00:18:09 GMT  
+		Size: 1.1 KB (1072 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
