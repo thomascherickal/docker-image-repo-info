@@ -2531,14 +2531,9 @@ Licenses: (parsed from: `/usr/share/doc/libarchive13/copyright`)
 - `Expat`
 - `PD`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libarchive=3.2.2-3.1ubuntu0.5
-'http://archive.ubuntu.com/ubuntu/pool/main/liba/libarchive/libarchive_3.2.2-3.1ubuntu0.5.dsc' libarchive_3.2.2-3.1ubuntu0.5.dsc 2457 SHA256:e15c8624c578dc43e15a57a7ecc93220d829ea367266a9f716c18c931fc2b91d
-'http://archive.ubuntu.com/ubuntu/pool/main/liba/libarchive/libarchive_3.2.2.orig.tar.gz' libarchive_3.2.2.orig.tar.gz 5458241 SHA256:691c194ee132d1f0f7a42541f091db811bc2e56f7107e9121be2bc8c04f1060f
-'http://archive.ubuntu.com/ubuntu/pool/main/liba/libarchive/libarchive_3.2.2-3.1ubuntu0.5.debian.tar.xz' libarchive_3.2.2-3.1ubuntu0.5.debian.tar.xz 23952 SHA256:6e3bd6adb7f2cb2b15d58bc16955bee855b1256c78ea742902db8655bf09d6b8
-```
 
 ### `dpkg` source package: `libassuan=2.5.1-2`
 
@@ -4317,9 +4312,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris mesa=19.2.8-0ubuntu0~18.04.2
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_19.2.8-0ubuntu0~18.04.2.dsc' mesa_19.2.8-0ubuntu0~18.04.2.dsc 5306 SHA256:3f430affe5fb6b7c11eb8f80380b2ffe11a9d263b6c51ab3df8d5eab45a15990
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_19.2.8.orig.tar.gz' mesa_19.2.8.orig.tar.gz 17662298 SHA256:49230604cc3f2847b29fce7481d57461f79902a766df9c48bcf53fb8d394b224
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_19.2.8-0ubuntu0~18.04.2.diff.gz' mesa_19.2.8-0ubuntu0~18.04.2.diff.gz 124983 SHA256:bf5f44ab273aa31f188ec352cb34bcf2f244935454a43238bd2fa16a192bc5e3
+'http://security.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_19.2.8-0ubuntu0~18.04.2.dsc' mesa_19.2.8-0ubuntu0~18.04.2.dsc 5306 SHA256:3f430affe5fb6b7c11eb8f80380b2ffe11a9d263b6c51ab3df8d5eab45a15990
+'http://security.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_19.2.8.orig.tar.gz' mesa_19.2.8.orig.tar.gz 17662298 SHA256:49230604cc3f2847b29fce7481d57461f79902a766df9c48bcf53fb8d394b224
+'http://security.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_19.2.8-0ubuntu0~18.04.2.diff.gz' mesa_19.2.8-0ubuntu0~18.04.2.diff.gz 124983 SHA256:bf5f44ab273aa31f188ec352cb34bcf2f244935454a43238bd2fa16a192bc5e3
 ```
 
 ### `dpkg` source package: `mime-support=3.60ubuntu1`

@@ -1837,14 +1837,9 @@ Licenses: (parsed from: `/usr/share/doc/libarchive13/copyright`)
 - `Expat`
 - `PD`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libarchive=3.2.2-3.1ubuntu0.5
-'http://archive.ubuntu.com/ubuntu/pool/main/liba/libarchive/libarchive_3.2.2-3.1ubuntu0.5.dsc' libarchive_3.2.2-3.1ubuntu0.5.dsc 2457 SHA256:e15c8624c578dc43e15a57a7ecc93220d829ea367266a9f716c18c931fc2b91d
-'http://archive.ubuntu.com/ubuntu/pool/main/liba/libarchive/libarchive_3.2.2.orig.tar.gz' libarchive_3.2.2.orig.tar.gz 5458241 SHA256:691c194ee132d1f0f7a42541f091db811bc2e56f7107e9121be2bc8c04f1060f
-'http://archive.ubuntu.com/ubuntu/pool/main/liba/libarchive/libarchive_3.2.2-3.1ubuntu0.5.debian.tar.xz' libarchive_3.2.2-3.1ubuntu0.5.debian.tar.xz 23952 SHA256:6e3bd6adb7f2cb2b15d58bc16955bee855b1256c78ea742902db8655bf09d6b8
-```
 
 ### `dpkg` source package: `libassuan=2.5.1-2`
 

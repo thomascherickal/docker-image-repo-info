@@ -1657,14 +1657,9 @@ Licenses: (parsed from: `/usr/share/doc/libarchive13/copyright`)
 - `Expat`
 - `PD`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libarchive=3.2.2-3.1ubuntu0.5
-'http://archive.ubuntu.com/ubuntu/pool/main/liba/libarchive/libarchive_3.2.2-3.1ubuntu0.5.dsc' libarchive_3.2.2-3.1ubuntu0.5.dsc 2457 SHA256:e15c8624c578dc43e15a57a7ecc93220d829ea367266a9f716c18c931fc2b91d
-'http://archive.ubuntu.com/ubuntu/pool/main/liba/libarchive/libarchive_3.2.2.orig.tar.gz' libarchive_3.2.2.orig.tar.gz 5458241 SHA256:691c194ee132d1f0f7a42541f091db811bc2e56f7107e9121be2bc8c04f1060f
-'http://archive.ubuntu.com/ubuntu/pool/main/liba/libarchive/libarchive_3.2.2-3.1ubuntu0.5.debian.tar.xz' libarchive_3.2.2-3.1ubuntu0.5.debian.tar.xz 23952 SHA256:6e3bd6adb7f2cb2b15d58bc16955bee855b1256c78ea742902db8655bf09d6b8
-```
 
 ### `dpkg` source package: `libassuan=2.5.1-2`
 
@@ -4325,14 +4320,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3-vcstool=0.2.6-1
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-vcstool/python3-vcstool_0.2.6-1.debian.tar.xz' python3-vcstool_0.2.6-1.debian.tar.xz 1116 SHA512:33795896a3a949de00359067b0c55845b27a9d0b76ca0de5759a866b5024687834c4566bf3380ff5d6b91cc7e2d4b09265c42ca9d2cf6ba4fd2b6151e3b81906
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-vcstool/python3-vcstool_0.2.6-1.dsc' python3-vcstool_0.2.6-1.dsc 883 SHA512:f6b1e22277f70f3a5c62a09fe928bdf13e24b09c4b8f72b96a3315e8fde1e14874a9186e162e3e336e28a58113e256718d0235b3f1b129746cfd3e41c76d4a32
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-vcstool/python3-vcstool_0.2.6.orig.tar.gz' python3-vcstool_0.2.6.orig.tar.gz 27373 SHA512:5d51c5bfbe756fce4690a82a06e4df2eb60ea89f69e024ee7b962e017870cbe38a262ecd3d8201bd3d1db0b8a4f62e696fb48efd0dca4b61208d75197236905b
-```
 
 ### `dpkg` source package: `python3.6=3.6.9-1~18.04`
 
