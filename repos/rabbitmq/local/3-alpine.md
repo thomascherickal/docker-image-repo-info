@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:884663f7466e644e337dd1cefb20d887aab31f15a411bc6cb58ff6c0ab696118`
-- Created: `2020-02-21T04:19:58.938469474Z`
-- Virtual Size: ~ 104.41 Mb  
+- Image ID: `sha256:03c42b01da712861645e5393469c03445a2732f9c7402d4f845caf4f1a95edc9`
+- Created: `2020-02-29T04:19:14.222827119Z`
+- Virtual Size: ~ 104.73 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -14,8 +14,8 @@
   - `OPENSSL_VERSION=1.1.1d`
   - `OPENSSL_SOURCE_SHA256=1e3a91bc1f9dfce01af26026f856e064eab4c8ee0a8f457b5ae30b40b8b711f2`
   - `OPENSSL_PGP_KEY_IDS=0x8657ABB260F056B1E5190839D9C4D26D0E604491 0x5B2545DAB21995F4088CEFAA36CEE4DEB00CFE33 0xED230BEC4D4F2518B9D7DF41F0DB4D21C1D35231 0xC1F33DD8CE1D4CC613AF14DA9195C48241FBF7DD 0x7953AC1FBC3DC8B3B292393ED5E9E43F7DF9EE8C 0xE5E52560DD91C556DDBDA5D02064C53641C25E5D`
-  - `OTP_VERSION=22.2.7`
-  - `OTP_SOURCE_SHA256=29487837a2dd6e3184257cdec067cd3f5c0cd9517fbfb2ffc962589d46afbf75`
+  - `OTP_VERSION=22.2.8`
+  - `OTP_SOURCE_SHA256=71f73ddd59db521928a0f6c8d4354d6f4e9f4bfbd0b40d321cd5253a6c79b095`
   - `RABBITMQ_DATA_DIR=/var/lib/rabbitmq`
   - `RABBITMQ_VERSION=3.8.2`
   - `RABBITMQ_PGP_KEY_ID=0x0A9AF2115F4687BD29803A206B73A36E6026DFCA`
@@ -269,33 +269,16 @@ MIT BSD GPL2+
 ### `apk` package: `ncurses-libs`
 
 ```console
-ncurses-libs-6.1_p20191130-r0 description:
+ncurses-libs-6.1_p20200118-r2 description:
 Ncurses libraries
 
-ncurses-libs-6.1_p20191130-r0 webpage:
+ncurses-libs-6.1_p20200118-r2 webpage:
 https://invisible-island.net/ncurses/
 
-ncurses-libs-6.1_p20191130-r0 installed size:
+ncurses-libs-6.1_p20200118-r2 installed size:
 507904
 
-ncurses-libs-6.1_p20191130-r0 license:
-MIT
-
-```
-
-### `apk` package: `ncurses-terminfo`
-
-```console
-ncurses-terminfo-6.1_p20191130-r0 description:
-Console display library (other terminfo files)
-
-ncurses-terminfo-6.1_p20191130-r0 webpage:
-https://invisible-island.net/ncurses/
-
-ncurses-terminfo-6.1_p20191130-r0 installed size:
-7348224
-
-ncurses-terminfo-6.1_p20191130-r0 license:
+ncurses-libs-6.1_p20200118-r2 license:
 MIT
 
 ```
@@ -303,16 +286,16 @@ MIT
 ### `apk` package: `ncurses-terminfo-base`
 
 ```console
-ncurses-terminfo-base-6.1_p20191130-r0 description:
+ncurses-terminfo-base-6.1_p20200118-r2 description:
 Descriptions of common terminals
 
-ncurses-terminfo-base-6.1_p20191130-r0 webpage:
+ncurses-terminfo-base-6.1_p20200118-r2 webpage:
 https://invisible-island.net/ncurses/
 
-ncurses-terminfo-base-6.1_p20191130-r0 installed size:
-94208
+ncurses-terminfo-base-6.1_p20200118-r2 installed size:
+217088
 
-ncurses-terminfo-base-6.1_p20191130-r0 license:
+ncurses-terminfo-base-6.1_p20200118-r2 license:
 MIT
 
 ```
