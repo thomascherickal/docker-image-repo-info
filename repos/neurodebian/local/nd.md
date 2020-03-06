@@ -26,21 +26,13 @@ Licenses: (parsed from: `/usr/share/doc/libacl1/copyright`)
 - `LGPL-2+`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris acl=2.2.53-5
-'http://deb.debian.org/debian/pool/main/a/acl/acl_2.2.53-5.dsc' acl_2.2.53-5.dsc 2336 SHA256:dd721715ea9a0514e90feddd17661b45e21a07415e87047a31d31f5c7ea1aab1
-'http://deb.debian.org/debian/pool/main/a/acl/acl_2.2.53.orig.tar.gz' acl_2.2.53.orig.tar.gz 524300 SHA256:06be9865c6f418d851ff4494e12406568353b891ffe1f596b34693c387af26c7
-'http://deb.debian.org/debian/pool/main/a/acl/acl_2.2.53.orig.tar.gz.asc' acl_2.2.53.orig.tar.gz.asc 833 SHA256:06849bece0b56a6a7269173abe101cff223bb9346d74027a3cd5ff80914abf4b
-'http://deb.debian.org/debian/pool/main/a/acl/acl_2.2.53-5.debian.tar.xz' acl_2.2.53-5.debian.tar.xz 22320 SHA256:e212867beb37f5ec30097b016b81ce4dc45663e1e81845754f8c4974dc19b5ac
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/acl/2.2.53-5/
 
-- https://sources.debian.net/src/acl/2.2.53-5/ (for browsing the source)
-- https://sources.debian.net/src/acl/2.2.53-5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/acl/2.2.53-5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `adduser=3.118`
 
@@ -1209,20 +1201,13 @@ Licenses: (parsed from: `/usr/share/doc/libidn2-0/copyright`)
 - `LGPL-3+`
 - `Unicode`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libidn2=2.2.0-2
-'http://deb.debian.org/debian/pool/main/libi/libidn2/libidn2_2.2.0-2.dsc' libidn2_2.2.0-2.dsc 2436 SHA256:a5c5ece3748beaba9ce0a0b29cdab2fe9d861a965a7a96101a49f194acf759d6
-'http://deb.debian.org/debian/pool/main/libi/libidn2/libidn2_2.2.0.orig.tar.gz' libidn2_2.2.0.orig.tar.gz 2110743 SHA256:fc734732b506d878753ec6606982bf7b936e868c25c30ddb0d83f7d7056381fe
-'http://deb.debian.org/debian/pool/main/libi/libidn2/libidn2_2.2.0-2.debian.tar.xz' libidn2_2.2.0-2.debian.tar.xz 11184 SHA256:b38ce002d7eb1abbf2c870ac9570cd06a5087693f359b133defbf44b06f8784d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libidn2/2.2.0-2/
 
-- https://sources.debian.net/src/libidn2/2.2.0-2/ (for browsing the source)
-- https://sources.debian.net/src/libidn2/2.2.0-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libidn2/2.2.0-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libksba=1.3.5-2`
 
@@ -1456,20 +1441,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libxcrypt=1:4.4.10-10
-'http://deb.debian.org/debian/pool/main/libx/libxcrypt/libxcrypt_4.4.10-10.dsc' libxcrypt_4.4.10-10.dsc 2049 SHA256:e912895b04fbcfc981b3e17a32e3638209c7d93946ecf2c2b477aad4f664cb5e
-'http://deb.debian.org/debian/pool/main/libx/libxcrypt/libxcrypt_4.4.10.orig.tar.xz' libxcrypt_4.4.10.orig.tar.xz 372652 SHA256:f790a8eac4e4af3124d2844a24a7afb3a972368e4dff63d701599c2f2d065fd3
-'http://deb.debian.org/debian/pool/main/libx/libxcrypt/libxcrypt_4.4.10-10.debian.tar.xz' libxcrypt_4.4.10-10.debian.tar.xz 4984 SHA256:399ef5187a9cc3a9b60d090e361e985d25c5a7eeab660f1b6b740eb31db417bb
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libxcrypt/1:4.4.10-10/
 
-- https://sources.debian.net/src/libxcrypt/1:4.4.10-10/ (for browsing the source)
-- https://sources.debian.net/src/libxcrypt/1:4.4.10-10/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libxcrypt/1:4.4.10-10/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libzstd=1.4.4+dfsg-3`
 
@@ -2226,17 +2204,10 @@ Licenses: (parsed from: `/usr/share/doc/zlib1g/copyright`)
 
 - `Zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris zlib=1:1.2.11.dfsg-1.2
-'http://deb.debian.org/debian/pool/main/z/zlib/zlib_1.2.11.dfsg-1.2.dsc' zlib_1.2.11.dfsg-1.2.dsc 2436 SHA256:5769fc70dd728991f1f7d21b3f289083ffd722e7e34fa874536957c0fedde819
-'http://deb.debian.org/debian/pool/main/z/zlib/zlib_1.2.11.dfsg.orig.tar.gz' zlib_1.2.11.dfsg.orig.tar.gz 370248 SHA256:80c481411a4fe8463aeb8270149a0e80bb9eaf7da44132b6e16f2b5af01bc899
-'http://deb.debian.org/debian/pool/main/z/zlib/zlib_1.2.11.dfsg-1.2.debian.tar.xz' zlib_1.2.11.dfsg-1.2.debian.tar.xz 19156 SHA256:f528bc15a5000cc4f232f9a918ce742067ff779d421b632b1bc7132d0ac179cf
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/zlib/1:1.2.11.dfsg-1.2/
 
-- https://sources.debian.net/src/zlib/1:1.2.11.dfsg-1.2/ (for browsing the source)
-- https://sources.debian.net/src/zlib/1:1.2.11.dfsg-1.2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/zlib/1:1.2.11.dfsg-1.2/ (for access to the source package after it no longer exists in the archive)
