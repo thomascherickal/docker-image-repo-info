@@ -1,7 +1,7 @@
 ## `archlinux:latest`
 
 ```console
-$ docker pull archlinux@sha256:01333c9d0acd59c4566d7e4138384d992cb16079530d4198d33916e4397e0230
+$ docker pull archlinux@sha256:4aa2e77a227ba98bb3309fa14437431d01356af0ceda4fba6cdb1e860b71e09d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,51 +11,51 @@ $ docker pull archlinux@sha256:01333c9d0acd59c4566d7e4138384d992cb16079530d4198d
 ### `archlinux:latest` - linux; amd64
 
 ```console
-$ docker pull archlinux@sha256:67d11262b299022437eb2961e45ea83f7e6b41bc2c42333a13132923ee08692e
+$ docker pull archlinux@sha256:250970c41f8c08c944ff22f5ed398f8b2f545fef07b7e5a2e580b2029dc3dc4e
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **127.5 MB (127523560 bytes)**  
+-	Total Size: **127.7 MB (127688069 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:8635d7bd071c3efa2365425018bb9a65399b563a8e5f4394848e2b0b4453b3c2`
+-	Image ID: `sha256:42bcd9e5e39936704fb439115d82375ebc5fef51db83329a18d9f6fd6725ad5b`
 -	Default Command: `["\/usr\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 05 Feb 2020 23:21:57 GMT
-ADD file:2ea25033cb49fb646c8490ebc0747c9e61b8947186602fc7270294797b8a3c07 in / 
-# Wed, 05 Feb 2020 23:22:01 GMT
+# Fri, 06 Mar 2020 23:19:50 GMT
+ADD file:a45852052726ea7875e53941577176676c8b51592ec54284f1021e47a3ba9303 in / 
+# Fri, 06 Mar 2020 23:19:54 GMT
 RUN ldconfig && update-ca-trust && locale-gen
-# Wed, 05 Feb 2020 23:22:02 GMT
+# Fri, 06 Mar 2020 23:19:54 GMT
 RUN sh -c 'ls usr/lib/sysusers.d/*.conf | /usr/share/libalpm/scripts/systemd-hook sysusers '
-# Wed, 05 Feb 2020 23:22:11 GMT
+# Fri, 06 Mar 2020 23:20:04 GMT
 RUN pacman-key --init && pacman-key --populate archlinux
-# Wed, 05 Feb 2020 23:22:11 GMT
+# Fri, 06 Mar 2020 23:20:04 GMT
 RUN rm -rf etc/pacman.d/gnupg/{openpgp-revocs.d/,private-keys-v1.d/,pugring.gpg~,gnupg.S.}*
-# Wed, 05 Feb 2020 23:22:12 GMT
+# Fri, 06 Mar 2020 23:20:04 GMT
 ENV LANG=en_US.UTF-8
-# Wed, 05 Feb 2020 23:22:12 GMT
+# Fri, 06 Mar 2020 23:20:05 GMT
 CMD ["/usr/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:ef42853c0f87fc68e54fc6b60fe8a5ff393396a487b3385d9c0a7277f68c481c`  
-		Last Modified: Wed, 05 Feb 2020 23:24:24 GMT  
-		Size: 124.2 MB (124206784 bytes)  
+	-	`sha256:02153b7ca79726853f0f47f2a2878ce18813e868ab6d828b12c3fb64b7d3ed3b`  
+		Last Modified: Fri, 06 Mar 2020 23:21:16 GMT  
+		Size: 124.4 MB (124370992 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e5cd2121e98da16f2dc079977509a764cccc133b39fe2989633b38d875badf0a`  
-		Last Modified: Wed, 05 Feb 2020 23:22:59 GMT  
-		Size: 1.6 MB (1598391 bytes)  
+	-	`sha256:906b7347c11f6c82978feea75e5be77c942622daa61cec8e8a784ab1d5f60a83`  
+		Last Modified: Fri, 06 Mar 2020 23:20:52 GMT  
+		Size: 1.6 MB (1598683 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:214eaa4433b284ae72c4b828b5266004f72dc93692d39ca46354fd75f6c98a63`  
-		Last Modified: Wed, 05 Feb 2020 23:22:59 GMT  
-		Size: 1.1 KB (1132 bytes)  
+	-	`sha256:a0ea37c1b0fad182595d6cd2902cdf1ff7ce517c591876a5310eb8ca02425007`  
+		Last Modified: Fri, 06 Mar 2020 23:20:52 GMT  
+		Size: 1.1 KB (1130 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:56470d7667b79334ca3ab5006f67066e626c06c22e0cc43f30b414969856868e`  
-		Last Modified: Wed, 05 Feb 2020 23:22:59 GMT  
-		Size: 1.7 MB (1716956 bytes)  
+	-	`sha256:f19178658e7362a8d40bd62f2e0b6fbfc82bdfc4f71d9817526123f2cc401ab5`  
+		Last Modified: Fri, 06 Mar 2020 23:20:52 GMT  
+		Size: 1.7 MB (1716965 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:896334b8e58301cb230d705bcc594765c8702efd1ea035648ddbafa193b65f25`  
-		Last Modified: Wed, 05 Feb 2020 23:22:59 GMT  
-		Size: 297.0 B  
+	-	`sha256:011f6dd960c989323dffb5b338ac96aca45eb1985589f5535d72538cde6a0790`  
+		Last Modified: Fri, 06 Mar 2020 23:20:52 GMT  
+		Size: 299.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
