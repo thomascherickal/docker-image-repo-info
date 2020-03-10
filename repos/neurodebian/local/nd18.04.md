@@ -426,14 +426,9 @@ Licenses: (parsed from: `/usr/share/doc/gcc-8-base/copyright`, `/usr/share/doc/l
 - `GPL-3`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-8=8.3.0-6ubuntu1~18.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-8/gcc-8_8.3.0-6ubuntu1~18.04.1.dsc' gcc-8_8.3.0-6ubuntu1~18.04.1.dsc 35751 SHA256:6d73229917cfc03f826c967f61a065d1f8faba2faa20cdee8c130b3b97554bbc
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-8/gcc-8_8.3.0.orig.tar.gz' gcc-8_8.3.0.orig.tar.gz 85259886 SHA256:561c1bc647ade738c14efe5a298fc0cee2e2efd3dec9fefb66b724dbd50437e6
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-8/gcc-8_8.3.0-6ubuntu1~18.04.1.diff.gz' gcc-8_8.3.0-6ubuntu1~18.04.1.diff.gz 566564 SHA256:a3b1c9a26470622c308fa6f9194b87cc806fa4c7b58a63889c66553ae85719d7
-```
 
 ### `dpkg` source package: `glibc=2.27-3ubuntu1`
 
