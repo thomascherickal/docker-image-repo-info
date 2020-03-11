@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:f050ff5b50c6903a00f2089bfded63388e08e4a00b22e5f6f226422ccbd34a8a`
-- Created: `2020-03-03T00:22:02.059851284Z`
-- Virtual Size: ~ 236.07 Mb  
+- Image ID: `sha256:e143e833c5693e31440c3d26b1b02c1207b6602e3194652fb51b81d575b7d051`
+- Created: `2020-03-10T23:28:58.202492602Z`
+- Virtual Size: ~ 236.86 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -745,16 +745,16 @@ BSD-3-Clause
 ### `apk` package: `musl`
 
 ```console
-musl-1.1.24-r0 description:
+musl-1.1.24-r1 description:
 the musl c library (libc) implementation
 
-musl-1.1.24-r0 webpage:
-http://www.musl-libc.org/
+musl-1.1.24-r1 webpage:
+https://musl.libc.org/
 
-musl-1.1.24-r0 installed size:
-610304
+musl-1.1.24-r1 installed size:
+614400
 
-musl-1.1.24-r0 license:
+musl-1.1.24-r1 license:
 MIT
 
 ```
@@ -1011,6 +1011,23 @@ tar-1.32-r1 installed size:
 
 tar-1.32-r1 license:
 GPL-3.0-or-later
+
+```
+
+### `apk` package: `tini`
+
+```console
+tini-0.18.0-r0 description:
+A tiny but valid init for containers
+
+tini-0.18.0-r0 webpage:
+https://github.com/krallin/tini
+
+tini-0.18.0-r0 installed size:
+36864
+
+tini-0.18.0-r0 license:
+MIT
 
 ```
 

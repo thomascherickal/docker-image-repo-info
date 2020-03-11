@@ -1,13 +1,13 @@
-# `friendica:2019.12-fpm-alpine`
+# `friendica:2020.03-rc-fpm-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:e143e833c5693e31440c3d26b1b02c1207b6602e3194652fb51b81d575b7d051`
-- Created: `2020-03-10T23:28:58.202492602Z`
-- Virtual Size: ~ 236.86 Mb  
+- Image ID: `sha256:5885adb597c553e3b497741b0e5f97134c97d4053b368f13db6a65c44b80ffd5`
+- Created: `2020-03-10T23:29:42.627355513Z`
+- Virtual Size: ~ 120.82 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Entrypoint: `["/entrypoint.sh"]`
+- Entrypoint: `["/entrypoint-dev.sh"]`
 - Command: `["php-fpm"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
@@ -23,8 +23,8 @@
   - `PHP_ASC_URL=https://www.php.net/get/php-7.3.15.tar.xz.asc/from/this/mirror`
   - `PHP_SHA256=de7ae7cf3d1dbb2824975b26b32991dac2b732886ec22075b8c53b261b018166`
   - `PHP_MD5=`
-  - `FRIENDICA_VERSION=2019.12`
-  - `FRIENDICA_ADDONS=2019.12`
+  - `FRIENDICA_VERSION=2020.03-rc`
+  - `FRIENDICA_ADDONS=2020.03-rc`
 
 ## `apk` (`.apk`-based packages)
 

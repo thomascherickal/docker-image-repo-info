@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:fed03598ba6d15ed9ca85201427eac36ae5736693ec7d6bc9602f52a5af31a18`
-- Created: `2020-03-03T00:22:07.042217446Z`
-- Virtual Size: ~ 433.53 Mb  
+- Image ID: `sha256:8c10774215ac22878444709fa717663078db57b5595608c951ffc4544a36f4f2`
+- Created: `2020-03-10T23:29:16.578722494Z`
+- Virtual Size: ~ 437.79 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint-dev.sh"]`
@@ -26,6 +26,7 @@
   - `PHP_ASC_URL=https://www.php.net/get/php-7.3.15.tar.xz.asc/from/this/mirror`
   - `PHP_SHA256=de7ae7cf3d1dbb2824975b26b32991dac2b732886ec22075b8c53b261b018166`
   - `PHP_MD5=`
+  - `TINI_VERSION=v0.18.0`
   - `FRIENDICA_VERSION=2020.03-dev`
   - `FRIENDICA_ADDONS=2020.03-dev`
 
@@ -1211,9 +1212,12 @@ Other potentially useful URLs:
 
 Binary Packages:
 
+- `dirmngr=2.1.18-8~deb9u4`
+- `gnupg=2.1.18-8~deb9u4`
+- `gnupg-agent=2.1.18-8~deb9u4`
 - `gpgv=2.1.18-8~deb9u4`
 
-Licenses: (parsed from: `/usr/share/doc/gpgv/copyright`)
+Licenses: (parsed from: `/usr/share/doc/dirmngr/copyright`, `/usr/share/doc/gnupg/copyright`, `/usr/share/doc/gnupg-agent/copyright`, `/usr/share/doc/gpgv/copyright`)
 
 - `BSD-3-clause`
 - `Expat`
@@ -1589,6 +1593,41 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/lcms2/2.8-4+deb9u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/lcms2/2.8-4+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
+### `dpkg` source package: `libassuan=2.4.3-2`
+
+Binary Packages:
+
+- `libassuan0:amd64=2.4.3-2`
+
+Licenses: (parsed from: `/usr/share/doc/libassuan0/copyright`)
+
+- `GAP`
+- `GAP~FSF`
+- `GPL-2`
+- `GPL-2+`
+- `GPL-2+ with libtool exception`
+- `GPL-3`
+- `GPL-3+`
+- `LGPL-2.1`
+- `LGPL-2.1+`
+- `LGPL-3`
+- `LGPL-3+`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris libassuan=2.4.3-2
+'http://deb.debian.org/debian/pool/main/liba/libassuan/libassuan_2.4.3-2.dsc' libassuan_2.4.3-2.dsc 2412 SHA256:fc057ff6bd548161cd978f7847682928222d31db96bd94d7ec0fc84b176bbcc7
+'http://deb.debian.org/debian/pool/main/liba/libassuan/libassuan_2.4.3.orig.tar.bz2' libassuan_2.4.3.orig.tar.bz2 559867 SHA256:22843a3bdb256f59be49842abf24da76700354293a066d82ade8134bb5aa2b71
+'http://deb.debian.org/debian/pool/main/liba/libassuan/libassuan_2.4.3-2.debian.tar.xz' libassuan_2.4.3-2.debian.tar.xz 15076 SHA256:16dd66909cf3b79c71d5169f35d94be64d079d882f027577c00c23bff3148012
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/libassuan/2.4.3-2/ (for browsing the source)
+- https://sources.debian.net/src/libassuan/2.4.3-2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libassuan/2.4.3-2/ (for access to the source package after it no longer exists in the archive)
+
 ### `dpkg` source package: `libbsd=0.8.3-1`
 
 Binary Packages:
@@ -1878,6 +1917,32 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libjpeg-turbo/1:1.5.1-2/ (for browsing the source)
 - https://sources.debian.net/src/libjpeg-turbo/1:1.5.1-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libjpeg-turbo/1:1.5.1-2/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `libksba=1.3.5-2`
+
+Binary Packages:
+
+- `libksba8:amd64=1.3.5-2`
+
+Licenses: (parsed from: `/usr/share/doc/libksba8/copyright`)
+
+- `GPL-3`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris libksba=1.3.5-2
+'http://deb.debian.org/debian/pool/main/libk/libksba/libksba_1.3.5-2.dsc' libksba_1.3.5-2.dsc 2526 SHA256:4fd08fd129f97ab1df86c220b88b7b2c6e4e04aa90bfd3ae364d18022256bef8
+'http://deb.debian.org/debian/pool/main/libk/libksba/libksba_1.3.5.orig.tar.bz2' libksba_1.3.5.orig.tar.bz2 620649 SHA256:41444fd7a6ff73a79ad9728f985e71c9ba8cd3e5e53358e70d5f066d35c1a340
+'http://deb.debian.org/debian/pool/main/libk/libksba/libksba_1.3.5.orig.tar.bz2.asc' libksba_1.3.5.orig.tar.bz2.asc 287 SHA256:a954b03144ee882c838853da24fd7b6868b78df72a18c71079217d968698a76f
+'http://deb.debian.org/debian/pool/main/libk/libksba/libksba_1.3.5-2.debian.tar.xz' libksba_1.3.5-2.debian.tar.xz 13852 SHA256:98c985bff973be1aecc702fa15887ff1e5b8de481d1dc3e99423a587754eaabd
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/libksba/1.3.5-2/ (for browsing the source)
+- https://sources.debian.net/src/libksba/1.3.5-2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libksba/1.3.5-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `liblqr=0.4.2-2`
 
@@ -2772,6 +2837,34 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/nghttp2/1.18.1-1+deb9u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/nghttp2/1.18.1-1+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
+### `dpkg` source package: `npth=1.3-1`
+
+Binary Packages:
+
+- `libnpth0:amd64=1.3-1`
+
+Licenses: (parsed from: `/usr/share/doc/libnpth0/copyright`)
+
+- `GPL-2`
+- `GPL-2+`
+- `LGPL-3`
+- `LGPL-3+`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris npth=1.3-1
+'http://deb.debian.org/debian/pool/main/n/npth/npth_1.3-1.dsc' npth_1.3-1.dsc 1949 SHA256:63e2598a3aebe21ef7969a601906a719e923673e04a4d157b6dde605566079be
+'http://deb.debian.org/debian/pool/main/n/npth/npth_1.3.orig.tar.bz2' npth_1.3.orig.tar.bz2 295998 SHA256:bca81940436aed0734eb8d0ff8b179e04cc8c087f5625204419f5f45d736a82a
+'http://deb.debian.org/debian/pool/main/n/npth/npth_1.3-1.debian.tar.xz' npth_1.3-1.debian.tar.xz 10324 SHA256:4910e19597aea46841eaffc6df58ecf91d5d059130ecb1442fee9f5f963b229c
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/npth/1.3-1/ (for browsing the source)
+- https://sources.debian.net/src/npth/1.3-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/npth/1.3-1/ (for access to the source package after it no longer exists in the archive)
+
 ### `dpkg` source package: `openjpeg2=2.1.2-1.1+deb9u4`
 
 Binary Packages:
@@ -3046,6 +3139,35 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/perl/5.24.1-3+deb9u6/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/perl/5.24.1-3+deb9u6/ (for access to the source package after it no longer exists in the archive)
 
+### `dpkg` source package: `pinentry=1.0.0-2`
+
+Binary Packages:
+
+- `pinentry-curses=1.0.0-2`
+
+Licenses: (parsed from: `/usr/share/doc/pinentry-curses/copyright`)
+
+- `GPL-2`
+- `GPL-2+`
+- `LGPL-3`
+- `LGPL-3+`
+- `X11`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris pinentry=1.0.0-2
+'http://deb.debian.org/debian/pool/main/p/pinentry/pinentry_1.0.0-2.dsc' pinentry_1.0.0-2.dsc 2591 SHA256:01349d75a92435037a4f4ad252a42cabe7bef774cb8ac6e8c6e24a4107f06e13
+'http://deb.debian.org/debian/pool/main/p/pinentry/pinentry_1.0.0.orig.tar.bz2' pinentry_1.0.0.orig.tar.bz2 436930 SHA256:1672c2edc1feb036075b187c0773787b2afd0544f55025c645a71b4c2f79275a
+'http://deb.debian.org/debian/pool/main/p/pinentry/pinentry_1.0.0-2.debian.tar.xz' pinentry_1.0.0-2.debian.tar.xz 16672 SHA256:85e0b03d74a64a08b51f6ffac58a1a07a42499615aa993f367675ef12d0b47fb
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/pinentry/1.0.0-2/ (for browsing the source)
+- https://sources.debian.net/src/pinentry/1.0.0-2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/pinentry/1.0.0-2/ (for access to the source package after it no longer exists in the archive)
+
 ### `dpkg` source package: `pkg-config=0.29-4`
 
 Binary Packages:
@@ -3153,6 +3275,33 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/re2c/0.16-2/ (for browsing the source)
 - https://sources.debian.net/src/re2c/0.16-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/re2c/0.16-2/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `readline=7.0-3`
+
+Binary Packages:
+
+- `libreadline7:amd64=7.0-3`
+- `readline-common=7.0-3`
+
+Licenses: (parsed from: `/usr/share/doc/libreadline7/copyright`, `/usr/share/doc/readline-common/copyright`)
+
+- `GFDL`
+- `GPL-3`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris readline=7.0-3
+'http://deb.debian.org/debian/pool/main/r/readline/readline_7.0-3.dsc' readline_7.0-3.dsc 2538 SHA256:f27a5dc9053b88641e3effc6c03b7840cbbbd887e8dcaf05d9e336c7bc7c6a53
+'http://deb.debian.org/debian/pool/main/r/readline/readline_7.0.orig.tar.gz' readline_7.0.orig.tar.gz 2910016 SHA256:750d437185286f40a369e1e4f4764eda932b9459b5ec9a731628393dd3d32334
+'http://deb.debian.org/debian/pool/main/r/readline/readline_7.0-3.debian.tar.xz' readline_7.0-3.debian.tar.xz 30012 SHA256:bf166310d6ca7716f2bd0e9e06cee2458b0157f7989d028730fc305643560175
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/readline/7.0-3/ (for browsing the source)
+- https://sources.debian.net/src/readline/7.0-3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/readline/7.0-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `rsync=3.1.2-1+deb9u2`
 
