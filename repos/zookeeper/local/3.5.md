@@ -1,16 +1,16 @@
-# `zookeeper:3.5.6`
+# `zookeeper:3.5.7`
 
 ## Docker Metadata
 
-- Image ID: `sha256:53bd045d4a25a91eec63bd1187274a007da56202c9427f80c0bbb0c0f2ae16dd`
-- Created: `2020-02-27T07:35:09.790214643Z`
-- Virtual Size: ~ 223.86 Mb  
+- Image ID: `sha256:bbebb888169c33c2dc55fdcbede96b8dd3725e1a25f24b5169d09e0ca52bd0ec`
+- Created: `2020-03-09T22:24:00.903227142Z`
+- Virtual Size: ~ 223.96 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
 - Command: `["zkServer.sh","start-foreground"]`
 - Environment:
-  - `PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.5.6-bin/bin`
+  - `PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.5.7-bin/bin`
   - `LANG=C.UTF-8`
   - `JAVA_HOME=/usr/local/openjdk-8`
   - `JAVA_VERSION=8u242`
