@@ -1,10 +1,10 @@
-# `rabbitmq:3.8.2`
+# `rabbitmq:3.8.3`
 
 ## Docker Metadata
 
-- Image ID: `sha256:b8956a8129ef2282ee3db879aa7bf5cacea22e068ed3948b0c161ea9ea103bbc`
-- Created: `2020-02-29T04:18:40.191242181Z`
-- Virtual Size: ~ 150.79 Mb  
+- Image ID: `sha256:4f856f1c03fceb5a235896adb741b6760816478da0e7539fbf3dcfd7e72c31d3`
+- Created: `2020-03-10T22:22:15.875547632Z`
+- Virtual Size: ~ 151.17 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -17,7 +17,7 @@
   - `OTP_VERSION=22.2.8`
   - `OTP_SOURCE_SHA256=71f73ddd59db521928a0f6c8d4354d6f4e9f4bfbd0b40d321cd5253a6c79b095`
   - `RABBITMQ_DATA_DIR=/var/lib/rabbitmq`
-  - `RABBITMQ_VERSION=3.8.2`
+  - `RABBITMQ_VERSION=3.8.3`
   - `RABBITMQ_PGP_KEY_ID=0x0A9AF2115F4687BD29803A206B73A36E6026DFCA`
   - `RABBITMQ_HOME=/opt/rabbitmq`
   - `RABBITMQ_LOGS=-`
@@ -417,14 +417,9 @@ Licenses: (parsed from: `/usr/share/doc/gcc-7-base/copyright`)
 - `GPL-3`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-7=7.4.0-1ubuntu1~18.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-7/gcc-7_7.4.0-1ubuntu1~18.04.1.dsc' gcc-7_7.4.0-1ubuntu1~18.04.1.dsc 28013 SHA256:91aeb251b10c95ee63fffac161c4c2acbbda3cc4e84d8ca44b68fe2c78754409
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-7/gcc-7_7.4.0.orig.tar.gz' gcc-7_7.4.0.orig.tar.gz 73695608 SHA256:5b4807f26217a79529db1e4f786ac1771b2caee5c7ff487bb72c1f633c29a705
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-7/gcc-7_7.4.0-1ubuntu1~18.04.1.diff.gz' gcc-7_7.4.0-1ubuntu1~18.04.1.diff.gz 569357 SHA256:a3d368ba2c5f1355702879333031b08b3e9af524a102878c6c0e7fbeb0dfe909
-```
 
 ### `dpkg` source package: `gcc-8=8.3.0-6ubuntu1~18.04.1`
 
@@ -443,14 +438,9 @@ Licenses: (parsed from: `/usr/share/doc/gcc-8-base/copyright`, `/usr/share/doc/l
 - `GPL-3`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-8=8.3.0-6ubuntu1~18.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-8/gcc-8_8.3.0-6ubuntu1~18.04.1.dsc' gcc-8_8.3.0-6ubuntu1~18.04.1.dsc 35751 SHA256:6d73229917cfc03f826c967f61a065d1f8faba2faa20cdee8c130b3b97554bbc
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-8/gcc-8_8.3.0.orig.tar.gz' gcc-8_8.3.0.orig.tar.gz 85259886 SHA256:561c1bc647ade738c14efe5a298fc0cee2e2efd3dec9fefb66b724dbd50437e6
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-8/gcc-8_8.3.0-6ubuntu1~18.04.1.diff.gz' gcc-8_8.3.0-6ubuntu1~18.04.1.diff.gz 566564 SHA256:a3b1c9a26470622c308fa6f9194b87cc806fa4c7b58a63889c66553ae85719d7
-```
 
 ### `dpkg` source package: `glibc=2.27-3ubuntu1`
 
