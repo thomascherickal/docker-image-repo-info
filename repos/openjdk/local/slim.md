@@ -1,20 +1,20 @@
-# `openjdk:13.0.2-jdk-slim-buster`
+# `openjdk:14-jdk-slim-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:5927024fce4785c60c43848b01f6007948cb72fea753b5602e89bba2f9c3a27e`
-- Created: `2020-02-26T20:19:47.148621014Z`
-- Virtual Size: ~ 409.20 Mb  
+- Image ID: `sha256:6a6398d6147c0247af350fee7d2185a5ae29a64e2da8c02a320533b539b3fba8`
+- Created: `2020-02-26T20:17:40.874391737Z`
+- Virtual Size: ~ 413.93 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["jshell"]`
 - Environment:
-  - `PATH=/usr/java/openjdk-13/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
+  - `PATH=/usr/java/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=C.UTF-8`
-  - `JAVA_HOME=/usr/java/openjdk-13`
-  - `JAVA_VERSION=13.0.2`
-  - `JAVA_URL=https://download.java.net/java/GA/jdk13.0.2/d4173c853231432d94f001e99d882ca7/8/GPL/openjdk-13.0.2_linux-x64_bin.tar.gz`
-  - `JAVA_SHA256=acc7a6aabced44e62ec3b83e3b5959df2b1aa6b3d610d58ee45f0c21a7821a71`
+  - `JAVA_HOME=/usr/java/openjdk-14`
+  - `JAVA_VERSION=14`
+  - `JAVA_URL=https://download.java.net/java/GA/jdk14/076bab302c7b4508975440c56f6cc26a/36/GPL/openjdk-14_linux-x64_bin.tar.gz`
+  - `JAVA_SHA256=c7006154dfb8b66328c6475447a396feb0042608ee07a96956547f574a911c09`
 
 ## `dpkg` (`.deb`-based packages)
 
