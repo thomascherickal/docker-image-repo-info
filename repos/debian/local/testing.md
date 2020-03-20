@@ -1131,20 +1131,13 @@ Licenses: (parsed from: `/usr/share/doc/libseccomp2/copyright`)
 
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libseccomp=2.4.2-2
-'http://deb.debian.org/debian/pool/main/libs/libseccomp/libseccomp_2.4.2-2.dsc' libseccomp_2.4.2-2.dsc 2413 SHA256:cb9c0bc4e318250850ec3a13bff5fe2494fd3e46bedeb453bdb0bb13c69de08b
-'http://deb.debian.org/debian/pool/main/libs/libseccomp/libseccomp_2.4.2.orig.tar.gz' libseccomp_2.4.2.orig.tar.gz 601014 SHA256:b54f27b53884caacc932e75e6b44304ac83586e2abe7a83eca6daecc5440585b
-'http://deb.debian.org/debian/pool/main/libs/libseccomp/libseccomp_2.4.2-2.debian.tar.xz' libseccomp_2.4.2-2.debian.tar.xz 7736 SHA256:7bbc0a96fbb8123ce11a946547d6479f481367b5a1342f2ad2a06f8f80de833f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libseccomp/2.4.2-2/
 
-- https://sources.debian.net/src/libseccomp/2.4.2-2/ (for browsing the source)
-- https://sources.debian.net/src/libseccomp/2.4.2-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libseccomp/2.4.2-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libselinux=3.0-1`
 
