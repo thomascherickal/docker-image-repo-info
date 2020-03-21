@@ -1,20 +1,20 @@
-# `tomcat:8.5.53-jdk13-openjdk-buster`
+# `tomcat:8.5.53-jdk14-openjdk-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:3c13a1f11955bfb652e3c3875862863e8e806654ebf61a1cfef1f3e461868bf7`
-- Created: `2020-03-17T23:08:25.838092385Z`
-- Virtual Size: ~ 681.58 Mb  
+- Image ID: `sha256:3b1722a448b60bb65722a265f0d068992856fe7af3bded77468e1a216ae853df`
+- Created: `2020-03-18T22:25:03.048890589Z`
+- Virtual Size: ~ 686.30 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["catalina.sh","run"]`
 - Environment:
-  - `PATH=/usr/local/tomcat/bin:/usr/java/openjdk-13/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
+  - `PATH=/usr/local/tomcat/bin:/usr/java/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=C.UTF-8`
-  - `JAVA_HOME=/usr/java/openjdk-13`
-  - `JAVA_VERSION=13.0.2`
-  - `JAVA_URL=https://download.java.net/java/GA/jdk13.0.2/d4173c853231432d94f001e99d882ca7/8/GPL/openjdk-13.0.2_linux-x64_bin.tar.gz`
-  - `JAVA_SHA256=acc7a6aabced44e62ec3b83e3b5959df2b1aa6b3d610d58ee45f0c21a7821a71`
+  - `JAVA_HOME=/usr/java/openjdk-14`
+  - `JAVA_VERSION=14`
+  - `JAVA_URL=https://download.java.net/java/GA/jdk14/076bab302c7b4508975440c56f6cc26a/36/GPL/openjdk-14_linux-x64_bin.tar.gz`
+  - `JAVA_SHA256=c7006154dfb8b66328c6475447a396feb0042608ee07a96956547f574a911c09`
   - `CATALINA_HOME=/usr/local/tomcat`
   - `TOMCAT_NATIVE_LIBDIR=/usr/local/tomcat/native-jni-lib`
   - `LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib`
