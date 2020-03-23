@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:e1c3fefb3dee875964da6e05bb65613f0eb25852097f36cb8d296dc3c10f2bd8`
-- Created: `2020-02-21T23:39:35.139496693Z`
-- Virtual Size: ~ 749.03 Mb  
+- Image ID: `sha256:bfb030aed8429ecf0018d92851e7aa753c4dcbdd16367ee7b6d9746ee94b8b4b`
+- Created: `2020-03-20T21:00:01.930976856Z`
+- Virtual Size: ~ 749.09 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/gzserver_entrypoint.sh"]`
@@ -1302,12 +1302,12 @@ Licenses: (parsed from: `/usr/share/doc/gazebo10/copyright`, `/usr/share/doc/gaz
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `gcc-7=7.4.0-1ubuntu1~18.04.1`
+### `dpkg` source package: `gcc-7=7.5.0-3ubuntu1~18.04`
 
 Binary Packages:
 
-- `gcc-7-base:amd64=7.4.0-1ubuntu1~18.04.1`
-- `libgfortran4:amd64=7.4.0-1ubuntu1~18.04.1`
+- `gcc-7-base:amd64=7.5.0-3ubuntu1~18.04`
+- `libgfortran4:amd64=7.5.0-3ubuntu1~18.04`
 
 Licenses: (parsed from: `/usr/share/doc/gcc-7-base/copyright`, `/usr/share/doc/libgfortran4/copyright`)
 
@@ -1318,19 +1318,24 @@ Licenses: (parsed from: `/usr/share/doc/gcc-7-base/copyright`, `/usr/share/doc/l
 - `GPL-3`
 - `LGPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris gcc-7=7.5.0-3ubuntu1~18.04
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-7/gcc-7_7.5.0-3ubuntu1~18.04.dsc' gcc-7_7.5.0-3ubuntu1~18.04.dsc 28071 SHA256:3e93f39cd8c8ac5d05e5f1af16674864c9cfe7fdbe23274c756cf07e1ff81548
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-7/gcc-7_7.5.0.orig.tar.gz' gcc-7_7.5.0.orig.tar.gz 73877115 SHA256:dd7f095be2cd6aa61bd914b5b8e78daccae741a816cf19357cd767bef24ec390
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-7/gcc-7_7.5.0-3ubuntu1~18.04.diff.gz' gcc-7_7.5.0-3ubuntu1~18.04.diff.gz 574614 SHA256:42d3fef17cd5561df6187ce0c11bdb61f78cbb2da56bfd6e9983b138077f82f2
+```
 
-### `dpkg` source package: `gcc-8=8.3.0-6ubuntu1~18.04.1`
+### `dpkg` source package: `gcc-8=8.3.0-26ubuntu1~18.04`
 
 Binary Packages:
 
-- `gcc-8-base:amd64=8.3.0-6ubuntu1~18.04.1`
-- `libgcc1:amd64=1:8.3.0-6ubuntu1~18.04.1`
-- `libgomp1:amd64=8.3.0-6ubuntu1~18.04.1`
-- `libquadmath0:amd64=8.3.0-6ubuntu1~18.04.1`
-- `libstdc++6:amd64=8.3.0-6ubuntu1~18.04.1`
+- `gcc-8-base:amd64=8.3.0-26ubuntu1~18.04`
+- `libgcc1:amd64=1:8.3.0-26ubuntu1~18.04`
+- `libgomp1:amd64=8.3.0-26ubuntu1~18.04`
+- `libquadmath0:amd64=8.3.0-26ubuntu1~18.04`
+- `libstdc++6:amd64=8.3.0-26ubuntu1~18.04`
 
 Licenses: (parsed from: `/usr/share/doc/gcc-8-base/copyright`, `/usr/share/doc/libgcc1/copyright`, `/usr/share/doc/libgomp1/copyright`, `/usr/share/doc/libquadmath0/copyright`, `/usr/share/doc/libstdc++6/copyright`)
 
@@ -1341,9 +1346,14 @@ Licenses: (parsed from: `/usr/share/doc/gcc-8-base/copyright`, `/usr/share/doc/l
 - `GPL-3`
 - `LGPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris gcc-8=8.3.0-26ubuntu1~18.04
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-8/gcc-8_8.3.0-26ubuntu1~18.04.dsc' gcc-8_8.3.0-26ubuntu1~18.04.dsc 36386 SHA256:865f941ff32f365d17946dbd1243bbdb8bb2e6dad1d0fab909bd543a2111d68f
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-8/gcc-8_8.3.0.orig.tar.gz' gcc-8_8.3.0.orig.tar.gz 85259886 SHA256:561c1bc647ade738c14efe5a298fc0cee2e2efd3dec9fefb66b724dbd50437e6
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-8/gcc-8_8.3.0-26ubuntu1~18.04.diff.gz' gcc-8_8.3.0-26ubuntu1~18.04.diff.gz 960430 SHA256:06a0f32c62a63685a95925c4fb3e73167bf69a87fc55470ea94b69dfe62ded62
+```
 
 ### `dpkg` source package: `gdal=2.2.3+dfsg-2`
 
@@ -1885,11 +1895,11 @@ $ apt-get source -qq --print-uris humanity-icon-theme=0.6.15
 'http://archive.ubuntu.com/ubuntu/pool/main/h/humanity-icon-theme/humanity-icon-theme_0.6.15.tar.xz' humanity-icon-theme_0.6.15.tar.xz 1755216 SHA256:9dbcb425c2ee2a58c70da1eda4c2c88e32e7ede4094fb59772726864c8214aa6
 ```
 
-### `dpkg` source package: `icu=60.2-3ubuntu3`
+### `dpkg` source package: `icu=60.2-3ubuntu3.1`
 
 Binary Packages:
 
-- `libicu60:amd64=60.2-3ubuntu3`
+- `libicu60:amd64=60.2-3ubuntu3.1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1898,10 +1908,10 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris icu=60.2-3ubuntu3
-'http://archive.ubuntu.com/ubuntu/pool/main/i/icu/icu_60.2-3ubuntu3.dsc' icu_60.2-3ubuntu3.dsc 1816 SHA256:6b733a4a14704048ccd62b404bd1dac5321f0b9ddc3248322594b0c1146fa0c3
+$ apt-get source -qq --print-uris icu=60.2-3ubuntu3.1
+'http://archive.ubuntu.com/ubuntu/pool/main/i/icu/icu_60.2-3ubuntu3.1.dsc' icu_60.2-3ubuntu3.1.dsc 2149 SHA256:eb8ac79f5fdbd30cfedbf8e5f2c3997dac813115aab9b583dfeced859889ac57
 'http://archive.ubuntu.com/ubuntu/pool/main/i/icu/icu_60.2.orig.tar.gz' icu_60.2.orig.tar.gz 23315541 SHA256:a8c2ddbdf2be01c7ddcfded837afe46362e1069ea6093f66816b2d1caa8272ae
-'http://archive.ubuntu.com/ubuntu/pool/main/i/icu/icu_60.2-3ubuntu3.debian.tar.xz' icu_60.2-3ubuntu3.debian.tar.xz 27588 SHA256:f9f9a7aa4a70c8ce4e2f324956b9883ce4faeecfc3799800595594620824140e
+'http://archive.ubuntu.com/ubuntu/pool/main/i/icu/icu_60.2-3ubuntu3.1.debian.tar.xz' icu_60.2-3ubuntu3.1.debian.tar.xz 29068 SHA256:b93559560abae724d3466f3d84a362282f97bb6562a82e99da06846f0dc6c09c
 ```
 
 ### `dpkg` source package: `ignition-common=1.1.1-1~bionic`
@@ -4697,19 +4707,19 @@ $ apt-get source -qq --print-uris mawk=1.3.3-17ubuntu3
 'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.3-17ubuntu3.diff.gz' mawk_1.3.3-17ubuntu3.diff.gz 64052 SHA256:d1be148525885cb1869e35514f55005b5043f3310b08c444625005a3e14c81fc
 ```
 
-### `dpkg` source package: `mesa=19.2.8-0ubuntu0~18.04.2`
+### `dpkg` source package: `mesa=19.2.8-0ubuntu0~18.04.3`
 
 Binary Packages:
 
-- `libegl-mesa0:amd64=19.2.8-0ubuntu0~18.04.2`
-- `libegl1-mesa:amd64=19.2.8-0ubuntu0~18.04.2`
-- `libgbm1:amd64=19.2.8-0ubuntu0~18.04.2`
-- `libgl1-mesa-dri:amd64=19.2.8-0ubuntu0~18.04.2`
-- `libglapi-mesa:amd64=19.2.8-0ubuntu0~18.04.2`
-- `libglx-mesa0:amd64=19.2.8-0ubuntu0~18.04.2`
-- `libwayland-egl1-mesa:amd64=19.2.8-0ubuntu0~18.04.2`
-- `mesa-va-drivers:amd64=19.2.8-0ubuntu0~18.04.2`
-- `mesa-vdpau-drivers:amd64=19.2.8-0ubuntu0~18.04.2`
+- `libegl-mesa0:amd64=19.2.8-0ubuntu0~18.04.3`
+- `libegl1-mesa:amd64=19.2.8-0ubuntu0~18.04.3`
+- `libgbm1:amd64=19.2.8-0ubuntu0~18.04.3`
+- `libgl1-mesa-dri:amd64=19.2.8-0ubuntu0~18.04.3`
+- `libglapi-mesa:amd64=19.2.8-0ubuntu0~18.04.3`
+- `libglx-mesa0:amd64=19.2.8-0ubuntu0~18.04.3`
+- `libwayland-egl1-mesa:amd64=19.2.8-0ubuntu0~18.04.3`
+- `mesa-va-drivers:amd64=19.2.8-0ubuntu0~18.04.3`
+- `mesa-vdpau-drivers:amd64=19.2.8-0ubuntu0~18.04.3`
 
 Licenses: (parsed from: `/usr/share/doc/libegl-mesa0/copyright`, `/usr/share/doc/libegl1-mesa/copyright`, `/usr/share/doc/libgbm1/copyright`, `/usr/share/doc/libgl1-mesa-dri/copyright`, `/usr/share/doc/libglapi-mesa/copyright`, `/usr/share/doc/libglx-mesa0/copyright`, `/usr/share/doc/libwayland-egl1-mesa/copyright`, `/usr/share/doc/mesa-va-drivers/copyright`, `/usr/share/doc/mesa-vdpau-drivers/copyright`)
 
@@ -4726,10 +4736,10 @@ Licenses: (parsed from: `/usr/share/doc/libegl-mesa0/copyright`, `/usr/share/doc
 Source:
 
 ```console
-$ apt-get source -qq --print-uris mesa=19.2.8-0ubuntu0~18.04.2
-'http://security.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_19.2.8-0ubuntu0~18.04.2.dsc' mesa_19.2.8-0ubuntu0~18.04.2.dsc 5306 SHA256:3f430affe5fb6b7c11eb8f80380b2ffe11a9d263b6c51ab3df8d5eab45a15990
-'http://security.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_19.2.8.orig.tar.gz' mesa_19.2.8.orig.tar.gz 17662298 SHA256:49230604cc3f2847b29fce7481d57461f79902a766df9c48bcf53fb8d394b224
-'http://security.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_19.2.8-0ubuntu0~18.04.2.diff.gz' mesa_19.2.8-0ubuntu0~18.04.2.diff.gz 124983 SHA256:bf5f44ab273aa31f188ec352cb34bcf2f244935454a43238bd2fa16a192bc5e3
+$ apt-get source -qq --print-uris mesa=19.2.8-0ubuntu0~18.04.3
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_19.2.8-0ubuntu0~18.04.3.dsc' mesa_19.2.8-0ubuntu0~18.04.3.dsc 5306 SHA256:ee0c2d52bc9e6db98477e7aeb9fff61b185e63787774439f557cba56bc243084
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_19.2.8.orig.tar.gz' mesa_19.2.8.orig.tar.gz 17662298 SHA256:49230604cc3f2847b29fce7481d57461f79902a766df9c48bcf53fb8d394b224
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_19.2.8-0ubuntu0~18.04.3.diff.gz' mesa_19.2.8-0ubuntu0~18.04.3.diff.gz 125216 SHA256:a7daf9875959d7322ce3544fcceeeacb99f3f31466228e92acf2c809f32c7aaf
 ```
 
 ### `dpkg` source package: `mime-support=3.60ubuntu1`
@@ -6174,11 +6184,11 @@ $ apt-get source -qq --print-uris speex=1.2~rc1.2-1ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/s/speex/speex_1.2~rc1.2-1ubuntu2.diff.gz' speex_1.2~rc1.2-1ubuntu2.diff.gz 10372 SHA256:1f8602e771c179ce81444f2b82414683ee69715837e47b9755b114bbdfb64d17
 ```
 
-### `dpkg` source package: `sqlite3=3.22.0-1ubuntu0.2`
+### `dpkg` source package: `sqlite3=3.22.0-1ubuntu0.3`
 
 Binary Packages:
 
-- `libsqlite3-0:amd64=3.22.0-1ubuntu0.2`
+- `libsqlite3-0:amd64=3.22.0-1ubuntu0.3`
 
 Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 
@@ -6186,9 +6196,15 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 - `GPL-2+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris sqlite3=3.22.0-1ubuntu0.3
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.22.0-1ubuntu0.3.dsc' sqlite3_3.22.0-1ubuntu0.3.dsc 2512 SHA256:54b2afc4ed367051c216ee8c96abce9a511f1b8ca7b05c76cefd667cf3e5746b
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.22.0.orig-www.tar.xz' sqlite3_3.22.0.orig-www.tar.xz 3564688 SHA256:a61a14d6f457bb31ca32f4844398140050597fe4403dc0ee19576111f407e231
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.22.0.orig.tar.xz' sqlite3_3.22.0.orig.tar.xz 6019648 SHA256:f973ba63b5a1ea1d72e80c585bfb945e71d3f8b74fbecccdf345a84f8c91e5d1
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.22.0-1ubuntu0.3.debian.tar.xz' sqlite3_3.22.0-1ubuntu0.3.debian.tar.xz 45120 SHA256:153d65bf0d6957a1c6e47cb4f1ab79e96190317576859003e0b96d656f1f78a6
+```
 
 ### `dpkg` source package: `superlu=5.2.1+dfsg1-3`
 
