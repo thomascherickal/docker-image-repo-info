@@ -1,10 +1,10 @@
-# `php:7.4.3-fpm-buster`
+# `php:7.4.4-fpm-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:77cd7cd803b24104fc7f4e7682c77bdaddb8443e30feff57447e710441aee048`
-- Created: `2020-02-26T12:18:12.119899004Z`
-- Virtual Size: ~ 405.09 Mb  
+- Image ID: `sha256:7d64b9cd1388a0b01295a19ffac5d1d99612fd43d521291d2df7482cdc126cb8`
+- Created: `2020-03-19T22:18:04.147871861Z`
+- Virtual Size: ~ 405.10 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -18,10 +18,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie`
   - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
-  - `PHP_VERSION=7.4.3`
-  - `PHP_URL=https://www.php.net/get/php-7.4.3.tar.xz/from/this/mirror`
-  - `PHP_ASC_URL=https://www.php.net/get/php-7.4.3.tar.xz.asc/from/this/mirror`
-  - `PHP_SHA256=cf1f856d877c268124ded1ede40c9fb6142b125fdaafdc54f855120b8bc6982a`
+  - `PHP_VERSION=7.4.4`
+  - `PHP_URL=https://www.php.net/get/php-7.4.4.tar.xz/from/this/mirror`
+  - `PHP_ASC_URL=https://www.php.net/get/php-7.4.4.tar.xz.asc/from/this/mirror`
+  - `PHP_SHA256=1873c4cefdd3df9a78dcffb2198bba5c2f0464f55c9c960720c84df483fca74c`
   - `PHP_MD5=`
 
 ## `dpkg` (`.deb`-based packages)
