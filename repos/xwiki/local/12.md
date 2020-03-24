@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:03d5c08d7fc97855288d4601216858f16ebba51f4e65129ba6c0b452837b292b`
-- Created: `2020-03-18T00:05:19.254559328Z`
+- Image ID: `sha256:cb8af789d1e9d6dd751c26c44ed636dee2d131088f0a73880578f90348910105`
+- Created: `2020-03-20T22:31:43.862727322Z`
 - Virtual Size: ~ 1.29 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -969,14 +969,9 @@ Licenses: (parsed from: `/usr/share/doc/libglib2.0-0/copyright`)
 
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glib2.0=2.56.4-0ubuntu0.18.04.4
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.56.4-0ubuntu0.18.04.4.dsc' glib2.0_2.56.4-0ubuntu0.18.04.4.dsc 3567 SHA256:cf6c1bad61ca8f19bdb5aa12df05999e2812b46d50413ac1534c0c4df2a48489
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.56.4.orig.tar.xz' glib2.0_2.56.4.orig.tar.xz 7029768 SHA256:27f703d125efb07f8a743666b580df0b4095c59fc8750e8890132c91d437504c
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.56.4-0ubuntu0.18.04.4.debian.tar.xz' glib2.0_2.56.4-0ubuntu0.18.04.4.debian.tar.xz 82472 SHA256:da8273fc3f78390ce1e4f7d5a2818352ab85a5ef790306d2f1b61d50cbd0718c
-```
 
 ### `dpkg` source package: `glibc=2.27-3ubuntu1`
 
@@ -3914,11 +3909,11 @@ $ apt-get source -qq --print-uris shared-mime-info=1.9-2
 'http://archive.ubuntu.com/ubuntu/pool/main/s/shared-mime-info/shared-mime-info_1.9-2.debian.tar.xz' shared-mime-info_1.9-2.debian.tar.xz 9992 SHA256:18cb7e2c0f2a3daa2d55abc87c4619d68f537f268a3bad8510e1fcf0d6b0cd76
 ```
 
-### `dpkg` source package: `sqlite3=3.22.0-1ubuntu0.2`
+### `dpkg` source package: `sqlite3=3.22.0-1ubuntu0.3`
 
 Binary Packages:
 
-- `libsqlite3-0:amd64=3.22.0-1ubuntu0.2`
+- `libsqlite3-0:amd64=3.22.0-1ubuntu0.3`
 
 Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 
@@ -3926,9 +3921,15 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 - `GPL-2+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris sqlite3=3.22.0-1ubuntu0.3
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.22.0-1ubuntu0.3.dsc' sqlite3_3.22.0-1ubuntu0.3.dsc 2512 SHA256:54b2afc4ed367051c216ee8c96abce9a511f1b8ca7b05c76cefd667cf3e5746b
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.22.0.orig-www.tar.xz' sqlite3_3.22.0.orig-www.tar.xz 3564688 SHA256:a61a14d6f457bb31ca32f4844398140050597fe4403dc0ee19576111f407e231
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.22.0.orig.tar.xz' sqlite3_3.22.0.orig.tar.xz 6019648 SHA256:f973ba63b5a1ea1d72e80c585bfb945e71d3f8b74fbecccdf345a84f8c91e5d1
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.22.0-1ubuntu0.3.debian.tar.xz' sqlite3_3.22.0-1ubuntu0.3.debian.tar.xz 45120 SHA256:153d65bf0d6957a1c6e47cb4f1ab79e96190317576859003e0b96d656f1f78a6
+```
 
 ### `dpkg` source package: `suitesparse=1:5.1.2-2`
 
@@ -4152,14 +4153,9 @@ Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/fdi
 - `MIT`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris util-linux=2.31.1-0.4ubuntu3.5
-'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.31.1-0.4ubuntu3.5.dsc' util-linux_2.31.1-0.4ubuntu3.5.dsc 4147 SHA256:1e7e4c5ae02514beb07ab0ab20fbb93444b6e321c358362a7621fba5f2a1159b
-'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.31.1.orig.tar.xz' util-linux_2.31.1.orig.tar.xz 4514032 SHA256:cfd5789570e9ff75e079471faeca1511ade1607f650523a6ad25d1e26516ae4e
-'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.31.1-0.4ubuntu3.5.debian.tar.xz' util-linux_2.31.1-0.4ubuntu3.5.debian.tar.xz 101300 SHA256:e246c635b9c383a300e622aa64c9088c1fa5699dd1af44856f957053140306bf
-```
 
 ### `dpkg` source package: `wayland=1.16.0-1ubuntu1.1~18.04.3`
 
