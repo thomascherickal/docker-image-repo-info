@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:882dad32cc49c80d1378d900b0bc48c2632c1d009695776da4c29b9daeaf63f4`
-- Created: `2020-03-20T03:32:31.716765907Z`
-- Virtual Size: ~ 370.11 Mb  
+- Image ID: `sha256:760fdda71c8fffbf9c6cb1a6d4a461fafd72eb507a62dc61f6354bb1c98f7ec2`
+- Created: `2020-03-23T23:07:05.058680005Z`
+- Virtual Size: ~ 369.52 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/sh"]`
@@ -86,16 +86,16 @@ GPL-2.0-only
 ### `apk` package: `ca-certificates`
 
 ```console
-ca-certificates-20191127-r0 description:
+ca-certificates-20191127-r1 description:
 Common CA certificates PEM files
 
-ca-certificates-20191127-r0 webpage:
+ca-certificates-20191127-r1 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-20191127-r0 installed size:
+ca-certificates-20191127-r1 installed size:
 741376
 
-ca-certificates-20191127-r0 license:
+ca-certificates-20191127-r1 license:
 MPL-2.0 GPL-2.0-or-later
 
 ```
@@ -103,16 +103,16 @@ MPL-2.0 GPL-2.0-or-later
 ### `apk` package: `ca-certificates-cacert`
 
 ```console
-ca-certificates-cacert-20191127-r0 description:
+ca-certificates-cacert-20191127-r1 description:
 Mozilla bundled certificates
 
-ca-certificates-cacert-20191127-r0 webpage:
+ca-certificates-cacert-20191127-r1 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-cacert-20191127-r0 installed size:
+ca-certificates-cacert-20191127-r1 installed size:
 245760
 
-ca-certificates-cacert-20191127-r0 license:
+ca-certificates-cacert-20191127-r1 license:
 MPL-2.0 GPL-2.0-or-later
 
 ```
@@ -188,16 +188,16 @@ ISC
 ### `apk` package: `musl`
 
 ```console
-musl-1.1.24-r1 description:
+musl-1.1.24-r2 description:
 the musl c library (libc) implementation
 
-musl-1.1.24-r1 webpage:
+musl-1.1.24-r2 webpage:
 https://musl.libc.org/
 
-musl-1.1.24-r1 installed size:
+musl-1.1.24-r2 installed size:
 614400
 
-musl-1.1.24-r1 license:
+musl-1.1.24-r2 license:
 MIT
 
 ```
@@ -205,16 +205,16 @@ MIT
 ### `apk` package: `musl-utils`
 
 ```console
-musl-utils-1.1.24-r0 description:
+musl-utils-1.1.24-r2 description:
 the musl c library (libc) implementation
 
-musl-utils-1.1.24-r0 webpage:
-http://www.musl-libc.org/
+musl-utils-1.1.24-r2 webpage:
+https://musl.libc.org/
 
-musl-utils-1.1.24-r0 installed size:
-147456
+musl-utils-1.1.24-r2 installed size:
+151552
 
-musl-utils-1.1.24-r0 license:
+musl-utils-1.1.24-r2 license:
 MIT BSD GPL2+
 
 ```
