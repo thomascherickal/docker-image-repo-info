@@ -510,20 +510,13 @@ Licenses: (parsed from: `/usr/share/doc/e2fslibs/copyright`, `/usr/share/doc/e2f
 - `GPL-2`
 - `LGPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris e2fsprogs=1.42.12-2+deb8u1
-'http://security.debian.org/debian-security/pool/updates/main/e/e2fsprogs/e2fsprogs_1.42.12-2+deb8u1.dsc' e2fsprogs_1.42.12-2+deb8u1.dsc 2747 SHA256:f3c40ff73088858d41c1d936c79836e066bdffe8f9b6351ad67d4fa73184c5b8
-'http://security.debian.org/debian-security/pool/updates/main/e/e2fsprogs/e2fsprogs_1.42.12.orig.tar.gz' e2fsprogs_1.42.12.orig.tar.gz 6381695 SHA256:e17846d91a0edd89fa59b064bde8f8e5cec5851e35f587bcccb4014dbd63186c
-'http://security.debian.org/debian-security/pool/updates/main/e/e2fsprogs/e2fsprogs_1.42.12-2+deb8u1.debian.tar.xz' e2fsprogs_1.42.12-2+deb8u1.debian.tar.xz 70292 SHA256:250ad73c0d8577b83bfb9004be0691667cb2ec913fecf9947903ba250cfc013c
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/e2fsprogs/1.42.12-2+deb8u1/
 
-- https://sources.debian.net/src/e2fsprogs/1.42.12-2+deb8u1/ (for browsing the source)
-- https://sources.debian.net/src/e2fsprogs/1.42.12-2+deb8u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/e2fsprogs/1.42.12-2+deb8u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `findutils=4.4.2-9`
 
