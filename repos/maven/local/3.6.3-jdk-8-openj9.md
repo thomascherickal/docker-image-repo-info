@@ -1695,14 +1695,9 @@ Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/fdi
 - `MIT`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris util-linux=2.31.1-0.4ubuntu3.5
-'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.31.1-0.4ubuntu3.5.dsc' util-linux_2.31.1-0.4ubuntu3.5.dsc 4147 SHA256:1e7e4c5ae02514beb07ab0ab20fbb93444b6e321c358362a7621fba5f2a1159b
-'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.31.1.orig.tar.xz' util-linux_2.31.1.orig.tar.xz 4514032 SHA256:cfd5789570e9ff75e079471faeca1511ade1607f650523a6ad25d1e26516ae4e
-'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.31.1-0.4ubuntu3.5.debian.tar.xz' util-linux_2.31.1-0.4ubuntu3.5.debian.tar.xz 101300 SHA256:e246c635b9c383a300e622aa64c9088c1fa5699dd1af44856f957053140306bf
-```
 
 ### `dpkg` source package: `xz-utils=5.2.2-1.3`
 
