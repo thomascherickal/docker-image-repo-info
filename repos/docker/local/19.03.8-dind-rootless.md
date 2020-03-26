@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:131e19ccffdf6245ad57a0ca98e0abd6e6cc5eb4495fe9358f90e1c9837de9c5`
-- Created: `2020-03-11T21:20:09.290147931Z`
-- Virtual Size: ~ 307.13 Mb  
+- Image ID: `sha256:d6bdb45ee65acf6c0bce72f059897f9b17f7f7e4a4574ffe26994ba5e7c054c9`
+- Created: `2020-03-23T21:37:41.142819459Z`
+- Virtual Size: ~ 304.08 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["dockerd-entrypoint.sh"]`
@@ -106,16 +106,16 @@ GPL-2.0-only
 ### `apk` package: `ca-certificates`
 
 ```console
-ca-certificates-20191127-r0 description:
+ca-certificates-20191127-r1 description:
 Common CA certificates PEM files
 
-ca-certificates-20191127-r0 webpage:
+ca-certificates-20191127-r1 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-20191127-r0 installed size:
+ca-certificates-20191127-r1 installed size:
 741376
 
-ca-certificates-20191127-r0 license:
+ca-certificates-20191127-r1 license:
 MPL-2.0 GPL-2.0-or-later
 
 ```
@@ -123,16 +123,16 @@ MPL-2.0 GPL-2.0-or-later
 ### `apk` package: `ca-certificates-cacert`
 
 ```console
-ca-certificates-cacert-20191127-r0 description:
+ca-certificates-cacert-20191127-r1 description:
 Mozilla bundled certificates
 
-ca-certificates-cacert-20191127-r0 webpage:
+ca-certificates-cacert-20191127-r1 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-cacert-20191127-r0 installed size:
+ca-certificates-cacert-20191127-r1 installed size:
 245760
 
-ca-certificates-cacert-20191127-r0 license:
+ca-certificates-cacert-20191127-r1 license:
 MPL-2.0 GPL-2.0-or-later
 
 ```
@@ -208,16 +208,16 @@ GPL-2.0-or-later
 ### `apk` package: `iptables`
 
 ```console
-iptables-1.8.3-r1 description:
+iptables-1.8.3-r2 description:
 Linux kernel firewall, NAT and packet mangling tools
 
-iptables-1.8.3-r1 webpage:
+iptables-1.8.3-r2 webpage:
 https://www.netfilter.org/projects/iptables/index.html
 
-iptables-1.8.3-r1 installed size:
+iptables-1.8.3-r2 installed size:
 2215936
 
-iptables-1.8.3-r1 license:
+iptables-1.8.3-r2 license:
 GPL-2.0-or-later
 
 ```
@@ -514,16 +514,16 @@ GPL
 ### `apk` package: `musl`
 
 ```console
-musl-1.1.24-r1 description:
+musl-1.1.24-r2 description:
 the musl c library (libc) implementation
 
-musl-1.1.24-r1 webpage:
+musl-1.1.24-r2 webpage:
 https://musl.libc.org/
 
-musl-1.1.24-r1 installed size:
+musl-1.1.24-r2 installed size:
 614400
 
-musl-1.1.24-r1 license:
+musl-1.1.24-r2 license:
 MIT
 
 ```
@@ -531,16 +531,16 @@ MIT
 ### `apk` package: `musl-utils`
 
 ```console
-musl-utils-1.1.24-r0 description:
+musl-utils-1.1.24-r2 description:
 the musl c library (libc) implementation
 
-musl-utils-1.1.24-r0 webpage:
-http://www.musl-libc.org/
+musl-utils-1.1.24-r2 webpage:
+https://musl.libc.org/
 
-musl-utils-1.1.24-r0 installed size:
-147456
+musl-utils-1.1.24-r2 installed size:
+151552
 
-musl-utils-1.1.24-r0 license:
+musl-utils-1.1.24-r2 license:
 MIT BSD GPL2+
 
 ```
@@ -548,33 +548,16 @@ MIT BSD GPL2+
 ### `apk` package: `ncurses-libs`
 
 ```console
-ncurses-libs-6.1_p20191130-r0 description:
+ncurses-libs-6.1_p20200118-r2 description:
 Ncurses libraries
 
-ncurses-libs-6.1_p20191130-r0 webpage:
+ncurses-libs-6.1_p20200118-r2 webpage:
 https://invisible-island.net/ncurses/
 
-ncurses-libs-6.1_p20191130-r0 installed size:
+ncurses-libs-6.1_p20200118-r2 installed size:
 507904
 
-ncurses-libs-6.1_p20191130-r0 license:
-MIT
-
-```
-
-### `apk` package: `ncurses-terminfo`
-
-```console
-ncurses-terminfo-6.1_p20191130-r0 description:
-Console display library (other terminfo files)
-
-ncurses-terminfo-6.1_p20191130-r0 webpage:
-https://invisible-island.net/ncurses/
-
-ncurses-terminfo-6.1_p20191130-r0 installed size:
-7348224
-
-ncurses-terminfo-6.1_p20191130-r0 license:
+ncurses-libs-6.1_p20200118-r2 license:
 MIT
 
 ```
@@ -582,16 +565,16 @@ MIT
 ### `apk` package: `ncurses-terminfo-base`
 
 ```console
-ncurses-terminfo-base-6.1_p20191130-r0 description:
+ncurses-terminfo-base-6.1_p20200118-r2 description:
 Descriptions of common terminals
 
-ncurses-terminfo-base-6.1_p20191130-r0 webpage:
+ncurses-terminfo-base-6.1_p20200118-r2 webpage:
 https://invisible-island.net/ncurses/
 
-ncurses-terminfo-base-6.1_p20191130-r0 installed size:
-94208
+ncurses-terminfo-base-6.1_p20200118-r2 installed size:
+217088
 
-ncurses-terminfo-base-6.1_p20191130-r0 license:
+ncurses-terminfo-base-6.1_p20200118-r2 license:
 MIT
 
 ```
