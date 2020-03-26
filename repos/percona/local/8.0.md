@@ -1,17 +1,17 @@
-# `percona:8.0.18-9-centos`
+# `percona:8.0.19-10-centos`
 
 ## Docker Metadata
 
-- Image ID: `sha256:9988e1470d5bdeaef521ccf2c3a6fc9f6fe5827bc55ff92e52c10148e0e1d9e7`
-- Created: `2020-01-30T23:34:01.295662067Z`
-- Virtual Size: ~ 719.04 Mb  
+- Image ID: `sha256:e269b673aa2af7f9d8abf157fc1460094bf886f0a4a1887842f45a8cf5d59262`
+- Created: `2020-03-23T21:21:04.94737453Z`
+- Virtual Size: ~ 743.15 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
 - Command: `["mysqld"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `PERCONA_VERSION=8.0.18-9.1.el7`
+  - `PERCONA_VERSION=8.0.19-10.1.el7`
 - Labels:
   - `org.label-schema.build-date=20191001`
   - `org.label-schema.license=GPLv2`
@@ -760,6 +760,20 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/keyutils-1.5.8-3.el7.src.rpm
 ```
 
+### `rpm` package: `keyutils-libs-devel-1.5.8-3.el7.x86_64`
+
+Licenses (from `rpm --query`): GPLv2+ and LGPLv2+
+
+Source:
+
+```console
+$ yumdownloader --quiet --source --urls keyutils-libs-devel-1.5.8-3.el7
+Enabling updates-source repository
+Enabling base-source repository
+Enabling extras-source repository
+http://vault.centos.org/centos/7/os/Source//SPackages/keyutils-1.5.8-3.el7.src.rpm
+```
+
 ### `rpm` package: `kmod-20-25.el7.x86_64`
 
 Licenses (from `rpm --query`): GPLv2+
@@ -800,6 +814,20 @@ Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/device-mapper-multipath-0.4.9-127.el7.src.rpm
+```
+
+### `rpm` package: `krb5-devel-1.15.1-37.el7_7.2.x86_64`
+
+Licenses (from `rpm --query`): MIT
+
+Source:
+
+```console
+$ yumdownloader --quiet --source --urls krb5-devel-1.15.1-37.el7_7.2
+Enabling updates-source repository
+Enabling base-source repository
+Enabling extras-source repository
+http://vault.centos.org/centos/7/updates/Source//SPackages/krb5-1.15.1-37.el7_7.2.src.rpm
 ```
 
 ### `rpm` package: `krb5-libs-1.15.1-37.el7_7.2.x86_64`
@@ -928,6 +956,20 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/e2fsprogs-1.42.9-16.el7.src.rpm
 ```
 
+### `rpm` package: `libcom_err-devel-1.42.9-16.el7.x86_64`
+
+Licenses (from `rpm --query`): MIT
+
+Source:
+
+```console
+$ yumdownloader --quiet --source --urls libcom_err-devel-1.42.9-16.el7
+Enabling updates-source repository
+Enabling base-source repository
+Enabling extras-source repository
+http://vault.centos.org/centos/7/os/Source//SPackages/e2fsprogs-1.42.9-16.el7.src.rpm
+```
+
 ### `rpm` package: `libcurl-7.29.0-54.el7.x86_64`
 
 Licenses (from `rpm --query`): MIT
@@ -1040,6 +1082,20 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/libidn-1.28-4.el7.src.rpm
 ```
 
+### `rpm` package: `libkadm5-1.15.1-37.el7_7.2.x86_64`
+
+Licenses (from `rpm --query`): MIT
+
+Source:
+
+```console
+$ yumdownloader --quiet --source --urls libkadm5-1.15.1-37.el7_7.2
+Enabling updates-source repository
+Enabling base-source repository
+Enabling extras-source repository
+http://vault.centos.org/centos/7/updates/Source//SPackages/krb5-1.15.1-37.el7_7.2.src.rpm
+```
+
 ### `rpm` package: `libmount-2.23.2-61.el7.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+
@@ -1082,6 +1138,20 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/libselinux-2.5-14.1.el7.src.rpm
 ```
 
+### `rpm` package: `libselinux-devel-2.5-14.1.el7.x86_64`
+
+Licenses (from `rpm --query`): Public Domain
+
+Source:
+
+```console
+$ yumdownloader --quiet --source --urls libselinux-devel-2.5-14.1.el7
+Enabling updates-source repository
+Enabling base-source repository
+Enabling extras-source repository
+http://vault.centos.org/centos/7/os/Source//SPackages/libselinux-2.5-14.1.el7.src.rpm
+```
+
 ### `rpm` package: `libselinux-utils-2.5-14.1.el7.x86_64`
 
 Licenses (from `rpm --query`): Public Domain
@@ -1118,6 +1188,20 @@ Source:
 
 ```console
 $ yumdownloader --quiet --source --urls libsepol-2.5-10.el7
+Enabling updates-source repository
+Enabling base-source repository
+Enabling extras-source repository
+http://vault.centos.org/centos/7/os/Source//SPackages/libsepol-2.5-10.el7.src.rpm
+```
+
+### `rpm` package: `libsepol-devel-2.5-10.el7.x86_64`
+
+Licenses (from `rpm --query`): LGPLv2+
+
+Source:
+
+```console
+$ yumdownloader --quiet --source --urls libsepol-devel-2.5-10.el7
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
@@ -1230,6 +1314,20 @@ Source:
 
 ```console
 $ yumdownloader --quiet --source --urls libverto-0.2.5-4.el7
+Enabling updates-source repository
+Enabling base-source repository
+Enabling extras-source repository
+http://vault.centos.org/centos/7/os/Source//SPackages/libverto-0.2.5-4.el7.src.rpm
+```
+
+### `rpm` package: `libverto-devel-0.2.5-4.el7.x86_64`
+
+Licenses (from `rpm --query`): MIT
+
+Source:
+
+```console
+$ yumdownloader --quiet --source --urls libverto-devel-0.2.5-4.el7
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
@@ -1488,6 +1586,20 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/openldap-2.4.44-21.el7_6.src.rpm
 ```
 
+### `rpm` package: `openssl-devel-1.0.2k-19.el7.x86_64`
+
+Licenses (from `rpm --query`): OpenSSL
+
+Source:
+
+```console
+$ yumdownloader --quiet --source --urls openssl-devel-1.0.2k-19.el7
+Enabling updates-source repository
+Enabling base-source repository
+Enabling extras-source repository
+http://vault.centos.org/centos/7/os/Source//SPackages/openssl-1.0.2k-19.el7.src.rpm
+```
+
 ### `rpm` package: `openssl-libs-1.0.2k-19.el7.x86_64`
 
 Licenses (from `rpm --query`): OpenSSL
@@ -1572,43 +1684,63 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/pcre-8.32-17.el7.src.rpm
 ```
 
+### `rpm` package: `pcre-devel-8.32-17.el7.x86_64`
+
+Licenses (from `rpm --query`): BSD
+
+Source:
+
+```console
+$ yumdownloader --quiet --source --urls pcre-devel-8.32-17.el7
+Enabling updates-source repository
+Enabling base-source repository
+Enabling extras-source repository
+http://vault.centos.org/centos/7/os/Source//SPackages/pcre-8.32-17.el7.src.rpm
+```
+
 ### `rpm` package: `percona-release-1.0-14.noarch`
 
 Licenses (from `rpm --query`): GPL-3.0+
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `percona-server-client-8.0.18-9.1.el7.x86_64`
+### `rpm` package: `percona-server-client-8.0.19-10.1.el7.x86_64`
 
 Licenses (from `rpm --query`): Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved. Under GPLv2 license as shown in the Description field..
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `percona-server-rocksdb-8.0.18-9.1.el7.x86_64`
+### `rpm` package: `percona-server-devel-8.0.19-10.1.el7.x86_64`
 
 Licenses (from `rpm --query`): Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved. Under GPLv2 license as shown in the Description field..
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `percona-server-server-8.0.18-9.1.el7.x86_64`
+### `rpm` package: `percona-server-rocksdb-8.0.19-10.1.el7.x86_64`
 
 Licenses (from `rpm --query`): Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved. Under GPLv2 license as shown in the Description field..
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `percona-server-shared-8.0.18-9.1.el7.x86_64`
+### `rpm` package: `percona-server-server-8.0.19-10.1.el7.x86_64`
 
 Licenses (from `rpm --query`): Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved. Under GPLv2 license as shown in the Description field..
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `percona-server-shared-compat-8.0.18-9.1.el7.x86_64`
+### `rpm` package: `percona-server-shared-8.0.19-10.1.el7.x86_64`
 
 Licenses (from `rpm --query`): Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved. Under GPLv2 license as shown in the Description field..
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `percona-server-tokudb-8.0.18-9.1.el7.x86_64`
+### `rpm` package: `percona-server-shared-compat-8.0.19-10.1.el7.x86_64`
+
+Licenses (from `rpm --query`): Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved. Under GPLv2 license as shown in the Description field..
+
+**WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
+
+### `rpm` package: `percona-server-tokudb-8.0.19-10.1.el7.x86_64`
 
 Licenses (from `rpm --query`): Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved. Under GPLv2 license as shown in the Description field..
 
@@ -2616,6 +2748,20 @@ Source:
 
 ```console
 $ yumdownloader --quiet --source --urls zlib-1.2.7-18.el7
+Enabling updates-source repository
+Enabling base-source repository
+Enabling extras-source repository
+http://vault.centos.org/centos/7/os/Source//SPackages/zlib-1.2.7-18.el7.src.rpm
+```
+
+### `rpm` package: `zlib-devel-1.2.7-18.el7.x86_64`
+
+Licenses (from `rpm --query`): zlib and Boost
+
+Source:
+
+```console
+$ yumdownloader --quiet --source --urls zlib-devel-1.2.7-18.el7
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
