@@ -122,19 +122,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=1.8.4
-'http://deb.debian.org/debian/pool/main/a/apt/apt_1.8.4.dsc' apt_1.8.4.dsc 2766 SHA256:492d4d6de28a26d46b63ac360c3ea3bcc106970a6521f3812dd86ae33cbeaccc
-'http://deb.debian.org/debian/pool/main/a/apt/apt_1.8.4.tar.xz' apt_1.8.4.tar.xz 2188876 SHA256:f40fe4475f3ab775a915569911326ff31c12c09eb8518bd82ba87aa570d6c43e
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/apt/1.8.4/
 
-- https://sources.debian.net/src/apt/1.8.4/ (for browsing the source)
-- https://sources.debian.net/src/apt/1.8.4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apt/1.8.4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `attr=1:2.4.48-5`
 
@@ -4515,20 +4509,13 @@ Licenses: (parsed from: `/usr/share/doc/libpq-dev/copyright`, `/usr/share/doc/li
 - `nagaysau-ishii`
 - `rijndael`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris postgresql-12=12.2-1
-'http://deb.debian.org/debian/pool/main/p/postgresql-12/postgresql-12_12.2-1.dsc' postgresql-12_12.2-1.dsc 3591 SHA256:2a1f0fe2f9187579b7d6be5811c2c9e8246a4fc6576bf866d5b041080b0173c4
-'http://deb.debian.org/debian/pool/main/p/postgresql-12/postgresql-12_12.2.orig.tar.bz2' postgresql-12_12.2.orig.tar.bz2 20363545 SHA256:ad1dcc4c4fc500786b745635a9e1eba950195ce20b8913f50345bb7d5369b5de
-'http://deb.debian.org/debian/pool/main/p/postgresql-12/postgresql-12_12.2-1.debian.tar.xz' postgresql-12_12.2-1.debian.tar.xz 22796 SHA256:cf7bba725dfd2d8094ef0d1c808761f20868a001f0de2ca0affe046fb5407648
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/postgresql-12/12.2-1/
 
-- https://sources.debian.net/src/postgresql-12/12.2-1/ (for browsing the source)
-- https://sources.debian.net/src/postgresql-12/12.2-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/postgresql-12/12.2-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `procps=2:3.3.16-1`
 
@@ -4865,20 +4852,13 @@ Licenses: (parsed from: `/usr/share/doc/shared-mime-info/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris shared-mime-info=1.10-1
-'http://deb.debian.org/debian/pool/main/s/shared-mime-info/shared-mime-info_1.10-1.dsc' shared-mime-info_1.10-1.dsc 2197 SHA256:49efdf90a3b97a58fbe8a5b241f721d89d43f03ad52dc8254a4642f12a20d641
-'http://deb.debian.org/debian/pool/main/s/shared-mime-info/shared-mime-info_1.10.orig.tar.xz' shared-mime-info_1.10.orig.tar.xz 616800 SHA256:c625a83b4838befc8cafcd54e3619946515d9e44d63d61c4adf7f5513ddfbebf
-'http://deb.debian.org/debian/pool/main/s/shared-mime-info/shared-mime-info_1.10-1.debian.tar.xz' shared-mime-info_1.10-1.debian.tar.xz 10020 SHA256:7b78639aeac9ba261bcccd572739c2cac813541a7ae7799e8e56de0df693295d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/shared-mime-info/1.10-1/
 
-- https://sources.debian.net/src/shared-mime-info/1.10-1/ (for browsing the source)
-- https://sources.debian.net/src/shared-mime-info/1.10-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/shared-mime-info/1.10-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sqlite3=3.31.1-3`
 
@@ -4923,21 +4903,13 @@ Licenses: (parsed from: `/usr/share/doc/libsvn1/copyright`, `/usr/share/doc/subv
 - `Unicode`
 - `Utfwidth`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris subversion=1.13.0-2
-'http://deb.debian.org/debian/pool/main/s/subversion/subversion_1.13.0-2.dsc' subversion_1.13.0-2.dsc 3642 SHA256:456d79d9e611853b3078189a0570a90b8fdc17a531f202bb210dfc45fb070267
-'http://deb.debian.org/debian/pool/main/s/subversion/subversion_1.13.0.orig.tar.gz' subversion_1.13.0.orig.tar.gz 11544359 SHA256:daad440c03b8a86fcca804ea82217bb1902cfcae1b7d28c624143c58dcb96931
-'http://deb.debian.org/debian/pool/main/s/subversion/subversion_1.13.0.orig.tar.gz.asc' subversion_1.13.0.orig.tar.gz.asc 2954 SHA256:ed4f87b947b8172fcaa4c741d8ccc7929914b18cf1ccffc32b4f159fdee3070d
-'http://deb.debian.org/debian/pool/main/s/subversion/subversion_1.13.0-2.debian.tar.xz' subversion_1.13.0-2.debian.tar.xz 420740 SHA256:56f1555b9adfa8dc10a4ff6773022a35befa45cd47b7b43024507a686d0f78bb
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/subversion/1.13.0-2/
 
-- https://sources.debian.net/src/subversion/1.13.0-2/ (for browsing the source)
-- https://sources.debian.net/src/subversion/1.13.0-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/subversion/1.13.0-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `systemd=244.3-1`
 

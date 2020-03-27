@@ -624,21 +624,13 @@ Licenses: (parsed from: `/usr/share/doc/e2fsprogs/copyright`, `/usr/share/doc/li
 - `GPL-2`
 - `LGPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris e2fsprogs=1.45.5-2
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.45.5-2.dsc' e2fsprogs_1.45.5-2.dsc 2969 SHA256:8aaed11ca66ef98d171db0f6331b8826d6544ca9e4862b762a18730b11f0cd29
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.45.5.orig.tar.gz' e2fsprogs_1.45.5.orig.tar.gz 7938826 SHA256:91e72a2f6fee21b89624d8ece5a4b3751a17b28775d32cd048921050b4760ed9
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.45.5.orig.tar.gz.asc' e2fsprogs_1.45.5.orig.tar.gz.asc 488 SHA256:0f900698a89e3e1996cd86966e5ae0dc6f8d866e2cd8a0f4285c23e7ea696720
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.45.5-2.debian.tar.xz' e2fsprogs_1.45.5-2.debian.tar.xz 80748 SHA256:2b929d6471a3d432a6dc7d632503e609df9c25ba8f9c2d9e0a4735a744bd7b62
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/e2fsprogs/1.45.5-2/
 
-- https://sources.debian.net/src/e2fsprogs/1.45.5-2/ (for browsing the source)
-- https://sources.debian.net/src/e2fsprogs/1.45.5-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/e2fsprogs/1.45.5-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `elfutils=0.176-1.1`
 
@@ -1197,20 +1189,13 @@ Licenses: (parsed from: `/usr/share/doc/libgssapi-krb5-2/copyright`, `/usr/share
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris krb5=1.17-6
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17-6.dsc' krb5_1.17-6.dsc 3173 SHA256:413a7eea29e609ebcb622308da9e2dd98a3a73861f5ee52b121c2f32ee9d2abf
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17.orig.tar.gz' krb5_1.17.orig.tar.gz 8761763 SHA256:5a6e2284a53de5702d3dc2be3b9339c963f9b5397d3fbbc53beb249380a781f5
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17-6.debian.tar.xz' krb5_1.17-6.debian.tar.xz 143328 SHA256:0419148ef3a7908dad511eca3d9127b318ac1b697a67f719e19a1ff380c00086
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/krb5/1.17-6/
 
-- https://sources.debian.net/src/krb5/1.17-6/ (for browsing the source)
-- https://sources.debian.net/src/krb5/1.17-6/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/krb5/1.17-6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libassuan=2.5.3-7`
 
@@ -1933,21 +1918,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ncurses=6.1+20191019-1
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.1+20191019-1.dsc' ncurses_6.1+20191019-1.dsc 4106 SHA256:84153ab02140a0caf6755b593b149dda32a5120d264cc9c2a31b61edf20256f2
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.1+20191019.orig.tar.gz' ncurses_6.1+20191019.orig.tar.gz 3463374 SHA256:b42ca297f1823c1b1f2baaf46da5a61f690dc857600c7eb95d02432bd9905d3a
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.1+20191019.orig.tar.gz.asc' ncurses_6.1+20191019.orig.tar.gz.asc 265 SHA256:670ab32ca07bf61d08d62731b1beef62194f684761bb73b2de1143949b0e88b6
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.1+20191019-1.debian.tar.xz' ncurses_6.1+20191019-1.debian.tar.xz 61096 SHA256:a650c2a0e3c2fe8ddeb63ce6387aa411edfc0cff0220df210cff43f60781d10f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/ncurses/6.1+20191019-1/
 
-- https://sources.debian.net/src/ncurses/6.1+20191019-1/ (for browsing the source)
-- https://sources.debian.net/src/ncurses/6.1+20191019-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/ncurses/6.1+20191019-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `netbase=6.1`
 
@@ -2672,21 +2649,13 @@ Licenses: (parsed from: `/usr/share/doc/sysvinit-utils/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sysvinit=2.96-2.1
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96-2.1.dsc' sysvinit_2.96-2.1.dsc 2607 SHA256:fe5e8f60f225dc1a2af6b68f5d99e0af4e09e02f8da0a4883a52e579819d8f97
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96.orig.tar.xz' sysvinit_2.96.orig.tar.xz 122164 SHA256:2a2e26b72aa235a23ab1c8471005f890309ce1196c83fbc9413c57b9ab62b587
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96.orig.tar.xz.asc' sysvinit_2.96.orig.tar.xz.asc 313 SHA256:dfc184b95da12c8c888c8ae6b0f26fe8a23b07fbcdd240f6600a8a78b9439fa0
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96-2.1.debian.tar.xz' sysvinit_2.96-2.1.debian.tar.xz 128084 SHA256:f2459926be2d0ce07c75b2c93548ac7fedd1e445f17879109ab28dde8fe4829b
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/sysvinit/2.96-2.1/
 
-- https://sources.debian.net/src/sysvinit/2.96-2.1/ (for browsing the source)
-- https://sources.debian.net/src/sysvinit/2.96-2.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sysvinit/2.96-2.1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tar=1.30+dfsg-6`
 
