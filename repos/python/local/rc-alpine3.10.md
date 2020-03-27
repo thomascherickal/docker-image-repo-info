@@ -1,10 +1,10 @@
-# `python:3.9.0a4-alpine3.10`
+# `python:3.9.0a5-alpine3.10`
 
 ## Docker Metadata
 
-- Image ID: `sha256:3a321fba9af4d47369b0988df110f963a6552aba8c65ea915139f91b1be2cf2a`
-- Created: `2020-02-29T03:49:48.003088905Z`
-- Virtual Size: ~ 106.52 Mb  
+- Image ID: `sha256:4bf15d1c326142c5dac2b4ce6988914be9de92974f1f7796f271820a12af8e38`
+- Created: `2020-03-25T16:37:04.310269438Z`
+- Virtual Size: ~ 106.55 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["python3"]`
@@ -12,7 +12,7 @@
   - `PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=C.UTF-8`
   - `GPG_KEY=E3FF2839C048B25C084DEBE9B26995E310250568`
-  - `PYTHON_VERSION=3.9.0a4`
+  - `PYTHON_VERSION=3.9.0a5`
   - `PYTHON_PIP_VERSION=20.0.2`
   - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/d59197a3c169cef378a22428a3fa99d33e080a5d/get-pip.py`
   - `PYTHON_GET_PIP_SHA256=421ac1d44c0cf9730a088e337867d974b91bdce4ea2636099275071878cc189e`
