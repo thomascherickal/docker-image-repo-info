@@ -1,10 +1,10 @@
-# `crate:4.1.3`
+# `crate:4.1.4`
 
 ## Docker Metadata
 
-- Image ID: `sha256:3a9864b9a05d3699433e84bb07844d98df3a065435e2dcc1a0b531ef483ef1ac`
-- Created: `2020-03-10T23:20:13.158655036Z`
-- Virtual Size: ~ 675.19 Mb  
+- Image ID: `sha256:004cdaadfd54d25698b2c6c5a7d8395cb39042d1a00c629e3de14a8c17c893ff`
+- Created: `2020-03-24T23:20:01.738687724Z`
+- Virtual Size: ~ 675.20 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -20,13 +20,13 @@
   - `org.label-schema.name=CentOS Base Image`
   - `org.label-schema.schema-version=1.0`
   - `org.label-schema.vendor=CentOS`
-  - `org.opencontainers.image.created=2020-03-05T16:12:47.636379`
+  - `org.opencontainers.image.created=2020-03-20T11:37:45.220429`
   - `org.opencontainers.image.description=CrateDB is a distributed SQL database handles massive amounts of machine data in real-time.`
   - `org.opencontainers.image.source=https://github.com/crate/docker-crate`
   - `org.opencontainers.image.title=crate`
   - `org.opencontainers.image.url=https://crate.io/products/cratedb/`
   - `org.opencontainers.image.vendor=Crate.io`
-  - `org.opencontainers.image.version=4.1.3`
+  - `org.opencontainers.image.version=4.1.4`
 
 ## `rpm` (`.rpm`-based packages)
 
@@ -1772,18 +1772,18 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/python3-3.6.8-10.el7.src.rpm
 ```
 
-### `rpm` package: `python3-pip-9.0.3-5.el7.noarch`
+### `rpm` package: `python3-pip-9.0.3-7.el7_7.noarch`
 
 Licenses (from `rpm --query`): MIT and Python and ASL 2.0 and BSD and ISC and LGPLv2 and MPLv2.0 and (ASL 2.0 or BSD)
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls python3-pip-9.0.3-5.el7.noarch
+$ yumdownloader --quiet --source --urls python3-pip-9.0.3-7.el7_7.noarch
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
-http://vault.centos.org/centos/7/os/Source//SPackages/python-pip-9.0.3-5.el7.src.rpm
+http://vault.centos.org/centos/7/updates/Source//SPackages/python-pip-9.0.3-7.el7_7.src.rpm
 ```
 
 ### `rpm` package: `python3-setuptools-39.2.0-10.el7.noarch`
