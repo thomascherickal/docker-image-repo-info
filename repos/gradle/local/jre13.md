@@ -1,10 +1,10 @@
-# `gradle:6.2.2-jre13`
+# `gradle:6.3.0-jre13`
 
 ## Docker Metadata
 
-- Image ID: `sha256:c15c97b12301c3548e23c8cc05c2bf4adbc9cebc291f843571b41dab2ae31918`
-- Created: `2020-03-20T21:22:37.447639236Z`
-- Virtual Size: ~ 491.03 Mb  
+- Image ID: `sha256:89c6b9d83b5ae396e9ceee03f6cb769261b5d47f2d0b323e5416d6a20dc6a51d`
+- Created: `2020-03-25T21:20:36.673741578Z`
+- Virtual Size: ~ 495.20 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["gradle"]`
@@ -16,7 +16,7 @@
   - `JAVA_VERSION=jdk-13.0.2+8`
   - `JAVA_HOME=/opt/java/openjdk`
   - `GRADLE_HOME=/opt/gradle`
-  - `GRADLE_VERSION=6.2.2`
+  - `GRADLE_VERSION=6.3`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -646,14 +646,9 @@ Licenses: (parsed from: `/usr/share/doc/gcc-8-base/copyright`, `/usr/share/doc/l
 - `GPL-3`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-8=8.3.0-26ubuntu1~18.04
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-8/gcc-8_8.3.0-26ubuntu1~18.04.dsc' gcc-8_8.3.0-26ubuntu1~18.04.dsc 36386 SHA256:865f941ff32f365d17946dbd1243bbdb8bb2e6dad1d0fab909bd543a2111d68f
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-8/gcc-8_8.3.0.orig.tar.gz' gcc-8_8.3.0.orig.tar.gz 85259886 SHA256:561c1bc647ade738c14efe5a298fc0cee2e2efd3dec9fefb66b724dbd50437e6
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-8/gcc-8_8.3.0-26ubuntu1~18.04.diff.gz' gcc-8_8.3.0-26ubuntu1~18.04.diff.gz 960430 SHA256:06a0f32c62a63685a95925c4fb3e73167bf69a87fc55470ea94b69dfe62ded62
-```
 
 ### `dpkg` source package: `gdbm=1.14.1-6`
 
