@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:0d303c9882ce21c7c430476a7af15157cca595fbe996185103c97f5fd5127ef8`
-- Created: `2020-02-27T07:40:04.930036279Z`
-- Virtual Size: ~ 613.38 Mb  
+- Image ID: `sha256:3583094476303f52fb1179dcc21b853ab851792d1f88e3a1e57bee54fd7d5991`
+- Created: `2020-03-31T00:47:06.910721905Z`
+- Virtual Size: ~ 416.26 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -14,7 +14,7 @@
   - `LANG=C.UTF-8`
   - `JAVA_HOME=/usr/local/openjdk-11`
   - `JAVA_VERSION=11.0.6`
-  - `JAVA_BASE_URL=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.6%2B10/OpenJDK11U-jdk_`
+  - `JAVA_BASE_URL=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.6%2B10/OpenJDK11U-jre_`
   - `JAVA_URL_VERSION=11.0.6_10`
   - `SOLR_USER=solr`
   - `SOLR_UID=8983`
