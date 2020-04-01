@@ -1,7 +1,7 @@
 ## `friendica:dev-fpm-alpine`
 
 ```console
-$ docker pull friendica@sha256:51499799a238837927abb9f1133e037dc8ae4f08090839c2a7254a2f2e1b39e6
+$ docker pull friendica@sha256:594f09762fa675805bc0ccf8c6a6886102b9b2e2e3d606ea79a7e20c025bf876
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -771,14 +771,14 @@ CMD ["php-fpm"]
 ### `friendica:dev-fpm-alpine` - linux; ppc64le
 
 ```console
-$ docker pull friendica@sha256:55c26e0dc1abd0036c173bfe42e8baf79d607b8ded18fd0ccf3af780f6ed7bd9
+$ docker pull friendica@sha256:e51c116c3e2a1e5beb0725e09016f5e42a5d9032aa4b22ad51b98376954ceb6f
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **51.0 MB (50993811 bytes)**  
+-	Total Size: **51.0 MB (50992458 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e1ee7871444f80c0b02797eb0c8e396ddff57d77aaed89d9b9419aedd64d16a9`
+-	Image ID: `sha256:a3072c81cd368995d090135f406294f488848e0992ca6fddaf5b98ccfc9d59c1`
 -	Entrypoint: `["\/entrypoint-dev.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -837,23 +837,23 @@ EXPOSE 9000
 CMD ["php-fpm"]
 # Tue, 24 Mar 2020 03:44:15 GMT
 RUN set -ex;     apk add --no-cache         rsync         git         ssmtp         shadow         tini;
-# Tue, 24 Mar 2020 03:46:52 GMT
-RUN set -ex;         apk add --no-cache --virtual .build-deps         mysql-client         bash         $PHPIZE_DEPS         libpng-dev         libjpeg-turbo-dev         imagemagick-dev         libtool         libmemcached-dev         cyrus-sasl-dev         libjpeg-turbo-dev         freetype-dev         librsvg         pcre-dev         libzip-dev         icu-dev         openldap-dev     ;         docker-php-ext-configure gd         --with-gd         --with-freetype-dir=/usr/include/         --with-png-dir=/usr/include/         --with-jpeg-dir=/usr/include/     ;         docker-php-ext-install -j "$(nproc)"        pdo_mysql        gd        zip        opcache        pcntl        ldap     ;         pecl install APCu-5.1.18;     pecl install memcached-3.1.5;     pecl install redis-5.2.0;     pecl install imagick-3.4.4;         docker-php-ext-enable     	apcu         memcached         redis         imagick     ;         runDeps="$(       scanelf --needed --nobanner --format '%n#p' --recursive /usr/local/lib/php/extensions           | tr ',' '\n'           | sort -u           | awk 'system("[ -e /usr/local/lib" $1 " ]") == 0 { next } { print "so:" $1 }'     )";     apk add --no-network --virtual .friendica-phpext-rundeps $runDeps;     apk del --no-network .build-deps;
-# Tue, 24 Mar 2020 03:47:06 GMT
+# Wed, 01 Apr 2020 09:20:51 GMT
+RUN set -ex;         apk add --no-cache --virtual .build-deps         mysql-client         bash         $PHPIZE_DEPS         libpng-dev         libjpeg-turbo-dev         imagemagick-dev         libtool         libmemcached-dev         cyrus-sasl-dev         libjpeg-turbo-dev         freetype-dev         librsvg         pcre-dev         libzip-dev         icu-dev         openldap-dev     ;         docker-php-ext-configure gd         --with-gd         --with-freetype-dir=/usr/include/         --with-png-dir=/usr/include/         --with-jpeg-dir=/usr/include/     ;         docker-php-ext-install -j "$(nproc)"        pdo_mysql        gd        zip        opcache        pcntl        ldap     ;         pecl install APCu-5.1.18;     pecl install memcached-3.1.5;     pecl install redis-5.2.1;     pecl install imagick-3.4.4;         docker-php-ext-enable     	apcu         memcached         redis         imagick     ;         runDeps="$(       scanelf --needed --nobanner --format '%n#p' --recursive /usr/local/lib/php/extensions           | tr ',' '\n'           | sort -u           | awk 'system("[ -e /usr/local/lib" $1 " ]") == 0 { next } { print "so:" $1 }'     )";     apk add --no-network --virtual .friendica-phpext-rundeps $runDeps;     apk del --no-network .build-deps;
+# Wed, 01 Apr 2020 09:21:00 GMT
 RUN set -ex;     {         echo 'opcache.enable=1' ;         echo 'opcache.interned_strings_buffer=8';         echo 'opcache.max_accelerated_files=10000';         echo 'opcache.memory_consumption=128';         echo 'opcache.save_comments=1';         echo 'opcache.revalidte_freq=1';     } > /usr/local/etc/php/conf.d/opcache-recommended.ini;         {         echo sendmail_path = "/usr/sbin/sendmail -t -i";     } > /usr/local/etc/php/conf.d/sendmail.ini;         echo 'apc.enable_cli=1' >> /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini;         echo 'memory_limit=512M' > /usr/local/etc/php/conf.d/memory-limit.ini;         mkdir /var/www/data;     chown -R www-data:root /var/www;     chmod -R g=u /var/www
-# Tue, 24 Mar 2020 03:47:14 GMT
+# Wed, 01 Apr 2020 09:21:02 GMT
 VOLUME [/var/www/html]
-# Tue, 24 Mar 2020 03:48:38 GMT
-ENV FRIENDICA_VERSION=2020.03-dev
-# Tue, 24 Mar 2020 03:48:41 GMT
-ENV FRIENDICA_ADDONS=2020.03-dev
-# Tue, 24 Mar 2020 03:48:43 GMT
+# Wed, 01 Apr 2020 09:23:28 GMT
+ENV FRIENDICA_VERSION=2020.06-dev
+# Wed, 01 Apr 2020 09:23:30 GMT
+ENV FRIENDICA_ADDONS=2020.06-dev
+# Wed, 01 Apr 2020 09:23:32 GMT
 COPY multi:79c18253e95b11e5d803cb19685ac5cb4fcedfeda73215d7e2e3f89d93570667 in / 
-# Tue, 24 Mar 2020 03:48:44 GMT
+# Wed, 01 Apr 2020 09:23:34 GMT
 COPY multi:923de5042cde61ed518a7067985e18cb873d0cd10946593bfb44de6ba9e078ed in /usr/src/friendica/config/ 
-# Tue, 24 Mar 2020 03:48:47 GMT
+# Wed, 01 Apr 2020 09:23:38 GMT
 ENTRYPOINT ["/entrypoint-dev.sh"]
-# Tue, 24 Mar 2020 03:48:50 GMT
+# Wed, 01 Apr 2020 09:23:44 GMT
 CMD ["php-fpm"]
 ```
 
@@ -902,19 +902,19 @@ CMD ["php-fpm"]
 		Last Modified: Tue, 24 Mar 2020 03:50:07 GMT  
 		Size: 9.7 MB (9664931 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7dd336d8422950241830eae184d3e3358f86b53c64fed1cbdfe59f09d2657c60`  
-		Last Modified: Tue, 24 Mar 2020 03:50:06 GMT  
-		Size: 9.5 MB (9460058 bytes)  
+	-	`sha256:9fcda23b7ee857dccfba330c53937a11fb32954dbb97307b1b776f83312d73ed`  
+		Last Modified: Wed, 01 Apr 2020 09:25:23 GMT  
+		Size: 9.5 MB (9458704 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c65c4e5e86904032882ab0799f340b2ce202e593d8df50493b5cf58c455c4d34`  
-		Last Modified: Tue, 24 Mar 2020 03:50:02 GMT  
-		Size: 576.0 B  
+	-	`sha256:ef29aee831607b2f0b476553b5ff0fac142b0db11eb57812780a60e2922fc1f2`  
+		Last Modified: Wed, 01 Apr 2020 09:25:20 GMT  
+		Size: 578.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c23acf31f66948ef37fa3bc2fd55160c7118036acdf5ab38b43e03df31333091`  
-		Last Modified: Tue, 24 Mar 2020 03:50:28 GMT  
-		Size: 2.9 KB (2852 bytes)  
+	-	`sha256:833ecb7d2a0935990d82470f804057554a818ac6c072f248e3fada189efcbc4f`  
+		Last Modified: Wed, 01 Apr 2020 09:26:18 GMT  
+		Size: 2.9 KB (2851 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cbc701a40e11643b753ff5656387e101f343be9772f101d6f6e5881929f524d4`  
-		Last Modified: Tue, 24 Mar 2020 03:50:28 GMT  
+	-	`sha256:911da33675d4154b1251ed6a78b60b1d38a7fd579e15bca0cfb99794be529cba`  
+		Last Modified: Wed, 01 Apr 2020 09:26:18 GMT  
 		Size: 1.1 KB (1086 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
