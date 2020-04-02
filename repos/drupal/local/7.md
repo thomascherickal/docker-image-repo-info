@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:a29a11e115081559780f3697d68fb7fb1cead7df2f1961ba738478efa71eca0b`
-- Created: `2020-03-20T04:04:23.585207049Z`
+- Image ID: `sha256:416a3d53f4ce4740afe4adfdd13d49c02207e6be2cad1e497076d8a60e0548ad`
+- Created: `2020-04-01T05:50:19.868172107Z`
 - Virtual Size: ~ 392.13 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -1229,11 +1229,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/hostname/3.18/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/hostname/3.18/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `icu=57.1-6+deb9u3`
+### `dpkg` source package: `icu=57.1-6+deb9u4`
 
 Binary Packages:
 
-- `libicu57:amd64=57.1-6+deb9u3`
+- `libicu57:amd64=57.1-6+deb9u4`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1242,17 +1242,17 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris icu=57.1-6+deb9u3
-'http://deb.debian.org/debian/pool/main/i/icu/icu_57.1-6+deb9u3.dsc' icu_57.1-6+deb9u3.dsc 2133 SHA256:4bde9bfbe39f0449010d5fb6863965674a2b7636cb5f55728d3f1ea790a4c1c0
-'http://deb.debian.org/debian/pool/main/i/icu/icu_57.1.orig.tar.gz' icu_57.1.orig.tar.gz 22360664 SHA256:ff8c67cb65949b1e7808f2359f2b80f722697048e90e7cfc382ec1fe229e9581
-'http://deb.debian.org/debian/pool/main/i/icu/icu_57.1-6+deb9u3.debian.tar.xz' icu_57.1-6+deb9u3.debian.tar.xz 34972 SHA256:8e24064ea1bc6ac1e96feede642723106bd7890718859ae0c36778ddca708ecc
+$ apt-get source -qq --print-uris icu=57.1-6+deb9u4
+'http://security.debian.org/debian-security/pool/updates/main/i/icu/icu_57.1-6+deb9u4.dsc' icu_57.1-6+deb9u4.dsc 2133 SHA256:80b9e9f411f713e7ba475959f083ba600cead528ab2c097448564f3ad9c0ffb5
+'http://security.debian.org/debian-security/pool/updates/main/i/icu/icu_57.1.orig.tar.gz' icu_57.1.orig.tar.gz 22360664 SHA256:ff8c67cb65949b1e7808f2359f2b80f722697048e90e7cfc382ec1fe229e9581
+'http://security.debian.org/debian-security/pool/updates/main/i/icu/icu_57.1-6+deb9u4.debian.tar.xz' icu_57.1-6+deb9u4.debian.tar.xz 36404 SHA256:37674a98793c0048ad8f7f8dc21d9ab14fd01b182c5ea764da3bae111f8afd63
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/icu/57.1-6+deb9u3/ (for browsing the source)
-- https://sources.debian.net/src/icu/57.1-6+deb9u3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/icu/57.1-6+deb9u3/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/icu/57.1-6+deb9u4/ (for browsing the source)
+- https://sources.debian.net/src/icu/57.1-6+deb9u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/icu/57.1-6+deb9u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `init-system-helpers=1.48`
 
