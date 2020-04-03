@@ -4376,14 +4376,9 @@ Licenses: (parsed from: `/usr/share/doc/libgd3/copyright`)
 - `WEBP`
 - `XFIG`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libgd2=2.2.5-4ubuntu0.3
-'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgd2/libgd2_2.2.5-4ubuntu0.3.dsc' libgd2_2.2.5-4ubuntu0.3.dsc 2349 SHA256:0c238d212adaedd2ec3fa48c82f0161fa6658b79cc229d469794755b3abd4916
-'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgd2/libgd2_2.2.5.orig.tar.gz' libgd2_2.2.5.orig.tar.gz 3326856 SHA256:150e6952af874bbccb33cf0f87288b41a8fd54f0ce4cff914ef90a80ef9d0162
-'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgd2/libgd2_2.2.5-4ubuntu0.3.debian.tar.xz' libgd2_2.2.5-4ubuntu0.3.debian.tar.xz 35660 SHA256:0bb12854aa07981d0e5693ab586d58f55dc0ed34c57175449580586462105c05
-```
 
 ### `dpkg` source package: `libgeotiff-dfsg=1.4.2-2build1`
 
