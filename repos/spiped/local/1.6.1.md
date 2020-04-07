@@ -1,19 +1,19 @@
-# `spiped:1.6.0`
+# `spiped:1.6.1`
 
 ## Docker Metadata
 
-- Image ID: `sha256:9ee22587d2eeca42f4830e1202538bccf93ff9ba027623bb1c329e82e8fbb52c`
-- Created: `2020-03-31T17:54:41.202926279Z`
-- Virtual Size: ~ 100.65 Mb  
+- Image ID: `sha256:3de3a9d7ad126b00ea958b4f0240d31d91c8a8582af4ddac8570e1935de03c70`
+- Created: `2020-04-06T21:12:55.92723829Z`
+- Virtual Size: ~ 100.66 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
 - Command: `["spiped"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `SPIPED_VERSION=1.6.0`
-  - `SPIPED_DOWNLOAD_URL=https://www.tarsnap.com/spiped/spiped-1.6.0.tgz`
-  - `SPIPED_DOWNLOAD_SHA256=e6f7f8f912172c3ad55638af8346ae7c4ecaa92aed6d3fb60f2bda4359cba1e4`
+  - `SPIPED_VERSION=1.6.1`
+  - `SPIPED_DOWNLOAD_URL=https://www.tarsnap.com/spiped/spiped-1.6.1.tgz`
+  - `SPIPED_DOWNLOAD_SHA256=8d7089979db79a531a0ecc507b113ac6f2cf5f19305571eff1d3413e0ab33713`
 
 ## `dpkg` (`.deb`-based packages)
 
