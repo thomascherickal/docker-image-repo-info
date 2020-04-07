@@ -894,20 +894,13 @@ Licenses: (parsed from: `/usr/share/doc/iproute2/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris iproute2=5.5.0-1
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.5.0-1.dsc' iproute2_5.5.0-1.dsc 1833 SHA256:2752a4084366fd76bac502838e01626ec9a0df6869338494955d1afdb0808e76
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.5.0.orig.tar.xz' iproute2_5.5.0.orig.tar.xz 747756 SHA256:bac543435cac208a11db44c9cc8e35aa902befef8750594654ee71941c388f7b
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.5.0-1.debian.tar.xz' iproute2_5.5.0-1.debian.tar.xz 144400 SHA256:33b6ba2e5acee2401f66049618b5fc5a26c92f9bd5972fd86fc7fc492cf886e9
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/iproute2/5.5.0-1/
 
-- https://sources.debian.net/src/iproute2/5.5.0-1/ (for browsing the source)
-- https://sources.debian.net/src/iproute2/5.5.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/iproute2/5.5.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `iptables=1.8.4-3`
 
@@ -2048,20 +2041,13 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=245.2-1
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_245.2-1.dsc' systemd_245.2-1.dsc 5029 SHA256:0d8830947aa82160a0c184acc5ae551b552f3716113cb8fd3907951306b649d8
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_245.2.orig.tar.gz' systemd_245.2.orig.tar.gz 8999428 SHA256:c0ded503eec746c5d39bcb55f73564dbcbaff6f48f28b6d9e0951ba5777dbdf7
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_245.2-1.debian.tar.xz' systemd_245.2-1.debian.tar.xz 148032 SHA256:d37278a425bdeb12ee27cc238ee3b7ee95ed66ecd7161ae050e9be722c37e60d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/systemd/245.2-1/
 
-- https://sources.debian.net/src/systemd/245.2-1/ (for browsing the source)
-- https://sources.debian.net/src/systemd/245.2-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/systemd/245.2-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sysvinit=2.96-3`
 
