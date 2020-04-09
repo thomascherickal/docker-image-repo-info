@@ -230,13 +230,13 @@ Licenses: (parsed from: `/usr/share/doc/ca-certificates/copyright`)
 - `GPL-2+`
 - `MPL-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ca-certificates=20190110
-'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20190110.dsc' ca-certificates_20190110.dsc 1805 SHA256:bffbfe63a1ad2a07c6094502f05899c65edba93aefe58682f440e000fc65f6f0
-'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20190110.tar.xz' ca-certificates_20190110.tar.xz 243472 SHA256:ee4bf0f4c6398005f5b5ca4e0b87b82837ac5c3b0280a1cb3a63c47555c3a675
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/ca-certificates/20190110/
+
 
 ### `dpkg` source package: `cdebconf=0.251ubuntu1`
 
@@ -400,13 +400,9 @@ Licenses: (parsed from: `/usr/share/doc/dpkg/copyright`)
 - `public-domain-md5`
 - `public-domain-s-s-d`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris dpkg=1.19.7ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/d/dpkg/dpkg_1.19.7ubuntu2.dsc' dpkg_1.19.7ubuntu2.dsc 2262 SHA256:579516f6ebccc399f7bc1b1ed49c298ecdea0511e4c3ad68f083486bb1abd3cb
-'http://archive.ubuntu.com/ubuntu/pool/main/d/dpkg/dpkg_1.19.7ubuntu2.tar.xz' dpkg_1.19.7ubuntu2.tar.xz 4730708 SHA256:972f148f1404b3382002d919c35fabfdfa74161492882a8f8af33e7f534af977
-```
 
 ### `dpkg` source package: `e2fsprogs=1.45.5-2ubuntu1`
 
@@ -586,14 +582,9 @@ Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/lib
 - `GPL-2`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glibc=2.31-0ubuntu6
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31-0ubuntu6.dsc' glibc_2.31-0ubuntu6.dsc 9250 SHA256:0a92d7d91e0b18b8b49ab8c8e7dba219acf2a978c8e90eb312317b96abc83429
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31.orig.tar.xz' glibc_2.31.orig.tar.xz 17317924 SHA256:2b22c7b04a36747d6c74796a73193a6f8856bfd1efc551b5db96baefa053fe5e
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31-0ubuntu6.debian.tar.xz' glibc_2.31-0ubuntu6.debian.tar.xz 836788 SHA256:68efa34a3bc3a9531d543a87659ceda8813b79fe7092c7a658b3c86b53732778
-```
 
 ### `dpkg` source package: `gmp=2:6.2.0+dfsg-4`
 
@@ -680,15 +671,9 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 - `LGPLv3+_or_GPLv2+`
 - `The main library is licensed under GNU Lesser`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gnutls28=3.6.11.1-2ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.11.1-2ubuntu2.dsc' gnutls28_3.6.11.1-2ubuntu2.dsc 3606 SHA256:d038b5ec39e60b63a2cd7d98dcabdeb01a7222a20c63cfc551ce078b693a4025
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.11.1.orig.tar.xz' gnutls28_3.6.11.1.orig.tar.xz 5902328 SHA256:fbba12f3db9a55dbf027e14111755817ec44b57eabec3e8089aac8ac6f533cf8
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.11.1.orig.tar.xz.asc' gnutls28_3.6.11.1.orig.tar.xz.asc 488 SHA256:d294c3bf26e5b4bbd15909570ab0fc37a84af01bee960a6cd8cbb193a66cdc9a
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.11.1-2ubuntu2.debian.tar.xz' gnutls28_3.6.11.1-2ubuntu2.debian.tar.xz 64232 SHA256:7362b7224a636af67d879bc55d95743a55f5d28a0180169e701cb2acee99c309
-```
 
 ### `dpkg` source package: `grep=3.4-1`
 
@@ -1031,14 +1016,13 @@ Licenses: (parsed from: `/usr/share/doc/libpsl5/copyright`)
 - `Chromium`
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libpsl=0.20.2-2
-'http://archive.ubuntu.com/ubuntu/pool/main/libp/libpsl/libpsl_0.20.2-2.dsc' libpsl_0.20.2-2.dsc 1637 SHA256:ae401852522d748f1222b91734bc5bd7c6db0de843dd675adc180f2a1884c94d
-'http://archive.ubuntu.com/ubuntu/pool/main/libp/libpsl/libpsl_0.20.2.orig.tar.gz' libpsl_0.20.2.orig.tar.gz 8590430 SHA256:94d2b5e00e9aa761ae7efbaa67edc00d5298487ed9706eb4789e349012993c31
-'http://archive.ubuntu.com/ubuntu/pool/main/libp/libpsl/libpsl_0.20.2-2.debian.tar.xz' libpsl_0.20.2-2.debian.tar.xz 9920 SHA256:1f008454fdb973964202020fb700d5028e001b7eaa4e77eeab8ebc99b749ea51
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/libpsl/0.20.2-2/
+
 
 ### `dpkg` source package: `libseccomp=2.4.3-0ubuntu2`
 
@@ -1050,14 +1034,9 @@ Licenses: (parsed from: `/usr/share/doc/libseccomp2/copyright`)
 
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libseccomp=2.4.3-0ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3-0ubuntu2.dsc' libseccomp_2.4.3-0ubuntu2.dsc 2576 SHA256:b5ff48695ad2a1450e701863708c5eada28f46d2ccb8e55107d9b1e9f1906250
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3.orig.tar.gz' libseccomp_2.4.3.orig.tar.gz 598147 SHA256:cf15d1421997fac45b936515af61d209c4fd788af11005d212b3d0fd71e7991d
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3-0ubuntu2.debian.tar.xz' libseccomp_2.4.3-0ubuntu2.debian.tar.xz 12832 SHA256:46140a35b7272ee3863cd2e50676aff51d8d82b1b27c188ccf341e923f2c2bcb
-```
 
 ### `dpkg` source package: `libselinux=3.0-1build1`
 
@@ -1497,14 +1476,13 @@ Licenses: (parsed from: `/usr/share/doc/libnspr4/copyright`)
 
 - `MPL-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris nspr=2:4.24-1
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nspr/nspr_4.24-1.dsc' nspr_4.24-1.dsc 1988 SHA256:fb3b8265cb3c1428f1fb731da57188bddccf657f768e5861ad3c26de6730bd10
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nspr/nspr_4.24.orig.tar.gz' nspr_4.24.orig.tar.gz 1078825 SHA256:90a59a0df6a11528749647fe18401cc7e03881e3e63c309f8c520ce06dd413d0
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nspr/nspr_4.24-1.debian.tar.xz' nspr_4.24-1.debian.tar.xz 10660 SHA256:9cf5029036416ac88b2ee7a9b3809c8612753dbf1f834658ee196ad185e2eee3
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/nspr/2:4.24-1/
+
 
 ### `dpkg` source package: `nss=2:3.49.1-1ubuntu1`
 
@@ -1713,14 +1691,13 @@ Licenses: (parsed from: `/usr/share/doc/pinentry-curses/copyright`)
 - `LGPL-3+`
 - `X11`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pinentry=1.1.0-3
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pinentry/pinentry_1.1.0-3.dsc' pinentry_1.1.0-3.dsc 2060 SHA256:007e0ef8f0c289d8df814c2ef6fc66c880eb587f4b2ffcab2e229ea324076921
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pinentry/pinentry_1.1.0.orig.tar.bz2' pinentry_1.1.0.orig.tar.bz2 467702 SHA256:68076686fa724a290ea49cdf0d1c0c1500907d1b759a3bcbfbec0293e8f56570
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pinentry/pinentry_1.1.0-3.debian.tar.xz' pinentry_1.1.0-3.debian.tar.xz 17124 SHA256:41315d69b0c0c06f2c1bff846b2d87519a6fa59e8d295d9e6d1a6b7e343b6168
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/pinentry/1.1.0-3/
+
 
 ### `dpkg` source package: `procps=2:3.3.16-1ubuntu2`
 
@@ -1834,14 +1811,9 @@ Licenses: (parsed from: `/usr/share/doc/login/copyright`, `/usr/share/doc/passwd
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris shadow=1:4.8.1-1ubuntu3
-'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1-1ubuntu3.dsc' shadow_4.8.1-1ubuntu3.dsc 2378 SHA256:319ae9ff41a612520f82327059d9dbd371c6921798e343de15e7a2bdf0a8cebb
-'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1.orig.tar.xz' shadow_4.8.1.orig.tar.xz 1611196 SHA256:a3ad4630bdc41372f02a647278a8c3514844295d36eefe68ece6c3a641c1ae62
-'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1-1ubuntu3.debian.tar.xz' shadow_4.8.1-1ubuntu3.debian.tar.xz 85156 SHA256:fb673a59be6280bc9ebc0f446c3c9fb2e72e1728b8c30a73dfea854b18d09a0c
-```
 
 ### `dpkg` source package: `sqlite3=3.31.1-3`
 
