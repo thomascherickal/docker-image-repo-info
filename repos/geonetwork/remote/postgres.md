@@ -1,7 +1,7 @@
 ## `geonetwork:postgres`
 
 ```console
-$ docker pull geonetwork@sha256:3dbdaf9cabc58228b9bcc222abc4e3c1abfd4c99b57656a6be70c4f598200bcd
+$ docker pull geonetwork@sha256:e6396ff54b4d6f1f1c6a387e892f8ceaf906b8a2471983b761908aaee35db920
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull geonetwork@sha256:3dbdaf9cabc58228b9bcc222abc4e3c1abfd4c99b57656a6
 ### `geonetwork:postgres` - linux; amd64
 
 ```console
-$ docker pull geonetwork@sha256:1e3787120ce050596e88f6e1cdcf607f285232713760b9a6e0e11e3de038f1c6
+$ docker pull geonetwork@sha256:088c973e8c744e4330037bba4521798ca9ccfaff72ebb1c573889365e7b2b906
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **446.7 MB (446689772 bytes)**  
+-	Total Size: **446.7 MB (446714016 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:dbc1c621dce5f83c4ddbc47039306ba9b658b792d92650e7ebe652a711eddd90`
+-	Image ID: `sha256:3d69f0f5de199916db1a913b97ee817bfef1b4fff71e2f268676b37b8c2fbd69`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["catalina.sh","run"]`
 
@@ -85,31 +85,31 @@ ENV GN_FILE=geonetwork.war
 ENV DATA_DIR=/usr/local/tomcat/webapps/geonetwork/WEB-INF/data
 # Wed, 01 Apr 2020 13:53:49 GMT
 ENV JAVA_OPTS=-Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true -server -Xms512m -Xmx2024m -XX:NewSize=512m -XX:MaxNewSize=1024m -XX:+UseConcMarkSweepGC
-# Wed, 01 Apr 2020 13:53:50 GMT
-ENV GN_VERSION=3.10.0
-# Wed, 01 Apr 2020 13:53:50 GMT
-ENV GN_DOWNLOAD_MD5=86b18cd2ef60f11dd1dbe055054cee97
-# Wed, 01 Apr 2020 13:53:50 GMT
+# Wed, 08 Apr 2020 21:23:34 GMT
+ENV GN_VERSION=3.10.1
+# Wed, 08 Apr 2020 21:23:34 GMT
+ENV GN_DOWNLOAD_MD5=909b93a87c43ed39a5a15890e82ba3c6
+# Wed, 08 Apr 2020 21:23:34 GMT
 WORKDIR /usr/local/tomcat/webapps
-# Wed, 01 Apr 2020 13:54:04 GMT
+# Wed, 08 Apr 2020 21:23:48 GMT
 RUN curl -fSL -o $GN_FILE      https://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v${GN_VERSION}/geonetwork.war/download &&      echo "$GN_DOWNLOAD_MD5 *$GN_FILE" | md5sum -c &&      mkdir -p geonetwork &&      unzip -e $GN_FILE -d geonetwork &&      rm $GN_FILE
-# Wed, 01 Apr 2020 13:54:04 GMT
+# Wed, 08 Apr 2020 21:23:48 GMT
 COPY file:0804862fd42c05f06dfa65cb1e5dad9a956d8ac6a3ddd4d962847ba159f5cfe6 in /entrypoint.sh 
-# Wed, 01 Apr 2020 13:54:04 GMT
+# Wed, 08 Apr 2020 21:23:49 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Wed, 01 Apr 2020 13:54:05 GMT
+# Wed, 08 Apr 2020 21:23:49 GMT
 CMD ["catalina.sh" "run"]
-# Wed, 01 Apr 2020 13:54:18 GMT
+# Wed, 08 Apr 2020 21:24:02 GMT
 RUN apt-get update && apt-get install -y postgresql-client &&     rm -rf /var/lib/apt/lists/*
-# Wed, 01 Apr 2020 13:54:19 GMT
+# Wed, 08 Apr 2020 21:24:03 GMT
 RUN sed -i -e 's#<import resource="../config-db/h2.xml"/>#<!--<import resource="../config-db/h2.xml"/> -->#g' $CATALINA_HOME/webapps/geonetwork/WEB-INF/config-node/srv.xml && sed -i -e 's#<!--<import resource="../config-db/postgres.xml"/>-->#<import resource="../config-db/postgres.xml"/>#g' $CATALINA_HOME/webapps/geonetwork/WEB-INF/config-node/srv.xml
-# Wed, 01 Apr 2020 13:54:19 GMT
+# Wed, 08 Apr 2020 21:24:03 GMT
 COPY file:2dedfd940a86106b2ae284c537f14d365881c03a01b212f81b49177bb22c8d7a in /usr/local/tomcat/webapps/geonetwork/WEB-INF/config-db/jdbc.properties 
-# Wed, 01 Apr 2020 13:54:20 GMT
+# Wed, 08 Apr 2020 21:24:04 GMT
 COPY file:c88411abba7ad9b7bb75019f08755dbfa163d2fc7fdd80676bf9350c4c56a19c in /entrypoint.sh 
-# Wed, 01 Apr 2020 13:54:20 GMT
+# Wed, 08 Apr 2020 21:24:04 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Wed, 01 Apr 2020 13:54:20 GMT
+# Wed, 08 Apr 2020 21:24:04 GMT
 CMD ["catalina.sh" "run"]
 ```
 
@@ -154,27 +154,27 @@ CMD ["catalina.sh" "run"]
 		Last Modified: Wed, 01 Apr 2020 08:55:45 GMT  
 		Size: 130.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3edbf7df005e6561d1b38971c6107b46630b3687e81dc0947ff580f5c24404d7`  
-		Last Modified: Wed, 01 Apr 2020 13:55:17 GMT  
-		Size: 194.1 MB (194096164 bytes)  
+	-	`sha256:04a3faaabfb874f3a51a52e98cf00234876de99d105a2e0b0b02dbd7877d6f27`  
+		Last Modified: Wed, 08 Apr 2020 21:27:32 GMT  
+		Size: 194.1 MB (194120372 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3b339c103b8a764301e6b40c1778328100a6216b62c14630725e7e183697b736`  
-		Last Modified: Wed, 01 Apr 2020 13:55:03 GMT  
-		Size: 249.0 B  
+	-	`sha256:1f5cb4328b495d1f3c599d9bb478bafd2ee170c8716272afd5e859c3a0070377`  
+		Last Modified: Wed, 08 Apr 2020 21:24:18 GMT  
+		Size: 251.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:885952e1888062d545445149e0be2891093185739a28d5fc30f37f04f41657b4`  
-		Last Modified: Wed, 01 Apr 2020 13:55:26 GMT  
-		Size: 11.8 MB (11808993 bytes)  
+	-	`sha256:bb7bca6cb7c27d5024f62339269207a288854c200e2b1aea0a45bfe75b18a95b`  
+		Last Modified: Wed, 08 Apr 2020 21:27:41 GMT  
+		Size: 11.8 MB (11809026 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8486289377d54b22a4787249b647f82d35ff2ec16d840a88dbc041278c2570d`  
-		Last Modified: Wed, 01 Apr 2020 13:55:24 GMT  
+	-	`sha256:410d05802279ad183676edcef886a75870bdbf630d41e97c36c3b2ac89b63323`  
+		Last Modified: Wed, 08 Apr 2020 21:27:39 GMT  
 		Size: 1.3 KB (1269 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e5e3ed92a217815292fcb2397c6d3d27e3128692cd1cf62c630075084b1dcdf7`  
-		Last Modified: Wed, 01 Apr 2020 13:55:24 GMT  
+	-	`sha256:514fdba2473a660006ae90d2eb1b2af7867cf36e813357bfbfdde4b24f0f8013`  
+		Last Modified: Wed, 08 Apr 2020 21:27:39 GMT  
 		Size: 543.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c727c7db4b9745c774f33d9464011e675f40b2488fc312b89d76d9c109db677b`  
-		Last Modified: Wed, 01 Apr 2020 13:55:24 GMT  
-		Size: 973.0 B  
+	-	`sha256:0677c31ac536334648ec98ab2bf667d01078cdea60edfc602bbf17da7d783327`  
+		Last Modified: Wed, 08 Apr 2020 21:27:39 GMT  
+		Size: 974.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
