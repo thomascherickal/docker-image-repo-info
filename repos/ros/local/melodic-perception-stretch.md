@@ -10474,14 +10474,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python-rosdep-modules=0.18.0-1
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rosdep-modules/python-rosdep-modules_0.18.0-1.debian.tar.xz' python-rosdep-modules_0.18.0-1.debian.tar.xz 1996 SHA512:a3d8326a73eda7df5caeacf818b8636a26ff60b3e57b4f96d58fcfd6b857fc0ba2b19345d9d65592bf1fb10d704d7aa96ae3e538dd02479f3c82d5f4d0f843a9
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rosdep-modules/python-rosdep-modules_0.18.0-1.dsc' python-rosdep-modules_0.18.0-1.dsc 973 SHA512:df0d2b96f7370d7a6b93a5afa3a5172e51c92ad0b4d50cb83171cfcc4f8f216896281c03a65b70c13605ff66e24721f0a03277636e382694df1466cb2eb166b3
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rosdep-modules/python-rosdep-modules_0.18.0.orig.tar.gz' python-rosdep-modules_0.18.0.orig.tar.gz 86836 SHA512:76383336265e59878d5b3b4a4dcde99795add9d850ce88d2243bf852c9496a2713240661ea9de0f7c58a28f51a929a084bfb39d8583313156e578bf2e421e22c
-```
 
 ### `dpkg` source package: `python-rosdep=0.18.0-1`
 
@@ -10493,14 +10488,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python-rosdep=0.18.0-1
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rosdep/python-rosdep_0.18.0-1.debian.tar.xz' python-rosdep_0.18.0-1.debian.tar.xz 1952 SHA512:2d13933a410b58a4b6d67d525af4cd86e655e02390f14f6ae211e51b8272180c287c7450cfd359a2a2d21735017c92ba505c3b381a55b6e93af61046e7a58c8b
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rosdep/python-rosdep_0.18.0-1.dsc' python-rosdep_0.18.0-1.dsc 905 SHA512:3b508104d143795e950ecdbc4fdf79356e140a74dc725ae05eef04fbb6decd8fc3cf0100bbf0f27027c675f70b1608a82861e7c9220619756f06ae14c15becda
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rosdep/python-rosdep_0.18.0.orig.tar.gz' python-rosdep_0.18.0.orig.tar.gz 31914 SHA512:5ea12c0abbf7add7d5cff953ed7bd3ec0c529678cc918331caed6591eb6770940c5d8ab14e681be5237d26bcad77f8e25ce33cb6fe1f5caffe83406f6bc8fa2a
-```
 
 ### `dpkg` source package: `python-rosdistro-modules=0.8.0-1`
 
@@ -10569,14 +10559,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python-rospkg-modules=1.2.3-1
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rospkg-modules/python-rospkg-modules_1.2.3-1.debian.tar.xz' python-rospkg-modules_1.2.3-1.debian.tar.xz 1104 SHA512:a4f92d4eec12891b9f79f4c7e93324f842f81e92b936985e106718a1e8a6ebd2b9c6adc4b964b8a2ad60b11970059e8f301d5801a6636276fe5b261a3a71bc90
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rospkg-modules/python-rospkg-modules_1.2.3-1.dsc' python-rospkg-modules_1.2.3-1.dsc 953 SHA512:510ac95386181887b72905e1c0166b9de3608d234dccc8cf7bf61ec3b0055e9fad7939a3e0ef0eca265d2b45a744e0d5cba9f4dbf4cc9e1a2cb91422c131b0df
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rospkg-modules/python-rospkg-modules_1.2.3.orig.tar.gz' python-rospkg-modules_1.2.3.orig.tar.gz 41475 SHA512:eb00300554faa3a17fe6564153afcfd4aa80e495d26c76a0dd328f6f693a0ca2112650e924587cf5ca2ecc9f0a1d862cec2ade70c96b5ebbbb6ad1a62b7a5afb
-```
 
 ### `dpkg` source package: `python-rospkg=1.2.3-100`
 
@@ -10588,14 +10573,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python-rospkg=1.2.3-100
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rospkg/python-rospkg_1.2.3-100.debian.tar.xz' python-rospkg_1.2.3-100.debian.tar.xz 1084 SHA512:dd4feb913605d5fa4b496c1dfc34b50f612a3c7dd9c9e877c86170b12c58c5b791009cac00003a142e2859ab3fbe2dcf3895a4acb6e57f66bde336ff5434b508
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rospkg/python-rospkg_1.2.3-100.dsc' python-rospkg_1.2.3-100.dsc 889 SHA512:5fdfc1c638ea008a56bf012e80b1934dd54b6a4bc8f6503c1ff54cdd28565c6fc878d4a395d9135118d568d3b45df74496cd7cb374ae7ac8d1b776872f945e0d
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rospkg/python-rospkg_1.2.3.orig.tar.gz' python-rospkg_1.2.3.orig.tar.gz 18150 SHA512:ce62059a94eb72f71cfe7f9e70ac509b66b8f7c10aa199b2fc8026b0ac719d51080c7dbbed5a7e401ed6fb33abe301b63a872d25b74d695bce33e23e7762fe2d
-```
 
 ### `dpkg` source package: `python-service-identity=16.0.0-2`
 
