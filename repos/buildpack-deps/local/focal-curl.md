@@ -1007,14 +1007,9 @@ Licenses: (parsed from: `/usr/share/doc/libssh-4/copyright`)
 - `LGPL-2.1+~OpenSSL`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libssh=0.9.3-2ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.9.3-2ubuntu1.dsc' libssh_0.9.3-2ubuntu1.dsc 1719 SHA256:09947e1bddf88dc0b1e77cd0a1a2e3bb12153fb6135296994d4c8afe5f7f835d
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.9.3.orig.tar.xz' libssh_0.9.3.orig.tar.xz 500068 SHA256:2c8b5f894dced58b3d629f16f3afa6562c20b4bdc894639163cf657833688f0c
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.9.3-2ubuntu1.debian.tar.xz' libssh_0.9.3-2ubuntu1.debian.tar.xz 27084 SHA256:0d417c53f24559b94d0a06b6943f30d9e219a7ed6e9eccec27832fb8aef20aed
-```
 
 ### `dpkg` source package: `libtasn1-6=4.16.0-2`
 
@@ -1733,14 +1728,9 @@ Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/fdi
 - `MIT`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris util-linux=2.34-0.1ubuntu8
-'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.34-0.1ubuntu8.dsc' util-linux_2.34-0.1ubuntu8.dsc 4034 SHA256:79c48566092bbd00a2fc963cbd1d62f9c4acbc6e6160aaf2f7dce85903761339
-'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.34.orig.tar.xz' util-linux_2.34.orig.tar.xz 4974812 SHA256:743f9d0c7252b6db246b659c1e1ce0bd45d8d4508b4dfa427bbb4a3e9b9f62b5
-'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.34-0.1ubuntu8.debian.tar.xz' util-linux_2.34-0.1ubuntu8.debian.tar.xz 88340 SHA256:16a6f71e2b9a3a6e7659fe8f080ebb8d8b2dfc12d308e7d4f5d622f83bffebb2
-```
 
 ### `dpkg` source package: `wget=1.20.3-1ubuntu1`
 

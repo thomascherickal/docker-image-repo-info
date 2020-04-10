@@ -2211,20 +2211,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openldap=2.4.49+dfsg-2
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.49+dfsg-2.dsc' openldap_2.4.49+dfsg-2.dsc 3021 SHA256:2c3e929d98a9cd51078e40bc6244c507172833955504989c5d045c735f2cecaa
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.49+dfsg.orig.tar.gz' openldap_2.4.49+dfsg.orig.tar.gz 4844726 SHA256:240022395b438f327aa860a631c1d4eef9b17e63ec8965d3aca2aa983e6d81e6
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.49+dfsg-2.debian.tar.xz' openldap_2.4.49+dfsg-2.debian.tar.xz 167820 SHA256:3681b755b125d77435ab7a2226f57be3380b64a450bd9be48f9b250452952a7c
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/openldap/2.4.49+dfsg-2/
 
-- https://sources.debian.net/src/openldap/2.4.49+dfsg-2/ (for browsing the source)
-- https://sources.debian.net/src/openldap/2.4.49+dfsg-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openldap/2.4.49+dfsg-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssh=1:8.2p1-4`
 
@@ -2566,20 +2559,13 @@ Licenses: (parsed from: `/usr/share/doc/libpython2.7-minimal/copyright`, `/usr/s
 - `implied`
 - `see above, some license as Python`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python2.7=2.7.17-1
-'http://deb.debian.org/debian/pool/main/p/python2.7/python2.7_2.7.17-1.dsc' python2.7_2.7.17-1.dsc 3365 SHA256:edf165ecac0f41f5f2ee605dbb66b6e148f7437b1ebe16a6f1444fb8a6a6da22
-'http://deb.debian.org/debian/pool/main/p/python2.7/python2.7_2.7.17.orig.tar.gz' python2.7_2.7.17.orig.tar.gz 17535962 SHA256:f22059d09cdf9625e0a7284d24a13062044f5bf59d93a7f3382190dfa94cecde
-'http://deb.debian.org/debian/pool/main/p/python2.7/python2.7_2.7.17-1.diff.gz' python2.7_2.7.17-1.diff.gz 286003 SHA256:a71d752753f7aaf0c6bb49bae5dfa2f35db4265742b4709bbd12d816f9cef5c3
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/python2.7/2.7.17-1/
 
-- https://sources.debian.net/src/python2.7/2.7.17-1/ (for browsing the source)
-- https://sources.debian.net/src/python2.7/2.7.17-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python2.7/2.7.17-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `readline=8.0-4`
 

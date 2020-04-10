@@ -130,19 +130,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.0.1
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.0.1.dsc' apt_2.0.1.dsc 2756 SHA256:4126cb56d40562c8e5aca3043235b9f4d1e5fa6e1358d326bdabb04f10d03723
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.0.1.tar.xz' apt_2.0.1.tar.xz 2167752 SHA256:7f51e58541a067884d34d81e41420c6163ea02d373c5a124210778ac45215f0d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/apt/2.0.1/
 
-- https://sources.debian.net/src/apt/2.0.1/ (for browsing the source)
-- https://sources.debian.net/src/apt/2.0.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apt/2.0.1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `attr=1:2.4.48-5`
 
@@ -4723,20 +4717,13 @@ Licenses: (parsed from: `/usr/share/doc/libpython2.7-minimal/copyright`, `/usr/s
 - `implied`
 - `see above, some license as Python`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python2.7=2.7.17-1
-'http://deb.debian.org/debian/pool/main/p/python2.7/python2.7_2.7.17-1.dsc' python2.7_2.7.17-1.dsc 3365 SHA256:edf165ecac0f41f5f2ee605dbb66b6e148f7437b1ebe16a6f1444fb8a6a6da22
-'http://deb.debian.org/debian/pool/main/p/python2.7/python2.7_2.7.17.orig.tar.gz' python2.7_2.7.17.orig.tar.gz 17535962 SHA256:f22059d09cdf9625e0a7284d24a13062044f5bf59d93a7f3382190dfa94cecde
-'http://deb.debian.org/debian/pool/main/p/python2.7/python2.7_2.7.17-1.diff.gz' python2.7_2.7.17-1.diff.gz 286003 SHA256:a71d752753f7aaf0c6bb49bae5dfa2f35db4265742b4709bbd12d816f9cef5c3
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/python2.7/2.7.17-1/
 
-- https://sources.debian.net/src/python2.7/2.7.17-1/ (for browsing the source)
-- https://sources.debian.net/src/python2.7/2.7.17-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python2.7/2.7.17-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `python3-defaults=3.8.2-2`
 
@@ -4750,19 +4737,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3-defaults=3.8.2-2
-'http://deb.debian.org/debian/pool/main/p/python3-defaults/python3-defaults_3.8.2-2.dsc' python3-defaults_3.8.2-2.dsc 2772 SHA256:2941ef61e9071c0644b5ac4dd38b434c5d22c91d50156114bab43c803276f6f8
-'http://deb.debian.org/debian/pool/main/p/python3-defaults/python3-defaults_3.8.2-2.tar.gz' python3-defaults_3.8.2-2.tar.gz 138553 SHA256:72a4c841c051521d4ac9a4669987ef729eddc4f14e907b56b220e06d14084111
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/python3-defaults/3.8.2-2/
 
-- https://sources.debian.net/src/python3-defaults/3.8.2-2/ (for browsing the source)
-- https://sources.debian.net/src/python3-defaults/3.8.2-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python3-defaults/3.8.2-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `python3-stdlib-extensions=3.8.2-2`
 
