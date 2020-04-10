@@ -336,9 +336,13 @@ Licenses: (parsed from: `/usr/share/doc/dpkg/copyright`)
 - `public-domain-md5`
 - `public-domain-s-s-d`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris dpkg=1.19.7ubuntu2
+'http://archive.ubuntu.com/ubuntu/pool/main/d/dpkg/dpkg_1.19.7ubuntu2.dsc' dpkg_1.19.7ubuntu2.dsc 2262 SHA256:579516f6ebccc399f7bc1b1ed49c298ecdea0511e4c3ad68f083486bb1abd3cb
+'http://archive.ubuntu.com/ubuntu/pool/main/d/dpkg/dpkg_1.19.7ubuntu2.tar.xz' dpkg_1.19.7ubuntu2.tar.xz 4730708 SHA256:972f148f1404b3382002d919c35fabfdfa74161492882a8f8af33e7f534af977
+```
 
 ### `dpkg` source package: `e2fsprogs=1.45.5-2ubuntu1`
 
@@ -419,9 +423,14 @@ Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/lib
 - `GPL-2`
 - `LGPL-2.1`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris glibc=2.31-0ubuntu6
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31-0ubuntu6.dsc' glibc_2.31-0ubuntu6.dsc 9250 SHA256:0a92d7d91e0b18b8b49ab8c8e7dba219acf2a978c8e90eb312317b96abc83429
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31.orig.tar.xz' glibc_2.31.orig.tar.xz 17317924 SHA256:2b22c7b04a36747d6c74796a73193a6f8856bfd1efc551b5db96baefa053fe5e
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31-0ubuntu6.debian.tar.xz' glibc_2.31-0ubuntu6.debian.tar.xz 836788 SHA256:68efa34a3bc3a9531d543a87659ceda8813b79fe7092c7a658b3c86b53732778
+```
 
 ### `dpkg` source package: `gmp=2:6.2.0+dfsg-4`
 
@@ -497,9 +506,15 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 - `LGPLv3+_or_GPLv2+`
 - `The main library is licensed under GNU Lesser`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris gnutls28=3.6.11.1-2ubuntu2
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.11.1-2ubuntu2.dsc' gnutls28_3.6.11.1-2ubuntu2.dsc 3606 SHA256:d038b5ec39e60b63a2cd7d98dcabdeb01a7222a20c63cfc551ce078b693a4025
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.11.1.orig.tar.xz' gnutls28_3.6.11.1.orig.tar.xz 5902328 SHA256:fbba12f3db9a55dbf027e14111755817ec44b57eabec3e8089aac8ac6f533cf8
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.11.1.orig.tar.xz.asc' gnutls28_3.6.11.1.orig.tar.xz.asc 488 SHA256:d294c3bf26e5b4bbd15909570ab0fc37a84af01bee960a6cd8cbb193a66cdc9a
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.11.1-2ubuntu2.debian.tar.xz' gnutls28_3.6.11.1-2ubuntu2.debian.tar.xz 64232 SHA256:7362b7224a636af67d879bc55d95743a55f5d28a0180169e701cb2acee99c309
+```
 
 ### `dpkg` source package: `grep=3.4-1`
 
