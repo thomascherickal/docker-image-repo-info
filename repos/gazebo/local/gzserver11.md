@@ -3740,14 +3740,9 @@ Licenses: (parsed from: `/usr/share/doc/libssh-gcrypt-4/copyright`)
 - `LGPL-2.1+~OpenSSL`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libssh=0.8.0~20170825.94fa1e38-1ubuntu0.5
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.8.0~20170825.94fa1e38-1ubuntu0.5.dsc' libssh_0.8.0~20170825.94fa1e38-1ubuntu0.5.dsc 2518 SHA256:b61b5bfc27edd54c1bc0b36f3663222981f84232ace147886308ef3728bffbc4
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.8.0~20170825.94fa1e38.orig.tar.xz' libssh_0.8.0~20170825.94fa1e38.orig.tar.xz 381176 SHA256:48cbcc4c946380f08c024fbc1898b1efd6edff66a5ec4b536695926f0ea055a8
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.8.0~20170825.94fa1e38-1ubuntu0.5.debian.tar.xz' libssh_0.8.0~20170825.94fa1e38-1ubuntu0.5.debian.tar.xz 35700 SHA256:9da9681f8f6ba5c7d90f5ff814510c911d12b4efc19fe6635445bacc2f77e210
-```
 
 ### `dpkg` source package: `libtar=1.2.20-7`
 
