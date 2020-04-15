@@ -1734,20 +1734,13 @@ Licenses: (parsed from: `/usr/share/doc/r-cran-lattice/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris lattice=0.20-40-1
-'http://deb.debian.org/debian/pool/main/l/lattice/lattice_0.20-40-1.dsc' lattice_0.20-40-1.dsc 1839 SHA256:d6372ad9357d1cf6b658a6a38c19a071bd0d645602a93e4d712a8db6bcc5f03c
-'http://deb.debian.org/debian/pool/main/l/lattice/lattice_0.20-40.orig.tar.gz' lattice_0.20-40.orig.tar.gz 355871 SHA256:d594ed6928101873c30c0abad12d25613a43e84d0e3742b68bfa27dfbed3a3f0
-'http://deb.debian.org/debian/pool/main/l/lattice/lattice_0.20-40-1.debian.tar.xz' lattice_0.20-40-1.debian.tar.xz 5148 SHA256:7093e25f131389b7db40bbbfeec10f375a1bed416b2869ff5dce198bb9eddd80
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/lattice/0.20-40-1/
 
-- https://sources.debian.net/src/lattice/0.20-40-1/ (for browsing the source)
-- https://sources.debian.net/src/lattice/0.20-40-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/lattice/0.20-40-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `less=551-1`
 
@@ -2756,10 +2749,16 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris linux=5.5.13-2
-'http://http.debian.net/debian/pool/main/l/linux/linux_5.5.13-2.dsc' linux_5.5.13-2.dsc 198700 SHA256:289356d82501ecf391d06de2ffcf251215509b1ec5b9601e9f9b781a80e556af
-'http://http.debian.net/debian/pool/main/l/linux/linux_5.5.13.orig.tar.xz' linux_5.5.13.orig.tar.xz 115213136 SHA256:9ddb6f65228a16d108351d2da104b52e16a2fbdcb31f985e06eb344f7687354f
-'http://http.debian.net/debian/pool/main/l/linux/linux_5.5.13-2.debian.tar.xz' linux_5.5.13-2.debian.tar.xz 2703916 SHA256:9ed9ddb115e31ac085a00c7eaabae976a33cdcb133624befa2c37dcaa8d26875
+'http://deb.debian.org/debian/pool/main/l/linux/linux_5.5.13-2.dsc' linux_5.5.13-2.dsc 198700 SHA256:289356d82501ecf391d06de2ffcf251215509b1ec5b9601e9f9b781a80e556af
+'http://deb.debian.org/debian/pool/main/l/linux/linux_5.5.13.orig.tar.xz' linux_5.5.13.orig.tar.xz 115213136 SHA256:9ddb6f65228a16d108351d2da104b52e16a2fbdcb31f985e06eb344f7687354f
+'http://deb.debian.org/debian/pool/main/l/linux/linux_5.5.13-2.debian.tar.xz' linux_5.5.13-2.debian.tar.xz 2703916 SHA256:9ed9ddb115e31ac085a00c7eaabae976a33cdcb133624befa2c37dcaa8d26875
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/linux/5.5.13-2/ (for browsing the source)
+- https://sources.debian.net/src/linux/5.5.13-2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/linux/5.5.13-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `littler=0.3.9-1`
 
