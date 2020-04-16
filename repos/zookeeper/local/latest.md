@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:b6f6e4bc7eef19d2a7611dfbe4c620cddc352a0425e0509d7d3106929d85e85f`
-- Created: `2020-04-01T08:42:19.013774079Z`
-- Virtual Size: ~ 252.13 Mb  
+- Image ID: `sha256:7fde596b2f50d38d78c11fefc7e23fb25ea4ca1321cd40bc1b37875d463ffd99`
+- Created: `2020-04-16T03:19:52.230527162Z`
+- Virtual Size: ~ 252.29 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -13,9 +13,9 @@
   - `PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.6.0-bin/bin`
   - `LANG=C.UTF-8`
   - `JAVA_HOME=/usr/local/openjdk-11`
-  - `JAVA_VERSION=11.0.6`
-  - `JAVA_BASE_URL=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.6%2B10/OpenJDK11U-jre_`
-  - `JAVA_URL_VERSION=11.0.6_10`
+  - `JAVA_VERSION=11.0.7`
+  - `JAVA_BASE_URL=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.7%2B10/OpenJDK11U-jre_`
+  - `JAVA_URL_VERSION=11.0.7_10`
   - `ZOO_CONF_DIR=/conf`
   - `ZOO_DATA_DIR=/data`
   - `ZOO_DATA_LOG_DIR=/datalog`
