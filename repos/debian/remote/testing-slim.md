@@ -1,7 +1,7 @@
 ## `debian:testing-slim`
 
 ```console
-$ docker pull debian@sha256:574eed6e0ad2d2eed6f3355cb299b24dd0fb2c289df90dc4017f1fa9f72f2312
+$ docker pull debian@sha256:10ad2847c3755cd29c9500a00931d00a4a63cd220d592b7b087242ff0e71a1f3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -43,53 +43,53 @@ CMD ["bash"]
 ### `debian:testing-slim` - linux; arm variant v5
 
 ```console
-$ docker pull debian@sha256:01c238b53d6d946d6fe4d645a062f275320666db0f2958c28683dabd2aa21f0c
+$ docker pull debian@sha256:0630bce339bf506d98b47def1a8ae7abbc157fb4e4671fbbd736c9eda285a73f
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **26.0 MB (26037153 bytes)**  
+-	Total Size: **26.0 MB (26005306 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e14339ef9c24444f8ce2768df96750cf3d99439d541dd67ceba115f4777ac0b3`
+-	Image ID: `sha256:480be8361455e1130a56e3070faeb0c9cec34b79579b4ea40361d0f5812544dd`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Tue, 31 Mar 2020 01:30:04 GMT
-ADD file:fe586cdf01815da12e0a6076e946556de60f07776bf6fa06696571930151ce48 in / 
-# Tue, 31 Mar 2020 01:30:05 GMT
+# Thu, 16 Apr 2020 00:55:38 GMT
+ADD file:d5808c13049cd29d62b9f2a5e257fcd2245ca0a3bafb5ed21f68ff268ec2fad4 in / 
+# Thu, 16 Apr 2020 00:55:40 GMT
 CMD ["bash"]
 ```
 
 -	Layers:
-	-	`sha256:e25dc01c5efd8c2b6b25a0bb3c3b592efe1bd12c4e0696926bdf10b627463c05`  
-		Last Modified: Tue, 31 Mar 2020 01:37:33 GMT  
-		Size: 26.0 MB (26037153 bytes)  
+	-	`sha256:0d41261e546d74aa2775c346edf3ddfbcb6b0c6e4161c3deaf4e922058cad515`  
+		Last Modified: Thu, 16 Apr 2020 01:03:14 GMT  
+		Size: 26.0 MB (26005306 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `debian:testing-slim` - linux; arm variant v7
 
 ```console
-$ docker pull debian@sha256:01066ea91c30251b73d49442e3c59f2459d0144837cb01e66f365f9764b2057e
+$ docker pull debian@sha256:e66323ecba67e15ede27abaf37bcb014af41e4fc2b057abb8b0bcab217f94743
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **23.9 MB (23871588 bytes)**  
+-	Total Size: **23.8 MB (23845261 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:db9bf06bac2007c42b7b7e4a67e2be7eabe42ecfa4320403c359bbf1d8f5fa74`
+-	Image ID: `sha256:ec152d5c9ae7034b6050999860c0a63467787d7659895fe1d34c781870b8b352`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Tue, 31 Mar 2020 01:53:38 GMT
-ADD file:f8e7fd77827df83836204800e0aa2245797c0e73b5e1323f213de25d2e6d2648 in / 
-# Tue, 31 Mar 2020 01:53:40 GMT
+# Thu, 16 Apr 2020 01:06:05 GMT
+ADD file:cb04e2f69c2533da34234eee1399328ea583d224621cdaef718f518bbcbabd82 in / 
+# Thu, 16 Apr 2020 01:06:07 GMT
 CMD ["bash"]
 ```
 
 -	Layers:
-	-	`sha256:e42a8d163947ebcc9d016cfa7bd7b51f98f235e184032d52d40baa025b05ae0c`  
-		Last Modified: Tue, 31 Mar 2020 02:00:56 GMT  
-		Size: 23.9 MB (23871588 bytes)  
+	-	`sha256:9da097c4297d381f996087effea2e6944d9eb883cabd287eaf1e08dc031b4944`  
+		Last Modified: Thu, 16 Apr 2020 01:13:12 GMT  
+		Size: 23.8 MB (23845261 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `debian:testing-slim` - linux; arm64 variant v8
@@ -121,27 +121,27 @@ CMD ["bash"]
 ### `debian:testing-slim` - linux; 386
 
 ```console
-$ docker pull debian@sha256:2c7e42c763f3554815cb7767bfb3f58f1f052bcf985a4d5814f53c9461050e6b
+$ docker pull debian@sha256:9ce4bdaa1cf966c6d1896ba35fa450cbd1e245f1d8f8fa6aa105daca0b916b23
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **29.1 MB (29058638 bytes)**  
+-	Total Size: **29.1 MB (29077849 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5422f67748e9675bd2e04c41542a3d23b2e7655372647d6f48903741c24504f7`
+-	Image ID: `sha256:6b7f5cea2c027cda78daf599023b9c68ea670b67ae4a9a7a7dd2e1dbdf2982c2`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Tue, 31 Mar 2020 00:43:23 GMT
-ADD file:0dc097e0867ad936f9880afe71eb431e5b5f85ce6000e462e6850da23eb018e7 in / 
-# Tue, 31 Mar 2020 00:43:23 GMT
+# Thu, 16 Apr 2020 01:44:02 GMT
+ADD file:d3a925bd5c5a87480c7d4e50020f9d212de772deb33c44a5aae0adb48a45dfcb in / 
+# Thu, 16 Apr 2020 01:44:02 GMT
 CMD ["bash"]
 ```
 
 -	Layers:
-	-	`sha256:67a18e5fb8d801f5216ec7bf83d55e13c97bc7eb4dc1df61ded8a456622f6e45`  
-		Last Modified: Tue, 31 Mar 2020 00:49:20 GMT  
-		Size: 29.1 MB (29058638 bytes)  
+	-	`sha256:4b9caa8b31f66a48ef31d53b3128caca2d1a7eddd964bb3cac5da7aa306c2a38`  
+		Last Modified: Thu, 16 Apr 2020 01:50:08 GMT  
+		Size: 29.1 MB (29077849 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `debian:testing-slim` - linux; ppc64le
@@ -173,25 +173,25 @@ CMD ["bash"]
 ### `debian:testing-slim` - linux; s390x
 
 ```console
-$ docker pull debian@sha256:d6906798b910b8818298e7e6b7bc2b781abad04174ee0b815fb0837328877912
+$ docker pull debian@sha256:f87d19c546f2efa277c080a51bd6841fb5c7080da55d9adad4297f7f5bb4667c
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **26.7 MB (26680357 bytes)**  
+-	Total Size: **26.7 MB (26704044 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:29aff281dbfcda2c3b4f06196ab6279545b0af8b28aa034688668df979ded11c`
+-	Image ID: `sha256:afb4f994d7e45468a1983597717ec200bb76156fcb5e170ffcafd799fa357c1c`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Tue, 31 Mar 2020 01:11:00 GMT
-ADD file:2416e8bc65a106391013667a498e2b3bd7f63549a36b460541bd14b11ad46320 in / 
-# Tue, 31 Mar 2020 01:11:01 GMT
+# Thu, 16 Apr 2020 00:44:28 GMT
+ADD file:d4bb31952ccad3668116af9cd80c3a7c185d8acb4dd2b67c311866748a1695d7 in / 
+# Thu, 16 Apr 2020 00:44:30 GMT
 CMD ["bash"]
 ```
 
 -	Layers:
-	-	`sha256:a22d05ce6a88c264b1b217daffb7a06a88a8fb92b57753dbe9935a77c1482a31`  
-		Last Modified: Tue, 31 Mar 2020 01:15:02 GMT  
-		Size: 26.7 MB (26680357 bytes)  
+	-	`sha256:02895d384827aa62ca70e98461f5518ef53cee18dd856ef16b66bee9b6a2eef8`  
+		Last Modified: Thu, 16 Apr 2020 00:49:00 GMT  
+		Size: 26.7 MB (26704044 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
