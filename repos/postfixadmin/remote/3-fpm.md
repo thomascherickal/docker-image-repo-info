@@ -1,7 +1,7 @@
 ## `postfixadmin:3-fpm`
 
 ```console
-$ docker pull postfixadmin@sha256:7b9b5bd7e8c0a903b2b41266a57fc04aad34cb677d375b2fbe6007e91f169fcb
+$ docker pull postfixadmin@sha256:3a752fdbeafaff41e8529864159a4a51d3622f0f73f0fde0a9e3bd3cc3c39b8a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -16,14 +16,14 @@ $ docker pull postfixadmin@sha256:7b9b5bd7e8c0a903b2b41266a57fc04aad34cb677d375b
 ### `postfixadmin:3-fpm` - linux; amd64
 
 ```console
-$ docker pull postfixadmin@sha256:b3985624df7ade2181cf7f5a4ca6e083fc6e1d3087787b2a5f6a444155566e0c
+$ docker pull postfixadmin@sha256:0ae783d4b5cf603992a5233db8ffc4bdbdb89784554cb6bc67c5bfdf781e2a75
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **146.9 MB (146927306 bytes)**  
+-	Total Size: **146.9 MB (146928194 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2c4764b1bd37202260099c7776296580e35cde54843c76fcf3e8ac6cfdc16523`
+-	Image ID: `sha256:1ec004b84c30b1602b550f72664e1cbc3832e8141d79cfcd04647a3bc9d3c32f`
 -	Entrypoint: `["\/usr\/local\/bin\/docker-entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -86,21 +86,21 @@ CMD ["php-fpm"]
 LABEL maintainer=David Goodwin <david@codepoets.co.uk> (@DavidGoodwin)
 # Fri, 17 Apr 2020 16:23:52 GMT
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 	apt-get install -y --no-install-recommends 	libpq-dev 	libsqlite3-dev 	; 		docker-php-ext-install -j "$(nproc)" 		mysqli 		pdo_mysql 		pdo_pgsql 		pdo_sqlite 		pgsql 	; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark; 		ldd "$(php -r 'echo ini_get("extension_dir");')"/*.so 		| awk '/=>/ { print $3 }' 		| sort -u 		| xargs -r dpkg-query -S 		| cut -d: -f1 		| sort -u 		| xargs -rt apt-mark manual; 			apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*
-# Fri, 17 Apr 2020 16:23:52 GMT
-ARG POSTFIXADMIN_VERSION=3.2.3
-# Fri, 17 Apr 2020 16:23:52 GMT
-ARG POSTFIXADMIN_SHA512=d44addb9a3ca830caf55b603363054df561d659957f21cab7523465ebf02ca18abe7fcf298fe718d957d0b7bf5613e2dde69c78c26e0f7f6f595d79b28fe08ab
-# Fri, 17 Apr 2020 16:23:52 GMT
-ENV POSTFIXADMIN_VERSION=3.2.3
-# Fri, 17 Apr 2020 16:23:52 GMT
-ENV POSTFIXADMIN_SHA512=d44addb9a3ca830caf55b603363054df561d659957f21cab7523465ebf02ca18abe7fcf298fe718d957d0b7bf5613e2dde69c78c26e0f7f6f595d79b28fe08ab
-# Fri, 17 Apr 2020 16:23:54 GMT
+# Fri, 17 Apr 2020 20:27:25 GMT
+ARG POSTFIXADMIN_VERSION=3.2.4
+# Fri, 17 Apr 2020 20:27:25 GMT
+ARG POSTFIXADMIN_SHA512=2bd7ae05addbaf3c6c7eebea16ec1e21b2c67c8e6161446ed82a9553c26c04e19c1ec9ce248a9b9df504df56d309590259e6f04907b04b593548028b40e40d47
+# Fri, 17 Apr 2020 20:27:25 GMT
+ENV POSTFIXADMIN_VERSION=3.2.4
+# Fri, 17 Apr 2020 20:27:25 GMT
+ENV POSTFIXADMIN_SHA512=2bd7ae05addbaf3c6c7eebea16ec1e21b2c67c8e6161446ed82a9553c26c04e19c1ec9ce248a9b9df504df56d309590259e6f04907b04b593548028b40e40d47
+# Fri, 17 Apr 2020 20:27:27 GMT
 RUN set -eu; 	curl -fsSL -o postfixadmin.tar.gz "https://github.com/postfixadmin/postfixadmin/archive/postfixadmin-${POSTFIXADMIN_VERSION}.tar.gz"; 	echo "$POSTFIXADMIN_SHA512 *postfixadmin.tar.gz" | sha512sum -c -; 	mkdir /usr/src/postfixadmin; 	tar -xf postfixadmin.tar.gz -C /usr/src/postfixadmin --strip-components=1; 	rm postfixadmin.tar.gz; 	mkdir -p /usr/src/postfixadmin/templates_c; 	chown -R www-data:www-data /usr/src/postfixadmin
-# Fri, 17 Apr 2020 16:23:54 GMT
-COPY file:83be1dbd46cfa4c9ff6241f21a00fcd952c07b15bab1c6cf82fac6bfbae210c8 in /usr/local/bin/ 
-# Fri, 17 Apr 2020 16:23:54 GMT
+# Fri, 17 Apr 2020 20:27:27 GMT
+COPY file:c6e11ee7dda40f44aa31f3bcb74669e99572ad86040276440b444d5699d333f5 in /usr/local/bin/ 
+# Fri, 17 Apr 2020 20:27:27 GMT
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-# Fri, 17 Apr 2020 16:23:54 GMT
+# Fri, 17 Apr 2020 20:27:27 GMT
 CMD ["php-fpm"]
 ```
 
@@ -153,26 +153,26 @@ CMD ["php-fpm"]
 		Last Modified: Fri, 17 Apr 2020 16:24:49 GMT  
 		Size: 626.5 KB (626481 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6e600a44efbf9e3f7649c1eadb00acc8d1548addd37b19bf82e05d2545e75df1`  
-		Last Modified: Fri, 17 Apr 2020 16:24:49 GMT  
-		Size: 1.3 MB (1333768 bytes)  
+	-	`sha256:20c9fe5528f49c98a0cc7b6e57b2a3e65f9dcef96fed892f845fb424395b572c`  
+		Last Modified: Fri, 17 Apr 2020 20:28:20 GMT  
+		Size: 1.3 MB (1334607 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0a8534d4af2144d21aa81e95140ae9eb0079e919b2128205342ba0fc8745c099`  
-		Last Modified: Fri, 17 Apr 2020 16:24:49 GMT  
-		Size: 1.3 KB (1282 bytes)  
+	-	`sha256:2b95e16d74ca6e5dc92e341bf02c307e79426db17115cc81d3ea6ae88238aa7c`  
+		Last Modified: Fri, 17 Apr 2020 20:28:20 GMT  
+		Size: 1.3 KB (1331 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `postfixadmin:3-fpm` - linux; arm variant v5
 
 ```console
-$ docker pull postfixadmin@sha256:4773b528de9aa533241422bfeecb08b4005bb2283e890dab8cb6a8ad1ea2a59a
+$ docker pull postfixadmin@sha256:df5ae6535b0027ddc532402d4150304a9a11cc493f1287f470c9c287450a94b0
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **125.3 MB (125326181 bytes)**  
+-	Total Size: **125.3 MB (125327099 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c7b6309abce6ea45ab1c48f366cb21b4ebfdc5ce7e727552a4c2ed7ca0a23c00`
+-	Image ID: `sha256:1b46c74dad54008bb9f1b711108f14d9e87a58aaf556410f8edc7ec595c8d5b6`
 -	Entrypoint: `["\/usr\/local\/bin\/docker-entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -235,21 +235,21 @@ CMD ["php-fpm"]
 LABEL maintainer=David Goodwin <david@codepoets.co.uk> (@DavidGoodwin)
 # Fri, 17 Apr 2020 12:46:05 GMT
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 	apt-get install -y --no-install-recommends 	libpq-dev 	libsqlite3-dev 	; 		docker-php-ext-install -j "$(nproc)" 		mysqli 		pdo_mysql 		pdo_pgsql 		pdo_sqlite 		pgsql 	; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark; 		ldd "$(php -r 'echo ini_get("extension_dir");')"/*.so 		| awk '/=>/ { print $3 }' 		| sort -u 		| xargs -r dpkg-query -S 		| cut -d: -f1 		| sort -u 		| xargs -rt apt-mark manual; 			apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*
-# Fri, 17 Apr 2020 12:46:06 GMT
-ARG POSTFIXADMIN_VERSION=3.2.3
-# Fri, 17 Apr 2020 12:46:07 GMT
-ARG POSTFIXADMIN_SHA512=d44addb9a3ca830caf55b603363054df561d659957f21cab7523465ebf02ca18abe7fcf298fe718d957d0b7bf5613e2dde69c78c26e0f7f6f595d79b28fe08ab
-# Fri, 17 Apr 2020 12:46:08 GMT
-ENV POSTFIXADMIN_VERSION=3.2.3
-# Fri, 17 Apr 2020 12:46:09 GMT
-ENV POSTFIXADMIN_SHA512=d44addb9a3ca830caf55b603363054df561d659957f21cab7523465ebf02ca18abe7fcf298fe718d957d0b7bf5613e2dde69c78c26e0f7f6f595d79b28fe08ab
-# Fri, 17 Apr 2020 12:46:12 GMT
+# Fri, 17 Apr 2020 20:49:09 GMT
+ARG POSTFIXADMIN_VERSION=3.2.4
+# Fri, 17 Apr 2020 20:49:10 GMT
+ARG POSTFIXADMIN_SHA512=2bd7ae05addbaf3c6c7eebea16ec1e21b2c67c8e6161446ed82a9553c26c04e19c1ec9ce248a9b9df504df56d309590259e6f04907b04b593548028b40e40d47
+# Fri, 17 Apr 2020 20:49:11 GMT
+ENV POSTFIXADMIN_VERSION=3.2.4
+# Fri, 17 Apr 2020 20:49:12 GMT
+ENV POSTFIXADMIN_SHA512=2bd7ae05addbaf3c6c7eebea16ec1e21b2c67c8e6161446ed82a9553c26c04e19c1ec9ce248a9b9df504df56d309590259e6f04907b04b593548028b40e40d47
+# Fri, 17 Apr 2020 20:49:16 GMT
 RUN set -eu; 	curl -fsSL -o postfixadmin.tar.gz "https://github.com/postfixadmin/postfixadmin/archive/postfixadmin-${POSTFIXADMIN_VERSION}.tar.gz"; 	echo "$POSTFIXADMIN_SHA512 *postfixadmin.tar.gz" | sha512sum -c -; 	mkdir /usr/src/postfixadmin; 	tar -xf postfixadmin.tar.gz -C /usr/src/postfixadmin --strip-components=1; 	rm postfixadmin.tar.gz; 	mkdir -p /usr/src/postfixadmin/templates_c; 	chown -R www-data:www-data /usr/src/postfixadmin
-# Fri, 17 Apr 2020 12:46:13 GMT
-COPY file:83be1dbd46cfa4c9ff6241f21a00fcd952c07b15bab1c6cf82fac6bfbae210c8 in /usr/local/bin/ 
-# Fri, 17 Apr 2020 12:46:14 GMT
+# Fri, 17 Apr 2020 20:49:18 GMT
+COPY file:c6e11ee7dda40f44aa31f3bcb74669e99572ad86040276440b444d5699d333f5 in /usr/local/bin/ 
+# Fri, 17 Apr 2020 20:49:20 GMT
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-# Fri, 17 Apr 2020 12:46:16 GMT
+# Fri, 17 Apr 2020 20:49:23 GMT
 CMD ["php-fpm"]
 ```
 
@@ -302,13 +302,13 @@ CMD ["php-fpm"]
 		Last Modified: Fri, 17 Apr 2020 12:47:01 GMT  
 		Size: 589.8 KB (589807 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8f471f166170b6d976950e66c2d643f4365e3ea4ccca9cbfa1e0c5c58070ef55`  
-		Last Modified: Fri, 17 Apr 2020 12:47:02 GMT  
-		Size: 1.3 MB (1333780 bytes)  
+	-	`sha256:9dda1c5e1ef6c1ea005fe20617166c5f5ea841185d2370dae648104abde8d50e`  
+		Last Modified: Fri, 17 Apr 2020 20:49:56 GMT  
+		Size: 1.3 MB (1334644 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:84e488cb8920d7cc1e69292436cdeff088037a12b39425c768b570f2af2ad09d`  
-		Last Modified: Fri, 17 Apr 2020 12:47:01 GMT  
-		Size: 1.3 KB (1277 bytes)  
+	-	`sha256:9f3384bb843fe969d6f5e124296bcca9b9171793a4c36a621fed046b7feebd16`  
+		Last Modified: Fri, 17 Apr 2020 20:49:56 GMT  
+		Size: 1.3 KB (1331 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `postfixadmin:3-fpm` - linux; arm variant v7
@@ -463,14 +463,14 @@ CMD ["php-fpm"]
 ### `postfixadmin:3-fpm` - linux; arm64 variant v8
 
 ```console
-$ docker pull postfixadmin@sha256:8a345288a64563359e3344d46e111fb7e73cada49022eb574267bec2fb6a88d7
+$ docker pull postfixadmin@sha256:9f383cd63b00ce6975a649cf31d6a45f7b59b67e097125847d3c8fe83ad9d958
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **139.0 MB (139031024 bytes)**  
+-	Total Size: **139.0 MB (139031938 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:eb4b4fb05040d5cf31f31653ff0291b1aa361deecc1d8369d64fe175bae4d4df`
+-	Image ID: `sha256:a0050b38fdbc529093e0bb691a123b619a734943eee9bd4b32424496c158fe7a`
 -	Entrypoint: `["\/usr\/local\/bin\/docker-entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -533,21 +533,21 @@ CMD ["php-fpm"]
 LABEL maintainer=David Goodwin <david@codepoets.co.uk> (@DavidGoodwin)
 # Fri, 17 Apr 2020 17:40:46 GMT
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 	apt-get install -y --no-install-recommends 	libpq-dev 	libsqlite3-dev 	; 		docker-php-ext-install -j "$(nproc)" 		mysqli 		pdo_mysql 		pdo_pgsql 		pdo_sqlite 		pgsql 	; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark; 		ldd "$(php -r 'echo ini_get("extension_dir");')"/*.so 		| awk '/=>/ { print $3 }' 		| sort -u 		| xargs -r dpkg-query -S 		| cut -d: -f1 		| sort -u 		| xargs -rt apt-mark manual; 			apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*
-# Fri, 17 Apr 2020 17:40:47 GMT
-ARG POSTFIXADMIN_VERSION=3.2.3
-# Fri, 17 Apr 2020 17:40:48 GMT
-ARG POSTFIXADMIN_SHA512=d44addb9a3ca830caf55b603363054df561d659957f21cab7523465ebf02ca18abe7fcf298fe718d957d0b7bf5613e2dde69c78c26e0f7f6f595d79b28fe08ab
-# Fri, 17 Apr 2020 17:40:50 GMT
-ENV POSTFIXADMIN_VERSION=3.2.3
-# Fri, 17 Apr 2020 17:40:51 GMT
-ENV POSTFIXADMIN_SHA512=d44addb9a3ca830caf55b603363054df561d659957f21cab7523465ebf02ca18abe7fcf298fe718d957d0b7bf5613e2dde69c78c26e0f7f6f595d79b28fe08ab
-# Fri, 17 Apr 2020 17:40:54 GMT
+# Fri, 17 Apr 2020 20:56:05 GMT
+ARG POSTFIXADMIN_VERSION=3.2.4
+# Fri, 17 Apr 2020 20:56:05 GMT
+ARG POSTFIXADMIN_SHA512=2bd7ae05addbaf3c6c7eebea16ec1e21b2c67c8e6161446ed82a9553c26c04e19c1ec9ce248a9b9df504df56d309590259e6f04907b04b593548028b40e40d47
+# Fri, 17 Apr 2020 20:56:06 GMT
+ENV POSTFIXADMIN_VERSION=3.2.4
+# Fri, 17 Apr 2020 20:56:07 GMT
+ENV POSTFIXADMIN_SHA512=2bd7ae05addbaf3c6c7eebea16ec1e21b2c67c8e6161446ed82a9553c26c04e19c1ec9ce248a9b9df504df56d309590259e6f04907b04b593548028b40e40d47
+# Fri, 17 Apr 2020 20:56:09 GMT
 RUN set -eu; 	curl -fsSL -o postfixadmin.tar.gz "https://github.com/postfixadmin/postfixadmin/archive/postfixadmin-${POSTFIXADMIN_VERSION}.tar.gz"; 	echo "$POSTFIXADMIN_SHA512 *postfixadmin.tar.gz" | sha512sum -c -; 	mkdir /usr/src/postfixadmin; 	tar -xf postfixadmin.tar.gz -C /usr/src/postfixadmin --strip-components=1; 	rm postfixadmin.tar.gz; 	mkdir -p /usr/src/postfixadmin/templates_c; 	chown -R www-data:www-data /usr/src/postfixadmin
-# Fri, 17 Apr 2020 17:40:55 GMT
-COPY file:83be1dbd46cfa4c9ff6241f21a00fcd952c07b15bab1c6cf82fac6bfbae210c8 in /usr/local/bin/ 
-# Fri, 17 Apr 2020 17:40:56 GMT
+# Fri, 17 Apr 2020 20:56:10 GMT
+COPY file:c6e11ee7dda40f44aa31f3bcb74669e99572ad86040276440b444d5699d333f5 in /usr/local/bin/ 
+# Fri, 17 Apr 2020 20:56:11 GMT
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-# Fri, 17 Apr 2020 17:40:56 GMT
+# Fri, 17 Apr 2020 20:56:12 GMT
 CMD ["php-fpm"]
 ```
 
@@ -600,26 +600,26 @@ CMD ["php-fpm"]
 		Last Modified: Fri, 17 Apr 2020 17:43:03 GMT  
 		Size: 618.3 KB (618268 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:07dc817479e92eb2da008edbf7db820e6ced27384ff33268aef98223accab9f7`  
-		Last Modified: Fri, 17 Apr 2020 17:43:03 GMT  
-		Size: 1.3 MB (1333773 bytes)  
+	-	`sha256:21333b81d319ff6485d2274739f777e1c60bbaf50afcca82543f8d2e83f63d87`  
+		Last Modified: Fri, 17 Apr 2020 20:57:51 GMT  
+		Size: 1.3 MB (1334637 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:536dd291af5c2ca908fa8cff5d429c1513aedd6ab139b2d9050429816bf1ca3b`  
-		Last Modified: Fri, 17 Apr 2020 17:43:03 GMT  
-		Size: 1.3 KB (1281 bytes)  
+	-	`sha256:45e5c907cfd983d207d4f3973115dd02ea5705f82f787ff95da498d9ba324697`  
+		Last Modified: Fri, 17 Apr 2020 20:57:51 GMT  
+		Size: 1.3 KB (1331 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `postfixadmin:3-fpm` - linux; 386
 
 ```console
-$ docker pull postfixadmin@sha256:e76527f15a8b748f80467049e570148b0c149f855192173a1230c31fae7ad634
+$ docker pull postfixadmin@sha256:d0f8af214ba97871e5415f03bd7c9646929b90167cb70b0edd8877325474a7f6
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **152.7 MB (152703892 bytes)**  
+-	Total Size: **152.7 MB (152704782 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:54361cad1426cf47cb85d436cd97f9c2dfeb9321a8a0866c6017c893e5e6aa13`
+-	Image ID: `sha256:b8d07716414a085dabca4e72b67fa6b82dab6c2c20f2e04694f390f17596a49f`
 -	Entrypoint: `["\/usr\/local\/bin\/docker-entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -682,21 +682,21 @@ CMD ["php-fpm"]
 LABEL maintainer=David Goodwin <david@codepoets.co.uk> (@DavidGoodwin)
 # Fri, 17 Apr 2020 14:58:04 GMT
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 	apt-get install -y --no-install-recommends 	libpq-dev 	libsqlite3-dev 	; 		docker-php-ext-install -j "$(nproc)" 		mysqli 		pdo_mysql 		pdo_pgsql 		pdo_sqlite 		pgsql 	; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark; 		ldd "$(php -r 'echo ini_get("extension_dir");')"/*.so 		| awk '/=>/ { print $3 }' 		| sort -u 		| xargs -r dpkg-query -S 		| cut -d: -f1 		| sort -u 		| xargs -rt apt-mark manual; 			apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*
-# Fri, 17 Apr 2020 14:58:04 GMT
-ARG POSTFIXADMIN_VERSION=3.2.3
-# Fri, 17 Apr 2020 14:58:05 GMT
-ARG POSTFIXADMIN_SHA512=d44addb9a3ca830caf55b603363054df561d659957f21cab7523465ebf02ca18abe7fcf298fe718d957d0b7bf5613e2dde69c78c26e0f7f6f595d79b28fe08ab
-# Fri, 17 Apr 2020 14:58:05 GMT
-ENV POSTFIXADMIN_VERSION=3.2.3
-# Fri, 17 Apr 2020 14:58:05 GMT
-ENV POSTFIXADMIN_SHA512=d44addb9a3ca830caf55b603363054df561d659957f21cab7523465ebf02ca18abe7fcf298fe718d957d0b7bf5613e2dde69c78c26e0f7f6f595d79b28fe08ab
-# Fri, 17 Apr 2020 14:58:08 GMT
+# Fri, 17 Apr 2020 20:41:00 GMT
+ARG POSTFIXADMIN_VERSION=3.2.4
+# Fri, 17 Apr 2020 20:41:00 GMT
+ARG POSTFIXADMIN_SHA512=2bd7ae05addbaf3c6c7eebea16ec1e21b2c67c8e6161446ed82a9553c26c04e19c1ec9ce248a9b9df504df56d309590259e6f04907b04b593548028b40e40d47
+# Fri, 17 Apr 2020 20:41:00 GMT
+ENV POSTFIXADMIN_VERSION=3.2.4
+# Fri, 17 Apr 2020 20:41:01 GMT
+ENV POSTFIXADMIN_SHA512=2bd7ae05addbaf3c6c7eebea16ec1e21b2c67c8e6161446ed82a9553c26c04e19c1ec9ce248a9b9df504df56d309590259e6f04907b04b593548028b40e40d47
+# Fri, 17 Apr 2020 20:41:02 GMT
 RUN set -eu; 	curl -fsSL -o postfixadmin.tar.gz "https://github.com/postfixadmin/postfixadmin/archive/postfixadmin-${POSTFIXADMIN_VERSION}.tar.gz"; 	echo "$POSTFIXADMIN_SHA512 *postfixadmin.tar.gz" | sha512sum -c -; 	mkdir /usr/src/postfixadmin; 	tar -xf postfixadmin.tar.gz -C /usr/src/postfixadmin --strip-components=1; 	rm postfixadmin.tar.gz; 	mkdir -p /usr/src/postfixadmin/templates_c; 	chown -R www-data:www-data /usr/src/postfixadmin
-# Fri, 17 Apr 2020 14:58:08 GMT
-COPY file:83be1dbd46cfa4c9ff6241f21a00fcd952c07b15bab1c6cf82fac6bfbae210c8 in /usr/local/bin/ 
-# Fri, 17 Apr 2020 14:58:08 GMT
+# Fri, 17 Apr 2020 20:41:02 GMT
+COPY file:c6e11ee7dda40f44aa31f3bcb74669e99572ad86040276440b444d5699d333f5 in /usr/local/bin/ 
+# Fri, 17 Apr 2020 20:41:02 GMT
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-# Fri, 17 Apr 2020 14:58:09 GMT
+# Fri, 17 Apr 2020 20:41:02 GMT
 CMD ["php-fpm"]
 ```
 
@@ -749,13 +749,13 @@ CMD ["php-fpm"]
 		Last Modified: Fri, 17 Apr 2020 14:59:28 GMT  
 		Size: 640.5 KB (640506 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:79ca9cb719bb4a749e5ed76d69db7b7afa21ce7ad90fecc6c29491c5ced6fddc`  
-		Last Modified: Fri, 17 Apr 2020 14:59:28 GMT  
-		Size: 1.3 MB (1333765 bytes)  
+	-	`sha256:1e0f42f31c7dd46955f99472e12870457ec81714106f7f1afe847ecbbf95d650`  
+		Last Modified: Fri, 17 Apr 2020 20:42:08 GMT  
+		Size: 1.3 MB (1334603 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1b01af51510cf1693a8762179c7312799bc935377fa7724f0e5aa6c6c934648e`  
-		Last Modified: Fri, 17 Apr 2020 14:59:28 GMT  
-		Size: 1.3 KB (1281 bytes)  
+	-	`sha256:dc072d96a82f812bf5efdff1a18534e6e072ff3c05b44f5155db0cf4da001f3f`  
+		Last Modified: Fri, 17 Apr 2020 20:42:08 GMT  
+		Size: 1.3 KB (1333 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `postfixadmin:3-fpm` - linux; ppc64le
