@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:feec2b87e8a45f3ad435885c2c69158be1c7fbcad6405be61355e00d76113e9d`
-- Created: `2020-04-14T19:06:39.163349064Z`
-- Virtual Size: ~ 52.32 Mb  
+- Image ID: `sha256:3a14b8af6e7a6b5d59c4ddbaa92e503d72f04f9a1379dcea1c6af1d7d1650699`
+- Created: `2020-04-16T00:19:31.954384061Z`
+- Virtual Size: ~ 52.38 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["caddy","run","--config","/etc/caddy/Caddyfile","--adapter","caddyfile"]`
@@ -193,6 +193,23 @@ libtls-standalone-2.9.1-r0 installed size:
 
 libtls-standalone-2.9.1-r0 license:
 ISC
+
+```
+
+### `apk` package: `mailcap`
+
+```console
+mailcap-2.1.48-r0 description:
+Helper application and MIME type associations for file types
+
+mailcap-2.1.48-r0 webpage:
+http://git.fedorahosted.org/git/mailcap.git
+
+mailcap-2.1.48-r0 installed size:
+73728
+
+mailcap-2.1.48-r0 license:
+Public-Domain and MIT
 
 ```
 
