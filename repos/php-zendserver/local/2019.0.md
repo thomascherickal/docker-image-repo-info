@@ -777,14 +777,9 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 - `dlmalloc`
 - `mingw-runtime`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris git=1:2.7.4-0ubuntu1.7
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.7.4-0ubuntu1.7.dsc' git_2.7.4-0ubuntu1.7.dsc 2897 SHA256:9c7bbc0d0c62089eb82903854c2fde86798ffce1804e4429b09411ac1152bc33
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.7.4.orig.tar.xz' git_2.7.4.orig.tar.xz 3909636 SHA256:dee574defbe05ec7356a0842ddbda51315926f2fa7e39c2539f2c3dcc52e457b
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.7.4-0ubuntu1.7.debian.tar.xz' git_2.7.4-0ubuntu1.7.debian.tar.xz 561208 SHA256:447494552284888dd996223954ecf6c71fefc8c5d41783a35641a5b66f4dc769
-```
 
 ### `dpkg` source package: `glibc=2.23-0ubuntu11`
 
