@@ -2,16 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:37f5f0a258bf77afe2010d7400fd87a07ddd1b619d5fb45858f4bad1dd480aef`
-- Created: `2020-03-20T20:09:34.463495291Z`
-- Virtual Size: ~ 355.73 Mb  
+- Image ID: `sha256:eef18f9e510dfd72e79bd26372d36e3897f29525f806b4bf04b9999f06782de4`
+- Created: `2020-04-17T16:48:03.891916288Z`
+- Virtual Size: ~ 356.84 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
 - Command: `["mysqld"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `GOSU_VERSION=1.10`
+  - `GOSU_VERSION=1.12`
   - `GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8`
   - `MARIADB_MAJOR=10.4`
   - `MARIADB_VERSION=1:10.4.12+maria~bionic`
