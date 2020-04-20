@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:441d51cdf4b91d71e6b9ab55f7ec0fd1e502e82737732b6c9614c76237a2b97e`
-- Created: `2020-04-06T20:57:56.606839335Z`
-- Virtual Size: ~ 543.96 Mb  
+- Image ID: `sha256:bfd06d136d3c01eafedd1b88e8ebc9128c4946d316abcf11d0ee9a62e59f0e6e`
+- Created: `2020-04-20T18:42:59.546007393Z`
+- Virtual Size: ~ 542.31 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -1115,12 +1115,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/ghostscript/9.27~dfsg-2+deb10u3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/ghostscript/9.27~dfsg-2+deb10u3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `git=1:2.20.1-2+deb10u1`
+### `dpkg` source package: `git=1:2.20.1-2+deb10u2`
 
 Binary Packages:
 
-- `git=1:2.20.1-2+deb10u1`
-- `git-man=1:2.20.1-2+deb10u1`
+- `git=1:2.20.1-2+deb10u2`
+- `git-man=1:2.20.1-2+deb10u2`
 
 Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/copyright`)
 
@@ -1146,17 +1146,17 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris git=1:2.20.1-2+deb10u1
-'http://deb.debian.org/debian/pool/main/g/git/git_2.20.1-2+deb10u1.dsc' git_2.20.1-2+deb10u1.dsc 2923 SHA256:d019a11d3826d5dc1f004cfcfeaad392c22cbd86956bca53271252014b0bd874
-'http://deb.debian.org/debian/pool/main/g/git/git_2.20.1.orig.tar.xz' git_2.20.1.orig.tar.xz 5359872 SHA256:9d2e91e2faa2ea61ba0a70201d023b36f54d846314591a002c610ea2ab81c3e9
-'http://deb.debian.org/debian/pool/main/g/git/git_2.20.1-2+deb10u1.debian.tar.xz' git_2.20.1-2+deb10u1.debian.tar.xz 632804 SHA256:3fe13b0b41f04e9029d6f3e396a610ddf79271c285cc8b0b7f644b563b6f1368
+$ apt-get source -qq --print-uris git=1:2.20.1-2+deb10u2
+'http://security.debian.org/debian-security/pool/updates/main/g/git/git_2.20.1-2+deb10u2.dsc' git_2.20.1-2+deb10u2.dsc 2923 SHA256:6aabffbb0392172cbe82c9f585c0e7b7a98e1741d7280310f212e44e1731413a
+'http://security.debian.org/debian-security/pool/updates/main/g/git/git_2.20.1.orig.tar.xz' git_2.20.1.orig.tar.xz 5359872 SHA256:9d2e91e2faa2ea61ba0a70201d023b36f54d846314591a002c610ea2ab81c3e9
+'http://security.debian.org/debian-security/pool/updates/main/g/git/git_2.20.1-2+deb10u2.debian.tar.xz' git_2.20.1-2+deb10u2.debian.tar.xz 636904 SHA256:6ab6020d82ef9991c4fe2bc1bc2c517c744c21e0e541a094e1952dff39c55357
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/git/1:2.20.1-2+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/git/1:2.20.1-2+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/git/1:2.20.1-2+deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/git/1:2.20.1-2+deb10u2/ (for browsing the source)
+- https://sources.debian.net/src/git/1:2.20.1-2+deb10u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/git/1:2.20.1-2+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `glib2.0=2.58.3-2+deb10u2`
 
