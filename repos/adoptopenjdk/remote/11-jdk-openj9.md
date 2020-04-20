@@ -1,7 +1,7 @@
 ## `adoptopenjdk:11-jdk-openj9`
 
 ```console
-$ docker pull adoptopenjdk@sha256:8ff33f76acf585832cec693d3077b3eb5e01b574f5353656a6e8a14323b8da87
+$ docker pull adoptopenjdk@sha256:81cfe42e19983830d50b91b42d196b1f84c453b00a03a431ac0e4046178b7581
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -15,14 +15,14 @@ $ docker pull adoptopenjdk@sha256:8ff33f76acf585832cec693d3077b3eb5e01b574f53536
 ### `adoptopenjdk:11-jdk-openj9` - linux; amd64
 
 ```console
-$ docker pull adoptopenjdk@sha256:683334b56948c832f00b52247b07055c14003ff7c4ab2166c799a3334e691503
+$ docker pull adoptopenjdk@sha256:c8d23a100f9c013f5cb2e8f2fc9817b0e4b52b2c4fab513403f312c984b5fbce
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **243.6 MB (243587436 bytes)**  
+-	Total Size: **236.1 MB (236137112 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c4e8da18dc4611d2e97188ed768648c2087d92072a7cfa2e5c9a322faefac44a`
+-	Image ID: `sha256:e277e0fc6b35f4c22996cc70efc98873b0dc958d8d178680b78d17f1340a11d1`
 -	Default Command: `["jshell"]`
 
 ```dockerfile
@@ -40,15 +40,15 @@ CMD ["/bin/bash"]
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Fri, 20 Mar 2020 19:37:33 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Fri, 20 Mar 2020 19:39:08 GMT
-ENV JAVA_VERSION=jdk-11.0.6+10_openj9-0.18.1
-# Fri, 20 Mar 2020 19:39:18 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        ppc64el|ppc64le)          ESUM='942436d908aea973a661df080e32ea88a3819b4d50b95d502c140fb0a0e43fdb';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.6%2B10_openj9-0.18.1/OpenJDK11U-jdk_ppc64le_linux_openj9_11.0.6_10_openj9-0.18.1.tar.gz';          ;;        s390x)          ESUM='a255f620a971f4f537b729d53b4ad6433cb579ce3f929a19b572cfcdacb6ec93';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.6%2B10_openj9-0.18.1/OpenJDK11U-jdk_s390x_linux_openj9_11.0.6_10_openj9-0.18.1.tar.gz';          ;;        amd64|x86_64)          ESUM='1530172ee98edd129954fcdca1bf725f7b30c8bfc3cdc381c88de96b7d19e690';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.6%2B10_openj9-0.18.1/OpenJDK11U-jdk_x64_linux_openj9_11.0.6_10_openj9-0.18.1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Fri, 20 Mar 2020 19:39:19 GMT
+# Mon, 20 Apr 2020 17:23:15 GMT
+ENV JAVA_VERSION=jdk-11.0.7+10_openj9-0.20.0
+# Mon, 20 Apr 2020 17:23:26 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='0be01fdcae330e26c489d8d0d0c98c535a2af8cbd0cdcda211776ab9fcd05086';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10_openj9-0.20.0/OpenJDK11U-jdk_aarch64_linux_openj9_11.0.7_10_openj9-0.20.0.tar.gz';          ;;        ppc64el|ppc64le)          ESUM='975a6dca2620a8373039e151d7732e9a9f668cc947b718eab077e6cdb7caeefd';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10_openj9-0.20.0/OpenJDK11U-jdk_ppc64le_linux_openj9_11.0.7_10_openj9-0.20.0.tar.gz';          ;;        s390x)          ESUM='8ab61654cfedcab7061346794c53e07ea8549db97e1c804a95f2bec885daef1b';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10_openj9-0.20.0/OpenJDK11U-jdk_s390x_linux_openj9_11.0.7_10_openj9-0.20.0.tar.gz';          ;;        amd64|x86_64)          ESUM='526e89f3014fec473b24c10c2464c1343e23703114983fd171b68b1599bba561';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10_openj9-0.20.0/OpenJDK11U-jdk_x64_linux_openj9_11.0.7_10_openj9-0.20.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
+# Mon, 20 Apr 2020 17:23:26 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 20 Mar 2020 19:39:19 GMT
+# Mon, 20 Apr 2020 17:23:26 GMT
 ENV JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+UseContainerSupport -XX:+IdleTuningCompactOnIdle -XX:+IdleTuningGcOnIdle
-# Fri, 20 Mar 2020 19:39:19 GMT
+# Mon, 20 Apr 2020 17:23:27 GMT
 CMD ["jshell"]
 ```
 
@@ -73,22 +73,22 @@ CMD ["jshell"]
 		Last Modified: Fri, 20 Mar 2020 19:40:17 GMT  
 		Size: 13.3 MB (13325178 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:53c41c1dade5a11ee028504429ce22cdb41a56100b461d8feb57720613ba29d5`  
-		Last Modified: Fri, 20 Mar 2020 19:42:59 GMT  
-		Size: 203.5 MB (203535289 bytes)  
+	-	`sha256:63da37e5d17ce6caa0fbce9a70a04c7287ac37d31c10fc1246fed54b266717da`  
+		Last Modified: Mon, 20 Apr 2020 17:27:01 GMT  
+		Size: 196.1 MB (196084965 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adoptopenjdk:11-jdk-openj9` - linux; ppc64le
 
 ```console
-$ docker pull adoptopenjdk@sha256:f80b3e29cfa0b410dd346ce4756b200a5162c34f0f0ba58276bfed5c854b66c6
+$ docker pull adoptopenjdk@sha256:181dc78cc0cfdd53ba80f9898ece53df8ec6e35d3edd7e81237338b45836b5a5
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **247.1 MB (247102977 bytes)**  
+-	Total Size: **241.3 MB (241331301 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d9fdce74ebf87645ff1913330503485f871436bf8938da67cb97492b66f29380`
+-	Image ID: `sha256:4068e6d8cac171e5ace083e9faeeecb07039aabb56b0349552897900f9239df6`
 -	Default Command: `["jshell"]`
 
 ```dockerfile
@@ -106,15 +106,15 @@ CMD ["/bin/bash"]
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Fri, 20 Mar 2020 19:44:04 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Fri, 20 Mar 2020 19:49:07 GMT
-ENV JAVA_VERSION=jdk-11.0.6+10_openj9-0.18.1
-# Fri, 20 Mar 2020 19:49:29 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        ppc64el|ppc64le)          ESUM='942436d908aea973a661df080e32ea88a3819b4d50b95d502c140fb0a0e43fdb';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.6%2B10_openj9-0.18.1/OpenJDK11U-jdk_ppc64le_linux_openj9_11.0.6_10_openj9-0.18.1.tar.gz';          ;;        s390x)          ESUM='a255f620a971f4f537b729d53b4ad6433cb579ce3f929a19b572cfcdacb6ec93';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.6%2B10_openj9-0.18.1/OpenJDK11U-jdk_s390x_linux_openj9_11.0.6_10_openj9-0.18.1.tar.gz';          ;;        amd64|x86_64)          ESUM='1530172ee98edd129954fcdca1bf725f7b30c8bfc3cdc381c88de96b7d19e690';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.6%2B10_openj9-0.18.1/OpenJDK11U-jdk_x64_linux_openj9_11.0.6_10_openj9-0.18.1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Fri, 20 Mar 2020 19:49:36 GMT
+# Mon, 20 Apr 2020 17:26:35 GMT
+ENV JAVA_VERSION=jdk-11.0.7+10_openj9-0.20.0
+# Mon, 20 Apr 2020 17:27:02 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='0be01fdcae330e26c489d8d0d0c98c535a2af8cbd0cdcda211776ab9fcd05086';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10_openj9-0.20.0/OpenJDK11U-jdk_aarch64_linux_openj9_11.0.7_10_openj9-0.20.0.tar.gz';          ;;        ppc64el|ppc64le)          ESUM='975a6dca2620a8373039e151d7732e9a9f668cc947b718eab077e6cdb7caeefd';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10_openj9-0.20.0/OpenJDK11U-jdk_ppc64le_linux_openj9_11.0.7_10_openj9-0.20.0.tar.gz';          ;;        s390x)          ESUM='8ab61654cfedcab7061346794c53e07ea8549db97e1c804a95f2bec885daef1b';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10_openj9-0.20.0/OpenJDK11U-jdk_s390x_linux_openj9_11.0.7_10_openj9-0.20.0.tar.gz';          ;;        amd64|x86_64)          ESUM='526e89f3014fec473b24c10c2464c1343e23703114983fd171b68b1599bba561';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10_openj9-0.20.0/OpenJDK11U-jdk_x64_linux_openj9_11.0.7_10_openj9-0.20.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
+# Mon, 20 Apr 2020 17:27:09 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 20 Mar 2020 19:49:39 GMT
+# Mon, 20 Apr 2020 17:27:14 GMT
 ENV JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+UseContainerSupport -XX:+IdleTuningCompactOnIdle -XX:+IdleTuningGcOnIdle
-# Fri, 20 Mar 2020 19:49:42 GMT
+# Mon, 20 Apr 2020 17:27:19 GMT
 CMD ["jshell"]
 ```
 
@@ -139,22 +139,22 @@ CMD ["jshell"]
 		Last Modified: Fri, 20 Mar 2020 19:52:26 GMT  
 		Size: 14.0 MB (13970663 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f02b5779368dcfc712035920136fb50e78f63ab4b9cdf20cf91954066555c33f`  
-		Last Modified: Fri, 20 Mar 2020 19:56:09 GMT  
-		Size: 202.7 MB (202696150 bytes)  
+	-	`sha256:ac6515e47bcc46b03059a9d7cf9191d52dc9e3b5cd33736c8ffcccd32d954f81`  
+		Last Modified: Mon, 20 Apr 2020 17:34:14 GMT  
+		Size: 196.9 MB (196924474 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adoptopenjdk:11-jdk-openj9` - linux; s390x
 
 ```console
-$ docker pull adoptopenjdk@sha256:342fdd1a0c0edc6492f5378a89ad8c025360e096accf7f1ee907ea7d5c4b3376
+$ docker pull adoptopenjdk@sha256:9a5619f6673dc1ae1c1bed29b72556b88800fb962621243cd7087a4668d0c144
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **240.4 MB (240424648 bytes)**  
+-	Total Size: **233.0 MB (233030646 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b02184a144ac26582294188b7fbbcb988e794d3c6c5c1b6ae2c0cda92716cbb3`
+-	Image ID: `sha256:dafbec2b54269216ded239dd124dfc38c32639c948d13ad0523acd39046f1b89`
 -	Default Command: `["jshell"]`
 
 ```dockerfile
@@ -172,15 +172,15 @@ CMD ["/bin/bash"]
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Fri, 20 Mar 2020 19:38:50 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Fri, 20 Mar 2020 19:40:50 GMT
-ENV JAVA_VERSION=jdk-11.0.6+10_openj9-0.18.1
-# Fri, 20 Mar 2020 19:41:06 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        ppc64el|ppc64le)          ESUM='942436d908aea973a661df080e32ea88a3819b4d50b95d502c140fb0a0e43fdb';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.6%2B10_openj9-0.18.1/OpenJDK11U-jdk_ppc64le_linux_openj9_11.0.6_10_openj9-0.18.1.tar.gz';          ;;        s390x)          ESUM='a255f620a971f4f537b729d53b4ad6433cb579ce3f929a19b572cfcdacb6ec93';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.6%2B10_openj9-0.18.1/OpenJDK11U-jdk_s390x_linux_openj9_11.0.6_10_openj9-0.18.1.tar.gz';          ;;        amd64|x86_64)          ESUM='1530172ee98edd129954fcdca1bf725f7b30c8bfc3cdc381c88de96b7d19e690';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.6%2B10_openj9-0.18.1/OpenJDK11U-jdk_x64_linux_openj9_11.0.6_10_openj9-0.18.1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Fri, 20 Mar 2020 19:41:10 GMT
+# Mon, 20 Apr 2020 18:50:59 GMT
+ENV JAVA_VERSION=jdk-11.0.7+10_openj9-0.20.0
+# Mon, 20 Apr 2020 18:51:11 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='0be01fdcae330e26c489d8d0d0c98c535a2af8cbd0cdcda211776ab9fcd05086';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10_openj9-0.20.0/OpenJDK11U-jdk_aarch64_linux_openj9_11.0.7_10_openj9-0.20.0.tar.gz';          ;;        ppc64el|ppc64le)          ESUM='975a6dca2620a8373039e151d7732e9a9f668cc947b718eab077e6cdb7caeefd';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10_openj9-0.20.0/OpenJDK11U-jdk_ppc64le_linux_openj9_11.0.7_10_openj9-0.20.0.tar.gz';          ;;        s390x)          ESUM='8ab61654cfedcab7061346794c53e07ea8549db97e1c804a95f2bec885daef1b';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10_openj9-0.20.0/OpenJDK11U-jdk_s390x_linux_openj9_11.0.7_10_openj9-0.20.0.tar.gz';          ;;        amd64|x86_64)          ESUM='526e89f3014fec473b24c10c2464c1343e23703114983fd171b68b1599bba561';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10_openj9-0.20.0/OpenJDK11U-jdk_x64_linux_openj9_11.0.7_10_openj9-0.20.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
+# Mon, 20 Apr 2020 18:51:15 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 20 Mar 2020 19:41:10 GMT
+# Mon, 20 Apr 2020 18:51:15 GMT
 ENV JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+UseContainerSupport -XX:+IdleTuningCompactOnIdle -XX:+IdleTuningGcOnIdle
-# Fri, 20 Mar 2020 19:41:10 GMT
+# Mon, 20 Apr 2020 18:51:15 GMT
 CMD ["jshell"]
 ```
 
@@ -205,22 +205,22 @@ CMD ["jshell"]
 		Last Modified: Fri, 20 Mar 2020 19:42:19 GMT  
 		Size: 13.0 MB (13043890 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5bdd9140a912206d3342cab5f31ddc42a485366805a4640308af2d5bd3ded616`  
-		Last Modified: Fri, 20 Mar 2020 19:44:31 GMT  
-		Size: 202.0 MB (201978933 bytes)  
+	-	`sha256:0997081166aa5eb68aee24f40357e5d27ea25db800df4b69f9356c2743d806ad`  
+		Last Modified: Mon, 20 Apr 2020 18:54:01 GMT  
+		Size: 194.6 MB (194584931 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adoptopenjdk:11-jdk-openj9` - windows version 10.0.14393.3630; amd64
 
 ```console
-$ docker pull adoptopenjdk@sha256:83e77b4d65c4ac21da371e59bdcdae679340488c94b1a1df42612cff97f6bf7c
+$ docker pull adoptopenjdk@sha256:db7f7d7c123f530c5649415d1d280a37aa48f23ca911c636938ad7092c02fd5a
 ```
 
 -	Docker Version: 18.09.11
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **6.1 GB (6117723498 bytes)**  
+-	Total Size: **6.1 GB (6105954039 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ac3eafcd4caec0cc3daff7db144afa4eed7d8d96b3ecb5e392f5cc4102aa7ab8`
+-	Image ID: `sha256:aa1c89b0d5cd4718eafcabad0a9c57277a97accab1427673a5025e63907b812f`
 -	Default Command: `["jshell"]`
 -	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
 
@@ -231,13 +231,13 @@ RUN Apply image 1607-RTM-amd64
 RUN Install update ltsc2016-amd64
 # Tue, 14 Apr 2020 21:35:40 GMT
 SHELL [powershell -Command $ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';]
-# Wed, 15 Apr 2020 18:20:20 GMT
-ENV JAVA_VERSION=jdk-11.0.6+10_openj9-0.18.1
-# Wed, 15 Apr 2020 18:23:41 GMT
-RUN Write-Host ('Downloading https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.6%2B10_openj9-0.18.1/OpenJDK11U-jdk_x64_windows_openj9_11.0.6_10_openj9-0.18.1.msi ...');         [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12;         wget https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.6%2B10_openj9-0.18.1/OpenJDK11U-jdk_x64_windows_openj9_11.0.6_10_openj9-0.18.1.msi -O 'openjdk.msi';         Write-Host ('Verifying sha256 (6297191f89d9905248c2f9b638ede5ed3dbc79eb9ac3587eb4139631479fa1ba) ...');         if ((Get-FileHash openjdk.msi -Algorithm sha256).Hash -ne '6297191f89d9905248c2f9b638ede5ed3dbc79eb9ac3587eb4139631479fa1ba') {                 Write-Host 'FAILED!';                 exit 1;         };                 New-Item -ItemType Directory -Path C:\temp | Out-Null;                 Write-Host 'Installing using MSI ...';         Start-Process -FilePath "msiexec.exe" -ArgumentList '/i', 'openjdk.msi', '/L*V', 'C:\temp\OpenJDK.log',         '/quiet', 'ADDLOCAL=FeatureEnvironment,FeatureJarFileRunWith,FeatureJavaHome' -Wait -Passthru;         Write-Host 'Removing openjdk.msi ...';         Remove-Item openjdk.msi -Force;         Remove-Item -Path C:\temp -Recurse | Out-Null;
-# Wed, 15 Apr 2020 18:23:42 GMT
+# Mon, 20 Apr 2020 17:45:26 GMT
+ENV JAVA_VERSION=jdk-11.0.7+10_openj9-0.20.0
+# Mon, 20 Apr 2020 17:48:47 GMT
+RUN Write-Host ('Downloading https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10_openj9-0.20.0/OpenJDK11U-jdk_x64_windows_openj9_11.0.7_10_openj9-0.20.0.msi ...');         [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12;         wget https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10_openj9-0.20.0/OpenJDK11U-jdk_x64_windows_openj9_11.0.7_10_openj9-0.20.0.msi -O 'openjdk.msi';         Write-Host ('Verifying sha256 (8d5736b42b16261bf8a74e6126890b8032dd08d9c7095d5b5484708f3dec2a72) ...');         if ((Get-FileHash openjdk.msi -Algorithm sha256).Hash -ne '8d5736b42b16261bf8a74e6126890b8032dd08d9c7095d5b5484708f3dec2a72') {                 Write-Host 'FAILED!';                 exit 1;         };                 New-Item -ItemType Directory -Path C:\temp | Out-Null;                 Write-Host 'Installing using MSI ...';         Start-Process -FilePath "msiexec.exe" -ArgumentList '/i', 'openjdk.msi', '/L*V', 'C:\temp\OpenJDK.log',         '/quiet', 'ADDLOCAL=FeatureEnvironment,FeatureJarFileRunWith,FeatureJavaHome' -Wait -Passthru;         Write-Host 'Removing openjdk.msi ...';         Remove-Item openjdk.msi -Force;         Remove-Item -Path C:\temp -Recurse | Out-Null;
+# Mon, 20 Apr 2020 17:48:49 GMT
 ENV JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+UseContainerSupport -XX:+IdleTuningCompactOnIdle -XX:+IdleTuningGcOnIdle
-# Wed, 15 Apr 2020 18:23:43 GMT
+# Mon, 20 Apr 2020 17:48:50 GMT
 CMD ["jshell"]
 ```
 
@@ -253,34 +253,34 @@ CMD ["jshell"]
 		Last Modified: Tue, 14 Apr 2020 22:16:36 GMT  
 		Size: 1.1 KB (1149 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:81ae653002f4ef5c2f10d983d56c05a9b75b50b2e084bdf0ff51ebccc6f68be5`  
-		Last Modified: Wed, 15 Apr 2020 19:20:14 GMT  
-		Size: 1.1 KB (1120 bytes)  
+	-	`sha256:2fb46dd1e5ab3f79811729cc3487559cdcbcfe529cd65624ceb5a0c337475fba`  
+		Last Modified: Mon, 20 Apr 2020 18:15:58 GMT  
+		Size: 1.1 KB (1129 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:84dde7cd0dec6c732ebec3c3db5f8d1e702ef249615cb52c8f4ec8311c51a652`  
-		Last Modified: Wed, 15 Apr 2020 19:21:11 GMT  
-		Size: 389.7 MB (389651382 bytes)  
+	-	`sha256:2fca3cb99ca9b60bb074f13baa50f14c6e6043bfbcfeed2e9335bab837d4231f`  
+		Last Modified: Mon, 20 Apr 2020 18:16:31 GMT  
+		Size: 377.9 MB (377881914 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5e35947c1d7416d0b95c56199f71d79d1ae04e1aa7b42f2dbbd90110891e9659`  
-		Last Modified: Wed, 15 Apr 2020 19:20:15 GMT  
-		Size: 1.1 KB (1146 bytes)  
+	-	`sha256:caad3dff5cfaa6a45ab68411963f25379c9a6db367421dbeab0cf0423496f67d`  
+		Last Modified: Mon, 20 Apr 2020 18:15:58 GMT  
+		Size: 1.1 KB (1124 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:75747b75aa277be5a7c2d113f200c7e3e3f5a64cb3bcdadf49c4e300052303ba`  
-		Last Modified: Wed, 15 Apr 2020 19:20:14 GMT  
-		Size: 1.1 KB (1128 bytes)  
+	-	`sha256:7b554f66f25be5776bb80040ba8781e244112b4754bfae1e19f03d21bbaddc53`  
+		Last Modified: Mon, 20 Apr 2020 18:15:59 GMT  
+		Size: 1.1 KB (1150 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adoptopenjdk:11-jdk-openj9` - windows version 10.0.17763.1158; amd64
 
 ```console
-$ docker pull adoptopenjdk@sha256:cb0e005e748d0bc35b796e8c79b36028fa8ae72dfeb5a305aef323cf400899cb
+$ docker pull adoptopenjdk@sha256:c760c40410bbf9e7905fb51e695908547b45ec69718c7ead4be9430bbf411b83
 ```
 
 -	Docker Version: 18.09.11
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **2.7 GB (2655190940 bytes)**  
+-	Total Size: **2.6 GB (2643429106 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0bc162afd83581a733e7dc04f5b917362d27084e5eb2f51aeaa775fcbed23df3`
+-	Image ID: `sha256:3212e74677a972adf2ec0b70886f0a58b525a81aaf9aa4b95bff8786cf4386a9`
 -	Default Command: `["jshell"]`
 -	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
 
@@ -291,13 +291,13 @@ RUN Apply image 1809-RTM-amd64
 RUN Install update 1809-amd64
 # Tue, 14 Apr 2020 21:32:35 GMT
 SHELL [powershell -Command $ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';]
-# Wed, 15 Apr 2020 18:24:01 GMT
-ENV JAVA_VERSION=jdk-11.0.6+10_openj9-0.18.1
-# Wed, 15 Apr 2020 18:26:36 GMT
-RUN Write-Host ('Downloading https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.6%2B10_openj9-0.18.1/OpenJDK11U-jdk_x64_windows_openj9_11.0.6_10_openj9-0.18.1.msi ...');         [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12;         wget https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.6%2B10_openj9-0.18.1/OpenJDK11U-jdk_x64_windows_openj9_11.0.6_10_openj9-0.18.1.msi -O 'openjdk.msi';         Write-Host ('Verifying sha256 (6297191f89d9905248c2f9b638ede5ed3dbc79eb9ac3587eb4139631479fa1ba) ...');         if ((Get-FileHash openjdk.msi -Algorithm sha256).Hash -ne '6297191f89d9905248c2f9b638ede5ed3dbc79eb9ac3587eb4139631479fa1ba') {                 Write-Host 'FAILED!';                 exit 1;         };                 New-Item -ItemType Directory -Path C:\temp | Out-Null;                 Write-Host 'Installing using MSI ...';         Start-Process -FilePath "msiexec.exe" -ArgumentList '/i', 'openjdk.msi', '/L*V', 'C:\temp\OpenJDK.log',         '/quiet', 'ADDLOCAL=FeatureEnvironment,FeatureJarFileRunWith,FeatureJavaHome' -Wait -Passthru;         Write-Host 'Removing openjdk.msi ...';         Remove-Item openjdk.msi -Force;         Remove-Item -Path C:\temp -Recurse | Out-Null;
-# Wed, 15 Apr 2020 18:26:37 GMT
+# Mon, 20 Apr 2020 17:49:08 GMT
+ENV JAVA_VERSION=jdk-11.0.7+10_openj9-0.20.0
+# Mon, 20 Apr 2020 17:51:43 GMT
+RUN Write-Host ('Downloading https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10_openj9-0.20.0/OpenJDK11U-jdk_x64_windows_openj9_11.0.7_10_openj9-0.20.0.msi ...');         [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12;         wget https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10_openj9-0.20.0/OpenJDK11U-jdk_x64_windows_openj9_11.0.7_10_openj9-0.20.0.msi -O 'openjdk.msi';         Write-Host ('Verifying sha256 (8d5736b42b16261bf8a74e6126890b8032dd08d9c7095d5b5484708f3dec2a72) ...');         if ((Get-FileHash openjdk.msi -Algorithm sha256).Hash -ne '8d5736b42b16261bf8a74e6126890b8032dd08d9c7095d5b5484708f3dec2a72') {                 Write-Host 'FAILED!';                 exit 1;         };                 New-Item -ItemType Directory -Path C:\temp | Out-Null;                 Write-Host 'Installing using MSI ...';         Start-Process -FilePath "msiexec.exe" -ArgumentList '/i', 'openjdk.msi', '/L*V', 'C:\temp\OpenJDK.log',         '/quiet', 'ADDLOCAL=FeatureEnvironment,FeatureJarFileRunWith,FeatureJavaHome' -Wait -Passthru;         Write-Host 'Removing openjdk.msi ...';         Remove-Item openjdk.msi -Force;         Remove-Item -Path C:\temp -Recurse | Out-Null;
+# Mon, 20 Apr 2020 17:51:44 GMT
 ENV JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+UseContainerSupport -XX:+IdleTuningCompactOnIdle -XX:+IdleTuningGcOnIdle
-# Wed, 15 Apr 2020 18:26:39 GMT
+# Mon, 20 Apr 2020 17:51:45 GMT
 CMD ["jshell"]
 ```
 
@@ -313,19 +313,19 @@ CMD ["jshell"]
 		Last Modified: Tue, 14 Apr 2020 22:15:56 GMT  
 		Size: 1.1 KB (1093 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:74d3ab586d2e0c5c8f9fcd9ee256bc422672c446eeb6c929055c910340214484`  
-		Last Modified: Wed, 15 Apr 2020 19:21:22 GMT  
+	-	`sha256:963d6a2e0981d9b6a994ccdc70eac22c8cbc3d9ea90e55dd36791d3522a8e75d`  
+		Last Modified: Mon, 20 Apr 2020 18:17:14 GMT  
+		Size: 1.1 KB (1149 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:d1c7d94db0f21c0471fbb8c003af60fec3bb3dfa3568d5b76ab9bcab0b549c96`  
+		Last Modified: Mon, 20 Apr 2020 18:17:42 GMT  
+		Size: 372.7 MB (372717340 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:8616d98ab3231f72b62fd0b5c5949b890ce12c34c34cc45cc0d7cdc208e6f1d4`  
+		Last Modified: Mon, 20 Apr 2020 18:17:13 GMT  
 		Size: 1.1 KB (1124 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:24f14b565c95877aad713d0ce487b12a39a74ded62af837be47451bc2d8559ed`  
-		Last Modified: Wed, 15 Apr 2020 19:22:17 GMT  
-		Size: 384.5 MB (384479199 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b60174610d4243b093f8d13ad0c96a0ac57113bd4b18c38a592d7d7afb94e992`  
-		Last Modified: Wed, 15 Apr 2020 19:21:22 GMT  
-		Size: 1.1 KB (1121 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:947af947fcbd1228cb6b7c1926070096367e640734b372749e239d5b4ffcab3d`  
-		Last Modified: Wed, 15 Apr 2020 19:21:22 GMT  
-		Size: 1.1 KB (1126 bytes)  
+	-	`sha256:741a71f8f677e01aafca7b621a87917de47fae009f9061e65ae13442f8382eaa`  
+		Last Modified: Mon, 20 Apr 2020 18:17:13 GMT  
+		Size: 1.1 KB (1123 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip

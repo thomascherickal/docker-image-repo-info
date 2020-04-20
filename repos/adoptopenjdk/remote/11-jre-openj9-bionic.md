@@ -1,7 +1,7 @@
 ## `adoptopenjdk:11-jre-openj9-bionic`
 
 ```console
-$ docker pull adoptopenjdk@sha256:e2ce19287341d4fed486c02414d9fa62c1e3633034e98cd2958cb024e07bc54e
+$ docker pull adoptopenjdk@sha256:f287d51ab2b828cead25d47555c9bdd492ae2cf34f2c5287d2d552aafb31be77
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -13,14 +13,14 @@ $ docker pull adoptopenjdk@sha256:e2ce19287341d4fed486c02414d9fa62c1e3633034e98c
 ### `adoptopenjdk:11-jre-openj9-bionic` - linux; amd64
 
 ```console
-$ docker pull adoptopenjdk@sha256:3db3a587d0e9b8f030252aa585e128c5f809d1688dd62893a2cf992d9d5888b4
+$ docker pull adoptopenjdk@sha256:7fe60cd8d82fcfe3ebef1199447f91f8afd7e449c650960af458bf0ebc2f9694
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **83.5 MB (83487750 bytes)**  
+-	Total Size: **82.4 MB (82419835 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0c70ee6cc6c6d268f99a88f998b8e066c652a2bbcb83caf5abcd40e975883b04`
+-	Image ID: `sha256:7b82b061e3a53f03a1e95b26b8ac492b8c9fcf62d4d33174da043b0bd3d4ab15`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
@@ -38,13 +38,13 @@ CMD ["/bin/bash"]
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Fri, 20 Mar 2020 19:37:33 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Fri, 20 Mar 2020 19:39:08 GMT
-ENV JAVA_VERSION=jdk-11.0.6+10_openj9-0.18.1
-# Fri, 20 Mar 2020 19:39:28 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        ppc64el|ppc64le)          ESUM='47c3e176cc3f32e0ab7eeb51a00d4f634192379657fe223fe23366e004a2aedb';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.6%2B10_openj9-0.18.1/OpenJDK11U-jre_ppc64le_linux_openj9_11.0.6_10_openj9-0.18.1.tar.gz';          ;;        s390x)          ESUM='74b08517185fd6b77ffc2f26e5673a4d5cdd9c726ba3ac0c7dbddaf2cd5b32de';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.6%2B10_openj9-0.18.1/OpenJDK11U-jre_s390x_linux_openj9_11.0.6_10_openj9-0.18.1.tar.gz';          ;;        amd64|x86_64)          ESUM='056e4b5f7166f5daa44f36b06c735913bda52831d2e77fa2ac371505c66d10c1';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.6%2B10_openj9-0.18.1/OpenJDK11U-jre_x64_linux_openj9_11.0.6_10_openj9-0.18.1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Fri, 20 Mar 2020 19:39:28 GMT
+# Mon, 20 Apr 2020 17:23:15 GMT
+ENV JAVA_VERSION=jdk-11.0.7+10_openj9-0.20.0
+# Mon, 20 Apr 2020 17:23:36 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='37ae26443abb02d2ab041eced9be948f0d20db03183aaf3c159ef682eeeabf9b';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10_openj9-0.20.0/OpenJDK11U-jre_aarch64_linux_openj9_11.0.7_10_openj9-0.20.0.tar.gz';          ;;        ppc64el|ppc64le)          ESUM='ffd15612796a6249309e72bb73deefeb4fa8bf1940e4bfcf3f94079be8d70717';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10_openj9-0.20.0/OpenJDK11U-jre_ppc64le_linux_openj9_11.0.7_10_openj9-0.20.0.tar.gz';          ;;        s390x)          ESUM='116b41f5ffe5af3e91a0e5289750a3eddadda42c31fd8aa90e5bca0e8b1b6313';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10_openj9-0.20.0/OpenJDK11U-jre_s390x_linux_openj9_11.0.7_10_openj9-0.20.0.tar.gz';          ;;        amd64|x86_64)          ESUM='08258a767a6953bde21d15ef3c08e776d83257afa4acc52b55c70e1ac02f0489';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10_openj9-0.20.0/OpenJDK11U-jre_x64_linux_openj9_11.0.7_10_openj9-0.20.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
+# Mon, 20 Apr 2020 17:23:36 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 20 Mar 2020 19:39:29 GMT
+# Mon, 20 Apr 2020 17:23:36 GMT
 ENV JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+UseContainerSupport -XX:+IdleTuningCompactOnIdle -XX:+IdleTuningGcOnIdle
 ```
 
@@ -69,22 +69,22 @@ ENV JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+UseContainerSupport 
 		Last Modified: Fri, 20 Mar 2020 19:40:17 GMT  
 		Size: 13.3 MB (13325178 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:44fdcbe64ebb670a14e250330fe48853017c050293d6ed5e7638183ac7039037`  
-		Last Modified: Fri, 20 Mar 2020 19:43:10 GMT  
-		Size: 43.4 MB (43435603 bytes)  
+	-	`sha256:5d37d585fb148d0ddac0a51058f3e8e26d07dfd9572a12a3fa0d9c8b27d74361`  
+		Last Modified: Mon, 20 Apr 2020 17:27:14 GMT  
+		Size: 42.4 MB (42367688 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adoptopenjdk:11-jre-openj9-bionic` - linux; ppc64le
 
 ```console
-$ docker pull adoptopenjdk@sha256:819105ce690fee558eed8e6150782fbe318a8fd305826c6aa06ac48b4327665d
+$ docker pull adoptopenjdk@sha256:4cfec7e09f8b636412b80fa051bfa5fadbbc3cfef91af3bed9d150cdfd29e2d3
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **87.4 MB (87379234 bytes)**  
+-	Total Size: **87.2 MB (87167866 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7ab9422049071a40595d783bcb3c883bf1a9ceac668eae3a830158671e982610`
+-	Image ID: `sha256:561ff097e0228384771b6da46cf2f6ac941ba78ff18ea23c8cefdbd4269e2327`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
@@ -102,13 +102,13 @@ CMD ["/bin/bash"]
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Fri, 20 Mar 2020 19:44:04 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Fri, 20 Mar 2020 19:49:07 GMT
-ENV JAVA_VERSION=jdk-11.0.6+10_openj9-0.18.1
-# Fri, 20 Mar 2020 19:50:07 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        ppc64el|ppc64le)          ESUM='47c3e176cc3f32e0ab7eeb51a00d4f634192379657fe223fe23366e004a2aedb';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.6%2B10_openj9-0.18.1/OpenJDK11U-jre_ppc64le_linux_openj9_11.0.6_10_openj9-0.18.1.tar.gz';          ;;        s390x)          ESUM='74b08517185fd6b77ffc2f26e5673a4d5cdd9c726ba3ac0c7dbddaf2cd5b32de';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.6%2B10_openj9-0.18.1/OpenJDK11U-jre_s390x_linux_openj9_11.0.6_10_openj9-0.18.1.tar.gz';          ;;        amd64|x86_64)          ESUM='056e4b5f7166f5daa44f36b06c735913bda52831d2e77fa2ac371505c66d10c1';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.6%2B10_openj9-0.18.1/OpenJDK11U-jre_x64_linux_openj9_11.0.6_10_openj9-0.18.1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Fri, 20 Mar 2020 19:50:13 GMT
+# Mon, 20 Apr 2020 17:26:35 GMT
+ENV JAVA_VERSION=jdk-11.0.7+10_openj9-0.20.0
+# Mon, 20 Apr 2020 17:27:50 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='37ae26443abb02d2ab041eced9be948f0d20db03183aaf3c159ef682eeeabf9b';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10_openj9-0.20.0/OpenJDK11U-jre_aarch64_linux_openj9_11.0.7_10_openj9-0.20.0.tar.gz';          ;;        ppc64el|ppc64le)          ESUM='ffd15612796a6249309e72bb73deefeb4fa8bf1940e4bfcf3f94079be8d70717';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10_openj9-0.20.0/OpenJDK11U-jre_ppc64le_linux_openj9_11.0.7_10_openj9-0.20.0.tar.gz';          ;;        s390x)          ESUM='116b41f5ffe5af3e91a0e5289750a3eddadda42c31fd8aa90e5bca0e8b1b6313';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10_openj9-0.20.0/OpenJDK11U-jre_s390x_linux_openj9_11.0.7_10_openj9-0.20.0.tar.gz';          ;;        amd64|x86_64)          ESUM='08258a767a6953bde21d15ef3c08e776d83257afa4acc52b55c70e1ac02f0489';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10_openj9-0.20.0/OpenJDK11U-jre_x64_linux_openj9_11.0.7_10_openj9-0.20.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
+# Mon, 20 Apr 2020 17:27:59 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 20 Mar 2020 19:50:16 GMT
+# Mon, 20 Apr 2020 17:28:02 GMT
 ENV JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+UseContainerSupport -XX:+IdleTuningCompactOnIdle -XX:+IdleTuningGcOnIdle
 ```
 
@@ -133,22 +133,22 @@ ENV JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+UseContainerSupport 
 		Last Modified: Fri, 20 Mar 2020 19:52:26 GMT  
 		Size: 14.0 MB (13970663 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3345e2bca8970fbc68cea2783110e630367c3bde0dc62d75e6f7d52a4289b4c7`  
-		Last Modified: Fri, 20 Mar 2020 19:56:36 GMT  
-		Size: 43.0 MB (42972407 bytes)  
+	-	`sha256:6387e48c4b0f836d9e9fc88319f584852cc3ab6ea5e5fb27e01b6d8171176d33`  
+		Last Modified: Mon, 20 Apr 2020 17:34:38 GMT  
+		Size: 42.8 MB (42761039 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adoptopenjdk:11-jre-openj9-bionic` - linux; s390x
 
 ```console
-$ docker pull adoptopenjdk@sha256:c268d57ad14b8cc11ae24614ba4e04cdd5c5ce2607b579e147012b1792878290
+$ docker pull adoptopenjdk@sha256:5b46540ada36755b8c2de699903193f9065588ed7d736b93a2abbfa9f4b5cf56
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **81.1 MB (81120783 bytes)**  
+-	Total Size: **80.1 MB (80083558 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:050b783e9769ea74aea6ab3c9fc470e639b4f7db2e89fceeaafaf1616ffc76b6`
+-	Image ID: `sha256:17856e39e1e2f7c180446e4f454238985d01c48ce95c2db1b94d447573a4c31b`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
@@ -166,13 +166,13 @@ CMD ["/bin/bash"]
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Fri, 20 Mar 2020 19:38:50 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Fri, 20 Mar 2020 19:40:50 GMT
-ENV JAVA_VERSION=jdk-11.0.6+10_openj9-0.18.1
-# Fri, 20 Mar 2020 19:41:20 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        ppc64el|ppc64le)          ESUM='47c3e176cc3f32e0ab7eeb51a00d4f634192379657fe223fe23366e004a2aedb';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.6%2B10_openj9-0.18.1/OpenJDK11U-jre_ppc64le_linux_openj9_11.0.6_10_openj9-0.18.1.tar.gz';          ;;        s390x)          ESUM='74b08517185fd6b77ffc2f26e5673a4d5cdd9c726ba3ac0c7dbddaf2cd5b32de';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.6%2B10_openj9-0.18.1/OpenJDK11U-jre_s390x_linux_openj9_11.0.6_10_openj9-0.18.1.tar.gz';          ;;        amd64|x86_64)          ESUM='056e4b5f7166f5daa44f36b06c735913bda52831d2e77fa2ac371505c66d10c1';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.6%2B10_openj9-0.18.1/OpenJDK11U-jre_x64_linux_openj9_11.0.6_10_openj9-0.18.1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Fri, 20 Mar 2020 19:41:22 GMT
+# Mon, 20 Apr 2020 18:50:59 GMT
+ENV JAVA_VERSION=jdk-11.0.7+10_openj9-0.20.0
+# Mon, 20 Apr 2020 18:51:24 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='37ae26443abb02d2ab041eced9be948f0d20db03183aaf3c159ef682eeeabf9b';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10_openj9-0.20.0/OpenJDK11U-jre_aarch64_linux_openj9_11.0.7_10_openj9-0.20.0.tar.gz';          ;;        ppc64el|ppc64le)          ESUM='ffd15612796a6249309e72bb73deefeb4fa8bf1940e4bfcf3f94079be8d70717';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10_openj9-0.20.0/OpenJDK11U-jre_ppc64le_linux_openj9_11.0.7_10_openj9-0.20.0.tar.gz';          ;;        s390x)          ESUM='116b41f5ffe5af3e91a0e5289750a3eddadda42c31fd8aa90e5bca0e8b1b6313';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10_openj9-0.20.0/OpenJDK11U-jre_s390x_linux_openj9_11.0.7_10_openj9-0.20.0.tar.gz';          ;;        amd64|x86_64)          ESUM='08258a767a6953bde21d15ef3c08e776d83257afa4acc52b55c70e1ac02f0489';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10_openj9-0.20.0/OpenJDK11U-jre_x64_linux_openj9_11.0.7_10_openj9-0.20.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
+# Mon, 20 Apr 2020 18:51:25 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 20 Mar 2020 19:41:22 GMT
+# Mon, 20 Apr 2020 18:51:26 GMT
 ENV JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+UseContainerSupport -XX:+IdleTuningCompactOnIdle -XX:+IdleTuningGcOnIdle
 ```
 
@@ -197,7 +197,7 @@ ENV JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+UseContainerSupport 
 		Last Modified: Fri, 20 Mar 2020 19:42:19 GMT  
 		Size: 13.0 MB (13043890 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9330d6d8885fbcc7570029d783b125d08ada709bf3076116972aa3d9ff1b0967`  
-		Last Modified: Fri, 20 Mar 2020 19:44:49 GMT  
-		Size: 42.7 MB (42675068 bytes)  
+	-	`sha256:51efcb1bc464ef1a222ab423a0a1a53e964c28d5c63d83e13de8776fe584407b`  
+		Last Modified: Mon, 20 Apr 2020 18:54:13 GMT  
+		Size: 41.6 MB (41637843 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
