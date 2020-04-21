@@ -1,10 +1,10 @@
-# `postfixadmin:3.2.3-fpm-alpine`
+# `postfixadmin:3.2.4-fpm-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:6b2ac559031780f91d9797c0a5c2d3d5c71dd120899b24115c7db4d7980d6dd8`
-- Created: `2020-03-24T04:54:45.141999317Z`
-- Virtual Size: ~ 85.92 Mb  
+- Image ID: `sha256:0268d567d0e1ad20d705f920d3abc3537f0b96e40609bd080f09a626cad805b8`
+- Created: `2020-04-17T20:28:00.779567649Z`
+- Virtual Size: ~ 84.75 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/docker-entrypoint.sh"]`
@@ -16,15 +16,15 @@
   - `PHP_EXTRA_CONFIGURE_ARGS=--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi`
   - `PHP_CFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
-  - `PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie`
+  - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=CBAF69F173A0FEA4B537F470D66C9593118BCCB6 F38252826ACD957EF380D39F2F7956BC5DA04B5D`
-  - `PHP_VERSION=7.3.16`
-  - `PHP_URL=https://www.php.net/get/php-7.3.16.tar.xz/from/this/mirror`
-  - `PHP_ASC_URL=https://www.php.net/get/php-7.3.16.tar.xz.asc/from/this/mirror`
-  - `PHP_SHA256=91aaee3dbdc71b69b4f3292f9d99211172a2fa926c3f3bbdb0e85dab03dd2bcb`
+  - `PHP_VERSION=7.3.17`
+  - `PHP_URL=https://www.php.net/get/php-7.3.17.tar.xz/from/this/mirror`
+  - `PHP_ASC_URL=https://www.php.net/get/php-7.3.17.tar.xz.asc/from/this/mirror`
+  - `PHP_SHA256=6a30304c27f7e7a94538f5ffec599f600ee93aedbbecad8aa4f8bec539b10ad8`
   - `PHP_MD5=`
-  - `POSTFIXADMIN_VERSION=3.2.3`
-  - `POSTFIXADMIN_SHA512=d44addb9a3ca830caf55b603363054df561d659957f21cab7523465ebf02ca18abe7fcf298fe718d957d0b7bf5613e2dde69c78c26e0f7f6f595d79b28fe08ab`
+  - `POSTFIXADMIN_VERSION=3.2.4`
+  - `POSTFIXADMIN_SHA512=2bd7ae05addbaf3c6c7eebea16ec1e21b2c67c8e6161446ed82a9553c26c04e19c1ec9ce248a9b9df504df56d309590259e6f04907b04b593548028b40e40d47`
 - Labels:
   - `maintainer=David Goodwin <david@codepoets.co.uk> (@DavidGoodwin)`
 
@@ -166,23 +166,6 @@ MPL-2.0 GPL-2.0-or-later
 
 ```
 
-### `apk` package: `coreutils`
-
-```console
-coreutils-8.31-r0 description:
-The basic file, shell and text manipulation utilities
-
-coreutils-8.31-r0 webpage:
-https://www.gnu.org/software/coreutils/
-
-coreutils-8.31-r0 installed size:
-1122304
-
-coreutils-8.31-r0 license:
-GPL-3.0-or-later
-
-```
-
 ### `apk` package: `curl`
 
 ```console
@@ -231,23 +214,6 @@ libacl-2.2.53-r0 installed size:
 
 libacl-2.2.53-r0 license:
 LGPL-2.1-or-later AND GPL-2.0-or-later
-
-```
-
-### `apk` package: `libattr`
-
-```console
-libattr-2.4.48-r0 description:
-Utilities for managing filesystem extended attributes (libraries)
-
-libattr-2.4.48-r0 webpage:
-https://savannah.nongnu.org/projects/attr
-
-libattr-2.4.48-r0 installed size:
-32768
-
-libattr-2.4.48-r0 license:
-LGPL-2.1-or-later
 
 ```
 
@@ -475,16 +441,16 @@ MIT BSD GPL2+
 ### `apk` package: `ncurses-libs`
 
 ```console
-ncurses-libs-6.1_p20200118-r2 description:
+ncurses-libs-6.1_p20200118-r3 description:
 Ncurses libraries
 
-ncurses-libs-6.1_p20200118-r2 webpage:
+ncurses-libs-6.1_p20200118-r3 webpage:
 https://invisible-island.net/ncurses/
 
-ncurses-libs-6.1_p20200118-r2 installed size:
+ncurses-libs-6.1_p20200118-r3 installed size:
 507904
 
-ncurses-libs-6.1_p20200118-r2 license:
+ncurses-libs-6.1_p20200118-r3 license:
 MIT
 
 ```
@@ -492,16 +458,16 @@ MIT
 ### `apk` package: `ncurses-terminfo-base`
 
 ```console
-ncurses-terminfo-base-6.1_p20200118-r2 description:
+ncurses-terminfo-base-6.1_p20200118-r3 description:
 Descriptions of common terminals
 
-ncurses-terminfo-base-6.1_p20200118-r2 webpage:
+ncurses-terminfo-base-6.1_p20200118-r3 webpage:
 https://invisible-island.net/ncurses/
 
-ncurses-terminfo-base-6.1_p20200118-r2 installed size:
+ncurses-terminfo-base-6.1_p20200118-r3 installed size:
 217088
 
-ncurses-terminfo-base-6.1_p20200118-r2 license:
+ncurses-terminfo-base-6.1_p20200118-r3 license:
 MIT
 
 ```
