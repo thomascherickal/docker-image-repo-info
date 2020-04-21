@@ -877,20 +877,13 @@ Licenses: (parsed from: `/usr/share/doc/iproute2/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris iproute2=5.5.0-1
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.5.0-1.dsc' iproute2_5.5.0-1.dsc 1833 SHA256:2752a4084366fd76bac502838e01626ec9a0df6869338494955d1afdb0808e76
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.5.0.orig.tar.xz' iproute2_5.5.0.orig.tar.xz 747756 SHA256:bac543435cac208a11db44c9cc8e35aa902befef8750594654ee71941c388f7b
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.5.0-1.debian.tar.xz' iproute2_5.5.0-1.debian.tar.xz 144400 SHA256:33b6ba2e5acee2401f66049618b5fc5a26c92f9bd5972fd86fc7fc492cf886e9
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/iproute2/5.5.0-1/
 
-- https://sources.debian.net/src/iproute2/5.5.0-1/ (for browsing the source)
-- https://sources.debian.net/src/iproute2/5.5.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/iproute2/5.5.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `iptables=1.8.4-3`
 
@@ -1168,20 +1161,13 @@ Licenses: (parsed from: `/usr/share/doc/libmnl0/copyright`)
 - `GPL-2+`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libmnl=1.0.4-2
-'http://deb.debian.org/debian/pool/main/libm/libmnl/libmnl_1.0.4-2.dsc' libmnl_1.0.4-2.dsc 1994 SHA256:131106bb7eb4a94fa8e8c135f92c38068d0b42681f166eb159137f171c568630
-'http://deb.debian.org/debian/pool/main/libm/libmnl/libmnl_1.0.4.orig.tar.bz2' libmnl_1.0.4.orig.tar.bz2 301270 SHA256:171f89699f286a5854b72b91d06e8f8e3683064c5901fb09d954a9ab6f551f81
-'http://deb.debian.org/debian/pool/main/libm/libmnl/libmnl_1.0.4-2.debian.tar.xz' libmnl_1.0.4-2.debian.tar.xz 7512 SHA256:208d62777081ffe6d7dffde0d7370cefb03fe0a6a0486a1b50f6b7b8e9a5b068
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libmnl/1.0.4-2/
 
-- https://sources.debian.net/src/libmnl/1.0.4-2/ (for browsing the source)
-- https://sources.debian.net/src/libmnl/1.0.4-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libmnl/1.0.4-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libseccomp=2.4.3-1`
 
