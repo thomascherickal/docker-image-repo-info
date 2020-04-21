@@ -2959,14 +2959,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python-catkin-pkg-modules=0.4.16-1
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-catkin-pkg-modules/python-catkin-pkg-modules_0.4.16-1.debian.tar.xz' python-catkin-pkg-modules_0.4.16-1.debian.tar.xz 1948 SHA512:ca9bd5f720ad242f03f42b56b6c6cae04f633b4c552713a22d1a69e890229ac4a391e59827e4d5e02173bf1aa35799f8e119225a3d2e6108db9754b43af19814
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-catkin-pkg-modules/python-catkin-pkg-modules_0.4.16-1.dsc' python-catkin-pkg-modules_0.4.16-1.dsc 998 SHA512:e76d2de2056aab70d69147295f422e53728023039954d85e39188f4f1917f743dcca2ecda56c07b7d3ab3b1af773a693166d5033b030c63bcf0c35b20c5a3189
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-catkin-pkg-modules/python-catkin-pkg-modules_0.4.16.orig.tar.gz' python-catkin-pkg-modules_0.4.16.orig.tar.gz 60929 SHA512:ccec63fbb6047932ceae296ff2994edd7649138afa869f46320ae35cf6f4963bf20ab9ad711b7c00b31a663d62ccdf0069c23c325f49d167c9d29895dbbd280c
-```
 
 ### `dpkg` source package: `python-catkin-pkg=0.4.16-100`
 
@@ -2978,14 +2973,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python-catkin-pkg=0.4.16-100
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-catkin-pkg/python-catkin-pkg_0.4.16-100.debian.tar.xz' python-catkin-pkg_0.4.16-100.debian.tar.xz 1936 SHA512:c8f2b80f2589cc1ec475836ba6f1d0f1c2d9cc752ef87877bac13c6fc281b67f6d71bd79547b2eee90b01fba185072025716727e7574aab740340e70d01feb20
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-catkin-pkg/python-catkin-pkg_0.4.16-100.dsc' python-catkin-pkg_0.4.16-100.dsc 938 SHA512:9bb19571ec5087c672a8a8a8b2724364e05b8198b3d2abbac38fbae2cfe0b5c29f099577baeb99e17c6295bb268646bc3c56a4259d5e9a2ab24129427acd39ac
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-catkin-pkg/python-catkin-pkg_0.4.16.orig.tar.gz' python-catkin-pkg_0.4.16.orig.tar.gz 13672 SHA512:6f59ae23161b3b68141c2d2a8d2a50c4bb1506860ec2942a4da11e5453985d055385c44b462e34ad3cc5be365e98532b34f02ccb2d8cd262cfc434fc949ec9ae
-```
 
 ### `dpkg` source package: `python-crypto=2.6.1-6ubuntu0.16.04.3`
 
@@ -3171,14 +3161,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python-rosdistro-modules=0.8.0-1
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rosdistro-modules/python-rosdistro-modules_0.8.0-1.debian.tar.xz' python-rosdistro-modules_0.8.0-1.debian.tar.xz 1928 SHA512:41692f4a6ff1bac0bc223b90318188e76daa0731d61e563ee70c00f1dcb044319abf7c7b1051cb14226723f46d03dea9342f2468b222dd44b20496cf74dbc9c1
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rosdistro-modules/python-rosdistro-modules_0.8.0-1.dsc' python-rosdistro-modules_0.8.0-1.dsc 982 SHA512:59a5694e8c173669686e8106de7e169737e8fced4a7116e6dafc107738933a6782533dbfadbfb17c51a757bc19378fbd885b01d8de18af954dc249deb85e622f
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rosdistro-modules/python-rosdistro-modules_0.8.0.orig.tar.gz' python-rosdistro-modules_0.8.0.orig.tar.gz 41948 SHA512:2262f4e1807e3dafbfaa4ad3e8851299741ba128b9d6fb56e805992543ba4290de5198c0e310c7efc4528700ea00eb6ab83bae5bc64a22856ba30a9f9d1aaa60
-```
 
 ### `dpkg` source package: `python-rosdistro=0.8.0-100`
 
@@ -3190,14 +3175,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python-rosdistro=0.8.0-100
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rosdistro/python-rosdistro_0.8.0-100.debian.tar.xz' python-rosdistro_0.8.0-100.debian.tar.xz 1912 SHA512:2d6ab6c8dcf41e8bae3ec9032550fe170c10b064870a14070815b56fffea523cddd73b23a5b9b697c807c07c0ee5ec59038a623f97079953becdf5a6f4dcfeb7
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rosdistro/python-rosdistro_0.8.0-100.dsc' python-rosdistro_0.8.0-100.dsc 922 SHA512:979772eb953a7b70e3efea06e2f52002fd682764989a10903ef0fc80aea892c430f98841082303d58516815d37e343ab7cb536b3d1f65aac6134fcded98447c0
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rosdistro/python-rosdistro_0.8.0.orig.tar.gz' python-rosdistro_0.8.0.orig.tar.gz 10107 SHA512:2f5e4144a0e5b90ba78f97544e68751d9f16792b5f20847e785aeb844fa86bf0de531cd1bcf032612decd1daca3808b15fef17f70d64163fd1e3cb0b4b8fa954
-```
 
 ### `dpkg` source package: `python-rosinstall=0.7.8-1`
 
