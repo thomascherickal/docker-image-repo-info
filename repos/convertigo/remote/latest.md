@@ -1,7 +1,7 @@
 ## `convertigo:latest`
 
 ```console
-$ docker pull convertigo@sha256:89fea3d53e07360f1f13620348dffcd23a4cbbad5ba803a5c3a5a322f6c23b8f
+$ docker pull convertigo@sha256:23200899ed09f61f8809fbe95ea4cf894d95bb0837927753599d4bc8a7ccaecd
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull convertigo@sha256:89fea3d53e07360f1f13620348dffcd23a4cbbad5ba803a5
 ### `convertigo:latest` - linux; amd64
 
 ```console
-$ docker pull convertigo@sha256:204ad3e0dacb2fa65f3ab8bc4dbabba3c5a24b911fa44a592c1895e2256f7105
+$ docker pull convertigo@sha256:8808cb0172edcd4a02853c7328690e87a450b183ed1915f469defbf541f4e643
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **429.3 MB (429299334 bytes)**  
+-	Total Size: **429.5 MB (429505742 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e99be37adacf1d50a48ff5ac7f1f2b131947c9f1faa586e1c98955e591d5170b`
+-	Image ID: `sha256:8851fe3602fb6f1dbc94ab84863cbc7c601078b4b9c7ccef5bcbae1a4cb3122f`
 -	Entrypoint: `["tini","--","\/docker-entrypoint.sh"]`
 -	Default Command: `["convertigo"]`
 
@@ -105,29 +105,29 @@ ENV TINI_GPG_KEYS=6380DC428747F6C393FEACA59A84159D7001A4E5
 RUN export GNUPGHOME="$(mktemp -d)"   && ( gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$GOSU_GPG_KEYS"   || gpg --batch --keyserver pgp.mit.edu --recv-keys "$GOSU_GPG_KEYS"   || gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$GOSU_GPG_KEYS"   || gpg --batch --keyserver keyserver.pgp.com --recv-keys "$GOSU_GPG_KEYS" )   && curl -o /usr/local/bin/gosu -fSL "https://github.com/tianon/gosu/releases/download/${GOSU_VERSION}/gosu-$(dpkg --print-architecture)"   && curl -o /usr/local/bin/gosu.asc -fSL "https://github.com/tianon/gosu/releases/download/${GOSU_VERSION}/gosu-$(dpkg --print-architecture).asc"   && gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu   && rm /usr/local/bin/gosu.asc   && chmod +x /usr/local/bin/gosu   && ( gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$TINI_GPG_KEYS"   || gpg --batch --keyserver pgp.mit.edu --recv-keys "$TINI_GPG_KEYS"   || gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$TINI_GPG_KEYS"   || gpg --batch --keyserver keyserver.pgp.com --recv-keys "$TINI_GPG_KEYS" )   && curl -o /usr/local/bin/tini -fSL "https://github.com/krallin/tini/releases/download/v${TINI_VERSION}/tini-$(dpkg --print-architecture)"   && curl -o /usr/local/bin/tini.asc -fSL "https://github.com/krallin/tini/releases/download/v${TINI_VERSION}/tini-$(dpkg --print-architecture).asc"   && gpg --batch --verify /usr/local/bin/tini.asc /usr/local/bin/tini   && rm /usr/local/bin/tini.asc   && chmod +x /usr/local/bin/tini   && rm -rf /tmp/*
 # Fri, 17 Apr 2020 18:20:41 GMT
 RUN useradd -s /bin/false -m convertigo     && mkdir -p /workspace/lib /workspace/classes     && chown -R convertigo:convertigo /workspace
-# Fri, 17 Apr 2020 18:20:42 GMT
-RUN sed -i.bak         -e '/protocol="AJP/d'         -e '/AprLifecycleListener/d'         -e '/JasperListener/d'         -e 's/port="8080"/port="28080" maxThreads="64000" relaxedQueryChars="{}[]|"/'         -e 's,</Host>,  <Valve className="org.apache.catalina.valves.RemoteIpValve" />\n      </Host>,'         conf/server.xml     && sed -i.bak         -e 's,<Context>,<Context sessionCookiePath="/">,'         conf/context.xml     && rm -rf webapps/* bin/*.bat conf/server.xml.bak /tmp/*     && mkdir webapps/ROOT     && chown -R convertigo:convertigo conf temp work logs     && chmod -w conf/*
-# Fri, 17 Apr 2020 18:20:42 GMT
-ENV CONVERTIGO_VERSION=7.7.0
-# Fri, 17 Apr 2020 18:20:42 GMT
-ENV CONVERTIGO_WAR_URL=https://github.com/convertigo/convertigo/releases/download/7.7.0/convertigo-7.7.0.war
-# Fri, 17 Apr 2020 18:20:42 GMT
+# Tue, 21 Apr 2020 18:24:36 GMT
+RUN sed -i.bak         -e '/protocol="AJP/d'         -e '/AprLifecycleListener/d'         -e '/JasperListener/d'         -e 's/port="8080"/port="28080" maxThreads="64000" relaxedQueryChars="{}[]|"/'         -e 's,</Host>,  <Valve className="org.apache.catalina.valves.RemoteIpValve" />\n      </Host>,'         conf/server.xml     && sed -i.bak         -e 's,<Context>,<Context sessionCookiePath="/">,'         -e 's,</Context>,<Manager pathname="" /><CookieProcessor sameSiteCookies="" /></Context>,'         conf/context.xml     && rm -rf webapps/* bin/*.bat conf/server.xml.bak /tmp/*     && mkdir webapps/ROOT     && chown -R convertigo:convertigo conf temp work logs     && chmod -w conf/*
+# Tue, 21 Apr 2020 18:24:36 GMT
+ENV CONVERTIGO_VERSION=7.8.0
+# Tue, 21 Apr 2020 18:24:36 GMT
+ENV CONVERTIGO_WAR_URL=https://github.com/convertigo/convertigo/releases/download/7.8.0/convertigo-7.8.0.war
+# Tue, 21 Apr 2020 18:24:36 GMT
 ENV CONVERTIGO_GPG_KEYS=6A7779BB78FE368DF74B708FD4DA8FBEB64BF75F
-# Fri, 17 Apr 2020 18:20:47 GMT
+# Tue, 21 Apr 2020 18:24:42 GMT
 RUN export GNUPGHOME="$(mktemp -d)"     && ( gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$CONVERTIGO_GPG_KEYS"     || gpg --batch --keyserver pgp.mit.edu --recv-keys "$CONVERTIGO_GPG_KEYS"     || gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$CONVERTIGO_GPG_KEYS"     || gpg --batch --keyserver keyserver.pgp.com --recv-keys "$CONVERTIGO_GPG_KEYS" )     && curl -fSL -o /tmp/convertigo.war $CONVERTIGO_WAR_URL     && curl -fSL -o /tmp/convertigo.war.asc $CONVERTIGO_WAR_URL.asc     && gpg --batch --verify /tmp/convertigo.war.asc /tmp/convertigo.war     && mkdir -p webapps/ROOT webapps/convertigo     && (cd webapps/convertigo         && unzip -q /tmp/convertigo.war         && (chmod -f a+x WEB-INF/xvnc/* || true)         && (test "$(dpkg --print-architecture)" != "i386" && rm -rf WEB-INF/xulrunner WEB-INF/xvnc WEB-INF/lib/swt_* || true)         && rm -rf /tmp/*)
-# Fri, 17 Apr 2020 18:20:48 GMT
+# Tue, 21 Apr 2020 18:24:43 GMT
 COPY file:394d5b837e94d77b6fb87e0ca8bd50995186aaed1c5f3ab5bc0b482f0f769cc3 in webapps/ROOT/index.html 
-# Fri, 17 Apr 2020 18:20:48 GMT
-COPY file:50df0fa3f88bad82c9cf37b6054755b485e39ccdd9250b2906dc40869fcdd4e8 in / 
-# Fri, 17 Apr 2020 18:20:48 GMT
+# Tue, 21 Apr 2020 18:24:43 GMT
+COPY file:589b02719ed77f1ee0adbb9d091153c2e2e219c7df46f5474a836963de39b7cc in / 
+# Tue, 21 Apr 2020 18:24:43 GMT
 WORKDIR /workspace
-# Fri, 17 Apr 2020 18:20:48 GMT
+# Tue, 21 Apr 2020 18:24:43 GMT
 VOLUME [/workspace]
-# Fri, 17 Apr 2020 18:20:48 GMT
+# Tue, 21 Apr 2020 18:24:43 GMT
 EXPOSE 28080
-# Fri, 17 Apr 2020 18:20:49 GMT
+# Tue, 21 Apr 2020 18:24:44 GMT
 ENTRYPOINT ["tini" "--" "/docker-entrypoint.sh"]
-# Fri, 17 Apr 2020 18:20:49 GMT
+# Tue, 21 Apr 2020 18:24:44 GMT
 CMD ["convertigo"]
 ```
 
@@ -184,19 +184,19 @@ CMD ["convertigo"]
 		Last Modified: Fri, 17 Apr 2020 18:20:56 GMT  
 		Size: 4.3 KB (4288 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f979a71c52d7fdc7041810ae76c972f28d1d894b81c961bc4f89e4cd98894b75`  
-		Last Modified: Fri, 17 Apr 2020 18:20:56 GMT  
-		Size: 27.3 KB (27273 bytes)  
+	-	`sha256:3f166c0b6cf693fde69d166c837b6c3c1a62367814de3b65acea2729c0e26a24`  
+		Last Modified: Tue, 21 Apr 2020 18:24:52 GMT  
+		Size: 27.3 KB (27300 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a126103dee343cdb6e7df203663425f02498c70e4382336cb00c92df73029386`  
-		Last Modified: Fri, 17 Apr 2020 18:21:06 GMT  
-		Size: 94.7 MB (94685753 bytes)  
+	-	`sha256:d069e7fd4e21727c379bfc80f8dccd869ad7ef161c8d61d506787c5dee01ffe8`  
+		Last Modified: Tue, 21 Apr 2020 18:24:59 GMT  
+		Size: 94.9 MB (94892099 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:39dff1e86ef73a6e9fad356088f95ca7e7b39216d301f7f2b6c45d961edd7d9e`  
-		Last Modified: Fri, 17 Apr 2020 18:20:56 GMT  
-		Size: 448.0 B  
+	-	`sha256:a7d0c824ad8eb34162ff2d1027f6670f3fd990dacb18e16110aa355854df8673`  
+		Last Modified: Tue, 21 Apr 2020 18:24:52 GMT  
+		Size: 451.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fc41cf52a4f0609e706c62577ba1965525ff3e9765f11e649218f391e2e0de14`  
-		Last Modified: Fri, 17 Apr 2020 18:20:56 GMT  
-		Size: 1.3 KB (1256 bytes)  
+	-	`sha256:85e1e1ef71aa976519dfa17057a0258a80e5afa06ccff0ae6be42786f69b3be9`  
+		Last Modified: Tue, 21 Apr 2020 18:24:52 GMT  
+		Size: 1.3 KB (1288 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
