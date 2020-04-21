@@ -2,17 +2,17 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:30e33de9be86eb7934b47d0c30e0bc0b8d63ffc696548383509938311d8493af`
-- Created: `2020-04-10T21:36:44.851483436Z`
-- Virtual Size: ~ 183.71 Mb  
+- Image ID: `sha256:5537c2a8f7c5c8af556ed5120a3d9b82b3d32ecc2d4cc8018c2f382601ed9bf3`
+- Created: `2020-04-21T19:32:12.769430748Z`
+- Virtual Size: ~ 183.73 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
 - Command: `["rabbitmq-server"]`
 - Environment:
   - `PATH=/opt/rabbitmq/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `OPENSSL_VERSION=1.1.1f`
-  - `OPENSSL_SOURCE_SHA256=186c6bfe6ecfba7a5b48c47f8a1673d0f3b0e5ba2e25602dd23b629975da3f35`
+  - `OPENSSL_VERSION=1.1.1g`
+  - `OPENSSL_SOURCE_SHA256=ddb04774f1e32f0c49751e21b67216ac87852ceb056b75209af2443400636d46`
   - `OPENSSL_PGP_KEY_IDS=0x8657ABB260F056B1E5190839D9C4D26D0E604491 0x5B2545DAB21995F4088CEFAA36CEE4DEB00CFE33 0xED230BEC4D4F2518B9D7DF41F0DB4D21C1D35231 0xC1F33DD8CE1D4CC613AF14DA9195C48241FBF7DD 0x7953AC1FBC3DC8B3B292393ED5E9E43F7DF9EE8C 0xE5E52560DD91C556DDBDA5D02064C53641C25E5D`
   - `OTP_VERSION=22.3.2`
   - `OTP_SOURCE_SHA256=4a3719c71a7998e4f57e73920439b4b1606f7c045e437a0f0f9f1613594d3eaa`
@@ -1244,14 +1244,14 @@ $ apt-get source -qq --print-uris python-defaults=2.7.15~rc1-1
 'http://archive.ubuntu.com/ubuntu/pool/main/p/python-defaults/python-defaults_2.7.15~rc1-1.tar.gz' python-defaults_2.7.15~rc1-1.tar.gz 1958015 SHA256:f3bed2b81091821d2e514c2e17c6846f7e744487fd15f7d3c48fa1c91b9cd49b
 ```
 
-### `dpkg` source package: `python2.7=2.7.17-1~18.04`
+### `dpkg` source package: `python2.7=2.7.17-1~18.04ubuntu1`
 
 Binary Packages:
 
-- `libpython2.7-minimal:amd64=2.7.17-1~18.04`
-- `libpython2.7-stdlib:amd64=2.7.17-1~18.04`
-- `python2.7=2.7.17-1~18.04`
-- `python2.7-minimal=2.7.17-1~18.04`
+- `libpython2.7-minimal:amd64=2.7.17-1~18.04ubuntu1`
+- `libpython2.7-stdlib:amd64=2.7.17-1~18.04ubuntu1`
+- `python2.7=2.7.17-1~18.04ubuntu1`
+- `python2.7-minimal=2.7.17-1~18.04ubuntu1`
 
 Licenses: (parsed from: `/usr/share/doc/libpython2.7-minimal/copyright`, `/usr/share/doc/libpython2.7-stdlib/copyright`, `/usr/share/doc/python2.7/copyright`, `/usr/share/doc/python2.7-minimal/copyright`)
 
@@ -1275,10 +1275,10 @@ Licenses: (parsed from: `/usr/share/doc/libpython2.7-minimal/copyright`, `/usr/s
 Source:
 
 ```console
-$ apt-get source -qq --print-uris python2.7=2.7.17-1~18.04
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.17-1~18.04.dsc' python2.7_2.7.17-1~18.04.dsc 3388 SHA256:6d68c4706e44e567668345435b521190cc8b8e8ee78a38078d16223c19ddb15d
+$ apt-get source -qq --print-uris python2.7=2.7.17-1~18.04ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.17-1~18.04ubuntu1.dsc' python2.7_2.7.17-1~18.04ubuntu1.dsc 3475 SHA256:b258c6ca2dad2d49b84b4657b21efd8e3a0db64bf88394c567b6325c91943804
 'http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.17.orig.tar.gz' python2.7_2.7.17.orig.tar.gz 17535962 SHA256:f22059d09cdf9625e0a7284d24a13062044f5bf59d93a7f3382190dfa94cecde
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.17-1~18.04.diff.gz' python2.7_2.7.17-1~18.04.diff.gz 287074 SHA256:d2088da2c791fbdf4e209593f82cc05f08711efa2b9050abc62f204db966e16e
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.17-1~18.04ubuntu1.diff.gz' python2.7_2.7.17-1~18.04ubuntu1.diff.gz 289562 SHA256:aa84d777881498f18036ece85689444d8542056cef25a59cd94eec7ecae73b78
 ```
 
 ### `dpkg` source package: `readline=7.0-3`
