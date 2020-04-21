@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:e2edeaccc8ffa4777f5c3de18e463eb4f29c6c0308523b6d263baecfcfab29c1`
-- Created: `2020-04-16T03:59:41.591506739Z`
-- Virtual Size: ~ 828.04 Mb  
+- Image ID: `sha256:490c91d844d571329144152be5f8d76b5f1806abe8b09fa95715fa01b3dad158`
+- Created: `2020-04-21T01:22:37.823399104Z`
+- Virtual Size: ~ 830.99 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["bash"]`
@@ -1156,21 +1156,21 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/fribidi/1.0.8-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/fribidi/1.0.8-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `gcc-10=10-20200324-1`
+### `dpkg` source package: `gcc-10=10-20200411-1`
 
 Binary Packages:
 
-- `gcc-10-base:amd64=10-20200324-1`
-- `libatomic1:amd64=10-20200324-1`
-- `libcc1-0:amd64=10-20200324-1`
-- `libgcc-s1:amd64=10-20200324-1`
-- `libgomp1:amd64=10-20200324-1`
-- `libitm1:amd64=10-20200324-1`
-- `liblsan0:amd64=10-20200324-1`
-- `libquadmath0:amd64=10-20200324-1`
-- `libstdc++6:amd64=10-20200324-1`
-- `libtsan0:amd64=10-20200324-1`
-- `libubsan1:amd64=10-20200324-1`
+- `gcc-10-base:amd64=10-20200411-1`
+- `libatomic1:amd64=10-20200411-1`
+- `libcc1-0:amd64=10-20200411-1`
+- `libgcc-s1:amd64=10-20200411-1`
+- `libgomp1:amd64=10-20200411-1`
+- `libitm1:amd64=10-20200411-1`
+- `liblsan0:amd64=10-20200411-1`
+- `libquadmath0:amd64=10-20200411-1`
+- `libstdc++6:amd64=10-20200411-1`
+- `libtsan0:amd64=10-20200411-1`
+- `libubsan1:amd64=10-20200411-1`
 
 Licenses: (parsed from: `/usr/share/doc/gcc-10-base/copyright`, `/usr/share/doc/libatomic1/copyright`, `/usr/share/doc/libcc1-0/copyright`, `/usr/share/doc/libgcc-s1/copyright`, `/usr/share/doc/libgomp1/copyright`, `/usr/share/doc/libitm1/copyright`, `/usr/share/doc/liblsan0/copyright`, `/usr/share/doc/libquadmath0/copyright`, `/usr/share/doc/libstdc++6/copyright`, `/usr/share/doc/libtsan0/copyright`, `/usr/share/doc/libubsan1/copyright`)
 
@@ -1184,17 +1184,17 @@ Licenses: (parsed from: `/usr/share/doc/gcc-10-base/copyright`, `/usr/share/doc/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris gcc-10=10-20200324-1
-'http://deb.debian.org/debian/pool/main/g/gcc-10/gcc-10_10-20200324-1.dsc' gcc-10_10-20200324-1.dsc 27934 SHA256:86f6cd672db6314c23cbf3d66cc6ab3d9d8b319ea538c9d586f318409c567e4e
-'http://deb.debian.org/debian/pool/main/g/gcc-10/gcc-10_10-20200324.orig.tar.gz' gcc-10_10-20200324.orig.tar.gz 89049019 SHA256:7ea222fbf7d6eea9e0a288a6ea92d72b023349a060a62adb032db2931fb9e1b8
-'http://deb.debian.org/debian/pool/main/g/gcc-10/gcc-10_10-20200324-1.debian.tar.xz' gcc-10_10-20200324-1.debian.tar.xz 556696 SHA256:701bebb749971eabfde28214096e001cc066732d846e4056ca2967b92f1de606
+$ apt-get source -qq --print-uris gcc-10=10-20200411-1
+'http://deb.debian.org/debian/pool/main/g/gcc-10/gcc-10_10-20200411-1.dsc' gcc-10_10-20200411-1.dsc 28164 SHA256:d53aa8f7fddc615f25e65202d6ca4e474740e102bfe1104c41c098c1ebe94195
+'http://deb.debian.org/debian/pool/main/g/gcc-10/gcc-10_10-20200411.orig.tar.gz' gcc-10_10-20200411.orig.tar.gz 89173603 SHA256:36df8d30417afe15721135f2a013f93fde9912926ab685a4ca822852a4bb0504
+'http://deb.debian.org/debian/pool/main/g/gcc-10/gcc-10_10-20200411-1.debian.tar.xz' gcc-10_10-20200411-1.debian.tar.xz 1387064 SHA256:447e1e587fdc303051a9f054cae30a1ee7a21eb2977e122e8729e9534ee7ce90
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/gcc-10/10-20200324-1/ (for browsing the source)
-- https://sources.debian.net/src/gcc-10/10-20200324-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gcc-10/10-20200324-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/gcc-10/10-20200411-1/ (for browsing the source)
+- https://sources.debian.net/src/gcc-10/10-20200411-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/gcc-10/10-20200411-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gcc-9=9.3.0-10`
 
@@ -1352,20 +1352,13 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 - `dlmalloc`
 - `mingw-runtime`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris git=1:2.25.1-1
-'http://deb.debian.org/debian/pool/main/g/git/git_2.25.1-1.dsc' git_2.25.1-1.dsc 2860 SHA256:32e936cf974b36b0868f2430cfa9d818c89a4871560744bc9d54c70651f0e17e
-'http://deb.debian.org/debian/pool/main/g/git/git_2.25.1.orig.tar.xz' git_2.25.1.orig.tar.xz 5875548 SHA256:222796cc6e3bf2f9fd765f8f097daa3c3999bb7865ac88a8c974d98182e29f26
-'http://deb.debian.org/debian/pool/main/g/git/git_2.25.1-1.debian.tar.xz' git_2.25.1-1.debian.tar.xz 637500 SHA256:aa08f0b28fc95e0172e7419e1de61dea2bc12b469a19db71d289a8cba3eb700c
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/git/1:2.25.1-1/
 
-- https://sources.debian.net/src/git/1:2.25.1-1/ (for browsing the source)
-- https://sources.debian.net/src/git/1:2.25.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/git/1:2.25.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `glib2.0=2.64.1-1`
 
@@ -1897,20 +1890,13 @@ Licenses: (parsed from: `/usr/share/doc/iproute2/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris iproute2=5.5.0-1
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.5.0-1.dsc' iproute2_5.5.0-1.dsc 1833 SHA256:2752a4084366fd76bac502838e01626ec9a0df6869338494955d1afdb0808e76
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.5.0.orig.tar.xz' iproute2_5.5.0.orig.tar.xz 747756 SHA256:bac543435cac208a11db44c9cc8e35aa902befef8750594654ee71941c388f7b
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.5.0-1.debian.tar.xz' iproute2_5.5.0-1.debian.tar.xz 144400 SHA256:33b6ba2e5acee2401f66049618b5fc5a26c92f9bd5972fd86fc7fc492cf886e9
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/iproute2/5.5.0-1/
 
-- https://sources.debian.net/src/iproute2/5.5.0-1/ (for browsing the source)
-- https://sources.debian.net/src/iproute2/5.5.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/iproute2/5.5.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `iptables=1.8.4-3`
 
@@ -2784,20 +2770,13 @@ Licenses: (parsed from: `/usr/share/doc/libmnl0/copyright`)
 - `GPL-2+`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libmnl=1.0.4-2
-'http://deb.debian.org/debian/pool/main/libm/libmnl/libmnl_1.0.4-2.dsc' libmnl_1.0.4-2.dsc 1994 SHA256:131106bb7eb4a94fa8e8c135f92c38068d0b42681f166eb159137f171c568630
-'http://deb.debian.org/debian/pool/main/libm/libmnl/libmnl_1.0.4.orig.tar.bz2' libmnl_1.0.4.orig.tar.bz2 301270 SHA256:171f89699f286a5854b72b91d06e8f8e3683064c5901fb09d954a9ab6f551f81
-'http://deb.debian.org/debian/pool/main/libm/libmnl/libmnl_1.0.4-2.debian.tar.xz' libmnl_1.0.4-2.debian.tar.xz 7512 SHA256:208d62777081ffe6d7dffde0d7370cefb03fe0a6a0486a1b50f6b7b8e9a5b068
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libmnl/1.0.4-2/
 
-- https://sources.debian.net/src/libmnl/1.0.4-2/ (for browsing the source)
-- https://sources.debian.net/src/libmnl/1.0.4-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libmnl/1.0.4-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libpng1.6=1.6.37-2`
 
@@ -2949,8 +2928,8 @@ Other potentially useful URLs:
 
 Binary Packages:
 
-- `libselinux1:amd64=3.0-1+b1`
-- `libselinux1-dev:amd64=3.0-1+b1`
+- `libselinux1:amd64=3.0-1+b3`
+- `libselinux1-dev:amd64=3.0-1+b3`
 
 Licenses: (parsed from: `/usr/share/doc/libselinux1/copyright`, `/usr/share/doc/libselinux1-dev/copyright`)
 
@@ -5538,13 +5517,13 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/xorg/1:7.7+20/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/xorg/1:7.7+20/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `xorgproto=2019.2-1`
+### `dpkg` source package: `xorgproto=2020.1-1`
 
 Binary Packages:
 
-- `x11proto-core-dev=2019.2-1`
-- `x11proto-dev=2019.2-1`
-- `x11proto-xext-dev=2019.2-1`
+- `x11proto-core-dev=2020.1-1`
+- `x11proto-dev=2020.1-1`
+- `x11proto-xext-dev=2020.1-1`
 
 Licenses: (parsed from: `/usr/share/doc/x11proto-core-dev/copyright`, `/usr/share/doc/x11proto-dev/copyright`, `/usr/share/doc/x11proto-xext-dev/copyright`)
 
@@ -5554,18 +5533,18 @@ Licenses: (parsed from: `/usr/share/doc/x11proto-core-dev/copyright`, `/usr/shar
 Source:
 
 ```console
-$ apt-get source -qq --print-uris xorgproto=2019.2-1
-'http://deb.debian.org/debian/pool/main/x/xorgproto/xorgproto_2019.2-1.dsc' xorgproto_2019.2-1.dsc 4068 SHA256:15b09ffea8878dee3fc7ef4e5d9dab576614a7c65549dd94eaac7abb8f18aee9
-'http://deb.debian.org/debian/pool/main/x/xorgproto/xorgproto_2019.2.orig.tar.gz' xorgproto_2019.2.orig.tar.gz 1080686 SHA256:ebfcfce48b66bec25d5dff0e9510e04053ef78e51a8eabeeee4c00e399226d61
-'http://deb.debian.org/debian/pool/main/x/xorgproto/xorgproto_2019.2.orig.tar.gz.asc' xorgproto_2019.2.orig.tar.gz.asc 659 SHA256:75da45caac1d85fe37a5e7f33a087d456cad1dc38f2743b7f7df63d7ca583293
-'http://deb.debian.org/debian/pool/main/x/xorgproto/xorgproto_2019.2-1.diff.gz' xorgproto_2019.2-1.diff.gz 20597 SHA256:9f9b9eb8832a9baa7fc15373fc12670ac49d2950f468fc3ddf70d5387879d07f
+$ apt-get source -qq --print-uris xorgproto=2020.1-1
+'http://deb.debian.org/debian/pool/main/x/xorgproto/xorgproto_2020.1-1.dsc' xorgproto_2020.1-1.dsc 3410 SHA256:227dba0e174e781c68502d33af10527d5d19d692ad969442a75c422a3cbaae6a
+'http://deb.debian.org/debian/pool/main/x/xorgproto/xorgproto_2020.1.orig.tar.gz' xorgproto_2020.1.orig.tar.gz 1081369 SHA256:6265b11b125df2f4853eec4895b14067d5621f813553fa077bebef20d7542418
+'http://deb.debian.org/debian/pool/main/x/xorgproto/xorgproto_2020.1.orig.tar.gz.asc' xorgproto_2020.1.orig.tar.gz.asc 659 SHA256:00af3777b1b00b5553d0838356202c920f94b3088502aca9c4c37abd704bf39d
+'http://deb.debian.org/debian/pool/main/x/xorgproto/xorgproto_2020.1-1.diff.gz' xorgproto_2020.1-1.diff.gz 20627 SHA256:b96eb973c1effc4fb5a8545f81983d1acf7a6f01231da230b5911daa4eca35be
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/xorgproto/2019.2-1/ (for browsing the source)
-- https://sources.debian.net/src/xorgproto/2019.2-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/xorgproto/2019.2-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/xorgproto/2020.1-1/ (for browsing the source)
+- https://sources.debian.net/src/xorgproto/2020.1-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/xorgproto/2020.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `xtrans=1.4.0-1`
 

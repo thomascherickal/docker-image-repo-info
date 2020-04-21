@@ -46,13 +46,9 @@ Licenses: (parsed from: `/usr/share/doc/adduser/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris adduser=3.118ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/a/adduser/adduser_3.118ubuntu1.dsc' adduser_3.118ubuntu1.dsc 1808 SHA256:415e093e945d4a37679504f4f54e0fcd903c4f524dd90526440965aea7bba77c
-'http://archive.ubuntu.com/ubuntu/pool/main/a/adduser/adduser_3.118ubuntu1.tar.xz' adduser_3.118ubuntu1.tar.xz 217300 SHA256:16e8d59231d814af0701a24195246f169a26df1b39d59e3cea04db882a31973a
-```
 
 ### `dpkg` source package: `apt=1.9.10`
 
@@ -284,14 +280,9 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.68.0-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu1.dsc' curl_7.68.0-1ubuntu1.dsc 2762 SHA256:78bc9f6d2a1fdaafe2779d01bb0580a57bc99bf0b8a41ca2cb2ec11105a11922
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0.orig.tar.gz' curl_7.68.0.orig.tar.gz 4096350 SHA256:1dd7604e418b0b9a9077f62f763f6684c1b092a7bc17e3f354b8ad5c964d7358
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu1.debian.tar.xz' curl_7.68.0-1ubuntu1.debian.tar.xz 30132 SHA256:ad3ef772b6efe6a3c2f573e38c4e35b831001969f2dccbe60987fe6c0c24695b
-```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2`
 
@@ -1309,15 +1300,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssl=1.1.1d-2ubuntu6
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1d-2ubuntu6.dsc' openssl_1.1.1d-2ubuntu6.dsc 2702 SHA256:8c36ae00a404ccfb08a889a6438da89c97839404e4fc3ec2ad7f87ddf19e26fa
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1d.orig.tar.gz' openssl_1.1.1d.orig.tar.gz 8845861 SHA256:1e3a91bc1f9dfce01af26026f856e064eab4c8ee0a8f457b5ae30b40b8b711f2
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1d.orig.tar.gz.asc' openssl_1.1.1d.orig.tar.gz.asc 488 SHA256:f3fd3299a79421fffd51d35f62636b8e987dab1d3033d93a19d7685868e15395
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1d-2ubuntu6.debian.tar.xz' openssl_1.1.1d-2ubuntu6.debian.tar.xz 1206416 SHA256:92d1e09cf0021a8de3712d4608d38d33bd2cb645932ef66177d2a3955d3f136b
-```
 
 ### `dpkg` source package: `p11-kit=0.23.20-1build1`
 

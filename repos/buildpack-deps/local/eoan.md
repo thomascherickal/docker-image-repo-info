@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:b75faec3dcaeba738bf640450a98ba04728a9438e69869c738ad23254de2bf2c`
-- Created: `2020-03-20T19:51:37.152544064Z`
-- Virtual Size: ~ 678.92 Mb  
+- Image ID: `sha256:ffa03af468a67e5e2abb685fb7df26fe482c23995fef5bf9896f279c5295a40b`
+- Created: `2020-04-21T01:26:06.721072194Z`
+- Virtual Size: ~ 678.93 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -1045,15 +1045,15 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `glib2.0=2.62.1-1`
+### `dpkg` source package: `glib2.0=2.62.4-1~ubuntu19.10.2`
 
 Binary Packages:
 
-- `libglib2.0-0:amd64=2.62.1-1`
-- `libglib2.0-bin=2.62.1-1`
-- `libglib2.0-data=2.62.1-1`
-- `libglib2.0-dev:amd64=2.62.1-1`
-- `libglib2.0-dev-bin=2.62.1-1`
+- `libglib2.0-0:amd64=2.62.4-1~ubuntu19.10.2`
+- `libglib2.0-bin=2.62.4-1~ubuntu19.10.2`
+- `libglib2.0-data=2.62.4-1~ubuntu19.10.2`
+- `libglib2.0-dev:amd64=2.62.4-1~ubuntu19.10.2`
+- `libglib2.0-dev-bin=2.62.4-1~ubuntu19.10.2`
 
 Licenses: (parsed from: `/usr/share/doc/libglib2.0-0/copyright`, `/usr/share/doc/libglib2.0-bin/copyright`, `/usr/share/doc/libglib2.0-data/copyright`, `/usr/share/doc/libglib2.0-dev/copyright`, `/usr/share/doc/libglib2.0-dev-bin/copyright`)
 
@@ -1064,10 +1064,10 @@ Licenses: (parsed from: `/usr/share/doc/libglib2.0-0/copyright`, `/usr/share/doc
 Source:
 
 ```console
-$ apt-get source -qq --print-uris glib2.0=2.62.1-1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.62.1-1.dsc' glib2.0_2.62.1-1.dsc 3232 SHA256:ca848af046b9f6d01562f7c2555feec2c06bbc063e49677a4c758af165c8badc
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.62.1.orig.tar.xz' glib2.0_2.62.1.orig.tar.xz 4681716 SHA256:3dd9024e1d0872a6da7ac509937ccf997161b11d7d35be337c7e829cbae0f9df
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.62.1-1.debian.tar.xz' glib2.0_2.62.1-1.debian.tar.xz 85312 SHA256:7aa788a4d805f0dc16eea9373811ba9b29bc4928d57575649389a3b83a1db2df
+$ apt-get source -qq --print-uris glib2.0=2.62.4-1~ubuntu19.10.2
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.62.4-1~ubuntu19.10.2.dsc' glib2.0_2.62.4-1~ubuntu19.10.2.dsc 3083 SHA256:5aac31fb5425cadfed450aae8340d0c54a4a6d3075b38252ee25574a232eaca3
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.62.4.orig.tar.xz' glib2.0_2.62.4.orig.tar.xz 4684768 SHA256:4c84030d77fa9712135dfa8036ad663925655ae95b1d19399b6200e869925bbc
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.62.4-1~ubuntu19.10.2.debian.tar.xz' glib2.0_2.62.4-1~ubuntu19.10.2.debian.tar.xz 91800 SHA256:24cf784f0062fcd316f67e705343c6ef5d850445a8bfd17b6af5c23eeef11d99
 ```
 
 ### `dpkg` source package: `glibc=2.30-0ubuntu2.1`
@@ -2655,19 +2655,24 @@ $ apt-get source -qq --print-uris libzstd=1.4.3+dfsg-1
 'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.4.3+dfsg-1.debian.tar.xz' libzstd_1.4.3+dfsg-1.debian.tar.xz 16108 SHA256:3dbb5f5d3e6c4c0f43a5f6d6803327bf9c330efdb0b3da461613971af506796b
 ```
 
-### `dpkg` source package: `linux=5.3.0-42.34`
+### `dpkg` source package: `linux=5.3.0-46.38`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=5.3.0-42.34`
+- `linux-libc-dev:amd64=5.3.0-46.38`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris linux=5.3.0-46.38
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.3.0-46.38.dsc' linux_5.3.0-46.38.dsc 8286 SHA256:0ce4b4997c2e6a4cddfb2c3f100d61a82eb4914fe6d897add4043dbc856a04d0
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.3.0.orig.tar.gz' linux_5.3.0.orig.tar.gz 168029263 SHA256:44edffd835819ac7156f2f4bb7512d25f8cf6eab098b09c9ef0c3c06a01148ef
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.3.0-46.38.diff.gz' linux_5.3.0-46.38.diff.gz 4028185 SHA256:82546a525b46afaa1ecefb2fd611e387fbb0bf4d697574c18e0e99711b7f496b
+```
 
 ### `dpkg` source package: `lsb=11.0.1ubuntu1`
 
@@ -3588,14 +3593,9 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.7-minimal/copyright`, `/usr/s
 - `use in source`
 - `without`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3.7=3.7.5-2~19.10
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.7/python3.7_3.7.5-2~19.10.dsc' python3.7_3.7.5-2~19.10.dsc 3443 SHA256:108d01fba4b18b7545216952ab129d326e32b9e0595b935acd1f00c8daeb9ee3
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.7/python3.7_3.7.5.orig.tar.xz' python3.7_3.7.5.orig.tar.xz 17236432 SHA256:e85a76ea9f3d6c485ec1780fca4e500725a4a7bbc63c78ebc44170de9b619d94
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.7/python3.7_3.7.5-2~19.10.debian.tar.xz' python3.7_3.7.5-2~19.10.debian.tar.xz 210968 SHA256:5b50a0c7e838073577e67ce4ca8fde136148e2c26832a747f1afb38acd0a6848
-```
 
 ### `dpkg` source package: `readline=8.0-3`
 

@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:ede52f805d796511e4d45d9ba92c3db1195eb7f854bd8aad82920801083acd80`
-- Created: `2020-03-20T19:47:50.906927055Z`
-- Virtual Size: ~ 619.08 Mb  
+- Image ID: `sha256:340e12f44d41ca6a89bd11be728d6d1fe52ed5a26235886a857d1fb24b1aa334`
+- Created: `2020-04-21T01:21:31.465605955Z`
+- Virtual Size: ~ 621.31 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -891,21 +891,21 @@ $ apt-get source -qq --print-uris gcc-7=7.5.0-3ubuntu1~18.04
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-7/gcc-7_7.5.0-3ubuntu1~18.04.diff.gz' gcc-7_7.5.0-3ubuntu1~18.04.diff.gz 574614 SHA256:42d3fef17cd5561df6187ce0c11bdb61f78cbb2da56bfd6e9983b138077f82f2
 ```
 
-### `dpkg` source package: `gcc-8=8.3.0-26ubuntu1~18.04`
+### `dpkg` source package: `gcc-8=8.4.0-1ubuntu1~18.04`
 
 Binary Packages:
 
-- `gcc-8-base:amd64=8.3.0-26ubuntu1~18.04`
-- `libatomic1:amd64=8.3.0-26ubuntu1~18.04`
-- `libcc1-0:amd64=8.3.0-26ubuntu1~18.04`
-- `libgcc1:amd64=1:8.3.0-26ubuntu1~18.04`
-- `libgomp1:amd64=8.3.0-26ubuntu1~18.04`
-- `libitm1:amd64=8.3.0-26ubuntu1~18.04`
-- `liblsan0:amd64=8.3.0-26ubuntu1~18.04`
-- `libmpx2:amd64=8.3.0-26ubuntu1~18.04`
-- `libquadmath0:amd64=8.3.0-26ubuntu1~18.04`
-- `libstdc++6:amd64=8.3.0-26ubuntu1~18.04`
-- `libtsan0:amd64=8.3.0-26ubuntu1~18.04`
+- `gcc-8-base:amd64=8.4.0-1ubuntu1~18.04`
+- `libatomic1:amd64=8.4.0-1ubuntu1~18.04`
+- `libcc1-0:amd64=8.4.0-1ubuntu1~18.04`
+- `libgcc1:amd64=1:8.4.0-1ubuntu1~18.04`
+- `libgomp1:amd64=8.4.0-1ubuntu1~18.04`
+- `libitm1:amd64=8.4.0-1ubuntu1~18.04`
+- `liblsan0:amd64=8.4.0-1ubuntu1~18.04`
+- `libmpx2:amd64=8.4.0-1ubuntu1~18.04`
+- `libquadmath0:amd64=8.4.0-1ubuntu1~18.04`
+- `libstdc++6:amd64=8.4.0-1ubuntu1~18.04`
+- `libtsan0:amd64=8.4.0-1ubuntu1~18.04`
 
 Licenses: (parsed from: `/usr/share/doc/gcc-8-base/copyright`, `/usr/share/doc/libatomic1/copyright`, `/usr/share/doc/libcc1-0/copyright`, `/usr/share/doc/libgcc1/copyright`, `/usr/share/doc/libgomp1/copyright`, `/usr/share/doc/libitm1/copyright`, `/usr/share/doc/liblsan0/copyright`, `/usr/share/doc/libmpx2/copyright`, `/usr/share/doc/libquadmath0/copyright`, `/usr/share/doc/libstdc++6/copyright`, `/usr/share/doc/libtsan0/copyright`)
 
@@ -916,9 +916,14 @@ Licenses: (parsed from: `/usr/share/doc/gcc-8-base/copyright`, `/usr/share/doc/l
 - `GPL-3`
 - `LGPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris gcc-8=8.4.0-1ubuntu1~18.04
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-8/gcc-8_8.4.0-1ubuntu1~18.04.dsc' gcc-8_8.4.0-1ubuntu1~18.04.dsc 36382 SHA256:bf7f453948fc746550c79b00c0af3940a2ff00c2f1692a376ebb90393963355a
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-8/gcc-8_8.4.0.orig.tar.gz' gcc-8_8.4.0.orig.tar.gz 85278215 SHA256:eb917ceb079e90afe1e524dee295e2360c63b923c611ae231144385be37dde2a
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-8/gcc-8_8.4.0-1ubuntu1~18.04.diff.gz' gcc-8_8.4.0-1ubuntu1~18.04.diff.gz 510634 SHA256:5dbda7df03e650d72ad7c54ad8d8a48389ee358ebfad18a40bf6d8bb57c8c2ad
+```
 
 ### `dpkg` source package: `gcc-defaults=1.176ubuntu2.3`
 
@@ -1021,23 +1026,28 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `glib2.0=2.56.4-0ubuntu0.18.04.4`
+### `dpkg` source package: `glib2.0=2.56.4-0ubuntu0.18.04.6`
 
 Binary Packages:
 
-- `libglib2.0-0:amd64=2.56.4-0ubuntu0.18.04.4`
-- `libglib2.0-bin=2.56.4-0ubuntu0.18.04.4`
-- `libglib2.0-data=2.56.4-0ubuntu0.18.04.4`
-- `libglib2.0-dev:amd64=2.56.4-0ubuntu0.18.04.4`
-- `libglib2.0-dev-bin=2.56.4-0ubuntu0.18.04.4`
+- `libglib2.0-0:amd64=2.56.4-0ubuntu0.18.04.6`
+- `libglib2.0-bin=2.56.4-0ubuntu0.18.04.6`
+- `libglib2.0-data=2.56.4-0ubuntu0.18.04.6`
+- `libglib2.0-dev:amd64=2.56.4-0ubuntu0.18.04.6`
+- `libglib2.0-dev-bin=2.56.4-0ubuntu0.18.04.6`
 
 Licenses: (parsed from: `/usr/share/doc/libglib2.0-0/copyright`, `/usr/share/doc/libglib2.0-bin/copyright`, `/usr/share/doc/libglib2.0-data/copyright`, `/usr/share/doc/libglib2.0-dev/copyright`, `/usr/share/doc/libglib2.0-dev-bin/copyright`)
 
 - `LGPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris glib2.0=2.56.4-0ubuntu0.18.04.6
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.56.4-0ubuntu0.18.04.6.dsc' glib2.0_2.56.4-0ubuntu0.18.04.6.dsc 3301 SHA256:a4cc68dbc3255f458789213e5eaa1ff1c409d8fc49688c9b136cfa4ef30dafa1
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.56.4.orig.tar.xz' glib2.0_2.56.4.orig.tar.xz 7029768 SHA256:27f703d125efb07f8a743666b580df0b4095c59fc8750e8890132c91d437504c
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.56.4-0ubuntu0.18.04.6.debian.tar.xz' glib2.0_2.56.4-0ubuntu0.18.04.6.debian.tar.xz 89540 SHA256:57f17e1760946894ae729e988798ac11339460e8ee71421c6b0a5b6cdde9af36
+```
 
 ### `dpkg` source package: `glibc=2.27-3ubuntu1`
 
@@ -2615,19 +2625,24 @@ $ apt-get source -qq --print-uris libzstd=1.3.3+dfsg-2ubuntu1.1
 'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.3.3+dfsg-2ubuntu1.1.debian.tar.xz' libzstd_1.3.3+dfsg-2ubuntu1.1.debian.tar.xz 12808 SHA256:9c7421170f0a1e6234147a89ba7fa5933c0771177423e962e6faf3fd13dcbb64
 ```
 
-### `dpkg` source package: `linux=4.15.0-91.92`
+### `dpkg` source package: `linux=4.15.0-96.97`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=4.15.0-91.92`
+- `linux-libc-dev:amd64=4.15.0-96.97`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris linux=4.15.0-96.97
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-96.97.dsc' linux_4.15.0-96.97.dsc 6995 SHA256:c6d63feb82801c3c2ef32d65b2a493b2a8aeafa32a577694a38088282b2cf23d
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0.orig.tar.gz' linux_4.15.0.orig.tar.gz 157656459 SHA256:c33b8ba5c45a40b689979caa2421c4d933864cd70eb93c00eb69adf43e9a24fc
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-96.97.diff.gz' linux_4.15.0-96.97.diff.gz 9566239 SHA256:3a77ab48cabeb05d3f61b898d30558ce295aeb9556d388150399faa95b84ae60
+```
 
 ### `dpkg` source package: `lsb=9.20170808ubuntu1`
 
@@ -3458,14 +3473,9 @@ Licenses: (parsed from: `/usr/share/doc/libpython2.7-minimal/copyright`, `/usr/s
 - `implied`
 - `see above, some license as Python`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python2.7=2.7.17-1~18.04
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.17-1~18.04.dsc' python2.7_2.7.17-1~18.04.dsc 3388 SHA256:6d68c4706e44e567668345435b521190cc8b8e8ee78a38078d16223c19ddb15d
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.17.orig.tar.gz' python2.7_2.7.17.orig.tar.gz 17535962 SHA256:f22059d09cdf9625e0a7284d24a13062044f5bf59d93a7f3382190dfa94cecde
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.17-1~18.04.diff.gz' python2.7_2.7.17-1~18.04.diff.gz 287074 SHA256:d2088da2c791fbdf4e209593f82cc05f08711efa2b9050abc62f204db966e16e
-```
 
 ### `dpkg` source package: `python3-defaults=3.6.7-1~18.04`
 
@@ -3536,14 +3546,9 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.6-minimal/copyright`, `/usr/s
 - `use in source`
 - `without`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3.6=3.6.9-1~18.04
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.6/python3.6_3.6.9-1~18.04.dsc' python3.6_3.6.9-1~18.04.dsc 3459 SHA256:bce2658efe1049ac11b6abf4f48e6891ec2ea633377b081a18db9280478ab425
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.6/python3.6_3.6.9.orig.tar.xz' python3.6_3.6.9.orig.tar.xz 17212164 SHA256:5e2f5f554e3f8f7f0296f7e73d8600c4e9acbaee6b2555b83206edf5153870da
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.6/python3.6_3.6.9-1~18.04.debian.tar.xz' python3.6_3.6.9-1~18.04.debian.tar.xz 214508 SHA256:5096a758dae76f406c05cd208b912e9562e7f88e84b6adc8ceeb3aa118707a42
-```
 
 ### `dpkg` source package: `readline=7.0-3`
 
