@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:0b9adaa583f88f589a8d58ca7a38ad50ed986cc04d824362f70c4c1c8c64913c`
-- Created: `2020-04-17T15:30:13.469988087Z`
-- Virtual Size: ~ 85.30 Mb  
+- Image ID: `sha256:82e3f5fca5e8c2676e1bf5f392304628f34f99eeb61054ff2be56bb17c127cf4`
+- Created: `2020-04-20T17:19:53.811044567Z`
+- Virtual Size: ~ 89.62 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
@@ -178,6 +178,23 @@ db-5.3.28-r1 installed size:
 
 db-5.3.28-r1 license:
 custom
+
+```
+
+### `apk` package: `freetds`
+
+```console
+freetds-1.1.20-r0 description:
+Tabular Datastream Library
+
+freetds-1.1.20-r0 webpage:
+https://www.freetds.org
+
+freetds-1.1.20-r0 installed size:
+1822720
+
+freetds-1.1.20-r0 license:
+GPL-2.0-or-later, LGPL-2.0-or-later
 
 ```
 
@@ -504,6 +521,23 @@ OpenSSL
 
 ```
 
+### `apk` package: `readline`
+
+```console
+readline-8.0.1-r0 description:
+GNU readline library
+
+readline-8.0.1-r0 webpage:
+https://tiswww.cwru.edu/php/chet/readline/rltop.html
+
+readline-8.0.1-r0 installed size:
+299008
+
+readline-8.0.1-r0 license:
+GPL-2.0-or-later
+
+```
+
 ### `apk` package: `scanelf`
 
 ```console
@@ -569,6 +603,23 @@ tar-1.32-r1 installed size:
 
 tar-1.32-r1 license:
 GPL-3.0-or-later
+
+```
+
+### `apk` package: `unixodbc`
+
+```console
+unixodbc-2.3.7-r2 description:
+ODBC is an open specification to access Data Sources
+
+unixodbc-2.3.7-r2 webpage:
+http://www.unixodbc.org/
+
+unixodbc-2.3.7-r2 installed size:
+716800
+
+unixodbc-2.3.7-r2 license:
+LGPL-2.0-or-later
 
 ```
 
