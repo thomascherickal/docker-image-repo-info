@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:f0890fbb2b597880739abafb012cbefeead7acc3af3f1dc3a88fb0ef10893639`
-- Created: `2020-04-15T00:38:59.162559104Z`
-- Virtual Size: ~ 527.84 Mb  
+- Image ID: `sha256:fb226c0047baeef01fcb89d3d13fe4a8992d502f3e7e56314647be9eec3f95f7`
+- Created: `2020-04-21T19:10:11.470798528Z`
+- Virtual Size: ~ 524.56 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["catalina.sh","run"]`
@@ -357,16 +357,16 @@ Enabling amzn2-core-source repository
 https://cdn.amazonlinux.com/2/core/2.0/SRPMS/4d436615aefdd0d8a8d45796e199ece0aad2da971ea8e49eadab08174361c568//../../../../../blobstore/712fffd161eb394310f7fe5f7d41ae2aae07cdcce27ca119bf04c6f056eb2b4d/gmp-6.0.0-15.amzn2.0.2.src.rpm
 ```
 
-### `rpm` package: `gnupg2-2.0.22-5.amzn2.0.3.x86_64`
+### `rpm` package: `gnupg2-2.0.22-5.amzn2.0.4.x86_64`
 
 Licenses (from `rpm --query`): GPLv3+
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls gnupg2-2.0.22-5.amzn2.0.3
+$ yumdownloader --quiet --source --urls gnupg2-2.0.22-5.amzn2.0.4
 Enabling amzn2-core-source repository
-https://cdn.amazonlinux.com/2/core/2.0/SRPMS/4d436615aefdd0d8a8d45796e199ece0aad2da971ea8e49eadab08174361c568//../../../../../blobstore/1462513d101ab1acbeb7c849948ebaeaa282316958d94c0bb97b5fbcdd752199/gnupg2-2.0.22-5.amzn2.0.3.src.rpm
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/4d436615aefdd0d8a8d45796e199ece0aad2da971ea8e49eadab08174361c568//../../../../../blobstore/cf2f89347d3eba84fb17d1d713b4a18aa7b15bfaace0b19464780208135b493f/gnupg2-2.0.22-5.amzn2.0.4.src.rpm
 ```
 
 ### `rpm` package: `gpg-pubkey-b04f24e3-5de94a19`
