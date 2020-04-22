@@ -2099,20 +2099,13 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 - `dlmalloc`
 - `mingw-runtime`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris git=1:2.20.1-2+deb10u2
-'http://security.debian.org/debian-security/pool/updates/main/g/git/git_2.20.1-2+deb10u2.dsc' git_2.20.1-2+deb10u2.dsc 2923 SHA256:6aabffbb0392172cbe82c9f585c0e7b7a98e1741d7280310f212e44e1731413a
-'http://security.debian.org/debian-security/pool/updates/main/g/git/git_2.20.1.orig.tar.xz' git_2.20.1.orig.tar.xz 5359872 SHA256:9d2e91e2faa2ea61ba0a70201d023b36f54d846314591a002c610ea2ab81c3e9
-'http://security.debian.org/debian-security/pool/updates/main/g/git/git_2.20.1-2+deb10u2.debian.tar.xz' git_2.20.1-2+deb10u2.debian.tar.xz 636904 SHA256:6ab6020d82ef9991c4fe2bc1bc2c517c744c21e0e541a094e1952dff39c55357
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/git/1:2.20.1-2+deb10u2/
 
-- https://sources.debian.net/src/git/1:2.20.1-2+deb10u2/ (for browsing the source)
-- https://sources.debian.net/src/git/1:2.20.1-2+deb10u2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/git/1:2.20.1-2+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `glib-networking=2.58.0-2`
 
