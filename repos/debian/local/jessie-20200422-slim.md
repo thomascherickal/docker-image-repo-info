@@ -1,9 +1,9 @@
-# `debian:oldoldstable-slim`
+# `debian:jessie-slim`
 
 ## Docker Metadata
 
-- Image ID: `sha256:c63640f4170d216230cda2819b5aa699665b783db78fb14887453a08e16f4ccd`
-- Created: `2020-04-16T03:24:12.187125571Z`
+- Image ID: `sha256:cb7fbd489387fac688ca4f082259a39292f784a7d4482a2c208c2203c8eba608`
+- Created: `2020-04-23T00:20:56.490645385Z`
 - Virtual Size: ~ 81.35 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
