@@ -3718,14 +3718,9 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.6/copyright`, `/usr/share/doc
 - `use in source`
 - `without`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3.6=3.6.9-1~18.04
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.6/python3.6_3.6.9-1~18.04.dsc' python3.6_3.6.9-1~18.04.dsc 3459 SHA256:bce2658efe1049ac11b6abf4f48e6891ec2ea633377b081a18db9280478ab425
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.6/python3.6_3.6.9.orig.tar.xz' python3.6_3.6.9.orig.tar.xz 17212164 SHA256:5e2f5f554e3f8f7f0296f7e73d8600c4e9acbaee6b2555b83206edf5153870da
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.6/python3.6_3.6.9-1~18.04.debian.tar.xz' python3.6_3.6.9-1~18.04.debian.tar.xz 214508 SHA256:5096a758dae76f406c05cd208b912e9562e7f88e84b6adc8ceeb3aa118707a42
-```
 
 ### `dpkg` source package: `raptor2=2.0.14-1build1`
 
