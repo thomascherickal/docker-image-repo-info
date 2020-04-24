@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:f9846126f9a1644eac75ca66a376fceb1ed1cd2907da04d5b026fd27a62f8df2`
-- Created: `2020-01-24T06:10:09.990600504Z`
-- Virtual Size: ~ 418.87 Mb  
+- Image ID: `sha256:5277a89190339af2aa249a091ab62b4b6098e4e8b39ccf0a683000c98572f1ce`
+- Created: `2020-04-24T14:12:45.080869054Z`
+- Virtual Size: ~ 416.64 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -681,16 +681,16 @@ GPL-2.0
 ### `apk` package: `ca-certificates`
 
 ```console
-ca-certificates-20190108-r0 description:
+ca-certificates-20191127-r0 description:
 Common CA certificates PEM files
 
-ca-certificates-20190108-r0 webpage:
+ca-certificates-20191127-r0 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-20190108-r0 installed size:
-737280
+ca-certificates-20191127-r0 installed size:
+741376
 
-ca-certificates-20190108-r0 license:
+ca-certificates-20191127-r0 license:
 MPL-2.0 GPL-2.0-or-later
 
 ```
@@ -698,16 +698,16 @@ MPL-2.0 GPL-2.0-or-later
 ### `apk` package: `ca-certificates-cacert`
 
 ```console
-ca-certificates-cacert-20190108-r0 description:
+ca-certificates-cacert-20191127-r0 description:
 Mozilla bundled certificates
 
-ca-certificates-cacert-20190108-r0 webpage:
+ca-certificates-cacert-20191127-r0 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-cacert-20190108-r0 installed size:
+ca-certificates-cacert-20191127-r0 installed size:
 245760
 
-ca-certificates-cacert-20190108-r0 license:
+ca-certificates-cacert-20191127-r0 license:
 MPL-2.0 GPL-2.0-or-later
 
 ```
@@ -902,16 +902,16 @@ BSD-3-Clause
 ### `apk` package: `icu`
 
 ```console
-icu-64.2-r0 description:
+icu-64.2-r1 description:
 International Components for Unicode library
 
-icu-64.2-r0 webpage:
+icu-64.2-r1 webpage:
 http://www.icu-project.org/
 
-icu-64.2-r0 installed size:
+icu-64.2-r1 installed size:
 663552
 
-icu-64.2-r0 license:
+icu-64.2-r1 license:
 MIT ICU Unicode-TOU
 
 ```
@@ -919,16 +919,16 @@ MIT ICU Unicode-TOU
 ### `apk` package: `icu-dev`
 
 ```console
-icu-dev-64.2-r0 description:
+icu-dev-64.2-r1 description:
 International Components for Unicode library (development files)
 
-icu-dev-64.2-r0 webpage:
+icu-dev-64.2-r1 webpage:
 http://www.icu-project.org/
 
-icu-dev-64.2-r0 installed size:
+icu-dev-64.2-r1 installed size:
 5009408
 
-icu-dev-64.2-r0 license:
+icu-dev-64.2-r1 license:
 MIT ICU Unicode-TOU
 
 ```
@@ -936,16 +936,16 @@ MIT ICU Unicode-TOU
 ### `apk` package: `icu-libs`
 
 ```console
-icu-libs-64.2-r0 description:
+icu-libs-64.2-r1 description:
 International Components for Unicode library (libraries)
 
-icu-libs-64.2-r0 webpage:
+icu-libs-64.2-r1 webpage:
 http://www.icu-project.org/
 
-icu-libs-64.2-r0 installed size:
+icu-libs-64.2-r1 installed size:
 32145408
 
-icu-libs-64.2-r0 license:
+icu-libs-64.2-r1 license:
 MIT ICU Unicode-TOU
 
 ```
@@ -1004,16 +1004,16 @@ LGPL-2.1-or-later AND GPL-2.0-or-later
 ### `apk` package: `libarchive`
 
 ```console
-libarchive-3.3.3-r1 description:
+libarchive-3.3.3-r2 description:
 library that can create and read several streaming archive formats
 
-libarchive-3.3.3-r1 webpage:
+libarchive-3.3.3-r2 webpage:
 https://libarchive.org/
 
-libarchive-3.3.3-r1 installed size:
+libarchive-3.3.3-r2 installed size:
 622592
 
-libarchive-3.3.3-r1 license:
+libarchive-3.3.3-r2 license:
 BSD-2-Clause BSD-3-Clause Apache-2.0
 
 ```
@@ -1106,16 +1106,16 @@ GPL-2.0-or-later AND LGPL-2.0-or-later AND BSD-3-Clause AND MIT
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1d-r2 description:
+libcrypto1.1-1.1.1g-r0 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1d-r2 webpage:
+libcrypto1.1-1.1.1g-r0 webpage:
 https://www.openssl.org
 
-libcrypto1.1-1.1.1d-r2 installed size:
-2740224
+libcrypto1.1-1.1.1g-r0 installed size:
+2756608
 
-libcrypto1.1-1.1.1d-r2 license:
+libcrypto1.1-1.1.1g-r0 license:
 OpenSSL
 
 ```
@@ -1310,16 +1310,16 @@ custom
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1d-r2 description:
+libssl1.1-1.1.1g-r0 description:
 SSL shared libraries
 
-libssl1.1-1.1.1d-r2 webpage:
+libssl1.1-1.1.1g-r0 webpage:
 https://www.openssl.org
 
-libssl1.1-1.1.1d-r2 installed size:
-532480
+libssl1.1-1.1.1g-r0 installed size:
+536576
 
-libssl1.1-1.1.1d-r2 license:
+libssl1.1-1.1.1g-r0 license:
 OpenSSL
 
 ```
@@ -1378,16 +1378,16 @@ MIT BSD ISC
 ### `apk` package: `lz4-libs`
 
 ```console
-lz4-libs-1.9.1-r0 description:
+lz4-libs-1.9.1-r1 description:
 LZ4 is lossless compression algorithm with fast decoder @ multiple GB/s per core. (libraries)
 
-lz4-libs-1.9.1-r0 webpage:
+lz4-libs-1.9.1-r1 webpage:
 https://github.com/lz4/lz4
 
-lz4-libs-1.9.1-r0 installed size:
+lz4-libs-1.9.1-r1 installed size:
 126976
 
-lz4-libs-1.9.1-r0 license:
+lz4-libs-1.9.1-r1 license:
 BSD-2-Clause GPL-2.0-only
 
 ```
@@ -1497,33 +1497,16 @@ MIT BSD GPL2+
 ### `apk` package: `ncurses-libs`
 
 ```console
-ncurses-libs-6.1_p20190518-r0 description:
+ncurses-libs-6.1_p20190518-r2 description:
 Ncurses libraries
 
-ncurses-libs-6.1_p20190518-r0 webpage:
+ncurses-libs-6.1_p20190518-r2 webpage:
 https://www.gnu.org/software/ncurses/
 
-ncurses-libs-6.1_p20190518-r0 installed size:
+ncurses-libs-6.1_p20190518-r2 installed size:
 503808
 
-ncurses-libs-6.1_p20190518-r0 license:
-MIT
-
-```
-
-### `apk` package: `ncurses-terminfo`
-
-```console
-ncurses-terminfo-6.1_p20190518-r0 description:
-Console display library (other terminfo files)
-
-ncurses-terminfo-6.1_p20190518-r0 webpage:
-https://www.gnu.org/software/ncurses/
-
-ncurses-terminfo-6.1_p20190518-r0 installed size:
-7307264
-
-ncurses-terminfo-6.1_p20190518-r0 license:
+ncurses-libs-6.1_p20190518-r2 license:
 MIT
 
 ```
@@ -1531,16 +1514,16 @@ MIT
 ### `apk` package: `ncurses-terminfo-base`
 
 ```console
-ncurses-terminfo-base-6.1_p20190518-r0 description:
+ncurses-terminfo-base-6.1_p20190518-r2 description:
 Descriptions of common terminals
 
-ncurses-terminfo-base-6.1_p20190518-r0 webpage:
+ncurses-terminfo-base-6.1_p20190518-r2 webpage:
 https://www.gnu.org/software/ncurses/
 
-ncurses-terminfo-base-6.1_p20190518-r0 installed size:
-94208
+ncurses-terminfo-base-6.1_p20190518-r2 installed size:
+212992
 
-ncurses-terminfo-base-6.1_p20190518-r0 license:
+ncurses-terminfo-base-6.1_p20190518-r2 license:
 MIT
 
 ```
@@ -1667,16 +1650,16 @@ custom
 ### `apk` package: `runtime-dependencies`
 
 ```console
-runtime-dependencies-20200124.060343 description:
+runtime-dependencies-20200424.140807 description:
 virtual meta package
 
-runtime-dependencies-20200124.060343 webpage:
+runtime-dependencies-20200424.140807 webpage:
 
 
-runtime-dependencies-20200124.060343 installed size:
+runtime-dependencies-20200424.140807 installed size:
 0
 
-runtime-dependencies-20200124.060343 license:
+runtime-dependencies-20200424.140807 license:
 
 
 ```
