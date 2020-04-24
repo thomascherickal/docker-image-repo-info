@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:07c06ec8b83b9f1415f1b95fadcb594c45482cee82c9a6863396cae21b4d8b17`
-- Created: `2020-04-21T01:23:47.822191429Z`
-- Virtual Size: ~ 803.39 Mb  
+- Image ID: `sha256:20fc7df8909c21c3d87dec73359efcca105c4ad30b7f4819b17ba15fe31bef51`
+- Created: `2020-04-23T00:51:19.314077661Z`
+- Virtual Size: ~ 803.41 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["bash"]`
@@ -1253,12 +1253,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/gdk-pixbuf/2.38.1+dfsg-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/gdk-pixbuf/2.38.1+dfsg-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `git=1:2.20.1-2+deb10u2`
+### `dpkg` source package: `git=1:2.20.1-2+deb10u3`
 
 Binary Packages:
 
-- `git=1:2.20.1-2+deb10u2`
-- `git-man=1:2.20.1-2+deb10u2`
+- `git=1:2.20.1-2+deb10u3`
+- `git-man=1:2.20.1-2+deb10u3`
 
 Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/copyright`)
 
@@ -1281,13 +1281,20 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 - `dlmalloc`
 - `mingw-runtime`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris git=1:2.20.1-2+deb10u3
+'http://security.debian.org/debian-security/pool/updates/main/g/git/git_2.20.1-2+deb10u3.dsc' git_2.20.1-2+deb10u3.dsc 2923 SHA256:6322d0dbe9b867a6cd1cd75f95a4a20335faa2030c38688f460ddaaaacbd4d06
+'http://security.debian.org/debian-security/pool/updates/main/g/git/git_2.20.1.orig.tar.xz' git_2.20.1.orig.tar.xz 5359872 SHA256:9d2e91e2faa2ea61ba0a70201d023b36f54d846314591a002c610ea2ab81c3e9
+'http://security.debian.org/debian-security/pool/updates/main/g/git/git_2.20.1-2+deb10u3.debian.tar.xz' git_2.20.1-2+deb10u3.debian.tar.xz 646216 SHA256:3c6e2f8495350bccd0981d579d4d1cac6b0e051e1f7ba8b1d22c842bd4cb3453
+```
 
-- http://snapshot.debian.org/package/git/1:2.20.1-2+deb10u2/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/git/1:2.20.1-2+deb10u3/ (for browsing the source)
+- https://sources.debian.net/src/git/1:2.20.1-2+deb10u3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/git/1:2.20.1-2+deb10u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `glib2.0=2.58.3-2+deb10u2`
 
@@ -4143,13 +4150,13 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/openssh/1:7.9p1-10+deb10u2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/openssh/1:7.9p1-10+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openssl=1.1.1d-0+deb10u2`
+### `dpkg` source package: `openssl=1.1.1d-0+deb10u3`
 
 Binary Packages:
 
-- `libssl-dev:amd64=1.1.1d-0+deb10u2`
-- `libssl1.1:amd64=1.1.1d-0+deb10u2`
-- `openssl=1.1.1d-0+deb10u2`
+- `libssl-dev:amd64=1.1.1d-0+deb10u3`
+- `libssl1.1:amd64=1.1.1d-0+deb10u3`
+- `openssl=1.1.1d-0+deb10u3`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -4158,18 +4165,18 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openssl=1.1.1d-0+deb10u2
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1d-0+deb10u2.dsc' openssl_1.1.1d-0+deb10u2.dsc 2472 SHA256:cfeb4085016d29b14c2e0b1c204fd95a6fe20be3c12b669b8b0d6553eb2108a9
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1d.orig.tar.gz' openssl_1.1.1d.orig.tar.gz 8845861 SHA256:1e3a91bc1f9dfce01af26026f856e064eab4c8ee0a8f457b5ae30b40b8b711f2
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1d.orig.tar.gz.asc' openssl_1.1.1d.orig.tar.gz.asc 488 SHA256:f3fd3299a79421fffd51d35f62636b8e987dab1d3033d93a19d7685868e15395
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1d-0+deb10u2.debian.tar.xz' openssl_1.1.1d-0+deb10u2.debian.tar.xz 84848 SHA256:418f08b2182c54bad5f049d8b17433055e146c84c793794ebca3d74231b53389
+$ apt-get source -qq --print-uris openssl=1.1.1d-0+deb10u3
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1d-0+deb10u3.dsc' openssl_1.1.1d-0+deb10u3.dsc 2472 SHA256:7dc19c6d2bf8ee424b3a39d49edd975e2a8b87655eb0a6a81431efde57a44b14
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1d.orig.tar.gz' openssl_1.1.1d.orig.tar.gz 8845861 SHA256:1e3a91bc1f9dfce01af26026f856e064eab4c8ee0a8f457b5ae30b40b8b711f2
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1d.orig.tar.gz.asc' openssl_1.1.1d.orig.tar.gz.asc 488 SHA256:f3fd3299a79421fffd51d35f62636b8e987dab1d3033d93a19d7685868e15395
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1d-0+deb10u3.debian.tar.xz' openssl_1.1.1d-0+deb10u3.debian.tar.xz 86692 SHA256:59db3dc3bf8e8abee0dc6dd6c62b644e57ac7a0e3ab98ace563885a4f3b205cd
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/openssl/1.1.1d-0+deb10u2/ (for browsing the source)
-- https://sources.debian.net/src/openssl/1.1.1d-0+deb10u2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openssl/1.1.1d-0+deb10u2/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/openssl/1.1.1d-0+deb10u3/ (for browsing the source)
+- https://sources.debian.net/src/openssl/1.1.1d-0+deb10u3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openssl/1.1.1d-0+deb10u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `p11-kit=0.23.15-2`
 
