@@ -5347,14 +5347,9 @@ Licenses: (parsed from: `/usr/share/doc/libpython2.7/copyright`, `/usr/share/doc
 - `implied`
 - `see above, some license as Python`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python2.7=2.7.12-1ubuntu0~16.04.9
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.12-1ubuntu0~16.04.9.dsc' python2.7_2.7.12-1ubuntu0~16.04.9.dsc 3387 SHA256:12ad235b3b09531fdf2f7705a72574a36c53e70251a82feef76b473d89fd4bdc
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.12.orig.tar.gz' python2.7_2.7.12.orig.tar.gz 16935960 SHA256:3cb522d17463dfa69a155ab18cffa399b358c966c0363d6c8b5b3bf1384da4b6
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.12-1ubuntu0~16.04.9.diff.gz' python2.7_2.7.12-1ubuntu0~16.04.9.diff.gz 305578 SHA256:5546459e2591d70af45a7cf1f0d8ce4f0b1fbd6cf39d4079cef3eafff83dc3ca
-```
 
 ### `dpkg` source package: `python3-defaults=3.5.1-3`
 
@@ -5414,14 +5409,9 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.5-minimal/copyright`, `/usr/s
 - `use in source`
 - `without`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3.5=3.5.2-2ubuntu0~16.04.9
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.5/python3.5_3.5.2-2ubuntu0~16.04.9.dsc' python3.5_3.5.2-2ubuntu0~16.04.9.dsc 3387 SHA256:88db0290ffa4bc764969ae695618824e8f2bae746793edc2602894914a304c39
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.5/python3.5_3.5.2.orig.tar.xz' python3.5_3.5.2.orig.tar.xz 15222676 SHA256:0010f56100b9b74259ebcd5d4b295a32324b58b517403a10d1a2aa7cb22bca40
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.5/python3.5_3.5.2-2ubuntu0~16.04.9.debian.tar.xz' python3.5_3.5.2-2ubuntu0~16.04.9.debian.tar.xz 232852 SHA256:9454a5fce93ca6f44bc9775512e82a5f083eb5c726d29a1f642192aeb71d8b33
-```
 
 ### `dpkg` source package: `pyyaml=3.11-3build1`
 
