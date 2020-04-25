@@ -1,7 +1,7 @@
 ## `xwiki:12-postgres-tomcat`
 
 ```console
-$ docker pull xwiki@sha256:43e1cddfed30661921402f0c89490b0723ecb83342791f6cec35a270fdadcde4
+$ docker pull xwiki@sha256:bccacee087016c082daa6de8f752e2896a38498b897b521fb152c8637958669b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -173,160 +173,160 @@ CMD ["xwiki"]
 ### `xwiki:12-postgres-tomcat` - linux; arm64 variant v8
 
 ```console
-$ docker pull xwiki@sha256:7db1fe65219cd0f5541bf5ae566edab047e946fbb22c5fd545eb3c725a9fe5ac
+$ docker pull xwiki@sha256:bb40cdfad0a8e248dc35d5ade56bad7ffb780d828b0002dbe5026edfa39e2465
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **697.0 MB (697048707 bytes)**  
+-	Total Size: **696.4 MB (696433722 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6c67a6e45db0ea3413019bbec0f75b520392bfae7548a5572653b1946e8a4761`
+-	Image ID: `sha256:7af36006e4400ae1a19cc7a8be0493e0bd6240b1a44c0cd5232950dff0459e3a`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["xwiki"]`
 
 ```dockerfile
-# Fri, 20 Mar 2020 18:43:33 GMT
-ADD file:e4214b65d372c2f971e6544f69c465e8b1ba82290276558036047179a02ba9e3 in / 
-# Fri, 20 Mar 2020 18:43:35 GMT
+# Fri, 24 Apr 2020 00:16:45 GMT
+ADD file:bd5b3470601aa4a28132ec60a8b1c33516d09a1391864fe1dbf82a4030397fd1 in / 
+# Fri, 24 Apr 2020 00:16:54 GMT
 RUN [ -z "$(apt-get indextargets)" ]
-# Fri, 20 Mar 2020 18:43:37 GMT
+# Fri, 24 Apr 2020 00:16:58 GMT
 RUN set -xe 		&& echo '#!/bin/sh' > /usr/sbin/policy-rc.d 	&& echo 'exit 101' >> /usr/sbin/policy-rc.d 	&& chmod +x /usr/sbin/policy-rc.d 		&& dpkg-divert --local --rename --add /sbin/initctl 	&& cp -a /usr/sbin/policy-rc.d /sbin/initctl 	&& sed -i 's/^exit.*/exit 0/' /sbin/initctl 		&& echo 'force-unsafe-io' > /etc/dpkg/dpkg.cfg.d/docker-apt-speedup 		&& echo 'DPkg::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' > /etc/apt/apt.conf.d/docker-clean 	&& echo 'APT::Update::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' >> /etc/apt/apt.conf.d/docker-clean 	&& echo 'Dir::Cache::pkgcache ""; Dir::Cache::srcpkgcache "";' >> /etc/apt/apt.conf.d/docker-clean 		&& echo 'Acquire::Languages "none";' > /etc/apt/apt.conf.d/docker-no-languages 		&& echo 'Acquire::GzipIndexes "true"; Acquire::CompressionTypes::Order:: "gz";' > /etc/apt/apt.conf.d/docker-gzip-indexes 		&& echo 'Apt::AutoRemove::SuggestsImportant "false";' > /etc/apt/apt.conf.d/docker-autoremove-suggests
-# Fri, 20 Mar 2020 18:43:39 GMT
+# Fri, 24 Apr 2020 00:17:03 GMT
 RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
-# Fri, 20 Mar 2020 18:43:39 GMT
+# Fri, 24 Apr 2020 00:17:05 GMT
 CMD ["/bin/bash"]
-# Fri, 20 Mar 2020 19:04:11 GMT
+# Fri, 24 Apr 2020 14:53:22 GMT
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Fri, 20 Mar 2020 19:04:37 GMT
+# Fri, 24 Apr 2020 14:53:49 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Mon, 20 Apr 2020 17:40:52 GMT
+# Fri, 24 Apr 2020 14:54:24 GMT
 ENV JAVA_VERSION=jdk-11.0.7+10
-# Mon, 20 Apr 2020 17:41:16 GMT
+# Fri, 24 Apr 2020 14:54:37 GMT
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='3b8b8bba6a0472ec7de5271cbf67f11e6ab525de6dd5d4729300375f1d56b7a1';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.7_10.tar.gz';          ;;        armhf|armv7l)          ESUM='45c235af67498f87e3dc99642771e57547cf226335eaee8a55d195173e66a2e9';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10/OpenJDK11U-jdk_arm_linux_hotspot_11.0.7_10.tar.gz';          ;;        ppc64el|ppc64le)          ESUM='a417db0295b1f4b538ecbaf7c774f3a177fab9657a665940170936c0eca4e71a';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10/OpenJDK11U-jdk_ppc64le_linux_hotspot_11.0.7_10.tar.gz';          ;;        s390x)          ESUM='d9b72e87a1d3ebc0c9552f72ae5eb150fffc0298a7cb841f1ce7bfc70dcd1059';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10/OpenJDK11U-jdk_s390x_linux_hotspot_11.0.7_10.tar.gz';          ;;        amd64|x86_64)          ESUM='ee60304d782c9d5654bf1a6b3f38c683921c1711045e1db94525a51b7024a2ca';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10/OpenJDK11U-jdk_x64_linux_hotspot_11.0.7_10.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Mon, 20 Apr 2020 17:41:24 GMT
+# Fri, 24 Apr 2020 14:54:39 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Mon, 20 Apr 2020 17:41:28 GMT
+# Fri, 24 Apr 2020 14:54:40 GMT
 CMD ["jshell"]
-# Mon, 20 Apr 2020 19:13:20 GMT
+# Fri, 24 Apr 2020 18:28:25 GMT
 ENV CATALINA_HOME=/usr/local/tomcat
-# Mon, 20 Apr 2020 19:13:21 GMT
+# Fri, 24 Apr 2020 18:28:26 GMT
 ENV PATH=/usr/local/tomcat/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Mon, 20 Apr 2020 19:13:24 GMT
+# Fri, 24 Apr 2020 18:28:28 GMT
 RUN mkdir -p "$CATALINA_HOME"
-# Mon, 20 Apr 2020 19:13:25 GMT
+# Fri, 24 Apr 2020 18:28:29 GMT
 WORKDIR /usr/local/tomcat
-# Mon, 20 Apr 2020 19:13:26 GMT
+# Fri, 24 Apr 2020 18:28:29 GMT
 ENV TOMCAT_NATIVE_LIBDIR=/usr/local/tomcat/native-jni-lib
-# Mon, 20 Apr 2020 19:13:27 GMT
+# Fri, 24 Apr 2020 18:28:30 GMT
 ENV LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib
-# Mon, 20 Apr 2020 19:18:08 GMT
+# Fri, 24 Apr 2020 18:31:55 GMT
 ENV GPG_KEYS=05AB33110949707C93A279E3D3EFE6B686867BA6 07E48665A34DCAFAE522E5E6266191C37C037D42 47309207D818FFD8DCD3F83F1931D684307A10A5 541FBE7D8F78B25E055DDEE13C370389288584E7 61B832AC2F1C5A90F0F9B00A1C506407564C17A3 713DA88BE50911535FE716F5208B0AB1D63011C7 79F7026C690BAA50B92CD8B66A3AD3F4F22C4FED 9BA44C2621385CB966EBA586F72C284D731FABEE A27677289986DB50844682F8ACB77FC2E86E29AC A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243 F3A04C595DB5B6A5F1ECA43E3B7BBB100D811BBE F7DA48BB64BCB84ECBA7EE6935CD23C10D498E23
-# Mon, 20 Apr 2020 19:18:09 GMT
+# Fri, 24 Apr 2020 18:31:55 GMT
 ENV TOMCAT_MAJOR=8
-# Mon, 20 Apr 2020 19:18:12 GMT
+# Fri, 24 Apr 2020 18:31:56 GMT
 ENV TOMCAT_VERSION=8.5.54
-# Mon, 20 Apr 2020 19:18:14 GMT
+# Fri, 24 Apr 2020 18:31:57 GMT
 ENV TOMCAT_SHA512=dc3ba0183d1e6f6006e5430e91abbc0758bdb719efebea5809f7034c9a28c590a764d8fcf2528a27a98cb86531e94cd9dc5a92cdbcae36e808ced0e5f1c665b8
-# Mon, 20 Apr 2020 19:19:52 GMT
+# Fri, 24 Apr 2020 18:33:01 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		gnupg dirmngr 		wget ca-certificates 	; 		ddist() { 		local f="$1"; shift; 		local distFile="$1"; shift; 		local success=; 		local distUrl=; 		for distUrl in 			'https://www.apache.org/dyn/closer.cgi?action=download&filename=' 			https://www-us.apache.org/dist/ 			https://www.apache.org/dist/ 			https://archive.apache.org/dist/ 		; do 			if wget -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then 				success=1; 				break; 			fi; 		done; 		[ -n "$success" ]; 	}; 		ddist 'tomcat.tar.gz' "tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz"; 	echo "$TOMCAT_SHA512 *tomcat.tar.gz" | sha512sum --strict --check -; 	ddist 'tomcat.tar.gz.asc' "tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	for key in $GPG_KEYS; do 		gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 	done; 	gpg --batch --verify tomcat.tar.gz.asc tomcat.tar.gz; 	tar -xf tomcat.tar.gz --strip-components=1; 	rm bin/*.bat; 	rm tomcat.tar.gz*; 	command -v gpgconf && gpgconf --kill all || :; 	rm -rf "$GNUPGHOME"; 		mv webapps webapps.dist; 	mkdir webapps; 		nativeBuildDir="$(mktemp -d)"; 	tar -xf bin/tomcat-native.tar.gz -C "$nativeBuildDir" --strip-components=1; 	apt-get install -y --no-install-recommends 		dpkg-dev 		gcc 		libapr1-dev 		libssl-dev 		make 	; 	( 		export CATALINA_HOME="$PWD"; 		cd "$nativeBuildDir/native"; 		gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 		aprConfig="$(command -v apr-1-config)"; 		./configure 			--build="$gnuArch" 			--libdir="$TOMCAT_NATIVE_LIBDIR" 			--prefix="$CATALINA_HOME" 			--with-apr="$aprConfig" 			--with-java-home="$JAVA_HOME" 			--with-ssl=yes; 		make -j "$(nproc)"; 		make install; 	); 	rm -rf "$nativeBuildDir"; 	rm bin/tomcat-native.tar.gz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	find "$TOMCAT_NATIVE_LIBDIR" -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		find ./bin/ -name '*.sh' -exec sed -ri 's|^#!/bin/sh$|#!/usr/bin/env bash|' '{}' +; 		chmod -R +rX .; 	chmod 777 logs temp work
-# Mon, 20 Apr 2020 19:19:59 GMT
+# Fri, 24 Apr 2020 18:33:05 GMT
 RUN set -e 	&& nativeLines="$(catalina.sh configtest 2>&1)" 	&& nativeLines="$(echo "$nativeLines" | grep 'Apache Tomcat Native')" 	&& nativeLines="$(echo "$nativeLines" | sort -u)" 	&& if ! echo "$nativeLines" | grep 'INFO: Loaded APR based Apache Tomcat Native library' >&2; then 		echo >&2 "$nativeLines"; 		exit 1; 	fi
-# Mon, 20 Apr 2020 19:20:00 GMT
+# Fri, 24 Apr 2020 18:33:06 GMT
 EXPOSE 8080
-# Mon, 20 Apr 2020 19:20:01 GMT
+# Fri, 24 Apr 2020 18:33:07 GMT
 CMD ["catalina.sh" "run"]
-# Mon, 20 Apr 2020 20:38:19 GMT
+# Fri, 24 Apr 2020 21:19:18 GMT
 MAINTAINER Vincent Massol <vincent@massol.net>
-# Mon, 20 Apr 2020 20:39:47 GMT
+# Fri, 24 Apr 2020 21:21:03 GMT
 RUN apt-get update &&   apt-get --no-install-recommends -y install     curl     libreoffice     unzip     procps     libpostgresql-jdbc-java &&   rm -rf /var/lib/apt/lists/*
-# Mon, 20 Apr 2020 20:41:09 GMT
+# Fri, 24 Apr 2020 21:22:38 GMT
 ENV XWIKI_VERSION=12.2.1
-# Mon, 20 Apr 2020 20:41:10 GMT
+# Fri, 24 Apr 2020 21:22:39 GMT
 ENV XWIKI_URL_PREFIX=https://maven.xwiki.org/releases/org/xwiki/platform/xwiki-platform-distribution-war/12.2.1
-# Mon, 20 Apr 2020 20:41:10 GMT
+# Fri, 24 Apr 2020 21:22:40 GMT
 ENV XWIKI_DOWNLOAD_SHA256=bbadfa174363a494bb5e31ca7ec6ce1b9f5af425d3439e6ffbbc96bcc1dae9f6
-# Mon, 20 Apr 2020 20:41:48 GMT
+# Fri, 24 Apr 2020 21:23:34 GMT
 RUN rm -rf /usr/local/tomcat/webapps/* &&   mkdir -p /usr/local/tomcat/temp &&   mkdir -p /usr/local/xwiki/data &&   curl -fSL "${XWIKI_URL_PREFIX}/xwiki-platform-distribution-war-${XWIKI_VERSION}.war" -o xwiki.war &&   echo "$XWIKI_DOWNLOAD_SHA256 xwiki.war" | sha256sum -c - &&   unzip -d /usr/local/tomcat/webapps/ROOT xwiki.war &&   rm -f xwiki.war
-# Mon, 20 Apr 2020 20:41:52 GMT
+# Fri, 24 Apr 2020 21:23:38 GMT
 RUN cp /usr/share/java/postgresql-jdbc4.jar /usr/local/tomcat/webapps/ROOT/WEB-INF/lib/
-# Mon, 20 Apr 2020 20:41:53 GMT
+# Fri, 24 Apr 2020 21:23:39 GMT
 COPY file:0a1be11e2eb610a1dbcd415404e3a592641110b93090030cb831e3a19a163017 in /usr/local/tomcat/bin/ 
-# Mon, 20 Apr 2020 20:41:53 GMT
+# Fri, 24 Apr 2020 21:23:40 GMT
 COPY file:bd68ae28ec068b0f89a2e05a10b1098af3b375c97a69f9255831e8fa6e87f773 in /usr/local/tomcat/webapps/ROOT/WEB-INF/hibernate.cfg.xml 
-# Mon, 20 Apr 2020 20:41:55 GMT
+# Fri, 24 Apr 2020 21:23:43 GMT
 RUN sed -i 's/<id>org.xwiki.platform:xwiki-platform-distribution-war/<id>org.xwiki.platform:xwiki-platform-distribution-docker/'   /usr/local/tomcat/webapps/ROOT/META-INF/extension.xed
-# Mon, 20 Apr 2020 20:41:56 GMT
+# Fri, 24 Apr 2020 21:23:44 GMT
 COPY file:1aeb90632849dc8f47315bba1c63b571b0f210b5f223333b3a494c471e4b9743 in /usr/local/bin/docker-entrypoint.sh 
-# Mon, 20 Apr 2020 20:41:56 GMT
+# Fri, 24 Apr 2020 21:23:46 GMT
 VOLUME [/usr/local/xwiki]
-# Mon, 20 Apr 2020 20:41:57 GMT
+# Fri, 24 Apr 2020 21:23:47 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Mon, 20 Apr 2020 20:41:57 GMT
+# Fri, 24 Apr 2020 21:23:48 GMT
 CMD ["xwiki"]
 ```
 
 -	Layers:
-	-	`sha256:b2f61026a351316126bfad6f6cac3971b3b3e928b126ac53026bb4263459d2ff`  
-		Last Modified: Mon, 16 Mar 2020 15:39:01 GMT  
-		Size: 23.7 MB (23720219 bytes)  
+	-	`sha256:c2cd007b69f7e5f37c851aa689e0e617fbaa3fe3e470f714337a03e569b7f434`  
+		Last Modified: Sun, 05 Apr 2020 20:25:25 GMT  
+		Size: 23.7 MB (23720401 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5538fb30c42c023ad64c0e31ce3cb02e3c4150f9ac944a46d3386b8212b80043`  
-		Last Modified: Fri, 20 Mar 2020 18:45:00 GMT  
-		Size: 35.2 KB (35206 bytes)  
+	-	`sha256:3c087f8bf83d28baa9c53fc5cfb0dfc79d5062cfad77563076553b04259e822f`  
+		Last Modified: Fri, 24 Apr 2020 00:21:16 GMT  
+		Size: 35.2 KB (35197 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f0b05810781a3c493e08dc6e2c9b9553244f8f86248f7d709a50becbac344234`  
-		Last Modified: Fri, 20 Mar 2020 18:45:00 GMT  
-		Size: 853.0 B  
+	-	`sha256:474b5c43e9a24e1958763941a17a7cac60b13460a47f2ae9067ec03ceadab33a`  
+		Last Modified: Fri, 24 Apr 2020 00:21:15 GMT  
+		Size: 849.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0180a33352d6b41ad6ca5fac27544fb3c8c7cb69e67dc30bf9584b49cd3b3938`  
-		Last Modified: Fri, 20 Mar 2020 18:45:00 GMT  
-		Size: 187.0 B  
+	-	`sha256:7083e6591d76b9a6c13497a6a89bfbae3e7eb2eb31bec366bec3884c8e4517ce`  
+		Last Modified: Fri, 24 Apr 2020 00:21:15 GMT  
+		Size: 189.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9b04dea9979e74cbad4e0d760b651a85f97a6e716a7ceace6d5290172867e751`  
-		Last Modified: Fri, 20 Mar 2020 19:06:41 GMT  
-		Size: 12.7 MB (12733586 bytes)  
+	-	`sha256:98a0d42d4dd893fa5a5aaceba8eaec6f024da8e4f08c532f0b049a4ff43fa484`  
+		Last Modified: Fri, 24 Apr 2020 14:56:44 GMT  
+		Size: 12.7 MB (12733848 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b103f64cf697c18902f2e02cabe8dcc0b2a6dfce5ff6b866dfe692ce3aa3c4c3`  
-		Last Modified: Mon, 20 Apr 2020 17:44:08 GMT  
-		Size: 191.0 MB (191013808 bytes)  
+	-	`sha256:623457f03b2314a95c0a83f2736fc8b10916f2bb105433e159bccd46c64f1d78`  
+		Last Modified: Fri, 24 Apr 2020 14:57:50 GMT  
+		Size: 191.0 MB (191013810 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d642d3ea0b015a63a6d5313c73e7b7b4918623c4a4c976006c58ea2de8578475`  
-		Last Modified: Mon, 20 Apr 2020 19:25:43 GMT  
-		Size: 173.0 B  
+	-	`sha256:dcb1ea57af6d5f1d12f3846d18b054add94c1d9a19904e953111f6ca3ecd2562`  
+		Last Modified: Fri, 24 Apr 2020 18:36:51 GMT  
+		Size: 174.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:48e5160ef37199d558bc2f9977ee7a72eb3507327113492c64faa3cd99ab4133`  
-		Last Modified: Mon, 20 Apr 2020 19:26:06 GMT  
-		Size: 11.9 MB (11932298 bytes)  
+	-	`sha256:20b3478eb224426b8e0700db0dfad002a72ae2d617e13c6b88b0080b12a9cdbb`  
+		Last Modified: Fri, 24 Apr 2020 18:37:16 GMT  
+		Size: 11.3 MB (11307652 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:86f51c251309adeccac52e61e974c852c6ba87f02d0f6419bedf530c918688bf`  
-		Last Modified: Mon, 20 Apr 2020 19:26:05 GMT  
-		Size: 165.0 B  
+	-	`sha256:052bd316bc818eeeaf7a4b06fcfb9f5d7707b3d152425aeee2095bb2deebe67a`  
+		Last Modified: Fri, 24 Apr 2020 18:37:15 GMT  
+		Size: 164.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cad7badd99437247f23c4f981eb89416d5b548aaa7e32e74aad876c6884716e6`  
-		Last Modified: Mon, 20 Apr 2020 20:42:58 GMT  
-		Size: 175.9 MB (175858157 bytes)  
+	-	`sha256:18f6a79ca8643dba894873670cf78fea353b289826e86920204d75293e7e4ac9`  
+		Last Modified: Fri, 24 Apr 2020 21:25:08 GMT  
+		Size: 175.9 MB (175867389 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ad3f19aaaca7cfe69119ab8b4863a462f5efabe00574386a4bb188397c7063d4`  
-		Last Modified: Mon, 20 Apr 2020 20:43:39 GMT  
-		Size: 281.1 MB (281124149 bytes)  
+	-	`sha256:0adadc05b402d296a25e1b732a96dff91d777b97f78e588709fb5c34835bc128`  
+		Last Modified: Fri, 24 Apr 2020 21:26:00 GMT  
+		Size: 281.1 MB (281124128 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7868041d0ccf596696e21ac1efbfc163b5fc16df7e9c3ac073ceec38794f63ec`  
-		Last Modified: Mon, 20 Apr 2020 20:43:08 GMT  
-		Size: 618.9 KB (618858 bytes)  
+	-	`sha256:702aba0d2174bfaccff4746ae7a76421046e540825a0a1062d7feec7db7388cd`  
+		Last Modified: Fri, 24 Apr 2020 21:25:20 GMT  
+		Size: 618.9 KB (618865 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:300f2afd68489cd1795a567158990b9ac22afad8aa4cb3fb1464d6d7614aace5`  
-		Last Modified: Mon, 20 Apr 2020 20:43:08 GMT  
+	-	`sha256:7fc8c8c007053b4b825388dfb0d253b6e73248a560a7f0428180bcc481f5b868`  
+		Last Modified: Fri, 24 Apr 2020 21:25:20 GMT  
 		Size: 1.3 KB (1346 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b1b6472e1d423445a5a37d79afd4c58a88372cd16ebc6eb95be13959a53f09ae`  
-		Last Modified: Mon, 20 Apr 2020 20:43:09 GMT  
-		Size: 2.5 KB (2480 bytes)  
+	-	`sha256:e744b78de17774636d417fade140d5fccfc126a59eabd2040477334f4862136a`  
+		Last Modified: Fri, 24 Apr 2020 21:25:19 GMT  
+		Size: 2.5 KB (2487 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:021f2c918f624ae375afcb0e5b72bca70b3e30ff957c9caef64f38d5f0687cc5`  
-		Last Modified: Mon, 20 Apr 2020 20:43:08 GMT  
-		Size: 4.8 KB (4765 bytes)  
+	-	`sha256:f40d593bbdd59e86b03fc34c935e5fe5c02ce25670c62c40681e16d3727da4a2`  
+		Last Modified: Fri, 24 Apr 2020 21:25:19 GMT  
+		Size: 4.8 KB (4768 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7d8f53fd92d93e41a3c395f021d2ce94cb8e567152b878bc86f8a7fb35f8073b`  
-		Last Modified: Mon, 20 Apr 2020 20:43:09 GMT  
-		Size: 2.5 KB (2457 bytes)  
+	-	`sha256:1a17adc56e11472d41821cafb9b970957b3ddcf6b97e5a94108b72e44f488981`  
+		Last Modified: Fri, 24 Apr 2020 21:25:19 GMT  
+		Size: 2.5 KB (2455 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
