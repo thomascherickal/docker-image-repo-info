@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:d2f8e3f1a97dd99a6fe39f92d5fc1575cc3d81727c1cedd2e1a2e61f9abbb87a`
-- Created: `2020-04-17T17:50:29.241786973Z`
-- Virtual Size: ~ 135.36 Mb  
+- Image ID: `sha256:565c6c8fa32d0bb1f5a9a658ed9da401c28b2308dc5dffe540a5135c86b903a2`
+- Created: `2020-04-25T00:37:23.570377039Z`
+- Virtual Size: ~ 135.38 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -68,16 +68,16 @@ MIT
 ### `apk` package: `apk-tools`
 
 ```console
-apk-tools-2.10.4-r3 description:
+apk-tools-2.10.5-r0 description:
 Alpine Package Keeper - package manager for alpine
 
-apk-tools-2.10.4-r3 webpage:
+apk-tools-2.10.5-r0 webpage:
 https://git.alpinelinux.org/cgit/apk-tools/
 
-apk-tools-2.10.4-r3 installed size:
+apk-tools-2.10.5-r0 installed size:
 262144
 
-apk-tools-2.10.4-r3 license:
+apk-tools-2.10.5-r0 license:
 GPL2
 
 ```
@@ -255,16 +255,16 @@ BSD
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1d-r3 description:
+libcrypto1.1-1.1.1g-r0 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1d-r3 webpage:
+libcrypto1.1-1.1.1g-r0 webpage:
 https://www.openssl.org
 
-libcrypto1.1-1.1.1d-r3 installed size:
-2748416
+libcrypto1.1-1.1.1g-r0 installed size:
+2760704
 
-libcrypto1.1-1.1.1d-r3 license:
+libcrypto1.1-1.1.1g-r0 license:
 OpenSSL
 
 ```
@@ -442,16 +442,16 @@ ISC
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1d-r3 description:
+libssl1.1-1.1.1g-r0 description:
 SSL shared libraries
 
-libssl1.1-1.1.1d-r3 webpage:
+libssl1.1-1.1.1g-r0 webpage:
 https://www.openssl.org
 
-libssl1.1-1.1.1d-r3 installed size:
-536576
+libssl1.1-1.1.1g-r0 installed size:
+540672
 
-libssl1.1-1.1.1d-r3 license:
+libssl1.1-1.1.1g-r0 license:
 OpenSSL
 
 ```
@@ -629,16 +629,16 @@ BSD-2-Clause
 ### `apk` package: `openssl`
 
 ```console
-openssl-1.1.1d-r3 description:
+openssl-1.1.1g-r0 description:
 Toolkit for Transport Layer Security (TLS)
 
-openssl-1.1.1d-r3 webpage:
+openssl-1.1.1g-r0 webpage:
 https://www.openssl.org
 
-openssl-1.1.1d-r3 installed size:
+openssl-1.1.1g-r0 installed size:
 675840
 
-openssl-1.1.1d-r3 license:
+openssl-1.1.1g-r0 license:
 OpenSSL
 
 ```
