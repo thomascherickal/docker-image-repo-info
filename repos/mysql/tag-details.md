@@ -236,7 +236,12 @@ CMD ["mysqld"]
 
 ## `mysql:5.6.48`
 
-**does not exist** (yet?)
+```console
+$ docker pull mysql@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `mysql:5.7`
 
@@ -351,7 +356,12 @@ CMD ["mysqld"]
 
 ## `mysql:5.7.30`
 
-**does not exist** (yet?)
+```console
+$ docker pull mysql@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `mysql:8`
 
@@ -589,7 +599,12 @@ CMD ["mysqld"]
 
 ## `mysql:8.0.20`
 
-**does not exist** (yet?)
+```console
+$ docker pull mysql@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `mysql:latest`
 
