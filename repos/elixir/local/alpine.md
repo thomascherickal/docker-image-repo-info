@@ -1,21 +1,21 @@
-# `elixir:1.10.2-alpine`
+# `elixir:1.10.3-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:6d2670c4ffbb6ee4fcecdd251af927c1bbf2a1e951dfa734ed6bbba6d3a032bf`
-- Created: `2020-04-09T20:15:23.075926186Z`
-- Virtual Size: ~ 83.83 Mb  
+- Image ID: `sha256:91b195e74f162cf0f7c5350069f18bba4df6ce3e8ff65c577f3b6816bfeb8e78`
+- Created: `2020-04-28T01:29:02.933976286Z`
+- Virtual Size: ~ 83.88 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["iex"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `OTP_VERSION=22.3.2`
+  - `OTP_VERSION=22.3.3`
   - `REBAR3_VERSION=3.13.1`
-  - `ELIXIR_VERSION=v1.10.2`
+  - `ELIXIR_VERSION=v1.10.3`
   - `LANG=C.UTF-8`
 - Labels:
-  - `org.opencontainers.image.version=22.3.2`
+  - `org.opencontainers.image.version=22.3.3`
 
 ## `apk` (`.apk`-based packages)
 
@@ -56,16 +56,16 @@ MIT
 ### `apk` package: `apk-tools`
 
 ```console
-apk-tools-2.10.4-r3 description:
+apk-tools-2.10.5-r0 description:
 Alpine Package Keeper - package manager for alpine
 
-apk-tools-2.10.4-r3 webpage:
+apk-tools-2.10.5-r0 webpage:
 https://git.alpinelinux.org/cgit/apk-tools/
 
-apk-tools-2.10.4-r3 installed size:
+apk-tools-2.10.5-r0 installed size:
 262144
 
-apk-tools-2.10.4-r3 license:
+apk-tools-2.10.5-r0 license:
 GPL2
 
 ```
@@ -141,16 +141,16 @@ BSD
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1d-r3 description:
+libcrypto1.1-1.1.1g-r0 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1d-r3 webpage:
+libcrypto1.1-1.1.1g-r0 webpage:
 https://www.openssl.org
 
-libcrypto1.1-1.1.1d-r3 installed size:
-2748416
+libcrypto1.1-1.1.1g-r0 installed size:
+2760704
 
-libcrypto1.1-1.1.1d-r3 license:
+libcrypto1.1-1.1.1g-r0 license:
 OpenSSL
 
 ```
@@ -175,16 +175,16 @@ GPL-2.0-only AND LGPL-2.1-or-later
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1d-r3 description:
+libssl1.1-1.1.1g-r0 description:
 SSL shared libraries
 
-libssl1.1-1.1.1d-r3 webpage:
+libssl1.1-1.1.1g-r0 webpage:
 https://www.openssl.org
 
-libssl1.1-1.1.1d-r3 installed size:
-536576
+libssl1.1-1.1.1g-r0 installed size:
+540672
 
-libssl1.1-1.1.1d-r3 license:
+libssl1.1-1.1.1g-r0 license:
 OpenSSL
 
 ```
@@ -260,16 +260,16 @@ MIT BSD GPL2+
 ### `apk` package: `ncurses-libs`
 
 ```console
-ncurses-libs-6.1_p20200118-r2 description:
+ncurses-libs-6.1_p20200118-r3 description:
 Ncurses libraries
 
-ncurses-libs-6.1_p20200118-r2 webpage:
+ncurses-libs-6.1_p20200118-r3 webpage:
 https://invisible-island.net/ncurses/
 
-ncurses-libs-6.1_p20200118-r2 installed size:
+ncurses-libs-6.1_p20200118-r3 installed size:
 507904
 
-ncurses-libs-6.1_p20200118-r2 license:
+ncurses-libs-6.1_p20200118-r3 license:
 MIT
 
 ```
@@ -277,16 +277,16 @@ MIT
 ### `apk` package: `ncurses-terminfo-base`
 
 ```console
-ncurses-terminfo-base-6.1_p20200118-r2 description:
+ncurses-terminfo-base-6.1_p20200118-r3 description:
 Descriptions of common terminals
 
-ncurses-terminfo-base-6.1_p20200118-r2 webpage:
+ncurses-terminfo-base-6.1_p20200118-r3 webpage:
 https://invisible-island.net/ncurses/
 
-ncurses-terminfo-base-6.1_p20200118-r2 installed size:
+ncurses-terminfo-base-6.1_p20200118-r3 installed size:
 217088
 
-ncurses-terminfo-base-6.1_p20200118-r2 license:
+ncurses-terminfo-base-6.1_p20200118-r3 license:
 MIT
 
 ```
