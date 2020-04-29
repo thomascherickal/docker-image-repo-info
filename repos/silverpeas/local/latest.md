@@ -465,14 +465,9 @@ Licenses: (parsed from: `/usr/share/doc/libcups2/copyright`, `/usr/share/doc/lib
 - `LGPL-2.0 with AOSDL exception`
 - `Zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris cups=2.1.3-4ubuntu0.10
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cups/cups_2.1.3-4ubuntu0.10.dsc' cups_2.1.3-4ubuntu0.10.dsc 3447 SHA256:300c90232b7ca024674df4b48ac3a981ff3ce5efab5a778037bb31c1de34e6b9
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cups/cups_2.1.3.orig.tar.bz2' cups_2.1.3.orig.tar.bz2 8832400 SHA256:36a70d43584aea2617da914b9331e23341c3501a8254c4d2eae9c11ec01fd4d3
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cups/cups_2.1.3-4ubuntu0.10.debian.tar.xz' cups_2.1.3-4ubuntu0.10.debian.tar.xz 357260 SHA256:4b66b60cf4be4e279268f1361f803fda3b8ae2510b58256a0f0032cfc48ebf7d
-```
 
 ### `dpkg` source package: `dash=0.5.8-2.1ubuntu2`
 
@@ -3766,14 +3761,9 @@ Licenses: (parsed from: `/usr/share/doc/libopenexr22/copyright`)
 
 - `openexr`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openexr=2.2.0-10ubuntu2.1
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openexr/openexr_2.2.0-10ubuntu2.1.dsc' openexr_2.2.0-10ubuntu2.1.dsc 2395 SHA256:8f2e3f8c3e124f9a726ffcfbb7699630040491dfb6fb6cd5582d3c5f21dc717a
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openexr/openexr_2.2.0.orig.tar.gz' openexr_2.2.0.orig.tar.gz 14489661 SHA256:36a012f6c43213f840ce29a8b182700f6cf6b214bea0d5735594136b44914231
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openexr/openexr_2.2.0-10ubuntu2.1.debian.tar.xz' openexr_2.2.0-10ubuntu2.1.debian.tar.xz 36820 SHA256:c7ca79ae2f3862af7780478eee19f23a78259a76125c43cd987ebbd6294e973e
-```
 
 ### `dpkg` source package: `openjdk-8=8u252-b09-1~16.04`
 
