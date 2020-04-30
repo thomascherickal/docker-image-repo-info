@@ -608,15 +608,9 @@ Licenses: (parsed from: `/usr/share/doc/libcups2/copyright`)
 - `LGPL-2.0 with AOSDL exception`
 - `Zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris cups=2.2.7-1ubuntu2.7
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cups/cups_2.2.7-1ubuntu2.7.dsc' cups_2.2.7-1ubuntu2.7.dsc 3339 SHA256:48a48cc93a931a3a22b04f68cdaa736421759888e72e54dee2acfd3dae9fe1ea
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cups/cups_2.2.7.orig.tar.gz' cups_2.2.7.orig.tar.gz 10330296 SHA256:3c4b637b737077565ccdfbd5f61785d03f49461ae736fcc2c0ffaf41d2c6ea6a
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cups/cups_2.2.7.orig.tar.gz.asc' cups_2.2.7.orig.tar.gz.asc 872 SHA256:2b17bef166e1f8a0dece544c0e4f0d847f6d2c8e784298898966352f4e47581a
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cups/cups_2.2.7-1ubuntu2.7.debian.tar.xz' cups_2.2.7-1ubuntu2.7.debian.tar.xz 362500 SHA256:9d603bfc13ffa9ba8ad8f94ab3ca0e5779eeaa546809381e1580fc3da132cfe9
-```
 
 ### `dpkg` source package: `curl=7.58.0-2ubuntu3.8`
 
@@ -5206,14 +5200,9 @@ Licenses: (parsed from: `/usr/share/doc/libopenexr22/copyright`)
 
 - `openexr`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openexr=2.2.0-11.1ubuntu1.1
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openexr/openexr_2.2.0-11.1ubuntu1.1.dsc' openexr_2.2.0-11.1ubuntu1.1.dsc 2403 SHA256:23039826ef42788b518e7a1e9cab5e87b74b15f80f4c6988b86f2297805dd8e9
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openexr/openexr_2.2.0.orig.tar.gz' openexr_2.2.0.orig.tar.gz 14489661 SHA256:36a012f6c43213f840ce29a8b182700f6cf6b214bea0d5735594136b44914231
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openexr/openexr_2.2.0-11.1ubuntu1.1.debian.tar.xz' openexr_2.2.0-11.1ubuntu1.1.debian.tar.xz 22244 SHA256:e9e41f0f62ae9c0b2cb5d4b1f793735d64bbe29ca18782bfaa0e2e368944e9ac
-```
 
 ### `dpkg` source package: `openjpeg2=2.3.0-2build0.18.04.1`
 
