@@ -2,8 +2,13 @@
 
 # Tags of `vault`
 
+-	[`vault:1.3.5`](#vault135)
 -	[`vault:1.4.0`](#vault140)
 -	[`vault:latest`](#vaultlatest)
+
+## `vault:1.3.5`
+
+**does not exist** (yet?)
 
 ## `vault:1.4.0`
 
