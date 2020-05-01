@@ -1,10 +1,10 @@
-# `crate:4.1.4`
+# `crate:4.1.5`
 
 ## Docker Metadata
 
-- Image ID: `sha256:004cdaadfd54d25698b2c6c5a7d8395cb39042d1a00c629e3de14a8c17c893ff`
-- Created: `2020-03-24T23:20:01.738687724Z`
-- Virtual Size: ~ 675.20 Mb  
+- Image ID: `sha256:de7b8112dd9380a6bdfbb56f65140a4965fa4e961f4cdcf68ffdffe3ad9e3353`
+- Created: `2020-04-29T20:19:57.82376884Z`
+- Virtual Size: ~ 675.51 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -20,13 +20,13 @@
   - `org.label-schema.name=CentOS Base Image`
   - `org.label-schema.schema-version=1.0`
   - `org.label-schema.vendor=CentOS`
-  - `org.opencontainers.image.created=2020-03-20T11:37:45.220429`
+  - `org.opencontainers.image.created=2020-04-24T09:34:17.477377`
   - `org.opencontainers.image.description=CrateDB is a distributed SQL database handles massive amounts of machine data in real-time.`
   - `org.opencontainers.image.source=https://github.com/crate/docker-crate`
   - `org.opencontainers.image.title=crate`
   - `org.opencontainers.image.url=https://crate.io/products/cratedb/`
   - `org.opencontainers.image.vendor=Crate.io`
-  - `org.opencontainers.image.version=4.1.4`
+  - `org.opencontainers.image.version=4.1.5`
 
 ## `rpm` (`.rpm`-based packages)
 
@@ -1368,31 +1368,39 @@ Licenses (from `rpm --query`): LGPLv2+
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `python3-3.6.8-10.el7.x86_64`
+### `rpm` package: `python3-3.6.8-13.el7.x86_64`
 
 Licenses (from `rpm --query`): Python
 
-**WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
+Source:
 
-### `rpm` package: `python3-libs-3.6.8-10.el7.x86_64`
+```console
+$ yumdownloader --quiet --source --urls python3-3.6.8-13.el7
+Enabling updates-source repository
+Enabling base-source repository
+Enabling extras-source repository
+http://vault.centos.org/centos/7/os/Source//SPackages/python3-3.6.8-13.el7.src.rpm
+```
+
+### `rpm` package: `python3-libs-3.6.8-13.el7.x86_64`
 
 Licenses (from `rpm --query`): Python
 
-**WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
+Source:
+
+```console
+$ yumdownloader --quiet --source --urls python3-libs-3.6.8-13.el7
+Enabling updates-source repository
+Enabling base-source repository
+Enabling extras-source repository
+http://vault.centos.org/centos/7/os/Source//SPackages/python3-3.6.8-13.el7.src.rpm
+```
 
 ### `rpm` package: `python3-pip-9.0.3-7.el7_7.noarch`
 
 Licenses (from `rpm --query`): MIT and Python and ASL 2.0 and BSD and ISC and LGPLv2 and MPLv2.0 and (ASL 2.0 or BSD)
 
-Source:
-
-```console
-$ yumdownloader --quiet --source --urls python3-pip-9.0.3-7.el7_7.noarch
-Enabling updates-source repository
-Enabling base-source repository
-Enabling extras-source repository
-http://vault.centos.org/centos/7/updates/Source//SPackages/python-pip-9.0.3-7.el7_7.src.rpm
-```
+**WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
 ### `rpm` package: `python3-setuptools-39.2.0-10.el7.noarch`
 
@@ -1652,11 +1660,19 @@ Licenses (from `rpm --query`): GPLv2+
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `yum-utils-1.1.31-52.el7.noarch`
+### `rpm` package: `yum-utils-1.1.31-53.el7.noarch`
 
 Licenses (from `rpm --query`): GPLv2+
 
-**WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
+Source:
+
+```console
+$ yumdownloader --quiet --source --urls yum-utils-1.1.31-53.el7.noarch
+Enabling updates-source repository
+Enabling base-source repository
+Enabling extras-source repository
+http://vault.centos.org/centos/7/os/Source//SPackages/yum-utils-1.1.31-53.el7.src.rpm
+```
 
 ### `rpm` package: `zlib-1.2.7-18.el7.x86_64`
 
