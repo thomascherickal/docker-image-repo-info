@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:2d2594e04ffa733c6018365bfadef936eedef2d87129ad42d9f0e1e8ed2b0f9d`
-- Created: `2020-04-24T23:46:16.975192547Z`
-- Virtual Size: ~ 419.09 Mb  
+- Image ID: `sha256:5d7ee0c780c01b8d6f6c99c05cb1a0eccc07270e13a5c8f4c6d9e571c569e866`
+- Created: `2020-04-29T23:41:23.478688107Z`
+- Virtual Size: ~ 371.18 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["catalina.sh","run"]`
@@ -153,6 +153,30 @@ Enabling amzn2-core-source repository
 https://cdn.amazonlinux.com/2/core/2.0/SRPMS/34fe09939be83c4717a26148f447644692c8a4455098c31ffbfdbec80313c2d9//../../../../../blobstore/d94991ec3297e116fddaa0543c7626d29605fd5ce546f5d94f697e65c595ad66/cyrus-sasl-2.1.26-23.amzn2.src.rpm
 ```
 
+### `rpm` package: `dejavu-fonts-common-2.33-6.amzn2.noarch`
+
+Licenses (from `rpm --query`): Bitstream Vera and Public Domain
+
+Source:
+
+```console
+$ yumdownloader --quiet --source --urls dejavu-fonts-common-2.33-6.amzn2.noarch
+Enabling amzn2-core-source repository
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/34fe09939be83c4717a26148f447644692c8a4455098c31ffbfdbec80313c2d9//../../../../../blobstore/2c78ae75ee92a19e0ecbd2d6f1b1e6c343e2c8357057617fb7a03438fcff9ce0/dejavu-fonts-2.33-6.amzn2.src.rpm
+```
+
+### `rpm` package: `dejavu-sans-fonts-2.33-6.amzn2.noarch`
+
+Licenses (from `rpm --query`): Bitstream Vera and Public Domain
+
+Source:
+
+```console
+$ yumdownloader --quiet --source --urls dejavu-sans-fonts-2.33-6.amzn2.noarch
+Enabling amzn2-core-source repository
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/34fe09939be83c4717a26148f447644692c8a4455098c31ffbfdbec80313c2d9//../../../../../blobstore/2c78ae75ee92a19e0ecbd2d6f1b1e6c343e2c8357057617fb7a03438fcff9ce0/dejavu-fonts-2.33-6.amzn2.src.rpm
+```
+
 ### `rpm` package: `diffutils-3.3-5.amzn2.x86_64`
 
 Licenses (from `rpm --query`): GPLv3+
@@ -225,16 +249,16 @@ Enabling amzn2-core-source repository
 https://cdn.amazonlinux.com/2/core/2.0/SRPMS/34fe09939be83c4717a26148f447644692c8a4455098c31ffbfdbec80313c2d9//../../../../../blobstore/8cb38ddd3353da1ca38e2748e4affeb61a422044bf26c05f93cd0e20d83b125d/findutils-4.5.11-6.amzn2.src.rpm
 ```
 
-### `rpm` package: `fontconfig-2.10.95-11.amzn2.0.2.x86_64`
+### `rpm` package: `fontconfig-2.13.0-4.3.amzn2.x86_64`
 
 Licenses (from `rpm --query`): MIT and Public Domain and UCD
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls fontconfig-2.10.95-11.amzn2.0.2
+$ yumdownloader --quiet --source --urls fontconfig-2.13.0-4.3.amzn2
 Enabling amzn2-core-source repository
-https://cdn.amazonlinux.com/2/core/2.0/SRPMS/34fe09939be83c4717a26148f447644692c8a4455098c31ffbfdbec80313c2d9//../../../../../blobstore/1573463ea6562e431f2bc980bfbd5fc4726f39def7c52fe7891f6b7000f5121f/fontconfig-2.10.95-11.amzn2.0.2.src.rpm
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/34fe09939be83c4717a26148f447644692c8a4455098c31ffbfdbec80313c2d9//../../../../../blobstore/d27fa964cbcbbd78a2cd17349b255f37d6fa44876c0186ffd4b05c63d6aae827/fontconfig-2.13.0-4.3.amzn2.src.rpm
 ```
 
 ### `rpm` package: `fontpackages-filesystem-1.44-8.amzn2.noarch`
@@ -249,16 +273,16 @@ Enabling amzn2-core-source repository
 https://cdn.amazonlinux.com/2/core/2.0/SRPMS/34fe09939be83c4717a26148f447644692c8a4455098c31ffbfdbec80313c2d9//../../../../../blobstore/a7c49b56992c5deec79f1d6b1cadaf4a1210c7f5cefea9dab4b353e83eeb6ab5/fontpackages-1.44-8.amzn2.src.rpm
 ```
 
-### `rpm` package: `freetype-2.4.11-15.amzn2.0.2.x86_64`
+### `rpm` package: `freetype-2.8-14.amzn2.x86_64`
 
 Licenses (from `rpm --query`): (FTL or GPLv2+) and BSD and MIT and Public Domain and zlib with acknowledgement
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls freetype-2.4.11-15.amzn2.0.2
+$ yumdownloader --quiet --source --urls freetype-2.8-14.amzn2
 Enabling amzn2-core-source repository
-https://cdn.amazonlinux.com/2/core/2.0/SRPMS/34fe09939be83c4717a26148f447644692c8a4455098c31ffbfdbec80313c2d9//../../../../../blobstore/1b3e2c74955224fd17da9498d1570e3d97878b0aa55c357d02cbde3cb03cdf19/freetype-2.4.11-15.amzn2.0.2.src.rpm
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/34fe09939be83c4717a26148f447644692c8a4455098c31ffbfdbec80313c2d9//../../../../../blobstore/3408ce0d136c6e112746d30fd9ecb6ed0beab0596b9d0c7765ad7e7bb4aad34d/freetype-2.8-14.amzn2.src.rpm
 ```
 
 ### `rpm` package: `gawk-4.0.2-4.amzn2.1.2.x86_64`
@@ -661,6 +685,18 @@ Source:
 $ yumdownloader --quiet --source --urls libnghttp2-1.39.2-1.amzn2
 Enabling amzn2-core-source repository
 https://cdn.amazonlinux.com/2/core/2.0/SRPMS/34fe09939be83c4717a26148f447644692c8a4455098c31ffbfdbec80313c2d9//../../../../../blobstore/48085a0e6bf38587dff50d8f036831b272063ebba8e74a6129d4d99ce775d3da/nghttp2-1.39.2-1.amzn2.src.rpm
+```
+
+### `rpm` package: `libpng-1.5.13-7.amzn2.0.2.x86_64`
+
+Licenses (from `rpm --query`): zlib
+
+Source:
+
+```console
+$ yumdownloader --quiet --source --urls libpng-1.5.13-7.amzn2.0.2
+Enabling amzn2-core-source repository
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/34fe09939be83c4717a26148f447644692c8a4455098c31ffbfdbec80313c2d9//../../../../../blobstore/92e071c38179bcfd406d26c6b2b7ae80db6951cf7e51e48aae17d1da96568b1b/libpng-1.5.13-7.amzn2.0.2.src.rpm
 ```
 
 ### `rpm` package: `libselinux-2.5-12.amzn2.0.2.x86_64`
@@ -1213,18 +1249,6 @@ Source:
 $ yumdownloader --quiet --source --urls sqlite-3.7.17-8.amzn2.1.1
 Enabling amzn2-core-source repository
 https://cdn.amazonlinux.com/2/core/2.0/SRPMS/34fe09939be83c4717a26148f447644692c8a4455098c31ffbfdbec80313c2d9//../../../../../blobstore/42efeeae9dcefd0c1a1b0eaafff80300a15588e03c1b5c3e727c2f8912fa8629/sqlite-3.7.17-8.amzn2.1.1.src.rpm
-```
-
-### `rpm` package: `stix-fonts-1.1.0-5.amzn2.noarch`
-
-Licenses (from `rpm --query`): OFL
-
-Source:
-
-```console
-$ yumdownloader --quiet --source --urls stix-fonts-1.1.0-5.amzn2.noarch
-Enabling amzn2-core-source repository
-https://cdn.amazonlinux.com/2/core/2.0/SRPMS/34fe09939be83c4717a26148f447644692c8a4455098c31ffbfdbec80313c2d9//../../../../../blobstore/72039a43e5d5bd5baf823298b26ccbb71e5e29a12c135010c2c11e4ed99daa13/stix-fonts-1.1.0-5.amzn2.src.rpm
 ```
 
 ### `rpm` package: `system-release-2-11.amzn2.x86_64`
