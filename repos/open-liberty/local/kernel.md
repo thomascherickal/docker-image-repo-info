@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:4a12934c2313d95950a67daf09488a574f8a08db2392857333496c98d52b8d17`
-- Created: `2020-04-25T00:57:54.094208683Z`
-- Virtual Size: ~ 431.00 Mb  
+- Image ID: `sha256:24447081dd17b756a82636ebf642ab2c02768a06205384ad6f4e41c1c65f6dbe`
+- Created: `2020-05-02T00:20:38.623424353Z`
+- Virtual Size: ~ 427.86 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/opt/ol/helpers/runtime/docker-server.sh"]`
@@ -25,10 +25,13 @@
   - `IBM_JAVA_OPTIONS=-Xshareclasses:name=liberty,nonfatal,cacheDir=/output/.classCache/ `
 - Labels:
   - `org.opencontainers.image.authors=Arthur De Magalhaes, Chris Potter`
+  - `org.opencontainers.image.description=This image contains the Open Liberty runtime with AdoptOpenJDK with OpenJ9 and Ubuntu as the base OS.  For more information on this image please see https://github.com/OpenLiberty/ci.docker#building-an-application-image`
   - `org.opencontainers.image.revision=cl200420200401-1714`
   - `org.opencontainers.image.source=https://github.com/OpenLiberty/ci.docker`
+  - `org.opencontainers.image.title=Open Liberty`
   - `org.opencontainers.image.url=https://openliberty.io/`
   - `org.opencontainers.image.vendor=Open Liberty`
+  - `org.opencontainers.image.version=20.0.0.4`
 
 ## `dpkg` (`.deb`-based packages)
 
