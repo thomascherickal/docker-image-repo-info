@@ -26,21 +26,13 @@ Licenses: (parsed from: `/usr/share/doc/libacl1/copyright`)
 - `LGPL-2+`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris acl=2.2.53-6
-'http://deb.debian.org/debian/pool/main/a/acl/acl_2.2.53-6.dsc' acl_2.2.53-6.dsc 2336 SHA256:02dad794aa09133e557552d75568324ed3e84fb56e93626e67993cf54a97df34
-'http://deb.debian.org/debian/pool/main/a/acl/acl_2.2.53.orig.tar.gz' acl_2.2.53.orig.tar.gz 524300 SHA256:06be9865c6f418d851ff4494e12406568353b891ffe1f596b34693c387af26c7
-'http://deb.debian.org/debian/pool/main/a/acl/acl_2.2.53.orig.tar.gz.asc' acl_2.2.53.orig.tar.gz.asc 833 SHA256:06849bece0b56a6a7269173abe101cff223bb9346d74027a3cd5ff80914abf4b
-'http://deb.debian.org/debian/pool/main/a/acl/acl_2.2.53-6.debian.tar.xz' acl_2.2.53-6.debian.tar.xz 25108 SHA256:c80e6150d9b213e52f5e65ff78d4ee95a71b5a258c1f8b980365d20ed1753a5c
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/acl/2.2.53-6/
 
-- https://sources.debian.net/src/acl/2.2.53-6/ (for browsing the source)
-- https://sources.debian.net/src/acl/2.2.53-6/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/acl/2.2.53-6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `adduser=3.118`
 
@@ -4202,20 +4194,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openldap=2.4.49+dfsg-4
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.49+dfsg-4.dsc' openldap_2.4.49+dfsg-4.dsc 3060 SHA256:14cf0e93c8cdc55b1919c99b477b716745842df22f5e6855c690743c74aae6b3
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.49+dfsg.orig.tar.gz' openldap_2.4.49+dfsg.orig.tar.gz 4844726 SHA256:240022395b438f327aa860a631c1d4eef9b17e63ec8965d3aca2aa983e6d81e6
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.49+dfsg-4.debian.tar.xz' openldap_2.4.49+dfsg-4.debian.tar.xz 172104 SHA256:f513e6489512ad94659dbbb1d76e0fa16a19849ba29dcb0af4f59a50924932ad
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/openldap/2.4.49+dfsg-4/
 
-- https://sources.debian.net/src/openldap/2.4.49+dfsg-4/ (for browsing the source)
-- https://sources.debian.net/src/openldap/2.4.49+dfsg-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openldap/2.4.49+dfsg-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssh=1:8.2p1-4`
 
@@ -4772,20 +4757,13 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.8-minimal/copyright`, `/usr/s
 - `use in source`
 - `without`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3.8=3.8.2-1
-'http://deb.debian.org/debian/pool/main/p/python3.8/python3.8_3.8.2-1.dsc' python3.8_3.8.2-1.dsc 3288 SHA256:380cdaeb2bf9a68bdb57d1b05b82d4a59e5ea51b47dff1bfcdf89f4bbe3143cf
-'http://deb.debian.org/debian/pool/main/p/python3.8/python3.8_3.8.2.orig.tar.xz' python3.8_3.8.2.orig.tar.xz 17869888 SHA256:2646e7dc233362f59714c6193017bb2d6f7b38d6ab4a0cb5fbac5c36c4d845df
-'http://deb.debian.org/debian/pool/main/p/python3.8/python3.8_3.8.2-1.debian.tar.xz' python3.8_3.8.2-1.debian.tar.xz 210080 SHA256:2a66b97b3650849d6fa14274772d4a2a412dd521e0c43df810b33cfce27452bd
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/python3.8/3.8.2-1/
 
-- https://sources.debian.net/src/python3.8/3.8.2-1/ (for browsing the source)
-- https://sources.debian.net/src/python3.8/3.8.2-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python3.8/3.8.2-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `readline=8.0-4`
 
