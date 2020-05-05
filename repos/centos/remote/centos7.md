@@ -1,7 +1,7 @@
 ## `centos:centos7`
 
 ```console
-$ docker pull centos@sha256:4a701376d03f6b39b8c2a8f4a8e499441b0d567f9ab9d58e4991de4472fb813c
+$ docker pull centos@sha256:c121daa96019d716c4f593d56c9ea661edaaedcb182dd96d91c35509fee8499e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -15,29 +15,29 @@ $ docker pull centos@sha256:4a701376d03f6b39b8c2a8f4a8e499441b0d567f9ab9d58e4991
 ### `centos:centos7` - linux; amd64
 
 ```console
-$ docker pull centos@sha256:285bc3161133ec01d8ca8680cd746eecbfdbc1faa6313bd863151c4b26d7e5a5
+$ docker pull centos@sha256:c2f1d5a9c0a81350fa0ad7e1eee99e379d75fe53823d44b5469eb2eb6092c941
 ```
 
--	Docker Version: 18.06.1-ce
+-	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **75.8 MB (75780712 bytes)**  
+-	Total Size: **75.9 MB (75880141 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5e35e350aded98340bc8fcb0ba392d809c807bc3eb5c618d4a0674d98d88bccd`
+-	Image ID: `sha256:b5b4d78bc90ccd15806443fb881e35b5ddba924e2f475c1071a38a3094c3081d`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Tue, 12 Nov 2019 00:20:33 GMT
-ADD file:45a381049c52b5664e5e911dead277b25fadbae689c0bb35be3c42dff0f2dffe in / 
-# Tue, 12 Nov 2019 00:20:33 GMT
-LABEL org.label-schema.schema-version=1.0 org.label-schema.name=CentOS Base Image org.label-schema.vendor=CentOS org.label-schema.license=GPLv2 org.label-schema.build-date=20191001
-# Tue, 12 Nov 2019 00:20:33 GMT
+# Tue, 05 May 2020 21:20:06 GMT
+ADD file:38e2d2a1a0cd8694bd5086f257fdf7504f0c2481bf4f746c9bd1c8d9f3f6430d in / 
+# Tue, 05 May 2020 21:20:06 GMT
+LABEL org.label-schema.schema-version=1.0 org.label-schema.name=CentOS Base Image org.label-schema.vendor=CentOS org.label-schema.license=GPLv2 org.label-schema.build-date=20200504 org.opencontainers.image.title=CentOS Base Image org.opencontainers.image.vendor=CentOS org.opencontainers.image.licenses=GPL-2.0-only org.opencontainers.image.created=2020-05-04 00:00:00+01:00
+# Tue, 05 May 2020 21:20:07 GMT
 CMD ["/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:ab5ef0e5819490abe86106fd9f4381123e37a03e80e650be39f7938d30ecb530`  
-		Last Modified: Tue, 12 Nov 2019 00:23:38 GMT  
-		Size: 75.8 MB (75780712 bytes)  
+	-	`sha256:524b0c1e57f8ee5fee01a1decba2f301c324a6513ca3551021264e3aa7341ebc`  
+		Last Modified: Tue, 05 May 2020 21:23:14 GMT  
+		Size: 75.9 MB (75880141 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `centos:centos7` - linux; arm variant v7
@@ -71,59 +71,57 @@ CMD ["/bin/bash"]
 ### `centos:centos7` - linux; arm64 variant v8
 
 ```console
-$ docker pull centos@sha256:fc5a0399d94336d15305d4d43754cd3c57808123cc67a578687748734af8f06b
+$ docker pull centos@sha256:221b09ed1560087e3d23cbeb7a67b1a7680ae14bed1e5dc55d299d8f4c8be30f
 ```
 
--	Docker Version: 18.06.1-ce
+-	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **103.6 MB (103619629 bytes)**  
+-	Total Size: **104.6 MB (104555376 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4dfd99be812b186ee379da6f8e270b2eca37dca5a046d61c216c2a6b630712c7`
+-	Image ID: `sha256:1d353df489e12aa511e7415eeedf963d303134825552912b363bf0b6c99b9564`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Tue, 12 Nov 2019 00:40:03 GMT
-ADD file:8449a578596d0a7b4ce64f74355f602ee47b1a8782058356ae614cdcdf4639fb in / 
-# Tue, 12 Nov 2019 00:40:05 GMT
-LABEL org.label-schema.schema-version=1.0 org.label-schema.name=CentOS Base Image org.label-schema.vendor=CentOS org.label-schema.license=GPLv2 org.label-schema.build-date=20191001
-# Tue, 12 Nov 2019 00:40:06 GMT
+# Tue, 05 May 2020 21:41:25 GMT
+ADD file:d64254c17612e9076d442240e4e567c0467ab6c4ca282ba5553f602805ad89ac in / 
+# Tue, 05 May 2020 21:41:30 GMT
+LABEL org.label-schema.schema-version=1.0 org.label-schema.name=CentOS Base Image org.label-schema.vendor=CentOS org.label-schema.license=GPLv2 org.label-schema.build-date=20200504 org.opencontainers.image.title=CentOS Base Image org.opencontainers.image.vendor=CentOS org.opencontainers.image.licenses=GPL-2.0-only org.opencontainers.image.created=2020-05-04 00:00:00+01:00
+# Tue, 05 May 2020 21:41:31 GMT
 CMD ["/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:3f2696f8166ff69dd0c116674b19eebd351ed3fc4111a42dbd57c673601c725d`  
-		Last Modified: Tue, 12 Nov 2019 00:40:46 GMT  
-		Size: 103.6 MB (103619629 bytes)  
+	-	`sha256:ae60b79047f8473e02511e923f461b869b62d2bf110b9fa282656e9f0128932d`  
+		Last Modified: Tue, 05 May 2020 21:42:11 GMT  
+		Size: 104.6 MB (104555376 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `centos:centos7` - linux; 386
 
 ```console
-$ docker pull centos@sha256:1f832b4e3b9ddf67fd77831cdfb591ce5e968548a01581672e5f6b32ce1212fe
+$ docker pull centos@sha256:0ee8ae140021ee8e3bddfa981b6c67f04eda413fc6b09765a6802feae1997e51
 ```
 
--	Docker Version: 18.06.1-ce
+-	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **75.7 MB (75654099 bytes)**  
+-	Total Size: **76.5 MB (76483599 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:fe70670fcbec5e3b3081c6800cb531002474c36563689b450d678a34a89b62c3`
+-	Image ID: `sha256:900871e5b7a666d0c58788a98cf425179cadcb69301b33f53a99b6d0177a08ed`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 10 Oct 2018 10:38:55 GMT
-MAINTAINER https://github.com/CentOS/sig-cloud-instance-images
-# Fri, 15 Mar 2019 10:38:43 GMT
-ADD file:1bff68db945cc0f9c1fc4a69400bfad48924c746dd3c9261dd39989dd52cb830 in / 
-# Fri, 15 Mar 2019 10:38:43 GMT
-LABEL name=CentOS Base Image vendor=CentOS license=GPLv2 build-date=20181006
-# Fri, 15 Mar 2019 10:38:43 GMT
+# Tue, 05 May 2020 21:38:55 GMT
+ADD file:e5b65b983a936fe80ef4d3a87aef8780c43ed21da0242ae6090c3e7709a6a78c in / 
+# Tue, 05 May 2020 21:38:56 GMT
+LABEL org.label-schema.schema-version=1.0 org.label-schema.name=CentOS Base Image org.label-schema.vendor=CentOS org.label-schema.license=GPLv2 org.label-schema.build-date=20200504 org.opencontainers.image.title=CentOS Base Image org.opencontainers.image.vendor=CentOS org.opencontainers.image.licenses=GPL-2.0-only org.opencontainers.image.created=2020-05-04 00:00:00+01:00
+# Tue, 05 May 2020 21:38:56 GMT
 CMD ["/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:39016a8400a36ce04799adba71f8678ae257d9d8dba638d81b8c5755f01fe213`  
-		Last Modified: Fri, 15 Mar 2019 10:39:26 GMT  
-		Size: 75.7 MB (75654099 bytes)  
+	-	`sha256:5afe8fe9bcada96e06400450e9475017c4aca0fa54062adbd2c0d4738d3475f3`  
+		Last Modified: Tue, 05 May 2020 21:39:27 GMT  
+		Size: 76.5 MB (76483599 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `centos:centos7` - linux; ppc64le
