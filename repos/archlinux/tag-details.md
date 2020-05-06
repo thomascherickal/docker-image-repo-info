@@ -9,6 +9,7 @@
 -	[`archlinux:20200205`](#archlinux20200205)
 -	[`archlinux:20200306`](#archlinux20200306)
 -	[`archlinux:20200407`](#archlinux20200407)
+-	[`archlinux:20200505`](#archlinux20200505)
 -	[`archlinux:latest`](#archlinuxlatest)
 
 ## `archlinux:20191006`
@@ -444,6 +445,10 @@ CMD ["/usr/bin/bash"]
 		Last Modified: Wed, 08 Apr 2020 21:20:56 GMT  
 		Size: 297.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `archlinux:20200505`
+
+**does not exist** (yet?)
 
 ## `archlinux:latest`
 
