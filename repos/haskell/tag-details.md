@@ -3,11 +3,23 @@
 # Tags of `haskell`
 
 -	[`haskell:8`](#haskell8)
--	[`haskell:8.6`](#haskell86)
--	[`haskell:8.6.5`](#haskell865)
+-	[`haskell:8.10`](#haskell810)
+-	[`haskell:8.10.1`](#haskell8101)
+-	[`haskell:8.10.1-buster`](#haskell8101-buster)
+-	[`haskell:8.10.1-stretch`](#haskell8101-stretch)
+-	[`haskell:8.10-buster`](#haskell810-buster)
+-	[`haskell:8.10-stretch`](#haskell810-stretch)
 -	[`haskell:8.8`](#haskell88)
 -	[`haskell:8.8.3`](#haskell883)
+-	[`haskell:8.8.3-buster`](#haskell883-buster)
+-	[`haskell:8.8.3-stretch`](#haskell883-stretch)
+-	[`haskell:8.8-buster`](#haskell88-buster)
+-	[`haskell:8.8-stretch`](#haskell88-stretch)
+-	[`haskell:8-buster`](#haskell8-buster)
+-	[`haskell:8-stretch`](#haskell8-stretch)
+-	[`haskell:buster`](#haskellbuster)
 -	[`haskell:latest`](#haskelllatest)
+-	[`haskell:stretch`](#haskellstretch)
 
 ## `haskell:8`
 
@@ -75,137 +87,29 @@ CMD ["ghci"]
 		Size: 14.6 MB (14567390 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-## `haskell:8.6`
+## `haskell:8.10`
 
-```console
-$ docker pull haskell@sha256:6ae86033bfa75027fc36a63bb69e7fa41d4e7df6ae4a78baeb77dafc94488d81
-```
+**does not exist** (yet?)
 
--	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
-	-	linux; amd64
+## `haskell:8.10.1`
 
-### `haskell:8.6` - linux; amd64
+**does not exist** (yet?)
 
-```console
-$ docker pull haskell@sha256:64352f810b8cbbc79ec55150cc88105586a280c0f0ea0cedfa0ed2e9f1454de1
-```
+## `haskell:8.10.1-buster`
 
--	Docker Version: 18.09.7
--	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **304.1 MB (304136528 bytes)**  
-	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:933dea80169e6b509a34a76653cacd5465ce3d16581cfe9921e3dfc983042dcd`
--	Default Command: `["ghci"]`
+**does not exist** (yet?)
 
-```dockerfile
-# Thu, 23 Apr 2020 00:22:48 GMT
-ADD file:21bf6969c2166c361350c07b1089a1a4b34b7cd3e802a602385d83c49f44a7f6 in / 
-# Thu, 23 Apr 2020 00:22:48 GMT
-CMD ["bash"]
-# Thu, 23 Apr 2020 01:36:57 GMT
-RUN apt-get update &&     apt-get install -y --no-install-recommends gnupg ca-certificates dirmngr &&     rm -rf /var/lib/apt/lists/*
-# Thu, 23 Apr 2020 01:38:18 GMT
-ARG GHC=8.6.5
-# Thu, 23 Apr 2020 01:38:19 GMT
-ARG STACK=1.9.3
-# Thu, 23 Apr 2020 01:38:19 GMT
-ARG CABAL_INSTALL=2.4
-# Thu, 23 Apr 2020 01:39:01 GMT
-# ARGS: CABAL_INSTALL=2.4 GHC=8.6.5 STACK=1.9.3
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 427CB69AAC9D00F2A43CAF1CBA3CBA3FFE22B574 &&     echo 'deb http://downloads.haskell.org/debian stretch main' > /etc/apt/sources.list.d/ghc.list &&     apt-get update &&     apt-get install -y --no-install-recommends         cabal-install-${CABAL_INSTALL}         curl         g++         ghc-${GHC}         git         libsqlite3-dev         libtinfo-dev         make         netbase         openssh-client         xz-utils         zlib1g-dev &&     rm -rf /var/lib/apt/lists/*
-# Thu, 23 Apr 2020 01:39:06 GMT
-# ARGS: CABAL_INSTALL=2.4 GHC=8.6.5 STACK=1.9.3
-RUN export GNUPGHOME="$(mktemp -d)" &&     gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys C5705533DA4F78D8664B5DC0575159689BEFB442 &&     curl -fSL https://github.com/commercialhaskell/stack/releases/download/v${STACK}/stack-${STACK}-linux-x86_64.tar.gz -o stack.tar.gz &&     curl -fSL https://github.com/commercialhaskell/stack/releases/download/v${STACK}/stack-${STACK}-linux-x86_64.tar.gz.asc -o stack.tar.gz.asc &&     gpg --batch --trusted-key 0x575159689BEFB442 --verify stack.tar.gz.asc stack.tar.gz &&     tar -xf stack.tar.gz -C /usr/local/bin --strip-components=1 &&     /usr/local/bin/stack config set system-ghc --global true &&     /usr/local/bin/stack config set install-ghc --global false &&     rm -rf "$GNUPGHOME" /var/lib/apt/lists/* /stack.tar.gz.asc /stack.tar.gz
-# Thu, 23 Apr 2020 01:39:06 GMT
-ENV PATH=/root/.cabal/bin:/root/.local/bin:/opt/cabal/2.4/bin:/opt/ghc/8.6.5/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 23 Apr 2020 01:39:07 GMT
-CMD ["ghci"]
-```
+## `haskell:8.10.1-stretch`
 
--	Layers:
-	-	`sha256:99760bc62448fbba69f6f0981d09bb4b7532e17362ecfb709141a7195d9b01d3`  
-		Last Modified: Thu, 23 Apr 2020 00:27:35 GMT  
-		Size: 45.4 MB (45375951 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:14d8700a62fa028e779c34a2981a9301bd2856a8383d8d2295586a2dc51e44bc`  
-		Last Modified: Thu, 23 Apr 2020 01:39:19 GMT  
-		Size: 9.6 MB (9613310 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:766a23f61269273d6c10e022bd12ccbf5514c1323c0cfbd09e4bf0d6ca3fb373`  
-		Last Modified: Thu, 23 Apr 2020 01:41:45 GMT  
-		Size: 234.9 MB (234910940 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:91cc7ab7425535a8e4f12c0e8339479052343dd78ed43338e4274bbf03075e8a`  
-		Last Modified: Thu, 23 Apr 2020 01:40:51 GMT  
-		Size: 14.2 MB (14236327 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+**does not exist** (yet?)
 
-## `haskell:8.6.5`
+## `haskell:8.10-buster`
 
-```console
-$ docker pull haskell@sha256:6ae86033bfa75027fc36a63bb69e7fa41d4e7df6ae4a78baeb77dafc94488d81
-```
+**does not exist** (yet?)
 
--	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
-	-	linux; amd64
+## `haskell:8.10-stretch`
 
-### `haskell:8.6.5` - linux; amd64
-
-```console
-$ docker pull haskell@sha256:64352f810b8cbbc79ec55150cc88105586a280c0f0ea0cedfa0ed2e9f1454de1
-```
-
--	Docker Version: 18.09.7
--	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **304.1 MB (304136528 bytes)**  
-	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:933dea80169e6b509a34a76653cacd5465ce3d16581cfe9921e3dfc983042dcd`
--	Default Command: `["ghci"]`
-
-```dockerfile
-# Thu, 23 Apr 2020 00:22:48 GMT
-ADD file:21bf6969c2166c361350c07b1089a1a4b34b7cd3e802a602385d83c49f44a7f6 in / 
-# Thu, 23 Apr 2020 00:22:48 GMT
-CMD ["bash"]
-# Thu, 23 Apr 2020 01:36:57 GMT
-RUN apt-get update &&     apt-get install -y --no-install-recommends gnupg ca-certificates dirmngr &&     rm -rf /var/lib/apt/lists/*
-# Thu, 23 Apr 2020 01:38:18 GMT
-ARG GHC=8.6.5
-# Thu, 23 Apr 2020 01:38:19 GMT
-ARG STACK=1.9.3
-# Thu, 23 Apr 2020 01:38:19 GMT
-ARG CABAL_INSTALL=2.4
-# Thu, 23 Apr 2020 01:39:01 GMT
-# ARGS: CABAL_INSTALL=2.4 GHC=8.6.5 STACK=1.9.3
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 427CB69AAC9D00F2A43CAF1CBA3CBA3FFE22B574 &&     echo 'deb http://downloads.haskell.org/debian stretch main' > /etc/apt/sources.list.d/ghc.list &&     apt-get update &&     apt-get install -y --no-install-recommends         cabal-install-${CABAL_INSTALL}         curl         g++         ghc-${GHC}         git         libsqlite3-dev         libtinfo-dev         make         netbase         openssh-client         xz-utils         zlib1g-dev &&     rm -rf /var/lib/apt/lists/*
-# Thu, 23 Apr 2020 01:39:06 GMT
-# ARGS: CABAL_INSTALL=2.4 GHC=8.6.5 STACK=1.9.3
-RUN export GNUPGHOME="$(mktemp -d)" &&     gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys C5705533DA4F78D8664B5DC0575159689BEFB442 &&     curl -fSL https://github.com/commercialhaskell/stack/releases/download/v${STACK}/stack-${STACK}-linux-x86_64.tar.gz -o stack.tar.gz &&     curl -fSL https://github.com/commercialhaskell/stack/releases/download/v${STACK}/stack-${STACK}-linux-x86_64.tar.gz.asc -o stack.tar.gz.asc &&     gpg --batch --trusted-key 0x575159689BEFB442 --verify stack.tar.gz.asc stack.tar.gz &&     tar -xf stack.tar.gz -C /usr/local/bin --strip-components=1 &&     /usr/local/bin/stack config set system-ghc --global true &&     /usr/local/bin/stack config set install-ghc --global false &&     rm -rf "$GNUPGHOME" /var/lib/apt/lists/* /stack.tar.gz.asc /stack.tar.gz
-# Thu, 23 Apr 2020 01:39:06 GMT
-ENV PATH=/root/.cabal/bin:/root/.local/bin:/opt/cabal/2.4/bin:/opt/ghc/8.6.5/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 23 Apr 2020 01:39:07 GMT
-CMD ["ghci"]
-```
-
--	Layers:
-	-	`sha256:99760bc62448fbba69f6f0981d09bb4b7532e17362ecfb709141a7195d9b01d3`  
-		Last Modified: Thu, 23 Apr 2020 00:27:35 GMT  
-		Size: 45.4 MB (45375951 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:14d8700a62fa028e779c34a2981a9301bd2856a8383d8d2295586a2dc51e44bc`  
-		Last Modified: Thu, 23 Apr 2020 01:39:19 GMT  
-		Size: 9.6 MB (9613310 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:766a23f61269273d6c10e022bd12ccbf5514c1323c0cfbd09e4bf0d6ca3fb373`  
-		Last Modified: Thu, 23 Apr 2020 01:41:45 GMT  
-		Size: 234.9 MB (234910940 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:91cc7ab7425535a8e4f12c0e8339479052343dd78ed43338e4274bbf03075e8a`  
-		Last Modified: Thu, 23 Apr 2020 01:40:51 GMT  
-		Size: 14.2 MB (14236327 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+**does not exist** (yet?)
 
 ## `haskell:8.8`
 
@@ -339,6 +243,34 @@ CMD ["ghci"]
 		Size: 14.6 MB (14567390 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `haskell:8.8.3-buster`
+
+**does not exist** (yet?)
+
+## `haskell:8.8.3-stretch`
+
+**does not exist** (yet?)
+
+## `haskell:8.8-buster`
+
+**does not exist** (yet?)
+
+## `haskell:8.8-stretch`
+
+**does not exist** (yet?)
+
+## `haskell:8-buster`
+
+**does not exist** (yet?)
+
+## `haskell:8-stretch`
+
+**does not exist** (yet?)
+
+## `haskell:buster`
+
+**does not exist** (yet?)
+
 ## `haskell:latest`
 
 ```console
@@ -404,3 +336,7 @@ CMD ["ghci"]
 		Last Modified: Thu, 23 Apr 2020 01:39:22 GMT  
 		Size: 14.6 MB (14567390 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `haskell:stretch`
+
+**does not exist** (yet?)
