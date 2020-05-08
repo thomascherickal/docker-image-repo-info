@@ -1117,13 +1117,9 @@ Licenses: (parsed from: `/usr/share/doc/neurodebian-freeze/copyright`)
 - `GPL-3`
 - `GPL-3+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris neurodebian=0.40.0~nd18.04+1
-'http://neuro.debian.net/debian/pool/main/n/neurodebian/neurodebian_0.40.0~nd18.04+1.dsc' neurodebian_0.40.0~nd18.04+1.dsc 1553 SHA256:399af8f948ca90b02ec69cdd1888c931adc09d46aed81e75189fbe351695098c
-'http://neuro.debian.net/debian/pool/main/n/neurodebian/neurodebian_0.40.0~nd18.04+1.tar.xz' neurodebian_0.40.0~nd18.04+1.tar.xz 8317248 SHA256:4f2157ff3dd7b31cb662dedc096b278b152642e84a444dd9f9c633e72c5b68e0
-```
 
 ### `dpkg` source package: `npth=1.5-3`
 
@@ -1156,14 +1152,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openldap=2.4.45+dfsg-1ubuntu1.4
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.45+dfsg-1ubuntu1.4.dsc' openldap_2.4.45+dfsg-1ubuntu1.4.dsc 2884 SHA256:be157db46093f2d29357ec2176f96d831f64970bc6c578345c64ca609a797321
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.45+dfsg.orig.tar.gz' openldap_2.4.45+dfsg.orig.tar.gz 4846458 SHA256:d51c70423aa0554d454fd3d43e7f2e940523b4ef07979305b48c233ae44b2b32
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.45+dfsg-1ubuntu1.4.debian.tar.xz' openldap_2.4.45+dfsg-1ubuntu1.4.debian.tar.xz 177956 SHA256:8b70367ad26d644ca3d832a69683a6b748757593128bf6ab72cd3256ae5aca62
-```
 
 ### `dpkg` source package: `p11-kit=0.23.9-2`
 
