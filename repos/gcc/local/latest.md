@@ -1,18 +1,18 @@
-# `gcc:9.3.0`
+# `gcc:10.1.0`
 
 ## Docker Metadata
 
-- Image ID: `sha256:2f9778ee181e54b0f473112bd7d3877de7468f27576ac44651d2f3aedcdf97cf`
-- Created: `2020-04-25T06:38:30.556414923Z`
-- Virtual Size: ~ 1.14 Gb  
+- Image ID: `sha256:7bba82d803294cfecf3eeda9e93f2758c9ea0cb15b2e967b229ae91192178a92`
+- Created: `2020-05-08T19:52:52.230589995Z`
+- Virtual Size: ~ 1.19 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["bash"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `GPG_KEYS=B215C1633BCA0477615F1B35A5B3A004745C015A 	B3C42148A44E6983B3E4CC0793FA9B1AB75C61B8 	90AA470469D3965A87A5DCB494D03953902C9419 	80F98B2E0DAB6C8281BDF541A7C8C3B2F71EDF1C 	7F74F97C103468EE5D750B583AB00996FC26A641 	33C235A34C46AA3FFB293709A328C3A2C3C45C06`
-  - `GCC_MIRRORS=https://ftpmirror.gnu.org/gcc 		https://bigsearcher.com/mirrors/gcc/releases 		https://mirrors-usa.go-parts.com/gcc/releases 		https://mirrors.concertpass.com/gcc/releases 		http://www.netgull.com/gcc/releases`
-  - `GCC_VERSION=9.3.0`
+  - `GCC_MIRRORS=https://ftpmirror.gnu.org/gcc 		https://mirrors.kernel.org/gnu/gcc 		https://bigsearcher.com/mirrors/gcc/releases 		http://www.netgull.com/gcc/releases 		https://ftpmirror.gnu.org/gcc 		ftp://ftp.gnu.org/gnu/gcc`
+  - `GCC_VERSION=10.1.0`
 
 ## `dpkg` (`.deb`-based packages)
 
