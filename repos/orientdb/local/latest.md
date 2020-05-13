@@ -1,10 +1,10 @@
-# `orientdb:3.0.30`
+# `orientdb:3.0.31`
 
 ## Docker Metadata
 
-- Image ID: `sha256:e4300cf348240f14b1818f26138db6ff21e42ec9423ebc42e23b28db128c7fa2`
-- Created: `2020-04-23T23:17:44.530057932Z`
-- Virtual Size: ~ 333.30 Mb  
+- Image ID: `sha256:bbb3161b5f16b2a3126ccbc1e36f18ba497caa1584c5ed4f4c6cdcc630553a26`
+- Created: `2020-05-11T15:28:24.43086739Z`
+- Virtual Size: ~ 333.31 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["server.sh"]`
@@ -15,10 +15,10 @@
   - `JAVA_VERSION=8u252`
   - `JAVA_BASE_URL=https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u252-b09/OpenJDK8U-jdk_`
   - `JAVA_URL_VERSION=8u252b09`
-  - `ORIENTDB_VERSION=3.0.30`
-  - `ORIENTDB_DOWNLOAD_MD5=6929cf30ba4485ddd6dd6b6f924d10fe`
-  - `ORIENTDB_DOWNLOAD_SHA1=cd864c8ccc5bb06c2a8516565b6f10e78ce99c49`
-  - `ORIENTDB_DOWNLOAD_URL=https://repo1.maven.org/maven2/com/orientechnologies/orientdb-community/3.0.30/orientdb-community-3.0.30.tar.gz`
+  - `ORIENTDB_VERSION=3.0.31`
+  - `ORIENTDB_DOWNLOAD_MD5=c37f5fd887ef552d1673af3a754a7bf8`
+  - `ORIENTDB_DOWNLOAD_SHA1=08f2b6dfcfdcd33bbe9f2be8c50be8c1f507efff`
+  - `ORIENTDB_DOWNLOAD_URL=https://repo1.maven.org/maven2/com/orientechnologies/orientdb-community/3.0.31/orientdb-community-3.0.31.tar.gz`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -1501,24 +1501,31 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/nghttp2/1.36.0-2+deb10u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/nghttp2/1.36.0-2+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openldap=2.4.47+dfsg-3+deb10u1`
+### `dpkg` source package: `openldap=2.4.47+dfsg-3+deb10u2`
 
 Binary Packages:
 
-- `libldap-2.4-2:amd64=2.4.47+dfsg-3+deb10u1`
-- `libldap-common=2.4.47+dfsg-3+deb10u1`
+- `libldap-2.4-2:amd64=2.4.47+dfsg-3+deb10u2`
+- `libldap-common=2.4.47+dfsg-3+deb10u2`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris openldap=2.4.47+dfsg-3+deb10u2
+'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.47+dfsg-3+deb10u2.dsc' openldap_2.4.47+dfsg-3+deb10u2.dsc 3022 SHA256:e909c6be4bfd1bacf644959bc18ebeebaa13606879f11a7876d044cd688a6f62
+'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.47+dfsg.orig.tar.gz' openldap_2.4.47+dfsg.orig.tar.gz 4872293 SHA256:8f1ac7a4be7dd8ef158361efbfe16509756d3d9b396f5f378c3cf5c727807651
+'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.47+dfsg-3+deb10u2.debian.tar.xz' openldap_2.4.47+dfsg-3+deb10u2.debian.tar.xz 168684 SHA256:0f6f81f18a2407bd1a6c6003659d8b33145f31033b6f7fd026607554f0bdfcb0
+```
 
-- http://snapshot.debian.org/package/openldap/2.4.47+dfsg-3+deb10u1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/openldap/2.4.47+dfsg-3+deb10u2/ (for browsing the source)
+- https://sources.debian.net/src/openldap/2.4.47+dfsg-3+deb10u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openldap/2.4.47+dfsg-3+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssl=1.1.1d-0+deb10u3`
 
