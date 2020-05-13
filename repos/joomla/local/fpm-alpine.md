@@ -1,9 +1,9 @@
-# `joomla:3.9.16-fpm-alpine`
+# `joomla:3.9.18-fpm-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:98b7589d04af35b787506d8edeb84ed7bf53fd8df61e8920aad48a7696680ef1`
-- Created: `2020-05-07T03:03:46.152274452Z`
+- Image ID: `sha256:214ed0f57478f20f7b31e00e3e11695eca98bd0ab905649d2f2e503577d871e8`
+- Created: `2020-05-11T15:25:08.399381187Z`
 - Virtual Size: ~ 128.55 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -24,8 +24,8 @@
   - `PHP_SHA256=6a30304c27f7e7a94538f5ffec599f600ee93aedbbecad8aa4f8bec539b10ad8`
   - `PHP_MD5=`
   - `JOOMLA_INSTALLATION_DISABLE_LOCALHOST_CHECK=1`
-  - `JOOMLA_VERSION=3.9.16`
-  - `JOOMLA_SHA512=3266ff375631fd0c4c45c66368f3d07cdc1b41010ffad907a957e6c1acb511847bf2c112e0991792f84455b48bea95c84eca9a7325baa3cab61078fda697ed0f`
+  - `JOOMLA_VERSION=3.9.18`
+  - `JOOMLA_SHA512=1bf4590a761cc24f59fc0d5b07ffbb8f9e50073b3536edc261b8785ff168aca2066d133a81c4ac33bcfe7b843559320ef4d1f97c5eb16096ca4b550a18b7f44d`
 - Labels:
   - `maintainer=Michael Babker <michael.babker@joomla.org> (@mbabker)`
 
