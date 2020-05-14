@@ -87,13 +87,9 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=1.2.32
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.2.32.dsc' apt_1.2.32.dsc 2432 SHA256:9202ffff0487cfbf57f3adb052d81e591cf0fd6ba44dfcc56b7500e91c2d4688
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.2.32.tar.xz' apt_1.2.32.tar.xz 2084344 SHA256:0c7044bd3eafed199d32e72af476f8c6305962918348aa3593d6d5aa301f7431
-```
 
 ### `dpkg` source package: `armadillo=1:6.500.5+dfsg-1`
 
@@ -811,14 +807,9 @@ Licenses: (parsed from: `/usr/share/doc/file/copyright`, `/usr/share/doc/libmagi
 - `MIT-Old-Style-with-legal-disclaimer-2`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris file=1:5.25-2ubuntu1.3
-'http://archive.ubuntu.com/ubuntu/pool/main/f/file/file_5.25-2ubuntu1.3.dsc' file_5.25-2ubuntu1.3.dsc 2252 SHA256:a6dcb0bd9ce6962897fd16cedb2a189ffc0152eada59e5ece522b67bae71766c
-'http://archive.ubuntu.com/ubuntu/pool/main/f/file/file_5.25.orig.tar.xz' file_5.25.orig.tar.xz 537916 SHA256:8062cae8be640ff8583b8714e394dc73c3127d23f8fe9097f1433cdb36bff31c
-'http://archive.ubuntu.com/ubuntu/pool/main/f/file/file_5.25-2ubuntu1.3.debian.tar.xz' file_5.25-2ubuntu1.3.debian.tar.xz 35184 SHA256:5eafa8f4a72094feb7d212fdea29d9aefcfd3d928788ad0e8ac96a01c8930389
-```
 
 ### `dpkg` source package: `findutils=4.6.0+git+20160126-2`
 
@@ -4490,9 +4481,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris systemd=229-4ubuntu21.27
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_229-4ubuntu21.27.dsc' systemd_229-4ubuntu21.27.dsc 4367 SHA256:5f49729464449659157420ee8c250ef12e806998221b04ef44952461984c73ba
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_229.orig.tar.gz' systemd_229.orig.tar.gz 4319173 SHA256:b51b0a48d1beb388d95bd6a98d62be05490335d4bb388aefecdcb576e91e0741
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_229-4ubuntu21.27.debian.tar.xz' systemd_229-4ubuntu21.27.debian.tar.xz 311204 SHA256:9ad917c8dc6f4bac8ffca471756c3c2c66b2168788c6c7559d0f56b959453f60
+'http://security.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_229-4ubuntu21.27.dsc' systemd_229-4ubuntu21.27.dsc 4367 SHA256:5f49729464449659157420ee8c250ef12e806998221b04ef44952461984c73ba
+'http://security.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_229.orig.tar.gz' systemd_229.orig.tar.gz 4319173 SHA256:b51b0a48d1beb388d95bd6a98d62be05490335d4bb388aefecdcb576e91e0741
+'http://security.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_229-4ubuntu21.27.debian.tar.xz' systemd_229-4ubuntu21.27.debian.tar.xz 311204 SHA256:9ad917c8dc6f4bac8ffca471756c3c2c66b2168788c6c7559d0f56b959453f60
 ```
 
 ### `dpkg` source package: `sysvinit=2.88dsf-59.3ubuntu2`

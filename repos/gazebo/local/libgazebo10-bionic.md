@@ -137,13 +137,9 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=1.6.12
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.6.12.dsc' apt_1.6.12.dsc 2796 SHA256:061d7de8e9faea48b69b37f01a54b2eac04d39eaab143ec4ffb7cd534fa01cfd
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.6.12.tar.xz' apt_1.6.12.tar.xz 2171176 SHA256:d4e2ae405a1ff12bd108a5a530a24d52afde9cde40065ed508fdea33302c8a35
-```
 
 ### `dpkg` source package: `armadillo=1:8.400.0+dfsg-2`
 
@@ -1262,14 +1258,9 @@ Licenses: (parsed from: `/usr/share/doc/file/copyright`, `/usr/share/doc/libmagi
 - `MIT-Old-Style-with-legal-disclaimer-2`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris file=1:5.32-2ubuntu0.3
-'http://archive.ubuntu.com/ubuntu/pool/main/f/file/file_5.32-2ubuntu0.3.dsc' file_5.32-2ubuntu0.3.dsc 1972 SHA256:821a16b82933d389739edad6a476381672ad1a3fde7355a800d248b72477456a
-'http://archive.ubuntu.com/ubuntu/pool/main/f/file/file_5.32.orig.tar.xz' file_5.32.orig.tar.xz 584352 SHA256:07627dc16c9a5b64352b00f24afb8d328b9ecade82afe2e2fa55201d324fd360
-'http://archive.ubuntu.com/ubuntu/pool/main/f/file/file_5.32-2ubuntu0.3.debian.tar.xz' file_5.32-2ubuntu0.3.debian.tar.xz 33820 SHA256:e3aaaf526a2fda754c658d15e4ea56de0c69b9aeac5738858bb4aa2375773da9
-```
 
 ### `dpkg` source package: `findutils=4.6.0+git+20170828-2`
 
@@ -6677,14 +6668,9 @@ Licenses: (parsed from: `/usr/share/doc/libpulse0/copyright`)
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pulseaudio=1:11.1-1ubuntu7.5
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pulseaudio/pulseaudio_11.1-1ubuntu7.5.dsc' pulseaudio_11.1-1ubuntu7.5.dsc 3237 SHA256:f7abd97bf9370ec21eec661bdfd2b5a05de87c65b5195ac3df1cd6d294b7d9b8
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pulseaudio/pulseaudio_11.1.orig.tar.xz' pulseaudio_11.1.orig.tar.xz 1648924 SHA256:f2521c525a77166189e3cb9169f75c2ee2b82fa3fcf9476024fbc2c3a6c9cd9e
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pulseaudio/pulseaudio_11.1-1ubuntu7.5.debian.tar.xz' pulseaudio_11.1-1ubuntu7.5.debian.tar.xz 102644 SHA256:d8f9f86d0c8e6b477d5ab48041ab4f4b681b2e1d453d68afacb606083661b7f8
-```
 
 ### `dpkg` source package: `python-defaults=2.7.15~rc1-1`
 
@@ -7458,14 +7444,9 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=237-3ubuntu10.39
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.39.dsc' systemd_237-3ubuntu10.39.dsc 5182 SHA256:ec8c8f85de36fa2c44d9264920cba0561e492b8dbf8450e46ec3f0332b77d394
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237.orig.tar.gz' systemd_237.orig.tar.gz 6871350 SHA256:c83dabbe1c9de6b9db1dafdb7e04140c7d0535705c68842f6c0768653ba4913c
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.39.debian.tar.xz' systemd_237-3ubuntu10.39.debian.tar.xz 258608 SHA256:9a4cc7f45b17c8577217aedaa78d970352ea00857c954832b3cfc0b53f649cb9
-```
 
 ### `dpkg` source package: `sysvinit=2.88dsf-59.10ubuntu1`
 
