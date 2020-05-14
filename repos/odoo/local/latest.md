@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:006812cec75a454c761169a47318a17f3d5b74308886c93d5bfa8a310c3b18a9`
-- Created: `2020-04-23T13:51:43.59449971Z`
+- Image ID: `sha256:867b6972498e9580f75e48112484f0224b02fcdc0143ff5ecc9d40614cf34089`
+- Created: `2020-05-14T03:30:07.643253763Z`
 - Virtual Size: ~ 1.17 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -178,23 +178,29 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/audit/1:2.8.4-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/audit/1:2.8.4-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `base-files=10.3+deb10u3`
+### `dpkg` source package: `base-files=10.3+deb10u4`
 
 Binary Packages:
 
-- `base-files=10.3+deb10u3`
+- `base-files=10.3+deb10u4`
 
 Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris base-files=10.3+deb10u4
+'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3+deb10u4.dsc' base-files_10.3+deb10u4.dsc 1103 SHA256:2e5caec958e2a302b3484100b559f85b4738758cb1a5eedfb71ee129cacafcf4
+'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3+deb10u4.tar.xz' base-files_10.3+deb10u4.tar.xz 65396 SHA256:4147e6e65fb431fac69c7d8c43f03fa30a2fa63616e71cf6928f39fabfbebcdd
+```
 
-- http://snapshot.debian.org/package/base-files/10.3+deb10u3/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/base-files/10.3+deb10u4/ (for browsing the source)
+- https://sources.debian.net/src/base-files/10.3+deb10u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/base-files/10.3+deb10u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-passwd=3.5.46`
 
@@ -271,6 +277,31 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/beautifulsoup4/4.7.1-1/ (for browsing the source)
 - https://sources.debian.net/src/beautifulsoup4/4.7.1-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/beautifulsoup4/4.7.1-1/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `brotli=1.0.7-2`
+
+Binary Packages:
+
+- `libbrotli1:amd64=1.0.7-2`
+
+Licenses: (parsed from: `/usr/share/doc/libbrotli1/copyright`)
+
+- `MIT`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris brotli=1.0.7-2
+'http://deb.debian.org/debian/pool/main/b/brotli/brotli_1.0.7-2.dsc' brotli_1.0.7-2.dsc 2296 SHA256:d91c8b5d622680076f6385c4df06df20726665f59d68d0f85bf51059b04dbfed
+'http://deb.debian.org/debian/pool/main/b/brotli/brotli_1.0.7.orig.tar.gz' brotli_1.0.7.orig.tar.gz 23827908 SHA256:4c61bfb0faca87219ea587326c467b95acb25555b53d1a421ffa3c8a9296ee2c
+'http://deb.debian.org/debian/pool/main/b/brotli/brotli_1.0.7-2.debian.tar.xz' brotli_1.0.7-2.debian.tar.xz 4004 SHA256:09d21a56df87309d5e7ac64992df650b3a19294e1fd79324a6fda628c18d1bae
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/brotli/1.0.7-2/ (for browsing the source)
+- https://sources.debian.net/src/brotli/1.0.7-2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/brotli/1.0.7-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `bzip2=1.0.6-9.2~deb10u1`
 
@@ -1022,10 +1053,11 @@ Other potentially useful URLs:
 Binary Packages:
 
 - `gcc-8-base:amd64=8.3.0-6`
+- `libatomic1:amd64=8.3.0-6`
 - `libgcc1:amd64=1:8.3.0-6`
 - `libstdc++6:amd64=8.3.0-6`
 
-Licenses: (parsed from: `/usr/share/doc/gcc-8-base/copyright`, `/usr/share/doc/libgcc1/copyright`, `/usr/share/doc/libstdc++6/copyright`)
+Licenses: (parsed from: `/usr/share/doc/gcc-8-base/copyright`, `/usr/share/doc/libatomic1/copyright`, `/usr/share/doc/libgcc1/copyright`, `/usr/share/doc/libstdc++6/copyright`)
 
 - `Artistic`
 - `GFDL-1.2`
@@ -9280,23 +9312,30 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/node-yallist/3.0.3-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/node-yallist/3.0.3-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `node-yargs-parser=11.1.1-1`
+### `dpkg` source package: `node-yargs-parser=11.1.1-1+deb10u1`
 
 Binary Packages:
 
-- `node-yargs-parser=11.1.1-1`
+- `node-yargs-parser=11.1.1-1+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/node-yargs-parser/copyright`)
 
 - `ISC`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris node-yargs-parser=11.1.1-1+deb10u1
+'http://deb.debian.org/debian/pool/main/n/node-yargs-parser/node-yargs-parser_11.1.1-1+deb10u1.dsc' node-yargs-parser_11.1.1-1+deb10u1.dsc 2160 SHA256:2644bc890767a8b915c7022c1ab173ecea9bb9fac1af26f86d22991af02d018e
+'http://deb.debian.org/debian/pool/main/n/node-yargs-parser/node-yargs-parser_11.1.1.orig.tar.gz' node-yargs-parser_11.1.1.orig.tar.gz 45682 SHA256:ae790e6e61affab085fa1601756927ff5641c47e7dbf9df49130eb7388f1b9fa
+'http://deb.debian.org/debian/pool/main/n/node-yargs-parser/node-yargs-parser_11.1.1-1+deb10u1.debian.tar.xz' node-yargs-parser_11.1.1-1+deb10u1.debian.tar.xz 3464 SHA256:31b304b972ce876219f14b29f6dd912ba6c452abb3a9ec593dc8b5591540d4bf
+```
 
-- http://snapshot.debian.org/package/node-yargs-parser/11.1.1-1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/node-yargs-parser/11.1.1-1+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/node-yargs-parser/11.1.1-1+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/node-yargs-parser/11.1.1-1+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `node-yargs=10.0.3-2`
 
@@ -9323,13 +9362,13 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/node-yargs/10.0.3-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/node-yargs/10.0.3-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `nodejs=10.15.2~dfsg-2`
+### `dpkg` source package: `nodejs=10.19.0~dfsg1-1`
 
 Binary Packages:
 
-- `libnode-dev:amd64=10.15.2~dfsg-2`
-- `libnode64:amd64=10.15.2~dfsg-2`
-- `nodejs=10.15.2~dfsg-2`
+- `libnode-dev:amd64=10.19.0~dfsg1-1`
+- `libnode64:amd64=10.19.0~dfsg1-1`
+- `nodejs=10.19.0~dfsg1-1`
 
 Licenses: (parsed from: `/usr/share/doc/libnode-dev/copyright`, `/usr/share/doc/libnode64/copyright`, `/usr/share/doc/nodejs/copyright`)
 
@@ -9361,19 +9400,26 @@ Licenses: (parsed from: `/usr/share/doc/libnode-dev/copyright`, `/usr/share/doc/
 - `curl`
 - `zlib`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris nodejs=10.19.0~dfsg1-1
+'http://deb.debian.org/debian/pool/main/n/nodejs/nodejs_10.19.0~dfsg1-1.dsc' nodejs_10.19.0~dfsg1-1.dsc 3029 SHA256:57d41dae05ef7490e3db756e597c259c90f49a97a8aebc5fd9b89688fb236725
+'http://deb.debian.org/debian/pool/main/n/nodejs/nodejs_10.19.0~dfsg1.orig.tar.xz' nodejs_10.19.0~dfsg1.orig.tar.xz 16629716 SHA256:34aa03e4867498ea65423d2d4396d1e0e4d6a711e0025536fe0b6933b53aa92e
+'http://deb.debian.org/debian/pool/main/n/nodejs/nodejs_10.19.0~dfsg1-1.debian.tar.xz' nodejs_10.19.0~dfsg1-1.debian.tar.xz 99564 SHA256:43fa38defde996b09d466399e2fd5a326ed5047194e1448a93712b650e8a38ea
+```
 
-- http://snapshot.debian.org/package/nodejs/10.15.2~dfsg-2/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/nodejs/10.19.0~dfsg1-1/ (for browsing the source)
+- https://sources.debian.net/src/nodejs/10.19.0~dfsg1-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/nodejs/10.19.0~dfsg1-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `npm=5.8.0+ds6-4`
+### `dpkg` source package: `npm=5.8.0+ds6-4+deb10u1`
 
 Binary Packages:
 
-- `npm=5.8.0+ds6-4`
+- `npm=5.8.0+ds6-4+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/npm/copyright`)
 
@@ -9382,13 +9428,20 @@ Licenses: (parsed from: `/usr/share/doc/npm/copyright`)
 - `Expat`
 - `ISC`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris npm=5.8.0+ds6-4+deb10u1
+'http://deb.debian.org/debian/pool/main/n/npm/npm_5.8.0+ds6-4+deb10u1.dsc' npm_5.8.0+ds6-4+deb10u1.dsc 4089 SHA256:f292a9cff2257d4e52cf9881f88736519b669079e67f546f16c310d72f5a938a
+'http://deb.debian.org/debian/pool/main/n/npm/npm_5.8.0+ds6.orig.tar.xz' npm_5.8.0+ds6.orig.tar.xz 1570880 SHA256:253b4f03973dca022e596042c917d6e9863fe308992440dfcb46e34c66f06643
+'http://deb.debian.org/debian/pool/main/n/npm/npm_5.8.0+ds6-4+deb10u1.debian.tar.xz' npm_5.8.0+ds6-4+deb10u1.debian.tar.xz 22632 SHA256:bca5ee5d32243f46affe8674a267b1368ee9ab059525561b99b24ead134f59fc
+```
 
-- http://snapshot.debian.org/package/npm/5.8.0+ds6-4/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/npm/5.8.0+ds6-4+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/npm/5.8.0+ds6-4+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/npm/5.8.0+ds6-4+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `npth=1.6-1`
 
@@ -9439,24 +9492,31 @@ Licenses: (parsed from: `/usr/share/doc/odoo/copyright`)
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `openldap=2.4.47+dfsg-3+deb10u1`
+### `dpkg` source package: `openldap=2.4.47+dfsg-3+deb10u2`
 
 Binary Packages:
 
-- `libldap-2.4-2:amd64=2.4.47+dfsg-3+deb10u1`
-- `libldap-common=2.4.47+dfsg-3+deb10u1`
+- `libldap-2.4-2:amd64=2.4.47+dfsg-3+deb10u2`
+- `libldap-common=2.4.47+dfsg-3+deb10u2`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris openldap=2.4.47+dfsg-3+deb10u2
+'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.47+dfsg-3+deb10u2.dsc' openldap_2.4.47+dfsg-3+deb10u2.dsc 3022 SHA256:e909c6be4bfd1bacf644959bc18ebeebaa13606879f11a7876d044cd688a6f62
+'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.47+dfsg.orig.tar.gz' openldap_2.4.47+dfsg.orig.tar.gz 4872293 SHA256:8f1ac7a4be7dd8ef158361efbfe16509756d3d9b396f5f378c3cf5c727807651
+'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.47+dfsg-3+deb10u2.debian.tar.xz' openldap_2.4.47+dfsg-3+deb10u2.debian.tar.xz 168684 SHA256:0f6f81f18a2407bd1a6c6003659d8b33145f31033b6f7fd026607554f0bdfcb0
+```
 
-- http://snapshot.debian.org/package/openldap/2.4.47+dfsg-3+deb10u1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/openldap/2.4.47+dfsg-3+deb10u2/ (for browsing the source)
+- https://sources.debian.net/src/openldap/2.4.47+dfsg-3+deb10u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openldap/2.4.47+dfsg-3+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssl=1.1.1d-0+deb10u3`
 
@@ -9544,13 +9604,13 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/pam/1.3.1-5/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/pam/1.3.1-5/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `pango1.0=1.42.4-7~deb10u1`
+### `dpkg` source package: `pango1.0=1.42.4-8~deb10u1`
 
 Binary Packages:
 
-- `libpango-1.0-0:amd64=1.42.4-7~deb10u1`
-- `libpangocairo-1.0-0:amd64=1.42.4-7~deb10u1`
-- `libpangoft2-1.0-0:amd64=1.42.4-7~deb10u1`
+- `libpango-1.0-0:amd64=1.42.4-8~deb10u1`
+- `libpangocairo-1.0-0:amd64=1.42.4-8~deb10u1`
+- `libpangoft2-1.0-0:amd64=1.42.4-8~deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/libpango-1.0-0/copyright`, `/usr/share/doc/libpangocairo-1.0-0/copyright`, `/usr/share/doc/libpangoft2-1.0-0/copyright`)
 
@@ -9564,17 +9624,17 @@ Licenses: (parsed from: `/usr/share/doc/libpango-1.0-0/copyright`, `/usr/share/d
 Source:
 
 ```console
-$ apt-get source -qq --print-uris pango1.0=1.42.4-7~deb10u1
-'http://security.debian.org/debian-security/pool/updates/main/p/pango1.0/pango1.0_1.42.4-7~deb10u1.dsc' pango1.0_1.42.4-7~deb10u1.dsc 3301 SHA256:48cb653f7a82d8127192e71ca644544f94bac7f882565f40f74b5dbe74c3d00e
-'http://security.debian.org/debian-security/pool/updates/main/p/pango1.0/pango1.0_1.42.4.orig.tar.xz' pango1.0_1.42.4.orig.tar.xz 833876 SHA256:1d2b74cd63e8bd41961f2f8d952355aa0f9be6002b52c8aa7699d9f5da597c9d
-'http://security.debian.org/debian-security/pool/updates/main/p/pango1.0/pango1.0_1.42.4-7~deb10u1.debian.tar.xz' pango1.0_1.42.4-7~deb10u1.debian.tar.xz 50480 SHA256:ceb9b2f2b01b8ab0f46f73078f04ea57805d8106de4369a13b507cba74034d6e
+$ apt-get source -qq --print-uris pango1.0=1.42.4-8~deb10u1
+'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.42.4-8~deb10u1.dsc' pango1.0_1.42.4-8~deb10u1.dsc 3318 SHA256:37ef362bf9bdb0af41a9564a34dcf677e0d67954ba05858443c895785b398318
+'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.42.4.orig.tar.xz' pango1.0_1.42.4.orig.tar.xz 833876 SHA256:1d2b74cd63e8bd41961f2f8d952355aa0f9be6002b52c8aa7699d9f5da597c9d
+'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.42.4-8~deb10u1.debian.tar.xz' pango1.0_1.42.4-8~deb10u1.debian.tar.xz 51280 SHA256:4ee1b2071855019df99c1f40c68e9b7a2741492d3003fedf3353067bec39d923
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/pango1.0/1.42.4-7~deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/pango1.0/1.42.4-7~deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/pango1.0/1.42.4-7~deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/pango1.0/1.42.4-8~deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/pango1.0/1.42.4-8~deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/pango1.0/1.42.4-8~deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pcre3=2:8.39-12`
 
@@ -10693,13 +10753,13 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/python-qrcode/6.1-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/python-qrcode/6.1-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `python-reportlab=3.5.13-1`
+### `dpkg` source package: `python-reportlab=3.5.13-1+deb10u1`
 
 Binary Packages:
 
-- `python3-renderpm:amd64=3.5.13-1`
-- `python3-reportlab=3.5.13-1`
-- `python3-reportlab-accel:amd64=3.5.13-1`
+- `python3-renderpm:amd64=3.5.13-1+deb10u1`
+- `python3-reportlab=3.5.13-1+deb10u1`
+- `python3-reportlab-accel:amd64=3.5.13-1+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/python3-renderpm/copyright`, `/usr/share/doc/python3-reportlab/copyright`, `/usr/share/doc/python3-reportlab-accel/copyright`)
 
@@ -10709,7 +10769,7 @@ Licenses: (parsed from: `/usr/share/doc/python3-renderpm/copyright`, `/usr/share
 Source:
 
 ```console
-$ apt-get source -qq --print-uris python-reportlab=3.5.13-1
+$ apt-get source -qq --print-uris python-reportlab=3.5.13-1+deb10u1
 'http://deb.debian.org/debian/pool/main/p/python-reportlab/python-reportlab_3.5.13-1+deb10u1.dsc' python-reportlab_3.5.13-1+deb10u1.dsc 3008 SHA256:74ffadca7a4bb6bc8c0968bedde124c93decc457910e03ee83eecd15c352b92c
 'http://deb.debian.org/debian/pool/main/p/python-reportlab/python-reportlab_3.5.13.orig.tar.gz' python-reportlab_3.5.13.orig.tar.gz 2842790 SHA256:6116e750f98018febc08dfee6df20446cf954adbcfa378d2c703d56c8864aff3
 'http://deb.debian.org/debian/pool/main/p/python-reportlab/python-reportlab_3.5.13-1+deb10u1.debian.tar.xz' python-reportlab_3.5.13-1+deb10u1.debian.tar.xz 12720 SHA256:8923d9c1855949823191088a6ab715eed5a53adbb82babf5c37af9d741607933
@@ -10717,9 +10777,9 @@ $ apt-get source -qq --print-uris python-reportlab=3.5.13-1
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/python-reportlab/3.5.13-1/ (for browsing the source)
-- https://sources.debian.net/src/python-reportlab/3.5.13-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python-reportlab/3.5.13-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/python-reportlab/3.5.13-1+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/python-reportlab/3.5.13-1+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/python-reportlab/3.5.13-1+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `python-requests-toolbelt=0.8.0-1`
 
@@ -11539,12 +11599,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/suds/0.7~git20150727.94664dd-5/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/suds/0.7~git20150727.94664dd-5/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `systemd=241-7~deb10u3`
+### `dpkg` source package: `systemd=241-7~deb10u4`
 
 Binary Packages:
 
-- `libsystemd0:amd64=241-7~deb10u3`
-- `libudev1:amd64=241-7~deb10u3`
+- `libsystemd0:amd64=241-7~deb10u4`
+- `libudev1:amd64=241-7~deb10u4`
 
 Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/libudev1/copyright`)
 
@@ -11556,13 +11616,20 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris systemd=241-7~deb10u4
+'http://deb.debian.org/debian/pool/main/s/systemd/systemd_241-7~deb10u4.dsc' systemd_241-7~deb10u4.dsc 4946 SHA256:52707608012c7b13d19ebbbfff704311e33f884f0f843811874e266dcf2faf71
+'http://deb.debian.org/debian/pool/main/s/systemd/systemd_241.orig.tar.gz' systemd_241.orig.tar.gz 7640538 SHA256:b2561a8e1d10a2c248253f0dda31a85dd6d69f2b54177de55e02cd1d2778316e
+'http://deb.debian.org/debian/pool/main/s/systemd/systemd_241-7~deb10u4.debian.tar.xz' systemd_241-7~deb10u4.debian.tar.xz 178136 SHA256:ff8ed4b3d9c30e14659278f17ea4cfc63c4b1af199a98a861abc670dfdd991cb
+```
 
-- http://snapshot.debian.org/package/systemd/241-7~deb10u3/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/systemd/241-7~deb10u4/ (for browsing the source)
+- https://sources.debian.net/src/systemd/241-7~deb10u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/systemd/241-7~deb10u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sysvinit=2.93-8`
 
@@ -11642,11 +11709,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tiff/4.1.0+git191117-2~deb10u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tiff/4.1.0+git191117-2~deb10u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tzdata=2019c-0+deb10u1`
+### `dpkg` source package: `tzdata=2020a-0+deb10u1`
 
 Binary Packages:
 
-- `tzdata=2019c-0+deb10u1`
+- `tzdata=2020a-0+deb10u1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -11655,18 +11722,18 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris tzdata=2019c-0+deb10u1
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2019c-0+deb10u1.dsc' tzdata_2019c-0+deb10u1.dsc 2264 SHA256:983c27d24d78c52d8f213b1b5800aaa90a171a4f805451b0845752f97c6f924b
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2019c.orig.tar.gz' tzdata_2019c.orig.tar.gz 392087 SHA256:79c7806dab09072308da0e3d22c37d3b245015a591891ea147d3b133b60ffc7c
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2019c.orig.tar.gz.asc' tzdata_2019c.orig.tar.gz.asc 833 SHA256:cd31deaeee229d45e4f4b973441189e7619ef81679359e9c8b47b2a87aaf6a07
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2019c-0+deb10u1.debian.tar.xz' tzdata_2019c-0+deb10u1.debian.tar.xz 104932 SHA256:fa8071037767a7dfa054c26621c5079809ee038eddb32a58814faf3541d52d5a
+$ apt-get source -qq --print-uris tzdata=2020a-0+deb10u1
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a-0+deb10u1.dsc' tzdata_2020a-0+deb10u1.dsc 2264 SHA256:24c86ca3f4755af8bd1ce2cd985382a490476f20006806fe5ec5c0f6b2a417c9
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a.orig.tar.gz' tzdata_2020a.orig.tar.gz 397245 SHA256:547161eca24d344e0b5f96aff6a76b454da295dc14ed4ca50c2355043fb899a2
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a.orig.tar.gz.asc' tzdata_2020a.orig.tar.gz.asc 833 SHA256:a92f085fe1e7f8bc0f0a0bc4432f27e6cf2d69e64d4a90958bd023eb0ccf45f9
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a-0+deb10u1.debian.tar.xz' tzdata_2020a-0+deb10u1.debian.tar.xz 104936 SHA256:df174cf4f4414006677b626f15b51a04762a2a0ef0171ce2f0c6856710a16d53
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/tzdata/2019c-0+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2019c-0+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2019c-0+deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/tzdata/2020a-0+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/tzdata/2020a-0+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tzdata/2020a-0+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0038+nmu1`
 
