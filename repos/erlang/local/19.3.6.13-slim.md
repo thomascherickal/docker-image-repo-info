@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:2862494880a50019a78909e692c595655f816a7fba15a1589368a6f3108e5d1e`
-- Created: `2020-04-23T07:30:26.930546858Z`
+- Image ID: `sha256:41fab817ddd1c9fee9b8dd3cd352601edef8bfafa7ccdea98fd19da92b5d5cfd`
+- Created: `2020-05-14T02:47:07.163718348Z`
 - Virtual Size: ~ 515.06 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -3219,11 +3219,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tar/1.29b-1.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tar/1.29b-1.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tiff=4.0.8-2+deb9u4`
+### `dpkg` source package: `tiff=4.0.8-2+deb9u5`
 
 Binary Packages:
 
-- `libtiff5:amd64=4.0.8-2+deb9u4`
+- `libtiff5:amd64=4.0.8-2+deb9u5`
 
 Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`)
 
@@ -3232,17 +3232,17 @@ Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris tiff=4.0.8-2+deb9u4
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.0.8-2+deb9u4.dsc' tiff_4.0.8-2+deb9u4.dsc 2185 SHA256:7f2a8ae92ea3ea871eb9baca399e589d256163e9689a64ac41ac64253c84b0b7
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.0.8.orig.tar.gz' tiff_4.0.8.orig.tar.gz 2065574 SHA256:59d7a5a8ccd92059913f246877db95a2918e6c04fb9d43fd74e5c3390dac2910
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.0.8-2+deb9u4.debian.tar.xz' tiff_4.0.8-2+deb9u4.debian.tar.xz 32508 SHA256:2096e012af91b8503e656212409c438ad2105fd42c22e8f811fe5ef25810342d
+$ apt-get source -qq --print-uris tiff=4.0.8-2+deb9u5
+'http://security.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.0.8-2+deb9u5.dsc' tiff_4.0.8-2+deb9u5.dsc 2185 SHA256:a782ae9a83645f53eab3cbe70b93f7fd3ec0c1c8efeb37513b8ea7ad77756c9c
+'http://security.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.0.8.orig.tar.gz' tiff_4.0.8.orig.tar.gz 2065574 SHA256:59d7a5a8ccd92059913f246877db95a2918e6c04fb9d43fd74e5c3390dac2910
+'http://security.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.0.8-2+deb9u5.debian.tar.xz' tiff_4.0.8-2+deb9u5.debian.tar.xz 37260 SHA256:141a6cde7494b392b10c00692dd4d4090294d7d5678265e3344662c23c7c3089
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/tiff/4.0.8-2+deb9u4/ (for browsing the source)
-- https://sources.debian.net/src/tiff/4.0.8-2+deb9u4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tiff/4.0.8-2+deb9u4/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/tiff/4.0.8-2+deb9u5/ (for browsing the source)
+- https://sources.debian.net/src/tiff/4.0.8-2+deb9u5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tiff/4.0.8-2+deb9u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tzdata=2019c-0+deb9u1`
 

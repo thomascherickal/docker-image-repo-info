@@ -1,19 +1,19 @@
-# `erlang:23.0-rc3-alpine`
+# `erlang:23.0-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:3faecf72d3b77708947568c194d251756682bd3101806be87c78a707fb794ef8`
-- Created: `2020-04-24T14:51:17.415516982Z`
-- Virtual Size: ~ 68.42 Mb  
+- Image ID: `sha256:948f64815f29d4b1f35d82ed8f0439bb021f69049b9b17d9a67bb35e67c9609d`
+- Created: `2020-05-14T22:17:40.243537992Z`
+- Virtual Size: ~ 68.71 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["erl"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `OTP_VERSION=23.0-rc3`
-  - `REBAR3_VERSION=3.13.1`
+  - `OTP_VERSION=23.0`
+  - `REBAR3_VERSION=3.13.2`
 - Labels:
-  - `org.opencontainers.image.version=23.0-rc3`
+  - `org.opencontainers.image.version=23.0`
 
 ## `apk` (`.apk`-based packages)
 
@@ -258,16 +258,16 @@ MIT BSD GPL2+
 ### `apk` package: `ncurses-libs`
 
 ```console
-ncurses-libs-6.1_p20200118-r3 description:
+ncurses-libs-6.1_p20200118-r4 description:
 Ncurses libraries
 
-ncurses-libs-6.1_p20200118-r3 webpage:
+ncurses-libs-6.1_p20200118-r4 webpage:
 https://invisible-island.net/ncurses/
 
-ncurses-libs-6.1_p20200118-r3 installed size:
+ncurses-libs-6.1_p20200118-r4 installed size:
 507904
 
-ncurses-libs-6.1_p20200118-r3 license:
+ncurses-libs-6.1_p20200118-r4 license:
 MIT
 
 ```
@@ -275,16 +275,16 @@ MIT
 ### `apk` package: `ncurses-terminfo-base`
 
 ```console
-ncurses-terminfo-base-6.1_p20200118-r3 description:
+ncurses-terminfo-base-6.1_p20200118-r4 description:
 Descriptions of common terminals
 
-ncurses-terminfo-base-6.1_p20200118-r3 webpage:
+ncurses-terminfo-base-6.1_p20200118-r4 webpage:
 https://invisible-island.net/ncurses/
 
-ncurses-terminfo-base-6.1_p20200118-r3 installed size:
+ncurses-terminfo-base-6.1_p20200118-r4 installed size:
 217088
 
-ncurses-terminfo-base-6.1_p20200118-r3 license:
+ncurses-terminfo-base-6.1_p20200118-r4 license:
 MIT
 
 ```
