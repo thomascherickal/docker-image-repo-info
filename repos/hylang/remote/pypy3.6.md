@@ -1,7 +1,7 @@
 ## `hylang:pypy3.6`
 
 ```console
-$ docker pull hylang@sha256:1d9af81f518cfe1e1100fb22451a89ab2d2c658edd20b339cc1d42e235b94cf1
+$ docker pull hylang@sha256:72c0ecda0b39bd659c2626c5079a0ed3cf5e7de214f52a4293454c502dff6782
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -14,69 +14,69 @@ $ docker pull hylang@sha256:1d9af81f518cfe1e1100fb22451a89ab2d2c658edd20b339cc1d
 ### `hylang:pypy3.6` - linux; amd64
 
 ```console
-$ docker pull hylang@sha256:e99d2b9fbdd595fb3e23f0635495c307a857b85c73907e3ebaafe7c94eac3999
+$ docker pull hylang@sha256:0c0973e0f3ecebe6540f33c6576853b9895be47c968b49b4862b4e232bfb6030
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **70.3 MB (70334576 bytes)**  
+-	Total Size: **70.3 MB (70328247 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a34ae18fe13c1f81d9371dd9bcfc824a364533f0a93e7c79d0eb8034093994b0`
+-	Image ID: `sha256:03ea1e092da1423c480c9381dff8975e7857551c38a7f581f61a2f1e545ec2fe`
 -	Default Command: `["hy"]`
 
 ```dockerfile
-# Thu, 23 Apr 2020 00:20:32 GMT
-ADD file:9b8be2b52ee0fa31da1b6256099030b73546253a57e94cccb24605cd888bb74d in / 
-# Thu, 23 Apr 2020 00:20:32 GMT
+# Wed, 13 May 2020 21:20:38 GMT
+ADD file:ca8f84daab6688a5d8efa1fc57c754c162584fc99cd98a8ea357065661d6a48b in / 
+# Wed, 13 May 2020 21:20:38 GMT
 CMD ["bash"]
-# Thu, 23 Apr 2020 14:23:49 GMT
+# Thu, 14 May 2020 03:46:47 GMT
 ENV PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 23 Apr 2020 14:23:49 GMT
+# Thu, 14 May 2020 03:46:48 GMT
 ENV LANG=C.UTF-8
-# Thu, 23 Apr 2020 19:57:43 GMT
+# Thu, 14 May 2020 03:46:55 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates; 	rm -rf /var/lib/apt/lists/*
-# Thu, 23 Apr 2020 19:57:43 GMT
+# Thu, 14 May 2020 03:46:55 GMT
 ENV PYPY_VERSION=7.3.0
-# Thu, 23 Apr 2020 20:00:05 GMT
+# Thu, 14 May 2020 03:49:45 GMT
 RUN set -ex; 		dpkgArch="$(dpkg --print-architecture)"; 	case "${dpkgArch##*-}" in 		amd64) pypyArch='linux64'; sha256='d3d549e8f43de820ac3385b698b83fa59b4d7dd6cf3fe34c115f731e26ad8856' ;; 		arm64) pypyArch='aarch64'; sha256='b900241bca7152254c107a632767f49edede99ca6360b9a064141267b47ef598' ;; 		i386) pypyArch='linux32'; sha256='7045b295d38ba0b5ee65bd3f078ca249fcf1de73fedeaab2d6ad78de2eab0f0e' ;; 		ppc64el) pypyArch='ppc64le'; sha256='d6f3b701313df69483b43ebdd21b9652ae5e808b2eea5fbffe3b74b82d2e7433' ;; 		s390x) pypyArch='s390x'; sha256='0fe2f7bbf42ea88b40954d7de773a43179a44f40656f2f58201524be70699544' ;; 		*) echo >&2 "error: current architecture ($dpkgArch) does not have a corresponding PyPy $PYPY_VERSION binary release"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		bzip2 		wget 		libexpat1 		libncurses5 	; 		wget -O pypy.tar.bz2 "https://bitbucket.org/pypy/pypy/downloads/pypy3.6-v${PYPY_VERSION}-${pypyArch}.tar.bz2" --progress=dot:giga; 	echo "$sha256 *pypy.tar.bz2" | sha256sum -c; 	tar -xjC /usr/local --strip-components=1 -f pypy.tar.bz2; 	find /usr/local/lib-python -depth -type d -a \( -name test -o -name tests \) -exec rm -rf '{}' +; 	rm pypy.tar.bz2; 		pypy3 --version; 		if [ -f /usr/local/lib_pypy/_ssl_build.py ]; then 		apt-get install -y --no-install-recommends gcc libc6-dev libssl-dev; 		cd /usr/local/lib_pypy; 		pypy3 _ssl_build.py; 	fi; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 	pypy3 --version; 		find /usr/local -depth 		\( 			\( -type d -a \( -name test -o -name tests \) \) 			-o 			\( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) 		\) -exec rm -rf '{}' +
-# Thu, 23 Apr 2020 20:00:05 GMT
+# Thu, 14 May 2020 03:49:45 GMT
 ENV PYTHON_PIP_VERSION=20.0.2
-# Thu, 23 Apr 2020 20:00:06 GMT
+# Thu, 14 May 2020 03:49:46 GMT
 ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/d59197a3c169cef378a22428a3fa99d33e080a5d/get-pip.py
-# Thu, 23 Apr 2020 20:00:06 GMT
+# Thu, 14 May 2020 03:49:46 GMT
 ENV PYTHON_GET_PIP_SHA256=421ac1d44c0cf9730a088e337867d974b91bdce4ea2636099275071878cc189e
-# Thu, 23 Apr 2020 20:00:26 GMT
+# Thu, 14 May 2020 03:50:09 GMT
 RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum --check --strict -; 		pypy3 get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		"pip==$PYTHON_PIP_VERSION" 	; 	apt-get purge -y --auto-remove wget; 	pip --version; 		find /usr/local -depth 		\( 			\( -type d -a \( -name test -o -name tests \) \) 			-o 			\( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) 		\) -exec rm -rf '{}' +; 	rm -f get-pip.py
-# Thu, 23 Apr 2020 20:00:26 GMT
+# Thu, 14 May 2020 03:50:09 GMT
 CMD ["pypy3"]
-# Fri, 24 Apr 2020 11:21:17 GMT
+# Fri, 15 May 2020 12:31:21 GMT
 ENV HY_VERSION=0.18.0
-# Fri, 24 Apr 2020 11:21:28 GMT
+# Fri, 15 May 2020 12:31:33 GMT
 RUN pip install --no-cache-dir "hy == $HY_VERSION"
-# Fri, 24 Apr 2020 11:21:28 GMT
+# Fri, 15 May 2020 12:31:33 GMT
 CMD ["hy"]
 ```
 
 -	Layers:
-	-	`sha256:54fec2fa59d0a0de9cd2dec9850b36c43de451f1fd1c0a5bf8f1cf26a61a5da4`  
-		Last Modified: Thu, 23 Apr 2020 00:25:10 GMT  
-		Size: 27.1 MB (27098254 bytes)  
+	-	`sha256:5b54d594fba7f30e90c967a80607905ba8d90ca8be45d5a4d30e69d75e65430b`  
+		Last Modified: Wed, 13 May 2020 21:26:23 GMT  
+		Size: 27.1 MB (27091990 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8e39f35332c56772b2021a2dd647c057ea5b012dec3cbdaf1fe1b92935a629c1`  
-		Last Modified: Thu, 23 Apr 2020 20:02:02 GMT  
-		Size: 2.7 MB (2741604 bytes)  
+	-	`sha256:b26605ca54c7136ccfa1f40c1af880dd63f24108fcd37554851a736cd0b12c68`  
+		Last Modified: Thu, 14 May 2020 03:51:31 GMT  
+		Size: 2.7 MB (2741621 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:14a8a973749d0fa11decfba33b96d6b99b2d7aa07548da93dde567d7a2b81c5d`  
-		Last Modified: Thu, 23 Apr 2020 20:02:53 GMT  
-		Size: 35.4 MB (35399993 bytes)  
+	-	`sha256:14da9e61faaefdcf2738e92ccd128170cd5ce7442b94ff60c101ed7f644edab0`  
+		Last Modified: Thu, 14 May 2020 03:52:37 GMT  
+		Size: 35.4 MB (35400042 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c8c1a47765c1a26119d70b01590251e54768a9d0a7b1cbb5e527611ed3c103bd`  
-		Last Modified: Thu, 23 Apr 2020 20:02:45 GMT  
-		Size: 2.2 MB (2166659 bytes)  
+	-	`sha256:61484ccb3ade21a14bd813ff1e8fef8b255e2cd47a532f86dca237ac4e6e0127`  
+		Last Modified: Thu, 14 May 2020 03:52:26 GMT  
+		Size: 2.2 MB (2166714 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d88c173389fe6c2d3df67d56ac968936d9fc09cc30d922ad8b2132a693f1d16b`  
-		Last Modified: Fri, 24 Apr 2020 11:23:25 GMT  
-		Size: 2.9 MB (2928066 bytes)  
+	-	`sha256:1c1b24b8fed1aed44a3413c18cd49b0a4d41b1e5b8c0f798a22993f58d5df943`  
+		Last Modified: Fri, 15 May 2020 12:33:45 GMT  
+		Size: 2.9 MB (2927880 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `hylang:pypy3.6` - linux; arm64 variant v8
