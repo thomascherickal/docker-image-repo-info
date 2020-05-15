@@ -1,12 +1,13 @@
 ## `debian:stable-20200514-slim`
 
 ```console
-$ docker pull debian@sha256:4566b22d910744b91bc9a6e6dd163aae99d59501b38e56a9783719d6f3b4bdb5
+$ docker pull debian@sha256:205261152fcae090e09c6f77a04a1de19dafabc40c042b9a29bad938757c58a2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
 -	Platforms:
 	-	linux; arm variant v5
+	-	linux; s390x
 
 ### `debian:stable-20200514-slim` - linux; arm variant v5
 
@@ -32,4 +33,30 @@ CMD ["bash"]
 	-	`sha256:89884728d89838c79f39b403b4098ffc13c089cc878a198ba1fac24385183012`  
 		Last Modified: Thu, 14 May 2020 22:50:23 GMT  
 		Size: 24.8 MB (24838428 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `debian:stable-20200514-slim` - linux; s390x
+
+```console
+$ docker pull debian@sha256:9614d6b6e1aafc9dfe4bab7e38fa1d78e160c7f8c6ff5feda9a215c22cc12e94
+```
+
+-	Docker Version: 18.09.7
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **25.7 MB (25712937 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:0355a143723acf26e9f0e32e068bf4bfbd76d87703605b4290d1a6464ef8a81f`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Thu, 14 May 2020 23:08:10 GMT
+ADD file:191064c79388f468d76b2135282b7a9e1e9b183dfeca19f4719712b5e80436ab in / 
+# Thu, 14 May 2020 23:08:11 GMT
+CMD ["bash"]
+```
+
+-	Layers:
+	-	`sha256:400f5b8484affbc492535f3e6f12a19ed601bd9466c55f7973c01010362e7ec6`  
+		Last Modified: Thu, 14 May 2020 23:12:39 GMT  
+		Size: 25.7 MB (25712937 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
