@@ -1,10 +1,10 @@
-# `python:3.8.2-alpine3.10`
+# `python:3.8.3-alpine3.10`
 
 ## Docker Metadata
 
-- Image ID: `sha256:d6a97cea864df782a631147deb09004a9b32267cd3a99aad4d7830ac83403933`
-- Created: `2020-04-29T17:38:21.235899936Z`
-- Virtual Size: ~ 108.86 Mb  
+- Image ID: `sha256:0b4259061163f07de783d40a17e10db7efcd2ccf6811f1b1d23087ad69b13639`
+- Created: `2020-05-14T23:13:12.018950484Z`
+- Virtual Size: ~ 108.85 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["python3"]`
@@ -12,7 +12,7 @@
   - `PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=C.UTF-8`
   - `GPG_KEY=E3FF2839C048B25C084DEBE9B26995E310250568`
-  - `PYTHON_VERSION=3.8.2`
+  - `PYTHON_VERSION=3.8.3`
   - `PYTHON_PIP_VERSION=20.1`
   - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/1fe530e9e3d800be94e04f6428460fc4fb94f5a9/get-pip.py`
   - `PYTHON_GET_PIP_SHA256=ce486cddac44e99496a702aa5c06c5028414ef48fdfd5242cd2fe559b13d4348`
@@ -515,16 +515,16 @@ GPL-2.0
 ### `apk` package: `sqlite-libs`
 
 ```console
-sqlite-libs-3.28.0-r2 description:
+sqlite-libs-3.28.0-r3 description:
 Sqlite3 library
 
-sqlite-libs-3.28.0-r2 webpage:
+sqlite-libs-3.28.0-r3 webpage:
 https://www.sqlite.org/
 
-sqlite-libs-3.28.0-r2 installed size:
+sqlite-libs-3.28.0-r3 installed size:
 925696
 
-sqlite-libs-3.28.0-r2 license:
+sqlite-libs-3.28.0-r3 license:
 Public-Domain
 
 ```
