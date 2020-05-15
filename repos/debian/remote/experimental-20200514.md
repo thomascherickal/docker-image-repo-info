@@ -1,13 +1,14 @@
 ## `debian:experimental-20200514`
 
 ```console
-$ docker pull debian@sha256:ea9e2f01152f0268f68a0224991d6a89cda8b8c9285f63cb509f4e538212d32c
+$ docker pull debian@sha256:ba728a50bf70dfefa79ee66c21f2d73adfdd9af66a9c1e1cb2b6454c652ae141
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
 -	Platforms:
 	-	linux; arm variant v5
 	-	linux; arm variant v7
+	-	linux; mips64le
 	-	linux; s390x
 
 ### `debian:experimental-20200514` - linux; arm variant v5
@@ -72,6 +73,38 @@ RUN echo 'deb http://deb.debian.org/debian experimental main' > /etc/apt/sources
 	-	`sha256:eed5b033bbc8655fe6f43694b0024d9cc8288a05d60b841ac6d60cf4dc04da37`  
 		Last Modified: Fri, 15 May 2020 01:16:26 GMT  
 		Size: 223.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `debian:experimental-20200514` - linux; mips64le
+
+```console
+$ docker pull debian@sha256:43eced143c9a9a3072f65a3e3dbc87e53b6f5c4efbdf5503b445d77bf74be3c5
+```
+
+-	Docker Version: 19.03.8
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **50.1 MB (50149353 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:001118f6fd880864090d64ce872c2c7eedffd91722f61396d86f852c1900269f`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Fri, 15 May 2020 04:53:24 GMT
+ADD file:37ed369d2871dae20776fd6b0de6e1fc9b7567b01d2b24d51b940f2a498b12bf in / 
+# Fri, 15 May 2020 04:53:25 GMT
+CMD ["bash"]
+# Fri, 15 May 2020 04:53:52 GMT
+RUN echo 'deb http://deb.debian.org/debian experimental main' > /etc/apt/sources.list.d/experimental.list
+```
+
+-	Layers:
+	-	`sha256:083fa88e3695c64a3f913be1f827a43ddf76f53de8914e0ad96a66d672610637`  
+		Last Modified: Fri, 15 May 2020 05:04:44 GMT  
+		Size: 50.1 MB (50149131 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:f2e6ec81821ab259b11f3ad75904687ba7868b3c18b382834b9476f37f018c6d`  
+		Last Modified: Fri, 15 May 2020 05:05:33 GMT  
+		Size: 222.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `debian:experimental-20200514` - linux; s390x
