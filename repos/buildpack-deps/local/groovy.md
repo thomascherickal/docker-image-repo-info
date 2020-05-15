@@ -303,14 +303,9 @@ Licenses: (parsed from: `/usr/share/doc/binutils/copyright`, `/usr/share/doc/bin
 - `GPL`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris binutils=2.34-6ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.34-6ubuntu1.dsc' binutils_2.34-6ubuntu1.dsc 8767 SHA256:ab7ef15972388dfc74e330893b195076f87cd55e3c9a58c8fa31406755fbd667
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.34.orig.tar.xz' binutils_2.34.orig.tar.xz 21637796 SHA256:f00b0e8803dc9bab1e2165bd568528135be734df3fabf8d0161828cd56028952
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.34-6ubuntu1.debian.tar.xz' binutils_2.34-6ubuntu1.debian.tar.xz 155276 SHA256:a96049d0b8833f6b89105bc32fa4d9b79a157d8e753b27721741a0229d801034
-```
 
 ### `dpkg` source package: `breezy=3.0.2-4ubuntu2`
 
@@ -1435,14 +1430,9 @@ Licenses: (parsed from: `/usr/share/doc/libasn1-8-heimdal/copyright`, `/usr/shar
 - `custom`
 - `none`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris heimdal=7.7.0+dfsg-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.7.0+dfsg-1ubuntu1.dsc' heimdal_7.7.0+dfsg-1ubuntu1.dsc 3633 SHA256:46b7873a11c8279f5efec50f16b5ed4abafa5a957224c3f624229f9d888e1ebe
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.7.0+dfsg.orig.tar.xz' heimdal_7.7.0+dfsg.orig.tar.xz 5945252 SHA256:6822c9547188b753b6325047fda9255744e4ebbbe02bb0dade78c261061fefac
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.7.0+dfsg-1ubuntu1.debian.tar.xz' heimdal_7.7.0+dfsg-1ubuntu1.debian.tar.xz 128604 SHA256:0c0b4572de525c3c294bcdbde95ebfc3386461c47c2e8d1a86fe0d37da6bd479
-```
 
 ### `dpkg` source package: `hicolor-icon-theme=0.17-2`
 
@@ -2278,14 +2268,13 @@ Licenses: (parsed from: `/usr/share/doc/gir1.2-rsvg-2.0/copyright`, `/usr/share/
 - `Sun-permissive`
 - `Unlicense`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris librsvg=2.48.2-1
-'http://archive.ubuntu.com/ubuntu/pool/main/libr/librsvg/librsvg_2.48.2-1.dsc' librsvg_2.48.2-1.dsc 2957 SHA256:d865b7520122fdaec3bcf044a744dd6ed37871bd2af4a0e7f30e7062343bc2b4
-'http://archive.ubuntu.com/ubuntu/pool/main/libr/librsvg/librsvg_2.48.2.orig.tar.xz' librsvg_2.48.2.orig.tar.xz 13125500 SHA256:272658a0e04fce21eb1368c345cc1305bfeada4ca6d7db99e77323ed0668bdca
-'http://archive.ubuntu.com/ubuntu/pool/main/libr/librsvg/librsvg_2.48.2-1.debian.tar.xz' librsvg_2.48.2-1.debian.tar.xz 23340 SHA256:560bafdf78851ae05b54afcefaeb9d18f4e81ef17c0e99a6f7e887fe0f473209
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/librsvg/2.48.2-1/
+
 
 ### `dpkg` source package: `libseccomp=2.4.3-1ubuntu1`
 
@@ -2297,14 +2286,9 @@ Licenses: (parsed from: `/usr/share/doc/libseccomp2/copyright`)
 
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libseccomp=2.4.3-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3-1ubuntu1.dsc' libseccomp_2.4.3-1ubuntu1.dsc 2564 SHA256:ae6e39b00694bf48a5cec9aaf9001643ba6c724d4e807b380d8d4ffa64ddc94e
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3.orig.tar.gz' libseccomp_2.4.3.orig.tar.gz 598147 SHA256:cf15d1421997fac45b936515af61d209c4fd788af11005d212b3d0fd71e7991d
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3-1ubuntu1.debian.tar.xz' libseccomp_2.4.3-1ubuntu1.debian.tar.xz 18988 SHA256:a04203ef20dfa40f1c7c234d078e839655ad04bfbc393751b149cae10893325f
-```
 
 ### `dpkg` source package: `libselinux=3.0-1build2`
 

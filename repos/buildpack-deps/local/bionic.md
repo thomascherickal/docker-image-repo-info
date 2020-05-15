@@ -103,13 +103,9 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=1.6.12
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.6.12.dsc' apt_1.6.12.dsc 2796 SHA256:061d7de8e9faea48b69b37f01a54b2eac04d39eaab143ec4ffb7cd534fa01cfd
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.6.12.tar.xz' apt_1.6.12.tar.xz 2171176 SHA256:d4e2ae405a1ff12bd108a5a530a24d52afde9cde40065ed508fdea33302c8a35
-```
 
 ### `dpkg` source package: `attr=1:2.4.47-2build1`
 
@@ -760,14 +756,9 @@ Licenses: (parsed from: `/usr/share/doc/file/copyright`, `/usr/share/doc/libmagi
 - `MIT-Old-Style-with-legal-disclaimer-2`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris file=1:5.32-2ubuntu0.3
-'http://archive.ubuntu.com/ubuntu/pool/main/f/file/file_5.32-2ubuntu0.3.dsc' file_5.32-2ubuntu0.3.dsc 1972 SHA256:821a16b82933d389739edad6a476381672ad1a3fde7355a800d248b72477456a
-'http://archive.ubuntu.com/ubuntu/pool/main/f/file/file_5.32.orig.tar.xz' file_5.32.orig.tar.xz 584352 SHA256:07627dc16c9a5b64352b00f24afb8d328b9ecade82afe2e2fa55201d324fd360
-'http://archive.ubuntu.com/ubuntu/pool/main/f/file/file_5.32-2ubuntu0.3.debian.tar.xz' file_5.32-2ubuntu0.3.debian.tar.xz 33820 SHA256:e3aaaf526a2fda754c658d15e4ea56de0c69b9aeac5738858bb4aa2375773da9
-```
 
 ### `dpkg` source package: `findutils=4.6.0+git+20170828-2`
 
@@ -1816,14 +1807,9 @@ Licenses: (parsed from: `/usr/share/doc/libexif-dev/copyright`, `/usr/share/doc/
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libexif=0.6.21-4ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/libe/libexif/libexif_0.6.21-4ubuntu0.1.dsc' libexif_0.6.21-4ubuntu0.1.dsc 2226 SHA256:e4181f64a9c4e896358d84eaab6a7b5a9df020f9dafe307d54f1f6e4bf419457
-'http://archive.ubuntu.com/ubuntu/pool/main/libe/libexif/libexif_0.6.21.orig.tar.gz' libexif_0.6.21.orig.tar.gz 2081615 SHA256:edb7eb13664cf950a6edd132b75e99afe61c5effe2f16494e6d27bc404b287bf
-'http://archive.ubuntu.com/ubuntu/pool/main/libe/libexif/libexif_0.6.21-4ubuntu0.1.debian.tar.xz' libexif_0.6.21-4ubuntu0.1.debian.tar.xz 11188 SHA256:bb5891936991904b565e3fae0015ef3923bb54f70d0aa245c60155ae5ced2cf5
-```
 
 ### `dpkg` source package: `libffi=3.2.1-8`
 

@@ -1817,14 +1817,9 @@ Licenses: (parsed from: `/usr/share/doc/libexif-dev/copyright`, `/usr/share/doc/
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libexif=0.6.21-5.1ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/libe/libexif/libexif_0.6.21-5.1ubuntu0.1.dsc' libexif_0.6.21-5.1ubuntu0.1.dsc 2216 SHA256:91f28ad0c512941bf82cb50a9f5db15ca34f4909cd308528a1c85538c8d82666
-'http://archive.ubuntu.com/ubuntu/pool/main/libe/libexif/libexif_0.6.21.orig.tar.gz' libexif_0.6.21.orig.tar.gz 2081615 SHA256:edb7eb13664cf950a6edd132b75e99afe61c5effe2f16494e6d27bc404b287bf
-'http://archive.ubuntu.com/ubuntu/pool/main/libe/libexif/libexif_0.6.21-5.1ubuntu0.1.debian.tar.xz' libexif_0.6.21-5.1ubuntu0.1.debian.tar.xz 14088 SHA256:88b61c052381936d9f58d227d56eef65ed08242dc78873a889682638277cca95
-```
 
 ### `dpkg` source package: `libffi=3.2.1-9`
 

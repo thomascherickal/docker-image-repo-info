@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:a5f24b7e1b7e6a5232315d05c509f9251f5e4e5838dad44ab08814d9ba689e08`
-- Created: `2020-04-23T00:53:24.895114684Z`
+- Image ID: `sha256:24ffe66d54be973f7c35124f35888d421014eebf8b3f9493b5690bfc8bb95b9d`
+- Created: `2020-05-13T22:31:46.083658665Z`
 - Virtual Size: ~ 170.23 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -76,19 +76,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=1.0.9.8.5
-'http://security.debian.org/debian-security/pool/updates/main/a/apt/apt_1.0.9.8.5.dsc' apt_1.0.9.8.5.dsc 2396 SHA256:57375233b57c22cd93539ce6d9ab26c4f3f5dac604c0a9b1479dc4da7b60fda3
-'http://security.debian.org/debian-security/pool/updates/main/a/apt/apt_1.0.9.8.5.tar.xz' apt_1.0.9.8.5.tar.xz 1783540 SHA256:d4e9dc57b0704e713895aa10de821c804b9a5c367772c36667cddbef96e79bd2
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/apt/1.0.9.8.5/
 
-- https://sources.debian.net/src/apt/1.0.9.8.5/ (for browsing the source)
-- https://sources.debian.net/src/apt/1.0.9.8.5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apt/1.0.9.8.5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `attr=1:2.4.47-2`
 
@@ -1688,23 +1682,30 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/nettle/2.7.1-5+deb8u2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/nettle/2.7.1-5+deb8u2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openldap=2.4.40+dfsg-1+deb8u5`
+### `dpkg` source package: `openldap=2.4.40+dfsg-1+deb8u6`
 
 Binary Packages:
 
-- `libldap-2.4-2:amd64=2.4.40+dfsg-1+deb8u5`
+- `libldap-2.4-2:amd64=2.4.40+dfsg-1+deb8u6`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris openldap=2.4.40+dfsg-1+deb8u6
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.40+dfsg-1+deb8u6.dsc' openldap_2.4.40+dfsg-1+deb8u6.dsc 2835 SHA256:2d743d14044303954ed7abd9f24cbe333af4e97c38d78398178d1ca992b25f1d
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.40+dfsg.orig.tar.gz' openldap_2.4.40+dfsg.orig.tar.gz 4797667 SHA256:86c0326dc3dc5f1a9b3c25f7106b96f3eafcdf5da090b1fc586dec57d56e0e7f
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.40+dfsg-1+deb8u6.diff.gz' openldap_2.4.40+dfsg-1+deb8u6.diff.gz 185074 SHA256:559621ba5e00388e3663e025b93a579b56076219c217bfe1274caa2e767acc30
+```
 
-- http://snapshot.debian.org/package/openldap/2.4.40+dfsg-1+deb8u5/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/openldap/2.4.40+dfsg-1+deb8u6/ (for browsing the source)
+- https://sources.debian.net/src/openldap/2.4.40+dfsg-1+deb8u6/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openldap/2.4.40+dfsg-1+deb8u6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssl=1.0.1t-1+deb8u12`
 
