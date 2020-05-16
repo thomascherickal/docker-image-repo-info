@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:5669538a11e7b52ad6a5dcdae59d0c50224a8bcc6d25de222bf2fa991b8f0c41`
-- Created: `2020-04-23T03:23:26.080043054Z`
+- Image ID: `sha256:990d70ee6b0827f3fab5592a9187e7eaa0e5c938db25fae8fa800fe24f56715a`
+- Created: `2020-05-15T20:45:53.276004524Z`
 - Virtual Size: ~ 162.33 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -79,19 +79,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=1.0.9.8.5
-'http://security.debian.org/debian-security/pool/updates/main/a/apt/apt_1.0.9.8.5.dsc' apt_1.0.9.8.5.dsc 2396 SHA256:57375233b57c22cd93539ce6d9ab26c4f3f5dac604c0a9b1479dc4da7b60fda3
-'http://security.debian.org/debian-security/pool/updates/main/a/apt/apt_1.0.9.8.5.tar.xz' apt_1.0.9.8.5.tar.xz 1783540 SHA256:d4e9dc57b0704e713895aa10de821c804b9a5c367772c36667cddbef96e79bd2
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/apt/1.0.9.8.5/
 
-- https://sources.debian.net/src/apt/1.0.9.8.5/ (for browsing the source)
-- https://sources.debian.net/src/apt/1.0.9.8.5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apt/1.0.9.8.5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `attr=1:2.4.47-2`
 

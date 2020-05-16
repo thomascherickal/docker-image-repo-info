@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:4d01d55a69e8ab417e064d5054a38d6e284a8d20e05db9e4ea7bf9ab18f7436c`
-- Created: `2020-04-23T03:17:13.526082257Z`
+- Image ID: `sha256:b7faf849bf9c460ff4279824bfd2d78e18cf029c8acd4cdc1683340ee79aa920`
+- Created: `2020-05-15T20:39:40.339445255Z`
 - Virtual Size: ~ 691.46 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -129,19 +129,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=1.0.9.8.5
-'http://security.debian.org/debian-security/pool/updates/main/a/apt/apt_1.0.9.8.5.dsc' apt_1.0.9.8.5.dsc 2396 SHA256:57375233b57c22cd93539ce6d9ab26c4f3f5dac604c0a9b1479dc4da7b60fda3
-'http://security.debian.org/debian-security/pool/updates/main/a/apt/apt_1.0.9.8.5.tar.xz' apt_1.0.9.8.5.tar.xz 1783540 SHA256:d4e9dc57b0704e713895aa10de821c804b9a5c367772c36667cddbef96e79bd2
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/apt/1.0.9.8.5/
 
-- https://sources.debian.net/src/apt/1.0.9.8.5/ (for browsing the source)
-- https://sources.debian.net/src/apt/1.0.9.8.5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apt/1.0.9.8.5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `attr=1:2.4.47-2`
 
@@ -1324,12 +1318,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/gdk-pixbuf/2.31.1-2+deb8u9/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/gdk-pixbuf/2.31.1-2+deb8u9/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `git=1:2.1.4-2.1+deb8u9`
+### `dpkg` source package: `git=1:2.1.4-2.1+deb8u10`
 
 Binary Packages:
 
-- `git=1:2.1.4-2.1+deb8u9`
-- `git-man=1:2.1.4-2.1+deb8u9`
+- `git=1:2.1.4-2.1+deb8u10`
+- `git-man=1:2.1.4-2.1+deb8u10`
 
 Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/copyright`)
 
@@ -1352,13 +1346,20 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 - `dlmalloc`
 - `mingw-runtime`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris git=1:2.1.4-2.1+deb8u10
+'http://security.debian.org/debian-security/pool/updates/main/g/git/git_2.1.4-2.1+deb8u10.dsc' git_2.1.4-2.1+deb8u10.dsc 2821 SHA256:0f3e537b9001411e940fd6ba60dc4e04c3227b5ff455b3e5b53b7e6959faa484
+'http://security.debian.org/debian-security/pool/updates/main/g/git/git_2.1.4.orig.tar.xz' git_2.1.4.orig.tar.xz 3544804 SHA256:a04968b9b10cbcb31a7054aa3a0d11ac47c83556ecd270ddef1987df5d3d053e
+'http://security.debian.org/debian-security/pool/updates/main/g/git/git_2.1.4-2.1+deb8u10.debian.tar.xz' git_2.1.4-2.1+deb8u10.debian.tar.xz 534760 SHA256:16620383020360e4bbc94d7d012ea89d44c5823e62e1724e5f730b57b398ec13
+```
 
-- http://snapshot.debian.org/package/git/1:2.1.4-2.1+deb8u9/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/git/1:2.1.4-2.1+deb8u10/ (for browsing the source)
+- https://sources.debian.net/src/git/1:2.1.4-2.1+deb8u10/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/git/1:2.1.4-2.1+deb8u10/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `glib2.0=2.42.1-1+deb8u3`
 
@@ -3945,23 +3946,30 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/openexr/1.6.1-8/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/openexr/1.6.1-8/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openldap=2.4.40+dfsg-1+deb8u5`
+### `dpkg` source package: `openldap=2.4.40+dfsg-1+deb8u6`
 
 Binary Packages:
 
-- `libldap-2.4-2:amd64=2.4.40+dfsg-1+deb8u5`
+- `libldap-2.4-2:amd64=2.4.40+dfsg-1+deb8u6`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris openldap=2.4.40+dfsg-1+deb8u6
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.40+dfsg-1+deb8u6.dsc' openldap_2.4.40+dfsg-1+deb8u6.dsc 2835 SHA256:2d743d14044303954ed7abd9f24cbe333af4e97c38d78398178d1ca992b25f1d
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.40+dfsg.orig.tar.gz' openldap_2.4.40+dfsg.orig.tar.gz 4797667 SHA256:86c0326dc3dc5f1a9b3c25f7106b96f3eafcdf5da090b1fc586dec57d56e0e7f
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.40+dfsg-1+deb8u6.diff.gz' openldap_2.4.40+dfsg-1+deb8u6.diff.gz 185074 SHA256:559621ba5e00388e3663e025b93a579b56076219c217bfe1274caa2e767acc30
+```
 
-- http://snapshot.debian.org/package/openldap/2.4.40+dfsg-1+deb8u5/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/openldap/2.4.40+dfsg-1+deb8u6/ (for browsing the source)
+- https://sources.debian.net/src/openldap/2.4.40+dfsg-1+deb8u6/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openldap/2.4.40+dfsg-1+deb8u6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssh=1:6.7p1-5+deb8u8`
 
@@ -4596,12 +4604,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/slang2/2.3.0-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/slang2/2.3.0-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `sqlite3=3.8.7.1-1+deb8u4`
+### `dpkg` source package: `sqlite3=3.8.7.1-1+deb8u5`
 
 Binary Packages:
 
-- `libsqlite3-0:amd64=3.8.7.1-1+deb8u4`
-- `libsqlite3-dev:amd64=3.8.7.1-1+deb8u4`
+- `libsqlite3-0:amd64=3.8.7.1-1+deb8u5`
+- `libsqlite3-dev:amd64=3.8.7.1-1+deb8u5`
 
 Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`, `/usr/share/doc/libsqlite3-dev/copyright`)
 
@@ -4609,13 +4617,21 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`, `/usr/share/doc
 - `GPL-2+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris sqlite3=3.8.7.1-1+deb8u5
+'http://security.debian.org/debian-security/pool/updates/main/s/sqlite3/sqlite3_3.8.7.1-1+deb8u5.dsc' sqlite3_3.8.7.1-1+deb8u5.dsc 2554 SHA256:2070b2d0e2106c9e6d9b1e01aa3fe864589bfcf2d643ed22a104e94f9825ed70
+'http://security.debian.org/debian-security/pool/updates/main/s/sqlite3/sqlite3_3.8.7.1.orig-www.tar.bz2' sqlite3_3.8.7.1.orig-www.tar.bz2 3337784 SHA256:e642657752f20144f42d002895510ea635e0384b14f276f1a2f281b73252bc64
+'http://security.debian.org/debian-security/pool/updates/main/s/sqlite3/sqlite3_3.8.7.1.orig.tar.bz2' sqlite3_3.8.7.1.orig.tar.bz2 4082068 SHA256:2632a999feba925aa0f1828fa669a091b165a719676765fb542f538345bfa7b9
+'http://security.debian.org/debian-security/pool/updates/main/s/sqlite3/sqlite3_3.8.7.1-1+deb8u5.debian.tar.xz' sqlite3_3.8.7.1-1+deb8u5.debian.tar.xz 24764 SHA256:3927bc1bb95ad16d672971d80e700c5ef0b540ecc5554722c49aa38eb0f0d1b9
+```
 
-- http://snapshot.debian.org/package/sqlite3/3.8.7.1-1+deb8u4/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/sqlite3/3.8.7.1-1+deb8u5/ (for browsing the source)
+- https://sources.debian.net/src/sqlite3/3.8.7.1-1+deb8u5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/sqlite3/3.8.7.1-1+deb8u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `startpar=0.59-3`
 
