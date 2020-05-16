@@ -1,7 +1,7 @@
 ## `tomee:8-jre-7.1.2-webprofile`
 
 ```console
-$ docker pull tomee@sha256:bc2817e0b6748c686742494375a0211b853479b0c5f681d6d7e75ddd652f7092
+$ docker pull tomee@sha256:1ba53ffd2701fef3ade04641846bd8c9ad1ecaad46f9d6d2095b76999ae5b586
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,99 +11,99 @@ $ docker pull tomee@sha256:bc2817e0b6748c686742494375a0211b853479b0c5f681d6d7e75
 ### `tomee:8-jre-7.1.2-webprofile` - linux; amd64
 
 ```console
-$ docker pull tomee@sha256:9a4c0352f248166193cd91e825436c704c278d52158eedf2e8b6e514a96a9cb0
+$ docker pull tomee@sha256:fa0f662e73b912d935e040ed34b096e4c1adb06dbcc707310b36e1abed4193e0
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **154.5 MB (154512872 bytes)**  
+-	Total Size: **154.5 MB (154521562 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a3a98bd50d665f3e72bd5c46bd70f0a1ef99d2d9b9314ada80f31f32a9d0f901`
+-	Image ID: `sha256:88778222daf957f7de46dd1f03bbea49752a4b257c46f1e5060ae2ea703d26aa`
 -	Default Command: `["catalina.sh","run"]`
 
 ```dockerfile
-# Thu, 23 Apr 2020 00:20:17 GMT
-ADD file:f086177965196842af3c15f50a7f6ad7912aaa7bf73a60b1d00e3129265eec9a in / 
-# Thu, 23 Apr 2020 00:20:17 GMT
+# Fri, 15 May 2020 06:28:12 GMT
+ADD file:fb54c709daa205bf9d04eb3d90ba068db4c34dfe3b6ec0d7691f677286120903 in / 
+# Fri, 15 May 2020 06:28:13 GMT
 CMD ["bash"]
-# Thu, 23 Apr 2020 00:50:01 GMT
+# Fri, 15 May 2020 17:32:13 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	&& rm -rf /var/lib/apt/lists/*
-# Thu, 23 Apr 2020 00:50:06 GMT
+# Fri, 15 May 2020 17:32:19 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Thu, 23 Apr 2020 04:03:22 GMT
+# Fri, 15 May 2020 21:03:31 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		bzip2 		unzip 		xz-utils 				ca-certificates p11-kit 				fontconfig libfreetype6 	; 	rm -rf /var/lib/apt/lists/*
-# Thu, 23 Apr 2020 04:03:22 GMT
+# Fri, 15 May 2020 21:03:31 GMT
 ENV LANG=C.UTF-8
-# Thu, 23 Apr 2020 04:04:55 GMT
+# Fri, 15 May 2020 21:05:00 GMT
 ENV JAVA_HOME=/usr/local/openjdk-8
-# Thu, 23 Apr 2020 04:04:55 GMT
+# Fri, 15 May 2020 21:05:00 GMT
 ENV PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 23 Apr 2020 04:04:56 GMT
+# Fri, 15 May 2020 21:05:02 GMT
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
-# Thu, 23 Apr 2020 04:04:57 GMT
+# Fri, 15 May 2020 21:05:02 GMT
 ENV JAVA_VERSION=8u252
-# Thu, 23 Apr 2020 04:04:57 GMT
+# Fri, 15 May 2020 21:05:03 GMT
 ENV JAVA_BASE_URL=https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u252-b09/OpenJDK8U-jre_
-# Thu, 23 Apr 2020 04:04:57 GMT
+# Fri, 15 May 2020 21:05:03 GMT
 ENV JAVA_URL_VERSION=8u252b09
-# Thu, 23 Apr 2020 04:05:04 GMT
+# Fri, 15 May 2020 21:05:09 GMT
 RUN set -eux; 		dpkgArch="$(dpkg --print-architecture)"; 	case "$dpkgArch" in 		amd64) upstreamArch='x64' ;; 		arm64) upstreamArch='aarch64' ;; 		*) echo >&2 "error: unsupported architecture: $dpkgArch" ;; 	esac; 		wget -O openjdk.tgz.asc "${JAVA_BASE_URL}${upstreamArch}_linux_${JAVA_URL_VERSION}.tar.gz.sign"; 	wget -O openjdk.tgz "${JAVA_BASE_URL}${upstreamArch}_linux_${JAVA_URL_VERSION}.tar.gz" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -version
-# Thu, 23 Apr 2020 23:12:44 GMT
+# Sat, 16 May 2020 11:12:06 GMT
 ENV PATH=/usr/local/tomee/bin:/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 23 Apr 2020 23:12:45 GMT
+# Sat, 16 May 2020 11:12:07 GMT
 RUN mkdir -p /usr/local/tomee
-# Thu, 23 Apr 2020 23:12:45 GMT
+# Sat, 16 May 2020 11:12:07 GMT
 WORKDIR /usr/local/tomee
-# Thu, 23 Apr 2020 23:12:46 GMT
+# Sat, 16 May 2020 11:12:07 GMT
 ENV GPG_KEYS=223D3A74B068ECA354DC385CE126833F9CF64915     7A2744A8A9AAF063C23EB7868EBE7DBE8D050EEF     82D8419BA697F0E7FB85916EE91287822FDB81B1     9056B710F1E332780DE7AF34CBAEBE39A46C4CA1     A57DAF81C1B69921F4BA8723A8DE0A4DB863A7C1     B7574789F5018690043E6DD9C212662E12F3E1DD     B8B301E6105DF628076BD92C5483E55897ABD9B9     DBCCD103B8B24F86FFAAB025C8BB472CD297D428     F067B8140F5DD80E1D3B5D92318242FE9A0B1183     FAA603D58B1BA4EDF65896D0ED340E0E6D545F97     C92604B0DEC5C62CFF5801E73D4683C24EDC64D1     294A395FFDC9FCF25A7E2BFDCF6FC99C2CC77782
-# Thu, 23 Apr 2020 23:12:48 GMT
+# Sat, 16 May 2020 11:12:08 GMT
 RUN set -xe     && for key in $GPG_KEYS; do         gpg --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys "$key" ||         gpg --batch --keyserver hkp://ipv4.pool.sks-keyservers.net --recv-keys "$key" ||         gpg --batch --keyserver hkp://pgp.mit.edu:80 --recv-keys "$key" ;     done
-# Thu, 23 Apr 2020 23:13:14 GMT
+# Sat, 16 May 2020 11:12:35 GMT
 ENV TOMEE_VER=7.1.2
-# Thu, 23 Apr 2020 23:13:42 GMT
+# Sat, 16 May 2020 11:13:00 GMT
 ENV TOMEE_BUILD=webprofile
-# Thu, 23 Apr 2020 23:13:45 GMT
+# Sat, 16 May 2020 11:13:03 GMT
 RUN set -x 	&& curl -fSL https://dist.apache.org/repos/dist/release/tomee/tomee-${TOMEE_VER}/apache-tomee-${TOMEE_VER}-${TOMEE_BUILD}.tar.gz.asc -o tomee.tar.gz.asc 	&& curl -fSL https://dist.apache.org/repos/dist/release/tomee/tomee-${TOMEE_VER}/apache-tomee-${TOMEE_VER}-${TOMEE_BUILD}.tar.gz -o tomee.tar.gz 	&& gpg --batch --verify tomee.tar.gz.asc tomee.tar.gz 	&& tar -zxf tomee.tar.gz 	&& mv apache-tomee-${TOMEE_BUILD}-${TOMEE_VER}/* /usr/local/tomee 	&& rm -Rf apache-tomee-${TOMEE_BUILD}-${TOMEE_VER} 	&& rm bin/*.bat 	&& rm tomee.tar.gz*
-# Thu, 23 Apr 2020 23:13:46 GMT
+# Sat, 16 May 2020 11:13:04 GMT
 EXPOSE 8080
-# Thu, 23 Apr 2020 23:13:46 GMT
+# Sat, 16 May 2020 11:13:04 GMT
 CMD ["catalina.sh" "run"]
 ```
 
 -	Layers:
-	-	`sha256:90fe46dd819953eb995f9cc9c326130abe9dd0b3993a998e12c01d0218a0b831`  
-		Last Modified: Thu, 23 Apr 2020 00:24:56 GMT  
-		Size: 50.4 MB (50382927 bytes)  
+	-	`sha256:376057ac6fa17f65688c56977118e2e764b27c348b3f70637fa829cd2a12b200`  
+		Last Modified: Fri, 15 May 2020 06:37:20 GMT  
+		Size: 50.4 MB (50391294 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:35a4f197768941ef308d981a94f6d06fb77b9f2ba89dc04d2daf8292ee297315`  
-		Last Modified: Thu, 23 Apr 2020 01:02:49 GMT  
-		Size: 7.8 MB (7812206 bytes)  
+	-	`sha256:5a63a0a859d859478f30461786a49c2fca3ae7d89ab5b5ce3c81c54951d30f88`  
+		Last Modified: Fri, 15 May 2020 17:50:44 GMT  
+		Size: 7.8 MB (7812354 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bbc37f14aded2d49bfac62dfa404755c9f1cadfee2b35933e4906f0054782888`  
-		Last Modified: Thu, 23 Apr 2020 01:02:49 GMT  
-		Size: 10.0 MB (9996197 bytes)  
+	-	`sha256:496548a8c952b37bdf149ab3654f9085d721ee126b8c73b16860778be5137f5e`  
+		Last Modified: Fri, 15 May 2020 17:50:49 GMT  
+		Size: 10.0 MB (9996284 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4b4691f300007ec76b2f8f745e90909a915bf61c36851c32c6a65236dab6d982`  
-		Last Modified: Thu, 23 Apr 2020 04:12:00 GMT  
-		Size: 5.5 MB (5529312 bytes)  
+	-	`sha256:94b2daf7a1b5f537cba1c514f668125cbe30051a963fceee666de62352eb49ca`  
+		Last Modified: Fri, 15 May 2020 21:10:23 GMT  
+		Size: 5.5 MB (5529320 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:52474d271babc8e8d1c4a38a22787111dfd51b457456ae72ade8b72b53367f31`  
-		Last Modified: Thu, 23 Apr 2020 04:13:09 GMT  
-		Size: 212.0 B  
+	-	`sha256:d78caafebbc14c14b09a27b0730c4fff0177552ce32dd658968bda5ed122239b`  
+		Last Modified: Fri, 15 May 2020 21:11:36 GMT  
+		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7a30d0654650111e87158831d27673ebd89a3a00199ca25205c67cc2523646e2`  
-		Last Modified: Thu, 23 Apr 2020 04:13:15 GMT  
-		Size: 40.3 MB (40314443 bytes)  
+	-	`sha256:1b5add4df1a270de67f488558db76e2a67ec06f00b94463d1beef4642ba9a3c3`  
+		Last Modified: Fri, 15 May 2020 21:11:44 GMT  
+		Size: 40.3 MB (40314503 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d431c649aa5960d9b4717790c325ecf838a6894d2ccc2e2b16aad13a47a5a621`  
-		Last Modified: Thu, 23 Apr 2020 23:15:12 GMT  
-		Size: 139.0 B  
+	-	`sha256:0840e7df048181953330181635b2d1f3f11e560927e2e3bb102f23ae86d92529`  
+		Last Modified: Sat, 16 May 2020 11:14:27 GMT  
+		Size: 138.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:deaca65b0b37fffc9fb98131261827273f3dde35b5e8c01560b8fe2fb455e658`  
-		Last Modified: Thu, 23 Apr 2020 23:15:12 GMT  
-		Size: 20.9 KB (20937 bytes)  
+	-	`sha256:4a1ef4d5be082efb59b81498ffe5c6d71e524e8b4e441e59f1aa6a0fa28a253d`  
+		Last Modified: Sat, 16 May 2020 11:14:26 GMT  
+		Size: 20.9 KB (20935 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:74af8d127af6d92d5961c3397abb602cda3d3392e4ded88bb417bdf7fdfe445e`  
-		Last Modified: Thu, 23 Apr 2020 23:16:05 GMT  
-		Size: 40.5 MB (40456499 bytes)  
+	-	`sha256:36197205183dd3efedc236516043724fe96c13c36f329bbc0d2d2b2f0e64c8af`  
+		Last Modified: Sat, 16 May 2020 11:15:20 GMT  
+		Size: 40.5 MB (40456523 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
