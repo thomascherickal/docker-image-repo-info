@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:83db935158761a11bbe6f19a3d11975ec999c9dc96321e3490ffbe69d81dc7d3`
-- Created: `2020-05-13T23:07:30.231680667Z`
+- Image ID: `sha256:c97e494deaa7e83b58d1e66c76f4ea8bd7595f58c9d25ce2b9a1f63d148b9add`
+- Created: `2020-05-15T18:59:53.900570641Z`
 - Virtual Size: ~ 1.45 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -63,12 +63,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/adduser/3.115/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/adduser/3.115/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `apt=1.4.9`
+### `dpkg` source package: `apt=1.4.10`
 
 Binary Packages:
 
-- `apt=1.4.9`
-- `libapt-pkg5.0:amd64=1.4.9`
+- `apt=1.4.10`
+- `libapt-pkg5.0:amd64=1.4.10`
 
 Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-pkg5.0/copyright`)
 
@@ -78,16 +78,16 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 Source:
 
 ```console
-$ apt-get source -qq --print-uris apt=1.4.9
-'http://deb.debian.org/debian/pool/main/a/apt/apt_1.4.9.dsc' apt_1.4.9.dsc 2549 SHA256:986d98b00caac809341f65acb3d14321d645ce8e87e411c26c66bf149a10dfea
-'http://deb.debian.org/debian/pool/main/a/apt/apt_1.4.9.tar.xz' apt_1.4.9.tar.xz 2079572 SHA256:d4d65e7c84da86f3e6dcc933bba46a08db429c9d933b667c864f5c0e880bac0d
+$ apt-get source -qq --print-uris apt=1.4.10
+'http://security.debian.org/debian-security/pool/updates/main/a/apt/apt_1.4.10.dsc' apt_1.4.10.dsc 2553 SHA256:4b05e85f29d5f9809e33b237612bffefc8afd9df30da18a6c34ac6ce58b60596
+'http://security.debian.org/debian-security/pool/updates/main/a/apt/apt_1.4.10.tar.xz' apt_1.4.10.tar.xz 2080560 SHA256:eaa314e8ebc9e62fedf316d196d1a99d894fd715e6385ed18afd41cc2cd5b127
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/apt/1.4.9/ (for browsing the source)
-- https://sources.debian.net/src/apt/1.4.9/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apt/1.4.9/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/apt/1.4.10/ (for browsing the source)
+- https://sources.debian.net/src/apt/1.4.10/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/apt/1.4.10/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `attr=1:2.4.47-2`
 
