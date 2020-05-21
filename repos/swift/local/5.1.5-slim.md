@@ -1568,14 +1568,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2019c-0ubuntu0.18.04
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2019c-0ubuntu0.18.04.dsc' tzdata_2019c-0ubuntu0.18.04.dsc 2122 SHA256:625bd3cae6a160cb54abd3048080115dc1e9f03948e17c4c90ac2ebaea79a431
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2019c.orig.tar.gz' tzdata_2019c.orig.tar.gz 392087 SHA256:79c7806dab09072308da0e3d22c37d3b245015a591891ea147d3b133b60ffc7c
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2019c-0ubuntu0.18.04.debian.tar.xz' tzdata_2019c-0ubuntu0.18.04.debian.tar.xz 104772 SHA256:0d683e58ceb5af7fb61f23745b0ced7afe7cbb22429b61e0697513842326842d
-```
 
 ### `dpkg` source package: `ubuntu-keyring=2018.09.18.1~18.04.0`
 
