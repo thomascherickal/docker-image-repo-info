@@ -7608,14 +7608,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2019c-0ubuntu0.16.04
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2019c-0ubuntu0.16.04.dsc' tzdata_2019c-0ubuntu0.16.04.dsc 2136 SHA256:49b3b3eda6d70c7830b9e182ebfdbcfe8916365f6331917497a682191aae12bc
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2019c.orig.tar.gz' tzdata_2019c.orig.tar.gz 392087 SHA256:79c7806dab09072308da0e3d22c37d3b245015a591891ea147d3b133b60ffc7c
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2019c-0ubuntu0.16.04.debian.tar.xz' tzdata_2019c-0ubuntu0.16.04.debian.tar.xz 100336 SHA256:e12167adea9e89190f2181b313be9dc7e767d4af389b1c82e480f12f2a7d367f
-```
 
 ### `dpkg` source package: `ubuntu-keyring=2012.05.19`
 

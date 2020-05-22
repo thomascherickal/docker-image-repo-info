@@ -581,14 +581,9 @@ Licenses: (parsed from: `/usr/share/doc/bind9-host/copyright`, `/usr/share/doc/l
 - `ISC`
 - `MPL-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris bind9=1:9.11.3+dfsg-1ubuntu1.11
-'http://archive.ubuntu.com/ubuntu/pool/main/b/bind9/bind9_9.11.3+dfsg-1ubuntu1.11.dsc' bind9_9.11.3+dfsg-1ubuntu1.11.dsc 3928 SHA256:c80a2c901a76f52d3cc03e6a06d322f26c5641eadeaa60730927c94bdc591ca9
-'http://archive.ubuntu.com/ubuntu/pool/main/b/bind9/bind9_9.11.3+dfsg.orig.tar.gz' bind9_9.11.3+dfsg.orig.tar.gz 7196577 SHA256:1ba0ab6ac21cb3e5cdf103f00b98a259a67b29dcd2bc116b8ae643a394a954a4
-'http://archive.ubuntu.com/ubuntu/pool/main/b/bind9/bind9_9.11.3+dfsg-1ubuntu1.11.debian.tar.xz' bind9_9.11.3+dfsg-1ubuntu1.11.debian.tar.xz 98672 SHA256:5e02aa2a77e2f29a7195f6f6768a17a2637afa8988f9b9e2c1c5b77240faece7
-```
 
 ### `dpkg` source package: `binfmt-support=2.1.8-2`
 
@@ -6499,15 +6494,9 @@ Licenses: (parsed from: `/usr/share/doc/dmsetup/copyright`, `/usr/share/doc/libd
 - `GPL-2`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris lvm2=2.02.176-4.1ubuntu3.18.04.2
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lvm2/lvm2_2.02.176-4.1ubuntu3.18.04.2.dsc' lvm2_2.02.176-4.1ubuntu3.18.04.2.dsc 3139 SHA256:007f502dd4c07d5172300eb12db0e0b94c08d52838f388b5a19e4fb1ad9b3093
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lvm2/lvm2_2.02.176.orig.tar.gz' lvm2_2.02.176.orig.tar.gz 2371438 SHA256:dece83628c2c78a267a126ce6046d506582185ae5d40fb8d59b56547fccea473
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lvm2/lvm2_2.02.176.orig.tar.gz.asc' lvm2_2.02.176.orig.tar.gz.asc 198 SHA256:51c66e6bdebb6ac5b9882b8082ac9816a8555c2d472d7763e0f867c5c8c10b89
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lvm2/lvm2_2.02.176-4.1ubuntu3.18.04.2.debian.tar.xz' lvm2_2.02.176-4.1ubuntu3.18.04.2.debian.tar.xz 45604 SHA256:8320557245dd11539935dbe2aaad9c6c2bc3f3a51f2c15bfe709ba69414ede5c
-```
 
 ### `dpkg` source package: `lz4=0.0~r131-2ubuntu3`
 
@@ -12040,14 +12029,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2019c-0ubuntu0.18.04
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2019c-0ubuntu0.18.04.dsc' tzdata_2019c-0ubuntu0.18.04.dsc 2122 SHA256:625bd3cae6a160cb54abd3048080115dc1e9f03948e17c4c90ac2ebaea79a431
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2019c.orig.tar.gz' tzdata_2019c.orig.tar.gz 392087 SHA256:79c7806dab09072308da0e3d22c37d3b245015a591891ea147d3b133b60ffc7c
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2019c-0ubuntu0.18.04.debian.tar.xz' tzdata_2019c-0ubuntu0.18.04.debian.tar.xz 104772 SHA256:0d683e58ceb5af7fb61f23745b0ced7afe7cbb22429b61e0697513842326842d
-```
 
 ### `dpkg` source package: `u-msgpack-python=2.1-1`
 
