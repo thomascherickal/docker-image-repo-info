@@ -267,13 +267,14 @@ Licenses: (parsed from: `/usr/share/doc/r-cran-boot/copyright`)
 
 - `'unlimited distribution'`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
-
-- http://snapshot.debian.org/package/boot/1.3-25-2/
-
+```console
+$ apt-get source -qq --print-uris boot=1.3-25-2
+'http://http.debian.net/debian/pool/main/b/boot/boot_1.3-25-2.dsc' boot_1.3-25-2.dsc 1796 SHA256:94fcdd9573d5576ea9f8ad389b8b0608853037fa5dc7fd3ec2ae4ba4c8a26676
+'http://http.debian.net/debian/pool/main/b/boot/boot_1.3-25.orig.tar.gz' boot_1.3-25.orig.tar.gz 235959 SHA256:464835fcb453072346ce49e4ae318e04c9dba682349be49db616623b6088fbbe
+'http://http.debian.net/debian/pool/main/b/boot/boot_1.3-25-2.debian.tar.xz' boot_1.3-25-2.debian.tar.xz 5212 SHA256:4760612eccd445c50fcd89a815e316b61697ccd45094da94bd568a3f2a057ba3
+```
 
 ### `dpkg` source package: `brotli=1.0.7-6.1`
 
@@ -463,13 +464,14 @@ Licenses: (parsed from: `/usr/share/doc/r-cran-codetools/copyright`)
 
 - `GPL-2`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
-
-- http://snapshot.debian.org/package/codetools/0.2-16-2/
-
+```console
+$ apt-get source -qq --print-uris codetools=0.2-16-2
+'http://http.debian.net/debian/pool/main/c/codetools/codetools_0.2-16-2.dsc' codetools_0.2-16-2.dsc 1853 SHA256:c7a78ce6b13bfcd25f9a22b5c161e1e183d6944b53e5aecf4075fce35bdbdf96
+'http://http.debian.net/debian/pool/main/c/codetools/codetools_0.2-16.orig.tar.gz' codetools_0.2-16.orig.tar.gz 12996 SHA256:f67a66175cb5d8882457d1e9b91ea2f16813d554fa74f80c1fd6e17cf1877501
+'http://http.debian.net/debian/pool/main/c/codetools/codetools_0.2-16-2.debian.tar.xz' codetools_0.2-16-2.debian.tar.xz 2836 SHA256:39def42f17e751c5c6944eb568d35b20175499c781a682c77f69bd4d8874a02b
+```
 
 ### `dpkg` source package: `coreutils=8.30-3`
 
@@ -922,13 +924,14 @@ Licenses: (parsed from: `/usr/share/doc/r-cran-foreign/copyright`)
 - `GPL`
 - `GPL `
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
-
-- http://snapshot.debian.org/package/foreign/0.8.79-2/
-
+```console
+$ apt-get source -qq --print-uris foreign=0.8.79-2
+'http://http.debian.net/debian/pool/main/f/foreign/foreign_0.8.79-2.dsc' foreign_0.8.79-2.dsc 1832 SHA256:333bec4c674ec462bd6e2aaec9c33169ce96d07ac2c0d1a9993c519a7c2c7e19
+'http://http.debian.net/debian/pool/main/f/foreign/foreign_0.8.79.orig.tar.gz' foreign_0.8.79.orig.tar.gz 362619 SHA256:af36b6945afbf849543ef7e432e27fecb66d5a8b3932b2428e59c2392699b9b4
+'http://http.debian.net/debian/pool/main/f/foreign/foreign_0.8.79-2.debian.tar.xz' foreign_0.8.79-2.debian.tar.xz 4264 SHA256:bb972c50b1c4e1efd7525c5ddbfa9e975b9484d71560fa76b0bae534f04e6b01
+```
 
 ### `dpkg` source package: `freetype=2.10.1-2`
 
@@ -3402,13 +3405,15 @@ Licenses: (parsed from: `/usr/share/doc/libperl5.30/copyright`, `/usr/share/doc/
 - `Unicode`
 - `ZLIB`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
-
-- http://snapshot.debian.org/package/perl/5.30.2-1/
-
+```console
+$ apt-get source -qq --print-uris perl=5.30.2-1
+'http://http.debian.net/debian/pool/main/p/perl/perl_5.30.2-1.dsc' perl_5.30.2-1.dsc 2868 SHA256:b7f57b8075f40b9d5184b3a68a96a15a01c87d25087b19f7f9ed7e60a784f6d0
+'http://http.debian.net/debian/pool/main/p/perl/perl_5.30.2.orig-regen-configure.tar.gz' perl_5.30.2.orig-regen-configure.tar.gz 870970 SHA256:99174174fbfc550f801076ab8a1a5831c92f75c1b81e553150351f14a111dcf8
+'http://http.debian.net/debian/pool/main/p/perl/perl_5.30.2.orig.tar.xz' perl_5.30.2.orig.tar.xz 12373480 SHA256:a1aa88bd6fbbdc2e82938afbb76c408b0ea847317737b712dc196cc7907a5259
+'http://http.debian.net/debian/pool/main/p/perl/perl_5.30.2-1.debian.tar.xz' perl_5.30.2-1.debian.tar.xz 162372 SHA256:dfbf0e2a1d9840beca5098bf728e05e554aeb616e77f9e63bbc52bfad7a852e9
+```
 
 ### `dpkg` source package: `pixman=0.36.0-1`
 
@@ -3820,20 +3825,13 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=245.5-2
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_245.5-2.dsc' systemd_245.5-2.dsc 5093 SHA256:5601e3e44d26fde90e9d33cb2dea9a28390fe6c5887264a9d285695645ffac2c
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_245.5.orig.tar.gz' systemd_245.5.orig.tar.gz 9020836 SHA256:b754d75617665a53bd0a1e8f5ec526b383f17e1cc06d1056399e5859e0b6fe06
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_245.5-2.debian.tar.xz' systemd_245.5-2.debian.tar.xz 161988 SHA256:f3b5dbcd47c61a616bfa34db314755b43fd7882bbd804c737abfb0069652f99d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/systemd/245.5-2/
 
-- https://sources.debian.net/src/systemd/245.5-2/ (for browsing the source)
-- https://sources.debian.net/src/systemd/245.5-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/systemd/245.5-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sysvinit=2.96-3`
 
@@ -4024,13 +4022,13 @@ Licenses: (parsed from: `/usr/share/doc/ucf/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ucf=3.0039
-'http://http.debian.net/debian/pool/main/u/ucf/ucf_3.0039.dsc' ucf_3.0039.dsc 1419 SHA256:8ae5e9ba14d264edbaf9e62b4a945d194215950ac590226ec3dea7c48c1300b2
-'http://http.debian.net/debian/pool/main/u/ucf/ucf_3.0039.tar.xz' ucf_3.0039.tar.xz 66240 SHA256:d7adb61cf16d6f273673b39ef825629a3c4a129753592fb1036fefc3d582c0c4
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/ucf/3.0039/
+
 
 ### `dpkg` source package: `unzip=6.0-25`
 
