@@ -1,3 +1,67 @@
 ## `rethinkdb:buster-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull rethinkdb@sha256:63bdac5aa30ea52505f4baf8ee0c8b26e12d460cbf603ec6904fa9ab60a8aa81
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+	-	linux; amd64
+
+### `rethinkdb:buster-slim` - linux; amd64
+
+```console
+$ docker pull rethinkdb@sha256:63487ef450fe9a6619e215461fa5f6c97fb329b3577dd3aab6b914bd75eaa19f
+```
+
+-	Docker Version: 18.09.7
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **51.8 MB (51763334 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:7ccb19f89ce22f0fe7e41c57f2287d1a57513136fa36f5b75abaedd6572e0b2f`
+-	Default Command: `["rethinkdb","--bind","all"]`
+
+```dockerfile
+# Fri, 15 May 2020 06:28:44 GMT
+ADD file:7780c81c33e6cc5b6261af4a6c611cce0f39dec3131009bb297e65f12020c150 in / 
+# Fri, 15 May 2020 06:28:44 GMT
+CMD ["bash"]
+# Fri, 29 May 2020 21:20:36 GMT
+RUN apt-get -qqy update     && apt-get install -y --no-install-recommends ca-certificates gnupg2     && rm -rf /var/lib/apt/lists/*
+# Fri, 29 May 2020 21:20:37 GMT
+RUN apt-key adv --keyserver keys.gnupg.net --recv-keys "539A 3A8C 6692 E6E3 F69B 3FE8 1D85 E93F 801B B43F"     && echo "deb https://download.rethinkdb.com/repository/debian-buster buster main" > /etc/apt/sources.list.d/rethinkdb.list
+# Fri, 29 May 2020 21:20:37 GMT
+ENV RETHINKDB_PACKAGE_VERSION=2.4.0~0buster
+# Fri, 29 May 2020 21:20:46 GMT
+RUN apt-get -qqy update 	&& apt-get install -y rethinkdb=$RETHINKDB_PACKAGE_VERSION 	&& rm -rf /var/lib/apt/lists/*
+# Fri, 29 May 2020 21:20:46 GMT
+VOLUME [/data]
+# Fri, 29 May 2020 21:20:46 GMT
+WORKDIR /data
+# Fri, 29 May 2020 21:20:46 GMT
+CMD ["rethinkdb" "--bind" "all"]
+# Fri, 29 May 2020 21:20:46 GMT
+EXPOSE 28015 29015 8080
+```
+
+-	Layers:
+	-	`sha256:afb6ec6fdc1c3ba04f7a56db32c5ff5ff38962dc4cd0ffdef5beaa0ce2eb77e2`  
+		Last Modified: Fri, 15 May 2020 06:37:39 GMT  
+		Size: 27.1 MB (27098756 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:34bbb42f3811a4c02b1c4215f0931baa5e7fd47f7fee958f5a6df4eaf484b513`  
+		Last Modified: Fri, 29 May 2020 21:21:15 GMT  
+		Size: 6.7 MB (6669801 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:0e549bc572ab8ed4af16254f062de89f9a16ad863d45cc0d7376fa281f371aef`  
+		Last Modified: Fri, 29 May 2020 21:21:14 GMT  
+		Size: 2.6 KB (2611 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c82a54f8493424eb4636699476754b60fd40544d6c4a0be22d9d98201ec6a492`  
+		Last Modified: Fri, 29 May 2020 21:21:19 GMT  
+		Size: 18.0 MB (17992073 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:0db2f23689c74580c5a35e7baae3f5a2734bb5650037e85252f8e46dfadbc66e`  
+		Last Modified: Fri, 29 May 2020 21:21:14 GMT  
+		Size: 93.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
