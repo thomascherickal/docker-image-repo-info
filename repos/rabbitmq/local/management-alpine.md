@@ -1,10 +1,10 @@
-# `rabbitmq:3.8.3-management-alpine`
+# `rabbitmq:3.8.4-management-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:e7503e14fb69ef045a88d7bc56da8e7271d6f9d393343b7dd749e6183604c244`
-- Created: `2020-05-21T05:39:25.794654044Z`
-- Virtual Size: ~ 139.78 Mb  
+- Image ID: `sha256:16f06a79df2d012747ad641854dbf929d140c70e810d75fa32ddefa571271e2a`
+- Created: `2020-05-29T00:40:25.309302743Z`
+- Virtual Size: ~ 160.15 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -14,10 +14,10 @@
   - `OPENSSL_VERSION=1.1.1g`
   - `OPENSSL_SOURCE_SHA256=ddb04774f1e32f0c49751e21b67216ac87852ceb056b75209af2443400636d46`
   - `OPENSSL_PGP_KEY_IDS=0x8657ABB260F056B1E5190839D9C4D26D0E604491 0x5B2545DAB21995F4088CEFAA36CEE4DEB00CFE33 0xED230BEC4D4F2518B9D7DF41F0DB4D21C1D35231 0xC1F33DD8CE1D4CC613AF14DA9195C48241FBF7DD 0x7953AC1FBC3DC8B3B292393ED5E9E43F7DF9EE8C 0xE5E52560DD91C556DDBDA5D02064C53641C25E5D`
-  - `OTP_VERSION=22.3.4.1`
-  - `OTP_SOURCE_SHA256=12d628c2d0bdc0cf1f1ec56bd3c4da697510b25ab744d45872f63fefdd1a7680`
+  - `OTP_VERSION=23.0.2`
+  - `OTP_SOURCE_SHA256=6bab92d1a1b20cc319cd845c23db3611cc99f8c99a610d117578262e3c108af3`
   - `RABBITMQ_DATA_DIR=/var/lib/rabbitmq`
-  - `RABBITMQ_VERSION=3.8.3`
+  - `RABBITMQ_VERSION=3.8.4`
   - `RABBITMQ_PGP_KEY_ID=0x0A9AF2115F4687BD29803A206B73A36E6026DFCA`
   - `RABBITMQ_HOME=/opt/rabbitmq`
   - `RABBITMQ_LOGS=-`
@@ -385,20 +385,20 @@ GPL-2.0 LGPL-2.1+
 
 ```
 
-### `apk` package: `python2`
+### `apk` package: `python3`
 
 ```console
-python2-2.7.18-r0 description:
+python3-3.8.2-r0 description:
 A high-level scripting language
 
-python2-2.7.18-r0 webpage:
+python3-3.8.2-r0 webpage:
 https://www.python.org/
 
-python2-2.7.18-r0 installed size:
-39944192
+python3-3.8.2-r0 installed size:
+58839040
 
-python2-2.7.18-r0 license:
-custom
+python3-3.8.2-r0 license:
+PSF-2.0
 
 ```
 
@@ -484,6 +484,23 @@ su-exec-0.2-r1 installed size:
 
 su-exec-0.2-r1 license:
 MIT
+
+```
+
+### `apk` package: `xz-libs`
+
+```console
+xz-libs-5.2.4-r0 description:
+Library and CLI tools for XZ and LZMA compressed files (libraries)
+
+xz-libs-5.2.4-r0 webpage:
+https://tukaani.org/xz
+
+xz-libs-5.2.4-r0 installed size:
+151552
+
+xz-libs-5.2.4-r0 license:
+GPL-2.0-or-later Public-Domain
 
 ```
 
