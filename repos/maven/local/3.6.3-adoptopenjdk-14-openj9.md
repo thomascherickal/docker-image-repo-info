@@ -1303,15 +1303,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssl=1.1.1-1ubuntu2.1~18.04.5
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1-1ubuntu2.1~18.04.5.dsc' openssl_1.1.1-1ubuntu2.1~18.04.5.dsc 2751 SHA256:9ee1d4dc064a27657581df4a6f3fc2d27c8e76379df816688c8e0182453b08e7
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1.orig.tar.gz' openssl_1.1.1.orig.tar.gz 8337920 SHA256:2836875a0f89c03d0fdf483941512613a50cfb421d6fd94b9f41d7279d586a3d
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1.orig.tar.gz.asc' openssl_1.1.1.orig.tar.gz.asc 488 SHA256:f3296150114069ea73a72eafbfdcbb295b770e7cbf3266f9590f3d0932498b3e
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1-1ubuntu2.1~18.04.5.debian.tar.xz' openssl_1.1.1-1ubuntu2.1~18.04.5.debian.tar.xz 96024 SHA256:0f7f2ebf8410c5c62465bf981a1d70e007294eac3aebac33c80793bc111cb3fd
-```
 
 ### `dpkg` source package: `p11-kit=0.23.9-2`
 
