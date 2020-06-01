@@ -2188,14 +2188,9 @@ Licenses: (parsed from: `/usr/share/doc/libjson-c-dev/copyright`, `/usr/share/do
 
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris json-c=0.12.1-1.3ubuntu0.2
-'http://archive.ubuntu.com/ubuntu/pool/main/j/json-c/json-c_0.12.1-1.3ubuntu0.2.dsc' json-c_0.12.1-1.3ubuntu0.2.dsc 1848 SHA256:3c79ff774a3766c808a36d24633d356c817948d1541186c8ca24a051e592e5fc
-'http://archive.ubuntu.com/ubuntu/pool/main/j/json-c/json-c_0.12.1.orig.tar.gz' json-c_0.12.1.orig.tar.gz 528103 SHA256:989e09b99ded277a0a651cd18b81fcb76885fea08769d7a21b6da39fb8a34816
-'http://archive.ubuntu.com/ubuntu/pool/main/j/json-c/json-c_0.12.1-1.3ubuntu0.2.debian.tar.xz' json-c_0.12.1-1.3ubuntu0.2.debian.tar.xz 6816 SHA256:fd98fa2ac297f8ecdead65dc1f9df247ea04caaf7e155568b14bea4a719da5a6
-```
 
 ### `dpkg` source package: `jxrlib=1.1-6build1`
 
@@ -5436,15 +5431,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssl=1.1.1-1ubuntu2.1~18.04.5
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1-1ubuntu2.1~18.04.5.dsc' openssl_1.1.1-1ubuntu2.1~18.04.5.dsc 2751 SHA256:9ee1d4dc064a27657581df4a6f3fc2d27c8e76379df816688c8e0182453b08e7
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1.orig.tar.gz' openssl_1.1.1.orig.tar.gz 8337920 SHA256:2836875a0f89c03d0fdf483941512613a50cfb421d6fd94b9f41d7279d586a3d
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1.orig.tar.gz.asc' openssl_1.1.1.orig.tar.gz.asc 488 SHA256:f3296150114069ea73a72eafbfdcbb295b770e7cbf3266f9590f3d0932498b3e
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1-1ubuntu2.1~18.04.5.debian.tar.xz' openssl_1.1.1-1ubuntu2.1~18.04.5.debian.tar.xz 96024 SHA256:0f7f2ebf8410c5c62465bf981a1d70e007294eac3aebac33c80793bc111cb3fd
-```
 
 ### `dpkg` source package: `opus=1.1.2-1ubuntu1`
 

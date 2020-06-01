@@ -2431,14 +2431,9 @@ Licenses: (parsed from: `/usr/share/doc/libjson-c-dev/copyright`, `/usr/share/do
 
 - `Expat`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris json-c=0.13.1+dfsg-7ubuntu0.2
-'http://archive.ubuntu.com/ubuntu/pool/main/j/json-c/json-c_0.13.1+dfsg-7ubuntu0.2.dsc' json-c_0.13.1+dfsg-7ubuntu0.2.dsc 1800 SHA256:0e40588fe162fd4fc3662cdf649623bd2013d988e005aaf860008ae376b006ff
-'http://archive.ubuntu.com/ubuntu/pool/main/j/json-c/json-c_0.13.1+dfsg.orig.tar.gz' json-c_0.13.1+dfsg.orig.tar.gz 564147 SHA256:7e42dbce5bad7870025bbf01b396dbe152270751679cc06e1a51211cbd5c0551
-'http://archive.ubuntu.com/ubuntu/pool/main/j/json-c/json-c_0.13.1+dfsg-7ubuntu0.2.debian.tar.xz' json-c_0.13.1+dfsg-7ubuntu0.2.debian.tar.xz 6944 SHA256:9029e1f253b348e1329d3585deca16b1a5483ee8f3efe05cb6791029c5995f40
-```
 
 ### `dpkg` source package: `jxrlib=1.1-6build1`
 
@@ -5059,14 +5054,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=5.4.0-31.35
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-31.35.dsc' linux_5.4.0-31.35.dsc 7204 SHA256:6c9eeaa515619f983f6073ed81c2c0b74f29bacf5328f6bfc338b18d8bff767d
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0.orig.tar.gz' linux_5.4.0.orig.tar.gz 170244619 SHA256:805f3ed93854317814c59caf2dbfd2097745685f95c8c18b509c9347dcc7d51f
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-31.35.diff.gz' linux_5.4.0-31.35.diff.gz 4325211 SHA256:361b6ab7fbbec69e084da4b8062ec317f4e4a5c6a37be450b099116e730f5991
-```
 
 ### `dpkg` source package: `llvm-toolchain-9=1:9.0.1-12`
 

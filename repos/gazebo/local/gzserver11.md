@@ -1847,14 +1847,9 @@ Licenses: (parsed from: `/usr/share/doc/libjson-c4/copyright`)
 
 - `Expat`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris json-c=0.13.1+dfsg-7ubuntu0.2
-'http://archive.ubuntu.com/ubuntu/pool/main/j/json-c/json-c_0.13.1+dfsg-7ubuntu0.2.dsc' json-c_0.13.1+dfsg-7ubuntu0.2.dsc 1800 SHA256:0e40588fe162fd4fc3662cdf649623bd2013d988e005aaf860008ae376b006ff
-'http://archive.ubuntu.com/ubuntu/pool/main/j/json-c/json-c_0.13.1+dfsg.orig.tar.gz' json-c_0.13.1+dfsg.orig.tar.gz 564147 SHA256:7e42dbce5bad7870025bbf01b396dbe152270751679cc06e1a51211cbd5c0551
-'http://archive.ubuntu.com/ubuntu/pool/main/j/json-c/json-c_0.13.1+dfsg-7ubuntu0.2.debian.tar.xz' json-c_0.13.1+dfsg-7ubuntu0.2.debian.tar.xz 6944 SHA256:9029e1f253b348e1329d3585deca16b1a5483ee8f3efe05cb6791029c5995f40
-```
 
 ### `dpkg` source package: `jxrlib=1.1-6build1`
 
