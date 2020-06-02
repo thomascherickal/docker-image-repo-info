@@ -218,13 +218,9 @@ Licenses: (parsed from: `/usr/share/doc/ca-certificates/copyright`)
 - `GPL-2+`
 - `MPL-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ca-certificates=20170717~16.04.2
-'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20170717~16.04.2.dsc' ca-certificates_20170717~16.04.2.dsc 1969 SHA256:0b6e1f7a5d2ae31e0c6729df25bfd008286ebcdd53cfd5d3b395b9e80be3d3f1
-'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20170717~16.04.2.tar.xz' ca-certificates_20170717~16.04.2.tar.xz 293084 SHA256:57f7083062f4318a4d1cb6a020df5ef0b245aa0755b9e6468aa44500e5798567
-```
 
 ### `dpkg` source package: `cdebconf=0.198ubuntu1`
 
