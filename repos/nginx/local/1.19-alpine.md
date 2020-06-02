@@ -1,17 +1,18 @@
-# `nginx:1.17.10-alpine`
+# `nginx:1.19.0-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:89ec9da682137d6b18ab8244ca263b6771067f251562f884c7510c8f1e5ac910`
-- Created: `2020-04-24T12:58:37.566032688Z`
-- Virtual Size: ~ 19.94 Mb  
+- Image ID: `sha256:a6ad79620a35a226fd1bcfe41e3fd7c523ec580518bb598dc0c678c460a4a9bc`
+- Created: `2020-06-02T00:36:27.512507662Z`
+- Virtual Size: ~ 21.25 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
+- Entrypoint: `["/docker-entrypoint.sh"]`
 - Command: `["nginx","-g","daemon off;"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `NGINX_VERSION=1.17.10`
-  - `NJS_VERSION=0.3.9`
+  - `NGINX_VERSION=1.19.0`
+  - `NJS_VERSION=0.4.1`
   - `PKG_RELEASE=1`
 - Labels:
   - `maintainer=NGINX Docker Maintainers <docker-maint@nginx.com>`
@@ -86,6 +87,23 @@ GPL-2.0-only
 
 ```
 
+### `apk` package: `ca-certificates`
+
+```console
+ca-certificates-20191127-r1 description:
+Common CA certificates PEM files
+
+ca-certificates-20191127-r1 webpage:
+https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
+
+ca-certificates-20191127-r1 installed size:
+741376
+
+ca-certificates-20191127-r1 license:
+MPL-2.0 GPL-2.0-or-later
+
+```
+
 ### `apk` package: `ca-certificates-cacert`
 
 ```console
@@ -100,6 +118,23 @@ ca-certificates-cacert-20191127-r1 installed size:
 
 ca-certificates-cacert-20191127-r1 license:
 MPL-2.0 GPL-2.0-or-later
+
+```
+
+### `apk` package: `curl`
+
+```console
+curl-7.67.0-r0 description:
+URL retrival utility and library
+
+curl-7.67.0-r0 webpage:
+https://curl.haxx.se/
+
+curl-7.67.0-r0 installed size:
+225280
+
+curl-7.67.0-r0 license:
+MIT
 
 ```
 
@@ -185,6 +220,23 @@ libcrypto1.1-1.1.1g-r0 installed size:
 
 libcrypto1.1-1.1.1g-r0 license:
 OpenSSL
+
+```
+
+### `apk` package: `libcurl`
+
+```console
+libcurl-7.67.0-r0 description:
+The multiprotocol file transfer library
+
+libcurl-7.67.0-r0 webpage:
+https://curl.haxx.se/
+
+libcurl-7.67.0-r0 installed size:
+458752
+
+libcurl-7.67.0-r0 license:
+MIT
 
 ```
 
@@ -361,16 +413,16 @@ BSD-3-Clause
 ### `apk` package: `libxml2`
 
 ```console
-libxml2-2.9.10-r2 description:
+libxml2-2.9.10-r3 description:
 XML parsing library, version 2
 
-libxml2-2.9.10-r2 webpage:
+libxml2-2.9.10-r3 webpage:
 http://www.xmlsoft.org/
 
-libxml2-2.9.10-r2 installed size:
+libxml2-2.9.10-r3 installed size:
 1220608
 
-libxml2-2.9.10-r2 license:
+libxml2-2.9.10-r3 license:
 MIT
 
 ```
@@ -429,16 +481,16 @@ MIT BSD GPL2+
 ### `apk` package: `ncurses-libs`
 
 ```console
-ncurses-libs-6.1_p20200118-r3 description:
+ncurses-libs-6.1_p20200118-r4 description:
 Ncurses libraries
 
-ncurses-libs-6.1_p20200118-r3 webpage:
+ncurses-libs-6.1_p20200118-r4 webpage:
 https://invisible-island.net/ncurses/
 
-ncurses-libs-6.1_p20200118-r3 installed size:
+ncurses-libs-6.1_p20200118-r4 installed size:
 507904
 
-ncurses-libs-6.1_p20200118-r3 license:
+ncurses-libs-6.1_p20200118-r4 license:
 MIT
 
 ```
@@ -446,16 +498,33 @@ MIT
 ### `apk` package: `ncurses-terminfo-base`
 
 ```console
-ncurses-terminfo-base-6.1_p20200118-r3 description:
+ncurses-terminfo-base-6.1_p20200118-r4 description:
 Descriptions of common terminals
 
-ncurses-terminfo-base-6.1_p20200118-r3 webpage:
+ncurses-terminfo-base-6.1_p20200118-r4 webpage:
 https://invisible-island.net/ncurses/
 
-ncurses-terminfo-base-6.1_p20200118-r3 installed size:
+ncurses-terminfo-base-6.1_p20200118-r4 installed size:
 217088
 
-ncurses-terminfo-base-6.1_p20200118-r3 license:
+ncurses-terminfo-base-6.1_p20200118-r4 license:
+MIT
+
+```
+
+### `apk` package: `nghttp2-libs`
+
+```console
+nghttp2-libs-1.40.0-r0 description:
+Experimental HTTP/2 client, server and proxy (libraries)
+
+nghttp2-libs-1.40.0-r0 webpage:
+https://nghttp2.org
+
+nghttp2-libs-1.40.0-r0 installed size:
+159744
+
+nghttp2-libs-1.40.0-r0 license:
 MIT
 
 ```
@@ -463,16 +532,16 @@ MIT
 ### `apk` package: `nginx`
 
 ```console
-nginx-1.17.10-r1 description:
+nginx-1.19.0-r1 description:
 High performance web server
 
-nginx-1.17.10-r1 webpage:
+nginx-1.19.0-r1 webpage:
 http://nginx.org/
 
-nginx-1.17.10-r1 installed size:
-2564096
+nginx-1.19.0-r1 installed size:
+2580480
 
-nginx-1.17.10-r1 license:
+nginx-1.19.0-r1 license:
 2-clause BSD-like license
 
 ```
@@ -480,16 +549,16 @@ nginx-1.17.10-r1 license:
 ### `apk` package: `nginx-module-geoip`
 
 ```console
-nginx-module-geoip-1.17.10-r1 description:
+nginx-module-geoip-1.19.0-r1 description:
 nginx GeoIP dynamic modules
 
-nginx-module-geoip-1.17.10-r1 webpage:
+nginx-module-geoip-1.19.0-r1 webpage:
 http://nginx.org/
 
-nginx-module-geoip-1.17.10-r1 installed size:
+nginx-module-geoip-1.19.0-r1 installed size:
 118784
 
-nginx-module-geoip-1.17.10-r1 license:
+nginx-module-geoip-1.19.0-r1 license:
 2-clause BSD-like license
 
 ```
@@ -497,16 +566,16 @@ nginx-module-geoip-1.17.10-r1 license:
 ### `apk` package: `nginx-module-image-filter`
 
 ```console
-nginx-module-image-filter-1.17.10-r1 description:
+nginx-module-image-filter-1.19.0-r1 description:
 nginx image filter dynamic module
 
-nginx-module-image-filter-1.17.10-r1 webpage:
+nginx-module-image-filter-1.19.0-r1 webpage:
 http://nginx.org/
 
-nginx-module-image-filter-1.17.10-r1 installed size:
+nginx-module-image-filter-1.19.0-r1 installed size:
 90112
 
-nginx-module-image-filter-1.17.10-r1 license:
+nginx-module-image-filter-1.19.0-r1 license:
 2-clause BSD-like license
 
 ```
@@ -514,16 +583,16 @@ nginx-module-image-filter-1.17.10-r1 license:
 ### `apk` package: `nginx-module-njs`
 
 ```console
-nginx-module-njs-1.17.10.0.3.9-r1 description:
+nginx-module-njs-1.19.0.0.4.1-r1 description:
 nginx njs dynamic modules
 
-nginx-module-njs-1.17.10.0.3.9-r1 webpage:
+nginx-module-njs-1.19.0.0.4.1-r1 webpage:
 http://nginx.org/
 
-nginx-module-njs-1.17.10.0.3.9-r1 installed size:
-2727936
+nginx-module-njs-1.19.0.0.4.1-r1 installed size:
+2777088
 
-nginx-module-njs-1.17.10.0.3.9-r1 license:
+nginx-module-njs-1.19.0.0.4.1-r1 license:
 2-clause BSD-like license
 
 ```
@@ -531,16 +600,16 @@ nginx-module-njs-1.17.10.0.3.9-r1 license:
 ### `apk` package: `nginx-module-xslt`
 
 ```console
-nginx-module-xslt-1.17.10-r1 description:
+nginx-module-xslt-1.19.0-r1 description:
 nginx xslt dynamic module
 
-nginx-module-xslt-1.17.10-r1 webpage:
+nginx-module-xslt-1.19.0-r1 webpage:
 http://nginx.org/
 
-nginx-module-xslt-1.17.10-r1 installed size:
+nginx-module-xslt-1.19.0-r1 installed size:
 86016
 
-nginx-module-xslt-1.17.10-r1 license:
+nginx-module-xslt-1.19.0-r1 license:
 2-clause BSD-like license
 
 ```
@@ -599,16 +668,16 @@ GPL-2.0-only
 ### `apk` package: `tzdata`
 
 ```console
-tzdata-2019c-r0 description:
+tzdata-2020a-r0 description:
 Timezone data
 
-tzdata-2019c-r0 webpage:
+tzdata-2020a-r0 webpage:
 https://www.iana.org/time-zones
 
-tzdata-2019c-r0 installed size:
-3538944
+tzdata-2020a-r0 installed size:
+3526656
 
-tzdata-2019c-r0 license:
+tzdata-2020a-r0 license:
 Public-Domain
 
 ```
