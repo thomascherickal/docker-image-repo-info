@@ -5069,9 +5069,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris pulseaudio=1:11.1-1ubuntu7.7
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pulseaudio/pulseaudio_11.1-1ubuntu7.7.dsc' pulseaudio_11.1-1ubuntu7.7.dsc 3877 SHA256:fc784292088cd757e8b8ad05189af98547b1386da1d9bbee22e07daaca40b902
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pulseaudio/pulseaudio_11.1.orig.tar.xz' pulseaudio_11.1.orig.tar.xz 1648924 SHA256:f2521c525a77166189e3cb9169f75c2ee2b82fa3fcf9476024fbc2c3a6c9cd9e
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pulseaudio/pulseaudio_11.1-1ubuntu7.7.debian.tar.xz' pulseaudio_11.1-1ubuntu7.7.debian.tar.xz 103068 SHA256:ceafa24b98b8a8ffc7d7a755ed440559bedec175bf19bf13db9533a857cb39f9
+'http://security.ubuntu.com/ubuntu/pool/main/p/pulseaudio/pulseaudio_11.1-1ubuntu7.7.dsc' pulseaudio_11.1-1ubuntu7.7.dsc 3877 SHA256:fc784292088cd757e8b8ad05189af98547b1386da1d9bbee22e07daaca40b902
+'http://security.ubuntu.com/ubuntu/pool/main/p/pulseaudio/pulseaudio_11.1.orig.tar.xz' pulseaudio_11.1.orig.tar.xz 1648924 SHA256:f2521c525a77166189e3cb9169f75c2ee2b82fa3fcf9476024fbc2c3a6c9cd9e
+'http://security.ubuntu.com/ubuntu/pool/main/p/pulseaudio/pulseaudio_11.1-1ubuntu7.7.debian.tar.xz' pulseaudio_11.1-1ubuntu7.7.debian.tar.xz 103068 SHA256:ceafa24b98b8a8ffc7d7a755ed440559bedec175bf19bf13db9533a857cb39f9
 ```
 
 ### `dpkg` source package: `python3-defaults=3.6.7-1~18.04`
