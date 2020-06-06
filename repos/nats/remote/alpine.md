@@ -1,7 +1,7 @@
 ## `nats:alpine`
 
 ```console
-$ docker pull nats@sha256:cb89f6baedc5c61eee5f5063338a5507903756daa39f148e987442a39b5498d0
+$ docker pull nats@sha256:966bafc8fed140348df882cdfce8c6ec0ae84246af19ba2dc4c44192a330c18b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -66,15 +66,16 @@ CMD ["nats-server" "--config" "/etc/nats/nats-server.conf"]
 ### `nats:alpine` - linux; arm variant v6
 
 ```console
-$ docker pull nats@sha256:137e44204c5f787b06b0902fa7370caaec2678981aa81600aed2393409a6de96
+$ docker pull nats@sha256:92881cbdb3078b8a4456e1a45a34d9272357c7ab82ece5a9f96a517176aaaf9d
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **6.7 MB (6719649 bytes)**  
+-	Total Size: **6.7 MB (6720097 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:563e60546d1dbf482ad7632b907a661f4d1b5b4a9dc0105adb89b0545452b743`
--	Default Command: `["nats-server"]`
+-	Image ID: `sha256:6c294dd603de46043cfee2c1d0d9c7bb5783559f5d94b3e7e370d07d9ed3c0b4`
+-	Entrypoint: `["docker-entrypoint.sh"]`
+-	Default Command: `["nats-server","--config","\/etc\/nats\/nats-server.conf"]`
 
 ```dockerfile
 # Thu, 23 Apr 2020 15:51:24 GMT
@@ -87,10 +88,14 @@ ENV NATS_SERVER=2.1.7
 RUN set -eux; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		arm64) natsArch='arm64' ;; 		armhf) natsArch='arm6' ;; 		armv7) natsArch='arm7' ;; 		x86_64) natsArch='amd64' ;; 		x86) natsArch='386' ;; 		*) echo >&2 "error: $apkArch is not supported!"; exit 1 ;; 	esac; 		wget -O nats-server.zip "https://github.com/nats-io/nats-server/releases/download/v${NATS_SERVER}/nats-server-v${NATS_SERVER}-linux-${natsArch}.zip"; 		apk add --no-cache ca-certificates; 	apk add --no-cache --virtual buildtmp unzip; 		unzip nats-server.zip "nats-server-v${NATS_SERVER}-linux-${natsArch}/nats-server"; 	rm nats-server.zip; 	mv "nats-server-v${NATS_SERVER}-linux-${natsArch}/nats-server" /usr/local/bin; 	rmdir "nats-server-v${NATS_SERVER}-linux-${natsArch}"; 		apk del --no-cache --no-network buildtmp
 # Fri, 15 May 2020 19:50:25 GMT
 COPY file:bef66f144841968228eb6875fdca1fb9c094da90455a3e05090bdd09e690e7ea in /etc/nats/nats-server.conf 
-# Fri, 15 May 2020 19:50:27 GMT
+# Sat, 06 Jun 2020 02:50:21 GMT
+COPY file:e90698d1d7a93a6e661321ceff0cc34f74523d472fad403fb682bb5d43b6a785 in /usr/local/bin 
+# Sat, 06 Jun 2020 02:50:23 GMT
 EXPOSE 4222 6222 8222
-# Fri, 15 May 2020 19:50:28 GMT
-CMD ["nats-server"]
+# Sat, 06 Jun 2020 02:50:25 GMT
+ENTRYPOINT ["docker-entrypoint.sh"]
+# Sat, 06 Jun 2020 02:50:27 GMT
+CMD ["nats-server" "--config" "/etc/nats/nats-server.conf"]
 ```
 
 -	Layers:
@@ -106,19 +111,24 @@ CMD ["nats-server"]
 		Last Modified: Fri, 15 May 2020 19:54:06 GMT  
 		Size: 559.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:39c5786c0476f10cbaaed737392af53825da728437020325ccbd384cdf53b100`  
+		Last Modified: Sat, 06 Jun 2020 02:57:26 GMT  
+		Size: 448.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `nats:alpine` - linux; arm variant v7
 
 ```console
-$ docker pull nats@sha256:67a267406fb385bb70f0a035f2145b9c13136885f816383944f735a5d8b681c1
+$ docker pull nats@sha256:2ce1841a96e019cbad94dc856fc41df447c6bfa53cda82adb93e431dc4bcc652
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **6.5 MB (6515898 bytes)**  
+-	Total Size: **6.5 MB (6516346 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0137278ffedaa83277058f3377701ed8d3dbf8f13ab9d3c8221829e919c4acd1`
--	Default Command: `["nats-server"]`
+-	Image ID: `sha256:353d1047af5e64a22156c535460a8883c63c3bb196aa977c1a8a96c09f716163`
+-	Entrypoint: `["docker-entrypoint.sh"]`
+-	Default Command: `["nats-server","--config","\/etc\/nats\/nats-server.conf"]`
 
 ```dockerfile
 # Thu, 23 Apr 2020 22:04:19 GMT
@@ -131,10 +141,14 @@ ENV NATS_SERVER=2.1.7
 RUN set -eux; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		arm64) natsArch='arm64' ;; 		armhf) natsArch='arm6' ;; 		armv7) natsArch='arm7' ;; 		x86_64) natsArch='amd64' ;; 		x86) natsArch='386' ;; 		*) echo >&2 "error: $apkArch is not supported!"; exit 1 ;; 	esac; 		wget -O nats-server.zip "https://github.com/nats-io/nats-server/releases/download/v${NATS_SERVER}/nats-server-v${NATS_SERVER}-linux-${natsArch}.zip"; 		apk add --no-cache ca-certificates; 	apk add --no-cache --virtual buildtmp unzip; 		unzip nats-server.zip "nats-server-v${NATS_SERVER}-linux-${natsArch}/nats-server"; 	rm nats-server.zip; 	mv "nats-server-v${NATS_SERVER}-linux-${natsArch}/nats-server" /usr/local/bin; 	rmdir "nats-server-v${NATS_SERVER}-linux-${natsArch}"; 		apk del --no-cache --no-network buildtmp
 # Sat, 16 May 2020 04:17:06 GMT
 COPY file:bef66f144841968228eb6875fdca1fb9c094da90455a3e05090bdd09e690e7ea in /etc/nats/nats-server.conf 
-# Sat, 16 May 2020 04:17:07 GMT
+# Sat, 06 Jun 2020 02:59:06 GMT
+COPY file:e90698d1d7a93a6e661321ceff0cc34f74523d472fad403fb682bb5d43b6a785 in /usr/local/bin 
+# Sat, 06 Jun 2020 02:59:06 GMT
 EXPOSE 4222 6222 8222
-# Sat, 16 May 2020 04:17:08 GMT
-CMD ["nats-server"]
+# Sat, 06 Jun 2020 02:59:07 GMT
+ENTRYPOINT ["docker-entrypoint.sh"]
+# Sat, 06 Jun 2020 02:59:08 GMT
+CMD ["nats-server" "--config" "/etc/nats/nats-server.conf"]
 ```
 
 -	Layers:
@@ -149,4 +163,8 @@ CMD ["nats-server"]
 	-	`sha256:aab45b7c0f143ec333947ad8048d647c2b8bc669596d874e502e79ee4e74e0f3`  
 		Last Modified: Sat, 16 May 2020 04:26:40 GMT  
 		Size: 560.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:967546c6e8edd236036de77257c69742e6740d1e64cd55cd2905478fcfde9552`  
+		Last Modified: Sat, 06 Jun 2020 03:09:08 GMT  
+		Size: 448.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
