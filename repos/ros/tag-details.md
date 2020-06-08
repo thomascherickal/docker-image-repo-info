@@ -3,16 +3,22 @@
 # Tags of `ros`
 
 -	[`ros:dashing`](#rosdashing)
+-	[`ros:dashing-ros1-bridge`](#rosdashing-ros1-bridge)
+-	[`ros:dashing-ros1-bridge-bionic`](#rosdashing-ros1-bridge-bionic)
 -	[`ros:dashing-ros-base`](#rosdashing-ros-base)
 -	[`ros:dashing-ros-base-bionic`](#rosdashing-ros-base-bionic)
 -	[`ros:dashing-ros-core`](#rosdashing-ros-core)
 -	[`ros:dashing-ros-core-bionic`](#rosdashing-ros-core-bionic)
 -	[`ros:eloquent`](#roseloquent)
+-	[`ros:eloquent-ros1-bridge`](#roseloquent-ros1-bridge)
+-	[`ros:eloquent-ros1-bridge-bionic`](#roseloquent-ros1-bridge-bionic)
 -	[`ros:eloquent-ros-base`](#roseloquent-ros-base)
 -	[`ros:eloquent-ros-base-bionic`](#roseloquent-ros-base-bionic)
 -	[`ros:eloquent-ros-core`](#roseloquent-ros-core)
 -	[`ros:eloquent-ros-core-bionic`](#roseloquent-ros-core-bionic)
 -	[`ros:foxy`](#rosfoxy)
+-	[`ros:foxy-ros1-bridge`](#rosfoxy-ros1-bridge)
+-	[`ros:foxy-ros1-bridge-focal`](#rosfoxy-ros1-bridge-focal)
 -	[`ros:foxy-ros-base`](#rosfoxy-ros-base)
 -	[`ros:foxy-ros-base-focal`](#rosfoxy-ros-base-focal)
 -	[`ros:foxy-ros-core`](#rosfoxy-ros-core)
@@ -410,6 +416,24 @@ RUN apt-get update && apt-get install -y --no-install-recommends     ros-dashing
 		Last Modified: Wed, 27 May 2020 01:37:18 GMT  
 		Size: 3.7 MB (3664524 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `ros:dashing-ros1-bridge`
+
+```console
+$ docker pull ros@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
+## `ros:dashing-ros1-bridge-bionic`
+
+```console
+$ docker pull ros@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `ros:dashing-ros-base`
 
@@ -2052,6 +2076,24 @@ RUN apt-get update && apt-get install -y --no-install-recommends     ros-eloquen
 		Size: 3.9 MB (3931442 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `ros:eloquent-ros1-bridge`
+
+```console
+$ docker pull ros@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
+## `ros:eloquent-ros1-bridge-bionic`
+
+```console
+$ docker pull ros@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
 ## `ros:eloquent-ros-base`
 
 ```console
@@ -3576,6 +3618,24 @@ RUN apt-get update && apt-get install -y --no-install-recommends     ros-foxy-ro
 		Last Modified: Sat, 06 Jun 2020 00:47:41 GMT  
 		Size: 9.3 MB (9288504 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `ros:foxy-ros1-bridge`
+
+```console
+$ docker pull ros@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
+## `ros:foxy-ros1-bridge-focal`
+
+```console
+$ docker pull ros@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `ros:foxy-ros-base`
 
