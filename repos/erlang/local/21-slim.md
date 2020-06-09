@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:0a9dc3a77d81c3c33239583ec890fd26a8fa30a189b605a88d5c208c05f6a88d`
-- Created: `2020-05-20T19:40:03.69201836Z`
-- Virtual Size: ~ 250.77 Mb  
+- Image ID: `sha256:456883aaac7a508c9e4727693d63e5c5dd4f9b7e351fe6aaba35ac91e6d6a528`
+- Created: `2020-06-09T04:06:29.566399186Z`
+- Virtual Size: ~ 250.76 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["erl"]`
