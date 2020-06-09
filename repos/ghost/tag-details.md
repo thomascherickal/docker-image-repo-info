@@ -1097,11 +1097,21 @@ CMD ["node" "current/index.js"]
 
 ## `ghost:2.38.2`
 
-**does not exist** (yet?)
+```console
+$ docker pull ghost@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `ghost:2.38.2-alpine`
 
-**does not exist** (yet?)
+```console
+$ docker pull ghost@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `ghost:2.38-alpine`
 
@@ -3118,19 +3128,39 @@ CMD ["node" "current/index.js"]
 
 ## `ghost:3.19`
 
-**does not exist** (yet?)
+```console
+$ docker pull ghost@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `ghost:3.19.0`
 
-**does not exist** (yet?)
+```console
+$ docker pull ghost@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `ghost:3.19.0-alpine`
 
-**does not exist** (yet?)
+```console
+$ docker pull ghost@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `ghost:3.19-alpine`
 
-**does not exist** (yet?)
+```console
+$ docker pull ghost@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `ghost:3-alpine`
 
