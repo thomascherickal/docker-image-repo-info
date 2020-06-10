@@ -2,16 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:0135244847f59a2a8cbb62b2d11bb759a976381952c4999bd110e6b521bbc21e`
-- Created: `2020-05-23T01:30:10.498198219Z`
-- Virtual Size: ~ 35.31 Mb  
+- Image ID: `sha256:fe29149226c48228edd8dc126927d5f2a77efa2881b064ad265e555b47c5ec16`
+- Created: `2020-06-10T18:24:10.536411358Z`
+- Virtual Size: ~ 35.33 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
 - Labels:
-  - `build-date=20200522`
+  - `build-date=20200609`
   - `name=Photon OS x86_64/3.0 Base Image`
   - `vendor=VMware`
 
@@ -83,7 +83,7 @@ Licenses (from `rpm --query`): GPLv3
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `glibc-2.28-5.ph3.x86_64`
+### `rpm` package: `glibc-2.28-6.ph3.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+
 
@@ -155,13 +155,13 @@ Licenses (from `rpm --query`): MPLv2.0
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `nss-libs-3.44-3.ph3.x86_64`
+### `rpm` package: `nss-libs-3.44-4.ph3.x86_64`
 
 Licenses (from `rpm --query`): MPLv2.0
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `openssl-1.0.2u-2.ph3.x86_64`
+### `rpm` package: `openssl-1.0.2v-1.ph3.x86_64`
 
 Licenses (from `rpm --query`): OpenSSL
 
@@ -191,25 +191,25 @@ Licenses (from `rpm --query`): GPLv3+
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `rpm-libs-4.14.2-7.ph3.x86_64`
+### `rpm` package: `rpm-libs-4.14.2-8.ph3.x86_64`
 
 Licenses (from `rpm --query`): GPLv2+
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `sqlite-libs-3.31.1-4.ph3.x86_64`
+### `rpm` package: `sqlite-libs-3.32.1-1.ph3.x86_64`
 
 Licenses (from `rpm --query`): Public Domain
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `tdnf-2.1.0-3.ph3.x86_64`
+### `rpm` package: `tdnf-2.1.1-2.ph3.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2.1,GPLv2
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `tdnf-cli-libs-2.1.0-3.ph3.x86_64`
+### `rpm` package: `tdnf-cli-libs-2.1.1-2.ph3.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2.1,GPLv2
 
