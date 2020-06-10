@@ -1,7 +1,7 @@
 ## `tomcat:10-jdk8-adoptopenjdk-openj9`
 
 ```console
-$ docker pull tomcat@sha256:83ad59d5e4250c1c033c9da0951372f373afafbad086b6f6d40950c61bed7ebf
+$ docker pull tomcat@sha256:b711260c6530683bdbf75d183ff0aa8be627102b64a05a6d59514555ae8e74d5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -13,14 +13,14 @@ $ docker pull tomcat@sha256:83ad59d5e4250c1c033c9da0951372f373afafbad086b6f6d409
 ### `tomcat:10-jdk8-adoptopenjdk-openj9` - linux; amd64
 
 ```console
-$ docker pull tomcat@sha256:247caf16a2e0fd48d99b65b7e43324e22b4ff642526ed355e8a16718a8feb62f
+$ docker pull tomcat@sha256:eec5be58f1b1a1ffc49431f8c794b6cbae09af8f09c1375998d88726497f8fe9
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **166.9 MB (166864305 bytes)**  
+-	Total Size: **169.0 MB (168961609 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7b32f996810f78d40939d995bc323451352b1cd4393e620c97f6aff3e6350e92`
+-	Image ID: `sha256:fc598a01106e3478730f15c28ce984bc7885056673e91dcbfdcbe2dbd1f21f2f`
 -	Default Command: `["catalina.sh","run"]`
 
 ```dockerfile
@@ -62,17 +62,17 @@ ENV LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib
 ENV GPG_KEYS=A9C5DF4D22E99998D9875A5110C01C5A2F6059E7
 # Fri, 24 Apr 2020 23:43:49 GMT
 ENV TOMCAT_MAJOR=10
-# Wed, 13 May 2020 02:01:45 GMT
-ENV TOMCAT_VERSION=10.0.0-M5
-# Wed, 13 May 2020 02:01:45 GMT
-ENV TOMCAT_SHA512=09d6d4c084857d3a7846fdb4ed562ef49402a164dbd140636a7d8fe1370f902f56144d8a20cc71b698189b873ce38cec2a12c38abedb6d7173b091eb46ea26a9
-# Wed, 13 May 2020 02:02:16 GMT
+# Wed, 10 Jun 2020 08:12:14 GMT
+ENV TOMCAT_VERSION=10.0.0-M6
+# Wed, 10 Jun 2020 08:12:14 GMT
+ENV TOMCAT_SHA512=4174a99075ef1366280598d08edc69c5e64aeffb4377c010a20d6decd2e5133cd29147f01510cf32ef1324a65701f25b4931e5b2e3e56dc7af969cdba2415b55
+# Wed, 10 Jun 2020 08:12:49 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		gnupg dirmngr 		wget ca-certificates 	; 		ddist() { 		local f="$1"; shift; 		local distFile="$1"; shift; 		local mvnFile="${1:-}"; 		local success=; 		local distUrl=; 		for distUrl in 			"https://www.apache.org/dyn/closer.cgi?action=download&filename=$distFile" 			"https://www-us.apache.org/dist/$distFile" 			"https://www.apache.org/dist/$distFile" 			"https://archive.apache.org/dist/$distFile" 			${mvnFile:+"https://repo1.maven.org/maven2/org/apache/tomcat/tomcat/$mvnFile"} 		; do 			if wget -O "$f" "$distUrl" && [ -s "$f" ]; then 				success=1; 				break; 			fi; 		done; 		[ -n "$success" ]; 	}; 		ddist 'tomcat.tar.gz' "tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz" "$TOMCAT_VERSION/tomcat-$TOMCAT_VERSION.tar.gz"; 	echo "$TOMCAT_SHA512 *tomcat.tar.gz" | sha512sum --strict --check -; 	ddist 'tomcat.tar.gz.asc' "tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz.asc" "$TOMCAT_VERSION/tomcat-$TOMCAT_VERSION.tar.gz.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	for key in $GPG_KEYS; do 		gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 	done; 	gpg --batch --verify tomcat.tar.gz.asc tomcat.tar.gz; 	tar -xf tomcat.tar.gz --strip-components=1; 	rm bin/*.bat; 	rm tomcat.tar.gz*; 	command -v gpgconf && gpgconf --kill all || :; 	rm -rf "$GNUPGHOME"; 		mv webapps webapps.dist; 	mkdir webapps; 		nativeBuildDir="$(mktemp -d)"; 	tar -xf bin/tomcat-native.tar.gz -C "$nativeBuildDir" --strip-components=1; 	apt-get install -y --no-install-recommends 		dpkg-dev 		gcc 		libapr1-dev 		libssl-dev 		make 	; 	( 		export CATALINA_HOME="$PWD"; 		cd "$nativeBuildDir/native"; 		gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 		aprConfig="$(command -v apr-1-config)"; 		./configure 			--build="$gnuArch" 			--libdir="$TOMCAT_NATIVE_LIBDIR" 			--prefix="$CATALINA_HOME" 			--with-apr="$aprConfig" 			--with-java-home="$JAVA_HOME" 			--with-ssl=yes; 		make -j "$(nproc)"; 		make install; 	); 	rm -rf "$nativeBuildDir"; 	rm bin/tomcat-native.tar.gz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	find "$TOMCAT_NATIVE_LIBDIR" -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		find ./bin/ -name '*.sh' -exec sed -ri 's|^#!/bin/sh$|#!/usr/bin/env bash|' '{}' +; 		chmod -R +rX .; 	chmod 777 logs temp work
-# Wed, 13 May 2020 02:02:18 GMT
+# Wed, 10 Jun 2020 08:12:51 GMT
 RUN set -e 	&& nativeLines="$(catalina.sh configtest 2>&1)" 	&& nativeLines="$(echo "$nativeLines" | grep 'Apache Tomcat Native')" 	&& nativeLines="$(echo "$nativeLines" | sort -u)" 	&& if ! echo "$nativeLines" | grep -E 'INFO: Loaded( APR based)? Apache Tomcat Native library' >&2; then 		echo >&2 "$nativeLines"; 		exit 1; 	fi
-# Wed, 13 May 2020 02:02:18 GMT
+# Wed, 10 Jun 2020 08:12:52 GMT
 EXPOSE 8080
-# Wed, 13 May 2020 02:02:18 GMT
+# Wed, 10 Jun 2020 08:12:52 GMT
 CMD ["catalina.sh" "run"]
 ```
 
@@ -105,13 +105,13 @@ CMD ["catalina.sh" "run"]
 		Last Modified: Sat, 25 Apr 2020 00:16:06 GMT  
 		Size: 139.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f33806d98a203b0e77ec3d9e6cf88bb71d8d45e45b623026641ec9852111673e`  
-		Last Modified: Wed, 13 May 2020 02:30:01 GMT  
-		Size: 12.0 MB (12005564 bytes)  
+	-	`sha256:65f15fe2f630d7b1a1def8502e302ea602709bc90025216d133c72edeea9c072`  
+		Last Modified: Wed, 10 Jun 2020 08:42:33 GMT  
+		Size: 14.1 MB (14102863 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:33dd6b64ee136aef0ad676d0688eff1e6bedc97bb7973189bffe8d8fe93804a9`  
-		Last Modified: Wed, 13 May 2020 02:30:00 GMT  
-		Size: 194.0 B  
+	-	`sha256:dcb8dcacb041630de8417a1c31dcdeb683bd81db94142ac179f57204815247af`  
+		Last Modified: Wed, 10 Jun 2020 08:42:31 GMT  
+		Size: 199.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `tomcat:10-jdk8-adoptopenjdk-openj9` - linux; ppc64le
