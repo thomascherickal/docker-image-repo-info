@@ -1,7 +1,7 @@
 ## `lightstreamer:latest`
 
 ```console
-$ docker pull lightstreamer@sha256:fa3dad21d8b54346cf972ba7dd0be4675633e80efa7a4ef9d8b1d315d13b52c7
+$ docker pull lightstreamer@sha256:540440f8e6ceff4436df543fcf500e4f6932b0f571225f2e837907761cee7e4e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,103 +12,103 @@ $ docker pull lightstreamer@sha256:fa3dad21d8b54346cf972ba7dd0be4675633e80efa7a4
 ### `lightstreamer:latest` - linux; amd64
 
 ```console
-$ docker pull lightstreamer@sha256:7d0f80f64aff76b031090d2623ba98f521f6500b6d28de3b40a7dad8d27fa514
+$ docker pull lightstreamer@sha256:2befe73e447a1a530ec10b13c74446939f058021118db3b01e7daa430b48f851
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **368.7 MB (368704266 bytes)**  
+-	Total Size: **368.7 MB (368702118 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e6a4d1726e0f425b1a26bbe911a12ef6fc90457f2972723f923a117fa2672dcd`
+-	Image ID: `sha256:204cd0ee069b89c68a061288c8a9e97a556e130036e35513b075c180bde261f4`
 -	Default Command: `[".\/LS.sh","run"]`
 
 ```dockerfile
-# Fri, 15 May 2020 06:28:12 GMT
-ADD file:fb54c709daa205bf9d04eb3d90ba068db4c34dfe3b6ec0d7691f677286120903 in / 
-# Fri, 15 May 2020 06:28:13 GMT
+# Tue, 09 Jun 2020 01:20:39 GMT
+ADD file:1ab357efe422cfed5e37af2dc60d07ccfd4bdee4d4a0c00838b5d68f19ff20c7 in / 
+# Tue, 09 Jun 2020 01:20:39 GMT
 CMD ["bash"]
-# Fri, 15 May 2020 17:32:13 GMT
+# Tue, 09 Jun 2020 01:46:35 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	&& rm -rf /var/lib/apt/lists/*
-# Fri, 15 May 2020 17:32:19 GMT
+# Tue, 09 Jun 2020 01:46:41 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Fri, 15 May 2020 17:32:41 GMT
+# Tue, 09 Jun 2020 01:47:05 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
-# Fri, 15 May 2020 21:02:20 GMT
+# Tue, 09 Jun 2020 16:36:48 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		bzip2 		unzip 		xz-utils 				ca-certificates p11-kit 				fontconfig libfreetype6 	; 	rm -rf /var/lib/apt/lists/*
-# Fri, 15 May 2020 21:02:20 GMT
+# Tue, 09 Jun 2020 16:36:48 GMT
 ENV LANG=C.UTF-8
-# Fri, 15 May 2020 21:02:20 GMT
+# Tue, 09 Jun 2020 16:36:48 GMT
 ENV JAVA_HOME=/usr/local/openjdk-11
-# Fri, 15 May 2020 21:02:21 GMT
+# Tue, 09 Jun 2020 16:36:49 GMT
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 15 May 2020 21:02:22 GMT
+# Tue, 09 Jun 2020 16:36:50 GMT
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
-# Fri, 15 May 2020 21:02:22 GMT
+# Tue, 09 Jun 2020 16:36:50 GMT
 ENV JAVA_VERSION=11.0.7
-# Fri, 15 May 2020 21:02:22 GMT
+# Tue, 09 Jun 2020 16:36:50 GMT
 ENV JAVA_BASE_URL=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.7%2B10/OpenJDK11U-jdk_
-# Fri, 15 May 2020 21:02:22 GMT
+# Tue, 09 Jun 2020 16:36:50 GMT
 ENV JAVA_URL_VERSION=11.0.7_10
-# Fri, 15 May 2020 21:02:39 GMT
+# Tue, 09 Jun 2020 16:37:07 GMT
 RUN set -eux; 		dpkgArch="$(dpkg --print-architecture)"; 	case "$dpkgArch" in 		amd64) upstreamArch='x64' ;; 		arm64) upstreamArch='aarch64' ;; 		*) echo >&2 "error: unsupported architecture: $dpkgArch" ;; 	esac; 		wget -O openjdk.tgz.asc "${JAVA_BASE_URL}${upstreamArch}_linux_${JAVA_URL_VERSION}.tar.gz.sign"; 	wget -O openjdk.tgz "${JAVA_BASE_URL}${upstreamArch}_linux_${JAVA_URL_VERSION}.tar.gz" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Fri, 15 May 2020 21:02:40 GMT
+# Tue, 09 Jun 2020 16:37:11 GMT
 CMD ["jshell"]
-# Sat, 16 May 2020 10:10:26 GMT
+# Wed, 10 Jun 2020 07:21:00 GMT
 LABEL maintainer=Lightstreamer Server Development Team <support@lightstreamer.com>
-# Sat, 16 May 2020 10:10:27 GMT
+# Wed, 10 Jun 2020 07:21:01 GMT
 RUN gpg --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 9B90BFD14309C7DA5EF58D7D4A8C08966F29B4D2
-# Wed, 27 May 2020 18:22:12 GMT
+# Wed, 10 Jun 2020 07:21:18 GMT
 ENV LIGHTSTREAMER_VERSION=7_1_1_20200527
-# Wed, 27 May 2020 18:22:13 GMT
+# Wed, 10 Jun 2020 07:21:18 GMT
 ENV LIGHTSTREAMER_URL_DOWNLOAD=http://www.lightstreamer.com/repo/distros/Lightstreamer_7_1_1_20200527.tar.gz
-# Wed, 03 Jun 2020 18:27:13 GMT
+# Wed, 10 Jun 2020 07:21:21 GMT
 RUN set -ex;         mkdir /lightstreamer && cd /lightstreamer         && curl -fSL -o Lightstreamer.tar.gz ${LIGHTSTREAMER_URL_DOWNLOAD}         && curl -fSL -o Lightstreamer.tar.gz.asc ${LIGHTSTREAMER_URL_DOWNLOAD}.asc         && gpg --batch --verify Lightstreamer.tar.gz.asc Lightstreamer.tar.gz         && tar -xvf Lightstreamer.tar.gz --strip-components=1         && sed -i -- 's/\/usr\/jdk1.8.0/$JAVA_HOME/' bin/unix-like/LS.sh         && sed -i -e 's/<appender-ref ref="LSDailyRolling" \/>/<appender-ref ref="LSConsole" \/>/'                   -e '/<logger name="LightstreamerLogger.init/,+2s/<appender-ref ref="LSConsole" \/>/<!-- <appender-ref ref="LSConsole" \/> -->/'                   -e '/<logger name="LightstreamerLogger.license/,+2s/<appender-ref ref="LSConsole" \/>/<!-- <appender-ref ref="LSConsole" \/> -->/'                   -e '/<logger name="LightstreamerProxyAdapters/,+2s/<appender-ref ref="LSConsole" \/>/<!-- <appender-ref ref="LSConsole" \/> -->/'                   conf/lightstreamer_log_conf.xml         && rm -fr /lightstreamer/DOCS-SDKs         && groupadd -r -g 10000 lightstreamer         && useradd --no-log-init -r -g lightstreamer -u 10000 lightstreamer         && chown -R lightstreamer:lightstreamer ../lightstreamer         && rm Lightstreamer.tar.gz Lightstreamer.tar.gz.asc
-# Wed, 03 Jun 2020 18:27:13 GMT
+# Wed, 10 Jun 2020 07:21:22 GMT
 USER lightstreamer
-# Wed, 03 Jun 2020 18:27:13 GMT
+# Wed, 10 Jun 2020 07:21:22 GMT
 EXPOSE 8080
-# Wed, 03 Jun 2020 18:27:13 GMT
+# Wed, 10 Jun 2020 07:21:22 GMT
 WORKDIR /lightstreamer/bin/unix-like
-# Wed, 03 Jun 2020 18:27:13 GMT
+# Wed, 10 Jun 2020 07:21:22 GMT
 CMD ["./LS.sh" "run"]
 ```
 
 -	Layers:
-	-	`sha256:376057ac6fa17f65688c56977118e2e764b27c348b3f70637fa829cd2a12b200`  
-		Last Modified: Fri, 15 May 2020 06:37:20 GMT  
-		Size: 50.4 MB (50391294 bytes)  
+	-	`sha256:e9afc4f90ab09248d75c8081b6dfba749a7f7efdac704ced7e0ceb506e02fa4a`  
+		Last Modified: Tue, 09 Jun 2020 01:25:37 GMT  
+		Size: 50.4 MB (50389504 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5a63a0a859d859478f30461786a49c2fca3ae7d89ab5b5ce3c81c54951d30f88`  
-		Last Modified: Fri, 15 May 2020 17:50:44 GMT  
-		Size: 7.8 MB (7812354 bytes)  
+	-	`sha256:989e6b19a265d6b8b7934e7ddd7dc07f6e2fc945b3a28dda9b8aecb12cdb30e0`  
+		Last Modified: Tue, 09 Jun 2020 01:59:52 GMT  
+		Size: 7.8 MB (7811709 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:496548a8c952b37bdf149ab3654f9085d721ee126b8c73b16860778be5137f5e`  
-		Last Modified: Fri, 15 May 2020 17:50:49 GMT  
-		Size: 10.0 MB (9996284 bytes)  
+	-	`sha256:af14b6c2f8785723bceb5964c5dec1f0489b7750e9d4ec671e49bfba15d80a39`  
+		Last Modified: Tue, 09 Jun 2020 01:59:52 GMT  
+		Size: 10.0 MB (9996168 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2adae3950d4d0f11875568c325d3d542d1f2e2d9b49bdd740bb57fcfc1f6478f`  
-		Last Modified: Fri, 15 May 2020 17:51:06 GMT  
-		Size: 51.8 MB (51827083 bytes)  
+	-	`sha256:5573c4b3094956931fd68c310ae92c9eb1a787f0c77ac2730be9d16cce172d5e`  
+		Last Modified: Tue, 09 Jun 2020 02:00:08 GMT  
+		Size: 51.8 MB (51827493 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0a297eafb9ac1e735f06c05d8ed0c60bbc1bf1ee8140e33d3011a3380c2061aa`  
-		Last Modified: Fri, 15 May 2020 21:09:18 GMT  
-		Size: 5.3 MB (5284714 bytes)  
+	-	`sha256:fb1a405f128d35ffb78464f5ac9f15e721e0d205b94360e151d60f32f9b38111`  
+		Last Modified: Tue, 09 Jun 2020 16:43:42 GMT  
+		Size: 5.3 MB (5284640 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:09a4142c5c9dde2fbf35e7a6e6475eba75a8c28540c375c80be7eade4b7cb438`  
-		Last Modified: Fri, 15 May 2020 21:09:16 GMT  
+	-	`sha256:612a9f566fdc082f9d43f642791723e34bab94c243b34a965b4602d416ee7a72`  
+		Last Modified: Tue, 09 Jun 2020 16:43:41 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9e78d9befa393a5e54fedfb699d83945d057022433b067e247201dfd278fe17a`  
-		Last Modified: Fri, 15 May 2020 21:09:38 GMT  
-		Size: 196.2 MB (196208236 bytes)  
+	-	`sha256:cf63ebed11424864a6f71681347d31876110d84dfb087460179f9b66a658df0a`  
+		Last Modified: Tue, 09 Jun 2020 16:44:06 GMT  
+		Size: 196.2 MB (196208287 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:85a656d9b171d2eff2a224da3f59a56e3c5588778675dcf212135a760609021e`  
-		Last Modified: Sat, 16 May 2020 10:11:37 GMT  
-		Size: 2.4 KB (2373 bytes)  
+	-	`sha256:8171e6cea22d934a92c64fab3d3ddcf928a2f3329b8cfc05336accefd96642e4`  
+		Last Modified: Wed, 10 Jun 2020 07:22:25 GMT  
+		Size: 2.4 KB (2381 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:25c3aac0621c585d566264fa4b495c36abe81d3749f83934078f7f20c75cf81e`  
-		Last Modified: Wed, 03 Jun 2020 18:29:32 GMT  
-		Size: 47.2 MB (47181717 bytes)  
+	-	`sha256:6ae64e7332c0e7567fa8cd0cf085dd3128909d263353a94d56ce2d57742b7ea4`  
+		Last Modified: Wed, 10 Jun 2020 07:22:48 GMT  
+		Size: 47.2 MB (47181725 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `lightstreamer:latest` - linux; arm64 variant v8
