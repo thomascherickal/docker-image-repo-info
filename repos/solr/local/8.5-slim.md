@@ -1,10 +1,10 @@
-# `solr:8.5.1-slim`
+# `solr:8.5.2-slim`
 
 ## Docker Metadata
 
-- Image ID: `sha256:3e4d04933d45a7608cdecde993f48dc07be4edb99ec7b9155d8f6682dcb69826`
-- Created: `2020-05-16T10:47:17.030888804Z`
-- Virtual Size: ~ 436.96 Mb  
+- Image ID: `sha256:5dd9fb5c5b7dd1824de429e624a75895db942478132f6e5109898dd905648e39`
+- Created: `2020-06-08T19:26:20.195192335Z`
+- Virtual Size: ~ 436.99 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -20,16 +20,16 @@
   - `SOLR_UID=8983`
   - `SOLR_GROUP=solr`
   - `SOLR_GID=8983`
-  - `SOLR_CLOSER_URL=http://www.apache.org/dyn/closer.lua?filename=lucene/solr/8.5.1/solr-8.5.1.tgz&action=download`
-  - `SOLR_DIST_URL=https://www.apache.org/dist/lucene/solr/8.5.1/solr-8.5.1.tgz`
-  - `SOLR_ARCHIVE_URL=https://archive.apache.org/dist/lucene/solr/8.5.1/solr-8.5.1.tgz`
+  - `SOLR_CLOSER_URL=http://www.apache.org/dyn/closer.lua?filename=lucene/solr/8.5.2/solr-8.5.2.tgz&action=download`
+  - `SOLR_DIST_URL=https://www.apache.org/dist/lucene/solr/8.5.2/solr-8.5.2.tgz`
+  - `SOLR_ARCHIVE_URL=https://archive.apache.org/dist/lucene/solr/8.5.2/solr-8.5.2.tgz`
   - `SOLR_INCLUDE=/etc/default/solr.in.sh`
   - `SOLR_HOME=/var/solr/data`
   - `SOLR_PID_DIR=/var/solr`
   - `SOLR_LOGS_DIR=/var/solr/logs`
   - `LOG4J_PROPS=/var/solr/log4j2.xml`
 - Labels:
-  - `maintainer=Martijn Koster "mak-docker@greenhills.co.uk"`
+  - `maintainer=The Apache Lucene/Solr Project`
   - `repository=https://github.com/docker-solr/docker-solr`
 
 ## `dpkg` (`.deb`-based packages)

@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:0fa90f37b51fb7f36ee55e94a6ef640e35abfb7404899866d06794209540b226`
-- Created: `2020-05-16T10:53:48.803170787Z`
-- Virtual Size: ~ 416.45 Mb  
+- Image ID: `sha256:781988f7dea60d1f4e6411a2100f9ee35d3e8bb6ee266a754d26425a12057725`
+- Created: `2020-06-08T19:32:40.907120385Z`
+- Virtual Size: ~ 416.48 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -24,7 +24,7 @@
   - `SOLR_DIST_URL=https://www.apache.org/dist/lucene/solr/7.7.3/solr-7.7.3.tgz`
   - `SOLR_ARCHIVE_URL=https://archive.apache.org/dist/lucene/solr/7.7.3/solr-7.7.3.tgz`
 - Labels:
-  - `maintainer=Martijn Koster "mak-docker@greenhills.co.uk"`
+  - `maintainer=The Apache Lucene/Solr Project`
   - `repository=https://github.com/docker-solr/docker-solr`
 
 ## `dpkg` (`.deb`-based packages)
