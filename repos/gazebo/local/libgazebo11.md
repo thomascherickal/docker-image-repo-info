@@ -2187,13 +2187,9 @@ Licenses: (parsed from: `/usr/share/doc/libignition-common3/copyright`, `/usr/sh
 - `Apache`
 - `Apache-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ignition-common3=3.5.0-1~focal
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-common3/ignition-common3_3.5.0-1~focal.dsc' ignition-common3_3.5.0-1~focal.dsc 1887 SHA256:5ec15bd675d4b80b1ba8fb8f0c8e591722d0c4d790b781a6d3247a690c98c472
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-common3/ignition-common3_3.5.0-1~focal.tar.xz' ignition-common3_3.5.0-1~focal.tar.xz 6581032 SHA256:109828421d7867ba8e611c9cbed7865be6d657994a297a9b89d65457a4c71cbe
-```
 
 ### `dpkg` source package: `ignition-fuel-tools4=4.1.0-1~focal`
 
@@ -6357,9 +6353,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris pulseaudio=1:13.99.1-1ubuntu3.2
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pulseaudio/pulseaudio_13.99.1-1ubuntu3.2.dsc' pulseaudio_13.99.1-1ubuntu3.2.dsc 3859 SHA256:5c9eb4de36ce55668cfd67b2641d37f6246891003d2d97ab11e50e47e7b3aeaf
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pulseaudio/pulseaudio_13.99.1.orig.tar.xz' pulseaudio_13.99.1.orig.tar.xz 1955840 SHA256:e6a111cc078e6039bf657a3fd1f73dc804c8ee362ca03a0732dc5c38c13e0a0c
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pulseaudio/pulseaudio_13.99.1-1ubuntu3.2.debian.tar.xz' pulseaudio_13.99.1-1ubuntu3.2.debian.tar.xz 139684 SHA256:4d0ea618faf6cbe48ff99ef0e7ab88f2ac4904f18ba911e4e1ed395fbdba7627
+'http://security.ubuntu.com/ubuntu/pool/main/p/pulseaudio/pulseaudio_13.99.1-1ubuntu3.2.dsc' pulseaudio_13.99.1-1ubuntu3.2.dsc 3859 SHA256:5c9eb4de36ce55668cfd67b2641d37f6246891003d2d97ab11e50e47e7b3aeaf
+'http://security.ubuntu.com/ubuntu/pool/main/p/pulseaudio/pulseaudio_13.99.1.orig.tar.xz' pulseaudio_13.99.1.orig.tar.xz 1955840 SHA256:e6a111cc078e6039bf657a3fd1f73dc804c8ee362ca03a0732dc5c38c13e0a0c
+'http://security.ubuntu.com/ubuntu/pool/main/p/pulseaudio/pulseaudio_13.99.1-1ubuntu3.2.debian.tar.xz' pulseaudio_13.99.1-1ubuntu3.2.debian.tar.xz 139684 SHA256:4d0ea618faf6cbe48ff99ef0e7ab88f2ac4904f18ba911e4e1ed395fbdba7627
 ```
 
 ### `dpkg` source package: `python3-defaults=3.8.2-0ubuntu2`
