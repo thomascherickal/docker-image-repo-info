@@ -864,13 +864,21 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 - `LGPLv3+_or_GPLv2+`
 - `The main library is licensed under GNU Lesser`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris gnutls28=3.6.14-1
+'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.14-1.dsc' gnutls28_3.6.14-1.dsc 3479 SHA256:9f85587356a29ceb26ba6d741348e190090b9f2c86b6352626eff2ea5cbe6dfd
+'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.14.orig.tar.xz' gnutls28_3.6.14.orig.tar.xz 6069088 SHA256:5630751adec7025b8ef955af4d141d00d252a985769f51b4059e5affa3d39d63
+'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.14.orig.tar.xz.asc' gnutls28_3.6.14.orig.tar.xz.asc 854 SHA256:a3e05b531b68a4aca8fdc5dce83e7091b5aa859d76de7e8ba9992047272f04dd
+'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.14-1.debian.tar.xz' gnutls28_3.6.14-1.debian.tar.xz 62708 SHA256:1414cfc508353c270c55043b65a2279b86e75370e501f7fefd175ca7bcf07aee
+```
 
-- http://snapshot.debian.org/package/gnutls28/3.6.14-1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/gnutls28/3.6.14-1/ (for browsing the source)
+- https://sources.debian.net/src/gnutls28/3.6.14-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/gnutls28/3.6.14-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `grep=3.4-1`
 
@@ -989,13 +997,20 @@ Licenses: (parsed from: `/usr/share/doc/iproute2/copyright`)
 
 - `GPL-2`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris iproute2=5.7.0-1
+'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.7.0-1.dsc' iproute2_5.7.0-1.dsc 1831 SHA256:5dddd17db18ac78e902e8ff11a46c444f61cf9b6435e057fce39bba0d84045f1
+'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.7.0.orig.tar.xz' iproute2_5.7.0.orig.tar.xz 764436 SHA256:725dc7ba94aae54c6f8d4223ca055d9fb4fe89d6994b1c03bfb4411c4dd10f21
+'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.7.0-1.debian.tar.xz' iproute2_5.7.0-1.debian.tar.xz 35928 SHA256:263c66f02eb7eb16119806efb07b900bb01ccfe6934e1e842fdc20845fa685b1
+```
 
-- http://snapshot.debian.org/package/iproute2/5.7.0-1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/iproute2/5.7.0-1/ (for browsing the source)
+- https://sources.debian.net/src/iproute2/5.7.0-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/iproute2/5.7.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `iptables=1.8.5-1`
 
@@ -1091,13 +1106,20 @@ Licenses: (parsed from: `/usr/share/doc/libgssapi-krb5-2/copyright`, `/usr/share
 
 - `GPL-2`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris krb5=1.17-9
+'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17-9.dsc' krb5_1.17-9.dsc 3183 SHA256:90b8db43be8f14672839cc66b1d3785ecb767bae6d20588462eb7ce8ed0653cb
+'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17.orig.tar.gz' krb5_1.17.orig.tar.gz 8761763 SHA256:5a6e2284a53de5702d3dc2be3b9339c963f9b5397d3fbbc53beb249380a781f5
+'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17-9.debian.tar.xz' krb5_1.17-9.debian.tar.xz 143720 SHA256:5e6e4ddb0e277ac6fedec1e8b2380b3082605a72a0fb47212a1ec14e85404a5a
+```
 
-- http://snapshot.debian.org/package/krb5/1.17-9/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/krb5/1.17-9/ (for browsing the source)
+- https://sources.debian.net/src/krb5/1.17-9/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/krb5/1.17-9/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libassuan=2.5.3-7`
 
@@ -1660,20 +1682,13 @@ Licenses: (parsed from: `/usr/share/doc/libzstd1/copyright`)
 - `GPL-2+`
 - `zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libzstd=1.4.5+dfsg-1
-'http://deb.debian.org/debian/pool/main/libz/libzstd/libzstd_1.4.5+dfsg-1.dsc' libzstd_1.4.5+dfsg-1.dsc 2291 SHA256:3d5fabd2871f19ab24f268119143c312c076b2aa0af4f0587b99e4f07aaef208
-'http://deb.debian.org/debian/pool/main/libz/libzstd/libzstd_1.4.5+dfsg.orig.tar.xz' libzstd_1.4.5+dfsg.orig.tar.xz 1387864 SHA256:ff51192647c8f87f447268e20180fe39fe8eb5d643210b82f90af741d7bdf0d2
-'http://deb.debian.org/debian/pool/main/libz/libzstd/libzstd_1.4.5+dfsg-1.debian.tar.xz' libzstd_1.4.5+dfsg-1.debian.tar.xz 11996 SHA256:ac78ee17a369a8c4edf302dcdd6983a48e45f39d9234296f3c6ccfab7e65cc66
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libzstd/1.4.5+dfsg-1/
 
-- https://sources.debian.net/src/libzstd/1.4.5+dfsg-1/ (for browsing the source)
-- https://sources.debian.net/src/libzstd/1.4.5+dfsg-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libzstd/1.4.5+dfsg-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lsb=11.1.0`
 
@@ -2252,13 +2267,21 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 - `GPL-2+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris sqlite3=3.32.2-2
+'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.32.2-2.dsc' sqlite3_3.32.2-2.dsc 2410 SHA256:324e02f7f0825ce2d0e02f0a68dc231063f48c3a4d0183329ba46e3f8109f0a1
+'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.32.2.orig-www.tar.xz' sqlite3_3.32.2.orig-www.tar.xz 5848960 SHA256:c3b3fab837f5580baeeeb58d950c35037fa333400d695c63d6f7e82e56a1d627
+'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.32.2.orig.tar.xz' sqlite3_3.32.2.orig.tar.xz 7286044 SHA256:95e48c7d9718831a777f7a002a0d6f7183c309bba87d60468a162a16a9c3cae1
+'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.32.2-2.debian.tar.xz' sqlite3_3.32.2-2.debian.tar.xz 25392 SHA256:c6dff4a12116e369fbdbeba4ad4f532b673bd87405fcf9ad9c1dd906062bc46d
+```
 
-- http://snapshot.debian.org/package/sqlite3/3.32.2-2/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/sqlite3/3.32.2-2/ (for browsing the source)
+- https://sources.debian.net/src/sqlite3/3.32.2-2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/sqlite3/3.32.2-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `systemd=245.5-3`
 
@@ -2278,20 +2301,13 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=245.5-3
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_245.5-3.dsc' systemd_245.5-3.dsc 5096 SHA256:fb7506929b3bd1b36e124d911aeb688ededad372e699cc3919313a3c3c65a527
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_245.5.orig.tar.gz' systemd_245.5.orig.tar.gz 9020836 SHA256:b754d75617665a53bd0a1e8f5ec526b383f17e1cc06d1056399e5859e0b6fe06
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_245.5-3.debian.tar.xz' systemd_245.5-3.debian.tar.xz 165476 SHA256:227e4c6b13cc360fa93f0447d1b505eed5b17e1562ad9f4a8953ac66b611f8e3
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/systemd/245.5-3/
 
-- https://sources.debian.net/src/systemd/245.5-3/ (for browsing the source)
-- https://sources.debian.net/src/systemd/245.5-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/systemd/245.5-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sysvinit=2.96-3`
 
