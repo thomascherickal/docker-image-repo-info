@@ -1,7 +1,7 @@
 ## `python:rc-buster`
 
 ```console
-$ docker pull python@sha256:a9909825d9e5b2f025bc1050e435e97a03fe18477080a60a8ba9e3a80e55f186
+$ docker pull python@sha256:68bdf5aaafff2c8b9a3bcfa49e1464d2b7fc5019e73b87bc0610f2311eabac12
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -108,14 +108,14 @@ CMD ["python3"]
 ### `python:rc-buster` - linux; arm variant v5
 
 ```console
-$ docker pull python@sha256:289041958eb0c197ba55b9f05a51d51f8357accfd189aebbdea2127dcb6a1370
+$ docker pull python@sha256:b054132fed0a28a628d80b81a641d3bd5d4fd9c03eac1a6eae3d803c53db8f87
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **321.3 MB (321346865 bytes)**  
+-	Total Size: **321.4 MB (321372302 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2cb9a13d0875835240888262ee7dfa1b32bb6d15bb3d5598c3c494251856d9c3`
+-	Image ID: `sha256:1b560402140ec14089326703dca262bad8a02371afbd9f3dad338bf498434cd4`
 -	Default Command: `["python3"]`
 
 ```dockerfile
@@ -139,21 +139,21 @@ ENV LANG=C.UTF-8
 RUN apt-get update && apt-get install -y --no-install-recommends 		libbluetooth-dev 		tk-dev 		uuid-dev 	&& rm -rf /var/lib/apt/lists/*
 # Tue, 09 Jun 2020 07:19:19 GMT
 ENV GPG_KEY=E3FF2839C048B25C084DEBE9B26995E310250568
-# Tue, 09 Jun 2020 22:09:56 GMT
-ENV PYTHON_VERSION=3.9.0b2
-# Tue, 09 Jun 2020 22:22:42 GMT
+# Thu, 11 Jun 2020 22:22:11 GMT
+ENV PYTHON_VERSION=3.9.0b3
+# Thu, 11 Jun 2020 22:35:52 GMT
 RUN set -ex 		&& wget -O python.tar.xz "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz" 	&& wget -O python.tar.xz.asc "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz.asc" 	&& export GNUPGHOME="$(mktemp -d)" 	&& gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$GPG_KEY" 	&& gpg --batch --verify python.tar.xz.asc python.tar.xz 	&& { command -v gpgconf > /dev/null && gpgconf --kill all || :; } 	&& rm -rf "$GNUPGHOME" python.tar.xz.asc 	&& mkdir -p /usr/src/python 	&& tar -xJC /usr/src/python --strip-components=1 -f python.tar.xz 	&& rm python.tar.xz 		&& cd /usr/src/python 	&& gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)" 	&& ./configure 		--build="$gnuArch" 		--enable-loadable-sqlite-extensions 		--enable-optimizations 		--enable-option-checking=fatal 		--enable-shared 		--with-system-expat 		--with-system-ffi 		--without-ensurepip 	&& make -j "$(nproc)" 	&& make install 	&& ldconfig 		&& find /usr/local -depth 		\( 			\( -type d -a \( -name test -o -name tests -o -name idle_test \) \) 			-o 			\( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) 		\) -exec rm -rf '{}' + 	&& rm -rf /usr/src/python 		&& python3 --version
-# Tue, 09 Jun 2020 22:22:46 GMT
+# Thu, 11 Jun 2020 22:35:55 GMT
 RUN cd /usr/local/bin 	&& ln -s idle3 idle 	&& ln -s pydoc3 pydoc 	&& ln -s python3 python 	&& ln -s python3-config python-config
-# Tue, 09 Jun 2020 22:22:47 GMT
+# Thu, 11 Jun 2020 22:35:56 GMT
 ENV PYTHON_PIP_VERSION=20.1.1
-# Tue, 09 Jun 2020 22:22:49 GMT
+# Thu, 11 Jun 2020 22:35:57 GMT
 ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/eff16c878c7fd6b688b9b4c4267695cf1a0bf01b/get-pip.py
-# Tue, 09 Jun 2020 22:22:50 GMT
+# Thu, 11 Jun 2020 22:35:58 GMT
 ENV PYTHON_GET_PIP_SHA256=b3153ec0cf7b7bbf9556932aa37e4981c35dc2a2c501d70d91d2795aa532be79
-# Tue, 09 Jun 2020 22:23:04 GMT
+# Thu, 11 Jun 2020 22:36:13 GMT
 RUN set -ex; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum --check --strict -; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		"pip==$PYTHON_PIP_VERSION" 	; 	pip --version; 		find /usr/local -depth 		\( 			\( -type d -a \( -name test -o -name tests -o -name idle_test \) \) 			-o 			\( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) 		\) -exec rm -rf '{}' +; 	rm -f get-pip.py
-# Tue, 09 Jun 2020 22:23:05 GMT
+# Thu, 11 Jun 2020 22:36:14 GMT
 CMD ["python3"]
 ```
 
@@ -182,17 +182,17 @@ CMD ["python3"]
 		Last Modified: Tue, 09 Jun 2020 10:07:22 GMT  
 		Size: 5.8 MB (5839976 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:832a630180a948463e954b1252524dcf198d8f099078fe9d4c57799a68b1c812`  
-		Last Modified: Tue, 09 Jun 2020 22:25:09 GMT  
-		Size: 27.7 MB (27680867 bytes)  
+	-	`sha256:e1b7d9f96f8d98b1e41a09ed462390a622cdfc502bac3820199d9e7dadab8a46`  
+		Last Modified: Thu, 11 Jun 2020 22:39:01 GMT  
+		Size: 27.7 MB (27706313 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:69b4a53b8ee48fa60c35953cc9dd7b1505d0cd6ad72d52dc6ae029e83c10331e`  
-		Last Modified: Tue, 09 Jun 2020 22:24:58 GMT  
-		Size: 234.0 B  
+	-	`sha256:11eff385efdb69837ed7ad832b8be902c5edd6746b323581c4508cd4ce7d7143`  
+		Last Modified: Thu, 11 Jun 2020 22:38:49 GMT  
+		Size: 233.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f15e072b1ac9db85702a558e91e35e88198c3fdcbb961040dda9d442a7b3aa20`  
-		Last Modified: Tue, 09 Jun 2020 22:24:59 GMT  
-		Size: 1.9 MB (1932138 bytes)  
+	-	`sha256:d8b668e7a64c05fa1cc0d4a5fe77b9552416bad26f2d5522e6a0d1577977f206`  
+		Last Modified: Thu, 11 Jun 2020 22:38:50 GMT  
+		Size: 1.9 MB (1932130 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `python:rc-buster` - linux; arm variant v7
@@ -648,14 +648,14 @@ CMD ["python3"]
 ### `python:rc-buster` - linux; s390x
 
 ```console
-$ docker pull python@sha256:cda97e559c12a5d28fe8cfca4c78daad9c91594a199f10a6f2693199ecaf9dcb
+$ docker pull python@sha256:d69fc8513ed2b0b9c72271871920d3bc84eba1bc3ee2d0e211f41ad987edaff6
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **332.3 MB (332294651 bytes)**  
+-	Total Size: **332.3 MB (332293475 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c72fbad70c41a0aaa00ae445f5b9783a1c2eb487485d0443d9e8fbb6d53cc26a`
+-	Image ID: `sha256:2a972b19f1b3f661dd16b75ce00a0b70fe505bf66aab181ab04cde8a51e8c9ca`
 -	Default Command: `["python3"]`
 
 ```dockerfile
@@ -679,21 +679,21 @@ ENV LANG=C.UTF-8
 RUN apt-get update && apt-get install -y --no-install-recommends 		libbluetooth-dev 		tk-dev 		uuid-dev 	&& rm -rf /var/lib/apt/lists/*
 # Tue, 09 Jun 2020 09:28:46 GMT
 ENV GPG_KEY=E3FF2839C048B25C084DEBE9B26995E310250568
-# Tue, 09 Jun 2020 22:02:58 GMT
-ENV PYTHON_VERSION=3.9.0b2
-# Tue, 09 Jun 2020 22:08:32 GMT
+# Thu, 11 Jun 2020 22:36:16 GMT
+ENV PYTHON_VERSION=3.9.0b3
+# Thu, 11 Jun 2020 22:41:21 GMT
 RUN set -ex 		&& wget -O python.tar.xz "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz" 	&& wget -O python.tar.xz.asc "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz.asc" 	&& export GNUPGHOME="$(mktemp -d)" 	&& gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$GPG_KEY" 	&& gpg --batch --verify python.tar.xz.asc python.tar.xz 	&& { command -v gpgconf > /dev/null && gpgconf --kill all || :; } 	&& rm -rf "$GNUPGHOME" python.tar.xz.asc 	&& mkdir -p /usr/src/python 	&& tar -xJC /usr/src/python --strip-components=1 -f python.tar.xz 	&& rm python.tar.xz 		&& cd /usr/src/python 	&& gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)" 	&& ./configure 		--build="$gnuArch" 		--enable-loadable-sqlite-extensions 		--enable-optimizations 		--enable-option-checking=fatal 		--enable-shared 		--with-system-expat 		--with-system-ffi 		--without-ensurepip 	&& make -j "$(nproc)" 	&& make install 	&& ldconfig 		&& find /usr/local -depth 		\( 			\( -type d -a \( -name test -o -name tests -o -name idle_test \) \) 			-o 			\( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) 		\) -exec rm -rf '{}' + 	&& rm -rf /usr/src/python 		&& python3 --version
-# Tue, 09 Jun 2020 22:08:38 GMT
+# Thu, 11 Jun 2020 22:41:23 GMT
 RUN cd /usr/local/bin 	&& ln -s idle3 idle 	&& ln -s pydoc3 pydoc 	&& ln -s python3 python 	&& ln -s python3-config python-config
-# Tue, 09 Jun 2020 22:08:39 GMT
+# Thu, 11 Jun 2020 22:41:23 GMT
 ENV PYTHON_PIP_VERSION=20.1.1
-# Tue, 09 Jun 2020 22:08:40 GMT
+# Thu, 11 Jun 2020 22:41:23 GMT
 ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/eff16c878c7fd6b688b9b4c4267695cf1a0bf01b/get-pip.py
-# Tue, 09 Jun 2020 22:08:40 GMT
+# Thu, 11 Jun 2020 22:41:24 GMT
 ENV PYTHON_GET_PIP_SHA256=b3153ec0cf7b7bbf9556932aa37e4981c35dc2a2c501d70d91d2795aa532be79
-# Tue, 09 Jun 2020 22:08:50 GMT
+# Thu, 11 Jun 2020 22:41:30 GMT
 RUN set -ex; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum --check --strict -; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		"pip==$PYTHON_PIP_VERSION" 	; 	pip --version; 		find /usr/local -depth 		\( 			\( -type d -a \( -name test -o -name tests -o -name idle_test \) \) 			-o 			\( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) 		\) -exec rm -rf '{}' +; 	rm -f get-pip.py
-# Tue, 09 Jun 2020 22:08:51 GMT
+# Thu, 11 Jun 2020 22:41:30 GMT
 CMD ["python3"]
 ```
 
@@ -722,15 +722,15 @@ CMD ["python3"]
 		Last Modified: Tue, 09 Jun 2020 11:03:38 GMT  
 		Size: 6.1 MB (6057856 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3073973aefc847467fcb1b79775ff07c4f796e69778800f35edccae168943d3c`  
-		Last Modified: Tue, 09 Jun 2020 22:22:38 GMT  
-		Size: 29.9 MB (29940496 bytes)  
+	-	`sha256:af76a744a9aa626ec76b3e5e815bc4f6877a0f6aa7bfcf3524fe81e64f5304be`  
+		Last Modified: Thu, 11 Jun 2020 22:54:01 GMT  
+		Size: 29.9 MB (29939527 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:caa4f353e743a54b78b2ab5a61fea30e024367cff05609a2d43df4c4dd614066`  
-		Last Modified: Tue, 09 Jun 2020 22:22:31 GMT  
-		Size: 232.0 B  
+	-	`sha256:82b142f93dc83d8fd7f14f0ac1b50c45cf36a0664a6c2deaee8112ea4eacb25d`  
+		Last Modified: Thu, 11 Jun 2020 22:53:55 GMT  
+		Size: 233.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:39f632280e132716eea640fab9de4fdc12d84e0cf7550b0da5c48840eac46a78`  
-		Last Modified: Tue, 09 Jun 2020 22:22:31 GMT  
-		Size: 1.9 MB (1932167 bytes)  
+	-	`sha256:7f2a6f629d0af7e928c876f8ef4a233bc35412e613307cd0e186e218df27c6ad`  
+		Last Modified: Thu, 11 Jun 2020 22:54:11 GMT  
+		Size: 1.9 MB (1931959 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
