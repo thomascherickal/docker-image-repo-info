@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:64b77336f454ac8159633156b9faf2ea2483d90aeb196533de92af9ad4e86f9f`
-- Created: `2020-05-16T09:28:15.114717192Z`
-- Virtual Size: ~ 181.71 Mb  
+- Image ID: `sha256:ebdc9b3b60bc2aee3beced4302c88b33d5b8b0258183fcfa5c497d75a02ce4ca`
+- Created: `2020-06-10T02:44:53.492067208Z`
+- Virtual Size: ~ 181.61 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -244,11 +244,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/bzip2/1.0.6-8.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/bzip2/1.0.6-8.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `ca-certificates=20161130+nmu1+deb9u1`
+### `dpkg` source package: `ca-certificates=20200601~deb9u1`
 
 Binary Packages:
 
-- `ca-certificates=20161130+nmu1+deb9u1`
+- `ca-certificates=20200601~deb9u1`
 
 Licenses: (parsed from: `/usr/share/doc/ca-certificates/copyright`)
 
@@ -259,16 +259,16 @@ Licenses: (parsed from: `/usr/share/doc/ca-certificates/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris ca-certificates=20161130+nmu1+deb9u1
-'http://deb.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_20161130+nmu1+deb9u1.dsc' ca-certificates_20161130+nmu1+deb9u1.dsc 1900 SHA256:c2f23c84c06abb9e982fa54ea6b061369711824d472039e89aa3fe46d2f37715
-'http://deb.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_20161130+nmu1+deb9u1.tar.xz' ca-certificates_20161130+nmu1+deb9u1.tar.xz 247788 SHA256:3b9b56e55a92acdabdae700340f36c5243105c2a022993407632bb08bb4c0197
+$ apt-get source -qq --print-uris ca-certificates=20200601~deb9u1
+'http://deb.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_20200601~deb9u1.dsc' ca-certificates_20200601~deb9u1.dsc 1855 SHA256:81772ce188acf4ef93aface3dc9fc0516fb193d1e7242c23a6e18a002a455302
+'http://deb.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_20200601~deb9u1.tar.xz' ca-certificates_20200601~deb9u1.tar.xz 245956 SHA256:873a9eb9ec66db1d9bc7c6829ee789fe6b1ba4ed497745df699b35145a3c98cd
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/ca-certificates/20161130+nmu1+deb9u1/ (for browsing the source)
-- https://sources.debian.net/src/ca-certificates/20161130+nmu1+deb9u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/ca-certificates/20161130+nmu1+deb9u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/ca-certificates/20200601~deb9u1/ (for browsing the source)
+- https://sources.debian.net/src/ca-certificates/20200601~deb9u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/ca-certificates/20200601~deb9u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cdebconf=0.227`
 
