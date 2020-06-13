@@ -1523,20 +1523,13 @@ Licenses: (parsed from: `/usr/share/doc/iproute2/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris iproute2=5.6.0-1
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.6.0-1.dsc' iproute2_5.6.0-1.dsc 1831 SHA256:447b459b1337f7057951faf834d9bd66e3c8f69ce5ec39e47c1e16d54a20a67f
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.6.0.orig.tar.xz' iproute2_5.6.0.orig.tar.xz 754812 SHA256:1b5b0e25ce6e23da7526ea1da044e814ad85ba761b10dd29c2b027c056b04692
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.6.0-1.debian.tar.xz' iproute2_5.6.0-1.debian.tar.xz 35876 SHA256:2fa627f1aee6ce52cec1ecdcd70fbb5b3374ebb94d40831f1a8d0c6aa5d95e25
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/iproute2/5.6.0-1/
 
-- https://sources.debian.net/src/iproute2/5.6.0-1/ (for browsing the source)
-- https://sources.debian.net/src/iproute2/5.6.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/iproute2/5.6.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `iptables=1.8.4-3`
 
@@ -2792,10 +2785,16 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris littler=0.3.10-1
-'http://http.debian.net/debian/pool/main/l/littler/littler_0.3.10-1.dsc' littler_0.3.10-1.dsc 1881 SHA256:3a785c66d5f043965a326407702235f9391f5fe9392f387da4246096ef4c954a
-'http://http.debian.net/debian/pool/main/l/littler/littler_0.3.10.orig.tar.gz' littler_0.3.10.orig.tar.gz 654934 SHA256:a53677955e115deff65b44a861ca60ca878cc8a1045b478dca98cd1ed52c6b2d
-'http://http.debian.net/debian/pool/main/l/littler/littler_0.3.10-1.debian.tar.xz' littler_0.3.10-1.debian.tar.xz 6872 SHA256:88418f3b0e1caf80dad4992837f5018a30c5191c38ea0c74fe4e93951a714dc4
+'http://deb.debian.org/debian/pool/main/l/littler/littler_0.3.10-1.dsc' littler_0.3.10-1.dsc 1881 SHA256:3a785c66d5f043965a326407702235f9391f5fe9392f387da4246096ef4c954a
+'http://deb.debian.org/debian/pool/main/l/littler/littler_0.3.10.orig.tar.gz' littler_0.3.10.orig.tar.gz 654934 SHA256:a53677955e115deff65b44a861ca60ca878cc8a1045b478dca98cd1ed52c6b2d
+'http://deb.debian.org/debian/pool/main/l/littler/littler_0.3.10-1.debian.tar.xz' littler_0.3.10-1.debian.tar.xz 6872 SHA256:88418f3b0e1caf80dad4992837f5018a30c5191c38ea0c74fe4e93951a714dc4
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/littler/0.3.10-1/ (for browsing the source)
+- https://sources.debian.net/src/littler/0.3.10-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/littler/0.3.10-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lsb=11.1.0`
 
@@ -3087,10 +3086,16 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris nlme=3.1.148-1
-'http://http.debian.net/debian/pool/main/n/nlme/nlme_3.1.148-1.dsc' nlme_3.1.148-1.dsc 1837 SHA256:6fc36bc5ce7c2d915392477095e83e69d643094553daa9c0c39c9040b228b23b
-'http://http.debian.net/debian/pool/main/n/nlme/nlme_3.1.148.orig.tar.gz' nlme_3.1.148.orig.tar.gz 792813 SHA256:77c23b644f09723addf16d31a3cb076aca95477418b6242f0c594d81f220aeb2
-'http://http.debian.net/debian/pool/main/n/nlme/nlme_3.1.148-1.debian.tar.xz' nlme_3.1.148-1.debian.tar.xz 7100 SHA256:004e515227a50b1b7176989888a82388aa23c4669d8400f4a1d2d77f28a2d2cb
+'http://deb.debian.org/debian/pool/main/n/nlme/nlme_3.1.148-1.dsc' nlme_3.1.148-1.dsc 1837 SHA256:6fc36bc5ce7c2d915392477095e83e69d643094553daa9c0c39c9040b228b23b
+'http://deb.debian.org/debian/pool/main/n/nlme/nlme_3.1.148.orig.tar.gz' nlme_3.1.148.orig.tar.gz 792813 SHA256:77c23b644f09723addf16d31a3cb076aca95477418b6242f0c594d81f220aeb2
+'http://deb.debian.org/debian/pool/main/n/nlme/nlme_3.1.148-1.debian.tar.xz' nlme_3.1.148-1.debian.tar.xz 7100 SHA256:004e515227a50b1b7176989888a82388aa23c4669d8400f4a1d2d77f28a2d2cb
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/nlme/3.1.148-1/ (for browsing the source)
+- https://sources.debian.net/src/nlme/3.1.148-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/nlme/3.1.148-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openldap=2.4.50+dfsg-1`
 
@@ -3362,11 +3367,17 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris perl=5.30.3-4
-'http://http.debian.net/debian/pool/main/p/perl/perl_5.30.3-4.dsc' perl_5.30.3-4.dsc 2983 SHA256:05c8d356f72848b6e26b57949b5fb7dcc6340719df292f83d02ff05fb84cdd98
-'http://http.debian.net/debian/pool/main/p/perl/perl_5.30.3.orig-regen-configure.tar.gz' perl_5.30.3.orig-regen-configure.tar.gz 870970 SHA256:99174174fbfc550f801076ab8a1a5831c92f75c1b81e553150351f14a111dcf8
-'http://http.debian.net/debian/pool/main/p/perl/perl_5.30.3.orig.tar.xz' perl_5.30.3.orig.tar.xz 12375128 SHA256:6967595f2e3f3a94544c35152f9a25e0cb8ea24ae45f4bf1882f2e33f4a400f4
-'http://http.debian.net/debian/pool/main/p/perl/perl_5.30.3-4.debian.tar.xz' perl_5.30.3-4.debian.tar.xz 171184 SHA256:a71ed73cab42cadb8cb9efe430ac075e644fea527f3689b64e4e0fe8b9648ffd
+'http://deb.debian.org/debian/pool/main/p/perl/perl_5.30.3-4.dsc' perl_5.30.3-4.dsc 2983 SHA256:05c8d356f72848b6e26b57949b5fb7dcc6340719df292f83d02ff05fb84cdd98
+'http://deb.debian.org/debian/pool/main/p/perl/perl_5.30.3.orig-regen-configure.tar.gz' perl_5.30.3.orig-regen-configure.tar.gz 870970 SHA256:99174174fbfc550f801076ab8a1a5831c92f75c1b81e553150351f14a111dcf8
+'http://deb.debian.org/debian/pool/main/p/perl/perl_5.30.3.orig.tar.xz' perl_5.30.3.orig.tar.xz 12375128 SHA256:6967595f2e3f3a94544c35152f9a25e0cb8ea24ae45f4bf1882f2e33f4a400f4
+'http://deb.debian.org/debian/pool/main/p/perl/perl_5.30.3-4.debian.tar.xz' perl_5.30.3-4.debian.tar.xz 171184 SHA256:a71ed73cab42cadb8cb9efe430ac075e644fea527f3689b64e4e0fe8b9648ffd
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/perl/5.30.3-4/ (for browsing the source)
+- https://sources.debian.net/src/perl/5.30.3-4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/perl/5.30.3-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pixman=0.36.0-1`
 
@@ -3440,10 +3451,16 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris r-base=4.0.1-1
-'http://http.debian.net/debian/pool/main/r/r-base/r-base_4.0.1-1.dsc' r-base_4.0.1-1.dsc 3016 SHA256:d4bac0cabc90c836e6ece73da712403790416bc70113e7dececc71a7cee7f956
-'http://http.debian.net/debian/pool/main/r/r-base/r-base_4.0.1.orig.tar.gz' r-base_4.0.1.orig.tar.gz 33189511 SHA256:95fe24a4d8d8f8f888460c8f5fe4311cec656e7a1722d233218bc03861bc6f32
-'http://http.debian.net/debian/pool/main/r/r-base/r-base_4.0.1-1.debian.tar.xz' r-base_4.0.1-1.debian.tar.xz 97188 SHA256:66655300608f4716ee5b378f58d720c9e8d9ac9319a4038705688c279f0d6e4a
+'http://deb.debian.org/debian/pool/main/r/r-base/r-base_4.0.1-1.dsc' r-base_4.0.1-1.dsc 3016 SHA256:d4bac0cabc90c836e6ece73da712403790416bc70113e7dececc71a7cee7f956
+'http://deb.debian.org/debian/pool/main/r/r-base/r-base_4.0.1.orig.tar.gz' r-base_4.0.1.orig.tar.gz 33189511 SHA256:95fe24a4d8d8f8f888460c8f5fe4311cec656e7a1722d233218bc03861bc6f32
+'http://deb.debian.org/debian/pool/main/r/r-base/r-base_4.0.1-1.debian.tar.xz' r-base_4.0.1-1.debian.tar.xz 97188 SHA256:66655300608f4716ee5b378f58d720c9e8d9ac9319a4038705688c279f0d6e4a
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/r-base/4.0.1-1/ (for browsing the source)
+- https://sources.debian.net/src/r-base/4.0.1-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/r-base/4.0.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `r-cran-class=7.3-17-1`
 
