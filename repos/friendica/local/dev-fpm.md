@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:53f96a08fe60711673f43adf820c858d9a99cd7a3295b441df0f2885ac0d6120`
-- Created: `2020-06-03T00:01:48.787427129Z`
-- Virtual Size: ~ 427.77 Mb  
+- Image ID: `sha256:720048ace24f862bdee64fc4b2e6e219db348a59ae3ac1f8b74f4f19f97e76da`
+- Created: `2020-06-12T01:39:09.600382791Z`
+- Virtual Size: ~ 427.67 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint-dev.sh"]`
@@ -18,10 +18,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=CBAF69F173A0FEA4B537F470D66C9593118BCCB6 F38252826ACD957EF380D39F2F7956BC5DA04B5D`
-  - `PHP_VERSION=7.3.18`
-  - `PHP_URL=https://www.php.net/distributions/php-7.3.18.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.3.18.tar.xz.asc`
-  - `PHP_SHA256=7b3e2479a8d6fd7666dcdef8aec50d49c4599cc6ee86e48d41724cfd99cc9e58`
+  - `PHP_VERSION=7.3.19`
+  - `PHP_URL=https://www.php.net/distributions/php-7.3.19.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.3.19.tar.xz.asc`
+  - `PHP_SHA256=6402faa19b1a8c4317c7612632bce985684a5bbae0980a5779a4019439882422`
   - `PHP_MD5=`
   - `TINI_VERSION=v0.18.0`
   - `FRIENDICA_VERSION=2020.06-dev`
@@ -353,11 +353,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/bzip2/1.0.6-8.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/bzip2/1.0.6-8.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `ca-certificates=20161130+nmu1+deb9u1`
+### `dpkg` source package: `ca-certificates=20200601~deb9u1`
 
 Binary Packages:
 
-- `ca-certificates=20161130+nmu1+deb9u1`
+- `ca-certificates=20200601~deb9u1`
 
 Licenses: (parsed from: `/usr/share/doc/ca-certificates/copyright`)
 
@@ -368,16 +368,16 @@ Licenses: (parsed from: `/usr/share/doc/ca-certificates/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris ca-certificates=20161130+nmu1+deb9u1
-'http://deb.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_20161130+nmu1+deb9u1.dsc' ca-certificates_20161130+nmu1+deb9u1.dsc 1900 SHA256:c2f23c84c06abb9e982fa54ea6b061369711824d472039e89aa3fe46d2f37715
-'http://deb.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_20161130+nmu1+deb9u1.tar.xz' ca-certificates_20161130+nmu1+deb9u1.tar.xz 247788 SHA256:3b9b56e55a92acdabdae700340f36c5243105c2a022993407632bb08bb4c0197
+$ apt-get source -qq --print-uris ca-certificates=20200601~deb9u1
+'http://deb.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_20200601~deb9u1.dsc' ca-certificates_20200601~deb9u1.dsc 1855 SHA256:81772ce188acf4ef93aface3dc9fc0516fb193d1e7242c23a6e18a002a455302
+'http://deb.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_20200601~deb9u1.tar.xz' ca-certificates_20200601~deb9u1.tar.xz 245956 SHA256:873a9eb9ec66db1d9bc7c6829ee789fe6b1ba4ed497745df699b35145a3c98cd
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/ca-certificates/20161130+nmu1+deb9u1/ (for browsing the source)
-- https://sources.debian.net/src/ca-certificates/20161130+nmu1+deb9u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/ca-certificates/20161130+nmu1+deb9u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/ca-certificates/20200601~deb9u1/ (for browsing the source)
+- https://sources.debian.net/src/ca-certificates/20200601~deb9u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/ca-certificates/20200601~deb9u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cdebconf=0.227`
 
