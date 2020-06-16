@@ -2387,20 +2387,13 @@ Licenses: (parsed from: `/usr/share/doc/libexif-dev/copyright`, `/usr/share/doc/
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libexif=0.6.21-2+deb8u3
-'http://security.debian.org/debian-security/pool/updates/main/libe/libexif/libexif_0.6.21-2+deb8u3.dsc' libexif_0.6.21-2+deb8u3.dsc 2127 SHA256:91444bea30ef0f8d0ec142096a3c8e0e9d0d5209d61209b716f4535b59afc9a8
-'http://security.debian.org/debian-security/pool/updates/main/libe/libexif/libexif_0.6.21.orig.tar.gz' libexif_0.6.21.orig.tar.gz 2081615 SHA256:edb7eb13664cf950a6edd132b75e99afe61c5effe2f16494e6d27bc404b287bf
-'http://security.debian.org/debian-security/pool/updates/main/libe/libexif/libexif_0.6.21-2+deb8u3.debian.tar.xz' libexif_0.6.21-2+deb8u3.debian.tar.xz 16048 SHA256:7c3641d06a7138175d01d0e1fdd01cea9d60a4b14f46d409f1ea5955e3aa659a
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libexif/0.6.21-2+deb8u3/
 
-- https://sources.debian.net/src/libexif/0.6.21-2+deb8u3/ (for browsing the source)
-- https://sources.debian.net/src/libexif/0.6.21-2+deb8u3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libexif/0.6.21-2+deb8u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libffi=3.1-2+deb8u1`
 

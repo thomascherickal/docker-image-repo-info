@@ -1517,21 +1517,13 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls-dane0/copyright`, `/usr/share/
 - `LGPLv3+_or_GPLv2+`
 - `The main library is licensed under GNU Lesser`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gnutls28=3.6.14-1
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.14-1.dsc' gnutls28_3.6.14-1.dsc 3479 SHA256:9f85587356a29ceb26ba6d741348e190090b9f2c86b6352626eff2ea5cbe6dfd
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.14.orig.tar.xz' gnutls28_3.6.14.orig.tar.xz 6069088 SHA256:5630751adec7025b8ef955af4d141d00d252a985769f51b4059e5affa3d39d63
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.14.orig.tar.xz.asc' gnutls28_3.6.14.orig.tar.xz.asc 854 SHA256:a3e05b531b68a4aca8fdc5dce83e7091b5aa859d76de7e8ba9992047272f04dd
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.14-1.debian.tar.xz' gnutls28_3.6.14-1.debian.tar.xz 62708 SHA256:1414cfc508353c270c55043b65a2279b86e75370e501f7fefd175ca7bcf07aee
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gnutls28/3.6.14-1/
 
-- https://sources.debian.net/src/gnutls28/3.6.14-1/ (for browsing the source)
-- https://sources.debian.net/src/gnutls28/3.6.14-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gnutls28/3.6.14-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gobject-introspection=1.64.1-1`
 
@@ -2111,21 +2103,13 @@ Licenses: (parsed from: `/usr/share/doc/libassuan0/copyright`)
 - `LGPL-3`
 - `LGPL-3+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libassuan=2.5.3-7
-'http://deb.debian.org/debian/pool/main/liba/libassuan/libassuan_2.5.3-7.dsc' libassuan_2.5.3-7.dsc 2014 SHA256:f23373705283a028f78b8286e662c563fdbb520fab46f3e679023821653bf2fa
-'http://deb.debian.org/debian/pool/main/liba/libassuan/libassuan_2.5.3.orig.tar.bz2' libassuan_2.5.3.orig.tar.bz2 572348 SHA256:91bcb0403866b4e7c4bc1cc52ed4c364a9b5414b3994f718c70303f7f765e702
-'http://deb.debian.org/debian/pool/main/liba/libassuan/libassuan_2.5.3.orig.tar.bz2.asc' libassuan_2.5.3.orig.tar.bz2.asc 952 SHA256:53b16a6619a2690b4f22da645a1d0c14b5664825c87b165ca5bd0de32607888a
-'http://deb.debian.org/debian/pool/main/liba/libassuan/libassuan_2.5.3-7.debian.tar.xz' libassuan_2.5.3-7.debian.tar.xz 13732 SHA256:6a617dab31e06d3db0258e90f3ec87531978d4c28fd0c00f92641fae1d3ebb45
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libassuan/2.5.3-7/
 
-- https://sources.debian.net/src/libassuan/2.5.3-7/ (for browsing the source)
-- https://sources.debian.net/src/libassuan/2.5.3-7/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libassuan/2.5.3-7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libbsd=0.10.0-1`
 
@@ -2876,20 +2860,13 @@ Licenses: (parsed from: `/usr/share/doc/gir1.2-rsvg-2.0/copyright`, `/usr/share/
 - `Sun-permissive`
 - `Unlicense`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris librsvg=2.48.4+dfsg-1
-'http://deb.debian.org/debian/pool/main/libr/librsvg/librsvg_2.48.4+dfsg-1.dsc' librsvg_2.48.4+dfsg-1.dsc 3107 SHA256:489e5a8c94f254318f0b1a8976352384ccf5616f9b06c8b044eea25ab749fe5d
-'http://deb.debian.org/debian/pool/main/libr/librsvg/librsvg_2.48.4+dfsg.orig.tar.xz' librsvg_2.48.4+dfsg.orig.tar.xz 10455240 SHA256:08c091a3edef25b9c2c71e918c78fdb0bf79e1836c656283097676150c49a1aa
-'http://deb.debian.org/debian/pool/main/libr/librsvg/librsvg_2.48.4+dfsg-1.debian.tar.xz' librsvg_2.48.4+dfsg-1.debian.tar.xz 24224 SHA256:7bd9ac3d5c8af6f90fa9462567afe1524cff4921332524977534411fa73713eb
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/librsvg/2.48.4+dfsg-1/
 
-- https://sources.debian.net/src/librsvg/2.48.4+dfsg-1/ (for browsing the source)
-- https://sources.debian.net/src/librsvg/2.48.4+dfsg-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/librsvg/2.48.4+dfsg-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libseccomp=2.4.3-1`
 
