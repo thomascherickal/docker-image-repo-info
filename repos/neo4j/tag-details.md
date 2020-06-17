@@ -31,6 +31,8 @@
 -	[`neo4j:3.5.17-enterprise`](#neo4j3517-enterprise)
 -	[`neo4j:3.5.18`](#neo4j3518)
 -	[`neo4j:3.5.18-enterprise`](#neo4j3518-enterprise)
+-	[`neo4j:3.5.19`](#neo4j3519)
+-	[`neo4j:3.5.19-enterprise`](#neo4j3519-enterprise)
 -	[`neo4j:3.5.6`](#neo4j356)
 -	[`neo4j:3.5.6-enterprise`](#neo4j356-enterprise)
 -	[`neo4j:3.5.7`](#neo4j357)
@@ -51,6 +53,8 @@
 -	[`neo4j:4.0.4-enterprise`](#neo4j404-enterprise)
 -	[`neo4j:4.0.5`](#neo4j405)
 -	[`neo4j:4.0.5-enterprise`](#neo4j405-enterprise)
+-	[`neo4j:4.0.6`](#neo4j406)
+-	[`neo4j:4.0.6-enterprise`](#neo4j406-enterprise)
 -	[`neo4j:4.0-enterprise`](#neo4j40-enterprise)
 -	[`neo4j:enterprise`](#neo4jenterprise)
 -	[`neo4j:latest`](#neo4jlatest)
@@ -3216,6 +3220,14 @@ CMD ["neo4j"]
 		Size: 5.8 KB (5841 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `neo4j:3.5.19`
+
+**does not exist** (yet?)
+
+## `neo4j:3.5.19-enterprise`
+
+**does not exist** (yet?)
+
 ## `neo4j:3.5.6`
 
 ```console
@@ -5421,6 +5433,14 @@ CMD ["neo4j"]
 		Last Modified: Wed, 10 Jun 2020 06:33:25 GMT  
 		Size: 5.8 KB (5753 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `neo4j:4.0.6`
+
+**does not exist** (yet?)
+
+## `neo4j:4.0.6-enterprise`
+
+**does not exist** (yet?)
 
 ## `neo4j:4.0-enterprise`
 
