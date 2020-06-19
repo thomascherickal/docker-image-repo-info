@@ -3,6 +3,7 @@
 # Tags of `silverpeas`
 
 -	[`silverpeas:6.0.2`](#silverpeas602)
+-	[`silverpeas:6.1`](#silverpeas61)
 -	[`silverpeas:latest`](#silverpeaslatest)
 
 ## `silverpeas:6.0.2`
@@ -161,6 +162,10 @@ CMD ["/opt/run.sh"]
 		Last Modified: Wed, 17 Jun 2020 05:14:10 GMT  
 		Size: 604.7 MB (604695826 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `silverpeas:6.1`
+
+**does not exist** (yet?)
 
 ## `silverpeas:latest`
 
