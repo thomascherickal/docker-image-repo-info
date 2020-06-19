@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:41c6b3b2857bb0fea7af8085b47c2bed0bbe3e1b26ca4f14ae7d3ebdc492db4c`
-- Created: `2020-05-27T00:28:56.902484283Z`
+- Image ID: `sha256:0387eb2628070d0837fc28f5d1dd59737cd841aeb7d7317962d8552be353daee`
+- Created: `2020-06-17T05:27:03.82184258Z`
 - Virtual Size: ~ 2.19 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -118,21 +118,25 @@ $ apt-get source -qq --print-uris apr=1.5.2-3
 'http://archive.ubuntu.com/ubuntu/pool/main/a/apr/apr_1.5.2-3.debian.tar.xz' apr_1.5.2-3.debian.tar.xz 18572 SHA256:442ffb9a7225cf405fe7a2b4a4624543fcb93e6f14cccf22acd57916cfa8348d
 ```
 
-### `dpkg` source package: `apt=1.2.32`
+### `dpkg` source package: `apt=1.2.32ubuntu0.1`
 
 Binary Packages:
 
-- `apt=1.2.32`
-- `libapt-pkg5.0:amd64=1.2.32`
+- `apt=1.2.32ubuntu0.1`
+- `libapt-pkg5.0:amd64=1.2.32ubuntu0.1`
 
 Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-pkg5.0/copyright`)
 
 - `GPL-2`
 - `GPLv2+`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris apt=1.2.32ubuntu0.1
+'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.2.32ubuntu0.1.dsc' apt_1.2.32ubuntu0.1.dsc 2218 SHA256:e73a0ac2ae73ee0417d135f8d5e5a0b0906aa9ace64fd0a4d4a0cfc483a7269f
+'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.2.32ubuntu0.1.tar.xz' apt_1.2.32ubuntu0.1.tar.xz 2095712 SHA256:3374c23e40ec7a8d7efbb740b353065760b3527c12bfad0a6daa4072436b8afc
+```
 
 ### `dpkg` source package: `armadillo=1:6.500.5+dfsg-1`
 
@@ -512,11 +516,11 @@ $ apt-get source -qq --print-uris bzr=2.7.0-2ubuntu3.1
 'http://archive.ubuntu.com/ubuntu/pool/main/b/bzr/bzr_2.7.0-2ubuntu3.1.debian.tar.xz' bzr_2.7.0-2ubuntu3.1.debian.tar.xz 42660 SHA256:7336e2ffc7f1f3a36d76c781f96076df4f81d140904163bb57f64f2a802f965b
 ```
 
-### `dpkg` source package: `ca-certificates=20170717~16.04.2`
+### `dpkg` source package: `ca-certificates=20190110~16.04.1`
 
 Binary Packages:
 
-- `ca-certificates=20170717~16.04.2`
+- `ca-certificates=20190110~16.04.1`
 
 Licenses: (parsed from: `/usr/share/doc/ca-certificates/copyright`)
 
@@ -524,9 +528,13 @@ Licenses: (parsed from: `/usr/share/doc/ca-certificates/copyright`)
 - `GPL-2+`
 - `MPL-2.0`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris ca-certificates=20190110~16.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20190110~16.04.1.dsc' ca-certificates_20190110~16.04.1.dsc 1969 SHA256:d71f5af4b47dd58e6a6221edbb2ca2102e7b24bb662eb41f6247131f36ddb26e
+'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20190110~16.04.1.tar.xz' ca-certificates_20190110~16.04.1.tar.xz 243584 SHA256:021db3fbd372f1caf1cdeccd117f9f271297603490b4381405422da481f40dcc
+```
 
 ### `dpkg` source package: `cairo=1.14.6-1`
 
@@ -829,11 +837,11 @@ $ apt-get source -qq --print-uris db5.3=5.3.28-11ubuntu0.2
 'http://archive.ubuntu.com/ubuntu/pool/main/d/db5.3/db5.3_5.3.28-11ubuntu0.2.debian.tar.xz' db5.3_5.3.28-11ubuntu0.2.debian.tar.xz 29312 SHA256:01f2cd8d0eda0f2b48b1aef7cb3babe94ecd14b1955de437b61e04f7b72bdd0c
 ```
 
-### `dpkg` source package: `dbus=1.10.6-1ubuntu3.5`
+### `dpkg` source package: `dbus=1.10.6-1ubuntu3.6`
 
 Binary Packages:
 
-- `libdbus-1-3:amd64=1.10.6-1ubuntu3.5`
+- `libdbus-1-3:amd64=1.10.6-1ubuntu3.6`
 
 Licenses: (parsed from: `/usr/share/doc/libdbus-1-3/copyright`)
 
@@ -850,10 +858,10 @@ Licenses: (parsed from: `/usr/share/doc/libdbus-1-3/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris dbus=1.10.6-1ubuntu3.5
-'http://archive.ubuntu.com/ubuntu/pool/main/d/dbus/dbus_1.10.6-1ubuntu3.5.dsc' dbus_1.10.6-1ubuntu3.5.dsc 3164 SHA256:781a42ed620bca22c3c34a2277354292392188fb23d5efacd9cfa1fd0583386c
+$ apt-get source -qq --print-uris dbus=1.10.6-1ubuntu3.6
+'http://archive.ubuntu.com/ubuntu/pool/main/d/dbus/dbus_1.10.6-1ubuntu3.6.dsc' dbus_1.10.6-1ubuntu3.6.dsc 3090 SHA256:40376cff2bd1f388c376a8c4cced48cf501d158b4a90334e2197ff7cc5249457
 'http://archive.ubuntu.com/ubuntu/pool/main/d/dbus/dbus_1.10.6.orig.tar.gz' dbus_1.10.6.orig.tar.gz 1952608 SHA256:b5fefa08a77edd76cd64d872db949eebc02cf6f3f8be82e4bbc641742af5d35f
-'http://archive.ubuntu.com/ubuntu/pool/main/d/dbus/dbus_1.10.6-1ubuntu3.5.debian.tar.xz' dbus_1.10.6-1ubuntu3.5.debian.tar.xz 65116 SHA256:2ce01c691a1df555cd27889e8016b7bdd55b17bf398f9796e8e45c0eee36d605
+'http://archive.ubuntu.com/ubuntu/pool/main/d/dbus/dbus_1.10.6-1ubuntu3.6.debian.tar.xz' dbus_1.10.6-1ubuntu3.6.debian.tar.xz 66784 SHA256:93d3eeed9d8d511cd3be493b052b2bf7c3a8a55dcb9ed115c5bf5c0f362562bd
 ```
 
 ### `dpkg` source package: `debconf=1.5.58ubuntu2`
@@ -3013,21 +3021,26 @@ $ apt-get source -qq --print-uris libinput=1.6.3-1ubuntu1~16.04.1
 'http://archive.ubuntu.com/ubuntu/pool/main/libi/libinput/libinput_1.6.3-1ubuntu1~16.04.1.debian.tar.xz' libinput_1.6.3-1ubuntu1~16.04.1.debian.tar.xz 19324 SHA256:021d03b082d8169f5f3a02086b822de458109362a236b0030e60d2b4205c4f6f
 ```
 
-### `dpkg` source package: `libjpeg-turbo=1.4.2-0ubuntu3.3`
+### `dpkg` source package: `libjpeg-turbo=1.4.2-0ubuntu3.4`
 
 Binary Packages:
 
-- `libjpeg-turbo8:amd64=1.4.2-0ubuntu3.3`
-- `libjpeg-turbo8-dev:amd64=1.4.2-0ubuntu3.3`
+- `libjpeg-turbo8:amd64=1.4.2-0ubuntu3.4`
+- `libjpeg-turbo8-dev:amd64=1.4.2-0ubuntu3.4`
 
 Licenses: (parsed from: `/usr/share/doc/libjpeg-turbo8/copyright`, `/usr/share/doc/libjpeg-turbo8-dev/copyright`)
 
 - `JPEG`
 - `LGPL-2.1`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris libjpeg-turbo=1.4.2-0ubuntu3.4
+'http://archive.ubuntu.com/ubuntu/pool/main/libj/libjpeg-turbo/libjpeg-turbo_1.4.2-0ubuntu3.4.dsc' libjpeg-turbo_1.4.2-0ubuntu3.4.dsc 2302 SHA256:0080b735775bfdc8927856da35ec52dc870d787b0d6864ad1875aa2a1c15d69d
+'http://archive.ubuntu.com/ubuntu/pool/main/libj/libjpeg-turbo/libjpeg-turbo_1.4.2.orig.tar.gz' libjpeg-turbo_1.4.2.orig.tar.gz 1569306 SHA256:521bb5d3043e7ac063ce3026d9a59cc2ab2e9636c655a2515af5f4706122233e
+'http://archive.ubuntu.com/ubuntu/pool/main/libj/libjpeg-turbo/libjpeg-turbo_1.4.2-0ubuntu3.4.debian.tar.xz' libjpeg-turbo_1.4.2-0ubuntu3.4.debian.tar.xz 30156 SHA256:f3e6a20cb3accb33cfdfed128ebc09e21416952472601a759bc4fd37bba482d7
+```
 
 ### `dpkg` source package: `libjpeg8-empty=8c-2ubuntu8`
 
@@ -4131,20 +4144,25 @@ $ apt-get source -qq --print-uris libyaml=0.1.6-3
 'http://archive.ubuntu.com/ubuntu/pool/main/liby/libyaml/libyaml_0.1.6-3.debian.tar.xz' libyaml_0.1.6-3.debian.tar.xz 4268 SHA256:fd567e6918903833e5c4f1f87254c550eca07c2bba1ccbe6031da33243cf4297
 ```
 
-### `dpkg` source package: `linux=4.4.0-179.209`
+### `dpkg` source package: `linux=4.4.0-184.214`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=4.4.0-179.209`
+- `linux-libc-dev:amd64=4.4.0-184.214`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 - `redpine-signals`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris linux=4.4.0-184.214
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0-184.214.dsc' linux_4.4.0-184.214.dsc 11601 SHA256:45a3c84ef539ad5cff57c02e9d66dcdfc5c9df21347f87b78ef41954e9d169f3
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0.orig.tar.gz' linux_4.4.0.orig.tar.gz 132860730 SHA256:730e75919b5d30a9bc934ccb300eaedfdf44994ca9ee1d07a46901c46c221357
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0-184.214.diff.gz' linux_4.4.0-184.214.diff.gz 16510822 SHA256:4528f89fc09e32fb65329113ce3976c50ab9a46f348d94b527ba8cf851cb3b5a
+```
 
 ### `dpkg` source package: `lksctp-tools=1.0.16+dfsg-3`
 
@@ -5024,21 +5042,26 @@ $ apt-get source -qq --print-uris openni=1.5.4.0-14
 'http://archive.ubuntu.com/ubuntu/pool/universe/o/openni/openni_1.5.4.0-14.debian.tar.xz' openni_1.5.4.0-14.debian.tar.xz 648524 SHA256:f69368ad4f4660755e16549108d028d72ce5da391bb0b58f9ec32c18a5e4147c
 ```
 
-### `dpkg` source package: `openssl=1.0.2g-1ubuntu4.15`
+### `dpkg` source package: `openssl=1.0.2g-1ubuntu4.16`
 
 Binary Packages:
 
-- `libssl-dev:amd64=1.0.2g-1ubuntu4.15`
-- `libssl1.0.0:amd64=1.0.2g-1ubuntu4.15`
-- `openssl=1.0.2g-1ubuntu4.15`
+- `libssl-dev:amd64=1.0.2g-1ubuntu4.16`
+- `libssl1.0.0:amd64=1.0.2g-1ubuntu4.16`
+- `openssl=1.0.2g-1ubuntu4.16`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris openssl=1.0.2g-1ubuntu4.16
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.0.2g-1ubuntu4.16.dsc' openssl_1.0.2g-1ubuntu4.16.dsc 2453 SHA256:3a8e643acae8c4e627ed97b05e51c2eaf873680170792db4e5dce4df58b40642
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.0.2g.orig.tar.gz' openssl_1.0.2g.orig.tar.gz 5266102 SHA256:b784b1b3907ce39abf4098702dade6365522a253ad1552e267a9a0e89594aa33
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.0.2g-1ubuntu4.16.debian.tar.xz' openssl_1.0.2g-1ubuntu4.16.debian.tar.xz 136592 SHA256:d306228914752dd61e390d4d00ce8f6bbf3d3702ecfa116b255eebfb8d52dd33
+```
 
 ### `dpkg` source package: `opus=1.1.2-1ubuntu1`
 
@@ -8567,12 +8590,12 @@ $ apt-get source -qq --print-uris sphinx=1.3.6-2ubuntu1.2
 'http://archive.ubuntu.com/ubuntu/pool/main/s/sphinx/sphinx_1.3.6-2ubuntu1.2.debian.tar.xz' sphinx_1.3.6-2ubuntu1.2.debian.tar.xz 31596 SHA256:c54d66d37a8dbe39ad579d88422d5b88e9b23e20e02251e7f2692ba56f054e0f
 ```
 
-### `dpkg` source package: `sqlite3=3.11.0-1ubuntu1.4`
+### `dpkg` source package: `sqlite3=3.11.0-1ubuntu1.5`
 
 Binary Packages:
 
-- `libsqlite3-0:amd64=3.11.0-1ubuntu1.4`
-- `libsqlite3-dev:amd64=3.11.0-1ubuntu1.4`
+- `libsqlite3-0:amd64=3.11.0-1ubuntu1.5`
+- `libsqlite3-dev:amd64=3.11.0-1ubuntu1.5`
 
 Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`, `/usr/share/doc/libsqlite3-dev/copyright`)
 
@@ -8580,9 +8603,15 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`, `/usr/share/doc
 - `GPL-2+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris sqlite3=3.11.0-1ubuntu1.5
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.11.0-1ubuntu1.5.dsc' sqlite3_3.11.0-1ubuntu1.5.dsc 2625 SHA256:296116f2ab465baecbd2bff99f4a994549737a45302cc6e5184616a07d227003
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.11.0.orig-www.tar.xz' sqlite3_3.11.0.orig-www.tar.xz 3135012 SHA256:99843a91a1da29cf07269df49b37b0cd8a75035a88aacdb1186f94a9a217bab3
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.11.0.orig.tar.xz' sqlite3_3.11.0.orig.tar.xz 5122440 SHA256:79fb8800b8744337d5317270899a5a40612bb76f81517e131bf496c26b044490
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.11.0-1ubuntu1.5.debian.tar.xz' sqlite3_3.11.0-1ubuntu1.5.debian.tar.xz 45984 SHA256:05dbaed6db014ac494c7d0322d572196e4538d73cef7579e9d033e704cf086f8
+```
 
 ### `dpkg` source package: `subversion=1.9.3-2ubuntu1.3`
 
@@ -8647,14 +8676,14 @@ $ apt-get source -qq --print-uris superlu=4.3+dfsg-3
 'http://archive.ubuntu.com/ubuntu/pool/universe/s/superlu/superlu_4.3+dfsg-3.debian.tar.xz' superlu_4.3+dfsg-3.debian.tar.xz 8472 SHA256:49b450efda3b636894fb66b0998c6246d5df1f6ad9135a5c7c4983dd630c8fc4
 ```
 
-### `dpkg` source package: `systemd=229-4ubuntu21.27`
+### `dpkg` source package: `systemd=229-4ubuntu21.28`
 
 Binary Packages:
 
-- `libsystemd0:amd64=229-4ubuntu21.27`
-- `libudev1:amd64=229-4ubuntu21.27`
-- `systemd=229-4ubuntu21.27`
-- `systemd-sysv=229-4ubuntu21.27`
+- `libsystemd0:amd64=229-4ubuntu21.28`
+- `libudev1:amd64=229-4ubuntu21.28`
+- `systemd=229-4ubuntu21.28`
+- `systemd-sysv=229-4ubuntu21.28`
 
 Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/libudev1/copyright`, `/usr/share/doc/systemd/copyright`, `/usr/share/doc/systemd-sysv/copyright`)
 
@@ -8669,10 +8698,10 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris systemd=229-4ubuntu21.27
-'http://security.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_229-4ubuntu21.27.dsc' systemd_229-4ubuntu21.27.dsc 4367 SHA256:5f49729464449659157420ee8c250ef12e806998221b04ef44952461984c73ba
-'http://security.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_229.orig.tar.gz' systemd_229.orig.tar.gz 4319173 SHA256:b51b0a48d1beb388d95bd6a98d62be05490335d4bb388aefecdcb576e91e0741
-'http://security.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_229-4ubuntu21.27.debian.tar.xz' systemd_229-4ubuntu21.27.debian.tar.xz 311204 SHA256:9ad917c8dc6f4bac8ffca471756c3c2c66b2168788c6c7559d0f56b959453f60
+$ apt-get source -qq --print-uris systemd=229-4ubuntu21.28
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_229-4ubuntu21.28.dsc' systemd_229-4ubuntu21.28.dsc 4643 SHA256:d1dba84ee92a4d5fc5a8a7b2568afebc7db1c7d113f23042c7ee19b1c222de6c
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_229.orig.tar.gz' systemd_229.orig.tar.gz 4319173 SHA256:b51b0a48d1beb388d95bd6a98d62be05490335d4bb388aefecdcb576e91e0741
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_229-4ubuntu21.28.debian.tar.xz' systemd_229-4ubuntu21.28.debian.tar.xz 312524 SHA256:8be42f694303095740a7c8381a0914b4573c7a8c18b97a844ebd3c0954e31eb5
 ```
 
 ### `dpkg` source package: `sysvinit=2.88dsf-59.3ubuntu2`
