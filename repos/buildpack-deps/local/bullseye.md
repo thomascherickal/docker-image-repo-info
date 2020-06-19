@@ -2040,20 +2040,13 @@ Licenses: (parsed from: `/usr/share/doc/krb5-multidev/copyright`, `/usr/share/do
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris krb5=1.17-7
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17-7.dsc' krb5_1.17-7.dsc 3177 SHA256:e87976ef609ade00c83f7d58628bb705f7c1a4647c3bbf2bc80b806e08622086
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17.orig.tar.gz' krb5_1.17.orig.tar.gz 8761763 SHA256:5a6e2284a53de5702d3dc2be3b9339c963f9b5397d3fbbc53beb249380a781f5
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17-7.debian.tar.xz' krb5_1.17-7.debian.tar.xz 144276 SHA256:b8f39a918fc2872b5befe4e77fc8ed40f193ab2ebfbb9d5b670a461b618542f4
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/krb5/1.17-7/
 
-- https://sources.debian.net/src/krb5/1.17-7/ (for browsing the source)
-- https://sources.debian.net/src/krb5/1.17-7/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/krb5/1.17-7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lcms2=2.9-4`
 
@@ -5192,19 +5185,13 @@ Licenses: (parsed from: `/usr/share/doc/ucf/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ucf=3.0042
-'http://deb.debian.org/debian/pool/main/u/ucf/ucf_3.0042.dsc' ucf_3.0042.dsc 1423 SHA256:f541cd403be385055761ff2d4c6e14386bce4c2f6ede2a463b0d1f968e9c432d
-'http://deb.debian.org/debian/pool/main/u/ucf/ucf_3.0042.tar.xz' ucf_3.0042.tar.xz 70452 SHA256:9e7f6fe5f2085ab2689e0cbdbf13619ade2b2663824cd8a5690e0a470566231f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/ucf/3.0042/
 
-- https://sources.debian.net/src/ucf/3.0042/ (for browsing the source)
-- https://sources.debian.net/src/ucf/3.0042/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/ucf/3.0042/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `unbound=1.10.1-1`
 
