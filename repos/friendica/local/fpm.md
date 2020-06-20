@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:b82aec6b29472168c881eb8139d77a477d52839054296b528a64cdafabfe67a3`
-- Created: `2020-04-24T11:29:43.647858024Z`
-- Virtual Size: ~ 544.84 Mb  
+- Image ID: `sha256:8b88df0c41ce2374ef839bc87ad899504bbd19bf184da0e44590dd8b88a6fb98`
+- Created: `2020-06-18T21:25:32.534506212Z`
+- Virtual Size: ~ 530.61 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -18,13 +18,15 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=CBAF69F173A0FEA4B537F470D66C9593118BCCB6 F38252826ACD957EF380D39F2F7956BC5DA04B5D`
-  - `PHP_VERSION=7.3.17`
-  - `PHP_URL=https://www.php.net/get/php-7.3.17.tar.xz/from/this/mirror`
-  - `PHP_ASC_URL=https://www.php.net/get/php-7.3.17.tar.xz.asc/from/this/mirror`
-  - `PHP_SHA256=6a30304c27f7e7a94538f5ffec599f600ee93aedbbecad8aa4f8bec539b10ad8`
+  - `PHP_VERSION=7.3.19`
+  - `PHP_URL=https://www.php.net/distributions/php-7.3.19.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.3.19.tar.xz.asc`
+  - `PHP_SHA256=6402faa19b1a8c4317c7612632bce985684a5bbae0980a5779a4019439882422`
   - `PHP_MD5=`
-  - `TINI_VERSION=v0.18.0`
+  - `TINI_VERSION=v0.19.0`
   - `FRIENDICA_VERSION=2020.03`
+  - `FRIENDICA_VERSION_YEAR=2020`
+  - `FRIENDICA_VERSION_MONTH=03`
   - `FRIENDICA_ADDONS=2020.03`
 
 ## `dpkg` (`.deb`-based packages)
@@ -79,12 +81,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/adduser/3.115/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/adduser/3.115/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `apt=1.4.9`
+### `dpkg` source package: `apt=1.4.10`
 
 Binary Packages:
 
-- `apt=1.4.9`
-- `libapt-pkg5.0:amd64=1.4.9`
+- `apt=1.4.10`
+- `libapt-pkg5.0:amd64=1.4.10`
 
 Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-pkg5.0/copyright`)
 
@@ -94,16 +96,16 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 Source:
 
 ```console
-$ apt-get source -qq --print-uris apt=1.4.9
-'http://deb.debian.org/debian/pool/main/a/apt/apt_1.4.9.dsc' apt_1.4.9.dsc 2549 SHA256:986d98b00caac809341f65acb3d14321d645ce8e87e411c26c66bf149a10dfea
-'http://deb.debian.org/debian/pool/main/a/apt/apt_1.4.9.tar.xz' apt_1.4.9.tar.xz 2079572 SHA256:d4d65e7c84da86f3e6dcc933bba46a08db429c9d933b667c864f5c0e880bac0d
+$ apt-get source -qq --print-uris apt=1.4.10
+'http://security.debian.org/debian-security/pool/updates/main/a/apt/apt_1.4.10.dsc' apt_1.4.10.dsc 2553 SHA256:4b05e85f29d5f9809e33b237612bffefc8afd9df30da18a6c34ac6ce58b60596
+'http://security.debian.org/debian-security/pool/updates/main/a/apt/apt_1.4.10.tar.xz' apt_1.4.10.tar.xz 2080560 SHA256:eaa314e8ebc9e62fedf316d196d1a99d894fd715e6385ed18afd41cc2cd5b127
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/apt/1.4.9/ (for browsing the source)
-- https://sources.debian.net/src/apt/1.4.9/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apt/1.4.9/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/apt/1.4.10/ (for browsing the source)
+- https://sources.debian.net/src/apt/1.4.10/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/apt/1.4.10/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `argon2=0~20171227-0.2`
 
@@ -353,11 +355,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/bzip2/1.0.6-8.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/bzip2/1.0.6-8.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `ca-certificates=20161130+nmu1+deb9u1`
+### `dpkg` source package: `ca-certificates=20200601~deb9u1`
 
 Binary Packages:
 
-- `ca-certificates=20161130+nmu1+deb9u1`
+- `ca-certificates=20200601~deb9u1`
 
 Licenses: (parsed from: `/usr/share/doc/ca-certificates/copyright`)
 
@@ -368,16 +370,16 @@ Licenses: (parsed from: `/usr/share/doc/ca-certificates/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris ca-certificates=20161130+nmu1+deb9u1
-'http://deb.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_20161130+nmu1+deb9u1.dsc' ca-certificates_20161130+nmu1+deb9u1.dsc 1900 SHA256:c2f23c84c06abb9e982fa54ea6b061369711824d472039e89aa3fe46d2f37715
-'http://deb.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_20161130+nmu1+deb9u1.tar.xz' ca-certificates_20161130+nmu1+deb9u1.tar.xz 247788 SHA256:3b9b56e55a92acdabdae700340f36c5243105c2a022993407632bb08bb4c0197
+$ apt-get source -qq --print-uris ca-certificates=20200601~deb9u1
+'http://deb.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_20200601~deb9u1.dsc' ca-certificates_20200601~deb9u1.dsc 1855 SHA256:81772ce188acf4ef93aface3dc9fc0516fb193d1e7242c23a6e18a002a455302
+'http://deb.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_20200601~deb9u1.tar.xz' ca-certificates_20200601~deb9u1.tar.xz 245956 SHA256:873a9eb9ec66db1d9bc7c6829ee789fe6b1ba4ed497745df699b35145a3c98cd
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/ca-certificates/20161130+nmu1+deb9u1/ (for browsing the source)
-- https://sources.debian.net/src/ca-certificates/20161130+nmu1+deb9u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/ca-certificates/20161130+nmu1+deb9u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/ca-certificates/20200601~deb9u1/ (for browsing the source)
+- https://sources.debian.net/src/ca-certificates/20200601~deb9u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/ca-certificates/20200601~deb9u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cdebconf=0.227`
 
@@ -2751,12 +2753,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/openjpeg2/2.1.2-1.1+deb9u4/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/openjpeg2/2.1.2-1.1+deb9u4/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openldap=2.4.44+dfsg-5+deb9u3`
+### `dpkg` source package: `openldap=2.4.44+dfsg-5+deb9u4`
 
 Binary Packages:
 
-- `libldap-2.4-2:amd64=2.4.44+dfsg-5+deb9u3`
-- `libldap-common=2.4.44+dfsg-5+deb9u3`
+- `libldap-2.4-2:amd64=2.4.44+dfsg-5+deb9u4`
+- `libldap-common=2.4.44+dfsg-5+deb9u4`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -2765,17 +2767,17 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openldap=2.4.44+dfsg-5+deb9u3
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.44+dfsg-5+deb9u3.dsc' openldap_2.4.44+dfsg-5+deb9u3.dsc 3009 SHA256:feff6977d4674bbbbe3c34c9d292edcfe6d895d10aa165910dbc96819a327abb
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.44+dfsg.orig.tar.gz' openldap_2.4.44+dfsg.orig.tar.gz 4826590 SHA256:d5187c229bec163c5d97845846e1b87917755f85b04f444c08836384f4bd7ffe
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.44+dfsg-5+deb9u3.debian.tar.xz' openldap_2.4.44+dfsg-5+deb9u3.debian.tar.xz 168576 SHA256:926e2b00418901d9b52d314a6f6319f84c9dd04e12d085830ffc37bf3329c402
+$ apt-get source -qq --print-uris openldap=2.4.44+dfsg-5+deb9u4
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.44+dfsg-5+deb9u4.dsc' openldap_2.4.44+dfsg-5+deb9u4.dsc 3143 SHA256:07ad0dadb47a8ed0ee5aa6a207859873fdd296511433ca170bc635fad659f02a
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.44+dfsg.orig.tar.gz' openldap_2.4.44+dfsg.orig.tar.gz 4826590 SHA256:d5187c229bec163c5d97845846e1b87917755f85b04f444c08836384f4bd7ffe
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.44+dfsg-5+deb9u4.debian.tar.xz' openldap_2.4.44+dfsg-5+deb9u4.debian.tar.xz 169396 SHA256:03b7a898ea970c05c8a7f80505c6317e7570e87954ee21df00593c1f2c1412ab
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/openldap/2.4.44+dfsg-5+deb9u3/ (for browsing the source)
-- https://sources.debian.net/src/openldap/2.4.44+dfsg-5+deb9u3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openldap/2.4.44+dfsg-5+deb9u3/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/openldap/2.4.44+dfsg-5+deb9u4/ (for browsing the source)
+- https://sources.debian.net/src/openldap/2.4.44+dfsg-5+deb9u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openldap/2.4.44+dfsg-5+deb9u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssl1.0=1.0.2u-1~deb9u1`
 
@@ -3387,11 +3389,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tar/1.29b-1.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tar/1.29b-1.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tiff=4.0.8-2+deb9u4`
+### `dpkg` source package: `tiff=4.0.8-2+deb9u5`
 
 Binary Packages:
 
-- `libtiff5:amd64=4.0.8-2+deb9u4`
+- `libtiff5:amd64=4.0.8-2+deb9u5`
 
 Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`)
 
@@ -3400,17 +3402,17 @@ Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris tiff=4.0.8-2+deb9u4
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.0.8-2+deb9u4.dsc' tiff_4.0.8-2+deb9u4.dsc 2185 SHA256:7f2a8ae92ea3ea871eb9baca399e589d256163e9689a64ac41ac64253c84b0b7
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.0.8.orig.tar.gz' tiff_4.0.8.orig.tar.gz 2065574 SHA256:59d7a5a8ccd92059913f246877db95a2918e6c04fb9d43fd74e5c3390dac2910
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.0.8-2+deb9u4.debian.tar.xz' tiff_4.0.8-2+deb9u4.debian.tar.xz 32508 SHA256:2096e012af91b8503e656212409c438ad2105fd42c22e8f811fe5ef25810342d
+$ apt-get source -qq --print-uris tiff=4.0.8-2+deb9u5
+'http://security.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.0.8-2+deb9u5.dsc' tiff_4.0.8-2+deb9u5.dsc 2185 SHA256:a782ae9a83645f53eab3cbe70b93f7fd3ec0c1c8efeb37513b8ea7ad77756c9c
+'http://security.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.0.8.orig.tar.gz' tiff_4.0.8.orig.tar.gz 2065574 SHA256:59d7a5a8ccd92059913f246877db95a2918e6c04fb9d43fd74e5c3390dac2910
+'http://security.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.0.8-2+deb9u5.debian.tar.xz' tiff_4.0.8-2+deb9u5.debian.tar.xz 37260 SHA256:141a6cde7494b392b10c00692dd4d4090294d7d5678265e3344662c23c7c3089
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/tiff/4.0.8-2+deb9u4/ (for browsing the source)
-- https://sources.debian.net/src/tiff/4.0.8-2+deb9u4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tiff/4.0.8-2+deb9u4/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/tiff/4.0.8-2+deb9u5/ (for browsing the source)
+- https://sources.debian.net/src/tiff/4.0.8-2+deb9u5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tiff/4.0.8-2+deb9u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tzdata=2019c-0+deb9u1`
 

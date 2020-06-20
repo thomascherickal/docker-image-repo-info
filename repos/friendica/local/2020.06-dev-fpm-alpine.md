@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:64062b26ac13abb8b4a02e76bcc16add84655be7cd2469bb1ae6bf9d30ec9ee0`
-- Created: `2020-06-12T01:39:17.772968231Z`
+- Image ID: `sha256:1cf03398b7ee8240d658bc4902bf13069bfdf2d325a7ad6a71b93af478f86443`
+- Created: `2020-06-18T21:28:00.215967957Z`
 - Virtual Size: ~ 118.37 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -24,6 +24,8 @@
   - `PHP_SHA256=6402faa19b1a8c4317c7612632bce985684a5bbae0980a5779a4019439882422`
   - `PHP_MD5=`
   - `FRIENDICA_VERSION=2020.06-dev`
+  - `FRIENDICA_VERSION_YEAR=2020`
+  - `FRIENDICA_VERSION_MONTH=06-dev`
   - `FRIENDICA_ADDONS=2020.06-dev`
 
 ## `apk` (`.apk`-based packages)
