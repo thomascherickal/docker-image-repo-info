@@ -1078,20 +1078,13 @@ Licenses: (parsed from: `/usr/share/doc/libcap2/copyright`, `/usr/share/doc/libc
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libcap2=1:2.34-2
-'http://deb.debian.org/debian/pool/main/libc/libcap2/libcap2_2.34-2.dsc' libcap2_2.34-2.dsc 2179 SHA256:32987de4216e10daf8d29d9f2794458c9b0c9d68185c37e8406cc4877ce06579
-'http://deb.debian.org/debian/pool/main/libc/libcap2/libcap2_2.34.orig.tar.xz' libcap2_2.34.orig.tar.xz 111556 SHA256:aecdd42015955068d3d94b7caa9590fcb2de5df53ce53c61a21b912bfc0b1611
-'http://deb.debian.org/debian/pool/main/libc/libcap2/libcap2_2.34-2.debian.tar.xz' libcap2_2.34-2.debian.tar.xz 28148 SHA256:d6827da681d763cac691a14243421be291cea2cb14f79eada0c8f27a2eddbb25
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libcap2/1:2.34-2/
 
-- https://sources.debian.net/src/libcap2/1:2.34-2/ (for browsing the source)
-- https://sources.debian.net/src/libcap2/1:2.34-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libcap2/1:2.34-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libeatmydata=105-9`
 
@@ -1995,21 +1988,13 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 - `GPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sqlite3=3.32.2-2
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.32.2-2.dsc' sqlite3_3.32.2-2.dsc 2410 SHA256:324e02f7f0825ce2d0e02f0a68dc231063f48c3a4d0183329ba46e3f8109f0a1
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.32.2.orig-www.tar.xz' sqlite3_3.32.2.orig-www.tar.xz 5848960 SHA256:c3b3fab837f5580baeeeb58d950c35037fa333400d695c63d6f7e82e56a1d627
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.32.2.orig.tar.xz' sqlite3_3.32.2.orig.tar.xz 7286044 SHA256:95e48c7d9718831a777f7a002a0d6f7183c309bba87d60468a162a16a9c3cae1
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.32.2-2.debian.tar.xz' sqlite3_3.32.2-2.debian.tar.xz 25392 SHA256:c6dff4a12116e369fbdbeba4ad4f532b673bd87405fcf9ad9c1dd906062bc46d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/sqlite3/3.32.2-2/
 
-- https://sources.debian.net/src/sqlite3/3.32.2-2/ (for browsing the source)
-- https://sources.debian.net/src/sqlite3/3.32.2-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sqlite3/3.32.2-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `systemd=245.5-3`
 
@@ -2147,20 +2132,13 @@ Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/lib
 - `MIT`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris util-linux=2.35.2-2
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.35.2-2.dsc' util-linux_2.35.2-2.dsc 4232 SHA256:e514e0e25e780184426777ef84b80cfe07e6a6401b51dbc5ebcb950748fa4c90
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.35.2.orig.tar.xz' util-linux_2.35.2.orig.tar.xz 5150488 SHA256:21b7431e82f6bcd9441a01beeec3d57ed33ee948f8a5b41da577073c372eb58a
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.35.2-2.debian.tar.xz' util-linux_2.35.2-2.debian.tar.xz 93268 SHA256:17af067f6b8ea14c58cef431260fc21655cc6380b33401b5ddeef2c77447b795
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/util-linux/2.35.2-2/
 
-- https://sources.debian.net/src/util-linux/2.35.2-2/ (for browsing the source)
-- https://sources.debian.net/src/util-linux/2.35.2-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/util-linux/2.35.2-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `xz-utils=5.2.4-1`
 
