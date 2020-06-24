@@ -1,7 +1,7 @@
 ## `rabbitmq:3-management-alpine`
 
 ```console
-$ docker pull rabbitmq@sha256:8d76ad6987e0890a85a0fc7c86a053cfae5f5a4a6570b0d4d034e235503afa82
+$ docker pull rabbitmq@sha256:0fc3440901e5e450394bf287df132837186192dcadf3911d5ebd70590a69cafa
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -17,14 +17,14 @@ $ docker pull rabbitmq@sha256:8d76ad6987e0890a85a0fc7c86a053cfae5f5a4a6570b0d4d0
 ### `rabbitmq:3-management-alpine` - linux; amd64
 
 ```console
-$ docker pull rabbitmq@sha256:8495f6b1cb069ca48add2a5815b10b90dbd44b75a6cc820211273c684cdf909f
+$ docker pull rabbitmq@sha256:2d0ff5e7c9c143f9ff1ea517bc9a5b9b0a6ef1a420a57a242830f1862987d595
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **73.0 MB (72965613 bytes)**  
+-	Total Size: **73.0 MB (72965930 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:977d0b3ac039b6a876ca4131afc23073008faf733fb63d81781744155aee6183`
+-	Image ID: `sha256:d0c8e486e3647888c8885c87d1a2b3aa00444edff8b5943261688e6a2d769cfe`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["rabbitmq-server"]`
 
@@ -75,19 +75,19 @@ ENV HOME=/var/lib/rabbitmq
 VOLUME [/var/lib/rabbitmq]
 # Mon, 15 Jun 2020 21:29:31 GMT
 ENV LANG=C.UTF-8 LANGUAGE=C.UTF-8 LC_ALL=C.UTF-8
-# Mon, 15 Jun 2020 21:29:31 GMT
-COPY file:2cb4eee6ce39121e7f1de01e8683347296de40d81470fb3070423f105fe0c348 in /usr/local/bin/ 
-# Mon, 15 Jun 2020 21:29:31 GMT
+# Wed, 24 Jun 2020 21:27:46 GMT
+COPY file:75981ed954baf43f9b0251f37de628d4cc74b2b1c0742de104a757015ca39ba9 in /usr/local/bin/ 
+# Wed, 24 Jun 2020 21:27:46 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Mon, 15 Jun 2020 21:29:32 GMT
+# Wed, 24 Jun 2020 21:27:46 GMT
 EXPOSE 25672 4369 5671 5672
-# Mon, 15 Jun 2020 21:29:32 GMT
+# Wed, 24 Jun 2020 21:27:46 GMT
 CMD ["rabbitmq-server"]
-# Mon, 15 Jun 2020 21:29:38 GMT
+# Wed, 24 Jun 2020 21:27:52 GMT
 RUN rabbitmq-plugins enable --offline rabbitmq_management
-# Mon, 15 Jun 2020 21:29:42 GMT
+# Wed, 24 Jun 2020 21:27:56 GMT
 RUN set -eux; 	erl -noinput -eval ' 		{ ok, AdminBin } = zip:foldl(fun(FileInArchive, GetInfo, GetBin, Acc) -> 			case Acc of 				"" -> 					case lists:suffix("/rabbitmqadmin", FileInArchive) of 						true -> GetBin(); 						false -> Acc 					end; 				_ -> Acc 			end 		end, "", init:get_plain_arguments()), 		io:format("~s", [ AdminBin ]), 		init:stop(). 	' -- /plugins/rabbitmq_management-*.ez > /usr/local/bin/rabbitmqadmin; 	[ -s /usr/local/bin/rabbitmqadmin ]; 	chmod +x /usr/local/bin/rabbitmqadmin; 	apk add --no-cache python3; 	rabbitmqadmin --version
-# Mon, 15 Jun 2020 21:29:42 GMT
+# Wed, 24 Jun 2020 21:27:56 GMT
 EXPOSE 15671 15672
 ```
 
@@ -116,17 +116,17 @@ EXPOSE 15671 15672
 		Last Modified: Mon, 15 Jun 2020 21:30:25 GMT  
 		Size: 107.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e689fdb7915170707a9006235caa827bec50b48c4c2ab00bfb8e47ad9f04ed10`  
-		Last Modified: Mon, 15 Jun 2020 21:30:25 GMT  
-		Size: 4.4 KB (4418 bytes)  
+	-	`sha256:668b748e7659f33aab89ff6c644e6d4d618f3200675407349ae168056e77cadd`  
+		Last Modified: Wed, 24 Jun 2020 21:29:02 GMT  
+		Size: 4.6 KB (4645 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b1d47612941196086959ecb05f3f4da845f4983c66227dbdc679a1964408c685`  
-		Last Modified: Mon, 15 Jun 2020 21:30:32 GMT  
+	-	`sha256:683b099bc1c897972ae3d097dc1ae59a0344ca8266b990d2819d72e3eaffdefb`  
+		Last Modified: Wed, 24 Jun 2020 21:29:07 GMT  
 		Size: 192.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e9e924fa42e340e0811a1e3b61bd305155fd69c6360bf02f360a7911107b7561`  
-		Last Modified: Mon, 15 Jun 2020 21:30:36 GMT  
-		Size: 16.9 MB (16858544 bytes)  
+	-	`sha256:33c8c03c83427ebe55eb621818aa79c0f6b8eec6d633ce61d2614a2cee725168`  
+		Last Modified: Wed, 24 Jun 2020 21:29:10 GMT  
+		Size: 16.9 MB (16858634 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `rabbitmq:3-management-alpine` - linux; arm variant v6

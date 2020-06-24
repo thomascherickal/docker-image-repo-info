@@ -1,7 +1,7 @@
 ## `rabbitmq:latest`
 
 ```console
-$ docker pull rabbitmq@sha256:51f26b842111311e45635ec41af369df7ca1b5447770292c7aff004d5d624fe7
+$ docker pull rabbitmq@sha256:a3a9a9fb4dc2da1bb9b328dc7f791a10e67b60325b3429bf275276afff7f32bc
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -16,14 +16,14 @@ $ docker pull rabbitmq@sha256:51f26b842111311e45635ec41af369df7ca1b5447770292c7a
 ### `rabbitmq:latest` - linux; amd64
 
 ```console
-$ docker pull rabbitmq@sha256:4cf3874f5752c823c852cd6a8fe21207189bb9cd50c76fac1461c26c53d07f1e
+$ docker pull rabbitmq@sha256:507e16202f39bfcf6a92d9ec2d6ffaddb3eb38061441d6f7b8d856ea2ede286e
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **75.5 MB (75507942 bytes)**  
+-	Total Size: **75.5 MB (75508161 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7e50c60f7e3ef5e6e725aad3e9b95e103125915d18c3c478988999f8bf01b6fe`
+-	Image ID: `sha256:bdd22a0ccf733068481ff9b1a8b86edf59baa6591b9b4f84efcb4cd7c38a7e25`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["rabbitmq-server"]`
 
@@ -80,13 +80,13 @@ ENV HOME=/var/lib/rabbitmq
 VOLUME [/var/lib/rabbitmq]
 # Wed, 17 Jun 2020 04:12:13 GMT
 ENV LANG=C.UTF-8 LANGUAGE=C.UTF-8 LC_ALL=C.UTF-8
-# Wed, 17 Jun 2020 04:12:13 GMT
-COPY file:a5cc161186850fe9524ba616e99e171f39a01b0b63ef53faf74fcdff4da40431 in /usr/local/bin/ 
-# Wed, 17 Jun 2020 04:12:13 GMT
+# Wed, 24 Jun 2020 21:27:22 GMT
+COPY file:b47e186ce30cd8335ebfcc492a3ee2bf8f38c7a29a1301945c0df60e929b021e in /usr/local/bin/ 
+# Wed, 24 Jun 2020 21:27:22 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Wed, 17 Jun 2020 04:12:13 GMT
+# Wed, 24 Jun 2020 21:27:22 GMT
 EXPOSE 25672 4369 5671 5672
-# Wed, 17 Jun 2020 04:12:13 GMT
+# Wed, 24 Jun 2020 21:27:23 GMT
 CMD ["rabbitmq-server"]
 ```
 
@@ -127,9 +127,9 @@ CMD ["rabbitmq-server"]
 		Last Modified: Wed, 17 Jun 2020 04:21:12 GMT  
 		Size: 107.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b7f34b3a6ae989175fb2f38447eea15ffcbc221fe8c385d6a7d56ae0e8de95d2`  
-		Last Modified: Wed, 17 Jun 2020 04:21:11 GMT  
-		Size: 4.4 KB (4414 bytes)  
+	-	`sha256:8f702d8e2d028d2fe7ed14805df6e5a1adc1b14b1a9766045b3d82898021f772`  
+		Last Modified: Wed, 24 Jun 2020 21:28:46 GMT  
+		Size: 4.6 KB (4633 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `rabbitmq:latest` - linux; arm variant v7
