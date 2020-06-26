@@ -1,15 +1,144 @@
 ## `postgres:13-beta2`
 
 ```console
-$ docker pull postgres@sha256:2bdfc2cee37480d0c62caf355f7c87faee6de792746872779ed0cae470888676
+$ docker pull postgres@sha256:b71084d6fef0876d7e63e652b0227d965bf8515bb3dec7478af4b67bf3aa722b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
 -	Platforms:
+	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
+	-	linux; arm64 variant v8
+	-	linux; 386
 	-	linux; mips64le
+	-	linux; ppc64le
 	-	linux; s390x
+
+### `postgres:13-beta2` - linux; amd64
+
+```console
+$ docker pull postgres@sha256:69269d533f698a38ddf5aa2bc01052e434d15016e06ce4b968550d8a147ee8a7
+```
+
+-	Docker Version: 18.09.7
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **115.3 MB (115256760 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:4a049a7324104c1193f7d58c44d8946f3baf084ec4815b2fa8730eda9e13ed9a`
+-	Entrypoint: `["docker-entrypoint.sh"]`
+-	Default Command: `["postgres"]`
+
+```dockerfile
+# Tue, 09 Jun 2020 01:20:56 GMT
+ADD file:4d35f6c8bbbe6801cc5f44989730fb6d349a644ecb36eca481e7df25842d6321 in / 
+# Tue, 09 Jun 2020 01:20:56 GMT
+CMD ["bash"]
+# Tue, 09 Jun 2020 16:24:07 GMT
+RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
+# Tue, 09 Jun 2020 16:24:08 GMT
+RUN set -eux; 	groupadd -r postgres --gid=999; 	useradd -r -g postgres --uid=999 --home-dir=/var/lib/postgresql --shell=/bin/bash postgres; 	mkdir -p /var/lib/postgresql; 	chown -R postgres:postgres /var/lib/postgresql
+# Tue, 09 Jun 2020 16:24:09 GMT
+ENV GOSU_VERSION=1.12
+# Tue, 09 Jun 2020 16:24:18 GMT
+RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates wget; 	rm -rf /var/lib/apt/lists/*; 	dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
+# Tue, 09 Jun 2020 16:24:28 GMT
+RUN set -eux; 	if [ -f /etc/dpkg/dpkg.cfg.d/docker ]; then 		grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 		sed -ri '/\/usr\/share\/locale/d' /etc/dpkg/dpkg.cfg.d/docker; 		! grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 	fi; 	apt-get update; apt-get install -y --no-install-recommends locales; rm -rf /var/lib/apt/lists/*; 	localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
+# Tue, 09 Jun 2020 16:24:29 GMT
+ENV LANG=en_US.utf8
+# Tue, 09 Jun 2020 16:24:36 GMT
+RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libnss-wrapper 		xz-utils 	; 	rm -rf /var/lib/apt/lists/*
+# Tue, 09 Jun 2020 16:24:38 GMT
+RUN mkdir /docker-entrypoint-initdb.d
+# Tue, 09 Jun 2020 16:24:40 GMT
+RUN set -ex; 	key='B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8'; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 	gpg --batch --export "$key" > /etc/apt/trusted.gpg.d/postgres.gpg; 	command -v gpgconf > /dev/null && gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 	apt-key list
+# Tue, 09 Jun 2020 16:24:40 GMT
+ENV PG_MAJOR=13
+# Fri, 26 Jun 2020 20:34:19 GMT
+ENV PG_VERSION=13~beta2-1.pgdg100+1
+# Fri, 26 Jun 2020 20:34:41 GMT
+RUN set -ex; 		export PYTHONDONTWRITEBYTECODE=1; 		dpkgArch="$(dpkg --print-architecture)"; 	case "$dpkgArch" in 		amd64 | arm64 | i386 | ppc64el) 			echo "deb http://apt.postgresql.org/pub/repos/apt/ buster-pgdg main $PG_MAJOR" > /etc/apt/sources.list.d/pgdg.list; 			apt-get update; 			;; 		*) 			echo "deb-src http://apt.postgresql.org/pub/repos/apt/ buster-pgdg main $PG_MAJOR" > /etc/apt/sources.list.d/pgdg.list; 						case "$PG_MAJOR" in 				9.* | 10 ) ;; 				*) 					echo 'deb http://deb.debian.org/debian buster-backports main' >> /etc/apt/sources.list.d/pgdg.list; 					;; 			esac; 						tempDir="$(mktemp -d)"; 			cd "$tempDir"; 						savedAptMark="$(apt-mark showmanual)"; 						apt-get update; 			DEBIAN_FRONTEND=noninteractive 			apt-get build-dep -y 				postgresql-common pgdg-keyring 				"postgresql-$PG_MAJOR=$PG_VERSION" 			; 			DEB_BUILD_OPTIONS="nocheck parallel=$(nproc)" 				apt-get source --compile 					postgresql-common pgdg-keyring 					"postgresql-$PG_MAJOR=$PG_VERSION" 			; 						apt-mark showmanual | xargs apt-mark auto > /dev/null; 			apt-mark manual $savedAptMark; 						ls -lAFh; 			dpkg-scanpackages . > Packages; 			grep '^Package: ' Packages; 			echo "deb [ trusted=yes ] file://$tempDir ./" > /etc/apt/sources.list.d/temp.list; 			apt-get -o Acquire::GzipIndexes=false update; 			;; 	esac; 		apt-get install -y --no-install-recommends postgresql-common; 	sed -ri 's/#(create_main_cluster) .*$/\1 = false/' /etc/postgresql-common/createcluster.conf; 	apt-get install -y --no-install-recommends 		"postgresql-$PG_MAJOR=$PG_VERSION" 	; 		rm -rf /var/lib/apt/lists/*; 		if [ -n "$tempDir" ]; then 		apt-get purge -y --auto-remove; 		rm -rf "$tempDir" /etc/apt/sources.list.d/temp.list; 	fi; 		find /usr -name '*.pyc' -type f -exec bash -c 'for pyc; do dpkg -S "$pyc" &> /dev/null || rm -vf "$pyc"; done' -- '{}' +
+# Fri, 26 Jun 2020 20:34:42 GMT
+RUN set -eux; 	dpkg-divert --add --rename --divert "/usr/share/postgresql/postgresql.conf.sample.dpkg" "/usr/share/postgresql/$PG_MAJOR/postgresql.conf.sample"; 	cp -v /usr/share/postgresql/postgresql.conf.sample.dpkg /usr/share/postgresql/postgresql.conf.sample; 	ln -sv ../postgresql.conf.sample "/usr/share/postgresql/$PG_MAJOR/"; 	sed -ri "s!^#?(listen_addresses)\s*=\s*\S+.*!\1 = '*'!" /usr/share/postgresql/postgresql.conf.sample; 	grep -F "listen_addresses = '*'" /usr/share/postgresql/postgresql.conf.sample
+# Fri, 26 Jun 2020 20:34:43 GMT
+RUN mkdir -p /var/run/postgresql && chown -R postgres:postgres /var/run/postgresql && chmod 2777 /var/run/postgresql
+# Fri, 26 Jun 2020 20:34:43 GMT
+ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/13/bin
+# Fri, 26 Jun 2020 20:34:43 GMT
+ENV PGDATA=/var/lib/postgresql/data
+# Fri, 26 Jun 2020 20:34:44 GMT
+RUN mkdir -p "$PGDATA" && chown -R postgres:postgres "$PGDATA" && chmod 777 "$PGDATA"
+# Fri, 26 Jun 2020 20:34:44 GMT
+VOLUME [/var/lib/postgresql/data]
+# Fri, 26 Jun 2020 20:34:44 GMT
+COPY file:bf774aaf2659f8308202ce0332f960783bfecabcf593dd9b2d25e19fe5c4b946 in /usr/local/bin/ 
+# Fri, 26 Jun 2020 20:34:45 GMT
+RUN ln -s usr/local/bin/docker-entrypoint.sh / # backwards compat
+# Fri, 26 Jun 2020 20:34:45 GMT
+ENTRYPOINT ["docker-entrypoint.sh"]
+# Fri, 26 Jun 2020 20:34:46 GMT
+EXPOSE 5432
+# Fri, 26 Jun 2020 20:34:46 GMT
+CMD ["postgres"]
+```
+
+-	Layers:
+	-	`sha256:8559a31e96f442f2c7b6da49d6c84705f98a39d8be10b3f5f14821d0ee8417df`  
+		Last Modified: Tue, 09 Jun 2020 01:25:50 GMT  
+		Size: 27.1 MB (27098265 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:04866763fec81a519491c38dbc29942baf6c63c82884d8c9ddd2e820fca2c5ed`  
+		Last Modified: Tue, 09 Jun 2020 16:30:27 GMT  
+		Size: 4.2 MB (4178094 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:1705d51f48e57c22e5c70f9d37466cd2d2fffea5728c413d8494864528b194c4`  
+		Last Modified: Tue, 09 Jun 2020 16:30:27 GMT  
+		Size: 1.8 KB (1767 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:e59f13162b50130d945fbb17589ed5d8b6e2d500bb812505206638718543e523`  
+		Last Modified: Tue, 09 Jun 2020 16:30:26 GMT  
+		Size: 1.4 MB (1419230 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:f34bb6f66594e0462dad6e1c41f1d3688e3e67465ab1308a80463c0c3245f5b2`  
+		Last Modified: Tue, 09 Jun 2020 16:30:29 GMT  
+		Size: 8.0 MB (7964519 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:cbfb60b6801ae0a76e34b15cbd375cbba7eeab5bcb59b489defe2ea00de2481c`  
+		Last Modified: Tue, 09 Jun 2020 16:30:25 GMT  
+		Size: 391.0 KB (391015 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:e8207269011b5b6171595e1f455b853dc0e5683c6b2da7bacf73e55b66416113`  
+		Last Modified: Tue, 09 Jun 2020 16:30:24 GMT  
+		Size: 115.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:89bccd0fcae0364c739d145157c2c6bde90b7960ff68ede0ebd450218f2aa5b2`  
+		Last Modified: Tue, 09 Jun 2020 16:30:24 GMT  
+		Size: 3.1 KB (3052 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:b19ea386d7d47501f57fe5146560e3a2afbe6e5bf5e77cdaec88b25e1c69e317`  
+		Last Modified: Fri, 26 Jun 2020 21:14:25 GMT  
+		Size: 74.2 MB (74186774 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:3d502f632dbfcf8799f49b3c745b9e14f865629209c71b77552f3d09b07006e4`  
+		Last Modified: Fri, 26 Jun 2020 21:14:03 GMT  
+		Size: 9.2 KB (9248 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:d833236405d0aac58520e0290e716a39ced4a477a313d6ad6aeb923552fde2c6`  
+		Last Modified: Fri, 26 Jun 2020 21:14:03 GMT  
+		Size: 129.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:3e2be2415fa206abbbf48469dbadb6f5e1ae3736eb04b1ad81210053074c21e3`  
+		Last Modified: Fri, 26 Jun 2020 21:14:02 GMT  
+		Size: 172.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:73e7267ee62166e5a15841972ad49c851e027733fa2652770229c79be1650ca1`  
+		Last Modified: Fri, 26 Jun 2020 21:14:03 GMT  
+		Size: 4.3 KB (4259 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:96707d6fceb1f67fec3138e5b87fc01e39d8f5f32a86dd7f16eb24b44ab1ff84`  
+		Last Modified: Fri, 26 Jun 2020 21:14:03 GMT  
+		Size: 121.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `postgres:13-beta2` - linux; arm variant v5
 
@@ -261,6 +390,256 @@ CMD ["postgres"]
 		Size: 121.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+### `postgres:13-beta2` - linux; arm64 variant v8
+
+```console
+$ docker pull postgres@sha256:7a5c75f1c5812233f5af92e2d9e443635a7c88f73f82d4fffec68d042d4adaf2
+```
+
+-	Docker Version: 18.09.7
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **111.6 MB (111575511 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:17220d3dbcbbaa7326a129ee0b6fdc4120e6518f22679e20eb65d41eb3c86b57`
+-	Entrypoint: `["docker-entrypoint.sh"]`
+-	Default Command: `["postgres"]`
+
+```dockerfile
+# Tue, 09 Jun 2020 01:52:01 GMT
+ADD file:98823648634dfc3af50862b1e2da1028b23996a37adf43b1b0c3c5b29e94b9c7 in / 
+# Tue, 09 Jun 2020 01:52:04 GMT
+CMD ["bash"]
+# Tue, 09 Jun 2020 08:35:23 GMT
+RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
+# Tue, 09 Jun 2020 08:35:26 GMT
+RUN set -eux; 	groupadd -r postgres --gid=999; 	useradd -r -g postgres --uid=999 --home-dir=/var/lib/postgresql --shell=/bin/bash postgres; 	mkdir -p /var/lib/postgresql; 	chown -R postgres:postgres /var/lib/postgresql
+# Tue, 09 Jun 2020 08:35:27 GMT
+ENV GOSU_VERSION=1.12
+# Tue, 09 Jun 2020 08:35:42 GMT
+RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates wget; 	rm -rf /var/lib/apt/lists/*; 	dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
+# Tue, 09 Jun 2020 08:35:56 GMT
+RUN set -eux; 	if [ -f /etc/dpkg/dpkg.cfg.d/docker ]; then 		grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 		sed -ri '/\/usr\/share\/locale/d' /etc/dpkg/dpkg.cfg.d/docker; 		! grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 	fi; 	apt-get update; apt-get install -y --no-install-recommends locales; rm -rf /var/lib/apt/lists/*; 	localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
+# Tue, 09 Jun 2020 08:35:57 GMT
+ENV LANG=en_US.utf8
+# Tue, 09 Jun 2020 08:36:07 GMT
+RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libnss-wrapper 		xz-utils 	; 	rm -rf /var/lib/apt/lists/*
+# Tue, 09 Jun 2020 08:36:09 GMT
+RUN mkdir /docker-entrypoint-initdb.d
+# Tue, 09 Jun 2020 08:36:12 GMT
+RUN set -ex; 	key='B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8'; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 	gpg --batch --export "$key" > /etc/apt/trusted.gpg.d/postgres.gpg; 	command -v gpgconf > /dev/null && gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 	apt-key list
+# Tue, 09 Jun 2020 08:36:13 GMT
+ENV PG_MAJOR=13
+# Fri, 26 Jun 2020 20:37:35 GMT
+ENV PG_VERSION=13~beta2-1.pgdg100+1
+# Fri, 26 Jun 2020 20:39:03 GMT
+RUN set -ex; 		export PYTHONDONTWRITEBYTECODE=1; 		dpkgArch="$(dpkg --print-architecture)"; 	case "$dpkgArch" in 		amd64 | arm64 | i386 | ppc64el) 			echo "deb http://apt.postgresql.org/pub/repos/apt/ buster-pgdg main $PG_MAJOR" > /etc/apt/sources.list.d/pgdg.list; 			apt-get update; 			;; 		*) 			echo "deb-src http://apt.postgresql.org/pub/repos/apt/ buster-pgdg main $PG_MAJOR" > /etc/apt/sources.list.d/pgdg.list; 						case "$PG_MAJOR" in 				9.* | 10 ) ;; 				*) 					echo 'deb http://deb.debian.org/debian buster-backports main' >> /etc/apt/sources.list.d/pgdg.list; 					;; 			esac; 						tempDir="$(mktemp -d)"; 			cd "$tempDir"; 						savedAptMark="$(apt-mark showmanual)"; 						apt-get update; 			DEBIAN_FRONTEND=noninteractive 			apt-get build-dep -y 				postgresql-common pgdg-keyring 				"postgresql-$PG_MAJOR=$PG_VERSION" 			; 			DEB_BUILD_OPTIONS="nocheck parallel=$(nproc)" 				apt-get source --compile 					postgresql-common pgdg-keyring 					"postgresql-$PG_MAJOR=$PG_VERSION" 			; 						apt-mark showmanual | xargs apt-mark auto > /dev/null; 			apt-mark manual $savedAptMark; 						ls -lAFh; 			dpkg-scanpackages . > Packages; 			grep '^Package: ' Packages; 			echo "deb [ trusted=yes ] file://$tempDir ./" > /etc/apt/sources.list.d/temp.list; 			apt-get -o Acquire::GzipIndexes=false update; 			;; 	esac; 		apt-get install -y --no-install-recommends postgresql-common; 	sed -ri 's/#(create_main_cluster) .*$/\1 = false/' /etc/postgresql-common/createcluster.conf; 	apt-get install -y --no-install-recommends 		"postgresql-$PG_MAJOR=$PG_VERSION" 	; 		rm -rf /var/lib/apt/lists/*; 		if [ -n "$tempDir" ]; then 		apt-get purge -y --auto-remove; 		rm -rf "$tempDir" /etc/apt/sources.list.d/temp.list; 	fi; 		find /usr -name '*.pyc' -type f -exec bash -c 'for pyc; do dpkg -S "$pyc" &> /dev/null || rm -vf "$pyc"; done' -- '{}' +
+# Fri, 26 Jun 2020 20:39:10 GMT
+RUN set -eux; 	dpkg-divert --add --rename --divert "/usr/share/postgresql/postgresql.conf.sample.dpkg" "/usr/share/postgresql/$PG_MAJOR/postgresql.conf.sample"; 	cp -v /usr/share/postgresql/postgresql.conf.sample.dpkg /usr/share/postgresql/postgresql.conf.sample; 	ln -sv ../postgresql.conf.sample "/usr/share/postgresql/$PG_MAJOR/"; 	sed -ri "s!^#?(listen_addresses)\s*=\s*\S+.*!\1 = '*'!" /usr/share/postgresql/postgresql.conf.sample; 	grep -F "listen_addresses = '*'" /usr/share/postgresql/postgresql.conf.sample
+# Fri, 26 Jun 2020 20:39:25 GMT
+RUN mkdir -p /var/run/postgresql && chown -R postgres:postgres /var/run/postgresql && chmod 2777 /var/run/postgresql
+# Fri, 26 Jun 2020 20:39:26 GMT
+ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/13/bin
+# Fri, 26 Jun 2020 20:39:27 GMT
+ENV PGDATA=/var/lib/postgresql/data
+# Fri, 26 Jun 2020 20:39:29 GMT
+RUN mkdir -p "$PGDATA" && chown -R postgres:postgres "$PGDATA" && chmod 777 "$PGDATA"
+# Fri, 26 Jun 2020 20:39:30 GMT
+VOLUME [/var/lib/postgresql/data]
+# Fri, 26 Jun 2020 20:39:30 GMT
+COPY file:bf774aaf2659f8308202ce0332f960783bfecabcf593dd9b2d25e19fe5c4b946 in /usr/local/bin/ 
+# Fri, 26 Jun 2020 20:39:32 GMT
+RUN ln -s usr/local/bin/docker-entrypoint.sh / # backwards compat
+# Fri, 26 Jun 2020 20:39:33 GMT
+ENTRYPOINT ["docker-entrypoint.sh"]
+# Fri, 26 Jun 2020 20:39:34 GMT
+EXPOSE 5432
+# Fri, 26 Jun 2020 20:39:37 GMT
+CMD ["postgres"]
+```
+
+-	Layers:
+	-	`sha256:33cc09c9b190539635d7c971301f623d94fda5b4b5647966c6c240902119009f`  
+		Last Modified: Tue, 09 Jun 2020 01:58:14 GMT  
+		Size: 25.9 MB (25857704 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:5f70c2d40c08e55d595ed646938fcb551291d4ac415d8ca06a90fdd7c05b1681`  
+		Last Modified: Tue, 09 Jun 2020 09:57:41 GMT  
+		Size: 4.2 MB (4170057 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:3ee86cfb1f4f21194c1264ef5b30fd60c5ad676bf9df4da59a95cb0b73fd110c`  
+		Last Modified: Tue, 09 Jun 2020 09:57:39 GMT  
+		Size: 1.8 KB (1799 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:731831d0b0b4617c6d6d70bf4fc7ad2d76a118c424167fca4ebaa01c4998daaf`  
+		Last Modified: Tue, 09 Jun 2020 09:57:39 GMT  
+		Size: 1.4 MB (1354198 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:03c0f0d1cfae1f4f0e7e7904beab228b6173517c9e171a44f830e972f1998cbe`  
+		Last Modified: Tue, 09 Jun 2020 09:57:40 GMT  
+		Size: 8.0 MB (7965146 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:aa575663c71aba2b10d85dbfb426872a2eda8c7f9bd27d046c95905562fc53bf`  
+		Last Modified: Tue, 09 Jun 2020 09:57:38 GMT  
+		Size: 389.4 KB (389427 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:2226928186ed7f596390df1c1f9f05a46a75ec6e3f5b6076f09ba6fc9f7382a3`  
+		Last Modified: Tue, 09 Jun 2020 09:57:37 GMT  
+		Size: 149.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:1a6424973cd37cb296198e1f4ee319d2769f41802dc0e76f11f25812b50b2c1d`  
+		Last Modified: Tue, 09 Jun 2020 09:57:37 GMT  
+		Size: 3.1 KB (3051 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:31f6dc799ffe4330dee9f0604cfbd855061d7b8720f8366f8c22888606f1bc37`  
+		Last Modified: Fri, 26 Jun 2020 21:01:59 GMT  
+		Size: 71.8 MB (71820018 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c6208520eedb9b8ac89ecbdb1664917808d0119fe075a2b9abacdf5ca6246975`  
+		Last Modified: Fri, 26 Jun 2020 21:01:35 GMT  
+		Size: 9.3 KB (9251 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:cc7ba00e6e6c5a18aa282eecf4dd338e88a1aca32eb49340b9772b4736fc09ac`  
+		Last Modified: Fri, 26 Jun 2020 21:01:35 GMT  
+		Size: 129.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:697ff5d63b401baa198be760a37e70541946ded75335a87274a0f0ab2f5024e3`  
+		Last Modified: Fri, 26 Jun 2020 21:01:35 GMT  
+		Size: 202.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:4025f3d9c8759fc7b8232e4f0732563d54e7173cdaec5df0c2ef03568713930a`  
+		Last Modified: Fri, 26 Jun 2020 21:01:35 GMT  
+		Size: 4.3 KB (4259 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c2d32af9f005244955d4f75ffa15624af356b5beb82b67c451e3f4d939da23f3`  
+		Last Modified: Fri, 26 Jun 2020 21:01:35 GMT  
+		Size: 121.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `postgres:13-beta2` - linux; 386
+
+```console
+$ docker pull postgres@sha256:cffe905a7d8b8c0cfc57636e454a2718924b0666ee47ea0b4bba0b01f6d8be3d
+```
+
+-	Docker Version: 18.09.7
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **115.9 MB (115923035 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:76f5f1f75c35b43d94a04158ba1e8f77e1e7cbeb552b2463c9989df3326f1bd7`
+-	Entrypoint: `["docker-entrypoint.sh"]`
+-	Default Command: `["postgres"]`
+
+```dockerfile
+# Tue, 09 Jun 2020 01:39:49 GMT
+ADD file:9fb8fd8bf970c4134f555964fe485a3baa84f1d4c91c5aa35276c24404de9d5d in / 
+# Tue, 09 Jun 2020 01:39:49 GMT
+CMD ["bash"]
+# Tue, 09 Jun 2020 15:38:33 GMT
+RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
+# Tue, 09 Jun 2020 15:38:34 GMT
+RUN set -eux; 	groupadd -r postgres --gid=999; 	useradd -r -g postgres --uid=999 --home-dir=/var/lib/postgresql --shell=/bin/bash postgres; 	mkdir -p /var/lib/postgresql; 	chown -R postgres:postgres /var/lib/postgresql
+# Tue, 09 Jun 2020 15:38:34 GMT
+ENV GOSU_VERSION=1.12
+# Tue, 09 Jun 2020 15:38:44 GMT
+RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates wget; 	rm -rf /var/lib/apt/lists/*; 	dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
+# Tue, 09 Jun 2020 15:38:53 GMT
+RUN set -eux; 	if [ -f /etc/dpkg/dpkg.cfg.d/docker ]; then 		grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 		sed -ri '/\/usr\/share\/locale/d' /etc/dpkg/dpkg.cfg.d/docker; 		! grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 	fi; 	apt-get update; apt-get install -y --no-install-recommends locales; rm -rf /var/lib/apt/lists/*; 	localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
+# Tue, 09 Jun 2020 15:38:53 GMT
+ENV LANG=en_US.utf8
+# Tue, 09 Jun 2020 15:38:58 GMT
+RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libnss-wrapper 		xz-utils 	; 	rm -rf /var/lib/apt/lists/*
+# Tue, 09 Jun 2020 15:38:59 GMT
+RUN mkdir /docker-entrypoint-initdb.d
+# Tue, 09 Jun 2020 15:39:00 GMT
+RUN set -ex; 	key='B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8'; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 	gpg --batch --export "$key" > /etc/apt/trusted.gpg.d/postgres.gpg; 	command -v gpgconf > /dev/null && gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 	apt-key list
+# Tue, 09 Jun 2020 15:39:00 GMT
+ENV PG_MAJOR=13
+# Fri, 26 Jun 2020 22:06:42 GMT
+ENV PG_VERSION=13~beta2-1.pgdg100+1
+# Fri, 26 Jun 2020 22:07:09 GMT
+RUN set -ex; 		export PYTHONDONTWRITEBYTECODE=1; 		dpkgArch="$(dpkg --print-architecture)"; 	case "$dpkgArch" in 		amd64 | arm64 | i386 | ppc64el) 			echo "deb http://apt.postgresql.org/pub/repos/apt/ buster-pgdg main $PG_MAJOR" > /etc/apt/sources.list.d/pgdg.list; 			apt-get update; 			;; 		*) 			echo "deb-src http://apt.postgresql.org/pub/repos/apt/ buster-pgdg main $PG_MAJOR" > /etc/apt/sources.list.d/pgdg.list; 						case "$PG_MAJOR" in 				9.* | 10 ) ;; 				*) 					echo 'deb http://deb.debian.org/debian buster-backports main' >> /etc/apt/sources.list.d/pgdg.list; 					;; 			esac; 						tempDir="$(mktemp -d)"; 			cd "$tempDir"; 						savedAptMark="$(apt-mark showmanual)"; 						apt-get update; 			DEBIAN_FRONTEND=noninteractive 			apt-get build-dep -y 				postgresql-common pgdg-keyring 				"postgresql-$PG_MAJOR=$PG_VERSION" 			; 			DEB_BUILD_OPTIONS="nocheck parallel=$(nproc)" 				apt-get source --compile 					postgresql-common pgdg-keyring 					"postgresql-$PG_MAJOR=$PG_VERSION" 			; 						apt-mark showmanual | xargs apt-mark auto > /dev/null; 			apt-mark manual $savedAptMark; 						ls -lAFh; 			dpkg-scanpackages . > Packages; 			grep '^Package: ' Packages; 			echo "deb [ trusted=yes ] file://$tempDir ./" > /etc/apt/sources.list.d/temp.list; 			apt-get -o Acquire::GzipIndexes=false update; 			;; 	esac; 		apt-get install -y --no-install-recommends postgresql-common; 	sed -ri 's/#(create_main_cluster) .*$/\1 = false/' /etc/postgresql-common/createcluster.conf; 	apt-get install -y --no-install-recommends 		"postgresql-$PG_MAJOR=$PG_VERSION" 	; 		rm -rf /var/lib/apt/lists/*; 		if [ -n "$tempDir" ]; then 		apt-get purge -y --auto-remove; 		rm -rf "$tempDir" /etc/apt/sources.list.d/temp.list; 	fi; 		find /usr -name '*.pyc' -type f -exec bash -c 'for pyc; do dpkg -S "$pyc" &> /dev/null || rm -vf "$pyc"; done' -- '{}' +
+# Fri, 26 Jun 2020 22:07:10 GMT
+RUN set -eux; 	dpkg-divert --add --rename --divert "/usr/share/postgresql/postgresql.conf.sample.dpkg" "/usr/share/postgresql/$PG_MAJOR/postgresql.conf.sample"; 	cp -v /usr/share/postgresql/postgresql.conf.sample.dpkg /usr/share/postgresql/postgresql.conf.sample; 	ln -sv ../postgresql.conf.sample "/usr/share/postgresql/$PG_MAJOR/"; 	sed -ri "s!^#?(listen_addresses)\s*=\s*\S+.*!\1 = '*'!" /usr/share/postgresql/postgresql.conf.sample; 	grep -F "listen_addresses = '*'" /usr/share/postgresql/postgresql.conf.sample
+# Fri, 26 Jun 2020 22:07:11 GMT
+RUN mkdir -p /var/run/postgresql && chown -R postgres:postgres /var/run/postgresql && chmod 2777 /var/run/postgresql
+# Fri, 26 Jun 2020 22:07:11 GMT
+ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/13/bin
+# Fri, 26 Jun 2020 22:07:11 GMT
+ENV PGDATA=/var/lib/postgresql/data
+# Fri, 26 Jun 2020 22:07:12 GMT
+RUN mkdir -p "$PGDATA" && chown -R postgres:postgres "$PGDATA" && chmod 777 "$PGDATA"
+# Fri, 26 Jun 2020 22:07:12 GMT
+VOLUME [/var/lib/postgresql/data]
+# Fri, 26 Jun 2020 22:07:13 GMT
+COPY file:bf774aaf2659f8308202ce0332f960783bfecabcf593dd9b2d25e19fe5c4b946 in /usr/local/bin/ 
+# Fri, 26 Jun 2020 22:07:13 GMT
+RUN ln -s usr/local/bin/docker-entrypoint.sh / # backwards compat
+# Fri, 26 Jun 2020 22:07:14 GMT
+ENTRYPOINT ["docker-entrypoint.sh"]
+# Fri, 26 Jun 2020 22:07:14 GMT
+EXPOSE 5432
+# Fri, 26 Jun 2020 22:07:14 GMT
+CMD ["postgres"]
+```
+
+-	Layers:
+	-	`sha256:860f8957d8be856e2235a28e49fc4dca17254951e0eb67d760769755656f5cad`  
+		Last Modified: Tue, 09 Jun 2020 01:45:01 GMT  
+		Size: 27.8 MB (27754909 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c95565f6232d12f0fd0fb86a0019b06fee4cbfe64d2ca55716ac163eda97e038`  
+		Last Modified: Tue, 09 Jun 2020 15:45:00 GMT  
+		Size: 4.5 MB (4542323 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:8892cb83a40e4ffc59372acd860026b64e0b68cc1e91aa7163f82aeb4ceb0372`  
+		Last Modified: Tue, 09 Jun 2020 15:44:56 GMT  
+		Size: 1.8 KB (1757 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:8277ed8747ad67d73c150d5741d85788b95c475f81a944080597d6c59387f72a`  
+		Last Modified: Tue, 09 Jun 2020 15:44:57 GMT  
+		Size: 1.4 MB (1389541 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:931d1f1e461b702cbcb2f8b574c9af233d94d59cfd31ff763f83777f39b59816`  
+		Last Modified: Tue, 09 Jun 2020 15:45:03 GMT  
+		Size: 8.0 MB (7964411 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:0da1fd92cee6c76b35a8f370134cffc5b46a241a6cde3eeb817d6886758c5492`  
+		Last Modified: Tue, 09 Jun 2020 15:44:56 GMT  
+		Size: 398.2 KB (398208 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:55b0d388e008598c8d0c3c69f205cd02822b847e7cb28a8914fc254b041f9502`  
+		Last Modified: Tue, 09 Jun 2020 15:44:55 GMT  
+		Size: 115.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:1e6a85ec92b5322cb3f5bdd09738e34b84bcdcd44b3d94a1184328f6c3d2f3a7`  
+		Last Modified: Tue, 09 Jun 2020 15:44:54 GMT  
+		Size: 3.1 KB (3051 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:e4d775482810744e9356cd9cd811f90b0f6bf53d1371663505f66abb4be0c308`  
+		Last Modified: Fri, 26 Jun 2020 22:53:34 GMT  
+		Size: 73.9 MB (73854786 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:b912ca123bacb7bd3f16ebcfa0d0961036bbae3757ae72443f0e91217e66bf2d`  
+		Last Modified: Fri, 26 Jun 2020 22:53:13 GMT  
+		Size: 9.3 KB (9254 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:1c8aa1be4b5a0cf2a9397049788c84c788bf7313a4d62627d5fe67cba9f860ba`  
+		Last Modified: Fri, 26 Jun 2020 22:53:13 GMT  
+		Size: 129.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:8e6166e5502b981b6fd81b694cdbf564f3ea979dc9ff080479469f7ccc1ad674`  
+		Last Modified: Fri, 26 Jun 2020 22:53:13 GMT  
+		Size: 172.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:5fe590b6935561f54c0510f2d971328831b5ffffa0209fbf69ea0356f24d224a`  
+		Last Modified: Fri, 26 Jun 2020 22:53:14 GMT  
+		Size: 4.3 KB (4258 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:50cb0c07397bf7f01c15bc8f7591845321d1319662cf140e4c382739795d2657`  
+		Last Modified: Fri, 26 Jun 2020 22:53:13 GMT  
+		Size: 121.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
 ### `postgres:13-beta2` - linux; mips64le
 
 ```console
@@ -383,6 +762,131 @@ CMD ["postgres"]
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 	-	`sha256:3656681e52e8b6e9cb94d01028e8c1b2e9a56993129d2e2347c0e008285596dd`  
 		Last Modified: Fri, 26 Jun 2020 20:02:03 GMT  
+		Size: 121.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `postgres:13-beta2` - linux; ppc64le
+
+```console
+$ docker pull postgres@sha256:35d98817ce8cdeeb731a62114ad79e23041eb67cca76c1647b143453eb482e40
+```
+
+-	Docker Version: 18.09.7
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **122.6 MB (122562354 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:9a075ccfe427e01ee91192b83421bea3d7d5ff36dc0fe83527361df68688e201`
+-	Entrypoint: `["docker-entrypoint.sh"]`
+-	Default Command: `["postgres"]`
+
+```dockerfile
+# Tue, 09 Jun 2020 01:22:34 GMT
+ADD file:796aad1a35ba276b8cccc19987c152a713db101b2b65e30923db753f5b7f4b0f in / 
+# Tue, 09 Jun 2020 01:22:38 GMT
+CMD ["bash"]
+# Tue, 09 Jun 2020 10:38:15 GMT
+RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
+# Tue, 09 Jun 2020 10:38:33 GMT
+RUN set -eux; 	groupadd -r postgres --gid=999; 	useradd -r -g postgres --uid=999 --home-dir=/var/lib/postgresql --shell=/bin/bash postgres; 	mkdir -p /var/lib/postgresql; 	chown -R postgres:postgres /var/lib/postgresql
+# Tue, 09 Jun 2020 10:38:42 GMT
+ENV GOSU_VERSION=1.12
+# Tue, 09 Jun 2020 10:39:55 GMT
+RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates wget; 	rm -rf /var/lib/apt/lists/*; 	dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
+# Tue, 09 Jun 2020 10:40:24 GMT
+RUN set -eux; 	if [ -f /etc/dpkg/dpkg.cfg.d/docker ]; then 		grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 		sed -ri '/\/usr\/share\/locale/d' /etc/dpkg/dpkg.cfg.d/docker; 		! grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 	fi; 	apt-get update; apt-get install -y --no-install-recommends locales; rm -rf /var/lib/apt/lists/*; 	localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
+# Tue, 09 Jun 2020 10:40:29 GMT
+ENV LANG=en_US.utf8
+# Tue, 09 Jun 2020 10:40:46 GMT
+RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libnss-wrapper 		xz-utils 	; 	rm -rf /var/lib/apt/lists/*
+# Tue, 09 Jun 2020 10:41:10 GMT
+RUN mkdir /docker-entrypoint-initdb.d
+# Tue, 09 Jun 2020 10:41:28 GMT
+RUN set -ex; 	key='B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8'; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 	gpg --batch --export "$key" > /etc/apt/trusted.gpg.d/postgres.gpg; 	command -v gpgconf > /dev/null && gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 	apt-key list
+# Tue, 09 Jun 2020 10:41:40 GMT
+ENV PG_MAJOR=13
+# Fri, 26 Jun 2020 20:15:13 GMT
+ENV PG_VERSION=13~beta2-1.pgdg100+1
+# Fri, 26 Jun 2020 20:16:39 GMT
+RUN set -ex; 		export PYTHONDONTWRITEBYTECODE=1; 		dpkgArch="$(dpkg --print-architecture)"; 	case "$dpkgArch" in 		amd64 | arm64 | i386 | ppc64el) 			echo "deb http://apt.postgresql.org/pub/repos/apt/ buster-pgdg main $PG_MAJOR" > /etc/apt/sources.list.d/pgdg.list; 			apt-get update; 			;; 		*) 			echo "deb-src http://apt.postgresql.org/pub/repos/apt/ buster-pgdg main $PG_MAJOR" > /etc/apt/sources.list.d/pgdg.list; 						case "$PG_MAJOR" in 				9.* | 10 ) ;; 				*) 					echo 'deb http://deb.debian.org/debian buster-backports main' >> /etc/apt/sources.list.d/pgdg.list; 					;; 			esac; 						tempDir="$(mktemp -d)"; 			cd "$tempDir"; 						savedAptMark="$(apt-mark showmanual)"; 						apt-get update; 			DEBIAN_FRONTEND=noninteractive 			apt-get build-dep -y 				postgresql-common pgdg-keyring 				"postgresql-$PG_MAJOR=$PG_VERSION" 			; 			DEB_BUILD_OPTIONS="nocheck parallel=$(nproc)" 				apt-get source --compile 					postgresql-common pgdg-keyring 					"postgresql-$PG_MAJOR=$PG_VERSION" 			; 						apt-mark showmanual | xargs apt-mark auto > /dev/null; 			apt-mark manual $savedAptMark; 						ls -lAFh; 			dpkg-scanpackages . > Packages; 			grep '^Package: ' Packages; 			echo "deb [ trusted=yes ] file://$tempDir ./" > /etc/apt/sources.list.d/temp.list; 			apt-get -o Acquire::GzipIndexes=false update; 			;; 	esac; 		apt-get install -y --no-install-recommends postgresql-common; 	sed -ri 's/#(create_main_cluster) .*$/\1 = false/' /etc/postgresql-common/createcluster.conf; 	apt-get install -y --no-install-recommends 		"postgresql-$PG_MAJOR=$PG_VERSION" 	; 		rm -rf /var/lib/apt/lists/*; 		if [ -n "$tempDir" ]; then 		apt-get purge -y --auto-remove; 		rm -rf "$tempDir" /etc/apt/sources.list.d/temp.list; 	fi; 		find /usr -name '*.pyc' -type f -exec bash -c 'for pyc; do dpkg -S "$pyc" &> /dev/null || rm -vf "$pyc"; done' -- '{}' +
+# Fri, 26 Jun 2020 20:16:59 GMT
+RUN set -eux; 	dpkg-divert --add --rename --divert "/usr/share/postgresql/postgresql.conf.sample.dpkg" "/usr/share/postgresql/$PG_MAJOR/postgresql.conf.sample"; 	cp -v /usr/share/postgresql/postgresql.conf.sample.dpkg /usr/share/postgresql/postgresql.conf.sample; 	ln -sv ../postgresql.conf.sample "/usr/share/postgresql/$PG_MAJOR/"; 	sed -ri "s!^#?(listen_addresses)\s*=\s*\S+.*!\1 = '*'!" /usr/share/postgresql/postgresql.conf.sample; 	grep -F "listen_addresses = '*'" /usr/share/postgresql/postgresql.conf.sample
+# Fri, 26 Jun 2020 20:17:09 GMT
+RUN mkdir -p /var/run/postgresql && chown -R postgres:postgres /var/run/postgresql && chmod 2777 /var/run/postgresql
+# Fri, 26 Jun 2020 20:17:11 GMT
+ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/13/bin
+# Fri, 26 Jun 2020 20:17:14 GMT
+ENV PGDATA=/var/lib/postgresql/data
+# Fri, 26 Jun 2020 20:17:22 GMT
+RUN mkdir -p "$PGDATA" && chown -R postgres:postgres "$PGDATA" && chmod 777 "$PGDATA"
+# Fri, 26 Jun 2020 20:17:24 GMT
+VOLUME [/var/lib/postgresql/data]
+# Fri, 26 Jun 2020 20:17:25 GMT
+COPY file:bf774aaf2659f8308202ce0332f960783bfecabcf593dd9b2d25e19fe5c4b946 in /usr/local/bin/ 
+# Fri, 26 Jun 2020 20:17:39 GMT
+RUN ln -s usr/local/bin/docker-entrypoint.sh / # backwards compat
+# Fri, 26 Jun 2020 20:17:44 GMT
+ENTRYPOINT ["docker-entrypoint.sh"]
+# Fri, 26 Jun 2020 20:17:50 GMT
+EXPOSE 5432
+# Fri, 26 Jun 2020 20:17:54 GMT
+CMD ["postgres"]
+```
+
+-	Layers:
+	-	`sha256:63dbb66c5119bb5086d9e6fb6b154211afc20b44ed136ab7df808f6044cfc6f1`  
+		Last Modified: Tue, 09 Jun 2020 01:31:04 GMT  
+		Size: 30.5 MB (30524405 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:b86b4146dc5739fae8befb9e72affdd47c65ebfe437c0228920207cc20acd4a9`  
+		Last Modified: Tue, 09 Jun 2020 11:24:51 GMT  
+		Size: 5.0 MB (4967315 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:1b9dda73e5fb9674acade5febc1dadfd285a5b3122d7fa542f986af13172294d`  
+		Last Modified: Tue, 09 Jun 2020 11:24:48 GMT  
+		Size: 1.8 KB (1802 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:450671a58193b839ef30e3abd577394019d4f66d0ceef7ea9ca9e3526548bb5e`  
+		Last Modified: Tue, 09 Jun 2020 11:24:48 GMT  
+		Size: 1.3 MB (1338052 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:da8f53bc270464a27af0f3e5b1930ed5e98ac2964132d06201e90c774e352ef6`  
+		Last Modified: Tue, 09 Jun 2020 11:24:44 GMT  
+		Size: 8.0 MB (7965451 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:6fdfb0621f3f2cf59f71377a2e87e457cddbfe49d19dd8c1b14444d32a04a433`  
+		Last Modified: Tue, 09 Jun 2020 11:24:43 GMT  
+		Size: 397.1 KB (397067 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:f3c1ace253526c11e2807ec017512d018148acaa610b30ec0133caa050659e74`  
+		Last Modified: Tue, 09 Jun 2020 11:24:43 GMT  
+		Size: 149.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ff6c8ffb3ec7cc406ab4614cd62d9341f1b905932f57e58b006d823c33294046`  
+		Last Modified: Tue, 09 Jun 2020 11:24:42 GMT  
+		Size: 3.1 KB (3052 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:9060cc317fe064e8c0cc263f9c4d4eded5a72e6a2b8ab118c3f2786e9222d441`  
+		Last Modified: Fri, 26 Jun 2020 20:45:04 GMT  
+		Size: 77.4 MB (77351095 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:e0eb2bff01e986694f6aa06a9ff34c27bad7b8b699d388f8482f129caab0c068`  
+		Last Modified: Fri, 26 Jun 2020 20:44:45 GMT  
+		Size: 9.3 KB (9256 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:2f03e106ef2bd0ce17022b9010ab6228a46a5b7377e34a730a71ebcac41e15c5`  
+		Last Modified: Fri, 26 Jun 2020 20:44:46 GMT  
+		Size: 130.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:0953979fa1414a036640da0761ca5e8273137fddedc7e6ee991b43ffc420afd9`  
+		Last Modified: Fri, 26 Jun 2020 20:44:46 GMT  
+		Size: 202.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:01dab7320264ba07aa3b65dfb2c8679082b690ee44982cf0c11f7e4601a613fe`  
+		Last Modified: Fri, 26 Jun 2020 20:44:46 GMT  
+		Size: 4.3 KB (4257 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:804663abeca61bc31de1cd7c574fdd8a521bc57ab952adfbfe68124caa62f065`  
+		Last Modified: Fri, 26 Jun 2020 20:44:46 GMT  
 		Size: 121.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
