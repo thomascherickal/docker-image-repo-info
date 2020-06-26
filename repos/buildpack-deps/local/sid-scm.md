@@ -1162,20 +1162,13 @@ Licenses: (parsed from: `/usr/share/doc/libxtables12/copyright`)
 - `GPL-2+`
 - `custom`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris iptables=1.8.5-1
-'http://deb.debian.org/debian/pool/main/i/iptables/iptables_1.8.5-1.dsc' iptables_1.8.5-1.dsc 2719 SHA256:37bae2fee453134a1e83749f382999d1d02328183f0af02b15ff0a4cf2b436e3
-'http://deb.debian.org/debian/pool/main/i/iptables/iptables_1.8.5.orig.tar.bz2' iptables_1.8.5.orig.tar.bz2 713769 SHA256:d457d74512e63aa3f50336e0597d4023c0e3c6845594d38532efb6ebcb294309
-'http://deb.debian.org/debian/pool/main/i/iptables/iptables_1.8.5-1.debian.tar.xz' iptables_1.8.5-1.debian.tar.xz 26560 SHA256:e0a1fcc915979d7f63443141cf7d3582e4571934ec55e72783d12454dd92d45b
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/iptables/1.8.5-1/
 
-- https://sources.debian.net/src/iptables/1.8.5-1/ (for browsing the source)
-- https://sources.debian.net/src/iptables/1.8.5-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/iptables/1.8.5-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `iputils=3:20190709-3`
 
@@ -2003,21 +1996,13 @@ Licenses: (parsed from: `/usr/share/doc/mercurial/copyright`, `/usr/share/doc/me
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mercurial=5.4-1
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.4-1.dsc' mercurial_5.4-1.dsc 2751 SHA256:13da00ec20a56e27e78bb8171e15717eb61966a68b02c3abbb8af8dab6c25159
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.4.orig.tar.gz' mercurial_5.4.orig.tar.gz 7722447 SHA256:1df8d1978aefcbb65dc51e3666a452583f47aeaf3c5682e4c00a3b23cd805d6a
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.4.orig.tar.gz.asc' mercurial_5.4.orig.tar.gz.asc 833 SHA256:0702e239411b0d81d8881c7ae58c13194221b43c333e81ded29bddf10d3572c6
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.4-1.debian.tar.xz' mercurial_5.4-1.debian.tar.xz 61992 SHA256:78241bd8e253988559f4a8cb1a494017f9421adb7d2e653e41e790bb11236f66
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mercurial/5.4-1/
 
-- https://sources.debian.net/src/mercurial/5.4-1/ (for browsing the source)
-- https://sources.debian.net/src/mercurial/5.4-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mercurial/5.4-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mime-support=3.64`
 
