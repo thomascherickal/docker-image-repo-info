@@ -2,16 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:20128ff1243a41791c84ed4911d705939dc964eeae60cec28cf362287654851f`
-- Created: `2020-06-22T15:20:49.859245083Z`
-- Virtual Size: ~ 35.33 Mb  
+- Image ID: `sha256:a3bbbff46f107cf6f3127664e11027b5e50834bb3e0aea5a42e71a083ab6d3e2`
+- Created: `2020-06-27T00:18:44.751984435Z`
+- Virtual Size: ~ 35.35 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
 - Labels:
-  - `build-date=20200612`
+  - `build-date=20200626`
   - `name=Photon OS x86_64/3.0 Base Image`
   - `vendor=VMware`
 
@@ -41,13 +41,13 @@ Licenses (from `rpm --query`): Custom
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `curl-7.61.1-6.ph3.x86_64`
+### `rpm` package: `curl-7.61.1-7.ph3.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `curl-libs-7.61.1-6.ph3.x86_64`
+### `rpm` package: `curl-libs-7.61.1-7.ph3.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
@@ -119,7 +119,7 @@ Licenses (from `rpm --query`): GPLv2+
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `libmetalink-0.1.3-1.ph3.x86_64`
+### `rpm` package: `libmetalink-0.1.3-2.ph3.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
