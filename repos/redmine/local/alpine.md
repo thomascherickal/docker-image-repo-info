@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:cdde4ec647c75f2e808f52e9f0bb3a963c0ba283dd32686f5b2282f7454c16c2`
-- Created: `2020-06-12T04:02:25.711087348Z`
+- Image ID: `sha256:08a1414db38346739e8aea9ca4c9b429ab68eab03a71c8bd6410e5a295fd4981`
+- Created: `2020-06-27T00:27:18.043222544Z`
 - Virtual Size: ~ 419.83 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -11,6 +11,7 @@
 - Command: `["rails","server","-b","0.0.0.0"]`
 - Environment:
   - `PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
+  - `LANG=C.UTF-8`
   - `RUBY_MAJOR=2.6`
   - `RUBY_VERSION=2.6.6`
   - `RUBY_DOWNLOAD_SHA256=5db187882b7ac34016cd48d7032e197f07e4968f406b0690e20193b9b424841f`
@@ -894,16 +895,16 @@ LGPL-2.1-or-later
 ### `apk` package: `libjpeg-turbo`
 
 ```console
-libjpeg-turbo-2.0.4-r0 description:
+libjpeg-turbo-2.0.4-r1 description:
 Accelerated baseline JPEG compression and decompression library
 
-libjpeg-turbo-2.0.4-r0 webpage:
+libjpeg-turbo-2.0.4-r1 webpage:
 https://libjpeg-turbo.org/
 
-libjpeg-turbo-2.0.4-r0 installed size:
+libjpeg-turbo-2.0.4-r1 installed size:
 1355776
 
-libjpeg-turbo-2.0.4-r0 license:
+libjpeg-turbo-2.0.4-r1 license:
 BSD-3-Clause IJG Zlib
 
 ```

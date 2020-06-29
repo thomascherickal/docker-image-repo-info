@@ -2,15 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:177a07e2d71d433a167f85fef76e1aa1b6a1e3b34bbcd5f8a59bb12c43d779b5`
-- Created: `2020-06-10T09:28:52.767452648Z`
-- Virtual Size: ~ 542.36 Mb  
+- Image ID: `sha256:cc31ccc7d61e8e5bc2999feb455b64dca2e21aa32fe9fd3d5505060b94954d6a`
+- Created: `2020-06-27T00:24:32.991311215Z`
+- Virtual Size: ~ 542.37 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
 - Command: `["rails","server","-b","0.0.0.0"]`
 - Environment:
   - `PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
+  - `LANG=C.UTF-8`
   - `RUBY_MAJOR=2.6`
   - `RUBY_VERSION=2.6.6`
   - `RUBY_DOWNLOAD_SHA256=5db187882b7ac34016cd48d7032e197f07e4968f406b0690e20193b9b424841f`
