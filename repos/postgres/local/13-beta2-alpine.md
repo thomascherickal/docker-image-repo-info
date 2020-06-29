@@ -1,10 +1,10 @@
-# `postgres:13-beta1-alpine`
+# `postgres:13-beta2-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:5e0dcae62ad6350740e3e635742d8e8bb0de22fd6d19f85af80042604e05abcf`
-- Created: `2020-06-11T22:55:36.759679979Z`
-- Virtual Size: ~ 157.86 Mb  
+- Image ID: `sha256:cac2ee40fa5a40f0abe53e0138033fe7a9bcee28e7fb6c9eaac4d3a2076b1a86`
+- Created: `2020-06-26T20:41:42.671102117Z`
+- Virtual Size: ~ 158.48 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -13,8 +13,8 @@
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=en_US.utf8`
   - `PG_MAJOR=13`
-  - `PG_VERSION=13beta1`
-  - `PG_SHA256=249ba0d0227d5393b83d397f2543354bfee579276cb1e821e9b7d904a42039e1`
+  - `PG_VERSION=13beta2`
+  - `PG_SHA256=51b8c64f4c354728555144a7bfbdced96afb86e5cfa80a26b5e96a1d9081ee9f`
   - `PGDATA=/var/lib/postgresql/data`
 
 ## `apk` (`.apk`-based packages)
@@ -379,16 +379,16 @@ Apache-2.0
 ### `apk` package: `musl`
 
 ```console
-musl-1.1.24-r8 description:
+musl-1.1.24-r9 description:
 the musl c library (libc) implementation
 
-musl-1.1.24-r8 webpage:
+musl-1.1.24-r9 webpage:
 https://musl.libc.org/
 
-musl-1.1.24-r8 installed size:
+musl-1.1.24-r9 installed size:
 614400
 
-musl-1.1.24-r8 license:
+musl-1.1.24-r9 license:
 MIT
 
 ```

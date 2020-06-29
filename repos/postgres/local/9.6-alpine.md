@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:45f463e53bc1f91b5369a241867cdfec1eae6b8b3987f3d2da2fd409241d22b9`
-- Created: `2020-06-11T23:23:38.981989694Z`
-- Virtual Size: ~ 36.06 Mb  
+- Image ID: `sha256:9147d451d0c0aad225a3f1844b6d53dad4f9a5f6388ebf46f65029e8f361fd80`
+- Created: `2020-06-26T21:09:24.614850514Z`
+- Virtual Size: ~ 36.66 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -294,16 +294,16 @@ custom
 ### `apk` package: `musl`
 
 ```console
-musl-1.1.24-r8 description:
+musl-1.1.24-r9 description:
 the musl c library (libc) implementation
 
-musl-1.1.24-r8 webpage:
+musl-1.1.24-r9 webpage:
 https://musl.libc.org/
 
-musl-1.1.24-r8 installed size:
+musl-1.1.24-r9 installed size:
 614400
 
-musl-1.1.24-r8 license:
+musl-1.1.24-r9 license:
 MIT
 
 ```
