@@ -1,9 +1,9 @@
-# `docker:19.03.11`
+# `docker:19.03.12`
 
 ## Docker Metadata
 
-- Image ID: `sha256:0bfe00e7bcd536451161fd64b2fe05f4ff6373ce9dd241e9762b68c7f56ce438`
-- Created: `2020-06-02T21:22:46.758792117Z`
+- Image ID: `sha256:81f5749c9058a7284e6acd8e126f2b882765a17b9ead14422b51cde1a110b85c`
+- Created: `2020-06-25T19:20:15.827832057Z`
 - Virtual Size: ~ 211.00 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -12,7 +12,7 @@
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `DOCKER_CHANNEL=stable`
-  - `DOCKER_VERSION=19.03.11`
+  - `DOCKER_VERSION=19.03.12`
   - `DOCKER_TLS_CERTDIR=/certs`
 
 ## `apk` (`.apk`-based packages)

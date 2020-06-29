@@ -1,9 +1,9 @@
-# `docker:19.03.11-git`
+# `docker:19.03.12-git`
 
 ## Docker Metadata
 
-- Image ID: `sha256:db887aecb8b3201f2f9a17ec55a2583306a3f94cb63101d924e57cb76487b3f1`
-- Created: `2020-06-02T21:23:21.621137908Z`
+- Image ID: `sha256:3a94f70af8c72bde9aff3c4ccd7b8d293028223ee479a820e1c8e97e139bf513`
+- Created: `2020-06-25T19:20:51.694435154Z`
 - Virtual Size: ~ 227.06 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -12,7 +12,7 @@
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `DOCKER_CHANNEL=stable`
-  - `DOCKER_VERSION=19.03.11`
+  - `DOCKER_VERSION=19.03.12`
   - `DOCKER_TLS_CERTDIR=/certs`
 
 ## `apk` (`.apk`-based packages)
@@ -326,16 +326,16 @@ MIT
 ### `apk` package: `nghttp2-libs`
 
 ```console
-nghttp2-libs-1.40.0-r0 description:
+nghttp2-libs-1.41.0-r0 description:
 Experimental HTTP/2 client, server and proxy (libraries)
 
-nghttp2-libs-1.40.0-r0 webpage:
+nghttp2-libs-1.41.0-r0 webpage:
 https://nghttp2.org
 
-nghttp2-libs-1.40.0-r0 installed size:
+nghttp2-libs-1.41.0-r0 installed size:
 159744
 
-nghttp2-libs-1.40.0-r0 license:
+nghttp2-libs-1.41.0-r0 license:
 MIT
 
 ```
