@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:2e425e1870832d9e14daa2964cee7d394170e3b5259ead2fe29201c349e3df2f`
-- Created: `2020-06-17T07:35:06.982905167Z`
+- Image ID: `sha256:866f0daca22d5b0874180b1a378e7a680fcedcc0daf480308af05bb7b95319ea`
+- Created: `2020-06-29T21:22:52.840178491Z`
 - Virtual Size: ~ 1.30 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -23,9 +23,13 @@
   - `TOMCAT_MAJOR=8`
   - `TOMCAT_VERSION=8.5.56`
   - `TOMCAT_SHA512=7a02a8e0b12eea2e0bf1175d754bd19dc445e7182c2db033ba6ca1330161cc74207c9b9b7f0fce510417ece28f26cc36816b34eb394b0d27350631e64204aed3`
-  - `XWIKI_VERSION=12.4`
-  - `XWIKI_URL_PREFIX=https://maven.xwiki.org/releases/org/xwiki/platform/xwiki-platform-distribution-war/12.4`
-  - `XWIKI_DOWNLOAD_SHA256=f42fe7b84a323b0f637c0e9c60e885741821b2fd05f0196d4d41729d5888d2cc`
+  - `XWIKI_VERSION=12.5`
+  - `XWIKI_URL_PREFIX=https://maven.xwiki.org/releases/org/xwiki/platform/xwiki-platform-distribution-war/12.5`
+  - `XWIKI_DOWNLOAD_SHA256=59b8dc502d2706de10db2295e4d301c9983d9f09be497a8ea15ab5db2254e8d0`
+  - `MYSQL_JDBC_VERSION=8.0.20`
+  - `MYSQL_JDBC_PREFIX=https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.20`
+  - `MYSQL_JDBC_ARTIFACT=mysql-connector-java-8.0.20.jar`
+  - `MYSQL_JDBC_TARGET=/usr/local/tomcat/webapps/ROOT/WEB-INF/lib/mysql-connector-java-8.0.20.jar`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -520,13 +524,13 @@ $ apt-get source -qq --print-uris cups=2.2.7-1ubuntu2.8
 'http://archive.ubuntu.com/ubuntu/pool/main/c/cups/cups_2.2.7-1ubuntu2.8.debian.tar.xz' cups_2.2.7-1ubuntu2.8.debian.tar.xz 363376 SHA256:eb062ea65e733f3c3bbe045c08477929a3cf02e6b6676586f8af72273ad2ddb9
 ```
 
-### `dpkg` source package: `curl=7.58.0-2ubuntu3.8`
+### `dpkg` source package: `curl=7.58.0-2ubuntu3.9`
 
 Binary Packages:
 
-- `curl=7.58.0-2ubuntu3.8`
-- `libcurl3-gnutls:amd64=7.58.0-2ubuntu3.8`
-- `libcurl4:amd64=7.58.0-2ubuntu3.8`
+- `curl=7.58.0-2ubuntu3.9`
+- `libcurl3-gnutls:amd64=7.58.0-2ubuntu3.9`
+- `libcurl4:amd64=7.58.0-2ubuntu3.9`
 
 Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/doc/libcurl4/copyright`)
 
@@ -537,9 +541,14 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris curl=7.58.0-2ubuntu3.9
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.58.0-2ubuntu3.9.dsc' curl_7.58.0-2ubuntu3.9.dsc 2777 SHA256:e6300de42c395bc17531dc85a6decd5a6ef0e446625641860c3a7ce8084b2309
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.58.0.orig.tar.gz' curl_7.58.0.orig.tar.gz 3879728 SHA256:cc245bf9a1a42a45df491501d97d5593392a03f7b4f07b952793518d97666115
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.58.0-2ubuntu3.9.debian.tar.xz' curl_7.58.0-2ubuntu3.9.debian.tar.xz 40692 SHA256:6231d88f5dc76718550eb3d89f810f1c0d1ecb84b9da9b261640389427a551ab
+```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27~101-g0780600+dfsg-3ubuntu2.1`
 
@@ -932,13 +941,13 @@ $ apt-get source -qq --print-uris gdk-pixbuf=2.36.11-2
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gdk-pixbuf/gdk-pixbuf_2.36.11-2.debian.tar.xz' gdk-pixbuf_2.36.11-2.debian.tar.xz 15204 SHA256:064020524e80e3ac713dd6bdf861660df26c61d9aceb75be74df44a9979c0a0c
 ```
 
-### `dpkg` source package: `glib-networking=2.56.0-1`
+### `dpkg` source package: `glib-networking=2.56.0-1ubuntu0.1`
 
 Binary Packages:
 
-- `glib-networking:amd64=2.56.0-1`
-- `glib-networking-common=2.56.0-1`
-- `glib-networking-services=2.56.0-1`
+- `glib-networking:amd64=2.56.0-1ubuntu0.1`
+- `glib-networking-common=2.56.0-1ubuntu0.1`
+- `glib-networking-services=2.56.0-1ubuntu0.1`
 
 Licenses: (parsed from: `/usr/share/doc/glib-networking/copyright`, `/usr/share/doc/glib-networking-common/copyright`, `/usr/share/doc/glib-networking-services/copyright`)
 
@@ -948,10 +957,10 @@ Licenses: (parsed from: `/usr/share/doc/glib-networking/copyright`, `/usr/share/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris glib-networking=2.56.0-1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib-networking/glib-networking_2.56.0-1.dsc' glib-networking_2.56.0-1.dsc 2510 SHA256:807831b3cef0a5c5f9ec3079534ac1705081d2bc3e6deab9bf26372dfa8b7f70
+$ apt-get source -qq --print-uris glib-networking=2.56.0-1ubuntu0.1
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glib-networking/glib-networking_2.56.0-1ubuntu0.1.dsc' glib-networking_2.56.0-1ubuntu0.1.dsc 2320 SHA256:749930ca467491bfe2c9d907c031a34d4492759adaca01cb5a1f3d84a31eb036
 'http://archive.ubuntu.com/ubuntu/pool/main/g/glib-networking/glib-networking_2.56.0.orig.tar.xz' glib-networking_2.56.0.orig.tar.xz 163852 SHA256:47fd10bcae2e5039dc5f685e3ea384f48e64a6bee26d755718f534a978477c93
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib-networking/glib-networking_2.56.0-1.debian.tar.xz' glib-networking_2.56.0-1.debian.tar.xz 7972 SHA256:d7508951b05952bea47dbbee1ddb6433b96875fc7801a9d9c47fcc256041dadd
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glib-networking/glib-networking_2.56.0-1ubuntu0.1.debian.tar.xz' glib-networking_2.56.0-1ubuntu0.1.debian.tar.xz 31224 SHA256:934c32861afb7162a28b39d1554488a75845eb7366da656e3f864476541e752d
 ```
 
 ### `dpkg` source package: `glib2.0=2.56.4-0ubuntu0.18.04.6`
@@ -2432,14 +2441,9 @@ Licenses: (parsed from: `/usr/share/doc/libseccomp2/copyright`)
 - `LGPL-2`
 - `LGPL-2.0+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libseccomp=2.4.1-0ubuntu0.18.04.2
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.1-0ubuntu0.18.04.2.dsc' libseccomp_2.4.1-0ubuntu0.18.04.2.dsc 2296 SHA256:1b9d6af1e8c7cbc7bfdd3c538a324f4e45fdd8dc37b909ec4b5d27efbf539ede
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.1.orig.tar.gz' libseccomp_2.4.1.orig.tar.gz 606860 SHA256:1ca3735249af66a1b2f762fe6e710fcc294ad7185f1cc961e5bd83f9988006e8
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.1-0ubuntu0.18.04.2.debian.tar.xz' libseccomp_2.4.1-0ubuntu0.18.04.2.debian.tar.xz 10248 SHA256:d7e6dd6f686f54dccf2701afc3ca164468037ea0b640c2621fb9f96b4a7ebf52
-```
 
 ### `dpkg` source package: `libselinux=2.7-2build2`
 
@@ -3185,25 +3189,6 @@ $ apt-get source -qq --print-uris mpdecimal=2.4.2-1ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/m/mpdecimal/mpdecimal_2.4.2-1ubuntu1.dsc' mpdecimal_2.4.2-1ubuntu1.dsc 2051 SHA256:6a1a2c1b839492e178d601dc6b9de26a3173124b35659ccd21362167a4fabda9
 'http://archive.ubuntu.com/ubuntu/pool/main/m/mpdecimal/mpdecimal_2.4.2.orig.tar.gz' mpdecimal_2.4.2.orig.tar.gz 2271529 SHA256:83c628b90f009470981cf084c5418329c88b19835d8af3691b930afccb7d79c7
 'http://archive.ubuntu.com/ubuntu/pool/main/m/mpdecimal/mpdecimal_2.4.2-1ubuntu1.debian.tar.xz' mpdecimal_2.4.2-1ubuntu1.debian.tar.xz 5328 SHA256:091414d364411f1d05b496f877e04d8ad22d52441cb698d739929907e94e0fc7
-```
-
-### `dpkg` source package: `mysql-connector-java=5.1.45-1`
-
-Binary Packages:
-
-- `libmysql-java=5.1.45-1`
-
-Licenses: (parsed from: `/usr/share/doc/libmysql-java/copyright`)
-
-- `GPL-2`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris mysql-connector-java=5.1.45-1
-'http://archive.ubuntu.com/ubuntu/pool/universe/m/mysql-connector-java/mysql-connector-java_5.1.45-1.dsc' mysql-connector-java_5.1.45-1.dsc 2215 SHA256:c1a9f2bece493c0e51b5f70c3df283cbc9e5dbccf7eff893125e353a80492946
-'http://archive.ubuntu.com/ubuntu/pool/universe/m/mysql-connector-java/mysql-connector-java_5.1.45.orig.tar.xz' mysql-connector-java_5.1.45.orig.tar.xz 1013888 SHA256:15b1dfbb1079b00e04c6d23e70b2354e2f9b421de837b21d9071bf5c0dea38ec
-'http://archive.ubuntu.com/ubuntu/pool/universe/m/mysql-connector-java/mysql-connector-java_5.1.45-1.debian.tar.xz' mysql-connector-java_5.1.45-1.debian.tar.xz 10608 SHA256:2d6e7758dd1e48ac4f3fb9045fcadf53355f1b92d23de2202da0ef6a7615c301
 ```
 
 ### `dpkg` source package: `mythes=2:1.2.4-3`

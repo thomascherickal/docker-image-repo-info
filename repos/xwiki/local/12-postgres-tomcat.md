@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:a21328122ecd12cabd4ffb772dce44c925bd04c051c7f85c4a6608b14231cde8`
-- Created: `2020-06-17T07:35:48.258115091Z`
+- Image ID: `sha256:7d4f0fcb6c3711a4a9a5e6983d0982f23273c0ea714fb1b2188f6aaad3c660e7`
+- Created: `2020-06-29T21:23:47.592100916Z`
 - Virtual Size: ~ 1.30 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -23,9 +23,9 @@
   - `TOMCAT_MAJOR=8`
   - `TOMCAT_VERSION=8.5.56`
   - `TOMCAT_SHA512=7a02a8e0b12eea2e0bf1175d754bd19dc445e7182c2db033ba6ca1330161cc74207c9b9b7f0fce510417ece28f26cc36816b34eb394b0d27350631e64204aed3`
-  - `XWIKI_VERSION=12.4`
-  - `XWIKI_URL_PREFIX=https://maven.xwiki.org/releases/org/xwiki/platform/xwiki-platform-distribution-war/12.4`
-  - `XWIKI_DOWNLOAD_SHA256=f42fe7b84a323b0f637c0e9c60e885741821b2fd05f0196d4d41729d5888d2cc`
+  - `XWIKI_VERSION=12.5`
+  - `XWIKI_URL_PREFIX=https://maven.xwiki.org/releases/org/xwiki/platform/xwiki-platform-distribution-war/12.5`
+  - `XWIKI_DOWNLOAD_SHA256=59b8dc502d2706de10db2295e4d301c9983d9f09be497a8ea15ab5db2254e8d0`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -2451,14 +2451,9 @@ Licenses: (parsed from: `/usr/share/doc/libseccomp2/copyright`)
 - `LGPL-2`
 - `LGPL-2.0+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libseccomp=2.4.1-0ubuntu0.18.04.2
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.1-0ubuntu0.18.04.2.dsc' libseccomp_2.4.1-0ubuntu0.18.04.2.dsc 2296 SHA256:1b9d6af1e8c7cbc7bfdd3c538a324f4e45fdd8dc37b909ec4b5d27efbf539ede
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.1.orig.tar.gz' libseccomp_2.4.1.orig.tar.gz 606860 SHA256:1ca3735249af66a1b2f762fe6e710fcc294ad7185f1cc961e5bd83f9988006e8
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.1-0ubuntu0.18.04.2.debian.tar.xz' libseccomp_2.4.1-0ubuntu0.18.04.2.debian.tar.xz 10248 SHA256:d7e6dd6f686f54dccf2701afc3ca164468037ea0b640c2621fb9f96b4a7ebf52
-```
 
 ### `dpkg` source package: `libselinux=2.7-2build2`
 
