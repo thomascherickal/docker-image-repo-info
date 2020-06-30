@@ -2178,14 +2178,9 @@ Licenses: (parsed from: `/usr/share/doc/glib-networking/copyright`, `/usr/share/
 - `LGPL-2.1+`
 - `OpenSSL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glib-networking=2.64.2-1build1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib-networking/glib-networking_2.64.2-1build1.dsc' glib-networking_2.64.2-1build1.dsc 1834 SHA256:7622468ba823b876356c900681602cfa991141032f129eab50bd3f1894661112
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib-networking/glib-networking_2.64.2.orig.tar.xz' glib-networking_2.64.2.orig.tar.xz 189680 SHA256:45def0715c551f9b0b41a4e4f730ac95f3d5d4f3de8162260fbf9421cff695a7
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib-networking/glib-networking_2.64.2-1build1.debian.tar.xz' glib-networking_2.64.2-1build1.debian.tar.xz 11148 SHA256:db60b6fc12a92670e2465bc8a031e6b6c71d8042ab23d4f7544491dc2a302062
-```
 
 ### `dpkg` source package: `glib2.0=2.64.2-1~fakesync1`
 

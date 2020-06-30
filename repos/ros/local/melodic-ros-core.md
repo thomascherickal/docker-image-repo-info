@@ -1847,9 +1847,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris libseccomp=2.4.1-0ubuntu0.18.04.2
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.1-0ubuntu0.18.04.2.dsc' libseccomp_2.4.1-0ubuntu0.18.04.2.dsc 2296 SHA256:1b9d6af1e8c7cbc7bfdd3c538a324f4e45fdd8dc37b909ec4b5d27efbf539ede
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.1.orig.tar.gz' libseccomp_2.4.1.orig.tar.gz 606860 SHA256:1ca3735249af66a1b2f762fe6e710fcc294ad7185f1cc961e5bd83f9988006e8
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.1-0ubuntu0.18.04.2.debian.tar.xz' libseccomp_2.4.1-0ubuntu0.18.04.2.debian.tar.xz 10248 SHA256:d7e6dd6f686f54dccf2701afc3ca164468037ea0b640c2621fb9f96b4a7ebf52
+'http://security.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.1-0ubuntu0.18.04.2.dsc' libseccomp_2.4.1-0ubuntu0.18.04.2.dsc 2296 SHA256:1b9d6af1e8c7cbc7bfdd3c538a324f4e45fdd8dc37b909ec4b5d27efbf539ede
+'http://security.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.1.orig.tar.gz' libseccomp_2.4.1.orig.tar.gz 606860 SHA256:1ca3735249af66a1b2f762fe6e710fcc294ad7185f1cc961e5bd83f9988006e8
+'http://security.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.1-0ubuntu0.18.04.2.debian.tar.xz' libseccomp_2.4.1-0ubuntu0.18.04.2.debian.tar.xz 10248 SHA256:d7e6dd6f686f54dccf2701afc3ca164468037ea0b640c2621fb9f96b4a7ebf52
 ```
 
 ### `dpkg` source package: `libselinux=2.7-2build2`
@@ -2083,14 +2083,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=4.15.0-106.107
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-106.107.dsc' linux_4.15.0-106.107.dsc 7062 SHA256:e3d53e60810e6d462cbb8d39809f2f175239bed9fb5f2533d9fb3aee1a6ef1dd
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0.orig.tar.gz' linux_4.15.0.orig.tar.gz 157656459 SHA256:c33b8ba5c45a40b689979caa2421c4d933864cd70eb93c00eb69adf43e9a24fc
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-106.107.diff.gz' linux_4.15.0-106.107.diff.gz 9866491 SHA256:c4832493cfc118c86e2db1b32c0026786b1e07d1944dedc81f3bdf33ff8fae9b
-```
 
 ### `dpkg` source package: `lksctp-tools=1.0.17+dfsg-2`
 
