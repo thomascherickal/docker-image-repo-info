@@ -921,20 +921,13 @@ Licenses: (parsed from: `/usr/share/doc/libxtables12/copyright`)
 - `GPL-2+`
 - `custom`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris iptables=1.8.4-3
-'http://deb.debian.org/debian/pool/main/i/iptables/iptables_1.8.4-3.dsc' iptables_1.8.4-3.dsc 2719 SHA256:0d0c9ae69f984d7ad8aef1f4361e56b01dfbb3908f2640644b02c62c0623f723
-'http://deb.debian.org/debian/pool/main/i/iptables/iptables_1.8.4.orig.tar.bz2' iptables_1.8.4.orig.tar.bz2 704312 SHA256:993a3a5490a544c2cbf2ef15cf7e7ed21af1845baf228318d5c36ef8827e157c
-'http://deb.debian.org/debian/pool/main/i/iptables/iptables_1.8.4-3.debian.tar.xz' iptables_1.8.4-3.debian.tar.xz 65296 SHA256:1d7018909d55f4f578f811ee5eff7591d91af79a6283a947d1c8c2c5f5a4ffab
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/iptables/1.8.4-3/
 
-- https://sources.debian.net/src/iptables/1.8.4-3/ (for browsing the source)
-- https://sources.debian.net/src/iptables/1.8.4-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/iptables/1.8.4-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `iputils=3:20190709-3`
 
