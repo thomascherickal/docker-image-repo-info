@@ -2,14 +2,15 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:465bbb9f48c4bb951521d25e43f9fbaf6f649cf133ba6ad5e65be40301eaebd2`
-- Created: `2020-06-09T19:42:11.047062407Z`
+- Image ID: `sha256:9b840f43471e752f4362ba25af84642ea0e61a862f7e3579f09147f30aee7b46`
+- Created: `2020-06-26T21:20:43.848023069Z`
 - Virtual Size: ~ 842.03 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["irb"]`
 - Environment:
   - `PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
+  - `LANG=C.UTF-8`
   - `RUBY_MAJOR=2.7`
   - `RUBY_VERSION=2.7.1`
   - `RUBY_DOWNLOAD_SHA256=b224f9844646cc92765df8288a46838511c1cec5b550d8874bd4686a904fcee7`
