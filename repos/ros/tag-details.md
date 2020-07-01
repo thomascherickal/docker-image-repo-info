@@ -59,6 +59,13 @@
 -	[`ros:noetic-ros-core`](#rosnoetic-ros-core)
 -	[`ros:noetic-ros-core-buster`](#rosnoetic-ros-core-buster)
 -	[`ros:noetic-ros-core-focal`](#rosnoetic-ros-core-focal)
+-	[`ros:rolling`](#rosrolling)
+-	[`ros:rolling-ros1-bridge`](#rosrolling-ros1-bridge)
+-	[`ros:rolling-ros1-bridge-focal`](#rosrolling-ros1-bridge-focal)
+-	[`ros:rolling-ros-base`](#rosrolling-ros-base)
+-	[`ros:rolling-ros-base-focal`](#rosrolling-ros-base-focal)
+-	[`ros:rolling-ros-core`](#rosrolling-ros-core)
+-	[`ros:rolling-ros-core-focal`](#rosrolling-ros-core-focal)
 
 ## `ros:dashing`
 
@@ -16546,3 +16553,31 @@ CMD ["bash"]
 		Last Modified: Wed, 17 Jun 2020 04:40:11 GMT  
 		Size: 195.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `ros:rolling`
+
+**does not exist** (yet?)
+
+## `ros:rolling-ros1-bridge`
+
+**does not exist** (yet?)
+
+## `ros:rolling-ros1-bridge-focal`
+
+**does not exist** (yet?)
+
+## `ros:rolling-ros-base`
+
+**does not exist** (yet?)
+
+## `ros:rolling-ros-base-focal`
+
+**does not exist** (yet?)
+
+## `ros:rolling-ros-core`
+
+**does not exist** (yet?)
+
+## `ros:rolling-ros-core-focal`
+
+**does not exist** (yet?)
