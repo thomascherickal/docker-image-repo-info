@@ -1,7 +1,7 @@
 ## `percona:psmdb-3.6.18`
 
 ```console
-$ docker pull percona@sha256:6f4839cff36fb816beab56a69f8acfb428f1043769f275d2f213708ddc4b9661
+$ docker pull percona@sha256:295d360a85dc46ee443cd340dfcadcbc406d119c29700784eb1c5afe8de37b26
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull percona@sha256:6f4839cff36fb816beab56a69f8acfb428f1043769f275d2f21
 ### `percona:psmdb-3.6.18` - linux; amd64
 
 ```console
-$ docker pull percona@sha256:147f999d6a931565f8812e9bc3387862040d9e1f3be06479ded81734af24f42d
+$ docker pull percona@sha256:5bb2e2fa02ba7570561ad727c5ad45b61986dcc88efbde3447cb4a904a1c08c8
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **157.0 MB (156955012 bytes)**  
+-	Total Size: **157.0 MB (157035853 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6007e785e971302c5d50954833bc5c79c3422c509f8232f61b18611904e9e4e7`
+-	Image ID: `sha256:4bb0898e4443c69e665418e86e273338005e2d89b1666a8ac7c9ffab515a3729`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["mongod"]`
 
@@ -63,29 +63,29 @@ ENV OS_VER=el7
 ENV FULL_PERCONA_VERSION=3.6.18-6.0.el7
 # Tue, 26 May 2020 21:45:41 GMT
 ENV K8S_TOOLS_VERSION=0.5.0
-# Tue, 26 May 2020 21:45:48 GMT
-RUN set -ex;     curl -Lf -o /tmp/jq.rpm https://download.fedoraproject.org/pub/epel/7/x86_64/Packages/j/jq-1.6-1.el7.x86_64.rpm;     curl -Lf -o /tmp/oniguruma.rpm https://download.fedoraproject.org/pub/epel/7/x86_64/Packages/o/oniguruma-5.9.5-3.el7.x86_64.rpm;     rpmkeys --checksig /tmp/jq.rpm /tmp/oniguruma.rpm;         rpm -i /tmp/jq.rpm /tmp/oniguruma.rpm;     rm -rf /tmp/jq.rpm /tmp/oniguruma.rpm
-# Tue, 26 May 2020 21:46:12 GMT
+# Thu, 02 Jul 2020 17:21:14 GMT
+RUN set -ex;     curl -Lf -o /tmp/jq.rpm https://download.fedoraproject.org/pub/epel/7/x86_64/Packages/j/jq-1.6-2.el7.x86_64.rpm;     curl -Lf -o /tmp/oniguruma.rpm https://download.fedoraproject.org/pub/epel/7/x86_64/Packages/o/oniguruma-6.8.2-1.el7.x86_64.rpm;     rpmkeys --checksig /tmp/jq.rpm /tmp/oniguruma.rpm;         rpm -i /tmp/jq.rpm /tmp/oniguruma.rpm;     rm -rf /tmp/jq.rpm /tmp/oniguruma.rpm
+# Thu, 02 Jul 2020 17:21:32 GMT
 RUN set -ex;     sed -i '/nodocs/d' /etc/yum.conf || :;     yum install -y         yum-utils         shadow-utils         curl         procps-ng         Percona-Server-MongoDB-36-shell-${FULL_PERCONA_VERSION}         Percona-Server-MongoDB-36-mongos-${FULL_PERCONA_VERSION};         repoquery -a --location             policycoreutils                 | xargs curl -Lf -o /tmp/policycoreutils.rpm;         repoquery -a --location             Percona-Server-MongoDB-36-server-${FULL_PERCONA_VERSION}                 | xargs curl -Lf -o /tmp/Percona-Server-MongoDB-36-server-${FULL_PERCONA_VERSION}.rpm;         rpm -iv /tmp/policycoreutils.rpm /tmp/Percona-Server-MongoDB-36-server-${FULL_PERCONA_VERSION}.rpm --nodeps;                 rm -rf /tmp/policycoreutils.rpm /tmp/Percona-Server-MongoDB-36-server-${FULL_PERCONA_VERSION}.rpm;         yum clean all;         rm -rf /var/cache/yum /data/db && mkdir -p /data/db;         chown -R 1001:0 /data/db
-# Tue, 26 May 2020 21:46:14 GMT
+# Thu, 02 Jul 2020 17:21:32 GMT
 RUN useradd -u 1001 -r -g 0 -s /sbin/nologin             -c "Default Application User" mongodb
-# Tue, 26 May 2020 21:46:15 GMT
+# Thu, 02 Jul 2020 17:21:33 GMT
 COPY file:b7c621ae843e72f20dd7ef20e8c42b89234688ceed5018592c3e5bfa61048aad in /licenses/LICENSE.Dockerfile 
-# Tue, 26 May 2020 21:46:16 GMT
+# Thu, 02 Jul 2020 17:21:33 GMT
 RUN cp /usr/share/doc/Percona-Server-MongoDB-36-server-$(echo ${FULL_PERCONA_VERSION} | cut -d - -f 1)/LICENSE-Community.txt /licenses/LICENSE.Percona-Server-for-MongoDB
-# Tue, 26 May 2020 21:46:21 GMT
+# Thu, 02 Jul 2020 17:21:35 GMT
 RUN set -ex;     curl -fSL https://github.com/percona/mongodb-orchestration-tools/releases/download/${K8S_TOOLS_VERSION}/k8s-mongodb-initiator -o /usr/local/bin/k8s-mongodb-initiator;     curl -fSL  https://github.com/percona/mongodb-orchestration-tools/releases/download/${K8S_TOOLS_VERSION}/mongodb-healthcheck -o /usr/local/bin/mongodb-healthcheck;     curl -fSL  https://github.com/percona/mongodb-orchestration-tools/releases/download/${K8S_TOOLS_VERSION}/SHA256SUMS -o /tmp/SHA256SUMS;     echo "$(grep 'k8s-mongodb-initiator' /tmp/SHA256SUMS | awk '{print $1}')" /usr/local/bin/k8s-mongodb-initiator | sha256sum -c -;     echo "$(grep 'mongodb-healthcheck' /tmp/SHA256SUMS   | awk '{print $1}')" /usr/local/bin/mongodb-healthcheck   | sha256sum -c -;     rm -f /tmp/SHA256SUMS;         chmod 0755 /usr/local/bin/k8s-mongodb-initiator /usr/local/bin/mongodb-healthcheck
-# Tue, 26 May 2020 21:46:21 GMT
+# Thu, 02 Jul 2020 17:21:36 GMT
 VOLUME [/data/db]
-# Tue, 26 May 2020 21:46:21 GMT
-COPY file:85995e73e1e4d284ba65fabe65ed1e96fcb9c00ac0d328edb8b0b48749d784e1 in /entrypoint.sh 
-# Tue, 26 May 2020 21:46:22 GMT
+# Thu, 02 Jul 2020 17:21:36 GMT
+COPY file:36bd7798a7bd236f79a692385b6877519fd05ff40f92de87cb1d5c527c35d799 in /entrypoint.sh 
+# Thu, 02 Jul 2020 17:21:36 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Tue, 26 May 2020 21:46:22 GMT
+# Thu, 02 Jul 2020 17:21:36 GMT
 EXPOSE 27017
-# Tue, 26 May 2020 21:46:23 GMT
+# Thu, 02 Jul 2020 17:21:36 GMT
 USER 1001
-# Tue, 26 May 2020 21:46:23 GMT
+# Thu, 02 Jul 2020 17:21:37 GMT
 CMD ["mongod"]
 ```
 
@@ -98,31 +98,31 @@ CMD ["mongod"]
 		Last Modified: Tue, 26 May 2020 21:47:12 GMT  
 		Size: 6.5 MB (6470308 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f6d53e4d6470b9e7a55ea4d656570c7d7b1630d4e36da4a75cb758551ffba777`  
-		Last Modified: Tue, 26 May 2020 21:47:12 GMT  
-		Size: 6.8 MB (6794740 bytes)  
+	-	`sha256:224b3b313dda5e5a1d45077b7a7380fe3616b6b1f9993a464b0f0742503a5ef6`  
+		Last Modified: Thu, 02 Jul 2020 17:22:19 GMT  
+		Size: 6.9 MB (6866852 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2487bc853ed7b533d7232c6bb4496349f515dee5974139c8c5f0ef7b779ef2fa`  
-		Last Modified: Tue, 26 May 2020 21:47:25 GMT  
-		Size: 59.7 MB (59650682 bytes)  
+	-	`sha256:19e9f32fd306993d08b51cfbc4c17d20a137743d3d3633b37d9ccf7ef8ca5f28`  
+		Last Modified: Thu, 02 Jul 2020 17:22:27 GMT  
+		Size: 59.7 MB (59658881 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9dadb527369af8261ce449cedd3ec6af481947a0695bb450adf73de206be4feb`  
-		Last Modified: Tue, 26 May 2020 21:47:07 GMT  
-		Size: 1.6 KB (1596 bytes)  
+	-	`sha256:e683bdb8b3e4e93c793d57b71c3a1ec06e4a2f0a41ab3d33917c1a6741f800ce`  
+		Last Modified: Thu, 02 Jul 2020 17:22:16 GMT  
+		Size: 1.6 KB (1593 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8949220cddbb6332cb6b9e8171f990b98f93a9e19209ae55361027347c9439a3`  
-		Last Modified: Tue, 26 May 2020 21:47:07 GMT  
-		Size: 4.1 KB (4075 bytes)  
+	-	`sha256:0e012d00cdfac70ed89214d6c727457048aa09261a226f16a77f672cd68d5ff0`  
+		Last Modified: Thu, 02 Jul 2020 17:22:16 GMT  
+		Size: 4.1 KB (4074 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0369cbd1fb50d2e24a30d691d263566f12d72783e20acf23696c26906dfbcd94`  
-		Last Modified: Tue, 26 May 2020 21:47:07 GMT  
+	-	`sha256:80f8729ed74d84ee001ebfad26a5c65e83ddfe7960e50404e021433067391c3a`  
+		Last Modified: Thu, 02 Jul 2020 17:22:16 GMT  
 		Size: 10.6 KB (10578 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:924b240b4cb54c9df68c61d44eac4b3345fa0e050bdfde7374790cafa9c4f460`  
-		Last Modified: Tue, 26 May 2020 21:47:12 GMT  
-		Size: 8.1 MB (8138879 bytes)  
+	-	`sha256:1f6657db9ed2cf25bbd739123194bf42a6ea0a3e16e488add8ebb78fe01dcd61`  
+		Last Modified: Thu, 02 Jul 2020 17:22:19 GMT  
+		Size: 8.1 MB (8138884 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a2850bf614f384c3501d51222981386b44270240e20116ecc7fc0e1fe02c3c86`  
-		Last Modified: Tue, 26 May 2020 21:47:07 GMT  
-		Size: 4.0 KB (4013 bytes)  
+	-	`sha256:91023628d75393aa573a82271a79e3d39e66c5ccd1dc62c683a51540e74a1407`  
+		Last Modified: Thu, 02 Jul 2020 17:22:16 GMT  
+		Size: 4.5 KB (4542 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
