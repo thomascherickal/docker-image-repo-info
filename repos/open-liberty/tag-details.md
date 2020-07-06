@@ -6,6 +6,8 @@
 -	[`open-liberty:20.0.0.3-kernel-java8-openj9`](#open-liberty20003-kernel-java8-openj9)
 -	[`open-liberty:20.0.0.6-full-java8-openj9`](#open-liberty20006-full-java8-openj9)
 -	[`open-liberty:20.0.0.6-kernel-java8-openj9`](#open-liberty20006-kernel-java8-openj9)
+-	[`open-liberty:20.0.0.7-full-java8-openj9`](#open-liberty20007-full-java8-openj9)
+-	[`open-liberty:20.0.0.7-kernel-java8-openj9`](#open-liberty20007-kernel-java8-openj9)
 -	[`open-liberty:full`](#open-libertyfull)
 -	[`open-liberty:full-java8-openj9`](#open-libertyfull-java8-openj9)
 -	[`open-liberty:kernel`](#open-libertykernel)
@@ -1661,6 +1663,14 @@ CMD ["/opt/ol/wlp/bin/server" "run" "defaultServer"]
 		Last Modified: Wed, 17 Jun 2020 04:29:42 GMT  
 		Size: 7.4 MB (7427551 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `open-liberty:20.0.0.7-full-java8-openj9`
+
+**does not exist** (yet?)
+
+## `open-liberty:20.0.0.7-kernel-java8-openj9`
+
+**does not exist** (yet?)
 
 ## `open-liberty:full`
 
