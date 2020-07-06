@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:6007e785e971302c5d50954833bc5c79c3422c509f8232f61b18611904e9e4e7`
-- Created: `2020-05-26T21:46:23.451813532Z`
-- Virtual Size: ~ 431.55 Mb  
+- Image ID: `sha256:4bb0898e4443c69e665418e86e273338005e2d89b1666a8ac7c9ffab515a3729`
+- Created: `2020-07-02T17:21:37.113181641Z`
+- Virtual Size: ~ 431.67 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -747,7 +747,7 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/iputils-20160308-10.el7.src.rpm
 ```
 
-### `rpm` package: `jq-1.6-1.el7.x86_64`
+### `rpm` package: `jq-1.6-2.el7.x86_64`
 
 Licenses (from `rpm --query`): MIT and ASL 2.0 and CC-BY and GPLv3
 
@@ -1439,7 +1439,7 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/nss-util-3.44.0-4.el7_7.src.rpm
 ```
 
-### `rpm` package: `oniguruma-5.9.5-3.el7.x86_64`
+### `rpm` package: `oniguruma-6.8.2-1.el7.x86_64`
 
 Licenses (from `rpm --query`): BSD
 
