@@ -259,19 +259,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris cdebconf=0.252
-'http://deb.debian.org/debian/pool/main/c/cdebconf/cdebconf_0.252.dsc' cdebconf_0.252.dsc 2750 SHA256:f0f6d4434923445c165812f87f91c986dbc42592bdce2fc8bd562534a3bbbe14
-'http://deb.debian.org/debian/pool/main/c/cdebconf/cdebconf_0.252.tar.xz' cdebconf_0.252.tar.xz 275488 SHA256:ebc377a6d605c9a2e93e904fdee6e82707c56c6adc600a4e65939fbcb791bb2f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/cdebconf/0.252/
 
-- https://sources.debian.net/src/cdebconf/0.252/ (for browsing the source)
-- https://sources.debian.net/src/cdebconf/0.252/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/cdebconf/0.252/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `coreutils=8.30-3`
 
@@ -876,19 +870,13 @@ Licenses: (parsed from: `/usr/share/doc/init-system-helpers/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris init-system-helpers=1.57
-'http://deb.debian.org/debian/pool/main/i/init-system-helpers/init-system-helpers_1.57.dsc' init-system-helpers_1.57.dsc 1896 SHA256:88bb5af040c99f010b6d6947ff5c80ae4863ff787e0eeae91e99dcd15a10dbb8
-'http://deb.debian.org/debian/pool/main/i/init-system-helpers/init-system-helpers_1.57.tar.xz' init-system-helpers_1.57.tar.xz 40460 SHA256:e9d83fd8756a42666fb5d19a8835813823295846659b4e58f138bb9b54e9f5dd
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/init-system-helpers/1.57/
 
-- https://sources.debian.net/src/init-system-helpers/1.57/ (for browsing the source)
-- https://sources.debian.net/src/init-system-helpers/1.57/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/init-system-helpers/1.57/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `iproute2=5.7.0-1`
 

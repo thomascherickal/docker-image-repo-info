@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:c0f91a0ca77c7868d1b25ed0c1ab2075eb06f44ffe8830d6b9b0e9b2467cc0f8`
-- Created: `2020-06-17T03:52:52.1189238Z`
-- Virtual Size: ~ 126.23 Mb  
+- Image ID: `sha256:56b843adf250b6ec87a61340ac9453f82362c003698ec23791818784440a7195`
+- Created: `2020-07-07T00:27:27.980978411Z`
+- Virtual Size: ~ 126.90 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -487,14 +487,9 @@ Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/lib
 - `GPL-2`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glibc=2.23-0ubuntu11
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.23-0ubuntu11.dsc' glibc_2.23-0ubuntu11.dsc 8568 SHA256:2c45454af949b7c8d211c09925e4cd5282b40c14048b67dbfec6b394bb6e9828
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.23.orig.tar.xz' glibc_2.23.orig.tar.xz 13849968 SHA256:bf6c528eeebefcacc295270068b79330c1fb2b22458ff66285b4175d23442c96
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.23-0ubuntu11.debian.tar.xz' glibc_2.23-0ubuntu11.debian.tar.xz 1246096 SHA256:fcaea11240f3eb24c28420f0bb7a48409da99939be6e1a5ed1479ed4ad1273db
-```
 
 ### `dpkg` source package: `gnupg=1.4.20-1ubuntu3.3`
 
@@ -1211,11 +1206,11 @@ $ apt-get source -qq --print-uris tar=1.28-2.1ubuntu0.1
 'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.28-2.1ubuntu0.1.debian.tar.xz' tar_1.28-2.1ubuntu0.1.debian.tar.xz 36868 SHA256:1933bd564d70d3d0cf085291969af36b2461265270be25f3819cc033f72c1ac6
 ```
 
-### `dpkg` source package: `ubuntu-keyring=2012.05.19`
+### `dpkg` source package: `ubuntu-keyring=2012.05.19.1`
 
 Binary Packages:
 
-- `ubuntu-keyring=2012.05.19`
+- `ubuntu-keyring=2012.05.19.1`
 
 Licenses: (parsed from: `/usr/share/doc/ubuntu-keyring/copyright`)
 
@@ -1224,9 +1219,9 @@ Licenses: (parsed from: `/usr/share/doc/ubuntu-keyring/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris ubuntu-keyring=2012.05.19
-'http://archive.ubuntu.com/ubuntu/pool/main/u/ubuntu-keyring/ubuntu-keyring_2012.05.19.dsc' ubuntu-keyring_2012.05.19.dsc 1542 SHA256:a98138a8ef99905330f7f1340d04f8a9104c8706243e4c694b46db7d11c89d16
-'http://archive.ubuntu.com/ubuntu/pool/main/u/ubuntu-keyring/ubuntu-keyring_2012.05.19.tar.gz' ubuntu-keyring_2012.05.19.tar.gz 18495 SHA256:8b3bb00770c7b1e5c0abb215ecf8c383cb3b709292a52aeb1022b5556e768b69
+$ apt-get source -qq --print-uris ubuntu-keyring=2012.05.19.1
+'http://archive.ubuntu.com/ubuntu/pool/main/u/ubuntu-keyring/ubuntu-keyring_2012.05.19.1.dsc' ubuntu-keyring_2012.05.19.1.dsc 1505 SHA256:cd665a3c2a14d1029ecdc50612ed2c4853d94b2ded033577ea01923753463d1d
+'http://archive.ubuntu.com/ubuntu/pool/main/u/ubuntu-keyring/ubuntu-keyring_2012.05.19.1.tar.gz' ubuntu-keyring_2012.05.19.1.tar.gz 21072 SHA256:9945fb0b2838fdda323ad8a186a04d304bc1ac8f8fb2a96b8d2c84a4ef517429
 ```
 
 ### `dpkg` source package: `ustr=1.0.4-5`

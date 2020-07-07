@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:a8ba15634bb93e9f703803e61d9dc4f0bf7be175d9996f8c800bc09f0ec56989`
-- Created: `2020-06-17T03:53:11.952003321Z`
-- Virtual Size: ~ 76.02 Mb  
+- Image ID: `sha256:bc78531864b01d8d444696eeeafe572c6aa44caea0187fd6f85acfd1c5498dd5`
+- Created: `2020-07-07T00:27:47.429835865Z`
+- Virtual Size: ~ 76.04 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -834,20 +834,25 @@ $ apt-get source -qq --print-uris libksba=1.3.5-2
 'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.3.5-2.debian.tar.xz' libksba_1.3.5-2.debian.tar.xz 13852 SHA256:98c985bff973be1aecc702fa15887ff1e5b8de481d1dc3e99423a587754eaabd
 ```
 
-### `dpkg` source package: `libseccomp=2.4.1-0ubuntu0.18.04.2`
+### `dpkg` source package: `libseccomp=2.4.3-1ubuntu3.18.04.2`
 
 Binary Packages:
 
-- `libseccomp2:amd64=2.4.1-0ubuntu0.18.04.2`
+- `libseccomp2:amd64=2.4.3-1ubuntu3.18.04.2`
 
 Licenses: (parsed from: `/usr/share/doc/libseccomp2/copyright`)
 
 - `LGPL-2`
 - `LGPL-2.0+`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris libseccomp=2.4.3-1ubuntu3.18.04.2
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3-1ubuntu3.18.04.2.dsc' libseccomp_2.4.3-1ubuntu3.18.04.2.dsc 1988 SHA256:c0e1dd33400a0a7175e2a273252af837a454ce6c43bbb9a70a74f9eb2d3526d9
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3.orig.tar.gz' libseccomp_2.4.3.orig.tar.gz 598147 SHA256:cf15d1421997fac45b936515af61d209c4fd788af11005d212b3d0fd71e7991d
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3-1ubuntu3.18.04.2.debian.tar.xz' libseccomp_2.4.3-1ubuntu3.18.04.2.debian.tar.xz 24652 SHA256:7718022b4b251b5c279d5d56d533ce1791b1718cb9427498375ea89b6d1517b5
+```
 
 ### `dpkg` source package: `libselinux=2.7-2build2`
 
