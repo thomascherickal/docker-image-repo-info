@@ -258,21 +258,13 @@ Licenses: (parsed from: `/usr/share/doc/automake/copyright`)
 - `GPL-3+`
 - `permissive`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris automake-1.16=1:1.16.2-1
-'http://deb.debian.org/debian/pool/main/a/automake-1.16/automake-1.16_1.16.2-1.dsc' automake-1.16_1.16.2-1.dsc 2561 SHA256:684a7d3ff1d5b3e901ce5fcd87e446cd893b7613b5de38dc5c2da7c0153eb778
-'http://deb.debian.org/debian/pool/main/a/automake-1.16/automake-1.16_1.16.2.orig.tar.xz' automake-1.16_1.16.2.orig.tar.xz 1545912 SHA256:ccc459de3d710e066ab9e12d2f119bd164a08c9341ca24ba22c9adaa179eedd0
-'http://deb.debian.org/debian/pool/main/a/automake-1.16/automake-1.16_1.16.2.orig.tar.xz.asc' automake-1.16_1.16.2.orig.tar.xz.asc 833 SHA256:dbfc268276c94c95177f8e697d2688c944807c1284833a3e5354b78cd73ad8ab
-'http://deb.debian.org/debian/pool/main/a/automake-1.16/automake-1.16_1.16.2-1.debian.tar.xz' automake-1.16_1.16.2-1.debian.tar.xz 12352 SHA256:d4aa0a24f06b33dd6f986bbaf9d2c5f665ea98eb07af38520d445e6c4dad7b4e
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/automake-1.16/1:1.16.2-1/
 
-- https://sources.debian.net/src/automake-1.16/1:1.16.2-1/ (for browsing the source)
-- https://sources.debian.net/src/automake-1.16/1:1.16.2-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/automake-1.16/1:1.16.2-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `autotools-dev=20180224.1`
 
@@ -389,20 +381,13 @@ Licenses: (parsed from: `/usr/share/doc/binutils/copyright`, `/usr/share/doc/bin
 - `GPL`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris binutils=2.34-8
-'http://deb.debian.org/debian/pool/main/b/binutils/binutils_2.34-8.dsc' binutils_2.34-8.dsc 11129 SHA256:d8e5563a481fba68ee3f15c2bf0c6e68160aa74374614d04a01f87983e80269d
-'http://deb.debian.org/debian/pool/main/b/binutils/binutils_2.34.orig.tar.xz' binutils_2.34.orig.tar.xz 23144772 SHA256:bc79b3cf950e1601257c0056315b5aa2dc073ebec9c2dba292b6ff30eaeb0899
-'http://deb.debian.org/debian/pool/main/b/binutils/binutils_2.34-8.debian.tar.xz' binutils_2.34-8.debian.tar.xz 149160 SHA256:ff5e674734b9805461c451c6ef16be20be60567f728bcba598accdeba8d46b45
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/binutils/2.34-8/
 
-- https://sources.debian.net/src/binutils/2.34-8/ (for browsing the source)
-- https://sources.debian.net/src/binutils/2.34-8/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/binutils/2.34-8/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `brotli=1.0.7-6.1`
 
@@ -521,19 +506,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris cdebconf=0.252
-'http://deb.debian.org/debian/pool/main/c/cdebconf/cdebconf_0.252.dsc' cdebconf_0.252.dsc 2750 SHA256:f0f6d4434923445c165812f87f91c986dbc42592bdce2fc8bd562534a3bbbe14
-'http://deb.debian.org/debian/pool/main/c/cdebconf/cdebconf_0.252.tar.xz' cdebconf_0.252.tar.xz 275488 SHA256:ebc377a6d605c9a2e93e904fdee6e82707c56c6adc600a4e65939fbcb791bb2f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/cdebconf/0.252/
 
-- https://sources.debian.net/src/cdebconf/0.252/ (for browsing the source)
-- https://sources.debian.net/src/cdebconf/0.252/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/cdebconf/0.252/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `coreutils=8.30-3`
 
@@ -1853,19 +1832,13 @@ Licenses: (parsed from: `/usr/share/doc/init-system-helpers/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris init-system-helpers=1.57
-'http://deb.debian.org/debian/pool/main/i/init-system-helpers/init-system-helpers_1.57.dsc' init-system-helpers_1.57.dsc 1896 SHA256:88bb5af040c99f010b6d6947ff5c80ae4863ff787e0eeae91e99dcd15a10dbb8
-'http://deb.debian.org/debian/pool/main/i/init-system-helpers/init-system-helpers_1.57.tar.xz' init-system-helpers_1.57.tar.xz 40460 SHA256:e9d83fd8756a42666fb5d19a8835813823295846659b4e58f138bb9b54e9f5dd
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/init-system-helpers/1.57/
 
-- https://sources.debian.net/src/init-system-helpers/1.57/ (for browsing the source)
-- https://sources.debian.net/src/init-system-helpers/1.57/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/init-system-helpers/1.57/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `iproute2=5.7.0-1`
 
@@ -3723,21 +3696,13 @@ Licenses: (parsed from: `/usr/share/doc/libmariadb-dev/copyright`, `/usr/share/d
 - `unlimited-free-doc`
 - `zlib/libpng`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mariadb-10.3=1:10.3.22-1
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.22-1.dsc' mariadb-10.3_10.3.22-1.dsc 4780 SHA256:395d56066fbd4a35e9ff9e4b1619e41857b412a47387fcf16c34265b93d67dd0
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.22.orig.tar.gz' mariadb-10.3_10.3.22.orig.tar.gz 72050820 SHA256:3200055dbdc27746981b3bb4bc182e2cb79dcf28ea88014b641a5b81280ccec7
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.22.orig.tar.gz.asc' mariadb-10.3_10.3.22.orig.tar.gz.asc 195 SHA256:1ede70600162de2876f875984a1f719665d257334612bae00583ebe658b67ea7
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.22-1.debian.tar.xz' mariadb-10.3_10.3.22-1.debian.tar.xz 216264 SHA256:1b56b2d3dc406c84d6e2d5cd6c3abaf3cb7459d0974285178b81c2bdfb308927
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mariadb-10.3/1:10.3.22-1/
 
-- https://sources.debian.net/src/mariadb-10.3/1:10.3.22-1/ (for browsing the source)
-- https://sources.debian.net/src/mariadb-10.3/1:10.3.22-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mariadb-10.3/1:10.3.22-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mawk=1.3.4.20200120-2`
 
