@@ -13,7 +13,7 @@
 ## `bonita:7.10`
 
 ```console
-$ docker pull bonita@sha256:32c8143dff9c76bd0bdf9d41bc7bf3941a39018bae7277d4572102f70b785102
+$ docker pull bonita@sha256:6fd8283718ce3e81832653f619dfa7839dd750708dad12392ebe69ed7a226a94
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -141,117 +141,117 @@ CMD ["/opt/files/startup.sh"]
 ### `bonita:7.10` - linux; arm64 variant v8
 
 ```console
-$ docker pull bonita@sha256:91bdf7ed71893cd85ad5cbd211e1c6ae69a7888d56fb666178a14f72f9b2eb8d
+$ docker pull bonita@sha256:ced9f99ecae89c3a2fcc8fb6b93a54eba2070056789a5c02a9995b1e33d7dace
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **215.2 MB (215153016 bytes)**  
+-	Total Size: **215.2 MB (215156219 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b04b5195bf91bdb8232f189d5dc8383c4fb03ab83eecbe224181f30724aa0f7c`
+-	Image ID: `sha256:4b3dedc66ac1619bc1fc992a40fd96fe3d8837f15b26f700fa187408d373cbba`
 -	Default Command: `["\/opt\/files\/startup.sh"]`
 
 ```dockerfile
-# Wed, 17 Jun 2020 01:42:33 GMT
-ADD file:7dc8819fd3d4b84ad19fb836e5bfda64a5ffefc371166f70d4d41dff6b22d450 in / 
-# Wed, 17 Jun 2020 01:42:37 GMT
+# Mon, 06 Jul 2020 22:04:54 GMT
+ADD file:090a5d48524c4b10f867bf6bb80c106a69bf839c876de86912ed0c633349a1ab in / 
+# Mon, 06 Jul 2020 22:04:56 GMT
 RUN [ -z "$(apt-get indextargets)" ]
-# Wed, 17 Jun 2020 01:42:41 GMT
+# Mon, 06 Jul 2020 22:04:58 GMT
 RUN set -xe 		&& echo '#!/bin/sh' > /usr/sbin/policy-rc.d 	&& echo 'exit 101' >> /usr/sbin/policy-rc.d 	&& chmod +x /usr/sbin/policy-rc.d 		&& dpkg-divert --local --rename --add /sbin/initctl 	&& cp -a /usr/sbin/policy-rc.d /sbin/initctl 	&& sed -i 's/^exit.*/exit 0/' /sbin/initctl 		&& echo 'force-unsafe-io' > /etc/dpkg/dpkg.cfg.d/docker-apt-speedup 		&& echo 'DPkg::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' > /etc/apt/apt.conf.d/docker-clean 	&& echo 'APT::Update::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' >> /etc/apt/apt.conf.d/docker-clean 	&& echo 'Dir::Cache::pkgcache ""; Dir::Cache::srcpkgcache "";' >> /etc/apt/apt.conf.d/docker-clean 		&& echo 'Acquire::Languages "none";' > /etc/apt/apt.conf.d/docker-no-languages 		&& echo 'Acquire::GzipIndexes "true"; Acquire::CompressionTypes::Order:: "gz";' > /etc/apt/apt.conf.d/docker-gzip-indexes 		&& echo 'Apt::AutoRemove::SuggestsImportant "false";' > /etc/apt/apt.conf.d/docker-autoremove-suggests
-# Wed, 17 Jun 2020 01:42:44 GMT
+# Mon, 06 Jul 2020 22:05:00 GMT
 RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
-# Wed, 17 Jun 2020 01:42:45 GMT
+# Mon, 06 Jul 2020 22:05:01 GMT
 CMD ["/bin/bash"]
-# Wed, 17 Jun 2020 02:40:34 GMT
+# Tue, 07 Jul 2020 00:39:08 GMT
 MAINTAINER Jérémy Jacquier-Roux <jeremy.jacquier-roux@bonitasoft.org>
-# Wed, 17 Jun 2020 02:42:25 GMT
+# Tue, 07 Jul 2020 00:40:03 GMT
 RUN apt-get update && apt-get install -y   curl   gnupg2   mysql-client-core-5.7   openjdk-11-jre-headless   postgresql-client   unzip   zip   && rm -rf /var/lib/apt/lists/*
-# Wed, 17 Jun 2020 02:42:28 GMT
+# Tue, 07 Jul 2020 00:40:06 GMT
 RUN mkdir /opt/custom-init.d/
-# Wed, 17 Jun 2020 02:42:33 GMT
+# Tue, 07 Jul 2020 00:40:08 GMT
 RUN groupadd -r bonita -g 1000   && useradd -u 1000 -r -g bonita -d /opt/bonita/ -s /sbin/nologin -c "Bonita User" bonita
-# Wed, 17 Jun 2020 02:42:38 GMT
+# Tue, 07 Jul 2020 00:40:11 GMT
 RUN (gpg --keyserver ha.pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4   || gpg --keyserver ipv4.pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4)   && curl -fsSL "https://github.com/tianon/gosu/releases/download/1.10/gosu-$(dpkg --print-architecture)" -o /usr/local/bin/gosu   && curl -fsSL "https://github.com/tianon/gosu/releases/download/1.10/gosu-$(dpkg --print-architecture).asc" -o /usr/local/bin/gosu.asc   && gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu   && rm /usr/local/bin/gosu.asc   && chmod +x /usr/local/bin/gosu
-# Wed, 17 Jun 2020 02:42:40 GMT
+# Tue, 07 Jul 2020 00:40:12 GMT
 ARG BONITA_VERSION
-# Wed, 17 Jun 2020 02:42:41 GMT
+# Tue, 07 Jul 2020 00:40:13 GMT
 ARG BONITA_SHA256
-# Wed, 17 Jun 2020 02:43:21 GMT
+# Tue, 07 Jul 2020 00:40:41 GMT
 ARG BASE_URL
-# Wed, 17 Jun 2020 02:43:22 GMT
+# Tue, 07 Jul 2020 00:40:42 GMT
 ARG BONITA_URL
-# Wed, 17 Jun 2020 02:43:23 GMT
+# Tue, 07 Jul 2020 00:40:42 GMT
 ENV BONITA_VERSION=7.10.5
-# Wed, 17 Jun 2020 02:43:24 GMT
+# Tue, 07 Jul 2020 00:40:43 GMT
 ENV BONITA_SHA256=bc2bb1048df1b9d8a293635924fd1e7eb2cf0652f65d3fd64c0f1bc22e435dff
-# Wed, 17 Jun 2020 02:43:26 GMT
+# Tue, 07 Jul 2020 00:40:44 GMT
 ENV BASE_URL=https://release.ow2.org/bonita
-# Wed, 17 Jun 2020 02:43:27 GMT
+# Tue, 07 Jul 2020 00:40:45 GMT
 ENV BONITA_URL=https://release.ow2.org/bonita/BonitaCommunity-7.10.5.zip
-# Wed, 17 Jun 2020 02:43:30 GMT
+# Tue, 07 Jul 2020 00:40:48 GMT
 RUN echo "Downloading Bonita from url: $BONITA_URL"
-# Wed, 17 Jun 2020 02:43:39 GMT
+# Tue, 07 Jul 2020 00:40:55 GMT
 RUN mkdir /opt/files   && curl -fsSL ${BONITA_URL} -o /opt/files/BonitaCommunity-${BONITA_VERSION}.zip
-# Wed, 17 Jun 2020 02:43:41 GMT
+# Tue, 07 Jul 2020 00:40:58 GMT
 RUN sha256sum /opt/files/BonitaCommunity-${BONITA_VERSION}.zip
-# Wed, 17 Jun 2020 02:43:44 GMT
+# Tue, 07 Jul 2020 00:41:00 GMT
 RUN echo "$BONITA_SHA256" /opt/files/BonitaCommunity-${BONITA_VERSION}.zip | sha256sum -c -
-# Wed, 17 Jun 2020 02:43:45 GMT
+# Tue, 07 Jul 2020 00:41:01 GMT
 VOLUME [/opt/bonita]
-# Wed, 17 Jun 2020 02:43:46 GMT
+# Tue, 07 Jul 2020 00:41:02 GMT
 COPY dir:6d2b12bd97418487ddd1a174f34d85d11b3e6487e01e6d3f80d99fffcff78e82 in /opt/files 
-# Wed, 17 Jun 2020 02:43:47 GMT
+# Tue, 07 Jul 2020 00:41:02 GMT
 COPY dir:157c135edc1215565cc6815861e1a1728bdf09f6cfceca03c1639b2262f1cd65 in /opt/templates 
-# Wed, 17 Jun 2020 02:43:47 GMT
+# Tue, 07 Jul 2020 00:41:03 GMT
 EXPOSE 8080
-# Wed, 17 Jun 2020 02:43:48 GMT
+# Tue, 07 Jul 2020 00:41:04 GMT
 CMD ["/opt/files/startup.sh"]
 ```
 
 -	Layers:
-	-	`sha256:2e8bea8b22f8f5a4fd5aa85019945dd8ae04f283a4ba2a7aeb4536fe2f1d1ec2`  
-		Last Modified: Tue, 26 May 2020 16:25:25 GMT  
-		Size: 23.7 MB (23721687 bytes)  
+	-	`sha256:68fe03cb170d6a5101858131ae1eac5393a4f018d70abfcd1348fd240ee0ccc5`  
+		Last Modified: Tue, 30 Jun 2020 16:25:30 GMT  
+		Size: 23.7 MB (23719365 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fc90876b9c9a7343ae432eaec7c8dc8859c1e84b6193da8d386815fde165a70e`  
-		Last Modified: Wed, 17 Jun 2020 01:44:48 GMT  
-		Size: 35.2 KB (35192 bytes)  
+	-	`sha256:18959295effbb87ec216a036a1821f8b7e183072faaa80a6d7f97aa14b51b2af`  
+		Last Modified: Mon, 06 Jul 2020 22:06:58 GMT  
+		Size: 35.2 KB (35189 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:27bfc658a5210a9f0c9cfcda5f504e720da9268e9f3f3bf48e3a9a7af360c959`  
-		Last Modified: Wed, 17 Jun 2020 01:44:49 GMT  
-		Size: 854.0 B  
+	-	`sha256:51118fb70ce38c0c2e667ecd5fc941590875e2fd9e55dd17c90073f085ba5970`  
+		Last Modified: Mon, 06 Jul 2020 22:06:58 GMT  
+		Size: 852.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1ef0f1b06b2142ff2bf35cc565f019ed9e4efe0d8f332825167538c2337bac8a`  
-		Last Modified: Wed, 17 Jun 2020 01:44:49 GMT  
+	-	`sha256:409a5d9eae931d5a3b5a3bcb840e11167c2d3d03ec22258cde67197babf908ed`  
+		Last Modified: Mon, 06 Jul 2020 22:06:58 GMT  
 		Size: 187.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ab2e7783d3202312a68d1bae9863062d6bfcad302b838d982a971b6d1eace7cf`  
-		Last Modified: Wed, 17 Jun 2020 02:44:30 GMT  
-		Size: 92.9 MB (92885966 bytes)  
+	-	`sha256:88202bff4b04a58aa9909279920477c5d8406ca6229efe7fe13727414f8643b0`  
+		Last Modified: Tue, 07 Jul 2020 00:42:09 GMT  
+		Size: 92.9 MB (92891499 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:18f7449c9a39dcb1672a84ad09440887b1968c4c7f83d49fe0ecbfa775c89ca9`  
-		Last Modified: Wed, 17 Jun 2020 02:44:04 GMT  
+	-	`sha256:fa6d85b404babb7155f454fdd1e4fcda3ee4fc61e6ca483f0734d7c1f7f89425`  
+		Last Modified: Tue, 07 Jul 2020 00:41:44 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:73da90b862c2b844579dc9210fe78f9026d832b17f0b9d594f703d8dacf603d7`  
-		Last Modified: Wed, 17 Jun 2020 02:44:03 GMT  
-		Size: 1.9 KB (1920 bytes)  
+	-	`sha256:e6f6e8713ad0e050faa8636e0133516c82dbf79c7dc668a18fb93f4b87d1e915`  
+		Last Modified: Tue, 07 Jul 2020 00:41:43 GMT  
+		Size: 1.9 KB (1917 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:832035663682d494bbcc67a3f9e4927458156bf6e392d821d11d63f4c6532f3c`  
-		Last Modified: Wed, 17 Jun 2020 02:44:02 GMT  
+	-	`sha256:c91b4518214ee90daf56d5ea809b97102b4f82b3ae3fd1b19378652d071b0bdb`  
+		Last Modified: Tue, 07 Jul 2020 00:41:43 GMT  
 		Size: 541.8 KB (541818 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3601430c499d32abe16da3e4266438d956207eaad1d46e5d232c3d1290e2264e`  
-		Last Modified: Wed, 17 Jun 2020 02:44:46 GMT  
-		Size: 98.0 MB (97955965 bytes)  
+	-	`sha256:94059c0d4129963d5c7d0d27b1f56a9fb37815f19e2f50adb54257c8524e6521`  
+		Last Modified: Tue, 07 Jul 2020 00:42:26 GMT  
+		Size: 98.0 MB (97955964 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3e2cdfd3afe32da65d05cb95c8acb480eeb3a45b54a3899b45dd178542a13045`  
-		Last Modified: Wed, 17 Jun 2020 02:44:36 GMT  
-		Size: 7.6 KB (7620 bytes)  
+	-	`sha256:cf84bf90fbafd4265a8a7ff032328c6adf93cd93aa27512eac62cdf096d60a77`  
+		Last Modified: Tue, 07 Jul 2020 00:42:15 GMT  
+		Size: 7.6 KB (7622 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5b7d0cd1b984a5aa8bca584efee31e40a335e4ac0dcb31ce85baa1a85b7087b9`  
-		Last Modified: Wed, 17 Jun 2020 02:44:36 GMT  
-		Size: 1.7 KB (1651 bytes)  
+	-	`sha256:d3705e07cab5ac8265f4cc6ed59542f338bce5ec27cf59979897aed182ac75cb`  
+		Last Modified: Tue, 07 Jul 2020 00:42:15 GMT  
+		Size: 1.6 KB (1650 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `bonita:7.10` - linux; ppc64le
@@ -373,7 +373,7 @@ CMD ["/opt/files/startup.sh"]
 ## `bonita:7.10.5`
 
 ```console
-$ docker pull bonita@sha256:32c8143dff9c76bd0bdf9d41bc7bf3941a39018bae7277d4572102f70b785102
+$ docker pull bonita@sha256:6fd8283718ce3e81832653f619dfa7839dd750708dad12392ebe69ed7a226a94
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -501,117 +501,117 @@ CMD ["/opt/files/startup.sh"]
 ### `bonita:7.10.5` - linux; arm64 variant v8
 
 ```console
-$ docker pull bonita@sha256:91bdf7ed71893cd85ad5cbd211e1c6ae69a7888d56fb666178a14f72f9b2eb8d
+$ docker pull bonita@sha256:ced9f99ecae89c3a2fcc8fb6b93a54eba2070056789a5c02a9995b1e33d7dace
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **215.2 MB (215153016 bytes)**  
+-	Total Size: **215.2 MB (215156219 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b04b5195bf91bdb8232f189d5dc8383c4fb03ab83eecbe224181f30724aa0f7c`
+-	Image ID: `sha256:4b3dedc66ac1619bc1fc992a40fd96fe3d8837f15b26f700fa187408d373cbba`
 -	Default Command: `["\/opt\/files\/startup.sh"]`
 
 ```dockerfile
-# Wed, 17 Jun 2020 01:42:33 GMT
-ADD file:7dc8819fd3d4b84ad19fb836e5bfda64a5ffefc371166f70d4d41dff6b22d450 in / 
-# Wed, 17 Jun 2020 01:42:37 GMT
+# Mon, 06 Jul 2020 22:04:54 GMT
+ADD file:090a5d48524c4b10f867bf6bb80c106a69bf839c876de86912ed0c633349a1ab in / 
+# Mon, 06 Jul 2020 22:04:56 GMT
 RUN [ -z "$(apt-get indextargets)" ]
-# Wed, 17 Jun 2020 01:42:41 GMT
+# Mon, 06 Jul 2020 22:04:58 GMT
 RUN set -xe 		&& echo '#!/bin/sh' > /usr/sbin/policy-rc.d 	&& echo 'exit 101' >> /usr/sbin/policy-rc.d 	&& chmod +x /usr/sbin/policy-rc.d 		&& dpkg-divert --local --rename --add /sbin/initctl 	&& cp -a /usr/sbin/policy-rc.d /sbin/initctl 	&& sed -i 's/^exit.*/exit 0/' /sbin/initctl 		&& echo 'force-unsafe-io' > /etc/dpkg/dpkg.cfg.d/docker-apt-speedup 		&& echo 'DPkg::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' > /etc/apt/apt.conf.d/docker-clean 	&& echo 'APT::Update::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' >> /etc/apt/apt.conf.d/docker-clean 	&& echo 'Dir::Cache::pkgcache ""; Dir::Cache::srcpkgcache "";' >> /etc/apt/apt.conf.d/docker-clean 		&& echo 'Acquire::Languages "none";' > /etc/apt/apt.conf.d/docker-no-languages 		&& echo 'Acquire::GzipIndexes "true"; Acquire::CompressionTypes::Order:: "gz";' > /etc/apt/apt.conf.d/docker-gzip-indexes 		&& echo 'Apt::AutoRemove::SuggestsImportant "false";' > /etc/apt/apt.conf.d/docker-autoremove-suggests
-# Wed, 17 Jun 2020 01:42:44 GMT
+# Mon, 06 Jul 2020 22:05:00 GMT
 RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
-# Wed, 17 Jun 2020 01:42:45 GMT
+# Mon, 06 Jul 2020 22:05:01 GMT
 CMD ["/bin/bash"]
-# Wed, 17 Jun 2020 02:40:34 GMT
+# Tue, 07 Jul 2020 00:39:08 GMT
 MAINTAINER Jérémy Jacquier-Roux <jeremy.jacquier-roux@bonitasoft.org>
-# Wed, 17 Jun 2020 02:42:25 GMT
+# Tue, 07 Jul 2020 00:40:03 GMT
 RUN apt-get update && apt-get install -y   curl   gnupg2   mysql-client-core-5.7   openjdk-11-jre-headless   postgresql-client   unzip   zip   && rm -rf /var/lib/apt/lists/*
-# Wed, 17 Jun 2020 02:42:28 GMT
+# Tue, 07 Jul 2020 00:40:06 GMT
 RUN mkdir /opt/custom-init.d/
-# Wed, 17 Jun 2020 02:42:33 GMT
+# Tue, 07 Jul 2020 00:40:08 GMT
 RUN groupadd -r bonita -g 1000   && useradd -u 1000 -r -g bonita -d /opt/bonita/ -s /sbin/nologin -c "Bonita User" bonita
-# Wed, 17 Jun 2020 02:42:38 GMT
+# Tue, 07 Jul 2020 00:40:11 GMT
 RUN (gpg --keyserver ha.pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4   || gpg --keyserver ipv4.pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4)   && curl -fsSL "https://github.com/tianon/gosu/releases/download/1.10/gosu-$(dpkg --print-architecture)" -o /usr/local/bin/gosu   && curl -fsSL "https://github.com/tianon/gosu/releases/download/1.10/gosu-$(dpkg --print-architecture).asc" -o /usr/local/bin/gosu.asc   && gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu   && rm /usr/local/bin/gosu.asc   && chmod +x /usr/local/bin/gosu
-# Wed, 17 Jun 2020 02:42:40 GMT
+# Tue, 07 Jul 2020 00:40:12 GMT
 ARG BONITA_VERSION
-# Wed, 17 Jun 2020 02:42:41 GMT
+# Tue, 07 Jul 2020 00:40:13 GMT
 ARG BONITA_SHA256
-# Wed, 17 Jun 2020 02:43:21 GMT
+# Tue, 07 Jul 2020 00:40:41 GMT
 ARG BASE_URL
-# Wed, 17 Jun 2020 02:43:22 GMT
+# Tue, 07 Jul 2020 00:40:42 GMT
 ARG BONITA_URL
-# Wed, 17 Jun 2020 02:43:23 GMT
+# Tue, 07 Jul 2020 00:40:42 GMT
 ENV BONITA_VERSION=7.10.5
-# Wed, 17 Jun 2020 02:43:24 GMT
+# Tue, 07 Jul 2020 00:40:43 GMT
 ENV BONITA_SHA256=bc2bb1048df1b9d8a293635924fd1e7eb2cf0652f65d3fd64c0f1bc22e435dff
-# Wed, 17 Jun 2020 02:43:26 GMT
+# Tue, 07 Jul 2020 00:40:44 GMT
 ENV BASE_URL=https://release.ow2.org/bonita
-# Wed, 17 Jun 2020 02:43:27 GMT
+# Tue, 07 Jul 2020 00:40:45 GMT
 ENV BONITA_URL=https://release.ow2.org/bonita/BonitaCommunity-7.10.5.zip
-# Wed, 17 Jun 2020 02:43:30 GMT
+# Tue, 07 Jul 2020 00:40:48 GMT
 RUN echo "Downloading Bonita from url: $BONITA_URL"
-# Wed, 17 Jun 2020 02:43:39 GMT
+# Tue, 07 Jul 2020 00:40:55 GMT
 RUN mkdir /opt/files   && curl -fsSL ${BONITA_URL} -o /opt/files/BonitaCommunity-${BONITA_VERSION}.zip
-# Wed, 17 Jun 2020 02:43:41 GMT
+# Tue, 07 Jul 2020 00:40:58 GMT
 RUN sha256sum /opt/files/BonitaCommunity-${BONITA_VERSION}.zip
-# Wed, 17 Jun 2020 02:43:44 GMT
+# Tue, 07 Jul 2020 00:41:00 GMT
 RUN echo "$BONITA_SHA256" /opt/files/BonitaCommunity-${BONITA_VERSION}.zip | sha256sum -c -
-# Wed, 17 Jun 2020 02:43:45 GMT
+# Tue, 07 Jul 2020 00:41:01 GMT
 VOLUME [/opt/bonita]
-# Wed, 17 Jun 2020 02:43:46 GMT
+# Tue, 07 Jul 2020 00:41:02 GMT
 COPY dir:6d2b12bd97418487ddd1a174f34d85d11b3e6487e01e6d3f80d99fffcff78e82 in /opt/files 
-# Wed, 17 Jun 2020 02:43:47 GMT
+# Tue, 07 Jul 2020 00:41:02 GMT
 COPY dir:157c135edc1215565cc6815861e1a1728bdf09f6cfceca03c1639b2262f1cd65 in /opt/templates 
-# Wed, 17 Jun 2020 02:43:47 GMT
+# Tue, 07 Jul 2020 00:41:03 GMT
 EXPOSE 8080
-# Wed, 17 Jun 2020 02:43:48 GMT
+# Tue, 07 Jul 2020 00:41:04 GMT
 CMD ["/opt/files/startup.sh"]
 ```
 
 -	Layers:
-	-	`sha256:2e8bea8b22f8f5a4fd5aa85019945dd8ae04f283a4ba2a7aeb4536fe2f1d1ec2`  
-		Last Modified: Tue, 26 May 2020 16:25:25 GMT  
-		Size: 23.7 MB (23721687 bytes)  
+	-	`sha256:68fe03cb170d6a5101858131ae1eac5393a4f018d70abfcd1348fd240ee0ccc5`  
+		Last Modified: Tue, 30 Jun 2020 16:25:30 GMT  
+		Size: 23.7 MB (23719365 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fc90876b9c9a7343ae432eaec7c8dc8859c1e84b6193da8d386815fde165a70e`  
-		Last Modified: Wed, 17 Jun 2020 01:44:48 GMT  
-		Size: 35.2 KB (35192 bytes)  
+	-	`sha256:18959295effbb87ec216a036a1821f8b7e183072faaa80a6d7f97aa14b51b2af`  
+		Last Modified: Mon, 06 Jul 2020 22:06:58 GMT  
+		Size: 35.2 KB (35189 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:27bfc658a5210a9f0c9cfcda5f504e720da9268e9f3f3bf48e3a9a7af360c959`  
-		Last Modified: Wed, 17 Jun 2020 01:44:49 GMT  
-		Size: 854.0 B  
+	-	`sha256:51118fb70ce38c0c2e667ecd5fc941590875e2fd9e55dd17c90073f085ba5970`  
+		Last Modified: Mon, 06 Jul 2020 22:06:58 GMT  
+		Size: 852.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1ef0f1b06b2142ff2bf35cc565f019ed9e4efe0d8f332825167538c2337bac8a`  
-		Last Modified: Wed, 17 Jun 2020 01:44:49 GMT  
+	-	`sha256:409a5d9eae931d5a3b5a3bcb840e11167c2d3d03ec22258cde67197babf908ed`  
+		Last Modified: Mon, 06 Jul 2020 22:06:58 GMT  
 		Size: 187.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ab2e7783d3202312a68d1bae9863062d6bfcad302b838d982a971b6d1eace7cf`  
-		Last Modified: Wed, 17 Jun 2020 02:44:30 GMT  
-		Size: 92.9 MB (92885966 bytes)  
+	-	`sha256:88202bff4b04a58aa9909279920477c5d8406ca6229efe7fe13727414f8643b0`  
+		Last Modified: Tue, 07 Jul 2020 00:42:09 GMT  
+		Size: 92.9 MB (92891499 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:18f7449c9a39dcb1672a84ad09440887b1968c4c7f83d49fe0ecbfa775c89ca9`  
-		Last Modified: Wed, 17 Jun 2020 02:44:04 GMT  
+	-	`sha256:fa6d85b404babb7155f454fdd1e4fcda3ee4fc61e6ca483f0734d7c1f7f89425`  
+		Last Modified: Tue, 07 Jul 2020 00:41:44 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:73da90b862c2b844579dc9210fe78f9026d832b17f0b9d594f703d8dacf603d7`  
-		Last Modified: Wed, 17 Jun 2020 02:44:03 GMT  
-		Size: 1.9 KB (1920 bytes)  
+	-	`sha256:e6f6e8713ad0e050faa8636e0133516c82dbf79c7dc668a18fb93f4b87d1e915`  
+		Last Modified: Tue, 07 Jul 2020 00:41:43 GMT  
+		Size: 1.9 KB (1917 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:832035663682d494bbcc67a3f9e4927458156bf6e392d821d11d63f4c6532f3c`  
-		Last Modified: Wed, 17 Jun 2020 02:44:02 GMT  
+	-	`sha256:c91b4518214ee90daf56d5ea809b97102b4f82b3ae3fd1b19378652d071b0bdb`  
+		Last Modified: Tue, 07 Jul 2020 00:41:43 GMT  
 		Size: 541.8 KB (541818 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3601430c499d32abe16da3e4266438d956207eaad1d46e5d232c3d1290e2264e`  
-		Last Modified: Wed, 17 Jun 2020 02:44:46 GMT  
-		Size: 98.0 MB (97955965 bytes)  
+	-	`sha256:94059c0d4129963d5c7d0d27b1f56a9fb37815f19e2f50adb54257c8524e6521`  
+		Last Modified: Tue, 07 Jul 2020 00:42:26 GMT  
+		Size: 98.0 MB (97955964 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3e2cdfd3afe32da65d05cb95c8acb480eeb3a45b54a3899b45dd178542a13045`  
-		Last Modified: Wed, 17 Jun 2020 02:44:36 GMT  
-		Size: 7.6 KB (7620 bytes)  
+	-	`sha256:cf84bf90fbafd4265a8a7ff032328c6adf93cd93aa27512eac62cdf096d60a77`  
+		Last Modified: Tue, 07 Jul 2020 00:42:15 GMT  
+		Size: 7.6 KB (7622 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5b7d0cd1b984a5aa8bca584efee31e40a335e4ac0dcb31ce85baa1a85b7087b9`  
-		Last Modified: Wed, 17 Jun 2020 02:44:36 GMT  
-		Size: 1.7 KB (1651 bytes)  
+	-	`sha256:d3705e07cab5ac8265f4cc6ed59542f338bce5ec27cf59979897aed182ac75cb`  
+		Last Modified: Tue, 07 Jul 2020 00:42:15 GMT  
+		Size: 1.6 KB (1650 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `bonita:7.10.5` - linux; ppc64le
@@ -733,7 +733,7 @@ CMD ["/opt/files/startup.sh"]
 ## `bonita:7.11`
 
 ```console
-$ docker pull bonita@sha256:6308fad666eb7e7172454a573194e470a3ee5cd0140386383c34c01d5c96db78
+$ docker pull bonita@sha256:90061a73157d871f3ba74fbc0137d1680d6af14385185cd28fe1ba38a7901d98
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -861,117 +861,117 @@ CMD ["/opt/files/startup.sh"]
 ### `bonita:7.11` - linux; arm64 variant v8
 
 ```console
-$ docker pull bonita@sha256:65ba0e2092b7bafa8f4c812130451af1c212c08775aff508d87cd7e1cb9f83c6
+$ docker pull bonita@sha256:5b6ae25fbd09fbc139512098ab578def4b91a6cd11f3b81f2f9efe62a06104ee
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **230.4 MB (230418729 bytes)**  
+-	Total Size: **230.4 MB (230421930 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5464e79dfb5c4d44ac9d5c6408232297da9600beda3dac56079fc0d127efab8c`
+-	Image ID: `sha256:4e11deefa8d72d0a186ed44f73683219ec4530a7a5b692fa64a5f9b4d5fc8cda`
 -	Default Command: `["\/opt\/files\/startup.sh"]`
 
 ```dockerfile
-# Wed, 17 Jun 2020 01:42:33 GMT
-ADD file:7dc8819fd3d4b84ad19fb836e5bfda64a5ffefc371166f70d4d41dff6b22d450 in / 
-# Wed, 17 Jun 2020 01:42:37 GMT
+# Mon, 06 Jul 2020 22:04:54 GMT
+ADD file:090a5d48524c4b10f867bf6bb80c106a69bf839c876de86912ed0c633349a1ab in / 
+# Mon, 06 Jul 2020 22:04:56 GMT
 RUN [ -z "$(apt-get indextargets)" ]
-# Wed, 17 Jun 2020 01:42:41 GMT
+# Mon, 06 Jul 2020 22:04:58 GMT
 RUN set -xe 		&& echo '#!/bin/sh' > /usr/sbin/policy-rc.d 	&& echo 'exit 101' >> /usr/sbin/policy-rc.d 	&& chmod +x /usr/sbin/policy-rc.d 		&& dpkg-divert --local --rename --add /sbin/initctl 	&& cp -a /usr/sbin/policy-rc.d /sbin/initctl 	&& sed -i 's/^exit.*/exit 0/' /sbin/initctl 		&& echo 'force-unsafe-io' > /etc/dpkg/dpkg.cfg.d/docker-apt-speedup 		&& echo 'DPkg::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' > /etc/apt/apt.conf.d/docker-clean 	&& echo 'APT::Update::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' >> /etc/apt/apt.conf.d/docker-clean 	&& echo 'Dir::Cache::pkgcache ""; Dir::Cache::srcpkgcache "";' >> /etc/apt/apt.conf.d/docker-clean 		&& echo 'Acquire::Languages "none";' > /etc/apt/apt.conf.d/docker-no-languages 		&& echo 'Acquire::GzipIndexes "true"; Acquire::CompressionTypes::Order:: "gz";' > /etc/apt/apt.conf.d/docker-gzip-indexes 		&& echo 'Apt::AutoRemove::SuggestsImportant "false";' > /etc/apt/apt.conf.d/docker-autoremove-suggests
-# Wed, 17 Jun 2020 01:42:44 GMT
+# Mon, 06 Jul 2020 22:05:00 GMT
 RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
-# Wed, 17 Jun 2020 01:42:45 GMT
+# Mon, 06 Jul 2020 22:05:01 GMT
 CMD ["/bin/bash"]
-# Wed, 17 Jun 2020 02:40:34 GMT
+# Tue, 07 Jul 2020 00:39:08 GMT
 MAINTAINER Jérémy Jacquier-Roux <jeremy.jacquier-roux@bonitasoft.org>
-# Wed, 17 Jun 2020 02:42:25 GMT
+# Tue, 07 Jul 2020 00:40:03 GMT
 RUN apt-get update && apt-get install -y   curl   gnupg2   mysql-client-core-5.7   openjdk-11-jre-headless   postgresql-client   unzip   zip   && rm -rf /var/lib/apt/lists/*
-# Wed, 17 Jun 2020 02:42:28 GMT
+# Tue, 07 Jul 2020 00:40:06 GMT
 RUN mkdir /opt/custom-init.d/
-# Wed, 17 Jun 2020 02:42:33 GMT
+# Tue, 07 Jul 2020 00:40:08 GMT
 RUN groupadd -r bonita -g 1000   && useradd -u 1000 -r -g bonita -d /opt/bonita/ -s /sbin/nologin -c "Bonita User" bonita
-# Wed, 17 Jun 2020 02:42:38 GMT
+# Tue, 07 Jul 2020 00:40:11 GMT
 RUN (gpg --keyserver ha.pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4   || gpg --keyserver ipv4.pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4)   && curl -fsSL "https://github.com/tianon/gosu/releases/download/1.10/gosu-$(dpkg --print-architecture)" -o /usr/local/bin/gosu   && curl -fsSL "https://github.com/tianon/gosu/releases/download/1.10/gosu-$(dpkg --print-architecture).asc" -o /usr/local/bin/gosu.asc   && gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu   && rm /usr/local/bin/gosu.asc   && chmod +x /usr/local/bin/gosu
-# Wed, 17 Jun 2020 02:42:40 GMT
+# Tue, 07 Jul 2020 00:40:12 GMT
 ARG BONITA_VERSION
-# Wed, 17 Jun 2020 02:42:41 GMT
+# Tue, 07 Jul 2020 00:40:13 GMT
 ARG BONITA_SHA256
-# Wed, 17 Jun 2020 02:43:21 GMT
+# Tue, 07 Jul 2020 00:40:41 GMT
 ARG BASE_URL
-# Wed, 17 Jun 2020 02:43:22 GMT
+# Tue, 07 Jul 2020 00:40:42 GMT
 ARG BONITA_URL
-# Wed, 24 Jun 2020 17:40:14 GMT
+# Tue, 07 Jul 2020 00:41:12 GMT
 ENV BONITA_VERSION=7.11.0
-# Wed, 24 Jun 2020 17:40:15 GMT
+# Tue, 07 Jul 2020 00:41:13 GMT
 ENV BONITA_SHA256=f1d0d3c2f57c0d32ee068c1acd4e21fcf5c866d17fb097b1db97e663697dc8fe
-# Wed, 24 Jun 2020 17:40:16 GMT
+# Tue, 07 Jul 2020 00:41:13 GMT
 ENV BASE_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download
-# Wed, 24 Jun 2020 17:40:16 GMT
+# Tue, 07 Jul 2020 00:41:14 GMT
 ENV BONITA_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download/7.11.0/BonitaCommunity-7.11.0.zip
-# Wed, 24 Jun 2020 17:40:19 GMT
+# Tue, 07 Jul 2020 00:41:16 GMT
 RUN echo "Downloading Bonita from url: $BONITA_URL"
-# Wed, 24 Jun 2020 17:40:28 GMT
+# Tue, 07 Jul 2020 00:41:20 GMT
 RUN mkdir /opt/files   && curl -fsSL ${BONITA_URL} -o /opt/files/BonitaCommunity-${BONITA_VERSION}.zip
-# Wed, 24 Jun 2020 17:40:31 GMT
+# Tue, 07 Jul 2020 00:41:22 GMT
 RUN sha256sum /opt/files/BonitaCommunity-${BONITA_VERSION}.zip
-# Wed, 24 Jun 2020 17:40:33 GMT
+# Tue, 07 Jul 2020 00:41:25 GMT
 RUN echo "$BONITA_SHA256" /opt/files/BonitaCommunity-${BONITA_VERSION}.zip | sha256sum -c -
-# Wed, 24 Jun 2020 17:40:34 GMT
+# Tue, 07 Jul 2020 00:41:26 GMT
 VOLUME [/opt/bonita]
-# Fri, 03 Jul 2020 17:39:47 GMT
+# Tue, 07 Jul 2020 00:41:26 GMT
 COPY dir:7f0e6270bb2bea49c029cca8eb0e60f9f0c9c5d47fd807149e3e18c746693278 in /opt/files 
-# Fri, 03 Jul 2020 17:39:48 GMT
+# Tue, 07 Jul 2020 00:41:27 GMT
 COPY dir:173a816fed2c2b9f191c45b4238f2062102518ab7cf02e5e7c4ca6bd9caeb849 in /opt/templates 
-# Fri, 03 Jul 2020 17:39:49 GMT
+# Tue, 07 Jul 2020 00:41:28 GMT
 EXPOSE 8080
-# Fri, 03 Jul 2020 17:39:49 GMT
+# Tue, 07 Jul 2020 00:41:28 GMT
 CMD ["/opt/files/startup.sh"]
 ```
 
 -	Layers:
-	-	`sha256:2e8bea8b22f8f5a4fd5aa85019945dd8ae04f283a4ba2a7aeb4536fe2f1d1ec2`  
-		Last Modified: Tue, 26 May 2020 16:25:25 GMT  
-		Size: 23.7 MB (23721687 bytes)  
+	-	`sha256:68fe03cb170d6a5101858131ae1eac5393a4f018d70abfcd1348fd240ee0ccc5`  
+		Last Modified: Tue, 30 Jun 2020 16:25:30 GMT  
+		Size: 23.7 MB (23719365 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fc90876b9c9a7343ae432eaec7c8dc8859c1e84b6193da8d386815fde165a70e`  
-		Last Modified: Wed, 17 Jun 2020 01:44:48 GMT  
-		Size: 35.2 KB (35192 bytes)  
+	-	`sha256:18959295effbb87ec216a036a1821f8b7e183072faaa80a6d7f97aa14b51b2af`  
+		Last Modified: Mon, 06 Jul 2020 22:06:58 GMT  
+		Size: 35.2 KB (35189 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:27bfc658a5210a9f0c9cfcda5f504e720da9268e9f3f3bf48e3a9a7af360c959`  
-		Last Modified: Wed, 17 Jun 2020 01:44:49 GMT  
-		Size: 854.0 B  
+	-	`sha256:51118fb70ce38c0c2e667ecd5fc941590875e2fd9e55dd17c90073f085ba5970`  
+		Last Modified: Mon, 06 Jul 2020 22:06:58 GMT  
+		Size: 852.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1ef0f1b06b2142ff2bf35cc565f019ed9e4efe0d8f332825167538c2337bac8a`  
-		Last Modified: Wed, 17 Jun 2020 01:44:49 GMT  
+	-	`sha256:409a5d9eae931d5a3b5a3bcb840e11167c2d3d03ec22258cde67197babf908ed`  
+		Last Modified: Mon, 06 Jul 2020 22:06:58 GMT  
 		Size: 187.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ab2e7783d3202312a68d1bae9863062d6bfcad302b838d982a971b6d1eace7cf`  
-		Last Modified: Wed, 17 Jun 2020 02:44:30 GMT  
-		Size: 92.9 MB (92885966 bytes)  
+	-	`sha256:88202bff4b04a58aa9909279920477c5d8406ca6229efe7fe13727414f8643b0`  
+		Last Modified: Tue, 07 Jul 2020 00:42:09 GMT  
+		Size: 92.9 MB (92891499 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:18f7449c9a39dcb1672a84ad09440887b1968c4c7f83d49fe0ecbfa775c89ca9`  
-		Last Modified: Wed, 17 Jun 2020 02:44:04 GMT  
+	-	`sha256:fa6d85b404babb7155f454fdd1e4fcda3ee4fc61e6ca483f0734d7c1f7f89425`  
+		Last Modified: Tue, 07 Jul 2020 00:41:44 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:73da90b862c2b844579dc9210fe78f9026d832b17f0b9d594f703d8dacf603d7`  
-		Last Modified: Wed, 17 Jun 2020 02:44:03 GMT  
-		Size: 1.9 KB (1920 bytes)  
+	-	`sha256:e6f6e8713ad0e050faa8636e0133516c82dbf79c7dc668a18fb93f4b87d1e915`  
+		Last Modified: Tue, 07 Jul 2020 00:41:43 GMT  
+		Size: 1.9 KB (1917 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:832035663682d494bbcc67a3f9e4927458156bf6e392d821d11d63f4c6532f3c`  
-		Last Modified: Wed, 17 Jun 2020 02:44:02 GMT  
+	-	`sha256:c91b4518214ee90daf56d5ea809b97102b4f82b3ae3fd1b19378652d071b0bdb`  
+		Last Modified: Tue, 07 Jul 2020 00:41:43 GMT  
 		Size: 541.8 KB (541818 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:aee3b35a452661ddca4c2185aeaeaf603b1937d0b4115a8ed159e89b484d9029`  
-		Last Modified: Wed, 24 Jun 2020 17:41:00 GMT  
-		Size: 113.2 MB (113221612 bytes)  
+	-	`sha256:42cf608dea2cd5cb3c1de2da7dd296cdeb6a327b5a677cbc88e96ea884435c5e`  
+		Last Modified: Tue, 07 Jul 2020 00:42:42 GMT  
+		Size: 113.2 MB (113221614 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3693802575293a0aece91313aedab1a4c96463acb5c399ab24bf64eda2e15e6c`  
-		Last Modified: Fri, 03 Jul 2020 17:40:03 GMT  
-		Size: 7.6 KB (7632 bytes)  
+	-	`sha256:87855d6b89013d4530611dfc8baba57a6919f310d3f96bab45ebc115b83273a1`  
+		Last Modified: Tue, 07 Jul 2020 00:42:32 GMT  
+		Size: 7.6 KB (7627 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1103b7a50b8f307fffc3657789584c32b8df6e7097dcbf8a21981b7bd1309e12`  
-		Last Modified: Fri, 03 Jul 2020 17:40:03 GMT  
-		Size: 1.7 KB (1705 bytes)  
+	-	`sha256:f90ee0a7e114377ec2fd24cfbe20555daa158763c0bc73e69ee4e446dfba8454`  
+		Last Modified: Tue, 07 Jul 2020 00:42:33 GMT  
+		Size: 1.7 KB (1706 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `bonita:7.11` - linux; ppc64le
@@ -1093,7 +1093,7 @@ CMD ["/opt/files/startup.sh"]
 ## `bonita:7.11.0`
 
 ```console
-$ docker pull bonita@sha256:6308fad666eb7e7172454a573194e470a3ee5cd0140386383c34c01d5c96db78
+$ docker pull bonita@sha256:90061a73157d871f3ba74fbc0137d1680d6af14385185cd28fe1ba38a7901d98
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1221,117 +1221,117 @@ CMD ["/opt/files/startup.sh"]
 ### `bonita:7.11.0` - linux; arm64 variant v8
 
 ```console
-$ docker pull bonita@sha256:65ba0e2092b7bafa8f4c812130451af1c212c08775aff508d87cd7e1cb9f83c6
+$ docker pull bonita@sha256:5b6ae25fbd09fbc139512098ab578def4b91a6cd11f3b81f2f9efe62a06104ee
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **230.4 MB (230418729 bytes)**  
+-	Total Size: **230.4 MB (230421930 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5464e79dfb5c4d44ac9d5c6408232297da9600beda3dac56079fc0d127efab8c`
+-	Image ID: `sha256:4e11deefa8d72d0a186ed44f73683219ec4530a7a5b692fa64a5f9b4d5fc8cda`
 -	Default Command: `["\/opt\/files\/startup.sh"]`
 
 ```dockerfile
-# Wed, 17 Jun 2020 01:42:33 GMT
-ADD file:7dc8819fd3d4b84ad19fb836e5bfda64a5ffefc371166f70d4d41dff6b22d450 in / 
-# Wed, 17 Jun 2020 01:42:37 GMT
+# Mon, 06 Jul 2020 22:04:54 GMT
+ADD file:090a5d48524c4b10f867bf6bb80c106a69bf839c876de86912ed0c633349a1ab in / 
+# Mon, 06 Jul 2020 22:04:56 GMT
 RUN [ -z "$(apt-get indextargets)" ]
-# Wed, 17 Jun 2020 01:42:41 GMT
+# Mon, 06 Jul 2020 22:04:58 GMT
 RUN set -xe 		&& echo '#!/bin/sh' > /usr/sbin/policy-rc.d 	&& echo 'exit 101' >> /usr/sbin/policy-rc.d 	&& chmod +x /usr/sbin/policy-rc.d 		&& dpkg-divert --local --rename --add /sbin/initctl 	&& cp -a /usr/sbin/policy-rc.d /sbin/initctl 	&& sed -i 's/^exit.*/exit 0/' /sbin/initctl 		&& echo 'force-unsafe-io' > /etc/dpkg/dpkg.cfg.d/docker-apt-speedup 		&& echo 'DPkg::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' > /etc/apt/apt.conf.d/docker-clean 	&& echo 'APT::Update::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' >> /etc/apt/apt.conf.d/docker-clean 	&& echo 'Dir::Cache::pkgcache ""; Dir::Cache::srcpkgcache "";' >> /etc/apt/apt.conf.d/docker-clean 		&& echo 'Acquire::Languages "none";' > /etc/apt/apt.conf.d/docker-no-languages 		&& echo 'Acquire::GzipIndexes "true"; Acquire::CompressionTypes::Order:: "gz";' > /etc/apt/apt.conf.d/docker-gzip-indexes 		&& echo 'Apt::AutoRemove::SuggestsImportant "false";' > /etc/apt/apt.conf.d/docker-autoremove-suggests
-# Wed, 17 Jun 2020 01:42:44 GMT
+# Mon, 06 Jul 2020 22:05:00 GMT
 RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
-# Wed, 17 Jun 2020 01:42:45 GMT
+# Mon, 06 Jul 2020 22:05:01 GMT
 CMD ["/bin/bash"]
-# Wed, 17 Jun 2020 02:40:34 GMT
+# Tue, 07 Jul 2020 00:39:08 GMT
 MAINTAINER Jérémy Jacquier-Roux <jeremy.jacquier-roux@bonitasoft.org>
-# Wed, 17 Jun 2020 02:42:25 GMT
+# Tue, 07 Jul 2020 00:40:03 GMT
 RUN apt-get update && apt-get install -y   curl   gnupg2   mysql-client-core-5.7   openjdk-11-jre-headless   postgresql-client   unzip   zip   && rm -rf /var/lib/apt/lists/*
-# Wed, 17 Jun 2020 02:42:28 GMT
+# Tue, 07 Jul 2020 00:40:06 GMT
 RUN mkdir /opt/custom-init.d/
-# Wed, 17 Jun 2020 02:42:33 GMT
+# Tue, 07 Jul 2020 00:40:08 GMT
 RUN groupadd -r bonita -g 1000   && useradd -u 1000 -r -g bonita -d /opt/bonita/ -s /sbin/nologin -c "Bonita User" bonita
-# Wed, 17 Jun 2020 02:42:38 GMT
+# Tue, 07 Jul 2020 00:40:11 GMT
 RUN (gpg --keyserver ha.pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4   || gpg --keyserver ipv4.pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4)   && curl -fsSL "https://github.com/tianon/gosu/releases/download/1.10/gosu-$(dpkg --print-architecture)" -o /usr/local/bin/gosu   && curl -fsSL "https://github.com/tianon/gosu/releases/download/1.10/gosu-$(dpkg --print-architecture).asc" -o /usr/local/bin/gosu.asc   && gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu   && rm /usr/local/bin/gosu.asc   && chmod +x /usr/local/bin/gosu
-# Wed, 17 Jun 2020 02:42:40 GMT
+# Tue, 07 Jul 2020 00:40:12 GMT
 ARG BONITA_VERSION
-# Wed, 17 Jun 2020 02:42:41 GMT
+# Tue, 07 Jul 2020 00:40:13 GMT
 ARG BONITA_SHA256
-# Wed, 17 Jun 2020 02:43:21 GMT
+# Tue, 07 Jul 2020 00:40:41 GMT
 ARG BASE_URL
-# Wed, 17 Jun 2020 02:43:22 GMT
+# Tue, 07 Jul 2020 00:40:42 GMT
 ARG BONITA_URL
-# Wed, 24 Jun 2020 17:40:14 GMT
+# Tue, 07 Jul 2020 00:41:12 GMT
 ENV BONITA_VERSION=7.11.0
-# Wed, 24 Jun 2020 17:40:15 GMT
+# Tue, 07 Jul 2020 00:41:13 GMT
 ENV BONITA_SHA256=f1d0d3c2f57c0d32ee068c1acd4e21fcf5c866d17fb097b1db97e663697dc8fe
-# Wed, 24 Jun 2020 17:40:16 GMT
+# Tue, 07 Jul 2020 00:41:13 GMT
 ENV BASE_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download
-# Wed, 24 Jun 2020 17:40:16 GMT
+# Tue, 07 Jul 2020 00:41:14 GMT
 ENV BONITA_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download/7.11.0/BonitaCommunity-7.11.0.zip
-# Wed, 24 Jun 2020 17:40:19 GMT
+# Tue, 07 Jul 2020 00:41:16 GMT
 RUN echo "Downloading Bonita from url: $BONITA_URL"
-# Wed, 24 Jun 2020 17:40:28 GMT
+# Tue, 07 Jul 2020 00:41:20 GMT
 RUN mkdir /opt/files   && curl -fsSL ${BONITA_URL} -o /opt/files/BonitaCommunity-${BONITA_VERSION}.zip
-# Wed, 24 Jun 2020 17:40:31 GMT
+# Tue, 07 Jul 2020 00:41:22 GMT
 RUN sha256sum /opt/files/BonitaCommunity-${BONITA_VERSION}.zip
-# Wed, 24 Jun 2020 17:40:33 GMT
+# Tue, 07 Jul 2020 00:41:25 GMT
 RUN echo "$BONITA_SHA256" /opt/files/BonitaCommunity-${BONITA_VERSION}.zip | sha256sum -c -
-# Wed, 24 Jun 2020 17:40:34 GMT
+# Tue, 07 Jul 2020 00:41:26 GMT
 VOLUME [/opt/bonita]
-# Fri, 03 Jul 2020 17:39:47 GMT
+# Tue, 07 Jul 2020 00:41:26 GMT
 COPY dir:7f0e6270bb2bea49c029cca8eb0e60f9f0c9c5d47fd807149e3e18c746693278 in /opt/files 
-# Fri, 03 Jul 2020 17:39:48 GMT
+# Tue, 07 Jul 2020 00:41:27 GMT
 COPY dir:173a816fed2c2b9f191c45b4238f2062102518ab7cf02e5e7c4ca6bd9caeb849 in /opt/templates 
-# Fri, 03 Jul 2020 17:39:49 GMT
+# Tue, 07 Jul 2020 00:41:28 GMT
 EXPOSE 8080
-# Fri, 03 Jul 2020 17:39:49 GMT
+# Tue, 07 Jul 2020 00:41:28 GMT
 CMD ["/opt/files/startup.sh"]
 ```
 
 -	Layers:
-	-	`sha256:2e8bea8b22f8f5a4fd5aa85019945dd8ae04f283a4ba2a7aeb4536fe2f1d1ec2`  
-		Last Modified: Tue, 26 May 2020 16:25:25 GMT  
-		Size: 23.7 MB (23721687 bytes)  
+	-	`sha256:68fe03cb170d6a5101858131ae1eac5393a4f018d70abfcd1348fd240ee0ccc5`  
+		Last Modified: Tue, 30 Jun 2020 16:25:30 GMT  
+		Size: 23.7 MB (23719365 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fc90876b9c9a7343ae432eaec7c8dc8859c1e84b6193da8d386815fde165a70e`  
-		Last Modified: Wed, 17 Jun 2020 01:44:48 GMT  
-		Size: 35.2 KB (35192 bytes)  
+	-	`sha256:18959295effbb87ec216a036a1821f8b7e183072faaa80a6d7f97aa14b51b2af`  
+		Last Modified: Mon, 06 Jul 2020 22:06:58 GMT  
+		Size: 35.2 KB (35189 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:27bfc658a5210a9f0c9cfcda5f504e720da9268e9f3f3bf48e3a9a7af360c959`  
-		Last Modified: Wed, 17 Jun 2020 01:44:49 GMT  
-		Size: 854.0 B  
+	-	`sha256:51118fb70ce38c0c2e667ecd5fc941590875e2fd9e55dd17c90073f085ba5970`  
+		Last Modified: Mon, 06 Jul 2020 22:06:58 GMT  
+		Size: 852.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1ef0f1b06b2142ff2bf35cc565f019ed9e4efe0d8f332825167538c2337bac8a`  
-		Last Modified: Wed, 17 Jun 2020 01:44:49 GMT  
+	-	`sha256:409a5d9eae931d5a3b5a3bcb840e11167c2d3d03ec22258cde67197babf908ed`  
+		Last Modified: Mon, 06 Jul 2020 22:06:58 GMT  
 		Size: 187.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ab2e7783d3202312a68d1bae9863062d6bfcad302b838d982a971b6d1eace7cf`  
-		Last Modified: Wed, 17 Jun 2020 02:44:30 GMT  
-		Size: 92.9 MB (92885966 bytes)  
+	-	`sha256:88202bff4b04a58aa9909279920477c5d8406ca6229efe7fe13727414f8643b0`  
+		Last Modified: Tue, 07 Jul 2020 00:42:09 GMT  
+		Size: 92.9 MB (92891499 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:18f7449c9a39dcb1672a84ad09440887b1968c4c7f83d49fe0ecbfa775c89ca9`  
-		Last Modified: Wed, 17 Jun 2020 02:44:04 GMT  
+	-	`sha256:fa6d85b404babb7155f454fdd1e4fcda3ee4fc61e6ca483f0734d7c1f7f89425`  
+		Last Modified: Tue, 07 Jul 2020 00:41:44 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:73da90b862c2b844579dc9210fe78f9026d832b17f0b9d594f703d8dacf603d7`  
-		Last Modified: Wed, 17 Jun 2020 02:44:03 GMT  
-		Size: 1.9 KB (1920 bytes)  
+	-	`sha256:e6f6e8713ad0e050faa8636e0133516c82dbf79c7dc668a18fb93f4b87d1e915`  
+		Last Modified: Tue, 07 Jul 2020 00:41:43 GMT  
+		Size: 1.9 KB (1917 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:832035663682d494bbcc67a3f9e4927458156bf6e392d821d11d63f4c6532f3c`  
-		Last Modified: Wed, 17 Jun 2020 02:44:02 GMT  
+	-	`sha256:c91b4518214ee90daf56d5ea809b97102b4f82b3ae3fd1b19378652d071b0bdb`  
+		Last Modified: Tue, 07 Jul 2020 00:41:43 GMT  
 		Size: 541.8 KB (541818 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:aee3b35a452661ddca4c2185aeaeaf603b1937d0b4115a8ed159e89b484d9029`  
-		Last Modified: Wed, 24 Jun 2020 17:41:00 GMT  
-		Size: 113.2 MB (113221612 bytes)  
+	-	`sha256:42cf608dea2cd5cb3c1de2da7dd296cdeb6a327b5a677cbc88e96ea884435c5e`  
+		Last Modified: Tue, 07 Jul 2020 00:42:42 GMT  
+		Size: 113.2 MB (113221614 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3693802575293a0aece91313aedab1a4c96463acb5c399ab24bf64eda2e15e6c`  
-		Last Modified: Fri, 03 Jul 2020 17:40:03 GMT  
-		Size: 7.6 KB (7632 bytes)  
+	-	`sha256:87855d6b89013d4530611dfc8baba57a6919f310d3f96bab45ebc115b83273a1`  
+		Last Modified: Tue, 07 Jul 2020 00:42:32 GMT  
+		Size: 7.6 KB (7627 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1103b7a50b8f307fffc3657789584c32b8df6e7097dcbf8a21981b7bd1309e12`  
-		Last Modified: Fri, 03 Jul 2020 17:40:03 GMT  
-		Size: 1.7 KB (1705 bytes)  
+	-	`sha256:f90ee0a7e114377ec2fd24cfbe20555daa158763c0bc73e69ee4e446dfba8454`  
+		Last Modified: Tue, 07 Jul 2020 00:42:33 GMT  
+		Size: 1.7 KB (1706 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `bonita:7.11.0` - linux; ppc64le
@@ -1453,7 +1453,7 @@ CMD ["/opt/files/startup.sh"]
 ## `bonita:7.9`
 
 ```console
-$ docker pull bonita@sha256:f687d563e20cb573aff8f7aac39f5616a9c5cec322471ae0501df30b6ad1e0db
+$ docker pull bonita@sha256:06131dc424ecd4cb17759dbcd9230eea42b1e019ca3c8876fe064260763af348
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1575,110 +1575,110 @@ CMD ["/opt/files/startup.sh"]
 ### `bonita:7.9` - linux; arm64 variant v8
 
 ```console
-$ docker pull bonita@sha256:ce90dd4da7b0cbbdd2726872ada27c36005088b451ba9bff024d7dadbc320662
+$ docker pull bonita@sha256:4c4ba6545c70f4823dfc7787bbcda8773536152f31b3645b71cac3523b8923d1
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **217.2 MB (217222019 bytes)**  
+-	Total Size: **217.2 MB (217225220 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:896e36877b518c9a79f598b901dd64c0090dd16ec3415c13ff4913449145fdc7`
+-	Image ID: `sha256:95b11b46a836e21ca3224b34777d05d4c4a9bf12442dd0681469ee0f21c09ae7`
 -	Default Command: `["\/opt\/files\/startup.sh"]`
 
 ```dockerfile
-# Wed, 17 Jun 2020 01:42:33 GMT
-ADD file:7dc8819fd3d4b84ad19fb836e5bfda64a5ffefc371166f70d4d41dff6b22d450 in / 
-# Wed, 17 Jun 2020 01:42:37 GMT
+# Mon, 06 Jul 2020 22:04:54 GMT
+ADD file:090a5d48524c4b10f867bf6bb80c106a69bf839c876de86912ed0c633349a1ab in / 
+# Mon, 06 Jul 2020 22:04:56 GMT
 RUN [ -z "$(apt-get indextargets)" ]
-# Wed, 17 Jun 2020 01:42:41 GMT
+# Mon, 06 Jul 2020 22:04:58 GMT
 RUN set -xe 		&& echo '#!/bin/sh' > /usr/sbin/policy-rc.d 	&& echo 'exit 101' >> /usr/sbin/policy-rc.d 	&& chmod +x /usr/sbin/policy-rc.d 		&& dpkg-divert --local --rename --add /sbin/initctl 	&& cp -a /usr/sbin/policy-rc.d /sbin/initctl 	&& sed -i 's/^exit.*/exit 0/' /sbin/initctl 		&& echo 'force-unsafe-io' > /etc/dpkg/dpkg.cfg.d/docker-apt-speedup 		&& echo 'DPkg::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' > /etc/apt/apt.conf.d/docker-clean 	&& echo 'APT::Update::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' >> /etc/apt/apt.conf.d/docker-clean 	&& echo 'Dir::Cache::pkgcache ""; Dir::Cache::srcpkgcache "";' >> /etc/apt/apt.conf.d/docker-clean 		&& echo 'Acquire::Languages "none";' > /etc/apt/apt.conf.d/docker-no-languages 		&& echo 'Acquire::GzipIndexes "true"; Acquire::CompressionTypes::Order:: "gz";' > /etc/apt/apt.conf.d/docker-gzip-indexes 		&& echo 'Apt::AutoRemove::SuggestsImportant "false";' > /etc/apt/apt.conf.d/docker-autoremove-suggests
-# Wed, 17 Jun 2020 01:42:44 GMT
+# Mon, 06 Jul 2020 22:05:00 GMT
 RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
-# Wed, 17 Jun 2020 01:42:45 GMT
+# Mon, 06 Jul 2020 22:05:01 GMT
 CMD ["/bin/bash"]
-# Wed, 17 Jun 2020 02:40:34 GMT
+# Tue, 07 Jul 2020 00:39:08 GMT
 MAINTAINER Jérémy Jacquier-Roux <jeremy.jacquier-roux@bonitasoft.org>
-# Wed, 17 Jun 2020 02:42:25 GMT
+# Tue, 07 Jul 2020 00:40:03 GMT
 RUN apt-get update && apt-get install -y   curl   gnupg2   mysql-client-core-5.7   openjdk-11-jre-headless   postgresql-client   unzip   zip   && rm -rf /var/lib/apt/lists/*
-# Wed, 17 Jun 2020 02:42:28 GMT
+# Tue, 07 Jul 2020 00:40:06 GMT
 RUN mkdir /opt/custom-init.d/
-# Wed, 17 Jun 2020 02:42:33 GMT
+# Tue, 07 Jul 2020 00:40:08 GMT
 RUN groupadd -r bonita -g 1000   && useradd -u 1000 -r -g bonita -d /opt/bonita/ -s /sbin/nologin -c "Bonita User" bonita
-# Wed, 17 Jun 2020 02:42:38 GMT
+# Tue, 07 Jul 2020 00:40:11 GMT
 RUN (gpg --keyserver ha.pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4   || gpg --keyserver ipv4.pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4)   && curl -fsSL "https://github.com/tianon/gosu/releases/download/1.10/gosu-$(dpkg --print-architecture)" -o /usr/local/bin/gosu   && curl -fsSL "https://github.com/tianon/gosu/releases/download/1.10/gosu-$(dpkg --print-architecture).asc" -o /usr/local/bin/gosu.asc   && gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu   && rm /usr/local/bin/gosu.asc   && chmod +x /usr/local/bin/gosu
-# Wed, 17 Jun 2020 02:42:40 GMT
+# Tue, 07 Jul 2020 00:40:12 GMT
 ARG BONITA_VERSION
-# Wed, 17 Jun 2020 02:42:41 GMT
+# Tue, 07 Jul 2020 00:40:13 GMT
 ARG BONITA_SHA256
-# Wed, 17 Jun 2020 02:42:43 GMT
+# Tue, 07 Jul 2020 00:40:14 GMT
 ARG BONITA_URL
-# Wed, 17 Jun 2020 02:42:45 GMT
+# Tue, 07 Jul 2020 00:40:15 GMT
 ENV BONITA_VERSION=7.9.5
-# Wed, 17 Jun 2020 02:42:46 GMT
+# Tue, 07 Jul 2020 00:40:15 GMT
 ENV BONITA_SHA256=49620e505f072a4f20ebb936c9391e8665d441df9f650749a61a19a5c52e2932
-# Wed, 17 Jun 2020 02:42:48 GMT
+# Tue, 07 Jul 2020 00:40:16 GMT
 ENV BONITA_URL=https://release.ow2.org/bonita/BonitaCommunity-7.9.5-tomcat.zip
-# Wed, 17 Jun 2020 02:42:56 GMT
+# Tue, 07 Jul 2020 00:40:23 GMT
 RUN mkdir /opt/files   && curl -fsSL ${BONITA_URL} -o /opt/files/BonitaCommunity-${BONITA_VERSION}-tomcat.zip
-# Wed, 17 Jun 2020 02:42:59 GMT
+# Tue, 07 Jul 2020 00:40:26 GMT
 RUN sha256sum /opt/files/BonitaCommunity-${BONITA_VERSION}-tomcat.zip
-# Wed, 17 Jun 2020 02:43:02 GMT
+# Tue, 07 Jul 2020 00:40:29 GMT
 RUN echo "$BONITA_SHA256" /opt/files/BonitaCommunity-${BONITA_VERSION}-tomcat.zip | sha256sum -c -
-# Wed, 17 Jun 2020 02:43:03 GMT
+# Tue, 07 Jul 2020 00:40:30 GMT
 VOLUME [/opt/bonita]
-# Wed, 17 Jun 2020 02:43:04 GMT
+# Tue, 07 Jul 2020 00:40:31 GMT
 COPY dir:ef58daa6df201fe2eac6b87ad183ec81a5dbb212d47f61a3244b65faca8cb3c6 in /opt/files 
-# Wed, 17 Jun 2020 02:43:04 GMT
+# Tue, 07 Jul 2020 00:40:31 GMT
 COPY dir:157c135edc1215565cc6815861e1a1728bdf09f6cfceca03c1639b2262f1cd65 in /opt/templates 
-# Wed, 17 Jun 2020 02:43:06 GMT
+# Tue, 07 Jul 2020 00:40:32 GMT
 EXPOSE 8080
-# Wed, 17 Jun 2020 02:43:08 GMT
+# Tue, 07 Jul 2020 00:40:33 GMT
 CMD ["/opt/files/startup.sh"]
 ```
 
 -	Layers:
-	-	`sha256:2e8bea8b22f8f5a4fd5aa85019945dd8ae04f283a4ba2a7aeb4536fe2f1d1ec2`  
-		Last Modified: Tue, 26 May 2020 16:25:25 GMT  
-		Size: 23.7 MB (23721687 bytes)  
+	-	`sha256:68fe03cb170d6a5101858131ae1eac5393a4f018d70abfcd1348fd240ee0ccc5`  
+		Last Modified: Tue, 30 Jun 2020 16:25:30 GMT  
+		Size: 23.7 MB (23719365 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fc90876b9c9a7343ae432eaec7c8dc8859c1e84b6193da8d386815fde165a70e`  
-		Last Modified: Wed, 17 Jun 2020 01:44:48 GMT  
-		Size: 35.2 KB (35192 bytes)  
+	-	`sha256:18959295effbb87ec216a036a1821f8b7e183072faaa80a6d7f97aa14b51b2af`  
+		Last Modified: Mon, 06 Jul 2020 22:06:58 GMT  
+		Size: 35.2 KB (35189 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:27bfc658a5210a9f0c9cfcda5f504e720da9268e9f3f3bf48e3a9a7af360c959`  
-		Last Modified: Wed, 17 Jun 2020 01:44:49 GMT  
-		Size: 854.0 B  
+	-	`sha256:51118fb70ce38c0c2e667ecd5fc941590875e2fd9e55dd17c90073f085ba5970`  
+		Last Modified: Mon, 06 Jul 2020 22:06:58 GMT  
+		Size: 852.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1ef0f1b06b2142ff2bf35cc565f019ed9e4efe0d8f332825167538c2337bac8a`  
-		Last Modified: Wed, 17 Jun 2020 01:44:49 GMT  
+	-	`sha256:409a5d9eae931d5a3b5a3bcb840e11167c2d3d03ec22258cde67197babf908ed`  
+		Last Modified: Mon, 06 Jul 2020 22:06:58 GMT  
 		Size: 187.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ab2e7783d3202312a68d1bae9863062d6bfcad302b838d982a971b6d1eace7cf`  
-		Last Modified: Wed, 17 Jun 2020 02:44:30 GMT  
-		Size: 92.9 MB (92885966 bytes)  
+	-	`sha256:88202bff4b04a58aa9909279920477c5d8406ca6229efe7fe13727414f8643b0`  
+		Last Modified: Tue, 07 Jul 2020 00:42:09 GMT  
+		Size: 92.9 MB (92891499 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:18f7449c9a39dcb1672a84ad09440887b1968c4c7f83d49fe0ecbfa775c89ca9`  
-		Last Modified: Wed, 17 Jun 2020 02:44:04 GMT  
+	-	`sha256:fa6d85b404babb7155f454fdd1e4fcda3ee4fc61e6ca483f0734d7c1f7f89425`  
+		Last Modified: Tue, 07 Jul 2020 00:41:44 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:73da90b862c2b844579dc9210fe78f9026d832b17f0b9d594f703d8dacf603d7`  
-		Last Modified: Wed, 17 Jun 2020 02:44:03 GMT  
-		Size: 1.9 KB (1920 bytes)  
+	-	`sha256:e6f6e8713ad0e050faa8636e0133516c82dbf79c7dc668a18fb93f4b87d1e915`  
+		Last Modified: Tue, 07 Jul 2020 00:41:43 GMT  
+		Size: 1.9 KB (1917 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:832035663682d494bbcc67a3f9e4927458156bf6e392d821d11d63f4c6532f3c`  
-		Last Modified: Wed, 17 Jun 2020 02:44:02 GMT  
+	-	`sha256:c91b4518214ee90daf56d5ea809b97102b4f82b3ae3fd1b19378652d071b0bdb`  
+		Last Modified: Tue, 07 Jul 2020 00:41:43 GMT  
 		Size: 541.8 KB (541818 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8a9d6f808e1c6cb80145e13a9c836b06cb6335b2c7ec7216430ca8b40058ae64`  
-		Last Modified: Wed, 17 Jun 2020 02:44:11 GMT  
-		Size: 100.0 MB (100025000 bytes)  
+	-	`sha256:f7a062737ea04ebb0578a31ec6aa26ebb732c7166f76a9db634c226aa9151726`  
+		Last Modified: Tue, 07 Jul 2020 00:41:53 GMT  
+		Size: 100.0 MB (100024999 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5a913ca2abfe76bed14e8b1e6ddafb3a4ff8b5f99b099bc3cd23157ff5b7d750`  
-		Last Modified: Wed, 17 Jun 2020 02:44:02 GMT  
-		Size: 7.6 KB (7587 bytes)  
+	-	`sha256:7f0d720f334c3c737f677d7c2dbedab38109095805899c0518290fe09319be01`  
+		Last Modified: Tue, 07 Jul 2020 00:41:43 GMT  
+		Size: 7.6 KB (7586 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:67827ddc9dac11f17288052b212bdd665b4103a04efa7f80214cc439545f8b6c`  
-		Last Modified: Wed, 17 Jun 2020 02:44:02 GMT  
+	-	`sha256:4718594cbdbc8d5bfbaa74780fd66b11ff3ed518a03d6c75f45942b62ac7f909`  
+		Last Modified: Tue, 07 Jul 2020 00:41:42 GMT  
 		Size: 1.7 KB (1652 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -1795,7 +1795,7 @@ CMD ["/opt/files/startup.sh"]
 ## `bonita:7.9.5`
 
 ```console
-$ docker pull bonita@sha256:f687d563e20cb573aff8f7aac39f5616a9c5cec322471ae0501df30b6ad1e0db
+$ docker pull bonita@sha256:06131dc424ecd4cb17759dbcd9230eea42b1e019ca3c8876fe064260763af348
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1917,110 +1917,110 @@ CMD ["/opt/files/startup.sh"]
 ### `bonita:7.9.5` - linux; arm64 variant v8
 
 ```console
-$ docker pull bonita@sha256:ce90dd4da7b0cbbdd2726872ada27c36005088b451ba9bff024d7dadbc320662
+$ docker pull bonita@sha256:4c4ba6545c70f4823dfc7787bbcda8773536152f31b3645b71cac3523b8923d1
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **217.2 MB (217222019 bytes)**  
+-	Total Size: **217.2 MB (217225220 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:896e36877b518c9a79f598b901dd64c0090dd16ec3415c13ff4913449145fdc7`
+-	Image ID: `sha256:95b11b46a836e21ca3224b34777d05d4c4a9bf12442dd0681469ee0f21c09ae7`
 -	Default Command: `["\/opt\/files\/startup.sh"]`
 
 ```dockerfile
-# Wed, 17 Jun 2020 01:42:33 GMT
-ADD file:7dc8819fd3d4b84ad19fb836e5bfda64a5ffefc371166f70d4d41dff6b22d450 in / 
-# Wed, 17 Jun 2020 01:42:37 GMT
+# Mon, 06 Jul 2020 22:04:54 GMT
+ADD file:090a5d48524c4b10f867bf6bb80c106a69bf839c876de86912ed0c633349a1ab in / 
+# Mon, 06 Jul 2020 22:04:56 GMT
 RUN [ -z "$(apt-get indextargets)" ]
-# Wed, 17 Jun 2020 01:42:41 GMT
+# Mon, 06 Jul 2020 22:04:58 GMT
 RUN set -xe 		&& echo '#!/bin/sh' > /usr/sbin/policy-rc.d 	&& echo 'exit 101' >> /usr/sbin/policy-rc.d 	&& chmod +x /usr/sbin/policy-rc.d 		&& dpkg-divert --local --rename --add /sbin/initctl 	&& cp -a /usr/sbin/policy-rc.d /sbin/initctl 	&& sed -i 's/^exit.*/exit 0/' /sbin/initctl 		&& echo 'force-unsafe-io' > /etc/dpkg/dpkg.cfg.d/docker-apt-speedup 		&& echo 'DPkg::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' > /etc/apt/apt.conf.d/docker-clean 	&& echo 'APT::Update::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' >> /etc/apt/apt.conf.d/docker-clean 	&& echo 'Dir::Cache::pkgcache ""; Dir::Cache::srcpkgcache "";' >> /etc/apt/apt.conf.d/docker-clean 		&& echo 'Acquire::Languages "none";' > /etc/apt/apt.conf.d/docker-no-languages 		&& echo 'Acquire::GzipIndexes "true"; Acquire::CompressionTypes::Order:: "gz";' > /etc/apt/apt.conf.d/docker-gzip-indexes 		&& echo 'Apt::AutoRemove::SuggestsImportant "false";' > /etc/apt/apt.conf.d/docker-autoremove-suggests
-# Wed, 17 Jun 2020 01:42:44 GMT
+# Mon, 06 Jul 2020 22:05:00 GMT
 RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
-# Wed, 17 Jun 2020 01:42:45 GMT
+# Mon, 06 Jul 2020 22:05:01 GMT
 CMD ["/bin/bash"]
-# Wed, 17 Jun 2020 02:40:34 GMT
+# Tue, 07 Jul 2020 00:39:08 GMT
 MAINTAINER Jérémy Jacquier-Roux <jeremy.jacquier-roux@bonitasoft.org>
-# Wed, 17 Jun 2020 02:42:25 GMT
+# Tue, 07 Jul 2020 00:40:03 GMT
 RUN apt-get update && apt-get install -y   curl   gnupg2   mysql-client-core-5.7   openjdk-11-jre-headless   postgresql-client   unzip   zip   && rm -rf /var/lib/apt/lists/*
-# Wed, 17 Jun 2020 02:42:28 GMT
+# Tue, 07 Jul 2020 00:40:06 GMT
 RUN mkdir /opt/custom-init.d/
-# Wed, 17 Jun 2020 02:42:33 GMT
+# Tue, 07 Jul 2020 00:40:08 GMT
 RUN groupadd -r bonita -g 1000   && useradd -u 1000 -r -g bonita -d /opt/bonita/ -s /sbin/nologin -c "Bonita User" bonita
-# Wed, 17 Jun 2020 02:42:38 GMT
+# Tue, 07 Jul 2020 00:40:11 GMT
 RUN (gpg --keyserver ha.pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4   || gpg --keyserver ipv4.pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4)   && curl -fsSL "https://github.com/tianon/gosu/releases/download/1.10/gosu-$(dpkg --print-architecture)" -o /usr/local/bin/gosu   && curl -fsSL "https://github.com/tianon/gosu/releases/download/1.10/gosu-$(dpkg --print-architecture).asc" -o /usr/local/bin/gosu.asc   && gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu   && rm /usr/local/bin/gosu.asc   && chmod +x /usr/local/bin/gosu
-# Wed, 17 Jun 2020 02:42:40 GMT
+# Tue, 07 Jul 2020 00:40:12 GMT
 ARG BONITA_VERSION
-# Wed, 17 Jun 2020 02:42:41 GMT
+# Tue, 07 Jul 2020 00:40:13 GMT
 ARG BONITA_SHA256
-# Wed, 17 Jun 2020 02:42:43 GMT
+# Tue, 07 Jul 2020 00:40:14 GMT
 ARG BONITA_URL
-# Wed, 17 Jun 2020 02:42:45 GMT
+# Tue, 07 Jul 2020 00:40:15 GMT
 ENV BONITA_VERSION=7.9.5
-# Wed, 17 Jun 2020 02:42:46 GMT
+# Tue, 07 Jul 2020 00:40:15 GMT
 ENV BONITA_SHA256=49620e505f072a4f20ebb936c9391e8665d441df9f650749a61a19a5c52e2932
-# Wed, 17 Jun 2020 02:42:48 GMT
+# Tue, 07 Jul 2020 00:40:16 GMT
 ENV BONITA_URL=https://release.ow2.org/bonita/BonitaCommunity-7.9.5-tomcat.zip
-# Wed, 17 Jun 2020 02:42:56 GMT
+# Tue, 07 Jul 2020 00:40:23 GMT
 RUN mkdir /opt/files   && curl -fsSL ${BONITA_URL} -o /opt/files/BonitaCommunity-${BONITA_VERSION}-tomcat.zip
-# Wed, 17 Jun 2020 02:42:59 GMT
+# Tue, 07 Jul 2020 00:40:26 GMT
 RUN sha256sum /opt/files/BonitaCommunity-${BONITA_VERSION}-tomcat.zip
-# Wed, 17 Jun 2020 02:43:02 GMT
+# Tue, 07 Jul 2020 00:40:29 GMT
 RUN echo "$BONITA_SHA256" /opt/files/BonitaCommunity-${BONITA_VERSION}-tomcat.zip | sha256sum -c -
-# Wed, 17 Jun 2020 02:43:03 GMT
+# Tue, 07 Jul 2020 00:40:30 GMT
 VOLUME [/opt/bonita]
-# Wed, 17 Jun 2020 02:43:04 GMT
+# Tue, 07 Jul 2020 00:40:31 GMT
 COPY dir:ef58daa6df201fe2eac6b87ad183ec81a5dbb212d47f61a3244b65faca8cb3c6 in /opt/files 
-# Wed, 17 Jun 2020 02:43:04 GMT
+# Tue, 07 Jul 2020 00:40:31 GMT
 COPY dir:157c135edc1215565cc6815861e1a1728bdf09f6cfceca03c1639b2262f1cd65 in /opt/templates 
-# Wed, 17 Jun 2020 02:43:06 GMT
+# Tue, 07 Jul 2020 00:40:32 GMT
 EXPOSE 8080
-# Wed, 17 Jun 2020 02:43:08 GMT
+# Tue, 07 Jul 2020 00:40:33 GMT
 CMD ["/opt/files/startup.sh"]
 ```
 
 -	Layers:
-	-	`sha256:2e8bea8b22f8f5a4fd5aa85019945dd8ae04f283a4ba2a7aeb4536fe2f1d1ec2`  
-		Last Modified: Tue, 26 May 2020 16:25:25 GMT  
-		Size: 23.7 MB (23721687 bytes)  
+	-	`sha256:68fe03cb170d6a5101858131ae1eac5393a4f018d70abfcd1348fd240ee0ccc5`  
+		Last Modified: Tue, 30 Jun 2020 16:25:30 GMT  
+		Size: 23.7 MB (23719365 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fc90876b9c9a7343ae432eaec7c8dc8859c1e84b6193da8d386815fde165a70e`  
-		Last Modified: Wed, 17 Jun 2020 01:44:48 GMT  
-		Size: 35.2 KB (35192 bytes)  
+	-	`sha256:18959295effbb87ec216a036a1821f8b7e183072faaa80a6d7f97aa14b51b2af`  
+		Last Modified: Mon, 06 Jul 2020 22:06:58 GMT  
+		Size: 35.2 KB (35189 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:27bfc658a5210a9f0c9cfcda5f504e720da9268e9f3f3bf48e3a9a7af360c959`  
-		Last Modified: Wed, 17 Jun 2020 01:44:49 GMT  
-		Size: 854.0 B  
+	-	`sha256:51118fb70ce38c0c2e667ecd5fc941590875e2fd9e55dd17c90073f085ba5970`  
+		Last Modified: Mon, 06 Jul 2020 22:06:58 GMT  
+		Size: 852.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1ef0f1b06b2142ff2bf35cc565f019ed9e4efe0d8f332825167538c2337bac8a`  
-		Last Modified: Wed, 17 Jun 2020 01:44:49 GMT  
+	-	`sha256:409a5d9eae931d5a3b5a3bcb840e11167c2d3d03ec22258cde67197babf908ed`  
+		Last Modified: Mon, 06 Jul 2020 22:06:58 GMT  
 		Size: 187.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ab2e7783d3202312a68d1bae9863062d6bfcad302b838d982a971b6d1eace7cf`  
-		Last Modified: Wed, 17 Jun 2020 02:44:30 GMT  
-		Size: 92.9 MB (92885966 bytes)  
+	-	`sha256:88202bff4b04a58aa9909279920477c5d8406ca6229efe7fe13727414f8643b0`  
+		Last Modified: Tue, 07 Jul 2020 00:42:09 GMT  
+		Size: 92.9 MB (92891499 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:18f7449c9a39dcb1672a84ad09440887b1968c4c7f83d49fe0ecbfa775c89ca9`  
-		Last Modified: Wed, 17 Jun 2020 02:44:04 GMT  
+	-	`sha256:fa6d85b404babb7155f454fdd1e4fcda3ee4fc61e6ca483f0734d7c1f7f89425`  
+		Last Modified: Tue, 07 Jul 2020 00:41:44 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:73da90b862c2b844579dc9210fe78f9026d832b17f0b9d594f703d8dacf603d7`  
-		Last Modified: Wed, 17 Jun 2020 02:44:03 GMT  
-		Size: 1.9 KB (1920 bytes)  
+	-	`sha256:e6f6e8713ad0e050faa8636e0133516c82dbf79c7dc668a18fb93f4b87d1e915`  
+		Last Modified: Tue, 07 Jul 2020 00:41:43 GMT  
+		Size: 1.9 KB (1917 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:832035663682d494bbcc67a3f9e4927458156bf6e392d821d11d63f4c6532f3c`  
-		Last Modified: Wed, 17 Jun 2020 02:44:02 GMT  
+	-	`sha256:c91b4518214ee90daf56d5ea809b97102b4f82b3ae3fd1b19378652d071b0bdb`  
+		Last Modified: Tue, 07 Jul 2020 00:41:43 GMT  
 		Size: 541.8 KB (541818 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8a9d6f808e1c6cb80145e13a9c836b06cb6335b2c7ec7216430ca8b40058ae64`  
-		Last Modified: Wed, 17 Jun 2020 02:44:11 GMT  
-		Size: 100.0 MB (100025000 bytes)  
+	-	`sha256:f7a062737ea04ebb0578a31ec6aa26ebb732c7166f76a9db634c226aa9151726`  
+		Last Modified: Tue, 07 Jul 2020 00:41:53 GMT  
+		Size: 100.0 MB (100024999 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5a913ca2abfe76bed14e8b1e6ddafb3a4ff8b5f99b099bc3cd23157ff5b7d750`  
-		Last Modified: Wed, 17 Jun 2020 02:44:02 GMT  
-		Size: 7.6 KB (7587 bytes)  
+	-	`sha256:7f0d720f334c3c737f677d7c2dbedab38109095805899c0518290fe09319be01`  
+		Last Modified: Tue, 07 Jul 2020 00:41:43 GMT  
+		Size: 7.6 KB (7586 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:67827ddc9dac11f17288052b212bdd665b4103a04efa7f80214cc439545f8b6c`  
-		Last Modified: Wed, 17 Jun 2020 02:44:02 GMT  
+	-	`sha256:4718594cbdbc8d5bfbaa74780fd66b11ff3ed518a03d6c75f45942b62ac7f909`  
+		Last Modified: Tue, 07 Jul 2020 00:41:42 GMT  
 		Size: 1.7 KB (1652 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -2137,7 +2137,7 @@ CMD ["/opt/files/startup.sh"]
 ## `bonita:latest`
 
 ```console
-$ docker pull bonita@sha256:6308fad666eb7e7172454a573194e470a3ee5cd0140386383c34c01d5c96db78
+$ docker pull bonita@sha256:90061a73157d871f3ba74fbc0137d1680d6af14385185cd28fe1ba38a7901d98
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2265,117 +2265,117 @@ CMD ["/opt/files/startup.sh"]
 ### `bonita:latest` - linux; arm64 variant v8
 
 ```console
-$ docker pull bonita@sha256:65ba0e2092b7bafa8f4c812130451af1c212c08775aff508d87cd7e1cb9f83c6
+$ docker pull bonita@sha256:5b6ae25fbd09fbc139512098ab578def4b91a6cd11f3b81f2f9efe62a06104ee
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **230.4 MB (230418729 bytes)**  
+-	Total Size: **230.4 MB (230421930 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5464e79dfb5c4d44ac9d5c6408232297da9600beda3dac56079fc0d127efab8c`
+-	Image ID: `sha256:4e11deefa8d72d0a186ed44f73683219ec4530a7a5b692fa64a5f9b4d5fc8cda`
 -	Default Command: `["\/opt\/files\/startup.sh"]`
 
 ```dockerfile
-# Wed, 17 Jun 2020 01:42:33 GMT
-ADD file:7dc8819fd3d4b84ad19fb836e5bfda64a5ffefc371166f70d4d41dff6b22d450 in / 
-# Wed, 17 Jun 2020 01:42:37 GMT
+# Mon, 06 Jul 2020 22:04:54 GMT
+ADD file:090a5d48524c4b10f867bf6bb80c106a69bf839c876de86912ed0c633349a1ab in / 
+# Mon, 06 Jul 2020 22:04:56 GMT
 RUN [ -z "$(apt-get indextargets)" ]
-# Wed, 17 Jun 2020 01:42:41 GMT
+# Mon, 06 Jul 2020 22:04:58 GMT
 RUN set -xe 		&& echo '#!/bin/sh' > /usr/sbin/policy-rc.d 	&& echo 'exit 101' >> /usr/sbin/policy-rc.d 	&& chmod +x /usr/sbin/policy-rc.d 		&& dpkg-divert --local --rename --add /sbin/initctl 	&& cp -a /usr/sbin/policy-rc.d /sbin/initctl 	&& sed -i 's/^exit.*/exit 0/' /sbin/initctl 		&& echo 'force-unsafe-io' > /etc/dpkg/dpkg.cfg.d/docker-apt-speedup 		&& echo 'DPkg::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' > /etc/apt/apt.conf.d/docker-clean 	&& echo 'APT::Update::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' >> /etc/apt/apt.conf.d/docker-clean 	&& echo 'Dir::Cache::pkgcache ""; Dir::Cache::srcpkgcache "";' >> /etc/apt/apt.conf.d/docker-clean 		&& echo 'Acquire::Languages "none";' > /etc/apt/apt.conf.d/docker-no-languages 		&& echo 'Acquire::GzipIndexes "true"; Acquire::CompressionTypes::Order:: "gz";' > /etc/apt/apt.conf.d/docker-gzip-indexes 		&& echo 'Apt::AutoRemove::SuggestsImportant "false";' > /etc/apt/apt.conf.d/docker-autoremove-suggests
-# Wed, 17 Jun 2020 01:42:44 GMT
+# Mon, 06 Jul 2020 22:05:00 GMT
 RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
-# Wed, 17 Jun 2020 01:42:45 GMT
+# Mon, 06 Jul 2020 22:05:01 GMT
 CMD ["/bin/bash"]
-# Wed, 17 Jun 2020 02:40:34 GMT
+# Tue, 07 Jul 2020 00:39:08 GMT
 MAINTAINER Jérémy Jacquier-Roux <jeremy.jacquier-roux@bonitasoft.org>
-# Wed, 17 Jun 2020 02:42:25 GMT
+# Tue, 07 Jul 2020 00:40:03 GMT
 RUN apt-get update && apt-get install -y   curl   gnupg2   mysql-client-core-5.7   openjdk-11-jre-headless   postgresql-client   unzip   zip   && rm -rf /var/lib/apt/lists/*
-# Wed, 17 Jun 2020 02:42:28 GMT
+# Tue, 07 Jul 2020 00:40:06 GMT
 RUN mkdir /opt/custom-init.d/
-# Wed, 17 Jun 2020 02:42:33 GMT
+# Tue, 07 Jul 2020 00:40:08 GMT
 RUN groupadd -r bonita -g 1000   && useradd -u 1000 -r -g bonita -d /opt/bonita/ -s /sbin/nologin -c "Bonita User" bonita
-# Wed, 17 Jun 2020 02:42:38 GMT
+# Tue, 07 Jul 2020 00:40:11 GMT
 RUN (gpg --keyserver ha.pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4   || gpg --keyserver ipv4.pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4)   && curl -fsSL "https://github.com/tianon/gosu/releases/download/1.10/gosu-$(dpkg --print-architecture)" -o /usr/local/bin/gosu   && curl -fsSL "https://github.com/tianon/gosu/releases/download/1.10/gosu-$(dpkg --print-architecture).asc" -o /usr/local/bin/gosu.asc   && gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu   && rm /usr/local/bin/gosu.asc   && chmod +x /usr/local/bin/gosu
-# Wed, 17 Jun 2020 02:42:40 GMT
+# Tue, 07 Jul 2020 00:40:12 GMT
 ARG BONITA_VERSION
-# Wed, 17 Jun 2020 02:42:41 GMT
+# Tue, 07 Jul 2020 00:40:13 GMT
 ARG BONITA_SHA256
-# Wed, 17 Jun 2020 02:43:21 GMT
+# Tue, 07 Jul 2020 00:40:41 GMT
 ARG BASE_URL
-# Wed, 17 Jun 2020 02:43:22 GMT
+# Tue, 07 Jul 2020 00:40:42 GMT
 ARG BONITA_URL
-# Wed, 24 Jun 2020 17:40:14 GMT
+# Tue, 07 Jul 2020 00:41:12 GMT
 ENV BONITA_VERSION=7.11.0
-# Wed, 24 Jun 2020 17:40:15 GMT
+# Tue, 07 Jul 2020 00:41:13 GMT
 ENV BONITA_SHA256=f1d0d3c2f57c0d32ee068c1acd4e21fcf5c866d17fb097b1db97e663697dc8fe
-# Wed, 24 Jun 2020 17:40:16 GMT
+# Tue, 07 Jul 2020 00:41:13 GMT
 ENV BASE_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download
-# Wed, 24 Jun 2020 17:40:16 GMT
+# Tue, 07 Jul 2020 00:41:14 GMT
 ENV BONITA_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download/7.11.0/BonitaCommunity-7.11.0.zip
-# Wed, 24 Jun 2020 17:40:19 GMT
+# Tue, 07 Jul 2020 00:41:16 GMT
 RUN echo "Downloading Bonita from url: $BONITA_URL"
-# Wed, 24 Jun 2020 17:40:28 GMT
+# Tue, 07 Jul 2020 00:41:20 GMT
 RUN mkdir /opt/files   && curl -fsSL ${BONITA_URL} -o /opt/files/BonitaCommunity-${BONITA_VERSION}.zip
-# Wed, 24 Jun 2020 17:40:31 GMT
+# Tue, 07 Jul 2020 00:41:22 GMT
 RUN sha256sum /opt/files/BonitaCommunity-${BONITA_VERSION}.zip
-# Wed, 24 Jun 2020 17:40:33 GMT
+# Tue, 07 Jul 2020 00:41:25 GMT
 RUN echo "$BONITA_SHA256" /opt/files/BonitaCommunity-${BONITA_VERSION}.zip | sha256sum -c -
-# Wed, 24 Jun 2020 17:40:34 GMT
+# Tue, 07 Jul 2020 00:41:26 GMT
 VOLUME [/opt/bonita]
-# Fri, 03 Jul 2020 17:39:47 GMT
+# Tue, 07 Jul 2020 00:41:26 GMT
 COPY dir:7f0e6270bb2bea49c029cca8eb0e60f9f0c9c5d47fd807149e3e18c746693278 in /opt/files 
-# Fri, 03 Jul 2020 17:39:48 GMT
+# Tue, 07 Jul 2020 00:41:27 GMT
 COPY dir:173a816fed2c2b9f191c45b4238f2062102518ab7cf02e5e7c4ca6bd9caeb849 in /opt/templates 
-# Fri, 03 Jul 2020 17:39:49 GMT
+# Tue, 07 Jul 2020 00:41:28 GMT
 EXPOSE 8080
-# Fri, 03 Jul 2020 17:39:49 GMT
+# Tue, 07 Jul 2020 00:41:28 GMT
 CMD ["/opt/files/startup.sh"]
 ```
 
 -	Layers:
-	-	`sha256:2e8bea8b22f8f5a4fd5aa85019945dd8ae04f283a4ba2a7aeb4536fe2f1d1ec2`  
-		Last Modified: Tue, 26 May 2020 16:25:25 GMT  
-		Size: 23.7 MB (23721687 bytes)  
+	-	`sha256:68fe03cb170d6a5101858131ae1eac5393a4f018d70abfcd1348fd240ee0ccc5`  
+		Last Modified: Tue, 30 Jun 2020 16:25:30 GMT  
+		Size: 23.7 MB (23719365 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fc90876b9c9a7343ae432eaec7c8dc8859c1e84b6193da8d386815fde165a70e`  
-		Last Modified: Wed, 17 Jun 2020 01:44:48 GMT  
-		Size: 35.2 KB (35192 bytes)  
+	-	`sha256:18959295effbb87ec216a036a1821f8b7e183072faaa80a6d7f97aa14b51b2af`  
+		Last Modified: Mon, 06 Jul 2020 22:06:58 GMT  
+		Size: 35.2 KB (35189 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:27bfc658a5210a9f0c9cfcda5f504e720da9268e9f3f3bf48e3a9a7af360c959`  
-		Last Modified: Wed, 17 Jun 2020 01:44:49 GMT  
-		Size: 854.0 B  
+	-	`sha256:51118fb70ce38c0c2e667ecd5fc941590875e2fd9e55dd17c90073f085ba5970`  
+		Last Modified: Mon, 06 Jul 2020 22:06:58 GMT  
+		Size: 852.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1ef0f1b06b2142ff2bf35cc565f019ed9e4efe0d8f332825167538c2337bac8a`  
-		Last Modified: Wed, 17 Jun 2020 01:44:49 GMT  
+	-	`sha256:409a5d9eae931d5a3b5a3bcb840e11167c2d3d03ec22258cde67197babf908ed`  
+		Last Modified: Mon, 06 Jul 2020 22:06:58 GMT  
 		Size: 187.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ab2e7783d3202312a68d1bae9863062d6bfcad302b838d982a971b6d1eace7cf`  
-		Last Modified: Wed, 17 Jun 2020 02:44:30 GMT  
-		Size: 92.9 MB (92885966 bytes)  
+	-	`sha256:88202bff4b04a58aa9909279920477c5d8406ca6229efe7fe13727414f8643b0`  
+		Last Modified: Tue, 07 Jul 2020 00:42:09 GMT  
+		Size: 92.9 MB (92891499 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:18f7449c9a39dcb1672a84ad09440887b1968c4c7f83d49fe0ecbfa775c89ca9`  
-		Last Modified: Wed, 17 Jun 2020 02:44:04 GMT  
+	-	`sha256:fa6d85b404babb7155f454fdd1e4fcda3ee4fc61e6ca483f0734d7c1f7f89425`  
+		Last Modified: Tue, 07 Jul 2020 00:41:44 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:73da90b862c2b844579dc9210fe78f9026d832b17f0b9d594f703d8dacf603d7`  
-		Last Modified: Wed, 17 Jun 2020 02:44:03 GMT  
-		Size: 1.9 KB (1920 bytes)  
+	-	`sha256:e6f6e8713ad0e050faa8636e0133516c82dbf79c7dc668a18fb93f4b87d1e915`  
+		Last Modified: Tue, 07 Jul 2020 00:41:43 GMT  
+		Size: 1.9 KB (1917 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:832035663682d494bbcc67a3f9e4927458156bf6e392d821d11d63f4c6532f3c`  
-		Last Modified: Wed, 17 Jun 2020 02:44:02 GMT  
+	-	`sha256:c91b4518214ee90daf56d5ea809b97102b4f82b3ae3fd1b19378652d071b0bdb`  
+		Last Modified: Tue, 07 Jul 2020 00:41:43 GMT  
 		Size: 541.8 KB (541818 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:aee3b35a452661ddca4c2185aeaeaf603b1937d0b4115a8ed159e89b484d9029`  
-		Last Modified: Wed, 24 Jun 2020 17:41:00 GMT  
-		Size: 113.2 MB (113221612 bytes)  
+	-	`sha256:42cf608dea2cd5cb3c1de2da7dd296cdeb6a327b5a677cbc88e96ea884435c5e`  
+		Last Modified: Tue, 07 Jul 2020 00:42:42 GMT  
+		Size: 113.2 MB (113221614 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3693802575293a0aece91313aedab1a4c96463acb5c399ab24bf64eda2e15e6c`  
-		Last Modified: Fri, 03 Jul 2020 17:40:03 GMT  
-		Size: 7.6 KB (7632 bytes)  
+	-	`sha256:87855d6b89013d4530611dfc8baba57a6919f310d3f96bab45ebc115b83273a1`  
+		Last Modified: Tue, 07 Jul 2020 00:42:32 GMT  
+		Size: 7.6 KB (7627 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1103b7a50b8f307fffc3657789584c32b8df6e7097dcbf8a21981b7bd1309e12`  
-		Last Modified: Fri, 03 Jul 2020 17:40:03 GMT  
-		Size: 1.7 KB (1705 bytes)  
+	-	`sha256:f90ee0a7e114377ec2fd24cfbe20555daa158763c0bc73e69ee4e446dfba8454`  
+		Last Modified: Tue, 07 Jul 2020 00:42:33 GMT  
+		Size: 1.7 KB (1706 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `bonita:latest` - linux; ppc64le
