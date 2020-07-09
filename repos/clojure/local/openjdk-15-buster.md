@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:c53cee28eefe17f39d05363f21b39dbc873b00e97c0c0841f52df5b483352556`
-- Created: `2020-06-26T23:38:33.048133672Z`
-- Virtual Size: ~ 687.74 Mb  
+- Image ID: `sha256:ceb1fe573170e2a082dedef0b80198d38ba7be15673614cd63f46a1a97548169`
+- Created: `2020-07-07T23:25:24.559716589Z`
+- Virtual Size: ~ 689.10 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["lein","repl"]`
@@ -12,7 +12,7 @@
   - `PATH=/usr/java/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/`
   - `LANG=C.UTF-8`
   - `JAVA_HOME=/usr/java/openjdk-15`
-  - `JAVA_VERSION=15-ea+29`
+  - `JAVA_VERSION=15-ea+30`
   - `LEIN_VERSION=2.9.3`
   - `LEIN_INSTALL=/usr/local/bin/`
   - `LEIN_ROOT=1`
@@ -1021,18 +1021,10 @@ Other potentially useful URLs:
 Binary Packages:
 
 - `dirmngr=2.2.12-1+deb10u1`
-- `gnupg=2.2.12-1+deb10u1`
-- `gnupg-l10n=2.2.12-1+deb10u1`
-- `gnupg-utils=2.2.12-1+deb10u1`
-- `gpg=2.2.12-1+deb10u1`
-- `gpg-agent=2.2.12-1+deb10u1`
-- `gpg-wks-client=2.2.12-1+deb10u1`
-- `gpg-wks-server=2.2.12-1+deb10u1`
 - `gpgconf=2.2.12-1+deb10u1`
-- `gpgsm=2.2.12-1+deb10u1`
 - `gpgv=2.2.12-1+deb10u1`
 
-Licenses: (parsed from: `/usr/share/doc/dirmngr/copyright`, `/usr/share/doc/gnupg/copyright`, `/usr/share/doc/gnupg-l10n/copyright`, `/usr/share/doc/gnupg-utils/copyright`, `/usr/share/doc/gpg/copyright`, `/usr/share/doc/gpg-agent/copyright`, `/usr/share/doc/gpg-wks-client/copyright`, `/usr/share/doc/gpg-wks-server/copyright`, `/usr/share/doc/gpgconf/copyright`, `/usr/share/doc/gpgsm/copyright`, `/usr/share/doc/gpgv/copyright`)
+Licenses: (parsed from: `/usr/share/doc/dirmngr/copyright`, `/usr/share/doc/gpgconf/copyright`, `/usr/share/doc/gpgv/copyright`)
 
 - `BSD-3-clause`
 - `CC0-1.0`
@@ -2499,35 +2491,6 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/perl/5.28.1-6/ (for browsing the source)
 - https://sources.debian.net/src/perl/5.28.1-6/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/perl/5.28.1-6/ (for access to the source package after it no longer exists in the archive)
-
-### `dpkg` source package: `pinentry=1.1.0-2`
-
-Binary Packages:
-
-- `pinentry-curses=1.1.0-2`
-
-Licenses: (parsed from: `/usr/share/doc/pinentry-curses/copyright`)
-
-- `GPL-2`
-- `GPL-2+`
-- `LGPL-3`
-- `LGPL-3+`
-- `X11`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris pinentry=1.1.0-2
-'http://deb.debian.org/debian/pool/main/p/pinentry/pinentry_1.1.0-2.dsc' pinentry_1.1.0-2.dsc 2055 SHA256:a3f157d367217eb91581d9fc53f23205794c7572894497a04d4d91eb6d5aff06
-'http://deb.debian.org/debian/pool/main/p/pinentry/pinentry_1.1.0.orig.tar.bz2' pinentry_1.1.0.orig.tar.bz2 467702 SHA256:68076686fa724a290ea49cdf0d1c0c1500907d1b759a3bcbfbec0293e8f56570
-'http://deb.debian.org/debian/pool/main/p/pinentry/pinentry_1.1.0-2.debian.tar.xz' pinentry_1.1.0-2.debian.tar.xz 16480 SHA256:b09437607c63c620bb581fe14080e897b5fb8210d08611b18b751efead7776da
-```
-
-Other potentially useful URLs:
-
-- https://sources.debian.net/src/pinentry/1.1.0-2/ (for browsing the source)
-- https://sources.debian.net/src/pinentry/1.1.0-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/pinentry/1.1.0-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `procps=2:3.3.15-2`
 
