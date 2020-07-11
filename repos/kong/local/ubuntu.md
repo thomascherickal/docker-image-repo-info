@@ -1,10 +1,10 @@
-# `kong:2.0.4-ubuntu`
+# `kong:2.0.5-ubuntu`
 
 ## Docker Metadata
 
-- Image ID: `sha256:52318c270a779c2d2e695333c6f79efa3cb3fef73aa8f092891a6cccf9f830d8`
-- Created: `2020-07-07T00:17:55.792812943Z`
-- Virtual Size: ~ 279.50 Mb  
+- Image ID: `sha256:27e223e65e979ff78cfa8c47d2f9955807d5ec5653a465fc118d4528ec40cf8f`
+- Created: `2020-07-10T20:23:23.631573814Z`
+- Virtual Size: ~ 287.97 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -12,7 +12,7 @@
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `ASSET=ce`
-  - `KONG_VERSION=2.0.4`
+  - `KONG_VERSION=2.0.5`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -479,6 +479,25 @@ $ apt-get source -qq --print-uris e2fsprogs=1.42.13-1ubuntu1.2
 'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.42.13-1ubuntu1.2.debian.tar.xz' e2fsprogs_1.42.13-1ubuntu1.2.debian.tar.xz 72228 SHA256:a5fb8efee48f188172d74d2084257ebe47dee11c46110a1b1990db65d64760fe
 ```
 
+### `dpkg` source package: `expat=2.1.0-7ubuntu0.16.04.5`
+
+Binary Packages:
+
+- `libexpat1:amd64=2.1.0-7ubuntu0.16.04.5`
+
+**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
+If source is available (seen below), check the contents of `debian/copyright` within it.
+
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris expat=2.1.0-7ubuntu0.16.04.5
+'http://archive.ubuntu.com/ubuntu/pool/main/e/expat/expat_2.1.0-7ubuntu0.16.04.5.dsc' expat_2.1.0-7ubuntu0.16.04.5.dsc 2387 SHA256:39c54dc2f9fa64fe3d1b2d216e0446de8dc37d2656a5597a8b344070ce2310e2
+'http://archive.ubuntu.com/ubuntu/pool/main/e/expat/expat_2.1.0.orig.tar.gz' expat_2.1.0.orig.tar.gz 562616 SHA256:823705472f816df21c8f6aa026dd162b280806838bb55b3432b0fb1fcca7eb86
+'http://archive.ubuntu.com/ubuntu/pool/main/e/expat/expat_2.1.0-7ubuntu0.16.04.5.debian.tar.xz' expat_2.1.0-7ubuntu0.16.04.5.debian.tar.xz 23116 SHA256:f422e05965440e42c030904fc6605c39cb5477c114ac7b172427ce96d63e97e0
+```
+
 ### `dpkg` source package: `findutils=4.6.0+git+20160126-2`
 
 Binary Packages:
@@ -564,6 +583,43 @@ $ apt-get source -qq --print-uris gdbm=1.8.3-13.1
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gdbm/gdbm_1.8.3-13.1.dsc' gdbm_1.8.3-13.1.dsc 1830 SHA256:b1d8bef30edc491315c337930cbe2b61f44f55035adfc26ae945bab5ca57d5c9
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gdbm/gdbm_1.8.3.orig.tar.bz2' gdbm_1.8.3.orig.tar.bz2 172796 SHA256:1d5995b6e9e6be4ff62c8126d019f184a083dd8e6f75f6c74b9fe023b5b9440e
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gdbm/gdbm_1.8.3-13.1.debian.tar.xz' gdbm_1.8.3-13.1.debian.tar.xz 14748 SHA256:251401e1f5210226f384e936b1b7ea1df40119a918d9f3dbf48b2e51d4df8983
+```
+
+### `dpkg` source package: `git=1:2.7.4-0ubuntu1.9`
+
+Binary Packages:
+
+- `git=1:2.7.4-0ubuntu1.9`
+- `git-man=1:2.7.4-0ubuntu1.9`
+
+Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/copyright`)
+
+- `Apache-2.0`
+- `Artistic`
+- `Artistic-1`
+- `BSD-2-clause`
+- `Boost`
+- `EDL-1.0`
+- `Expat`
+- `GPL`
+- `GPL-1+`
+- `GPL-2`
+- `GPL-2+`
+- `ISC`
+- `LGPL-2`
+- `LGPL-2+`
+- `LGPL-2.1`
+- `LGPL-2.1+`
+- `dlmalloc`
+- `mingw-runtime`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris git=1:2.7.4-0ubuntu1.9
+'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.7.4-0ubuntu1.9.dsc' git_2.7.4-0ubuntu1.9.dsc 2897 SHA256:a7c83276d876be29656f08a3e1f6ef153c21f6556b31bb0abb9cbb15c0fd0b03
+'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.7.4.orig.tar.xz' git_2.7.4.orig.tar.xz 3909636 SHA256:dee574defbe05ec7356a0842ddbda51315926f2fa7e39c2539f2c3dcc52e457b
+'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.7.4-0ubuntu1.9.debian.tar.xz' git_2.7.4-0ubuntu1.9.debian.tar.xz 572052 SHA256:2ab39ce8a9d1d94a549be4d086e6b59ae2c4201bc022dd1368a38eebe98cdf24
 ```
 
 ### `dpkg` source package: `glibc=2.23-0ubuntu11`
@@ -821,11 +877,11 @@ $ apt-get source -qq --print-uris kmod=22-1ubuntu5.2
 'http://archive.ubuntu.com/ubuntu/pool/main/k/kmod/kmod_22-1ubuntu5.2.debian.tar.xz' kmod_22-1ubuntu5.2.debian.tar.xz 14524 SHA256:f8dd1134e6cff72a458e66d2e86ef413be07a29cc66c87d02544bb5c2037bfb7
 ```
 
-### `dpkg` source package: `kong=2.0.4`
+### `dpkg` source package: `kong=2.0.5`
 
 Binary Packages:
 
-- `kong=2.0.4`
+- `kong=2.0.5`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -878,6 +934,26 @@ $ apt-get source -qq --print-uris libcap2=1:2.24-12
 'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcap2/libcap2_2.24-12.dsc' libcap2_2.24-12.dsc 2211 SHA256:4db68746bd1fe7df6d29ae15c3605e4e1d0e44723580c05166144735c773ae14
 'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcap2/libcap2_2.24.orig.tar.xz' libcap2_2.24.orig.tar.xz 63264 SHA256:51cd1c568a2baf1e687573bd6117a94b07f33b46a05acaa50ee208792a830b79
 'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcap2/libcap2_2.24-12.debian.tar.xz' libcap2_2.24-12.debian.tar.xz 18704 SHA256:34be2e791ec96095cc0b405e532874e8c79aeb2125981ebc6896a0ad0b999cf2
+```
+
+### `dpkg` source package: `liberror-perl=0.17-1.2`
+
+Binary Packages:
+
+- `liberror-perl=0.17-1.2`
+
+Licenses: (parsed from: `/usr/share/doc/liberror-perl/copyright`)
+
+- `Artistic`
+- `GPL`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris liberror-perl=0.17-1.2
+'http://archive.ubuntu.com/ubuntu/pool/main/libe/liberror-perl/liberror-perl_0.17-1.2.dsc' liberror-perl_0.17-1.2.dsc 1825 SHA256:d024e770bb970061e338798934a1862b5dd51ca99f04f6cdab1c5a58b30b4eba
+'http://archive.ubuntu.com/ubuntu/pool/main/libe/liberror-perl/liberror-perl_0.17.orig.tar.gz' liberror-perl_0.17.orig.tar.gz 17266 SHA256:2e8157981a77e87d37d26d8b6b3183560dddc541b491b0b32fcda010730b257c
+'http://archive.ubuntu.com/ubuntu/pool/main/libe/liberror-perl/liberror-perl_0.17-1.2.diff.gz' liberror-perl_0.17-1.2.diff.gz 3645 SHA256:26664db91daa76fdf78be37196df02067b2283deae1b4ac766923d7ef08c3fb8
 ```
 
 ### `dpkg` source package: `libffi=3.2.1-4`

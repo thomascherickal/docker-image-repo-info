@@ -1,10 +1,10 @@
-# `kong:2.0.4-centos`
+# `kong:2.0.5-centos`
 
 ## Docker Metadata
 
-- Image ID: `sha256:33606e3edaee945be23e4e4e9a8afbc416da3421b00be80f861dec3045b53b2a`
-- Created: `2020-05-05T21:54:47.989909375Z`
-- Virtual Size: ~ 362.02 Mb  
+- Image ID: `sha256:27dbb73207530d4ccf1b6f737fcdacdcdea7ba16000aca132a0ecc85ee78affb`
+- Created: `2020-07-10T20:24:08.261301323Z`
+- Virtual Size: ~ 363.98 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -12,8 +12,8 @@
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `ASSET=ce`
-  - `KONG_VERSION=2.0.4`
-  - `KONG_SHA256=16a934a7bc2e182f00f03bd75b67f4bdb483150b3820d33cab9b0c95539dd353`
+  - `KONG_VERSION=2.0.5`
+  - `KONG_SHA256=e05340680de3541c4c940f54e64f00c90fb5137f6a8c71e413b815a411d74fc6`
 - Labels:
   - `maintainer=Kong <support@konghq.com>`
   - `org.label-schema.build-date=20200504`
@@ -476,6 +476,34 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/findutils-4.5.11-6.el7.src.rpm
 ```
 
+### `rpm` package: `fipscheck-1.4.1-6.el7.x86_64`
+
+Licenses (from `rpm --query`): BSD
+
+Source:
+
+```console
+$ yumdownloader --quiet --source --urls fipscheck-1.4.1-6.el7
+Enabling updates-source repository
+Enabling base-source repository
+Enabling extras-source repository
+http://vault.centos.org/centos/7/os/Source//SPackages/fipscheck-1.4.1-6.el7.src.rpm
+```
+
+### `rpm` package: `fipscheck-lib-1.4.1-6.el7.x86_64`
+
+Licenses (from `rpm --query`): BSD
+
+Source:
+
+```console
+$ yumdownloader --quiet --source --urls fipscheck-lib-1.4.1-6.el7
+Enabling updates-source repository
+Enabling base-source repository
+Enabling extras-source repository
+http://vault.centos.org/centos/7/os/Source//SPackages/fipscheck-1.4.1-6.el7.src.rpm
+```
+
 ### `rpm` package: `gawk-4.0.2-4.el7_3.1.x86_64`
 
 Licenses (from `rpm --query`): GPLv3+ and GPL and LGPLv3+ and LGPL and BSD
@@ -516,6 +544,20 @@ Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/geoipupdate-2.5.0-1.el7.src.rpm
+```
+
+### `rpm` package: `git-1.8.3.1-23.el7_8.x86_64`
+
+Licenses (from `rpm --query`): GPLv2
+
+Source:
+
+```console
+$ yumdownloader --quiet --source --urls git-1.8.3.1-23.el7_8
+Enabling updates-source repository
+Enabling base-source repository
+Enabling extras-source repository
+http://vault.centos.org/centos/7/updates/Source//SPackages/git-1.8.3.1-23.el7_8.src.rpm
 ```
 
 ### `rpm` package: `glib2-2.56.1-5.el7.x86_64`
@@ -776,7 +818,7 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/kmod-20-28.el7.src.rpm
 ```
 
-### `rpm` package: `kong-2.0.4-1.x86_64`
+### `rpm` package: `kong-2.0.5-1.x86_64`
 
 Licenses (from `rpm --query`): ASL 2.0
 
@@ -808,6 +850,20 @@ Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/krb5-1.15.1-46.el7.src.rpm
+```
+
+### `rpm` package: `less-458-9.el7.x86_64`
+
+Licenses (from `rpm --query`): GPLv3+
+
+Source:
+
+```console
+$ yumdownloader --quiet --source --urls less-458-9.el7
+Enabling updates-source repository
+Enabling base-source repository
+Enabling extras-source repository
+http://vault.centos.org/centos/7/os/Source//SPackages/less-458-9.el7.src.rpm
 ```
 
 ### `rpm` package: `libacl-2.2.51-15.el7.x86_64`
@@ -948,6 +1004,20 @@ Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/libdb-5.3.21-25.el7.src.rpm
+```
+
+### `rpm` package: `libedit-3.0-12.20121213cvs.el7.x86_64`
+
+Licenses (from `rpm --query`): BSD
+
+Source:
+
+```console
+$ yumdownloader --quiet --source --urls libedit-3.0-12.20121213cvs.el7
+Enabling updates-source repository
+Enabling base-source repository
+Enabling extras-source repository
+http://vault.centos.org/centos/7/os/Source//SPackages/libedit-3.0-12.20121213cvs.el7.src.rpm
 ```
 
 ### `rpm` package: `libffi-3.0.13-19.el7.x86_64`
@@ -1426,6 +1496,34 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/openldap-2.4.44-21.el7_6.src.rpm
 ```
 
+### `rpm` package: `openssh-7.4p1-21.el7.x86_64`
+
+Licenses (from `rpm --query`): BSD
+
+Source:
+
+```console
+$ yumdownloader --quiet --source --urls openssh-7.4p1-21.el7
+Enabling updates-source repository
+Enabling base-source repository
+Enabling extras-source repository
+http://vault.centos.org/centos/7/os/Source//SPackages/openssh-7.4p1-21.el7.src.rpm
+```
+
+### `rpm` package: `openssh-clients-7.4p1-21.el7.x86_64`
+
+Licenses (from `rpm --query`): BSD
+
+Source:
+
+```console
+$ yumdownloader --quiet --source --urls openssh-clients-7.4p1-21.el7
+Enabling updates-source repository
+Enabling base-source repository
+Enabling extras-source repository
+http://vault.centos.org/centos/7/os/Source//SPackages/openssh-7.4p1-21.el7.src.rpm
+```
+
 ### `rpm` package: `openssl-libs-1.0.2k-19.el7.x86_64`
 
 Licenses (from `rpm --query`): OpenSSL
@@ -1552,6 +1650,20 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/perl-Encode-2.51-7.el7.src.rpm
 ```
 
+### `rpm` package: `perl-Error-0.17020-2.el7.noarch`
+
+Licenses (from `rpm --query`): (GPL+ or Artistic) and MIT
+
+Source:
+
+```console
+$ yumdownloader --quiet --source --urls perl-Error-0.17020-2.el7.noarch
+Enabling updates-source repository
+Enabling base-source repository
+Enabling extras-source repository
+http://vault.centos.org/centos/7/os/Source//SPackages/perl-Error-0.17020-2.el7.src.rpm
+```
+
 ### `rpm` package: `perl-Exporter-5.68-3.el7.noarch`
 
 Licenses (from `rpm --query`): GPL+ or Artistic
@@ -1620,6 +1732,20 @@ Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/perl-Getopt-Long-2.40-3.el7.src.rpm
+```
+
+### `rpm` package: `perl-Git-1.8.3.1-23.el7_8.noarch`
+
+Licenses (from `rpm --query`): GPLv2
+
+Source:
+
+```console
+$ yumdownloader --quiet --source --urls perl-Git-1.8.3.1-23.el7_8.noarch
+Enabling updates-source repository
+Enabling base-source repository
+Enabling extras-source repository
+http://vault.centos.org/centos/7/updates/Source//SPackages/git-1.8.3.1-23.el7_8.src.rpm
 ```
 
 ### `rpm` package: `perl-HTTP-Tiny-0.033-3.el7.noarch`
@@ -1746,6 +1872,20 @@ Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/perl-Storable-2.45-3.el7.src.rpm
+```
+
+### `rpm` package: `perl-TermReadKey-2.30-20.el7.x86_64`
+
+Licenses (from `rpm --query`): (Copyright only) and (Artistic or GPL+)
+
+Source:
+
+```console
+$ yumdownloader --quiet --source --urls perl-TermReadKey-2.30-20.el7
+Enabling updates-source repository
+Enabling base-source repository
+Enabling extras-source repository
+http://vault.centos.org/centos/7/os/Source//SPackages/perl-TermReadKey-2.30-20.el7.src.rpm
 ```
 
 ### `rpm` package: `perl-Text-ParseWords-3.29-4.el7.noarch`
@@ -2208,6 +2348,20 @@ Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/rpm-4.11.3-43.el7.src.rpm
+```
+
+### `rpm` package: `rsync-3.1.2-10.el7.x86_64`
+
+Licenses (from `rpm --query`): GPLv3+
+
+Source:
+
+```console
+$ yumdownloader --quiet --source --urls rsync-3.1.2-10.el7
+Enabling updates-source repository
+Enabling base-source repository
+Enabling extras-source repository
+http://vault.centos.org/centos/7/os/Source//SPackages/rsync-3.1.2-10.el7.src.rpm
 ```
 
 ### `rpm` package: `sed-4.2.2-6.el7.x86_64`

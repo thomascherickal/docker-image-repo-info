@@ -1,10 +1,10 @@
-# `kong:2.0.4-alpine`
+# `kong:2.0.5-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:7a800e1cef72354e6e0f6549c23e47d8622aed285f35e7ec340cd19dce577d01`
-- Created: `2020-05-05T00:20:11.21058543Z`
-- Virtual Size: ~ 184.67 Mb  
+- Image ID: `sha256:89e4054b2cb34797c690f201afe00e0daf4803d60405d7aa3519e59abe92cc4d`
+- Created: `2020-07-10T20:22:21.081882369Z`
+- Virtual Size: ~ 145.52 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -12,8 +12,8 @@
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `ASSET=ce`
-  - `KONG_VERSION=2.0.4`
-  - `KONG_SHA256=457dd0172ae2de2e0b71ce625f78e06449faf38fd734dd6825eb7782d74cb77e`
+  - `KONG_VERSION=2.0.5`
+  - `KONG_SHA256=2e78dee0e695c238cde7e607e85c2e62e44422b57c626ea12822d15ed898769b`
 - Labels:
   - `maintainer=Kong <support@konghq.com>`
 
@@ -104,6 +104,23 @@ GPL-2.0-only
 
 ```
 
+### `apk` package: `ca-certificates`
+
+```console
+ca-certificates-20191127-r2 description:
+Common CA certificates PEM files from Mozilla
+
+ca-certificates-20191127-r2 webpage:
+https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
+
+ca-certificates-20191127-r2 installed size:
+737280
+
+ca-certificates-20191127-r2 license:
+MPL-2.0 GPL-2.0-or-later
+
+```
+
 ### `apk` package: `ca-certificates-cacert`
 
 ```console
@@ -118,6 +135,57 @@ ca-certificates-cacert-20191127-r1 installed size:
 
 ca-certificates-cacert-20191127-r1 license:
 MPL-2.0 GPL-2.0-or-later
+
+```
+
+### `apk` package: `expat`
+
+```console
+expat-2.2.9-r1 description:
+An XML Parser library written in C
+
+expat-2.2.9-r1 webpage:
+http://www.libexpat.org/
+
+expat-2.2.9-r1 installed size:
+188416
+
+expat-2.2.9-r1 license:
+MIT
+
+```
+
+### `apk` package: `git`
+
+```console
+git-2.24.3-r0 description:
+Distributed version control system
+
+git-2.24.3-r0 webpage:
+https://www.git-scm.com/
+
+git-2.24.3-r0 installed size:
+14610432
+
+git-2.24.3-r0 license:
+GPL-2.0-or-later
+
+```
+
+### `apk` package: `git-perl`
+
+```console
+git-perl-2.24.3-r0 description:
+Additional Git commands that requires perl
+
+git-perl-2.24.3-r0 webpage:
+https://www.git-scm.com/
+
+git-perl-2.24.3-r0 installed size:
+131072
+
+git-perl-2.24.3-r0 license:
+GPL-2.0-or-later
 
 ```
 
@@ -186,6 +254,23 @@ libcrypto1.1-1.1.1g-r0 installed size:
 
 libcrypto1.1-1.1.1g-r0 license:
 OpenSSL
+
+```
+
+### `apk` package: `libcurl`
+
+```console
+libcurl-7.67.0-r0 description:
+The multiprotocol file transfer library
+
+libcurl-7.67.0-r0 webpage:
+https://curl.haxx.se/
+
+libcurl-7.67.0-r0 installed size:
+458752
+
+libcurl-7.67.0-r0 license:
+MIT
 
 ```
 
@@ -308,6 +393,23 @@ MIT
 
 ```
 
+### `apk` package: `nghttp2-libs`
+
+```console
+nghttp2-libs-1.40.0-r1 description:
+Experimental HTTP/2 client, server and proxy (libraries)
+
+nghttp2-libs-1.40.0-r1 webpage:
+https://nghttp2.org
+
+nghttp2-libs-1.40.0-r1 installed size:
+159744
+
+nghttp2-libs-1.40.0-r1 license:
+MIT
+
+```
+
 ### `apk` package: `openssl`
 
 ```console
@@ -342,20 +444,71 @@ BSD-3-Clause
 
 ```
 
+### `apk` package: `pcre2`
+
+```console
+pcre2-10.34-r1 description:
+Perl-compatible regular expression library
+
+pcre2-10.34-r1 webpage:
+https://pcre.org/
+
+pcre2-10.34-r1 installed size:
+679936
+
+pcre2-10.34-r1 license:
+BSD-3-Clause
+
+```
+
 ### `apk` package: `perl`
 
 ```console
-perl-5.30.1-r0 description:
+perl-5.30.3-r0 description:
 Larry Wall's Practical Extraction and Report Language
 
-perl-5.30.1-r0 webpage:
+perl-5.30.3-r0 webpage:
 https://www.perl.org/
 
-perl-5.30.1-r0 installed size:
-38596608
+perl-5.30.3-r0 installed size:
+38625280
 
-perl-5.30.1-r0 license:
+perl-5.30.3-r0 license:
 Artistic GPL-2.0
+
+```
+
+### `apk` package: `perl-error`
+
+```console
+perl-error-0.17028-r0 description:
+Perl module error/exception handling in an OO-ish way
+
+perl-error-0.17028-r0 webpage:
+https://metacpan.org/release/Error
+
+perl-error-0.17028-r0 installed size:
+90112
+
+perl-error-0.17028-r0 license:
+GPL-1.0-or-later OR Artistic-1.0-Perl
+
+```
+
+### `apk` package: `perl-git`
+
+```console
+perl-git-2.24.3-r0 description:
+Perl interface to Git
+
+perl-git-2.24.3-r0 webpage:
+https://www.git-scm.com/
+
+perl-git-2.24.3-r0 installed size:
+155648
+
+perl-git-2.24.3-r0 license:
+GPL-2.0-or-later
 
 ```
 
