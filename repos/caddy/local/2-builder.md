@@ -2,15 +2,15 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:fae42fca94e0c95c78cd48a8f3406f0d7ac7109215f0f42ac1c985fafb5fef8b`
-- Created: `2020-07-01T00:20:01.36724371Z`
-- Virtual Size: ~ 854.40 Mb  
+- Image ID: `sha256:1fac412c11d24fd828ec634457e43ca5cf99bad8e5daa8f73d2b4ba84a353baa`
+- Created: `2020-07-14T18:50:48.176804487Z`
+- Virtual Size: ~ 854.92 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/sh"]`
 - Environment:
   - `PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `GOLANG_VERSION=1.14.4`
+  - `GOLANG_VERSION=1.14.5`
   - `GOPATH=/go`
   - `CADDY_SOURCE_VERSION=v2.1.1`
 
@@ -240,16 +240,16 @@ ISC
 ### `apk` package: `musl`
 
 ```console
-musl-1.1.24-r8 description:
+musl-1.1.24-r9 description:
 the musl c library (libc) implementation
 
-musl-1.1.24-r8 webpage:
+musl-1.1.24-r9 webpage:
 https://musl.libc.org/
 
-musl-1.1.24-r8 installed size:
+musl-1.1.24-r9 installed size:
 614400
 
-musl-1.1.24-r8 license:
+musl-1.1.24-r9 license:
 MIT
 
 ```
