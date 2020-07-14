@@ -865,20 +865,13 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 - `dlmalloc`
 - `mingw-runtime`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris git=1:2.27.0-1
-'http://deb.debian.org/debian/pool/main/g/git/git_2.27.0-1.dsc' git_2.27.0-1.dsc 2486 SHA256:817e610e84dbc432a53c0ae3f8c95192b00df79c6d14cad510adc0c888dc767a
-'http://deb.debian.org/debian/pool/main/g/git/git_2.27.0.orig.tar.xz' git_2.27.0.orig.tar.xz 6074636 SHA256:73ca9774d7fa226e1d87c1909401623f96dca6a044e583b9a762e84d7d1a73f9
-'http://deb.debian.org/debian/pool/main/g/git/git_2.27.0-1.debian.tar.xz' git_2.27.0-1.debian.tar.xz 651196 SHA256:b8449dcb27701abf05cb23ef6bc860e38ee20ff8fa278c15ac99d7659e74949d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/git/1:2.27.0-1/
 
-- https://sources.debian.net/src/git/1:2.27.0-1/ (for browsing the source)
-- https://sources.debian.net/src/git/1:2.27.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/git/1:2.27.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `glibc=2.30-8`
 

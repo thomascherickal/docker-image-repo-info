@@ -375,20 +375,13 @@ Licenses: (parsed from: `/usr/share/doc/binutils/copyright`, `/usr/share/doc/bin
 - `GPL`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris binutils=2.34-8
-'http://deb.debian.org/debian/pool/main/b/binutils/binutils_2.34-8.dsc' binutils_2.34-8.dsc 11129 SHA256:d8e5563a481fba68ee3f15c2bf0c6e68160aa74374614d04a01f87983e80269d
-'http://deb.debian.org/debian/pool/main/b/binutils/binutils_2.34.orig.tar.xz' binutils_2.34.orig.tar.xz 23144772 SHA256:bc79b3cf950e1601257c0056315b5aa2dc073ebec9c2dba292b6ff30eaeb0899
-'http://deb.debian.org/debian/pool/main/b/binutils/binutils_2.34-8.debian.tar.xz' binutils_2.34-8.debian.tar.xz 149160 SHA256:ff5e674734b9805461c451c6ef16be20be60567f728bcba598accdeba8d46b45
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/binutils/2.34-8/
 
-- https://sources.debian.net/src/binutils/2.34-8/ (for browsing the source)
-- https://sources.debian.net/src/binutils/2.34-8/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/binutils/2.34-8/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `brotli=1.0.7-6.1`
 
@@ -507,19 +500,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris cdebconf=0.252
-'http://deb.debian.org/debian/pool/main/c/cdebconf/cdebconf_0.252.dsc' cdebconf_0.252.dsc 2750 SHA256:f0f6d4434923445c165812f87f91c986dbc42592bdce2fc8bd562534a3bbbe14
-'http://deb.debian.org/debian/pool/main/c/cdebconf/cdebconf_0.252.tar.xz' cdebconf_0.252.tar.xz 275488 SHA256:ebc377a6d605c9a2e93e904fdee6e82707c56c6adc600a4e65939fbcb791bb2f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/cdebconf/0.252/
 
-- https://sources.debian.net/src/cdebconf/0.252/ (for browsing the source)
-- https://sources.debian.net/src/cdebconf/0.252/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/cdebconf/0.252/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `coreutils=8.30-3`
 
