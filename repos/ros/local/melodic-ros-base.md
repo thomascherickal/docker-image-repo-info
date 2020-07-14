@@ -3438,9 +3438,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris linux=4.15.0-109.110
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-109.110.dsc' linux_4.15.0-109.110.dsc 7057 SHA256:f562a746f733f75204a96eda6185d184ce84c1542d9085db593a237ef6b87475
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0.orig.tar.gz' linux_4.15.0.orig.tar.gz 157656459 SHA256:c33b8ba5c45a40b689979caa2421c4d933864cd70eb93c00eb69adf43e9a24fc
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-109.110.diff.gz' linux_4.15.0-109.110.diff.gz 9940757 SHA256:5768a336f00641ce4484b79b09c147e369118f356e2b050bc802665a76c86ee0
+'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-109.110.dsc' linux_4.15.0-109.110.dsc 7057 SHA256:f562a746f733f75204a96eda6185d184ce84c1542d9085db593a237ef6b87475
+'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0.orig.tar.gz' linux_4.15.0.orig.tar.gz 157656459 SHA256:c33b8ba5c45a40b689979caa2421c4d933864cd70eb93c00eb69adf43e9a24fc
+'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-109.110.diff.gz' linux_4.15.0-109.110.diff.gz 9940757 SHA256:5768a336f00641ce4484b79b09c147e369118f356e2b050bc802665a76c86ee0
 ```
 
 ### `dpkg` source package: `lksctp-tools=1.0.17+dfsg-2`
@@ -3687,14 +3687,9 @@ Licenses: (parsed from: `/usr/share/doc/libgl1-mesa-dri/copyright`, `/usr/share/
 - `MLAA`
 - `SGI`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mesa=19.2.8-0ubuntu0~18.04.3
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_19.2.8-0ubuntu0~18.04.3.dsc' mesa_19.2.8-0ubuntu0~18.04.3.dsc 5306 SHA256:ee0c2d52bc9e6db98477e7aeb9fff61b185e63787774439f557cba56bc243084
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_19.2.8.orig.tar.gz' mesa_19.2.8.orig.tar.gz 17662298 SHA256:49230604cc3f2847b29fce7481d57461f79902a766df9c48bcf53fb8d394b224
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_19.2.8-0ubuntu0~18.04.3.diff.gz' mesa_19.2.8-0ubuntu0~18.04.3.diff.gz 125216 SHA256:a7daf9875959d7322ce3544fcceeeacb99f3f31466228e92acf2c809f32c7aaf
-```
 
 ### `dpkg` source package: `mime-support=3.60ubuntu1`
 
