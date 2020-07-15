@@ -1,10 +1,10 @@
-# `friendica:2020.03-fpm`
+# `friendica:2020.07-fpm`
 
 ## Docker Metadata
 
-- Image ID: `sha256:881b56a78d3642f694268d1f5840148731b1cad6c4f58619cd81df7c89500554`
-- Created: `2020-07-10T05:18:28.288777758Z`
-- Virtual Size: ~ 530.61 Mb  
+- Image ID: `sha256:2146bef0c649215b3167f0d45c5f915d537013652c6efbd41e4cdbf2ee5b3a31`
+- Created: `2020-07-14T02:28:21.447120088Z`
+- Virtual Size: ~ 536.83 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -24,10 +24,8 @@
   - `PHP_SHA256=43292046f6684eb13acb637276d4aa1dd9f66b0b7045e6f1493bc90db389b888`
   - `PHP_MD5=`
   - `TINI_VERSION=v0.19.0`
-  - `FRIENDICA_VERSION=2020.03`
-  - `FRIENDICA_VERSION_YEAR=2020`
-  - `FRIENDICA_VERSION_MONTH=03`
-  - `FRIENDICA_ADDONS=2020.03`
+  - `FRIENDICA_VERSION=2020.07`
+  - `FRIENDICA_ADDONS=2020.07`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -2720,11 +2718,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/npth/1.3-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/npth/1.3-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openjpeg2=2.1.2-1.1+deb9u4`
+### `dpkg` source package: `openjpeg2=2.1.2-1.1+deb9u5`
 
 Binary Packages:
 
-- `libopenjp2-7:amd64=2.1.2-1.1+deb9u4`
+- `libopenjp2-7:amd64=2.1.2-1.1+deb9u5`
 
 Licenses: (parsed from: `/usr/share/doc/libopenjp2-7/copyright`)
 
@@ -2741,17 +2739,17 @@ Licenses: (parsed from: `/usr/share/doc/libopenjp2-7/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openjpeg2=2.1.2-1.1+deb9u4
-'http://deb.debian.org/debian/pool/main/o/openjpeg2/openjpeg2_2.1.2-1.1+deb9u4.dsc' openjpeg2_2.1.2-1.1+deb9u4.dsc 2623 SHA256:f3830f5cb00a22cc544d762bdc864e65e9393d040142ddd79b5d3d6169802968
-'http://deb.debian.org/debian/pool/main/o/openjpeg2/openjpeg2_2.1.2.orig.tar.gz' openjpeg2_2.1.2.orig.tar.gz 1987071 SHA256:4ce77b6ef538ef090d9bde1d5eeff8b3069ab56c4906f083475517c2c023dfa7
-'http://deb.debian.org/debian/pool/main/o/openjpeg2/openjpeg2_2.1.2-1.1+deb9u4.debian.tar.xz' openjpeg2_2.1.2-1.1+deb9u4.debian.tar.xz 26744 SHA256:18fd3d6617216bab817581a05e80317579eccef3f43c5f26da6f0fcf4db23d0a
+$ apt-get source -qq --print-uris openjpeg2=2.1.2-1.1+deb9u5
+'http://security.debian.org/debian-security/pool/updates/main/o/openjpeg2/openjpeg2_2.1.2-1.1+deb9u5.dsc' openjpeg2_2.1.2-1.1+deb9u5.dsc 2826 SHA256:79722e1f68fb5edac327a58a3713f120582a63053d12ba1f9b0c0db5ba3c4a12
+'http://security.debian.org/debian-security/pool/updates/main/o/openjpeg2/openjpeg2_2.1.2.orig.tar.gz' openjpeg2_2.1.2.orig.tar.gz 1987071 SHA256:4ce77b6ef538ef090d9bde1d5eeff8b3069ab56c4906f083475517c2c023dfa7
+'http://security.debian.org/debian-security/pool/updates/main/o/openjpeg2/openjpeg2_2.1.2-1.1+deb9u5.debian.tar.xz' openjpeg2_2.1.2-1.1+deb9u5.debian.tar.xz 28480 SHA256:b02f72dab29abddeb879d8e7272e8c670aabbb8b9aecee06607b608f397e9eeb
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/openjpeg2/2.1.2-1.1+deb9u4/ (for browsing the source)
-- https://sources.debian.net/src/openjpeg2/2.1.2-1.1+deb9u4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openjpeg2/2.1.2-1.1+deb9u4/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/openjpeg2/2.1.2-1.1+deb9u5/ (for browsing the source)
+- https://sources.debian.net/src/openjpeg2/2.1.2-1.1+deb9u5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openjpeg2/2.1.2-1.1+deb9u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openldap=2.4.44+dfsg-5+deb9u4`
 
