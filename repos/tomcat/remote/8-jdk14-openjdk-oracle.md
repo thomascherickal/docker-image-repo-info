@@ -1,7 +1,7 @@
 ## `tomcat:8-jdk14-openjdk-oracle`
 
 ```console
-$ docker pull tomcat@sha256:c2cf82df3d101415e43706b76e47bc09d30032a68431cdd65519956f28cc73ee
+$ docker pull tomcat@sha256:98c9ad03514fe627cb3b0bd8988662339e42480de37a73824db52cc677d88a56
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull tomcat@sha256:c2cf82df3d101415e43706b76e47bc09d30032a68431cdd65519
 ### `tomcat:8-jdk14-openjdk-oracle` - linux; amd64
 
 ```console
-$ docker pull tomcat@sha256:915f35bcc3220b13f550a091e9058af49e5665b76f12bcb2dff8475d57f3b4ee
+$ docker pull tomcat@sha256:e84047dd4b7b79c468ccea110312cc8c9ae756f2f49191ef30f05a5241a518d6
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **273.5 MB (273482902 bytes)**  
+-	Total Size: **273.4 MB (273422750 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:48f65d5aab5b8a3cbce3bedf1d7142021b53bd88a921ac9cd350f979eb98904d`
+-	Image ID: `sha256:b19660447eed1d0bdef986db00b0cb4488780bc41d44e3d787f8a32bbe7157cc`
 -	Default Command: `["catalina.sh","run"]`
 
 ```dockerfile
@@ -36,39 +36,39 @@ ENV LANG=en_US.UTF-8
 ENV JAVA_HOME=/usr/java/openjdk-14
 # Wed, 10 Jun 2020 18:40:21 GMT
 ENV PATH=/usr/java/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 10 Jun 2020 18:40:21 GMT
-ENV JAVA_VERSION=14.0.1
-# Mon, 22 Jun 2020 20:23:17 GMT
-RUN set -eux; 		objdump="$(command -v objdump)"; 	arch="$(objdump --file-headers "$objdump" | awk -F '[:,]+[[:space:]]+' '$1 == "architecture" { print $2 }')"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.1/664493ef4a6946b186ff29eb326336a2/7/GPL/openjdk-14.0.1_linux-x64_bin.tar.gz; 			downloadSha256=22ce248e0bd69f23028625bede9d1b3080935b68d011eaaf9e241f84d6b9c4cc; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		curl -fL -o /openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 */openjdk.tgz" | sha256sum -c -; 		mkdir -p "$JAVA_HOME"; 	tar --extract --file /openjdk.tgz --directory "$JAVA_HOME" --strip-components 1; 	rm /openjdk.tgz; 		ln -sfT "$JAVA_HOME" /usr/java/default; 	ln -sfT "$JAVA_HOME" /usr/java/latest; 	for bin in "$JAVA_HOME/bin/"*; do 		base="$(basename "$bin")"; 		[ ! -e "/usr/bin/$base" ]; 		alternatives --install "/usr/bin/$base" "$base" "$bin" 20000; 	done; 		java -Xshare:dump; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/pki/ca-trust/extracted/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		java --version; 	javac --version
-# Mon, 22 Jun 2020 20:23:17 GMT
+# Wed, 15 Jul 2020 01:20:31 GMT
+ENV JAVA_VERSION=14.0.2
+# Wed, 15 Jul 2020 01:21:00 GMT
+RUN set -eux; 		objdump="$(command -v objdump)"; 	arch="$(objdump --file-headers "$objdump" | awk -F '[:,]+[[:space:]]+' '$1 == "architecture" { print $2 }')"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		curl -fL -o /openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 */openjdk.tgz" | sha256sum -c -; 		mkdir -p "$JAVA_HOME"; 	tar --extract --file /openjdk.tgz --directory "$JAVA_HOME" --strip-components 1; 	rm /openjdk.tgz; 		ln -sfT "$JAVA_HOME" /usr/java/default; 	ln -sfT "$JAVA_HOME" /usr/java/latest; 	for bin in "$JAVA_HOME/bin/"*; do 		base="$(basename "$bin")"; 		[ ! -e "/usr/bin/$base" ]; 		alternatives --install "/usr/bin/$base" "$base" "$bin" 20000; 	done; 		java -Xshare:dump; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/pki/ca-trust/extracted/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		java --version; 	javac --version
+# Wed, 15 Jul 2020 01:21:01 GMT
 CMD ["jshell"]
-# Mon, 22 Jun 2020 21:12:40 GMT
+# Wed, 15 Jul 2020 02:03:58 GMT
 ENV CATALINA_HOME=/usr/local/tomcat
-# Mon, 22 Jun 2020 21:12:40 GMT
+# Wed, 15 Jul 2020 02:03:58 GMT
 ENV PATH=/usr/local/tomcat/bin:/usr/java/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Mon, 22 Jun 2020 21:12:41 GMT
+# Wed, 15 Jul 2020 02:03:59 GMT
 RUN mkdir -p "$CATALINA_HOME"
-# Mon, 22 Jun 2020 21:12:41 GMT
+# Wed, 15 Jul 2020 02:03:59 GMT
 WORKDIR /usr/local/tomcat
-# Mon, 22 Jun 2020 21:12:42 GMT
+# Wed, 15 Jul 2020 02:03:59 GMT
 ENV TOMCAT_NATIVE_LIBDIR=/usr/local/tomcat/native-jni-lib
-# Mon, 22 Jun 2020 21:12:42 GMT
+# Wed, 15 Jul 2020 02:03:59 GMT
 ENV LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib
-# Mon, 22 Jun 2020 21:16:21 GMT
+# Wed, 15 Jul 2020 02:10:09 GMT
 ENV GPG_KEYS=05AB33110949707C93A279E3D3EFE6B686867BA6 07E48665A34DCAFAE522E5E6266191C37C037D42 47309207D818FFD8DCD3F83F1931D684307A10A5 541FBE7D8F78B25E055DDEE13C370389288584E7 61B832AC2F1C5A90F0F9B00A1C506407564C17A3 713DA88BE50911535FE716F5208B0AB1D63011C7 79F7026C690BAA50B92CD8B66A3AD3F4F22C4FED 9BA44C2621385CB966EBA586F72C284D731FABEE A27677289986DB50844682F8ACB77FC2E86E29AC A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243 F3A04C595DB5B6A5F1ECA43E3B7BBB100D811BBE F7DA48BB64BCB84ECBA7EE6935CD23C10D498E23
-# Mon, 22 Jun 2020 21:16:21 GMT
+# Wed, 15 Jul 2020 02:10:09 GMT
 ENV TOMCAT_MAJOR=8
-# Mon, 06 Jul 2020 21:37:24 GMT
+# Wed, 15 Jul 2020 02:10:09 GMT
 ENV TOMCAT_VERSION=8.5.57
-# Mon, 06 Jul 2020 21:37:24 GMT
+# Wed, 15 Jul 2020 02:10:10 GMT
 ENV TOMCAT_SHA512=720de36bb3e40a4c67bdf0137b12ae0fd733aef772d81a4b8dab00f29924ddd17ecb2a7217b9551fc0ca51bd81d1da13ad63b6694c445e5c0e42dfa7f279ede1
-# Mon, 06 Jul 2020 21:38:22 GMT
+# Wed, 15 Jul 2020 02:11:05 GMT
 RUN set -eux; 		if ! command -v yumdb > /dev/null; then 		yum install -y yum-utils; 		yumdb set reason dep yum-utils; 	fi; 	if [ -f /etc/oracle-release ]; then 		yumdb set reason user filesystem; 	fi; 	_yum_install_temporary() { ( set -eu +x; 		local pkg todo=''; 		for pkg; do 			if ! rpm --query "$pkg" > /dev/null 2>&1; then 				todo="$todo $pkg"; 			fi; 		done; 		if [ -n "$todo" ]; then 			set -x; 			yum install -y $todo; 			yumdb set reason dep $todo; 		fi; 	) }; 	_yum_install_temporary gzip tar; 		ddist() { 		local f="$1"; shift; 		local distFile="$1"; shift; 		local mvnFile="${1:-}"; 		local success=; 		local distUrl=; 		for distUrl in 			"https://www.apache.org/dyn/closer.cgi?action=download&filename=$distFile" 			"https://www-us.apache.org/dist/$distFile" 			"https://www.apache.org/dist/$distFile" 			"https://archive.apache.org/dist/$distFile" 			${mvnFile:+"https://repo1.maven.org/maven2/org/apache/tomcat/tomcat/$mvnFile"} 		; do 			if curl -fL -o "$f" "$distUrl" && [ -s "$f" ]; then 				success=1; 				break; 			fi; 		done; 		[ -n "$success" ]; 	}; 		ddist 'tomcat.tar.gz' "tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz" "$TOMCAT_VERSION/tomcat-$TOMCAT_VERSION.tar.gz"; 	echo "$TOMCAT_SHA512 *tomcat.tar.gz" | sha512sum --strict --check -; 	ddist 'tomcat.tar.gz.asc' "tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz.asc" "$TOMCAT_VERSION/tomcat-$TOMCAT_VERSION.tar.gz.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	for key in $GPG_KEYS; do 		gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 	done; 	gpg --batch --verify tomcat.tar.gz.asc tomcat.tar.gz; 	tar -xf tomcat.tar.gz --strip-components=1; 	rm bin/*.bat; 	rm tomcat.tar.gz*; 	command -v gpgconf && gpgconf --kill all || :; 	rm -rf "$GNUPGHOME"; 		mv webapps webapps.dist; 	mkdir webapps; 		nativeBuildDir="$(mktemp -d)"; 	tar -xf bin/tomcat-native.tar.gz -C "$nativeBuildDir" --strip-components=1; 	_yum_install_temporary 		apr-devel 		gcc 		make 		openssl-devel 	; 	( 		export CATALINA_HOME="$PWD"; 		cd "$nativeBuildDir/native"; 		aprConfig="$(command -v apr-1-config)"; 		./configure 			--libdir="$TOMCAT_NATIVE_LIBDIR" 			--prefix="$CATALINA_HOME" 			--with-apr="$aprConfig" 			--with-java-home="$JAVA_HOME" 			--with-ssl=yes; 		make -j "$(nproc)"; 		make install; 	); 	rm -rf "$nativeBuildDir"; 	rm bin/tomcat-native.tar.gz; 		deps="$( 		find "$TOMCAT_NATIVE_LIBDIR" -type f -executable -exec ldd '{}' ';' 			| awk '/=>/ && $(NF-1) != "=>" { print $(NF-1) }' 			| sort -u 			| xargs -r rpm --query --whatprovides 			| sort -u 	)"; 	[ -z "$deps" ] || yumdb set reason user $deps; 		yum autoremove -y; 	yum clean all; 	rm -rf /var/cache/yum; 		find ./bin/ -name '*.sh' -exec sed -ri 's|^#!/bin/sh$|#!/usr/bin/env bash|' '{}' +; 		chmod -R +rX .; 	chmod 777 logs temp work
-# Mon, 06 Jul 2020 21:38:24 GMT
+# Wed, 15 Jul 2020 02:11:08 GMT
 RUN set -e 	&& nativeLines="$(catalina.sh configtest 2>&1)" 	&& nativeLines="$(echo "$nativeLines" | grep 'Apache Tomcat Native')" 	&& nativeLines="$(echo "$nativeLines" | sort -u)" 	&& if ! echo "$nativeLines" | grep -E 'INFO: Loaded( APR based)? Apache Tomcat Native library' >&2; then 		echo >&2 "$nativeLines"; 		exit 1; 	fi
-# Mon, 06 Jul 2020 21:38:24 GMT
+# Wed, 15 Jul 2020 02:11:08 GMT
 EXPOSE 8080
-# Mon, 06 Jul 2020 21:38:25 GMT
+# Wed, 15 Jul 2020 02:11:08 GMT
 CMD ["catalina.sh" "run"]
 ```
 
@@ -81,19 +81,19 @@ CMD ["catalina.sh" "run"]
 		Last Modified: Wed, 10 Jun 2020 18:42:25 GMT  
 		Size: 14.8 MB (14760261 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:82415e630b3538e083d5ce5e9a20e5e55d7878e9daa01efd09fbaba620a989b8`  
-		Last Modified: Mon, 22 Jun 2020 20:27:41 GMT  
-		Size: 199.2 MB (199153257 bytes)  
+	-	`sha256:1cba22676e6a049ebc5758d244aea2a3c5fbfa691047ccbdafb7a90e99f747f7`  
+		Last Modified: Wed, 15 Jul 2020 01:23:51 GMT  
+		Size: 199.1 MB (199093174 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1b6512a263723d6c5c7ff549d3758ce6026fb62b47c78bb2ec1d9233ecf15003`  
-		Last Modified: Mon, 22 Jun 2020 21:19:17 GMT  
-		Size: 136.0 B  
+	-	`sha256:94a28ffecf056d370bec0fdbabe040ceefdc1c08fad0018e3d0ed10eaffbe16d`  
+		Last Modified: Wed, 15 Jul 2020 02:14:16 GMT  
+		Size: 137.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e4c70d2f6dabdbe8465aab7dae5178f86e0e5ed79f6fad145684c8d81e26f98b`  
-		Last Modified: Mon, 06 Jul 2020 21:54:18 GMT  
-		Size: 16.1 MB (16111652 bytes)  
+	-	`sha256:d5336c0828c28316a4d92e8d6027150d0441ee7ad52ad8b0a1d90cb566053d0f`  
+		Last Modified: Wed, 15 Jul 2020 02:15:25 GMT  
+		Size: 16.1 MB (16111582 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4e053cf191eb9e464c80dd6cc8330e3e1abe43e22b6d4337c0b218216e43ccf1`  
-		Last Modified: Mon, 06 Jul 2020 21:54:17 GMT  
+	-	`sha256:c0c1c2bc059f04a4dfddfab8d7ca6f1f37a6df31f58ac42790b1f7ac17d5c12e`  
+		Last Modified: Wed, 15 Jul 2020 02:15:22 GMT  
 		Size: 130.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
