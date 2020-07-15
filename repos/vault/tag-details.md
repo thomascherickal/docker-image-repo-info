@@ -4,6 +4,7 @@
 
 -	[`vault:1.3.7`](#vault137)
 -	[`vault:1.4.3`](#vault143)
+-	[`vault:1.5.0-rc`](#vault150-rc)
 -	[`vault:latest`](#vaultlatest)
 
 ## `vault:1.3.7`
@@ -559,6 +560,10 @@ CMD ["server" "-dev"]
 		Last Modified: Fri, 03 Jul 2020 17:39:07 GMT  
 		Size: 1.8 KB (1820 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `vault:1.5.0-rc`
+
+**does not exist** (yet?)
 
 ## `vault:latest`
 
