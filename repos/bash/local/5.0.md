@@ -1,10 +1,10 @@
-# `bash:5.0.17`
+# `bash:5.0.18`
 
 ## Docker Metadata
 
-- Image ID: `sha256:0980cb958276600244536e40e2c77cddecd1e0761b59a32da9e0d5d002133166`
-- Created: `2020-05-30T00:21:17.578348608Z`
-- Virtual Size: ~ 13.15 Mb  
+- Image ID: `sha256:ec37a17ac30dc6bee79c057bdecb8c720191b21aa14041a444717d5c0b9eecf5`
+- Created: `2020-07-14T02:21:13.91725051Z`
+- Virtual Size: ~ 13.75 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -14,7 +14,7 @@
   - `_BASH_GPG_KEY=7C0135FB088AAF6C66C650B9BB5869F064EA74AB`
   - `_BASH_VERSION=5.0`
   - `_BASH_PATCH_LEVEL=0`
-  - `_BASH_LATEST_PATCH=17`
+  - `_BASH_LATEST_PATCH=18`
 
 ## `apk` (`.apk`-based packages)
 
@@ -174,16 +174,16 @@ ISC
 ### `apk` package: `musl`
 
 ```console
-musl-1.1.24-r8 description:
+musl-1.1.24-r9 description:
 the musl c library (libc) implementation
 
-musl-1.1.24-r8 webpage:
+musl-1.1.24-r9 webpage:
 https://musl.libc.org/
 
-musl-1.1.24-r8 installed size:
+musl-1.1.24-r9 installed size:
 614400
 
-musl-1.1.24-r8 license:
+musl-1.1.24-r9 license:
 MIT
 
 ```
