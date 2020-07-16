@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:1014a07ba74bcc942dca83bcc6baafc76d8a8fd5b1ee4033d427bba4b619df7b`
-- Created: `2020-06-27T00:25:07.215710562Z`
+- Image ID: `sha256:f97672ab976779993889dccfabb5b3acf57f8b6e114b377087db27c43363ec4a`
+- Created: `2020-07-15T01:26:03.760455566Z`
 - Virtual Size: ~ 609.82 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -22,7 +22,7 @@
   - `HOME=/home/redmine`
   - `REDMINE_VERSION=4.1.1`
   - `REDMINE_DOWNLOAD_MD5=a15a25dec7b866e213bbd4b041f05f17`
-  - `PASSENGER_VERSION=6.0.5`
+  - `PASSENGER_VERSION=6.0.6`
   - `PASSENGER_PID_FILE=tmp/pids/server.pid`
 
 ## `dpkg` (`.deb`-based packages)
