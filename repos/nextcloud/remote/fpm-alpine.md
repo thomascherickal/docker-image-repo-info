@@ -1,7 +1,7 @@
 ## `nextcloud:fpm-alpine`
 
 ```console
-$ docker pull nextcloud@sha256:e04d16b33159122b803cb85449c61f0fa2630b18ae5fe1f357dcbebff6cb49c9
+$ docker pull nextcloud@sha256:b7068fe900040276272ce5b002da9c9d09248254b8564fe12c122a6cfafbd420
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -17,14 +17,14 @@ $ docker pull nextcloud@sha256:e04d16b33159122b803cb85449c61f0fa2630b18ae5fe1f35
 ### `nextcloud:fpm-alpine` - linux; amd64
 
 ```console
-$ docker pull nextcloud@sha256:1a315c23822b988ea00a54845d218c0f6fca03bd6457fbc0ed57b5069f489db3
+$ docker pull nextcloud@sha256:92365a2d88b18908993bfa13aa1c0c6015cae579d70b893c912a53b1ce922ebf
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **154.0 MB (153960688 bytes)**  
+-	Total Size: **154.5 MB (154490159 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7d58da01650d56406f55f53631cb837533cf7bf696a1ba6f4032dcbd83d0d698`
+-	Image ID: `sha256:e06310c786e53f92b14c890694f97f8db1d90f71866ff2d02441a7bbc16b87c4`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -89,17 +89,17 @@ RUN set -ex;         apk add --no-cache --virtual .build-deps         $PHPIZE_DE
 RUN {         echo 'opcache.enable=1';         echo 'opcache.interned_strings_buffer=8';         echo 'opcache.max_accelerated_files=10000';         echo 'opcache.memory_consumption=128';         echo 'opcache.save_comments=1';         echo 'opcache.revalidate_freq=1';     } > /usr/local/etc/php/conf.d/opcache-recommended.ini;         echo 'apc.enable_cli=1' >> /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini;         echo 'memory_limit=512M' > /usr/local/etc/php/conf.d/memory-limit.ini;         mkdir /var/www/data;     chown -R www-data:root /var/www;     chmod -R g=u /var/www
 # Wed, 15 Jul 2020 23:35:12 GMT
 VOLUME [/var/www/html]
-# Wed, 15 Jul 2020 23:39:48 GMT
-ENV NEXTCLOUD_VERSION=19.0.0
-# Wed, 15 Jul 2020 23:40:15 GMT
+# Thu, 16 Jul 2020 22:30:33 GMT
+ENV NEXTCLOUD_VERSION=19.0.1
+# Thu, 16 Jul 2020 22:31:01 GMT
 RUN set -ex;     apk add --no-cache --virtual .fetch-deps         bzip2         gnupg     ;         curl -fsSL -o nextcloud.tar.bz2         "https://download.nextcloud.com/server/releases/nextcloud-${NEXTCLOUD_VERSION}.tar.bz2";     curl -fsSL -o nextcloud.tar.bz2.asc         "https://download.nextcloud.com/server/releases/nextcloud-${NEXTCLOUD_VERSION}.tar.bz2.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 28806A878AE423A28372792ED75899B9A724937A;     gpg --batch --verify nextcloud.tar.bz2.asc nextcloud.tar.bz2;     tar -xjf nextcloud.tar.bz2 -C /usr/src/;     gpgconf --kill all;     rm nextcloud.tar.bz2.asc nextcloud.tar.bz2;     rm -rf "$GNUPGHOME" /usr/src/nextcloud/updater;     mkdir -p /usr/src/nextcloud/data;     mkdir -p /usr/src/nextcloud/custom_apps;     chmod +x /usr/src/nextcloud/occ;     apk del .fetch-deps
-# Wed, 15 Jul 2020 23:40:16 GMT
+# Thu, 16 Jul 2020 22:31:02 GMT
 COPY multi:7396b0dc331ca301e37b57c4af539d58e09521ec7c723e0739e6eca71f90ffb3 in / 
-# Wed, 15 Jul 2020 23:40:16 GMT
+# Thu, 16 Jul 2020 22:31:02 GMT
 COPY multi:0f9299c697c03625557426785fb6ad8cae5e661ea8ceedf25eb083ff586c1e00 in /usr/src/nextcloud/config/ 
-# Wed, 15 Jul 2020 23:40:17 GMT
+# Thu, 16 Jul 2020 22:31:02 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Wed, 15 Jul 2020 23:40:17 GMT
+# Thu, 16 Jul 2020 22:31:03 GMT
 CMD ["php-fpm"]
 ```
 
@@ -156,30 +156,30 @@ CMD ["php-fpm"]
 		Last Modified: Wed, 15 Jul 2020 23:44:55 GMT  
 		Size: 501.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8d1799a7c7caa95ea6974c04ebc55c303a131247ebe25fb57b2acec7faaf4bad`  
-		Last Modified: Wed, 15 Jul 2020 23:46:41 GMT  
-		Size: 98.1 MB (98081933 bytes)  
+	-	`sha256:8ae82ae4e2a8ab22073ed17ee3e99a571e539381cc8320c536ab9cfefd216d93`  
+		Last Modified: Thu, 16 Jul 2020 22:34:44 GMT  
+		Size: 98.6 MB (98611403 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:39fb2469535846ef0eff07521fe9720638ed8ef8b387ef8c69e7f6cb4cc519e4`  
-		Last Modified: Wed, 15 Jul 2020 23:46:21 GMT  
-		Size: 2.5 KB (2524 bytes)  
+	-	`sha256:f9ab373d0a22975410da26104bdbbe7be427174e57f80e7afaf0bf515677212f`  
+		Last Modified: Thu, 16 Jul 2020 22:34:28 GMT  
+		Size: 2.5 KB (2523 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:248e9cc175475b321f8f1f2c3ec43e3dba697f2e1b7e7416b0403267f2eb4a58`  
-		Last Modified: Wed, 15 Jul 2020 23:46:21 GMT  
-		Size: 1.3 KB (1328 bytes)  
+	-	`sha256:f65b7ba2f923de6f17c8c301b0431b87798bc6b54fae671808debc6310bbdabc`  
+		Last Modified: Thu, 16 Jul 2020 22:34:29 GMT  
+		Size: 1.3 KB (1330 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `nextcloud:fpm-alpine` - linux; arm variant v6
 
 ```console
-$ docker pull nextcloud@sha256:bc49f7266e96cfb033477e4ef1f5c87cfd7a56efbebb1d9e34bcf74578c07900
+$ docker pull nextcloud@sha256:9a73632922baaf73c836aafccbbd2b56420ab91a8df36d94277386a268490fee
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **151.9 MB (151885213 bytes)**  
+-	Total Size: **152.4 MB (152414217 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a263964d11ec58e3af4ea19462c747aa59e8b5e32471a80c3ddcf290f1fe3b50`
+-	Image ID: `sha256:6ebde59b267e18b89ee011031e8ab08a65fb597d408ec1be273024e99ccc88a8`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -244,17 +244,17 @@ RUN set -ex;         apk add --no-cache --virtual .build-deps         $PHPIZE_DE
 RUN {         echo 'opcache.enable=1';         echo 'opcache.interned_strings_buffer=8';         echo 'opcache.max_accelerated_files=10000';         echo 'opcache.memory_consumption=128';         echo 'opcache.save_comments=1';         echo 'opcache.revalidate_freq=1';     } > /usr/local/etc/php/conf.d/opcache-recommended.ini;         echo 'apc.enable_cli=1' >> /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini;         echo 'memory_limit=512M' > /usr/local/etc/php/conf.d/memory-limit.ini;         mkdir /var/www/data;     chown -R www-data:root /var/www;     chmod -R g=u /var/www
 # Wed, 15 Jul 2020 22:58:12 GMT
 VOLUME [/var/www/html]
-# Wed, 15 Jul 2020 22:59:27 GMT
-ENV NEXTCLOUD_VERSION=19.0.0
-# Wed, 15 Jul 2020 23:00:12 GMT
+# Thu, 16 Jul 2020 22:01:13 GMT
+ENV NEXTCLOUD_VERSION=19.0.1
+# Thu, 16 Jul 2020 22:02:07 GMT
 RUN set -ex;     apk add --no-cache --virtual .fetch-deps         bzip2         gnupg     ;         curl -fsSL -o nextcloud.tar.bz2         "https://download.nextcloud.com/server/releases/nextcloud-${NEXTCLOUD_VERSION}.tar.bz2";     curl -fsSL -o nextcloud.tar.bz2.asc         "https://download.nextcloud.com/server/releases/nextcloud-${NEXTCLOUD_VERSION}.tar.bz2.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 28806A878AE423A28372792ED75899B9A724937A;     gpg --batch --verify nextcloud.tar.bz2.asc nextcloud.tar.bz2;     tar -xjf nextcloud.tar.bz2 -C /usr/src/;     gpgconf --kill all;     rm nextcloud.tar.bz2.asc nextcloud.tar.bz2;     rm -rf "$GNUPGHOME" /usr/src/nextcloud/updater;     mkdir -p /usr/src/nextcloud/data;     mkdir -p /usr/src/nextcloud/custom_apps;     chmod +x /usr/src/nextcloud/occ;     apk del .fetch-deps
-# Wed, 15 Jul 2020 23:00:14 GMT
+# Thu, 16 Jul 2020 22:02:09 GMT
 COPY multi:7396b0dc331ca301e37b57c4af539d58e09521ec7c723e0739e6eca71f90ffb3 in / 
-# Wed, 15 Jul 2020 23:00:17 GMT
+# Thu, 16 Jul 2020 22:02:13 GMT
 COPY multi:0f9299c697c03625557426785fb6ad8cae5e661ea8ceedf25eb083ff586c1e00 in /usr/src/nextcloud/config/ 
-# Wed, 15 Jul 2020 23:00:18 GMT
+# Thu, 16 Jul 2020 22:02:15 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Wed, 15 Jul 2020 23:00:20 GMT
+# Thu, 16 Jul 2020 22:02:16 GMT
 CMD ["php-fpm"]
 ```
 
@@ -311,30 +311,30 @@ CMD ["php-fpm"]
 		Last Modified: Wed, 15 Jul 2020 23:02:20 GMT  
 		Size: 531.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:64fb358c5399a238408f4dbf735e48e20d22a5d9c9e6cf9027ee03ee1353c67c`  
-		Last Modified: Wed, 15 Jul 2020 23:03:51 GMT  
-		Size: 98.1 MB (98082048 bytes)  
+	-	`sha256:4341a60dd29da9e2431b0d2c5641d33c45f1135268ace17c6e912d0632f95434`  
+		Last Modified: Thu, 16 Jul 2020 22:04:42 GMT  
+		Size: 98.6 MB (98611050 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:41e5c6e61f2d78f3f764130664ca9b2cc83972130bd18351e989be8a7ba85f70`  
-		Last Modified: Wed, 15 Jul 2020 23:03:13 GMT  
-		Size: 2.5 KB (2523 bytes)  
+	-	`sha256:9ed2bedaa937bb17d073c2b22b8e703d4a27156b5fb6733b7d10f072944e014f`  
+		Last Modified: Thu, 16 Jul 2020 22:04:06 GMT  
+		Size: 2.5 KB (2524 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7823e549ce80fcb26628120e761a3baf2b4c78210205eaaa7b19965ab96ab67b`  
-		Last Modified: Wed, 15 Jul 2020 23:03:13 GMT  
-		Size: 1.3 KB (1330 bytes)  
+	-	`sha256:5be16d08af528f1a04491f93aeda355d864aef8c12970804750f96457410aa20`  
+		Last Modified: Thu, 16 Jul 2020 22:04:06 GMT  
+		Size: 1.3 KB (1331 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `nextcloud:fpm-alpine` - linux; arm variant v7
 
 ```console
-$ docker pull nextcloud@sha256:3da81791cc33d3619414a0176ef09f1a175464bf68052f98fb55e78a64585114
+$ docker pull nextcloud@sha256:3326d24bafff30da3d479a3f31f77429f4d8847e74b714be0d5af1362160389f
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **150.1 MB (150149374 bytes)**  
+-	Total Size: **150.7 MB (150678077 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:323daa8e8003d198ac60c45da7de623530299c2e2dcb1713559c21b2f5820d41`
+-	Image ID: `sha256:2270060bbffa9ddc00bcc4486c1b242fda48bd9381c7fa1b0fd404d422c0601f`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -399,17 +399,17 @@ RUN set -ex;         apk add --no-cache --virtual .build-deps         $PHPIZE_DE
 RUN {         echo 'opcache.enable=1';         echo 'opcache.interned_strings_buffer=8';         echo 'opcache.max_accelerated_files=10000';         echo 'opcache.memory_consumption=128';         echo 'opcache.save_comments=1';         echo 'opcache.revalidate_freq=1';     } > /usr/local/etc/php/conf.d/opcache-recommended.ini;         echo 'apc.enable_cli=1' >> /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini;         echo 'memory_limit=512M' > /usr/local/etc/php/conf.d/memory-limit.ini;         mkdir /var/www/data;     chown -R www-data:root /var/www;     chmod -R g=u /var/www
 # Wed, 15 Jul 2020 23:18:45 GMT
 VOLUME [/var/www/html]
-# Wed, 15 Jul 2020 23:27:33 GMT
-ENV NEXTCLOUD_VERSION=19.0.0
-# Wed, 15 Jul 2020 23:28:16 GMT
+# Thu, 16 Jul 2020 22:21:26 GMT
+ENV NEXTCLOUD_VERSION=19.0.1
+# Thu, 16 Jul 2020 22:22:08 GMT
 RUN set -ex;     apk add --no-cache --virtual .fetch-deps         bzip2         gnupg     ;         curl -fsSL -o nextcloud.tar.bz2         "https://download.nextcloud.com/server/releases/nextcloud-${NEXTCLOUD_VERSION}.tar.bz2";     curl -fsSL -o nextcloud.tar.bz2.asc         "https://download.nextcloud.com/server/releases/nextcloud-${NEXTCLOUD_VERSION}.tar.bz2.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 28806A878AE423A28372792ED75899B9A724937A;     gpg --batch --verify nextcloud.tar.bz2.asc nextcloud.tar.bz2;     tar -xjf nextcloud.tar.bz2 -C /usr/src/;     gpgconf --kill all;     rm nextcloud.tar.bz2.asc nextcloud.tar.bz2;     rm -rf "$GNUPGHOME" /usr/src/nextcloud/updater;     mkdir -p /usr/src/nextcloud/data;     mkdir -p /usr/src/nextcloud/custom_apps;     chmod +x /usr/src/nextcloud/occ;     apk del .fetch-deps
-# Wed, 15 Jul 2020 23:28:22 GMT
+# Thu, 16 Jul 2020 22:22:14 GMT
 COPY multi:7396b0dc331ca301e37b57c4af539d58e09521ec7c723e0739e6eca71f90ffb3 in / 
-# Wed, 15 Jul 2020 23:28:24 GMT
+# Thu, 16 Jul 2020 22:22:16 GMT
 COPY multi:0f9299c697c03625557426785fb6ad8cae5e661ea8ceedf25eb083ff586c1e00 in /usr/src/nextcloud/config/ 
-# Wed, 15 Jul 2020 23:28:25 GMT
+# Thu, 16 Jul 2020 22:22:16 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Wed, 15 Jul 2020 23:28:27 GMT
+# Thu, 16 Jul 2020 22:22:17 GMT
 CMD ["php-fpm"]
 ```
 
@@ -466,30 +466,30 @@ CMD ["php-fpm"]
 		Last Modified: Wed, 15 Jul 2020 23:36:29 GMT  
 		Size: 535.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4fb2edbb2dabcc817abffc0559445778db8794ce95e117fa1aa5ba7e4f2d4ee9`  
-		Last Modified: Wed, 15 Jul 2020 23:39:23 GMT  
-		Size: 98.1 MB (98082143 bytes)  
+	-	`sha256:ba2cfe7ac45c6d99456a3e8a23d84cb1a81d5a3d4a344e1a4407b330f9c7c158`  
+		Last Modified: Thu, 16 Jul 2020 22:29:20 GMT  
+		Size: 98.6 MB (98610845 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:211cf7a52ac8ff136b23b494822f8d385eb06acdda17b655610ae7cfd1090e3f`  
-		Last Modified: Wed, 15 Jul 2020 23:38:47 GMT  
-		Size: 2.5 KB (2525 bytes)  
+	-	`sha256:46fa20d9d1f3fe0f040c2793cc10451a83400cd4ee49e158f6f293e7a7e3dd71`  
+		Last Modified: Thu, 16 Jul 2020 22:28:48 GMT  
+		Size: 2.5 KB (2523 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2c7bfd8a7e02abcf41ad633a5ccada8141830cf0f96f348528ed9985cc40d08e`  
-		Last Modified: Wed, 15 Jul 2020 23:38:47 GMT  
-		Size: 1.3 KB (1331 bytes)  
+	-	`sha256:5f4682a22fcf349da7af5ce3f4bc1002d58902bba403be2123ed41137953aece`  
+		Last Modified: Thu, 16 Jul 2020 22:28:48 GMT  
+		Size: 1.3 KB (1334 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `nextcloud:fpm-alpine` - linux; arm64 variant v8
 
 ```console
-$ docker pull nextcloud@sha256:a25b36b16fc0094e48fa4d1e442ddc58c0e7607299afccd805f053bf00dd48d2
+$ docker pull nextcloud@sha256:d407fa98bf21938c7871d26ee78f2f1e313531a45d5e7273dbbc5eab8bcfbec8
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **153.5 MB (153519988 bytes)**  
+-	Total Size: **154.0 MB (154049192 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5478da64910eaa5b93b552a89051ea2f5a601014afc6832e02b3e1f6deadce3f`
+-	Image ID: `sha256:b0396d350ff1dd233f9a9fb9bba633e962f6f69cf5ea1f2652a8ca96d1899f8e`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -554,17 +554,17 @@ RUN set -ex;         apk add --no-cache --virtual .build-deps         $PHPIZE_DE
 RUN {         echo 'opcache.enable=1';         echo 'opcache.interned_strings_buffer=8';         echo 'opcache.max_accelerated_files=10000';         echo 'opcache.memory_consumption=128';         echo 'opcache.save_comments=1';         echo 'opcache.revalidate_freq=1';     } > /usr/local/etc/php/conf.d/opcache-recommended.ini;         echo 'apc.enable_cli=1' >> /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini;         echo 'memory_limit=512M' > /usr/local/etc/php/conf.d/memory-limit.ini;         mkdir /var/www/data;     chown -R www-data:root /var/www;     chmod -R g=u /var/www
 # Wed, 15 Jul 2020 23:01:33 GMT
 VOLUME [/var/www/html]
-# Wed, 15 Jul 2020 23:11:31 GMT
-ENV NEXTCLOUD_VERSION=19.0.0
-# Wed, 15 Jul 2020 23:12:09 GMT
+# Thu, 16 Jul 2020 22:03:51 GMT
+ENV NEXTCLOUD_VERSION=19.0.1
+# Thu, 16 Jul 2020 22:04:29 GMT
 RUN set -ex;     apk add --no-cache --virtual .fetch-deps         bzip2         gnupg     ;         curl -fsSL -o nextcloud.tar.bz2         "https://download.nextcloud.com/server/releases/nextcloud-${NEXTCLOUD_VERSION}.tar.bz2";     curl -fsSL -o nextcloud.tar.bz2.asc         "https://download.nextcloud.com/server/releases/nextcloud-${NEXTCLOUD_VERSION}.tar.bz2.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 28806A878AE423A28372792ED75899B9A724937A;     gpg --batch --verify nextcloud.tar.bz2.asc nextcloud.tar.bz2;     tar -xjf nextcloud.tar.bz2 -C /usr/src/;     gpgconf --kill all;     rm nextcloud.tar.bz2.asc nextcloud.tar.bz2;     rm -rf "$GNUPGHOME" /usr/src/nextcloud/updater;     mkdir -p /usr/src/nextcloud/data;     mkdir -p /usr/src/nextcloud/custom_apps;     chmod +x /usr/src/nextcloud/occ;     apk del .fetch-deps
-# Wed, 15 Jul 2020 23:12:19 GMT
+# Thu, 16 Jul 2020 22:04:35 GMT
 COPY multi:7396b0dc331ca301e37b57c4af539d58e09521ec7c723e0739e6eca71f90ffb3 in / 
-# Wed, 15 Jul 2020 23:12:22 GMT
+# Thu, 16 Jul 2020 22:04:37 GMT
 COPY multi:0f9299c697c03625557426785fb6ad8cae5e661ea8ceedf25eb083ff586c1e00 in /usr/src/nextcloud/config/ 
-# Wed, 15 Jul 2020 23:12:23 GMT
+# Thu, 16 Jul 2020 22:04:37 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Wed, 15 Jul 2020 23:12:24 GMT
+# Thu, 16 Jul 2020 22:04:38 GMT
 CMD ["php-fpm"]
 ```
 
@@ -621,30 +621,30 @@ CMD ["php-fpm"]
 		Last Modified: Wed, 15 Jul 2020 23:19:28 GMT  
 		Size: 528.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7f10a2b91a424f108fedceadc40e0bdef061117706a453eda7d1bf2f8a7e5245`  
-		Last Modified: Wed, 15 Jul 2020 23:21:52 GMT  
-		Size: 98.1 MB (98081955 bytes)  
+	-	`sha256:8c28374b6a141980f0a24b29703b900599cffbe118df5e1aadce3aa717d31881`  
+		Last Modified: Thu, 16 Jul 2020 22:11:11 GMT  
+		Size: 98.6 MB (98611154 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b6ed59a43a236b5cb4c97d1ea2b64d3f104d430b9c53a70426665ea55300384e`  
-		Last Modified: Wed, 15 Jul 2020 23:21:26 GMT  
+	-	`sha256:e95843ea103958324b9d0364a3641a011684de51f111708fefb5346f4acb6c5a`  
+		Last Modified: Thu, 16 Jul 2020 22:10:44 GMT  
 		Size: 2.5 KB (2525 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dbd840aff1557e136091f5398bd1a749c52b742382974205ff7947f890833473`  
-		Last Modified: Wed, 15 Jul 2020 23:21:26 GMT  
-		Size: 1.3 KB (1326 bytes)  
+	-	`sha256:4d07d35e5b5f02e45955c2c9ca6919eb6b45edc70128c747d5435124a3c14a88`  
+		Last Modified: Thu, 16 Jul 2020 22:10:44 GMT  
+		Size: 1.3 KB (1331 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `nextcloud:fpm-alpine` - linux; 386
 
 ```console
-$ docker pull nextcloud@sha256:0a8ae2915f6163db8cf3dc91836480fa67ca9ff2b8b689a74fff4020c6a35835
+$ docker pull nextcloud@sha256:6c1c1beb6e1ab67af1aefe72a2343e6adcd99d4ad7eb3cf2bf71d8103da794fd
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **154.9 MB (154938665 bytes)**  
+-	Total Size: **155.5 MB (155467645 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:92e9d4562a6abc60b424746c4b412bbc9debfc3ef7efbd80e7ecc7b38798bda2`
+-	Image ID: `sha256:e17d6f855ee341f01ecd3ca8945e666a9858329e374dd8ae7488b0ada9254921`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -709,17 +709,17 @@ RUN set -ex;         apk add --no-cache --virtual .build-deps         $PHPIZE_DE
 RUN {         echo 'opcache.enable=1';         echo 'opcache.interned_strings_buffer=8';         echo 'opcache.max_accelerated_files=10000';         echo 'opcache.memory_consumption=128';         echo 'opcache.save_comments=1';         echo 'opcache.revalidate_freq=1';     } > /usr/local/etc/php/conf.d/opcache-recommended.ini;         echo 'apc.enable_cli=1' >> /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini;         echo 'memory_limit=512M' > /usr/local/etc/php/conf.d/memory-limit.ini;         mkdir /var/www/data;     chown -R www-data:root /var/www;     chmod -R g=u /var/www
 # Wed, 15 Jul 2020 22:49:33 GMT
 VOLUME [/var/www/html]
-# Wed, 15 Jul 2020 22:54:36 GMT
-ENV NEXTCLOUD_VERSION=19.0.0
-# Wed, 15 Jul 2020 22:55:06 GMT
+# Thu, 16 Jul 2020 21:50:05 GMT
+ENV NEXTCLOUD_VERSION=19.0.1
+# Thu, 16 Jul 2020 21:50:35 GMT
 RUN set -ex;     apk add --no-cache --virtual .fetch-deps         bzip2         gnupg     ;         curl -fsSL -o nextcloud.tar.bz2         "https://download.nextcloud.com/server/releases/nextcloud-${NEXTCLOUD_VERSION}.tar.bz2";     curl -fsSL -o nextcloud.tar.bz2.asc         "https://download.nextcloud.com/server/releases/nextcloud-${NEXTCLOUD_VERSION}.tar.bz2.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 28806A878AE423A28372792ED75899B9A724937A;     gpg --batch --verify nextcloud.tar.bz2.asc nextcloud.tar.bz2;     tar -xjf nextcloud.tar.bz2 -C /usr/src/;     gpgconf --kill all;     rm nextcloud.tar.bz2.asc nextcloud.tar.bz2;     rm -rf "$GNUPGHOME" /usr/src/nextcloud/updater;     mkdir -p /usr/src/nextcloud/data;     mkdir -p /usr/src/nextcloud/custom_apps;     chmod +x /usr/src/nextcloud/occ;     apk del .fetch-deps
-# Wed, 15 Jul 2020 22:55:07 GMT
+# Thu, 16 Jul 2020 21:50:36 GMT
 COPY multi:7396b0dc331ca301e37b57c4af539d58e09521ec7c723e0739e6eca71f90ffb3 in / 
-# Wed, 15 Jul 2020 22:55:08 GMT
+# Thu, 16 Jul 2020 21:50:37 GMT
 COPY multi:0f9299c697c03625557426785fb6ad8cae5e661ea8ceedf25eb083ff586c1e00 in /usr/src/nextcloud/config/ 
-# Wed, 15 Jul 2020 22:55:08 GMT
+# Thu, 16 Jul 2020 21:50:37 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Wed, 15 Jul 2020 22:55:08 GMT
+# Thu, 16 Jul 2020 21:50:37 GMT
 CMD ["php-fpm"]
 ```
 
@@ -776,30 +776,30 @@ CMD ["php-fpm"]
 		Last Modified: Wed, 15 Jul 2020 23:00:23 GMT  
 		Size: 499.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4696addcfd7e4fbb12288abf9f1aa5a19f2bcdcde9d1267f0d0bbc8ac225035d`  
-		Last Modified: Wed, 15 Jul 2020 23:02:22 GMT  
-		Size: 98.1 MB (98082114 bytes)  
+	-	`sha256:9769d1e22cb74746bf30aa93bc37a5b61374b3549bee3a3e67466347e1d1d157`  
+		Last Modified: Thu, 16 Jul 2020 21:55:26 GMT  
+		Size: 98.6 MB (98611097 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:133fe075879a4e03f4ad4ac352a3fdbcc25dac08862e0d20828f9adb3f36fb6f`  
-		Last Modified: Wed, 15 Jul 2020 23:01:59 GMT  
+	-	`sha256:fdb123d59dfa3ae772de6b0f209538f39d2f27c1d9aa1c6fd8b98df9403325a9`  
+		Last Modified: Thu, 16 Jul 2020 21:55:03 GMT  
 		Size: 2.5 KB (2524 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:176067a304052bbe2f3c5c27f8a466b755407f9eb3a9d92274c5422b8e62cdad`  
-		Last Modified: Wed, 15 Jul 2020 23:02:00 GMT  
-		Size: 1.3 KB (1330 bytes)  
+	-	`sha256:b9baa819c8fc742b47a05576159f4fe86fec24452493b2c952792f92a47b81fe`  
+		Last Modified: Thu, 16 Jul 2020 21:55:04 GMT  
+		Size: 1.3 KB (1327 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `nextcloud:fpm-alpine` - linux; ppc64le
 
 ```console
-$ docker pull nextcloud@sha256:20f1f1fd49718e2184ad4b0b950d387d2bd31980f55346ec0d1f9d0466b75924
+$ docker pull nextcloud@sha256:1bc826297e7c8d34520fa5a83bd23653aa8e4fc53cea866d957cdcab4a86ea54
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **155.4 MB (155372711 bytes)**  
+-	Total Size: **155.9 MB (155901884 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4b380db4ca4b78d0f3c52588e857bbc027dbc4365c535958b450d87883f53510`
+-	Image ID: `sha256:9fff19a7741c1a7d7c33cf8e6a98b03d9668d5376774c8d06902d20e084a3cde`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -864,17 +864,17 @@ RUN set -ex;         apk add --no-cache --virtual .build-deps         $PHPIZE_DE
 RUN {         echo 'opcache.enable=1';         echo 'opcache.interned_strings_buffer=8';         echo 'opcache.max_accelerated_files=10000';         echo 'opcache.memory_consumption=128';         echo 'opcache.save_comments=1';         echo 'opcache.revalidate_freq=1';     } > /usr/local/etc/php/conf.d/opcache-recommended.ini;         echo 'apc.enable_cli=1' >> /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini;         echo 'memory_limit=512M' > /usr/local/etc/php/conf.d/memory-limit.ini;         mkdir /var/www/data;     chown -R www-data:root /var/www;     chmod -R g=u /var/www
 # Wed, 15 Jul 2020 23:54:17 GMT
 VOLUME [/var/www/html]
-# Thu, 16 Jul 2020 00:17:15 GMT
-ENV NEXTCLOUD_VERSION=19.0.0
-# Thu, 16 Jul 2020 00:19:19 GMT
+# Thu, 16 Jul 2020 23:14:09 GMT
+ENV NEXTCLOUD_VERSION=19.0.1
+# Thu, 16 Jul 2020 23:16:46 GMT
 RUN set -ex;     apk add --no-cache --virtual .fetch-deps         bzip2         gnupg     ;         curl -fsSL -o nextcloud.tar.bz2         "https://download.nextcloud.com/server/releases/nextcloud-${NEXTCLOUD_VERSION}.tar.bz2";     curl -fsSL -o nextcloud.tar.bz2.asc         "https://download.nextcloud.com/server/releases/nextcloud-${NEXTCLOUD_VERSION}.tar.bz2.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 28806A878AE423A28372792ED75899B9A724937A;     gpg --batch --verify nextcloud.tar.bz2.asc nextcloud.tar.bz2;     tar -xjf nextcloud.tar.bz2 -C /usr/src/;     gpgconf --kill all;     rm nextcloud.tar.bz2.asc nextcloud.tar.bz2;     rm -rf "$GNUPGHOME" /usr/src/nextcloud/updater;     mkdir -p /usr/src/nextcloud/data;     mkdir -p /usr/src/nextcloud/custom_apps;     chmod +x /usr/src/nextcloud/occ;     apk del .fetch-deps
-# Thu, 16 Jul 2020 00:19:24 GMT
+# Thu, 16 Jul 2020 23:16:53 GMT
 COPY multi:7396b0dc331ca301e37b57c4af539d58e09521ec7c723e0739e6eca71f90ffb3 in / 
-# Thu, 16 Jul 2020 00:19:26 GMT
+# Thu, 16 Jul 2020 23:16:55 GMT
 COPY multi:0f9299c697c03625557426785fb6ad8cae5e661ea8ceedf25eb083ff586c1e00 in /usr/src/nextcloud/config/ 
-# Thu, 16 Jul 2020 00:19:30 GMT
+# Thu, 16 Jul 2020 23:16:58 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Thu, 16 Jul 2020 00:19:36 GMT
+# Thu, 16 Jul 2020 23:17:05 GMT
 CMD ["php-fpm"]
 ```
 
@@ -931,30 +931,30 @@ CMD ["php-fpm"]
 		Last Modified: Thu, 16 Jul 2020 00:43:12 GMT  
 		Size: 531.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1531de0938cfe309ffaaf28f9816ae6965543916c8013562c4c7663336b8711d`  
-		Last Modified: Thu, 16 Jul 2020 00:55:08 GMT  
-		Size: 98.1 MB (98081968 bytes)  
+	-	`sha256:73e40219a521fbaeed2e3f260da4f2c5fac6000fe80a323d73e3aabd268e0330`  
+		Last Modified: Thu, 16 Jul 2020 23:41:56 GMT  
+		Size: 98.6 MB (98611133 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6ceb08c481737d5f8bc3349201240ef6cf13d1c5cac8c9b2e349365285a052ff`  
-		Last Modified: Thu, 16 Jul 2020 00:51:26 GMT  
-		Size: 2.5 KB (2521 bytes)  
+	-	`sha256:b9aa83542e3e785a2176a8c9780a1d853cecf8419c2ede07c9ef64aedba1871b`  
+		Last Modified: Thu, 16 Jul 2020 23:38:56 GMT  
+		Size: 2.5 KB (2525 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2e9885883346e635291653755928ccc44ecbd5293231bfac4808b13744d32d23`  
-		Last Modified: Thu, 16 Jul 2020 00:51:25 GMT  
-		Size: 1.3 KB (1328 bytes)  
+	-	`sha256:0665ca0452f58921c65bc886ec595ea5ff7b5fc6c8eed0e7340ab6421824d471`  
+		Last Modified: Thu, 16 Jul 2020 23:38:56 GMT  
+		Size: 1.3 KB (1332 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `nextcloud:fpm-alpine` - linux; s390x
 
 ```console
-$ docker pull nextcloud@sha256:cfc7e15f19c0b408669287d6bf23d4112116934f290dafcc147a96dbc14f288a
+$ docker pull nextcloud@sha256:12c5d0c27d03cb3373c8dca9f8bdac4e665617d3afb95b849d3a9ef05befd648
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **153.0 MB (152973083 bytes)**  
+-	Total Size: **153.5 MB (153502403 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:22e3040dce2568cb1e84976030f1f10c10cf8b4ecbacfaefaf50aedb539b5517`
+-	Image ID: `sha256:3eba935b1e070bf09bd0c057917cf6cc95debdce412fdbe58dfaa87833f50c12`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -1019,17 +1019,17 @@ RUN set -ex;         apk add --no-cache --virtual .build-deps         $PHPIZE_DE
 RUN {         echo 'opcache.enable=1';         echo 'opcache.interned_strings_buffer=8';         echo 'opcache.max_accelerated_files=10000';         echo 'opcache.memory_consumption=128';         echo 'opcache.save_comments=1';         echo 'opcache.revalidate_freq=1';     } > /usr/local/etc/php/conf.d/opcache-recommended.ini;         echo 'apc.enable_cli=1' >> /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini;         echo 'memory_limit=512M' > /usr/local/etc/php/conf.d/memory-limit.ini;         mkdir /var/www/data;     chown -R www-data:root /var/www;     chmod -R g=u /var/www
 # Wed, 15 Jul 2020 22:53:04 GMT
 VOLUME [/var/www/html]
-# Wed, 15 Jul 2020 22:57:22 GMT
-ENV NEXTCLOUD_VERSION=19.0.0
-# Wed, 15 Jul 2020 22:57:46 GMT
+# Thu, 16 Jul 2020 21:56:00 GMT
+ENV NEXTCLOUD_VERSION=19.0.1
+# Thu, 16 Jul 2020 21:56:23 GMT
 RUN set -ex;     apk add --no-cache --virtual .fetch-deps         bzip2         gnupg     ;         curl -fsSL -o nextcloud.tar.bz2         "https://download.nextcloud.com/server/releases/nextcloud-${NEXTCLOUD_VERSION}.tar.bz2";     curl -fsSL -o nextcloud.tar.bz2.asc         "https://download.nextcloud.com/server/releases/nextcloud-${NEXTCLOUD_VERSION}.tar.bz2.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 28806A878AE423A28372792ED75899B9A724937A;     gpg --batch --verify nextcloud.tar.bz2.asc nextcloud.tar.bz2;     tar -xjf nextcloud.tar.bz2 -C /usr/src/;     gpgconf --kill all;     rm nextcloud.tar.bz2.asc nextcloud.tar.bz2;     rm -rf "$GNUPGHOME" /usr/src/nextcloud/updater;     mkdir -p /usr/src/nextcloud/data;     mkdir -p /usr/src/nextcloud/custom_apps;     chmod +x /usr/src/nextcloud/occ;     apk del .fetch-deps
-# Wed, 15 Jul 2020 22:57:51 GMT
+# Thu, 16 Jul 2020 21:56:28 GMT
 COPY multi:7396b0dc331ca301e37b57c4af539d58e09521ec7c723e0739e6eca71f90ffb3 in / 
-# Wed, 15 Jul 2020 22:57:52 GMT
+# Thu, 16 Jul 2020 21:56:29 GMT
 COPY multi:0f9299c697c03625557426785fb6ad8cae5e661ea8ceedf25eb083ff586c1e00 in /usr/src/nextcloud/config/ 
-# Wed, 15 Jul 2020 22:57:52 GMT
+# Thu, 16 Jul 2020 21:56:29 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Wed, 15 Jul 2020 22:57:52 GMT
+# Thu, 16 Jul 2020 21:56:29 GMT
 CMD ["php-fpm"]
 ```
 
@@ -1086,15 +1086,15 @@ CMD ["php-fpm"]
 		Last Modified: Wed, 15 Jul 2020 23:02:44 GMT  
 		Size: 527.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d5502c23082472360d2514b0d772cabb290d75f4c47e6684f054791de464e8ff`  
-		Last Modified: Wed, 15 Jul 2020 23:04:31 GMT  
-		Size: 98.1 MB (98081929 bytes)  
+	-	`sha256:559af490b18e67444e7c531196845c8de3f0ec1e164c36114253b97592a184a9`  
+		Last Modified: Thu, 16 Jul 2020 22:00:45 GMT  
+		Size: 98.6 MB (98611244 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:04339fa2b1de9ccddc316aaad261f3eb697475f9c5e3ef8147347003b8c0e917`  
-		Last Modified: Wed, 15 Jul 2020 23:04:09 GMT  
-		Size: 2.5 KB (2523 bytes)  
+	-	`sha256:7f6007123e6e56e92bd418c0bc12e4f60fe2a5a5f5509b2f3d5d8cc6f62b7daa`  
+		Last Modified: Thu, 16 Jul 2020 22:00:34 GMT  
+		Size: 2.5 KB (2525 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5a99196a91cde6ed458126d0e8ecf7fe59d59dbc067869c1ea333c2d49f71324`  
-		Last Modified: Wed, 15 Jul 2020 23:04:24 GMT  
-		Size: 1.3 KB (1328 bytes)  
+	-	`sha256:94bacb0630053637e92efa42249104f52c89f5fa0c761738d866e9df790e0eeb`  
+		Last Modified: Thu, 16 Jul 2020 22:00:52 GMT  
+		Size: 1.3 KB (1331 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
