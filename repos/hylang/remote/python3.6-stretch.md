@@ -1,7 +1,7 @@
 ## `hylang:python3.6-stretch`
 
 ```console
-$ docker pull hylang@sha256:85605cd4e5caae2a798a6b5c0d59dea3d6aec9a4d217ca76e253ab3db61e8773
+$ docker pull hylang@sha256:2c08478b36d7d24faa8ee8e30bde112d23bbde24c8c940ee8cd57df4b2e7b149
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -18,14 +18,14 @@ $ docker pull hylang@sha256:85605cd4e5caae2a798a6b5c0d59dea3d6aec9a4d217ca76e253
 ### `hylang:python3.6-stretch` - linux; amd64
 
 ```console
-$ docker pull hylang@sha256:5c25f823816a327b7cf3d1609648df6d7ea8bf3f30ce2421eab62a0dbf08acf0
+$ docker pull hylang@sha256:592b88ef7907a78306b5d611ac4287f80eb3c4a331761675a70fd9bacac650b7
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **48.3 MB (48345010 bytes)**  
+-	Total Size: **48.3 MB (48347195 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:8895ff149deaa1c532f787fd9b227266a93e4a24d45b517d30b989a0b2f0ffb9`
+-	Image ID: `sha256:2a1c45991f9cfd1a0409f2e36ecec11021ebeab184df1470c7552c83999ca764`
 -	Default Command: `["hy"]`
 
 ```dockerfile
@@ -57,11 +57,11 @@ ENV PYTHON_GET_PIP_SHA256=b3153ec0cf7b7bbf9556932aa37e4981c35dc2a2c501d70d91d279
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends wget; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum --check --strict -; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		"pip==$PYTHON_PIP_VERSION" 	; 	pip --version; 		find /usr/local -depth 		\( 			\( -type d -a \( -name test -o -name tests -o -name idle_test \) \) 			-o 			\( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) 		\) -exec rm -rf '{}' +; 	rm -f get-pip.py
 # Tue, 30 Jun 2020 19:45:51 GMT
 CMD ["python3"]
-# Tue, 30 Jun 2020 20:51:28 GMT
-ENV HY_VERSION=0.18.0
-# Tue, 30 Jun 2020 20:51:33 GMT
+# Thu, 16 Jul 2020 22:21:56 GMT
+ENV HY_VERSION=0.19.0
+# Thu, 16 Jul 2020 22:22:01 GMT
 RUN pip install --no-cache-dir "hy == $HY_VERSION"
-# Tue, 30 Jun 2020 20:51:33 GMT
+# Thu, 16 Jul 2020 22:22:01 GMT
 CMD ["hy"]
 ```
 
@@ -86,22 +86,22 @@ CMD ["hy"]
 		Last Modified: Tue, 30 Jun 2020 20:04:43 GMT  
 		Size: 2.2 MB (2214900 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:202133ea9285643572eafad5c6aae10da3c1cb42e7f4c85fd5eefc854f7fdce2`  
-		Last Modified: Tue, 30 Jun 2020 20:53:43 GMT  
-		Size: 2.8 MB (2754421 bytes)  
+	-	`sha256:beac711caa4567dc57c1e8760898331d13619664b9342fa5995968b9dbc13689`  
+		Last Modified: Thu, 16 Jul 2020 22:25:02 GMT  
+		Size: 2.8 MB (2756606 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `hylang:python3.6-stretch` - linux; arm variant v5
 
 ```console
-$ docker pull hylang@sha256:1e979c5d231f4ef4bf697b3b3b984122bebf7e0319c91c22e2b18fd5d65568fa
+$ docker pull hylang@sha256:01290440d510dd38f51d17721da8aa6269c4680be032d2ff29645e6a5b4f5a6e
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **44.7 MB (44698796 bytes)**  
+-	Total Size: **44.7 MB (44701175 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4bc5e3994d49954e1c7b8d648f4ca69cc9af15bd771bd7c9dd3267d6bbe85cbb`
+-	Image ID: `sha256:67bdfc662978dedac576088ee356c6fd5758bfed44122fb24476ae2d82e0c9a5`
 -	Default Command: `["hy"]`
 
 ```dockerfile
@@ -133,11 +133,11 @@ ENV PYTHON_GET_PIP_SHA256=b3153ec0cf7b7bbf9556932aa37e4981c35dc2a2c501d70d91d279
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends wget; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum --check --strict -; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		"pip==$PYTHON_PIP_VERSION" 	; 	pip --version; 		find /usr/local -depth 		\( 			\( -type d -a \( -name test -o -name tests -o -name idle_test \) \) 			-o 			\( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) 		\) -exec rm -rf '{}' +; 	rm -f get-pip.py
 # Tue, 30 Jun 2020 20:16:01 GMT
 CMD ["python3"]
-# Tue, 30 Jun 2020 20:36:09 GMT
-ENV HY_VERSION=0.18.0
-# Tue, 30 Jun 2020 20:36:21 GMT
+# Thu, 16 Jul 2020 21:50:22 GMT
+ENV HY_VERSION=0.19.0
+# Thu, 16 Jul 2020 21:50:35 GMT
 RUN pip install --no-cache-dir "hy == $HY_VERSION"
-# Tue, 30 Jun 2020 20:36:23 GMT
+# Thu, 16 Jul 2020 21:50:36 GMT
 CMD ["hy"]
 ```
 
@@ -162,22 +162,22 @@ CMD ["hy"]
 		Last Modified: Tue, 30 Jun 2020 20:19:06 GMT  
 		Size: 2.2 MB (2215017 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6c931dcea787fbb1fadc5a53935f17cafc147103d35b08419283a4bd352a746f`  
-		Last Modified: Tue, 30 Jun 2020 20:37:35 GMT  
-		Size: 2.8 MB (2754955 bytes)  
+	-	`sha256:f1b27e2a4bc6c79979e70ebdc0d702fae6f14ff437057af9cf8fb4130970b1a1`  
+		Last Modified: Thu, 16 Jul 2020 21:52:45 GMT  
+		Size: 2.8 MB (2757334 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `hylang:python3.6-stretch` - linux; arm variant v7
 
 ```console
-$ docker pull hylang@sha256:87084e02a5d1445eab644b47b0a85fd76abe60acfafad0f4d614b8e4b97b1754
+$ docker pull hylang@sha256:2494d2fdde96df3bd49a60aa3af6059f0ab54cfdb56c03cea3a51596eeb67e1a
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **42.7 MB (42745743 bytes)**  
+-	Total Size: **42.7 MB (42747937 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:dc9272d5444d3ac69a6dd5483034d0a495cded17a02a68a5a16fe0f457c1f562`
+-	Image ID: `sha256:6c3f8fac09ff163b307614336cbdc88e057479ae718dadf2c83368249299894f`
 -	Default Command: `["hy"]`
 
 ```dockerfile
@@ -209,11 +209,11 @@ ENV PYTHON_GET_PIP_SHA256=b3153ec0cf7b7bbf9556932aa37e4981c35dc2a2c501d70d91d279
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends wget; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum --check --strict -; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		"pip==$PYTHON_PIP_VERSION" 	; 	pip --version; 		find /usr/local -depth 		\( 			\( -type d -a \( -name test -o -name tests -o -name idle_test \) \) 			-o 			\( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) 		\) -exec rm -rf '{}' +; 	rm -f get-pip.py
 # Tue, 30 Jun 2020 21:00:03 GMT
 CMD ["python3"]
-# Tue, 30 Jun 2020 22:30:44 GMT
-ENV HY_VERSION=0.18.0
-# Tue, 30 Jun 2020 22:30:55 GMT
+# Thu, 16 Jul 2020 22:05:06 GMT
+ENV HY_VERSION=0.19.0
+# Thu, 16 Jul 2020 22:05:18 GMT
 RUN pip install --no-cache-dir "hy == $HY_VERSION"
-# Tue, 30 Jun 2020 22:30:56 GMT
+# Thu, 16 Jul 2020 22:05:21 GMT
 CMD ["hy"]
 ```
 
@@ -238,22 +238,22 @@ CMD ["hy"]
 		Last Modified: Tue, 30 Jun 2020 21:14:10 GMT  
 		Size: 2.2 MB (2215125 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2a6fced4b0d6c34cb5a277385be693f3c1b29ca6faa62d1aea2050bb7835e6ed`  
-		Last Modified: Tue, 30 Jun 2020 22:33:42 GMT  
-		Size: 2.8 MB (2755102 bytes)  
+	-	`sha256:9f9b49b9d66b175bf7f81def41acf3a966da08d6a55e4d7fb57692b0bee9faea`  
+		Last Modified: Thu, 16 Jul 2020 22:11:16 GMT  
+		Size: 2.8 MB (2757296 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `hylang:python3.6-stretch` - linux; arm64 variant v8
 
 ```console
-$ docker pull hylang@sha256:274397746cb3dae1f154f5152e2e28666b725939d3bb921c1b02e075c7ba4352
+$ docker pull hylang@sha256:ecc23ac21956f9968f1bf9f6ed1ef262b3e975deac97a30aef361710e30670bc
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **45.1 MB (45119300 bytes)**  
+-	Total Size: **45.1 MB (45121582 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5def0871d4f5cad92f824c1f19dc2a2fcdff7ddcafe3014601db1b3061aa3edb`
+-	Image ID: `sha256:f33474eafd05097a08c72032514587cfc33a93829da2d63daaa701503ccbf2eb`
 -	Default Command: `["hy"]`
 
 ```dockerfile
@@ -285,11 +285,11 @@ ENV PYTHON_GET_PIP_SHA256=b3153ec0cf7b7bbf9556932aa37e4981c35dc2a2c501d70d91d279
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends wget; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum --check --strict -; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		"pip==$PYTHON_PIP_VERSION" 	; 	pip --version; 		find /usr/local -depth 		\( 			\( -type d -a \( -name test -o -name tests -o -name idle_test \) \) 			-o 			\( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) 		\) -exec rm -rf '{}' +; 	rm -f get-pip.py
 # Tue, 30 Jun 2020 20:43:20 GMT
 CMD ["python3"]
-# Tue, 30 Jun 2020 22:08:33 GMT
-ENV HY_VERSION=0.18.0
-# Tue, 30 Jun 2020 22:08:44 GMT
+# Thu, 16 Jul 2020 21:44:26 GMT
+ENV HY_VERSION=0.19.0
+# Thu, 16 Jul 2020 21:44:36 GMT
 RUN pip install --no-cache-dir "hy == $HY_VERSION"
-# Tue, 30 Jun 2020 22:08:45 GMT
+# Thu, 16 Jul 2020 21:44:37 GMT
 CMD ["hy"]
 ```
 
@@ -314,22 +314,22 @@ CMD ["hy"]
 		Last Modified: Tue, 30 Jun 2020 21:04:00 GMT  
 		Size: 2.2 MB (2214875 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eb119af471a18b4f99e0a80739a0df80eb440234e0cad1e562f2e2c37517a017`  
-		Last Modified: Tue, 30 Jun 2020 22:11:53 GMT  
-		Size: 2.8 MB (2755014 bytes)  
+	-	`sha256:3592dd3a08c289dda49c4f6fb3276640223159204ca599e0f5025b77a7ca17cb`  
+		Last Modified: Thu, 16 Jul 2020 21:52:29 GMT  
+		Size: 2.8 MB (2757296 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `hylang:python3.6-stretch` - linux; 386
 
 ```console
-$ docker pull hylang@sha256:5f894617fbf9713317a5c806b5cc0bbf51fb81abe339d57a857846655a9b4335
+$ docker pull hylang@sha256:346006ceaaa3890dd01fa125e96de07b6ca26d1343dc4658935f38a60907b4a4
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **48.1 MB (48092313 bytes)**  
+-	Total Size: **48.1 MB (48094641 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:196296b425434b26d81990e4c88be0d773b125f429e72cc7664c9d2b26544dbb`
+-	Image ID: `sha256:809736e87d4a495e21bbceefdf0d995003d60730f47ea39542c7154d5b2ca5a7`
 -	Default Command: `["hy"]`
 
 ```dockerfile
@@ -361,11 +361,11 @@ ENV PYTHON_GET_PIP_SHA256=b3153ec0cf7b7bbf9556932aa37e4981c35dc2a2c501d70d91d279
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends wget; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum --check --strict -; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		"pip==$PYTHON_PIP_VERSION" 	; 	pip --version; 		find /usr/local -depth 		\( 			\( -type d -a \( -name test -o -name tests -o -name idle_test \) \) 			-o 			\( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) 		\) -exec rm -rf '{}' +; 	rm -f get-pip.py
 # Tue, 30 Jun 2020 20:31:46 GMT
 CMD ["python3"]
-# Tue, 30 Jun 2020 21:36:20 GMT
-ENV HY_VERSION=0.18.0
-# Tue, 30 Jun 2020 21:36:26 GMT
+# Thu, 16 Jul 2020 21:40:50 GMT
+ENV HY_VERSION=0.19.0
+# Thu, 16 Jul 2020 21:40:55 GMT
 RUN pip install --no-cache-dir "hy == $HY_VERSION"
-# Tue, 30 Jun 2020 21:36:26 GMT
+# Thu, 16 Jul 2020 21:40:56 GMT
 CMD ["hy"]
 ```
 
@@ -390,22 +390,22 @@ CMD ["hy"]
 		Last Modified: Tue, 30 Jun 2020 20:51:55 GMT  
 		Size: 2.2 MB (2214587 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bf8e18a6b191038ee73647a1ceb9a8c3f3e56a8d257f942940e569022529ca7a`  
-		Last Modified: Tue, 30 Jun 2020 21:38:32 GMT  
-		Size: 2.8 MB (2754289 bytes)  
+	-	`sha256:a4fa1be8f11f97c399da96fde731c808f39d2f0523f18c9d9f626b9a25220bce`  
+		Last Modified: Thu, 16 Jul 2020 21:44:01 GMT  
+		Size: 2.8 MB (2756617 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `hylang:python3.6-stretch` - linux; mips64le
 
 ```console
-$ docker pull hylang@sha256:3e850164b2716e753d1f4efd29a98999f9ae0894e0809da6b074b8bbeb3d937e
+$ docker pull hylang@sha256:d1d1ee9d10df4a59b25c379a16c172af044f3d8eeaf47de083fa56fe3bf0c5f0
 ```
 
 -	Docker Version: 19.03.8
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **47.4 MB (47381021 bytes)**  
+-	Total Size: **47.4 MB (47383112 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b5357807f30c068da290cbb6c854cb0d9f20e3279f55efcf4d1cf21ccbfe2ff0`
+-	Image ID: `sha256:ff0bee5ed950e3f155d04cc54a1ec2a41ed4bb89d5e5c6dab47088092c258003`
 -	Default Command: `["hy"]`
 
 ```dockerfile
@@ -437,11 +437,11 @@ ENV PYTHON_GET_PIP_SHA256=b3153ec0cf7b7bbf9556932aa37e4981c35dc2a2c501d70d91d279
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends wget; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum --check --strict -; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		"pip==$PYTHON_PIP_VERSION" 	; 	pip --version; 		find /usr/local -depth 		\( 			\( -type d -a \( -name test -o -name tests -o -name idle_test \) \) 			-o 			\( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) 		\) -exec rm -rf '{}' +; 	rm -f get-pip.py
 # Tue, 30 Jun 2020 22:08:43 GMT
 CMD ["python3"]
-# Tue, 30 Jun 2020 22:41:57 GMT
-ENV HY_VERSION=0.18.0
-# Mon, 06 Jul 2020 20:17:47 GMT
+# Thu, 16 Jul 2020 22:13:47 GMT
+ENV HY_VERSION=0.19.0
+# Thu, 16 Jul 2020 22:14:03 GMT
 RUN pip install --no-cache-dir "hy == $HY_VERSION"
-# Mon, 06 Jul 2020 20:17:48 GMT
+# Thu, 16 Jul 2020 22:14:03 GMT
 CMD ["hy"]
 ```
 
@@ -466,22 +466,22 @@ CMD ["hy"]
 		Last Modified: Tue, 30 Jun 2020 22:13:35 GMT  
 		Size: 2.2 MB (2214291 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eb1f403cf47d060371f4603107cbfbdf036b45110c15d695dfc66418e56f4ed8`  
-		Last Modified: Mon, 06 Jul 2020 20:18:32 GMT  
-		Size: 2.8 MB (2755002 bytes)  
+	-	`sha256:48f1b023ba4024548dda7b36ce2e076301e47fc2de77b1f34db2e5f4cff08fb7`  
+		Last Modified: Thu, 16 Jul 2020 22:16:46 GMT  
+		Size: 2.8 MB (2757093 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `hylang:python3.6-stretch` - linux; ppc64le
 
 ```console
-$ docker pull hylang@sha256:35e131304ff9fe0e669b4957805447a01f7d3c57954ddc5473b5a9c16674b290
+$ docker pull hylang@sha256:16a88651ecbcb98545f32f8988bbbaacd526c69799a85aeb1245534c70e23246
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **48.4 MB (48430459 bytes)**  
+-	Total Size: **48.4 MB (48432560 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6fa4b33b116b12572f21fb27db53fe399110ad981660f4a088212a12b4e7cbe8`
+-	Image ID: `sha256:7777829c217166d999b38e1821ca30550128c2b387b78adefa6efc10802fefec`
 -	Default Command: `["hy"]`
 
 ```dockerfile
@@ -513,11 +513,11 @@ ENV PYTHON_GET_PIP_SHA256=b3153ec0cf7b7bbf9556932aa37e4981c35dc2a2c501d70d91d279
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends wget; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum --check --strict -; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		"pip==$PYTHON_PIP_VERSION" 	; 	pip --version; 		find /usr/local -depth 		\( 			\( -type d -a \( -name test -o -name tests -o -name idle_test \) \) 			-o 			\( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) 		\) -exec rm -rf '{}' +; 	rm -f get-pip.py
 # Tue, 30 Jun 2020 20:42:44 GMT
 CMD ["python3"]
-# Tue, 30 Jun 2020 22:33:38 GMT
-ENV HY_VERSION=0.18.0
-# Tue, 30 Jun 2020 22:34:15 GMT
+# Thu, 16 Jul 2020 22:30:41 GMT
+ENV HY_VERSION=0.19.0
+# Thu, 16 Jul 2020 22:31:13 GMT
 RUN pip install --no-cache-dir "hy == $HY_VERSION"
-# Tue, 30 Jun 2020 22:34:19 GMT
+# Thu, 16 Jul 2020 22:31:18 GMT
 CMD ["hy"]
 ```
 
@@ -542,22 +542,22 @@ CMD ["hy"]
 		Last Modified: Tue, 30 Jun 2020 21:04:54 GMT  
 		Size: 2.2 MB (2216055 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:67da73dd179ca80c47514fd045fac5b40eeb56de27e14470b5841977c76efb38`  
-		Last Modified: Tue, 30 Jun 2020 22:39:42 GMT  
-		Size: 2.8 MB (2755491 bytes)  
+	-	`sha256:71e344dcf3f25b1f65f2b4e6aba92e377a5c767628080364957b0f80c2d2c387`  
+		Last Modified: Thu, 16 Jul 2020 22:45:07 GMT  
+		Size: 2.8 MB (2757592 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `hylang:python3.6-stretch` - linux; s390x
 
 ```console
-$ docker pull hylang@sha256:577ba2f6b8d8a221725bb084f2a3e4e6a85c35201ed4ce6fa1135d2165c8930a
+$ docker pull hylang@sha256:da745e3daaca345a238af09230a26289e63f2e3209940d674c0e393fbfc0db57
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **48.9 MB (48879413 bytes)**  
+-	Total Size: **48.9 MB (48881846 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d4bf8d25a5abe9812dd4ef77d2e98883f59fef53e72c7c826b8ffcc387c0504d`
+-	Image ID: `sha256:1c7dc1f3b9341b200ae8de3b4cea3229f6f268a5f54e43edba2eba0a7c2bbebb`
 -	Default Command: `["hy"]`
 
 ```dockerfile
@@ -589,11 +589,11 @@ ENV PYTHON_GET_PIP_SHA256=b3153ec0cf7b7bbf9556932aa37e4981c35dc2a2c501d70d91d279
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends wget; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum --check --strict -; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		"pip==$PYTHON_PIP_VERSION" 	; 	pip --version; 		find /usr/local -depth 		\( 			\( -type d -a \( -name test -o -name tests -o -name idle_test \) \) 			-o 			\( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) 		\) -exec rm -rf '{}' +; 	rm -f get-pip.py
 # Tue, 30 Jun 2020 19:45:37 GMT
 CMD ["python3"]
-# Tue, 30 Jun 2020 21:13:15 GMT
-ENV HY_VERSION=0.18.0
-# Tue, 30 Jun 2020 21:13:20 GMT
+# Thu, 16 Jul 2020 21:45:48 GMT
+ENV HY_VERSION=0.19.0
+# Thu, 16 Jul 2020 21:45:53 GMT
 RUN pip install --no-cache-dir "hy == $HY_VERSION"
-# Tue, 30 Jun 2020 21:13:21 GMT
+# Thu, 16 Jul 2020 21:45:53 GMT
 CMD ["hy"]
 ```
 
@@ -618,7 +618,7 @@ CMD ["hy"]
 		Last Modified: Tue, 30 Jun 2020 19:59:10 GMT  
 		Size: 2.2 MB (2214307 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa952cd10bf24f0d64accff59cc1e6208770fd38eeaf141fd70feccea9b51683`  
-		Last Modified: Tue, 30 Jun 2020 21:15:51 GMT  
-		Size: 2.8 MB (2754648 bytes)  
+	-	`sha256:ac12e0aac174b9a2b2059da824fc184e73e20a9cde576bc6b89dbd3ad961f275`  
+		Last Modified: Thu, 16 Jul 2020 21:49:27 GMT  
+		Size: 2.8 MB (2757081 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
