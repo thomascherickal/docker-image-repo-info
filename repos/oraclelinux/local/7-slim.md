@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:7442ca158991ca5eb49a6be0776c8aac435922a073b751e475c6ecf6c3cd1be9`
-- Created: `2020-06-10T18:22:32.667655335Z`
-- Virtual Size: ~ 119.85 Mb  
+- Image ID: `sha256:153f8d73287e1816a32b0523340893b0e7b420fa5ea53322ecc6322448991410`
+- Created: `2020-07-17T02:36:32.959140858Z`
+- Virtual Size: ~ 131.07 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -57,15 +57,15 @@ $ yumdownloader --quiet --source --urls bzip2-libs-1.0.6-13.el7
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/bzip2-1.0.6-13.el7.src.rpm
 ```
 
-### `rpm` package: `ca-certificates-2019.2.32-76.el7_7.noarch`
+### `rpm` package: `ca-certificates-2020.2.41-70.0.el7_8.noarch`
 
 Licenses (from `rpm --query`): Public Domain
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls ca-certificates-2019.2.32-76.el7_7.noarch
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/ca-certificates-2019.2.32-76.el7_7.src.rpm
+$ yumdownloader --quiet --source --urls ca-certificates-2020.2.41-70.0.el7_8.noarch
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/ca-certificates-2020.2.41-70.0.el7_8.src.rpm
 ```
 
 ### `rpm` package: `chkconfig-1.7.4-1.el7.x86_64`
@@ -789,15 +789,15 @@ $ yumdownloader --quiet --source --urls oraclelinux-release-7.8-1.0.7.el7
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/oraclelinux-release-7.8-1.0.7.el7.src.rpm
 ```
 
-### `rpm` package: `oraclelinux-release-el7-1.0-11.el7.x86_64`
+### `rpm` package: `oraclelinux-release-el7-1.0-12.1.el7.x86_64`
 
 Licenses (from `rpm --query`): GPLv2
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls oraclelinux-release-el7-1.0-11.el7
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/oraclelinux-release-el7-1.0-11.el7.src.rpm
+$ yumdownloader --quiet --source --urls oraclelinux-release-el7-1.0-12.1.el7
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/oraclelinux-release-el7-1.0-12.1.el7.src.rpm
 ```
 
 ### `rpm` package: `p11-kit-0.23.5-3.el7.x86_64`
