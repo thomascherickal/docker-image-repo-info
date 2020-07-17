@@ -3097,9 +3097,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris openldap=2.4.48+dfsg-1ubuntu1.1
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.48+dfsg-1ubuntu1.1.dsc' openldap_2.4.48+dfsg-1ubuntu1.1.dsc 2994 SHA256:d8b365479f402f9e6aa8ae5176d166117f6a1657ac4663213ad41aade5ae86fa
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.48+dfsg.orig.tar.gz' openldap_2.4.48+dfsg.orig.tar.gz 4875429 SHA256:8645601c28f094b01baed02a604479b175a45ba010e407212d214313bc6a80ba
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.48+dfsg-1ubuntu1.1.debian.tar.xz' openldap_2.4.48+dfsg-1ubuntu1.1.debian.tar.xz 180024 SHA256:6f5a47c8703cac9010c2ff47fa82c2d804c946c1038fed2efdc0f45b9f8bb88b
+'http://security.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.48+dfsg-1ubuntu1.1.dsc' openldap_2.4.48+dfsg-1ubuntu1.1.dsc 2994 SHA256:d8b365479f402f9e6aa8ae5176d166117f6a1657ac4663213ad41aade5ae86fa
+'http://security.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.48+dfsg.orig.tar.gz' openldap_2.4.48+dfsg.orig.tar.gz 4875429 SHA256:8645601c28f094b01baed02a604479b175a45ba010e407212d214313bc6a80ba
+'http://security.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.48+dfsg-1ubuntu1.1.debian.tar.xz' openldap_2.4.48+dfsg-1ubuntu1.1.debian.tar.xz 180024 SHA256:6f5a47c8703cac9010c2ff47fa82c2d804c946c1038fed2efdc0f45b9f8bb88b
 ```
 
 ### `dpkg` source package: `openssh=1:8.0p1-6build1`
