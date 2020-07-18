@@ -1,7 +1,7 @@
 ## `friendica:dev-apache`
 
 ```console
-$ docker pull friendica@sha256:37a6f1e0d4ae3c566bae04ad00f917b32fdcc8f6b15d16c6bc539e0cd4c264a3
+$ docker pull friendica@sha256:aab5f27284eea196dcd832a54d9380a9b4f9c923b8c6dae685ae2346d0375150
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -963,14 +963,14 @@ CMD ["apache2-foreground"]
 ### `friendica:dev-apache` - linux; mips64le
 
 ```console
-$ docker pull friendica@sha256:940d34d4c498fd0e0475b0a2d5662d930987cec354c8c53674d71933d288d319
+$ docker pull friendica@sha256:7f00289bc38528bb226ad889b0a00bfe007bdcb0e862b1d87e24878be0fb2d51
 ```
 
 -	Docker Version: 19.03.8
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **151.0 MB (150995762 bytes)**  
+-	Total Size: **151.0 MB (151038204 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f759819af0533094b56f7fca82765006b2e02ee3abed17f12041607499e26db0`
+-	Image ID: `sha256:fc05916cf09ae49d5b57b5b4d2875c540072dba5923cc78b7e8def98368ff9d4`
 -	Entrypoint: `["\/entrypoint-dev.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -1045,29 +1045,25 @@ RUN set -ex;         apt-get update;     apt-get install -y --no-install-recomme
 ENV TINI_VERSION=v0.19.0
 # Wed, 24 Jun 2020 23:27:19 GMT
 RUN export BUILD_ARCH=$(dpkg-architecture --query DEB_BUILD_ARCH)  && mkdir ~/.gnupg  && echo "disable-ipv6" >> ~/.gnupg/dirmngr.conf  && curl -L -o /sbin/tini https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-${BUILD_ARCH}  && curl -L -o /tini.asc https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-${BUILD_ARCH}.asc  && gpg --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 595E85A6B1B4779EA4DAAEC70B588DFF0527A9B7  && gpg --batch --verify /tini.asc /sbin/tini  && chmod +x /sbin/tini
-# Wed, 24 Jun 2020 23:35:00 GMT
-RUN set -ex;         savedAptMark="$(apt-mark showmanual)";         apt-get update;     apt-get install -y --no-install-recommends         mysql-client         bash         libpng-dev         libjpeg62-turbo-dev         libtool         libmagick++-dev         libmemcached-dev         libgraphicsmagick1-dev         libfreetype6-dev         librsvg2-2         libzip-dev         libldap2-dev     ;             debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)";         docker-php-ext-configure gd         --with-gd         --with-freetype-dir=/usr/include/         --with-png-dir=/usr/include/         --with-jpeg-dir=/usr/include/     ;     docker-php-ext-configure ldap         --with-libdir=lib/$debMultiarch/     ;    docker-php-ext-install -j "$(nproc)"         pdo_mysql         gd         zip         opcache         ctype         pcntl         ldap     ;         pecl install apcu-5.1.18;     pecl install memcached-3.1.5;     pecl install redis-5.2.2;     pecl install imagick-3.4.4;         docker-php-ext-enable         apcu         memcached         redis         imagick     ;         apt-mark auto '.*' > /dev/null;     apt-mark manual $savedAptMark;     ldd "$(php -r 'echo ini_get("extension_dir");')"/*.so         | awk '/=>/ { print $3 }'         | sort -u         | xargs -r dpkg-query -S         | cut -d: -f1         | sort -u         | xargs -rt apt-mark manual;         apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false;     rm -rf /var/lib/apt/lists/*
-# Wed, 24 Jun 2020 23:35:02 GMT
+# Sat, 18 Jul 2020 12:15:05 GMT
+RUN set -ex;         savedAptMark="$(apt-mark showmanual)";         apt-get update;     apt-get install -y --no-install-recommends         mysql-client         bash         libpng-dev         libjpeg62-turbo-dev         libtool         libmagick++-dev         libmemcached-dev         libgraphicsmagick1-dev         libfreetype6-dev         librsvg2-2         libzip-dev         libldap2-dev     ;             debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)";         docker-php-ext-configure gd         --with-gd         --with-freetype-dir=/usr/include/         --with-png-dir=/usr/include/         --with-jpeg-dir=/usr/include/     ;     docker-php-ext-configure ldap         --with-libdir=lib/$debMultiarch/     ;    docker-php-ext-install -j "$(nproc)"         pdo_mysql         gd         zip         opcache         ctype         pcntl         ldap     ;         pecl install apcu-5.1.18;     pecl install memcached-3.1.5;     pecl install redis-5.3.1;     pecl install imagick-3.4.4;         docker-php-ext-enable         apcu         memcached         redis         imagick     ;         apt-mark auto '.*' > /dev/null;     apt-mark manual $savedAptMark;     ldd "$(php -r 'echo ini_get("extension_dir");')"/*.so         | awk '/=>/ { print $3 }'         | sort -u         | xargs -r dpkg-query -S         | cut -d: -f1         | sort -u         | xargs -rt apt-mark manual;         apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false;     rm -rf /var/lib/apt/lists/*
+# Sat, 18 Jul 2020 12:15:08 GMT
 RUN set -ex;     {         echo 'opcache.enable=1' ;         echo 'opcache.interned_strings_buffer=8';         echo 'opcache.max_accelerated_files=10000';         echo 'opcache.memory_consumption=128';         echo 'opcache.save_comments=1';         echo 'opcache.revalidte_freq=1';     } > /usr/local/etc/php/conf.d/opcache-recommended.ini;         {         echo sendmail_path = "/usr/sbin/sendmail -t -i";     } > /usr/local/etc/php/conf.d/sendmail.ini;         echo 'apc.enable_cli=1' >> /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini;         echo 'memory_limit=512M' > /usr/local/etc/php/conf.d/memory-limit.ini;         mkdir /var/www/data;     chown -R www-data:root /var/www;     chmod -R g=u /var/www
-# Wed, 24 Jun 2020 23:35:02 GMT
+# Sat, 18 Jul 2020 12:15:08 GMT
 VOLUME [/var/www/html]
-# Wed, 24 Jun 2020 23:35:05 GMT
+# Sat, 18 Jul 2020 12:15:10 GMT
 RUN set -ex;    a2enmod rewrite remoteip ;    {     echo RemoteIPHeader X-Real-IP ;     echo RemoteIPTrustedProxy 10.0.0.0/8 ;     echo RemoteIPTrustedProxy 172.16.0.0/12 ;     echo RemoteIPTrustedProxy 192.168.0.0/16 ;    } > /etc/apache2/conf-available/remoteip.conf;    a2enconf remoteip
-# Wed, 24 Jun 2020 23:44:23 GMT
-ENV FRIENDICA_VERSION=2020.06-dev
-# Wed, 24 Jun 2020 23:44:23 GMT
-ENV FRIENDICA_VERSION_YEAR=2020
-# Wed, 24 Jun 2020 23:44:23 GMT
-ENV FRIENDICA_VERSION_MONTH=06-dev
-# Wed, 24 Jun 2020 23:44:24 GMT
-ENV FRIENDICA_ADDONS=2020.06-dev
-# Wed, 24 Jun 2020 23:44:25 GMT
+# Sat, 18 Jul 2020 12:23:57 GMT
+ENV FRIENDICA_VERSION=2020.09-dev
+# Sat, 18 Jul 2020 12:23:57 GMT
+ENV FRIENDICA_ADDONS=2020.09-dev
+# Sat, 18 Jul 2020 12:23:58 GMT
 COPY multi:598df5fefad260813db8ab503035d8a1bb340cca59ac39b7dd7e3202a7d6f225 in / 
-# Wed, 24 Jun 2020 23:44:25 GMT
+# Sat, 18 Jul 2020 12:23:59 GMT
 COPY multi:923de5042cde61ed518a7067985e18cb873d0cd10946593bfb44de6ba9e078ed in /usr/src/friendica/config/ 
-# Wed, 24 Jun 2020 23:44:26 GMT
+# Sat, 18 Jul 2020 12:23:59 GMT
 ENTRYPOINT ["/entrypoint-dev.sh"]
-# Wed, 24 Jun 2020 23:44:26 GMT
+# Sat, 18 Jul 2020 12:24:00 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -1132,25 +1128,25 @@ CMD ["apache2-foreground"]
 		Last Modified: Wed, 24 Jun 2020 23:45:20 GMT  
 		Size: 16.2 KB (16153 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a3bc3e975533d1a28fd91705e97bde286fe6b5cbd51d1b13b585ced9fa0259ed`  
-		Last Modified: Wed, 24 Jun 2020 23:45:33 GMT  
-		Size: 11.1 MB (11147600 bytes)  
+	-	`sha256:74da769045bd27dbdfe262a821ba5f473c3189b781e96b8b34360fd987b63d94`  
+		Last Modified: Sat, 18 Jul 2020 12:24:32 GMT  
+		Size: 11.2 MB (11190034 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:53bce5b10defdde1bb2e6bf86ae7cedfacbfde6705e081fd6e18b309b622b19a`  
-		Last Modified: Wed, 24 Jun 2020 23:45:18 GMT  
-		Size: 561.0 B  
+	-	`sha256:ba318d156f8e22b172658e026a697f7135e2396ec2c976b8db69504636d840a9`  
+		Last Modified: Sat, 18 Jul 2020 12:24:19 GMT  
+		Size: 565.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cc4a3c9023648270a06fc7a1de5f48169f555988220d4336ed3308e5fdbf2c3f`  
-		Last Modified: Wed, 24 Jun 2020 23:45:18 GMT  
-		Size: 544.0 B  
+	-	`sha256:cfe2f6c359531d90ace12842daf1ca1abfc17f6382451ffa5a03f0b6fa06f0c2`  
+		Last Modified: Sat, 18 Jul 2020 12:24:19 GMT  
+		Size: 545.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ff56c0bec0b61343d2a85ad63994bab773a834936043f7c5de6aa76ab405c4be`  
-		Last Modified: Wed, 24 Jun 2020 23:47:09 GMT  
+	-	`sha256:b7b3298fb61cd8d3de5306f2853d668e0516d5d8ad7f9350e43e9a31da78d5cf`  
+		Last Modified: Sat, 18 Jul 2020 12:26:06 GMT  
 		Size: 2.9 KB (2851 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1e7ebcd3ac45a8a478ab617815d5f08ec10c39d2e7a0c9799b01d4d7f3cffe0b`  
-		Last Modified: Wed, 24 Jun 2020 23:47:09 GMT  
-		Size: 1.1 KB (1063 bytes)  
+	-	`sha256:eaab77f44a67347b2571ba004f373da5e5fa69330d7d029011a2d0f95cc4ec26`  
+		Last Modified: Sat, 18 Jul 2020 12:26:06 GMT  
+		Size: 1.1 KB (1066 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `friendica:dev-apache` - linux; ppc64le
@@ -1349,14 +1345,14 @@ CMD ["apache2-foreground"]
 ### `friendica:dev-apache` - linux; s390x
 
 ```console
-$ docker pull friendica@sha256:428d93c3a60d986a103c7f54e3ca237f029ca267accadf8bbc0dba2fcef7ffc7
+$ docker pull friendica@sha256:edfbf9d087df5cb4928f5cd3b0aa0b9674382309e803f3b2566f6d038dd0bfff
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **148.1 MB (148050379 bytes)**  
+-	Total Size: **148.1 MB (148094849 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:9a4a9f71ce5c5bc94a4b0a81d1327a026cfeeca00ac5f15aa6140918e2920ec3`
+-	Image ID: `sha256:c39599b22692c15f9e4d474a76edf8160f74651e06a95775d0032d6e24b82cea`
 -	Entrypoint: `["\/entrypoint-dev.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -1431,29 +1427,25 @@ RUN set -ex;         apt-get update;     apt-get install -y --no-install-recomme
 ENV TINI_VERSION=v0.19.0
 # Wed, 24 Jun 2020 22:34:47 GMT
 RUN export BUILD_ARCH=$(dpkg-architecture --query DEB_BUILD_ARCH)  && mkdir ~/.gnupg  && echo "disable-ipv6" >> ~/.gnupg/dirmngr.conf  && curl -L -o /sbin/tini https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-${BUILD_ARCH}  && curl -L -o /tini.asc https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-${BUILD_ARCH}.asc  && gpg --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 595E85A6B1B4779EA4DAAEC70B588DFF0527A9B7  && gpg --batch --verify /tini.asc /sbin/tini  && chmod +x /sbin/tini
-# Wed, 24 Jun 2020 22:37:19 GMT
-RUN set -ex;         savedAptMark="$(apt-mark showmanual)";         apt-get update;     apt-get install -y --no-install-recommends         mysql-client         bash         libpng-dev         libjpeg62-turbo-dev         libtool         libmagick++-dev         libmemcached-dev         libgraphicsmagick1-dev         libfreetype6-dev         librsvg2-2         libzip-dev         libldap2-dev     ;             debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)";         docker-php-ext-configure gd         --with-gd         --with-freetype-dir=/usr/include/         --with-png-dir=/usr/include/         --with-jpeg-dir=/usr/include/     ;     docker-php-ext-configure ldap         --with-libdir=lib/$debMultiarch/     ;    docker-php-ext-install -j "$(nproc)"         pdo_mysql         gd         zip         opcache         ctype         pcntl         ldap     ;         pecl install apcu-5.1.18;     pecl install memcached-3.1.5;     pecl install redis-5.2.2;     pecl install imagick-3.4.4;         docker-php-ext-enable         apcu         memcached         redis         imagick     ;         apt-mark auto '.*' > /dev/null;     apt-mark manual $savedAptMark;     ldd "$(php -r 'echo ini_get("extension_dir");')"/*.so         | awk '/=>/ { print $3 }'         | sort -u         | xargs -r dpkg-query -S         | cut -d: -f1         | sort -u         | xargs -rt apt-mark manual;         apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false;     rm -rf /var/lib/apt/lists/*
-# Wed, 24 Jun 2020 22:37:21 GMT
+# Sat, 18 Jul 2020 11:45:02 GMT
+RUN set -ex;         savedAptMark="$(apt-mark showmanual)";         apt-get update;     apt-get install -y --no-install-recommends         mysql-client         bash         libpng-dev         libjpeg62-turbo-dev         libtool         libmagick++-dev         libmemcached-dev         libgraphicsmagick1-dev         libfreetype6-dev         librsvg2-2         libzip-dev         libldap2-dev     ;             debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)";         docker-php-ext-configure gd         --with-gd         --with-freetype-dir=/usr/include/         --with-png-dir=/usr/include/         --with-jpeg-dir=/usr/include/     ;     docker-php-ext-configure ldap         --with-libdir=lib/$debMultiarch/     ;    docker-php-ext-install -j "$(nproc)"         pdo_mysql         gd         zip         opcache         ctype         pcntl         ldap     ;         pecl install apcu-5.1.18;     pecl install memcached-3.1.5;     pecl install redis-5.3.1;     pecl install imagick-3.4.4;         docker-php-ext-enable         apcu         memcached         redis         imagick     ;         apt-mark auto '.*' > /dev/null;     apt-mark manual $savedAptMark;     ldd "$(php -r 'echo ini_get("extension_dir");')"/*.so         | awk '/=>/ { print $3 }'         | sort -u         | xargs -r dpkg-query -S         | cut -d: -f1         | sort -u         | xargs -rt apt-mark manual;         apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false;     rm -rf /var/lib/apt/lists/*
+# Sat, 18 Jul 2020 11:45:03 GMT
 RUN set -ex;     {         echo 'opcache.enable=1' ;         echo 'opcache.interned_strings_buffer=8';         echo 'opcache.max_accelerated_files=10000';         echo 'opcache.memory_consumption=128';         echo 'opcache.save_comments=1';         echo 'opcache.revalidte_freq=1';     } > /usr/local/etc/php/conf.d/opcache-recommended.ini;         {         echo sendmail_path = "/usr/sbin/sendmail -t -i";     } > /usr/local/etc/php/conf.d/sendmail.ini;         echo 'apc.enable_cli=1' >> /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini;         echo 'memory_limit=512M' > /usr/local/etc/php/conf.d/memory-limit.ini;         mkdir /var/www/data;     chown -R www-data:root /var/www;     chmod -R g=u /var/www
-# Wed, 24 Jun 2020 22:37:21 GMT
+# Sat, 18 Jul 2020 11:45:03 GMT
 VOLUME [/var/www/html]
-# Wed, 24 Jun 2020 22:37:22 GMT
+# Sat, 18 Jul 2020 11:45:04 GMT
 RUN set -ex;    a2enmod rewrite remoteip ;    {     echo RemoteIPHeader X-Real-IP ;     echo RemoteIPTrustedProxy 10.0.0.0/8 ;     echo RemoteIPTrustedProxy 172.16.0.0/12 ;     echo RemoteIPTrustedProxy 192.168.0.0/16 ;    } > /etc/apache2/conf-available/remoteip.conf;    a2enconf remoteip
-# Wed, 24 Jun 2020 22:41:23 GMT
-ENV FRIENDICA_VERSION=2020.06-dev
-# Wed, 24 Jun 2020 22:41:23 GMT
-ENV FRIENDICA_VERSION_YEAR=2020
-# Wed, 24 Jun 2020 22:41:23 GMT
-ENV FRIENDICA_VERSION_MONTH=06-dev
-# Wed, 24 Jun 2020 22:41:24 GMT
-ENV FRIENDICA_ADDONS=2020.06-dev
-# Wed, 24 Jun 2020 22:41:24 GMT
+# Sat, 18 Jul 2020 11:45:04 GMT
+ENV FRIENDICA_VERSION=2020.09-dev
+# Sat, 18 Jul 2020 11:45:04 GMT
+ENV FRIENDICA_ADDONS=2020.09-dev
+# Sat, 18 Jul 2020 11:45:05 GMT
 COPY multi:598df5fefad260813db8ab503035d8a1bb340cca59ac39b7dd7e3202a7d6f225 in / 
-# Wed, 24 Jun 2020 22:41:24 GMT
+# Sat, 18 Jul 2020 11:45:05 GMT
 COPY multi:923de5042cde61ed518a7067985e18cb873d0cd10946593bfb44de6ba9e078ed in /usr/src/friendica/config/ 
-# Wed, 24 Jun 2020 22:41:25 GMT
+# Sat, 18 Jul 2020 11:45:05 GMT
 ENTRYPOINT ["/entrypoint-dev.sh"]
-# Wed, 24 Jun 2020 22:41:25 GMT
+# Sat, 18 Jul 2020 11:45:06 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -1518,23 +1510,23 @@ CMD ["apache2-foreground"]
 		Last Modified: Wed, 24 Jun 2020 22:42:38 GMT  
 		Size: 16.7 KB (16676 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:610352136b51f75e9babdce909d687ace776f8d48d3b6162c16829cf85f99729`  
-		Last Modified: Wed, 24 Jun 2020 22:42:36 GMT  
-		Size: 11.4 MB (11377834 bytes)  
+	-	`sha256:f5d2ea4dea01ff8960fb7b4a9c56c79115bbce58520d940e0383f69deb11ffd9`  
+		Last Modified: Sat, 18 Jul 2020 11:47:20 GMT  
+		Size: 11.4 MB (11422299 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1bed0a99d3dd75b4be5b1ed384a9b6c87e8df30379606b2fa68755a7678f4914`  
-		Last Modified: Wed, 24 Jun 2020 22:42:33 GMT  
-		Size: 592.0 B  
+	-	`sha256:c8a5542782a7cf4e27775b5c3bdd01b6522964f4f3974fa602fcfcac3a5d8f7c`  
+		Last Modified: Sat, 18 Jul 2020 11:47:18 GMT  
+		Size: 596.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:788eb57747f46b95501807770465584081cd3e7568ef02ea9484c99d688f9dd4`  
-		Last Modified: Wed, 24 Jun 2020 22:42:38 GMT  
-		Size: 546.0 B  
+	-	`sha256:94e0b987af879e8a00cddd202212988f12555db6aa1370cc680ae9fc66aac9e5`  
+		Last Modified: Sat, 18 Jul 2020 11:47:24 GMT  
+		Size: 547.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1d837d6d2b3c3ca333e1e7313575bf08f7e8aefdd8b296e0a8aaa28d4623754a`  
-		Last Modified: Wed, 24 Jun 2020 22:43:20 GMT  
+	-	`sha256:cd5740d5ac6b264aafa56df40c6e42d81b75d400d9e9788948453136d30710dc`  
+		Last Modified: Sat, 18 Jul 2020 11:47:18 GMT  
 		Size: 2.9 KB (2851 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6ae5fc802375efefcd019de5eeff1d44f8fc824a53e107856f9b53cc15bd1d10`  
-		Last Modified: Wed, 24 Jun 2020 22:43:25 GMT  
+	-	`sha256:469c2dfda5e2880a11af4aa0b1e0cdcd3e97d451c01a23cb01eda14f0c7ddd4e`  
+		Last Modified: Sat, 18 Jul 2020 11:47:34 GMT  
 		Size: 1.1 KB (1090 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
