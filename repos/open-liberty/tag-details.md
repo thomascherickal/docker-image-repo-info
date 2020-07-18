@@ -17,7 +17,7 @@
 ## `open-liberty:20.0.0.3-full-java8-openj9`
 
 ```console
-$ docker pull open-liberty@sha256:12d86c042a778e8c9645c70f28ca80d199b1f2d649764e2805d574853199d914
+$ docker pull open-liberty@sha256:5869233edca8ee75d8e6b383f92f1518b0a0d4a35552bbf6d628150e8b862db8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -29,14 +29,14 @@ $ docker pull open-liberty@sha256:12d86c042a778e8c9645c70f28ca80d199b1f2d649764e
 ### `open-liberty:20.0.0.3-full-java8-openj9` - linux; amd64
 
 ```console
-$ docker pull open-liberty@sha256:e5c13a7b9e75fc3e36e97b9c17f6c7e3f956224022d325922812d35c9f6cb255
+$ docker pull open-liberty@sha256:71dc5369e55114b7029a525a950d38322a6291c470ee39b6f95df71071f4b35d
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **252.0 MB (251951821 bytes)**  
+-	Total Size: **252.8 MB (252828256 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:39a62a2f1df9dd14427b85b6879118c8a3e83c8e2fd5f6c94cc32f971bdb31cd`
+-	Image ID: `sha256:cd69af0fb30304b838013f40f963db0e0b082df7090cc1ee30f26237b29b8b7a`
 -	Entrypoint: `["\/opt\/ol\/helpers\/runtime\/docker-server.sh"]`
 -	Default Command: `["\/opt\/ol\/wlp\/bin\/server","run","defaultServer"]`
 
@@ -53,57 +53,57 @@ RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
 CMD ["/bin/bash"]
 # Mon, 06 Jul 2020 23:03:04 GMT
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Mon, 06 Jul 2020 23:03:21 GMT
-RUN apt-get update     && apt-get install -y --no-install-recommends curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Mon, 06 Jul 2020 23:05:06 GMT
-ENV JAVA_VERSION=jdk8u252-b09_openj9-0.20.0
-# Mon, 06 Jul 2020 23:05:25 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        ppc64el|ppc64le)          ESUM='00095854b2219c71a142135ef2b63ae48869f4366c82524353991a36204cf7e9';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u252-b09_openj9-0.20.0/OpenJDK8U-jre_ppc64le_linux_openj9_8u252b09_openj9-0.20.0.tar.gz';          ;;        s390x)          ESUM='7cb7d392fb7240c30b0993a6ec332060b406641589b4c0207b7f9cbbaad81fc8';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u252-b09_openj9-0.20.0/OpenJDK8U-jre_s390x_linux_openj9_8u252b09_openj9-0.20.0.tar.gz';          ;;        amd64|x86_64)          ESUM='5c0ab4691ff5f8e69bb14462f2afb8d73d751b01048eacf4b426ed6d6646dc63';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u252-b09_openj9-0.20.0/OpenJDK8U-jre_x64_linux_openj9_8u252b09_openj9-0.20.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Mon, 06 Jul 2020 23:05:25 GMT
+# Fri, 17 Jul 2020 22:19:52 GMT
+RUN apt-get update     && apt-get install -y --no-install-recommends tzdata curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
+# Fri, 17 Jul 2020 22:21:18 GMT
+ENV JAVA_VERSION=jdk8u262-b10_openj9-0.21.0
+# Fri, 17 Jul 2020 22:21:37 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        ppc64el|ppc64le)          ESUM='722517d9565bd9602580609114eb0de9b40b01050d52ff7bae24c438d363e186';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10_openj9-0.21.0/OpenJDK8U-jre_ppc64le_linux_openj9_8u262b10_openj9-0.21.0.tar.gz';          ;;        s390x)          ESUM='c14aeedf4e989a6b31e00d6e18b8377957b07b000cac316aee9d973ef6d65b6f';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10_openj9-0.21.0/OpenJDK8U-jre_s390x_linux_openj9_8u262b10_openj9-0.21.0.tar.gz';          ;;        amd64|x86_64)          ESUM='aef8750b492ff6371318cf5138e38827d8895815b2ac079dcfcb02007a45c7f6';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10_openj9-0.21.0/OpenJDK8U-jre_x64_linux_openj9_8u262b10_openj9-0.21.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
+# Fri, 17 Jul 2020 22:21:37 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Mon, 06 Jul 2020 23:05:25 GMT
+# Fri, 17 Jul 2020 22:21:37 GMT
 ENV JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+UseContainerSupport -XX:+IdleTuningCompactOnIdle -XX:+IdleTuningGcOnIdle
-# Tue, 07 Jul 2020 03:00:13 GMT
+# Fri, 17 Jul 2020 22:56:00 GMT
 ARG LIBERTY_VERSION=20.0.0.3
-# Tue, 07 Jul 2020 03:00:13 GMT
+# Fri, 17 Jul 2020 22:56:00 GMT
 ARG LIBERTY_SHA=49180c2cd6ce23f863760d837a4b1663680084db
-# Tue, 07 Jul 2020 03:00:13 GMT
+# Fri, 17 Jul 2020 22:56:01 GMT
 ARG LIBERTY_BUILD_LABEL=cl200320200305-1433
-# Tue, 07 Jul 2020 03:00:13 GMT
+# Fri, 17 Jul 2020 22:56:01 GMT
 ARG LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.3/openliberty-runtime-20.0.0.3.zip
-# Tue, 07 Jul 2020 03:00:14 GMT
+# Fri, 17 Jul 2020 22:56:01 GMT
 ARG OPENJ9_SCC=true
-# Tue, 07 Jul 2020 03:00:14 GMT
+# Fri, 17 Jul 2020 22:56:01 GMT
 LABEL org.opencontainers.image.authors=Arthur De Magalhaes, Chris Potter org.opencontainers.image.vendor=Open Liberty org.opencontainers.image.url=https://openliberty.io/ org.opencontainers.image.source=https://github.com/OpenLiberty/ci.docker org.opencontainers.image.revision=cl200320200305-1433 org.opencontainers.image.description=This image contains the Open Liberty runtime with AdoptOpenJDK with OpenJ9 and Ubuntu as the base OS.  For more information on this image please see https://github.com/OpenLiberty/ci.docker#building-an-application-image org.opencontainers.image.title=Open Liberty org.opencontainers.image.version=20.0.0.3
-# Tue, 07 Jul 2020 03:00:14 GMT
+# Fri, 17 Jul 2020 22:56:01 GMT
 COPY dir:db13e0b286891a0bd7aa45ab6285056101f78bde154aff1711d0e2933840a07f in /opt/ol/helpers 
-# Tue, 07 Jul 2020 03:00:14 GMT
+# Fri, 17 Jul 2020 22:56:02 GMT
 COPY dir:1cf5cc2663c6235241a5228340a9c566587fe27b3e434a313debbf75dacd7a4b in /opt/ol/fixes/ 
-# Tue, 07 Jul 2020 03:00:25 GMT
+# Fri, 17 Jul 2020 22:56:13 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200320200305-1433 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.3/openliberty-runtime-20.0.0.3.zip LIBERTY_SHA=49180c2cd6ce23f863760d837a4b1663680084db LIBERTY_VERSION=20.0.0.3 OPENJ9_SCC=true
 RUN apt-get update     && apt-get install -y --no-install-recommends unzip openssl wget     && rm -rf /var/lib/apt/lists/*     && wget -q $LIBERTY_DOWNLOAD_URL -U UA-Open-Liberty-Docker -O /tmp/wlp.zip     && echo "$LIBERTY_SHA  /tmp/wlp.zip" > /tmp/wlp.zip.sha1     && sha1sum -c /tmp/wlp.zip.sha1     && unzip -q /tmp/wlp.zip -d /opt/ol     && rm /tmp/wlp.zip     && rm /tmp/wlp.zip.sha1     && apt-get remove -y unzip     && apt-get remove -y wget     && rm -rf /var/lib/apt/lists/*     && useradd -u 1001 -r -g 0 -s /usr/sbin/nologin default     && chown -R 1001:0 /opt/ol/wlp     && chmod -R g+rw /opt/ol/wlp
-# Tue, 07 Jul 2020 03:00:26 GMT
+# Fri, 17 Jul 2020 22:56:13 GMT
 ENV PATH=/opt/ol/wlp/bin:/opt/ol/docker/:/opt/ol/helpers/build:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin LOG_DIR=/logs WLP_OUTPUT_DIR=/opt/ol/wlp/output WLP_SKIP_MAXPERMSIZE=true OPENJ9_SCC=true
-# Tue, 07 Jul 2020 03:00:27 GMT
+# Fri, 17 Jul 2020 22:56:14 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200320200305-1433 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.3/openliberty-runtime-20.0.0.3.zip LIBERTY_SHA=49180c2cd6ce23f863760d837a4b1663680084db LIBERTY_VERSION=20.0.0.3
 RUN /opt/ol/wlp/bin/server create     && rm -rf $WLP_OUTPUT_DIR/.classCache /output/workarea
-# Tue, 07 Jul 2020 03:00:27 GMT
+# Fri, 17 Jul 2020 22:56:15 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200320200305-1433 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.3/openliberty-runtime-20.0.0.3.zip LIBERTY_SHA=49180c2cd6ce23f863760d837a4b1663680084db LIBERTY_VERSION=20.0.0.3
 RUN mkdir /logs     && mkdir -p /opt/ol/wlp/usr/shared/resources/lib.index.cache     && ln -s /opt/ol/wlp/usr/shared/resources/lib.index.cache /lib.index.cache     && mkdir -p $WLP_OUTPUT_DIR/defaultServer     && ln -s $WLP_OUTPUT_DIR/defaultServer /output     && ln -s /opt/ol/wlp/usr/servers/defaultServer /config     && mkdir -p /config/configDropins/defaults     && mkdir -p /config/configDropins/overrides     && ln -s /opt/ol/wlp /liberty     && chown -R 1001:0 /config     && chmod -R g+rw /config     && chown -R 1001:0 /logs     && chmod -R g+rw /logs     && chown -R 1001:0 /opt/ol/wlp/usr     && chmod -R g+rw /opt/ol/wlp/usr     && chown -R 1001:0 /opt/ol/wlp/output     && chmod -R g+rw /opt/ol/wlp/output     && chown -R 1001:0 /opt/ol/helpers     && chmod -R g+rw /opt/ol/helpers     && chown -R 1001:0 /opt/ol/fixes     && chmod -R g+rwx /opt/ol/fixes     && mkdir /etc/wlp     && chown -R 1001:0 /etc/wlp     && chmod -R g+rw /etc/wlp     && echo "<server description=\"Default Server\"><httpEndpoint id=\"defaultHttpEndpoint\" host=\"*\" /></server>" > /config/configDropins/defaults/open-default-port.xml
-# Tue, 07 Jul 2020 03:00:46 GMT
+# Fri, 17 Jul 2020 22:56:36 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200320200305-1433 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.3/openliberty-runtime-20.0.0.3.zip LIBERTY_SHA=49180c2cd6ce23f863760d837a4b1663680084db LIBERTY_VERSION=20.0.0.3
 RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /output/messaging /output/resources/security /logs/* $WLP_OUTPUT_DIR/.classCache     && chown -R 1001:0 /opt/ol/wlp/output     && chmod -R g+rwx /opt/ol/wlp/output
-# Tue, 07 Jul 2020 03:00:46 GMT
+# Fri, 17 Jul 2020 22:56:36 GMT
 ENV RANDFILE=/tmp/.rnd IBM_JAVA_OPTIONS=-Xshareclasses:name=liberty,nonfatal,cacheDir=/output/.classCache/ 
-# Tue, 07 Jul 2020 03:00:46 GMT
+# Fri, 17 Jul 2020 22:56:36 GMT
 USER 1001
-# Tue, 07 Jul 2020 03:00:47 GMT
+# Fri, 17 Jul 2020 22:56:36 GMT
 EXPOSE 9080 9443
-# Tue, 07 Jul 2020 03:00:47 GMT
+# Fri, 17 Jul 2020 22:56:36 GMT
 ENTRYPOINT ["/opt/ol/helpers/runtime/docker-server.sh"]
-# Tue, 07 Jul 2020 03:00:47 GMT
+# Fri, 17 Jul 2020 22:56:37 GMT
 CMD ["/opt/ol/wlp/bin/server" "run" "defaultServer"]
-# Tue, 07 Jul 2020 03:00:53 GMT
+# Fri, 17 Jul 2020 22:56:48 GMT
 RUN cp /opt/ol/wlp/templates/servers/javaee8/server.xml /config/server.xml
 ```
 
@@ -124,40 +124,40 @@ RUN cp /opt/ol/wlp/templates/servers/javaee8/server.xml /config/server.xml
 		Last Modified: Mon, 06 Jul 2020 21:57:19 GMT  
 		Size: 162.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0cbfb179272dc9aa9a0a4722b2f8ffe1d0cdb83652c091add1d0c091d505468e`  
-		Last Modified: Mon, 06 Jul 2020 23:07:26 GMT  
-		Size: 13.3 MB (13311646 bytes)  
+	-	`sha256:262049cebf1b6f60b6dc78a926be5d3a689ba76a6c5c28edc9b195952b98c31f`  
+		Last Modified: Fri, 17 Jul 2020 22:23:14 GMT  
+		Size: 13.9 MB (13875144 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d69578686d5961608b047f555a5d6b3e75e1a8bfadde61e661ffe3b5717439e0`  
-		Last Modified: Mon, 06 Jul 2020 23:10:16 GMT  
-		Size: 48.5 MB (48502689 bytes)  
+	-	`sha256:ae7ae3562f54a1abcec2e390aa39c5d1bdd4d797018f8288100ac516ff45ec7e`  
+		Last Modified: Fri, 17 Jul 2020 22:25:12 GMT  
+		Size: 48.7 MB (48691295 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:48fcd40dae891033ce441db2457c92a8a833020057ee244010f616fd9ca97c8a`  
-		Last Modified: Tue, 07 Jul 2020 03:01:54 GMT  
-		Size: 6.5 KB (6517 bytes)  
+	-	`sha256:44f98f54810e854ecb60f31726e9cccf3fb615a73d9910ece25e74b1bbae8d54`  
+		Last Modified: Fri, 17 Jul 2020 22:57:40 GMT  
+		Size: 6.5 KB (6520 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f61375dabffa4f1bf641e0cf4b64f11ea4a9cc5b848db51d66bf53f273f3a1f7`  
-		Last Modified: Tue, 07 Jul 2020 03:01:54 GMT  
-		Size: 240.0 B  
+	-	`sha256:d9dbc3f99f4ad350bca19737fd57cf81b0f2c04631ff774db1292f9fee411cb3`  
+		Last Modified: Fri, 17 Jul 2020 22:57:40 GMT  
+		Size: 241.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a06edff394ed6dad477218b907d5a30c5355a9d64e14dec5dbea48bee741f57c`  
-		Last Modified: Tue, 07 Jul 2020 03:02:03 GMT  
-		Size: 155.0 MB (155025882 bytes)  
+	-	`sha256:0a56a45917d6e0c378373f112b8a0df6241b298bab057c329cbc98d038c41abd`  
+		Last Modified: Fri, 17 Jul 2020 22:57:49 GMT  
+		Size: 155.1 MB (155084321 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fb8b8ef114ca7384af12a308751b1a3b7bff78667518ded32af47a097d9bb1d6`  
-		Last Modified: Tue, 07 Jul 2020 03:01:53 GMT  
+	-	`sha256:4524c1be43b417f3cf8d33e94586aedd087d51d849e7f7cdc6971e44ba4eb1c4`  
+		Last Modified: Fri, 17 Jul 2020 22:57:39 GMT  
 		Size: 934.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fe79530d6caf5045d2b639fcc94a0b6324a1c96c4110eef0e54892e7112383a8`  
-		Last Modified: Tue, 07 Jul 2020 03:01:52 GMT  
-		Size: 7.5 KB (7550 bytes)  
+	-	`sha256:0ef1d42e5ac14b9c687e2d6ae4e43f100ea955ca0b89854b3b1d49b909455f2a`  
+		Last Modified: Fri, 17 Jul 2020 22:57:39 GMT  
+		Size: 7.5 KB (7548 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5033728e2ddf348b25d77cdce113df475b67a70947beae0797836676b954c3e0`  
-		Last Modified: Tue, 07 Jul 2020 03:01:54 GMT  
-		Size: 8.4 MB (8362828 bytes)  
+	-	`sha256:a95a0d9bc818691b6d0a9a9ba4993d84ebf798f69c111bfaecf565c95ad337bd`  
+		Last Modified: Fri, 17 Jul 2020 22:57:42 GMT  
+		Size: 8.4 MB (8428718 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:71d1be2dda230dc3fc3babc3832cb38174e186c0c97d54d687af77126706c5b8`  
-		Last Modified: Tue, 07 Jul 2020 03:02:08 GMT  
+	-	`sha256:649f88c91d9bbb9feda6da2cb3299b4798be00a8ef34460deb7f452b81d978a3`  
+		Last Modified: Fri, 17 Jul 2020 22:57:55 GMT  
 		Size: 963.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -434,7 +434,7 @@ RUN cp /opt/ol/wlp/templates/servers/javaee8/server.xml /config/server.xml
 ## `open-liberty:20.0.0.3-kernel-java8-openj9`
 
 ```console
-$ docker pull open-liberty@sha256:e92c2b1e7081bae6def1756e292b4e7dcb35797a0ae24c816778a4e1545d04d4
+$ docker pull open-liberty@sha256:a2f84540eccb232aa7843b65a58030b4efffc181073096bb27e7a84bd0e44aa2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -446,14 +446,14 @@ $ docker pull open-liberty@sha256:e92c2b1e7081bae6def1756e292b4e7dcb35797a0ae24c
 ### `open-liberty:20.0.0.3-kernel-java8-openj9` - linux; amd64
 
 ```console
-$ docker pull open-liberty@sha256:38f166e40583e360da28b2952c259cdb299198f6274eeb0f35844812e65c410b
+$ docker pull open-liberty@sha256:7c773037d384c1c70f7290f0995f51f415238fbb70433de441465695080f579d
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **252.0 MB (251950858 bytes)**  
+-	Total Size: **252.8 MB (252827293 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:da46e14b242a150e7c7b1c21ba73a743c9b0a1dbf32af55e80f928544e5fefa5`
+-	Image ID: `sha256:2beda37051c40d4b58ca25e6988b8f4db7c26f8988cfedc9619d95c0bd573f6e`
 -	Entrypoint: `["\/opt\/ol\/helpers\/runtime\/docker-server.sh"]`
 -	Default Command: `["\/opt\/ol\/wlp\/bin\/server","run","defaultServer"]`
 
@@ -470,55 +470,55 @@ RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
 CMD ["/bin/bash"]
 # Mon, 06 Jul 2020 23:03:04 GMT
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Mon, 06 Jul 2020 23:03:21 GMT
-RUN apt-get update     && apt-get install -y --no-install-recommends curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Mon, 06 Jul 2020 23:05:06 GMT
-ENV JAVA_VERSION=jdk8u252-b09_openj9-0.20.0
-# Mon, 06 Jul 2020 23:05:25 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        ppc64el|ppc64le)          ESUM='00095854b2219c71a142135ef2b63ae48869f4366c82524353991a36204cf7e9';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u252-b09_openj9-0.20.0/OpenJDK8U-jre_ppc64le_linux_openj9_8u252b09_openj9-0.20.0.tar.gz';          ;;        s390x)          ESUM='7cb7d392fb7240c30b0993a6ec332060b406641589b4c0207b7f9cbbaad81fc8';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u252-b09_openj9-0.20.0/OpenJDK8U-jre_s390x_linux_openj9_8u252b09_openj9-0.20.0.tar.gz';          ;;        amd64|x86_64)          ESUM='5c0ab4691ff5f8e69bb14462f2afb8d73d751b01048eacf4b426ed6d6646dc63';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u252-b09_openj9-0.20.0/OpenJDK8U-jre_x64_linux_openj9_8u252b09_openj9-0.20.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Mon, 06 Jul 2020 23:05:25 GMT
+# Fri, 17 Jul 2020 22:19:52 GMT
+RUN apt-get update     && apt-get install -y --no-install-recommends tzdata curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
+# Fri, 17 Jul 2020 22:21:18 GMT
+ENV JAVA_VERSION=jdk8u262-b10_openj9-0.21.0
+# Fri, 17 Jul 2020 22:21:37 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        ppc64el|ppc64le)          ESUM='722517d9565bd9602580609114eb0de9b40b01050d52ff7bae24c438d363e186';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10_openj9-0.21.0/OpenJDK8U-jre_ppc64le_linux_openj9_8u262b10_openj9-0.21.0.tar.gz';          ;;        s390x)          ESUM='c14aeedf4e989a6b31e00d6e18b8377957b07b000cac316aee9d973ef6d65b6f';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10_openj9-0.21.0/OpenJDK8U-jre_s390x_linux_openj9_8u262b10_openj9-0.21.0.tar.gz';          ;;        amd64|x86_64)          ESUM='aef8750b492ff6371318cf5138e38827d8895815b2ac079dcfcb02007a45c7f6';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10_openj9-0.21.0/OpenJDK8U-jre_x64_linux_openj9_8u262b10_openj9-0.21.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
+# Fri, 17 Jul 2020 22:21:37 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Mon, 06 Jul 2020 23:05:25 GMT
+# Fri, 17 Jul 2020 22:21:37 GMT
 ENV JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+UseContainerSupport -XX:+IdleTuningCompactOnIdle -XX:+IdleTuningGcOnIdle
-# Tue, 07 Jul 2020 03:00:13 GMT
+# Fri, 17 Jul 2020 22:56:00 GMT
 ARG LIBERTY_VERSION=20.0.0.3
-# Tue, 07 Jul 2020 03:00:13 GMT
+# Fri, 17 Jul 2020 22:56:00 GMT
 ARG LIBERTY_SHA=49180c2cd6ce23f863760d837a4b1663680084db
-# Tue, 07 Jul 2020 03:00:13 GMT
+# Fri, 17 Jul 2020 22:56:01 GMT
 ARG LIBERTY_BUILD_LABEL=cl200320200305-1433
-# Tue, 07 Jul 2020 03:00:13 GMT
+# Fri, 17 Jul 2020 22:56:01 GMT
 ARG LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.3/openliberty-runtime-20.0.0.3.zip
-# Tue, 07 Jul 2020 03:00:14 GMT
+# Fri, 17 Jul 2020 22:56:01 GMT
 ARG OPENJ9_SCC=true
-# Tue, 07 Jul 2020 03:00:14 GMT
+# Fri, 17 Jul 2020 22:56:01 GMT
 LABEL org.opencontainers.image.authors=Arthur De Magalhaes, Chris Potter org.opencontainers.image.vendor=Open Liberty org.opencontainers.image.url=https://openliberty.io/ org.opencontainers.image.source=https://github.com/OpenLiberty/ci.docker org.opencontainers.image.revision=cl200320200305-1433 org.opencontainers.image.description=This image contains the Open Liberty runtime with AdoptOpenJDK with OpenJ9 and Ubuntu as the base OS.  For more information on this image please see https://github.com/OpenLiberty/ci.docker#building-an-application-image org.opencontainers.image.title=Open Liberty org.opencontainers.image.version=20.0.0.3
-# Tue, 07 Jul 2020 03:00:14 GMT
+# Fri, 17 Jul 2020 22:56:01 GMT
 COPY dir:db13e0b286891a0bd7aa45ab6285056101f78bde154aff1711d0e2933840a07f in /opt/ol/helpers 
-# Tue, 07 Jul 2020 03:00:14 GMT
+# Fri, 17 Jul 2020 22:56:02 GMT
 COPY dir:1cf5cc2663c6235241a5228340a9c566587fe27b3e434a313debbf75dacd7a4b in /opt/ol/fixes/ 
-# Tue, 07 Jul 2020 03:00:25 GMT
+# Fri, 17 Jul 2020 22:56:13 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200320200305-1433 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.3/openliberty-runtime-20.0.0.3.zip LIBERTY_SHA=49180c2cd6ce23f863760d837a4b1663680084db LIBERTY_VERSION=20.0.0.3 OPENJ9_SCC=true
 RUN apt-get update     && apt-get install -y --no-install-recommends unzip openssl wget     && rm -rf /var/lib/apt/lists/*     && wget -q $LIBERTY_DOWNLOAD_URL -U UA-Open-Liberty-Docker -O /tmp/wlp.zip     && echo "$LIBERTY_SHA  /tmp/wlp.zip" > /tmp/wlp.zip.sha1     && sha1sum -c /tmp/wlp.zip.sha1     && unzip -q /tmp/wlp.zip -d /opt/ol     && rm /tmp/wlp.zip     && rm /tmp/wlp.zip.sha1     && apt-get remove -y unzip     && apt-get remove -y wget     && rm -rf /var/lib/apt/lists/*     && useradd -u 1001 -r -g 0 -s /usr/sbin/nologin default     && chown -R 1001:0 /opt/ol/wlp     && chmod -R g+rw /opt/ol/wlp
-# Tue, 07 Jul 2020 03:00:26 GMT
+# Fri, 17 Jul 2020 22:56:13 GMT
 ENV PATH=/opt/ol/wlp/bin:/opt/ol/docker/:/opt/ol/helpers/build:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin LOG_DIR=/logs WLP_OUTPUT_DIR=/opt/ol/wlp/output WLP_SKIP_MAXPERMSIZE=true OPENJ9_SCC=true
-# Tue, 07 Jul 2020 03:00:27 GMT
+# Fri, 17 Jul 2020 22:56:14 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200320200305-1433 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.3/openliberty-runtime-20.0.0.3.zip LIBERTY_SHA=49180c2cd6ce23f863760d837a4b1663680084db LIBERTY_VERSION=20.0.0.3
 RUN /opt/ol/wlp/bin/server create     && rm -rf $WLP_OUTPUT_DIR/.classCache /output/workarea
-# Tue, 07 Jul 2020 03:00:27 GMT
+# Fri, 17 Jul 2020 22:56:15 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200320200305-1433 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.3/openliberty-runtime-20.0.0.3.zip LIBERTY_SHA=49180c2cd6ce23f863760d837a4b1663680084db LIBERTY_VERSION=20.0.0.3
 RUN mkdir /logs     && mkdir -p /opt/ol/wlp/usr/shared/resources/lib.index.cache     && ln -s /opt/ol/wlp/usr/shared/resources/lib.index.cache /lib.index.cache     && mkdir -p $WLP_OUTPUT_DIR/defaultServer     && ln -s $WLP_OUTPUT_DIR/defaultServer /output     && ln -s /opt/ol/wlp/usr/servers/defaultServer /config     && mkdir -p /config/configDropins/defaults     && mkdir -p /config/configDropins/overrides     && ln -s /opt/ol/wlp /liberty     && chown -R 1001:0 /config     && chmod -R g+rw /config     && chown -R 1001:0 /logs     && chmod -R g+rw /logs     && chown -R 1001:0 /opt/ol/wlp/usr     && chmod -R g+rw /opt/ol/wlp/usr     && chown -R 1001:0 /opt/ol/wlp/output     && chmod -R g+rw /opt/ol/wlp/output     && chown -R 1001:0 /opt/ol/helpers     && chmod -R g+rw /opt/ol/helpers     && chown -R 1001:0 /opt/ol/fixes     && chmod -R g+rwx /opt/ol/fixes     && mkdir /etc/wlp     && chown -R 1001:0 /etc/wlp     && chmod -R g+rw /etc/wlp     && echo "<server description=\"Default Server\"><httpEndpoint id=\"defaultHttpEndpoint\" host=\"*\" /></server>" > /config/configDropins/defaults/open-default-port.xml
-# Tue, 07 Jul 2020 03:00:46 GMT
+# Fri, 17 Jul 2020 22:56:36 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200320200305-1433 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.3/openliberty-runtime-20.0.0.3.zip LIBERTY_SHA=49180c2cd6ce23f863760d837a4b1663680084db LIBERTY_VERSION=20.0.0.3
 RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /output/messaging /output/resources/security /logs/* $WLP_OUTPUT_DIR/.classCache     && chown -R 1001:0 /opt/ol/wlp/output     && chmod -R g+rwx /opt/ol/wlp/output
-# Tue, 07 Jul 2020 03:00:46 GMT
+# Fri, 17 Jul 2020 22:56:36 GMT
 ENV RANDFILE=/tmp/.rnd IBM_JAVA_OPTIONS=-Xshareclasses:name=liberty,nonfatal,cacheDir=/output/.classCache/ 
-# Tue, 07 Jul 2020 03:00:46 GMT
+# Fri, 17 Jul 2020 22:56:36 GMT
 USER 1001
-# Tue, 07 Jul 2020 03:00:47 GMT
+# Fri, 17 Jul 2020 22:56:36 GMT
 EXPOSE 9080 9443
-# Tue, 07 Jul 2020 03:00:47 GMT
+# Fri, 17 Jul 2020 22:56:36 GMT
 ENTRYPOINT ["/opt/ol/helpers/runtime/docker-server.sh"]
-# Tue, 07 Jul 2020 03:00:47 GMT
+# Fri, 17 Jul 2020 22:56:37 GMT
 CMD ["/opt/ol/wlp/bin/server" "run" "defaultServer"]
 ```
 
@@ -539,37 +539,37 @@ CMD ["/opt/ol/wlp/bin/server" "run" "defaultServer"]
 		Last Modified: Mon, 06 Jul 2020 21:57:19 GMT  
 		Size: 162.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0cbfb179272dc9aa9a0a4722b2f8ffe1d0cdb83652c091add1d0c091d505468e`  
-		Last Modified: Mon, 06 Jul 2020 23:07:26 GMT  
-		Size: 13.3 MB (13311646 bytes)  
+	-	`sha256:262049cebf1b6f60b6dc78a926be5d3a689ba76a6c5c28edc9b195952b98c31f`  
+		Last Modified: Fri, 17 Jul 2020 22:23:14 GMT  
+		Size: 13.9 MB (13875144 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d69578686d5961608b047f555a5d6b3e75e1a8bfadde61e661ffe3b5717439e0`  
-		Last Modified: Mon, 06 Jul 2020 23:10:16 GMT  
-		Size: 48.5 MB (48502689 bytes)  
+	-	`sha256:ae7ae3562f54a1abcec2e390aa39c5d1bdd4d797018f8288100ac516ff45ec7e`  
+		Last Modified: Fri, 17 Jul 2020 22:25:12 GMT  
+		Size: 48.7 MB (48691295 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:48fcd40dae891033ce441db2457c92a8a833020057ee244010f616fd9ca97c8a`  
-		Last Modified: Tue, 07 Jul 2020 03:01:54 GMT  
-		Size: 6.5 KB (6517 bytes)  
+	-	`sha256:44f98f54810e854ecb60f31726e9cccf3fb615a73d9910ece25e74b1bbae8d54`  
+		Last Modified: Fri, 17 Jul 2020 22:57:40 GMT  
+		Size: 6.5 KB (6520 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f61375dabffa4f1bf641e0cf4b64f11ea4a9cc5b848db51d66bf53f273f3a1f7`  
-		Last Modified: Tue, 07 Jul 2020 03:01:54 GMT  
-		Size: 240.0 B  
+	-	`sha256:d9dbc3f99f4ad350bca19737fd57cf81b0f2c04631ff774db1292f9fee411cb3`  
+		Last Modified: Fri, 17 Jul 2020 22:57:40 GMT  
+		Size: 241.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a06edff394ed6dad477218b907d5a30c5355a9d64e14dec5dbea48bee741f57c`  
-		Last Modified: Tue, 07 Jul 2020 03:02:03 GMT  
-		Size: 155.0 MB (155025882 bytes)  
+	-	`sha256:0a56a45917d6e0c378373f112b8a0df6241b298bab057c329cbc98d038c41abd`  
+		Last Modified: Fri, 17 Jul 2020 22:57:49 GMT  
+		Size: 155.1 MB (155084321 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fb8b8ef114ca7384af12a308751b1a3b7bff78667518ded32af47a097d9bb1d6`  
-		Last Modified: Tue, 07 Jul 2020 03:01:53 GMT  
+	-	`sha256:4524c1be43b417f3cf8d33e94586aedd087d51d849e7f7cdc6971e44ba4eb1c4`  
+		Last Modified: Fri, 17 Jul 2020 22:57:39 GMT  
 		Size: 934.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fe79530d6caf5045d2b639fcc94a0b6324a1c96c4110eef0e54892e7112383a8`  
-		Last Modified: Tue, 07 Jul 2020 03:01:52 GMT  
-		Size: 7.5 KB (7550 bytes)  
+	-	`sha256:0ef1d42e5ac14b9c687e2d6ae4e43f100ea955ca0b89854b3b1d49b909455f2a`  
+		Last Modified: Fri, 17 Jul 2020 22:57:39 GMT  
+		Size: 7.5 KB (7548 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5033728e2ddf348b25d77cdce113df475b67a70947beae0797836676b954c3e0`  
-		Last Modified: Tue, 07 Jul 2020 03:01:54 GMT  
-		Size: 8.4 MB (8362828 bytes)  
+	-	`sha256:a95a0d9bc818691b6d0a9a9ba4993d84ebf798f69c111bfaecf565c95ad337bd`  
+		Last Modified: Fri, 17 Jul 2020 22:57:42 GMT  
+		Size: 8.4 MB (8428718 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `open-liberty:20.0.0.3-kernel-java8-openj9` - linux; ppc64le
@@ -833,7 +833,7 @@ CMD ["/opt/ol/wlp/bin/server" "run" "defaultServer"]
 ## `open-liberty:20.0.0.6-full-java8-openj9`
 
 ```console
-$ docker pull open-liberty@sha256:2edb3a98d38e7f01656060263f76355f5afdf9c6ec4cc1f100750a12b0527e66
+$ docker pull open-liberty@sha256:1d88a4532a6cdb6e6dcbe5074f98849af30fb6a58559a414cac90c81873ffd99
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -845,14 +845,14 @@ $ docker pull open-liberty@sha256:2edb3a98d38e7f01656060263f76355f5afdf9c6ec4cc1
 ### `open-liberty:20.0.0.6-full-java8-openj9` - linux; amd64
 
 ```console
-$ docker pull open-liberty@sha256:837ba76d5fddd250d00006e64d1476c8de9173fc9c698555b0028e3b256e9f11
+$ docker pull open-liberty@sha256:6033e26e2e40d038cd1a7338117116c40a3782867a646ef60689f46b24cdda96
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **271.1 MB (271138937 bytes)**  
+-	Total Size: **272.2 MB (272150362 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ca310369b834a2062e6245b7fe064587f5593c0393e1abe312c1bddd7f41dbb1`
+-	Image ID: `sha256:54372ce342fb47987af81d848dd2f9caf0741bc6bed95f734e7bec888ee2aa4e`
 -	Entrypoint: `["\/opt\/ol\/helpers\/runtime\/docker-server.sh"]`
 -	Default Command: `["\/opt\/ol\/wlp\/bin\/server","run","defaultServer"]`
 
@@ -869,59 +869,59 @@ RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
 CMD ["/bin/bash"]
 # Mon, 06 Jul 2020 23:03:04 GMT
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Mon, 06 Jul 2020 23:03:21 GMT
-RUN apt-get update     && apt-get install -y --no-install-recommends curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Mon, 06 Jul 2020 23:05:06 GMT
-ENV JAVA_VERSION=jdk8u252-b09_openj9-0.20.0
-# Mon, 06 Jul 2020 23:05:25 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        ppc64el|ppc64le)          ESUM='00095854b2219c71a142135ef2b63ae48869f4366c82524353991a36204cf7e9';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u252-b09_openj9-0.20.0/OpenJDK8U-jre_ppc64le_linux_openj9_8u252b09_openj9-0.20.0.tar.gz';          ;;        s390x)          ESUM='7cb7d392fb7240c30b0993a6ec332060b406641589b4c0207b7f9cbbaad81fc8';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u252-b09_openj9-0.20.0/OpenJDK8U-jre_s390x_linux_openj9_8u252b09_openj9-0.20.0.tar.gz';          ;;        amd64|x86_64)          ESUM='5c0ab4691ff5f8e69bb14462f2afb8d73d751b01048eacf4b426ed6d6646dc63';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u252-b09_openj9-0.20.0/OpenJDK8U-jre_x64_linux_openj9_8u252b09_openj9-0.20.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Mon, 06 Jul 2020 23:05:25 GMT
+# Fri, 17 Jul 2020 22:19:52 GMT
+RUN apt-get update     && apt-get install -y --no-install-recommends tzdata curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
+# Fri, 17 Jul 2020 22:21:18 GMT
+ENV JAVA_VERSION=jdk8u262-b10_openj9-0.21.0
+# Fri, 17 Jul 2020 22:21:37 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        ppc64el|ppc64le)          ESUM='722517d9565bd9602580609114eb0de9b40b01050d52ff7bae24c438d363e186';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10_openj9-0.21.0/OpenJDK8U-jre_ppc64le_linux_openj9_8u262b10_openj9-0.21.0.tar.gz';          ;;        s390x)          ESUM='c14aeedf4e989a6b31e00d6e18b8377957b07b000cac316aee9d973ef6d65b6f';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10_openj9-0.21.0/OpenJDK8U-jre_s390x_linux_openj9_8u262b10_openj9-0.21.0.tar.gz';          ;;        amd64|x86_64)          ESUM='aef8750b492ff6371318cf5138e38827d8895815b2ac079dcfcb02007a45c7f6';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10_openj9-0.21.0/OpenJDK8U-jre_x64_linux_openj9_8u262b10_openj9-0.21.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
+# Fri, 17 Jul 2020 22:21:37 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Mon, 06 Jul 2020 23:05:25 GMT
+# Fri, 17 Jul 2020 22:21:37 GMT
 ENV JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+UseContainerSupport -XX:+IdleTuningCompactOnIdle -XX:+IdleTuningGcOnIdle
-# Tue, 07 Jul 2020 02:58:59 GMT
+# Fri, 17 Jul 2020 22:54:39 GMT
 ARG LIBERTY_VERSION=20.0.0.6
-# Tue, 07 Jul 2020 02:58:59 GMT
+# Fri, 17 Jul 2020 22:54:40 GMT
 ARG LIBERTY_SHA=083e89c2f96972df339a513582b338658e6562b3
-# Tue, 07 Jul 2020 02:59:00 GMT
+# Fri, 17 Jul 2020 22:54:40 GMT
 ARG LIBERTY_BUILD_LABEL=cl200620200528-0414
-# Tue, 07 Jul 2020 02:59:00 GMT
+# Fri, 17 Jul 2020 22:54:40 GMT
 ARG LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.6/openliberty-runtime-20.0.0.6.zip
-# Tue, 07 Jul 2020 02:59:00 GMT
+# Fri, 17 Jul 2020 22:54:40 GMT
 ARG OPENJ9_SCC=true
-# Tue, 07 Jul 2020 02:59:00 GMT
+# Fri, 17 Jul 2020 22:54:40 GMT
 LABEL org.opencontainers.image.authors=Arthur De Magalhaes, Chris Potter org.opencontainers.image.vendor=Open Liberty org.opencontainers.image.url=https://openliberty.io/ org.opencontainers.image.source=https://github.com/OpenLiberty/ci.docker org.opencontainers.image.revision=cl200620200528-0414 org.opencontainers.image.description=This image contains the Open Liberty runtime with AdoptOpenJDK with OpenJ9 and Ubuntu as the base OS.  For more information on this image please see https://github.com/OpenLiberty/ci.docker#building-an-application-image org.opencontainers.image.title=Open Liberty org.opencontainers.image.version=20.0.0.6
-# Tue, 07 Jul 2020 02:59:00 GMT
+# Fri, 17 Jul 2020 22:54:40 GMT
 COPY dir:e8bb2487ca41e6b847cd1240bcb920ccb8c6de3c77aaaaf5ed7f0d39a3789c4a in /opt/ol/helpers 
-# Tue, 07 Jul 2020 02:59:01 GMT
+# Fri, 17 Jul 2020 22:54:41 GMT
 COPY dir:1cf5cc2663c6235241a5228340a9c566587fe27b3e434a313debbf75dacd7a4b in /opt/ol/fixes/ 
-# Tue, 07 Jul 2020 02:59:12 GMT
+# Fri, 17 Jul 2020 22:54:52 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200620200528-0414 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.6/openliberty-runtime-20.0.0.6.zip LIBERTY_SHA=083e89c2f96972df339a513582b338658e6562b3 LIBERTY_VERSION=20.0.0.6 OPENJ9_SCC=true
 RUN apt-get update     && apt-get install -y --no-install-recommends unzip openssl wget     && rm -rf /var/lib/apt/lists/*     && wget -q $LIBERTY_DOWNLOAD_URL -U UA-Open-Liberty-Docker -O /tmp/wlp.zip     && echo "$LIBERTY_SHA  /tmp/wlp.zip" > /tmp/wlp.zip.sha1     && sha1sum -c /tmp/wlp.zip.sha1     && unzip -q /tmp/wlp.zip -d /opt/ol     && rm /tmp/wlp.zip     && rm /tmp/wlp.zip.sha1     && apt-get remove -y unzip     && apt-get remove -y wget     && rm -rf /var/lib/apt/lists/*     && useradd -u 1001 -r -g 0 -s /usr/sbin/nologin default     && chown -R 1001:0 /opt/ol/wlp     && chmod -R g+rw /opt/ol/wlp
-# Tue, 07 Jul 2020 02:59:13 GMT
+# Fri, 17 Jul 2020 22:54:53 GMT
 ENV PATH=/opt/ol/wlp/bin:/opt/ol/docker/:/opt/ol/helpers/build:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin LOG_DIR=/logs WLP_OUTPUT_DIR=/opt/ol/wlp/output WLP_SKIP_MAXPERMSIZE=true OPENJ9_SCC=true
-# Tue, 07 Jul 2020 02:59:14 GMT
+# Fri, 17 Jul 2020 22:54:54 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200620200528-0414 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.6/openliberty-runtime-20.0.0.6.zip LIBERTY_SHA=083e89c2f96972df339a513582b338658e6562b3 LIBERTY_VERSION=20.0.0.6
 RUN /opt/ol/wlp/bin/server create     && rm -rf $WLP_OUTPUT_DIR/.classCache /output/workarea
-# Tue, 07 Jul 2020 02:59:14 GMT
+# Fri, 17 Jul 2020 22:54:54 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200620200528-0414 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.6/openliberty-runtime-20.0.0.6.zip LIBERTY_SHA=083e89c2f96972df339a513582b338658e6562b3 LIBERTY_VERSION=20.0.0.6
 RUN mkdir /logs     && mkdir -p /opt/ol/wlp/usr/shared/resources/lib.index.cache     && ln -s /opt/ol/wlp/usr/shared/resources/lib.index.cache /lib.index.cache     && mkdir -p $WLP_OUTPUT_DIR/defaultServer     && ln -s $WLP_OUTPUT_DIR/defaultServer /output     && ln -s /opt/ol/wlp/usr/servers/defaultServer /config     && mkdir -p /config/configDropins/defaults     && mkdir -p /config/configDropins/overrides     && ln -s /opt/ol/wlp /liberty     && chown -R 1001:0 /config     && chmod -R g+rw /config     && chown -R 1001:0 /logs     && chmod -R g+rw /logs     && chown -R 1001:0 /opt/ol/wlp/usr     && chmod -R g+rw /opt/ol/wlp/usr     && chown -R 1001:0 /opt/ol/wlp/output     && chmod -R g+rw /opt/ol/wlp/output     && chown -R 1001:0 /opt/ol/helpers     && chmod -R g+rw /opt/ol/helpers     && chown -R 1001:0 /opt/ol/fixes     && chmod -R g+rwx /opt/ol/fixes     && mkdir /etc/wlp     && chown -R 1001:0 /etc/wlp     && chmod -R g+rw /etc/wlp     && echo "<server description=\"Default Server\"><httpEndpoint id=\"defaultHttpEndpoint\" host=\"*\" /></server>" > /config/configDropins/defaults/open-default-port.xml
-# Tue, 07 Jul 2020 02:59:33 GMT
+# Fri, 17 Jul 2020 22:55:13 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200620200528-0414 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.6/openliberty-runtime-20.0.0.6.zip LIBERTY_SHA=083e89c2f96972df339a513582b338658e6562b3 LIBERTY_VERSION=20.0.0.6
 RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /output/messaging /output/resources/security /logs/* $WLP_OUTPUT_DIR/.classCache     && chown -R 1001:0 /opt/ol/wlp/output     && chmod -R g+rwx /opt/ol/wlp/output
-# Tue, 07 Jul 2020 02:59:33 GMT
+# Fri, 17 Jul 2020 22:55:13 GMT
 ENV RANDFILE=/tmp/.rnd IBM_JAVA_OPTIONS=-Xshareclasses:name=liberty,nonfatal,cacheDir=/output/.classCache/ 
-# Tue, 07 Jul 2020 02:59:34 GMT
+# Fri, 17 Jul 2020 22:55:13 GMT
 USER 1001
-# Tue, 07 Jul 2020 02:59:34 GMT
+# Fri, 17 Jul 2020 22:55:13 GMT
 EXPOSE 9080 9443
-# Tue, 07 Jul 2020 02:59:34 GMT
+# Fri, 17 Jul 2020 22:55:13 GMT
 ENTRYPOINT ["/opt/ol/helpers/runtime/docker-server.sh"]
-# Tue, 07 Jul 2020 02:59:34 GMT
+# Fri, 17 Jul 2020 22:55:14 GMT
 CMD ["/opt/ol/wlp/bin/server" "run" "defaultServer"]
-# Tue, 07 Jul 2020 02:59:39 GMT
+# Fri, 17 Jul 2020 22:55:20 GMT
 RUN cp /opt/ol/wlp/templates/servers/javaee8/server.xml /config/server.xml
-# Tue, 07 Jul 2020 03:00:09 GMT
+# Fri, 17 Jul 2020 22:55:50 GMT
 RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /output/messaging /output/resources/security /logs/* $WLP_OUTPUT_DIR/.classCache     && chown -R 1001:0 /opt/ol/wlp/output     && chmod -R g+rwx /opt/ol/wlp/output
 ```
 
@@ -942,45 +942,45 @@ RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /outpu
 		Last Modified: Mon, 06 Jul 2020 21:57:19 GMT  
 		Size: 162.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0cbfb179272dc9aa9a0a4722b2f8ffe1d0cdb83652c091add1d0c091d505468e`  
-		Last Modified: Mon, 06 Jul 2020 23:07:26 GMT  
-		Size: 13.3 MB (13311646 bytes)  
+	-	`sha256:262049cebf1b6f60b6dc78a926be5d3a689ba76a6c5c28edc9b195952b98c31f`  
+		Last Modified: Fri, 17 Jul 2020 22:23:14 GMT  
+		Size: 13.9 MB (13875144 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d69578686d5961608b047f555a5d6b3e75e1a8bfadde61e661ffe3b5717439e0`  
-		Last Modified: Mon, 06 Jul 2020 23:10:16 GMT  
-		Size: 48.5 MB (48502689 bytes)  
+	-	`sha256:ae7ae3562f54a1abcec2e390aa39c5d1bdd4d797018f8288100ac516ff45ec7e`  
+		Last Modified: Fri, 17 Jul 2020 22:25:12 GMT  
+		Size: 48.7 MB (48691295 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2472de67192fd9d6c76adbd76b5f968a9ea0858cedd726aee9668281ac86fd88`  
-		Last Modified: Tue, 07 Jul 2020 03:01:27 GMT  
-		Size: 8.3 KB (8350 bytes)  
+	-	`sha256:00652744eb70f9cb75d725b60f802dec2024e1ecb27b0e814d6cf46e5c35a4eb`  
+		Last Modified: Fri, 17 Jul 2020 22:57:21 GMT  
+		Size: 8.4 KB (8354 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b34b1c42e9ab17270301e01d26cdd1aedc9c113f205b7fa65a66c43d8f8553aa`  
-		Last Modified: Tue, 07 Jul 2020 03:01:26 GMT  
-		Size: 241.0 B  
+	-	`sha256:83817042c52882957a822d44960b005acff774efc81fd585fc52b3840759a619`  
+		Last Modified: Fri, 17 Jul 2020 22:57:20 GMT  
+		Size: 244.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ac377fa4a8bf27cff28092fc32de7cbd4dc639523c69a18325919d5dfb9270d0`  
-		Last Modified: Tue, 07 Jul 2020 03:01:36 GMT  
-		Size: 157.7 MB (157699176 bytes)  
+	-	`sha256:ee0d2f13a48a72e613a8dc7a8c17a3d32ec3f10f5209183530853c98aefe23a3`  
+		Last Modified: Fri, 17 Jul 2020 22:57:30 GMT  
+		Size: 157.8 MB (157758230 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2ee831d3e509e5303d06f668acb9292ae903708d9edeedbaf5f05f4e9fd2dbd9`  
-		Last Modified: Tue, 07 Jul 2020 03:01:26 GMT  
-		Size: 910.0 B  
+	-	`sha256:85f540d776fa3dcffcc8e8cdde79f32af6d98c9f555b3dcc1fba720523f22e05`  
+		Last Modified: Fri, 17 Jul 2020 22:57:20 GMT  
+		Size: 909.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9db940e28ffa15c0ebb9ec16bab376acd68e9e342f78bb2605b4be49aeb552d1`  
-		Last Modified: Tue, 07 Jul 2020 03:01:26 GMT  
-		Size: 9.4 KB (9405 bytes)  
+	-	`sha256:931db93ced61c9bfb9322ca1fa1a07653104a8bb005b751e07be037e788aa923`  
+		Last Modified: Fri, 17 Jul 2020 22:57:20 GMT  
+		Size: 9.4 KB (9410 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0759f71a690a38640ef0a78bf7d66d4730fca7b29660790c29062c2e8b8844ba`  
-		Last Modified: Tue, 07 Jul 2020 03:01:28 GMT  
-		Size: 8.1 MB (8110452 bytes)  
+	-	`sha256:87651c1e8db7a9eaaf51605532f7b2025350579e05e73153ffe162e020d46375`  
+		Last Modified: Fri, 17 Jul 2020 22:57:21 GMT  
+		Size: 8.3 MB (8264669 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e9815290ee5b6d208b8a179157b7378f7aeec48c0acb403dea2e48717116eb74`  
-		Last Modified: Tue, 07 Jul 2020 03:01:46 GMT  
-		Size: 965.0 B  
+	-	`sha256:a02be425045b8c01bc8eb00b02f693abc55524d7152a6b0f76f6f41fb0994d40`  
+		Last Modified: Fri, 17 Jul 2020 22:57:34 GMT  
+		Size: 964.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:955b9f2c709f7e67875aaa72a18f8b76cece22aa7399c66e909eb1b070812d99`  
-		Last Modified: Tue, 07 Jul 2020 03:01:49 GMT  
-		Size: 16.8 MB (16762531 bytes)  
+	-	`sha256:f85de23076a40a043073a2fbb319b75afee25664d3682eb1941b7f2d372caf8a`  
+		Last Modified: Fri, 17 Jul 2020 22:57:36 GMT  
+		Size: 16.8 MB (16808571 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `open-liberty:20.0.0.6-full-java8-openj9` - linux; ppc64le
@@ -1268,7 +1268,7 @@ RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /outpu
 ## `open-liberty:20.0.0.6-kernel-java8-openj9`
 
 ```console
-$ docker pull open-liberty@sha256:23b89d934d3fcfc8ad728827b85147d7724862ba0e82e65cbbbc7ca47dff0544
+$ docker pull open-liberty@sha256:04253bc6276e45dfaf07d8b08e37074126edf8fcc7c23328924190227d096a96
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1280,14 +1280,14 @@ $ docker pull open-liberty@sha256:23b89d934d3fcfc8ad728827b85147d7724862ba0e82e6
 ### `open-liberty:20.0.0.6-kernel-java8-openj9` - linux; amd64
 
 ```console
-$ docker pull open-liberty@sha256:e875ae258b6e1ca9df4c6186e4eb557cd005ff52e4cf97cc5f03331bf636a0db
+$ docker pull open-liberty@sha256:90cec38b827e96e8674dfdac403747981b5d17c4afc367b4b1458201074034c4
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **254.4 MB (254375441 bytes)**  
+-	Total Size: **255.3 MB (255340827 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:30d43839f2cb96e2506528522015d211aea0d5d640950f951bd00152209edc6d`
+-	Image ID: `sha256:e6d185350f5a6ff25cf224bf349c5a8900b15a6a165276fd759736f42f393ace`
 -	Entrypoint: `["\/opt\/ol\/helpers\/runtime\/docker-server.sh"]`
 -	Default Command: `["\/opt\/ol\/wlp\/bin\/server","run","defaultServer"]`
 
@@ -1304,55 +1304,55 @@ RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
 CMD ["/bin/bash"]
 # Mon, 06 Jul 2020 23:03:04 GMT
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Mon, 06 Jul 2020 23:03:21 GMT
-RUN apt-get update     && apt-get install -y --no-install-recommends curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Mon, 06 Jul 2020 23:05:06 GMT
-ENV JAVA_VERSION=jdk8u252-b09_openj9-0.20.0
-# Mon, 06 Jul 2020 23:05:25 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        ppc64el|ppc64le)          ESUM='00095854b2219c71a142135ef2b63ae48869f4366c82524353991a36204cf7e9';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u252-b09_openj9-0.20.0/OpenJDK8U-jre_ppc64le_linux_openj9_8u252b09_openj9-0.20.0.tar.gz';          ;;        s390x)          ESUM='7cb7d392fb7240c30b0993a6ec332060b406641589b4c0207b7f9cbbaad81fc8';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u252-b09_openj9-0.20.0/OpenJDK8U-jre_s390x_linux_openj9_8u252b09_openj9-0.20.0.tar.gz';          ;;        amd64|x86_64)          ESUM='5c0ab4691ff5f8e69bb14462f2afb8d73d751b01048eacf4b426ed6d6646dc63';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u252-b09_openj9-0.20.0/OpenJDK8U-jre_x64_linux_openj9_8u252b09_openj9-0.20.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Mon, 06 Jul 2020 23:05:25 GMT
+# Fri, 17 Jul 2020 22:19:52 GMT
+RUN apt-get update     && apt-get install -y --no-install-recommends tzdata curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
+# Fri, 17 Jul 2020 22:21:18 GMT
+ENV JAVA_VERSION=jdk8u262-b10_openj9-0.21.0
+# Fri, 17 Jul 2020 22:21:37 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        ppc64el|ppc64le)          ESUM='722517d9565bd9602580609114eb0de9b40b01050d52ff7bae24c438d363e186';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10_openj9-0.21.0/OpenJDK8U-jre_ppc64le_linux_openj9_8u262b10_openj9-0.21.0.tar.gz';          ;;        s390x)          ESUM='c14aeedf4e989a6b31e00d6e18b8377957b07b000cac316aee9d973ef6d65b6f';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10_openj9-0.21.0/OpenJDK8U-jre_s390x_linux_openj9_8u262b10_openj9-0.21.0.tar.gz';          ;;        amd64|x86_64)          ESUM='aef8750b492ff6371318cf5138e38827d8895815b2ac079dcfcb02007a45c7f6';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10_openj9-0.21.0/OpenJDK8U-jre_x64_linux_openj9_8u262b10_openj9-0.21.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
+# Fri, 17 Jul 2020 22:21:37 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Mon, 06 Jul 2020 23:05:25 GMT
+# Fri, 17 Jul 2020 22:21:37 GMT
 ENV JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+UseContainerSupport -XX:+IdleTuningCompactOnIdle -XX:+IdleTuningGcOnIdle
-# Tue, 07 Jul 2020 02:58:59 GMT
+# Fri, 17 Jul 2020 22:54:39 GMT
 ARG LIBERTY_VERSION=20.0.0.6
-# Tue, 07 Jul 2020 02:58:59 GMT
+# Fri, 17 Jul 2020 22:54:40 GMT
 ARG LIBERTY_SHA=083e89c2f96972df339a513582b338658e6562b3
-# Tue, 07 Jul 2020 02:59:00 GMT
+# Fri, 17 Jul 2020 22:54:40 GMT
 ARG LIBERTY_BUILD_LABEL=cl200620200528-0414
-# Tue, 07 Jul 2020 02:59:00 GMT
+# Fri, 17 Jul 2020 22:54:40 GMT
 ARG LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.6/openliberty-runtime-20.0.0.6.zip
-# Tue, 07 Jul 2020 02:59:00 GMT
+# Fri, 17 Jul 2020 22:54:40 GMT
 ARG OPENJ9_SCC=true
-# Tue, 07 Jul 2020 02:59:00 GMT
+# Fri, 17 Jul 2020 22:54:40 GMT
 LABEL org.opencontainers.image.authors=Arthur De Magalhaes, Chris Potter org.opencontainers.image.vendor=Open Liberty org.opencontainers.image.url=https://openliberty.io/ org.opencontainers.image.source=https://github.com/OpenLiberty/ci.docker org.opencontainers.image.revision=cl200620200528-0414 org.opencontainers.image.description=This image contains the Open Liberty runtime with AdoptOpenJDK with OpenJ9 and Ubuntu as the base OS.  For more information on this image please see https://github.com/OpenLiberty/ci.docker#building-an-application-image org.opencontainers.image.title=Open Liberty org.opencontainers.image.version=20.0.0.6
-# Tue, 07 Jul 2020 02:59:00 GMT
+# Fri, 17 Jul 2020 22:54:40 GMT
 COPY dir:e8bb2487ca41e6b847cd1240bcb920ccb8c6de3c77aaaaf5ed7f0d39a3789c4a in /opt/ol/helpers 
-# Tue, 07 Jul 2020 02:59:01 GMT
+# Fri, 17 Jul 2020 22:54:41 GMT
 COPY dir:1cf5cc2663c6235241a5228340a9c566587fe27b3e434a313debbf75dacd7a4b in /opt/ol/fixes/ 
-# Tue, 07 Jul 2020 02:59:12 GMT
+# Fri, 17 Jul 2020 22:54:52 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200620200528-0414 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.6/openliberty-runtime-20.0.0.6.zip LIBERTY_SHA=083e89c2f96972df339a513582b338658e6562b3 LIBERTY_VERSION=20.0.0.6 OPENJ9_SCC=true
 RUN apt-get update     && apt-get install -y --no-install-recommends unzip openssl wget     && rm -rf /var/lib/apt/lists/*     && wget -q $LIBERTY_DOWNLOAD_URL -U UA-Open-Liberty-Docker -O /tmp/wlp.zip     && echo "$LIBERTY_SHA  /tmp/wlp.zip" > /tmp/wlp.zip.sha1     && sha1sum -c /tmp/wlp.zip.sha1     && unzip -q /tmp/wlp.zip -d /opt/ol     && rm /tmp/wlp.zip     && rm /tmp/wlp.zip.sha1     && apt-get remove -y unzip     && apt-get remove -y wget     && rm -rf /var/lib/apt/lists/*     && useradd -u 1001 -r -g 0 -s /usr/sbin/nologin default     && chown -R 1001:0 /opt/ol/wlp     && chmod -R g+rw /opt/ol/wlp
-# Tue, 07 Jul 2020 02:59:13 GMT
+# Fri, 17 Jul 2020 22:54:53 GMT
 ENV PATH=/opt/ol/wlp/bin:/opt/ol/docker/:/opt/ol/helpers/build:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin LOG_DIR=/logs WLP_OUTPUT_DIR=/opt/ol/wlp/output WLP_SKIP_MAXPERMSIZE=true OPENJ9_SCC=true
-# Tue, 07 Jul 2020 02:59:14 GMT
+# Fri, 17 Jul 2020 22:54:54 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200620200528-0414 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.6/openliberty-runtime-20.0.0.6.zip LIBERTY_SHA=083e89c2f96972df339a513582b338658e6562b3 LIBERTY_VERSION=20.0.0.6
 RUN /opt/ol/wlp/bin/server create     && rm -rf $WLP_OUTPUT_DIR/.classCache /output/workarea
-# Tue, 07 Jul 2020 02:59:14 GMT
+# Fri, 17 Jul 2020 22:54:54 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200620200528-0414 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.6/openliberty-runtime-20.0.0.6.zip LIBERTY_SHA=083e89c2f96972df339a513582b338658e6562b3 LIBERTY_VERSION=20.0.0.6
 RUN mkdir /logs     && mkdir -p /opt/ol/wlp/usr/shared/resources/lib.index.cache     && ln -s /opt/ol/wlp/usr/shared/resources/lib.index.cache /lib.index.cache     && mkdir -p $WLP_OUTPUT_DIR/defaultServer     && ln -s $WLP_OUTPUT_DIR/defaultServer /output     && ln -s /opt/ol/wlp/usr/servers/defaultServer /config     && mkdir -p /config/configDropins/defaults     && mkdir -p /config/configDropins/overrides     && ln -s /opt/ol/wlp /liberty     && chown -R 1001:0 /config     && chmod -R g+rw /config     && chown -R 1001:0 /logs     && chmod -R g+rw /logs     && chown -R 1001:0 /opt/ol/wlp/usr     && chmod -R g+rw /opt/ol/wlp/usr     && chown -R 1001:0 /opt/ol/wlp/output     && chmod -R g+rw /opt/ol/wlp/output     && chown -R 1001:0 /opt/ol/helpers     && chmod -R g+rw /opt/ol/helpers     && chown -R 1001:0 /opt/ol/fixes     && chmod -R g+rwx /opt/ol/fixes     && mkdir /etc/wlp     && chown -R 1001:0 /etc/wlp     && chmod -R g+rw /etc/wlp     && echo "<server description=\"Default Server\"><httpEndpoint id=\"defaultHttpEndpoint\" host=\"*\" /></server>" > /config/configDropins/defaults/open-default-port.xml
-# Tue, 07 Jul 2020 02:59:33 GMT
+# Fri, 17 Jul 2020 22:55:13 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200620200528-0414 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.6/openliberty-runtime-20.0.0.6.zip LIBERTY_SHA=083e89c2f96972df339a513582b338658e6562b3 LIBERTY_VERSION=20.0.0.6
 RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /output/messaging /output/resources/security /logs/* $WLP_OUTPUT_DIR/.classCache     && chown -R 1001:0 /opt/ol/wlp/output     && chmod -R g+rwx /opt/ol/wlp/output
-# Tue, 07 Jul 2020 02:59:33 GMT
+# Fri, 17 Jul 2020 22:55:13 GMT
 ENV RANDFILE=/tmp/.rnd IBM_JAVA_OPTIONS=-Xshareclasses:name=liberty,nonfatal,cacheDir=/output/.classCache/ 
-# Tue, 07 Jul 2020 02:59:34 GMT
+# Fri, 17 Jul 2020 22:55:13 GMT
 USER 1001
-# Tue, 07 Jul 2020 02:59:34 GMT
+# Fri, 17 Jul 2020 22:55:13 GMT
 EXPOSE 9080 9443
-# Tue, 07 Jul 2020 02:59:34 GMT
+# Fri, 17 Jul 2020 22:55:13 GMT
 ENTRYPOINT ["/opt/ol/helpers/runtime/docker-server.sh"]
-# Tue, 07 Jul 2020 02:59:34 GMT
+# Fri, 17 Jul 2020 22:55:14 GMT
 CMD ["/opt/ol/wlp/bin/server" "run" "defaultServer"]
 ```
 
@@ -1373,37 +1373,37 @@ CMD ["/opt/ol/wlp/bin/server" "run" "defaultServer"]
 		Last Modified: Mon, 06 Jul 2020 21:57:19 GMT  
 		Size: 162.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0cbfb179272dc9aa9a0a4722b2f8ffe1d0cdb83652c091add1d0c091d505468e`  
-		Last Modified: Mon, 06 Jul 2020 23:07:26 GMT  
-		Size: 13.3 MB (13311646 bytes)  
+	-	`sha256:262049cebf1b6f60b6dc78a926be5d3a689ba76a6c5c28edc9b195952b98c31f`  
+		Last Modified: Fri, 17 Jul 2020 22:23:14 GMT  
+		Size: 13.9 MB (13875144 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d69578686d5961608b047f555a5d6b3e75e1a8bfadde61e661ffe3b5717439e0`  
-		Last Modified: Mon, 06 Jul 2020 23:10:16 GMT  
-		Size: 48.5 MB (48502689 bytes)  
+	-	`sha256:ae7ae3562f54a1abcec2e390aa39c5d1bdd4d797018f8288100ac516ff45ec7e`  
+		Last Modified: Fri, 17 Jul 2020 22:25:12 GMT  
+		Size: 48.7 MB (48691295 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2472de67192fd9d6c76adbd76b5f968a9ea0858cedd726aee9668281ac86fd88`  
-		Last Modified: Tue, 07 Jul 2020 03:01:27 GMT  
-		Size: 8.3 KB (8350 bytes)  
+	-	`sha256:00652744eb70f9cb75d725b60f802dec2024e1ecb27b0e814d6cf46e5c35a4eb`  
+		Last Modified: Fri, 17 Jul 2020 22:57:21 GMT  
+		Size: 8.4 KB (8354 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b34b1c42e9ab17270301e01d26cdd1aedc9c113f205b7fa65a66c43d8f8553aa`  
-		Last Modified: Tue, 07 Jul 2020 03:01:26 GMT  
-		Size: 241.0 B  
+	-	`sha256:83817042c52882957a822d44960b005acff774efc81fd585fc52b3840759a619`  
+		Last Modified: Fri, 17 Jul 2020 22:57:20 GMT  
+		Size: 244.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ac377fa4a8bf27cff28092fc32de7cbd4dc639523c69a18325919d5dfb9270d0`  
-		Last Modified: Tue, 07 Jul 2020 03:01:36 GMT  
-		Size: 157.7 MB (157699176 bytes)  
+	-	`sha256:ee0d2f13a48a72e613a8dc7a8c17a3d32ec3f10f5209183530853c98aefe23a3`  
+		Last Modified: Fri, 17 Jul 2020 22:57:30 GMT  
+		Size: 157.8 MB (157758230 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2ee831d3e509e5303d06f668acb9292ae903708d9edeedbaf5f05f4e9fd2dbd9`  
-		Last Modified: Tue, 07 Jul 2020 03:01:26 GMT  
-		Size: 910.0 B  
+	-	`sha256:85f540d776fa3dcffcc8e8cdde79f32af6d98c9f555b3dcc1fba720523f22e05`  
+		Last Modified: Fri, 17 Jul 2020 22:57:20 GMT  
+		Size: 909.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9db940e28ffa15c0ebb9ec16bab376acd68e9e342f78bb2605b4be49aeb552d1`  
-		Last Modified: Tue, 07 Jul 2020 03:01:26 GMT  
-		Size: 9.4 KB (9405 bytes)  
+	-	`sha256:931db93ced61c9bfb9322ca1fa1a07653104a8bb005b751e07be037e788aa923`  
+		Last Modified: Fri, 17 Jul 2020 22:57:20 GMT  
+		Size: 9.4 KB (9410 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0759f71a690a38640ef0a78bf7d66d4730fca7b29660790c29062c2e8b8844ba`  
-		Last Modified: Tue, 07 Jul 2020 03:01:28 GMT  
-		Size: 8.1 MB (8110452 bytes)  
+	-	`sha256:87651c1e8db7a9eaaf51605532f7b2025350579e05e73153ffe162e020d46375`  
+		Last Modified: Fri, 17 Jul 2020 22:57:21 GMT  
+		Size: 8.3 MB (8264669 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `open-liberty:20.0.0.6-kernel-java8-openj9` - linux; ppc64le
@@ -1667,7 +1667,7 @@ CMD ["/opt/ol/wlp/bin/server" "run" "defaultServer"]
 ## `open-liberty:20.0.0.7-full-java8-openj9`
 
 ```console
-$ docker pull open-liberty@sha256:3dc33caa1ead55124282ae4a90fbea59f8d8f5faac5bd778482964f87e8c774c
+$ docker pull open-liberty@sha256:a02173eb0fc83377745b10a05116d35bac8a3d6255b63300e3d5fd2f597e2399
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1679,14 +1679,14 @@ $ docker pull open-liberty@sha256:3dc33caa1ead55124282ae4a90fbea59f8d8f5faac5bd7
 ### `open-liberty:20.0.0.7-full-java8-openj9` - linux; amd64
 
 ```console
-$ docker pull open-liberty@sha256:bd76c7595ca159a418c522395031520c6cf63e562919c6b6466fab219635961b
+$ docker pull open-liberty@sha256:c2a27d0ea2a831437eb9aa7827ee8981f5c8a8dd7b0543ae0c531f532ee1761b
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **271.1 MB (271143447 bytes)**  
+-	Total Size: **271.8 MB (271833836 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3a4bf95620c8fe1cf7b4100971381ce86e884ba656aeaf7e260793c290b4fd1f`
+-	Image ID: `sha256:6388a94564c394cd1198307ad44aa52575189e91fa2269f5b65430c4a487481a`
 -	Entrypoint: `["\/opt\/ol\/helpers\/runtime\/docker-server.sh"]`
 -	Default Command: `["\/opt\/ol\/wlp\/bin\/server","run","defaultServer"]`
 
@@ -1703,59 +1703,59 @@ RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
 CMD ["/bin/bash"]
 # Mon, 06 Jul 2020 23:03:04 GMT
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Mon, 06 Jul 2020 23:03:21 GMT
-RUN apt-get update     && apt-get install -y --no-install-recommends curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Mon, 06 Jul 2020 23:05:06 GMT
-ENV JAVA_VERSION=jdk8u252-b09_openj9-0.20.0
-# Mon, 06 Jul 2020 23:05:25 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        ppc64el|ppc64le)          ESUM='00095854b2219c71a142135ef2b63ae48869f4366c82524353991a36204cf7e9';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u252-b09_openj9-0.20.0/OpenJDK8U-jre_ppc64le_linux_openj9_8u252b09_openj9-0.20.0.tar.gz';          ;;        s390x)          ESUM='7cb7d392fb7240c30b0993a6ec332060b406641589b4c0207b7f9cbbaad81fc8';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u252-b09_openj9-0.20.0/OpenJDK8U-jre_s390x_linux_openj9_8u252b09_openj9-0.20.0.tar.gz';          ;;        amd64|x86_64)          ESUM='5c0ab4691ff5f8e69bb14462f2afb8d73d751b01048eacf4b426ed6d6646dc63';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u252-b09_openj9-0.20.0/OpenJDK8U-jre_x64_linux_openj9_8u252b09_openj9-0.20.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Mon, 06 Jul 2020 23:05:25 GMT
+# Fri, 17 Jul 2020 22:19:52 GMT
+RUN apt-get update     && apt-get install -y --no-install-recommends tzdata curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
+# Fri, 17 Jul 2020 22:21:18 GMT
+ENV JAVA_VERSION=jdk8u262-b10_openj9-0.21.0
+# Fri, 17 Jul 2020 22:21:37 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        ppc64el|ppc64le)          ESUM='722517d9565bd9602580609114eb0de9b40b01050d52ff7bae24c438d363e186';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10_openj9-0.21.0/OpenJDK8U-jre_ppc64le_linux_openj9_8u262b10_openj9-0.21.0.tar.gz';          ;;        s390x)          ESUM='c14aeedf4e989a6b31e00d6e18b8377957b07b000cac316aee9d973ef6d65b6f';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10_openj9-0.21.0/OpenJDK8U-jre_s390x_linux_openj9_8u262b10_openj9-0.21.0.tar.gz';          ;;        amd64|x86_64)          ESUM='aef8750b492ff6371318cf5138e38827d8895815b2ac079dcfcb02007a45c7f6';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10_openj9-0.21.0/OpenJDK8U-jre_x64_linux_openj9_8u262b10_openj9-0.21.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
+# Fri, 17 Jul 2020 22:21:37 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Mon, 06 Jul 2020 23:05:25 GMT
+# Fri, 17 Jul 2020 22:21:37 GMT
 ENV JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+UseContainerSupport -XX:+IdleTuningCompactOnIdle -XX:+IdleTuningGcOnIdle
-# Tue, 07 Jul 2020 02:57:30 GMT
+# Fri, 17 Jul 2020 22:53:03 GMT
 ARG LIBERTY_VERSION=20.0.0.7
-# Tue, 07 Jul 2020 02:57:30 GMT
+# Fri, 17 Jul 2020 22:53:04 GMT
 ARG LIBERTY_SHA=226cd89250b2b831fd777042eff1ae69edb1cb1f
-# Tue, 07 Jul 2020 02:57:30 GMT
+# Fri, 17 Jul 2020 22:53:04 GMT
 ARG LIBERTY_BUILD_LABEL=cl200720200625-0300
-# Tue, 07 Jul 2020 02:57:31 GMT
+# Fri, 17 Jul 2020 22:53:04 GMT
 ARG LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.7/openliberty-runtime-20.0.0.7.zip
-# Tue, 07 Jul 2020 02:57:31 GMT
+# Fri, 17 Jul 2020 22:53:04 GMT
 ARG OPENJ9_SCC=true
-# Tue, 07 Jul 2020 02:57:31 GMT
+# Fri, 17 Jul 2020 22:53:04 GMT
 LABEL org.opencontainers.image.authors=Arthur De Magalhaes, Chris Potter org.opencontainers.image.vendor=Open Liberty org.opencontainers.image.url=https://openliberty.io/ org.opencontainers.image.source=https://github.com/OpenLiberty/ci.docker org.opencontainers.image.revision=cl200720200625-0300 org.opencontainers.image.description=This image contains the Open Liberty runtime with AdoptOpenJDK with OpenJ9 and Ubuntu as the base OS.  For more information on this image please see https://github.com/OpenLiberty/ci.docker#building-an-application-image org.opencontainers.image.title=Open Liberty org.opencontainers.image.version=20.0.0.7
-# Tue, 07 Jul 2020 02:57:31 GMT
+# Fri, 17 Jul 2020 22:53:05 GMT
 COPY dir:e8bb2487ca41e6b847cd1240bcb920ccb8c6de3c77aaaaf5ed7f0d39a3789c4a in /opt/ol/helpers 
-# Tue, 07 Jul 2020 02:57:31 GMT
+# Fri, 17 Jul 2020 22:53:05 GMT
 COPY dir:1cf5cc2663c6235241a5228340a9c566587fe27b3e434a313debbf75dacd7a4b in /opt/ol/fixes/ 
-# Tue, 07 Jul 2020 02:57:44 GMT
+# Fri, 17 Jul 2020 22:53:16 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200720200625-0300 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.7/openliberty-runtime-20.0.0.7.zip LIBERTY_SHA=226cd89250b2b831fd777042eff1ae69edb1cb1f LIBERTY_VERSION=20.0.0.7 OPENJ9_SCC=true
 RUN apt-get update     && apt-get install -y --no-install-recommends unzip openssl wget     && rm -rf /var/lib/apt/lists/*     && wget -q $LIBERTY_DOWNLOAD_URL -U UA-Open-Liberty-Docker -O /tmp/wlp.zip     && echo "$LIBERTY_SHA  /tmp/wlp.zip" > /tmp/wlp.zip.sha1     && sha1sum -c /tmp/wlp.zip.sha1     && unzip -q /tmp/wlp.zip -d /opt/ol     && rm /tmp/wlp.zip     && rm /tmp/wlp.zip.sha1     && apt-get remove -y unzip     && apt-get remove -y wget     && rm -rf /var/lib/apt/lists/*     && useradd -u 1001 -r -g 0 -s /usr/sbin/nologin default     && chown -R 1001:0 /opt/ol/wlp     && chmod -R g+rw /opt/ol/wlp
-# Tue, 07 Jul 2020 02:57:44 GMT
+# Fri, 17 Jul 2020 22:53:16 GMT
 ENV PATH=/opt/ol/wlp/bin:/opt/ol/docker/:/opt/ol/helpers/build:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin LOG_DIR=/logs WLP_OUTPUT_DIR=/opt/ol/wlp/output WLP_SKIP_MAXPERMSIZE=true OPENJ9_SCC=true
-# Tue, 07 Jul 2020 02:57:46 GMT
+# Fri, 17 Jul 2020 22:53:18 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200720200625-0300 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.7/openliberty-runtime-20.0.0.7.zip LIBERTY_SHA=226cd89250b2b831fd777042eff1ae69edb1cb1f LIBERTY_VERSION=20.0.0.7
 RUN /opt/ol/wlp/bin/server create     && rm -rf $WLP_OUTPUT_DIR/.classCache /output/workarea
-# Tue, 07 Jul 2020 02:57:47 GMT
+# Fri, 17 Jul 2020 22:53:19 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200720200625-0300 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.7/openliberty-runtime-20.0.0.7.zip LIBERTY_SHA=226cd89250b2b831fd777042eff1ae69edb1cb1f LIBERTY_VERSION=20.0.0.7
 RUN mkdir /logs     && mkdir -p /opt/ol/wlp/usr/shared/resources/lib.index.cache     && ln -s /opt/ol/wlp/usr/shared/resources/lib.index.cache /lib.index.cache     && mkdir -p $WLP_OUTPUT_DIR/defaultServer     && ln -s $WLP_OUTPUT_DIR/defaultServer /output     && ln -s /opt/ol/wlp/usr/servers/defaultServer /config     && mkdir -p /config/configDropins/defaults     && mkdir -p /config/configDropins/overrides     && ln -s /opt/ol/wlp /liberty     && chown -R 1001:0 /config     && chmod -R g+rw /config     && chown -R 1001:0 /logs     && chmod -R g+rw /logs     && chown -R 1001:0 /opt/ol/wlp/usr     && chmod -R g+rw /opt/ol/wlp/usr     && chown -R 1001:0 /opt/ol/wlp/output     && chmod -R g+rw /opt/ol/wlp/output     && chown -R 1001:0 /opt/ol/helpers     && chmod -R g+rw /opt/ol/helpers     && chown -R 1001:0 /opt/ol/fixes     && chmod -R g+rwx /opt/ol/fixes     && mkdir /etc/wlp     && chown -R 1001:0 /etc/wlp     && chmod -R g+rw /etc/wlp     && echo "<server description=\"Default Server\"><httpEndpoint id=\"defaultHttpEndpoint\" host=\"*\" /></server>" > /config/configDropins/defaults/open-default-port.xml
-# Tue, 07 Jul 2020 02:58:08 GMT
+# Fri, 17 Jul 2020 22:53:41 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200720200625-0300 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.7/openliberty-runtime-20.0.0.7.zip LIBERTY_SHA=226cd89250b2b831fd777042eff1ae69edb1cb1f LIBERTY_VERSION=20.0.0.7
 RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /output/messaging /output/resources/security /logs/* $WLP_OUTPUT_DIR/.classCache     && chown -R 1001:0 /opt/ol/wlp/output     && chmod -R g+rwx /opt/ol/wlp/output
-# Tue, 07 Jul 2020 02:58:08 GMT
+# Fri, 17 Jul 2020 22:53:41 GMT
 ENV RANDFILE=/tmp/.rnd IBM_JAVA_OPTIONS=-Xshareclasses:name=liberty,nonfatal,cacheDir=/output/.classCache/ 
-# Tue, 07 Jul 2020 02:58:09 GMT
+# Fri, 17 Jul 2020 22:53:41 GMT
 USER 1001
-# Tue, 07 Jul 2020 02:58:09 GMT
+# Fri, 17 Jul 2020 22:53:41 GMT
 EXPOSE 9080 9443
-# Tue, 07 Jul 2020 02:58:09 GMT
+# Fri, 17 Jul 2020 22:53:42 GMT
 ENTRYPOINT ["/opt/ol/helpers/runtime/docker-server.sh"]
-# Tue, 07 Jul 2020 02:58:09 GMT
+# Fri, 17 Jul 2020 22:53:42 GMT
 CMD ["/opt/ol/wlp/bin/server" "run" "defaultServer"]
-# Tue, 07 Jul 2020 02:58:18 GMT
+# Fri, 17 Jul 2020 22:53:52 GMT
 RUN cp /opt/ol/wlp/templates/servers/javaee8/server.xml /config/server.xml
-# Tue, 07 Jul 2020 02:58:47 GMT
+# Fri, 17 Jul 2020 22:54:26 GMT
 RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /output/messaging /output/resources/security /logs/* $WLP_OUTPUT_DIR/.classCache     && chown -R 1001:0 /opt/ol/wlp/output     && chmod -R g+rwx /opt/ol/wlp/output
 ```
 
@@ -1776,45 +1776,45 @@ RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /outpu
 		Last Modified: Mon, 06 Jul 2020 21:57:19 GMT  
 		Size: 162.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0cbfb179272dc9aa9a0a4722b2f8ffe1d0cdb83652c091add1d0c091d505468e`  
-		Last Modified: Mon, 06 Jul 2020 23:07:26 GMT  
-		Size: 13.3 MB (13311646 bytes)  
+	-	`sha256:262049cebf1b6f60b6dc78a926be5d3a689ba76a6c5c28edc9b195952b98c31f`  
+		Last Modified: Fri, 17 Jul 2020 22:23:14 GMT  
+		Size: 13.9 MB (13875144 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d69578686d5961608b047f555a5d6b3e75e1a8bfadde61e661ffe3b5717439e0`  
-		Last Modified: Mon, 06 Jul 2020 23:10:16 GMT  
-		Size: 48.5 MB (48502689 bytes)  
+	-	`sha256:ae7ae3562f54a1abcec2e390aa39c5d1bdd4d797018f8288100ac516ff45ec7e`  
+		Last Modified: Fri, 17 Jul 2020 22:25:12 GMT  
+		Size: 48.7 MB (48691295 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fec365aa67b4f41776711dd22b883853bdc71a38adfcaf324b01fcfcd2e51275`  
-		Last Modified: Tue, 07 Jul 2020 03:01:03 GMT  
-		Size: 8.4 KB (8352 bytes)  
+	-	`sha256:d5cd1c7cabb21604488842a6b70ae3b2b1f4f3f4ab8f3166c7d886a938b470aa`  
+		Last Modified: Fri, 17 Jul 2020 22:56:57 GMT  
+		Size: 8.4 KB (8355 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d529747d877f72c9f41bc995536f24b95bde29a0605d6d2d4b68247fe0d2ae71`  
-		Last Modified: Tue, 07 Jul 2020 03:01:02 GMT  
-		Size: 241.0 B  
+	-	`sha256:4d0a7e5386637638c3baa64552e90f97f3a78b8758988bede3c9aa9cd9ff23dd`  
+		Last Modified: Fri, 17 Jul 2020 22:56:56 GMT  
+		Size: 244.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ea208fc78696caf4d2c51196ad79e6a91047a856dc079b3213e79fc847403773`  
-		Last Modified: Tue, 07 Jul 2020 03:01:12 GMT  
-		Size: 157.7 MB (157725520 bytes)  
+	-	`sha256:2fa2164691c4714f263629a04436be551e7f183e34ae362c7cd328f004d6839e`  
+		Last Modified: Fri, 17 Jul 2020 22:57:07 GMT  
+		Size: 157.8 MB (157783993 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ba2a09fba9bd31e8d62f8aacacc293fc8c22b319326ac7c6007389f48cd1448e`  
-		Last Modified: Tue, 07 Jul 2020 03:01:02 GMT  
-		Size: 909.0 B  
+	-	`sha256:b9561ae263f5638923b206f0e2fe29e3b990a44216e271332e01860490479fd5`  
+		Last Modified: Fri, 17 Jul 2020 22:56:56 GMT  
+		Size: 907.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cad0fe80d02a5bf9740be4defec5bd14b3d1dd5bc61edcc93a4599ce83d0458d`  
-		Last Modified: Tue, 07 Jul 2020 03:01:02 GMT  
-		Size: 9.4 KB (9397 bytes)  
+	-	`sha256:c5b0d9ee4b1303ecddcb8c9642dacd16d0ba6ca2667af936583b610dc1abdbd2`  
+		Last Modified: Fri, 17 Jul 2020 22:56:56 GMT  
+		Size: 9.4 KB (9404 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6b937aaf748c9efe4d0a0526c76b10937cbbf915191f701abe6c551cd71ad738`  
-		Last Modified: Tue, 07 Jul 2020 03:01:03 GMT  
-		Size: 8.2 MB (8166928 bytes)  
+	-	`sha256:a78593c7e93c95a24d1067de28c5918f5b0934f1137c1b6ff284a4984214e12b`  
+		Last Modified: Fri, 17 Jul 2020 22:56:58 GMT  
+		Size: 8.1 MB (8123074 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b03a95e897555c1e38167ae106c54bca8851761df923838aac4205204fba429b`  
-		Last Modified: Tue, 07 Jul 2020 03:01:17 GMT  
-		Size: 962.0 B  
+	-	`sha256:7d87ae3bca31579ea606a2a26fda0d2764eed2c473dbd9463ac06b75fd7bd160`  
+		Last Modified: Fri, 17 Jul 2020 22:57:11 GMT  
+		Size: 964.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dbd171ffa47e399d1737acc8766613900c0241cfcf78ce394f52bf4b62f1ca3a`  
-		Last Modified: Tue, 07 Jul 2020 03:01:20 GMT  
-		Size: 16.7 MB (16684231 bytes)  
+	-	`sha256:f5043a1b4004b7c5e00d1325a216ffb151a0097b1772a5819aeddb8b53eab216`  
+		Last Modified: Fri, 17 Jul 2020 22:57:14 GMT  
+		Size: 16.6 MB (16607884 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `open-liberty:20.0.0.7-full-java8-openj9` - linux; ppc64le
@@ -2102,7 +2102,7 @@ RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /outpu
 ## `open-liberty:20.0.0.7-kernel-java8-openj9`
 
 ```console
-$ docker pull open-liberty@sha256:1fb0de70553795af25f99c5c6fd6d3899744791ad711071d63f2dd1835a03721
+$ docker pull open-liberty@sha256:c4a1c29588a578aa45c8287b2ba5162df85edb01279b59919298d2374ffdd44b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2114,14 +2114,14 @@ $ docker pull open-liberty@sha256:1fb0de70553795af25f99c5c6fd6d3899744791ad71107
 ### `open-liberty:20.0.0.7-kernel-java8-openj9` - linux; amd64
 
 ```console
-$ docker pull open-liberty@sha256:674614f389635e0783601fb1aa95d254b4ed8b2cfc6466eff666ee5bb1d9ea0f
+$ docker pull open-liberty@sha256:9ec416148ff15897d3dba3fafe2e24f2b71526208eb5b5833bc349d906c68cec
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **254.5 MB (254458254 bytes)**  
+-	Total Size: **255.2 MB (255224988 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4d9681eec381eae9b9ffb18dab36a53a4d0502ff1a4f64478de2f5d91bed63aa`
+-	Image ID: `sha256:51b8699d351291d1d74a75f32f66d653aaee6c7765fd31b748c645a82398bd04`
 -	Entrypoint: `["\/opt\/ol\/helpers\/runtime\/docker-server.sh"]`
 -	Default Command: `["\/opt\/ol\/wlp\/bin\/server","run","defaultServer"]`
 
@@ -2138,55 +2138,55 @@ RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
 CMD ["/bin/bash"]
 # Mon, 06 Jul 2020 23:03:04 GMT
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Mon, 06 Jul 2020 23:03:21 GMT
-RUN apt-get update     && apt-get install -y --no-install-recommends curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Mon, 06 Jul 2020 23:05:06 GMT
-ENV JAVA_VERSION=jdk8u252-b09_openj9-0.20.0
-# Mon, 06 Jul 2020 23:05:25 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        ppc64el|ppc64le)          ESUM='00095854b2219c71a142135ef2b63ae48869f4366c82524353991a36204cf7e9';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u252-b09_openj9-0.20.0/OpenJDK8U-jre_ppc64le_linux_openj9_8u252b09_openj9-0.20.0.tar.gz';          ;;        s390x)          ESUM='7cb7d392fb7240c30b0993a6ec332060b406641589b4c0207b7f9cbbaad81fc8';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u252-b09_openj9-0.20.0/OpenJDK8U-jre_s390x_linux_openj9_8u252b09_openj9-0.20.0.tar.gz';          ;;        amd64|x86_64)          ESUM='5c0ab4691ff5f8e69bb14462f2afb8d73d751b01048eacf4b426ed6d6646dc63';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u252-b09_openj9-0.20.0/OpenJDK8U-jre_x64_linux_openj9_8u252b09_openj9-0.20.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Mon, 06 Jul 2020 23:05:25 GMT
+# Fri, 17 Jul 2020 22:19:52 GMT
+RUN apt-get update     && apt-get install -y --no-install-recommends tzdata curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
+# Fri, 17 Jul 2020 22:21:18 GMT
+ENV JAVA_VERSION=jdk8u262-b10_openj9-0.21.0
+# Fri, 17 Jul 2020 22:21:37 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        ppc64el|ppc64le)          ESUM='722517d9565bd9602580609114eb0de9b40b01050d52ff7bae24c438d363e186';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10_openj9-0.21.0/OpenJDK8U-jre_ppc64le_linux_openj9_8u262b10_openj9-0.21.0.tar.gz';          ;;        s390x)          ESUM='c14aeedf4e989a6b31e00d6e18b8377957b07b000cac316aee9d973ef6d65b6f';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10_openj9-0.21.0/OpenJDK8U-jre_s390x_linux_openj9_8u262b10_openj9-0.21.0.tar.gz';          ;;        amd64|x86_64)          ESUM='aef8750b492ff6371318cf5138e38827d8895815b2ac079dcfcb02007a45c7f6';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10_openj9-0.21.0/OpenJDK8U-jre_x64_linux_openj9_8u262b10_openj9-0.21.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
+# Fri, 17 Jul 2020 22:21:37 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Mon, 06 Jul 2020 23:05:25 GMT
+# Fri, 17 Jul 2020 22:21:37 GMT
 ENV JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+UseContainerSupport -XX:+IdleTuningCompactOnIdle -XX:+IdleTuningGcOnIdle
-# Tue, 07 Jul 2020 02:57:30 GMT
+# Fri, 17 Jul 2020 22:53:03 GMT
 ARG LIBERTY_VERSION=20.0.0.7
-# Tue, 07 Jul 2020 02:57:30 GMT
+# Fri, 17 Jul 2020 22:53:04 GMT
 ARG LIBERTY_SHA=226cd89250b2b831fd777042eff1ae69edb1cb1f
-# Tue, 07 Jul 2020 02:57:30 GMT
+# Fri, 17 Jul 2020 22:53:04 GMT
 ARG LIBERTY_BUILD_LABEL=cl200720200625-0300
-# Tue, 07 Jul 2020 02:57:31 GMT
+# Fri, 17 Jul 2020 22:53:04 GMT
 ARG LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.7/openliberty-runtime-20.0.0.7.zip
-# Tue, 07 Jul 2020 02:57:31 GMT
+# Fri, 17 Jul 2020 22:53:04 GMT
 ARG OPENJ9_SCC=true
-# Tue, 07 Jul 2020 02:57:31 GMT
+# Fri, 17 Jul 2020 22:53:04 GMT
 LABEL org.opencontainers.image.authors=Arthur De Magalhaes, Chris Potter org.opencontainers.image.vendor=Open Liberty org.opencontainers.image.url=https://openliberty.io/ org.opencontainers.image.source=https://github.com/OpenLiberty/ci.docker org.opencontainers.image.revision=cl200720200625-0300 org.opencontainers.image.description=This image contains the Open Liberty runtime with AdoptOpenJDK with OpenJ9 and Ubuntu as the base OS.  For more information on this image please see https://github.com/OpenLiberty/ci.docker#building-an-application-image org.opencontainers.image.title=Open Liberty org.opencontainers.image.version=20.0.0.7
-# Tue, 07 Jul 2020 02:57:31 GMT
+# Fri, 17 Jul 2020 22:53:05 GMT
 COPY dir:e8bb2487ca41e6b847cd1240bcb920ccb8c6de3c77aaaaf5ed7f0d39a3789c4a in /opt/ol/helpers 
-# Tue, 07 Jul 2020 02:57:31 GMT
+# Fri, 17 Jul 2020 22:53:05 GMT
 COPY dir:1cf5cc2663c6235241a5228340a9c566587fe27b3e434a313debbf75dacd7a4b in /opt/ol/fixes/ 
-# Tue, 07 Jul 2020 02:57:44 GMT
+# Fri, 17 Jul 2020 22:53:16 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200720200625-0300 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.7/openliberty-runtime-20.0.0.7.zip LIBERTY_SHA=226cd89250b2b831fd777042eff1ae69edb1cb1f LIBERTY_VERSION=20.0.0.7 OPENJ9_SCC=true
 RUN apt-get update     && apt-get install -y --no-install-recommends unzip openssl wget     && rm -rf /var/lib/apt/lists/*     && wget -q $LIBERTY_DOWNLOAD_URL -U UA-Open-Liberty-Docker -O /tmp/wlp.zip     && echo "$LIBERTY_SHA  /tmp/wlp.zip" > /tmp/wlp.zip.sha1     && sha1sum -c /tmp/wlp.zip.sha1     && unzip -q /tmp/wlp.zip -d /opt/ol     && rm /tmp/wlp.zip     && rm /tmp/wlp.zip.sha1     && apt-get remove -y unzip     && apt-get remove -y wget     && rm -rf /var/lib/apt/lists/*     && useradd -u 1001 -r -g 0 -s /usr/sbin/nologin default     && chown -R 1001:0 /opt/ol/wlp     && chmod -R g+rw /opt/ol/wlp
-# Tue, 07 Jul 2020 02:57:44 GMT
+# Fri, 17 Jul 2020 22:53:16 GMT
 ENV PATH=/opt/ol/wlp/bin:/opt/ol/docker/:/opt/ol/helpers/build:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin LOG_DIR=/logs WLP_OUTPUT_DIR=/opt/ol/wlp/output WLP_SKIP_MAXPERMSIZE=true OPENJ9_SCC=true
-# Tue, 07 Jul 2020 02:57:46 GMT
+# Fri, 17 Jul 2020 22:53:18 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200720200625-0300 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.7/openliberty-runtime-20.0.0.7.zip LIBERTY_SHA=226cd89250b2b831fd777042eff1ae69edb1cb1f LIBERTY_VERSION=20.0.0.7
 RUN /opt/ol/wlp/bin/server create     && rm -rf $WLP_OUTPUT_DIR/.classCache /output/workarea
-# Tue, 07 Jul 2020 02:57:47 GMT
+# Fri, 17 Jul 2020 22:53:19 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200720200625-0300 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.7/openliberty-runtime-20.0.0.7.zip LIBERTY_SHA=226cd89250b2b831fd777042eff1ae69edb1cb1f LIBERTY_VERSION=20.0.0.7
 RUN mkdir /logs     && mkdir -p /opt/ol/wlp/usr/shared/resources/lib.index.cache     && ln -s /opt/ol/wlp/usr/shared/resources/lib.index.cache /lib.index.cache     && mkdir -p $WLP_OUTPUT_DIR/defaultServer     && ln -s $WLP_OUTPUT_DIR/defaultServer /output     && ln -s /opt/ol/wlp/usr/servers/defaultServer /config     && mkdir -p /config/configDropins/defaults     && mkdir -p /config/configDropins/overrides     && ln -s /opt/ol/wlp /liberty     && chown -R 1001:0 /config     && chmod -R g+rw /config     && chown -R 1001:0 /logs     && chmod -R g+rw /logs     && chown -R 1001:0 /opt/ol/wlp/usr     && chmod -R g+rw /opt/ol/wlp/usr     && chown -R 1001:0 /opt/ol/wlp/output     && chmod -R g+rw /opt/ol/wlp/output     && chown -R 1001:0 /opt/ol/helpers     && chmod -R g+rw /opt/ol/helpers     && chown -R 1001:0 /opt/ol/fixes     && chmod -R g+rwx /opt/ol/fixes     && mkdir /etc/wlp     && chown -R 1001:0 /etc/wlp     && chmod -R g+rw /etc/wlp     && echo "<server description=\"Default Server\"><httpEndpoint id=\"defaultHttpEndpoint\" host=\"*\" /></server>" > /config/configDropins/defaults/open-default-port.xml
-# Tue, 07 Jul 2020 02:58:08 GMT
+# Fri, 17 Jul 2020 22:53:41 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200720200625-0300 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.7/openliberty-runtime-20.0.0.7.zip LIBERTY_SHA=226cd89250b2b831fd777042eff1ae69edb1cb1f LIBERTY_VERSION=20.0.0.7
 RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /output/messaging /output/resources/security /logs/* $WLP_OUTPUT_DIR/.classCache     && chown -R 1001:0 /opt/ol/wlp/output     && chmod -R g+rwx /opt/ol/wlp/output
-# Tue, 07 Jul 2020 02:58:08 GMT
+# Fri, 17 Jul 2020 22:53:41 GMT
 ENV RANDFILE=/tmp/.rnd IBM_JAVA_OPTIONS=-Xshareclasses:name=liberty,nonfatal,cacheDir=/output/.classCache/ 
-# Tue, 07 Jul 2020 02:58:09 GMT
+# Fri, 17 Jul 2020 22:53:41 GMT
 USER 1001
-# Tue, 07 Jul 2020 02:58:09 GMT
+# Fri, 17 Jul 2020 22:53:41 GMT
 EXPOSE 9080 9443
-# Tue, 07 Jul 2020 02:58:09 GMT
+# Fri, 17 Jul 2020 22:53:42 GMT
 ENTRYPOINT ["/opt/ol/helpers/runtime/docker-server.sh"]
-# Tue, 07 Jul 2020 02:58:09 GMT
+# Fri, 17 Jul 2020 22:53:42 GMT
 CMD ["/opt/ol/wlp/bin/server" "run" "defaultServer"]
 ```
 
@@ -2207,37 +2207,37 @@ CMD ["/opt/ol/wlp/bin/server" "run" "defaultServer"]
 		Last Modified: Mon, 06 Jul 2020 21:57:19 GMT  
 		Size: 162.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0cbfb179272dc9aa9a0a4722b2f8ffe1d0cdb83652c091add1d0c091d505468e`  
-		Last Modified: Mon, 06 Jul 2020 23:07:26 GMT  
-		Size: 13.3 MB (13311646 bytes)  
+	-	`sha256:262049cebf1b6f60b6dc78a926be5d3a689ba76a6c5c28edc9b195952b98c31f`  
+		Last Modified: Fri, 17 Jul 2020 22:23:14 GMT  
+		Size: 13.9 MB (13875144 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d69578686d5961608b047f555a5d6b3e75e1a8bfadde61e661ffe3b5717439e0`  
-		Last Modified: Mon, 06 Jul 2020 23:10:16 GMT  
-		Size: 48.5 MB (48502689 bytes)  
+	-	`sha256:ae7ae3562f54a1abcec2e390aa39c5d1bdd4d797018f8288100ac516ff45ec7e`  
+		Last Modified: Fri, 17 Jul 2020 22:25:12 GMT  
+		Size: 48.7 MB (48691295 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fec365aa67b4f41776711dd22b883853bdc71a38adfcaf324b01fcfcd2e51275`  
-		Last Modified: Tue, 07 Jul 2020 03:01:03 GMT  
-		Size: 8.4 KB (8352 bytes)  
+	-	`sha256:d5cd1c7cabb21604488842a6b70ae3b2b1f4f3f4ab8f3166c7d886a938b470aa`  
+		Last Modified: Fri, 17 Jul 2020 22:56:57 GMT  
+		Size: 8.4 KB (8355 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d529747d877f72c9f41bc995536f24b95bde29a0605d6d2d4b68247fe0d2ae71`  
-		Last Modified: Tue, 07 Jul 2020 03:01:02 GMT  
-		Size: 241.0 B  
+	-	`sha256:4d0a7e5386637638c3baa64552e90f97f3a78b8758988bede3c9aa9cd9ff23dd`  
+		Last Modified: Fri, 17 Jul 2020 22:56:56 GMT  
+		Size: 244.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ea208fc78696caf4d2c51196ad79e6a91047a856dc079b3213e79fc847403773`  
-		Last Modified: Tue, 07 Jul 2020 03:01:12 GMT  
-		Size: 157.7 MB (157725520 bytes)  
+	-	`sha256:2fa2164691c4714f263629a04436be551e7f183e34ae362c7cd328f004d6839e`  
+		Last Modified: Fri, 17 Jul 2020 22:57:07 GMT  
+		Size: 157.8 MB (157783993 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ba2a09fba9bd31e8d62f8aacacc293fc8c22b319326ac7c6007389f48cd1448e`  
-		Last Modified: Tue, 07 Jul 2020 03:01:02 GMT  
-		Size: 909.0 B  
+	-	`sha256:b9561ae263f5638923b206f0e2fe29e3b990a44216e271332e01860490479fd5`  
+		Last Modified: Fri, 17 Jul 2020 22:56:56 GMT  
+		Size: 907.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cad0fe80d02a5bf9740be4defec5bd14b3d1dd5bc61edcc93a4599ce83d0458d`  
-		Last Modified: Tue, 07 Jul 2020 03:01:02 GMT  
-		Size: 9.4 KB (9397 bytes)  
+	-	`sha256:c5b0d9ee4b1303ecddcb8c9642dacd16d0ba6ca2667af936583b610dc1abdbd2`  
+		Last Modified: Fri, 17 Jul 2020 22:56:56 GMT  
+		Size: 9.4 KB (9404 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6b937aaf748c9efe4d0a0526c76b10937cbbf915191f701abe6c551cd71ad738`  
-		Last Modified: Tue, 07 Jul 2020 03:01:03 GMT  
-		Size: 8.2 MB (8166928 bytes)  
+	-	`sha256:a78593c7e93c95a24d1067de28c5918f5b0934f1137c1b6ff284a4984214e12b`  
+		Last Modified: Fri, 17 Jul 2020 22:56:58 GMT  
+		Size: 8.1 MB (8123074 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `open-liberty:20.0.0.7-kernel-java8-openj9` - linux; ppc64le
@@ -2501,7 +2501,7 @@ CMD ["/opt/ol/wlp/bin/server" "run" "defaultServer"]
 ## `open-liberty:full`
 
 ```console
-$ docker pull open-liberty@sha256:3dc33caa1ead55124282ae4a90fbea59f8d8f5faac5bd778482964f87e8c774c
+$ docker pull open-liberty@sha256:a02173eb0fc83377745b10a05116d35bac8a3d6255b63300e3d5fd2f597e2399
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2513,14 +2513,14 @@ $ docker pull open-liberty@sha256:3dc33caa1ead55124282ae4a90fbea59f8d8f5faac5bd7
 ### `open-liberty:full` - linux; amd64
 
 ```console
-$ docker pull open-liberty@sha256:bd76c7595ca159a418c522395031520c6cf63e562919c6b6466fab219635961b
+$ docker pull open-liberty@sha256:c2a27d0ea2a831437eb9aa7827ee8981f5c8a8dd7b0543ae0c531f532ee1761b
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **271.1 MB (271143447 bytes)**  
+-	Total Size: **271.8 MB (271833836 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3a4bf95620c8fe1cf7b4100971381ce86e884ba656aeaf7e260793c290b4fd1f`
+-	Image ID: `sha256:6388a94564c394cd1198307ad44aa52575189e91fa2269f5b65430c4a487481a`
 -	Entrypoint: `["\/opt\/ol\/helpers\/runtime\/docker-server.sh"]`
 -	Default Command: `["\/opt\/ol\/wlp\/bin\/server","run","defaultServer"]`
 
@@ -2537,59 +2537,59 @@ RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
 CMD ["/bin/bash"]
 # Mon, 06 Jul 2020 23:03:04 GMT
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Mon, 06 Jul 2020 23:03:21 GMT
-RUN apt-get update     && apt-get install -y --no-install-recommends curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Mon, 06 Jul 2020 23:05:06 GMT
-ENV JAVA_VERSION=jdk8u252-b09_openj9-0.20.0
-# Mon, 06 Jul 2020 23:05:25 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        ppc64el|ppc64le)          ESUM='00095854b2219c71a142135ef2b63ae48869f4366c82524353991a36204cf7e9';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u252-b09_openj9-0.20.0/OpenJDK8U-jre_ppc64le_linux_openj9_8u252b09_openj9-0.20.0.tar.gz';          ;;        s390x)          ESUM='7cb7d392fb7240c30b0993a6ec332060b406641589b4c0207b7f9cbbaad81fc8';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u252-b09_openj9-0.20.0/OpenJDK8U-jre_s390x_linux_openj9_8u252b09_openj9-0.20.0.tar.gz';          ;;        amd64|x86_64)          ESUM='5c0ab4691ff5f8e69bb14462f2afb8d73d751b01048eacf4b426ed6d6646dc63';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u252-b09_openj9-0.20.0/OpenJDK8U-jre_x64_linux_openj9_8u252b09_openj9-0.20.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Mon, 06 Jul 2020 23:05:25 GMT
+# Fri, 17 Jul 2020 22:19:52 GMT
+RUN apt-get update     && apt-get install -y --no-install-recommends tzdata curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
+# Fri, 17 Jul 2020 22:21:18 GMT
+ENV JAVA_VERSION=jdk8u262-b10_openj9-0.21.0
+# Fri, 17 Jul 2020 22:21:37 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        ppc64el|ppc64le)          ESUM='722517d9565bd9602580609114eb0de9b40b01050d52ff7bae24c438d363e186';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10_openj9-0.21.0/OpenJDK8U-jre_ppc64le_linux_openj9_8u262b10_openj9-0.21.0.tar.gz';          ;;        s390x)          ESUM='c14aeedf4e989a6b31e00d6e18b8377957b07b000cac316aee9d973ef6d65b6f';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10_openj9-0.21.0/OpenJDK8U-jre_s390x_linux_openj9_8u262b10_openj9-0.21.0.tar.gz';          ;;        amd64|x86_64)          ESUM='aef8750b492ff6371318cf5138e38827d8895815b2ac079dcfcb02007a45c7f6';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10_openj9-0.21.0/OpenJDK8U-jre_x64_linux_openj9_8u262b10_openj9-0.21.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
+# Fri, 17 Jul 2020 22:21:37 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Mon, 06 Jul 2020 23:05:25 GMT
+# Fri, 17 Jul 2020 22:21:37 GMT
 ENV JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+UseContainerSupport -XX:+IdleTuningCompactOnIdle -XX:+IdleTuningGcOnIdle
-# Tue, 07 Jul 2020 02:57:30 GMT
+# Fri, 17 Jul 2020 22:53:03 GMT
 ARG LIBERTY_VERSION=20.0.0.7
-# Tue, 07 Jul 2020 02:57:30 GMT
+# Fri, 17 Jul 2020 22:53:04 GMT
 ARG LIBERTY_SHA=226cd89250b2b831fd777042eff1ae69edb1cb1f
-# Tue, 07 Jul 2020 02:57:30 GMT
+# Fri, 17 Jul 2020 22:53:04 GMT
 ARG LIBERTY_BUILD_LABEL=cl200720200625-0300
-# Tue, 07 Jul 2020 02:57:31 GMT
+# Fri, 17 Jul 2020 22:53:04 GMT
 ARG LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.7/openliberty-runtime-20.0.0.7.zip
-# Tue, 07 Jul 2020 02:57:31 GMT
+# Fri, 17 Jul 2020 22:53:04 GMT
 ARG OPENJ9_SCC=true
-# Tue, 07 Jul 2020 02:57:31 GMT
+# Fri, 17 Jul 2020 22:53:04 GMT
 LABEL org.opencontainers.image.authors=Arthur De Magalhaes, Chris Potter org.opencontainers.image.vendor=Open Liberty org.opencontainers.image.url=https://openliberty.io/ org.opencontainers.image.source=https://github.com/OpenLiberty/ci.docker org.opencontainers.image.revision=cl200720200625-0300 org.opencontainers.image.description=This image contains the Open Liberty runtime with AdoptOpenJDK with OpenJ9 and Ubuntu as the base OS.  For more information on this image please see https://github.com/OpenLiberty/ci.docker#building-an-application-image org.opencontainers.image.title=Open Liberty org.opencontainers.image.version=20.0.0.7
-# Tue, 07 Jul 2020 02:57:31 GMT
+# Fri, 17 Jul 2020 22:53:05 GMT
 COPY dir:e8bb2487ca41e6b847cd1240bcb920ccb8c6de3c77aaaaf5ed7f0d39a3789c4a in /opt/ol/helpers 
-# Tue, 07 Jul 2020 02:57:31 GMT
+# Fri, 17 Jul 2020 22:53:05 GMT
 COPY dir:1cf5cc2663c6235241a5228340a9c566587fe27b3e434a313debbf75dacd7a4b in /opt/ol/fixes/ 
-# Tue, 07 Jul 2020 02:57:44 GMT
+# Fri, 17 Jul 2020 22:53:16 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200720200625-0300 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.7/openliberty-runtime-20.0.0.7.zip LIBERTY_SHA=226cd89250b2b831fd777042eff1ae69edb1cb1f LIBERTY_VERSION=20.0.0.7 OPENJ9_SCC=true
 RUN apt-get update     && apt-get install -y --no-install-recommends unzip openssl wget     && rm -rf /var/lib/apt/lists/*     && wget -q $LIBERTY_DOWNLOAD_URL -U UA-Open-Liberty-Docker -O /tmp/wlp.zip     && echo "$LIBERTY_SHA  /tmp/wlp.zip" > /tmp/wlp.zip.sha1     && sha1sum -c /tmp/wlp.zip.sha1     && unzip -q /tmp/wlp.zip -d /opt/ol     && rm /tmp/wlp.zip     && rm /tmp/wlp.zip.sha1     && apt-get remove -y unzip     && apt-get remove -y wget     && rm -rf /var/lib/apt/lists/*     && useradd -u 1001 -r -g 0 -s /usr/sbin/nologin default     && chown -R 1001:0 /opt/ol/wlp     && chmod -R g+rw /opt/ol/wlp
-# Tue, 07 Jul 2020 02:57:44 GMT
+# Fri, 17 Jul 2020 22:53:16 GMT
 ENV PATH=/opt/ol/wlp/bin:/opt/ol/docker/:/opt/ol/helpers/build:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin LOG_DIR=/logs WLP_OUTPUT_DIR=/opt/ol/wlp/output WLP_SKIP_MAXPERMSIZE=true OPENJ9_SCC=true
-# Tue, 07 Jul 2020 02:57:46 GMT
+# Fri, 17 Jul 2020 22:53:18 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200720200625-0300 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.7/openliberty-runtime-20.0.0.7.zip LIBERTY_SHA=226cd89250b2b831fd777042eff1ae69edb1cb1f LIBERTY_VERSION=20.0.0.7
 RUN /opt/ol/wlp/bin/server create     && rm -rf $WLP_OUTPUT_DIR/.classCache /output/workarea
-# Tue, 07 Jul 2020 02:57:47 GMT
+# Fri, 17 Jul 2020 22:53:19 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200720200625-0300 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.7/openliberty-runtime-20.0.0.7.zip LIBERTY_SHA=226cd89250b2b831fd777042eff1ae69edb1cb1f LIBERTY_VERSION=20.0.0.7
 RUN mkdir /logs     && mkdir -p /opt/ol/wlp/usr/shared/resources/lib.index.cache     && ln -s /opt/ol/wlp/usr/shared/resources/lib.index.cache /lib.index.cache     && mkdir -p $WLP_OUTPUT_DIR/defaultServer     && ln -s $WLP_OUTPUT_DIR/defaultServer /output     && ln -s /opt/ol/wlp/usr/servers/defaultServer /config     && mkdir -p /config/configDropins/defaults     && mkdir -p /config/configDropins/overrides     && ln -s /opt/ol/wlp /liberty     && chown -R 1001:0 /config     && chmod -R g+rw /config     && chown -R 1001:0 /logs     && chmod -R g+rw /logs     && chown -R 1001:0 /opt/ol/wlp/usr     && chmod -R g+rw /opt/ol/wlp/usr     && chown -R 1001:0 /opt/ol/wlp/output     && chmod -R g+rw /opt/ol/wlp/output     && chown -R 1001:0 /opt/ol/helpers     && chmod -R g+rw /opt/ol/helpers     && chown -R 1001:0 /opt/ol/fixes     && chmod -R g+rwx /opt/ol/fixes     && mkdir /etc/wlp     && chown -R 1001:0 /etc/wlp     && chmod -R g+rw /etc/wlp     && echo "<server description=\"Default Server\"><httpEndpoint id=\"defaultHttpEndpoint\" host=\"*\" /></server>" > /config/configDropins/defaults/open-default-port.xml
-# Tue, 07 Jul 2020 02:58:08 GMT
+# Fri, 17 Jul 2020 22:53:41 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200720200625-0300 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.7/openliberty-runtime-20.0.0.7.zip LIBERTY_SHA=226cd89250b2b831fd777042eff1ae69edb1cb1f LIBERTY_VERSION=20.0.0.7
 RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /output/messaging /output/resources/security /logs/* $WLP_OUTPUT_DIR/.classCache     && chown -R 1001:0 /opt/ol/wlp/output     && chmod -R g+rwx /opt/ol/wlp/output
-# Tue, 07 Jul 2020 02:58:08 GMT
+# Fri, 17 Jul 2020 22:53:41 GMT
 ENV RANDFILE=/tmp/.rnd IBM_JAVA_OPTIONS=-Xshareclasses:name=liberty,nonfatal,cacheDir=/output/.classCache/ 
-# Tue, 07 Jul 2020 02:58:09 GMT
+# Fri, 17 Jul 2020 22:53:41 GMT
 USER 1001
-# Tue, 07 Jul 2020 02:58:09 GMT
+# Fri, 17 Jul 2020 22:53:41 GMT
 EXPOSE 9080 9443
-# Tue, 07 Jul 2020 02:58:09 GMT
+# Fri, 17 Jul 2020 22:53:42 GMT
 ENTRYPOINT ["/opt/ol/helpers/runtime/docker-server.sh"]
-# Tue, 07 Jul 2020 02:58:09 GMT
+# Fri, 17 Jul 2020 22:53:42 GMT
 CMD ["/opt/ol/wlp/bin/server" "run" "defaultServer"]
-# Tue, 07 Jul 2020 02:58:18 GMT
+# Fri, 17 Jul 2020 22:53:52 GMT
 RUN cp /opt/ol/wlp/templates/servers/javaee8/server.xml /config/server.xml
-# Tue, 07 Jul 2020 02:58:47 GMT
+# Fri, 17 Jul 2020 22:54:26 GMT
 RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /output/messaging /output/resources/security /logs/* $WLP_OUTPUT_DIR/.classCache     && chown -R 1001:0 /opt/ol/wlp/output     && chmod -R g+rwx /opt/ol/wlp/output
 ```
 
@@ -2610,45 +2610,45 @@ RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /outpu
 		Last Modified: Mon, 06 Jul 2020 21:57:19 GMT  
 		Size: 162.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0cbfb179272dc9aa9a0a4722b2f8ffe1d0cdb83652c091add1d0c091d505468e`  
-		Last Modified: Mon, 06 Jul 2020 23:07:26 GMT  
-		Size: 13.3 MB (13311646 bytes)  
+	-	`sha256:262049cebf1b6f60b6dc78a926be5d3a689ba76a6c5c28edc9b195952b98c31f`  
+		Last Modified: Fri, 17 Jul 2020 22:23:14 GMT  
+		Size: 13.9 MB (13875144 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d69578686d5961608b047f555a5d6b3e75e1a8bfadde61e661ffe3b5717439e0`  
-		Last Modified: Mon, 06 Jul 2020 23:10:16 GMT  
-		Size: 48.5 MB (48502689 bytes)  
+	-	`sha256:ae7ae3562f54a1abcec2e390aa39c5d1bdd4d797018f8288100ac516ff45ec7e`  
+		Last Modified: Fri, 17 Jul 2020 22:25:12 GMT  
+		Size: 48.7 MB (48691295 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fec365aa67b4f41776711dd22b883853bdc71a38adfcaf324b01fcfcd2e51275`  
-		Last Modified: Tue, 07 Jul 2020 03:01:03 GMT  
-		Size: 8.4 KB (8352 bytes)  
+	-	`sha256:d5cd1c7cabb21604488842a6b70ae3b2b1f4f3f4ab8f3166c7d886a938b470aa`  
+		Last Modified: Fri, 17 Jul 2020 22:56:57 GMT  
+		Size: 8.4 KB (8355 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d529747d877f72c9f41bc995536f24b95bde29a0605d6d2d4b68247fe0d2ae71`  
-		Last Modified: Tue, 07 Jul 2020 03:01:02 GMT  
-		Size: 241.0 B  
+	-	`sha256:4d0a7e5386637638c3baa64552e90f97f3a78b8758988bede3c9aa9cd9ff23dd`  
+		Last Modified: Fri, 17 Jul 2020 22:56:56 GMT  
+		Size: 244.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ea208fc78696caf4d2c51196ad79e6a91047a856dc079b3213e79fc847403773`  
-		Last Modified: Tue, 07 Jul 2020 03:01:12 GMT  
-		Size: 157.7 MB (157725520 bytes)  
+	-	`sha256:2fa2164691c4714f263629a04436be551e7f183e34ae362c7cd328f004d6839e`  
+		Last Modified: Fri, 17 Jul 2020 22:57:07 GMT  
+		Size: 157.8 MB (157783993 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ba2a09fba9bd31e8d62f8aacacc293fc8c22b319326ac7c6007389f48cd1448e`  
-		Last Modified: Tue, 07 Jul 2020 03:01:02 GMT  
-		Size: 909.0 B  
+	-	`sha256:b9561ae263f5638923b206f0e2fe29e3b990a44216e271332e01860490479fd5`  
+		Last Modified: Fri, 17 Jul 2020 22:56:56 GMT  
+		Size: 907.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cad0fe80d02a5bf9740be4defec5bd14b3d1dd5bc61edcc93a4599ce83d0458d`  
-		Last Modified: Tue, 07 Jul 2020 03:01:02 GMT  
-		Size: 9.4 KB (9397 bytes)  
+	-	`sha256:c5b0d9ee4b1303ecddcb8c9642dacd16d0ba6ca2667af936583b610dc1abdbd2`  
+		Last Modified: Fri, 17 Jul 2020 22:56:56 GMT  
+		Size: 9.4 KB (9404 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6b937aaf748c9efe4d0a0526c76b10937cbbf915191f701abe6c551cd71ad738`  
-		Last Modified: Tue, 07 Jul 2020 03:01:03 GMT  
-		Size: 8.2 MB (8166928 bytes)  
+	-	`sha256:a78593c7e93c95a24d1067de28c5918f5b0934f1137c1b6ff284a4984214e12b`  
+		Last Modified: Fri, 17 Jul 2020 22:56:58 GMT  
+		Size: 8.1 MB (8123074 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b03a95e897555c1e38167ae106c54bca8851761df923838aac4205204fba429b`  
-		Last Modified: Tue, 07 Jul 2020 03:01:17 GMT  
-		Size: 962.0 B  
+	-	`sha256:7d87ae3bca31579ea606a2a26fda0d2764eed2c473dbd9463ac06b75fd7bd160`  
+		Last Modified: Fri, 17 Jul 2020 22:57:11 GMT  
+		Size: 964.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dbd171ffa47e399d1737acc8766613900c0241cfcf78ce394f52bf4b62f1ca3a`  
-		Last Modified: Tue, 07 Jul 2020 03:01:20 GMT  
-		Size: 16.7 MB (16684231 bytes)  
+	-	`sha256:f5043a1b4004b7c5e00d1325a216ffb151a0097b1772a5819aeddb8b53eab216`  
+		Last Modified: Fri, 17 Jul 2020 22:57:14 GMT  
+		Size: 16.6 MB (16607884 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `open-liberty:full` - linux; ppc64le
@@ -2936,7 +2936,7 @@ RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /outpu
 ## `open-liberty:full-java8-openj9`
 
 ```console
-$ docker pull open-liberty@sha256:3dc33caa1ead55124282ae4a90fbea59f8d8f5faac5bd778482964f87e8c774c
+$ docker pull open-liberty@sha256:a02173eb0fc83377745b10a05116d35bac8a3d6255b63300e3d5fd2f597e2399
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2948,14 +2948,14 @@ $ docker pull open-liberty@sha256:3dc33caa1ead55124282ae4a90fbea59f8d8f5faac5bd7
 ### `open-liberty:full-java8-openj9` - linux; amd64
 
 ```console
-$ docker pull open-liberty@sha256:bd76c7595ca159a418c522395031520c6cf63e562919c6b6466fab219635961b
+$ docker pull open-liberty@sha256:c2a27d0ea2a831437eb9aa7827ee8981f5c8a8dd7b0543ae0c531f532ee1761b
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **271.1 MB (271143447 bytes)**  
+-	Total Size: **271.8 MB (271833836 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3a4bf95620c8fe1cf7b4100971381ce86e884ba656aeaf7e260793c290b4fd1f`
+-	Image ID: `sha256:6388a94564c394cd1198307ad44aa52575189e91fa2269f5b65430c4a487481a`
 -	Entrypoint: `["\/opt\/ol\/helpers\/runtime\/docker-server.sh"]`
 -	Default Command: `["\/opt\/ol\/wlp\/bin\/server","run","defaultServer"]`
 
@@ -2972,59 +2972,59 @@ RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
 CMD ["/bin/bash"]
 # Mon, 06 Jul 2020 23:03:04 GMT
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Mon, 06 Jul 2020 23:03:21 GMT
-RUN apt-get update     && apt-get install -y --no-install-recommends curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Mon, 06 Jul 2020 23:05:06 GMT
-ENV JAVA_VERSION=jdk8u252-b09_openj9-0.20.0
-# Mon, 06 Jul 2020 23:05:25 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        ppc64el|ppc64le)          ESUM='00095854b2219c71a142135ef2b63ae48869f4366c82524353991a36204cf7e9';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u252-b09_openj9-0.20.0/OpenJDK8U-jre_ppc64le_linux_openj9_8u252b09_openj9-0.20.0.tar.gz';          ;;        s390x)          ESUM='7cb7d392fb7240c30b0993a6ec332060b406641589b4c0207b7f9cbbaad81fc8';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u252-b09_openj9-0.20.0/OpenJDK8U-jre_s390x_linux_openj9_8u252b09_openj9-0.20.0.tar.gz';          ;;        amd64|x86_64)          ESUM='5c0ab4691ff5f8e69bb14462f2afb8d73d751b01048eacf4b426ed6d6646dc63';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u252-b09_openj9-0.20.0/OpenJDK8U-jre_x64_linux_openj9_8u252b09_openj9-0.20.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Mon, 06 Jul 2020 23:05:25 GMT
+# Fri, 17 Jul 2020 22:19:52 GMT
+RUN apt-get update     && apt-get install -y --no-install-recommends tzdata curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
+# Fri, 17 Jul 2020 22:21:18 GMT
+ENV JAVA_VERSION=jdk8u262-b10_openj9-0.21.0
+# Fri, 17 Jul 2020 22:21:37 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        ppc64el|ppc64le)          ESUM='722517d9565bd9602580609114eb0de9b40b01050d52ff7bae24c438d363e186';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10_openj9-0.21.0/OpenJDK8U-jre_ppc64le_linux_openj9_8u262b10_openj9-0.21.0.tar.gz';          ;;        s390x)          ESUM='c14aeedf4e989a6b31e00d6e18b8377957b07b000cac316aee9d973ef6d65b6f';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10_openj9-0.21.0/OpenJDK8U-jre_s390x_linux_openj9_8u262b10_openj9-0.21.0.tar.gz';          ;;        amd64|x86_64)          ESUM='aef8750b492ff6371318cf5138e38827d8895815b2ac079dcfcb02007a45c7f6';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10_openj9-0.21.0/OpenJDK8U-jre_x64_linux_openj9_8u262b10_openj9-0.21.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
+# Fri, 17 Jul 2020 22:21:37 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Mon, 06 Jul 2020 23:05:25 GMT
+# Fri, 17 Jul 2020 22:21:37 GMT
 ENV JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+UseContainerSupport -XX:+IdleTuningCompactOnIdle -XX:+IdleTuningGcOnIdle
-# Tue, 07 Jul 2020 02:57:30 GMT
+# Fri, 17 Jul 2020 22:53:03 GMT
 ARG LIBERTY_VERSION=20.0.0.7
-# Tue, 07 Jul 2020 02:57:30 GMT
+# Fri, 17 Jul 2020 22:53:04 GMT
 ARG LIBERTY_SHA=226cd89250b2b831fd777042eff1ae69edb1cb1f
-# Tue, 07 Jul 2020 02:57:30 GMT
+# Fri, 17 Jul 2020 22:53:04 GMT
 ARG LIBERTY_BUILD_LABEL=cl200720200625-0300
-# Tue, 07 Jul 2020 02:57:31 GMT
+# Fri, 17 Jul 2020 22:53:04 GMT
 ARG LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.7/openliberty-runtime-20.0.0.7.zip
-# Tue, 07 Jul 2020 02:57:31 GMT
+# Fri, 17 Jul 2020 22:53:04 GMT
 ARG OPENJ9_SCC=true
-# Tue, 07 Jul 2020 02:57:31 GMT
+# Fri, 17 Jul 2020 22:53:04 GMT
 LABEL org.opencontainers.image.authors=Arthur De Magalhaes, Chris Potter org.opencontainers.image.vendor=Open Liberty org.opencontainers.image.url=https://openliberty.io/ org.opencontainers.image.source=https://github.com/OpenLiberty/ci.docker org.opencontainers.image.revision=cl200720200625-0300 org.opencontainers.image.description=This image contains the Open Liberty runtime with AdoptOpenJDK with OpenJ9 and Ubuntu as the base OS.  For more information on this image please see https://github.com/OpenLiberty/ci.docker#building-an-application-image org.opencontainers.image.title=Open Liberty org.opencontainers.image.version=20.0.0.7
-# Tue, 07 Jul 2020 02:57:31 GMT
+# Fri, 17 Jul 2020 22:53:05 GMT
 COPY dir:e8bb2487ca41e6b847cd1240bcb920ccb8c6de3c77aaaaf5ed7f0d39a3789c4a in /opt/ol/helpers 
-# Tue, 07 Jul 2020 02:57:31 GMT
+# Fri, 17 Jul 2020 22:53:05 GMT
 COPY dir:1cf5cc2663c6235241a5228340a9c566587fe27b3e434a313debbf75dacd7a4b in /opt/ol/fixes/ 
-# Tue, 07 Jul 2020 02:57:44 GMT
+# Fri, 17 Jul 2020 22:53:16 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200720200625-0300 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.7/openliberty-runtime-20.0.0.7.zip LIBERTY_SHA=226cd89250b2b831fd777042eff1ae69edb1cb1f LIBERTY_VERSION=20.0.0.7 OPENJ9_SCC=true
 RUN apt-get update     && apt-get install -y --no-install-recommends unzip openssl wget     && rm -rf /var/lib/apt/lists/*     && wget -q $LIBERTY_DOWNLOAD_URL -U UA-Open-Liberty-Docker -O /tmp/wlp.zip     && echo "$LIBERTY_SHA  /tmp/wlp.zip" > /tmp/wlp.zip.sha1     && sha1sum -c /tmp/wlp.zip.sha1     && unzip -q /tmp/wlp.zip -d /opt/ol     && rm /tmp/wlp.zip     && rm /tmp/wlp.zip.sha1     && apt-get remove -y unzip     && apt-get remove -y wget     && rm -rf /var/lib/apt/lists/*     && useradd -u 1001 -r -g 0 -s /usr/sbin/nologin default     && chown -R 1001:0 /opt/ol/wlp     && chmod -R g+rw /opt/ol/wlp
-# Tue, 07 Jul 2020 02:57:44 GMT
+# Fri, 17 Jul 2020 22:53:16 GMT
 ENV PATH=/opt/ol/wlp/bin:/opt/ol/docker/:/opt/ol/helpers/build:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin LOG_DIR=/logs WLP_OUTPUT_DIR=/opt/ol/wlp/output WLP_SKIP_MAXPERMSIZE=true OPENJ9_SCC=true
-# Tue, 07 Jul 2020 02:57:46 GMT
+# Fri, 17 Jul 2020 22:53:18 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200720200625-0300 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.7/openliberty-runtime-20.0.0.7.zip LIBERTY_SHA=226cd89250b2b831fd777042eff1ae69edb1cb1f LIBERTY_VERSION=20.0.0.7
 RUN /opt/ol/wlp/bin/server create     && rm -rf $WLP_OUTPUT_DIR/.classCache /output/workarea
-# Tue, 07 Jul 2020 02:57:47 GMT
+# Fri, 17 Jul 2020 22:53:19 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200720200625-0300 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.7/openliberty-runtime-20.0.0.7.zip LIBERTY_SHA=226cd89250b2b831fd777042eff1ae69edb1cb1f LIBERTY_VERSION=20.0.0.7
 RUN mkdir /logs     && mkdir -p /opt/ol/wlp/usr/shared/resources/lib.index.cache     && ln -s /opt/ol/wlp/usr/shared/resources/lib.index.cache /lib.index.cache     && mkdir -p $WLP_OUTPUT_DIR/defaultServer     && ln -s $WLP_OUTPUT_DIR/defaultServer /output     && ln -s /opt/ol/wlp/usr/servers/defaultServer /config     && mkdir -p /config/configDropins/defaults     && mkdir -p /config/configDropins/overrides     && ln -s /opt/ol/wlp /liberty     && chown -R 1001:0 /config     && chmod -R g+rw /config     && chown -R 1001:0 /logs     && chmod -R g+rw /logs     && chown -R 1001:0 /opt/ol/wlp/usr     && chmod -R g+rw /opt/ol/wlp/usr     && chown -R 1001:0 /opt/ol/wlp/output     && chmod -R g+rw /opt/ol/wlp/output     && chown -R 1001:0 /opt/ol/helpers     && chmod -R g+rw /opt/ol/helpers     && chown -R 1001:0 /opt/ol/fixes     && chmod -R g+rwx /opt/ol/fixes     && mkdir /etc/wlp     && chown -R 1001:0 /etc/wlp     && chmod -R g+rw /etc/wlp     && echo "<server description=\"Default Server\"><httpEndpoint id=\"defaultHttpEndpoint\" host=\"*\" /></server>" > /config/configDropins/defaults/open-default-port.xml
-# Tue, 07 Jul 2020 02:58:08 GMT
+# Fri, 17 Jul 2020 22:53:41 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200720200625-0300 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.7/openliberty-runtime-20.0.0.7.zip LIBERTY_SHA=226cd89250b2b831fd777042eff1ae69edb1cb1f LIBERTY_VERSION=20.0.0.7
 RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /output/messaging /output/resources/security /logs/* $WLP_OUTPUT_DIR/.classCache     && chown -R 1001:0 /opt/ol/wlp/output     && chmod -R g+rwx /opt/ol/wlp/output
-# Tue, 07 Jul 2020 02:58:08 GMT
+# Fri, 17 Jul 2020 22:53:41 GMT
 ENV RANDFILE=/tmp/.rnd IBM_JAVA_OPTIONS=-Xshareclasses:name=liberty,nonfatal,cacheDir=/output/.classCache/ 
-# Tue, 07 Jul 2020 02:58:09 GMT
+# Fri, 17 Jul 2020 22:53:41 GMT
 USER 1001
-# Tue, 07 Jul 2020 02:58:09 GMT
+# Fri, 17 Jul 2020 22:53:41 GMT
 EXPOSE 9080 9443
-# Tue, 07 Jul 2020 02:58:09 GMT
+# Fri, 17 Jul 2020 22:53:42 GMT
 ENTRYPOINT ["/opt/ol/helpers/runtime/docker-server.sh"]
-# Tue, 07 Jul 2020 02:58:09 GMT
+# Fri, 17 Jul 2020 22:53:42 GMT
 CMD ["/opt/ol/wlp/bin/server" "run" "defaultServer"]
-# Tue, 07 Jul 2020 02:58:18 GMT
+# Fri, 17 Jul 2020 22:53:52 GMT
 RUN cp /opt/ol/wlp/templates/servers/javaee8/server.xml /config/server.xml
-# Tue, 07 Jul 2020 02:58:47 GMT
+# Fri, 17 Jul 2020 22:54:26 GMT
 RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /output/messaging /output/resources/security /logs/* $WLP_OUTPUT_DIR/.classCache     && chown -R 1001:0 /opt/ol/wlp/output     && chmod -R g+rwx /opt/ol/wlp/output
 ```
 
@@ -3045,45 +3045,45 @@ RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /outpu
 		Last Modified: Mon, 06 Jul 2020 21:57:19 GMT  
 		Size: 162.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0cbfb179272dc9aa9a0a4722b2f8ffe1d0cdb83652c091add1d0c091d505468e`  
-		Last Modified: Mon, 06 Jul 2020 23:07:26 GMT  
-		Size: 13.3 MB (13311646 bytes)  
+	-	`sha256:262049cebf1b6f60b6dc78a926be5d3a689ba76a6c5c28edc9b195952b98c31f`  
+		Last Modified: Fri, 17 Jul 2020 22:23:14 GMT  
+		Size: 13.9 MB (13875144 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d69578686d5961608b047f555a5d6b3e75e1a8bfadde61e661ffe3b5717439e0`  
-		Last Modified: Mon, 06 Jul 2020 23:10:16 GMT  
-		Size: 48.5 MB (48502689 bytes)  
+	-	`sha256:ae7ae3562f54a1abcec2e390aa39c5d1bdd4d797018f8288100ac516ff45ec7e`  
+		Last Modified: Fri, 17 Jul 2020 22:25:12 GMT  
+		Size: 48.7 MB (48691295 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fec365aa67b4f41776711dd22b883853bdc71a38adfcaf324b01fcfcd2e51275`  
-		Last Modified: Tue, 07 Jul 2020 03:01:03 GMT  
-		Size: 8.4 KB (8352 bytes)  
+	-	`sha256:d5cd1c7cabb21604488842a6b70ae3b2b1f4f3f4ab8f3166c7d886a938b470aa`  
+		Last Modified: Fri, 17 Jul 2020 22:56:57 GMT  
+		Size: 8.4 KB (8355 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d529747d877f72c9f41bc995536f24b95bde29a0605d6d2d4b68247fe0d2ae71`  
-		Last Modified: Tue, 07 Jul 2020 03:01:02 GMT  
-		Size: 241.0 B  
+	-	`sha256:4d0a7e5386637638c3baa64552e90f97f3a78b8758988bede3c9aa9cd9ff23dd`  
+		Last Modified: Fri, 17 Jul 2020 22:56:56 GMT  
+		Size: 244.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ea208fc78696caf4d2c51196ad79e6a91047a856dc079b3213e79fc847403773`  
-		Last Modified: Tue, 07 Jul 2020 03:01:12 GMT  
-		Size: 157.7 MB (157725520 bytes)  
+	-	`sha256:2fa2164691c4714f263629a04436be551e7f183e34ae362c7cd328f004d6839e`  
+		Last Modified: Fri, 17 Jul 2020 22:57:07 GMT  
+		Size: 157.8 MB (157783993 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ba2a09fba9bd31e8d62f8aacacc293fc8c22b319326ac7c6007389f48cd1448e`  
-		Last Modified: Tue, 07 Jul 2020 03:01:02 GMT  
-		Size: 909.0 B  
+	-	`sha256:b9561ae263f5638923b206f0e2fe29e3b990a44216e271332e01860490479fd5`  
+		Last Modified: Fri, 17 Jul 2020 22:56:56 GMT  
+		Size: 907.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cad0fe80d02a5bf9740be4defec5bd14b3d1dd5bc61edcc93a4599ce83d0458d`  
-		Last Modified: Tue, 07 Jul 2020 03:01:02 GMT  
-		Size: 9.4 KB (9397 bytes)  
+	-	`sha256:c5b0d9ee4b1303ecddcb8c9642dacd16d0ba6ca2667af936583b610dc1abdbd2`  
+		Last Modified: Fri, 17 Jul 2020 22:56:56 GMT  
+		Size: 9.4 KB (9404 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6b937aaf748c9efe4d0a0526c76b10937cbbf915191f701abe6c551cd71ad738`  
-		Last Modified: Tue, 07 Jul 2020 03:01:03 GMT  
-		Size: 8.2 MB (8166928 bytes)  
+	-	`sha256:a78593c7e93c95a24d1067de28c5918f5b0934f1137c1b6ff284a4984214e12b`  
+		Last Modified: Fri, 17 Jul 2020 22:56:58 GMT  
+		Size: 8.1 MB (8123074 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b03a95e897555c1e38167ae106c54bca8851761df923838aac4205204fba429b`  
-		Last Modified: Tue, 07 Jul 2020 03:01:17 GMT  
-		Size: 962.0 B  
+	-	`sha256:7d87ae3bca31579ea606a2a26fda0d2764eed2c473dbd9463ac06b75fd7bd160`  
+		Last Modified: Fri, 17 Jul 2020 22:57:11 GMT  
+		Size: 964.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dbd171ffa47e399d1737acc8766613900c0241cfcf78ce394f52bf4b62f1ca3a`  
-		Last Modified: Tue, 07 Jul 2020 03:01:20 GMT  
-		Size: 16.7 MB (16684231 bytes)  
+	-	`sha256:f5043a1b4004b7c5e00d1325a216ffb151a0097b1772a5819aeddb8b53eab216`  
+		Last Modified: Fri, 17 Jul 2020 22:57:14 GMT  
+		Size: 16.6 MB (16607884 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `open-liberty:full-java8-openj9` - linux; ppc64le
@@ -3371,7 +3371,7 @@ RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /outpu
 ## `open-liberty:kernel`
 
 ```console
-$ docker pull open-liberty@sha256:1fb0de70553795af25f99c5c6fd6d3899744791ad711071d63f2dd1835a03721
+$ docker pull open-liberty@sha256:c4a1c29588a578aa45c8287b2ba5162df85edb01279b59919298d2374ffdd44b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3383,14 +3383,14 @@ $ docker pull open-liberty@sha256:1fb0de70553795af25f99c5c6fd6d3899744791ad71107
 ### `open-liberty:kernel` - linux; amd64
 
 ```console
-$ docker pull open-liberty@sha256:674614f389635e0783601fb1aa95d254b4ed8b2cfc6466eff666ee5bb1d9ea0f
+$ docker pull open-liberty@sha256:9ec416148ff15897d3dba3fafe2e24f2b71526208eb5b5833bc349d906c68cec
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **254.5 MB (254458254 bytes)**  
+-	Total Size: **255.2 MB (255224988 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4d9681eec381eae9b9ffb18dab36a53a4d0502ff1a4f64478de2f5d91bed63aa`
+-	Image ID: `sha256:51b8699d351291d1d74a75f32f66d653aaee6c7765fd31b748c645a82398bd04`
 -	Entrypoint: `["\/opt\/ol\/helpers\/runtime\/docker-server.sh"]`
 -	Default Command: `["\/opt\/ol\/wlp\/bin\/server","run","defaultServer"]`
 
@@ -3407,55 +3407,55 @@ RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
 CMD ["/bin/bash"]
 # Mon, 06 Jul 2020 23:03:04 GMT
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Mon, 06 Jul 2020 23:03:21 GMT
-RUN apt-get update     && apt-get install -y --no-install-recommends curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Mon, 06 Jul 2020 23:05:06 GMT
-ENV JAVA_VERSION=jdk8u252-b09_openj9-0.20.0
-# Mon, 06 Jul 2020 23:05:25 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        ppc64el|ppc64le)          ESUM='00095854b2219c71a142135ef2b63ae48869f4366c82524353991a36204cf7e9';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u252-b09_openj9-0.20.0/OpenJDK8U-jre_ppc64le_linux_openj9_8u252b09_openj9-0.20.0.tar.gz';          ;;        s390x)          ESUM='7cb7d392fb7240c30b0993a6ec332060b406641589b4c0207b7f9cbbaad81fc8';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u252-b09_openj9-0.20.0/OpenJDK8U-jre_s390x_linux_openj9_8u252b09_openj9-0.20.0.tar.gz';          ;;        amd64|x86_64)          ESUM='5c0ab4691ff5f8e69bb14462f2afb8d73d751b01048eacf4b426ed6d6646dc63';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u252-b09_openj9-0.20.0/OpenJDK8U-jre_x64_linux_openj9_8u252b09_openj9-0.20.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Mon, 06 Jul 2020 23:05:25 GMT
+# Fri, 17 Jul 2020 22:19:52 GMT
+RUN apt-get update     && apt-get install -y --no-install-recommends tzdata curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
+# Fri, 17 Jul 2020 22:21:18 GMT
+ENV JAVA_VERSION=jdk8u262-b10_openj9-0.21.0
+# Fri, 17 Jul 2020 22:21:37 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        ppc64el|ppc64le)          ESUM='722517d9565bd9602580609114eb0de9b40b01050d52ff7bae24c438d363e186';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10_openj9-0.21.0/OpenJDK8U-jre_ppc64le_linux_openj9_8u262b10_openj9-0.21.0.tar.gz';          ;;        s390x)          ESUM='c14aeedf4e989a6b31e00d6e18b8377957b07b000cac316aee9d973ef6d65b6f';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10_openj9-0.21.0/OpenJDK8U-jre_s390x_linux_openj9_8u262b10_openj9-0.21.0.tar.gz';          ;;        amd64|x86_64)          ESUM='aef8750b492ff6371318cf5138e38827d8895815b2ac079dcfcb02007a45c7f6';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10_openj9-0.21.0/OpenJDK8U-jre_x64_linux_openj9_8u262b10_openj9-0.21.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
+# Fri, 17 Jul 2020 22:21:37 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Mon, 06 Jul 2020 23:05:25 GMT
+# Fri, 17 Jul 2020 22:21:37 GMT
 ENV JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+UseContainerSupport -XX:+IdleTuningCompactOnIdle -XX:+IdleTuningGcOnIdle
-# Tue, 07 Jul 2020 02:57:30 GMT
+# Fri, 17 Jul 2020 22:53:03 GMT
 ARG LIBERTY_VERSION=20.0.0.7
-# Tue, 07 Jul 2020 02:57:30 GMT
+# Fri, 17 Jul 2020 22:53:04 GMT
 ARG LIBERTY_SHA=226cd89250b2b831fd777042eff1ae69edb1cb1f
-# Tue, 07 Jul 2020 02:57:30 GMT
+# Fri, 17 Jul 2020 22:53:04 GMT
 ARG LIBERTY_BUILD_LABEL=cl200720200625-0300
-# Tue, 07 Jul 2020 02:57:31 GMT
+# Fri, 17 Jul 2020 22:53:04 GMT
 ARG LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.7/openliberty-runtime-20.0.0.7.zip
-# Tue, 07 Jul 2020 02:57:31 GMT
+# Fri, 17 Jul 2020 22:53:04 GMT
 ARG OPENJ9_SCC=true
-# Tue, 07 Jul 2020 02:57:31 GMT
+# Fri, 17 Jul 2020 22:53:04 GMT
 LABEL org.opencontainers.image.authors=Arthur De Magalhaes, Chris Potter org.opencontainers.image.vendor=Open Liberty org.opencontainers.image.url=https://openliberty.io/ org.opencontainers.image.source=https://github.com/OpenLiberty/ci.docker org.opencontainers.image.revision=cl200720200625-0300 org.opencontainers.image.description=This image contains the Open Liberty runtime with AdoptOpenJDK with OpenJ9 and Ubuntu as the base OS.  For more information on this image please see https://github.com/OpenLiberty/ci.docker#building-an-application-image org.opencontainers.image.title=Open Liberty org.opencontainers.image.version=20.0.0.7
-# Tue, 07 Jul 2020 02:57:31 GMT
+# Fri, 17 Jul 2020 22:53:05 GMT
 COPY dir:e8bb2487ca41e6b847cd1240bcb920ccb8c6de3c77aaaaf5ed7f0d39a3789c4a in /opt/ol/helpers 
-# Tue, 07 Jul 2020 02:57:31 GMT
+# Fri, 17 Jul 2020 22:53:05 GMT
 COPY dir:1cf5cc2663c6235241a5228340a9c566587fe27b3e434a313debbf75dacd7a4b in /opt/ol/fixes/ 
-# Tue, 07 Jul 2020 02:57:44 GMT
+# Fri, 17 Jul 2020 22:53:16 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200720200625-0300 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.7/openliberty-runtime-20.0.0.7.zip LIBERTY_SHA=226cd89250b2b831fd777042eff1ae69edb1cb1f LIBERTY_VERSION=20.0.0.7 OPENJ9_SCC=true
 RUN apt-get update     && apt-get install -y --no-install-recommends unzip openssl wget     && rm -rf /var/lib/apt/lists/*     && wget -q $LIBERTY_DOWNLOAD_URL -U UA-Open-Liberty-Docker -O /tmp/wlp.zip     && echo "$LIBERTY_SHA  /tmp/wlp.zip" > /tmp/wlp.zip.sha1     && sha1sum -c /tmp/wlp.zip.sha1     && unzip -q /tmp/wlp.zip -d /opt/ol     && rm /tmp/wlp.zip     && rm /tmp/wlp.zip.sha1     && apt-get remove -y unzip     && apt-get remove -y wget     && rm -rf /var/lib/apt/lists/*     && useradd -u 1001 -r -g 0 -s /usr/sbin/nologin default     && chown -R 1001:0 /opt/ol/wlp     && chmod -R g+rw /opt/ol/wlp
-# Tue, 07 Jul 2020 02:57:44 GMT
+# Fri, 17 Jul 2020 22:53:16 GMT
 ENV PATH=/opt/ol/wlp/bin:/opt/ol/docker/:/opt/ol/helpers/build:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin LOG_DIR=/logs WLP_OUTPUT_DIR=/opt/ol/wlp/output WLP_SKIP_MAXPERMSIZE=true OPENJ9_SCC=true
-# Tue, 07 Jul 2020 02:57:46 GMT
+# Fri, 17 Jul 2020 22:53:18 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200720200625-0300 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.7/openliberty-runtime-20.0.0.7.zip LIBERTY_SHA=226cd89250b2b831fd777042eff1ae69edb1cb1f LIBERTY_VERSION=20.0.0.7
 RUN /opt/ol/wlp/bin/server create     && rm -rf $WLP_OUTPUT_DIR/.classCache /output/workarea
-# Tue, 07 Jul 2020 02:57:47 GMT
+# Fri, 17 Jul 2020 22:53:19 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200720200625-0300 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.7/openliberty-runtime-20.0.0.7.zip LIBERTY_SHA=226cd89250b2b831fd777042eff1ae69edb1cb1f LIBERTY_VERSION=20.0.0.7
 RUN mkdir /logs     && mkdir -p /opt/ol/wlp/usr/shared/resources/lib.index.cache     && ln -s /opt/ol/wlp/usr/shared/resources/lib.index.cache /lib.index.cache     && mkdir -p $WLP_OUTPUT_DIR/defaultServer     && ln -s $WLP_OUTPUT_DIR/defaultServer /output     && ln -s /opt/ol/wlp/usr/servers/defaultServer /config     && mkdir -p /config/configDropins/defaults     && mkdir -p /config/configDropins/overrides     && ln -s /opt/ol/wlp /liberty     && chown -R 1001:0 /config     && chmod -R g+rw /config     && chown -R 1001:0 /logs     && chmod -R g+rw /logs     && chown -R 1001:0 /opt/ol/wlp/usr     && chmod -R g+rw /opt/ol/wlp/usr     && chown -R 1001:0 /opt/ol/wlp/output     && chmod -R g+rw /opt/ol/wlp/output     && chown -R 1001:0 /opt/ol/helpers     && chmod -R g+rw /opt/ol/helpers     && chown -R 1001:0 /opt/ol/fixes     && chmod -R g+rwx /opt/ol/fixes     && mkdir /etc/wlp     && chown -R 1001:0 /etc/wlp     && chmod -R g+rw /etc/wlp     && echo "<server description=\"Default Server\"><httpEndpoint id=\"defaultHttpEndpoint\" host=\"*\" /></server>" > /config/configDropins/defaults/open-default-port.xml
-# Tue, 07 Jul 2020 02:58:08 GMT
+# Fri, 17 Jul 2020 22:53:41 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200720200625-0300 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.7/openliberty-runtime-20.0.0.7.zip LIBERTY_SHA=226cd89250b2b831fd777042eff1ae69edb1cb1f LIBERTY_VERSION=20.0.0.7
 RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /output/messaging /output/resources/security /logs/* $WLP_OUTPUT_DIR/.classCache     && chown -R 1001:0 /opt/ol/wlp/output     && chmod -R g+rwx /opt/ol/wlp/output
-# Tue, 07 Jul 2020 02:58:08 GMT
+# Fri, 17 Jul 2020 22:53:41 GMT
 ENV RANDFILE=/tmp/.rnd IBM_JAVA_OPTIONS=-Xshareclasses:name=liberty,nonfatal,cacheDir=/output/.classCache/ 
-# Tue, 07 Jul 2020 02:58:09 GMT
+# Fri, 17 Jul 2020 22:53:41 GMT
 USER 1001
-# Tue, 07 Jul 2020 02:58:09 GMT
+# Fri, 17 Jul 2020 22:53:41 GMT
 EXPOSE 9080 9443
-# Tue, 07 Jul 2020 02:58:09 GMT
+# Fri, 17 Jul 2020 22:53:42 GMT
 ENTRYPOINT ["/opt/ol/helpers/runtime/docker-server.sh"]
-# Tue, 07 Jul 2020 02:58:09 GMT
+# Fri, 17 Jul 2020 22:53:42 GMT
 CMD ["/opt/ol/wlp/bin/server" "run" "defaultServer"]
 ```
 
@@ -3476,37 +3476,37 @@ CMD ["/opt/ol/wlp/bin/server" "run" "defaultServer"]
 		Last Modified: Mon, 06 Jul 2020 21:57:19 GMT  
 		Size: 162.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0cbfb179272dc9aa9a0a4722b2f8ffe1d0cdb83652c091add1d0c091d505468e`  
-		Last Modified: Mon, 06 Jul 2020 23:07:26 GMT  
-		Size: 13.3 MB (13311646 bytes)  
+	-	`sha256:262049cebf1b6f60b6dc78a926be5d3a689ba76a6c5c28edc9b195952b98c31f`  
+		Last Modified: Fri, 17 Jul 2020 22:23:14 GMT  
+		Size: 13.9 MB (13875144 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d69578686d5961608b047f555a5d6b3e75e1a8bfadde61e661ffe3b5717439e0`  
-		Last Modified: Mon, 06 Jul 2020 23:10:16 GMT  
-		Size: 48.5 MB (48502689 bytes)  
+	-	`sha256:ae7ae3562f54a1abcec2e390aa39c5d1bdd4d797018f8288100ac516ff45ec7e`  
+		Last Modified: Fri, 17 Jul 2020 22:25:12 GMT  
+		Size: 48.7 MB (48691295 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fec365aa67b4f41776711dd22b883853bdc71a38adfcaf324b01fcfcd2e51275`  
-		Last Modified: Tue, 07 Jul 2020 03:01:03 GMT  
-		Size: 8.4 KB (8352 bytes)  
+	-	`sha256:d5cd1c7cabb21604488842a6b70ae3b2b1f4f3f4ab8f3166c7d886a938b470aa`  
+		Last Modified: Fri, 17 Jul 2020 22:56:57 GMT  
+		Size: 8.4 KB (8355 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d529747d877f72c9f41bc995536f24b95bde29a0605d6d2d4b68247fe0d2ae71`  
-		Last Modified: Tue, 07 Jul 2020 03:01:02 GMT  
-		Size: 241.0 B  
+	-	`sha256:4d0a7e5386637638c3baa64552e90f97f3a78b8758988bede3c9aa9cd9ff23dd`  
+		Last Modified: Fri, 17 Jul 2020 22:56:56 GMT  
+		Size: 244.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ea208fc78696caf4d2c51196ad79e6a91047a856dc079b3213e79fc847403773`  
-		Last Modified: Tue, 07 Jul 2020 03:01:12 GMT  
-		Size: 157.7 MB (157725520 bytes)  
+	-	`sha256:2fa2164691c4714f263629a04436be551e7f183e34ae362c7cd328f004d6839e`  
+		Last Modified: Fri, 17 Jul 2020 22:57:07 GMT  
+		Size: 157.8 MB (157783993 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ba2a09fba9bd31e8d62f8aacacc293fc8c22b319326ac7c6007389f48cd1448e`  
-		Last Modified: Tue, 07 Jul 2020 03:01:02 GMT  
-		Size: 909.0 B  
+	-	`sha256:b9561ae263f5638923b206f0e2fe29e3b990a44216e271332e01860490479fd5`  
+		Last Modified: Fri, 17 Jul 2020 22:56:56 GMT  
+		Size: 907.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cad0fe80d02a5bf9740be4defec5bd14b3d1dd5bc61edcc93a4599ce83d0458d`  
-		Last Modified: Tue, 07 Jul 2020 03:01:02 GMT  
-		Size: 9.4 KB (9397 bytes)  
+	-	`sha256:c5b0d9ee4b1303ecddcb8c9642dacd16d0ba6ca2667af936583b610dc1abdbd2`  
+		Last Modified: Fri, 17 Jul 2020 22:56:56 GMT  
+		Size: 9.4 KB (9404 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6b937aaf748c9efe4d0a0526c76b10937cbbf915191f701abe6c551cd71ad738`  
-		Last Modified: Tue, 07 Jul 2020 03:01:03 GMT  
-		Size: 8.2 MB (8166928 bytes)  
+	-	`sha256:a78593c7e93c95a24d1067de28c5918f5b0934f1137c1b6ff284a4984214e12b`  
+		Last Modified: Fri, 17 Jul 2020 22:56:58 GMT  
+		Size: 8.1 MB (8123074 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `open-liberty:kernel` - linux; ppc64le
@@ -3770,7 +3770,7 @@ CMD ["/opt/ol/wlp/bin/server" "run" "defaultServer"]
 ## `open-liberty:kernel-java8-openj9`
 
 ```console
-$ docker pull open-liberty@sha256:1fb0de70553795af25f99c5c6fd6d3899744791ad711071d63f2dd1835a03721
+$ docker pull open-liberty@sha256:c4a1c29588a578aa45c8287b2ba5162df85edb01279b59919298d2374ffdd44b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3782,14 +3782,14 @@ $ docker pull open-liberty@sha256:1fb0de70553795af25f99c5c6fd6d3899744791ad71107
 ### `open-liberty:kernel-java8-openj9` - linux; amd64
 
 ```console
-$ docker pull open-liberty@sha256:674614f389635e0783601fb1aa95d254b4ed8b2cfc6466eff666ee5bb1d9ea0f
+$ docker pull open-liberty@sha256:9ec416148ff15897d3dba3fafe2e24f2b71526208eb5b5833bc349d906c68cec
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **254.5 MB (254458254 bytes)**  
+-	Total Size: **255.2 MB (255224988 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4d9681eec381eae9b9ffb18dab36a53a4d0502ff1a4f64478de2f5d91bed63aa`
+-	Image ID: `sha256:51b8699d351291d1d74a75f32f66d653aaee6c7765fd31b748c645a82398bd04`
 -	Entrypoint: `["\/opt\/ol\/helpers\/runtime\/docker-server.sh"]`
 -	Default Command: `["\/opt\/ol\/wlp\/bin\/server","run","defaultServer"]`
 
@@ -3806,55 +3806,55 @@ RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
 CMD ["/bin/bash"]
 # Mon, 06 Jul 2020 23:03:04 GMT
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Mon, 06 Jul 2020 23:03:21 GMT
-RUN apt-get update     && apt-get install -y --no-install-recommends curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Mon, 06 Jul 2020 23:05:06 GMT
-ENV JAVA_VERSION=jdk8u252-b09_openj9-0.20.0
-# Mon, 06 Jul 2020 23:05:25 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        ppc64el|ppc64le)          ESUM='00095854b2219c71a142135ef2b63ae48869f4366c82524353991a36204cf7e9';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u252-b09_openj9-0.20.0/OpenJDK8U-jre_ppc64le_linux_openj9_8u252b09_openj9-0.20.0.tar.gz';          ;;        s390x)          ESUM='7cb7d392fb7240c30b0993a6ec332060b406641589b4c0207b7f9cbbaad81fc8';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u252-b09_openj9-0.20.0/OpenJDK8U-jre_s390x_linux_openj9_8u252b09_openj9-0.20.0.tar.gz';          ;;        amd64|x86_64)          ESUM='5c0ab4691ff5f8e69bb14462f2afb8d73d751b01048eacf4b426ed6d6646dc63';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u252-b09_openj9-0.20.0/OpenJDK8U-jre_x64_linux_openj9_8u252b09_openj9-0.20.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Mon, 06 Jul 2020 23:05:25 GMT
+# Fri, 17 Jul 2020 22:19:52 GMT
+RUN apt-get update     && apt-get install -y --no-install-recommends tzdata curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
+# Fri, 17 Jul 2020 22:21:18 GMT
+ENV JAVA_VERSION=jdk8u262-b10_openj9-0.21.0
+# Fri, 17 Jul 2020 22:21:37 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        ppc64el|ppc64le)          ESUM='722517d9565bd9602580609114eb0de9b40b01050d52ff7bae24c438d363e186';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10_openj9-0.21.0/OpenJDK8U-jre_ppc64le_linux_openj9_8u262b10_openj9-0.21.0.tar.gz';          ;;        s390x)          ESUM='c14aeedf4e989a6b31e00d6e18b8377957b07b000cac316aee9d973ef6d65b6f';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10_openj9-0.21.0/OpenJDK8U-jre_s390x_linux_openj9_8u262b10_openj9-0.21.0.tar.gz';          ;;        amd64|x86_64)          ESUM='aef8750b492ff6371318cf5138e38827d8895815b2ac079dcfcb02007a45c7f6';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10_openj9-0.21.0/OpenJDK8U-jre_x64_linux_openj9_8u262b10_openj9-0.21.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
+# Fri, 17 Jul 2020 22:21:37 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Mon, 06 Jul 2020 23:05:25 GMT
+# Fri, 17 Jul 2020 22:21:37 GMT
 ENV JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+UseContainerSupport -XX:+IdleTuningCompactOnIdle -XX:+IdleTuningGcOnIdle
-# Tue, 07 Jul 2020 02:57:30 GMT
+# Fri, 17 Jul 2020 22:53:03 GMT
 ARG LIBERTY_VERSION=20.0.0.7
-# Tue, 07 Jul 2020 02:57:30 GMT
+# Fri, 17 Jul 2020 22:53:04 GMT
 ARG LIBERTY_SHA=226cd89250b2b831fd777042eff1ae69edb1cb1f
-# Tue, 07 Jul 2020 02:57:30 GMT
+# Fri, 17 Jul 2020 22:53:04 GMT
 ARG LIBERTY_BUILD_LABEL=cl200720200625-0300
-# Tue, 07 Jul 2020 02:57:31 GMT
+# Fri, 17 Jul 2020 22:53:04 GMT
 ARG LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.7/openliberty-runtime-20.0.0.7.zip
-# Tue, 07 Jul 2020 02:57:31 GMT
+# Fri, 17 Jul 2020 22:53:04 GMT
 ARG OPENJ9_SCC=true
-# Tue, 07 Jul 2020 02:57:31 GMT
+# Fri, 17 Jul 2020 22:53:04 GMT
 LABEL org.opencontainers.image.authors=Arthur De Magalhaes, Chris Potter org.opencontainers.image.vendor=Open Liberty org.opencontainers.image.url=https://openliberty.io/ org.opencontainers.image.source=https://github.com/OpenLiberty/ci.docker org.opencontainers.image.revision=cl200720200625-0300 org.opencontainers.image.description=This image contains the Open Liberty runtime with AdoptOpenJDK with OpenJ9 and Ubuntu as the base OS.  For more information on this image please see https://github.com/OpenLiberty/ci.docker#building-an-application-image org.opencontainers.image.title=Open Liberty org.opencontainers.image.version=20.0.0.7
-# Tue, 07 Jul 2020 02:57:31 GMT
+# Fri, 17 Jul 2020 22:53:05 GMT
 COPY dir:e8bb2487ca41e6b847cd1240bcb920ccb8c6de3c77aaaaf5ed7f0d39a3789c4a in /opt/ol/helpers 
-# Tue, 07 Jul 2020 02:57:31 GMT
+# Fri, 17 Jul 2020 22:53:05 GMT
 COPY dir:1cf5cc2663c6235241a5228340a9c566587fe27b3e434a313debbf75dacd7a4b in /opt/ol/fixes/ 
-# Tue, 07 Jul 2020 02:57:44 GMT
+# Fri, 17 Jul 2020 22:53:16 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200720200625-0300 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.7/openliberty-runtime-20.0.0.7.zip LIBERTY_SHA=226cd89250b2b831fd777042eff1ae69edb1cb1f LIBERTY_VERSION=20.0.0.7 OPENJ9_SCC=true
 RUN apt-get update     && apt-get install -y --no-install-recommends unzip openssl wget     && rm -rf /var/lib/apt/lists/*     && wget -q $LIBERTY_DOWNLOAD_URL -U UA-Open-Liberty-Docker -O /tmp/wlp.zip     && echo "$LIBERTY_SHA  /tmp/wlp.zip" > /tmp/wlp.zip.sha1     && sha1sum -c /tmp/wlp.zip.sha1     && unzip -q /tmp/wlp.zip -d /opt/ol     && rm /tmp/wlp.zip     && rm /tmp/wlp.zip.sha1     && apt-get remove -y unzip     && apt-get remove -y wget     && rm -rf /var/lib/apt/lists/*     && useradd -u 1001 -r -g 0 -s /usr/sbin/nologin default     && chown -R 1001:0 /opt/ol/wlp     && chmod -R g+rw /opt/ol/wlp
-# Tue, 07 Jul 2020 02:57:44 GMT
+# Fri, 17 Jul 2020 22:53:16 GMT
 ENV PATH=/opt/ol/wlp/bin:/opt/ol/docker/:/opt/ol/helpers/build:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin LOG_DIR=/logs WLP_OUTPUT_DIR=/opt/ol/wlp/output WLP_SKIP_MAXPERMSIZE=true OPENJ9_SCC=true
-# Tue, 07 Jul 2020 02:57:46 GMT
+# Fri, 17 Jul 2020 22:53:18 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200720200625-0300 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.7/openliberty-runtime-20.0.0.7.zip LIBERTY_SHA=226cd89250b2b831fd777042eff1ae69edb1cb1f LIBERTY_VERSION=20.0.0.7
 RUN /opt/ol/wlp/bin/server create     && rm -rf $WLP_OUTPUT_DIR/.classCache /output/workarea
-# Tue, 07 Jul 2020 02:57:47 GMT
+# Fri, 17 Jul 2020 22:53:19 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200720200625-0300 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.7/openliberty-runtime-20.0.0.7.zip LIBERTY_SHA=226cd89250b2b831fd777042eff1ae69edb1cb1f LIBERTY_VERSION=20.0.0.7
 RUN mkdir /logs     && mkdir -p /opt/ol/wlp/usr/shared/resources/lib.index.cache     && ln -s /opt/ol/wlp/usr/shared/resources/lib.index.cache /lib.index.cache     && mkdir -p $WLP_OUTPUT_DIR/defaultServer     && ln -s $WLP_OUTPUT_DIR/defaultServer /output     && ln -s /opt/ol/wlp/usr/servers/defaultServer /config     && mkdir -p /config/configDropins/defaults     && mkdir -p /config/configDropins/overrides     && ln -s /opt/ol/wlp /liberty     && chown -R 1001:0 /config     && chmod -R g+rw /config     && chown -R 1001:0 /logs     && chmod -R g+rw /logs     && chown -R 1001:0 /opt/ol/wlp/usr     && chmod -R g+rw /opt/ol/wlp/usr     && chown -R 1001:0 /opt/ol/wlp/output     && chmod -R g+rw /opt/ol/wlp/output     && chown -R 1001:0 /opt/ol/helpers     && chmod -R g+rw /opt/ol/helpers     && chown -R 1001:0 /opt/ol/fixes     && chmod -R g+rwx /opt/ol/fixes     && mkdir /etc/wlp     && chown -R 1001:0 /etc/wlp     && chmod -R g+rw /etc/wlp     && echo "<server description=\"Default Server\"><httpEndpoint id=\"defaultHttpEndpoint\" host=\"*\" /></server>" > /config/configDropins/defaults/open-default-port.xml
-# Tue, 07 Jul 2020 02:58:08 GMT
+# Fri, 17 Jul 2020 22:53:41 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200720200625-0300 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.7/openliberty-runtime-20.0.0.7.zip LIBERTY_SHA=226cd89250b2b831fd777042eff1ae69edb1cb1f LIBERTY_VERSION=20.0.0.7
 RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /output/messaging /output/resources/security /logs/* $WLP_OUTPUT_DIR/.classCache     && chown -R 1001:0 /opt/ol/wlp/output     && chmod -R g+rwx /opt/ol/wlp/output
-# Tue, 07 Jul 2020 02:58:08 GMT
+# Fri, 17 Jul 2020 22:53:41 GMT
 ENV RANDFILE=/tmp/.rnd IBM_JAVA_OPTIONS=-Xshareclasses:name=liberty,nonfatal,cacheDir=/output/.classCache/ 
-# Tue, 07 Jul 2020 02:58:09 GMT
+# Fri, 17 Jul 2020 22:53:41 GMT
 USER 1001
-# Tue, 07 Jul 2020 02:58:09 GMT
+# Fri, 17 Jul 2020 22:53:41 GMT
 EXPOSE 9080 9443
-# Tue, 07 Jul 2020 02:58:09 GMT
+# Fri, 17 Jul 2020 22:53:42 GMT
 ENTRYPOINT ["/opt/ol/helpers/runtime/docker-server.sh"]
-# Tue, 07 Jul 2020 02:58:09 GMT
+# Fri, 17 Jul 2020 22:53:42 GMT
 CMD ["/opt/ol/wlp/bin/server" "run" "defaultServer"]
 ```
 
@@ -3875,37 +3875,37 @@ CMD ["/opt/ol/wlp/bin/server" "run" "defaultServer"]
 		Last Modified: Mon, 06 Jul 2020 21:57:19 GMT  
 		Size: 162.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0cbfb179272dc9aa9a0a4722b2f8ffe1d0cdb83652c091add1d0c091d505468e`  
-		Last Modified: Mon, 06 Jul 2020 23:07:26 GMT  
-		Size: 13.3 MB (13311646 bytes)  
+	-	`sha256:262049cebf1b6f60b6dc78a926be5d3a689ba76a6c5c28edc9b195952b98c31f`  
+		Last Modified: Fri, 17 Jul 2020 22:23:14 GMT  
+		Size: 13.9 MB (13875144 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d69578686d5961608b047f555a5d6b3e75e1a8bfadde61e661ffe3b5717439e0`  
-		Last Modified: Mon, 06 Jul 2020 23:10:16 GMT  
-		Size: 48.5 MB (48502689 bytes)  
+	-	`sha256:ae7ae3562f54a1abcec2e390aa39c5d1bdd4d797018f8288100ac516ff45ec7e`  
+		Last Modified: Fri, 17 Jul 2020 22:25:12 GMT  
+		Size: 48.7 MB (48691295 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fec365aa67b4f41776711dd22b883853bdc71a38adfcaf324b01fcfcd2e51275`  
-		Last Modified: Tue, 07 Jul 2020 03:01:03 GMT  
-		Size: 8.4 KB (8352 bytes)  
+	-	`sha256:d5cd1c7cabb21604488842a6b70ae3b2b1f4f3f4ab8f3166c7d886a938b470aa`  
+		Last Modified: Fri, 17 Jul 2020 22:56:57 GMT  
+		Size: 8.4 KB (8355 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d529747d877f72c9f41bc995536f24b95bde29a0605d6d2d4b68247fe0d2ae71`  
-		Last Modified: Tue, 07 Jul 2020 03:01:02 GMT  
-		Size: 241.0 B  
+	-	`sha256:4d0a7e5386637638c3baa64552e90f97f3a78b8758988bede3c9aa9cd9ff23dd`  
+		Last Modified: Fri, 17 Jul 2020 22:56:56 GMT  
+		Size: 244.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ea208fc78696caf4d2c51196ad79e6a91047a856dc079b3213e79fc847403773`  
-		Last Modified: Tue, 07 Jul 2020 03:01:12 GMT  
-		Size: 157.7 MB (157725520 bytes)  
+	-	`sha256:2fa2164691c4714f263629a04436be551e7f183e34ae362c7cd328f004d6839e`  
+		Last Modified: Fri, 17 Jul 2020 22:57:07 GMT  
+		Size: 157.8 MB (157783993 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ba2a09fba9bd31e8d62f8aacacc293fc8c22b319326ac7c6007389f48cd1448e`  
-		Last Modified: Tue, 07 Jul 2020 03:01:02 GMT  
-		Size: 909.0 B  
+	-	`sha256:b9561ae263f5638923b206f0e2fe29e3b990a44216e271332e01860490479fd5`  
+		Last Modified: Fri, 17 Jul 2020 22:56:56 GMT  
+		Size: 907.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cad0fe80d02a5bf9740be4defec5bd14b3d1dd5bc61edcc93a4599ce83d0458d`  
-		Last Modified: Tue, 07 Jul 2020 03:01:02 GMT  
-		Size: 9.4 KB (9397 bytes)  
+	-	`sha256:c5b0d9ee4b1303ecddcb8c9642dacd16d0ba6ca2667af936583b610dc1abdbd2`  
+		Last Modified: Fri, 17 Jul 2020 22:56:56 GMT  
+		Size: 9.4 KB (9404 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6b937aaf748c9efe4d0a0526c76b10937cbbf915191f701abe6c551cd71ad738`  
-		Last Modified: Tue, 07 Jul 2020 03:01:03 GMT  
-		Size: 8.2 MB (8166928 bytes)  
+	-	`sha256:a78593c7e93c95a24d1067de28c5918f5b0934f1137c1b6ff284a4984214e12b`  
+		Last Modified: Fri, 17 Jul 2020 22:56:58 GMT  
+		Size: 8.1 MB (8123074 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `open-liberty:kernel-java8-openj9` - linux; ppc64le
@@ -4169,7 +4169,7 @@ CMD ["/opt/ol/wlp/bin/server" "run" "defaultServer"]
 ## `open-liberty:latest`
 
 ```console
-$ docker pull open-liberty@sha256:3dc33caa1ead55124282ae4a90fbea59f8d8f5faac5bd778482964f87e8c774c
+$ docker pull open-liberty@sha256:a02173eb0fc83377745b10a05116d35bac8a3d6255b63300e3d5fd2f597e2399
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4181,14 +4181,14 @@ $ docker pull open-liberty@sha256:3dc33caa1ead55124282ae4a90fbea59f8d8f5faac5bd7
 ### `open-liberty:latest` - linux; amd64
 
 ```console
-$ docker pull open-liberty@sha256:bd76c7595ca159a418c522395031520c6cf63e562919c6b6466fab219635961b
+$ docker pull open-liberty@sha256:c2a27d0ea2a831437eb9aa7827ee8981f5c8a8dd7b0543ae0c531f532ee1761b
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **271.1 MB (271143447 bytes)**  
+-	Total Size: **271.8 MB (271833836 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3a4bf95620c8fe1cf7b4100971381ce86e884ba656aeaf7e260793c290b4fd1f`
+-	Image ID: `sha256:6388a94564c394cd1198307ad44aa52575189e91fa2269f5b65430c4a487481a`
 -	Entrypoint: `["\/opt\/ol\/helpers\/runtime\/docker-server.sh"]`
 -	Default Command: `["\/opt\/ol\/wlp\/bin\/server","run","defaultServer"]`
 
@@ -4205,59 +4205,59 @@ RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
 CMD ["/bin/bash"]
 # Mon, 06 Jul 2020 23:03:04 GMT
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Mon, 06 Jul 2020 23:03:21 GMT
-RUN apt-get update     && apt-get install -y --no-install-recommends curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Mon, 06 Jul 2020 23:05:06 GMT
-ENV JAVA_VERSION=jdk8u252-b09_openj9-0.20.0
-# Mon, 06 Jul 2020 23:05:25 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        ppc64el|ppc64le)          ESUM='00095854b2219c71a142135ef2b63ae48869f4366c82524353991a36204cf7e9';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u252-b09_openj9-0.20.0/OpenJDK8U-jre_ppc64le_linux_openj9_8u252b09_openj9-0.20.0.tar.gz';          ;;        s390x)          ESUM='7cb7d392fb7240c30b0993a6ec332060b406641589b4c0207b7f9cbbaad81fc8';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u252-b09_openj9-0.20.0/OpenJDK8U-jre_s390x_linux_openj9_8u252b09_openj9-0.20.0.tar.gz';          ;;        amd64|x86_64)          ESUM='5c0ab4691ff5f8e69bb14462f2afb8d73d751b01048eacf4b426ed6d6646dc63';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u252-b09_openj9-0.20.0/OpenJDK8U-jre_x64_linux_openj9_8u252b09_openj9-0.20.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Mon, 06 Jul 2020 23:05:25 GMT
+# Fri, 17 Jul 2020 22:19:52 GMT
+RUN apt-get update     && apt-get install -y --no-install-recommends tzdata curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
+# Fri, 17 Jul 2020 22:21:18 GMT
+ENV JAVA_VERSION=jdk8u262-b10_openj9-0.21.0
+# Fri, 17 Jul 2020 22:21:37 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        ppc64el|ppc64le)          ESUM='722517d9565bd9602580609114eb0de9b40b01050d52ff7bae24c438d363e186';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10_openj9-0.21.0/OpenJDK8U-jre_ppc64le_linux_openj9_8u262b10_openj9-0.21.0.tar.gz';          ;;        s390x)          ESUM='c14aeedf4e989a6b31e00d6e18b8377957b07b000cac316aee9d973ef6d65b6f';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10_openj9-0.21.0/OpenJDK8U-jre_s390x_linux_openj9_8u262b10_openj9-0.21.0.tar.gz';          ;;        amd64|x86_64)          ESUM='aef8750b492ff6371318cf5138e38827d8895815b2ac079dcfcb02007a45c7f6';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10_openj9-0.21.0/OpenJDK8U-jre_x64_linux_openj9_8u262b10_openj9-0.21.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
+# Fri, 17 Jul 2020 22:21:37 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Mon, 06 Jul 2020 23:05:25 GMT
+# Fri, 17 Jul 2020 22:21:37 GMT
 ENV JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+UseContainerSupport -XX:+IdleTuningCompactOnIdle -XX:+IdleTuningGcOnIdle
-# Tue, 07 Jul 2020 02:57:30 GMT
+# Fri, 17 Jul 2020 22:53:03 GMT
 ARG LIBERTY_VERSION=20.0.0.7
-# Tue, 07 Jul 2020 02:57:30 GMT
+# Fri, 17 Jul 2020 22:53:04 GMT
 ARG LIBERTY_SHA=226cd89250b2b831fd777042eff1ae69edb1cb1f
-# Tue, 07 Jul 2020 02:57:30 GMT
+# Fri, 17 Jul 2020 22:53:04 GMT
 ARG LIBERTY_BUILD_LABEL=cl200720200625-0300
-# Tue, 07 Jul 2020 02:57:31 GMT
+# Fri, 17 Jul 2020 22:53:04 GMT
 ARG LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.7/openliberty-runtime-20.0.0.7.zip
-# Tue, 07 Jul 2020 02:57:31 GMT
+# Fri, 17 Jul 2020 22:53:04 GMT
 ARG OPENJ9_SCC=true
-# Tue, 07 Jul 2020 02:57:31 GMT
+# Fri, 17 Jul 2020 22:53:04 GMT
 LABEL org.opencontainers.image.authors=Arthur De Magalhaes, Chris Potter org.opencontainers.image.vendor=Open Liberty org.opencontainers.image.url=https://openliberty.io/ org.opencontainers.image.source=https://github.com/OpenLiberty/ci.docker org.opencontainers.image.revision=cl200720200625-0300 org.opencontainers.image.description=This image contains the Open Liberty runtime with AdoptOpenJDK with OpenJ9 and Ubuntu as the base OS.  For more information on this image please see https://github.com/OpenLiberty/ci.docker#building-an-application-image org.opencontainers.image.title=Open Liberty org.opencontainers.image.version=20.0.0.7
-# Tue, 07 Jul 2020 02:57:31 GMT
+# Fri, 17 Jul 2020 22:53:05 GMT
 COPY dir:e8bb2487ca41e6b847cd1240bcb920ccb8c6de3c77aaaaf5ed7f0d39a3789c4a in /opt/ol/helpers 
-# Tue, 07 Jul 2020 02:57:31 GMT
+# Fri, 17 Jul 2020 22:53:05 GMT
 COPY dir:1cf5cc2663c6235241a5228340a9c566587fe27b3e434a313debbf75dacd7a4b in /opt/ol/fixes/ 
-# Tue, 07 Jul 2020 02:57:44 GMT
+# Fri, 17 Jul 2020 22:53:16 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200720200625-0300 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.7/openliberty-runtime-20.0.0.7.zip LIBERTY_SHA=226cd89250b2b831fd777042eff1ae69edb1cb1f LIBERTY_VERSION=20.0.0.7 OPENJ9_SCC=true
 RUN apt-get update     && apt-get install -y --no-install-recommends unzip openssl wget     && rm -rf /var/lib/apt/lists/*     && wget -q $LIBERTY_DOWNLOAD_URL -U UA-Open-Liberty-Docker -O /tmp/wlp.zip     && echo "$LIBERTY_SHA  /tmp/wlp.zip" > /tmp/wlp.zip.sha1     && sha1sum -c /tmp/wlp.zip.sha1     && unzip -q /tmp/wlp.zip -d /opt/ol     && rm /tmp/wlp.zip     && rm /tmp/wlp.zip.sha1     && apt-get remove -y unzip     && apt-get remove -y wget     && rm -rf /var/lib/apt/lists/*     && useradd -u 1001 -r -g 0 -s /usr/sbin/nologin default     && chown -R 1001:0 /opt/ol/wlp     && chmod -R g+rw /opt/ol/wlp
-# Tue, 07 Jul 2020 02:57:44 GMT
+# Fri, 17 Jul 2020 22:53:16 GMT
 ENV PATH=/opt/ol/wlp/bin:/opt/ol/docker/:/opt/ol/helpers/build:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin LOG_DIR=/logs WLP_OUTPUT_DIR=/opt/ol/wlp/output WLP_SKIP_MAXPERMSIZE=true OPENJ9_SCC=true
-# Tue, 07 Jul 2020 02:57:46 GMT
+# Fri, 17 Jul 2020 22:53:18 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200720200625-0300 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.7/openliberty-runtime-20.0.0.7.zip LIBERTY_SHA=226cd89250b2b831fd777042eff1ae69edb1cb1f LIBERTY_VERSION=20.0.0.7
 RUN /opt/ol/wlp/bin/server create     && rm -rf $WLP_OUTPUT_DIR/.classCache /output/workarea
-# Tue, 07 Jul 2020 02:57:47 GMT
+# Fri, 17 Jul 2020 22:53:19 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200720200625-0300 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.7/openliberty-runtime-20.0.0.7.zip LIBERTY_SHA=226cd89250b2b831fd777042eff1ae69edb1cb1f LIBERTY_VERSION=20.0.0.7
 RUN mkdir /logs     && mkdir -p /opt/ol/wlp/usr/shared/resources/lib.index.cache     && ln -s /opt/ol/wlp/usr/shared/resources/lib.index.cache /lib.index.cache     && mkdir -p $WLP_OUTPUT_DIR/defaultServer     && ln -s $WLP_OUTPUT_DIR/defaultServer /output     && ln -s /opt/ol/wlp/usr/servers/defaultServer /config     && mkdir -p /config/configDropins/defaults     && mkdir -p /config/configDropins/overrides     && ln -s /opt/ol/wlp /liberty     && chown -R 1001:0 /config     && chmod -R g+rw /config     && chown -R 1001:0 /logs     && chmod -R g+rw /logs     && chown -R 1001:0 /opt/ol/wlp/usr     && chmod -R g+rw /opt/ol/wlp/usr     && chown -R 1001:0 /opt/ol/wlp/output     && chmod -R g+rw /opt/ol/wlp/output     && chown -R 1001:0 /opt/ol/helpers     && chmod -R g+rw /opt/ol/helpers     && chown -R 1001:0 /opt/ol/fixes     && chmod -R g+rwx /opt/ol/fixes     && mkdir /etc/wlp     && chown -R 1001:0 /etc/wlp     && chmod -R g+rw /etc/wlp     && echo "<server description=\"Default Server\"><httpEndpoint id=\"defaultHttpEndpoint\" host=\"*\" /></server>" > /config/configDropins/defaults/open-default-port.xml
-# Tue, 07 Jul 2020 02:58:08 GMT
+# Fri, 17 Jul 2020 22:53:41 GMT
 # ARGS: LIBERTY_BUILD_LABEL=cl200720200625-0300 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-runtime/20.0.0.7/openliberty-runtime-20.0.0.7.zip LIBERTY_SHA=226cd89250b2b831fd777042eff1ae69edb1cb1f LIBERTY_VERSION=20.0.0.7
 RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /output/messaging /output/resources/security /logs/* $WLP_OUTPUT_DIR/.classCache     && chown -R 1001:0 /opt/ol/wlp/output     && chmod -R g+rwx /opt/ol/wlp/output
-# Tue, 07 Jul 2020 02:58:08 GMT
+# Fri, 17 Jul 2020 22:53:41 GMT
 ENV RANDFILE=/tmp/.rnd IBM_JAVA_OPTIONS=-Xshareclasses:name=liberty,nonfatal,cacheDir=/output/.classCache/ 
-# Tue, 07 Jul 2020 02:58:09 GMT
+# Fri, 17 Jul 2020 22:53:41 GMT
 USER 1001
-# Tue, 07 Jul 2020 02:58:09 GMT
+# Fri, 17 Jul 2020 22:53:41 GMT
 EXPOSE 9080 9443
-# Tue, 07 Jul 2020 02:58:09 GMT
+# Fri, 17 Jul 2020 22:53:42 GMT
 ENTRYPOINT ["/opt/ol/helpers/runtime/docker-server.sh"]
-# Tue, 07 Jul 2020 02:58:09 GMT
+# Fri, 17 Jul 2020 22:53:42 GMT
 CMD ["/opt/ol/wlp/bin/server" "run" "defaultServer"]
-# Tue, 07 Jul 2020 02:58:18 GMT
+# Fri, 17 Jul 2020 22:53:52 GMT
 RUN cp /opt/ol/wlp/templates/servers/javaee8/server.xml /config/server.xml
-# Tue, 07 Jul 2020 02:58:47 GMT
+# Fri, 17 Jul 2020 22:54:26 GMT
 RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /output/messaging /output/resources/security /logs/* $WLP_OUTPUT_DIR/.classCache     && chown -R 1001:0 /opt/ol/wlp/output     && chmod -R g+rwx /opt/ol/wlp/output
 ```
 
@@ -4278,45 +4278,45 @@ RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /outpu
 		Last Modified: Mon, 06 Jul 2020 21:57:19 GMT  
 		Size: 162.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0cbfb179272dc9aa9a0a4722b2f8ffe1d0cdb83652c091add1d0c091d505468e`  
-		Last Modified: Mon, 06 Jul 2020 23:07:26 GMT  
-		Size: 13.3 MB (13311646 bytes)  
+	-	`sha256:262049cebf1b6f60b6dc78a926be5d3a689ba76a6c5c28edc9b195952b98c31f`  
+		Last Modified: Fri, 17 Jul 2020 22:23:14 GMT  
+		Size: 13.9 MB (13875144 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d69578686d5961608b047f555a5d6b3e75e1a8bfadde61e661ffe3b5717439e0`  
-		Last Modified: Mon, 06 Jul 2020 23:10:16 GMT  
-		Size: 48.5 MB (48502689 bytes)  
+	-	`sha256:ae7ae3562f54a1abcec2e390aa39c5d1bdd4d797018f8288100ac516ff45ec7e`  
+		Last Modified: Fri, 17 Jul 2020 22:25:12 GMT  
+		Size: 48.7 MB (48691295 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fec365aa67b4f41776711dd22b883853bdc71a38adfcaf324b01fcfcd2e51275`  
-		Last Modified: Tue, 07 Jul 2020 03:01:03 GMT  
-		Size: 8.4 KB (8352 bytes)  
+	-	`sha256:d5cd1c7cabb21604488842a6b70ae3b2b1f4f3f4ab8f3166c7d886a938b470aa`  
+		Last Modified: Fri, 17 Jul 2020 22:56:57 GMT  
+		Size: 8.4 KB (8355 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d529747d877f72c9f41bc995536f24b95bde29a0605d6d2d4b68247fe0d2ae71`  
-		Last Modified: Tue, 07 Jul 2020 03:01:02 GMT  
-		Size: 241.0 B  
+	-	`sha256:4d0a7e5386637638c3baa64552e90f97f3a78b8758988bede3c9aa9cd9ff23dd`  
+		Last Modified: Fri, 17 Jul 2020 22:56:56 GMT  
+		Size: 244.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ea208fc78696caf4d2c51196ad79e6a91047a856dc079b3213e79fc847403773`  
-		Last Modified: Tue, 07 Jul 2020 03:01:12 GMT  
-		Size: 157.7 MB (157725520 bytes)  
+	-	`sha256:2fa2164691c4714f263629a04436be551e7f183e34ae362c7cd328f004d6839e`  
+		Last Modified: Fri, 17 Jul 2020 22:57:07 GMT  
+		Size: 157.8 MB (157783993 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ba2a09fba9bd31e8d62f8aacacc293fc8c22b319326ac7c6007389f48cd1448e`  
-		Last Modified: Tue, 07 Jul 2020 03:01:02 GMT  
-		Size: 909.0 B  
+	-	`sha256:b9561ae263f5638923b206f0e2fe29e3b990a44216e271332e01860490479fd5`  
+		Last Modified: Fri, 17 Jul 2020 22:56:56 GMT  
+		Size: 907.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cad0fe80d02a5bf9740be4defec5bd14b3d1dd5bc61edcc93a4599ce83d0458d`  
-		Last Modified: Tue, 07 Jul 2020 03:01:02 GMT  
-		Size: 9.4 KB (9397 bytes)  
+	-	`sha256:c5b0d9ee4b1303ecddcb8c9642dacd16d0ba6ca2667af936583b610dc1abdbd2`  
+		Last Modified: Fri, 17 Jul 2020 22:56:56 GMT  
+		Size: 9.4 KB (9404 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6b937aaf748c9efe4d0a0526c76b10937cbbf915191f701abe6c551cd71ad738`  
-		Last Modified: Tue, 07 Jul 2020 03:01:03 GMT  
-		Size: 8.2 MB (8166928 bytes)  
+	-	`sha256:a78593c7e93c95a24d1067de28c5918f5b0934f1137c1b6ff284a4984214e12b`  
+		Last Modified: Fri, 17 Jul 2020 22:56:58 GMT  
+		Size: 8.1 MB (8123074 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b03a95e897555c1e38167ae106c54bca8851761df923838aac4205204fba429b`  
-		Last Modified: Tue, 07 Jul 2020 03:01:17 GMT  
-		Size: 962.0 B  
+	-	`sha256:7d87ae3bca31579ea606a2a26fda0d2764eed2c473dbd9463ac06b75fd7bd160`  
+		Last Modified: Fri, 17 Jul 2020 22:57:11 GMT  
+		Size: 964.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dbd171ffa47e399d1737acc8766613900c0241cfcf78ce394f52bf4b62f1ca3a`  
-		Last Modified: Tue, 07 Jul 2020 03:01:20 GMT  
-		Size: 16.7 MB (16684231 bytes)  
+	-	`sha256:f5043a1b4004b7c5e00d1325a216ffb151a0097b1772a5819aeddb8b53eab216`  
+		Last Modified: Fri, 17 Jul 2020 22:57:14 GMT  
+		Size: 16.6 MB (16607884 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `open-liberty:latest` - linux; ppc64le
