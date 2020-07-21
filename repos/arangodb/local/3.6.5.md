@@ -2,20 +2,20 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:79c99b3e2810c7d609802b484462244e46352d2475d7ec880cc90c29ac28d71c`
-- Created: `2020-06-02T01:27:51.323138808Z`
-- Virtual Size: ~ 298.93 Mb  
+- Image ID: `sha256:17257d7ca195af9046b77dbadf643d2b9afe980e051e107fcd761246898ef63a`
+- Created: `2020-07-21T00:20:52.755393013Z`
+- Virtual Size: ~ 279.26 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
 - Command: `["arangod"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `ARANGO_VERSION=3.6.4`
+  - `ARANGO_VERSION=3.6.5`
   - `ARANGO_URL=https://download.arangodb.com/arangodb36/DEBIAN/amd64`
-  - `ARANGO_PACKAGE=arangodb3_3.6.4-1_amd64.deb`
-  - `ARANGO_PACKAGE_URL=https://download.arangodb.com/arangodb36/DEBIAN/amd64/arangodb3_3.6.4-1_amd64.deb`
-  - `ARANGO_SIGNATURE_URL=https://download.arangodb.com/arangodb36/DEBIAN/amd64/arangodb3_3.6.4-1_amd64.deb.asc`
+  - `ARANGO_PACKAGE=arangodb3_3.6.5-1_amd64.deb`
+  - `ARANGO_PACKAGE_URL=https://download.arangodb.com/arangodb36/DEBIAN/amd64/arangodb3_3.6.5-1_amd64.deb`
+  - `ARANGO_SIGNATURE_URL=https://download.arangodb.com/arangodb36/DEBIAN/amd64/arangodb3_3.6.5-1_amd64.deb.asc`
 
 ## `apk` (`.apk`-based packages)
 
@@ -124,16 +124,16 @@ MIT
 ### `apk` package: `ca-certificates`
 
 ```console
-ca-certificates-20191127-r0 description:
-Common CA certificates PEM files
+ca-certificates-20191127-r2 description:
+Common CA certificates PEM files from Mozilla
 
-ca-certificates-20191127-r0 webpage:
+ca-certificates-20191127-r2 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-20191127-r0 installed size:
-741376
+ca-certificates-20191127-r2 installed size:
+737280
 
-ca-certificates-20191127-r0 license:
+ca-certificates-20191127-r2 license:
 MPL-2.0 GPL-2.0-or-later
 
 ```
@@ -152,23 +152,6 @@ ca-certificates-cacert-20191127-r0 installed size:
 
 ca-certificates-cacert-20191127-r0 license:
 MPL-2.0 GPL-2.0-or-later
-
-```
-
-### `apk` package: `http-parser`
-
-```console
-http-parser-2.9.2-r0 description:
-HTTP request/response parser for C
-
-http-parser-2.9.2-r0 webpage:
-https://github.com/nodejs/http-parser
-
-http-parser-2.9.2-r0 installed size:
-57344
-
-http-parser-2.9.2-r0 license:
-MIT
 
 ```
 
@@ -209,16 +192,16 @@ OpenSSL
 ### `apk` package: `libgcc`
 
 ```console
-libgcc-8.3.0-r0 description:
+libgcc-9.2.0-r4 description:
 GNU C compiler runtime libraries
 
-libgcc-8.3.0-r0 webpage:
+libgcc-9.2.0-r4 webpage:
 http://gcc.gnu.org
 
-libgcc-8.3.0-r0 installed size:
+libgcc-9.2.0-r4 installed size:
 90112
 
-libgcc-8.3.0-r0 license:
+libgcc-9.2.0-r4 license:
 GPL LGPL
 
 ```
@@ -243,16 +226,16 @@ OpenSSL
 ### `apk` package: `libstdc++`
 
 ```console
-libstdc++-8.3.0-r0 description:
+libstdc++-9.2.0-r4 description:
 GNU C++ standard runtime library
 
-libstdc++-8.3.0-r0 webpage:
+libstdc++-9.2.0-r4 webpage:
 http://gcc.gnu.org
 
-libstdc++-8.3.0-r0 installed size:
-1392640
+libstdc++-9.2.0-r4 installed size:
+1671168
 
-libstdc++-8.3.0-r0 license:
+libstdc++-9.2.0-r4 license:
 GPL LGPL
 
 ```
@@ -277,17 +260,17 @@ ISC
 ### `apk` package: `libuv`
 
 ```console
-libuv-1.29.1-r0 description:
+libuv-1.34.0-r0 description:
 Cross-platform asychronous I/O
 
-libuv-1.29.1-r0 webpage:
+libuv-1.34.0-r0 webpage:
 https://libuv.org
 
-libuv-1.29.1-r0 installed size:
-192512
+libuv-1.34.0-r0 installed size:
+196608
 
-libuv-1.29.1-r0 license:
-MIT BSD ISC
+libuv-1.34.0-r0 license:
+MIT AND ISC
 
 ```
 
@@ -325,36 +308,36 @@ MIT BSD GPL2+
 
 ```
 
-### `apk` package: `nodejs`
+### `apk` package: `nghttp2-libs`
 
 ```console
-nodejs-10.19.0-r0 description:
-JavaScript runtime built on V8 engine - LTS version
+nghttp2-libs-1.40.0-r1 description:
+Experimental HTTP/2 client, server and proxy (libraries)
 
-nodejs-10.19.0-r0 webpage:
-https://nodejs.org/
+nghttp2-libs-1.40.0-r1 webpage:
+https://nghttp2.org
 
-nodejs-10.19.0-r0 installed size:
-25096192
+nghttp2-libs-1.40.0-r1 installed size:
+159744
 
-nodejs-10.19.0-r0 license:
+nghttp2-libs-1.40.0-r1 license:
 MIT
 
 ```
 
-### `apk` package: `npm`
+### `apk` package: `nodejs`
 
 ```console
-npm-10.19.0-r0 description:
-A package manager for JavaScript
+nodejs-12.15.0-r1 description:
+JavaScript runtime built on V8 engine - LTS version
 
-npm-10.19.0-r0 webpage:
+nodejs-12.15.0-r1 webpage:
 https://nodejs.org/
 
-npm-10.19.0-r0 installed size:
-28860416
+nodejs-12.15.0-r1 installed size:
+29175808
 
-npm-10.19.0-r0 license:
+nodejs-12.15.0-r1 license:
 MIT
 
 ```
