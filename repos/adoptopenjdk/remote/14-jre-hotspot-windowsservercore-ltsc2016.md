@@ -1,7 +1,7 @@
 ## `adoptopenjdk:14-jre-hotspot-windowsservercore-ltsc2016`
 
 ```console
-$ docker pull adoptopenjdk@sha256:94e2ade86f64c8e805ed59fb5e440f26b5571ba3ed80038d891193ea9e6d2935
+$ docker pull adoptopenjdk@sha256:8477881b9ae98035ca81698f54a139d659046c935acd47a111fb5b1d9fb25883
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull adoptopenjdk@sha256:94e2ade86f64c8e805ed59fb5e440f26b5571ba3ed8003
 ### `adoptopenjdk:14-jre-hotspot-windowsservercore-ltsc2016` - windows version 10.0.14393.3808; amd64
 
 ```console
-$ docker pull adoptopenjdk@sha256:29a715ed80eeff05515de57644558f45b13fee2ec493d1d4b357c403b0a04a4b
+$ docker pull adoptopenjdk@sha256:35012dbfa422cc2d4d198ee826408be020e04f5b84aa67d65e549b9e8cf16574
 ```
 
--	Docker Version: 18.09.11
+-	Docker Version: 19.03.5
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **5.8 GB (5840707659 bytes)**  
+-	Total Size: **5.8 GB (5840639293 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6a7212018c91935fbadc1767285833c57b474d945ed8e3cfaa33d0d28aefcb9e`
+-	Image ID: `sha256:62d4a0e633fc3d016d4d6e2c72f57d3ee8ac0d621b7cfde1382471393e286dd7`
 -	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
 -	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
 
@@ -29,10 +29,10 @@ RUN Apply image 1607-RTM-amd64
 RUN Install update ltsc2016-amd64
 # Tue, 14 Jul 2020 18:34:08 GMT
 SHELL [powershell -Command $ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';]
-# Wed, 15 Jul 2020 19:07:29 GMT
-ENV JAVA_VERSION=jdk-14.0.1+7.1
-# Wed, 15 Jul 2020 19:16:53 GMT
-RUN Write-Host ('Downloading https://github.com/AdoptOpenJDK/openjdk14-binaries/releases/download/jdk-14.0.1%2B7.1/OpenJDK14U-jre_x64_windows_hotspot_14.0.1_7.msi ...');         [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12;         wget https://github.com/AdoptOpenJDK/openjdk14-binaries/releases/download/jdk-14.0.1%2B7.1/OpenJDK14U-jre_x64_windows_hotspot_14.0.1_7.msi -O 'openjdk.msi';         Write-Host ('Verifying sha256 (b89f20b57a87c41f0838d962768a40dac826baa4bc2fe76f3934d0919a096abd) ...');         if ((Get-FileHash openjdk.msi -Algorithm sha256).Hash -ne 'b89f20b57a87c41f0838d962768a40dac826baa4bc2fe76f3934d0919a096abd') {                 Write-Host 'FAILED!';                 exit 1;         };                 New-Item -ItemType Directory -Path C:\temp | Out-Null;                 Write-Host 'Installing using MSI ...';         Start-Process -FilePath "msiexec.exe" -ArgumentList '/i', 'openjdk.msi', '/L*V', 'C:\temp\OpenJDK.log',         '/quiet', 'ADDLOCAL=FeatureEnvironment,FeatureJarFileRunWith,FeatureJavaHome' -Wait -Passthru;         Write-Host 'Removing openjdk.msi ...';         Remove-Item openjdk.msi -Force;         Remove-Item -Path C:\temp -Recurse | Out-Null;
+# Wed, 22 Jul 2020 13:17:57 GMT
+ENV JAVA_VERSION=jdk-14.0.2+12
+# Wed, 22 Jul 2020 13:23:58 GMT
+RUN Write-Host ('Downloading https://github.com/AdoptOpenJDK/openjdk14-binaries/releases/download/jdk-14.0.2%2B12/OpenJDK14U-jre_x64_windows_hotspot_14.0.2_12.msi ...');     [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12;     wget https://github.com/AdoptOpenJDK/openjdk14-binaries/releases/download/jdk-14.0.2%2B12/OpenJDK14U-jre_x64_windows_hotspot_14.0.2_12.msi -O 'openjdk.msi';     Write-Host ('Verifying sha256 (bf468c78387b8095914a2d46af6961d5c22697929b66961e346a41fc8bf909d4) ...');     if ((Get-FileHash openjdk.msi -Algorithm sha256).Hash -ne 'bf468c78387b8095914a2d46af6961d5c22697929b66961e346a41fc8bf909d4') {             Write-Host 'FAILED!';             exit 1;     };         New-Item -ItemType Directory -Path C:\temp | Out-Null;         Write-Host 'Installing using MSI ...';     Start-Process -FilePath "msiexec.exe" -ArgumentList '/i', 'openjdk.msi', '/L*V', 'C:\temp\OpenJDK.log',     '/quiet', 'ADDLOCAL=FeatureEnvironment,FeatureJarFileRunWith,FeatureJavaHome' -Wait -Passthru;     Remove-Item -Path C:\temp -Recurse | Out-Null;     Write-Host 'Removing openjdk.msi ...';     Remove-Item openjdk.msi -Force
 ```
 
 -	Layers:
@@ -47,11 +47,11 @@ RUN Write-Host ('Downloading https://github.com/AdoptOpenJDK/openjdk14-binaries/
 		Last Modified: Tue, 14 Jul 2020 19:42:07 GMT  
 		Size: 1.1 KB (1127 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cebece0b4ff6f38296d8c2788fbbf3ec9e372e3aae4997cc8a6a03ae9ce6e3a7`  
-		Last Modified: Wed, 15 Jul 2020 20:12:56 GMT  
-		Size: 1.1 KB (1129 bytes)  
+	-	`sha256:6d0c4b27c8dd0a85f69e954742c83fd1af36881daf5f14274a9b5e4a4e2bc17e`  
+		Last Modified: Wed, 22 Jul 2020 13:47:27 GMT  
+		Size: 1.2 KB (1152 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:229e5200734dcf996187ebd74045dbeea5c2174489020989b44ec756bea618fc`  
-		Last Modified: Wed, 15 Jul 2020 20:14:48 GMT  
-		Size: 103.2 MB (103243304 bytes)  
+	-	`sha256:c2480e55ca88d423e54b62e613eeb5cab9814dd053aab1be6aebec5694a087b7`  
+		Last Modified: Wed, 22 Jul 2020 13:48:30 GMT  
+		Size: 103.2 MB (103174915 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
