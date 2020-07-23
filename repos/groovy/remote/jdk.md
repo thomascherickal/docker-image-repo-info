@@ -1,7 +1,7 @@
 ## `groovy:jdk`
 
 ```console
-$ docker pull groovy@sha256:436b8c71f74011fd8586e45e36d337114b4c020c39bf7e97a7479bf60c1e84c7
+$ docker pull groovy@sha256:a15b119b5c945fda16b34e0892a4af8e3f33bf93914d4faedf153340ae37ae62
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -111,14 +111,14 @@ RUN set -o errexit -o nounset     && echo "Testing Groovy installation"     && g
 ### `groovy:jdk` - linux; ppc64le
 
 ```console
-$ docker pull groovy@sha256:1478d0e9b8cd90eb2579e91e3e37979bb711dcc1ba41ae79c19a5a9dd0091843
+$ docker pull groovy@sha256:516aa8ca3bc1bfce0dd9318dea5aa406cdddc4b29a6dbd4038380b1da514613c
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **193.3 MB (193327220 bytes)**  
+-	Total Size: **195.8 MB (195816081 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e5053db778ab62a82324f4357e34367e6ff3c221965b827a7e13b893059eca50`
+-	Image ID: `sha256:b8c4b0a2a77f608ff936e98b4791c25740e005af2fb525f50d25ff85589de177`
 -	Default Command: `["groovysh"]`
 
 ```dockerfile
@@ -154,13 +154,13 @@ VOLUME [/home/groovy/.groovy/grapes]
 WORKDIR /home/groovy
 # Sat, 18 Jul 2020 00:40:13 GMT
 RUN apt-get update     && echo "Installing build dependencies"     && apt-get install --yes --no-install-recommends         dirmngr         fontconfig         gnupg         unzip         wget     && rm --recursive --force /var/lib/apt/lists/*
-# Sat, 18 Jul 2020 00:40:19 GMT
-ENV GROOVY_VERSION=3.0.4
-# Sat, 18 Jul 2020 00:42:25 GMT
+# Thu, 23 Jul 2020 19:12:40 GMT
+ENV GROOVY_VERSION=3.0.5
+# Thu, 23 Jul 2020 19:14:16 GMT
 RUN set -o errexit -o nounset     && echo "Downloading Groovy"     && wget --no-verbose --output-document=groovy.zip "https://archive.apache.org/dist/groovy/${GROOVY_VERSION}/distribution/apache-groovy-binary-${GROOVY_VERSION}.zip"         && echo "Importing keys listed in http://www.apache.org/dist/groovy/KEYS from key server"     && export GNUPGHOME="$(mktemp -d)"     && gpg --batch --no-tty --keyserver ha.pool.sks-keyservers.net --recv-keys         7FAA0F2206DE228F0DB01AD741321490758AAD6F         331224E1D7BE883D16E8A685825C06C827AF6B66         34441E504A937F43EB0DAEF96A65176A0FB1CD0B         9A810E3B766E089FFB27C70F11B595CEDC4AEBB5         81CABC23EECA0790E8989B361FF96E10F0E13706         && echo "Checking download signature"     && wget --no-verbose --output-document=groovy.zip.asc "https://archive.apache.org/dist/groovy/${GROOVY_VERSION}/distribution/apache-groovy-binary-${GROOVY_VERSION}.zip.asc"     && gpg --batch --no-tty --verify groovy.zip.asc groovy.zip     && rm --recursive --force "${GNUPGHOME}"     && rm groovy.zip.asc         && echo "Installing Groovy"     && unzip groovy.zip     && rm groovy.zip     && mv "groovy-${GROOVY_VERSION}" "${GROOVY_HOME}/"     && ln --symbolic "${GROOVY_HOME}/bin/grape" /usr/bin/grape     && ln --symbolic "${GROOVY_HOME}/bin/groovy" /usr/bin/groovy     && ln --symbolic "${GROOVY_HOME}/bin/groovyc" /usr/bin/groovyc     && ln --symbolic "${GROOVY_HOME}/bin/groovyConsole" /usr/bin/groovyConsole     && ln --symbolic "${GROOVY_HOME}/bin/groovydoc" /usr/bin/groovydoc     && ln --symbolic "${GROOVY_HOME}/bin/groovysh" /usr/bin/groovysh     && ln --symbolic "${GROOVY_HOME}/bin/java2groovy" /usr/bin/java2groovy
-# Sat, 18 Jul 2020 00:42:29 GMT
+# Thu, 23 Jul 2020 19:14:23 GMT
 USER groovy
-# Sat, 18 Jul 2020 00:42:38 GMT
+# Thu, 23 Jul 2020 19:14:48 GMT
 RUN set -o errexit -o nounset     && echo "Testing Groovy installation"     && groovy --version
 ```
 
@@ -197,13 +197,13 @@ RUN set -o errexit -o nounset     && echo "Testing Groovy installation"     && g
 		Last Modified: Sat, 18 Jul 2020 01:04:10 GMT  
 		Size: 4.3 MB (4271290 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:794d7b1e49be147d52f90b17825da10148b1d0909073cb158bd65eb08b4be3d2`  
-		Last Modified: Sat, 18 Jul 2020 01:04:13 GMT  
-		Size: 43.2 MB (43202617 bytes)  
+	-	`sha256:8628378cbaed997a20de34de640af5cca57c63987ebe03741340473de3d1dd18`  
+		Last Modified: Thu, 23 Jul 2020 19:23:40 GMT  
+		Size: 45.7 MB (45691479 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2b4297a56166534a80cb8f0d895078bba4484555ae4c9052e078b676efeb31ec`  
-		Last Modified: Sat, 18 Jul 2020 01:04:08 GMT  
-		Size: 172.0 B  
+	-	`sha256:7095424c8eef25e1f319fbbd0d6ac985a687f3be71cd453dea54fc599dfbe1f1`  
+		Last Modified: Thu, 23 Jul 2020 19:23:34 GMT  
+		Size: 171.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `groovy:jdk` - linux; s390x
