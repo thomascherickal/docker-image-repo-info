@@ -1,7 +1,7 @@
 ## `joomla:3-php7.3-fpm`
 
 ```console
-$ docker pull joomla@sha256:62be81e1a13f593a17b9650178c1279a33fa0cdf8de67d9fe0fa9b0864252be2
+$ docker pull joomla@sha256:7b4859e227be33f02e6b4f6242e6bde21a061da1c82f74434f6c192de7c2a39f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -948,156 +948,156 @@ CMD ["php-fpm"]
 ### `joomla:3-php7.3-fpm` - linux; ppc64le
 
 ```console
-$ docker pull joomla@sha256:241690367b97aea9b93c7007b5bf612cacc4e9354f68de2a0d82a97e174a1f54
+$ docker pull joomla@sha256:ac673cc24ef3b88da974897b14d574ab3fc0eaebf9dbc10010fc13c4c85c9e63
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **169.0 MB (168955186 bytes)**  
+-	Total Size: **169.0 MB (168956155 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:8ee55894deaa80dfae9d43bf69eedcd3fcd720ac2a1a84d216bdc13fc28a2053`
+-	Image ID: `sha256:fcac604e916b33e86ec5bd9884bd096c6b03fb88cfa776a399903a7914dc44aa`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
 ```dockerfile
-# Tue, 09 Jun 2020 01:22:34 GMT
-ADD file:796aad1a35ba276b8cccc19987c152a713db101b2b65e30923db753f5b7f4b0f in / 
-# Tue, 09 Jun 2020 01:22:38 GMT
+# Wed, 22 Jul 2020 02:16:05 GMT
+ADD file:037dec996d9b742fc49f675272aa42ebd31f04226ba3d28836a6556cb61c29e7 in / 
+# Wed, 22 Jul 2020 02:16:14 GMT
 CMD ["bash"]
-# Tue, 09 Jun 2020 05:09:08 GMT
+# Wed, 22 Jul 2020 10:19:34 GMT
 RUN set -eux; 	{ 		echo 'Package: php*'; 		echo 'Pin: release *'; 		echo 'Pin-Priority: -1'; 	} > /etc/apt/preferences.d/no-debian-php
-# Tue, 09 Jun 2020 05:09:11 GMT
+# Wed, 22 Jul 2020 10:19:41 GMT
 ENV PHPIZE_DEPS=autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c
-# Tue, 09 Jun 2020 05:11:00 GMT
+# Wed, 22 Jul 2020 10:23:58 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		$PHPIZE_DEPS 		ca-certificates 		curl 		xz-utils 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 09 Jun 2020 05:11:05 GMT
+# Wed, 22 Jul 2020 10:24:07 GMT
 ENV PHP_INI_DIR=/usr/local/etc/php
-# Tue, 09 Jun 2020 05:11:10 GMT
+# Wed, 22 Jul 2020 10:24:20 GMT
 RUN set -eux; 	mkdir -p "$PHP_INI_DIR/conf.d"; 	[ ! -d /var/www/html ]; 	mkdir -p /var/www/html; 	chown www-data:www-data /var/www/html; 	chmod 777 /var/www/html
-# Tue, 09 Jun 2020 05:26:55 GMT
+# Wed, 22 Jul 2020 10:41:27 GMT
 ENV PHP_EXTRA_CONFIGURE_ARGS=--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi
-# Tue, 09 Jun 2020 05:27:00 GMT
+# Wed, 22 Jul 2020 10:41:30 GMT
 ENV PHP_CFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
-# Tue, 09 Jun 2020 05:27:03 GMT
+# Wed, 22 Jul 2020 10:41:36 GMT
 ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
-# Tue, 09 Jun 2020 05:27:11 GMT
+# Wed, 22 Jul 2020 10:41:39 GMT
 ENV PHP_LDFLAGS=-Wl,-O1 -pie
-# Tue, 09 Jun 2020 05:57:07 GMT
+# Wed, 22 Jul 2020 11:59:55 GMT
 ENV GPG_KEYS=CBAF69F173A0FEA4B537F470D66C9593118BCCB6 F38252826ACD957EF380D39F2F7956BC5DA04B5D
-# Fri, 10 Jul 2020 00:59:04 GMT
+# Wed, 22 Jul 2020 11:59:59 GMT
 ENV PHP_VERSION=7.3.20
-# Fri, 10 Jul 2020 00:59:09 GMT
+# Wed, 22 Jul 2020 12:00:05 GMT
 ENV PHP_URL=https://www.php.net/distributions/php-7.3.20.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-7.3.20.tar.xz.asc
-# Fri, 10 Jul 2020 00:59:11 GMT
+# Wed, 22 Jul 2020 12:00:15 GMT
 ENV PHP_SHA256=43292046f6684eb13acb637276d4aa1dd9f66b0b7045e6f1493bc90db389b888 PHP_MD5=
-# Fri, 10 Jul 2020 01:00:50 GMT
+# Wed, 22 Jul 2020 12:01:35 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends gnupg dirmngr; 	rm -rf /var/lib/apt/lists/*; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Fri, 10 Jul 2020 01:00:54 GMT
+# Wed, 22 Jul 2020 12:01:39 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Fri, 10 Jul 2020 01:05:52 GMT
+# Wed, 22 Jul 2020 12:06:03 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		libargon2-dev 		libcurl4-openssl-dev 		libedit-dev 		libsodium-dev 		libsqlite3-dev 		libssl-dev 		libxml2-dev 		zlib1g-dev 		${PHP_EXTRA_BUILD_DEPS:-} 	; 	rm -rf /var/lib/apt/lists/*; 		export 		CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)"; 	if [ ! -d /usr/include/curl ]; then 		ln -sT "/usr/include/$debMultiarch/curl" /usr/local/include/curl; 	fi; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				$(test "$gnuArch" = 's390x-linux-gnu' && echo '--without-pcre-jit') 		--with-libdir="lib/$debMultiarch" 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -executable -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Fri, 10 Jul 2020 01:05:55 GMT
+# Wed, 22 Jul 2020 12:06:09 GMT
 COPY multi:bd67471e0c4047be362a8a0e199558e6245207a6f70b72fdfe55aa2d2cae15e6 in /usr/local/bin/ 
-# Fri, 10 Jul 2020 01:06:05 GMT
+# Wed, 22 Jul 2020 12:06:22 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 10 Jul 2020 01:06:12 GMT
+# Wed, 22 Jul 2020 12:06:34 GMT
 RUN { echo '#!/bin/sh'; echo 'exec pkg-config "$@" freetype2'; } > /usr/local/bin/freetype-config && chmod +x /usr/local/bin/freetype-config
-# Fri, 10 Jul 2020 01:06:16 GMT
+# Wed, 22 Jul 2020 12:06:39 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 10 Jul 2020 01:06:19 GMT
+# Wed, 22 Jul 2020 12:06:43 GMT
 WORKDIR /var/www/html
-# Fri, 10 Jul 2020 01:06:32 GMT
+# Wed, 22 Jul 2020 12:06:52 GMT
 RUN set -eux; 	cd /usr/local/etc; 	if [ -d php-fpm.d ]; then 		sed 's!=NONE/!=!g' php-fpm.conf.default | tee php-fpm.conf > /dev/null; 		cp php-fpm.d/www.conf.default php-fpm.d/www.conf; 	else 		mkdir php-fpm.d; 		cp php-fpm.conf.default php-fpm.d/www.conf; 		{ 			echo '[global]'; 			echo 'include=etc/php-fpm.d/*.conf'; 		} | tee php-fpm.conf; 	fi; 	{ 		echo '[global]'; 		echo 'error_log = /proc/self/fd/2'; 		echo; echo '; https://github.com/docker-library/php/pull/725#issuecomment-443540114'; echo 'log_limit = 8192'; 		echo; 		echo '[www]'; 		echo '; if we send this to /proc/self/fd/1, it never appears'; 		echo 'access.log = /proc/self/fd/2'; 		echo; 		echo 'clear_env = no'; 		echo; 		echo '; Ensure worker stdout and stderr are sent to the main error log.'; 		echo 'catch_workers_output = yes'; 		echo 'decorate_workers_output = no'; 	} | tee php-fpm.d/docker.conf; 	{ 		echo '[global]'; 		echo 'daemonize = no'; 		echo; 		echo '[www]'; 		echo 'listen = 9000'; 	} | tee php-fpm.d/zz-docker.conf
-# Fri, 10 Jul 2020 01:06:36 GMT
+# Wed, 22 Jul 2020 12:06:58 GMT
 STOPSIGNAL SIGQUIT
-# Fri, 10 Jul 2020 01:06:39 GMT
+# Wed, 22 Jul 2020 12:07:02 GMT
 EXPOSE 9000
-# Fri, 10 Jul 2020 01:06:45 GMT
+# Wed, 22 Jul 2020 12:07:05 GMT
 CMD ["php-fpm"]
-# Fri, 10 Jul 2020 04:58:14 GMT
+# Wed, 22 Jul 2020 23:02:41 GMT
 LABEL maintainer=Michael Babker <michael.babker@joomla.org> (@mbabker)
-# Fri, 10 Jul 2020 04:58:16 GMT
+# Wed, 22 Jul 2020 23:02:45 GMT
 ENV JOOMLA_INSTALLATION_DISABLE_LOCALHOST_CHECK=1
-# Fri, 10 Jul 2020 05:00:56 GMT
+# Wed, 22 Jul 2020 23:06:12 GMT
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 	apt-get install -y --no-install-recommends 		libbz2-dev 		libjpeg-dev 		libldap2-dev 		libmemcached-dev 		libpng-dev 		libpq-dev 		libzip-dev 	; 		docker-php-ext-configure gd --with-jpeg-dir=/usr --with-png-dir=/usr; 	debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)"; 	docker-php-ext-configure ldap --with-libdir="lib/$debMultiarch"; 	docker-php-ext-install -j "$(nproc)" 		bz2 		gd 		ldap 		mysqli 		pdo_mysql 		pdo_pgsql 		pgsql 		zip 	; 		pecl install APCu-5.1.18; 	pecl install memcached-3.1.5; 	pecl install redis-4.3.0; 		docker-php-ext-enable 		apcu 		memcached 		redis 	; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark; 	ldd "$(php -r 'echo ini_get("extension_dir");')"/*.so 		| awk '/=>/ { print $3 }' 		| sort -u 		| xargs -r dpkg-query -S 		| cut -d: -f1 		| sort -u 		| xargs -rt apt-mark manual; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*
-# Fri, 10 Jul 2020 05:00:58 GMT
+# Wed, 22 Jul 2020 23:06:16 GMT
 VOLUME [/var/www/html]
-# Fri, 10 Jul 2020 05:01:01 GMT
+# Wed, 22 Jul 2020 23:06:20 GMT
 ENV JOOMLA_VERSION=3.9.18
-# Fri, 10 Jul 2020 05:01:04 GMT
+# Wed, 22 Jul 2020 23:06:29 GMT
 ENV JOOMLA_SHA512=1bf4590a761cc24f59fc0d5b07ffbb8f9e50073b3536edc261b8785ff168aca2066d133a81c4ac33bcfe7b843559320ef4d1f97c5eb16096ca4b550a18b7f44d
-# Fri, 10 Jul 2020 05:01:17 GMT
+# Wed, 22 Jul 2020 23:06:55 GMT
 RUN set -ex; 	curl -o joomla.tar.bz2 -SL https://github.com/joomla/joomla-cms/releases/download/${JOOMLA_VERSION}/Joomla_${JOOMLA_VERSION}-Stable-Full_Package.tar.bz2; 	echo "$JOOMLA_SHA512 *joomla.tar.bz2" | sha512sum -c -; 	mkdir /usr/src/joomla; 	tar -xf joomla.tar.bz2 -C /usr/src/joomla; 	rm joomla.tar.bz2; 	chown -R www-data:www-data /usr/src/joomla
-# Fri, 10 Jul 2020 05:01:21 GMT
+# Wed, 22 Jul 2020 23:07:00 GMT
 COPY file:fcc18c5b9c2d514cfb965bab84e10b4f924a39a5f202055df75d7990da099d8f in /entrypoint.sh 
-# Fri, 10 Jul 2020 05:01:23 GMT
+# Wed, 22 Jul 2020 23:07:03 GMT
 COPY file:5a85d779aaae74cfa3ab6228df0f24236d4d5ad9097e2a1b277e3daea0d6d3dc in /makedb.php 
-# Fri, 10 Jul 2020 05:01:27 GMT
+# Wed, 22 Jul 2020 23:07:05 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Fri, 10 Jul 2020 05:01:29 GMT
+# Wed, 22 Jul 2020 23:07:11 GMT
 CMD ["php-fpm"]
 ```
 
 -	Layers:
-	-	`sha256:63dbb66c5119bb5086d9e6fb6b154211afc20b44ed136ab7df808f6044cfc6f1`  
-		Last Modified: Tue, 09 Jun 2020 01:31:04 GMT  
-		Size: 30.5 MB (30524405 bytes)  
+	-	`sha256:d022338f917106731b8902d4c3d7009435a41381c11c8d210bbd6af007569f69`  
+		Last Modified: Wed, 22 Jul 2020 02:26:01 GMT  
+		Size: 30.5 MB (30524562 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5ad44f0796ea364793d3ac145c002c7ed180fe56cd09eed97a971a2e20999794`  
-		Last Modified: Tue, 09 Jun 2020 08:55:13 GMT  
-		Size: 227.0 B  
+	-	`sha256:e0664a61881d05cc0e8746a8342755ac9442a4f3e87073026096655cc55b0cc3`  
+		Last Modified: Wed, 22 Jul 2020 13:40:57 GMT  
+		Size: 228.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:501de6851c5eeb5b1bd75588fa67abb74d85b869f36d4815f1e4ae4e007fc4f1`  
-		Last Modified: Tue, 09 Jun 2020 08:56:28 GMT  
-		Size: 82.3 MB (82262725 bytes)  
+	-	`sha256:b4d65645e6fdf84bfa39a94f46a90aacec09a0d1d2d2606c365eb9a65c678fd4`  
+		Last Modified: Wed, 22 Jul 2020 13:41:16 GMT  
+		Size: 82.3 MB (82263064 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4824564d8a89ca8405d5fcf32fb84ff63852689cf385a5bcffa8023a86fa4a69`  
-		Last Modified: Tue, 09 Jun 2020 08:55:10 GMT  
-		Size: 269.0 B  
+	-	`sha256:a5a1f3da03577e1ffffca6abcd3a26313f2ed2f8424e1f2dfe21237345fd9b47`  
+		Last Modified: Wed, 22 Jul 2020 13:40:56 GMT  
+		Size: 270.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5e48d87640e55b0516ea6eb566cedc860edc6b5d53d63fd79acb6a99665d2ac4`  
-		Last Modified: Fri, 10 Jul 2020 03:29:25 GMT  
-		Size: 12.4 MB (12439125 bytes)  
+	-	`sha256:b6d3f74d7409b42037f5f7245e6fd1725f6e26c23cf577ed37d090b40a0e6fc2`  
+		Last Modified: Wed, 22 Jul 2020 13:46:59 GMT  
+		Size: 12.4 MB (12439194 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dc1e95877097be07a3a39378ec27b95b375acc307a436067416cc5190f201805`  
-		Last Modified: Fri, 10 Jul 2020 03:29:25 GMT  
-		Size: 495.0 B  
+	-	`sha256:287d8de815c876ec32c2e693799451cb4be4d9f1395c4a3c1113a64aae42d620`  
+		Last Modified: Wed, 22 Jul 2020 13:46:53 GMT  
+		Size: 493.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3ce8ead4d7fa1de027f33a591e809250ec82d9acf94e0ae5286891f055fe09b3`  
-		Last Modified: Fri, 10 Jul 2020 03:29:27 GMT  
-		Size: 30.5 MB (30465584 bytes)  
+	-	`sha256:48f65a256778cba29ad9da64780c129fd8ef7c9712d05217bae00f78f75c2c21`  
+		Last Modified: Wed, 22 Jul 2020 13:46:59 GMT  
+		Size: 30.5 MB (30465689 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:74015ce822581b09a6cbd2a2c5fbdb72018b9a1874d9947d2a54b175964313f7`  
-		Last Modified: Fri, 10 Jul 2020 03:29:20 GMT  
-		Size: 2.3 KB (2277 bytes)  
+	-	`sha256:61b2b3834e1b9348c525d88f7b487a03ce3ba089403badbb9a53083eb7bb2024`  
+		Last Modified: Wed, 22 Jul 2020 13:46:50 GMT  
+		Size: 2.3 KB (2275 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c4e767d052816f88d4a2818cd9dd13ee919cfd8c01923cfc596654dba1e7ad52`  
-		Last Modified: Fri, 10 Jul 2020 03:29:20 GMT  
-		Size: 247.0 B  
+	-	`sha256:69aff80c09bff5e51cabd04757b9f79153ff8abe9f7a7dd712cbc38bff8db0ed`  
+		Last Modified: Wed, 22 Jul 2020 13:46:52 GMT  
+		Size: 246.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7edaec8f507c0462e210697879374a99639acd30e16765ba2c50952541d93b2d`  
-		Last Modified: Fri, 10 Jul 2020 03:29:20 GMT  
-		Size: 211.0 B  
+	-	`sha256:f077135edc184fc19cfb12d2f11f245c982ddabe820b8cbbd483af8494b16b66`  
+		Last Modified: Wed, 22 Jul 2020 13:46:52 GMT  
+		Size: 212.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:99e1738b8d93f84f0424b8689852194d39365e0c797f8c4875f0cc85af09f72f`  
-		Last Modified: Fri, 10 Jul 2020 03:29:20 GMT  
-		Size: 8.4 KB (8415 bytes)  
+	-	`sha256:56cdb839ac86d3d96c65a13324de1fd16cb96ae6b4113e412f98d34a5d0828f1`  
+		Last Modified: Wed, 22 Jul 2020 13:46:52 GMT  
+		Size: 8.4 KB (8417 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:564746ea8257b8db705410da906a72cf2f29b74d359fcfdfedbdfdb0df92fc76`  
-		Last Modified: Fri, 10 Jul 2020 05:19:07 GMT  
-		Size: 3.6 MB (3596127 bytes)  
+	-	`sha256:16e9f59c5f611e91c31da75222a78e4f43fcbdc54f5809049a8ae72fbec45c82`  
+		Last Modified: Wed, 22 Jul 2020 23:21:07 GMT  
+		Size: 3.6 MB (3596439 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7e65fba10cadfcd5c5c0a9513f0b76a7f42af45dea79c42343736b86b403f447`  
-		Last Modified: Fri, 10 Jul 2020 05:19:09 GMT  
-		Size: 9.7 MB (9653291 bytes)  
+	-	`sha256:09b0ced4f2dc18d758343cdb6e083e832dad25f86e1aee3ce00f695f1b2e32fa`  
+		Last Modified: Wed, 22 Jul 2020 23:21:09 GMT  
+		Size: 9.7 MB (9653280 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:981fe697d6c51b08eaea702a34f3674a802a04f9d86f3ce6956f3f38ef274512`  
-		Last Modified: Fri, 10 Jul 2020 05:19:05 GMT  
+	-	`sha256:566fe1002b8dd253ef2a3e42d2ffd8f63817291ef62639e58ffdf82f14c33a83`  
+		Last Modified: Wed, 22 Jul 2020 23:21:06 GMT  
 		Size: 1.2 KB (1173 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9d952334f90db16ad1a49285c3c642d7c8a47a6b73a7ea3462f7c205f31c2798`  
-		Last Modified: Fri, 10 Jul 2020 05:19:05 GMT  
-		Size: 615.0 B  
+	-	`sha256:5bb3d4749dad617caf0c5bad19ca3a712d149f491baa217052e94df904e85d81`  
+		Last Modified: Wed, 22 Jul 2020 23:21:06 GMT  
+		Size: 613.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `joomla:3-php7.3-fpm` - linux; s390x
