@@ -1,17 +1,17 @@
-# `percona:8.0.19-10-centos`
+# `percona:8.0.20-11-centos`
 
 ## Docker Metadata
 
-- Image ID: `sha256:55e16910846759f931f0a0445c6266082091b036b21b0364ac1cc275b6c3fd2f`
-- Created: `2020-05-05T21:40:07.355810697Z`
-- Virtual Size: ~ 744.08 Mb  
+- Image ID: `sha256:413400f31bb523d51ef5609617ac531d53959cdbd034fc781b9333829c1ae857`
+- Created: `2020-07-22T01:16:44.709005758Z`
+- Virtual Size: ~ 748.39 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
 - Command: `["mysqld"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `PERCONA_VERSION=8.0.19-10.1.el7`
+  - `PERCONA_VERSION=8.0.20-11.1.el7`
 - Labels:
   - `org.label-schema.build-date=20200504`
   - `org.label-schema.license=GPLv2`
@@ -1394,6 +1394,20 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/lz4-1.7.5-3.el7.src.rpm
 ```
 
+### `rpm` package: `make-3.82-24.el7.x86_64`
+
+Licenses (from `rpm --query`): GPLv2+
+
+Source:
+
+```console
+$ yumdownloader --quiet --source --urls make-3.82-24.el7
+Enabling updates-source repository
+Enabling base-source repository
+Enabling extras-source repository
+http://vault.centos.org/centos/7/os/Source//SPackages/make-3.82-24.el7.src.rpm
+```
+
 ### `rpm` package: `ncurses-5.9-14.20130511.el7_4.x86_64`
 
 Licenses (from `rpm --query`): MIT
@@ -1590,6 +1604,20 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/openldap-2.4.44-21.el7_6.src.rpm
 ```
 
+### `rpm` package: `openssl-1.0.2k-19.el7.x86_64`
+
+Licenses (from `rpm --query`): OpenSSL
+
+Source:
+
+```console
+$ yumdownloader --quiet --source --urls openssl-1.0.2k-19.el7
+Enabling updates-source repository
+Enabling base-source repository
+Enabling extras-source repository
+http://vault.centos.org/centos/7/os/Source//SPackages/openssl-1.0.2k-19.el7.src.rpm
+```
+
 ### `rpm` package: `openssl-devel-1.0.2k-19.el7.x86_64`
 
 Licenses (from `rpm --query`): OpenSSL
@@ -1708,43 +1736,43 @@ Licenses (from `rpm --query`): GPL-3.0+
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `percona-server-client-8.0.19-10.1.el7.x86_64`
+### `rpm` package: `percona-server-client-8.0.20-11.1.el7.x86_64`
 
 Licenses (from `rpm --query`): Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved. Under GPLv2 license as shown in the Description field..
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `percona-server-devel-8.0.19-10.1.el7.x86_64`
+### `rpm` package: `percona-server-devel-8.0.20-11.1.el7.x86_64`
 
 Licenses (from `rpm --query`): Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved. Under GPLv2 license as shown in the Description field..
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `percona-server-rocksdb-8.0.19-10.1.el7.x86_64`
+### `rpm` package: `percona-server-rocksdb-8.0.20-11.1.el7.x86_64`
 
 Licenses (from `rpm --query`): Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved. Under GPLv2 license as shown in the Description field..
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `percona-server-server-8.0.19-10.1.el7.x86_64`
+### `rpm` package: `percona-server-server-8.0.20-11.1.el7.x86_64`
 
 Licenses (from `rpm --query`): Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved. Under GPLv2 license as shown in the Description field..
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `percona-server-shared-8.0.19-10.1.el7.x86_64`
+### `rpm` package: `percona-server-shared-8.0.20-11.1.el7.x86_64`
 
 Licenses (from `rpm --query`): Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved. Under GPLv2 license as shown in the Description field..
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `percona-server-shared-compat-8.0.19-10.1.el7.x86_64`
+### `rpm` package: `percona-server-shared-compat-8.0.20-11.1.el7.x86_64`
 
 Licenses (from `rpm --query`): Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved. Under GPLv2 license as shown in the Description field..
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `percona-server-tokudb-8.0.19-10.1.el7.x86_64`
+### `rpm` package: `percona-server-tokudb-8.0.20-11.1.el7.x86_64`
 
 Licenses (from `rpm --query`): Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved. Under GPLv2 license as shown in the Description field..
 
