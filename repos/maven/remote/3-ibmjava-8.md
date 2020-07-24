@@ -1,7 +1,7 @@
 ## `maven:3-ibmjava-8`
 
 ```console
-$ docker pull maven@sha256:bf3177bd8b16eac44759022a0b3a65099f58a178a50a6e1311268942d78e820d
+$ docker pull maven@sha256:f6a9ef8d5680b12d7ec9423d60d9841ad0022f3497aded817481e1a5f7482f55
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -112,99 +112,99 @@ CMD ["mvn"]
 ### `maven:3-ibmjava-8` - linux; 386
 
 ```console
-$ docker pull maven@sha256:e76d5e4f30f52ddb01c7160980649e0a9054566ea29c830283cf3e9980498a9c
+$ docker pull maven@sha256:df683c69bf825a72f80073330b0670ce82675c6b34d726cbe07a9d9d171d23e4
 ```
 
--	Docker Version: 18.09.7
+-	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **220.2 MB (220152506 bytes)**  
+-	Total Size: **220.2 MB (220180214 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f61650151b898d01a6b4604d560225d57bf6a754b268cc8781127ba9be3bc0f3`
+-	Image ID: `sha256:31e1111c441cf7f1a37cd3f1b47e85d46134880aa2fadcefcd41eb568989179f`
 -	Entrypoint: `["\/usr\/local\/bin\/mvn-entrypoint.sh"]`
 -	Default Command: `["mvn"]`
 
 ```dockerfile
-# Mon, 06 Jul 2020 20:32:29 GMT
-ADD file:1ab0923a42259d2ec6dcbe54c4d0bf28afbf4fdc4395d4212435342be59d30b0 in / 
-# Mon, 06 Jul 2020 20:32:29 GMT
+# Fri, 24 Jul 2020 14:40:18 GMT
+ADD file:1041a59a13c0d49b1cb87f211694f68be4c9b76f2deb36e2d8955b77c4d2836f in / 
+# Fri, 24 Jul 2020 14:40:19 GMT
 RUN [ -z "$(apt-get indextargets)" ]
-# Mon, 06 Jul 2020 20:32:30 GMT
+# Fri, 24 Jul 2020 14:40:20 GMT
 RUN set -xe 		&& echo '#!/bin/sh' > /usr/sbin/policy-rc.d 	&& echo 'exit 101' >> /usr/sbin/policy-rc.d 	&& chmod +x /usr/sbin/policy-rc.d 		&& dpkg-divert --local --rename --add /sbin/initctl 	&& cp -a /usr/sbin/policy-rc.d /sbin/initctl 	&& sed -i 's/^exit.*/exit 0/' /sbin/initctl 		&& echo 'force-unsafe-io' > /etc/dpkg/dpkg.cfg.d/docker-apt-speedup 		&& echo 'DPkg::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' > /etc/apt/apt.conf.d/docker-clean 	&& echo 'APT::Update::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' >> /etc/apt/apt.conf.d/docker-clean 	&& echo 'Dir::Cache::pkgcache ""; Dir::Cache::srcpkgcache "";' >> /etc/apt/apt.conf.d/docker-clean 		&& echo 'Acquire::Languages "none";' > /etc/apt/apt.conf.d/docker-no-languages 		&& echo 'Acquire::GzipIndexes "true"; Acquire::CompressionTypes::Order:: "gz";' > /etc/apt/apt.conf.d/docker-gzip-indexes 		&& echo 'Apt::AutoRemove::SuggestsImportant "false";' > /etc/apt/apt.conf.d/docker-autoremove-suggests
-# Mon, 06 Jul 2020 20:32:31 GMT
+# Fri, 24 Jul 2020 14:40:21 GMT
 RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
-# Mon, 06 Jul 2020 20:32:31 GMT
+# Fri, 24 Jul 2020 14:40:21 GMT
 CMD ["/bin/bash"]
-# Mon, 06 Jul 2020 21:02:43 GMT
+# Fri, 24 Jul 2020 14:56:28 GMT
 MAINTAINER Jayashree Gopi <jayasg12@in.ibm.com> (@jayasg12)
-# Mon, 06 Jul 2020 21:02:51 GMT
+# Fri, 24 Jul 2020 14:56:40 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends wget ca-certificates     && rm -rf /var/lib/apt/lists/*
-# Mon, 06 Jul 2020 21:02:51 GMT
+# Fri, 24 Jul 2020 14:56:40 GMT
 ENV JAVA_VERSION=1.8.0_sr6fp11
-# Mon, 06 Jul 2020 21:05:19 GMT
+# Fri, 24 Jul 2020 14:59:02 GMT
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        amd64|x86_64)          ESUM='3bee7811d5beb382c4b08d1d1ca583613b88e79c4e631e47602baab4666b565b';          YML_FILE='sdk/linux/x86_64/index.yml';          ;;        i386)          ESUM='543c7fbd0ee9f816026dd65933ba4e2ba885b5aa902e7866bab5bfa1911bd5bb';          YML_FILE='sdk/linux/i386/index.yml';          ;;        ppc64el|ppc64le)          ESUM='d69ff7519e32e89db88a9a4d4d88d1881524073ac940f35d3860db2c6647be2e';          YML_FILE='sdk/linux/ppc64le/index.yml';          ;;        s390)          ESUM='898e741dcab49dd8aad35dd159f6909a32ae68ede442f5f56ac8ebdd47ad4183';          YML_FILE='sdk/linux/s390/index.yml';          ;;        s390x)          ESUM='560f41c60495b525fa70a4ec52f7061649b768b083b6577882ae5508b2e8653d';          YML_FILE='sdk/linux/s390x/index.yml';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     BASE_URL="https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/java/meta/";     wget -q -U UA_IBM_JAVA_Docker -O /tmp/index.yml ${BASE_URL}/${YML_FILE};     JAVA_URL=$(sed -n '/^'${JAVA_VERSION}:'/{n;s/\s*uri:\s//p}'< /tmp/index.yml);     wget -q -U UA_IBM_JAVA_Docker -O /tmp/ibm-java.bin ${JAVA_URL};     echo "${ESUM}  /tmp/ibm-java.bin" | sha256sum -c -;     echo "INSTALLER_UI=silent" > /tmp/response.properties;     echo "USER_INSTALL_DIR=/opt/ibm/java" >> /tmp/response.properties;     echo "LICENSE_ACCEPTED=TRUE" >> /tmp/response.properties;     mkdir -p /opt/ibm;     chmod +x /tmp/ibm-java.bin;     /tmp/ibm-java.bin -i silent -f /tmp/response.properties;     rm -f /tmp/response.properties;     rm -f /tmp/index.yml;     rm -f /tmp/ibm-java.bin;
-# Mon, 06 Jul 2020 21:05:19 GMT
+# Fri, 24 Jul 2020 14:59:02 GMT
 ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin IBM_JAVA_OPTIONS=-XX:+UseContainerSupport
-# Mon, 06 Jul 2020 21:44:13 GMT
+# Fri, 24 Jul 2020 15:35:01 GMT
 ARG MAVEN_VERSION=3.6.3
-# Mon, 06 Jul 2020 21:44:13 GMT
+# Fri, 24 Jul 2020 15:35:02 GMT
 ARG USER_HOME_DIR=/root
-# Mon, 06 Jul 2020 21:44:14 GMT
+# Fri, 24 Jul 2020 15:35:02 GMT
 ARG SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0
-# Mon, 06 Jul 2020 21:44:14 GMT
+# Fri, 24 Jul 2020 15:35:02 GMT
 ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries
-# Mon, 06 Jul 2020 21:44:26 GMT
+# Fri, 24 Jul 2020 15:35:13 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries MAVEN_VERSION=3.6.3 SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0 USER_HOME_DIR=/root
 RUN apt-get update && apt-get install -y curl   && mkdir -p /usr/share/maven /usr/share/maven/ref   && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz   && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha512sum -c -   && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1   && rm -f /tmp/apache-maven.tar.gz   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
-# Mon, 06 Jul 2020 21:44:26 GMT
+# Fri, 24 Jul 2020 15:35:14 GMT
 ENV MAVEN_HOME=/usr/share/maven
-# Mon, 06 Jul 2020 21:44:27 GMT
+# Fri, 24 Jul 2020 15:35:14 GMT
 ENV MAVEN_CONFIG=/root/.m2
-# Mon, 06 Jul 2020 21:44:27 GMT
+# Fri, 24 Jul 2020 15:35:14 GMT
 COPY file:1b3da5c58894f705e7387946301c0c52edb6271761ea3cd80b86a848847a64cd in /usr/local/bin/mvn-entrypoint.sh 
-# Mon, 06 Jul 2020 21:44:28 GMT
+# Fri, 24 Jul 2020 15:35:15 GMT
 COPY file:2bbb488dd73c55d658b91943cfdf9c26975a320ceafc45dda94c95b03e518ad3 in /usr/share/maven/ref/ 
-# Mon, 06 Jul 2020 21:44:28 GMT
+# Fri, 24 Jul 2020 15:35:15 GMT
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
-# Mon, 06 Jul 2020 21:44:29 GMT
+# Fri, 24 Jul 2020 15:35:15 GMT
 CMD ["mvn"]
 ```
 
 -	Layers:
-	-	`sha256:2cd50deeb693c29681a326ec9a0882dc67b183243664cfb7c86ba7fd2cde36a4`  
-		Last Modified: Mon, 06 Jul 2020 15:46:38 GMT  
-		Size: 27.1 MB (27122240 bytes)  
+	-	`sha256:89823af3b784a3ef6d57a90159cbd5f28c863927aa03d4c43b44b6c37479fa1c`  
+		Last Modified: Mon, 13 Jul 2020 15:46:56 GMT  
+		Size: 27.1 MB (27123624 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d3d9101853b00b699c2ad3c82fe84666a7ecfafee74a784c5b8e743cd577d958`  
-		Last Modified: Mon, 06 Jul 2020 20:33:17 GMT  
-		Size: 34.6 KB (34609 bytes)  
+	-	`sha256:28677484c2569b014ecb876df3111b11e825c82629306b3af99a1c12f3b234e2`  
+		Last Modified: Fri, 24 Jul 2020 14:40:50 GMT  
+		Size: 34.6 KB (34611 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6f7b9585a3925ec5a201575b22acf609f48acb3b62c9429052b88b1d49c17604`  
-		Last Modified: Mon, 06 Jul 2020 20:33:18 GMT  
+	-	`sha256:9c914b15d9c03339769ddd662b893654bbc371dbed4f8cdfa29ca1c57c0bb98e`  
+		Last Modified: Fri, 24 Jul 2020 14:40:50 GMT  
+		Size: 849.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:d9dc7dbf6d65bca5959e6f7c892f468288c27e6a0ef07eec142d4497ee07e6cd`  
+		Last Modified: Fri, 24 Jul 2020 14:40:50 GMT  
+		Size: 162.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:a6390acddeaf0d5abd6917da9b4934d31bc7973be5b9dceb484774c00312c178`  
+		Last Modified: Fri, 24 Jul 2020 14:59:13 GMT  
+		Size: 3.0 MB (2982896 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:eb6b8c182f4e36476c58efa589521e3c26b58330d101d2a00a24e85e1c0930c5`  
+		Last Modified: Fri, 24 Jul 2020 15:00:03 GMT  
+		Size: 155.8 MB (155762562 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:702588ed85f693f850729c8a865f90b7a969f5c4a9e45d52070510fedf3ce199`  
+		Last Modified: Fri, 24 Jul 2020 15:35:29 GMT  
+		Size: 34.3 MB (34274300 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:245896c1071f499802a3207e1d1d55bc5d35486cb9230ee08701ae7620c77ea9`  
+		Last Modified: Fri, 24 Jul 2020 15:35:24 GMT  
 		Size: 851.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3433e32d48b8657aba0bef236dca2e327b4ecb8c0707fa36140c266529ed1dd9`  
-		Last Modified: Mon, 06 Jul 2020 20:33:16 GMT  
-		Size: 163.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a4f7afc6a0084603a64a180ca6394017048e7e6e2d9a9f20829dc05b26540882`  
-		Last Modified: Mon, 06 Jul 2020 21:05:29 GMT  
-		Size: 3.0 MB (2982695 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f3734122a31fbd092079f25e79b2f3bbf28f1e5f2df51f58b9dbdbc5e942d59c`  
-		Last Modified: Mon, 06 Jul 2020 21:06:21 GMT  
-		Size: 155.8 MB (155763047 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:783081d053484dd0dd929a68a4702871112ca2c60e56a7b16eab467815f69d05`  
-		Last Modified: Mon, 06 Jul 2020 21:44:43 GMT  
-		Size: 34.2 MB (34247685 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:790821366a4658874642ca38a4bb5daed9738ff42868bc87821fce1aef198285`  
-		Last Modified: Mon, 06 Jul 2020 21:44:39 GMT  
-		Size: 854.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a0bbb8dd459dfde6869110e8b8b09b1432ed22cfc9cd89c334493ba636f6c570`  
-		Last Modified: Mon, 06 Jul 2020 21:44:39 GMT  
-		Size: 362.0 B  
+	-	`sha256:b09bcc0c92b900e8f7b9fe34448267aecba95a00f57c6e0c0d06b382b8cab335`  
+		Last Modified: Fri, 24 Jul 2020 15:35:24 GMT  
+		Size: 359.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `maven:3-ibmjava-8` - linux; ppc64le
