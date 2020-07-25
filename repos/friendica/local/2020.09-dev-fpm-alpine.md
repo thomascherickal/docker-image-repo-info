@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:50a772786a1120e8428f691f66dd6d5ef1eb0e87955be0852440b9ddec96a46b`
-- Created: `2020-07-14T02:30:52.156563276Z`
-- Virtual Size: ~ 119.10 Mb  
+- Image ID: `sha256:ca2921b0a5043804d9e2722a5cf262e376930c9de5d7db8cbe3d66efee98bf85`
+- Created: `2020-07-24T14:20:40.192566838Z`
+- Virtual Size: ~ 124.64 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint-dev.sh"]`
@@ -266,6 +266,40 @@ GPL-2.0-or-later
 
 ```
 
+### `apk` package: `gmp`
+
+```console
+gmp-6.2.0-r0 description:
+A free library for arbitrary precision arithmetic
+
+gmp-6.2.0-r0 webpage:
+https://gmplib.org/
+
+gmp-6.2.0-r0 installed size:
+430080
+
+gmp-6.2.0-r0 license:
+LGPL-3.0-or-later
+
+```
+
+### `apk` package: `gnutls`
+
+```console
+gnutls-3.6.14-r0 description:
+A TLS protocol implementation
+
+gnutls-3.6.14-r0 webpage:
+https://www.gnutls.org/
+
+gnutls-3.6.14-r0 installed size:
+1757184
+
+gnutls-3.6.14-r0 license:
+GPL-3.0-or-later
+
+```
+
 ### `apk` package: `imagemagick-libs`
 
 ```console
@@ -419,6 +453,23 @@ BSD-3-Clause
 
 ```
 
+### `apk` package: `libffi`
+
+```console
+libffi-3.3-r2 description:
+A portable, high level programming interface to various calling conventions.
+
+libffi-3.3-r2 webpage:
+https://sourceware.org/libffi
+
+libffi-3.3-r2 installed size:
+53248
+
+libffi-3.3-r2 license:
+MIT
+
+```
+
 ### `apk` package: `libgcc`
 
 ```console
@@ -433,6 +484,23 @@ libgcc-9.3.0-r2 installed size:
 
 libgcc-9.3.0-r2 license:
 GPL-2.0-or-later LGPL-2.1-or-later
+
+```
+
+### `apk` package: `libintl`
+
+```console
+libintl-0.20.2-r0 description:
+GNU gettext runtime library
+
+libintl-0.20.2-r0 webpage:
+https://www.gnu.org/software/gettext/gettext.html
+
+libintl-0.20.2-r0 installed size:
+57344
+
+libintl-0.20.2-r0 license:
+LGPL-2.1-or-later
 
 ```
 
@@ -589,6 +657,23 @@ GPL-2.0-or-later LGPL-2.1-or-later
 
 ```
 
+### `apk` package: `libtasn1`
+
+```console
+libtasn1-4.16.0-r1 description:
+The ASN.1 library used in GNUTLS
+
+libtasn1-4.16.0-r1 webpage:
+https://www.gnu.org/software/gnutls/
+
+libtasn1-4.16.0-r1 installed size:
+86016
+
+libtasn1-4.16.0-r1 license:
+LGPL-2.1-or-later
+
+```
+
 ### `apk` package: `libtls-standalone`
 
 ```console
@@ -603,6 +688,23 @@ libtls-standalone-2.9.1-r1 installed size:
 
 libtls-standalone-2.9.1-r1 license:
 ISC
+
+```
+
+### `apk` package: `libunistring`
+
+```console
+libunistring-0.9.10-r0 description:
+Library for manipulating Unicode strings and C strings
+
+libunistring-0.9.10-r0 webpage:
+https://www.gnu.org/software/libunistring/
+
+libunistring-0.9.10-r0 installed size:
+1540096
+
+libunistring-0.9.10-r0 license:
+GPL-2.0+ OR LGPL-3.0+
 
 ```
 
@@ -759,6 +861,23 @@ BSD-3-Clause
 
 ```
 
+### `apk` package: `msmtp`
+
+```console
+msmtp-1.8.10-r0 description:
+SMTP client with a sendmail compatible interface
+
+msmtp-1.8.10-r0 webpage:
+https://marlam.de/msmtp/
+
+msmtp-1.8.10-r0 installed size:
+155648
+
+msmtp-1.8.10-r0 license:
+GPL-3.0-or-later
+
+```
+
 ### `apk` package: `musl`
 
 ```console
@@ -827,6 +946,23 @@ MIT
 
 ```
 
+### `apk` package: `nettle`
+
+```console
+nettle-3.5.1-r1 description:
+A low-level cryptographic library
+
+nettle-3.5.1-r1 webpage:
+https://www.lysator.liu.se/~nisse/nettle/
+
+nettle-3.5.1-r1 installed size:
+462848
+
+nettle-3.5.1-r1 license:
+LGPL-2.0-or-later
+
+```
+
 ### `apk` package: `nghttp2-libs`
 
 ```console
@@ -858,6 +994,23 @@ openssl-1.1.1g-r0 installed size:
 
 openssl-1.1.1g-r0 license:
 OpenSSL
+
+```
+
+### `apk` package: `p11-kit`
+
+```console
+p11-kit-0.23.20-r5 description:
+Library for loading and sharing PKCS#11 modules
+
+p11-kit-0.23.20-r5 webpage:
+https://p11-glue.freedesktop.org/
+
+p11-kit-0.23.20-r5 installed size:
+1216512
+
+p11-kit-0.23.20-r5 license:
+BSD-3-Clause
 
 ```
 
@@ -977,23 +1130,6 @@ ssl_client-1.31.1-r16 installed size:
 
 ssl_client-1.31.1-r16 license:
 GPL-2.0-only
-
-```
-
-### `apk` package: `ssmtp`
-
-```console
-ssmtp-2.64-r14 description:
-Extremely simple MTA to get mail off the system to a mail hub
-
-ssmtp-2.64-r14 webpage:
-https://packages.debian.org/stable/mail/ssmtp
-
-ssmtp-2.64-r14 installed size:
-65536
-
-ssmtp-2.64-r14 license:
-GPL-2.0
 
 ```
 
