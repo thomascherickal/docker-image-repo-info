@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:a5101124fe2ea5cb9b9d4bbe7d0146ac4d3d201785a8321d30e5fdfc3dd22c5c`
-- Created: `2020-07-22T00:40:20.943843326Z`
-- Virtual Size: ~ 691.18 Mb  
+- Image ID: `sha256:09a7acfa4c7094d2eaeb754daa7e56bdcd9410b968368c1503d0596b545619f3`
+- Created: `2020-07-22T22:55:16.295906729Z`
+- Virtual Size: ~ 691.19 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -2375,12 +2375,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libevent/2.0.21-stable-2+deb8u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libevent/2.0.21-stable-2+deb8u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libexif=0.6.21-2+deb8u3`
+### `dpkg` source package: `libexif=0.6.21-2+deb8u4`
 
 Binary Packages:
 
-- `libexif-dev=0.6.21-2+deb8u3`
-- `libexif12:amd64=0.6.21-2+deb8u3`
+- `libexif-dev=0.6.21-2+deb8u4`
+- `libexif12:amd64=0.6.21-2+deb8u4`
 
 Licenses: (parsed from: `/usr/share/doc/libexif-dev/copyright`, `/usr/share/doc/libexif12/copyright`)
 
@@ -2390,13 +2390,20 @@ Licenses: (parsed from: `/usr/share/doc/libexif-dev/copyright`, `/usr/share/doc/
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris libexif=0.6.21-2+deb8u4
+'http://security.debian.org/debian-security/pool/updates/main/libe/libexif/libexif_0.6.21-2+deb8u4.dsc' libexif_0.6.21-2+deb8u4.dsc 2098 SHA256:0551ba7f793ca4d9c7846323a96321e65fbf0bb6720e704e29eb1b2962363b97
+'http://security.debian.org/debian-security/pool/updates/main/libe/libexif/libexif_0.6.21.orig.tar.gz' libexif_0.6.21.orig.tar.gz 2081615 SHA256:edb7eb13664cf950a6edd132b75e99afe61c5effe2f16494e6d27bc404b287bf
+'http://security.debian.org/debian-security/pool/updates/main/libe/libexif/libexif_0.6.21-2+deb8u4.debian.tar.xz' libexif_0.6.21-2+deb8u4.debian.tar.xz 16732 SHA256:b898554dc0736ac3b5bc2bef508eb1a3e714c4c0a43704995d30b15b99315a05
+```
 
-- http://snapshot.debian.org/package/libexif/0.6.21-2+deb8u3/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/libexif/0.6.21-2+deb8u4/ (for browsing the source)
+- https://sources.debian.net/src/libexif/0.6.21-2+deb8u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libexif/0.6.21-2+deb8u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libffi=3.1-2+deb8u1`
 
@@ -2920,11 +2927,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libssh2/1.4.3-4.1+deb8u6/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libssh2/1.4.3-4.1+deb8u6/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libtasn1-6=4.2-3+deb8u3`
+### `dpkg` source package: `libtasn1-6=4.2-3+deb8u4`
 
 Binary Packages:
 
-- `libtasn1-6:amd64=4.2-3+deb8u3`
+- `libtasn1-6:amd64=4.2-3+deb8u4`
 
 Licenses: (parsed from: `/usr/share/doc/libtasn1-6/copyright`)
 
@@ -2936,17 +2943,17 @@ Licenses: (parsed from: `/usr/share/doc/libtasn1-6/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libtasn1-6=4.2-3+deb8u3
-'http://deb.debian.org/debian/pool/main/libt/libtasn1-6/libtasn1-6_4.2-3+deb8u3.dsc' libtasn1-6_4.2-3+deb8u3.dsc 2607 SHA256:dee600f7bdacd1fa75d40a13425e6c81d36b979fd23aab468000a1bfc18706ba
-'http://deb.debian.org/debian/pool/main/libt/libtasn1-6/libtasn1-6_4.2.orig.tar.gz' libtasn1-6_4.2.orig.tar.gz 1866192 SHA256:693b41cb36c2ac02d5990180b0712a79a591168e93d85f7fcbb75a0a0be4cdbb
-'http://deb.debian.org/debian/pool/main/libt/libtasn1-6/libtasn1-6_4.2-3+deb8u3.debian.tar.xz' libtasn1-6_4.2-3+deb8u3.debian.tar.xz 59144 SHA256:59ba69bafbe22542f58bc63eab30b70b5ce15673f8b7b8332c21b72e33572d28
+$ apt-get source -qq --print-uris libtasn1-6=4.2-3+deb8u4
+'http://security.debian.org/debian-security/pool/updates/main/libt/libtasn1-6/libtasn1-6_4.2-3+deb8u4.dsc' libtasn1-6_4.2-3+deb8u4.dsc 2607 SHA256:9fe778ed52ad7ce359e8e28fddf9bf9d50fb52cb649a6df92f25e0614c83a07a
+'http://security.debian.org/debian-security/pool/updates/main/libt/libtasn1-6/libtasn1-6_4.2.orig.tar.gz' libtasn1-6_4.2.orig.tar.gz 1866192 SHA256:693b41cb36c2ac02d5990180b0712a79a591168e93d85f7fcbb75a0a0be4cdbb
+'http://security.debian.org/debian-security/pool/updates/main/libt/libtasn1-6/libtasn1-6_4.2-3+deb8u4.debian.tar.xz' libtasn1-6_4.2-3+deb8u4.debian.tar.xz 59628 SHA256:5adf560fc2a5d92b7740c243c6c5872d01edcdfc21e17597508fc3fe4a533345
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/libtasn1-6/4.2-3+deb8u3/ (for browsing the source)
-- https://sources.debian.net/src/libtasn1-6/4.2-3+deb8u3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libtasn1-6/4.2-3+deb8u3/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/libtasn1-6/4.2-3+deb8u4/ (for browsing the source)
+- https://sources.debian.net/src/libtasn1-6/4.2-3+deb8u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libtasn1-6/4.2-3+deb8u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libtext-charwidth-perl=0.04-7`
 
@@ -3506,11 +3513,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libyaml/0.1.6-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libyaml/0.1.6-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `linux=3.16.81-1`
+### `dpkg` source package: `linux=3.16.84-1`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=3.16.81-1`
+- `linux-libc-dev:amd64=3.16.84-1`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -3521,17 +3528,17 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris linux=3.16.81-1
-'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_3.16.81-1.dsc' linux_3.16.81-1.dsc 143027 SHA256:108bfc738f52c201a1db6c7706884dac3c16392f609e9cabf7f9e3023e01df19
-'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_3.16.81.orig.tar.xz' linux_3.16.81.orig.tar.xz 82076668 SHA256:3e4dbc369a611f8b3171a5ac530ded0379e7151d507c890e96b654394c1071e3
-'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_3.16.81-1.debian.tar.xz' linux_3.16.81-1.debian.tar.xz 1858468 SHA256:c8338a0dfa66845eb3a97a0dad4e916d038e8996cfb5b4b3082159e4e1575a67
+$ apt-get source -qq --print-uris linux=3.16.84-1
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_3.16.84-1.dsc' linux_3.16.84-1.dsc 143027 SHA256:1181b4ab818eaca2a8d7de7d1a3b751077dc1389fcb1d8111924d5df36c7d720
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_3.16.84.orig.tar.xz' linux_3.16.84.orig.tar.xz 82095884 SHA256:17f0a7a1c8279c971509801eef4f60af49f85fec41649cbec77bc95a5db887f9
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_3.16.84-1.debian.tar.xz' linux_3.16.84-1.debian.tar.xz 1231412 SHA256:f8c5f05043084d4b1e6468fddaf471d61935a38f5f81357bd2b271481a567947
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/linux/3.16.81-1/ (for browsing the source)
-- https://sources.debian.net/src/linux/3.16.81-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/3.16.81-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/linux/3.16.84-1/ (for browsing the source)
+- https://sources.debian.net/src/linux/3.16.84-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/linux/3.16.84-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lsb=4.1+Debian13+nmu1`
 

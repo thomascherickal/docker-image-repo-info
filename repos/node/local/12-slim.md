@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:1a484809c0c674ae1933287cb43fbd56f486c96beb72e576a2da06a0444a7bf8`
-- Created: `2020-06-30T20:25:39.725517982Z`
-- Virtual Size: ~ 142.00 Mb  
+- Image ID: `sha256:232db31dd450f4a6ce8b2173c6f298ce2e89cd69a280e170a4b056dc6d548538`
+- Created: `2020-07-22T22:53:38.788591637Z`
+- Virtual Size: ~ 141.99 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -146,23 +146,29 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/audit/1:2.6.7-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/audit/1:2.6.7-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `base-files=9.9+deb9u12`
+### `dpkg` source package: `base-files=9.9+deb9u13`
 
 Binary Packages:
 
-- `base-files=9.9+deb9u12`
+- `base-files=9.9+deb9u13`
 
 Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris base-files=9.9+deb9u13
+'http://deb.debian.org/debian/pool/main/b/base-files/base-files_9.9+deb9u13.dsc' base-files_9.9+deb9u13.dsc 1099 SHA256:d5d615c5cd54effa18d390b8942be462affc0e3ca83ece1d9c1acddb0e2ee0c7
+'http://deb.debian.org/debian/pool/main/b/base-files/base-files_9.9+deb9u13.tar.xz' base-files_9.9+deb9u13.tar.xz 63212 SHA256:0a3a50a62826abd4de6ef77e5a20d58e4f8b50ccc46974014c6bc068de39b867
+```
 
-- http://snapshot.debian.org/package/base-files/9.9+deb9u12/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/base-files/9.9+deb9u13/ (for browsing the source)
+- https://sources.debian.net/src/base-files/9.9+deb9u13/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/base-files/9.9+deb9u13/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-passwd=3.5.43`
 
@@ -1030,11 +1036,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/pcre3/2:8.39-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/pcre3/2:8.39-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `perl=5.24.1-3+deb9u6`
+### `dpkg` source package: `perl=5.24.1-3+deb9u7`
 
 Binary Packages:
 
-- `perl-base=5.24.1-3+deb9u6`
+- `perl-base=5.24.1-3+deb9u7`
 
 Licenses: (parsed from: `/usr/share/doc/perl-base/copyright`)
 
@@ -1066,13 +1072,20 @@ Licenses: (parsed from: `/usr/share/doc/perl-base/copyright`)
 - `Unicode`
 - `ZLIB`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris perl=5.24.1-3+deb9u7
+'http://deb.debian.org/debian/pool/main/p/perl/perl_5.24.1-3+deb9u7.dsc' perl_5.24.1-3+deb9u7.dsc 2393 SHA256:3ff763d4ea2bbcb180faafbdc3edfed7488e9f0b2904131b2302bb7320312b0c
+'http://deb.debian.org/debian/pool/main/p/perl/perl_5.24.1.orig.tar.xz' perl_5.24.1.orig.tar.xz 11569284 SHA256:03a77bac4505c270f1890ece75afc7d4b555090b41aa41ea478747e23b2afb3f
+'http://deb.debian.org/debian/pool/main/p/perl/perl_5.24.1-3+deb9u7.debian.tar.xz' perl_5.24.1-3+deb9u7.debian.tar.xz 192140 SHA256:9f339ca072fc87ee1225520f45594cb052dc591e163d6d19b98de267df3326e4
+```
 
-- http://snapshot.debian.org/package/perl/5.24.1-3+deb9u6/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/perl/5.24.1-3+deb9u7/ (for browsing the source)
+- https://sources.debian.net/src/perl/5.24.1-3+deb9u7/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/perl/5.24.1-3+deb9u7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sed=4.4-1`
 
@@ -1232,23 +1245,31 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tar/1.29b-1.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tar/1.29b-1.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tzdata=2019c-0+deb9u1`
+### `dpkg` source package: `tzdata=2020a-0+deb9u1`
 
 Binary Packages:
 
-- `tzdata=2019c-0+deb9u1`
+- `tzdata=2020a-0+deb9u1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris tzdata=2020a-0+deb9u1
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a-0+deb9u1.dsc' tzdata_2020a-0+deb9u1.dsc 2270 SHA256:9d8d6d11d324336958b3f13dacd180372b6cffe830263dfa1b187be4c30c3ddc
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a.orig.tar.gz' tzdata_2020a.orig.tar.gz 397245 SHA256:547161eca24d344e0b5f96aff6a76b454da295dc14ed4ca50c2355043fb899a2
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a.orig.tar.gz.asc' tzdata_2020a.orig.tar.gz.asc 833 SHA256:a92f085fe1e7f8bc0f0a0bc4432f27e6cf2d69e64d4a90958bd023eb0ccf45f9
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a-0+deb9u1.debian.tar.xz' tzdata_2020a-0+deb9u1.debian.tar.xz 101968 SHA256:dc85bbeec67c115c5dd61673b37eb3a7c1d7402160cf6f790e0ffa816dea9205
+```
 
-- http://snapshot.debian.org/package/tzdata/2019c-0+deb9u1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/tzdata/2020a-0+deb9u1/ (for browsing the source)
+- https://sources.debian.net/src/tzdata/2020a-0+deb9u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tzdata/2020a-0+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ustr=1.0.4-6`
 
