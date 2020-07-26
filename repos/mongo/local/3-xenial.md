@@ -1,10 +1,10 @@
-# `mongo:3.6.18-xenial`
+# `mongo:3.6.19-xenial`
 
 ## Docker Metadata
 
-- Image ID: `sha256:944c82bef68bc2ec6a58db644f36ac218304605605b3f65951c5f46e2da2d4d7`
-- Created: `2020-07-06T22:02:30.211837413Z`
-- Virtual Size: ~ 440.31 Mb  
+- Image ID: `sha256:8f1c0eaedd1b713469c1927425ad61d506dfd74bc2f44c5a4be1925dea60ac20`
+- Created: `2020-07-24T16:27:44.984279621Z`
+- Virtual Size: ~ 440.57 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -17,7 +17,7 @@
   - `MONGO_PACKAGE=mongodb-org`
   - `MONGO_REPO=repo.mongodb.org`
   - `MONGO_MAJOR=3.6`
-  - `MONGO_VERSION=3.6.18`
+  - `MONGO_VERSION=3.6.19`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -502,22 +502,27 @@ $ apt-get source -qq --print-uris gccgo-6=6.0.1-0ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gccgo-6/gccgo-6_6.0.1-0ubuntu1.diff.gz' gccgo-6_6.0.1-0ubuntu1.diff.gz 633954 SHA256:839eea6c2d23670f09b642864ff61e3097b47391cb508a5997538750ff8678f6
 ```
 
-### `dpkg` source package: `glibc=2.23-0ubuntu11`
+### `dpkg` source package: `glibc=2.23-0ubuntu11.2`
 
 Binary Packages:
 
-- `libc-bin=2.23-0ubuntu11`
-- `libc6:amd64=2.23-0ubuntu11`
-- `multiarch-support=2.23-0ubuntu11`
+- `libc-bin=2.23-0ubuntu11.2`
+- `libc6:amd64=2.23-0ubuntu11.2`
+- `multiarch-support=2.23-0ubuntu11.2`
 
 Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/libc6/copyright`, `/usr/share/doc/multiarch-support/copyright`)
 
 - `GPL-2`
 - `LGPL-2.1`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris glibc=2.23-0ubuntu11.2
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.23-0ubuntu11.2.dsc' glibc_2.23-0ubuntu11.2.dsc 8547 SHA256:bf8f1067f5524046070f3cac025888651a99447cc789a0e5b9eafa97a3571f9c
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.23.orig.tar.xz' glibc_2.23.orig.tar.xz 13849968 SHA256:bf6c528eeebefcacc295270068b79330c1fb2b22458ff66285b4175d23442c96
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.23-0ubuntu11.2.debian.tar.xz' glibc_2.23-0ubuntu11.2.debian.tar.xz 1357888 SHA256:04ebe665c81c24481057a4facd6c07e9c43319f6a2dc98fce18ecd247d1af96d
+```
 
 ### `dpkg` source package: `gnupg=1.4.20-1ubuntu3.3`
 
@@ -766,11 +771,11 @@ $ apt-get source -qq --print-uris libonig=5.9.6-1ubuntu0.1
 'http://archive.ubuntu.com/ubuntu/pool/universe/libo/libonig/libonig_5.9.6-1ubuntu0.1.debian.tar.xz' libonig_5.9.6-1ubuntu0.1.debian.tar.xz 8108 SHA256:864d49d68744b3949f47cd6710998e7fdc86c413a5bfda553a9fa035e78bfe3b
 ```
 
-### `dpkg` source package: `libseccomp=2.4.1-0ubuntu0.16.04.2`
+### `dpkg` source package: `libseccomp=2.4.3-1ubuntu3.16.04.2`
 
 Binary Packages:
 
-- `libseccomp2:amd64=2.4.1-0ubuntu0.16.04.2`
+- `libseccomp2:amd64=2.4.3-1ubuntu3.16.04.2`
 
 Licenses: (parsed from: `/usr/share/doc/libseccomp2/copyright`)
 
@@ -959,15 +964,15 @@ $ apt-get source -qq --print-uris mawk=1.3.3-17ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.3-17ubuntu2.diff.gz' mawk_1.3.3-17ubuntu2.diff.gz 63882 SHA256:670103046767474be29e80f2143dc67e3d0b958972f5942c3df94883f978eded
 ```
 
-### `dpkg` source package: `mongodb-org=3.6.18`
+### `dpkg` source package: `mongodb-org=3.6.19`
 
 Binary Packages:
 
-- `mongodb-org=3.6.18`
-- `mongodb-org-mongos=3.6.18`
-- `mongodb-org-server=3.6.18`
-- `mongodb-org-shell=3.6.18`
-- `mongodb-org-tools=3.6.18`
+- `mongodb-org=3.6.19`
+- `mongodb-org-mongos=3.6.19`
+- `mongodb-org-server=3.6.19`
+- `mongodb-org-shell=3.6.19`
+- `mongodb-org-tools=3.6.19`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
