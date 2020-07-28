@@ -616,20 +616,13 @@ Licenses: (parsed from: `/usr/share/doc/gcc-10-base/copyright`, `/usr/share/doc/
 - `GPL-3`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-10=10.1.0-4
-'http://deb.debian.org/debian/pool/main/g/gcc-10/gcc-10_10.1.0-4.dsc' gcc-10_10.1.0-4.dsc 27590 SHA256:e05f8e27f69ed1619147bae883a6463270b77d013270b8bca4447b9d66234627
-'http://deb.debian.org/debian/pool/main/g/gcc-10/gcc-10_10.1.0.orig.tar.gz' gcc-10_10.1.0.orig.tar.gz 92670668 SHA256:cdf22173652ee0a51f4789a8c64aa2c7aeeaf67eddeb49d0221c0da368bc9432
-'http://deb.debian.org/debian/pool/main/g/gcc-10/gcc-10_10.1.0-4.debian.tar.xz' gcc-10_10.1.0-4.debian.tar.xz 2319628 SHA256:c21b657214602bfc58b47821054361cd32dd0004b58eebbdc1afc98766464cbc
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gcc-10/10.1.0-4/
 
-- https://sources.debian.net/src/gcc-10/10.1.0-4/ (for browsing the source)
-- https://sources.debian.net/src/gcc-10/10.1.0-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gcc-10/10.1.0-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gcc-9=9.3.0-14`
 

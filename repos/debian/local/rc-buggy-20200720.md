@@ -1773,20 +1773,13 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=245.6-3
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_245.6-3.dsc' systemd_245.6-3.dsc 5102 SHA256:a8946c6cc9b467c83c369cf009257f4eeba94eec2cd03a7d60aad10baef802b7
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_245.6.orig.tar.gz' systemd_245.6.orig.tar.gz 9022866 SHA256:f58424fd2d105503f836ff7d099d762901fb40347de993fce7373d65ff640f5b
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_245.6-3.debian.tar.xz' systemd_245.6-3.debian.tar.xz 166456 SHA256:3c86748ec92fff1dbba184f2104e9ce415a7f936468eac329e9494c222457f79
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/systemd/245.6-3/
 
-- https://sources.debian.net/src/systemd/245.6-3/ (for browsing the source)
-- https://sources.debian.net/src/systemd/245.6-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/systemd/245.6-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sysvinit=2.96-3`
 
@@ -1898,20 +1891,13 @@ Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/lib
 - `MIT`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris util-linux=2.35.2-7
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.35.2-7.dsc' util-linux_2.35.2-7.dsc 4337 SHA256:f530383c7d6d7fd8e4b96f9f1814b4adb54b2bd0a172e0dd54ff819e829a5612
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.35.2.orig.tar.xz' util-linux_2.35.2.orig.tar.xz 5150488 SHA256:21b7431e82f6bcd9441a01beeec3d57ed33ee948f8a5b41da577073c372eb58a
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.35.2-7.debian.tar.xz' util-linux_2.35.2-7.debian.tar.xz 95500 SHA256:808bfb2918e245476f044a328d1567cb5eff219438f2be8ffd0c66b99d544f4e
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/util-linux/2.35.2-7/
 
-- https://sources.debian.net/src/util-linux/2.35.2-7/ (for browsing the source)
-- https://sources.debian.net/src/util-linux/2.35.2-7/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/util-linux/2.35.2-7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `xz-utils=5.2.4-1`
 

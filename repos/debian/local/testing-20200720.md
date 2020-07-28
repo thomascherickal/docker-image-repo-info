@@ -644,20 +644,13 @@ Licenses: (parsed from: `/usr/share/doc/gcc-10-base/copyright`, `/usr/share/doc/
 - `GPL-3`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-10=10.1.0-4
-'http://deb.debian.org/debian/pool/main/g/gcc-10/gcc-10_10.1.0-4.dsc' gcc-10_10.1.0-4.dsc 27590 SHA256:e05f8e27f69ed1619147bae883a6463270b77d013270b8bca4447b9d66234627
-'http://deb.debian.org/debian/pool/main/g/gcc-10/gcc-10_10.1.0.orig.tar.gz' gcc-10_10.1.0.orig.tar.gz 92670668 SHA256:cdf22173652ee0a51f4789a8c64aa2c7aeeaf67eddeb49d0221c0da368bc9432
-'http://deb.debian.org/debian/pool/main/g/gcc-10/gcc-10_10.1.0-4.debian.tar.xz' gcc-10_10.1.0-4.debian.tar.xz 2319628 SHA256:c21b657214602bfc58b47821054361cd32dd0004b58eebbdc1afc98766464cbc
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gcc-10/10.1.0-4/
 
-- https://sources.debian.net/src/gcc-10/10.1.0-4/ (for browsing the source)
-- https://sources.debian.net/src/gcc-10/10.1.0-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gcc-10/10.1.0-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gcc-9=9.3.0-14`
 
@@ -1324,20 +1317,13 @@ Licenses: (parsed from: `/usr/share/doc/libsemanage-common/copyright`, `/usr/sha
 - `GPL`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libsemanage=3.0-1
-'http://deb.debian.org/debian/pool/main/libs/libsemanage/libsemanage_3.0-1.dsc' libsemanage_3.0-1.dsc 2333 SHA256:269c958d0f0a8e8fff34e75c88153c060eb8054127bfadf183903a49c390fd06
-'http://deb.debian.org/debian/pool/main/libs/libsemanage/libsemanage_3.0.orig.tar.gz' libsemanage_3.0.orig.tar.gz 180745 SHA256:a497b0720d54eac427f1f3f618eed417e50ed8f4e47ed0f7a1d391bd416e84cf
-'http://deb.debian.org/debian/pool/main/libs/libsemanage/libsemanage_3.0-1.debian.tar.xz' libsemanage_3.0-1.debian.tar.xz 17040 SHA256:d6dd598f84fa642d10d27c5f9ef4155ceef80d8127a48075b3c5a918d93a513a
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libsemanage/3.0-1/
 
-- https://sources.debian.net/src/libsemanage/3.0-1/ (for browsing the source)
-- https://sources.debian.net/src/libsemanage/3.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libsemanage/3.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libsepol=3.0-1`
 
@@ -1350,20 +1336,13 @@ Licenses: (parsed from: `/usr/share/doc/libsepol1/copyright`)
 - `GPL`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libsepol=3.0-1
-'http://deb.debian.org/debian/pool/main/libs/libsepol/libsepol_3.0-1.dsc' libsepol_3.0-1.dsc 1770 SHA256:0073de5844605d380dd56f6630678ad91459496dc768fa9eb4d8cc7f693f5c1a
-'http://deb.debian.org/debian/pool/main/libs/libsepol/libsepol_3.0.orig.tar.gz' libsepol_3.0.orig.tar.gz 473864 SHA256:5b7ae1881909f1048b06f7a0c364c5c8a86ec12e0ec76e740fe9595a6033eb79
-'http://deb.debian.org/debian/pool/main/libs/libsepol/libsepol_3.0-1.debian.tar.xz' libsepol_3.0-1.debian.tar.xz 14224 SHA256:a16b5bc3c041e016d01794d1a1b9826ed4426862622c05526e93607c325ec328
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libsepol/3.0-1/
 
-- https://sources.debian.net/src/libsepol/3.0-1/ (for browsing the source)
-- https://sources.debian.net/src/libsepol/3.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libsepol/3.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libtasn1-6=4.16.0-2`
 
