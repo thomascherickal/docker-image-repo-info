@@ -1,17 +1,17 @@
-# `node:12.18.2-stretch-slim`
+# `node:12.18.3-stretch-slim`
 
 ## Docker Metadata
 
-- Image ID: `sha256:232db31dd450f4a6ce8b2173c6f298ce2e89cd69a280e170a4b056dc6d548538`
-- Created: `2020-07-22T22:53:38.788591637Z`
-- Virtual Size: ~ 141.99 Mb  
+- Image ID: `sha256:9708c2ed1a4b087b6aa8edc8307b3436648c36e6987339e6e226f87b48a53643`
+- Created: `2020-07-28T21:23:28.54345017Z`
+- Virtual Size: ~ 141.95 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
 - Command: `["node"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `NODE_VERSION=12.18.2`
+  - `NODE_VERSION=12.18.3`
   - `YARN_VERSION=1.22.4`
 
 ## `dpkg` (`.deb`-based packages)
