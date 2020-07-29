@@ -1,7 +1,7 @@
 ## `nats-streaming:linux`
 
 ```console
-$ docker pull nats-streaming@sha256:324fd9f26319ea86c85d18b877b5815252be2deeb96da86f73d74b6e8b887695
+$ docker pull nats-streaming@sha256:6ab20bdd5317c0c00aa163f02cbf5d430e4381f6f1ae77fba2063c797b5acbb0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -107,30 +107,30 @@ CMD ["-m" "8222"]
 ### `nats-streaming:linux` - linux; arm64 variant v8
 
 ```console
-$ docker pull nats-streaming@sha256:d51446476985b28e3adbe2fade2829a4422cc9772a381102d6d028c692f6103a
+$ docker pull nats-streaming@sha256:ed524c7b14a4b6e91428f8c765455f742c4351657468296a8b63bdefecd5ceb1
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **5.5 MB (5532577 bytes)**  
+-	Total Size: **5.5 MB (5469641 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:66abc9c11dbf79a012e2eb7942c925497ec745126c3c0fa84b0f6f9c802d2aac`
+-	Image ID: `sha256:2424d5ea5176bb2af173ccb2222a5d39ff53c785fdad2bfc1045d5c66aee5185`
 -	Entrypoint: `["\/nats-streaming-server"]`
 -	Default Command: `["-m","8222"]`
 
 ```dockerfile
-# Tue, 11 Feb 2020 20:55:22 GMT
-COPY file:fe34ad03c894e889c935d94d7e07558f20273a5d297c14329deebd7179819ef8 in /nats-streaming-server 
-# Tue, 11 Feb 2020 20:55:23 GMT
+# Wed, 29 Jul 2020 22:40:10 GMT
+COPY file:f3f47d8e20155d8cbd02ab8a9f26c3be2763cf0430c38ab1071fb6949f9e466c in /nats-streaming-server 
+# Wed, 29 Jul 2020 22:40:11 GMT
 EXPOSE 4222 8222
-# Tue, 11 Feb 2020 20:55:23 GMT
+# Wed, 29 Jul 2020 22:40:11 GMT
 ENTRYPOINT ["/nats-streaming-server"]
-# Tue, 11 Feb 2020 20:55:25 GMT
+# Wed, 29 Jul 2020 22:40:12 GMT
 CMD ["-m" "8222"]
 ```
 
 -	Layers:
-	-	`sha256:5e82baaeaf291facb7d5f2b85f4a96bda41038775d2a804a293d31701833d65f`  
-		Last Modified: Tue, 11 Feb 2020 20:55:36 GMT  
-		Size: 5.5 MB (5532577 bytes)  
+	-	`sha256:58414d7c10a2a92ebdcb56bcf4a04f62f2f370c1e415c008fda228ab012a1a45`  
+		Last Modified: Wed, 29 Jul 2020 22:40:42 GMT  
+		Size: 5.5 MB (5469641 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
