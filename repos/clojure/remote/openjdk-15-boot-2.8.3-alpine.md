@@ -1,7 +1,7 @@
 ## `clojure:openjdk-15-boot-2.8.3-alpine`
 
 ```console
-$ docker pull clojure@sha256:051d0f33b013bbc74555e72f7f0eb2216d7843d1978400dd472ba06b8ab96981
+$ docker pull clojure@sha256:4e4406433955c3391abb02172bbccbc4a9421836a7de8a0c533c57cb9cb62071
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull clojure@sha256:051d0f33b013bbc74555e72f7f0eb2216d7843d1978400dd472
 ### `clojure:openjdk-15-boot-2.8.3-alpine` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:e79b453f6bab77384a60cf0ba1e8342aef1282e91601af37e09fc9f1078fa324
+$ docker pull clojure@sha256:595e13f72b5f0a64128ab27d5c145b535265c2a75a28105cf6622dc27978b7a3
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **260.1 MB (260132168 bytes)**  
+-	Total Size: **260.1 MB (260127970 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:55c16b116d62f312b1b01eac0e1bbf77975f7f31e8a138a35bc117573747e499`
+-	Image ID: `sha256:a6e3625466edd0c621f269c3de7aeea7b96fee979b15250edb47dcf719f9da94`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
@@ -34,29 +34,25 @@ ENV JAVA_HOME=/opt/openjdk-15
 ENV PATH=/opt/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 22 Jul 2020 01:07:14 GMT
 ENV JAVA_VERSION=15-ea+31
-# Wed, 22 Jul 2020 01:07:15 GMT
-ENV JAVA_URL=https://download.java.net/java/early_access/alpine/31/binaries/openjdk-15-ea+31_linux-x64-musl_bin.tar.gz
-# Wed, 22 Jul 2020 01:07:15 GMT
-ENV JAVA_SHA256=da7abd4d3b3511ed2da8aba25b7ff67863261a0c8b5e7e771cf0fbfadcc7f4fd
-# Wed, 22 Jul 2020 01:08:07 GMT
-RUN set -eux; 		wget -O /openjdk.tgz "$JAVA_URL"; 	echo "$JAVA_SHA256 */openjdk.tgz" | sha256sum -c -; 		mkdir -p "$JAVA_HOME"; 	tar --extract --file /openjdk.tgz --directory "$JAVA_HOME" --strip-components 1; 	rm /openjdk.tgz; 		java -Xshare:dump; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/ssl/certs/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		java --version; 	javac --version
-# Wed, 22 Jul 2020 01:08:07 GMT
+# Wed, 29 Jul 2020 01:27:32 GMT
+RUN set -eux; 		arch="$(apk --print-arch)"; 	case "$arch" in 		x86_64) 			downloadUrl=https://download.java.net/java/early_access/alpine/31/binaries/openjdk-15-ea+31_linux-x64-musl_bin.tar.gz; 			downloadSha256=da7abd4d3b3511ed2da8aba25b7ff67863261a0c8b5e7e771cf0fbfadcc7f4fd; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum -c -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/ssl/certs/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		java -Xshare:dump; 		javac --version; 	java --version
+# Wed, 29 Jul 2020 01:27:32 GMT
 CMD ["jshell"]
-# Wed, 22 Jul 2020 02:31:56 GMT
+# Wed, 29 Jul 2020 02:12:37 GMT
 ENV BOOT_VERSION=2.8.3
-# Wed, 22 Jul 2020 02:31:56 GMT
+# Wed, 29 Jul 2020 02:12:37 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Wed, 22 Jul 2020 02:31:56 GMT
+# Wed, 29 Jul 2020 02:12:37 GMT
 WORKDIR /tmp
-# Wed, 22 Jul 2020 02:31:58 GMT
+# Wed, 29 Jul 2020 02:12:39 GMT
 RUN apk add --update --no-cache bash openssl && mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot && apk del openssl
-# Wed, 22 Jul 2020 02:31:58 GMT
+# Wed, 29 Jul 2020 02:12:39 GMT
 ENV PATH=/opt/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 22 Jul 2020 02:31:58 GMT
+# Wed, 29 Jul 2020 02:12:39 GMT
 ENV BOOT_AS_ROOT=yes
-# Wed, 22 Jul 2020 02:32:18 GMT
+# Wed, 29 Jul 2020 02:12:57 GMT
 RUN boot
-# Wed, 22 Jul 2020 02:32:18 GMT
+# Wed, 29 Jul 2020 02:12:57 GMT
 CMD ["boot" "repl"]
 ```
 
@@ -69,15 +65,15 @@ CMD ["boot" "repl"]
 		Last Modified: Wed, 22 Jul 2020 01:13:01 GMT  
 		Size: 926.4 KB (926401 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eaa15118984fa68e4bdb9010318493fccb170122e25dac619d5cefdb32c4d32b`  
-		Last Modified: Wed, 22 Jul 2020 01:14:18 GMT  
-		Size: 196.8 MB (196795740 bytes)  
+	-	`sha256:fc5eabcede3645338ce4f48b82a9c70a12f11b8d569a562c1ce54a7e670b0e98`  
+		Last Modified: Wed, 29 Jul 2020 01:34:52 GMT  
+		Size: 196.8 MB (196791691 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7748f1ba1690bbc14eb84e4b7b68f553ed0f5971a94709e5b30fecdb8168bae3`  
-		Last Modified: Wed, 22 Jul 2020 02:34:53 GMT  
-		Size: 792.3 KB (792331 bytes)  
+	-	`sha256:5adc76b8fed903c335022532726042117cf3a0238d33f236a858d17f1f01439e`  
+		Last Modified: Wed, 29 Jul 2020 02:18:06 GMT  
+		Size: 792.3 KB (792334 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:92d907366f18a68293231e2954eb9bfd278fe258cf10cb027f327fba6ed16570`  
-		Last Modified: Wed, 22 Jul 2020 02:34:59 GMT  
-		Size: 58.8 MB (58820155 bytes)  
+	-	`sha256:dabe1e28fa58dbd8125545b5e91dd0fed09e42c70ecd2c28385b3deade2e373d`  
+		Last Modified: Wed, 29 Jul 2020 02:18:14 GMT  
+		Size: 58.8 MB (58820003 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
