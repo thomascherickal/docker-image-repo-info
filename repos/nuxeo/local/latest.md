@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:be97976accc101c4643cbbc914b258b2fe2cc6649f4a7445e05292d63bde6732`
-- Created: `2020-07-23T08:15:04.506858529Z`
+- Image ID: `sha256:6c53cafd67512475a834fb3fb68b351ded680a5caa111b817674f2bae47b84c9`
+- Created: `2020-07-29T02:44:30.942930189Z`
 - Virtual Size: ~ 1.85 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -14,8 +14,6 @@
   - `LANG=C.UTF-8`
   - `JAVA_HOME=/usr/local/openjdk-8`
   - `JAVA_VERSION=8u262`
-  - `JAVA_BASE_URL=https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jdk_`
-  - `JAVA_URL_VERSION=8u262b10`
   - `NUXEO_USER=nuxeo`
   - `NUXEO_HOME=/opt/nuxeo/server`
   - `HOME=/opt/nuxeo/server`
