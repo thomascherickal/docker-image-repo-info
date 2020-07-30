@@ -4438,14 +4438,9 @@ Licenses: (parsed from: `/usr/share/doc/libmysqlclient21/copyright`)
 - `public-domain`
 - `zlib/libpng`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mysql-8.0=8.0.20-0ubuntu0.20.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.20-0ubuntu0.20.04.1.dsc' mysql-8.0_8.0.20-0ubuntu0.20.04.1.dsc 3434 SHA256:cf6bf0b365e31310ab6b83063cc553db1178cb3f6e4a93f1b62400113527e293
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.20.orig.tar.gz' mysql-8.0_8.0.20.orig.tar.gz 266282970 SHA256:b6ad1a09eb146fa913f1afc257bbed8ffab688e2d504fb8ddb652f69f551a9c1
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.20-0ubuntu0.20.04.1.debian.tar.xz' mysql-8.0_8.0.20-0ubuntu0.20.04.1.debian.tar.xz 157596 SHA256:6fecbd09b2a3c46540300e094a5bf3485ee26f3434e5aec631ea39d99e07319c
-```
 
 ### `dpkg` source package: `mysql-defaults=1.0.5ubuntu2`
 
@@ -5800,15 +5795,9 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 - `GPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sqlite3=3.31.1-4ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.31.1-4ubuntu0.1.dsc' sqlite3_3.31.1-4ubuntu0.1.dsc 2519 SHA256:4b57ad14241996798ba2dfe0be6717c12d1e5a30d03c9a4e808d00b7a235d454
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.31.1.orig-www.tar.xz' sqlite3_3.31.1.orig-www.tar.xz 5764424 SHA256:cab01c285fad4eb08bd1e3659cde5a44e17e024badbe9ed01b2de9c625ed0831
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.31.1.orig.tar.xz' sqlite3_3.31.1.orig.tar.xz 7108036 SHA256:dfa6eda312d391d33b7790b061f533d723dc5c30b60720ddd98c89a6fb29272f
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.31.1-4ubuntu0.1.debian.tar.xz' sqlite3_3.31.1-4ubuntu0.1.debian.tar.xz 32556 SHA256:01c90dfd05dbebeb468a2b9b2ac191df95b9c8438b3e274ba0701d01f0cb3fda
-```
 
 ### `dpkg` source package: `sratom=0.6.4-1`
 

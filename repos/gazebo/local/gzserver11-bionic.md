@@ -4067,14 +4067,9 @@ Licenses: (parsed from: `/usr/share/doc/libllvm10/copyright`)
 - `Python`
 - `solar-public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris llvm-toolchain-10=1:10.0.0-4ubuntu1~18.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/l/llvm-toolchain-10/llvm-toolchain-10_10.0.0-4ubuntu1~18.04.1.dsc' llvm-toolchain-10_10.0.0-4ubuntu1~18.04.1.dsc 6099 SHA256:cfca2981602aa5c07b2dfb8febb1bb92e424efa24caf8b18df85effba33cfdf8
-'http://archive.ubuntu.com/ubuntu/pool/main/l/llvm-toolchain-10/llvm-toolchain-10_10.0.0.orig.tar.xz' llvm-toolchain-10_10.0.0.orig.tar.xz 78321340 SHA256:e40b41c85091aebd8e706f24ee9992a82b97d23db099769a798a3584e3535212
-'http://archive.ubuntu.com/ubuntu/pool/main/l/llvm-toolchain-10/llvm-toolchain-10_10.0.0-4ubuntu1~18.04.1.debian.tar.xz' llvm-toolchain-10_10.0.0-4ubuntu1~18.04.1.debian.tar.xz 138856 SHA256:b08ae63f459d9379557faa25f122519d1f5734d359df7781cde523d7d846f1e5
-```
 
 ### `dpkg` source package: `lm-sensors=1:3.4.0-4`
 
@@ -4310,14 +4305,9 @@ Licenses: (parsed from: `/usr/share/doc/libmysqlclient20/copyright`)
 - `public-domain`
 - `zlib/libpng`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mysql-5.7=5.7.30-0ubuntu0.18.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-5.7_5.7.30-0ubuntu0.18.04.1.dsc' mysql-5.7_5.7.30-0ubuntu0.18.04.1.dsc 3446 SHA256:3c705c3437e5725f67e6c5b9890b249b8652766e0cdb47b86f89e1af5ad14aa3
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-5.7_5.7.30.orig.tar.gz' mysql-5.7_5.7.30.orig.tar.gz 51363998 SHA256:211fbbb359da651197e1cc419e215f1f3caee8c1adf7491f5f7ed3e8dbcdb8af
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-5.7_5.7.30-0ubuntu0.18.04.1.debian.tar.xz' mysql-5.7_5.7.30-0ubuntu0.18.04.1.debian.tar.xz 156320 SHA256:6b5b9d809550893d4f2fa8af7fe6fa056cedbc121a91f32ab09c10267cbcda5d
-```
 
 ### `dpkg` source package: `mysql-defaults=1.0.4`
 
