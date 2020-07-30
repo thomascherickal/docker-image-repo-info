@@ -1,7 +1,7 @@
 ## `rust:1-alpine3.11`
 
 ```console
-$ docker pull rust@sha256:9316dbf150e9bbb9ceeaea80f4bbbe9c04f79f0517da888169b71db09cb6b236
+$ docker pull rust@sha256:559792193bfb4bbbb52f640d62d7f4377aa22912ae62669ca86ad9322e10d1b9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull rust@sha256:9316dbf150e9bbb9ceeaea80f4bbbe9c04f79f0517da888169b71d
 ### `rust:1-alpine3.11` - linux; amd64
 
 ```console
-$ docker pull rust@sha256:357713d817295b784c5d441694c13952c8ecdbfde6194fa32bcec3c26b51ffcb
+$ docker pull rust@sha256:bbda6b89df1eeaf1a222fed52b10231675bb287363970525f393e984ceddac88
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **172.8 MB (172811644 bytes)**  
+-	Total Size: **172.8 MB (172804106 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2c89d5d82920b86d8d09e49bda76bb39d4d056b96538d691b0ae40a8c4b007e2`
+-	Image ID: `sha256:fcdf5af3ccc0134794b5e949f12abc116f1a62c241e609fead22e7c3edaec071`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
@@ -28,9 +28,9 @@ ADD file:b91adb67b670d3a6ff9463e48b7def903ed516be66fc4282d22c53e41512be49 in /
 CMD ["/bin/sh"]
 # Fri, 24 Apr 2020 12:43:51 GMT
 RUN apk add --no-cache         ca-certificates         gcc
-# Thu, 16 Jul 2020 22:54:51 GMT
-ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.45.0
-# Thu, 16 Jul 2020 22:55:04 GMT
+# Thu, 30 Jul 2020 22:35:10 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.45.1
+# Thu, 30 Jul 2020 22:35:26 GMT
 RUN set -eux;     url="https://static.rust-lang.org/rustup/archive/1.22.1/x86_64-unknown-linux-musl/rustup-init";     wget "$url";     echo "cee31c6f72b953c6293fd5d40142c7d61aa85db2a5ea81b3519fe1b492148dc9 *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION;     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;
 ```
 
@@ -43,7 +43,7 @@ RUN set -eux;     url="https://static.rust-lang.org/rustup/archive/1.22.1/x86_64
 		Last Modified: Fri, 24 Apr 2020 12:45:08 GMT  
 		Size: 36.4 MB (36416643 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8820c6d13374c199be06128915ab4270677df4372189cb96846fabcea3952864`  
-		Last Modified: Thu, 16 Jul 2020 22:57:56 GMT  
-		Size: 133.6 MB (133581685 bytes)  
+	-	`sha256:1b530c175071e54f66c2ad477112eb2c406126be7c4ec1026c6d0b27aea071a2`  
+		Last Modified: Thu, 30 Jul 2020 22:38:35 GMT  
+		Size: 133.6 MB (133574147 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
