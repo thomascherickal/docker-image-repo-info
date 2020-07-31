@@ -1,19 +1,19 @@
-# `erlang:21.3.8.16-alpine`
+# `erlang:21.3.8.17-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:beb062f80d99d08d2005e8cb074f232868298546c9939ae825b5b89cd9483833`
-- Created: `2020-05-20T19:58:57.990551134Z`
-- Virtual Size: ~ 73.38 Mb  
+- Image ID: `sha256:263294b72a1fad1a347196634d680ea608d8d5aeff97c45d410b3cbfca3444d7`
+- Created: `2020-07-30T21:13:37.587746557Z`
+- Virtual Size: ~ 73.40 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["erl"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `OTP_VERSION=21.3.8.16`
+  - `OTP_VERSION=21.3.8.17`
   - `REBAR3_VERSION=3.13.2`
 - Labels:
-  - `org.opencontainers.image.version=21.3.8.16`
+  - `org.opencontainers.image.version=21.3.8.17`
 
 ## `apk` (`.apk`-based packages)
 
@@ -88,16 +88,16 @@ GPL-2.0
 ### `apk` package: `ca-certificates`
 
 ```console
-ca-certificates-20191127-r0 description:
-Common CA certificates PEM files
+ca-certificates-20191127-r2 description:
+Common CA certificates PEM files from Mozilla
 
-ca-certificates-20191127-r0 webpage:
+ca-certificates-20191127-r2 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-20191127-r0 installed size:
-741376
+ca-certificates-20191127-r2 installed size:
+737280
 
-ca-certificates-20191127-r0 license:
+ca-certificates-20191127-r2 license:
 MPL-2.0 GPL-2.0-or-later
 
 ```
