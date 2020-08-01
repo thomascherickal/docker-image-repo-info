@@ -1,4 +1,4 @@
-# `tomcat:9.0.37-jdk14-openjdk-oracle`
+# `tomcat:9.0.37-jdk14-openjdk-oraclelinux7`
 
 ## Docker Metadata
 
