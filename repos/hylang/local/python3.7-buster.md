@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:2c19077a6633784967f99c3d6a166cc0c7f9cd8f55136c3dea6aab8de7410710`
-- Created: `2020-07-23T06:43:06.799142108Z`
-- Virtual Size: ~ 163.22 Mb  
+- Image ID: `sha256:282325ec38632a2994272bdced0190b3e59c2e89d13170f590f44cc92201c9e8`
+- Created: `2020-07-31T01:05:24.2309867Z`
+- Virtual Size: ~ 163.30 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["hy"]`
@@ -13,9 +13,9 @@
   - `LANG=C.UTF-8`
   - `GPG_KEY=0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D`
   - `PYTHON_VERSION=3.7.8`
-  - `PYTHON_PIP_VERSION=20.1.1`
-  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/eff16c878c7fd6b688b9b4c4267695cf1a0bf01b/get-pip.py`
-  - `PYTHON_GET_PIP_SHA256=b3153ec0cf7b7bbf9556932aa37e4981c35dc2a2c501d70d91d2795aa532be79`
+  - `PYTHON_PIP_VERSION=20.2`
+  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/cb5b85a8e0c3d13ced611b97816d7490d2f1497e/get-pip.py`
+  - `PYTHON_GET_PIP_SHA256=a30ff8a3446c592c6d70403a82483716e7b759e8eecba2c8d3f6ecfb34a8d6d7`
   - `HY_VERSION=0.19.0`
 
 ## `dpkg` (`.deb`-based packages)
@@ -89,8 +89,8 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris apt=1.8.2.1
-'http://security.debian.org/debian-security/pool/updates/main/a/apt/apt_1.8.2.1.dsc' apt_1.8.2.1.dsc 2774 SHA256:8e6af99e5eab948853dcffde8bf8b2cc9acdd53fcdadf3505a3c0234b69eabb1
-'http://security.debian.org/debian-security/pool/updates/main/a/apt/apt_1.8.2.1.tar.xz' apt_1.8.2.1.tar.xz 2189236 SHA256:6d447f2e9437ec24e78350b63bb0592bee1f050811d51990b0c783183b0983f8
+'http://deb.debian.org/debian/pool/main/a/apt/apt_1.8.2.1.dsc' apt_1.8.2.1.dsc 2774 SHA256:8e6af99e5eab948853dcffde8bf8b2cc9acdd53fcdadf3505a3c0234b69eabb1
+'http://deb.debian.org/debian/pool/main/a/apt/apt_1.8.2.1.tar.xz' apt_1.8.2.1.tar.xz 2189236 SHA256:6d447f2e9437ec24e78350b63bb0592bee1f050811d51990b0c783183b0983f8
 ```
 
 Other potentially useful URLs:
@@ -166,19 +166,13 @@ Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris base-files=10.3+deb10u4
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3+deb10u4.dsc' base-files_10.3+deb10u4.dsc 1103 SHA256:2e5caec958e2a302b3484100b559f85b4738758cb1a5eedfb71ee129cacafcf4
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3+deb10u4.tar.xz' base-files_10.3+deb10u4.tar.xz 65396 SHA256:4147e6e65fb431fac69c7d8c43f03fa30a2fa63616e71cf6928f39fabfbebcdd
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/base-files/10.3+deb10u4/
 
-- https://sources.debian.net/src/base-files/10.3+deb10u4/ (for browsing the source)
-- https://sources.debian.net/src/base-files/10.3+deb10u4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/base-files/10.3+deb10u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-passwd=3.5.46`
 
@@ -1511,10 +1505,10 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris perl=5.28.1-6
-'http://deb.debian.org/debian/pool/main/p/perl/perl_5.28.1-6.dsc' perl_5.28.1-6.dsc 2835 SHA256:3af8a65b216c6aadf9093d979c25eb48f6f2b3286264a3f1f65ccefcc9fc653c
+'http://deb.debian.org/debian/pool/main/p/perl/perl_5.28.1-6+deb10u1.dsc' perl_5.28.1-6+deb10u1.dsc 2863 SHA256:a680d97001398640c249fc6bae6124fe59eb465b044f03fb4148b22152895785
 'http://deb.debian.org/debian/pool/main/p/perl/perl_5.28.1.orig-regen-configure.tar.xz' perl_5.28.1.orig-regen-configure.tar.xz 411944 SHA256:5873b81af4514d3910ab1a8267b15ff8c0e2100dbae4edfd10b65ef72cd31ef8
 'http://deb.debian.org/debian/pool/main/p/perl/perl_5.28.1.orig.tar.xz' perl_5.28.1.orig.tar.xz 12372080 SHA256:fea7162d4cca940a387f0587b93f6737d884bf74d8a9d7cfd978bc12cd0b202d
-'http://deb.debian.org/debian/pool/main/p/perl/perl_5.28.1-6.debian.tar.xz' perl_5.28.1-6.debian.tar.xz 178708 SHA256:59a3fd93229c9ca1a1f8a4692eb768f16444494e6bf0d454ea27de5f5a1655cd
+'http://deb.debian.org/debian/pool/main/p/perl/perl_5.28.1-6+deb10u1.debian.tar.xz' perl_5.28.1-6+deb10u1.debian.tar.xz 185004 SHA256:e531c2d8c85b28b34c2122175a8e8f6cfe56b8a0708972fc4beae9876549d815
 ```
 
 Other potentially useful URLs:
