@@ -3247,14 +3247,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3-colcon-cmake=0.2.23-1
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-cmake/python3-colcon-cmake_0.2.23-1.debian.tar.xz' python3-colcon-cmake_0.2.23-1.debian.tar.xz 1100 SHA512:c455d3ecbb68cfe1eaea8e993284d0275f13f81f881924589eb7e8e0200098368791364b938dea2bfae729da2f9fe81b96b46a390516a0fa215890f82340462b
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-cmake/python3-colcon-cmake_0.2.23-1.dsc' python3-colcon-cmake_0.2.23-1.dsc 925 SHA512:7063c826874eeb7445d0b38bf17ddfea0e457feab43f9f02b78229d448d191757e6cc98c2baa04590467c63b968775a18a92042c1791f8ee8cfeee82f83a8662
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-cmake/python3-colcon-cmake_0.2.23.orig.tar.gz' python3-colcon-cmake_0.2.23.orig.tar.gz 17433 SHA512:2e2950660bdd3c7f43fadcb60809fc32647769019ba31fc9ae5c97575a73844a89533752f9dd3ebe96cb7368cf4c868b08fc38763a647334a9fc3fc16c9bd0cf
-```
 
 ### `dpkg` source package: `python3-colcon-common-extensions=0.2.1-1`
 
@@ -3783,14 +3778,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3-vcstool=0.2.13-1
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-vcstool/python3-vcstool_0.2.13-1.debian.tar.xz' python3-vcstool_0.2.13-1.debian.tar.xz 1116 SHA512:169158755868831854ce202b2463b8c0e33d6506d858e7e6504ef1e4644a1656173f609d77c1998b1a2747149f67bf944cb3d0229a6f84bb2f91d953800b680c
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-vcstool/python3-vcstool_0.2.13-1.dsc' python3-vcstool_0.2.13-1.dsc 890 SHA512:1adc1477173a967939d1f7f342907b2003bff4e98e42a568494acddab1d42f3326ad5522d5716f75e18ec00c1ad048b525a8bac75e62c922bd48e158077f1a56
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-vcstool/python3-vcstool_0.2.13.orig.tar.gz' python3-vcstool_0.2.13.orig.tar.gz 31593 SHA512:fc3753976094615968a4699b07548fd6b9a0498ec6fe9a5a8d9da5b7ffb885615b58186f71a7db9aa6c962b36ab151b1e42847c2c60774357991c5f8be8481bf
-```
 
 ### `dpkg` source package: `python3.6=3.6.9-1~18.04ubuntu1.1`
 
