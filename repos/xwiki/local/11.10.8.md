@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:ba92c57a84ef21fde7bcf307c5d5e5f05fbfffb3c9d3b92f6f3d8226a82b71b2`
-- Created: `2020-07-24T21:00:43.232521815Z`
+- Image ID: `sha256:402328d47d38dc9dae075e369f1d806db67c363e67ebe117e538cf71a49d7466`
+- Created: `2020-08-03T23:05:49.806659249Z`
 - Virtual Size: ~ 1.29 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -23,9 +23,14 @@
   - `TOMCAT_MAJOR=8`
   - `TOMCAT_VERSION=8.5.57`
   - `TOMCAT_SHA512=720de36bb3e40a4c67bdf0137b12ae0fd733aef772d81a4b8dab00f29924ddd17ecb2a7217b9551fc0ca51bd81d1da13ad63b6694c445e5c0e42dfa7f279ede1`
-  - `XWIKI_VERSION=11.10.5`
-  - `XWIKI_URL_PREFIX=https://maven.xwiki.org/releases/org/xwiki/platform/xwiki-platform-distribution-war/11.10.5`
-  - `XWIKI_DOWNLOAD_SHA256=b08c8a9f0abbbf2bef5c61852688165dd4b2a9a7217da29047647e81c1ec3058`
+  - `XWIKI_VERSION=11.10.8`
+  - `XWIKI_URL_PREFIX=https://maven.xwiki.org/releases/org/xwiki/platform/xwiki-platform-distribution-war/11.10.8`
+  - `XWIKI_DOWNLOAD_SHA256=926cdab925cbac1053a9c2d829fe5d714dba919dd85c7aac5876d878fa99f61f`
+  - `MYSQL_JDBC_VERSION=8.0.20`
+  - `MYSQL_JDBC_SHA256=56a42553b516660ae0bcd08f7f4f5f375294afbd62200d6c0c88a8c61c668ede`
+  - `MYSQL_JDBC_PREFIX=https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.20`
+  - `MYSQL_JDBC_ARTIFACT=mysql-connector-java-8.0.20.jar`
+  - `MYSQL_JDBC_TARGET=/usr/local/tomcat/webapps/ROOT/WEB-INF/lib/mysql-connector-java-8.0.20.jar`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -3185,25 +3190,6 @@ $ apt-get source -qq --print-uris mpdecimal=2.4.2-1ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/m/mpdecimal/mpdecimal_2.4.2-1ubuntu1.dsc' mpdecimal_2.4.2-1ubuntu1.dsc 2051 SHA256:6a1a2c1b839492e178d601dc6b9de26a3173124b35659ccd21362167a4fabda9
 'http://archive.ubuntu.com/ubuntu/pool/main/m/mpdecimal/mpdecimal_2.4.2.orig.tar.gz' mpdecimal_2.4.2.orig.tar.gz 2271529 SHA256:83c628b90f009470981cf084c5418329c88b19835d8af3691b930afccb7d79c7
 'http://archive.ubuntu.com/ubuntu/pool/main/m/mpdecimal/mpdecimal_2.4.2-1ubuntu1.debian.tar.xz' mpdecimal_2.4.2-1ubuntu1.debian.tar.xz 5328 SHA256:091414d364411f1d05b496f877e04d8ad22d52441cb698d739929907e94e0fc7
-```
-
-### `dpkg` source package: `mysql-connector-java=5.1.45-1`
-
-Binary Packages:
-
-- `libmysql-java=5.1.45-1`
-
-Licenses: (parsed from: `/usr/share/doc/libmysql-java/copyright`)
-
-- `GPL-2`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris mysql-connector-java=5.1.45-1
-'http://archive.ubuntu.com/ubuntu/pool/universe/m/mysql-connector-java/mysql-connector-java_5.1.45-1.dsc' mysql-connector-java_5.1.45-1.dsc 2215 SHA256:c1a9f2bece493c0e51b5f70c3df283cbc9e5dbccf7eff893125e353a80492946
-'http://archive.ubuntu.com/ubuntu/pool/universe/m/mysql-connector-java/mysql-connector-java_5.1.45.orig.tar.xz' mysql-connector-java_5.1.45.orig.tar.xz 1013888 SHA256:15b1dfbb1079b00e04c6d23e70b2354e2f9b421de837b21d9071bf5c0dea38ec
-'http://archive.ubuntu.com/ubuntu/pool/universe/m/mysql-connector-java/mysql-connector-java_5.1.45-1.debian.tar.xz' mysql-connector-java_5.1.45-1.debian.tar.xz 10608 SHA256:2d6e7758dd1e48ac4f3fb9045fcadf53355f1b92d23de2202da0ef6a7615c301
 ```
 
 ### `dpkg` source package: `mythes=2:1.2.4-3`
