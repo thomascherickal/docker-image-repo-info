@@ -1,7 +1,7 @@
 ## `python:alpine3.11`
 
 ```console
-$ docker pull python@sha256:0c154618877a515a5cd5a2e2cf6daa37faf61fd5253166d767072d49b916f207
+$ docker pull python@sha256:bb38cb4ec013b963d4d4da59f7674d97c4767f0806b14e5e1f7b13f9328c25ea
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -17,14 +17,14 @@ $ docker pull python@sha256:0c154618877a515a5cd5a2e2cf6daa37faf61fd5253166d76707
 ### `python:alpine3.11` - linux; amd64
 
 ```console
-$ docker pull python@sha256:e26bb06e413847fb73dfef2582001ee4fcb227fdcd1210ab38d85f09c8e40840
+$ docker pull python@sha256:7cdd4a3fd4585007373c94eb3f8b77ffa2c1d103cee735fed1b03461e35c24c7
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **27.6 MB (27599602 bytes)**  
+-	Total Size: **16.3 MB (16300235 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:343c9fcc74a2bf57deb4448722efbd5971ca9446459bd8492a65be3394b7c6e7`
+-	Image ID: `sha256:aec0a31f4b722164fad7aae3ea8baa1b1d0820012abb3f5e59ecdc35410178d3`
 -	Default Command: `["python3"]`
 
 ```dockerfile
@@ -42,19 +42,19 @@ RUN apk add --no-cache ca-certificates
 ENV GPG_KEY=E3FF2839C048B25C084DEBE9B26995E310250568
 # Tue, 21 Jul 2020 18:18:00 GMT
 ENV PYTHON_VERSION=3.8.5
-# Tue, 21 Jul 2020 18:26:56 GMT
-RUN set -ex 	&& apk add --no-cache --virtual .fetch-deps 		gnupg 		tar 		xz 		&& wget -O python.tar.xz "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz" 	&& wget -O python.tar.xz.asc "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz.asc" 	&& export GNUPGHOME="$(mktemp -d)" 	&& gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$GPG_KEY" 	&& gpg --batch --verify python.tar.xz.asc python.tar.xz 	&& { command -v gpgconf > /dev/null && gpgconf --kill all || :; } 	&& rm -rf "$GNUPGHOME" python.tar.xz.asc 	&& mkdir -p /usr/src/python 	&& tar -xJC /usr/src/python --strip-components=1 -f python.tar.xz 	&& rm python.tar.xz 		&& apk add --no-cache --virtual .build-deps  		bluez-dev 		bzip2-dev 		coreutils 		dpkg-dev dpkg 		expat-dev 		findutils 		gcc 		gdbm-dev 		libc-dev 		libffi-dev 		libnsl-dev 		libtirpc-dev 		linux-headers 		make 		ncurses-dev 		openssl-dev 		pax-utils 		readline-dev 		sqlite-dev 		tcl-dev 		tk 		tk-dev 		util-linux-dev 		xz-dev 		zlib-dev 	&& apk del --no-network .fetch-deps 		&& cd /usr/src/python 	&& gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)" 	&& ./configure 		--build="$gnuArch" 		--enable-loadable-sqlite-extensions 		--enable-optimizations 		--enable-option-checking=fatal 		--enable-shared 		--with-system-expat 		--with-system-ffi 		--without-ensurepip 	&& make -j "$(nproc)" 		EXTRA_CFLAGS="-DTHREAD_STACK_SIZE=0x100000" 		LDFLAGS="-Wl,--strip-all" 	&& make install 		&& find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec scanelf --needed --nobanner --format '%n#p' '{}' ';' 		| tr ',' '\n' 		| sort -u 		| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 		| xargs -rt apk add --no-cache --virtual .python-rundeps 	&& apk del --no-network .build-deps 		&& find /usr/local -depth 		\( 			\( -type d -a \( -name test -o -name tests -o -name idle_test \) \) 			-o 			\( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) 		\) -exec rm -rf '{}' + 	&& rm -rf /usr/src/python 		&& python3 --version
-# Tue, 21 Jul 2020 18:26:57 GMT
+# Tue, 04 Aug 2020 04:21:19 GMT
+RUN set -ex 	&& apk add --no-cache --virtual .fetch-deps 		gnupg 		tar 		xz 		&& wget -O python.tar.xz "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz" 	&& wget -O python.tar.xz.asc "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz.asc" 	&& export GNUPGHOME="$(mktemp -d)" 	&& gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$GPG_KEY" 	&& gpg --batch --verify python.tar.xz.asc python.tar.xz 	&& { command -v gpgconf > /dev/null && gpgconf --kill all || :; } 	&& rm -rf "$GNUPGHOME" python.tar.xz.asc 	&& mkdir -p /usr/src/python 	&& tar -xJC /usr/src/python --strip-components=1 -f python.tar.xz 	&& rm python.tar.xz 		&& apk add --no-cache --virtual .build-deps  		bluez-dev 		bzip2-dev 		coreutils 		dpkg-dev dpkg 		expat-dev 		findutils 		gcc 		gdbm-dev 		libc-dev 		libffi-dev 		libnsl-dev 		libtirpc-dev 		linux-headers 		make 		ncurses-dev 		openssl-dev 		pax-utils 		readline-dev 		sqlite-dev 		tcl-dev 		tk 		tk-dev 		util-linux-dev 		xz-dev 		zlib-dev 	&& apk del --no-network .fetch-deps 		&& cd /usr/src/python 	&& gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)" 	&& ./configure 		--build="$gnuArch" 		--enable-loadable-sqlite-extensions 		--enable-optimizations 		--enable-option-checking=fatal 		--enable-shared 		--with-system-expat 		--with-system-ffi 		--without-ensurepip 	&& make -j "$(nproc)" 		EXTRA_CFLAGS="-DTHREAD_STACK_SIZE=0x100000" 		LDFLAGS="-Wl,--strip-all" 	&& make install 	&& rm -rf /usr/src/python 		&& find /usr/local -depth 		\( 			\( -type d -a \( -name test -o -name tests -o -name idle_test \) \) 			-o \( -type f -a \( -name '*.pyc' -o -name '*.pyo' -o -name '*.a' \) \) 			-o \( -type f -a -name 'wininst-*.exe' \) 		\) -exec rm -rf '{}' + 		&& find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec scanelf --needed --nobanner --format '%n#p' '{}' ';' 		| tr ',' '\n' 		| sort -u 		| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 		| xargs -rt apk add --no-cache --virtual .python-rundeps 	&& apk del --no-network .build-deps 		&& python3 --version
+# Tue, 04 Aug 2020 04:21:21 GMT
 RUN cd /usr/local/bin 	&& ln -s idle3 idle 	&& ln -s pydoc3 pydoc 	&& ln -s python3 python 	&& ln -s python3-config python-config
-# Fri, 31 Jul 2020 00:42:35 GMT
+# Tue, 04 Aug 2020 04:21:21 GMT
 ENV PYTHON_PIP_VERSION=20.2
-# Fri, 31 Jul 2020 00:42:35 GMT
+# Tue, 04 Aug 2020 04:21:21 GMT
 ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/cb5b85a8e0c3d13ced611b97816d7490d2f1497e/get-pip.py
-# Fri, 31 Jul 2020 00:42:35 GMT
+# Tue, 04 Aug 2020 04:21:22 GMT
 ENV PYTHON_GET_PIP_SHA256=a30ff8a3446c592c6d70403a82483716e7b759e8eecba2c8d3f6ecfb34a8d6d7
-# Fri, 31 Jul 2020 00:42:41 GMT
+# Tue, 04 Aug 2020 04:21:32 GMT
 RUN set -ex; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		"pip==$PYTHON_PIP_VERSION" 	; 	pip --version; 		find /usr/local -depth 		\( 			\( -type d -a \( -name test -o -name tests -o -name idle_test \) \) 			-o 			\( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) 		\) -exec rm -rf '{}' +; 	rm -f get-pip.py
-# Fri, 31 Jul 2020 00:42:41 GMT
+# Tue, 04 Aug 2020 04:21:33 GMT
 CMD ["python3"]
 ```
 
@@ -67,17 +67,17 @@ CMD ["python3"]
 		Last Modified: Fri, 24 Apr 2020 11:13:10 GMT  
 		Size: 301.3 KB (301276 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:94051932c34daadcbfe9ad9e17ae0d32b1d11d86f67ef03bc516024ab7b48031`  
-		Last Modified: Tue, 21 Jul 2020 18:30:47 GMT  
-		Size: 22.4 MB (22367019 bytes)  
+	-	`sha256:ff7af2f49618c33f3877ad40c4455d45cf9a70d8fb901be3e27b6d4fa34ab233`  
+		Last Modified: Tue, 04 Aug 2020 15:37:06 GMT  
+		Size: 11.1 MB (11067424 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:29a218b458620d4975fc53a8a5645ec24cc39918f15fb1244646eab1501c9023`  
-		Last Modified: Tue, 21 Jul 2020 18:30:43 GMT  
-		Size: 230.0 B  
+	-	`sha256:5ae1d74801f7554637c8e2f8b22db5256dbe28c5e363d6803c5ea9e04d876852`  
+		Last Modified: Tue, 04 Aug 2020 15:37:04 GMT  
+		Size: 233.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cc8c0a5a64d8da849e914df12f0fbde2b284001b126fa8349a5db691dbbfef19`  
-		Last Modified: Fri, 31 Jul 2020 00:47:51 GMT  
-		Size: 2.1 MB (2117761 bytes)  
+	-	`sha256:33b00b257e8ba7bdafc1714c8a2ee552f2ed6ede1240b56cad2d9e33a268d772`  
+		Last Modified: Tue, 04 Aug 2020 15:37:04 GMT  
+		Size: 2.1 MB (2117986 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `python:alpine3.11` - linux; arm variant v6
