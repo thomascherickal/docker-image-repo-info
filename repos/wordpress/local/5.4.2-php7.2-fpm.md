@@ -97,8 +97,8 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris apt=1.8.2.1
-'http://security.debian.org/debian-security/pool/updates/main/a/apt/apt_1.8.2.1.dsc' apt_1.8.2.1.dsc 2774 SHA256:8e6af99e5eab948853dcffde8bf8b2cc9acdd53fcdadf3505a3c0234b69eabb1
-'http://security.debian.org/debian-security/pool/updates/main/a/apt/apt_1.8.2.1.tar.xz' apt_1.8.2.1.tar.xz 2189236 SHA256:6d447f2e9437ec24e78350b63bb0592bee1f050811d51990b0c783183b0983f8
+'http://deb.debian.org/debian/pool/main/a/apt/apt_1.8.2.1.dsc' apt_1.8.2.1.dsc 2774 SHA256:8e6af99e5eab948853dcffde8bf8b2cc9acdd53fcdadf3505a3c0234b69eabb1
+'http://deb.debian.org/debian/pool/main/a/apt/apt_1.8.2.1.tar.xz' apt_1.8.2.1.tar.xz 2189236 SHA256:6d447f2e9437ec24e78350b63bb0592bee1f050811d51990b0c783183b0983f8
 ```
 
 Other potentially useful URLs:
@@ -270,19 +270,13 @@ Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris base-files=10.3+deb10u4
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3+deb10u4.dsc' base-files_10.3+deb10u4.dsc 1103 SHA256:2e5caec958e2a302b3484100b559f85b4738758cb1a5eedfb71ee129cacafcf4
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3+deb10u4.tar.xz' base-files_10.3+deb10u4.tar.xz 65396 SHA256:4147e6e65fb431fac69c7d8c43f03fa30a2fa63616e71cf6928f39fabfbebcdd
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/base-files/10.3+deb10u4/
 
-- https://sources.debian.net/src/base-files/10.3+deb10u4/ (for browsing the source)
-- https://sources.debian.net/src/base-files/10.3+deb10u4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/base-files/10.3+deb10u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-passwd=3.5.46`
 
@@ -625,21 +619,13 @@ Licenses: (parsed from: `/usr/share/doc/libdbus-1-3/copyright`)
 - `Tcl-BSDish`
 - `g10-permissive`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris dbus=1.12.16-1
-'http://deb.debian.org/debian/pool/main/d/dbus/dbus_1.12.16-1.dsc' dbus_1.12.16-1.dsc 3752 SHA256:86a42029448c3ef881d351db0d298b2d6ecd260110e06b815b520eed63749749
-'http://deb.debian.org/debian/pool/main/d/dbus/dbus_1.12.16.orig.tar.gz' dbus_1.12.16.orig.tar.gz 2093296 SHA256:54a22d2fa42f2eb2a871f32811c6005b531b9613b1b93a0d269b05e7549fec80
-'http://deb.debian.org/debian/pool/main/d/dbus/dbus_1.12.16.orig.tar.gz.asc' dbus_1.12.16.orig.tar.gz.asc 833 SHA256:5906e4cb235e8a3a88f5f0566b7775b065dc3e14683c2c379af86b4f428042f9
-'http://deb.debian.org/debian/pool/main/d/dbus/dbus_1.12.16-1.debian.tar.xz' dbus_1.12.16-1.debian.tar.xz 64052 SHA256:61376d1420c56f81538bc3d5dc3492d9ee08714f69d0cbed804d28fc14421e1f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/dbus/1.12.16-1/
 
-- https://sources.debian.net/src/dbus/1.12.16-1/ (for browsing the source)
-- https://sources.debian.net/src/dbus/1.12.16-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/dbus/1.12.16-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `debconf=1.5.71`
 
@@ -1489,9 +1475,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris imagemagick=8:6.9.10.23+dfsg-2.1+deb10u1
-'http://security.debian.org/debian-security/pool/updates/main/i/imagemagick/imagemagick_6.9.10.23+dfsg-2.1+deb10u1.dsc' imagemagick_6.9.10.23+dfsg-2.1+deb10u1.dsc 5162 SHA256:7981932a55bdef29fe5815fcad267933603c5aa7530ba4f3e42fafc3abfff394
-'http://security.debian.org/debian-security/pool/updates/main/i/imagemagick/imagemagick_6.9.10.23+dfsg.orig.tar.xz' imagemagick_6.9.10.23+dfsg.orig.tar.xz 9081188 SHA256:44249112b624f2cc315573fa96685e547da27ebb321432259290c407023c531e
-'http://security.debian.org/debian-security/pool/updates/main/i/imagemagick/imagemagick_6.9.10.23+dfsg-2.1+deb10u1.debian.tar.xz' imagemagick_6.9.10.23+dfsg-2.1+deb10u1.debian.tar.xz 237856 SHA256:a713bde913942f58fa7a6f004c12ce6fe94342a0befc47ef27d948f3007d45a2
+'http://deb.debian.org/debian/pool/main/i/imagemagick/imagemagick_6.9.10.23+dfsg-2.1+deb10u1.dsc' imagemagick_6.9.10.23+dfsg-2.1+deb10u1.dsc 5162 SHA256:7981932a55bdef29fe5815fcad267933603c5aa7530ba4f3e42fafc3abfff394
+'http://deb.debian.org/debian/pool/main/i/imagemagick/imagemagick_6.9.10.23+dfsg.orig.tar.xz' imagemagick_6.9.10.23+dfsg.orig.tar.xz 9081188 SHA256:44249112b624f2cc315573fa96685e547da27ebb321432259290c407023c531e
+'http://deb.debian.org/debian/pool/main/i/imagemagick/imagemagick_6.9.10.23+dfsg-2.1+deb10u1.debian.tar.xz' imagemagick_6.9.10.23+dfsg-2.1+deb10u1.debian.tar.xz 237856 SHA256:a713bde913942f58fa7a6f004c12ce6fe94342a0befc47ef27d948f3007d45a2
 ```
 
 Other potentially useful URLs:
@@ -2647,9 +2633,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris linux=4.19.118-2+deb10u1
-'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.118-2+deb10u1.dsc' linux_4.19.118-2+deb10u1.dsc 189318 SHA256:955087d295f3a75078f5ffcd46168cb2852345683af30cc22ce1b2db583609d7
-'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.118.orig.tar.xz' linux_4.19.118.orig.tar.xz 107469088 SHA256:353b99a93364cc9c54cd889acc71ffd3190101ad67f19238150691a3c6f95aaf
-'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.118-2+deb10u1.debian.tar.xz' linux_4.19.118-2+deb10u1.debian.tar.xz 3306732 SHA256:d77e14c94986c0ef783588fb0829ff69a5e4bc3ae678c4f2e6aad8184db29edf
+'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.118-2+deb10u1.dsc' linux_4.19.118-2+deb10u1.dsc 189318 SHA256:955087d295f3a75078f5ffcd46168cb2852345683af30cc22ce1b2db583609d7
+'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.118.orig.tar.xz' linux_4.19.118.orig.tar.xz 107469088 SHA256:353b99a93364cc9c54cd889acc71ffd3190101ad67f19238150691a3c6f95aaf
+'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.118-2+deb10u1.debian.tar.xz' linux_4.19.118-2+deb10u1.debian.tar.xz 3306732 SHA256:d77e14c94986c0ef783588fb0829ff69a5e4bc3ae678c4f2e6aad8184db29edf
 ```
 
 Other potentially useful URLs:
@@ -3171,21 +3157,13 @@ Licenses: (parsed from: `/usr/share/doc/libperl5.28/copyright`, `/usr/share/doc/
 - `Unicode`
 - `ZLIB`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris perl=5.28.1-6
-'http://deb.debian.org/debian/pool/main/p/perl/perl_5.28.1-6.dsc' perl_5.28.1-6.dsc 2835 SHA256:3af8a65b216c6aadf9093d979c25eb48f6f2b3286264a3f1f65ccefcc9fc653c
-'http://deb.debian.org/debian/pool/main/p/perl/perl_5.28.1.orig-regen-configure.tar.xz' perl_5.28.1.orig-regen-configure.tar.xz 411944 SHA256:5873b81af4514d3910ab1a8267b15ff8c0e2100dbae4edfd10b65ef72cd31ef8
-'http://deb.debian.org/debian/pool/main/p/perl/perl_5.28.1.orig.tar.xz' perl_5.28.1.orig.tar.xz 12372080 SHA256:fea7162d4cca940a387f0587b93f6737d884bf74d8a9d7cfd978bc12cd0b202d
-'http://deb.debian.org/debian/pool/main/p/perl/perl_5.28.1-6.debian.tar.xz' perl_5.28.1-6.debian.tar.xz 178708 SHA256:59a3fd93229c9ca1a1f8a4692eb768f16444494e6bf0d454ea27de5f5a1655cd
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/perl/5.28.1-6/
 
-- https://sources.debian.net/src/perl/5.28.1-6/ (for browsing the source)
-- https://sources.debian.net/src/perl/5.28.1-6/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/perl/5.28.1-6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pkg-config=0.29-6`
 
