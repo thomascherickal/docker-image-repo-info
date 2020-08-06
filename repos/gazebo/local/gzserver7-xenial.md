@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:8add8ce57f2b03debff57ee7a361929a127143649db65ea827118622ca333afd`
-- Created: `2020-07-24T15:39:07.067209236Z`
+- Image ID: `sha256:38dc90cf1e8a00c00f6f84eb4bbbcac37d376eda725bc179b793f1815580d501`
+- Created: `2020-08-04T22:42:05.970043436Z`
 - Virtual Size: ~ 604.36 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -893,13 +893,13 @@ $ apt-get source -qq --print-uris game-music-emu=0.6.0-3ubuntu0.16.04.1
 'http://archive.ubuntu.com/ubuntu/pool/universe/g/game-music-emu/game-music-emu_0.6.0-3ubuntu0.16.04.1.debian.tar.xz' game-music-emu_0.6.0-3ubuntu0.16.04.1.debian.tar.xz 5592 SHA256:a4d7a4f5d9df23098abc4c1fe82696ed8f93d893c50bb8fc14a4de84e705810d
 ```
 
-### `dpkg` source package: `gazebo7=7.16.0-1~xenial`
+### `dpkg` source package: `gazebo7=7.16.1-1~xenial`
 
 Binary Packages:
 
-- `gazebo7=7.16.0-1~xenial`
-- `gazebo7-common=7.16.0-1~xenial`
-- `libgazebo7:amd64=7.16.0-1~xenial`
+- `gazebo7=7.16.1-1~xenial`
+- `gazebo7-common=7.16.1-1~xenial`
+- `libgazebo7:amd64=7.16.1-1~xenial`
 
 Licenses: (parsed from: `/usr/share/doc/gazebo7/copyright`, `/usr/share/doc/gazebo7-common/copyright`, `/usr/share/doc/libgazebo7/copyright`)
 
@@ -915,9 +915,14 @@ Licenses: (parsed from: `/usr/share/doc/gazebo7/copyright`, `/usr/share/doc/gaze
 - `LGPL-3+`
 - `ZLIB`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris gazebo7=7.16.1-1~xenial
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo7/gazebo7_7.16.1-1~xenial.dsc' gazebo7_7.16.1-1~xenial.dsc 2019 SHA256:c04e0b0f69a4ac5f58265f23589b39c16033e147d2324f776c7014b28a1c220d
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo7/gazebo7_7.16.1.orig.tar.bz2' gazebo7_7.16.1.orig.tar.bz2 50593740 SHA256:18262736706768ef848e62b1f9b41132a9ecf50c496eab763a02a7cd73a66675
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo7/gazebo7_7.16.1-1~xenial.debian.tar.xz' gazebo7_7.16.1-1~xenial.debian.tar.xz 6788 SHA256:66a749c3e4f2440c4b7f1a0769541fa557f0340e13d7962832af217ff2a4867e
+```
 
 ### `dpkg` source package: `gcc-5=5.4.0-6ubuntu1~16.04.12`
 
@@ -2338,11 +2343,11 @@ $ apt-get source -qq --print-uris libspnav=0.2.3-1
 'http://archive.ubuntu.com/ubuntu/pool/universe/libs/libspnav/libspnav_0.2.3-1.debian.tar.xz' libspnav_0.2.3-1.debian.tar.xz 3536 SHA256:90989c2656f922ee6a56280d530a77c547268edecb9a1e2f02b2011bf451afe3
 ```
 
-### `dpkg` source package: `libssh=0.6.3-4.3ubuntu0.5`
+### `dpkg` source package: `libssh=0.6.3-4.3ubuntu0.6`
 
 Binary Packages:
 
-- `libssh-gcrypt-4:amd64=0.6.3-4.3ubuntu0.5`
+- `libssh-gcrypt-4:amd64=0.6.3-4.3ubuntu0.6`
 
 Licenses: (parsed from: `/usr/share/doc/libssh-gcrypt-4/copyright`)
 
@@ -2354,10 +2359,10 @@ Licenses: (parsed from: `/usr/share/doc/libssh-gcrypt-4/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libssh=0.6.3-4.3ubuntu0.5
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.6.3-4.3ubuntu0.5.dsc' libssh_0.6.3-4.3ubuntu0.5.dsc 2429 SHA256:fabe7624254eb4c8ad11f8c0c3e249c6a402755856c4321a3b8c6b20eae1b327
+$ apt-get source -qq --print-uris libssh=0.6.3-4.3ubuntu0.6
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.6.3-4.3ubuntu0.6.dsc' libssh_0.6.3-4.3ubuntu0.6.dsc 2429 SHA256:c3b0d908dad023038388db59ddbff92e88dc0405ce501f3b1af63b58c42602cd
 'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.6.3.orig.tar.xz' libssh_0.6.3.orig.tar.xz 279492 SHA256:2bb5d7c595059f990a8915c190169257328ffa828ced0c05b09bbe186092cacb
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.6.3-4.3ubuntu0.5.debian.tar.xz' libssh_0.6.3-4.3ubuntu0.5.debian.tar.xz 35892 SHA256:f7e646567b1cccb5030a1d2291b746c9c9b13d899f1581fca57677e5e3e01178
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.6.3-4.3ubuntu0.6.debian.tar.xz' libssh_0.6.3-4.3ubuntu0.6.debian.tar.xz 37036 SHA256:25b68b8e154c836e2838ca129a424342ca085d91496167ea63ac8934e18b0d20
 ```
 
 ### `dpkg` source package: `libtar=1.2.20-4`
@@ -3160,12 +3165,12 @@ $ apt-get source -qq --print-uris mpdecimal=2.4.2-1
 'http://archive.ubuntu.com/ubuntu/pool/main/m/mpdecimal/mpdecimal_2.4.2-1.debian.tar.xz' mpdecimal_2.4.2-1.debian.tar.xz 5172 SHA256:b95fb775fd04a7ad34fa5bd2c222b49ee2dfd7f0e15295dbd3f7fb86a9b0194b
 ```
 
-### `dpkg` source package: `mysql-5.7=5.7.30-0ubuntu0.16.04.1`
+### `dpkg` source package: `mysql-5.7=5.7.31-0ubuntu0.16.04.1`
 
 Binary Packages:
 
-- `libmysqlclient20:amd64=5.7.30-0ubuntu0.16.04.1`
-- `mysql-common=5.7.30-0ubuntu0.16.04.1`
+- `libmysqlclient20:amd64=5.7.31-0ubuntu0.16.04.1`
+- `mysql-common=5.7.31-0ubuntu0.16.04.1`
 
 Licenses: (parsed from: `/usr/share/doc/libmysqlclient20/copyright`, `/usr/share/doc/mysql-common/copyright`)
 
@@ -3183,9 +3188,14 @@ Licenses: (parsed from: `/usr/share/doc/libmysqlclient20/copyright`, `/usr/share
 - `public-domain`
 - `zlib/libpng`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris mysql-5.7=5.7.31-0ubuntu0.16.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-5.7_5.7.31-0ubuntu0.16.04.1.dsc' mysql-5.7_5.7.31-0ubuntu0.16.04.1.dsc 3380 SHA256:28b49b2d68fe5789d415bad82939e63a482965afb1ba56878ed896b751e3eb1f
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-5.7_5.7.31.orig.tar.gz' mysql-5.7_5.7.31.orig.tar.gz 51382559 SHA256:85bd222e61846313d7ad7c095ad664c89ca8f52dd9c21b7ac343ead62d701200
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-5.7_5.7.31-0ubuntu0.16.04.1.debian.tar.xz' mysql-5.7_5.7.31-0ubuntu0.16.04.1.debian.tar.xz 251200 SHA256:57af326b0b3162449a26064be54d833c5636ad3b9466a3d30b034819b52a64d4
+```
 
 ### `dpkg` source package: `nas=1.9.4-4`
 

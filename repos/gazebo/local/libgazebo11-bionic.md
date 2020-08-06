@@ -271,14 +271,9 @@ Licenses: (parsed from: `/usr/share/doc/binutils/copyright`, `/usr/share/doc/bin
 - `GPL`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris binutils=2.30-21ubuntu1~18.04.3
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.30-21ubuntu1~18.04.3.dsc' binutils_2.30-21ubuntu1~18.04.3.dsc 11670 SHA256:277baf59cd0eeca9f624afbcef484f88726cd309bcf5ba11d95aea0a91673feb
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.30.orig.tar.xz' binutils_2.30.orig.tar.xz 20286700 SHA256:6e46b8aeae2f727a36f0bd9505e405768a72218f1796f0d09757d45209871ae6
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.30-21ubuntu1~18.04.3.debian.tar.xz' binutils_2.30-21ubuntu1~18.04.3.debian.tar.xz 621320 SHA256:38cffa307e197c63ec5631dc57cafd0d48f904c146559a43d2fcb3b8e56b45e9
-```
 
 ### `dpkg` source package: `boost-defaults=1.65.1.0ubuntu1`
 
@@ -3836,14 +3831,9 @@ Licenses: (parsed from: `/usr/share/doc/libssh-gcrypt-4/copyright`)
 - `LGPL-2.1+~OpenSSL`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libssh=0.8.0~20170825.94fa1e38-1ubuntu0.6
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.8.0~20170825.94fa1e38-1ubuntu0.6.dsc' libssh_0.8.0~20170825.94fa1e38-1ubuntu0.6.dsc 2518 SHA256:2ee84667e3447ce4edab938227c2a4c0311dd8577ef050b45bf4d622cc0da872
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.8.0~20170825.94fa1e38.orig.tar.xz' libssh_0.8.0~20170825.94fa1e38.orig.tar.xz 381176 SHA256:48cbcc4c946380f08c024fbc1898b1efd6edff66a5ec4b536695926f0ea055a8
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.8.0~20170825.94fa1e38-1ubuntu0.6.debian.tar.xz' libssh_0.8.0~20170825.94fa1e38-1ubuntu0.6.debian.tar.xz 36024 SHA256:d961dec81b464d03ef6351411489b08888ee7ed9d68aaf83533e9bcf49695658
-```
 
 ### `dpkg` source package: `libtar=1.2.20-7`
 
@@ -5870,14 +5860,9 @@ Licenses: (parsed from: `/usr/share/doc/libpulse0/copyright`)
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pulseaudio=1:11.1-1ubuntu7.9
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pulseaudio/pulseaudio_11.1-1ubuntu7.9.dsc' pulseaudio_11.1-1ubuntu7.9.dsc 3223 SHA256:0948fed9942730b67c17cd34b6948895682e72d9f630b947b0503495b5503e8d
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pulseaudio/pulseaudio_11.1.orig.tar.xz' pulseaudio_11.1.orig.tar.xz 1648924 SHA256:f2521c525a77166189e3cb9169f75c2ee2b82fa3fcf9476024fbc2c3a6c9cd9e
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pulseaudio/pulseaudio_11.1-1ubuntu7.9.debian.tar.xz' pulseaudio_11.1-1ubuntu7.9.debian.tar.xz 113684 SHA256:4efffa8c36fff9bbcc5fdca79571356ac1f6d85ee05ba9d936b291c0fc1adab8
-```
 
 ### `dpkg` source package: `python-defaults=2.7.15~rc1-1`
 
@@ -6823,14 +6808,9 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=237-3ubuntu10.41
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.41.dsc' systemd_237-3ubuntu10.41.dsc 5149 SHA256:9fd80d1fdd57e4275a0aaaed2b4c9009953335cda45970582b7c71d624a10e0b
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237.orig.tar.gz' systemd_237.orig.tar.gz 6871350 SHA256:c83dabbe1c9de6b9db1dafdb7e04140c7d0535705c68842f6c0768653ba4913c
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.41.debian.tar.xz' systemd_237-3ubuntu10.41.debian.tar.xz 270988 SHA256:86b1e317ed39c35b5fb64740c4df6c7b0acb9a72fd6b978bd0a816928ecc060a
-```
 
 ### `dpkg` source package: `sysvinit=2.88dsf-59.10ubuntu1`
 
