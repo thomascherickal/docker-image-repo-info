@@ -125,13 +125,9 @@ Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris base-files=10.1ubuntu2.8
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_10.1ubuntu2.8.dsc' base-files_10.1ubuntu2.8.dsc 1275 SHA256:fa0056b823fb0bb9442b9d26161d74d836aa72e74c0ccf43d4b27baf2f4c9985
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_10.1ubuntu2.8.tar.xz' base-files_10.1ubuntu2.8.tar.xz 78408 SHA256:c555008db259ae41c3c5252e8ab212b81840256e0a7ea35434dbbb6abc4924d9
-```
 
 ### `dpkg` source package: `base-passwd=3.5.44`
 
@@ -981,9 +977,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris iproute2=4.15.0-2ubuntu1.1
-'http://archive.ubuntu.com/ubuntu/pool/main/i/iproute2/iproute2_4.15.0-2ubuntu1.1.dsc' iproute2_4.15.0-2ubuntu1.1.dsc 2266 SHA256:6249d68ad54e97789182fe2b03c8c6465dcb5912460f1ab0f8a82bf76dfdb148
-'http://archive.ubuntu.com/ubuntu/pool/main/i/iproute2/iproute2_4.15.0.orig.tar.xz' iproute2_4.15.0.orig.tar.xz 648836 SHA256:48d4616a99d7b609b7b795c0ae8ec57099fb0271ed89253e8772c02327798355
-'http://archive.ubuntu.com/ubuntu/pool/main/i/iproute2/iproute2_4.15.0-2ubuntu1.1.debian.tar.xz' iproute2_4.15.0-2ubuntu1.1.debian.tar.xz 141972 SHA256:871f75b0bbf6e9a5f95ed518ac4ad7dba00c26211d05301d15ee495bd08f0f73
+'http://security.ubuntu.com/ubuntu/pool/main/i/iproute2/iproute2_4.15.0-2ubuntu1.1.dsc' iproute2_4.15.0-2ubuntu1.1.dsc 2266 SHA256:6249d68ad54e97789182fe2b03c8c6465dcb5912460f1ab0f8a82bf76dfdb148
+'http://security.ubuntu.com/ubuntu/pool/main/i/iproute2/iproute2_4.15.0.orig.tar.xz' iproute2_4.15.0.orig.tar.xz 648836 SHA256:48d4616a99d7b609b7b795c0ae8ec57099fb0271ed89253e8772c02327798355
+'http://security.ubuntu.com/ubuntu/pool/main/i/iproute2/iproute2_4.15.0-2ubuntu1.1.debian.tar.xz' iproute2_4.15.0-2ubuntu1.1.debian.tar.xz 141972 SHA256:871f75b0bbf6e9a5f95ed518ac4ad7dba00c26211d05301d15ee495bd08f0f73
 ```
 
 ### `dpkg` source package: `iptables=1.6.1-2ubuntu2`
@@ -3402,14 +3398,9 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=237-3ubuntu10.41
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.41.dsc' systemd_237-3ubuntu10.41.dsc 5149 SHA256:9fd80d1fdd57e4275a0aaaed2b4c9009953335cda45970582b7c71d624a10e0b
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237.orig.tar.gz' systemd_237.orig.tar.gz 6871350 SHA256:c83dabbe1c9de6b9db1dafdb7e04140c7d0535705c68842f6c0768653ba4913c
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.41.debian.tar.xz' systemd_237-3ubuntu10.41.debian.tar.xz 270988 SHA256:86b1e317ed39c35b5fb64740c4df6c7b0acb9a72fd6b978bd0a816928ecc060a
-```
 
 ### `dpkg` source package: `sysvinit=2.88dsf-59.10ubuntu1`
 
