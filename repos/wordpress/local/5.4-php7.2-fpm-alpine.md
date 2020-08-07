@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:4dc44f3bb0535eb63894de74e1feee1c2350234ca046af886b7bf8746138248a`
-- Created: `2020-07-10T06:26:12.39093768Z`
-- Virtual Size: ~ 230.07 Mb  
+- Image ID: `sha256:b69bb76b7c095e2245fba2813561da143ca3fbdb521d783c1d49c94a01bd81c4`
+- Created: `2020-08-07T02:49:12.546594723Z`
+- Virtual Size: ~ 230.17 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -18,10 +18,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 B1B44D8F021E4E2D6021E995DC9FF8D3EE5AF27F`
-  - `PHP_VERSION=7.2.32`
-  - `PHP_URL=https://www.php.net/distributions/php-7.2.32.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.2.32.tar.xz.asc`
-  - `PHP_SHA256=050fc16ca56d8d2365d980998220a4eb06439da71dfd38de49b42fea72310ef1`
+  - `PHP_VERSION=7.2.33`
+  - `PHP_URL=https://www.php.net/distributions/php-7.2.33.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.2.33.tar.xz.asc`
+  - `PHP_SHA256=0f160a3483ffce36be5962fab7bcf09d605ee66c5707df83e4195cb796bbb03a`
   - `PHP_MD5=`
   - `WORDPRESS_VERSION=5.4.2`
   - `WORDPRESS_SHA1=e5631f812232fbd45d3431783d3db2e0d5670d2d`
@@ -473,16 +473,16 @@ MIT
 ### `apk` package: `imagemagick`
 
 ```console
-imagemagick-7.0.10.12-r0 description:
+imagemagick-7.0.10.25-r0 description:
 Collection of tools and libraries for many image formats
 
-imagemagick-7.0.10.12-r0 webpage:
+imagemagick-7.0.10.25-r0 webpage:
 https://www.imagemagick.org/
 
-imagemagick-7.0.10.12-r0 installed size:
-4468736
+imagemagick-7.0.10.25-r0 installed size:
+4501504
 
-imagemagick-7.0.10.12-r0 license:
+imagemagick-7.0.10.25-r0 license:
 ImageMagick
 
 ```
@@ -490,16 +490,16 @@ ImageMagick
 ### `apk` package: `imagemagick-libs`
 
 ```console
-imagemagick-libs-7.0.10.12-r0 description:
+imagemagick-libs-7.0.10.25-r0 description:
 Collection of tools and libraries for many image formats (libraries)
 
-imagemagick-libs-7.0.10.12-r0 webpage:
+imagemagick-libs-7.0.10.25-r0 webpage:
 https://www.imagemagick.org/
 
-imagemagick-libs-7.0.10.12-r0 installed size:
-3289088
+imagemagick-libs-7.0.10.25-r0 installed size:
+3293184
 
-imagemagick-libs-7.0.10.12-r0 license:
+imagemagick-libs-7.0.10.25-r0 license:
 ImageMagick
 
 ```
@@ -983,16 +983,16 @@ BSD-3-Clause
 ### `apk` package: `libx11`
 
 ```console
-libx11-1.6.9-r0 description:
+libx11-1.6.11-r0 description:
 X11 client-side library
 
-libx11-1.6.9-r0 webpage:
+libx11-1.6.11-r0 webpage:
 http://xorg.freedesktop.org/
 
-libx11-1.6.9-r0 installed size:
+libx11-1.6.11-r0 installed size:
 3391488
 
-libx11-1.6.9-r0 license:
+libx11-1.6.11-r0 license:
 custom:XFREE86
 
 ```

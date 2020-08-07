@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:873ddb89dc439a4027eaec853a290d3d120a90f7d002420d6521e8bf57304da1`
-- Created: `2020-07-10T06:39:11.347965547Z`
-- Virtual Size: ~ 131.83 Mb  
+- Image ID: `sha256:18a3d19f13b0cbc083e64f99dc30d3af61ff4b650249cdc30be5223f11e799b9`
+- Created: `2020-08-07T03:02:34.227779237Z`
+- Virtual Size: ~ 131.85 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=CBAF69F173A0FEA4B537F470D66C9593118BCCB6 F38252826ACD957EF380D39F2F7956BC5DA04B5D`
-  - `PHP_VERSION=7.3.20`
-  - `PHP_URL=https://www.php.net/distributions/php-7.3.20.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.3.20.tar.xz.asc`
-  - `PHP_SHA256=43292046f6684eb13acb637276d4aa1dd9f66b0b7045e6f1493bc90db389b888`
+  - `PHP_VERSION=7.3.21`
+  - `PHP_URL=https://www.php.net/distributions/php-7.3.21.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.3.21.tar.xz.asc`
+  - `PHP_SHA256=4c8b065746ef776d84b7ae47908c21a79e3d4704b86b60d816716b8697c58ce9`
   - `PHP_MD5=`
   - `WORDPRESS_CLI_GPG_KEY=63AF7AA15067C05616FDDD88A3A2E8F226F0BC06`
   - `WORDPRESS_CLI_VERSION=2.4.0`
@@ -252,16 +252,16 @@ FTL GPL-2.0-or-later
 ### `apk` package: `imagemagick-libs`
 
 ```console
-imagemagick-libs-7.0.10.12-r0 description:
+imagemagick-libs-7.0.10.25-r0 description:
 Collection of tools and libraries for many image formats (libraries)
 
-imagemagick-libs-7.0.10.12-r0 webpage:
+imagemagick-libs-7.0.10.25-r0 webpage:
 https://www.imagemagick.org/
 
-imagemagick-libs-7.0.10.12-r0 installed size:
-3289088
+imagemagick-libs-7.0.10.25-r0 installed size:
+3293184
 
-imagemagick-libs-7.0.10.12-r0 license:
+imagemagick-libs-7.0.10.25-r0 license:
 ImageMagick
 
 ```
@@ -575,16 +575,16 @@ GPL-2.0 GPL-2.0-or-later LGPL-2.0-or-later BSD Public-Domain
 ### `apk` package: `libx11`
 
 ```console
-libx11-1.6.9-r0 description:
+libx11-1.6.11-r0 description:
 X11 client-side library
 
-libx11-1.6.9-r0 webpage:
+libx11-1.6.11-r0 webpage:
 http://xorg.freedesktop.org/
 
-libx11-1.6.9-r0 installed size:
+libx11-1.6.11-r0 installed size:
 3391488
 
-libx11-1.6.9-r0 license:
+libx11-1.6.11-r0 license:
 custom:XFREE86
 
 ```
