@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:3c5e9e50742948630fc6ff4afc3ceabbe452af06111427a6107b7420734346a8`
-- Created: `2020-07-22T03:11:48.378659402Z`
+- Image ID: `sha256:1b88eaff333c16c5e76df0b9ed59f2da5d3a8173fd114c4a1eb809039b4851c6`
+- Created: `2020-08-04T23:36:04.059191443Z`
 - Virtual Size: ~ 131.61 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -317,12 +317,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/coreutils/8.26-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/coreutils/8.26-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `curl=7.52.1-5+deb9u10`
+### `dpkg` source package: `curl=7.52.1-5+deb9u11`
 
 Binary Packages:
 
-- `curl=7.52.1-5+deb9u10`
-- `libcurl3:amd64=7.52.1-5+deb9u10`
+- `curl=7.52.1-5+deb9u11`
+- `libcurl3:amd64=7.52.1-5+deb9u11`
 
 Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl3/copyright`)
 
@@ -336,17 +336,17 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 Source:
 
 ```console
-$ apt-get source -qq --print-uris curl=7.52.1-5+deb9u10
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.52.1-5+deb9u10.dsc' curl_7.52.1-5+deb9u10.dsc 2822 SHA256:313cd1eeb23ee0cb069040ab48d3d4fba08811d14b1581647b0e0bf303747160
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.52.1.orig.tar.gz' curl_7.52.1.orig.tar.gz 3504621 SHA256:a8984e8b20880b621f61a62d95ff3c0763a3152093a9f9ce4287cfd614add6ae
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.52.1-5+deb9u10.debian.tar.xz' curl_7.52.1-5+deb9u10.debian.tar.xz 43360 SHA256:014f6df474eb55469883314060bef68c04334862ff8d543c04bec6f5fae4542c
+$ apt-get source -qq --print-uris curl=7.52.1-5+deb9u11
+'http://security.debian.org/debian-security/pool/updates/main/c/curl/curl_7.52.1-5+deb9u11.dsc' curl_7.52.1-5+deb9u11.dsc 2956 SHA256:e28615867cb827ad8c6e2b43fa0e990f3d3143446e19e217b3f498485920a8da
+'http://security.debian.org/debian-security/pool/updates/main/c/curl/curl_7.52.1.orig.tar.gz' curl_7.52.1.orig.tar.gz 3504621 SHA256:a8984e8b20880b621f61a62d95ff3c0763a3152093a9f9ce4287cfd614add6ae
+'http://security.debian.org/debian-security/pool/updates/main/c/curl/curl_7.52.1-5+deb9u11.debian.tar.xz' curl_7.52.1-5+deb9u11.debian.tar.xz 43880 SHA256:904852ae6672bd14ffbe2a17491eb908b852f6fb4c63fe3c9695f46c909246af
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/curl/7.52.1-5+deb9u10/ (for browsing the source)
-- https://sources.debian.net/src/curl/7.52.1-5+deb9u10/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/curl/7.52.1-5+deb9u10/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/curl/7.52.1-5+deb9u11/ (for browsing the source)
+- https://sources.debian.net/src/curl/7.52.1-5+deb9u11/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/curl/7.52.1-5+deb9u11/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27~101-g0780600+dfsg-3+deb9u1`
 
@@ -552,14 +552,14 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/dpkg/1.18.25/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/dpkg/1.18.25/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `e2fsprogs=1.43.4-2+deb9u1`
+### `dpkg` source package: `e2fsprogs=1.43.4-2+deb9u2`
 
 Binary Packages:
 
-- `e2fslibs:amd64=1.43.4-2+deb9u1`
-- `e2fsprogs=1.43.4-2+deb9u1`
-- `libcomerr2:amd64=1.43.4-2+deb9u1`
-- `libss2:amd64=1.43.4-2+deb9u1`
+- `e2fslibs:amd64=1.43.4-2+deb9u2`
+- `e2fsprogs=1.43.4-2+deb9u2`
+- `libcomerr2:amd64=1.43.4-2+deb9u2`
+- `libss2:amd64=1.43.4-2+deb9u2`
 
 Licenses: (parsed from: `/usr/share/doc/e2fslibs/copyright`, `/usr/share/doc/e2fsprogs/copyright`, `/usr/share/doc/libcomerr2/copyright`, `/usr/share/doc/libss2/copyright`)
 
@@ -569,17 +569,17 @@ Licenses: (parsed from: `/usr/share/doc/e2fslibs/copyright`, `/usr/share/doc/e2f
 Source:
 
 ```console
-$ apt-get source -qq --print-uris e2fsprogs=1.43.4-2+deb9u1
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.43.4-2+deb9u1.dsc' e2fsprogs_1.43.4-2+deb9u1.dsc 2071 SHA256:b3d4d80f72ef552369448b0f2ecc2b68e3a670fdab5a14705fcaf8607579cc32
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.43.4.orig.tar.gz' e2fsprogs_1.43.4.orig.tar.gz 7552218 SHA256:484ab0bc1bc07c64267b18cfe7871b6b975bf0a705c5a4563001f035071cdc7c
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.43.4-2+deb9u1.debian.tar.xz' e2fsprogs_1.43.4-2+deb9u1.debian.tar.xz 78168 SHA256:d238b0872e2aad029fbcd02a9e83242befb3b2cc445bbaa4712a90f2741fbeeb
+$ apt-get source -qq --print-uris e2fsprogs=1.43.4-2+deb9u2
+'http://security.debian.org/debian-security/pool/updates/main/e/e2fsprogs/e2fsprogs_1.43.4-2+deb9u2.dsc' e2fsprogs_1.43.4-2+deb9u2.dsc 2575 SHA256:40b9eac8d59a005d1e3677bf6bc4f152521dd9155805e0a0368aae668e06dd30
+'http://security.debian.org/debian-security/pool/updates/main/e/e2fsprogs/e2fsprogs_1.43.4.orig.tar.gz' e2fsprogs_1.43.4.orig.tar.gz 7552218 SHA256:484ab0bc1bc07c64267b18cfe7871b6b975bf0a705c5a4563001f035071cdc7c
+'http://security.debian.org/debian-security/pool/updates/main/e/e2fsprogs/e2fsprogs_1.43.4-2+deb9u2.debian.tar.xz' e2fsprogs_1.43.4-2+deb9u2.debian.tar.xz 79360 SHA256:34c815b2b70f7d44bf0a308324e4371fc7e7c149dcafcf9f39dd64bfc387c631
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/e2fsprogs/1.43.4-2+deb9u1/ (for browsing the source)
-- https://sources.debian.net/src/e2fsprogs/1.43.4-2+deb9u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/e2fsprogs/1.43.4-2+deb9u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/e2fsprogs/1.43.4-2+deb9u2/ (for browsing the source)
+- https://sources.debian.net/src/e2fsprogs/1.43.4-2+deb9u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/e2fsprogs/1.43.4-2+deb9u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `elfutils=0.168-1`
 

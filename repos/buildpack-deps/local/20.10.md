@@ -209,15 +209,9 @@ Licenses: (parsed from: `/usr/share/doc/automake/copyright`)
 - `GPL-3+`
 - `permissive`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris automake-1.16=1:1.16.2-3ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/a/automake-1.16/automake-1.16_1.16.2-3ubuntu1.dsc' automake-1.16_1.16.2-3ubuntu1.dsc 2583 SHA256:59dd1e12b85a13fff43cb24fe411e5cf8c0466bcb4f0935aa350d8cf5b64ede6
-'http://archive.ubuntu.com/ubuntu/pool/main/a/automake-1.16/automake-1.16_1.16.2.orig.tar.xz' automake-1.16_1.16.2.orig.tar.xz 1545912 SHA256:ccc459de3d710e066ab9e12d2f119bd164a08c9341ca24ba22c9adaa179eedd0
-'http://archive.ubuntu.com/ubuntu/pool/main/a/automake-1.16/automake-1.16_1.16.2.orig.tar.xz.asc' automake-1.16_1.16.2.orig.tar.xz.asc 833 SHA256:dbfc268276c94c95177f8e697d2688c944807c1284833a3e5354b78cd73ad8ab
-'http://archive.ubuntu.com/ubuntu/pool/main/a/automake-1.16/automake-1.16_1.16.2-3ubuntu1.debian.tar.xz' automake-1.16_1.16.2-3ubuntu1.debian.tar.xz 12904 SHA256:e15c5164e6538cc94c0537b2a762a53cd2a375fde48187f362f6fe1541b21487
-```
 
 ### `dpkg` source package: `autotools-dev=20180224.1`
 
@@ -756,14 +750,9 @@ Licenses: (parsed from: `/usr/share/doc/libelf1/copyright`)
 - `GPL-3`
 - `LGPL-`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris elfutils=0.180-0ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/e/elfutils/elfutils_0.180-0ubuntu1.dsc' elfutils_0.180-0ubuntu1.dsc 2464 SHA256:45148aef6132af5a2e2856a6fd7ef84d14b3036bf94f1560fd3c3f9f46c49c81
-'http://archive.ubuntu.com/ubuntu/pool/main/e/elfutils/elfutils_0.180.orig.tar.bz2' elfutils_0.180.orig.tar.bz2 9079640 SHA256:b827b6e35c59d188ba97d7cf148fa8dc6f5c68eb6c5981888dfdbb758c0b569d
-'http://archive.ubuntu.com/ubuntu/pool/main/e/elfutils/elfutils_0.180-0ubuntu1.debian.tar.xz' elfutils_0.180-0ubuntu1.debian.tar.xz 32688 SHA256:ad040e9dbefbe5beb293963565b3988f0209cba64241a5ca97239d059e56c751
-```
 
 ### `dpkg` source package: `expat=2.2.9-1build1`
 
@@ -2931,15 +2920,9 @@ Licenses: (parsed from: `/usr/share/doc/mercurial/copyright`, `/usr/share/doc/me
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mercurial=5.4.1-1ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/universe/m/mercurial/mercurial_5.4.1-1ubuntu2.dsc' mercurial_5.4.1-1ubuntu2.dsc 2830 SHA256:d0fa49d9d5893b97853f80f187f249e8c345c1647d69dccc26125d7af8764b7e
-'http://archive.ubuntu.com/ubuntu/pool/universe/m/mercurial/mercurial_5.4.1.orig.tar.gz' mercurial_5.4.1.orig.tar.gz 7725893 SHA256:c31c026b09e8e1301ff23b5acc8a8563eeecbf7ff3495110b13688f01ba88ac6
-'http://archive.ubuntu.com/ubuntu/pool/universe/m/mercurial/mercurial_5.4.1.orig.tar.gz.asc' mercurial_5.4.1.orig.tar.gz.asc 833 SHA256:85a25b7cda3303d06d109f4858e8981f5f9cfce0e7a1161d24fd2f505adf15b8
-'http://archive.ubuntu.com/ubuntu/pool/universe/m/mercurial/mercurial_5.4.1-1ubuntu2.debian.tar.xz' mercurial_5.4.1-1ubuntu2.debian.tar.xz 62900 SHA256:64979e17cfc49e8281bf33295be8bd7e132c5b3303e6f64b44ce008f54824c14
-```
 
 ### `dpkg` source package: `mime-support=3.64ubuntu1`
 
@@ -2991,14 +2974,13 @@ Licenses: (parsed from: `/usr/share/doc/libmpdec2/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mpdecimal=2.4.2-3
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mpdecimal/mpdecimal_2.4.2-3.dsc' mpdecimal_2.4.2-3.dsc 1932 SHA256:4cdd04de9915af3c9d787f4922affc1993d76c25cd0715ffdd2658da37c86753
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mpdecimal/mpdecimal_2.4.2.orig.tar.gz' mpdecimal_2.4.2.orig.tar.gz 2271529 SHA256:83c628b90f009470981cf084c5418329c88b19835d8af3691b930afccb7d79c7
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mpdecimal/mpdecimal_2.4.2-3.debian.tar.xz' mpdecimal_2.4.2-3.debian.tar.xz 6352 SHA256:1baf12776a911bc77f76e16aa7600d4ace21a27817f4a56373093065205a9292
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/mpdecimal/2.4.2-3/
+
 
 ### `dpkg` source package: `mpfr4=4.0.2-1build1`
 
@@ -3824,14 +3806,13 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.8-minimal/copyright`, `/usr/s
 - `use in source`
 - `without`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3.8=3.8.5-1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.5-1.dsc' python3.8_3.8.5-1.dsc 3316 SHA256:40937aeee02d8c1fef154536a6a57b9dcbcf9c96aac1c5a96ea2258e5bef07a5
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.5.orig.tar.xz' python3.8_3.8.5.orig.tar.xz 18019640 SHA256:e3003ed57db17e617acb382b0cade29a248c6026b1bd8aad1f976e9af66a83b0
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.5-1.debian.tar.xz' python3.8_3.8.5-1.debian.tar.xz 210184 SHA256:e17249ff1b5ddb9821f89363d90743de00fad8cad15b7ca039d8d7f5d8128d8c
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/python3.8/3.8.5-1/
+
 
 ### `dpkg` source package: `readline=8.0-4`
 
