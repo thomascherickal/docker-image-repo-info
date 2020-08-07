@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:a9bf42d464b2037f90e40c305ca45bda2cb93ce2818fa2b71ca980ef75227a23`
-- Created: `2020-07-22T03:46:41.140107114Z`
-- Virtual Size: ~ 858.65 Mb  
+- Image ID: `sha256:fad56a1e87146bb1f03756047047c1b26762ff0a3ac738f82135d90ba61f9036`
+- Created: `2020-08-05T01:01:41.098400515Z`
+- Virtual Size: ~ 858.70 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["perl5.32.0","-de0"]`
@@ -299,23 +299,29 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/autotools-dev/20180224.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/autotools-dev/20180224.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `base-files=10.3+deb10u4`
+### `dpkg` source package: `base-files=10.3+deb10u5`
 
 Binary Packages:
 
-- `base-files=10.3+deb10u4`
+- `base-files=10.3+deb10u5`
 
 Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris base-files=10.3+deb10u5
+'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3+deb10u5.dsc' base-files_10.3+deb10u5.dsc 1103 SHA256:7724ff9a9a3b2ce469cb04e761ab504b88fa2c74ba45d4d4d6b1e6cebdb11502
+'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3+deb10u5.tar.xz' base-files_10.3+deb10u5.tar.xz 65376 SHA256:a86ea7be711a9a91ae781cbd9db1b0a931f76cdd36ea247aae9273f8f4d2a011
+```
 
-- http://snapshot.debian.org/package/base-files/10.3+deb10u4/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/base-files/10.3+deb10u5/ (for browsing the source)
+- https://sources.debian.net/src/base-files/10.3+deb10u5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/base-files/10.3+deb10u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-passwd=3.5.46`
 
@@ -1430,15 +1436,15 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/gnupg2/2.2.12-1+deb10u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/gnupg2/2.2.12-1+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `gnutls28=3.6.7-4+deb10u4`
+### `dpkg` source package: `gnutls28=3.6.7-4+deb10u5`
 
 Binary Packages:
 
-- `libgnutls-dane0:amd64=3.6.7-4+deb10u4`
-- `libgnutls-openssl27:amd64=3.6.7-4+deb10u4`
-- `libgnutls28-dev:amd64=3.6.7-4+deb10u4`
-- `libgnutls30:amd64=3.6.7-4+deb10u4`
-- `libgnutlsxx28:amd64=3.6.7-4+deb10u4`
+- `libgnutls-dane0:amd64=3.6.7-4+deb10u5`
+- `libgnutls-openssl27:amd64=3.6.7-4+deb10u5`
+- `libgnutls28-dev:amd64=3.6.7-4+deb10u5`
+- `libgnutls30:amd64=3.6.7-4+deb10u5`
+- `libgnutlsxx28:amd64=3.6.7-4+deb10u5`
 
 Licenses: (parsed from: `/usr/share/doc/libgnutls-dane0/copyright`, `/usr/share/doc/libgnutls-openssl27/copyright`, `/usr/share/doc/libgnutls28-dev/copyright`, `/usr/share/doc/libgnutls30/copyright`, `/usr/share/doc/libgnutlsxx28/copyright`)
 
@@ -1457,18 +1463,18 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls-dane0/copyright`, `/usr/share/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris gnutls28=3.6.7-4+deb10u4
-'http://security.debian.org/debian-security/pool/updates/main/g/gnutls28/gnutls28_3.6.7-4+deb10u4.dsc' gnutls28_3.6.7-4+deb10u4.dsc 3509 SHA256:0d633cb281152d025b49fa398930c8f5ea2e9af529bc9a2d288813679e75d88f
-'http://security.debian.org/debian-security/pool/updates/main/g/gnutls28/gnutls28_3.6.7.orig.tar.xz' gnutls28_3.6.7.orig.tar.xz 8153728 SHA256:5b3409ad5aaf239808730d1ee12fdcd148c0be00262c7edf157af655a8a188e2
-'http://security.debian.org/debian-security/pool/updates/main/g/gnutls28/gnutls28_3.6.7.orig.tar.xz.asc' gnutls28_3.6.7.orig.tar.xz.asc 534 SHA256:a14d0a7b9295b65ae797a70f8e765024a2e363dca03d008bfce0aec2b3f292b0
-'http://security.debian.org/debian-security/pool/updates/main/g/gnutls28/gnutls28_3.6.7-4+deb10u4.debian.tar.xz' gnutls28_3.6.7-4+deb10u4.debian.tar.xz 78712 SHA256:2bf9e2ce3603e46ad2a47762e4e96c2f64729fe5bd784274025aa99f33a11688
+$ apt-get source -qq --print-uris gnutls28=3.6.7-4+deb10u5
+'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.7-4+deb10u5.dsc' gnutls28_3.6.7-4+deb10u5.dsc 3354 SHA256:d91aef3a450b7dceef817264996a3c11b72dd7fb8e892897b63d7e52bd078e4a
+'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.7.orig.tar.xz' gnutls28_3.6.7.orig.tar.xz 8153728 SHA256:5b3409ad5aaf239808730d1ee12fdcd148c0be00262c7edf157af655a8a188e2
+'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.7.orig.tar.xz.asc' gnutls28_3.6.7.orig.tar.xz.asc 534 SHA256:a14d0a7b9295b65ae797a70f8e765024a2e363dca03d008bfce0aec2b3f292b0
+'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.7-4+deb10u5.debian.tar.xz' gnutls28_3.6.7-4+deb10u5.debian.tar.xz 89484 SHA256:d719d468f59aef1c480dda91ffee6d0c728e8635a0808f199d999d04f128b70a
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/gnutls28/3.6.7-4+deb10u4/ (for browsing the source)
-- https://sources.debian.net/src/gnutls28/3.6.7-4+deb10u4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gnutls28/3.6.7-4+deb10u4/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/gnutls28/3.6.7-4+deb10u5/ (for browsing the source)
+- https://sources.debian.net/src/gnutls28/3.6.7-4+deb10u5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/gnutls28/3.6.7-4+deb10u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gobject-introspection=1.58.3-2`
 
@@ -2330,12 +2336,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libevent/2.1.8-stable-4/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libevent/2.1.8-stable-4/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libexif=0.6.21-5.1+deb10u1`
+### `dpkg` source package: `libexif=0.6.21-5.1+deb10u4`
 
 Binary Packages:
 
-- `libexif-dev:amd64=0.6.21-5.1+deb10u1`
-- `libexif12:amd64=0.6.21-5.1+deb10u1`
+- `libexif-dev:amd64=0.6.21-5.1+deb10u4`
+- `libexif12:amd64=0.6.21-5.1+deb10u4`
 
 Licenses: (parsed from: `/usr/share/doc/libexif-dev/copyright`, `/usr/share/doc/libexif12/copyright`)
 
@@ -2348,17 +2354,17 @@ Licenses: (parsed from: `/usr/share/doc/libexif-dev/copyright`, `/usr/share/doc/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libexif=0.6.21-5.1+deb10u1
-'http://security.debian.org/debian-security/pool/updates/main/libe/libexif/libexif_0.6.21-5.1+deb10u1.dsc' libexif_0.6.21-5.1+deb10u1.dsc 2304 SHA256:1c1083725b7714ea0b78d2ffbf5a65a9e6b979ba8037619a41e6986c8c5af751
-'http://security.debian.org/debian-security/pool/updates/main/libe/libexif/libexif_0.6.21.orig.tar.gz' libexif_0.6.21.orig.tar.gz 2081615 SHA256:edb7eb13664cf950a6edd132b75e99afe61c5effe2f16494e6d27bc404b287bf
-'http://security.debian.org/debian-security/pool/updates/main/libe/libexif/libexif_0.6.21-5.1+deb10u1.debian.tar.xz' libexif_0.6.21-5.1+deb10u1.debian.tar.xz 14008 SHA256:88d74663b25e6ab05471c2ffd051e8598741789845558ac4ab7c84f199a591e0
+$ apt-get source -qq --print-uris libexif=0.6.21-5.1+deb10u4
+'http://deb.debian.org/debian/pool/main/libe/libexif/libexif_0.6.21-5.1+deb10u4.dsc' libexif_0.6.21-5.1+deb10u4.dsc 2149 SHA256:d6a15e1bb2dcf1d208af37b161f7826ca743adb8af1e6cc69f0c8a8d0e58cc05
+'http://deb.debian.org/debian/pool/main/libe/libexif/libexif_0.6.21.orig.tar.gz' libexif_0.6.21.orig.tar.gz 2081615 SHA256:edb7eb13664cf950a6edd132b75e99afe61c5effe2f16494e6d27bc404b287bf
+'http://deb.debian.org/debian/pool/main/libe/libexif/libexif_0.6.21-5.1+deb10u4.debian.tar.xz' libexif_0.6.21-5.1+deb10u4.debian.tar.xz 18172 SHA256:13bfef4427198fb657af8c4bd103d008ba8f4928337ad6994481aae023c88b52
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/libexif/0.6.21-5.1+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/libexif/0.6.21-5.1+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libexif/0.6.21-5.1+deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/libexif/0.6.21-5.1+deb10u4/ (for browsing the source)
+- https://sources.debian.net/src/libexif/0.6.21-5.1+deb10u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libexif/0.6.21-5.1+deb10u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libffi=3.2.1-9`
 
@@ -3458,11 +3464,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libzstd/1.3.8+dfsg-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libzstd/1.3.8+dfsg-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `linux=4.19.118-2+deb10u1`
+### `dpkg` source package: `linux=4.19.132-1`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=4.19.118-2+deb10u1`
+- `linux-libc-dev:amd64=4.19.132-1`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -3477,17 +3483,17 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris linux=4.19.118-2+deb10u1
-'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.118-2+deb10u1.dsc' linux_4.19.118-2+deb10u1.dsc 189318 SHA256:955087d295f3a75078f5ffcd46168cb2852345683af30cc22ce1b2db583609d7
-'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.118.orig.tar.xz' linux_4.19.118.orig.tar.xz 107469088 SHA256:353b99a93364cc9c54cd889acc71ffd3190101ad67f19238150691a3c6f95aaf
-'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.118-2+deb10u1.debian.tar.xz' linux_4.19.118-2+deb10u1.debian.tar.xz 3306732 SHA256:d77e14c94986c0ef783588fb0829ff69a5e4bc3ae678c4f2e6aad8184db29edf
+$ apt-get source -qq --print-uris linux=4.19.132-1
+'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.132-1.dsc' linux_4.19.132-1.dsc 191615 SHA256:3431e9f27ad196e3cd3b0908b5ac5008ed2522118c4f51fd8f8a8c1240819e28
+'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.132.orig.tar.xz' linux_4.19.132.orig.tar.xz 107498852 SHA256:3e9e811d44d190dcd8af04e86ad4c00032a5b74cafece51cfd12581648e4e1db
+'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.132-1.debian.tar.xz' linux_4.19.132-1.debian.tar.xz 3308396 SHA256:c592597164270d5cfbf7efa12a04d8246ba26e2d9228bb8ae030ef88b147fe40
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/linux/4.19.118-2+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/linux/4.19.118-2+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/4.19.118-2+deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/linux/4.19.132-1/ (for browsing the source)
+- https://sources.debian.net/src/linux/4.19.132-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/linux/4.19.132-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lsb=10.2019051400`
 
@@ -3618,14 +3624,14 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/make-dfsg/4.2.1-1.2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/make-dfsg/4.2.1-1.2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `mariadb-10.3=1:10.3.22-0+deb10u1`
+### `dpkg` source package: `mariadb-10.3=1:10.3.23-0+deb10u1`
 
 Binary Packages:
 
-- `libmariadb-dev=1:10.3.22-0+deb10u1`
-- `libmariadb-dev-compat:amd64=1:10.3.22-0+deb10u1`
-- `libmariadb3:amd64=1:10.3.22-0+deb10u1`
-- `mariadb-common=1:10.3.22-0+deb10u1`
+- `libmariadb-dev=1:10.3.23-0+deb10u1`
+- `libmariadb-dev-compat:amd64=1:10.3.23-0+deb10u1`
+- `libmariadb3:amd64=1:10.3.23-0+deb10u1`
+- `mariadb-common=1:10.3.23-0+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/libmariadb-dev/copyright`, `/usr/share/doc/libmariadb-dev-compat/copyright`, `/usr/share/doc/libmariadb3/copyright`, `/usr/share/doc/mariadb-common/copyright`)
 
@@ -3649,13 +3655,21 @@ Licenses: (parsed from: `/usr/share/doc/libmariadb-dev/copyright`, `/usr/share/d
 - `unlimited-free-doc`
 - `zlib/libpng`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris mariadb-10.3=1:10.3.23-0+deb10u1
+'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.23-0+deb10u1.dsc' mariadb-10.3_10.3.23-0+deb10u1.dsc 4812 SHA256:c366bb61801471ad8a4ad0491ec684de214f9dac2a26b4d402f137de51285570
+'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.23.orig.tar.gz' mariadb-10.3_10.3.23.orig.tar.gz 72582611 SHA256:fc405022457d8eec5991b870cc1c9a07b83b551d6165c414c4d8f31523aa86ae
+'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.23.orig.tar.gz.asc' mariadb-10.3_10.3.23.orig.tar.gz.asc 195 SHA256:641e4d384fca5a93a2382b6d522881c6076e72c201afaf8d6a470d6e9c2b6b12
+'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.23-0+deb10u1.debian.tar.xz' mariadb-10.3_10.3.23-0+deb10u1.debian.tar.xz 223744 SHA256:d447215b78567b2efa40af745fc641e47debbb8d4d304e31ba2efbb05dbbfefd
+```
 
-- http://snapshot.debian.org/package/mariadb-10.3/1:10.3.22-0+deb10u1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/mariadb-10.3/1:10.3.23-0+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/mariadb-10.3/1:10.3.23-0+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/mariadb-10.3/1:10.3.23-0+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mawk=1.3.3-17`
 
@@ -4336,14 +4350,14 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/pcre3/2:8.39-12/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/pcre3/2:8.39-12/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `perl=5.28.1-6`
+### `dpkg` source package: `perl=5.28.1-6+deb10u1`
 
 Binary Packages:
 
-- `libperl5.28:amd64=5.28.1-6`
-- `perl=5.28.1-6`
-- `perl-base=5.28.1-6`
-- `perl-modules-5.28=5.28.1-6`
+- `libperl5.28:amd64=5.28.1-6+deb10u1`
+- `perl=5.28.1-6+deb10u1`
+- `perl-base=5.28.1-6+deb10u1`
+- `perl-modules-5.28=5.28.1-6+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/libperl5.28/copyright`, `/usr/share/doc/perl/copyright`, `/usr/share/doc/perl-base/copyright`, `/usr/share/doc/perl-modules-5.28/copyright`)
 
@@ -4376,13 +4390,21 @@ Licenses: (parsed from: `/usr/share/doc/libperl5.28/copyright`, `/usr/share/doc/
 - `Unicode`
 - `ZLIB`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris perl=5.28.1-6+deb10u1
+'http://deb.debian.org/debian/pool/main/p/perl/perl_5.28.1-6+deb10u1.dsc' perl_5.28.1-6+deb10u1.dsc 2863 SHA256:a680d97001398640c249fc6bae6124fe59eb465b044f03fb4148b22152895785
+'http://deb.debian.org/debian/pool/main/p/perl/perl_5.28.1.orig-regen-configure.tar.xz' perl_5.28.1.orig-regen-configure.tar.xz 411944 SHA256:5873b81af4514d3910ab1a8267b15ff8c0e2100dbae4edfd10b65ef72cd31ef8
+'http://deb.debian.org/debian/pool/main/p/perl/perl_5.28.1.orig.tar.xz' perl_5.28.1.orig.tar.xz 12372080 SHA256:fea7162d4cca940a387f0587b93f6737d884bf74d8a9d7cfd978bc12cd0b202d
+'http://deb.debian.org/debian/pool/main/p/perl/perl_5.28.1-6+deb10u1.debian.tar.xz' perl_5.28.1-6+deb10u1.debian.tar.xz 185004 SHA256:e531c2d8c85b28b34c2122175a8e8f6cfe56b8a0708972fc4beae9876549d815
+```
 
-- http://snapshot.debian.org/package/perl/5.28.1-6/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/perl/5.28.1-6+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/perl/5.28.1-6+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/perl/5.28.1-6+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pinentry=1.1.0-2`
 
@@ -4659,14 +4681,14 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/python3-stdlib-extensions/3.7.3-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/python3-stdlib-extensions/3.7.3-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `python3.7=3.7.3-2+deb10u1`
+### `dpkg` source package: `python3.7=3.7.3-2+deb10u2`
 
 Binary Packages:
 
-- `libpython3.7-minimal:amd64=3.7.3-2+deb10u1`
-- `libpython3.7-stdlib:amd64=3.7.3-2+deb10u1`
-- `python3.7=3.7.3-2+deb10u1`
-- `python3.7-minimal=3.7.3-2+deb10u1`
+- `libpython3.7-minimal:amd64=3.7.3-2+deb10u2`
+- `libpython3.7-stdlib:amd64=3.7.3-2+deb10u2`
+- `python3.7=3.7.3-2+deb10u2`
+- `python3.7-minimal=3.7.3-2+deb10u2`
 
 Licenses: (parsed from: `/usr/share/doc/libpython3.7-minimal/copyright`, `/usr/share/doc/libpython3.7-stdlib/copyright`, `/usr/share/doc/python3.7/copyright`, `/usr/share/doc/python3.7-minimal/copyright`)
 
@@ -4688,13 +4710,20 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.7-minimal/copyright`, `/usr/s
 - `use in source`
 - `without`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris python3.7=3.7.3-2+deb10u2
+'http://deb.debian.org/debian/pool/main/p/python3.7/python3.7_3.7.3-2+deb10u2.dsc' python3.7_3.7.3-2+deb10u2.dsc 3404 SHA256:06969a6446c96eb791b20fced13126a81acffca3cf669dc1c726abca763efd3f
+'http://deb.debian.org/debian/pool/main/p/python3.7/python3.7_3.7.3.orig.tar.xz' python3.7_3.7.3.orig.tar.xz 17108364 SHA256:da60b54064d4cfcd9c26576f6df2690e62085123826cff2e667e72a91952d318
+'http://deb.debian.org/debian/pool/main/p/python3.7/python3.7_3.7.3-2+deb10u2.debian.tar.xz' python3.7_3.7.3-2+deb10u2.debian.tar.xz 217696 SHA256:b401c8d03bfbdf24bdf1bb12c8c88ef506b3fe00914e560ac1a58a09915c60c9
+```
 
-- http://snapshot.debian.org/package/python3.7/3.7.3-2+deb10u1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/python3.7/3.7.3-2+deb10u2/ (for browsing the source)
+- https://sources.debian.net/src/python3.7/3.7.3-2+deb10u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/python3.7/3.7.3-2+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `readline=7.0-5`
 
