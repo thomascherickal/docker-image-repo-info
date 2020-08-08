@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:bd44a44311a044fda8837db8320a3b294dce3e0dc6467a072edac9cfa32ffe59`
-- Created: `2020-07-10T05:06:24.469286124Z`
-- Virtual Size: ~ 90.52 Mb  
+- Image ID: `sha256:c1772d554869d9b6c9cf1d4fa71427691b64b9b97278be7242b8e589a299502e`
+- Created: `2020-08-07T01:15:42.446458781Z`
+- Virtual Size: ~ 90.53 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
@@ -18,10 +18,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
-  - `PHP_VERSION=7.4.8`
-  - `PHP_URL=https://www.php.net/distributions/php-7.4.8.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.8.tar.xz.asc`
-  - `PHP_SHA256=642843890b732e8af01cb661e823ae01472af1402f211c83009c9b3abd073245`
+  - `PHP_VERSION=7.4.9`
+  - `PHP_URL=https://www.php.net/distributions/php-7.4.9.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.9.tar.xz.asc`
+  - `PHP_SHA256=23733f4a608ad1bebdcecf0138ebc5fd57cf20d6e0915f98a9444c3f747dc57b`
   - `PHP_MD5=`
   - `ADMINER_VERSION=4.7.7`
   - `ADMINER_DOWNLOAD_SHA256=566152a2d86186dcfb28856b4ed0dfdb60e355d93ab693f7931201f75868fff0`
