@@ -1,17 +1,17 @@
-# `consul:1.8.1`
+# `consul:1.8.2`
 
 ## Docker Metadata
 
-- Image ID: `sha256:0b5c8f1c8872c4eaae98e9a70a6dc42266b2aa35c26c1014d70fd35f7b334520`
-- Created: `2020-07-31T18:22:11.543325862Z`
-- Virtual Size: ~ 122.08 Mb  
+- Image ID: `sha256:45f9911e51f6e38982e8a4ed9a575f00402210ca67ba232e1e39e358cdda874f`
+- Created: `2020-08-07T23:19:52.722203537Z`
+- Virtual Size: ~ 122.06 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
 - Command: `["agent","-dev","-client","0.0.0.0"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `CONSUL_VERSION=1.8.1`
+  - `CONSUL_VERSION=1.8.2`
   - `HASHICORP_RELEASES=https://releases.hashicorp.com`
 - Labels:
   - `org.opencontainers.image.authors=Consul Team <consul@hashicorp.com>`
