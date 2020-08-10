@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:69d435559d4bd6fef90b39d70f175a080cd4206bfc3b59a5aeaf52def13fb5f0`
-- Created: `2020-08-05T20:19:17.470836366Z`
-- Virtual Size: ~ 732.54 Mb  
+- Image ID: `sha256:8b62aa9a85787a2efd99a1b0edfc34b7fa80bed729164aaac8372f14969ab018`
+- Created: `2020-08-07T02:09:24.837972982Z`
+- Virtual Size: ~ 732.60 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -21,10 +21,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 B1B44D8F021E4E2D6021E995DC9FF8D3EE5AF27F`
-  - `PHP_VERSION=7.2.32`
-  - `PHP_URL=https://www.php.net/distributions/php-7.2.32.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.2.32.tar.xz.asc`
-  - `PHP_SHA256=050fc16ca56d8d2365d980998220a4eb06439da71dfd38de49b42fea72310ef1`
+  - `PHP_VERSION=7.2.33`
+  - `PHP_URL=https://www.php.net/distributions/php-7.2.33.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.2.33.tar.xz.asc`
+  - `PHP_SHA256=0f160a3483ffce36be5962fab7bcf09d605ee66c5707df83e4195cb796bbb03a`
   - `PHP_MD5=`
   - `MEDIAWIKI_MAJOR_VERSION=1.33`
   - `MEDIAWIKI_BRANCH=REL1_33`
@@ -2219,11 +2219,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/jbigkit/2.1-3.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/jbigkit/2.1-3.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `json-c=0.12.1+ds-2`
+### `dpkg` source package: `json-c=0.12.1+ds-2+deb10u1`
 
 Binary Packages:
 
-- `libjson-c3:amd64=0.12.1+ds-2`
+- `libjson-c3:amd64=0.12.1+ds-2+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/libjson-c3/copyright`)
 
@@ -2232,17 +2232,17 @@ Licenses: (parsed from: `/usr/share/doc/libjson-c3/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris json-c=0.12.1+ds-2
-'http://deb.debian.org/debian/pool/main/j/json-c/json-c_0.12.1+ds-2.dsc' json-c_0.12.1+ds-2.dsc 2040 SHA256:933ae6adbb96b30cf98dadbdc03585b5910f9eb147d3dbfa719a8a57f613e884
-'http://deb.debian.org/debian/pool/main/j/json-c/json-c_0.12.1+ds.orig.tar.gz' json-c_0.12.1+ds.orig.tar.gz 477598 SHA256:d036d20b63cb17ff02f43b86840f6c8c8da2b99077700c1779b16379cebb788d
-'http://deb.debian.org/debian/pool/main/j/json-c/json-c_0.12.1+ds-2.debian.tar.xz' json-c_0.12.1+ds-2.debian.tar.xz 7132 SHA256:54c1434412f6e835f597320b7187a1bdf16f36f22ba2b47a872662fc0854c0c0
+$ apt-get source -qq --print-uris json-c=0.12.1+ds-2+deb10u1
+'http://security.debian.org/debian-security/pool/updates/main/j/json-c/json-c_0.12.1+ds-2+deb10u1.dsc' json-c_0.12.1+ds-2+deb10u1.dsc 2105 SHA256:d64688bc4427ad313277c7074cb01f55ca6a1fe0aa60d2f47defb9101e203426
+'http://security.debian.org/debian-security/pool/updates/main/j/json-c/json-c_0.12.1+ds.orig.tar.gz' json-c_0.12.1+ds.orig.tar.gz 477598 SHA256:d036d20b63cb17ff02f43b86840f6c8c8da2b99077700c1779b16379cebb788d
+'http://security.debian.org/debian-security/pool/updates/main/j/json-c/json-c_0.12.1+ds-2+deb10u1.debian.tar.xz' json-c_0.12.1+ds-2+deb10u1.debian.tar.xz 9460 SHA256:d40d54851a278018d15e1348efd9c169963add8566c455c8551d394337190d75
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/json-c/0.12.1+ds-2/ (for browsing the source)
-- https://sources.debian.net/src/json-c/0.12.1+ds-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/json-c/0.12.1+ds-2/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/json-c/0.12.1+ds-2+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/json-c/0.12.1+ds-2+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/json-c/0.12.1+ds-2+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `json-glib=1.4.4-2`
 
