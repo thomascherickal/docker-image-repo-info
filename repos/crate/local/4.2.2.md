@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:d24fc1d34d79144a360d3fca95a0c3849d17964f3887f092266b48c6995c60d9`
-- Created: `2020-07-30T19:20:10.131487037Z`
-- Virtual Size: ~ 687.40 Mb  
+- Image ID: `sha256:98e949f7eeb273ec952db491e847af47bae48522a4d1f878d2f0bba859366dcf`
+- Created: `2020-08-10T18:48:58.41738041Z`
+- Virtual Size: ~ 687.11 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -14,7 +14,7 @@
   - `CRATE_HEAP_SIZE=512M`
 - Labels:
   - `maintainer=Crate.io <office@crate.io>`
-  - `org.label-schema.build-date=20200504`
+  - `org.label-schema.build-date=20200809`
   - `org.label-schema.license=GPLv2`
   - `org.label-schema.name=CentOS Base Image`
   - `org.label-schema.schema-version=1.0`
@@ -86,32 +86,32 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/bash-4.2.46-34.el7.src.rpm
 ```
 
-### `rpm` package: `bind-license-9.11.4-16.P2.el7_8.2.noarch`
+### `rpm` package: `bind-license-9.11.4-16.P2.el7_8.6.noarch`
 
 Licenses (from `rpm --query`): MPLv2.0
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls bind-license-9.11.4-16.P2.el7_8.2.noarch
+$ yumdownloader --quiet --source --urls bind-license-9.11.4-16.P2.el7_8.6.noarch
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
-http://vault.centos.org/centos/7/updates/Source//SPackages/bind-9.11.4-16.P2.el7_8.2.src.rpm
+http://vault.centos.org/centos/7/updates/Source//SPackages/bind-9.11.4-16.P2.el7_8.6.src.rpm
 ```
 
-### `rpm` package: `binutils-2.27-43.base.el7.x86_64`
+### `rpm` package: `binutils-2.27-43.base.el7_8.1.x86_64`
 
 Licenses (from `rpm --query`): GPLv3+
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls binutils-2.27-43.base.el7
+$ yumdownloader --quiet --source --urls binutils-2.27-43.base.el7_8.1
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
-http://vault.centos.org/centos/7/os/Source//SPackages/binutils-2.27-43.base.el7.src.rpm
+http://vault.centos.org/centos/7/updates/Source//SPackages/binutils-2.27-43.base.el7_8.1.src.rpm
 ```
 
 ### `rpm` package: `bzip2-libs-1.0.6-13.el7.x86_64`
@@ -128,18 +128,18 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/bzip2-1.0.6-13.el7.src.rpm
 ```
 
-### `rpm` package: `ca-certificates-2019.2.32-76.el7_7.noarch`
+### `rpm` package: `ca-certificates-2020.2.41-70.0.el7_8.noarch`
 
 Licenses (from `rpm --query`): Public Domain
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls ca-certificates-2019.2.32-76.el7_7.noarch
+$ yumdownloader --quiet --source --urls ca-certificates-2020.2.41-70.0.el7_8.noarch
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
-http://vault.centos.org/centos/7/os/Source//SPackages/ca-certificates-2019.2.32-76.el7_7.src.rpm
+http://vault.centos.org/centos/7/updates/Source//SPackages/ca-certificates-2020.2.41-70.0.el7_8.src.rpm
 ```
 
 ### `rpm` package: `centos-release-7-8.2003.0.el7.centos.x86_64`
@@ -240,18 +240,18 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/cryptsetup-2.0.3-6.el7.src.rpm
 ```
 
-### `rpm` package: `curl-7.29.0-57.el7.x86_64`
+### `rpm` package: `curl-7.29.0-57.el7_8.1.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls curl-7.29.0-57.el7
+$ yumdownloader --quiet --source --urls curl-7.29.0-57.el7_8.1
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
-http://vault.centos.org/centos/7/os/Source//SPackages/curl-7.29.0-57.el7.src.rpm
+http://vault.centos.org/centos/7/updates/Source//SPackages/curl-7.29.0-57.el7_8.1.src.rpm
 ```
 
 ### `rpm` package: `cyrus-sasl-lib-2.1.26-23.el7.x86_64`
@@ -268,18 +268,18 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/cyrus-sasl-2.1.26-23.el7.src.rpm
 ```
 
-### `rpm` package: `dbus-1.10.24-13.el7_6.x86_64`
+### `rpm` package: `dbus-1.10.24-14.el7_8.x86_64`
 
 Licenses (from `rpm --query`): (GPLv2+ or AFL) and GPLv2+
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls dbus-1.10.24-13.el7_6
+$ yumdownloader --quiet --source --urls dbus-1.10.24-14.el7_8
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
-http://vault.centos.org/centos/7/os/Source//SPackages/dbus-1.10.24-13.el7_6.src.rpm
+http://vault.centos.org/centos/7/updates/Source//SPackages/dbus-1.10.24-14.el7_8.src.rpm
 ```
 
 ### `rpm` package: `dbus-glib-0.100-7.el7.x86_64`
@@ -296,18 +296,18 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/dbus-glib-0.100-7.el7.src.rpm
 ```
 
-### `rpm` package: `dbus-libs-1.10.24-13.el7_6.x86_64`
+### `rpm` package: `dbus-libs-1.10.24-14.el7_8.x86_64`
 
 Licenses (from `rpm --query`): (GPLv2+ or AFL) and GPLv2+
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls dbus-libs-1.10.24-13.el7_6
+$ yumdownloader --quiet --source --urls dbus-libs-1.10.24-14.el7_8
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
-http://vault.centos.org/centos/7/os/Source//SPackages/dbus-1.10.24-13.el7_6.src.rpm
+http://vault.centos.org/centos/7/updates/Source//SPackages/dbus-1.10.24-14.el7_8.src.rpm
 ```
 
 ### `rpm` package: `dbus-python-1.1.1-9.el7.x86_64`
@@ -324,32 +324,32 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/dbus-python-1.1.1-9.el7.src.rpm
 ```
 
-### `rpm` package: `device-mapper-1.02.164-7.el7_8.1.x86_64`
+### `rpm` package: `device-mapper-1.02.164-7.el7_8.2.x86_64`
 
 Licenses (from `rpm --query`): GPLv2
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls device-mapper-1.02.164-7.el7_8.1
+$ yumdownloader --quiet --source --urls device-mapper-1.02.164-7.el7_8.2
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
-http://vault.centos.org/centos/7/updates/Source//SPackages/lvm2-2.02.186-7.el7_8.1.src.rpm
+http://vault.centos.org/centos/7/updates/Source//SPackages/lvm2-2.02.186-7.el7_8.2.src.rpm
 ```
 
-### `rpm` package: `device-mapper-libs-1.02.164-7.el7_8.1.x86_64`
+### `rpm` package: `device-mapper-libs-1.02.164-7.el7_8.2.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls device-mapper-libs-1.02.164-7.el7_8.1
+$ yumdownloader --quiet --source --urls device-mapper-libs-1.02.164-7.el7_8.2
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
-http://vault.centos.org/centos/7/updates/Source//SPackages/lvm2-2.02.186-7.el7_8.1.src.rpm
+http://vault.centos.org/centos/7/updates/Source//SPackages/lvm2-2.02.186-7.el7_8.2.src.rpm
 ```
 
 ### `rpm` package: `diffutils-3.3-5.el7.x86_64`
@@ -890,18 +890,18 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/e2fsprogs-1.42.9-17.el7.src.rpm
 ```
 
-### `rpm` package: `libcurl-7.29.0-57.el7.x86_64`
+### `rpm` package: `libcurl-7.29.0-57.el7_8.1.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls libcurl-7.29.0-57.el7
+$ yumdownloader --quiet --source --urls libcurl-7.29.0-57.el7_8.1
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
-http://vault.centos.org/centos/7/os/Source//SPackages/curl-7.29.0-57.el7.src.rpm
+http://vault.centos.org/centos/7/updates/Source//SPackages/curl-7.29.0-57.el7_8.1.src.rpm
 ```
 
 ### `rpm` package: `libdb-5.3.21-25.el7.x86_64`
@@ -1974,32 +1974,32 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/sqlite-3.7.17-8.el7_7.1.src.rpm
 ```
 
-### `rpm` package: `systemd-219-73.el7_8.5.x86_64`
+### `rpm` package: `systemd-219-73.el7_8.9.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+ and MIT and GPLv2+
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls systemd-219-73.el7_8.5
+$ yumdownloader --quiet --source --urls systemd-219-73.el7_8.9
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
-http://vault.centos.org/centos/7/updates/Source//SPackages/systemd-219-73.el7_8.5.src.rpm
+http://vault.centos.org/centos/7/updates/Source//SPackages/systemd-219-73.el7_8.9.src.rpm
 ```
 
-### `rpm` package: `systemd-libs-219-73.el7_8.5.x86_64`
+### `rpm` package: `systemd-libs-219-73.el7_8.9.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+ and MIT
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls systemd-libs-219-73.el7_8.5
+$ yumdownloader --quiet --source --urls systemd-libs-219-73.el7_8.9
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
-http://vault.centos.org/centos/7/updates/Source//SPackages/systemd-219-73.el7_8.5.src.rpm
+http://vault.centos.org/centos/7/updates/Source//SPackages/systemd-219-73.el7_8.9.src.rpm
 ```
 
 ### `rpm` package: `tar-1.26-35.el7.x86_64`
@@ -2128,32 +2128,32 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/yum-metadata-parser-1.1.4-10.el7.src.rpm
 ```
 
-### `rpm` package: `yum-plugin-fastestmirror-1.1.31-53.el7.noarch`
+### `rpm` package: `yum-plugin-fastestmirror-1.1.31-54.el7_8.noarch`
 
 Licenses (from `rpm --query`): GPLv2+
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls yum-plugin-fastestmirror-1.1.31-53.el7.noarch
+$ yumdownloader --quiet --source --urls yum-plugin-fastestmirror-1.1.31-54.el7_8.noarch
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
-http://vault.centos.org/centos/7/os/Source//SPackages/yum-utils-1.1.31-53.el7.src.rpm
+http://vault.centos.org/centos/7/updates/Source//SPackages/yum-utils-1.1.31-54.el7_8.src.rpm
 ```
 
-### `rpm` package: `yum-plugin-ovl-1.1.31-53.el7.noarch`
+### `rpm` package: `yum-plugin-ovl-1.1.31-54.el7_8.noarch`
 
 Licenses (from `rpm --query`): GPLv2+
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls yum-plugin-ovl-1.1.31-53.el7.noarch
+$ yumdownloader --quiet --source --urls yum-plugin-ovl-1.1.31-54.el7_8.noarch
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
-http://vault.centos.org/centos/7/os/Source//SPackages/yum-utils-1.1.31-53.el7.src.rpm
+http://vault.centos.org/centos/7/updates/Source//SPackages/yum-utils-1.1.31-54.el7_8.src.rpm
 ```
 
 ### `rpm` package: `yum-utils-1.1.31-54.el7_8.noarch`
