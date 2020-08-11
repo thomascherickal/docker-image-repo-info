@@ -6268,14 +6268,9 @@ Licenses: (parsed from: `/usr/share/doc/libnss3/copyright`)
 - `Zlib`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris nss=2:3.49.1-1ubuntu1.2
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nss/nss_3.49.1-1ubuntu1.2.dsc' nss_3.49.1-1ubuntu1.2.dsc 2284 SHA256:d96e91c2621822c1b8efd9bf7d3a4cf10b93c97495cdb8f449556a352924b13d
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nss/nss_3.49.1.orig.tar.gz' nss_3.49.1.orig.tar.gz 76489134 SHA256:d9aa42e49e02bb0dc0a2f164604cfc718e11a2a06ddb266cd676376ac21b026e
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nss/nss_3.49.1-1ubuntu1.2.debian.tar.xz' nss_3.49.1-1ubuntu1.2.debian.tar.xz 30084 SHA256:4ba976ba27a508f05c8d5e11b07d7f0fd76ae3b244d8040e1e4efaf8631c6d76
-```
 
 ### `dpkg` source package: `numactl=2.0.12-1`
 
