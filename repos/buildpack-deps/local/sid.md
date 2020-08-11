@@ -3613,20 +3613,13 @@ Licenses: (parsed from: `/usr/share/doc/libzstd1/copyright`)
 - `GPL-2+`
 - `zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libzstd=1.4.5+dfsg-3
-'http://deb.debian.org/debian/pool/main/libz/libzstd/libzstd_1.4.5+dfsg-3.dsc' libzstd_1.4.5+dfsg-3.dsc 2291 SHA256:3f028878e892dae1c55267d23a57bdc37e87dfd7846fcb7d0d1247bc63462b64
-'http://deb.debian.org/debian/pool/main/libz/libzstd/libzstd_1.4.5+dfsg.orig.tar.xz' libzstd_1.4.5+dfsg.orig.tar.xz 1387864 SHA256:ff51192647c8f87f447268e20180fe39fe8eb5d643210b82f90af741d7bdf0d2
-'http://deb.debian.org/debian/pool/main/libz/libzstd/libzstd_1.4.5+dfsg-3.debian.tar.xz' libzstd_1.4.5+dfsg-3.debian.tar.xz 12488 SHA256:3c387912561f24d2e4f8539805b8f8db80b35689cb8cd539544eb757317fb88f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libzstd/1.4.5+dfsg-3/
 
-- https://sources.debian.net/src/libzstd/1.4.5+dfsg-3/ (for browsing the source)
-- https://sources.debian.net/src/libzstd/1.4.5+dfsg-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libzstd/1.4.5+dfsg-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `linux=5.7.10-1`
 
@@ -5222,21 +5215,13 @@ Licenses: (parsed from: `/usr/share/doc/libunbound8/copyright`)
 - `ISC`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris unbound=1.10.1-1
-'http://deb.debian.org/debian/pool/main/u/unbound/unbound_1.10.1-1.dsc' unbound_1.10.1-1.dsc 3048 SHA256:f912bb1fe0c139b80d5e5cb873890ca52780be4b2684349db4829e91ae8e6c71
-'http://deb.debian.org/debian/pool/main/u/unbound/unbound_1.10.1.orig.tar.gz' unbound_1.10.1.orig.tar.gz 5729334 SHA256:b73677c21a71cf92f15cc8cfe76a3d875e40f65b6150081c39620b286582d536
-'http://deb.debian.org/debian/pool/main/u/unbound/unbound_1.10.1.orig.tar.gz.asc' unbound_1.10.1.orig.tar.gz.asc 833 SHA256:bceef22440a6ff97fe70d8a9bddcd999b70d41f2567d4b897ecf3e90c3aee48a
-'http://deb.debian.org/debian/pool/main/u/unbound/unbound_1.10.1-1.debian.tar.xz' unbound_1.10.1-1.debian.tar.xz 19504 SHA256:590a76965450a7c1d008b5d02b661bab898c311c2c826465339843d61fcdd4c4
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/unbound/1.10.1-1/
 
-- https://sources.debian.net/src/unbound/1.10.1-1/ (for browsing the source)
-- https://sources.debian.net/src/unbound/1.10.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/unbound/1.10.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `unzip=6.0-25`
 
