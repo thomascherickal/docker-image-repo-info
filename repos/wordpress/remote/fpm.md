@@ -1,7 +1,7 @@
 ## `wordpress:fpm`
 
 ```console
-$ docker pull wordpress@sha256:a5458453890a733128d895332517a9efd0d9007c8fe6094a80932e534ad1a1ef
+$ docker pull wordpress@sha256:544497c533ac176f06dbeae4d3fd86abdccdd5ddfb688b703092612baf9879e2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -18,14 +18,14 @@ $ docker pull wordpress@sha256:a5458453890a733128d895332517a9efd0d9007c8fe6094a8
 ### `wordpress:fpm` - linux; amd64
 
 ```console
-$ docker pull wordpress@sha256:919ecc1396ec0e7c682562a91925c1188b14142979065e8b6b502f7af165118d
+$ docker pull wordpress@sha256:7bd21bb2d7d6394de8ab1c4e4d58f6ae48ac218a18f04fd8ea906dcc4160a655
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **181.1 MB (181098781 bytes)**  
+-	Total Size: **181.9 MB (181851168 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c5f6c141ebfab5229b6363d35a0d6898d94978efad610774bf914e3aeed46a10`
+-	Image ID: `sha256:d42fc095a3598d4716edee33d0e6328f871a0ff34ba7ddcb1707fa3e56911451`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -90,19 +90,19 @@ RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 	apt-get
 RUN set -eux; 	docker-php-ext-enable opcache; 	{ 		echo 'opcache.memory_consumption=128'; 		echo 'opcache.interned_strings_buffer=8'; 		echo 'opcache.max_accelerated_files=4000'; 		echo 'opcache.revalidate_freq=2'; 		echo 'opcache.fast_shutdown=1'; 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
 # Fri, 07 Aug 2020 02:58:43 GMT
 RUN { 		echo 'error_reporting = E_ERROR | E_WARNING | E_PARSE | E_CORE_ERROR | E_CORE_WARNING | E_COMPILE_ERROR | E_COMPILE_WARNING | E_RECOVERABLE_ERROR'; 		echo 'display_errors = Off'; 		echo 'display_startup_errors = Off'; 		echo 'log_errors = On'; 		echo 'error_log = /dev/stderr'; 		echo 'log_errors_max_len = 1024'; 		echo 'ignore_repeated_errors = On'; 		echo 'ignore_repeated_source = Off'; 		echo 'html_errors = Off'; 	} > /usr/local/etc/php/conf.d/error-logging.ini
-# Fri, 07 Aug 2020 02:58:43 GMT
-ENV WORDPRESS_VERSION=5.4.2
-# Fri, 07 Aug 2020 02:58:43 GMT
-ENV WORDPRESS_SHA1=e5631f812232fbd45d3431783d3db2e0d5670d2d
-# Fri, 07 Aug 2020 02:58:52 GMT
+# Wed, 12 Aug 2020 19:24:00 GMT
+ENV WORDPRESS_VERSION=5.5
+# Wed, 12 Aug 2020 19:24:00 GMT
+ENV WORDPRESS_SHA1=03fe1a139b3cd987cc588ba95fab2460cba2a89e
+# Wed, 12 Aug 2020 19:24:09 GMT
 RUN set -ex; 	curl -o wordpress.tar.gz -fSL "https://wordpress.org/wordpress-${WORDPRESS_VERSION}.tar.gz"; 	echo "$WORDPRESS_SHA1 *wordpress.tar.gz" | sha1sum -c -; 	tar -xzf wordpress.tar.gz -C /usr/src/; 	rm wordpress.tar.gz; 	chown -R www-data:www-data /usr/src/wordpress; 	mkdir wp-content; 	for dir in /usr/src/wordpress/wp-content/*/; do 		dir="$(basename "${dir%/}")"; 		mkdir "wp-content/$dir"; 	done; 	chown -R www-data:www-data wp-content; 	chmod -R 777 wp-content
-# Fri, 07 Aug 2020 02:58:52 GMT
+# Wed, 12 Aug 2020 19:24:09 GMT
 VOLUME [/var/www/html]
-# Fri, 07 Aug 2020 02:58:52 GMT
+# Wed, 12 Aug 2020 19:24:09 GMT
 COPY file:f56966eeac957656aead5cb65d1531bfe029ddac03ee3ffefdafd2f0d4252925 in /usr/local/bin/ 
-# Fri, 07 Aug 2020 02:58:53 GMT
+# Wed, 12 Aug 2020 19:24:09 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 07 Aug 2020 02:58:53 GMT
+# Wed, 12 Aug 2020 19:24:09 GMT
 CMD ["php-fpm"]
 ```
 
@@ -163,13 +163,13 @@ CMD ["php-fpm"]
 		Last Modified: Fri, 07 Aug 2020 03:06:36 GMT  
 		Size: 396.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3215bad746dca5dbda9684a115f2fdfd0457d7b22db970af8e23bbcb040c883e`  
-		Last Modified: Fri, 07 Aug 2020 03:06:41 GMT  
-		Size: 12.1 MB (12082654 bytes)  
+	-	`sha256:192624b4babbbaedf20d0f3dc9dc7c5405e97b5d8bd77b54de85bf9172b2621a`  
+		Last Modified: Wed, 12 Aug 2020 19:26:49 GMT  
+		Size: 12.8 MB (12835044 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:74599ff0a47af19984b09f407c2fc2e6666802faf2278fa4c7fc675b96f6fd28`  
-		Last Modified: Fri, 07 Aug 2020 03:06:36 GMT  
-		Size: 4.2 KB (4150 bytes)  
+	-	`sha256:037d07d1af1065a7468721dd04853ab65b58332b909a13dc2645f47385708f6d`  
+		Last Modified: Wed, 12 Aug 2020 19:26:46 GMT  
+		Size: 4.1 KB (4147 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `wordpress:fpm` - linux; arm variant v5
@@ -489,14 +489,14 @@ CMD ["php-fpm"]
 ### `wordpress:fpm` - linux; arm64 variant v8
 
 ```console
-$ docker pull wordpress@sha256:bff0f7810a03f144eacaeba3d523f34a7714822d74df126de72111559fcd5294
+$ docker pull wordpress@sha256:ddc1ed1083bf7c0ee3801a6ae59474d54a3643c6a2ced1a682e42efc1e0c7633
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **171.7 MB (171652675 bytes)**  
+-	Total Size: **172.4 MB (172405125 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:99abc280035d411dbe5cf780a14bf2b33fe85771308e2d1c5b762234052ab951`
+-	Image ID: `sha256:ab8367d191c549ae21f1951890f283dc8a5f5b4f42fe6452ad6db9578fb09437`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -561,19 +561,19 @@ RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 	apt-get
 RUN set -eux; 	docker-php-ext-enable opcache; 	{ 		echo 'opcache.memory_consumption=128'; 		echo 'opcache.interned_strings_buffer=8'; 		echo 'opcache.max_accelerated_files=4000'; 		echo 'opcache.revalidate_freq=2'; 		echo 'opcache.fast_shutdown=1'; 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
 # Fri, 07 Aug 2020 05:43:45 GMT
 RUN { 		echo 'error_reporting = E_ERROR | E_WARNING | E_PARSE | E_CORE_ERROR | E_CORE_WARNING | E_COMPILE_ERROR | E_COMPILE_WARNING | E_RECOVERABLE_ERROR'; 		echo 'display_errors = Off'; 		echo 'display_startup_errors = Off'; 		echo 'log_errors = On'; 		echo 'error_log = /dev/stderr'; 		echo 'log_errors_max_len = 1024'; 		echo 'ignore_repeated_errors = On'; 		echo 'ignore_repeated_source = Off'; 		echo 'html_errors = Off'; 	} > /usr/local/etc/php/conf.d/error-logging.ini
-# Fri, 07 Aug 2020 05:43:45 GMT
-ENV WORDPRESS_VERSION=5.4.2
-# Fri, 07 Aug 2020 05:43:46 GMT
-ENV WORDPRESS_SHA1=e5631f812232fbd45d3431783d3db2e0d5670d2d
-# Fri, 07 Aug 2020 05:43:51 GMT
+# Wed, 12 Aug 2020 19:20:01 GMT
+ENV WORDPRESS_VERSION=5.5
+# Wed, 12 Aug 2020 19:20:06 GMT
+ENV WORDPRESS_SHA1=03fe1a139b3cd987cc588ba95fab2460cba2a89e
+# Wed, 12 Aug 2020 19:20:19 GMT
 RUN set -ex; 	curl -o wordpress.tar.gz -fSL "https://wordpress.org/wordpress-${WORDPRESS_VERSION}.tar.gz"; 	echo "$WORDPRESS_SHA1 *wordpress.tar.gz" | sha1sum -c -; 	tar -xzf wordpress.tar.gz -C /usr/src/; 	rm wordpress.tar.gz; 	chown -R www-data:www-data /usr/src/wordpress; 	mkdir wp-content; 	for dir in /usr/src/wordpress/wp-content/*/; do 		dir="$(basename "${dir%/}")"; 		mkdir "wp-content/$dir"; 	done; 	chown -R www-data:www-data wp-content; 	chmod -R 777 wp-content
-# Fri, 07 Aug 2020 05:43:52 GMT
+# Wed, 12 Aug 2020 19:20:29 GMT
 VOLUME [/var/www/html]
-# Fri, 07 Aug 2020 05:43:53 GMT
+# Wed, 12 Aug 2020 19:20:31 GMT
 COPY file:f56966eeac957656aead5cb65d1531bfe029ddac03ee3ffefdafd2f0d4252925 in /usr/local/bin/ 
-# Fri, 07 Aug 2020 05:43:54 GMT
+# Wed, 12 Aug 2020 19:20:32 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 07 Aug 2020 05:43:55 GMT
+# Wed, 12 Aug 2020 19:20:33 GMT
 CMD ["php-fpm"]
 ```
 
@@ -634,26 +634,26 @@ CMD ["php-fpm"]
 		Last Modified: Fri, 07 Aug 2020 05:54:56 GMT  
 		Size: 397.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e4c2258d5d02723a3b1c7eb7e33e8568dcbbcdd43c2d6f3e3c542a2526b72f7d`  
-		Last Modified: Fri, 07 Aug 2020 05:55:00 GMT  
-		Size: 12.1 MB (12082662 bytes)  
+	-	`sha256:9131adc107a604d91f379cbc12d08b8780afbfff2cfc1674f05577887da1f68a`  
+		Last Modified: Wed, 12 Aug 2020 19:24:27 GMT  
+		Size: 12.8 MB (12835114 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2dae437881bfb43d3a2ec79fd67f5d9f9c73e331c4867c517b0507cc8880d335`  
-		Last Modified: Fri, 07 Aug 2020 05:54:55 GMT  
-		Size: 4.2 KB (4154 bytes)  
+	-	`sha256:762d854b157d275d571ed9f677456f324c2b73e6df21069a06d59644fdc437bc`  
+		Last Modified: Wed, 12 Aug 2020 19:24:22 GMT  
+		Size: 4.2 KB (4152 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `wordpress:fpm` - linux; 386
 
 ```console
-$ docker pull wordpress@sha256:8f5c6f8ff8faa97cc8075f6b79c555a88a96a012e489ec5ac4fcdb432fea78f4
+$ docker pull wordpress@sha256:901f4bd4176d55a6a491eba49321723c56a0cd1c47f4d776ea088840acfb878b
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **186.5 MB (186473272 bytes)**  
+-	Total Size: **187.2 MB (187225680 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5c2d63d2244bdb7a3c57461c2c81795fcf0a7ec4d7397a6e84bd364b06a753d9`
+-	Image ID: `sha256:12e0646bbb183f62a8633eed641b3687727b1e0d21c87401505fc29942eee2cf`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -718,19 +718,19 @@ RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 	apt-get
 RUN set -eux; 	docker-php-ext-enable opcache; 	{ 		echo 'opcache.memory_consumption=128'; 		echo 'opcache.interned_strings_buffer=8'; 		echo 'opcache.max_accelerated_files=4000'; 		echo 'opcache.revalidate_freq=2'; 		echo 'opcache.fast_shutdown=1'; 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
 # Fri, 07 Aug 2020 02:36:28 GMT
 RUN { 		echo 'error_reporting = E_ERROR | E_WARNING | E_PARSE | E_CORE_ERROR | E_CORE_WARNING | E_COMPILE_ERROR | E_COMPILE_WARNING | E_RECOVERABLE_ERROR'; 		echo 'display_errors = Off'; 		echo 'display_startup_errors = Off'; 		echo 'log_errors = On'; 		echo 'error_log = /dev/stderr'; 		echo 'log_errors_max_len = 1024'; 		echo 'ignore_repeated_errors = On'; 		echo 'ignore_repeated_source = Off'; 		echo 'html_errors = Off'; 	} > /usr/local/etc/php/conf.d/error-logging.ini
-# Fri, 07 Aug 2020 02:36:28 GMT
-ENV WORDPRESS_VERSION=5.4.2
-# Fri, 07 Aug 2020 02:36:28 GMT
-ENV WORDPRESS_SHA1=e5631f812232fbd45d3431783d3db2e0d5670d2d
-# Fri, 07 Aug 2020 02:36:38 GMT
+# Wed, 12 Aug 2020 19:23:12 GMT
+ENV WORDPRESS_VERSION=5.5
+# Wed, 12 Aug 2020 19:23:13 GMT
+ENV WORDPRESS_SHA1=03fe1a139b3cd987cc588ba95fab2460cba2a89e
+# Wed, 12 Aug 2020 19:23:22 GMT
 RUN set -ex; 	curl -o wordpress.tar.gz -fSL "https://wordpress.org/wordpress-${WORDPRESS_VERSION}.tar.gz"; 	echo "$WORDPRESS_SHA1 *wordpress.tar.gz" | sha1sum -c -; 	tar -xzf wordpress.tar.gz -C /usr/src/; 	rm wordpress.tar.gz; 	chown -R www-data:www-data /usr/src/wordpress; 	mkdir wp-content; 	for dir in /usr/src/wordpress/wp-content/*/; do 		dir="$(basename "${dir%/}")"; 		mkdir "wp-content/$dir"; 	done; 	chown -R www-data:www-data wp-content; 	chmod -R 777 wp-content
-# Fri, 07 Aug 2020 02:36:38 GMT
+# Wed, 12 Aug 2020 19:23:22 GMT
 VOLUME [/var/www/html]
-# Fri, 07 Aug 2020 02:36:38 GMT
+# Wed, 12 Aug 2020 19:23:22 GMT
 COPY file:f56966eeac957656aead5cb65d1531bfe029ddac03ee3ffefdafd2f0d4252925 in /usr/local/bin/ 
-# Fri, 07 Aug 2020 02:36:39 GMT
+# Wed, 12 Aug 2020 19:23:22 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 07 Aug 2020 02:36:39 GMT
+# Wed, 12 Aug 2020 19:23:23 GMT
 CMD ["php-fpm"]
 ```
 
@@ -791,13 +791,13 @@ CMD ["php-fpm"]
 		Last Modified: Fri, 07 Aug 2020 02:44:39 GMT  
 		Size: 393.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5441de61cba18d5148dac1d8ee485e8b1f1c8daf2e37d3b1664ed70a410b42d7`  
-		Last Modified: Fri, 07 Aug 2020 02:44:49 GMT  
-		Size: 12.1 MB (12082644 bytes)  
+	-	`sha256:1d8eed30480ec2792d8e3d80646a52db7469ce320f2eb93531dc9754c39982e6`  
+		Last Modified: Wed, 12 Aug 2020 19:26:20 GMT  
+		Size: 12.8 MB (12835051 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dd1369935e093d67e90b70974ab6835e7c1547b3330c83edaef429ac516fc839`  
-		Last Modified: Fri, 07 Aug 2020 02:44:39 GMT  
-		Size: 4.2 KB (4151 bytes)  
+	-	`sha256:86ce0ced7bfbe0aea9e9e9d5b879eb5588c0e1bd38702ecafff7917c806ecd7c`  
+		Last Modified: Wed, 12 Aug 2020 19:26:14 GMT  
+		Size: 4.2 KB (4152 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `wordpress:fpm` - linux; mips64le
@@ -960,14 +960,14 @@ CMD ["php-fpm"]
 ### `wordpress:fpm` - linux; ppc64le
 
 ```console
-$ docker pull wordpress@sha256:785a0de9a2c73120d38b215c6553b60f9d0ec66f6536b7a785b3eedd6a3ae6db
+$ docker pull wordpress@sha256:dc1cb7de394a60a22c75a539fd879299618554fe15565f1f7d975fdb593dd961
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **192.4 MB (192445161 bytes)**  
+-	Total Size: **193.2 MB (193197623 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c8bd86998f6d417b07a8b439d72124b44a5d1cf463ccd803dccd5e2716210b15`
+-	Image ID: `sha256:ee323078b0a224b4f60afe8e7f5ff50ee09730896a405f3da0da338cec6a932b`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -1032,19 +1032,19 @@ RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 	apt-get
 RUN set -eux; 	docker-php-ext-enable opcache; 	{ 		echo 'opcache.memory_consumption=128'; 		echo 'opcache.interned_strings_buffer=8'; 		echo 'opcache.max_accelerated_files=4000'; 		echo 'opcache.revalidate_freq=2'; 		echo 'opcache.fast_shutdown=1'; 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
 # Fri, 07 Aug 2020 07:07:40 GMT
 RUN { 		echo 'error_reporting = E_ERROR | E_WARNING | E_PARSE | E_CORE_ERROR | E_CORE_WARNING | E_COMPILE_ERROR | E_COMPILE_WARNING | E_RECOVERABLE_ERROR'; 		echo 'display_errors = Off'; 		echo 'display_startup_errors = Off'; 		echo 'log_errors = On'; 		echo 'error_log = /dev/stderr'; 		echo 'log_errors_max_len = 1024'; 		echo 'ignore_repeated_errors = On'; 		echo 'ignore_repeated_source = Off'; 		echo 'html_errors = Off'; 	} > /usr/local/etc/php/conf.d/error-logging.ini
-# Fri, 07 Aug 2020 07:07:48 GMT
-ENV WORDPRESS_VERSION=5.4.2
-# Fri, 07 Aug 2020 07:08:01 GMT
-ENV WORDPRESS_SHA1=e5631f812232fbd45d3431783d3db2e0d5670d2d
-# Fri, 07 Aug 2020 07:08:29 GMT
+# Wed, 12 Aug 2020 19:26:45 GMT
+ENV WORDPRESS_VERSION=5.5
+# Wed, 12 Aug 2020 19:26:49 GMT
+ENV WORDPRESS_SHA1=03fe1a139b3cd987cc588ba95fab2460cba2a89e
+# Wed, 12 Aug 2020 19:27:09 GMT
 RUN set -ex; 	curl -o wordpress.tar.gz -fSL "https://wordpress.org/wordpress-${WORDPRESS_VERSION}.tar.gz"; 	echo "$WORDPRESS_SHA1 *wordpress.tar.gz" | sha1sum -c -; 	tar -xzf wordpress.tar.gz -C /usr/src/; 	rm wordpress.tar.gz; 	chown -R www-data:www-data /usr/src/wordpress; 	mkdir wp-content; 	for dir in /usr/src/wordpress/wp-content/*/; do 		dir="$(basename "${dir%/}")"; 		mkdir "wp-content/$dir"; 	done; 	chown -R www-data:www-data wp-content; 	chmod -R 777 wp-content
-# Fri, 07 Aug 2020 07:08:55 GMT
+# Wed, 12 Aug 2020 19:27:19 GMT
 VOLUME [/var/www/html]
-# Fri, 07 Aug 2020 07:09:19 GMT
+# Wed, 12 Aug 2020 19:27:24 GMT
 COPY file:f56966eeac957656aead5cb65d1531bfe029ddac03ee3ffefdafd2f0d4252925 in /usr/local/bin/ 
-# Fri, 07 Aug 2020 07:09:32 GMT
+# Wed, 12 Aug 2020 19:27:33 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 07 Aug 2020 07:09:42 GMT
+# Wed, 12 Aug 2020 19:27:48 GMT
 CMD ["php-fpm"]
 ```
 
@@ -1105,13 +1105,13 @@ CMD ["php-fpm"]
 		Last Modified: Fri, 07 Aug 2020 07:32:23 GMT  
 		Size: 397.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c8e22bb004a86ec528463e47afb16757d951179ed738ae5d8f4960f023b8ffd8`  
-		Last Modified: Fri, 07 Aug 2020 07:32:28 GMT  
-		Size: 12.1 MB (12082659 bytes)  
+	-	`sha256:784bedf06d703cc8e7697d771779b5fe10f9a44ca0203f398a5b010989ad1d9d`  
+		Last Modified: Wed, 12 Aug 2020 19:34:54 GMT  
+		Size: 12.8 MB (12835120 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f6a9889635af4e188022c2fae9dbcf479b9369b3ccf259ce4ad2a21cd742b96e`  
-		Last Modified: Fri, 07 Aug 2020 07:32:23 GMT  
-		Size: 4.2 KB (4153 bytes)  
+	-	`sha256:7f073d21e4bc8d8a499a1d1d3737a7000bdcec0c086ef9364c16343f7098f62d`  
+		Last Modified: Wed, 12 Aug 2020 19:34:50 GMT  
+		Size: 4.2 KB (4154 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `wordpress:fpm` - linux; s390x
