@@ -1,9 +1,9 @@
-# `swift:5.2.4-amazonlinux2`
+# `swift:5.2.5-amazonlinux2`
 
 ## Docker Metadata
 
-- Image ID: `sha256:e6fe5a16d8ac2f4503a7b56c2895356f6de19a121f2c7b96a2ca9cb3b5fb4560`
-- Created: `2020-07-31T22:40:01.516353134Z`
+- Image ID: `sha256:1d7847ffafb361c951ed7125d172a726fb738963f32a8bf2e0b556b9f35bc578`
+- Created: `2020-08-11T19:32:21.887045323Z`
 - Virtual Size: ~ 1.97 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -12,8 +12,8 @@
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561`
   - `SWIFT_PLATFORM=amazonlinux2`
-  - `SWIFT_BRANCH=swift-5.2.4-release`
-  - `SWIFT_VERSION=swift-5.2.4-RELEASE`
+  - `SWIFT_BRANCH=swift-5.2.5-release`
+  - `SWIFT_VERSION=swift-5.2.5-RELEASE`
   - `SWIFT_WEBROOT=https://swift.org/builds/`
 - Labels:
   - `description=Docker Container for the Swift programming language`
@@ -2235,16 +2235,16 @@ Enabling amzn2-core-source repository
 https://cdn.amazonlinux.com/2/core/2.0/SRPMS/4d876f86a838ef7a0461c1209ae2884455fa451fa8a25509a2b352a84abcb05a//../../../../../blobstore/3249d58314be6399ecbfcf70476bb2a0039af066ed4fc79942090302f6b214f6/tar-1.26-35.amzn2.src.rpm
 ```
 
-### `rpm` package: `tzdata-2019c-1.amzn2.noarch`
+### `rpm` package: `tzdata-2020a-1.amzn2.noarch`
 
 Licenses (from `rpm --query`): Public Domain
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls tzdata-2019c-1.amzn2.noarch
+$ yumdownloader --quiet --source --urls tzdata-2020a-1.amzn2.noarch
 Enabling amzn2-core-source repository
-https://cdn.amazonlinux.com/2/core/2.0/SRPMS/4d876f86a838ef7a0461c1209ae2884455fa451fa8a25509a2b352a84abcb05a//../../../../../blobstore/3cda10097c85685ce42fc3da2251943d0791543605be82123ea8261b69da15d2/tzdata-2019c-1.amzn2.src.rpm
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/4d876f86a838ef7a0461c1209ae2884455fa451fa8a25509a2b352a84abcb05a//../../../../../blobstore/a8c5d5a4f72ae69a4623a911e8a6696ae99f6f2b0ca662372fa7adfad9c1535f/tzdata-2020a-1.amzn2.src.rpm
 ```
 
 ### `rpm` package: `ustr-1.0.4-16.amzn2.0.3.x86_64`

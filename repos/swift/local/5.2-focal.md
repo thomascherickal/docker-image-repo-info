@@ -1,9 +1,9 @@
-# `swift:5.2.4-focal`
+# `swift:5.2.5-focal`
 
 ## Docker Metadata
 
-- Image ID: `sha256:2d92917d61e39faa20fa3b8e33922bb7eca3d10b0fdc72c2ff1c20c08399586e`
-- Created: `2020-07-24T17:35:50.63907311Z`
+- Image ID: `sha256:dfab6e4f0d2727b29a16f75c16b6713bf446c97d81aa7041b6a5d9d9b29661e1`
+- Created: `2020-08-11T19:28:58.594719961Z`
 - Virtual Size: ~ 1.58 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -12,8 +12,8 @@
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561`
   - `SWIFT_PLATFORM=ubuntu20.04`
-  - `SWIFT_BRANCH=swift-5.2.4-release`
-  - `SWIFT_VERSION=swift-5.2.4-RELEASE`
+  - `SWIFT_BRANCH=swift-5.2.5-release`
+  - `SWIFT_VERSION=swift-5.2.5-RELEASE`
   - `SWIFT_WEBROOT=https://swift.org/builds/`
 - Labels:
   - `description=Docker Container for the Swift programming language`
