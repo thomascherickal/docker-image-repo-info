@@ -1136,20 +1136,13 @@ Licenses: (parsed from: `/usr/share/doc/iproute2/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris iproute2=5.7.0-1
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.7.0-1.dsc' iproute2_5.7.0-1.dsc 1831 SHA256:5dddd17db18ac78e902e8ff11a46c444f61cf9b6435e057fce39bba0d84045f1
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.7.0.orig.tar.xz' iproute2_5.7.0.orig.tar.xz 764436 SHA256:725dc7ba94aae54c6f8d4223ca055d9fb4fe89d6994b1c03bfb4411c4dd10f21
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.7.0-1.debian.tar.xz' iproute2_5.7.0-1.debian.tar.xz 35928 SHA256:263c66f02eb7eb16119806efb07b900bb01ccfe6934e1e842fdc20845fa685b1
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/iproute2/5.7.0-1/
 
-- https://sources.debian.net/src/iproute2/5.7.0-1/ (for browsing the source)
-- https://sources.debian.net/src/iproute2/5.7.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/iproute2/5.7.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `iptables=1.8.5-2`
 
@@ -2027,20 +2020,13 @@ Licenses: (parsed from: `/usr/share/doc/mercurial/copyright`, `/usr/share/doc/me
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mercurial=5.4.1-2
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.4.1-2.dsc' mercurial_5.4.1-2.dsc 2503 SHA256:eb3695ccf72fa9ee03fc4cfcf1b6159930a3cd646e7225c5cc2c524cecfd1869
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.4.1.orig.tar.gz' mercurial_5.4.1.orig.tar.gz 7725893 SHA256:c31c026b09e8e1301ff23b5acc8a8563eeecbf7ff3495110b13688f01ba88ac6
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.4.1-2.debian.tar.xz' mercurial_5.4.1-2.debian.tar.xz 62672 SHA256:65f64e81b99ce51ef51532aeef27f43131ae292d247046f193e629a1b9865e4d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mercurial/5.4.1-2/
 
-- https://sources.debian.net/src/mercurial/5.4.1-2/ (for browsing the source)
-- https://sources.debian.net/src/mercurial/5.4.1-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mercurial/5.4.1-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mime-support=3.64`
 
@@ -2854,21 +2840,13 @@ Licenses: (parsed from: `/usr/share/doc/sysvinit-utils/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sysvinit=2.96-3
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96-3.dsc' sysvinit_2.96-3.dsc 2666 SHA256:e2c25c85b282b57268d53ffc6d43c28761f7920bff79164544f6e64c3a81d1cb
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96.orig.tar.xz' sysvinit_2.96.orig.tar.xz 122164 SHA256:2a2e26b72aa235a23ab1c8471005f890309ce1196c83fbc9413c57b9ab62b587
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96.orig.tar.xz.asc' sysvinit_2.96.orig.tar.xz.asc 313 SHA256:dfc184b95da12c8c888c8ae6b0f26fe8a23b07fbcdd240f6600a8a78b9439fa0
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96-3.debian.tar.xz' sysvinit_2.96-3.debian.tar.xz 127280 SHA256:de097fd2e7fd3575b15381d4427ea4ccdb0c0df13ea7c69e720464cf09b3f3fb
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/sysvinit/2.96-3/
 
-- https://sources.debian.net/src/sysvinit/2.96-3/ (for browsing the source)
-- https://sources.debian.net/src/sysvinit/2.96-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sysvinit/2.96-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tar=1.30+dfsg-7`
 

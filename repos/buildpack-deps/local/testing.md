@@ -1232,19 +1232,13 @@ Licenses: (parsed from: `/usr/share/doc/cpp/copyright`, `/usr/share/doc/g++/copy
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-defaults=1.185.1
-'http://deb.debian.org/debian/pool/main/g/gcc-defaults/gcc-defaults_1.185.1.dsc' gcc-defaults_1.185.1.dsc 11989 SHA256:471b39e0d91871f9b0054b8d3d2f7c27c190fc751f46a1c7c7ecdcba6de7aa4d
-'http://deb.debian.org/debian/pool/main/g/gcc-defaults/gcc-defaults_1.185.1.tar.gz' gcc-defaults_1.185.1.tar.gz 54512 SHA256:6e1bbc04f51b63cb0a8ac26c635c9f0e9a3a45f5d01b013b1946bb0c42e6cc77
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gcc-defaults/1.185.1/
 
-- https://sources.debian.net/src/gcc-defaults/1.185.1/ (for browsing the source)
-- https://sources.debian.net/src/gcc-defaults/1.185.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gcc-defaults/1.185.1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gdbm=1.18.1-5`
 
@@ -3822,21 +3816,13 @@ Licenses: (parsed from: `/usr/share/doc/mercurial/copyright`, `/usr/share/doc/me
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mercurial=5.4.1-1
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.4.1-1.dsc' mercurial_5.4.1-1.dsc 2752 SHA256:f4a5fa51029ca42b6d63726ed88f4c24be5485f998dcc533127a91c5a76148de
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.4.1.orig.tar.gz' mercurial_5.4.1.orig.tar.gz 7725893 SHA256:c31c026b09e8e1301ff23b5acc8a8563eeecbf7ff3495110b13688f01ba88ac6
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.4.1.orig.tar.gz.asc' mercurial_5.4.1.orig.tar.gz.asc 833 SHA256:85a25b7cda3303d06d109f4858e8981f5f9cfce0e7a1161d24fd2f505adf15b8
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.4.1-1.debian.tar.xz' mercurial_5.4.1-1.debian.tar.xz 62536 SHA256:174557808d13c0168ed97e6a1d92927dc4d21c14250f1c305d2f143dc7d104bb
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mercurial/5.4.1-1/
 
-- https://sources.debian.net/src/mercurial/5.4.1-1/ (for browsing the source)
-- https://sources.debian.net/src/mercurial/5.4.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mercurial/5.4.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mime-support=3.64`
 
@@ -3900,20 +3886,13 @@ Licenses: (parsed from: `/usr/share/doc/libmpdec2/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mpdecimal=2.4.2-3
-'http://deb.debian.org/debian/pool/main/m/mpdecimal/mpdecimal_2.4.2-3.dsc' mpdecimal_2.4.2-3.dsc 1932 SHA256:4cdd04de9915af3c9d787f4922affc1993d76c25cd0715ffdd2658da37c86753
-'http://deb.debian.org/debian/pool/main/m/mpdecimal/mpdecimal_2.4.2.orig.tar.gz' mpdecimal_2.4.2.orig.tar.gz 2271529 SHA256:83c628b90f009470981cf084c5418329c88b19835d8af3691b930afccb7d79c7
-'http://deb.debian.org/debian/pool/main/m/mpdecimal/mpdecimal_2.4.2-3.debian.tar.xz' mpdecimal_2.4.2-3.debian.tar.xz 6352 SHA256:1baf12776a911bc77f76e16aa7600d4ace21a27817f4a56373093065205a9292
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mpdecimal/2.4.2-3/
 
-- https://sources.debian.net/src/mpdecimal/2.4.2-3/ (for browsing the source)
-- https://sources.debian.net/src/mpdecimal/2.4.2-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mpdecimal/2.4.2-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mpfr4=4.0.2-1`
 

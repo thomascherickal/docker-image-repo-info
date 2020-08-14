@@ -105,13 +105,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.1.7
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.1.7.dsc' apt_2.1.7.dsc 2756 SHA256:c81d9d9e2d77e1b415e714ee3a6df1bb8c081de54293d105599196e423d97b44
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.1.7.tar.xz' apt_2.1.7.tar.xz 2177580 SHA256:064adbfb3248188de562e0aac394b1085af063c9a43240e24e6f324f45306b9c
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/apt/2.1.7/
+
 
 ### `dpkg` source package: `attr=1:2.4.48-5`
 
@@ -149,14 +149,9 @@ Licenses: (parsed from: `/usr/share/doc/libaudit-common/copyright`, `/usr/share/
 - `GPL-2`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris audit=1:2.8.5-2ubuntu6
-'http://archive.ubuntu.com/ubuntu/pool/main/a/audit/audit_2.8.5-2ubuntu6.dsc' audit_2.8.5-2ubuntu6.dsc 2764 SHA256:b149fad8217d68a80299c1ef72539ee7d756146d692b7e51eade7341e60ac528
-'http://archive.ubuntu.com/ubuntu/pool/main/a/audit/audit_2.8.5.orig.tar.gz' audit_2.8.5.orig.tar.gz 1140694 SHA256:0e5d4103646e00f8d1981e1cd2faea7a2ae28e854c31a803e907a383c5e2ecb7
-'http://archive.ubuntu.com/ubuntu/pool/main/a/audit/audit_2.8.5-2ubuntu6.debian.tar.xz' audit_2.8.5-2ubuntu6.debian.tar.xz 18712 SHA256:d85ecf206bfe256a86e6d39602cd2744beda264a28e413f31c4da227e6542ea7
-```
 
 ### `dpkg` source package: `autoconf=2.69-11.1`
 
@@ -682,13 +677,9 @@ Licenses: (parsed from: `/usr/share/doc/dpkg/copyright`, `/usr/share/doc/dpkg-de
 - `public-domain-md5`
 - `public-domain-s-s-d`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris dpkg=1.19.7ubuntu4
-'http://archive.ubuntu.com/ubuntu/pool/main/d/dpkg/dpkg_1.19.7ubuntu4.dsc' dpkg_1.19.7ubuntu4.dsc 2250 SHA256:6365d7768eb8966b46d35933999ee23f7128ec057c21ca107fdccb0c0ec7b720
-'http://archive.ubuntu.com/ubuntu/pool/main/d/dpkg/dpkg_1.19.7ubuntu4.tar.xz' dpkg_1.19.7ubuntu4.tar.xz 4743704 SHA256:1714efd82c143f463f43d1e1a0cffcc009e0cb3001cf725209f74bd642b76a27
-```
 
 ### `dpkg` source package: `dulwich=0.19.15-1build1`
 
@@ -1167,14 +1158,13 @@ Licenses: (parsed from: `/usr/share/doc/libgmp-dev/copyright`, `/usr/share/doc/l
 - `GPL-3`
 - `LGPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gmp=2:6.2.0+dfsg-6
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.2.0+dfsg-6.dsc' gmp_6.2.0+dfsg-6.dsc 2144 SHA256:8ca73e96ab6d3d05d21a76b357fdc36959be9c5c863186fd30ee17981c4f2c93
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.2.0+dfsg.orig.tar.xz' gmp_6.2.0+dfsg.orig.tar.xz 1842912 SHA256:5d7610449498a79aa62d4b9a8f6baaef91b8716726e1009e02b879962dff32ab
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.2.0+dfsg-6.debian.tar.xz' gmp_6.2.0+dfsg-6.debian.tar.xz 21220 SHA256:bb447179d6bd323e2a37035a8ebab58722f1e5c74abb1043b8b9ad038ce4f9fe
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/gmp/2:6.2.0+dfsg-6/
+
 
 ### `dpkg` source package: `gnupg2=2.2.20-1ubuntu1`
 
@@ -2532,15 +2522,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libx11=2:1.6.9-2ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.6.9-2ubuntu1.dsc' libx11_1.6.9-2ubuntu1.dsc 2584 SHA256:e0d4ff552c8a2e0742bd01053d1abc8cfc8b32dc5302cd1fe90c524a91ae0999
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.6.9.orig.tar.gz' libx11_1.6.9.orig.tar.gz 2994329 SHA256:b8c0930a9b25de15f3d773288cacd5e2f0a4158e194935615c52aeceafd1107b
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.6.9.orig.tar.gz.asc' libx11_1.6.9.orig.tar.gz.asc 659 SHA256:5dca08f1a18bcfd9aabbb9b61c78948180db4e0a3e6710df695a48badb1ea8df
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.6.9-2ubuntu1.diff.gz' libx11_1.6.9-2ubuntu1.diff.gz 60547 SHA256:6af57abf40eabe9d1ddc09d70754ad473ef7b7edc898d88ca9069d9acbd60d9e
-```
 
 ### `dpkg` source package: `libxau=1:1.0.9-0ubuntu1`
 
@@ -2952,14 +2936,13 @@ Licenses: (parsed from: `/usr/share/doc/libmpc3/copyright`)
 
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mpclib3=1.1.0-1
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mpclib3/mpclib3_1.1.0-1.dsc' mpclib3_1.1.0-1.dsc 1990 SHA256:bb57824015b735bf72399a53f8c6a241e6a8bd402753b0fdcdaa5b99d0aef790
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mpclib3/mpclib3_1.1.0.orig.tar.gz' mpclib3_1.1.0.orig.tar.gz 701263 SHA256:6985c538143c1208dcb1ac42cedad6ff52e267b47e5f970183a3e75125b43c2e
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mpclib3/mpclib3_1.1.0-1.diff.gz' mpclib3_1.1.0-1.diff.gz 3794 SHA256:84b10a4ae958b3015e136b75be5fee22961255d19be655f7d0adae8d4f3bc977
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/mpclib3/1.1.0-1/
+
 
 ### `dpkg` source package: `mpdecimal=2.4.2-3`
 
@@ -2992,14 +2975,9 @@ Licenses: (parsed from: `/usr/share/doc/libmpfr6/copyright`)
 - `GFDL-1.2`
 - `LGPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mpfr4=4.0.2-1build1
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mpfr4/mpfr4_4.0.2-1build1.dsc' mpfr4_4.0.2-1build1.dsc 2050 SHA256:4a4f5bba60eb52876e97a4cd929fdcd698f203dc6a6cdf039551d90b1e0e6d09
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mpfr4/mpfr4_4.0.2.orig.tar.xz' mpfr4_4.0.2.orig.tar.xz 1441996 SHA256:1d3be708604eae0e42d578ba93b390c2a145f17743a744d8f3f8c2ad5855a38a
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mpfr4/mpfr4_4.0.2-1build1.debian.tar.xz' mpfr4_4.0.2-1build1.debian.tar.xz 10648 SHA256:46c27af1827ad144a997817c21d766bd05a7397b561ea6eab1408b021cb7c3bd
-```
 
 ### `dpkg` source package: `mysql-8.0=8.0.19-0ubuntu5`
 
