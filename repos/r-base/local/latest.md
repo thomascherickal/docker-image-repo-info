@@ -1436,10 +1436,16 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris harfbuzz=2.6.7-1
-'http://http.debian.net/debian/pool/main/h/harfbuzz/harfbuzz_2.6.7-1.dsc' harfbuzz_2.6.7-1.dsc 2440 SHA256:60b2b2f402054eb9e5d7ce14075178e4c17ba6e74f7d1545f76339594d7bcf2b
-'http://http.debian.net/debian/pool/main/h/harfbuzz/harfbuzz_2.6.7.orig.tar.xz' harfbuzz_2.6.7.orig.tar.xz 9001936 SHA256:49e481d06cdff97bf68d99fa26bdf785331f411614485d892ea4c78eb479b218
-'http://http.debian.net/debian/pool/main/h/harfbuzz/harfbuzz_2.6.7-1.debian.tar.xz' harfbuzz_2.6.7-1.debian.tar.xz 10444 SHA256:bb2c3d2f6a23162de819742827e41d9426ca90129c6406a9b80082c43c2bc25a
+'http://deb.debian.org/debian/pool/main/h/harfbuzz/harfbuzz_2.6.7-1.dsc' harfbuzz_2.6.7-1.dsc 2440 SHA256:60b2b2f402054eb9e5d7ce14075178e4c17ba6e74f7d1545f76339594d7bcf2b
+'http://deb.debian.org/debian/pool/main/h/harfbuzz/harfbuzz_2.6.7.orig.tar.xz' harfbuzz_2.6.7.orig.tar.xz 9001936 SHA256:49e481d06cdff97bf68d99fa26bdf785331f411614485d892ea4c78eb479b218
+'http://deb.debian.org/debian/pool/main/h/harfbuzz/harfbuzz_2.6.7-1.debian.tar.xz' harfbuzz_2.6.7-1.debian.tar.xz 10444 SHA256:bb2c3d2f6a23162de819742827e41d9426ca90129c6406a9b80082c43c2bc25a
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/harfbuzz/2.6.7-1/ (for browsing the source)
+- https://sources.debian.net/src/harfbuzz/2.6.7-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/harfbuzz/2.6.7-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `hostname=3.23`
 
@@ -1529,20 +1535,13 @@ Licenses: (parsed from: `/usr/share/doc/iproute2/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris iproute2=5.7.0-1
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.7.0-1.dsc' iproute2_5.7.0-1.dsc 1831 SHA256:5dddd17db18ac78e902e8ff11a46c444f61cf9b6435e057fce39bba0d84045f1
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.7.0.orig.tar.xz' iproute2_5.7.0.orig.tar.xz 764436 SHA256:725dc7ba94aae54c6f8d4223ca055d9fb4fe89d6994b1c03bfb4411c4dd10f21
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.7.0-1.debian.tar.xz' iproute2_5.7.0-1.debian.tar.xz 35928 SHA256:263c66f02eb7eb16119806efb07b900bb01ccfe6934e1e842fdc20845fa685b1
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/iproute2/5.7.0-1/
 
-- https://sources.debian.net/src/iproute2/5.7.0-1/ (for browsing the source)
-- https://sources.debian.net/src/iproute2/5.7.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/iproute2/5.7.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `iptables=1.8.5-2`
 
@@ -3078,20 +3077,13 @@ Licenses: (parsed from: `/usr/share/doc/libnghttp2-14/copyright`)
 - `SIL-OFL-1.1`
 - `all-permissive`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris nghttp2=1.41.0-2
-'http://deb.debian.org/debian/pool/main/n/nghttp2/nghttp2_1.41.0-2.dsc' nghttp2_1.41.0-2.dsc 2548 SHA256:de017fb480273ab1f2a5581fd11773fdfbbb64685fe07a4398a98a02f3d7d76a
-'http://deb.debian.org/debian/pool/main/n/nghttp2/nghttp2_1.41.0.orig.tar.bz2' nghttp2_1.41.0.orig.tar.bz2 1943304 SHA256:645ca078e7ec276dcfa27175f3af6140c8badc7358ec9d2892b6ab2bcee72240
-'http://deb.debian.org/debian/pool/main/n/nghttp2/nghttp2_1.41.0-2.debian.tar.xz' nghttp2_1.41.0-2.debian.tar.xz 13268 SHA256:ac0b8341728592ca0de4a73646c2c5c24b4d46df5e6e726b7816e9de52f1d0b2
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/nghttp2/1.41.0-2/
 
-- https://sources.debian.net/src/nghttp2/1.41.0-2/ (for browsing the source)
-- https://sources.debian.net/src/nghttp2/1.41.0-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/nghttp2/1.41.0-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `nlme=3.1.148-1`
 
@@ -3865,21 +3857,13 @@ Licenses: (parsed from: `/usr/share/doc/sysvinit-utils/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sysvinit=2.96-3
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96-3.dsc' sysvinit_2.96-3.dsc 2666 SHA256:e2c25c85b282b57268d53ffc6d43c28761f7920bff79164544f6e64c3a81d1cb
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96.orig.tar.xz' sysvinit_2.96.orig.tar.xz 122164 SHA256:2a2e26b72aa235a23ab1c8471005f890309ce1196c83fbc9413c57b9ab62b587
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96.orig.tar.xz.asc' sysvinit_2.96.orig.tar.xz.asc 313 SHA256:dfc184b95da12c8c888c8ae6b0f26fe8a23b07fbcdd240f6600a8a78b9439fa0
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96-3.debian.tar.xz' sysvinit_2.96-3.debian.tar.xz 127280 SHA256:de097fd2e7fd3575b15381d4427ea4ccdb0c0df13ea7c69e720464cf09b3f3fb
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/sysvinit/2.96-3/
 
-- https://sources.debian.net/src/sysvinit/2.96-3/ (for browsing the source)
-- https://sources.debian.net/src/sysvinit/2.96-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sysvinit/2.96-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tar=1.30+dfsg-7`
 
