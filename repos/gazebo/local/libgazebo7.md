@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:b9709a9c5103c935370af437d3b0d798505d6c102f233d8fd934ae677dc63476`
-- Created: `2020-08-04T22:44:44.161268715Z`
+- Image ID: `sha256:f7fd31efbf4addb16c5ac620ff5fd04dc459928eb46768cc338f1eb91263f0ca`
+- Created: `2020-08-19T22:42:46.318205019Z`
 - Virtual Size: ~ 1.40 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -174,19 +174,23 @@ $ apt-get source -qq --print-uris audit=1:2.4.5-1ubuntu2.1
 'http://archive.ubuntu.com/ubuntu/pool/main/a/audit/audit_2.4.5-1ubuntu2.1.debian.tar.xz' audit_2.4.5-1ubuntu2.1.debian.tar.xz 19292 SHA256:285eef1a789f47c9ad6a30dc8427822b624146715a8f603d011bdc117529d5b2
 ```
 
-### `dpkg` source package: `base-files=9.4ubuntu4.11`
+### `dpkg` source package: `base-files=9.4ubuntu4.12`
 
 Binary Packages:
 
-- `base-files=9.4ubuntu4.11`
+- `base-files=9.4ubuntu4.12`
 
 Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris base-files=9.4ubuntu4.12
+'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_9.4ubuntu4.12.dsc' base-files_9.4ubuntu4.12.dsc 1230 SHA256:a2b35edf31f7c157e85329538534c5fda82b87a710ebc0d93541afc1ed95e394
+'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_9.4ubuntu4.12.tar.xz' base-files_9.4ubuntu4.12.tar.xz 65584 SHA256:de69b2a17c4d6e8168459e800b13759ef1f8eeb49825947ea341d6c20b47c5df
+```
 
 ### `dpkg` source package: `base-passwd=3.5.39`
 
@@ -516,13 +520,13 @@ $ apt-get source -qq --print-uris crystalhd=1:0.0~git20110715.fdd2f19-11build1
 'http://archive.ubuntu.com/ubuntu/pool/universe/c/crystalhd/crystalhd_0.0~git20110715.fdd2f19-11build1.debian.tar.xz' crystalhd_0.0~git20110715.fdd2f19-11build1.debian.tar.xz 15240 SHA256:646168058a9a41b20a392fe20f7a2a88caaa1a42fc3e002635c33f0cf129ed0f
 ```
 
-### `dpkg` source package: `curl=7.47.0-1ubuntu2.15`
+### `dpkg` source package: `curl=7.47.0-1ubuntu2.16`
 
 Binary Packages:
 
-- `libcurl3:amd64=7.47.0-1ubuntu2.15`
-- `libcurl3-gnutls:amd64=7.47.0-1ubuntu2.15`
-- `libcurl4-openssl-dev:amd64=7.47.0-1ubuntu2.15`
+- `libcurl3:amd64=7.47.0-1ubuntu2.16`
+- `libcurl3-gnutls:amd64=7.47.0-1ubuntu2.16`
+- `libcurl4-openssl-dev:amd64=7.47.0-1ubuntu2.16`
 
 Licenses: (parsed from: `/usr/share/doc/libcurl3/copyright`, `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/doc/libcurl4-openssl-dev/copyright`)
 
@@ -536,10 +540,10 @@ Licenses: (parsed from: `/usr/share/doc/libcurl3/copyright`, `/usr/share/doc/lib
 Source:
 
 ```console
-$ apt-get source -qq --print-uris curl=7.47.0-1ubuntu2.15
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.47.0-1ubuntu2.15.dsc' curl_7.47.0-1ubuntu2.15.dsc 2733 SHA256:f69c59d02657dccb7fd3e5d25119ea89c84e7c8b6c9fad08bd0a5fbeb6ca07f0
+$ apt-get source -qq --print-uris curl=7.47.0-1ubuntu2.16
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.47.0-1ubuntu2.16.dsc' curl_7.47.0-1ubuntu2.16.dsc 2733 SHA256:504d8f4f515d6211cb22b7c1b2589ed939dcc69524aa7f93c7299cbbe708195f
 'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.47.0.orig.tar.gz' curl_7.47.0.orig.tar.gz 4563163 SHA256:df01bd42af361978d9de7de8529718bcafe01897a544a7650139a1954c55bdfe
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.47.0-1ubuntu2.15.debian.tar.xz' curl_7.47.0-1ubuntu2.15.debian.tar.xz 56200 SHA256:973830da76df0141298d9e4f76eff6df691af1c9354cb8ea3c2bc15157a63d14
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.47.0-1ubuntu2.16.debian.tar.xz' curl_7.47.0-1ubuntu2.16.debian.tar.xz 57440 SHA256:bc658dca382d0c22780e889821d2ba3f7b9f1226dace55daa69fdacbaa447c02
 ```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.26.dfsg1-14ubuntu0.2`
@@ -2587,20 +2591,25 @@ $ apt-get source -qq --print-uris libraw=0.17.1-1ubuntu0.5
 'http://archive.ubuntu.com/ubuntu/pool/main/libr/libraw/libraw_0.17.1-1ubuntu0.5.debian.tar.xz' libraw_0.17.1-1ubuntu0.5.debian.tar.xz 38364 SHA256:9524aa8fe1fdecfaadcaf0579f07a37c71049b21ae1787a59c47e165b5b38045
 ```
 
-### `dpkg` source package: `libseccomp=2.4.3-1ubuntu3.16.04.2`
+### `dpkg` source package: `libseccomp=2.4.3-1ubuntu3.16.04.3`
 
 Binary Packages:
 
-- `libseccomp2:amd64=2.4.3-1ubuntu3.16.04.2`
+- `libseccomp2:amd64=2.4.3-1ubuntu3.16.04.3`
 
 Licenses: (parsed from: `/usr/share/doc/libseccomp2/copyright`)
 
 - `LGPL-2`
 - `LGPL-2.0+`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris libseccomp=2.4.3-1ubuntu3.16.04.3
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3-1ubuntu3.16.04.3.dsc' libseccomp_2.4.3-1ubuntu3.16.04.3.dsc 1951 SHA256:d96e6324c3d8a56bfde53305247539c169ccf22759539f71bbebcf786785f21d
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3.orig.tar.gz' libseccomp_2.4.3.orig.tar.gz 598147 SHA256:cf15d1421997fac45b936515af61d209c4fd788af11005d212b3d0fd71e7991d
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3-1ubuntu3.16.04.3.debian.tar.xz' libseccomp_2.4.3-1ubuntu3.16.04.3.debian.tar.xz 27452 SHA256:cbe9631069183c458f21270689840d13f4fa6f182950f81d779d62ac7662de2a
+```
 
 ### `dpkg` source package: `libselinux=2.4-3build2`
 
@@ -3354,11 +3363,11 @@ $ apt-get source -qq --print-uris libxxf86vm=1:1.1.4-1
 'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxxf86vm/libxxf86vm_1.1.4-1.diff.gz' libxxf86vm_1.1.4-1.diff.gz 8040 SHA256:e0f11739d28c7a4475820ebda26e6f29e6cfa80b99a3513c075471132c81725b
 ```
 
-### `dpkg` source package: `linux=4.4.0-186.216`
+### `dpkg` source package: `linux=4.4.0-187.217`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=4.4.0-186.216`
+- `linux-libc-dev:amd64=4.4.0-187.217`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -3368,10 +3377,10 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris linux=4.4.0-186.216
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0-186.216.dsc' linux_4.4.0-186.216.dsc 11909 SHA256:be89e56f62386e9c7461b2ddab85e5f456214d9198012bc1ab814a3638aae8c5
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0.orig.tar.gz' linux_4.4.0.orig.tar.gz 132860730 SHA256:730e75919b5d30a9bc934ccb300eaedfdf44994ca9ee1d07a46901c46c221357
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0-186.216.diff.gz' linux_4.4.0-186.216.diff.gz 16629023 SHA256:d9355d89b9c9ddabd89d0ff6fa09d59894f31c48122fdb8f17ac08b6839d13b3
+$ apt-get source -qq --print-uris linux=4.4.0-187.217
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0-187.217.dsc' linux_4.4.0-187.217.dsc 11909 SHA256:9f243a59c772487e160f6020300bfb07b48342f86b1cc063a7d71e59fcb7bf65
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0.orig.tar.gz' linux_4.4.0.orig.tar.gz 132860730 SHA256:730e75919b5d30a9bc934ccb300eaedfdf44994ca9ee1d07a46901c46c221357
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0-187.217.diff.gz' linux_4.4.0-187.217.diff.gz 16662935 SHA256:387884e66fbed42af7f9529f1706c8597a048f203c56239e0441aba769975519
 ```
 
 ### `dpkg` source package: `llvm-toolchain-6.0=1:6.0-1ubuntu2~16.04.1`

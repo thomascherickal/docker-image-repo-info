@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:67ea9eb6fb52407262f8d50d199b0ebf1a13ed4f4e0d993297c684d190dbede2`
-- Created: `2020-08-14T00:28:12.213920982Z`
-- Virtual Size: ~ 783.89 Mb  
+- Image ID: `sha256:0bdd28092e17abf0457cfaaebc54f0dd389bc0b347da34b5b4900c55be216280`
+- Created: `2020-08-19T22:59:27.498898782Z`
+- Virtual Size: ~ 783.90 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/gzserver_entrypoint.sh"]`
@@ -231,11 +231,11 @@ $ apt-get source -qq --print-uris audit=1:2.8.5-2ubuntu6
 'http://archive.ubuntu.com/ubuntu/pool/main/a/audit/audit_2.8.5-2ubuntu6.debian.tar.xz' audit_2.8.5-2ubuntu6.debian.tar.xz 18712 SHA256:d85ecf206bfe256a86e6d39602cd2744beda264a28e413f31c4da227e6542ea7
 ```
 
-### `dpkg` source package: `base-files=11ubuntu5`
+### `dpkg` source package: `base-files=11ubuntu5.1`
 
 Binary Packages:
 
-- `base-files=11ubuntu5`
+- `base-files=11ubuntu5.1`
 
 Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
@@ -244,9 +244,9 @@ Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris base-files=11ubuntu5
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_11ubuntu5.dsc' base-files_11ubuntu5.dsc 1629 SHA256:f4e78cc27f950a69d03f8a2d4633d4c9780b178a78eb9102d849729b92607360
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_11ubuntu5.tar.xz' base-files_11ubuntu5.tar.xz 79116 SHA256:0e5a244f3266a5fc668cc05e8562a59f289c8d239632a005b8c38a9f1fc9bf78
+$ apt-get source -qq --print-uris base-files=11ubuntu5.1
+'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_11ubuntu5.1.dsc' base-files_11ubuntu5.1.dsc 1267 SHA256:5a11844317d216cf356c3c4893e61a2e950d1baafb12dd5bf4903f211db642cb
+'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_11ubuntu5.1.tar.xz' base-files_11ubuntu5.1.tar.xz 79132 SHA256:4f5859d89b2fdfbf44e56013950b7eedfec83145e52ee4c28a157f49d0524424
 ```
 
 ### `dpkg` source package: `base-passwd=3.5.47`
@@ -539,12 +539,12 @@ $ apt-get source -qq --print-uris coreutils=8.30-3ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/c/coreutils/coreutils_8.30-3ubuntu2.debian.tar.xz' coreutils_8.30-3ubuntu2.debian.tar.xz 39636 SHA256:98204ef9d94e5c567880cd0245fdb7940eaf7592d6c6830c300ad117628b351f
 ```
 
-### `dpkg` source package: `curl=7.68.0-1ubuntu2.1`
+### `dpkg` source package: `curl=7.68.0-1ubuntu2.2`
 
 Binary Packages:
 
-- `libcurl3-gnutls:amd64=7.68.0-1ubuntu2.1`
-- `libcurl4:amd64=7.68.0-1ubuntu2.1`
+- `libcurl3-gnutls:amd64=7.68.0-1ubuntu2.2`
+- `libcurl4:amd64=7.68.0-1ubuntu2.2`
 
 Licenses: (parsed from: `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/doc/libcurl4/copyright`)
 
@@ -558,10 +558,10 @@ Licenses: (parsed from: `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris curl=7.68.0-1ubuntu2.1
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.1.dsc' curl_7.68.0-1ubuntu2.1.dsc 2733 SHA256:0482ce43af3f1b2a85d7814d7c3d0606235aa3200ef3191dffa841829ab2ddf6
+$ apt-get source -qq --print-uris curl=7.68.0-1ubuntu2.2
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.2.dsc' curl_7.68.0-1ubuntu2.2.dsc 2733 SHA256:7d00c4b9ad285d449cc101cf2bd0f5c8d14e6d08d16c8e6c5013bd8fd8b292ab
 'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0.orig.tar.gz' curl_7.68.0.orig.tar.gz 4096350 SHA256:1dd7604e418b0b9a9077f62f763f6684c1b092a7bc17e3f354b8ad5c964d7358
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.1.debian.tar.xz' curl_7.68.0-1ubuntu2.1.debian.tar.xz 33416 SHA256:21184570def2337c24cdaf7c1f044c062944cb948733af997e70e26e5738ed1c
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.2.debian.tar.xz' curl_7.68.0-1ubuntu2.2.debian.tar.xz 34624 SHA256:713b79597c36ae16d1d1618cca60a0cf6de2bbd280151087e89cfbd9a4a826d5
 ```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2`
@@ -3217,19 +3217,24 @@ $ apt-get source -qq --print-uris libsdl2=2.0.10+dfsg1-3
 'http://archive.ubuntu.com/ubuntu/pool/universe/libs/libsdl2/libsdl2_2.0.10+dfsg1-3.debian.tar.xz' libsdl2_2.0.10+dfsg1-3.debian.tar.xz 22512 SHA256:fb6b7a079c7f50df6f205952b95d6d1897b1fee4b2ca85c0ffbc7ff683f794e6
 ```
 
-### `dpkg` source package: `libseccomp=2.4.3-1ubuntu3.20.04.2`
+### `dpkg` source package: `libseccomp=2.4.3-1ubuntu3.20.04.3`
 
 Binary Packages:
 
-- `libseccomp2:amd64=2.4.3-1ubuntu3.20.04.2`
+- `libseccomp2:amd64=2.4.3-1ubuntu3.20.04.3`
 
 Licenses: (parsed from: `/usr/share/doc/libseccomp2/copyright`)
 
 - `LGPL-2.1`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris libseccomp=2.4.3-1ubuntu3.20.04.3
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3-1ubuntu3.20.04.3.dsc' libseccomp_2.4.3-1ubuntu3.20.04.3.dsc 2226 SHA256:6d1692ad720075c24d7c7beeaaaae041eac3df1963fbf90bde024171e05ec395
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3.orig.tar.gz' libseccomp_2.4.3.orig.tar.gz 598147 SHA256:cf15d1421997fac45b936515af61d209c4fd788af11005d212b3d0fd71e7991d
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3-1ubuntu3.20.04.3.debian.tar.xz' libseccomp_2.4.3-1ubuntu3.20.04.3.debian.tar.xz 36444 SHA256:6231018b3d3e4fbb853a9f739fd6a76e67052d31362dfa3eefe774782baed7ce
+```
 
 ### `dpkg` source package: `libselinux=3.0-1build2`
 
@@ -5931,11 +5936,11 @@ $ apt-get source -qq --print-uris speex=1.2~rc1.2-1.1ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/s/speex/speex_1.2~rc1.2-1.1ubuntu1.diff.gz' speex_1.2~rc1.2-1.1ubuntu1.diff.gz 10477 SHA256:afe21b8b229dcdf8dd272d0ca724e9973aa4393ad5ff5959357cce7d23e0680b
 ```
 
-### `dpkg` source package: `sqlite3=3.31.1-4ubuntu0.1`
+### `dpkg` source package: `sqlite3=3.31.1-4ubuntu0.2`
 
 Binary Packages:
 
-- `libsqlite3-0:amd64=3.31.1-4ubuntu0.1`
+- `libsqlite3-0:amd64=3.31.1-4ubuntu0.2`
 
 Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 
@@ -5943,9 +5948,15 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 - `GPL-2+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris sqlite3=3.31.1-4ubuntu0.2
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.31.1-4ubuntu0.2.dsc' sqlite3_3.31.1-4ubuntu0.2.dsc 2519 SHA256:f7da60b389f3bebbdeef048f599246b044471507330fba66fd749538b29a7428
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.31.1.orig-www.tar.xz' sqlite3_3.31.1.orig-www.tar.xz 5764424 SHA256:cab01c285fad4eb08bd1e3659cde5a44e17e024badbe9ed01b2de9c625ed0831
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.31.1.orig.tar.xz' sqlite3_3.31.1.orig.tar.xz 7108036 SHA256:dfa6eda312d391d33b7790b061f533d723dc5c30b60720ddd98c89a6fb29272f
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.31.1-4ubuntu0.2.debian.tar.xz' sqlite3_3.31.1-4ubuntu0.2.debian.tar.xz 33492 SHA256:c21a01d084df0a1d6be1e29e420c462277213cbd082c3a49a8501c2f023e80c1
+```
 
 ### `dpkg` source package: `sratom=0.6.4-1`
 
@@ -5990,12 +6001,12 @@ $ apt-get source -qq --print-uris superlu=5.2.1+dfsg1-4
 'http://archive.ubuntu.com/ubuntu/pool/universe/s/superlu/superlu_5.2.1+dfsg1-4.debian.tar.xz' superlu_5.2.1+dfsg1-4.debian.tar.xz 6436 SHA256:3f4af1a6931b6a2d0e5fad02aa57af8c2d9773bcfbdf2230fd866184242b69f6
 ```
 
-### `dpkg` source package: `systemd=245.4-4ubuntu3.1`
+### `dpkg` source package: `systemd=245.4-4ubuntu3.2`
 
 Binary Packages:
 
-- `libsystemd0:amd64=245.4-4ubuntu3.1`
-- `libudev1:amd64=245.4-4ubuntu3.1`
+- `libsystemd0:amd64=245.4-4ubuntu3.2`
+- `libudev1:amd64=245.4-4ubuntu3.2`
 
 Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/libudev1/copyright`)
 
@@ -6008,9 +6019,14 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris systemd=245.4-4ubuntu3.2
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.2.dsc' systemd_245.4-4ubuntu3.2.dsc 5291 SHA256:4403949784fe55c2f460be3515bac0c79b6df40c4d5e51e75a38f32efc1815ff
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4.orig.tar.gz' systemd_245.4.orig.tar.gz 9000780 SHA256:bd1c467045989ab986b29d003f17960ccb201bc923093db978b4cfb299ae8a63
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.2.debian.tar.xz' systemd_245.4-4ubuntu3.2.debian.tar.xz 217140 SHA256:3fe613d3a2b30d714d777ecffb25e1a16fc14162de61d2ff70ea0e26b98af51b
+```
 
 ### `dpkg` source package: `sysvinit=2.96-2.1ubuntu1`
 
