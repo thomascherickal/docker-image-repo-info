@@ -1,26 +1,26 @@
-# `percona:psmdb-3.6.18`
+# `percona:psmdb-3.6.19`
 
 ## Docker Metadata
 
-- Image ID: `sha256:237ee5fdc8731de53675c3bf679827f1920cd4e9b1c3d23c48e3736b5a89ea3c`
-- Created: `2020-08-10T18:45:20.89902922Z`
-- Virtual Size: ~ 431.41 Mb  
+- Image ID: `sha256:c0a82035177d4bc2fd31a4360a6ca256330e60e8b7ee5c848aa96714fc5ec0c6`
+- Created: `2020-08-17T18:21:25.3872669Z`
+- Virtual Size: ~ 431.46 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
 - Command: `["mongod"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `PSMDB_VERSION=3.6.18-6.0`
+  - `PSMDB_VERSION=3.6.19-7.0`
   - `OS_VER=el7`
-  - `FULL_PERCONA_VERSION=3.6.18-6.0.el7`
+  - `FULL_PERCONA_VERSION=3.6.19-7.0.el7`
   - `K8S_TOOLS_VERSION=0.5.0`
 - Labels:
   - `org.label-schema.build-date=20200809`
   - `org.label-schema.description=Percona Server for MongoDB is our free and open-source drop-in replacement for MongoDB Community Edition. It offers all the features and benefits of MongoDB Community Edition, plus additional enterprise-grade functionality.`
   - `org.label-schema.license=SSPLv1`
   - `org.label-schema.name=Percona Server for MongoDB`
-  - `org.label-schema.schema-version=3.6.18-6.0`
+  - `org.label-schema.schema-version=3.6.19-7.0`
   - `org.label-schema.vendor=Percona`
   - `org.opencontainers.image.authors=info@percona.com`
   - `org.opencontainers.image.created=2020-08-09 00:00:00+01:00`
@@ -29,23 +29,23 @@
   - `org.opencontainers.image.licenses=GPL-2.0-only`
   - `org.opencontainers.image.title=Percona Server for MongoDB`
   - `org.opencontainers.image.vendor=Percona`
-  - `org.opencontainers.image.version=3.6.18-6.0`
+  - `org.opencontainers.image.version=3.6.19-7.0`
 
 ## `rpm` (`.rpm`-based packages)
 
-### `rpm` package: `Percona-Server-MongoDB-36-mongos-3.6.18-6.0.el7.x86_64`
+### `rpm` package: `Percona-Server-MongoDB-36-mongos-3.6.19-7.0.el7.x86_64`
 
 Licenses (from `rpm --query`): SSPL
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `Percona-Server-MongoDB-36-server-3.6.18-6.0.el7.x86_64`
+### `rpm` package: `Percona-Server-MongoDB-36-server-3.6.19-7.0.el7.x86_64`
 
 Licenses (from `rpm --query`): SSPL
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `Percona-Server-MongoDB-36-shell-3.6.18-6.0.el7.x86_64`
+### `rpm` package: `Percona-Server-MongoDB-36-shell-3.6.19-7.0.el7.x86_64`
 
 Licenses (from `rpm --query`): SSPL
 
