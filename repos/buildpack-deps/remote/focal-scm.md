@@ -1,7 +1,7 @@
 ## `buildpack-deps:focal-scm`
 
 ```console
-$ docker pull buildpack-deps@sha256:a51f2d80e53a08b22115284bf3a1cc7aabd56d162d88ba870a0158f487607f3b
+$ docker pull buildpack-deps@sha256:f0b959c9b5fed6e0e384b684296f2fb187525da6dea4a15f32cf4d58ce85de0a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -77,63 +77,63 @@ RUN apt-get update && apt-get install -y --no-install-recommends 		bzr 		git 		m
 ### `buildpack-deps:focal-scm` - linux; arm variant v7
 
 ```console
-$ docker pull buildpack-deps@sha256:53202a6ff5610a0e8feeaedcf18d8cd6da3351b86f8946a692f74616a09034e5
+$ docker pull buildpack-deps@sha256:4322c35e857cfe075b4e9015584cad3e8648524100e5979a2a6ea32aa2804409
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **88.2 MB (88214695 bytes)**  
+-	Total Size: **88.2 MB (88219560 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4d264af774c52fe5ffea810df72ef0d15729665f8cbbf85a9fac29af1180aee4`
+-	Image ID: `sha256:cf837e7a5163ae94bedb6968f6c494760239f144e8f68697c9ffa72867af36cb`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Fri, 24 Jul 2020 16:06:12 GMT
-ADD file:bcba01fb27d025c2931e46af0b091f98e743ab46eaa1d2d2dd38e6aeb9706267 in / 
-# Fri, 24 Jul 2020 16:06:20 GMT
+# Wed, 19 Aug 2020 21:45:35 GMT
+ADD file:bfe01aadc11b91c906991cb5cb5fe488e49855783a0cd38cf51edd0aa6bc8b98 in / 
+# Wed, 19 Aug 2020 21:45:38 GMT
 RUN [ -z "$(apt-get indextargets)" ]
-# Fri, 24 Jul 2020 16:06:26 GMT
+# Wed, 19 Aug 2020 21:45:41 GMT
 RUN set -xe 		&& echo '#!/bin/sh' > /usr/sbin/policy-rc.d 	&& echo 'exit 101' >> /usr/sbin/policy-rc.d 	&& chmod +x /usr/sbin/policy-rc.d 		&& dpkg-divert --local --rename --add /sbin/initctl 	&& cp -a /usr/sbin/policy-rc.d /sbin/initctl 	&& sed -i 's/^exit.*/exit 0/' /sbin/initctl 		&& echo 'force-unsafe-io' > /etc/dpkg/dpkg.cfg.d/docker-apt-speedup 		&& echo 'DPkg::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' > /etc/apt/apt.conf.d/docker-clean 	&& echo 'APT::Update::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' >> /etc/apt/apt.conf.d/docker-clean 	&& echo 'Dir::Cache::pkgcache ""; Dir::Cache::srcpkgcache "";' >> /etc/apt/apt.conf.d/docker-clean 		&& echo 'Acquire::Languages "none";' > /etc/apt/apt.conf.d/docker-no-languages 		&& echo 'Acquire::GzipIndexes "true"; Acquire::CompressionTypes::Order:: "gz";' > /etc/apt/apt.conf.d/docker-gzip-indexes 		&& echo 'Apt::AutoRemove::SuggestsImportant "false";' > /etc/apt/apt.conf.d/docker-autoremove-suggests
-# Fri, 24 Jul 2020 16:06:50 GMT
+# Wed, 19 Aug 2020 21:45:43 GMT
 RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
-# Fri, 24 Jul 2020 16:06:55 GMT
+# Wed, 19 Aug 2020 21:45:44 GMT
 CMD ["/bin/bash"]
-# Fri, 24 Jul 2020 17:57:58 GMT
+# Wed, 19 Aug 2020 23:37:18 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	&& rm -rf /var/lib/apt/lists/*
-# Fri, 24 Jul 2020 17:58:33 GMT
+# Wed, 19 Aug 2020 23:37:55 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Fri, 24 Jul 2020 18:00:07 GMT
+# Wed, 19 Aug 2020 23:39:20 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		bzr 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
 ```
 
 -	Layers:
-	-	`sha256:86924fd76ad7a77a1ec54ad07fdb4d2d51c12b6070f2dfe92dbf92e3f99702d7`  
-		Last Modified: Mon, 20 Jul 2020 15:50:15 GMT  
-		Size: 24.0 MB (24034159 bytes)  
+	-	`sha256:ceea98c5fa08244c844238a2ce484fa14c30ffa489edb9895fba50b77a7cfa60`  
+		Last Modified: Mon, 03 Aug 2020 15:51:06 GMT  
+		Size: 24.0 MB (24037952 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8e967235e6adc918de90ffb2d143fb1ad2659c63f6c0c8a9c70c8e08bff13917`  
-		Last Modified: Fri, 24 Jul 2020 16:14:35 GMT  
-		Size: 32.3 KB (32349 bytes)  
+	-	`sha256:8f3da9874eeead204573f212800c6ade25da830235c0ad3548c26f722eace05b`  
+		Last Modified: Wed, 19 Aug 2020 21:47:26 GMT  
+		Size: 32.3 KB (32341 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fabf100c8ea14f6342f16b9b10cb81a1355aa9a9d6b8f607c04119c9790f1a51`  
-		Last Modified: Fri, 24 Jul 2020 16:14:35 GMT  
+	-	`sha256:c68fbe4d8e6dd4748556d6ef14fdd8135f7443715086c717cdf274c94ecec8ad`  
+		Last Modified: Wed, 19 Aug 2020 21:47:26 GMT  
 		Size: 849.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:344cec738d225bc4e9abb563b22a040685352088e9d588d910c09039fa47ac35`  
-		Last Modified: Fri, 24 Jul 2020 16:14:35 GMT  
-		Size: 189.0 B  
+	-	`sha256:03d3cf167993a17554b119a4afa4c1bc5ec478015827bf1e1f4ca23296e43f50`  
+		Last Modified: Wed, 19 Aug 2020 21:47:26 GMT  
+		Size: 188.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7289da11e3a62aa99da074c382eccf3812167072a3147d29bceb7d45b9e22bfe`  
-		Last Modified: Fri, 24 Jul 2020 18:15:03 GMT  
-		Size: 5.9 MB (5854937 bytes)  
+	-	`sha256:6110f525eb1611c149adb549c27097f3996d110da6cd54063a19bb32d80ec4e6`  
+		Last Modified: Wed, 19 Aug 2020 23:55:24 GMT  
+		Size: 5.9 MB (5855155 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2bf7a75afc7720477d11fa4f5187fac976ace930e6e54b4bbbf0d2f9e91ec168`  
-		Last Modified: Fri, 24 Jul 2020 18:15:02 GMT  
-		Size: 3.0 MB (3044526 bytes)  
+	-	`sha256:06511a717911fe1422ef4a1db0d0b24881aefa03f603b022a9ab17b4298fd69c`  
+		Last Modified: Wed, 19 Aug 2020 23:55:23 GMT  
+		Size: 3.0 MB (3044740 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:07c17470ee08bc2ebbb57b9bbb05ab4978e3e329ede7dc1f14bbf02bb9ce6880`  
-		Last Modified: Fri, 24 Jul 2020 18:15:34 GMT  
-		Size: 55.2 MB (55247686 bytes)  
+	-	`sha256:a102efff068b33d673c4980555704db251542daecaca0579c9c6b4f3772a1716`  
+		Last Modified: Wed, 19 Aug 2020 23:55:52 GMT  
+		Size: 55.2 MB (55248335 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `buildpack-deps:focal-scm` - linux; arm64 variant v8
