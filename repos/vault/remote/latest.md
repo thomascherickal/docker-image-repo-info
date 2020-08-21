@@ -1,7 +1,7 @@
 ## `vault:latest`
 
 ```console
-$ docker pull vault@sha256:e9c163ece5abde2ac1dd544abb8f61435b610bebc536d769196bcc3f5ab3d517
+$ docker pull vault@sha256:6fc3a117ce9fea9041fa575cb0f02c4bf19aa4b3d97ce71ea3c8caba76084e2a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -14,14 +14,14 @@ $ docker pull vault@sha256:e9c163ece5abde2ac1dd544abb8f61435b610bebc536d769196bc
 ### `vault:latest` - linux; amd64
 
 ```console
-$ docker pull vault@sha256:93bffce899095d5b085273155515741311bb2dcdd52fb56fbe0f188f71c910fe
+$ docker pull vault@sha256:d8e230e3995e6a58349d90c40393c5e6c33a35d419dca31e5b2f11e5f26c210c
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **54.3 MB (54325728 bytes)**  
+-	Total Size: **55.0 MB (55001916 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:843dda5d35e1bd42612c15ba3e1f636756596226b93b72f008bfd7dba1a1b86f`
+-	Image ID: `sha256:14889d38c67545d7b96c510e816782c52426c3e8545af34d7c2ffa792c151ee1`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["server","-dev"]`
 
@@ -30,28 +30,28 @@ $ docker pull vault@sha256:93bffce899095d5b085273155515741311bb2dcdd52fb56fbe0f1
 ADD file:66a440394c2442570f1f060e25c86613cb2d88a8af0c71c5a4154b3570e9a805 in / 
 # Fri, 24 Apr 2020 01:05:21 GMT
 CMD ["/bin/sh"]
-# Wed, 22 Jul 2020 01:31:55 GMT
-ARG VAULT_VERSION=1.5.0
-# Wed, 22 Jul 2020 01:31:57 GMT
-# ARGS: VAULT_VERSION=1.5.0
+# Fri, 21 Aug 2020 19:18:10 GMT
+ARG VAULT_VERSION=1.5.2
+# Fri, 21 Aug 2020 19:18:11 GMT
+# ARGS: VAULT_VERSION=1.5.2
 RUN addgroup vault &&     adduser -S -G vault vault
-# Wed, 22 Jul 2020 01:32:06 GMT
-# ARGS: VAULT_VERSION=1.5.0
+# Fri, 21 Aug 2020 19:18:20 GMT
+# ARGS: VAULT_VERSION=1.5.2
 RUN set -eux;     apk add --no-cache ca-certificates gnupg openssl libcap su-exec dumb-init tzdata &&     apkArch="$(apk --print-arch)";     case "$apkArch" in         armhf) ARCH='arm' ;;         aarch64) ARCH='arm64' ;;         x86_64) ARCH='amd64' ;;         x86) ARCH='386' ;;         *) echo >&2 "error: unsupported architecture: $apkArch"; exit 1 ;;     esac &&     VAULT_GPGKEY=91A6E7F85D05C65630BEF18951852D87348FFC4C;     found='';     for server in         hkp://p80.pool.sks-keyservers.net:80         hkp://keyserver.ubuntu.com:80         hkp://pgp.mit.edu:80     ; do         echo "Fetching GPG key $VAULT_GPGKEY from $server";         gpg --batch --keyserver "$server" --recv-keys "$VAULT_GPGKEY" && found=yes && break;     done;     test -z "$found" && echo >&2 "error: failed to fetch GPG key $VAULT_GPGKEY" && exit 1;     mkdir -p /tmp/build &&     cd /tmp/build &&     wget https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_linux_${ARCH}.zip &&     wget https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_SHA256SUMS &&     wget https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_SHA256SUMS.sig &&     gpg --batch --verify vault_${VAULT_VERSION}_SHA256SUMS.sig vault_${VAULT_VERSION}_SHA256SUMS &&     grep vault_${VAULT_VERSION}_linux_${ARCH}.zip vault_${VAULT_VERSION}_SHA256SUMS | sha256sum -c &&     unzip -d /bin vault_${VAULT_VERSION}_linux_${ARCH}.zip &&     cd /tmp &&     rm -rf /tmp/build &&     gpgconf --kill dirmngr &&     gpgconf --kill gpg-agent &&     apk del gnupg openssl &&     rm -rf /root/.gnupg
-# Wed, 22 Jul 2020 01:32:08 GMT
-# ARGS: VAULT_VERSION=1.5.0
+# Fri, 21 Aug 2020 19:18:21 GMT
+# ARGS: VAULT_VERSION=1.5.2
 RUN mkdir -p /vault/logs &&     mkdir -p /vault/file &&     mkdir -p /vault/config &&     chown -R vault:vault /vault
-# Wed, 22 Jul 2020 01:32:08 GMT
+# Fri, 21 Aug 2020 19:18:22 GMT
 VOLUME [/vault/logs]
-# Wed, 22 Jul 2020 01:32:09 GMT
+# Fri, 21 Aug 2020 19:18:22 GMT
 VOLUME [/vault/file]
-# Wed, 22 Jul 2020 01:32:09 GMT
+# Fri, 21 Aug 2020 19:18:22 GMT
 EXPOSE 8200
-# Wed, 22 Jul 2020 01:32:09 GMT
+# Fri, 21 Aug 2020 19:18:23 GMT
 COPY file:a1e68ac70727f49824592e948e9a677097c8d3752a047b468122ba433b453fc4 in /usr/local/bin/docker-entrypoint.sh 
-# Wed, 22 Jul 2020 01:32:10 GMT
+# Fri, 21 Aug 2020 19:18:23 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Wed, 22 Jul 2020 01:32:10 GMT
+# Fri, 21 Aug 2020 19:18:23 GMT
 CMD ["server" "-dev"]
 ```
 
@@ -60,21 +60,21 @@ CMD ["server" "-dev"]
 		Last Modified: Fri, 24 Apr 2020 01:06:07 GMT  
 		Size: 2.8 MB (2795580 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f83d0d2835011ad2bfa426f921e713119f9313e412918397a0129ccab01e09c6`  
-		Last Modified: Wed, 22 Jul 2020 01:32:19 GMT  
-		Size: 1.3 KB (1260 bytes)  
+	-	`sha256:6b3b7e4276dd5ad9c3dfaaf1424dba7a6f15a4e09df2266c92da6d97a182e418`  
+		Last Modified: Fri, 21 Aug 2020 19:19:29 GMT  
+		Size: 1.3 KB (1262 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:75b2ebf789aae50091af5d9e17127b37f32f9db0c0a982f57443dbb32e3e704f`  
-		Last Modified: Wed, 22 Jul 2020 01:32:32 GMT  
-		Size: 51.5 MB (51526910 bytes)  
+	-	`sha256:2c904ae0f10cfe3d473dd76ad2829bfb30a81a1534e84289499623faa33b8a72`  
+		Last Modified: Fri, 21 Aug 2020 19:19:39 GMT  
+		Size: 52.2 MB (52203100 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0d3cc15a133f4b9ecbcbb30b6f7a73a7816a7b2610f36e52c3eca21d9dc01b8f`  
-		Last Modified: Wed, 22 Jul 2020 01:32:20 GMT  
+	-	`sha256:351356674c870478218f981698fd3ad4fa991e6b1b8b510bc154c7ac6c4ba27d`  
+		Last Modified: Fri, 21 Aug 2020 19:19:28 GMT  
 		Size: 154.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0e2ee5161fc733a9c81babca2ab2eb74bbfc18569bb4cd025f64d91bf7e831c3`  
-		Last Modified: Wed, 22 Jul 2020 01:32:19 GMT  
-		Size: 1.8 KB (1824 bytes)  
+	-	`sha256:c7780ab5359928ed984cdc8a18654804dfbba80b0b7e227f066d515adff2451d`  
+		Last Modified: Fri, 21 Aug 2020 19:19:28 GMT  
+		Size: 1.8 KB (1820 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `vault:latest` - linux; arm variant v6
@@ -146,14 +146,14 @@ CMD ["server" "-dev"]
 ### `vault:latest` - linux; arm64 variant v8
 
 ```console
-$ docker pull vault@sha256:ff596cf9df78a300904af5808996eba930c8af17e2877536e88e723bfdbdc78c
+$ docker pull vault@sha256:4e072c7e7622579e0e463f668563b23d046afaf28950cf3475221a91e76ac618
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **51.3 MB (51261501 bytes)**  
+-	Total Size: **51.9 MB (51919116 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2bc4ed95de203cae2ffac8294a9c0aaf470fd5f430e60f0a614c15d2448fc047`
+-	Image ID: `sha256:dc20548ad12b95cadb9be7e532d5649cae92d8c50371e4cbeda23a8db14bbedb`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["server","-dev"]`
 
@@ -162,28 +162,28 @@ $ docker pull vault@sha256:ff596cf9df78a300904af5808996eba930c8af17e2877536e88e7
 ADD file:75529f7e83edb6d0457a3b8bbfe33d4e3a12f339c5ace517d0f52dbedd9a146b in / 
 # Fri, 24 Apr 2020 00:14:53 GMT
 CMD ["/bin/sh"]
-# Wed, 22 Jul 2020 00:53:11 GMT
-ARG VAULT_VERSION=1.5.0
-# Wed, 22 Jul 2020 00:53:15 GMT
-# ARGS: VAULT_VERSION=1.5.0
+# Fri, 21 Aug 2020 19:08:29 GMT
+ARG VAULT_VERSION=1.5.2
+# Fri, 21 Aug 2020 19:08:31 GMT
+# ARGS: VAULT_VERSION=1.5.2
 RUN addgroup vault &&     adduser -S -G vault vault
-# Wed, 22 Jul 2020 00:53:23 GMT
-# ARGS: VAULT_VERSION=1.5.0
+# Fri, 21 Aug 2020 19:08:41 GMT
+# ARGS: VAULT_VERSION=1.5.2
 RUN set -eux;     apk add --no-cache ca-certificates gnupg openssl libcap su-exec dumb-init tzdata &&     apkArch="$(apk --print-arch)";     case "$apkArch" in         armhf) ARCH='arm' ;;         aarch64) ARCH='arm64' ;;         x86_64) ARCH='amd64' ;;         x86) ARCH='386' ;;         *) echo >&2 "error: unsupported architecture: $apkArch"; exit 1 ;;     esac &&     VAULT_GPGKEY=91A6E7F85D05C65630BEF18951852D87348FFC4C;     found='';     for server in         hkp://p80.pool.sks-keyservers.net:80         hkp://keyserver.ubuntu.com:80         hkp://pgp.mit.edu:80     ; do         echo "Fetching GPG key $VAULT_GPGKEY from $server";         gpg --batch --keyserver "$server" --recv-keys "$VAULT_GPGKEY" && found=yes && break;     done;     test -z "$found" && echo >&2 "error: failed to fetch GPG key $VAULT_GPGKEY" && exit 1;     mkdir -p /tmp/build &&     cd /tmp/build &&     wget https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_linux_${ARCH}.zip &&     wget https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_SHA256SUMS &&     wget https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_SHA256SUMS.sig &&     gpg --batch --verify vault_${VAULT_VERSION}_SHA256SUMS.sig vault_${VAULT_VERSION}_SHA256SUMS &&     grep vault_${VAULT_VERSION}_linux_${ARCH}.zip vault_${VAULT_VERSION}_SHA256SUMS | sha256sum -c &&     unzip -d /bin vault_${VAULT_VERSION}_linux_${ARCH}.zip &&     cd /tmp &&     rm -rf /tmp/build &&     gpgconf --kill dirmngr &&     gpgconf --kill gpg-agent &&     apk del gnupg openssl &&     rm -rf /root/.gnupg
-# Wed, 22 Jul 2020 00:53:27 GMT
-# ARGS: VAULT_VERSION=1.5.0
+# Fri, 21 Aug 2020 19:08:43 GMT
+# ARGS: VAULT_VERSION=1.5.2
 RUN mkdir -p /vault/logs &&     mkdir -p /vault/file &&     mkdir -p /vault/config &&     chown -R vault:vault /vault
-# Wed, 22 Jul 2020 00:53:28 GMT
+# Fri, 21 Aug 2020 19:08:44 GMT
 VOLUME [/vault/logs]
-# Wed, 22 Jul 2020 00:53:28 GMT
+# Fri, 21 Aug 2020 19:08:45 GMT
 VOLUME [/vault/file]
-# Wed, 22 Jul 2020 00:53:29 GMT
+# Fri, 21 Aug 2020 19:08:45 GMT
 EXPOSE 8200
-# Wed, 22 Jul 2020 00:53:30 GMT
+# Fri, 21 Aug 2020 19:08:46 GMT
 COPY file:a1e68ac70727f49824592e948e9a677097c8d3752a047b468122ba433b453fc4 in /usr/local/bin/docker-entrypoint.sh 
-# Wed, 22 Jul 2020 00:53:30 GMT
+# Fri, 21 Aug 2020 19:08:46 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Wed, 22 Jul 2020 00:53:31 GMT
+# Fri, 21 Aug 2020 19:08:47 GMT
 CMD ["server" "-dev"]
 ```
 
@@ -192,20 +192,20 @@ CMD ["server" "-dev"]
 		Last Modified: Fri, 24 Apr 2020 00:15:54 GMT  
 		Size: 2.7 MB (2718734 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a34f3c292160241915a90468ebd833263004f79dc31f19c6b55022c5bc23f425`  
-		Last Modified: Wed, 22 Jul 2020 00:53:41 GMT  
+	-	`sha256:be2e2a3a90170cf2a14df612f2bd9747f95704d1426bb44b84fe1f79de2396fc`  
+		Last Modified: Fri, 21 Aug 2020 19:10:09 GMT  
 		Size: 1.3 KB (1290 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:969828cd481f598b339f4f94d09524a2385c07cf4cd41fdc64e76dbd30fd8b91`  
-		Last Modified: Wed, 22 Jul 2020 00:53:53 GMT  
-		Size: 48.5 MB (48539468 bytes)  
+	-	`sha256:7bcd1768948320328901c1ddea860c0380579c9d041b9373a3cfd681f1a6b62d`  
+		Last Modified: Fri, 21 Aug 2020 19:10:23 GMT  
+		Size: 49.2 MB (49197084 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f89bc576029a71c33adcb793b8ce72231f54246ca41bb41dc81ce149ff7212e7`  
-		Last Modified: Wed, 22 Jul 2020 00:53:41 GMT  
-		Size: 187.0 B  
+	-	`sha256:23ca790cba5393f67ac47c17330a9ac419599eab0532d20487c96a9a1376a6a7`  
+		Last Modified: Fri, 21 Aug 2020 19:10:09 GMT  
+		Size: 186.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b73d93c42445059eaf0931ec83de1981371fd2a665384e43b8d58f5f5471e1a3`  
-		Last Modified: Wed, 22 Jul 2020 00:53:41 GMT  
+	-	`sha256:86179d02812454a6f52b196ff08e39fdb3ed42bd5b8bba49f9946973efbe4c7c`  
+		Last Modified: Fri, 21 Aug 2020 19:10:09 GMT  
 		Size: 1.8 KB (1822 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
