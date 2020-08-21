@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:49771660717527f62e7fce9e5e62ea67d6ff93f965bdb4a54db781d79935598c`
-- Created: `2020-07-24T16:38:14.978920486Z`
+- Image ID: `sha256:d1b369291f87b577cadde29a42dc919bc19a56d1ac2712fd8cc80436699a8d4f`
+- Created: `2020-08-19T23:40:32.982184524Z`
 - Virtual Size: ~ 1.22 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -115,19 +115,23 @@ $ apt-get source -qq --print-uris audit=1:2.8.2-1ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/a/audit/audit_2.8.2-1ubuntu1.debian.tar.xz' audit_2.8.2-1ubuntu1.debian.tar.xz 21344 SHA256:2bc93230e3bf01eef5e9a5acff8f904af074e6e39003f1db8941118fbd041ec2
 ```
 
-### `dpkg` source package: `base-files=10.1ubuntu2.8`
+### `dpkg` source package: `base-files=10.1ubuntu2.9`
 
 Binary Packages:
 
-- `base-files=10.1ubuntu2.8`
+- `base-files=10.1ubuntu2.9`
 
 Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris base-files=10.1ubuntu2.9
+'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_10.1ubuntu2.9.dsc' base-files_10.1ubuntu2.9.dsc 1275 SHA256:d7b2f1c250b358ad4aa76bc6f5f4c681684898b9bdff7208c48ebdb45d4bd927
+'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_10.1ubuntu2.9.tar.xz' base-files_10.1ubuntu2.9.tar.xz 78380 SHA256:42983195aad6985b1914cca55b29812e7358705ec30548e4444130f2c6341697
+```
 
 ### `dpkg` source package: `base-passwd=3.5.44`
 
@@ -245,13 +249,13 @@ $ apt-get source -qq --print-uris coreutils=8.28-1ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/c/coreutils/coreutils_8.28-1ubuntu1.debian.tar.xz' coreutils_8.28-1ubuntu1.debian.tar.xz 37940 SHA256:71ba2e83edc675a79e1e0556aff326ab2ae812332692e3db29615e8ed1b427f4
 ```
 
-### `dpkg` source package: `curl=7.58.0-2ubuntu3.9`
+### `dpkg` source package: `curl=7.58.0-2ubuntu3.10`
 
 Binary Packages:
 
-- `curl=7.58.0-2ubuntu3.9`
-- `libcurl3-gnutls:amd64=7.58.0-2ubuntu3.9`
-- `libcurl4:amd64=7.58.0-2ubuntu3.9`
+- `curl=7.58.0-2ubuntu3.10`
+- `libcurl3-gnutls:amd64=7.58.0-2ubuntu3.10`
+- `libcurl4:amd64=7.58.0-2ubuntu3.10`
 
 Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/doc/libcurl4/copyright`)
 
@@ -265,10 +269,10 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 Source:
 
 ```console
-$ apt-get source -qq --print-uris curl=7.58.0-2ubuntu3.9
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.58.0-2ubuntu3.9.dsc' curl_7.58.0-2ubuntu3.9.dsc 2777 SHA256:e6300de42c395bc17531dc85a6decd5a6ef0e446625641860c3a7ce8084b2309
+$ apt-get source -qq --print-uris curl=7.58.0-2ubuntu3.10
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.58.0-2ubuntu3.10.dsc' curl_7.58.0-2ubuntu3.10.dsc 2781 SHA256:0f80b3add0f3a8c471d1ae4f0aac8d473a3fcba72e9fba398355f16bfcd4615e
 'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.58.0.orig.tar.gz' curl_7.58.0.orig.tar.gz 3879728 SHA256:cc245bf9a1a42a45df491501d97d5593392a03f7b4f07b952793518d97666115
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.58.0-2ubuntu3.9.debian.tar.xz' curl_7.58.0-2ubuntu3.9.debian.tar.xz 40692 SHA256:6231d88f5dc76718550eb3d89f810f1c0d1ecb84b9da9b261640389427a551ab
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.58.0-2ubuntu3.10.debian.tar.xz' curl_7.58.0-2ubuntu3.10.debian.tar.xz 41908 SHA256:0aca9be6c8fdb0ab69b109b34d4424c99097c894ba8487fd7e28f83bc27f4850
 ```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27~101-g0780600+dfsg-3ubuntu2.1`
@@ -963,11 +967,11 @@ $ apt-get source -qq --print-uris init-system-helpers=1.51
 'http://archive.ubuntu.com/ubuntu/pool/main/i/init-system-helpers/init-system-helpers_1.51.tar.xz' init-system-helpers_1.51.tar.xz 37468 SHA256:e18b28efe8df087146d9c1e4e9c25386ee1b7312f518d48a2a38469a6c661be0
 ```
 
-### `dpkg` source package: `iproute2=4.15.0-2ubuntu1.1`
+### `dpkg` source package: `iproute2=4.15.0-2ubuntu1.2`
 
 Binary Packages:
 
-- `iproute2=4.15.0-2ubuntu1.1`
+- `iproute2=4.15.0-2ubuntu1.2`
 
 Licenses: (parsed from: `/usr/share/doc/iproute2/copyright`)
 
@@ -976,10 +980,10 @@ Licenses: (parsed from: `/usr/share/doc/iproute2/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris iproute2=4.15.0-2ubuntu1.1
-'http://security.ubuntu.com/ubuntu/pool/main/i/iproute2/iproute2_4.15.0-2ubuntu1.1.dsc' iproute2_4.15.0-2ubuntu1.1.dsc 2266 SHA256:6249d68ad54e97789182fe2b03c8c6465dcb5912460f1ab0f8a82bf76dfdb148
-'http://security.ubuntu.com/ubuntu/pool/main/i/iproute2/iproute2_4.15.0.orig.tar.xz' iproute2_4.15.0.orig.tar.xz 648836 SHA256:48d4616a99d7b609b7b795c0ae8ec57099fb0271ed89253e8772c02327798355
-'http://security.ubuntu.com/ubuntu/pool/main/i/iproute2/iproute2_4.15.0-2ubuntu1.1.debian.tar.xz' iproute2_4.15.0-2ubuntu1.1.debian.tar.xz 141972 SHA256:871f75b0bbf6e9a5f95ed518ac4ad7dba00c26211d05301d15ee495bd08f0f73
+$ apt-get source -qq --print-uris iproute2=4.15.0-2ubuntu1.2
+'http://archive.ubuntu.com/ubuntu/pool/main/i/iproute2/iproute2_4.15.0-2ubuntu1.2.dsc' iproute2_4.15.0-2ubuntu1.2.dsc 2282 SHA256:e931744774e5ddc8660693a537fe60cabcf1f512e335af57bd0132d8a13bdc02
+'http://archive.ubuntu.com/ubuntu/pool/main/i/iproute2/iproute2_4.15.0.orig.tar.xz' iproute2_4.15.0.orig.tar.xz 648836 SHA256:48d4616a99d7b609b7b795c0ae8ec57099fb0271ed89253e8772c02327798355
+'http://archive.ubuntu.com/ubuntu/pool/main/i/iproute2/iproute2_4.15.0-2ubuntu1.2.debian.tar.xz' iproute2_4.15.0-2ubuntu1.2.debian.tar.xz 143068 SHA256:e607c8e7e86c7057ea74bbd1dd56fe73c962ea7ebeec4caf3cba2bba584f6c0d
 ```
 
 ### `dpkg` source package: `iptables=1.6.1-2ubuntu2`
@@ -1549,20 +1553,25 @@ $ apt-get source -qq --print-uris libpsl=0.19.1-5build1
 'http://archive.ubuntu.com/ubuntu/pool/main/libp/libpsl/libpsl_0.19.1-5build1.debian.tar.xz' libpsl_0.19.1-5build1.debian.tar.xz 9860 SHA256:53285bee66ac22a25dd41f7778cc4e94ae3d61929eb6701a8064a38a964e40e2
 ```
 
-### `dpkg` source package: `libseccomp=2.4.3-1ubuntu3.18.04.2`
+### `dpkg` source package: `libseccomp=2.4.3-1ubuntu3.18.04.3`
 
 Binary Packages:
 
-- `libseccomp2:amd64=2.4.3-1ubuntu3.18.04.2`
+- `libseccomp2:amd64=2.4.3-1ubuntu3.18.04.3`
 
 Licenses: (parsed from: `/usr/share/doc/libseccomp2/copyright`)
 
 - `LGPL-2`
 - `LGPL-2.0+`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris libseccomp=2.4.3-1ubuntu3.18.04.3
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3-1ubuntu3.18.04.3.dsc' libseccomp_2.4.3-1ubuntu3.18.04.3.dsc 1951 SHA256:a21ac1a2c77ed23af125630a6fe63035e35cd8312d5023efdb5c9434c2d3d30e
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3.orig.tar.gz' libseccomp_2.4.3.orig.tar.gz 598147 SHA256:cf15d1421997fac45b936515af61d209c4fd788af11005d212b3d0fd71e7991d
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3-1ubuntu3.18.04.3.debian.tar.xz' libseccomp_2.4.3-1ubuntu3.18.04.3.debian.tar.xz 27652 SHA256:9110a31f32f7c63318f75c09493c021e454fa46d7bb0ccca4b0874610c85a71c
+```
 
 ### `dpkg` source package: `libselinux=2.7-2build2`
 
@@ -2050,11 +2059,11 @@ $ apt-get source -qq --print-uris mawk=1.3.3-17ubuntu3
 'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.3-17ubuntu3.diff.gz' mawk_1.3.3-17ubuntu3.diff.gz 64052 SHA256:d1be148525885cb1869e35514f55005b5043f3310b08c444625005a3e14c81fc
 ```
 
-### `dpkg` source package: `mysql-5.7=5.7.30-0ubuntu0.18.04.1`
+### `dpkg` source package: `mysql-5.7=5.7.31-0ubuntu0.18.04.1`
 
 Binary Packages:
 
-- `libmysqlclient20:amd64=5.7.30-0ubuntu0.18.04.1`
+- `libmysqlclient20:amd64=5.7.31-0ubuntu0.18.04.1`
 
 Licenses: (parsed from: `/usr/share/doc/libmysqlclient20/copyright`)
 
@@ -2072,9 +2081,14 @@ Licenses: (parsed from: `/usr/share/doc/libmysqlclient20/copyright`)
 - `public-domain`
 - `zlib/libpng`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris mysql-5.7=5.7.31-0ubuntu0.18.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-5.7_5.7.31-0ubuntu0.18.04.1.dsc' mysql-5.7_5.7.31-0ubuntu0.18.04.1.dsc 3446 SHA256:55560786c7397d034b77ad2bbeeef9f08b3c3be5ca3f2244a093c3da96d14a1e
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-5.7_5.7.31.orig.tar.gz' mysql-5.7_5.7.31.orig.tar.gz 51382559 SHA256:85bd222e61846313d7ad7c095ad664c89ca8f52dd9c21b7ac343ead62d701200
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-5.7_5.7.31-0ubuntu0.18.04.1.debian.tar.xz' mysql-5.7_5.7.31-0ubuntu0.18.04.1.debian.tar.xz 156460 SHA256:05bcfcfbe054ac9b645212dabb7329328e6513b758f46ff3192b19370b81f54b
+```
 
 ### `dpkg` source package: `mysql-defaults=1.0.4`
 
@@ -3381,12 +3395,12 @@ $ apt-get source -qq --print-uris sqlite3=3.22.0-1ubuntu0.4
 'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.22.0-1ubuntu0.4.debian.tar.xz' sqlite3_3.22.0-1ubuntu0.4.debian.tar.xz 47632 SHA256:3fddb7f76857daed76685d157320271706c72529aaec2e843a83ea92bc05b689
 ```
 
-### `dpkg` source package: `systemd=237-3ubuntu10.41`
+### `dpkg` source package: `systemd=237-3ubuntu10.42`
 
 Binary Packages:
 
-- `libsystemd0:amd64=237-3ubuntu10.41`
-- `libudev1:amd64=237-3ubuntu10.41`
+- `libsystemd0:amd64=237-3ubuntu10.42`
+- `libudev1:amd64=237-3ubuntu10.42`
 
 Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/libudev1/copyright`)
 
@@ -3398,9 +3412,14 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris systemd=237-3ubuntu10.42
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.42.dsc' systemd_237-3ubuntu10.42.dsc 5182 SHA256:38073197625912794aacfe4522006680aae20d1743699fa9b0de71f14536fa74
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237.orig.tar.gz' systemd_237.orig.tar.gz 6871350 SHA256:c83dabbe1c9de6b9db1dafdb7e04140c7d0535705c68842f6c0768653ba4913c
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.42.debian.tar.xz' systemd_237-3ubuntu10.42.debian.tar.xz 275288 SHA256:8f408963e65e7cd4435df53e43c17f39b4a5d3df0cf66fba99f91a8f5956f685
+```
 
 ### `dpkg` source package: `sysvinit=2.88dsf-59.10ubuntu1`
 
