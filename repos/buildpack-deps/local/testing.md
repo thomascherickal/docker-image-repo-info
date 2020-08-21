@@ -3852,20 +3852,13 @@ Licenses: (parsed from: `/usr/share/doc/libmpc3/copyright`)
 
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mpclib3=1.1.0-1
-'http://deb.debian.org/debian/pool/main/m/mpclib3/mpclib3_1.1.0-1.dsc' mpclib3_1.1.0-1.dsc 1990 SHA256:bb57824015b735bf72399a53f8c6a241e6a8bd402753b0fdcdaa5b99d0aef790
-'http://deb.debian.org/debian/pool/main/m/mpclib3/mpclib3_1.1.0.orig.tar.gz' mpclib3_1.1.0.orig.tar.gz 701263 SHA256:6985c538143c1208dcb1ac42cedad6ff52e267b47e5f970183a3e75125b43c2e
-'http://deb.debian.org/debian/pool/main/m/mpclib3/mpclib3_1.1.0-1.diff.gz' mpclib3_1.1.0-1.diff.gz 3794 SHA256:84b10a4ae958b3015e136b75be5fee22961255d19be655f7d0adae8d4f3bc977
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mpclib3/1.1.0-1/
 
-- https://sources.debian.net/src/mpclib3/1.1.0-1/ (for browsing the source)
-- https://sources.debian.net/src/mpclib3/1.1.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mpclib3/1.1.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mpdecimal=2.4.2-3`
 
@@ -3898,20 +3891,13 @@ Licenses: (parsed from: `/usr/share/doc/libmpfr6/copyright`)
 - `GFDL-1.2`
 - `LGPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mpfr4=4.0.2-1
-'http://deb.debian.org/debian/pool/main/m/mpfr4/mpfr4_4.0.2-1.dsc' mpfr4_4.0.2-1.dsc 1972 SHA256:9021ec2462ed0e73ea1379266740473abf5f826be819226497729f6c6b02e672
-'http://deb.debian.org/debian/pool/main/m/mpfr4/mpfr4_4.0.2.orig.tar.xz' mpfr4_4.0.2.orig.tar.xz 1441996 SHA256:1d3be708604eae0e42d578ba93b390c2a145f17743a744d8f3f8c2ad5855a38a
-'http://deb.debian.org/debian/pool/main/m/mpfr4/mpfr4_4.0.2-1.debian.tar.xz' mpfr4_4.0.2-1.debian.tar.xz 10544 SHA256:99c4d35654f33340f0efdec67142a34753157b20334cadad9018f5eab29738da
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mpfr4/4.0.2-1/
 
-- https://sources.debian.net/src/mpfr4/4.0.2-1/ (for browsing the source)
-- https://sources.debian.net/src/mpfr4/4.0.2-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mpfr4/4.0.2-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mysql-defaults=1.0.5`
 
@@ -4341,20 +4327,13 @@ Licenses: (parsed from: `/usr/share/doc/libpango-1.0-0/copyright`, `/usr/share/d
 - `TCL`
 - `Unicode`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pango1.0=1.44.7-4
-'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.44.7-4.dsc' pango1.0_1.44.7-4.dsc 3521 SHA256:93d56e77e608f115d826467d11dcc45b8321837bffb25d409d6ffb2e7c07f2f2
-'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.44.7.orig.tar.xz' pango1.0_1.44.7.orig.tar.xz 521384 SHA256:66a5b6cc13db73efed67b8e933584509f8ddb7b10a8a40c3850ca4a985ea1b1f
-'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.44.7-4.debian.tar.xz' pango1.0_1.44.7-4.debian.tar.xz 33376 SHA256:3484a822d00be4696dbaf6f136a0dd22eda226eabe21092334dbbffcc1fbb8b6
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/pango1.0/1.44.7-4/
 
-- https://sources.debian.net/src/pango1.0/1.44.7-4/ (for browsing the source)
-- https://sources.debian.net/src/pango1.0/1.44.7-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/pango1.0/1.44.7-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `patch=2.7.6-6`
 
@@ -4600,20 +4579,13 @@ Licenses: (parsed from: `/usr/share/doc/libpq-dev/copyright`, `/usr/share/doc/li
 - `nagaysau-ishii`
 - `rijndael`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris postgresql-12=12.3-1
-'http://deb.debian.org/debian/pool/main/p/postgresql-12/postgresql-12_12.3-1.dsc' postgresql-12_12.3-1.dsc 3621 SHA256:ea35b1628113fc33fd03a5fb0f4f2f1a8121e5f728bd33ec3c8bf4f403637904
-'http://deb.debian.org/debian/pool/main/p/postgresql-12/postgresql-12_12.3.orig.tar.bz2' postgresql-12_12.3.orig.tar.bz2 20439892 SHA256:94ed64a6179048190695c86ec707cc25d016056ce10fc9d229267d9a8f1dcf41
-'http://deb.debian.org/debian/pool/main/p/postgresql-12/postgresql-12_12.3-1.debian.tar.xz' postgresql-12_12.3-1.debian.tar.xz 23036 SHA256:aafefe46e7ba9df537920af048d2300c9ca9f7248d38c89fe4734bddc508ec47
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/postgresql-12/12.3-1/
 
-- https://sources.debian.net/src/postgresql-12/12.3-1/ (for browsing the source)
-- https://sources.debian.net/src/postgresql-12/12.3-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/postgresql-12/12.3-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `procps=2:3.3.16-5`
 
@@ -4995,21 +4967,13 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`, `/usr/share/doc
 - `GPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sqlite3=3.32.3-1
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.32.3-1.dsc' sqlite3_3.32.3-1.dsc 2410 SHA256:8589bf15004d2306741cc8a624d40ad0cc842c5725f3789e2c58412edae5e469
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.32.3.orig-www.tar.xz' sqlite3_3.32.3.orig-www.tar.xz 5851212 SHA256:d8332971efcfcf74203b87ce14f2f990d36e7712a2e549fcfdfc3943fbd8fddc
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.32.3.orig.tar.xz' sqlite3_3.32.3.orig.tar.xz 7228432 SHA256:ef1248cd0c7e9697771483e77f507bd17d574877623039e48ce13c1cc589adec
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.32.3-1.debian.tar.xz' sqlite3_3.32.3-1.debian.tar.xz 21812 SHA256:7907dcfd55fca25b6754db07ba56d79744a38178ecf9e4387f71985c450adaf9
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/sqlite3/3.32.3-1/
 
-- https://sources.debian.net/src/sqlite3/3.32.3-1/ (for browsing the source)
-- https://sources.debian.net/src/sqlite3/3.32.3-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sqlite3/3.32.3-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `subversion=1.14.0-1`
 
@@ -5034,21 +4998,13 @@ Licenses: (parsed from: `/usr/share/doc/libsvn1/copyright`, `/usr/share/doc/subv
 - `Unicode`
 - `Utfwidth`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris subversion=1.14.0-1
-'http://deb.debian.org/debian/pool/main/s/subversion/subversion_1.14.0-1.dsc' subversion_1.14.0-1.dsc 3807 SHA256:efb177ab8d566c8dadd01919cb114264961d84e9f0c7ea24a78234ff1f267ea5
-'http://deb.debian.org/debian/pool/main/s/subversion/subversion_1.14.0.orig.tar.gz' subversion_1.14.0.orig.tar.gz 11519871 SHA256:ef3d1147535e41874c304fb5b9ea32745fbf5d7faecf2ce21d4115b567e937d0
-'http://deb.debian.org/debian/pool/main/s/subversion/subversion_1.14.0.orig.tar.gz.asc' subversion_1.14.0.orig.tar.gz.asc 3917 SHA256:98333df38d29a64500d4ad1693741d3d087485555207289b4e53af309abac71a
-'http://deb.debian.org/debian/pool/main/s/subversion/subversion_1.14.0-1.debian.tar.xz' subversion_1.14.0-1.debian.tar.xz 426604 SHA256:2df3c0e9ad9f8ef33d5d3c2ffc19c89b5d0cb8850c526842baa356ca85ac3e3c
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/subversion/1.14.0-1/
 
-- https://sources.debian.net/src/subversion/1.14.0-1/ (for browsing the source)
-- https://sources.debian.net/src/subversion/1.14.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/subversion/1.14.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `systemd=245.7-1`
 
