@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:7bcdb32acf275b8853b402bc139dca04cf3dd5f5f2915a1a336fbc8554ab698c`
-- Created: `2020-07-24T16:24:36.854733363Z`
-- Virtual Size: ~ 127.17 Mb  
+- Image ID: `sha256:4348d27c88da915b9bce173828dfa15e9c11ebd907ab6497e0b631a6b057eb5e`
+- Created: `2020-08-19T23:32:12.511097255Z`
+- Virtual Size: ~ 127.65 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -135,19 +135,23 @@ $ apt-get source -qq --print-uris audit=1:2.4.5-1ubuntu2.1
 'http://archive.ubuntu.com/ubuntu/pool/main/a/audit/audit_2.4.5-1ubuntu2.1.debian.tar.xz' audit_2.4.5-1ubuntu2.1.debian.tar.xz 19292 SHA256:285eef1a789f47c9ad6a30dc8427822b624146715a8f603d011bdc117529d5b2
 ```
 
-### `dpkg` source package: `base-files=9.4ubuntu4.11`
+### `dpkg` source package: `base-files=9.4ubuntu4.12`
 
 Binary Packages:
 
-- `base-files=9.4ubuntu4.11`
+- `base-files=9.4ubuntu4.12`
 
 Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris base-files=9.4ubuntu4.12
+'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_9.4ubuntu4.12.dsc' base-files_9.4ubuntu4.12.dsc 1230 SHA256:a2b35edf31f7c157e85329538534c5fda82b87a710ebc0d93541afc1ed95e394
+'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_9.4ubuntu4.12.tar.xz' base-files_9.4ubuntu4.12.tar.xz 65584 SHA256:de69b2a17c4d6e8168459e800b13759ef1f8eeb49825947ea341d6c20b47c5df
+```
 
 ### `dpkg` source package: `base-passwd=3.5.39`
 
@@ -714,20 +718,25 @@ $ apt-get source -qq --print-uris libgpg-error=1.21-2ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgpg-error/libgpg-error_1.21-2ubuntu1.debian.tar.xz' libgpg-error_1.21-2ubuntu1.debian.tar.xz 11988 SHA256:b67f4686d39ec678e860b28d05e07567ec6d43025c18b82c1e9a5dda07a00ed9
 ```
 
-### `dpkg` source package: `libseccomp=2.4.3-1ubuntu3.16.04.2`
+### `dpkg` source package: `libseccomp=2.4.3-1ubuntu3.16.04.3`
 
 Binary Packages:
 
-- `libseccomp2:amd64=2.4.3-1ubuntu3.16.04.2`
+- `libseccomp2:amd64=2.4.3-1ubuntu3.16.04.3`
 
 Licenses: (parsed from: `/usr/share/doc/libseccomp2/copyright`)
 
 - `LGPL-2`
 - `LGPL-2.0+`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris libseccomp=2.4.3-1ubuntu3.16.04.3
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3-1ubuntu3.16.04.3.dsc' libseccomp_2.4.3-1ubuntu3.16.04.3.dsc 1951 SHA256:d96e6324c3d8a56bfde53305247539c169ccf22759539f71bbebcf786785f21d
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3.orig.tar.gz' libseccomp_2.4.3.orig.tar.gz 598147 SHA256:cf15d1421997fac45b936515af61d209c4fd788af11005d212b3d0fd71e7991d
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3-1ubuntu3.16.04.3.debian.tar.xz' libseccomp_2.4.3-1ubuntu3.16.04.3.debian.tar.xz 27452 SHA256:cbe9631069183c458f21270689840d13f4fa6f182950f81d779d62ac7662de2a
+```
 
 ### `dpkg` source package: `libselinux=2.4-3build2`
 
