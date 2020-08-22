@@ -2,16 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:116ff90daf9ccc6facfd2c4e748885f7105bc23a234672860392d76e9aa2f033`
-- Created: `2020-08-15T00:22:06.19016108Z`
-- Virtual Size: ~ 35.34 Mb  
+- Image ID: `sha256:08132bdecb851a0f125437d463e04a4551bf9339fc37f7c6e681e05f1985fc22`
+- Created: `2020-08-21T22:43:00.119272511Z`
+- Virtual Size: ~ 35.37 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
 - Labels:
-  - `build-date=20200814`
+  - `build-date=20200821`
   - `name=Photon OS x86_64/3.0 Base Image`
   - `vendor=VMware`
 
@@ -41,13 +41,13 @@ Licenses (from `rpm --query`): Custom
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `curl-7.61.1-7.ph3.x86_64`
+### `rpm` package: `curl-7.61.1-8.ph3.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `curl-libs-7.61.1-7.ph3.x86_64`
+### `rpm` package: `curl-libs-7.61.1-8.ph3.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
@@ -215,7 +215,7 @@ Licenses (from `rpm --query`): LGPLv2.1,GPLv2
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `toybox-0.8.2-2.ph3.x86_64`
+### `rpm` package: `toybox-0.8.2-3.ph3.x86_64`
 
 Licenses (from `rpm --query`): BSD
 
