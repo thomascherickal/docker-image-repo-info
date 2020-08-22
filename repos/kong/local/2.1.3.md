@@ -1,10 +1,10 @@
-# `kong:2.1.2-alpine`
+# `kong:2.1.3-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:19bb9f62a43859c7ddb51190fd7dc83e3bc9399b09b2f374656ade0ec1400807`
-- Created: `2020-08-14T01:26:58.986586619Z`
-- Virtual Size: ~ 147.11 Mb  
+- Image ID: `sha256:a62a8307bf7fd7fe6031f9b0ff3763a461143e6da341da33ea955ee31877ba02`
+- Created: `2020-08-20T23:19:56.706654316Z`
+- Virtual Size: ~ 147.13 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -12,7 +12,7 @@
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `ASSET=ce`
-  - `KONG_VERSION=2.1.2`
+  - `KONG_VERSION=2.1.3`
 - Labels:
   - `maintainer=Kong <support@konghq.com>`
 
