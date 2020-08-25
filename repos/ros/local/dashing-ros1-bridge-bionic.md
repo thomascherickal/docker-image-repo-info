@@ -4289,9 +4289,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris python3-colcon-cmake=0.2.24-1
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python3-colcon-cmake/python3-colcon-cmake_0.2.24-1.debian.tar.xz' python3-colcon-cmake_0.2.24-1.debian.tar.xz 1096 SHA512:f8370fbcbfd4db5d08f737640880a10c94b1ebaae8138a4e8e4ee05d6a992d2021a68d5c9a6e1a2575656c81d180e77e8384ce8f0b745a29686ffdf6bf815b0d
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python3-colcon-cmake/python3-colcon-cmake_0.2.24-1.dsc' python3-colcon-cmake_0.2.24-1.dsc 925 SHA512:71ceadd2153cd5c5948864790ce3b5e9b559219d4dd579740ab4316c6d74d083fc78c7d4307ceb887851d90f8319cfa5456ea208663d4c8b44bc53d54f76b762
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python3-colcon-cmake/python3-colcon-cmake_0.2.24.orig.tar.gz' python3-colcon-cmake_0.2.24.orig.tar.gz 17520 SHA512:1cd7c8f2eecc0449ce5f3197f0878cc2c41af8a8ddd1c7036b1f6e19320c983b9ca764733d1d38a2e835afce3037e3468759c6f80a8d189c14d604bbc8019c1a
+'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-cmake/python3-colcon-cmake_0.2.24-1.debian.tar.xz' python3-colcon-cmake_0.2.24-1.debian.tar.xz 1096 SHA512:f8370fbcbfd4db5d08f737640880a10c94b1ebaae8138a4e8e4ee05d6a992d2021a68d5c9a6e1a2575656c81d180e77e8384ce8f0b745a29686ffdf6bf815b0d
+'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-cmake/python3-colcon-cmake_0.2.24-1.dsc' python3-colcon-cmake_0.2.24-1.dsc 925 SHA512:71ceadd2153cd5c5948864790ce3b5e9b559219d4dd579740ab4316c6d74d083fc78c7d4307ceb887851d90f8319cfa5456ea208663d4c8b44bc53d54f76b762
+'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-cmake/python3-colcon-cmake_0.2.24.orig.tar.gz' python3-colcon-cmake_0.2.24.orig.tar.gz 17520 SHA512:1cd7c8f2eecc0449ce5f3197f0878cc2c41af8a8ddd1c7036b1f6e19320c983b9ca764733d1d38a2e835afce3037e3468759c6f80a8d189c14d604bbc8019c1a
 ```
 
 ### `dpkg` source package: `python3-colcon-common-extensions=0.2.1-1`
@@ -4403,9 +4403,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris python3-colcon-metadata=0.2.5-1
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-metadata/python3-colcon-metadata_0.2.5-1.debian.tar.xz' python3-colcon-metadata_0.2.5-1.debian.tar.xz 1112 SHA512:ce98b0e24312a8e0ba11c2f01693448c5701a81aba8d6bb2f0a73679ef1ae0e94e5e75637271850c7f5a868f899cde49e9e9e025cc7cd63f057ac069239296a5
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-metadata/python3-colcon-metadata_0.2.5-1.dsc' python3-colcon-metadata_0.2.5-1.dsc 945 SHA512:17b64c85f88192dffc1b33542744a1a7f5fff0b68913cdd8259c4137c6f025c66e70fdaf54ed1356f1177abfd46cd64b108375ef99ef8c36fbd37c9ebb26de24
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-metadata/python3-colcon-metadata_0.2.5.orig.tar.gz' python3-colcon-metadata_0.2.5.orig.tar.gz 10846 SHA512:ba84f2c15a4981dfc0f4dbf10e68186705e8c3704e96182d620ff2f18971e5c145dfbdb1f04f71dacc18b262193c0c308ab39f113282974234e13a4a7dd77ef8
+'http://packages.ros.org/ros/ubuntu/pool/main/p/python3-colcon-metadata/python3-colcon-metadata_0.2.5-1.debian.tar.xz' python3-colcon-metadata_0.2.5-1.debian.tar.xz 1112 SHA512:ce98b0e24312a8e0ba11c2f01693448c5701a81aba8d6bb2f0a73679ef1ae0e94e5e75637271850c7f5a868f899cde49e9e9e025cc7cd63f057ac069239296a5
+'http://packages.ros.org/ros/ubuntu/pool/main/p/python3-colcon-metadata/python3-colcon-metadata_0.2.5-1.dsc' python3-colcon-metadata_0.2.5-1.dsc 945 SHA512:17b64c85f88192dffc1b33542744a1a7f5fff0b68913cdd8259c4137c6f025c66e70fdaf54ed1356f1177abfd46cd64b108375ef99ef8c36fbd37c9ebb26de24
+'http://packages.ros.org/ros/ubuntu/pool/main/p/python3-colcon-metadata/python3-colcon-metadata_0.2.5.orig.tar.gz' python3-colcon-metadata_0.2.5.orig.tar.gz 10846 SHA512:ba84f2c15a4981dfc0f4dbf10e68186705e8c3704e96182d620ff2f18971e5c145dfbdb1f04f71dacc18b262193c0c308ab39f113282974234e13a4a7dd77ef8
 ```
 
 ### `dpkg` source package: `python3-colcon-mixin=0.2.0-1`
