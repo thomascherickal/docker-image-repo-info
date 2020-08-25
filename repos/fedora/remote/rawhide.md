@@ -1,7 +1,7 @@
 ## `fedora:rawhide`
 
 ```console
-$ docker pull fedora@sha256:4b181cd2a40b557d651a8b8776847517f60ad21e540e81d24a812eeecc32ae6a
+$ docker pull fedora@sha256:f7e88b3a542eca2fe0c7b700931aa09645cb7c953838bf6db4fd2893c4c88e6c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -42,29 +42,29 @@ CMD ["/bin/bash"]
 ### `fedora:rawhide` - linux; arm64 variant v8
 
 ```console
-$ docker pull fedora@sha256:6b33616281680d5ac0f5a8a4c8cc6bb3f6445d095848506a67a9f2c3ffa94a93
+$ docker pull fedora@sha256:872ce99cbe662261de3b107a001c4b41e2253f06faa0efe81c4fdc4fa73f8fc5
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **65.4 MB (65384127 bytes)**  
+-	Total Size: **61.6 MB (61643977 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:deaffc3deae78ff474905e47b189abd81c435268609635749de3bfc727306afd`
+-	Image ID: `sha256:500fd4b5ebe9d930fc28da7ad9a7d3ed87ef1bace5db00767b9e205bdebb2882`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
 # Wed, 05 Jun 2019 22:43:26 GMT
 LABEL maintainer=Clement Verna <cverna@fedoraproject.org>
-# Thu, 30 Apr 2020 23:01:35 GMT
-ENV DISTTAG=f33container FGC=f33 FBR=f33
-# Fri, 10 Jul 2020 18:52:42 GMT
-ADD file:72a91f303cf43e916f97c2f80c34f15940ea7b19ee1067c910e8e6f19297fed0 in / 
-# Fri, 10 Jul 2020 18:52:48 GMT
+# Tue, 25 Aug 2020 17:46:51 GMT
+ENV DISTTAG=f34container FGC=f34 FBR=f34
+# Tue, 25 Aug 2020 17:46:59 GMT
+ADD file:2ffb6c7f0afd8a3d319d4faeadd37716d649b9aace3b69ef28f27a8fcdd84b6b in / 
+# Tue, 25 Aug 2020 17:47:04 GMT
 CMD ["/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:525109fb1c3ca2fed333614f70bd8cf97e73503cf4c4eb75f54709dbb41714a0`  
-		Last Modified: Fri, 10 Jul 2020 18:54:07 GMT  
-		Size: 65.4 MB (65384127 bytes)  
+	-	`sha256:567c5e83e195d401a1a58236e1788fa5a68f7144da38b0ac8af41b7b7d881cfc`  
+		Last Modified: Tue, 25 Aug 2020 17:48:02 GMT  
+		Size: 61.6 MB (61643977 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
