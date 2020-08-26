@@ -93,6 +93,7 @@
 -	[`openjdk:14.0.2-jdk-nanoserver-1809`](#openjdk1402-jdk-nanoserver-1809)
 -	[`openjdk:14.0.2-jdk-oracle`](#openjdk1402-jdk-oracle)
 -	[`openjdk:14.0.2-jdk-oraclelinux7`](#openjdk1402-jdk-oraclelinux7)
+-	[`openjdk:14.0.2-jdk-oraclelinux8`](#openjdk1402-jdk-oraclelinux8)
 -	[`openjdk:14.0.2-jdk-slim`](#openjdk1402-jdk-slim)
 -	[`openjdk:14.0.2-jdk-slim-buster`](#openjdk1402-jdk-slim-buster)
 -	[`openjdk:14.0.2-jdk-windowsservercore`](#openjdk1402-jdk-windowsservercore)
@@ -102,6 +103,7 @@
 -	[`openjdk:14.0.2-nanoserver-1809`](#openjdk1402-nanoserver-1809)
 -	[`openjdk:14.0.2-oracle`](#openjdk1402-oracle)
 -	[`openjdk:14.0.2-oraclelinux7`](#openjdk1402-oraclelinux7)
+-	[`openjdk:14.0.2-oraclelinux8`](#openjdk1402-oraclelinux8)
 -	[`openjdk:14.0.2-slim`](#openjdk1402-slim)
 -	[`openjdk:14.0.2-slim-buster`](#openjdk1402-slim-buster)
 -	[`openjdk:14.0.2-windowsservercore`](#openjdk1402-windowsservercore)
@@ -114,6 +116,7 @@
 -	[`openjdk:14.0-jdk-nanoserver-1809`](#openjdk140-jdk-nanoserver-1809)
 -	[`openjdk:14.0-jdk-oracle`](#openjdk140-jdk-oracle)
 -	[`openjdk:14.0-jdk-oraclelinux7`](#openjdk140-jdk-oraclelinux7)
+-	[`openjdk:14.0-jdk-oraclelinux8`](#openjdk140-jdk-oraclelinux8)
 -	[`openjdk:14.0-jdk-slim`](#openjdk140-jdk-slim)
 -	[`openjdk:14.0-jdk-slim-buster`](#openjdk140-jdk-slim-buster)
 -	[`openjdk:14.0-jdk-windowsservercore`](#openjdk140-jdk-windowsservercore)
@@ -123,6 +126,7 @@
 -	[`openjdk:14.0-nanoserver-1809`](#openjdk140-nanoserver-1809)
 -	[`openjdk:14.0-oracle`](#openjdk140-oracle)
 -	[`openjdk:14.0-oraclelinux7`](#openjdk140-oraclelinux7)
+-	[`openjdk:14.0-oraclelinux8`](#openjdk140-oraclelinux8)
 -	[`openjdk:14.0-slim`](#openjdk140-slim)
 -	[`openjdk:14.0-slim-buster`](#openjdk140-slim-buster)
 -	[`openjdk:14.0-windowsservercore`](#openjdk140-windowsservercore)
@@ -135,6 +139,7 @@
 -	[`openjdk:14-jdk-nanoserver-1809`](#openjdk14-jdk-nanoserver-1809)
 -	[`openjdk:14-jdk-oracle`](#openjdk14-jdk-oracle)
 -	[`openjdk:14-jdk-oraclelinux7`](#openjdk14-jdk-oraclelinux7)
+-	[`openjdk:14-jdk-oraclelinux8`](#openjdk14-jdk-oraclelinux8)
 -	[`openjdk:14-jdk-slim`](#openjdk14-jdk-slim)
 -	[`openjdk:14-jdk-slim-buster`](#openjdk14-jdk-slim-buster)
 -	[`openjdk:14-jdk-windowsservercore`](#openjdk14-jdk-windowsservercore)
@@ -144,6 +149,7 @@
 -	[`openjdk:14-nanoserver-1809`](#openjdk14-nanoserver-1809)
 -	[`openjdk:14-oracle`](#openjdk14-oracle)
 -	[`openjdk:14-oraclelinux7`](#openjdk14-oraclelinux7)
+-	[`openjdk:14-oraclelinux8`](#openjdk14-oraclelinux8)
 -	[`openjdk:14-slim`](#openjdk14-slim)
 -	[`openjdk:14-slim-buster`](#openjdk14-slim-buster)
 -	[`openjdk:14-windowsservercore`](#openjdk14-windowsservercore)
@@ -157,6 +163,7 @@
 -	[`openjdk:15-jdk-nanoserver-1809`](#openjdk15-jdk-nanoserver-1809)
 -	[`openjdk:15-jdk-oracle`](#openjdk15-jdk-oracle)
 -	[`openjdk:15-jdk-oraclelinux7`](#openjdk15-jdk-oraclelinux7)
+-	[`openjdk:15-jdk-oraclelinux8`](#openjdk15-jdk-oraclelinux8)
 -	[`openjdk:15-jdk-slim`](#openjdk15-jdk-slim)
 -	[`openjdk:15-jdk-slim-buster`](#openjdk15-jdk-slim-buster)
 -	[`openjdk:15-jdk-windowsservercore`](#openjdk15-jdk-windowsservercore)
@@ -166,6 +173,7 @@
 -	[`openjdk:15-nanoserver-1809`](#openjdk15-nanoserver-1809)
 -	[`openjdk:15-oracle`](#openjdk15-oracle)
 -	[`openjdk:15-oraclelinux7`](#openjdk15-oraclelinux7)
+-	[`openjdk:15-oraclelinux8`](#openjdk15-oraclelinux8)
 -	[`openjdk:15-slim`](#openjdk15-slim)
 -	[`openjdk:15-slim-buster`](#openjdk15-slim-buster)
 -	[`openjdk:15-windowsservercore`](#openjdk15-windowsservercore)
@@ -184,6 +192,7 @@
 -	[`openjdk:16-ea-12-jdk-nanoserver-1809`](#openjdk16-ea-12-jdk-nanoserver-1809)
 -	[`openjdk:16-ea-12-jdk-oracle`](#openjdk16-ea-12-jdk-oracle)
 -	[`openjdk:16-ea-12-jdk-oraclelinux7`](#openjdk16-ea-12-jdk-oraclelinux7)
+-	[`openjdk:16-ea-12-jdk-oraclelinux8`](#openjdk16-ea-12-jdk-oraclelinux8)
 -	[`openjdk:16-ea-12-jdk-slim`](#openjdk16-ea-12-jdk-slim)
 -	[`openjdk:16-ea-12-jdk-slim-buster`](#openjdk16-ea-12-jdk-slim-buster)
 -	[`openjdk:16-ea-12-jdk-windowsservercore`](#openjdk16-ea-12-jdk-windowsservercore)
@@ -193,6 +202,7 @@
 -	[`openjdk:16-ea-12-nanoserver-1809`](#openjdk16-ea-12-nanoserver-1809)
 -	[`openjdk:16-ea-12-oracle`](#openjdk16-ea-12-oracle)
 -	[`openjdk:16-ea-12-oraclelinux7`](#openjdk16-ea-12-oraclelinux7)
+-	[`openjdk:16-ea-12-oraclelinux8`](#openjdk16-ea-12-oraclelinux8)
 -	[`openjdk:16-ea-12-slim`](#openjdk16-ea-12-slim)
 -	[`openjdk:16-ea-12-slim-buster`](#openjdk16-ea-12-slim-buster)
 -	[`openjdk:16-ea-12-windowsservercore`](#openjdk16-ea-12-windowsservercore)
@@ -213,6 +223,7 @@
 -	[`openjdk:16-ea-jdk-nanoserver-1809`](#openjdk16-ea-jdk-nanoserver-1809)
 -	[`openjdk:16-ea-jdk-oracle`](#openjdk16-ea-jdk-oracle)
 -	[`openjdk:16-ea-jdk-oraclelinux7`](#openjdk16-ea-jdk-oraclelinux7)
+-	[`openjdk:16-ea-jdk-oraclelinux8`](#openjdk16-ea-jdk-oraclelinux8)
 -	[`openjdk:16-ea-jdk-slim`](#openjdk16-ea-jdk-slim)
 -	[`openjdk:16-ea-jdk-slim-buster`](#openjdk16-ea-jdk-slim-buster)
 -	[`openjdk:16-ea-jdk-windowsservercore`](#openjdk16-ea-jdk-windowsservercore)
@@ -222,6 +233,7 @@
 -	[`openjdk:16-ea-nanoserver-1809`](#openjdk16-ea-nanoserver-1809)
 -	[`openjdk:16-ea-oracle`](#openjdk16-ea-oracle)
 -	[`openjdk:16-ea-oraclelinux7`](#openjdk16-ea-oraclelinux7)
+-	[`openjdk:16-ea-oraclelinux8`](#openjdk16-ea-oraclelinux8)
 -	[`openjdk:16-ea-slim`](#openjdk16-ea-slim)
 -	[`openjdk:16-ea-slim-buster`](#openjdk16-ea-slim-buster)
 -	[`openjdk:16-ea-windowsservercore`](#openjdk16-ea-windowsservercore)
@@ -235,6 +247,7 @@
 -	[`openjdk:16-jdk-nanoserver-1809`](#openjdk16-jdk-nanoserver-1809)
 -	[`openjdk:16-jdk-oracle`](#openjdk16-jdk-oracle)
 -	[`openjdk:16-jdk-oraclelinux7`](#openjdk16-jdk-oraclelinux7)
+-	[`openjdk:16-jdk-oraclelinux8`](#openjdk16-jdk-oraclelinux8)
 -	[`openjdk:16-jdk-slim`](#openjdk16-jdk-slim)
 -	[`openjdk:16-jdk-slim-buster`](#openjdk16-jdk-slim-buster)
 -	[`openjdk:16-jdk-windowsservercore`](#openjdk16-jdk-windowsservercore)
@@ -244,6 +257,7 @@
 -	[`openjdk:16-nanoserver-1809`](#openjdk16-nanoserver-1809)
 -	[`openjdk:16-oracle`](#openjdk16-oracle)
 -	[`openjdk:16-oraclelinux7`](#openjdk16-oraclelinux7)
+-	[`openjdk:16-oraclelinux8`](#openjdk16-oraclelinux8)
 -	[`openjdk:16-slim`](#openjdk16-slim)
 -	[`openjdk:16-slim-buster`](#openjdk16-slim-buster)
 -	[`openjdk:16-windowsservercore`](#openjdk16-windowsservercore)
@@ -310,6 +324,7 @@
 -	[`openjdk:jdk-nanoserver-1809`](#openjdkjdk-nanoserver-1809)
 -	[`openjdk:jdk-oracle`](#openjdkjdk-oracle)
 -	[`openjdk:jdk-oraclelinux7`](#openjdkjdk-oraclelinux7)
+-	[`openjdk:jdk-oraclelinux8`](#openjdkjdk-oraclelinux8)
 -	[`openjdk:jdk-slim`](#openjdkjdk-slim)
 -	[`openjdk:jdk-slim-buster`](#openjdkjdk-slim-buster)
 -	[`openjdk:jdk-windowsservercore`](#openjdkjdk-windowsservercore)
@@ -320,6 +335,7 @@
 -	[`openjdk:nanoserver-1809`](#openjdknanoserver-1809)
 -	[`openjdk:oracle`](#openjdkoracle)
 -	[`openjdk:oraclelinux7`](#openjdkoraclelinux7)
+-	[`openjdk:oraclelinux8`](#openjdkoraclelinux8)
 -	[`openjdk:slim`](#openjdkslim)
 -	[`openjdk:slim-buster`](#openjdkslim-buster)
 -	[`openjdk:windowsservercore`](#openjdkwindowsservercore)
@@ -12112,6 +12128,10 @@ CMD ["jshell"]
 		Size: 199.1 MB (199091775 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `openjdk:14.0.2-jdk-oraclelinux8`
+
+**does not exist** (yet?)
+
 ## `openjdk:14.0.2-jdk-slim`
 
 ```console
@@ -12900,6 +12920,10 @@ CMD ["jshell"]
 		Last Modified: Wed, 29 Jul 2020 01:35:18 GMT  
 		Size: 199.1 MB (199091775 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `openjdk:14.0.2-oraclelinux8`
+
+**does not exist** (yet?)
 
 ## `openjdk:14.0.2-slim`
 
@@ -14083,6 +14107,10 @@ CMD ["jshell"]
 		Size: 199.1 MB (199091775 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `openjdk:14.0-jdk-oraclelinux8`
+
+**does not exist** (yet?)
+
 ## `openjdk:14.0-jdk-slim`
 
 ```console
@@ -14871,6 +14899,10 @@ CMD ["jshell"]
 		Last Modified: Wed, 29 Jul 2020 01:35:18 GMT  
 		Size: 199.1 MB (199091775 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `openjdk:14.0-oraclelinux8`
+
+**does not exist** (yet?)
 
 ## `openjdk:14.0-slim`
 
@@ -16054,6 +16086,10 @@ CMD ["jshell"]
 		Size: 199.1 MB (199091775 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `openjdk:14-jdk-oraclelinux8`
+
+**does not exist** (yet?)
+
 ## `openjdk:14-jdk-slim`
 
 ```console
@@ -16842,6 +16878,10 @@ CMD ["jshell"]
 		Last Modified: Wed, 29 Jul 2020 01:35:18 GMT  
 		Size: 199.1 MB (199091775 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `openjdk:14-oraclelinux8`
+
+**does not exist** (yet?)
 
 ## `openjdk:14-slim`
 
@@ -18604,6 +18644,10 @@ CMD ["jshell"]
 		Size: 174.9 MB (174856901 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `openjdk:15-jdk-oraclelinux8`
+
+**does not exist** (yet?)
+
 ## `openjdk:15-jdk-slim`
 
 ```console
@@ -19604,6 +19648,10 @@ CMD ["jshell"]
 		Last Modified: Fri, 14 Aug 2020 21:41:41 GMT  
 		Size: 174.9 MB (174856901 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `openjdk:15-oraclelinux8`
+
+**does not exist** (yet?)
 
 ## `openjdk:15-slim`
 
@@ -22303,6 +22351,10 @@ CMD ["jshell"]
 		Size: 175.2 MB (175201839 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `openjdk:16-ea-12-jdk-oraclelinux8`
+
+**does not exist** (yet?)
+
 ## `openjdk:16-ea-12-jdk-slim`
 
 ```console
@@ -23303,6 +23355,10 @@ CMD ["jshell"]
 		Last Modified: Fri, 21 Aug 2020 22:14:02 GMT  
 		Size: 175.2 MB (175201839 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `openjdk:16-ea-12-oraclelinux8`
+
+**does not exist** (yet?)
 
 ## `openjdk:16-ea-12-slim`
 
@@ -25343,6 +25399,10 @@ CMD ["jshell"]
 		Size: 175.2 MB (175201839 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `openjdk:16-ea-jdk-oraclelinux8`
+
+**does not exist** (yet?)
+
 ## `openjdk:16-ea-jdk-slim`
 
 ```console
@@ -26343,6 +26403,10 @@ CMD ["jshell"]
 		Last Modified: Fri, 21 Aug 2020 22:14:02 GMT  
 		Size: 175.2 MB (175201839 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `openjdk:16-ea-oraclelinux8`
+
+**does not exist** (yet?)
 
 ## `openjdk:16-ea-slim`
 
@@ -27892,6 +27956,10 @@ CMD ["jshell"]
 		Size: 175.2 MB (175201839 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `openjdk:16-jdk-oraclelinux8`
+
+**does not exist** (yet?)
+
 ## `openjdk:16-jdk-slim`
 
 ```console
@@ -28892,6 +28960,10 @@ CMD ["jshell"]
 		Last Modified: Fri, 21 Aug 2020 22:14:02 GMT  
 		Size: 175.2 MB (175201839 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `openjdk:16-oraclelinux8`
+
+**does not exist** (yet?)
 
 ## `openjdk:16-slim`
 
@@ -35405,6 +35477,10 @@ CMD ["jshell"]
 		Size: 199.1 MB (199091775 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `openjdk:jdk-oraclelinux8`
+
+**does not exist** (yet?)
+
 ## `openjdk:jdk-slim`
 
 ```console
@@ -36422,6 +36498,10 @@ CMD ["jshell"]
 		Last Modified: Wed, 29 Jul 2020 01:35:18 GMT  
 		Size: 199.1 MB (199091775 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `openjdk:oraclelinux8`
+
+**does not exist** (yet?)
 
 ## `openjdk:slim`
 
