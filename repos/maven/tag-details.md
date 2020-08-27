@@ -32,6 +32,7 @@
 -	[`maven:3.6.3-openjdk-14`](#maven363-openjdk-14)
 -	[`maven:3.6.3-openjdk-14-slim`](#maven363-openjdk-14-slim)
 -	[`maven:3.6.3-openjdk-15`](#maven363-openjdk-15)
+-	[`maven:3.6.3-openjdk-16`](#maven363-openjdk-16)
 -	[`maven:3.6.3-openjdk-8`](#maven363-openjdk-8)
 -	[`maven:3.6.3-openjdk-8-slim`](#maven363-openjdk-8-slim)
 -	[`maven:3.6.3-slim`](#maven363-slim)
@@ -62,6 +63,7 @@
 -	[`maven:3.6-openjdk-14`](#maven36-openjdk-14)
 -	[`maven:3.6-openjdk-14-slim`](#maven36-openjdk-14-slim)
 -	[`maven:3.6-openjdk-15`](#maven36-openjdk-15)
+-	[`maven:3.6-openjdk-16`](#maven36-openjdk-16)
 -	[`maven:3.6-openjdk-8`](#maven36-openjdk-8)
 -	[`maven:3.6-openjdk-8-slim`](#maven36-openjdk-8-slim)
 -	[`maven:3.6-slim`](#maven36-slim)
@@ -91,6 +93,7 @@
 -	[`maven:3-openjdk-14`](#maven3-openjdk-14)
 -	[`maven:3-openjdk-14-slim`](#maven3-openjdk-14-slim)
 -	[`maven:3-openjdk-15`](#maven3-openjdk-15)
+-	[`maven:3-openjdk-16`](#maven3-openjdk-16)
 -	[`maven:3-openjdk-8`](#maven3-openjdk-8)
 -	[`maven:3-openjdk-8-slim`](#maven3-openjdk-8-slim)
 -	[`maven:adoptopenjdk`](#mavenadoptopenjdk)
@@ -7271,6 +7274,10 @@ CMD ["mvn"]
 		Last Modified: Wed, 26 Aug 2020 22:07:45 GMT  
 		Size: 359.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `maven:3.6.3-openjdk-16`
+
+**does not exist** (yet?)
 
 ## `maven:3.6.3-openjdk-8`
 
@@ -14483,6 +14490,10 @@ CMD ["mvn"]
 		Size: 359.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `maven:3.6-openjdk-16`
+
+**does not exist** (yet?)
+
 ## `maven:3.6-openjdk-8`
 
 ```console
@@ -21591,6 +21602,10 @@ CMD ["mvn"]
 		Last Modified: Wed, 26 Aug 2020 22:07:45 GMT  
 		Size: 359.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `maven:3-openjdk-16`
+
+**does not exist** (yet?)
 
 ## `maven:3-openjdk-8`
 
