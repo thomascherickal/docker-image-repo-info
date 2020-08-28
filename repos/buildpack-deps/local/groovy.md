@@ -2798,14 +2798,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=5.4.0-42.46
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-42.46.dsc' linux_5.4.0-42.46.dsc 7204 SHA256:9757c11f4a535512fd812a20c9e24ae8369ac3195ed359c0f0193f73c340f942
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0.orig.tar.gz' linux_5.4.0.orig.tar.gz 170244619 SHA256:805f3ed93854317814c59caf2dbfd2097745685f95c8c18b509c9347dcc7d51f
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-42.46.diff.gz' linux_5.4.0-42.46.diff.gz 4665701 SHA256:9e416bd1147d00d93eeaa3a106304e9ff03629ea2447efc5b61381d2046e2f7d
-```
 
 ### `dpkg` source package: `lsb=11.1.0ubuntu2`
 
@@ -3025,14 +3020,9 @@ Licenses: (parsed from: `/usr/share/doc/libmysqlclient-dev/copyright`, `/usr/sha
 - `public-domain`
 - `zlib/libpng`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mysql-8.0=8.0.21-0ubuntu4
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.21-0ubuntu4.dsc' mysql-8.0_8.0.21-0ubuntu4.dsc 3402 SHA256:d3c1cccff653be6b3f5ea5e3bed1026b389f0d8773e5c8e42214a1f95020c7d2
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.21.orig.tar.gz' mysql-8.0_8.0.21.orig.tar.gz 278292192 SHA256:37231a123372a95f409857364dc1deb196b6f2c0b1fe60cc8382c7686b487f11
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.21-0ubuntu4.debian.tar.xz' mysql-8.0_8.0.21-0ubuntu4.debian.tar.xz 159632 SHA256:c62800f72fd84fe970a07a3de9c0bfe5d5393293c462794a05287a0d62365804
-```
 
 ### `dpkg` source package: `mysql-defaults=1.0.5ubuntu2`
 
@@ -3329,14 +3319,9 @@ Licenses: (parsed from: `/usr/share/doc/libpam-modules/copyright`, `/usr/share/d
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pam=1.3.1-5ubuntu5
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.3.1-5ubuntu5.dsc' pam_1.3.1-5ubuntu5.dsc 2699 SHA256:ce4a3e45efcdcb176d519c6776361129698ad941359064c4501d32d0213a0f10
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.3.1.orig.tar.xz' pam_1.3.1.orig.tar.xz 912332 SHA256:eff47a4ecd833fbf18de9686632a70ee8d0794b79aecb217ebd0ce11db4cd0db
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.3.1-5ubuntu5.debian.tar.xz' pam_1.3.1-5ubuntu5.debian.tar.xz 159928 SHA256:ddb63bcb2827ea736bfa8343a24f9bdba33a7c213359d3cc105ea08cbfa7dc6a
-```
 
 ### `dpkg` source package: `pango1.0=1.46.0-2`
 
