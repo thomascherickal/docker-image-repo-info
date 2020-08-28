@@ -3365,14 +3365,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris nss=2:3.35-2ubuntu2.11
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nss/nss_3.35-2ubuntu2.11.dsc' nss_3.35-2ubuntu2.11.dsc 2354 SHA256:ee3f8fd4e7523953b3670c39cda737e79f7b90f9baf44b3e7395a8a93147a3a3
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nss/nss_3.35.orig.tar.gz' nss_3.35.orig.tar.gz 9620041 SHA256:f4127de09bede39f5fd0f789d33c3504c5d261e69ea03022d46b319b3e32f6fa
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nss/nss_3.35-2ubuntu2.11.debian.tar.xz' nss_3.35-2ubuntu2.11.debian.tar.xz 219992 SHA256:01bafee19a120b79a211de608fe70236b30583734f42343a40ed0897b643ae95
-```
 
 ### `dpkg` source package: `openldap=2.4.45+dfsg-1ubuntu1.6`
 
@@ -3471,13 +3466,9 @@ Licenses: (parsed from: `/usr/share/doc/libpam-modules/copyright`, `/usr/share/d
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pam=1.1.8-3.6ubuntu2.18.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.1.8-3.6ubuntu2.18.04.1.dsc' pam_1.1.8-3.6ubuntu2.18.04.1.dsc 2212 SHA256:eb895fd520265f4db4eb5c00f06e0f5e903900265093011a61b431a3b6221eff
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.1.8-3.6ubuntu2.18.04.1.tar.gz' pam_1.1.8-3.6ubuntu2.18.04.1.tar.gz 1990490 SHA256:a400f8d82fb41afd008a9f8a6f2221cad0cc0f7cc60a41d50f27fc518217f68f
-```
 
 ### `dpkg` source package: `pango1.0=1.40.14-1ubuntu0.1`
 
