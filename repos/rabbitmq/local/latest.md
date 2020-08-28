@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:db1d293f9183936dd636ba1c6f29d224925b2d685ce1eab2277df7172a9aa80f`
-- Created: `2020-08-21T22:13:23.214744834Z`
+- Image ID: `sha256:7c275a273df8b9363e613a3dc2ac5874725550adafae490448cad8d09dfbe1aa`
+- Created: `2020-08-27T18:24:14.562353319Z`
 - Virtual Size: ~ 156.17 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -1067,13 +1067,9 @@ Licenses: (parsed from: `/usr/share/doc/libpam-modules/copyright`, `/usr/share/d
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pam=1.1.8-3.6ubuntu2.18.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.1.8-3.6ubuntu2.18.04.1.dsc' pam_1.1.8-3.6ubuntu2.18.04.1.dsc 2212 SHA256:eb895fd520265f4db4eb5c00f06e0f5e903900265093011a61b431a3b6221eff
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.1.8-3.6ubuntu2.18.04.1.tar.gz' pam_1.1.8-3.6ubuntu2.18.04.1.tar.gz 1990490 SHA256:a400f8d82fb41afd008a9f8a6f2221cad0cc0f7cc60a41d50f27fc518217f68f
-```
 
 ### `dpkg` source package: `pcre3=2:8.39-9`
 
