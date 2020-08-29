@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:97ad8752cd154f3f2f40645d7b589861d8e30a73eb8fa0845890b24d79601d5c`
-- Created: `2020-08-20T23:20:34.051508567Z`
-- Virtual Size: ~ 306.10 Mb  
+- Image ID: `sha256:d71ed9c5bbb1e1a941415654f5598b970ee67c8d1219920550215c08c70ef339`
+- Created: `2020-08-28T19:50:06.787762039Z`
+- Virtual Size: ~ 309.20 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -1273,6 +1273,35 @@ $ apt-get source -qq --print-uris makedev=2.3.1-93ubuntu2~ubuntu16.04.1
 'http://archive.ubuntu.com/ubuntu/pool/main/m/makedev/makedev_2.3.1-93ubuntu2~ubuntu16.04.1.diff.gz' makedev_2.3.1-93ubuntu2~ubuntu16.04.1.diff.gz 50340 SHA256:caf4da6a9b3903b03536c93a54aea44bf3cf74af7444e79038de12eecc73841b
 ```
 
+### `dpkg` source package: `manpages=4.04-2`
+
+Binary Packages:
+
+- `manpages=4.04-2`
+- `manpages-dev=4.04-2`
+
+Licenses: (parsed from: `/usr/share/doc/manpages/copyright`, `/usr/share/doc/manpages-dev/copyright`)
+
+- `BSD-3-clause`
+- `BSD-4-clause`
+- `Expat`
+- `GPL-2`
+- `GPL-2+`
+- `LDPv1`
+- `freely-redistributable`
+- `henry-spencer-regex`
+- `public-domain`
+- `verbatim`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris manpages=4.04-2
+'http://archive.ubuntu.com/ubuntu/pool/main/m/manpages/manpages_4.04-2.dsc' manpages_4.04-2.dsc 1954 SHA256:66f7433df6efa70384de64d0d9af68f6ece56c82df30741698c023059476d814
+'http://archive.ubuntu.com/ubuntu/pool/main/m/manpages/manpages_4.04.orig.tar.xz' manpages_4.04.orig.tar.xz 1426380 SHA256:8fe1950df65ccf2b43ed64c329ccce0eedb2f7b42af12beff03d3aa609ee1f6d
+'http://archive.ubuntu.com/ubuntu/pool/main/m/manpages/manpages_4.04-2.debian.tar.xz' manpages_4.04-2.debian.tar.xz 74772 SHA256:fadd91777c4e724d4ba746974354d4eaa63870a4e0a08bfb3e58bb533239a3d3
+```
+
 ### `dpkg` source package: `mawk=1.3.3-17ubuntu2`
 
 Binary Packages:
@@ -1861,23 +1890,4 @@ $ apt-get source -qq --print-uris zlib=1:1.2.8.dfsg-2ubuntu4.3
 'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.8.dfsg-2ubuntu4.3.dsc' zlib_1.2.8.dfsg-2ubuntu4.3.dsc 2535 SHA256:d0e23d3bf4b5062bbb929e4e78639ded99129dbfeca9fb735c5d2390b1f9c398
 'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.8.dfsg.orig.tar.gz' zlib_1.2.8.dfsg.orig.tar.gz 361943 SHA256:2caecc2c3f1ef8b87b8f72b128a03e61c307e8c14f5ec9b422ef7914ba75cf9f
 'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.8.dfsg-2ubuntu4.3.debian.tar.xz' zlib_1.2.8.dfsg-2ubuntu4.3.debian.tar.xz 19128 SHA256:25a6dda8dd5fad7c5927e43b815056335e27e7a1a552b5d8e5a4d5b4f9a9ce8f
-```
-
-### `dpkg` source package: `zlibc=0.9k-4.3`
-
-Binary Packages:
-
-- `zlibc=0.9k-4.3`
-
-Licenses: (parsed from: `/usr/share/doc/zlibc/copyright`)
-
-- `GPL`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris zlibc=0.9k-4.3
-'http://archive.ubuntu.com/ubuntu/pool/universe/z/zlibc/zlibc_0.9k-4.3.dsc' zlibc_0.9k-4.3.dsc 1679 SHA256:569791d727d910dc26e7c77a6a26f9af1edebe95eadfc1ef98896069f7a9ffd2
-'http://archive.ubuntu.com/ubuntu/pool/universe/z/zlibc/zlibc_0.9k.orig.tar.gz' zlibc_0.9k.orig.tar.gz 111773 SHA256:de63f95e2e1fdca2182667974f7766b333a2ed3230d9721658e765d6f59a4ac6
-'http://archive.ubuntu.com/ubuntu/pool/universe/z/zlibc/zlibc_0.9k-4.3.diff.gz' zlibc_0.9k-4.3.diff.gz 86159 SHA256:4b4b9c9e5777f0b292de730d33eaac5633acdccefd258cdf760562fb947e9ae1
 ```
