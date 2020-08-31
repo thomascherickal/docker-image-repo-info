@@ -61,6 +61,8 @@
 -	[`neo4j:4.0.6-enterprise`](#neo4j406-enterprise)
 -	[`neo4j:4.0.7`](#neo4j407)
 -	[`neo4j:4.0.7-enterprise`](#neo4j407-enterprise)
+-	[`neo4j:4.0.8`](#neo4j408)
+-	[`neo4j:4.0.8-enterprise`](#neo4j408-enterprise)
 -	[`neo4j:4.0-enterprise`](#neo4j40-enterprise)
 -	[`neo4j:4.1`](#neo4j41)
 -	[`neo4j:4.1.0`](#neo4j410)
@@ -6311,6 +6313,14 @@ CMD ["neo4j"]
 		Last Modified: Fri, 07 Aug 2020 00:59:58 GMT  
 		Size: 5.8 KB (5849 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `neo4j:4.0.8`
+
+**does not exist** (yet?)
+
+## `neo4j:4.0.8-enterprise`
+
+**does not exist** (yet?)
 
 ## `neo4j:4.0-enterprise`
 
