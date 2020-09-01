@@ -138,7 +138,7 @@
 ## `clojure:boot`
 
 ```console
-$ docker pull clojure@sha256:5386ec9cd3bfe05d30f776325d851a5eccaca3ccd159e9cf28851eabc7345804
+$ docker pull clojure@sha256:d13dbabd3a8399c44d1e42be634487ac61d91ed6de6341538f6452b89591a33a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -149,14 +149,14 @@ $ docker pull clojure@sha256:5386ec9cd3bfe05d30f776325d851a5eccaca3ccd159e9cf288
 ### `clojure:boot` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:af38bba8ca8ce6e8a5708b7fe3eec80f1b596d5e24d73e9ea5cfbc565bdd466c
+$ docker pull clojure@sha256:13cafbbedaf319795454a3cba769ac36c5c1b2d95a8a948ae27bbee0711a2c4f
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **380.4 MB (380394560 bytes)**  
+-	Total Size: **380.4 MB (380394676 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3d542e8a70ab7a1cb721239c041243139b2c38e8c03e8780182eba15547e0c1c`
+-	Image ID: `sha256:6d6dbc91d30298edb2b2e53b9e2fb5ebb77f363d75098ecbef9becae6029236a`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
@@ -182,25 +182,25 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:27 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:44:39 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:39 GMT
+# Tue, 01 Sep 2020 01:49:46 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:47 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 16:58:30 GMT
+# Tue, 01 Sep 2020 21:11:00 GMT
 ENV BOOT_VERSION=2.8.3
-# Wed, 05 Aug 2020 16:58:30 GMT
+# Tue, 01 Sep 2020 21:11:00 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:30 GMT
+# Tue, 01 Sep 2020 21:11:00 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:58:31 GMT
+# Tue, 01 Sep 2020 21:11:01 GMT
 RUN mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot
-# Wed, 05 Aug 2020 16:58:31 GMT
+# Tue, 01 Sep 2020 21:11:02 GMT
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:31 GMT
+# Tue, 01 Sep 2020 21:11:02 GMT
 ENV BOOT_AS_ROOT=yes
-# Wed, 05 Aug 2020 16:58:50 GMT
+# Tue, 01 Sep 2020 21:11:22 GMT
 RUN boot
-# Wed, 05 Aug 2020 16:58:50 GMT
+# Tue, 01 Sep 2020 21:11:22 GMT
 CMD ["boot" "repl"]
 ```
 
@@ -229,17 +229,17 @@ CMD ["boot" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:50:57 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa776a6e7e3738bb7885a1f6d3140c2276841368a5e839a099821c68f2f852e2`  
-		Last Modified: Wed, 05 Aug 2020 00:51:14 GMT  
-		Size: 196.2 MB (196248896 bytes)  
+	-	`sha256:6bf89641a7f2b81477850d9d4604e9d235622bf71a5859c2136763e10e04b284`  
+		Last Modified: Tue, 01 Sep 2020 02:00:43 GMT  
+		Size: 196.2 MB (196249014 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c8677d8b80bc3510426779b40a645026feb9f9ee1262a28131866603cb548c76`  
-		Last Modified: Wed, 05 Aug 2020 17:06:47 GMT  
-		Size: 6.9 KB (6906 bytes)  
+	-	`sha256:d4f6c4bbc6e761d038dc7c784d1672fb14aacdf8c708ba84690168bb35965d0a`  
+		Last Modified: Tue, 01 Sep 2020 21:21:14 GMT  
+		Size: 6.9 KB (6911 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3cef7934c78d826d225cbfc06bf8460ba7aabcf4b1721dc51e7721a1ee9546bf`  
-		Last Modified: Wed, 05 Aug 2020 17:06:52 GMT  
-		Size: 58.8 MB (58820166 bytes)  
+	-	`sha256:841f1b5e7e34af7f3c3051d3fa34a5f9321148a0c05eece481fba93f6646f890`  
+		Last Modified: Tue, 01 Sep 2020 21:21:18 GMT  
+		Size: 58.8 MB (58820159 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:boot` - linux; arm64 variant v8
@@ -341,7 +341,7 @@ CMD ["boot" "repl"]
 ## `clojure:boot-2.8.3`
 
 ```console
-$ docker pull clojure@sha256:5386ec9cd3bfe05d30f776325d851a5eccaca3ccd159e9cf28851eabc7345804
+$ docker pull clojure@sha256:d13dbabd3a8399c44d1e42be634487ac61d91ed6de6341538f6452b89591a33a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -352,14 +352,14 @@ $ docker pull clojure@sha256:5386ec9cd3bfe05d30f776325d851a5eccaca3ccd159e9cf288
 ### `clojure:boot-2.8.3` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:af38bba8ca8ce6e8a5708b7fe3eec80f1b596d5e24d73e9ea5cfbc565bdd466c
+$ docker pull clojure@sha256:13cafbbedaf319795454a3cba769ac36c5c1b2d95a8a948ae27bbee0711a2c4f
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **380.4 MB (380394560 bytes)**  
+-	Total Size: **380.4 MB (380394676 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3d542e8a70ab7a1cb721239c041243139b2c38e8c03e8780182eba15547e0c1c`
+-	Image ID: `sha256:6d6dbc91d30298edb2b2e53b9e2fb5ebb77f363d75098ecbef9becae6029236a`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
@@ -385,25 +385,25 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:27 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:44:39 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:39 GMT
+# Tue, 01 Sep 2020 01:49:46 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:47 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 16:58:30 GMT
+# Tue, 01 Sep 2020 21:11:00 GMT
 ENV BOOT_VERSION=2.8.3
-# Wed, 05 Aug 2020 16:58:30 GMT
+# Tue, 01 Sep 2020 21:11:00 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:30 GMT
+# Tue, 01 Sep 2020 21:11:00 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:58:31 GMT
+# Tue, 01 Sep 2020 21:11:01 GMT
 RUN mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot
-# Wed, 05 Aug 2020 16:58:31 GMT
+# Tue, 01 Sep 2020 21:11:02 GMT
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:31 GMT
+# Tue, 01 Sep 2020 21:11:02 GMT
 ENV BOOT_AS_ROOT=yes
-# Wed, 05 Aug 2020 16:58:50 GMT
+# Tue, 01 Sep 2020 21:11:22 GMT
 RUN boot
-# Wed, 05 Aug 2020 16:58:50 GMT
+# Tue, 01 Sep 2020 21:11:22 GMT
 CMD ["boot" "repl"]
 ```
 
@@ -432,17 +432,17 @@ CMD ["boot" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:50:57 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa776a6e7e3738bb7885a1f6d3140c2276841368a5e839a099821c68f2f852e2`  
-		Last Modified: Wed, 05 Aug 2020 00:51:14 GMT  
-		Size: 196.2 MB (196248896 bytes)  
+	-	`sha256:6bf89641a7f2b81477850d9d4604e9d235622bf71a5859c2136763e10e04b284`  
+		Last Modified: Tue, 01 Sep 2020 02:00:43 GMT  
+		Size: 196.2 MB (196249014 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c8677d8b80bc3510426779b40a645026feb9f9ee1262a28131866603cb548c76`  
-		Last Modified: Wed, 05 Aug 2020 17:06:47 GMT  
-		Size: 6.9 KB (6906 bytes)  
+	-	`sha256:d4f6c4bbc6e761d038dc7c784d1672fb14aacdf8c708ba84690168bb35965d0a`  
+		Last Modified: Tue, 01 Sep 2020 21:21:14 GMT  
+		Size: 6.9 KB (6911 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3cef7934c78d826d225cbfc06bf8460ba7aabcf4b1721dc51e7721a1ee9546bf`  
-		Last Modified: Wed, 05 Aug 2020 17:06:52 GMT  
-		Size: 58.8 MB (58820166 bytes)  
+	-	`sha256:841f1b5e7e34af7f3c3051d3fa34a5f9321148a0c05eece481fba93f6646f890`  
+		Last Modified: Tue, 01 Sep 2020 21:21:18 GMT  
+		Size: 58.8 MB (58820159 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:boot-2.8.3` - linux; arm64 variant v8
@@ -544,7 +544,7 @@ CMD ["boot" "repl"]
 ## `clojure:boot-2.8.3-buster`
 
 ```console
-$ docker pull clojure@sha256:5386ec9cd3bfe05d30f776325d851a5eccaca3ccd159e9cf28851eabc7345804
+$ docker pull clojure@sha256:d13dbabd3a8399c44d1e42be634487ac61d91ed6de6341538f6452b89591a33a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -555,14 +555,14 @@ $ docker pull clojure@sha256:5386ec9cd3bfe05d30f776325d851a5eccaca3ccd159e9cf288
 ### `clojure:boot-2.8.3-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:af38bba8ca8ce6e8a5708b7fe3eec80f1b596d5e24d73e9ea5cfbc565bdd466c
+$ docker pull clojure@sha256:13cafbbedaf319795454a3cba769ac36c5c1b2d95a8a948ae27bbee0711a2c4f
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **380.4 MB (380394560 bytes)**  
+-	Total Size: **380.4 MB (380394676 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3d542e8a70ab7a1cb721239c041243139b2c38e8c03e8780182eba15547e0c1c`
+-	Image ID: `sha256:6d6dbc91d30298edb2b2e53b9e2fb5ebb77f363d75098ecbef9becae6029236a`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
@@ -588,25 +588,25 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:27 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:44:39 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:39 GMT
+# Tue, 01 Sep 2020 01:49:46 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:47 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 16:58:30 GMT
+# Tue, 01 Sep 2020 21:11:00 GMT
 ENV BOOT_VERSION=2.8.3
-# Wed, 05 Aug 2020 16:58:30 GMT
+# Tue, 01 Sep 2020 21:11:00 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:30 GMT
+# Tue, 01 Sep 2020 21:11:00 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:58:31 GMT
+# Tue, 01 Sep 2020 21:11:01 GMT
 RUN mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot
-# Wed, 05 Aug 2020 16:58:31 GMT
+# Tue, 01 Sep 2020 21:11:02 GMT
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:31 GMT
+# Tue, 01 Sep 2020 21:11:02 GMT
 ENV BOOT_AS_ROOT=yes
-# Wed, 05 Aug 2020 16:58:50 GMT
+# Tue, 01 Sep 2020 21:11:22 GMT
 RUN boot
-# Wed, 05 Aug 2020 16:58:50 GMT
+# Tue, 01 Sep 2020 21:11:22 GMT
 CMD ["boot" "repl"]
 ```
 
@@ -635,17 +635,17 @@ CMD ["boot" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:50:57 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa776a6e7e3738bb7885a1f6d3140c2276841368a5e839a099821c68f2f852e2`  
-		Last Modified: Wed, 05 Aug 2020 00:51:14 GMT  
-		Size: 196.2 MB (196248896 bytes)  
+	-	`sha256:6bf89641a7f2b81477850d9d4604e9d235622bf71a5859c2136763e10e04b284`  
+		Last Modified: Tue, 01 Sep 2020 02:00:43 GMT  
+		Size: 196.2 MB (196249014 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c8677d8b80bc3510426779b40a645026feb9f9ee1262a28131866603cb548c76`  
-		Last Modified: Wed, 05 Aug 2020 17:06:47 GMT  
-		Size: 6.9 KB (6906 bytes)  
+	-	`sha256:d4f6c4bbc6e761d038dc7c784d1672fb14aacdf8c708ba84690168bb35965d0a`  
+		Last Modified: Tue, 01 Sep 2020 21:21:14 GMT  
+		Size: 6.9 KB (6911 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3cef7934c78d826d225cbfc06bf8460ba7aabcf4b1721dc51e7721a1ee9546bf`  
-		Last Modified: Wed, 05 Aug 2020 17:06:52 GMT  
-		Size: 58.8 MB (58820166 bytes)  
+	-	`sha256:841f1b5e7e34af7f3c3051d3fa34a5f9321148a0c05eece481fba93f6646f890`  
+		Last Modified: Tue, 01 Sep 2020 21:21:18 GMT  
+		Size: 58.8 MB (58820159 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:boot-2.8.3-buster` - linux; arm64 variant v8
@@ -747,7 +747,7 @@ CMD ["boot" "repl"]
 ## `clojure:boot-2.8.3-slim-buster`
 
 ```console
-$ docker pull clojure@sha256:d5b67c1d594bfce1c1afd0aefeba630518ab498b45e7c3474d8dfe1b60c1b269
+$ docker pull clojure@sha256:b5d273fb20b78623f59a4938b9b08be97eab95b7f18c9d06a8f8c9cb6fcfa2b7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -758,14 +758,14 @@ $ docker pull clojure@sha256:d5b67c1d594bfce1c1afd0aefeba630518ab498b45e7c3474d8
 ### `clojure:boot-2.8.3-slim-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:8d0064b3628ed6748f4c37c47a2d2d094323d97868bded073c7577b2ca95a6fb
+$ docker pull clojure@sha256:a9bc7d1bb16f33550dbb7f6bea2c1a381c01e228fca6814d4b32171a784d4cbd
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **286.0 MB (285969565 bytes)**  
+-	Total Size: **286.0 MB (285969668 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:9bd6913879c0127cb638f7334ffccb2413bc45aac687a29e0b22e027bbdc411e`
+-	Image ID: `sha256:72196a02888787956840f91950f1a4c1e12e58b3b9402411525ac4f86023e67b`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
@@ -785,25 +785,25 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:46 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:45:02 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:45:03 GMT
+# Tue, 01 Sep 2020 01:50:18 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:50:18 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 16:54:34 GMT
+# Tue, 01 Sep 2020 21:08:58 GMT
 ENV BOOT_VERSION=2.8.3
-# Wed, 05 Aug 2020 16:54:34 GMT
+# Tue, 01 Sep 2020 21:08:58 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:54:34 GMT
+# Tue, 01 Sep 2020 21:08:58 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:54:40 GMT
+# Tue, 01 Sep 2020 21:09:03 GMT
 RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/* && mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot && apt-get purge -y --auto-remove wget
-# Wed, 05 Aug 2020 16:54:40 GMT
+# Tue, 01 Sep 2020 21:09:03 GMT
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 16:54:40 GMT
+# Tue, 01 Sep 2020 21:09:03 GMT
 ENV BOOT_AS_ROOT=yes
-# Wed, 05 Aug 2020 16:55:00 GMT
+# Tue, 01 Sep 2020 21:09:24 GMT
 RUN boot
-# Wed, 05 Aug 2020 16:58:55 GMT
+# Tue, 01 Sep 2020 21:11:29 GMT
 CMD ["boot" "repl"]
 ```
 
@@ -820,17 +820,17 @@ CMD ["boot" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:51:20 GMT  
 		Size: 212.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7900923f09cbc8c8dda6274e5de53ec12688a9d2c27edabed353d1af12b03b1a`  
-		Last Modified: Wed, 05 Aug 2020 00:51:36 GMT  
-		Size: 196.5 MB (196526004 bytes)  
+	-	`sha256:ba2a97e7cfd908de238f3f28c9f3221858d3de0bf5f0138dcc04bffdb9e1f446`  
+		Last Modified: Tue, 01 Sep 2020 02:01:09 GMT  
+		Size: 196.5 MB (196526138 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a57f7ec7eeff0e2fa35c3126dda1cf3b5e82a69c394929136a94d9d378980fe0`  
-		Last Modified: Wed, 05 Aug 2020 17:05:19 GMT  
-		Size: 282.6 KB (282616 bytes)  
+	-	`sha256:fd29e8c4b397c58b6b89e89547cc73dfd2f2b69ca1c8420c0560004bd683b16e`  
+		Last Modified: Tue, 01 Sep 2020 21:20:44 GMT  
+		Size: 282.6 KB (282649 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:33b10cd8870fa0b1ab0f3d2ebb4f3ce093cc7ab5b836a7ebea739cf0b93b9c53`  
-		Last Modified: Wed, 05 Aug 2020 17:05:24 GMT  
-		Size: 58.8 MB (58820181 bytes)  
+	-	`sha256:5d23854470eb28c9b7ee28f3f6a80e0b2193ea725ee05971c3f99e71a1688912`  
+		Last Modified: Tue, 01 Sep 2020 21:20:48 GMT  
+		Size: 58.8 MB (58820117 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:boot-2.8.3-slim-buster` - linux; arm64 variant v8
@@ -914,7 +914,7 @@ CMD ["boot" "repl"]
 ## `clojure:boot-buster`
 
 ```console
-$ docker pull clojure@sha256:5386ec9cd3bfe05d30f776325d851a5eccaca3ccd159e9cf28851eabc7345804
+$ docker pull clojure@sha256:d13dbabd3a8399c44d1e42be634487ac61d91ed6de6341538f6452b89591a33a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -925,14 +925,14 @@ $ docker pull clojure@sha256:5386ec9cd3bfe05d30f776325d851a5eccaca3ccd159e9cf288
 ### `clojure:boot-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:af38bba8ca8ce6e8a5708b7fe3eec80f1b596d5e24d73e9ea5cfbc565bdd466c
+$ docker pull clojure@sha256:13cafbbedaf319795454a3cba769ac36c5c1b2d95a8a948ae27bbee0711a2c4f
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **380.4 MB (380394560 bytes)**  
+-	Total Size: **380.4 MB (380394676 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3d542e8a70ab7a1cb721239c041243139b2c38e8c03e8780182eba15547e0c1c`
+-	Image ID: `sha256:6d6dbc91d30298edb2b2e53b9e2fb5ebb77f363d75098ecbef9becae6029236a`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
@@ -958,25 +958,25 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:27 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:44:39 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:39 GMT
+# Tue, 01 Sep 2020 01:49:46 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:47 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 16:58:30 GMT
+# Tue, 01 Sep 2020 21:11:00 GMT
 ENV BOOT_VERSION=2.8.3
-# Wed, 05 Aug 2020 16:58:30 GMT
+# Tue, 01 Sep 2020 21:11:00 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:30 GMT
+# Tue, 01 Sep 2020 21:11:00 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:58:31 GMT
+# Tue, 01 Sep 2020 21:11:01 GMT
 RUN mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot
-# Wed, 05 Aug 2020 16:58:31 GMT
+# Tue, 01 Sep 2020 21:11:02 GMT
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:31 GMT
+# Tue, 01 Sep 2020 21:11:02 GMT
 ENV BOOT_AS_ROOT=yes
-# Wed, 05 Aug 2020 16:58:50 GMT
+# Tue, 01 Sep 2020 21:11:22 GMT
 RUN boot
-# Wed, 05 Aug 2020 16:58:50 GMT
+# Tue, 01 Sep 2020 21:11:22 GMT
 CMD ["boot" "repl"]
 ```
 
@@ -1005,17 +1005,17 @@ CMD ["boot" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:50:57 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa776a6e7e3738bb7885a1f6d3140c2276841368a5e839a099821c68f2f852e2`  
-		Last Modified: Wed, 05 Aug 2020 00:51:14 GMT  
-		Size: 196.2 MB (196248896 bytes)  
+	-	`sha256:6bf89641a7f2b81477850d9d4604e9d235622bf71a5859c2136763e10e04b284`  
+		Last Modified: Tue, 01 Sep 2020 02:00:43 GMT  
+		Size: 196.2 MB (196249014 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c8677d8b80bc3510426779b40a645026feb9f9ee1262a28131866603cb548c76`  
-		Last Modified: Wed, 05 Aug 2020 17:06:47 GMT  
-		Size: 6.9 KB (6906 bytes)  
+	-	`sha256:d4f6c4bbc6e761d038dc7c784d1672fb14aacdf8c708ba84690168bb35965d0a`  
+		Last Modified: Tue, 01 Sep 2020 21:21:14 GMT  
+		Size: 6.9 KB (6911 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3cef7934c78d826d225cbfc06bf8460ba7aabcf4b1721dc51e7721a1ee9546bf`  
-		Last Modified: Wed, 05 Aug 2020 17:06:52 GMT  
-		Size: 58.8 MB (58820166 bytes)  
+	-	`sha256:841f1b5e7e34af7f3c3051d3fa34a5f9321148a0c05eece481fba93f6646f890`  
+		Last Modified: Tue, 01 Sep 2020 21:21:18 GMT  
+		Size: 58.8 MB (58820159 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:boot-buster` - linux; arm64 variant v8
@@ -1117,7 +1117,7 @@ CMD ["boot" "repl"]
 ## `clojure:boot-slim-buster`
 
 ```console
-$ docker pull clojure@sha256:d5b67c1d594bfce1c1afd0aefeba630518ab498b45e7c3474d8dfe1b60c1b269
+$ docker pull clojure@sha256:b5d273fb20b78623f59a4938b9b08be97eab95b7f18c9d06a8f8c9cb6fcfa2b7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1128,14 +1128,14 @@ $ docker pull clojure@sha256:d5b67c1d594bfce1c1afd0aefeba630518ab498b45e7c3474d8
 ### `clojure:boot-slim-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:8d0064b3628ed6748f4c37c47a2d2d094323d97868bded073c7577b2ca95a6fb
+$ docker pull clojure@sha256:a9bc7d1bb16f33550dbb7f6bea2c1a381c01e228fca6814d4b32171a784d4cbd
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **286.0 MB (285969565 bytes)**  
+-	Total Size: **286.0 MB (285969668 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:9bd6913879c0127cb638f7334ffccb2413bc45aac687a29e0b22e027bbdc411e`
+-	Image ID: `sha256:72196a02888787956840f91950f1a4c1e12e58b3b9402411525ac4f86023e67b`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
@@ -1155,25 +1155,25 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:46 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:45:02 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:45:03 GMT
+# Tue, 01 Sep 2020 01:50:18 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:50:18 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 16:54:34 GMT
+# Tue, 01 Sep 2020 21:08:58 GMT
 ENV BOOT_VERSION=2.8.3
-# Wed, 05 Aug 2020 16:54:34 GMT
+# Tue, 01 Sep 2020 21:08:58 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:54:34 GMT
+# Tue, 01 Sep 2020 21:08:58 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:54:40 GMT
+# Tue, 01 Sep 2020 21:09:03 GMT
 RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/* && mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot && apt-get purge -y --auto-remove wget
-# Wed, 05 Aug 2020 16:54:40 GMT
+# Tue, 01 Sep 2020 21:09:03 GMT
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 16:54:40 GMT
+# Tue, 01 Sep 2020 21:09:03 GMT
 ENV BOOT_AS_ROOT=yes
-# Wed, 05 Aug 2020 16:55:00 GMT
+# Tue, 01 Sep 2020 21:09:24 GMT
 RUN boot
-# Wed, 05 Aug 2020 16:58:55 GMT
+# Tue, 01 Sep 2020 21:11:29 GMT
 CMD ["boot" "repl"]
 ```
 
@@ -1190,17 +1190,17 @@ CMD ["boot" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:51:20 GMT  
 		Size: 212.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7900923f09cbc8c8dda6274e5de53ec12688a9d2c27edabed353d1af12b03b1a`  
-		Last Modified: Wed, 05 Aug 2020 00:51:36 GMT  
-		Size: 196.5 MB (196526004 bytes)  
+	-	`sha256:ba2a97e7cfd908de238f3f28c9f3221858d3de0bf5f0138dcc04bffdb9e1f446`  
+		Last Modified: Tue, 01 Sep 2020 02:01:09 GMT  
+		Size: 196.5 MB (196526138 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a57f7ec7eeff0e2fa35c3126dda1cf3b5e82a69c394929136a94d9d378980fe0`  
-		Last Modified: Wed, 05 Aug 2020 17:05:19 GMT  
-		Size: 282.6 KB (282616 bytes)  
+	-	`sha256:fd29e8c4b397c58b6b89e89547cc73dfd2f2b69ca1c8420c0560004bd683b16e`  
+		Last Modified: Tue, 01 Sep 2020 21:20:44 GMT  
+		Size: 282.6 KB (282649 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:33b10cd8870fa0b1ab0f3d2ebb4f3ce093cc7ab5b836a7ebea739cf0b93b9c53`  
-		Last Modified: Wed, 05 Aug 2020 17:05:24 GMT  
-		Size: 58.8 MB (58820181 bytes)  
+	-	`sha256:5d23854470eb28c9b7ee28f3f6a80e0b2193ea725ee05971c3f99e71a1688912`  
+		Last Modified: Tue, 01 Sep 2020 21:20:48 GMT  
+		Size: 58.8 MB (58820117 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:boot-slim-buster` - linux; arm64 variant v8
@@ -1284,7 +1284,7 @@ CMD ["boot" "repl"]
 ## `clojure:latest`
 
 ```console
-$ docker pull clojure@sha256:69e3885526f06b364ce5e4bae216774daaa8e4e327e7b27eaabe77bf53807aad
+$ docker pull clojure@sha256:da116dad47d4b1be096e04e6def3a5833ea2deeb4a76842128b6f7020f421f2a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1294,14 +1294,14 @@ $ docker pull clojure@sha256:69e3885526f06b364ce5e4bae216774daaa8e4e327e7b27eaab
 ### `clojure:latest` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:e5ed84b995918ae19e71d843be9bae7ff94b56f65e25da989dc4cbe1e44028d6
+$ docker pull clojure@sha256:c7fc3f5835478c5f98ecfe0fb27f05c8548d11fd00cc9172f1856bbbaabf8136
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **342.0 MB (341979053 bytes)**  
+-	Total Size: **342.0 MB (341979226 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c4ae00de50df415a71fc68888a8ac7cebf5c74106d1bbad4ad286e74e83d8b03`
+-	Image ID: `sha256:0755a41f229105784421aaee0d1c7dd1936d586093cb8d5350b9d5397d63c0c7`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -1321,45 +1321,45 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:46 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:45:02 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:45:03 GMT
+# Tue, 01 Sep 2020 01:50:18 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:50:18 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 16:54:34 GMT
+# Tue, 01 Sep 2020 21:08:58 GMT
 ENV BOOT_VERSION=2.8.3
-# Wed, 05 Aug 2020 16:54:34 GMT
+# Tue, 01 Sep 2020 21:08:58 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:54:34 GMT
+# Tue, 01 Sep 2020 21:08:58 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:54:40 GMT
+# Tue, 01 Sep 2020 21:09:03 GMT
 RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/* && mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot && apt-get purge -y --auto-remove wget
-# Wed, 05 Aug 2020 16:54:40 GMT
+# Tue, 01 Sep 2020 21:09:03 GMT
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 16:54:40 GMT
+# Tue, 01 Sep 2020 21:09:03 GMT
 ENV BOOT_AS_ROOT=yes
-# Wed, 05 Aug 2020 16:55:00 GMT
+# Tue, 01 Sep 2020 21:09:24 GMT
 RUN boot
-# Wed, 05 Aug 2020 16:55:00 GMT
+# Tue, 01 Sep 2020 21:09:24 GMT
 ENV LEIN_VERSION=2.9.3
-# Wed, 05 Aug 2020 16:55:00 GMT
+# Tue, 01 Sep 2020 21:09:24 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:55:00 GMT
+# Tue, 01 Sep 2020 21:09:25 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:55:10 GMT
+# Tue, 01 Sep 2020 21:09:34 GMT
 RUN apt-get update && apt-get install -y gnupg wget && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg wget
-# Wed, 05 Aug 2020 16:55:10 GMT
+# Tue, 01 Sep 2020 21:09:34 GMT
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/:/usr/local/bin/
-# Wed, 05 Aug 2020 16:55:10 GMT
+# Tue, 01 Sep 2020 21:09:34 GMT
 ENV LEIN_ROOT=1
-# Wed, 05 Aug 2020 16:55:14 GMT
+# Tue, 01 Sep 2020 21:09:38 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Fri, 14 Aug 2020 01:19:34 GMT
+# Tue, 01 Sep 2020 21:09:38 GMT
 ENV CLOJURE_VERSION=1.10.1.561
-# Fri, 14 Aug 2020 01:19:34 GMT
+# Tue, 01 Sep 2020 21:09:39 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 01:19:54 GMT
+# Tue, 01 Sep 2020 21:09:57 GMT
 RUN apt-get update && apt-get install -y curl make rlwrap wget && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "7f9e4e7c5a8171db4e4edf5ce78e5b8f453bae641a4c6b7f3dda36c3128d2ff7 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apt-get purge -y --auto-remove curl wget
-# Fri, 14 Aug 2020 01:19:55 GMT
+# Tue, 01 Sep 2020 21:09:58 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -1376,35 +1376,35 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:51:20 GMT  
 		Size: 212.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7900923f09cbc8c8dda6274e5de53ec12688a9d2c27edabed353d1af12b03b1a`  
-		Last Modified: Wed, 05 Aug 2020 00:51:36 GMT  
-		Size: 196.5 MB (196526004 bytes)  
+	-	`sha256:ba2a97e7cfd908de238f3f28c9f3221858d3de0bf5f0138dcc04bffdb9e1f446`  
+		Last Modified: Tue, 01 Sep 2020 02:01:09 GMT  
+		Size: 196.5 MB (196526138 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a57f7ec7eeff0e2fa35c3126dda1cf3b5e82a69c394929136a94d9d378980fe0`  
-		Last Modified: Wed, 05 Aug 2020 17:05:19 GMT  
-		Size: 282.6 KB (282616 bytes)  
+	-	`sha256:fd29e8c4b397c58b6b89e89547cc73dfd2f2b69ca1c8420c0560004bd683b16e`  
+		Last Modified: Tue, 01 Sep 2020 21:20:44 GMT  
+		Size: 282.6 KB (282649 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:33b10cd8870fa0b1ab0f3d2ebb4f3ce093cc7ab5b836a7ebea739cf0b93b9c53`  
-		Last Modified: Wed, 05 Aug 2020 17:05:24 GMT  
-		Size: 58.8 MB (58820181 bytes)  
+	-	`sha256:5d23854470eb28c9b7ee28f3f6a80e0b2193ea725ee05971c3f99e71a1688912`  
+		Last Modified: Tue, 01 Sep 2020 21:20:48 GMT  
+		Size: 58.8 MB (58820117 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7803aade06c915eebc4b8934007f0da81910cff8dac8bb5caa60ce563d714c9d`  
-		Last Modified: Wed, 05 Aug 2020 17:05:20 GMT  
-		Size: 13.5 MB (13459386 bytes)  
+	-	`sha256:f160e8c4621290a0402e592fc34269ba122193061ee4f308a84d46b546b9b70d`  
+		Last Modified: Tue, 01 Sep 2020 21:20:45 GMT  
+		Size: 13.5 MB (13459457 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:47578a562d6f1cf98893518210872bc925294d1f984b1132a3af72b827219555`  
-		Last Modified: Wed, 05 Aug 2020 17:05:19 GMT  
-		Size: 4.2 MB (4155681 bytes)  
+	-	`sha256:bf22ba57700a3edc2c8ce3343603075df1434a7e00fdd224f58419d19a24d676`  
+		Last Modified: Tue, 01 Sep 2020 21:20:44 GMT  
+		Size: 4.2 MB (4155675 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:70abe7e7f7436838cbb7dfec242e3c8910825670ed10bc069ffa6ee371c726ce`  
-		Last Modified: Fri, 14 Aug 2020 01:24:56 GMT  
-		Size: 38.4 MB (38394421 bytes)  
+	-	`sha256:176d37c5c47938f9aae3caf791814b46f8daec0a94144a1f78e6cdf39c4c58b9`  
+		Last Modified: Tue, 01 Sep 2020 21:20:50 GMT  
+		Size: 38.4 MB (38394426 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:lein`
 
 ```console
-$ docker pull clojure@sha256:f59203d17d497fe351b586fa8f85c23a12109842b184e662c2c5d4b1aaa0cea4
+$ docker pull clojure@sha256:ecda6793cc282b320304eb47063730492700b6114ced7fd29db5a3bdc3d92524
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1415,14 +1415,14 @@ $ docker pull clojure@sha256:f59203d17d497fe351b586fa8f85c23a12109842b184e662c2c
 ### `clojure:lein` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:7aeb244bdd2bab426c5d3038b0c0bd3d029920b973326573bd9fefa555dddf03
+$ docker pull clojure@sha256:76957fcf621e0d27980c9b78200b93a5be08254575925360d6197c59c1c14aae
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **339.3 MB (339274584 bytes)**  
+-	Total Size: **339.3 MB (339274669 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:45419e5468fc40be7c63f4def8b96db062a022e58b2879dfef20b891bbcdaebd`
+-	Image ID: `sha256:f33b38eff6c09dc007c6ea5f9123ccc0b77e5fa52fba276ca563a7e063ce8539`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -1448,25 +1448,25 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:27 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:44:39 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:39 GMT
+# Tue, 01 Sep 2020 01:49:46 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:47 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 16:57:55 GMT
+# Tue, 01 Sep 2020 21:10:25 GMT
 ENV LEIN_VERSION=2.9.3
-# Wed, 05 Aug 2020 16:57:55 GMT
+# Tue, 01 Sep 2020 21:10:25 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:57:55 GMT
+# Tue, 01 Sep 2020 21:10:25 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:58:01 GMT
+# Tue, 01 Sep 2020 21:10:32 GMT
 RUN apt-get update && apt-get install -y gnupg && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg
-# Wed, 05 Aug 2020 16:58:02 GMT
+# Tue, 01 Sep 2020 21:10:32 GMT
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:02 GMT
+# Tue, 01 Sep 2020 21:10:32 GMT
 ENV LEIN_ROOT=1
-# Wed, 05 Aug 2020 16:58:06 GMT
+# Tue, 01 Sep 2020 21:10:36 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Wed, 05 Aug 2020 16:58:06 GMT
+# Tue, 01 Sep 2020 21:10:36 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -1495,17 +1495,17 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:50:57 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa776a6e7e3738bb7885a1f6d3140c2276841368a5e839a099821c68f2f852e2`  
-		Last Modified: Wed, 05 Aug 2020 00:51:14 GMT  
-		Size: 196.2 MB (196248896 bytes)  
+	-	`sha256:6bf89641a7f2b81477850d9d4604e9d235622bf71a5859c2136763e10e04b284`  
+		Last Modified: Tue, 01 Sep 2020 02:00:43 GMT  
+		Size: 196.2 MB (196249014 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0b2bb76c7e87dd34d64ccc8c6e1cfe303a43a848bc75fcabb2ba970a041804f2`  
-		Last Modified: Wed, 05 Aug 2020 17:06:29 GMT  
-		Size: 13.5 MB (13538876 bytes)  
+	-	`sha256:4bca78fc84ce0f6a83852e5aa19b824fe2d205988e57716bd08e983cec9900d8`  
+		Last Modified: Tue, 01 Sep 2020 21:20:58 GMT  
+		Size: 13.5 MB (13538849 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:61141ed15543166ea95c20960295b85a926d5a3ed8656afe7402c04c84c683e5`  
-		Last Modified: Wed, 05 Aug 2020 17:06:28 GMT  
-		Size: 4.2 MB (4168220 bytes)  
+	-	`sha256:1efdb10416021c2cbc49863bc7d8aefc03aa8e8381d3762ee29fd011db05f097`  
+		Last Modified: Tue, 01 Sep 2020 21:20:57 GMT  
+		Size: 4.2 MB (4168214 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:lein` - linux; arm64 variant v8
@@ -1607,7 +1607,7 @@ CMD ["lein" "repl"]
 ## `clojure:lein-2.9.3`
 
 ```console
-$ docker pull clojure@sha256:f59203d17d497fe351b586fa8f85c23a12109842b184e662c2c5d4b1aaa0cea4
+$ docker pull clojure@sha256:ecda6793cc282b320304eb47063730492700b6114ced7fd29db5a3bdc3d92524
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1618,14 +1618,14 @@ $ docker pull clojure@sha256:f59203d17d497fe351b586fa8f85c23a12109842b184e662c2c
 ### `clojure:lein-2.9.3` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:7aeb244bdd2bab426c5d3038b0c0bd3d029920b973326573bd9fefa555dddf03
+$ docker pull clojure@sha256:76957fcf621e0d27980c9b78200b93a5be08254575925360d6197c59c1c14aae
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **339.3 MB (339274584 bytes)**  
+-	Total Size: **339.3 MB (339274669 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:45419e5468fc40be7c63f4def8b96db062a022e58b2879dfef20b891bbcdaebd`
+-	Image ID: `sha256:f33b38eff6c09dc007c6ea5f9123ccc0b77e5fa52fba276ca563a7e063ce8539`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -1651,25 +1651,25 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:27 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:44:39 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:39 GMT
+# Tue, 01 Sep 2020 01:49:46 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:47 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 16:57:55 GMT
+# Tue, 01 Sep 2020 21:10:25 GMT
 ENV LEIN_VERSION=2.9.3
-# Wed, 05 Aug 2020 16:57:55 GMT
+# Tue, 01 Sep 2020 21:10:25 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:57:55 GMT
+# Tue, 01 Sep 2020 21:10:25 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:58:01 GMT
+# Tue, 01 Sep 2020 21:10:32 GMT
 RUN apt-get update && apt-get install -y gnupg && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg
-# Wed, 05 Aug 2020 16:58:02 GMT
+# Tue, 01 Sep 2020 21:10:32 GMT
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:02 GMT
+# Tue, 01 Sep 2020 21:10:32 GMT
 ENV LEIN_ROOT=1
-# Wed, 05 Aug 2020 16:58:06 GMT
+# Tue, 01 Sep 2020 21:10:36 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Wed, 05 Aug 2020 16:58:06 GMT
+# Tue, 01 Sep 2020 21:10:36 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -1698,17 +1698,17 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:50:57 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa776a6e7e3738bb7885a1f6d3140c2276841368a5e839a099821c68f2f852e2`  
-		Last Modified: Wed, 05 Aug 2020 00:51:14 GMT  
-		Size: 196.2 MB (196248896 bytes)  
+	-	`sha256:6bf89641a7f2b81477850d9d4604e9d235622bf71a5859c2136763e10e04b284`  
+		Last Modified: Tue, 01 Sep 2020 02:00:43 GMT  
+		Size: 196.2 MB (196249014 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0b2bb76c7e87dd34d64ccc8c6e1cfe303a43a848bc75fcabb2ba970a041804f2`  
-		Last Modified: Wed, 05 Aug 2020 17:06:29 GMT  
-		Size: 13.5 MB (13538876 bytes)  
+	-	`sha256:4bca78fc84ce0f6a83852e5aa19b824fe2d205988e57716bd08e983cec9900d8`  
+		Last Modified: Tue, 01 Sep 2020 21:20:58 GMT  
+		Size: 13.5 MB (13538849 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:61141ed15543166ea95c20960295b85a926d5a3ed8656afe7402c04c84c683e5`  
-		Last Modified: Wed, 05 Aug 2020 17:06:28 GMT  
-		Size: 4.2 MB (4168220 bytes)  
+	-	`sha256:1efdb10416021c2cbc49863bc7d8aefc03aa8e8381d3762ee29fd011db05f097`  
+		Last Modified: Tue, 01 Sep 2020 21:20:57 GMT  
+		Size: 4.2 MB (4168214 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:lein-2.9.3` - linux; arm64 variant v8
@@ -1810,7 +1810,7 @@ CMD ["lein" "repl"]
 ## `clojure:lein-2.9.3-buster`
 
 ```console
-$ docker pull clojure@sha256:f59203d17d497fe351b586fa8f85c23a12109842b184e662c2c5d4b1aaa0cea4
+$ docker pull clojure@sha256:ecda6793cc282b320304eb47063730492700b6114ced7fd29db5a3bdc3d92524
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1821,14 +1821,14 @@ $ docker pull clojure@sha256:f59203d17d497fe351b586fa8f85c23a12109842b184e662c2c
 ### `clojure:lein-2.9.3-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:7aeb244bdd2bab426c5d3038b0c0bd3d029920b973326573bd9fefa555dddf03
+$ docker pull clojure@sha256:76957fcf621e0d27980c9b78200b93a5be08254575925360d6197c59c1c14aae
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **339.3 MB (339274584 bytes)**  
+-	Total Size: **339.3 MB (339274669 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:45419e5468fc40be7c63f4def8b96db062a022e58b2879dfef20b891bbcdaebd`
+-	Image ID: `sha256:f33b38eff6c09dc007c6ea5f9123ccc0b77e5fa52fba276ca563a7e063ce8539`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -1854,25 +1854,25 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:27 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:44:39 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:39 GMT
+# Tue, 01 Sep 2020 01:49:46 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:47 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 16:57:55 GMT
+# Tue, 01 Sep 2020 21:10:25 GMT
 ENV LEIN_VERSION=2.9.3
-# Wed, 05 Aug 2020 16:57:55 GMT
+# Tue, 01 Sep 2020 21:10:25 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:57:55 GMT
+# Tue, 01 Sep 2020 21:10:25 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:58:01 GMT
+# Tue, 01 Sep 2020 21:10:32 GMT
 RUN apt-get update && apt-get install -y gnupg && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg
-# Wed, 05 Aug 2020 16:58:02 GMT
+# Tue, 01 Sep 2020 21:10:32 GMT
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:02 GMT
+# Tue, 01 Sep 2020 21:10:32 GMT
 ENV LEIN_ROOT=1
-# Wed, 05 Aug 2020 16:58:06 GMT
+# Tue, 01 Sep 2020 21:10:36 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Wed, 05 Aug 2020 16:58:06 GMT
+# Tue, 01 Sep 2020 21:10:36 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -1901,17 +1901,17 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:50:57 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa776a6e7e3738bb7885a1f6d3140c2276841368a5e839a099821c68f2f852e2`  
-		Last Modified: Wed, 05 Aug 2020 00:51:14 GMT  
-		Size: 196.2 MB (196248896 bytes)  
+	-	`sha256:6bf89641a7f2b81477850d9d4604e9d235622bf71a5859c2136763e10e04b284`  
+		Last Modified: Tue, 01 Sep 2020 02:00:43 GMT  
+		Size: 196.2 MB (196249014 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0b2bb76c7e87dd34d64ccc8c6e1cfe303a43a848bc75fcabb2ba970a041804f2`  
-		Last Modified: Wed, 05 Aug 2020 17:06:29 GMT  
-		Size: 13.5 MB (13538876 bytes)  
+	-	`sha256:4bca78fc84ce0f6a83852e5aa19b824fe2d205988e57716bd08e983cec9900d8`  
+		Last Modified: Tue, 01 Sep 2020 21:20:58 GMT  
+		Size: 13.5 MB (13538849 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:61141ed15543166ea95c20960295b85a926d5a3ed8656afe7402c04c84c683e5`  
-		Last Modified: Wed, 05 Aug 2020 17:06:28 GMT  
-		Size: 4.2 MB (4168220 bytes)  
+	-	`sha256:1efdb10416021c2cbc49863bc7d8aefc03aa8e8381d3762ee29fd011db05f097`  
+		Last Modified: Tue, 01 Sep 2020 21:20:57 GMT  
+		Size: 4.2 MB (4168214 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:lein-2.9.3-buster` - linux; arm64 variant v8
@@ -2013,7 +2013,7 @@ CMD ["lein" "repl"]
 ## `clojure:lein-2.9.3-slim-buster`
 
 ```console
-$ docker pull clojure@sha256:73d3b987a44df2cab4bda701786c4204ce564da603d0fbd45511b63eebc5ea93
+$ docker pull clojure@sha256:53ffacd317ac8ecf3304682e3a08596b1c3c161f5a23d4c4e42008d1072646e2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2024,14 +2024,14 @@ $ docker pull clojure@sha256:73d3b987a44df2cab4bda701786c4204ce564da603d0fbd4551
 ### `clojure:lein-2.9.3-slim-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:771cd2c5250eabf5267478931615a9dccc649704648574a9eb33a43d04ab05f2
+$ docker pull clojure@sha256:edfa5024a9c1b7f40027b88adfc52e864a7a1ca70da6c42f5ed53aae4d34866d
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **244.5 MB (244493950 bytes)**  
+-	Total Size: **244.5 MB (244494078 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f78a1e393bd6de644ac496abd930736dbf4ffcdacd2c7118372dbffc9deb4867`
+-	Image ID: `sha256:54f6113f88d77e1f77dbd5518947d3886a84a154320888025223d7d85960d1ef`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -2051,25 +2051,25 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:46 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:45:02 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:45:03 GMT
+# Tue, 01 Sep 2020 01:50:18 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:50:18 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 16:58:11 GMT
+# Tue, 01 Sep 2020 21:10:41 GMT
 ENV LEIN_VERSION=2.9.3
-# Wed, 05 Aug 2020 16:58:11 GMT
+# Tue, 01 Sep 2020 21:10:41 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:11 GMT
+# Tue, 01 Sep 2020 21:10:42 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:58:20 GMT
+# Tue, 01 Sep 2020 21:10:51 GMT
 RUN apt-get update && apt-get install -y gnupg wget && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg wget
-# Wed, 05 Aug 2020 16:58:21 GMT
+# Tue, 01 Sep 2020 21:10:51 GMT
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:21 GMT
+# Tue, 01 Sep 2020 21:10:51 GMT
 ENV LEIN_ROOT=1
-# Wed, 05 Aug 2020 16:58:25 GMT
+# Tue, 01 Sep 2020 21:10:55 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Wed, 05 Aug 2020 16:58:25 GMT
+# Tue, 01 Sep 2020 21:10:55 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -2086,17 +2086,17 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:51:20 GMT  
 		Size: 212.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7900923f09cbc8c8dda6274e5de53ec12688a9d2c27edabed353d1af12b03b1a`  
-		Last Modified: Wed, 05 Aug 2020 00:51:36 GMT  
-		Size: 196.5 MB (196526004 bytes)  
+	-	`sha256:ba2a97e7cfd908de238f3f28c9f3221858d3de0bf5f0138dcc04bffdb9e1f446`  
+		Last Modified: Tue, 01 Sep 2020 02:01:09 GMT  
+		Size: 196.5 MB (196526138 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7d4257124f2fe6b9661ab6a69d273cf1906cc0f2f9f1ed9b371bbd9bacf60580`  
-		Last Modified: Wed, 05 Aug 2020 17:06:40 GMT  
-		Size: 13.5 MB (13459056 bytes)  
+	-	`sha256:4b050804743ede43660974b70b791dc0bf20663229459123509f1bdbe018fcda`  
+		Last Modified: Tue, 01 Sep 2020 21:21:07 GMT  
+		Size: 13.5 MB (13459048 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8887164796c4f4565eee27f16fdcbd70f543fff226088a7a162ee85a530f2518`  
-		Last Modified: Wed, 05 Aug 2020 17:06:39 GMT  
-		Size: 4.2 MB (4168126 bytes)  
+	-	`sha256:9ace3907bbb789eefdded03bbae9ab5b13a4ec04ea8ffc5a3b5117dc67438be6`  
+		Last Modified: Tue, 01 Sep 2020 21:21:06 GMT  
+		Size: 4.2 MB (4168128 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:lein-2.9.3-slim-buster` - linux; arm64 variant v8
@@ -2180,7 +2180,7 @@ CMD ["lein" "repl"]
 ## `clojure:lein-buster`
 
 ```console
-$ docker pull clojure@sha256:f59203d17d497fe351b586fa8f85c23a12109842b184e662c2c5d4b1aaa0cea4
+$ docker pull clojure@sha256:ecda6793cc282b320304eb47063730492700b6114ced7fd29db5a3bdc3d92524
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2191,14 +2191,14 @@ $ docker pull clojure@sha256:f59203d17d497fe351b586fa8f85c23a12109842b184e662c2c
 ### `clojure:lein-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:7aeb244bdd2bab426c5d3038b0c0bd3d029920b973326573bd9fefa555dddf03
+$ docker pull clojure@sha256:76957fcf621e0d27980c9b78200b93a5be08254575925360d6197c59c1c14aae
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **339.3 MB (339274584 bytes)**  
+-	Total Size: **339.3 MB (339274669 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:45419e5468fc40be7c63f4def8b96db062a022e58b2879dfef20b891bbcdaebd`
+-	Image ID: `sha256:f33b38eff6c09dc007c6ea5f9123ccc0b77e5fa52fba276ca563a7e063ce8539`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -2224,25 +2224,25 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:27 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:44:39 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:39 GMT
+# Tue, 01 Sep 2020 01:49:46 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:47 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 16:57:55 GMT
+# Tue, 01 Sep 2020 21:10:25 GMT
 ENV LEIN_VERSION=2.9.3
-# Wed, 05 Aug 2020 16:57:55 GMT
+# Tue, 01 Sep 2020 21:10:25 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:57:55 GMT
+# Tue, 01 Sep 2020 21:10:25 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:58:01 GMT
+# Tue, 01 Sep 2020 21:10:32 GMT
 RUN apt-get update && apt-get install -y gnupg && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg
-# Wed, 05 Aug 2020 16:58:02 GMT
+# Tue, 01 Sep 2020 21:10:32 GMT
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:02 GMT
+# Tue, 01 Sep 2020 21:10:32 GMT
 ENV LEIN_ROOT=1
-# Wed, 05 Aug 2020 16:58:06 GMT
+# Tue, 01 Sep 2020 21:10:36 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Wed, 05 Aug 2020 16:58:06 GMT
+# Tue, 01 Sep 2020 21:10:36 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -2271,17 +2271,17 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:50:57 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa776a6e7e3738bb7885a1f6d3140c2276841368a5e839a099821c68f2f852e2`  
-		Last Modified: Wed, 05 Aug 2020 00:51:14 GMT  
-		Size: 196.2 MB (196248896 bytes)  
+	-	`sha256:6bf89641a7f2b81477850d9d4604e9d235622bf71a5859c2136763e10e04b284`  
+		Last Modified: Tue, 01 Sep 2020 02:00:43 GMT  
+		Size: 196.2 MB (196249014 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0b2bb76c7e87dd34d64ccc8c6e1cfe303a43a848bc75fcabb2ba970a041804f2`  
-		Last Modified: Wed, 05 Aug 2020 17:06:29 GMT  
-		Size: 13.5 MB (13538876 bytes)  
+	-	`sha256:4bca78fc84ce0f6a83852e5aa19b824fe2d205988e57716bd08e983cec9900d8`  
+		Last Modified: Tue, 01 Sep 2020 21:20:58 GMT  
+		Size: 13.5 MB (13538849 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:61141ed15543166ea95c20960295b85a926d5a3ed8656afe7402c04c84c683e5`  
-		Last Modified: Wed, 05 Aug 2020 17:06:28 GMT  
-		Size: 4.2 MB (4168220 bytes)  
+	-	`sha256:1efdb10416021c2cbc49863bc7d8aefc03aa8e8381d3762ee29fd011db05f097`  
+		Last Modified: Tue, 01 Sep 2020 21:20:57 GMT  
+		Size: 4.2 MB (4168214 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:lein-buster` - linux; arm64 variant v8
@@ -2383,7 +2383,7 @@ CMD ["lein" "repl"]
 ## `clojure:lein-slim-buster`
 
 ```console
-$ docker pull clojure@sha256:73d3b987a44df2cab4bda701786c4204ce564da603d0fbd45511b63eebc5ea93
+$ docker pull clojure@sha256:53ffacd317ac8ecf3304682e3a08596b1c3c161f5a23d4c4e42008d1072646e2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2394,14 +2394,14 @@ $ docker pull clojure@sha256:73d3b987a44df2cab4bda701786c4204ce564da603d0fbd4551
 ### `clojure:lein-slim-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:771cd2c5250eabf5267478931615a9dccc649704648574a9eb33a43d04ab05f2
+$ docker pull clojure@sha256:edfa5024a9c1b7f40027b88adfc52e864a7a1ca70da6c42f5ed53aae4d34866d
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **244.5 MB (244493950 bytes)**  
+-	Total Size: **244.5 MB (244494078 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f78a1e393bd6de644ac496abd930736dbf4ffcdacd2c7118372dbffc9deb4867`
+-	Image ID: `sha256:54f6113f88d77e1f77dbd5518947d3886a84a154320888025223d7d85960d1ef`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -2421,25 +2421,25 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:46 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:45:02 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:45:03 GMT
+# Tue, 01 Sep 2020 01:50:18 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:50:18 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 16:58:11 GMT
+# Tue, 01 Sep 2020 21:10:41 GMT
 ENV LEIN_VERSION=2.9.3
-# Wed, 05 Aug 2020 16:58:11 GMT
+# Tue, 01 Sep 2020 21:10:41 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:11 GMT
+# Tue, 01 Sep 2020 21:10:42 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:58:20 GMT
+# Tue, 01 Sep 2020 21:10:51 GMT
 RUN apt-get update && apt-get install -y gnupg wget && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg wget
-# Wed, 05 Aug 2020 16:58:21 GMT
+# Tue, 01 Sep 2020 21:10:51 GMT
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:21 GMT
+# Tue, 01 Sep 2020 21:10:51 GMT
 ENV LEIN_ROOT=1
-# Wed, 05 Aug 2020 16:58:25 GMT
+# Tue, 01 Sep 2020 21:10:55 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Wed, 05 Aug 2020 16:58:25 GMT
+# Tue, 01 Sep 2020 21:10:55 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -2456,17 +2456,17 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:51:20 GMT  
 		Size: 212.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7900923f09cbc8c8dda6274e5de53ec12688a9d2c27edabed353d1af12b03b1a`  
-		Last Modified: Wed, 05 Aug 2020 00:51:36 GMT  
-		Size: 196.5 MB (196526004 bytes)  
+	-	`sha256:ba2a97e7cfd908de238f3f28c9f3221858d3de0bf5f0138dcc04bffdb9e1f446`  
+		Last Modified: Tue, 01 Sep 2020 02:01:09 GMT  
+		Size: 196.5 MB (196526138 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7d4257124f2fe6b9661ab6a69d273cf1906cc0f2f9f1ed9b371bbd9bacf60580`  
-		Last Modified: Wed, 05 Aug 2020 17:06:40 GMT  
-		Size: 13.5 MB (13459056 bytes)  
+	-	`sha256:4b050804743ede43660974b70b791dc0bf20663229459123509f1bdbe018fcda`  
+		Last Modified: Tue, 01 Sep 2020 21:21:07 GMT  
+		Size: 13.5 MB (13459048 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8887164796c4f4565eee27f16fdcbd70f543fff226088a7a162ee85a530f2518`  
-		Last Modified: Wed, 05 Aug 2020 17:06:39 GMT  
-		Size: 4.2 MB (4168126 bytes)  
+	-	`sha256:9ace3907bbb789eefdded03bbae9ab5b13a4ec04ea8ffc5a3b5117dc67438be6`  
+		Last Modified: Tue, 01 Sep 2020 21:21:06 GMT  
+		Size: 4.2 MB (4168128 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:lein-slim-buster` - linux; arm64 variant v8
@@ -2550,7 +2550,7 @@ CMD ["lein" "repl"]
 ## `clojure:openjdk-11`
 
 ```console
-$ docker pull clojure@sha256:f59203d17d497fe351b586fa8f85c23a12109842b184e662c2c5d4b1aaa0cea4
+$ docker pull clojure@sha256:ecda6793cc282b320304eb47063730492700b6114ced7fd29db5a3bdc3d92524
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2561,14 +2561,14 @@ $ docker pull clojure@sha256:f59203d17d497fe351b586fa8f85c23a12109842b184e662c2c
 ### `clojure:openjdk-11` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:7aeb244bdd2bab426c5d3038b0c0bd3d029920b973326573bd9fefa555dddf03
+$ docker pull clojure@sha256:76957fcf621e0d27980c9b78200b93a5be08254575925360d6197c59c1c14aae
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **339.3 MB (339274584 bytes)**  
+-	Total Size: **339.3 MB (339274669 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:45419e5468fc40be7c63f4def8b96db062a022e58b2879dfef20b891bbcdaebd`
+-	Image ID: `sha256:f33b38eff6c09dc007c6ea5f9123ccc0b77e5fa52fba276ca563a7e063ce8539`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -2594,25 +2594,25 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:27 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:44:39 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:39 GMT
+# Tue, 01 Sep 2020 01:49:46 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:47 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 16:57:55 GMT
+# Tue, 01 Sep 2020 21:10:25 GMT
 ENV LEIN_VERSION=2.9.3
-# Wed, 05 Aug 2020 16:57:55 GMT
+# Tue, 01 Sep 2020 21:10:25 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:57:55 GMT
+# Tue, 01 Sep 2020 21:10:25 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:58:01 GMT
+# Tue, 01 Sep 2020 21:10:32 GMT
 RUN apt-get update && apt-get install -y gnupg && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg
-# Wed, 05 Aug 2020 16:58:02 GMT
+# Tue, 01 Sep 2020 21:10:32 GMT
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:02 GMT
+# Tue, 01 Sep 2020 21:10:32 GMT
 ENV LEIN_ROOT=1
-# Wed, 05 Aug 2020 16:58:06 GMT
+# Tue, 01 Sep 2020 21:10:36 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Wed, 05 Aug 2020 16:58:06 GMT
+# Tue, 01 Sep 2020 21:10:36 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -2641,17 +2641,17 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:50:57 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa776a6e7e3738bb7885a1f6d3140c2276841368a5e839a099821c68f2f852e2`  
-		Last Modified: Wed, 05 Aug 2020 00:51:14 GMT  
-		Size: 196.2 MB (196248896 bytes)  
+	-	`sha256:6bf89641a7f2b81477850d9d4604e9d235622bf71a5859c2136763e10e04b284`  
+		Last Modified: Tue, 01 Sep 2020 02:00:43 GMT  
+		Size: 196.2 MB (196249014 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0b2bb76c7e87dd34d64ccc8c6e1cfe303a43a848bc75fcabb2ba970a041804f2`  
-		Last Modified: Wed, 05 Aug 2020 17:06:29 GMT  
-		Size: 13.5 MB (13538876 bytes)  
+	-	`sha256:4bca78fc84ce0f6a83852e5aa19b824fe2d205988e57716bd08e983cec9900d8`  
+		Last Modified: Tue, 01 Sep 2020 21:20:58 GMT  
+		Size: 13.5 MB (13538849 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:61141ed15543166ea95c20960295b85a926d5a3ed8656afe7402c04c84c683e5`  
-		Last Modified: Wed, 05 Aug 2020 17:06:28 GMT  
-		Size: 4.2 MB (4168220 bytes)  
+	-	`sha256:1efdb10416021c2cbc49863bc7d8aefc03aa8e8381d3762ee29fd011db05f097`  
+		Last Modified: Tue, 01 Sep 2020 21:20:57 GMT  
+		Size: 4.2 MB (4168214 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:openjdk-11` - linux; arm64 variant v8
@@ -2753,7 +2753,7 @@ CMD ["lein" "repl"]
 ## `clojure:openjdk-11-boot`
 
 ```console
-$ docker pull clojure@sha256:5386ec9cd3bfe05d30f776325d851a5eccaca3ccd159e9cf28851eabc7345804
+$ docker pull clojure@sha256:d13dbabd3a8399c44d1e42be634487ac61d91ed6de6341538f6452b89591a33a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2764,14 +2764,14 @@ $ docker pull clojure@sha256:5386ec9cd3bfe05d30f776325d851a5eccaca3ccd159e9cf288
 ### `clojure:openjdk-11-boot` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:af38bba8ca8ce6e8a5708b7fe3eec80f1b596d5e24d73e9ea5cfbc565bdd466c
+$ docker pull clojure@sha256:13cafbbedaf319795454a3cba769ac36c5c1b2d95a8a948ae27bbee0711a2c4f
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **380.4 MB (380394560 bytes)**  
+-	Total Size: **380.4 MB (380394676 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3d542e8a70ab7a1cb721239c041243139b2c38e8c03e8780182eba15547e0c1c`
+-	Image ID: `sha256:6d6dbc91d30298edb2b2e53b9e2fb5ebb77f363d75098ecbef9becae6029236a`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
@@ -2797,25 +2797,25 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:27 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:44:39 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:39 GMT
+# Tue, 01 Sep 2020 01:49:46 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:47 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 16:58:30 GMT
+# Tue, 01 Sep 2020 21:11:00 GMT
 ENV BOOT_VERSION=2.8.3
-# Wed, 05 Aug 2020 16:58:30 GMT
+# Tue, 01 Sep 2020 21:11:00 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:30 GMT
+# Tue, 01 Sep 2020 21:11:00 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:58:31 GMT
+# Tue, 01 Sep 2020 21:11:01 GMT
 RUN mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot
-# Wed, 05 Aug 2020 16:58:31 GMT
+# Tue, 01 Sep 2020 21:11:02 GMT
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:31 GMT
+# Tue, 01 Sep 2020 21:11:02 GMT
 ENV BOOT_AS_ROOT=yes
-# Wed, 05 Aug 2020 16:58:50 GMT
+# Tue, 01 Sep 2020 21:11:22 GMT
 RUN boot
-# Wed, 05 Aug 2020 16:58:50 GMT
+# Tue, 01 Sep 2020 21:11:22 GMT
 CMD ["boot" "repl"]
 ```
 
@@ -2844,17 +2844,17 @@ CMD ["boot" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:50:57 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa776a6e7e3738bb7885a1f6d3140c2276841368a5e839a099821c68f2f852e2`  
-		Last Modified: Wed, 05 Aug 2020 00:51:14 GMT  
-		Size: 196.2 MB (196248896 bytes)  
+	-	`sha256:6bf89641a7f2b81477850d9d4604e9d235622bf71a5859c2136763e10e04b284`  
+		Last Modified: Tue, 01 Sep 2020 02:00:43 GMT  
+		Size: 196.2 MB (196249014 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c8677d8b80bc3510426779b40a645026feb9f9ee1262a28131866603cb548c76`  
-		Last Modified: Wed, 05 Aug 2020 17:06:47 GMT  
-		Size: 6.9 KB (6906 bytes)  
+	-	`sha256:d4f6c4bbc6e761d038dc7c784d1672fb14aacdf8c708ba84690168bb35965d0a`  
+		Last Modified: Tue, 01 Sep 2020 21:21:14 GMT  
+		Size: 6.9 KB (6911 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3cef7934c78d826d225cbfc06bf8460ba7aabcf4b1721dc51e7721a1ee9546bf`  
-		Last Modified: Wed, 05 Aug 2020 17:06:52 GMT  
-		Size: 58.8 MB (58820166 bytes)  
+	-	`sha256:841f1b5e7e34af7f3c3051d3fa34a5f9321148a0c05eece481fba93f6646f890`  
+		Last Modified: Tue, 01 Sep 2020 21:21:18 GMT  
+		Size: 58.8 MB (58820159 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:openjdk-11-boot` - linux; arm64 variant v8
@@ -2956,7 +2956,7 @@ CMD ["boot" "repl"]
 ## `clojure:openjdk-11-boot-2.8.3`
 
 ```console
-$ docker pull clojure@sha256:5386ec9cd3bfe05d30f776325d851a5eccaca3ccd159e9cf28851eabc7345804
+$ docker pull clojure@sha256:d13dbabd3a8399c44d1e42be634487ac61d91ed6de6341538f6452b89591a33a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2967,14 +2967,14 @@ $ docker pull clojure@sha256:5386ec9cd3bfe05d30f776325d851a5eccaca3ccd159e9cf288
 ### `clojure:openjdk-11-boot-2.8.3` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:af38bba8ca8ce6e8a5708b7fe3eec80f1b596d5e24d73e9ea5cfbc565bdd466c
+$ docker pull clojure@sha256:13cafbbedaf319795454a3cba769ac36c5c1b2d95a8a948ae27bbee0711a2c4f
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **380.4 MB (380394560 bytes)**  
+-	Total Size: **380.4 MB (380394676 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3d542e8a70ab7a1cb721239c041243139b2c38e8c03e8780182eba15547e0c1c`
+-	Image ID: `sha256:6d6dbc91d30298edb2b2e53b9e2fb5ebb77f363d75098ecbef9becae6029236a`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
@@ -3000,25 +3000,25 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:27 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:44:39 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:39 GMT
+# Tue, 01 Sep 2020 01:49:46 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:47 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 16:58:30 GMT
+# Tue, 01 Sep 2020 21:11:00 GMT
 ENV BOOT_VERSION=2.8.3
-# Wed, 05 Aug 2020 16:58:30 GMT
+# Tue, 01 Sep 2020 21:11:00 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:30 GMT
+# Tue, 01 Sep 2020 21:11:00 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:58:31 GMT
+# Tue, 01 Sep 2020 21:11:01 GMT
 RUN mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot
-# Wed, 05 Aug 2020 16:58:31 GMT
+# Tue, 01 Sep 2020 21:11:02 GMT
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:31 GMT
+# Tue, 01 Sep 2020 21:11:02 GMT
 ENV BOOT_AS_ROOT=yes
-# Wed, 05 Aug 2020 16:58:50 GMT
+# Tue, 01 Sep 2020 21:11:22 GMT
 RUN boot
-# Wed, 05 Aug 2020 16:58:50 GMT
+# Tue, 01 Sep 2020 21:11:22 GMT
 CMD ["boot" "repl"]
 ```
 
@@ -3047,17 +3047,17 @@ CMD ["boot" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:50:57 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa776a6e7e3738bb7885a1f6d3140c2276841368a5e839a099821c68f2f852e2`  
-		Last Modified: Wed, 05 Aug 2020 00:51:14 GMT  
-		Size: 196.2 MB (196248896 bytes)  
+	-	`sha256:6bf89641a7f2b81477850d9d4604e9d235622bf71a5859c2136763e10e04b284`  
+		Last Modified: Tue, 01 Sep 2020 02:00:43 GMT  
+		Size: 196.2 MB (196249014 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c8677d8b80bc3510426779b40a645026feb9f9ee1262a28131866603cb548c76`  
-		Last Modified: Wed, 05 Aug 2020 17:06:47 GMT  
-		Size: 6.9 KB (6906 bytes)  
+	-	`sha256:d4f6c4bbc6e761d038dc7c784d1672fb14aacdf8c708ba84690168bb35965d0a`  
+		Last Modified: Tue, 01 Sep 2020 21:21:14 GMT  
+		Size: 6.9 KB (6911 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3cef7934c78d826d225cbfc06bf8460ba7aabcf4b1721dc51e7721a1ee9546bf`  
-		Last Modified: Wed, 05 Aug 2020 17:06:52 GMT  
-		Size: 58.8 MB (58820166 bytes)  
+	-	`sha256:841f1b5e7e34af7f3c3051d3fa34a5f9321148a0c05eece481fba93f6646f890`  
+		Last Modified: Tue, 01 Sep 2020 21:21:18 GMT  
+		Size: 58.8 MB (58820159 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:openjdk-11-boot-2.8.3` - linux; arm64 variant v8
@@ -3159,7 +3159,7 @@ CMD ["boot" "repl"]
 ## `clojure:openjdk-11-boot-2.8.3-buster`
 
 ```console
-$ docker pull clojure@sha256:5386ec9cd3bfe05d30f776325d851a5eccaca3ccd159e9cf28851eabc7345804
+$ docker pull clojure@sha256:d13dbabd3a8399c44d1e42be634487ac61d91ed6de6341538f6452b89591a33a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3170,14 +3170,14 @@ $ docker pull clojure@sha256:5386ec9cd3bfe05d30f776325d851a5eccaca3ccd159e9cf288
 ### `clojure:openjdk-11-boot-2.8.3-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:af38bba8ca8ce6e8a5708b7fe3eec80f1b596d5e24d73e9ea5cfbc565bdd466c
+$ docker pull clojure@sha256:13cafbbedaf319795454a3cba769ac36c5c1b2d95a8a948ae27bbee0711a2c4f
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **380.4 MB (380394560 bytes)**  
+-	Total Size: **380.4 MB (380394676 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3d542e8a70ab7a1cb721239c041243139b2c38e8c03e8780182eba15547e0c1c`
+-	Image ID: `sha256:6d6dbc91d30298edb2b2e53b9e2fb5ebb77f363d75098ecbef9becae6029236a`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
@@ -3203,25 +3203,25 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:27 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:44:39 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:39 GMT
+# Tue, 01 Sep 2020 01:49:46 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:47 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 16:58:30 GMT
+# Tue, 01 Sep 2020 21:11:00 GMT
 ENV BOOT_VERSION=2.8.3
-# Wed, 05 Aug 2020 16:58:30 GMT
+# Tue, 01 Sep 2020 21:11:00 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:30 GMT
+# Tue, 01 Sep 2020 21:11:00 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:58:31 GMT
+# Tue, 01 Sep 2020 21:11:01 GMT
 RUN mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot
-# Wed, 05 Aug 2020 16:58:31 GMT
+# Tue, 01 Sep 2020 21:11:02 GMT
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:31 GMT
+# Tue, 01 Sep 2020 21:11:02 GMT
 ENV BOOT_AS_ROOT=yes
-# Wed, 05 Aug 2020 16:58:50 GMT
+# Tue, 01 Sep 2020 21:11:22 GMT
 RUN boot
-# Wed, 05 Aug 2020 16:58:50 GMT
+# Tue, 01 Sep 2020 21:11:22 GMT
 CMD ["boot" "repl"]
 ```
 
@@ -3250,17 +3250,17 @@ CMD ["boot" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:50:57 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa776a6e7e3738bb7885a1f6d3140c2276841368a5e839a099821c68f2f852e2`  
-		Last Modified: Wed, 05 Aug 2020 00:51:14 GMT  
-		Size: 196.2 MB (196248896 bytes)  
+	-	`sha256:6bf89641a7f2b81477850d9d4604e9d235622bf71a5859c2136763e10e04b284`  
+		Last Modified: Tue, 01 Sep 2020 02:00:43 GMT  
+		Size: 196.2 MB (196249014 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c8677d8b80bc3510426779b40a645026feb9f9ee1262a28131866603cb548c76`  
-		Last Modified: Wed, 05 Aug 2020 17:06:47 GMT  
-		Size: 6.9 KB (6906 bytes)  
+	-	`sha256:d4f6c4bbc6e761d038dc7c784d1672fb14aacdf8c708ba84690168bb35965d0a`  
+		Last Modified: Tue, 01 Sep 2020 21:21:14 GMT  
+		Size: 6.9 KB (6911 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3cef7934c78d826d225cbfc06bf8460ba7aabcf4b1721dc51e7721a1ee9546bf`  
-		Last Modified: Wed, 05 Aug 2020 17:06:52 GMT  
-		Size: 58.8 MB (58820166 bytes)  
+	-	`sha256:841f1b5e7e34af7f3c3051d3fa34a5f9321148a0c05eece481fba93f6646f890`  
+		Last Modified: Tue, 01 Sep 2020 21:21:18 GMT  
+		Size: 58.8 MB (58820159 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:openjdk-11-boot-2.8.3-buster` - linux; arm64 variant v8
@@ -3362,7 +3362,7 @@ CMD ["boot" "repl"]
 ## `clojure:openjdk-11-boot-2.8.3-slim-buster`
 
 ```console
-$ docker pull clojure@sha256:d5b67c1d594bfce1c1afd0aefeba630518ab498b45e7c3474d8dfe1b60c1b269
+$ docker pull clojure@sha256:b5d273fb20b78623f59a4938b9b08be97eab95b7f18c9d06a8f8c9cb6fcfa2b7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3373,14 +3373,14 @@ $ docker pull clojure@sha256:d5b67c1d594bfce1c1afd0aefeba630518ab498b45e7c3474d8
 ### `clojure:openjdk-11-boot-2.8.3-slim-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:8d0064b3628ed6748f4c37c47a2d2d094323d97868bded073c7577b2ca95a6fb
+$ docker pull clojure@sha256:a9bc7d1bb16f33550dbb7f6bea2c1a381c01e228fca6814d4b32171a784d4cbd
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **286.0 MB (285969565 bytes)**  
+-	Total Size: **286.0 MB (285969668 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:9bd6913879c0127cb638f7334ffccb2413bc45aac687a29e0b22e027bbdc411e`
+-	Image ID: `sha256:72196a02888787956840f91950f1a4c1e12e58b3b9402411525ac4f86023e67b`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
@@ -3400,25 +3400,25 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:46 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:45:02 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:45:03 GMT
+# Tue, 01 Sep 2020 01:50:18 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:50:18 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 16:54:34 GMT
+# Tue, 01 Sep 2020 21:08:58 GMT
 ENV BOOT_VERSION=2.8.3
-# Wed, 05 Aug 2020 16:54:34 GMT
+# Tue, 01 Sep 2020 21:08:58 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:54:34 GMT
+# Tue, 01 Sep 2020 21:08:58 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:54:40 GMT
+# Tue, 01 Sep 2020 21:09:03 GMT
 RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/* && mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot && apt-get purge -y --auto-remove wget
-# Wed, 05 Aug 2020 16:54:40 GMT
+# Tue, 01 Sep 2020 21:09:03 GMT
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 16:54:40 GMT
+# Tue, 01 Sep 2020 21:09:03 GMT
 ENV BOOT_AS_ROOT=yes
-# Wed, 05 Aug 2020 16:55:00 GMT
+# Tue, 01 Sep 2020 21:09:24 GMT
 RUN boot
-# Wed, 05 Aug 2020 16:58:55 GMT
+# Tue, 01 Sep 2020 21:11:29 GMT
 CMD ["boot" "repl"]
 ```
 
@@ -3435,17 +3435,17 @@ CMD ["boot" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:51:20 GMT  
 		Size: 212.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7900923f09cbc8c8dda6274e5de53ec12688a9d2c27edabed353d1af12b03b1a`  
-		Last Modified: Wed, 05 Aug 2020 00:51:36 GMT  
-		Size: 196.5 MB (196526004 bytes)  
+	-	`sha256:ba2a97e7cfd908de238f3f28c9f3221858d3de0bf5f0138dcc04bffdb9e1f446`  
+		Last Modified: Tue, 01 Sep 2020 02:01:09 GMT  
+		Size: 196.5 MB (196526138 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a57f7ec7eeff0e2fa35c3126dda1cf3b5e82a69c394929136a94d9d378980fe0`  
-		Last Modified: Wed, 05 Aug 2020 17:05:19 GMT  
-		Size: 282.6 KB (282616 bytes)  
+	-	`sha256:fd29e8c4b397c58b6b89e89547cc73dfd2f2b69ca1c8420c0560004bd683b16e`  
+		Last Modified: Tue, 01 Sep 2020 21:20:44 GMT  
+		Size: 282.6 KB (282649 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:33b10cd8870fa0b1ab0f3d2ebb4f3ce093cc7ab5b836a7ebea739cf0b93b9c53`  
-		Last Modified: Wed, 05 Aug 2020 17:05:24 GMT  
-		Size: 58.8 MB (58820181 bytes)  
+	-	`sha256:5d23854470eb28c9b7ee28f3f6a80e0b2193ea725ee05971c3f99e71a1688912`  
+		Last Modified: Tue, 01 Sep 2020 21:20:48 GMT  
+		Size: 58.8 MB (58820117 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:openjdk-11-boot-2.8.3-slim-buster` - linux; arm64 variant v8
@@ -3529,7 +3529,7 @@ CMD ["boot" "repl"]
 ## `clojure:openjdk-11-boot-buster`
 
 ```console
-$ docker pull clojure@sha256:5386ec9cd3bfe05d30f776325d851a5eccaca3ccd159e9cf28851eabc7345804
+$ docker pull clojure@sha256:d13dbabd3a8399c44d1e42be634487ac61d91ed6de6341538f6452b89591a33a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3540,14 +3540,14 @@ $ docker pull clojure@sha256:5386ec9cd3bfe05d30f776325d851a5eccaca3ccd159e9cf288
 ### `clojure:openjdk-11-boot-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:af38bba8ca8ce6e8a5708b7fe3eec80f1b596d5e24d73e9ea5cfbc565bdd466c
+$ docker pull clojure@sha256:13cafbbedaf319795454a3cba769ac36c5c1b2d95a8a948ae27bbee0711a2c4f
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **380.4 MB (380394560 bytes)**  
+-	Total Size: **380.4 MB (380394676 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3d542e8a70ab7a1cb721239c041243139b2c38e8c03e8780182eba15547e0c1c`
+-	Image ID: `sha256:6d6dbc91d30298edb2b2e53b9e2fb5ebb77f363d75098ecbef9becae6029236a`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
@@ -3573,25 +3573,25 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:27 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:44:39 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:39 GMT
+# Tue, 01 Sep 2020 01:49:46 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:47 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 16:58:30 GMT
+# Tue, 01 Sep 2020 21:11:00 GMT
 ENV BOOT_VERSION=2.8.3
-# Wed, 05 Aug 2020 16:58:30 GMT
+# Tue, 01 Sep 2020 21:11:00 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:30 GMT
+# Tue, 01 Sep 2020 21:11:00 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:58:31 GMT
+# Tue, 01 Sep 2020 21:11:01 GMT
 RUN mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot
-# Wed, 05 Aug 2020 16:58:31 GMT
+# Tue, 01 Sep 2020 21:11:02 GMT
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:31 GMT
+# Tue, 01 Sep 2020 21:11:02 GMT
 ENV BOOT_AS_ROOT=yes
-# Wed, 05 Aug 2020 16:58:50 GMT
+# Tue, 01 Sep 2020 21:11:22 GMT
 RUN boot
-# Wed, 05 Aug 2020 16:58:50 GMT
+# Tue, 01 Sep 2020 21:11:22 GMT
 CMD ["boot" "repl"]
 ```
 
@@ -3620,17 +3620,17 @@ CMD ["boot" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:50:57 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa776a6e7e3738bb7885a1f6d3140c2276841368a5e839a099821c68f2f852e2`  
-		Last Modified: Wed, 05 Aug 2020 00:51:14 GMT  
-		Size: 196.2 MB (196248896 bytes)  
+	-	`sha256:6bf89641a7f2b81477850d9d4604e9d235622bf71a5859c2136763e10e04b284`  
+		Last Modified: Tue, 01 Sep 2020 02:00:43 GMT  
+		Size: 196.2 MB (196249014 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c8677d8b80bc3510426779b40a645026feb9f9ee1262a28131866603cb548c76`  
-		Last Modified: Wed, 05 Aug 2020 17:06:47 GMT  
-		Size: 6.9 KB (6906 bytes)  
+	-	`sha256:d4f6c4bbc6e761d038dc7c784d1672fb14aacdf8c708ba84690168bb35965d0a`  
+		Last Modified: Tue, 01 Sep 2020 21:21:14 GMT  
+		Size: 6.9 KB (6911 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3cef7934c78d826d225cbfc06bf8460ba7aabcf4b1721dc51e7721a1ee9546bf`  
-		Last Modified: Wed, 05 Aug 2020 17:06:52 GMT  
-		Size: 58.8 MB (58820166 bytes)  
+	-	`sha256:841f1b5e7e34af7f3c3051d3fa34a5f9321148a0c05eece481fba93f6646f890`  
+		Last Modified: Tue, 01 Sep 2020 21:21:18 GMT  
+		Size: 58.8 MB (58820159 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:openjdk-11-boot-buster` - linux; arm64 variant v8
@@ -3732,7 +3732,7 @@ CMD ["boot" "repl"]
 ## `clojure:openjdk-11-boot-slim-buster`
 
 ```console
-$ docker pull clojure@sha256:d5b67c1d594bfce1c1afd0aefeba630518ab498b45e7c3474d8dfe1b60c1b269
+$ docker pull clojure@sha256:b5d273fb20b78623f59a4938b9b08be97eab95b7f18c9d06a8f8c9cb6fcfa2b7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3743,14 +3743,14 @@ $ docker pull clojure@sha256:d5b67c1d594bfce1c1afd0aefeba630518ab498b45e7c3474d8
 ### `clojure:openjdk-11-boot-slim-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:8d0064b3628ed6748f4c37c47a2d2d094323d97868bded073c7577b2ca95a6fb
+$ docker pull clojure@sha256:a9bc7d1bb16f33550dbb7f6bea2c1a381c01e228fca6814d4b32171a784d4cbd
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **286.0 MB (285969565 bytes)**  
+-	Total Size: **286.0 MB (285969668 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:9bd6913879c0127cb638f7334ffccb2413bc45aac687a29e0b22e027bbdc411e`
+-	Image ID: `sha256:72196a02888787956840f91950f1a4c1e12e58b3b9402411525ac4f86023e67b`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
@@ -3770,25 +3770,25 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:46 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:45:02 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:45:03 GMT
+# Tue, 01 Sep 2020 01:50:18 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:50:18 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 16:54:34 GMT
+# Tue, 01 Sep 2020 21:08:58 GMT
 ENV BOOT_VERSION=2.8.3
-# Wed, 05 Aug 2020 16:54:34 GMT
+# Tue, 01 Sep 2020 21:08:58 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:54:34 GMT
+# Tue, 01 Sep 2020 21:08:58 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:54:40 GMT
+# Tue, 01 Sep 2020 21:09:03 GMT
 RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/* && mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot && apt-get purge -y --auto-remove wget
-# Wed, 05 Aug 2020 16:54:40 GMT
+# Tue, 01 Sep 2020 21:09:03 GMT
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 16:54:40 GMT
+# Tue, 01 Sep 2020 21:09:03 GMT
 ENV BOOT_AS_ROOT=yes
-# Wed, 05 Aug 2020 16:55:00 GMT
+# Tue, 01 Sep 2020 21:09:24 GMT
 RUN boot
-# Wed, 05 Aug 2020 16:58:55 GMT
+# Tue, 01 Sep 2020 21:11:29 GMT
 CMD ["boot" "repl"]
 ```
 
@@ -3805,17 +3805,17 @@ CMD ["boot" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:51:20 GMT  
 		Size: 212.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7900923f09cbc8c8dda6274e5de53ec12688a9d2c27edabed353d1af12b03b1a`  
-		Last Modified: Wed, 05 Aug 2020 00:51:36 GMT  
-		Size: 196.5 MB (196526004 bytes)  
+	-	`sha256:ba2a97e7cfd908de238f3f28c9f3221858d3de0bf5f0138dcc04bffdb9e1f446`  
+		Last Modified: Tue, 01 Sep 2020 02:01:09 GMT  
+		Size: 196.5 MB (196526138 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a57f7ec7eeff0e2fa35c3126dda1cf3b5e82a69c394929136a94d9d378980fe0`  
-		Last Modified: Wed, 05 Aug 2020 17:05:19 GMT  
-		Size: 282.6 KB (282616 bytes)  
+	-	`sha256:fd29e8c4b397c58b6b89e89547cc73dfd2f2b69ca1c8420c0560004bd683b16e`  
+		Last Modified: Tue, 01 Sep 2020 21:20:44 GMT  
+		Size: 282.6 KB (282649 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:33b10cd8870fa0b1ab0f3d2ebb4f3ce093cc7ab5b836a7ebea739cf0b93b9c53`  
-		Last Modified: Wed, 05 Aug 2020 17:05:24 GMT  
-		Size: 58.8 MB (58820181 bytes)  
+	-	`sha256:5d23854470eb28c9b7ee28f3f6a80e0b2193ea725ee05971c3f99e71a1688912`  
+		Last Modified: Tue, 01 Sep 2020 21:20:48 GMT  
+		Size: 58.8 MB (58820117 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:openjdk-11-boot-slim-buster` - linux; arm64 variant v8
@@ -3899,7 +3899,7 @@ CMD ["boot" "repl"]
 ## `clojure:openjdk-11-buster`
 
 ```console
-$ docker pull clojure@sha256:f59203d17d497fe351b586fa8f85c23a12109842b184e662c2c5d4b1aaa0cea4
+$ docker pull clojure@sha256:ecda6793cc282b320304eb47063730492700b6114ced7fd29db5a3bdc3d92524
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3910,14 +3910,14 @@ $ docker pull clojure@sha256:f59203d17d497fe351b586fa8f85c23a12109842b184e662c2c
 ### `clojure:openjdk-11-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:7aeb244bdd2bab426c5d3038b0c0bd3d029920b973326573bd9fefa555dddf03
+$ docker pull clojure@sha256:76957fcf621e0d27980c9b78200b93a5be08254575925360d6197c59c1c14aae
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **339.3 MB (339274584 bytes)**  
+-	Total Size: **339.3 MB (339274669 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:45419e5468fc40be7c63f4def8b96db062a022e58b2879dfef20b891bbcdaebd`
+-	Image ID: `sha256:f33b38eff6c09dc007c6ea5f9123ccc0b77e5fa52fba276ca563a7e063ce8539`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -3943,25 +3943,25 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:27 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:44:39 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:39 GMT
+# Tue, 01 Sep 2020 01:49:46 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:47 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 16:57:55 GMT
+# Tue, 01 Sep 2020 21:10:25 GMT
 ENV LEIN_VERSION=2.9.3
-# Wed, 05 Aug 2020 16:57:55 GMT
+# Tue, 01 Sep 2020 21:10:25 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:57:55 GMT
+# Tue, 01 Sep 2020 21:10:25 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:58:01 GMT
+# Tue, 01 Sep 2020 21:10:32 GMT
 RUN apt-get update && apt-get install -y gnupg && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg
-# Wed, 05 Aug 2020 16:58:02 GMT
+# Tue, 01 Sep 2020 21:10:32 GMT
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:02 GMT
+# Tue, 01 Sep 2020 21:10:32 GMT
 ENV LEIN_ROOT=1
-# Wed, 05 Aug 2020 16:58:06 GMT
+# Tue, 01 Sep 2020 21:10:36 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Wed, 05 Aug 2020 16:58:06 GMT
+# Tue, 01 Sep 2020 21:10:36 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -3990,17 +3990,17 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:50:57 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa776a6e7e3738bb7885a1f6d3140c2276841368a5e839a099821c68f2f852e2`  
-		Last Modified: Wed, 05 Aug 2020 00:51:14 GMT  
-		Size: 196.2 MB (196248896 bytes)  
+	-	`sha256:6bf89641a7f2b81477850d9d4604e9d235622bf71a5859c2136763e10e04b284`  
+		Last Modified: Tue, 01 Sep 2020 02:00:43 GMT  
+		Size: 196.2 MB (196249014 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0b2bb76c7e87dd34d64ccc8c6e1cfe303a43a848bc75fcabb2ba970a041804f2`  
-		Last Modified: Wed, 05 Aug 2020 17:06:29 GMT  
-		Size: 13.5 MB (13538876 bytes)  
+	-	`sha256:4bca78fc84ce0f6a83852e5aa19b824fe2d205988e57716bd08e983cec9900d8`  
+		Last Modified: Tue, 01 Sep 2020 21:20:58 GMT  
+		Size: 13.5 MB (13538849 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:61141ed15543166ea95c20960295b85a926d5a3ed8656afe7402c04c84c683e5`  
-		Last Modified: Wed, 05 Aug 2020 17:06:28 GMT  
-		Size: 4.2 MB (4168220 bytes)  
+	-	`sha256:1efdb10416021c2cbc49863bc7d8aefc03aa8e8381d3762ee29fd011db05f097`  
+		Last Modified: Tue, 01 Sep 2020 21:20:57 GMT  
+		Size: 4.2 MB (4168214 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:openjdk-11-buster` - linux; arm64 variant v8
@@ -4102,7 +4102,7 @@ CMD ["lein" "repl"]
 ## `clojure:openjdk-11-lein`
 
 ```console
-$ docker pull clojure@sha256:f59203d17d497fe351b586fa8f85c23a12109842b184e662c2c5d4b1aaa0cea4
+$ docker pull clojure@sha256:ecda6793cc282b320304eb47063730492700b6114ced7fd29db5a3bdc3d92524
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4113,14 +4113,14 @@ $ docker pull clojure@sha256:f59203d17d497fe351b586fa8f85c23a12109842b184e662c2c
 ### `clojure:openjdk-11-lein` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:7aeb244bdd2bab426c5d3038b0c0bd3d029920b973326573bd9fefa555dddf03
+$ docker pull clojure@sha256:76957fcf621e0d27980c9b78200b93a5be08254575925360d6197c59c1c14aae
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **339.3 MB (339274584 bytes)**  
+-	Total Size: **339.3 MB (339274669 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:45419e5468fc40be7c63f4def8b96db062a022e58b2879dfef20b891bbcdaebd`
+-	Image ID: `sha256:f33b38eff6c09dc007c6ea5f9123ccc0b77e5fa52fba276ca563a7e063ce8539`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -4146,25 +4146,25 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:27 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:44:39 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:39 GMT
+# Tue, 01 Sep 2020 01:49:46 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:47 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 16:57:55 GMT
+# Tue, 01 Sep 2020 21:10:25 GMT
 ENV LEIN_VERSION=2.9.3
-# Wed, 05 Aug 2020 16:57:55 GMT
+# Tue, 01 Sep 2020 21:10:25 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:57:55 GMT
+# Tue, 01 Sep 2020 21:10:25 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:58:01 GMT
+# Tue, 01 Sep 2020 21:10:32 GMT
 RUN apt-get update && apt-get install -y gnupg && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg
-# Wed, 05 Aug 2020 16:58:02 GMT
+# Tue, 01 Sep 2020 21:10:32 GMT
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:02 GMT
+# Tue, 01 Sep 2020 21:10:32 GMT
 ENV LEIN_ROOT=1
-# Wed, 05 Aug 2020 16:58:06 GMT
+# Tue, 01 Sep 2020 21:10:36 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Wed, 05 Aug 2020 16:58:06 GMT
+# Tue, 01 Sep 2020 21:10:36 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -4193,17 +4193,17 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:50:57 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa776a6e7e3738bb7885a1f6d3140c2276841368a5e839a099821c68f2f852e2`  
-		Last Modified: Wed, 05 Aug 2020 00:51:14 GMT  
-		Size: 196.2 MB (196248896 bytes)  
+	-	`sha256:6bf89641a7f2b81477850d9d4604e9d235622bf71a5859c2136763e10e04b284`  
+		Last Modified: Tue, 01 Sep 2020 02:00:43 GMT  
+		Size: 196.2 MB (196249014 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0b2bb76c7e87dd34d64ccc8c6e1cfe303a43a848bc75fcabb2ba970a041804f2`  
-		Last Modified: Wed, 05 Aug 2020 17:06:29 GMT  
-		Size: 13.5 MB (13538876 bytes)  
+	-	`sha256:4bca78fc84ce0f6a83852e5aa19b824fe2d205988e57716bd08e983cec9900d8`  
+		Last Modified: Tue, 01 Sep 2020 21:20:58 GMT  
+		Size: 13.5 MB (13538849 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:61141ed15543166ea95c20960295b85a926d5a3ed8656afe7402c04c84c683e5`  
-		Last Modified: Wed, 05 Aug 2020 17:06:28 GMT  
-		Size: 4.2 MB (4168220 bytes)  
+	-	`sha256:1efdb10416021c2cbc49863bc7d8aefc03aa8e8381d3762ee29fd011db05f097`  
+		Last Modified: Tue, 01 Sep 2020 21:20:57 GMT  
+		Size: 4.2 MB (4168214 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:openjdk-11-lein` - linux; arm64 variant v8
@@ -4305,7 +4305,7 @@ CMD ["lein" "repl"]
 ## `clojure:openjdk-11-lein-2.9.3`
 
 ```console
-$ docker pull clojure@sha256:f59203d17d497fe351b586fa8f85c23a12109842b184e662c2c5d4b1aaa0cea4
+$ docker pull clojure@sha256:ecda6793cc282b320304eb47063730492700b6114ced7fd29db5a3bdc3d92524
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4316,14 +4316,14 @@ $ docker pull clojure@sha256:f59203d17d497fe351b586fa8f85c23a12109842b184e662c2c
 ### `clojure:openjdk-11-lein-2.9.3` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:7aeb244bdd2bab426c5d3038b0c0bd3d029920b973326573bd9fefa555dddf03
+$ docker pull clojure@sha256:76957fcf621e0d27980c9b78200b93a5be08254575925360d6197c59c1c14aae
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **339.3 MB (339274584 bytes)**  
+-	Total Size: **339.3 MB (339274669 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:45419e5468fc40be7c63f4def8b96db062a022e58b2879dfef20b891bbcdaebd`
+-	Image ID: `sha256:f33b38eff6c09dc007c6ea5f9123ccc0b77e5fa52fba276ca563a7e063ce8539`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -4349,25 +4349,25 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:27 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:44:39 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:39 GMT
+# Tue, 01 Sep 2020 01:49:46 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:47 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 16:57:55 GMT
+# Tue, 01 Sep 2020 21:10:25 GMT
 ENV LEIN_VERSION=2.9.3
-# Wed, 05 Aug 2020 16:57:55 GMT
+# Tue, 01 Sep 2020 21:10:25 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:57:55 GMT
+# Tue, 01 Sep 2020 21:10:25 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:58:01 GMT
+# Tue, 01 Sep 2020 21:10:32 GMT
 RUN apt-get update && apt-get install -y gnupg && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg
-# Wed, 05 Aug 2020 16:58:02 GMT
+# Tue, 01 Sep 2020 21:10:32 GMT
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:02 GMT
+# Tue, 01 Sep 2020 21:10:32 GMT
 ENV LEIN_ROOT=1
-# Wed, 05 Aug 2020 16:58:06 GMT
+# Tue, 01 Sep 2020 21:10:36 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Wed, 05 Aug 2020 16:58:06 GMT
+# Tue, 01 Sep 2020 21:10:36 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -4396,17 +4396,17 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:50:57 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa776a6e7e3738bb7885a1f6d3140c2276841368a5e839a099821c68f2f852e2`  
-		Last Modified: Wed, 05 Aug 2020 00:51:14 GMT  
-		Size: 196.2 MB (196248896 bytes)  
+	-	`sha256:6bf89641a7f2b81477850d9d4604e9d235622bf71a5859c2136763e10e04b284`  
+		Last Modified: Tue, 01 Sep 2020 02:00:43 GMT  
+		Size: 196.2 MB (196249014 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0b2bb76c7e87dd34d64ccc8c6e1cfe303a43a848bc75fcabb2ba970a041804f2`  
-		Last Modified: Wed, 05 Aug 2020 17:06:29 GMT  
-		Size: 13.5 MB (13538876 bytes)  
+	-	`sha256:4bca78fc84ce0f6a83852e5aa19b824fe2d205988e57716bd08e983cec9900d8`  
+		Last Modified: Tue, 01 Sep 2020 21:20:58 GMT  
+		Size: 13.5 MB (13538849 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:61141ed15543166ea95c20960295b85a926d5a3ed8656afe7402c04c84c683e5`  
-		Last Modified: Wed, 05 Aug 2020 17:06:28 GMT  
-		Size: 4.2 MB (4168220 bytes)  
+	-	`sha256:1efdb10416021c2cbc49863bc7d8aefc03aa8e8381d3762ee29fd011db05f097`  
+		Last Modified: Tue, 01 Sep 2020 21:20:57 GMT  
+		Size: 4.2 MB (4168214 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:openjdk-11-lein-2.9.3` - linux; arm64 variant v8
@@ -4508,7 +4508,7 @@ CMD ["lein" "repl"]
 ## `clojure:openjdk-11-lein-2.9.3-buster`
 
 ```console
-$ docker pull clojure@sha256:f59203d17d497fe351b586fa8f85c23a12109842b184e662c2c5d4b1aaa0cea4
+$ docker pull clojure@sha256:ecda6793cc282b320304eb47063730492700b6114ced7fd29db5a3bdc3d92524
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4519,14 +4519,14 @@ $ docker pull clojure@sha256:f59203d17d497fe351b586fa8f85c23a12109842b184e662c2c
 ### `clojure:openjdk-11-lein-2.9.3-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:7aeb244bdd2bab426c5d3038b0c0bd3d029920b973326573bd9fefa555dddf03
+$ docker pull clojure@sha256:76957fcf621e0d27980c9b78200b93a5be08254575925360d6197c59c1c14aae
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **339.3 MB (339274584 bytes)**  
+-	Total Size: **339.3 MB (339274669 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:45419e5468fc40be7c63f4def8b96db062a022e58b2879dfef20b891bbcdaebd`
+-	Image ID: `sha256:f33b38eff6c09dc007c6ea5f9123ccc0b77e5fa52fba276ca563a7e063ce8539`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -4552,25 +4552,25 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:27 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:44:39 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:39 GMT
+# Tue, 01 Sep 2020 01:49:46 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:47 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 16:57:55 GMT
+# Tue, 01 Sep 2020 21:10:25 GMT
 ENV LEIN_VERSION=2.9.3
-# Wed, 05 Aug 2020 16:57:55 GMT
+# Tue, 01 Sep 2020 21:10:25 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:57:55 GMT
+# Tue, 01 Sep 2020 21:10:25 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:58:01 GMT
+# Tue, 01 Sep 2020 21:10:32 GMT
 RUN apt-get update && apt-get install -y gnupg && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg
-# Wed, 05 Aug 2020 16:58:02 GMT
+# Tue, 01 Sep 2020 21:10:32 GMT
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:02 GMT
+# Tue, 01 Sep 2020 21:10:32 GMT
 ENV LEIN_ROOT=1
-# Wed, 05 Aug 2020 16:58:06 GMT
+# Tue, 01 Sep 2020 21:10:36 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Wed, 05 Aug 2020 16:58:06 GMT
+# Tue, 01 Sep 2020 21:10:36 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -4599,17 +4599,17 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:50:57 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa776a6e7e3738bb7885a1f6d3140c2276841368a5e839a099821c68f2f852e2`  
-		Last Modified: Wed, 05 Aug 2020 00:51:14 GMT  
-		Size: 196.2 MB (196248896 bytes)  
+	-	`sha256:6bf89641a7f2b81477850d9d4604e9d235622bf71a5859c2136763e10e04b284`  
+		Last Modified: Tue, 01 Sep 2020 02:00:43 GMT  
+		Size: 196.2 MB (196249014 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0b2bb76c7e87dd34d64ccc8c6e1cfe303a43a848bc75fcabb2ba970a041804f2`  
-		Last Modified: Wed, 05 Aug 2020 17:06:29 GMT  
-		Size: 13.5 MB (13538876 bytes)  
+	-	`sha256:4bca78fc84ce0f6a83852e5aa19b824fe2d205988e57716bd08e983cec9900d8`  
+		Last Modified: Tue, 01 Sep 2020 21:20:58 GMT  
+		Size: 13.5 MB (13538849 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:61141ed15543166ea95c20960295b85a926d5a3ed8656afe7402c04c84c683e5`  
-		Last Modified: Wed, 05 Aug 2020 17:06:28 GMT  
-		Size: 4.2 MB (4168220 bytes)  
+	-	`sha256:1efdb10416021c2cbc49863bc7d8aefc03aa8e8381d3762ee29fd011db05f097`  
+		Last Modified: Tue, 01 Sep 2020 21:20:57 GMT  
+		Size: 4.2 MB (4168214 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:openjdk-11-lein-2.9.3-buster` - linux; arm64 variant v8
@@ -4711,7 +4711,7 @@ CMD ["lein" "repl"]
 ## `clojure:openjdk-11-lein-2.9.3-slim-buster`
 
 ```console
-$ docker pull clojure@sha256:73d3b987a44df2cab4bda701786c4204ce564da603d0fbd45511b63eebc5ea93
+$ docker pull clojure@sha256:53ffacd317ac8ecf3304682e3a08596b1c3c161f5a23d4c4e42008d1072646e2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4722,14 +4722,14 @@ $ docker pull clojure@sha256:73d3b987a44df2cab4bda701786c4204ce564da603d0fbd4551
 ### `clojure:openjdk-11-lein-2.9.3-slim-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:771cd2c5250eabf5267478931615a9dccc649704648574a9eb33a43d04ab05f2
+$ docker pull clojure@sha256:edfa5024a9c1b7f40027b88adfc52e864a7a1ca70da6c42f5ed53aae4d34866d
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **244.5 MB (244493950 bytes)**  
+-	Total Size: **244.5 MB (244494078 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f78a1e393bd6de644ac496abd930736dbf4ffcdacd2c7118372dbffc9deb4867`
+-	Image ID: `sha256:54f6113f88d77e1f77dbd5518947d3886a84a154320888025223d7d85960d1ef`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -4749,25 +4749,25 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:46 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:45:02 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:45:03 GMT
+# Tue, 01 Sep 2020 01:50:18 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:50:18 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 16:58:11 GMT
+# Tue, 01 Sep 2020 21:10:41 GMT
 ENV LEIN_VERSION=2.9.3
-# Wed, 05 Aug 2020 16:58:11 GMT
+# Tue, 01 Sep 2020 21:10:41 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:11 GMT
+# Tue, 01 Sep 2020 21:10:42 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:58:20 GMT
+# Tue, 01 Sep 2020 21:10:51 GMT
 RUN apt-get update && apt-get install -y gnupg wget && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg wget
-# Wed, 05 Aug 2020 16:58:21 GMT
+# Tue, 01 Sep 2020 21:10:51 GMT
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:21 GMT
+# Tue, 01 Sep 2020 21:10:51 GMT
 ENV LEIN_ROOT=1
-# Wed, 05 Aug 2020 16:58:25 GMT
+# Tue, 01 Sep 2020 21:10:55 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Wed, 05 Aug 2020 16:58:25 GMT
+# Tue, 01 Sep 2020 21:10:55 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -4784,17 +4784,17 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:51:20 GMT  
 		Size: 212.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7900923f09cbc8c8dda6274e5de53ec12688a9d2c27edabed353d1af12b03b1a`  
-		Last Modified: Wed, 05 Aug 2020 00:51:36 GMT  
-		Size: 196.5 MB (196526004 bytes)  
+	-	`sha256:ba2a97e7cfd908de238f3f28c9f3221858d3de0bf5f0138dcc04bffdb9e1f446`  
+		Last Modified: Tue, 01 Sep 2020 02:01:09 GMT  
+		Size: 196.5 MB (196526138 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7d4257124f2fe6b9661ab6a69d273cf1906cc0f2f9f1ed9b371bbd9bacf60580`  
-		Last Modified: Wed, 05 Aug 2020 17:06:40 GMT  
-		Size: 13.5 MB (13459056 bytes)  
+	-	`sha256:4b050804743ede43660974b70b791dc0bf20663229459123509f1bdbe018fcda`  
+		Last Modified: Tue, 01 Sep 2020 21:21:07 GMT  
+		Size: 13.5 MB (13459048 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8887164796c4f4565eee27f16fdcbd70f543fff226088a7a162ee85a530f2518`  
-		Last Modified: Wed, 05 Aug 2020 17:06:39 GMT  
-		Size: 4.2 MB (4168126 bytes)  
+	-	`sha256:9ace3907bbb789eefdded03bbae9ab5b13a4ec04ea8ffc5a3b5117dc67438be6`  
+		Last Modified: Tue, 01 Sep 2020 21:21:06 GMT  
+		Size: 4.2 MB (4168128 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:openjdk-11-lein-2.9.3-slim-buster` - linux; arm64 variant v8
@@ -4878,7 +4878,7 @@ CMD ["lein" "repl"]
 ## `clojure:openjdk-11-lein-buster`
 
 ```console
-$ docker pull clojure@sha256:f59203d17d497fe351b586fa8f85c23a12109842b184e662c2c5d4b1aaa0cea4
+$ docker pull clojure@sha256:ecda6793cc282b320304eb47063730492700b6114ced7fd29db5a3bdc3d92524
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4889,14 +4889,14 @@ $ docker pull clojure@sha256:f59203d17d497fe351b586fa8f85c23a12109842b184e662c2c
 ### `clojure:openjdk-11-lein-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:7aeb244bdd2bab426c5d3038b0c0bd3d029920b973326573bd9fefa555dddf03
+$ docker pull clojure@sha256:76957fcf621e0d27980c9b78200b93a5be08254575925360d6197c59c1c14aae
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **339.3 MB (339274584 bytes)**  
+-	Total Size: **339.3 MB (339274669 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:45419e5468fc40be7c63f4def8b96db062a022e58b2879dfef20b891bbcdaebd`
+-	Image ID: `sha256:f33b38eff6c09dc007c6ea5f9123ccc0b77e5fa52fba276ca563a7e063ce8539`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -4922,25 +4922,25 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:27 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:44:39 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:39 GMT
+# Tue, 01 Sep 2020 01:49:46 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:47 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 16:57:55 GMT
+# Tue, 01 Sep 2020 21:10:25 GMT
 ENV LEIN_VERSION=2.9.3
-# Wed, 05 Aug 2020 16:57:55 GMT
+# Tue, 01 Sep 2020 21:10:25 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:57:55 GMT
+# Tue, 01 Sep 2020 21:10:25 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:58:01 GMT
+# Tue, 01 Sep 2020 21:10:32 GMT
 RUN apt-get update && apt-get install -y gnupg && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg
-# Wed, 05 Aug 2020 16:58:02 GMT
+# Tue, 01 Sep 2020 21:10:32 GMT
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:02 GMT
+# Tue, 01 Sep 2020 21:10:32 GMT
 ENV LEIN_ROOT=1
-# Wed, 05 Aug 2020 16:58:06 GMT
+# Tue, 01 Sep 2020 21:10:36 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Wed, 05 Aug 2020 16:58:06 GMT
+# Tue, 01 Sep 2020 21:10:36 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -4969,17 +4969,17 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:50:57 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa776a6e7e3738bb7885a1f6d3140c2276841368a5e839a099821c68f2f852e2`  
-		Last Modified: Wed, 05 Aug 2020 00:51:14 GMT  
-		Size: 196.2 MB (196248896 bytes)  
+	-	`sha256:6bf89641a7f2b81477850d9d4604e9d235622bf71a5859c2136763e10e04b284`  
+		Last Modified: Tue, 01 Sep 2020 02:00:43 GMT  
+		Size: 196.2 MB (196249014 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0b2bb76c7e87dd34d64ccc8c6e1cfe303a43a848bc75fcabb2ba970a041804f2`  
-		Last Modified: Wed, 05 Aug 2020 17:06:29 GMT  
-		Size: 13.5 MB (13538876 bytes)  
+	-	`sha256:4bca78fc84ce0f6a83852e5aa19b824fe2d205988e57716bd08e983cec9900d8`  
+		Last Modified: Tue, 01 Sep 2020 21:20:58 GMT  
+		Size: 13.5 MB (13538849 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:61141ed15543166ea95c20960295b85a926d5a3ed8656afe7402c04c84c683e5`  
-		Last Modified: Wed, 05 Aug 2020 17:06:28 GMT  
-		Size: 4.2 MB (4168220 bytes)  
+	-	`sha256:1efdb10416021c2cbc49863bc7d8aefc03aa8e8381d3762ee29fd011db05f097`  
+		Last Modified: Tue, 01 Sep 2020 21:20:57 GMT  
+		Size: 4.2 MB (4168214 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:openjdk-11-lein-buster` - linux; arm64 variant v8
@@ -5081,7 +5081,7 @@ CMD ["lein" "repl"]
 ## `clojure:openjdk-11-lein-slim-buster`
 
 ```console
-$ docker pull clojure@sha256:73d3b987a44df2cab4bda701786c4204ce564da603d0fbd45511b63eebc5ea93
+$ docker pull clojure@sha256:53ffacd317ac8ecf3304682e3a08596b1c3c161f5a23d4c4e42008d1072646e2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -5092,14 +5092,14 @@ $ docker pull clojure@sha256:73d3b987a44df2cab4bda701786c4204ce564da603d0fbd4551
 ### `clojure:openjdk-11-lein-slim-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:771cd2c5250eabf5267478931615a9dccc649704648574a9eb33a43d04ab05f2
+$ docker pull clojure@sha256:edfa5024a9c1b7f40027b88adfc52e864a7a1ca70da6c42f5ed53aae4d34866d
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **244.5 MB (244493950 bytes)**  
+-	Total Size: **244.5 MB (244494078 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f78a1e393bd6de644ac496abd930736dbf4ffcdacd2c7118372dbffc9deb4867`
+-	Image ID: `sha256:54f6113f88d77e1f77dbd5518947d3886a84a154320888025223d7d85960d1ef`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -5119,25 +5119,25 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:46 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:45:02 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:45:03 GMT
+# Tue, 01 Sep 2020 01:50:18 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:50:18 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 16:58:11 GMT
+# Tue, 01 Sep 2020 21:10:41 GMT
 ENV LEIN_VERSION=2.9.3
-# Wed, 05 Aug 2020 16:58:11 GMT
+# Tue, 01 Sep 2020 21:10:41 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:11 GMT
+# Tue, 01 Sep 2020 21:10:42 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:58:20 GMT
+# Tue, 01 Sep 2020 21:10:51 GMT
 RUN apt-get update && apt-get install -y gnupg wget && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg wget
-# Wed, 05 Aug 2020 16:58:21 GMT
+# Tue, 01 Sep 2020 21:10:51 GMT
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:21 GMT
+# Tue, 01 Sep 2020 21:10:51 GMT
 ENV LEIN_ROOT=1
-# Wed, 05 Aug 2020 16:58:25 GMT
+# Tue, 01 Sep 2020 21:10:55 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Wed, 05 Aug 2020 16:58:25 GMT
+# Tue, 01 Sep 2020 21:10:55 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -5154,17 +5154,17 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:51:20 GMT  
 		Size: 212.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7900923f09cbc8c8dda6274e5de53ec12688a9d2c27edabed353d1af12b03b1a`  
-		Last Modified: Wed, 05 Aug 2020 00:51:36 GMT  
-		Size: 196.5 MB (196526004 bytes)  
+	-	`sha256:ba2a97e7cfd908de238f3f28c9f3221858d3de0bf5f0138dcc04bffdb9e1f446`  
+		Last Modified: Tue, 01 Sep 2020 02:01:09 GMT  
+		Size: 196.5 MB (196526138 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7d4257124f2fe6b9661ab6a69d273cf1906cc0f2f9f1ed9b371bbd9bacf60580`  
-		Last Modified: Wed, 05 Aug 2020 17:06:40 GMT  
-		Size: 13.5 MB (13459056 bytes)  
+	-	`sha256:4b050804743ede43660974b70b791dc0bf20663229459123509f1bdbe018fcda`  
+		Last Modified: Tue, 01 Sep 2020 21:21:07 GMT  
+		Size: 13.5 MB (13459048 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8887164796c4f4565eee27f16fdcbd70f543fff226088a7a162ee85a530f2518`  
-		Last Modified: Wed, 05 Aug 2020 17:06:39 GMT  
-		Size: 4.2 MB (4168126 bytes)  
+	-	`sha256:9ace3907bbb789eefdded03bbae9ab5b13a4ec04ea8ffc5a3b5117dc67438be6`  
+		Last Modified: Tue, 01 Sep 2020 21:21:06 GMT  
+		Size: 4.2 MB (4168128 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:openjdk-11-lein-slim-buster` - linux; arm64 variant v8
@@ -5248,7 +5248,7 @@ CMD ["lein" "repl"]
 ## `clojure:openjdk-11-slim-buster`
 
 ```console
-$ docker pull clojure@sha256:73d3b987a44df2cab4bda701786c4204ce564da603d0fbd45511b63eebc5ea93
+$ docker pull clojure@sha256:53ffacd317ac8ecf3304682e3a08596b1c3c161f5a23d4c4e42008d1072646e2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -5259,14 +5259,14 @@ $ docker pull clojure@sha256:73d3b987a44df2cab4bda701786c4204ce564da603d0fbd4551
 ### `clojure:openjdk-11-slim-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:771cd2c5250eabf5267478931615a9dccc649704648574a9eb33a43d04ab05f2
+$ docker pull clojure@sha256:edfa5024a9c1b7f40027b88adfc52e864a7a1ca70da6c42f5ed53aae4d34866d
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **244.5 MB (244493950 bytes)**  
+-	Total Size: **244.5 MB (244494078 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f78a1e393bd6de644ac496abd930736dbf4ffcdacd2c7118372dbffc9deb4867`
+-	Image ID: `sha256:54f6113f88d77e1f77dbd5518947d3886a84a154320888025223d7d85960d1ef`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -5286,25 +5286,25 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:46 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:45:02 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:45:03 GMT
+# Tue, 01 Sep 2020 01:50:18 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:50:18 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 16:58:11 GMT
+# Tue, 01 Sep 2020 21:10:41 GMT
 ENV LEIN_VERSION=2.9.3
-# Wed, 05 Aug 2020 16:58:11 GMT
+# Tue, 01 Sep 2020 21:10:41 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:11 GMT
+# Tue, 01 Sep 2020 21:10:42 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:58:20 GMT
+# Tue, 01 Sep 2020 21:10:51 GMT
 RUN apt-get update && apt-get install -y gnupg wget && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg wget
-# Wed, 05 Aug 2020 16:58:21 GMT
+# Tue, 01 Sep 2020 21:10:51 GMT
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:21 GMT
+# Tue, 01 Sep 2020 21:10:51 GMT
 ENV LEIN_ROOT=1
-# Wed, 05 Aug 2020 16:58:25 GMT
+# Tue, 01 Sep 2020 21:10:55 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Wed, 05 Aug 2020 16:58:25 GMT
+# Tue, 01 Sep 2020 21:10:55 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -5321,17 +5321,17 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:51:20 GMT  
 		Size: 212.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7900923f09cbc8c8dda6274e5de53ec12688a9d2c27edabed353d1af12b03b1a`  
-		Last Modified: Wed, 05 Aug 2020 00:51:36 GMT  
-		Size: 196.5 MB (196526004 bytes)  
+	-	`sha256:ba2a97e7cfd908de238f3f28c9f3221858d3de0bf5f0138dcc04bffdb9e1f446`  
+		Last Modified: Tue, 01 Sep 2020 02:01:09 GMT  
+		Size: 196.5 MB (196526138 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7d4257124f2fe6b9661ab6a69d273cf1906cc0f2f9f1ed9b371bbd9bacf60580`  
-		Last Modified: Wed, 05 Aug 2020 17:06:40 GMT  
-		Size: 13.5 MB (13459056 bytes)  
+	-	`sha256:4b050804743ede43660974b70b791dc0bf20663229459123509f1bdbe018fcda`  
+		Last Modified: Tue, 01 Sep 2020 21:21:07 GMT  
+		Size: 13.5 MB (13459048 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8887164796c4f4565eee27f16fdcbd70f543fff226088a7a162ee85a530f2518`  
-		Last Modified: Wed, 05 Aug 2020 17:06:39 GMT  
-		Size: 4.2 MB (4168126 bytes)  
+	-	`sha256:9ace3907bbb789eefdded03bbae9ab5b13a4ec04ea8ffc5a3b5117dc67438be6`  
+		Last Modified: Tue, 01 Sep 2020 21:21:06 GMT  
+		Size: 4.2 MB (4168128 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:openjdk-11-slim-buster` - linux; arm64 variant v8
@@ -5415,7 +5415,7 @@ CMD ["lein" "repl"]
 ## `clojure:openjdk-11-tools-deps`
 
 ```console
-$ docker pull clojure@sha256:59ca8190bca504e8ee171efbb32a8c90f4e2d46f8c88f1b244268c362719f070
+$ docker pull clojure@sha256:64df0f3b6c7bb4204e4787a409a4da2bec438f0670ddb2c37ac419b4ba76dbfb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -5426,14 +5426,14 @@ $ docker pull clojure@sha256:59ca8190bca504e8ee171efbb32a8c90f4e2d46f8c88f1b2442
 ### `clojure:openjdk-11-tools-deps` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:605957c0ac3f00d3f6b79a776c1f933c6d68941444db9f4e5484da6c52055019
+$ docker pull clojure@sha256:099e51b1d45d41e2aa60e25d86c0d4990deae07c5c34567ac2be572759bddcdc
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **352.7 MB (352732701 bytes)**  
+-	Total Size: **352.7 MB (352732804 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c72e20dfad0e492200d609ea0dd9fd0a96111d3300a6668bf4ce52ef4472d008`
+-	Image ID: `sha256:35063c5b332cf0e05076a28ef92f051c9bb35a32db974b15d9cdb9bc079c9b93`
 -	Default Command: `["sh","-c","sleep 1 && exec clj"]`
 
 ```dockerfile
@@ -5459,17 +5459,17 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:27 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:44:39 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:39 GMT
+# Tue, 01 Sep 2020 01:49:46 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:47 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 01:21:19 GMT
+# Tue, 01 Sep 2020 21:11:34 GMT
 ENV CLOJURE_VERSION=1.10.1.561
-# Fri, 14 Aug 2020 01:21:19 GMT
+# Tue, 01 Sep 2020 21:11:34 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 01:21:35 GMT
+# Tue, 01 Sep 2020 21:11:50 GMT
 RUN apt-get update && apt-get install -y make rlwrap && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "7f9e4e7c5a8171db4e4edf5ce78e5b8f453bae641a4c6b7f3dda36c3128d2ff7 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)"
-# Fri, 14 Aug 2020 01:21:35 GMT
+# Tue, 01 Sep 2020 21:11:50 GMT
 CMD ["sh" "-c" "sleep 1 && exec clj"]
 ```
 
@@ -5498,13 +5498,13 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 		Last Modified: Wed, 05 Aug 2020 00:50:57 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa776a6e7e3738bb7885a1f6d3140c2276841368a5e839a099821c68f2f852e2`  
-		Last Modified: Wed, 05 Aug 2020 00:51:14 GMT  
-		Size: 196.2 MB (196248896 bytes)  
+	-	`sha256:6bf89641a7f2b81477850d9d4604e9d235622bf71a5859c2136763e10e04b284`  
+		Last Modified: Tue, 01 Sep 2020 02:00:43 GMT  
+		Size: 196.2 MB (196249014 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:729d4edeea833808c237d008d44b1875eb31788045f31148740f5fd8879b60d2`  
-		Last Modified: Fri, 14 Aug 2020 01:25:35 GMT  
-		Size: 31.2 MB (31165213 bytes)  
+	-	`sha256:cd9a54fc6a2386f8af40a9d69f9fc1efa3ba0060368bde209963fd8f2fd221cc`  
+		Last Modified: Tue, 01 Sep 2020 21:21:33 GMT  
+		Size: 31.2 MB (31165198 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:openjdk-11-tools-deps` - linux; arm64 variant v8
@@ -5594,7 +5594,7 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 ## `clojure:openjdk-11-tools-deps-1.10.1.561`
 
 ```console
-$ docker pull clojure@sha256:59ca8190bca504e8ee171efbb32a8c90f4e2d46f8c88f1b244268c362719f070
+$ docker pull clojure@sha256:64df0f3b6c7bb4204e4787a409a4da2bec438f0670ddb2c37ac419b4ba76dbfb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -5605,14 +5605,14 @@ $ docker pull clojure@sha256:59ca8190bca504e8ee171efbb32a8c90f4e2d46f8c88f1b2442
 ### `clojure:openjdk-11-tools-deps-1.10.1.561` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:605957c0ac3f00d3f6b79a776c1f933c6d68941444db9f4e5484da6c52055019
+$ docker pull clojure@sha256:099e51b1d45d41e2aa60e25d86c0d4990deae07c5c34567ac2be572759bddcdc
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **352.7 MB (352732701 bytes)**  
+-	Total Size: **352.7 MB (352732804 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c72e20dfad0e492200d609ea0dd9fd0a96111d3300a6668bf4ce52ef4472d008`
+-	Image ID: `sha256:35063c5b332cf0e05076a28ef92f051c9bb35a32db974b15d9cdb9bc079c9b93`
 -	Default Command: `["sh","-c","sleep 1 && exec clj"]`
 
 ```dockerfile
@@ -5638,17 +5638,17 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:27 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:44:39 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:39 GMT
+# Tue, 01 Sep 2020 01:49:46 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:47 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 01:21:19 GMT
+# Tue, 01 Sep 2020 21:11:34 GMT
 ENV CLOJURE_VERSION=1.10.1.561
-# Fri, 14 Aug 2020 01:21:19 GMT
+# Tue, 01 Sep 2020 21:11:34 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 01:21:35 GMT
+# Tue, 01 Sep 2020 21:11:50 GMT
 RUN apt-get update && apt-get install -y make rlwrap && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "7f9e4e7c5a8171db4e4edf5ce78e5b8f453bae641a4c6b7f3dda36c3128d2ff7 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)"
-# Fri, 14 Aug 2020 01:21:35 GMT
+# Tue, 01 Sep 2020 21:11:50 GMT
 CMD ["sh" "-c" "sleep 1 && exec clj"]
 ```
 
@@ -5677,13 +5677,13 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 		Last Modified: Wed, 05 Aug 2020 00:50:57 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa776a6e7e3738bb7885a1f6d3140c2276841368a5e839a099821c68f2f852e2`  
-		Last Modified: Wed, 05 Aug 2020 00:51:14 GMT  
-		Size: 196.2 MB (196248896 bytes)  
+	-	`sha256:6bf89641a7f2b81477850d9d4604e9d235622bf71a5859c2136763e10e04b284`  
+		Last Modified: Tue, 01 Sep 2020 02:00:43 GMT  
+		Size: 196.2 MB (196249014 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:729d4edeea833808c237d008d44b1875eb31788045f31148740f5fd8879b60d2`  
-		Last Modified: Fri, 14 Aug 2020 01:25:35 GMT  
-		Size: 31.2 MB (31165213 bytes)  
+	-	`sha256:cd9a54fc6a2386f8af40a9d69f9fc1efa3ba0060368bde209963fd8f2fd221cc`  
+		Last Modified: Tue, 01 Sep 2020 21:21:33 GMT  
+		Size: 31.2 MB (31165198 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:openjdk-11-tools-deps-1.10.1.561` - linux; arm64 variant v8
@@ -5773,7 +5773,7 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 ## `clojure:openjdk-11-tools-deps-1.10.1.561-buster`
 
 ```console
-$ docker pull clojure@sha256:59ca8190bca504e8ee171efbb32a8c90f4e2d46f8c88f1b244268c362719f070
+$ docker pull clojure@sha256:64df0f3b6c7bb4204e4787a409a4da2bec438f0670ddb2c37ac419b4ba76dbfb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -5784,14 +5784,14 @@ $ docker pull clojure@sha256:59ca8190bca504e8ee171efbb32a8c90f4e2d46f8c88f1b2442
 ### `clojure:openjdk-11-tools-deps-1.10.1.561-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:605957c0ac3f00d3f6b79a776c1f933c6d68941444db9f4e5484da6c52055019
+$ docker pull clojure@sha256:099e51b1d45d41e2aa60e25d86c0d4990deae07c5c34567ac2be572759bddcdc
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **352.7 MB (352732701 bytes)**  
+-	Total Size: **352.7 MB (352732804 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c72e20dfad0e492200d609ea0dd9fd0a96111d3300a6668bf4ce52ef4472d008`
+-	Image ID: `sha256:35063c5b332cf0e05076a28ef92f051c9bb35a32db974b15d9cdb9bc079c9b93`
 -	Default Command: `["sh","-c","sleep 1 && exec clj"]`
 
 ```dockerfile
@@ -5817,17 +5817,17 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:27 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:44:39 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:39 GMT
+# Tue, 01 Sep 2020 01:49:46 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:47 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 01:21:19 GMT
+# Tue, 01 Sep 2020 21:11:34 GMT
 ENV CLOJURE_VERSION=1.10.1.561
-# Fri, 14 Aug 2020 01:21:19 GMT
+# Tue, 01 Sep 2020 21:11:34 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 01:21:35 GMT
+# Tue, 01 Sep 2020 21:11:50 GMT
 RUN apt-get update && apt-get install -y make rlwrap && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "7f9e4e7c5a8171db4e4edf5ce78e5b8f453bae641a4c6b7f3dda36c3128d2ff7 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)"
-# Fri, 14 Aug 2020 01:21:35 GMT
+# Tue, 01 Sep 2020 21:11:50 GMT
 CMD ["sh" "-c" "sleep 1 && exec clj"]
 ```
 
@@ -5856,13 +5856,13 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 		Last Modified: Wed, 05 Aug 2020 00:50:57 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa776a6e7e3738bb7885a1f6d3140c2276841368a5e839a099821c68f2f852e2`  
-		Last Modified: Wed, 05 Aug 2020 00:51:14 GMT  
-		Size: 196.2 MB (196248896 bytes)  
+	-	`sha256:6bf89641a7f2b81477850d9d4604e9d235622bf71a5859c2136763e10e04b284`  
+		Last Modified: Tue, 01 Sep 2020 02:00:43 GMT  
+		Size: 196.2 MB (196249014 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:729d4edeea833808c237d008d44b1875eb31788045f31148740f5fd8879b60d2`  
-		Last Modified: Fri, 14 Aug 2020 01:25:35 GMT  
-		Size: 31.2 MB (31165213 bytes)  
+	-	`sha256:cd9a54fc6a2386f8af40a9d69f9fc1efa3ba0060368bde209963fd8f2fd221cc`  
+		Last Modified: Tue, 01 Sep 2020 21:21:33 GMT  
+		Size: 31.2 MB (31165198 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:openjdk-11-tools-deps-1.10.1.561-buster` - linux; arm64 variant v8
@@ -5952,7 +5952,7 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 ## `clojure:openjdk-11-tools-deps-1.10.1.561-slim-buster`
 
 ```console
-$ docker pull clojure@sha256:8bf85777c0b8d59fba028dcae933a8ee48ab5c1bde0c4210117f66aa0faefcdd
+$ docker pull clojure@sha256:dd4290d2f0ae03cbf5fdd0c38293f5409d2e1c3eb2f7ff2e2f5132404cde5aa8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -5963,14 +5963,14 @@ $ docker pull clojure@sha256:8bf85777c0b8d59fba028dcae933a8ee48ab5c1bde0c4210117
 ### `clojure:openjdk-11-tools-deps-1.10.1.561-slim-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:1bb38ab4a09bade537ce9dddee4fd11c8c54fd15f2177274671c1f5913829257
+$ docker pull clojure@sha256:db358b34e9dbb10a3947fe5a6abfbecc039425126600a81418283ccacc60f455
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **269.4 MB (269376440 bytes)**  
+-	Total Size: **269.4 MB (269376577 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:9b4f61d515d65ef8f726e5aa2cd123230863b7b3e673c8a699f68f06fa822a42`
+-	Image ID: `sha256:3c502282dcc42bb9697a293a94917e53768e4065dcf4ecd957ab8560381f15d7`
 -	Default Command: `["sh","-c","sleep 1 && exec clj"]`
 
 ```dockerfile
@@ -5990,17 +5990,17 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:46 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:45:02 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:45:03 GMT
+# Tue, 01 Sep 2020 01:50:18 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:50:18 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 01:21:41 GMT
+# Tue, 01 Sep 2020 21:11:55 GMT
 ENV CLOJURE_VERSION=1.10.1.561
-# Fri, 14 Aug 2020 01:21:41 GMT
+# Tue, 01 Sep 2020 21:11:56 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 01:22:01 GMT
+# Tue, 01 Sep 2020 21:12:16 GMT
 RUN apt-get update && apt-get install -y curl make rlwrap wget && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "7f9e4e7c5a8171db4e4edf5ce78e5b8f453bae641a4c6b7f3dda36c3128d2ff7 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apt-get purge -y --auto-remove curl wget
-# Fri, 14 Aug 2020 01:22:01 GMT
+# Tue, 01 Sep 2020 21:12:17 GMT
 CMD ["sh" "-c" "sleep 1 && exec clj"]
 ```
 
@@ -6017,13 +6017,13 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 		Last Modified: Wed, 05 Aug 2020 00:51:20 GMT  
 		Size: 212.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7900923f09cbc8c8dda6274e5de53ec12688a9d2c27edabed353d1af12b03b1a`  
-		Last Modified: Wed, 05 Aug 2020 00:51:36 GMT  
-		Size: 196.5 MB (196526004 bytes)  
+	-	`sha256:ba2a97e7cfd908de238f3f28c9f3221858d3de0bf5f0138dcc04bffdb9e1f446`  
+		Last Modified: Tue, 01 Sep 2020 02:01:09 GMT  
+		Size: 196.5 MB (196526138 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c01e03d73653e888fe0d1f89af2c899ccb0df1f2d6145a01aac2130fe7f2e922`  
-		Last Modified: Fri, 14 Aug 2020 01:25:48 GMT  
-		Size: 42.5 MB (42509672 bytes)  
+	-	`sha256:e0272c6dccdf919d0268948f1a1729e62c1c39519cb0e603eddb663fd401fd0b`  
+		Last Modified: Tue, 01 Sep 2020 21:21:46 GMT  
+		Size: 42.5 MB (42509675 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:openjdk-11-tools-deps-1.10.1.561-slim-buster` - linux; arm64 variant v8
@@ -6095,7 +6095,7 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 ## `clojure:openjdk-11-tools-deps-buster`
 
 ```console
-$ docker pull clojure@sha256:59ca8190bca504e8ee171efbb32a8c90f4e2d46f8c88f1b244268c362719f070
+$ docker pull clojure@sha256:64df0f3b6c7bb4204e4787a409a4da2bec438f0670ddb2c37ac419b4ba76dbfb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6106,14 +6106,14 @@ $ docker pull clojure@sha256:59ca8190bca504e8ee171efbb32a8c90f4e2d46f8c88f1b2442
 ### `clojure:openjdk-11-tools-deps-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:605957c0ac3f00d3f6b79a776c1f933c6d68941444db9f4e5484da6c52055019
+$ docker pull clojure@sha256:099e51b1d45d41e2aa60e25d86c0d4990deae07c5c34567ac2be572759bddcdc
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **352.7 MB (352732701 bytes)**  
+-	Total Size: **352.7 MB (352732804 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c72e20dfad0e492200d609ea0dd9fd0a96111d3300a6668bf4ce52ef4472d008`
+-	Image ID: `sha256:35063c5b332cf0e05076a28ef92f051c9bb35a32db974b15d9cdb9bc079c9b93`
 -	Default Command: `["sh","-c","sleep 1 && exec clj"]`
 
 ```dockerfile
@@ -6139,17 +6139,17 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:27 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:44:39 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:39 GMT
+# Tue, 01 Sep 2020 01:49:46 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:47 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 01:21:19 GMT
+# Tue, 01 Sep 2020 21:11:34 GMT
 ENV CLOJURE_VERSION=1.10.1.561
-# Fri, 14 Aug 2020 01:21:19 GMT
+# Tue, 01 Sep 2020 21:11:34 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 01:21:35 GMT
+# Tue, 01 Sep 2020 21:11:50 GMT
 RUN apt-get update && apt-get install -y make rlwrap && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "7f9e4e7c5a8171db4e4edf5ce78e5b8f453bae641a4c6b7f3dda36c3128d2ff7 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)"
-# Fri, 14 Aug 2020 01:21:35 GMT
+# Tue, 01 Sep 2020 21:11:50 GMT
 CMD ["sh" "-c" "sleep 1 && exec clj"]
 ```
 
@@ -6178,13 +6178,13 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 		Last Modified: Wed, 05 Aug 2020 00:50:57 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa776a6e7e3738bb7885a1f6d3140c2276841368a5e839a099821c68f2f852e2`  
-		Last Modified: Wed, 05 Aug 2020 00:51:14 GMT  
-		Size: 196.2 MB (196248896 bytes)  
+	-	`sha256:6bf89641a7f2b81477850d9d4604e9d235622bf71a5859c2136763e10e04b284`  
+		Last Modified: Tue, 01 Sep 2020 02:00:43 GMT  
+		Size: 196.2 MB (196249014 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:729d4edeea833808c237d008d44b1875eb31788045f31148740f5fd8879b60d2`  
-		Last Modified: Fri, 14 Aug 2020 01:25:35 GMT  
-		Size: 31.2 MB (31165213 bytes)  
+	-	`sha256:cd9a54fc6a2386f8af40a9d69f9fc1efa3ba0060368bde209963fd8f2fd221cc`  
+		Last Modified: Tue, 01 Sep 2020 21:21:33 GMT  
+		Size: 31.2 MB (31165198 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:openjdk-11-tools-deps-buster` - linux; arm64 variant v8
@@ -6274,7 +6274,7 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 ## `clojure:openjdk-11-tools-deps-slim-buster`
 
 ```console
-$ docker pull clojure@sha256:8bf85777c0b8d59fba028dcae933a8ee48ab5c1bde0c4210117f66aa0faefcdd
+$ docker pull clojure@sha256:dd4290d2f0ae03cbf5fdd0c38293f5409d2e1c3eb2f7ff2e2f5132404cde5aa8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6285,14 +6285,14 @@ $ docker pull clojure@sha256:8bf85777c0b8d59fba028dcae933a8ee48ab5c1bde0c4210117
 ### `clojure:openjdk-11-tools-deps-slim-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:1bb38ab4a09bade537ce9dddee4fd11c8c54fd15f2177274671c1f5913829257
+$ docker pull clojure@sha256:db358b34e9dbb10a3947fe5a6abfbecc039425126600a81418283ccacc60f455
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **269.4 MB (269376440 bytes)**  
+-	Total Size: **269.4 MB (269376577 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:9b4f61d515d65ef8f726e5aa2cd123230863b7b3e673c8a699f68f06fa822a42`
+-	Image ID: `sha256:3c502282dcc42bb9697a293a94917e53768e4065dcf4ecd957ab8560381f15d7`
 -	Default Command: `["sh","-c","sleep 1 && exec clj"]`
 
 ```dockerfile
@@ -6312,17 +6312,17 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:46 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:45:02 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:45:03 GMT
+# Tue, 01 Sep 2020 01:50:18 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:50:18 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 01:21:41 GMT
+# Tue, 01 Sep 2020 21:11:55 GMT
 ENV CLOJURE_VERSION=1.10.1.561
-# Fri, 14 Aug 2020 01:21:41 GMT
+# Tue, 01 Sep 2020 21:11:56 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 01:22:01 GMT
+# Tue, 01 Sep 2020 21:12:16 GMT
 RUN apt-get update && apt-get install -y curl make rlwrap wget && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "7f9e4e7c5a8171db4e4edf5ce78e5b8f453bae641a4c6b7f3dda36c3128d2ff7 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apt-get purge -y --auto-remove curl wget
-# Fri, 14 Aug 2020 01:22:01 GMT
+# Tue, 01 Sep 2020 21:12:17 GMT
 CMD ["sh" "-c" "sleep 1 && exec clj"]
 ```
 
@@ -6339,13 +6339,13 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 		Last Modified: Wed, 05 Aug 2020 00:51:20 GMT  
 		Size: 212.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7900923f09cbc8c8dda6274e5de53ec12688a9d2c27edabed353d1af12b03b1a`  
-		Last Modified: Wed, 05 Aug 2020 00:51:36 GMT  
-		Size: 196.5 MB (196526004 bytes)  
+	-	`sha256:ba2a97e7cfd908de238f3f28c9f3221858d3de0bf5f0138dcc04bffdb9e1f446`  
+		Last Modified: Tue, 01 Sep 2020 02:01:09 GMT  
+		Size: 196.5 MB (196526138 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c01e03d73653e888fe0d1f89af2c899ccb0df1f2d6145a01aac2130fe7f2e922`  
-		Last Modified: Fri, 14 Aug 2020 01:25:48 GMT  
-		Size: 42.5 MB (42509672 bytes)  
+	-	`sha256:e0272c6dccdf919d0268948f1a1729e62c1c39519cb0e603eddb663fd401fd0b`  
+		Last Modified: Tue, 01 Sep 2020 21:21:46 GMT  
+		Size: 42.5 MB (42509675 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:openjdk-11-tools-deps-slim-buster` - linux; arm64 variant v8
@@ -6417,7 +6417,7 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 ## `clojure:openjdk-14`
 
 ```console
-$ docker pull clojure@sha256:33ff460b5608957b4374a6e00bf1fc69d3d6058cc036240201e17fe762d12e64
+$ docker pull clojure@sha256:dc842c682c3076acb883787e26175f470e1cf6b25b219ed3a578ccc03d969834
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6427,14 +6427,14 @@ $ docker pull clojure@sha256:33ff460b5608957b4374a6e00bf1fc69d3d6058cc036240201e
 ### `clojure:openjdk-14` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:2e262bad2f1bf087c0484e63a10e061d04693214a20041625cf1ec83fbcd2466
+$ docker pull clojure@sha256:7b04f3312796e039a77dfee91cf79a25ab3942dbe5d2a7e2d953b547a464ec1b
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **247.4 MB (247436936 bytes)**  
+-	Total Size: **247.4 MB (247437326 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ebf9ac25449ff55a711bd6a0c353acb35ed9990de8a736cd535c671e6f96e581`
+-	Image ID: `sha256:058e4f36bc76abe0b4969b676a3a5b726fd7149412af83ed5c45512d5b9a4826`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -6454,25 +6454,25 @@ ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:43:58 GMT
 ENV JAVA_VERSION=14.0.2
-# Wed, 05 Aug 2020 00:44:12 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:12 GMT
+# Tue, 01 Sep 2020 01:49:24 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:24 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 16:59:45 GMT
+# Tue, 01 Sep 2020 21:12:21 GMT
 ENV LEIN_VERSION=2.9.3
-# Wed, 05 Aug 2020 16:59:45 GMT
+# Tue, 01 Sep 2020 21:12:21 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:59:45 GMT
+# Tue, 01 Sep 2020 21:12:21 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:59:54 GMT
+# Tue, 01 Sep 2020 21:12:31 GMT
 RUN apt-get update && apt-get install -y gnupg wget && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg wget
-# Wed, 05 Aug 2020 16:59:55 GMT
+# Tue, 01 Sep 2020 21:12:31 GMT
 ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 16:59:55 GMT
+# Tue, 01 Sep 2020 21:12:31 GMT
 ENV LEIN_ROOT=1
-# Wed, 05 Aug 2020 16:59:59 GMT
+# Tue, 01 Sep 2020 21:12:35 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Wed, 05 Aug 2020 16:59:59 GMT
+# Tue, 01 Sep 2020 21:12:35 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -6489,23 +6489,23 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:50:11 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:705d11f01792bfa5683e07ee99cb5e26d71449f279d9ad424a6d2f5558997ee1`  
-		Last Modified: Wed, 05 Aug 2020 00:50:45 GMT  
-		Size: 199.5 MB (199464729 bytes)  
+	-	`sha256:1bb778f76db35302bb48fef9517abc09b6ff8ad7f6985f482b2ccbfa48c6e800`  
+		Last Modified: Tue, 01 Sep 2020 02:00:01 GMT  
+		Size: 199.5 MB (199465062 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:02ad710d80270004e65ea3698c6356d21afab53ff7caaa4fbe9e4ce996046c08`  
-		Last Modified: Wed, 05 Aug 2020 17:07:38 GMT  
-		Size: 13.5 MB (13463314 bytes)  
+	-	`sha256:1f94548dacf5982ad86fac0ec24e2d2cb581e9dd223bbfe04cc3eca21b5f096f`  
+		Last Modified: Tue, 01 Sep 2020 21:21:52 GMT  
+		Size: 13.5 MB (13463340 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ba92d24d7300607968e8cc48b6801aacd5cb3ade5f66d33cb7842504a4b51a8f`  
-		Last Modified: Wed, 05 Aug 2020 17:07:38 GMT  
-		Size: 4.2 MB (4168130 bytes)  
+	-	`sha256:ebc88d75d38a90805bf13e7e571b04dbb17f74557c2afc1d8e0dd72376fb10d6`  
+		Last Modified: Tue, 01 Sep 2020 21:21:52 GMT  
+		Size: 4.2 MB (4168161 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-14-boot`
 
 ```console
-$ docker pull clojure@sha256:7b1d59747877936b2f817695e7807eaedc971d492bbbd07d87019e6f8ca67f8f
+$ docker pull clojure@sha256:aadba483fe9709690629e18cc766353aa7ddd05ca30e07adbd096ca4b76b43b2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6515,14 +6515,14 @@ $ docker pull clojure@sha256:7b1d59747877936b2f817695e7807eaedc971d492bbbd07d870
 ### `clojure:openjdk-14-boot` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:b1c50ea94dc710166ad4d25ec5afe5db788bd2382ca59f507f9820e5b6fe102c
+$ docker pull clojure@sha256:a06539c6bcb51ac35bfd4e262840164e866fdc4510a3e93bd10e6b176165dc94
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **288.9 MB (288904866 bytes)**  
+-	Total Size: **288.9 MB (288905638 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4a3770878e95060cd3e09fe2c6edcde45af11638123a4164dcba1d9e50732ef2`
+-	Image ID: `sha256:b9ed622e2ebeb3a2327b302dcd1ca4ab297d87cb31408908112aeeb677bc86be`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
@@ -6542,25 +6542,25 @@ ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:43:58 GMT
 ENV JAVA_VERSION=14.0.2
-# Wed, 05 Aug 2020 00:44:12 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:12 GMT
+# Tue, 01 Sep 2020 01:49:24 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:24 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 17:00:20 GMT
+# Tue, 01 Sep 2020 21:12:57 GMT
 ENV BOOT_VERSION=2.8.3
-# Wed, 05 Aug 2020 17:00:20 GMT
+# Tue, 01 Sep 2020 21:12:58 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 17:00:21 GMT
+# Tue, 01 Sep 2020 21:12:58 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 17:00:26 GMT
+# Tue, 01 Sep 2020 21:13:03 GMT
 RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/* && mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot && apt-get purge -y --auto-remove wget
-# Wed, 05 Aug 2020 17:00:26 GMT
+# Tue, 01 Sep 2020 21:13:03 GMT
 ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 17:00:26 GMT
+# Tue, 01 Sep 2020 21:13:03 GMT
 ENV BOOT_AS_ROOT=yes
-# Wed, 05 Aug 2020 17:00:44 GMT
+# Tue, 01 Sep 2020 21:13:22 GMT
 RUN boot
-# Wed, 05 Aug 2020 17:00:44 GMT
+# Tue, 01 Sep 2020 21:13:23 GMT
 CMD ["boot" "repl"]
 ```
 
@@ -6577,23 +6577,23 @@ CMD ["boot" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:50:11 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:705d11f01792bfa5683e07ee99cb5e26d71449f279d9ad424a6d2f5558997ee1`  
-		Last Modified: Wed, 05 Aug 2020 00:50:45 GMT  
-		Size: 199.5 MB (199464729 bytes)  
+	-	`sha256:1bb778f76db35302bb48fef9517abc09b6ff8ad7f6985f482b2ccbfa48c6e800`  
+		Last Modified: Tue, 01 Sep 2020 02:00:01 GMT  
+		Size: 199.5 MB (199465062 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:33c5f1c539ccb593a580bae07debb2a8af1dae348097e125fd584d3181e7cc23`  
-		Last Modified: Wed, 05 Aug 2020 17:07:53 GMT  
-		Size: 279.6 KB (279555 bytes)  
+	-	`sha256:c529544a34b984368489c6223065463f8af2e9d84d6f6000cfcac2f7882c70b3`  
+		Last Modified: Tue, 01 Sep 2020 21:22:05 GMT  
+		Size: 279.6 KB (279567 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:62af0ceb76512beafb01a0d6953c1fdc42dcb7a9573eeaf87976a6c669b6ae26`  
-		Last Modified: Wed, 05 Aug 2020 17:07:58 GMT  
-		Size: 58.8 MB (58819819 bytes)  
+	-	`sha256:346e2d31d1879364e6525d7f5afeaeca470b21db3fe8b34c6264d722a120eac4`  
+		Last Modified: Tue, 01 Sep 2020 21:22:08 GMT  
+		Size: 58.8 MB (58820246 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-14-boot-2.8.3`
 
 ```console
-$ docker pull clojure@sha256:7b1d59747877936b2f817695e7807eaedc971d492bbbd07d87019e6f8ca67f8f
+$ docker pull clojure@sha256:aadba483fe9709690629e18cc766353aa7ddd05ca30e07adbd096ca4b76b43b2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6603,14 +6603,14 @@ $ docker pull clojure@sha256:7b1d59747877936b2f817695e7807eaedc971d492bbbd07d870
 ### `clojure:openjdk-14-boot-2.8.3` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:b1c50ea94dc710166ad4d25ec5afe5db788bd2382ca59f507f9820e5b6fe102c
+$ docker pull clojure@sha256:a06539c6bcb51ac35bfd4e262840164e866fdc4510a3e93bd10e6b176165dc94
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **288.9 MB (288904866 bytes)**  
+-	Total Size: **288.9 MB (288905638 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4a3770878e95060cd3e09fe2c6edcde45af11638123a4164dcba1d9e50732ef2`
+-	Image ID: `sha256:b9ed622e2ebeb3a2327b302dcd1ca4ab297d87cb31408908112aeeb677bc86be`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
@@ -6630,25 +6630,25 @@ ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:43:58 GMT
 ENV JAVA_VERSION=14.0.2
-# Wed, 05 Aug 2020 00:44:12 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:12 GMT
+# Tue, 01 Sep 2020 01:49:24 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:24 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 17:00:20 GMT
+# Tue, 01 Sep 2020 21:12:57 GMT
 ENV BOOT_VERSION=2.8.3
-# Wed, 05 Aug 2020 17:00:20 GMT
+# Tue, 01 Sep 2020 21:12:58 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 17:00:21 GMT
+# Tue, 01 Sep 2020 21:12:58 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 17:00:26 GMT
+# Tue, 01 Sep 2020 21:13:03 GMT
 RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/* && mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot && apt-get purge -y --auto-remove wget
-# Wed, 05 Aug 2020 17:00:26 GMT
+# Tue, 01 Sep 2020 21:13:03 GMT
 ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 17:00:26 GMT
+# Tue, 01 Sep 2020 21:13:03 GMT
 ENV BOOT_AS_ROOT=yes
-# Wed, 05 Aug 2020 17:00:44 GMT
+# Tue, 01 Sep 2020 21:13:22 GMT
 RUN boot
-# Wed, 05 Aug 2020 17:00:44 GMT
+# Tue, 01 Sep 2020 21:13:23 GMT
 CMD ["boot" "repl"]
 ```
 
@@ -6665,23 +6665,23 @@ CMD ["boot" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:50:11 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:705d11f01792bfa5683e07ee99cb5e26d71449f279d9ad424a6d2f5558997ee1`  
-		Last Modified: Wed, 05 Aug 2020 00:50:45 GMT  
-		Size: 199.5 MB (199464729 bytes)  
+	-	`sha256:1bb778f76db35302bb48fef9517abc09b6ff8ad7f6985f482b2ccbfa48c6e800`  
+		Last Modified: Tue, 01 Sep 2020 02:00:01 GMT  
+		Size: 199.5 MB (199465062 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:33c5f1c539ccb593a580bae07debb2a8af1dae348097e125fd584d3181e7cc23`  
-		Last Modified: Wed, 05 Aug 2020 17:07:53 GMT  
-		Size: 279.6 KB (279555 bytes)  
+	-	`sha256:c529544a34b984368489c6223065463f8af2e9d84d6f6000cfcac2f7882c70b3`  
+		Last Modified: Tue, 01 Sep 2020 21:22:05 GMT  
+		Size: 279.6 KB (279567 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:62af0ceb76512beafb01a0d6953c1fdc42dcb7a9573eeaf87976a6c669b6ae26`  
-		Last Modified: Wed, 05 Aug 2020 17:07:58 GMT  
-		Size: 58.8 MB (58819819 bytes)  
+	-	`sha256:346e2d31d1879364e6525d7f5afeaeca470b21db3fe8b34c6264d722a120eac4`  
+		Last Modified: Tue, 01 Sep 2020 21:22:08 GMT  
+		Size: 58.8 MB (58820246 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-14-boot-2.8.3-buster`
 
 ```console
-$ docker pull clojure@sha256:f484f08475de20b8e29f65980ae218fa3e9a3312c6e33edb8c6187c4a111c496
+$ docker pull clojure@sha256:dd6623ec4a23e31e3fab0810c377e4ccd8d696b5dfa1bdac2859de4ac6a09ebd
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6691,14 +6691,14 @@ $ docker pull clojure@sha256:f484f08475de20b8e29f65980ae218fa3e9a3312c6e33edb8c6
 ### `clojure:openjdk-14-boot-2.8.3-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:7d449215402b1ec233b51328e035cd72cda7de0fcf9c5b240ebc767f2d3533e0
+$ docker pull clojure@sha256:dd6411590766c3b36f80f393eea47e4bf1ff45e807a6e4cfe71b671858cc5366
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **392.0 MB (391984308 bytes)**  
+-	Total Size: **392.0 MB (391982038 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:37ce8e8b1822319601177b4fcaba07f1d4f685cb16149bda7030e58ec22df41d`
+-	Image ID: `sha256:aa4ece43d63a94448af5443c86d09e16baaa5e65040f734ebd553b58b9e46bbb`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
@@ -6724,25 +6724,25 @@ ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:43:10 GMT
 ENV JAVA_VERSION=14.0.2
-# Wed, 05 Aug 2020 00:43:49 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:43:50 GMT
+# Tue, 01 Sep 2020 01:49:00 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:01 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 17:00:49 GMT
+# Tue, 01 Sep 2020 21:13:27 GMT
 ENV BOOT_VERSION=2.8.3
-# Wed, 05 Aug 2020 17:00:50 GMT
+# Tue, 01 Sep 2020 21:13:27 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 17:00:50 GMT
+# Tue, 01 Sep 2020 21:13:27 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 17:00:51 GMT
+# Tue, 01 Sep 2020 21:13:28 GMT
 RUN mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot
-# Wed, 05 Aug 2020 17:00:51 GMT
+# Tue, 01 Sep 2020 21:13:28 GMT
 ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 17:00:51 GMT
+# Tue, 01 Sep 2020 21:13:28 GMT
 ENV BOOT_AS_ROOT=yes
-# Wed, 05 Aug 2020 17:01:09 GMT
+# Tue, 01 Sep 2020 21:13:47 GMT
 RUN boot
-# Wed, 05 Aug 2020 17:01:09 GMT
+# Tue, 01 Sep 2020 21:13:47 GMT
 CMD ["boot" "repl"]
 ```
 
@@ -6771,23 +6771,23 @@ CMD ["boot" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:49:43 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ec2fc41c5c09d2f7bd5c657529dcf5c9b720699f68202f03a43b63afd2e2f168`  
-		Last Modified: Wed, 05 Aug 2020 00:50:00 GMT  
-		Size: 199.2 MB (199203257 bytes)  
+	-	`sha256:0b9db829721756fb5ee2bfd5e8c3833c7d6bae40cd259b4e4992f70b22c83bae`  
+		Last Modified: Tue, 01 Sep 2020 01:59:29 GMT  
+		Size: 199.2 MB (199200899 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:940302f76b9509a40a25324ddf866f6191094a9da887cabe87a7122c23260342`  
-		Last Modified: Wed, 05 Aug 2020 17:08:05 GMT  
-		Size: 6.9 KB (6895 bytes)  
+	-	`sha256:ce250811922173947a2e2491494c59ef630a0c801538d7121b15c354988d76e6`  
+		Last Modified: Tue, 01 Sep 2020 21:22:13 GMT  
+		Size: 6.9 KB (6897 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b6d90124193c4006f5012d5d1a80e14296b506ef9aa32dbadee9efb0671e0ac9`  
-		Last Modified: Wed, 05 Aug 2020 17:08:17 GMT  
-		Size: 58.8 MB (58820060 bytes)  
+	-	`sha256:9c5bb96b453e46dbe84b86d9cf9f3146e27b2645b08826b29999c2a4dc9a57d9`  
+		Last Modified: Tue, 01 Sep 2020 21:22:17 GMT  
+		Size: 58.8 MB (58820146 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-14-boot-2.8.3-slim-buster`
 
 ```console
-$ docker pull clojure@sha256:7b1d59747877936b2f817695e7807eaedc971d492bbbd07d87019e6f8ca67f8f
+$ docker pull clojure@sha256:aadba483fe9709690629e18cc766353aa7ddd05ca30e07adbd096ca4b76b43b2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6797,14 +6797,14 @@ $ docker pull clojure@sha256:7b1d59747877936b2f817695e7807eaedc971d492bbbd07d870
 ### `clojure:openjdk-14-boot-2.8.3-slim-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:b1c50ea94dc710166ad4d25ec5afe5db788bd2382ca59f507f9820e5b6fe102c
+$ docker pull clojure@sha256:a06539c6bcb51ac35bfd4e262840164e866fdc4510a3e93bd10e6b176165dc94
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **288.9 MB (288904866 bytes)**  
+-	Total Size: **288.9 MB (288905638 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4a3770878e95060cd3e09fe2c6edcde45af11638123a4164dcba1d9e50732ef2`
+-	Image ID: `sha256:b9ed622e2ebeb3a2327b302dcd1ca4ab297d87cb31408908112aeeb677bc86be`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
@@ -6824,25 +6824,25 @@ ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:43:58 GMT
 ENV JAVA_VERSION=14.0.2
-# Wed, 05 Aug 2020 00:44:12 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:12 GMT
+# Tue, 01 Sep 2020 01:49:24 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:24 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 17:00:20 GMT
+# Tue, 01 Sep 2020 21:12:57 GMT
 ENV BOOT_VERSION=2.8.3
-# Wed, 05 Aug 2020 17:00:20 GMT
+# Tue, 01 Sep 2020 21:12:58 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 17:00:21 GMT
+# Tue, 01 Sep 2020 21:12:58 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 17:00:26 GMT
+# Tue, 01 Sep 2020 21:13:03 GMT
 RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/* && mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot && apt-get purge -y --auto-remove wget
-# Wed, 05 Aug 2020 17:00:26 GMT
+# Tue, 01 Sep 2020 21:13:03 GMT
 ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 17:00:26 GMT
+# Tue, 01 Sep 2020 21:13:03 GMT
 ENV BOOT_AS_ROOT=yes
-# Wed, 05 Aug 2020 17:00:44 GMT
+# Tue, 01 Sep 2020 21:13:22 GMT
 RUN boot
-# Wed, 05 Aug 2020 17:00:44 GMT
+# Tue, 01 Sep 2020 21:13:23 GMT
 CMD ["boot" "repl"]
 ```
 
@@ -6859,23 +6859,23 @@ CMD ["boot" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:50:11 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:705d11f01792bfa5683e07ee99cb5e26d71449f279d9ad424a6d2f5558997ee1`  
-		Last Modified: Wed, 05 Aug 2020 00:50:45 GMT  
-		Size: 199.5 MB (199464729 bytes)  
+	-	`sha256:1bb778f76db35302bb48fef9517abc09b6ff8ad7f6985f482b2ccbfa48c6e800`  
+		Last Modified: Tue, 01 Sep 2020 02:00:01 GMT  
+		Size: 199.5 MB (199465062 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:33c5f1c539ccb593a580bae07debb2a8af1dae348097e125fd584d3181e7cc23`  
-		Last Modified: Wed, 05 Aug 2020 17:07:53 GMT  
-		Size: 279.6 KB (279555 bytes)  
+	-	`sha256:c529544a34b984368489c6223065463f8af2e9d84d6f6000cfcac2f7882c70b3`  
+		Last Modified: Tue, 01 Sep 2020 21:22:05 GMT  
+		Size: 279.6 KB (279567 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:62af0ceb76512beafb01a0d6953c1fdc42dcb7a9573eeaf87976a6c669b6ae26`  
-		Last Modified: Wed, 05 Aug 2020 17:07:58 GMT  
-		Size: 58.8 MB (58819819 bytes)  
+	-	`sha256:346e2d31d1879364e6525d7f5afeaeca470b21db3fe8b34c6264d722a120eac4`  
+		Last Modified: Tue, 01 Sep 2020 21:22:08 GMT  
+		Size: 58.8 MB (58820246 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-14-boot-buster`
 
 ```console
-$ docker pull clojure@sha256:f484f08475de20b8e29f65980ae218fa3e9a3312c6e33edb8c6187c4a111c496
+$ docker pull clojure@sha256:dd6623ec4a23e31e3fab0810c377e4ccd8d696b5dfa1bdac2859de4ac6a09ebd
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6885,14 +6885,14 @@ $ docker pull clojure@sha256:f484f08475de20b8e29f65980ae218fa3e9a3312c6e33edb8c6
 ### `clojure:openjdk-14-boot-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:7d449215402b1ec233b51328e035cd72cda7de0fcf9c5b240ebc767f2d3533e0
+$ docker pull clojure@sha256:dd6411590766c3b36f80f393eea47e4bf1ff45e807a6e4cfe71b671858cc5366
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **392.0 MB (391984308 bytes)**  
+-	Total Size: **392.0 MB (391982038 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:37ce8e8b1822319601177b4fcaba07f1d4f685cb16149bda7030e58ec22df41d`
+-	Image ID: `sha256:aa4ece43d63a94448af5443c86d09e16baaa5e65040f734ebd553b58b9e46bbb`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
@@ -6918,25 +6918,25 @@ ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:43:10 GMT
 ENV JAVA_VERSION=14.0.2
-# Wed, 05 Aug 2020 00:43:49 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:43:50 GMT
+# Tue, 01 Sep 2020 01:49:00 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:01 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 17:00:49 GMT
+# Tue, 01 Sep 2020 21:13:27 GMT
 ENV BOOT_VERSION=2.8.3
-# Wed, 05 Aug 2020 17:00:50 GMT
+# Tue, 01 Sep 2020 21:13:27 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 17:00:50 GMT
+# Tue, 01 Sep 2020 21:13:27 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 17:00:51 GMT
+# Tue, 01 Sep 2020 21:13:28 GMT
 RUN mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot
-# Wed, 05 Aug 2020 17:00:51 GMT
+# Tue, 01 Sep 2020 21:13:28 GMT
 ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 17:00:51 GMT
+# Tue, 01 Sep 2020 21:13:28 GMT
 ENV BOOT_AS_ROOT=yes
-# Wed, 05 Aug 2020 17:01:09 GMT
+# Tue, 01 Sep 2020 21:13:47 GMT
 RUN boot
-# Wed, 05 Aug 2020 17:01:09 GMT
+# Tue, 01 Sep 2020 21:13:47 GMT
 CMD ["boot" "repl"]
 ```
 
@@ -6965,23 +6965,23 @@ CMD ["boot" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:49:43 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ec2fc41c5c09d2f7bd5c657529dcf5c9b720699f68202f03a43b63afd2e2f168`  
-		Last Modified: Wed, 05 Aug 2020 00:50:00 GMT  
-		Size: 199.2 MB (199203257 bytes)  
+	-	`sha256:0b9db829721756fb5ee2bfd5e8c3833c7d6bae40cd259b4e4992f70b22c83bae`  
+		Last Modified: Tue, 01 Sep 2020 01:59:29 GMT  
+		Size: 199.2 MB (199200899 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:940302f76b9509a40a25324ddf866f6191094a9da887cabe87a7122c23260342`  
-		Last Modified: Wed, 05 Aug 2020 17:08:05 GMT  
-		Size: 6.9 KB (6895 bytes)  
+	-	`sha256:ce250811922173947a2e2491494c59ef630a0c801538d7121b15c354988d76e6`  
+		Last Modified: Tue, 01 Sep 2020 21:22:13 GMT  
+		Size: 6.9 KB (6897 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b6d90124193c4006f5012d5d1a80e14296b506ef9aa32dbadee9efb0671e0ac9`  
-		Last Modified: Wed, 05 Aug 2020 17:08:17 GMT  
-		Size: 58.8 MB (58820060 bytes)  
+	-	`sha256:9c5bb96b453e46dbe84b86d9cf9f3146e27b2645b08826b29999c2a4dc9a57d9`  
+		Last Modified: Tue, 01 Sep 2020 21:22:17 GMT  
+		Size: 58.8 MB (58820146 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-14-boot-slim-buster`
 
 ```console
-$ docker pull clojure@sha256:7b1d59747877936b2f817695e7807eaedc971d492bbbd07d87019e6f8ca67f8f
+$ docker pull clojure@sha256:aadba483fe9709690629e18cc766353aa7ddd05ca30e07adbd096ca4b76b43b2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6991,14 +6991,14 @@ $ docker pull clojure@sha256:7b1d59747877936b2f817695e7807eaedc971d492bbbd07d870
 ### `clojure:openjdk-14-boot-slim-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:b1c50ea94dc710166ad4d25ec5afe5db788bd2382ca59f507f9820e5b6fe102c
+$ docker pull clojure@sha256:a06539c6bcb51ac35bfd4e262840164e866fdc4510a3e93bd10e6b176165dc94
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **288.9 MB (288904866 bytes)**  
+-	Total Size: **288.9 MB (288905638 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4a3770878e95060cd3e09fe2c6edcde45af11638123a4164dcba1d9e50732ef2`
+-	Image ID: `sha256:b9ed622e2ebeb3a2327b302dcd1ca4ab297d87cb31408908112aeeb677bc86be`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
@@ -7018,25 +7018,25 @@ ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:43:58 GMT
 ENV JAVA_VERSION=14.0.2
-# Wed, 05 Aug 2020 00:44:12 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:12 GMT
+# Tue, 01 Sep 2020 01:49:24 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:24 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 17:00:20 GMT
+# Tue, 01 Sep 2020 21:12:57 GMT
 ENV BOOT_VERSION=2.8.3
-# Wed, 05 Aug 2020 17:00:20 GMT
+# Tue, 01 Sep 2020 21:12:58 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 17:00:21 GMT
+# Tue, 01 Sep 2020 21:12:58 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 17:00:26 GMT
+# Tue, 01 Sep 2020 21:13:03 GMT
 RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/* && mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot && apt-get purge -y --auto-remove wget
-# Wed, 05 Aug 2020 17:00:26 GMT
+# Tue, 01 Sep 2020 21:13:03 GMT
 ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 17:00:26 GMT
+# Tue, 01 Sep 2020 21:13:03 GMT
 ENV BOOT_AS_ROOT=yes
-# Wed, 05 Aug 2020 17:00:44 GMT
+# Tue, 01 Sep 2020 21:13:22 GMT
 RUN boot
-# Wed, 05 Aug 2020 17:00:44 GMT
+# Tue, 01 Sep 2020 21:13:23 GMT
 CMD ["boot" "repl"]
 ```
 
@@ -7053,23 +7053,23 @@ CMD ["boot" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:50:11 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:705d11f01792bfa5683e07ee99cb5e26d71449f279d9ad424a6d2f5558997ee1`  
-		Last Modified: Wed, 05 Aug 2020 00:50:45 GMT  
-		Size: 199.5 MB (199464729 bytes)  
+	-	`sha256:1bb778f76db35302bb48fef9517abc09b6ff8ad7f6985f482b2ccbfa48c6e800`  
+		Last Modified: Tue, 01 Sep 2020 02:00:01 GMT  
+		Size: 199.5 MB (199465062 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:33c5f1c539ccb593a580bae07debb2a8af1dae348097e125fd584d3181e7cc23`  
-		Last Modified: Wed, 05 Aug 2020 17:07:53 GMT  
-		Size: 279.6 KB (279555 bytes)  
+	-	`sha256:c529544a34b984368489c6223065463f8af2e9d84d6f6000cfcac2f7882c70b3`  
+		Last Modified: Tue, 01 Sep 2020 21:22:05 GMT  
+		Size: 279.6 KB (279567 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:62af0ceb76512beafb01a0d6953c1fdc42dcb7a9573eeaf87976a6c669b6ae26`  
-		Last Modified: Wed, 05 Aug 2020 17:07:58 GMT  
-		Size: 58.8 MB (58819819 bytes)  
+	-	`sha256:346e2d31d1879364e6525d7f5afeaeca470b21db3fe8b34c6264d722a120eac4`  
+		Last Modified: Tue, 01 Sep 2020 21:22:08 GMT  
+		Size: 58.8 MB (58820246 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-14-buster`
 
 ```console
-$ docker pull clojure@sha256:490638a37f7aa7ee9846fd4af8f4401eb6d244684906a260cbc6553727539ddf
+$ docker pull clojure@sha256:e9383ee380ab616cff55b7683ba7f2845bcb0c3712829d59ab5788a041f0e4fc
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -7079,14 +7079,14 @@ $ docker pull clojure@sha256:490638a37f7aa7ee9846fd4af8f4401eb6d244684906a260cbc
 ### `clojure:openjdk-14-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:eb266ac5f18fe04d3ff73db9c63c0c9e3c7ad6c113a5b9f02babf64b52bf0772
+$ docker pull clojure@sha256:676e678982c290c10b563b29228987a0a4d6d5e390b11557da4269dc3dc4e9f9
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **350.9 MB (350866177 bytes)**  
+-	Total Size: **350.9 MB (350863825 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:32ea0ba7d6db6e3c2a1d6bb0076bb25f23731319df0f894d0334cbe33eacfe05`
+-	Image ID: `sha256:f562680d0a3b9dc5be713e8d79e2ca92340a8f7ebd9532e414ce1858808fcea1`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -7112,25 +7112,25 @@ ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:43:10 GMT
 ENV JAVA_VERSION=14.0.2
-# Wed, 05 Aug 2020 00:43:49 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:43:50 GMT
+# Tue, 01 Sep 2020 01:49:00 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:01 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 17:00:04 GMT
+# Tue, 01 Sep 2020 21:12:40 GMT
 ENV LEIN_VERSION=2.9.3
-# Wed, 05 Aug 2020 17:00:04 GMT
+# Tue, 01 Sep 2020 21:12:41 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 17:00:04 GMT
+# Tue, 01 Sep 2020 21:12:41 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 17:00:11 GMT
+# Tue, 01 Sep 2020 21:12:47 GMT
 RUN apt-get update && apt-get install -y gnupg && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg
-# Wed, 05 Aug 2020 17:00:11 GMT
+# Tue, 01 Sep 2020 21:12:47 GMT
 ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 17:00:11 GMT
+# Tue, 01 Sep 2020 21:12:47 GMT
 ENV LEIN_ROOT=1
-# Wed, 05 Aug 2020 17:00:15 GMT
+# Tue, 01 Sep 2020 21:12:51 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Wed, 05 Aug 2020 17:00:15 GMT
+# Tue, 01 Sep 2020 21:12:51 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -7159,23 +7159,23 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:49:43 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ec2fc41c5c09d2f7bd5c657529dcf5c9b720699f68202f03a43b63afd2e2f168`  
-		Last Modified: Wed, 05 Aug 2020 00:50:00 GMT  
-		Size: 199.2 MB (199203257 bytes)  
+	-	`sha256:0b9db829721756fb5ee2bfd5e8c3833c7d6bae40cd259b4e4992f70b22c83bae`  
+		Last Modified: Tue, 01 Sep 2020 01:59:29 GMT  
+		Size: 199.2 MB (199200899 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f07540f0116611be6274143f3104a11440ce52437a94cd892176aa6ca6c69ce0`  
-		Last Modified: Wed, 05 Aug 2020 17:07:48 GMT  
-		Size: 13.5 MB (13540643 bytes)  
+	-	`sha256:adf6ffda22ab8af8a48580eda79b5aba166985c457e944798d0d95b179f875b9`  
+		Last Modified: Tue, 01 Sep 2020 21:22:00 GMT  
+		Size: 13.5 MB (13540652 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f78a6cf338fee089cfc2be72e67a4d6ac212df66719037c82823ae6d20298d97`  
-		Last Modified: Wed, 05 Aug 2020 17:07:46 GMT  
-		Size: 4.2 MB (4168181 bytes)  
+	-	`sha256:36f47bf03b04d3fa12b633746ab151242f6d65115c500b2f8b40f7da5eba8bcd`  
+		Last Modified: Tue, 01 Sep 2020 21:21:59 GMT  
+		Size: 4.2 MB (4168178 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-14-lein`
 
 ```console
-$ docker pull clojure@sha256:33ff460b5608957b4374a6e00bf1fc69d3d6058cc036240201e17fe762d12e64
+$ docker pull clojure@sha256:dc842c682c3076acb883787e26175f470e1cf6b25b219ed3a578ccc03d969834
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -7185,14 +7185,14 @@ $ docker pull clojure@sha256:33ff460b5608957b4374a6e00bf1fc69d3d6058cc036240201e
 ### `clojure:openjdk-14-lein` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:2e262bad2f1bf087c0484e63a10e061d04693214a20041625cf1ec83fbcd2466
+$ docker pull clojure@sha256:7b04f3312796e039a77dfee91cf79a25ab3942dbe5d2a7e2d953b547a464ec1b
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **247.4 MB (247436936 bytes)**  
+-	Total Size: **247.4 MB (247437326 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ebf9ac25449ff55a711bd6a0c353acb35ed9990de8a736cd535c671e6f96e581`
+-	Image ID: `sha256:058e4f36bc76abe0b4969b676a3a5b726fd7149412af83ed5c45512d5b9a4826`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -7212,25 +7212,25 @@ ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:43:58 GMT
 ENV JAVA_VERSION=14.0.2
-# Wed, 05 Aug 2020 00:44:12 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:12 GMT
+# Tue, 01 Sep 2020 01:49:24 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:24 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 16:59:45 GMT
+# Tue, 01 Sep 2020 21:12:21 GMT
 ENV LEIN_VERSION=2.9.3
-# Wed, 05 Aug 2020 16:59:45 GMT
+# Tue, 01 Sep 2020 21:12:21 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:59:45 GMT
+# Tue, 01 Sep 2020 21:12:21 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:59:54 GMT
+# Tue, 01 Sep 2020 21:12:31 GMT
 RUN apt-get update && apt-get install -y gnupg wget && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg wget
-# Wed, 05 Aug 2020 16:59:55 GMT
+# Tue, 01 Sep 2020 21:12:31 GMT
 ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 16:59:55 GMT
+# Tue, 01 Sep 2020 21:12:31 GMT
 ENV LEIN_ROOT=1
-# Wed, 05 Aug 2020 16:59:59 GMT
+# Tue, 01 Sep 2020 21:12:35 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Wed, 05 Aug 2020 16:59:59 GMT
+# Tue, 01 Sep 2020 21:12:35 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -7247,23 +7247,23 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:50:11 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:705d11f01792bfa5683e07ee99cb5e26d71449f279d9ad424a6d2f5558997ee1`  
-		Last Modified: Wed, 05 Aug 2020 00:50:45 GMT  
-		Size: 199.5 MB (199464729 bytes)  
+	-	`sha256:1bb778f76db35302bb48fef9517abc09b6ff8ad7f6985f482b2ccbfa48c6e800`  
+		Last Modified: Tue, 01 Sep 2020 02:00:01 GMT  
+		Size: 199.5 MB (199465062 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:02ad710d80270004e65ea3698c6356d21afab53ff7caaa4fbe9e4ce996046c08`  
-		Last Modified: Wed, 05 Aug 2020 17:07:38 GMT  
-		Size: 13.5 MB (13463314 bytes)  
+	-	`sha256:1f94548dacf5982ad86fac0ec24e2d2cb581e9dd223bbfe04cc3eca21b5f096f`  
+		Last Modified: Tue, 01 Sep 2020 21:21:52 GMT  
+		Size: 13.5 MB (13463340 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ba92d24d7300607968e8cc48b6801aacd5cb3ade5f66d33cb7842504a4b51a8f`  
-		Last Modified: Wed, 05 Aug 2020 17:07:38 GMT  
-		Size: 4.2 MB (4168130 bytes)  
+	-	`sha256:ebc88d75d38a90805bf13e7e571b04dbb17f74557c2afc1d8e0dd72376fb10d6`  
+		Last Modified: Tue, 01 Sep 2020 21:21:52 GMT  
+		Size: 4.2 MB (4168161 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-14-lein-2.9.3`
 
 ```console
-$ docker pull clojure@sha256:33ff460b5608957b4374a6e00bf1fc69d3d6058cc036240201e17fe762d12e64
+$ docker pull clojure@sha256:dc842c682c3076acb883787e26175f470e1cf6b25b219ed3a578ccc03d969834
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -7273,14 +7273,14 @@ $ docker pull clojure@sha256:33ff460b5608957b4374a6e00bf1fc69d3d6058cc036240201e
 ### `clojure:openjdk-14-lein-2.9.3` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:2e262bad2f1bf087c0484e63a10e061d04693214a20041625cf1ec83fbcd2466
+$ docker pull clojure@sha256:7b04f3312796e039a77dfee91cf79a25ab3942dbe5d2a7e2d953b547a464ec1b
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **247.4 MB (247436936 bytes)**  
+-	Total Size: **247.4 MB (247437326 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ebf9ac25449ff55a711bd6a0c353acb35ed9990de8a736cd535c671e6f96e581`
+-	Image ID: `sha256:058e4f36bc76abe0b4969b676a3a5b726fd7149412af83ed5c45512d5b9a4826`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -7300,25 +7300,25 @@ ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:43:58 GMT
 ENV JAVA_VERSION=14.0.2
-# Wed, 05 Aug 2020 00:44:12 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:12 GMT
+# Tue, 01 Sep 2020 01:49:24 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:24 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 16:59:45 GMT
+# Tue, 01 Sep 2020 21:12:21 GMT
 ENV LEIN_VERSION=2.9.3
-# Wed, 05 Aug 2020 16:59:45 GMT
+# Tue, 01 Sep 2020 21:12:21 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:59:45 GMT
+# Tue, 01 Sep 2020 21:12:21 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:59:54 GMT
+# Tue, 01 Sep 2020 21:12:31 GMT
 RUN apt-get update && apt-get install -y gnupg wget && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg wget
-# Wed, 05 Aug 2020 16:59:55 GMT
+# Tue, 01 Sep 2020 21:12:31 GMT
 ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 16:59:55 GMT
+# Tue, 01 Sep 2020 21:12:31 GMT
 ENV LEIN_ROOT=1
-# Wed, 05 Aug 2020 16:59:59 GMT
+# Tue, 01 Sep 2020 21:12:35 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Wed, 05 Aug 2020 16:59:59 GMT
+# Tue, 01 Sep 2020 21:12:35 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -7335,23 +7335,23 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:50:11 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:705d11f01792bfa5683e07ee99cb5e26d71449f279d9ad424a6d2f5558997ee1`  
-		Last Modified: Wed, 05 Aug 2020 00:50:45 GMT  
-		Size: 199.5 MB (199464729 bytes)  
+	-	`sha256:1bb778f76db35302bb48fef9517abc09b6ff8ad7f6985f482b2ccbfa48c6e800`  
+		Last Modified: Tue, 01 Sep 2020 02:00:01 GMT  
+		Size: 199.5 MB (199465062 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:02ad710d80270004e65ea3698c6356d21afab53ff7caaa4fbe9e4ce996046c08`  
-		Last Modified: Wed, 05 Aug 2020 17:07:38 GMT  
-		Size: 13.5 MB (13463314 bytes)  
+	-	`sha256:1f94548dacf5982ad86fac0ec24e2d2cb581e9dd223bbfe04cc3eca21b5f096f`  
+		Last Modified: Tue, 01 Sep 2020 21:21:52 GMT  
+		Size: 13.5 MB (13463340 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ba92d24d7300607968e8cc48b6801aacd5cb3ade5f66d33cb7842504a4b51a8f`  
-		Last Modified: Wed, 05 Aug 2020 17:07:38 GMT  
-		Size: 4.2 MB (4168130 bytes)  
+	-	`sha256:ebc88d75d38a90805bf13e7e571b04dbb17f74557c2afc1d8e0dd72376fb10d6`  
+		Last Modified: Tue, 01 Sep 2020 21:21:52 GMT  
+		Size: 4.2 MB (4168161 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-14-lein-2.9.3-buster`
 
 ```console
-$ docker pull clojure@sha256:490638a37f7aa7ee9846fd4af8f4401eb6d244684906a260cbc6553727539ddf
+$ docker pull clojure@sha256:e9383ee380ab616cff55b7683ba7f2845bcb0c3712829d59ab5788a041f0e4fc
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -7361,14 +7361,14 @@ $ docker pull clojure@sha256:490638a37f7aa7ee9846fd4af8f4401eb6d244684906a260cbc
 ### `clojure:openjdk-14-lein-2.9.3-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:eb266ac5f18fe04d3ff73db9c63c0c9e3c7ad6c113a5b9f02babf64b52bf0772
+$ docker pull clojure@sha256:676e678982c290c10b563b29228987a0a4d6d5e390b11557da4269dc3dc4e9f9
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **350.9 MB (350866177 bytes)**  
+-	Total Size: **350.9 MB (350863825 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:32ea0ba7d6db6e3c2a1d6bb0076bb25f23731319df0f894d0334cbe33eacfe05`
+-	Image ID: `sha256:f562680d0a3b9dc5be713e8d79e2ca92340a8f7ebd9532e414ce1858808fcea1`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -7394,25 +7394,25 @@ ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:43:10 GMT
 ENV JAVA_VERSION=14.0.2
-# Wed, 05 Aug 2020 00:43:49 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:43:50 GMT
+# Tue, 01 Sep 2020 01:49:00 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:01 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 17:00:04 GMT
+# Tue, 01 Sep 2020 21:12:40 GMT
 ENV LEIN_VERSION=2.9.3
-# Wed, 05 Aug 2020 17:00:04 GMT
+# Tue, 01 Sep 2020 21:12:41 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 17:00:04 GMT
+# Tue, 01 Sep 2020 21:12:41 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 17:00:11 GMT
+# Tue, 01 Sep 2020 21:12:47 GMT
 RUN apt-get update && apt-get install -y gnupg && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg
-# Wed, 05 Aug 2020 17:00:11 GMT
+# Tue, 01 Sep 2020 21:12:47 GMT
 ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 17:00:11 GMT
+# Tue, 01 Sep 2020 21:12:47 GMT
 ENV LEIN_ROOT=1
-# Wed, 05 Aug 2020 17:00:15 GMT
+# Tue, 01 Sep 2020 21:12:51 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Wed, 05 Aug 2020 17:00:15 GMT
+# Tue, 01 Sep 2020 21:12:51 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -7441,23 +7441,23 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:49:43 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ec2fc41c5c09d2f7bd5c657529dcf5c9b720699f68202f03a43b63afd2e2f168`  
-		Last Modified: Wed, 05 Aug 2020 00:50:00 GMT  
-		Size: 199.2 MB (199203257 bytes)  
+	-	`sha256:0b9db829721756fb5ee2bfd5e8c3833c7d6bae40cd259b4e4992f70b22c83bae`  
+		Last Modified: Tue, 01 Sep 2020 01:59:29 GMT  
+		Size: 199.2 MB (199200899 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f07540f0116611be6274143f3104a11440ce52437a94cd892176aa6ca6c69ce0`  
-		Last Modified: Wed, 05 Aug 2020 17:07:48 GMT  
-		Size: 13.5 MB (13540643 bytes)  
+	-	`sha256:adf6ffda22ab8af8a48580eda79b5aba166985c457e944798d0d95b179f875b9`  
+		Last Modified: Tue, 01 Sep 2020 21:22:00 GMT  
+		Size: 13.5 MB (13540652 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f78a6cf338fee089cfc2be72e67a4d6ac212df66719037c82823ae6d20298d97`  
-		Last Modified: Wed, 05 Aug 2020 17:07:46 GMT  
-		Size: 4.2 MB (4168181 bytes)  
+	-	`sha256:36f47bf03b04d3fa12b633746ab151242f6d65115c500b2f8b40f7da5eba8bcd`  
+		Last Modified: Tue, 01 Sep 2020 21:21:59 GMT  
+		Size: 4.2 MB (4168178 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-14-lein-2.9.3-slim-buster`
 
 ```console
-$ docker pull clojure@sha256:33ff460b5608957b4374a6e00bf1fc69d3d6058cc036240201e17fe762d12e64
+$ docker pull clojure@sha256:dc842c682c3076acb883787e26175f470e1cf6b25b219ed3a578ccc03d969834
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -7467,14 +7467,14 @@ $ docker pull clojure@sha256:33ff460b5608957b4374a6e00bf1fc69d3d6058cc036240201e
 ### `clojure:openjdk-14-lein-2.9.3-slim-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:2e262bad2f1bf087c0484e63a10e061d04693214a20041625cf1ec83fbcd2466
+$ docker pull clojure@sha256:7b04f3312796e039a77dfee91cf79a25ab3942dbe5d2a7e2d953b547a464ec1b
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **247.4 MB (247436936 bytes)**  
+-	Total Size: **247.4 MB (247437326 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ebf9ac25449ff55a711bd6a0c353acb35ed9990de8a736cd535c671e6f96e581`
+-	Image ID: `sha256:058e4f36bc76abe0b4969b676a3a5b726fd7149412af83ed5c45512d5b9a4826`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -7494,25 +7494,25 @@ ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:43:58 GMT
 ENV JAVA_VERSION=14.0.2
-# Wed, 05 Aug 2020 00:44:12 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:12 GMT
+# Tue, 01 Sep 2020 01:49:24 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:24 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 16:59:45 GMT
+# Tue, 01 Sep 2020 21:12:21 GMT
 ENV LEIN_VERSION=2.9.3
-# Wed, 05 Aug 2020 16:59:45 GMT
+# Tue, 01 Sep 2020 21:12:21 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:59:45 GMT
+# Tue, 01 Sep 2020 21:12:21 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:59:54 GMT
+# Tue, 01 Sep 2020 21:12:31 GMT
 RUN apt-get update && apt-get install -y gnupg wget && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg wget
-# Wed, 05 Aug 2020 16:59:55 GMT
+# Tue, 01 Sep 2020 21:12:31 GMT
 ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 16:59:55 GMT
+# Tue, 01 Sep 2020 21:12:31 GMT
 ENV LEIN_ROOT=1
-# Wed, 05 Aug 2020 16:59:59 GMT
+# Tue, 01 Sep 2020 21:12:35 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Wed, 05 Aug 2020 16:59:59 GMT
+# Tue, 01 Sep 2020 21:12:35 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -7529,23 +7529,23 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:50:11 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:705d11f01792bfa5683e07ee99cb5e26d71449f279d9ad424a6d2f5558997ee1`  
-		Last Modified: Wed, 05 Aug 2020 00:50:45 GMT  
-		Size: 199.5 MB (199464729 bytes)  
+	-	`sha256:1bb778f76db35302bb48fef9517abc09b6ff8ad7f6985f482b2ccbfa48c6e800`  
+		Last Modified: Tue, 01 Sep 2020 02:00:01 GMT  
+		Size: 199.5 MB (199465062 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:02ad710d80270004e65ea3698c6356d21afab53ff7caaa4fbe9e4ce996046c08`  
-		Last Modified: Wed, 05 Aug 2020 17:07:38 GMT  
-		Size: 13.5 MB (13463314 bytes)  
+	-	`sha256:1f94548dacf5982ad86fac0ec24e2d2cb581e9dd223bbfe04cc3eca21b5f096f`  
+		Last Modified: Tue, 01 Sep 2020 21:21:52 GMT  
+		Size: 13.5 MB (13463340 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ba92d24d7300607968e8cc48b6801aacd5cb3ade5f66d33cb7842504a4b51a8f`  
-		Last Modified: Wed, 05 Aug 2020 17:07:38 GMT  
-		Size: 4.2 MB (4168130 bytes)  
+	-	`sha256:ebc88d75d38a90805bf13e7e571b04dbb17f74557c2afc1d8e0dd72376fb10d6`  
+		Last Modified: Tue, 01 Sep 2020 21:21:52 GMT  
+		Size: 4.2 MB (4168161 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-14-lein-buster`
 
 ```console
-$ docker pull clojure@sha256:490638a37f7aa7ee9846fd4af8f4401eb6d244684906a260cbc6553727539ddf
+$ docker pull clojure@sha256:e9383ee380ab616cff55b7683ba7f2845bcb0c3712829d59ab5788a041f0e4fc
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -7555,14 +7555,14 @@ $ docker pull clojure@sha256:490638a37f7aa7ee9846fd4af8f4401eb6d244684906a260cbc
 ### `clojure:openjdk-14-lein-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:eb266ac5f18fe04d3ff73db9c63c0c9e3c7ad6c113a5b9f02babf64b52bf0772
+$ docker pull clojure@sha256:676e678982c290c10b563b29228987a0a4d6d5e390b11557da4269dc3dc4e9f9
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **350.9 MB (350866177 bytes)**  
+-	Total Size: **350.9 MB (350863825 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:32ea0ba7d6db6e3c2a1d6bb0076bb25f23731319df0f894d0334cbe33eacfe05`
+-	Image ID: `sha256:f562680d0a3b9dc5be713e8d79e2ca92340a8f7ebd9532e414ce1858808fcea1`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -7588,25 +7588,25 @@ ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:43:10 GMT
 ENV JAVA_VERSION=14.0.2
-# Wed, 05 Aug 2020 00:43:49 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:43:50 GMT
+# Tue, 01 Sep 2020 01:49:00 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:01 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 17:00:04 GMT
+# Tue, 01 Sep 2020 21:12:40 GMT
 ENV LEIN_VERSION=2.9.3
-# Wed, 05 Aug 2020 17:00:04 GMT
+# Tue, 01 Sep 2020 21:12:41 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 17:00:04 GMT
+# Tue, 01 Sep 2020 21:12:41 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 17:00:11 GMT
+# Tue, 01 Sep 2020 21:12:47 GMT
 RUN apt-get update && apt-get install -y gnupg && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg
-# Wed, 05 Aug 2020 17:00:11 GMT
+# Tue, 01 Sep 2020 21:12:47 GMT
 ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 17:00:11 GMT
+# Tue, 01 Sep 2020 21:12:47 GMT
 ENV LEIN_ROOT=1
-# Wed, 05 Aug 2020 17:00:15 GMT
+# Tue, 01 Sep 2020 21:12:51 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Wed, 05 Aug 2020 17:00:15 GMT
+# Tue, 01 Sep 2020 21:12:51 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -7635,23 +7635,23 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:49:43 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ec2fc41c5c09d2f7bd5c657529dcf5c9b720699f68202f03a43b63afd2e2f168`  
-		Last Modified: Wed, 05 Aug 2020 00:50:00 GMT  
-		Size: 199.2 MB (199203257 bytes)  
+	-	`sha256:0b9db829721756fb5ee2bfd5e8c3833c7d6bae40cd259b4e4992f70b22c83bae`  
+		Last Modified: Tue, 01 Sep 2020 01:59:29 GMT  
+		Size: 199.2 MB (199200899 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f07540f0116611be6274143f3104a11440ce52437a94cd892176aa6ca6c69ce0`  
-		Last Modified: Wed, 05 Aug 2020 17:07:48 GMT  
-		Size: 13.5 MB (13540643 bytes)  
+	-	`sha256:adf6ffda22ab8af8a48580eda79b5aba166985c457e944798d0d95b179f875b9`  
+		Last Modified: Tue, 01 Sep 2020 21:22:00 GMT  
+		Size: 13.5 MB (13540652 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f78a6cf338fee089cfc2be72e67a4d6ac212df66719037c82823ae6d20298d97`  
-		Last Modified: Wed, 05 Aug 2020 17:07:46 GMT  
-		Size: 4.2 MB (4168181 bytes)  
+	-	`sha256:36f47bf03b04d3fa12b633746ab151242f6d65115c500b2f8b40f7da5eba8bcd`  
+		Last Modified: Tue, 01 Sep 2020 21:21:59 GMT  
+		Size: 4.2 MB (4168178 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-14-lein-slim-buster`
 
 ```console
-$ docker pull clojure@sha256:33ff460b5608957b4374a6e00bf1fc69d3d6058cc036240201e17fe762d12e64
+$ docker pull clojure@sha256:dc842c682c3076acb883787e26175f470e1cf6b25b219ed3a578ccc03d969834
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -7661,14 +7661,14 @@ $ docker pull clojure@sha256:33ff460b5608957b4374a6e00bf1fc69d3d6058cc036240201e
 ### `clojure:openjdk-14-lein-slim-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:2e262bad2f1bf087c0484e63a10e061d04693214a20041625cf1ec83fbcd2466
+$ docker pull clojure@sha256:7b04f3312796e039a77dfee91cf79a25ab3942dbe5d2a7e2d953b547a464ec1b
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **247.4 MB (247436936 bytes)**  
+-	Total Size: **247.4 MB (247437326 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ebf9ac25449ff55a711bd6a0c353acb35ed9990de8a736cd535c671e6f96e581`
+-	Image ID: `sha256:058e4f36bc76abe0b4969b676a3a5b726fd7149412af83ed5c45512d5b9a4826`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -7688,25 +7688,25 @@ ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:43:58 GMT
 ENV JAVA_VERSION=14.0.2
-# Wed, 05 Aug 2020 00:44:12 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:12 GMT
+# Tue, 01 Sep 2020 01:49:24 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:24 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 16:59:45 GMT
+# Tue, 01 Sep 2020 21:12:21 GMT
 ENV LEIN_VERSION=2.9.3
-# Wed, 05 Aug 2020 16:59:45 GMT
+# Tue, 01 Sep 2020 21:12:21 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:59:45 GMT
+# Tue, 01 Sep 2020 21:12:21 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:59:54 GMT
+# Tue, 01 Sep 2020 21:12:31 GMT
 RUN apt-get update && apt-get install -y gnupg wget && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg wget
-# Wed, 05 Aug 2020 16:59:55 GMT
+# Tue, 01 Sep 2020 21:12:31 GMT
 ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 16:59:55 GMT
+# Tue, 01 Sep 2020 21:12:31 GMT
 ENV LEIN_ROOT=1
-# Wed, 05 Aug 2020 16:59:59 GMT
+# Tue, 01 Sep 2020 21:12:35 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Wed, 05 Aug 2020 16:59:59 GMT
+# Tue, 01 Sep 2020 21:12:35 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -7723,23 +7723,23 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:50:11 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:705d11f01792bfa5683e07ee99cb5e26d71449f279d9ad424a6d2f5558997ee1`  
-		Last Modified: Wed, 05 Aug 2020 00:50:45 GMT  
-		Size: 199.5 MB (199464729 bytes)  
+	-	`sha256:1bb778f76db35302bb48fef9517abc09b6ff8ad7f6985f482b2ccbfa48c6e800`  
+		Last Modified: Tue, 01 Sep 2020 02:00:01 GMT  
+		Size: 199.5 MB (199465062 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:02ad710d80270004e65ea3698c6356d21afab53ff7caaa4fbe9e4ce996046c08`  
-		Last Modified: Wed, 05 Aug 2020 17:07:38 GMT  
-		Size: 13.5 MB (13463314 bytes)  
+	-	`sha256:1f94548dacf5982ad86fac0ec24e2d2cb581e9dd223bbfe04cc3eca21b5f096f`  
+		Last Modified: Tue, 01 Sep 2020 21:21:52 GMT  
+		Size: 13.5 MB (13463340 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ba92d24d7300607968e8cc48b6801aacd5cb3ade5f66d33cb7842504a4b51a8f`  
-		Last Modified: Wed, 05 Aug 2020 17:07:38 GMT  
-		Size: 4.2 MB (4168130 bytes)  
+	-	`sha256:ebc88d75d38a90805bf13e7e571b04dbb17f74557c2afc1d8e0dd72376fb10d6`  
+		Last Modified: Tue, 01 Sep 2020 21:21:52 GMT  
+		Size: 4.2 MB (4168161 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-14-slim-buster`
 
 ```console
-$ docker pull clojure@sha256:33ff460b5608957b4374a6e00bf1fc69d3d6058cc036240201e17fe762d12e64
+$ docker pull clojure@sha256:dc842c682c3076acb883787e26175f470e1cf6b25b219ed3a578ccc03d969834
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -7749,14 +7749,14 @@ $ docker pull clojure@sha256:33ff460b5608957b4374a6e00bf1fc69d3d6058cc036240201e
 ### `clojure:openjdk-14-slim-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:2e262bad2f1bf087c0484e63a10e061d04693214a20041625cf1ec83fbcd2466
+$ docker pull clojure@sha256:7b04f3312796e039a77dfee91cf79a25ab3942dbe5d2a7e2d953b547a464ec1b
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **247.4 MB (247436936 bytes)**  
+-	Total Size: **247.4 MB (247437326 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ebf9ac25449ff55a711bd6a0c353acb35ed9990de8a736cd535c671e6f96e581`
+-	Image ID: `sha256:058e4f36bc76abe0b4969b676a3a5b726fd7149412af83ed5c45512d5b9a4826`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -7776,25 +7776,25 @@ ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:43:58 GMT
 ENV JAVA_VERSION=14.0.2
-# Wed, 05 Aug 2020 00:44:12 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:12 GMT
+# Tue, 01 Sep 2020 01:49:24 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:24 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 16:59:45 GMT
+# Tue, 01 Sep 2020 21:12:21 GMT
 ENV LEIN_VERSION=2.9.3
-# Wed, 05 Aug 2020 16:59:45 GMT
+# Tue, 01 Sep 2020 21:12:21 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:59:45 GMT
+# Tue, 01 Sep 2020 21:12:21 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:59:54 GMT
+# Tue, 01 Sep 2020 21:12:31 GMT
 RUN apt-get update && apt-get install -y gnupg wget && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg wget
-# Wed, 05 Aug 2020 16:59:55 GMT
+# Tue, 01 Sep 2020 21:12:31 GMT
 ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 16:59:55 GMT
+# Tue, 01 Sep 2020 21:12:31 GMT
 ENV LEIN_ROOT=1
-# Wed, 05 Aug 2020 16:59:59 GMT
+# Tue, 01 Sep 2020 21:12:35 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Wed, 05 Aug 2020 16:59:59 GMT
+# Tue, 01 Sep 2020 21:12:35 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -7811,23 +7811,23 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:50:11 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:705d11f01792bfa5683e07ee99cb5e26d71449f279d9ad424a6d2f5558997ee1`  
-		Last Modified: Wed, 05 Aug 2020 00:50:45 GMT  
-		Size: 199.5 MB (199464729 bytes)  
+	-	`sha256:1bb778f76db35302bb48fef9517abc09b6ff8ad7f6985f482b2ccbfa48c6e800`  
+		Last Modified: Tue, 01 Sep 2020 02:00:01 GMT  
+		Size: 199.5 MB (199465062 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:02ad710d80270004e65ea3698c6356d21afab53ff7caaa4fbe9e4ce996046c08`  
-		Last Modified: Wed, 05 Aug 2020 17:07:38 GMT  
-		Size: 13.5 MB (13463314 bytes)  
+	-	`sha256:1f94548dacf5982ad86fac0ec24e2d2cb581e9dd223bbfe04cc3eca21b5f096f`  
+		Last Modified: Tue, 01 Sep 2020 21:21:52 GMT  
+		Size: 13.5 MB (13463340 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ba92d24d7300607968e8cc48b6801aacd5cb3ade5f66d33cb7842504a4b51a8f`  
-		Last Modified: Wed, 05 Aug 2020 17:07:38 GMT  
-		Size: 4.2 MB (4168130 bytes)  
+	-	`sha256:ebc88d75d38a90805bf13e7e571b04dbb17f74557c2afc1d8e0dd72376fb10d6`  
+		Last Modified: Tue, 01 Sep 2020 21:21:52 GMT  
+		Size: 4.2 MB (4168161 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-14-tools-deps`
 
 ```console
-$ docker pull clojure@sha256:807987d5b73f8f8b95be947baa34e5a859659db2a389c3a1a174394116a49e43
+$ docker pull clojure@sha256:238a48ba3e258dff6d7696cc57dc2cc2415a8e43ae0f17bd98ab356e03151a04
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -7837,14 +7837,14 @@ $ docker pull clojure@sha256:807987d5b73f8f8b95be947baa34e5a859659db2a389c3a1a17
 ### `clojure:openjdk-14-tools-deps` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:4bda32b34c4c4b9b1d5a3393fb3b7896d0e707c0f50b2171db5c023ff9523918
+$ docker pull clojure@sha256:619551e39acf0665daf76be07ceebfd2353e6d78fda7db1bad36cd5cb8560019
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **272.3 MB (272312071 bytes)**  
+-	Total Size: **272.3 MB (272312682 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7f61edf9dea60398deb752ce3323453d72bb3c0a6e3f5482c939ff63f4a2d224`
+-	Image ID: `sha256:cc7a1511e16333833a36b87898418718140c78ee5a63053b54f1df2248777a94`
 -	Default Command: `["sh","-c","sleep 1 && exec clj"]`
 
 ```dockerfile
@@ -7864,17 +7864,17 @@ ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:43:58 GMT
 ENV JAVA_VERSION=14.0.2
-# Wed, 05 Aug 2020 00:44:12 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:12 GMT
+# Tue, 01 Sep 2020 01:49:24 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:24 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 01:22:22 GMT
+# Tue, 01 Sep 2020 21:13:52 GMT
 ENV CLOJURE_VERSION=1.10.1.561
-# Fri, 14 Aug 2020 01:22:22 GMT
+# Tue, 01 Sep 2020 21:13:52 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 01:22:42 GMT
+# Tue, 01 Sep 2020 21:14:12 GMT
 RUN apt-get update && apt-get install -y curl make rlwrap wget && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "7f9e4e7c5a8171db4e4edf5ce78e5b8f453bae641a4c6b7f3dda36c3128d2ff7 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apt-get purge -y --auto-remove curl wget
-# Fri, 14 Aug 2020 01:22:42 GMT
+# Tue, 01 Sep 2020 21:14:12 GMT
 CMD ["sh" "-c" "sleep 1 && exec clj"]
 ```
 
@@ -7891,19 +7891,19 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 		Last Modified: Wed, 05 Aug 2020 00:50:11 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:705d11f01792bfa5683e07ee99cb5e26d71449f279d9ad424a6d2f5558997ee1`  
-		Last Modified: Wed, 05 Aug 2020 00:50:45 GMT  
-		Size: 199.5 MB (199464729 bytes)  
+	-	`sha256:1bb778f76db35302bb48fef9517abc09b6ff8ad7f6985f482b2ccbfa48c6e800`  
+		Last Modified: Tue, 01 Sep 2020 02:00:01 GMT  
+		Size: 199.5 MB (199465062 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:82a90cd43bb9d7f8d7148b7f64fddf3689de2b17cff0eb7d43eacd45f5fa2c3b`  
-		Last Modified: Fri, 14 Aug 2020 01:26:02 GMT  
-		Size: 42.5 MB (42506579 bytes)  
+	-	`sha256:8d3f6e20b81f8592023734a7eb2e2d4c0f08e7ae39ac6c14e2cbf5c8a00cde3e`  
+		Last Modified: Tue, 01 Sep 2020 21:22:27 GMT  
+		Size: 42.5 MB (42506857 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-14-tools-deps-1.10.1.561`
 
 ```console
-$ docker pull clojure@sha256:807987d5b73f8f8b95be947baa34e5a859659db2a389c3a1a174394116a49e43
+$ docker pull clojure@sha256:238a48ba3e258dff6d7696cc57dc2cc2415a8e43ae0f17bd98ab356e03151a04
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -7913,14 +7913,14 @@ $ docker pull clojure@sha256:807987d5b73f8f8b95be947baa34e5a859659db2a389c3a1a17
 ### `clojure:openjdk-14-tools-deps-1.10.1.561` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:4bda32b34c4c4b9b1d5a3393fb3b7896d0e707c0f50b2171db5c023ff9523918
+$ docker pull clojure@sha256:619551e39acf0665daf76be07ceebfd2353e6d78fda7db1bad36cd5cb8560019
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **272.3 MB (272312071 bytes)**  
+-	Total Size: **272.3 MB (272312682 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7f61edf9dea60398deb752ce3323453d72bb3c0a6e3f5482c939ff63f4a2d224`
+-	Image ID: `sha256:cc7a1511e16333833a36b87898418718140c78ee5a63053b54f1df2248777a94`
 -	Default Command: `["sh","-c","sleep 1 && exec clj"]`
 
 ```dockerfile
@@ -7940,17 +7940,17 @@ ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:43:58 GMT
 ENV JAVA_VERSION=14.0.2
-# Wed, 05 Aug 2020 00:44:12 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:12 GMT
+# Tue, 01 Sep 2020 01:49:24 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:24 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 01:22:22 GMT
+# Tue, 01 Sep 2020 21:13:52 GMT
 ENV CLOJURE_VERSION=1.10.1.561
-# Fri, 14 Aug 2020 01:22:22 GMT
+# Tue, 01 Sep 2020 21:13:52 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 01:22:42 GMT
+# Tue, 01 Sep 2020 21:14:12 GMT
 RUN apt-get update && apt-get install -y curl make rlwrap wget && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "7f9e4e7c5a8171db4e4edf5ce78e5b8f453bae641a4c6b7f3dda36c3128d2ff7 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apt-get purge -y --auto-remove curl wget
-# Fri, 14 Aug 2020 01:22:42 GMT
+# Tue, 01 Sep 2020 21:14:12 GMT
 CMD ["sh" "-c" "sleep 1 && exec clj"]
 ```
 
@@ -7967,19 +7967,19 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 		Last Modified: Wed, 05 Aug 2020 00:50:11 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:705d11f01792bfa5683e07ee99cb5e26d71449f279d9ad424a6d2f5558997ee1`  
-		Last Modified: Wed, 05 Aug 2020 00:50:45 GMT  
-		Size: 199.5 MB (199464729 bytes)  
+	-	`sha256:1bb778f76db35302bb48fef9517abc09b6ff8ad7f6985f482b2ccbfa48c6e800`  
+		Last Modified: Tue, 01 Sep 2020 02:00:01 GMT  
+		Size: 199.5 MB (199465062 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:82a90cd43bb9d7f8d7148b7f64fddf3689de2b17cff0eb7d43eacd45f5fa2c3b`  
-		Last Modified: Fri, 14 Aug 2020 01:26:02 GMT  
-		Size: 42.5 MB (42506579 bytes)  
+	-	`sha256:8d3f6e20b81f8592023734a7eb2e2d4c0f08e7ae39ac6c14e2cbf5c8a00cde3e`  
+		Last Modified: Tue, 01 Sep 2020 21:22:27 GMT  
+		Size: 42.5 MB (42506857 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-14-tools-deps-1.10.1.561-buster`
 
 ```console
-$ docker pull clojure@sha256:66b3fb2742db8f8a25a1f20dc67ed01052c85cb2e7010a9c57f2f21ea79e7932
+$ docker pull clojure@sha256:6c1b061f9a11c21297c1f79f77b39c439e49b6e3ba28ef3f4e0bec99cd43bbcd
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -7989,14 +7989,14 @@ $ docker pull clojure@sha256:66b3fb2742db8f8a25a1f20dc67ed01052c85cb2e7010a9c57f
 ### `clojure:openjdk-14-tools-deps-1.10.1.561-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:b1d9fa36f3a3a94f18fc02dd0f3e5a00f1ef2d75363211064a39df3a03595acb
+$ docker pull clojure@sha256:8391b96e7fb8ef42e03c77286cb7410d35463509f073cf3d7925aa533aa8add2
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **364.3 MB (364324254 bytes)**  
+-	Total Size: **364.3 MB (364321895 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5a4037a2b254df502434515cb75ee05d49ded20613aff994d0170bc2575ea011`
+-	Image ID: `sha256:44ec492249df04b56798a5d148173278b09ae578efb6770c0bf5b6164d3354c0`
 -	Default Command: `["sh","-c","sleep 1 && exec clj"]`
 
 ```dockerfile
@@ -8022,17 +8022,17 @@ ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:43:10 GMT
 ENV JAVA_VERSION=14.0.2
-# Wed, 05 Aug 2020 00:43:49 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:43:50 GMT
+# Tue, 01 Sep 2020 01:49:00 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:01 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 01:22:47 GMT
+# Tue, 01 Sep 2020 21:14:17 GMT
 ENV CLOJURE_VERSION=1.10.1.561
-# Fri, 14 Aug 2020 01:22:48 GMT
+# Tue, 01 Sep 2020 21:14:17 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 01:23:02 GMT
+# Tue, 01 Sep 2020 21:14:32 GMT
 RUN apt-get update && apt-get install -y make rlwrap && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "7f9e4e7c5a8171db4e4edf5ce78e5b8f453bae641a4c6b7f3dda36c3128d2ff7 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)"
-# Fri, 14 Aug 2020 01:23:02 GMT
+# Tue, 01 Sep 2020 21:14:32 GMT
 CMD ["sh" "-c" "sleep 1 && exec clj"]
 ```
 
@@ -8061,19 +8061,19 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 		Last Modified: Wed, 05 Aug 2020 00:49:43 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ec2fc41c5c09d2f7bd5c657529dcf5c9b720699f68202f03a43b63afd2e2f168`  
-		Last Modified: Wed, 05 Aug 2020 00:50:00 GMT  
-		Size: 199.2 MB (199203257 bytes)  
+	-	`sha256:0b9db829721756fb5ee2bfd5e8c3833c7d6bae40cd259b4e4992f70b22c83bae`  
+		Last Modified: Tue, 01 Sep 2020 01:59:29 GMT  
+		Size: 199.2 MB (199200899 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ee61ec79ac33358fb65eb5d7d7f505be491e24cebd6b50e440b04603ddcaf325`  
-		Last Modified: Fri, 14 Aug 2020 01:26:10 GMT  
-		Size: 31.2 MB (31166901 bytes)  
+	-	`sha256:d9309f1e528f08744684f9746500903d409cdf8d901aa88329c6b2009c18d0d9`  
+		Last Modified: Tue, 01 Sep 2020 21:22:36 GMT  
+		Size: 31.2 MB (31166900 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-14-tools-deps-1.10.1.561-slim-buster`
 
 ```console
-$ docker pull clojure@sha256:807987d5b73f8f8b95be947baa34e5a859659db2a389c3a1a174394116a49e43
+$ docker pull clojure@sha256:238a48ba3e258dff6d7696cc57dc2cc2415a8e43ae0f17bd98ab356e03151a04
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -8083,14 +8083,14 @@ $ docker pull clojure@sha256:807987d5b73f8f8b95be947baa34e5a859659db2a389c3a1a17
 ### `clojure:openjdk-14-tools-deps-1.10.1.561-slim-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:4bda32b34c4c4b9b1d5a3393fb3b7896d0e707c0f50b2171db5c023ff9523918
+$ docker pull clojure@sha256:619551e39acf0665daf76be07ceebfd2353e6d78fda7db1bad36cd5cb8560019
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **272.3 MB (272312071 bytes)**  
+-	Total Size: **272.3 MB (272312682 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7f61edf9dea60398deb752ce3323453d72bb3c0a6e3f5482c939ff63f4a2d224`
+-	Image ID: `sha256:cc7a1511e16333833a36b87898418718140c78ee5a63053b54f1df2248777a94`
 -	Default Command: `["sh","-c","sleep 1 && exec clj"]`
 
 ```dockerfile
@@ -8110,17 +8110,17 @@ ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:43:58 GMT
 ENV JAVA_VERSION=14.0.2
-# Wed, 05 Aug 2020 00:44:12 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:12 GMT
+# Tue, 01 Sep 2020 01:49:24 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:24 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 01:22:22 GMT
+# Tue, 01 Sep 2020 21:13:52 GMT
 ENV CLOJURE_VERSION=1.10.1.561
-# Fri, 14 Aug 2020 01:22:22 GMT
+# Tue, 01 Sep 2020 21:13:52 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 01:22:42 GMT
+# Tue, 01 Sep 2020 21:14:12 GMT
 RUN apt-get update && apt-get install -y curl make rlwrap wget && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "7f9e4e7c5a8171db4e4edf5ce78e5b8f453bae641a4c6b7f3dda36c3128d2ff7 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apt-get purge -y --auto-remove curl wget
-# Fri, 14 Aug 2020 01:22:42 GMT
+# Tue, 01 Sep 2020 21:14:12 GMT
 CMD ["sh" "-c" "sleep 1 && exec clj"]
 ```
 
@@ -8137,19 +8137,19 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 		Last Modified: Wed, 05 Aug 2020 00:50:11 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:705d11f01792bfa5683e07ee99cb5e26d71449f279d9ad424a6d2f5558997ee1`  
-		Last Modified: Wed, 05 Aug 2020 00:50:45 GMT  
-		Size: 199.5 MB (199464729 bytes)  
+	-	`sha256:1bb778f76db35302bb48fef9517abc09b6ff8ad7f6985f482b2ccbfa48c6e800`  
+		Last Modified: Tue, 01 Sep 2020 02:00:01 GMT  
+		Size: 199.5 MB (199465062 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:82a90cd43bb9d7f8d7148b7f64fddf3689de2b17cff0eb7d43eacd45f5fa2c3b`  
-		Last Modified: Fri, 14 Aug 2020 01:26:02 GMT  
-		Size: 42.5 MB (42506579 bytes)  
+	-	`sha256:8d3f6e20b81f8592023734a7eb2e2d4c0f08e7ae39ac6c14e2cbf5c8a00cde3e`  
+		Last Modified: Tue, 01 Sep 2020 21:22:27 GMT  
+		Size: 42.5 MB (42506857 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-14-tools-deps-buster`
 
 ```console
-$ docker pull clojure@sha256:66b3fb2742db8f8a25a1f20dc67ed01052c85cb2e7010a9c57f2f21ea79e7932
+$ docker pull clojure@sha256:6c1b061f9a11c21297c1f79f77b39c439e49b6e3ba28ef3f4e0bec99cd43bbcd
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -8159,14 +8159,14 @@ $ docker pull clojure@sha256:66b3fb2742db8f8a25a1f20dc67ed01052c85cb2e7010a9c57f
 ### `clojure:openjdk-14-tools-deps-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:b1d9fa36f3a3a94f18fc02dd0f3e5a00f1ef2d75363211064a39df3a03595acb
+$ docker pull clojure@sha256:8391b96e7fb8ef42e03c77286cb7410d35463509f073cf3d7925aa533aa8add2
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **364.3 MB (364324254 bytes)**  
+-	Total Size: **364.3 MB (364321895 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5a4037a2b254df502434515cb75ee05d49ded20613aff994d0170bc2575ea011`
+-	Image ID: `sha256:44ec492249df04b56798a5d148173278b09ae578efb6770c0bf5b6164d3354c0`
 -	Default Command: `["sh","-c","sleep 1 && exec clj"]`
 
 ```dockerfile
@@ -8192,17 +8192,17 @@ ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:43:10 GMT
 ENV JAVA_VERSION=14.0.2
-# Wed, 05 Aug 2020 00:43:49 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:43:50 GMT
+# Tue, 01 Sep 2020 01:49:00 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:01 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 01:22:47 GMT
+# Tue, 01 Sep 2020 21:14:17 GMT
 ENV CLOJURE_VERSION=1.10.1.561
-# Fri, 14 Aug 2020 01:22:48 GMT
+# Tue, 01 Sep 2020 21:14:17 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 01:23:02 GMT
+# Tue, 01 Sep 2020 21:14:32 GMT
 RUN apt-get update && apt-get install -y make rlwrap && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "7f9e4e7c5a8171db4e4edf5ce78e5b8f453bae641a4c6b7f3dda36c3128d2ff7 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)"
-# Fri, 14 Aug 2020 01:23:02 GMT
+# Tue, 01 Sep 2020 21:14:32 GMT
 CMD ["sh" "-c" "sleep 1 && exec clj"]
 ```
 
@@ -8231,19 +8231,19 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 		Last Modified: Wed, 05 Aug 2020 00:49:43 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ec2fc41c5c09d2f7bd5c657529dcf5c9b720699f68202f03a43b63afd2e2f168`  
-		Last Modified: Wed, 05 Aug 2020 00:50:00 GMT  
-		Size: 199.2 MB (199203257 bytes)  
+	-	`sha256:0b9db829721756fb5ee2bfd5e8c3833c7d6bae40cd259b4e4992f70b22c83bae`  
+		Last Modified: Tue, 01 Sep 2020 01:59:29 GMT  
+		Size: 199.2 MB (199200899 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ee61ec79ac33358fb65eb5d7d7f505be491e24cebd6b50e440b04603ddcaf325`  
-		Last Modified: Fri, 14 Aug 2020 01:26:10 GMT  
-		Size: 31.2 MB (31166901 bytes)  
+	-	`sha256:d9309f1e528f08744684f9746500903d409cdf8d901aa88329c6b2009c18d0d9`  
+		Last Modified: Tue, 01 Sep 2020 21:22:36 GMT  
+		Size: 31.2 MB (31166900 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-14-tools-deps-slim-buster`
 
 ```console
-$ docker pull clojure@sha256:807987d5b73f8f8b95be947baa34e5a859659db2a389c3a1a174394116a49e43
+$ docker pull clojure@sha256:238a48ba3e258dff6d7696cc57dc2cc2415a8e43ae0f17bd98ab356e03151a04
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -8253,14 +8253,14 @@ $ docker pull clojure@sha256:807987d5b73f8f8b95be947baa34e5a859659db2a389c3a1a17
 ### `clojure:openjdk-14-tools-deps-slim-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:4bda32b34c4c4b9b1d5a3393fb3b7896d0e707c0f50b2171db5c023ff9523918
+$ docker pull clojure@sha256:619551e39acf0665daf76be07ceebfd2353e6d78fda7db1bad36cd5cb8560019
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **272.3 MB (272312071 bytes)**  
+-	Total Size: **272.3 MB (272312682 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7f61edf9dea60398deb752ce3323453d72bb3c0a6e3f5482c939ff63f4a2d224`
+-	Image ID: `sha256:cc7a1511e16333833a36b87898418718140c78ee5a63053b54f1df2248777a94`
 -	Default Command: `["sh","-c","sleep 1 && exec clj"]`
 
 ```dockerfile
@@ -8280,17 +8280,17 @@ ENV PATH=/usr/local/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:43:58 GMT
 ENV JAVA_VERSION=14.0.2
-# Wed, 05 Aug 2020 00:44:12 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:12 GMT
+# Tue, 01 Sep 2020 01:49:24 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz; 			downloadSha256=91310200f072045dc6cef2c8c23e7e6387b37c46e9de49623ce0fa461a24623d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:24 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 01:22:22 GMT
+# Tue, 01 Sep 2020 21:13:52 GMT
 ENV CLOJURE_VERSION=1.10.1.561
-# Fri, 14 Aug 2020 01:22:22 GMT
+# Tue, 01 Sep 2020 21:13:52 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 01:22:42 GMT
+# Tue, 01 Sep 2020 21:14:12 GMT
 RUN apt-get update && apt-get install -y curl make rlwrap wget && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "7f9e4e7c5a8171db4e4edf5ce78e5b8f453bae641a4c6b7f3dda36c3128d2ff7 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apt-get purge -y --auto-remove curl wget
-# Fri, 14 Aug 2020 01:22:42 GMT
+# Tue, 01 Sep 2020 21:14:12 GMT
 CMD ["sh" "-c" "sleep 1 && exec clj"]
 ```
 
@@ -8307,19 +8307,19 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 		Last Modified: Wed, 05 Aug 2020 00:50:11 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:705d11f01792bfa5683e07ee99cb5e26d71449f279d9ad424a6d2f5558997ee1`  
-		Last Modified: Wed, 05 Aug 2020 00:50:45 GMT  
-		Size: 199.5 MB (199464729 bytes)  
+	-	`sha256:1bb778f76db35302bb48fef9517abc09b6ff8ad7f6985f482b2ccbfa48c6e800`  
+		Last Modified: Tue, 01 Sep 2020 02:00:01 GMT  
+		Size: 199.5 MB (199465062 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:82a90cd43bb9d7f8d7148b7f64fddf3689de2b17cff0eb7d43eacd45f5fa2c3b`  
-		Last Modified: Fri, 14 Aug 2020 01:26:02 GMT  
-		Size: 42.5 MB (42506579 bytes)  
+	-	`sha256:8d3f6e20b81f8592023734a7eb2e2d4c0f08e7ae39ac6c14e2cbf5c8a00cde3e`  
+		Last Modified: Tue, 01 Sep 2020 21:22:27 GMT  
+		Size: 42.5 MB (42506857 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-15`
 
 ```console
-$ docker pull clojure@sha256:13f12bc35f7fbd192013c0b48d45dc463b7694a24f57043f783fbc6d43fd0df0
+$ docker pull clojure@sha256:cb04ee9780400b1575fc00d1e1d4cac9e4bb538b8ce09f4a172bd57be93f7129
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -8329,14 +8329,14 @@ $ docker pull clojure@sha256:13f12bc35f7fbd192013c0b48d45dc463b7694a24f57043f783
 ### `clojure:openjdk-15` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:d67c4fa149096298e51f064a17195b480736d52ee85fae44c0900c59cd014b61
+$ docker pull clojure@sha256:1dd1fb98fbea918e0ad55e1f9bdfaea2f2bd13a4ff913584f41665df49298dee
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **244.1 MB (244098827 bytes)**  
+-	Total Size: **244.1 MB (244098991 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:8e7d2cb28cf354c44b4610f98a51ec9f6f2c4cb00f711855aa42bccaa45ad531`
+-	Image ID: `sha256:5f6c6cac144f8060d295f94a777c7f9365134e1f943ee51c7cb6b18bbb46a65f`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -8356,25 +8356,25 @@ ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Fri, 07 Aug 2020 23:31:58 GMT
 ENV JAVA_VERSION=15
-# Fri, 14 Aug 2020 21:37:00 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Fri, 14 Aug 2020 21:37:01 GMT
+# Tue, 01 Sep 2020 01:47:08 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:47:08 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 22:33:59 GMT
+# Tue, 01 Sep 2020 21:14:37 GMT
 ENV LEIN_VERSION=2.9.3
-# Fri, 14 Aug 2020 22:33:59 GMT
+# Tue, 01 Sep 2020 21:14:37 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Fri, 14 Aug 2020 22:33:59 GMT
+# Tue, 01 Sep 2020 21:14:37 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 22:34:09 GMT
+# Tue, 01 Sep 2020 21:14:46 GMT
 RUN apt-get update && apt-get install -y gnupg wget && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg wget
-# Fri, 14 Aug 2020 22:34:09 GMT
+# Tue, 01 Sep 2020 21:14:47 GMT
 ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Fri, 14 Aug 2020 22:34:10 GMT
+# Tue, 01 Sep 2020 21:14:47 GMT
 ENV LEIN_ROOT=1
-# Fri, 14 Aug 2020 22:34:14 GMT
+# Tue, 01 Sep 2020 21:14:51 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Fri, 14 Aug 2020 22:34:14 GMT
+# Tue, 01 Sep 2020 21:14:51 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -8391,23 +8391,23 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:49:13 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5bfd1d6a35e3871606342eff139fe322557b271b39d0dd81d544a8450d6b8a08`  
-		Last Modified: Fri, 14 Aug 2020 21:42:11 GMT  
-		Size: 196.1 MB (196126609 bytes)  
+	-	`sha256:6bcaf8278534a89fbf9fe35f783ca9c66d4d3e3f77f31caa1e5c961f7d11bc50`  
+		Last Modified: Tue, 01 Sep 2020 01:57:40 GMT  
+		Size: 196.1 MB (196126694 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:babcccd44e2c4ff60095224e93af752578c4d0167651778a358c79003e2ab1e0`  
-		Last Modified: Fri, 14 Aug 2020 22:39:49 GMT  
+	-	`sha256:375f5551028b04e518530a854e5906bfc85c3389aad9cca631ddb3cf412117fd`  
+		Last Modified: Tue, 01 Sep 2020 21:22:40 GMT  
 		Size: 13.5 MB (13463321 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6ee6c1c4c02be4aa0bdd804455895dccf7052a4effea83011af559f7ce6d637c`  
-		Last Modified: Fri, 14 Aug 2020 22:39:49 GMT  
-		Size: 4.2 MB (4168134 bytes)  
+	-	`sha256:26ef1faaba9c7f97e77f94bd4f03d17199257066e1403d8186ce6b3376e0dedb`  
+		Last Modified: Tue, 01 Sep 2020 21:22:40 GMT  
+		Size: 4.2 MB (4168213 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-15-boot`
 
 ```console
-$ docker pull clojure@sha256:1a06b17a7db4753955e85200f19309a585d41be92209b22d4d2b4149ca693e35
+$ docker pull clojure@sha256:be85ee6678f54d6f6b60d1eaaab0e19573d8c9d12f4cb3afc8d9157ab935de29
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -8417,14 +8417,14 @@ $ docker pull clojure@sha256:1a06b17a7db4753955e85200f19309a585d41be92209b22d4d2
 ### `clojure:openjdk-15-boot` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:edff04be21d91b2dd990c15b8438e673b67d2b77c10b3fbec062d564e6e15519
+$ docker pull clojure@sha256:7876d2f05d10f76db2c364bc3fd502e230a17f40d6a69be2e960f696510548fd
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **285.6 MB (285566995 bytes)**  
+-	Total Size: **285.6 MB (285567230 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:883c8024a8c229fd0d2d6dc68dc0b03f02d7ef96610cd7a89f4487316e4b08d2`
+-	Image ID: `sha256:24f505f9453d2567b0db71fd122f69143cd9cc946e0c7c9937f5fb9d11868cf5`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
@@ -8444,25 +8444,25 @@ ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Fri, 07 Aug 2020 23:31:58 GMT
 ENV JAVA_VERSION=15
-# Fri, 14 Aug 2020 21:37:00 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Fri, 14 Aug 2020 21:37:01 GMT
+# Tue, 01 Sep 2020 01:47:08 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:47:08 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 22:34:37 GMT
+# Tue, 01 Sep 2020 21:15:12 GMT
 ENV BOOT_VERSION=2.8.3
-# Fri, 14 Aug 2020 22:34:37 GMT
+# Tue, 01 Sep 2020 21:15:12 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Fri, 14 Aug 2020 22:34:37 GMT
+# Tue, 01 Sep 2020 21:15:13 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 22:34:42 GMT
+# Tue, 01 Sep 2020 21:15:18 GMT
 RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/* && mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot && apt-get purge -y --auto-remove wget
-# Fri, 14 Aug 2020 22:34:42 GMT
+# Tue, 01 Sep 2020 21:15:18 GMT
 ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Fri, 14 Aug 2020 22:34:42 GMT
+# Tue, 01 Sep 2020 21:15:18 GMT
 ENV BOOT_AS_ROOT=yes
-# Fri, 14 Aug 2020 22:35:01 GMT
+# Tue, 01 Sep 2020 21:15:37 GMT
 RUN boot
-# Fri, 14 Aug 2020 22:35:01 GMT
+# Tue, 01 Sep 2020 21:15:37 GMT
 CMD ["boot" "repl"]
 ```
 
@@ -8479,23 +8479,23 @@ CMD ["boot" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:49:13 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5bfd1d6a35e3871606342eff139fe322557b271b39d0dd81d544a8450d6b8a08`  
-		Last Modified: Fri, 14 Aug 2020 21:42:11 GMT  
-		Size: 196.1 MB (196126609 bytes)  
+	-	`sha256:6bcaf8278534a89fbf9fe35f783ca9c66d4d3e3f77f31caa1e5c961f7d11bc50`  
+		Last Modified: Tue, 01 Sep 2020 01:57:40 GMT  
+		Size: 196.1 MB (196126694 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:42564ca600fb0df55c094e03207c2cb1b95373079e4b0deb7e20fcd29a9f658c`  
-		Last Modified: Fri, 14 Aug 2020 22:40:00 GMT  
-		Size: 279.6 KB (279616 bytes)  
+	-	`sha256:836de121c469f90705b2473e56d44777f4dbafc4d656c64150b666a82757f392`  
+		Last Modified: Tue, 01 Sep 2020 21:22:52 GMT  
+		Size: 279.5 KB (279534 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:48fc66e4fc0a966afd9a9464e7d14c2cc4f192bf6818482be00ec4df4d78b35f`  
-		Last Modified: Fri, 14 Aug 2020 22:40:04 GMT  
-		Size: 58.8 MB (58820007 bytes)  
+	-	`sha256:f34f7122b81f062706aa133caf39d09dbc8788fcc447fbfea3709baf3da3e292`  
+		Last Modified: Tue, 01 Sep 2020 21:22:56 GMT  
+		Size: 58.8 MB (58820239 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-15-boot-2.8.3`
 
 ```console
-$ docker pull clojure@sha256:1a06b17a7db4753955e85200f19309a585d41be92209b22d4d2b4149ca693e35
+$ docker pull clojure@sha256:be85ee6678f54d6f6b60d1eaaab0e19573d8c9d12f4cb3afc8d9157ab935de29
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -8505,14 +8505,14 @@ $ docker pull clojure@sha256:1a06b17a7db4753955e85200f19309a585d41be92209b22d4d2
 ### `clojure:openjdk-15-boot-2.8.3` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:edff04be21d91b2dd990c15b8438e673b67d2b77c10b3fbec062d564e6e15519
+$ docker pull clojure@sha256:7876d2f05d10f76db2c364bc3fd502e230a17f40d6a69be2e960f696510548fd
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **285.6 MB (285566995 bytes)**  
+-	Total Size: **285.6 MB (285567230 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:883c8024a8c229fd0d2d6dc68dc0b03f02d7ef96610cd7a89f4487316e4b08d2`
+-	Image ID: `sha256:24f505f9453d2567b0db71fd122f69143cd9cc946e0c7c9937f5fb9d11868cf5`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
@@ -8532,25 +8532,25 @@ ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Fri, 07 Aug 2020 23:31:58 GMT
 ENV JAVA_VERSION=15
-# Fri, 14 Aug 2020 21:37:00 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Fri, 14 Aug 2020 21:37:01 GMT
+# Tue, 01 Sep 2020 01:47:08 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:47:08 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 22:34:37 GMT
+# Tue, 01 Sep 2020 21:15:12 GMT
 ENV BOOT_VERSION=2.8.3
-# Fri, 14 Aug 2020 22:34:37 GMT
+# Tue, 01 Sep 2020 21:15:12 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Fri, 14 Aug 2020 22:34:37 GMT
+# Tue, 01 Sep 2020 21:15:13 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 22:34:42 GMT
+# Tue, 01 Sep 2020 21:15:18 GMT
 RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/* && mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot && apt-get purge -y --auto-remove wget
-# Fri, 14 Aug 2020 22:34:42 GMT
+# Tue, 01 Sep 2020 21:15:18 GMT
 ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Fri, 14 Aug 2020 22:34:42 GMT
+# Tue, 01 Sep 2020 21:15:18 GMT
 ENV BOOT_AS_ROOT=yes
-# Fri, 14 Aug 2020 22:35:01 GMT
+# Tue, 01 Sep 2020 21:15:37 GMT
 RUN boot
-# Fri, 14 Aug 2020 22:35:01 GMT
+# Tue, 01 Sep 2020 21:15:37 GMT
 CMD ["boot" "repl"]
 ```
 
@@ -8567,23 +8567,23 @@ CMD ["boot" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:49:13 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5bfd1d6a35e3871606342eff139fe322557b271b39d0dd81d544a8450d6b8a08`  
-		Last Modified: Fri, 14 Aug 2020 21:42:11 GMT  
-		Size: 196.1 MB (196126609 bytes)  
+	-	`sha256:6bcaf8278534a89fbf9fe35f783ca9c66d4d3e3f77f31caa1e5c961f7d11bc50`  
+		Last Modified: Tue, 01 Sep 2020 01:57:40 GMT  
+		Size: 196.1 MB (196126694 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:42564ca600fb0df55c094e03207c2cb1b95373079e4b0deb7e20fcd29a9f658c`  
-		Last Modified: Fri, 14 Aug 2020 22:40:00 GMT  
-		Size: 279.6 KB (279616 bytes)  
+	-	`sha256:836de121c469f90705b2473e56d44777f4dbafc4d656c64150b666a82757f392`  
+		Last Modified: Tue, 01 Sep 2020 21:22:52 GMT  
+		Size: 279.5 KB (279534 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:48fc66e4fc0a966afd9a9464e7d14c2cc4f192bf6818482be00ec4df4d78b35f`  
-		Last Modified: Fri, 14 Aug 2020 22:40:04 GMT  
-		Size: 58.8 MB (58820007 bytes)  
+	-	`sha256:f34f7122b81f062706aa133caf39d09dbc8788fcc447fbfea3709baf3da3e292`  
+		Last Modified: Tue, 01 Sep 2020 21:22:56 GMT  
+		Size: 58.8 MB (58820239 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-15-boot-2.8.3-buster`
 
 ```console
-$ docker pull clojure@sha256:d42db50d7159927187c0e0bad99c172066bf5378f728b46215e2dcc3bf6c90c0
+$ docker pull clojure@sha256:c140a142bce3ccf5e459910645488db92efd05943f76e2ff655735c7c14db87b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -8593,14 +8593,14 @@ $ docker pull clojure@sha256:d42db50d7159927187c0e0bad99c172066bf5378f728b46215e
 ### `clojure:openjdk-15-boot-2.8.3-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:8ba277737356c87d97055b63988c1aaff074ab0dc6d287e9f109e03b8a896f56
+$ docker pull clojure@sha256:20315d7a89becd93de32515c4ef3dfa58a6a62b348e0b8cec4b95cce7e3f5ae9
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **388.6 MB (388642113 bytes)**  
+-	Total Size: **388.6 MB (388642348 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4c41449e29fd482c10c2c30a4871134d272d1cc5a717c9ee9892514766bc6dce`
+-	Image ID: `sha256:8adfbf4615e88a70439680ab7ee34db0bedf40226c44e4a676eeaff8c73692b0`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
@@ -8626,25 +8626,25 @@ ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Fri, 07 Aug 2020 23:31:43 GMT
 ENV JAVA_VERSION=15
-# Fri, 14 Aug 2020 21:36:36 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Fri, 14 Aug 2020 21:36:37 GMT
+# Tue, 01 Sep 2020 01:46:34 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:46:35 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 22:35:06 GMT
+# Tue, 01 Sep 2020 21:15:42 GMT
 ENV BOOT_VERSION=2.8.3
-# Fri, 14 Aug 2020 22:35:06 GMT
+# Tue, 01 Sep 2020 21:15:42 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Fri, 14 Aug 2020 22:35:07 GMT
+# Tue, 01 Sep 2020 21:15:42 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 22:35:08 GMT
+# Tue, 01 Sep 2020 21:15:43 GMT
 RUN mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot
-# Fri, 14 Aug 2020 22:35:08 GMT
+# Tue, 01 Sep 2020 21:15:43 GMT
 ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Fri, 14 Aug 2020 22:35:08 GMT
+# Tue, 01 Sep 2020 21:15:43 GMT
 ENV BOOT_AS_ROOT=yes
-# Fri, 14 Aug 2020 22:35:26 GMT
+# Tue, 01 Sep 2020 21:16:02 GMT
 RUN boot
-# Fri, 14 Aug 2020 22:35:26 GMT
+# Tue, 01 Sep 2020 21:16:02 GMT
 CMD ["boot" "repl"]
 ```
 
@@ -8673,23 +8673,23 @@ CMD ["boot" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:48:44 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f96ab385af8c9d760dba0676b72a17036befbe9bdfaa674f3d1748ad822b37ec`  
-		Last Modified: Fri, 14 Aug 2020 21:41:28 GMT  
-		Size: 195.9 MB (195860975 bytes)  
+	-	`sha256:72a0367c0236abe0949679e4ae9b1a8dbf4ce3d0857e20ab620f4de4256ce84c`  
+		Last Modified: Tue, 01 Sep 2020 01:57:11 GMT  
+		Size: 195.9 MB (195861088 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:94fd6bd0bd4f23dd6cf967d2eadb070042340374a4d4a1375c580b6fed393fb9`  
-		Last Modified: Fri, 14 Aug 2020 22:40:09 GMT  
+	-	`sha256:61c5bc2784d634e3ba1e7c38b2fa2fd21242d4a6b619c33d5303140f260ad6ed`  
+		Last Modified: Tue, 01 Sep 2020 21:23:01 GMT  
 		Size: 6.9 KB (6898 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:521b4c56409503a5fb3183774150bce0a3d2c83e85dbb5a620c1b0649074b09f`  
-		Last Modified: Fri, 14 Aug 2020 22:40:13 GMT  
-		Size: 58.8 MB (58820144 bytes)  
+	-	`sha256:1484ce77fc71727bb529cf75c57d0257cef8bdc684091c7f7016d7b271f344b8`  
+		Last Modified: Tue, 01 Sep 2020 21:23:06 GMT  
+		Size: 58.8 MB (58820266 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-15-boot-2.8.3-slim-buster`
 
 ```console
-$ docker pull clojure@sha256:1a06b17a7db4753955e85200f19309a585d41be92209b22d4d2b4149ca693e35
+$ docker pull clojure@sha256:be85ee6678f54d6f6b60d1eaaab0e19573d8c9d12f4cb3afc8d9157ab935de29
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -8699,14 +8699,14 @@ $ docker pull clojure@sha256:1a06b17a7db4753955e85200f19309a585d41be92209b22d4d2
 ### `clojure:openjdk-15-boot-2.8.3-slim-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:edff04be21d91b2dd990c15b8438e673b67d2b77c10b3fbec062d564e6e15519
+$ docker pull clojure@sha256:7876d2f05d10f76db2c364bc3fd502e230a17f40d6a69be2e960f696510548fd
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **285.6 MB (285566995 bytes)**  
+-	Total Size: **285.6 MB (285567230 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:883c8024a8c229fd0d2d6dc68dc0b03f02d7ef96610cd7a89f4487316e4b08d2`
+-	Image ID: `sha256:24f505f9453d2567b0db71fd122f69143cd9cc946e0c7c9937f5fb9d11868cf5`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
@@ -8726,25 +8726,25 @@ ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Fri, 07 Aug 2020 23:31:58 GMT
 ENV JAVA_VERSION=15
-# Fri, 14 Aug 2020 21:37:00 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Fri, 14 Aug 2020 21:37:01 GMT
+# Tue, 01 Sep 2020 01:47:08 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:47:08 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 22:34:37 GMT
+# Tue, 01 Sep 2020 21:15:12 GMT
 ENV BOOT_VERSION=2.8.3
-# Fri, 14 Aug 2020 22:34:37 GMT
+# Tue, 01 Sep 2020 21:15:12 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Fri, 14 Aug 2020 22:34:37 GMT
+# Tue, 01 Sep 2020 21:15:13 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 22:34:42 GMT
+# Tue, 01 Sep 2020 21:15:18 GMT
 RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/* && mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot && apt-get purge -y --auto-remove wget
-# Fri, 14 Aug 2020 22:34:42 GMT
+# Tue, 01 Sep 2020 21:15:18 GMT
 ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Fri, 14 Aug 2020 22:34:42 GMT
+# Tue, 01 Sep 2020 21:15:18 GMT
 ENV BOOT_AS_ROOT=yes
-# Fri, 14 Aug 2020 22:35:01 GMT
+# Tue, 01 Sep 2020 21:15:37 GMT
 RUN boot
-# Fri, 14 Aug 2020 22:35:01 GMT
+# Tue, 01 Sep 2020 21:15:37 GMT
 CMD ["boot" "repl"]
 ```
 
@@ -8761,23 +8761,23 @@ CMD ["boot" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:49:13 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5bfd1d6a35e3871606342eff139fe322557b271b39d0dd81d544a8450d6b8a08`  
-		Last Modified: Fri, 14 Aug 2020 21:42:11 GMT  
-		Size: 196.1 MB (196126609 bytes)  
+	-	`sha256:6bcaf8278534a89fbf9fe35f783ca9c66d4d3e3f77f31caa1e5c961f7d11bc50`  
+		Last Modified: Tue, 01 Sep 2020 01:57:40 GMT  
+		Size: 196.1 MB (196126694 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:42564ca600fb0df55c094e03207c2cb1b95373079e4b0deb7e20fcd29a9f658c`  
-		Last Modified: Fri, 14 Aug 2020 22:40:00 GMT  
-		Size: 279.6 KB (279616 bytes)  
+	-	`sha256:836de121c469f90705b2473e56d44777f4dbafc4d656c64150b666a82757f392`  
+		Last Modified: Tue, 01 Sep 2020 21:22:52 GMT  
+		Size: 279.5 KB (279534 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:48fc66e4fc0a966afd9a9464e7d14c2cc4f192bf6818482be00ec4df4d78b35f`  
-		Last Modified: Fri, 14 Aug 2020 22:40:04 GMT  
-		Size: 58.8 MB (58820007 bytes)  
+	-	`sha256:f34f7122b81f062706aa133caf39d09dbc8788fcc447fbfea3709baf3da3e292`  
+		Last Modified: Tue, 01 Sep 2020 21:22:56 GMT  
+		Size: 58.8 MB (58820239 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-15-boot-buster`
 
 ```console
-$ docker pull clojure@sha256:d42db50d7159927187c0e0bad99c172066bf5378f728b46215e2dcc3bf6c90c0
+$ docker pull clojure@sha256:c140a142bce3ccf5e459910645488db92efd05943f76e2ff655735c7c14db87b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -8787,14 +8787,14 @@ $ docker pull clojure@sha256:d42db50d7159927187c0e0bad99c172066bf5378f728b46215e
 ### `clojure:openjdk-15-boot-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:8ba277737356c87d97055b63988c1aaff074ab0dc6d287e9f109e03b8a896f56
+$ docker pull clojure@sha256:20315d7a89becd93de32515c4ef3dfa58a6a62b348e0b8cec4b95cce7e3f5ae9
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **388.6 MB (388642113 bytes)**  
+-	Total Size: **388.6 MB (388642348 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4c41449e29fd482c10c2c30a4871134d272d1cc5a717c9ee9892514766bc6dce`
+-	Image ID: `sha256:8adfbf4615e88a70439680ab7ee34db0bedf40226c44e4a676eeaff8c73692b0`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
@@ -8820,25 +8820,25 @@ ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Fri, 07 Aug 2020 23:31:43 GMT
 ENV JAVA_VERSION=15
-# Fri, 14 Aug 2020 21:36:36 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Fri, 14 Aug 2020 21:36:37 GMT
+# Tue, 01 Sep 2020 01:46:34 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:46:35 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 22:35:06 GMT
+# Tue, 01 Sep 2020 21:15:42 GMT
 ENV BOOT_VERSION=2.8.3
-# Fri, 14 Aug 2020 22:35:06 GMT
+# Tue, 01 Sep 2020 21:15:42 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Fri, 14 Aug 2020 22:35:07 GMT
+# Tue, 01 Sep 2020 21:15:42 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 22:35:08 GMT
+# Tue, 01 Sep 2020 21:15:43 GMT
 RUN mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot
-# Fri, 14 Aug 2020 22:35:08 GMT
+# Tue, 01 Sep 2020 21:15:43 GMT
 ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Fri, 14 Aug 2020 22:35:08 GMT
+# Tue, 01 Sep 2020 21:15:43 GMT
 ENV BOOT_AS_ROOT=yes
-# Fri, 14 Aug 2020 22:35:26 GMT
+# Tue, 01 Sep 2020 21:16:02 GMT
 RUN boot
-# Fri, 14 Aug 2020 22:35:26 GMT
+# Tue, 01 Sep 2020 21:16:02 GMT
 CMD ["boot" "repl"]
 ```
 
@@ -8867,23 +8867,23 @@ CMD ["boot" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:48:44 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f96ab385af8c9d760dba0676b72a17036befbe9bdfaa674f3d1748ad822b37ec`  
-		Last Modified: Fri, 14 Aug 2020 21:41:28 GMT  
-		Size: 195.9 MB (195860975 bytes)  
+	-	`sha256:72a0367c0236abe0949679e4ae9b1a8dbf4ce3d0857e20ab620f4de4256ce84c`  
+		Last Modified: Tue, 01 Sep 2020 01:57:11 GMT  
+		Size: 195.9 MB (195861088 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:94fd6bd0bd4f23dd6cf967d2eadb070042340374a4d4a1375c580b6fed393fb9`  
-		Last Modified: Fri, 14 Aug 2020 22:40:09 GMT  
+	-	`sha256:61c5bc2784d634e3ba1e7c38b2fa2fd21242d4a6b619c33d5303140f260ad6ed`  
+		Last Modified: Tue, 01 Sep 2020 21:23:01 GMT  
 		Size: 6.9 KB (6898 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:521b4c56409503a5fb3183774150bce0a3d2c83e85dbb5a620c1b0649074b09f`  
-		Last Modified: Fri, 14 Aug 2020 22:40:13 GMT  
-		Size: 58.8 MB (58820144 bytes)  
+	-	`sha256:1484ce77fc71727bb529cf75c57d0257cef8bdc684091c7f7016d7b271f344b8`  
+		Last Modified: Tue, 01 Sep 2020 21:23:06 GMT  
+		Size: 58.8 MB (58820266 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-15-boot-slim-buster`
 
 ```console
-$ docker pull clojure@sha256:1a06b17a7db4753955e85200f19309a585d41be92209b22d4d2b4149ca693e35
+$ docker pull clojure@sha256:be85ee6678f54d6f6b60d1eaaab0e19573d8c9d12f4cb3afc8d9157ab935de29
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -8893,14 +8893,14 @@ $ docker pull clojure@sha256:1a06b17a7db4753955e85200f19309a585d41be92209b22d4d2
 ### `clojure:openjdk-15-boot-slim-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:edff04be21d91b2dd990c15b8438e673b67d2b77c10b3fbec062d564e6e15519
+$ docker pull clojure@sha256:7876d2f05d10f76db2c364bc3fd502e230a17f40d6a69be2e960f696510548fd
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **285.6 MB (285566995 bytes)**  
+-	Total Size: **285.6 MB (285567230 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:883c8024a8c229fd0d2d6dc68dc0b03f02d7ef96610cd7a89f4487316e4b08d2`
+-	Image ID: `sha256:24f505f9453d2567b0db71fd122f69143cd9cc946e0c7c9937f5fb9d11868cf5`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
@@ -8920,25 +8920,25 @@ ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Fri, 07 Aug 2020 23:31:58 GMT
 ENV JAVA_VERSION=15
-# Fri, 14 Aug 2020 21:37:00 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Fri, 14 Aug 2020 21:37:01 GMT
+# Tue, 01 Sep 2020 01:47:08 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:47:08 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 22:34:37 GMT
+# Tue, 01 Sep 2020 21:15:12 GMT
 ENV BOOT_VERSION=2.8.3
-# Fri, 14 Aug 2020 22:34:37 GMT
+# Tue, 01 Sep 2020 21:15:12 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Fri, 14 Aug 2020 22:34:37 GMT
+# Tue, 01 Sep 2020 21:15:13 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 22:34:42 GMT
+# Tue, 01 Sep 2020 21:15:18 GMT
 RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/* && mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot && apt-get purge -y --auto-remove wget
-# Fri, 14 Aug 2020 22:34:42 GMT
+# Tue, 01 Sep 2020 21:15:18 GMT
 ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Fri, 14 Aug 2020 22:34:42 GMT
+# Tue, 01 Sep 2020 21:15:18 GMT
 ENV BOOT_AS_ROOT=yes
-# Fri, 14 Aug 2020 22:35:01 GMT
+# Tue, 01 Sep 2020 21:15:37 GMT
 RUN boot
-# Fri, 14 Aug 2020 22:35:01 GMT
+# Tue, 01 Sep 2020 21:15:37 GMT
 CMD ["boot" "repl"]
 ```
 
@@ -8955,23 +8955,23 @@ CMD ["boot" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:49:13 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5bfd1d6a35e3871606342eff139fe322557b271b39d0dd81d544a8450d6b8a08`  
-		Last Modified: Fri, 14 Aug 2020 21:42:11 GMT  
-		Size: 196.1 MB (196126609 bytes)  
+	-	`sha256:6bcaf8278534a89fbf9fe35f783ca9c66d4d3e3f77f31caa1e5c961f7d11bc50`  
+		Last Modified: Tue, 01 Sep 2020 01:57:40 GMT  
+		Size: 196.1 MB (196126694 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:42564ca600fb0df55c094e03207c2cb1b95373079e4b0deb7e20fcd29a9f658c`  
-		Last Modified: Fri, 14 Aug 2020 22:40:00 GMT  
-		Size: 279.6 KB (279616 bytes)  
+	-	`sha256:836de121c469f90705b2473e56d44777f4dbafc4d656c64150b666a82757f392`  
+		Last Modified: Tue, 01 Sep 2020 21:22:52 GMT  
+		Size: 279.5 KB (279534 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:48fc66e4fc0a966afd9a9464e7d14c2cc4f192bf6818482be00ec4df4d78b35f`  
-		Last Modified: Fri, 14 Aug 2020 22:40:04 GMT  
-		Size: 58.8 MB (58820007 bytes)  
+	-	`sha256:f34f7122b81f062706aa133caf39d09dbc8788fcc447fbfea3709baf3da3e292`  
+		Last Modified: Tue, 01 Sep 2020 21:22:56 GMT  
+		Size: 58.8 MB (58820239 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-15-buster`
 
 ```console
-$ docker pull clojure@sha256:bce4e2016467809797b18398a3244d5be71b5498a5ed4ff07c17917b925ed7da
+$ docker pull clojure@sha256:627bfbc7714812b4224bb940a765dc267a938bd3ff4994abc4f1af393925c27d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -8981,14 +8981,14 @@ $ docker pull clojure@sha256:bce4e2016467809797b18398a3244d5be71b5498a5ed4ff07c1
 ### `clojure:openjdk-15-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:449162825012af811f96d9347b7ac32497b5511f7d005240e1ce819b93b43a10
+$ docker pull clojure@sha256:498e84f1060a1e6a5597db6cf11667eccbae03a8f428ed8cd8829aa02c7968c1
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **347.5 MB (347523922 bytes)**  
+-	Total Size: **347.5 MB (347523983 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:31dc3fcbb12bc4f38f3d590db11f94ea34c347a5197af4f2c7ed5359c707421f`
+-	Image ID: `sha256:031a608d7b9001c81f41e9bd25a29b7eb9cd9f82452af29c703fa9fbea81e8c6`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -9014,25 +9014,25 @@ ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Fri, 07 Aug 2020 23:31:43 GMT
 ENV JAVA_VERSION=15
-# Fri, 14 Aug 2020 21:36:36 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Fri, 14 Aug 2020 21:36:37 GMT
+# Tue, 01 Sep 2020 01:46:34 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:46:35 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 22:34:20 GMT
+# Tue, 01 Sep 2020 21:14:56 GMT
 ENV LEIN_VERSION=2.9.3
-# Fri, 14 Aug 2020 22:34:21 GMT
+# Tue, 01 Sep 2020 21:14:56 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Fri, 14 Aug 2020 22:34:21 GMT
+# Tue, 01 Sep 2020 21:14:56 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 22:34:27 GMT
+# Tue, 01 Sep 2020 21:15:03 GMT
 RUN apt-get update && apt-get install -y gnupg && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg
-# Fri, 14 Aug 2020 22:34:27 GMT
+# Tue, 01 Sep 2020 21:15:03 GMT
 ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Fri, 14 Aug 2020 22:34:28 GMT
+# Tue, 01 Sep 2020 21:15:03 GMT
 ENV LEIN_ROOT=1
-# Fri, 14 Aug 2020 22:34:32 GMT
+# Tue, 01 Sep 2020 21:15:08 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Fri, 14 Aug 2020 22:34:32 GMT
+# Tue, 01 Sep 2020 21:15:08 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -9061,23 +9061,23 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:48:44 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f96ab385af8c9d760dba0676b72a17036befbe9bdfaa674f3d1748ad822b37ec`  
-		Last Modified: Fri, 14 Aug 2020 21:41:28 GMT  
-		Size: 195.9 MB (195860975 bytes)  
+	-	`sha256:72a0367c0236abe0949679e4ae9b1a8dbf4ce3d0857e20ab620f4de4256ce84c`  
+		Last Modified: Tue, 01 Sep 2020 01:57:11 GMT  
+		Size: 195.9 MB (195861088 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:24f6252e684609b23a3a5141188b012937d97128d0be7f1f39c5261a7f5bba58`  
-		Last Modified: Fri, 14 Aug 2020 22:39:56 GMT  
-		Size: 13.5 MB (13540720 bytes)  
+	-	`sha256:e8252849a0196668c1a9e45b28dbbd8468cd7cfe7485b79bf461093192fd3fec`  
+		Last Modified: Tue, 01 Sep 2020 21:22:48 GMT  
+		Size: 13.5 MB (13540648 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ae28467efe21b2b90a75b1f483cb8993f9d603083594f16691b9983b48cd1e2e`  
-		Last Modified: Fri, 14 Aug 2020 22:39:55 GMT  
-		Size: 4.2 MB (4168131 bytes)  
+	-	`sha256:93ab01df58cf77969f95e46f58b4303c022a8dd873fc8cc4636c55738149da17`  
+		Last Modified: Tue, 01 Sep 2020 21:22:47 GMT  
+		Size: 4.2 MB (4168151 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-15-lein`
 
 ```console
-$ docker pull clojure@sha256:13f12bc35f7fbd192013c0b48d45dc463b7694a24f57043f783fbc6d43fd0df0
+$ docker pull clojure@sha256:cb04ee9780400b1575fc00d1e1d4cac9e4bb538b8ce09f4a172bd57be93f7129
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -9087,14 +9087,14 @@ $ docker pull clojure@sha256:13f12bc35f7fbd192013c0b48d45dc463b7694a24f57043f783
 ### `clojure:openjdk-15-lein` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:d67c4fa149096298e51f064a17195b480736d52ee85fae44c0900c59cd014b61
+$ docker pull clojure@sha256:1dd1fb98fbea918e0ad55e1f9bdfaea2f2bd13a4ff913584f41665df49298dee
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **244.1 MB (244098827 bytes)**  
+-	Total Size: **244.1 MB (244098991 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:8e7d2cb28cf354c44b4610f98a51ec9f6f2c4cb00f711855aa42bccaa45ad531`
+-	Image ID: `sha256:5f6c6cac144f8060d295f94a777c7f9365134e1f943ee51c7cb6b18bbb46a65f`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -9114,25 +9114,25 @@ ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Fri, 07 Aug 2020 23:31:58 GMT
 ENV JAVA_VERSION=15
-# Fri, 14 Aug 2020 21:37:00 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Fri, 14 Aug 2020 21:37:01 GMT
+# Tue, 01 Sep 2020 01:47:08 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:47:08 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 22:33:59 GMT
+# Tue, 01 Sep 2020 21:14:37 GMT
 ENV LEIN_VERSION=2.9.3
-# Fri, 14 Aug 2020 22:33:59 GMT
+# Tue, 01 Sep 2020 21:14:37 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Fri, 14 Aug 2020 22:33:59 GMT
+# Tue, 01 Sep 2020 21:14:37 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 22:34:09 GMT
+# Tue, 01 Sep 2020 21:14:46 GMT
 RUN apt-get update && apt-get install -y gnupg wget && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg wget
-# Fri, 14 Aug 2020 22:34:09 GMT
+# Tue, 01 Sep 2020 21:14:47 GMT
 ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Fri, 14 Aug 2020 22:34:10 GMT
+# Tue, 01 Sep 2020 21:14:47 GMT
 ENV LEIN_ROOT=1
-# Fri, 14 Aug 2020 22:34:14 GMT
+# Tue, 01 Sep 2020 21:14:51 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Fri, 14 Aug 2020 22:34:14 GMT
+# Tue, 01 Sep 2020 21:14:51 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -9149,23 +9149,23 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:49:13 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5bfd1d6a35e3871606342eff139fe322557b271b39d0dd81d544a8450d6b8a08`  
-		Last Modified: Fri, 14 Aug 2020 21:42:11 GMT  
-		Size: 196.1 MB (196126609 bytes)  
+	-	`sha256:6bcaf8278534a89fbf9fe35f783ca9c66d4d3e3f77f31caa1e5c961f7d11bc50`  
+		Last Modified: Tue, 01 Sep 2020 01:57:40 GMT  
+		Size: 196.1 MB (196126694 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:babcccd44e2c4ff60095224e93af752578c4d0167651778a358c79003e2ab1e0`  
-		Last Modified: Fri, 14 Aug 2020 22:39:49 GMT  
+	-	`sha256:375f5551028b04e518530a854e5906bfc85c3389aad9cca631ddb3cf412117fd`  
+		Last Modified: Tue, 01 Sep 2020 21:22:40 GMT  
 		Size: 13.5 MB (13463321 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6ee6c1c4c02be4aa0bdd804455895dccf7052a4effea83011af559f7ce6d637c`  
-		Last Modified: Fri, 14 Aug 2020 22:39:49 GMT  
-		Size: 4.2 MB (4168134 bytes)  
+	-	`sha256:26ef1faaba9c7f97e77f94bd4f03d17199257066e1403d8186ce6b3376e0dedb`  
+		Last Modified: Tue, 01 Sep 2020 21:22:40 GMT  
+		Size: 4.2 MB (4168213 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-15-lein-2.9.3`
 
 ```console
-$ docker pull clojure@sha256:13f12bc35f7fbd192013c0b48d45dc463b7694a24f57043f783fbc6d43fd0df0
+$ docker pull clojure@sha256:cb04ee9780400b1575fc00d1e1d4cac9e4bb538b8ce09f4a172bd57be93f7129
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -9175,14 +9175,14 @@ $ docker pull clojure@sha256:13f12bc35f7fbd192013c0b48d45dc463b7694a24f57043f783
 ### `clojure:openjdk-15-lein-2.9.3` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:d67c4fa149096298e51f064a17195b480736d52ee85fae44c0900c59cd014b61
+$ docker pull clojure@sha256:1dd1fb98fbea918e0ad55e1f9bdfaea2f2bd13a4ff913584f41665df49298dee
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **244.1 MB (244098827 bytes)**  
+-	Total Size: **244.1 MB (244098991 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:8e7d2cb28cf354c44b4610f98a51ec9f6f2c4cb00f711855aa42bccaa45ad531`
+-	Image ID: `sha256:5f6c6cac144f8060d295f94a777c7f9365134e1f943ee51c7cb6b18bbb46a65f`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -9202,25 +9202,25 @@ ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Fri, 07 Aug 2020 23:31:58 GMT
 ENV JAVA_VERSION=15
-# Fri, 14 Aug 2020 21:37:00 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Fri, 14 Aug 2020 21:37:01 GMT
+# Tue, 01 Sep 2020 01:47:08 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:47:08 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 22:33:59 GMT
+# Tue, 01 Sep 2020 21:14:37 GMT
 ENV LEIN_VERSION=2.9.3
-# Fri, 14 Aug 2020 22:33:59 GMT
+# Tue, 01 Sep 2020 21:14:37 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Fri, 14 Aug 2020 22:33:59 GMT
+# Tue, 01 Sep 2020 21:14:37 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 22:34:09 GMT
+# Tue, 01 Sep 2020 21:14:46 GMT
 RUN apt-get update && apt-get install -y gnupg wget && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg wget
-# Fri, 14 Aug 2020 22:34:09 GMT
+# Tue, 01 Sep 2020 21:14:47 GMT
 ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Fri, 14 Aug 2020 22:34:10 GMT
+# Tue, 01 Sep 2020 21:14:47 GMT
 ENV LEIN_ROOT=1
-# Fri, 14 Aug 2020 22:34:14 GMT
+# Tue, 01 Sep 2020 21:14:51 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Fri, 14 Aug 2020 22:34:14 GMT
+# Tue, 01 Sep 2020 21:14:51 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -9237,23 +9237,23 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:49:13 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5bfd1d6a35e3871606342eff139fe322557b271b39d0dd81d544a8450d6b8a08`  
-		Last Modified: Fri, 14 Aug 2020 21:42:11 GMT  
-		Size: 196.1 MB (196126609 bytes)  
+	-	`sha256:6bcaf8278534a89fbf9fe35f783ca9c66d4d3e3f77f31caa1e5c961f7d11bc50`  
+		Last Modified: Tue, 01 Sep 2020 01:57:40 GMT  
+		Size: 196.1 MB (196126694 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:babcccd44e2c4ff60095224e93af752578c4d0167651778a358c79003e2ab1e0`  
-		Last Modified: Fri, 14 Aug 2020 22:39:49 GMT  
+	-	`sha256:375f5551028b04e518530a854e5906bfc85c3389aad9cca631ddb3cf412117fd`  
+		Last Modified: Tue, 01 Sep 2020 21:22:40 GMT  
 		Size: 13.5 MB (13463321 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6ee6c1c4c02be4aa0bdd804455895dccf7052a4effea83011af559f7ce6d637c`  
-		Last Modified: Fri, 14 Aug 2020 22:39:49 GMT  
-		Size: 4.2 MB (4168134 bytes)  
+	-	`sha256:26ef1faaba9c7f97e77f94bd4f03d17199257066e1403d8186ce6b3376e0dedb`  
+		Last Modified: Tue, 01 Sep 2020 21:22:40 GMT  
+		Size: 4.2 MB (4168213 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-15-lein-2.9.3-buster`
 
 ```console
-$ docker pull clojure@sha256:bce4e2016467809797b18398a3244d5be71b5498a5ed4ff07c17917b925ed7da
+$ docker pull clojure@sha256:627bfbc7714812b4224bb940a765dc267a938bd3ff4994abc4f1af393925c27d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -9263,14 +9263,14 @@ $ docker pull clojure@sha256:bce4e2016467809797b18398a3244d5be71b5498a5ed4ff07c1
 ### `clojure:openjdk-15-lein-2.9.3-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:449162825012af811f96d9347b7ac32497b5511f7d005240e1ce819b93b43a10
+$ docker pull clojure@sha256:498e84f1060a1e6a5597db6cf11667eccbae03a8f428ed8cd8829aa02c7968c1
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **347.5 MB (347523922 bytes)**  
+-	Total Size: **347.5 MB (347523983 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:31dc3fcbb12bc4f38f3d590db11f94ea34c347a5197af4f2c7ed5359c707421f`
+-	Image ID: `sha256:031a608d7b9001c81f41e9bd25a29b7eb9cd9f82452af29c703fa9fbea81e8c6`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -9296,25 +9296,25 @@ ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Fri, 07 Aug 2020 23:31:43 GMT
 ENV JAVA_VERSION=15
-# Fri, 14 Aug 2020 21:36:36 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Fri, 14 Aug 2020 21:36:37 GMT
+# Tue, 01 Sep 2020 01:46:34 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:46:35 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 22:34:20 GMT
+# Tue, 01 Sep 2020 21:14:56 GMT
 ENV LEIN_VERSION=2.9.3
-# Fri, 14 Aug 2020 22:34:21 GMT
+# Tue, 01 Sep 2020 21:14:56 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Fri, 14 Aug 2020 22:34:21 GMT
+# Tue, 01 Sep 2020 21:14:56 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 22:34:27 GMT
+# Tue, 01 Sep 2020 21:15:03 GMT
 RUN apt-get update && apt-get install -y gnupg && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg
-# Fri, 14 Aug 2020 22:34:27 GMT
+# Tue, 01 Sep 2020 21:15:03 GMT
 ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Fri, 14 Aug 2020 22:34:28 GMT
+# Tue, 01 Sep 2020 21:15:03 GMT
 ENV LEIN_ROOT=1
-# Fri, 14 Aug 2020 22:34:32 GMT
+# Tue, 01 Sep 2020 21:15:08 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Fri, 14 Aug 2020 22:34:32 GMT
+# Tue, 01 Sep 2020 21:15:08 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -9343,23 +9343,23 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:48:44 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f96ab385af8c9d760dba0676b72a17036befbe9bdfaa674f3d1748ad822b37ec`  
-		Last Modified: Fri, 14 Aug 2020 21:41:28 GMT  
-		Size: 195.9 MB (195860975 bytes)  
+	-	`sha256:72a0367c0236abe0949679e4ae9b1a8dbf4ce3d0857e20ab620f4de4256ce84c`  
+		Last Modified: Tue, 01 Sep 2020 01:57:11 GMT  
+		Size: 195.9 MB (195861088 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:24f6252e684609b23a3a5141188b012937d97128d0be7f1f39c5261a7f5bba58`  
-		Last Modified: Fri, 14 Aug 2020 22:39:56 GMT  
-		Size: 13.5 MB (13540720 bytes)  
+	-	`sha256:e8252849a0196668c1a9e45b28dbbd8468cd7cfe7485b79bf461093192fd3fec`  
+		Last Modified: Tue, 01 Sep 2020 21:22:48 GMT  
+		Size: 13.5 MB (13540648 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ae28467efe21b2b90a75b1f483cb8993f9d603083594f16691b9983b48cd1e2e`  
-		Last Modified: Fri, 14 Aug 2020 22:39:55 GMT  
-		Size: 4.2 MB (4168131 bytes)  
+	-	`sha256:93ab01df58cf77969f95e46f58b4303c022a8dd873fc8cc4636c55738149da17`  
+		Last Modified: Tue, 01 Sep 2020 21:22:47 GMT  
+		Size: 4.2 MB (4168151 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-15-lein-2.9.3-slim-buster`
 
 ```console
-$ docker pull clojure@sha256:13f12bc35f7fbd192013c0b48d45dc463b7694a24f57043f783fbc6d43fd0df0
+$ docker pull clojure@sha256:cb04ee9780400b1575fc00d1e1d4cac9e4bb538b8ce09f4a172bd57be93f7129
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -9369,14 +9369,14 @@ $ docker pull clojure@sha256:13f12bc35f7fbd192013c0b48d45dc463b7694a24f57043f783
 ### `clojure:openjdk-15-lein-2.9.3-slim-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:d67c4fa149096298e51f064a17195b480736d52ee85fae44c0900c59cd014b61
+$ docker pull clojure@sha256:1dd1fb98fbea918e0ad55e1f9bdfaea2f2bd13a4ff913584f41665df49298dee
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **244.1 MB (244098827 bytes)**  
+-	Total Size: **244.1 MB (244098991 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:8e7d2cb28cf354c44b4610f98a51ec9f6f2c4cb00f711855aa42bccaa45ad531`
+-	Image ID: `sha256:5f6c6cac144f8060d295f94a777c7f9365134e1f943ee51c7cb6b18bbb46a65f`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -9396,25 +9396,25 @@ ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Fri, 07 Aug 2020 23:31:58 GMT
 ENV JAVA_VERSION=15
-# Fri, 14 Aug 2020 21:37:00 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Fri, 14 Aug 2020 21:37:01 GMT
+# Tue, 01 Sep 2020 01:47:08 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:47:08 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 22:33:59 GMT
+# Tue, 01 Sep 2020 21:14:37 GMT
 ENV LEIN_VERSION=2.9.3
-# Fri, 14 Aug 2020 22:33:59 GMT
+# Tue, 01 Sep 2020 21:14:37 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Fri, 14 Aug 2020 22:33:59 GMT
+# Tue, 01 Sep 2020 21:14:37 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 22:34:09 GMT
+# Tue, 01 Sep 2020 21:14:46 GMT
 RUN apt-get update && apt-get install -y gnupg wget && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg wget
-# Fri, 14 Aug 2020 22:34:09 GMT
+# Tue, 01 Sep 2020 21:14:47 GMT
 ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Fri, 14 Aug 2020 22:34:10 GMT
+# Tue, 01 Sep 2020 21:14:47 GMT
 ENV LEIN_ROOT=1
-# Fri, 14 Aug 2020 22:34:14 GMT
+# Tue, 01 Sep 2020 21:14:51 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Fri, 14 Aug 2020 22:34:14 GMT
+# Tue, 01 Sep 2020 21:14:51 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -9431,23 +9431,23 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:49:13 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5bfd1d6a35e3871606342eff139fe322557b271b39d0dd81d544a8450d6b8a08`  
-		Last Modified: Fri, 14 Aug 2020 21:42:11 GMT  
-		Size: 196.1 MB (196126609 bytes)  
+	-	`sha256:6bcaf8278534a89fbf9fe35f783ca9c66d4d3e3f77f31caa1e5c961f7d11bc50`  
+		Last Modified: Tue, 01 Sep 2020 01:57:40 GMT  
+		Size: 196.1 MB (196126694 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:babcccd44e2c4ff60095224e93af752578c4d0167651778a358c79003e2ab1e0`  
-		Last Modified: Fri, 14 Aug 2020 22:39:49 GMT  
+	-	`sha256:375f5551028b04e518530a854e5906bfc85c3389aad9cca631ddb3cf412117fd`  
+		Last Modified: Tue, 01 Sep 2020 21:22:40 GMT  
 		Size: 13.5 MB (13463321 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6ee6c1c4c02be4aa0bdd804455895dccf7052a4effea83011af559f7ce6d637c`  
-		Last Modified: Fri, 14 Aug 2020 22:39:49 GMT  
-		Size: 4.2 MB (4168134 bytes)  
+	-	`sha256:26ef1faaba9c7f97e77f94bd4f03d17199257066e1403d8186ce6b3376e0dedb`  
+		Last Modified: Tue, 01 Sep 2020 21:22:40 GMT  
+		Size: 4.2 MB (4168213 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-15-lein-buster`
 
 ```console
-$ docker pull clojure@sha256:bce4e2016467809797b18398a3244d5be71b5498a5ed4ff07c17917b925ed7da
+$ docker pull clojure@sha256:627bfbc7714812b4224bb940a765dc267a938bd3ff4994abc4f1af393925c27d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -9457,14 +9457,14 @@ $ docker pull clojure@sha256:bce4e2016467809797b18398a3244d5be71b5498a5ed4ff07c1
 ### `clojure:openjdk-15-lein-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:449162825012af811f96d9347b7ac32497b5511f7d005240e1ce819b93b43a10
+$ docker pull clojure@sha256:498e84f1060a1e6a5597db6cf11667eccbae03a8f428ed8cd8829aa02c7968c1
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **347.5 MB (347523922 bytes)**  
+-	Total Size: **347.5 MB (347523983 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:31dc3fcbb12bc4f38f3d590db11f94ea34c347a5197af4f2c7ed5359c707421f`
+-	Image ID: `sha256:031a608d7b9001c81f41e9bd25a29b7eb9cd9f82452af29c703fa9fbea81e8c6`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -9490,25 +9490,25 @@ ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Fri, 07 Aug 2020 23:31:43 GMT
 ENV JAVA_VERSION=15
-# Fri, 14 Aug 2020 21:36:36 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Fri, 14 Aug 2020 21:36:37 GMT
+# Tue, 01 Sep 2020 01:46:34 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:46:35 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 22:34:20 GMT
+# Tue, 01 Sep 2020 21:14:56 GMT
 ENV LEIN_VERSION=2.9.3
-# Fri, 14 Aug 2020 22:34:21 GMT
+# Tue, 01 Sep 2020 21:14:56 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Fri, 14 Aug 2020 22:34:21 GMT
+# Tue, 01 Sep 2020 21:14:56 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 22:34:27 GMT
+# Tue, 01 Sep 2020 21:15:03 GMT
 RUN apt-get update && apt-get install -y gnupg && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg
-# Fri, 14 Aug 2020 22:34:27 GMT
+# Tue, 01 Sep 2020 21:15:03 GMT
 ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Fri, 14 Aug 2020 22:34:28 GMT
+# Tue, 01 Sep 2020 21:15:03 GMT
 ENV LEIN_ROOT=1
-# Fri, 14 Aug 2020 22:34:32 GMT
+# Tue, 01 Sep 2020 21:15:08 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Fri, 14 Aug 2020 22:34:32 GMT
+# Tue, 01 Sep 2020 21:15:08 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -9537,23 +9537,23 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:48:44 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f96ab385af8c9d760dba0676b72a17036befbe9bdfaa674f3d1748ad822b37ec`  
-		Last Modified: Fri, 14 Aug 2020 21:41:28 GMT  
-		Size: 195.9 MB (195860975 bytes)  
+	-	`sha256:72a0367c0236abe0949679e4ae9b1a8dbf4ce3d0857e20ab620f4de4256ce84c`  
+		Last Modified: Tue, 01 Sep 2020 01:57:11 GMT  
+		Size: 195.9 MB (195861088 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:24f6252e684609b23a3a5141188b012937d97128d0be7f1f39c5261a7f5bba58`  
-		Last Modified: Fri, 14 Aug 2020 22:39:56 GMT  
-		Size: 13.5 MB (13540720 bytes)  
+	-	`sha256:e8252849a0196668c1a9e45b28dbbd8468cd7cfe7485b79bf461093192fd3fec`  
+		Last Modified: Tue, 01 Sep 2020 21:22:48 GMT  
+		Size: 13.5 MB (13540648 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ae28467efe21b2b90a75b1f483cb8993f9d603083594f16691b9983b48cd1e2e`  
-		Last Modified: Fri, 14 Aug 2020 22:39:55 GMT  
-		Size: 4.2 MB (4168131 bytes)  
+	-	`sha256:93ab01df58cf77969f95e46f58b4303c022a8dd873fc8cc4636c55738149da17`  
+		Last Modified: Tue, 01 Sep 2020 21:22:47 GMT  
+		Size: 4.2 MB (4168151 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-15-lein-slim-buster`
 
 ```console
-$ docker pull clojure@sha256:13f12bc35f7fbd192013c0b48d45dc463b7694a24f57043f783fbc6d43fd0df0
+$ docker pull clojure@sha256:cb04ee9780400b1575fc00d1e1d4cac9e4bb538b8ce09f4a172bd57be93f7129
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -9563,14 +9563,14 @@ $ docker pull clojure@sha256:13f12bc35f7fbd192013c0b48d45dc463b7694a24f57043f783
 ### `clojure:openjdk-15-lein-slim-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:d67c4fa149096298e51f064a17195b480736d52ee85fae44c0900c59cd014b61
+$ docker pull clojure@sha256:1dd1fb98fbea918e0ad55e1f9bdfaea2f2bd13a4ff913584f41665df49298dee
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **244.1 MB (244098827 bytes)**  
+-	Total Size: **244.1 MB (244098991 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:8e7d2cb28cf354c44b4610f98a51ec9f6f2c4cb00f711855aa42bccaa45ad531`
+-	Image ID: `sha256:5f6c6cac144f8060d295f94a777c7f9365134e1f943ee51c7cb6b18bbb46a65f`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -9590,25 +9590,25 @@ ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Fri, 07 Aug 2020 23:31:58 GMT
 ENV JAVA_VERSION=15
-# Fri, 14 Aug 2020 21:37:00 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Fri, 14 Aug 2020 21:37:01 GMT
+# Tue, 01 Sep 2020 01:47:08 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:47:08 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 22:33:59 GMT
+# Tue, 01 Sep 2020 21:14:37 GMT
 ENV LEIN_VERSION=2.9.3
-# Fri, 14 Aug 2020 22:33:59 GMT
+# Tue, 01 Sep 2020 21:14:37 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Fri, 14 Aug 2020 22:33:59 GMT
+# Tue, 01 Sep 2020 21:14:37 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 22:34:09 GMT
+# Tue, 01 Sep 2020 21:14:46 GMT
 RUN apt-get update && apt-get install -y gnupg wget && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg wget
-# Fri, 14 Aug 2020 22:34:09 GMT
+# Tue, 01 Sep 2020 21:14:47 GMT
 ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Fri, 14 Aug 2020 22:34:10 GMT
+# Tue, 01 Sep 2020 21:14:47 GMT
 ENV LEIN_ROOT=1
-# Fri, 14 Aug 2020 22:34:14 GMT
+# Tue, 01 Sep 2020 21:14:51 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Fri, 14 Aug 2020 22:34:14 GMT
+# Tue, 01 Sep 2020 21:14:51 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -9625,23 +9625,23 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:49:13 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5bfd1d6a35e3871606342eff139fe322557b271b39d0dd81d544a8450d6b8a08`  
-		Last Modified: Fri, 14 Aug 2020 21:42:11 GMT  
-		Size: 196.1 MB (196126609 bytes)  
+	-	`sha256:6bcaf8278534a89fbf9fe35f783ca9c66d4d3e3f77f31caa1e5c961f7d11bc50`  
+		Last Modified: Tue, 01 Sep 2020 01:57:40 GMT  
+		Size: 196.1 MB (196126694 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:babcccd44e2c4ff60095224e93af752578c4d0167651778a358c79003e2ab1e0`  
-		Last Modified: Fri, 14 Aug 2020 22:39:49 GMT  
+	-	`sha256:375f5551028b04e518530a854e5906bfc85c3389aad9cca631ddb3cf412117fd`  
+		Last Modified: Tue, 01 Sep 2020 21:22:40 GMT  
 		Size: 13.5 MB (13463321 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6ee6c1c4c02be4aa0bdd804455895dccf7052a4effea83011af559f7ce6d637c`  
-		Last Modified: Fri, 14 Aug 2020 22:39:49 GMT  
-		Size: 4.2 MB (4168134 bytes)  
+	-	`sha256:26ef1faaba9c7f97e77f94bd4f03d17199257066e1403d8186ce6b3376e0dedb`  
+		Last Modified: Tue, 01 Sep 2020 21:22:40 GMT  
+		Size: 4.2 MB (4168213 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-15-slim-buster`
 
 ```console
-$ docker pull clojure@sha256:13f12bc35f7fbd192013c0b48d45dc463b7694a24f57043f783fbc6d43fd0df0
+$ docker pull clojure@sha256:cb04ee9780400b1575fc00d1e1d4cac9e4bb538b8ce09f4a172bd57be93f7129
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -9651,14 +9651,14 @@ $ docker pull clojure@sha256:13f12bc35f7fbd192013c0b48d45dc463b7694a24f57043f783
 ### `clojure:openjdk-15-slim-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:d67c4fa149096298e51f064a17195b480736d52ee85fae44c0900c59cd014b61
+$ docker pull clojure@sha256:1dd1fb98fbea918e0ad55e1f9bdfaea2f2bd13a4ff913584f41665df49298dee
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **244.1 MB (244098827 bytes)**  
+-	Total Size: **244.1 MB (244098991 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:8e7d2cb28cf354c44b4610f98a51ec9f6f2c4cb00f711855aa42bccaa45ad531`
+-	Image ID: `sha256:5f6c6cac144f8060d295f94a777c7f9365134e1f943ee51c7cb6b18bbb46a65f`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -9678,25 +9678,25 @@ ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Fri, 07 Aug 2020 23:31:58 GMT
 ENV JAVA_VERSION=15
-# Fri, 14 Aug 2020 21:37:00 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Fri, 14 Aug 2020 21:37:01 GMT
+# Tue, 01 Sep 2020 01:47:08 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:47:08 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 22:33:59 GMT
+# Tue, 01 Sep 2020 21:14:37 GMT
 ENV LEIN_VERSION=2.9.3
-# Fri, 14 Aug 2020 22:33:59 GMT
+# Tue, 01 Sep 2020 21:14:37 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Fri, 14 Aug 2020 22:33:59 GMT
+# Tue, 01 Sep 2020 21:14:37 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 22:34:09 GMT
+# Tue, 01 Sep 2020 21:14:46 GMT
 RUN apt-get update && apt-get install -y gnupg wget && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg wget
-# Fri, 14 Aug 2020 22:34:09 GMT
+# Tue, 01 Sep 2020 21:14:47 GMT
 ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Fri, 14 Aug 2020 22:34:10 GMT
+# Tue, 01 Sep 2020 21:14:47 GMT
 ENV LEIN_ROOT=1
-# Fri, 14 Aug 2020 22:34:14 GMT
+# Tue, 01 Sep 2020 21:14:51 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Fri, 14 Aug 2020 22:34:14 GMT
+# Tue, 01 Sep 2020 21:14:51 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -9713,23 +9713,23 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:49:13 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5bfd1d6a35e3871606342eff139fe322557b271b39d0dd81d544a8450d6b8a08`  
-		Last Modified: Fri, 14 Aug 2020 21:42:11 GMT  
-		Size: 196.1 MB (196126609 bytes)  
+	-	`sha256:6bcaf8278534a89fbf9fe35f783ca9c66d4d3e3f77f31caa1e5c961f7d11bc50`  
+		Last Modified: Tue, 01 Sep 2020 01:57:40 GMT  
+		Size: 196.1 MB (196126694 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:babcccd44e2c4ff60095224e93af752578c4d0167651778a358c79003e2ab1e0`  
-		Last Modified: Fri, 14 Aug 2020 22:39:49 GMT  
+	-	`sha256:375f5551028b04e518530a854e5906bfc85c3389aad9cca631ddb3cf412117fd`  
+		Last Modified: Tue, 01 Sep 2020 21:22:40 GMT  
 		Size: 13.5 MB (13463321 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6ee6c1c4c02be4aa0bdd804455895dccf7052a4effea83011af559f7ce6d637c`  
-		Last Modified: Fri, 14 Aug 2020 22:39:49 GMT  
-		Size: 4.2 MB (4168134 bytes)  
+	-	`sha256:26ef1faaba9c7f97e77f94bd4f03d17199257066e1403d8186ce6b3376e0dedb`  
+		Last Modified: Tue, 01 Sep 2020 21:22:40 GMT  
+		Size: 4.2 MB (4168213 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-15-tools-deps`
 
 ```console
-$ docker pull clojure@sha256:34b3919caa2f8e1eb19eb97100accf5fcaeb58e9df4ff2db5811c114ee86b37e
+$ docker pull clojure@sha256:6427d05a84eee4c3455eaaa38ea414ab2eaa2268b5590c5d916b19acea22b52f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -9739,14 +9739,14 @@ $ docker pull clojure@sha256:34b3919caa2f8e1eb19eb97100accf5fcaeb58e9df4ff2db581
 ### `clojure:openjdk-15-tools-deps` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:3c4ff616ec8c71e1c152503cf9610edf2942214a2fbc6f7117900f47a44abd1e
+$ docker pull clojure@sha256:13dc12699bc6ce530bb8c14c7480316afca94ec43e2c36062b2126debd2b3c85
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **269.0 MB (268974062 bytes)**  
+-	Total Size: **269.0 MB (268973796 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c17434e6b7b7a4ab8b958b3506ce127e907f3382ab51f7b41f671b846e6c4166`
+-	Image ID: `sha256:89f5e24afd2eff3de4cb6393068271e35c9e87a3dcfbd79f7147863648bc698d`
 -	Default Command: `["sh","-c","sleep 1 && exec clj"]`
 
 ```dockerfile
@@ -9766,17 +9766,17 @@ ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Fri, 07 Aug 2020 23:31:58 GMT
 ENV JAVA_VERSION=15
-# Fri, 14 Aug 2020 21:37:00 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Fri, 14 Aug 2020 21:37:01 GMT
+# Tue, 01 Sep 2020 01:47:08 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:47:08 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 22:35:31 GMT
+# Tue, 01 Sep 2020 21:16:07 GMT
 ENV CLOJURE_VERSION=1.10.1.561
-# Fri, 14 Aug 2020 22:35:32 GMT
+# Tue, 01 Sep 2020 21:16:07 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 22:35:52 GMT
+# Tue, 01 Sep 2020 21:16:27 GMT
 RUN apt-get update && apt-get install -y curl make rlwrap wget && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "7f9e4e7c5a8171db4e4edf5ce78e5b8f453bae641a4c6b7f3dda36c3128d2ff7 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apt-get purge -y --auto-remove curl wget
-# Fri, 14 Aug 2020 22:35:52 GMT
+# Tue, 01 Sep 2020 21:16:27 GMT
 CMD ["sh" "-c" "sleep 1 && exec clj"]
 ```
 
@@ -9793,19 +9793,19 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 		Last Modified: Wed, 05 Aug 2020 00:49:13 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5bfd1d6a35e3871606342eff139fe322557b271b39d0dd81d544a8450d6b8a08`  
-		Last Modified: Fri, 14 Aug 2020 21:42:11 GMT  
-		Size: 196.1 MB (196126609 bytes)  
+	-	`sha256:6bcaf8278534a89fbf9fe35f783ca9c66d4d3e3f77f31caa1e5c961f7d11bc50`  
+		Last Modified: Tue, 01 Sep 2020 01:57:40 GMT  
+		Size: 196.1 MB (196126694 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7d0d49f4b59359714ebc9ba3918707817fb1b2def8c3905f404015215303ec09`  
-		Last Modified: Fri, 14 Aug 2020 22:40:23 GMT  
-		Size: 42.5 MB (42506690 bytes)  
+	-	`sha256:27dbe31aefe6537f1b7a0261baf16c03a9a298a82a2657e74863bec0c155986d`  
+		Last Modified: Tue, 01 Sep 2020 21:23:16 GMT  
+		Size: 42.5 MB (42506339 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-15-tools-deps-1.10.1.561`
 
 ```console
-$ docker pull clojure@sha256:34b3919caa2f8e1eb19eb97100accf5fcaeb58e9df4ff2db5811c114ee86b37e
+$ docker pull clojure@sha256:6427d05a84eee4c3455eaaa38ea414ab2eaa2268b5590c5d916b19acea22b52f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -9815,14 +9815,14 @@ $ docker pull clojure@sha256:34b3919caa2f8e1eb19eb97100accf5fcaeb58e9df4ff2db581
 ### `clojure:openjdk-15-tools-deps-1.10.1.561` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:3c4ff616ec8c71e1c152503cf9610edf2942214a2fbc6f7117900f47a44abd1e
+$ docker pull clojure@sha256:13dc12699bc6ce530bb8c14c7480316afca94ec43e2c36062b2126debd2b3c85
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **269.0 MB (268974062 bytes)**  
+-	Total Size: **269.0 MB (268973796 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c17434e6b7b7a4ab8b958b3506ce127e907f3382ab51f7b41f671b846e6c4166`
+-	Image ID: `sha256:89f5e24afd2eff3de4cb6393068271e35c9e87a3dcfbd79f7147863648bc698d`
 -	Default Command: `["sh","-c","sleep 1 && exec clj"]`
 
 ```dockerfile
@@ -9842,17 +9842,17 @@ ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Fri, 07 Aug 2020 23:31:58 GMT
 ENV JAVA_VERSION=15
-# Fri, 14 Aug 2020 21:37:00 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Fri, 14 Aug 2020 21:37:01 GMT
+# Tue, 01 Sep 2020 01:47:08 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:47:08 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 22:35:31 GMT
+# Tue, 01 Sep 2020 21:16:07 GMT
 ENV CLOJURE_VERSION=1.10.1.561
-# Fri, 14 Aug 2020 22:35:32 GMT
+# Tue, 01 Sep 2020 21:16:07 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 22:35:52 GMT
+# Tue, 01 Sep 2020 21:16:27 GMT
 RUN apt-get update && apt-get install -y curl make rlwrap wget && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "7f9e4e7c5a8171db4e4edf5ce78e5b8f453bae641a4c6b7f3dda36c3128d2ff7 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apt-get purge -y --auto-remove curl wget
-# Fri, 14 Aug 2020 22:35:52 GMT
+# Tue, 01 Sep 2020 21:16:27 GMT
 CMD ["sh" "-c" "sleep 1 && exec clj"]
 ```
 
@@ -9869,19 +9869,19 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 		Last Modified: Wed, 05 Aug 2020 00:49:13 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5bfd1d6a35e3871606342eff139fe322557b271b39d0dd81d544a8450d6b8a08`  
-		Last Modified: Fri, 14 Aug 2020 21:42:11 GMT  
-		Size: 196.1 MB (196126609 bytes)  
+	-	`sha256:6bcaf8278534a89fbf9fe35f783ca9c66d4d3e3f77f31caa1e5c961f7d11bc50`  
+		Last Modified: Tue, 01 Sep 2020 01:57:40 GMT  
+		Size: 196.1 MB (196126694 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7d0d49f4b59359714ebc9ba3918707817fb1b2def8c3905f404015215303ec09`  
-		Last Modified: Fri, 14 Aug 2020 22:40:23 GMT  
-		Size: 42.5 MB (42506690 bytes)  
+	-	`sha256:27dbe31aefe6537f1b7a0261baf16c03a9a298a82a2657e74863bec0c155986d`  
+		Last Modified: Tue, 01 Sep 2020 21:23:16 GMT  
+		Size: 42.5 MB (42506339 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-15-tools-deps-1.10.1.561-buster`
 
 ```console
-$ docker pull clojure@sha256:6a900a982e4708da2b1310f1d95b08f107428580140be66af04ab9257687139b
+$ docker pull clojure@sha256:f7df64981ce5c1192d686475124a294c82690ad0eb15afadf7286b6675714567
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -9891,14 +9891,14 @@ $ docker pull clojure@sha256:6a900a982e4708da2b1310f1d95b08f107428580140be66af04
 ### `clojure:openjdk-15-tools-deps-1.10.1.561-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:568e89f14fc53fa66f9ab657ca529e21717d14d2d6046df14bfc67541d6156b9
+$ docker pull clojure@sha256:f9d022fdecfeaa35b32643b72f88c3a18ff951f42d27c611dd215687d8e3762e
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **361.0 MB (360981870 bytes)**  
+-	Total Size: **361.0 MB (360982090 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:002c2ccc614b85c19c03bce458a3881fd8bc690befc47c432cf2188434d0ab4f`
+-	Image ID: `sha256:13b465c4c3f11f3dd2574e3396b58fa428ec33da1fb7cf7a1ebe1efb769cc889`
 -	Default Command: `["sh","-c","sleep 1 && exec clj"]`
 
 ```dockerfile
@@ -9924,17 +9924,17 @@ ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Fri, 07 Aug 2020 23:31:43 GMT
 ENV JAVA_VERSION=15
-# Fri, 14 Aug 2020 21:36:36 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Fri, 14 Aug 2020 21:36:37 GMT
+# Tue, 01 Sep 2020 01:46:34 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:46:35 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 22:35:56 GMT
+# Tue, 01 Sep 2020 21:16:32 GMT
 ENV CLOJURE_VERSION=1.10.1.561
-# Fri, 14 Aug 2020 22:35:56 GMT
+# Tue, 01 Sep 2020 21:16:32 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 22:36:11 GMT
+# Tue, 01 Sep 2020 21:16:47 GMT
 RUN apt-get update && apt-get install -y make rlwrap && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "7f9e4e7c5a8171db4e4edf5ce78e5b8f453bae641a4c6b7f3dda36c3128d2ff7 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)"
-# Fri, 14 Aug 2020 22:36:11 GMT
+# Tue, 01 Sep 2020 21:16:47 GMT
 CMD ["sh" "-c" "sleep 1 && exec clj"]
 ```
 
@@ -9963,19 +9963,19 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 		Last Modified: Wed, 05 Aug 2020 00:48:44 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f96ab385af8c9d760dba0676b72a17036befbe9bdfaa674f3d1748ad822b37ec`  
-		Last Modified: Fri, 14 Aug 2020 21:41:28 GMT  
-		Size: 195.9 MB (195860975 bytes)  
+	-	`sha256:72a0367c0236abe0949679e4ae9b1a8dbf4ce3d0857e20ab620f4de4256ce84c`  
+		Last Modified: Tue, 01 Sep 2020 01:57:11 GMT  
+		Size: 195.9 MB (195861088 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:658e1406a6e2b69269d969b43341c48949c902baa21bf6ff3f20d6e243564490`  
-		Last Modified: Fri, 14 Aug 2020 22:40:31 GMT  
-		Size: 31.2 MB (31166799 bytes)  
+	-	`sha256:44c55aaf52758c1b75d87380aacb746b7123bde298e71057a214e1fcd3d076f2`  
+		Last Modified: Tue, 01 Sep 2020 21:23:24 GMT  
+		Size: 31.2 MB (31166906 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-15-tools-deps-1.10.1.561-slim-buster`
 
 ```console
-$ docker pull clojure@sha256:34b3919caa2f8e1eb19eb97100accf5fcaeb58e9df4ff2db5811c114ee86b37e
+$ docker pull clojure@sha256:6427d05a84eee4c3455eaaa38ea414ab2eaa2268b5590c5d916b19acea22b52f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -9985,14 +9985,14 @@ $ docker pull clojure@sha256:34b3919caa2f8e1eb19eb97100accf5fcaeb58e9df4ff2db581
 ### `clojure:openjdk-15-tools-deps-1.10.1.561-slim-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:3c4ff616ec8c71e1c152503cf9610edf2942214a2fbc6f7117900f47a44abd1e
+$ docker pull clojure@sha256:13dc12699bc6ce530bb8c14c7480316afca94ec43e2c36062b2126debd2b3c85
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **269.0 MB (268974062 bytes)**  
+-	Total Size: **269.0 MB (268973796 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c17434e6b7b7a4ab8b958b3506ce127e907f3382ab51f7b41f671b846e6c4166`
+-	Image ID: `sha256:89f5e24afd2eff3de4cb6393068271e35c9e87a3dcfbd79f7147863648bc698d`
 -	Default Command: `["sh","-c","sleep 1 && exec clj"]`
 
 ```dockerfile
@@ -10012,17 +10012,17 @@ ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Fri, 07 Aug 2020 23:31:58 GMT
 ENV JAVA_VERSION=15
-# Fri, 14 Aug 2020 21:37:00 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Fri, 14 Aug 2020 21:37:01 GMT
+# Tue, 01 Sep 2020 01:47:08 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:47:08 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 22:35:31 GMT
+# Tue, 01 Sep 2020 21:16:07 GMT
 ENV CLOJURE_VERSION=1.10.1.561
-# Fri, 14 Aug 2020 22:35:32 GMT
+# Tue, 01 Sep 2020 21:16:07 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 22:35:52 GMT
+# Tue, 01 Sep 2020 21:16:27 GMT
 RUN apt-get update && apt-get install -y curl make rlwrap wget && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "7f9e4e7c5a8171db4e4edf5ce78e5b8f453bae641a4c6b7f3dda36c3128d2ff7 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apt-get purge -y --auto-remove curl wget
-# Fri, 14 Aug 2020 22:35:52 GMT
+# Tue, 01 Sep 2020 21:16:27 GMT
 CMD ["sh" "-c" "sleep 1 && exec clj"]
 ```
 
@@ -10039,19 +10039,19 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 		Last Modified: Wed, 05 Aug 2020 00:49:13 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5bfd1d6a35e3871606342eff139fe322557b271b39d0dd81d544a8450d6b8a08`  
-		Last Modified: Fri, 14 Aug 2020 21:42:11 GMT  
-		Size: 196.1 MB (196126609 bytes)  
+	-	`sha256:6bcaf8278534a89fbf9fe35f783ca9c66d4d3e3f77f31caa1e5c961f7d11bc50`  
+		Last Modified: Tue, 01 Sep 2020 01:57:40 GMT  
+		Size: 196.1 MB (196126694 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7d0d49f4b59359714ebc9ba3918707817fb1b2def8c3905f404015215303ec09`  
-		Last Modified: Fri, 14 Aug 2020 22:40:23 GMT  
-		Size: 42.5 MB (42506690 bytes)  
+	-	`sha256:27dbe31aefe6537f1b7a0261baf16c03a9a298a82a2657e74863bec0c155986d`  
+		Last Modified: Tue, 01 Sep 2020 21:23:16 GMT  
+		Size: 42.5 MB (42506339 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-15-tools-deps-buster`
 
 ```console
-$ docker pull clojure@sha256:6a900a982e4708da2b1310f1d95b08f107428580140be66af04ab9257687139b
+$ docker pull clojure@sha256:f7df64981ce5c1192d686475124a294c82690ad0eb15afadf7286b6675714567
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -10061,14 +10061,14 @@ $ docker pull clojure@sha256:6a900a982e4708da2b1310f1d95b08f107428580140be66af04
 ### `clojure:openjdk-15-tools-deps-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:568e89f14fc53fa66f9ab657ca529e21717d14d2d6046df14bfc67541d6156b9
+$ docker pull clojure@sha256:f9d022fdecfeaa35b32643b72f88c3a18ff951f42d27c611dd215687d8e3762e
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **361.0 MB (360981870 bytes)**  
+-	Total Size: **361.0 MB (360982090 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:002c2ccc614b85c19c03bce458a3881fd8bc690befc47c432cf2188434d0ab4f`
+-	Image ID: `sha256:13b465c4c3f11f3dd2574e3396b58fa428ec33da1fb7cf7a1ebe1efb769cc889`
 -	Default Command: `["sh","-c","sleep 1 && exec clj"]`
 
 ```dockerfile
@@ -10094,17 +10094,17 @@ ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Fri, 07 Aug 2020 23:31:43 GMT
 ENV JAVA_VERSION=15
-# Fri, 14 Aug 2020 21:36:36 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Fri, 14 Aug 2020 21:36:37 GMT
+# Tue, 01 Sep 2020 01:46:34 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:46:35 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 22:35:56 GMT
+# Tue, 01 Sep 2020 21:16:32 GMT
 ENV CLOJURE_VERSION=1.10.1.561
-# Fri, 14 Aug 2020 22:35:56 GMT
+# Tue, 01 Sep 2020 21:16:32 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 22:36:11 GMT
+# Tue, 01 Sep 2020 21:16:47 GMT
 RUN apt-get update && apt-get install -y make rlwrap && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "7f9e4e7c5a8171db4e4edf5ce78e5b8f453bae641a4c6b7f3dda36c3128d2ff7 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)"
-# Fri, 14 Aug 2020 22:36:11 GMT
+# Tue, 01 Sep 2020 21:16:47 GMT
 CMD ["sh" "-c" "sleep 1 && exec clj"]
 ```
 
@@ -10133,19 +10133,19 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 		Last Modified: Wed, 05 Aug 2020 00:48:44 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f96ab385af8c9d760dba0676b72a17036befbe9bdfaa674f3d1748ad822b37ec`  
-		Last Modified: Fri, 14 Aug 2020 21:41:28 GMT  
-		Size: 195.9 MB (195860975 bytes)  
+	-	`sha256:72a0367c0236abe0949679e4ae9b1a8dbf4ce3d0857e20ab620f4de4256ce84c`  
+		Last Modified: Tue, 01 Sep 2020 01:57:11 GMT  
+		Size: 195.9 MB (195861088 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:658e1406a6e2b69269d969b43341c48949c902baa21bf6ff3f20d6e243564490`  
-		Last Modified: Fri, 14 Aug 2020 22:40:31 GMT  
-		Size: 31.2 MB (31166799 bytes)  
+	-	`sha256:44c55aaf52758c1b75d87380aacb746b7123bde298e71057a214e1fcd3d076f2`  
+		Last Modified: Tue, 01 Sep 2020 21:23:24 GMT  
+		Size: 31.2 MB (31166906 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-15-tools-deps-slim-buster`
 
 ```console
-$ docker pull clojure@sha256:34b3919caa2f8e1eb19eb97100accf5fcaeb58e9df4ff2db5811c114ee86b37e
+$ docker pull clojure@sha256:6427d05a84eee4c3455eaaa38ea414ab2eaa2268b5590c5d916b19acea22b52f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -10155,14 +10155,14 @@ $ docker pull clojure@sha256:34b3919caa2f8e1eb19eb97100accf5fcaeb58e9df4ff2db581
 ### `clojure:openjdk-15-tools-deps-slim-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:3c4ff616ec8c71e1c152503cf9610edf2942214a2fbc6f7117900f47a44abd1e
+$ docker pull clojure@sha256:13dc12699bc6ce530bb8c14c7480316afca94ec43e2c36062b2126debd2b3c85
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **269.0 MB (268974062 bytes)**  
+-	Total Size: **269.0 MB (268973796 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c17434e6b7b7a4ab8b958b3506ce127e907f3382ab51f7b41f671b846e6c4166`
+-	Image ID: `sha256:89f5e24afd2eff3de4cb6393068271e35c9e87a3dcfbd79f7147863648bc698d`
 -	Default Command: `["sh","-c","sleep 1 && exec clj"]`
 
 ```dockerfile
@@ -10182,17 +10182,17 @@ ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Fri, 07 Aug 2020 23:31:58 GMT
 ENV JAVA_VERSION=15
-# Fri, 14 Aug 2020 21:37:00 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Fri, 14 Aug 2020 21:37:01 GMT
+# Tue, 01 Sep 2020 01:47:08 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:47:08 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 22:35:31 GMT
+# Tue, 01 Sep 2020 21:16:07 GMT
 ENV CLOJURE_VERSION=1.10.1.561
-# Fri, 14 Aug 2020 22:35:32 GMT
+# Tue, 01 Sep 2020 21:16:07 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 22:35:52 GMT
+# Tue, 01 Sep 2020 21:16:27 GMT
 RUN apt-get update && apt-get install -y curl make rlwrap wget && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "7f9e4e7c5a8171db4e4edf5ce78e5b8f453bae641a4c6b7f3dda36c3128d2ff7 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apt-get purge -y --auto-remove curl wget
-# Fri, 14 Aug 2020 22:35:52 GMT
+# Tue, 01 Sep 2020 21:16:27 GMT
 CMD ["sh" "-c" "sleep 1 && exec clj"]
 ```
 
@@ -10209,19 +10209,19 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 		Last Modified: Wed, 05 Aug 2020 00:49:13 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5bfd1d6a35e3871606342eff139fe322557b271b39d0dd81d544a8450d6b8a08`  
-		Last Modified: Fri, 14 Aug 2020 21:42:11 GMT  
-		Size: 196.1 MB (196126609 bytes)  
+	-	`sha256:6bcaf8278534a89fbf9fe35f783ca9c66d4d3e3f77f31caa1e5c961f7d11bc50`  
+		Last Modified: Tue, 01 Sep 2020 01:57:40 GMT  
+		Size: 196.1 MB (196126694 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7d0d49f4b59359714ebc9ba3918707817fb1b2def8c3905f404015215303ec09`  
-		Last Modified: Fri, 14 Aug 2020 22:40:23 GMT  
-		Size: 42.5 MB (42506690 bytes)  
+	-	`sha256:27dbe31aefe6537f1b7a0261baf16c03a9a298a82a2657e74863bec0c155986d`  
+		Last Modified: Tue, 01 Sep 2020 21:23:16 GMT  
+		Size: 42.5 MB (42506339 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-16`
 
 ```console
-$ docker pull clojure@sha256:55519edada66da8ee37bb5611f644cbfc232aab7b3f011c4121ac2150065e845
+$ docker pull clojure@sha256:b5059ff767f88aa844e4226b20bbf105aa26083e6c2aaeeac5e02cbf482fb33c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -10231,14 +10231,14 @@ $ docker pull clojure@sha256:55519edada66da8ee37bb5611f644cbfc232aab7b3f011c4121
 ### `clojure:openjdk-16` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:89c80ce3af9ef73df2619a9d7125adc3869573ff3d28e3c04095f8ada051bf5d
+$ docker pull clojure@sha256:275f74cd60f12dc0270006e36c37f5de94342c60064e49ca43320eb393032ed3
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **245.0 MB (245016986 bytes)**  
+-	Total Size: **245.0 MB (245017020 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:98296b16d2d65aa3946ac9bd27b670efbe82329d6a689d0dc558081a118fc1e1`
+-	Image ID: `sha256:55f23e3182a755fe5c7464465da86d57d4b2b30f0106b6d3f4fe1ab5be96f022`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -10258,25 +10258,25 @@ ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Thu, 27 Aug 2020 22:31:32 GMT
 ENV JAVA_VERSION=16-ea+13
-# Thu, 27 Aug 2020 22:31:47 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Thu, 27 Aug 2020 22:31:47 GMT
+# Tue, 01 Sep 2020 01:43:20 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:43:20 GMT
 CMD ["jshell"]
-# Thu, 27 Aug 2020 22:53:26 GMT
+# Tue, 01 Sep 2020 21:16:51 GMT
 ENV LEIN_VERSION=2.9.3
-# Thu, 27 Aug 2020 22:53:26 GMT
+# Tue, 01 Sep 2020 21:16:51 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Thu, 27 Aug 2020 22:53:26 GMT
+# Tue, 01 Sep 2020 21:16:51 GMT
 WORKDIR /tmp
-# Thu, 27 Aug 2020 22:53:36 GMT
+# Tue, 01 Sep 2020 21:17:01 GMT
 RUN apt-get update && apt-get install -y gnupg wget && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg wget
-# Thu, 27 Aug 2020 22:53:36 GMT
+# Tue, 01 Sep 2020 21:17:01 GMT
 ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Thu, 27 Aug 2020 22:53:36 GMT
+# Tue, 01 Sep 2020 21:17:01 GMT
 ENV LEIN_ROOT=1
-# Thu, 27 Aug 2020 22:53:40 GMT
+# Tue, 01 Sep 2020 21:17:06 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Thu, 27 Aug 2020 22:53:40 GMT
+# Tue, 01 Sep 2020 21:17:06 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -10293,23 +10293,23 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:48:13 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dc70c6892e78972a2781684c9a4ba7d1202fc8c26c42181636aa8ec0bbb982b5`  
-		Last Modified: Thu, 27 Aug 2020 22:35:33 GMT  
-		Size: 197.0 MB (197044757 bytes)  
+	-	`sha256:21f221a4a470d4af022d1b05e5a3ebff17b25bb23a5aea25f004125753359645`  
+		Last Modified: Tue, 01 Sep 2020 01:54:49 GMT  
+		Size: 197.0 MB (197044746 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:13d4192b3732d3926eb2564dfab778f3a1405ed5bcbde723fe4efa2dcce6192b`  
-		Last Modified: Thu, 27 Aug 2020 22:56:41 GMT  
-		Size: 13.5 MB (13463340 bytes)  
+	-	`sha256:6fffdc8739babb0eaf3bd450116f4e4d6df46165afebfa1c3e6c22a1639e4001`  
+		Last Modified: Tue, 01 Sep 2020 21:23:29 GMT  
+		Size: 13.5 MB (13463347 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5ca9728c4ebc3fc49fea29ec93ba99fe4d43f6fc0aa33957b33c09095402b34c`  
-		Last Modified: Thu, 27 Aug 2020 22:56:40 GMT  
-		Size: 4.2 MB (4168126 bytes)  
+	-	`sha256:a30efaeab4fc938ebed5293325c46d623cb9c883b4b7bd82b2c99705fc8f90f3`  
+		Last Modified: Tue, 01 Sep 2020 21:23:29 GMT  
+		Size: 4.2 MB (4168164 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-16-alpine`
 
 ```console
-$ docker pull clojure@sha256:8db6816fbaf5f64301491564e24570c24e1e37cbfd76de6d42570d397fc901e4
+$ docker pull clojure@sha256:ffccd0a49b482fc61fe2dc9dc65e9f19a4e5496c61da7969fed9be9bb0a56717
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -10319,14 +10319,14 @@ $ docker pull clojure@sha256:8db6816fbaf5f64301491564e24570c24e1e37cbfd76de6d425
 ### `clojure:openjdk-16-alpine` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:0fbf50c7056c7b19c4a02518ad15f561a776370d6694b4f073dda58c8f749639
+$ docker pull clojure@sha256:e224b8e53e18ad4c276ec70d9fd2b96f89ed78001a991b45c0250ed64ad85c43
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **219.3 MB (219315493 bytes)**  
+-	Total Size: **219.3 MB (219315409 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:bc69ba6b24fca56978b74c2904a7f52d2a433907a23a16cde6746387b7608745`
+-	Image ID: `sha256:2b7066ef3edac2738f11dc7689cbfb3e31ea2070e63310997999466154ddac3b`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -10342,25 +10342,25 @@ ENV JAVA_HOME=/opt/openjdk-16
 ENV PATH=/opt/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 22 Jul 2020 01:05:45 GMT
 ENV JAVA_VERSION=16-ea+5
-# Wed, 29 Jul 2020 01:24:50 GMT
-RUN set -eux; 		arch="$(apk --print-arch)"; 	case "$arch" in 		x86_64) 			downloadUrl=https://download.java.net/java/early_access/alpine/5/binaries/openjdk-16-ea+5_linux-x64-musl_bin.tar.gz; 			downloadSha256=1ec940bea148a7ececda635c209de3836fe4e6511f5d49d4248cf6d52c77aac8; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum -c -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/ssl/certs/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		java -Xshare:dump; 		javac --version; 	java --version
-# Wed, 29 Jul 2020 01:24:51 GMT
+# Tue, 01 Sep 2020 01:44:22 GMT
+RUN set -eux; 		arch="$(apk --print-arch)"; 	case "$arch" in 		x86_64) 			downloadUrl=https://download.java.net/java/early_access/alpine/5/binaries/openjdk-16-ea+5_linux-x64-musl_bin.tar.gz; 			downloadSha256=1ec940bea148a7ececda635c209de3836fe4e6511f5d49d4248cf6d52c77aac8; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum -c -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/ssl/certs/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:44:22 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 21:25:33 GMT
+# Tue, 01 Sep 2020 21:19:10 GMT
 ENV LEIN_VERSION=2.9.3
-# Fri, 14 Aug 2020 21:25:33 GMT
+# Tue, 01 Sep 2020 21:19:10 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Fri, 14 Aug 2020 21:25:33 GMT
+# Tue, 01 Sep 2020 21:19:10 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 21:25:38 GMT
+# Tue, 01 Sep 2020 21:19:13 GMT
 RUN apk add --update --no-cache ca-certificates bash tar openssl gnupg && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apk del ca-certificates tar openssl gnupg
-# Fri, 14 Aug 2020 21:25:38 GMT
+# Tue, 01 Sep 2020 21:19:13 GMT
 ENV PATH=/opt/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Fri, 14 Aug 2020 21:25:39 GMT
+# Tue, 01 Sep 2020 21:19:13 GMT
 ENV LEIN_ROOT=1
-# Fri, 14 Aug 2020 21:25:46 GMT
+# Tue, 01 Sep 2020 21:19:18 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Fri, 14 Aug 2020 21:25:46 GMT
+# Tue, 01 Sep 2020 21:19:18 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -10373,23 +10373,23 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 22 Jul 2020 01:13:01 GMT  
 		Size: 926.4 KB (926401 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3ad14fdcda01da7c472fc488405c040d3b90afda31db2232d0a657edf2a86ab2`  
-		Last Modified: Wed, 29 Jul 2020 01:33:12 GMT  
-		Size: 197.5 MB (197456503 bytes)  
+	-	`sha256:db897018b4b7f77d0385f8d927829815841e840a5c7b293a8f540a58a2420aaa`  
+		Last Modified: Tue, 01 Sep 2020 01:55:28 GMT  
+		Size: 197.5 MB (197456532 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6347f44589e858b8ac43a1ab0eb54b75724bfa7d3f92b9d11c1ac5ce0b9b07fe`  
-		Last Modified: Fri, 14 Aug 2020 21:30:25 GMT  
-		Size: 14.0 MB (13966809 bytes)  
+	-	`sha256:5f2760d206b4a2815db6a35d8d4473f9b69346c8a7224e0e478cf3e553d21b82`  
+		Last Modified: Tue, 01 Sep 2020 21:24:16 GMT  
+		Size: 14.0 MB (13966800 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d2ed9b03755683b262050a5654a57f9230af47f2ae7398f26cda660ed8b1fb3b`  
-		Last Modified: Fri, 14 Aug 2020 21:30:24 GMT  
-		Size: 4.2 MB (4168239 bytes)  
+	-	`sha256:a22036942f7366cae0660eb53d058ceb3e554db27988cce64129b969bb660263`  
+		Last Modified: Tue, 01 Sep 2020 21:24:15 GMT  
+		Size: 4.2 MB (4168135 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-16-boot`
 
 ```console
-$ docker pull clojure@sha256:a9336750ba0beab7566356bb9f5bad6679facfaad72014a0a8b00841dba44840
+$ docker pull clojure@sha256:7581311d67c58ea009905dea63a5106839be30c1f477c501a39bb3711b8436f2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -10399,14 +10399,14 @@ $ docker pull clojure@sha256:a9336750ba0beab7566356bb9f5bad6679facfaad72014a0a8b
 ### `clojure:openjdk-16-boot` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:464bc067bdea04033ca43316b0d30aaa49b464b076970ec36f04919a2791a6ba
+$ docker pull clojure@sha256:300d95562b56187745816bdeb131d2d14c48fff764ed00eff78b1b81918038d7
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **286.5 MB (286485391 bytes)**  
+-	Total Size: **286.5 MB (286485378 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e02cc58bf89f6dcd83bf9b88702022529e250005257f0e5923c6a0e4072939d1`
+-	Image ID: `sha256:e751f45d42d850e9fcea73e7ffdcc10eb63f4386666425cf9d2928228e6fd337`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
@@ -10426,25 +10426,25 @@ ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Thu, 27 Aug 2020 22:31:32 GMT
 ENV JAVA_VERSION=16-ea+13
-# Thu, 27 Aug 2020 22:31:47 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Thu, 27 Aug 2020 22:31:47 GMT
+# Tue, 01 Sep 2020 01:43:20 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:43:20 GMT
 CMD ["jshell"]
-# Thu, 27 Aug 2020 22:54:01 GMT
+# Tue, 01 Sep 2020 21:17:29 GMT
 ENV BOOT_VERSION=2.8.3
-# Thu, 27 Aug 2020 22:54:01 GMT
+# Tue, 01 Sep 2020 21:17:29 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Thu, 27 Aug 2020 22:54:01 GMT
+# Tue, 01 Sep 2020 21:17:29 GMT
 WORKDIR /tmp
-# Thu, 27 Aug 2020 22:54:06 GMT
+# Tue, 01 Sep 2020 21:17:34 GMT
 RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/* && mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot && apt-get purge -y --auto-remove wget
-# Thu, 27 Aug 2020 22:54:06 GMT
+# Tue, 01 Sep 2020 21:17:34 GMT
 ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Thu, 27 Aug 2020 22:54:06 GMT
+# Tue, 01 Sep 2020 21:17:34 GMT
 ENV BOOT_AS_ROOT=yes
-# Thu, 27 Aug 2020 22:54:25 GMT
+# Tue, 01 Sep 2020 21:17:53 GMT
 RUN boot
-# Thu, 27 Aug 2020 22:54:25 GMT
+# Tue, 01 Sep 2020 21:17:53 GMT
 CMD ["boot" "repl"]
 ```
 
@@ -10461,23 +10461,23 @@ CMD ["boot" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:48:13 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dc70c6892e78972a2781684c9a4ba7d1202fc8c26c42181636aa8ec0bbb982b5`  
-		Last Modified: Thu, 27 Aug 2020 22:35:33 GMT  
-		Size: 197.0 MB (197044757 bytes)  
+	-	`sha256:21f221a4a470d4af022d1b05e5a3ebff17b25bb23a5aea25f004125753359645`  
+		Last Modified: Tue, 01 Sep 2020 01:54:49 GMT  
+		Size: 197.0 MB (197044746 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d48c915730359600eda2c2b6e502713d649e8bc197c31cbbd8859ef344cf2c76`  
-		Last Modified: Thu, 27 Aug 2020 22:56:53 GMT  
-		Size: 279.7 KB (279681 bytes)  
+	-	`sha256:a6a2d2628d42bd1b2ffe43f583ad21994b123e8edb0c524526532c37e91c832a`  
+		Last Modified: Tue, 01 Sep 2020 21:23:40 GMT  
+		Size: 279.7 KB (279670 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cd4e59ec2425fb864fbcc809b97deba76f716f0ca88a206af4f70db686d45409`  
-		Last Modified: Thu, 27 Aug 2020 22:56:55 GMT  
-		Size: 58.8 MB (58820190 bytes)  
+	-	`sha256:bc7dad535a5133d2632b7024a4d0bef3d6a5d8ee5b933aa897059ef9ce152a56`  
+		Last Modified: Tue, 01 Sep 2020 21:23:45 GMT  
+		Size: 58.8 MB (58820199 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-16-boot-2.8.3`
 
 ```console
-$ docker pull clojure@sha256:a9336750ba0beab7566356bb9f5bad6679facfaad72014a0a8b00841dba44840
+$ docker pull clojure@sha256:7581311d67c58ea009905dea63a5106839be30c1f477c501a39bb3711b8436f2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -10487,14 +10487,14 @@ $ docker pull clojure@sha256:a9336750ba0beab7566356bb9f5bad6679facfaad72014a0a8b
 ### `clojure:openjdk-16-boot-2.8.3` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:464bc067bdea04033ca43316b0d30aaa49b464b076970ec36f04919a2791a6ba
+$ docker pull clojure@sha256:300d95562b56187745816bdeb131d2d14c48fff764ed00eff78b1b81918038d7
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **286.5 MB (286485391 bytes)**  
+-	Total Size: **286.5 MB (286485378 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e02cc58bf89f6dcd83bf9b88702022529e250005257f0e5923c6a0e4072939d1`
+-	Image ID: `sha256:e751f45d42d850e9fcea73e7ffdcc10eb63f4386666425cf9d2928228e6fd337`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
@@ -10514,25 +10514,25 @@ ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Thu, 27 Aug 2020 22:31:32 GMT
 ENV JAVA_VERSION=16-ea+13
-# Thu, 27 Aug 2020 22:31:47 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Thu, 27 Aug 2020 22:31:47 GMT
+# Tue, 01 Sep 2020 01:43:20 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:43:20 GMT
 CMD ["jshell"]
-# Thu, 27 Aug 2020 22:54:01 GMT
+# Tue, 01 Sep 2020 21:17:29 GMT
 ENV BOOT_VERSION=2.8.3
-# Thu, 27 Aug 2020 22:54:01 GMT
+# Tue, 01 Sep 2020 21:17:29 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Thu, 27 Aug 2020 22:54:01 GMT
+# Tue, 01 Sep 2020 21:17:29 GMT
 WORKDIR /tmp
-# Thu, 27 Aug 2020 22:54:06 GMT
+# Tue, 01 Sep 2020 21:17:34 GMT
 RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/* && mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot && apt-get purge -y --auto-remove wget
-# Thu, 27 Aug 2020 22:54:06 GMT
+# Tue, 01 Sep 2020 21:17:34 GMT
 ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Thu, 27 Aug 2020 22:54:06 GMT
+# Tue, 01 Sep 2020 21:17:34 GMT
 ENV BOOT_AS_ROOT=yes
-# Thu, 27 Aug 2020 22:54:25 GMT
+# Tue, 01 Sep 2020 21:17:53 GMT
 RUN boot
-# Thu, 27 Aug 2020 22:54:25 GMT
+# Tue, 01 Sep 2020 21:17:53 GMT
 CMD ["boot" "repl"]
 ```
 
@@ -10549,23 +10549,23 @@ CMD ["boot" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:48:13 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dc70c6892e78972a2781684c9a4ba7d1202fc8c26c42181636aa8ec0bbb982b5`  
-		Last Modified: Thu, 27 Aug 2020 22:35:33 GMT  
-		Size: 197.0 MB (197044757 bytes)  
+	-	`sha256:21f221a4a470d4af022d1b05e5a3ebff17b25bb23a5aea25f004125753359645`  
+		Last Modified: Tue, 01 Sep 2020 01:54:49 GMT  
+		Size: 197.0 MB (197044746 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d48c915730359600eda2c2b6e502713d649e8bc197c31cbbd8859ef344cf2c76`  
-		Last Modified: Thu, 27 Aug 2020 22:56:53 GMT  
-		Size: 279.7 KB (279681 bytes)  
+	-	`sha256:a6a2d2628d42bd1b2ffe43f583ad21994b123e8edb0c524526532c37e91c832a`  
+		Last Modified: Tue, 01 Sep 2020 21:23:40 GMT  
+		Size: 279.7 KB (279670 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cd4e59ec2425fb864fbcc809b97deba76f716f0ca88a206af4f70db686d45409`  
-		Last Modified: Thu, 27 Aug 2020 22:56:55 GMT  
-		Size: 58.8 MB (58820190 bytes)  
+	-	`sha256:bc7dad535a5133d2632b7024a4d0bef3d6a5d8ee5b933aa897059ef9ce152a56`  
+		Last Modified: Tue, 01 Sep 2020 21:23:45 GMT  
+		Size: 58.8 MB (58820199 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-16-boot-2.8.3-alpine`
 
 ```console
-$ docker pull clojure@sha256:a402711b3c3ae1c5d6d87a6b321dcb65a280a3d0d52fa74015fc09b4e5b344ce
+$ docker pull clojure@sha256:e38550ca4d808792fbac6c0005f15dc29d6c7ec69598eb6eaa87e995cf98b94f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -10575,14 +10575,14 @@ $ docker pull clojure@sha256:a402711b3c3ae1c5d6d87a6b321dcb65a280a3d0d52fa74015f
 ### `clojure:openjdk-16-boot-2.8.3-alpine` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:aa2d59e181a734393e18c5bca8a20caa1f9143d315627618cf55d43996a174a8
+$ docker pull clojure@sha256:35005b2a725644db5e9d75c94b166e95768ff33a707906a0bd0e319811915b7b
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **260.8 MB (260793117 bytes)**  
+-	Total Size: **260.8 MB (260792857 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0a6e2556938267a650ea1a03c172634ad23715544d3e79856a691f25f8e4e7db`
+-	Image ID: `sha256:75bf03ebf7ff7c71769653304fdccdaf107e434007c37584b070de2b347624a0`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
@@ -10598,25 +10598,25 @@ ENV JAVA_HOME=/opt/openjdk-16
 ENV PATH=/opt/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 22 Jul 2020 01:05:45 GMT
 ENV JAVA_VERSION=16-ea+5
-# Wed, 29 Jul 2020 01:24:50 GMT
-RUN set -eux; 		arch="$(apk --print-arch)"; 	case "$arch" in 		x86_64) 			downloadUrl=https://download.java.net/java/early_access/alpine/5/binaries/openjdk-16-ea+5_linux-x64-musl_bin.tar.gz; 			downloadSha256=1ec940bea148a7ececda635c209de3836fe4e6511f5d49d4248cf6d52c77aac8; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum -c -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/ssl/certs/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		java -Xshare:dump; 		javac --version; 	java --version
-# Wed, 29 Jul 2020 01:24:51 GMT
+# Tue, 01 Sep 2020 01:44:22 GMT
+RUN set -eux; 		arch="$(apk --print-arch)"; 	case "$arch" in 		x86_64) 			downloadUrl=https://download.java.net/java/early_access/alpine/5/binaries/openjdk-16-ea+5_linux-x64-musl_bin.tar.gz; 			downloadSha256=1ec940bea148a7ececda635c209de3836fe4e6511f5d49d4248cf6d52c77aac8; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum -c -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/ssl/certs/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:44:22 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 21:25:52 GMT
+# Tue, 01 Sep 2020 21:19:22 GMT
 ENV BOOT_VERSION=2.8.3
-# Fri, 14 Aug 2020 21:25:52 GMT
+# Tue, 01 Sep 2020 21:19:22 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Fri, 14 Aug 2020 21:25:53 GMT
+# Tue, 01 Sep 2020 21:19:23 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 21:25:55 GMT
+# Tue, 01 Sep 2020 21:19:24 GMT
 RUN apk add --update --no-cache bash openssl && mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot && apk del openssl
-# Fri, 14 Aug 2020 21:25:55 GMT
+# Tue, 01 Sep 2020 21:19:24 GMT
 ENV PATH=/opt/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Fri, 14 Aug 2020 21:25:56 GMT
+# Tue, 01 Sep 2020 21:19:24 GMT
 ENV BOOT_AS_ROOT=yes
-# Fri, 14 Aug 2020 21:26:31 GMT
+# Tue, 01 Sep 2020 21:19:42 GMT
 RUN boot
-# Fri, 14 Aug 2020 21:26:32 GMT
+# Tue, 01 Sep 2020 21:19:43 GMT
 CMD ["boot" "repl"]
 ```
 
@@ -10629,23 +10629,23 @@ CMD ["boot" "repl"]
 		Last Modified: Wed, 22 Jul 2020 01:13:01 GMT  
 		Size: 926.4 KB (926401 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3ad14fdcda01da7c472fc488405c040d3b90afda31db2232d0a657edf2a86ab2`  
-		Last Modified: Wed, 29 Jul 2020 01:33:12 GMT  
-		Size: 197.5 MB (197456503 bytes)  
+	-	`sha256:db897018b4b7f77d0385f8d927829815841e840a5c7b293a8f540a58a2420aaa`  
+		Last Modified: Tue, 01 Sep 2020 01:55:28 GMT  
+		Size: 197.5 MB (197456532 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:be848cbbd911885260c54db59002ffa2c2a93879b47e4b1b1df03f40eebe8155`  
-		Last Modified: Fri, 14 Aug 2020 21:30:30 GMT  
-		Size: 792.3 KB (792325 bytes)  
+	-	`sha256:aaaa91e2aa9279269d4fbcfa7888aeb1108dd2fdcf3df6a68bd155143d47e338`  
+		Last Modified: Tue, 01 Sep 2020 21:24:19 GMT  
+		Size: 792.3 KB (792331 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fdb6bc9451559514f61bd4fea914dec543197faadbd7fa42b189cf1c556fa4dd`  
-		Last Modified: Fri, 14 Aug 2020 21:30:35 GMT  
-		Size: 58.8 MB (58820347 bytes)  
+	-	`sha256:4e259dee88dde743b5f13b5479ea652ed4c9f934e4174d802e153d1bfaa26bbd`  
+		Last Modified: Tue, 01 Sep 2020 21:24:23 GMT  
+		Size: 58.8 MB (58820052 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-16-boot-2.8.3-buster`
 
 ```console
-$ docker pull clojure@sha256:7accca5483701220d8d2cd2e661f0f132dd3af3a8d26c739d598d191f996682c
+$ docker pull clojure@sha256:5ff3a09acd92f54f99117e78c924bc39f286a47cc1d5044f0a20fa0d8d9b1b7b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -10655,14 +10655,14 @@ $ docker pull clojure@sha256:7accca5483701220d8d2cd2e661f0f132dd3af3a8d26c739d59
 ### `clojure:openjdk-16-boot-2.8.3-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:b9ea8b9d911a4321f62c2e981a7f0b040269d09276789afb31f9128405a675e6
+$ docker pull clojure@sha256:43209ba400f2d777f4e97a7c601dffc892c687b36b21a4545f22af036fcebaf1
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **389.6 MB (389562455 bytes)**  
+-	Total Size: **389.6 MB (389562230 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f0953022c6ef822a5920a1dc929a5b3843ac946837114f27d77c26688d9c02f8`
+-	Image ID: `sha256:fe6fde476e174dab96c732a3f6d59c715f6babd5dc3a9575922dac4e58cfe0df`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
@@ -10688,25 +10688,25 @@ ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Thu, 27 Aug 2020 22:30:37 GMT
 ENV JAVA_VERSION=16-ea+13
-# Thu, 27 Aug 2020 22:31:22 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Thu, 27 Aug 2020 22:31:22 GMT
+# Tue, 01 Sep 2020 01:42:55 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:42:56 GMT
 CMD ["jshell"]
-# Thu, 27 Aug 2020 22:54:30 GMT
+# Tue, 01 Sep 2020 21:17:58 GMT
 ENV BOOT_VERSION=2.8.3
-# Thu, 27 Aug 2020 22:54:30 GMT
+# Tue, 01 Sep 2020 21:17:58 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Thu, 27 Aug 2020 22:54:30 GMT
+# Tue, 01 Sep 2020 21:17:58 GMT
 WORKDIR /tmp
-# Thu, 27 Aug 2020 22:54:31 GMT
+# Tue, 01 Sep 2020 21:17:59 GMT
 RUN mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot
-# Thu, 27 Aug 2020 22:54:32 GMT
+# Tue, 01 Sep 2020 21:17:59 GMT
 ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Thu, 27 Aug 2020 22:54:32 GMT
+# Tue, 01 Sep 2020 21:17:59 GMT
 ENV BOOT_AS_ROOT=yes
-# Thu, 27 Aug 2020 22:54:51 GMT
+# Tue, 01 Sep 2020 21:18:17 GMT
 RUN boot
-# Thu, 27 Aug 2020 22:54:51 GMT
+# Tue, 01 Sep 2020 21:18:17 GMT
 CMD ["boot" "repl"]
 ```
 
@@ -10735,23 +10735,23 @@ CMD ["boot" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:47:44 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9aaba90dc6c33806a373fc2ae8f09b9ac47691b592c85c74ae271714172bb672`  
-		Last Modified: Thu, 27 Aug 2020 22:35:09 GMT  
-		Size: 196.8 MB (196781159 bytes)  
+	-	`sha256:4d06967fed734dd46caba0318d8d7f9c3e1706c069c1f2d120c3b978c4bb1e30`  
+		Last Modified: Tue, 01 Sep 2020 01:54:25 GMT  
+		Size: 196.8 MB (196781152 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dd82fbd3de6637d3f1484b3e53ec6f2a7da0a42bc6c187cf965c21872aaddf30`  
-		Last Modified: Thu, 27 Aug 2020 22:57:00 GMT  
+	-	`sha256:d60be4093a0f6883486169bc6dd1c5bccc9e203d402350e506dc5679e29a3c13`  
+		Last Modified: Tue, 01 Sep 2020 21:23:49 GMT  
 		Size: 6.9 KB (6899 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7486bdaf44467c5ef263c190b20e15af2c88ae85a6cfb84d5be96a3c03d09ab3`  
-		Last Modified: Thu, 27 Aug 2020 22:57:04 GMT  
-		Size: 58.8 MB (58820301 bytes)  
+	-	`sha256:30a3e00a39be365bfc42702047b12585db35539159656d1d52d0290bc18d5f21`  
+		Last Modified: Tue, 01 Sep 2020 21:23:53 GMT  
+		Size: 58.8 MB (58820083 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-16-boot-2.8.3-slim-buster`
 
 ```console
-$ docker pull clojure@sha256:a9336750ba0beab7566356bb9f5bad6679facfaad72014a0a8b00841dba44840
+$ docker pull clojure@sha256:7581311d67c58ea009905dea63a5106839be30c1f477c501a39bb3711b8436f2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -10761,14 +10761,14 @@ $ docker pull clojure@sha256:a9336750ba0beab7566356bb9f5bad6679facfaad72014a0a8b
 ### `clojure:openjdk-16-boot-2.8.3-slim-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:464bc067bdea04033ca43316b0d30aaa49b464b076970ec36f04919a2791a6ba
+$ docker pull clojure@sha256:300d95562b56187745816bdeb131d2d14c48fff764ed00eff78b1b81918038d7
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **286.5 MB (286485391 bytes)**  
+-	Total Size: **286.5 MB (286485378 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e02cc58bf89f6dcd83bf9b88702022529e250005257f0e5923c6a0e4072939d1`
+-	Image ID: `sha256:e751f45d42d850e9fcea73e7ffdcc10eb63f4386666425cf9d2928228e6fd337`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
@@ -10788,25 +10788,25 @@ ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Thu, 27 Aug 2020 22:31:32 GMT
 ENV JAVA_VERSION=16-ea+13
-# Thu, 27 Aug 2020 22:31:47 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Thu, 27 Aug 2020 22:31:47 GMT
+# Tue, 01 Sep 2020 01:43:20 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:43:20 GMT
 CMD ["jshell"]
-# Thu, 27 Aug 2020 22:54:01 GMT
+# Tue, 01 Sep 2020 21:17:29 GMT
 ENV BOOT_VERSION=2.8.3
-# Thu, 27 Aug 2020 22:54:01 GMT
+# Tue, 01 Sep 2020 21:17:29 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Thu, 27 Aug 2020 22:54:01 GMT
+# Tue, 01 Sep 2020 21:17:29 GMT
 WORKDIR /tmp
-# Thu, 27 Aug 2020 22:54:06 GMT
+# Tue, 01 Sep 2020 21:17:34 GMT
 RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/* && mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot && apt-get purge -y --auto-remove wget
-# Thu, 27 Aug 2020 22:54:06 GMT
+# Tue, 01 Sep 2020 21:17:34 GMT
 ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Thu, 27 Aug 2020 22:54:06 GMT
+# Tue, 01 Sep 2020 21:17:34 GMT
 ENV BOOT_AS_ROOT=yes
-# Thu, 27 Aug 2020 22:54:25 GMT
+# Tue, 01 Sep 2020 21:17:53 GMT
 RUN boot
-# Thu, 27 Aug 2020 22:54:25 GMT
+# Tue, 01 Sep 2020 21:17:53 GMT
 CMD ["boot" "repl"]
 ```
 
@@ -10823,23 +10823,23 @@ CMD ["boot" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:48:13 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dc70c6892e78972a2781684c9a4ba7d1202fc8c26c42181636aa8ec0bbb982b5`  
-		Last Modified: Thu, 27 Aug 2020 22:35:33 GMT  
-		Size: 197.0 MB (197044757 bytes)  
+	-	`sha256:21f221a4a470d4af022d1b05e5a3ebff17b25bb23a5aea25f004125753359645`  
+		Last Modified: Tue, 01 Sep 2020 01:54:49 GMT  
+		Size: 197.0 MB (197044746 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d48c915730359600eda2c2b6e502713d649e8bc197c31cbbd8859ef344cf2c76`  
-		Last Modified: Thu, 27 Aug 2020 22:56:53 GMT  
-		Size: 279.7 KB (279681 bytes)  
+	-	`sha256:a6a2d2628d42bd1b2ffe43f583ad21994b123e8edb0c524526532c37e91c832a`  
+		Last Modified: Tue, 01 Sep 2020 21:23:40 GMT  
+		Size: 279.7 KB (279670 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cd4e59ec2425fb864fbcc809b97deba76f716f0ca88a206af4f70db686d45409`  
-		Last Modified: Thu, 27 Aug 2020 22:56:55 GMT  
-		Size: 58.8 MB (58820190 bytes)  
+	-	`sha256:bc7dad535a5133d2632b7024a4d0bef3d6a5d8ee5b933aa897059ef9ce152a56`  
+		Last Modified: Tue, 01 Sep 2020 21:23:45 GMT  
+		Size: 58.8 MB (58820199 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-16-boot-alpine`
 
 ```console
-$ docker pull clojure@sha256:a402711b3c3ae1c5d6d87a6b321dcb65a280a3d0d52fa74015fc09b4e5b344ce
+$ docker pull clojure@sha256:e38550ca4d808792fbac6c0005f15dc29d6c7ec69598eb6eaa87e995cf98b94f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -10849,14 +10849,14 @@ $ docker pull clojure@sha256:a402711b3c3ae1c5d6d87a6b321dcb65a280a3d0d52fa74015f
 ### `clojure:openjdk-16-boot-alpine` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:aa2d59e181a734393e18c5bca8a20caa1f9143d315627618cf55d43996a174a8
+$ docker pull clojure@sha256:35005b2a725644db5e9d75c94b166e95768ff33a707906a0bd0e319811915b7b
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **260.8 MB (260793117 bytes)**  
+-	Total Size: **260.8 MB (260792857 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0a6e2556938267a650ea1a03c172634ad23715544d3e79856a691f25f8e4e7db`
+-	Image ID: `sha256:75bf03ebf7ff7c71769653304fdccdaf107e434007c37584b070de2b347624a0`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
@@ -10872,25 +10872,25 @@ ENV JAVA_HOME=/opt/openjdk-16
 ENV PATH=/opt/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 22 Jul 2020 01:05:45 GMT
 ENV JAVA_VERSION=16-ea+5
-# Wed, 29 Jul 2020 01:24:50 GMT
-RUN set -eux; 		arch="$(apk --print-arch)"; 	case "$arch" in 		x86_64) 			downloadUrl=https://download.java.net/java/early_access/alpine/5/binaries/openjdk-16-ea+5_linux-x64-musl_bin.tar.gz; 			downloadSha256=1ec940bea148a7ececda635c209de3836fe4e6511f5d49d4248cf6d52c77aac8; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum -c -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/ssl/certs/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		java -Xshare:dump; 		javac --version; 	java --version
-# Wed, 29 Jul 2020 01:24:51 GMT
+# Tue, 01 Sep 2020 01:44:22 GMT
+RUN set -eux; 		arch="$(apk --print-arch)"; 	case "$arch" in 		x86_64) 			downloadUrl=https://download.java.net/java/early_access/alpine/5/binaries/openjdk-16-ea+5_linux-x64-musl_bin.tar.gz; 			downloadSha256=1ec940bea148a7ececda635c209de3836fe4e6511f5d49d4248cf6d52c77aac8; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum -c -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/ssl/certs/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:44:22 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 21:25:52 GMT
+# Tue, 01 Sep 2020 21:19:22 GMT
 ENV BOOT_VERSION=2.8.3
-# Fri, 14 Aug 2020 21:25:52 GMT
+# Tue, 01 Sep 2020 21:19:22 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Fri, 14 Aug 2020 21:25:53 GMT
+# Tue, 01 Sep 2020 21:19:23 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 21:25:55 GMT
+# Tue, 01 Sep 2020 21:19:24 GMT
 RUN apk add --update --no-cache bash openssl && mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot && apk del openssl
-# Fri, 14 Aug 2020 21:25:55 GMT
+# Tue, 01 Sep 2020 21:19:24 GMT
 ENV PATH=/opt/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Fri, 14 Aug 2020 21:25:56 GMT
+# Tue, 01 Sep 2020 21:19:24 GMT
 ENV BOOT_AS_ROOT=yes
-# Fri, 14 Aug 2020 21:26:31 GMT
+# Tue, 01 Sep 2020 21:19:42 GMT
 RUN boot
-# Fri, 14 Aug 2020 21:26:32 GMT
+# Tue, 01 Sep 2020 21:19:43 GMT
 CMD ["boot" "repl"]
 ```
 
@@ -10903,23 +10903,23 @@ CMD ["boot" "repl"]
 		Last Modified: Wed, 22 Jul 2020 01:13:01 GMT  
 		Size: 926.4 KB (926401 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3ad14fdcda01da7c472fc488405c040d3b90afda31db2232d0a657edf2a86ab2`  
-		Last Modified: Wed, 29 Jul 2020 01:33:12 GMT  
-		Size: 197.5 MB (197456503 bytes)  
+	-	`sha256:db897018b4b7f77d0385f8d927829815841e840a5c7b293a8f540a58a2420aaa`  
+		Last Modified: Tue, 01 Sep 2020 01:55:28 GMT  
+		Size: 197.5 MB (197456532 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:be848cbbd911885260c54db59002ffa2c2a93879b47e4b1b1df03f40eebe8155`  
-		Last Modified: Fri, 14 Aug 2020 21:30:30 GMT  
-		Size: 792.3 KB (792325 bytes)  
+	-	`sha256:aaaa91e2aa9279269d4fbcfa7888aeb1108dd2fdcf3df6a68bd155143d47e338`  
+		Last Modified: Tue, 01 Sep 2020 21:24:19 GMT  
+		Size: 792.3 KB (792331 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fdb6bc9451559514f61bd4fea914dec543197faadbd7fa42b189cf1c556fa4dd`  
-		Last Modified: Fri, 14 Aug 2020 21:30:35 GMT  
-		Size: 58.8 MB (58820347 bytes)  
+	-	`sha256:4e259dee88dde743b5f13b5479ea652ed4c9f934e4174d802e153d1bfaa26bbd`  
+		Last Modified: Tue, 01 Sep 2020 21:24:23 GMT  
+		Size: 58.8 MB (58820052 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-16-boot-buster`
 
 ```console
-$ docker pull clojure@sha256:7accca5483701220d8d2cd2e661f0f132dd3af3a8d26c739d598d191f996682c
+$ docker pull clojure@sha256:5ff3a09acd92f54f99117e78c924bc39f286a47cc1d5044f0a20fa0d8d9b1b7b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -10929,14 +10929,14 @@ $ docker pull clojure@sha256:7accca5483701220d8d2cd2e661f0f132dd3af3a8d26c739d59
 ### `clojure:openjdk-16-boot-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:b9ea8b9d911a4321f62c2e981a7f0b040269d09276789afb31f9128405a675e6
+$ docker pull clojure@sha256:43209ba400f2d777f4e97a7c601dffc892c687b36b21a4545f22af036fcebaf1
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **389.6 MB (389562455 bytes)**  
+-	Total Size: **389.6 MB (389562230 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f0953022c6ef822a5920a1dc929a5b3843ac946837114f27d77c26688d9c02f8`
+-	Image ID: `sha256:fe6fde476e174dab96c732a3f6d59c715f6babd5dc3a9575922dac4e58cfe0df`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
@@ -10962,25 +10962,25 @@ ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Thu, 27 Aug 2020 22:30:37 GMT
 ENV JAVA_VERSION=16-ea+13
-# Thu, 27 Aug 2020 22:31:22 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Thu, 27 Aug 2020 22:31:22 GMT
+# Tue, 01 Sep 2020 01:42:55 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:42:56 GMT
 CMD ["jshell"]
-# Thu, 27 Aug 2020 22:54:30 GMT
+# Tue, 01 Sep 2020 21:17:58 GMT
 ENV BOOT_VERSION=2.8.3
-# Thu, 27 Aug 2020 22:54:30 GMT
+# Tue, 01 Sep 2020 21:17:58 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Thu, 27 Aug 2020 22:54:30 GMT
+# Tue, 01 Sep 2020 21:17:58 GMT
 WORKDIR /tmp
-# Thu, 27 Aug 2020 22:54:31 GMT
+# Tue, 01 Sep 2020 21:17:59 GMT
 RUN mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot
-# Thu, 27 Aug 2020 22:54:32 GMT
+# Tue, 01 Sep 2020 21:17:59 GMT
 ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Thu, 27 Aug 2020 22:54:32 GMT
+# Tue, 01 Sep 2020 21:17:59 GMT
 ENV BOOT_AS_ROOT=yes
-# Thu, 27 Aug 2020 22:54:51 GMT
+# Tue, 01 Sep 2020 21:18:17 GMT
 RUN boot
-# Thu, 27 Aug 2020 22:54:51 GMT
+# Tue, 01 Sep 2020 21:18:17 GMT
 CMD ["boot" "repl"]
 ```
 
@@ -11009,23 +11009,23 @@ CMD ["boot" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:47:44 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9aaba90dc6c33806a373fc2ae8f09b9ac47691b592c85c74ae271714172bb672`  
-		Last Modified: Thu, 27 Aug 2020 22:35:09 GMT  
-		Size: 196.8 MB (196781159 bytes)  
+	-	`sha256:4d06967fed734dd46caba0318d8d7f9c3e1706c069c1f2d120c3b978c4bb1e30`  
+		Last Modified: Tue, 01 Sep 2020 01:54:25 GMT  
+		Size: 196.8 MB (196781152 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dd82fbd3de6637d3f1484b3e53ec6f2a7da0a42bc6c187cf965c21872aaddf30`  
-		Last Modified: Thu, 27 Aug 2020 22:57:00 GMT  
+	-	`sha256:d60be4093a0f6883486169bc6dd1c5bccc9e203d402350e506dc5679e29a3c13`  
+		Last Modified: Tue, 01 Sep 2020 21:23:49 GMT  
 		Size: 6.9 KB (6899 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7486bdaf44467c5ef263c190b20e15af2c88ae85a6cfb84d5be96a3c03d09ab3`  
-		Last Modified: Thu, 27 Aug 2020 22:57:04 GMT  
-		Size: 58.8 MB (58820301 bytes)  
+	-	`sha256:30a3e00a39be365bfc42702047b12585db35539159656d1d52d0290bc18d5f21`  
+		Last Modified: Tue, 01 Sep 2020 21:23:53 GMT  
+		Size: 58.8 MB (58820083 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-16-boot-slim-buster`
 
 ```console
-$ docker pull clojure@sha256:a9336750ba0beab7566356bb9f5bad6679facfaad72014a0a8b00841dba44840
+$ docker pull clojure@sha256:7581311d67c58ea009905dea63a5106839be30c1f477c501a39bb3711b8436f2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11035,14 +11035,14 @@ $ docker pull clojure@sha256:a9336750ba0beab7566356bb9f5bad6679facfaad72014a0a8b
 ### `clojure:openjdk-16-boot-slim-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:464bc067bdea04033ca43316b0d30aaa49b464b076970ec36f04919a2791a6ba
+$ docker pull clojure@sha256:300d95562b56187745816bdeb131d2d14c48fff764ed00eff78b1b81918038d7
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **286.5 MB (286485391 bytes)**  
+-	Total Size: **286.5 MB (286485378 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e02cc58bf89f6dcd83bf9b88702022529e250005257f0e5923c6a0e4072939d1`
+-	Image ID: `sha256:e751f45d42d850e9fcea73e7ffdcc10eb63f4386666425cf9d2928228e6fd337`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
@@ -11062,25 +11062,25 @@ ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Thu, 27 Aug 2020 22:31:32 GMT
 ENV JAVA_VERSION=16-ea+13
-# Thu, 27 Aug 2020 22:31:47 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Thu, 27 Aug 2020 22:31:47 GMT
+# Tue, 01 Sep 2020 01:43:20 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:43:20 GMT
 CMD ["jshell"]
-# Thu, 27 Aug 2020 22:54:01 GMT
+# Tue, 01 Sep 2020 21:17:29 GMT
 ENV BOOT_VERSION=2.8.3
-# Thu, 27 Aug 2020 22:54:01 GMT
+# Tue, 01 Sep 2020 21:17:29 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Thu, 27 Aug 2020 22:54:01 GMT
+# Tue, 01 Sep 2020 21:17:29 GMT
 WORKDIR /tmp
-# Thu, 27 Aug 2020 22:54:06 GMT
+# Tue, 01 Sep 2020 21:17:34 GMT
 RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/* && mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot && apt-get purge -y --auto-remove wget
-# Thu, 27 Aug 2020 22:54:06 GMT
+# Tue, 01 Sep 2020 21:17:34 GMT
 ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Thu, 27 Aug 2020 22:54:06 GMT
+# Tue, 01 Sep 2020 21:17:34 GMT
 ENV BOOT_AS_ROOT=yes
-# Thu, 27 Aug 2020 22:54:25 GMT
+# Tue, 01 Sep 2020 21:17:53 GMT
 RUN boot
-# Thu, 27 Aug 2020 22:54:25 GMT
+# Tue, 01 Sep 2020 21:17:53 GMT
 CMD ["boot" "repl"]
 ```
 
@@ -11097,23 +11097,23 @@ CMD ["boot" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:48:13 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dc70c6892e78972a2781684c9a4ba7d1202fc8c26c42181636aa8ec0bbb982b5`  
-		Last Modified: Thu, 27 Aug 2020 22:35:33 GMT  
-		Size: 197.0 MB (197044757 bytes)  
+	-	`sha256:21f221a4a470d4af022d1b05e5a3ebff17b25bb23a5aea25f004125753359645`  
+		Last Modified: Tue, 01 Sep 2020 01:54:49 GMT  
+		Size: 197.0 MB (197044746 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d48c915730359600eda2c2b6e502713d649e8bc197c31cbbd8859ef344cf2c76`  
-		Last Modified: Thu, 27 Aug 2020 22:56:53 GMT  
-		Size: 279.7 KB (279681 bytes)  
+	-	`sha256:a6a2d2628d42bd1b2ffe43f583ad21994b123e8edb0c524526532c37e91c832a`  
+		Last Modified: Tue, 01 Sep 2020 21:23:40 GMT  
+		Size: 279.7 KB (279670 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cd4e59ec2425fb864fbcc809b97deba76f716f0ca88a206af4f70db686d45409`  
-		Last Modified: Thu, 27 Aug 2020 22:56:55 GMT  
-		Size: 58.8 MB (58820190 bytes)  
+	-	`sha256:bc7dad535a5133d2632b7024a4d0bef3d6a5d8ee5b933aa897059ef9ce152a56`  
+		Last Modified: Tue, 01 Sep 2020 21:23:45 GMT  
+		Size: 58.8 MB (58820199 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-16-buster`
 
 ```console
-$ docker pull clojure@sha256:8ec64e917889e19bd08ea6d66778135238093f0dd017b65536a279d0d11b890e
+$ docker pull clojure@sha256:e536d20a909993694783bd8caaa9840958496d2837bdfb8c81b4d78d63f5cd04
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11123,14 +11123,14 @@ $ docker pull clojure@sha256:8ec64e917889e19bd08ea6d66778135238093f0dd017b65536a
 ### `clojure:openjdk-16-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:6a64267b5e6956e0abbd725b60fb8b6b057fcaf8df0dfd22bd4fd88da05cabfc
+$ docker pull clojure@sha256:6a921215f7fc4fec11cb5c65c8fd00c4454172a3f56b4526d05d19d982ce60ff
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **348.4 MB (348444056 bytes)**  
+-	Total Size: **348.4 MB (348444079 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0fd9c0f6cb4bba657e263ead29b617501f114714f5f60ce96310ff403a5ad397`
+-	Image ID: `sha256:4323fa359cb5bb2997211802afc4c1bf2417a4d00a3b8d7a1a28659d377e37e9`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -11156,25 +11156,25 @@ ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Thu, 27 Aug 2020 22:30:37 GMT
 ENV JAVA_VERSION=16-ea+13
-# Thu, 27 Aug 2020 22:31:22 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Thu, 27 Aug 2020 22:31:22 GMT
+# Tue, 01 Sep 2020 01:42:55 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:42:56 GMT
 CMD ["jshell"]
-# Thu, 27 Aug 2020 22:53:44 GMT
+# Tue, 01 Sep 2020 21:17:12 GMT
 ENV LEIN_VERSION=2.9.3
-# Thu, 27 Aug 2020 22:53:45 GMT
+# Tue, 01 Sep 2020 21:17:13 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Thu, 27 Aug 2020 22:53:45 GMT
+# Tue, 01 Sep 2020 21:17:13 GMT
 WORKDIR /tmp
-# Thu, 27 Aug 2020 22:53:51 GMT
+# Tue, 01 Sep 2020 21:17:19 GMT
 RUN apt-get update && apt-get install -y gnupg && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg
-# Thu, 27 Aug 2020 22:53:51 GMT
+# Tue, 01 Sep 2020 21:17:19 GMT
 ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Thu, 27 Aug 2020 22:53:51 GMT
+# Tue, 01 Sep 2020 21:17:19 GMT
 ENV LEIN_ROOT=1
-# Thu, 27 Aug 2020 22:53:55 GMT
+# Tue, 01 Sep 2020 21:17:24 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Thu, 27 Aug 2020 22:53:55 GMT
+# Tue, 01 Sep 2020 21:17:24 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -11203,23 +11203,23 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:47:44 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9aaba90dc6c33806a373fc2ae8f09b9ac47691b592c85c74ae271714172bb672`  
-		Last Modified: Thu, 27 Aug 2020 22:35:09 GMT  
-		Size: 196.8 MB (196781159 bytes)  
+	-	`sha256:4d06967fed734dd46caba0318d8d7f9c3e1706c069c1f2d120c3b978c4bb1e30`  
+		Last Modified: Tue, 01 Sep 2020 01:54:25 GMT  
+		Size: 196.8 MB (196781152 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4f2b6b0cfe2f7ab7e565794642912e82219c04b3b74c43a330e5c173a35dfc94`  
-		Last Modified: Thu, 27 Aug 2020 22:56:48 GMT  
-		Size: 13.5 MB (13540679 bytes)  
+	-	`sha256:b162836593ce1e59c0b1d82b9098ea339bc5484086c0025ac98c01c42987d65c`  
+		Last Modified: Tue, 01 Sep 2020 21:23:36 GMT  
+		Size: 13.5 MB (13540660 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7235a42eb4df3602ffd614ad1d97f6d63bf32ea298653d3b3ad7084668218d72`  
-		Last Modified: Thu, 27 Aug 2020 22:56:47 GMT  
-		Size: 4.2 MB (4168122 bytes)  
+	-	`sha256:73343a840f519f7012ac54131a0eaf3e73823b6faa153bbcc1913ff2ffaf8f0f`  
+		Last Modified: Tue, 01 Sep 2020 21:23:36 GMT  
+		Size: 4.2 MB (4168171 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-16-lein`
 
 ```console
-$ docker pull clojure@sha256:55519edada66da8ee37bb5611f644cbfc232aab7b3f011c4121ac2150065e845
+$ docker pull clojure@sha256:b5059ff767f88aa844e4226b20bbf105aa26083e6c2aaeeac5e02cbf482fb33c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11229,14 +11229,14 @@ $ docker pull clojure@sha256:55519edada66da8ee37bb5611f644cbfc232aab7b3f011c4121
 ### `clojure:openjdk-16-lein` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:89c80ce3af9ef73df2619a9d7125adc3869573ff3d28e3c04095f8ada051bf5d
+$ docker pull clojure@sha256:275f74cd60f12dc0270006e36c37f5de94342c60064e49ca43320eb393032ed3
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **245.0 MB (245016986 bytes)**  
+-	Total Size: **245.0 MB (245017020 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:98296b16d2d65aa3946ac9bd27b670efbe82329d6a689d0dc558081a118fc1e1`
+-	Image ID: `sha256:55f23e3182a755fe5c7464465da86d57d4b2b30f0106b6d3f4fe1ab5be96f022`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -11256,25 +11256,25 @@ ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Thu, 27 Aug 2020 22:31:32 GMT
 ENV JAVA_VERSION=16-ea+13
-# Thu, 27 Aug 2020 22:31:47 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Thu, 27 Aug 2020 22:31:47 GMT
+# Tue, 01 Sep 2020 01:43:20 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:43:20 GMT
 CMD ["jshell"]
-# Thu, 27 Aug 2020 22:53:26 GMT
+# Tue, 01 Sep 2020 21:16:51 GMT
 ENV LEIN_VERSION=2.9.3
-# Thu, 27 Aug 2020 22:53:26 GMT
+# Tue, 01 Sep 2020 21:16:51 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Thu, 27 Aug 2020 22:53:26 GMT
+# Tue, 01 Sep 2020 21:16:51 GMT
 WORKDIR /tmp
-# Thu, 27 Aug 2020 22:53:36 GMT
+# Tue, 01 Sep 2020 21:17:01 GMT
 RUN apt-get update && apt-get install -y gnupg wget && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg wget
-# Thu, 27 Aug 2020 22:53:36 GMT
+# Tue, 01 Sep 2020 21:17:01 GMT
 ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Thu, 27 Aug 2020 22:53:36 GMT
+# Tue, 01 Sep 2020 21:17:01 GMT
 ENV LEIN_ROOT=1
-# Thu, 27 Aug 2020 22:53:40 GMT
+# Tue, 01 Sep 2020 21:17:06 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Thu, 27 Aug 2020 22:53:40 GMT
+# Tue, 01 Sep 2020 21:17:06 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -11291,23 +11291,23 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:48:13 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dc70c6892e78972a2781684c9a4ba7d1202fc8c26c42181636aa8ec0bbb982b5`  
-		Last Modified: Thu, 27 Aug 2020 22:35:33 GMT  
-		Size: 197.0 MB (197044757 bytes)  
+	-	`sha256:21f221a4a470d4af022d1b05e5a3ebff17b25bb23a5aea25f004125753359645`  
+		Last Modified: Tue, 01 Sep 2020 01:54:49 GMT  
+		Size: 197.0 MB (197044746 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:13d4192b3732d3926eb2564dfab778f3a1405ed5bcbde723fe4efa2dcce6192b`  
-		Last Modified: Thu, 27 Aug 2020 22:56:41 GMT  
-		Size: 13.5 MB (13463340 bytes)  
+	-	`sha256:6fffdc8739babb0eaf3bd450116f4e4d6df46165afebfa1c3e6c22a1639e4001`  
+		Last Modified: Tue, 01 Sep 2020 21:23:29 GMT  
+		Size: 13.5 MB (13463347 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5ca9728c4ebc3fc49fea29ec93ba99fe4d43f6fc0aa33957b33c09095402b34c`  
-		Last Modified: Thu, 27 Aug 2020 22:56:40 GMT  
-		Size: 4.2 MB (4168126 bytes)  
+	-	`sha256:a30efaeab4fc938ebed5293325c46d623cb9c883b4b7bd82b2c99705fc8f90f3`  
+		Last Modified: Tue, 01 Sep 2020 21:23:29 GMT  
+		Size: 4.2 MB (4168164 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-16-lein-2.9.3`
 
 ```console
-$ docker pull clojure@sha256:55519edada66da8ee37bb5611f644cbfc232aab7b3f011c4121ac2150065e845
+$ docker pull clojure@sha256:b5059ff767f88aa844e4226b20bbf105aa26083e6c2aaeeac5e02cbf482fb33c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11317,14 +11317,14 @@ $ docker pull clojure@sha256:55519edada66da8ee37bb5611f644cbfc232aab7b3f011c4121
 ### `clojure:openjdk-16-lein-2.9.3` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:89c80ce3af9ef73df2619a9d7125adc3869573ff3d28e3c04095f8ada051bf5d
+$ docker pull clojure@sha256:275f74cd60f12dc0270006e36c37f5de94342c60064e49ca43320eb393032ed3
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **245.0 MB (245016986 bytes)**  
+-	Total Size: **245.0 MB (245017020 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:98296b16d2d65aa3946ac9bd27b670efbe82329d6a689d0dc558081a118fc1e1`
+-	Image ID: `sha256:55f23e3182a755fe5c7464465da86d57d4b2b30f0106b6d3f4fe1ab5be96f022`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -11344,25 +11344,25 @@ ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Thu, 27 Aug 2020 22:31:32 GMT
 ENV JAVA_VERSION=16-ea+13
-# Thu, 27 Aug 2020 22:31:47 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Thu, 27 Aug 2020 22:31:47 GMT
+# Tue, 01 Sep 2020 01:43:20 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:43:20 GMT
 CMD ["jshell"]
-# Thu, 27 Aug 2020 22:53:26 GMT
+# Tue, 01 Sep 2020 21:16:51 GMT
 ENV LEIN_VERSION=2.9.3
-# Thu, 27 Aug 2020 22:53:26 GMT
+# Tue, 01 Sep 2020 21:16:51 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Thu, 27 Aug 2020 22:53:26 GMT
+# Tue, 01 Sep 2020 21:16:51 GMT
 WORKDIR /tmp
-# Thu, 27 Aug 2020 22:53:36 GMT
+# Tue, 01 Sep 2020 21:17:01 GMT
 RUN apt-get update && apt-get install -y gnupg wget && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg wget
-# Thu, 27 Aug 2020 22:53:36 GMT
+# Tue, 01 Sep 2020 21:17:01 GMT
 ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Thu, 27 Aug 2020 22:53:36 GMT
+# Tue, 01 Sep 2020 21:17:01 GMT
 ENV LEIN_ROOT=1
-# Thu, 27 Aug 2020 22:53:40 GMT
+# Tue, 01 Sep 2020 21:17:06 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Thu, 27 Aug 2020 22:53:40 GMT
+# Tue, 01 Sep 2020 21:17:06 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -11379,23 +11379,23 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:48:13 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dc70c6892e78972a2781684c9a4ba7d1202fc8c26c42181636aa8ec0bbb982b5`  
-		Last Modified: Thu, 27 Aug 2020 22:35:33 GMT  
-		Size: 197.0 MB (197044757 bytes)  
+	-	`sha256:21f221a4a470d4af022d1b05e5a3ebff17b25bb23a5aea25f004125753359645`  
+		Last Modified: Tue, 01 Sep 2020 01:54:49 GMT  
+		Size: 197.0 MB (197044746 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:13d4192b3732d3926eb2564dfab778f3a1405ed5bcbde723fe4efa2dcce6192b`  
-		Last Modified: Thu, 27 Aug 2020 22:56:41 GMT  
-		Size: 13.5 MB (13463340 bytes)  
+	-	`sha256:6fffdc8739babb0eaf3bd450116f4e4d6df46165afebfa1c3e6c22a1639e4001`  
+		Last Modified: Tue, 01 Sep 2020 21:23:29 GMT  
+		Size: 13.5 MB (13463347 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5ca9728c4ebc3fc49fea29ec93ba99fe4d43f6fc0aa33957b33c09095402b34c`  
-		Last Modified: Thu, 27 Aug 2020 22:56:40 GMT  
-		Size: 4.2 MB (4168126 bytes)  
+	-	`sha256:a30efaeab4fc938ebed5293325c46d623cb9c883b4b7bd82b2c99705fc8f90f3`  
+		Last Modified: Tue, 01 Sep 2020 21:23:29 GMT  
+		Size: 4.2 MB (4168164 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-16-lein-2.9.3-alpine`
 
 ```console
-$ docker pull clojure@sha256:8db6816fbaf5f64301491564e24570c24e1e37cbfd76de6d42570d397fc901e4
+$ docker pull clojure@sha256:ffccd0a49b482fc61fe2dc9dc65e9f19a4e5496c61da7969fed9be9bb0a56717
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11405,14 +11405,14 @@ $ docker pull clojure@sha256:8db6816fbaf5f64301491564e24570c24e1e37cbfd76de6d425
 ### `clojure:openjdk-16-lein-2.9.3-alpine` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:0fbf50c7056c7b19c4a02518ad15f561a776370d6694b4f073dda58c8f749639
+$ docker pull clojure@sha256:e224b8e53e18ad4c276ec70d9fd2b96f89ed78001a991b45c0250ed64ad85c43
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **219.3 MB (219315493 bytes)**  
+-	Total Size: **219.3 MB (219315409 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:bc69ba6b24fca56978b74c2904a7f52d2a433907a23a16cde6746387b7608745`
+-	Image ID: `sha256:2b7066ef3edac2738f11dc7689cbfb3e31ea2070e63310997999466154ddac3b`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -11428,25 +11428,25 @@ ENV JAVA_HOME=/opt/openjdk-16
 ENV PATH=/opt/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 22 Jul 2020 01:05:45 GMT
 ENV JAVA_VERSION=16-ea+5
-# Wed, 29 Jul 2020 01:24:50 GMT
-RUN set -eux; 		arch="$(apk --print-arch)"; 	case "$arch" in 		x86_64) 			downloadUrl=https://download.java.net/java/early_access/alpine/5/binaries/openjdk-16-ea+5_linux-x64-musl_bin.tar.gz; 			downloadSha256=1ec940bea148a7ececda635c209de3836fe4e6511f5d49d4248cf6d52c77aac8; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum -c -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/ssl/certs/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		java -Xshare:dump; 		javac --version; 	java --version
-# Wed, 29 Jul 2020 01:24:51 GMT
+# Tue, 01 Sep 2020 01:44:22 GMT
+RUN set -eux; 		arch="$(apk --print-arch)"; 	case "$arch" in 		x86_64) 			downloadUrl=https://download.java.net/java/early_access/alpine/5/binaries/openjdk-16-ea+5_linux-x64-musl_bin.tar.gz; 			downloadSha256=1ec940bea148a7ececda635c209de3836fe4e6511f5d49d4248cf6d52c77aac8; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum -c -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/ssl/certs/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:44:22 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 21:25:33 GMT
+# Tue, 01 Sep 2020 21:19:10 GMT
 ENV LEIN_VERSION=2.9.3
-# Fri, 14 Aug 2020 21:25:33 GMT
+# Tue, 01 Sep 2020 21:19:10 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Fri, 14 Aug 2020 21:25:33 GMT
+# Tue, 01 Sep 2020 21:19:10 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 21:25:38 GMT
+# Tue, 01 Sep 2020 21:19:13 GMT
 RUN apk add --update --no-cache ca-certificates bash tar openssl gnupg && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apk del ca-certificates tar openssl gnupg
-# Fri, 14 Aug 2020 21:25:38 GMT
+# Tue, 01 Sep 2020 21:19:13 GMT
 ENV PATH=/opt/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Fri, 14 Aug 2020 21:25:39 GMT
+# Tue, 01 Sep 2020 21:19:13 GMT
 ENV LEIN_ROOT=1
-# Fri, 14 Aug 2020 21:25:46 GMT
+# Tue, 01 Sep 2020 21:19:18 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Fri, 14 Aug 2020 21:25:46 GMT
+# Tue, 01 Sep 2020 21:19:18 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -11459,23 +11459,23 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 22 Jul 2020 01:13:01 GMT  
 		Size: 926.4 KB (926401 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3ad14fdcda01da7c472fc488405c040d3b90afda31db2232d0a657edf2a86ab2`  
-		Last Modified: Wed, 29 Jul 2020 01:33:12 GMT  
-		Size: 197.5 MB (197456503 bytes)  
+	-	`sha256:db897018b4b7f77d0385f8d927829815841e840a5c7b293a8f540a58a2420aaa`  
+		Last Modified: Tue, 01 Sep 2020 01:55:28 GMT  
+		Size: 197.5 MB (197456532 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6347f44589e858b8ac43a1ab0eb54b75724bfa7d3f92b9d11c1ac5ce0b9b07fe`  
-		Last Modified: Fri, 14 Aug 2020 21:30:25 GMT  
-		Size: 14.0 MB (13966809 bytes)  
+	-	`sha256:5f2760d206b4a2815db6a35d8d4473f9b69346c8a7224e0e478cf3e553d21b82`  
+		Last Modified: Tue, 01 Sep 2020 21:24:16 GMT  
+		Size: 14.0 MB (13966800 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d2ed9b03755683b262050a5654a57f9230af47f2ae7398f26cda660ed8b1fb3b`  
-		Last Modified: Fri, 14 Aug 2020 21:30:24 GMT  
-		Size: 4.2 MB (4168239 bytes)  
+	-	`sha256:a22036942f7366cae0660eb53d058ceb3e554db27988cce64129b969bb660263`  
+		Last Modified: Tue, 01 Sep 2020 21:24:15 GMT  
+		Size: 4.2 MB (4168135 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-16-lein-2.9.3-buster`
 
 ```console
-$ docker pull clojure@sha256:8ec64e917889e19bd08ea6d66778135238093f0dd017b65536a279d0d11b890e
+$ docker pull clojure@sha256:e536d20a909993694783bd8caaa9840958496d2837bdfb8c81b4d78d63f5cd04
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11485,14 +11485,14 @@ $ docker pull clojure@sha256:8ec64e917889e19bd08ea6d66778135238093f0dd017b65536a
 ### `clojure:openjdk-16-lein-2.9.3-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:6a64267b5e6956e0abbd725b60fb8b6b057fcaf8df0dfd22bd4fd88da05cabfc
+$ docker pull clojure@sha256:6a921215f7fc4fec11cb5c65c8fd00c4454172a3f56b4526d05d19d982ce60ff
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **348.4 MB (348444056 bytes)**  
+-	Total Size: **348.4 MB (348444079 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0fd9c0f6cb4bba657e263ead29b617501f114714f5f60ce96310ff403a5ad397`
+-	Image ID: `sha256:4323fa359cb5bb2997211802afc4c1bf2417a4d00a3b8d7a1a28659d377e37e9`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -11518,25 +11518,25 @@ ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Thu, 27 Aug 2020 22:30:37 GMT
 ENV JAVA_VERSION=16-ea+13
-# Thu, 27 Aug 2020 22:31:22 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Thu, 27 Aug 2020 22:31:22 GMT
+# Tue, 01 Sep 2020 01:42:55 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:42:56 GMT
 CMD ["jshell"]
-# Thu, 27 Aug 2020 22:53:44 GMT
+# Tue, 01 Sep 2020 21:17:12 GMT
 ENV LEIN_VERSION=2.9.3
-# Thu, 27 Aug 2020 22:53:45 GMT
+# Tue, 01 Sep 2020 21:17:13 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Thu, 27 Aug 2020 22:53:45 GMT
+# Tue, 01 Sep 2020 21:17:13 GMT
 WORKDIR /tmp
-# Thu, 27 Aug 2020 22:53:51 GMT
+# Tue, 01 Sep 2020 21:17:19 GMT
 RUN apt-get update && apt-get install -y gnupg && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg
-# Thu, 27 Aug 2020 22:53:51 GMT
+# Tue, 01 Sep 2020 21:17:19 GMT
 ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Thu, 27 Aug 2020 22:53:51 GMT
+# Tue, 01 Sep 2020 21:17:19 GMT
 ENV LEIN_ROOT=1
-# Thu, 27 Aug 2020 22:53:55 GMT
+# Tue, 01 Sep 2020 21:17:24 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Thu, 27 Aug 2020 22:53:55 GMT
+# Tue, 01 Sep 2020 21:17:24 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -11565,23 +11565,23 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:47:44 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9aaba90dc6c33806a373fc2ae8f09b9ac47691b592c85c74ae271714172bb672`  
-		Last Modified: Thu, 27 Aug 2020 22:35:09 GMT  
-		Size: 196.8 MB (196781159 bytes)  
+	-	`sha256:4d06967fed734dd46caba0318d8d7f9c3e1706c069c1f2d120c3b978c4bb1e30`  
+		Last Modified: Tue, 01 Sep 2020 01:54:25 GMT  
+		Size: 196.8 MB (196781152 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4f2b6b0cfe2f7ab7e565794642912e82219c04b3b74c43a330e5c173a35dfc94`  
-		Last Modified: Thu, 27 Aug 2020 22:56:48 GMT  
-		Size: 13.5 MB (13540679 bytes)  
+	-	`sha256:b162836593ce1e59c0b1d82b9098ea339bc5484086c0025ac98c01c42987d65c`  
+		Last Modified: Tue, 01 Sep 2020 21:23:36 GMT  
+		Size: 13.5 MB (13540660 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7235a42eb4df3602ffd614ad1d97f6d63bf32ea298653d3b3ad7084668218d72`  
-		Last Modified: Thu, 27 Aug 2020 22:56:47 GMT  
-		Size: 4.2 MB (4168122 bytes)  
+	-	`sha256:73343a840f519f7012ac54131a0eaf3e73823b6faa153bbcc1913ff2ffaf8f0f`  
+		Last Modified: Tue, 01 Sep 2020 21:23:36 GMT  
+		Size: 4.2 MB (4168171 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-16-lein-2.9.3-slim-buster`
 
 ```console
-$ docker pull clojure@sha256:55519edada66da8ee37bb5611f644cbfc232aab7b3f011c4121ac2150065e845
+$ docker pull clojure@sha256:b5059ff767f88aa844e4226b20bbf105aa26083e6c2aaeeac5e02cbf482fb33c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11591,14 +11591,14 @@ $ docker pull clojure@sha256:55519edada66da8ee37bb5611f644cbfc232aab7b3f011c4121
 ### `clojure:openjdk-16-lein-2.9.3-slim-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:89c80ce3af9ef73df2619a9d7125adc3869573ff3d28e3c04095f8ada051bf5d
+$ docker pull clojure@sha256:275f74cd60f12dc0270006e36c37f5de94342c60064e49ca43320eb393032ed3
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **245.0 MB (245016986 bytes)**  
+-	Total Size: **245.0 MB (245017020 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:98296b16d2d65aa3946ac9bd27b670efbe82329d6a689d0dc558081a118fc1e1`
+-	Image ID: `sha256:55f23e3182a755fe5c7464465da86d57d4b2b30f0106b6d3f4fe1ab5be96f022`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -11618,25 +11618,25 @@ ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Thu, 27 Aug 2020 22:31:32 GMT
 ENV JAVA_VERSION=16-ea+13
-# Thu, 27 Aug 2020 22:31:47 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Thu, 27 Aug 2020 22:31:47 GMT
+# Tue, 01 Sep 2020 01:43:20 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:43:20 GMT
 CMD ["jshell"]
-# Thu, 27 Aug 2020 22:53:26 GMT
+# Tue, 01 Sep 2020 21:16:51 GMT
 ENV LEIN_VERSION=2.9.3
-# Thu, 27 Aug 2020 22:53:26 GMT
+# Tue, 01 Sep 2020 21:16:51 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Thu, 27 Aug 2020 22:53:26 GMT
+# Tue, 01 Sep 2020 21:16:51 GMT
 WORKDIR /tmp
-# Thu, 27 Aug 2020 22:53:36 GMT
+# Tue, 01 Sep 2020 21:17:01 GMT
 RUN apt-get update && apt-get install -y gnupg wget && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg wget
-# Thu, 27 Aug 2020 22:53:36 GMT
+# Tue, 01 Sep 2020 21:17:01 GMT
 ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Thu, 27 Aug 2020 22:53:36 GMT
+# Tue, 01 Sep 2020 21:17:01 GMT
 ENV LEIN_ROOT=1
-# Thu, 27 Aug 2020 22:53:40 GMT
+# Tue, 01 Sep 2020 21:17:06 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Thu, 27 Aug 2020 22:53:40 GMT
+# Tue, 01 Sep 2020 21:17:06 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -11653,23 +11653,23 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:48:13 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dc70c6892e78972a2781684c9a4ba7d1202fc8c26c42181636aa8ec0bbb982b5`  
-		Last Modified: Thu, 27 Aug 2020 22:35:33 GMT  
-		Size: 197.0 MB (197044757 bytes)  
+	-	`sha256:21f221a4a470d4af022d1b05e5a3ebff17b25bb23a5aea25f004125753359645`  
+		Last Modified: Tue, 01 Sep 2020 01:54:49 GMT  
+		Size: 197.0 MB (197044746 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:13d4192b3732d3926eb2564dfab778f3a1405ed5bcbde723fe4efa2dcce6192b`  
-		Last Modified: Thu, 27 Aug 2020 22:56:41 GMT  
-		Size: 13.5 MB (13463340 bytes)  
+	-	`sha256:6fffdc8739babb0eaf3bd450116f4e4d6df46165afebfa1c3e6c22a1639e4001`  
+		Last Modified: Tue, 01 Sep 2020 21:23:29 GMT  
+		Size: 13.5 MB (13463347 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5ca9728c4ebc3fc49fea29ec93ba99fe4d43f6fc0aa33957b33c09095402b34c`  
-		Last Modified: Thu, 27 Aug 2020 22:56:40 GMT  
-		Size: 4.2 MB (4168126 bytes)  
+	-	`sha256:a30efaeab4fc938ebed5293325c46d623cb9c883b4b7bd82b2c99705fc8f90f3`  
+		Last Modified: Tue, 01 Sep 2020 21:23:29 GMT  
+		Size: 4.2 MB (4168164 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-16-lein-alpine`
 
 ```console
-$ docker pull clojure@sha256:8db6816fbaf5f64301491564e24570c24e1e37cbfd76de6d42570d397fc901e4
+$ docker pull clojure@sha256:ffccd0a49b482fc61fe2dc9dc65e9f19a4e5496c61da7969fed9be9bb0a56717
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11679,14 +11679,14 @@ $ docker pull clojure@sha256:8db6816fbaf5f64301491564e24570c24e1e37cbfd76de6d425
 ### `clojure:openjdk-16-lein-alpine` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:0fbf50c7056c7b19c4a02518ad15f561a776370d6694b4f073dda58c8f749639
+$ docker pull clojure@sha256:e224b8e53e18ad4c276ec70d9fd2b96f89ed78001a991b45c0250ed64ad85c43
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **219.3 MB (219315493 bytes)**  
+-	Total Size: **219.3 MB (219315409 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:bc69ba6b24fca56978b74c2904a7f52d2a433907a23a16cde6746387b7608745`
+-	Image ID: `sha256:2b7066ef3edac2738f11dc7689cbfb3e31ea2070e63310997999466154ddac3b`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -11702,25 +11702,25 @@ ENV JAVA_HOME=/opt/openjdk-16
 ENV PATH=/opt/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 22 Jul 2020 01:05:45 GMT
 ENV JAVA_VERSION=16-ea+5
-# Wed, 29 Jul 2020 01:24:50 GMT
-RUN set -eux; 		arch="$(apk --print-arch)"; 	case "$arch" in 		x86_64) 			downloadUrl=https://download.java.net/java/early_access/alpine/5/binaries/openjdk-16-ea+5_linux-x64-musl_bin.tar.gz; 			downloadSha256=1ec940bea148a7ececda635c209de3836fe4e6511f5d49d4248cf6d52c77aac8; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum -c -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/ssl/certs/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		java -Xshare:dump; 		javac --version; 	java --version
-# Wed, 29 Jul 2020 01:24:51 GMT
+# Tue, 01 Sep 2020 01:44:22 GMT
+RUN set -eux; 		arch="$(apk --print-arch)"; 	case "$arch" in 		x86_64) 			downloadUrl=https://download.java.net/java/early_access/alpine/5/binaries/openjdk-16-ea+5_linux-x64-musl_bin.tar.gz; 			downloadSha256=1ec940bea148a7ececda635c209de3836fe4e6511f5d49d4248cf6d52c77aac8; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum -c -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/ssl/certs/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:44:22 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 21:25:33 GMT
+# Tue, 01 Sep 2020 21:19:10 GMT
 ENV LEIN_VERSION=2.9.3
-# Fri, 14 Aug 2020 21:25:33 GMT
+# Tue, 01 Sep 2020 21:19:10 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Fri, 14 Aug 2020 21:25:33 GMT
+# Tue, 01 Sep 2020 21:19:10 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 21:25:38 GMT
+# Tue, 01 Sep 2020 21:19:13 GMT
 RUN apk add --update --no-cache ca-certificates bash tar openssl gnupg && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apk del ca-certificates tar openssl gnupg
-# Fri, 14 Aug 2020 21:25:38 GMT
+# Tue, 01 Sep 2020 21:19:13 GMT
 ENV PATH=/opt/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Fri, 14 Aug 2020 21:25:39 GMT
+# Tue, 01 Sep 2020 21:19:13 GMT
 ENV LEIN_ROOT=1
-# Fri, 14 Aug 2020 21:25:46 GMT
+# Tue, 01 Sep 2020 21:19:18 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Fri, 14 Aug 2020 21:25:46 GMT
+# Tue, 01 Sep 2020 21:19:18 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -11733,23 +11733,23 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 22 Jul 2020 01:13:01 GMT  
 		Size: 926.4 KB (926401 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3ad14fdcda01da7c472fc488405c040d3b90afda31db2232d0a657edf2a86ab2`  
-		Last Modified: Wed, 29 Jul 2020 01:33:12 GMT  
-		Size: 197.5 MB (197456503 bytes)  
+	-	`sha256:db897018b4b7f77d0385f8d927829815841e840a5c7b293a8f540a58a2420aaa`  
+		Last Modified: Tue, 01 Sep 2020 01:55:28 GMT  
+		Size: 197.5 MB (197456532 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6347f44589e858b8ac43a1ab0eb54b75724bfa7d3f92b9d11c1ac5ce0b9b07fe`  
-		Last Modified: Fri, 14 Aug 2020 21:30:25 GMT  
-		Size: 14.0 MB (13966809 bytes)  
+	-	`sha256:5f2760d206b4a2815db6a35d8d4473f9b69346c8a7224e0e478cf3e553d21b82`  
+		Last Modified: Tue, 01 Sep 2020 21:24:16 GMT  
+		Size: 14.0 MB (13966800 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d2ed9b03755683b262050a5654a57f9230af47f2ae7398f26cda660ed8b1fb3b`  
-		Last Modified: Fri, 14 Aug 2020 21:30:24 GMT  
-		Size: 4.2 MB (4168239 bytes)  
+	-	`sha256:a22036942f7366cae0660eb53d058ceb3e554db27988cce64129b969bb660263`  
+		Last Modified: Tue, 01 Sep 2020 21:24:15 GMT  
+		Size: 4.2 MB (4168135 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-16-lein-buster`
 
 ```console
-$ docker pull clojure@sha256:8ec64e917889e19bd08ea6d66778135238093f0dd017b65536a279d0d11b890e
+$ docker pull clojure@sha256:e536d20a909993694783bd8caaa9840958496d2837bdfb8c81b4d78d63f5cd04
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11759,14 +11759,14 @@ $ docker pull clojure@sha256:8ec64e917889e19bd08ea6d66778135238093f0dd017b65536a
 ### `clojure:openjdk-16-lein-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:6a64267b5e6956e0abbd725b60fb8b6b057fcaf8df0dfd22bd4fd88da05cabfc
+$ docker pull clojure@sha256:6a921215f7fc4fec11cb5c65c8fd00c4454172a3f56b4526d05d19d982ce60ff
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **348.4 MB (348444056 bytes)**  
+-	Total Size: **348.4 MB (348444079 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0fd9c0f6cb4bba657e263ead29b617501f114714f5f60ce96310ff403a5ad397`
+-	Image ID: `sha256:4323fa359cb5bb2997211802afc4c1bf2417a4d00a3b8d7a1a28659d377e37e9`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -11792,25 +11792,25 @@ ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Thu, 27 Aug 2020 22:30:37 GMT
 ENV JAVA_VERSION=16-ea+13
-# Thu, 27 Aug 2020 22:31:22 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Thu, 27 Aug 2020 22:31:22 GMT
+# Tue, 01 Sep 2020 01:42:55 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:42:56 GMT
 CMD ["jshell"]
-# Thu, 27 Aug 2020 22:53:44 GMT
+# Tue, 01 Sep 2020 21:17:12 GMT
 ENV LEIN_VERSION=2.9.3
-# Thu, 27 Aug 2020 22:53:45 GMT
+# Tue, 01 Sep 2020 21:17:13 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Thu, 27 Aug 2020 22:53:45 GMT
+# Tue, 01 Sep 2020 21:17:13 GMT
 WORKDIR /tmp
-# Thu, 27 Aug 2020 22:53:51 GMT
+# Tue, 01 Sep 2020 21:17:19 GMT
 RUN apt-get update && apt-get install -y gnupg && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg
-# Thu, 27 Aug 2020 22:53:51 GMT
+# Tue, 01 Sep 2020 21:17:19 GMT
 ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Thu, 27 Aug 2020 22:53:51 GMT
+# Tue, 01 Sep 2020 21:17:19 GMT
 ENV LEIN_ROOT=1
-# Thu, 27 Aug 2020 22:53:55 GMT
+# Tue, 01 Sep 2020 21:17:24 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Thu, 27 Aug 2020 22:53:55 GMT
+# Tue, 01 Sep 2020 21:17:24 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -11839,23 +11839,23 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:47:44 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9aaba90dc6c33806a373fc2ae8f09b9ac47691b592c85c74ae271714172bb672`  
-		Last Modified: Thu, 27 Aug 2020 22:35:09 GMT  
-		Size: 196.8 MB (196781159 bytes)  
+	-	`sha256:4d06967fed734dd46caba0318d8d7f9c3e1706c069c1f2d120c3b978c4bb1e30`  
+		Last Modified: Tue, 01 Sep 2020 01:54:25 GMT  
+		Size: 196.8 MB (196781152 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4f2b6b0cfe2f7ab7e565794642912e82219c04b3b74c43a330e5c173a35dfc94`  
-		Last Modified: Thu, 27 Aug 2020 22:56:48 GMT  
-		Size: 13.5 MB (13540679 bytes)  
+	-	`sha256:b162836593ce1e59c0b1d82b9098ea339bc5484086c0025ac98c01c42987d65c`  
+		Last Modified: Tue, 01 Sep 2020 21:23:36 GMT  
+		Size: 13.5 MB (13540660 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7235a42eb4df3602ffd614ad1d97f6d63bf32ea298653d3b3ad7084668218d72`  
-		Last Modified: Thu, 27 Aug 2020 22:56:47 GMT  
-		Size: 4.2 MB (4168122 bytes)  
+	-	`sha256:73343a840f519f7012ac54131a0eaf3e73823b6faa153bbcc1913ff2ffaf8f0f`  
+		Last Modified: Tue, 01 Sep 2020 21:23:36 GMT  
+		Size: 4.2 MB (4168171 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-16-lein-slim-buster`
 
 ```console
-$ docker pull clojure@sha256:55519edada66da8ee37bb5611f644cbfc232aab7b3f011c4121ac2150065e845
+$ docker pull clojure@sha256:b5059ff767f88aa844e4226b20bbf105aa26083e6c2aaeeac5e02cbf482fb33c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11865,14 +11865,14 @@ $ docker pull clojure@sha256:55519edada66da8ee37bb5611f644cbfc232aab7b3f011c4121
 ### `clojure:openjdk-16-lein-slim-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:89c80ce3af9ef73df2619a9d7125adc3869573ff3d28e3c04095f8ada051bf5d
+$ docker pull clojure@sha256:275f74cd60f12dc0270006e36c37f5de94342c60064e49ca43320eb393032ed3
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **245.0 MB (245016986 bytes)**  
+-	Total Size: **245.0 MB (245017020 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:98296b16d2d65aa3946ac9bd27b670efbe82329d6a689d0dc558081a118fc1e1`
+-	Image ID: `sha256:55f23e3182a755fe5c7464465da86d57d4b2b30f0106b6d3f4fe1ab5be96f022`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -11892,25 +11892,25 @@ ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Thu, 27 Aug 2020 22:31:32 GMT
 ENV JAVA_VERSION=16-ea+13
-# Thu, 27 Aug 2020 22:31:47 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Thu, 27 Aug 2020 22:31:47 GMT
+# Tue, 01 Sep 2020 01:43:20 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:43:20 GMT
 CMD ["jshell"]
-# Thu, 27 Aug 2020 22:53:26 GMT
+# Tue, 01 Sep 2020 21:16:51 GMT
 ENV LEIN_VERSION=2.9.3
-# Thu, 27 Aug 2020 22:53:26 GMT
+# Tue, 01 Sep 2020 21:16:51 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Thu, 27 Aug 2020 22:53:26 GMT
+# Tue, 01 Sep 2020 21:16:51 GMT
 WORKDIR /tmp
-# Thu, 27 Aug 2020 22:53:36 GMT
+# Tue, 01 Sep 2020 21:17:01 GMT
 RUN apt-get update && apt-get install -y gnupg wget && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg wget
-# Thu, 27 Aug 2020 22:53:36 GMT
+# Tue, 01 Sep 2020 21:17:01 GMT
 ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Thu, 27 Aug 2020 22:53:36 GMT
+# Tue, 01 Sep 2020 21:17:01 GMT
 ENV LEIN_ROOT=1
-# Thu, 27 Aug 2020 22:53:40 GMT
+# Tue, 01 Sep 2020 21:17:06 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Thu, 27 Aug 2020 22:53:40 GMT
+# Tue, 01 Sep 2020 21:17:06 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -11927,23 +11927,23 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:48:13 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dc70c6892e78972a2781684c9a4ba7d1202fc8c26c42181636aa8ec0bbb982b5`  
-		Last Modified: Thu, 27 Aug 2020 22:35:33 GMT  
-		Size: 197.0 MB (197044757 bytes)  
+	-	`sha256:21f221a4a470d4af022d1b05e5a3ebff17b25bb23a5aea25f004125753359645`  
+		Last Modified: Tue, 01 Sep 2020 01:54:49 GMT  
+		Size: 197.0 MB (197044746 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:13d4192b3732d3926eb2564dfab778f3a1405ed5bcbde723fe4efa2dcce6192b`  
-		Last Modified: Thu, 27 Aug 2020 22:56:41 GMT  
-		Size: 13.5 MB (13463340 bytes)  
+	-	`sha256:6fffdc8739babb0eaf3bd450116f4e4d6df46165afebfa1c3e6c22a1639e4001`  
+		Last Modified: Tue, 01 Sep 2020 21:23:29 GMT  
+		Size: 13.5 MB (13463347 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5ca9728c4ebc3fc49fea29ec93ba99fe4d43f6fc0aa33957b33c09095402b34c`  
-		Last Modified: Thu, 27 Aug 2020 22:56:40 GMT  
-		Size: 4.2 MB (4168126 bytes)  
+	-	`sha256:a30efaeab4fc938ebed5293325c46d623cb9c883b4b7bd82b2c99705fc8f90f3`  
+		Last Modified: Tue, 01 Sep 2020 21:23:29 GMT  
+		Size: 4.2 MB (4168164 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-16-slim-buster`
 
 ```console
-$ docker pull clojure@sha256:55519edada66da8ee37bb5611f644cbfc232aab7b3f011c4121ac2150065e845
+$ docker pull clojure@sha256:b5059ff767f88aa844e4226b20bbf105aa26083e6c2aaeeac5e02cbf482fb33c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11953,14 +11953,14 @@ $ docker pull clojure@sha256:55519edada66da8ee37bb5611f644cbfc232aab7b3f011c4121
 ### `clojure:openjdk-16-slim-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:89c80ce3af9ef73df2619a9d7125adc3869573ff3d28e3c04095f8ada051bf5d
+$ docker pull clojure@sha256:275f74cd60f12dc0270006e36c37f5de94342c60064e49ca43320eb393032ed3
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **245.0 MB (245016986 bytes)**  
+-	Total Size: **245.0 MB (245017020 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:98296b16d2d65aa3946ac9bd27b670efbe82329d6a689d0dc558081a118fc1e1`
+-	Image ID: `sha256:55f23e3182a755fe5c7464465da86d57d4b2b30f0106b6d3f4fe1ab5be96f022`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -11980,25 +11980,25 @@ ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Thu, 27 Aug 2020 22:31:32 GMT
 ENV JAVA_VERSION=16-ea+13
-# Thu, 27 Aug 2020 22:31:47 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Thu, 27 Aug 2020 22:31:47 GMT
+# Tue, 01 Sep 2020 01:43:20 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:43:20 GMT
 CMD ["jshell"]
-# Thu, 27 Aug 2020 22:53:26 GMT
+# Tue, 01 Sep 2020 21:16:51 GMT
 ENV LEIN_VERSION=2.9.3
-# Thu, 27 Aug 2020 22:53:26 GMT
+# Tue, 01 Sep 2020 21:16:51 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Thu, 27 Aug 2020 22:53:26 GMT
+# Tue, 01 Sep 2020 21:16:51 GMT
 WORKDIR /tmp
-# Thu, 27 Aug 2020 22:53:36 GMT
+# Tue, 01 Sep 2020 21:17:01 GMT
 RUN apt-get update && apt-get install -y gnupg wget && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg wget
-# Thu, 27 Aug 2020 22:53:36 GMT
+# Tue, 01 Sep 2020 21:17:01 GMT
 ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Thu, 27 Aug 2020 22:53:36 GMT
+# Tue, 01 Sep 2020 21:17:01 GMT
 ENV LEIN_ROOT=1
-# Thu, 27 Aug 2020 22:53:40 GMT
+# Tue, 01 Sep 2020 21:17:06 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Thu, 27 Aug 2020 22:53:40 GMT
+# Tue, 01 Sep 2020 21:17:06 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -12015,23 +12015,23 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:48:13 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dc70c6892e78972a2781684c9a4ba7d1202fc8c26c42181636aa8ec0bbb982b5`  
-		Last Modified: Thu, 27 Aug 2020 22:35:33 GMT  
-		Size: 197.0 MB (197044757 bytes)  
+	-	`sha256:21f221a4a470d4af022d1b05e5a3ebff17b25bb23a5aea25f004125753359645`  
+		Last Modified: Tue, 01 Sep 2020 01:54:49 GMT  
+		Size: 197.0 MB (197044746 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:13d4192b3732d3926eb2564dfab778f3a1405ed5bcbde723fe4efa2dcce6192b`  
-		Last Modified: Thu, 27 Aug 2020 22:56:41 GMT  
-		Size: 13.5 MB (13463340 bytes)  
+	-	`sha256:6fffdc8739babb0eaf3bd450116f4e4d6df46165afebfa1c3e6c22a1639e4001`  
+		Last Modified: Tue, 01 Sep 2020 21:23:29 GMT  
+		Size: 13.5 MB (13463347 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5ca9728c4ebc3fc49fea29ec93ba99fe4d43f6fc0aa33957b33c09095402b34c`  
-		Last Modified: Thu, 27 Aug 2020 22:56:40 GMT  
-		Size: 4.2 MB (4168126 bytes)  
+	-	`sha256:a30efaeab4fc938ebed5293325c46d623cb9c883b4b7bd82b2c99705fc8f90f3`  
+		Last Modified: Tue, 01 Sep 2020 21:23:29 GMT  
+		Size: 4.2 MB (4168164 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-16-tools-deps`
 
 ```console
-$ docker pull clojure@sha256:8bb9765fe52a639cdb8adf05858cf8627bb162c4ca2addd99b43424b4e07aa21
+$ docker pull clojure@sha256:7aaab1b4dbabe2a2f1514473498728b53fa21d223d6ffe32e7a658cfe5a0e3a7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12041,14 +12041,14 @@ $ docker pull clojure@sha256:8bb9765fe52a639cdb8adf05858cf8627bb162c4ca2addd99b4
 ### `clojure:openjdk-16-tools-deps` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:fc78618fd89d97bd638e6b889b2ead65301c28d47af860ed11d0ca3df4ec374b
+$ docker pull clojure@sha256:0ec84a0acdb6c41c014d06849a9daece3f45fb2f413c3477137ae31fb4aeac60
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **269.9 MB (269895575 bytes)**  
+-	Total Size: **269.9 MB (269895778 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:75581fa17f0d8107101bb5e9b1009dba8e15af236ccdaabab22a02eef51595cb`
+-	Image ID: `sha256:3d9951bf85a13efbe2aa705f541b761869362606c2c72bc9e56e190fd3397266`
 -	Default Command: `["sh","-c","sleep 1 && exec clj"]`
 
 ```dockerfile
@@ -12068,17 +12068,17 @@ ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Thu, 27 Aug 2020 22:31:32 GMT
 ENV JAVA_VERSION=16-ea+13
-# Thu, 27 Aug 2020 22:31:47 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Thu, 27 Aug 2020 22:31:47 GMT
+# Tue, 01 Sep 2020 01:43:20 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:43:20 GMT
 CMD ["jshell"]
-# Thu, 27 Aug 2020 22:54:55 GMT
+# Tue, 01 Sep 2020 21:18:23 GMT
 ENV CLOJURE_VERSION=1.10.1.619
-# Thu, 27 Aug 2020 22:54:55 GMT
+# Tue, 01 Sep 2020 21:18:23 GMT
 WORKDIR /tmp
-# Thu, 27 Aug 2020 22:55:15 GMT
+# Tue, 01 Sep 2020 21:18:44 GMT
 RUN apt-get update && apt-get install -y curl make rlwrap wget && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "28b1652686426cdf856f83551b8ca01ff949b03bc9a533d270204d6511a8ca9d *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apt-get purge -y --auto-remove curl wget
-# Thu, 27 Aug 2020 22:55:16 GMT
+# Tue, 01 Sep 2020 21:18:44 GMT
 CMD ["sh" "-c" "sleep 1 && exec clj"]
 ```
 
@@ -12095,19 +12095,19 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 		Last Modified: Wed, 05 Aug 2020 00:48:13 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dc70c6892e78972a2781684c9a4ba7d1202fc8c26c42181636aa8ec0bbb982b5`  
-		Last Modified: Thu, 27 Aug 2020 22:35:33 GMT  
-		Size: 197.0 MB (197044757 bytes)  
+	-	`sha256:21f221a4a470d4af022d1b05e5a3ebff17b25bb23a5aea25f004125753359645`  
+		Last Modified: Tue, 01 Sep 2020 01:54:49 GMT  
+		Size: 197.0 MB (197044746 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:aa26f335f4570a2bc1d313174607adc9450ae56a1fcc75f14e8d2b48d4f802cb`  
-		Last Modified: Thu, 27 Aug 2020 22:57:14 GMT  
-		Size: 42.5 MB (42510055 bytes)  
+	-	`sha256:6e96f4d886bc38362c3726e0cccff72e32e65067b5e2084b64956af2741327f8`  
+		Last Modified: Tue, 01 Sep 2020 21:24:04 GMT  
+		Size: 42.5 MB (42510269 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-16-tools-deps-1.10.1.561`
 
 ```console
-$ docker pull clojure@sha256:8bb9765fe52a639cdb8adf05858cf8627bb162c4ca2addd99b43424b4e07aa21
+$ docker pull clojure@sha256:7aaab1b4dbabe2a2f1514473498728b53fa21d223d6ffe32e7a658cfe5a0e3a7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12117,14 +12117,14 @@ $ docker pull clojure@sha256:8bb9765fe52a639cdb8adf05858cf8627bb162c4ca2addd99b4
 ### `clojure:openjdk-16-tools-deps-1.10.1.561` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:fc78618fd89d97bd638e6b889b2ead65301c28d47af860ed11d0ca3df4ec374b
+$ docker pull clojure@sha256:0ec84a0acdb6c41c014d06849a9daece3f45fb2f413c3477137ae31fb4aeac60
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **269.9 MB (269895575 bytes)**  
+-	Total Size: **269.9 MB (269895778 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:75581fa17f0d8107101bb5e9b1009dba8e15af236ccdaabab22a02eef51595cb`
+-	Image ID: `sha256:3d9951bf85a13efbe2aa705f541b761869362606c2c72bc9e56e190fd3397266`
 -	Default Command: `["sh","-c","sleep 1 && exec clj"]`
 
 ```dockerfile
@@ -12144,17 +12144,17 @@ ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Thu, 27 Aug 2020 22:31:32 GMT
 ENV JAVA_VERSION=16-ea+13
-# Thu, 27 Aug 2020 22:31:47 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Thu, 27 Aug 2020 22:31:47 GMT
+# Tue, 01 Sep 2020 01:43:20 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:43:20 GMT
 CMD ["jshell"]
-# Thu, 27 Aug 2020 22:54:55 GMT
+# Tue, 01 Sep 2020 21:18:23 GMT
 ENV CLOJURE_VERSION=1.10.1.619
-# Thu, 27 Aug 2020 22:54:55 GMT
+# Tue, 01 Sep 2020 21:18:23 GMT
 WORKDIR /tmp
-# Thu, 27 Aug 2020 22:55:15 GMT
+# Tue, 01 Sep 2020 21:18:44 GMT
 RUN apt-get update && apt-get install -y curl make rlwrap wget && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "28b1652686426cdf856f83551b8ca01ff949b03bc9a533d270204d6511a8ca9d *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apt-get purge -y --auto-remove curl wget
-# Thu, 27 Aug 2020 22:55:16 GMT
+# Tue, 01 Sep 2020 21:18:44 GMT
 CMD ["sh" "-c" "sleep 1 && exec clj"]
 ```
 
@@ -12171,19 +12171,19 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 		Last Modified: Wed, 05 Aug 2020 00:48:13 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dc70c6892e78972a2781684c9a4ba7d1202fc8c26c42181636aa8ec0bbb982b5`  
-		Last Modified: Thu, 27 Aug 2020 22:35:33 GMT  
-		Size: 197.0 MB (197044757 bytes)  
+	-	`sha256:21f221a4a470d4af022d1b05e5a3ebff17b25bb23a5aea25f004125753359645`  
+		Last Modified: Tue, 01 Sep 2020 01:54:49 GMT  
+		Size: 197.0 MB (197044746 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:aa26f335f4570a2bc1d313174607adc9450ae56a1fcc75f14e8d2b48d4f802cb`  
-		Last Modified: Thu, 27 Aug 2020 22:57:14 GMT  
-		Size: 42.5 MB (42510055 bytes)  
+	-	`sha256:6e96f4d886bc38362c3726e0cccff72e32e65067b5e2084b64956af2741327f8`  
+		Last Modified: Tue, 01 Sep 2020 21:24:04 GMT  
+		Size: 42.5 MB (42510269 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-16-tools-deps-1.10.1.561-alpine`
 
 ```console
-$ docker pull clojure@sha256:434c19e284b2708dc3a7e644210efb2e03fe3f0c05a0ec0883cad1d9389de9a0
+$ docker pull clojure@sha256:9bf9d24a534f7fbac9e03ffad9b2d4762394ed7e7c1bf08bcd78fb31f10ce45e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12193,14 +12193,14 @@ $ docker pull clojure@sha256:434c19e284b2708dc3a7e644210efb2e03fe3f0c05a0ec0883c
 ### `clojure:openjdk-16-tools-deps-1.10.1.561-alpine` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:d05fb00a3f7854f750bacc80a5fe1d7e6950c910746e7a75c97cf110782038d2
+$ docker pull clojure@sha256:27e644d94829b0fbd02572ae7b88b664186d6f28f2380e1b986e931c77301624
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **223.7 MB (223703187 bytes)**  
+-	Total Size: **223.7 MB (223703249 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:df168c7df63524040ea6a45445a6e2cc27cd8b978d51e15a271b152fac473f86`
+-	Image ID: `sha256:3760945a40b7afec5d2ea468939736e602bd292dc56226cec17be75994c26b19`
 -	Default Command: `["sh","-c","sleep 1 && exec clj"]`
 
 ```dockerfile
@@ -12216,17 +12216,17 @@ ENV JAVA_HOME=/opt/openjdk-16
 ENV PATH=/opt/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 22 Jul 2020 01:05:45 GMT
 ENV JAVA_VERSION=16-ea+5
-# Wed, 29 Jul 2020 01:24:50 GMT
-RUN set -eux; 		arch="$(apk --print-arch)"; 	case "$arch" in 		x86_64) 			downloadUrl=https://download.java.net/java/early_access/alpine/5/binaries/openjdk-16-ea+5_linux-x64-musl_bin.tar.gz; 			downloadSha256=1ec940bea148a7ececda635c209de3836fe4e6511f5d49d4248cf6d52c77aac8; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum -c -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/ssl/certs/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		java -Xshare:dump; 		javac --version; 	java --version
-# Wed, 29 Jul 2020 01:24:51 GMT
+# Tue, 01 Sep 2020 01:44:22 GMT
+RUN set -eux; 		arch="$(apk --print-arch)"; 	case "$arch" in 		x86_64) 			downloadUrl=https://download.java.net/java/early_access/alpine/5/binaries/openjdk-16-ea+5_linux-x64-musl_bin.tar.gz; 			downloadSha256=1ec940bea148a7ececda635c209de3836fe4e6511f5d49d4248cf6d52c77aac8; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum -c -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/ssl/certs/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:44:22 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 21:26:39 GMT
+# Tue, 01 Sep 2020 21:19:47 GMT
 ENV CLOJURE_VERSION=1.10.1.619
-# Fri, 14 Aug 2020 21:26:40 GMT
+# Tue, 01 Sep 2020 21:19:48 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 21:26:56 GMT
+# Tue, 01 Sep 2020 21:19:56 GMT
 RUN apk add --update --no-cache curl bash make && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "28b1652686426cdf856f83551b8ca01ff949b03bc9a533d270204d6511a8ca9d *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apk del curl
-# Fri, 14 Aug 2020 21:26:57 GMT
+# Tue, 01 Sep 2020 21:19:56 GMT
 CMD ["sh" "-c" "sleep 1 && exec clj"]
 ```
 
@@ -12239,19 +12239,19 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 		Last Modified: Wed, 22 Jul 2020 01:13:01 GMT  
 		Size: 926.4 KB (926401 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3ad14fdcda01da7c472fc488405c040d3b90afda31db2232d0a657edf2a86ab2`  
-		Last Modified: Wed, 29 Jul 2020 01:33:12 GMT  
-		Size: 197.5 MB (197456503 bytes)  
+	-	`sha256:db897018b4b7f77d0385f8d927829815841e840a5c7b293a8f540a58a2420aaa`  
+		Last Modified: Tue, 01 Sep 2020 01:55:28 GMT  
+		Size: 197.5 MB (197456532 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:44549619b2a481aa885e8ef23df4acb9b3d073e1170538cbc8becd67cdc5f910`  
-		Last Modified: Fri, 14 Aug 2020 21:30:42 GMT  
-		Size: 22.5 MB (22522742 bytes)  
+	-	`sha256:f515ff78161a0b36be8da421e10c9efc93f6ebdffab7059d259e74668576af57`  
+		Last Modified: Tue, 01 Sep 2020 21:24:28 GMT  
+		Size: 22.5 MB (22522775 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-16-tools-deps-1.10.1.561-buster`
 
 ```console
-$ docker pull clojure@sha256:144436d20783638f9a034345a046443f13ff0e31dd8ba9e62a894abecdaf4ac5
+$ docker pull clojure@sha256:30c4bf169de1f23ce1430f44f25d9670f3935f6f3a0e0a9cf755e537b33c92af
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12261,14 +12261,14 @@ $ docker pull clojure@sha256:144436d20783638f9a034345a046443f13ff0e31dd8ba9e62a8
 ### `clojure:openjdk-16-tools-deps-1.10.1.561-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:343c8416d959d7ff922b124601e716c7c9889a5a0bfb16d8bcc7d30be625b62e
+$ docker pull clojure@sha256:db337d688bb01ffe2201a9dc84c289b2dbb66ccd6bab385c3215e21a643c635b
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **361.9 MB (361904050 bytes)**  
+-	Total Size: **361.9 MB (361904115 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:685fe33a18a7f3dde52d47b67796d9013259e6e3476af7e343f21ea820b7630a`
+-	Image ID: `sha256:a7e4cd4ccd0533b775cc824ca3bf00e39315c5a9b7ab3c4d6eceec025b09df0f`
 -	Default Command: `["sh","-c","sleep 1 && exec clj"]`
 
 ```dockerfile
@@ -12294,17 +12294,17 @@ ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Thu, 27 Aug 2020 22:30:37 GMT
 ENV JAVA_VERSION=16-ea+13
-# Thu, 27 Aug 2020 22:31:22 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Thu, 27 Aug 2020 22:31:22 GMT
+# Tue, 01 Sep 2020 01:42:55 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:42:56 GMT
 CMD ["jshell"]
-# Thu, 27 Aug 2020 22:55:20 GMT
+# Tue, 01 Sep 2020 21:18:48 GMT
 ENV CLOJURE_VERSION=1.10.1.619
-# Thu, 27 Aug 2020 22:55:21 GMT
+# Tue, 01 Sep 2020 21:18:48 GMT
 WORKDIR /tmp
-# Thu, 27 Aug 2020 22:55:35 GMT
+# Tue, 01 Sep 2020 21:19:03 GMT
 RUN apt-get update && apt-get install -y make rlwrap && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "28b1652686426cdf856f83551b8ca01ff949b03bc9a533d270204d6511a8ca9d *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)"
-# Thu, 27 Aug 2020 22:55:36 GMT
+# Tue, 01 Sep 2020 21:19:04 GMT
 CMD ["sh" "-c" "sleep 1 && exec clj"]
 ```
 
@@ -12333,19 +12333,19 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 		Last Modified: Wed, 05 Aug 2020 00:47:44 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9aaba90dc6c33806a373fc2ae8f09b9ac47691b592c85c74ae271714172bb672`  
-		Last Modified: Thu, 27 Aug 2020 22:35:09 GMT  
-		Size: 196.8 MB (196781159 bytes)  
+	-	`sha256:4d06967fed734dd46caba0318d8d7f9c3e1706c069c1f2d120c3b978c4bb1e30`  
+		Last Modified: Tue, 01 Sep 2020 01:54:25 GMT  
+		Size: 196.8 MB (196781152 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a768a82e6076015fde82c331ea2344f693ff3040280d7a8280b5e8a2b7a3bae5`  
-		Last Modified: Thu, 27 Aug 2020 22:57:22 GMT  
-		Size: 31.2 MB (31168795 bytes)  
+	-	`sha256:a05132e2e782f262b74f40cc103f81f41cf9d08c83777ff926e119d1e653a53c`  
+		Last Modified: Tue, 01 Sep 2020 21:24:11 GMT  
+		Size: 31.2 MB (31168867 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-16-tools-deps-1.10.1.561-slim-buster`
 
 ```console
-$ docker pull clojure@sha256:8bb9765fe52a639cdb8adf05858cf8627bb162c4ca2addd99b43424b4e07aa21
+$ docker pull clojure@sha256:7aaab1b4dbabe2a2f1514473498728b53fa21d223d6ffe32e7a658cfe5a0e3a7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12355,14 +12355,14 @@ $ docker pull clojure@sha256:8bb9765fe52a639cdb8adf05858cf8627bb162c4ca2addd99b4
 ### `clojure:openjdk-16-tools-deps-1.10.1.561-slim-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:fc78618fd89d97bd638e6b889b2ead65301c28d47af860ed11d0ca3df4ec374b
+$ docker pull clojure@sha256:0ec84a0acdb6c41c014d06849a9daece3f45fb2f413c3477137ae31fb4aeac60
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **269.9 MB (269895575 bytes)**  
+-	Total Size: **269.9 MB (269895778 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:75581fa17f0d8107101bb5e9b1009dba8e15af236ccdaabab22a02eef51595cb`
+-	Image ID: `sha256:3d9951bf85a13efbe2aa705f541b761869362606c2c72bc9e56e190fd3397266`
 -	Default Command: `["sh","-c","sleep 1 && exec clj"]`
 
 ```dockerfile
@@ -12382,17 +12382,17 @@ ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Thu, 27 Aug 2020 22:31:32 GMT
 ENV JAVA_VERSION=16-ea+13
-# Thu, 27 Aug 2020 22:31:47 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Thu, 27 Aug 2020 22:31:47 GMT
+# Tue, 01 Sep 2020 01:43:20 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:43:20 GMT
 CMD ["jshell"]
-# Thu, 27 Aug 2020 22:54:55 GMT
+# Tue, 01 Sep 2020 21:18:23 GMT
 ENV CLOJURE_VERSION=1.10.1.619
-# Thu, 27 Aug 2020 22:54:55 GMT
+# Tue, 01 Sep 2020 21:18:23 GMT
 WORKDIR /tmp
-# Thu, 27 Aug 2020 22:55:15 GMT
+# Tue, 01 Sep 2020 21:18:44 GMT
 RUN apt-get update && apt-get install -y curl make rlwrap wget && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "28b1652686426cdf856f83551b8ca01ff949b03bc9a533d270204d6511a8ca9d *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apt-get purge -y --auto-remove curl wget
-# Thu, 27 Aug 2020 22:55:16 GMT
+# Tue, 01 Sep 2020 21:18:44 GMT
 CMD ["sh" "-c" "sleep 1 && exec clj"]
 ```
 
@@ -12409,19 +12409,19 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 		Last Modified: Wed, 05 Aug 2020 00:48:13 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dc70c6892e78972a2781684c9a4ba7d1202fc8c26c42181636aa8ec0bbb982b5`  
-		Last Modified: Thu, 27 Aug 2020 22:35:33 GMT  
-		Size: 197.0 MB (197044757 bytes)  
+	-	`sha256:21f221a4a470d4af022d1b05e5a3ebff17b25bb23a5aea25f004125753359645`  
+		Last Modified: Tue, 01 Sep 2020 01:54:49 GMT  
+		Size: 197.0 MB (197044746 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:aa26f335f4570a2bc1d313174607adc9450ae56a1fcc75f14e8d2b48d4f802cb`  
-		Last Modified: Thu, 27 Aug 2020 22:57:14 GMT  
-		Size: 42.5 MB (42510055 bytes)  
+	-	`sha256:6e96f4d886bc38362c3726e0cccff72e32e65067b5e2084b64956af2741327f8`  
+		Last Modified: Tue, 01 Sep 2020 21:24:04 GMT  
+		Size: 42.5 MB (42510269 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-16-tools-deps-alpine`
 
 ```console
-$ docker pull clojure@sha256:434c19e284b2708dc3a7e644210efb2e03fe3f0c05a0ec0883cad1d9389de9a0
+$ docker pull clojure@sha256:9bf9d24a534f7fbac9e03ffad9b2d4762394ed7e7c1bf08bcd78fb31f10ce45e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12431,14 +12431,14 @@ $ docker pull clojure@sha256:434c19e284b2708dc3a7e644210efb2e03fe3f0c05a0ec0883c
 ### `clojure:openjdk-16-tools-deps-alpine` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:d05fb00a3f7854f750bacc80a5fe1d7e6950c910746e7a75c97cf110782038d2
+$ docker pull clojure@sha256:27e644d94829b0fbd02572ae7b88b664186d6f28f2380e1b986e931c77301624
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **223.7 MB (223703187 bytes)**  
+-	Total Size: **223.7 MB (223703249 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:df168c7df63524040ea6a45445a6e2cc27cd8b978d51e15a271b152fac473f86`
+-	Image ID: `sha256:3760945a40b7afec5d2ea468939736e602bd292dc56226cec17be75994c26b19`
 -	Default Command: `["sh","-c","sleep 1 && exec clj"]`
 
 ```dockerfile
@@ -12454,17 +12454,17 @@ ENV JAVA_HOME=/opt/openjdk-16
 ENV PATH=/opt/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 22 Jul 2020 01:05:45 GMT
 ENV JAVA_VERSION=16-ea+5
-# Wed, 29 Jul 2020 01:24:50 GMT
-RUN set -eux; 		arch="$(apk --print-arch)"; 	case "$arch" in 		x86_64) 			downloadUrl=https://download.java.net/java/early_access/alpine/5/binaries/openjdk-16-ea+5_linux-x64-musl_bin.tar.gz; 			downloadSha256=1ec940bea148a7ececda635c209de3836fe4e6511f5d49d4248cf6d52c77aac8; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum -c -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/ssl/certs/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		java -Xshare:dump; 		javac --version; 	java --version
-# Wed, 29 Jul 2020 01:24:51 GMT
+# Tue, 01 Sep 2020 01:44:22 GMT
+RUN set -eux; 		arch="$(apk --print-arch)"; 	case "$arch" in 		x86_64) 			downloadUrl=https://download.java.net/java/early_access/alpine/5/binaries/openjdk-16-ea+5_linux-x64-musl_bin.tar.gz; 			downloadSha256=1ec940bea148a7ececda635c209de3836fe4e6511f5d49d4248cf6d52c77aac8; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum -c -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/ssl/certs/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:44:22 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 21:26:39 GMT
+# Tue, 01 Sep 2020 21:19:47 GMT
 ENV CLOJURE_VERSION=1.10.1.619
-# Fri, 14 Aug 2020 21:26:40 GMT
+# Tue, 01 Sep 2020 21:19:48 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 21:26:56 GMT
+# Tue, 01 Sep 2020 21:19:56 GMT
 RUN apk add --update --no-cache curl bash make && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "28b1652686426cdf856f83551b8ca01ff949b03bc9a533d270204d6511a8ca9d *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apk del curl
-# Fri, 14 Aug 2020 21:26:57 GMT
+# Tue, 01 Sep 2020 21:19:56 GMT
 CMD ["sh" "-c" "sleep 1 && exec clj"]
 ```
 
@@ -12477,19 +12477,19 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 		Last Modified: Wed, 22 Jul 2020 01:13:01 GMT  
 		Size: 926.4 KB (926401 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3ad14fdcda01da7c472fc488405c040d3b90afda31db2232d0a657edf2a86ab2`  
-		Last Modified: Wed, 29 Jul 2020 01:33:12 GMT  
-		Size: 197.5 MB (197456503 bytes)  
+	-	`sha256:db897018b4b7f77d0385f8d927829815841e840a5c7b293a8f540a58a2420aaa`  
+		Last Modified: Tue, 01 Sep 2020 01:55:28 GMT  
+		Size: 197.5 MB (197456532 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:44549619b2a481aa885e8ef23df4acb9b3d073e1170538cbc8becd67cdc5f910`  
-		Last Modified: Fri, 14 Aug 2020 21:30:42 GMT  
-		Size: 22.5 MB (22522742 bytes)  
+	-	`sha256:f515ff78161a0b36be8da421e10c9efc93f6ebdffab7059d259e74668576af57`  
+		Last Modified: Tue, 01 Sep 2020 21:24:28 GMT  
+		Size: 22.5 MB (22522775 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-16-tools-deps-buster`
 
 ```console
-$ docker pull clojure@sha256:144436d20783638f9a034345a046443f13ff0e31dd8ba9e62a894abecdaf4ac5
+$ docker pull clojure@sha256:30c4bf169de1f23ce1430f44f25d9670f3935f6f3a0e0a9cf755e537b33c92af
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12499,14 +12499,14 @@ $ docker pull clojure@sha256:144436d20783638f9a034345a046443f13ff0e31dd8ba9e62a8
 ### `clojure:openjdk-16-tools-deps-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:343c8416d959d7ff922b124601e716c7c9889a5a0bfb16d8bcc7d30be625b62e
+$ docker pull clojure@sha256:db337d688bb01ffe2201a9dc84c289b2dbb66ccd6bab385c3215e21a643c635b
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **361.9 MB (361904050 bytes)**  
+-	Total Size: **361.9 MB (361904115 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:685fe33a18a7f3dde52d47b67796d9013259e6e3476af7e343f21ea820b7630a`
+-	Image ID: `sha256:a7e4cd4ccd0533b775cc824ca3bf00e39315c5a9b7ab3c4d6eceec025b09df0f`
 -	Default Command: `["sh","-c","sleep 1 && exec clj"]`
 
 ```dockerfile
@@ -12532,17 +12532,17 @@ ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Thu, 27 Aug 2020 22:30:37 GMT
 ENV JAVA_VERSION=16-ea+13
-# Thu, 27 Aug 2020 22:31:22 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Thu, 27 Aug 2020 22:31:22 GMT
+# Tue, 01 Sep 2020 01:42:55 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:42:56 GMT
 CMD ["jshell"]
-# Thu, 27 Aug 2020 22:55:20 GMT
+# Tue, 01 Sep 2020 21:18:48 GMT
 ENV CLOJURE_VERSION=1.10.1.619
-# Thu, 27 Aug 2020 22:55:21 GMT
+# Tue, 01 Sep 2020 21:18:48 GMT
 WORKDIR /tmp
-# Thu, 27 Aug 2020 22:55:35 GMT
+# Tue, 01 Sep 2020 21:19:03 GMT
 RUN apt-get update && apt-get install -y make rlwrap && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "28b1652686426cdf856f83551b8ca01ff949b03bc9a533d270204d6511a8ca9d *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)"
-# Thu, 27 Aug 2020 22:55:36 GMT
+# Tue, 01 Sep 2020 21:19:04 GMT
 CMD ["sh" "-c" "sleep 1 && exec clj"]
 ```
 
@@ -12571,19 +12571,19 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 		Last Modified: Wed, 05 Aug 2020 00:47:44 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9aaba90dc6c33806a373fc2ae8f09b9ac47691b592c85c74ae271714172bb672`  
-		Last Modified: Thu, 27 Aug 2020 22:35:09 GMT  
-		Size: 196.8 MB (196781159 bytes)  
+	-	`sha256:4d06967fed734dd46caba0318d8d7f9c3e1706c069c1f2d120c3b978c4bb1e30`  
+		Last Modified: Tue, 01 Sep 2020 01:54:25 GMT  
+		Size: 196.8 MB (196781152 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a768a82e6076015fde82c331ea2344f693ff3040280d7a8280b5e8a2b7a3bae5`  
-		Last Modified: Thu, 27 Aug 2020 22:57:22 GMT  
-		Size: 31.2 MB (31168795 bytes)  
+	-	`sha256:a05132e2e782f262b74f40cc103f81f41cf9d08c83777ff926e119d1e653a53c`  
+		Last Modified: Tue, 01 Sep 2020 21:24:11 GMT  
+		Size: 31.2 MB (31168867 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-16-tools-deps-slim-buster`
 
 ```console
-$ docker pull clojure@sha256:8bb9765fe52a639cdb8adf05858cf8627bb162c4ca2addd99b43424b4e07aa21
+$ docker pull clojure@sha256:7aaab1b4dbabe2a2f1514473498728b53fa21d223d6ffe32e7a658cfe5a0e3a7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12593,14 +12593,14 @@ $ docker pull clojure@sha256:8bb9765fe52a639cdb8adf05858cf8627bb162c4ca2addd99b4
 ### `clojure:openjdk-16-tools-deps-slim-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:fc78618fd89d97bd638e6b889b2ead65301c28d47af860ed11d0ca3df4ec374b
+$ docker pull clojure@sha256:0ec84a0acdb6c41c014d06849a9daece3f45fb2f413c3477137ae31fb4aeac60
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **269.9 MB (269895575 bytes)**  
+-	Total Size: **269.9 MB (269895778 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:75581fa17f0d8107101bb5e9b1009dba8e15af236ccdaabab22a02eef51595cb`
+-	Image ID: `sha256:3d9951bf85a13efbe2aa705f541b761869362606c2c72bc9e56e190fd3397266`
 -	Default Command: `["sh","-c","sleep 1 && exec clj"]`
 
 ```dockerfile
@@ -12620,17 +12620,17 @@ ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Thu, 27 Aug 2020 22:31:32 GMT
 ENV JAVA_VERSION=16-ea+13
-# Thu, 27 Aug 2020 22:31:47 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		javac --version; 	java --version
-# Thu, 27 Aug 2020 22:31:47 GMT
+# Tue, 01 Sep 2020 01:43:20 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-aarch64_bin.tar.gz; 			downloadSha256=ff0e6702cc9aa6aad0d1399db28526d41e3c89d09293e3f322d3cee01b7a1d7d; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/13/GPL/openjdk-16-ea+13_linux-x64_bin.tar.gz; 			downloadSha256=c5a1067ea4822157a4476bbab01ed581d6992bd788b45505a3dd32ef4deb16b0; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:43:20 GMT
 CMD ["jshell"]
-# Thu, 27 Aug 2020 22:54:55 GMT
+# Tue, 01 Sep 2020 21:18:23 GMT
 ENV CLOJURE_VERSION=1.10.1.619
-# Thu, 27 Aug 2020 22:54:55 GMT
+# Tue, 01 Sep 2020 21:18:23 GMT
 WORKDIR /tmp
-# Thu, 27 Aug 2020 22:55:15 GMT
+# Tue, 01 Sep 2020 21:18:44 GMT
 RUN apt-get update && apt-get install -y curl make rlwrap wget && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "28b1652686426cdf856f83551b8ca01ff949b03bc9a533d270204d6511a8ca9d *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apt-get purge -y --auto-remove curl wget
-# Thu, 27 Aug 2020 22:55:16 GMT
+# Tue, 01 Sep 2020 21:18:44 GMT
 CMD ["sh" "-c" "sleep 1 && exec clj"]
 ```
 
@@ -12647,13 +12647,13 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 		Last Modified: Wed, 05 Aug 2020 00:48:13 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dc70c6892e78972a2781684c9a4ba7d1202fc8c26c42181636aa8ec0bbb982b5`  
-		Last Modified: Thu, 27 Aug 2020 22:35:33 GMT  
-		Size: 197.0 MB (197044757 bytes)  
+	-	`sha256:21f221a4a470d4af022d1b05e5a3ebff17b25bb23a5aea25f004125753359645`  
+		Last Modified: Tue, 01 Sep 2020 01:54:49 GMT  
+		Size: 197.0 MB (197044746 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:aa26f335f4570a2bc1d313174607adc9450ae56a1fcc75f14e8d2b48d4f802cb`  
-		Last Modified: Thu, 27 Aug 2020 22:57:14 GMT  
-		Size: 42.5 MB (42510055 bytes)  
+	-	`sha256:6e96f4d886bc38362c3726e0cccff72e32e65067b5e2084b64956af2741327f8`  
+		Last Modified: Tue, 01 Sep 2020 21:24:04 GMT  
+		Size: 42.5 MB (42510269 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `clojure:openjdk-8`
@@ -14645,7 +14645,7 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 ## `clojure:slim-buster`
 
 ```console
-$ docker pull clojure@sha256:73d3b987a44df2cab4bda701786c4204ce564da603d0fbd45511b63eebc5ea93
+$ docker pull clojure@sha256:53ffacd317ac8ecf3304682e3a08596b1c3c161f5a23d4c4e42008d1072646e2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -14656,14 +14656,14 @@ $ docker pull clojure@sha256:73d3b987a44df2cab4bda701786c4204ce564da603d0fbd4551
 ### `clojure:slim-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:771cd2c5250eabf5267478931615a9dccc649704648574a9eb33a43d04ab05f2
+$ docker pull clojure@sha256:edfa5024a9c1b7f40027b88adfc52e864a7a1ca70da6c42f5ed53aae4d34866d
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **244.5 MB (244493950 bytes)**  
+-	Total Size: **244.5 MB (244494078 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f78a1e393bd6de644ac496abd930736dbf4ffcdacd2c7118372dbffc9deb4867`
+-	Image ID: `sha256:54f6113f88d77e1f77dbd5518947d3886a84a154320888025223d7d85960d1ef`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -14683,25 +14683,25 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:46 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:45:02 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:45:03 GMT
+# Tue, 01 Sep 2020 01:50:18 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:50:18 GMT
 CMD ["jshell"]
-# Wed, 05 Aug 2020 16:58:11 GMT
+# Tue, 01 Sep 2020 21:10:41 GMT
 ENV LEIN_VERSION=2.9.3
-# Wed, 05 Aug 2020 16:58:11 GMT
+# Tue, 01 Sep 2020 21:10:41 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:11 GMT
+# Tue, 01 Sep 2020 21:10:42 GMT
 WORKDIR /tmp
-# Wed, 05 Aug 2020 16:58:20 GMT
+# Tue, 01 Sep 2020 21:10:51 GMT
 RUN apt-get update && apt-get install -y gnupg wget && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "42e18e8a833b863ddfba1c5565bd5d78b54bcee661ec86e94a8bdc67b1733e63 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg wget
-# Wed, 05 Aug 2020 16:58:21 GMT
+# Tue, 01 Sep 2020 21:10:51 GMT
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 05 Aug 2020 16:58:21 GMT
+# Tue, 01 Sep 2020 21:10:51 GMT
 ENV LEIN_ROOT=1
-# Wed, 05 Aug 2020 16:58:25 GMT
+# Tue, 01 Sep 2020 21:10:55 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Wed, 05 Aug 2020 16:58:25 GMT
+# Tue, 01 Sep 2020 21:10:55 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -14718,17 +14718,17 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Aug 2020 00:51:20 GMT  
 		Size: 212.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7900923f09cbc8c8dda6274e5de53ec12688a9d2c27edabed353d1af12b03b1a`  
-		Last Modified: Wed, 05 Aug 2020 00:51:36 GMT  
-		Size: 196.5 MB (196526004 bytes)  
+	-	`sha256:ba2a97e7cfd908de238f3f28c9f3221858d3de0bf5f0138dcc04bffdb9e1f446`  
+		Last Modified: Tue, 01 Sep 2020 02:01:09 GMT  
+		Size: 196.5 MB (196526138 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7d4257124f2fe6b9661ab6a69d273cf1906cc0f2f9f1ed9b371bbd9bacf60580`  
-		Last Modified: Wed, 05 Aug 2020 17:06:40 GMT  
-		Size: 13.5 MB (13459056 bytes)  
+	-	`sha256:4b050804743ede43660974b70b791dc0bf20663229459123509f1bdbe018fcda`  
+		Last Modified: Tue, 01 Sep 2020 21:21:07 GMT  
+		Size: 13.5 MB (13459048 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8887164796c4f4565eee27f16fdcbd70f543fff226088a7a162ee85a530f2518`  
-		Last Modified: Wed, 05 Aug 2020 17:06:39 GMT  
-		Size: 4.2 MB (4168126 bytes)  
+	-	`sha256:9ace3907bbb789eefdded03bbae9ab5b13a4ec04ea8ffc5a3b5117dc67438be6`  
+		Last Modified: Tue, 01 Sep 2020 21:21:06 GMT  
+		Size: 4.2 MB (4168128 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:slim-buster` - linux; arm64 variant v8
@@ -14812,7 +14812,7 @@ CMD ["lein" "repl"]
 ## `clojure:tools-deps`
 
 ```console
-$ docker pull clojure@sha256:59ca8190bca504e8ee171efbb32a8c90f4e2d46f8c88f1b244268c362719f070
+$ docker pull clojure@sha256:64df0f3b6c7bb4204e4787a409a4da2bec438f0670ddb2c37ac419b4ba76dbfb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -14823,14 +14823,14 @@ $ docker pull clojure@sha256:59ca8190bca504e8ee171efbb32a8c90f4e2d46f8c88f1b2442
 ### `clojure:tools-deps` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:605957c0ac3f00d3f6b79a776c1f933c6d68941444db9f4e5484da6c52055019
+$ docker pull clojure@sha256:099e51b1d45d41e2aa60e25d86c0d4990deae07c5c34567ac2be572759bddcdc
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **352.7 MB (352732701 bytes)**  
+-	Total Size: **352.7 MB (352732804 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c72e20dfad0e492200d609ea0dd9fd0a96111d3300a6668bf4ce52ef4472d008`
+-	Image ID: `sha256:35063c5b332cf0e05076a28ef92f051c9bb35a32db974b15d9cdb9bc079c9b93`
 -	Default Command: `["sh","-c","sleep 1 && exec clj"]`
 
 ```dockerfile
@@ -14856,17 +14856,17 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:27 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:44:39 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:39 GMT
+# Tue, 01 Sep 2020 01:49:46 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:47 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 01:21:19 GMT
+# Tue, 01 Sep 2020 21:11:34 GMT
 ENV CLOJURE_VERSION=1.10.1.561
-# Fri, 14 Aug 2020 01:21:19 GMT
+# Tue, 01 Sep 2020 21:11:34 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 01:21:35 GMT
+# Tue, 01 Sep 2020 21:11:50 GMT
 RUN apt-get update && apt-get install -y make rlwrap && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "7f9e4e7c5a8171db4e4edf5ce78e5b8f453bae641a4c6b7f3dda36c3128d2ff7 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)"
-# Fri, 14 Aug 2020 01:21:35 GMT
+# Tue, 01 Sep 2020 21:11:50 GMT
 CMD ["sh" "-c" "sleep 1 && exec clj"]
 ```
 
@@ -14895,13 +14895,13 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 		Last Modified: Wed, 05 Aug 2020 00:50:57 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa776a6e7e3738bb7885a1f6d3140c2276841368a5e839a099821c68f2f852e2`  
-		Last Modified: Wed, 05 Aug 2020 00:51:14 GMT  
-		Size: 196.2 MB (196248896 bytes)  
+	-	`sha256:6bf89641a7f2b81477850d9d4604e9d235622bf71a5859c2136763e10e04b284`  
+		Last Modified: Tue, 01 Sep 2020 02:00:43 GMT  
+		Size: 196.2 MB (196249014 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:729d4edeea833808c237d008d44b1875eb31788045f31148740f5fd8879b60d2`  
-		Last Modified: Fri, 14 Aug 2020 01:25:35 GMT  
-		Size: 31.2 MB (31165213 bytes)  
+	-	`sha256:cd9a54fc6a2386f8af40a9d69f9fc1efa3ba0060368bde209963fd8f2fd221cc`  
+		Last Modified: Tue, 01 Sep 2020 21:21:33 GMT  
+		Size: 31.2 MB (31165198 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:tools-deps` - linux; arm64 variant v8
@@ -14991,7 +14991,7 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 ## `clojure:tools-deps-1.10.1.561`
 
 ```console
-$ docker pull clojure@sha256:59ca8190bca504e8ee171efbb32a8c90f4e2d46f8c88f1b244268c362719f070
+$ docker pull clojure@sha256:64df0f3b6c7bb4204e4787a409a4da2bec438f0670ddb2c37ac419b4ba76dbfb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -15002,14 +15002,14 @@ $ docker pull clojure@sha256:59ca8190bca504e8ee171efbb32a8c90f4e2d46f8c88f1b2442
 ### `clojure:tools-deps-1.10.1.561` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:605957c0ac3f00d3f6b79a776c1f933c6d68941444db9f4e5484da6c52055019
+$ docker pull clojure@sha256:099e51b1d45d41e2aa60e25d86c0d4990deae07c5c34567ac2be572759bddcdc
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **352.7 MB (352732701 bytes)**  
+-	Total Size: **352.7 MB (352732804 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c72e20dfad0e492200d609ea0dd9fd0a96111d3300a6668bf4ce52ef4472d008`
+-	Image ID: `sha256:35063c5b332cf0e05076a28ef92f051c9bb35a32db974b15d9cdb9bc079c9b93`
 -	Default Command: `["sh","-c","sleep 1 && exec clj"]`
 
 ```dockerfile
@@ -15035,17 +15035,17 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:27 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:44:39 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:39 GMT
+# Tue, 01 Sep 2020 01:49:46 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:47 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 01:21:19 GMT
+# Tue, 01 Sep 2020 21:11:34 GMT
 ENV CLOJURE_VERSION=1.10.1.561
-# Fri, 14 Aug 2020 01:21:19 GMT
+# Tue, 01 Sep 2020 21:11:34 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 01:21:35 GMT
+# Tue, 01 Sep 2020 21:11:50 GMT
 RUN apt-get update && apt-get install -y make rlwrap && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "7f9e4e7c5a8171db4e4edf5ce78e5b8f453bae641a4c6b7f3dda36c3128d2ff7 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)"
-# Fri, 14 Aug 2020 01:21:35 GMT
+# Tue, 01 Sep 2020 21:11:50 GMT
 CMD ["sh" "-c" "sleep 1 && exec clj"]
 ```
 
@@ -15074,13 +15074,13 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 		Last Modified: Wed, 05 Aug 2020 00:50:57 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa776a6e7e3738bb7885a1f6d3140c2276841368a5e839a099821c68f2f852e2`  
-		Last Modified: Wed, 05 Aug 2020 00:51:14 GMT  
-		Size: 196.2 MB (196248896 bytes)  
+	-	`sha256:6bf89641a7f2b81477850d9d4604e9d235622bf71a5859c2136763e10e04b284`  
+		Last Modified: Tue, 01 Sep 2020 02:00:43 GMT  
+		Size: 196.2 MB (196249014 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:729d4edeea833808c237d008d44b1875eb31788045f31148740f5fd8879b60d2`  
-		Last Modified: Fri, 14 Aug 2020 01:25:35 GMT  
-		Size: 31.2 MB (31165213 bytes)  
+	-	`sha256:cd9a54fc6a2386f8af40a9d69f9fc1efa3ba0060368bde209963fd8f2fd221cc`  
+		Last Modified: Tue, 01 Sep 2020 21:21:33 GMT  
+		Size: 31.2 MB (31165198 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:tools-deps-1.10.1.561` - linux; arm64 variant v8
@@ -15170,7 +15170,7 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 ## `clojure:tools-deps-1.10.1.561-buster`
 
 ```console
-$ docker pull clojure@sha256:59ca8190bca504e8ee171efbb32a8c90f4e2d46f8c88f1b244268c362719f070
+$ docker pull clojure@sha256:64df0f3b6c7bb4204e4787a409a4da2bec438f0670ddb2c37ac419b4ba76dbfb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -15181,14 +15181,14 @@ $ docker pull clojure@sha256:59ca8190bca504e8ee171efbb32a8c90f4e2d46f8c88f1b2442
 ### `clojure:tools-deps-1.10.1.561-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:605957c0ac3f00d3f6b79a776c1f933c6d68941444db9f4e5484da6c52055019
+$ docker pull clojure@sha256:099e51b1d45d41e2aa60e25d86c0d4990deae07c5c34567ac2be572759bddcdc
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **352.7 MB (352732701 bytes)**  
+-	Total Size: **352.7 MB (352732804 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c72e20dfad0e492200d609ea0dd9fd0a96111d3300a6668bf4ce52ef4472d008`
+-	Image ID: `sha256:35063c5b332cf0e05076a28ef92f051c9bb35a32db974b15d9cdb9bc079c9b93`
 -	Default Command: `["sh","-c","sleep 1 && exec clj"]`
 
 ```dockerfile
@@ -15214,17 +15214,17 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:27 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:44:39 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:39 GMT
+# Tue, 01 Sep 2020 01:49:46 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:47 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 01:21:19 GMT
+# Tue, 01 Sep 2020 21:11:34 GMT
 ENV CLOJURE_VERSION=1.10.1.561
-# Fri, 14 Aug 2020 01:21:19 GMT
+# Tue, 01 Sep 2020 21:11:34 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 01:21:35 GMT
+# Tue, 01 Sep 2020 21:11:50 GMT
 RUN apt-get update && apt-get install -y make rlwrap && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "7f9e4e7c5a8171db4e4edf5ce78e5b8f453bae641a4c6b7f3dda36c3128d2ff7 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)"
-# Fri, 14 Aug 2020 01:21:35 GMT
+# Tue, 01 Sep 2020 21:11:50 GMT
 CMD ["sh" "-c" "sleep 1 && exec clj"]
 ```
 
@@ -15253,13 +15253,13 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 		Last Modified: Wed, 05 Aug 2020 00:50:57 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa776a6e7e3738bb7885a1f6d3140c2276841368a5e839a099821c68f2f852e2`  
-		Last Modified: Wed, 05 Aug 2020 00:51:14 GMT  
-		Size: 196.2 MB (196248896 bytes)  
+	-	`sha256:6bf89641a7f2b81477850d9d4604e9d235622bf71a5859c2136763e10e04b284`  
+		Last Modified: Tue, 01 Sep 2020 02:00:43 GMT  
+		Size: 196.2 MB (196249014 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:729d4edeea833808c237d008d44b1875eb31788045f31148740f5fd8879b60d2`  
-		Last Modified: Fri, 14 Aug 2020 01:25:35 GMT  
-		Size: 31.2 MB (31165213 bytes)  
+	-	`sha256:cd9a54fc6a2386f8af40a9d69f9fc1efa3ba0060368bde209963fd8f2fd221cc`  
+		Last Modified: Tue, 01 Sep 2020 21:21:33 GMT  
+		Size: 31.2 MB (31165198 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:tools-deps-1.10.1.561-buster` - linux; arm64 variant v8
@@ -15349,7 +15349,7 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 ## `clojure:tools-deps-1.10.1.561-slim-buster`
 
 ```console
-$ docker pull clojure@sha256:8bf85777c0b8d59fba028dcae933a8ee48ab5c1bde0c4210117f66aa0faefcdd
+$ docker pull clojure@sha256:dd4290d2f0ae03cbf5fdd0c38293f5409d2e1c3eb2f7ff2e2f5132404cde5aa8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -15360,14 +15360,14 @@ $ docker pull clojure@sha256:8bf85777c0b8d59fba028dcae933a8ee48ab5c1bde0c4210117
 ### `clojure:tools-deps-1.10.1.561-slim-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:1bb38ab4a09bade537ce9dddee4fd11c8c54fd15f2177274671c1f5913829257
+$ docker pull clojure@sha256:db358b34e9dbb10a3947fe5a6abfbecc039425126600a81418283ccacc60f455
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **269.4 MB (269376440 bytes)**  
+-	Total Size: **269.4 MB (269376577 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:9b4f61d515d65ef8f726e5aa2cd123230863b7b3e673c8a699f68f06fa822a42`
+-	Image ID: `sha256:3c502282dcc42bb9697a293a94917e53768e4065dcf4ecd957ab8560381f15d7`
 -	Default Command: `["sh","-c","sleep 1 && exec clj"]`
 
 ```dockerfile
@@ -15387,17 +15387,17 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:46 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:45:02 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:45:03 GMT
+# Tue, 01 Sep 2020 01:50:18 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:50:18 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 01:21:41 GMT
+# Tue, 01 Sep 2020 21:11:55 GMT
 ENV CLOJURE_VERSION=1.10.1.561
-# Fri, 14 Aug 2020 01:21:41 GMT
+# Tue, 01 Sep 2020 21:11:56 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 01:22:01 GMT
+# Tue, 01 Sep 2020 21:12:16 GMT
 RUN apt-get update && apt-get install -y curl make rlwrap wget && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "7f9e4e7c5a8171db4e4edf5ce78e5b8f453bae641a4c6b7f3dda36c3128d2ff7 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apt-get purge -y --auto-remove curl wget
-# Fri, 14 Aug 2020 01:22:01 GMT
+# Tue, 01 Sep 2020 21:12:17 GMT
 CMD ["sh" "-c" "sleep 1 && exec clj"]
 ```
 
@@ -15414,13 +15414,13 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 		Last Modified: Wed, 05 Aug 2020 00:51:20 GMT  
 		Size: 212.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7900923f09cbc8c8dda6274e5de53ec12688a9d2c27edabed353d1af12b03b1a`  
-		Last Modified: Wed, 05 Aug 2020 00:51:36 GMT  
-		Size: 196.5 MB (196526004 bytes)  
+	-	`sha256:ba2a97e7cfd908de238f3f28c9f3221858d3de0bf5f0138dcc04bffdb9e1f446`  
+		Last Modified: Tue, 01 Sep 2020 02:01:09 GMT  
+		Size: 196.5 MB (196526138 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c01e03d73653e888fe0d1f89af2c899ccb0df1f2d6145a01aac2130fe7f2e922`  
-		Last Modified: Fri, 14 Aug 2020 01:25:48 GMT  
-		Size: 42.5 MB (42509672 bytes)  
+	-	`sha256:e0272c6dccdf919d0268948f1a1729e62c1c39519cb0e603eddb663fd401fd0b`  
+		Last Modified: Tue, 01 Sep 2020 21:21:46 GMT  
+		Size: 42.5 MB (42509675 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:tools-deps-1.10.1.561-slim-buster` - linux; arm64 variant v8
@@ -15492,7 +15492,7 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 ## `clojure:tools-deps-buster`
 
 ```console
-$ docker pull clojure@sha256:59ca8190bca504e8ee171efbb32a8c90f4e2d46f8c88f1b244268c362719f070
+$ docker pull clojure@sha256:64df0f3b6c7bb4204e4787a409a4da2bec438f0670ddb2c37ac419b4ba76dbfb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -15503,14 +15503,14 @@ $ docker pull clojure@sha256:59ca8190bca504e8ee171efbb32a8c90f4e2d46f8c88f1b2442
 ### `clojure:tools-deps-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:605957c0ac3f00d3f6b79a776c1f933c6d68941444db9f4e5484da6c52055019
+$ docker pull clojure@sha256:099e51b1d45d41e2aa60e25d86c0d4990deae07c5c34567ac2be572759bddcdc
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **352.7 MB (352732701 bytes)**  
+-	Total Size: **352.7 MB (352732804 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c72e20dfad0e492200d609ea0dd9fd0a96111d3300a6668bf4ce52ef4472d008`
+-	Image ID: `sha256:35063c5b332cf0e05076a28ef92f051c9bb35a32db974b15d9cdb9bc079c9b93`
 -	Default Command: `["sh","-c","sleep 1 && exec clj"]`
 
 ```dockerfile
@@ -15536,17 +15536,17 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:27 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:44:39 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:44:39 GMT
+# Tue, 01 Sep 2020 01:49:46 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:49:47 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 01:21:19 GMT
+# Tue, 01 Sep 2020 21:11:34 GMT
 ENV CLOJURE_VERSION=1.10.1.561
-# Fri, 14 Aug 2020 01:21:19 GMT
+# Tue, 01 Sep 2020 21:11:34 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 01:21:35 GMT
+# Tue, 01 Sep 2020 21:11:50 GMT
 RUN apt-get update && apt-get install -y make rlwrap && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "7f9e4e7c5a8171db4e4edf5ce78e5b8f453bae641a4c6b7f3dda36c3128d2ff7 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)"
-# Fri, 14 Aug 2020 01:21:35 GMT
+# Tue, 01 Sep 2020 21:11:50 GMT
 CMD ["sh" "-c" "sleep 1 && exec clj"]
 ```
 
@@ -15575,13 +15575,13 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 		Last Modified: Wed, 05 Aug 2020 00:50:57 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa776a6e7e3738bb7885a1f6d3140c2276841368a5e839a099821c68f2f852e2`  
-		Last Modified: Wed, 05 Aug 2020 00:51:14 GMT  
-		Size: 196.2 MB (196248896 bytes)  
+	-	`sha256:6bf89641a7f2b81477850d9d4604e9d235622bf71a5859c2136763e10e04b284`  
+		Last Modified: Tue, 01 Sep 2020 02:00:43 GMT  
+		Size: 196.2 MB (196249014 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:729d4edeea833808c237d008d44b1875eb31788045f31148740f5fd8879b60d2`  
-		Last Modified: Fri, 14 Aug 2020 01:25:35 GMT  
-		Size: 31.2 MB (31165213 bytes)  
+	-	`sha256:cd9a54fc6a2386f8af40a9d69f9fc1efa3ba0060368bde209963fd8f2fd221cc`  
+		Last Modified: Tue, 01 Sep 2020 21:21:33 GMT  
+		Size: 31.2 MB (31165198 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:tools-deps-buster` - linux; arm64 variant v8
@@ -15671,7 +15671,7 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 ## `clojure:tools-deps-slim-buster`
 
 ```console
-$ docker pull clojure@sha256:8bf85777c0b8d59fba028dcae933a8ee48ab5c1bde0c4210117f66aa0faefcdd
+$ docker pull clojure@sha256:dd4290d2f0ae03cbf5fdd0c38293f5409d2e1c3eb2f7ff2e2f5132404cde5aa8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -15682,14 +15682,14 @@ $ docker pull clojure@sha256:8bf85777c0b8d59fba028dcae933a8ee48ab5c1bde0c4210117
 ### `clojure:tools-deps-slim-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:1bb38ab4a09bade537ce9dddee4fd11c8c54fd15f2177274671c1f5913829257
+$ docker pull clojure@sha256:db358b34e9dbb10a3947fe5a6abfbecc039425126600a81418283ccacc60f455
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **269.4 MB (269376440 bytes)**  
+-	Total Size: **269.4 MB (269376577 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:9b4f61d515d65ef8f726e5aa2cd123230863b7b3e673c8a699f68f06fa822a42`
+-	Image ID: `sha256:3c502282dcc42bb9697a293a94917e53768e4065dcf4ecd957ab8560381f15d7`
 -	Default Command: `["sh","-c","sleep 1 && exec clj"]`
 
 ```dockerfile
@@ -15709,17 +15709,17 @@ ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 # Wed, 05 Aug 2020 00:44:46 GMT
 ENV JAVA_VERSION=11.0.8
-# Wed, 05 Aug 2020 00:45:02 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac --version; 	java --version
-# Wed, 05 Aug 2020 00:45:03 GMT
+# Tue, 01 Sep 2020 01:50:18 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.8_10.tar.gz ;; 		amd64 | i386:x86-64) downloadUrl=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz ;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz.asc "$downloadUrl.sign"; 	wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 			apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Tue, 01 Sep 2020 01:50:18 GMT
 CMD ["jshell"]
-# Fri, 14 Aug 2020 01:21:41 GMT
+# Tue, 01 Sep 2020 21:11:55 GMT
 ENV CLOJURE_VERSION=1.10.1.561
-# Fri, 14 Aug 2020 01:21:41 GMT
+# Tue, 01 Sep 2020 21:11:56 GMT
 WORKDIR /tmp
-# Fri, 14 Aug 2020 01:22:01 GMT
+# Tue, 01 Sep 2020 21:12:16 GMT
 RUN apt-get update && apt-get install -y curl make rlwrap wget && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "7f9e4e7c5a8171db4e4edf5ce78e5b8f453bae641a4c6b7f3dda36c3128d2ff7 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apt-get purge -y --auto-remove curl wget
-# Fri, 14 Aug 2020 01:22:01 GMT
+# Tue, 01 Sep 2020 21:12:17 GMT
 CMD ["sh" "-c" "sleep 1 && exec clj"]
 ```
 
@@ -15736,13 +15736,13 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 		Last Modified: Wed, 05 Aug 2020 00:51:20 GMT  
 		Size: 212.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7900923f09cbc8c8dda6274e5de53ec12688a9d2c27edabed353d1af12b03b1a`  
-		Last Modified: Wed, 05 Aug 2020 00:51:36 GMT  
-		Size: 196.5 MB (196526004 bytes)  
+	-	`sha256:ba2a97e7cfd908de238f3f28c9f3221858d3de0bf5f0138dcc04bffdb9e1f446`  
+		Last Modified: Tue, 01 Sep 2020 02:01:09 GMT  
+		Size: 196.5 MB (196526138 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c01e03d73653e888fe0d1f89af2c899ccb0df1f2d6145a01aac2130fe7f2e922`  
-		Last Modified: Fri, 14 Aug 2020 01:25:48 GMT  
-		Size: 42.5 MB (42509672 bytes)  
+	-	`sha256:e0272c6dccdf919d0268948f1a1729e62c1c39519cb0e603eddb663fd401fd0b`  
+		Last Modified: Tue, 01 Sep 2020 21:21:46 GMT  
+		Size: 42.5 MB (42509675 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:tools-deps-slim-buster` - linux; arm64 variant v8
