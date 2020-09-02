@@ -1,7 +1,7 @@
 ## `kapacitor:latest`
 
 ```console
-$ docker pull kapacitor@sha256:bd9f7862520243b47e4fa582778a6c02f764ecaa3d233d5b474ed89c748fe76c
+$ docker pull kapacitor@sha256:54d4ba1eae5e8bfc15f41a413e43f117a846428647ca58bd7d09991e459724c9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -13,14 +13,14 @@ $ docker pull kapacitor@sha256:bd9f7862520243b47e4fa582778a6c02f764ecaa3d233d5b4
 ### `kapacitor:latest` - linux; amd64
 
 ```console
-$ docker pull kapacitor@sha256:b3c738d9fbb0135e36317a21e94e7291269c1f1df56b1f19ec3953d16837eff4
+$ docker pull kapacitor@sha256:5d45798cd4faf653c1fce3d5b36e1e9b80b7fbe4e4427624bd4fb6b43e023522
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **110.0 MB (109958916 bytes)**  
+-	Total Size: **110.0 MB (109958962 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4b0782c166c86c5cb0ecea447367b42ce40149cc6d992ed3c100585d267ea677`
+-	Image ID: `sha256:9a7ac689eb303d2aab3e012989ac0cc69f75b5118e6c794c6af305dfba0c5d19`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["kapacitord"]`
 
@@ -35,23 +35,23 @@ RUN apt-get update && apt-get install -y --no-install-recommends 		ca-certificat
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
 # Wed, 05 Aug 2020 16:32:20 GMT
 RUN DEBIAN_FRONTEND=noninteractive apt-get update &&     DEBIAN_FRONTEND=noninteractive apt-get install -y bash-completion &&     awk 'f{if(sub(/^#/,"",$0)==0){f=0}};/^# enable bash completion/{f=1};{print;}' /etc/bash.bashrc > /etc/bash.bashrc.new &&     mv /etc/bash.bashrc.new /etc/bash.bashrc
-# Wed, 05 Aug 2020 16:32:23 GMT
-RUN set -ex &&     for key in         05CE15085FC09D18E99EFB22684A14CF2582E0C5 ;     do         gpg --keyserver ha.pool.sks-keyservers.net --recv-keys "$key" ||         gpg --keyserver pgp.mit.edu --recv-keys "$key" ||         gpg --keyserver keyserver.pgp.com --recv-keys "$key" ;     done
-# Tue, 01 Sep 2020 01:04:47 GMT
+# Wed, 02 Sep 2020 00:16:19 GMT
+RUN set -ex &&     mkdir ~/.gnupg;     echo "disable-ipv6" >> ~/.gnupg/dirmngr.conf;     for key in         05CE15085FC09D18E99EFB22684A14CF2582E0C5 ;     do         gpg --keyserver ha.pool.sks-keyservers.net --recv-keys "$key" ||         gpg --keyserver pgp.mit.edu --recv-keys "$key" ||         gpg --keyserver keyserver.pgp.com --recv-keys "$key" ;     done
+# Wed, 02 Sep 2020 00:16:36 GMT
 ENV KAPACITOR_VERSION=1.5.6
-# Tue, 01 Sep 2020 01:04:51 GMT
+# Wed, 02 Sep 2020 00:16:39 GMT
 RUN ARCH= && dpkgArch="$(dpkg --print-architecture)" &&     case "${dpkgArch##*-}" in       amd64) ARCH='amd64';;       arm64) ARCH='arm64';;       armhf) ARCH='armhf';;       armel) ARCH='armel';;       *)     echo "Unsupported architecture: ${dpkgArch}"; exit 1;;     esac &&     wget --no-verbose https://dl.influxdata.com/kapacitor/releases/kapacitor_${KAPACITOR_VERSION}-1_${ARCH}.deb.asc &&     wget --no-verbose https://dl.influxdata.com/kapacitor/releases/kapacitor_${KAPACITOR_VERSION}-1_${ARCH}.deb &&     gpg --batch --verify kapacitor_${KAPACITOR_VERSION}-1_${ARCH}.deb.asc kapacitor_${KAPACITOR_VERSION}-1_${ARCH}.deb &&     dpkg -i kapacitor_${KAPACITOR_VERSION}-1_${ARCH}.deb &&     rm -f kapacitor_${KAPACITOR_VERSION}-1_${ARCH}.deb*
-# Tue, 01 Sep 2020 01:04:51 GMT
+# Wed, 02 Sep 2020 00:16:39 GMT
 COPY file:9450c5dcbc0a583243f987f682dc6c44d9e4a3f1c31d1bb9957f313457e444ec in /etc/kapacitor/kapacitor.conf 
-# Tue, 01 Sep 2020 01:04:51 GMT
+# Wed, 02 Sep 2020 00:16:39 GMT
 EXPOSE 9092
-# Tue, 01 Sep 2020 01:04:51 GMT
+# Wed, 02 Sep 2020 00:16:40 GMT
 VOLUME [/var/lib/kapacitor]
-# Tue, 01 Sep 2020 01:04:52 GMT
+# Wed, 02 Sep 2020 00:16:40 GMT
 COPY file:a229567085df49450fcc70ed6d49efcbdfc41ca92b6c5bdb3b541cb803165dbc in /entrypoint.sh 
-# Tue, 01 Sep 2020 01:04:52 GMT
+# Wed, 02 Sep 2020 00:16:40 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Tue, 01 Sep 2020 01:04:52 GMT
+# Wed, 02 Sep 2020 00:16:40 GMT
 CMD ["kapacitord"]
 ```
 
@@ -72,21 +72,21 @@ CMD ["kapacitord"]
 		Last Modified: Wed, 05 Aug 2020 16:32:54 GMT  
 		Size: 13.1 MB (13084969 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e6c60f611c32aa98a7ba0b61c7de2092ced760cd49a95c49e66935087415240a`  
-		Last Modified: Wed, 05 Aug 2020 16:32:52 GMT  
-		Size: 2.8 KB (2774 bytes)  
+	-	`sha256:027977b65bfb7d6972f64909f085660f99749c7f9ec0f250bd25700824f5216b`  
+		Last Modified: Wed, 02 Sep 2020 00:16:54 GMT  
+		Size: 2.8 KB (2828 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1775ca02cc88e23ba4715c4f16881314aa6caa2055d0152dd3231a3b0ea80745`  
-		Last Modified: Tue, 01 Sep 2020 01:05:24 GMT  
-		Size: 36.4 MB (36413468 bytes)  
+	-	`sha256:4934195a363c316108ae41af7572d1c23005cb595a01fd5fa2265a2e8efd6a03`  
+		Last Modified: Wed, 02 Sep 2020 00:17:14 GMT  
+		Size: 36.4 MB (36413460 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4dec63ab390684c8d8180236a4a7e5a6492ff38d03dcbdc782d6b973f0b3d5ce`  
-		Last Modified: Tue, 01 Sep 2020 01:05:18 GMT  
-		Size: 225.0 B  
+	-	`sha256:38db87eda0d309259551c20e5537db53f717924525f4047d785dbbe6e1a62a50`  
+		Last Modified: Wed, 02 Sep 2020 00:17:10 GMT  
+		Size: 224.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3cbc634ed7cc523e5c4a9d31694d14b0ae7407fdb6f32770ead319df5e8d1245`  
-		Last Modified: Tue, 01 Sep 2020 01:05:18 GMT  
-		Size: 230.0 B  
+	-	`sha256:e8f5e268a43f719d7ad244767f19e687bc3e69edbf48c58e8a372ba2444b005a`  
+		Last Modified: Wed, 02 Sep 2020 00:17:09 GMT  
+		Size: 231.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `kapacitor:latest` - linux; arm variant v7
