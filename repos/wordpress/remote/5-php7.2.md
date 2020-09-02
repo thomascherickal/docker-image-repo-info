@@ -1,7 +1,7 @@
 ## `wordpress:5-php7.2`
 
 ```console
-$ docker pull wordpress@sha256:25dfbfcd1f97ca5cf2d253af2d4b7043759109bea3230dbbcb3e708d5072ae09
+$ docker pull wordpress@sha256:9ebecf3202ed804d74c35dfb40611b183561d1fc63095da804f1710ed644d024
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -982,14 +982,14 @@ CMD ["apache2-foreground"]
 ### `wordpress:5-php7.2` - linux; ppc64le
 
 ```console
-$ docker pull wordpress@sha256:519cfb96cdf895085c942dad1fc3882ac4b461933fcc0e9974cc237cb311be9a
+$ docker pull wordpress@sha256:592259d3bafb821030d638cf3ff180475b3b46c4a25162d3886062eac3777084
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **199.5 MB (199520674 bytes)**  
+-	Total Size: **199.5 MB (199523320 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b4b15f215f1eedad01ad611cebba34fb6bdc0ca782ec8833daf8ad0cb66b5ec9`
+-	Image ID: `sha256:e7c8fb94af42d6d0261c1eb364a4efae057e75a4a0eaa1a7a26d81a7301145db`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -1040,49 +1040,49 @@ ENV PHP_SHA256=0f160a3483ffce36be5962fab7bcf09d605ee66c5707df83e4195cb796bbb03a 
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends gnupg dirmngr; 	rm -rf /var/lib/apt/lists/*; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
 # Thu, 06 Aug 2020 21:26:27 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 06 Aug 2020 21:32:44 GMT
-RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		libargon2-dev 		libcurl4-openssl-dev 		libedit-dev 		libsodium-dev 		libsqlite3-dev 		libssl-dev 		libxml2-dev 		zlib1g-dev 		${PHP_EXTRA_BUILD_DEPS:-} 	; 	rm -rf /var/lib/apt/lists/*; 		export 		CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)"; 	if [ ! -d /usr/include/curl ]; then 		ln -sT "/usr/include/$debMultiarch/curl" /usr/local/include/curl; 	fi; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				$(test "$gnuArch" = 's390x-linux-gnu' && echo '--without-pcre-jit') 		--with-libdir="lib/$debMultiarch" 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -executable -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 	php --version
-# Thu, 06 Aug 2020 21:32:50 GMT
+# Tue, 01 Sep 2020 06:03:30 GMT
+RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		libargon2-dev 		libcurl4-openssl-dev 		libedit-dev 		libsodium-dev 		libsqlite3-dev 		libssl-dev 		libxml2-dev 		zlib1g-dev 		${PHP_EXTRA_BUILD_DEPS:-} 	; 	rm -rf /var/lib/apt/lists/*; 		export 		CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)"; 	if [ ! -d /usr/include/curl ]; then 		ln -sT "/usr/include/$debMultiarch/curl" /usr/local/include/curl; 	fi; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				$(test "$gnuArch" = 's390x-linux-gnu' && echo '--without-pcre-jit') 		--with-libdir="lib/$debMultiarch" 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -executable -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 		php --version
+# Tue, 01 Sep 2020 06:03:34 GMT
 COPY multi:af24b1d34daac0a277386947399eceaaf20d3065d4be5db00b1d6466cf006c49 in /usr/local/bin/ 
-# Thu, 06 Aug 2020 21:33:10 GMT
+# Tue, 01 Sep 2020 06:03:53 GMT
 RUN docker-php-ext-enable sodium
-# Thu, 06 Aug 2020 21:33:27 GMT
+# Tue, 01 Sep 2020 06:04:09 GMT
 RUN { echo '#!/bin/sh'; echo 'exec pkg-config "$@" freetype2'; } > /usr/local/bin/freetype-config && chmod +x /usr/local/bin/freetype-config
-# Thu, 06 Aug 2020 21:33:31 GMT
+# Tue, 01 Sep 2020 06:04:12 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Thu, 06 Aug 2020 21:33:34 GMT
+# Tue, 01 Sep 2020 06:04:19 GMT
 STOPSIGNAL SIGWINCH
-# Thu, 06 Aug 2020 21:33:36 GMT
+# Tue, 01 Sep 2020 06:04:21 GMT
 COPY file:e3123fcb6566efa979f945bfac1c94c854a559d7b82723e42118882a8ac4de66 in /usr/local/bin/ 
-# Thu, 06 Aug 2020 21:33:40 GMT
+# Tue, 01 Sep 2020 06:04:26 GMT
 WORKDIR /var/www/html
-# Thu, 06 Aug 2020 21:33:46 GMT
+# Tue, 01 Sep 2020 06:04:33 GMT
 EXPOSE 80
-# Thu, 06 Aug 2020 21:33:51 GMT
+# Tue, 01 Sep 2020 06:04:45 GMT
 CMD ["apache2-foreground"]
-# Fri, 07 Aug 2020 04:50:15 GMT
+# Tue, 01 Sep 2020 23:59:59 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ghostscript 	; 	rm -rf /var/lib/apt/lists/*
-# Fri, 07 Aug 2020 05:00:13 GMT
+# Wed, 02 Sep 2020 00:11:59 GMT
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 	apt-get install -y --no-install-recommends 		libfreetype6-dev 		libjpeg-dev 		libmagickwand-dev 		libpng-dev 	; 		docker-php-ext-configure gd --with-freetype-dir=/usr --with-jpeg-dir=/usr --with-png-dir=/usr; 	docker-php-ext-install -j "$(nproc)" 		bcmath 		exif 		gd 		mysqli 		zip 	; 	pecl install imagick-3.4.4; 	docker-php-ext-enable imagick; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark; 	ldd "$(php -r 'echo ini_get("extension_dir");')"/*.so 		| awk '/=>/ { print $3 }' 		| sort -u 		| xargs -r dpkg-query -S 		| cut -d: -f1 		| sort -u 		| xargs -rt apt-mark manual; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*
-# Fri, 07 Aug 2020 05:00:24 GMT
+# Wed, 02 Sep 2020 00:12:12 GMT
 RUN set -eux; 	docker-php-ext-enable opcache; 	{ 		echo 'opcache.memory_consumption=128'; 		echo 'opcache.interned_strings_buffer=8'; 		echo 'opcache.max_accelerated_files=4000'; 		echo 'opcache.revalidate_freq=2'; 		echo 'opcache.fast_shutdown=1'; 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
-# Fri, 07 Aug 2020 05:00:37 GMT
+# Wed, 02 Sep 2020 00:12:23 GMT
 RUN { 		echo 'error_reporting = E_ERROR | E_WARNING | E_PARSE | E_CORE_ERROR | E_CORE_WARNING | E_COMPILE_ERROR | E_COMPILE_WARNING | E_RECOVERABLE_ERROR'; 		echo 'display_errors = Off'; 		echo 'display_startup_errors = Off'; 		echo 'log_errors = On'; 		echo 'error_log = /dev/stderr'; 		echo 'log_errors_max_len = 1024'; 		echo 'ignore_repeated_errors = On'; 		echo 'ignore_repeated_source = Off'; 		echo 'html_errors = Off'; 	} > /usr/local/etc/php/conf.d/error-logging.ini
-# Fri, 07 Aug 2020 05:00:48 GMT
+# Wed, 02 Sep 2020 00:12:36 GMT
 RUN set -eux; 	a2enmod rewrite expires; 		a2enmod remoteip; 	{ 		echo 'RemoteIPHeader X-Forwarded-For'; 		echo 'RemoteIPTrustedProxy 10.0.0.0/8'; 		echo 'RemoteIPTrustedProxy 172.16.0.0/12'; 		echo 'RemoteIPTrustedProxy 192.168.0.0/16'; 		echo 'RemoteIPTrustedProxy 169.254.0.0/16'; 		echo 'RemoteIPTrustedProxy 127.0.0.0/8'; 	} > /etc/apache2/conf-available/remoteip.conf; 	a2enconf remoteip; 	find /etc/apache2 -type f -name '*.conf' -exec sed -ri 's/([[:space:]]*LogFormat[[:space:]]+"[^"]*)%h([^"]*")/\1%a\2/g' '{}' +
-# Wed, 12 Aug 2020 19:19:30 GMT
+# Wed, 02 Sep 2020 00:12:40 GMT
 ENV WORDPRESS_VERSION=5.5
-# Wed, 12 Aug 2020 19:19:36 GMT
+# Wed, 02 Sep 2020 00:12:45 GMT
 ENV WORDPRESS_SHA1=03fe1a139b3cd987cc588ba95fab2460cba2a89e
-# Wed, 12 Aug 2020 19:19:55 GMT
+# Wed, 02 Sep 2020 00:12:59 GMT
 RUN set -ex; 	curl -o wordpress.tar.gz -fSL "https://wordpress.org/wordpress-${WORDPRESS_VERSION}.tar.gz"; 	echo "$WORDPRESS_SHA1 *wordpress.tar.gz" | sha1sum -c -; 	tar -xzf wordpress.tar.gz -C /usr/src/; 	rm wordpress.tar.gz; 	chown -R www-data:www-data /usr/src/wordpress; 	mkdir wp-content; 	for dir in /usr/src/wordpress/wp-content/*/; do 		dir="$(basename "${dir%/}")"; 		mkdir "wp-content/$dir"; 	done; 	chown -R www-data:www-data wp-content; 	chmod -R 777 wp-content
-# Wed, 12 Aug 2020 19:20:00 GMT
+# Wed, 02 Sep 2020 00:13:05 GMT
 VOLUME [/var/www/html]
-# Wed, 12 Aug 2020 19:20:01 GMT
+# Wed, 02 Sep 2020 00:13:09 GMT
 COPY file:f56966eeac957656aead5cb65d1531bfe029ddac03ee3ffefdafd2f0d4252925 in /usr/local/bin/ 
-# Wed, 12 Aug 2020 19:20:09 GMT
+# Wed, 02 Sep 2020 00:13:13 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Wed, 12 Aug 2020 19:20:14 GMT
+# Wed, 02 Sep 2020 00:13:17 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -1123,53 +1123,53 @@ CMD ["apache2-foreground"]
 		Last Modified: Thu, 06 Aug 2020 22:48:07 GMT  
 		Size: 493.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c0b0254f4c7b34fbd37a56317f9dabd03bd63b24f4577671987c45d272e373cf`  
-		Last Modified: Thu, 06 Aug 2020 22:48:04 GMT  
-		Size: 14.9 MB (14858296 bytes)  
+	-	`sha256:7028154bfab8500f5570498976a771af899ea5167b4549ac3d506178b49b3bf9`  
+		Last Modified: Tue, 01 Sep 2020 07:14:03 GMT  
+		Size: 14.9 MB (14858350 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e316aa6448cd871577c222d60d561c85d1c359b95b9fca48d7487019eb66f2ac`  
-		Last Modified: Thu, 06 Aug 2020 22:48:03 GMT  
-		Size: 2.3 KB (2286 bytes)  
+	-	`sha256:87f27f850cd36f7a1d1dd75115e949745765003f3e2eb28c4f4a7505ac1c591f`  
+		Last Modified: Tue, 01 Sep 2020 07:13:58 GMT  
+		Size: 2.3 KB (2290 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b1eda866c59c736cea6008dce73c54f5f816255e802d01cf6e7643001892b1c7`  
-		Last Modified: Thu, 06 Aug 2020 22:48:03 GMT  
-		Size: 249.0 B  
+	-	`sha256:73ebc7511f240c9bcb848f887b25f47d37463c955acc0c6ee2d392ac1ce108d6`  
+		Last Modified: Tue, 01 Sep 2020 07:13:57 GMT  
+		Size: 250.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:59f0c4e222358840830b99cfbc06cdc6ca5088db162963e58c01a5f5c9e8bba9`  
-		Last Modified: Thu, 06 Aug 2020 22:48:03 GMT  
+	-	`sha256:3d9f6492a35b247fbb97f835755bb5b02e55aa78b9d7fb9688cd70d24c2ba1df`  
+		Last Modified: Tue, 01 Sep 2020 07:13:58 GMT  
 		Size: 212.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:843dc4b43ead86b50f81ca68e5f91f90879bcf6b1148ce7938ec4c8314602d39`  
-		Last Modified: Thu, 06 Aug 2020 22:48:03 GMT  
-		Size: 896.0 B  
+	-	`sha256:6f7b8694f6d0466af5a94a9737de2e88ef6d45ece4f0e8534b0f6cca4eecc1b9`  
+		Last Modified: Tue, 01 Sep 2020 07:13:57 GMT  
+		Size: 898.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:14c3be4ef27039b3845db005e53c65b5a957d6c034a0f5fb6f0f8fed0f95ae49`  
-		Last Modified: Fri, 07 Aug 2020 07:27:37 GMT  
-		Size: 17.5 MB (17455788 bytes)  
+	-	`sha256:bb7457e8158ab52900494109166aaaf8da298551c145f727b29180f29127e70f`  
+		Last Modified: Wed, 02 Sep 2020 01:46:59 GMT  
+		Size: 17.5 MB (17458300 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:57497125568f6c01ca163e840fd5dff92ee05e4714b32dd29747be93d13edfa1`  
-		Last Modified: Fri, 07 Aug 2020 07:27:38 GMT  
-		Size: 9.1 MB (9101180 bytes)  
+	-	`sha256:2d9d00b1fa086f25e24765c1f6a15e3dc260767c1a6a946bdd1c6748b2b81e53`  
+		Last Modified: Wed, 02 Sep 2020 01:46:53 GMT  
+		Size: 9.1 MB (9101236 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:16f5dc1ceb0d2c7708d17efec9b797cf732fb8adfd1ad2f5193dbd2a03f83e34`  
-		Last Modified: Fri, 07 Aug 2020 07:27:28 GMT  
+	-	`sha256:7a3b80fc465c994387eb8f1b7eb9da271d53bafecd6b273c063acb107184caa4`  
+		Last Modified: Wed, 02 Sep 2020 01:46:47 GMT  
 		Size: 407.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:189a52977376d2bbe3d654879824cdf20529bb51095b7fc344aaf3d5f510cd0b`  
-		Last Modified: Fri, 07 Aug 2020 07:27:29 GMT  
-		Size: 395.0 B  
+	-	`sha256:7fa46a42bb2689a6b728d3b767c408dc00c21131642c5dbd5e6639f607131729`  
+		Last Modified: Wed, 02 Sep 2020 01:46:47 GMT  
+		Size: 397.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:784af7f39a7fd756683650c92e8d435e30798d41f380a8abd661b500a0b1c4e6`  
-		Last Modified: Fri, 07 Aug 2020 07:27:29 GMT  
-		Size: 19.5 KB (19485 bytes)  
+	-	`sha256:ed0ba9f8fb73a229de2b33ed4cf43f818b59fca509aa3539d69508bff466f907`  
+		Last Modified: Wed, 02 Sep 2020 01:46:47 GMT  
+		Size: 19.5 KB (19497 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:168bcb3200f3fa19a157d2e30a1c1e5be2db4b86907023d2fd079afb6ad69f6c`  
-		Last Modified: Wed, 12 Aug 2020 19:31:00 GMT  
+	-	`sha256:553d94be27083f7442a01e4da6ca945a7d87f56c2e9124f5c9944efc59ce0cec`  
+		Last Modified: Wed, 02 Sep 2020 01:46:51 GMT  
 		Size: 12.8 MB (12835113 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:432cd8c5213b70ad2670a9240891e51013830bdd009988194f2ebb13118cbcd9`  
-		Last Modified: Wed, 12 Aug 2020 19:30:57 GMT  
-		Size: 4.2 KB (4151 bytes)  
+	-	`sha256:f33e5f2f505488706177892f06eab00810b0575eab34110b40511394015e681e`  
+		Last Modified: Wed, 02 Sep 2020 01:46:47 GMT  
+		Size: 4.2 KB (4154 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `wordpress:5-php7.2` - linux; s390x
