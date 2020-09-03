@@ -137,13 +137,9 @@ Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris base-files=11ubuntu5.1
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_11ubuntu5.1.dsc' base-files_11ubuntu5.1.dsc 1267 SHA256:5a11844317d216cf356c3c4893e61a2e950d1baafb12dd5bf4903f211db642cb
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_11ubuntu5.1.tar.xz' base-files_11ubuntu5.1.tar.xz 79132 SHA256:4f5859d89b2fdfbf44e56013950b7eedfec83145e52ee4c28a157f49d0524424
-```
 
 ### `dpkg` source package: `base-passwd=3.5.47`
 
@@ -1705,14 +1701,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=5.4.0-42.46
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-42.46.dsc' linux_5.4.0-42.46.dsc 7204 SHA256:9757c11f4a535512fd812a20c9e24ae8369ac3195ed359c0f0193f73c340f942
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0.orig.tar.gz' linux_5.4.0.orig.tar.gz 170244619 SHA256:805f3ed93854317814c59caf2dbfd2097745685f95c8c18b509c9347dcc7d51f
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-42.46.diff.gz' linux_5.4.0-42.46.diff.gz 4665701 SHA256:9e416bd1147d00d93eeaa3a106304e9ff03629ea2447efc5b61381d2046e2f7d
-```
 
 ### `dpkg` source package: `lsb=11.1.0ubuntu2`
 
