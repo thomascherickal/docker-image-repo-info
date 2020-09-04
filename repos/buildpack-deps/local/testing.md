@@ -2615,20 +2615,13 @@ Licenses: (parsed from: `/usr/share/doc/libheif1/copyright`)
 - `LGPL-3+`
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libheif=1.6.1-1
-'http://deb.debian.org/debian/pool/main/libh/libheif/libheif_1.6.1-1.dsc' libheif_1.6.1-1.dsc 2239 SHA256:5fc76d1cc1bc0a057d93a0abbdd46d6a29c1f1525d9d56f52ba628bf5a97704c
-'http://deb.debian.org/debian/pool/main/libh/libheif/libheif_1.6.1.orig.tar.gz' libheif_1.6.1.orig.tar.gz 1514950 SHA256:a22611289464da08fa7e580c95ea5e1b1b522b96ee6807de9b3b4605efb621d1
-'http://deb.debian.org/debian/pool/main/libh/libheif/libheif_1.6.1-1.debian.tar.xz' libheif_1.6.1-1.debian.tar.xz 6416 SHA256:c3baf69ae32e11c65db7de64c62ff55bb991ea8e7d61305e93236989ce4bf346
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libheif/1.6.1-1/
 
-- https://sources.debian.net/src/libheif/1.6.1-1/ (for browsing the source)
-- https://sources.debian.net/src/libheif/1.6.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libheif/1.6.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libice=2:1.0.9-2`
 
@@ -3829,21 +3822,13 @@ Licenses: (parsed from: `/usr/share/doc/libmariadb-dev/copyright`, `/usr/share/d
 - `unlimited-free-doc`
 - `zlib/libpng`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mariadb-10.3=1:10.3.23-1
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.23-1.dsc' mariadb-10.3_10.3.23-1.dsc 4772 SHA256:f0fef035fc0d11ec20a856421c739be81de883e70f9ce182b7173d756afd07d6
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.23.orig.tar.gz' mariadb-10.3_10.3.23.orig.tar.gz 72582611 SHA256:fc405022457d8eec5991b870cc1c9a07b83b551d6165c414c4d8f31523aa86ae
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.23.orig.tar.gz.asc' mariadb-10.3_10.3.23.orig.tar.gz.asc 195 SHA256:641e4d384fca5a93a2382b6d522881c6076e72c201afaf8d6a470d6e9c2b6b12
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.23-1.debian.tar.xz' mariadb-10.3_10.3.23-1.debian.tar.xz 219324 SHA256:21e5229af4992bcb8a62807d5e86f215012bcb0ed53c84ab40028c790a87cb8d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mariadb-10.3/1:10.3.23-1/
 
-- https://sources.debian.net/src/mariadb-10.3/1:10.3.23-1/ (for browsing the source)
-- https://sources.debian.net/src/mariadb-10.3/1:10.3.23-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mariadb-10.3/1:10.3.23-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mawk=1.3.4.20200120-2`
 
@@ -4325,21 +4310,13 @@ Licenses: (parsed from: `/usr/share/doc/libp11-kit-dev/copyright`, `/usr/share/d
 - `permissive-like-automake-output`
 - `same-as-rest-of-p11kit`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris p11-kit=0.23.20-1
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.23.20-1.dsc' p11-kit_0.23.20-1.dsc 2417 SHA256:daeef2f874a7346062402ed262b9487b442c026ecd74081c1ab37c0dcefc0f5e
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.23.20.orig.tar.xz' p11-kit_0.23.20.orig.tar.xz 822588 SHA256:14d86024c3dfd6b967d9bc0b4ec7b2973014fe7423481f4d230a1a63b8aa6104
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.23.20.orig.tar.xz.asc' p11-kit_0.23.20.orig.tar.xz.asc 854 SHA256:6429a15c3c071629add6712ed75916df90043d47250edb9235d89ee197f613b8
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.23.20-1.debian.tar.xz' p11-kit_0.23.20-1.debian.tar.xz 21940 SHA256:beed598e93d4fee5b49c42099b41c66f634057a424ec90fbd78643cf0dc5c4b0
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/p11-kit/0.23.20-1/
 
-- https://sources.debian.net/src/p11-kit/0.23.20-1/ (for browsing the source)
-- https://sources.debian.net/src/p11-kit/0.23.20-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/p11-kit/0.23.20-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pam=1.3.1-5`
 

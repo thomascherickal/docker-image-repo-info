@@ -416,20 +416,13 @@ Licenses: (parsed from: `/usr/share/doc/libbrotli-dev/copyright`, `/usr/share/do
 
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris brotli=1.0.7-7
-'http://deb.debian.org/debian/pool/main/b/brotli/brotli_1.0.7-7.dsc' brotli_1.0.7-7.dsc 2292 SHA256:454727e54cd7ca9d7d9360349bc9e42de390746ea51223d3a78861e5dbf93d37
-'http://deb.debian.org/debian/pool/main/b/brotli/brotli_1.0.7.orig.tar.gz' brotli_1.0.7.orig.tar.gz 23827908 SHA256:4c61bfb0faca87219ea587326c467b95acb25555b53d1a421ffa3c8a9296ee2c
-'http://deb.debian.org/debian/pool/main/b/brotli/brotli_1.0.7-7.debian.tar.xz' brotli_1.0.7-7.debian.tar.xz 4700 SHA256:deea2090ec04b0c51b0e9867beb34c7d8f515027ad85ca1c45050957120b3392
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/brotli/1.0.7-7/
 
-- https://sources.debian.net/src/brotli/1.0.7-7/ (for browsing the source)
-- https://sources.debian.net/src/brotli/1.0.7-7/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/brotli/1.0.7-7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `bzip2=1.0.8-4`
 
@@ -3845,21 +3838,13 @@ Licenses: (parsed from: `/usr/share/doc/libmariadb-dev/copyright`, `/usr/share/d
 - `unlimited-free-doc`
 - `zlib/libpng`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mariadb-10.3=1:10.3.24-1
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.24-1.dsc' mariadb-10.3_10.3.24-1.dsc 4772 SHA256:f53b911d719b35bf4de7210bdf7ee7fb78c89737a28ffab76fd4c337675895fa
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.24.orig.tar.gz' mariadb-10.3_10.3.24.orig.tar.gz 72714002 SHA256:713cfbe78475bf152d711280096756bd12cce3ba01a1130027da4901598a9a4e
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.24.orig.tar.gz.asc' mariadb-10.3_10.3.24.orig.tar.gz.asc 195 SHA256:677af18ec364ab3b4fccaf473839631ab36e3b1953fe169e3f3ac5a18063f7e1
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.24-1.debian.tar.xz' mariadb-10.3_10.3.24-1.debian.tar.xz 217752 SHA256:8ae95b8ffc4a037bc7cd6bf998c5a62cfbd8cfa1ab44b91fde9b47bce8c6c24b
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mariadb-10.3/1:10.3.24-1/
 
-- https://sources.debian.net/src/mariadb-10.3/1:10.3.24-1/ (for browsing the source)
-- https://sources.debian.net/src/mariadb-10.3/1:10.3.24-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mariadb-10.3/1:10.3.24-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mawk=1.3.4.20200120-2`
 
