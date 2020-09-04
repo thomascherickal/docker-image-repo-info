@@ -1,7 +1,7 @@
 ## `wordpress:cli-php7.4`
 
 ```console
-$ docker pull wordpress@sha256:5ecfd156b6c2216aee51030e44c25f74e93c105e760b0b1463907c21e4b3b7fe
+$ docker pull wordpress@sha256:a085395602a39aee2137bc845a64510ba2797cbaf2d4774bb83e1830aa02032d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -17,14 +17,14 @@ $ docker pull wordpress@sha256:5ecfd156b6c2216aee51030e44c25f74e93c105e760b0b146
 ### `wordpress:cli-php7.4` - linux; amd64
 
 ```console
-$ docker pull wordpress@sha256:949fb541491bbc122f679be27a942b4d1d50989ccea9b30ae32bd618fc86b69d
+$ docker pull wordpress@sha256:9178b97f36b69b63c0a1904b73f6c8fdf25865730dd396836de8e7756abdff32
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **46.6 MB (46550926 bytes)**  
+-	Total Size: **46.6 MB (46550921 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:661a6fffd91c315c4601ca224ecb8e200bdaefaabb4c3a8d8589e54b84ac82a4`
+-	Image ID: `sha256:f5cdcb74c3f78a804804b875b304e445f6eb4d1b1641476785856be3585fb643`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["wp","shell"]`
 
@@ -91,13 +91,13 @@ ENV WORDPRESS_CLI_SHA512=4049c7e45e14276a70a41c3b0864be7a6a8cfa8ea65ebac8b184a4f
 RUN set -ex; 		apk add --no-cache --virtual .fetch-deps 		gnupg 	; 		curl -o /usr/local/bin/wp.gpg -fSL "https://github.com/wp-cli/wp-cli/releases/download/v${WORDPRESS_CLI_VERSION}/wp-cli-${WORDPRESS_CLI_VERSION}.phar.gpg"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$WORDPRESS_CLI_GPG_KEY"; 	gpg --batch --decrypt --output /usr/local/bin/wp /usr/local/bin/wp.gpg; 	command -v gpgconf && gpgconf --kill all || :; 	rm -rf "$GNUPGHOME" /usr/local/bin/wp.gpg; 		echo "$WORDPRESS_CLI_SHA512 */usr/local/bin/wp" | sha512sum -c -; 	chmod +x /usr/local/bin/wp; 		apk del .fetch-deps; 		wp --allow-root --version
 # Fri, 04 Sep 2020 01:11:57 GMT
 VOLUME [/var/www/html]
-# Fri, 04 Sep 2020 01:11:58 GMT
-COPY file:7798dc600ff57df68d7de781fd8834d5a9371b2ab13ab9649086b34ee0e38fcf in /usr/local/bin/ 
-# Fri, 04 Sep 2020 01:11:58 GMT
+# Fri, 04 Sep 2020 20:30:34 GMT
+COPY file:b6efa5ff0423d61c2df0c8941b896844a8272d8516cdda0fcae8daaf56baac18 in /usr/local/bin/ 
+# Fri, 04 Sep 2020 20:30:34 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 04 Sep 2020 01:11:58 GMT
+# Fri, 04 Sep 2020 20:30:34 GMT
 USER www-data
-# Fri, 04 Sep 2020 01:11:58 GMT
+# Fri, 04 Sep 2020 20:30:34 GMT
 CMD ["wp" "shell"]
 ```
 
@@ -158,9 +158,9 @@ CMD ["wp" "shell"]
 		Last Modified: Fri, 04 Sep 2020 01:14:50 GMT  
 		Size: 1.2 MB (1205528 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d8cbb20d918e9a6281a5d4b67ebd1445f609834d38ff9a278f0fdfae79b7074e`  
-		Last Modified: Fri, 04 Sep 2020 01:14:49 GMT  
-		Size: 417.0 B  
+	-	`sha256:8e61c6973544c83c7690f2f0e1fa19abea13447e80e6e655a65135d444387eba`  
+		Last Modified: Fri, 04 Sep 2020 20:31:48 GMT  
+		Size: 412.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `wordpress:cli-php7.4` - linux; arm variant v6
@@ -464,14 +464,14 @@ CMD ["wp" "shell"]
 ### `wordpress:cli-php7.4` - linux; arm64 variant v8
 
 ```console
-$ docker pull wordpress@sha256:ac660a46f73b906fd18b5babb4d922334ca8e36f043476bebd4788e77dfefdf7
+$ docker pull wordpress@sha256:15a601175c6881b9391579b22bda7b53ddd330a4014c9c183ef7d17f4dd9b733
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **46.2 MB (46168671 bytes)**  
+-	Total Size: **46.2 MB (46168664 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:38f23af7f5b474349539711808e972fcbfefcb70ce0d558a34075297270c13db`
+-	Image ID: `sha256:bcd2255c75fbb6e3c0f8c2a937944eeda4e58b82b3c4a4cdf7b2cb8a36be94ee`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["wp","shell"]`
 
@@ -538,13 +538,13 @@ ENV WORDPRESS_CLI_SHA512=4049c7e45e14276a70a41c3b0864be7a6a8cfa8ea65ebac8b184a4f
 RUN set -ex; 		apk add --no-cache --virtual .fetch-deps 		gnupg 	; 		curl -o /usr/local/bin/wp.gpg -fSL "https://github.com/wp-cli/wp-cli/releases/download/v${WORDPRESS_CLI_VERSION}/wp-cli-${WORDPRESS_CLI_VERSION}.phar.gpg"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$WORDPRESS_CLI_GPG_KEY"; 	gpg --batch --decrypt --output /usr/local/bin/wp /usr/local/bin/wp.gpg; 	command -v gpgconf && gpgconf --kill all || :; 	rm -rf "$GNUPGHOME" /usr/local/bin/wp.gpg; 		echo "$WORDPRESS_CLI_SHA512 */usr/local/bin/wp" | sha512sum -c -; 	chmod +x /usr/local/bin/wp; 		apk del .fetch-deps; 		wp --allow-root --version
 # Fri, 04 Sep 2020 02:31:04 GMT
 VOLUME [/var/www/html]
-# Fri, 04 Sep 2020 02:31:16 GMT
-COPY file:7798dc600ff57df68d7de781fd8834d5a9371b2ab13ab9649086b34ee0e38fcf in /usr/local/bin/ 
-# Fri, 04 Sep 2020 02:31:24 GMT
+# Fri, 04 Sep 2020 20:51:23 GMT
+COPY file:b6efa5ff0423d61c2df0c8941b896844a8272d8516cdda0fcae8daaf56baac18 in /usr/local/bin/ 
+# Fri, 04 Sep 2020 20:51:29 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 04 Sep 2020 02:31:33 GMT
+# Fri, 04 Sep 2020 20:51:29 GMT
 USER www-data
-# Fri, 04 Sep 2020 02:31:41 GMT
+# Fri, 04 Sep 2020 20:51:30 GMT
 CMD ["wp" "shell"]
 ```
 
@@ -605,22 +605,22 @@ CMD ["wp" "shell"]
 		Last Modified: Fri, 04 Sep 2020 02:35:46 GMT  
 		Size: 1.2 MB (1205538 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c7e5db6d00536155455e1fafb0fb15107d4e7a6dbc59a72adfa30bab670ca5a8`  
-		Last Modified: Fri, 04 Sep 2020 02:35:46 GMT  
-		Size: 417.0 B  
+	-	`sha256:d946f41b3bc66c9261a164aa5bcab128466066d6ffc17bc4ba937485d49623be`  
+		Last Modified: Fri, 04 Sep 2020 20:53:21 GMT  
+		Size: 410.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `wordpress:cli-php7.4` - linux; 386
 
 ```console
-$ docker pull wordpress@sha256:7a921864b27c308d2925f9656e3eb801051473eed21f8fccbdd1a93598c02445
+$ docker pull wordpress@sha256:10dcc10f8665282569ff74f8d04d0f958d08d6eda77edb7d9168bb86ab184849
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **47.3 MB (47310486 bytes)**  
+-	Total Size: **47.3 MB (47310475 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3103e5cdd7d3d1d6aee52ce9d924f34cfb7a5683900fcb29d044a3674b67220a`
+-	Image ID: `sha256:ec8c43c3f6baf4fe93fbde5e5b4040128ad7074b51b4b4734df97dfcdfdcf63a`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["wp","shell"]`
 
@@ -687,13 +687,13 @@ ENV WORDPRESS_CLI_SHA512=4049c7e45e14276a70a41c3b0864be7a6a8cfa8ea65ebac8b184a4f
 RUN set -ex; 		apk add --no-cache --virtual .fetch-deps 		gnupg 	; 		curl -o /usr/local/bin/wp.gpg -fSL "https://github.com/wp-cli/wp-cli/releases/download/v${WORDPRESS_CLI_VERSION}/wp-cli-${WORDPRESS_CLI_VERSION}.phar.gpg"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$WORDPRESS_CLI_GPG_KEY"; 	gpg --batch --decrypt --output /usr/local/bin/wp /usr/local/bin/wp.gpg; 	command -v gpgconf && gpgconf --kill all || :; 	rm -rf "$GNUPGHOME" /usr/local/bin/wp.gpg; 		echo "$WORDPRESS_CLI_SHA512 */usr/local/bin/wp" | sha512sum -c -; 	chmod +x /usr/local/bin/wp; 		apk del .fetch-deps; 		wp --allow-root --version
 # Fri, 04 Sep 2020 01:50:44 GMT
 VOLUME [/var/www/html]
-# Fri, 04 Sep 2020 01:50:44 GMT
-COPY file:7798dc600ff57df68d7de781fd8834d5a9371b2ab13ab9649086b34ee0e38fcf in /usr/local/bin/ 
-# Fri, 04 Sep 2020 01:50:44 GMT
+# Fri, 04 Sep 2020 20:44:35 GMT
+COPY file:b6efa5ff0423d61c2df0c8941b896844a8272d8516cdda0fcae8daaf56baac18 in /usr/local/bin/ 
+# Fri, 04 Sep 2020 20:44:35 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 04 Sep 2020 01:50:44 GMT
+# Fri, 04 Sep 2020 20:44:35 GMT
 USER www-data
-# Fri, 04 Sep 2020 01:50:44 GMT
+# Fri, 04 Sep 2020 20:44:36 GMT
 CMD ["wp" "shell"]
 ```
 
@@ -754,22 +754,22 @@ CMD ["wp" "shell"]
 		Last Modified: Fri, 04 Sep 2020 01:53:51 GMT  
 		Size: 1.2 MB (1205516 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8c357509bd0ea74b585c375e8ff4ea99ecb9acd33996d7be06faad6cb339d40b`  
-		Last Modified: Fri, 04 Sep 2020 01:53:51 GMT  
-		Size: 416.0 B  
+	-	`sha256:cd32b5f6ab709f064b071d064bee88e79915a6866f9914fdf922f5eb9967063b`  
+		Last Modified: Fri, 04 Sep 2020 20:45:43 GMT  
+		Size: 405.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `wordpress:cli-php7.4` - linux; ppc64le
 
 ```console
-$ docker pull wordpress@sha256:73b2b6e47c13aa2b29452565d266b3a08af38cacebc813e72190b5e02e96bb18
+$ docker pull wordpress@sha256:a3c392a340c1d5429580664bf4d97432b906c0046f9817c866b69471be856513
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **47.8 MB (47781907 bytes)**  
+-	Total Size: **47.8 MB (47781901 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7ae46516c1681adfedbab0d34e75c5d8b768e02bac51b659efeed8ca9375a45d`
+-	Image ID: `sha256:5d145afc5f92684ed3d7a57a68f4cb75c16a267f294d5d9a9f938e4e8382f98b`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["wp","shell"]`
 
@@ -836,13 +836,13 @@ ENV WORDPRESS_CLI_SHA512=4049c7e45e14276a70a41c3b0864be7a6a8cfa8ea65ebac8b184a4f
 RUN set -ex; 		apk add --no-cache --virtual .fetch-deps 		gnupg 	; 		curl -o /usr/local/bin/wp.gpg -fSL "https://github.com/wp-cli/wp-cli/releases/download/v${WORDPRESS_CLI_VERSION}/wp-cli-${WORDPRESS_CLI_VERSION}.phar.gpg"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$WORDPRESS_CLI_GPG_KEY"; 	gpg --batch --decrypt --output /usr/local/bin/wp /usr/local/bin/wp.gpg; 	command -v gpgconf && gpgconf --kill all || :; 	rm -rf "$GNUPGHOME" /usr/local/bin/wp.gpg; 		echo "$WORDPRESS_CLI_SHA512 */usr/local/bin/wp" | sha512sum -c -; 	chmod +x /usr/local/bin/wp; 		apk del .fetch-deps; 		wp --allow-root --version
 # Fri, 04 Sep 2020 07:19:59 GMT
 VOLUME [/var/www/html]
-# Fri, 04 Sep 2020 07:20:02 GMT
-COPY file:7798dc600ff57df68d7de781fd8834d5a9371b2ab13ab9649086b34ee0e38fcf in /usr/local/bin/ 
-# Fri, 04 Sep 2020 07:20:05 GMT
+# Fri, 04 Sep 2020 20:35:49 GMT
+COPY file:b6efa5ff0423d61c2df0c8941b896844a8272d8516cdda0fcae8daaf56baac18 in /usr/local/bin/ 
+# Fri, 04 Sep 2020 20:35:56 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 04 Sep 2020 07:20:09 GMT
+# Fri, 04 Sep 2020 20:36:07 GMT
 USER www-data
-# Fri, 04 Sep 2020 07:20:14 GMT
+# Fri, 04 Sep 2020 20:36:15 GMT
 CMD ["wp" "shell"]
 ```
 
@@ -903,22 +903,22 @@ CMD ["wp" "shell"]
 		Last Modified: Fri, 04 Sep 2020 07:26:27 GMT  
 		Size: 1.2 MB (1205554 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:37f6fe2358df985738dd7c7d5b92404af041f94626e94110b94f0403d9bb7335`  
-		Last Modified: Fri, 04 Sep 2020 07:26:26 GMT  
-		Size: 416.0 B  
+	-	`sha256:19aba549c02b1dec4e621201d7daa510eb3b40a8b28f13e7cb9cdd8f354e1d36`  
+		Last Modified: Fri, 04 Sep 2020 20:39:01 GMT  
+		Size: 410.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `wordpress:cli-php7.4` - linux; s390x
 
 ```console
-$ docker pull wordpress@sha256:9044da84098703b100b053a9547b8a72327296b638c70b226ecde15594985129
+$ docker pull wordpress@sha256:1c8937b18ce69dad206ba7a34f0e866788e42cb6d4b2f1c16aef2f6f492a8da7
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **45.9 MB (45901013 bytes)**  
+-	Total Size: **45.9 MB (45901005 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ebb4c3af19b8f7b419ec059b77767362a8024f3799e8b005c9b212aed31625a2`
+-	Image ID: `sha256:2abe327e6ea446ca5925ef882f8638a338996a41a1a13d717a7439baed0435af`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["wp","shell"]`
 
@@ -985,13 +985,13 @@ ENV WORDPRESS_CLI_SHA512=4049c7e45e14276a70a41c3b0864be7a6a8cfa8ea65ebac8b184a4f
 RUN set -ex; 		apk add --no-cache --virtual .fetch-deps 		gnupg 	; 		curl -o /usr/local/bin/wp.gpg -fSL "https://github.com/wp-cli/wp-cli/releases/download/v${WORDPRESS_CLI_VERSION}/wp-cli-${WORDPRESS_CLI_VERSION}.phar.gpg"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$WORDPRESS_CLI_GPG_KEY"; 	gpg --batch --decrypt --output /usr/local/bin/wp /usr/local/bin/wp.gpg; 	command -v gpgconf && gpgconf --kill all || :; 	rm -rf "$GNUPGHOME" /usr/local/bin/wp.gpg; 		echo "$WORDPRESS_CLI_SHA512 */usr/local/bin/wp" | sha512sum -c -; 	chmod +x /usr/local/bin/wp; 		apk del .fetch-deps; 		wp --allow-root --version
 # Thu, 03 Sep 2020 21:59:24 GMT
 VOLUME [/var/www/html]
-# Thu, 03 Sep 2020 21:59:24 GMT
-COPY file:7798dc600ff57df68d7de781fd8834d5a9371b2ab13ab9649086b34ee0e38fcf in /usr/local/bin/ 
-# Thu, 03 Sep 2020 21:59:24 GMT
+# Fri, 04 Sep 2020 20:51:23 GMT
+COPY file:b6efa5ff0423d61c2df0c8941b896844a8272d8516cdda0fcae8daaf56baac18 in /usr/local/bin/ 
+# Fri, 04 Sep 2020 20:51:23 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 03 Sep 2020 21:59:25 GMT
+# Fri, 04 Sep 2020 20:51:24 GMT
 USER www-data
-# Thu, 03 Sep 2020 21:59:25 GMT
+# Fri, 04 Sep 2020 20:51:24 GMT
 CMD ["wp" "shell"]
 ```
 
@@ -1052,7 +1052,7 @@ CMD ["wp" "shell"]
 		Last Modified: Thu, 03 Sep 2020 22:02:39 GMT  
 		Size: 1.2 MB (1205530 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4a9cd460e09c3803537a6a424b4a10b94e277be1ac52ebe43c7968006e3259aa`  
-		Last Modified: Thu, 03 Sep 2020 22:02:39 GMT  
-		Size: 414.0 B  
+	-	`sha256:1f33818762a0410b13725f6f5b907cba14b68679b45b56626594db737477149d`  
+		Last Modified: Fri, 04 Sep 2020 20:52:52 GMT  
+		Size: 406.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
