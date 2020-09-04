@@ -1335,21 +1335,13 @@ Licenses: (parsed from: `/usr/share/doc/libp11-kit0/copyright`)
 - `permissive-like-automake-output`
 - `same-as-rest-of-p11kit`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris p11-kit=0.23.20-1
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.23.20-1.dsc' p11-kit_0.23.20-1.dsc 2417 SHA256:daeef2f874a7346062402ed262b9487b442c026ecd74081c1ab37c0dcefc0f5e
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.23.20.orig.tar.xz' p11-kit_0.23.20.orig.tar.xz 822588 SHA256:14d86024c3dfd6b967d9bc0b4ec7b2973014fe7423481f4d230a1a63b8aa6104
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.23.20.orig.tar.xz.asc' p11-kit_0.23.20.orig.tar.xz.asc 854 SHA256:6429a15c3c071629add6712ed75916df90043d47250edb9235d89ee197f613b8
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.23.20-1.debian.tar.xz' p11-kit_0.23.20-1.debian.tar.xz 21940 SHA256:beed598e93d4fee5b49c42099b41c66f634057a424ec90fbd78643cf0dc5c4b0
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/p11-kit/0.23.20-1/
 
-- https://sources.debian.net/src/p11-kit/0.23.20-1/ (for browsing the source)
-- https://sources.debian.net/src/p11-kit/0.23.20-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/p11-kit/0.23.20-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pam=1.3.1-5`
 
