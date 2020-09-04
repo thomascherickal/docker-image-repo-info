@@ -1,10 +1,10 @@
-# `php:8.0.0beta2-zts-buster`
+# `php:8.0.0beta3-zts-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:3f6b214fc606b6b473206efd8a05c86c282339ff1732d35321964a6d736407de`
-- Created: `2020-08-21T21:53:36.738165967Z`
-- Virtual Size: ~ 387.40 Mb  
+- Image ID: `sha256:4ce558370ce04df6b2e6b0b26522dfcbe6b0353f3b15452bed10c65663170f2b`
+- Created: `2020-09-03T18:51:21.076031017Z`
+- Virtual Size: ~ 387.53 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -18,10 +18,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F`
-  - `PHP_VERSION=8.0.0beta2`
-  - `PHP_URL=https://downloads.php.net/~pollita/php-8.0.0beta2.tar.xz`
-  - `PHP_ASC_URL=https://downloads.php.net/~pollita/php-8.0.0beta2.tar.xz.asc`
-  - `PHP_SHA256=466b2519f54e819bc8907206b30e0e21196a3609e80f27a112c434c7ede3a965`
+  - `PHP_VERSION=8.0.0beta3`
+  - `PHP_URL=https://downloads.php.net/~carusogabriel/php-8.0.0beta3.tar.xz`
+  - `PHP_ASC_URL=https://downloads.php.net/~carusogabriel/php-8.0.0beta3.tar.xz.asc`
+  - `PHP_SHA256=a52b4e07e14a3986482e08fdd82df027acc46acaffb6409bef8290dd218fbcec`
   - `PHP_MD5=`
 
 ## `dpkg` (`.deb`-based packages)
