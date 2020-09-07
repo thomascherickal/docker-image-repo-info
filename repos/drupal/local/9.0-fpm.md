@@ -1,9 +1,9 @@
-# `drupal:9.0.4-fpm-buster`
+# `drupal:9.0.5-fpm-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:d2d996e2f142d80aceb104a16c6678a575925ac1403f17c709dea347d70b63f1`
-- Created: `2020-09-02T19:35:39.750819507Z`
+- Image ID: `sha256:64e22b378fae62ea8cd9a88a95b78775bfa41d32471e646b0c3a7d56e0b3db93`
+- Created: `2020-09-03T23:22:35.695763526Z`
 - Virtual Size: ~ 484.52 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -18,12 +18,12 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
-  - `PHP_VERSION=7.4.9`
-  - `PHP_URL=https://www.php.net/distributions/php-7.4.9.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.9.tar.xz.asc`
-  - `PHP_SHA256=23733f4a608ad1bebdcecf0138ebc5fd57cf20d6e0915f98a9444c3f747dc57b`
+  - `PHP_VERSION=7.4.10`
+  - `PHP_URL=https://www.php.net/distributions/php-7.4.10.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.10.tar.xz.asc`
+  - `PHP_SHA256=c2d90b00b14284588a787b100dee54c2400e7db995b457864d66f00ad64fb010`
   - `PHP_MD5=`
-  - `DRUPAL_VERSION=9.0.4`
+  - `DRUPAL_VERSION=9.0.5`
 
 ## `dpkg` (`.deb`-based packages)
 
