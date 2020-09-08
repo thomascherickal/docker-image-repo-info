@@ -1,7 +1,7 @@
 ## `memcached:1-alpine`
 
 ```console
-$ docker pull memcached@sha256:eeb70c064ec36d136c3559fbaadec9df11f3ab745e4280f17c6580ff93d47615
+$ docker pull memcached@sha256:f082d96b17dcf912e5b0615995b3ab9ed28a400bbe095142e39f01d59edb1103
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -155,14 +155,14 @@ CMD ["memcached"]
 ### `memcached:1-alpine` - linux; arm variant v7
 
 ```console
-$ docker pull memcached@sha256:b46c1524cef5a4dc4c624ab5260500e3ea1f126dceca799a68f736af6f962378
+$ docker pull memcached@sha256:5df58dd4af8c4e69b2d0a71c6a35811934379c618fb3247d0d9b5cd726636c7a
 ```
 
--	Docker Version: 18.09.7
+-	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **3.8 MB (3826350 bytes)**  
+-	Total Size: **4.3 MB (4308981 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:8fcb8b1e1fb28d77c405eab2623c8376361a0724faee61e4b00d87604f2ac589`
+-	Image ID: `sha256:e4d85a2b8661ec592eaea28d949c858606735eedea931bad225bdfb76411a579`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["memcached"]`
 
@@ -175,23 +175,23 @@ CMD ["/bin/sh"]
 RUN addgroup -g 11211 memcache && adduser -D -u 11211 -G memcache memcache
 # Thu, 11 Jun 2020 20:31:58 GMT
 RUN apk add --no-cache cyrus-sasl-plain
-# Thu, 11 Jun 2020 20:31:59 GMT
-ENV MEMCACHED_VERSION=1.6.6
-# Thu, 11 Jun 2020 20:32:00 GMT
-ENV MEMCACHED_SHA1=d8895b12dc9fc82b389f1713e2c09cc6ca3d03e4
-# Thu, 11 Jun 2020 20:42:44 GMT
+# Tue, 08 Sep 2020 21:31:04 GMT
+ENV MEMCACHED_VERSION=1.6.7
+# Tue, 08 Sep 2020 21:31:19 GMT
+ENV MEMCACHED_SHA1=49336bb0a4b7ad296422b08148581ed54edf32d0
+# Tue, 08 Sep 2020 21:42:25 GMT
 RUN set -x 		&& apk add --no-cache --virtual .build-deps 		ca-certificates 		coreutils 		cyrus-sasl-dev 		dpkg-dev dpkg 		gcc 		libc-dev 		libevent-dev 		linux-headers 		make 		openssl 		openssl-dev 		perl 		perl-io-socket-ssl 		perl-utils 		tar 		wget 		&& wget -O memcached.tar.gz "https://memcached.org/files/memcached-$MEMCACHED_VERSION.tar.gz" 	&& echo "$MEMCACHED_SHA1  memcached.tar.gz" | sha1sum -c - 	&& mkdir -p /usr/src/memcached 	&& tar -xzf memcached.tar.gz -C /usr/src/memcached --strip-components=1 	&& rm memcached.tar.gz 		&& cd /usr/src/memcached 		&& gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)" 	&& enableExtstore="$( 		case "$gnuArch" in 			s390x-*) ;; 			*) echo '--enable-extstore' ;; 		esac 	)" 	&& ./configure 		--build="$gnuArch" 		--enable-sasl 		--enable-sasl-pwdb 		--enable-tls 		$enableExtstore 	&& make -j "$(nproc)" 		&& make test 	&& make install 		&& cd / && rm -rf /usr/src/memcached 		&& runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)" 	&& apk add --no-network --virtual .memcached-rundeps $runDeps 	&& apk del --no-network .build-deps 		&& memcached -V
-# Thu, 11 Jun 2020 20:42:45 GMT
+# Tue, 08 Sep 2020 21:42:40 GMT
 COPY file:bf641b13ea5b37f5830b299ebe9d72f194ee5d897db14faf8b133dc7a66a48ad in /usr/local/bin/ 
-# Thu, 11 Jun 2020 20:42:47 GMT
+# Tue, 08 Sep 2020 21:43:14 GMT
 RUN ln -s usr/local/bin/docker-entrypoint.sh /entrypoint.sh # backwards compat
-# Thu, 11 Jun 2020 20:42:48 GMT
+# Tue, 08 Sep 2020 21:43:20 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 11 Jun 2020 20:42:49 GMT
+# Tue, 08 Sep 2020 21:43:27 GMT
 USER memcache
-# Thu, 11 Jun 2020 20:42:50 GMT
+# Tue, 08 Sep 2020 21:43:36 GMT
 EXPOSE 11211
-# Thu, 11 Jun 2020 20:42:50 GMT
+# Tue, 08 Sep 2020 21:43:45 GMT
 CMD ["memcached"]
 ```
 
@@ -208,16 +208,16 @@ CMD ["memcached"]
 		Last Modified: Thu, 11 Jun 2020 20:43:17 GMT  
 		Size: 13.8 KB (13821 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d24ea3e7feb7ae4cc898f3549467c5d200b739020fbb1204666c7c2bf0f2049a`  
-		Last Modified: Thu, 11 Jun 2020 20:43:16 GMT  
-		Size: 1.4 MB (1404102 bytes)  
+	-	`sha256:5fb21bd27680eb0bb3a12b0230902e6e669705c89eb00a40b1e447c724630aaf`  
+		Last Modified: Tue, 08 Sep 2020 21:44:14 GMT  
+		Size: 1.9 MB (1886732 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:121fd71ab3ff327ca2cd4606b6472ae6dbed82f3363bb087ba6fbe4fc1a5d8c3`  
-		Last Modified: Thu, 11 Jun 2020 20:43:17 GMT  
-		Size: 284.0 B  
+	-	`sha256:5f223b308518beca0559a433993f85b4839c01cc9bd99273e99ca85a41c2789e`  
+		Last Modified: Tue, 08 Sep 2020 21:44:13 GMT  
+		Size: 285.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c7d2f107913e874d41a62b7b6c286ea0b3bea2a4a35c2e10ce334966a8fe8e48`  
-		Last Modified: Thu, 11 Jun 2020 20:43:17 GMT  
+	-	`sha256:c89f21f449a1fe14dd0743b953195690232696f7b71bff23bbbf37c513f58066`  
+		Last Modified: Tue, 08 Sep 2020 21:44:13 GMT  
 		Size: 121.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
