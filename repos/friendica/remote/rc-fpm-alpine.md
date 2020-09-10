@@ -1,7 +1,7 @@
 ## `friendica:rc-fpm-alpine`
 
 ```console
-$ docker pull friendica@sha256:da3b5c56cd93386bb3473f502b1c7bbddf602b1ba20c773e5899bfbc0096c365
+$ docker pull friendica@sha256:abf890b01798c877c6a26209b688d627e3c6517121b25ef1c5175d79cdc5d5cc
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -620,14 +620,14 @@ CMD ["php-fpm"]
 ### `friendica:rc-fpm-alpine` - linux; 386
 
 ```console
-$ docker pull friendica@sha256:aec076c6f902f48b6520aa55356578902cb908c4aa33134c18cbd1b251e3c21a
+$ docker pull friendica@sha256:80c5ca76548410bc463c13e6acfc248eedcdf69d4d7b70400ec86e73b0a5313b
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **53.8 MB (53752244 bytes)**  
+-	Total Size: **53.8 MB (53752260 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e37c329962386467061ec9ad679cc7822e639527da81529c15096db402944233`
+-	Image ID: `sha256:f3582ef604acb63fb7f98fb972d595fa2ad8241b544f124afb458b92f533929e`
 -	Entrypoint: `["\/entrypoint-dev.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -696,13 +696,13 @@ VOLUME [/var/www/html]
 ENV FRIENDICA_VERSION=2020.09-rc
 # Tue, 08 Sep 2020 19:47:00 GMT
 ENV FRIENDICA_ADDONS=2020.09-rc
-# Tue, 08 Sep 2020 19:47:00 GMT
-COPY multi:3784479e3dfafa9db457a9077471aff84b9ec68c2636d95e5207b3fbcdb966a9 in / 
-# Tue, 08 Sep 2020 19:47:01 GMT
+# Thu, 10 Sep 2020 22:11:11 GMT
+COPY multi:79fafe1f110f1d1a4fd44f7b958b2a83de813fc7f8cfcefe662a6fa6e275cf3e in / 
+# Thu, 10 Sep 2020 22:11:12 GMT
 COPY multi:923de5042cde61ed518a7067985e18cb873d0cd10946593bfb44de6ba9e078ed in /usr/src/friendica/config/ 
-# Tue, 08 Sep 2020 19:47:01 GMT
+# Thu, 10 Sep 2020 22:11:13 GMT
 ENTRYPOINT ["/entrypoint-dev.sh"]
-# Tue, 08 Sep 2020 19:47:01 GMT
+# Thu, 10 Sep 2020 22:11:13 GMT
 CMD ["php-fpm"]
 ```
 
@@ -759,12 +759,12 @@ CMD ["php-fpm"]
 		Last Modified: Fri, 04 Sep 2020 00:06:35 GMT  
 		Size: 547.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5c0cab97f1c2f368e128ee9c4c0f17e4abf66505f0eaf96c8f4987477b12ace4`  
-		Last Modified: Tue, 08 Sep 2020 19:49:32 GMT  
-		Size: 3.2 KB (3241 bytes)  
+	-	`sha256:3949e2896fb1cae4c74dc5607f8b313ac86dd1060456bc0b752c0b57666998fe`  
+		Last Modified: Thu, 10 Sep 2020 22:13:42 GMT  
+		Size: 3.3 KB (3257 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d0acc4e95e0d9fc0e5bdae8a83482acf99457dbf79a630eca791391722201173`  
-		Last Modified: Tue, 08 Sep 2020 19:49:32 GMT  
+	-	`sha256:0861cdc175b73183c58e0baef723874b922fcc599af08d00e63e9ba714ea5b8e`  
+		Last Modified: Thu, 10 Sep 2020 22:13:41 GMT  
 		Size: 1.1 KB (1064 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
