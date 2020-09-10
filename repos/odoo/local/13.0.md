@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:8ad4d32e0f24c4579c6430ca9f369ca3c660b3308cb1a8ef22254d1b07b0465b`
-- Created: `2020-08-26T21:23:54.834524958Z`
+- Image ID: `sha256:f018911ebd84885cf5c5b70a8b0392f7d9229e326197818034fc46065fdb4dac`
+- Created: `2020-09-10T12:52:23.975118376Z`
 - Virtual Size: ~ 1.20 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -9832,12 +9832,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/polib/1.1.0-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/polib/1.1.0-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `postgresql-12=12.3-1.pgdg100+1`
+### `dpkg` source package: `postgresql-12=12.4-1.pgdg100+1`
 
 Binary Packages:
 
-- `libpq5:amd64=12.3-1.pgdg100+1`
-- `postgresql-client-12=12.3-1.pgdg100+1`
+- `libpq5:amd64=12.4-1.pgdg100+1`
+- `postgresql-client-12=12.4-1.pgdg100+1`
 
 Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`, `/usr/share/doc/postgresql-client-12/copyright`)
 
@@ -9861,12 +9861,12 @@ Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`, `/usr/share/doc/postg
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `postgresql-common=215.pgdg100+1`
+### `dpkg` source package: `postgresql-common=216.pgdg100+1`
 
 Binary Packages:
 
-- `postgresql-client=12+215.pgdg100+1`
-- `postgresql-client-common=215.pgdg100+1`
+- `postgresql-client=12+216.pgdg100+1`
+- `postgresql-client-common=216.pgdg100+1`
 
 Licenses: (parsed from: `/usr/share/doc/postgresql-client/copyright`, `/usr/share/doc/postgresql-client-common/copyright`)
 
