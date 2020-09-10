@@ -2052,15 +2052,9 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 - `LGPLv3+_or_GPLv2+`
 - `The main library is licensed under GNU Lesser`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gnutls28=3.6.13-2ubuntu1.2
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.13-2ubuntu1.2.dsc' gnutls28_3.6.13-2ubuntu1.2.dsc 2940 SHA256:ede1726b6cff5e0d32835f44bdad07397438343a3c095c725d0cd2cb23189478
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.13.orig.tar.xz' gnutls28_3.6.13.orig.tar.xz 5958956 SHA256:32041df447d9f4644570cf573c9f60358e865637d69b7e59d1159b7240b52f38
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.13.orig.tar.xz.asc' gnutls28_3.6.13.orig.tar.xz.asc 667 SHA256:79eb677b19a35de2f17d2ea87e863755cd53f0072b9435c8a4b57669360f57d0
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.13-2ubuntu1.2.debian.tar.xz' gnutls28_3.6.13-2ubuntu1.2.debian.tar.xz 63676 SHA256:0f140bf0b589fbc3c4c1d46327c8fd968043f1814844687833e01808ffb5a70c
-```
 
 ### `dpkg` source package: `graphite2=1.3.13-11build1`
 
@@ -2362,14 +2356,9 @@ Licenses: (parsed from: `/usr/share/doc/libignition-math6/copyright`, `/usr/shar
 - `Apache-2.0`
 - `BSD-3-clause`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ignition-math6=6.4.0-1~focal
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.4.0-1~focal.dsc' ignition-math6_6.4.0-1~focal.dsc 1379 SHA256:5d397c702cbb5edbd7562809d8ee80d7df329dbe66631a77ffbe63043af571c6
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.4.0.orig.tar.bz2' ignition-math6_6.4.0.orig.tar.bz2 418644 SHA256:d31061dc34e940a1d84234c068e3da9c1015e1580eeed31844a6d04071578526
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.4.0-1~focal.debian.tar.xz' ignition-math6_6.4.0-1~focal.debian.tar.xz 2536 SHA256:1cb7966c57ca4e5fd1a504eca2feca507611ded4cef703630e1fda54f6f9848b
-```
 
 ### `dpkg` source package: `ignition-msgs5=5.3.0-1~focal`
 
@@ -7157,14 +7146,9 @@ Licenses: (parsed from: `/usr/share/doc/libsdformat9/copyright`, `/usr/share/doc
 - `Apache-2.0`
 - `BSD-3-clause`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sdformat9=9.2.0-1~focal
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/s/sdformat9/sdformat9_9.2.0-1~focal.dsc' sdformat9_9.2.0-1~focal.dsc 1376 SHA256:337ee9cc045a1bfaf9f073c044eca2778833374d9b4a3cebbd83b637ee078523
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/s/sdformat9/sdformat9_9.2.0.orig.tar.bz2' sdformat9_9.2.0.orig.tar.bz2 644484 SHA256:18193e571877d06b679a476f52329f326d02b5f70bc90c7cdc92f7dae2f5d784
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/s/sdformat9/sdformat9_9.2.0-1~focal.debian.tar.xz' sdformat9_9.2.0-1~focal.debian.tar.xz 3348 SHA256:627ee60f583591fabe6497e5ae59975fe3df11971c75fb1002ba620ff04ffb24
-```
 
 ### `dpkg` source package: `sed=4.7-1`
 

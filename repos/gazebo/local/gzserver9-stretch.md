@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:844a6ca1f6405b24a3543624fa931e4f089ce0872a4749a8ef007d09f9487540`
-- Created: `2020-08-11T00:30:16.838742629Z`
-- Virtual Size: ~ 591.16 Mb  
+- Image ID: `sha256:0563d59b0956698c1b80e4b884ab41216ccd2b93a9a279171d77e0df83fb7688`
+- Created: `2020-09-10T05:41:32.72935385Z`
+- Virtual Size: ~ 591.17 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/gzserver_entrypoint.sh"]`
@@ -4284,25 +4284,32 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libwebp/0.5.2-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libwebp/0.5.2-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libx11=2:1.6.4-3+deb9u2`
+### `dpkg` source package: `libx11=2:1.6.4-3+deb9u3`
 
 Binary Packages:
 
-- `libx11-6:amd64=2:1.6.4-3+deb9u2`
-- `libx11-data=2:1.6.4-3+deb9u2`
-- `libx11-xcb1:amd64=2:1.6.4-3+deb9u2`
+- `libx11-6:amd64=2:1.6.4-3+deb9u3`
+- `libx11-data=2:1.6.4-3+deb9u3`
+- `libx11-xcb1:amd64=2:1.6.4-3+deb9u3`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris libx11=2:1.6.4-3+deb9u3
+'http://security.debian.org/debian-security/pool/updates/main/libx/libx11/libx11_1.6.4-3+deb9u3.dsc' libx11_1.6.4-3+deb9u3.dsc 2425 SHA256:50b0a6ee00b6019b39b5bf513001b4d085fcaecdb34f4f432695b8dd56b2dce4
+'http://security.debian.org/debian-security/pool/updates/main/libx/libx11/libx11_1.6.4.orig.tar.gz' libx11_1.6.4.orig.tar.gz 3095115 SHA256:5d7fbb9e15c27900ea8963218a59750b674a8d7c94161b66e96fcfbdaa1c6263
+'http://security.debian.org/debian-security/pool/updates/main/libx/libx11/libx11_1.6.4-3+deb9u3.diff.gz' libx11_1.6.4-3+deb9u3.diff.gz 47484 SHA256:86c81692699b0a1d73f13f8c7ca49dbdebe949ce2f2ceae3972bbccab4783fb6
+```
 
-- http://snapshot.debian.org/package/libx11/2:1.6.4-3+deb9u2/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/libx11/2:1.6.4-3+deb9u3/ (for browsing the source)
+- https://sources.debian.net/src/libx11/2:1.6.4-3+deb9u3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libx11/2:1.6.4-3+deb9u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libxau=1:1.0.8-1`
 
@@ -4592,11 +4599,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libxkbcommon/0.7.1-2~deb9u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libxkbcommon/0.7.1-2~deb9u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libxml2=2.9.4+dfsg1-2.2+deb9u2`
+### `dpkg` source package: `libxml2=2.9.4+dfsg1-2.2+deb9u3`
 
 Binary Packages:
 
-- `libxml2:amd64=2.9.4+dfsg1-2.2+deb9u2`
+- `libxml2:amd64=2.9.4+dfsg1-2.2+deb9u3`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -4605,17 +4612,17 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libxml2=2.9.4+dfsg1-2.2+deb9u2
-'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.4+dfsg1-2.2+deb9u2.dsc' libxml2_2.9.4+dfsg1-2.2+deb9u2.dsc 3049 SHA256:53d34e06270572861dd0cb59f99b35caa40f85f928151827f59686fc3642d6b1
-'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.4+dfsg1.orig.tar.xz' libxml2_2.9.4+dfsg1.orig.tar.xz 2446412 SHA256:a74ad55e346aa0b2b41903e66d21f8f3d2a736b3f41e32496376861ab484184e
-'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.4+dfsg1-2.2+deb9u2.debian.tar.xz' libxml2_2.9.4+dfsg1-2.2+deb9u2.debian.tar.xz 33996 SHA256:d178b2d7c9a3bfd929762e15b8f99a139a54a9bcf988820e4f4febb051090b62
+$ apt-get source -qq --print-uris libxml2=2.9.4+dfsg1-2.2+deb9u3
+'http://security.debian.org/debian-security/pool/updates/main/libx/libxml2/libxml2_2.9.4+dfsg1-2.2+deb9u3.dsc' libxml2_2.9.4+dfsg1-2.2+deb9u3.dsc 3045 SHA256:08f96248840c577e4131f58ca1010d4335add3eb9b78dd1b152e064683e13158
+'http://security.debian.org/debian-security/pool/updates/main/libx/libxml2/libxml2_2.9.4+dfsg1.orig.tar.xz' libxml2_2.9.4+dfsg1.orig.tar.xz 2446412 SHA256:a74ad55e346aa0b2b41903e66d21f8f3d2a736b3f41e32496376861ab484184e
+'http://security.debian.org/debian-security/pool/updates/main/libx/libxml2/libxml2_2.9.4+dfsg1-2.2+deb9u3.debian.tar.xz' libxml2_2.9.4+dfsg1-2.2+deb9u3.debian.tar.xz 36248 SHA256:76a2f664a700d1023c214b9fbb248cf955072d16cfea4bba54003af199795268
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/libxml2/2.9.4+dfsg1-2.2+deb9u2/ (for browsing the source)
-- https://sources.debian.net/src/libxml2/2.9.4+dfsg1-2.2+deb9u2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libxml2/2.9.4+dfsg1-2.2+deb9u2/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/libxml2/2.9.4+dfsg1-2.2+deb9u3/ (for browsing the source)
+- https://sources.debian.net/src/libxml2/2.9.4+dfsg1-2.2+deb9u3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libxml2/2.9.4+dfsg1-2.2+deb9u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libxmu=2:1.1.2-2`
 
@@ -5597,11 +5604,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/opencv/2.4.9.1+dfsg1-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/opencv/2.4.9.1+dfsg1-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openexr=2.2.0-11`
+### `dpkg` source package: `openexr=2.2.0-11+deb9u1`
 
 Binary Packages:
 
-- `libopenexr22:amd64=2.2.0-11+b1`
+- `libopenexr22:amd64=2.2.0-11+deb9u1`
 
 Licenses: (parsed from: `/usr/share/doc/libopenexr22/copyright`)
 
@@ -5610,7 +5617,7 @@ Licenses: (parsed from: `/usr/share/doc/libopenexr22/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openexr=2.2.0-11
+$ apt-get source -qq --print-uris openexr=2.2.0-11+deb9u1
 'http://security.debian.org/debian-security/pool/updates/main/o/openexr/openexr_2.2.0-11+deb9u1.dsc' openexr_2.2.0-11+deb9u1.dsc 2308 SHA256:cc1eddd927833dc4e9b896414f30c82da8d3b2dafa8520a9c59921aec1aefa6f
 'http://security.debian.org/debian-security/pool/updates/main/o/openexr/openexr_2.2.0.orig.tar.gz' openexr_2.2.0.orig.tar.gz 14489661 SHA256:36a012f6c43213f840ce29a8b182700f6cf6b214bea0d5735594136b44914231
 'http://security.debian.org/debian-security/pool/updates/main/o/openexr/openexr_2.2.0-11+deb9u1.debian.tar.xz' openexr_2.2.0-11+deb9u1.debian.tar.xz 28044 SHA256:7122327fdf668a2ef74abeae709a7fa92a005ea9058a64e3bffe6450b0aab0ce
@@ -5618,9 +5625,9 @@ $ apt-get source -qq --print-uris openexr=2.2.0-11
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/openexr/2.2.0-11/ (for browsing the source)
-- https://sources.debian.net/src/openexr/2.2.0-11/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openexr/2.2.0-11/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/openexr/2.2.0-11+deb9u1/ (for browsing the source)
+- https://sources.debian.net/src/openexr/2.2.0-11+deb9u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openexr/2.2.0-11+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openjpeg2=2.1.2-1.1+deb9u5`
 
@@ -5999,11 +6006,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/popt/1.16-10/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/popt/1.16-10/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `postgresql-9.6=9.6.17-0+deb9u1`
+### `dpkg` source package: `postgresql-9.6=9.6.19-0+deb9u1`
 
 Binary Packages:
 
-- `libpq5:amd64=9.6.17-0+deb9u1`
+- `libpq5:amd64=9.6.19-0+deb9u1`
 
 Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`)
 
@@ -6025,17 +6032,17 @@ Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris postgresql-9.6=9.6.17-0+deb9u1
-'http://deb.debian.org/debian/pool/main/p/postgresql-9.6/postgresql-9.6_9.6.17-0+deb9u1.dsc' postgresql-9.6_9.6.17-0+deb9u1.dsc 3698 SHA256:d7bd776c56f514fcdae757d0bc88b5d3311799eb436e1e389a6c0138c48cb40d
-'http://deb.debian.org/debian/pool/main/p/postgresql-9.6/postgresql-9.6_9.6.17.orig.tar.bz2' postgresql-9.6_9.6.17.orig.tar.bz2 18812282 SHA256:f6e1e32d32545f97c066f3c19f4d58dfab1205c01252cf85c5c92294ace1a0c2
-'http://deb.debian.org/debian/pool/main/p/postgresql-9.6/postgresql-9.6_9.6.17-0+deb9u1.debian.tar.xz' postgresql-9.6_9.6.17-0+deb9u1.debian.tar.xz 29964 SHA256:daae30d27d42300b52aeddd7280e03872bab9fd2baa0f939d6a2674e7172933b
+$ apt-get source -qq --print-uris postgresql-9.6=9.6.19-0+deb9u1
+'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-9.6/postgresql-9.6_9.6.19-0+deb9u1.dsc' postgresql-9.6_9.6.19-0+deb9u1.dsc 3698 SHA256:47d25e579a0ce6b10a0be91ccd7f7d932b7d6d50b78c288c62e78a0f52522a2a
+'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-9.6/postgresql-9.6_9.6.19.orig.tar.bz2' postgresql-9.6_9.6.19.orig.tar.bz2 18880036 SHA256:61f93a94ccddbe0b2d1afaf03f04ba605d8af5b774ff9b830e5adeb50ab55cb0
+'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-9.6/postgresql-9.6_9.6.19-0+deb9u1.debian.tar.xz' postgresql-9.6_9.6.19-0+deb9u1.debian.tar.xz 30256 SHA256:af121bdb428a6677c097068a2c4cded67aa30fa1fd08af58fcda44c2043a64cb
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/postgresql-9.6/9.6.17-0+deb9u1/ (for browsing the source)
-- https://sources.debian.net/src/postgresql-9.6/9.6.17-0+deb9u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/postgresql-9.6/9.6.17-0+deb9u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/postgresql-9.6/9.6.19-0+deb9u1/ (for browsing the source)
+- https://sources.debian.net/src/postgresql-9.6/9.6.19-0+deb9u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/postgresql-9.6/9.6.19-0+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `proj=4.9.3-1`
 
@@ -6718,11 +6725,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/speex/1.2~rc1.2-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/speex/1.2~rc1.2-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `sqlite3=3.16.2-5+deb9u1`
+### `dpkg` source package: `sqlite3=3.16.2-5+deb9u2`
 
 Binary Packages:
 
-- `libsqlite3-0:amd64=3.16.2-5+deb9u1`
+- `libsqlite3-0:amd64=3.16.2-5+deb9u2`
 
 Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 
@@ -6733,18 +6740,18 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris sqlite3=3.16.2-5+deb9u1
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.16.2-5+deb9u1.dsc' sqlite3_3.16.2-5+deb9u1.dsc 2538 SHA256:aafd7c33e9091a0c8703a9b2dbfaf1b1592d8fc1df18bf92d3bfd2ffc350cc96
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.16.2.orig-www.tar.xz' sqlite3_3.16.2.orig-www.tar.xz 3383968 SHA256:d5dd3de405c55c63c9f99fbfcf3defc91a54a81b5656c510cd46544aaed134fa
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.16.2.orig.tar.xz' sqlite3_3.16.2.orig.tar.xz 5634120 SHA256:bf7b1e8ea7577253b7f8a8287d111d542d1792cf1768edc66541ac851ff92453
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.16.2-5+deb9u1.debian.tar.xz' sqlite3_3.16.2-5+deb9u1.debian.tar.xz 22128 SHA256:66358aca4f46ead86ba909bc5899bd312c10c46e620ad017120efe3b8714d44e
+$ apt-get source -qq --print-uris sqlite3=3.16.2-5+deb9u2
+'http://security.debian.org/debian-security/pool/updates/main/s/sqlite3/sqlite3_3.16.2-5+deb9u2.dsc' sqlite3_3.16.2-5+deb9u2.dsc 2538 SHA256:1fb129e1ec23dde5e110b2640cf67c6638a5c0beaa333f63bd188e23dd5df2c4
+'http://security.debian.org/debian-security/pool/updates/main/s/sqlite3/sqlite3_3.16.2.orig-www.tar.xz' sqlite3_3.16.2.orig-www.tar.xz 3383968 SHA256:d5dd3de405c55c63c9f99fbfcf3defc91a54a81b5656c510cd46544aaed134fa
+'http://security.debian.org/debian-security/pool/updates/main/s/sqlite3/sqlite3_3.16.2.orig.tar.xz' sqlite3_3.16.2.orig.tar.xz 5634120 SHA256:bf7b1e8ea7577253b7f8a8287d111d542d1792cf1768edc66541ac851ff92453
+'http://security.debian.org/debian-security/pool/updates/main/s/sqlite3/sqlite3_3.16.2-5+deb9u2.debian.tar.xz' sqlite3_3.16.2-5+deb9u2.debian.tar.xz 37060 SHA256:2999ed49cb86474b912538cdec88f4cb461b9c0d5729df9e4ff90afb762c4470
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/sqlite3/3.16.2-5+deb9u1/ (for browsing the source)
-- https://sources.debian.net/src/sqlite3/3.16.2-5+deb9u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sqlite3/3.16.2-5+deb9u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/sqlite3/3.16.2-5+deb9u2/ (for browsing the source)
+- https://sources.debian.net/src/sqlite3/3.16.2-5+deb9u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/sqlite3/3.16.2-5+deb9u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `superlu=5.2.1+dfsg1-2`
 
