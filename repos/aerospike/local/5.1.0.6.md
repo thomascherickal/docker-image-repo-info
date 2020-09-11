@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:46bdce9abaaa743f1020ff9e923c022f1dae46b3301d6419ea39765a826e378c`
-- Created: `2020-08-18T20:19:49.563824295Z`
-- Virtual Size: ~ 157.62 Mb  
+- Image ID: `sha256:25a9db1ae18281a52e7266307b073444b1a8c8eaa5a256de66ccd4d59bda4376`
+- Created: `2020-09-10T00:56:01.334665784Z`
+- Virtual Size: ~ 157.64 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -1858,14 +1858,14 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/python-defaults/2.7.13-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/python-defaults/2.7.13-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `python2.7=2.7.13-2+deb9u3`
+### `dpkg` source package: `python2.7=2.7.13-2+deb9u4`
 
 Binary Packages:
 
-- `libpython2.7-minimal:amd64=2.7.13-2+deb9u3`
-- `libpython2.7-stdlib:amd64=2.7.13-2+deb9u3`
-- `python2.7=2.7.13-2+deb9u3`
-- `python2.7-minimal=2.7.13-2+deb9u3`
+- `libpython2.7-minimal:amd64=2.7.13-2+deb9u4`
+- `libpython2.7-stdlib:amd64=2.7.13-2+deb9u4`
+- `python2.7=2.7.13-2+deb9u4`
+- `python2.7-minimal=2.7.13-2+deb9u4`
 
 Licenses: (parsed from: `/usr/share/doc/libpython2.7-minimal/copyright`, `/usr/share/doc/libpython2.7-stdlib/copyright`, `/usr/share/doc/python2.7/copyright`, `/usr/share/doc/python2.7-minimal/copyright`)
 
@@ -1889,17 +1889,17 @@ Licenses: (parsed from: `/usr/share/doc/libpython2.7-minimal/copyright`, `/usr/s
 Source:
 
 ```console
-$ apt-get source -qq --print-uris python2.7=2.7.13-2+deb9u3
-'http://deb.debian.org/debian/pool/main/p/python2.7/python2.7_2.7.13-2+deb9u3.dsc' python2.7_2.7.13-2+deb9u3.dsc 3370 SHA256:07f864cef82aaf3741af4c89aa5bcc595c56c283c3ff61630c36171ce5aac9f3
-'http://deb.debian.org/debian/pool/main/p/python2.7/python2.7_2.7.13.orig.tar.gz' python2.7_2.7.13.orig.tar.gz 17076672 SHA256:a4f05a0720ce0fd92626f0278b6b433eee9a6173ddf2bced7957dfb599a5ece1
-'http://deb.debian.org/debian/pool/main/p/python2.7/python2.7_2.7.13-2+deb9u3.diff.gz' python2.7_2.7.13-2+deb9u3.diff.gz 284882 SHA256:4e7d5d372cb78eadc0fafa461a579a658ee245fcc1142234561406b45193c087
+$ apt-get source -qq --print-uris python2.7=2.7.13-2+deb9u4
+'http://security.debian.org/debian-security/pool/updates/main/p/python2.7/python2.7_2.7.13-2+deb9u4.dsc' python2.7_2.7.13-2+deb9u4.dsc 3529 SHA256:e4f8b227d30ca0cae71bb1ae0e938788a89882299c03d558ee042d74e5ec80d6
+'http://security.debian.org/debian-security/pool/updates/main/p/python2.7/python2.7_2.7.13.orig.tar.gz' python2.7_2.7.13.orig.tar.gz 17076672 SHA256:a4f05a0720ce0fd92626f0278b6b433eee9a6173ddf2bced7957dfb599a5ece1
+'http://security.debian.org/debian-security/pool/updates/main/p/python2.7/python2.7_2.7.13-2+deb9u4.diff.gz' python2.7_2.7.13-2+deb9u4.diff.gz 296390 SHA256:87709d2c0db04eb19afbe3ef91914b9a3ff14e5e69bf661bd825a34baaee7a42
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/python2.7/2.7.13-2+deb9u3/ (for browsing the source)
-- https://sources.debian.net/src/python2.7/2.7.13-2+deb9u3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python2.7/2.7.13-2+deb9u3/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/python2.7/2.7.13-2+deb9u4/ (for browsing the source)
+- https://sources.debian.net/src/python2.7/2.7.13-2+deb9u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/python2.7/2.7.13-2+deb9u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `readline=7.0-3`
 
@@ -2029,11 +2029,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/shadow/1:4.4-4.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/shadow/1:4.4-4.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `sqlite3=3.16.2-5+deb9u1`
+### `dpkg` source package: `sqlite3=3.16.2-5+deb9u2`
 
 Binary Packages:
 
-- `libsqlite3-0:amd64=3.16.2-5+deb9u1`
+- `libsqlite3-0:amd64=3.16.2-5+deb9u2`
 
 Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 
@@ -2044,18 +2044,18 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris sqlite3=3.16.2-5+deb9u1
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.16.2-5+deb9u1.dsc' sqlite3_3.16.2-5+deb9u1.dsc 2538 SHA256:aafd7c33e9091a0c8703a9b2dbfaf1b1592d8fc1df18bf92d3bfd2ffc350cc96
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.16.2.orig-www.tar.xz' sqlite3_3.16.2.orig-www.tar.xz 3383968 SHA256:d5dd3de405c55c63c9f99fbfcf3defc91a54a81b5656c510cd46544aaed134fa
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.16.2.orig.tar.xz' sqlite3_3.16.2.orig.tar.xz 5634120 SHA256:bf7b1e8ea7577253b7f8a8287d111d542d1792cf1768edc66541ac851ff92453
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.16.2-5+deb9u1.debian.tar.xz' sqlite3_3.16.2-5+deb9u1.debian.tar.xz 22128 SHA256:66358aca4f46ead86ba909bc5899bd312c10c46e620ad017120efe3b8714d44e
+$ apt-get source -qq --print-uris sqlite3=3.16.2-5+deb9u2
+'http://security.debian.org/debian-security/pool/updates/main/s/sqlite3/sqlite3_3.16.2-5+deb9u2.dsc' sqlite3_3.16.2-5+deb9u2.dsc 2538 SHA256:1fb129e1ec23dde5e110b2640cf67c6638a5c0beaa333f63bd188e23dd5df2c4
+'http://security.debian.org/debian-security/pool/updates/main/s/sqlite3/sqlite3_3.16.2.orig-www.tar.xz' sqlite3_3.16.2.orig-www.tar.xz 3383968 SHA256:d5dd3de405c55c63c9f99fbfcf3defc91a54a81b5656c510cd46544aaed134fa
+'http://security.debian.org/debian-security/pool/updates/main/s/sqlite3/sqlite3_3.16.2.orig.tar.xz' sqlite3_3.16.2.orig.tar.xz 5634120 SHA256:bf7b1e8ea7577253b7f8a8287d111d542d1792cf1768edc66541ac851ff92453
+'http://security.debian.org/debian-security/pool/updates/main/s/sqlite3/sqlite3_3.16.2-5+deb9u2.debian.tar.xz' sqlite3_3.16.2-5+deb9u2.debian.tar.xz 37060 SHA256:2999ed49cb86474b912538cdec88f4cb461b9c0d5729df9e4ff90afb762c4470
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/sqlite3/3.16.2-5+deb9u1/ (for browsing the source)
-- https://sources.debian.net/src/sqlite3/3.16.2-5+deb9u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sqlite3/3.16.2-5+deb9u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/sqlite3/3.16.2-5+deb9u2/ (for browsing the source)
+- https://sources.debian.net/src/sqlite3/3.16.2-5+deb9u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/sqlite3/3.16.2-5+deb9u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `systemd=232-25+deb9u12`
 
