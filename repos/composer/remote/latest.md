@@ -1,7 +1,7 @@
 ## `composer:latest`
 
 ```console
-$ docker pull composer@sha256:1c0cdcc6e75dca8816cfe760f5d16e02eb016726bdf80cbe317b9b927502f52e
+$ docker pull composer@sha256:df4d8e37a081c0aa2456fa9f1b2c8ba16c7c2869892a047ad308ed4dc4d05536
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -17,14 +17,14 @@ $ docker pull composer@sha256:1c0cdcc6e75dca8816cfe760f5d16e02eb016726bdf80cbe31
 ### `composer:latest` - linux; amd64
 
 ```console
-$ docker pull composer@sha256:d1f6c3d66ea4ce75ef0436bd6deb3992b6f98c192204b9a6c80fddd7f326adf4
+$ docker pull composer@sha256:ad84a30a827b5b2e53d7c0632e9c4e39ac589c68c4eb07bd2d7bad6005d86042
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **63.6 MB (63599953 bytes)**  
+-	Total Size: **63.6 MB (63600102 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:31b4103dc9624be60990458959d9d58399eda18693f1ddc882791a4bc638942d`
+-	Image ID: `sha256:6c85ffda8e162bb9eab81d17c4d5e383b8f620d09a54cbae8c3c2532d0e7221e`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["composer"]`
 
@@ -81,17 +81,17 @@ RUN printf "# composer php cli ini settings\ndate.timezone=UTC\nmemory_limit=-1\
 ENV COMPOSER_ALLOW_SUPERUSER=1
 # Thu, 03 Sep 2020 23:16:51 GMT
 ENV COMPOSER_HOME=/tmp
-# Wed, 09 Sep 2020 19:19:42 GMT
-ENV COMPOSER_VERSION=1.10.12
-# Wed, 09 Sep 2020 19:19:43 GMT
+# Fri, 11 Sep 2020 06:59:23 GMT
+ENV COMPOSER_VERSION=1.10.13
+# Fri, 11 Sep 2020 06:59:24 GMT
 RUN set -eux;   curl --silent --fail --location --retry 3 --output /tmp/installer.php --url https://raw.githubusercontent.com/composer/getcomposer.org/cb19f2aa3aeaa2006c0cd69a7ef011eb31463067/web/installer;   php -r "     \$signature = '48e3236262b34d30969dca3c37281b3b4bbe3221bda826ac6a9a62d6444cdb0dcd0615698a5cbe587c3f0fe57a54d8f5';     \$hash = hash('sha384', file_get_contents('/tmp/installer.php'));     if (!hash_equals(\$signature, \$hash)) {       unlink('/tmp/installer.php');       echo 'Integrity check failed, installer is either corrupt or worse.' . PHP_EOL;       exit(1);     }";   php /tmp/installer.php --no-ansi --install-dir=/usr/bin --filename=composer --version=${COMPOSER_VERSION};   composer --ansi --version --no-interaction;   rm -f /tmp/installer.php;   find /tmp -type d -exec chmod -v 1777 {} +
-# Wed, 09 Sep 2020 19:19:43 GMT
+# Fri, 11 Sep 2020 06:59:25 GMT
 COPY file:fec7a37c0f859c3b5da390e40fa6f3ea8445ed26f54be61f4bce40efcaad57ee in /docker-entrypoint.sh 
-# Wed, 09 Sep 2020 19:19:44 GMT
+# Fri, 11 Sep 2020 06:59:25 GMT
 WORKDIR /app
-# Wed, 09 Sep 2020 19:19:44 GMT
+# Fri, 11 Sep 2020 06:59:25 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 09 Sep 2020 19:19:44 GMT
+# Fri, 11 Sep 2020 06:59:25 GMT
 CMD ["composer"]
 ```
 
@@ -144,17 +144,17 @@ CMD ["composer"]
 		Last Modified: Thu, 03 Sep 2020 23:17:21 GMT  
 		Size: 257.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4e93dc97c2c33573727ab1c06c849e8e5afd191ae77bf3cbdb92b2d9bc5bf042`  
-		Last Modified: Wed, 09 Sep 2020 19:20:01 GMT  
-		Size: 509.0 KB (509034 bytes)  
+	-	`sha256:284dee58799b1ab1bcd1011d232bd876c78968147cafd901ea888c80978b7925`  
+		Last Modified: Fri, 11 Sep 2020 06:59:43 GMT  
+		Size: 509.2 KB (509182 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:47e563c98502611f885e8c5456a3629a80ccfe98ebe3640aa9b304367d2cf7b7`  
-		Last Modified: Wed, 09 Sep 2020 19:20:01 GMT  
-		Size: 408.0 B  
+	-	`sha256:37401ca4d73908d0e4cb4fcc36b5e58ae429f1163dc430f315e9ecda1da9dd5f`  
+		Last Modified: Fri, 11 Sep 2020 06:59:44 GMT  
+		Size: 407.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a27ad1c875185c403e00dc63921ac5d3e96bc18025c5b67a4ec10c31855fab75`  
-		Last Modified: Wed, 09 Sep 2020 19:20:02 GMT  
-		Size: 90.0 B  
+	-	`sha256:9565e0e7a8c16ebdfa5ca8214634d38b3646a17d65842b0322257dd8f9174497`  
+		Last Modified: Fri, 11 Sep 2020 06:59:43 GMT  
+		Size: 92.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `composer:latest` - linux; arm variant v6
