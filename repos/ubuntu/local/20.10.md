@@ -406,14 +406,9 @@ Licenses: (parsed from: `/usr/share/doc/gcc-10-base/copyright`, `/usr/share/doc/
 - `GPL-3`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-10=10.2.0-5ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.2.0-5ubuntu2.dsc' gcc-10_10.2.0-5ubuntu2.dsc 30426 SHA256:c0497cd654a993b6e4ead66239235c71cf6ff27534ad1b9026591d119e110472
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.2.0.orig.tar.gz' gcc-10_10.2.0.orig.tar.gz 94773960 SHA256:8c932c6527c2d53eebea682092591b701a79901d9f308697f2cf8d443578ac40
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.2.0-5ubuntu2.debian.tar.xz' gcc-10_10.2.0-5ubuntu2.debian.tar.xz 2024860 SHA256:fd9026959db5bb113dded9a8e96b5bcfd34590eb66b1d1b6846b526af2815986
-```
 
 ### `dpkg` source package: `glibc=2.31-0ubuntu10`
 
@@ -505,15 +500,9 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 - `LGPLv3+_or_GPLv2+`
 - `The main library is licensed under GNU Lesser`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gnutls28=3.6.13-4ubuntu4
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.13-4ubuntu4.dsc' gnutls28_3.6.13-4ubuntu4.dsc 3586 SHA256:bfe7295eae5f906146bfb962f50d7a02e0998c7de042f70bd4ab8732027693a3
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.13.orig.tar.xz' gnutls28_3.6.13.orig.tar.xz 5958956 SHA256:32041df447d9f4644570cf573c9f60358e865637d69b7e59d1159b7240b52f38
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.13.orig.tar.xz.asc' gnutls28_3.6.13.orig.tar.xz.asc 667 SHA256:79eb677b19a35de2f17d2ea87e863755cd53f0072b9435c8a4b57669360f57d0
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.13-4ubuntu4.debian.tar.xz' gnutls28_3.6.13-4ubuntu4.debian.tar.xz 71076 SHA256:48d1ef66b94d73a3e8386fba9fe68e3218b10220159c9dd3d1c5f3d5dad4d681
-```
 
 ### `dpkg` source package: `grep=3.4-1`
 
@@ -628,14 +617,13 @@ Licenses: (parsed from: `/usr/share/doc/libffi7/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libffi=3.3-4
-'http://archive.ubuntu.com/ubuntu/pool/main/libf/libffi/libffi_3.3-4.dsc' libffi_3.3-4.dsc 1932 SHA256:4190ad8e7ae9167a0c67c5926bc3705acb191745cca93ef845dbc06fc097f380
-'http://archive.ubuntu.com/ubuntu/pool/main/libf/libffi/libffi_3.3.orig.tar.gz' libffi_3.3.orig.tar.gz 1305466 SHA256:72fba7922703ddfa7a028d513ac15a85c8d54c8d67f55fa5a4802885dc652056
-'http://archive.ubuntu.com/ubuntu/pool/main/libf/libffi/libffi_3.3-4.debian.tar.xz' libffi_3.3-4.debian.tar.xz 9016 SHA256:0e8a6d9d87202d04d7646178479c3d365a845f9723da26625d533a169b378100
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/libffi/3.3-4/
+
 
 ### `dpkg` source package: `libgcrypt20=1.8.5-5ubuntu2`
 
@@ -1317,14 +1305,9 @@ Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/lib
 - `MIT`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris util-linux=2.36-2ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.36-2ubuntu1.dsc' util-linux_2.36-2ubuntu1.dsc 4329 SHA256:a8d8d8abcb5c3a7f0074118e0d96001030cfaf3953c19ce97d0af007c9a42d70
-'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.36.orig.tar.xz' util-linux_2.36.orig.tar.xz 5242420 SHA256:9e4b1c67eb13b9b67feb32ae1dc0d50e08ce9e5d82e1cccd0ee771ad2fa9e0b1
-'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.36-2ubuntu1.debian.tar.xz' util-linux_2.36-2ubuntu1.debian.tar.xz 98844 SHA256:f6d063af7f4b3bf1214c672696fe0a95fa28530c91f1097ff5f72fc27d50d581
-```
 
 ### `dpkg` source package: `xz-utils=5.2.4-1ubuntu1`
 
