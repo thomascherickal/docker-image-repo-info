@@ -7858,7 +7858,7 @@ CMD ["haproxy" "-f" "/usr/local/etc/haproxy/haproxy.cfg"]
 ## `haproxy:2.3-dev`
 
 ```console
-$ docker pull haproxy@sha256:d058f2a6f272422f98b84b7c586e5128b19b05c3401cfda68c376227f936db54
+$ docker pull haproxy@sha256:9ccc658caacf2f5d25bb13c1ebaea45fe7340514416cec62e6d0d48ba9e88360
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -7875,14 +7875,14 @@ $ docker pull haproxy@sha256:d058f2a6f272422f98b84b7c586e5128b19b05c3401cfda68c3
 ### `haproxy:2.3-dev` - linux; amd64
 
 ```console
-$ docker pull haproxy@sha256:29af173d9161ebacd2ab68a17ce0c9fc5bb2c3d557229ac7a662b1e7b72fe797
+$ docker pull haproxy@sha256:a1d052f598e5680609b6b08c8a9d5990cdae8442d5407f7338278467458b380a
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **36.5 MB (36456999 bytes)**  
+-	Total Size: **36.6 MB (36609829 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0622e432626700590179176ac9331910518d54ca087c5fed62cfcf012ae375fd`
+-	Image ID: `sha256:ad405580af9738a0dbaaafdd027505a5db6b2fc5ddee8da3d14fe3c577d000c3`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["haproxy","-f","\/usr\/local\/etc\/haproxy\/haproxy.cfg"]`
 
@@ -7891,21 +7891,21 @@ $ docker pull haproxy@sha256:29af173d9161ebacd2ab68a17ce0c9fc5bb2c3d557229ac7a66
 ADD file:e7407f2294ad23634565820b9669b18ff2a2ca0212a7ec84b9c89d8550859954 in / 
 # Thu, 10 Sep 2020 00:23:30 GMT
 CMD ["bash"]
-# Thu, 10 Sep 2020 05:46:52 GMT
-ENV HAPROXY_VERSION=2.3-dev3
-# Thu, 10 Sep 2020 05:46:53 GMT
-ENV HAPROXY_URL=https://www.haproxy.org/download/2.3/src/devel/haproxy-2.3-dev3.tar.gz
-# Thu, 10 Sep 2020 05:46:53 GMT
-ENV HAPROXY_SHA256=1f9229e75a8d52c9e9b3b4506a04036798e9f5656f6b988982dd356483453dfe
-# Thu, 10 Sep 2020 05:48:29 GMT
+# Fri, 11 Sep 2020 22:24:13 GMT
+ENV HAPROXY_VERSION=2.3-dev4
+# Fri, 11 Sep 2020 22:24:13 GMT
+ENV HAPROXY_URL=https://www.haproxy.org/download/2.3/src/devel/haproxy-2.3-dev4.tar.gz
+# Fri, 11 Sep 2020 22:24:13 GMT
+ENV HAPROXY_SHA256=7055cac5076b7b95a2255587211e8740adc8559f5d855d8ab6ff3b3901f1c96d
+# Fri, 11 Sep 2020 22:25:23 GMT
 RUN set -x 		&& savedAptMark="$(apt-mark showmanual)" 	&& apt-get update && apt-get install -y --no-install-recommends 		ca-certificates 		gcc 		libc6-dev 		liblua5.3-dev 		libpcre2-dev 		libssl-dev 		make 		wget 		zlib1g-dev 	&& rm -rf /var/lib/apt/lists/* 		&& wget -O haproxy.tar.gz "$HAPROXY_URL" 	&& echo "$HAPROXY_SHA256 *haproxy.tar.gz" | sha256sum -c 	&& mkdir -p /usr/src/haproxy 	&& tar -xzf haproxy.tar.gz -C /usr/src/haproxy --strip-components=1 	&& rm haproxy.tar.gz 		&& makeOpts=' 		TARGET=linux-glibc 		USE_GETADDRINFO=1 		USE_LUA=1 LUA_INC=/usr/include/lua5.3 		USE_OPENSSL=1 		USE_PCRE2=1 USE_PCRE2_JIT=1 		USE_ZLIB=1 				EXTRA_OBJS=" 			contrib/prometheus-exporter/service-prometheus.o 		" 	' 	&& nproc="$(nproc)" 	&& eval "make -C /usr/src/haproxy -j '$nproc' all $makeOpts" 	&& eval "make -C /usr/src/haproxy install-bin $makeOpts" 		&& mkdir -p /usr/local/etc/haproxy 	&& cp -R /usr/src/haproxy/examples/errorfiles /usr/local/etc/haproxy/errors 	&& rm -rf /usr/src/haproxy 		&& apt-mark auto '.*' > /dev/null 	&& { [ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; } 	&& find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	&& apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Thu, 10 Sep 2020 05:48:30 GMT
+# Fri, 11 Sep 2020 22:25:23 GMT
 STOPSIGNAL SIGUSR1
-# Thu, 10 Sep 2020 05:48:30 GMT
+# Fri, 11 Sep 2020 22:25:23 GMT
 COPY file:a7db5ef8dbcd831ff68d6ff2fb45bc340539ad6d7a58d54323fd7399d1520910 in / 
-# Thu, 10 Sep 2020 05:48:30 GMT
+# Fri, 11 Sep 2020 22:25:23 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Thu, 10 Sep 2020 05:48:30 GMT
+# Fri, 11 Sep 2020 22:25:24 GMT
 CMD ["haproxy" "-f" "/usr/local/etc/haproxy/haproxy.cfg"]
 ```
 
@@ -7914,13 +7914,13 @@ CMD ["haproxy" "-f" "/usr/local/etc/haproxy/haproxy.cfg"]
 		Last Modified: Thu, 10 Sep 2020 00:34:02 GMT  
 		Size: 27.1 MB (27092161 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:697b25829a93d6436bd45fc3841eae65015dd9df8754c225302cfdddf69c33c8`  
-		Last Modified: Thu, 10 Sep 2020 05:56:04 GMT  
-		Size: 9.4 MB (9364458 bytes)  
+	-	`sha256:d4d7718402f8927403c7263707ed7bc2f77c277c0dcb823e2b40474bcc9e09eb`  
+		Last Modified: Fri, 11 Sep 2020 22:28:24 GMT  
+		Size: 9.5 MB (9517287 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:20de867b66d686b997990f286b82b0c00d64a82686302180e2b6fdfe6e5e05b2`  
-		Last Modified: Thu, 10 Sep 2020 05:56:02 GMT  
-		Size: 380.0 B  
+	-	`sha256:9fcd85912df5dc52595d966b2382601c0976325bbdb3f341359d22c8b09c597b`  
+		Last Modified: Fri, 11 Sep 2020 22:28:22 GMT  
+		Size: 381.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `haproxy:2.3-dev` - linux; arm variant v5
@@ -8028,14 +8028,14 @@ CMD ["haproxy" "-f" "/usr/local/etc/haproxy/haproxy.cfg"]
 ### `haproxy:2.3-dev` - linux; arm64 variant v8
 
 ```console
-$ docker pull haproxy@sha256:04485514ad8edf7e26b4813b79c60c64329327b5f9e513084783a271850eafd8
+$ docker pull haproxy@sha256:a6d40725f9d83184970670732e856ace0b2e6129ffdec02bd626fcf73598b0a0
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **35.0 MB (35031312 bytes)**  
+-	Total Size: **35.2 MB (35183880 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ded336a73cfbaf992d706e1575312119aa9d1c914c4076f6e2afd0b9815c23a1`
+-	Image ID: `sha256:2c29e6f882124ce5852e51fefff4a80ccca387edbfac398794ef9babc46d2eff`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["haproxy","-f","\/usr\/local\/etc\/haproxy\/haproxy.cfg"]`
 
@@ -8044,21 +8044,21 @@ $ docker pull haproxy@sha256:04485514ad8edf7e26b4813b79c60c64329327b5f9e51308478
 ADD file:d870fb0484ea283840d9cc923c9c3fe36d1bb6b3b5ecfefcce06aa26a22c9414 in / 
 # Wed, 09 Sep 2020 23:50:57 GMT
 CMD ["bash"]
-# Thu, 10 Sep 2020 03:57:19 GMT
-ENV HAPROXY_VERSION=2.3-dev3
-# Thu, 10 Sep 2020 03:57:20 GMT
-ENV HAPROXY_URL=https://www.haproxy.org/download/2.3/src/devel/haproxy-2.3-dev3.tar.gz
-# Thu, 10 Sep 2020 03:57:22 GMT
-ENV HAPROXY_SHA256=1f9229e75a8d52c9e9b3b4506a04036798e9f5656f6b988982dd356483453dfe
-# Thu, 10 Sep 2020 03:58:04 GMT
+# Fri, 11 Sep 2020 22:39:56 GMT
+ENV HAPROXY_VERSION=2.3-dev4
+# Fri, 11 Sep 2020 22:39:59 GMT
+ENV HAPROXY_URL=https://www.haproxy.org/download/2.3/src/devel/haproxy-2.3-dev4.tar.gz
+# Fri, 11 Sep 2020 22:40:00 GMT
+ENV HAPROXY_SHA256=7055cac5076b7b95a2255587211e8740adc8559f5d855d8ab6ff3b3901f1c96d
+# Fri, 11 Sep 2020 22:40:51 GMT
 RUN set -x 		&& savedAptMark="$(apt-mark showmanual)" 	&& apt-get update && apt-get install -y --no-install-recommends 		ca-certificates 		gcc 		libc6-dev 		liblua5.3-dev 		libpcre2-dev 		libssl-dev 		make 		wget 		zlib1g-dev 	&& rm -rf /var/lib/apt/lists/* 		&& wget -O haproxy.tar.gz "$HAPROXY_URL" 	&& echo "$HAPROXY_SHA256 *haproxy.tar.gz" | sha256sum -c 	&& mkdir -p /usr/src/haproxy 	&& tar -xzf haproxy.tar.gz -C /usr/src/haproxy --strip-components=1 	&& rm haproxy.tar.gz 		&& makeOpts=' 		TARGET=linux-glibc 		USE_GETADDRINFO=1 		USE_LUA=1 LUA_INC=/usr/include/lua5.3 		USE_OPENSSL=1 		USE_PCRE2=1 USE_PCRE2_JIT=1 		USE_ZLIB=1 				EXTRA_OBJS=" 			contrib/prometheus-exporter/service-prometheus.o 		" 	' 	&& nproc="$(nproc)" 	&& eval "make -C /usr/src/haproxy -j '$nproc' all $makeOpts" 	&& eval "make -C /usr/src/haproxy install-bin $makeOpts" 		&& mkdir -p /usr/local/etc/haproxy 	&& cp -R /usr/src/haproxy/examples/errorfiles /usr/local/etc/haproxy/errors 	&& rm -rf /usr/src/haproxy 		&& apt-mark auto '.*' > /dev/null 	&& { [ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; } 	&& find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	&& apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Thu, 10 Sep 2020 03:58:05 GMT
+# Fri, 11 Sep 2020 22:40:53 GMT
 STOPSIGNAL SIGUSR1
-# Thu, 10 Sep 2020 03:58:06 GMT
+# Fri, 11 Sep 2020 22:40:59 GMT
 COPY file:a7db5ef8dbcd831ff68d6ff2fb45bc340539ad6d7a58d54323fd7399d1520910 in / 
-# Thu, 10 Sep 2020 03:58:07 GMT
+# Fri, 11 Sep 2020 22:41:00 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Thu, 10 Sep 2020 03:58:07 GMT
+# Fri, 11 Sep 2020 22:41:01 GMT
 CMD ["haproxy" "-f" "/usr/local/etc/haproxy/haproxy.cfg"]
 ```
 
@@ -8067,26 +8067,26 @@ CMD ["haproxy" "-f" "/usr/local/etc/haproxy/haproxy.cfg"]
 		Last Modified: Wed, 09 Sep 2020 23:59:09 GMT  
 		Size: 25.8 MB (25849325 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8daf183f3e0557f902206453d683bb1d8daee3749befbfb08906ed5be1bb2273`  
-		Last Modified: Thu, 10 Sep 2020 04:05:27 GMT  
-		Size: 9.2 MB (9181607 bytes)  
+	-	`sha256:02b1f30489c2ef4def04d67563f533c09bd02914b9ea1d6dd48901f5dc307e36`  
+		Last Modified: Fri, 11 Sep 2020 22:44:13 GMT  
+		Size: 9.3 MB (9334175 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b7a939cc5a7424e43d62a40bb0b33bdfe079dd77c388445e0ccc3ca23d9adf55`  
-		Last Modified: Thu, 10 Sep 2020 04:05:24 GMT  
+	-	`sha256:7211819f07e442d6d26de8b5da99d7526680daf291221a7c9cdca1b244f50bc9`  
+		Last Modified: Fri, 11 Sep 2020 22:44:10 GMT  
 		Size: 380.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `haproxy:2.3-dev` - linux; 386
 
 ```console
-$ docker pull haproxy@sha256:60f609dacba7eb893dcb33f4789c7f1ffdf248e1d50495e8cfea630ae5f41618
+$ docker pull haproxy@sha256:a2132b6daafee7a1d628b4d1f0b7905e5e00bb1e3c405d9ddd43d5b1dbf5019c
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **37.0 MB (36993349 bytes)**  
+-	Total Size: **37.1 MB (37145861 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:93103fa753f8393c58f6061fc16b586b52e9e777c8ceb78212e459416ced4a71`
+-	Image ID: `sha256:06afcad4ead4950d3b4119bee71b4baca1ffc5feafb29316502d682d5b215520`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["haproxy","-f","\/usr\/local\/etc\/haproxy\/haproxy.cfg"]`
 
@@ -8095,21 +8095,21 @@ $ docker pull haproxy@sha256:60f609dacba7eb893dcb33f4789c7f1ffdf248e1d50495e8cfe
 ADD file:08dc20c9cd727ebf02cac6e4b287c3009274682174aee9222494491cd6c671b8 in / 
 # Wed, 09 Sep 2020 23:40:19 GMT
 CMD ["bash"]
-# Thu, 10 Sep 2020 00:05:33 GMT
-ENV HAPROXY_VERSION=2.3-dev3
-# Thu, 10 Sep 2020 00:05:33 GMT
-ENV HAPROXY_URL=https://www.haproxy.org/download/2.3/src/devel/haproxy-2.3-dev3.tar.gz
-# Thu, 10 Sep 2020 00:05:33 GMT
-ENV HAPROXY_SHA256=1f9229e75a8d52c9e9b3b4506a04036798e9f5656f6b988982dd356483453dfe
-# Thu, 10 Sep 2020 00:06:33 GMT
+# Fri, 11 Sep 2020 22:54:19 GMT
+ENV HAPROXY_VERSION=2.3-dev4
+# Fri, 11 Sep 2020 22:54:19 GMT
+ENV HAPROXY_URL=https://www.haproxy.org/download/2.3/src/devel/haproxy-2.3-dev4.tar.gz
+# Fri, 11 Sep 2020 22:54:20 GMT
+ENV HAPROXY_SHA256=7055cac5076b7b95a2255587211e8740adc8559f5d855d8ab6ff3b3901f1c96d
+# Fri, 11 Sep 2020 22:56:15 GMT
 RUN set -x 		&& savedAptMark="$(apt-mark showmanual)" 	&& apt-get update && apt-get install -y --no-install-recommends 		ca-certificates 		gcc 		libc6-dev 		liblua5.3-dev 		libpcre2-dev 		libssl-dev 		make 		wget 		zlib1g-dev 	&& rm -rf /var/lib/apt/lists/* 		&& wget -O haproxy.tar.gz "$HAPROXY_URL" 	&& echo "$HAPROXY_SHA256 *haproxy.tar.gz" | sha256sum -c 	&& mkdir -p /usr/src/haproxy 	&& tar -xzf haproxy.tar.gz -C /usr/src/haproxy --strip-components=1 	&& rm haproxy.tar.gz 		&& makeOpts=' 		TARGET=linux-glibc 		USE_GETADDRINFO=1 		USE_LUA=1 LUA_INC=/usr/include/lua5.3 		USE_OPENSSL=1 		USE_PCRE2=1 USE_PCRE2_JIT=1 		USE_ZLIB=1 				EXTRA_OBJS=" 			contrib/prometheus-exporter/service-prometheus.o 		" 	' 	&& nproc="$(nproc)" 	&& eval "make -C /usr/src/haproxy -j '$nproc' all $makeOpts" 	&& eval "make -C /usr/src/haproxy install-bin $makeOpts" 		&& mkdir -p /usr/local/etc/haproxy 	&& cp -R /usr/src/haproxy/examples/errorfiles /usr/local/etc/haproxy/errors 	&& rm -rf /usr/src/haproxy 		&& apt-mark auto '.*' > /dev/null 	&& { [ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; } 	&& find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	&& apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Thu, 10 Sep 2020 00:06:33 GMT
+# Fri, 11 Sep 2020 22:56:16 GMT
 STOPSIGNAL SIGUSR1
-# Thu, 10 Sep 2020 00:06:33 GMT
+# Fri, 11 Sep 2020 22:56:16 GMT
 COPY file:a7db5ef8dbcd831ff68d6ff2fb45bc340539ad6d7a58d54323fd7399d1520910 in / 
-# Thu, 10 Sep 2020 00:06:33 GMT
+# Fri, 11 Sep 2020 22:56:17 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Thu, 10 Sep 2020 00:06:34 GMT
+# Fri, 11 Sep 2020 22:56:17 GMT
 CMD ["haproxy" "-f" "/usr/local/etc/haproxy/haproxy.cfg"]
 ```
 
@@ -8118,13 +8118,13 @@ CMD ["haproxy" "-f" "/usr/local/etc/haproxy/haproxy.cfg"]
 		Last Modified: Wed, 09 Sep 2020 23:46:30 GMT  
 		Size: 27.8 MB (27750334 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e1a297386a3d19d9d34e995c4dd67e81066b47f91245561243fd41d9c68df043`  
-		Last Modified: Thu, 10 Sep 2020 00:12:08 GMT  
-		Size: 9.2 MB (9242635 bytes)  
+	-	`sha256:9d066a8a819c85dbc1376120930371c9e3a823e5858ffe5fdab273f71d555087`  
+		Last Modified: Fri, 11 Sep 2020 22:59:59 GMT  
+		Size: 9.4 MB (9395148 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b6b37e64ff385f4c5b6768fc7518d77ed66301dcb63905b8adf0f1bb5a72f772`  
-		Last Modified: Thu, 10 Sep 2020 00:12:05 GMT  
-		Size: 380.0 B  
+	-	`sha256:4665bb91b600fc6823a520a03a465468b5109f4779e771962e3f73ce03133c1f`  
+		Last Modified: Fri, 11 Sep 2020 22:59:56 GMT  
+		Size: 379.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `haproxy:2.3-dev` - linux; mips64le
@@ -8283,13 +8283,67 @@ CMD ["haproxy" "-f" "/usr/local/etc/haproxy/haproxy.cfg"]
 ## `haproxy:2.3-dev4`
 
 ```console
-$ docker pull haproxy@sha256:59a547a12a165f6a912dad995de3ccf1e12433df8418607cd39fae4234944719
+$ docker pull haproxy@sha256:ef6e270f9a7ce02bd6da02afcbe5b097aef3b45349c5a6d6ca8fc3e2b6c61397
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
 -	Platforms:
+	-	linux; amd64
 	-	linux; arm variant v5
+	-	linux; arm64 variant v8
+	-	linux; 386
 	-	linux; s390x
+
+### `haproxy:2.3-dev4` - linux; amd64
+
+```console
+$ docker pull haproxy@sha256:a1d052f598e5680609b6b08c8a9d5990cdae8442d5407f7338278467458b380a
+```
+
+-	Docker Version: 18.09.7
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **36.6 MB (36609829 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:ad405580af9738a0dbaaafdd027505a5db6b2fc5ddee8da3d14fe3c577d000c3`
+-	Entrypoint: `["\/docker-entrypoint.sh"]`
+-	Default Command: `["haproxy","-f","\/usr\/local\/etc\/haproxy\/haproxy.cfg"]`
+
+```dockerfile
+# Thu, 10 Sep 2020 00:23:29 GMT
+ADD file:e7407f2294ad23634565820b9669b18ff2a2ca0212a7ec84b9c89d8550859954 in / 
+# Thu, 10 Sep 2020 00:23:30 GMT
+CMD ["bash"]
+# Fri, 11 Sep 2020 22:24:13 GMT
+ENV HAPROXY_VERSION=2.3-dev4
+# Fri, 11 Sep 2020 22:24:13 GMT
+ENV HAPROXY_URL=https://www.haproxy.org/download/2.3/src/devel/haproxy-2.3-dev4.tar.gz
+# Fri, 11 Sep 2020 22:24:13 GMT
+ENV HAPROXY_SHA256=7055cac5076b7b95a2255587211e8740adc8559f5d855d8ab6ff3b3901f1c96d
+# Fri, 11 Sep 2020 22:25:23 GMT
+RUN set -x 		&& savedAptMark="$(apt-mark showmanual)" 	&& apt-get update && apt-get install -y --no-install-recommends 		ca-certificates 		gcc 		libc6-dev 		liblua5.3-dev 		libpcre2-dev 		libssl-dev 		make 		wget 		zlib1g-dev 	&& rm -rf /var/lib/apt/lists/* 		&& wget -O haproxy.tar.gz "$HAPROXY_URL" 	&& echo "$HAPROXY_SHA256 *haproxy.tar.gz" | sha256sum -c 	&& mkdir -p /usr/src/haproxy 	&& tar -xzf haproxy.tar.gz -C /usr/src/haproxy --strip-components=1 	&& rm haproxy.tar.gz 		&& makeOpts=' 		TARGET=linux-glibc 		USE_GETADDRINFO=1 		USE_LUA=1 LUA_INC=/usr/include/lua5.3 		USE_OPENSSL=1 		USE_PCRE2=1 USE_PCRE2_JIT=1 		USE_ZLIB=1 				EXTRA_OBJS=" 			contrib/prometheus-exporter/service-prometheus.o 		" 	' 	&& nproc="$(nproc)" 	&& eval "make -C /usr/src/haproxy -j '$nproc' all $makeOpts" 	&& eval "make -C /usr/src/haproxy install-bin $makeOpts" 		&& mkdir -p /usr/local/etc/haproxy 	&& cp -R /usr/src/haproxy/examples/errorfiles /usr/local/etc/haproxy/errors 	&& rm -rf /usr/src/haproxy 		&& apt-mark auto '.*' > /dev/null 	&& { [ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; } 	&& find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	&& apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
+# Fri, 11 Sep 2020 22:25:23 GMT
+STOPSIGNAL SIGUSR1
+# Fri, 11 Sep 2020 22:25:23 GMT
+COPY file:a7db5ef8dbcd831ff68d6ff2fb45bc340539ad6d7a58d54323fd7399d1520910 in / 
+# Fri, 11 Sep 2020 22:25:23 GMT
+ENTRYPOINT ["/docker-entrypoint.sh"]
+# Fri, 11 Sep 2020 22:25:24 GMT
+CMD ["haproxy" "-f" "/usr/local/etc/haproxy/haproxy.cfg"]
+```
+
+-	Layers:
+	-	`sha256:d121f8d1c4128ebc1e95e5bfad90a0189b84eadbbb2fbaad20cbb26d20b2c8a2`  
+		Last Modified: Thu, 10 Sep 2020 00:34:02 GMT  
+		Size: 27.1 MB (27092161 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:d4d7718402f8927403c7263707ed7bc2f77c277c0dcb823e2b40474bcc9e09eb`  
+		Last Modified: Fri, 11 Sep 2020 22:28:24 GMT  
+		Size: 9.5 MB (9517287 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:9fcd85912df5dc52595d966b2382601c0976325bbdb3f341359d22c8b09c597b`  
+		Last Modified: Fri, 11 Sep 2020 22:28:22 GMT  
+		Size: 381.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `haproxy:2.3-dev4` - linux; arm variant v5
 
@@ -8340,6 +8394,108 @@ CMD ["haproxy" "-f" "/usr/local/etc/haproxy/haproxy.cfg"]
 	-	`sha256:a31bc53c64654d0143369d0881e0662e5f5af4429a4a209b8a4345082e5c3738`  
 		Last Modified: Fri, 11 Sep 2020 21:58:26 GMT  
 		Size: 380.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `haproxy:2.3-dev4` - linux; arm64 variant v8
+
+```console
+$ docker pull haproxy@sha256:a6d40725f9d83184970670732e856ace0b2e6129ffdec02bd626fcf73598b0a0
+```
+
+-	Docker Version: 18.09.7
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **35.2 MB (35183880 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:2c29e6f882124ce5852e51fefff4a80ccca387edbfac398794ef9babc46d2eff`
+-	Entrypoint: `["\/docker-entrypoint.sh"]`
+-	Default Command: `["haproxy","-f","\/usr\/local\/etc\/haproxy\/haproxy.cfg"]`
+
+```dockerfile
+# Wed, 09 Sep 2020 23:50:54 GMT
+ADD file:d870fb0484ea283840d9cc923c9c3fe36d1bb6b3b5ecfefcce06aa26a22c9414 in / 
+# Wed, 09 Sep 2020 23:50:57 GMT
+CMD ["bash"]
+# Fri, 11 Sep 2020 22:39:56 GMT
+ENV HAPROXY_VERSION=2.3-dev4
+# Fri, 11 Sep 2020 22:39:59 GMT
+ENV HAPROXY_URL=https://www.haproxy.org/download/2.3/src/devel/haproxy-2.3-dev4.tar.gz
+# Fri, 11 Sep 2020 22:40:00 GMT
+ENV HAPROXY_SHA256=7055cac5076b7b95a2255587211e8740adc8559f5d855d8ab6ff3b3901f1c96d
+# Fri, 11 Sep 2020 22:40:51 GMT
+RUN set -x 		&& savedAptMark="$(apt-mark showmanual)" 	&& apt-get update && apt-get install -y --no-install-recommends 		ca-certificates 		gcc 		libc6-dev 		liblua5.3-dev 		libpcre2-dev 		libssl-dev 		make 		wget 		zlib1g-dev 	&& rm -rf /var/lib/apt/lists/* 		&& wget -O haproxy.tar.gz "$HAPROXY_URL" 	&& echo "$HAPROXY_SHA256 *haproxy.tar.gz" | sha256sum -c 	&& mkdir -p /usr/src/haproxy 	&& tar -xzf haproxy.tar.gz -C /usr/src/haproxy --strip-components=1 	&& rm haproxy.tar.gz 		&& makeOpts=' 		TARGET=linux-glibc 		USE_GETADDRINFO=1 		USE_LUA=1 LUA_INC=/usr/include/lua5.3 		USE_OPENSSL=1 		USE_PCRE2=1 USE_PCRE2_JIT=1 		USE_ZLIB=1 				EXTRA_OBJS=" 			contrib/prometheus-exporter/service-prometheus.o 		" 	' 	&& nproc="$(nproc)" 	&& eval "make -C /usr/src/haproxy -j '$nproc' all $makeOpts" 	&& eval "make -C /usr/src/haproxy install-bin $makeOpts" 		&& mkdir -p /usr/local/etc/haproxy 	&& cp -R /usr/src/haproxy/examples/errorfiles /usr/local/etc/haproxy/errors 	&& rm -rf /usr/src/haproxy 		&& apt-mark auto '.*' > /dev/null 	&& { [ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; } 	&& find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	&& apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
+# Fri, 11 Sep 2020 22:40:53 GMT
+STOPSIGNAL SIGUSR1
+# Fri, 11 Sep 2020 22:40:59 GMT
+COPY file:a7db5ef8dbcd831ff68d6ff2fb45bc340539ad6d7a58d54323fd7399d1520910 in / 
+# Fri, 11 Sep 2020 22:41:00 GMT
+ENTRYPOINT ["/docker-entrypoint.sh"]
+# Fri, 11 Sep 2020 22:41:01 GMT
+CMD ["haproxy" "-f" "/usr/local/etc/haproxy/haproxy.cfg"]
+```
+
+-	Layers:
+	-	`sha256:a6d76de28f58f3470aff71c934c0fec4e5d0fad788f8b8bcc50601266fc1b34d`  
+		Last Modified: Wed, 09 Sep 2020 23:59:09 GMT  
+		Size: 25.8 MB (25849325 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:02b1f30489c2ef4def04d67563f533c09bd02914b9ea1d6dd48901f5dc307e36`  
+		Last Modified: Fri, 11 Sep 2020 22:44:13 GMT  
+		Size: 9.3 MB (9334175 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:7211819f07e442d6d26de8b5da99d7526680daf291221a7c9cdca1b244f50bc9`  
+		Last Modified: Fri, 11 Sep 2020 22:44:10 GMT  
+		Size: 380.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `haproxy:2.3-dev4` - linux; 386
+
+```console
+$ docker pull haproxy@sha256:a2132b6daafee7a1d628b4d1f0b7905e5e00bb1e3c405d9ddd43d5b1dbf5019c
+```
+
+-	Docker Version: 19.03.12
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **37.1 MB (37145861 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:06afcad4ead4950d3b4119bee71b4baca1ffc5feafb29316502d682d5b215520`
+-	Entrypoint: `["\/docker-entrypoint.sh"]`
+-	Default Command: `["haproxy","-f","\/usr\/local\/etc\/haproxy\/haproxy.cfg"]`
+
+```dockerfile
+# Wed, 09 Sep 2020 23:40:19 GMT
+ADD file:08dc20c9cd727ebf02cac6e4b287c3009274682174aee9222494491cd6c671b8 in / 
+# Wed, 09 Sep 2020 23:40:19 GMT
+CMD ["bash"]
+# Fri, 11 Sep 2020 22:54:19 GMT
+ENV HAPROXY_VERSION=2.3-dev4
+# Fri, 11 Sep 2020 22:54:19 GMT
+ENV HAPROXY_URL=https://www.haproxy.org/download/2.3/src/devel/haproxy-2.3-dev4.tar.gz
+# Fri, 11 Sep 2020 22:54:20 GMT
+ENV HAPROXY_SHA256=7055cac5076b7b95a2255587211e8740adc8559f5d855d8ab6ff3b3901f1c96d
+# Fri, 11 Sep 2020 22:56:15 GMT
+RUN set -x 		&& savedAptMark="$(apt-mark showmanual)" 	&& apt-get update && apt-get install -y --no-install-recommends 		ca-certificates 		gcc 		libc6-dev 		liblua5.3-dev 		libpcre2-dev 		libssl-dev 		make 		wget 		zlib1g-dev 	&& rm -rf /var/lib/apt/lists/* 		&& wget -O haproxy.tar.gz "$HAPROXY_URL" 	&& echo "$HAPROXY_SHA256 *haproxy.tar.gz" | sha256sum -c 	&& mkdir -p /usr/src/haproxy 	&& tar -xzf haproxy.tar.gz -C /usr/src/haproxy --strip-components=1 	&& rm haproxy.tar.gz 		&& makeOpts=' 		TARGET=linux-glibc 		USE_GETADDRINFO=1 		USE_LUA=1 LUA_INC=/usr/include/lua5.3 		USE_OPENSSL=1 		USE_PCRE2=1 USE_PCRE2_JIT=1 		USE_ZLIB=1 				EXTRA_OBJS=" 			contrib/prometheus-exporter/service-prometheus.o 		" 	' 	&& nproc="$(nproc)" 	&& eval "make -C /usr/src/haproxy -j '$nproc' all $makeOpts" 	&& eval "make -C /usr/src/haproxy install-bin $makeOpts" 		&& mkdir -p /usr/local/etc/haproxy 	&& cp -R /usr/src/haproxy/examples/errorfiles /usr/local/etc/haproxy/errors 	&& rm -rf /usr/src/haproxy 		&& apt-mark auto '.*' > /dev/null 	&& { [ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; } 	&& find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	&& apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
+# Fri, 11 Sep 2020 22:56:16 GMT
+STOPSIGNAL SIGUSR1
+# Fri, 11 Sep 2020 22:56:16 GMT
+COPY file:a7db5ef8dbcd831ff68d6ff2fb45bc340539ad6d7a58d54323fd7399d1520910 in / 
+# Fri, 11 Sep 2020 22:56:17 GMT
+ENTRYPOINT ["/docker-entrypoint.sh"]
+# Fri, 11 Sep 2020 22:56:17 GMT
+CMD ["haproxy" "-f" "/usr/local/etc/haproxy/haproxy.cfg"]
+```
+
+-	Layers:
+	-	`sha256:31e6582dbd9f9a84903d46339df0c393a63d2cbfb001b06b3204653cceafcc61`  
+		Last Modified: Wed, 09 Sep 2020 23:46:30 GMT  
+		Size: 27.8 MB (27750334 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:9d066a8a819c85dbc1376120930371c9e3a823e5858ffe5fdab273f71d555087`  
+		Last Modified: Fri, 11 Sep 2020 22:59:59 GMT  
+		Size: 9.4 MB (9395148 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:4665bb91b600fc6823a520a03a465468b5109f4779e771962e3f73ce03133c1f`  
+		Last Modified: Fri, 11 Sep 2020 22:59:56 GMT  
+		Size: 379.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `haproxy:2.3-dev4` - linux; s390x
@@ -8396,12 +8552,220 @@ CMD ["haproxy" "-f" "/usr/local/etc/haproxy/haproxy.cfg"]
 ## `haproxy:2.3-dev4-alpine`
 
 ```console
-$ docker pull haproxy@sha256:a40c259c7dd6f3e42e17fd5c70b22ee33ff77f91d158a52e412bf74e440baca0
+$ docker pull haproxy@sha256:c15cd5c5b9152243f7d0319552a05c6561be08df1bccd4a213528180f6f05826
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
 -	Platforms:
+	-	linux; amd64
+	-	linux; arm variant v6
+	-	linux; arm64 variant v8
+	-	linux; 386
 	-	linux; s390x
+
+### `haproxy:2.3-dev4-alpine` - linux; amd64
+
+```console
+$ docker pull haproxy@sha256:998f010886d7e3b25bfe1bb480a967ab0c8ca9fbd49201433b3a484d9a82afff
+```
+
+-	Docker Version: 18.09.7
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **10.5 MB (10472806 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:200a10dc7c44cd570f62267a87f69dd701c9c33fb0332ce26c2244cf5713cdfa`
+-	Entrypoint: `["\/docker-entrypoint.sh"]`
+-	Default Command: `["haproxy","-f","\/usr\/local\/etc\/haproxy\/haproxy.cfg"]`
+
+```dockerfile
+# Fri, 29 May 2020 21:19:46 GMT
+ADD file:c92c248239f8c7b9b3c067650954815f391b7bcb09023f984972c082ace2a8d0 in / 
+# Fri, 29 May 2020 21:19:46 GMT
+CMD ["/bin/sh"]
+# Fri, 11 Sep 2020 22:25:29 GMT
+ENV HAPROXY_VERSION=2.3-dev4
+# Fri, 11 Sep 2020 22:25:30 GMT
+ENV HAPROXY_URL=https://www.haproxy.org/download/2.3/src/devel/haproxy-2.3-dev4.tar.gz
+# Fri, 11 Sep 2020 22:25:30 GMT
+ENV HAPROXY_SHA256=7055cac5076b7b95a2255587211e8740adc8559f5d855d8ab6ff3b3901f1c96d
+# Fri, 11 Sep 2020 22:26:45 GMT
+RUN set -x 		&& apk add --no-cache --virtual .build-deps 		gcc 		libc-dev 		linux-headers 		lua5.3-dev 		make 		openssl 		openssl-dev 		pcre2-dev 		readline-dev 		tar 		zlib-dev 		&& wget -O haproxy.tar.gz "$HAPROXY_URL" 	&& echo "$HAPROXY_SHA256 *haproxy.tar.gz" | sha256sum -c 	&& mkdir -p /usr/src/haproxy 	&& tar -xzf haproxy.tar.gz -C /usr/src/haproxy --strip-components=1 	&& rm haproxy.tar.gz 		&& makeOpts=' 		TARGET=linux-musl 		USE_GETADDRINFO=1 		USE_LUA=1 LUA_INC=/usr/include/lua5.3 LUA_LIB=/usr/lib/lua5.3 		USE_OPENSSL=1 		USE_PCRE2=1 USE_PCRE2_JIT=1 		USE_ZLIB=1 				EXTRA_OBJS=" 			contrib/prometheus-exporter/service-prometheus.o 		" 	' 	&& nproc="$(getconf _NPROCESSORS_ONLN)" 	&& eval "make -C /usr/src/haproxy -j '$nproc' all $makeOpts" 	&& eval "make -C /usr/src/haproxy install-bin $makeOpts" 		&& mkdir -p /usr/local/etc/haproxy 	&& cp -R /usr/src/haproxy/examples/errorfiles /usr/local/etc/haproxy/errors 	&& rm -rf /usr/src/haproxy 		&& runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)" 	&& apk add --no-network --virtual .haproxy-rundeps $runDeps 	&& apk del --no-network .build-deps
+# Fri, 11 Sep 2020 22:26:45 GMT
+STOPSIGNAL SIGUSR1
+# Fri, 11 Sep 2020 22:26:46 GMT
+COPY file:a7db5ef8dbcd831ff68d6ff2fb45bc340539ad6d7a58d54323fd7399d1520910 in / 
+# Fri, 11 Sep 2020 22:26:46 GMT
+ENTRYPOINT ["/docker-entrypoint.sh"]
+# Fri, 11 Sep 2020 22:26:46 GMT
+CMD ["haproxy" "-f" "/usr/local/etc/haproxy/haproxy.cfg"]
+```
+
+-	Layers:
+	-	`sha256:df20fa9351a15782c64e6dddb2d4a6f50bf6d3688060a34c4014b0d9a752eb4c`  
+		Last Modified: Fri, 29 May 2020 21:20:06 GMT  
+		Size: 2.8 MB (2797541 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c871b16fa179e371722804e76390b7be99a656ce275f202bfaf4384058c3cb87`  
+		Last Modified: Fri, 11 Sep 2020 22:28:29 GMT  
+		Size: 7.7 MB (7674884 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:b94cd4a057dbb56fa07db4b1d63f1a73bb4f15232192c6942c853003360b730c`  
+		Last Modified: Fri, 11 Sep 2020 22:28:27 GMT  
+		Size: 381.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `haproxy:2.3-dev4-alpine` - linux; arm variant v6
+
+```console
+$ docker pull haproxy@sha256:b965e32d163b4aa1ca3e07a9394bd447efe96e2d0feadaf134d0699cedb17e57
+```
+
+-	Docker Version: 19.03.12
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **10.1 MB (10134691 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:a1fa68d51abf10b169af71e56ec26c802ae8f263d0684ceed14c7c5d12540b19`
+-	Entrypoint: `["\/docker-entrypoint.sh"]`
+-	Default Command: `["haproxy","-f","\/usr\/local\/etc\/haproxy\/haproxy.cfg"]`
+
+```dockerfile
+# Fri, 29 May 2020 21:50:55 GMT
+ADD file:f46e997a56849423db17e5fc9f0249ab6c73b155245927dba5fcb9dfd65f622f in / 
+# Fri, 29 May 2020 21:50:56 GMT
+CMD ["/bin/sh"]
+# Fri, 11 Sep 2020 22:32:11 GMT
+ENV HAPROXY_VERSION=2.3-dev4
+# Fri, 11 Sep 2020 22:32:17 GMT
+ENV HAPROXY_URL=https://www.haproxy.org/download/2.3/src/devel/haproxy-2.3-dev4.tar.gz
+# Fri, 11 Sep 2020 22:32:26 GMT
+ENV HAPROXY_SHA256=7055cac5076b7b95a2255587211e8740adc8559f5d855d8ab6ff3b3901f1c96d
+# Fri, 11 Sep 2020 22:33:31 GMT
+RUN set -x 		&& apk add --no-cache --virtual .build-deps 		gcc 		libc-dev 		linux-headers 		lua5.3-dev 		make 		openssl 		openssl-dev 		pcre2-dev 		readline-dev 		tar 		zlib-dev 		&& wget -O haproxy.tar.gz "$HAPROXY_URL" 	&& echo "$HAPROXY_SHA256 *haproxy.tar.gz" | sha256sum -c 	&& mkdir -p /usr/src/haproxy 	&& tar -xzf haproxy.tar.gz -C /usr/src/haproxy --strip-components=1 	&& rm haproxy.tar.gz 		&& makeOpts=' 		TARGET=linux-musl 		USE_GETADDRINFO=1 		USE_LUA=1 LUA_INC=/usr/include/lua5.3 LUA_LIB=/usr/lib/lua5.3 		USE_OPENSSL=1 		USE_PCRE2=1 USE_PCRE2_JIT=1 		USE_ZLIB=1 				EXTRA_OBJS=" 			contrib/prometheus-exporter/service-prometheus.o 		" 	' 	&& nproc="$(getconf _NPROCESSORS_ONLN)" 	&& eval "make -C /usr/src/haproxy -j '$nproc' all $makeOpts" 	&& eval "make -C /usr/src/haproxy install-bin $makeOpts" 		&& mkdir -p /usr/local/etc/haproxy 	&& cp -R /usr/src/haproxy/examples/errorfiles /usr/local/etc/haproxy/errors 	&& rm -rf /usr/src/haproxy 		&& runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)" 	&& apk add --no-network --virtual .haproxy-rundeps $runDeps 	&& apk del --no-network .build-deps
+# Fri, 11 Sep 2020 22:33:42 GMT
+STOPSIGNAL SIGUSR1
+# Fri, 11 Sep 2020 22:33:59 GMT
+COPY file:a7db5ef8dbcd831ff68d6ff2fb45bc340539ad6d7a58d54323fd7399d1520910 in / 
+# Fri, 11 Sep 2020 22:34:05 GMT
+ENTRYPOINT ["/docker-entrypoint.sh"]
+# Fri, 11 Sep 2020 22:34:11 GMT
+CMD ["haproxy" "-f" "/usr/local/etc/haproxy/haproxy.cfg"]
+```
+
+-	Layers:
+	-	`sha256:b4b72e716706d29f5d2351709c20bf737b94f876a5472a43ff1b6e203c65d27f`  
+		Last Modified: Fri, 29 May 2020 21:51:30 GMT  
+		Size: 2.6 MB (2603286 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:d61013a6438d97c1cb7c2451b093fec1895a9687b7f154ba225c111f8d00e32b`  
+		Last Modified: Fri, 11 Sep 2020 22:35:08 GMT  
+		Size: 7.5 MB (7531024 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:8abdac0b6a3cbcd15d62acde930755d0b2313278c54a45715eab10034706a35a`  
+		Last Modified: Fri, 11 Sep 2020 22:35:05 GMT  
+		Size: 381.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `haproxy:2.3-dev4-alpine` - linux; arm64 variant v8
+
+```console
+$ docker pull haproxy@sha256:9fd2e2da34a8dbc2448a5e5243f5668b650dbf40c15b7ba4a7f102ebad9bbefb
+```
+
+-	Docker Version: 18.09.7
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **10.3 MB (10345939 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:86707b18f085275b4357edd62a8b7abf4eebc5b07f6d127068c4960a69746844`
+-	Entrypoint: `["\/docker-entrypoint.sh"]`
+-	Default Command: `["haproxy","-f","\/usr\/local\/etc\/haproxy\/haproxy.cfg"]`
+
+```dockerfile
+# Fri, 29 May 2020 21:43:19 GMT
+ADD file:7574aee4e37a85460ab889212d52912723a9b30dda1c060548f0deb4a05fc398 in / 
+# Fri, 29 May 2020 21:43:20 GMT
+CMD ["/bin/sh"]
+# Fri, 11 Sep 2020 22:41:14 GMT
+ENV HAPROXY_VERSION=2.3-dev4
+# Fri, 11 Sep 2020 22:41:19 GMT
+ENV HAPROXY_URL=https://www.haproxy.org/download/2.3/src/devel/haproxy-2.3-dev4.tar.gz
+# Fri, 11 Sep 2020 22:41:26 GMT
+ENV HAPROXY_SHA256=7055cac5076b7b95a2255587211e8740adc8559f5d855d8ab6ff3b3901f1c96d
+# Fri, 11 Sep 2020 22:41:59 GMT
+RUN set -x 		&& apk add --no-cache --virtual .build-deps 		gcc 		libc-dev 		linux-headers 		lua5.3-dev 		make 		openssl 		openssl-dev 		pcre2-dev 		readline-dev 		tar 		zlib-dev 		&& wget -O haproxy.tar.gz "$HAPROXY_URL" 	&& echo "$HAPROXY_SHA256 *haproxy.tar.gz" | sha256sum -c 	&& mkdir -p /usr/src/haproxy 	&& tar -xzf haproxy.tar.gz -C /usr/src/haproxy --strip-components=1 	&& rm haproxy.tar.gz 		&& makeOpts=' 		TARGET=linux-musl 		USE_GETADDRINFO=1 		USE_LUA=1 LUA_INC=/usr/include/lua5.3 LUA_LIB=/usr/lib/lua5.3 		USE_OPENSSL=1 		USE_PCRE2=1 USE_PCRE2_JIT=1 		USE_ZLIB=1 				EXTRA_OBJS=" 			contrib/prometheus-exporter/service-prometheus.o 		" 	' 	&& nproc="$(getconf _NPROCESSORS_ONLN)" 	&& eval "make -C /usr/src/haproxy -j '$nproc' all $makeOpts" 	&& eval "make -C /usr/src/haproxy install-bin $makeOpts" 		&& mkdir -p /usr/local/etc/haproxy 	&& cp -R /usr/src/haproxy/examples/errorfiles /usr/local/etc/haproxy/errors 	&& rm -rf /usr/src/haproxy 		&& runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)" 	&& apk add --no-network --virtual .haproxy-rundeps $runDeps 	&& apk del --no-network .build-deps
+# Fri, 11 Sep 2020 22:42:01 GMT
+STOPSIGNAL SIGUSR1
+# Fri, 11 Sep 2020 22:42:02 GMT
+COPY file:a7db5ef8dbcd831ff68d6ff2fb45bc340539ad6d7a58d54323fd7399d1520910 in / 
+# Fri, 11 Sep 2020 22:42:03 GMT
+ENTRYPOINT ["/docker-entrypoint.sh"]
+# Fri, 11 Sep 2020 22:42:04 GMT
+CMD ["haproxy" "-f" "/usr/local/etc/haproxy/haproxy.cfg"]
+```
+
+-	Layers:
+	-	`sha256:b538f80385f9b48122e3da068c932a96ea5018afa3c7be79da00437414bd18cd`  
+		Last Modified: Fri, 29 May 2020 21:43:57 GMT  
+		Size: 2.7 MB (2707964 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:63756796cd5510492a6e73569586543b77c70d04e37f306e8e6fbee73bf5f3e0`  
+		Last Modified: Fri, 11 Sep 2020 22:44:22 GMT  
+		Size: 7.6 MB (7637595 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:dc02a37a897accecc9b6a894a06e0aba9ec8ff75faaf991aff320e6fe4319343`  
+		Last Modified: Fri, 11 Sep 2020 22:44:20 GMT  
+		Size: 380.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `haproxy:2.3-dev4-alpine` - linux; 386
+
+```console
+$ docker pull haproxy@sha256:fce69150b3a6b6b7f6cc394aa5268ba23b63a12d36518aa9f710ff068ff52df0
+```
+
+-	Docker Version: 19.03.12
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **10.4 MB (10390940 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:824d5bdc73236b1ea82d74e7aa78172c518d0123a82a9209d6061345ca8f38cf`
+-	Entrypoint: `["\/docker-entrypoint.sh"]`
+-	Default Command: `["haproxy","-f","\/usr\/local\/etc\/haproxy\/haproxy.cfg"]`
+
+```dockerfile
+# Fri, 29 May 2020 21:38:33 GMT
+ADD file:5624441d97aca5eeb82a582941efc3586397098b8391227a9040ebe434cc1d6b in / 
+# Fri, 29 May 2020 21:38:33 GMT
+CMD ["/bin/sh"]
+# Fri, 11 Sep 2020 22:56:36 GMT
+ENV HAPROXY_VERSION=2.3-dev4
+# Fri, 11 Sep 2020 22:56:36 GMT
+ENV HAPROXY_URL=https://www.haproxy.org/download/2.3/src/devel/haproxy-2.3-dev4.tar.gz
+# Fri, 11 Sep 2020 22:56:36 GMT
+ENV HAPROXY_SHA256=7055cac5076b7b95a2255587211e8740adc8559f5d855d8ab6ff3b3901f1c96d
+# Fri, 11 Sep 2020 22:58:33 GMT
+RUN set -x 		&& apk add --no-cache --virtual .build-deps 		gcc 		libc-dev 		linux-headers 		lua5.3-dev 		make 		openssl 		openssl-dev 		pcre2-dev 		readline-dev 		tar 		zlib-dev 		&& wget -O haproxy.tar.gz "$HAPROXY_URL" 	&& echo "$HAPROXY_SHA256 *haproxy.tar.gz" | sha256sum -c 	&& mkdir -p /usr/src/haproxy 	&& tar -xzf haproxy.tar.gz -C /usr/src/haproxy --strip-components=1 	&& rm haproxy.tar.gz 		&& makeOpts=' 		TARGET=linux-musl 		USE_GETADDRINFO=1 		USE_LUA=1 LUA_INC=/usr/include/lua5.3 LUA_LIB=/usr/lib/lua5.3 		USE_OPENSSL=1 		USE_PCRE2=1 USE_PCRE2_JIT=1 		USE_ZLIB=1 				EXTRA_OBJS=" 			contrib/prometheus-exporter/service-prometheus.o 		" 	' 	&& nproc="$(getconf _NPROCESSORS_ONLN)" 	&& eval "make -C /usr/src/haproxy -j '$nproc' all $makeOpts" 	&& eval "make -C /usr/src/haproxy install-bin $makeOpts" 		&& mkdir -p /usr/local/etc/haproxy 	&& cp -R /usr/src/haproxy/examples/errorfiles /usr/local/etc/haproxy/errors 	&& rm -rf /usr/src/haproxy 		&& runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)" 	&& apk add --no-network --virtual .haproxy-rundeps $runDeps 	&& apk del --no-network .build-deps
+# Fri, 11 Sep 2020 22:58:34 GMT
+STOPSIGNAL SIGUSR1
+# Fri, 11 Sep 2020 22:58:34 GMT
+COPY file:a7db5ef8dbcd831ff68d6ff2fb45bc340539ad6d7a58d54323fd7399d1520910 in / 
+# Fri, 11 Sep 2020 22:58:34 GMT
+ENTRYPOINT ["/docker-entrypoint.sh"]
+# Fri, 11 Sep 2020 22:58:34 GMT
+CMD ["haproxy" "-f" "/usr/local/etc/haproxy/haproxy.cfg"]
+```
+
+-	Layers:
+	-	`sha256:0625b4155e2a59f647ece47c0cd77ed3196b1f84454fa64ce80cad90e2b9b79e`  
+		Last Modified: Fri, 29 May 2020 21:38:53 GMT  
+		Size: 2.8 MB (2792298 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c498a59ec575c992a911f8c7a46c6d907146731fc468908199008e54197a712c`  
+		Last Modified: Fri, 11 Sep 2020 23:00:07 GMT  
+		Size: 7.6 MB (7598262 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:d4738048bf54eba9ba3374d9b14723957d50d0efc882292e84488e86a06f3fb6`  
+		Last Modified: Fri, 11 Sep 2020 23:00:05 GMT  
+		Size: 380.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `haproxy:2.3-dev4-alpine` - linux; s390x
 
@@ -8457,7 +8821,7 @@ CMD ["haproxy" "-f" "/usr/local/etc/haproxy/haproxy.cfg"]
 ## `haproxy:2.3-dev-alpine`
 
 ```console
-$ docker pull haproxy@sha256:dd7115a0909a29ebca4583409e483d6bfcb17e22d24ad1a574cf01465dcf3cab
+$ docker pull haproxy@sha256:465a59dd6097c28d580acb4eb10d63a6d73680df21f5da298e0e6a1e8243a3a3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -8473,14 +8837,14 @@ $ docker pull haproxy@sha256:dd7115a0909a29ebca4583409e483d6bfcb17e22d24ad1a574c
 ### `haproxy:2.3-dev-alpine` - linux; amd64
 
 ```console
-$ docker pull haproxy@sha256:63ca8066c688fcb189b5eb78cfc3f1f65b122b2726316c1b9a4570269a7e16ea
+$ docker pull haproxy@sha256:998f010886d7e3b25bfe1bb480a967ab0c8ca9fbd49201433b3a484d9a82afff
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **10.3 MB (10322244 bytes)**  
+-	Total Size: **10.5 MB (10472806 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7a868e500039081a922028d770983b18dbbcbc3316c2ca1b02d1857dae2699f3`
+-	Image ID: `sha256:200a10dc7c44cd570f62267a87f69dd701c9c33fb0332ce26c2244cf5713cdfa`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["haproxy","-f","\/usr\/local\/etc\/haproxy\/haproxy.cfg"]`
 
@@ -8489,21 +8853,21 @@ $ docker pull haproxy@sha256:63ca8066c688fcb189b5eb78cfc3f1f65b122b2726316c1b9a4
 ADD file:c92c248239f8c7b9b3c067650954815f391b7bcb09023f984972c082ace2a8d0 in / 
 # Fri, 29 May 2020 21:19:46 GMT
 CMD ["/bin/sh"]
-# Mon, 17 Aug 2020 23:20:49 GMT
-ENV HAPROXY_VERSION=2.3-dev3
-# Mon, 17 Aug 2020 23:20:49 GMT
-ENV HAPROXY_URL=https://www.haproxy.org/download/2.3/src/devel/haproxy-2.3-dev3.tar.gz
-# Mon, 17 Aug 2020 23:20:49 GMT
-ENV HAPROXY_SHA256=1f9229e75a8d52c9e9b3b4506a04036798e9f5656f6b988982dd356483453dfe
-# Mon, 17 Aug 2020 23:21:47 GMT
+# Fri, 11 Sep 2020 22:25:29 GMT
+ENV HAPROXY_VERSION=2.3-dev4
+# Fri, 11 Sep 2020 22:25:30 GMT
+ENV HAPROXY_URL=https://www.haproxy.org/download/2.3/src/devel/haproxy-2.3-dev4.tar.gz
+# Fri, 11 Sep 2020 22:25:30 GMT
+ENV HAPROXY_SHA256=7055cac5076b7b95a2255587211e8740adc8559f5d855d8ab6ff3b3901f1c96d
+# Fri, 11 Sep 2020 22:26:45 GMT
 RUN set -x 		&& apk add --no-cache --virtual .build-deps 		gcc 		libc-dev 		linux-headers 		lua5.3-dev 		make 		openssl 		openssl-dev 		pcre2-dev 		readline-dev 		tar 		zlib-dev 		&& wget -O haproxy.tar.gz "$HAPROXY_URL" 	&& echo "$HAPROXY_SHA256 *haproxy.tar.gz" | sha256sum -c 	&& mkdir -p /usr/src/haproxy 	&& tar -xzf haproxy.tar.gz -C /usr/src/haproxy --strip-components=1 	&& rm haproxy.tar.gz 		&& makeOpts=' 		TARGET=linux-musl 		USE_GETADDRINFO=1 		USE_LUA=1 LUA_INC=/usr/include/lua5.3 LUA_LIB=/usr/lib/lua5.3 		USE_OPENSSL=1 		USE_PCRE2=1 USE_PCRE2_JIT=1 		USE_ZLIB=1 				EXTRA_OBJS=" 			contrib/prometheus-exporter/service-prometheus.o 		" 	' 	&& nproc="$(getconf _NPROCESSORS_ONLN)" 	&& eval "make -C /usr/src/haproxy -j '$nproc' all $makeOpts" 	&& eval "make -C /usr/src/haproxy install-bin $makeOpts" 		&& mkdir -p /usr/local/etc/haproxy 	&& cp -R /usr/src/haproxy/examples/errorfiles /usr/local/etc/haproxy/errors 	&& rm -rf /usr/src/haproxy 		&& runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)" 	&& apk add --no-network --virtual .haproxy-rundeps $runDeps 	&& apk del --no-network .build-deps
-# Mon, 17 Aug 2020 23:21:47 GMT
+# Fri, 11 Sep 2020 22:26:45 GMT
 STOPSIGNAL SIGUSR1
-# Mon, 17 Aug 2020 23:21:47 GMT
+# Fri, 11 Sep 2020 22:26:46 GMT
 COPY file:a7db5ef8dbcd831ff68d6ff2fb45bc340539ad6d7a58d54323fd7399d1520910 in / 
-# Mon, 17 Aug 2020 23:21:47 GMT
+# Fri, 11 Sep 2020 22:26:46 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Mon, 17 Aug 2020 23:21:47 GMT
+# Fri, 11 Sep 2020 22:26:46 GMT
 CMD ["haproxy" "-f" "/usr/local/etc/haproxy/haproxy.cfg"]
 ```
 
@@ -8512,26 +8876,26 @@ CMD ["haproxy" "-f" "/usr/local/etc/haproxy/haproxy.cfg"]
 		Last Modified: Fri, 29 May 2020 21:20:06 GMT  
 		Size: 2.8 MB (2797541 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c24f62159ecc99c1363b7e9bfd531e9c8864806840c3595df8a6c175be74c772`  
-		Last Modified: Mon, 17 Aug 2020 23:22:49 GMT  
-		Size: 7.5 MB (7524324 bytes)  
+	-	`sha256:c871b16fa179e371722804e76390b7be99a656ce275f202bfaf4384058c3cb87`  
+		Last Modified: Fri, 11 Sep 2020 22:28:29 GMT  
+		Size: 7.7 MB (7674884 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7d9a3df5b04980404b41e1bb5e28177235fb5cfd79fa8feb48b12b49dfb67952`  
-		Last Modified: Mon, 17 Aug 2020 23:22:48 GMT  
-		Size: 379.0 B  
+	-	`sha256:b94cd4a057dbb56fa07db4b1d63f1a73bb4f15232192c6942c853003360b730c`  
+		Last Modified: Fri, 11 Sep 2020 22:28:27 GMT  
+		Size: 381.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `haproxy:2.3-dev-alpine` - linux; arm variant v6
 
 ```console
-$ docker pull haproxy@sha256:243a9ced2e011f3679be11f40cb6d106f6ce5b0fa6088f1ca47a0d9e07325d18
+$ docker pull haproxy@sha256:b965e32d163b4aa1ca3e07a9394bd447efe96e2d0feadaf134d0699cedb17e57
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **10.0 MB (9984426 bytes)**  
+-	Total Size: **10.1 MB (10134691 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f4e001ea073ecb74296cb2a576eb318e6a46f0b7dc51e81cc256f5290d7ad2ec`
+-	Image ID: `sha256:a1fa68d51abf10b169af71e56ec26c802ae8f263d0684ceed14c7c5d12540b19`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["haproxy","-f","\/usr\/local\/etc\/haproxy\/haproxy.cfg"]`
 
@@ -8540,21 +8904,21 @@ $ docker pull haproxy@sha256:243a9ced2e011f3679be11f40cb6d106f6ce5b0fa6088f1ca47
 ADD file:f46e997a56849423db17e5fc9f0249ab6c73b155245927dba5fcb9dfd65f622f in / 
 # Fri, 29 May 2020 21:50:56 GMT
 CMD ["/bin/sh"]
-# Mon, 17 Aug 2020 22:50:55 GMT
-ENV HAPROXY_VERSION=2.3-dev3
-# Mon, 17 Aug 2020 22:50:55 GMT
-ENV HAPROXY_URL=https://www.haproxy.org/download/2.3/src/devel/haproxy-2.3-dev3.tar.gz
-# Mon, 17 Aug 2020 22:50:56 GMT
-ENV HAPROXY_SHA256=1f9229e75a8d52c9e9b3b4506a04036798e9f5656f6b988982dd356483453dfe
-# Mon, 17 Aug 2020 22:51:36 GMT
+# Fri, 11 Sep 2020 22:32:11 GMT
+ENV HAPROXY_VERSION=2.3-dev4
+# Fri, 11 Sep 2020 22:32:17 GMT
+ENV HAPROXY_URL=https://www.haproxy.org/download/2.3/src/devel/haproxy-2.3-dev4.tar.gz
+# Fri, 11 Sep 2020 22:32:26 GMT
+ENV HAPROXY_SHA256=7055cac5076b7b95a2255587211e8740adc8559f5d855d8ab6ff3b3901f1c96d
+# Fri, 11 Sep 2020 22:33:31 GMT
 RUN set -x 		&& apk add --no-cache --virtual .build-deps 		gcc 		libc-dev 		linux-headers 		lua5.3-dev 		make 		openssl 		openssl-dev 		pcre2-dev 		readline-dev 		tar 		zlib-dev 		&& wget -O haproxy.tar.gz "$HAPROXY_URL" 	&& echo "$HAPROXY_SHA256 *haproxy.tar.gz" | sha256sum -c 	&& mkdir -p /usr/src/haproxy 	&& tar -xzf haproxy.tar.gz -C /usr/src/haproxy --strip-components=1 	&& rm haproxy.tar.gz 		&& makeOpts=' 		TARGET=linux-musl 		USE_GETADDRINFO=1 		USE_LUA=1 LUA_INC=/usr/include/lua5.3 LUA_LIB=/usr/lib/lua5.3 		USE_OPENSSL=1 		USE_PCRE2=1 USE_PCRE2_JIT=1 		USE_ZLIB=1 				EXTRA_OBJS=" 			contrib/prometheus-exporter/service-prometheus.o 		" 	' 	&& nproc="$(getconf _NPROCESSORS_ONLN)" 	&& eval "make -C /usr/src/haproxy -j '$nproc' all $makeOpts" 	&& eval "make -C /usr/src/haproxy install-bin $makeOpts" 		&& mkdir -p /usr/local/etc/haproxy 	&& cp -R /usr/src/haproxy/examples/errorfiles /usr/local/etc/haproxy/errors 	&& rm -rf /usr/src/haproxy 		&& runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)" 	&& apk add --no-network --virtual .haproxy-rundeps $runDeps 	&& apk del --no-network .build-deps
-# Mon, 17 Aug 2020 22:51:37 GMT
+# Fri, 11 Sep 2020 22:33:42 GMT
 STOPSIGNAL SIGUSR1
-# Mon, 17 Aug 2020 22:51:37 GMT
+# Fri, 11 Sep 2020 22:33:59 GMT
 COPY file:a7db5ef8dbcd831ff68d6ff2fb45bc340539ad6d7a58d54323fd7399d1520910 in / 
-# Mon, 17 Aug 2020 22:51:38 GMT
+# Fri, 11 Sep 2020 22:34:05 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Mon, 17 Aug 2020 22:51:39 GMT
+# Fri, 11 Sep 2020 22:34:11 GMT
 CMD ["haproxy" "-f" "/usr/local/etc/haproxy/haproxy.cfg"]
 ```
 
@@ -8563,13 +8927,13 @@ CMD ["haproxy" "-f" "/usr/local/etc/haproxy/haproxy.cfg"]
 		Last Modified: Fri, 29 May 2020 21:51:30 GMT  
 		Size: 2.6 MB (2603286 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cf336d910c98411213dd388889ce704db10f244e05ebd80f4031a3c23dd4f13e`  
-		Last Modified: Mon, 17 Aug 2020 22:52:25 GMT  
-		Size: 7.4 MB (7380760 bytes)  
+	-	`sha256:d61013a6438d97c1cb7c2451b093fec1895a9687b7f154ba225c111f8d00e32b`  
+		Last Modified: Fri, 11 Sep 2020 22:35:08 GMT  
+		Size: 7.5 MB (7531024 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3c615a064a3f4d4978098502d38362b374663cbbbb40ee4ae1eb6482d9ec34eb`  
-		Last Modified: Mon, 17 Aug 2020 22:52:23 GMT  
-		Size: 380.0 B  
+	-	`sha256:8abdac0b6a3cbcd15d62acde930755d0b2313278c54a45715eab10034706a35a`  
+		Last Modified: Fri, 11 Sep 2020 22:35:05 GMT  
+		Size: 381.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `haproxy:2.3-dev-alpine` - linux; arm variant v7
@@ -8626,14 +8990,14 @@ CMD ["haproxy" "-f" "/usr/local/etc/haproxy/haproxy.cfg"]
 ### `haproxy:2.3-dev-alpine` - linux; arm64 variant v8
 
 ```console
-$ docker pull haproxy@sha256:24b8cd93c4d4bfeca6eaea552b2b0cd9f3377b109a6706bd3220ece8e00da085
+$ docker pull haproxy@sha256:9fd2e2da34a8dbc2448a5e5243f5668b650dbf40c15b7ba4a7f102ebad9bbefb
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **10.2 MB (10196533 bytes)**  
+-	Total Size: **10.3 MB (10345939 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0536d8442e945aef48d7fbcbf897070baa4df921dfb2285cf3e2626246418bd0`
+-	Image ID: `sha256:86707b18f085275b4357edd62a8b7abf4eebc5b07f6d127068c4960a69746844`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["haproxy","-f","\/usr\/local\/etc\/haproxy\/haproxy.cfg"]`
 
@@ -8642,21 +9006,21 @@ $ docker pull haproxy@sha256:24b8cd93c4d4bfeca6eaea552b2b0cd9f3377b109a6706bd322
 ADD file:7574aee4e37a85460ab889212d52912723a9b30dda1c060548f0deb4a05fc398 in / 
 # Fri, 29 May 2020 21:43:20 GMT
 CMD ["/bin/sh"]
-# Mon, 17 Aug 2020 22:41:01 GMT
-ENV HAPROXY_VERSION=2.3-dev3
-# Mon, 17 Aug 2020 22:41:02 GMT
-ENV HAPROXY_URL=https://www.haproxy.org/download/2.3/src/devel/haproxy-2.3-dev3.tar.gz
-# Mon, 17 Aug 2020 22:41:02 GMT
-ENV HAPROXY_SHA256=1f9229e75a8d52c9e9b3b4506a04036798e9f5656f6b988982dd356483453dfe
-# Mon, 17 Aug 2020 22:41:25 GMT
+# Fri, 11 Sep 2020 22:41:14 GMT
+ENV HAPROXY_VERSION=2.3-dev4
+# Fri, 11 Sep 2020 22:41:19 GMT
+ENV HAPROXY_URL=https://www.haproxy.org/download/2.3/src/devel/haproxy-2.3-dev4.tar.gz
+# Fri, 11 Sep 2020 22:41:26 GMT
+ENV HAPROXY_SHA256=7055cac5076b7b95a2255587211e8740adc8559f5d855d8ab6ff3b3901f1c96d
+# Fri, 11 Sep 2020 22:41:59 GMT
 RUN set -x 		&& apk add --no-cache --virtual .build-deps 		gcc 		libc-dev 		linux-headers 		lua5.3-dev 		make 		openssl 		openssl-dev 		pcre2-dev 		readline-dev 		tar 		zlib-dev 		&& wget -O haproxy.tar.gz "$HAPROXY_URL" 	&& echo "$HAPROXY_SHA256 *haproxy.tar.gz" | sha256sum -c 	&& mkdir -p /usr/src/haproxy 	&& tar -xzf haproxy.tar.gz -C /usr/src/haproxy --strip-components=1 	&& rm haproxy.tar.gz 		&& makeOpts=' 		TARGET=linux-musl 		USE_GETADDRINFO=1 		USE_LUA=1 LUA_INC=/usr/include/lua5.3 LUA_LIB=/usr/lib/lua5.3 		USE_OPENSSL=1 		USE_PCRE2=1 USE_PCRE2_JIT=1 		USE_ZLIB=1 				EXTRA_OBJS=" 			contrib/prometheus-exporter/service-prometheus.o 		" 	' 	&& nproc="$(getconf _NPROCESSORS_ONLN)" 	&& eval "make -C /usr/src/haproxy -j '$nproc' all $makeOpts" 	&& eval "make -C /usr/src/haproxy install-bin $makeOpts" 		&& mkdir -p /usr/local/etc/haproxy 	&& cp -R /usr/src/haproxy/examples/errorfiles /usr/local/etc/haproxy/errors 	&& rm -rf /usr/src/haproxy 		&& runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)" 	&& apk add --no-network --virtual .haproxy-rundeps $runDeps 	&& apk del --no-network .build-deps
-# Mon, 17 Aug 2020 22:41:25 GMT
+# Fri, 11 Sep 2020 22:42:01 GMT
 STOPSIGNAL SIGUSR1
-# Mon, 17 Aug 2020 22:41:26 GMT
+# Fri, 11 Sep 2020 22:42:02 GMT
 COPY file:a7db5ef8dbcd831ff68d6ff2fb45bc340539ad6d7a58d54323fd7399d1520910 in / 
-# Mon, 17 Aug 2020 22:41:26 GMT
+# Fri, 11 Sep 2020 22:42:03 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Mon, 17 Aug 2020 22:41:27 GMT
+# Fri, 11 Sep 2020 22:42:04 GMT
 CMD ["haproxy" "-f" "/usr/local/etc/haproxy/haproxy.cfg"]
 ```
 
@@ -8665,26 +9029,26 @@ CMD ["haproxy" "-f" "/usr/local/etc/haproxy/haproxy.cfg"]
 		Last Modified: Fri, 29 May 2020 21:43:57 GMT  
 		Size: 2.7 MB (2707964 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ac01d963e2505ce2010988c5599c1c3d9136ecc7369d63ef2f3ee203ea3e4b6a`  
-		Last Modified: Mon, 17 Aug 2020 22:42:48 GMT  
-		Size: 7.5 MB (7488189 bytes)  
+	-	`sha256:63756796cd5510492a6e73569586543b77c70d04e37f306e8e6fbee73bf5f3e0`  
+		Last Modified: Fri, 11 Sep 2020 22:44:22 GMT  
+		Size: 7.6 MB (7637595 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ac618d7ba8cc149de5a1bd58515893befdebe47c67bbc7fbbe6f2caabe95bbe7`  
-		Last Modified: Mon, 17 Aug 2020 22:42:46 GMT  
+	-	`sha256:dc02a37a897accecc9b6a894a06e0aba9ec8ff75faaf991aff320e6fe4319343`  
+		Last Modified: Fri, 11 Sep 2020 22:44:20 GMT  
 		Size: 380.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `haproxy:2.3-dev-alpine` - linux; 386
 
 ```console
-$ docker pull haproxy@sha256:ee25fde948da87ad9eaf7006459cfa60b413daf1b5f388219864595117c19028
+$ docker pull haproxy@sha256:fce69150b3a6b6b7f6cc394aa5268ba23b63a12d36518aa9f710ff068ff52df0
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **10.2 MB (10241445 bytes)**  
+-	Total Size: **10.4 MB (10390940 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:16dd9d3dc8ae46b2076200ac01e4162d968b3234737afc23f38993275ed1cea7`
+-	Image ID: `sha256:824d5bdc73236b1ea82d74e7aa78172c518d0123a82a9209d6061345ca8f38cf`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["haproxy","-f","\/usr\/local\/etc\/haproxy\/haproxy.cfg"]`
 
@@ -8693,21 +9057,21 @@ $ docker pull haproxy@sha256:ee25fde948da87ad9eaf7006459cfa60b413daf1b5f38821986
 ADD file:5624441d97aca5eeb82a582941efc3586397098b8391227a9040ebe434cc1d6b in / 
 # Fri, 29 May 2020 21:38:33 GMT
 CMD ["/bin/sh"]
-# Mon, 17 Aug 2020 22:39:46 GMT
-ENV HAPROXY_VERSION=2.3-dev3
-# Mon, 17 Aug 2020 22:39:46 GMT
-ENV HAPROXY_URL=https://www.haproxy.org/download/2.3/src/devel/haproxy-2.3-dev3.tar.gz
-# Mon, 17 Aug 2020 22:39:46 GMT
-ENV HAPROXY_SHA256=1f9229e75a8d52c9e9b3b4506a04036798e9f5656f6b988982dd356483453dfe
-# Mon, 17 Aug 2020 22:40:55 GMT
+# Fri, 11 Sep 2020 22:56:36 GMT
+ENV HAPROXY_VERSION=2.3-dev4
+# Fri, 11 Sep 2020 22:56:36 GMT
+ENV HAPROXY_URL=https://www.haproxy.org/download/2.3/src/devel/haproxy-2.3-dev4.tar.gz
+# Fri, 11 Sep 2020 22:56:36 GMT
+ENV HAPROXY_SHA256=7055cac5076b7b95a2255587211e8740adc8559f5d855d8ab6ff3b3901f1c96d
+# Fri, 11 Sep 2020 22:58:33 GMT
 RUN set -x 		&& apk add --no-cache --virtual .build-deps 		gcc 		libc-dev 		linux-headers 		lua5.3-dev 		make 		openssl 		openssl-dev 		pcre2-dev 		readline-dev 		tar 		zlib-dev 		&& wget -O haproxy.tar.gz "$HAPROXY_URL" 	&& echo "$HAPROXY_SHA256 *haproxy.tar.gz" | sha256sum -c 	&& mkdir -p /usr/src/haproxy 	&& tar -xzf haproxy.tar.gz -C /usr/src/haproxy --strip-components=1 	&& rm haproxy.tar.gz 		&& makeOpts=' 		TARGET=linux-musl 		USE_GETADDRINFO=1 		USE_LUA=1 LUA_INC=/usr/include/lua5.3 LUA_LIB=/usr/lib/lua5.3 		USE_OPENSSL=1 		USE_PCRE2=1 USE_PCRE2_JIT=1 		USE_ZLIB=1 				EXTRA_OBJS=" 			contrib/prometheus-exporter/service-prometheus.o 		" 	' 	&& nproc="$(getconf _NPROCESSORS_ONLN)" 	&& eval "make -C /usr/src/haproxy -j '$nproc' all $makeOpts" 	&& eval "make -C /usr/src/haproxy install-bin $makeOpts" 		&& mkdir -p /usr/local/etc/haproxy 	&& cp -R /usr/src/haproxy/examples/errorfiles /usr/local/etc/haproxy/errors 	&& rm -rf /usr/src/haproxy 		&& runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)" 	&& apk add --no-network --virtual .haproxy-rundeps $runDeps 	&& apk del --no-network .build-deps
-# Mon, 17 Aug 2020 22:40:55 GMT
+# Fri, 11 Sep 2020 22:58:34 GMT
 STOPSIGNAL SIGUSR1
-# Mon, 17 Aug 2020 22:40:55 GMT
+# Fri, 11 Sep 2020 22:58:34 GMT
 COPY file:a7db5ef8dbcd831ff68d6ff2fb45bc340539ad6d7a58d54323fd7399d1520910 in / 
-# Mon, 17 Aug 2020 22:40:55 GMT
+# Fri, 11 Sep 2020 22:58:34 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Mon, 17 Aug 2020 22:40:55 GMT
+# Fri, 11 Sep 2020 22:58:34 GMT
 CMD ["haproxy" "-f" "/usr/local/etc/haproxy/haproxy.cfg"]
 ```
 
@@ -8716,12 +9080,12 @@ CMD ["haproxy" "-f" "/usr/local/etc/haproxy/haproxy.cfg"]
 		Last Modified: Fri, 29 May 2020 21:38:53 GMT  
 		Size: 2.8 MB (2792298 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:19400589ec6d89d396a7e43187181b6515bd675eae334e45f687c05003b27940`  
-		Last Modified: Mon, 17 Aug 2020 22:41:58 GMT  
-		Size: 7.4 MB (7448767 bytes)  
+	-	`sha256:c498a59ec575c992a911f8c7a46c6d907146731fc468908199008e54197a712c`  
+		Last Modified: Fri, 11 Sep 2020 23:00:07 GMT  
+		Size: 7.6 MB (7598262 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:de775ccecd62ce52e81a3a625605cfe726655a0a6ccd9cc8639e91b89c05c94d`  
-		Last Modified: Mon, 17 Aug 2020 22:41:57 GMT  
+	-	`sha256:d4738048bf54eba9ba3374d9b14723957d50d0efc882292e84488e86a06f3fb6`  
+		Last Modified: Fri, 11 Sep 2020 23:00:05 GMT  
 		Size: 380.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
