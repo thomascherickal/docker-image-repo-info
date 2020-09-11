@@ -1,7 +1,7 @@
 ## `ghost:alpine`
 
 ```console
-$ docker pull ghost@sha256:d2cc2015a697635f4269e6ac9161d4661a630aae1beed91ec4edcaae3af384e2
+$ docker pull ghost@sha256:45d0face24c090b0afde71739bbdb0562e9374499fc1f1ecb34b54d44b4d5c26
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -532,14 +532,14 @@ CMD ["node" "current/index.js"]
 ### `ghost:alpine` - linux; ppc64le
 
 ```console
-$ docker pull ghost@sha256:1a765df83a67f27c4b6aa12b9569c11c398d55f3f2147d2ea79738392e09ede1
+$ docker pull ghost@sha256:94bb26106739edd1ac0fda345f610e7b8f8712ece0253ea6f98bc279cee734bf
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **103.3 MB (103310738 bytes)**  
+-	Total Size: **103.3 MB (103310301 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:8b08c588ed5b4033fc14ce3d38bf6ed1e96318442d3c30579c580345d62de268`
+-	Image ID: `sha256:d384bcf83b9555ec07372e9df05146f9f0913a3f194862fc06574c66c75797db`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -576,21 +576,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Wed, 29 Jul 2020 01:02:53 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Tue, 08 Sep 2020 20:08:23 GMT
-ENV GHOST_VERSION=3.32.1
-# Tue, 08 Sep 2020 20:24:28 GMT
+# Fri, 11 Sep 2020 21:20:02 GMT
+ENV GHOST_VERSION=3.32.2
+# Fri, 11 Sep 2020 21:26:43 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		su-exec node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	su-exec node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	su-exec node ghost config paths.contentPath "$GHOST_CONTENT"; 		su-exec node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! su-exec node yarn add "sqlite3@$sqlite3Version" --force; then 		apk add --no-cache --virtual .build-deps python make gcc g++ libc-dev; 				su-exec node yarn add "sqlite3@$sqlite3Version" --force --build-from-source; 				apk del --no-network .build-deps; 	fi; 		su-exec node yarn cache clean; 	su-exec node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Tue, 08 Sep 2020 20:24:40 GMT
+# Fri, 11 Sep 2020 21:27:01 GMT
 WORKDIR /var/lib/ghost
-# Tue, 08 Sep 2020 20:24:46 GMT
+# Fri, 11 Sep 2020 21:27:11 GMT
 VOLUME [/var/lib/ghost/content]
-# Tue, 08 Sep 2020 20:24:48 GMT
+# Fri, 11 Sep 2020 21:27:14 GMT
 COPY file:87209c4c75826f5d839c2f3270a782740f42eecf4bc96b2f6dbae79b08c17e21 in /usr/local/bin 
-# Tue, 08 Sep 2020 20:24:51 GMT
+# Fri, 11 Sep 2020 21:27:19 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Tue, 08 Sep 2020 20:24:56 GMT
+# Fri, 11 Sep 2020 21:27:24 GMT
 EXPOSE 2368
-# Tue, 08 Sep 2020 20:25:04 GMT
+# Fri, 11 Sep 2020 21:27:31 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -623,13 +623,13 @@ CMD ["node" "current/index.js"]
 		Last Modified: Wed, 29 Jul 2020 01:28:43 GMT  
 		Size: 7.3 MB (7293562 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:83d802dc5aabb2f5ec64f7ab9266e4ea80299fcd5e1ad1108f3fa7e46eb94a37`  
-		Last Modified: Tue, 08 Sep 2020 20:36:30 GMT  
-		Size: 63.1 MB (63103712 bytes)  
+	-	`sha256:e92faa6e875b61aa863ca158a05b668c5c1bb7e0293ffeb26fe84706b0e27800`  
+		Last Modified: Fri, 11 Sep 2020 21:40:18 GMT  
+		Size: 63.1 MB (63103274 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b4b44b54064870f364fa40d4474c0fcb27147f731998f50c85ba01b0cefd584d`  
-		Last Modified: Tue, 08 Sep 2020 20:31:45 GMT  
-		Size: 547.0 B  
+	-	`sha256:91630ba0efb8484bcbc4992e155b21455a95565dc863a54633ac3a21b4fae1d5`  
+		Last Modified: Fri, 11 Sep 2020 21:39:55 GMT  
+		Size: 548.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ghost:alpine` - linux; s390x
