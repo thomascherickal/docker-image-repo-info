@@ -2,16 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:08132bdecb851a0f125437d463e04a4551bf9339fc37f7c6e681e05f1985fc22`
-- Created: `2020-08-21T22:43:00.119272511Z`
-- Virtual Size: ~ 35.37 Mb  
+- Image ID: `sha256:fb10d66e43fdcf533a09929333a51eb851ae91ddc415cb7d5422bd8eb25bae5f`
+- Created: `2020-09-12T00:20:56.930346931Z`
+- Virtual Size: ~ 35.35 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
 - Labels:
-  - `build-date=20200821`
+  - `build-date=20200911`
   - `name=Photon OS x86_64/3.0 Base Image`
   - `vendor=VMware`
 
@@ -53,7 +53,7 @@ Licenses (from `rpm --query`): MIT
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `e2fsprogs-libs-1.45.5-2.ph3.x86_64`
+### `rpm` package: `e2fsprogs-libs-1.45.5-3.ph3.x86_64`
 
 Licenses (from `rpm --query`): GPLv2+
 
