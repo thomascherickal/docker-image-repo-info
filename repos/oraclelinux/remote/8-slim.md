@@ -1,7 +1,7 @@
 ## `oraclelinux:8-slim`
 
 ```console
-$ docker pull oraclelinux@sha256:87860df710329c7497addc70a593ccbddb076d425aa5ff7bb319d79beba708a0
+$ docker pull oraclelinux@sha256:9b365bb762efe39c660f727bd4a0b726a6c02e9c694464a385aece7761369636
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,22 +12,22 @@ $ docker pull oraclelinux@sha256:87860df710329c7497addc70a593ccbddb076d425aa5ff7
 ### `oraclelinux:8-slim` - linux; amd64
 
 ```console
-$ docker pull oraclelinux@sha256:65343e6b87ef30945a6e418c66ad3efbe6eed7437cf685cf0cdc1cbfb0f2168d
+$ docker pull oraclelinux@sha256:9cdc2b776aa20cbd6cae15c84326af07f9cfa3dfb5f6d20a9876fa0b40f52a70
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
 -	Total Size: **54.2 MB (54164063 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:454e10836d2e91329b485ba64b8864a33921d197139a8a7b2904a03a3f5234b1`
+-	Image ID: `sha256:9072de5aaac729a34263682d397af2ad8f9482bdefaef03b5c0ab5685b4158c2`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Thu, 30 Aug 2018 21:49:27 GMT
-MAINTAINER Oracle Linux Product Team <ol-ovm-info_ww@oracle.com>
-# Mon, 14 Sep 2020 18:33:21 GMT
+# Tue, 15 Sep 2020 21:22:07 GMT
+LABEL org.opencontainers.image.authors=Oracle Linux Product Team <ol-ovm-info_ww@oracle.com> org.opencontainers.image.url=https://github.com/oracle/container-images org.opencontainers.image.source=https://github.com/oracle/container-images/tree/dist-amd64/8-slim org.opencontainers.image.vendor=Oracle America, Inc org.opencontainers.image.title=Oracle Linux 8 (slim) org.opencontainers.image.description=Oracle Linux is an open-source       operating system available under the GNU General Public License (GPLv2) and       is suitable for both general purpose or Oracle workloads.
+# Tue, 15 Sep 2020 21:22:13 GMT
 ADD file:8011e31575cbf4b8ebb243821b300ba24330e02cab925024aa98f4ce27997846 in / 
-# Mon, 14 Sep 2020 18:33:21 GMT
+# Tue, 15 Sep 2020 21:22:13 GMT
 CMD ["/bin/bash"]
 ```
 
