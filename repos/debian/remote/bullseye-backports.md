@@ -1,7 +1,7 @@
 ## `debian:bullseye-backports`
 
 ```console
-$ docker pull debian@sha256:b79fae2772d39085db8ad60dda6dd39f97dbbaa0f2dd38d98f0b8405458c4660
+$ docker pull debian@sha256:1c7b9c544ee2e7ebf287aa10f53707846824dade680a5e82d6a44e2c12c1adcc
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -178,33 +178,33 @@ RUN echo 'deb http://deb.debian.org/debian bullseye-backports main' > /etc/apt/s
 ### `debian:bullseye-backports` - linux; mips64le
 
 ```console
-$ docker pull debian@sha256:805b0caf2518ab5b801bb122928183ebd717b8660883c7ca9668733134aa190c
+$ docker pull debian@sha256:2309b99f55e46e807066244139189a9b3a5b579fd42858b215e7dafe26521803
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **50.6 MB (50551010 bytes)**  
+-	Total Size: **50.6 MB (50615742 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:224d98f1c06f46549e71dd70a153da8aff656a871649988e1271c71780550fa8`
+-	Image ID: `sha256:03a0034c3949b646e62401a73618becb9251c178bdde6ee7b937a59b71bd5c53`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Tue, 04 Aug 2020 06:41:13 GMT
-ADD file:9e3d31545fae8b44e8aa3ad24629d2336276c01e23dfbdde9885d01e61a54298 in / 
-# Tue, 04 Aug 2020 06:41:14 GMT
+# Thu, 10 Sep 2020 00:08:32 GMT
+ADD file:f875dea5461bc3a98c6c3dab6e2eafcf83ee8edb22905981e0dc44debaa18b43 in / 
+# Thu, 10 Sep 2020 00:08:33 GMT
 CMD ["bash"]
-# Tue, 04 Aug 2020 06:41:19 GMT
+# Thu, 10 Sep 2020 00:08:42 GMT
 RUN echo 'deb http://deb.debian.org/debian bullseye-backports main' > /etc/apt/sources.list.d/backports.list
 ```
 
 -	Layers:
-	-	`sha256:249c58d6beef4ec2d380f0e2adf7ea99a80c295cddcf6f6bc3d6b463dfe44a05`  
-		Last Modified: Tue, 04 Aug 2020 06:46:35 GMT  
-		Size: 50.6 MB (50550783 bytes)  
+	-	`sha256:51d9c21615eb513b443cf8d3194bcf27d511c5166a9688eb785755ea42a8612d`  
+		Last Modified: Tue, 15 Sep 2020 01:11:13 GMT  
+		Size: 50.6 MB (50615514 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:792465b21b87e55c311f9809ae028ee6c8fc0aff144f55101e6c8868facfee89`  
-		Last Modified: Tue, 04 Aug 2020 06:46:45 GMT  
-		Size: 227.0 B  
+	-	`sha256:e2f369632a2bf2d208cbbe9dce71bc04379f300c50860fbf551eefe9c3b4d14f`  
+		Last Modified: Tue, 15 Sep 2020 01:11:24 GMT  
+		Size: 228.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `debian:bullseye-backports` - linux; ppc64le
