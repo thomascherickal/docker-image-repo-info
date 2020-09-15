@@ -7224,7 +7224,7 @@ CMD ["mvn"]
 ## `maven:3.6.3-openjdk-15`
 
 ```console
-$ docker pull maven@sha256:97876108af4b1963957b8cf1739014c726bbb140c9e5190696cba73442d84557
+$ docker pull maven@sha256:d2c22dc55d55b3782356707a8b5fbf91f3f5aaffa80454ee28c905be5b3bd63c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -7328,63 +7328,63 @@ CMD ["mvn"]
 ### `maven:3.6.3-openjdk-15` - linux; arm64 variant v8
 
 ```console
-$ docker pull maven@sha256:28984e37ca89939142189bc1b7494297a898d80a3d52157c3b4ea6af1cc8cc2c
+$ docker pull maven@sha256:ba3574b0d967078879a6b70d2dfae2ed49ad70375bc0899866b5ccecd4ecfa4a
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **307.9 MB (307940651 bytes)**  
+-	Total Size: **307.9 MB (307940674 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:bb706138138e3afde7b099bf8df5aa70e03583186978899f2fc564b04055c2f8`
+-	Image ID: `sha256:8668e24b80ad3fa01443911c62e44270e0535edac76ceb6c3966afc9b38ec09b`
 -	Entrypoint: `["\/usr\/local\/bin\/mvn-entrypoint.sh"]`
 -	Default Command: `["mvn"]`
 
 ```dockerfile
-# Fri, 31 May 2019 21:40:52 GMT
-MAINTAINER Oracle Linux Product Team <ol-ovm-info_ww@oracle.com>
-# Mon, 14 Sep 2020 17:42:14 GMT
+# Tue, 15 Sep 2020 20:40:54 GMT
+LABEL org.opencontainers.image.authors=Oracle Linux Product Team <ol-ovm-info_ww@oracle.com> org.opencontainers.image.url=https://github.com/oracle/container-images org.opencontainers.image.source=https://github.com/oracle/container-images/tree/dist-arm64v8/8-slim org.opencontainers.image.vendor=Oracle America, Inc org.opencontainers.image.title=Oracle Linux 8 (slim) org.opencontainers.image.description=Oracle Linux is an open-source       operating system available under the GNU General Public License (GPLv2) and       is suitable for both general purpose or Oracle workloads.
+# Tue, 15 Sep 2020 20:41:01 GMT
 ADD file:b3bd5c2ec8ff0efe8a0b1384563b42f02d6bcf7531132d9ec4748ecfe264d476 in / 
-# Mon, 14 Sep 2020 17:42:18 GMT
+# Tue, 15 Sep 2020 20:41:02 GMT
 CMD ["/bin/bash"]
-# Mon, 14 Sep 2020 17:59:56 GMT
+# Tue, 15 Sep 2020 20:58:24 GMT
 RUN set -eux; 	microdnf install 		gzip 		tar 				binutils 		freetype fontconfig 	; 	microdnf clean all
-# Mon, 14 Sep 2020 18:00:04 GMT
+# Tue, 15 Sep 2020 20:58:31 GMT
 ENV LANG=C.UTF-8
-# Mon, 14 Sep 2020 18:01:37 GMT
+# Tue, 15 Sep 2020 21:01:53 GMT
 ENV JAVA_HOME=/usr/java/openjdk-15
-# Mon, 14 Sep 2020 18:01:47 GMT
+# Tue, 15 Sep 2020 21:01:54 GMT
 ENV PATH=/usr/java/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Mon, 14 Sep 2020 18:01:49 GMT
+# Tue, 15 Sep 2020 21:01:54 GMT
 ENV JAVA_VERSION=15
-# Mon, 14 Sep 2020 18:02:39 GMT
+# Tue, 15 Sep 2020 21:02:27 GMT
 RUN set -eux; 		objdump="$(command -v objdump)"; 	arch="$(objdump --file-headers "$objdump" | awk -F '[:,]+[[:space:]]+' '$1 == "architecture" { print $2 }')"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		curl -fL -o openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		ln -sfT "$JAVA_HOME" /usr/java/default; 	ln -sfT "$JAVA_HOME" /usr/java/latest; 	for bin in "$JAVA_HOME/bin/"*; do 		base="$(basename "$bin")"; 		[ ! -e "/usr/bin/$base" ]; 		alternatives --install "/usr/bin/$base" "$base" "$bin" 20000; 	done; 		java -Xshare:dump; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/pki/ca-trust/extracted/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
-# Mon, 14 Sep 2020 18:02:42 GMT
+# Tue, 15 Sep 2020 21:02:29 GMT
 CMD ["jshell"]
-# Mon, 14 Sep 2020 21:24:56 GMT
+# Tue, 15 Sep 2020 21:23:58 GMT
 ARG MAVEN_VERSION=3.6.3
-# Mon, 14 Sep 2020 21:24:57 GMT
+# Tue, 15 Sep 2020 21:23:58 GMT
 ARG USER_HOME_DIR=/root
-# Mon, 14 Sep 2020 21:24:57 GMT
+# Tue, 15 Sep 2020 21:23:59 GMT
 ARG SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0
-# Mon, 14 Sep 2020 21:24:58 GMT
+# Tue, 15 Sep 2020 21:23:59 GMT
 ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries
-# Mon, 14 Sep 2020 21:25:23 GMT
+# Tue, 15 Sep 2020 21:24:14 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries MAVEN_VERSION=3.6.3 SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0 USER_HOME_DIR=/root
 RUN microdnf install findutils
-# Mon, 14 Sep 2020 21:25:34 GMT
+# Tue, 15 Sep 2020 21:24:17 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries MAVEN_VERSION=3.6.3 SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0 USER_HOME_DIR=/root
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref   && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz   && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha512sum -c -   && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1   && rm -f /tmp/apache-maven.tar.gz   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
-# Mon, 14 Sep 2020 21:25:35 GMT
+# Tue, 15 Sep 2020 21:24:18 GMT
 ENV MAVEN_HOME=/usr/share/maven
-# Mon, 14 Sep 2020 21:25:35 GMT
+# Tue, 15 Sep 2020 21:24:19 GMT
 ENV MAVEN_CONFIG=/root/.m2
-# Mon, 14 Sep 2020 21:25:36 GMT
+# Tue, 15 Sep 2020 21:24:19 GMT
 COPY file:1b3da5c58894f705e7387946301c0c52edb6271761ea3cd80b86a848847a64cd in /usr/local/bin/mvn-entrypoint.sh 
-# Mon, 14 Sep 2020 21:25:36 GMT
+# Tue, 15 Sep 2020 21:24:20 GMT
 COPY file:2bbb488dd73c55d658b91943cfdf9c26975a320ceafc45dda94c95b03e518ad3 in /usr/share/maven/ref/ 
-# Mon, 14 Sep 2020 21:25:37 GMT
+# Tue, 15 Sep 2020 21:24:21 GMT
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
-# Mon, 14 Sep 2020 21:25:38 GMT
+# Tue, 15 Sep 2020 21:24:21 GMT
 CMD ["mvn"]
 ```
 
@@ -7393,35 +7393,35 @@ CMD ["mvn"]
 		Last Modified: Mon, 14 Sep 2020 17:43:27 GMT  
 		Size: 54.3 MB (54266593 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8dee2ba14d3dd42ac318a14c434bced8bd3cc7a2c58339deb209699b1d167b21`  
-		Last Modified: Mon, 14 Sep 2020 20:56:35 GMT  
-		Size: 14.4 MB (14366836 bytes)  
+	-	`sha256:f893975677f1e890e793bb79d6684177489551bc055499096c3c153bc305e940`  
+		Last Modified: Tue, 15 Sep 2020 21:04:39 GMT  
+		Size: 14.4 MB (14366569 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c962550dadc0ccae13f43c26067641e639dd560cd6f0f96e1826189b592551db`  
-		Last Modified: Mon, 14 Sep 2020 20:59:35 GMT  
-		Size: 174.9 MB (174859078 bytes)  
+	-	`sha256:d1c69d485585ba8c4e0f9ee8e9b25bc230d98feaa7c7f0a296f92d27626f5fe8`  
+		Last Modified: Tue, 15 Sep 2020 21:06:35 GMT  
+		Size: 174.9 MB (174859111 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7bd3cdf2f09edc8979b4d80326720afcd461d662640cada82cf956196034d613`  
-		Last Modified: Mon, 14 Sep 2020 21:27:28 GMT  
-		Size: 54.9 MB (54865721 bytes)  
+	-	`sha256:dbbbac2c8a562ce56a824ca30040cccdbe49bd896407d74abd0a313fff993bea`  
+		Last Modified: Tue, 15 Sep 2020 21:25:56 GMT  
+		Size: 54.9 MB (54865977 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d27cf58b463921712722ae538c11026309dde4296f1224a93950060099a00583`  
-		Last Modified: Mon, 14 Sep 2020 21:27:26 GMT  
+	-	`sha256:1803c282aedb9cbed8d60955d9b3d909e44840f98dfb700ef298acafe4a18681`  
+		Last Modified: Tue, 15 Sep 2020 21:25:50 GMT  
 		Size: 9.6 MB (9581208 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:36bb0b3a200b678fefe66f113515081de515792d4dc6de48d7dcf79c7044502b`  
-		Last Modified: Mon, 14 Sep 2020 21:27:21 GMT  
-		Size: 857.0 B  
+	-	`sha256:3ad0cd6063681960f164e50b7994f5a685ba4304be4cd816b830f89af6fdc8c2`  
+		Last Modified: Tue, 15 Sep 2020 21:25:49 GMT  
+		Size: 856.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7552dfd0b656f98ec8d96f2dda6d9b437692e48e5eb13d89cf2a5b613eff4fe0`  
-		Last Modified: Mon, 14 Sep 2020 21:27:21 GMT  
-		Size: 358.0 B  
+	-	`sha256:74f2e67f65ec7e3c921984010b06df819493c27327b987887f6c97d6f46fd305`  
+		Last Modified: Tue, 15 Sep 2020 21:25:49 GMT  
+		Size: 360.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `maven:3.6.3-openjdk-16`
 
 ```console
-$ docker pull maven@sha256:7e86e6e4d345d0a7cf554ca84f11d2de2ea13bee95db1f1af1860d22682d95f3
+$ docker pull maven@sha256:eb9bd5033e8b694a2c3caa939e07a2f2be425ccc3a0c38193e33661aa37c4f27
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -7525,63 +7525,63 @@ CMD ["mvn"]
 ### `maven:3.6.3-openjdk-16` - linux; arm64 variant v8
 
 ```console
-$ docker pull maven@sha256:ec9fbf4809dfecd85cfd89acd72732a1d04458bc1fed8a1003256d294dc5aeb3
+$ docker pull maven@sha256:bd7fe0235da1e5639cdec7fa1cd9a387043ac233e82a10d2e1ed63fa0236f3a4
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **308.5 MB (308467179 bytes)**  
+-	Total Size: **308.5 MB (308466827 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:61886345d561508c4f19404a59de76cda9865b172fb58802b590aaff29d38504`
+-	Image ID: `sha256:0905fdcb949d1a86f1450ab5709f202d7b941d3c7de58d3a42dcc0bc9501a00f`
 -	Entrypoint: `["\/usr\/local\/bin\/mvn-entrypoint.sh"]`
 -	Default Command: `["mvn"]`
 
 ```dockerfile
-# Fri, 31 May 2019 21:40:52 GMT
-MAINTAINER Oracle Linux Product Team <ol-ovm-info_ww@oracle.com>
-# Mon, 14 Sep 2020 17:42:14 GMT
+# Tue, 15 Sep 2020 20:40:54 GMT
+LABEL org.opencontainers.image.authors=Oracle Linux Product Team <ol-ovm-info_ww@oracle.com> org.opencontainers.image.url=https://github.com/oracle/container-images org.opencontainers.image.source=https://github.com/oracle/container-images/tree/dist-arm64v8/8-slim org.opencontainers.image.vendor=Oracle America, Inc org.opencontainers.image.title=Oracle Linux 8 (slim) org.opencontainers.image.description=Oracle Linux is an open-source       operating system available under the GNU General Public License (GPLv2) and       is suitable for both general purpose or Oracle workloads.
+# Tue, 15 Sep 2020 20:41:01 GMT
 ADD file:b3bd5c2ec8ff0efe8a0b1384563b42f02d6bcf7531132d9ec4748ecfe264d476 in / 
-# Mon, 14 Sep 2020 17:42:18 GMT
+# Tue, 15 Sep 2020 20:41:02 GMT
 CMD ["/bin/bash"]
-# Mon, 14 Sep 2020 17:59:56 GMT
+# Tue, 15 Sep 2020 20:58:24 GMT
 RUN set -eux; 	microdnf install 		gzip 		tar 				binutils 		freetype fontconfig 	; 	microdnf clean all
-# Mon, 14 Sep 2020 18:00:04 GMT
+# Tue, 15 Sep 2020 20:58:31 GMT
 ENV LANG=C.UTF-8
-# Mon, 14 Sep 2020 18:00:06 GMT
+# Tue, 15 Sep 2020 20:58:37 GMT
 ENV JAVA_HOME=/usr/java/openjdk-16
-# Mon, 14 Sep 2020 18:00:07 GMT
+# Tue, 15 Sep 2020 20:58:39 GMT
 ENV PATH=/usr/java/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Mon, 14 Sep 2020 18:00:07 GMT
+# Tue, 15 Sep 2020 20:58:40 GMT
 ENV JAVA_VERSION=16-ea+15
-# Mon, 14 Sep 2020 18:00:57 GMT
+# Tue, 15 Sep 2020 20:59:21 GMT
 RUN set -eux; 		objdump="$(command -v objdump)"; 	arch="$(objdump --file-headers "$objdump" | awk -F '[:,]+[[:space:]]+' '$1 == "architecture" { print $2 }')"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/15/GPL/openjdk-16-ea+15_linux-aarch64_bin.tar.gz; 			downloadSha256=c0fda06a69e492907fe85d1e151e34747e0fce3a2221a70e5dcffd8df048d1db; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/15/GPL/openjdk-16-ea+15_linux-x64_bin.tar.gz; 			downloadSha256=7e6eccd3ac82ce7c007b30a8cde4d849c61612be5353de130690646814f5b9f9; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		curl -fL -o openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		ln -sfT "$JAVA_HOME" /usr/java/default; 	ln -sfT "$JAVA_HOME" /usr/java/latest; 	for bin in "$JAVA_HOME/bin/"*; do 		base="$(basename "$bin")"; 		[ ! -e "/usr/bin/$base" ]; 		alternatives --install "/usr/bin/$base" "$base" "$bin" 20000; 	done; 		java -Xshare:dump; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/pki/ca-trust/extracted/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
-# Mon, 14 Sep 2020 18:01:00 GMT
+# Tue, 15 Sep 2020 20:59:28 GMT
 CMD ["jshell"]
-# Mon, 14 Sep 2020 21:25:46 GMT
+# Tue, 15 Sep 2020 21:24:29 GMT
 ARG MAVEN_VERSION=3.6.3
-# Mon, 14 Sep 2020 21:25:46 GMT
+# Tue, 15 Sep 2020 21:24:30 GMT
 ARG USER_HOME_DIR=/root
-# Mon, 14 Sep 2020 21:25:47 GMT
+# Tue, 15 Sep 2020 21:24:31 GMT
 ARG SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0
-# Mon, 14 Sep 2020 21:25:48 GMT
+# Tue, 15 Sep 2020 21:24:31 GMT
 ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries
-# Mon, 14 Sep 2020 21:26:04 GMT
+# Tue, 15 Sep 2020 21:24:46 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries MAVEN_VERSION=3.6.3 SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0 USER_HOME_DIR=/root
 RUN microdnf install findutils
-# Mon, 14 Sep 2020 21:26:15 GMT
+# Tue, 15 Sep 2020 21:24:51 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries MAVEN_VERSION=3.6.3 SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0 USER_HOME_DIR=/root
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref   && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz   && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha512sum -c -   && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1   && rm -f /tmp/apache-maven.tar.gz   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
-# Mon, 14 Sep 2020 21:26:16 GMT
+# Tue, 15 Sep 2020 21:24:51 GMT
 ENV MAVEN_HOME=/usr/share/maven
-# Mon, 14 Sep 2020 21:26:17 GMT
+# Tue, 15 Sep 2020 21:24:52 GMT
 ENV MAVEN_CONFIG=/root/.m2
-# Mon, 14 Sep 2020 21:26:17 GMT
+# Tue, 15 Sep 2020 21:24:53 GMT
 COPY file:1b3da5c58894f705e7387946301c0c52edb6271761ea3cd80b86a848847a64cd in /usr/local/bin/mvn-entrypoint.sh 
-# Mon, 14 Sep 2020 21:26:18 GMT
+# Tue, 15 Sep 2020 21:24:53 GMT
 COPY file:2bbb488dd73c55d658b91943cfdf9c26975a320ceafc45dda94c95b03e518ad3 in /usr/share/maven/ref/ 
-# Mon, 14 Sep 2020 21:26:19 GMT
+# Tue, 15 Sep 2020 21:24:54 GMT
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
-# Mon, 14 Sep 2020 21:26:20 GMT
+# Tue, 15 Sep 2020 21:24:55 GMT
 CMD ["mvn"]
 ```
 
@@ -7590,29 +7590,29 @@ CMD ["mvn"]
 		Last Modified: Mon, 14 Sep 2020 17:43:27 GMT  
 		Size: 54.3 MB (54266593 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8dee2ba14d3dd42ac318a14c434bced8bd3cc7a2c58339deb209699b1d167b21`  
-		Last Modified: Mon, 14 Sep 2020 20:56:35 GMT  
-		Size: 14.4 MB (14366836 bytes)  
+	-	`sha256:f893975677f1e890e793bb79d6684177489551bc055499096c3c153bc305e940`  
+		Last Modified: Tue, 15 Sep 2020 21:04:39 GMT  
+		Size: 14.4 MB (14366569 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b2d8e66a354b59ebdd090ba036a67e82f1ca3441e6e50da045ca773c2a546dbe`  
-		Last Modified: Mon, 14 Sep 2020 20:56:59 GMT  
-		Size: 175.4 MB (175385290 bytes)  
+	-	`sha256:f0ea45237f3f1b266b2ba743ba7ecd13ac8710dcae03fef55ca735eaca110de7`  
+		Last Modified: Tue, 15 Sep 2020 21:05:05 GMT  
+		Size: 175.4 MB (175385426 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d4d95867a8a36576a825adcf72e66114c9f6f0f04df8248db81eaf30741f5bee`  
-		Last Modified: Mon, 14 Sep 2020 21:27:43 GMT  
-		Size: 54.9 MB (54866035 bytes)  
+	-	`sha256:21ec72245f7451b5241680460fd1624120023a8d98e92d36565d1f7aef69562c`  
+		Last Modified: Tue, 15 Sep 2020 21:26:12 GMT  
+		Size: 54.9 MB (54865823 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:18f632d0e079ad46f539d77440f07a100f56338f3b21a4055281139d4656768e`  
-		Last Modified: Mon, 14 Sep 2020 21:27:38 GMT  
-		Size: 9.6 MB (9581215 bytes)  
+	-	`sha256:eb1e749cd34e1e888a79b74fddb00988f97efb50b24363745f2aa5ca67a2206b`  
+		Last Modified: Tue, 15 Sep 2020 21:26:06 GMT  
+		Size: 9.6 MB (9581199 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f97a063ec663935f698d29f6827717a70592c214f02a434d107a1d5bb3b6fabc`  
-		Last Modified: Mon, 14 Sep 2020 21:27:36 GMT  
-		Size: 853.0 B  
+	-	`sha256:ce2c7856d00d582d07c850b29433d35db243e1748f09fd780015a30b9c65971f`  
+		Last Modified: Tue, 15 Sep 2020 21:26:05 GMT  
+		Size: 857.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:65d65d620cdabb0d7a1c9ddda73ca2f199bf880f0f4d4a143cf4f073b96707a7`  
-		Last Modified: Mon, 14 Sep 2020 21:27:36 GMT  
-		Size: 357.0 B  
+	-	`sha256:1de87e035a636226aba65c7eb831f37973a028d9cf6cb7d60ad3f3e440cf4395`  
+		Last Modified: Tue, 15 Sep 2020 21:26:05 GMT  
+		Size: 360.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `maven:3.6.3-openjdk-8`
@@ -14754,7 +14754,7 @@ CMD ["mvn"]
 ## `maven:3.6-openjdk-15`
 
 ```console
-$ docker pull maven@sha256:97876108af4b1963957b8cf1739014c726bbb140c9e5190696cba73442d84557
+$ docker pull maven@sha256:d2c22dc55d55b3782356707a8b5fbf91f3f5aaffa80454ee28c905be5b3bd63c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -14858,63 +14858,63 @@ CMD ["mvn"]
 ### `maven:3.6-openjdk-15` - linux; arm64 variant v8
 
 ```console
-$ docker pull maven@sha256:28984e37ca89939142189bc1b7494297a898d80a3d52157c3b4ea6af1cc8cc2c
+$ docker pull maven@sha256:ba3574b0d967078879a6b70d2dfae2ed49ad70375bc0899866b5ccecd4ecfa4a
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **307.9 MB (307940651 bytes)**  
+-	Total Size: **307.9 MB (307940674 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:bb706138138e3afde7b099bf8df5aa70e03583186978899f2fc564b04055c2f8`
+-	Image ID: `sha256:8668e24b80ad3fa01443911c62e44270e0535edac76ceb6c3966afc9b38ec09b`
 -	Entrypoint: `["\/usr\/local\/bin\/mvn-entrypoint.sh"]`
 -	Default Command: `["mvn"]`
 
 ```dockerfile
-# Fri, 31 May 2019 21:40:52 GMT
-MAINTAINER Oracle Linux Product Team <ol-ovm-info_ww@oracle.com>
-# Mon, 14 Sep 2020 17:42:14 GMT
+# Tue, 15 Sep 2020 20:40:54 GMT
+LABEL org.opencontainers.image.authors=Oracle Linux Product Team <ol-ovm-info_ww@oracle.com> org.opencontainers.image.url=https://github.com/oracle/container-images org.opencontainers.image.source=https://github.com/oracle/container-images/tree/dist-arm64v8/8-slim org.opencontainers.image.vendor=Oracle America, Inc org.opencontainers.image.title=Oracle Linux 8 (slim) org.opencontainers.image.description=Oracle Linux is an open-source       operating system available under the GNU General Public License (GPLv2) and       is suitable for both general purpose or Oracle workloads.
+# Tue, 15 Sep 2020 20:41:01 GMT
 ADD file:b3bd5c2ec8ff0efe8a0b1384563b42f02d6bcf7531132d9ec4748ecfe264d476 in / 
-# Mon, 14 Sep 2020 17:42:18 GMT
+# Tue, 15 Sep 2020 20:41:02 GMT
 CMD ["/bin/bash"]
-# Mon, 14 Sep 2020 17:59:56 GMT
+# Tue, 15 Sep 2020 20:58:24 GMT
 RUN set -eux; 	microdnf install 		gzip 		tar 				binutils 		freetype fontconfig 	; 	microdnf clean all
-# Mon, 14 Sep 2020 18:00:04 GMT
+# Tue, 15 Sep 2020 20:58:31 GMT
 ENV LANG=C.UTF-8
-# Mon, 14 Sep 2020 18:01:37 GMT
+# Tue, 15 Sep 2020 21:01:53 GMT
 ENV JAVA_HOME=/usr/java/openjdk-15
-# Mon, 14 Sep 2020 18:01:47 GMT
+# Tue, 15 Sep 2020 21:01:54 GMT
 ENV PATH=/usr/java/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Mon, 14 Sep 2020 18:01:49 GMT
+# Tue, 15 Sep 2020 21:01:54 GMT
 ENV JAVA_VERSION=15
-# Mon, 14 Sep 2020 18:02:39 GMT
+# Tue, 15 Sep 2020 21:02:27 GMT
 RUN set -eux; 		objdump="$(command -v objdump)"; 	arch="$(objdump --file-headers "$objdump" | awk -F '[:,]+[[:space:]]+' '$1 == "architecture" { print $2 }')"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		curl -fL -o openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		ln -sfT "$JAVA_HOME" /usr/java/default; 	ln -sfT "$JAVA_HOME" /usr/java/latest; 	for bin in "$JAVA_HOME/bin/"*; do 		base="$(basename "$bin")"; 		[ ! -e "/usr/bin/$base" ]; 		alternatives --install "/usr/bin/$base" "$base" "$bin" 20000; 	done; 		java -Xshare:dump; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/pki/ca-trust/extracted/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
-# Mon, 14 Sep 2020 18:02:42 GMT
+# Tue, 15 Sep 2020 21:02:29 GMT
 CMD ["jshell"]
-# Mon, 14 Sep 2020 21:24:56 GMT
+# Tue, 15 Sep 2020 21:23:58 GMT
 ARG MAVEN_VERSION=3.6.3
-# Mon, 14 Sep 2020 21:24:57 GMT
+# Tue, 15 Sep 2020 21:23:58 GMT
 ARG USER_HOME_DIR=/root
-# Mon, 14 Sep 2020 21:24:57 GMT
+# Tue, 15 Sep 2020 21:23:59 GMT
 ARG SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0
-# Mon, 14 Sep 2020 21:24:58 GMT
+# Tue, 15 Sep 2020 21:23:59 GMT
 ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries
-# Mon, 14 Sep 2020 21:25:23 GMT
+# Tue, 15 Sep 2020 21:24:14 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries MAVEN_VERSION=3.6.3 SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0 USER_HOME_DIR=/root
 RUN microdnf install findutils
-# Mon, 14 Sep 2020 21:25:34 GMT
+# Tue, 15 Sep 2020 21:24:17 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries MAVEN_VERSION=3.6.3 SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0 USER_HOME_DIR=/root
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref   && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz   && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha512sum -c -   && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1   && rm -f /tmp/apache-maven.tar.gz   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
-# Mon, 14 Sep 2020 21:25:35 GMT
+# Tue, 15 Sep 2020 21:24:18 GMT
 ENV MAVEN_HOME=/usr/share/maven
-# Mon, 14 Sep 2020 21:25:35 GMT
+# Tue, 15 Sep 2020 21:24:19 GMT
 ENV MAVEN_CONFIG=/root/.m2
-# Mon, 14 Sep 2020 21:25:36 GMT
+# Tue, 15 Sep 2020 21:24:19 GMT
 COPY file:1b3da5c58894f705e7387946301c0c52edb6271761ea3cd80b86a848847a64cd in /usr/local/bin/mvn-entrypoint.sh 
-# Mon, 14 Sep 2020 21:25:36 GMT
+# Tue, 15 Sep 2020 21:24:20 GMT
 COPY file:2bbb488dd73c55d658b91943cfdf9c26975a320ceafc45dda94c95b03e518ad3 in /usr/share/maven/ref/ 
-# Mon, 14 Sep 2020 21:25:37 GMT
+# Tue, 15 Sep 2020 21:24:21 GMT
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
-# Mon, 14 Sep 2020 21:25:38 GMT
+# Tue, 15 Sep 2020 21:24:21 GMT
 CMD ["mvn"]
 ```
 
@@ -14923,35 +14923,35 @@ CMD ["mvn"]
 		Last Modified: Mon, 14 Sep 2020 17:43:27 GMT  
 		Size: 54.3 MB (54266593 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8dee2ba14d3dd42ac318a14c434bced8bd3cc7a2c58339deb209699b1d167b21`  
-		Last Modified: Mon, 14 Sep 2020 20:56:35 GMT  
-		Size: 14.4 MB (14366836 bytes)  
+	-	`sha256:f893975677f1e890e793bb79d6684177489551bc055499096c3c153bc305e940`  
+		Last Modified: Tue, 15 Sep 2020 21:04:39 GMT  
+		Size: 14.4 MB (14366569 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c962550dadc0ccae13f43c26067641e639dd560cd6f0f96e1826189b592551db`  
-		Last Modified: Mon, 14 Sep 2020 20:59:35 GMT  
-		Size: 174.9 MB (174859078 bytes)  
+	-	`sha256:d1c69d485585ba8c4e0f9ee8e9b25bc230d98feaa7c7f0a296f92d27626f5fe8`  
+		Last Modified: Tue, 15 Sep 2020 21:06:35 GMT  
+		Size: 174.9 MB (174859111 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7bd3cdf2f09edc8979b4d80326720afcd461d662640cada82cf956196034d613`  
-		Last Modified: Mon, 14 Sep 2020 21:27:28 GMT  
-		Size: 54.9 MB (54865721 bytes)  
+	-	`sha256:dbbbac2c8a562ce56a824ca30040cccdbe49bd896407d74abd0a313fff993bea`  
+		Last Modified: Tue, 15 Sep 2020 21:25:56 GMT  
+		Size: 54.9 MB (54865977 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d27cf58b463921712722ae538c11026309dde4296f1224a93950060099a00583`  
-		Last Modified: Mon, 14 Sep 2020 21:27:26 GMT  
+	-	`sha256:1803c282aedb9cbed8d60955d9b3d909e44840f98dfb700ef298acafe4a18681`  
+		Last Modified: Tue, 15 Sep 2020 21:25:50 GMT  
 		Size: 9.6 MB (9581208 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:36bb0b3a200b678fefe66f113515081de515792d4dc6de48d7dcf79c7044502b`  
-		Last Modified: Mon, 14 Sep 2020 21:27:21 GMT  
-		Size: 857.0 B  
+	-	`sha256:3ad0cd6063681960f164e50b7994f5a685ba4304be4cd816b830f89af6fdc8c2`  
+		Last Modified: Tue, 15 Sep 2020 21:25:49 GMT  
+		Size: 856.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7552dfd0b656f98ec8d96f2dda6d9b437692e48e5eb13d89cf2a5b613eff4fe0`  
-		Last Modified: Mon, 14 Sep 2020 21:27:21 GMT  
-		Size: 358.0 B  
+	-	`sha256:74f2e67f65ec7e3c921984010b06df819493c27327b987887f6c97d6f46fd305`  
+		Last Modified: Tue, 15 Sep 2020 21:25:49 GMT  
+		Size: 360.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `maven:3.6-openjdk-16`
 
 ```console
-$ docker pull maven@sha256:7e86e6e4d345d0a7cf554ca84f11d2de2ea13bee95db1f1af1860d22682d95f3
+$ docker pull maven@sha256:eb9bd5033e8b694a2c3caa939e07a2f2be425ccc3a0c38193e33661aa37c4f27
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -15055,63 +15055,63 @@ CMD ["mvn"]
 ### `maven:3.6-openjdk-16` - linux; arm64 variant v8
 
 ```console
-$ docker pull maven@sha256:ec9fbf4809dfecd85cfd89acd72732a1d04458bc1fed8a1003256d294dc5aeb3
+$ docker pull maven@sha256:bd7fe0235da1e5639cdec7fa1cd9a387043ac233e82a10d2e1ed63fa0236f3a4
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **308.5 MB (308467179 bytes)**  
+-	Total Size: **308.5 MB (308466827 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:61886345d561508c4f19404a59de76cda9865b172fb58802b590aaff29d38504`
+-	Image ID: `sha256:0905fdcb949d1a86f1450ab5709f202d7b941d3c7de58d3a42dcc0bc9501a00f`
 -	Entrypoint: `["\/usr\/local\/bin\/mvn-entrypoint.sh"]`
 -	Default Command: `["mvn"]`
 
 ```dockerfile
-# Fri, 31 May 2019 21:40:52 GMT
-MAINTAINER Oracle Linux Product Team <ol-ovm-info_ww@oracle.com>
-# Mon, 14 Sep 2020 17:42:14 GMT
+# Tue, 15 Sep 2020 20:40:54 GMT
+LABEL org.opencontainers.image.authors=Oracle Linux Product Team <ol-ovm-info_ww@oracle.com> org.opencontainers.image.url=https://github.com/oracle/container-images org.opencontainers.image.source=https://github.com/oracle/container-images/tree/dist-arm64v8/8-slim org.opencontainers.image.vendor=Oracle America, Inc org.opencontainers.image.title=Oracle Linux 8 (slim) org.opencontainers.image.description=Oracle Linux is an open-source       operating system available under the GNU General Public License (GPLv2) and       is suitable for both general purpose or Oracle workloads.
+# Tue, 15 Sep 2020 20:41:01 GMT
 ADD file:b3bd5c2ec8ff0efe8a0b1384563b42f02d6bcf7531132d9ec4748ecfe264d476 in / 
-# Mon, 14 Sep 2020 17:42:18 GMT
+# Tue, 15 Sep 2020 20:41:02 GMT
 CMD ["/bin/bash"]
-# Mon, 14 Sep 2020 17:59:56 GMT
+# Tue, 15 Sep 2020 20:58:24 GMT
 RUN set -eux; 	microdnf install 		gzip 		tar 				binutils 		freetype fontconfig 	; 	microdnf clean all
-# Mon, 14 Sep 2020 18:00:04 GMT
+# Tue, 15 Sep 2020 20:58:31 GMT
 ENV LANG=C.UTF-8
-# Mon, 14 Sep 2020 18:00:06 GMT
+# Tue, 15 Sep 2020 20:58:37 GMT
 ENV JAVA_HOME=/usr/java/openjdk-16
-# Mon, 14 Sep 2020 18:00:07 GMT
+# Tue, 15 Sep 2020 20:58:39 GMT
 ENV PATH=/usr/java/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Mon, 14 Sep 2020 18:00:07 GMT
+# Tue, 15 Sep 2020 20:58:40 GMT
 ENV JAVA_VERSION=16-ea+15
-# Mon, 14 Sep 2020 18:00:57 GMT
+# Tue, 15 Sep 2020 20:59:21 GMT
 RUN set -eux; 		objdump="$(command -v objdump)"; 	arch="$(objdump --file-headers "$objdump" | awk -F '[:,]+[[:space:]]+' '$1 == "architecture" { print $2 }')"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/15/GPL/openjdk-16-ea+15_linux-aarch64_bin.tar.gz; 			downloadSha256=c0fda06a69e492907fe85d1e151e34747e0fce3a2221a70e5dcffd8df048d1db; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/15/GPL/openjdk-16-ea+15_linux-x64_bin.tar.gz; 			downloadSha256=7e6eccd3ac82ce7c007b30a8cde4d849c61612be5353de130690646814f5b9f9; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		curl -fL -o openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		ln -sfT "$JAVA_HOME" /usr/java/default; 	ln -sfT "$JAVA_HOME" /usr/java/latest; 	for bin in "$JAVA_HOME/bin/"*; do 		base="$(basename "$bin")"; 		[ ! -e "/usr/bin/$base" ]; 		alternatives --install "/usr/bin/$base" "$base" "$bin" 20000; 	done; 		java -Xshare:dump; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/pki/ca-trust/extracted/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
-# Mon, 14 Sep 2020 18:01:00 GMT
+# Tue, 15 Sep 2020 20:59:28 GMT
 CMD ["jshell"]
-# Mon, 14 Sep 2020 21:25:46 GMT
+# Tue, 15 Sep 2020 21:24:29 GMT
 ARG MAVEN_VERSION=3.6.3
-# Mon, 14 Sep 2020 21:25:46 GMT
+# Tue, 15 Sep 2020 21:24:30 GMT
 ARG USER_HOME_DIR=/root
-# Mon, 14 Sep 2020 21:25:47 GMT
+# Tue, 15 Sep 2020 21:24:31 GMT
 ARG SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0
-# Mon, 14 Sep 2020 21:25:48 GMT
+# Tue, 15 Sep 2020 21:24:31 GMT
 ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries
-# Mon, 14 Sep 2020 21:26:04 GMT
+# Tue, 15 Sep 2020 21:24:46 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries MAVEN_VERSION=3.6.3 SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0 USER_HOME_DIR=/root
 RUN microdnf install findutils
-# Mon, 14 Sep 2020 21:26:15 GMT
+# Tue, 15 Sep 2020 21:24:51 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries MAVEN_VERSION=3.6.3 SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0 USER_HOME_DIR=/root
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref   && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz   && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha512sum -c -   && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1   && rm -f /tmp/apache-maven.tar.gz   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
-# Mon, 14 Sep 2020 21:26:16 GMT
+# Tue, 15 Sep 2020 21:24:51 GMT
 ENV MAVEN_HOME=/usr/share/maven
-# Mon, 14 Sep 2020 21:26:17 GMT
+# Tue, 15 Sep 2020 21:24:52 GMT
 ENV MAVEN_CONFIG=/root/.m2
-# Mon, 14 Sep 2020 21:26:17 GMT
+# Tue, 15 Sep 2020 21:24:53 GMT
 COPY file:1b3da5c58894f705e7387946301c0c52edb6271761ea3cd80b86a848847a64cd in /usr/local/bin/mvn-entrypoint.sh 
-# Mon, 14 Sep 2020 21:26:18 GMT
+# Tue, 15 Sep 2020 21:24:53 GMT
 COPY file:2bbb488dd73c55d658b91943cfdf9c26975a320ceafc45dda94c95b03e518ad3 in /usr/share/maven/ref/ 
-# Mon, 14 Sep 2020 21:26:19 GMT
+# Tue, 15 Sep 2020 21:24:54 GMT
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
-# Mon, 14 Sep 2020 21:26:20 GMT
+# Tue, 15 Sep 2020 21:24:55 GMT
 CMD ["mvn"]
 ```
 
@@ -15120,29 +15120,29 @@ CMD ["mvn"]
 		Last Modified: Mon, 14 Sep 2020 17:43:27 GMT  
 		Size: 54.3 MB (54266593 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8dee2ba14d3dd42ac318a14c434bced8bd3cc7a2c58339deb209699b1d167b21`  
-		Last Modified: Mon, 14 Sep 2020 20:56:35 GMT  
-		Size: 14.4 MB (14366836 bytes)  
+	-	`sha256:f893975677f1e890e793bb79d6684177489551bc055499096c3c153bc305e940`  
+		Last Modified: Tue, 15 Sep 2020 21:04:39 GMT  
+		Size: 14.4 MB (14366569 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b2d8e66a354b59ebdd090ba036a67e82f1ca3441e6e50da045ca773c2a546dbe`  
-		Last Modified: Mon, 14 Sep 2020 20:56:59 GMT  
-		Size: 175.4 MB (175385290 bytes)  
+	-	`sha256:f0ea45237f3f1b266b2ba743ba7ecd13ac8710dcae03fef55ca735eaca110de7`  
+		Last Modified: Tue, 15 Sep 2020 21:05:05 GMT  
+		Size: 175.4 MB (175385426 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d4d95867a8a36576a825adcf72e66114c9f6f0f04df8248db81eaf30741f5bee`  
-		Last Modified: Mon, 14 Sep 2020 21:27:43 GMT  
-		Size: 54.9 MB (54866035 bytes)  
+	-	`sha256:21ec72245f7451b5241680460fd1624120023a8d98e92d36565d1f7aef69562c`  
+		Last Modified: Tue, 15 Sep 2020 21:26:12 GMT  
+		Size: 54.9 MB (54865823 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:18f632d0e079ad46f539d77440f07a100f56338f3b21a4055281139d4656768e`  
-		Last Modified: Mon, 14 Sep 2020 21:27:38 GMT  
-		Size: 9.6 MB (9581215 bytes)  
+	-	`sha256:eb1e749cd34e1e888a79b74fddb00988f97efb50b24363745f2aa5ca67a2206b`  
+		Last Modified: Tue, 15 Sep 2020 21:26:06 GMT  
+		Size: 9.6 MB (9581199 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f97a063ec663935f698d29f6827717a70592c214f02a434d107a1d5bb3b6fabc`  
-		Last Modified: Mon, 14 Sep 2020 21:27:36 GMT  
-		Size: 853.0 B  
+	-	`sha256:ce2c7856d00d582d07c850b29433d35db243e1748f09fd780015a30b9c65971f`  
+		Last Modified: Tue, 15 Sep 2020 21:26:05 GMT  
+		Size: 857.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:65d65d620cdabb0d7a1c9ddda73ca2f199bf880f0f4d4a143cf4f073b96707a7`  
-		Last Modified: Mon, 14 Sep 2020 21:27:36 GMT  
-		Size: 357.0 B  
+	-	`sha256:1de87e035a636226aba65c7eb831f37973a028d9cf6cb7d60ad3f3e440cf4395`  
+		Last Modified: Tue, 15 Sep 2020 21:26:05 GMT  
+		Size: 360.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `maven:3.6-openjdk-8`
@@ -22182,7 +22182,7 @@ CMD ["mvn"]
 ## `maven:3-openjdk-15`
 
 ```console
-$ docker pull maven@sha256:97876108af4b1963957b8cf1739014c726bbb140c9e5190696cba73442d84557
+$ docker pull maven@sha256:d2c22dc55d55b3782356707a8b5fbf91f3f5aaffa80454ee28c905be5b3bd63c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -22286,63 +22286,63 @@ CMD ["mvn"]
 ### `maven:3-openjdk-15` - linux; arm64 variant v8
 
 ```console
-$ docker pull maven@sha256:28984e37ca89939142189bc1b7494297a898d80a3d52157c3b4ea6af1cc8cc2c
+$ docker pull maven@sha256:ba3574b0d967078879a6b70d2dfae2ed49ad70375bc0899866b5ccecd4ecfa4a
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **307.9 MB (307940651 bytes)**  
+-	Total Size: **307.9 MB (307940674 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:bb706138138e3afde7b099bf8df5aa70e03583186978899f2fc564b04055c2f8`
+-	Image ID: `sha256:8668e24b80ad3fa01443911c62e44270e0535edac76ceb6c3966afc9b38ec09b`
 -	Entrypoint: `["\/usr\/local\/bin\/mvn-entrypoint.sh"]`
 -	Default Command: `["mvn"]`
 
 ```dockerfile
-# Fri, 31 May 2019 21:40:52 GMT
-MAINTAINER Oracle Linux Product Team <ol-ovm-info_ww@oracle.com>
-# Mon, 14 Sep 2020 17:42:14 GMT
+# Tue, 15 Sep 2020 20:40:54 GMT
+LABEL org.opencontainers.image.authors=Oracle Linux Product Team <ol-ovm-info_ww@oracle.com> org.opencontainers.image.url=https://github.com/oracle/container-images org.opencontainers.image.source=https://github.com/oracle/container-images/tree/dist-arm64v8/8-slim org.opencontainers.image.vendor=Oracle America, Inc org.opencontainers.image.title=Oracle Linux 8 (slim) org.opencontainers.image.description=Oracle Linux is an open-source       operating system available under the GNU General Public License (GPLv2) and       is suitable for both general purpose or Oracle workloads.
+# Tue, 15 Sep 2020 20:41:01 GMT
 ADD file:b3bd5c2ec8ff0efe8a0b1384563b42f02d6bcf7531132d9ec4748ecfe264d476 in / 
-# Mon, 14 Sep 2020 17:42:18 GMT
+# Tue, 15 Sep 2020 20:41:02 GMT
 CMD ["/bin/bash"]
-# Mon, 14 Sep 2020 17:59:56 GMT
+# Tue, 15 Sep 2020 20:58:24 GMT
 RUN set -eux; 	microdnf install 		gzip 		tar 				binutils 		freetype fontconfig 	; 	microdnf clean all
-# Mon, 14 Sep 2020 18:00:04 GMT
+# Tue, 15 Sep 2020 20:58:31 GMT
 ENV LANG=C.UTF-8
-# Mon, 14 Sep 2020 18:01:37 GMT
+# Tue, 15 Sep 2020 21:01:53 GMT
 ENV JAVA_HOME=/usr/java/openjdk-15
-# Mon, 14 Sep 2020 18:01:47 GMT
+# Tue, 15 Sep 2020 21:01:54 GMT
 ENV PATH=/usr/java/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Mon, 14 Sep 2020 18:01:49 GMT
+# Tue, 15 Sep 2020 21:01:54 GMT
 ENV JAVA_VERSION=15
-# Mon, 14 Sep 2020 18:02:39 GMT
+# Tue, 15 Sep 2020 21:02:27 GMT
 RUN set -eux; 		objdump="$(command -v objdump)"; 	arch="$(objdump --file-headers "$objdump" | awk -F '[:,]+[[:space:]]+' '$1 == "architecture" { print $2 }')"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-aarch64_bin.tar.gz; 			downloadSha256=01e7e07dd8a67a65b32fdcaff75ba3f21cd9cfc749287e7c9b1c6037f96a3537; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz; 			downloadSha256=bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		curl -fL -o openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		ln -sfT "$JAVA_HOME" /usr/java/default; 	ln -sfT "$JAVA_HOME" /usr/java/latest; 	for bin in "$JAVA_HOME/bin/"*; do 		base="$(basename "$bin")"; 		[ ! -e "/usr/bin/$base" ]; 		alternatives --install "/usr/bin/$base" "$base" "$bin" 20000; 	done; 		java -Xshare:dump; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/pki/ca-trust/extracted/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
-# Mon, 14 Sep 2020 18:02:42 GMT
+# Tue, 15 Sep 2020 21:02:29 GMT
 CMD ["jshell"]
-# Mon, 14 Sep 2020 21:24:56 GMT
+# Tue, 15 Sep 2020 21:23:58 GMT
 ARG MAVEN_VERSION=3.6.3
-# Mon, 14 Sep 2020 21:24:57 GMT
+# Tue, 15 Sep 2020 21:23:58 GMT
 ARG USER_HOME_DIR=/root
-# Mon, 14 Sep 2020 21:24:57 GMT
+# Tue, 15 Sep 2020 21:23:59 GMT
 ARG SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0
-# Mon, 14 Sep 2020 21:24:58 GMT
+# Tue, 15 Sep 2020 21:23:59 GMT
 ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries
-# Mon, 14 Sep 2020 21:25:23 GMT
+# Tue, 15 Sep 2020 21:24:14 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries MAVEN_VERSION=3.6.3 SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0 USER_HOME_DIR=/root
 RUN microdnf install findutils
-# Mon, 14 Sep 2020 21:25:34 GMT
+# Tue, 15 Sep 2020 21:24:17 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries MAVEN_VERSION=3.6.3 SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0 USER_HOME_DIR=/root
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref   && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz   && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha512sum -c -   && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1   && rm -f /tmp/apache-maven.tar.gz   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
-# Mon, 14 Sep 2020 21:25:35 GMT
+# Tue, 15 Sep 2020 21:24:18 GMT
 ENV MAVEN_HOME=/usr/share/maven
-# Mon, 14 Sep 2020 21:25:35 GMT
+# Tue, 15 Sep 2020 21:24:19 GMT
 ENV MAVEN_CONFIG=/root/.m2
-# Mon, 14 Sep 2020 21:25:36 GMT
+# Tue, 15 Sep 2020 21:24:19 GMT
 COPY file:1b3da5c58894f705e7387946301c0c52edb6271761ea3cd80b86a848847a64cd in /usr/local/bin/mvn-entrypoint.sh 
-# Mon, 14 Sep 2020 21:25:36 GMT
+# Tue, 15 Sep 2020 21:24:20 GMT
 COPY file:2bbb488dd73c55d658b91943cfdf9c26975a320ceafc45dda94c95b03e518ad3 in /usr/share/maven/ref/ 
-# Mon, 14 Sep 2020 21:25:37 GMT
+# Tue, 15 Sep 2020 21:24:21 GMT
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
-# Mon, 14 Sep 2020 21:25:38 GMT
+# Tue, 15 Sep 2020 21:24:21 GMT
 CMD ["mvn"]
 ```
 
@@ -22351,35 +22351,35 @@ CMD ["mvn"]
 		Last Modified: Mon, 14 Sep 2020 17:43:27 GMT  
 		Size: 54.3 MB (54266593 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8dee2ba14d3dd42ac318a14c434bced8bd3cc7a2c58339deb209699b1d167b21`  
-		Last Modified: Mon, 14 Sep 2020 20:56:35 GMT  
-		Size: 14.4 MB (14366836 bytes)  
+	-	`sha256:f893975677f1e890e793bb79d6684177489551bc055499096c3c153bc305e940`  
+		Last Modified: Tue, 15 Sep 2020 21:04:39 GMT  
+		Size: 14.4 MB (14366569 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c962550dadc0ccae13f43c26067641e639dd560cd6f0f96e1826189b592551db`  
-		Last Modified: Mon, 14 Sep 2020 20:59:35 GMT  
-		Size: 174.9 MB (174859078 bytes)  
+	-	`sha256:d1c69d485585ba8c4e0f9ee8e9b25bc230d98feaa7c7f0a296f92d27626f5fe8`  
+		Last Modified: Tue, 15 Sep 2020 21:06:35 GMT  
+		Size: 174.9 MB (174859111 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7bd3cdf2f09edc8979b4d80326720afcd461d662640cada82cf956196034d613`  
-		Last Modified: Mon, 14 Sep 2020 21:27:28 GMT  
-		Size: 54.9 MB (54865721 bytes)  
+	-	`sha256:dbbbac2c8a562ce56a824ca30040cccdbe49bd896407d74abd0a313fff993bea`  
+		Last Modified: Tue, 15 Sep 2020 21:25:56 GMT  
+		Size: 54.9 MB (54865977 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d27cf58b463921712722ae538c11026309dde4296f1224a93950060099a00583`  
-		Last Modified: Mon, 14 Sep 2020 21:27:26 GMT  
+	-	`sha256:1803c282aedb9cbed8d60955d9b3d909e44840f98dfb700ef298acafe4a18681`  
+		Last Modified: Tue, 15 Sep 2020 21:25:50 GMT  
 		Size: 9.6 MB (9581208 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:36bb0b3a200b678fefe66f113515081de515792d4dc6de48d7dcf79c7044502b`  
-		Last Modified: Mon, 14 Sep 2020 21:27:21 GMT  
-		Size: 857.0 B  
+	-	`sha256:3ad0cd6063681960f164e50b7994f5a685ba4304be4cd816b830f89af6fdc8c2`  
+		Last Modified: Tue, 15 Sep 2020 21:25:49 GMT  
+		Size: 856.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7552dfd0b656f98ec8d96f2dda6d9b437692e48e5eb13d89cf2a5b613eff4fe0`  
-		Last Modified: Mon, 14 Sep 2020 21:27:21 GMT  
-		Size: 358.0 B  
+	-	`sha256:74f2e67f65ec7e3c921984010b06df819493c27327b987887f6c97d6f46fd305`  
+		Last Modified: Tue, 15 Sep 2020 21:25:49 GMT  
+		Size: 360.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `maven:3-openjdk-16`
 
 ```console
-$ docker pull maven@sha256:7e86e6e4d345d0a7cf554ca84f11d2de2ea13bee95db1f1af1860d22682d95f3
+$ docker pull maven@sha256:eb9bd5033e8b694a2c3caa939e07a2f2be425ccc3a0c38193e33661aa37c4f27
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -22483,63 +22483,63 @@ CMD ["mvn"]
 ### `maven:3-openjdk-16` - linux; arm64 variant v8
 
 ```console
-$ docker pull maven@sha256:ec9fbf4809dfecd85cfd89acd72732a1d04458bc1fed8a1003256d294dc5aeb3
+$ docker pull maven@sha256:bd7fe0235da1e5639cdec7fa1cd9a387043ac233e82a10d2e1ed63fa0236f3a4
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **308.5 MB (308467179 bytes)**  
+-	Total Size: **308.5 MB (308466827 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:61886345d561508c4f19404a59de76cda9865b172fb58802b590aaff29d38504`
+-	Image ID: `sha256:0905fdcb949d1a86f1450ab5709f202d7b941d3c7de58d3a42dcc0bc9501a00f`
 -	Entrypoint: `["\/usr\/local\/bin\/mvn-entrypoint.sh"]`
 -	Default Command: `["mvn"]`
 
 ```dockerfile
-# Fri, 31 May 2019 21:40:52 GMT
-MAINTAINER Oracle Linux Product Team <ol-ovm-info_ww@oracle.com>
-# Mon, 14 Sep 2020 17:42:14 GMT
+# Tue, 15 Sep 2020 20:40:54 GMT
+LABEL org.opencontainers.image.authors=Oracle Linux Product Team <ol-ovm-info_ww@oracle.com> org.opencontainers.image.url=https://github.com/oracle/container-images org.opencontainers.image.source=https://github.com/oracle/container-images/tree/dist-arm64v8/8-slim org.opencontainers.image.vendor=Oracle America, Inc org.opencontainers.image.title=Oracle Linux 8 (slim) org.opencontainers.image.description=Oracle Linux is an open-source       operating system available under the GNU General Public License (GPLv2) and       is suitable for both general purpose or Oracle workloads.
+# Tue, 15 Sep 2020 20:41:01 GMT
 ADD file:b3bd5c2ec8ff0efe8a0b1384563b42f02d6bcf7531132d9ec4748ecfe264d476 in / 
-# Mon, 14 Sep 2020 17:42:18 GMT
+# Tue, 15 Sep 2020 20:41:02 GMT
 CMD ["/bin/bash"]
-# Mon, 14 Sep 2020 17:59:56 GMT
+# Tue, 15 Sep 2020 20:58:24 GMT
 RUN set -eux; 	microdnf install 		gzip 		tar 				binutils 		freetype fontconfig 	; 	microdnf clean all
-# Mon, 14 Sep 2020 18:00:04 GMT
+# Tue, 15 Sep 2020 20:58:31 GMT
 ENV LANG=C.UTF-8
-# Mon, 14 Sep 2020 18:00:06 GMT
+# Tue, 15 Sep 2020 20:58:37 GMT
 ENV JAVA_HOME=/usr/java/openjdk-16
-# Mon, 14 Sep 2020 18:00:07 GMT
+# Tue, 15 Sep 2020 20:58:39 GMT
 ENV PATH=/usr/java/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Mon, 14 Sep 2020 18:00:07 GMT
+# Tue, 15 Sep 2020 20:58:40 GMT
 ENV JAVA_VERSION=16-ea+15
-# Mon, 14 Sep 2020 18:00:57 GMT
+# Tue, 15 Sep 2020 20:59:21 GMT
 RUN set -eux; 		objdump="$(command -v objdump)"; 	arch="$(objdump --file-headers "$objdump" | awk -F '[:,]+[[:space:]]+' '$1 == "architecture" { print $2 }')"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/15/GPL/openjdk-16-ea+15_linux-aarch64_bin.tar.gz; 			downloadSha256=c0fda06a69e492907fe85d1e151e34747e0fce3a2221a70e5dcffd8df048d1db; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/15/GPL/openjdk-16-ea+15_linux-x64_bin.tar.gz; 			downloadSha256=7e6eccd3ac82ce7c007b30a8cde4d849c61612be5353de130690646814f5b9f9; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		curl -fL -o openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		ln -sfT "$JAVA_HOME" /usr/java/default; 	ln -sfT "$JAVA_HOME" /usr/java/latest; 	for bin in "$JAVA_HOME/bin/"*; do 		base="$(basename "$bin")"; 		[ ! -e "/usr/bin/$base" ]; 		alternatives --install "/usr/bin/$base" "$base" "$bin" 20000; 	done; 		java -Xshare:dump; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/pki/ca-trust/extracted/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
-# Mon, 14 Sep 2020 18:01:00 GMT
+# Tue, 15 Sep 2020 20:59:28 GMT
 CMD ["jshell"]
-# Mon, 14 Sep 2020 21:25:46 GMT
+# Tue, 15 Sep 2020 21:24:29 GMT
 ARG MAVEN_VERSION=3.6.3
-# Mon, 14 Sep 2020 21:25:46 GMT
+# Tue, 15 Sep 2020 21:24:30 GMT
 ARG USER_HOME_DIR=/root
-# Mon, 14 Sep 2020 21:25:47 GMT
+# Tue, 15 Sep 2020 21:24:31 GMT
 ARG SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0
-# Mon, 14 Sep 2020 21:25:48 GMT
+# Tue, 15 Sep 2020 21:24:31 GMT
 ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries
-# Mon, 14 Sep 2020 21:26:04 GMT
+# Tue, 15 Sep 2020 21:24:46 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries MAVEN_VERSION=3.6.3 SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0 USER_HOME_DIR=/root
 RUN microdnf install findutils
-# Mon, 14 Sep 2020 21:26:15 GMT
+# Tue, 15 Sep 2020 21:24:51 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries MAVEN_VERSION=3.6.3 SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0 USER_HOME_DIR=/root
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref   && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz   && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha512sum -c -   && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1   && rm -f /tmp/apache-maven.tar.gz   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
-# Mon, 14 Sep 2020 21:26:16 GMT
+# Tue, 15 Sep 2020 21:24:51 GMT
 ENV MAVEN_HOME=/usr/share/maven
-# Mon, 14 Sep 2020 21:26:17 GMT
+# Tue, 15 Sep 2020 21:24:52 GMT
 ENV MAVEN_CONFIG=/root/.m2
-# Mon, 14 Sep 2020 21:26:17 GMT
+# Tue, 15 Sep 2020 21:24:53 GMT
 COPY file:1b3da5c58894f705e7387946301c0c52edb6271761ea3cd80b86a848847a64cd in /usr/local/bin/mvn-entrypoint.sh 
-# Mon, 14 Sep 2020 21:26:18 GMT
+# Tue, 15 Sep 2020 21:24:53 GMT
 COPY file:2bbb488dd73c55d658b91943cfdf9c26975a320ceafc45dda94c95b03e518ad3 in /usr/share/maven/ref/ 
-# Mon, 14 Sep 2020 21:26:19 GMT
+# Tue, 15 Sep 2020 21:24:54 GMT
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
-# Mon, 14 Sep 2020 21:26:20 GMT
+# Tue, 15 Sep 2020 21:24:55 GMT
 CMD ["mvn"]
 ```
 
@@ -22548,29 +22548,29 @@ CMD ["mvn"]
 		Last Modified: Mon, 14 Sep 2020 17:43:27 GMT  
 		Size: 54.3 MB (54266593 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8dee2ba14d3dd42ac318a14c434bced8bd3cc7a2c58339deb209699b1d167b21`  
-		Last Modified: Mon, 14 Sep 2020 20:56:35 GMT  
-		Size: 14.4 MB (14366836 bytes)  
+	-	`sha256:f893975677f1e890e793bb79d6684177489551bc055499096c3c153bc305e940`  
+		Last Modified: Tue, 15 Sep 2020 21:04:39 GMT  
+		Size: 14.4 MB (14366569 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b2d8e66a354b59ebdd090ba036a67e82f1ca3441e6e50da045ca773c2a546dbe`  
-		Last Modified: Mon, 14 Sep 2020 20:56:59 GMT  
-		Size: 175.4 MB (175385290 bytes)  
+	-	`sha256:f0ea45237f3f1b266b2ba743ba7ecd13ac8710dcae03fef55ca735eaca110de7`  
+		Last Modified: Tue, 15 Sep 2020 21:05:05 GMT  
+		Size: 175.4 MB (175385426 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d4d95867a8a36576a825adcf72e66114c9f6f0f04df8248db81eaf30741f5bee`  
-		Last Modified: Mon, 14 Sep 2020 21:27:43 GMT  
-		Size: 54.9 MB (54866035 bytes)  
+	-	`sha256:21ec72245f7451b5241680460fd1624120023a8d98e92d36565d1f7aef69562c`  
+		Last Modified: Tue, 15 Sep 2020 21:26:12 GMT  
+		Size: 54.9 MB (54865823 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:18f632d0e079ad46f539d77440f07a100f56338f3b21a4055281139d4656768e`  
-		Last Modified: Mon, 14 Sep 2020 21:27:38 GMT  
-		Size: 9.6 MB (9581215 bytes)  
+	-	`sha256:eb1e749cd34e1e888a79b74fddb00988f97efb50b24363745f2aa5ca67a2206b`  
+		Last Modified: Tue, 15 Sep 2020 21:26:06 GMT  
+		Size: 9.6 MB (9581199 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f97a063ec663935f698d29f6827717a70592c214f02a434d107a1d5bb3b6fabc`  
-		Last Modified: Mon, 14 Sep 2020 21:27:36 GMT  
-		Size: 853.0 B  
+	-	`sha256:ce2c7856d00d582d07c850b29433d35db243e1748f09fd780015a30b9c65971f`  
+		Last Modified: Tue, 15 Sep 2020 21:26:05 GMT  
+		Size: 857.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:65d65d620cdabb0d7a1c9ddda73ca2f199bf880f0f4d4a143cf4f073b96707a7`  
-		Last Modified: Mon, 14 Sep 2020 21:27:36 GMT  
-		Size: 357.0 B  
+	-	`sha256:1de87e035a636226aba65c7eb831f37973a028d9cf6cb7d60ad3f3e440cf4395`  
+		Last Modified: Tue, 15 Sep 2020 21:26:05 GMT  
+		Size: 360.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `maven:3-openjdk-8`
