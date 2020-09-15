@@ -204,15 +204,9 @@ Licenses: (parsed from: `/usr/share/doc/automake/copyright`)
 - `GPL-3+`
 - `permissive`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris automake-1.16=1:1.16.2-3ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/a/automake-1.16/automake-1.16_1.16.2-3ubuntu2.dsc' automake-1.16_1.16.2-3ubuntu2.dsc 1929 SHA256:c07f0ac1f2912803c28086aff355964335184e8e3dacd4592d5883a878693f4c
-'http://archive.ubuntu.com/ubuntu/pool/main/a/automake-1.16/automake-1.16_1.16.2.orig.tar.xz' automake-1.16_1.16.2.orig.tar.xz 1545912 SHA256:ccc459de3d710e066ab9e12d2f119bd164a08c9341ca24ba22c9adaa179eedd0
-'http://archive.ubuntu.com/ubuntu/pool/main/a/automake-1.16/automake-1.16_1.16.2.orig.tar.xz.asc' automake-1.16_1.16.2.orig.tar.xz.asc 833 SHA256:dbfc268276c94c95177f8e697d2688c944807c1284833a3e5354b78cd73ad8ab
-'http://archive.ubuntu.com/ubuntu/pool/main/a/automake-1.16/automake-1.16_1.16.2-3ubuntu2.debian.tar.xz' automake-1.16_1.16.2-3ubuntu2.debian.tar.xz 13316 SHA256:ba3a4e824df618f280b30cae5e3a47fde95c9c4186c917fbefddb4f552292317
-```
 
 ### `dpkg` source package: `autotools-dev=20180224.1`
 
@@ -301,14 +295,9 @@ Licenses: (parsed from: `/usr/share/doc/binutils/copyright`, `/usr/share/doc/bin
 - `GPL`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris binutils=2.35-2ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.35-2ubuntu1.dsc' binutils_2.35-2ubuntu1.dsc 8767 SHA256:ff9d309e2cbabe891fd1c046de8af554ed3e5aacff71c1f7f7563fb505eced63
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.35.orig.tar.xz' binutils_2.35.orig.tar.xz 22042160 SHA256:1b11659fb49e20e18db460d44485f09442c8c56d5df165de9461eb09c8302f85
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.35-2ubuntu1.debian.tar.xz' binutils_2.35-2ubuntu1.debian.tar.xz 340240 SHA256:37007bb3df41b37c3bb55e379e7755d286f6f202674e6376f5c5181fabc8f794
-```
 
 ### `dpkg` source package: `breezy=3.1.0-4`
 

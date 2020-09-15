@@ -772,20 +772,13 @@ Licenses: (parsed from: `/usr/share/doc/gcc-10-base/copyright`, `/usr/share/doc/
 - `GPL-3`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-10=10.2.0-6
-'http://deb.debian.org/debian/pool/main/g/gcc-10/gcc-10_10.2.0-6.dsc' gcc-10_10.2.0-6.dsc 27590 SHA256:f1a0a6e97fbe187b772fd3718544bf7a27b94bb8285840e27db22171e5920354
-'http://deb.debian.org/debian/pool/main/g/gcc-10/gcc-10_10.2.0.orig.tar.gz' gcc-10_10.2.0.orig.tar.gz 97337200 SHA256:a04738b0cfcdef4c9b5a04f587cc53dfb45fabb8c363cda1a91cb667bd9ad553
-'http://deb.debian.org/debian/pool/main/g/gcc-10/gcc-10_10.2.0-6.debian.tar.xz' gcc-10_10.2.0-6.debian.tar.xz 2087472 SHA256:5625d2d9278dbd770160c370500706234e8d9ba3e0e5a10e10f248b440c99619
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gcc-10/10.2.0-6/
 
-- https://sources.debian.net/src/gcc-10/10.2.0-6/ (for browsing the source)
-- https://sources.debian.net/src/gcc-10/10.2.0-6/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gcc-10/10.2.0-6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gcc-9=9.3.0-17`
 
@@ -803,20 +796,13 @@ Licenses: (parsed from: `/usr/share/doc/gcc-9-base/copyright`)
 - `LGPL`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-9=9.3.0-17
-'http://deb.debian.org/debian/pool/main/g/gcc-9/gcc-9_9.3.0-17.dsc' gcc-9_9.3.0-17.dsc 21922 SHA256:f9740a073dc61df3a0cf411de4685faec9454d7443eb409d6b9016bd4f2d8a49
-'http://deb.debian.org/debian/pool/main/g/gcc-9/gcc-9_9.3.0.orig.tar.gz' gcc-9_9.3.0.orig.tar.gz 88686943 SHA256:824044ffa96eb337bb1c1d4cf6a82691d0290d6f42e1d13362eea855458de060
-'http://deb.debian.org/debian/pool/main/g/gcc-9/gcc-9_9.3.0-17.debian.tar.xz' gcc-9_9.3.0-17.debian.tar.xz 762204 SHA256:b535a4b9ede470aa787423983d0004218a76c09f65fa68516e6c653144ef062a
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gcc-9/9.3.0-17/
 
-- https://sources.debian.net/src/gcc-9/9.3.0-17/ (for browsing the source)
-- https://sources.debian.net/src/gcc-9/9.3.0-17/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gcc-9/9.3.0-17/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gdbm=1.18.1-5.1`
 
@@ -2855,20 +2841,13 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=246.4-1
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_246.4-1.dsc' systemd_246.4-1.dsc 5141 SHA256:9a87270da016cddbe8c2a026fe09cf7045b77c3cf2949ac330fec15f868fc76c
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_246.4.orig.tar.gz' systemd_246.4.orig.tar.gz 9539099 SHA256:06d73f8d16f866837a5d40b37503d53119c6046daf58cc32a4ebaf9fc75a0b3b
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_246.4-1.debian.tar.xz' systemd_246.4-1.debian.tar.xz 153792 SHA256:023bb0ac31797865f1a852bf63348d428faa77f3f89999a9cddf9bcea56f4a03
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/systemd/246.4-1/
 
-- https://sources.debian.net/src/systemd/246.4-1/ (for browsing the source)
-- https://sources.debian.net/src/systemd/246.4-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/systemd/246.4-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sysvinit=2.96-4`
 

@@ -764,20 +764,13 @@ Licenses: (parsed from: `/usr/share/doc/gcc-10-base/copyright`, `/usr/share/doc/
 - `GPL-3`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-10=10.2.0-6
-'http://deb.debian.org/debian/pool/main/g/gcc-10/gcc-10_10.2.0-6.dsc' gcc-10_10.2.0-6.dsc 27590 SHA256:f1a0a6e97fbe187b772fd3718544bf7a27b94bb8285840e27db22171e5920354
-'http://deb.debian.org/debian/pool/main/g/gcc-10/gcc-10_10.2.0.orig.tar.gz' gcc-10_10.2.0.orig.tar.gz 97337200 SHA256:a04738b0cfcdef4c9b5a04f587cc53dfb45fabb8c363cda1a91cb667bd9ad553
-'http://deb.debian.org/debian/pool/main/g/gcc-10/gcc-10_10.2.0-6.debian.tar.xz' gcc-10_10.2.0-6.debian.tar.xz 2087472 SHA256:5625d2d9278dbd770160c370500706234e8d9ba3e0e5a10e10f248b440c99619
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gcc-10/10.2.0-6/
 
-- https://sources.debian.net/src/gcc-10/10.2.0-6/ (for browsing the source)
-- https://sources.debian.net/src/gcc-10/10.2.0-6/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gcc-10/10.2.0-6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gcc-9=9.3.0-15`
 
@@ -795,20 +788,13 @@ Licenses: (parsed from: `/usr/share/doc/gcc-9-base/copyright`)
 - `LGPL`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-9=9.3.0-15
-'http://deb.debian.org/debian/pool/main/g/gcc-9/gcc-9_9.3.0-15.dsc' gcc-9_9.3.0-15.dsc 21922 SHA256:83dd853938bcb9d131210c8f8eddcb4c9c9a3a0704b063da17cd099b32d88d30
-'http://deb.debian.org/debian/pool/main/g/gcc-9/gcc-9_9.3.0.orig.tar.gz' gcc-9_9.3.0.orig.tar.gz 88686943 SHA256:824044ffa96eb337bb1c1d4cf6a82691d0290d6f42e1d13362eea855458de060
-'http://deb.debian.org/debian/pool/main/g/gcc-9/gcc-9_9.3.0-15.debian.tar.xz' gcc-9_9.3.0-15.debian.tar.xz 735456 SHA256:6561b0b5c3578b7ef031e7c2b4af8178f479f2122df99e20540ea192871ba7ca
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gcc-9/9.3.0-15/
 
-- https://sources.debian.net/src/gcc-9/9.3.0-15/ (for browsing the source)
-- https://sources.debian.net/src/gcc-9/9.3.0-15/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gcc-9/9.3.0-15/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gdbm=1.18.1-5.1`
 
@@ -2241,20 +2227,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openldap=2.4.51+dfsg-1
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.51+dfsg-1.dsc' openldap_2.4.51+dfsg-1.dsc 3060 SHA256:d3e47f279144eb15cb3783436777152a8f425ca2f4cbf0e303c4c5e2e4d986ea
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.51+dfsg.orig.tar.gz' openldap_2.4.51+dfsg.orig.tar.gz 5009322 SHA256:315893a5e399a69cdac88794dbff89f7989558c2faa138e82d6fb75e729b7fa6
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.51+dfsg-1.debian.tar.xz' openldap_2.4.51+dfsg-1.debian.tar.xz 167748 SHA256:2f26538eaa32565539aaf5aead6913804b1d3a52669592ec8a82415d72963d84
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/openldap/2.4.51+dfsg-1/
 
-- https://sources.debian.net/src/openldap/2.4.51+dfsg-1/ (for browsing the source)
-- https://sources.debian.net/src/openldap/2.4.51+dfsg-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openldap/2.4.51+dfsg-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssh=1:8.3p1-1`
 
