@@ -1,7 +1,7 @@
 ## `crux:latest`
 
 ```console
-$ docker pull crux@sha256:5ab3fe9d6588dc95a394fef715a33af5c13c49e64460dace0cfc9abe3841901e
+$ docker pull crux@sha256:cb9a2fabb5fbf7237bada201082bfa2ece2fe2587dfd3ca2ba63efcc2c09d18a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,29 +12,29 @@ $ docker pull crux@sha256:5ab3fe9d6588dc95a394fef715a33af5c13c49e64460dace0cfc9a
 ### `crux:latest` - linux; amd64
 
 ```console
-$ docker pull crux@sha256:e795f821ee4fb7d9d2c6a1afe56eb8a6e005babdb48904129a22f374023644a2
+$ docker pull crux@sha256:b15570468c2dd56d4bd1bd14011b7085d7bcb2179b2d718af235676acd38ddee
 ```
 
--	Docker Version: 17.06.2-ce
+-	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **159.6 MB (159555383 bytes)**  
+-	Total Size: **159.6 MB (159554247 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:127f1bb71be660de0e44632e9441931265b185355188fc17e32992117f8ae511`
+-	Image ID: `sha256:4dbff4cf50d728c83bd7c2a0b3f966506c40dc1ed3657289eb8cc11d9d1200e0`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
 # Wed, 21 Nov 2018 16:51:34 GMT
 MAINTAINER James Mills, prologic at shortcircuit dot net dot au
-# Wed, 21 Nov 2018 16:51:48 GMT
-ADD file:02761211796502e3a55fa508acbe0d23bd8ef17caecabe2d10f0542a9df63d83 in / 
-# Wed, 21 Nov 2018 16:51:49 GMT
+# Wed, 16 Sep 2020 17:52:15 GMT
+ADD file:9708f8879c5615563d0346084dd67e9b11eb01cea1f187dc42f1b3fea345e8e3 in / 
+# Wed, 16 Sep 2020 17:52:17 GMT
 CMD ["/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:6f115d25df7f6f0434020aa4adbcb8d7e747725308df777eb6769cec797c1979`  
-		Last Modified: Wed, 21 Nov 2018 16:54:06 GMT  
-		Size: 159.6 MB (159555383 bytes)  
+	-	`sha256:180a5b3bafc3c941332c0ca2c40e004ae0aabfa7173a28d5ca5f8562f596442a`  
+		Last Modified: Wed, 16 Sep 2020 17:55:13 GMT  
+		Size: 159.6 MB (159554247 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `crux:latest` - linux; arm64 variant v8
