@@ -8,7 +8,7 @@
 ## `swarm:1.2.9`
 
 ```console
-$ docker pull swarm@sha256:b866583a3b8791bcd705b7bc0fd94c66b695a1a2dbaeb5f59ed29940e5015dc8
+$ docker pull swarm@sha256:2de8883e2933840ed7ee7360ea1eed314bf8aeac37c0692b9ca651630fde3b7f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -18,54 +18,54 @@ $ docker pull swarm@sha256:b866583a3b8791bcd705b7bc0fd94c66b695a1a2dbaeb5f59ed29
 ### `swarm:1.2.9` - linux; amd64
 
 ```console
-$ docker pull swarm@sha256:21ba7705cd79ead9495d5bea3b14a98e70b1e8ec97c35b095e6f8562a3f547ff
+$ docker pull swarm@sha256:b09c61cb20e925723210a2d2504043766381d59751079ca6e57ca9c4a71ebe3c
 ```
 
--	Docker Version: 17.06.2-ce
+-	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **3.8 MB (3849922 bytes)**  
+-	Total Size: **3.8 MB (3849920 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ff454b4a0e84e50c50e3df457ad44b80f1a67ec6ec75cff5117dd5dc46bf4965`
+-	Image ID: `sha256:1a5eb59a410faeff5de495f07553845624ad3278ac59ac066107564bdd14bf48`
 -	Entrypoint: `["\/swarm"]`
 -	Default Command: `["--help"]`
 
 ```dockerfile
-# Fri, 01 Jun 2018 20:34:37 GMT
-COPY file:a0ae60e7cd059ed4cd6a1ad271463ff13a63dafb05ef44ea98778a3d5d7ca9e4 in /swarm 
-# Fri, 01 Jun 2018 20:34:37 GMT
-COPY file:7544fce8b63059c6e70ecf475487d6e4ea6fef407369869f02d8ea84b211c4de in /etc/ssl/certs/ca-certificates.crt 
-# Fri, 01 Jun 2018 20:34:38 GMT
-COPY dir:d556676b4fb31ddaa271490e57c3a85e3c4bcc1e809b22d64b2f570c05149a22 in /tmp 
-# Fri, 01 Jun 2018 20:34:38 GMT
+# Wed, 16 Sep 2020 20:15:18 GMT
+COPY file:baf765dce7d83eed89fb4848147c416423cc42bf07523d8d93b72ed539bf7e1d in /swarm 
+# Wed, 16 Sep 2020 20:15:19 GMT
+COPY file:542309c051962f73f8ace49c3bc97bfd3743b6f105ae8fd920186dde62b7481f in /etc/ssl/certs/ca-certificates.crt 
+# Wed, 16 Sep 2020 20:15:20 GMT
+COPY dir:9d1a4b75a1813e208a4ef5f72a74f6b9b14c74574a2e191d9e800a4698e2174e in /tmp 
+# Wed, 16 Sep 2020 20:15:20 GMT
 ENV SWARM_HOST=:2375
-# Fri, 01 Jun 2018 20:34:38 GMT
-EXPOSE 2375/tcp
-# Fri, 01 Jun 2018 20:34:38 GMT
+# Wed, 16 Sep 2020 20:15:20 GMT
+EXPOSE 2375
+# Wed, 16 Sep 2020 20:15:21 GMT
 VOLUME [/.swarm]
-# Fri, 01 Jun 2018 20:34:39 GMT
+# Wed, 16 Sep 2020 20:15:21 GMT
 ENTRYPOINT ["/swarm"]
-# Fri, 01 Jun 2018 20:34:39 GMT
+# Wed, 16 Sep 2020 20:15:21 GMT
 CMD ["--help"]
 ```
 
 -	Layers:
-	-	`sha256:d85c18077b82c3550e91fe3c0d4413ff2e0c028c590a05cd282bcc17924e8dce`  
-		Last Modified: Fri, 01 Jun 2018 20:34:52 GMT  
+	-	`sha256:38e5683d7755d5390caf8ef4e7b3d52e81f592cee695ba41dd696efa685b3657`  
+		Last Modified: Wed, 16 Sep 2020 20:15:31 GMT  
 		Size: 3.7 MB (3693031 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1e6bb16f8cb1f84ca253dfe59226e75e1d8d6cb27d93f1bb843398219b2b505e`  
-		Last Modified: Fri, 01 Jun 2018 20:34:51 GMT  
-		Size: 156.8 KB (156763 bytes)  
+	-	`sha256:083aff16360665b6a2e34da65173bfa2b005b7cb77327239984b4f3f3a2d0b0e`  
+		Last Modified: Wed, 16 Sep 2020 20:15:30 GMT  
+		Size: 156.8 KB (156761 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:85bac13497d7196c6367aa0e527880c110e71fceb04ea517008234954b3e2f61`  
-		Last Modified: Fri, 01 Jun 2018 20:34:51 GMT  
+	-	`sha256:2064f1a73c6be65f86bab532e48f884e20f3ebda94c23207166ebcf1f6ba48ee`  
+		Last Modified: Wed, 16 Sep 2020 20:15:30 GMT  
 		Size: 128.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `swarm:latest`
 
 ```console
-$ docker pull swarm@sha256:b866583a3b8791bcd705b7bc0fd94c66b695a1a2dbaeb5f59ed29940e5015dc8
+$ docker pull swarm@sha256:2de8883e2933840ed7ee7360ea1eed314bf8aeac37c0692b9ca651630fde3b7f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -75,46 +75,46 @@ $ docker pull swarm@sha256:b866583a3b8791bcd705b7bc0fd94c66b695a1a2dbaeb5f59ed29
 ### `swarm:latest` - linux; amd64
 
 ```console
-$ docker pull swarm@sha256:21ba7705cd79ead9495d5bea3b14a98e70b1e8ec97c35b095e6f8562a3f547ff
+$ docker pull swarm@sha256:b09c61cb20e925723210a2d2504043766381d59751079ca6e57ca9c4a71ebe3c
 ```
 
--	Docker Version: 17.06.2-ce
+-	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **3.8 MB (3849922 bytes)**  
+-	Total Size: **3.8 MB (3849920 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ff454b4a0e84e50c50e3df457ad44b80f1a67ec6ec75cff5117dd5dc46bf4965`
+-	Image ID: `sha256:1a5eb59a410faeff5de495f07553845624ad3278ac59ac066107564bdd14bf48`
 -	Entrypoint: `["\/swarm"]`
 -	Default Command: `["--help"]`
 
 ```dockerfile
-# Fri, 01 Jun 2018 20:34:37 GMT
-COPY file:a0ae60e7cd059ed4cd6a1ad271463ff13a63dafb05ef44ea98778a3d5d7ca9e4 in /swarm 
-# Fri, 01 Jun 2018 20:34:37 GMT
-COPY file:7544fce8b63059c6e70ecf475487d6e4ea6fef407369869f02d8ea84b211c4de in /etc/ssl/certs/ca-certificates.crt 
-# Fri, 01 Jun 2018 20:34:38 GMT
-COPY dir:d556676b4fb31ddaa271490e57c3a85e3c4bcc1e809b22d64b2f570c05149a22 in /tmp 
-# Fri, 01 Jun 2018 20:34:38 GMT
+# Wed, 16 Sep 2020 20:15:18 GMT
+COPY file:baf765dce7d83eed89fb4848147c416423cc42bf07523d8d93b72ed539bf7e1d in /swarm 
+# Wed, 16 Sep 2020 20:15:19 GMT
+COPY file:542309c051962f73f8ace49c3bc97bfd3743b6f105ae8fd920186dde62b7481f in /etc/ssl/certs/ca-certificates.crt 
+# Wed, 16 Sep 2020 20:15:20 GMT
+COPY dir:9d1a4b75a1813e208a4ef5f72a74f6b9b14c74574a2e191d9e800a4698e2174e in /tmp 
+# Wed, 16 Sep 2020 20:15:20 GMT
 ENV SWARM_HOST=:2375
-# Fri, 01 Jun 2018 20:34:38 GMT
-EXPOSE 2375/tcp
-# Fri, 01 Jun 2018 20:34:38 GMT
+# Wed, 16 Sep 2020 20:15:20 GMT
+EXPOSE 2375
+# Wed, 16 Sep 2020 20:15:21 GMT
 VOLUME [/.swarm]
-# Fri, 01 Jun 2018 20:34:39 GMT
+# Wed, 16 Sep 2020 20:15:21 GMT
 ENTRYPOINT ["/swarm"]
-# Fri, 01 Jun 2018 20:34:39 GMT
+# Wed, 16 Sep 2020 20:15:21 GMT
 CMD ["--help"]
 ```
 
 -	Layers:
-	-	`sha256:d85c18077b82c3550e91fe3c0d4413ff2e0c028c590a05cd282bcc17924e8dce`  
-		Last Modified: Fri, 01 Jun 2018 20:34:52 GMT  
+	-	`sha256:38e5683d7755d5390caf8ef4e7b3d52e81f592cee695ba41dd696efa685b3657`  
+		Last Modified: Wed, 16 Sep 2020 20:15:31 GMT  
 		Size: 3.7 MB (3693031 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1e6bb16f8cb1f84ca253dfe59226e75e1d8d6cb27d93f1bb843398219b2b505e`  
-		Last Modified: Fri, 01 Jun 2018 20:34:51 GMT  
-		Size: 156.8 KB (156763 bytes)  
+	-	`sha256:083aff16360665b6a2e34da65173bfa2b005b7cb77327239984b4f3f3a2d0b0e`  
+		Last Modified: Wed, 16 Sep 2020 20:15:30 GMT  
+		Size: 156.8 KB (156761 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:85bac13497d7196c6367aa0e527880c110e71fceb04ea517008234954b3e2f61`  
-		Last Modified: Fri, 01 Jun 2018 20:34:51 GMT  
+	-	`sha256:2064f1a73c6be65f86bab532e48f884e20f3ebda94c23207166ebcf1f6ba48ee`  
+		Last Modified: Wed, 16 Sep 2020 20:15:30 GMT  
 		Size: 128.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
