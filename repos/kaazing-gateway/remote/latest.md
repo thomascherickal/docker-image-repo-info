@@ -1,7 +1,7 @@
 ## `kaazing-gateway:latest`
 
 ```console
-$ docker pull kaazing-gateway@sha256:746d6397f366984315e0c180f0d4089c64ddcd2dc31e5da963c8e19d7064bab9
+$ docker pull kaazing-gateway@sha256:24a5c6d7ce8d77f9aae8ef6d9eeb0b60aab3c7b06d9869c2074cf370d1e58a17
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -108,14 +108,14 @@ CMD ["gateway.start"]
 ### `kaazing-gateway:latest` - linux; arm64 variant v8
 
 ```console
-$ docker pull kaazing-gateway@sha256:84f1c6492ccb31c377938b2a6c3f2a24bc8216f060cf0f0069233ed43031d96a
+$ docker pull kaazing-gateway@sha256:ad3f768d6996963f9af9a4b7bd5df58dd29a2fdc63a04a596bd30f8f6b16213c
 ```
 
--	Docker Version: 18.06.1-ce
+-	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **188.0 MB (188016353 bytes)**  
+-	Total Size: **188.0 MB (188022411 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:daa12ab57d6b63c30f352c62d9044099ac796bb68c2734025e3d02f3bea7d911`
+-	Image ID: `sha256:cd8109943e482dc21f4c0e04481a2aab6cd098610e097f6c97b28683d2af2503`
 -	Default Command: `["gateway.start"]`
 
 ```dockerfile
@@ -127,41 +127,41 @@ CMD ["bash"]
 RUN apt-get update && apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	&& rm -rf /var/lib/apt/lists/*
 # Wed, 08 May 2019 11:51:50 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Wed, 08 May 2019 16:06:35 GMT
+# Fri, 17 May 2019 22:46:42 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		bzip2 		unzip 		xz-utils 	&& rm -rf /var/lib/apt/lists/*
-# Wed, 08 May 2019 16:20:20 GMT
+# Fri, 17 May 2019 22:50:40 GMT
 ENV LANG=C.UTF-8
-# Wed, 08 May 2019 16:20:22 GMT
+# Fri, 17 May 2019 22:50:41 GMT
 RUN { 		echo '#!/bin/sh'; 		echo 'set -e'; 		echo; 		echo 'dirname "$(dirname "$(readlink -f "$(which javac || which java)")")"'; 	} > /usr/local/bin/docker-java-home 	&& chmod +x /usr/local/bin/docker-java-home
-# Wed, 08 May 2019 16:20:24 GMT
+# Fri, 17 May 2019 22:50:42 GMT
 RUN ln -svT "/usr/lib/jvm/java-8-openjdk-$(dpkg --print-architecture)" /docker-java-home
-# Wed, 08 May 2019 16:20:25 GMT
+# Fri, 17 May 2019 22:50:43 GMT
 ENV JAVA_HOME=/docker-java-home/jre
-# Wed, 08 May 2019 16:20:25 GMT
+# Fri, 17 May 2019 22:50:43 GMT
 ENV JAVA_VERSION=8u212
-# Wed, 08 May 2019 16:20:26 GMT
+# Fri, 17 May 2019 22:50:43 GMT
 ENV JAVA_DEBIAN_VERSION=8u212-b01-1~deb9u1
-# Wed, 08 May 2019 16:26:07 GMT
+# Fri, 17 May 2019 22:51:36 GMT
 RUN set -ex; 		if [ ! -d /usr/share/man/man1 ]; then 		mkdir -p /usr/share/man/man1; 	fi; 		apt-get update; 	apt-get install -y --no-install-recommends 		openjdk-8-jre="$JAVA_DEBIAN_VERSION" 	; 	rm -rf /var/lib/apt/lists/*; 		[ "$(readlink -f "$JAVA_HOME")" = "$(docker-java-home)" ]; 		update-alternatives --get-selections | awk -v home="$(readlink -f "$JAVA_HOME")" 'index($3, home) == 1 { $2 = "manual"; print | "update-alternatives --set-selections" }'; 	update-alternatives --query java | grep -q 'Status: manual'
-# Thu, 09 May 2019 07:12:12 GMT
+# Wed, 16 Sep 2020 20:18:08 GMT
 MAINTAINER Kaazing Docker Maintainers, contact via github issues: https://github.com/kaazing/gateway.docker/issues
-# Thu, 09 May 2019 07:12:17 GMT
+# Wed, 16 Sep 2020 20:18:13 GMT
 RUN gpg --keyserver ha.pool.sks-keyservers.net --recv-keys F8F4B66E022A4668E532DAC03AA0B82C385B4D59
-# Thu, 09 May 2019 07:12:18 GMT
+# Wed, 16 Sep 2020 20:18:14 GMT
 ENV KAAZING_GATEWAY_VERSION=5.6.0
-# Thu, 09 May 2019 07:12:19 GMT
+# Wed, 16 Sep 2020 20:18:15 GMT
 ENV KAAZING_GATEWAY_URL=https://oss.sonatype.org/content/repositories/releases/org/kaazing/gateway.distribution/5.6.0/gateway.distribution-5.6.0.tar.gz
-# Thu, 09 May 2019 07:12:20 GMT
+# Wed, 16 Sep 2020 20:18:15 GMT
 WORKDIR /kaazing-gateway
-# Thu, 09 May 2019 07:12:27 GMT
+# Wed, 16 Sep 2020 20:18:20 GMT
 RUN curl -fSL -o gateway.tar.gz $KAAZING_GATEWAY_URL 	&& curl -fSL -o gateway.tar.gz.asc ${KAAZING_GATEWAY_URL}.asc 	&& gpg --verify gateway.tar.gz.asc 	&& tar -xvf gateway.tar.gz --strip-components=1 	&& rm gateway.tar.gz*
-# Thu, 09 May 2019 07:12:27 GMT
+# Wed, 16 Sep 2020 20:18:20 GMT
 ENV GATEWAY_OPTS=-Xmx512m -Djava.security.egd=file:/dev/urandom
-# Thu, 09 May 2019 07:12:28 GMT
+# Wed, 16 Sep 2020 20:18:21 GMT
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/kaazing-gateway/bin
-# Thu, 09 May 2019 07:12:29 GMT
+# Wed, 16 Sep 2020 20:18:22 GMT
 EXPOSE 8000
-# Thu, 09 May 2019 07:12:29 GMT
+# Wed, 16 Sep 2020 20:18:22 GMT
 CMD ["gateway.start"]
 ```
 
@@ -178,31 +178,31 @@ CMD ["gateway.start"]
 		Last Modified: Wed, 08 May 2019 12:07:03 GMT  
 		Size: 4.1 MB (4094187 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:266e07372d3cf38feb8825ddae8cb9f335282ad809bba6aeaac01c34a13b9394`  
-		Last Modified: Wed, 08 May 2019 16:31:36 GMT  
-		Size: 839.5 KB (839462 bytes)  
+	-	`sha256:edc920c054370e9fe777d4546e8898e94588c01909d487696f8378c34d00b67e`  
+		Last Modified: Fri, 17 May 2019 22:56:09 GMT  
+		Size: 839.6 KB (839611 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a659800b4725d142bb026865f3fe7c0783f10d06c59d098da99786f2d1651351`  
-		Last Modified: Wed, 08 May 2019 16:35:05 GMT  
+	-	`sha256:faf483f25e9254d4337fac759851db8d04b5a2eea6056b1375ff19c2df554464`  
+		Last Modified: Fri, 17 May 2019 22:59:45 GMT  
 		Size: 247.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2b72fcad374b58026407e0d656f469140e3725eb1baa7468dfaba55fc642503d`  
-		Last Modified: Wed, 08 May 2019 16:35:05 GMT  
+	-	`sha256:57a594c16f5b8360bf6256529e6a21eddf648595ac48000e0d91808fd21a9798`  
+		Last Modified: Fri, 17 May 2019 22:59:45 GMT  
 		Size: 131.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f06f957e19b2a1bce1a9143c3ec174bda06b3a5d74ef7122a0b81a3a730deae6`  
-		Last Modified: Wed, 08 May 2019 16:35:55 GMT  
-		Size: 113.1 MB (113077224 bytes)  
+	-	`sha256:dee9e1dac91c466b57c47d5738767104f91af563b89a969f98a2eff0d0692cd6`  
+		Last Modified: Fri, 17 May 2019 23:00:18 GMT  
+		Size: 113.1 MB (113082862 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6216869f23a2b299bb4c2ef7d856de4d5677027d65c9b7c1c0180bb10c48186b`  
-		Last Modified: Thu, 09 May 2019 07:12:42 GMT  
-		Size: 3.2 KB (3155 bytes)  
+	-	`sha256:a50254dee7721960ec694affa8e9b49295968fdfe724612ea7c7367956bed7de`  
+		Last Modified: Wed, 16 Sep 2020 20:18:33 GMT  
+		Size: 3.2 KB (3189 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:17103b8db8dc48943485697b38c930d46f5d68a21d1d95269981e6f2ec11fca1`  
-		Last Modified: Thu, 09 May 2019 07:12:42 GMT  
-		Size: 104.0 B  
+	-	`sha256:7483c182407774dff37ccf8e1493df3edb4d760c5c8427e0cf24ebc574bdc339`  
+		Last Modified: Wed, 16 Sep 2020 20:18:33 GMT  
+		Size: 138.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6e7e7b62e7df569cda82d0bb86d350be7b7044c8a1ea144f3807515610110045`  
-		Last Modified: Thu, 09 May 2019 07:12:45 GMT  
-		Size: 17.1 MB (17126810 bytes)  
+	-	`sha256:31734cf3bf7ac3c03778d55c925a88afd38e0226f7bbed098153252890b2fb30`  
+		Last Modified: Wed, 16 Sep 2020 20:18:35 GMT  
+		Size: 17.1 MB (17127013 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
