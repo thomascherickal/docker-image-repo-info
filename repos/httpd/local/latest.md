@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:6d82971d37d087be9917ab2015a4dc807569c736d3f2017c0821ddc4ed126617`
-- Created: `2020-09-10T06:17:30.817059776Z`
-- Virtual Size: ~ 165.55 Mb  
+- Image ID: `sha256:417af7dc28bc66aa2cc4af18cbfa934cc55f46721b101beac68b9f5c33d7fcb2`
+- Created: `2020-09-15T23:05:57.348340124Z`
+- Virtual Size: ~ 137.53 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["httpd-foreground"]`
@@ -75,10 +75,9 @@ Other potentially useful URLs:
 Binary Packages:
 
 - `libaprutil1:amd64=1.6.1-4`
-- `libaprutil1-dev=1.6.1-4`
 - `libaprutil1-ldap:amd64=1.6.1-4`
 
-Licenses: (parsed from: `/usr/share/doc/libaprutil1/copyright`, `/usr/share/doc/libaprutil1-dev/copyright`, `/usr/share/doc/libaprutil1-ldap/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libaprutil1/copyright`, `/usr/share/doc/libaprutil1-ldap/copyright`)
 
 - `Apache-2.0`
 
@@ -103,9 +102,8 @@ Other potentially useful URLs:
 Binary Packages:
 
 - `libapr1:amd64=1.6.5-1+b1`
-- `libapr1-dev=1.6.5-1+b1`
 
-Licenses: (parsed from: `/usr/share/doc/libapr1/copyright`, `/usr/share/doc/libapr1-dev/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libapr1/copyright`)
 
 - `Apache-2.0`
 
@@ -651,9 +649,8 @@ Other potentially useful URLs:
 Binary Packages:
 
 - `libexpat1:amd64=2.2.6-2+deb10u1`
-- `libexpat1-dev:amd64=2.2.6-2+deb10u1`
 
-Licenses: (parsed from: `/usr/share/doc/libexpat1/copyright`, `/usr/share/doc/libexpat1-dev/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libexpat1/copyright`)
 
 - `MIT`
 
@@ -765,11 +762,9 @@ Other potentially useful URLs:
 Binary Packages:
 
 - `libc-bin=2.28-10`
-- `libc-dev-bin=2.28-10`
 - `libc6:amd64=2.28-10`
-- `libc6-dev:amd64=2.28-10`
 
-Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/libc-dev-bin/copyright`, `/usr/share/doc/libc6/copyright`, `/usr/share/doc/libc6-dev/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/libc6/copyright`)
 
 - `GPL-2`
 - `LGPL-2.1`
@@ -1513,67 +1508,6 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libzstd/1.3.8+dfsg-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libzstd/1.3.8+dfsg-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `linux=4.19.132-1`
-
-Binary Packages:
-
-- `linux-libc-dev:amd64=4.19.132-1`
-
-Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
-
-- `CRYPTOGAMS`
-- `GPL-2`
-- `GPL-2+`
-- `LGPL-2.1`
-- `Unicode-data`
-- `X11`
-- `Xen-interface`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris linux=4.19.132-1
-'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.132-1.dsc' linux_4.19.132-1.dsc 191615 SHA256:3431e9f27ad196e3cd3b0908b5ac5008ed2522118c4f51fd8f8a8c1240819e28
-'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.132.orig.tar.xz' linux_4.19.132.orig.tar.xz 107498852 SHA256:3e9e811d44d190dcd8af04e86ad4c00032a5b74cafece51cfd12581648e4e1db
-'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.132-1.debian.tar.xz' linux_4.19.132-1.debian.tar.xz 3308396 SHA256:c592597164270d5cfbf7efa12a04d8246ba26e2d9228bb8ae030ef88b147fe40
-```
-
-Other potentially useful URLs:
-
-- https://sources.debian.net/src/linux/4.19.132-1/ (for browsing the source)
-- https://sources.debian.net/src/linux/4.19.132-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/4.19.132-1/ (for access to the source package after it no longer exists in the archive)
-
-### `dpkg` source package: `lksctp-tools=1.0.18+dfsg-1`
-
-Binary Packages:
-
-- `libsctp-dev:amd64=1.0.18+dfsg-1`
-- `libsctp1:amd64=1.0.18+dfsg-1`
-
-Licenses: (parsed from: `/usr/share/doc/libsctp-dev/copyright`, `/usr/share/doc/libsctp1/copyright`)
-
-- `BSD-3-clause`
-- `GPL-2`
-- `GPL-2.0+`
-- `LGPL-2.1`
-- `LGPL-2.1+`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris lksctp-tools=1.0.18+dfsg-1
-'http://deb.debian.org/debian/pool/main/l/lksctp-tools/lksctp-tools_1.0.18+dfsg-1.dsc' lksctp-tools_1.0.18+dfsg-1.dsc 2017 SHA256:648c5a77722638056592fa9ba7bc99359ab70fcdf9f37c53e05d8cda96624705
-'http://deb.debian.org/debian/pool/main/l/lksctp-tools/lksctp-tools_1.0.18+dfsg.orig.tar.gz' lksctp-tools_1.0.18+dfsg.orig.tar.gz 194751 SHA256:ac0f4e499281e1d190b5cc9c7e31570de4b82fade1c2754a21b2c8e215cb3cf5
-'http://deb.debian.org/debian/pool/main/l/lksctp-tools/lksctp-tools_1.0.18+dfsg-1.debian.tar.xz' lksctp-tools_1.0.18+dfsg-1.debian.tar.xz 10488 SHA256:826130ee1a35bec5a0f73160328e4429f3a64e57a865c6e9b2286d2cc8ff2d30
-```
-
-Other potentially useful URLs:
-
-- https://sources.debian.net/src/lksctp-tools/1.0.18+dfsg-1/ (for browsing the source)
-- https://sources.debian.net/src/lksctp-tools/1.0.18+dfsg-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/lksctp-tools/1.0.18+dfsg-1/ (for access to the source package after it no longer exists in the archive)
-
 ### `dpkg` source package: `lsb=10.2019051400`
 
 Binary Packages:
@@ -1779,7 +1713,6 @@ Binary Packages:
 
 - `libldap-2.4-2:amd64=2.4.47+dfsg-3+deb10u2`
 - `libldap-common=2.4.47+dfsg-3+deb10u2`
-- `libldap2-dev:amd64=2.4.47+dfsg-3+deb10u2`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -2163,9 +2096,8 @@ Binary Packages:
 - `libuuid1:amd64=2.33.1-0.1`
 - `mount=2.33.1-0.1`
 - `util-linux=2.33.1-0.1`
-- `uuid-dev:amd64=2.33.1-0.1`
 
-Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/fdisk/copyright`, `/usr/share/doc/libblkid1/copyright`, `/usr/share/doc/libfdisk1/copyright`, `/usr/share/doc/libmount1/copyright`, `/usr/share/doc/libsmartcols1/copyright`, `/usr/share/doc/libuuid1/copyright`, `/usr/share/doc/mount/copyright`, `/usr/share/doc/util-linux/copyright`, `/usr/share/doc/uuid-dev/copyright`)
+Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/fdisk/copyright`, `/usr/share/doc/libblkid1/copyright`, `/usr/share/doc/libfdisk1/copyright`, `/usr/share/doc/libmount1/copyright`, `/usr/share/doc/libsmartcols1/copyright`, `/usr/share/doc/libuuid1/copyright`, `/usr/share/doc/mount/copyright`, `/usr/share/doc/util-linux/copyright`)
 
 - `BSD-2-clause`
 - `BSD-3-clause`
