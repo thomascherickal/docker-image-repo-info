@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:74176c9040d307e1285b2e2b2b510a073e66e13832b7278cce745950c08151bd`
-- Created: `2020-08-20T01:18:51.025039966Z`
-- Virtual Size: ~ 223.75 Mb  
+- Image ID: `sha256:1b4e8b7b856885b6538a2cc4ad43b944cca7ba921e3a7468add512ab5f03585b`
+- Created: `2020-09-17T02:35:05.916908798Z`
+- Virtual Size: ~ 222.79 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -127,19 +127,23 @@ $ apt-get source -qq --print-uris audit=1:2.8.5-2ubuntu6
 'http://archive.ubuntu.com/ubuntu/pool/main/a/audit/audit_2.8.5-2ubuntu6.debian.tar.xz' audit_2.8.5-2ubuntu6.debian.tar.xz 18712 SHA256:d85ecf206bfe256a86e6d39602cd2744beda264a28e413f31c4da227e6542ea7
 ```
 
-### `dpkg` source package: `base-files=11ubuntu5.1`
+### `dpkg` source package: `base-files=11ubuntu5.2`
 
 Binary Packages:
 
-- `base-files=11ubuntu5.1`
+- `base-files=11ubuntu5.2`
 
 Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris base-files=11ubuntu5.2
+'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_11ubuntu5.2.dsc' base-files_11ubuntu5.2.dsc 1676 SHA256:d945ac6208e2c9b16ca462f4e054df7a21df2f019fa9be017cce668c44313b2f
+'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_11ubuntu5.2.tar.xz' base-files_11ubuntu5.2.tar.xz 80528 SHA256:8629f826ab5e29cf0c0f03042912e274fead6eef27f5c404ea0103c5ff0bf20f
+```
 
 ### `dpkg` source package: `base-passwd=3.5.47`
 
@@ -585,11 +589,11 @@ $ apt-get source -qq --print-uris gnupg2=2.2.19-3ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.19-3ubuntu2.debian.tar.xz' gnupg2_2.2.19-3ubuntu2.debian.tar.xz 65068 SHA256:fd2dc1a844dbce1b989e8c6f7d8199c950bd3c35c8aefa553dcc27f9cb977ac6
 ```
 
-### `dpkg` source package: `gnutls28=3.6.13-2ubuntu1.2`
+### `dpkg` source package: `gnutls28=3.6.13-2ubuntu1.3`
 
 Binary Packages:
 
-- `libgnutls30:amd64=3.6.13-2ubuntu1.2`
+- `libgnutls30:amd64=3.6.13-2ubuntu1.3`
 
 Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 
@@ -607,9 +611,15 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 - `LGPLv3+_or_GPLv2+`
 - `The main library is licensed under GNU Lesser`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris gnutls28=3.6.13-2ubuntu1.3
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.13-2ubuntu1.3.dsc' gnutls28_3.6.13-2ubuntu1.3.dsc 3594 SHA256:47cd345ce3261708acc91f85abb2b1910702fb9451867d0d937f1f8d4db9905b
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.13.orig.tar.xz' gnutls28_3.6.13.orig.tar.xz 5958956 SHA256:32041df447d9f4644570cf573c9f60358e865637d69b7e59d1159b7240b52f38
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.13.orig.tar.xz.asc' gnutls28_3.6.13.orig.tar.xz.asc 667 SHA256:79eb677b19a35de2f17d2ea87e863755cd53f0072b9435c8a4b57669360f57d0
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.13-2ubuntu1.3.debian.tar.xz' gnutls28_3.6.13-2ubuntu1.3.debian.tar.xz 64836 SHA256:5e821c76567b141f8aa511f734f1be9c4c83b5da208acb7c53352a3dd3f8a293
+```
 
 ### `dpkg` source package: `grep=3.4-1`
 
@@ -1337,14 +1347,14 @@ $ apt-get source -qq --print-uris p11-kit=0.23.20-1build1
 'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.20-1build1.debian.tar.xz' p11-kit_0.23.20-1build1.debian.tar.xz 22004 SHA256:c43279d68adc9f710ff438f7084316e1e3ca9918f7c653bf1cb932927c415960
 ```
 
-### `dpkg` source package: `pam=1.3.1-5ubuntu4`
+### `dpkg` source package: `pam=1.3.1-5ubuntu4.1`
 
 Binary Packages:
 
-- `libpam-modules:amd64=1.3.1-5ubuntu4`
-- `libpam-modules-bin=1.3.1-5ubuntu4`
-- `libpam-runtime=1.3.1-5ubuntu4`
-- `libpam0g:amd64=1.3.1-5ubuntu4`
+- `libpam-modules:amd64=1.3.1-5ubuntu4.1`
+- `libpam-modules-bin=1.3.1-5ubuntu4.1`
+- `libpam-runtime=1.3.1-5ubuntu4.1`
+- `libpam0g:amd64=1.3.1-5ubuntu4.1`
 
 Licenses: (parsed from: `/usr/share/doc/libpam-modules/copyright`, `/usr/share/doc/libpam-modules-bin/copyright`, `/usr/share/doc/libpam-runtime/copyright`, `/usr/share/doc/libpam0g/copyright`)
 
@@ -1353,10 +1363,10 @@ Licenses: (parsed from: `/usr/share/doc/libpam-modules/copyright`, `/usr/share/d
 Source:
 
 ```console
-$ apt-get source -qq --print-uris pam=1.3.1-5ubuntu4
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.3.1-5ubuntu4.dsc' pam_1.3.1-5ubuntu4.dsc 2699 SHA256:b0d51a23352d570209f00156b796e685cee249dfcc36872154de0138f0b27e4b
+$ apt-get source -qq --print-uris pam=1.3.1-5ubuntu4.1
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.3.1-5ubuntu4.1.dsc' pam_1.3.1-5ubuntu4.1.dsc 2707 SHA256:35ab14df7e92736365c7f25ab34c409c0e61744873a00eb2501913a78391242e
 'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.3.1.orig.tar.xz' pam_1.3.1.orig.tar.xz 912332 SHA256:eff47a4ecd833fbf18de9686632a70ee8d0794b79aecb217ebd0ce11db4cd0db
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.3.1-5ubuntu4.debian.tar.xz' pam_1.3.1-5ubuntu4.debian.tar.xz 159780 SHA256:d5c539ac0bb5d05b62a2e9f936145d1cc8dbf94a91e0268e7ae98f043dbe8b0b
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.3.1-5ubuntu4.1.debian.tar.xz' pam_1.3.1-5ubuntu4.1.debian.tar.xz 159852 SHA256:0077dbedfcfece1aad46febd0f7a3be5fa90ecd05080b660843c8d9ec53ff3c4
 ```
 
 ### `dpkg` source package: `pcre2=10.34-7`
@@ -1697,19 +1707,19 @@ $ apt-get source -qq --print-uris ubuntu-keyring=2020.02.11.2
 'http://archive.ubuntu.com/ubuntu/pool/main/u/ubuntu-keyring/ubuntu-keyring_2020.02.11.2.tar.gz' ubuntu-keyring_2020.02.11.2.tar.gz 39180 SHA256:d2ee9deedb99f5a2b8bee2c0f9e85834638bfbc46d7a59edba7ce2bb6229bcec
 ```
 
-### `dpkg` source package: `util-linux=2.34-0.1ubuntu9`
+### `dpkg` source package: `util-linux=2.34-0.1ubuntu9.1`
 
 Binary Packages:
 
-- `bsdutils=1:2.34-0.1ubuntu9`
-- `fdisk=2.34-0.1ubuntu9`
-- `libblkid1:amd64=2.34-0.1ubuntu9`
-- `libfdisk1:amd64=2.34-0.1ubuntu9`
-- `libmount1:amd64=2.34-0.1ubuntu9`
-- `libsmartcols1:amd64=2.34-0.1ubuntu9`
-- `libuuid1:amd64=2.34-0.1ubuntu9`
-- `mount=2.34-0.1ubuntu9`
-- `util-linux=2.34-0.1ubuntu9`
+- `bsdutils=1:2.34-0.1ubuntu9.1`
+- `fdisk=2.34-0.1ubuntu9.1`
+- `libblkid1:amd64=2.34-0.1ubuntu9.1`
+- `libfdisk1:amd64=2.34-0.1ubuntu9.1`
+- `libmount1:amd64=2.34-0.1ubuntu9.1`
+- `libsmartcols1:amd64=2.34-0.1ubuntu9.1`
+- `libuuid1:amd64=2.34-0.1ubuntu9.1`
+- `mount=2.34-0.1ubuntu9.1`
+- `util-linux=2.34-0.1ubuntu9.1`
 
 Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/fdisk/copyright`, `/usr/share/doc/libblkid1/copyright`, `/usr/share/doc/libfdisk1/copyright`, `/usr/share/doc/libmount1/copyright`, `/usr/share/doc/libsmartcols1/copyright`, `/usr/share/doc/libuuid1/copyright`, `/usr/share/doc/mount/copyright`, `/usr/share/doc/util-linux/copyright`)
 
@@ -1733,17 +1743,17 @@ Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/fdi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris util-linux=2.34-0.1ubuntu9
-'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.34-0.1ubuntu9.dsc' util-linux_2.34-0.1ubuntu9.dsc 3380 SHA256:d6afdba4e84e53a0e8bb153383173d2409de9ab2679d503a683ebcbaa972b225
+$ apt-get source -qq --print-uris util-linux=2.34-0.1ubuntu9.1
+'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.34-0.1ubuntu9.1.dsc' util-linux_2.34-0.1ubuntu9.1.dsc 4067 SHA256:83327235f08a42a94267f537e8f81c56ed149727ff333298a7dccd1e556d655f
 'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.34.orig.tar.xz' util-linux_2.34.orig.tar.xz 4974812 SHA256:743f9d0c7252b6db246b659c1e1ce0bd45d8d4508b4dfa427bbb4a3e9b9f62b5
-'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.34-0.1ubuntu9.debian.tar.xz' util-linux_2.34-0.1ubuntu9.debian.tar.xz 90728 SHA256:23a6c2f493ad0b4600a4b0d0d75b9337a1f24735e5a02ddd8cbff4fd34b6c5d7
+'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.34-0.1ubuntu9.1.debian.tar.xz' util-linux_2.34-0.1ubuntu9.1.debian.tar.xz 91620 SHA256:17d9dfaad33ce33b75c3161d6e699d8eb27a140237ed0126b3133b2a2b4dd84c
 ```
 
-### `dpkg` source package: `xz-utils=5.2.4-1`
+### `dpkg` source package: `xz-utils=5.2.4-1ubuntu1`
 
 Binary Packages:
 
-- `liblzma5:amd64=5.2.4-1`
+- `liblzma5:amd64=5.2.4-1ubuntu1`
 
 Licenses: (parsed from: `/usr/share/doc/liblzma5/copyright`)
 
@@ -1766,11 +1776,11 @@ Licenses: (parsed from: `/usr/share/doc/liblzma5/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris xz-utils=5.2.4-1
-'http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.4-1.dsc' xz-utils_5.2.4-1.dsc 2518 SHA256:b1572c4efb3c8ebf6f0e044b70e1e0451c919a99d3f80be03b624a54dd7ea593
+$ apt-get source -qq --print-uris xz-utils=5.2.4-1ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.4-1ubuntu1.dsc' xz-utils_5.2.4-1ubuntu1.dsc 2629 SHA256:ef1afb534aae085f0f1265a0b282be3c839b97f5fd30ed652826aeb81b132724
 'http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.4.orig.tar.xz' xz-utils_5.2.4.orig.tar.xz 1053868 SHA256:9717ae363760dedf573dad241420c5fea86256b65bc21d2cf71b2b12f0544f4b
 'http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.4.orig.tar.xz.asc' xz-utils_5.2.4.orig.tar.xz.asc 879 SHA256:88290c1deeaf674ae2a4821f4373fe0e4cc2a94199eae6dcc26df1e70cc15303
-'http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.4-1.debian.tar.xz' xz-utils_5.2.4-1.debian.tar.xz 135296 SHA256:d37b558444b76e88a69601df008cf1c0343c58cb7765b7bbb2099b0a19619361
+'http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.4-1ubuntu1.debian.tar.xz' xz-utils_5.2.4-1ubuntu1.debian.tar.xz 135512 SHA256:daaa79e97b131e18381c05ed3b7cb878acd6c6f7341779039d7a2af765f37627
 ```
 
 ### `dpkg` source package: `zlib=1:1.2.11.dfsg-2ubuntu1`
