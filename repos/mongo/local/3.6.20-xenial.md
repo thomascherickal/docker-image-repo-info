@@ -1,10 +1,10 @@
-# `mongo:3.6.19-xenial`
+# `mongo:3.6.20-xenial`
 
 ## Docker Metadata
 
-- Image ID: `sha256:e9a9a525de518f0e4a5243677811d5225aedf618c47deefda5bbb34dd49953ec`
-- Created: `2020-08-19T23:27:30.146586501Z`
-- Virtual Size: ~ 441.05 Mb  
+- Image ID: `sha256:6b4c3b0ac66edbdcbf51a17080a92b759b5fa6aa8bcbb964988b998370b0db6e`
+- Created: `2020-09-16T22:33:35.306715451Z`
+- Virtual Size: ~ 441.62 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -17,7 +17,7 @@
   - `MONGO_PACKAGE=mongodb-org`
   - `MONGO_REPO=repo.mongodb.org`
   - `MONGO_MAJOR=3.6`
-  - `MONGO_VERSION=3.6.19`
+  - `MONGO_VERSION=3.6.20`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -143,19 +143,23 @@ $ apt-get source -qq --print-uris audit=1:2.4.5-1ubuntu2.1
 'http://archive.ubuntu.com/ubuntu/pool/main/a/audit/audit_2.4.5-1ubuntu2.1.debian.tar.xz' audit_2.4.5-1ubuntu2.1.debian.tar.xz 19292 SHA256:285eef1a789f47c9ad6a30dc8427822b624146715a8f603d011bdc117529d5b2
 ```
 
-### `dpkg` source package: `base-files=9.4ubuntu4.12`
+### `dpkg` source package: `base-files=9.4ubuntu4.13`
 
 Binary Packages:
 
-- `base-files=9.4ubuntu4.12`
+- `base-files=9.4ubuntu4.13`
 
 Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris base-files=9.4ubuntu4.13
+'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_9.4ubuntu4.13.dsc' base-files_9.4ubuntu4.13.dsc 1639 SHA256:920d924dcd8b818b0bbebf3a0393ebdf885f04ac8bfa927c566718caba42040a
+'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_9.4ubuntu4.13.tar.xz' base-files_9.4ubuntu4.13.tar.xz 67184 SHA256:a0a0a84ed702415d8259eb8433fafcf386c62dcc662b125f7abe3136a011460c
+```
 
 ### `dpkg` source package: `base-passwd=3.5.39`
 
@@ -965,15 +969,15 @@ $ apt-get source -qq --print-uris mawk=1.3.3-17ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.3-17ubuntu2.diff.gz' mawk_1.3.3-17ubuntu2.diff.gz 63882 SHA256:670103046767474be29e80f2143dc67e3d0b958972f5942c3df94883f978eded
 ```
 
-### `dpkg` source package: `mongodb-org=3.6.19`
+### `dpkg` source package: `mongodb-org=3.6.20`
 
 Binary Packages:
 
-- `mongodb-org=3.6.19`
-- `mongodb-org-mongos=3.6.19`
-- `mongodb-org-server=3.6.19`
-- `mongodb-org-shell=3.6.19`
-- `mongodb-org-tools=3.6.19`
+- `mongodb-org=3.6.20`
+- `mongodb-org-mongos=3.6.20`
+- `mongodb-org-server=3.6.20`
+- `mongodb-org-shell=3.6.20`
+- `mongodb-org-tools=3.6.20`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1253,14 +1257,9 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=229-4ubuntu21.28
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_229-4ubuntu21.28.dsc' systemd_229-4ubuntu21.28.dsc 4643 SHA256:d1dba84ee92a4d5fc5a8a7b2568afebc7db1c7d113f23042c7ee19b1c222de6c
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_229.orig.tar.gz' systemd_229.orig.tar.gz 4319173 SHA256:b51b0a48d1beb388d95bd6a98d62be05490335d4bb388aefecdcb576e91e0741
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_229-4ubuntu21.28.debian.tar.xz' systemd_229-4ubuntu21.28.debian.tar.xz 312524 SHA256:8be42f694303095740a7c8381a0914b4573c7a8c18b97a844ebd3c0954e31eb5
-```
 
 ### `dpkg` source package: `sysvinit=2.88dsf-59.3ubuntu2`
 
