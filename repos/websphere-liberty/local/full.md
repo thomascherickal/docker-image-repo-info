@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:a9fff67630d5b8966e357fa9ab9d8adbaa22fb18c5ce4a2d727f3a4603e9d3e3`
-- Created: `2020-08-28T20:45:11.514735999Z`
-- Virtual Size: ~ 623.38 Mb  
+- Image ID: `sha256:8f3985a1aaa5bdeb9af855a4cf02e5dc7138c69ff11c7f30daa94fd0c7226309`
+- Created: `2020-09-17T04:14:00.57461663Z`
+- Virtual Size: ~ 627.64 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/opt/ibm/helpers/runtime/docker-server.sh"]`
@@ -135,19 +135,23 @@ $ apt-get source -qq --print-uris audit=1:2.8.2-1ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/a/audit/audit_2.8.2-1ubuntu1.debian.tar.xz' audit_2.8.2-1ubuntu1.debian.tar.xz 21344 SHA256:2bc93230e3bf01eef5e9a5acff8f904af074e6e39003f1db8941118fbd041ec2
 ```
 
-### `dpkg` source package: `base-files=10.1ubuntu2.9`
+### `dpkg` source package: `base-files=10.1ubuntu2.10`
 
 Binary Packages:
 
-- `base-files=10.1ubuntu2.9`
+- `base-files=10.1ubuntu2.10`
 
 Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris base-files=10.1ubuntu2.10
+'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_10.1ubuntu2.10.dsc' base-files_10.1ubuntu2.10.dsc 1688 SHA256:f6d4715c4dbe63584bcc6cd1852cda4d84081990eb02354445cb03f57e566793
+'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_10.1ubuntu2.10.tar.xz' base-files_10.1ubuntu2.10.tar.xz 79780 SHA256:b1735b09b972f818eadb2bc99b3f974b49561341a53abea476afe2a6da87273e
+```
 
 ### `dpkg` source package: `base-passwd=3.5.44`
 
@@ -514,15 +518,9 @@ Licenses: (parsed from: `/usr/share/doc/gpgv/copyright`)
 - `TinySCHEME`
 - `permissive`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gnupg2=2.2.4-1ubuntu1.2
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.4-1ubuntu1.2.dsc' gnupg2_2.2.4-1ubuntu1.2.dsc 3816 SHA256:3b5821e3a8c95653140d0bbc791098ab6c08d6fc7206857a21b25e291e79f2bc
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.4.orig.tar.bz2' gnupg2_2.2.4.orig.tar.bz2 6571487 SHA256:401a3e64780fdfa6d7670de0880aa5c9d589b3db7a7098979d7606cec546f2ec
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.4.orig.tar.bz2.asc' gnupg2_2.2.4.orig.tar.bz2.asc 952 SHA256:30dd26e12b451e8f6799ba3a81449ed18db3d3e747820b237a39745ab264c899
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.4-1ubuntu1.2.debian.tar.bz2' gnupg2_2.2.4-1ubuntu1.2.debian.tar.bz2 82238 SHA256:ad2e70205e5d5f52c092c58e619ee58e5f5bc2b44f44a2c462296fc34a1960de
-```
 
 ### `dpkg` source package: `gnutls28=3.5.18-1ubuntu1.4`
 
@@ -1054,22 +1052,26 @@ $ apt-get source -qq --print-uris p11-kit=0.23.9-2
 'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.9-2.debian.tar.xz' p11-kit_0.23.9-2.debian.tar.xz 21704 SHA256:fa6af69f96f6ccdce95d61e39662a38768b05f8872b2b2008d56cc4fff0ed3fd
 ```
 
-### `dpkg` source package: `pam=1.1.8-3.6ubuntu2.18.04.1`
+### `dpkg` source package: `pam=1.1.8-3.6ubuntu2.18.04.2`
 
 Binary Packages:
 
-- `libpam-modules:amd64=1.1.8-3.6ubuntu2.18.04.1`
-- `libpam-modules-bin=1.1.8-3.6ubuntu2.18.04.1`
-- `libpam-runtime=1.1.8-3.6ubuntu2.18.04.1`
-- `libpam0g:amd64=1.1.8-3.6ubuntu2.18.04.1`
+- `libpam-modules:amd64=1.1.8-3.6ubuntu2.18.04.2`
+- `libpam-modules-bin=1.1.8-3.6ubuntu2.18.04.2`
+- `libpam-runtime=1.1.8-3.6ubuntu2.18.04.2`
+- `libpam0g:amd64=1.1.8-3.6ubuntu2.18.04.2`
 
 Licenses: (parsed from: `/usr/share/doc/libpam-modules/copyright`, `/usr/share/doc/libpam-modules-bin/copyright`, `/usr/share/doc/libpam-runtime/copyright`, `/usr/share/doc/libpam0g/copyright`)
 
 - `GPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris pam=1.1.8-3.6ubuntu2.18.04.2
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.1.8-3.6ubuntu2.18.04.2.dsc' pam_1.1.8-3.6ubuntu2.18.04.2.dsc 2557 SHA256:5c46f04306f829f2226773f206d598fcca0e982585c62b48dcda683912dfd662
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.1.8-3.6ubuntu2.18.04.2.tar.gz' pam_1.1.8-3.6ubuntu2.18.04.2.tar.gz 1991026 SHA256:fbd0f113c84beeb8cea5a09e0ad8672e79a12519cd53510389591f915fdcdeef
+```
 
 ### `dpkg` source package: `pcre3=2:8.39-9`
 
@@ -1339,14 +1341,9 @@ Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/fdi
 - `MIT`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris util-linux=2.31.1-0.4ubuntu3.6
-'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.31.1-0.4ubuntu3.6.dsc' util-linux_2.31.1-0.4ubuntu3.6.dsc 4147 SHA256:e1bd0d6290ebeefdeb6b2f4925d04c01b833292efcf59441343254db51f7bbf0
-'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.31.1.orig.tar.xz' util-linux_2.31.1.orig.tar.xz 4514032 SHA256:cfd5789570e9ff75e079471faeca1511ade1607f650523a6ad25d1e26516ae4e
-'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.31.1-0.4ubuntu3.6.debian.tar.xz' util-linux_2.31.1-0.4ubuntu3.6.debian.tar.xz 101672 SHA256:b019ef3e51f6dee11811afb6943bacc59fb8fb961785bfc6448a92c4a5c0f8c2
-```
 
 ### `dpkg` source package: `xz-utils=5.2.2-1.3`
 
