@@ -1,10 +1,10 @@
-# `flink:1.11.1-scala_2.11-java11`
+# `flink:1.11.2-scala_2.11-java11`
 
 ## Docker Metadata
 
-- Image ID: `sha256:55c1106a941dbd811e6f72d96da0af12350367f367afb9ee572e6d498e8420b1`
-- Created: `2020-09-11T04:46:26.570262367Z`
-- Virtual Size: ~ 656.28 Mb  
+- Image ID: `sha256:b58f0f9230af945cef9c50c258f59e0476cfe5c51f68f5be54261c736db796ff`
+- Created: `2020-09-16T22:57:41.861959573Z`
+- Virtual Size: ~ 655.25 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -15,9 +15,9 @@
   - `JAVA_HOME=/usr/local/openjdk-11`
   - `JAVA_VERSION=11.0.8`
   - `GOSU_VERSION=1.11`
-  - `FLINK_TGZ_URL=https://www.apache.org/dyn/closer.cgi?action=download&filename=flink/flink-1.11.1/flink-1.11.1-bin-scala_2.11.tgz`
-  - `FLINK_ASC_URL=https://www.apache.org/dist/flink/flink-1.11.1/flink-1.11.1-bin-scala_2.11.tgz.asc`
-  - `GPG_KEY=6B6291A8502BA8F0913AE04DDEB95B05BF075300`
+  - `FLINK_TGZ_URL=https://www.apache.org/dyn/closer.cgi?action=download&filename=flink/flink-1.11.2/flink-1.11.2-bin-scala_2.11.tgz`
+  - `FLINK_ASC_URL=https://www.apache.org/dist/flink/flink-1.11.2/flink-1.11.2-bin-scala_2.11.tgz.asc`
+  - `GPG_KEY=C63E230EFFF519A5BBF2C9AE6767487CD505859C`
   - `CHECK_GPG=true`
   - `FLINK_HOME=/opt/flink`
 
