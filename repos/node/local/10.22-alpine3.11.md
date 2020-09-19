@@ -1,9 +1,9 @@
-# `node:10.22.0-alpine3.11`
+# `node:10.22.1-alpine3.11`
 
 ## Docker Metadata
 
-- Image ID: `sha256:8e473595b853548740fb6392fa00c81b37383a4506284410c16365ad44f41905`
-- Created: `2020-07-22T00:50:56.139399792Z`
+- Image ID: `sha256:3ac6f53a4041633286b6320c2db380521cc2b80eba4bfd7e9d9d4fdb92262bf3`
+- Created: `2020-09-16T15:27:35.518247484Z`
 - Virtual Size: ~ 83.52 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -11,7 +11,7 @@
 - Command: `["node"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `NODE_VERSION=10.22.0`
+  - `NODE_VERSION=10.22.1`
   - `YARN_VERSION=1.22.4`
 
 ## `apk` (`.apk`-based packages)
@@ -138,16 +138,16 @@ OpenSSL
 ### `apk` package: `libgcc`
 
 ```console
-libgcc-9.2.0-r4 description:
+libgcc-9.3.0-r0 description:
 GNU C compiler runtime libraries
 
-libgcc-9.2.0-r4 webpage:
+libgcc-9.3.0-r0 webpage:
 http://gcc.gnu.org
 
-libgcc-9.2.0-r4 installed size:
+libgcc-9.3.0-r0 installed size:
 90112
 
-libgcc-9.2.0-r4 license:
+libgcc-9.3.0-r0 license:
 GPL LGPL
 
 ```
@@ -172,16 +172,16 @@ OpenSSL
 ### `apk` package: `libstdc++`
 
 ```console
-libstdc++-9.2.0-r4 description:
+libstdc++-9.3.0-r0 description:
 GNU C++ standard runtime library
 
-libstdc++-9.2.0-r4 webpage:
+libstdc++-9.3.0-r0 webpage:
 http://gcc.gnu.org
 
-libstdc++-9.2.0-r4 installed size:
+libstdc++-9.3.0-r0 installed size:
 1671168
 
-libstdc++-9.2.0-r4 license:
+libstdc++-9.3.0-r0 license:
 GPL LGPL
 
 ```
