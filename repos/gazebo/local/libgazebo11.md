@@ -2381,14 +2381,9 @@ Licenses: (parsed from: `/usr/share/doc/libignition-math6/copyright`, `/usr/shar
 - `Apache-2.0`
 - `BSD-3-clause`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ignition-math6=6.5.0-2~focal
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.5.0-2~focal.dsc' ignition-math6_6.5.0-2~focal.dsc 1379 SHA256:071c1363eb487f24ce2c57207d8c8ef5deb0e5ddbcf3611a318451c89ec78bff
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.5.0.orig.tar.bz2' ignition-math6_6.5.0.orig.tar.bz2 446604 SHA256:ad98d0c1c8798a1f3df8c5ad05916fc6a28013e13afe90ec2f9fef3e27c4c6bf
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.5.0-2~focal.debian.tar.xz' ignition-math6_6.5.0-2~focal.debian.tar.xz 2600 SHA256:e6d78903f8bacb5e292046ca849da91916793367ebc64ae068b537506ebe03cf
-```
 
 ### `dpkg` source package: `ignition-msgs5=5.3.0-1~focal`
 
