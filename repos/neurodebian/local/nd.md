@@ -259,19 +259,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris cdebconf=0.253
-'http://deb.debian.org/debian/pool/main/c/cdebconf/cdebconf_0.253.dsc' cdebconf_0.253.dsc 2750 SHA256:c66fc6fa7bc175f211b597e31326fa20fd5780a936193d40c6777e7bb88b93da
-'http://deb.debian.org/debian/pool/main/c/cdebconf/cdebconf_0.253.tar.xz' cdebconf_0.253.tar.xz 275576 SHA256:a9546e1078b7260dc2154750b1354d1b14a02375445642a4e4e083451d0580a7
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/cdebconf/0.253/
 
-- https://sources.debian.net/src/cdebconf/0.253/ (for browsing the source)
-- https://sources.debian.net/src/cdebconf/0.253/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/cdebconf/0.253/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `coreutils=8.32-3`
 
@@ -283,21 +277,13 @@ Licenses: (parsed from: `/usr/share/doc/coreutils/copyright`)
 
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris coreutils=8.32-3
-'http://deb.debian.org/debian/pool/main/c/coreutils/coreutils_8.32-3.dsc' coreutils_8.32-3.dsc 2096 SHA256:5cd5095da4d93724b9d585e8cd1cae879957987716d70da68298c57be994c4c2
-'http://deb.debian.org/debian/pool/main/c/coreutils/coreutils_8.32.orig.tar.xz' coreutils_8.32.orig.tar.xz 5547836 SHA256:4458d8de7849df44ccab15e16b1548b285224dbba5f08fac070c1c0e0bcc4cfa
-'http://deb.debian.org/debian/pool/main/c/coreutils/coreutils_8.32.orig.tar.xz.asc' coreutils_8.32.orig.tar.xz.asc 833 SHA256:71b944375b322ba77c9c56b687b48df885c676d4fd7c465b3706713a9b62ce0a
-'http://deb.debian.org/debian/pool/main/c/coreutils/coreutils_8.32-3.debian.tar.xz' coreutils_8.32-3.debian.tar.xz 31396 SHA256:00544162cfd3bc2a2094ba0025692d38b494dbd1123ced3db3129430fa6b93af
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/coreutils/8.32-3/
 
-- https://sources.debian.net/src/coreutils/8.32-3/ (for browsing the source)
-- https://sources.debian.net/src/coreutils/8.32-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/coreutils/8.32-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2`
 
@@ -1294,20 +1280,13 @@ Licenses: (parsed from: `/usr/share/doc/libseccomp2/copyright`)
 
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libseccomp=2.4.3-1
-'http://deb.debian.org/debian/pool/main/libs/libseccomp/libseccomp_2.4.3-1.dsc' libseccomp_2.4.3-1.dsc 2416 SHA256:753a11c3aaed55ee2f96cc428582bee5f9e67684d3928337f44db066bf345f5b
-'http://deb.debian.org/debian/pool/main/libs/libseccomp/libseccomp_2.4.3.orig.tar.gz' libseccomp_2.4.3.orig.tar.gz 598147 SHA256:cf15d1421997fac45b936515af61d209c4fd788af11005d212b3d0fd71e7991d
-'http://deb.debian.org/debian/pool/main/libs/libseccomp/libseccomp_2.4.3-1.debian.tar.xz' libseccomp_2.4.3-1.debian.tar.xz 13400 SHA256:dadccb6c01ddaebad2f694527db8bda948ccd4c9dab9a895adc211ac3a57c49b
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libseccomp/2.4.3-1/
 
-- https://sources.debian.net/src/libseccomp/2.4.3-1/ (for browsing the source)
-- https://sources.debian.net/src/libseccomp/2.4.3-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libseccomp/2.4.3-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libselinux=3.1-2`
 
