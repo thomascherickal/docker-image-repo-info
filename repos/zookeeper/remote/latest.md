@@ -1,24 +1,25 @@
 ## `zookeeper:latest`
 
 ```console
-$ docker pull zookeeper@sha256:80ad2170ad62216b7299f18d1883ab2155a7c3d581a8983f1fe9635b146cb9fb
+$ docker pull zookeeper@sha256:c0790a4d50da5f87338706e6cd3774f8934a267b8c3e1c5c190e25a472520163
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
 -	Platforms:
 	-	linux; amd64
+	-	linux; arm64 variant v8
 
 ### `zookeeper:latest` - linux; amd64
 
 ```console
-$ docker pull zookeeper@sha256:4683ec75d4fcf20ea1bfbac75ec4bb9f18a77abbfe9ccbeabf3472aee5d31be8
+$ docker pull zookeeper@sha256:a6ba8cd94070ecd6d30f0c2c0911dc04c7d6c7eef77e35460d8e43cdb7a0bd33
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **90.3 MB (90301531 bytes)**  
+-	Total Size: **90.4 MB (90385357 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3bbbc7545ea8eb889f714446d7c5712621abaea12ea68b94b1c62c4934edbf40`
+-	Image ID: `sha256:36b7f3aa23400a462a47cce132ee008a9d55cc230328c76a8db5822fd4fbb221`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["zkServer.sh","start-foreground"]`
 
@@ -49,26 +50,26 @@ RUN set -eux;     groupadd -r zookeeper --gid=1000;     useradd -r -g zookeeper 
 RUN set -eux;     apt-get update;     DEBIAN_FRONTEND=noninteractive     apt-get install -y --no-install-recommends         ca-certificates         dirmngr         gosu         gnupg         netcat         wget;     rm -rf /var/lib/apt/lists/*;     gosu nobody true
 # Fri, 11 Sep 2020 03:47:56 GMT
 ARG GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C
-# Fri, 11 Sep 2020 03:47:56 GMT
-ARG SHORT_DISTRO_NAME=zookeeper-3.6.1
-# Fri, 11 Sep 2020 03:47:57 GMT
-ARG DISTRO_NAME=apache-zookeeper-3.6.1-bin
-# Fri, 11 Sep 2020 03:48:03 GMT
-# ARGS: DISTRO_NAME=apache-zookeeper-3.6.1-bin GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C SHORT_DISTRO_NAME=zookeeper-3.6.1
+# Tue, 22 Sep 2020 18:09:54 GMT
+ARG SHORT_DISTRO_NAME=zookeeper-3.6.2
+# Tue, 22 Sep 2020 18:09:54 GMT
+ARG DISTRO_NAME=apache-zookeeper-3.6.2-bin
+# Tue, 22 Sep 2020 18:09:57 GMT
+# ARGS: DISTRO_NAME=apache-zookeeper-3.6.2-bin GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C SHORT_DISTRO_NAME=zookeeper-3.6.2
 RUN set -eux;     ddist() {         local f="$1"; shift;         local distFile="$1"; shift;         local success=;         local distUrl=;         for distUrl in             'https://www.apache.org/dyn/closer.cgi?action=download&filename='             https://www-us.apache.org/dist/             https://www.apache.org/dist/             https://archive.apache.org/dist/         ; do             if wget -q -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then                 success=1;                 break;             fi;         done;         [ -n "$success" ];     };     ddist "$DISTRO_NAME.tar.gz" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz";     ddist "$DISTRO_NAME.tar.gz.asc" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --keyserver ha.pool.sks-keyservers.net --recv-key "$GPG_KEY" ||     gpg --keyserver pgp.mit.edu --recv-keys "$GPG_KEY" ||     gpg --keyserver keyserver.pgp.com --recv-keys "$GPG_KEY";     gpg --batch --verify "$DISTRO_NAME.tar.gz.asc" "$DISTRO_NAME.tar.gz";     tar -zxf "$DISTRO_NAME.tar.gz";     mv "$DISTRO_NAME/conf/"* "$ZOO_CONF_DIR";     rm -rf "$GNUPGHOME" "$DISTRO_NAME.tar.gz" "$DISTRO_NAME.tar.gz.asc";     chown -R zookeeper:zookeeper "/$DISTRO_NAME"
-# Fri, 11 Sep 2020 03:48:03 GMT
-WORKDIR /apache-zookeeper-3.6.1-bin
-# Fri, 11 Sep 2020 03:48:04 GMT
+# Tue, 22 Sep 2020 18:09:57 GMT
+WORKDIR /apache-zookeeper-3.6.2-bin
+# Tue, 22 Sep 2020 18:09:58 GMT
 VOLUME [/data /datalog /logs]
-# Fri, 11 Sep 2020 03:48:04 GMT
+# Tue, 22 Sep 2020 18:09:58 GMT
 EXPOSE 2181 2888 3888 8080
-# Fri, 11 Sep 2020 03:48:04 GMT
-ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.6.1-bin/bin ZOOCFGDIR=/conf
-# Fri, 11 Sep 2020 03:48:04 GMT
+# Tue, 22 Sep 2020 18:09:58 GMT
+ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.6.2-bin/bin ZOOCFGDIR=/conf
+# Tue, 22 Sep 2020 18:09:58 GMT
 COPY file:876dd2fa348f66a85a81dab4d431046f781ebc426b6fd355fdac0b388935e8d1 in / 
-# Fri, 11 Sep 2020 03:48:04 GMT
+# Tue, 22 Sep 2020 18:09:58 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Fri, 11 Sep 2020 03:48:05 GMT
+# Tue, 22 Sep 2020 18:09:59 GMT
 CMD ["zkServer.sh" "start-foreground"]
 ```
 
@@ -97,11 +98,103 @@ CMD ["zkServer.sh" "start-foreground"]
 		Last Modified: Fri, 11 Sep 2020 03:48:21 GMT  
 		Size: 5.4 MB (5382361 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c612a6ea05917b61ecbed6d34ca96b4d2bd5029d7e6cc448b725b8cd750aa9ff`  
-		Last Modified: Fri, 11 Sep 2020 03:48:26 GMT  
-		Size: 12.4 MB (12350454 bytes)  
+	-	`sha256:99abe5102984c99354dd9f87afb600b289116c64971b0ce1f209f1aa2ac8acf5`  
+		Last Modified: Tue, 22 Sep 2020 18:10:10 GMT  
+		Size: 12.4 MB (12434280 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:97a13d9cdc74ea0cac671c71c80c3d8d8029951581a2f27e2161c2f74d97eafd`  
-		Last Modified: Fri, 11 Sep 2020 03:48:24 GMT  
+	-	`sha256:f0154f2759c05a9b1f62a544b47a62e88484185de8becbe65a0de9fefc497d40`  
+		Last Modified: Tue, 22 Sep 2020 18:10:10 GMT  
 		Size: 777.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `zookeeper:latest` - linux; arm64 variant v8
+
+```console
+$ docker pull zookeeper@sha256:5fe68f29abe9b06ead95d5691eec1f1771f2603bea5c5c7b17aac623b66be8b5
+```
+
+-	Docker Version: 18.06.1-ce
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **96.9 MB (96929728 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:edb41640c531fffd3a749e82bc762ff398ea237e3d4cce951d6e03555ea4a914`
+-	Entrypoint: `["\/docker-entrypoint.sh"]`
+-	Default Command: `["zkServer.sh","start-foreground"]`
+
+```dockerfile
+# Sat, 11 May 2019 08:43:24 GMT
+ADD file:66f49017dd7ba295602526dbf210046e47fd097298c17a3f268a47487b5b6379 in / 
+# Sat, 11 May 2019 08:43:25 GMT
+CMD ["/bin/sh"]
+# Sat, 11 May 2019 09:18:27 GMT
+ENV LANG=C.UTF-8
+# Sat, 11 May 2019 09:18:29 GMT
+RUN { 		echo '#!/bin/sh'; 		echo 'set -e'; 		echo; 		echo 'dirname "$(dirname "$(readlink -f "$(which javac || which java)")")"'; 	} > /usr/local/bin/docker-java-home 	&& chmod +x /usr/local/bin/docker-java-home
+# Sat, 11 May 2019 09:18:55 GMT
+ENV JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk/jre
+# Sat, 11 May 2019 09:18:56 GMT
+ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/jvm/java-1.8-openjdk/jre/bin:/usr/lib/jvm/java-1.8-openjdk/bin
+# Sat, 11 May 2019 09:18:56 GMT
+ENV JAVA_VERSION=8u212
+# Sat, 11 May 2019 09:18:57 GMT
+ENV JAVA_ALPINE_VERSION=8.212.04-r0
+# Sat, 11 May 2019 09:19:04 GMT
+RUN set -x 	&& apk add --no-cache 		openjdk8-jre="$JAVA_ALPINE_VERSION" 	&& [ "$JAVA_HOME" = "$(docker-java-home)" ]
+# Sat, 11 May 2019 17:01:40 GMT
+RUN apk add --no-cache     bash     su-exec
+# Sat, 11 May 2019 17:01:41 GMT
+ENV ZOO_USER=zookeeper ZOO_CONF_DIR=/conf ZOO_DATA_DIR=/data ZOO_DATA_LOG_DIR=/datalog ZOO_LOG_DIR=/logs ZOO_PORT=2181 ZOO_TICK_TIME=2000 ZOO_INIT_LIMIT=5 ZOO_SYNC_LIMIT=2 ZOO_AUTOPURGE_PURGEINTERVAL=0 ZOO_AUTOPURGE_SNAPRETAINCOUNT=3 ZOO_MAX_CLIENT_CNXNS=60
+# Sat, 11 May 2019 17:01:43 GMT
+RUN set -ex;     adduser -D "$ZOO_USER";     mkdir -p "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR";     chown "$ZOO_USER:$ZOO_USER" "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR"
+# Sat, 11 May 2019 17:01:44 GMT
+ARG GPG_KEY=3F7A1D16FA4217B1DC75E1C9FFE35B7F15DFA1BA
+# Sat, 11 May 2019 17:01:44 GMT
+ARG DISTRO_NAME=zookeeper-3.4.14
+# Sat, 11 May 2019 17:01:56 GMT
+# ARGS: DISTRO_NAME=zookeeper-3.4.14 GPG_KEY=3F7A1D16FA4217B1DC75E1C9FFE35B7F15DFA1BA
+RUN set -ex;     apk add --no-cache --virtual .build-deps         ca-certificates         gnupg         libressl;     wget -q "https://www.apache.org/dist/zookeeper/$DISTRO_NAME/$DISTRO_NAME.tar.gz";     wget -q "https://www.apache.org/dist/zookeeper/$DISTRO_NAME/$DISTRO_NAME.tar.gz.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --keyserver ha.pool.sks-keyservers.net --recv-key "$GPG_KEY" ||     gpg --keyserver pgp.mit.edu --recv-keys "$GPG_KEY" ||     gpg --keyserver keyserver.pgp.com --recv-keys "$GPG_KEY";     gpg --batch --verify "$DISTRO_NAME.tar.gz.asc" "$DISTRO_NAME.tar.gz";     tar -xzf "$DISTRO_NAME.tar.gz";     mv "$DISTRO_NAME/conf/"* "$ZOO_CONF_DIR";     rm -rf "$GNUPGHOME" "$DISTRO_NAME.tar.gz" "$DISTRO_NAME.tar.gz.asc";     apk del .build-deps
+# Sat, 11 May 2019 17:01:57 GMT
+WORKDIR /zookeeper-3.4.14
+# Sat, 11 May 2019 17:01:58 GMT
+VOLUME [/data /datalog /logs]
+# Sat, 11 May 2019 17:01:59 GMT
+EXPOSE 2181 2888 3888
+# Sat, 11 May 2019 17:02:00 GMT
+ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/jvm/java-1.8-openjdk/jre/bin:/usr/lib/jvm/java-1.8-openjdk/bin:/zookeeper-3.4.14/bin ZOOCFGDIR=/conf
+# Sat, 11 May 2019 17:02:00 GMT
+COPY file:e241c4b758b1c07187e9a94844ecbab8e37b4440f1e74109ed52835d8aa518be in / 
+# Sat, 11 May 2019 17:02:01 GMT
+ENTRYPOINT ["/docker-entrypoint.sh"]
+# Sat, 11 May 2019 17:02:02 GMT
+CMD ["zkServer.sh" "start-foreground"]
+```
+
+-	Layers:
+	-	`sha256:0362ad1dd800a9d92f8982fa28f173f9120266153830f990f7486f44b068968a`  
+		Last Modified: Sat, 11 May 2019 08:44:25 GMT  
+		Size: 2.7 MB (2688779 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:9ca2cc770c6ebbe90978672d360accf2434f83f9f0339ecd592224d794d5e35e`  
+		Last Modified: Sat, 11 May 2019 09:21:04 GMT  
+		Size: 237.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:d9072aa1a230005b2e358809d99ea667b32e1404f13e626b9bf5f3f5eb9f8dd1`  
+		Last Modified: Sat, 11 May 2019 09:21:55 GMT  
+		Size: 54.9 MB (54942530 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ad511f8be6ee2e825068c45f0c001aee1555e06e7a913068de4f5c399b140296`  
+		Last Modified: Sat, 11 May 2019 17:02:39 GMT  
+		Size: 1.2 MB (1220098 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:734a842b1a98c33763b537d0ba700e1e952468a00b27c2641a118bcaa8b8bd7a`  
+		Last Modified: Sat, 11 May 2019 17:02:38 GMT  
+		Size: 1.3 KB (1323 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ad7666ba2833e3433a28edee3ccdb952e03eec4db3ce02fed4ac5849df0cc9ab`  
+		Last Modified: Sat, 11 May 2019 17:02:46 GMT  
+		Size: 38.1 MB (38076145 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:76a2be9cc7cb0c3f5b179b0a69778454853810b2fcec032f9f1ac5030addf305`  
+		Last Modified: Sat, 11 May 2019 17:02:38 GMT  
+		Size: 616.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
