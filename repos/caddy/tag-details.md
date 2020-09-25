@@ -6,16 +6,34 @@
 -	[`caddy:2.1.1`](#caddy211)
 -	[`caddy:2.1.1-alpine`](#caddy211-alpine)
 -	[`caddy:2.1.1-builder`](#caddy211-builder)
+-	[`caddy:2.1.1-builder-alpine`](#caddy211-builder-alpine)
+-	[`caddy:2.1.1-builder-windowsservercore-1809`](#caddy211-builder-windowsservercore-1809)
+-	[`caddy:2.1.1-builder-windowsservercore-ltsc2016`](#caddy211-builder-windowsservercore-ltsc2016)
 -	[`caddy:2.1.1-windowsservercore`](#caddy211-windowsservercore)
 -	[`caddy:2.1.1-windowsservercore-1809`](#caddy211-windowsservercore-1809)
 -	[`caddy:2.1.1-windowsservercore-ltsc2016`](#caddy211-windowsservercore-ltsc2016)
+-	[`caddy:2.2.0`](#caddy220)
+-	[`caddy:2.2.0-alpine`](#caddy220-alpine)
+-	[`caddy:2.2.0-builder`](#caddy220-builder)
+-	[`caddy:2.2.0-builder-alpine`](#caddy220-builder-alpine)
+-	[`caddy:2.2.0-builder-windowsservercore-1809`](#caddy220-builder-windowsservercore-1809)
+-	[`caddy:2.2.0-builder-windowsservercore-ltsc2016`](#caddy220-builder-windowsservercore-ltsc2016)
+-	[`caddy:2.2.0-windowsservercore`](#caddy220-windowsservercore)
+-	[`caddy:2.2.0-windowsservercore-1809`](#caddy220-windowsservercore-1809)
+-	[`caddy:2.2.0-windowsservercore-ltsc2016`](#caddy220-windowsservercore-ltsc2016)
 -	[`caddy:2-alpine`](#caddy2-alpine)
 -	[`caddy:2-builder`](#caddy2-builder)
+-	[`caddy:2-builder-alpine`](#caddy2-builder-alpine)
+-	[`caddy:2-builder-windowsservercore-1809`](#caddy2-builder-windowsservercore-1809)
+-	[`caddy:2-builder-windowsservercore-ltsc2016`](#caddy2-builder-windowsservercore-ltsc2016)
 -	[`caddy:2-windowsservercore`](#caddy2-windowsservercore)
 -	[`caddy:2-windowsservercore-1809`](#caddy2-windowsservercore-1809)
 -	[`caddy:2-windowsservercore-ltsc2016`](#caddy2-windowsservercore-ltsc2016)
 -	[`caddy:alpine`](#caddyalpine)
 -	[`caddy:builder`](#caddybuilder)
+-	[`caddy:builder-alpine`](#caddybuilder-alpine)
+-	[`caddy:builder-windowsservercore-1809`](#caddybuilder-windowsservercore-1809)
+-	[`caddy:builder-windowsservercore-ltsc2016`](#caddybuilder-windowsservercore-ltsc2016)
 -	[`caddy:latest`](#caddylatest)
 -	[`caddy:windowsservercore`](#caddywindowsservercore)
 -	[`caddy:windowsservercore-1809`](#caddywindowsservercore-1809)
@@ -2915,6 +2933,33 @@ WORKDIR /src/custom-caddy/cmd/caddy
 		Size: 183.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `caddy:2.1.1-builder-alpine`
+
+```console
+$ docker pull caddy@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
+## `caddy:2.1.1-builder-windowsservercore-1809`
+
+```console
+$ docker pull caddy@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
+## `caddy:2.1.1-builder-windowsservercore-ltsc2016`
+
+```console
+$ docker pull caddy@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
 ## `caddy:2.1.1-windowsservercore`
 
 ```console
@@ -3591,6 +3636,87 @@ CMD ["caddy" "run" "--config" "/etc/caddy/Caddyfile" "--adapter" "caddyfile"]
 		Last Modified: Wed, 09 Sep 2020 20:30:04 GMT  
 		Size: 1.1 KB (1130 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `caddy:2.2.0`
+
+```console
+$ docker pull caddy@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
+## `caddy:2.2.0-alpine`
+
+```console
+$ docker pull caddy@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
+## `caddy:2.2.0-builder`
+
+```console
+$ docker pull caddy@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
+## `caddy:2.2.0-builder-alpine`
+
+```console
+$ docker pull caddy@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
+## `caddy:2.2.0-builder-windowsservercore-1809`
+
+```console
+$ docker pull caddy@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
+## `caddy:2.2.0-builder-windowsservercore-ltsc2016`
+
+```console
+$ docker pull caddy@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
+## `caddy:2.2.0-windowsservercore`
+
+```console
+$ docker pull caddy@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
+## `caddy:2.2.0-windowsservercore-1809`
+
+```console
+$ docker pull caddy@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
+## `caddy:2.2.0-windowsservercore-ltsc2016`
+
+```console
+$ docker pull caddy@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `caddy:2-alpine`
 
@@ -4749,6 +4875,33 @@ WORKDIR /src/custom-caddy/cmd/caddy
 		Last Modified: Wed, 09 Sep 2020 23:05:06 GMT  
 		Size: 183.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `caddy:2-builder-alpine`
+
+```console
+$ docker pull caddy@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
+## `caddy:2-builder-windowsservercore-1809`
+
+```console
+$ docker pull caddy@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
+## `caddy:2-builder-windowsservercore-ltsc2016`
+
+```console
+$ docker pull caddy@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `caddy:2-windowsservercore`
 
@@ -6584,6 +6737,33 @@ WORKDIR /src/custom-caddy/cmd/caddy
 		Last Modified: Wed, 09 Sep 2020 23:05:06 GMT  
 		Size: 183.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `caddy:builder-alpine`
+
+```console
+$ docker pull caddy@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
+## `caddy:builder-windowsservercore-1809`
+
+```console
+$ docker pull caddy@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
+## `caddy:builder-windowsservercore-ltsc2016`
+
+```console
+$ docker pull caddy@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `caddy:latest`
 
