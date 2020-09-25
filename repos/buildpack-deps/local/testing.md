@@ -537,19 +537,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris cdebconf=0.253
-'http://deb.debian.org/debian/pool/main/c/cdebconf/cdebconf_0.253.dsc' cdebconf_0.253.dsc 2750 SHA256:c66fc6fa7bc175f211b597e31326fa20fd5780a936193d40c6777e7bb88b93da
-'http://deb.debian.org/debian/pool/main/c/cdebconf/cdebconf_0.253.tar.xz' cdebconf_0.253.tar.xz 275576 SHA256:a9546e1078b7260dc2154750b1354d1b14a02375445642a4e4e083451d0580a7
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/cdebconf/0.253/
 
-- https://sources.debian.net/src/cdebconf/0.253/ (for browsing the source)
-- https://sources.debian.net/src/cdebconf/0.253/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/cdebconf/0.253/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `coreutils=8.30-3`
 
@@ -1239,19 +1233,13 @@ Licenses: (parsed from: `/usr/share/doc/cpp/copyright`, `/usr/share/doc/g++/copy
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-defaults=1.188
-'http://deb.debian.org/debian/pool/main/g/gcc-defaults/gcc-defaults_1.188.dsc' gcc-defaults_1.188.dsc 12064 SHA256:3cb253657ae98b98382a8a3699ff5c08e9e50dc8260701a74997a9b12e30e257
-'http://deb.debian.org/debian/pool/main/g/gcc-defaults/gcc-defaults_1.188.tar.xz' gcc-defaults_1.188.tar.xz 45160 SHA256:d2382d67e9c3cf2040f70302200f910ce236fac59e6e4e0e980d2434bbce9c8a
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gcc-defaults/1.188/
 
-- https://sources.debian.net/src/gcc-defaults/1.188/ (for browsing the source)
-- https://sources.debian.net/src/gcc-defaults/1.188/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gcc-defaults/1.188/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gdbm=1.18.1-5.1`
 
@@ -1557,20 +1545,13 @@ Licenses: (parsed from: `/usr/share/doc/gir1.2-freedesktop/copyright`, `/usr/sha
 - `LGPL-2+`
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gobject-introspection=1.64.1-1
-'http://deb.debian.org/debian/pool/main/g/gobject-introspection/gobject-introspection_1.64.1-1.dsc' gobject-introspection_1.64.1-1.dsc 3088 SHA256:d5f522e9e605b07b94ae1ddcc3ba744c6726d61718a5f509b7e39a41440d3a0d
-'http://deb.debian.org/debian/pool/main/g/gobject-introspection/gobject-introspection_1.64.1.orig.tar.xz' gobject-introspection_1.64.1.orig.tar.xz 1000280 SHA256:80beae6728c134521926affff9b2e97125749b38d38744dc901f4010ee3e7fa7
-'http://deb.debian.org/debian/pool/main/g/gobject-introspection/gobject-introspection_1.64.1-1.debian.tar.xz' gobject-introspection_1.64.1-1.debian.tar.xz 23348 SHA256:5bcb9e66815cf376b50cfba4c5f275faf21c46c4e27bf06bbc2452c1707bc408
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gobject-introspection/1.64.1-1/
 
-- https://sources.debian.net/src/gobject-introspection/1.64.1-1/ (for browsing the source)
-- https://sources.debian.net/src/gobject-introspection/1.64.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gobject-introspection/1.64.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `graphite2=1.3.14-1`
 

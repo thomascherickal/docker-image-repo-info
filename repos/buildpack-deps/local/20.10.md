@@ -306,14 +306,9 @@ Licenses: (parsed from: `/usr/share/doc/binutils/copyright`, `/usr/share/doc/bin
 - `GPL`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris binutils=2.35-3ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.35-3ubuntu1.dsc' binutils_2.35-3ubuntu1.dsc 8767 SHA256:dddec40a7e93473f3065903e0ac4602721f1f678299c4356033391ffaaf7cce0
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.35.orig.tar.xz' binutils_2.35.orig.tar.xz 22042160 SHA256:1b11659fb49e20e18db460d44485f09442c8c56d5df165de9461eb09c8302f85
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.35-3ubuntu1.debian.tar.xz' binutils_2.35-3ubuntu1.debian.tar.xz 360924 SHA256:192b73500c89ffca41b0cc19d60a89074f906042ea070436eae851bd3f7d35dc
-```
 
 ### `dpkg` source package: `breezy=3.1.0-5build1`
 
@@ -1124,14 +1119,13 @@ Licenses: (parsed from: `/usr/share/doc/libglib2.0-0/copyright`, `/usr/share/doc
 - `GPL-2+`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glib2.0=2.65.3-1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.65.3-1.dsc' glib2.0_2.65.3-1.dsc 3232 SHA256:cf7ce59f2518a469e3b6897758fb31f248389193d31afa34fa3b728c11f45448
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.65.3.orig.tar.xz' glib2.0_2.65.3.orig.tar.xz 4838128 SHA256:efd894e4693068bca945cb20d168b088510fa24d48a577f5edaf3d55912c60c2
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.65.3-1.debian.tar.xz' glib2.0_2.65.3-1.debian.tar.xz 91372 SHA256:6efe22e351f6f1a4a91f08e05a63c9bcd849dd8f5c5f7e3f39466ad8bd67634f
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/glib2.0/2.65.3-1/
+
 
 ### `dpkg` source package: `glibc=2.31-0ubuntu11`
 
@@ -2805,14 +2799,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=5.8.0-18.19
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.8.0-18.19.dsc' linux_5.8.0-18.19.dsc 7127 SHA256:cf2b56ce908dacea9fd53962dcffcdeaf20c2863b0fd756ccf81041d7e662f9f
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.8.0.orig.tar.gz' linux_5.8.0.orig.tar.gz 178322327 SHA256:0657da4f4b0035f6ad60806f5fece4ff2575159f156d5f3fe8301d911e58081b
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.8.0-18.19.diff.gz' linux_5.8.0-18.19.diff.gz 2669567 SHA256:68d0cccc169ca0b8467ec2d2be0804ba4937338ee71acd05f4fec5938a6d7fe3
-```
 
 ### `dpkg` source package: `lsb=11.1.0ubuntu2`
 
@@ -3990,14 +3979,9 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=246.4-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_246.4-1ubuntu1.dsc' systemd_246.4-1ubuntu1.dsc 5323 SHA256:d9142d6be191c7ce9e629c1001e66cbcbe73ad63ebdb1a0b8097a224792b467e
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_246.4.orig.tar.gz' systemd_246.4.orig.tar.gz 9539099 SHA256:06d73f8d16f866837a5d40b37503d53119c6046daf58cc32a4ebaf9fc75a0b3b
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_246.4-1ubuntu1.debian.tar.xz' systemd_246.4-1ubuntu1.debian.tar.xz 192392 SHA256:a0fc2adef6031fddc5305e977281cc81301be5634636c1c45fbd9bdda434535f
-```
 
 ### `dpkg` source package: `sysvinit=2.96-3ubuntu1`
 
@@ -4250,15 +4234,9 @@ Licenses: (parsed from: `/usr/share/doc/x11proto-core-dev/copyright`, `/usr/shar
 - `MIT`
 - `SGI`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris xorgproto=2019.2-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/x/xorgproto/xorgproto_2019.2-1ubuntu1.dsc' xorgproto_2019.2-1ubuntu1.dsc 4096 SHA256:1b0fede1501745c7cfed22b86ea951ba6792ae6eda404fafae9533b01fbb2ee2
-'http://archive.ubuntu.com/ubuntu/pool/main/x/xorgproto/xorgproto_2019.2.orig.tar.gz' xorgproto_2019.2.orig.tar.gz 1080686 SHA256:ebfcfce48b66bec25d5dff0e9510e04053ef78e51a8eabeeee4c00e399226d61
-'http://archive.ubuntu.com/ubuntu/pool/main/x/xorgproto/xorgproto_2019.2.orig.tar.gz.asc' xorgproto_2019.2.orig.tar.gz.asc 659 SHA256:75da45caac1d85fe37a5e7f33a087d456cad1dc38f2743b7f7df63d7ca583293
-'http://archive.ubuntu.com/ubuntu/pool/main/x/xorgproto/xorgproto_2019.2-1ubuntu1.diff.gz' xorgproto_2019.2-1ubuntu1.diff.gz 21111 SHA256:9162224ecb85b35b37a51fbb2a1c53fc8262339fd3208ded60e141607aa835e8
-```
 
 ### `dpkg` source package: `xtrans=1.4.0-1`
 

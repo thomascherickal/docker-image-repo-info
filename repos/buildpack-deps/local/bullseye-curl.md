@@ -303,19 +303,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris cdebconf=0.253
-'http://deb.debian.org/debian/pool/main/c/cdebconf/cdebconf_0.253.dsc' cdebconf_0.253.dsc 2750 SHA256:c66fc6fa7bc175f211b597e31326fa20fd5780a936193d40c6777e7bb88b93da
-'http://deb.debian.org/debian/pool/main/c/cdebconf/cdebconf_0.253.tar.xz' cdebconf_0.253.tar.xz 275576 SHA256:a9546e1078b7260dc2154750b1354d1b14a02375445642a4e4e083451d0580a7
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/cdebconf/0.253/
 
-- https://sources.debian.net/src/cdebconf/0.253/ (for browsing the source)
-- https://sources.debian.net/src/cdebconf/0.253/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/cdebconf/0.253/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `coreutils=8.30-3`
 
@@ -627,20 +621,13 @@ Licenses: (parsed from: `/usr/share/doc/libelf1/copyright`)
 - `GPL-3`
 - `LGPL-`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris elfutils=0.180-1
-'http://deb.debian.org/debian/pool/main/e/elfutils/elfutils_0.180-1.dsc' elfutils_0.180-1.dsc 2810 SHA256:21325074457d6d02da421a81a00c676da4bced72c5f3abaae77c05a636b517e9
-'http://deb.debian.org/debian/pool/main/e/elfutils/elfutils_0.180.orig.tar.bz2' elfutils_0.180.orig.tar.bz2 9079640 SHA256:b827b6e35c59d188ba97d7cf148fa8dc6f5c68eb6c5981888dfdbb758c0b569d
-'http://deb.debian.org/debian/pool/main/e/elfutils/elfutils_0.180-1.debian.tar.xz' elfutils_0.180-1.debian.tar.xz 33016 SHA256:2049e6fff637816cf7bbf93a9d2e67514f71758c354c61c8b032e9bc13119d0b
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/elfutils/0.180-1/
 
-- https://sources.debian.net/src/elfutils/0.180-1/ (for browsing the source)
-- https://sources.debian.net/src/elfutils/0.180-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/elfutils/0.180-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `findutils=4.7.0-1`
 
@@ -2306,21 +2293,13 @@ Licenses: (parsed from: `/usr/share/doc/sysvinit-utils/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sysvinit=2.96-4
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96-4.dsc' sysvinit_2.96-4.dsc 2612 SHA256:ebafa4e6191e9c3ea0f8947f253e73d94e1fbbc6326d1b11811b0e1f95a74797
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96.orig.tar.xz' sysvinit_2.96.orig.tar.xz 122164 SHA256:2a2e26b72aa235a23ab1c8471005f890309ce1196c83fbc9413c57b9ab62b587
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96.orig.tar.xz.asc' sysvinit_2.96.orig.tar.xz.asc 313 SHA256:dfc184b95da12c8c888c8ae6b0f26fe8a23b07fbcdd240f6600a8a78b9439fa0
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96-4.debian.tar.xz' sysvinit_2.96-4.debian.tar.xz 128080 SHA256:7bad6796666a3e1ee603d35e14b2969710f63969a4550750dad398bc04dc6e13
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/sysvinit/2.96-4/
 
-- https://sources.debian.net/src/sysvinit/2.96-4/ (for browsing the source)
-- https://sources.debian.net/src/sysvinit/2.96-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sysvinit/2.96-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tar=1.30+dfsg-7`
 

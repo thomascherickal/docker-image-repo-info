@@ -496,9 +496,14 @@ Licenses: (parsed from: `/usr/share/doc/gcc-10-base/copyright`, `/usr/share/doc/
 - `GPL-3`
 - `LGPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris gcc-10=10.2.0-6ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.2.0-6ubuntu1.dsc' gcc-10_10.2.0-6ubuntu1.dsc 30426 SHA256:2b71189fe02e4cc589495d0ed3781d3b14c21e727ed47681356bf7c81504570a
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.2.0.orig.tar.gz' gcc-10_10.2.0.orig.tar.gz 94773960 SHA256:8c932c6527c2d53eebea682092591b701a79901d9f308697f2cf8d443578ac40
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.2.0-6ubuntu1.debian.tar.xz' gcc-10_10.2.0-6ubuntu1.debian.tar.xz 2088068 SHA256:d712393f20c7eac5405c1cde0ddb560044d5887e7a2530cd79ede9cf10eecbdd
+```
 
 ### `dpkg` source package: `glibc=2.31-0ubuntu11`
 
@@ -512,9 +517,14 @@ Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/lib
 - `GPL-2`
 - `LGPL-2.1`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris glibc=2.31-0ubuntu11
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31-0ubuntu11.dsc' glibc_2.31-0ubuntu11.dsc 9452 SHA256:fd159510bac5c27182a3cf450691b0e38151fd069f46c64cd01657e91514b558
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31.orig.tar.xz' glibc_2.31.orig.tar.xz 17317924 SHA256:2b22c7b04a36747d6c74796a73193a6f8856bfd1efc551b5db96baefa053fe5e
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31-0ubuntu11.debian.tar.xz' glibc_2.31-0ubuntu11.debian.tar.xz 868156 SHA256:7c118f746038caba3dc8b489b31a5376e7bb3b6f0e75598cc3692cfc578eb432
+```
 
 ### `dpkg` source package: `gmp=2:6.2.0+dfsg-6ubuntu1`
 
@@ -1340,9 +1350,14 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris openldap=2.4.51+dfsg-1ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.51+dfsg-1ubuntu1.dsc' openldap_2.4.51+dfsg-1ubuntu1.dsc 3154 SHA256:b8d7ad5f4c495fb0efa4483a35953f768335fbc49a8bc7a60e7905f33bf33621
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.51+dfsg.orig.tar.gz' openldap_2.4.51+dfsg.orig.tar.gz 5009322 SHA256:315893a5e399a69cdac88794dbff89f7989558c2faa138e82d6fb75e729b7fa6
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.51+dfsg-1ubuntu1.debian.tar.xz' openldap_2.4.51+dfsg-1ubuntu1.debian.tar.xz 181676 SHA256:8b1841aa43c30d418f5eb83b01ed097d49b8dda43f6e0cdd43df0d1090aa5217
+```
 
 ### `dpkg` source package: `openssl=1.1.1f-1ubuntu3`
 
@@ -1355,9 +1370,15 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris openssl=1.1.1f-1ubuntu3
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu3.dsc' openssl_1.1.1f-1ubuntu3.dsc 2705 SHA256:3b58d6628e89793a297bc5591901bfe3374a708042d384df6e8ec908e5e3c39c
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f.orig.tar.gz' openssl_1.1.1f.orig.tar.gz 9792828 SHA256:186c6bfe6ecfba7a5b48c47f8a1673d0f3b0e5ba2e25602dd23b629975da3f35
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f.orig.tar.gz.asc' openssl_1.1.1f.orig.tar.gz.asc 488 SHA256:e9c68097b05be8873e41bd33a9269378ca58e515fbaa30a512c315b602d41dda
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu3.debian.tar.xz' openssl_1.1.1f-1ubuntu3.debian.tar.xz 145256 SHA256:dd675e883550730e221da191588a0b27a5a76115f754e37672681d198505411a
+```
 
 ### `dpkg` source package: `p11-kit=0.23.21-2build1`
 
