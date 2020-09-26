@@ -361,20 +361,13 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.52.1-5+deb9u11
-'http://security.debian.org/debian-security/pool/updates/main/c/curl/curl_7.52.1-5+deb9u11.dsc' curl_7.52.1-5+deb9u11.dsc 2956 SHA256:e28615867cb827ad8c6e2b43fa0e990f3d3143446e19e217b3f498485920a8da
-'http://security.debian.org/debian-security/pool/updates/main/c/curl/curl_7.52.1.orig.tar.gz' curl_7.52.1.orig.tar.gz 3504621 SHA256:a8984e8b20880b621f61a62d95ff3c0763a3152093a9f9ce4287cfd614add6ae
-'http://security.debian.org/debian-security/pool/updates/main/c/curl/curl_7.52.1-5+deb9u11.debian.tar.xz' curl_7.52.1-5+deb9u11.debian.tar.xz 43880 SHA256:904852ae6672bd14ffbe2a17491eb908b852f6fb4c63fe3c9695f46c909246af
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/curl/7.52.1-5+deb9u11/
 
-- https://sources.debian.net/src/curl/7.52.1-5+deb9u11/ (for browsing the source)
-- https://sources.debian.net/src/curl/7.52.1-5+deb9u11/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/curl/7.52.1-5+deb9u11/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27~101-g0780600+dfsg-3+deb9u1`
 
