@@ -1,7 +1,7 @@
 ## `xwiki:stable-mysql-tomcat`
 
 ```console
-$ docker pull xwiki@sha256:08e03534cdf9337dada9409e1f0bf3854ae86f32acc44b585e919d1b28a82e58
+$ docker pull xwiki@sha256:35cc2e6572043bf37bf376c4ade518d136d31de94af43c475c6b9cf02dd7327a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull xwiki@sha256:08e03534cdf9337dada9409e1f0bf3854ae86f32acc44b585e919
 ### `xwiki:stable-mysql-tomcat` - linux; amd64
 
 ```console
-$ docker pull xwiki@sha256:5444565ef70ff471433d3aead5a6714878914c890c4f9311ea18f175a2ea3c68
+$ docker pull xwiki@sha256:5d4636b786730492e872529e951ce074c4fc8dcb91c216220f14d0a48f3ba2a7
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **720.1 MB (720120790 bytes)**  
+-	Total Size: **720.2 MB (720216401 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:88920ae4b9d749f2a0c68034d33e23d0c8877029cd1439a44ee7f048bd03cdcf`
+-	Image ID: `sha256:6f80a02fe2c1c32cded67899f83aed6c682cbc77ed17a91f7483dd7f6738cbce`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["xwiki"]`
 
@@ -77,39 +77,39 @@ CMD ["catalina.sh" "run"]
 MAINTAINER Vincent Massol <vincent@massol.net>
 # Fri, 18 Sep 2020 02:50:59 GMT
 RUN apt-get update &&   apt-get --no-install-recommends -y install     curl     libreoffice     unzip     procps &&   rm -rf /var/lib/apt/lists/*
-# Fri, 18 Sep 2020 02:53:47 GMT
-ENV XWIKI_VERSION=12.7.1
-# Fri, 18 Sep 2020 02:53:47 GMT
-ENV XWIKI_URL_PREFIX=https://maven.xwiki.org/releases/org/xwiki/platform/xwiki-platform-distribution-war/12.7.1
-# Fri, 18 Sep 2020 02:53:47 GMT
-ENV XWIKI_DOWNLOAD_SHA256=2486c6facdac4b0fc2f1ba8c4c415d6beab0899ae9997597a1684b0b4513a173
-# Fri, 18 Sep 2020 02:54:26 GMT
+# Mon, 28 Sep 2020 22:22:38 GMT
+ENV XWIKI_VERSION=12.8
+# Mon, 28 Sep 2020 22:22:38 GMT
+ENV XWIKI_URL_PREFIX=https://maven.xwiki.org/releases/org/xwiki/platform/xwiki-platform-distribution-war/12.8
+# Mon, 28 Sep 2020 22:22:38 GMT
+ENV XWIKI_DOWNLOAD_SHA256=a1a7009d822a7903729150a43a05e08340cd210b7c7c9ee3b1f199530fb3d18d
+# Mon, 28 Sep 2020 22:23:08 GMT
 RUN rm -rf /usr/local/tomcat/webapps/* &&   mkdir -p /usr/local/tomcat/temp &&   mkdir -p /usr/local/xwiki/data &&   curl -fSL "${XWIKI_URL_PREFIX}/xwiki-platform-distribution-war-${XWIKI_VERSION}.war" -o xwiki.war &&   echo "$XWIKI_DOWNLOAD_SHA256 xwiki.war" | sha256sum -c - &&   unzip -d /usr/local/tomcat/webapps/ROOT xwiki.war &&   rm -f xwiki.war
-# Fri, 18 Sep 2020 02:54:26 GMT
-ENV MYSQL_JDBC_VERSION=8.0.20
-# Fri, 18 Sep 2020 02:54:26 GMT
-ENV MYSQL_JDBC_SHA256=56a42553b516660ae0bcd08f7f4f5f375294afbd62200d6c0c88a8c61c668ede
-# Fri, 18 Sep 2020 02:54:27 GMT
-ENV MYSQL_JDBC_PREFIX=https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.20
-# Fri, 18 Sep 2020 02:54:27 GMT
-ENV MYSQL_JDBC_ARTIFACT=mysql-connector-java-8.0.20.jar
-# Fri, 18 Sep 2020 02:54:27 GMT
-ENV MYSQL_JDBC_TARGET=/usr/local/tomcat/webapps/ROOT/WEB-INF/lib/mysql-connector-java-8.0.20.jar
-# Fri, 18 Sep 2020 02:54:28 GMT
+# Mon, 28 Sep 2020 22:23:08 GMT
+ENV MYSQL_JDBC_VERSION=8.0.21
+# Mon, 28 Sep 2020 22:23:08 GMT
+ENV MYSQL_JDBC_SHA256=2f62d886270a75ebc8e8fd89127d4a30ccc711f02256ade2cfb7090817132003
+# Mon, 28 Sep 2020 22:23:08 GMT
+ENV MYSQL_JDBC_PREFIX=https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.21
+# Mon, 28 Sep 2020 22:23:08 GMT
+ENV MYSQL_JDBC_ARTIFACT=mysql-connector-java-8.0.21.jar
+# Mon, 28 Sep 2020 22:23:09 GMT
+ENV MYSQL_JDBC_TARGET=/usr/local/tomcat/webapps/ROOT/WEB-INF/lib/mysql-connector-java-8.0.21.jar
+# Mon, 28 Sep 2020 22:23:10 GMT
 RUN curl -fSL "${MYSQL_JDBC_PREFIX}/${MYSQL_JDBC_ARTIFACT}" -o $MYSQL_JDBC_TARGET &&   echo "$MYSQL_JDBC_SHA256 $MYSQL_JDBC_TARGET" | sha256sum -c -
-# Fri, 18 Sep 2020 02:54:28 GMT
+# Mon, 28 Sep 2020 22:23:10 GMT
 COPY file:0a1be11e2eb610a1dbcd415404e3a592641110b93090030cb831e3a19a163017 in /usr/local/tomcat/bin/ 
-# Fri, 18 Sep 2020 02:54:28 GMT
+# Mon, 28 Sep 2020 22:23:10 GMT
 COPY file:2ddb14ac28e30d814fb2fc4772408aeb1bad06733f2b02f99ac544ada515f776 in /usr/local/tomcat/webapps/ROOT/WEB-INF/hibernate.cfg.xml 
-# Fri, 18 Sep 2020 02:54:29 GMT
+# Mon, 28 Sep 2020 22:23:11 GMT
 RUN sed -i 's/<id>org.xwiki.platform:xwiki-platform-distribution-war/<id>org.xwiki.platform:xwiki-platform-distribution-docker/'   /usr/local/tomcat/webapps/ROOT/META-INF/extension.xed
-# Fri, 18 Sep 2020 02:54:29 GMT
+# Mon, 28 Sep 2020 22:23:11 GMT
 COPY file:a47c4dcd87c9dad97aff38c49188357e6193bcad50757e516cfb08a60d4de611 in /usr/local/bin/docker-entrypoint.sh 
-# Fri, 18 Sep 2020 02:54:30 GMT
+# Mon, 28 Sep 2020 22:23:11 GMT
 VOLUME [/usr/local/xwiki]
-# Fri, 18 Sep 2020 02:54:30 GMT
+# Mon, 28 Sep 2020 22:23:11 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 18 Sep 2020 02:54:30 GMT
+# Mon, 28 Sep 2020 22:23:11 GMT
 CMD ["xwiki"]
 ```
 
@@ -150,27 +150,27 @@ CMD ["xwiki"]
 		Last Modified: Fri, 18 Sep 2020 02:57:49 GMT  
 		Size: 179.1 MB (179093273 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:45a409a05c683cc362ab406515532da8db95e516a9ad027975ef150646e54912`  
-		Last Modified: Fri, 18 Sep 2020 02:59:01 GMT  
-		Size: 292.2 MB (292208777 bytes)  
+	-	`sha256:89c46a3c418a36244bcfd9cb673d0ddc33d223d4aca61a3408d3de03d94ca896`  
+		Last Modified: Mon, 28 Sep 2020 22:24:41 GMT  
+		Size: 292.3 MB (292293078 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:49266f46a833bbc58fdfd22ac922430f9ac9b1e4ebd8e0320dcc6c431de9750f`  
-		Last Modified: Fri, 18 Sep 2020 02:58:41 GMT  
-		Size: 2.3 MB (2253820 bytes)  
+	-	`sha256:9fec9297d8ea5d75508bb2f5e7593ae076d56672448402f44752ea97ec379fda`  
+		Last Modified: Mon, 28 Sep 2020 22:24:20 GMT  
+		Size: 2.3 MB (2265131 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7980c3f2dbb4435249df4355a80037e6ef48c7386226c06c04a9cbc6f9e73ff1`  
-		Last Modified: Fri, 18 Sep 2020 02:58:41 GMT  
-		Size: 1.3 KB (1344 bytes)  
+	-	`sha256:43eee87a0e1943e32e7f352ecf6bed03ce287a4b2ee1616509945f0b1a82e2c2`  
+		Last Modified: Mon, 28 Sep 2020 22:24:20 GMT  
+		Size: 1.3 KB (1343 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f28c37e249d700b49cfc84c83431c05a844ede5c1c6055fed5e75120567cabf9`  
-		Last Modified: Fri, 18 Sep 2020 02:58:41 GMT  
-		Size: 2.3 KB (2314 bytes)  
+	-	`sha256:fb4949a1de270ad5a7df6fc900ef00386be9e782315ae071d1f5e9b6d3dfce5f`  
+		Last Modified: Mon, 28 Sep 2020 22:24:20 GMT  
+		Size: 2.3 KB (2316 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3a840de00676e5a862a4424eacf8fd88641b3493475bea8bed99488c5b94748d`  
-		Last Modified: Fri, 18 Sep 2020 02:58:41 GMT  
-		Size: 5.0 KB (4998 bytes)  
+	-	`sha256:3889b6d70724854eb9d0c0eea9ad473c13b199b69380d8628ef0818d381c4c80`  
+		Last Modified: Mon, 28 Sep 2020 22:24:20 GMT  
+		Size: 5.0 KB (4994 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fc9112de95154a09e214834b8fd62e19dcc0e9dcb1f9f59f84b2883d1c096a94`  
-		Last Modified: Fri, 18 Sep 2020 02:58:42 GMT  
-		Size: 2.5 KB (2503 bytes)  
+	-	`sha256:06e88594968233b5e09b20aef7d84e0ea999f2de2dbb1943a32005b2995b9fb7`  
+		Last Modified: Mon, 28 Sep 2020 22:24:20 GMT  
+		Size: 2.5 KB (2505 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
