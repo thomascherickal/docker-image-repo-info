@@ -59,6 +59,18 @@
 -	[`ruby:2-buster`](#ruby2-buster)
 -	[`ruby:2-slim`](#ruby2-slim)
 -	[`ruby:2-slim-buster`](#ruby2-slim-buster)
+-	[`ruby:3.0.0-preview1`](#ruby300-preview1)
+-	[`ruby:3.0.0-preview1-alpine`](#ruby300-preview1-alpine)
+-	[`ruby:3.0.0-preview1-alpine3.12`](#ruby300-preview1-alpine312)
+-	[`ruby:3.0.0-preview1-buster`](#ruby300-preview1-buster)
+-	[`ruby:3.0.0-preview1-slim`](#ruby300-preview1-slim)
+-	[`ruby:3.0.0-preview1-slim-buster`](#ruby300-preview1-slim-buster)
+-	[`ruby:3.0-rc`](#ruby30-rc)
+-	[`ruby:3.0-rc-alpine`](#ruby30-rc-alpine)
+-	[`ruby:3.0-rc-alpine3.12`](#ruby30-rc-alpine312)
+-	[`ruby:3.0-rc-buster`](#ruby30-rc-buster)
+-	[`ruby:3.0-rc-slim`](#ruby30-rc-slim)
+-	[`ruby:3.0-rc-slim-buster`](#ruby30-rc-slim-buster)
 -	[`ruby:alpine`](#rubyalpine)
 -	[`ruby:alpine3.11`](#rubyalpine311)
 -	[`ruby:alpine3.12`](#rubyalpine312)
@@ -30978,6 +30990,54 @@ CMD ["irb"]
 		Last Modified: Thu, 10 Sep 2020 02:02:18 GMT  
 		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `ruby:3.0.0-preview1`
+
+**does not exist** (yet?)
+
+## `ruby:3.0.0-preview1-alpine`
+
+**does not exist** (yet?)
+
+## `ruby:3.0.0-preview1-alpine3.12`
+
+**does not exist** (yet?)
+
+## `ruby:3.0.0-preview1-buster`
+
+**does not exist** (yet?)
+
+## `ruby:3.0.0-preview1-slim`
+
+**does not exist** (yet?)
+
+## `ruby:3.0.0-preview1-slim-buster`
+
+**does not exist** (yet?)
+
+## `ruby:3.0-rc`
+
+**does not exist** (yet?)
+
+## `ruby:3.0-rc-alpine`
+
+**does not exist** (yet?)
+
+## `ruby:3.0-rc-alpine3.12`
+
+**does not exist** (yet?)
+
+## `ruby:3.0-rc-buster`
+
+**does not exist** (yet?)
+
+## `ruby:3.0-rc-slim`
+
+**does not exist** (yet?)
+
+## `ruby:3.0-rc-slim-buster`
+
+**does not exist** (yet?)
 
 ## `ruby:alpine`
 
