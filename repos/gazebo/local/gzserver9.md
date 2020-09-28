@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:579e7d779ba595d74bb5e4273eb15b7bb623da7e24dd994d16f9a31f482b1491`
-- Created: `2020-09-17T00:29:07.682979794Z`
-- Virtual Size: ~ 647.04 Mb  
+- Image ID: `sha256:5fc0d94eef71e07321d5988162d4e858f1298547bbbc641dac2ca0c58d3b00ec`
+- Created: `2020-09-26T00:05:42.994917101Z`
+- Virtual Size: ~ 647.05 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/gzserver_entrypoint.sh"]`
@@ -1320,22 +1320,22 @@ $ apt-get source -qq --print-uris gmp=2:6.1.2+dfsg-2
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.1.2+dfsg-2.debian.tar.xz' gmp_6.1.2+dfsg-2.debian.tar.xz 20744 SHA256:33cf6cc65827c9df744e4e07b216ca2d02eb57327a949f80a7b7dddd0485ee85
 ```
 
-### `dpkg` source package: `gnupg2=2.2.4-1ubuntu1.2`
+### `dpkg` source package: `gnupg2=2.2.4-1ubuntu1.3`
 
 Binary Packages:
 
-- `dirmngr=2.2.4-1ubuntu1.2`
-- `gnupg=2.2.4-1ubuntu1.2`
-- `gnupg-l10n=2.2.4-1ubuntu1.2`
-- `gnupg-utils=2.2.4-1ubuntu1.2`
-- `gnupg2=2.2.4-1ubuntu1.2`
-- `gpg=2.2.4-1ubuntu1.2`
-- `gpg-agent=2.2.4-1ubuntu1.2`
-- `gpg-wks-client=2.2.4-1ubuntu1.2`
-- `gpg-wks-server=2.2.4-1ubuntu1.2`
-- `gpgconf=2.2.4-1ubuntu1.2`
-- `gpgsm=2.2.4-1ubuntu1.2`
-- `gpgv=2.2.4-1ubuntu1.2`
+- `dirmngr=2.2.4-1ubuntu1.3`
+- `gnupg=2.2.4-1ubuntu1.3`
+- `gnupg-l10n=2.2.4-1ubuntu1.3`
+- `gnupg-utils=2.2.4-1ubuntu1.3`
+- `gnupg2=2.2.4-1ubuntu1.3`
+- `gpg=2.2.4-1ubuntu1.3`
+- `gpg-agent=2.2.4-1ubuntu1.3`
+- `gpg-wks-client=2.2.4-1ubuntu1.3`
+- `gpg-wks-server=2.2.4-1ubuntu1.3`
+- `gpgconf=2.2.4-1ubuntu1.3`
+- `gpgsm=2.2.4-1ubuntu1.3`
+- `gpgv=2.2.4-1ubuntu1.3`
 
 Licenses: (parsed from: `/usr/share/doc/dirmngr/copyright`, `/usr/share/doc/gnupg/copyright`, `/usr/share/doc/gnupg-l10n/copyright`, `/usr/share/doc/gnupg-utils/copyright`, `/usr/share/doc/gnupg2/copyright`, `/usr/share/doc/gpg/copyright`, `/usr/share/doc/gpg-agent/copyright`, `/usr/share/doc/gpg-wks-client/copyright`, `/usr/share/doc/gpg-wks-server/copyright`, `/usr/share/doc/gpgconf/copyright`, `/usr/share/doc/gpgsm/copyright`, `/usr/share/doc/gpgv/copyright`)
 
@@ -1351,9 +1351,15 @@ Licenses: (parsed from: `/usr/share/doc/dirmngr/copyright`, `/usr/share/doc/gnup
 - `TinySCHEME`
 - `permissive`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris gnupg2=2.2.4-1ubuntu1.3
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.4-1ubuntu1.3.dsc' gnupg2_2.2.4-1ubuntu1.3.dsc 3816 SHA256:c9e03fe1179171768e06c4289b7b96ddd5df8a8a81067f645dfe77c2430be58e
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.4.orig.tar.bz2' gnupg2_2.2.4.orig.tar.bz2 6571487 SHA256:401a3e64780fdfa6d7670de0880aa5c9d589b3db7a7098979d7606cec546f2ec
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.4.orig.tar.bz2.asc' gnupg2_2.2.4.orig.tar.bz2.asc 952 SHA256:30dd26e12b451e8f6799ba3a81449ed18db3d3e747820b237a39745ab264c899
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.4-1ubuntu1.3.debian.tar.bz2' gnupg2_2.2.4-1ubuntu1.3.debian.tar.bz2 85796 SHA256:2037a7a473e89006024c9a4924cdee198277d0956eccf30d7bdb7cad344d7ede
+```
 
 ### `dpkg` source package: `gnutls28=3.5.18-1ubuntu1.4`
 
@@ -5886,19 +5892,19 @@ $ apt-get source -qq --print-uris uriparser=0.8.4-1
 'http://archive.ubuntu.com/ubuntu/pool/universe/u/uriparser/uriparser_0.8.4-1.debian.tar.xz' uriparser_0.8.4-1.debian.tar.xz 6096 SHA256:fdff8accbb61b3befed0f9da70975fec473051a0f1f9b2020fead23471eed43f
 ```
 
-### `dpkg` source package: `util-linux=2.31.1-0.4ubuntu3.6`
+### `dpkg` source package: `util-linux=2.31.1-0.4ubuntu3.7`
 
 Binary Packages:
 
-- `bsdutils=1:2.31.1-0.4ubuntu3.6`
-- `fdisk=2.31.1-0.4ubuntu3.6`
-- `libblkid1:amd64=2.31.1-0.4ubuntu3.6`
-- `libfdisk1:amd64=2.31.1-0.4ubuntu3.6`
-- `libmount1:amd64=2.31.1-0.4ubuntu3.6`
-- `libsmartcols1:amd64=2.31.1-0.4ubuntu3.6`
-- `libuuid1:amd64=2.31.1-0.4ubuntu3.6`
-- `mount=2.31.1-0.4ubuntu3.6`
-- `util-linux=2.31.1-0.4ubuntu3.6`
+- `bsdutils=1:2.31.1-0.4ubuntu3.7`
+- `fdisk=2.31.1-0.4ubuntu3.7`
+- `libblkid1:amd64=2.31.1-0.4ubuntu3.7`
+- `libfdisk1:amd64=2.31.1-0.4ubuntu3.7`
+- `libmount1:amd64=2.31.1-0.4ubuntu3.7`
+- `libsmartcols1:amd64=2.31.1-0.4ubuntu3.7`
+- `libuuid1:amd64=2.31.1-0.4ubuntu3.7`
+- `mount=2.31.1-0.4ubuntu3.7`
+- `util-linux=2.31.1-0.4ubuntu3.7`
 
 Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/fdisk/copyright`, `/usr/share/doc/libblkid1/copyright`, `/usr/share/doc/libfdisk1/copyright`, `/usr/share/doc/libmount1/copyright`, `/usr/share/doc/libsmartcols1/copyright`, `/usr/share/doc/libuuid1/copyright`, `/usr/share/doc/mount/copyright`, `/usr/share/doc/util-linux/copyright`)
 
@@ -5919,9 +5925,14 @@ Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/fdi
 - `MIT`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris util-linux=2.31.1-0.4ubuntu3.7
+'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.31.1-0.4ubuntu3.7.dsc' util-linux_2.31.1-0.4ubuntu3.7.dsc 4122 SHA256:9cc71b4783e96ec9a70f26a915abdf5cb0d6030054dc553070414aa660aa3a81
+'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.31.1.orig.tar.xz' util-linux_2.31.1.orig.tar.xz 4514032 SHA256:cfd5789570e9ff75e079471faeca1511ade1607f650523a6ad25d1e26516ae4e
+'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.31.1-0.4ubuntu3.7.debian.tar.xz' util-linux_2.31.1-0.4ubuntu3.7.debian.tar.xz 102216 SHA256:604928b464f9d1076873eb1311e175137b97e12ec2a69e96c42207cbcbcdb0b8
+```
 
 ### `dpkg` source package: `wavpack=5.1.0-2ubuntu1.4`
 

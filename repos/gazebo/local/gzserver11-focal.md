@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:c14ac4838333896cec396a181e8fc4534eeda30930310428e9d56999cfeabc20`
-- Created: `2020-09-17T00:39:54.879194243Z`
-- Virtual Size: ~ 783.22 Mb  
+- Image ID: `sha256:dccb8bffb7bca8b47b0a4244cbb0f7358436ef48346cf964725ad43ad11d24b5`
+- Created: `2020-09-26T00:16:35.918392609Z`
+- Virtual Size: ~ 783.38 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/gzserver_entrypoint.sh"]`
@@ -1420,12 +1420,12 @@ $ apt-get source -qq --print-uris glib2.0=2.64.3-1~ubuntu20.04.1
 'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.64.3-1~ubuntu20.04.1.debian.tar.xz' glib2.0_2.64.3-1~ubuntu20.04.1.debian.tar.xz 91792 SHA256:1bd92474c85b7f500d6a27677e4d41cd81d447dc5cbcdce7124d5f493d0fbd3f
 ```
 
-### `dpkg` source package: `glibc=2.31-0ubuntu9`
+### `dpkg` source package: `glibc=2.31-0ubuntu9.1`
 
 Binary Packages:
 
-- `libc-bin=2.31-0ubuntu9`
-- `libc6:amd64=2.31-0ubuntu9`
+- `libc-bin=2.31-0ubuntu9.1`
+- `libc6:amd64=2.31-0ubuntu9.1`
 
 Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/libc6/copyright`)
 
@@ -1435,10 +1435,10 @@ Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/lib
 Source:
 
 ```console
-$ apt-get source -qq --print-uris glibc=2.31-0ubuntu9
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31-0ubuntu9.dsc' glibc_2.31-0ubuntu9.dsc 9280 SHA256:be5c141ac961304c9c91218d7c49d0059f49895752720b1e58a834fb1d108bcd
+$ apt-get source -qq --print-uris glibc=2.31-0ubuntu9.1
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31-0ubuntu9.1.dsc' glibc_2.31-0ubuntu9.1.dsc 9456 SHA256:643d2f8a17187e2fe7e7430a6f40fc3ea1f3ff66e75bce052b8dfb9663ec30af
 'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31.orig.tar.xz' glibc_2.31.orig.tar.xz 17317924 SHA256:2b22c7b04a36747d6c74796a73193a6f8856bfd1efc551b5db96baefa053fe5e
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31-0ubuntu9.debian.tar.xz' glibc_2.31-0ubuntu9.debian.tar.xz 840996 SHA256:63c9cb78c131faec608ba47cfd2a15a9807ff6fcc41204a0429fa0c17b87b4d8
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31-0ubuntu9.1.debian.tar.xz' glibc_2.31-0ubuntu9.1.debian.tar.xz 844816 SHA256:2fc462337da07fe26ffb8217f2b705cd553ae486e888fa508556d923bb2085ab
 ```
 
 ### `dpkg` source package: `gmp=2:6.2.0+dfsg-4`
@@ -1773,11 +1773,11 @@ $ apt-get source -qq --print-uris ignition-fuel-tools4=4.2.1-2~focal
 'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-fuel-tools4/ignition-fuel-tools4_4.2.1-2~focal.debian.tar.xz' ignition-fuel-tools4_4.2.1-2~focal.debian.tar.xz 1684 SHA256:59dfb3a2d4ab48b1b73f730d0ec77d1a37c81a848c4d4bd5fd9fd0e9c91b02c5
 ```
 
-### `dpkg` source package: `ignition-math6=6.5.0-2~focal`
+### `dpkg` source package: `ignition-math6=6.6.0-1~focal`
 
 Binary Packages:
 
-- `libignition-math6:amd64=6.5.0-2~focal`
+- `libignition-math6:amd64=6.6.0-1~focal`
 
 Licenses: (parsed from: `/usr/share/doc/libignition-math6/copyright`)
 
@@ -1785,9 +1785,14 @@ Licenses: (parsed from: `/usr/share/doc/libignition-math6/copyright`)
 - `Apache-2.0`
 - `BSD-3-clause`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris ignition-math6=6.6.0-1~focal
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.6.0-1~focal.dsc' ignition-math6_6.6.0-1~focal.dsc 1379 SHA256:08fdcbb38a661a833c8145a38895e05f291928cc4aa62af081c0f3008c02329c
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.6.0.orig.tar.bz2' ignition-math6_6.6.0.orig.tar.bz2 447372 SHA256:1acd2c6ee663f67da7dd0a3f3db554e847b8cf8df3f1a253045331416e7a6d14
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.6.0-1~focal.debian.tar.xz' ignition-math6_6.6.0-1~focal.debian.tar.xz 2652 SHA256:f83782b81858fcb21027c8bab5f7fafa1c9899087cb8963722bc7d31a8fe7dcd
+```
 
 ### `dpkg` source package: `ignition-msgs5=5.3.0-1~focal`
 
