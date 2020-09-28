@@ -1,20 +1,20 @@
-# `postgres:12.4`
+# `postgres:13.0`
 
 ## Docker Metadata
 
-- Image ID: `sha256:d38331307292995d20023ebc59ddd1502feccde017906149d0c95ca82a3229d8`
-- Created: `2020-09-18T00:44:54.519122682Z`
-- Virtual Size: ~ 313.98 Mb  
+- Image ID: `sha256:817f2d3d51eccb32a160cecca3b6bb95de017810498f1bb0a1d7627f59e3c5f9`
+- Created: `2020-09-24T21:26:30.899286377Z`
+- Virtual Size: ~ 314.20 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
 - Command: `["postgres"]`
 - Environment:
-  - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/12/bin`
+  - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/13/bin`
   - `GOSU_VERSION=1.12`
   - `LANG=en_US.utf8`
-  - `PG_MAJOR=12`
-  - `PG_VERSION=12.4-1.pgdg100+1`
+  - `PG_MAJOR=13`
+  - `PG_VERSION=13.0-1.pgdg100+1`
   - `PGDATA=/var/lib/postgresql/data`
 
 ## `dpkg` (`.deb`-based packages)
@@ -165,19 +165,13 @@ Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris base-files=10.3+deb10u5
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3+deb10u5.dsc' base-files_10.3+deb10u5.dsc 1103 SHA256:7724ff9a9a3b2ce469cb04e761ab504b88fa2c74ba45d4d4d6b1e6cebdb11502
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3+deb10u5.tar.xz' base-files_10.3+deb10u5.tar.xz 65376 SHA256:a86ea7be711a9a91ae781cbd9db1b0a931f76cdd36ea247aae9273f8f4d2a011
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/base-files/10.3+deb10u5/
 
-- https://sources.debian.net/src/base-files/10.3+deb10u5/ (for browsing the source)
-- https://sources.debian.net/src/base-files/10.3+deb10u5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/base-files/10.3+deb10u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-passwd=3.5.46`
 
@@ -1972,15 +1966,15 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/pinentry/1.1.0-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/pinentry/1.1.0-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `postgresql-12=12.4-1.pgdg100+1`
+### `dpkg` source package: `postgresql-13=13.0-1.pgdg100+1`
 
 Binary Packages:
 
-- `libpq5:amd64=12.4-1.pgdg100+1`
-- `postgresql-12=12.4-1.pgdg100+1`
-- `postgresql-client-12=12.4-1.pgdg100+1`
+- `libpq5:amd64=13.0-1.pgdg100+1`
+- `postgresql-13=13.0-1.pgdg100+1`
+- `postgresql-client-13=13.0-1.pgdg100+1`
 
-Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`, `/usr/share/doc/postgresql-12/copyright`, `/usr/share/doc/postgresql-client-12/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`, `/usr/share/doc/postgresql-13/copyright`, `/usr/share/doc/postgresql-client-13/copyright`)
 
 - `Artistic`
 - `BSD-2-clause`
@@ -2001,10 +1995,10 @@ Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`, `/usr/share/doc/postg
 Source:
 
 ```console
-$ apt-get source -qq --print-uris postgresql-12=12.4-1.pgdg100+1
-'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-12/postgresql-12_12.4-1.pgdg100+1.dsc' postgresql-12_12.4-1.pgdg100+1.dsc 2776 SHA256:50b6a97025f3dbec552ee8d12930805635e79209e34e794e4964af2896215fec
-'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-12/postgresql-12_12.4.orig.tar.bz2' postgresql-12_12.4.orig.tar.bz2 20669776 SHA256:bee93fbe2c32f59419cb162bcc0145c58da9a8644ee154a30b9a5ce47de606cc
-'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-12/postgresql-12_12.4-1.pgdg100+1.debian.tar.xz' postgresql-12_12.4-1.pgdg100+1.debian.tar.xz 23740 SHA256:69f50bd40d06bf6e99b71454c058b3b7579ef698d9cb1f86ae9ddeb820125a92
+$ apt-get source -qq --print-uris postgresql-13=13.0-1.pgdg100+1
+'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-13/postgresql-13_13.0-1.pgdg100+1.dsc' postgresql-13_13.0-1.pgdg100+1.dsc 2767 SHA256:fa2fc648c3fe0653eefdf1ca1b08484b8bbe8d6a4ab05c362727214c07dad488
+'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-13/postgresql-13_13.0.orig.tar.bz2' postgresql-13_13.0.orig.tar.bz2 20999465 SHA256:80e750be8d436b54197636a02636f8fd3263ba6779bf865b04832495ea592296
+'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-13/postgresql-13_13.0-1.pgdg100+1.debian.tar.xz' postgresql-13_13.0-1.pgdg100+1.debian.tar.xz 24156 SHA256:fb33de9ffcd8f71d915d4f55646f4dd0b95af7e96eafce4b3994c8c807ca90b4
 ```
 
 ### `dpkg` source package: `postgresql-common=216.pgdg100+1`
