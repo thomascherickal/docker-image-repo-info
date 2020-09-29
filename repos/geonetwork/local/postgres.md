@@ -227,19 +227,13 @@ Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris base-files=10.3+deb10u5
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3+deb10u5.dsc' base-files_10.3+deb10u5.dsc 1103 SHA256:7724ff9a9a3b2ce469cb04e761ab504b88fa2c74ba45d4d4d6b1e6cebdb11502
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3+deb10u5.tar.xz' base-files_10.3+deb10u5.tar.xz 65376 SHA256:a86ea7be711a9a91ae781cbd9db1b0a931f76cdd36ea247aae9273f8f4d2a011
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/base-files/10.3+deb10u5/
 
-- https://sources.debian.net/src/base-files/10.3+deb10u5/ (for browsing the source)
-- https://sources.debian.net/src/base-files/10.3+deb10u5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/base-files/10.3+deb10u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-passwd=3.5.46`
 
@@ -2590,9 +2584,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris postgresql-11=11.7-0+deb10u1
-'http://deb.debian.org/debian/pool/main/p/postgresql-11/postgresql-11_11.7-0+deb10u1.dsc' postgresql-11_11.7-0+deb10u1.dsc 3738 SHA256:5729f856ae9818e5c1c1f9be61aab55a8a7dea81b30749670ae531c2c145e564
-'http://deb.debian.org/debian/pool/main/p/postgresql-11/postgresql-11_11.7.orig.tar.bz2' postgresql-11_11.7.orig.tar.bz2 19890063 SHA256:324ae93a8846fbb6a25d562d271bc441ffa8794654c5b2839384834de220a313
-'http://deb.debian.org/debian/pool/main/p/postgresql-11/postgresql-11_11.7-0+deb10u1.debian.tar.xz' postgresql-11_11.7-0+deb10u1.debian.tar.xz 24952 SHA256:dc9097b4d54d393f3e01d90485ea047a401fa12cba814395937047da89616fe3
+'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-11/postgresql-11_11.7-0+deb10u1.dsc' postgresql-11_11.7-0+deb10u1.dsc 3738 SHA256:5729f856ae9818e5c1c1f9be61aab55a8a7dea81b30749670ae531c2c145e564
+'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-11/postgresql-11_11.7.orig.tar.bz2' postgresql-11_11.7.orig.tar.bz2 19890063 SHA256:324ae93a8846fbb6a25d562d271bc441ffa8794654c5b2839384834de220a313
+'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-11/postgresql-11_11.7-0+deb10u1.debian.tar.xz' postgresql-11_11.7-0+deb10u1.debian.tar.xz 24952 SHA256:dc9097b4d54d393f3e01d90485ea047a401fa12cba814395937047da89616fe3
 ```
 
 Other potentially useful URLs:
@@ -2617,8 +2611,8 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris postgresql-common=200+deb10u3
-'http://deb.debian.org/debian/pool/main/p/postgresql-common/postgresql-common_200+deb10u3.dsc' postgresql-common_200+deb10u3.dsc 2341 SHA256:14a3734d2e62c89f7aa689d3014e243fb9bdb0030940b1ed0cb721a651e7f947
-'http://deb.debian.org/debian/pool/main/p/postgresql-common/postgresql-common_200+deb10u3.tar.xz' postgresql-common_200+deb10u3.tar.xz 213376 SHA256:394e775ac9227d79f5c258bf1a6b0b446f6b8abf08ad1e75d07f9935353014e6
+'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-common/postgresql-common_200+deb10u3.dsc' postgresql-common_200+deb10u3.dsc 2341 SHA256:14a3734d2e62c89f7aa689d3014e243fb9bdb0030940b1ed0cb721a651e7f947
+'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-common/postgresql-common_200+deb10u3.tar.xz' postgresql-common_200+deb10u3.tar.xz 213376 SHA256:394e775ac9227d79f5c258bf1a6b0b446f6b8abf08ad1e75d07f9935353014e6
 ```
 
 Other potentially useful URLs:
