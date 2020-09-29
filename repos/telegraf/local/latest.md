@@ -161,19 +161,13 @@ Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris base-files=10.3+deb10u5
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3+deb10u5.dsc' base-files_10.3+deb10u5.dsc 1103 SHA256:7724ff9a9a3b2ce469cb04e761ab504b88fa2c74ba45d4d4d6b1e6cebdb11502
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3+deb10u5.tar.xz' base-files_10.3+deb10u5.tar.xz 65376 SHA256:a86ea7be711a9a91ae781cbd9db1b0a931f76cdd36ea247aae9273f8f4d2a011
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/base-files/10.3+deb10u5/
 
-- https://sources.debian.net/src/base-files/10.3+deb10u5/ (for browsing the source)
-- https://sources.debian.net/src/base-files/10.3+deb10u5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/base-files/10.3+deb10u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-passwd=3.5.46`
 
@@ -1816,9 +1810,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris net-snmp=5.7.3+dfsg-5+deb10u1
-'http://security.debian.org/debian-security/pool/updates/main/n/net-snmp/net-snmp_5.7.3+dfsg-5+deb10u1.dsc' net-snmp_5.7.3+dfsg-5+deb10u1.dsc 3000 SHA256:b9e7cc8c042c69e059cfbc9b39bc617793e7e66363ea549cdfc007f0acaee905
-'http://security.debian.org/debian-security/pool/updates/main/n/net-snmp/net-snmp_5.7.3+dfsg.orig.tar.xz' net-snmp_5.7.3+dfsg.orig.tar.xz 3371224 SHA256:073eb05b926a9d23a2eba3270c4e52dd94c0aa27e8b7cf7f1a4e59a4d3da3fb5
-'http://security.debian.org/debian-security/pool/updates/main/n/net-snmp/net-snmp_5.7.3+dfsg-5+deb10u1.debian.tar.xz' net-snmp_5.7.3+dfsg-5+deb10u1.debian.tar.xz 82540 SHA256:dcaafbe074a1f3881e4f350508d02f0647c77a84512707bb97f78d5709f19395
+'http://deb.debian.org/debian/pool/main/n/net-snmp/net-snmp_5.7.3+dfsg-5+deb10u1.dsc' net-snmp_5.7.3+dfsg-5+deb10u1.dsc 3000 SHA256:b9e7cc8c042c69e059cfbc9b39bc617793e7e66363ea549cdfc007f0acaee905
+'http://deb.debian.org/debian/pool/main/n/net-snmp/net-snmp_5.7.3+dfsg.orig.tar.xz' net-snmp_5.7.3+dfsg.orig.tar.xz 3371224 SHA256:073eb05b926a9d23a2eba3270c4e52dd94c0aa27e8b7cf7f1a4e59a4d3da3fb5
+'http://deb.debian.org/debian/pool/main/n/net-snmp/net-snmp_5.7.3+dfsg-5+deb10u1.debian.tar.xz' net-snmp_5.7.3+dfsg-5+deb10u1.debian.tar.xz 82540 SHA256:dcaafbe074a1f3881e4f350508d02f0647c77a84512707bb97f78d5709f19395
 ```
 
 Other potentially useful URLs:
