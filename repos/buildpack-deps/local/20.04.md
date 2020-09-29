@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:0482081c7826d1d9323a91e7a96fd2a8ead9047d8fceef8bf4616f517805479e`
-- Created: `2020-09-17T00:09:36.240742616Z`
-- Virtual Size: ~ 698.64 Mb  
+- Image ID: `sha256:c5cd39169d797cff3c79b7a21bdb27d6123e0f8eba382bbabf4773cee8570ae3`
+- Created: `2020-09-25T23:30:36.825169366Z`
+- Virtual Size: ~ 698.65 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -1165,14 +1165,14 @@ $ apt-get source -qq --print-uris glib2.0=2.64.3-1~ubuntu20.04.1
 'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.64.3-1~ubuntu20.04.1.debian.tar.xz' glib2.0_2.64.3-1~ubuntu20.04.1.debian.tar.xz 91792 SHA256:1bd92474c85b7f500d6a27677e4d41cd81d447dc5cbcdce7124d5f493d0fbd3f
 ```
 
-### `dpkg` source package: `glibc=2.31-0ubuntu9`
+### `dpkg` source package: `glibc=2.31-0ubuntu9.1`
 
 Binary Packages:
 
-- `libc-bin=2.31-0ubuntu9`
-- `libc-dev-bin=2.31-0ubuntu9`
-- `libc6:amd64=2.31-0ubuntu9`
-- `libc6-dev:amd64=2.31-0ubuntu9`
+- `libc-bin=2.31-0ubuntu9.1`
+- `libc-dev-bin=2.31-0ubuntu9.1`
+- `libc6:amd64=2.31-0ubuntu9.1`
+- `libc6-dev:amd64=2.31-0ubuntu9.1`
 
 Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/libc-dev-bin/copyright`, `/usr/share/doc/libc6/copyright`, `/usr/share/doc/libc6-dev/copyright`)
 
@@ -1182,10 +1182,10 @@ Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/lib
 Source:
 
 ```console
-$ apt-get source -qq --print-uris glibc=2.31-0ubuntu9
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31-0ubuntu9.dsc' glibc_2.31-0ubuntu9.dsc 9280 SHA256:be5c141ac961304c9c91218d7c49d0059f49895752720b1e58a834fb1d108bcd
+$ apt-get source -qq --print-uris glibc=2.31-0ubuntu9.1
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31-0ubuntu9.1.dsc' glibc_2.31-0ubuntu9.1.dsc 9456 SHA256:643d2f8a17187e2fe7e7430a6f40fc3ea1f3ff66e75bce052b8dfb9663ec30af
 'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31.orig.tar.xz' glibc_2.31.orig.tar.xz 17317924 SHA256:2b22c7b04a36747d6c74796a73193a6f8856bfd1efc551b5db96baefa053fe5e
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31-0ubuntu9.debian.tar.xz' glibc_2.31-0ubuntu9.debian.tar.xz 840996 SHA256:63c9cb78c131faec608ba47cfd2a15a9807ff6fcc41204a0429fa0c17b87b4d8
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31-0ubuntu9.1.debian.tar.xz' glibc_2.31-0ubuntu9.1.debian.tar.xz 844816 SHA256:2fc462337da07fe26ffb8217f2b705cd553ae486e888fa508556d923bb2085ab
 ```
 
 ### `dpkg` source package: `gmp=2:6.2.0+dfsg-4`
@@ -2814,19 +2814,24 @@ $ apt-get source -qq --print-uris libzstd=1.4.4+dfsg-3
 'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.4.4+dfsg-3.debian.tar.xz' libzstd_1.4.4+dfsg-3.debian.tar.xz 16068 SHA256:f7fec89f1fae04dfa551d124973167e09e84c864a25961aa20727cc91277b0e6
 ```
 
-### `dpkg` source package: `linux=5.4.0-47.51`
+### `dpkg` source package: `linux=5.4.0-48.52`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=5.4.0-47.51`
+- `linux-libc-dev:amd64=5.4.0-48.52`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris linux=5.4.0-48.52
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-48.52.dsc' linux_5.4.0-48.52.dsc 6875 SHA256:9c997e05945d9bb0715ab7320fdef556cb830afb2bf3f07094cc4edef2ab3543
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0.orig.tar.gz' linux_5.4.0.orig.tar.gz 170244619 SHA256:805f3ed93854317814c59caf2dbfd2097745685f95c8c18b509c9347dcc7d51f
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-48.52.diff.gz' linux_5.4.0-48.52.diff.gz 5335070 SHA256:b7743160da27bc55d29df1dd8389a214eabfa6832d9d94f15d536f73d79a6885
+```
 
 ### `dpkg` source package: `lsb=11.1.0ubuntu2`
 
