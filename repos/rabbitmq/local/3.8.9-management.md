@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:437def336c7bf3d8395513c7080548c281450b97189736d63ccf5342d961614f`
-- Created: `2020-09-25T01:23:26.116001945Z`
-- Virtual Size: ~ 186.35 Mb  
+- Image ID: `sha256:b876c920f541b165a03548de171321b9a273a101731dbec798107af63c027fef`
+- Created: `2020-09-26T01:27:08.518367038Z`
+- Virtual Size: ~ 185.90 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -1490,19 +1490,19 @@ $ apt-get source -qq --print-uris ubuntu-keyring=2018.09.18.1~18.04.0
 'http://archive.ubuntu.com/ubuntu/pool/main/u/ubuntu-keyring/ubuntu-keyring_2018.09.18.1~18.04.0.tar.gz' ubuntu-keyring_2018.09.18.1~18.04.0.tar.gz 34238 SHA256:7095b786c02816bb6933b3a73ed6c9e302542e8fc1edb8346f7ddab49e95b3bd
 ```
 
-### `dpkg` source package: `util-linux=2.31.1-0.4ubuntu3.6`
+### `dpkg` source package: `util-linux=2.31.1-0.4ubuntu3.7`
 
 Binary Packages:
 
-- `bsdutils=1:2.31.1-0.4ubuntu3.6`
-- `fdisk=2.31.1-0.4ubuntu3.6`
-- `libblkid1:amd64=2.31.1-0.4ubuntu3.6`
-- `libfdisk1:amd64=2.31.1-0.4ubuntu3.6`
-- `libmount1:amd64=2.31.1-0.4ubuntu3.6`
-- `libsmartcols1:amd64=2.31.1-0.4ubuntu3.6`
-- `libuuid1:amd64=2.31.1-0.4ubuntu3.6`
-- `mount=2.31.1-0.4ubuntu3.6`
-- `util-linux=2.31.1-0.4ubuntu3.6`
+- `bsdutils=1:2.31.1-0.4ubuntu3.7`
+- `fdisk=2.31.1-0.4ubuntu3.7`
+- `libblkid1:amd64=2.31.1-0.4ubuntu3.7`
+- `libfdisk1:amd64=2.31.1-0.4ubuntu3.7`
+- `libmount1:amd64=2.31.1-0.4ubuntu3.7`
+- `libsmartcols1:amd64=2.31.1-0.4ubuntu3.7`
+- `libuuid1:amd64=2.31.1-0.4ubuntu3.7`
+- `mount=2.31.1-0.4ubuntu3.7`
+- `util-linux=2.31.1-0.4ubuntu3.7`
 
 Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/fdisk/copyright`, `/usr/share/doc/libblkid1/copyright`, `/usr/share/doc/libfdisk1/copyright`, `/usr/share/doc/libmount1/copyright`, `/usr/share/doc/libsmartcols1/copyright`, `/usr/share/doc/libuuid1/copyright`, `/usr/share/doc/mount/copyright`, `/usr/share/doc/util-linux/copyright`)
 
@@ -1523,9 +1523,14 @@ Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/fdi
 - `MIT`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris util-linux=2.31.1-0.4ubuntu3.7
+'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.31.1-0.4ubuntu3.7.dsc' util-linux_2.31.1-0.4ubuntu3.7.dsc 4122 SHA256:9cc71b4783e96ec9a70f26a915abdf5cb0d6030054dc553070414aa660aa3a81
+'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.31.1.orig.tar.xz' util-linux_2.31.1.orig.tar.xz 4514032 SHA256:cfd5789570e9ff75e079471faeca1511ade1607f650523a6ad25d1e26516ae4e
+'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.31.1-0.4ubuntu3.7.debian.tar.xz' util-linux_2.31.1-0.4ubuntu3.7.debian.tar.xz 102216 SHA256:604928b464f9d1076873eb1311e175137b97e12ec2a69e96c42207cbcbcdb0b8
+```
 
 ### `dpkg` source package: `xz-utils=5.2.2-1.3`
 
