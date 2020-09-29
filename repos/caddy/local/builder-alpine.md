@@ -1,27 +1,20 @@
-# `caddy:2.1.1-alpine`
+# `caddy:2.2.0-builder-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:4fd8ade3df48988e09df79afd3361daa868169892daa8efc4b9b88028fada48a`
-- Created: `2020-09-25T22:27:19.482522026Z`
-- Virtual Size: ~ 43.05 Mb  
+- Image ID: `sha256:dc5d6c14a9d8a82163a267d5e933b49fb65cf12f39bccf5e698b5f091286eeff`
+- Created: `2020-09-25T22:27:47.355912843Z`
+- Virtual Size: ~ 319.08 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Command: `["caddy","run","--config","/etc/caddy/Caddyfile","--adapter","caddyfile"]`
+- Command: `["/bin/sh"]`
 - Environment:
-  - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `CADDY_VERSION=v2.1.1`
-  - `XDG_CONFIG_HOME=/config`
-  - `XDG_DATA_HOME=/data`
-- Labels:
-  - `org.opencontainers.image.description=a powerful, enterprise-ready, open source web server with automatic HTTPS written in Go`
-  - `org.opencontainers.image.documentation=https://caddyserver.com/docs`
-  - `org.opencontainers.image.licenses=Apache-2.0`
-  - `org.opencontainers.image.source=https://github.com/caddyserver/caddy-docker`
-  - `org.opencontainers.image.title=Caddy`
-  - `org.opencontainers.image.url=https://caddyserver.com`
-  - `org.opencontainers.image.vendor=Light Code Labs`
-  - `org.opencontainers.image.version=v2.1.1`
+  - `PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
+  - `GOLANG_VERSION=1.15.2`
+  - `GOPATH=/go`
+  - `XCADDY_VERSION=v0.1.5`
+  - `CADDY_VERSION=v2.2.0`
+  - `XCADDY_SKIP_CLEANUP=1`
 
 ## `apk` (`.apk`-based packages)
 
@@ -96,16 +89,16 @@ GPL-2.0-only
 ### `apk` package: `ca-certificates`
 
 ```console
-ca-certificates-20191127-r3 description:
+ca-certificates-20191127-r2 description:
 Common CA certificates PEM files from Mozilla
 
-ca-certificates-20191127-r3 webpage:
+ca-certificates-20191127-r2 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-20191127-r3 installed size:
-688128
+ca-certificates-20191127-r2 installed size:
+692224
 
-ca-certificates-20191127-r3 license:
+ca-certificates-20191127-r2 license:
 MPL-2.0 GPL-2.0-or-later
 
 ```
@@ -124,6 +117,40 @@ ca-certificates-bundle-20191127-r2 installed size:
 
 ca-certificates-bundle-20191127-r2 license:
 MPL-2.0 GPL-2.0-or-later
+
+```
+
+### `apk` package: `expat`
+
+```console
+expat-2.2.9-r1 description:
+An XML Parser library written in C
+
+expat-2.2.9-r1 webpage:
+http://www.libexpat.org/
+
+expat-2.2.9-r1 installed size:
+188416
+
+expat-2.2.9-r1 license:
+MIT
+
+```
+
+### `apk` package: `git`
+
+```console
+git-2.26.2-r0 description:
+Distributed version control system
+
+git-2.26.2-r0 webpage:
+https://www.git-scm.com/
+
+git-2.26.2-r0 installed size:
+14831616
+
+git-2.26.2-r0 license:
+GPL-2.0-or-later
 
 ```
 
@@ -161,6 +188,23 @@ OpenSSL
 
 ```
 
+### `apk` package: `libcurl`
+
+```console
+libcurl-7.69.1-r1 description:
+The multiprotocol file transfer library
+
+libcurl-7.69.1-r1 webpage:
+https://curl.haxx.se/
+
+libcurl-7.69.1-r1 installed size:
+458752
+
+libcurl-7.69.1-r1 license:
+MIT
+
+```
+
 ### `apk` package: `libssl1.1`
 
 ```console
@@ -195,36 +239,19 @@ ISC
 
 ```
 
-### `apk` package: `mailcap`
-
-```console
-mailcap-2.1.49-r0 description:
-Helper application and MIME type associations for file types
-
-mailcap-2.1.49-r0 webpage:
-https://pagure.io/mailcap
-
-mailcap-2.1.49-r0 installed size:
-81920
-
-mailcap-2.1.49-r0 license:
-Public-Domain and MIT
-
-```
-
 ### `apk` package: `musl`
 
 ```console
-musl-1.1.24-r8 description:
+musl-1.1.24-r9 description:
 the musl c library (libc) implementation
 
-musl-1.1.24-r8 webpage:
+musl-1.1.24-r9 webpage:
 https://musl.libc.org/
 
-musl-1.1.24-r8 installed size:
+musl-1.1.24-r9 installed size:
 614400
 
-musl-1.1.24-r8 license:
+musl-1.1.24-r9 license:
 MIT
 
 ```
@@ -243,6 +270,40 @@ musl-utils-1.1.24-r8 installed size:
 
 musl-utils-1.1.24-r8 license:
 MIT BSD GPL2+
+
+```
+
+### `apk` package: `nghttp2-libs`
+
+```console
+nghttp2-libs-1.41.0-r0 description:
+Experimental HTTP/2 client, server and proxy (libraries)
+
+nghttp2-libs-1.41.0-r0 webpage:
+https://nghttp2.org
+
+nghttp2-libs-1.41.0-r0 installed size:
+159744
+
+nghttp2-libs-1.41.0-r0 license:
+MIT
+
+```
+
+### `apk` package: `pcre2`
+
+```console
+pcre2-10.35-r0 description:
+Perl-compatible regular expression library
+
+pcre2-10.35-r0 webpage:
+https://pcre.org/
+
+pcre2-10.35-r0 installed size:
+692224
+
+pcre2-10.35-r0 license:
+BSD-3-Clause
 
 ```
 

@@ -1,18 +1,20 @@
-# `caddy:2.1.1-builder`
+# `caddy:2.2.0-builder-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:9eae05b9c152023f118a7b41498c3413fc036dd459dd8cb0b6d3f901e3ddad7b`
-- Created: `2020-09-09T22:46:57.447338179Z`
-- Virtual Size: ~ 771.28 Mb  
+- Image ID: `sha256:dc5d6c14a9d8a82163a267d5e933b49fb65cf12f39bccf5e698b5f091286eeff`
+- Created: `2020-09-25T22:27:47.355912843Z`
+- Virtual Size: ~ 319.08 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/sh"]`
 - Environment:
   - `PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `GOLANG_VERSION=1.14.9`
+  - `GOLANG_VERSION=1.15.2`
   - `GOPATH=/go`
-  - `CADDY_SOURCE_VERSION=v2.1.1`
+  - `XCADDY_VERSION=v0.1.5`
+  - `CADDY_VERSION=v2.2.0`
+  - `XCADDY_SKIP_CLEANUP=1`
 
 ## `apk` (`.apk`-based packages)
 
@@ -189,16 +191,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.69.1-r0 description:
+libcurl-7.69.1-r1 description:
 The multiprotocol file transfer library
 
-libcurl-7.69.1-r0 webpage:
+libcurl-7.69.1-r1 webpage:
 https://curl.haxx.se/
 
-libcurl-7.69.1-r0 installed size:
+libcurl-7.69.1-r1 installed size:
 458752
 
-libcurl-7.69.1-r0 license:
+libcurl-7.69.1-r1 license:
 MIT
 
 ```
