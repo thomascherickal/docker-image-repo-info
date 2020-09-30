@@ -1,7 +1,7 @@
 ## `mediawiki:latest`
 
 ```console
-$ docker pull mediawiki@sha256:f671b9c9cab432cb2d97eb623c667373f4deee7704ff6232a56ef113988fa39c
+$ docker pull mediawiki@sha256:c59318af8468eec4a0482959fe0d8a8029f81843c7c55d06fe0a3648dce74b11
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -199,14 +199,14 @@ CMD ["apache2-foreground"]
 ### `mediawiki:latest` - linux; arm variant v5
 
 ```console
-$ docker pull mediawiki@sha256:f6a668ca03c839672db8b1e33fa17c561bb3de08f476362ad33a203f707aa6fd
+$ docker pull mediawiki@sha256:155f66fe9222a17053bc594c89fb7ee3bb2b1b7ef78734380053bd244a1e84bb
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **232.1 MB (232095160 bytes)**  
+-	Total Size: **239.4 MB (239417269 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:813e9ed247ddbd56cf1aca90352bfb9de79740291191c3ce3ec35e69ce205084`
+-	Image ID: `sha256:fd8d27e627ea3a476dbf8f02b79e05e49db272e9ea13b01b56424a3692a8f659`
 -	Entrypoint: `["docker-php-entrypoint"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -287,13 +287,13 @@ RUN set -eux; 	a2enmod rewrite; 	{ 		echo "<Directory /var/www/html>"; 		echo " 
 RUN { 		echo 'opcache.memory_consumption=128'; 		echo 'opcache.interned_strings_buffer=8'; 		echo 'opcache.max_accelerated_files=4000'; 		echo 'opcache.revalidate_freq=60'; 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
 # Fri, 25 Sep 2020 20:51:16 GMT
 RUN set -eux; 	mkdir -p /var/www/data; 	chown -R www-data:www-data /var/www/data
-# Fri, 25 Sep 2020 20:51:17 GMT
-ENV MEDIAWIKI_MAJOR_VERSION=1.34
-# Fri, 25 Sep 2020 20:51:18 GMT
-ENV MEDIAWIKI_VERSION=1.34.4
-# Fri, 25 Sep 2020 20:52:07 GMT
+# Wed, 30 Sep 2020 00:49:52 GMT
+ENV MEDIAWIKI_MAJOR_VERSION=1.35
+# Wed, 30 Sep 2020 00:49:52 GMT
+ENV MEDIAWIKI_VERSION=1.35.0
+# Wed, 30 Sep 2020 00:50:52 GMT
 RUN set -eux; 	fetchDeps=" 		gnupg 		dirmngr 	"; 	apt-get update; 	apt-get install -y --no-install-recommends $fetchDeps; 		curl -fSL "https://releases.wikimedia.org/mediawiki/${MEDIAWIKI_MAJOR_VERSION}/mediawiki-${MEDIAWIKI_VERSION}.tar.gz" -o mediawiki.tar.gz; 	curl -fSL "https://releases.wikimedia.org/mediawiki/${MEDIAWIKI_MAJOR_VERSION}/mediawiki-${MEDIAWIKI_VERSION}.tar.gz.sig" -o mediawiki.tar.gz.sig; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 		D7D6767D135A514BEB86E9BA75682B08E8A3FEC4 		441276E9CCD15F44F6D97D18C119E1A64D70938E 		F7F780D82EBFB8A56556E7EE82403E59F9F8CD79 		1D98867E82982C8FE0ABC25F9B69B3109D3BB7B0 	; 	gpg --batch --verify mediawiki.tar.gz.sig mediawiki.tar.gz; 	tar -x --strip-components=1 -f mediawiki.tar.gz; 	gpgconf --kill all; 	rm -r "$GNUPGHOME" mediawiki.tar.gz.sig mediawiki.tar.gz; 	chown -R www-data:www-data extensions skins cache images; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; 	rm -rf /var/lib/apt/lists/*
-# Fri, 25 Sep 2020 20:52:10 GMT
+# Wed, 30 Sep 2020 00:50:53 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -374,22 +374,22 @@ CMD ["apache2-foreground"]
 		Last Modified: Fri, 25 Sep 2020 20:56:07 GMT  
 		Size: 172.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e3efe3dd652d44d76e3385d5edcd8e849416c103b13f301bb2e45374238e7b69`  
-		Last Modified: Fri, 25 Sep 2020 20:56:29 GMT  
-		Size: 41.3 MB (41342231 bytes)  
+	-	`sha256:e0c8ee7a607f78d0266435a9a80420eb1e68903040f184a9a2245ccbde0979a9`  
+		Last Modified: Wed, 30 Sep 2020 00:53:24 GMT  
+		Size: 48.7 MB (48664340 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mediawiki:latest` - linux; arm variant v7
 
 ```console
-$ docker pull mediawiki@sha256:4b1976a49d38b340cff4b2b6cac007fec14e8ad0d1ab0ed707fdc98ecd2cc3ec
+$ docker pull mediawiki@sha256:523a93ab29d6e1153b46c1c270d995c4e35f9cae40422ebb9765daa3ed066832
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **225.7 MB (225653711 bytes)**  
+-	Total Size: **233.0 MB (232975525 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d1faceafe9663bb33f1513694b5cddd14e6cad9a76b7be053d61a124d947ed50`
+-	Image ID: `sha256:3adbc0146ea8f1b987096fe98e3770dcff5f244ab5ecff9db386e12f17347c99`
 -	Entrypoint: `["docker-php-entrypoint"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -470,13 +470,13 @@ RUN set -eux; 	a2enmod rewrite; 	{ 		echo "<Directory /var/www/html>"; 		echo " 
 RUN { 		echo 'opcache.memory_consumption=128'; 		echo 'opcache.interned_strings_buffer=8'; 		echo 'opcache.max_accelerated_files=4000'; 		echo 'opcache.revalidate_freq=60'; 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
 # Fri, 25 Sep 2020 21:30:29 GMT
 RUN set -eux; 	mkdir -p /var/www/data; 	chown -R www-data:www-data /var/www/data
-# Fri, 25 Sep 2020 21:30:30 GMT
-ENV MEDIAWIKI_MAJOR_VERSION=1.34
-# Fri, 25 Sep 2020 21:30:30 GMT
-ENV MEDIAWIKI_VERSION=1.34.4
-# Fri, 25 Sep 2020 21:31:16 GMT
+# Wed, 30 Sep 2020 00:58:29 GMT
+ENV MEDIAWIKI_MAJOR_VERSION=1.35
+# Wed, 30 Sep 2020 00:58:30 GMT
+ENV MEDIAWIKI_VERSION=1.35.0
+# Wed, 30 Sep 2020 00:59:22 GMT
 RUN set -eux; 	fetchDeps=" 		gnupg 		dirmngr 	"; 	apt-get update; 	apt-get install -y --no-install-recommends $fetchDeps; 		curl -fSL "https://releases.wikimedia.org/mediawiki/${MEDIAWIKI_MAJOR_VERSION}/mediawiki-${MEDIAWIKI_VERSION}.tar.gz" -o mediawiki.tar.gz; 	curl -fSL "https://releases.wikimedia.org/mediawiki/${MEDIAWIKI_MAJOR_VERSION}/mediawiki-${MEDIAWIKI_VERSION}.tar.gz.sig" -o mediawiki.tar.gz.sig; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 		D7D6767D135A514BEB86E9BA75682B08E8A3FEC4 		441276E9CCD15F44F6D97D18C119E1A64D70938E 		F7F780D82EBFB8A56556E7EE82403E59F9F8CD79 		1D98867E82982C8FE0ABC25F9B69B3109D3BB7B0 	; 	gpg --batch --verify mediawiki.tar.gz.sig mediawiki.tar.gz; 	tar -x --strip-components=1 -f mediawiki.tar.gz; 	gpgconf --kill all; 	rm -r "$GNUPGHOME" mediawiki.tar.gz.sig mediawiki.tar.gz; 	chown -R www-data:www-data extensions skins cache images; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; 	rm -rf /var/lib/apt/lists/*
-# Fri, 25 Sep 2020 21:31:18 GMT
+# Wed, 30 Sep 2020 00:59:26 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -557,22 +557,22 @@ CMD ["apache2-foreground"]
 		Last Modified: Fri, 25 Sep 2020 21:36:12 GMT  
 		Size: 171.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:64e27b9d2563d171058630d51de171d72237f254f60be229bfb003c84d307d2b`  
-		Last Modified: Fri, 25 Sep 2020 21:36:33 GMT  
-		Size: 41.3 MB (41342194 bytes)  
+	-	`sha256:205b67b9fee74728045cd01bfba37736e0c0f81a9741d0d7938ab7b09956bfe9`  
+		Last Modified: Wed, 30 Sep 2020 01:03:12 GMT  
+		Size: 48.7 MB (48664008 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mediawiki:latest` - linux; arm64 variant v8
 
 ```console
-$ docker pull mediawiki@sha256:86640a5547818aef0eb8b514d26c836d0dbaf8681bd5461406568a8da5c22b20
+$ docker pull mediawiki@sha256:f94dc8fad433a29a9bade1c41fc53fb74c5e0a32d382152ab0eb4af19adb9d7a
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **247.4 MB (247400685 bytes)**  
+-	Total Size: **254.7 MB (254723716 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a323f955f639385c2f10c1658253995c05671eb3e4da21cb6a77599e38ad3a0d`
+-	Image ID: `sha256:9c50582f0522bfb8ef25ae489a6f9bef776aff1de1d3b87f9585ed32254fb77b`
 -	Entrypoint: `["docker-php-entrypoint"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -653,13 +653,13 @@ RUN set -eux; 	a2enmod rewrite; 	{ 		echo "<Directory /var/www/html>"; 		echo " 
 RUN { 		echo 'opcache.memory_consumption=128'; 		echo 'opcache.interned_strings_buffer=8'; 		echo 'opcache.max_accelerated_files=4000'; 		echo 'opcache.revalidate_freq=60'; 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
 # Fri, 25 Sep 2020 20:44:05 GMT
 RUN set -eux; 	mkdir -p /var/www/data; 	chown -R www-data:www-data /var/www/data
-# Fri, 25 Sep 2020 20:44:05 GMT
-ENV MEDIAWIKI_MAJOR_VERSION=1.34
-# Fri, 25 Sep 2020 20:44:06 GMT
-ENV MEDIAWIKI_VERSION=1.34.4
-# Fri, 25 Sep 2020 20:44:38 GMT
+# Wed, 30 Sep 2020 00:44:44 GMT
+ENV MEDIAWIKI_MAJOR_VERSION=1.35
+# Wed, 30 Sep 2020 00:44:45 GMT
+ENV MEDIAWIKI_VERSION=1.35.0
+# Wed, 30 Sep 2020 00:45:23 GMT
 RUN set -eux; 	fetchDeps=" 		gnupg 		dirmngr 	"; 	apt-get update; 	apt-get install -y --no-install-recommends $fetchDeps; 		curl -fSL "https://releases.wikimedia.org/mediawiki/${MEDIAWIKI_MAJOR_VERSION}/mediawiki-${MEDIAWIKI_VERSION}.tar.gz" -o mediawiki.tar.gz; 	curl -fSL "https://releases.wikimedia.org/mediawiki/${MEDIAWIKI_MAJOR_VERSION}/mediawiki-${MEDIAWIKI_VERSION}.tar.gz.sig" -o mediawiki.tar.gz.sig; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 		D7D6767D135A514BEB86E9BA75682B08E8A3FEC4 		441276E9CCD15F44F6D97D18C119E1A64D70938E 		F7F780D82EBFB8A56556E7EE82403E59F9F8CD79 		1D98867E82982C8FE0ABC25F9B69B3109D3BB7B0 	; 	gpg --batch --verify mediawiki.tar.gz.sig mediawiki.tar.gz; 	tar -x --strip-components=1 -f mediawiki.tar.gz; 	gpgconf --kill all; 	rm -r "$GNUPGHOME" mediawiki.tar.gz.sig mediawiki.tar.gz; 	chown -R www-data:www-data extensions skins cache images; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; 	rm -rf /var/lib/apt/lists/*
-# Fri, 25 Sep 2020 20:44:40 GMT
+# Wed, 30 Sep 2020 00:45:28 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -740,22 +740,22 @@ CMD ["apache2-foreground"]
 		Last Modified: Fri, 25 Sep 2020 20:48:22 GMT  
 		Size: 171.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1adbc15c9dd39f71dde5b2112f6dc03682d0565000daa8021976d6c1b33b4b29`  
-		Last Modified: Fri, 25 Sep 2020 20:48:40 GMT  
-		Size: 41.3 MB (41344956 bytes)  
+	-	`sha256:681d1a9c23a43d33d2475c5b76adbb57a2c1c3b4cef2ae81417ff15bbf850f26`  
+		Last Modified: Wed, 30 Sep 2020 00:48:18 GMT  
+		Size: 48.7 MB (48667987 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mediawiki:latest` - linux; 386
 
 ```console
-$ docker pull mediawiki@sha256:fe1957cced53daefe4c5db5b40fa0c3fe50f0a58e9815f3d3f3a1a64bd48af91
+$ docker pull mediawiki@sha256:28eb6395305cdfcbe6429485126c899f0b28d14b8b483d772b6ce7ad295266c2
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **265.5 MB (265501847 bytes)**  
+-	Total Size: **272.8 MB (272825104 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:20c3d4319c15ac06d8ed4503eff9c331812ccc9410ca859c01e2644b546b7462`
+-	Image ID: `sha256:cadff0e61d3b2a966fad8ba4b789adb6e1e95458e96c20269f9e3299161ef62a`
 -	Entrypoint: `["docker-php-entrypoint"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -836,13 +836,13 @@ RUN set -eux; 	a2enmod rewrite; 	{ 		echo "<Directory /var/www/html>"; 		echo " 
 RUN { 		echo 'opcache.memory_consumption=128'; 		echo 'opcache.interned_strings_buffer=8'; 		echo 'opcache.max_accelerated_files=4000'; 		echo 'opcache.revalidate_freq=60'; 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
 # Fri, 25 Sep 2020 20:41:00 GMT
 RUN set -eux; 	mkdir -p /var/www/data; 	chown -R www-data:www-data /var/www/data
-# Fri, 25 Sep 2020 20:41:00 GMT
-ENV MEDIAWIKI_MAJOR_VERSION=1.34
-# Fri, 25 Sep 2020 20:41:00 GMT
-ENV MEDIAWIKI_VERSION=1.34.4
-# Fri, 25 Sep 2020 20:41:19 GMT
+# Wed, 30 Sep 2020 00:44:29 GMT
+ENV MEDIAWIKI_MAJOR_VERSION=1.35
+# Wed, 30 Sep 2020 00:44:29 GMT
+ENV MEDIAWIKI_VERSION=1.35.0
+# Wed, 30 Sep 2020 00:44:52 GMT
 RUN set -eux; 	fetchDeps=" 		gnupg 		dirmngr 	"; 	apt-get update; 	apt-get install -y --no-install-recommends $fetchDeps; 		curl -fSL "https://releases.wikimedia.org/mediawiki/${MEDIAWIKI_MAJOR_VERSION}/mediawiki-${MEDIAWIKI_VERSION}.tar.gz" -o mediawiki.tar.gz; 	curl -fSL "https://releases.wikimedia.org/mediawiki/${MEDIAWIKI_MAJOR_VERSION}/mediawiki-${MEDIAWIKI_VERSION}.tar.gz.sig" -o mediawiki.tar.gz.sig; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 		D7D6767D135A514BEB86E9BA75682B08E8A3FEC4 		441276E9CCD15F44F6D97D18C119E1A64D70938E 		F7F780D82EBFB8A56556E7EE82403E59F9F8CD79 		1D98867E82982C8FE0ABC25F9B69B3109D3BB7B0 	; 	gpg --batch --verify mediawiki.tar.gz.sig mediawiki.tar.gz; 	tar -x --strip-components=1 -f mediawiki.tar.gz; 	gpgconf --kill all; 	rm -r "$GNUPGHOME" mediawiki.tar.gz.sig mediawiki.tar.gz; 	chown -R www-data:www-data extensions skins cache images; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; 	rm -rf /var/lib/apt/lists/*
-# Fri, 25 Sep 2020 20:41:19 GMT
+# Wed, 30 Sep 2020 00:44:52 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -923,9 +923,9 @@ CMD ["apache2-foreground"]
 		Last Modified: Fri, 25 Sep 2020 20:43:20 GMT  
 		Size: 140.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:30c9d651735f225b24594b6d295fd80aff3a243b06ab596b51a271217c169ce7`  
-		Last Modified: Fri, 25 Sep 2020 20:43:37 GMT  
-		Size: 41.3 MB (41344707 bytes)  
+	-	`sha256:c78cdf1f4cdbcc5576144ae44ca6f0f0825e94f8638d3597d35a292ee25339ff`  
+		Last Modified: Wed, 30 Sep 2020 00:46:44 GMT  
+		Size: 48.7 MB (48667964 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mediawiki:latest` - linux; ppc64le
