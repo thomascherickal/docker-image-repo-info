@@ -18,7 +18,7 @@
 ## `matomo:3`
 
 ```console
-$ docker pull matomo@sha256:e5474c8e451d0884a1d5a5b95e754daa0b4641df6a9e4979f920d4ae9b31d315
+$ docker pull matomo@sha256:0e55366d3e8c602b94cbe4e04bd8a539ed8e2075d01772324ad3f46a6f901479
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -910,14 +910,14 @@ CMD ["apache2-foreground"]
 ### `matomo:3` - linux; mips64le
 
 ```console
-$ docker pull matomo@sha256:ce5398e430e33615ae3dda8fc124aa1ae5ed39d10446d86ff736cdbca36abc2e
+$ docker pull matomo@sha256:ff79b2eeb67b595ebe508f98790746e32b805afdfb7f15d15bb17770ba66174e
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **149.3 MB (149309231 bytes)**  
+-	Total Size: **149.3 MB (149309845 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:cf6bdcfdc2d62ddb5617ed5d8d28e6a011a4e665efee31128c5661fe9a704b5e`
+-	Image ID: `sha256:6125643fc2ddc7deb6739ca7483621ad861028cc54e37e87db04e656eb8ce8cf`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -958,53 +958,53 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -pie
 # Tue, 15 Sep 2020 14:21:20 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Tue, 15 Sep 2020 14:21:20 GMT
-ENV PHP_VERSION=7.4.10
-# Tue, 15 Sep 2020 14:21:20 GMT
-ENV PHP_URL=https://www.php.net/distributions/php-7.4.10.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-7.4.10.tar.xz.asc
-# Tue, 15 Sep 2020 14:21:21 GMT
-ENV PHP_SHA256=c2d90b00b14284588a787b100dee54c2400e7db995b457864d66f00ad64fb010 PHP_MD5=
-# Tue, 15 Sep 2020 14:21:43 GMT
+# Thu, 01 Oct 2020 19:21:03 GMT
+ENV PHP_VERSION=7.4.11
+# Thu, 01 Oct 2020 19:21:03 GMT
+ENV PHP_URL=https://www.php.net/distributions/php-7.4.11.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-7.4.11.tar.xz.asc
+# Thu, 01 Oct 2020 19:21:03 GMT
+ENV PHP_SHA256=5d31675a9b9c21b5bd03389418218c30b26558246870caba8eb54f5856e2d6ce PHP_MD5=
+# Thu, 01 Oct 2020 19:21:24 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends gnupg dirmngr; 	rm -rf /var/lib/apt/lists/*; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Tue, 15 Sep 2020 14:21:43 GMT
+# Thu, 01 Oct 2020 19:21:24 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Tue, 15 Sep 2020 14:29:28 GMT
+# Thu, 01 Oct 2020 19:29:11 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		libargon2-dev 		libcurl4-openssl-dev 		libedit-dev 		libonig-dev 		libsodium-dev 		libsqlite3-dev 		libssl-dev 		libxml2-dev 		zlib1g-dev 		${PHP_EXTRA_BUILD_DEPS:-} 	; 	rm -rf /var/lib/apt/lists/*; 		export 		CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)"; 	if [ ! -d /usr/include/curl ]; then 		ln -sT "/usr/include/$debMultiarch/curl" /usr/local/include/curl; 	fi; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-gnu' && echo '--without-pcre-jit') 		--with-libdir="lib/$debMultiarch" 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -executable -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 		php --version
-# Tue, 15 Sep 2020 14:29:29 GMT
+# Thu, 01 Oct 2020 19:29:12 GMT
 COPY multi:af24b1d34daac0a277386947399eceaaf20d3065d4be5db00b1d6466cf006c49 in /usr/local/bin/ 
-# Tue, 15 Sep 2020 14:29:31 GMT
+# Thu, 01 Oct 2020 19:29:14 GMT
 RUN docker-php-ext-enable sodium
-# Tue, 15 Sep 2020 14:29:32 GMT
+# Thu, 01 Oct 2020 19:29:14 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Tue, 15 Sep 2020 14:29:32 GMT
+# Thu, 01 Oct 2020 19:29:15 GMT
 STOPSIGNAL SIGWINCH
-# Tue, 15 Sep 2020 14:29:32 GMT
+# Thu, 01 Oct 2020 19:29:15 GMT
 COPY file:e3123fcb6566efa979f945bfac1c94c854a559d7b82723e42118882a8ac4de66 in /usr/local/bin/ 
-# Tue, 15 Sep 2020 14:29:33 GMT
+# Thu, 01 Oct 2020 19:29:15 GMT
 WORKDIR /var/www/html
-# Tue, 15 Sep 2020 14:29:33 GMT
+# Thu, 01 Oct 2020 19:29:16 GMT
 EXPOSE 80
-# Tue, 15 Sep 2020 14:29:33 GMT
+# Thu, 01 Oct 2020 19:29:16 GMT
 CMD ["apache2-foreground"]
-# Tue, 15 Sep 2020 18:13:29 GMT
+# Thu, 01 Oct 2020 22:41:12 GMT
 LABEL maintainer=pierre@piwik.org
-# Thu, 17 Sep 2020 23:11:35 GMT
+# Thu, 01 Oct 2020 22:45:24 GMT
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 	apt-get install -y --no-install-recommends 		libfreetype6-dev 		libjpeg-dev 		libldap2-dev 		libpng-dev 		libzip-dev 	; 		debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)"; 	docker-php-ext-configure gd --with-freetype --with-jpeg; 	docker-php-ext-configure ldap --with-libdir="lib/$debMultiarch"; 	docker-php-ext-install -j "$(nproc)" 		gd 		ldap 		mysqli 		opcache 		pdo_mysql 		zip 	; 		pecl install APCu-5.1.18; 	pecl install redis-5.3.1; 		docker-php-ext-enable 		apcu 		redis 	; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark; 	ldd "$(php -r 'echo ini_get("extension_dir");')"/*.so 		| awk '/=>/ { print $3 }' 		| sort -u 		| xargs -r dpkg-query -S 		| cut -d: -f1 		| sort -u 		| xargs -rt apt-mark manual; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*
-# Thu, 17 Sep 2020 23:11:37 GMT
+# Thu, 01 Oct 2020 22:45:26 GMT
 RUN { 		echo 'opcache.memory_consumption=128'; 		echo 'opcache.interned_strings_buffer=8'; 		echo 'opcache.max_accelerated_files=4000'; 		echo 'opcache.revalidate_freq=2'; 		echo 'opcache.fast_shutdown=1'; 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
-# Thu, 17 Sep 2020 23:11:37 GMT
+# Thu, 01 Oct 2020 22:45:27 GMT
 ENV MATOMO_VERSION=3.14.1
-# Thu, 17 Sep 2020 23:12:11 GMT
+# Thu, 01 Oct 2020 22:45:59 GMT
 RUN set -ex; 	fetchDeps=" 		dirmngr 		gnupg 	"; 	apt-get update; 	apt-get install -y --no-install-recommends 		$fetchDeps 	; 		curl -fsSL -o matomo.tar.gz 		"https://builds.matomo.org/matomo-${MATOMO_VERSION}.tar.gz"; 	curl -fsSL -o matomo.tar.gz.asc 		"https://builds.matomo.org/matomo-${MATOMO_VERSION}.tar.gz.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 814E346FA01A20DBB04B6807B5DBD5925590A237; 	gpg --batch --verify matomo.tar.gz.asc matomo.tar.gz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" matomo.tar.gz.asc; 	tar -xzf matomo.tar.gz -C /usr/src/; 	rm matomo.tar.gz; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; 	rm -rf /var/lib/apt/lists/*
-# Thu, 17 Sep 2020 23:12:12 GMT
+# Thu, 01 Oct 2020 22:46:00 GMT
 COPY file:5a36d7fba12e383595e7235267e54c5714dbf865acd4c4596c92ac0f17d139b3 in /usr/local/etc/php/conf.d/php-matomo.ini 
-# Thu, 17 Sep 2020 23:12:12 GMT
+# Thu, 01 Oct 2020 22:46:00 GMT
 COPY file:0fafaeb399f05cbf0a84d0276a6353eb053cd1a1537e5631be96c2a2ffa2fd31 in /entrypoint.sh 
-# Thu, 17 Sep 2020 23:12:12 GMT
+# Thu, 01 Oct 2020 22:46:01 GMT
 VOLUME [/var/www/html]
-# Thu, 17 Sep 2020 23:12:13 GMT
+# Thu, 01 Oct 2020 22:46:01 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Thu, 17 Sep 2020 23:12:13 GMT
+# Thu, 01 Oct 2020 22:46:01 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -1037,49 +1037,49 @@ CMD ["apache2-foreground"]
 		Last Modified: Tue, 15 Sep 2020 15:53:55 GMT  
 		Size: 494.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:19d18abc27125de6d66bab8b3e3d447e2bab5244ea21afc7e6c8da92b1ada0f4`  
-		Last Modified: Tue, 15 Sep 2020 15:57:06 GMT  
-		Size: 10.6 MB (10633904 bytes)  
+	-	`sha256:b887d9db690121bc625b1c166668d7922b5557b67d3c1e3ac06ef0d10d2b3e90`  
+		Last Modified: Thu, 01 Oct 2020 20:48:57 GMT  
+		Size: 10.6 MB (10636985 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3994b750207ed07c87dd8d10e3c0c819b3f4c73bf71c756155d6a6f505df42a9`  
-		Last Modified: Tue, 15 Sep 2020 15:56:59 GMT  
-		Size: 493.0 B  
+	-	`sha256:8811fa3bc80db48c12f77f4d9b0eb11a44003f7369b5f504cae264692426e333`  
+		Last Modified: Thu, 01 Oct 2020 20:48:51 GMT  
+		Size: 494.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:90741598550c379c7b2dc75e96285dab9d48533a06a9baa1ee09e5638c45dd7e`  
-		Last Modified: Tue, 15 Sep 2020 15:57:10 GMT  
-		Size: 13.1 MB (13113047 bytes)  
+	-	`sha256:698327cf1f3bdc69b4bc4ea1188fe32c74ee3cb152b88d5c1d6a21236775d1d3`  
+		Last Modified: Thu, 01 Oct 2020 20:49:05 GMT  
+		Size: 13.1 MB (13110581 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:db37b20edead79c86e396ef6bb8adcdd550d9cff8d7e2510cc03da9a0aac5ef4`  
-		Last Modified: Tue, 15 Sep 2020 15:56:59 GMT  
-		Size: 2.3 KB (2289 bytes)  
+	-	`sha256:e7151363195ddd6e3bce1dcc00f99900549278a198f48e3ddc9bdcf92004d15b`  
+		Last Modified: Thu, 01 Oct 2020 20:48:51 GMT  
+		Size: 2.3 KB (2290 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2b3e11fb435a5310be6ec2707130b4e3b494ecfc1854ac72d1e69d2c3112d3c3`  
-		Last Modified: Tue, 15 Sep 2020 15:56:59 GMT  
+	-	`sha256:cb5843995b5c561a5c50b3ba9b5c331378f66b00c967fa008e87eb2bbfbfc76f`  
+		Last Modified: Thu, 01 Oct 2020 20:48:51 GMT  
 		Size: 250.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bbba1c5329cf687717e70bf30e2d9e9701bc36ea2ef037837b5c4aefe6b358fb`  
-		Last Modified: Tue, 15 Sep 2020 15:56:59 GMT  
+	-	`sha256:64e50cb3f3839acc6abb86df7584a5de2b5ec33547264dd90da3dfdab4aedd6b`  
+		Last Modified: Thu, 01 Oct 2020 20:48:51 GMT  
 		Size: 898.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ad15e92d151bb06855e332160fa2f02ada994e82b886b0a481edb4dee28f20f8`  
-		Last Modified: Thu, 17 Sep 2020 23:17:26 GMT  
-		Size: 3.5 MB (3471162 bytes)  
+	-	`sha256:eb564b366673a23b23eecddb5d7c6e1e49cd26b33a4128187e960eeb8a5a0546`  
+		Last Modified: Thu, 01 Oct 2020 22:51:21 GMT  
+		Size: 3.5 MB (3471210 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d4baf4e4041e0d9148dfec14db9f67e289dd36f49398fad27434523700d74ddc`  
-		Last Modified: Thu, 17 Sep 2020 23:17:23 GMT  
-		Size: 330.0 B  
+	-	`sha256:b14a3f9e8e85fd09436108386fa473dd72e83b4077bd3a76f192ce8bfed0616f`  
+		Last Modified: Thu, 01 Oct 2020 22:51:17 GMT  
+		Size: 328.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ecf4c3e7e6a96cdb71b3711e5629c1f29c26b765f8993dbdc9ebfb976bb43e43`  
-		Last Modified: Thu, 17 Sep 2020 23:17:38 GMT  
-		Size: 16.3 MB (16326588 bytes)  
+	-	`sha256:05db5f597d237a1d5e98ccaad2116f1b757517ee8352634cc9135cebbfd66db0`  
+		Last Modified: Thu, 01 Oct 2020 22:51:32 GMT  
+		Size: 16.3 MB (16326534 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:23ccb44119b5c39680eb8fe42ae577f363ff970511c259a6657e52c64582a5ee`  
-		Last Modified: Thu, 17 Sep 2020 23:17:24 GMT  
-		Size: 305.0 B  
+	-	`sha256:14af46e1ce2a70459d7099842111c748c59425ee742a3e87478e2e81574c06ff`  
+		Last Modified: Thu, 01 Oct 2020 22:51:17 GMT  
+		Size: 308.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4c7059bde26b332599d3e0972ab018a2c76b2655ce951909cbceea2c59432323`  
-		Last Modified: Thu, 17 Sep 2020 23:17:23 GMT  
-		Size: 226.0 B  
+	-	`sha256:75892528c7903d0d5ec67c614ca90e48646792a9f92ff1675a9afa75aef6fc56`  
+		Last Modified: Thu, 01 Oct 2020 22:51:18 GMT  
+		Size: 228.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `matomo:3` - linux; ppc64le
@@ -1435,7 +1435,7 @@ CMD ["apache2-foreground"]
 ## `matomo:3.14`
 
 ```console
-$ docker pull matomo@sha256:e5474c8e451d0884a1d5a5b95e754daa0b4641df6a9e4979f920d4ae9b31d315
+$ docker pull matomo@sha256:0e55366d3e8c602b94cbe4e04bd8a539ed8e2075d01772324ad3f46a6f901479
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2327,14 +2327,14 @@ CMD ["apache2-foreground"]
 ### `matomo:3.14` - linux; mips64le
 
 ```console
-$ docker pull matomo@sha256:ce5398e430e33615ae3dda8fc124aa1ae5ed39d10446d86ff736cdbca36abc2e
+$ docker pull matomo@sha256:ff79b2eeb67b595ebe508f98790746e32b805afdfb7f15d15bb17770ba66174e
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **149.3 MB (149309231 bytes)**  
+-	Total Size: **149.3 MB (149309845 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:cf6bdcfdc2d62ddb5617ed5d8d28e6a011a4e665efee31128c5661fe9a704b5e`
+-	Image ID: `sha256:6125643fc2ddc7deb6739ca7483621ad861028cc54e37e87db04e656eb8ce8cf`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -2375,53 +2375,53 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -pie
 # Tue, 15 Sep 2020 14:21:20 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Tue, 15 Sep 2020 14:21:20 GMT
-ENV PHP_VERSION=7.4.10
-# Tue, 15 Sep 2020 14:21:20 GMT
-ENV PHP_URL=https://www.php.net/distributions/php-7.4.10.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-7.4.10.tar.xz.asc
-# Tue, 15 Sep 2020 14:21:21 GMT
-ENV PHP_SHA256=c2d90b00b14284588a787b100dee54c2400e7db995b457864d66f00ad64fb010 PHP_MD5=
-# Tue, 15 Sep 2020 14:21:43 GMT
+# Thu, 01 Oct 2020 19:21:03 GMT
+ENV PHP_VERSION=7.4.11
+# Thu, 01 Oct 2020 19:21:03 GMT
+ENV PHP_URL=https://www.php.net/distributions/php-7.4.11.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-7.4.11.tar.xz.asc
+# Thu, 01 Oct 2020 19:21:03 GMT
+ENV PHP_SHA256=5d31675a9b9c21b5bd03389418218c30b26558246870caba8eb54f5856e2d6ce PHP_MD5=
+# Thu, 01 Oct 2020 19:21:24 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends gnupg dirmngr; 	rm -rf /var/lib/apt/lists/*; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Tue, 15 Sep 2020 14:21:43 GMT
+# Thu, 01 Oct 2020 19:21:24 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Tue, 15 Sep 2020 14:29:28 GMT
+# Thu, 01 Oct 2020 19:29:11 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		libargon2-dev 		libcurl4-openssl-dev 		libedit-dev 		libonig-dev 		libsodium-dev 		libsqlite3-dev 		libssl-dev 		libxml2-dev 		zlib1g-dev 		${PHP_EXTRA_BUILD_DEPS:-} 	; 	rm -rf /var/lib/apt/lists/*; 		export 		CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)"; 	if [ ! -d /usr/include/curl ]; then 		ln -sT "/usr/include/$debMultiarch/curl" /usr/local/include/curl; 	fi; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-gnu' && echo '--without-pcre-jit') 		--with-libdir="lib/$debMultiarch" 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -executable -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 		php --version
-# Tue, 15 Sep 2020 14:29:29 GMT
+# Thu, 01 Oct 2020 19:29:12 GMT
 COPY multi:af24b1d34daac0a277386947399eceaaf20d3065d4be5db00b1d6466cf006c49 in /usr/local/bin/ 
-# Tue, 15 Sep 2020 14:29:31 GMT
+# Thu, 01 Oct 2020 19:29:14 GMT
 RUN docker-php-ext-enable sodium
-# Tue, 15 Sep 2020 14:29:32 GMT
+# Thu, 01 Oct 2020 19:29:14 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Tue, 15 Sep 2020 14:29:32 GMT
+# Thu, 01 Oct 2020 19:29:15 GMT
 STOPSIGNAL SIGWINCH
-# Tue, 15 Sep 2020 14:29:32 GMT
+# Thu, 01 Oct 2020 19:29:15 GMT
 COPY file:e3123fcb6566efa979f945bfac1c94c854a559d7b82723e42118882a8ac4de66 in /usr/local/bin/ 
-# Tue, 15 Sep 2020 14:29:33 GMT
+# Thu, 01 Oct 2020 19:29:15 GMT
 WORKDIR /var/www/html
-# Tue, 15 Sep 2020 14:29:33 GMT
+# Thu, 01 Oct 2020 19:29:16 GMT
 EXPOSE 80
-# Tue, 15 Sep 2020 14:29:33 GMT
+# Thu, 01 Oct 2020 19:29:16 GMT
 CMD ["apache2-foreground"]
-# Tue, 15 Sep 2020 18:13:29 GMT
+# Thu, 01 Oct 2020 22:41:12 GMT
 LABEL maintainer=pierre@piwik.org
-# Thu, 17 Sep 2020 23:11:35 GMT
+# Thu, 01 Oct 2020 22:45:24 GMT
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 	apt-get install -y --no-install-recommends 		libfreetype6-dev 		libjpeg-dev 		libldap2-dev 		libpng-dev 		libzip-dev 	; 		debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)"; 	docker-php-ext-configure gd --with-freetype --with-jpeg; 	docker-php-ext-configure ldap --with-libdir="lib/$debMultiarch"; 	docker-php-ext-install -j "$(nproc)" 		gd 		ldap 		mysqli 		opcache 		pdo_mysql 		zip 	; 		pecl install APCu-5.1.18; 	pecl install redis-5.3.1; 		docker-php-ext-enable 		apcu 		redis 	; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark; 	ldd "$(php -r 'echo ini_get("extension_dir");')"/*.so 		| awk '/=>/ { print $3 }' 		| sort -u 		| xargs -r dpkg-query -S 		| cut -d: -f1 		| sort -u 		| xargs -rt apt-mark manual; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*
-# Thu, 17 Sep 2020 23:11:37 GMT
+# Thu, 01 Oct 2020 22:45:26 GMT
 RUN { 		echo 'opcache.memory_consumption=128'; 		echo 'opcache.interned_strings_buffer=8'; 		echo 'opcache.max_accelerated_files=4000'; 		echo 'opcache.revalidate_freq=2'; 		echo 'opcache.fast_shutdown=1'; 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
-# Thu, 17 Sep 2020 23:11:37 GMT
+# Thu, 01 Oct 2020 22:45:27 GMT
 ENV MATOMO_VERSION=3.14.1
-# Thu, 17 Sep 2020 23:12:11 GMT
+# Thu, 01 Oct 2020 22:45:59 GMT
 RUN set -ex; 	fetchDeps=" 		dirmngr 		gnupg 	"; 	apt-get update; 	apt-get install -y --no-install-recommends 		$fetchDeps 	; 		curl -fsSL -o matomo.tar.gz 		"https://builds.matomo.org/matomo-${MATOMO_VERSION}.tar.gz"; 	curl -fsSL -o matomo.tar.gz.asc 		"https://builds.matomo.org/matomo-${MATOMO_VERSION}.tar.gz.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 814E346FA01A20DBB04B6807B5DBD5925590A237; 	gpg --batch --verify matomo.tar.gz.asc matomo.tar.gz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" matomo.tar.gz.asc; 	tar -xzf matomo.tar.gz -C /usr/src/; 	rm matomo.tar.gz; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; 	rm -rf /var/lib/apt/lists/*
-# Thu, 17 Sep 2020 23:12:12 GMT
+# Thu, 01 Oct 2020 22:46:00 GMT
 COPY file:5a36d7fba12e383595e7235267e54c5714dbf865acd4c4596c92ac0f17d139b3 in /usr/local/etc/php/conf.d/php-matomo.ini 
-# Thu, 17 Sep 2020 23:12:12 GMT
+# Thu, 01 Oct 2020 22:46:00 GMT
 COPY file:0fafaeb399f05cbf0a84d0276a6353eb053cd1a1537e5631be96c2a2ffa2fd31 in /entrypoint.sh 
-# Thu, 17 Sep 2020 23:12:12 GMT
+# Thu, 01 Oct 2020 22:46:01 GMT
 VOLUME [/var/www/html]
-# Thu, 17 Sep 2020 23:12:13 GMT
+# Thu, 01 Oct 2020 22:46:01 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Thu, 17 Sep 2020 23:12:13 GMT
+# Thu, 01 Oct 2020 22:46:01 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -2454,49 +2454,49 @@ CMD ["apache2-foreground"]
 		Last Modified: Tue, 15 Sep 2020 15:53:55 GMT  
 		Size: 494.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:19d18abc27125de6d66bab8b3e3d447e2bab5244ea21afc7e6c8da92b1ada0f4`  
-		Last Modified: Tue, 15 Sep 2020 15:57:06 GMT  
-		Size: 10.6 MB (10633904 bytes)  
+	-	`sha256:b887d9db690121bc625b1c166668d7922b5557b67d3c1e3ac06ef0d10d2b3e90`  
+		Last Modified: Thu, 01 Oct 2020 20:48:57 GMT  
+		Size: 10.6 MB (10636985 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3994b750207ed07c87dd8d10e3c0c819b3f4c73bf71c756155d6a6f505df42a9`  
-		Last Modified: Tue, 15 Sep 2020 15:56:59 GMT  
-		Size: 493.0 B  
+	-	`sha256:8811fa3bc80db48c12f77f4d9b0eb11a44003f7369b5f504cae264692426e333`  
+		Last Modified: Thu, 01 Oct 2020 20:48:51 GMT  
+		Size: 494.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:90741598550c379c7b2dc75e96285dab9d48533a06a9baa1ee09e5638c45dd7e`  
-		Last Modified: Tue, 15 Sep 2020 15:57:10 GMT  
-		Size: 13.1 MB (13113047 bytes)  
+	-	`sha256:698327cf1f3bdc69b4bc4ea1188fe32c74ee3cb152b88d5c1d6a21236775d1d3`  
+		Last Modified: Thu, 01 Oct 2020 20:49:05 GMT  
+		Size: 13.1 MB (13110581 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:db37b20edead79c86e396ef6bb8adcdd550d9cff8d7e2510cc03da9a0aac5ef4`  
-		Last Modified: Tue, 15 Sep 2020 15:56:59 GMT  
-		Size: 2.3 KB (2289 bytes)  
+	-	`sha256:e7151363195ddd6e3bce1dcc00f99900549278a198f48e3ddc9bdcf92004d15b`  
+		Last Modified: Thu, 01 Oct 2020 20:48:51 GMT  
+		Size: 2.3 KB (2290 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2b3e11fb435a5310be6ec2707130b4e3b494ecfc1854ac72d1e69d2c3112d3c3`  
-		Last Modified: Tue, 15 Sep 2020 15:56:59 GMT  
+	-	`sha256:cb5843995b5c561a5c50b3ba9b5c331378f66b00c967fa008e87eb2bbfbfc76f`  
+		Last Modified: Thu, 01 Oct 2020 20:48:51 GMT  
 		Size: 250.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bbba1c5329cf687717e70bf30e2d9e9701bc36ea2ef037837b5c4aefe6b358fb`  
-		Last Modified: Tue, 15 Sep 2020 15:56:59 GMT  
+	-	`sha256:64e50cb3f3839acc6abb86df7584a5de2b5ec33547264dd90da3dfdab4aedd6b`  
+		Last Modified: Thu, 01 Oct 2020 20:48:51 GMT  
 		Size: 898.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ad15e92d151bb06855e332160fa2f02ada994e82b886b0a481edb4dee28f20f8`  
-		Last Modified: Thu, 17 Sep 2020 23:17:26 GMT  
-		Size: 3.5 MB (3471162 bytes)  
+	-	`sha256:eb564b366673a23b23eecddb5d7c6e1e49cd26b33a4128187e960eeb8a5a0546`  
+		Last Modified: Thu, 01 Oct 2020 22:51:21 GMT  
+		Size: 3.5 MB (3471210 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d4baf4e4041e0d9148dfec14db9f67e289dd36f49398fad27434523700d74ddc`  
-		Last Modified: Thu, 17 Sep 2020 23:17:23 GMT  
-		Size: 330.0 B  
+	-	`sha256:b14a3f9e8e85fd09436108386fa473dd72e83b4077bd3a76f192ce8bfed0616f`  
+		Last Modified: Thu, 01 Oct 2020 22:51:17 GMT  
+		Size: 328.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ecf4c3e7e6a96cdb71b3711e5629c1f29c26b765f8993dbdc9ebfb976bb43e43`  
-		Last Modified: Thu, 17 Sep 2020 23:17:38 GMT  
-		Size: 16.3 MB (16326588 bytes)  
+	-	`sha256:05db5f597d237a1d5e98ccaad2116f1b757517ee8352634cc9135cebbfd66db0`  
+		Last Modified: Thu, 01 Oct 2020 22:51:32 GMT  
+		Size: 16.3 MB (16326534 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:23ccb44119b5c39680eb8fe42ae577f363ff970511c259a6657e52c64582a5ee`  
-		Last Modified: Thu, 17 Sep 2020 23:17:24 GMT  
-		Size: 305.0 B  
+	-	`sha256:14af46e1ce2a70459d7099842111c748c59425ee742a3e87478e2e81574c06ff`  
+		Last Modified: Thu, 01 Oct 2020 22:51:17 GMT  
+		Size: 308.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4c7059bde26b332599d3e0972ab018a2c76b2655ce951909cbceea2c59432323`  
-		Last Modified: Thu, 17 Sep 2020 23:17:23 GMT  
-		Size: 226.0 B  
+	-	`sha256:75892528c7903d0d5ec67c614ca90e48646792a9f92ff1675a9afa75aef6fc56`  
+		Last Modified: Thu, 01 Oct 2020 22:51:18 GMT  
+		Size: 228.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `matomo:3.14` - linux; ppc64le
@@ -2852,7 +2852,7 @@ CMD ["apache2-foreground"]
 ## `matomo:3.14.1`
 
 ```console
-$ docker pull matomo@sha256:e5474c8e451d0884a1d5a5b95e754daa0b4641df6a9e4979f920d4ae9b31d315
+$ docker pull matomo@sha256:0e55366d3e8c602b94cbe4e04bd8a539ed8e2075d01772324ad3f46a6f901479
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3744,14 +3744,14 @@ CMD ["apache2-foreground"]
 ### `matomo:3.14.1` - linux; mips64le
 
 ```console
-$ docker pull matomo@sha256:ce5398e430e33615ae3dda8fc124aa1ae5ed39d10446d86ff736cdbca36abc2e
+$ docker pull matomo@sha256:ff79b2eeb67b595ebe508f98790746e32b805afdfb7f15d15bb17770ba66174e
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **149.3 MB (149309231 bytes)**  
+-	Total Size: **149.3 MB (149309845 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:cf6bdcfdc2d62ddb5617ed5d8d28e6a011a4e665efee31128c5661fe9a704b5e`
+-	Image ID: `sha256:6125643fc2ddc7deb6739ca7483621ad861028cc54e37e87db04e656eb8ce8cf`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -3792,53 +3792,53 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -pie
 # Tue, 15 Sep 2020 14:21:20 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Tue, 15 Sep 2020 14:21:20 GMT
-ENV PHP_VERSION=7.4.10
-# Tue, 15 Sep 2020 14:21:20 GMT
-ENV PHP_URL=https://www.php.net/distributions/php-7.4.10.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-7.4.10.tar.xz.asc
-# Tue, 15 Sep 2020 14:21:21 GMT
-ENV PHP_SHA256=c2d90b00b14284588a787b100dee54c2400e7db995b457864d66f00ad64fb010 PHP_MD5=
-# Tue, 15 Sep 2020 14:21:43 GMT
+# Thu, 01 Oct 2020 19:21:03 GMT
+ENV PHP_VERSION=7.4.11
+# Thu, 01 Oct 2020 19:21:03 GMT
+ENV PHP_URL=https://www.php.net/distributions/php-7.4.11.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-7.4.11.tar.xz.asc
+# Thu, 01 Oct 2020 19:21:03 GMT
+ENV PHP_SHA256=5d31675a9b9c21b5bd03389418218c30b26558246870caba8eb54f5856e2d6ce PHP_MD5=
+# Thu, 01 Oct 2020 19:21:24 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends gnupg dirmngr; 	rm -rf /var/lib/apt/lists/*; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Tue, 15 Sep 2020 14:21:43 GMT
+# Thu, 01 Oct 2020 19:21:24 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Tue, 15 Sep 2020 14:29:28 GMT
+# Thu, 01 Oct 2020 19:29:11 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		libargon2-dev 		libcurl4-openssl-dev 		libedit-dev 		libonig-dev 		libsodium-dev 		libsqlite3-dev 		libssl-dev 		libxml2-dev 		zlib1g-dev 		${PHP_EXTRA_BUILD_DEPS:-} 	; 	rm -rf /var/lib/apt/lists/*; 		export 		CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)"; 	if [ ! -d /usr/include/curl ]; then 		ln -sT "/usr/include/$debMultiarch/curl" /usr/local/include/curl; 	fi; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-gnu' && echo '--without-pcre-jit') 		--with-libdir="lib/$debMultiarch" 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -executable -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 		php --version
-# Tue, 15 Sep 2020 14:29:29 GMT
+# Thu, 01 Oct 2020 19:29:12 GMT
 COPY multi:af24b1d34daac0a277386947399eceaaf20d3065d4be5db00b1d6466cf006c49 in /usr/local/bin/ 
-# Tue, 15 Sep 2020 14:29:31 GMT
+# Thu, 01 Oct 2020 19:29:14 GMT
 RUN docker-php-ext-enable sodium
-# Tue, 15 Sep 2020 14:29:32 GMT
+# Thu, 01 Oct 2020 19:29:14 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Tue, 15 Sep 2020 14:29:32 GMT
+# Thu, 01 Oct 2020 19:29:15 GMT
 STOPSIGNAL SIGWINCH
-# Tue, 15 Sep 2020 14:29:32 GMT
+# Thu, 01 Oct 2020 19:29:15 GMT
 COPY file:e3123fcb6566efa979f945bfac1c94c854a559d7b82723e42118882a8ac4de66 in /usr/local/bin/ 
-# Tue, 15 Sep 2020 14:29:33 GMT
+# Thu, 01 Oct 2020 19:29:15 GMT
 WORKDIR /var/www/html
-# Tue, 15 Sep 2020 14:29:33 GMT
+# Thu, 01 Oct 2020 19:29:16 GMT
 EXPOSE 80
-# Tue, 15 Sep 2020 14:29:33 GMT
+# Thu, 01 Oct 2020 19:29:16 GMT
 CMD ["apache2-foreground"]
-# Tue, 15 Sep 2020 18:13:29 GMT
+# Thu, 01 Oct 2020 22:41:12 GMT
 LABEL maintainer=pierre@piwik.org
-# Thu, 17 Sep 2020 23:11:35 GMT
+# Thu, 01 Oct 2020 22:45:24 GMT
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 	apt-get install -y --no-install-recommends 		libfreetype6-dev 		libjpeg-dev 		libldap2-dev 		libpng-dev 		libzip-dev 	; 		debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)"; 	docker-php-ext-configure gd --with-freetype --with-jpeg; 	docker-php-ext-configure ldap --with-libdir="lib/$debMultiarch"; 	docker-php-ext-install -j "$(nproc)" 		gd 		ldap 		mysqli 		opcache 		pdo_mysql 		zip 	; 		pecl install APCu-5.1.18; 	pecl install redis-5.3.1; 		docker-php-ext-enable 		apcu 		redis 	; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark; 	ldd "$(php -r 'echo ini_get("extension_dir");')"/*.so 		| awk '/=>/ { print $3 }' 		| sort -u 		| xargs -r dpkg-query -S 		| cut -d: -f1 		| sort -u 		| xargs -rt apt-mark manual; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*
-# Thu, 17 Sep 2020 23:11:37 GMT
+# Thu, 01 Oct 2020 22:45:26 GMT
 RUN { 		echo 'opcache.memory_consumption=128'; 		echo 'opcache.interned_strings_buffer=8'; 		echo 'opcache.max_accelerated_files=4000'; 		echo 'opcache.revalidate_freq=2'; 		echo 'opcache.fast_shutdown=1'; 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
-# Thu, 17 Sep 2020 23:11:37 GMT
+# Thu, 01 Oct 2020 22:45:27 GMT
 ENV MATOMO_VERSION=3.14.1
-# Thu, 17 Sep 2020 23:12:11 GMT
+# Thu, 01 Oct 2020 22:45:59 GMT
 RUN set -ex; 	fetchDeps=" 		dirmngr 		gnupg 	"; 	apt-get update; 	apt-get install -y --no-install-recommends 		$fetchDeps 	; 		curl -fsSL -o matomo.tar.gz 		"https://builds.matomo.org/matomo-${MATOMO_VERSION}.tar.gz"; 	curl -fsSL -o matomo.tar.gz.asc 		"https://builds.matomo.org/matomo-${MATOMO_VERSION}.tar.gz.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 814E346FA01A20DBB04B6807B5DBD5925590A237; 	gpg --batch --verify matomo.tar.gz.asc matomo.tar.gz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" matomo.tar.gz.asc; 	tar -xzf matomo.tar.gz -C /usr/src/; 	rm matomo.tar.gz; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; 	rm -rf /var/lib/apt/lists/*
-# Thu, 17 Sep 2020 23:12:12 GMT
+# Thu, 01 Oct 2020 22:46:00 GMT
 COPY file:5a36d7fba12e383595e7235267e54c5714dbf865acd4c4596c92ac0f17d139b3 in /usr/local/etc/php/conf.d/php-matomo.ini 
-# Thu, 17 Sep 2020 23:12:12 GMT
+# Thu, 01 Oct 2020 22:46:00 GMT
 COPY file:0fafaeb399f05cbf0a84d0276a6353eb053cd1a1537e5631be96c2a2ffa2fd31 in /entrypoint.sh 
-# Thu, 17 Sep 2020 23:12:12 GMT
+# Thu, 01 Oct 2020 22:46:01 GMT
 VOLUME [/var/www/html]
-# Thu, 17 Sep 2020 23:12:13 GMT
+# Thu, 01 Oct 2020 22:46:01 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Thu, 17 Sep 2020 23:12:13 GMT
+# Thu, 01 Oct 2020 22:46:01 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -3871,49 +3871,49 @@ CMD ["apache2-foreground"]
 		Last Modified: Tue, 15 Sep 2020 15:53:55 GMT  
 		Size: 494.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:19d18abc27125de6d66bab8b3e3d447e2bab5244ea21afc7e6c8da92b1ada0f4`  
-		Last Modified: Tue, 15 Sep 2020 15:57:06 GMT  
-		Size: 10.6 MB (10633904 bytes)  
+	-	`sha256:b887d9db690121bc625b1c166668d7922b5557b67d3c1e3ac06ef0d10d2b3e90`  
+		Last Modified: Thu, 01 Oct 2020 20:48:57 GMT  
+		Size: 10.6 MB (10636985 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3994b750207ed07c87dd8d10e3c0c819b3f4c73bf71c756155d6a6f505df42a9`  
-		Last Modified: Tue, 15 Sep 2020 15:56:59 GMT  
-		Size: 493.0 B  
+	-	`sha256:8811fa3bc80db48c12f77f4d9b0eb11a44003f7369b5f504cae264692426e333`  
+		Last Modified: Thu, 01 Oct 2020 20:48:51 GMT  
+		Size: 494.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:90741598550c379c7b2dc75e96285dab9d48533a06a9baa1ee09e5638c45dd7e`  
-		Last Modified: Tue, 15 Sep 2020 15:57:10 GMT  
-		Size: 13.1 MB (13113047 bytes)  
+	-	`sha256:698327cf1f3bdc69b4bc4ea1188fe32c74ee3cb152b88d5c1d6a21236775d1d3`  
+		Last Modified: Thu, 01 Oct 2020 20:49:05 GMT  
+		Size: 13.1 MB (13110581 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:db37b20edead79c86e396ef6bb8adcdd550d9cff8d7e2510cc03da9a0aac5ef4`  
-		Last Modified: Tue, 15 Sep 2020 15:56:59 GMT  
-		Size: 2.3 KB (2289 bytes)  
+	-	`sha256:e7151363195ddd6e3bce1dcc00f99900549278a198f48e3ddc9bdcf92004d15b`  
+		Last Modified: Thu, 01 Oct 2020 20:48:51 GMT  
+		Size: 2.3 KB (2290 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2b3e11fb435a5310be6ec2707130b4e3b494ecfc1854ac72d1e69d2c3112d3c3`  
-		Last Modified: Tue, 15 Sep 2020 15:56:59 GMT  
+	-	`sha256:cb5843995b5c561a5c50b3ba9b5c331378f66b00c967fa008e87eb2bbfbfc76f`  
+		Last Modified: Thu, 01 Oct 2020 20:48:51 GMT  
 		Size: 250.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bbba1c5329cf687717e70bf30e2d9e9701bc36ea2ef037837b5c4aefe6b358fb`  
-		Last Modified: Tue, 15 Sep 2020 15:56:59 GMT  
+	-	`sha256:64e50cb3f3839acc6abb86df7584a5de2b5ec33547264dd90da3dfdab4aedd6b`  
+		Last Modified: Thu, 01 Oct 2020 20:48:51 GMT  
 		Size: 898.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ad15e92d151bb06855e332160fa2f02ada994e82b886b0a481edb4dee28f20f8`  
-		Last Modified: Thu, 17 Sep 2020 23:17:26 GMT  
-		Size: 3.5 MB (3471162 bytes)  
+	-	`sha256:eb564b366673a23b23eecddb5d7c6e1e49cd26b33a4128187e960eeb8a5a0546`  
+		Last Modified: Thu, 01 Oct 2020 22:51:21 GMT  
+		Size: 3.5 MB (3471210 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d4baf4e4041e0d9148dfec14db9f67e289dd36f49398fad27434523700d74ddc`  
-		Last Modified: Thu, 17 Sep 2020 23:17:23 GMT  
-		Size: 330.0 B  
+	-	`sha256:b14a3f9e8e85fd09436108386fa473dd72e83b4077bd3a76f192ce8bfed0616f`  
+		Last Modified: Thu, 01 Oct 2020 22:51:17 GMT  
+		Size: 328.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ecf4c3e7e6a96cdb71b3711e5629c1f29c26b765f8993dbdc9ebfb976bb43e43`  
-		Last Modified: Thu, 17 Sep 2020 23:17:38 GMT  
-		Size: 16.3 MB (16326588 bytes)  
+	-	`sha256:05db5f597d237a1d5e98ccaad2116f1b757517ee8352634cc9135cebbfd66db0`  
+		Last Modified: Thu, 01 Oct 2020 22:51:32 GMT  
+		Size: 16.3 MB (16326534 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:23ccb44119b5c39680eb8fe42ae577f363ff970511c259a6657e52c64582a5ee`  
-		Last Modified: Thu, 17 Sep 2020 23:17:24 GMT  
-		Size: 305.0 B  
+	-	`sha256:14af46e1ce2a70459d7099842111c748c59425ee742a3e87478e2e81574c06ff`  
+		Last Modified: Thu, 01 Oct 2020 22:51:17 GMT  
+		Size: 308.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4c7059bde26b332599d3e0972ab018a2c76b2655ce951909cbceea2c59432323`  
-		Last Modified: Thu, 17 Sep 2020 23:17:23 GMT  
-		Size: 226.0 B  
+	-	`sha256:75892528c7903d0d5ec67c614ca90e48646792a9f92ff1675a9afa75aef6fc56`  
+		Last Modified: Thu, 01 Oct 2020 22:51:18 GMT  
+		Size: 228.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `matomo:3.14.1` - linux; ppc64le
@@ -4269,7 +4269,7 @@ CMD ["apache2-foreground"]
 ## `matomo:3.14.1-apache`
 
 ```console
-$ docker pull matomo@sha256:e5474c8e451d0884a1d5a5b95e754daa0b4641df6a9e4979f920d4ae9b31d315
+$ docker pull matomo@sha256:0e55366d3e8c602b94cbe4e04bd8a539ed8e2075d01772324ad3f46a6f901479
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -5161,14 +5161,14 @@ CMD ["apache2-foreground"]
 ### `matomo:3.14.1-apache` - linux; mips64le
 
 ```console
-$ docker pull matomo@sha256:ce5398e430e33615ae3dda8fc124aa1ae5ed39d10446d86ff736cdbca36abc2e
+$ docker pull matomo@sha256:ff79b2eeb67b595ebe508f98790746e32b805afdfb7f15d15bb17770ba66174e
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **149.3 MB (149309231 bytes)**  
+-	Total Size: **149.3 MB (149309845 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:cf6bdcfdc2d62ddb5617ed5d8d28e6a011a4e665efee31128c5661fe9a704b5e`
+-	Image ID: `sha256:6125643fc2ddc7deb6739ca7483621ad861028cc54e37e87db04e656eb8ce8cf`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -5209,53 +5209,53 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -pie
 # Tue, 15 Sep 2020 14:21:20 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Tue, 15 Sep 2020 14:21:20 GMT
-ENV PHP_VERSION=7.4.10
-# Tue, 15 Sep 2020 14:21:20 GMT
-ENV PHP_URL=https://www.php.net/distributions/php-7.4.10.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-7.4.10.tar.xz.asc
-# Tue, 15 Sep 2020 14:21:21 GMT
-ENV PHP_SHA256=c2d90b00b14284588a787b100dee54c2400e7db995b457864d66f00ad64fb010 PHP_MD5=
-# Tue, 15 Sep 2020 14:21:43 GMT
+# Thu, 01 Oct 2020 19:21:03 GMT
+ENV PHP_VERSION=7.4.11
+# Thu, 01 Oct 2020 19:21:03 GMT
+ENV PHP_URL=https://www.php.net/distributions/php-7.4.11.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-7.4.11.tar.xz.asc
+# Thu, 01 Oct 2020 19:21:03 GMT
+ENV PHP_SHA256=5d31675a9b9c21b5bd03389418218c30b26558246870caba8eb54f5856e2d6ce PHP_MD5=
+# Thu, 01 Oct 2020 19:21:24 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends gnupg dirmngr; 	rm -rf /var/lib/apt/lists/*; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Tue, 15 Sep 2020 14:21:43 GMT
+# Thu, 01 Oct 2020 19:21:24 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Tue, 15 Sep 2020 14:29:28 GMT
+# Thu, 01 Oct 2020 19:29:11 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		libargon2-dev 		libcurl4-openssl-dev 		libedit-dev 		libonig-dev 		libsodium-dev 		libsqlite3-dev 		libssl-dev 		libxml2-dev 		zlib1g-dev 		${PHP_EXTRA_BUILD_DEPS:-} 	; 	rm -rf /var/lib/apt/lists/*; 		export 		CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)"; 	if [ ! -d /usr/include/curl ]; then 		ln -sT "/usr/include/$debMultiarch/curl" /usr/local/include/curl; 	fi; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-gnu' && echo '--without-pcre-jit') 		--with-libdir="lib/$debMultiarch" 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -executable -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 		php --version
-# Tue, 15 Sep 2020 14:29:29 GMT
+# Thu, 01 Oct 2020 19:29:12 GMT
 COPY multi:af24b1d34daac0a277386947399eceaaf20d3065d4be5db00b1d6466cf006c49 in /usr/local/bin/ 
-# Tue, 15 Sep 2020 14:29:31 GMT
+# Thu, 01 Oct 2020 19:29:14 GMT
 RUN docker-php-ext-enable sodium
-# Tue, 15 Sep 2020 14:29:32 GMT
+# Thu, 01 Oct 2020 19:29:14 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Tue, 15 Sep 2020 14:29:32 GMT
+# Thu, 01 Oct 2020 19:29:15 GMT
 STOPSIGNAL SIGWINCH
-# Tue, 15 Sep 2020 14:29:32 GMT
+# Thu, 01 Oct 2020 19:29:15 GMT
 COPY file:e3123fcb6566efa979f945bfac1c94c854a559d7b82723e42118882a8ac4de66 in /usr/local/bin/ 
-# Tue, 15 Sep 2020 14:29:33 GMT
+# Thu, 01 Oct 2020 19:29:15 GMT
 WORKDIR /var/www/html
-# Tue, 15 Sep 2020 14:29:33 GMT
+# Thu, 01 Oct 2020 19:29:16 GMT
 EXPOSE 80
-# Tue, 15 Sep 2020 14:29:33 GMT
+# Thu, 01 Oct 2020 19:29:16 GMT
 CMD ["apache2-foreground"]
-# Tue, 15 Sep 2020 18:13:29 GMT
+# Thu, 01 Oct 2020 22:41:12 GMT
 LABEL maintainer=pierre@piwik.org
-# Thu, 17 Sep 2020 23:11:35 GMT
+# Thu, 01 Oct 2020 22:45:24 GMT
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 	apt-get install -y --no-install-recommends 		libfreetype6-dev 		libjpeg-dev 		libldap2-dev 		libpng-dev 		libzip-dev 	; 		debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)"; 	docker-php-ext-configure gd --with-freetype --with-jpeg; 	docker-php-ext-configure ldap --with-libdir="lib/$debMultiarch"; 	docker-php-ext-install -j "$(nproc)" 		gd 		ldap 		mysqli 		opcache 		pdo_mysql 		zip 	; 		pecl install APCu-5.1.18; 	pecl install redis-5.3.1; 		docker-php-ext-enable 		apcu 		redis 	; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark; 	ldd "$(php -r 'echo ini_get("extension_dir");')"/*.so 		| awk '/=>/ { print $3 }' 		| sort -u 		| xargs -r dpkg-query -S 		| cut -d: -f1 		| sort -u 		| xargs -rt apt-mark manual; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*
-# Thu, 17 Sep 2020 23:11:37 GMT
+# Thu, 01 Oct 2020 22:45:26 GMT
 RUN { 		echo 'opcache.memory_consumption=128'; 		echo 'opcache.interned_strings_buffer=8'; 		echo 'opcache.max_accelerated_files=4000'; 		echo 'opcache.revalidate_freq=2'; 		echo 'opcache.fast_shutdown=1'; 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
-# Thu, 17 Sep 2020 23:11:37 GMT
+# Thu, 01 Oct 2020 22:45:27 GMT
 ENV MATOMO_VERSION=3.14.1
-# Thu, 17 Sep 2020 23:12:11 GMT
+# Thu, 01 Oct 2020 22:45:59 GMT
 RUN set -ex; 	fetchDeps=" 		dirmngr 		gnupg 	"; 	apt-get update; 	apt-get install -y --no-install-recommends 		$fetchDeps 	; 		curl -fsSL -o matomo.tar.gz 		"https://builds.matomo.org/matomo-${MATOMO_VERSION}.tar.gz"; 	curl -fsSL -o matomo.tar.gz.asc 		"https://builds.matomo.org/matomo-${MATOMO_VERSION}.tar.gz.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 814E346FA01A20DBB04B6807B5DBD5925590A237; 	gpg --batch --verify matomo.tar.gz.asc matomo.tar.gz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" matomo.tar.gz.asc; 	tar -xzf matomo.tar.gz -C /usr/src/; 	rm matomo.tar.gz; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; 	rm -rf /var/lib/apt/lists/*
-# Thu, 17 Sep 2020 23:12:12 GMT
+# Thu, 01 Oct 2020 22:46:00 GMT
 COPY file:5a36d7fba12e383595e7235267e54c5714dbf865acd4c4596c92ac0f17d139b3 in /usr/local/etc/php/conf.d/php-matomo.ini 
-# Thu, 17 Sep 2020 23:12:12 GMT
+# Thu, 01 Oct 2020 22:46:00 GMT
 COPY file:0fafaeb399f05cbf0a84d0276a6353eb053cd1a1537e5631be96c2a2ffa2fd31 in /entrypoint.sh 
-# Thu, 17 Sep 2020 23:12:12 GMT
+# Thu, 01 Oct 2020 22:46:01 GMT
 VOLUME [/var/www/html]
-# Thu, 17 Sep 2020 23:12:13 GMT
+# Thu, 01 Oct 2020 22:46:01 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Thu, 17 Sep 2020 23:12:13 GMT
+# Thu, 01 Oct 2020 22:46:01 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -5288,49 +5288,49 @@ CMD ["apache2-foreground"]
 		Last Modified: Tue, 15 Sep 2020 15:53:55 GMT  
 		Size: 494.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:19d18abc27125de6d66bab8b3e3d447e2bab5244ea21afc7e6c8da92b1ada0f4`  
-		Last Modified: Tue, 15 Sep 2020 15:57:06 GMT  
-		Size: 10.6 MB (10633904 bytes)  
+	-	`sha256:b887d9db690121bc625b1c166668d7922b5557b67d3c1e3ac06ef0d10d2b3e90`  
+		Last Modified: Thu, 01 Oct 2020 20:48:57 GMT  
+		Size: 10.6 MB (10636985 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3994b750207ed07c87dd8d10e3c0c819b3f4c73bf71c756155d6a6f505df42a9`  
-		Last Modified: Tue, 15 Sep 2020 15:56:59 GMT  
-		Size: 493.0 B  
+	-	`sha256:8811fa3bc80db48c12f77f4d9b0eb11a44003f7369b5f504cae264692426e333`  
+		Last Modified: Thu, 01 Oct 2020 20:48:51 GMT  
+		Size: 494.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:90741598550c379c7b2dc75e96285dab9d48533a06a9baa1ee09e5638c45dd7e`  
-		Last Modified: Tue, 15 Sep 2020 15:57:10 GMT  
-		Size: 13.1 MB (13113047 bytes)  
+	-	`sha256:698327cf1f3bdc69b4bc4ea1188fe32c74ee3cb152b88d5c1d6a21236775d1d3`  
+		Last Modified: Thu, 01 Oct 2020 20:49:05 GMT  
+		Size: 13.1 MB (13110581 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:db37b20edead79c86e396ef6bb8adcdd550d9cff8d7e2510cc03da9a0aac5ef4`  
-		Last Modified: Tue, 15 Sep 2020 15:56:59 GMT  
-		Size: 2.3 KB (2289 bytes)  
+	-	`sha256:e7151363195ddd6e3bce1dcc00f99900549278a198f48e3ddc9bdcf92004d15b`  
+		Last Modified: Thu, 01 Oct 2020 20:48:51 GMT  
+		Size: 2.3 KB (2290 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2b3e11fb435a5310be6ec2707130b4e3b494ecfc1854ac72d1e69d2c3112d3c3`  
-		Last Modified: Tue, 15 Sep 2020 15:56:59 GMT  
+	-	`sha256:cb5843995b5c561a5c50b3ba9b5c331378f66b00c967fa008e87eb2bbfbfc76f`  
+		Last Modified: Thu, 01 Oct 2020 20:48:51 GMT  
 		Size: 250.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bbba1c5329cf687717e70bf30e2d9e9701bc36ea2ef037837b5c4aefe6b358fb`  
-		Last Modified: Tue, 15 Sep 2020 15:56:59 GMT  
+	-	`sha256:64e50cb3f3839acc6abb86df7584a5de2b5ec33547264dd90da3dfdab4aedd6b`  
+		Last Modified: Thu, 01 Oct 2020 20:48:51 GMT  
 		Size: 898.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ad15e92d151bb06855e332160fa2f02ada994e82b886b0a481edb4dee28f20f8`  
-		Last Modified: Thu, 17 Sep 2020 23:17:26 GMT  
-		Size: 3.5 MB (3471162 bytes)  
+	-	`sha256:eb564b366673a23b23eecddb5d7c6e1e49cd26b33a4128187e960eeb8a5a0546`  
+		Last Modified: Thu, 01 Oct 2020 22:51:21 GMT  
+		Size: 3.5 MB (3471210 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d4baf4e4041e0d9148dfec14db9f67e289dd36f49398fad27434523700d74ddc`  
-		Last Modified: Thu, 17 Sep 2020 23:17:23 GMT  
-		Size: 330.0 B  
+	-	`sha256:b14a3f9e8e85fd09436108386fa473dd72e83b4077bd3a76f192ce8bfed0616f`  
+		Last Modified: Thu, 01 Oct 2020 22:51:17 GMT  
+		Size: 328.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ecf4c3e7e6a96cdb71b3711e5629c1f29c26b765f8993dbdc9ebfb976bb43e43`  
-		Last Modified: Thu, 17 Sep 2020 23:17:38 GMT  
-		Size: 16.3 MB (16326588 bytes)  
+	-	`sha256:05db5f597d237a1d5e98ccaad2116f1b757517ee8352634cc9135cebbfd66db0`  
+		Last Modified: Thu, 01 Oct 2020 22:51:32 GMT  
+		Size: 16.3 MB (16326534 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:23ccb44119b5c39680eb8fe42ae577f363ff970511c259a6657e52c64582a5ee`  
-		Last Modified: Thu, 17 Sep 2020 23:17:24 GMT  
-		Size: 305.0 B  
+	-	`sha256:14af46e1ce2a70459d7099842111c748c59425ee742a3e87478e2e81574c06ff`  
+		Last Modified: Thu, 01 Oct 2020 22:51:17 GMT  
+		Size: 308.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4c7059bde26b332599d3e0972ab018a2c76b2655ce951909cbceea2c59432323`  
-		Last Modified: Thu, 17 Sep 2020 23:17:23 GMT  
-		Size: 226.0 B  
+	-	`sha256:75892528c7903d0d5ec67c614ca90e48646792a9f92ff1675a9afa75aef6fc56`  
+		Last Modified: Thu, 01 Oct 2020 22:51:18 GMT  
+		Size: 228.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `matomo:3.14.1-apache` - linux; ppc64le
@@ -5686,7 +5686,7 @@ CMD ["apache2-foreground"]
 ## `matomo:3.14.1-fpm`
 
 ```console
-$ docker pull matomo@sha256:f29b7889b47bd3aca86f498f8ca3ae8f45fd858880248a4f4b899f4542e0c020
+$ docker pull matomo@sha256:2e6d0ba27914fa889cce8881219a7ee885e36fa759d2d0dfbbdf71a5c2fe6ac7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6458,14 +6458,14 @@ CMD ["php-fpm"]
 ### `matomo:3.14.1-fpm` - linux; mips64le
 
 ```console
-$ docker pull matomo@sha256:66dd18b8cf998932e99a207b8ccc3e6d654864f0d37c2e576671d3c0063e468b
+$ docker pull matomo@sha256:5ae893b0715ffd08b2f20265b0843160d30e76e2a28e314a8d56cd18e2fc0155
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **145.4 MB (145448645 bytes)**  
+-	Total Size: **145.4 MB (145445960 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a7ef8acab6942212694ebbbba5c287d364fc7ec3079ddfd34ed33a55e4d16df9`
+-	Image ID: `sha256:7692c39e619bd0ddeed23a3af45370ea109f9e43dd4f4646a6dff61878534d75`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -6494,53 +6494,53 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -pie
 # Tue, 15 Sep 2020 14:29:48 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Tue, 15 Sep 2020 14:29:48 GMT
-ENV PHP_VERSION=7.4.10
-# Tue, 15 Sep 2020 14:29:48 GMT
-ENV PHP_URL=https://www.php.net/distributions/php-7.4.10.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-7.4.10.tar.xz.asc
-# Tue, 15 Sep 2020 14:29:49 GMT
-ENV PHP_SHA256=c2d90b00b14284588a787b100dee54c2400e7db995b457864d66f00ad64fb010 PHP_MD5=
-# Tue, 15 Sep 2020 14:30:10 GMT
+# Thu, 01 Oct 2020 19:29:31 GMT
+ENV PHP_VERSION=7.4.11
+# Thu, 01 Oct 2020 19:29:31 GMT
+ENV PHP_URL=https://www.php.net/distributions/php-7.4.11.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-7.4.11.tar.xz.asc
+# Thu, 01 Oct 2020 19:29:31 GMT
+ENV PHP_SHA256=5d31675a9b9c21b5bd03389418218c30b26558246870caba8eb54f5856e2d6ce PHP_MD5=
+# Thu, 01 Oct 2020 19:29:53 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends gnupg dirmngr; 	rm -rf /var/lib/apt/lists/*; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Tue, 15 Sep 2020 14:30:11 GMT
+# Thu, 01 Oct 2020 19:29:53 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Tue, 15 Sep 2020 14:42:48 GMT
+# Thu, 01 Oct 2020 19:42:27 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		libargon2-dev 		libcurl4-openssl-dev 		libedit-dev 		libonig-dev 		libsodium-dev 		libsqlite3-dev 		libssl-dev 		libxml2-dev 		zlib1g-dev 		${PHP_EXTRA_BUILD_DEPS:-} 	; 	rm -rf /var/lib/apt/lists/*; 		export 		CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)"; 	if [ ! -d /usr/include/curl ]; then 		ln -sT "/usr/include/$debMultiarch/curl" /usr/local/include/curl; 	fi; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-gnu' && echo '--without-pcre-jit') 		--with-libdir="lib/$debMultiarch" 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -executable -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 		php --version
-# Tue, 15 Sep 2020 14:42:49 GMT
+# Thu, 01 Oct 2020 19:42:28 GMT
 COPY multi:bd67471e0c4047be362a8a0e199558e6245207a6f70b72fdfe55aa2d2cae15e6 in /usr/local/bin/ 
-# Tue, 15 Sep 2020 14:42:51 GMT
+# Thu, 01 Oct 2020 19:42:30 GMT
 RUN docker-php-ext-enable sodium
-# Tue, 15 Sep 2020 14:42:51 GMT
+# Thu, 01 Oct 2020 19:42:30 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Tue, 15 Sep 2020 14:42:51 GMT
+# Thu, 01 Oct 2020 19:42:31 GMT
 WORKDIR /var/www/html
-# Tue, 15 Sep 2020 14:42:53 GMT
+# Thu, 01 Oct 2020 19:42:33 GMT
 RUN set -eux; 	cd /usr/local/etc; 	if [ -d php-fpm.d ]; then 		sed 's!=NONE/!=!g' php-fpm.conf.default | tee php-fpm.conf > /dev/null; 		cp php-fpm.d/www.conf.default php-fpm.d/www.conf; 	else 		mkdir php-fpm.d; 		cp php-fpm.conf.default php-fpm.d/www.conf; 		{ 			echo '[global]'; 			echo 'include=etc/php-fpm.d/*.conf'; 		} | tee php-fpm.conf; 	fi; 	{ 		echo '[global]'; 		echo 'error_log = /proc/self/fd/2'; 		echo; echo '; https://github.com/docker-library/php/pull/725#issuecomment-443540114'; echo 'log_limit = 8192'; 		echo; 		echo '[www]'; 		echo '; if we send this to /proc/self/fd/1, it never appears'; 		echo 'access.log = /proc/self/fd/2'; 		echo; 		echo 'clear_env = no'; 		echo; 		echo '; Ensure worker stdout and stderr are sent to the main error log.'; 		echo 'catch_workers_output = yes'; 		echo 'decorate_workers_output = no'; 	} | tee php-fpm.d/docker.conf; 	{ 		echo '[global]'; 		echo 'daemonize = no'; 		echo; 		echo '[www]'; 		echo 'listen = 9000'; 	} | tee php-fpm.d/zz-docker.conf
-# Tue, 15 Sep 2020 14:42:53 GMT
+# Thu, 01 Oct 2020 19:42:33 GMT
 STOPSIGNAL SIGQUIT
-# Tue, 15 Sep 2020 14:42:53 GMT
+# Thu, 01 Oct 2020 19:42:33 GMT
 EXPOSE 9000
-# Tue, 15 Sep 2020 14:42:54 GMT
+# Thu, 01 Oct 2020 19:42:34 GMT
 CMD ["php-fpm"]
-# Tue, 15 Sep 2020 18:18:26 GMT
+# Thu, 01 Oct 2020 22:46:09 GMT
 LABEL maintainer=pierre@piwik.org
-# Thu, 17 Sep 2020 23:16:29 GMT
+# Thu, 01 Oct 2020 22:50:20 GMT
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 	apt-get install -y --no-install-recommends 		libfreetype6-dev 		libjpeg-dev 		libldap2-dev 		libpng-dev 		libzip-dev 	; 		debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)"; 	docker-php-ext-configure gd --with-freetype --with-jpeg; 	docker-php-ext-configure ldap --with-libdir="lib/$debMultiarch"; 	docker-php-ext-install -j "$(nproc)" 		gd 		ldap 		mysqli 		opcache 		pdo_mysql 		zip 	; 		pecl install APCu-5.1.18; 	pecl install redis-5.3.1; 		docker-php-ext-enable 		apcu 		redis 	; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark; 	ldd "$(php -r 'echo ini_get("extension_dir");')"/*.so 		| awk '/=>/ { print $3 }' 		| sort -u 		| xargs -r dpkg-query -S 		| cut -d: -f1 		| sort -u 		| xargs -rt apt-mark manual; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*
-# Thu, 17 Sep 2020 23:16:31 GMT
+# Thu, 01 Oct 2020 22:50:21 GMT
 RUN { 		echo 'opcache.memory_consumption=128'; 		echo 'opcache.interned_strings_buffer=8'; 		echo 'opcache.max_accelerated_files=4000'; 		echo 'opcache.revalidate_freq=2'; 		echo 'opcache.fast_shutdown=1'; 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
-# Thu, 17 Sep 2020 23:16:31 GMT
+# Thu, 01 Oct 2020 22:50:22 GMT
 ENV MATOMO_VERSION=3.14.1
-# Thu, 17 Sep 2020 23:17:03 GMT
+# Thu, 01 Oct 2020 22:50:54 GMT
 RUN set -ex; 	fetchDeps=" 		dirmngr 		gnupg 	"; 	apt-get update; 	apt-get install -y --no-install-recommends 		$fetchDeps 	; 		curl -fsSL -o matomo.tar.gz 		"https://builds.matomo.org/matomo-${MATOMO_VERSION}.tar.gz"; 	curl -fsSL -o matomo.tar.gz.asc 		"https://builds.matomo.org/matomo-${MATOMO_VERSION}.tar.gz.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 814E346FA01A20DBB04B6807B5DBD5925590A237; 	gpg --batch --verify matomo.tar.gz.asc matomo.tar.gz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" matomo.tar.gz.asc; 	tar -xzf matomo.tar.gz -C /usr/src/; 	rm matomo.tar.gz; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; 	rm -rf /var/lib/apt/lists/*
-# Thu, 17 Sep 2020 23:17:05 GMT
+# Thu, 01 Oct 2020 22:50:55 GMT
 COPY file:5a36d7fba12e383595e7235267e54c5714dbf865acd4c4596c92ac0f17d139b3 in /usr/local/etc/php/conf.d/php-matomo.ini 
-# Thu, 17 Sep 2020 23:17:05 GMT
+# Thu, 01 Oct 2020 22:50:56 GMT
 COPY file:0fafaeb399f05cbf0a84d0276a6353eb053cd1a1537e5631be96c2a2ffa2fd31 in /entrypoint.sh 
-# Thu, 17 Sep 2020 23:17:05 GMT
+# Thu, 01 Oct 2020 22:50:56 GMT
 VOLUME [/var/www/html]
-# Thu, 17 Sep 2020 23:17:06 GMT
+# Thu, 01 Oct 2020 22:50:56 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Thu, 17 Sep 2020 23:17:06 GMT
+# Thu, 01 Oct 2020 22:50:57 GMT
 CMD ["php-fpm"]
 ```
 
@@ -6561,48 +6561,48 @@ CMD ["php-fpm"]
 		Last Modified: Tue, 15 Sep 2020 15:52:20 GMT  
 		Size: 224.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:687fb081da21caa9c554be34d14ac9ebcec9afa16cc8cf3b4a8950f398afab06`  
-		Last Modified: Tue, 15 Sep 2020 15:57:45 GMT  
-		Size: 10.6 MB (10617086 bytes)  
+	-	`sha256:dec42332e0e931f894497a53a0ef69d12b2465eb05b8a324f22883986e7fbb7a`  
+		Last Modified: Thu, 01 Oct 2020 20:49:59 GMT  
+		Size: 10.6 MB (10620734 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4050022ad76679bba437131e658a616dea41374687c459cdd10354c39a5c8e16`  
-		Last Modified: Tue, 15 Sep 2020 15:57:39 GMT  
+	-	`sha256:4e867eb5ddc410099a15459179cfce3360466e68c8ac81152d9254fd30c9750f`  
+		Last Modified: Thu, 01 Oct 2020 20:49:53 GMT  
 		Size: 494.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9ccaffb112fd2d7c0bb51ef6777e6ad7c75b7785396a0cd499fd3b2a77cb63c3`  
-		Last Modified: Tue, 15 Sep 2020 15:57:59 GMT  
-		Size: 27.9 MB (27917921 bytes)  
+	-	`sha256:ae8cf0d26fa65e28d16b8fa293a1375b9245efe9b3d2bbd64efe03a357477c02`  
+		Last Modified: Thu, 01 Oct 2020 20:50:14 GMT  
+		Size: 27.9 MB (27911895 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:289dd7424a6fd1b34a35996a5b0328c2e098287360a9ad6481e0b50310f2d8a4`  
-		Last Modified: Tue, 15 Sep 2020 15:57:39 GMT  
-		Size: 2.3 KB (2281 bytes)  
+	-	`sha256:99ba8df1b7e676524465395d806330ada9fad621dd38d16a332e94633d8717cd`  
+		Last Modified: Thu, 01 Oct 2020 20:49:53 GMT  
+		Size: 2.3 KB (2280 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f47357b19dc501b05b94e610f39ad626828ef05aaee557d8d56e915c9e78995a`  
-		Last Modified: Tue, 15 Sep 2020 15:57:39 GMT  
-		Size: 249.0 B  
+	-	`sha256:0152e25f03fb1ae8cbfb22ff6c459e282b0e6ee59f67c9bc67d683767d22bef3`  
+		Last Modified: Thu, 01 Oct 2020 20:49:54 GMT  
+		Size: 250.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:22fd54ee8b0695bb0a49d6a080bedcce20b60eff2db809a98348aa64147bc54c`  
-		Last Modified: Tue, 15 Sep 2020 15:57:40 GMT  
-		Size: 8.5 KB (8452 bytes)  
+	-	`sha256:ddc3de7851c539bfeb6a33d074cc6874874c2f1e0685cdd93e5eec184e5bef61`  
+		Last Modified: Thu, 01 Oct 2020 20:49:54 GMT  
+		Size: 8.4 KB (8449 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4ff491b333d4400e80951e7879d5c9ae397bad38d61b79ad5ec168667c5681ac`  
-		Last Modified: Thu, 17 Sep 2020 23:18:08 GMT  
-		Size: 3.4 MB (3446424 bytes)  
+	-	`sha256:0a2f22fc5351fe027bbeaf118a9c31047d7d745db95c7adcde0b59a4ba8fa54d`  
+		Last Modified: Thu, 01 Oct 2020 22:52:04 GMT  
+		Size: 3.4 MB (3446093 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b91b5931b0615efbcd092d9a0f871ed51a48cb6987dd8d693954ab8fe4c7715a`  
-		Last Modified: Thu, 17 Sep 2020 23:18:05 GMT  
-		Size: 331.0 B  
+	-	`sha256:58a7a9eaea4ad911be66a3d998141e058de693f71122b8fdffacef363ef53459`  
+		Last Modified: Thu, 01 Oct 2020 22:52:01 GMT  
+		Size: 328.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c78b1bc99f3e4bc3483a3556d53051c90f9603b089c843e10a97eaef346e2bbf`  
-		Last Modified: Thu, 17 Sep 2020 23:18:20 GMT  
-		Size: 16.3 MB (16302443 bytes)  
+	-	`sha256:1d0b246d68633da7bd4f8d6d347b7b312a4623115d6590a204e2fcadaa0777d1`  
+		Last Modified: Thu, 01 Oct 2020 22:52:15 GMT  
+		Size: 16.3 MB (16302474 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f54f1c8d24c1cfa282d12100d328a88935434916007baf5ac9a26cb10ae82aae`  
-		Last Modified: Thu, 17 Sep 2020 23:18:05 GMT  
-		Size: 308.0 B  
+	-	`sha256:fe17f71c6617f8deea90cc1cf39fb9e22a2b4c4ee57976aae0ccfeb7a6bee429`  
+		Last Modified: Thu, 01 Oct 2020 22:52:01 GMT  
+		Size: 307.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0cb467bb6d8b87b3ff27dcb8104dc5236e9bfbb4e5fd767f0567d2355d8d6134`  
-		Last Modified: Thu, 17 Sep 2020 23:18:05 GMT  
+	-	`sha256:4a45e08797abb8e44cbb2a18f3753a70f0de7be1e976c86b8711cfc9b8bb1e33`  
+		Last Modified: Thu, 01 Oct 2020 22:52:01 GMT  
 		Size: 227.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -7984,7 +7984,7 @@ CMD ["php-fpm"]
 ## `matomo:3.14-apache`
 
 ```console
-$ docker pull matomo@sha256:e5474c8e451d0884a1d5a5b95e754daa0b4641df6a9e4979f920d4ae9b31d315
+$ docker pull matomo@sha256:0e55366d3e8c602b94cbe4e04bd8a539ed8e2075d01772324ad3f46a6f901479
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -8876,14 +8876,14 @@ CMD ["apache2-foreground"]
 ### `matomo:3.14-apache` - linux; mips64le
 
 ```console
-$ docker pull matomo@sha256:ce5398e430e33615ae3dda8fc124aa1ae5ed39d10446d86ff736cdbca36abc2e
+$ docker pull matomo@sha256:ff79b2eeb67b595ebe508f98790746e32b805afdfb7f15d15bb17770ba66174e
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **149.3 MB (149309231 bytes)**  
+-	Total Size: **149.3 MB (149309845 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:cf6bdcfdc2d62ddb5617ed5d8d28e6a011a4e665efee31128c5661fe9a704b5e`
+-	Image ID: `sha256:6125643fc2ddc7deb6739ca7483621ad861028cc54e37e87db04e656eb8ce8cf`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -8924,53 +8924,53 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -pie
 # Tue, 15 Sep 2020 14:21:20 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Tue, 15 Sep 2020 14:21:20 GMT
-ENV PHP_VERSION=7.4.10
-# Tue, 15 Sep 2020 14:21:20 GMT
-ENV PHP_URL=https://www.php.net/distributions/php-7.4.10.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-7.4.10.tar.xz.asc
-# Tue, 15 Sep 2020 14:21:21 GMT
-ENV PHP_SHA256=c2d90b00b14284588a787b100dee54c2400e7db995b457864d66f00ad64fb010 PHP_MD5=
-# Tue, 15 Sep 2020 14:21:43 GMT
+# Thu, 01 Oct 2020 19:21:03 GMT
+ENV PHP_VERSION=7.4.11
+# Thu, 01 Oct 2020 19:21:03 GMT
+ENV PHP_URL=https://www.php.net/distributions/php-7.4.11.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-7.4.11.tar.xz.asc
+# Thu, 01 Oct 2020 19:21:03 GMT
+ENV PHP_SHA256=5d31675a9b9c21b5bd03389418218c30b26558246870caba8eb54f5856e2d6ce PHP_MD5=
+# Thu, 01 Oct 2020 19:21:24 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends gnupg dirmngr; 	rm -rf /var/lib/apt/lists/*; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Tue, 15 Sep 2020 14:21:43 GMT
+# Thu, 01 Oct 2020 19:21:24 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Tue, 15 Sep 2020 14:29:28 GMT
+# Thu, 01 Oct 2020 19:29:11 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		libargon2-dev 		libcurl4-openssl-dev 		libedit-dev 		libonig-dev 		libsodium-dev 		libsqlite3-dev 		libssl-dev 		libxml2-dev 		zlib1g-dev 		${PHP_EXTRA_BUILD_DEPS:-} 	; 	rm -rf /var/lib/apt/lists/*; 		export 		CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)"; 	if [ ! -d /usr/include/curl ]; then 		ln -sT "/usr/include/$debMultiarch/curl" /usr/local/include/curl; 	fi; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-gnu' && echo '--without-pcre-jit') 		--with-libdir="lib/$debMultiarch" 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -executable -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 		php --version
-# Tue, 15 Sep 2020 14:29:29 GMT
+# Thu, 01 Oct 2020 19:29:12 GMT
 COPY multi:af24b1d34daac0a277386947399eceaaf20d3065d4be5db00b1d6466cf006c49 in /usr/local/bin/ 
-# Tue, 15 Sep 2020 14:29:31 GMT
+# Thu, 01 Oct 2020 19:29:14 GMT
 RUN docker-php-ext-enable sodium
-# Tue, 15 Sep 2020 14:29:32 GMT
+# Thu, 01 Oct 2020 19:29:14 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Tue, 15 Sep 2020 14:29:32 GMT
+# Thu, 01 Oct 2020 19:29:15 GMT
 STOPSIGNAL SIGWINCH
-# Tue, 15 Sep 2020 14:29:32 GMT
+# Thu, 01 Oct 2020 19:29:15 GMT
 COPY file:e3123fcb6566efa979f945bfac1c94c854a559d7b82723e42118882a8ac4de66 in /usr/local/bin/ 
-# Tue, 15 Sep 2020 14:29:33 GMT
+# Thu, 01 Oct 2020 19:29:15 GMT
 WORKDIR /var/www/html
-# Tue, 15 Sep 2020 14:29:33 GMT
+# Thu, 01 Oct 2020 19:29:16 GMT
 EXPOSE 80
-# Tue, 15 Sep 2020 14:29:33 GMT
+# Thu, 01 Oct 2020 19:29:16 GMT
 CMD ["apache2-foreground"]
-# Tue, 15 Sep 2020 18:13:29 GMT
+# Thu, 01 Oct 2020 22:41:12 GMT
 LABEL maintainer=pierre@piwik.org
-# Thu, 17 Sep 2020 23:11:35 GMT
+# Thu, 01 Oct 2020 22:45:24 GMT
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 	apt-get install -y --no-install-recommends 		libfreetype6-dev 		libjpeg-dev 		libldap2-dev 		libpng-dev 		libzip-dev 	; 		debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)"; 	docker-php-ext-configure gd --with-freetype --with-jpeg; 	docker-php-ext-configure ldap --with-libdir="lib/$debMultiarch"; 	docker-php-ext-install -j "$(nproc)" 		gd 		ldap 		mysqli 		opcache 		pdo_mysql 		zip 	; 		pecl install APCu-5.1.18; 	pecl install redis-5.3.1; 		docker-php-ext-enable 		apcu 		redis 	; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark; 	ldd "$(php -r 'echo ini_get("extension_dir");')"/*.so 		| awk '/=>/ { print $3 }' 		| sort -u 		| xargs -r dpkg-query -S 		| cut -d: -f1 		| sort -u 		| xargs -rt apt-mark manual; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*
-# Thu, 17 Sep 2020 23:11:37 GMT
+# Thu, 01 Oct 2020 22:45:26 GMT
 RUN { 		echo 'opcache.memory_consumption=128'; 		echo 'opcache.interned_strings_buffer=8'; 		echo 'opcache.max_accelerated_files=4000'; 		echo 'opcache.revalidate_freq=2'; 		echo 'opcache.fast_shutdown=1'; 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
-# Thu, 17 Sep 2020 23:11:37 GMT
+# Thu, 01 Oct 2020 22:45:27 GMT
 ENV MATOMO_VERSION=3.14.1
-# Thu, 17 Sep 2020 23:12:11 GMT
+# Thu, 01 Oct 2020 22:45:59 GMT
 RUN set -ex; 	fetchDeps=" 		dirmngr 		gnupg 	"; 	apt-get update; 	apt-get install -y --no-install-recommends 		$fetchDeps 	; 		curl -fsSL -o matomo.tar.gz 		"https://builds.matomo.org/matomo-${MATOMO_VERSION}.tar.gz"; 	curl -fsSL -o matomo.tar.gz.asc 		"https://builds.matomo.org/matomo-${MATOMO_VERSION}.tar.gz.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 814E346FA01A20DBB04B6807B5DBD5925590A237; 	gpg --batch --verify matomo.tar.gz.asc matomo.tar.gz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" matomo.tar.gz.asc; 	tar -xzf matomo.tar.gz -C /usr/src/; 	rm matomo.tar.gz; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; 	rm -rf /var/lib/apt/lists/*
-# Thu, 17 Sep 2020 23:12:12 GMT
+# Thu, 01 Oct 2020 22:46:00 GMT
 COPY file:5a36d7fba12e383595e7235267e54c5714dbf865acd4c4596c92ac0f17d139b3 in /usr/local/etc/php/conf.d/php-matomo.ini 
-# Thu, 17 Sep 2020 23:12:12 GMT
+# Thu, 01 Oct 2020 22:46:00 GMT
 COPY file:0fafaeb399f05cbf0a84d0276a6353eb053cd1a1537e5631be96c2a2ffa2fd31 in /entrypoint.sh 
-# Thu, 17 Sep 2020 23:12:12 GMT
+# Thu, 01 Oct 2020 22:46:01 GMT
 VOLUME [/var/www/html]
-# Thu, 17 Sep 2020 23:12:13 GMT
+# Thu, 01 Oct 2020 22:46:01 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Thu, 17 Sep 2020 23:12:13 GMT
+# Thu, 01 Oct 2020 22:46:01 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -9003,49 +9003,49 @@ CMD ["apache2-foreground"]
 		Last Modified: Tue, 15 Sep 2020 15:53:55 GMT  
 		Size: 494.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:19d18abc27125de6d66bab8b3e3d447e2bab5244ea21afc7e6c8da92b1ada0f4`  
-		Last Modified: Tue, 15 Sep 2020 15:57:06 GMT  
-		Size: 10.6 MB (10633904 bytes)  
+	-	`sha256:b887d9db690121bc625b1c166668d7922b5557b67d3c1e3ac06ef0d10d2b3e90`  
+		Last Modified: Thu, 01 Oct 2020 20:48:57 GMT  
+		Size: 10.6 MB (10636985 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3994b750207ed07c87dd8d10e3c0c819b3f4c73bf71c756155d6a6f505df42a9`  
-		Last Modified: Tue, 15 Sep 2020 15:56:59 GMT  
-		Size: 493.0 B  
+	-	`sha256:8811fa3bc80db48c12f77f4d9b0eb11a44003f7369b5f504cae264692426e333`  
+		Last Modified: Thu, 01 Oct 2020 20:48:51 GMT  
+		Size: 494.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:90741598550c379c7b2dc75e96285dab9d48533a06a9baa1ee09e5638c45dd7e`  
-		Last Modified: Tue, 15 Sep 2020 15:57:10 GMT  
-		Size: 13.1 MB (13113047 bytes)  
+	-	`sha256:698327cf1f3bdc69b4bc4ea1188fe32c74ee3cb152b88d5c1d6a21236775d1d3`  
+		Last Modified: Thu, 01 Oct 2020 20:49:05 GMT  
+		Size: 13.1 MB (13110581 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:db37b20edead79c86e396ef6bb8adcdd550d9cff8d7e2510cc03da9a0aac5ef4`  
-		Last Modified: Tue, 15 Sep 2020 15:56:59 GMT  
-		Size: 2.3 KB (2289 bytes)  
+	-	`sha256:e7151363195ddd6e3bce1dcc00f99900549278a198f48e3ddc9bdcf92004d15b`  
+		Last Modified: Thu, 01 Oct 2020 20:48:51 GMT  
+		Size: 2.3 KB (2290 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2b3e11fb435a5310be6ec2707130b4e3b494ecfc1854ac72d1e69d2c3112d3c3`  
-		Last Modified: Tue, 15 Sep 2020 15:56:59 GMT  
+	-	`sha256:cb5843995b5c561a5c50b3ba9b5c331378f66b00c967fa008e87eb2bbfbfc76f`  
+		Last Modified: Thu, 01 Oct 2020 20:48:51 GMT  
 		Size: 250.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bbba1c5329cf687717e70bf30e2d9e9701bc36ea2ef037837b5c4aefe6b358fb`  
-		Last Modified: Tue, 15 Sep 2020 15:56:59 GMT  
+	-	`sha256:64e50cb3f3839acc6abb86df7584a5de2b5ec33547264dd90da3dfdab4aedd6b`  
+		Last Modified: Thu, 01 Oct 2020 20:48:51 GMT  
 		Size: 898.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ad15e92d151bb06855e332160fa2f02ada994e82b886b0a481edb4dee28f20f8`  
-		Last Modified: Thu, 17 Sep 2020 23:17:26 GMT  
-		Size: 3.5 MB (3471162 bytes)  
+	-	`sha256:eb564b366673a23b23eecddb5d7c6e1e49cd26b33a4128187e960eeb8a5a0546`  
+		Last Modified: Thu, 01 Oct 2020 22:51:21 GMT  
+		Size: 3.5 MB (3471210 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d4baf4e4041e0d9148dfec14db9f67e289dd36f49398fad27434523700d74ddc`  
-		Last Modified: Thu, 17 Sep 2020 23:17:23 GMT  
-		Size: 330.0 B  
+	-	`sha256:b14a3f9e8e85fd09436108386fa473dd72e83b4077bd3a76f192ce8bfed0616f`  
+		Last Modified: Thu, 01 Oct 2020 22:51:17 GMT  
+		Size: 328.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ecf4c3e7e6a96cdb71b3711e5629c1f29c26b765f8993dbdc9ebfb976bb43e43`  
-		Last Modified: Thu, 17 Sep 2020 23:17:38 GMT  
-		Size: 16.3 MB (16326588 bytes)  
+	-	`sha256:05db5f597d237a1d5e98ccaad2116f1b757517ee8352634cc9135cebbfd66db0`  
+		Last Modified: Thu, 01 Oct 2020 22:51:32 GMT  
+		Size: 16.3 MB (16326534 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:23ccb44119b5c39680eb8fe42ae577f363ff970511c259a6657e52c64582a5ee`  
-		Last Modified: Thu, 17 Sep 2020 23:17:24 GMT  
-		Size: 305.0 B  
+	-	`sha256:14af46e1ce2a70459d7099842111c748c59425ee742a3e87478e2e81574c06ff`  
+		Last Modified: Thu, 01 Oct 2020 22:51:17 GMT  
+		Size: 308.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4c7059bde26b332599d3e0972ab018a2c76b2655ce951909cbceea2c59432323`  
-		Last Modified: Thu, 17 Sep 2020 23:17:23 GMT  
-		Size: 226.0 B  
+	-	`sha256:75892528c7903d0d5ec67c614ca90e48646792a9f92ff1675a9afa75aef6fc56`  
+		Last Modified: Thu, 01 Oct 2020 22:51:18 GMT  
+		Size: 228.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `matomo:3.14-apache` - linux; ppc64le
@@ -9401,7 +9401,7 @@ CMD ["apache2-foreground"]
 ## `matomo:3.14-fpm`
 
 ```console
-$ docker pull matomo@sha256:f29b7889b47bd3aca86f498f8ca3ae8f45fd858880248a4f4b899f4542e0c020
+$ docker pull matomo@sha256:2e6d0ba27914fa889cce8881219a7ee885e36fa759d2d0dfbbdf71a5c2fe6ac7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -10173,14 +10173,14 @@ CMD ["php-fpm"]
 ### `matomo:3.14-fpm` - linux; mips64le
 
 ```console
-$ docker pull matomo@sha256:66dd18b8cf998932e99a207b8ccc3e6d654864f0d37c2e576671d3c0063e468b
+$ docker pull matomo@sha256:5ae893b0715ffd08b2f20265b0843160d30e76e2a28e314a8d56cd18e2fc0155
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **145.4 MB (145448645 bytes)**  
+-	Total Size: **145.4 MB (145445960 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a7ef8acab6942212694ebbbba5c287d364fc7ec3079ddfd34ed33a55e4d16df9`
+-	Image ID: `sha256:7692c39e619bd0ddeed23a3af45370ea109f9e43dd4f4646a6dff61878534d75`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -10209,53 +10209,53 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -pie
 # Tue, 15 Sep 2020 14:29:48 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Tue, 15 Sep 2020 14:29:48 GMT
-ENV PHP_VERSION=7.4.10
-# Tue, 15 Sep 2020 14:29:48 GMT
-ENV PHP_URL=https://www.php.net/distributions/php-7.4.10.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-7.4.10.tar.xz.asc
-# Tue, 15 Sep 2020 14:29:49 GMT
-ENV PHP_SHA256=c2d90b00b14284588a787b100dee54c2400e7db995b457864d66f00ad64fb010 PHP_MD5=
-# Tue, 15 Sep 2020 14:30:10 GMT
+# Thu, 01 Oct 2020 19:29:31 GMT
+ENV PHP_VERSION=7.4.11
+# Thu, 01 Oct 2020 19:29:31 GMT
+ENV PHP_URL=https://www.php.net/distributions/php-7.4.11.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-7.4.11.tar.xz.asc
+# Thu, 01 Oct 2020 19:29:31 GMT
+ENV PHP_SHA256=5d31675a9b9c21b5bd03389418218c30b26558246870caba8eb54f5856e2d6ce PHP_MD5=
+# Thu, 01 Oct 2020 19:29:53 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends gnupg dirmngr; 	rm -rf /var/lib/apt/lists/*; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Tue, 15 Sep 2020 14:30:11 GMT
+# Thu, 01 Oct 2020 19:29:53 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Tue, 15 Sep 2020 14:42:48 GMT
+# Thu, 01 Oct 2020 19:42:27 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		libargon2-dev 		libcurl4-openssl-dev 		libedit-dev 		libonig-dev 		libsodium-dev 		libsqlite3-dev 		libssl-dev 		libxml2-dev 		zlib1g-dev 		${PHP_EXTRA_BUILD_DEPS:-} 	; 	rm -rf /var/lib/apt/lists/*; 		export 		CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)"; 	if [ ! -d /usr/include/curl ]; then 		ln -sT "/usr/include/$debMultiarch/curl" /usr/local/include/curl; 	fi; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-gnu' && echo '--without-pcre-jit') 		--with-libdir="lib/$debMultiarch" 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -executable -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 		php --version
-# Tue, 15 Sep 2020 14:42:49 GMT
+# Thu, 01 Oct 2020 19:42:28 GMT
 COPY multi:bd67471e0c4047be362a8a0e199558e6245207a6f70b72fdfe55aa2d2cae15e6 in /usr/local/bin/ 
-# Tue, 15 Sep 2020 14:42:51 GMT
+# Thu, 01 Oct 2020 19:42:30 GMT
 RUN docker-php-ext-enable sodium
-# Tue, 15 Sep 2020 14:42:51 GMT
+# Thu, 01 Oct 2020 19:42:30 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Tue, 15 Sep 2020 14:42:51 GMT
+# Thu, 01 Oct 2020 19:42:31 GMT
 WORKDIR /var/www/html
-# Tue, 15 Sep 2020 14:42:53 GMT
+# Thu, 01 Oct 2020 19:42:33 GMT
 RUN set -eux; 	cd /usr/local/etc; 	if [ -d php-fpm.d ]; then 		sed 's!=NONE/!=!g' php-fpm.conf.default | tee php-fpm.conf > /dev/null; 		cp php-fpm.d/www.conf.default php-fpm.d/www.conf; 	else 		mkdir php-fpm.d; 		cp php-fpm.conf.default php-fpm.d/www.conf; 		{ 			echo '[global]'; 			echo 'include=etc/php-fpm.d/*.conf'; 		} | tee php-fpm.conf; 	fi; 	{ 		echo '[global]'; 		echo 'error_log = /proc/self/fd/2'; 		echo; echo '; https://github.com/docker-library/php/pull/725#issuecomment-443540114'; echo 'log_limit = 8192'; 		echo; 		echo '[www]'; 		echo '; if we send this to /proc/self/fd/1, it never appears'; 		echo 'access.log = /proc/self/fd/2'; 		echo; 		echo 'clear_env = no'; 		echo; 		echo '; Ensure worker stdout and stderr are sent to the main error log.'; 		echo 'catch_workers_output = yes'; 		echo 'decorate_workers_output = no'; 	} | tee php-fpm.d/docker.conf; 	{ 		echo '[global]'; 		echo 'daemonize = no'; 		echo; 		echo '[www]'; 		echo 'listen = 9000'; 	} | tee php-fpm.d/zz-docker.conf
-# Tue, 15 Sep 2020 14:42:53 GMT
+# Thu, 01 Oct 2020 19:42:33 GMT
 STOPSIGNAL SIGQUIT
-# Tue, 15 Sep 2020 14:42:53 GMT
+# Thu, 01 Oct 2020 19:42:33 GMT
 EXPOSE 9000
-# Tue, 15 Sep 2020 14:42:54 GMT
+# Thu, 01 Oct 2020 19:42:34 GMT
 CMD ["php-fpm"]
-# Tue, 15 Sep 2020 18:18:26 GMT
+# Thu, 01 Oct 2020 22:46:09 GMT
 LABEL maintainer=pierre@piwik.org
-# Thu, 17 Sep 2020 23:16:29 GMT
+# Thu, 01 Oct 2020 22:50:20 GMT
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 	apt-get install -y --no-install-recommends 		libfreetype6-dev 		libjpeg-dev 		libldap2-dev 		libpng-dev 		libzip-dev 	; 		debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)"; 	docker-php-ext-configure gd --with-freetype --with-jpeg; 	docker-php-ext-configure ldap --with-libdir="lib/$debMultiarch"; 	docker-php-ext-install -j "$(nproc)" 		gd 		ldap 		mysqli 		opcache 		pdo_mysql 		zip 	; 		pecl install APCu-5.1.18; 	pecl install redis-5.3.1; 		docker-php-ext-enable 		apcu 		redis 	; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark; 	ldd "$(php -r 'echo ini_get("extension_dir");')"/*.so 		| awk '/=>/ { print $3 }' 		| sort -u 		| xargs -r dpkg-query -S 		| cut -d: -f1 		| sort -u 		| xargs -rt apt-mark manual; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*
-# Thu, 17 Sep 2020 23:16:31 GMT
+# Thu, 01 Oct 2020 22:50:21 GMT
 RUN { 		echo 'opcache.memory_consumption=128'; 		echo 'opcache.interned_strings_buffer=8'; 		echo 'opcache.max_accelerated_files=4000'; 		echo 'opcache.revalidate_freq=2'; 		echo 'opcache.fast_shutdown=1'; 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
-# Thu, 17 Sep 2020 23:16:31 GMT
+# Thu, 01 Oct 2020 22:50:22 GMT
 ENV MATOMO_VERSION=3.14.1
-# Thu, 17 Sep 2020 23:17:03 GMT
+# Thu, 01 Oct 2020 22:50:54 GMT
 RUN set -ex; 	fetchDeps=" 		dirmngr 		gnupg 	"; 	apt-get update; 	apt-get install -y --no-install-recommends 		$fetchDeps 	; 		curl -fsSL -o matomo.tar.gz 		"https://builds.matomo.org/matomo-${MATOMO_VERSION}.tar.gz"; 	curl -fsSL -o matomo.tar.gz.asc 		"https://builds.matomo.org/matomo-${MATOMO_VERSION}.tar.gz.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 814E346FA01A20DBB04B6807B5DBD5925590A237; 	gpg --batch --verify matomo.tar.gz.asc matomo.tar.gz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" matomo.tar.gz.asc; 	tar -xzf matomo.tar.gz -C /usr/src/; 	rm matomo.tar.gz; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; 	rm -rf /var/lib/apt/lists/*
-# Thu, 17 Sep 2020 23:17:05 GMT
+# Thu, 01 Oct 2020 22:50:55 GMT
 COPY file:5a36d7fba12e383595e7235267e54c5714dbf865acd4c4596c92ac0f17d139b3 in /usr/local/etc/php/conf.d/php-matomo.ini 
-# Thu, 17 Sep 2020 23:17:05 GMT
+# Thu, 01 Oct 2020 22:50:56 GMT
 COPY file:0fafaeb399f05cbf0a84d0276a6353eb053cd1a1537e5631be96c2a2ffa2fd31 in /entrypoint.sh 
-# Thu, 17 Sep 2020 23:17:05 GMT
+# Thu, 01 Oct 2020 22:50:56 GMT
 VOLUME [/var/www/html]
-# Thu, 17 Sep 2020 23:17:06 GMT
+# Thu, 01 Oct 2020 22:50:56 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Thu, 17 Sep 2020 23:17:06 GMT
+# Thu, 01 Oct 2020 22:50:57 GMT
 CMD ["php-fpm"]
 ```
 
@@ -10276,48 +10276,48 @@ CMD ["php-fpm"]
 		Last Modified: Tue, 15 Sep 2020 15:52:20 GMT  
 		Size: 224.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:687fb081da21caa9c554be34d14ac9ebcec9afa16cc8cf3b4a8950f398afab06`  
-		Last Modified: Tue, 15 Sep 2020 15:57:45 GMT  
-		Size: 10.6 MB (10617086 bytes)  
+	-	`sha256:dec42332e0e931f894497a53a0ef69d12b2465eb05b8a324f22883986e7fbb7a`  
+		Last Modified: Thu, 01 Oct 2020 20:49:59 GMT  
+		Size: 10.6 MB (10620734 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4050022ad76679bba437131e658a616dea41374687c459cdd10354c39a5c8e16`  
-		Last Modified: Tue, 15 Sep 2020 15:57:39 GMT  
+	-	`sha256:4e867eb5ddc410099a15459179cfce3360466e68c8ac81152d9254fd30c9750f`  
+		Last Modified: Thu, 01 Oct 2020 20:49:53 GMT  
 		Size: 494.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9ccaffb112fd2d7c0bb51ef6777e6ad7c75b7785396a0cd499fd3b2a77cb63c3`  
-		Last Modified: Tue, 15 Sep 2020 15:57:59 GMT  
-		Size: 27.9 MB (27917921 bytes)  
+	-	`sha256:ae8cf0d26fa65e28d16b8fa293a1375b9245efe9b3d2bbd64efe03a357477c02`  
+		Last Modified: Thu, 01 Oct 2020 20:50:14 GMT  
+		Size: 27.9 MB (27911895 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:289dd7424a6fd1b34a35996a5b0328c2e098287360a9ad6481e0b50310f2d8a4`  
-		Last Modified: Tue, 15 Sep 2020 15:57:39 GMT  
-		Size: 2.3 KB (2281 bytes)  
+	-	`sha256:99ba8df1b7e676524465395d806330ada9fad621dd38d16a332e94633d8717cd`  
+		Last Modified: Thu, 01 Oct 2020 20:49:53 GMT  
+		Size: 2.3 KB (2280 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f47357b19dc501b05b94e610f39ad626828ef05aaee557d8d56e915c9e78995a`  
-		Last Modified: Tue, 15 Sep 2020 15:57:39 GMT  
-		Size: 249.0 B  
+	-	`sha256:0152e25f03fb1ae8cbfb22ff6c459e282b0e6ee59f67c9bc67d683767d22bef3`  
+		Last Modified: Thu, 01 Oct 2020 20:49:54 GMT  
+		Size: 250.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:22fd54ee8b0695bb0a49d6a080bedcce20b60eff2db809a98348aa64147bc54c`  
-		Last Modified: Tue, 15 Sep 2020 15:57:40 GMT  
-		Size: 8.5 KB (8452 bytes)  
+	-	`sha256:ddc3de7851c539bfeb6a33d074cc6874874c2f1e0685cdd93e5eec184e5bef61`  
+		Last Modified: Thu, 01 Oct 2020 20:49:54 GMT  
+		Size: 8.4 KB (8449 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4ff491b333d4400e80951e7879d5c9ae397bad38d61b79ad5ec168667c5681ac`  
-		Last Modified: Thu, 17 Sep 2020 23:18:08 GMT  
-		Size: 3.4 MB (3446424 bytes)  
+	-	`sha256:0a2f22fc5351fe027bbeaf118a9c31047d7d745db95c7adcde0b59a4ba8fa54d`  
+		Last Modified: Thu, 01 Oct 2020 22:52:04 GMT  
+		Size: 3.4 MB (3446093 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b91b5931b0615efbcd092d9a0f871ed51a48cb6987dd8d693954ab8fe4c7715a`  
-		Last Modified: Thu, 17 Sep 2020 23:18:05 GMT  
-		Size: 331.0 B  
+	-	`sha256:58a7a9eaea4ad911be66a3d998141e058de693f71122b8fdffacef363ef53459`  
+		Last Modified: Thu, 01 Oct 2020 22:52:01 GMT  
+		Size: 328.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c78b1bc99f3e4bc3483a3556d53051c90f9603b089c843e10a97eaef346e2bbf`  
-		Last Modified: Thu, 17 Sep 2020 23:18:20 GMT  
-		Size: 16.3 MB (16302443 bytes)  
+	-	`sha256:1d0b246d68633da7bd4f8d6d347b7b312a4623115d6590a204e2fcadaa0777d1`  
+		Last Modified: Thu, 01 Oct 2020 22:52:15 GMT  
+		Size: 16.3 MB (16302474 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f54f1c8d24c1cfa282d12100d328a88935434916007baf5ac9a26cb10ae82aae`  
-		Last Modified: Thu, 17 Sep 2020 23:18:05 GMT  
-		Size: 308.0 B  
+	-	`sha256:fe17f71c6617f8deea90cc1cf39fb9e22a2b4c4ee57976aae0ccfeb7a6bee429`  
+		Last Modified: Thu, 01 Oct 2020 22:52:01 GMT  
+		Size: 307.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0cb467bb6d8b87b3ff27dcb8104dc5236e9bfbb4e5fd767f0567d2355d8d6134`  
-		Last Modified: Thu, 17 Sep 2020 23:18:05 GMT  
+	-	`sha256:4a45e08797abb8e44cbb2a18f3753a70f0de7be1e976c86b8711cfc9b8bb1e33`  
+		Last Modified: Thu, 01 Oct 2020 22:52:01 GMT  
 		Size: 227.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -11699,7 +11699,7 @@ CMD ["php-fpm"]
 ## `matomo:3-apache`
 
 ```console
-$ docker pull matomo@sha256:e5474c8e451d0884a1d5a5b95e754daa0b4641df6a9e4979f920d4ae9b31d315
+$ docker pull matomo@sha256:0e55366d3e8c602b94cbe4e04bd8a539ed8e2075d01772324ad3f46a6f901479
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12591,14 +12591,14 @@ CMD ["apache2-foreground"]
 ### `matomo:3-apache` - linux; mips64le
 
 ```console
-$ docker pull matomo@sha256:ce5398e430e33615ae3dda8fc124aa1ae5ed39d10446d86ff736cdbca36abc2e
+$ docker pull matomo@sha256:ff79b2eeb67b595ebe508f98790746e32b805afdfb7f15d15bb17770ba66174e
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **149.3 MB (149309231 bytes)**  
+-	Total Size: **149.3 MB (149309845 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:cf6bdcfdc2d62ddb5617ed5d8d28e6a011a4e665efee31128c5661fe9a704b5e`
+-	Image ID: `sha256:6125643fc2ddc7deb6739ca7483621ad861028cc54e37e87db04e656eb8ce8cf`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -12639,53 +12639,53 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -pie
 # Tue, 15 Sep 2020 14:21:20 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Tue, 15 Sep 2020 14:21:20 GMT
-ENV PHP_VERSION=7.4.10
-# Tue, 15 Sep 2020 14:21:20 GMT
-ENV PHP_URL=https://www.php.net/distributions/php-7.4.10.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-7.4.10.tar.xz.asc
-# Tue, 15 Sep 2020 14:21:21 GMT
-ENV PHP_SHA256=c2d90b00b14284588a787b100dee54c2400e7db995b457864d66f00ad64fb010 PHP_MD5=
-# Tue, 15 Sep 2020 14:21:43 GMT
+# Thu, 01 Oct 2020 19:21:03 GMT
+ENV PHP_VERSION=7.4.11
+# Thu, 01 Oct 2020 19:21:03 GMT
+ENV PHP_URL=https://www.php.net/distributions/php-7.4.11.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-7.4.11.tar.xz.asc
+# Thu, 01 Oct 2020 19:21:03 GMT
+ENV PHP_SHA256=5d31675a9b9c21b5bd03389418218c30b26558246870caba8eb54f5856e2d6ce PHP_MD5=
+# Thu, 01 Oct 2020 19:21:24 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends gnupg dirmngr; 	rm -rf /var/lib/apt/lists/*; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Tue, 15 Sep 2020 14:21:43 GMT
+# Thu, 01 Oct 2020 19:21:24 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Tue, 15 Sep 2020 14:29:28 GMT
+# Thu, 01 Oct 2020 19:29:11 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		libargon2-dev 		libcurl4-openssl-dev 		libedit-dev 		libonig-dev 		libsodium-dev 		libsqlite3-dev 		libssl-dev 		libxml2-dev 		zlib1g-dev 		${PHP_EXTRA_BUILD_DEPS:-} 	; 	rm -rf /var/lib/apt/lists/*; 		export 		CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)"; 	if [ ! -d /usr/include/curl ]; then 		ln -sT "/usr/include/$debMultiarch/curl" /usr/local/include/curl; 	fi; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-gnu' && echo '--without-pcre-jit') 		--with-libdir="lib/$debMultiarch" 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -executable -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 		php --version
-# Tue, 15 Sep 2020 14:29:29 GMT
+# Thu, 01 Oct 2020 19:29:12 GMT
 COPY multi:af24b1d34daac0a277386947399eceaaf20d3065d4be5db00b1d6466cf006c49 in /usr/local/bin/ 
-# Tue, 15 Sep 2020 14:29:31 GMT
+# Thu, 01 Oct 2020 19:29:14 GMT
 RUN docker-php-ext-enable sodium
-# Tue, 15 Sep 2020 14:29:32 GMT
+# Thu, 01 Oct 2020 19:29:14 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Tue, 15 Sep 2020 14:29:32 GMT
+# Thu, 01 Oct 2020 19:29:15 GMT
 STOPSIGNAL SIGWINCH
-# Tue, 15 Sep 2020 14:29:32 GMT
+# Thu, 01 Oct 2020 19:29:15 GMT
 COPY file:e3123fcb6566efa979f945bfac1c94c854a559d7b82723e42118882a8ac4de66 in /usr/local/bin/ 
-# Tue, 15 Sep 2020 14:29:33 GMT
+# Thu, 01 Oct 2020 19:29:15 GMT
 WORKDIR /var/www/html
-# Tue, 15 Sep 2020 14:29:33 GMT
+# Thu, 01 Oct 2020 19:29:16 GMT
 EXPOSE 80
-# Tue, 15 Sep 2020 14:29:33 GMT
+# Thu, 01 Oct 2020 19:29:16 GMT
 CMD ["apache2-foreground"]
-# Tue, 15 Sep 2020 18:13:29 GMT
+# Thu, 01 Oct 2020 22:41:12 GMT
 LABEL maintainer=pierre@piwik.org
-# Thu, 17 Sep 2020 23:11:35 GMT
+# Thu, 01 Oct 2020 22:45:24 GMT
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 	apt-get install -y --no-install-recommends 		libfreetype6-dev 		libjpeg-dev 		libldap2-dev 		libpng-dev 		libzip-dev 	; 		debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)"; 	docker-php-ext-configure gd --with-freetype --with-jpeg; 	docker-php-ext-configure ldap --with-libdir="lib/$debMultiarch"; 	docker-php-ext-install -j "$(nproc)" 		gd 		ldap 		mysqli 		opcache 		pdo_mysql 		zip 	; 		pecl install APCu-5.1.18; 	pecl install redis-5.3.1; 		docker-php-ext-enable 		apcu 		redis 	; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark; 	ldd "$(php -r 'echo ini_get("extension_dir");')"/*.so 		| awk '/=>/ { print $3 }' 		| sort -u 		| xargs -r dpkg-query -S 		| cut -d: -f1 		| sort -u 		| xargs -rt apt-mark manual; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*
-# Thu, 17 Sep 2020 23:11:37 GMT
+# Thu, 01 Oct 2020 22:45:26 GMT
 RUN { 		echo 'opcache.memory_consumption=128'; 		echo 'opcache.interned_strings_buffer=8'; 		echo 'opcache.max_accelerated_files=4000'; 		echo 'opcache.revalidate_freq=2'; 		echo 'opcache.fast_shutdown=1'; 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
-# Thu, 17 Sep 2020 23:11:37 GMT
+# Thu, 01 Oct 2020 22:45:27 GMT
 ENV MATOMO_VERSION=3.14.1
-# Thu, 17 Sep 2020 23:12:11 GMT
+# Thu, 01 Oct 2020 22:45:59 GMT
 RUN set -ex; 	fetchDeps=" 		dirmngr 		gnupg 	"; 	apt-get update; 	apt-get install -y --no-install-recommends 		$fetchDeps 	; 		curl -fsSL -o matomo.tar.gz 		"https://builds.matomo.org/matomo-${MATOMO_VERSION}.tar.gz"; 	curl -fsSL -o matomo.tar.gz.asc 		"https://builds.matomo.org/matomo-${MATOMO_VERSION}.tar.gz.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 814E346FA01A20DBB04B6807B5DBD5925590A237; 	gpg --batch --verify matomo.tar.gz.asc matomo.tar.gz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" matomo.tar.gz.asc; 	tar -xzf matomo.tar.gz -C /usr/src/; 	rm matomo.tar.gz; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; 	rm -rf /var/lib/apt/lists/*
-# Thu, 17 Sep 2020 23:12:12 GMT
+# Thu, 01 Oct 2020 22:46:00 GMT
 COPY file:5a36d7fba12e383595e7235267e54c5714dbf865acd4c4596c92ac0f17d139b3 in /usr/local/etc/php/conf.d/php-matomo.ini 
-# Thu, 17 Sep 2020 23:12:12 GMT
+# Thu, 01 Oct 2020 22:46:00 GMT
 COPY file:0fafaeb399f05cbf0a84d0276a6353eb053cd1a1537e5631be96c2a2ffa2fd31 in /entrypoint.sh 
-# Thu, 17 Sep 2020 23:12:12 GMT
+# Thu, 01 Oct 2020 22:46:01 GMT
 VOLUME [/var/www/html]
-# Thu, 17 Sep 2020 23:12:13 GMT
+# Thu, 01 Oct 2020 22:46:01 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Thu, 17 Sep 2020 23:12:13 GMT
+# Thu, 01 Oct 2020 22:46:01 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -12718,49 +12718,49 @@ CMD ["apache2-foreground"]
 		Last Modified: Tue, 15 Sep 2020 15:53:55 GMT  
 		Size: 494.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:19d18abc27125de6d66bab8b3e3d447e2bab5244ea21afc7e6c8da92b1ada0f4`  
-		Last Modified: Tue, 15 Sep 2020 15:57:06 GMT  
-		Size: 10.6 MB (10633904 bytes)  
+	-	`sha256:b887d9db690121bc625b1c166668d7922b5557b67d3c1e3ac06ef0d10d2b3e90`  
+		Last Modified: Thu, 01 Oct 2020 20:48:57 GMT  
+		Size: 10.6 MB (10636985 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3994b750207ed07c87dd8d10e3c0c819b3f4c73bf71c756155d6a6f505df42a9`  
-		Last Modified: Tue, 15 Sep 2020 15:56:59 GMT  
-		Size: 493.0 B  
+	-	`sha256:8811fa3bc80db48c12f77f4d9b0eb11a44003f7369b5f504cae264692426e333`  
+		Last Modified: Thu, 01 Oct 2020 20:48:51 GMT  
+		Size: 494.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:90741598550c379c7b2dc75e96285dab9d48533a06a9baa1ee09e5638c45dd7e`  
-		Last Modified: Tue, 15 Sep 2020 15:57:10 GMT  
-		Size: 13.1 MB (13113047 bytes)  
+	-	`sha256:698327cf1f3bdc69b4bc4ea1188fe32c74ee3cb152b88d5c1d6a21236775d1d3`  
+		Last Modified: Thu, 01 Oct 2020 20:49:05 GMT  
+		Size: 13.1 MB (13110581 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:db37b20edead79c86e396ef6bb8adcdd550d9cff8d7e2510cc03da9a0aac5ef4`  
-		Last Modified: Tue, 15 Sep 2020 15:56:59 GMT  
-		Size: 2.3 KB (2289 bytes)  
+	-	`sha256:e7151363195ddd6e3bce1dcc00f99900549278a198f48e3ddc9bdcf92004d15b`  
+		Last Modified: Thu, 01 Oct 2020 20:48:51 GMT  
+		Size: 2.3 KB (2290 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2b3e11fb435a5310be6ec2707130b4e3b494ecfc1854ac72d1e69d2c3112d3c3`  
-		Last Modified: Tue, 15 Sep 2020 15:56:59 GMT  
+	-	`sha256:cb5843995b5c561a5c50b3ba9b5c331378f66b00c967fa008e87eb2bbfbfc76f`  
+		Last Modified: Thu, 01 Oct 2020 20:48:51 GMT  
 		Size: 250.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bbba1c5329cf687717e70bf30e2d9e9701bc36ea2ef037837b5c4aefe6b358fb`  
-		Last Modified: Tue, 15 Sep 2020 15:56:59 GMT  
+	-	`sha256:64e50cb3f3839acc6abb86df7584a5de2b5ec33547264dd90da3dfdab4aedd6b`  
+		Last Modified: Thu, 01 Oct 2020 20:48:51 GMT  
 		Size: 898.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ad15e92d151bb06855e332160fa2f02ada994e82b886b0a481edb4dee28f20f8`  
-		Last Modified: Thu, 17 Sep 2020 23:17:26 GMT  
-		Size: 3.5 MB (3471162 bytes)  
+	-	`sha256:eb564b366673a23b23eecddb5d7c6e1e49cd26b33a4128187e960eeb8a5a0546`  
+		Last Modified: Thu, 01 Oct 2020 22:51:21 GMT  
+		Size: 3.5 MB (3471210 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d4baf4e4041e0d9148dfec14db9f67e289dd36f49398fad27434523700d74ddc`  
-		Last Modified: Thu, 17 Sep 2020 23:17:23 GMT  
-		Size: 330.0 B  
+	-	`sha256:b14a3f9e8e85fd09436108386fa473dd72e83b4077bd3a76f192ce8bfed0616f`  
+		Last Modified: Thu, 01 Oct 2020 22:51:17 GMT  
+		Size: 328.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ecf4c3e7e6a96cdb71b3711e5629c1f29c26b765f8993dbdc9ebfb976bb43e43`  
-		Last Modified: Thu, 17 Sep 2020 23:17:38 GMT  
-		Size: 16.3 MB (16326588 bytes)  
+	-	`sha256:05db5f597d237a1d5e98ccaad2116f1b757517ee8352634cc9135cebbfd66db0`  
+		Last Modified: Thu, 01 Oct 2020 22:51:32 GMT  
+		Size: 16.3 MB (16326534 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:23ccb44119b5c39680eb8fe42ae577f363ff970511c259a6657e52c64582a5ee`  
-		Last Modified: Thu, 17 Sep 2020 23:17:24 GMT  
-		Size: 305.0 B  
+	-	`sha256:14af46e1ce2a70459d7099842111c748c59425ee742a3e87478e2e81574c06ff`  
+		Last Modified: Thu, 01 Oct 2020 22:51:17 GMT  
+		Size: 308.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4c7059bde26b332599d3e0972ab018a2c76b2655ce951909cbceea2c59432323`  
-		Last Modified: Thu, 17 Sep 2020 23:17:23 GMT  
-		Size: 226.0 B  
+	-	`sha256:75892528c7903d0d5ec67c614ca90e48646792a9f92ff1675a9afa75aef6fc56`  
+		Last Modified: Thu, 01 Oct 2020 22:51:18 GMT  
+		Size: 228.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `matomo:3-apache` - linux; ppc64le
@@ -13116,7 +13116,7 @@ CMD ["apache2-foreground"]
 ## `matomo:3-fpm`
 
 ```console
-$ docker pull matomo@sha256:f29b7889b47bd3aca86f498f8ca3ae8f45fd858880248a4f4b899f4542e0c020
+$ docker pull matomo@sha256:2e6d0ba27914fa889cce8881219a7ee885e36fa759d2d0dfbbdf71a5c2fe6ac7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -13888,14 +13888,14 @@ CMD ["php-fpm"]
 ### `matomo:3-fpm` - linux; mips64le
 
 ```console
-$ docker pull matomo@sha256:66dd18b8cf998932e99a207b8ccc3e6d654864f0d37c2e576671d3c0063e468b
+$ docker pull matomo@sha256:5ae893b0715ffd08b2f20265b0843160d30e76e2a28e314a8d56cd18e2fc0155
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **145.4 MB (145448645 bytes)**  
+-	Total Size: **145.4 MB (145445960 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a7ef8acab6942212694ebbbba5c287d364fc7ec3079ddfd34ed33a55e4d16df9`
+-	Image ID: `sha256:7692c39e619bd0ddeed23a3af45370ea109f9e43dd4f4646a6dff61878534d75`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -13924,53 +13924,53 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -pie
 # Tue, 15 Sep 2020 14:29:48 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Tue, 15 Sep 2020 14:29:48 GMT
-ENV PHP_VERSION=7.4.10
-# Tue, 15 Sep 2020 14:29:48 GMT
-ENV PHP_URL=https://www.php.net/distributions/php-7.4.10.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-7.4.10.tar.xz.asc
-# Tue, 15 Sep 2020 14:29:49 GMT
-ENV PHP_SHA256=c2d90b00b14284588a787b100dee54c2400e7db995b457864d66f00ad64fb010 PHP_MD5=
-# Tue, 15 Sep 2020 14:30:10 GMT
+# Thu, 01 Oct 2020 19:29:31 GMT
+ENV PHP_VERSION=7.4.11
+# Thu, 01 Oct 2020 19:29:31 GMT
+ENV PHP_URL=https://www.php.net/distributions/php-7.4.11.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-7.4.11.tar.xz.asc
+# Thu, 01 Oct 2020 19:29:31 GMT
+ENV PHP_SHA256=5d31675a9b9c21b5bd03389418218c30b26558246870caba8eb54f5856e2d6ce PHP_MD5=
+# Thu, 01 Oct 2020 19:29:53 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends gnupg dirmngr; 	rm -rf /var/lib/apt/lists/*; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 	if [ -n "$PHP_MD5" ]; then 		echo "$PHP_MD5 *php.tar.xz" | md5sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Tue, 15 Sep 2020 14:30:11 GMT
+# Thu, 01 Oct 2020 19:29:53 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Tue, 15 Sep 2020 14:42:48 GMT
+# Thu, 01 Oct 2020 19:42:27 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		libargon2-dev 		libcurl4-openssl-dev 		libedit-dev 		libonig-dev 		libsodium-dev 		libsqlite3-dev 		libssl-dev 		libxml2-dev 		zlib1g-dev 		${PHP_EXTRA_BUILD_DEPS:-} 	; 	rm -rf /var/lib/apt/lists/*; 		export 		CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)"; 	if [ ! -d /usr/include/curl ]; then 		ln -sT "/usr/include/$debMultiarch/curl" /usr/local/include/curl; 	fi; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-gnu' && echo '--without-pcre-jit') 		--with-libdir="lib/$debMultiarch" 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -executable -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 		php --version
-# Tue, 15 Sep 2020 14:42:49 GMT
+# Thu, 01 Oct 2020 19:42:28 GMT
 COPY multi:bd67471e0c4047be362a8a0e199558e6245207a6f70b72fdfe55aa2d2cae15e6 in /usr/local/bin/ 
-# Tue, 15 Sep 2020 14:42:51 GMT
+# Thu, 01 Oct 2020 19:42:30 GMT
 RUN docker-php-ext-enable sodium
-# Tue, 15 Sep 2020 14:42:51 GMT
+# Thu, 01 Oct 2020 19:42:30 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Tue, 15 Sep 2020 14:42:51 GMT
+# Thu, 01 Oct 2020 19:42:31 GMT
 WORKDIR /var/www/html
-# Tue, 15 Sep 2020 14:42:53 GMT
+# Thu, 01 Oct 2020 19:42:33 GMT
 RUN set -eux; 	cd /usr/local/etc; 	if [ -d php-fpm.d ]; then 		sed 's!=NONE/!=!g' php-fpm.conf.default | tee php-fpm.conf > /dev/null; 		cp php-fpm.d/www.conf.default php-fpm.d/www.conf; 	else 		mkdir php-fpm.d; 		cp php-fpm.conf.default php-fpm.d/www.conf; 		{ 			echo '[global]'; 			echo 'include=etc/php-fpm.d/*.conf'; 		} | tee php-fpm.conf; 	fi; 	{ 		echo '[global]'; 		echo 'error_log = /proc/self/fd/2'; 		echo; echo '; https://github.com/docker-library/php/pull/725#issuecomment-443540114'; echo 'log_limit = 8192'; 		echo; 		echo '[www]'; 		echo '; if we send this to /proc/self/fd/1, it never appears'; 		echo 'access.log = /proc/self/fd/2'; 		echo; 		echo 'clear_env = no'; 		echo; 		echo '; Ensure worker stdout and stderr are sent to the main error log.'; 		echo 'catch_workers_output = yes'; 		echo 'decorate_workers_output = no'; 	} | tee php-fpm.d/docker.conf; 	{ 		echo '[global]'; 		echo 'daemonize = no'; 		echo; 		echo '[www]'; 		echo 'listen = 9000'; 	} | tee php-fpm.d/zz-docker.conf
-# Tue, 15 Sep 2020 14:42:53 GMT
+# Thu, 01 Oct 2020 19:42:33 GMT
 STOPSIGNAL SIGQUIT
-# Tue, 15 Sep 2020 14:42:53 GMT
+# Thu, 01 Oct 2020 19:42:33 GMT
 EXPOSE 9000
-# Tue, 15 Sep 2020 14:42:54 GMT
+# Thu, 01 Oct 2020 19:42:34 GMT
 CMD ["php-fpm"]
-# Tue, 15 Sep 2020 18:18:26 GMT
+# Thu, 01 Oct 2020 22:46:09 GMT
 LABEL maintainer=pierre@piwik.org
-# Thu, 17 Sep 2020 23:16:29 GMT
+# Thu, 01 Oct 2020 22:50:20 GMT
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 	apt-get install -y --no-install-recommends 		libfreetype6-dev 		libjpeg-dev 		libldap2-dev 		libpng-dev 		libzip-dev 	; 		debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)"; 	docker-php-ext-configure gd --with-freetype --with-jpeg; 	docker-php-ext-configure ldap --with-libdir="lib/$debMultiarch"; 	docker-php-ext-install -j "$(nproc)" 		gd 		ldap 		mysqli 		opcache 		pdo_mysql 		zip 	; 		pecl install APCu-5.1.18; 	pecl install redis-5.3.1; 		docker-php-ext-enable 		apcu 		redis 	; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark; 	ldd "$(php -r 'echo ini_get("extension_dir");')"/*.so 		| awk '/=>/ { print $3 }' 		| sort -u 		| xargs -r dpkg-query -S 		| cut -d: -f1 		| sort -u 		| xargs -rt apt-mark manual; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*
-# Thu, 17 Sep 2020 23:16:31 GMT
+# Thu, 01 Oct 2020 22:50:21 GMT
 RUN { 		echo 'opcache.memory_consumption=128'; 		echo 'opcache.interned_strings_buffer=8'; 		echo 'opcache.max_accelerated_files=4000'; 		echo 'opcache.revalidate_freq=2'; 		echo 'opcache.fast_shutdown=1'; 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
-# Thu, 17 Sep 2020 23:16:31 GMT
+# Thu, 01 Oct 2020 22:50:22 GMT
 ENV MATOMO_VERSION=3.14.1
-# Thu, 17 Sep 2020 23:17:03 GMT
+# Thu, 01 Oct 2020 22:50:54 GMT
 RUN set -ex; 	fetchDeps=" 		dirmngr 		gnupg 	"; 	apt-get update; 	apt-get install -y --no-install-recommends 		$fetchDeps 	; 		curl -fsSL -o matomo.tar.gz 		"https://builds.matomo.org/matomo-${MATOMO_VERSION}.tar.gz"; 	curl -fsSL -o matomo.tar.gz.asc 		"https://builds.matomo.org/matomo-${MATOMO_VERSION}.tar.gz.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 814E346FA01A20DBB04B6807B5DBD5925590A237; 	gpg --batch --verify matomo.tar.gz.asc matomo.tar.gz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" matomo.tar.gz.asc; 	tar -xzf matomo.tar.gz -C /usr/src/; 	rm matomo.tar.gz; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; 	rm -rf /var/lib/apt/lists/*
-# Thu, 17 Sep 2020 23:17:05 GMT
+# Thu, 01 Oct 2020 22:50:55 GMT
 COPY file:5a36d7fba12e383595e7235267e54c5714dbf865acd4c4596c92ac0f17d139b3 in /usr/local/etc/php/conf.d/php-matomo.ini 
-# Thu, 17 Sep 2020 23:17:05 GMT
+# Thu, 01 Oct 2020 22:50:56 GMT
 COPY file:0fafaeb399f05cbf0a84d0276a6353eb053cd1a1537e5631be96c2a2ffa2fd31 in /entrypoint.sh 
-# Thu, 17 Sep 2020 23:17:05 GMT
+# Thu, 01 Oct 2020 22:50:56 GMT
 VOLUME [/var/www/html]
-# Thu, 17 Sep 2020 23:17:06 GMT
+# Thu, 01 Oct 2020 22:50:56 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Thu, 17 Sep 2020 23:17:06 GMT
+# Thu, 01 Oct 2020 22:50:57 GMT
 CMD ["php-fpm"]
 ```
 
@@ -13991,48 +13991,48 @@ CMD ["php-fpm"]
 		Last Modified: Tue, 15 Sep 2020 15:52:20 GMT  
 		Size: 224.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:687fb081da21caa9c554be34d14ac9ebcec9afa16cc8cf3b4a8950f398afab06`  
-		Last Modified: Tue, 15 Sep 2020 15:57:45 GMT  
-		Size: 10.6 MB (10617086 bytes)  
+	-	`sha256:dec42332e0e931f894497a53a0ef69d12b2465eb05b8a324f22883986e7fbb7a`  
+		Last Modified: Thu, 01 Oct 2020 20:49:59 GMT  
+		Size: 10.6 MB (10620734 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4050022ad76679bba437131e658a616dea41374687c459cdd10354c39a5c8e16`  
-		Last Modified: Tue, 15 Sep 2020 15:57:39 GMT  
+	-	`sha256:4e867eb5ddc410099a15459179cfce3360466e68c8ac81152d9254fd30c9750f`  
+		Last Modified: Thu, 01 Oct 2020 20:49:53 GMT  
 		Size: 494.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9ccaffb112fd2d7c0bb51ef6777e6ad7c75b7785396a0cd499fd3b2a77cb63c3`  
-		Last Modified: Tue, 15 Sep 2020 15:57:59 GMT  
-		Size: 27.9 MB (27917921 bytes)  
+	-	`sha256:ae8cf0d26fa65e28d16b8fa293a1375b9245efe9b3d2bbd64efe03a357477c02`  
+		Last Modified: Thu, 01 Oct 2020 20:50:14 GMT  
+		Size: 27.9 MB (27911895 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:289dd7424a6fd1b34a35996a5b0328c2e098287360a9ad6481e0b50310f2d8a4`  
-		Last Modified: Tue, 15 Sep 2020 15:57:39 GMT  
-		Size: 2.3 KB (2281 bytes)  
+	-	`sha256:99ba8df1b7e676524465395d806330ada9fad621dd38d16a332e94633d8717cd`  
+		Last Modified: Thu, 01 Oct 2020 20:49:53 GMT  
+		Size: 2.3 KB (2280 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f47357b19dc501b05b94e610f39ad626828ef05aaee557d8d56e915c9e78995a`  
-		Last Modified: Tue, 15 Sep 2020 15:57:39 GMT  
-		Size: 249.0 B  
+	-	`sha256:0152e25f03fb1ae8cbfb22ff6c459e282b0e6ee59f67c9bc67d683767d22bef3`  
+		Last Modified: Thu, 01 Oct 2020 20:49:54 GMT  
+		Size: 250.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:22fd54ee8b0695bb0a49d6a080bedcce20b60eff2db809a98348aa64147bc54c`  
-		Last Modified: Tue, 15 Sep 2020 15:57:40 GMT  
-		Size: 8.5 KB (8452 bytes)  
+	-	`sha256:ddc3de7851c539bfeb6a33d074cc6874874c2f1e0685cdd93e5eec184e5bef61`  
+		Last Modified: Thu, 01 Oct 2020 20:49:54 GMT  
+		Size: 8.4 KB (8449 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4ff491b333d4400e80951e7879d5c9ae397bad38d61b79ad5ec168667c5681ac`  
-		Last Modified: Thu, 17 Sep 2020 23:18:08 GMT  
-		Size: 3.4 MB (3446424 bytes)  
+	-	`sha256:0a2f22fc5351fe027bbeaf118a9c31047d7d745db95c7adcde0b59a4ba8fa54d`  
+		Last Modified: Thu, 01 Oct 2020 22:52:04 GMT  
+		Size: 3.4 MB (3446093 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b91b5931b0615efbcd092d9a0f871ed51a48cb6987dd8d693954ab8fe4c7715a`  
-		Last Modified: Thu, 17 Sep 2020 23:18:05 GMT  
-		Size: 331.0 B  
+	-	`sha256:58a7a9eaea4ad911be66a3d998141e058de693f71122b8fdffacef363ef53459`  
+		Last Modified: Thu, 01 Oct 2020 22:52:01 GMT  
+		Size: 328.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c78b1bc99f3e4bc3483a3556d53051c90f9603b089c843e10a97eaef346e2bbf`  
-		Last Modified: Thu, 17 Sep 2020 23:18:20 GMT  
-		Size: 16.3 MB (16302443 bytes)  
+	-	`sha256:1d0b246d68633da7bd4f8d6d347b7b312a4623115d6590a204e2fcadaa0777d1`  
+		Last Modified: Thu, 01 Oct 2020 22:52:15 GMT  
+		Size: 16.3 MB (16302474 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f54f1c8d24c1cfa282d12100d328a88935434916007baf5ac9a26cb10ae82aae`  
-		Last Modified: Thu, 17 Sep 2020 23:18:05 GMT  
-		Size: 308.0 B  
+	-	`sha256:fe17f71c6617f8deea90cc1cf39fb9e22a2b4c4ee57976aae0ccfeb7a6bee429`  
+		Last Modified: Thu, 01 Oct 2020 22:52:01 GMT  
+		Size: 307.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0cb467bb6d8b87b3ff27dcb8104dc5236e9bfbb4e5fd767f0567d2355d8d6134`  
-		Last Modified: Thu, 17 Sep 2020 23:18:05 GMT  
+	-	`sha256:4a45e08797abb8e44cbb2a18f3753a70f0de7be1e976c86b8711cfc9b8bb1e33`  
+		Last Modified: Thu, 01 Oct 2020 22:52:01 GMT  
 		Size: 227.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
