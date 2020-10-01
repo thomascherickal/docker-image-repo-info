@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:7207266adc80c7cb153dc9e69bea5fa44dc0b09c7ac48bd589aa300469ce2b7d`
-- Created: `2020-09-24T21:35:14.258464431Z`
-- Virtual Size: ~ 36.67 Mb  
+- Image ID: `sha256:4bb112d232349cdc8c877d05e128ef0ed3015a61547144526245935e78b413b9`
+- Created: `2020-09-29T01:52:05.722364737Z`
+- Virtual Size: ~ 37.56 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -260,16 +260,16 @@ GPL-2.0 GPL-2.0-or-later LGPL-2.0-or-later BSD Public-Domain
 ### `apk` package: `libxml2`
 
 ```console
-libxml2-2.9.10-r4 description:
+libxml2-2.9.10-r5 description:
 XML parsing library, version 2
 
-libxml2-2.9.10-r4 webpage:
+libxml2-2.9.10-r5 webpage:
 http://www.xmlsoft.org/
 
-libxml2-2.9.10-r4 installed size:
+libxml2-2.9.10-r5 installed size:
 1220608
 
-libxml2-2.9.10-r4 license:
+libxml2-2.9.10-r5 license:
 MIT
 
 ```
