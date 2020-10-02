@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:6153b8c7536cada7480ca0f51a0d95a5d0b57e81f3d07482d4afff4c04c3ad54`
-- Created: `2020-09-02T18:22:37.562334203Z`
-- Virtual Size: ~ 232.34 Mb  
+- Image ID: `sha256:794717fcc6d9d4da37cabff016abe751e62e66df9ecf889d2f852bd5330c5f97`
+- Created: `2020-10-02T04:42:53.341730896Z`
+- Virtual Size: ~ 232.79 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -18,10 +18,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 B1B44D8F021E4E2D6021E995DC9FF8D3EE5AF27F`
-  - `PHP_VERSION=7.2.33`
-  - `PHP_URL=https://www.php.net/distributions/php-7.2.33.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.2.33.tar.xz.asc`
-  - `PHP_SHA256=0f160a3483ffce36be5962fab7bcf09d605ee66c5707df83e4195cb796bbb03a`
+  - `PHP_VERSION=7.2.34`
+  - `PHP_URL=https://www.php.net/distributions/php-7.2.34.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.2.34.tar.xz.asc`
+  - `PHP_SHA256=409e11bc6a2c18707dfc44bc61c820ddfd81e17481470f3405ee7822d8379903`
   - `PHP_MD5=`
   - `WORDPRESS_VERSION=5.5.1`
   - `WORDPRESS_SHA1=d3316a4ffff2a12cf92fde8bfdd1ff8691e41931`
@@ -422,16 +422,16 @@ LGPL-3.0-or-later
 ### `apk` package: `gnutls`
 
 ```console
-gnutls-3.6.14-r0 description:
+gnutls-3.6.15-r0 description:
 A TLS protocol implementation
 
-gnutls-3.6.14-r0 webpage:
+gnutls-3.6.15-r0 webpage:
 https://www.gnutls.org/
 
-gnutls-3.6.14-r0 installed size:
-1757184
+gnutls-3.6.15-r0 installed size:
+1769472
 
-gnutls-3.6.14-r0 license:
+gnutls-3.6.15-r0 license:
 GPL-3.0-or-later
 
 ```
@@ -643,16 +643,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.69.1-r0 description:
+libcurl-7.69.1-r1 description:
 The multiprotocol file transfer library
 
-libcurl-7.69.1-r0 webpage:
+libcurl-7.69.1-r1 webpage:
 https://curl.haxx.se/
 
-libcurl-7.69.1-r0 installed size:
+libcurl-7.69.1-r1 installed size:
 458752
 
-libcurl-7.69.1-r0 license:
+libcurl-7.69.1-r1 license:
 MIT
 
 ```
@@ -1085,16 +1085,16 @@ MIT
 ### `apk` package: `libxml2`
 
 ```console
-libxml2-2.9.10-r4 description:
+libxml2-2.9.10-r5 description:
 XML parsing library, version 2
 
-libxml2-2.9.10-r4 webpage:
+libxml2-2.9.10-r5 webpage:
 http://www.xmlsoft.org/
 
-libxml2-2.9.10-r4 installed size:
+libxml2-2.9.10-r5 installed size:
 1220608
 
-libxml2-2.9.10-r4 license:
+libxml2-2.9.10-r5 license:
 MIT
 
 ```
