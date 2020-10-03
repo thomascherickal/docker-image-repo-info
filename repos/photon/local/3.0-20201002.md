@@ -2,16 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:d92a3b2018c8077fadd07ed0c7ae2607f3f61a8ab54b25e5e9531cc115fa3ceb`
-- Created: `2020-09-19T00:26:45.990132383Z`
-- Virtual Size: ~ 35.34 Mb  
+- Image ID: `sha256:07bc5e332532d8ae5cfd75166f66f3b1c9a1e2e0ec631d9df80982f6a7540c37`
+- Created: `2020-10-02T23:33:01.371517756Z`
+- Virtual Size: ~ 36.30 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
 - Labels:
-  - `build-date=20200918`
+  - `build-date=20201002`
   - `name=Photon OS x86_64/3.0 Base Image`
   - `vendor=VMware`
 
@@ -191,7 +191,7 @@ Licenses (from `rpm --query`): GPLv3+
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `rpm-libs-4.14.2-8.ph3.x86_64`
+### `rpm` package: `rpm-libs-4.14.2-9.ph3.x86_64`
 
 Licenses (from `rpm --query`): GPLv2+
 
@@ -230,5 +230,11 @@ Licenses (from `rpm --query`): GPLv2+ and GPLv3+ and LGPLv2+
 ### `rpm` package: `zlib-1.2.11-1.ph3.x86_64`
 
 Licenses (from `rpm --query`): zlib
+
+**WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
+
+### `rpm` package: `zstd-libs-1.4.5-1.ph3.x86_64`
+
+Licenses (from `rpm --query`): BSD and GPLv2
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
