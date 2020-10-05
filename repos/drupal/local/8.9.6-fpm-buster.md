@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:b5d2a92f185ed89b13fdc5478549f3330e822c1c47ccae718ae4d4b165d00e8c`
-- Created: `2020-09-17T04:25:29.656908413Z`
+- Image ID: `sha256:0d04dc6e39f084db3cd17ef922a5e27915dda9d2cfbd0ebd70e2d5836257dc26`
+- Created: `2020-10-02T03:34:26.993970155Z`
 - Virtual Size: ~ 494.12 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -18,10 +18,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
-  - `PHP_VERSION=7.4.10`
-  - `PHP_URL=https://www.php.net/distributions/php-7.4.10.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.10.tar.xz.asc`
-  - `PHP_SHA256=c2d90b00b14284588a787b100dee54c2400e7db995b457864d66f00ad64fb010`
+  - `PHP_VERSION=7.4.11`
+  - `PHP_URL=https://www.php.net/distributions/php-7.4.11.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.11.tar.xz.asc`
+  - `PHP_SHA256=5d31675a9b9c21b5bd03389418218c30b26558246870caba8eb54f5856e2d6ce`
   - `PHP_MD5=`
   - `DRUPAL_VERSION=8.9.6`
 
@@ -2450,11 +2450,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/pkg-config/0.29-6/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/pkg-config/0.29-6/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `postgresql-11=11.7-0+deb10u1`
+### `dpkg` source package: `postgresql-11=11.9-0+deb10u1`
 
 Binary Packages:
 
-- `libpq5:amd64=11.7-0+deb10u1`
+- `libpq5:amd64=11.9-0+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`)
 
@@ -2477,17 +2477,17 @@ Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris postgresql-11=11.7-0+deb10u1
-'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-11/postgresql-11_11.7-0+deb10u1.dsc' postgresql-11_11.7-0+deb10u1.dsc 3738 SHA256:5729f856ae9818e5c1c1f9be61aab55a8a7dea81b30749670ae531c2c145e564
-'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-11/postgresql-11_11.7.orig.tar.bz2' postgresql-11_11.7.orig.tar.bz2 19890063 SHA256:324ae93a8846fbb6a25d562d271bc441ffa8794654c5b2839384834de220a313
-'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-11/postgresql-11_11.7-0+deb10u1.debian.tar.xz' postgresql-11_11.7-0+deb10u1.debian.tar.xz 24952 SHA256:dc9097b4d54d393f3e01d90485ea047a401fa12cba814395937047da89616fe3
+$ apt-get source -qq --print-uris postgresql-11=11.9-0+deb10u1
+'http://deb.debian.org/debian/pool/main/p/postgresql-11/postgresql-11_11.9-0+deb10u1.dsc' postgresql-11_11.9-0+deb10u1.dsc 3738 SHA256:d4538af8c4f86e48ada0a32c113b0d10df21c640d190e2eac8bfee63a11ec3ed
+'http://deb.debian.org/debian/pool/main/p/postgresql-11/postgresql-11_11.9.orig.tar.bz2' postgresql-11_11.9.orig.tar.bz2 19959019 SHA256:35618aa72e0372091f923c42389c6febd07513157b4fbb9408371706afbb6635
+'http://deb.debian.org/debian/pool/main/p/postgresql-11/postgresql-11_11.9-0+deb10u1.debian.tar.xz' postgresql-11_11.9-0+deb10u1.debian.tar.xz 25536 SHA256:7044369b5353aa91e672fae6122812682b863468db4fa631d952d34daf8baf36
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/postgresql-11/11.7-0+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/postgresql-11/11.7-0+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/postgresql-11/11.7-0+deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/postgresql-11/11.9-0+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/postgresql-11/11.9-0+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/postgresql-11/11.9-0+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `re2c=1.1.1-1`
 

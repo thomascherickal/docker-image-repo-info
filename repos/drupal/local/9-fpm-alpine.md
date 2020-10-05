@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:e7d76783668ae929e42046aa53cbc944901acffe45ee332c4477fb70423ed541`
-- Created: `2020-09-17T04:24:48.207415581Z`
-- Virtual Size: ~ 165.45 Mb  
+- Image ID: `sha256:12bc9887b97557afc839a60132e9e0ec9714a53c0d3fd394e396f27798c60d22`
+- Created: `2020-10-02T03:33:38.01473616Z`
+- Virtual Size: ~ 165.90 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -18,10 +18,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
-  - `PHP_VERSION=7.4.10`
-  - `PHP_URL=https://www.php.net/distributions/php-7.4.10.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.10.tar.xz.asc`
-  - `PHP_SHA256=c2d90b00b14284588a787b100dee54c2400e7db995b457864d66f00ad64fb010`
+  - `PHP_VERSION=7.4.11`
+  - `PHP_URL=https://www.php.net/distributions/php-7.4.11.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.11.tar.xz.asc`
+  - `PHP_SHA256=5d31675a9b9c21b5bd03389418218c30b26558246870caba8eb54f5856e2d6ce`
   - `PHP_MD5=`
   - `DRUPAL_VERSION=9.0.6`
 
@@ -285,16 +285,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.69.1-r0 description:
+libcurl-7.69.1-r1 description:
 The multiprotocol file transfer library
 
-libcurl-7.69.1-r0 webpage:
+libcurl-7.69.1-r1 webpage:
 https://curl.haxx.se/
 
-libcurl-7.69.1-r0 installed size:
+libcurl-7.69.1-r1 installed size:
 458752
 
-libcurl-7.69.1-r0 license:
+libcurl-7.69.1-r1 license:
 MIT
 
 ```
@@ -370,16 +370,16 @@ Libpng
 ### `apk` package: `libpq`
 
 ```console
-libpq-12.3-r2 description:
+libpq-12.4-r0 description:
 PostgreSQL libraries
 
-libpq-12.3-r2 webpage:
+libpq-12.4-r0 webpage:
 https://www.postgresql.org/
 
-libpq-12.3-r2 installed size:
+libpq-12.4-r0 installed size:
 327680
 
-libpq-12.3-r2 license:
+libpq-12.4-r0 license:
 PostgreSQL
 
 ```
@@ -455,16 +455,16 @@ ISC
 ### `apk` package: `libxml2`
 
 ```console
-libxml2-2.9.10-r4 description:
+libxml2-2.9.10-r5 description:
 XML parsing library, version 2
 
-libxml2-2.9.10-r4 webpage:
+libxml2-2.9.10-r5 webpage:
 http://www.xmlsoft.org/
 
-libxml2-2.9.10-r4 installed size:
+libxml2-2.9.10-r5 installed size:
 1220608
 
-libxml2-2.9.10-r4 license:
+libxml2-2.9.10-r5 license:
 MIT
 
 ```
