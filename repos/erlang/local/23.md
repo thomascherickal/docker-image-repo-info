@@ -1,20 +1,20 @@
-# `erlang:23.1.0.0`
+# `erlang:23.1.1.0`
 
 ## Docker Metadata
 
-- Image ID: `sha256:a49f18db37c2ca218b8860a80f2861dfe81186e7c9345ab8d9a6a82ac5f8c8e1`
-- Created: `2020-09-25T21:33:16.015138901Z`
+- Image ID: `sha256:d4a6916fae16ebe5adb46a6bc5a8cf33fe52e12426be787b535ae649eca51279`
+- Created: `2020-10-05T19:44:43.331370014Z`
 - Virtual Size: ~ 1.22 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["erl"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `OTP_VERSION=23.1`
+  - `OTP_VERSION=23.1.1`
   - `REBAR3_VERSION=3.14.1`
   - `REBAR_VERSION=2.6.4`
 - Labels:
-  - `org.opencontainers.image.version=23.1`
+  - `org.opencontainers.image.version=23.1.1`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -4017,8 +4017,6 @@ Binary Packages:
 - `libx11-6:amd64=2:1.6.7-1`
 - `libx11-data=2:1.6.7-1`
 - `libx11-dev:amd64=2:1.6.7-1`
-- `libx11-xcb-dev:amd64=2:1.6.7-1`
-- `libx11-xcb1:amd64=2:1.6.7-1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -4031,6 +4029,33 @@ The source package *may* still be available for download from:
 
 - http://snapshot.debian.org/package/libx11/2:1.6.7-1/
 
+
+### `dpkg` source package: `libx11=2:1.6.7-1+deb10u1`
+
+Binary Packages:
+
+- `libx11-xcb-dev:amd64=2:1.6.7-1+deb10u1`
+- `libx11-xcb1:amd64=2:1.6.7-1+deb10u1`
+
+**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
+If source is available (seen below), check the contents of `debian/copyright` within it.
+
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris libx11=2:1.6.7-1+deb10u1
+'http://deb.debian.org/debian/pool/main/libx/libx11/libx11_1.6.7-1+deb10u1.dsc' libx11_1.6.7-1+deb10u1.dsc 2651 SHA256:32165ead57fed813168f87bd43d5dd387c2a27bba4c77bd8e8075cee90f90fce
+'http://deb.debian.org/debian/pool/main/libx/libx11/libx11_1.6.7.orig.tar.gz' libx11_1.6.7.orig.tar.gz 2972354 SHA256:f62ab88c2a87b55e1dc338726a55bb6ed8048084fe6a3294a7ae324ca45159d1
+'http://deb.debian.org/debian/pool/main/libx/libx11/libx11_1.6.7.orig.tar.gz.asc' libx11_1.6.7.orig.tar.gz.asc 404 SHA256:01a06afbe0574a30721d98f1c80b668ebc46410a9e8b2eb81e69b4bd8667c386
+'http://deb.debian.org/debian/pool/main/libx/libx11/libx11_1.6.7-1+deb10u1.diff.gz' libx11_1.6.7-1+deb10u1.diff.gz 52461 SHA256:ea3a943ea781136b3d5320010039e42039b0e58d5aeeca2d2b7a0593f9ce04ef
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/libx11/2:1.6.7-1+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/libx11/2:1.6.7-1+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libx11/2:1.6.7-1+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libxau=1:1.0.8-1`
 
@@ -4631,11 +4656,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/lksctp-tools/1.0.18+dfsg-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/lksctp-tools/1.0.18+dfsg-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `llvm-toolchain-7=1:7.0.1-8`
+### `dpkg` source package: `llvm-toolchain-7=1:7.0.1-8+deb10u2`
 
 Binary Packages:
 
-- `libllvm7:amd64=1:7.0.1-8`
+- `libllvm7:amd64=1:7.0.1-8+deb10u2`
 
 Licenses: (parsed from: `/usr/share/doc/libllvm7/copyright`)
 
@@ -4656,8 +4681,8 @@ Licenses: (parsed from: `/usr/share/doc/libllvm7/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris llvm-toolchain-7=1:7.0.1-8
-'http://deb.debian.org/debian/pool/main/l/llvm-toolchain-7/llvm-toolchain-7_7.0.1-8.dsc' llvm-toolchain-7_7.0.1-8.dsc 8253 SHA256:315347f31a2bc02c82185062bde8ad702fc6298d6eaa4bf121db3a984d9c90c4
+$ apt-get source -qq --print-uris llvm-toolchain-7=1:7.0.1-8+deb10u2
+'http://deb.debian.org/debian/pool/main/l/llvm-toolchain-7/llvm-toolchain-7_7.0.1-8+deb10u2.dsc' llvm-toolchain-7_7.0.1-8+deb10u2.dsc 8285 SHA256:cfaebe2dd6eb4546967ed4cb40c2ab029dad4fdf547c921e749c510726d68349
 'http://deb.debian.org/debian/pool/main/l/llvm-toolchain-7/llvm-toolchain-7_7.0.1.orig-clang-tools-extra.tar.bz2' llvm-toolchain-7_7.0.1.orig-clang-tools-extra.tar.bz2 954392 SHA256:5bd9a587e321536bfe93619d4260f2c6d85973c7d2212b5a29f4e6d0b081b67a
 'http://deb.debian.org/debian/pool/main/l/llvm-toolchain-7/llvm-toolchain-7_7.0.1.orig-clang.tar.bz2' llvm-toolchain-7_7.0.1.orig-clang.tar.bz2 13927137 SHA256:78d974b2200cf18e4d711492b601ffbe104fe43682f2626b931eeb89ad4524b1
 'http://deb.debian.org/debian/pool/main/l/llvm-toolchain-7/llvm-toolchain-7_7.0.1.orig-compiler-rt.tar.bz2' llvm-toolchain-7_7.0.1.orig-compiler-rt.tar.bz2 2364285 SHA256:58c730ee430ebf274946402098c4798e0b8b45ff0d1fa05741236e10b713c06b
@@ -4668,14 +4693,14 @@ $ apt-get source -qq --print-uris llvm-toolchain-7=1:7.0.1-8
 'http://deb.debian.org/debian/pool/main/l/llvm-toolchain-7/llvm-toolchain-7_7.0.1.orig-openmp.tar.bz2' llvm-toolchain-7_7.0.1.orig-openmp.tar.bz2 998026 SHA256:99cf464fcbcbfb8bbc80bde455f7a0171cb945970a4d8028ec055ffdfedb5e10
 'http://deb.debian.org/debian/pool/main/l/llvm-toolchain-7/llvm-toolchain-7_7.0.1.orig-polly.tar.bz2' llvm-toolchain-7_7.0.1.orig-polly.tar.bz2 3319947 SHA256:3a5f5af8efed79763d2e052e75c11e6e987377201fde54fe6f664c8c9faa6b44
 'http://deb.debian.org/debian/pool/main/l/llvm-toolchain-7/llvm-toolchain-7_7.0.1.orig.tar.bz2' llvm-toolchain-7_7.0.1.orig.tar.bz2 33380406 SHA256:4a45763b46c2d48ab6db5347afdbba520407e9b16134e71163163a4d2a5e0980
-'http://deb.debian.org/debian/pool/main/l/llvm-toolchain-7/llvm-toolchain-7_7.0.1-8.debian.tar.xz' llvm-toolchain-7_7.0.1-8.debian.tar.xz 112440 SHA256:2b728675b1d2f119433fce1d9507efc4f11b6673d38911ae0f4ec7dbd957bb62
+'http://deb.debian.org/debian/pool/main/l/llvm-toolchain-7/llvm-toolchain-7_7.0.1-8+deb10u2.debian.tar.xz' llvm-toolchain-7_7.0.1-8+deb10u2.debian.tar.xz 121352 SHA256:0b9c91c5fb262d8c677ade8a5706ff7f585552f49a7908815fe627c650fbf40f
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/llvm-toolchain-7/1:7.0.1-8/ (for browsing the source)
-- https://sources.debian.net/src/llvm-toolchain-7/1:7.0.1-8/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/llvm-toolchain-7/1:7.0.1-8/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/llvm-toolchain-7/1:7.0.1-8+deb10u2/ (for browsing the source)
+- https://sources.debian.net/src/llvm-toolchain-7/1:7.0.1-8+deb10u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/llvm-toolchain-7/1:7.0.1-8+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lm-sensors=1:3.5.0-3`
 
