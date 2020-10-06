@@ -1,10 +1,10 @@
-# `geonetwork:3.10.3-postgres`
+# `geonetwork:3.10.4-postgres`
 
 ## Docker Metadata
 
-- Image ID: `sha256:a90ac0cfcc8f609a0d29e3eba50a29e4f51666e0dbb876c7a0ce8459d4c26eab`
-- Created: `2020-09-15T23:28:59.079094797Z`
-- Virtual Size: ~ 868.39 Mb  
+- Image ID: `sha256:b164cd53ca35a5a55ae9dd4492afb666570ae2666a46637625a5284f661e4fde`
+- Created: `2020-10-02T21:22:02.143964206Z`
+- Virtual Size: ~ 952.44 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -24,8 +24,8 @@
   - `GN_FILE=geonetwork.war`
   - `DATA_DIR=/usr/local/tomcat/webapps/geonetwork/WEB-INF/data`
   - `JAVA_OPTS=-Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true -server -Xms512m -Xmx2024m -XX:NewSize=512m -XX:MaxNewSize=1024m -XX:+UseConcMarkSweepGC`
-  - `GN_VERSION=3.10.3`
-  - `GN_DOWNLOAD_MD5=f6d62ef8856d697e62c7cbde65e66ad7`
+  - `GN_VERSION=3.10.4`
+  - `GN_DOWNLOAD_MD5=a7ba7e05da47db26476e7600f63e5da3`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -2555,12 +2555,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/pinentry/1.1.0-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/pinentry/1.1.0-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `postgresql-11=11.7-0+deb10u1`
+### `dpkg` source package: `postgresql-11=11.9-0+deb10u1`
 
 Binary Packages:
 
-- `libpq5:amd64=11.7-0+deb10u1`
-- `postgresql-client-11=11.7-0+deb10u1`
+- `libpq5:amd64=11.9-0+deb10u1`
+- `postgresql-client-11=11.9-0+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`, `/usr/share/doc/postgresql-client-11/copyright`)
 
@@ -2583,24 +2583,24 @@ Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`, `/usr/share/doc/postg
 Source:
 
 ```console
-$ apt-get source -qq --print-uris postgresql-11=11.7-0+deb10u1
-'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-11/postgresql-11_11.7-0+deb10u1.dsc' postgresql-11_11.7-0+deb10u1.dsc 3738 SHA256:5729f856ae9818e5c1c1f9be61aab55a8a7dea81b30749670ae531c2c145e564
-'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-11/postgresql-11_11.7.orig.tar.bz2' postgresql-11_11.7.orig.tar.bz2 19890063 SHA256:324ae93a8846fbb6a25d562d271bc441ffa8794654c5b2839384834de220a313
-'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-11/postgresql-11_11.7-0+deb10u1.debian.tar.xz' postgresql-11_11.7-0+deb10u1.debian.tar.xz 24952 SHA256:dc9097b4d54d393f3e01d90485ea047a401fa12cba814395937047da89616fe3
+$ apt-get source -qq --print-uris postgresql-11=11.9-0+deb10u1
+'http://deb.debian.org/debian/pool/main/p/postgresql-11/postgresql-11_11.9-0+deb10u1.dsc' postgresql-11_11.9-0+deb10u1.dsc 3738 SHA256:d4538af8c4f86e48ada0a32c113b0d10df21c640d190e2eac8bfee63a11ec3ed
+'http://deb.debian.org/debian/pool/main/p/postgresql-11/postgresql-11_11.9.orig.tar.bz2' postgresql-11_11.9.orig.tar.bz2 19959019 SHA256:35618aa72e0372091f923c42389c6febd07513157b4fbb9408371706afbb6635
+'http://deb.debian.org/debian/pool/main/p/postgresql-11/postgresql-11_11.9-0+deb10u1.debian.tar.xz' postgresql-11_11.9-0+deb10u1.debian.tar.xz 25536 SHA256:7044369b5353aa91e672fae6122812682b863468db4fa631d952d34daf8baf36
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/postgresql-11/11.7-0+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/postgresql-11/11.7-0+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/postgresql-11/11.7-0+deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/postgresql-11/11.9-0+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/postgresql-11/11.9-0+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/postgresql-11/11.9-0+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `postgresql-common=200+deb10u3`
+### `dpkg` source package: `postgresql-common=200+deb10u4`
 
 Binary Packages:
 
-- `postgresql-client=11+200+deb10u3`
-- `postgresql-client-common=200+deb10u3`
+- `postgresql-client=11+200+deb10u4`
+- `postgresql-client-common=200+deb10u4`
 
 Licenses: (parsed from: `/usr/share/doc/postgresql-client/copyright`, `/usr/share/doc/postgresql-client-common/copyright`)
 
@@ -2610,16 +2610,16 @@ Licenses: (parsed from: `/usr/share/doc/postgresql-client/copyright`, `/usr/shar
 Source:
 
 ```console
-$ apt-get source -qq --print-uris postgresql-common=200+deb10u3
-'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-common/postgresql-common_200+deb10u3.dsc' postgresql-common_200+deb10u3.dsc 2341 SHA256:14a3734d2e62c89f7aa689d3014e243fb9bdb0030940b1ed0cb721a651e7f947
-'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-common/postgresql-common_200+deb10u3.tar.xz' postgresql-common_200+deb10u3.tar.xz 213376 SHA256:394e775ac9227d79f5c258bf1a6b0b446f6b8abf08ad1e75d07f9935353014e6
+$ apt-get source -qq --print-uris postgresql-common=200+deb10u4
+'http://deb.debian.org/debian/pool/main/p/postgresql-common/postgresql-common_200+deb10u4.dsc' postgresql-common_200+deb10u4.dsc 2341 SHA256:03162fac6241736b39714a225e75976fd19447988e03a99ccd0456d75e933a2e
+'http://deb.debian.org/debian/pool/main/p/postgresql-common/postgresql-common_200+deb10u4.tar.xz' postgresql-common_200+deb10u4.tar.xz 213176 SHA256:18927200b7e239af9f54b605848051638425b0e63a25e924929841ef0471f0c2
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/postgresql-common/200+deb10u3/ (for browsing the source)
-- https://sources.debian.net/src/postgresql-common/200+deb10u3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/postgresql-common/200+deb10u3/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/postgresql-common/200+deb10u4/ (for browsing the source)
+- https://sources.debian.net/src/postgresql-common/200+deb10u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/postgresql-common/200+deb10u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `procps=2:3.3.15-2`
 

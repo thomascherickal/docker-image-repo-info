@@ -1,10 +1,10 @@
-# `geonetwork:3.10.3`
+# `geonetwork:3.10.4`
 
 ## Docker Metadata
 
-- Image ID: `sha256:2a14dad05c79ff754e27345c39e71f8ea2ced097274e6716e47bddb21b2dd078`
-- Created: `2020-09-15T23:28:45.043186882Z`
-- Virtual Size: ~ 835.42 Mb  
+- Image ID: `sha256:fe9beee83f25c0f44c11dd0f5fb17cc2aaba1cd1d7d61520d2d3918bf079517b`
+- Created: `2020-10-02T21:21:46.582109995Z`
+- Virtual Size: ~ 919.47 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -24,8 +24,8 @@
   - `GN_FILE=geonetwork.war`
   - `DATA_DIR=/usr/local/tomcat/webapps/geonetwork/WEB-INF/data`
   - `JAVA_OPTS=-Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true -server -Xms512m -Xmx2024m -XX:NewSize=512m -XX:MaxNewSize=1024m -XX:+UseConcMarkSweepGC`
-  - `GN_VERSION=3.10.3`
-  - `GN_DOWNLOAD_MD5=f6d62ef8856d697e62c7cbde65e66ad7`
+  - `GN_VERSION=3.10.4`
+  - `GN_DOWNLOAD_MD5=a7ba7e05da47db26476e7600f63e5da3`
 
 ## `dpkg` (`.deb`-based packages)
 
