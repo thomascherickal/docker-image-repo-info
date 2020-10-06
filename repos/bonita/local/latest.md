@@ -1,19 +1,19 @@
-# `bonita:7.11.1`
+# `bonita:7.11.2`
 
 ## Docker Metadata
 
-- Image ID: `sha256:ce4b71d10d9830f1ba285af9668f58b515be3b6dbdb276b7bd21ed5c1186298c`
-- Created: `2020-09-25T23:42:40.770497324Z`
-- Virtual Size: ~ 466.88 Mb  
+- Image ID: `sha256:2a1a40f20c0a015944dcc4ba5a2adcbff93889901cc10d18f775735d1ae13817`
+- Created: `2020-10-02T21:19:59.558879906Z`
+- Virtual Size: ~ 466.89 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/opt/files/startup.sh"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `BONITA_VERSION=7.11.1`
-  - `BONITA_SHA256=d2874ada41c0549a6620ef8095c6eb7480e45d8b8143af5f983a06df62a7243d`
+  - `BONITA_VERSION=7.11.2`
+  - `BONITA_SHA256=36dca45fed326d700fddc52edc4efe2a14bc1111b2952fc0001047df9cf7a67a`
   - `BASE_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download`
-  - `BONITA_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download/7.11.1/BonitaCommunity-7.11.1.zip`
+  - `BONITA_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download/7.11.2/BonitaCommunity-7.11.2.zip`
 
 ## `dpkg` (`.deb`-based packages)
 
