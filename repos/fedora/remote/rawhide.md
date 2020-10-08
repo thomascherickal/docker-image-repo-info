@@ -1,7 +1,7 @@
 ## `fedora:rawhide`
 
 ```console
-$ docker pull fedora@sha256:62c5a73a6743ed7f085f12f089858ab6ec2281f90fa29005696f68bc68d93bb0
+$ docker pull fedora@sha256:68f10744bc612e47d5e52851cdd94e33c45240cc830d238e4af7b231fa51cf39
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -105,14 +105,14 @@ CMD ["/bin/bash"]
 ### `fedora:rawhide` - linux; ppc64le
 
 ```console
-$ docker pull fedora@sha256:7ab41d92990824647acc87b9b2b3aee8a9b66caec285f1b7d0e16e0679bcfc05
+$ docker pull fedora@sha256:0d8bee73e3df2828dc273b1d90c7c5b3fb246614ec44cb72e7486c46ded09ec1
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **67.1 MB (67135980 bytes)**  
+-	Total Size: **67.3 MB (67269871 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:8da070a0d9ed5ac39f87ea5b6b777aac24f401a5e96a4270782e1044d9477c5a`
+-	Image ID: `sha256:2904e195e74f018a5af6757c4102c7b6a429ce8af4cc842eda6a1db7564a6b6e`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
@@ -120,16 +120,16 @@ $ docker pull fedora@sha256:7ab41d92990824647acc87b9b2b3aee8a9b66caec285f1b7d0e1
 LABEL maintainer=Clement Verna <cverna@fedoraproject.org>
 # Fri, 02 Oct 2020 22:52:10 GMT
 ENV DISTTAG=f34container FGC=f34 FBR=f34
-# Fri, 02 Oct 2020 22:52:21 GMT
-ADD file:bf801fda8043daa26becf13559ff1ee876cb274901ed0480b894d106cce2881c in / 
-# Fri, 02 Oct 2020 22:52:34 GMT
+# Thu, 08 Oct 2020 20:50:04 GMT
+ADD file:9591268aba1fd82e46628f5a37a50237be336006cd64a2b8e24b5ae5f91be7be in / 
+# Thu, 08 Oct 2020 20:50:14 GMT
 CMD ["/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:4413bf441c66821b68a5a9975df9eb731a3a5df283cc8512dc26f060b6e71d29`  
-		Last Modified: Fri, 02 Oct 2020 22:57:46 GMT  
-		Size: 67.1 MB (67135980 bytes)  
+	-	`sha256:a81bfad82d86797d008241f197dad7570b2967121c7c286b1e6206af71f64d35`  
+		Last Modified: Thu, 08 Oct 2020 20:53:20 GMT  
+		Size: 67.3 MB (67269871 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `fedora:rawhide` - linux; s390x
