@@ -306,13 +306,13 @@ Licenses: (parsed from: `/usr/share/doc/debianutils/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris debianutils=4.11.1
-'http://archive.ubuntu.com/ubuntu/pool/main/d/debianutils/debianutils_4.11.1.dsc' debianutils_4.11.1.dsc 1619 SHA512:c4eb2433f4938a337042fcbf0ebf3f7fab729bd6c7dee3a9320afcd77b0b3e33b7946172e45a148d88a57a73b871d312ab8e6c8b3ab2f55b445d917025e0e9f2
-'http://archive.ubuntu.com/ubuntu/pool/main/d/debianutils/debianutils_4.11.1.tar.xz' debianutils_4.11.1.tar.xz 157536 SHA512:8283e42f190a9c59c54817a745e219fcc9a1f8995204d62aff84f755ace041e433fe707d3b4373060207a70c9c01d958234281061f77e6e6fb6c560c79711772
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/debianutils/4.11.1/
+
 
 ### `dpkg` source package: `diffutils=1:3.7-3build1`
 
@@ -325,14 +325,9 @@ Licenses: (parsed from: `/usr/share/doc/diffutils/copyright`)
 - `GFDL`
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris diffutils=1:3.7-3build1
-'http://archive.ubuntu.com/ubuntu/pool/main/d/diffutils/diffutils_3.7-3build1.dsc' diffutils_3.7-3build1.dsc 1901 SHA512:bd0ac4014f8fd92e63fb8b72c7bba474f7fc6af139e4b6d3cfefba450f1d520723c9338c0aadcbbb7cfbd3eb0524fc7aaf6c9efddab97ca1bfad4c2e15cf8c70
-'http://archive.ubuntu.com/ubuntu/pool/main/d/diffutils/diffutils_3.7.orig.tar.xz' diffutils_3.7.orig.tar.xz 1448828 SHA512:7b12cf8aea1b9844773748f72272d9c6a38adae9c3c3a8c62048f91fb56c60b76035fa5f51665dceaf2cfbf1d1f4a3efdcc24bf47a5a16ff4350543314b12c9c
-'http://archive.ubuntu.com/ubuntu/pool/main/d/diffutils/diffutils_3.7-3build1.debian.tar.xz' diffutils_3.7-3build1.debian.tar.xz 11252 SHA512:0639acbaa296ca8526cc77e0bb821b011e2b8b8fb0e8ba5643037ebcc0ed7d72fa6e7e9d1b753b6f88864a5a6792cf537d5530d7eb894f76eb361bff190c5b80
-```
 
 ### `dpkg` source package: `dpkg=1.20.5ubuntu2`
 
@@ -392,15 +387,9 @@ Licenses: (parsed from: `/usr/share/doc/findutils/copyright`)
 - `GFDL-1.3`
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris findutils=4.7.0-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/f/findutils/findutils_4.7.0-1ubuntu1.dsc' findutils_4.7.0-1ubuntu1.dsc 2446 SHA512:18b4aa5a7442aa661da540faec9c0f2fa15d8ea2d33c836f80bbba0239d6d71d5b7180cca5d2f8390dad71d41ed64c61ded593624eaa6e720b81a25a916fb084
-'http://archive.ubuntu.com/ubuntu/pool/main/f/findutils/findutils_4.7.0.orig.tar.xz' findutils_4.7.0.orig.tar.xz 1895048 SHA512:650a24507f8f4ebff83ad28dd27daa4785b4038dcaadc4fe00823b976e848527074cce3f9ec34065b7f037436d2aa6e9ec099bc05d7472c29864ac2c69de7f2e
-'http://archive.ubuntu.com/ubuntu/pool/main/f/findutils/findutils_4.7.0.orig.tar.xz.asc' findutils_4.7.0.orig.tar.xz.asc 488 SHA512:a4868a6f36d7224f05a19096a9ef2e1eedfdc77beb5d4098b0c94634cf9a757d47e2ccdf3451f48c45667a1fa3f30e209a022bf287cad6b3109b37cccea0cb72
-'http://archive.ubuntu.com/ubuntu/pool/main/f/findutils/findutils_4.7.0-1ubuntu1.debian.tar.xz' findutils_4.7.0-1ubuntu1.debian.tar.xz 27700 SHA512:b2c85ad667b8bc2841e917df0ddd4867f109fd6282d889c165aaa47863586a0cd1ccf472b8d33ae498791a617d383704c12b12bcbc620699bbbce8263de4fa5e
-```
 
 ### `dpkg` source package: `gcc-10=10.2.0-9ubuntu2`
 
@@ -1343,14 +1332,9 @@ Licenses: (parsed from: `/usr/share/doc/sed/copyright`)
 
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sed=4.7-1build1
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sed/sed_4.7-1build1.dsc' sed_4.7-1build1.dsc 1958 SHA512:11d9784f99b4ff082bff9180a4e28896fe73f4880909129cbf585f8cec82f556044f5a333dbfc96961a78d14fb4bb84be7fc302e775595ebfdee130fda157f58
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sed/sed_4.7.orig.tar.xz' sed_4.7.orig.tar.xz 1298316 SHA512:e0be5db4cdf8226b34aaa9071bc5ae0eafde1c52227cee3512eea7fe2520d6c5cebf15266aa5c4adffbb51bf125c140a15644e28d57759893c12823ea9bbf4fb
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sed/sed_4.7-1build1.debian.tar.xz' sed_4.7-1build1.debian.tar.xz 59956 SHA512:943fdcb4a61666cf87630852320754bda73a78cf82155792f4ff4c8ee842463ea38aa276a2ff7a9d295786e91d330ca87746a02448d737f7093a0d56d1f105fe
-```
 
 ### `dpkg` source package: `sensible-utils=0.0.13`
 
