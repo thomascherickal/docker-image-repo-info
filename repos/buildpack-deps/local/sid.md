@@ -5301,19 +5301,13 @@ Licenses: (parsed from: `/usr/share/doc/x11-common/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris xorg=1:7.7+20
-'http://deb.debian.org/debian/pool/main/x/xorg/xorg_7.7+20.dsc' xorg_7.7+20.dsc 1969 SHA256:e24781dcf02522f070811acdeaba7113b560c61148a692c6b74719aacd85bd0b
-'http://deb.debian.org/debian/pool/main/x/xorg/xorg_7.7+20.tar.gz' xorg_7.7+20.tar.gz 286646 SHA256:2da7138a6f437ce7ccf63e36786b17053ffbdbcf177dab4874260bfa54595b5c
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/xorg/1:7.7+20/
 
-- https://sources.debian.net/src/xorg/1:7.7+20/ (for browsing the source)
-- https://sources.debian.net/src/xorg/1:7.7+20/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/xorg/1:7.7+20/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `xorgproto=2020.1-1`
 

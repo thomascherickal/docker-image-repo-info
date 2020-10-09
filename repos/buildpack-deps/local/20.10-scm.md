@@ -2156,13 +2156,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3-defaults=3.8.2-0ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-defaults/python3-defaults_3.8.2-0ubuntu2.dsc' python3-defaults_3.8.2-0ubuntu2.dsc 2879 SHA512:bf0229b84fbaa584c269a76969bd555d852337da6b5ef82475c5a82903e7823811ab639858a60c72b02673c8243aaf19de7e3dc7ab622f0bfe7380fc7251d0f3
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-defaults/python3-defaults_3.8.2-0ubuntu2.tar.gz' python3-defaults_3.8.2-0ubuntu2.tar.gz 138226 SHA512:744bf1420e268c8884e89da1bfc49e05ce6b593cebe179d550584e9d4bc298e2165b27a20d4c1bd627288e26560b2eba679d440723c25d2d922d3d6f99807a79
-```
 
 ### `dpkg` source package: `python3.8=3.8.6~rc1-2`
 

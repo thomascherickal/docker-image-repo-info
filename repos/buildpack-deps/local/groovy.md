@@ -1516,14 +1516,9 @@ Licenses: (parsed from: `/usr/share/doc/imagemagick/copyright`, `/usr/share/doc/
 - `TatcherUlrichPublicDomain`
 - `aclocal`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris imagemagick=8:6.9.10.23+dfsg-2.1ubuntu12
-'http://archive.ubuntu.com/ubuntu/pool/universe/i/imagemagick/imagemagick_6.9.10.23+dfsg-2.1ubuntu12.dsc' imagemagick_6.9.10.23+dfsg-2.1ubuntu12.dsc 5228 SHA512:09119e38ad0387e06725fa0c03f006fa44c6d8241df1f8bd3daea6f5c75f4254a52b18686f0a6bb9aa5301895a5e544adb70da0eddd4d041a7b6210422b79175
-'http://archive.ubuntu.com/ubuntu/pool/universe/i/imagemagick/imagemagick_6.9.10.23+dfsg.orig.tar.xz' imagemagick_6.9.10.23+dfsg.orig.tar.xz 9081188 SHA512:0c5fdfb82d12fef09d79c3a3d03167a57732e566980ca89e977d04502779506eae34e6bc4260c35558db63c572c64fe80d69f6627e180ffc8e8679ebe8574972
-'http://archive.ubuntu.com/ubuntu/pool/universe/i/imagemagick/imagemagick_6.9.10.23+dfsg-2.1ubuntu12.debian.tar.xz' imagemagick_6.9.10.23+dfsg-2.1ubuntu12.debian.tar.xz 241284 SHA512:954fc4f8454e017865d764b297247343d2ebb0eb5f3611f1fdb4901f7f44a27cb18958bf6d80bde9409305f338bff5bd24fac4c305eeba02b07fd67ebb61006a
-```
 
 ### `dpkg` source package: `init-system-helpers=1.58`
 
@@ -3311,14 +3306,9 @@ Licenses: (parsed from: `/usr/share/doc/libopenexr-dev/copyright`, `/usr/share/d
 - `GPL-2+`
 - `openexr`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openexr=2.3.0-6ubuntu3
-'http://archive.ubuntu.com/ubuntu/pool/universe/o/openexr/openexr_2.3.0-6ubuntu3.dsc' openexr_2.3.0-6ubuntu3.dsc 2386 SHA512:f2d2b4fc13f985406ad1d730f3a3738f93116a614a96ecd71eb692da5e6b4c4d2b412fdf057720ca5c7a135045bf65067c6b4c6ed6e8b063208786bf809e763e
-'http://archive.ubuntu.com/ubuntu/pool/universe/o/openexr/openexr_2.3.0.orig.tar.gz' openexr_2.3.0.orig.tar.gz 18416222 SHA512:f6810505428674451627ef09e5dfbf13d7413e118f9defec4d160d9f1327b47699fe770a96b61da7820d2a357ccb722ad909ba4ba0924703fa5fd532cdf0da69
-'http://archive.ubuntu.com/ubuntu/pool/universe/o/openexr/openexr_2.3.0-6ubuntu3.debian.tar.xz' openexr_2.3.0-6ubuntu3.debian.tar.xz 33800 SHA512:6d7c6adc1d63cc3eee73103a19962a09bebb72ab78ed835bba9e33215f9da0244c1185d704cffadd30a611601f32839f14c3c026da52956bdea1b6dbf10b527a
-```
 
 ### `dpkg` source package: `openjpeg2=2.3.1-1ubuntu4`
 
@@ -3809,13 +3799,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3-defaults=3.8.2-0ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-defaults/python3-defaults_3.8.2-0ubuntu2.dsc' python3-defaults_3.8.2-0ubuntu2.dsc 2879 SHA512:bf0229b84fbaa584c269a76969bd555d852337da6b5ef82475c5a82903e7823811ab639858a60c72b02673c8243aaf19de7e3dc7ab622f0bfe7380fc7251d0f3
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-defaults/python3-defaults_3.8.2-0ubuntu2.tar.gz' python3-defaults_3.8.2-0ubuntu2.tar.gz 138226 SHA512:744bf1420e268c8884e89da1bfc49e05ce6b593cebe179d550584e9d4bc298e2165b27a20d4c1bd627288e26560b2eba679d440723c25d2d922d3d6f99807a79
-```
 
 ### `dpkg` source package: `python3-stdlib-extensions=3.8.5-1`
 
@@ -3828,14 +3814,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3-stdlib-extensions=3.8.5-1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.8.5-1.dsc' python3-stdlib-extensions_3.8.5-1.dsc 2524 SHA512:5d24f5eafee809891f286b320cd482a6e32e28200007f6f301305ec78f05179758f1e5ff1339f3613c4b9801026ec3758ceaa583c942d6f2ddb53bf49bdf42a3
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.8.5.orig.tar.xz' python3-stdlib-extensions_3.8.5.orig.tar.xz 1074164 SHA512:71dfd69b86015b42be696f8c52ac4d491423e0174138c1c8a11383e39868b774fdb673fced6915bede17fdb053aaa05384bed2d6a0908676c58dc775aeb7afbe
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.8.5-1.debian.tar.xz' python3-stdlib-extensions_3.8.5-1.debian.tar.xz 17896 SHA512:b76db81f2900d6048907bfb0d7cd3049775e3a1890b2476eb98230f865ea2b85950fbe52e27152d7dedf4a8c6299ac022d622fde7ffb152b880e6fcd7a383e6c
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/python3-stdlib-extensions/3.8.5-1/
+
 
 ### `dpkg` source package: `python3.8=3.8.6~rc1-2`
 
@@ -3916,14 +3901,9 @@ Licenses: (parsed from: `/usr/share/doc/rpcsvc-proto/copyright`)
 - `permissive-fsf`
 - `permissive-makefile-in`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris rpcsvc-proto=1.4.2-0ubuntu3
-'http://archive.ubuntu.com/ubuntu/pool/main/r/rpcsvc-proto/rpcsvc-proto_1.4.2-0ubuntu3.dsc' rpcsvc-proto_1.4.2-0ubuntu3.dsc 2084 SHA512:92f66ecd3ee90edaccf391140832eed8dad64cd099512e7fd4e5bc266c49f550f82325610afc2bac86d16acec1f017624b4fec7314ac0c733eb3288c91ca04ea
-'http://archive.ubuntu.com/ubuntu/pool/main/r/rpcsvc-proto/rpcsvc-proto_1.4.2.orig.tar.xz' rpcsvc-proto_1.4.2.orig.tar.xz 171620 SHA512:631fbfc00af94c5d7def0759f27e97dc14d400b4468c906719ae18ecef74815730798c882d1aaa4f90359224e7b829019b786baddc3097905b54f940ca85a714
-'http://archive.ubuntu.com/ubuntu/pool/main/r/rpcsvc-proto/rpcsvc-proto_1.4.2-0ubuntu3.debian.tar.xz' rpcsvc-proto_1.4.2-0ubuntu3.debian.tar.xz 4080 SHA512:195cfd23210be17ff2720b9f1e4ae26ed3d1f8386d68a2f2f66d86bc4a9a9dd92d8e6d5bc97589080de1ab988d7c9bbdc9288a22d1317615e4b4b43852924e0b
-```
 
 ### `dpkg` source package: `rtmpdump=2.4+20151223.gitfa8646d.1-2build2`
 
