@@ -2462,14 +2462,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pyparsing=2.0.3+dfsg1-1ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pyparsing/pyparsing_2.0.3+dfsg1-1ubuntu0.1.dsc' pyparsing_2.0.3+dfsg1-1ubuntu0.1.dsc 2440 SHA512:4a62327d76b53b828a42cb7d8b4915ee4f75987b71abd65b167f91cf8986299745b100d434fa8c6f42a921cf6e9be98fe349b0043ffb56a88eaeafa391905de8
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pyparsing/pyparsing_2.0.3+dfsg1.orig.tar.gz' pyparsing_2.0.3+dfsg1.orig.tar.gz 1375115 SHA512:00b844a6d33e8b41e06f56c47c04e805c0ab4f25a4c8ff5549982e7b776d93f8e35ac0f98f65a05a221e71b02d7818876bd4ac604b5e859bb685b99689ea5598
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pyparsing/pyparsing_2.0.3+dfsg1-1ubuntu0.1.debian.tar.xz' pyparsing_2.0.3+dfsg1-1ubuntu0.1.debian.tar.xz 6552 SHA512:c53627b88f7488ddbdad69ea4da7f47763621cfd652879430a668504544daab752d99eed68d2e1fdb75778330d7f1e83c02f349d2f59ebebad5ab936c9e3610a
-```
 
 ### `dpkg` source package: `python-catkin-pkg-modules=0.4.22-1`
 

@@ -8003,14 +8003,9 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.8/copyright`, `/usr/share/doc
 - `use in source`
 - `without`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3.8=3.8.2-1ubuntu1.2
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.2-1ubuntu1.2.dsc' python3.8_3.8.2-1ubuntu1.2.dsc 3383 SHA512:75920fbd2f84099931b35648591c1b87a3f3e6e861ef1b0645b2ce9fd2bc94d747b3ca216d43f49fbe24ae0124fbd20bec1ff7b04f9a282f9b379431060512ae
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.2.orig.tar.xz' python3.8_3.8.2.orig.tar.xz 17869888 SHA512:ca37ad0e7c5845f5f228566aa8ff654a8f428c7d4a5aaabff29baebb0ca3219b31ba8bb2607f89e37cf3fc564f023b8407e53a4f2c47bd99122c1cc222613e37
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.2-1ubuntu1.2.debian.tar.xz' python3.8_3.8.2-1ubuntu1.2.debian.tar.xz 214328 SHA512:22aeb9fe1ca6c478ff2ec3b210be52d7b657f67515cd22a4b072a2a4f6f5ad169937951bb5667a1e5a42e22bc051c3b2d023822445ab75c899fdceeb214b034f
-```
 
 ### `dpkg` source package: `pyyaml=5.3.1-1`
 
