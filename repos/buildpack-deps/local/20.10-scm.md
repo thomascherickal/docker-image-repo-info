@@ -1350,14 +1350,13 @@ Licenses: (parsed from: `/usr/share/doc/libpsl5/copyright`)
 - `Chromium`
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libpsl=0.21.0-1.1
-'http://archive.ubuntu.com/ubuntu/pool/main/libp/libpsl/libpsl_0.21.0-1.1.dsc' libpsl_0.21.0-1.1.dsc 2228 SHA512:b00f8d19e898531543680cdead98d644fe6dfc2f40834aadfb7a782bdd5695c0bd1f7854a55f4dd5cf31462160128c60adac06fc7c9b9c955d897d1a55bf65e0
-'http://archive.ubuntu.com/ubuntu/pool/main/libp/libpsl/libpsl_0.21.0.orig.tar.gz' libpsl_0.21.0.orig.tar.gz 8598583 SHA512:b7466edb9763f94a65330dbb3c19586f9c7b01e20ddedb38ca2fd4c9ee5764a4f9b3291dc4b76659b45425d954f15973345f917b2cd2de72ea731e8c41f2a265
-'http://archive.ubuntu.com/ubuntu/pool/main/libp/libpsl/libpsl_0.21.0-1.1.debian.tar.xz' libpsl_0.21.0-1.1.debian.tar.xz 12432 SHA512:b5e31df56df8ce023e2875074d3fbe6644e840f9d76d25b7a502a87bb7be066159293b9858abe6e19e367b532a38cb1188df40301d267bc6f726f1f2257b41f8
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/libpsl/0.21.0-1.1/
+
 
 ### `dpkg` source package: `libseccomp=2.4.3-1ubuntu4`
 
@@ -2608,11 +2607,6 @@ Licenses: (parsed from: `/usr/share/doc/zlib1g/copyright`)
 
 - `Zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris zlib=1:1.2.11.dfsg-2ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg-2ubuntu2.dsc' zlib_1.2.11.dfsg-2ubuntu2.dsc 2945 SHA512:906f2419b7f03bad3dfd86541b15d41057b98cb07d22568a2595785f57909714057761d25d79607100645867cff50f2fe8afb6fcdf77adc7d3acd9be3eac636a
-'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg.orig.tar.gz' zlib_1.2.11.dfsg.orig.tar.gz 370248 SHA512:92819807c0b8de655021bb2d5d182f9b6b381d3072d8c8dc1df34bbaa25d36bcba140c85f754a43cc466aac65850b7a7366aa0c93e804180e5b255e61d5748de
-'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg-2ubuntu2.debian.tar.xz' zlib_1.2.11.dfsg-2ubuntu2.debian.tar.xz 50556 SHA512:62fd2d5e356d70f0bbe3f67ce27553af726303dea7f968dde6fa3e4f7c7599e7b5f8c2c78a4dd2ce284a30d8049e587289f419ae6b2c7536d3e2a28a2f713147
-```
