@@ -1,7 +1,7 @@
 ## `mysql:latest`
 
 ```console
-$ docker pull mysql@sha256:e1bfe11693ed2052cb3b4e5fa356c65381129e87e38551c6cd6ec532ebe0e808
+$ docker pull mysql@sha256:86b7c83e24c824163927db1016d5ab153a9a04358951be8b236171286e3289a4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,106 +11,106 @@ $ docker pull mysql@sha256:e1bfe11693ed2052cb3b4e5fa356c65381129e87e38551c6cd6ec
 ### `mysql:latest` - linux; amd64
 
 ```console
-$ docker pull mysql@sha256:b589f11ab39a852fd13090aeb56314978c73a16d615e28ec148306889b67889f
+$ docker pull mysql@sha256:77b7e09c906615c1bb59b2e9d7703f728b1186a5a70e547ce2f1079ef4c1c5ca
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **158.6 MB (158633433 bytes)**  
+-	Total Size: **158.6 MB (158633522 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e1d7dc9731daa2c79858307d65ef35f543daf97457b9c11b681f78bb86f7a158`
+-	Image ID: `sha256:8e85dd5c32558ea5c22cc4786cff512c1940270a50e7dbc21ad2df42f0637de4`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mysqld"]`
 
 ```dockerfile
-# Thu, 10 Sep 2020 00:23:29 GMT
-ADD file:e7407f2294ad23634565820b9669b18ff2a2ca0212a7ec84b9c89d8550859954 in / 
-# Thu, 10 Sep 2020 00:23:30 GMT
+# Tue, 13 Oct 2020 01:39:05 GMT
+ADD file:0dc53e7886c35bc21ae6c4f6cedda54d56ae9c9e9cd367678f1a72e68b3c43d4 in / 
+# Tue, 13 Oct 2020 01:39:05 GMT
 CMD ["bash"]
-# Thu, 10 Sep 2020 06:53:12 GMT
+# Tue, 13 Oct 2020 08:01:49 GMT
 RUN groupadd -r mysql && useradd -r -g mysql mysql
-# Thu, 10 Sep 2020 06:53:19 GMT
+# Tue, 13 Oct 2020 08:01:59 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends gnupg dirmngr && rm -rf /var/lib/apt/lists/*
-# Thu, 10 Sep 2020 06:53:19 GMT
+# Tue, 13 Oct 2020 08:01:59 GMT
 ENV GOSU_VERSION=1.12
-# Thu, 10 Sep 2020 06:53:29 GMT
+# Tue, 13 Oct 2020 08:02:13 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates wget; 	rm -rf /var/lib/apt/lists/*; 	dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
-# Thu, 10 Sep 2020 06:53:30 GMT
+# Tue, 13 Oct 2020 08:02:14 GMT
 RUN mkdir /docker-entrypoint-initdb.d
-# Thu, 10 Sep 2020 06:53:37 GMT
+# Tue, 13 Oct 2020 08:02:26 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		pwgen 		openssl 		perl 		xz-utils 	&& rm -rf /var/lib/apt/lists/*
-# Thu, 10 Sep 2020 06:53:38 GMT
+# Tue, 13 Oct 2020 08:02:28 GMT
 RUN set -ex; 	key='A4A9406876FCBD3C456770C88C718D3B5072E1F5'; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 	gpg --batch --export "$key" > /etc/apt/trusted.gpg.d/mysql.gpg; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 	apt-key list > /dev/null
-# Thu, 10 Sep 2020 06:53:38 GMT
+# Tue, 13 Oct 2020 08:02:29 GMT
 ENV MYSQL_MAJOR=8.0
-# Thu, 10 Sep 2020 06:53:39 GMT
+# Tue, 13 Oct 2020 08:02:29 GMT
 ENV MYSQL_VERSION=8.0.21-1debian10
-# Thu, 10 Sep 2020 06:53:39 GMT
+# Tue, 13 Oct 2020 08:02:30 GMT
 RUN echo "deb http://repo.mysql.com/apt/debian/ buster mysql-${MYSQL_MAJOR}" > /etc/apt/sources.list.d/mysql.list
-# Thu, 10 Sep 2020 06:53:55 GMT
+# Tue, 13 Oct 2020 08:02:57 GMT
 RUN { 		echo mysql-community-server mysql-community-server/data-dir select ''; 		echo mysql-community-server mysql-community-server/root-pass password ''; 		echo mysql-community-server mysql-community-server/re-root-pass password ''; 		echo mysql-community-server mysql-community-server/remove-test-db select false; 	} | debconf-set-selections 	&& apt-get update && apt-get install -y mysql-community-client="${MYSQL_VERSION}" mysql-community-server-core="${MYSQL_VERSION}" && rm -rf /var/lib/apt/lists/* 	&& rm -rf /var/lib/mysql && mkdir -p /var/lib/mysql /var/run/mysqld 	&& chown -R mysql:mysql /var/lib/mysql /var/run/mysqld 	&& chmod 1777 /var/run/mysqld /var/lib/mysql
-# Thu, 10 Sep 2020 06:53:56 GMT
+# Tue, 13 Oct 2020 08:02:57 GMT
 VOLUME [/var/lib/mysql]
-# Thu, 10 Sep 2020 06:53:56 GMT
+# Tue, 13 Oct 2020 08:02:58 GMT
 COPY dir:2e040acc386ebd23b8571951a51e6cb93647df091bc26159b8c757ef82b3fcda in /etc/mysql/ 
-# Thu, 10 Sep 2020 06:53:56 GMT
+# Tue, 13 Oct 2020 08:02:58 GMT
 COPY file:7cbb26bbdb8e71b36aafda38dbac08caa641714a19991b86cde77daf3286ec11 in /usr/local/bin/ 
-# Thu, 10 Sep 2020 06:53:57 GMT
+# Tue, 13 Oct 2020 08:03:00 GMT
 RUN ln -s usr/local/bin/docker-entrypoint.sh /entrypoint.sh # backwards compat
-# Thu, 10 Sep 2020 06:53:57 GMT
+# Tue, 13 Oct 2020 08:03:00 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 10 Sep 2020 06:53:57 GMT
+# Tue, 13 Oct 2020 08:03:00 GMT
 EXPOSE 3306 33060
-# Thu, 10 Sep 2020 06:53:58 GMT
+# Tue, 13 Oct 2020 08:03:01 GMT
 CMD ["mysqld"]
 ```
 
 -	Layers:
-	-	`sha256:d121f8d1c4128ebc1e95e5bfad90a0189b84eadbbb2fbaad20cbb26d20b2c8a2`  
-		Last Modified: Thu, 10 Sep 2020 00:34:02 GMT  
-		Size: 27.1 MB (27092161 bytes)  
+	-	`sha256:bb79b6b2107fea8e8a47133a660b78e3a546998fcf0427be39ac9a0af4a97e90`  
+		Last Modified: Tue, 13 Oct 2020 01:48:17 GMT  
+		Size: 27.1 MB (27092228 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f3cebc0b46913f0ab62528142684580ec1e3559f7c3571b2d53eccb656fbf308`  
-		Last Modified: Thu, 10 Sep 2020 06:56:10 GMT  
-		Size: 1.7 KB (1745 bytes)  
+	-	`sha256:49e22f6fb9f7713028f8ed9b0beaa2ebac38d73ff6fd60532031e4a257f314c0`  
+		Last Modified: Tue, 13 Oct 2020 08:05:18 GMT  
+		Size: 1.7 KB (1736 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1862755a0b378cf709262d121db21ca934437463f647c7eeb1dd328869df9743`  
-		Last Modified: Thu, 10 Sep 2020 06:56:11 GMT  
-		Size: 4.2 MB (4178114 bytes)  
+	-	`sha256:842b1255668c99365efe9cf8367baf458ad590033cfbe73c03e67a961d34a288`  
+		Last Modified: Tue, 13 Oct 2020 08:05:18 GMT  
+		Size: 4.2 MB (4178100 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:489b44f3dbb4c3b4fb955823e880352f6acfe001b1f41c8dcc81fac58622ee29`  
-		Last Modified: Thu, 10 Sep 2020 06:56:10 GMT  
-		Size: 1.4 MB (1419211 bytes)  
+	-	`sha256:9f48d1f430002d35f5766b2ba9cfbe0c624a705a542622a94e5b86e2132aba7b`  
+		Last Modified: Tue, 13 Oct 2020 08:05:17 GMT  
+		Size: 1.4 MB (1419213 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:690874f836dbbd1fc19486ed7d1d09084fc88cb8a1a873228ff987700314d91c`  
-		Last Modified: Thu, 10 Sep 2020 06:56:08 GMT  
+	-	`sha256:c693f0615bcee7154070df04d6cce10562437d69ee98d469252e950cd79e0d7f`  
+		Last Modified: Tue, 13 Oct 2020 08:05:17 GMT  
 		Size: 115.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:baa8be383ffb08bae1621a739dffb09ef152a476bdf23fa43ab902a5a330b7f2`  
-		Last Modified: Thu, 10 Sep 2020 06:56:16 GMT  
-		Size: 13.4 MB (13447130 bytes)  
+	-	`sha256:8a621b9dbed2309be1806a0a750a6deef7c2558f25ceee4fcfc06ec421fad097`  
+		Last Modified: Tue, 13 Oct 2020 08:05:21 GMT  
+		Size: 13.4 MB (13447145 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:55356608b4ac46e974b166adeb8207e78938059004277e38257ae1e0b5e517aa`  
-		Last Modified: Thu, 10 Sep 2020 06:56:09 GMT  
-		Size: 2.4 KB (2393 bytes)  
+	-	`sha256:0807d32aef130f157419493647a5b252b6560b5385f14f102f388e576aeb1e98`  
+		Last Modified: Tue, 13 Oct 2020 08:05:17 GMT  
+		Size: 2.4 KB (2395 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dd35ceccb6ebb923fead362e892aecdf0c78e9bf9871236edd37b939e9aa42b7`  
-		Last Modified: Thu, 10 Sep 2020 06:56:07 GMT  
-		Size: 222.0 B  
+	-	`sha256:9eb4355ba4508252590eb497a480a1d154529cff1ccdada2c60e628aaa73dc18`  
+		Last Modified: Tue, 13 Oct 2020 08:05:16 GMT  
+		Size: 225.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:429b35712b19f180a3b54050b0e06f2aba4604a93595a4e84aecbef5ae965756`  
-		Last Modified: Thu, 10 Sep 2020 06:56:41 GMT  
-		Size: 112.5 MB (112486232 bytes)  
+	-	`sha256:6879faad3b6c70e300c1ad96cf752b85e4a54ade54b8e4d370600a57e617c439`  
+		Last Modified: Tue, 13 Oct 2020 08:05:39 GMT  
+		Size: 112.5 MB (112486256 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:162d8291095c7d95de5978bed455880ca417b35062409ccca428620a0e12e2d0`  
-		Last Modified: Thu, 10 Sep 2020 06:56:08 GMT  
-		Size: 844.0 B  
+	-	`sha256:164ef92f3887884a8e93d96f0a4cdfe88912f0dc4a257b857c1aa63c7ee5e00f`  
+		Last Modified: Tue, 13 Oct 2020 08:05:16 GMT  
+		Size: 843.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5e500ef7181b04f57c863f6a874500d2f1963976f66833ddba3238b3c0ca5949`  
-		Last Modified: Thu, 10 Sep 2020 06:56:07 GMT  
+	-	`sha256:6e4a6e666228dc751782155f2b3af56ed7c5e9ba56ef35c36f03587b6242065d`  
+		Last Modified: Tue, 13 Oct 2020 08:05:16 GMT  
 		Size: 5.1 KB (5145 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:af7528e958b6dbe6f2348a1a2035f2ba4b57f4742156f0d5cd0f2e763150d3c4`  
-		Last Modified: Thu, 10 Sep 2020 06:56:07 GMT  
+	-	`sha256:d45dea7731adeb126e6275444517123fc75f817c1949722f608d1eedef8ce475`  
+		Last Modified: Tue, 13 Oct 2020 08:05:16 GMT  
 		Size: 121.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
