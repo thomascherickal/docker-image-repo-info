@@ -1,18 +1,18 @@
-# `aerospike:5.1.0.6`
+# `aerospike:5.2.0.2`
 
 ## Docker Metadata
 
-- Image ID: `sha256:25a9db1ae18281a52e7266307b073444b1a8c8eaa5a256de66ccd4d59bda4376`
-- Created: `2020-09-10T00:56:01.334665784Z`
-- Virtual Size: ~ 157.64 Mb  
+- Image ID: `sha256:77cefb0b2db366341ae122429841ec8c54310ed0c889ac3fddfb9976551f8d05`
+- Created: `2020-10-13T02:08:32.190725315Z`
+- Virtual Size: ~ 157.75 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
 - Command: `["asd"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `AEROSPIKE_VERSION=5.1.0.6`
-  - `AEROSPIKE_SHA256=64d39a81286de648592add8a4de3037c4141d55a135dfeddfa4b3c6534c297e7`
+  - `AEROSPIKE_VERSION=5.2.0.2`
+  - `AEROSPIKE_SHA256=a60799791567b845d20aeaf73adf96ed2285d08145b3c5cac6746cc4e1f1f0d5`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -66,11 +66,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/adduser/3.115/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/adduser/3.115/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `aerospike-server-community=5.1.0.6-1`
+### `dpkg` source package: `aerospike-server-community=5.2.0.2-1`
 
 Binary Packages:
 
-- `aerospike-server-community=5.1.0.6-1`
+- `aerospike-server-community=5.2.0.2-1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -80,11 +80,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `aerospike-tools=3.29.0`
+### `dpkg` source package: `aerospike-tools=3.31.0`
 
 Binary Packages:
 
-- `aerospike-tools=3.29.0`
+- `aerospike-tools=3.31.0`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -323,12 +323,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/coreutils/8.26-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/coreutils/8.26-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `curl=7.52.1-5+deb9u11`
+### `dpkg` source package: `curl=7.52.1-5+deb9u12`
 
 Binary Packages:
 
-- `libcurl3:amd64=7.52.1-5+deb9u11`
-- `libcurl4-openssl-dev:amd64=7.52.1-5+deb9u11`
+- `libcurl3:amd64=7.52.1-5+deb9u12`
+- `libcurl4-openssl-dev:amd64=7.52.1-5+deb9u12`
 
 Licenses: (parsed from: `/usr/share/doc/libcurl3/copyright`, `/usr/share/doc/libcurl4-openssl-dev/copyright`)
 
@@ -339,13 +339,20 @@ Licenses: (parsed from: `/usr/share/doc/libcurl3/copyright`, `/usr/share/doc/lib
 - `other`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris curl=7.52.1-5+deb9u12
+'http://security.debian.org/debian-security/pool/updates/main/c/curl/curl_7.52.1-5+deb9u12.dsc' curl_7.52.1-5+deb9u12.dsc 2956 SHA256:8eb3a46742209ecc0933b23fd96634a29e95a889cffa3b6eb944350d282cb20a
+'http://security.debian.org/debian-security/pool/updates/main/c/curl/curl_7.52.1.orig.tar.gz' curl_7.52.1.orig.tar.gz 3504621 SHA256:a8984e8b20880b621f61a62d95ff3c0763a3152093a9f9ce4287cfd614add6ae
+'http://security.debian.org/debian-security/pool/updates/main/c/curl/curl_7.52.1-5+deb9u12.debian.tar.xz' curl_7.52.1-5+deb9u12.debian.tar.xz 45088 SHA256:048b49e321889c9eb96c68ee58075a872486a98245c59253718c0a8b5a8f1b34
+```
 
-- http://snapshot.debian.org/package/curl/7.52.1-5+deb9u11/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/curl/7.52.1-5+deb9u12/ (for browsing the source)
+- https://sources.debian.net/src/curl/7.52.1-5+deb9u12/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/curl/7.52.1-5+deb9u12/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27~101-g0780600+dfsg-3+deb9u1`
 
@@ -1613,11 +1620,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/openldap/2.4.44+dfsg-5+deb9u4/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/openldap/2.4.44+dfsg-5+deb9u4/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openssl1.0=1.0.2u-1~deb9u1`
+### `dpkg` source package: `openssl1.0=1.0.2u-1~deb9u2`
 
 Binary Packages:
 
-- `libssl1.0.2:amd64=1.0.2u-1~deb9u1`
+- `libssl1.0.2:amd64=1.0.2u-1~deb9u2`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1626,18 +1633,17 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openssl1.0=1.0.2u-1~deb9u1
-'http://deb.debian.org/debian/pool/main/o/openssl1.0/openssl1.0_1.0.2u-1~deb9u1.dsc' openssl1.0_1.0.2u-1~deb9u1.dsc 2383 SHA256:35e2627956512ce933f91e66ecb4a276200d8d1ab67ee599fc1a8dd7ae0a183a
-'http://deb.debian.org/debian/pool/main/o/openssl1.0/openssl1.0_1.0.2u.orig.tar.gz' openssl1.0_1.0.2u.orig.tar.gz 5355412 SHA256:ecd0c6ffb493dd06707d38b14bb4d8c2288bb7033735606569d8f90f89669d16
-'http://deb.debian.org/debian/pool/main/o/openssl1.0/openssl1.0_1.0.2u.orig.tar.gz.asc' openssl1.0_1.0.2u.orig.tar.gz.asc 488 SHA256:84d7a8b23df5567e80e3732f69c5428ee533a2bc7c3c2264dd8390a7af2a8620
-'http://deb.debian.org/debian/pool/main/o/openssl1.0/openssl1.0_1.0.2u-1~deb9u1.debian.tar.xz' openssl1.0_1.0.2u-1~deb9u1.debian.tar.xz 94808 SHA256:2b3beb8c675e7ede236e7f54ebad5df277c995722c9a85ca6e0033896119db7c
+$ apt-get source -qq --print-uris openssl1.0=1.0.2u-1~deb9u2
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl1.0/openssl1.0_1.0.2u-1~deb9u2.dsc' openssl1.0_1.0.2u-1~deb9u2.dsc 2301 SHA256:dc6e3ba0885c093e1dc6f018c9ed3a78f274e8995a21e12e2c50659c1c085b9c
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl1.0/openssl1.0_1.0.2u.orig.tar.gz' openssl1.0_1.0.2u.orig.tar.gz 5355412 SHA256:ecd0c6ffb493dd06707d38b14bb4d8c2288bb7033735606569d8f90f89669d16
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl1.0/openssl1.0_1.0.2u-1~deb9u2.debian.tar.xz' openssl1.0_1.0.2u-1~deb9u2.debian.tar.xz 95328 SHA256:b2fa5e1cfc97c1b32d18fc90844e2dceccb198b757d193a01394a71ce7c876bf
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/openssl1.0/1.0.2u-1~deb9u1/ (for browsing the source)
-- https://sources.debian.net/src/openssl1.0/1.0.2u-1~deb9u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openssl1.0/1.0.2u-1~deb9u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/openssl1.0/1.0.2u-1~deb9u2/ (for browsing the source)
+- https://sources.debian.net/src/openssl1.0/1.0.2u-1~deb9u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openssl1.0/1.0.2u-1~deb9u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssl=1.1.0l-1~deb9u1`
 
