@@ -1,15 +1,18 @@
 ## `debian:testing-20201012-slim`
 
 ```console
-$ docker pull debian@sha256:d3491802da2b6e06c3903216a23f7cce17f0aee2003d506928df91345efccf17
+$ docker pull debian@sha256:635baead7b412b2b2e709b374673ef6527513edbcdbf714d90ec435c4e98705c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
 -	Platforms:
 	-	linux; amd64
+	-	linux; arm variant v5
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
+	-	linux; 386
 	-	linux; mips64le
+	-	linux; ppc64le
 	-	linux; s390x
 
 ### `debian:testing-20201012-slim` - linux; amd64
@@ -36,6 +39,32 @@ CMD ["bash"]
 	-	`sha256:e46f134c9c3de20c1102798c457ba1adc3663322da7e18beb6f15f49a9ba1a7a`  
 		Last Modified: Tue, 13 Oct 2020 01:51:34 GMT  
 		Size: 28.2 MB (28223446 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `debian:testing-20201012-slim` - linux; arm variant v5
+
+```console
+$ docker pull debian@sha256:2682fe9892ad905dd925acc6c1e02f9dc1616d7709a0ca26626972bcd44c8f97
+```
+
+-	Docker Version: 19.03.12
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **26.1 MB (26147151 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:184fa32f1972e07df0ec973f2f5530dbdf6643b39f51fab2f6869cd11bad591b`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Tue, 13 Oct 2020 01:58:21 GMT
+ADD file:64ac5f7cbd4b572ed375873146053e724c874823a9e9230ddb8af9313ca1b85c in / 
+# Tue, 13 Oct 2020 01:58:22 GMT
+CMD ["bash"]
+```
+
+-	Layers:
+	-	`sha256:5e08cc5a440d5f3d0c91c4dd5bf54f11b7e77f1d3c6a41ef7006e9867b75c28e`  
+		Last Modified: Tue, 13 Oct 2020 02:06:27 GMT  
+		Size: 26.1 MB (26147151 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `debian:testing-20201012-slim` - linux; arm variant v7
@@ -90,6 +119,32 @@ CMD ["bash"]
 		Size: 27.1 MB (27114912 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+### `debian:testing-20201012-slim` - linux; 386
+
+```console
+$ docker pull debian@sha256:b11d322ca76662c875aad0f06fd4b1ff54cc655ee177e3957a93961510180d91
+```
+
+-	Docker Version: 19.03.12
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **29.1 MB (29138877 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:b661a4bc90e5aa56064ab0d2b372543eab405712f9f8d10b2483afbe9761d344`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Tue, 13 Oct 2020 01:46:22 GMT
+ADD file:3f8c83f76e25276f6b5493a91ce3c3b649c0a971e3202469b2c4e337c1ce7562 in / 
+# Tue, 13 Oct 2020 01:46:22 GMT
+CMD ["bash"]
+```
+
+-	Layers:
+	-	`sha256:09d690443584707a5b87fcbd27086ee0d8e15b0f671a5f44ff661781813cbfc6`  
+		Last Modified: Tue, 13 Oct 2020 01:52:47 GMT  
+		Size: 29.1 MB (29138877 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
 ### `debian:testing-20201012-slim` - linux; mips64le
 
 ```console
@@ -114,6 +169,32 @@ CMD ["bash"]
 	-	`sha256:3455adaffb05839fc602c486b23f2b09efb6ffa89267867a216be2a07e63948d`  
 		Last Modified: Tue, 13 Oct 2020 01:20:40 GMT  
 		Size: 27.0 MB (26965692 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `debian:testing-20201012-slim` - linux; ppc64le
+
+```console
+$ docker pull debian@sha256:5ba1369049f310ad3c2563d372249bcd06b1261d55ed6b99aafaef1cc37173c3
+```
+
+-	Docker Version: 18.09.7
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **31.8 MB (31823444 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:340081f164ca23f4e1fbfe6f39f1227cf5797f8b558e998bbc3fdc60e760156d`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Tue, 13 Oct 2020 01:42:33 GMT
+ADD file:8fdaf61c9a74ebcc68645b42af896e3d82888c57c0eac02ce5ee03180b4fdee3 in / 
+# Tue, 13 Oct 2020 01:42:41 GMT
+CMD ["bash"]
+```
+
+-	Layers:
+	-	`sha256:65b9c096e96645747b8bcbff633b86c3fc2a025788a323840cb204f28600f1ba`  
+		Last Modified: Tue, 13 Oct 2020 01:56:42 GMT  
+		Size: 31.8 MB (31823444 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `debian:testing-20201012-slim` - linux; s390x
