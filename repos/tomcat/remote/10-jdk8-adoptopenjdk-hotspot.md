@@ -1,7 +1,7 @@
 ## `tomcat:10-jdk8-adoptopenjdk-hotspot`
 
 ```console
-$ docker pull tomcat@sha256:8241d4827bc10d63f68d9536887a5b9e1653984e2e488b51e3b3c63c96ac2f67
+$ docker pull tomcat@sha256:6b9aeec9a40084f71778dbc4ff447d6a62848730296a11678b39be9a190e708e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -211,14 +211,14 @@ CMD ["catalina.sh" "run"]
 ### `tomcat:10-jdk8-adoptopenjdk-hotspot` - linux; arm64 variant v8
 
 ```console
-$ docker pull tomcat@sha256:a998c6dc8e24c7cdc55eb7648d94f7756cb1713a0687d69ea3db4bd241b0b55e
+$ docker pull tomcat@sha256:69f46b79a3eaf286b04ac0cad4e00420ab8ea81491fe776a07fcc59742fe51f5
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **153.1 MB (153077812 bytes)**  
+-	Total Size: **153.1 MB (153089871 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5b744b05276c90f57d786b203089a7ab0fe619e04cd15e04a724eb4bfbbb60b3`
+-	Image ID: `sha256:9655f5a24569d0a5a57e4d99bc69d60948bea734e721116be9fba9d974e2fa0f`
 -	Default Command: `["catalina.sh","run"]`
 
 ```dockerfile
@@ -258,17 +258,17 @@ ENV LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib
 ENV GPG_KEYS=A9C5DF4D22E99998D9875A5110C01C5A2F6059E7
 # Fri, 02 Oct 2020 04:20:07 GMT
 ENV TOMCAT_MAJOR=10
-# Fri, 02 Oct 2020 04:20:08 GMT
-ENV TOMCAT_VERSION=10.0.0-M8
-# Fri, 02 Oct 2020 04:20:09 GMT
-ENV TOMCAT_SHA512=5e3dcbc56e14de73c6b866d355db8169680d093fa447e52e9a4082cc7ca363a385ac2a37a1acdc66c1945a21effe440aa06edd8a572ac6096cbe5e22ea356de4
-# Fri, 02 Oct 2020 04:21:27 GMT
+# Wed, 14 Oct 2020 10:28:05 GMT
+ENV TOMCAT_VERSION=10.0.0-M9
+# Wed, 14 Oct 2020 10:28:06 GMT
+ENV TOMCAT_SHA512=547ae280792b8684d11154f678584d0c4eb5af645cc8145e04da6de6d115b7bca03122191e6447cdb3497b85357181ca3fd9716d8a2dbc86461cf28f3df3ee91
+# Wed, 14 Oct 2020 10:29:01 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		gnupg dirmngr 		wget ca-certificates 	; 		ddist() { 		local f="$1"; shift; 		local distFile="$1"; shift; 		local mvnFile="${1:-}"; 		local success=; 		local distUrl=; 		for distUrl in 			"https://www.apache.org/dyn/closer.cgi?action=download&filename=$distFile" 			"https://www-us.apache.org/dist/$distFile" 			"https://www.apache.org/dist/$distFile" 			"https://archive.apache.org/dist/$distFile" 			${mvnFile:+"https://repo1.maven.org/maven2/org/apache/tomcat/tomcat/$mvnFile"} 		; do 			if wget -O "$f" "$distUrl" && [ -s "$f" ]; then 				success=1; 				break; 			fi; 		done; 		[ -n "$success" ]; 	}; 		ddist 'tomcat.tar.gz' "tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz" "$TOMCAT_VERSION/tomcat-$TOMCAT_VERSION.tar.gz"; 	echo "$TOMCAT_SHA512 *tomcat.tar.gz" | sha512sum --strict --check -; 	ddist 'tomcat.tar.gz.asc' "tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz.asc" "$TOMCAT_VERSION/tomcat-$TOMCAT_VERSION.tar.gz.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	for key in $GPG_KEYS; do 		gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 	done; 	gpg --batch --verify tomcat.tar.gz.asc tomcat.tar.gz; 	tar -xf tomcat.tar.gz --strip-components=1; 	rm bin/*.bat; 	rm tomcat.tar.gz*; 	command -v gpgconf && gpgconf --kill all || :; 	rm -rf "$GNUPGHOME"; 		mv webapps webapps.dist; 	mkdir webapps; 		nativeBuildDir="$(mktemp -d)"; 	tar -xf bin/tomcat-native.tar.gz -C "$nativeBuildDir" --strip-components=1; 	apt-get install -y --no-install-recommends 		dpkg-dev 		gcc 		libapr1-dev 		libssl-dev 		make 	; 	( 		export CATALINA_HOME="$PWD"; 		cd "$nativeBuildDir/native"; 		gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 		aprConfig="$(command -v apr-1-config)"; 		./configure 			--build="$gnuArch" 			--libdir="$TOMCAT_NATIVE_LIBDIR" 			--prefix="$CATALINA_HOME" 			--with-apr="$aprConfig" 			--with-java-home="$JAVA_HOME" 			--with-ssl=yes; 		make -j "$(nproc)"; 		make install; 	); 	rm -rf "$nativeBuildDir"; 	rm bin/tomcat-native.tar.gz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	find "$TOMCAT_NATIVE_LIBDIR" -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		find ./bin/ -name '*.sh' -exec sed -ri 's|^#!/bin/sh$|#!/usr/bin/env bash|' '{}' +; 		chmod -R +rX .; 	chmod 777 logs temp work
-# Fri, 02 Oct 2020 04:21:49 GMT
+# Wed, 14 Oct 2020 10:29:09 GMT
 RUN set -e 	&& nativeLines="$(catalina.sh configtest 2>&1)" 	&& nativeLines="$(echo "$nativeLines" | grep 'Apache Tomcat Native')" 	&& nativeLines="$(echo "$nativeLines" | sort -u)" 	&& if ! echo "$nativeLines" | grep -E 'INFO: Loaded( APR based)? Apache Tomcat Native library' >&2; then 		echo >&2 "$nativeLines"; 		exit 1; 	fi
-# Fri, 02 Oct 2020 04:21:54 GMT
+# Wed, 14 Oct 2020 10:29:10 GMT
 EXPOSE 8080
-# Fri, 02 Oct 2020 04:22:00 GMT
+# Wed, 14 Oct 2020 10:29:11 GMT
 CMD ["catalina.sh" "run"]
 ```
 
@@ -297,13 +297,13 @@ CMD ["catalina.sh" "run"]
 		Last Modified: Fri, 02 Oct 2020 04:35:10 GMT  
 		Size: 170.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:20f974f3d0b37d1a414a32a2d6ccf1a107fcfaf0dfcc3bc7d05efd64a90a9b5f`  
-		Last Modified: Fri, 02 Oct 2020 04:35:12 GMT  
-		Size: 12.2 MB (12194098 bytes)  
+	-	`sha256:287a8abeac4bfb5172f1fc20f6b167d8529595a73647a61304069902354d43ca`  
+		Last Modified: Wed, 14 Oct 2020 11:00:45 GMT  
+		Size: 12.2 MB (12206159 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:756f8c8c8cf54251fb4a1cd5619c85a69f37ffc5b21c3a452b811dcda024312b`  
-		Last Modified: Fri, 02 Oct 2020 04:35:10 GMT  
-		Size: 165.0 B  
+	-	`sha256:29fd9c5f4135368712ab6618eacd65cc7da9f8152db25f673cef1a22c91420a4`  
+		Last Modified: Wed, 14 Oct 2020 11:00:44 GMT  
+		Size: 163.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `tomcat:10-jdk8-adoptopenjdk-hotspot` - linux; ppc64le
