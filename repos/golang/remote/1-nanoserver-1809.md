@@ -1,7 +1,7 @@
 ## `golang:1-nanoserver-1809`
 
 ```console
-$ docker pull golang@sha256:7b2dc9a5d2580553ec7687f18eb24b7aa7a17db0a59f8f71fe17a766f6360d6d
+$ docker pull golang@sha256:1876d569e22abb0f07e99c324d8891999ebd073eb06de43859294808cd09f9cf
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull golang@sha256:7b2dc9a5d2580553ec7687f18eb24b7aa7a17db0a59f8f71fe17
 ### `golang:1-nanoserver-1809` - windows version 10.0.17763.1518; amd64
 
 ```console
-$ docker pull golang@sha256:c303545373a79aa1cbbf1d46b36071de49f8237d3aba472ba44a5cbbe99efa82
+$ docker pull golang@sha256:9d339a5477d4ce7fecf16847722a6e8fa180e18b42f5d5b71a35be58f306a912
 ```
 
 -	Docker Version: 19.03.5
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **235.3 MB (235300168 bytes)**  
+-	Total Size: **235.2 MB (235202198 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:16bca6844eba4aaae39f1bf60e0c701b74df8bdfc4474231a915fcc47dbc4a2f`
+-	Image ID: `sha256:c179a88f330b5311593143fa997569cf672b0a6208d1463d7267de9a6e442c69`
 -	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
 -	`SHELL`: `["cmd","\/S","\/C"]`
 
@@ -35,13 +35,13 @@ USER ContainerAdministrator
 RUN setx /m PATH "%GOPATH%\bin;C:\go\bin;%PATH%"
 # Wed, 14 Oct 2020 12:39:04 GMT
 USER ContainerUser
-# Wed, 14 Oct 2020 12:39:04 GMT
-ENV GOLANG_VERSION=1.15.2
-# Wed, 14 Oct 2020 12:41:00 GMT
-COPY dir:c68fd448135b1d496d0acfdaf09d10b1fbe646bd56bcd50e62788e87c715c4df in C:\go 
-# Wed, 14 Oct 2020 12:41:15 GMT
+# Thu, 15 Oct 2020 01:21:50 GMT
+ENV GOLANG_VERSION=1.15.3
+# Thu, 15 Oct 2020 01:24:00 GMT
+COPY dir:b2adfa626edba88f8a594c97293f1c3e77da1d5bb72229d22d4906b07425c954 in C:\go 
+# Thu, 15 Oct 2020 01:24:20 GMT
 RUN go version
-# Wed, 14 Oct 2020 12:41:15 GMT
+# Thu, 15 Oct 2020 01:24:21 GMT
 WORKDIR C:\gopath
 ```
 
@@ -69,19 +69,19 @@ WORKDIR C:\gopath
 		Last Modified: Wed, 14 Oct 2020 12:52:13 GMT  
 		Size: 868.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:20585436fdf25a8cc500f777ba43219dee2fea2c757a2655d9b44068b67d6ec0`  
-		Last Modified: Wed, 14 Oct 2020 12:52:13 GMT  
-		Size: 860.0 B  
+	-	`sha256:f74b8b11eb2f02c177e11b5575af8487fb6e6be624f18f1e682d07124ef64a87`  
+		Last Modified: Thu, 15 Oct 2020 02:06:50 GMT  
+		Size: 887.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:31b8be8fb0be36bb598211644f2a5767764adeb4101acad71b615f43be0fe019`  
-		Last Modified: Wed, 14 Oct 2020 12:52:40 GMT  
-		Size: 134.0 MB (133954470 bytes)  
+	-	`sha256:ff33e40614a3e5a9f0d492c5446d478c6716e79fb02dba56df38d342eb452da3`  
+		Last Modified: Thu, 15 Oct 2020 02:07:18 GMT  
+		Size: 133.9 MB (133862456 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2062a81feea2bb6b1dc14f9b3d65985663d9a828eaf1b81fa1ec7b79c1db0fb8`  
-		Last Modified: Wed, 14 Oct 2020 12:52:14 GMT  
-		Size: 71.2 KB (71244 bytes)  
+	-	`sha256:d43b056b4b0d8477e89b87a7c0f11d84b42c987efc5333dc2f0562e0f53c088d`  
+		Last Modified: Thu, 15 Oct 2020 02:06:51 GMT  
+		Size: 65.2 KB (65239 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:db3de58b81c32aea61bb14453c0d52a29aeef916a9ee750cf588c14dfb76a6de`  
-		Last Modified: Wed, 14 Oct 2020 12:52:13 GMT  
-		Size: 1.1 KB (1085 bytes)  
+	-	`sha256:b3306b285f0618421b5e3145c43b3c1ccc2f27c3e00140ad2d609567b0a14bd1`  
+		Last Modified: Thu, 15 Oct 2020 02:06:50 GMT  
+		Size: 1.1 KB (1107 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
