@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:93f36bbb5ff351995c37384a15c0a397dbc0a43387f593f3b8184bd9851ed5ec`
-- Created: `2020-10-02T04:23:36.508584035Z`
+- Image ID: `sha256:b2cdb0aa3acab74d84b91a1c7ecca1890a6305ef8b13543dbeed4dc1286b0eeb`
+- Created: `2020-10-14T09:10:53.695406659Z`
 - Virtual Size: ~ 743.52 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -508,23 +508,29 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/avahi/0.7-4/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/avahi/0.7-4/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `base-files=10.3+deb10u5`
+### `dpkg` source package: `base-files=10.3+deb10u6`
 
 Binary Packages:
 
-- `base-files=10.3+deb10u5`
+- `base-files=10.3+deb10u6`
 
 Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris base-files=10.3+deb10u6
+'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3+deb10u6.dsc' base-files_10.3+deb10u6.dsc 1103 SHA256:9b77bbf528cafb65eb6f510fbc3cf1367e55bf915af99740b3579a3e4ac7450f
+'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3+deb10u6.tar.xz' base-files_10.3+deb10u6.tar.xz 65400 SHA256:450aed5977afeb8bf6f3f7ad9d67eb8bd08c27e79a434e1f0ed867f0cfcbc5da
+```
 
-- http://snapshot.debian.org/package/base-files/10.3+deb10u5/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/base-files/10.3+deb10u6/ (for browsing the source)
+- https://sources.debian.net/src/base-files/10.3+deb10u6/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/base-files/10.3+deb10u6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-passwd=3.5.46`
 
@@ -3787,11 +3793,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libzstd/1.3.8+dfsg-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libzstd/1.3.8+dfsg-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `linux=4.19.132-1`
+### `dpkg` source package: `linux=4.19.146-1`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=4.19.132-1`
+- `linux-libc-dev:amd64=4.19.146-1`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -3806,17 +3812,17 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris linux=4.19.132-1
-'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.132-1.dsc' linux_4.19.132-1.dsc 191615 SHA256:3431e9f27ad196e3cd3b0908b5ac5008ed2522118c4f51fd8f8a8c1240819e28
-'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.132.orig.tar.xz' linux_4.19.132.orig.tar.xz 107498852 SHA256:3e9e811d44d190dcd8af04e86ad4c00032a5b74cafece51cfd12581648e4e1db
-'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.132-1.debian.tar.xz' linux_4.19.132-1.debian.tar.xz 3308396 SHA256:c592597164270d5cfbf7efa12a04d8246ba26e2d9228bb8ae030ef88b147fe40
+$ apt-get source -qq --print-uris linux=4.19.146-1
+'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.146-1.dsc' linux_4.19.146-1.dsc 191615 SHA256:d073e1201130f87ae9fbbef9657ac0d196367ded2ff3bd25a109fe94f71c5e30
+'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.146.orig.tar.xz' linux_4.19.146.orig.tar.xz 107530016 SHA256:161f45802adbe953ed67cc2997e3aebc9dbd762a49f1ac11ac45d13a2e5176b0
+'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.146-1.debian.tar.xz' linux_4.19.146-1.debian.tar.xz 1433256 SHA256:f501206bbe2ed8d2ac4ffbbe6d8c552d0f08b02e8a9895a3f4a5c278bce80435
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/linux/4.19.132-1/ (for browsing the source)
-- https://sources.debian.net/src/linux/4.19.132-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/4.19.132-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/linux/4.19.146-1/ (for browsing the source)
+- https://sources.debian.net/src/linux/4.19.146-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/linux/4.19.146-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lsb=10.2019051400`
 
