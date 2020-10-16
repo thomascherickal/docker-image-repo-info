@@ -1442,20 +1442,13 @@ Licenses: (parsed from: `/usr/share/doc/libglib2.0-0/copyright`, `/usr/share/doc
 - `GPL-2+`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glib2.0=2.66.0-2
-'http://deb.debian.org/debian/pool/main/g/glib2.0/glib2.0_2.66.0-2.dsc' glib2.0_2.66.0-2.dsc 3346 SHA256:a68f2e28df9d6938b647fecb40c63f90906d76543b07383a125892dcf84c1b94
-'http://deb.debian.org/debian/pool/main/g/glib2.0/glib2.0_2.66.0.orig.tar.xz' glib2.0_2.66.0.orig.tar.xz 4839236 SHA256:c5a66bf143065648c135da4c943d2ac23cce15690fc91c358013b2889111156c
-'http://deb.debian.org/debian/pool/main/g/glib2.0/glib2.0_2.66.0-2.debian.tar.xz' glib2.0_2.66.0-2.debian.tar.xz 94844 SHA256:33600b7628dadef411e81c26cc55b245d106275c579e88e8f8080053a903560f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/glib2.0/2.66.0-2/
 
-- https://sources.debian.net/src/glib2.0/2.66.0-2/ (for browsing the source)
-- https://sources.debian.net/src/glib2.0/2.66.0-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/glib2.0/2.66.0-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `glibc=2.31-3`
 
@@ -1622,20 +1615,13 @@ Licenses: (parsed from: `/usr/share/doc/gir1.2-freedesktop/copyright`, `/usr/sha
 - `LGPL-2+`
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gobject-introspection=1.66.0-1
-'http://deb.debian.org/debian/pool/main/g/gobject-introspection/gobject-introspection_1.66.0-1.dsc' gobject-introspection_1.66.0-1.dsc 3063 SHA256:8486df28fbfc060ac40e7777d7d970dfe4fb28cb738541952932ef59aa6604d8
-'http://deb.debian.org/debian/pool/main/g/gobject-introspection/gobject-introspection_1.66.0.orig.tar.xz' gobject-introspection_1.66.0.orig.tar.xz 1012396 SHA256:3d66ea3aec7c3f8f1f83d89db3e78e18e36adc22b8bba45298119f0b3ea50060
-'http://deb.debian.org/debian/pool/main/g/gobject-introspection/gobject-introspection_1.66.0-1.debian.tar.xz' gobject-introspection_1.66.0-1.debian.tar.xz 23572 SHA256:cf50d975f3d7154a867d7cf1e53543197bd8f0fa17ec800c964996dcdc7e4ba1
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gobject-introspection/1.66.0-1/
 
-- https://sources.debian.net/src/gobject-introspection/1.66.0-1/ (for browsing the source)
-- https://sources.debian.net/src/gobject-introspection/1.66.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gobject-introspection/1.66.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `graphite2=1.3.14-1`
 
@@ -4720,20 +4706,13 @@ Licenses: (parsed from: `/usr/share/doc/libpq-dev/copyright`, `/usr/share/doc/li
 - `nagaysau-ishii`
 - `rijndael`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris postgresql-13=13.0-3
-'http://deb.debian.org/debian/pool/main/p/postgresql-13/postgresql-13_13.0-3.dsc' postgresql-13_13.0-3.dsc 3632 SHA256:a551e65c43575e2d9ba98528db41319398e582f86c707ea697533951919737b6
-'http://deb.debian.org/debian/pool/main/p/postgresql-13/postgresql-13_13.0.orig.tar.bz2' postgresql-13_13.0.orig.tar.bz2 20999465 SHA256:80e750be8d436b54197636a02636f8fd3263ba6779bf865b04832495ea592296
-'http://deb.debian.org/debian/pool/main/p/postgresql-13/postgresql-13_13.0-3.debian.tar.xz' postgresql-13_13.0-3.debian.tar.xz 24772 SHA256:29eca3949c48ee2d8849e6d2f1b46eb0cfafb021bf88963f6568c6f90224dbd0
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/postgresql-13/13.0-3/
 
-- https://sources.debian.net/src/postgresql-13/13.0-3/ (for browsing the source)
-- https://sources.debian.net/src/postgresql-13/13.0-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/postgresql-13/13.0-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `procps=2:3.3.16-5`
 
@@ -5025,20 +5004,13 @@ Licenses: (parsed from: `/usr/share/doc/shared-mime-info/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris shared-mime-info=1.15-1
-'http://deb.debian.org/debian/pool/main/s/shared-mime-info/shared-mime-info_1.15-1.dsc' shared-mime-info_1.15-1.dsc 2198 SHA256:dca6ea0156110b4a2694dd96a721d34ad4f42b51f3d3a20d0d711b77bde5115d
-'http://deb.debian.org/debian/pool/main/s/shared-mime-info/shared-mime-info_1.15.orig.tar.xz' shared-mime-info_1.15.orig.tar.xz 772708 SHA256:f482b027437c99e53b81037a9843fccd549243fd52145d016e9c7174a4f5db90
-'http://deb.debian.org/debian/pool/main/s/shared-mime-info/shared-mime-info_1.15-1.debian.tar.xz' shared-mime-info_1.15-1.debian.tar.xz 9728 SHA256:02c4fa8b2b3073c745287dd0e00c69c9f1ba028c7c6496105e3ecdcc02d9f1dd
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/shared-mime-info/1.15-1/
 
-- https://sources.debian.net/src/shared-mime-info/1.15-1/ (for browsing the source)
-- https://sources.debian.net/src/shared-mime-info/1.15-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/shared-mime-info/1.15-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sqlite3=3.33.0-1`
 
@@ -5231,21 +5203,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2020a-1
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a-1.dsc' tzdata_2020a-1.dsc 2237 SHA256:c1a0bba8797ca5eb91dcda49bcb08a3102020dd1a8557f4d7f74a8343e563975
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a.orig.tar.gz' tzdata_2020a.orig.tar.gz 397245 SHA256:547161eca24d344e0b5f96aff6a76b454da295dc14ed4ca50c2355043fb899a2
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a.orig.tar.gz.asc' tzdata_2020a.orig.tar.gz.asc 833 SHA256:a92f085fe1e7f8bc0f0a0bc4432f27e6cf2d69e64d4a90958bd023eb0ccf45f9
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a-1.debian.tar.xz' tzdata_2020a-1.debian.tar.xz 105224 SHA256:d84a9a0d0581a2331b7a26f35b1dfc646f9f6bb3dc36f18327151d322206c549
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2020a-1/
 
-- https://sources.debian.net/src/tzdata/2020a-1/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2020a-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2020a-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0043`
 
@@ -5503,19 +5467,13 @@ Licenses: (parsed from: `/usr/share/doc/x11-common/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris xorg=1:7.7+20
-'http://deb.debian.org/debian/pool/main/x/xorg/xorg_7.7+20.dsc' xorg_7.7+20.dsc 1969 SHA256:e24781dcf02522f070811acdeaba7113b560c61148a692c6b74719aacd85bd0b
-'http://deb.debian.org/debian/pool/main/x/xorg/xorg_7.7+20.tar.gz' xorg_7.7+20.tar.gz 286646 SHA256:2da7138a6f437ce7ccf63e36786b17053ffbdbcf177dab4874260bfa54595b5c
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/xorg/1:7.7+20/
 
-- https://sources.debian.net/src/xorg/1:7.7+20/ (for browsing the source)
-- https://sources.debian.net/src/xorg/1:7.7+20/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/xorg/1:7.7+20/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `xorgproto=2020.1-1`
 

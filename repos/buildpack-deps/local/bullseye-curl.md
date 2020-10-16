@@ -1816,13 +1816,19 @@ Licenses: (parsed from: `/usr/share/doc/netbase/copyright`)
 
 - `GPL-2`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris netbase=6.2
+'http://deb.debian.org/debian/pool/main/n/netbase/netbase_6.2.dsc' netbase_6.2.dsc 875 SHA256:97433d7f9cf4dbb0ac079d0e02bca7b6e9e48037cab92aef2441954fb13ab20a
+'http://deb.debian.org/debian/pool/main/n/netbase/netbase_6.2.tar.xz' netbase_6.2.tar.xz 31908 SHA256:309a24146a06347d654b261e9e07a82fab844b173674a42e223803dd8258541e
+```
 
-- http://snapshot.debian.org/package/netbase/6.2/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/netbase/6.2/ (for browsing the source)
+- https://sources.debian.net/src/netbase/6.2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/netbase/6.2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `nettle=3.6-2`
 

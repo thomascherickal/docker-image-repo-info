@@ -4004,14 +4004,13 @@ Licenses: (parsed from: `/usr/share/doc/shared-mime-info/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris shared-mime-info=1.15-1
-'http://archive.ubuntu.com/ubuntu/pool/main/s/shared-mime-info/shared-mime-info_1.15-1.dsc' shared-mime-info_1.15-1.dsc 2198 SHA512:7c953cce2037c345330b1147e3cd6595cd4261bb32b1b09022b8d88cd19d7a81a4c24e306806c4bb6277c74ae3c7cbd8add94451722754a1801806024f3f9fca
-'http://archive.ubuntu.com/ubuntu/pool/main/s/shared-mime-info/shared-mime-info_1.15.orig.tar.xz' shared-mime-info_1.15.orig.tar.xz 772708 SHA512:3666aa500dfa6a28bd0524400c47fa16d90ae61f8c80f350fd895972319ec2f511618b8a7fa3cbde621edee46fde19e4506bda62f0bd2d0ede1b08d7bdb9aef2
-'http://archive.ubuntu.com/ubuntu/pool/main/s/shared-mime-info/shared-mime-info_1.15-1.debian.tar.xz' shared-mime-info_1.15-1.debian.tar.xz 9728 SHA512:9134c60839a02c8f3088868d615b62393a44c55aa52ddcfbf8caf53d735c717caba805e1c0582f786761d946291b5698cecefefab384b422b6f1ae578b766b47
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/shared-mime-info/1.15-1/
+
 
 ### `dpkg` source package: `six=1.15.0-1`
 

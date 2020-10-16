@@ -1028,14 +1028,13 @@ Licenses: (parsed from: `/usr/share/doc/libpsl5/copyright`)
 - `Chromium`
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libpsl=0.21.0-1.1
-'http://archive.ubuntu.com/ubuntu/pool/main/libp/libpsl/libpsl_0.21.0-1.1.dsc' libpsl_0.21.0-1.1.dsc 2228 SHA512:b00f8d19e898531543680cdead98d644fe6dfc2f40834aadfb7a782bdd5695c0bd1f7854a55f4dd5cf31462160128c60adac06fc7c9b9c955d897d1a55bf65e0
-'http://archive.ubuntu.com/ubuntu/pool/main/libp/libpsl/libpsl_0.21.0.orig.tar.gz' libpsl_0.21.0.orig.tar.gz 8598583 SHA512:b7466edb9763f94a65330dbb3c19586f9c7b01e20ddedb38ca2fd4c9ee5764a4f9b3291dc4b76659b45425d954f15973345f917b2cd2de72ea731e8c41f2a265
-'http://archive.ubuntu.com/ubuntu/pool/main/libp/libpsl/libpsl_0.21.0-1.1.debian.tar.xz' libpsl_0.21.0-1.1.debian.tar.xz 12432 SHA512:b5e31df56df8ce023e2875074d3fbe6644e840f9d76d25b7a502a87bb7be066159293b9858abe6e19e367b532a38cb1188df40301d267bc6f726f1f2257b41f8
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/libpsl/0.21.0-1.1/
+
 
 ### `dpkg` source package: `libseccomp=2.4.3-1ubuntu4`
 
