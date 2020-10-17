@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:5a28f30af20c6a73b9aab1f7362198edef93fd874bd929209c1206c50f3dd54e`
-- Created: `2020-09-15T23:17:34.614837028Z`
-- Virtual Size: ~ 770.41 Mb  
+- Image ID: `sha256:90ab4665f640986bcfe6a3b324cff79fb08f3614f9907af512259a1e17fb7338`
+- Created: `2020-10-14T11:17:25.238924167Z`
+- Virtual Size: ~ 770.44 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["tini","--","/docker-entrypoint.sh"]`
@@ -19,8 +19,8 @@
   - `LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib`
   - `GPG_KEYS=05AB33110949707C93A279E3D3EFE6B686867BA6 07E48665A34DCAFAE522E5E6266191C37C037D42 47309207D818FFD8DCD3F83F1931D684307A10A5 541FBE7D8F78B25E055DDEE13C370389288584E7 61B832AC2F1C5A90F0F9B00A1C506407564C17A3 79F7026C690BAA50B92CD8B66A3AD3F4F22C4FED 9BA44C2621385CB966EBA586F72C284D731FABEE A27677289986DB50844682F8ACB77FC2E86E29AC A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243 F3A04C595DB5B6A5F1ECA43E3B7BBB100D811BBE F7DA48BB64BCB84ECBA7EE6935CD23C10D498E23`
   - `TOMCAT_MAJOR=9`
-  - `TOMCAT_VERSION=9.0.38`
-  - `TOMCAT_SHA512=37117164c9ab985b4f3032deac9617cee01463f8822586a62a9c498d2720fac23a8207fcf7a76cea2fcb3c6f828ff12b7b31422316a7d92e707c3bd8d687e303`
+  - `TOMCAT_VERSION=9.0.39`
+  - `TOMCAT_SHA512=307ca646bac267e529fb0862278f7133fe80813f0af64a44aed949f4c7a9a98aeb9bd7f08b087645b40c6fefdd3a7fe519e4858a3dbf0a19c38c53704f92b575`
   - `SWT_GTK3=0`
   - `GOSU_VERSION=1.11`
   - `GOSU_GPG_KEYS=B42F6819007F00F88E364FD4036A9C25BF357DD4`
@@ -220,23 +220,29 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/audit/1:2.8.4-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/audit/1:2.8.4-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `base-files=10.3+deb10u5`
+### `dpkg` source package: `base-files=10.3+deb10u6`
 
 Binary Packages:
 
-- `base-files=10.3+deb10u5`
+- `base-files=10.3+deb10u6`
 
 Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris base-files=10.3+deb10u6
+'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3+deb10u6.dsc' base-files_10.3+deb10u6.dsc 1103 SHA256:9b77bbf528cafb65eb6f510fbc3cf1367e55bf915af99740b3579a3e4ac7450f
+'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3+deb10u6.tar.xz' base-files_10.3+deb10u6.tar.xz 65400 SHA256:450aed5977afeb8bf6f3f7ad9d67eb8bd08c27e79a434e1f0ed867f0cfcbc5da
+```
 
-- http://snapshot.debian.org/package/base-files/10.3+deb10u5/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/base-files/10.3+deb10u6/ (for browsing the source)
+- https://sources.debian.net/src/base-files/10.3+deb10u6/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/base-files/10.3+deb10u6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-passwd=3.5.46`
 
