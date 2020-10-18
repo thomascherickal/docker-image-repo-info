@@ -1,7 +1,7 @@
 ## `adoptopenjdk:13-jre-hotspot`
 
 ```console
-$ docker pull adoptopenjdk@sha256:3970242e3da9b07afa985a934efe393c9989d8e096c6b8ce8d80c307e09bcfe3
+$ docker pull adoptopenjdk@sha256:730d13e81ac32efd1db6a31dfd31846cbcc853fa8bb65713ba2291b1e2a34ae7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -132,14 +132,14 @@ ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/
 ### `adoptopenjdk:13-jre-hotspot` - linux; ppc64le
 
 ```console
-$ docker pull adoptopenjdk@sha256:bec7f402dbbf68689e0902d29be3bcfbcb70b9697735ebfe0d719daccd2e249e
+$ docker pull adoptopenjdk@sha256:f788e2d27e87ca9e5875144f04cca2cea49bc4879a514f6eb904e7ee990e1f51
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **86.5 MB (86479194 bytes)**  
+-	Total Size: **87.0 MB (87041695 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3425528205d1d27759b01446dfcbce5a8e566d8049aff41be2a9df0b2f33627e`
+-	Image ID: `sha256:9d0331dfb9a30c4433f78af3a1bcd012dcf82f104f4990fdb168b9a0c3060312`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
@@ -155,13 +155,13 @@ RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
 CMD ["/bin/bash"]
 # Sat, 26 Sep 2020 03:37:39 GMT
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Sat, 26 Sep 2020 03:42:48 GMT
-RUN apt-get update     && apt-get install -y --no-install-recommends curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Sat, 26 Sep 2020 03:42:53 GMT
+# Sat, 26 Sep 2020 03:39:11 GMT
+RUN apt-get update     && apt-get install -y --no-install-recommends tzdata curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
+# Sat, 17 Oct 2020 22:01:49 GMT
 ENV JAVA_VERSION=jdk-13.0.2+8
-# Sat, 26 Sep 2020 03:43:55 GMT
+# Sun, 18 Oct 2020 10:22:48 GMT
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='6c4b69d1609f4c65c576c80d6aa101de80048f8ce5566f890e8fff5349228bae';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk13-binaries/releases/download/jdk-13.0.2%2B8/OpenJDK13U-jre_aarch64_linux_hotspot_13.0.2_8.tar.gz';          ;;        ppc64el|ppc64le)          ESUM='43d6fb71bdf7b6ad9295087c46dfc9b00bf26db1b5cdcff0c418cbe43b49904a';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk13-binaries/releases/download/jdk-13.0.2%2B8/OpenJDK13U-jre_ppc64le_linux_hotspot_13.0.2_8.tar.gz';          ;;        s390x)          ESUM='ac07703f9b9aed0676ae751f2b5b2346285566944ba89d0d8833790f83b00163';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk13-binaries/releases/download/jdk-13.0.2%2B8/OpenJDK13U-jre_s390x_linux_hotspot_13.0.2_8.tar.gz';          ;;        amd64|x86_64)          ESUM='897f16fe8e056395209e35d2384013bd1ff250e717465769079e3f4793628c34';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk13-binaries/releases/download/jdk-13.0.2%2B8/OpenJDK13U-jre_x64_linux_hotspot_13.0.2_8.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Sat, 26 Sep 2020 03:44:05 GMT
+# Sun, 18 Oct 2020 10:23:04 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ```
 
@@ -178,13 +178,13 @@ ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/
 		Last Modified: Sat, 26 Sep 2020 00:05:06 GMT  
 		Size: 189.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ebfb6c489efbefe4db059b4b16dca858d7feaa20cac40f8fafd34ee448cc70bd`  
-		Last Modified: Sat, 26 Sep 2020 03:57:29 GMT  
-		Size: 14.0 MB (13956137 bytes)  
+	-	`sha256:30f274fd8d44c41b563fd8be80792424906ae7f32bacbb53d3fc872271889baf`  
+		Last Modified: Sat, 26 Sep 2020 03:54:38 GMT  
+		Size: 14.5 MB (14518670 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c0bb95ceaef526850c394908cf16fbe09295963d7f652963b62d1872166af972`  
-		Last Modified: Sat, 26 Sep 2020 03:58:37 GMT  
-		Size: 42.1 MB (42113524 bytes)  
+	-	`sha256:628b4cae7312beefc68fe7452722075520ab4e594996371abffcdd637f54a780`  
+		Last Modified: Sun, 18 Oct 2020 10:39:49 GMT  
+		Size: 42.1 MB (42113492 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adoptopenjdk:13-jre-hotspot` - linux; s390x
