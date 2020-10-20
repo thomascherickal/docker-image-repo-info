@@ -382,7 +382,7 @@ CMD ["cassandra" "-f"]
 ## `cassandra:2.1`
 
 ```console
-$ docker pull cassandra@sha256:97cae807893543e7bc59e7c2ccddb073f3a5d4dab2aa090117a22513350c6364
+$ docker pull cassandra@sha256:1a5a5255e735ab85eb80294b60b1c4a4a4a1524713a3ba5e867369a80405ee61
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -511,14 +511,14 @@ CMD ["cassandra" "-f"]
 ### `cassandra:2.1` - linux; arm64 variant v8
 
 ```console
-$ docker pull cassandra@sha256:0ce6ea973023c2eecd55610f7111999ec278e7c4cffaae5fb1feeb39c77a55c2
+$ docker pull cassandra@sha256:f29043fe0c38bdd3cc4f7012af0bb9338f7a063253d2e0f0229838b24d4799b1
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **114.5 MB (114511715 bytes)**  
+-	Total Size: **114.5 MB (114501960 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0db8d5cf516f9b8598e2c9723312af50ab86c8689a636264e5ad238f557dd3a0`
+-	Image ID: `sha256:5794b4ffa50a7fc3f595ea9e12a8ba3142cb8f79b19531ed55468d8461318684`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["cassandra","-f"]`
 
@@ -537,45 +537,45 @@ CMD ["/bin/bash"]
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Fri, 25 Sep 2020 23:06:39 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends tzdata curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Fri, 25 Sep 2020 23:06:40 GMT
-ENV JAVA_VERSION=jdk8u262-b10
-# Fri, 25 Sep 2020 23:07:03 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='0ad1ff282ad034a613c64313c885edef5dfbc5dd51f2eda705bbeb7fa822f238';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jre_aarch64_linux_hotspot_8u262b10.tar.gz';          ;;        armhf|armv7l)          ESUM='330ce008c6f49ddd6dcf43c7839896bb7fe14843300358a71b441a3f94036f69';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jre_arm_linux_hotspot_8u262b10.tar.gz';          ;;        ppc64el|ppc64le)          ESUM='12309354889da2ed9085fda9812c7d2653fa099c36d322af222da11cbb244df7';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jre_ppc64le_linux_hotspot_8u262b10.tar.gz';          ;;        s390x)          ESUM='0225d0a8707c0b6a059c58b77dd7387fb439816100d668ba000c4536cef77fc2';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jre_s390x_linux_hotspot_8u262b10.tar.gz';          ;;        amd64|x86_64)          ESUM='3ce1f34b279a4f8fc6374f5644739622886dd4bcac4fcb0eb596955bac5ca5a4';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jre_x64_linux_hotspot_8u262b10.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Fri, 25 Sep 2020 23:07:04 GMT
+# Tue, 20 Oct 2020 16:39:39 GMT
+ENV JAVA_VERSION=jdk8u265-b01
+# Tue, 20 Oct 2020 16:40:01 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='2f9c5be1bf704f1233bcf96b8c02524c14dc4d43dc80c4926856091961b79948';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u265-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u265b01.tar.gz';          ;;        armhf|armv7l)          ESUM='4ac2503725b2729ec245dbdb000b2486f9c73ae86860c9525f9ac822ec81f0d6';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u265-b01/OpenJDK8U-jre_arm_linux_hotspot_8u265b01.tar.gz';          ;;        ppc64el|ppc64le)          ESUM='4fb3640fae4b9bd4ebf834c775b547ed930cd1b805f4686223994480411aee72';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u265-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u265b01.tar.gz';          ;;        s390x)          ESUM='8b76480c809c4fde654ab55d10371c35d70b50069ab1724960509d99ed61065d';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u265-b01/OpenJDK8U-jre_s390x_linux_hotspot_8u265b01.tar.gz';          ;;        amd64|x86_64)          ESUM='9bce39f63d24626da75778f240294fa466a0ed117e32db798164621fe30b0723';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u265-b01/OpenJDK8U-jre_x64_linux_hotspot_8u265b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
+# Tue, 20 Oct 2020 16:40:02 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sat, 26 Sep 2020 01:53:37 GMT
+# Tue, 20 Oct 2020 17:05:56 GMT
 RUN set -eux; 	groupadd -r cassandra --gid=999; 	useradd -r -g cassandra --uid=999 cassandra
-# Sat, 26 Sep 2020 01:53:53 GMT
+# Tue, 20 Oct 2020 17:06:16 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libjemalloc1 		procps 		python 		iproute2 		numactl 	; 	rm -rf /var/lib/apt/lists/*
-# Sat, 26 Sep 2020 01:53:54 GMT
+# Tue, 20 Oct 2020 17:06:17 GMT
 ENV GOSU_VERSION=1.12
-# Sat, 26 Sep 2020 01:54:11 GMT
+# Tue, 20 Oct 2020 17:06:36 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates dirmngr gnupg wget; 	rm -rf /var/lib/apt/lists/*; 	dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
-# Sat, 26 Sep 2020 01:54:12 GMT
+# Tue, 20 Oct 2020 17:06:37 GMT
 ENV CASSANDRA_HOME=/opt/cassandra
-# Sat, 26 Sep 2020 01:54:12 GMT
+# Tue, 20 Oct 2020 17:06:38 GMT
 ENV CASSANDRA_CONF=/etc/cassandra
-# Sat, 26 Sep 2020 01:54:13 GMT
+# Tue, 20 Oct 2020 17:06:39 GMT
 ENV PATH=/opt/cassandra/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sat, 26 Sep 2020 01:54:14 GMT
+# Tue, 20 Oct 2020 17:06:39 GMT
 ENV GPG_KEYS=514A2AD631A57A16DD0047EC749D6EEC0353B12C 	A26E528B271F19B9E5D8E19EA278B781FE4B2BDA 	A4C465FEA0C552561A392A61E91335D77E3E87CB
-# Sat, 26 Sep 2020 01:55:57 GMT
+# Tue, 20 Oct 2020 17:08:41 GMT
 ENV CASSANDRA_VERSION=2.1.22
-# Sat, 26 Sep 2020 01:55:58 GMT
+# Tue, 20 Oct 2020 17:08:41 GMT
 ENV CASSANDRA_SHA512=68c13950f02bc0d03cc70a45ae9ea3786f07248d7e5d4385fe8776c4e5d3b041addd0f9594b2d06e7fe25a3454eac20ed531bdc380e6122b7149d2c8ac5d866b
-# Sat, 26 Sep 2020 01:56:23 GMT
+# Tue, 20 Oct 2020 17:09:10 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates dirmngr gnupg wget; 	rm -rf /var/lib/apt/lists/*; 		ddist() { 		local f="$1"; shift; 		local distFile="$1"; shift; 		local success=; 		local distUrl=; 		for distUrl in 			'https://www.apache.org/dyn/closer.cgi?action=download&filename=' 			https://www-us.apache.org/dist/ 			https://www.apache.org/dist/ 			https://archive.apache.org/dist/ 		; do 			if wget --progress=dot:giga -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then 				success=1; 				break; 			fi; 		done; 		[ -n "$success" ]; 	}; 		ddist 'cassandra-bin.tgz' "cassandra/$CASSANDRA_VERSION/apache-cassandra-$CASSANDRA_VERSION-bin.tar.gz"; 	echo "$CASSANDRA_SHA512 *cassandra-bin.tgz" | sha512sum --check --strict -; 		ddist 'cassandra-bin.tgz.asc' "cassandra/$CASSANDRA_VERSION/apache-cassandra-$CASSANDRA_VERSION-bin.tar.gz.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	for key in $GPG_KEYS; do 		gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 	done; 	gpg --batch --verify cassandra-bin.tgz.asc cassandra-bin.tgz; 	rm -rf "$GNUPGHOME"; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		mkdir -p "$CASSANDRA_HOME"; 	tar --extract --file cassandra-bin.tgz --directory "$CASSANDRA_HOME" --strip-components 1; 	rm cassandra-bin.tgz*; 		[ ! -e "$CASSANDRA_CONF" ]; 	mv "$CASSANDRA_HOME/conf" "$CASSANDRA_CONF"; 	ln -sT "$CASSANDRA_CONF" "$CASSANDRA_HOME/conf"; 		dpkgArch="$(dpkg --print-architecture)"; 	case "$dpkgArch" in 		ppc64el) 			if grep -q -- '^-Xss' "$CASSANDRA_CONF/jvm.options"; then 				grep -- '^-Xss256k$' "$CASSANDRA_CONF/jvm.options"; 				sed -ri 's/^-Xss256k$/-Xss512k/' "$CASSANDRA_CONF/jvm.options"; 				grep -- '^-Xss512k$' "$CASSANDRA_CONF/jvm.options"; 			elif grep -q -- '-Xss256k' "$CASSANDRA_CONF/cassandra-env.sh"; then 				sed -ri 's/-Xss256k/-Xss512k/g' "$CASSANDRA_CONF/cassandra-env.sh"; 				grep -- '-Xss512k' "$CASSANDRA_CONF/cassandra-env.sh"; 			fi; 			;; 	esac; 		mkdir -p "$CASSANDRA_CONF" /var/lib/cassandra /var/log/cassandra; 	chown -R cassandra:cassandra "$CASSANDRA_CONF" /var/lib/cassandra /var/log/cassandra; 	chmod 777 "$CASSANDRA_CONF" /var/lib/cassandra /var/log/cassandra; 	ln -sT /var/lib/cassandra "$CASSANDRA_HOME/data"; 	ln -sT /var/log/cassandra "$CASSANDRA_HOME/logs"; 		cassandra -v
-# Sat, 26 Sep 2020 01:56:26 GMT
+# Tue, 20 Oct 2020 17:09:14 GMT
 VOLUME [/var/lib/cassandra]
-# Sat, 26 Sep 2020 01:56:26 GMT
+# Tue, 20 Oct 2020 17:09:14 GMT
 COPY file:4124b71c4a5f59acdcefba4560d1bacb9047954f73615ae244532f7769e2caa7 in /usr/local/bin/ 
-# Sat, 26 Sep 2020 01:56:29 GMT
+# Tue, 20 Oct 2020 17:09:17 GMT
 RUN ln -s usr/local/bin/docker-entrypoint.sh /docker-entrypoint.sh # backwards compat
-# Sat, 26 Sep 2020 01:56:29 GMT
+# Tue, 20 Oct 2020 17:09:18 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Sat, 26 Sep 2020 01:56:30 GMT
+# Tue, 20 Oct 2020 17:09:19 GMT
 EXPOSE 7000 7001 7199 9042 9160
-# Sat, 26 Sep 2020 01:56:31 GMT
+# Tue, 20 Oct 2020 17:09:20 GMT
 CMD ["cassandra" "-f"]
 ```
 
@@ -596,32 +596,32 @@ CMD ["cassandra" "-f"]
 		Last Modified: Fri, 25 Sep 2020 23:09:59 GMT  
 		Size: 13.3 MB (13284869 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9e931ba887daa89be01d4ad63a9cab37fc147c16699527c1b5ebe853e7c38d55`  
-		Last Modified: Fri, 25 Sep 2020 23:10:32 GMT  
-		Size: 42.1 MB (42114921 bytes)  
+	-	`sha256:d1e0dc94f4fa96fe7954a97eb8278f5e532919a5105830a6c8d7e9d625f13038`  
+		Last Modified: Tue, 20 Oct 2020 16:46:39 GMT  
+		Size: 42.1 MB (42105998 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6643e1a0be2a6f7dd2f6abc9e187d0a21b7c58f8efd7794ac03bd075294d7581`  
-		Last Modified: Sat, 26 Sep 2020 01:57:03 GMT  
-		Size: 1.9 KB (1894 bytes)  
+	-	`sha256:26fe6c9c21f6884f2f16eafcf835b4afb21f6da7ca2b5ff0335935d3dd762a2d`  
+		Last Modified: Tue, 20 Oct 2020 17:09:43 GMT  
+		Size: 1.9 KB (1893 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:affbcdd617e990a853c981ebddf8d5ef8dfcbe0b5f8ce312431011f87a1ab799`  
-		Last Modified: Sat, 26 Sep 2020 01:57:04 GMT  
-		Size: 8.5 MB (8534589 bytes)  
+	-	`sha256:6694d82c9558212ed1d73b470b2f3b74f4ca50c7b1c37ec80eeae8165e380521`  
+		Last Modified: Tue, 20 Oct 2020 17:09:43 GMT  
+		Size: 8.5 MB (8533839 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:860070ef668d3623c09f2d5ecc2b7eb4c5ea8a642a1a93d263f70a8cf3193b16`  
-		Last Modified: Sat, 26 Sep 2020 01:56:59 GMT  
-		Size: 1.2 MB (1247427 bytes)  
+	-	`sha256:0bf2edcef610c528fa7cd87443e94a829180e531d60d41cdcf9b12badb989607`  
+		Last Modified: Tue, 20 Oct 2020 17:09:41 GMT  
+		Size: 1.2 MB (1247465 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:539cadb1fc0515d408c8f90aec81b0498351e794944a959813e0f36bb357c052`  
-		Last Modified: Sat, 26 Sep 2020 01:57:43 GMT  
-		Size: 25.6 MB (25602852 bytes)  
+	-	`sha256:42bf1879a3a84b816dcba9a14e6e4a77ce8bba2d0f6a18867db3942bd1dc59a6`  
+		Last Modified: Tue, 20 Oct 2020 17:10:31 GMT  
+		Size: 25.6 MB (25602730 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b3495c35e3e73420bf6fefed9664981d7fc9fa42cb362a0f17656844151d339c`  
-		Last Modified: Sat, 26 Sep 2020 01:57:38 GMT  
-		Size: 1.1 KB (1150 bytes)  
+	-	`sha256:8c28462956fabf05eb7a2a43b5f98c0a43c37047e02e1dee983e61200d25692c`  
+		Last Modified: Tue, 20 Oct 2020 17:10:25 GMT  
+		Size: 1.2 KB (1153 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eaa21258cbf0ee87d342dec0a7bd0909e733213c6acb6fa4793ed3375d246b36`  
-		Last Modified: Sat, 26 Sep 2020 01:57:38 GMT  
+	-	`sha256:6a80460833668d4f8373155d85b821e8de23d690c56f835abb7c3ac0ab229d5e`  
+		Last Modified: Tue, 20 Oct 2020 17:10:24 GMT  
 		Size: 121.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -745,7 +745,7 @@ CMD ["cassandra" "-f"]
 ## `cassandra:2.1.22`
 
 ```console
-$ docker pull cassandra@sha256:97cae807893543e7bc59e7c2ccddb073f3a5d4dab2aa090117a22513350c6364
+$ docker pull cassandra@sha256:1a5a5255e735ab85eb80294b60b1c4a4a4a1524713a3ba5e867369a80405ee61
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -874,14 +874,14 @@ CMD ["cassandra" "-f"]
 ### `cassandra:2.1.22` - linux; arm64 variant v8
 
 ```console
-$ docker pull cassandra@sha256:0ce6ea973023c2eecd55610f7111999ec278e7c4cffaae5fb1feeb39c77a55c2
+$ docker pull cassandra@sha256:f29043fe0c38bdd3cc4f7012af0bb9338f7a063253d2e0f0229838b24d4799b1
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **114.5 MB (114511715 bytes)**  
+-	Total Size: **114.5 MB (114501960 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0db8d5cf516f9b8598e2c9723312af50ab86c8689a636264e5ad238f557dd3a0`
+-	Image ID: `sha256:5794b4ffa50a7fc3f595ea9e12a8ba3142cb8f79b19531ed55468d8461318684`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["cassandra","-f"]`
 
@@ -900,45 +900,45 @@ CMD ["/bin/bash"]
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Fri, 25 Sep 2020 23:06:39 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends tzdata curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Fri, 25 Sep 2020 23:06:40 GMT
-ENV JAVA_VERSION=jdk8u262-b10
-# Fri, 25 Sep 2020 23:07:03 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='0ad1ff282ad034a613c64313c885edef5dfbc5dd51f2eda705bbeb7fa822f238';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jre_aarch64_linux_hotspot_8u262b10.tar.gz';          ;;        armhf|armv7l)          ESUM='330ce008c6f49ddd6dcf43c7839896bb7fe14843300358a71b441a3f94036f69';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jre_arm_linux_hotspot_8u262b10.tar.gz';          ;;        ppc64el|ppc64le)          ESUM='12309354889da2ed9085fda9812c7d2653fa099c36d322af222da11cbb244df7';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jre_ppc64le_linux_hotspot_8u262b10.tar.gz';          ;;        s390x)          ESUM='0225d0a8707c0b6a059c58b77dd7387fb439816100d668ba000c4536cef77fc2';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jre_s390x_linux_hotspot_8u262b10.tar.gz';          ;;        amd64|x86_64)          ESUM='3ce1f34b279a4f8fc6374f5644739622886dd4bcac4fcb0eb596955bac5ca5a4';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jre_x64_linux_hotspot_8u262b10.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Fri, 25 Sep 2020 23:07:04 GMT
+# Tue, 20 Oct 2020 16:39:39 GMT
+ENV JAVA_VERSION=jdk8u265-b01
+# Tue, 20 Oct 2020 16:40:01 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='2f9c5be1bf704f1233bcf96b8c02524c14dc4d43dc80c4926856091961b79948';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u265-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u265b01.tar.gz';          ;;        armhf|armv7l)          ESUM='4ac2503725b2729ec245dbdb000b2486f9c73ae86860c9525f9ac822ec81f0d6';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u265-b01/OpenJDK8U-jre_arm_linux_hotspot_8u265b01.tar.gz';          ;;        ppc64el|ppc64le)          ESUM='4fb3640fae4b9bd4ebf834c775b547ed930cd1b805f4686223994480411aee72';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u265-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u265b01.tar.gz';          ;;        s390x)          ESUM='8b76480c809c4fde654ab55d10371c35d70b50069ab1724960509d99ed61065d';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u265-b01/OpenJDK8U-jre_s390x_linux_hotspot_8u265b01.tar.gz';          ;;        amd64|x86_64)          ESUM='9bce39f63d24626da75778f240294fa466a0ed117e32db798164621fe30b0723';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u265-b01/OpenJDK8U-jre_x64_linux_hotspot_8u265b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
+# Tue, 20 Oct 2020 16:40:02 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sat, 26 Sep 2020 01:53:37 GMT
+# Tue, 20 Oct 2020 17:05:56 GMT
 RUN set -eux; 	groupadd -r cassandra --gid=999; 	useradd -r -g cassandra --uid=999 cassandra
-# Sat, 26 Sep 2020 01:53:53 GMT
+# Tue, 20 Oct 2020 17:06:16 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libjemalloc1 		procps 		python 		iproute2 		numactl 	; 	rm -rf /var/lib/apt/lists/*
-# Sat, 26 Sep 2020 01:53:54 GMT
+# Tue, 20 Oct 2020 17:06:17 GMT
 ENV GOSU_VERSION=1.12
-# Sat, 26 Sep 2020 01:54:11 GMT
+# Tue, 20 Oct 2020 17:06:36 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates dirmngr gnupg wget; 	rm -rf /var/lib/apt/lists/*; 	dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
-# Sat, 26 Sep 2020 01:54:12 GMT
+# Tue, 20 Oct 2020 17:06:37 GMT
 ENV CASSANDRA_HOME=/opt/cassandra
-# Sat, 26 Sep 2020 01:54:12 GMT
+# Tue, 20 Oct 2020 17:06:38 GMT
 ENV CASSANDRA_CONF=/etc/cassandra
-# Sat, 26 Sep 2020 01:54:13 GMT
+# Tue, 20 Oct 2020 17:06:39 GMT
 ENV PATH=/opt/cassandra/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sat, 26 Sep 2020 01:54:14 GMT
+# Tue, 20 Oct 2020 17:06:39 GMT
 ENV GPG_KEYS=514A2AD631A57A16DD0047EC749D6EEC0353B12C 	A26E528B271F19B9E5D8E19EA278B781FE4B2BDA 	A4C465FEA0C552561A392A61E91335D77E3E87CB
-# Sat, 26 Sep 2020 01:55:57 GMT
+# Tue, 20 Oct 2020 17:08:41 GMT
 ENV CASSANDRA_VERSION=2.1.22
-# Sat, 26 Sep 2020 01:55:58 GMT
+# Tue, 20 Oct 2020 17:08:41 GMT
 ENV CASSANDRA_SHA512=68c13950f02bc0d03cc70a45ae9ea3786f07248d7e5d4385fe8776c4e5d3b041addd0f9594b2d06e7fe25a3454eac20ed531bdc380e6122b7149d2c8ac5d866b
-# Sat, 26 Sep 2020 01:56:23 GMT
+# Tue, 20 Oct 2020 17:09:10 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates dirmngr gnupg wget; 	rm -rf /var/lib/apt/lists/*; 		ddist() { 		local f="$1"; shift; 		local distFile="$1"; shift; 		local success=; 		local distUrl=; 		for distUrl in 			'https://www.apache.org/dyn/closer.cgi?action=download&filename=' 			https://www-us.apache.org/dist/ 			https://www.apache.org/dist/ 			https://archive.apache.org/dist/ 		; do 			if wget --progress=dot:giga -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then 				success=1; 				break; 			fi; 		done; 		[ -n "$success" ]; 	}; 		ddist 'cassandra-bin.tgz' "cassandra/$CASSANDRA_VERSION/apache-cassandra-$CASSANDRA_VERSION-bin.tar.gz"; 	echo "$CASSANDRA_SHA512 *cassandra-bin.tgz" | sha512sum --check --strict -; 		ddist 'cassandra-bin.tgz.asc' "cassandra/$CASSANDRA_VERSION/apache-cassandra-$CASSANDRA_VERSION-bin.tar.gz.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	for key in $GPG_KEYS; do 		gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 	done; 	gpg --batch --verify cassandra-bin.tgz.asc cassandra-bin.tgz; 	rm -rf "$GNUPGHOME"; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		mkdir -p "$CASSANDRA_HOME"; 	tar --extract --file cassandra-bin.tgz --directory "$CASSANDRA_HOME" --strip-components 1; 	rm cassandra-bin.tgz*; 		[ ! -e "$CASSANDRA_CONF" ]; 	mv "$CASSANDRA_HOME/conf" "$CASSANDRA_CONF"; 	ln -sT "$CASSANDRA_CONF" "$CASSANDRA_HOME/conf"; 		dpkgArch="$(dpkg --print-architecture)"; 	case "$dpkgArch" in 		ppc64el) 			if grep -q -- '^-Xss' "$CASSANDRA_CONF/jvm.options"; then 				grep -- '^-Xss256k$' "$CASSANDRA_CONF/jvm.options"; 				sed -ri 's/^-Xss256k$/-Xss512k/' "$CASSANDRA_CONF/jvm.options"; 				grep -- '^-Xss512k$' "$CASSANDRA_CONF/jvm.options"; 			elif grep -q -- '-Xss256k' "$CASSANDRA_CONF/cassandra-env.sh"; then 				sed -ri 's/-Xss256k/-Xss512k/g' "$CASSANDRA_CONF/cassandra-env.sh"; 				grep -- '-Xss512k' "$CASSANDRA_CONF/cassandra-env.sh"; 			fi; 			;; 	esac; 		mkdir -p "$CASSANDRA_CONF" /var/lib/cassandra /var/log/cassandra; 	chown -R cassandra:cassandra "$CASSANDRA_CONF" /var/lib/cassandra /var/log/cassandra; 	chmod 777 "$CASSANDRA_CONF" /var/lib/cassandra /var/log/cassandra; 	ln -sT /var/lib/cassandra "$CASSANDRA_HOME/data"; 	ln -sT /var/log/cassandra "$CASSANDRA_HOME/logs"; 		cassandra -v
-# Sat, 26 Sep 2020 01:56:26 GMT
+# Tue, 20 Oct 2020 17:09:14 GMT
 VOLUME [/var/lib/cassandra]
-# Sat, 26 Sep 2020 01:56:26 GMT
+# Tue, 20 Oct 2020 17:09:14 GMT
 COPY file:4124b71c4a5f59acdcefba4560d1bacb9047954f73615ae244532f7769e2caa7 in /usr/local/bin/ 
-# Sat, 26 Sep 2020 01:56:29 GMT
+# Tue, 20 Oct 2020 17:09:17 GMT
 RUN ln -s usr/local/bin/docker-entrypoint.sh /docker-entrypoint.sh # backwards compat
-# Sat, 26 Sep 2020 01:56:29 GMT
+# Tue, 20 Oct 2020 17:09:18 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Sat, 26 Sep 2020 01:56:30 GMT
+# Tue, 20 Oct 2020 17:09:19 GMT
 EXPOSE 7000 7001 7199 9042 9160
-# Sat, 26 Sep 2020 01:56:31 GMT
+# Tue, 20 Oct 2020 17:09:20 GMT
 CMD ["cassandra" "-f"]
 ```
 
@@ -959,32 +959,32 @@ CMD ["cassandra" "-f"]
 		Last Modified: Fri, 25 Sep 2020 23:09:59 GMT  
 		Size: 13.3 MB (13284869 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9e931ba887daa89be01d4ad63a9cab37fc147c16699527c1b5ebe853e7c38d55`  
-		Last Modified: Fri, 25 Sep 2020 23:10:32 GMT  
-		Size: 42.1 MB (42114921 bytes)  
+	-	`sha256:d1e0dc94f4fa96fe7954a97eb8278f5e532919a5105830a6c8d7e9d625f13038`  
+		Last Modified: Tue, 20 Oct 2020 16:46:39 GMT  
+		Size: 42.1 MB (42105998 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6643e1a0be2a6f7dd2f6abc9e187d0a21b7c58f8efd7794ac03bd075294d7581`  
-		Last Modified: Sat, 26 Sep 2020 01:57:03 GMT  
-		Size: 1.9 KB (1894 bytes)  
+	-	`sha256:26fe6c9c21f6884f2f16eafcf835b4afb21f6da7ca2b5ff0335935d3dd762a2d`  
+		Last Modified: Tue, 20 Oct 2020 17:09:43 GMT  
+		Size: 1.9 KB (1893 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:affbcdd617e990a853c981ebddf8d5ef8dfcbe0b5f8ce312431011f87a1ab799`  
-		Last Modified: Sat, 26 Sep 2020 01:57:04 GMT  
-		Size: 8.5 MB (8534589 bytes)  
+	-	`sha256:6694d82c9558212ed1d73b470b2f3b74f4ca50c7b1c37ec80eeae8165e380521`  
+		Last Modified: Tue, 20 Oct 2020 17:09:43 GMT  
+		Size: 8.5 MB (8533839 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:860070ef668d3623c09f2d5ecc2b7eb4c5ea8a642a1a93d263f70a8cf3193b16`  
-		Last Modified: Sat, 26 Sep 2020 01:56:59 GMT  
-		Size: 1.2 MB (1247427 bytes)  
+	-	`sha256:0bf2edcef610c528fa7cd87443e94a829180e531d60d41cdcf9b12badb989607`  
+		Last Modified: Tue, 20 Oct 2020 17:09:41 GMT  
+		Size: 1.2 MB (1247465 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:539cadb1fc0515d408c8f90aec81b0498351e794944a959813e0f36bb357c052`  
-		Last Modified: Sat, 26 Sep 2020 01:57:43 GMT  
-		Size: 25.6 MB (25602852 bytes)  
+	-	`sha256:42bf1879a3a84b816dcba9a14e6e4a77ce8bba2d0f6a18867db3942bd1dc59a6`  
+		Last Modified: Tue, 20 Oct 2020 17:10:31 GMT  
+		Size: 25.6 MB (25602730 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b3495c35e3e73420bf6fefed9664981d7fc9fa42cb362a0f17656844151d339c`  
-		Last Modified: Sat, 26 Sep 2020 01:57:38 GMT  
-		Size: 1.1 KB (1150 bytes)  
+	-	`sha256:8c28462956fabf05eb7a2a43b5f98c0a43c37047e02e1dee983e61200d25692c`  
+		Last Modified: Tue, 20 Oct 2020 17:10:25 GMT  
+		Size: 1.2 KB (1153 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eaa21258cbf0ee87d342dec0a7bd0909e733213c6acb6fa4793ed3375d246b36`  
-		Last Modified: Sat, 26 Sep 2020 01:57:38 GMT  
+	-	`sha256:6a80460833668d4f8373155d85b821e8de23d690c56f835abb7c3ac0ab229d5e`  
+		Last Modified: Tue, 20 Oct 2020 17:10:24 GMT  
 		Size: 121.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -1108,7 +1108,7 @@ CMD ["cassandra" "-f"]
 ## `cassandra:2.2`
 
 ```console
-$ docker pull cassandra@sha256:3191bce18832ef26b8afa802e167299143615bbd16427bbb9e5eb2c8ceec0fd5
+$ docker pull cassandra@sha256:519bad5fd395c2ba5f0303e31dfa9173f782d55a32ead6668c919b8d47ec8aeb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1237,14 +1237,14 @@ CMD ["cassandra" "-f"]
 ### `cassandra:2.2` - linux; arm variant v7
 
 ```console
-$ docker pull cassandra@sha256:7d4d23f7f46aec82929c48e7100d20d634b32c6360b1ff3dbbd9a37c5b013436
+$ docker pull cassandra@sha256:189b08220590006448418b3fd8ffe01909250160ae5339223fc46b8d1f11e2ac
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **113.8 MB (113811305 bytes)**  
+-	Total Size: **113.8 MB (113814829 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3b597ae9020619675e42f237758fa21ea6c46d49a8bd2fb493b9178419e3cd58`
+-	Image ID: `sha256:db50be83ebd3dc0e641e13a3d3b6e868b50d6eccc08763822762c35891bb0388`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["cassandra","-f"]`
 
@@ -1263,45 +1263,45 @@ CMD ["/bin/bash"]
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Fri, 25 Sep 2020 23:23:39 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends tzdata curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Fri, 25 Sep 2020 23:23:40 GMT
-ENV JAVA_VERSION=jdk8u262-b10
-# Fri, 25 Sep 2020 23:24:11 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='0ad1ff282ad034a613c64313c885edef5dfbc5dd51f2eda705bbeb7fa822f238';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jre_aarch64_linux_hotspot_8u262b10.tar.gz';          ;;        armhf|armv7l)          ESUM='330ce008c6f49ddd6dcf43c7839896bb7fe14843300358a71b441a3f94036f69';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jre_arm_linux_hotspot_8u262b10.tar.gz';          ;;        ppc64el|ppc64le)          ESUM='12309354889da2ed9085fda9812c7d2653fa099c36d322af222da11cbb244df7';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jre_ppc64le_linux_hotspot_8u262b10.tar.gz';          ;;        s390x)          ESUM='0225d0a8707c0b6a059c58b77dd7387fb439816100d668ba000c4536cef77fc2';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jre_s390x_linux_hotspot_8u262b10.tar.gz';          ;;        amd64|x86_64)          ESUM='3ce1f34b279a4f8fc6374f5644739622886dd4bcac4fcb0eb596955bac5ca5a4';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jre_x64_linux_hotspot_8u262b10.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Fri, 25 Sep 2020 23:24:12 GMT
+# Tue, 20 Oct 2020 17:00:24 GMT
+ENV JAVA_VERSION=jdk8u265-b01
+# Tue, 20 Oct 2020 17:00:59 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='2f9c5be1bf704f1233bcf96b8c02524c14dc4d43dc80c4926856091961b79948';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u265-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u265b01.tar.gz';          ;;        armhf|armv7l)          ESUM='4ac2503725b2729ec245dbdb000b2486f9c73ae86860c9525f9ac822ec81f0d6';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u265-b01/OpenJDK8U-jre_arm_linux_hotspot_8u265b01.tar.gz';          ;;        ppc64el|ppc64le)          ESUM='4fb3640fae4b9bd4ebf834c775b547ed930cd1b805f4686223994480411aee72';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u265-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u265b01.tar.gz';          ;;        s390x)          ESUM='8b76480c809c4fde654ab55d10371c35d70b50069ab1724960509d99ed61065d';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u265-b01/OpenJDK8U-jre_s390x_linux_hotspot_8u265b01.tar.gz';          ;;        amd64|x86_64)          ESUM='9bce39f63d24626da75778f240294fa466a0ed117e32db798164621fe30b0723';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u265-b01/OpenJDK8U-jre_x64_linux_hotspot_8u265b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
+# Tue, 20 Oct 2020 17:01:00 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sat, 26 Sep 2020 01:25:45 GMT
+# Tue, 20 Oct 2020 17:21:41 GMT
 RUN set -eux; 	groupadd -r cassandra --gid=999; 	useradd -r -g cassandra --uid=999 cassandra
-# Sat, 26 Sep 2020 01:26:10 GMT
+# Tue, 20 Oct 2020 17:22:02 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libjemalloc1 		procps 		python 		iproute2 		numactl 	; 	rm -rf /var/lib/apt/lists/*
-# Sat, 26 Sep 2020 01:26:13 GMT
+# Tue, 20 Oct 2020 17:22:03 GMT
 ENV GOSU_VERSION=1.12
-# Sat, 26 Sep 2020 01:26:34 GMT
+# Tue, 20 Oct 2020 17:22:22 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates dirmngr gnupg wget; 	rm -rf /var/lib/apt/lists/*; 	dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
-# Sat, 26 Sep 2020 01:26:36 GMT
+# Tue, 20 Oct 2020 17:22:23 GMT
 ENV CASSANDRA_HOME=/opt/cassandra
-# Sat, 26 Sep 2020 01:26:37 GMT
+# Tue, 20 Oct 2020 17:22:23 GMT
 ENV CASSANDRA_CONF=/etc/cassandra
-# Sat, 26 Sep 2020 01:26:38 GMT
+# Tue, 20 Oct 2020 17:22:24 GMT
 ENV PATH=/opt/cassandra/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sat, 26 Sep 2020 01:26:40 GMT
+# Tue, 20 Oct 2020 17:22:25 GMT
 ENV GPG_KEYS=514A2AD631A57A16DD0047EC749D6EEC0353B12C 	A26E528B271F19B9E5D8E19EA278B781FE4B2BDA 	A4C465FEA0C552561A392A61E91335D77E3E87CB
-# Sat, 26 Sep 2020 01:28:52 GMT
+# Tue, 20 Oct 2020 17:24:18 GMT
 ENV CASSANDRA_VERSION=2.2.16
-# Sat, 26 Sep 2020 01:28:54 GMT
+# Tue, 20 Oct 2020 17:24:19 GMT
 ENV CASSANDRA_SHA512=db2026342e876caf790833d49f7ab1a2fbba39bf380384ef66e2da4913f537690a56c97cb2f6ea17f667a0d34aeb406fa658db02aec1121a5ba7134ab59a5cfb
-# Sat, 26 Sep 2020 01:29:32 GMT
+# Tue, 20 Oct 2020 17:24:52 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates dirmngr gnupg wget; 	rm -rf /var/lib/apt/lists/*; 		ddist() { 		local f="$1"; shift; 		local distFile="$1"; shift; 		local success=; 		local distUrl=; 		for distUrl in 			'https://www.apache.org/dyn/closer.cgi?action=download&filename=' 			https://www-us.apache.org/dist/ 			https://www.apache.org/dist/ 			https://archive.apache.org/dist/ 		; do 			if wget --progress=dot:giga -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then 				success=1; 				break; 			fi; 		done; 		[ -n "$success" ]; 	}; 		ddist 'cassandra-bin.tgz' "cassandra/$CASSANDRA_VERSION/apache-cassandra-$CASSANDRA_VERSION-bin.tar.gz"; 	echo "$CASSANDRA_SHA512 *cassandra-bin.tgz" | sha512sum --check --strict -; 		ddist 'cassandra-bin.tgz.asc' "cassandra/$CASSANDRA_VERSION/apache-cassandra-$CASSANDRA_VERSION-bin.tar.gz.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	for key in $GPG_KEYS; do 		gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 	done; 	gpg --batch --verify cassandra-bin.tgz.asc cassandra-bin.tgz; 	rm -rf "$GNUPGHOME"; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		mkdir -p "$CASSANDRA_HOME"; 	tar --extract --file cassandra-bin.tgz --directory "$CASSANDRA_HOME" --strip-components 1; 	rm cassandra-bin.tgz*; 		[ ! -e "$CASSANDRA_CONF" ]; 	mv "$CASSANDRA_HOME/conf" "$CASSANDRA_CONF"; 	ln -sT "$CASSANDRA_CONF" "$CASSANDRA_HOME/conf"; 		dpkgArch="$(dpkg --print-architecture)"; 	case "$dpkgArch" in 		ppc64el) 			if grep -q -- '^-Xss' "$CASSANDRA_CONF/jvm.options"; then 				grep -- '^-Xss256k$' "$CASSANDRA_CONF/jvm.options"; 				sed -ri 's/^-Xss256k$/-Xss512k/' "$CASSANDRA_CONF/jvm.options"; 				grep -- '^-Xss512k$' "$CASSANDRA_CONF/jvm.options"; 			elif grep -q -- '-Xss256k' "$CASSANDRA_CONF/cassandra-env.sh"; then 				sed -ri 's/-Xss256k/-Xss512k/g' "$CASSANDRA_CONF/cassandra-env.sh"; 				grep -- '-Xss512k' "$CASSANDRA_CONF/cassandra-env.sh"; 			fi; 			;; 	esac; 		mkdir -p "$CASSANDRA_CONF" /var/lib/cassandra /var/log/cassandra; 	chown -R cassandra:cassandra "$CASSANDRA_CONF" /var/lib/cassandra /var/log/cassandra; 	chmod 777 "$CASSANDRA_CONF" /var/lib/cassandra /var/log/cassandra; 	ln -sT /var/lib/cassandra "$CASSANDRA_HOME/data"; 	ln -sT /var/log/cassandra "$CASSANDRA_HOME/logs"; 		cassandra -v
-# Sat, 26 Sep 2020 01:29:37 GMT
+# Tue, 20 Oct 2020 17:24:55 GMT
 VOLUME [/var/lib/cassandra]
-# Sat, 26 Sep 2020 01:29:38 GMT
+# Tue, 20 Oct 2020 17:24:56 GMT
 COPY file:4124b71c4a5f59acdcefba4560d1bacb9047954f73615ae244532f7769e2caa7 in /usr/local/bin/ 
-# Sat, 26 Sep 2020 01:29:44 GMT
+# Tue, 20 Oct 2020 17:24:58 GMT
 RUN ln -s usr/local/bin/docker-entrypoint.sh /docker-entrypoint.sh # backwards compat
-# Sat, 26 Sep 2020 01:29:45 GMT
+# Tue, 20 Oct 2020 17:24:59 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Sat, 26 Sep 2020 01:29:46 GMT
+# Tue, 20 Oct 2020 17:25:02 GMT
 EXPOSE 7000 7001 7199 9042 9160
-# Sat, 26 Sep 2020 01:29:48 GMT
+# Tue, 20 Oct 2020 17:25:03 GMT
 CMD ["cassandra" "-f"]
 ```
 
@@ -1322,32 +1322,32 @@ CMD ["cassandra" "-f"]
 		Last Modified: Fri, 25 Sep 2020 23:27:19 GMT  
 		Size: 12.8 MB (12817173 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:293c0dcc6acc42a427ef3192b87e1a8605f27d0bf9d5c68fbf45598ae2c6b5ba`  
-		Last Modified: Fri, 25 Sep 2020 23:27:56 GMT  
-		Size: 38.6 MB (38612369 bytes)  
+	-	`sha256:e8275c2039e99d6fb294826af0b8ea4faa9e982e5e3b792a7fe66491321f221f`  
+		Last Modified: Tue, 20 Oct 2020 17:03:47 GMT  
+		Size: 38.6 MB (38612514 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:80e751c561aec7dbf43df9fcd838d61d3a2328a3e38ecbbc8c8e7d7da1514133`  
-		Last Modified: Sat, 26 Sep 2020 01:30:24 GMT  
-		Size: 1.9 KB (1878 bytes)  
+	-	`sha256:0803319a48941e06857a04d4a116e6b8751bef6b0891e027d970d7452ff6d020`  
+		Last Modified: Tue, 20 Oct 2020 17:25:28 GMT  
+		Size: 1.9 KB (1882 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ba376cbe37dcba1bc03f419134878d3248e510ebb1d5ecacb17ff73c3652645b`  
-		Last Modified: Sat, 26 Sep 2020 01:30:26 GMT  
-		Size: 8.2 MB (8195430 bytes)  
+	-	`sha256:cbb6ef0bc1adc1d2645d7a73dbcf6e0e96b8362f107a09e98995428f7043ba4c`  
+		Last Modified: Tue, 20 Oct 2020 17:25:30 GMT  
+		Size: 8.2 MB (8198639 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d8b538237d0116f9f5c94649826878a247e86edd061fd57e03c8a2d1aa795c3d`  
-		Last Modified: Sat, 26 Sep 2020 01:30:23 GMT  
-		Size: 1.3 MB (1263794 bytes)  
+	-	`sha256:ec1151f8dd05f62fccd77464d9c72b1ff7ba80c2d6ea0aaca286d8e055d8a512`  
+		Last Modified: Tue, 20 Oct 2020 17:25:27 GMT  
+		Size: 1.3 MB (1263808 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4398999676d77bb5160302e3c397e9d01bb9333d66f2af45745e62ebc5fbd8f4`  
-		Last Modified: Sat, 26 Sep 2020 01:31:18 GMT  
-		Size: 30.6 MB (30638832 bytes)  
+	-	`sha256:7492a59643bb30218faaf2a168efe82ae9f907d9b57e6ddef0f263b615bc210e`  
+		Last Modified: Tue, 20 Oct 2020 17:26:37 GMT  
+		Size: 30.6 MB (30638985 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:80b410b194053809a5936f4b1b32d8db9b57536a63cce423679fd7d3032a3cfd`  
-		Last Modified: Sat, 26 Sep 2020 01:31:07 GMT  
-		Size: 1.2 KB (1153 bytes)  
+	-	`sha256:2f047495b81f113305be33744ee2207f1fe5dc5360c0d3e572c1b2a79af6576e`  
+		Last Modified: Tue, 20 Oct 2020 17:26:11 GMT  
+		Size: 1.2 KB (1152 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:702ce5aa923828e5bf656ade9be118ba205e8aaf085c116a5e8fbec3b7f0eddc`  
-		Last Modified: Sat, 26 Sep 2020 01:31:07 GMT  
+	-	`sha256:268ca476363c1267b51493452f182c62a9ee0b0a90f53aa20055c124719050c5`  
+		Last Modified: Tue, 20 Oct 2020 17:26:12 GMT  
 		Size: 121.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -1471,7 +1471,7 @@ CMD ["cassandra" "-f"]
 ## `cassandra:2.2.16`
 
 ```console
-$ docker pull cassandra@sha256:3191bce18832ef26b8afa802e167299143615bbd16427bbb9e5eb2c8ceec0fd5
+$ docker pull cassandra@sha256:519bad5fd395c2ba5f0303e31dfa9173f782d55a32ead6668c919b8d47ec8aeb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1600,14 +1600,14 @@ CMD ["cassandra" "-f"]
 ### `cassandra:2.2.16` - linux; arm variant v7
 
 ```console
-$ docker pull cassandra@sha256:7d4d23f7f46aec82929c48e7100d20d634b32c6360b1ff3dbbd9a37c5b013436
+$ docker pull cassandra@sha256:189b08220590006448418b3fd8ffe01909250160ae5339223fc46b8d1f11e2ac
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **113.8 MB (113811305 bytes)**  
+-	Total Size: **113.8 MB (113814829 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3b597ae9020619675e42f237758fa21ea6c46d49a8bd2fb493b9178419e3cd58`
+-	Image ID: `sha256:db50be83ebd3dc0e641e13a3d3b6e868b50d6eccc08763822762c35891bb0388`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["cassandra","-f"]`
 
@@ -1626,45 +1626,45 @@ CMD ["/bin/bash"]
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Fri, 25 Sep 2020 23:23:39 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends tzdata curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Fri, 25 Sep 2020 23:23:40 GMT
-ENV JAVA_VERSION=jdk8u262-b10
-# Fri, 25 Sep 2020 23:24:11 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='0ad1ff282ad034a613c64313c885edef5dfbc5dd51f2eda705bbeb7fa822f238';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jre_aarch64_linux_hotspot_8u262b10.tar.gz';          ;;        armhf|armv7l)          ESUM='330ce008c6f49ddd6dcf43c7839896bb7fe14843300358a71b441a3f94036f69';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jre_arm_linux_hotspot_8u262b10.tar.gz';          ;;        ppc64el|ppc64le)          ESUM='12309354889da2ed9085fda9812c7d2653fa099c36d322af222da11cbb244df7';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jre_ppc64le_linux_hotspot_8u262b10.tar.gz';          ;;        s390x)          ESUM='0225d0a8707c0b6a059c58b77dd7387fb439816100d668ba000c4536cef77fc2';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jre_s390x_linux_hotspot_8u262b10.tar.gz';          ;;        amd64|x86_64)          ESUM='3ce1f34b279a4f8fc6374f5644739622886dd4bcac4fcb0eb596955bac5ca5a4';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jre_x64_linux_hotspot_8u262b10.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Fri, 25 Sep 2020 23:24:12 GMT
+# Tue, 20 Oct 2020 17:00:24 GMT
+ENV JAVA_VERSION=jdk8u265-b01
+# Tue, 20 Oct 2020 17:00:59 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='2f9c5be1bf704f1233bcf96b8c02524c14dc4d43dc80c4926856091961b79948';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u265-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u265b01.tar.gz';          ;;        armhf|armv7l)          ESUM='4ac2503725b2729ec245dbdb000b2486f9c73ae86860c9525f9ac822ec81f0d6';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u265-b01/OpenJDK8U-jre_arm_linux_hotspot_8u265b01.tar.gz';          ;;        ppc64el|ppc64le)          ESUM='4fb3640fae4b9bd4ebf834c775b547ed930cd1b805f4686223994480411aee72';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u265-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u265b01.tar.gz';          ;;        s390x)          ESUM='8b76480c809c4fde654ab55d10371c35d70b50069ab1724960509d99ed61065d';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u265-b01/OpenJDK8U-jre_s390x_linux_hotspot_8u265b01.tar.gz';          ;;        amd64|x86_64)          ESUM='9bce39f63d24626da75778f240294fa466a0ed117e32db798164621fe30b0723';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u265-b01/OpenJDK8U-jre_x64_linux_hotspot_8u265b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
+# Tue, 20 Oct 2020 17:01:00 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sat, 26 Sep 2020 01:25:45 GMT
+# Tue, 20 Oct 2020 17:21:41 GMT
 RUN set -eux; 	groupadd -r cassandra --gid=999; 	useradd -r -g cassandra --uid=999 cassandra
-# Sat, 26 Sep 2020 01:26:10 GMT
+# Tue, 20 Oct 2020 17:22:02 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libjemalloc1 		procps 		python 		iproute2 		numactl 	; 	rm -rf /var/lib/apt/lists/*
-# Sat, 26 Sep 2020 01:26:13 GMT
+# Tue, 20 Oct 2020 17:22:03 GMT
 ENV GOSU_VERSION=1.12
-# Sat, 26 Sep 2020 01:26:34 GMT
+# Tue, 20 Oct 2020 17:22:22 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates dirmngr gnupg wget; 	rm -rf /var/lib/apt/lists/*; 	dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
-# Sat, 26 Sep 2020 01:26:36 GMT
+# Tue, 20 Oct 2020 17:22:23 GMT
 ENV CASSANDRA_HOME=/opt/cassandra
-# Sat, 26 Sep 2020 01:26:37 GMT
+# Tue, 20 Oct 2020 17:22:23 GMT
 ENV CASSANDRA_CONF=/etc/cassandra
-# Sat, 26 Sep 2020 01:26:38 GMT
+# Tue, 20 Oct 2020 17:22:24 GMT
 ENV PATH=/opt/cassandra/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sat, 26 Sep 2020 01:26:40 GMT
+# Tue, 20 Oct 2020 17:22:25 GMT
 ENV GPG_KEYS=514A2AD631A57A16DD0047EC749D6EEC0353B12C 	A26E528B271F19B9E5D8E19EA278B781FE4B2BDA 	A4C465FEA0C552561A392A61E91335D77E3E87CB
-# Sat, 26 Sep 2020 01:28:52 GMT
+# Tue, 20 Oct 2020 17:24:18 GMT
 ENV CASSANDRA_VERSION=2.2.16
-# Sat, 26 Sep 2020 01:28:54 GMT
+# Tue, 20 Oct 2020 17:24:19 GMT
 ENV CASSANDRA_SHA512=db2026342e876caf790833d49f7ab1a2fbba39bf380384ef66e2da4913f537690a56c97cb2f6ea17f667a0d34aeb406fa658db02aec1121a5ba7134ab59a5cfb
-# Sat, 26 Sep 2020 01:29:32 GMT
+# Tue, 20 Oct 2020 17:24:52 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates dirmngr gnupg wget; 	rm -rf /var/lib/apt/lists/*; 		ddist() { 		local f="$1"; shift; 		local distFile="$1"; shift; 		local success=; 		local distUrl=; 		for distUrl in 			'https://www.apache.org/dyn/closer.cgi?action=download&filename=' 			https://www-us.apache.org/dist/ 			https://www.apache.org/dist/ 			https://archive.apache.org/dist/ 		; do 			if wget --progress=dot:giga -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then 				success=1; 				break; 			fi; 		done; 		[ -n "$success" ]; 	}; 		ddist 'cassandra-bin.tgz' "cassandra/$CASSANDRA_VERSION/apache-cassandra-$CASSANDRA_VERSION-bin.tar.gz"; 	echo "$CASSANDRA_SHA512 *cassandra-bin.tgz" | sha512sum --check --strict -; 		ddist 'cassandra-bin.tgz.asc' "cassandra/$CASSANDRA_VERSION/apache-cassandra-$CASSANDRA_VERSION-bin.tar.gz.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	for key in $GPG_KEYS; do 		gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 	done; 	gpg --batch --verify cassandra-bin.tgz.asc cassandra-bin.tgz; 	rm -rf "$GNUPGHOME"; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		mkdir -p "$CASSANDRA_HOME"; 	tar --extract --file cassandra-bin.tgz --directory "$CASSANDRA_HOME" --strip-components 1; 	rm cassandra-bin.tgz*; 		[ ! -e "$CASSANDRA_CONF" ]; 	mv "$CASSANDRA_HOME/conf" "$CASSANDRA_CONF"; 	ln -sT "$CASSANDRA_CONF" "$CASSANDRA_HOME/conf"; 		dpkgArch="$(dpkg --print-architecture)"; 	case "$dpkgArch" in 		ppc64el) 			if grep -q -- '^-Xss' "$CASSANDRA_CONF/jvm.options"; then 				grep -- '^-Xss256k$' "$CASSANDRA_CONF/jvm.options"; 				sed -ri 's/^-Xss256k$/-Xss512k/' "$CASSANDRA_CONF/jvm.options"; 				grep -- '^-Xss512k$' "$CASSANDRA_CONF/jvm.options"; 			elif grep -q -- '-Xss256k' "$CASSANDRA_CONF/cassandra-env.sh"; then 				sed -ri 's/-Xss256k/-Xss512k/g' "$CASSANDRA_CONF/cassandra-env.sh"; 				grep -- '-Xss512k' "$CASSANDRA_CONF/cassandra-env.sh"; 			fi; 			;; 	esac; 		mkdir -p "$CASSANDRA_CONF" /var/lib/cassandra /var/log/cassandra; 	chown -R cassandra:cassandra "$CASSANDRA_CONF" /var/lib/cassandra /var/log/cassandra; 	chmod 777 "$CASSANDRA_CONF" /var/lib/cassandra /var/log/cassandra; 	ln -sT /var/lib/cassandra "$CASSANDRA_HOME/data"; 	ln -sT /var/log/cassandra "$CASSANDRA_HOME/logs"; 		cassandra -v
-# Sat, 26 Sep 2020 01:29:37 GMT
+# Tue, 20 Oct 2020 17:24:55 GMT
 VOLUME [/var/lib/cassandra]
-# Sat, 26 Sep 2020 01:29:38 GMT
+# Tue, 20 Oct 2020 17:24:56 GMT
 COPY file:4124b71c4a5f59acdcefba4560d1bacb9047954f73615ae244532f7769e2caa7 in /usr/local/bin/ 
-# Sat, 26 Sep 2020 01:29:44 GMT
+# Tue, 20 Oct 2020 17:24:58 GMT
 RUN ln -s usr/local/bin/docker-entrypoint.sh /docker-entrypoint.sh # backwards compat
-# Sat, 26 Sep 2020 01:29:45 GMT
+# Tue, 20 Oct 2020 17:24:59 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Sat, 26 Sep 2020 01:29:46 GMT
+# Tue, 20 Oct 2020 17:25:02 GMT
 EXPOSE 7000 7001 7199 9042 9160
-# Sat, 26 Sep 2020 01:29:48 GMT
+# Tue, 20 Oct 2020 17:25:03 GMT
 CMD ["cassandra" "-f"]
 ```
 
@@ -1685,32 +1685,32 @@ CMD ["cassandra" "-f"]
 		Last Modified: Fri, 25 Sep 2020 23:27:19 GMT  
 		Size: 12.8 MB (12817173 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:293c0dcc6acc42a427ef3192b87e1a8605f27d0bf9d5c68fbf45598ae2c6b5ba`  
-		Last Modified: Fri, 25 Sep 2020 23:27:56 GMT  
-		Size: 38.6 MB (38612369 bytes)  
+	-	`sha256:e8275c2039e99d6fb294826af0b8ea4faa9e982e5e3b792a7fe66491321f221f`  
+		Last Modified: Tue, 20 Oct 2020 17:03:47 GMT  
+		Size: 38.6 MB (38612514 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:80e751c561aec7dbf43df9fcd838d61d3a2328a3e38ecbbc8c8e7d7da1514133`  
-		Last Modified: Sat, 26 Sep 2020 01:30:24 GMT  
-		Size: 1.9 KB (1878 bytes)  
+	-	`sha256:0803319a48941e06857a04d4a116e6b8751bef6b0891e027d970d7452ff6d020`  
+		Last Modified: Tue, 20 Oct 2020 17:25:28 GMT  
+		Size: 1.9 KB (1882 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ba376cbe37dcba1bc03f419134878d3248e510ebb1d5ecacb17ff73c3652645b`  
-		Last Modified: Sat, 26 Sep 2020 01:30:26 GMT  
-		Size: 8.2 MB (8195430 bytes)  
+	-	`sha256:cbb6ef0bc1adc1d2645d7a73dbcf6e0e96b8362f107a09e98995428f7043ba4c`  
+		Last Modified: Tue, 20 Oct 2020 17:25:30 GMT  
+		Size: 8.2 MB (8198639 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d8b538237d0116f9f5c94649826878a247e86edd061fd57e03c8a2d1aa795c3d`  
-		Last Modified: Sat, 26 Sep 2020 01:30:23 GMT  
-		Size: 1.3 MB (1263794 bytes)  
+	-	`sha256:ec1151f8dd05f62fccd77464d9c72b1ff7ba80c2d6ea0aaca286d8e055d8a512`  
+		Last Modified: Tue, 20 Oct 2020 17:25:27 GMT  
+		Size: 1.3 MB (1263808 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4398999676d77bb5160302e3c397e9d01bb9333d66f2af45745e62ebc5fbd8f4`  
-		Last Modified: Sat, 26 Sep 2020 01:31:18 GMT  
-		Size: 30.6 MB (30638832 bytes)  
+	-	`sha256:7492a59643bb30218faaf2a168efe82ae9f907d9b57e6ddef0f263b615bc210e`  
+		Last Modified: Tue, 20 Oct 2020 17:26:37 GMT  
+		Size: 30.6 MB (30638985 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:80b410b194053809a5936f4b1b32d8db9b57536a63cce423679fd7d3032a3cfd`  
-		Last Modified: Sat, 26 Sep 2020 01:31:07 GMT  
-		Size: 1.2 KB (1153 bytes)  
+	-	`sha256:2f047495b81f113305be33744ee2207f1fe5dc5360c0d3e572c1b2a79af6576e`  
+		Last Modified: Tue, 20 Oct 2020 17:26:11 GMT  
+		Size: 1.2 KB (1152 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:702ce5aa923828e5bf656ade9be118ba205e8aaf085c116a5e8fbec3b7f0eddc`  
-		Last Modified: Sat, 26 Sep 2020 01:31:07 GMT  
+	-	`sha256:268ca476363c1267b51493452f182c62a9ee0b0a90f53aa20055c124719050c5`  
+		Last Modified: Tue, 20 Oct 2020 17:26:12 GMT  
 		Size: 121.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -1834,7 +1834,7 @@ CMD ["cassandra" "-f"]
 ## `cassandra:3`
 
 ```console
-$ docker pull cassandra@sha256:a360830d3b9ebb6ff9ef666ff98e98176a1ee2d39624f97037e1caacfe15ba1f
+$ docker pull cassandra@sha256:2c7bde9cd06e002e90cbbfbd53c60186d4e13859c33427d55e5114e9df877962
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1964,14 +1964,14 @@ CMD ["cassandra" "-f"]
 ### `cassandra:3` - linux; arm variant v7
 
 ```console
-$ docker pull cassandra@sha256:f34844d71aae170a10d32050453f9132a253b26dc94e747b76a300625a185f4d
+$ docker pull cassandra@sha256:e1b10a0a4351d591fbbd3db8283c16bcdbd7c1860d47f1c7571c08cef68b958d
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **121.7 MB (121741876 bytes)**  
+-	Total Size: **121.7 MB (121745260 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:57ddebd4454da47d80d20a39f7663a4ef1e8de35867b6c9038f052ffd5d61e71`
+-	Image ID: `sha256:5e63a471be40f30473ccb590ee9a6fb89535375260120487b1ac241adbec2159`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["cassandra","-f"]`
 
@@ -1990,45 +1990,45 @@ CMD ["/bin/bash"]
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Fri, 25 Sep 2020 23:23:39 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends tzdata curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Fri, 25 Sep 2020 23:23:40 GMT
-ENV JAVA_VERSION=jdk8u262-b10
-# Fri, 25 Sep 2020 23:24:11 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='0ad1ff282ad034a613c64313c885edef5dfbc5dd51f2eda705bbeb7fa822f238';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jre_aarch64_linux_hotspot_8u262b10.tar.gz';          ;;        armhf|armv7l)          ESUM='330ce008c6f49ddd6dcf43c7839896bb7fe14843300358a71b441a3f94036f69';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jre_arm_linux_hotspot_8u262b10.tar.gz';          ;;        ppc64el|ppc64le)          ESUM='12309354889da2ed9085fda9812c7d2653fa099c36d322af222da11cbb244df7';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jre_ppc64le_linux_hotspot_8u262b10.tar.gz';          ;;        s390x)          ESUM='0225d0a8707c0b6a059c58b77dd7387fb439816100d668ba000c4536cef77fc2';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jre_s390x_linux_hotspot_8u262b10.tar.gz';          ;;        amd64|x86_64)          ESUM='3ce1f34b279a4f8fc6374f5644739622886dd4bcac4fcb0eb596955bac5ca5a4';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jre_x64_linux_hotspot_8u262b10.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Fri, 25 Sep 2020 23:24:12 GMT
+# Tue, 20 Oct 2020 17:00:24 GMT
+ENV JAVA_VERSION=jdk8u265-b01
+# Tue, 20 Oct 2020 17:00:59 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='2f9c5be1bf704f1233bcf96b8c02524c14dc4d43dc80c4926856091961b79948';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u265-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u265b01.tar.gz';          ;;        armhf|armv7l)          ESUM='4ac2503725b2729ec245dbdb000b2486f9c73ae86860c9525f9ac822ec81f0d6';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u265-b01/OpenJDK8U-jre_arm_linux_hotspot_8u265b01.tar.gz';          ;;        ppc64el|ppc64le)          ESUM='4fb3640fae4b9bd4ebf834c775b547ed930cd1b805f4686223994480411aee72';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u265-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u265b01.tar.gz';          ;;        s390x)          ESUM='8b76480c809c4fde654ab55d10371c35d70b50069ab1724960509d99ed61065d';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u265-b01/OpenJDK8U-jre_s390x_linux_hotspot_8u265b01.tar.gz';          ;;        amd64|x86_64)          ESUM='9bce39f63d24626da75778f240294fa466a0ed117e32db798164621fe30b0723';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u265-b01/OpenJDK8U-jre_x64_linux_hotspot_8u265b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
+# Tue, 20 Oct 2020 17:01:00 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sat, 26 Sep 2020 01:25:45 GMT
+# Tue, 20 Oct 2020 17:21:41 GMT
 RUN set -eux; 	groupadd -r cassandra --gid=999; 	useradd -r -g cassandra --uid=999 cassandra
-# Sat, 26 Sep 2020 01:26:10 GMT
+# Tue, 20 Oct 2020 17:22:02 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libjemalloc1 		procps 		python 		iproute2 		numactl 	; 	rm -rf /var/lib/apt/lists/*
-# Sat, 26 Sep 2020 01:26:13 GMT
+# Tue, 20 Oct 2020 17:22:03 GMT
 ENV GOSU_VERSION=1.12
-# Sat, 26 Sep 2020 01:26:34 GMT
+# Tue, 20 Oct 2020 17:22:22 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates dirmngr gnupg wget; 	rm -rf /var/lib/apt/lists/*; 	dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
-# Sat, 26 Sep 2020 01:26:36 GMT
+# Tue, 20 Oct 2020 17:22:23 GMT
 ENV CASSANDRA_HOME=/opt/cassandra
-# Sat, 26 Sep 2020 01:26:37 GMT
+# Tue, 20 Oct 2020 17:22:23 GMT
 ENV CASSANDRA_CONF=/etc/cassandra
-# Sat, 26 Sep 2020 01:26:38 GMT
+# Tue, 20 Oct 2020 17:22:24 GMT
 ENV PATH=/opt/cassandra/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sat, 26 Sep 2020 01:26:40 GMT
+# Tue, 20 Oct 2020 17:22:25 GMT
 ENV GPG_KEYS=514A2AD631A57A16DD0047EC749D6EEC0353B12C 	A26E528B271F19B9E5D8E19EA278B781FE4B2BDA 	A4C465FEA0C552561A392A61E91335D77E3E87CB
-# Sat, 26 Sep 2020 01:26:41 GMT
+# Tue, 20 Oct 2020 17:22:26 GMT
 ENV CASSANDRA_VERSION=3.11.8
-# Sat, 26 Sep 2020 01:26:42 GMT
+# Tue, 20 Oct 2020 17:22:27 GMT
 ENV CASSANDRA_SHA512=ece12cafc7aab7f035a5c8505a7a32915f7fe8c2729c7ade69b21d9354e3f0c06fd5e6206e7f066fb1e525162213fa295200cd46fd1a8bf4b27c9bc834a86c43
-# Sat, 26 Sep 2020 01:27:19 GMT
+# Tue, 20 Oct 2020 17:22:59 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates dirmngr gnupg wget; 	rm -rf /var/lib/apt/lists/*; 		ddist() { 		local f="$1"; shift; 		local distFile="$1"; shift; 		local success=; 		local distUrl=; 		for distUrl in 			'https://www.apache.org/dyn/closer.cgi?action=download&filename=' 			https://www-us.apache.org/dist/ 			https://www.apache.org/dist/ 			https://archive.apache.org/dist/ 		; do 			if wget --progress=dot:giga -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then 				success=1; 				break; 			fi; 		done; 		[ -n "$success" ]; 	}; 		ddist 'cassandra-bin.tgz' "cassandra/$CASSANDRA_VERSION/apache-cassandra-$CASSANDRA_VERSION-bin.tar.gz"; 	echo "$CASSANDRA_SHA512 *cassandra-bin.tgz" | sha512sum --check --strict -; 		ddist 'cassandra-bin.tgz.asc' "cassandra/$CASSANDRA_VERSION/apache-cassandra-$CASSANDRA_VERSION-bin.tar.gz.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	for key in $GPG_KEYS; do 		gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 	done; 	gpg --batch --verify cassandra-bin.tgz.asc cassandra-bin.tgz; 	rm -rf "$GNUPGHOME"; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		mkdir -p "$CASSANDRA_HOME"; 	tar --extract --file cassandra-bin.tgz --directory "$CASSANDRA_HOME" --strip-components 1; 	rm cassandra-bin.tgz*; 		[ ! -e "$CASSANDRA_CONF" ]; 	mv "$CASSANDRA_HOME/conf" "$CASSANDRA_CONF"; 	ln -sT "$CASSANDRA_CONF" "$CASSANDRA_HOME/conf"; 		dpkgArch="$(dpkg --print-architecture)"; 	case "$dpkgArch" in 		ppc64el) 			if grep -q -- '^-Xss' "$CASSANDRA_CONF/jvm.options"; then 				grep -- '^-Xss256k$' "$CASSANDRA_CONF/jvm.options"; 				sed -ri 's/^-Xss256k$/-Xss512k/' "$CASSANDRA_CONF/jvm.options"; 				grep -- '^-Xss512k$' "$CASSANDRA_CONF/jvm.options"; 			elif grep -q -- '-Xss256k' "$CASSANDRA_CONF/cassandra-env.sh"; then 				sed -ri 's/-Xss256k/-Xss512k/g' "$CASSANDRA_CONF/cassandra-env.sh"; 				grep -- '-Xss512k' "$CASSANDRA_CONF/cassandra-env.sh"; 			fi; 			;; 	esac; 		mkdir -p "$CASSANDRA_CONF" /var/lib/cassandra /var/log/cassandra; 	chown -R cassandra:cassandra "$CASSANDRA_CONF" /var/lib/cassandra /var/log/cassandra; 	chmod 777 "$CASSANDRA_CONF" /var/lib/cassandra /var/log/cassandra; 	ln -sT /var/lib/cassandra "$CASSANDRA_HOME/data"; 	ln -sT /var/log/cassandra "$CASSANDRA_HOME/logs"; 		cassandra -v
-# Sat, 26 Sep 2020 01:27:21 GMT
+# Tue, 20 Oct 2020 17:23:02 GMT
 VOLUME [/var/lib/cassandra]
-# Sat, 26 Sep 2020 01:27:24 GMT
+# Tue, 20 Oct 2020 17:23:03 GMT
 COPY file:4124b71c4a5f59acdcefba4560d1bacb9047954f73615ae244532f7769e2caa7 in /usr/local/bin/ 
-# Sat, 26 Sep 2020 01:27:28 GMT
+# Tue, 20 Oct 2020 17:23:05 GMT
 RUN ln -s usr/local/bin/docker-entrypoint.sh /docker-entrypoint.sh # backwards compat
-# Sat, 26 Sep 2020 01:27:29 GMT
+# Tue, 20 Oct 2020 17:23:06 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Sat, 26 Sep 2020 01:27:31 GMT
+# Tue, 20 Oct 2020 17:23:06 GMT
 EXPOSE 7000 7001 7199 9042 9160
-# Sat, 26 Sep 2020 01:27:32 GMT
+# Tue, 20 Oct 2020 17:23:07 GMT
 CMD ["cassandra" "-f"]
 ```
 
@@ -2049,46 +2049,46 @@ CMD ["cassandra" "-f"]
 		Last Modified: Fri, 25 Sep 2020 23:27:19 GMT  
 		Size: 12.8 MB (12817173 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:293c0dcc6acc42a427ef3192b87e1a8605f27d0bf9d5c68fbf45598ae2c6b5ba`  
-		Last Modified: Fri, 25 Sep 2020 23:27:56 GMT  
-		Size: 38.6 MB (38612369 bytes)  
+	-	`sha256:e8275c2039e99d6fb294826af0b8ea4faa9e982e5e3b792a7fe66491321f221f`  
+		Last Modified: Tue, 20 Oct 2020 17:03:47 GMT  
+		Size: 38.6 MB (38612514 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:80e751c561aec7dbf43df9fcd838d61d3a2328a3e38ecbbc8c8e7d7da1514133`  
-		Last Modified: Sat, 26 Sep 2020 01:30:24 GMT  
-		Size: 1.9 KB (1878 bytes)  
+	-	`sha256:0803319a48941e06857a04d4a116e6b8751bef6b0891e027d970d7452ff6d020`  
+		Last Modified: Tue, 20 Oct 2020 17:25:28 GMT  
+		Size: 1.9 KB (1882 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ba376cbe37dcba1bc03f419134878d3248e510ebb1d5ecacb17ff73c3652645b`  
-		Last Modified: Sat, 26 Sep 2020 01:30:26 GMT  
-		Size: 8.2 MB (8195430 bytes)  
+	-	`sha256:cbb6ef0bc1adc1d2645d7a73dbcf6e0e96b8362f107a09e98995428f7043ba4c`  
+		Last Modified: Tue, 20 Oct 2020 17:25:30 GMT  
+		Size: 8.2 MB (8198639 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d8b538237d0116f9f5c94649826878a247e86edd061fd57e03c8a2d1aa795c3d`  
-		Last Modified: Sat, 26 Sep 2020 01:30:23 GMT  
-		Size: 1.3 MB (1263794 bytes)  
+	-	`sha256:ec1151f8dd05f62fccd77464d9c72b1ff7ba80c2d6ea0aaca286d8e055d8a512`  
+		Last Modified: Tue, 20 Oct 2020 17:25:27 GMT  
+		Size: 1.3 MB (1263808 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ff458165a264f7e66eeec7566ca28ec12844fb766630ef2982e50099d1e2c7a0`  
-		Last Modified: Sat, 26 Sep 2020 01:30:34 GMT  
-		Size: 38.6 MB (38569406 bytes)  
+	-	`sha256:1a9977b0cec67729afdbcaa911cb354fac3fdb799b02500b129f5e395e5eae9e`  
+		Last Modified: Tue, 20 Oct 2020 17:25:40 GMT  
+		Size: 38.6 MB (38569414 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:200e7356dcb9a6984b5c3e8c772dbfad4d688fd0eae0caae3ace2ee0d8942b82`  
-		Last Modified: Sat, 26 Sep 2020 01:30:23 GMT  
-		Size: 1.2 KB (1152 bytes)  
+	-	`sha256:8001ad13fad3f135fb82eec745123ccd41347afbb91530ccd8c1812922a89c39`  
+		Last Modified: Tue, 20 Oct 2020 17:25:26 GMT  
+		Size: 1.2 KB (1154 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a3891cc73ee382a3e9c8034cd20703256944773f9d172188cf7e652c0ab74aa7`  
-		Last Modified: Sat, 26 Sep 2020 01:30:23 GMT  
-		Size: 119.0 B  
+	-	`sha256:9cf7aa5544dca9f35c856531e267846736f60f68333098a5dc6951c54ef2db03`  
+		Last Modified: Tue, 20 Oct 2020 17:25:26 GMT  
+		Size: 121.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `cassandra:3` - linux; arm64 variant v8
 
 ```console
-$ docker pull cassandra@sha256:95ba915f56d9336a687e93da2ea05eaf16e59f401d132c28f8c6c52ffea96bc1
+$ docker pull cassandra@sha256:3d2cdcbf02915262a54f52eb0db805a59e78e60517b8fe9e8610a8a4c5c3c436
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **127.5 MB (127477929 bytes)**  
+-	Total Size: **127.5 MB (127468290 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:9a2d4cfa5cde6d701c779567e57708240e68a546e4f5ee24419aa328199a38a4`
+-	Image ID: `sha256:0ef4b29bd550b96bda08b78d2c8abe31c7459428b6761422e3ce75521bf45f1c`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["cassandra","-f"]`
 
@@ -2107,45 +2107,45 @@ CMD ["/bin/bash"]
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Fri, 25 Sep 2020 23:06:39 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends tzdata curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Fri, 25 Sep 2020 23:06:40 GMT
-ENV JAVA_VERSION=jdk8u262-b10
-# Fri, 25 Sep 2020 23:07:03 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='0ad1ff282ad034a613c64313c885edef5dfbc5dd51f2eda705bbeb7fa822f238';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jre_aarch64_linux_hotspot_8u262b10.tar.gz';          ;;        armhf|armv7l)          ESUM='330ce008c6f49ddd6dcf43c7839896bb7fe14843300358a71b441a3f94036f69';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jre_arm_linux_hotspot_8u262b10.tar.gz';          ;;        ppc64el|ppc64le)          ESUM='12309354889da2ed9085fda9812c7d2653fa099c36d322af222da11cbb244df7';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jre_ppc64le_linux_hotspot_8u262b10.tar.gz';          ;;        s390x)          ESUM='0225d0a8707c0b6a059c58b77dd7387fb439816100d668ba000c4536cef77fc2';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jre_s390x_linux_hotspot_8u262b10.tar.gz';          ;;        amd64|x86_64)          ESUM='3ce1f34b279a4f8fc6374f5644739622886dd4bcac4fcb0eb596955bac5ca5a4';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jre_x64_linux_hotspot_8u262b10.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Fri, 25 Sep 2020 23:07:04 GMT
+# Tue, 20 Oct 2020 16:39:39 GMT
+ENV JAVA_VERSION=jdk8u265-b01
+# Tue, 20 Oct 2020 16:40:01 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='2f9c5be1bf704f1233bcf96b8c02524c14dc4d43dc80c4926856091961b79948';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u265-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u265b01.tar.gz';          ;;        armhf|armv7l)          ESUM='4ac2503725b2729ec245dbdb000b2486f9c73ae86860c9525f9ac822ec81f0d6';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u265-b01/OpenJDK8U-jre_arm_linux_hotspot_8u265b01.tar.gz';          ;;        ppc64el|ppc64le)          ESUM='4fb3640fae4b9bd4ebf834c775b547ed930cd1b805f4686223994480411aee72';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u265-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u265b01.tar.gz';          ;;        s390x)          ESUM='8b76480c809c4fde654ab55d10371c35d70b50069ab1724960509d99ed61065d';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u265-b01/OpenJDK8U-jre_s390x_linux_hotspot_8u265b01.tar.gz';          ;;        amd64|x86_64)          ESUM='9bce39f63d24626da75778f240294fa466a0ed117e32db798164621fe30b0723';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u265-b01/OpenJDK8U-jre_x64_linux_hotspot_8u265b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
+# Tue, 20 Oct 2020 16:40:02 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sat, 26 Sep 2020 01:53:37 GMT
+# Tue, 20 Oct 2020 17:05:56 GMT
 RUN set -eux; 	groupadd -r cassandra --gid=999; 	useradd -r -g cassandra --uid=999 cassandra
-# Sat, 26 Sep 2020 01:53:53 GMT
+# Tue, 20 Oct 2020 17:06:16 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libjemalloc1 		procps 		python 		iproute2 		numactl 	; 	rm -rf /var/lib/apt/lists/*
-# Sat, 26 Sep 2020 01:53:54 GMT
+# Tue, 20 Oct 2020 17:06:17 GMT
 ENV GOSU_VERSION=1.12
-# Sat, 26 Sep 2020 01:54:11 GMT
+# Tue, 20 Oct 2020 17:06:36 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates dirmngr gnupg wget; 	rm -rf /var/lib/apt/lists/*; 	dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
-# Sat, 26 Sep 2020 01:54:12 GMT
+# Tue, 20 Oct 2020 17:06:37 GMT
 ENV CASSANDRA_HOME=/opt/cassandra
-# Sat, 26 Sep 2020 01:54:12 GMT
+# Tue, 20 Oct 2020 17:06:38 GMT
 ENV CASSANDRA_CONF=/etc/cassandra
-# Sat, 26 Sep 2020 01:54:13 GMT
+# Tue, 20 Oct 2020 17:06:39 GMT
 ENV PATH=/opt/cassandra/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sat, 26 Sep 2020 01:54:14 GMT
+# Tue, 20 Oct 2020 17:06:39 GMT
 ENV GPG_KEYS=514A2AD631A57A16DD0047EC749D6EEC0353B12C 	A26E528B271F19B9E5D8E19EA278B781FE4B2BDA 	A4C465FEA0C552561A392A61E91335D77E3E87CB
-# Sat, 26 Sep 2020 01:54:14 GMT
+# Tue, 20 Oct 2020 17:06:40 GMT
 ENV CASSANDRA_VERSION=3.11.8
-# Sat, 26 Sep 2020 01:54:15 GMT
+# Tue, 20 Oct 2020 17:06:41 GMT
 ENV CASSANDRA_SHA512=ece12cafc7aab7f035a5c8505a7a32915f7fe8c2729c7ade69b21d9354e3f0c06fd5e6206e7f066fb1e525162213fa295200cd46fd1a8bf4b27c9bc834a86c43
-# Sat, 26 Sep 2020 01:54:50 GMT
+# Tue, 20 Oct 2020 17:07:36 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates dirmngr gnupg wget; 	rm -rf /var/lib/apt/lists/*; 		ddist() { 		local f="$1"; shift; 		local distFile="$1"; shift; 		local success=; 		local distUrl=; 		for distUrl in 			'https://www.apache.org/dyn/closer.cgi?action=download&filename=' 			https://www-us.apache.org/dist/ 			https://www.apache.org/dist/ 			https://archive.apache.org/dist/ 		; do 			if wget --progress=dot:giga -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then 				success=1; 				break; 			fi; 		done; 		[ -n "$success" ]; 	}; 		ddist 'cassandra-bin.tgz' "cassandra/$CASSANDRA_VERSION/apache-cassandra-$CASSANDRA_VERSION-bin.tar.gz"; 	echo "$CASSANDRA_SHA512 *cassandra-bin.tgz" | sha512sum --check --strict -; 		ddist 'cassandra-bin.tgz.asc' "cassandra/$CASSANDRA_VERSION/apache-cassandra-$CASSANDRA_VERSION-bin.tar.gz.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	for key in $GPG_KEYS; do 		gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 	done; 	gpg --batch --verify cassandra-bin.tgz.asc cassandra-bin.tgz; 	rm -rf "$GNUPGHOME"; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		mkdir -p "$CASSANDRA_HOME"; 	tar --extract --file cassandra-bin.tgz --directory "$CASSANDRA_HOME" --strip-components 1; 	rm cassandra-bin.tgz*; 		[ ! -e "$CASSANDRA_CONF" ]; 	mv "$CASSANDRA_HOME/conf" "$CASSANDRA_CONF"; 	ln -sT "$CASSANDRA_CONF" "$CASSANDRA_HOME/conf"; 		dpkgArch="$(dpkg --print-architecture)"; 	case "$dpkgArch" in 		ppc64el) 			if grep -q -- '^-Xss' "$CASSANDRA_CONF/jvm.options"; then 				grep -- '^-Xss256k$' "$CASSANDRA_CONF/jvm.options"; 				sed -ri 's/^-Xss256k$/-Xss512k/' "$CASSANDRA_CONF/jvm.options"; 				grep -- '^-Xss512k$' "$CASSANDRA_CONF/jvm.options"; 			elif grep -q -- '-Xss256k' "$CASSANDRA_CONF/cassandra-env.sh"; then 				sed -ri 's/-Xss256k/-Xss512k/g' "$CASSANDRA_CONF/cassandra-env.sh"; 				grep -- '-Xss512k' "$CASSANDRA_CONF/cassandra-env.sh"; 			fi; 			;; 	esac; 		mkdir -p "$CASSANDRA_CONF" /var/lib/cassandra /var/log/cassandra; 	chown -R cassandra:cassandra "$CASSANDRA_CONF" /var/lib/cassandra /var/log/cassandra; 	chmod 777 "$CASSANDRA_CONF" /var/lib/cassandra /var/log/cassandra; 	ln -sT /var/lib/cassandra "$CASSANDRA_HOME/data"; 	ln -sT /var/log/cassandra "$CASSANDRA_HOME/logs"; 		cassandra -v
-# Sat, 26 Sep 2020 01:54:53 GMT
+# Tue, 20 Oct 2020 17:07:38 GMT
 VOLUME [/var/lib/cassandra]
-# Sat, 26 Sep 2020 01:54:53 GMT
+# Tue, 20 Oct 2020 17:07:39 GMT
 COPY file:4124b71c4a5f59acdcefba4560d1bacb9047954f73615ae244532f7769e2caa7 in /usr/local/bin/ 
-# Sat, 26 Sep 2020 01:54:55 GMT
+# Tue, 20 Oct 2020 17:07:40 GMT
 RUN ln -s usr/local/bin/docker-entrypoint.sh /docker-entrypoint.sh # backwards compat
-# Sat, 26 Sep 2020 01:54:56 GMT
+# Tue, 20 Oct 2020 17:07:41 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Sat, 26 Sep 2020 01:54:57 GMT
+# Tue, 20 Oct 2020 17:07:42 GMT
 EXPOSE 7000 7001 7199 9042 9160
-# Sat, 26 Sep 2020 01:54:57 GMT
+# Tue, 20 Oct 2020 17:07:42 GMT
 CMD ["cassandra" "-f"]
 ```
 
@@ -2166,33 +2166,33 @@ CMD ["cassandra" "-f"]
 		Last Modified: Fri, 25 Sep 2020 23:09:59 GMT  
 		Size: 13.3 MB (13284869 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9e931ba887daa89be01d4ad63a9cab37fc147c16699527c1b5ebe853e7c38d55`  
-		Last Modified: Fri, 25 Sep 2020 23:10:32 GMT  
-		Size: 42.1 MB (42114921 bytes)  
+	-	`sha256:d1e0dc94f4fa96fe7954a97eb8278f5e532919a5105830a6c8d7e9d625f13038`  
+		Last Modified: Tue, 20 Oct 2020 16:46:39 GMT  
+		Size: 42.1 MB (42105998 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6643e1a0be2a6f7dd2f6abc9e187d0a21b7c58f8efd7794ac03bd075294d7581`  
-		Last Modified: Sat, 26 Sep 2020 01:57:03 GMT  
-		Size: 1.9 KB (1894 bytes)  
+	-	`sha256:26fe6c9c21f6884f2f16eafcf835b4afb21f6da7ca2b5ff0335935d3dd762a2d`  
+		Last Modified: Tue, 20 Oct 2020 17:09:43 GMT  
+		Size: 1.9 KB (1893 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:affbcdd617e990a853c981ebddf8d5ef8dfcbe0b5f8ce312431011f87a1ab799`  
-		Last Modified: Sat, 26 Sep 2020 01:57:04 GMT  
-		Size: 8.5 MB (8534589 bytes)  
+	-	`sha256:6694d82c9558212ed1d73b470b2f3b74f4ca50c7b1c37ec80eeae8165e380521`  
+		Last Modified: Tue, 20 Oct 2020 17:09:43 GMT  
+		Size: 8.5 MB (8533839 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:860070ef668d3623c09f2d5ecc2b7eb4c5ea8a642a1a93d263f70a8cf3193b16`  
-		Last Modified: Sat, 26 Sep 2020 01:56:59 GMT  
-		Size: 1.2 MB (1247427 bytes)  
+	-	`sha256:0bf2edcef610c528fa7cd87443e94a829180e531d60d41cdcf9b12badb989607`  
+		Last Modified: Tue, 20 Oct 2020 17:09:41 GMT  
+		Size: 1.2 MB (1247465 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c5212c9d28eb1f6694bf5aae02cc3e863f6155871389ba4f904de50c54999c0f`  
-		Last Modified: Sat, 26 Sep 2020 01:57:14 GMT  
-		Size: 38.6 MB (38569065 bytes)  
+	-	`sha256:bfaa418883024c7e565bdc394c571f7bbb786298d3c09015846a073b73cf78e7`  
+		Last Modified: Tue, 20 Oct 2020 17:09:50 GMT  
+		Size: 38.6 MB (38569059 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6cdd967758ddd01c6490f1650931486eb73615e87ba95c1da3396a68d75c63a3`  
-		Last Modified: Sat, 26 Sep 2020 01:56:59 GMT  
-		Size: 1.2 KB (1152 bytes)  
+	-	`sha256:a23ddd9c4179e4f05094c8c8972db0f08f6899e4ecaa5d8cd5fea1dec057d685`  
+		Last Modified: Tue, 20 Oct 2020 17:09:40 GMT  
+		Size: 1.2 KB (1154 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0b2d760df7724b6c440a8a7486072cd40330b8d2369cfb9cc148ee90513ff84c`  
-		Last Modified: Sat, 26 Sep 2020 01:56:59 GMT  
-		Size: 120.0 B  
+	-	`sha256:cb190979e15fed3a3764411b14535a4fef9b9890144bbc967afc4cbc554728da`  
+		Last Modified: Tue, 20 Oct 2020 17:09:41 GMT  
+		Size: 121.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `cassandra:3` - linux; ppc64le
