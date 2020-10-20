@@ -156,6 +156,54 @@
 -	[`openjdk:14-windowsservercore-1809`](#openjdk14-windowsservercore-1809)
 -	[`openjdk:14-windowsservercore-ltsc2016`](#openjdk14-windowsservercore-ltsc2016)
 -	[`openjdk:15`](#openjdk15)
+-	[`openjdk:15.0`](#openjdk150)
+-	[`openjdk:15.0.1`](#openjdk1501)
+-	[`openjdk:15.0.1-buster`](#openjdk1501-buster)
+-	[`openjdk:15.0.1-jdk`](#openjdk1501-jdk)
+-	[`openjdk:15.0.1-jdk-buster`](#openjdk1501-jdk-buster)
+-	[`openjdk:15.0.1-jdk-nanoserver`](#openjdk1501-jdk-nanoserver)
+-	[`openjdk:15.0.1-jdk-nanoserver-1809`](#openjdk1501-jdk-nanoserver-1809)
+-	[`openjdk:15.0.1-jdk-oracle`](#openjdk1501-jdk-oracle)
+-	[`openjdk:15.0.1-jdk-oraclelinux7`](#openjdk1501-jdk-oraclelinux7)
+-	[`openjdk:15.0.1-jdk-oraclelinux8`](#openjdk1501-jdk-oraclelinux8)
+-	[`openjdk:15.0.1-jdk-slim`](#openjdk1501-jdk-slim)
+-	[`openjdk:15.0.1-jdk-slim-buster`](#openjdk1501-jdk-slim-buster)
+-	[`openjdk:15.0.1-jdk-windowsservercore`](#openjdk1501-jdk-windowsservercore)
+-	[`openjdk:15.0.1-jdk-windowsservercore-1809`](#openjdk1501-jdk-windowsservercore-1809)
+-	[`openjdk:15.0.1-jdk-windowsservercore-ltsc2016`](#openjdk1501-jdk-windowsservercore-ltsc2016)
+-	[`openjdk:15.0.1-nanoserver`](#openjdk1501-nanoserver)
+-	[`openjdk:15.0.1-nanoserver-1809`](#openjdk1501-nanoserver-1809)
+-	[`openjdk:15.0.1-oracle`](#openjdk1501-oracle)
+-	[`openjdk:15.0.1-oraclelinux7`](#openjdk1501-oraclelinux7)
+-	[`openjdk:15.0.1-oraclelinux8`](#openjdk1501-oraclelinux8)
+-	[`openjdk:15.0.1-slim`](#openjdk1501-slim)
+-	[`openjdk:15.0.1-slim-buster`](#openjdk1501-slim-buster)
+-	[`openjdk:15.0.1-windowsservercore`](#openjdk1501-windowsservercore)
+-	[`openjdk:15.0.1-windowsservercore-1809`](#openjdk1501-windowsservercore-1809)
+-	[`openjdk:15.0.1-windowsservercore-ltsc2016`](#openjdk1501-windowsservercore-ltsc2016)
+-	[`openjdk:15.0-buster`](#openjdk150-buster)
+-	[`openjdk:15.0-jdk`](#openjdk150-jdk)
+-	[`openjdk:15.0-jdk-buster`](#openjdk150-jdk-buster)
+-	[`openjdk:15.0-jdk-nanoserver`](#openjdk150-jdk-nanoserver)
+-	[`openjdk:15.0-jdk-nanoserver-1809`](#openjdk150-jdk-nanoserver-1809)
+-	[`openjdk:15.0-jdk-oracle`](#openjdk150-jdk-oracle)
+-	[`openjdk:15.0-jdk-oraclelinux7`](#openjdk150-jdk-oraclelinux7)
+-	[`openjdk:15.0-jdk-oraclelinux8`](#openjdk150-jdk-oraclelinux8)
+-	[`openjdk:15.0-jdk-slim`](#openjdk150-jdk-slim)
+-	[`openjdk:15.0-jdk-slim-buster`](#openjdk150-jdk-slim-buster)
+-	[`openjdk:15.0-jdk-windowsservercore`](#openjdk150-jdk-windowsservercore)
+-	[`openjdk:15.0-jdk-windowsservercore-1809`](#openjdk150-jdk-windowsservercore-1809)
+-	[`openjdk:15.0-jdk-windowsservercore-ltsc2016`](#openjdk150-jdk-windowsservercore-ltsc2016)
+-	[`openjdk:15.0-nanoserver`](#openjdk150-nanoserver)
+-	[`openjdk:15.0-nanoserver-1809`](#openjdk150-nanoserver-1809)
+-	[`openjdk:15.0-oracle`](#openjdk150-oracle)
+-	[`openjdk:15.0-oraclelinux7`](#openjdk150-oraclelinux7)
+-	[`openjdk:15.0-oraclelinux8`](#openjdk150-oraclelinux8)
+-	[`openjdk:15.0-slim`](#openjdk150-slim)
+-	[`openjdk:15.0-slim-buster`](#openjdk150-slim-buster)
+-	[`openjdk:15.0-windowsservercore`](#openjdk150-windowsservercore)
+-	[`openjdk:15.0-windowsservercore-1809`](#openjdk150-windowsservercore-1809)
+-	[`openjdk:15.0-windowsservercore-ltsc2016`](#openjdk150-windowsservercore-ltsc2016)
 -	[`openjdk:15-buster`](#openjdk15-buster)
 -	[`openjdk:15-jdk`](#openjdk15-jdk)
 -	[`openjdk:15-jdk-buster`](#openjdk15-jdk-buster)
@@ -17991,6 +18039,198 @@ CMD ["jshell"]
 		Last Modified: Wed, 14 Oct 2020 18:35:41 GMT  
 		Size: 1.1 KB (1134 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `openjdk:15.0`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0.1`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0.1-buster`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0.1-jdk`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0.1-jdk-buster`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0.1-jdk-nanoserver`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0.1-jdk-nanoserver-1809`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0.1-jdk-oracle`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0.1-jdk-oraclelinux7`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0.1-jdk-oraclelinux8`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0.1-jdk-slim`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0.1-jdk-slim-buster`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0.1-jdk-windowsservercore`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0.1-jdk-windowsservercore-1809`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0.1-jdk-windowsservercore-ltsc2016`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0.1-nanoserver`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0.1-nanoserver-1809`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0.1-oracle`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0.1-oraclelinux7`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0.1-oraclelinux8`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0.1-slim`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0.1-slim-buster`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0.1-windowsservercore`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0.1-windowsservercore-1809`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0.1-windowsservercore-ltsc2016`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0-buster`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0-jdk`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0-jdk-buster`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0-jdk-nanoserver`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0-jdk-nanoserver-1809`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0-jdk-oracle`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0-jdk-oraclelinux7`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0-jdk-oraclelinux8`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0-jdk-slim`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0-jdk-slim-buster`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0-jdk-windowsservercore`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0-jdk-windowsservercore-1809`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0-jdk-windowsservercore-ltsc2016`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0-nanoserver`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0-nanoserver-1809`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0-oracle`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0-oraclelinux7`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0-oraclelinux8`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0-slim`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0-slim-buster`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0-windowsservercore`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0-windowsservercore-1809`
+
+**does not exist** (yet?)
+
+## `openjdk:15.0-windowsservercore-ltsc2016`
+
+**does not exist** (yet?)
 
 ## `openjdk:15-buster`
 
