@@ -186,20 +186,13 @@ Licenses: (parsed from: `/usr/share/doc/libaudit-common/copyright`, `/usr/share/
 - `GPL-2`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris audit=1:2.8.5-3
-'http://deb.debian.org/debian/pool/main/a/audit/audit_2.8.5-3.dsc' audit_2.8.5-3.dsc 2401 SHA256:24f6c0b71797265bd163f53237d8ec359761d92f3840b3315d4dcebf6505121e
-'http://deb.debian.org/debian/pool/main/a/audit/audit_2.8.5.orig.tar.gz' audit_2.8.5.orig.tar.gz 1140694 SHA256:0e5d4103646e00f8d1981e1cd2faea7a2ae28e854c31a803e907a383c5e2ecb7
-'http://deb.debian.org/debian/pool/main/a/audit/audit_2.8.5-3.debian.tar.xz' audit_2.8.5-3.debian.tar.xz 17164 SHA256:425eca791602be6865c1198a70ed7bf3775a1a4ef0851645826c09cc9d6df314
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/audit/1:2.8.5-3/
 
-- https://sources.debian.net/src/audit/1:2.8.5-3/ (for browsing the source)
-- https://sources.debian.net/src/audit/1:2.8.5-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/audit/1:2.8.5-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-files=11`
 
@@ -236,19 +229,13 @@ Licenses: (parsed from: `/usr/share/doc/base-passwd/copyright`)
 - `GPL-2`
 - `PD`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris base-passwd=3.5.47
-'http://deb.debian.org/debian/pool/main/b/base-passwd/base-passwd_3.5.47.dsc' base-passwd_3.5.47.dsc 1757 SHA256:5a77a4cce51d1eb72e9d96d4083c641435c05888922c7bd3fa6b4395bf9afad3
-'http://deb.debian.org/debian/pool/main/b/base-passwd/base-passwd_3.5.47.tar.xz' base-passwd_3.5.47.tar.xz 53024 SHA256:9810ae0216e96bf9fc7ca6163d47ef8ec7d1677f533451af5911d8202a490a23
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/base-passwd/3.5.47/
 
-- https://sources.debian.net/src/base-passwd/3.5.47/ (for browsing the source)
-- https://sources.debian.net/src/base-passwd/3.5.47/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/base-passwd/3.5.47/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `bash=5.0-7`
 
@@ -1391,20 +1378,13 @@ Licenses: (parsed from: `/usr/share/doc/libcap2/copyright`, `/usr/share/doc/libc
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libcap2=1:2.43-1
-'http://deb.debian.org/debian/pool/main/libc/libcap2/libcap2_2.43-1.dsc' libcap2_2.43-1.dsc 2179 SHA256:07b755f7c82791f8a7b3593ffbbb2a5e24e2bced022808c2584c44a38d22e1cb
-'http://deb.debian.org/debian/pool/main/libc/libcap2/libcap2_2.43.orig.tar.xz' libcap2_2.43.orig.tar.xz 125284 SHA256:512a0e5fc4c1e06d472a20da26aa96a9b9bf2a26b23f094f77f1b8da56cc427f
-'http://deb.debian.org/debian/pool/main/libc/libcap2/libcap2_2.43-1.debian.tar.xz' libcap2_2.43-1.debian.tar.xz 21152 SHA256:99a65de447f8a5d83d47e74984068f967413c58d5d548f236f53063472fc381e
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libcap2/1:2.43-1/
 
-- https://sources.debian.net/src/libcap2/1:2.43-1/ (for browsing the source)
-- https://sources.debian.net/src/libcap2/1:2.43-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libcap2/1:2.43-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libcbor=0.5.0+dfsg-2`
 
@@ -2048,21 +2028,13 @@ Licenses: (parsed from: `/usr/share/doc/mercurial/copyright`, `/usr/share/doc/me
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mercurial=5.5.1-1
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.5.1-1.dsc' mercurial_5.5.1-1.dsc 2776 SHA256:e63420ac79e29468c522781187b2e05dc4a07c562f181f991fa555dccf9a556a
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.5.1.orig.tar.gz' mercurial_5.5.1.orig.tar.gz 7759341 SHA256:4f95ad8d575941835d67210e9f8700cc594a441e4fd0bd029c084923b4f40874
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.5.1.orig.tar.gz.asc' mercurial_5.5.1.orig.tar.gz.asc 833 SHA256:af222d26afdb471a8198b8a064678f667da1e13051b3cc3ef18cfa0a20d74901
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.5.1-1.debian.tar.xz' mercurial_5.5.1-1.debian.tar.xz 63320 SHA256:7519de896c6045c5236a35ad31c671ac7f694a88f316181996aeed8df9fa8bb9
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mercurial/5.5.1-1/
 
-- https://sources.debian.net/src/mercurial/5.5.1-1/ (for browsing the source)
-- https://sources.debian.net/src/mercurial/5.5.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mercurial/5.5.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mime-support=3.64`
 
@@ -2856,20 +2828,13 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=246.6-1
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_246.6-1.dsc' systemd_246.6-1.dsc 5141 SHA256:54748ca4b614f7056c24dd0d226ca1e7da2ee7e5ad1a7e7dea2864d9353356f1
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_246.6.orig.tar.gz' systemd_246.6.orig.tar.gz 9545237 SHA256:e999dbf0cff5b0109c28b307741b7dc315877fe2e1999f25c153548db44bb020
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_246.6-1.debian.tar.xz' systemd_246.6-1.debian.tar.xz 153828 SHA256:d90376673f2afbca3247a75c26f948965903a3ca25546b5e8a02734ff0bd8e8c
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/systemd/246.6-1/
 
-- https://sources.debian.net/src/systemd/246.6-1/ (for browsing the source)
-- https://sources.debian.net/src/systemd/246.6-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/systemd/246.6-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sysvinit=2.96-5`
 

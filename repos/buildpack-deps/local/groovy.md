@@ -247,13 +247,9 @@ Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris base-files=11ubuntu13
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_11ubuntu13.dsc' base-files_11ubuntu13.dsc 1672 SHA512:a4900a6bd90d7c64e7f25dabfea87bc3b9e4eff58c0b172ca3640a48c2a91819be20fa4cf11a1c203f59d6c6e0ccd2a126d34bdffcb15204c69e47a79ab6dfbc
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_11ubuntu13.tar.xz' base-files_11ubuntu13.tar.xz 80824 SHA512:bc23e347377f884baca0cc5560b6595f619222cc56267d06accbf289294a63b672b69484e0678987488947ccdbd551c2801e6d8f18a064f063684dd37949b1e5
-```
 
 ### `dpkg` source package: `base-passwd=3.5.47`
 
@@ -1121,14 +1117,13 @@ Licenses: (parsed from: `/usr/share/doc/libglib2.0-0/copyright`, `/usr/share/doc
 - `GPL-2+`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glib2.0=2.66.0-2
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.66.0-2.dsc' glib2.0_2.66.0-2.dsc 3346 SHA512:574c40762941121d510cf6e4c304a94eee3a52d24c7c2c318c2a915015f3477989cab9291e06641ad6d80280c56635893e837cb7886d1117410f03679a493c3e
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.66.0.orig.tar.xz' glib2.0_2.66.0.orig.tar.xz 4839236 SHA512:358e6a840b722139593eb7825c3aa70153eb26036e05d13d3286bcc6d2e962c2b4ddcb0fe5c6728b89bfffbd178101e72c576081ae714326a272a9fc34ed953e
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.66.0-2.debian.tar.xz' glib2.0_2.66.0-2.debian.tar.xz 94844 SHA512:e24c2e96d0bb9cfb65b4f59ea585487ad331d826b1e580d44768719be0d6aa463e074218ca2b51a388deea9e4ea59f9dd703a7233ce901982fbfef349d9a84a1
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/glib2.0/2.66.0-2/
+
 
 ### `dpkg` source package: `glibc=2.32-0ubuntu3`
 

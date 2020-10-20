@@ -1428,20 +1428,13 @@ Licenses: (parsed from: `/usr/share/doc/libglib2.0-0/copyright`, `/usr/share/doc
 - `GPL-2+`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glib2.0=2.66.1-1
-'http://deb.debian.org/debian/pool/main/g/glib2.0/glib2.0_2.66.1-1.dsc' glib2.0_2.66.1-1.dsc 3346 SHA256:7fc045d6847e36a9ea38f67e5dbe475e37e217b46025f85ac97c3142dbafe551
-'http://deb.debian.org/debian/pool/main/g/glib2.0/glib2.0_2.66.1.orig.tar.xz' glib2.0_2.66.1.orig.tar.xz 4834784 SHA256:a269ffe69fbcc3a21ff1acb1b6146b2a5723499d6e2de33ae16ccb6d2438ef60
-'http://deb.debian.org/debian/pool/main/g/glib2.0/glib2.0_2.66.1-1.debian.tar.xz' glib2.0_2.66.1-1.debian.tar.xz 92732 SHA256:3173fef8fc49a3505b243b01a01e8331d421ccf86355d3315562d4b8373f6dc2
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/glib2.0/2.66.1-1/
 
-- https://sources.debian.net/src/glib2.0/2.66.1-1/ (for browsing the source)
-- https://sources.debian.net/src/glib2.0/2.66.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/glib2.0/2.66.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `glibc=2.31-4`
 
@@ -1943,20 +1936,13 @@ Licenses: (parsed from: `/usr/share/doc/iproute2/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris iproute2=5.8.0-1
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.8.0-1.dsc' iproute2_5.8.0-1.dsc 1831 SHA256:557180ecd39f291deac14d4ca510118a8b5102ab793a195bdced76150ce8b126
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.8.0.orig.tar.xz' iproute2_5.8.0.orig.tar.xz 780612 SHA256:cfcd1f890290f8c8afcc91d9444ad929b9252c16f9ab3f286c50dd3c59dc646e
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.8.0-1.debian.tar.xz' iproute2_5.8.0-1.debian.tar.xz 35940 SHA256:a66ac8c3fcd172728451a4f6a1e3195bbf935c56ee96a1b353bd98988815eb5f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/iproute2/5.8.0-1/
 
-- https://sources.debian.net/src/iproute2/5.8.0-1/ (for browsing the source)
-- https://sources.debian.net/src/iproute2/5.8.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/iproute2/5.8.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `iptables=1.8.5-3`
 
@@ -2905,20 +2891,13 @@ Licenses: (parsed from: `/usr/share/doc/libnss-nis/copyright`)
 - `permissive-fsf`
 - `permissive-makefile-in`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libnss-nis=3.1-3
-'http://deb.debian.org/debian/pool/main/libn/libnss-nis/libnss-nis_3.1-3.dsc' libnss-nis_3.1-3.dsc 1933 SHA256:f85889970dffe1aa319f84df3637098060d2823470dd45c0a910eb4da81f066b
-'http://deb.debian.org/debian/pool/main/libn/libnss-nis/libnss-nis_3.1.orig.tar.xz' libnss-nis_3.1.orig.tar.xz 257440 SHA256:83c3d9c0d4c5a8344211aa0d3743680ec3dbbafd9775454db5c9cc2273ea008b
-'http://deb.debian.org/debian/pool/main/libn/libnss-nis/libnss-nis_3.1-3.debian.tar.xz' libnss-nis_3.1-3.debian.tar.xz 5040 SHA256:dddd7cf1c5c5b0b7f0b412e609fc561c07e9c6a1df548efde0586893c85bbb62
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libnss-nis/3.1-3/
 
-- https://sources.debian.net/src/libnss-nis/3.1-3/ (for browsing the source)
-- https://sources.debian.net/src/libnss-nis/3.1-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libnss-nis/3.1-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libnss-nisplus=1.3-3`
 
@@ -2937,20 +2916,13 @@ Licenses: (parsed from: `/usr/share/doc/libnss-nisplus/copyright`)
 - `permissive-autoconf-m4`
 - `permissive-fsf`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libnss-nisplus=1.3-3
-'http://deb.debian.org/debian/pool/main/libn/libnss-nisplus/libnss-nisplus_1.3-3.dsc' libnss-nisplus_1.3-3.dsc 1967 SHA256:edf8ab4f0351a763afbc76207b0e0c9c0a43b814ae01244d67567c7ea03ddcbf
-'http://deb.debian.org/debian/pool/main/libn/libnss-nisplus/libnss-nisplus_1.3.orig.tar.xz' libnss-nisplus_1.3.orig.tar.xz 162500 SHA256:c9844177704d07a4e9fede4b8de7c45ab80b3373009f505cbec603c5ec208d92
-'http://deb.debian.org/debian/pool/main/libn/libnss-nisplus/libnss-nisplus_1.3-3.debian.tar.xz' libnss-nisplus_1.3-3.debian.tar.xz 6376 SHA256:9e3458315d43d084fe4be920dc9d6e62de55a2e89d8a820246005e42aaaa9689
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libnss-nisplus/1.3-3/
 
-- https://sources.debian.net/src/libnss-nisplus/1.3-3/ (for browsing the source)
-- https://sources.debian.net/src/libnss-nisplus/1.3-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libnss-nisplus/1.3-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libpng1.6=1.6.37-3`
 
@@ -4303,20 +4275,13 @@ Licenses: (parsed from: `/usr/share/doc/libnpth0/copyright`)
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris npth=1.6-2
-'http://deb.debian.org/debian/pool/main/n/npth/npth_1.6-2.dsc' npth_1.6-2.dsc 1931 SHA256:7bb227f06b60eabbcc02a4fc4c46eba0aec430dda34b6bc7521c53deb9514a71
-'http://deb.debian.org/debian/pool/main/n/npth/npth_1.6.orig.tar.bz2' npth_1.6.orig.tar.bz2 300486 SHA256:1393abd9adcf0762d34798dc34fdcf4d0d22a8410721e76f1e3afcd1daa4e2d1
-'http://deb.debian.org/debian/pool/main/n/npth/npth_1.6-2.debian.tar.xz' npth_1.6-2.debian.tar.xz 10612 SHA256:e848caf5b5296f7415a7af41f97bd9ec1fcc2b477cb134e4ee4309e15f84323a
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/npth/1.6-2/
 
-- https://sources.debian.net/src/npth/1.6-2/ (for browsing the source)
-- https://sources.debian.net/src/npth/1.6-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/npth/1.6-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `numactl=2.0.12-1`
 
@@ -4416,20 +4381,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openldap=2.4.53+dfsg-1
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.53+dfsg-1.dsc' openldap_2.4.53+dfsg-1.dsc 3060 SHA256:f376a542a80d65d9226333ccf1dfb6d36bb649f0c856070a5a2ccd9bdda42534
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.53+dfsg.orig.tar.gz' openldap_2.4.53+dfsg.orig.tar.gz 5013515 SHA256:939b281098f63432a0e29de06701823cc158225fce33973b768dc883f6756139
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.53+dfsg-1.debian.tar.xz' openldap_2.4.53+dfsg-1.debian.tar.xz 167768 SHA256:12eee35b128988a9d8560e60d8097f1fa309e5725a013fbb79d076a7f806eb3f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/openldap/2.4.53+dfsg-1/
 
-- https://sources.debian.net/src/openldap/2.4.53+dfsg-1/ (for browsing the source)
-- https://sources.debian.net/src/openldap/2.4.53+dfsg-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openldap/2.4.53+dfsg-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssh=1:8.3p1-1`
 
@@ -5221,20 +5179,13 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=246.6-1
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_246.6-1.dsc' systemd_246.6-1.dsc 5141 SHA256:54748ca4b614f7056c24dd0d226ca1e7da2ee7e5ad1a7e7dea2864d9353356f1
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_246.6.orig.tar.gz' systemd_246.6.orig.tar.gz 9545237 SHA256:e999dbf0cff5b0109c28b307741b7dc315877fe2e1999f25c153548db44bb020
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_246.6-1.debian.tar.xz' systemd_246.6-1.debian.tar.xz 153828 SHA256:d90376673f2afbca3247a75c26f948965903a3ca25546b5e8a02734ff0bd8e8c
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/systemd/246.6-1/
 
-- https://sources.debian.net/src/systemd/246.6-1/ (for browsing the source)
-- https://sources.debian.net/src/systemd/246.6-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/systemd/246.6-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sysvinit=2.96-5`
 
@@ -5326,21 +5277,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2020b-1
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020b-1.dsc' tzdata_2020b-1.dsc 2237 SHA256:f16572adefedff758212c5ffede67ecba6ffc165507f3e90714eae075632a7bc
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020b.orig.tar.gz' tzdata_2020b.orig.tar.gz 400017 SHA256:9b053f951d245ce89d850b96ee4711d82d833559b1fc96ba19f90bc4d745e809
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020b.orig.tar.gz.asc' tzdata_2020b.orig.tar.gz.asc 833 SHA256:2e9e0492e556500d9f6d33b4290667d53d85af37f14929371f56c147354157ce
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020b-1.debian.tar.xz' tzdata_2020b-1.debian.tar.xz 105064 SHA256:e801eb64e5b44b092d11dd73bc60216bc2fc57a7a1ca98f5bb56b1c028e03dbc
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2020b-1/
 
-- https://sources.debian.net/src/tzdata/2020b-1/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2020b-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2020b-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0043`
 
@@ -5390,21 +5333,13 @@ Licenses: (parsed from: `/usr/share/doc/libunbound8/copyright`)
 - `ISC`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris unbound=1.11.0-1
-'http://deb.debian.org/debian/pool/main/u/unbound/unbound_1.11.0-1.dsc' unbound_1.11.0-1.dsc 3011 SHA256:29e2d9443b945cfa1b525cf74e2f6b4bd4005706650bb8b262e2aaa0607afcff
-'http://deb.debian.org/debian/pool/main/u/unbound/unbound_1.11.0.orig.tar.gz' unbound_1.11.0.orig.tar.gz 5900967 SHA256:9f2f0798f76eb8f30feaeda7e442ceed479bc54db0e3ac19c052d68685e51ef7
-'http://deb.debian.org/debian/pool/main/u/unbound/unbound_1.11.0.orig.tar.gz.asc' unbound_1.11.0.orig.tar.gz.asc 833 SHA256:bcc0ccbaeb4a39af53259cd54aad4605abfd059b8b54441e5f7da96de85a0ea3
-'http://deb.debian.org/debian/pool/main/u/unbound/unbound_1.11.0-1.debian.tar.xz' unbound_1.11.0-1.debian.tar.xz 20208 SHA256:f4b873321a4be5c046e6c1252594a20103b34eafd7decf4b482e62fba92f3d3c
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/unbound/1.11.0-1/
 
-- https://sources.debian.net/src/unbound/1.11.0-1/ (for browsing the source)
-- https://sources.debian.net/src/unbound/1.11.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/unbound/1.11.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `unzip=6.0-25`
 
