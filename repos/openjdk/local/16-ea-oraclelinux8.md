@@ -1,10 +1,10 @@
-# `openjdk:16-ea-19-jdk-oraclelinux8`
+# `openjdk:16-ea-20-jdk-oraclelinux8`
 
 ## Docker Metadata
 
-- Image ID: `sha256:3cd198485fdcbb9eef389549b564fda26d89a85aafbef2fbe7e6cc50356befa5`
-- Created: `2020-10-12T17:35:23.707728646Z`
-- Virtual Size: ~ 526.28 Mb  
+- Image ID: `sha256:bda211b8ef3fb8e7b24aba79e6aee4097595a35f89dbf894a40c55d7727e6375`
+- Created: `2020-10-16T20:31:58.986649163Z`
+- Virtual Size: ~ 526.73 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["jshell"]`
@@ -12,7 +12,7 @@
   - `PATH=/usr/java/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=C.UTF-8`
   - `JAVA_HOME=/usr/java/openjdk-16`
-  - `JAVA_VERSION=16-ea+19`
+  - `JAVA_VERSION=16-ea+20`
 - Labels:
   - `org.opencontainers.image.authors=Oracle Linux Product Team <ol-ovm-info_ww@oracle.com>`
   - `org.opencontainers.image.description=Oracle Linux is an open-source       operating system available under the GNU General Public License (GPLv2) and       is suitable for both general purpose or Oracle workloads.`
