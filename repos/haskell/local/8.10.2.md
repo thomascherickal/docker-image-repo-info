@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:d40d741be5bba617fc5e53abd8713228856ff06a69277081004c20de21afe86e`
-- Created: `2020-10-13T07:15:48.492239465Z`
+- Image ID: `sha256:f334c520745790b0726dea67e689bba3e59c4bdf6fccd6b3a6adc00236399b2b`
+- Created: `2020-10-22T23:20:41.266745705Z`
 - Virtual Size: ~ 1.50 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -1919,11 +1919,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libzstd/1.3.8+dfsg-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libzstd/1.3.8+dfsg-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `linux=4.19.146-1`
+### `dpkg` source package: `linux=4.19.152-1`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=4.19.146-1`
+- `linux-libc-dev:amd64=4.19.152-1`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -1938,17 +1938,17 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris linux=4.19.146-1
-'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.146-1.dsc' linux_4.19.146-1.dsc 191615 SHA256:d073e1201130f87ae9fbbef9657ac0d196367ded2ff3bd25a109fe94f71c5e30
-'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.146.orig.tar.xz' linux_4.19.146.orig.tar.xz 107530016 SHA256:161f45802adbe953ed67cc2997e3aebc9dbd762a49f1ac11ac45d13a2e5176b0
-'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.146-1.debian.tar.xz' linux_4.19.146-1.debian.tar.xz 1433256 SHA256:f501206bbe2ed8d2ac4ffbbe6d8c552d0f08b02e8a9895a3f4a5c278bce80435
+$ apt-get source -qq --print-uris linux=4.19.152-1
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.152-1.dsc' linux_4.19.152-1.dsc 191615 SHA256:f499079f030828dfe42f4146dbc5090bb0b88553ff5ae7fcabbe8a535ff782ea
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.152.orig.tar.xz' linux_4.19.152.orig.tar.xz 107539124 SHA256:6773903b52e79373f31c5542311800cb3534dcaf47eadc764770c419f25fd40e
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.152-1.debian.tar.xz' linux_4.19.152-1.debian.tar.xz 1438044 SHA256:dd63f5cbbfa110c50711247ee9e70ee0928497c7c5072e2b25d6c43ae9aba4b7
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/linux/4.19.146-1/ (for browsing the source)
-- https://sources.debian.net/src/linux/4.19.146-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/4.19.146-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/linux/4.19.152-1/ (for browsing the source)
+- https://sources.debian.net/src/linux/4.19.152-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/linux/4.19.152-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lsb=10.2019051400`
 
