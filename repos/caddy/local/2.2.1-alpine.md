@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:e4fd2a84cc279dbdc53de15daeae84bd726376c255582d12f3d2a3fa105150c9`
-- Created: `2020-10-14T19:19:47.882681008Z`
+- Image ID: `sha256:4bb0137bab0e21a92b0bc9ec1cc22c259b097d5bf239b161ae1eac0de1833e67`
+- Created: `2020-10-22T04:34:06.723813467Z`
 - Virtual Size: ~ 39.22 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -28,16 +28,16 @@
 ### `apk` package: `alpine-baselayout`
 
 ```console
-alpine-baselayout-3.2.0-r6 description:
+alpine-baselayout-3.2.0-r7 description:
 Alpine base dir structure and init scripts
 
-alpine-baselayout-3.2.0-r6 webpage:
+alpine-baselayout-3.2.0-r7 webpage:
 https://git.alpinelinux.org/cgit/aports/tree/main/alpine-baselayout
 
-alpine-baselayout-3.2.0-r6 installed size:
+alpine-baselayout-3.2.0-r7 installed size:
 409600
 
-alpine-baselayout-3.2.0-r6 license:
+alpine-baselayout-3.2.0-r7 license:
 GPL-2.0-only
 
 ```
@@ -79,16 +79,16 @@ GPL-2.0-only
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.31.1-r16 description:
+busybox-1.31.1-r19 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.31.1-r16 webpage:
+busybox-1.31.1-r19 webpage:
 https://busybox.net/
 
-busybox-1.31.1-r16 installed size:
+busybox-1.31.1-r19 installed size:
 962560
 
-busybox-1.31.1-r16 license:
+busybox-1.31.1-r19 license:
 GPL-2.0-only
 
 ```
@@ -96,16 +96,16 @@ GPL-2.0-only
 ### `apk` package: `ca-certificates`
 
 ```console
-ca-certificates-20191127-r3 description:
+ca-certificates-20191127-r4 description:
 Common CA certificates PEM files from Mozilla
 
-ca-certificates-20191127-r3 webpage:
+ca-certificates-20191127-r4 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-20191127-r3 installed size:
+ca-certificates-20191127-r4 installed size:
 688128
 
-ca-certificates-20191127-r3 license:
+ca-certificates-20191127-r4 license:
 MPL-2.0 GPL-2.0-or-later
 
 ```
@@ -113,16 +113,16 @@ MPL-2.0 GPL-2.0-or-later
 ### `apk` package: `ca-certificates-bundle`
 
 ```console
-ca-certificates-bundle-20191127-r2 description:
+ca-certificates-bundle-20191127-r4 description:
 Pre generated bundle of Mozilla certificates
 
-ca-certificates-bundle-20191127-r2 webpage:
+ca-certificates-bundle-20191127-r4 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-bundle-20191127-r2 installed size:
+ca-certificates-bundle-20191127-r4 installed size:
 233472
 
-ca-certificates-bundle-20191127-r2 license:
+ca-certificates-bundle-20191127-r4 license:
 MPL-2.0 GPL-2.0-or-later
 
 ```
@@ -215,16 +215,16 @@ Public-Domain and MIT
 ### `apk` package: `musl`
 
 ```console
-musl-1.1.24-r8 description:
+musl-1.1.24-r9 description:
 the musl c library (libc) implementation
 
-musl-1.1.24-r8 webpage:
+musl-1.1.24-r9 webpage:
 https://musl.libc.org/
 
-musl-1.1.24-r8 installed size:
+musl-1.1.24-r9 installed size:
 614400
 
-musl-1.1.24-r8 license:
+musl-1.1.24-r9 license:
 MIT
 
 ```
@@ -232,16 +232,16 @@ MIT
 ### `apk` package: `musl-utils`
 
 ```console
-musl-utils-1.1.24-r8 description:
+musl-utils-1.1.24-r9 description:
 the musl c library (libc) implementation
 
-musl-utils-1.1.24-r8 webpage:
+musl-utils-1.1.24-r9 webpage:
 https://musl.libc.org/
 
-musl-utils-1.1.24-r8 installed size:
+musl-utils-1.1.24-r9 installed size:
 151552
 
-musl-utils-1.1.24-r8 license:
+musl-utils-1.1.24-r9 license:
 MIT BSD GPL2+
 
 ```
@@ -266,16 +266,16 @@ GPL-2.0-only
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.31.1-r16 description:
+ssl_client-1.31.1-r19 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.31.1-r16 webpage:
+ssl_client-1.31.1-r19 webpage:
 https://busybox.net/
 
-ssl_client-1.31.1-r16 installed size:
+ssl_client-1.31.1-r19 installed size:
 28672
 
-ssl_client-1.31.1-r16 license:
+ssl_client-1.31.1-r19 license:
 GPL-2.0-only
 
 ```
