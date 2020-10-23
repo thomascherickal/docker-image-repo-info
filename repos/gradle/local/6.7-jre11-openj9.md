@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:b1becea00347ae824e89c9f13cedc394ffc7d456f1116cdeaed4fd1c21b75885`
-- Created: `2020-10-15T18:21:35.205568722Z`
-- Virtual Size: ~ 490.24 Mb  
+- Image ID: `sha256:056bce442f06a46cbc2dfe688aa959f333cae27827d280e99a7a589c62fed4f9`
+- Created: `2020-10-21T18:35:18.890367595Z`
+- Virtual Size: ~ 505.97 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["gradle"]`
@@ -15,7 +15,8 @@
   - `LC_ALL=en_US.UTF-8`
   - `JAVA_VERSION=jdk-11.0.8+10_openj9-0.21.0`
   - `JAVA_HOME=/opt/java/openjdk`
-  - `JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+UseContainerSupport -XX:+IdleTuningCompactOnIdle -XX:+IdleTuningGcOnIdle`
+  - `JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+IdleTuningGcOnIdle`
+  - `OPENJ9_JAVA_OPTIONS=-Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,readonly,nonFatal`
   - `GRADLE_HOME=/opt/gradle`
   - `GRADLE_VERSION=6.7`
 
@@ -725,14 +726,9 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 - `dlmalloc`
 - `mingw-runtime`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris git=1:2.28.0-0ppa1~ubuntu18.04.1
-'http://ppa.launchpad.net/git-core/ppa/ubuntu/pool/main/g/git/git_2.28.0.orig.tar.xz' git_2.28.0.orig.tar.xz 6117608 SHA256:dfa5d1a253aa451465478fe45c6a40ab8605b340fdb4c4e80b16d7f87708439d
-'http://ppa.launchpad.net/git-core/ppa/ubuntu/pool/main/g/git/git_2.28.0-0ppa1~ubuntu18.04.1.debian.tar.xz' git_2.28.0-0ppa1~ubuntu18.04.1.debian.tar.xz 655172 SHA256:9db745c6a6460f55a2877632c4c84af9caf67a862ab7e526d1a274607001bf4d
-'http://ppa.launchpad.net/git-core/ppa/ubuntu/pool/main/g/git/git_2.28.0-0ppa1~ubuntu18.04.1.dsc' git_2.28.0-0ppa1~ubuntu18.04.1.dsc 2753 SHA256:a5d9e94eec279b86175e818ed59be149c4ec9cae07c7ec1a098ea0bca918f37d
-```
 
 ### `dpkg` source package: `glibc=2.27-3ubuntu1.2`
 

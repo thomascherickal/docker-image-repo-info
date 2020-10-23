@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:3aa02bc611da4784146d49107229592338e3bb3236f6b7c10cfa081da9027dbe`
-- Created: `2020-10-15T18:20:04.745986259Z`
-- Virtual Size: ~ 479.28 Mb  
+- Image ID: `sha256:8c1a715a9e2bf655bb867689adcc9e4ce56f1b04ed1531acc0c18be79925d0e2`
+- Created: `2020-10-21T18:31:07.614587946Z`
+- Virtual Size: ~ 479.24 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["gradle"]`
@@ -13,7 +13,7 @@
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk8u262-b10`
+  - `JAVA_VERSION=jdk8u265-b01`
   - `JAVA_HOME=/opt/java/openjdk`
   - `GRADLE_HOME=/opt/gradle`
   - `GRADLE_VERSION=6.7`
@@ -724,14 +724,9 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 - `dlmalloc`
 - `mingw-runtime`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris git=1:2.28.0-0ppa1~ubuntu18.04.1
-'http://ppa.launchpad.net/git-core/ppa/ubuntu/pool/main/g/git/git_2.28.0.orig.tar.xz' git_2.28.0.orig.tar.xz 6117608 SHA256:dfa5d1a253aa451465478fe45c6a40ab8605b340fdb4c4e80b16d7f87708439d
-'http://ppa.launchpad.net/git-core/ppa/ubuntu/pool/main/g/git/git_2.28.0-0ppa1~ubuntu18.04.1.debian.tar.xz' git_2.28.0-0ppa1~ubuntu18.04.1.debian.tar.xz 655172 SHA256:9db745c6a6460f55a2877632c4c84af9caf67a862ab7e526d1a274607001bf4d
-'http://ppa.launchpad.net/git-core/ppa/ubuntu/pool/main/g/git/git_2.28.0-0ppa1~ubuntu18.04.1.dsc' git_2.28.0-0ppa1~ubuntu18.04.1.dsc 2753 SHA256:a5d9e94eec279b86175e818ed59be149c4ec9cae07c7ec1a098ea0bca918f37d
-```
 
 ### `dpkg` source package: `glibc=2.27-3ubuntu1.2`
 
@@ -1925,14 +1920,14 @@ $ apt-get source -qq --print-uris python-defaults=2.7.15~rc1-1
 'http://archive.ubuntu.com/ubuntu/pool/main/p/python-defaults/python-defaults_2.7.15~rc1-1.tar.gz' python-defaults_2.7.15~rc1-1.tar.gz 1958015 SHA256:f3bed2b81091821d2e514c2e17c6846f7e744487fd15f7d3c48fa1c91b9cd49b
 ```
 
-### `dpkg` source package: `python2.7=2.7.17-1~18.04ubuntu1.1`
+### `dpkg` source package: `python2.7=2.7.17-1~18.04ubuntu1.2`
 
 Binary Packages:
 
-- `libpython2.7-minimal:amd64=2.7.17-1~18.04ubuntu1.1`
-- `libpython2.7-stdlib:amd64=2.7.17-1~18.04ubuntu1.1`
-- `python2.7=2.7.17-1~18.04ubuntu1.1`
-- `python2.7-minimal=2.7.17-1~18.04ubuntu1.1`
+- `libpython2.7-minimal:amd64=2.7.17-1~18.04ubuntu1.2`
+- `libpython2.7-stdlib:amd64=2.7.17-1~18.04ubuntu1.2`
+- `python2.7=2.7.17-1~18.04ubuntu1.2`
+- `python2.7-minimal=2.7.17-1~18.04ubuntu1.2`
 
 Licenses: (parsed from: `/usr/share/doc/libpython2.7-minimal/copyright`, `/usr/share/doc/libpython2.7-stdlib/copyright`, `/usr/share/doc/python2.7/copyright`, `/usr/share/doc/python2.7-minimal/copyright`)
 
@@ -1953,9 +1948,14 @@ Licenses: (parsed from: `/usr/share/doc/libpython2.7-minimal/copyright`, `/usr/s
 - `implied`
 - `see above, some license as Python`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris python2.7=2.7.17-1~18.04ubuntu1.2
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.17-1~18.04ubuntu1.2.dsc' python2.7_2.7.17-1~18.04ubuntu1.2.dsc 3483 SHA512:5450e075e251ba89bb299da7468875428b81a9249bb0a72fd845aa517bbae52f876c339f9064861f287e62adb7db70d5c2ad3cdd1ac425a2371372775fc4277f
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.17.orig.tar.gz' python2.7_2.7.17.orig.tar.gz 17535962 SHA512:f526baff7f1a9451244edb04e2aca63336b656aac178f4f64c135390b5b1185990ccff0c48f602914dd1c49c9e075951d372b4f2daac39e336c23ae84ef4ca16
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.17-1~18.04ubuntu1.2.diff.gz' python2.7_2.7.17-1~18.04ubuntu1.2.diff.gz 294617 SHA512:a92eb8fe030174bc0b063d71e58dcb364a0d62bf554afae01da6dc121246442149630c104d2d4f49a0d7a247042ffa176973baf5f6d516f772b986f4dbdaf19e
+```
 
 ### `dpkg` source package: `readline=7.0-3`
 

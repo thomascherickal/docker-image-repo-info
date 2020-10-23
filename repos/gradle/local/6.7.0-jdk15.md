@@ -1,10 +1,10 @@
-# `gradle:6.7.0-jre14-openj9`
+# `gradle:6.7.0-jdk15`
 
 ## Docker Metadata
 
-- Image ID: `sha256:c5f4c464c811bef8407a5d6999a1455699ad2563e3ad524e15a7131e6d231211`
-- Created: `2020-10-15T18:21:57.532470049Z`
-- Virtual Size: ~ 509.36 Mb  
+- Image ID: `sha256:74946b72e0804ab6f95948faa0f84aaf24b4a314536baed7b9d560047b742271`
+- Created: `2020-10-21T18:31:55.796522092Z`
+- Virtual Size: ~ 727.55 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["gradle"]`
@@ -13,9 +13,8 @@
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk-14.0.2+12_openj9-0.21.0`
+  - `JAVA_VERSION=jdk-15+36`
   - `JAVA_HOME=/opt/java/openjdk`
-  - `JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+UseContainerSupport -XX:+IdleTuningCompactOnIdle -XX:+IdleTuningGcOnIdle`
   - `GRADLE_HOME=/opt/gradle`
   - `GRADLE_VERSION=6.7`
 
@@ -725,14 +724,9 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 - `dlmalloc`
 - `mingw-runtime`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris git=1:2.28.0-0ppa1~ubuntu18.04.1
-'http://ppa.launchpad.net/git-core/ppa/ubuntu/pool/main/g/git/git_2.28.0.orig.tar.xz' git_2.28.0.orig.tar.xz 6117608 SHA256:dfa5d1a253aa451465478fe45c6a40ab8605b340fdb4c4e80b16d7f87708439d
-'http://ppa.launchpad.net/git-core/ppa/ubuntu/pool/main/g/git/git_2.28.0-0ppa1~ubuntu18.04.1.debian.tar.xz' git_2.28.0-0ppa1~ubuntu18.04.1.debian.tar.xz 655172 SHA256:9db745c6a6460f55a2877632c4c84af9caf67a862ab7e526d1a274607001bf4d
-'http://ppa.launchpad.net/git-core/ppa/ubuntu/pool/main/g/git/git_2.28.0-0ppa1~ubuntu18.04.1.dsc' git_2.28.0-0ppa1~ubuntu18.04.1.dsc 2753 SHA256:a5d9e94eec279b86175e818ed59be149c4ec9cae07c7ec1a098ea0bca918f37d
-```
 
 ### `dpkg` source package: `glibc=2.27-3ubuntu1.2`
 
