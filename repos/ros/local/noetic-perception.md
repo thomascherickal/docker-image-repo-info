@@ -1086,9 +1086,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris cryptsetup=2:2.2.2-3ubuntu2.2
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cryptsetup/cryptsetup_2.2.2-3ubuntu2.2.dsc' cryptsetup_2.2.2-3ubuntu2.2.dsc 2968 SHA512:cbc6a116775f61c3ed23fe9225427aeaab31c28eab2c136bdd2dfd7ca86b143ff773bcc239d8ee75a4bc8cd2813ba3b73bea15ed4f62ac1ba2797439f90f4057
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cryptsetup/cryptsetup_2.2.2.orig.tar.gz' cryptsetup_2.2.2.orig.tar.gz 10912347 SHA512:e7a19c12a0959fbaf75caf033d9737e3505a3f97da12a544959a435e10aa5c4499376b66309bd94db2b9acc13a9515ba6359145f950614487b8f35914819e9eb
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cryptsetup/cryptsetup_2.2.2-3ubuntu2.2.debian.tar.xz' cryptsetup_2.2.2-3ubuntu2.2.debian.tar.xz 124864 SHA512:81014f2e5c0e6e90e8452973d3cd4c1d591fc14889af86178115acbeb7de2e41932ba2b6e771e4c4d922ee5a4894accff9730702a774530b4ffd8d213a1e0afd
+'http://security.ubuntu.com/ubuntu/pool/main/c/cryptsetup/cryptsetup_2.2.2-3ubuntu2.2.dsc' cryptsetup_2.2.2-3ubuntu2.2.dsc 2968 SHA512:cbc6a116775f61c3ed23fe9225427aeaab31c28eab2c136bdd2dfd7ca86b143ff773bcc239d8ee75a4bc8cd2813ba3b73bea15ed4f62ac1ba2797439f90f4057
+'http://security.ubuntu.com/ubuntu/pool/main/c/cryptsetup/cryptsetup_2.2.2.orig.tar.gz' cryptsetup_2.2.2.orig.tar.gz 10912347 SHA512:e7a19c12a0959fbaf75caf033d9737e3505a3f97da12a544959a435e10aa5c4499376b66309bd94db2b9acc13a9515ba6359145f950614487b8f35914819e9eb
+'http://security.ubuntu.com/ubuntu/pool/main/c/cryptsetup/cryptsetup_2.2.2-3ubuntu2.2.debian.tar.xz' cryptsetup_2.2.2-3ubuntu2.2.debian.tar.xz 124864 SHA512:81014f2e5c0e6e90e8452973d3cd4c1d591fc14889af86178115acbeb7de2e41932ba2b6e771e4c4d922ee5a4894accff9730702a774530b4ffd8d213a1e0afd
 ```
 
 ### `dpkg` source package: `cups=2.3.1-9ubuntu1.1`
