@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:9ba525de20f70a3cc0c500f3d56ac88551385f0e1245452aa6fad3d50618e7e0`
-- Created: `2020-09-26T00:48:31.550877202Z`
-- Virtual Size: ~ 335.16 Mb  
+- Image ID: `sha256:5d8e0d7855f9f178b003da8acda232350a1f77ae055d06acc0ffc695943d1152`
+- Created: `2020-10-23T17:53:13.958533125Z`
+- Virtual Size: ~ 338.23 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -1174,20 +1174,25 @@ $ apt-get source -qq --print-uris libusb=2:0.1.12-28
 'http://archive.ubuntu.com/ubuntu/pool/main/libu/libusb/libusb_0.1.12-28.debian.tar.xz' libusb_0.1.12-28.debian.tar.xz 21524 SHA256:eaf2314902b0bb9de3e1fa8c9abfcecea7b78c9824048016beaca34f7cc4351b
 ```
 
-### `dpkg` source package: `linux=4.4.0-190.220`
+### `dpkg` source package: `linux=4.4.0-193.224`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=4.4.0-190.220`
+- `linux-libc-dev:amd64=4.4.0-193.224`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 - `redpine-signals`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris linux=4.4.0-193.224
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0-193.224.dsc' linux_4.4.0-193.224.dsc 11628 SHA512:f4070ec0cb25e409d84f11e27f22f03730b9d4c404e18d22e3477d19f4a05db287066b751e7f035fa61a6a509a3452b72ce89f7d030ff074da5b30c3c736118a
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0.orig.tar.gz' linux_4.4.0.orig.tar.gz 132860730 SHA512:28ef89b62f663f2d90b58274799b7ebeff04699f08d0b83f650b0de179d4ef354450c81ecda07522b493c43d5eb2d530fa0f552a2794d48f84878e05efa39cc3
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0-193.224.diff.gz' linux_4.4.0-193.224.diff.gz 16774187 SHA512:3a8e588aa0aaa79af901aa6cb4e2b4286ec561f46bab7767b22f3400efab28d0de8556bc0d1cfb042eaa9e91ddfac691c93c6afe9fdc172d339fab2522a978a3
+```
 
 ### `dpkg` source package: `lsb=9.20160110ubuntu0.2`
 
@@ -1431,22 +1436,27 @@ $ apt-get source -qq --print-uris p11-kit=0.23.2-5~ubuntu16.04.1
 'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.2-5~ubuntu16.04.1.debian.tar.xz' p11-kit_0.23.2-5~ubuntu16.04.1.debian.tar.xz 15208 SHA512:26514c75dd90eb2816a66b4e7fc37087600092111fd7a4b47919bee6c9e2c62a5f67d2f167ecdce4c449eb0b7f08c0286e08eaccdc334eadfd3f1a1e39c9242b
 ```
 
-### `dpkg` source package: `pam=1.1.8-3.2ubuntu2.1`
+### `dpkg` source package: `pam=1.1.8-3.2ubuntu2.3`
 
 Binary Packages:
 
-- `libpam-modules:amd64=1.1.8-3.2ubuntu2.1`
-- `libpam-modules-bin=1.1.8-3.2ubuntu2.1`
-- `libpam-runtime=1.1.8-3.2ubuntu2.1`
-- `libpam0g:amd64=1.1.8-3.2ubuntu2.1`
+- `libpam-modules:amd64=1.1.8-3.2ubuntu2.3`
+- `libpam-modules-bin=1.1.8-3.2ubuntu2.3`
+- `libpam-runtime=1.1.8-3.2ubuntu2.3`
+- `libpam0g:amd64=1.1.8-3.2ubuntu2.3`
 
 Licenses: (parsed from: `/usr/share/doc/libpam-modules/copyright`, `/usr/share/doc/libpam-modules-bin/copyright`, `/usr/share/doc/libpam-runtime/copyright`, `/usr/share/doc/libpam0g/copyright`)
 
 - `GPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris pam=1.1.8-3.2ubuntu2.3
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.1.8-3.2ubuntu2.3.dsc' pam_1.1.8-3.2ubuntu2.3.dsc 2611 SHA512:f33dfe20b608641d5d2f2396700a83511a58164d9ad22fada18f644e9c27dba5b489c178dcb7077c99307cc42d8ce5b6ba6826000307257a729a522c778fb34e
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.1.8.orig.tar.gz' pam_1.1.8.orig.tar.gz 1892765 SHA512:dca21547f951a53cdb6bbcbedde694f345ec02ff5931f2f81da26980471206515f891035cacded3e10d6631f7dc2fb8679fdaf737cd50adaf18768a1c56482a2
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.1.8-3.2ubuntu2.3.diff.gz' pam_1.1.8-3.2ubuntu2.3.diff.gz 197563 SHA512:19d1ea949966ba6f5935094f68006a35028c4787ceb6cbdd367ded22a28e8b76f17c6c2bb3d446f2f8674bc4427938f6cd65b85b6cc5699bfc64265302090074
+```
 
 ### `dpkg` source package: `pcre3=2:8.38-3.1`
 
