@@ -962,24 +962,13 @@ Licenses: (parsed from: `/usr/share/doc/libfreetype6/copyright`)
 - `Public-Domain`
 - `Zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris freetype=2.10.2+dfsg-3
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.10.2+dfsg-3.dsc' freetype_2.10.2+dfsg-3.dsc 3680 SHA256:d91c8e350849462dc7fa93bf551c714653dfcbdb82ed7a45f1ecd414475c301b
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.10.2+dfsg.orig-ft2demos.tar.xz' freetype_2.10.2+dfsg.orig-ft2demos.tar.xz 230672 SHA256:3dce65d1ba53d48659688549175765ee163d645b73db7055a3c43a7c882d6daa
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.10.2+dfsg.orig-ft2demos.tar.xz.asc' freetype_2.10.2+dfsg.orig-ft2demos.tar.xz.asc 195 SHA256:0a11f56569a589c9f52a3e60e491aeed566d040f51435082891d6551d6d66338
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.10.2+dfsg.orig-ft2docs.tar.xz' freetype_2.10.2+dfsg.orig-ft2docs.tar.xz 2078712 SHA256:22b9584040a2e3c4387b5998cb9b4340183888eef15c2ac0fd9115cad837cf91
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.10.2+dfsg.orig-ft2docs.tar.xz.asc' freetype_2.10.2+dfsg.orig-ft2docs.tar.xz.asc 195 SHA256:4be0f469d29086486df1ace563b9536e1be34d603e311f89a38b3fef99a9f115
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.10.2+dfsg.orig.tar.xz' freetype_2.10.2+dfsg.orig.tar.xz 2246904 SHA256:c1f32cbb42a1519ae7d69046d84d359f44bfdea15c800c4f0b60a36c78b46d70
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.10.2+dfsg-3.debian.tar.xz' freetype_2.10.2+dfsg-3.debian.tar.xz 116212 SHA256:7adcb9c757025deaa295f776787c8dc529d9ddfe30791862d476b73170782013
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/freetype/2.10.2+dfsg-3/
 
-- https://sources.debian.net/src/freetype/2.10.2+dfsg-3/ (for browsing the source)
-- https://sources.debian.net/src/freetype/2.10.2+dfsg-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/freetype/2.10.2+dfsg-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `fribidi=1.0.8-2`
 
@@ -1528,20 +1517,13 @@ Licenses: (parsed from: `/usr/share/doc/iproute2/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris iproute2=5.8.0-1
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.8.0-1.dsc' iproute2_5.8.0-1.dsc 1831 SHA256:557180ecd39f291deac14d4ca510118a8b5102ab793a195bdced76150ce8b126
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.8.0.orig.tar.xz' iproute2_5.8.0.orig.tar.xz 780612 SHA256:cfcd1f890290f8c8afcc91d9444ad929b9252c16f9ab3f286c50dd3c59dc646e
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.8.0-1.debian.tar.xz' iproute2_5.8.0-1.debian.tar.xz 35940 SHA256:a66ac8c3fcd172728451a4f6a1e3195bbf935c56ee96a1b353bd98988815eb5f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/iproute2/5.8.0-1/
 
-- https://sources.debian.net/src/iproute2/5.8.0-1/ (for browsing the source)
-- https://sources.debian.net/src/iproute2/5.8.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/iproute2/5.8.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `iptables=1.8.5-3`
 
@@ -2185,20 +2167,13 @@ Licenses: (parsed from: `/usr/share/doc/libnss-nis/copyright`)
 - `permissive-fsf`
 - `permissive-makefile-in`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libnss-nis=3.1-3
-'http://deb.debian.org/debian/pool/main/libn/libnss-nis/libnss-nis_3.1-3.dsc' libnss-nis_3.1-3.dsc 1933 SHA256:f85889970dffe1aa319f84df3637098060d2823470dd45c0a910eb4da81f066b
-'http://deb.debian.org/debian/pool/main/libn/libnss-nis/libnss-nis_3.1.orig.tar.xz' libnss-nis_3.1.orig.tar.xz 257440 SHA256:83c3d9c0d4c5a8344211aa0d3743680ec3dbbafd9775454db5c9cc2273ea008b
-'http://deb.debian.org/debian/pool/main/libn/libnss-nis/libnss-nis_3.1-3.debian.tar.xz' libnss-nis_3.1-3.debian.tar.xz 5040 SHA256:dddd7cf1c5c5b0b7f0b412e609fc561c07e9c6a1df548efde0586893c85bbb62
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libnss-nis/3.1-3/
 
-- https://sources.debian.net/src/libnss-nis/3.1-3/ (for browsing the source)
-- https://sources.debian.net/src/libnss-nis/3.1-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libnss-nis/3.1-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libnss-nisplus=1.3-3`
 
@@ -2217,20 +2192,13 @@ Licenses: (parsed from: `/usr/share/doc/libnss-nisplus/copyright`)
 - `permissive-autoconf-m4`
 - `permissive-fsf`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libnss-nisplus=1.3-3
-'http://deb.debian.org/debian/pool/main/libn/libnss-nisplus/libnss-nisplus_1.3-3.dsc' libnss-nisplus_1.3-3.dsc 1967 SHA256:edf8ab4f0351a763afbc76207b0e0c9c0a43b814ae01244d67567c7ea03ddcbf
-'http://deb.debian.org/debian/pool/main/libn/libnss-nisplus/libnss-nisplus_1.3.orig.tar.xz' libnss-nisplus_1.3.orig.tar.xz 162500 SHA256:c9844177704d07a4e9fede4b8de7c45ab80b3373009f505cbec603c5ec208d92
-'http://deb.debian.org/debian/pool/main/libn/libnss-nisplus/libnss-nisplus_1.3-3.debian.tar.xz' libnss-nisplus_1.3-3.debian.tar.xz 6376 SHA256:9e3458315d43d084fe4be920dc9d6e62de55a2e89d8a820246005e42aaaa9689
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libnss-nisplus/1.3-3/
 
-- https://sources.debian.net/src/libnss-nisplus/1.3-3/ (for browsing the source)
-- https://sources.debian.net/src/libnss-nisplus/1.3-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libnss-nisplus/1.3-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libpaper=1.1.28`
 
@@ -2931,16 +2899,10 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris linux=5.8.14-1
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.8.14-1.dsc' linux_5.8.14-1.dsc 194661 SHA256:639b3d2c22ef2dbc20d517e625b5827cfa43cb5f8f26799ea8023aa606353835
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.8.14.orig.tar.xz' linux_5.8.14.orig.tar.xz 119195732 SHA256:accb4fd194247ab011b9bf6e1fb4a3e0f6753146482467e00e5c5c6b806c783e
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.8.14-1.debian.tar.xz' linux_5.8.14-1.debian.tar.xz 1248760 SHA256:e20e709be9784305ccc03ea43513a8b59f58443eaeea2c716d2370025c042193
+'http://http.debian.net/debian/pool/main/l/linux/linux_5.8.14-1.dsc' linux_5.8.14-1.dsc 194661 SHA256:639b3d2c22ef2dbc20d517e625b5827cfa43cb5f8f26799ea8023aa606353835
+'http://http.debian.net/debian/pool/main/l/linux/linux_5.8.14.orig.tar.xz' linux_5.8.14.orig.tar.xz 119195732 SHA256:accb4fd194247ab011b9bf6e1fb4a3e0f6753146482467e00e5c5c6b806c783e
+'http://http.debian.net/debian/pool/main/l/linux/linux_5.8.14-1.debian.tar.xz' linux_5.8.14-1.debian.tar.xz 1248760 SHA256:e20e709be9784305ccc03ea43513a8b59f58443eaeea2c716d2370025c042193
 ```
-
-Other potentially useful URLs:
-
-- https://sources.debian.net/src/linux/5.8.14-1/ (for browsing the source)
-- https://sources.debian.net/src/linux/5.8.14-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/5.8.14-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `littler=0.3.12-1`
 
