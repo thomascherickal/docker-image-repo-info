@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:99316547dbe167b2eec207242456b2ad1e42013a878230df4253ff128b42bab4`
-- Created: `2020-10-06T21:20:09.018814326Z`
-- Virtual Size: ~ 321.92 Mb  
+- Image ID: `sha256:7a3a89243ece990a938647c53ed624ec6a8555155c5bc0d23c5319dd9be55dc2`
+- Created: `2020-10-22T02:52:11.674631017Z`
+- Virtual Size: ~ 322.90 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/sh"]`
@@ -18,16 +18,16 @@
 ### `apk` package: `alpine-baselayout`
 
 ```console
-alpine-baselayout-3.2.0-r6 description:
+alpine-baselayout-3.2.0-r7 description:
 Alpine base dir structure and init scripts
 
-alpine-baselayout-3.2.0-r6 webpage:
+alpine-baselayout-3.2.0-r7 webpage:
 https://git.alpinelinux.org/cgit/aports/tree/main/alpine-baselayout
 
-alpine-baselayout-3.2.0-r6 installed size:
+alpine-baselayout-3.2.0-r7 installed size:
 409600
 
-alpine-baselayout-3.2.0-r6 license:
+alpine-baselayout-3.2.0-r7 license:
 GPL-2.0-only
 
 ```
@@ -52,16 +52,16 @@ MIT
 ### `apk` package: `amazon-corretto-11`
 
 ```console
-amazon-corretto-11-11.0.8.10.1-r0 description:
+amazon-corretto-11-11.0.9.11.1-r0 description:
 Corretto11
 
-amazon-corretto-11-11.0.8.10.1-r0 webpage:
+amazon-corretto-11-11.0.9.11.1-r0 webpage:
 https://github.com/corretto/corretto-11
 
-amazon-corretto-11-11.0.8.10.1-r0 installed size:
-317566976
+amazon-corretto-11-11.0.9.11.1-r0 installed size:
+318545920
 
-amazon-corretto-11-11.0.8.10.1-r0 license:
+amazon-corretto-11-11.0.9.11.1-r0 license:
 https://github.com/corretto/corretto-11/blob/develop/LICENSE
 
 ```
@@ -86,16 +86,16 @@ GPL-2.0-only
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.31.1-r16 description:
+busybox-1.31.1-r19 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.31.1-r16 webpage:
+busybox-1.31.1-r19 webpage:
 https://busybox.net/
 
-busybox-1.31.1-r16 installed size:
+busybox-1.31.1-r19 installed size:
 962560
 
-busybox-1.31.1-r16 license:
+busybox-1.31.1-r19 license:
 GPL-2.0-only
 
 ```
@@ -103,16 +103,16 @@ GPL-2.0-only
 ### `apk` package: `ca-certificates-bundle`
 
 ```console
-ca-certificates-bundle-20191127-r2 description:
+ca-certificates-bundle-20191127-r4 description:
 Pre generated bundle of Mozilla certificates
 
-ca-certificates-bundle-20191127-r2 webpage:
+ca-certificates-bundle-20191127-r4 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-bundle-20191127-r2 installed size:
+ca-certificates-bundle-20191127-r4 installed size:
 233472
 
-ca-certificates-bundle-20191127-r2 license:
+ca-certificates-bundle-20191127-r4 license:
 MPL-2.0 GPL-2.0-or-later
 
 ```
@@ -205,16 +205,16 @@ ISC
 ### `apk` package: `musl`
 
 ```console
-musl-1.1.24-r8 description:
+musl-1.1.24-r9 description:
 the musl c library (libc) implementation
 
-musl-1.1.24-r8 webpage:
+musl-1.1.24-r9 webpage:
 https://musl.libc.org/
 
-musl-1.1.24-r8 installed size:
+musl-1.1.24-r9 installed size:
 614400
 
-musl-1.1.24-r8 license:
+musl-1.1.24-r9 license:
 MIT
 
 ```
@@ -222,16 +222,16 @@ MIT
 ### `apk` package: `musl-utils`
 
 ```console
-musl-utils-1.1.24-r8 description:
+musl-utils-1.1.24-r9 description:
 the musl c library (libc) implementation
 
-musl-utils-1.1.24-r8 webpage:
+musl-utils-1.1.24-r9 webpage:
 https://musl.libc.org/
 
-musl-utils-1.1.24-r8 installed size:
+musl-utils-1.1.24-r9 installed size:
 151552
 
-musl-utils-1.1.24-r8 license:
+musl-utils-1.1.24-r9 license:
 MIT BSD GPL2+
 
 ```
@@ -256,16 +256,16 @@ GPL-2.0-only
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.31.1-r16 description:
+ssl_client-1.31.1-r19 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.31.1-r16 webpage:
+ssl_client-1.31.1-r19 webpage:
 https://busybox.net/
 
-ssl_client-1.31.1-r16 installed size:
+ssl_client-1.31.1-r19 installed size:
 28672
 
-ssl_client-1.31.1-r16 license:
+ssl_client-1.31.1-r19 license:
 GPL-2.0-only
 
 ```
