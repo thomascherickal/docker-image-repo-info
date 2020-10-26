@@ -1,19 +1,18 @@
-# `docker:19.03.13-dind-rootless`
+# `docker:20.10.0-beta1-dind`
 
 ## Docker Metadata
 
-- Image ID: `sha256:1f794d01f56082fa212cd67a19297fb6c02a5e0b72ee5f4559f8dab60a254d00`
-- Created: `2020-10-23T17:18:19.83778024Z`
-- Virtual Size: ~ 296.64 Mb  
+- Image ID: `sha256:8d4efebd1fec3228e63b94537a836c1fbe3b73ae1965c5ddd6241b32471be218`
+- Created: `2020-10-23T17:17:15.48046535Z`
+- Virtual Size: ~ 253.22 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["dockerd-entrypoint.sh"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `DOCKER_VERSION=19.03.13`
+  - `DOCKER_VERSION=20.10.0-beta1`
   - `DOCKER_TLS_CERTDIR=/certs`
   - `DIND_COMMIT=ed89041433a031cafc0a0f19cfe573c31688d377`
-  - `ROOTLESSKIT_VERSION=0.10.0`
 
 ## `apk` (`.apk`-based packages)
 
@@ -187,40 +186,6 @@ GPL-2.0-or-later AND LGPL-2.0-or-later AND BSD-3-Clause AND MIT
 
 ```
 
-### `apk` package: `fts`
-
-```console
-fts-1.2.7-r1 description:
-Provides the fts(3) functions, which are missing in musl libc
-
-fts-1.2.7-r1 webpage:
-https://github.com/pullmoll/musl-fts/
-
-fts-1.2.7-r1 installed size:
-32768
-
-fts-1.2.7-r1 license:
-BSD-3-Clause
-
-```
-
-### `apk` package: `iproute2`
-
-```console
-iproute2-5.6.0-r0 description:
-IP Routing Utilities
-
-iproute2-5.6.0-r0 webpage:
-https://www.linuxfoundation.org/collaborate/workgroups/networking/iproute2
-
-iproute2-5.6.0-r0 installed size:
-1794048
-
-iproute2-5.6.0-r0 license:
-GPL-2.0-or-later
-
-```
-
 ### `apk` package: `iptables`
 
 ```console
@@ -306,23 +271,6 @@ GPL-2.0 GPL-2.0-or-later LGPL-2.0-or-later BSD Public-Domain
 
 ```
 
-### `apk` package: `libbz2`
-
-```console
-libbz2-1.0.8-r1 description:
-Shared library for bz2
-
-libbz2-1.0.8-r1 webpage:
-http://sources.redhat.com/bzip2
-
-libbz2-1.0.8-r1 installed size:
-73728
-
-libbz2-1.0.8-r1 license:
-bzip2-1.0.6
-
-```
-
 ### `apk` package: `libc-utils`
 
 ```console
@@ -388,23 +336,6 @@ libedit-20191231.3.1-r0 installed size:
 
 libedit-20191231.3.1-r0 license:
 BSD-3-Clause
-
-```
-
-### `apk` package: `libelf`
-
-```console
-libelf-0.179-r0 description:
-A collection of utilities and DSOs to handle ELF files and DWARF data - runtime libraries
-
-libelf-0.179-r0 webpage:
-http://elfutils.org/
-
-libelf-0.179-r0 installed size:
-704512
-
-libelf-0.179-r0 license:
-GPL-3.0-or-later and (GPL-2.0-or-later or LGPL-3.0-or-later)
 
 ```
 
