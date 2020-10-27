@@ -6480,15 +6480,9 @@ Licenses: (parsed from: `/usr/share/doc/libperl5.26/copyright`, `/usr/share/doc/
 - `Unicode`
 - `ZLIB`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris perl=5.26.1-6ubuntu0.3
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.26.1-6ubuntu0.3.dsc' perl_5.26.1-6ubuntu0.3.dsc 2768 SHA512:d859b56d2cc477937f33c033b81449e740a05be19c5376180e1db377b1d9733b3ebdcd2dfb144df68587e2d8e6f4b78a9f0b500c9ace8f5e07468e6705fe55bb
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.26.1.orig-regen-configure.tar.gz' perl_5.26.1.orig-regen-configure.tar.gz 712883 SHA512:3a8ecf16483d87d40bf428e952a3f5c287af8e4f64977133b61188855120d5896b3c5af845a19ad1912f469d9345dddd728708f6171498a7fd0dd0f56b463139
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.26.1.orig.tar.xz' perl_5.26.1.orig.tar.xz 11922848 SHA512:13faa7bcd7ed8c490c37e9032c115af06c9b8152b75f8062409dd72d263d1314480e8a9a883490de1b448b2e6d53b6a87d108e2eceb17de2524d5857c6a7d300
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.26.1-6ubuntu0.3.debian.tar.xz' perl_5.26.1-6ubuntu0.3.debian.tar.xz 174240 SHA512:e5febb7ff8da2e4153e323f2d036dae663079c5af18fa44e33729440c96998221d1074d7804057a54c4bf40d3ba8d0aa878bbef42b6ba1f2446a30021d5adf98
-```
 
 ### `dpkg` source package: `pillow=5.1.0-1ubuntu0.3`
 
@@ -10089,9 +10083,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris sudo=1.8.21p2-3ubuntu1.2
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sudo/sudo_1.8.21p2-3ubuntu1.2.dsc' sudo_1.8.21p2-3ubuntu1.2.dsc 2129 SHA512:256a15cb296c7a3e968e1000b1ced1209ccebe421eabed8a6d585d80a254b075adb205995c9c6505087d1333889f4e5e1f06903717d4e5294fd7d5e1fa8cfa21
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sudo/sudo_1.8.21p2.orig.tar.gz' sudo_1.8.21p2.orig.tar.gz 3008808 SHA512:fa9eb3324ad05cb7ca7637cadf3c2fe4b0d781c8a970942b356d12b1b8a22d6f16f293c2f547fe54cb71848770da1af3626da9fb44f92d18b8f523b0a1f723da
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sudo/sudo_1.8.21p2-3ubuntu1.2.debian.tar.xz' sudo_1.8.21p2-3ubuntu1.2.debian.tar.xz 34188 SHA512:67ecd2480bb70eedb483d3c38fe135f24d493ba9187673107380d088a2aa63714e1192d30be7fdbf405fbcb6cf015a64617c60bfee1edb09918f601e2ac3173c
+'http://security.ubuntu.com/ubuntu/pool/main/s/sudo/sudo_1.8.21p2-3ubuntu1.2.dsc' sudo_1.8.21p2-3ubuntu1.2.dsc 2129 SHA512:256a15cb296c7a3e968e1000b1ced1209ccebe421eabed8a6d585d80a254b075adb205995c9c6505087d1333889f4e5e1f06903717d4e5294fd7d5e1fa8cfa21
+'http://security.ubuntu.com/ubuntu/pool/main/s/sudo/sudo_1.8.21p2.orig.tar.gz' sudo_1.8.21p2.orig.tar.gz 3008808 SHA512:fa9eb3324ad05cb7ca7637cadf3c2fe4b0d781c8a970942b356d12b1b8a22d6f16f293c2f547fe54cb71848770da1af3626da9fb44f92d18b8f523b0a1f723da
+'http://security.ubuntu.com/ubuntu/pool/main/s/sudo/sudo_1.8.21p2-3ubuntu1.2.debian.tar.xz' sudo_1.8.21p2-3ubuntu1.2.debian.tar.xz 34188 SHA512:67ecd2480bb70eedb483d3c38fe135f24d493ba9187673107380d088a2aa63714e1192d30be7fdbf405fbcb6cf015a64617c60bfee1edb09918f601e2ac3173c
 ```
 
 ### `dpkg` source package: `superlu=5.2.1+dfsg1-3`
