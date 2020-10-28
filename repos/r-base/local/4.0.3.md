@@ -456,20 +456,13 @@ Licenses: (parsed from: `/usr/share/doc/r-cran-codetools/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris codetools=0.2-16-2
-'http://deb.debian.org/debian/pool/main/c/codetools/codetools_0.2-16-2.dsc' codetools_0.2-16-2.dsc 1853 SHA256:c7a78ce6b13bfcd25f9a22b5c161e1e183d6944b53e5aecf4075fce35bdbdf96
-'http://deb.debian.org/debian/pool/main/c/codetools/codetools_0.2-16.orig.tar.gz' codetools_0.2-16.orig.tar.gz 12996 SHA256:f67a66175cb5d8882457d1e9b91ea2f16813d554fa74f80c1fd6e17cf1877501
-'http://deb.debian.org/debian/pool/main/c/codetools/codetools_0.2-16-2.debian.tar.xz' codetools_0.2-16-2.debian.tar.xz 2836 SHA256:39def42f17e751c5c6944eb568d35b20175499c781a682c77f69bd4d8874a02b
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/codetools/0.2-16-2/
 
-- https://sources.debian.net/src/codetools/0.2-16-2/ (for browsing the source)
-- https://sources.debian.net/src/codetools/0.2-16-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/codetools/0.2-16-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `coreutils=8.32-4`
 
@@ -3277,20 +3270,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openldap=2.4.53+dfsg-1
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.53+dfsg-1.dsc' openldap_2.4.53+dfsg-1.dsc 3060 SHA256:f376a542a80d65d9226333ccf1dfb6d36bb649f0c856070a5a2ccd9bdda42534
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.53+dfsg.orig.tar.gz' openldap_2.4.53+dfsg.orig.tar.gz 5013515 SHA256:939b281098f63432a0e29de06701823cc158225fce33973b768dc883f6756139
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.53+dfsg-1.debian.tar.xz' openldap_2.4.53+dfsg-1.debian.tar.xz 167768 SHA256:12eee35b128988a9d8560e60d8097f1fa309e5725a013fbb79d076a7f806eb3f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/openldap/2.4.53+dfsg-1/
 
-- https://sources.debian.net/src/openldap/2.4.53+dfsg-1/ (for browsing the source)
-- https://sources.debian.net/src/openldap/2.4.53+dfsg-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openldap/2.4.53+dfsg-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssl=1.1.1g-1`
 
