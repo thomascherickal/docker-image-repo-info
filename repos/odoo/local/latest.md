@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:6640ab6622b9810ee4918bbae3a4ad9c1c6143a45cf1bcd7932226a6366cd15d`
-- Created: `2020-10-13T17:52:02.116898255Z`
-- Virtual Size: ~ 1.18 Gb  
+- Image ID: `sha256:70de954aa8a5672fc15a662bc3d389a5a0378a20082e7235cf4cabd78c3d8799`
+- Created: `2020-10-26T17:46:26.534793712Z`
+- Virtual Size: ~ 1.20 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -927,6 +927,58 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/fonts-dejavu/2.37-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/fonts-dejavu/2.37-1/ (for access to the source package after it no longer exists in the archive)
 
+### `dpkg` source package: `fonts-font-awesome=5.0.10+really4.7.0~dfsg-1`
+
+Binary Packages:
+
+- `fonts-font-awesome=5.0.10+really4.7.0~dfsg-1`
+
+Licenses: (parsed from: `/usr/share/doc/fonts-font-awesome/copyright`)
+
+- `Expat`
+- `OFL-1.1`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris fonts-font-awesome=5.0.10+really4.7.0~dfsg-1
+'http://deb.debian.org/debian/pool/main/f/fonts-font-awesome/fonts-font-awesome_5.0.10+really4.7.0~dfsg-1.dsc' fonts-font-awesome_5.0.10+really4.7.0~dfsg-1.dsc 2243 SHA256:a981dcd407e9826ecf0579eae430d2a997b2593bb4a1b0247ae557735d9d10cd
+'http://deb.debian.org/debian/pool/main/f/fonts-font-awesome/fonts-font-awesome_5.0.10+really4.7.0~dfsg.orig.tar.gz' fonts-font-awesome_5.0.10+really4.7.0~dfsg.orig.tar.gz 675665 SHA256:9d25735ecb8984dae7b1bf04c6c343f8684ce88e0c81104e4b5f5495df3ded5d
+'http://deb.debian.org/debian/pool/main/f/fonts-font-awesome/fonts-font-awesome_5.0.10+really4.7.0~dfsg-1.debian.tar.xz' fonts-font-awesome_5.0.10+really4.7.0~dfsg-1.debian.tar.xz 6448 SHA256:caf1442e594d9c3f13dd4c812241cbd1531c8353ee6388b9160f7b93f809cf28
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/fonts-font-awesome/5.0.10+really4.7.0~dfsg-1/ (for browsing the source)
+- https://sources.debian.net/src/fonts-font-awesome/5.0.10+really4.7.0~dfsg-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/fonts-font-awesome/5.0.10+really4.7.0~dfsg-1/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `fonts-inconsolata=001.010-5`
+
+Binary Packages:
+
+- `fonts-inconsolata=001.010-5`
+
+Licenses: (parsed from: `/usr/share/doc/fonts-inconsolata/copyright`)
+
+- `Open Font License 1.0`
+- `The packaging is released under the same license as the Font Software`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris fonts-inconsolata=001.010-5
+'http://deb.debian.org/debian/pool/main/f/fonts-inconsolata/fonts-inconsolata_001.010-5.dsc' fonts-inconsolata_001.010-5.dsc 2097 SHA256:de7346f28416ab3521e634a073792627d33666ed12c040ed236c1f193f47ddc2
+'http://deb.debian.org/debian/pool/main/f/fonts-inconsolata/fonts-inconsolata_001.010.orig.tar.bz2' fonts-inconsolata_001.010.orig.tar.bz2 146357 SHA256:5b74557113257c6dc8d937c172fad8ff9ed3c34c733c1d94179a01e580f6b6f5
+'http://deb.debian.org/debian/pool/main/f/fonts-inconsolata/fonts-inconsolata_001.010-5.debian.tar.gz' fonts-inconsolata_001.010-5.debian.tar.gz 5628 SHA256:10eec9cafa8762aeb7d8f1f4de5c146e3fe175be5152b2c22113923900cf4c0a
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/fonts-inconsolata/001.010-5/ (for browsing the source)
+- https://sources.debian.net/src/fonts-inconsolata/001.010-5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/fonts-inconsolata/001.010-5/ (for access to the source package after it no longer exists in the archive)
+
 ### `dpkg` source package: `fonts-noto-cjk=1:20170601+repack1-3+deb10u1`
 
 Binary Packages:
@@ -954,11 +1006,40 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/fonts-noto-cjk/1:20170601+repack1-3+deb10u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/fonts-noto-cjk/1:20170601+repack1-3+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `freetype=2.9.1-3+deb10u1`
+### `dpkg` source package: `fonts-roboto=2:0~20170802-3`
 
 Binary Packages:
 
-- `libfreetype6:amd64=2.9.1-3+deb10u1`
+- `fonts-roboto-unhinted=2:0~20170802-3`
+
+Licenses: (parsed from: `/usr/share/doc/fonts-roboto-unhinted/copyright`)
+
+- `Apache-2.0`
+- `GPL-2`
+- `GPL-2+`
+- `GPL-3`
+- `GPL-3+`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris fonts-roboto=2:0~20170802-3
+'http://deb.debian.org/debian/pool/main/f/fonts-roboto/fonts-roboto_0~20170802-3.dsc' fonts-roboto_0~20170802-3.dsc 2043 SHA256:86f6bda68337b337d6906bacdb8f0293db8d97c9f15a77e3c30f83c1b1104464
+'http://deb.debian.org/debian/pool/main/f/fonts-roboto/fonts-roboto_0~20170802.orig.tar.xz' fonts-roboto_0~20170802.orig.tar.xz 5960112 SHA256:28729751815fa424282f9e534ac21ce11313969b67bb4ab278268fdcb23967e1
+'http://deb.debian.org/debian/pool/main/f/fonts-roboto/fonts-roboto_0~20170802-3.debian.tar.xz' fonts-roboto_0~20170802-3.debian.tar.xz 20488 SHA256:33d09403f2e68773e97b40421dfe79d85ed596f7fa8d29aff0549894d2076750
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/fonts-roboto/2:0~20170802-3/ (for browsing the source)
+- https://sources.debian.net/src/fonts-roboto/2:0~20170802-3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/fonts-roboto/2:0~20170802-3/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `freetype=2.9.1-3+deb10u2`
+
+Binary Packages:
+
+- `libfreetype6:amd64=2.9.1-3+deb10u2`
 
 Licenses: (parsed from: `/usr/share/doc/libfreetype6/copyright`)
 
@@ -980,22 +1061,22 @@ Licenses: (parsed from: `/usr/share/doc/libfreetype6/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris freetype=2.9.1-3+deb10u1
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.9.1-3+deb10u1.dsc' freetype_2.9.1-3+deb10u1.dsc 3690 SHA256:ef4825d67d044be4ea2e86444eae166057f8bd7d5606abf82d5095f47a3a7bd1
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.9.1.orig-ft2demos.tar.gz' freetype_2.9.1.orig-ft2demos.tar.gz 294850 SHA256:3d440aad3481285c7455f1593577e375c9d5792c800bbaba68d46fd75130fab9
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.9.1.orig-ft2demos.tar.gz.asc' freetype_2.9.1.orig-ft2demos.tar.gz.asc 359 SHA256:665b8357378dc715fbac964d05cdcc2a2f7fd1e9d7918a27bf50f4d0a17f0d30
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.9.1.orig-ft2docs.tar.gz' freetype_2.9.1.orig-ft2docs.tar.gz 2123920 SHA256:f57c1297f5ad2ad4764f491317fa0f548bd307c4513185d4a0602412e83b1dc9
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.9.1.orig-ft2docs.tar.gz.asc' freetype_2.9.1.orig-ft2docs.tar.gz.asc 359 SHA256:c4c674db43603f719018716970569d1722d0de46fa94757eb7f39266d72cdbd1
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.9.1.orig.tar.gz' freetype_2.9.1.orig.tar.gz 2533956 SHA256:ec391504e55498adceb30baceebd147a6e963f636eb617424bcfc47a169898ce
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.9.1.orig.tar.gz.asc' freetype_2.9.1.orig.tar.gz.asc 359 SHA256:2c2c5ae3b3838053b94366639e802b18bc4761003ea15ce73402d276baec424d
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.9.1-3+deb10u1.debian.tar.xz' freetype_2.9.1-3+deb10u1.debian.tar.xz 111972 SHA256:7a2765961a01332f2d402d86a126a9480efb326c995b0db2108c0f825d78cbe2
+$ apt-get source -qq --print-uris freetype=2.9.1-3+deb10u2
+'http://security.debian.org/debian-security/pool/updates/main/f/freetype/freetype_2.9.1-3+deb10u2.dsc' freetype_2.9.1-3+deb10u2.dsc 3845 SHA256:374330a49a699ec8dc4fff06b3270ae4d236d5b68a1258d60512f6edc9ddd1d1
+'http://security.debian.org/debian-security/pool/updates/main/f/freetype/freetype_2.9.1.orig-ft2demos.tar.gz' freetype_2.9.1.orig-ft2demos.tar.gz 294850 SHA256:3d440aad3481285c7455f1593577e375c9d5792c800bbaba68d46fd75130fab9
+'http://security.debian.org/debian-security/pool/updates/main/f/freetype/freetype_2.9.1.orig-ft2demos.tar.gz.asc' freetype_2.9.1.orig-ft2demos.tar.gz.asc 359 SHA256:665b8357378dc715fbac964d05cdcc2a2f7fd1e9d7918a27bf50f4d0a17f0d30
+'http://security.debian.org/debian-security/pool/updates/main/f/freetype/freetype_2.9.1.orig-ft2docs.tar.gz' freetype_2.9.1.orig-ft2docs.tar.gz 2123920 SHA256:f57c1297f5ad2ad4764f491317fa0f548bd307c4513185d4a0602412e83b1dc9
+'http://security.debian.org/debian-security/pool/updates/main/f/freetype/freetype_2.9.1.orig-ft2docs.tar.gz.asc' freetype_2.9.1.orig-ft2docs.tar.gz.asc 359 SHA256:c4c674db43603f719018716970569d1722d0de46fa94757eb7f39266d72cdbd1
+'http://security.debian.org/debian-security/pool/updates/main/f/freetype/freetype_2.9.1.orig.tar.gz' freetype_2.9.1.orig.tar.gz 2533956 SHA256:ec391504e55498adceb30baceebd147a6e963f636eb617424bcfc47a169898ce
+'http://security.debian.org/debian-security/pool/updates/main/f/freetype/freetype_2.9.1.orig.tar.gz.asc' freetype_2.9.1.orig.tar.gz.asc 359 SHA256:2c2c5ae3b3838053b94366639e802b18bc4761003ea15ce73402d276baec424d
+'http://security.debian.org/debian-security/pool/updates/main/f/freetype/freetype_2.9.1-3+deb10u2.debian.tar.xz' freetype_2.9.1-3+deb10u2.debian.tar.xz 112652 SHA256:0fdd4dc35e232a9dc09450fc0b961e0642c6a54135abea53be64991f26d31cc6
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/freetype/2.9.1-3+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/freetype/2.9.1-3+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/freetype/2.9.1-3+deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/freetype/2.9.1-3+deb10u2/ (for browsing the source)
+- https://sources.debian.net/src/freetype/2.9.1-3+deb10u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/freetype/2.9.1-3+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `freezegun=0.3.11-0.1`
 
@@ -9469,24 +9550,25 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/npth/1.6-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/npth/1.6-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `odoo=14.0.20201012`
+### `dpkg` source package: `odoo=14.0.20201026`
 
 Binary Packages:
 
-- `odoo=14.0.20201012`
+- `odoo=14.0.20201026`
 
 Licenses: (parsed from: `/usr/share/doc/odoo/copyright`)
 
-- `Apache-2`
 - `Apache-2.0`
-- `Flask Design License`
-- `GPL-2`
-- `GPL-2+`
+- `BSD-2`
+- `BSD-3`
+- `DWTFYW`
 - `LGPL-3`
 - `LGPL-3+`
 - `MIT`
 - `OFL-1.1`
 - `PSF`
+- `SIL-Open-Font-License`
+- `SIL-Open-Font-License `
 
 **WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
 This is *usually* due to a new package version being released and the old version being removed.
@@ -11915,11 +11997,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/util-linux/2.33.1-0.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/util-linux/2.33.1-0.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `wkhtmltox=1:0.12.5-1.stretch`
+### `dpkg` source package: `wkhtmltox=1:0.12.5-1.buster`
 
 Binary Packages:
 
-- `wkhtmltox=1:0.12.5-1.stretch`
+- `wkhtmltox=1:0.12.5-1.buster`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
