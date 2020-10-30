@@ -1,7 +1,7 @@
 ## `openjdk:15-jdk-oraclelinux7`
 
 ```console
-$ docker pull openjdk@sha256:2017f8c6612b1ac0d7194419589c0f2a13d8bf415ae29eaef967b024b57516d5
+$ docker pull openjdk@sha256:20a92376bf89becccf66d1df3ccebb8159b44c7334ac0ff8422a897636605152
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,51 +12,51 @@ $ docker pull openjdk@sha256:2017f8c6612b1ac0d7194419589c0f2a13d8bf415ae29eaef96
 ### `openjdk:15-jdk-oraclelinux7` - linux; amd64
 
 ```console
-$ docker pull openjdk@sha256:7e721912f31c8d6dda525e5ec3621ad704bff3eee21cb6b33ba7f6f364a05e7a
+$ docker pull openjdk@sha256:e8c50a5ba2f8691f62ea5ad952a9ee886e60f58a1abe3f0e2f580eccb4fdeb86
 ```
 
 -	Docker Version: 18.09.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **260.3 MB (260253245 bytes)**  
+-	Total Size: **260.3 MB (260271309 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:71a32dd6d7bf8e2d8815a019adbd2bb08bd06be83c9ca0aaa3ca85c238273140`
+-	Image ID: `sha256:c42f56dca1bd06cf4ed0fa0a98f0bf97c8516cbe079cdf6c9c5bfd9fd83a9cf9`
 -	Default Command: `["jshell"]`
 
 ```dockerfile
 # Tue, 15 Sep 2020 21:23:41 GMT
 LABEL org.opencontainers.image.authors=Oracle Linux Product Team <ol-ovm-info_ww@oracle.com> org.opencontainers.image.url=https://github.com/oracle/container-images org.opencontainers.image.source=https://github.com/oracle/container-images/tree/dist-amd64/7-slim org.opencontainers.image.vendor=Oracle America, Inc org.opencontainers.image.title=Oracle Linux 7 (slim) org.opencontainers.image.description=Oracle Linux is an open-source       operating system available under the GNU General Public License (GPLv2) and       is suitable for both general purpose or Oracle workloads.
-# Thu, 22 Oct 2020 02:16:46 GMT
-ADD file:59b4b5dc4ff5144ae5143af034a90495ce3fb94b66f4966e4d06c26c73506d90 in / 
-# Thu, 22 Oct 2020 02:16:47 GMT
+# Fri, 30 Oct 2020 02:06:29 GMT
+ADD file:145961aa92d5a9c6b87e124b38a59e7a4a08910f8cb21414300096f88cc5cb82 in / 
+# Fri, 30 Oct 2020 02:06:29 GMT
 CMD ["/bin/bash"]
-# Thu, 22 Oct 2020 02:36:16 GMT
+# Fri, 30 Oct 2020 04:38:46 GMT
 RUN set -eux; 	yum install -y 		gzip 		tar 				binutils 		freetype fontconfig 	; 	rm -rf /var/cache/yum
-# Thu, 22 Oct 2020 02:36:16 GMT
+# Fri, 30 Oct 2020 04:38:46 GMT
 ENV LANG=en_US.UTF-8
-# Thu, 22 Oct 2020 02:38:35 GMT
+# Fri, 30 Oct 2020 04:39:46 GMT
 ENV JAVA_HOME=/usr/java/openjdk-15
-# Thu, 22 Oct 2020 02:38:36 GMT
+# Fri, 30 Oct 2020 04:39:46 GMT
 ENV PATH=/usr/java/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 22 Oct 2020 02:38:36 GMT
+# Fri, 30 Oct 2020 04:39:47 GMT
 ENV JAVA_VERSION=15.0.1
-# Thu, 22 Oct 2020 02:38:59 GMT
+# Fri, 30 Oct 2020 04:40:02 GMT
 RUN set -eux; 		objdump="$(command -v objdump)"; 	arch="$(objdump --file-headers "$objdump" | awk -F '[:,]+[[:space:]]+' '$1 == "architecture" { print $2 }')"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/GA/jdk15.0.1/51f4f36ad4ef43e39d0dfdbaf6549e32/9/GPL/openjdk-15.0.1_linux-aarch64_bin.tar.gz; 			downloadSha256=6a62b7ec065280bad978a3322733a089153dec5ebf5ba81fd2fa361382dbc7b0; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/GA/jdk15.0.1/51f4f36ad4ef43e39d0dfdbaf6549e32/9/GPL/openjdk-15.0.1_linux-x64_bin.tar.gz; 			downloadSha256=83ec3a7b1649a6b31e021cde1e58ab447b07fb8173489f27f427e731c89ed84a; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		curl -fL -o openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		ln -sfT "$JAVA_HOME" /usr/java/default; 	ln -sfT "$JAVA_HOME" /usr/java/latest; 	for bin in "$JAVA_HOME/bin/"*; do 		base="$(basename "$bin")"; 		[ ! -e "/usr/bin/$base" ]; 		alternatives --install "/usr/bin/$base" "$base" "$bin" 20000; 	done; 		java -Xshare:dump; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/pki/ca-trust/extracted/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
-# Thu, 22 Oct 2020 02:39:00 GMT
+# Fri, 30 Oct 2020 04:40:07 GMT
 CMD ["jshell"]
 ```
 
 -	Layers:
-	-	`sha256:95cb88f1fe95a86a8b517472bb2c588e7f8ec90b705f71e24ec099e3a266e9de`  
-		Last Modified: Thu, 22 Oct 2020 02:18:58 GMT  
-		Size: 48.2 MB (48245353 bytes)  
+	-	`sha256:0df82e2779b8235d6babd25457b87762ea8300fb3797ea03adccf472e7a598df`  
+		Last Modified: Fri, 30 Oct 2020 02:08:45 GMT  
+		Size: 48.3 MB (48259572 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:49088501182fac2779f26885b335f17d9328f05236e6de06597dd813a20dadf2`  
-		Last Modified: Thu, 22 Oct 2020 02:45:34 GMT  
-		Size: 16.2 MB (16228231 bytes)  
+	-	`sha256:0b6cf1bd0da100f7cdd56c4dba13c55e8927426cdf47857604dacc67dc2763ea`  
+		Last Modified: Fri, 30 Oct 2020 04:43:13 GMT  
+		Size: 16.2 MB (16232304 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:34b1739552c9c7965d0094fa7ebb54f08d01e9afba6db93c6658a3de3c7b4c8f`  
-		Last Modified: Thu, 22 Oct 2020 02:48:24 GMT  
-		Size: 195.8 MB (195779661 bytes)  
+	-	`sha256:e9628c98a82ec472d29782374636f624f294f497176da0c13c89b6f39cf67149`  
+		Last Modified: Fri, 30 Oct 2020 04:44:49 GMT  
+		Size: 195.8 MB (195779433 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `openjdk:15-jdk-oraclelinux7` - linux; arm64 variant v8
