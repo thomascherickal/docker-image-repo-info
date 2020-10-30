@@ -1,7 +1,7 @@
 ## `oraclelinux:7-slim`
 
 ```console
-$ docker pull oraclelinux@sha256:e4e9bf19f4dc98bf477b8391465b45a456b7e19dd9025d3dc153a973756f4fd8
+$ docker pull oraclelinux@sha256:bc574a4cdb83591874e5c6ce5d9fa468494575d4b1ffc01c30809f8116d1858f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -40,27 +40,27 @@ CMD ["/bin/bash"]
 ### `oraclelinux:7-slim` - linux; arm64 variant v8
 
 ```console
-$ docker pull oraclelinux@sha256:7d3c4670f1fc32bb72cdfa793786d9af97a842734f2bb4b3be22b2e29db400d4
+$ docker pull oraclelinux@sha256:e53e6498633229abad7b41c698fe115c94e8822d8b524f61cb407801bb4bdb25
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **48.8 MB (48842295 bytes)**  
+-	Total Size: **48.9 MB (48850724 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:769bef8c512648c67d96d78d3e737d78a82968f3b324fa98ec4e53c47630fb41`
+-	Image ID: `sha256:5ef754f6859a0f5b4f16e1ebc6810d5bc6e0d417af2b5d379c474b3c430d5a14`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
 # Tue, 15 Sep 2020 20:41:36 GMT
 LABEL org.opencontainers.image.authors=Oracle Linux Product Team <ol-ovm-info_ww@oracle.com> org.opencontainers.image.url=https://github.com/oracle/container-images org.opencontainers.image.source=https://github.com/oracle/container-images/tree/dist-arm64v8/7-slim org.opencontainers.image.vendor=Oracle America, Inc org.opencontainers.image.title=Oracle Linux 7 (slim) org.opencontainers.image.description=Oracle Linux is an open-source       operating system available under the GNU General Public License (GPLv2) and       is suitable for both general purpose or Oracle workloads.
-# Thu, 22 Oct 2020 02:03:38 GMT
-ADD file:434be5616fd3939c71e24bfdeef60a8b2ba8daf6f7304554ea178bd308eb21a0 in / 
-# Thu, 22 Oct 2020 02:03:40 GMT
+# Fri, 30 Oct 2020 03:45:28 GMT
+ADD file:d06b128d722861d60588554a964338fbb9b6dfcc296d33a7a42703a049cd88b5 in / 
+# Fri, 30 Oct 2020 03:45:31 GMT
 CMD ["/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:447d17457bbfc6992a66711a4a20e5492ced489d732f6d943e5a2f8843d8e584`  
-		Last Modified: Thu, 22 Oct 2020 02:05:54 GMT  
-		Size: 48.8 MB (48842295 bytes)  
+	-	`sha256:52c09b6ca87b8b24b91cb6a8012a6e48a4a855b5a01f8a6076a66f42e7be2fc8`  
+		Last Modified: Fri, 30 Oct 2020 03:47:43 GMT  
+		Size: 48.9 MB (48850724 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
