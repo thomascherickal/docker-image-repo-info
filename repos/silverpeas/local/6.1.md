@@ -460,13 +460,9 @@ Licenses: (parsed from: `/usr/share/doc/ca-certificates/copyright`)
 - `GPL-2+`
 - `MPL-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ca-certificates=20190110~18.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20190110~18.04.1.dsc' ca-certificates_20190110~18.04.1.dsc 1830 SHA512:7b1f210e4020be3c91cb3a52cee93585a480272dbe7726079ac6a907868b7f1e078f06bc5c1557e232e4eb8cf7bab76be66838e9acd8303bf29f7a29de83adae
-'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20190110~18.04.1.tar.xz' ca-certificates_20190110~18.04.1.tar.xz 243664 SHA512:7b13d11c7b56d36c530289fa66edeea9a9b3ede7346a4d618f47da0a6ba22e04f282c411e3af1f067996e8e12073592b737bb5c7cab773246004ca590c43876e
-```
 
 ### `dpkg` source package: `cairo=1.15.10-2ubuntu0.1`
 
