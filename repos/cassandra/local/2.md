@@ -1833,15 +1833,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2020a-0ubuntu0.18.04
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2020a-0ubuntu0.18.04.dsc' tzdata_2020a-0ubuntu0.18.04.dsc 2363 SHA512:c25e90112957a2c170718aa83859d942a5cfa4e3143e443e2112f58a296dd563350100bfec556bc111295d8900dabf0e57b7a3deca8720bc4fca32ee9e51ebf9
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2020a.orig.tar.gz' tzdata_2020a.orig.tar.gz 397245 SHA512:2a2fc2e3ad8a6e4c574242296c847ad582c2c1d86add9c556e65c812d19b9528522e3c4dddb5239017091825d2acc5a2ccaf21dc41b900b6c300ef4264cc5a9d
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2020a.orig.tar.gz.asc' tzdata_2020a.orig.tar.gz.asc 833 SHA512:54c6539c4ed78f5ab8006f0a6ad99911a7002e742b185119bb3c77ba7c637777b2c7dce9867e16fd58088ad3f9d062d74c03f80e3225a599a3fc28581d87e366
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2020a-0ubuntu0.18.04.debian.tar.xz' tzdata_2020a-0ubuntu0.18.04.debian.tar.xz 104992 SHA512:20db9950500a3794b895c4893638e251bce84fa5da1de53ece1e36a09b440db4f1ec2565f9310004016674a188655fdc8eca15ab72f2386a9407895c7b8fe0eb
-```
 
 ### `dpkg` source package: `ubuntu-keyring=2018.09.18.1~18.04.0`
 
