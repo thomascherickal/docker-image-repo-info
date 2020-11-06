@@ -1028,9 +1028,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris glibc=2.27-3ubuntu1.2
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.27-3ubuntu1.2.dsc' glibc_2.27-3ubuntu1.2.dsc 9364 SHA512:3c04622e913a85fe8d32a65a14114310aad0df92c848ac00ecea6ad99cc3d4ebb5efd40c562cad0684151edc2348bc229a469662c55f19731d82971295f5cea8
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.27.orig.tar.xz' glibc_2.27.orig.tar.xz 15923832 SHA512:a0580fb52bc4ea8bb6e6734086b0dc66bd661060cdd837965880b989866490063c2420f250fb19b54e3547c58a5a7f8e012699e6513ce413746fd236ddd239e8
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.27-3ubuntu1.2.debian.tar.xz' glibc_2.27-3ubuntu1.2.debian.tar.xz 1014508 SHA512:0013d939c1c8be3b5a06fb71e710b7912a475c178e8daff27ece31b8cfb3fbab586f09da22a506a28d4af6aadc6ca8953b6acd1272c2a9010f38d400eec24358
+'http://security.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.27-3ubuntu1.2.dsc' glibc_2.27-3ubuntu1.2.dsc 9364 SHA512:3c04622e913a85fe8d32a65a14114310aad0df92c848ac00ecea6ad99cc3d4ebb5efd40c562cad0684151edc2348bc229a469662c55f19731d82971295f5cea8
+'http://security.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.27.orig.tar.xz' glibc_2.27.orig.tar.xz 15923832 SHA512:a0580fb52bc4ea8bb6e6734086b0dc66bd661060cdd837965880b989866490063c2420f250fb19b54e3547c58a5a7f8e012699e6513ce413746fd236ddd239e8
+'http://security.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.27-3ubuntu1.2.debian.tar.xz' glibc_2.27-3ubuntu1.2.debian.tar.xz 1014508 SHA512:0013d939c1c8be3b5a06fb71e710b7912a475c178e8daff27ece31b8cfb3fbab586f09da22a506a28d4af6aadc6ca8953b6acd1272c2a9010f38d400eec24358
 ```
 
 ### `dpkg` source package: `gmp=2:6.1.2+dfsg-2`
@@ -2964,14 +2964,9 @@ Licenses: (parsed from: `/usr/share/doc/python-cryptography/copyright`)
 - `Apache-2.0`
 - `Expat`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python-cryptography=2.1.4-1ubuntu1.3
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python-cryptography/python-cryptography_2.1.4-1ubuntu1.3.dsc' python-cryptography_2.1.4-1ubuntu1.3.dsc 3320 SHA512:e8a3c4fd9a4e3372d6a83cc293d93a4ae4220da5707c133b17921e605209f52028ce9a099fe887b1be4549df9549057db7f28df5f2b6baa0a625d998de366487
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python-cryptography/python-cryptography_2.1.4.orig.tar.gz' python-cryptography_2.1.4.orig.tar.gz 441557 SHA512:f749cb4384badc174a842514e5a4fee2ed01ab9c716799d8d9d5301f6d2d97b6c41deb9e425f48928b639fa34bef8c05529ed7e5b777ef5ca75c244f8fda8fd4
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python-cryptography/python-cryptography_2.1.4-1ubuntu1.3.debian.tar.xz' python-cryptography_2.1.4-1ubuntu1.3.debian.tar.xz 28008 SHA512:7b7fab7c12103aca70f1dd50bc112055ca9dc5ffca7bf659d95879ff11237b4292e2d122c1d8bea0e1c6539c920db2c6d9da5718224f96a7f5a5e66e455cfa4c
-```
 
 ### `dpkg` source package: `python-dateutil=2.6.1-1`
 
