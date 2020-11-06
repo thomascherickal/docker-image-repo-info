@@ -1,7 +1,7 @@
 ## `nginx:1-alpine`
 
 ```console
-$ docker pull nginx@sha256:1a029f356bb7d5fd9a8f8bc11d4049a0ce2e292a3b5e62087321516c9caf0d05
+$ docker pull nginx@sha256:9b22bb6d703d52b079ae4262081f3b850009e80cd2fc53cdcb8795f3a7b452ee
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -352,14 +352,14 @@ CMD ["nginx" "-g" "daemon off;"]
 ### `nginx:1-alpine` - linux; ppc64le
 
 ```console
-$ docker pull nginx@sha256:a837d2418530bde5128fa230ec9d42d15fab4c9989574bdf4b9b9d191733c657
+$ docker pull nginx@sha256:f8b90a8074c8db3c7c475605d80299815d09c570690bc573aee631c61bb67b08
 ```
 
 -	Docker Version: 19.03.12
--	Manifest MIME: `application/vnd.docker.distribution.manifest.v1+json`
--	Total Size: **9.8 MB (9808409 bytes)**  
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **9.8 MB (9808377 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `6fce271a9051f554186b952b3f42b9a8053e1d44a20ec8d112be94f1e4b779fe`
+-	Image ID: `sha256:9473281182871e16a00ea84d2fa0c38bf422141c92c6fc669756b9114a78a5f6`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["nginx","-g","daemon off;"]`
 
@@ -391,34 +391,30 @@ EXPOSE 80
 # Thu, 05 Nov 2020 19:22:32 GMT
 STOPSIGNAL SIGTERM
 # Thu, 05 Nov 2020 19:22:48 GMT
-RUN ["\/bin\/sh","-c","#(nop) ","CMD [\"nginx\" \"-g\" \"daemon off;\"]"]
+CMD ["nginx" "-g" "daemon off;"]
 ```
 
 -	Layers:
-	-	`sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4`  
-		Last Modified: Sat, 14 Nov 2015 09:09:44 GMT  
-		Size: 32.0 B  
-		MIME: application/octet-stream
-	-	`sha256:bc26933b551bde6fd905613a7d092b2e54e1977fcc2f2163f2fe6f6515e10550`  
-		Last Modified: Thu, 05 Nov 2020 19:31:48 GMT  
-		Size: 668.0 B  
-		MIME: application/octet-stream
-	-	`sha256:72783cc751486dc19e78ef3e63a1a5ccae65b30b60afcab30fbaf82f7a115f8f`  
-		Last Modified: Thu, 05 Nov 2020 19:31:48 GMT  
-		Size: 897.0 B  
-		MIME: application/octet-stream
-	-	`sha256:5b8670bcf5404b694f13956de1b31769219a96c4122782180d4bd7429a23e899`  
-		Last Modified: Thu, 05 Nov 2020 19:31:48 GMT  
-		Size: 601.0 B  
-		MIME: application/octet-stream
-	-	`sha256:152be783b7386e3befdd96006e2fe9e18012faa485edfd1a7f33f0bb18e78517`  
-		Last Modified: Thu, 05 Nov 2020 19:31:49 GMT  
-		Size: 7.0 MB (7002993 bytes)  
-		MIME: application/octet-stream
 	-	`sha256:692a9d763e196c85d79fc3e45b316b1bb557c93ba88a3c8ebf679a585d1efe73`  
 		Last Modified: Thu, 22 Oct 2020 11:02:06 GMT  
 		Size: 2.8 MB (2803218 bytes)  
-		MIME: application/octet-stream
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:152be783b7386e3befdd96006e2fe9e18012faa485edfd1a7f33f0bb18e78517`  
+		Last Modified: Thu, 05 Nov 2020 19:31:49 GMT  
+		Size: 7.0 MB (7002993 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:5b8670bcf5404b694f13956de1b31769219a96c4122782180d4bd7429a23e899`  
+		Last Modified: Thu, 05 Nov 2020 19:31:48 GMT  
+		Size: 601.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:72783cc751486dc19e78ef3e63a1a5ccae65b30b60afcab30fbaf82f7a115f8f`  
+		Last Modified: Thu, 05 Nov 2020 19:31:48 GMT  
+		Size: 897.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:bc26933b551bde6fd905613a7d092b2e54e1977fcc2f2163f2fe6f6515e10550`  
+		Last Modified: Thu, 05 Nov 2020 19:31:48 GMT  
+		Size: 668.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `nginx:1-alpine` - linux; s390x
 
