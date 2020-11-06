@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:3b9f8dcf9e2c11c511cddc8f47fda4c9123b3df88b7d94c674430ab4d86b7eba`
-- Created: `2020-11-02T23:38:52.606511931Z`
-- Virtual Size: ~ 541.50 Mb  
+- Image ID: `sha256:b685c4472e8b647a71e5d362a36bdf4e40d758e2fdab545349e5c203502afee7`
+- Created: `2020-11-06T02:14:41.639249159Z`
+- Virtual Size: ~ 541.95 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -25,7 +25,6 @@
   - `PHP_URL=https://www.php.net/distributions/php-7.2.34.tar.xz`
   - `PHP_ASC_URL=https://www.php.net/distributions/php-7.2.34.tar.xz.asc`
   - `PHP_SHA256=409e11bc6a2c18707dfc44bc61c820ddfd81e17481470f3405ee7822d8379903`
-  - `PHP_MD5=`
   - `WORDPRESS_VERSION=5.5.3`
   - `WORDPRESS_SHA1=61015720c679a6cbf9ad51701f0f3fedb51b3273`
 
@@ -3198,7 +3197,6 @@ Other potentially useful URLs:
 
 Binary Packages:
 
-- `libldap-2.4-2:amd64=2.4.47+dfsg-3+deb10u2`
 - `libldap-common=2.4.47+dfsg-3+deb10u2`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
@@ -3219,6 +3217,31 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/openldap/2.4.47+dfsg-3+deb10u2/ (for browsing the source)
 - https://sources.debian.net/src/openldap/2.4.47+dfsg-3+deb10u2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/openldap/2.4.47+dfsg-3+deb10u2/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `openldap=2.4.47+dfsg-3+deb10u3`
+
+Binary Packages:
+
+- `libldap-2.4-2:amd64=2.4.47+dfsg-3+deb10u3`
+
+**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
+If source is available (seen below), check the contents of `debian/copyright` within it.
+
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris openldap=2.4.47+dfsg-3+deb10u3
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.47+dfsg-3+deb10u3.dsc' openldap_2.4.47+dfsg-3+deb10u3.dsc 3022 SHA256:54c7e8b3866860a1f5876c3fed5f1e79699b227be1a46ab46f58b0a2584e9c8b
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.47+dfsg.orig.tar.gz' openldap_2.4.47+dfsg.orig.tar.gz 4872293 SHA256:8f1ac7a4be7dd8ef158361efbfe16509756d3d9b396f5f378c3cf5c727807651
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.47+dfsg-3+deb10u3.debian.tar.xz' openldap_2.4.47+dfsg-3+deb10u3.debian.tar.xz 169180 SHA256:e5d36ab03121b2ccf6196538989d84d0229133d4a5bc58e060e961589fe127ba
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/openldap/2.4.47+dfsg-3+deb10u3/ (for browsing the source)
+- https://sources.debian.net/src/openldap/2.4.47+dfsg-3+deb10u3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openldap/2.4.47+dfsg-3+deb10u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssl=1.1.1d-0+deb10u3`
 

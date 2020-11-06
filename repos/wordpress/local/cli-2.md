@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:25196a3236870adff6c658cb5e849b3a40ea3d44d4d2309b657c1662a5a1f77d`
-- Created: `2020-10-30T04:29:16.210240137Z`
+- Image ID: `sha256:58f91ceba42b7e6aa8e5285ab7a1f0b1cdbacd185a33589400f9e5d601954af4`
+- Created: `2020-11-06T02:33:26.858594381Z`
 - Virtual Size: ~ 138.32 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -21,7 +21,6 @@
   - `PHP_URL=https://www.php.net/distributions/php-7.4.12.tar.xz`
   - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.12.tar.xz.asc`
   - `PHP_SHA256=e82d2bcead05255f6b7d2ff4e2561bc334204955820cabc2457b5239fde96b76`
-  - `PHP_MD5=`
   - `WORDPRESS_CLI_GPG_KEY=63AF7AA15067C05616FDDD88A3A2E8F226F0BC06`
   - `WORDPRESS_CLI_VERSION=2.4.0`
   - `WORDPRESS_CLI_SHA512=4049c7e45e14276a70a41c3b0864be7a6a8cfa8ea65ebac8b184a4f503a91baa1a0d29260d03248bc74aef70729824330fb6b396336172a624332e16f64e37ef`

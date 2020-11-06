@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:4581ec17c843010dfc3ef37ab64551a558b41901b22772375666f8ddebf6a4e6`
-- Created: `2020-11-02T23:39:23.799283555Z`
-- Virtual Size: ~ 231.78 Mb  
+- Image ID: `sha256:c66bf02b2d517cd920e0572f0a2089030390ec075c7d4ebfd087eee2df6c4d84`
+- Created: `2020-11-06T02:18:03.130810759Z`
+- Virtual Size: ~ 231.79 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -22,7 +22,6 @@
   - `PHP_URL=https://www.php.net/distributions/php-7.2.34.tar.xz`
   - `PHP_ASC_URL=https://www.php.net/distributions/php-7.2.34.tar.xz.asc`
   - `PHP_SHA256=409e11bc6a2c18707dfc44bc61c820ddfd81e17481470f3405ee7822d8379903`
-  - `PHP_MD5=`
   - `WORDPRESS_VERSION=5.5.3`
   - `WORDPRESS_SHA1=61015720c679a6cbf9ad51701f0f3fedb51b3273`
 
