@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:c3f663dd2cda0edc3a23c5b4ea034b64f0f620e83bc494c8aee2c43f1ad7e602`
-- Created: `2020-11-03T03:34:04.958047679Z`
+- Image ID: `sha256:4f25667642529ad6dec45b4b3fea93e5a21562a0b03e0e03dd3f2ef899560b78`
+- Created: `2020-11-04T18:21:24.518794458Z`
 - Virtual Size: ~ 1.27 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -23,14 +23,14 @@
   - `TOMCAT_MAJOR=8`
   - `TOMCAT_VERSION=8.5.59`
   - `TOMCAT_SHA512=3106fa39f1859ba31c87d245eaf8efe9c1f2f4837dc4f259c245d2c9b55d3593e97a9925e7d012d397987279965b8e24d940cfdda062d8ac9b64e41396120bd9`
-  - `XWIKI_VERSION=11.10.10`
-  - `XWIKI_URL_PREFIX=https://maven.xwiki.org/releases/org/xwiki/platform/xwiki-platform-distribution-war/11.10.10`
-  - `XWIKI_DOWNLOAD_SHA256=497477c610b668bed7314c89bb0bde6dae4a0664404f4d4499e1d95d7eb94829`
-  - `MYSQL_JDBC_VERSION=8.0.20`
-  - `MYSQL_JDBC_SHA256=56a42553b516660ae0bcd08f7f4f5f375294afbd62200d6c0c88a8c61c668ede`
-  - `MYSQL_JDBC_PREFIX=https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.20`
-  - `MYSQL_JDBC_ARTIFACT=mysql-connector-java-8.0.20.jar`
-  - `MYSQL_JDBC_TARGET=/usr/local/tomcat/webapps/ROOT/WEB-INF/lib/mysql-connector-java-8.0.20.jar`
+  - `XWIKI_VERSION=11.10.11`
+  - `XWIKI_URL_PREFIX=https://maven.xwiki.org/releases/org/xwiki/platform/xwiki-platform-distribution-war/11.10.11`
+  - `XWIKI_DOWNLOAD_SHA256=21845fe8eed97708b86c0a7050cd99710633d0d3ed5b1084358694e101bd353e`
+  - `MYSQL_JDBC_VERSION=8.0.22`
+  - `MYSQL_JDBC_SHA256=5019defbd12316295e97a6e88f2a9b07f118345a4e982710bba232e499b22f4f`
+  - `MYSQL_JDBC_PREFIX=https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.22`
+  - `MYSQL_JDBC_ARTIFACT=mysql-connector-java-8.0.22.jar`
+  - `MYSQL_JDBC_TARGET=/usr/local/tomcat/webapps/ROOT/WEB-INF/lib/mysql-connector-java-8.0.22.jar`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -3551,14 +3551,9 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=245.4-4ubuntu3.2
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.2.dsc' systemd_245.4-4ubuntu3.2.dsc 5291 SHA512:d220f6dbe6b27f9a17a016ee952eef163be5e102b2436726f3b79a096ea3a2bd2d2c59d4bfd344bb9f5818ce9ab08a0ec08c05309b11547a98200ccfb2434b8e
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4.orig.tar.gz' systemd_245.4.orig.tar.gz 9000780 SHA512:02036bb1ab05301a9d0dfdd4b9c9376e90134474482531e6e292122380be2f24f99177493dd3af6f8af1a8ed2599ee0996da91a3b1b7872bbfaf26a1c3e61b4c
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.2.debian.tar.xz' systemd_245.4-4ubuntu3.2.debian.tar.xz 217140 SHA512:6e0561880e35bfb0e1943141465a8c23f0f029e4a02b0f6fb7c4a181d3f1a159c0afac1ed38f70f2b3044df874835ab31a2f619f3413d90f845d4ba90ad4ccd6
-```
 
 ### `dpkg` source package: `sysvinit=2.96-2.1ubuntu1`
 
@@ -3832,11 +3827,6 @@ Licenses: (parsed from: `/usr/share/doc/zlib1g/copyright`)
 
 - `Zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris zlib=1:1.2.11.dfsg-2ubuntu1.1
-'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg-2ubuntu1.1.dsc' zlib_1.2.11.dfsg-2ubuntu1.1.dsc 2953 SHA512:c45111bf4c8d7f90f7cdcac618e25ce257fb4fa4ff01766259f27ba2afde471266e3683bcf40378caec3d4eefa7209811d9007b07ca4fa079b9061ec95a639f4
-'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg.orig.tar.gz' zlib_1.2.11.dfsg.orig.tar.gz 370248 SHA512:92819807c0b8de655021bb2d5d182f9b6b381d3072d8c8dc1df34bbaa25d36bcba140c85f754a43cc466aac65850b7a7366aa0c93e804180e5b255e61d5748de
-'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg-2ubuntu1.1.debian.tar.xz' zlib_1.2.11.dfsg-2ubuntu1.1.debian.tar.xz 50556 SHA512:6e4cb7b0eeb1645b8ed08a82ef967627abfe2444ca35cbec58a05e84cfdd2d7a45d766809b9a6082ba074185af36f1d5e3995ff63df8b9780170769474fc23c7
-```
