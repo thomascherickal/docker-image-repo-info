@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:e854a323ee58cb9ca386699b469fba47db393f8e5ad06f4f67a2d0018db025fd`
-- Created: `2020-10-30T02:43:37.162194855Z`
+- Image ID: `sha256:49d7c232be64afabd933d2eab06edb343531e6b1cd0be348b26f7c4323fb688a`
+- Created: `2020-11-06T03:10:49.607827046Z`
 - Virtual Size: ~ 236.25 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -22,7 +22,6 @@
   - `PHP_URL=https://www.php.net/distributions/php-7.3.24.tar.xz`
   - `PHP_ASC_URL=https://www.php.net/distributions/php-7.3.24.tar.xz.asc`
   - `PHP_SHA256=78b0b417a147ab7572c874334d11654e3c61ec5b3f2170098e5db02fb0c89888`
-  - `PHP_MD5=`
   - `FRIENDICA_VERSION=2020.09-1`
   - `FRIENDICA_ADDONS=2020.09-1`
 
