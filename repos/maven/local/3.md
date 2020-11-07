@@ -1,19 +1,19 @@
-# `maven:3.6.3-jdk-14`
+# `maven:3.6.3-openjdk-15`
 
 ## Docker Metadata
 
-- Image ID: `sha256:97c335e9a3446955be54e8df05222ff1478ebf6c0a1a2520b21bbff40f92b911`
-- Created: `2020-10-22T08:40:27.578228199Z`
-- Virtual Size: ~ 632.95 Mb  
+- Image ID: `sha256:209a509278b61bd902869c5e7b7fc65aecb01d35a40f1265a10a1b3cbc81b7ec`
+- Created: `2020-11-04T19:33:55.298841244Z`
+- Virtual Size: ~ 740.77 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/mvn-entrypoint.sh"]`
 - Command: `["mvn"]`
 - Environment:
-  - `PATH=/usr/java/openjdk-14/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
+  - `PATH=/usr/java/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=C.UTF-8`
-  - `JAVA_HOME=/usr/java/openjdk-14`
-  - `JAVA_VERSION=14.0.2`
+  - `JAVA_HOME=/usr/java/openjdk-15`
+  - `JAVA_VERSION=15.0.1`
   - `MAVEN_HOME=/usr/share/maven`
   - `MAVEN_CONFIG=/root/.m2`
 - Labels:
