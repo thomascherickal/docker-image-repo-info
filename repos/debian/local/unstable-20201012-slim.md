@@ -710,21 +710,13 @@ Licenses: (parsed from: `/usr/share/doc/grep/copyright`)
 - `GPL-3`
 - `GPL-3+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris grep=3.4-1
-'http://deb.debian.org/debian/pool/main/g/grep/grep_3.4-1.dsc' grep_3.4-1.dsc 1674 SHA256:785f527cede9631f075bdd6c7f35e65e6b82897d009682766cf35839a393277d
-'http://deb.debian.org/debian/pool/main/g/grep/grep_3.4.orig.tar.xz' grep_3.4.orig.tar.xz 1555820 SHA256:58e6751c41a7c25bfc6e9363a41786cff3ba5709cf11d5ad903cf7cce31cc3fb
-'http://deb.debian.org/debian/pool/main/g/grep/grep_3.4.orig.tar.xz.asc' grep_3.4.orig.tar.xz.asc 833 SHA256:4c1871ff6b79c5e5ce0a192272c171d06ec20762b4b258688b1ca2e47d94b23e
-'http://deb.debian.org/debian/pool/main/g/grep/grep_3.4-1.debian.tar.xz' grep_3.4-1.debian.tar.xz 104364 SHA256:582d181804ce72fcfc4c6a9f13ea1dd73ad04c2723b5da346b69ee5cd24a7d08
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/grep/3.4-1/
 
-- https://sources.debian.net/src/grep/3.4-1/ (for browsing the source)
-- https://sources.debian.net/src/grep/3.4-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/grep/3.4-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gzip=1.10-2`
 
@@ -1006,21 +998,13 @@ Licenses: (parsed from: `/usr/share/doc/libseccomp2/copyright`)
 
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libseccomp=2.4.4-1
-'http://deb.debian.org/debian/pool/main/libs/libseccomp/libseccomp_2.4.4-1.dsc' libseccomp_2.4.4-1.dsc 2669 SHA256:34a48fb9af99290c843d56743540591580da03d429a1b00062d264343d5937af
-'http://deb.debian.org/debian/pool/main/libs/libseccomp/libseccomp_2.4.4.orig.tar.gz' libseccomp_2.4.4.orig.tar.gz 604420 SHA256:4e79738d1ef3c9b7ca9769f1f8b8d84fc17143c2c1c432e53b9c64787e0ff3eb
-'http://deb.debian.org/debian/pool/main/libs/libseccomp/libseccomp_2.4.4.orig.tar.gz.asc' libseccomp_2.4.4.orig.tar.gz.asc 833 SHA256:356c73e295f3b807f4de4d6d2a1914505e1fe5dfe4ef1abdbc00023333420463
-'http://deb.debian.org/debian/pool/main/libs/libseccomp/libseccomp_2.4.4-1.debian.tar.xz' libseccomp_2.4.4-1.debian.tar.xz 23056 SHA256:98817f1d9fca8c356cc1d30eaac536aff49ebb4c1ee0517935c3287ef9377fcc
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libseccomp/2.4.4-1/
 
-- https://sources.debian.net/src/libseccomp/2.4.4-1/ (for browsing the source)
-- https://sources.debian.net/src/libseccomp/2.4.4-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libseccomp/2.4.4-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libselinux=3.1-2`
 
