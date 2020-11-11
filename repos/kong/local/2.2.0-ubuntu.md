@@ -1185,14 +1185,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 - `GPL-2`
 - `redpine-signals`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=4.4.0-193.224
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0-193.224.dsc' linux_4.4.0-193.224.dsc 11628 SHA512:f4070ec0cb25e409d84f11e27f22f03730b9d4c404e18d22e3477d19f4a05db287066b751e7f035fa61a6a509a3452b72ce89f7d030ff074da5b30c3c736118a
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0.orig.tar.gz' linux_4.4.0.orig.tar.gz 132860730 SHA512:28ef89b62f663f2d90b58274799b7ebeff04699f08d0b83f650b0de179d4ef354450c81ecda07522b493c43d5eb2d530fa0f552a2794d48f84878e05efa39cc3
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0-193.224.diff.gz' linux_4.4.0-193.224.diff.gz 16774187 SHA512:3a8e588aa0aaa79af901aa6cb4e2b4286ec561f46bab7767b22f3400efab28d0de8556bc0d1cfb042eaa9e91ddfac691c93c6afe9fdc172d339fab2522a978a3
-```
 
 ### `dpkg` source package: `lsb=9.20160110ubuntu0.2`
 
@@ -1384,14 +1379,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openldap=2.4.42+dfsg-2ubuntu3.9
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.42+dfsg-2ubuntu3.9.dsc' openldap_2.4.42+dfsg-2ubuntu3.9.dsc 3054 SHA512:e27501e68d3274a2b2ed321feadd2f5127f15557accd7c5dc94fa16c37d4551932ffd136adbea0904f321530613908f10a61853ce76ce9952de36021546962d3
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.42+dfsg.orig.tar.gz' openldap_2.4.42+dfsg.orig.tar.gz 4813173 SHA512:4ed671baef513927cc340dac15b8979dba766d4fd629cae0bad1e125d09bc4ae61fda6912e06c53f8ef2cee6c2e28379b4e0c419c00c8254dc0cc0c715caf200
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.42+dfsg-2ubuntu3.9.debian.tar.xz' openldap_2.4.42+dfsg-2ubuntu3.9.debian.tar.xz 181648 SHA512:7c05acbe23c869b7089de6c5ee91b5d7be10e3c5497b9c2ef0f0937b10e71c36820aa9d23bae0392f2b888afec560136a98a6ff1fff6fca407ef09e11d8f0ab7
-```
 
 ### `dpkg` source package: `openssl=1.0.2g-1ubuntu4.17`
 
