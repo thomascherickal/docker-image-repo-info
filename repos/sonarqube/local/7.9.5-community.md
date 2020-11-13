@@ -1,10 +1,10 @@
-# `sonarqube:7.9.4-community`
+# `sonarqube:7.9.5-community`
 
 ## Docker Metadata
 
-- Image ID: `sha256:2fd3ce38e6c04e2849848c1e2639d41787efd910931d34fd74a759dca9d8f0e8`
-- Created: `2020-10-26T17:53:10.143418433Z`
-- Virtual Size: ~ 484.04 Mb  
+- Image ID: `sha256:d8df79fd6948843a64d35dc2e7c432ae1ca2bcc7cbf4d101fec2838f110d751f`
+- Created: `2020-11-12T03:33:48.464913358Z`
+- Virtual Size: ~ 482.96 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["./bin/run.sh"]`
@@ -12,8 +12,8 @@
   - `PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=C.UTF-8`
   - `JAVA_HOME=/usr/local/openjdk-11`
-  - `JAVA_VERSION=11.0.9`
-  - `SONAR_VERSION=7.9.4`
+  - `JAVA_VERSION=11.0.9.1`
+  - `SONAR_VERSION=7.9.5`
   - `SONARQUBE_HOME=/opt/sonarqube`
   - `SONARQUBE_JDBC_USERNAME=sonar`
   - `SONARQUBE_JDBC_PASSWORD=sonar`
@@ -1605,12 +1605,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/npth/1.6-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/npth/1.6-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openldap=2.4.47+dfsg-3+deb10u2`
+### `dpkg` source package: `openldap=2.4.47+dfsg-3+deb10u3`
 
 Binary Packages:
 
-- `libldap-2.4-2:amd64=2.4.47+dfsg-3+deb10u2`
-- `libldap-common=2.4.47+dfsg-3+deb10u2`
+- `libldap-2.4-2:amd64=2.4.47+dfsg-3+deb10u3`
+- `libldap-common=2.4.47+dfsg-3+deb10u3`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1619,17 +1619,17 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openldap=2.4.47+dfsg-3+deb10u2
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.47+dfsg-3+deb10u2.dsc' openldap_2.4.47+dfsg-3+deb10u2.dsc 3022 SHA256:e909c6be4bfd1bacf644959bc18ebeebaa13606879f11a7876d044cd688a6f62
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.47+dfsg.orig.tar.gz' openldap_2.4.47+dfsg.orig.tar.gz 4872293 SHA256:8f1ac7a4be7dd8ef158361efbfe16509756d3d9b396f5f378c3cf5c727807651
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.47+dfsg-3+deb10u2.debian.tar.xz' openldap_2.4.47+dfsg-3+deb10u2.debian.tar.xz 168684 SHA256:0f6f81f18a2407bd1a6c6003659d8b33145f31033b6f7fd026607554f0bdfcb0
+$ apt-get source -qq --print-uris openldap=2.4.47+dfsg-3+deb10u3
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.47+dfsg-3+deb10u3.dsc' openldap_2.4.47+dfsg-3+deb10u3.dsc 3022 SHA256:54c7e8b3866860a1f5876c3fed5f1e79699b227be1a46ab46f58b0a2584e9c8b
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.47+dfsg.orig.tar.gz' openldap_2.4.47+dfsg.orig.tar.gz 4872293 SHA256:8f1ac7a4be7dd8ef158361efbfe16509756d3d9b396f5f378c3cf5c727807651
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.47+dfsg-3+deb10u3.debian.tar.xz' openldap_2.4.47+dfsg-3+deb10u3.debian.tar.xz 169180 SHA256:e5d36ab03121b2ccf6196538989d84d0229133d4a5bc58e060e961589fe127ba
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/openldap/2.4.47+dfsg-3+deb10u2/ (for browsing the source)
-- https://sources.debian.net/src/openldap/2.4.47+dfsg-3+deb10u2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openldap/2.4.47+dfsg-3+deb10u2/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/openldap/2.4.47+dfsg-3+deb10u3/ (for browsing the source)
+- https://sources.debian.net/src/openldap/2.4.47+dfsg-3+deb10u3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openldap/2.4.47+dfsg-3+deb10u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssl=1.1.1d-0+deb10u3`
 
