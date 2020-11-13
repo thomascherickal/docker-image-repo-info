@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:85447059677439f34ea4643a183f10b1d9eb89baeb6605f793e4bcb53b784f52`
-- Created: `2020-10-21T18:33:57.444491732Z`
-- Virtual Size: ~ 508.56 Mb  
+- Image ID: `sha256:377ab89fe1361027cbd355a657c9086a2e9e9e47432cf8ee1fd24067b0e4eb8e`
+- Created: `2020-11-11T01:27:31.838449294Z`
+- Virtual Size: ~ 573.56 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["gradle"]`
@@ -13,7 +13,7 @@
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk8u265-b01_openj9-0.21.0`
+  - `JAVA_VERSION=jdk8u272-b10_openj9-0.23.0`
   - `JAVA_HOME=/opt/java/openjdk`
   - `JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+IdleTuningGcOnIdle`
   - `OPENJ9_JAVA_OPTIONS=-Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,readonly,nonFatal`
@@ -22,31 +22,34 @@
 
 ## `dpkg` (`.deb`-based packages)
 
-### `dpkg` source package: `acl=2.2.52-3build1`
+### `dpkg` source package: `acl=2.2.53-6`
 
 Binary Packages:
 
-- `libacl1:amd64=2.2.52-3build1`
+- `libacl1:amd64=2.2.53-6`
 
 Licenses: (parsed from: `/usr/share/doc/libacl1/copyright`)
 
-- `GPL`
+- `GPL-2`
+- `GPL-2+`
+- `LGPL-2+`
 - `LGPL-2.1`
 
 Source:
 
 ```console
-$ apt-get source -qq --print-uris acl=2.2.52-3build1
-'http://archive.ubuntu.com/ubuntu/pool/main/a/acl/acl_2.2.52-3build1.dsc' acl_2.2.52-3build1.dsc 2031 SHA256:864215f3e68d6b169a044bd952e78be9b0b1cf527a2cbf25866cab919e78e64b
-'http://archive.ubuntu.com/ubuntu/pool/main/a/acl/acl_2.2.52.orig.tar.bz2' acl_2.2.52.orig.tar.bz2 312128 SHA256:59d05b38af76baf2eddccbf08c7968a17451cc785ffecc657fcb46ce32b2631d
-'http://archive.ubuntu.com/ubuntu/pool/main/a/acl/acl_2.2.52-3build1.debian.tar.xz' acl_2.2.52-3build1.debian.tar.xz 8788 SHA256:0729d8c850aa26bc9f1b22ce632efb1616a3f97dc5fca1d9edfda45b582b7f37
+$ apt-get source -qq --print-uris acl=2.2.53-6
+'http://archive.ubuntu.com/ubuntu/pool/main/a/acl/acl_2.2.53-6.dsc' acl_2.2.53-6.dsc 2336 SHA256:02dad794aa09133e557552d75568324ed3e84fb56e93626e67993cf54a97df34
+'http://archive.ubuntu.com/ubuntu/pool/main/a/acl/acl_2.2.53.orig.tar.gz' acl_2.2.53.orig.tar.gz 524300 SHA256:06be9865c6f418d851ff4494e12406568353b891ffe1f596b34693c387af26c7
+'http://archive.ubuntu.com/ubuntu/pool/main/a/acl/acl_2.2.53.orig.tar.gz.asc' acl_2.2.53.orig.tar.gz.asc 833 SHA256:06849bece0b56a6a7269173abe101cff223bb9346d74027a3cd5ff80914abf4b
+'http://archive.ubuntu.com/ubuntu/pool/main/a/acl/acl_2.2.53-6.debian.tar.xz' acl_2.2.53-6.debian.tar.xz 25108 SHA256:c80e6150d9b213e52f5e65ff78d4ee95a71b5a258c1f8b980365d20ed1753a5c
 ```
 
-### `dpkg` source package: `adduser=3.116ubuntu1`
+### `dpkg` source package: `adduser=3.118ubuntu2`
 
 Binary Packages:
 
-- `adduser=3.116ubuntu1`
+- `adduser=3.118ubuntu2`
 
 Licenses: (parsed from: `/usr/share/doc/adduser/copyright`)
 
@@ -55,16 +58,16 @@ Licenses: (parsed from: `/usr/share/doc/adduser/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris adduser=3.116ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/a/adduser/adduser_3.116ubuntu1.dsc' adduser_3.116ubuntu1.dsc 1845 SHA256:fc44097093d74fc2e36fc37dceb54cf6bcb70a434240b14fd91beb64849cf2fd
-'http://archive.ubuntu.com/ubuntu/pool/main/a/adduser/adduser_3.116ubuntu1.tar.xz' adduser_3.116ubuntu1.tar.xz 216868 SHA256:f34f1d95e96ecae3b068a3dd666848f82f06cbb26152c56a6b72bd71555a8f18
+$ apt-get source -qq --print-uris adduser=3.118ubuntu2
+'http://archive.ubuntu.com/ubuntu/pool/main/a/adduser/adduser_3.118ubuntu2.dsc' adduser_3.118ubuntu2.dsc 1131 SHA256:785f99d8c75c972cd42d3fab3afa07f97299bb1d70013fe5d295f045224774bb
+'http://archive.ubuntu.com/ubuntu/pool/main/a/adduser/adduser_3.118ubuntu2.tar.xz' adduser_3.118ubuntu2.tar.xz 222364 SHA256:9429124c39c381b541005da6f0ae29831bd6533dd65c923e06ca2a7c310db382
 ```
 
-### `dpkg` source package: `apr-util=1.6.1-2`
+### `dpkg` source package: `apr-util=1.6.1-4ubuntu2`
 
 Binary Packages:
 
-- `libaprutil1:amd64=1.6.1-2`
+- `libaprutil1:amd64=1.6.1-4ubuntu2`
 
 Licenses: (parsed from: `/usr/share/doc/libaprutil1/copyright`)
 
@@ -73,18 +76,17 @@ Licenses: (parsed from: `/usr/share/doc/libaprutil1/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris apr-util=1.6.1-2
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apr-util/apr-util_1.6.1-2.dsc' apr-util_1.6.1-2.dsc 2851 SHA256:7a3a7d0dccc0d89ad751988163cb57d34b32094893d08c4d0ac79e9bfee6d8f4
+$ apt-get source -qq --print-uris apr-util=1.6.1-4ubuntu2
+'http://archive.ubuntu.com/ubuntu/pool/main/a/apr-util/apr-util_1.6.1-4ubuntu2.dsc' apr-util_1.6.1-4ubuntu2.dsc 2686 SHA256:bf8be458f58a6b1576d35bc78647bb0e990fc0d0c47ee7b51a5e2ecf3d378aac
 'http://archive.ubuntu.com/ubuntu/pool/main/a/apr-util/apr-util_1.6.1.orig.tar.bz2' apr-util_1.6.1.orig.tar.bz2 428595 SHA256:d3e12f7b6ad12687572a3a39475545a072608f4ba03a6ce8a3778f607dd0035b
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apr-util/apr-util_1.6.1.orig.tar.bz2.asc' apr-util_1.6.1.orig.tar.bz2.asc 801 SHA256:47837b605290c0d7659b73734e4a9d5e6c0c24c13185cd4d91837afe63c07ca4
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apr-util/apr-util_1.6.1-2.debian.tar.xz' apr-util_1.6.1-2.debian.tar.xz 211832 SHA256:e30e919e7e049a8a7056b7184e77d69b82660d71a4bf9654d1c9bfccf2fcde30
+'http://archive.ubuntu.com/ubuntu/pool/main/a/apr-util/apr-util_1.6.1-4ubuntu2.debian.tar.xz' apr-util_1.6.1-4ubuntu2.debian.tar.xz 213052 SHA256:2293c33f2e8d354aae7285e6037820d32305dcf4843093123c0683946ae35967
 ```
 
-### `dpkg` source package: `apr=1.6.3-2`
+### `dpkg` source package: `apr=1.6.5-1ubuntu1`
 
 Binary Packages:
 
-- `libapr1:amd64=1.6.3-2`
+- `libapr1:amd64=1.6.5-1ubuntu1`
 
 Licenses: (parsed from: `/usr/share/doc/libapr1/copyright`)
 
@@ -93,21 +95,21 @@ Licenses: (parsed from: `/usr/share/doc/libapr1/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris apr=1.6.3-2
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apr/apr_1.6.3-2.dsc' apr_1.6.3-2.dsc 2305 SHA256:0597703f9ea3bc3b30fcd7e055c67c2113e5c4255df5ff42738ce6a396bf5afc
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apr/apr_1.6.3.orig.tar.bz2' apr_1.6.3.orig.tar.bz2 854100 SHA256:131f06d16d7aabd097fa992a33eec2b6af3962f93e6d570a9bd4d85e95993172
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apr/apr_1.6.3.orig.tar.bz2.asc' apr_1.6.3.orig.tar.bz2.asc 801 SHA256:33db39162f7ca9acdccaa4f19630a67045542791b262116d3512c8b5d7c3fca1
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apr/apr_1.6.3-2.debian.tar.xz' apr_1.6.3-2.debian.tar.xz 213068 SHA256:ac515f888f7157586631e3de9792ee01d239f9cbf1e768be31ee6daac61f2597
+$ apt-get source -qq --print-uris apr=1.6.5-1ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/main/a/apr/apr_1.6.5-1ubuntu1.dsc' apr_1.6.5-1ubuntu1.dsc 2390 SHA256:9e9d5b1be5c9d17c4720d43096064da70a4cba1593f10c272328e16f8ed4c656
+'http://archive.ubuntu.com/ubuntu/pool/main/a/apr/apr_1.6.5.orig.tar.bz2' apr_1.6.5.orig.tar.bz2 855393 SHA256:a67ca9fcf9c4ff59bce7f428a323c8b5e18667fdea7b0ebad47d194371b0a105
+'http://archive.ubuntu.com/ubuntu/pool/main/a/apr/apr_1.6.5.orig.tar.bz2.asc' apr_1.6.5.orig.tar.bz2.asc 801 SHA256:9beff0bb06f4cbbb006176af93258d946d33b7fb54aac13a4c90cfba1cfd0c88
+'http://archive.ubuntu.com/ubuntu/pool/main/a/apr/apr_1.6.5-1ubuntu1.debian.tar.xz' apr_1.6.5-1ubuntu1.debian.tar.xz 213596 SHA256:faca1bccb281c7d91bf0846ee908dd0be53b4482c0a1850e03397307682717d1
 ```
 
-### `dpkg` source package: `apt=1.6.12ubuntu0.1`
+### `dpkg` source package: `apt=2.0.2ubuntu0.1`
 
 Binary Packages:
 
-- `apt=1.6.12ubuntu0.1`
-- `libapt-pkg5.0:amd64=1.6.12ubuntu0.1`
+- `apt=2.0.2ubuntu0.1`
+- `libapt-pkg6.0:amd64=2.0.2ubuntu0.1`
 
-Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-pkg5.0/copyright`)
+Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-pkg6.0/copyright`)
 
 - `GPL-2`
 - `GPLv2+`
@@ -115,37 +117,40 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 Source:
 
 ```console
-$ apt-get source -qq --print-uris apt=1.6.12ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.6.12ubuntu0.1.dsc' apt_1.6.12ubuntu0.1.dsc 2561 SHA512:39e55dff8d40ad1c1356f00b1eaff27ab6bb803fc6ea0d0669031540cac8b623e36e36a9c9b1eafc9421f828912d3874e57e58a5347f77e28f8d9d623555ea1d
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.6.12ubuntu0.1.tar.xz' apt_1.6.12ubuntu0.1.tar.xz 2172208 SHA512:77c3c1c26522f00ecd7549a51f92f50a58d4fc31a0b31d9f78663b79ab043a2c3be22cde9c568f41b19c1f87d03c999d36adc0a6518de8af262e12b5021c4c84
+$ apt-get source -qq --print-uris apt=2.0.2ubuntu0.1
+'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.0.2ubuntu0.1.dsc' apt_2.0.2ubuntu0.1.dsc 2542 SHA512:e990fd2133f79395fe56e93aefa6aa6459e85f9ac71f8d64119eec3c8028ddbc80581661b9744919f1d8154f7973bbb7b1c0bfd538f3ab5872ccf168ac96e13d
+'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.0.2ubuntu0.1.tar.xz' apt_2.0.2ubuntu0.1.tar.xz 2169516 SHA512:dce019214bb737e09affe0e0ca7ff300a9d3d16aabce98fec3e5f3032d28610a3123122286b6f2b7286112ad86ff1cf5d35657085d27e9875315689375458beb
 ```
 
-### `dpkg` source package: `attr=1:2.4.47-2build1`
+### `dpkg` source package: `attr=1:2.4.48-5`
 
 Binary Packages:
 
-- `libattr1:amd64=1:2.4.47-2build1`
+- `libattr1:amd64=1:2.4.48-5`
 
 Licenses: (parsed from: `/usr/share/doc/libattr1/copyright`)
 
 - `GPL-2`
+- `GPL-2+`
+- `LGPL-2+`
 - `LGPL-2.1`
 
 Source:
 
 ```console
-$ apt-get source -qq --print-uris attr=1:2.4.47-2build1
-'http://archive.ubuntu.com/ubuntu/pool/main/a/attr/attr_2.4.47-2build1.dsc' attr_2.4.47-2build1.dsc 2033 SHA256:b78dbf07b789010caabc12c1ab0b2a944072058fe47ac6b5d345209c16f4e1f5
-'http://archive.ubuntu.com/ubuntu/pool/main/a/attr/attr_2.4.47.orig.tar.bz2' attr_2.4.47.orig.tar.bz2 281877 SHA256:6c1208035757f5ce9b516402dd45b8299a53ae4d69ad2c352116f9cb8d7bc274
-'http://archive.ubuntu.com/ubuntu/pool/main/a/attr/attr_2.4.47-2build1.debian.tar.xz' attr_2.4.47-2build1.debian.tar.xz 8168 SHA256:6732a8874190a1f792c7f9cb95fadc1dc852baf2e164b0d7b4bcea525f5c0882
+$ apt-get source -qq --print-uris attr=1:2.4.48-5
+'http://archive.ubuntu.com/ubuntu/pool/main/a/attr/attr_2.4.48-5.dsc' attr_2.4.48-5.dsc 2433 SHA256:0b20a285b758083e2e202ffdd2930cef1bf84fee498791fc3e26b69a3bced01d
+'http://archive.ubuntu.com/ubuntu/pool/main/a/attr/attr_2.4.48.orig.tar.gz' attr_2.4.48.orig.tar.gz 467840 SHA256:5ead72b358ec709ed00bbf7a9eaef1654baad937c001c044fe8b74c57f5324e7
+'http://archive.ubuntu.com/ubuntu/pool/main/a/attr/attr_2.4.48.orig.tar.gz.asc' attr_2.4.48.orig.tar.gz.asc 833 SHA256:5d23c2c83cc13d170f1c209f48d0efa1fc46d16487b790e9996c5206dcfe0395
+'http://archive.ubuntu.com/ubuntu/pool/main/a/attr/attr_2.4.48-5.debian.tar.xz' attr_2.4.48-5.debian.tar.xz 25560 SHA256:02238253d324250dabdc0434f7de045d85df93458995a465ac434f2a3978a312
 ```
 
-### `dpkg` source package: `audit=1:2.8.2-1ubuntu1`
+### `dpkg` source package: `audit=1:2.8.5-2ubuntu6`
 
 Binary Packages:
 
-- `libaudit-common=1:2.8.2-1ubuntu1`
-- `libaudit1:amd64=1:2.8.2-1ubuntu1`
+- `libaudit-common=1:2.8.5-2ubuntu6`
+- `libaudit1:amd64=1:2.8.5-2ubuntu6`
 
 Licenses: (parsed from: `/usr/share/doc/libaudit-common/copyright`, `/usr/share/doc/libaudit1/copyright`)
 
@@ -156,17 +161,17 @@ Licenses: (parsed from: `/usr/share/doc/libaudit-common/copyright`, `/usr/share/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris audit=1:2.8.2-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/a/audit/audit_2.8.2-1ubuntu1.dsc' audit_2.8.2-1ubuntu1.dsc 2903 SHA256:454c231dc2268ee4862f87d65720354699be9b807a411556a536bc2b4e581a90
-'http://archive.ubuntu.com/ubuntu/pool/main/a/audit/audit_2.8.2.orig.tar.gz' audit_2.8.2.orig.tar.gz 1121970 SHA256:67b59b2b77afee9ed87afa4d80ffc8e6f3a1f4bbedd5f2871f387c952147bcba
-'http://archive.ubuntu.com/ubuntu/pool/main/a/audit/audit_2.8.2-1ubuntu1.debian.tar.xz' audit_2.8.2-1ubuntu1.debian.tar.xz 21344 SHA256:2bc93230e3bf01eef5e9a5acff8f904af074e6e39003f1db8941118fbd041ec2
+$ apt-get source -qq --print-uris audit=1:2.8.5-2ubuntu6
+'http://archive.ubuntu.com/ubuntu/pool/main/a/audit/audit_2.8.5-2ubuntu6.dsc' audit_2.8.5-2ubuntu6.dsc 2764 SHA256:b149fad8217d68a80299c1ef72539ee7d756146d692b7e51eade7341e60ac528
+'http://archive.ubuntu.com/ubuntu/pool/main/a/audit/audit_2.8.5.orig.tar.gz' audit_2.8.5.orig.tar.gz 1140694 SHA256:0e5d4103646e00f8d1981e1cd2faea7a2ae28e854c31a803e907a383c5e2ecb7
+'http://archive.ubuntu.com/ubuntu/pool/main/a/audit/audit_2.8.5-2ubuntu6.debian.tar.xz' audit_2.8.5-2ubuntu6.debian.tar.xz 18712 SHA256:d85ecf206bfe256a86e6d39602cd2744beda264a28e413f31c4da227e6542ea7
 ```
 
-### `dpkg` source package: `base-files=10.1ubuntu2.10`
+### `dpkg` source package: `base-files=11ubuntu5.2`
 
 Binary Packages:
 
-- `base-files=10.1ubuntu2.10`
+- `base-files=11ubuntu5.2`
 
 Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
@@ -175,16 +180,16 @@ Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris base-files=10.1ubuntu2.10
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_10.1ubuntu2.10.dsc' base-files_10.1ubuntu2.10.dsc 1688 SHA512:79cd0404b5885944c52a99dbed1d9ffc33dad914a2c2151c283d981fd3a4a1064bb594a45deda9c36889d0aa5f0b6b5b6a1d7c77c13b9460ac191cd4f0484e87
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_10.1ubuntu2.10.tar.xz' base-files_10.1ubuntu2.10.tar.xz 79780 SHA512:826d4e116644b905c52372f79cdb29aa0f5a360f3dd48843d51aae778c4a8ab4264d24a9c01a3f16230d6b5db209b09d06fa976a0018bb0c3d0c512297183757
+$ apt-get source -qq --print-uris base-files=11ubuntu5.2
+'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_11ubuntu5.2.dsc' base-files_11ubuntu5.2.dsc 1676 SHA512:8f10b639796469f1d8b9eff30fccf8418148b8a4d863771ce9f5936c4b33ff9e1d4adfd0a7140a5eff54096c31c0cb566996215b7985cbf591594cf9a0d23fd9
+'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_11ubuntu5.2.tar.xz' base-files_11ubuntu5.2.tar.xz 80528 SHA512:45aee06a5fb08562aff51fd1ceedbf9749535820754b9a64da989326b6c05c2e73b88d1cb3e03d078ce899a84b4c383cd19ad6a5be32573c936293bd5d2932cf
 ```
 
-### `dpkg` source package: `base-passwd=3.5.44`
+### `dpkg` source package: `base-passwd=3.5.47`
 
 Binary Packages:
 
-- `base-passwd=3.5.44`
+- `base-passwd=3.5.47`
 
 Licenses: (parsed from: `/usr/share/doc/base-passwd/copyright`)
 
@@ -194,16 +199,16 @@ Licenses: (parsed from: `/usr/share/doc/base-passwd/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris base-passwd=3.5.44
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-passwd/base-passwd_3.5.44.dsc' base-passwd_3.5.44.dsc 1685 SHA256:22a5db1e9bb71fa8a4d682b3f9c01470a61b8041eb6212471181c6808b268c13
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-passwd/base-passwd_3.5.44.tar.xz' base-passwd_3.5.44.tar.xz 52644 SHA256:f17a0746024572e86e60e4614cf226a81ffe682ceaf1a1fce9dc1a8002683e90
+$ apt-get source -qq --print-uris base-passwd=3.5.47
+'http://archive.ubuntu.com/ubuntu/pool/main/b/base-passwd/base-passwd_3.5.47.dsc' base-passwd_3.5.47.dsc 1757 SHA256:5a77a4cce51d1eb72e9d96d4083c641435c05888922c7bd3fa6b4395bf9afad3
+'http://archive.ubuntu.com/ubuntu/pool/main/b/base-passwd/base-passwd_3.5.47.tar.xz' base-passwd_3.5.47.tar.xz 53024 SHA256:9810ae0216e96bf9fc7ca6163d47ef8ec7d1677f533451af5911d8202a490a23
 ```
 
-### `dpkg` source package: `bash=4.4.18-2ubuntu1.2`
+### `dpkg` source package: `bash=5.0-6ubuntu1.1`
 
 Binary Packages:
 
-- `bash=4.4.18-2ubuntu1.2`
+- `bash=5.0-6ubuntu1.1`
 
 Licenses: (parsed from: `/usr/share/doc/bash/copyright`)
 
@@ -212,40 +217,81 @@ Licenses: (parsed from: `/usr/share/doc/bash/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris bash=4.4.18-2ubuntu1.2
-'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_4.4.18-2ubuntu1.2.dsc' bash_4.4.18-2ubuntu1.2.dsc 2434 SHA512:9cac142b52cd93d5faa8db4e755c5509d2a98358a84e5522a669d3b2ad0b3bb87c9f9deb35a582d666baefb98c6e91a96d506ddf833d50b856d36768065eef97
-'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_4.4.18.orig.tar.xz' bash_4.4.18.orig.tar.xz 5036272 SHA512:a0c0b84133f9dc1dd404a130a6a8ac08c4551d28bf4d0a6a9be40acee5d1465270af595191cad9584f17fe098b846a70dd1f7772f771db79ff5f03e47cfd5791
-'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_4.4.18-2ubuntu1.2.debian.tar.xz' bash_4.4.18-2ubuntu1.2.debian.tar.xz 65236 SHA512:84ef4350f9069601a8bfe9c444400e268b927c286970270c2c635dac8946f5f499658fe822404ae662d922655a5158b019f8a4c3dcec1ffd72b1aa40b85830e4
+$ apt-get source -qq --print-uris bash=5.0-6ubuntu1.1
+'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.0-6ubuntu1.1.dsc' bash_5.0-6ubuntu1.1.dsc 2418 SHA512:283e6fa78ac1a13e6e3a70efa6f67817871b12c1fe099475dfe6b87fd9f2926406446fabb72a66d8546ad320976761ffe68867a1e90bd6a5f97c07e851df9933
+'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.0.orig.tar.xz' bash_5.0.orig.tar.xz 5554808 SHA512:f3a719997a8515bae7e84701afafc9b2cdd23c95d29533adb678000b08eba968450b93d5576c3cffbeccbdcd95b713db830e8efeda689258dcfe6f15f0c5dec4
+'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.0-6ubuntu1.1.debian.tar.xz' bash_5.0-6ubuntu1.1.debian.tar.xz 74356 SHA512:450eacea5316075107da9951356021091dfc96889057769590ae8505fa851a99d2f48ce300281b8a448c87e9573cfa2f68a04369ee97955be204e73fa2fd6385
 ```
 
-### `dpkg` source package: `bzip2=1.0.6-8.1ubuntu0.2`
+### `dpkg` source package: `breezy=3.0.2-4ubuntu2`
 
 Binary Packages:
 
-- `bzip2=1.0.6-8.1ubuntu0.2`
-- `libbz2-1.0:amd64=1.0.6-8.1ubuntu0.2`
+- `brz=3.0.2-4ubuntu2`
+- `python3-breezy=3.0.2-4ubuntu2`
+
+Licenses: (parsed from: `/usr/share/doc/brz/copyright`, `/usr/share/doc/python3-breezy/copyright`)
+
+- `GPL-2`
+- `GPL-2+`
+- `MIT`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris breezy=3.0.2-4ubuntu2
+'http://archive.ubuntu.com/ubuntu/pool/universe/b/breezy/breezy_3.0.2-4ubuntu2.dsc' breezy_3.0.2-4ubuntu2.dsc 2793 SHA256:387fbd45cbe97d4d0685cba418d213bf5b4023ab4b10039390c2f11b2f9871f5
+'http://archive.ubuntu.com/ubuntu/pool/universe/b/breezy/breezy_3.0.2.orig.tar.gz' breezy_3.0.2.orig.tar.gz 15271219 SHA256:50f16bc7faf299f98fe58573da55b0664078f94b1a0e7f0ce9e1e6a0d47e68e0
+'http://archive.ubuntu.com/ubuntu/pool/universe/b/breezy/breezy_3.0.2-4ubuntu2.debian.tar.xz' breezy_3.0.2-4ubuntu2.debian.tar.xz 64032 SHA256:6ad61cb9ba7b452882e2fe19e24e99ba9b4fcbaa087af9ea058e9a5c4a9260c1
+```
+
+### `dpkg` source package: `brotli=1.0.7-6ubuntu0.1`
+
+Binary Packages:
+
+- `libbrotli1:amd64=1.0.7-6ubuntu0.1`
+
+Licenses: (parsed from: `/usr/share/doc/libbrotli1/copyright`)
+
+- `MIT`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris brotli=1.0.7-6ubuntu0.1
+'http://archive.ubuntu.com/ubuntu/pool/main/b/brotli/brotli_1.0.7-6ubuntu0.1.dsc' brotli_1.0.7-6ubuntu0.1.dsc 2385 SHA512:139a93e110c6cf50531bdfee5ec4a8751ca81d1e02d2f38b21c1a9a478064286ddeb6bfdf20af488f7e2f53219cf460a00e68b77ef1b860fbf0df67f300d303b
+'http://archive.ubuntu.com/ubuntu/pool/main/b/brotli/brotli_1.0.7.orig.tar.gz' brotli_1.0.7.orig.tar.gz 23827908 SHA512:a82362aa36d2f2094bca0b2808d9de0d57291fb3a4c29d7c0ca0a37e73087ec5ac4df299c8c363e61106fccf2fe7f58b5cf76eb97729e2696058ef43b1d3930a
+'http://archive.ubuntu.com/ubuntu/pool/main/b/brotli/brotli_1.0.7-6ubuntu0.1.debian.tar.xz' brotli_1.0.7-6ubuntu0.1.debian.tar.xz 13672 SHA512:eb24ee68d0a699bb8f382c7f80c313e0bb26bea6b22f74bf01af236eafe345cf602f7544da4a74eb8c8f70defcd6b867018df97a96e5e894535cf731400edaa8
+```
+
+### `dpkg` source package: `bzip2=1.0.8-2`
+
+Binary Packages:
+
+- `bzip2=1.0.8-2`
+- `libbz2-1.0:amd64=1.0.8-2`
 
 Licenses: (parsed from: `/usr/share/doc/bzip2/copyright`, `/usr/share/doc/libbz2-1.0/copyright`)
 
+- `BSD-variant`
 - `GPL-2`
 
 Source:
 
 ```console
-$ apt-get source -qq --print-uris bzip2=1.0.6-8.1ubuntu0.2
-'http://archive.ubuntu.com/ubuntu/pool/main/b/bzip2/bzip2_1.0.6-8.1ubuntu0.2.dsc' bzip2_1.0.6-8.1ubuntu0.2.dsc 2181 SHA512:872defc414a97416d701ce8bb59ddbf44b80ebffe447d67ebba20ed13b3e006c771002c82ad11c0c669004d22ce9368254e44c6be977c21e7d92dab69ec4e33a
-'http://archive.ubuntu.com/ubuntu/pool/main/b/bzip2/bzip2_1.0.6.orig.tar.bz2' bzip2_1.0.6.orig.tar.bz2 708737 SHA512:b1108c392a7f45218b86196498657f50333c870db4ab555ce4859a3fe76c17b4a3430b8a075b7f1c86d9ded006bdf17001b73bfcf261e2d2ee7de4998ad604fd
-'http://archive.ubuntu.com/ubuntu/pool/main/b/bzip2/bzip2_1.0.6-8.1ubuntu0.2.debian.tar.bz2' bzip2_1.0.6-8.1ubuntu0.2.debian.tar.bz2 61477 SHA512:f895cded216bd210eed7356be97630de75f650bb40d3bb0c7a26b0fadf9991188005ab1c5438e4b8f95614e6ff8c2ad5b2a94f0cc048580bcdc387a219ba7495
+$ apt-get source -qq --print-uris bzip2=1.0.8-2
+'http://archive.ubuntu.com/ubuntu/pool/main/b/bzip2/bzip2_1.0.8-2.dsc' bzip2_1.0.8-2.dsc 2180 SHA256:646cdcbb786a89a647cfafb280ef467143c06c445c4bf6fe69ec4a7882943064
+'http://archive.ubuntu.com/ubuntu/pool/main/b/bzip2/bzip2_1.0.8.orig.tar.gz' bzip2_1.0.8.orig.tar.gz 810029 SHA256:ab5a03176ee106d3f0fa90e381da478ddae405918153cca248e682cd0c4a2269
+'http://archive.ubuntu.com/ubuntu/pool/main/b/bzip2/bzip2_1.0.8-2.debian.tar.bz2' bzip2_1.0.8-2.debian.tar.bz2 26032 SHA256:237c8619bc9bc16f357b1077064a3e58aa1a230dadb4b9bb3bd8dc8f454afc0b
 ```
 
-### `dpkg` source package: `bzr=2.7.0+bzr6622-10`
+### `dpkg` source package: `bzr=2.7.0+bzr6622+brz`
 
 Binary Packages:
 
-- `bzr=2.7.0+bzr6622-10`
-- `python-bzrlib=2.7.0+bzr6622-10`
+- `bzr=2.7.0+bzr6622+brz`
 
-Licenses: (parsed from: `/usr/share/doc/bzr/copyright`, `/usr/share/doc/python-bzrlib/copyright`)
+Licenses: (parsed from: `/usr/share/doc/bzr/copyright`)
 
 - `GPL-2`
 - `GPL-2+`
@@ -253,17 +299,16 @@ Licenses: (parsed from: `/usr/share/doc/bzr/copyright`, `/usr/share/doc/python-b
 Source:
 
 ```console
-$ apt-get source -qq --print-uris bzr=2.7.0+bzr6622-10
-'http://archive.ubuntu.com/ubuntu/pool/main/b/bzr/bzr_2.7.0+bzr6622-10.dsc' bzr_2.7.0+bzr6622-10.dsc 2521 SHA256:658f59aaaa101288369e96ab766f5344e31eaa835fa008ad56df2ed65d11903e
-'http://archive.ubuntu.com/ubuntu/pool/main/b/bzr/bzr_2.7.0+bzr6622.orig.tar.gz' bzr_2.7.0+bzr6622.orig.tar.gz 10948360 SHA256:08bba3e76cba9beb6b686e71253045beeab9db94753ddbcafa0f8ed1cba377ff
-'http://archive.ubuntu.com/ubuntu/pool/main/b/bzr/bzr_2.7.0+bzr6622-10.debian.tar.xz' bzr_2.7.0+bzr6622-10.debian.tar.xz 92572 SHA256:0e35de0eea3cb6910e3dfef330502afd01be60c4cd0b9ca3d5f77e9bb0f406aa
+$ apt-get source -qq --print-uris bzr=2.7.0+bzr6622+brz
+'http://archive.ubuntu.com/ubuntu/pool/universe/b/bzr/bzr_2.7.0+bzr6622+brz.dsc' bzr_2.7.0+bzr6622+brz.dsc 1866 SHA256:2c1d9f13818b32fbc5dc41d395b91101e2d1b451eae358ffdf83421521dbe670
+'http://archive.ubuntu.com/ubuntu/pool/universe/b/bzr/bzr_2.7.0+bzr6622+brz.tar.xz' bzr_2.7.0+bzr6622+brz.tar.xz 18052 SHA256:d847a018e4869b59e9bfc04b0ff3705dcbb5479a8b6796c2dd68e60be3753a42
 ```
 
-### `dpkg` source package: `ca-certificates=20190110~18.04.1`
+### `dpkg` source package: `ca-certificates=20201027ubuntu0.20.04.1`
 
 Binary Packages:
 
-- `ca-certificates=20190110~18.04.1`
+- `ca-certificates=20201027ubuntu0.20.04.1`
 
 Licenses: (parsed from: `/usr/share/doc/ca-certificates/copyright`)
 
@@ -271,15 +316,19 @@ Licenses: (parsed from: `/usr/share/doc/ca-certificates/copyright`)
 - `GPL-2+`
 - `MPL-2.0`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris ca-certificates=20201027ubuntu0.20.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20201027ubuntu0.20.04.1.dsc' ca-certificates_20201027ubuntu0.20.04.1.dsc 1945 SHA512:32df164149775001a030721767a21b99133638d9293ff4085bbee56a8e38219d8d4f7d8b2ddfee021dcdb05e300c8f94312707881bbeb1bffa406728b319d7fe
+'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20201027ubuntu0.20.04.1.tar.xz' ca-certificates_20201027ubuntu0.20.04.1.tar.xz 242452 SHA512:4639732f2445a495c861ea933d43fc431b5ea907272e31f72cb6a955ecf827c76f6d043cb82da0e8742af6abc6a80b20b96540c17a75d0b6452c01eb8203cd76
+```
 
-### `dpkg` source package: `cdebconf=0.213ubuntu1`
+### `dpkg` source package: `cdebconf=0.251ubuntu1`
 
 Binary Packages:
 
-- `libdebconfclient0:amd64=0.213ubuntu1`
+- `libdebconfclient0:amd64=0.251ubuntu1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -288,35 +337,35 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris cdebconf=0.213ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cdebconf/cdebconf_0.213ubuntu1.dsc' cdebconf_0.213ubuntu1.dsc 2769 SHA256:76cb3f0b1685629220b0e4c3105757b95714f7350df4e7863d5310f1f581fee0
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cdebconf/cdebconf_0.213ubuntu1.tar.xz' cdebconf_0.213ubuntu1.tar.xz 272596 SHA256:624feaf9e7e5f407271f99e06e54d5002fcce51345553a626caf7b4a65f0afd1
+$ apt-get source -qq --print-uris cdebconf=0.251ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/main/c/cdebconf/cdebconf_0.251ubuntu1.dsc' cdebconf_0.251ubuntu1.dsc 2858 SHA256:0753b98ec773e743de19d393f444a8b88915ad75340cc58007eb7c309031121d
+'http://archive.ubuntu.com/ubuntu/pool/main/c/cdebconf/cdebconf_0.251ubuntu1.tar.xz' cdebconf_0.251ubuntu1.tar.xz 276744 SHA256:d07848e52aecb70e82d8bafd082ecee3cccd7a8229b59527e07cc49023aa22d0
 ```
 
-### `dpkg` source package: `configobj=5.0.6-2`
+### `dpkg` source package: `configobj=5.0.6-4`
 
 Binary Packages:
 
-- `python-configobj=5.0.6-2`
+- `python3-configobj=5.0.6-4`
 
-Licenses: (parsed from: `/usr/share/doc/python-configobj/copyright`)
+Licenses: (parsed from: `/usr/share/doc/python3-configobj/copyright`)
 
 - `BSD-3-clause`
 
 Source:
 
 ```console
-$ apt-get source -qq --print-uris configobj=5.0.6-2
-'http://archive.ubuntu.com/ubuntu/pool/main/c/configobj/configobj_5.0.6-2.dsc' configobj_5.0.6-2.dsc 2381 SHA256:9bb8577128460ff33326d3d90b8454376c83f4d41b1da61aeabdbfcbfb5e0087
+$ apt-get source -qq --print-uris configobj=5.0.6-4
+'http://archive.ubuntu.com/ubuntu/pool/main/c/configobj/configobj_5.0.6-4.dsc' configobj_5.0.6-4.dsc 2246 SHA256:74df72d8fdb3c20e4bc5ab996bf1f8c6297811643989110cc27a019e7beb0429
 'http://archive.ubuntu.com/ubuntu/pool/main/c/configobj/configobj_5.0.6.orig.tar.gz' configobj_5.0.6.orig.tar.gz 143664 SHA256:2e140354efcca6f558ff9ee941b435ae09a617bc071797bef62c8d6ed2033d5e
-'http://archive.ubuntu.com/ubuntu/pool/main/c/configobj/configobj_5.0.6-2.debian.tar.xz' configobj_5.0.6-2.debian.tar.xz 7436 SHA256:dc677cd329b4a3aacebe10c5a169d9d092cc27888c3f3f9203930cacd6a0eab8
+'http://archive.ubuntu.com/ubuntu/pool/main/c/configobj/configobj_5.0.6-4.debian.tar.xz' configobj_5.0.6-4.debian.tar.xz 6916 SHA256:dd20992aeef0eb1fb8ab6f0007e265ece33cfc20a6ca18b380eb255674195f01
 ```
 
-### `dpkg` source package: `coreutils=8.28-1ubuntu1`
+### `dpkg` source package: `coreutils=8.30-3ubuntu2`
 
 Binary Packages:
 
-- `coreutils=8.28-1ubuntu1`
+- `coreutils=8.30-3ubuntu2`
 
 Licenses: (parsed from: `/usr/share/doc/coreutils/copyright`)
 
@@ -325,20 +374,19 @@ Licenses: (parsed from: `/usr/share/doc/coreutils/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris coreutils=8.28-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/c/coreutils/coreutils_8.28-1ubuntu1.dsc' coreutils_8.28-1ubuntu1.dsc 2302 SHA256:9a7154fd8a458295b686383767f9305095e6ea929a08c8f56cf51640c3fe209f
-'http://archive.ubuntu.com/ubuntu/pool/main/c/coreutils/coreutils_8.28.orig.tar.xz' coreutils_8.28.orig.tar.xz 5252336 SHA256:1117b1a16039ddd84d51a9923948307cfa28c2cea03d1a2438742253df0a0c65
-'http://archive.ubuntu.com/ubuntu/pool/main/c/coreutils/coreutils_8.28.orig.tar.xz.asc' coreutils_8.28.orig.tar.xz.asc 1196 SHA256:505b1a530a55732a9ed659d419ff4973d1b15059078d2060675927058db9607d
-'http://archive.ubuntu.com/ubuntu/pool/main/c/coreutils/coreutils_8.28-1ubuntu1.debian.tar.xz' coreutils_8.28-1ubuntu1.debian.tar.xz 37940 SHA256:71ba2e83edc675a79e1e0556aff326ab2ae812332692e3db29615e8ed1b427f4
+$ apt-get source -qq --print-uris coreutils=8.30-3ubuntu2
+'http://archive.ubuntu.com/ubuntu/pool/main/c/coreutils/coreutils_8.30-3ubuntu2.dsc' coreutils_8.30-3ubuntu2.dsc 2048 SHA256:f36fe0ac14978b240a750b79d2bbd737d6b1939296c3a287899933aa2a1906ea
+'http://archive.ubuntu.com/ubuntu/pool/main/c/coreutils/coreutils_8.30.orig.tar.xz' coreutils_8.30.orig.tar.xz 5359532 SHA256:e831b3a86091496cdba720411f9748de81507798f6130adeaef872d206e1b057
+'http://archive.ubuntu.com/ubuntu/pool/main/c/coreutils/coreutils_8.30-3ubuntu2.debian.tar.xz' coreutils_8.30-3ubuntu2.debian.tar.xz 39636 SHA256:98204ef9d94e5c567880cd0245fdb7940eaf7592d6c6830c300ad117628b351f
 ```
 
-### `dpkg` source package: `curl=7.58.0-2ubuntu3.10`
+### `dpkg` source package: `curl=7.68.0-1ubuntu2.2`
 
 Binary Packages:
 
-- `curl=7.58.0-2ubuntu3.10`
-- `libcurl3-gnutls:amd64=7.58.0-2ubuntu3.10`
-- `libcurl4:amd64=7.58.0-2ubuntu3.10`
+- `curl=7.68.0-1ubuntu2.2`
+- `libcurl3-gnutls:amd64=7.68.0-1ubuntu2.2`
+- `libcurl4:amd64=7.68.0-1ubuntu2.2`
 
 Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/doc/libcurl4/copyright`)
 
@@ -352,18 +400,18 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 Source:
 
 ```console
-$ apt-get source -qq --print-uris curl=7.58.0-2ubuntu3.10
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.58.0-2ubuntu3.10.dsc' curl_7.58.0-2ubuntu3.10.dsc 2781 SHA512:6674bade118bb14272b82c6a0d803ebe0de0ae1530e752518e4b409a31c8448694a4551fcdcbec595d5fe0a53712ec6d5076ae0e4b4d705140fa575cdcc6e269
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.58.0.orig.tar.gz' curl_7.58.0.orig.tar.gz 3879728 SHA512:7b12b79107558bb266672d6e128615fe5a8149c37f4ae540197e3298f5d312beb2d78fbb23e3ea84ea7afc41549898a1e5cd38509f0388b11707b48d5efb8ca3
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.58.0-2ubuntu3.10.debian.tar.xz' curl_7.58.0-2ubuntu3.10.debian.tar.xz 41908 SHA512:6ec45923614cadc69045ff317270e1494687ea75fa4298df9fe0b23b3d22bf14f7ccf05edbd515cd7d8f011bce4e05faedcb6f327a030584b237a3b76752187f
+$ apt-get source -qq --print-uris curl=7.68.0-1ubuntu2.2
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.2.dsc' curl_7.68.0-1ubuntu2.2.dsc 2733 SHA512:19eb5cc831f04738cc18b31bd1f681af35229c90844e96b523f1f84e121d33195bff8258b085bd44bf8974f8cbaa1c88098cab0de5a00a836a9f0101f4817f98
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0.orig.tar.gz' curl_7.68.0.orig.tar.gz 4096350 SHA512:58b42c08b1cf4cb6e68f8e469d5b5f6298eebe286ba2677ad29e1a7eefd15b8609af54544f4c5a7dadebbd3b23bd77700830f2f60fbea7ae3f2f306e640010b0
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.2.debian.tar.xz' curl_7.68.0-1ubuntu2.2.debian.tar.xz 34624 SHA512:8b6b58e88fc54cdc1fe77ab689d82df5164a1509424ff2813eba51018ad237cd2740c6f2a27b487f959371c9cb9bd2374d21aeea2cb145f226297e731d918a00
 ```
 
-### `dpkg` source package: `cyrus-sasl2=2.1.27~101-g0780600+dfsg-3ubuntu2.1`
+### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2`
 
 Binary Packages:
 
-- `libsasl2-2:amd64=2.1.27~101-g0780600+dfsg-3ubuntu2.1`
-- `libsasl2-modules-db:amd64=2.1.27~101-g0780600+dfsg-3ubuntu2.1`
+- `libsasl2-2:amd64=2.1.27+dfsg-2`
+- `libsasl2-modules-db:amd64=2.1.27+dfsg-2`
 
 Licenses: (parsed from: `/usr/share/doc/libsasl2-2/copyright`, `/usr/share/doc/libsasl2-modules-db/copyright`)
 
@@ -374,17 +422,17 @@ Licenses: (parsed from: `/usr/share/doc/libsasl2-2/copyright`, `/usr/share/doc/l
 Source:
 
 ```console
-$ apt-get source -qq --print-uris cyrus-sasl2=2.1.27~101-g0780600+dfsg-3ubuntu2.1
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.27~101-g0780600+dfsg-3ubuntu2.1.dsc' cyrus-sasl2_2.1.27~101-g0780600+dfsg-3ubuntu2.1.dsc 3297 SHA512:0c64b0a5cffa46d49ddd4a359c35e1b92d3c446415e8faf29c7a8d689073dc9bbcd0427aff30ee8d70b1712b27dc202ec14c955538d92998ecd6dc96569b2665
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.27~101-g0780600+dfsg.orig.tar.xz' cyrus-sasl2_2.1.27~101-g0780600+dfsg.orig.tar.xz 1143888 SHA512:cd684133dcea5856301f50e378ff105e88f8008af06bd4e02fb9a62a88ece2ee1901ea2776ef3d941d6a3cfc2a77875c08054326293818db89e5f9995c4cd524
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.27~101-g0780600+dfsg-3ubuntu2.1.debian.tar.xz' cyrus-sasl2_2.1.27~101-g0780600+dfsg-3ubuntu2.1.debian.tar.xz 95712 SHA512:c8eb0ff8cf4db3a3d3af2875626d9f39c058ea259c41d9954be18b269fc0fe0809ac2fea63c1ede72873cfa7388f8b76685e77eaaab64695d62739cef6ad6715
+$ apt-get source -qq --print-uris cyrus-sasl2=2.1.27+dfsg-2
+'http://archive.ubuntu.com/ubuntu/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.27+dfsg-2.dsc' cyrus-sasl2_2.1.27+dfsg-2.dsc 3393 SHA256:e7e09491a1c2589c9947164db091d0f9b21b7d122f128841b6eac1adfc51b6c2
+'http://archive.ubuntu.com/ubuntu/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.27+dfsg.orig.tar.xz' cyrus-sasl2_2.1.27+dfsg.orig.tar.xz 2058596 SHA256:108b0c691c423837264f05abb559ea76c3dfdd91246555e8abe87c129a6e37cd
+'http://archive.ubuntu.com/ubuntu/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.27+dfsg-2.debian.tar.xz' cyrus-sasl2_2.1.27+dfsg-2.debian.tar.xz 99956 SHA256:ee894aeee645e842e39b434d5130e1bd15ea24b84c8eeeea3f5077511a87341a
 ```
 
-### `dpkg` source package: `dash=0.5.8-2.10`
+### `dpkg` source package: `dash=0.5.10.2-6`
 
 Binary Packages:
 
-- `dash=0.5.8-2.10`
+- `dash=0.5.10.2-6`
 
 Licenses: (parsed from: `/usr/share/doc/dash/copyright`)
 
@@ -393,17 +441,17 @@ Licenses: (parsed from: `/usr/share/doc/dash/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris dash=0.5.8-2.10
-'http://archive.ubuntu.com/ubuntu/pool/main/d/dash/dash_0.5.8-2.10.dsc' dash_0.5.8-2.10.dsc 1618 SHA256:1e8fdac0880d57d8ed5eb11f9f1750a67c71a7200180cf3ed5aa3e74dab3e4c5
-'http://archive.ubuntu.com/ubuntu/pool/main/d/dash/dash_0.5.8.orig.tar.gz' dash_0.5.8.orig.tar.gz 223028 SHA256:c6db3a237747b02d20382a761397563d813b306c020ae28ce25a1c3915fac60f
-'http://archive.ubuntu.com/ubuntu/pool/main/d/dash/dash_0.5.8-2.10.debian.tar.xz' dash_0.5.8-2.10.debian.tar.xz 43920 SHA256:0d870b0cf9b3ad40e4d4f1e3d4d9097f4d62151693a48f34cb1d49865fd4abdb
+$ apt-get source -qq --print-uris dash=0.5.10.2-6
+'http://archive.ubuntu.com/ubuntu/pool/main/d/dash/dash_0.5.10.2-6.dsc' dash_0.5.10.2-6.dsc 1756 SHA256:d509a23ebdc4f107c911914590c1400e5a24383f35c5d6904e48d2afeff168ac
+'http://archive.ubuntu.com/ubuntu/pool/main/d/dash/dash_0.5.10.2.orig.tar.gz' dash_0.5.10.2.orig.tar.gz 225196 SHA256:3c663919dc5c66ec991da14c7cf7e0be8ad00f3db73986a987c118862b5f6071
+'http://archive.ubuntu.com/ubuntu/pool/main/d/dash/dash_0.5.10.2-6.debian.tar.xz' dash_0.5.10.2-6.debian.tar.xz 44232 SHA256:1448fbfc2541be52787da81ce03bb81ad6b1f380cba1b7e747abefdcd44f6c86
 ```
 
-### `dpkg` source package: `db5.3=5.3.28-13.1ubuntu1.1`
+### `dpkg` source package: `db5.3=5.3.28+dfsg1-0.6ubuntu2`
 
 Binary Packages:
 
-- `libdb5.3:amd64=5.3.28-13.1ubuntu1.1`
+- `libdb5.3:amd64=5.3.28+dfsg1-0.6ubuntu2`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -412,17 +460,17 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris db5.3=5.3.28-13.1ubuntu1.1
-'http://archive.ubuntu.com/ubuntu/pool/main/d/db5.3/db5.3_5.3.28-13.1ubuntu1.1.dsc' db5.3_5.3.28-13.1ubuntu1.1.dsc 3068 SHA512:20b2e7cddbf97b5de71d782b6df35c6586686da822ae978e5d60acfb3fecd4b00568b24a5ff33bfe05bc8776a0dc4d4d5dc0cc1b127f4fd0bb2d485f6fb108bd
-'http://archive.ubuntu.com/ubuntu/pool/main/d/db5.3/db5.3_5.3.28.orig.tar.xz' db5.3_5.3.28.orig.tar.xz 24154920 SHA512:080483cac3119569e04c3c22c95e97e5e448c88d87a443933d0ef2c71b506f309428584d6a8fb9c236c616dd82beffa1b30361b4c918756745983fcf54a3f8da
-'http://archive.ubuntu.com/ubuntu/pool/main/d/db5.3/db5.3_5.3.28-13.1ubuntu1.1.debian.tar.xz' db5.3_5.3.28-13.1ubuntu1.1.debian.tar.xz 29444 SHA512:0e30e4884d67561970fcff40f41641cb7bd663cc5310d396ddc002a26b348d12ca46dd2f265cfd479daffbc42530d047a177b943d65d96dfb483cd1c4e918dc4
+$ apt-get source -qq --print-uris db5.3=5.3.28+dfsg1-0.6ubuntu2
+'http://archive.ubuntu.com/ubuntu/pool/main/d/db5.3/db5.3_5.3.28+dfsg1-0.6ubuntu2.dsc' db5.3_5.3.28+dfsg1-0.6ubuntu2.dsc 3245 SHA256:d879f4921a2f573132031d9371f0eb020005bdce48d6e12b436bf3515dda8663
+'http://archive.ubuntu.com/ubuntu/pool/main/d/db5.3/db5.3_5.3.28+dfsg1.orig.tar.xz' db5.3_5.3.28+dfsg1.orig.tar.xz 19723860 SHA256:b19bf3dd8ce74b95a7b215be9a7c8489e8e8f18da60d64d6340a06e75f497749
+'http://archive.ubuntu.com/ubuntu/pool/main/d/db5.3/db5.3_5.3.28+dfsg1-0.6ubuntu2.debian.tar.xz' db5.3_5.3.28+dfsg1-0.6ubuntu2.debian.tar.xz 30172 SHA256:e606e7827f077efc92afc6f0d43c921fab4577d619eab06fab23182aefab7506
 ```
 
-### `dpkg` source package: `debconf=1.5.66ubuntu1`
+### `dpkg` source package: `debconf=1.5.73`
 
 Binary Packages:
 
-- `debconf=1.5.66ubuntu1`
+- `debconf=1.5.73`
 
 Licenses: (parsed from: `/usr/share/doc/debconf/copyright`)
 
@@ -431,16 +479,16 @@ Licenses: (parsed from: `/usr/share/doc/debconf/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris debconf=1.5.66ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/d/debconf/debconf_1.5.66ubuntu1.dsc' debconf_1.5.66ubuntu1.dsc 2087 SHA512:5320524b5b84afeb7b48a50e25ba80648de989c83f3e8e6c0797e500b4be872cad0e226fe2e7c0bc3e7bed67747006ae855c5f9131e6ffb9a9618800e83d5016
-'http://archive.ubuntu.com/ubuntu/pool/main/d/debconf/debconf_1.5.66ubuntu1.tar.xz' debconf_1.5.66ubuntu1.tar.xz 572556 SHA512:6890b7639c884d4e28d43ac4ca27dd6ab845d9c451521d18369d57a487f2fd14966b30878065d749c60279d0f2f1996035e280e5d060b6c7ff8902bc32fac1f9
+$ apt-get source -qq --print-uris debconf=1.5.73
+'http://archive.ubuntu.com/ubuntu/pool/main/d/debconf/debconf_1.5.73.dsc' debconf_1.5.73.dsc 2081 SHA256:cdd4c049414cd167a4a9479d883e205bf5cebb19fc4bb6f132000a56291eb670
+'http://archive.ubuntu.com/ubuntu/pool/main/d/debconf/debconf_1.5.73.tar.xz' debconf_1.5.73.tar.xz 570780 SHA256:513895b2b77d9fb72542152390e7d4c67fe1e08de75fdad44d54ce1e7d83ecef
 ```
 
-### `dpkg` source package: `debianutils=4.8.4`
+### `dpkg` source package: `debianutils=4.9.1`
 
 Binary Packages:
 
-- `debianutils=4.8.4`
+- `debianutils=4.9.1`
 
 Licenses: (parsed from: `/usr/share/doc/debianutils/copyright`)
 
@@ -449,16 +497,16 @@ Licenses: (parsed from: `/usr/share/doc/debianutils/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris debianutils=4.8.4
-'http://archive.ubuntu.com/ubuntu/pool/main/d/debianutils/debianutils_4.8.4.dsc' debianutils_4.8.4.dsc 1764 SHA256:8b12921fe6e4f51d295bfd4213706d588a6c9b8bab659b0ee1fe525f37e9fbcc
-'http://archive.ubuntu.com/ubuntu/pool/main/d/debianutils/debianutils_4.8.4.tar.xz' debianutils_4.8.4.tar.xz 156344 SHA256:c061ab99aea61f892043b7624b021ab5b193e9c6bbfd474da0fbcdd506be1eb2
+$ apt-get source -qq --print-uris debianutils=4.9.1
+'http://archive.ubuntu.com/ubuntu/pool/main/d/debianutils/debianutils_4.9.1.dsc' debianutils_4.9.1.dsc 1592 SHA256:d30866ea0352263fa7756010e8743ade350024b2fd491bc5befcbaa9a97626b7
+'http://archive.ubuntu.com/ubuntu/pool/main/d/debianutils/debianutils_4.9.1.tar.xz' debianutils_4.9.1.tar.xz 157516 SHA256:af826685d9c56abfa873e84cd392539cd363cb0ba04a09d21187377e1b764091
 ```
 
-### `dpkg` source package: `diffutils=1:3.6-1`
+### `dpkg` source package: `diffutils=1:3.7-3`
 
 Binary Packages:
 
-- `diffutils=1:3.6-1`
+- `diffutils=1:3.7-3`
 
 Licenses: (parsed from: `/usr/share/doc/diffutils/copyright`)
 
@@ -468,17 +516,17 @@ Licenses: (parsed from: `/usr/share/doc/diffutils/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris diffutils=1:3.6-1
-'http://archive.ubuntu.com/ubuntu/pool/main/d/diffutils/diffutils_3.6-1.dsc' diffutils_3.6-1.dsc 1453 SHA256:26fe7690b45748dc92cee6af224192e78db2ac574e16ae0aeb8ed6a472c883cd
-'http://archive.ubuntu.com/ubuntu/pool/main/d/diffutils/diffutils_3.6.orig.tar.xz' diffutils_3.6.orig.tar.xz 1398296 SHA256:d621e8bdd4b573918c8145f7ae61817d1be9deb4c8d2328a65cea8e11d783bd6
-'http://archive.ubuntu.com/ubuntu/pool/main/d/diffutils/diffutils_3.6-1.debian.tar.xz' diffutils_3.6-1.debian.tar.xz 10808 SHA256:f6ab546a134bde18a87ca8e3c98919680e79d81a65a24801ae06ef69b33f24d8
+$ apt-get source -qq --print-uris diffutils=1:3.7-3
+'http://archive.ubuntu.com/ubuntu/pool/main/d/diffutils/diffutils_3.7-3.dsc' diffutils_3.7-3.dsc 1453 SHA256:99dee94cec05454a65a9cb542bea1720dbd4c511d13f9784c9e3741e76a9b9ba
+'http://archive.ubuntu.com/ubuntu/pool/main/d/diffutils/diffutils_3.7.orig.tar.xz' diffutils_3.7.orig.tar.xz 1448828 SHA256:b3a7a6221c3dc916085f0d205abf6b8e1ba443d4dd965118da364a1dc1cb3a26
+'http://archive.ubuntu.com/ubuntu/pool/main/d/diffutils/diffutils_3.7-3.debian.tar.xz' diffutils_3.7-3.debian.tar.xz 11116 SHA256:a455228f12283b5f3c0165db4ab9b12071adc37fb9dd50dcb5e1b8851c524f1f
 ```
 
-### `dpkg` source package: `dpkg=1.19.0.5ubuntu2.3`
+### `dpkg` source package: `dpkg=1.19.7ubuntu3`
 
 Binary Packages:
 
-- `dpkg=1.19.0.5ubuntu2.3`
+- `dpkg=1.19.7ubuntu3`
 
 Licenses: (parsed from: `/usr/share/doc/dpkg/copyright`)
 
@@ -491,21 +539,44 @@ Licenses: (parsed from: `/usr/share/doc/dpkg/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris dpkg=1.19.0.5ubuntu2.3
-'http://archive.ubuntu.com/ubuntu/pool/main/d/dpkg/dpkg_1.19.0.5ubuntu2.3.dsc' dpkg_1.19.0.5ubuntu2.3.dsc 2144 SHA512:b788b94a2e602ab43a7fdf734f518ea8f43fd0d6ccc11a5be01d3e18d5917db1224c266a1790336093fc06a976efa390fd99d81e380f3abe291ba4686c131579
-'http://archive.ubuntu.com/ubuntu/pool/main/d/dpkg/dpkg_1.19.0.5ubuntu2.3.tar.xz' dpkg_1.19.0.5ubuntu2.3.tar.xz 4571256 SHA512:f9dc03714fee11a8bb62b3d1a556853329ab3b41dd996914cb47f38432e6b46c939433282f9039575811cb0e57508e9fbd2a5259eca7d9134d4760c636c3ec91
+$ apt-get source -qq --print-uris dpkg=1.19.7ubuntu3
+'http://archive.ubuntu.com/ubuntu/pool/main/d/dpkg/dpkg_1.19.7ubuntu3.dsc' dpkg_1.19.7ubuntu3.dsc 2254 SHA256:462ecb9f8af5612f7fbc1181484d8376569f95bb0dc7b7c53891819a0434e81a
+'http://archive.ubuntu.com/ubuntu/pool/main/d/dpkg/dpkg_1.19.7ubuntu3.tar.xz' dpkg_1.19.7ubuntu3.tar.xz 4731220 SHA256:598eba200da2e1b6097f11537c49e9ad7eb2292e148259bd76f9cd184f281853
 ```
 
-### `dpkg` source package: `e2fsprogs=1.44.1-1ubuntu1.3`
+### `dpkg` source package: `dulwich=0.19.15-1build1`
 
 Binary Packages:
 
-- `e2fsprogs=1.44.1-1ubuntu1.3`
-- `libcom-err2:amd64=1.44.1-1ubuntu1.3`
-- `libext2fs2:amd64=1.44.1-1ubuntu1.3`
-- `libss2:amd64=1.44.1-1ubuntu1.3`
+- `python3-dulwich=0.19.15-1build1`
 
-Licenses: (parsed from: `/usr/share/doc/e2fsprogs/copyright`, `/usr/share/doc/libcom-err2/copyright`, `/usr/share/doc/libext2fs2/copyright`, `/usr/share/doc/libss2/copyright`)
+Licenses: (parsed from: `/usr/share/doc/python3-dulwich/copyright`)
+
+- `Apache-2`
+- `Apache-2.0`
+- `GPL-2`
+- `GPL-2+`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris dulwich=0.19.15-1build1
+'http://archive.ubuntu.com/ubuntu/pool/universe/d/dulwich/dulwich_0.19.15-1build1.dsc' dulwich_0.19.15-1build1.dsc 2410 SHA256:5a742485cfbf473aeefab144351af69662ab867ab016e5c3541aad6efddfa00c
+'http://archive.ubuntu.com/ubuntu/pool/universe/d/dulwich/dulwich_0.19.15.orig.tar.gz' dulwich_0.19.15.orig.tar.gz 369491 SHA256:805a9b1932dc28b91f359f529c2e46b7623aec3ab719c96d3f2fc63d0d8d8411
+'http://archive.ubuntu.com/ubuntu/pool/universe/d/dulwich/dulwich_0.19.15-1build1.debian.tar.xz' dulwich_0.19.15-1build1.debian.tar.xz 631088 SHA256:6fddcf432f17d8512cafbc8f7bac2e94f54bd7843a820af64e0fe010413e8a5f
+```
+
+### `dpkg` source package: `e2fsprogs=1.45.5-2ubuntu1`
+
+Binary Packages:
+
+- `e2fsprogs=1.45.5-2ubuntu1`
+- `libcom-err2:amd64=1.45.5-2ubuntu1`
+- `libext2fs2:amd64=1.45.5-2ubuntu1`
+- `libss2:amd64=1.45.5-2ubuntu1`
+- `logsave=1.45.5-2ubuntu1`
+
+Licenses: (parsed from: `/usr/share/doc/e2fsprogs/copyright`, `/usr/share/doc/libcom-err2/copyright`, `/usr/share/doc/libext2fs2/copyright`, `/usr/share/doc/libss2/copyright`, `/usr/share/doc/logsave/copyright`)
 
 - `GPL-2`
 - `LGPL-2`
@@ -513,18 +584,18 @@ Licenses: (parsed from: `/usr/share/doc/e2fsprogs/copyright`, `/usr/share/doc/li
 Source:
 
 ```console
-$ apt-get source -qq --print-uris e2fsprogs=1.44.1-1ubuntu1.3
-'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.44.1-1ubuntu1.3.dsc' e2fsprogs_1.44.1-1ubuntu1.3.dsc 3188 SHA512:e5311f88ee8498252027c0c57ea62dc5a924535d93f66da281e9c1a506eee2157d008f01b96c8df5e597720fd57f05877991310b3d0cedef00a8f84645b65409
-'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.44.1.orig.tar.gz' e2fsprogs_1.44.1.orig.tar.gz 7544908 SHA512:c4b1f9baab70ceac9058286eeb75f57a738f01eaa0d9dd74eaaf9b0fd0709c954a0b3efb75896b9dd67ab2626febadd6635fe04a5c32e0700419d2531024dacf
-'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.44.1.orig.tar.gz.asc' e2fsprogs_1.44.1.orig.tar.gz.asc 488 SHA512:8e3771c784ac83b368e2258ebbd12869683be88cfad15b019ed5e60b72c21aac713494e987f3f3568e859b585808a41480027dd991163a785a93bdf78584853b
-'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.44.1-1ubuntu1.3.debian.tar.xz' e2fsprogs_1.44.1-1ubuntu1.3.debian.tar.xz 81152 SHA512:0fa4885fbd73b00efbd865e17898362d6cd8551be169f8f23ea0fa52cf4de8d6c244315ef69631062fbc97c11be19f0decfac775811b47405416e5ae645e0956
+$ apt-get source -qq --print-uris e2fsprogs=1.45.5-2ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.45.5-2ubuntu1.dsc' e2fsprogs_1.45.5-2ubuntu1.dsc 3342 SHA256:a4d9f6948bd041523783a727854beff6b8c3786f96f70936e1d63b6cd9596b01
+'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.45.5.orig.tar.gz' e2fsprogs_1.45.5.orig.tar.gz 7938826 SHA256:91e72a2f6fee21b89624d8ece5a4b3751a17b28775d32cd048921050b4760ed9
+'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.45.5.orig.tar.gz.asc' e2fsprogs_1.45.5.orig.tar.gz.asc 488 SHA256:0f900698a89e3e1996cd86966e5ae0dc6f8d866e2cd8a0f4285c23e7ea696720
+'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.45.5-2ubuntu1.debian.tar.xz' e2fsprogs_1.45.5-2ubuntu1.debian.tar.xz 81528 SHA256:bcf259dd0480b50996580a765fded85f89a0a6041f6c81cbbcce94f58944c51b
 ```
 
-### `dpkg` source package: `expat=2.2.5-3ubuntu0.2`
+### `dpkg` source package: `expat=2.2.9-1build1`
 
 Binary Packages:
 
-- `libexpat1:amd64=2.2.5-3ubuntu0.2`
+- `libexpat1:amd64=2.2.9-1build1`
 
 Licenses: (parsed from: `/usr/share/doc/libexpat1/copyright`)
 
@@ -533,17 +604,17 @@ Licenses: (parsed from: `/usr/share/doc/libexpat1/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris expat=2.2.5-3ubuntu0.2
-'http://archive.ubuntu.com/ubuntu/pool/main/e/expat/expat_2.2.5-3ubuntu0.2.dsc' expat_2.2.5-3ubuntu0.2.dsc 2198 SHA512:efe01c6d1bb262332995fe1dbe25829fc5b416fa6f566505a70ed9e11ef5a4d7ca0769eab6fb0dce655f0ec4facefcff1e29d93c660c90a115819f489a0d30f8
-'http://archive.ubuntu.com/ubuntu/pool/main/e/expat/expat_2.2.5.orig.tar.gz' expat_2.2.5.orig.tar.gz 8273003 SHA512:61ce2a479521412e0c56c352106c4adfb61a6bedb883921aba3ebccc29311ddd192646ac2c51b41572728d4de6ab4cb60a1dbc71515d742a80a8b59d89ca74d6
-'http://archive.ubuntu.com/ubuntu/pool/main/e/expat/expat_2.2.5-3ubuntu0.2.debian.tar.xz' expat_2.2.5-3ubuntu0.2.debian.tar.xz 12024 SHA512:79f104bce4515465616eea834d2d932aba403929799ea97ecfd09e6890307709caa9b2a4dab2e3697a124232c2ff7f31b5c5a06436df06e19ea934834779da68
+$ apt-get source -qq --print-uris expat=2.2.9-1build1
+'http://archive.ubuntu.com/ubuntu/pool/main/e/expat/expat_2.2.9-1build1.dsc' expat_2.2.9-1build1.dsc 1998 SHA256:9f2d2e3bf2aec22907e3bf818fac7acc5f1e917821907bdea016f69a5cfe4da0
+'http://archive.ubuntu.com/ubuntu/pool/main/e/expat/expat_2.2.9.orig.tar.gz' expat_2.2.9.orig.tar.gz 8273174 SHA256:c341ac8c79e021cc3392a6d76e138e62d1dd287592cb455148540331756a2208
+'http://archive.ubuntu.com/ubuntu/pool/main/e/expat/expat_2.2.9-1build1.debian.tar.xz' expat_2.2.9-1build1.debian.tar.xz 10780 SHA256:400872937adfb41255914391a172237cfe317e57f129562ff2ec66773b2b5bbf
 ```
 
-### `dpkg` source package: `findutils=4.6.0+git+20170828-2`
+### `dpkg` source package: `findutils=4.7.0-1ubuntu1`
 
 Binary Packages:
 
-- `findutils=4.6.0+git+20170828-2`
+- `findutils=4.7.0-1ubuntu1`
 
 Licenses: (parsed from: `/usr/share/doc/findutils/copyright`)
 
@@ -553,19 +624,20 @@ Licenses: (parsed from: `/usr/share/doc/findutils/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris findutils=4.6.0+git+20170828-2
-'http://archive.ubuntu.com/ubuntu/pool/main/f/findutils/findutils_4.6.0+git+20170828-2.dsc' findutils_4.6.0+git+20170828-2.dsc 2221 SHA256:6997072de2f1b24457073275f7b8f15ad2f0569389dcb277ebe99dd1846e2ee9
-'http://archive.ubuntu.com/ubuntu/pool/main/f/findutils/findutils_4.6.0+git+20170828.orig.tar.xz' findutils_4.6.0+git+20170828.orig.tar.xz 1865192 SHA256:8d6571ffd5105307bcb1b20c4b7d5c2d0b5152e463b082801268bd3ec9e2bbfd
-'http://archive.ubuntu.com/ubuntu/pool/main/f/findutils/findutils_4.6.0+git+20170828-2.debian.tar.xz' findutils_4.6.0+git+20170828-2.debian.tar.xz 26532 SHA256:5b13792a14edec982fddcf74fe01b4380b909703d76aaba2860da51c6248de73
+$ apt-get source -qq --print-uris findutils=4.7.0-1ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/main/f/findutils/findutils_4.7.0-1ubuntu1.dsc' findutils_4.7.0-1ubuntu1.dsc 2446 SHA256:3d157948919082e66cb74e0f927efa3dd240d9fa9814973874d0fa77f3023ead
+'http://archive.ubuntu.com/ubuntu/pool/main/f/findutils/findutils_4.7.0.orig.tar.xz' findutils_4.7.0.orig.tar.xz 1895048 SHA256:c5fefbdf9858f7e4feb86f036e1247a54c79fc2d8e4b7064d5aaa1f47dfa789a
+'http://archive.ubuntu.com/ubuntu/pool/main/f/findutils/findutils_4.7.0.orig.tar.xz.asc' findutils_4.7.0.orig.tar.xz.asc 488 SHA256:2f620e6d941e241fac52344a89149ab1ffeefb0fb9e42174e17a508d59a31d0f
+'http://archive.ubuntu.com/ubuntu/pool/main/f/findutils/findutils_4.7.0-1ubuntu1.debian.tar.xz' findutils_4.7.0-1ubuntu1.debian.tar.xz 27700 SHA256:dfb2329fd141384c2d76409c2e99f164cc25954115529245d80d5d41e3167731
 ```
 
-### `dpkg` source package: `fontconfig=2.12.6-0ubuntu2`
+### `dpkg` source package: `fontconfig=2.13.1-2ubuntu3`
 
 Binary Packages:
 
-- `fontconfig=2.12.6-0ubuntu2`
-- `fontconfig-config=2.12.6-0ubuntu2`
-- `libfontconfig1:amd64=2.12.6-0ubuntu2`
+- `fontconfig=2.13.1-2ubuntu3`
+- `fontconfig-config=2.13.1-2ubuntu3`
+- `libfontconfig1:amd64=2.13.1-2ubuntu3`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -574,10 +646,10 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris fontconfig=2.12.6-0ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/f/fontconfig/fontconfig_2.12.6-0ubuntu2.dsc' fontconfig_2.12.6-0ubuntu2.dsc 2384 SHA256:e7109f728f73761ad17ff5c5ec066ad940b67b779a78a094b67a7af4cfafadcc
-'http://archive.ubuntu.com/ubuntu/pool/main/f/fontconfig/fontconfig_2.12.6.orig.tar.bz2' fontconfig_2.12.6.orig.tar.bz2 1624683 SHA256:cf0c30807d08f6a28ab46c61b8dbd55c97d2f292cf88f3a07d3384687f31f017
-'http://archive.ubuntu.com/ubuntu/pool/main/f/fontconfig/fontconfig_2.12.6-0ubuntu2.debian.tar.xz' fontconfig_2.12.6-0ubuntu2.debian.tar.xz 29168 SHA256:75c259e2d6b1944fe76a49f89b806b3ee34fe7a42eb25efd289e38b1b5e16517
+$ apt-get source -qq --print-uris fontconfig=2.13.1-2ubuntu3
+'http://archive.ubuntu.com/ubuntu/pool/main/f/fontconfig/fontconfig_2.13.1-2ubuntu3.dsc' fontconfig_2.13.1-2ubuntu3.dsc 1959 SHA256:a9eebf6e6e88aa64d33fb3852c97718c212579f9714afd67cb6a9b8b116dd7aa
+'http://archive.ubuntu.com/ubuntu/pool/main/f/fontconfig/fontconfig_2.13.1.orig.tar.bz2' fontconfig_2.13.1.orig.tar.bz2 1723639 SHA256:f655dd2a986d7aa97e052261b36aa67b0a64989496361eca8d604e6414006741
+'http://archive.ubuntu.com/ubuntu/pool/main/f/fontconfig/fontconfig_2.13.1-2ubuntu3.debian.tar.xz' fontconfig_2.13.1-2ubuntu3.debian.tar.xz 26344 SHA256:342671f6a1e6d392958a6eec27541c6bdffc6498b469dcc46eca66c9d23a863a
 ```
 
 ### `dpkg` source package: `fonts-dejavu=2.37-1`
@@ -601,41 +673,54 @@ $ apt-get source -qq --print-uris fonts-dejavu=2.37-1
 'http://archive.ubuntu.com/ubuntu/pool/main/f/fonts-dejavu/fonts-dejavu_2.37-1.debian.tar.xz' fonts-dejavu_2.37-1.debian.tar.xz 10424 SHA256:5105cdbfc086f4a83ab6871eb39cc904bf02aa52762402b7cacf33d0938122f7
 ```
 
-### `dpkg` source package: `freetype=2.8.1-2ubuntu2`
+### `dpkg` source package: `freetype=2.10.1-2ubuntu0.1`
 
 Binary Packages:
 
-- `libfreetype6:amd64=2.8.1-2ubuntu2`
+- `libfreetype6:amd64=2.10.1-2ubuntu0.1`
 
 Licenses: (parsed from: `/usr/share/doc/libfreetype6/copyright`)
 
-- `BSD-2-Clause`
+- `Apache-2.0`
 - `BSD-3-Clause`
-- `Catharon-OSL`
+- `FSFUL`
+- `FSFULLR`
 - `FTL`
 - `GPL-2`
 - `GPL-2+`
-- `GZip`
+- `GPL-3`
+- `GPL-3+`
+- `MIT`
+- `MPL-1.1`
+- `OFL-1.1`
 - `OpenGroup-BSD-like`
+- `Permissive`
+- `Public-Domain`
+- `Zlib`
 
 Source:
 
 ```console
-$ apt-get source -qq --print-uris freetype=2.8.1-2ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.8.1-2ubuntu2.dsc' freetype_2.8.1-2ubuntu2.dsc 2288 SHA256:f7a1e8715cc35405d814fd97478e37ff22fad2bb639c049e058298c9f5847015
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.8.1.orig.tar.gz' freetype_2.8.1.orig.tar.gz 4242784 SHA256:a7531cb8c2f6b709896f018380ad97e677e243847ff8a098d1b8b5d23e9d74d7
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.8.1-2ubuntu2.diff.gz' freetype_2.8.1-2ubuntu2.diff.gz 44335 SHA256:ec498da97b3c1715b67f8d6ed85e6d9a2eb8b709cabce38519a8ab5ca995b85a
+$ apt-get source -qq --print-uris freetype=2.10.1-2ubuntu0.1
+'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.10.1-2ubuntu0.1.dsc' freetype_2.10.1-2ubuntu0.1.dsc 3556 SHA512:dc45a1f920cdee10c2b2a6d400d05d089b8467f1f9fa6eca5be61e75567acd58b17c7e2ac1d6faec9ff5edee38cb3489323709231506264bc6d1a9f4a20fe2ac
+'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.10.1.orig-ft2demos.tar.gz' freetype_2.10.1.orig-ft2demos.tar.gz 305328 SHA512:67b9dc1c03ca5588a53edd8b9cb7f27e5b52a5730add6887e6af776176ab66099bfe4a9e69d036511d32ae2f96e822a71a3c9213f1adfcc6fa45be81adf56f77
+'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.10.1.orig-ft2demos.tar.gz.asc' freetype_2.10.1.orig-ft2demos.tar.gz.asc 195 SHA512:8279e9e7ea4da030db388ac5960808d652553b97dc65bc517ebcae90834188d75101fbe29d334a0e2b0a17a723c7121ac28b1f14bab0bf29ec4c9c6df6575a67
+'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.10.1.orig-ft2docs.tar.gz' freetype_2.10.1.orig-ft2docs.tar.gz 2123885 SHA512:05dbe26c291d3fa39c167f3aa5d8da0f3d3992f8e7ec74e936547b3feb17c1a59753a111fc33b2edce12ed991c61161c0ef7084b91c770d73c4679b62edd5b2f
+'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.10.1.orig-ft2docs.tar.gz.asc' freetype_2.10.1.orig-ft2docs.tar.gz.asc 195 SHA512:48e283c72d808901b9754bb20242d493628610326f3492c6d1aa35fcdffffd4ec320f589d18442735cfc6cda7238399f4f339d58e4a536da46e2b5a13864972e
+'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.10.1.orig.tar.gz' freetype_2.10.1.orig.tar.gz 3478158 SHA512:346c682744bcf06ca9d71265c108a242ad7d78443eff20142454b72eef47ba6d76671a6e931ed4c4c9091dd8f8515ebdd71202d94b073d77931345ff93cfeaa7
+'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.10.1.orig.tar.gz.asc' freetype_2.10.1.orig.tar.gz.asc 195 SHA512:2a2750605d0fd11fbfe4f76d47ccd8e300473c3043b28a5c46f4f628e1da2c2f2308ee4f1b1b585daaf2c4b408718ee68eab6c5411e993ad9f95b08c35248178
+'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.10.1-2ubuntu0.1.debian.tar.xz' freetype_2.10.1-2ubuntu0.1.debian.tar.xz 115576 SHA512:c24138956061abdb0c22ade45eb5ef4daa24f798310691701525face08fe372d3e32d5000cc1f078acc733da40623cc061a7ab84dab64c649f484c840b110593
 ```
 
-### `dpkg` source package: `gcc-8=8.4.0-1ubuntu1~18.04`
+### `dpkg` source package: `gcc-10=10.2.0-5ubuntu1~20.04`
 
 Binary Packages:
 
-- `gcc-8-base:amd64=8.4.0-1ubuntu1~18.04`
-- `libgcc1:amd64=1:8.4.0-1ubuntu1~18.04`
-- `libstdc++6:amd64=8.4.0-1ubuntu1~18.04`
+- `gcc-10-base:amd64=10.2.0-5ubuntu1~20.04`
+- `libgcc-s1:amd64=10.2.0-5ubuntu1~20.04`
+- `libstdc++6:amd64=10.2.0-5ubuntu1~20.04`
 
-Licenses: (parsed from: `/usr/share/doc/gcc-8-base/copyright`, `/usr/share/doc/libgcc1/copyright`, `/usr/share/doc/libstdc++6/copyright`)
+Licenses: (parsed from: `/usr/share/doc/gcc-10-base/copyright`, `/usr/share/doc/libgcc-s1/copyright`, `/usr/share/doc/libstdc++6/copyright`)
 
 - `Artistic`
 - `GFDL-1.2`
@@ -647,39 +732,42 @@ Licenses: (parsed from: `/usr/share/doc/gcc-8-base/copyright`, `/usr/share/doc/l
 Source:
 
 ```console
-$ apt-get source -qq --print-uris gcc-8=8.4.0-1ubuntu1~18.04
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-8/gcc-8_8.4.0-1ubuntu1~18.04.dsc' gcc-8_8.4.0-1ubuntu1~18.04.dsc 36382 SHA512:064409c787f62bff87a494f2952f5c3f264d5a7c8508c83b863c1a1ad410d25988cfc73afde9908221258f81714164121cc1f02e3699ca2283c6a3aa035d1ddd
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-8/gcc-8_8.4.0.orig.tar.gz' gcc-8_8.4.0.orig.tar.gz 85278215 SHA512:ce6ff302ab2e252950bc446bc2b58c198c4b1a75d59122c00845c026a29068f412e0d59cd6ddd8b648838f80589252a1695afc6193fb669082c9a1c4ad14b1dc
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-8/gcc-8_8.4.0-1ubuntu1~18.04.diff.gz' gcc-8_8.4.0-1ubuntu1~18.04.diff.gz 510634 SHA512:7bd97a04eccd35c3483a82b238d8d54c91071c4d1361cb30fb3fbf7b512c84b9d0bc80499373f2da3e17520d112125ebfebae6b93746feede78f9eecc1ccd4ac
+$ apt-get source -qq --print-uris gcc-10=10.2.0-5ubuntu1~20.04
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.2.0-5ubuntu1~20.04.dsc' gcc-10_10.2.0-5ubuntu1~20.04.dsc 31163 SHA512:706dbc165819f21cc0ffc0d8e9ac3058db6bd2309a0665b7d83992b39985ff232cdadd165361cdb1216a5e17d16573eacc64e470d965290206c202c80108e1bb
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.2.0.orig.tar.gz' gcc-10_10.2.0.orig.tar.gz 94773960 SHA512:70911f9489225ddb10527f122be77d20cbaf2e4f2bfe92f756d33ec35c0aba352f342a7ee296310a149ea112f97e835f0d3d61f9bc9d416cfc43ccacb325e7ca
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.2.0-5ubuntu1~20.04.debian.tar.xz' gcc-10_10.2.0-5ubuntu1~20.04.debian.tar.xz 2024876 SHA512:d61af9c1eddf504f7b9ff2721b1f077a11059f0dba50392505c591bebd363bbe3a3b46f9fa67c090ac63bfcea6990efd47d647c35507c48f34f12b68a58fb94a
 ```
 
-### `dpkg` source package: `gdbm=1.14.1-6`
+### `dpkg` source package: `gdbm=1.18.1-5`
 
 Binary Packages:
 
-- `libgdbm-compat4:amd64=1.14.1-6`
-- `libgdbm5:amd64=1.14.1-6`
+- `libgdbm-compat4:amd64=1.18.1-5`
+- `libgdbm6:amd64=1.18.1-5`
 
-Licenses: (parsed from: `/usr/share/doc/libgdbm-compat4/copyright`, `/usr/share/doc/libgdbm5/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libgdbm-compat4/copyright`, `/usr/share/doc/libgdbm6/copyright`)
 
-- `GFDL-1.3+`
+- `GFDL-NIV-1.3+`
+- `GPL-2`
+- `GPL-2+`
 - `GPL-3`
 - `GPL-3+`
 
 Source:
 
 ```console
-$ apt-get source -qq --print-uris gdbm=1.14.1-6
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gdbm/gdbm_1.14.1-6.dsc' gdbm_1.14.1-6.dsc 2293 SHA256:85fc353e81fc54b49d9c13c71f4247836fb1aac2693e98416a6821de8cfe7b41
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gdbm/gdbm_1.14.1.orig.tar.gz' gdbm_1.14.1.orig.tar.gz 894412 SHA256:cdceff00ffe014495bed3aed71c7910aa88bf29379f795abc0f46d4ee5f8bc5f
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gdbm/gdbm_1.14.1-6.debian.tar.xz' gdbm_1.14.1-6.debian.tar.xz 27492 SHA256:c9da59f11d5e40ecd877f1256c53ea4750b9d614c7885800e42d0f1885996658
+$ apt-get source -qq --print-uris gdbm=1.18.1-5
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gdbm/gdbm_1.18.1-5.dsc' gdbm_1.18.1-5.dsc 2635 SHA256:4c0c4498378c673c9d2d8dfb5b319a4830d2dd21e65faaaa8e0f09cb7f71606b
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gdbm/gdbm_1.18.1.orig.tar.gz' gdbm_1.18.1.orig.tar.gz 941863 SHA256:86e613527e5dba544e73208f42b78b7c022d4fa5a6d5498bf18c8d6f745b91dc
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gdbm/gdbm_1.18.1.orig.tar.gz.asc' gdbm_1.18.1.orig.tar.gz.asc 412 SHA256:3254738e7689e44ac65e78a766806828b8282e6bb1c0e5bb6156a99e567889a5
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gdbm/gdbm_1.18.1-5.debian.tar.xz' gdbm_1.18.1-5.debian.tar.xz 16348 SHA256:3c1a0e05b40a97ee51ce77c736c72c37738ba31b2720111d3bc99175a2c3a3ed
 ```
 
-### `dpkg` source package: `git-lfs=2.3.4-1`
+### `dpkg` source package: `git-lfs=2.9.2-1`
 
 Binary Packages:
 
-- `git-lfs=2.3.4-1`
+- `git-lfs=2.9.2-1`
 
 Licenses: (parsed from: `/usr/share/doc/git-lfs/copyright`)
 
@@ -688,18 +776,18 @@ Licenses: (parsed from: `/usr/share/doc/git-lfs/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris git-lfs=2.3.4-1
-'http://archive.ubuntu.com/ubuntu/pool/universe/g/git-lfs/git-lfs_2.3.4-1.dsc' git-lfs_2.3.4-1.dsc 2354 SHA256:81403c59110c21baeaacdd55d3eb97ee87ae914a997d722877079b3428dbdec2
-'http://archive.ubuntu.com/ubuntu/pool/universe/g/git-lfs/git-lfs_2.3.4.orig.tar.gz' git-lfs_2.3.4.orig.tar.gz 504946 SHA256:9d4e37be4d4790b01b5432dba44ec78cd4e95c111c03b4bc731f7dff9db0e2a8
-'http://archive.ubuntu.com/ubuntu/pool/universe/g/git-lfs/git-lfs_2.3.4-1.debian.tar.xz' git-lfs_2.3.4-1.debian.tar.xz 2732 SHA256:a39c2308d562dd52f7425d2c4a152ac15d296c27b796ad7abbe704680f62f98f
+$ apt-get source -qq --print-uris git-lfs=2.9.2-1
+'http://archive.ubuntu.com/ubuntu/pool/universe/g/git-lfs/git-lfs_2.9.2-1.dsc' git-lfs_2.9.2-1.dsc 2609 SHA256:fdeba08da470ba5f29791b3e18b22eac92685e8b9aa1d17868a6d3d8b2dca48a
+'http://archive.ubuntu.com/ubuntu/pool/universe/g/git-lfs/git-lfs_2.9.2.orig.tar.xz' git-lfs_2.9.2.orig.tar.xz 440652 SHA256:a8c33179fe3d9b99f59f6ea6d6e022ecca1c135571002e73fdc7e794d3601db5
+'http://archive.ubuntu.com/ubuntu/pool/universe/g/git-lfs/git-lfs_2.9.2-1.debian.tar.xz' git-lfs_2.9.2-1.debian.tar.xz 4112 SHA256:342408ebd4c5d2270f7ee16a8183761dd0015ded0d3fef36b6c5c34fcc32cff2
 ```
 
-### `dpkg` source package: `git=1:2.28.0-0ppa1~ubuntu18.04.1`
+### `dpkg` source package: `git=1:2.25.1-1ubuntu3`
 
 Binary Packages:
 
-- `git=1:2.28.0-0ppa1~ubuntu18.04.1`
-- `git-man=1:2.28.0-0ppa1~ubuntu18.04.1`
+- `git=1:2.25.1-1ubuntu3`
+- `git-man=1:2.25.1-1ubuntu3`
 
 Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/copyright`)
 
@@ -722,17 +810,22 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 - `dlmalloc`
 - `mingw-runtime`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris git=1:2.25.1-1ubuntu3
+'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.25.1-1ubuntu3.dsc' git_2.25.1-1ubuntu3.dsc 2954 SHA256:7f47dc333299979e969f9b87a8cfd8926312e6bee01e44eef6d5a60c19bc7316
+'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.25.1.orig.tar.xz' git_2.25.1.orig.tar.xz 5875548 SHA256:222796cc6e3bf2f9fd765f8f097daa3c3999bb7865ac88a8c974d98182e29f26
+'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.25.1-1ubuntu3.debian.tar.xz' git_2.25.1-1ubuntu3.debian.tar.xz 650520 SHA256:384e8710d6136d7b0b2541cc950de8a0b9f8bc680cc7b889b059eb758b35792c
+```
 
-### `dpkg` source package: `glibc=2.27-3ubuntu1.2`
+### `dpkg` source package: `glibc=2.31-0ubuntu9.1`
 
 Binary Packages:
 
-- `libc-bin=2.27-3ubuntu1.2`
-- `libc6:amd64=2.27-3ubuntu1.2`
-- `locales=2.27-3ubuntu1.2`
+- `libc-bin=2.31-0ubuntu9.1`
+- `libc6:amd64=2.31-0ubuntu9.1`
+- `locales=2.31-0ubuntu9.1`
 
 Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/libc6/copyright`, `/usr/share/doc/locales/copyright`)
 
@@ -742,17 +835,17 @@ Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/lib
 Source:
 
 ```console
-$ apt-get source -qq --print-uris glibc=2.27-3ubuntu1.2
-'http://security.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.27-3ubuntu1.2.dsc' glibc_2.27-3ubuntu1.2.dsc 9364 SHA512:3c04622e913a85fe8d32a65a14114310aad0df92c848ac00ecea6ad99cc3d4ebb5efd40c562cad0684151edc2348bc229a469662c55f19731d82971295f5cea8
-'http://security.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.27.orig.tar.xz' glibc_2.27.orig.tar.xz 15923832 SHA512:a0580fb52bc4ea8bb6e6734086b0dc66bd661060cdd837965880b989866490063c2420f250fb19b54e3547c58a5a7f8e012699e6513ce413746fd236ddd239e8
-'http://security.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.27-3ubuntu1.2.debian.tar.xz' glibc_2.27-3ubuntu1.2.debian.tar.xz 1014508 SHA512:0013d939c1c8be3b5a06fb71e710b7912a475c178e8daff27ece31b8cfb3fbab586f09da22a506a28d4af6aadc6ca8953b6acd1272c2a9010f38d400eec24358
+$ apt-get source -qq --print-uris glibc=2.31-0ubuntu9.1
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31-0ubuntu9.1.dsc' glibc_2.31-0ubuntu9.1.dsc 9456 SHA512:b3f10b8c8f421431c91f14efbc92fc165675d5cdb427629e67d5e19927de0f4024c736c9da1c5d4b7e2bd0aa01395b3e269aeccee161918311f2ea1c75815f1f
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31.orig.tar.xz' glibc_2.31.orig.tar.xz 17317924 SHA512:2ff56628fe935cacbdf1825534f15d45cb87a159cbdb2e6a981590eeb6174ed4b3ff7041519cdecbd4f624ac20b745e2dd9614c420dd3ea186b8f36bc4c2453c
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31-0ubuntu9.1.debian.tar.xz' glibc_2.31-0ubuntu9.1.debian.tar.xz 844816 SHA512:bca1857b031eda2d170256b97829c6b8a38493c66858a041e6f0143bf26c376c207e72d499ef1be07a83667419d55284407bae518511a702171eac58c6f31d62
 ```
 
-### `dpkg` source package: `gmp=2:6.1.2+dfsg-2`
+### `dpkg` source package: `gmp=2:6.2.0+dfsg-4`
 
 Binary Packages:
 
-- `libgmp10:amd64=2:6.1.2+dfsg-2`
+- `libgmp10:amd64=2:6.2.0+dfsg-4`
 
 Licenses: (parsed from: `/usr/share/doc/libgmp10/copyright`)
 
@@ -764,31 +857,22 @@ Licenses: (parsed from: `/usr/share/doc/libgmp10/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris gmp=2:6.1.2+dfsg-2
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.1.2+dfsg-2.dsc' gmp_6.1.2+dfsg-2.dsc 2152 SHA256:d1e7b69c619c2d07b3eaf9f051159cde1884cf9c68109f1dee278bf7a59b632b
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.1.2+dfsg.orig.tar.xz' gmp_6.1.2+dfsg.orig.tar.xz 1804424 SHA256:18016f718f621e7641ddd4e57f8e140391c5183252e5998263ffff59198a65b7
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.1.2+dfsg-2.debian.tar.xz' gmp_6.1.2+dfsg-2.debian.tar.xz 20744 SHA256:33cf6cc65827c9df744e4e07b216ca2d02eb57327a949f80a7b7dddd0485ee85
+$ apt-get source -qq --print-uris gmp=2:6.2.0+dfsg-4
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.2.0+dfsg-4.dsc' gmp_6.2.0+dfsg-4.dsc 2144 SHA256:4ca8c5bca982c78eb7679256a5d41b2c9363a6c3e3ee15ed765515bc328e9989
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.2.0+dfsg.orig.tar.xz' gmp_6.2.0+dfsg.orig.tar.xz 1842912 SHA256:5d7610449498a79aa62d4b9a8f6baaef91b8716726e1009e02b879962dff32ab
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.2.0+dfsg-4.debian.tar.xz' gmp_6.2.0+dfsg-4.debian.tar.xz 21120 SHA256:a0772595583dbcf2147e8457602ccf4b524b18227d6804c4a74050df64ece912
 ```
 
-### `dpkg` source package: `gnupg2=2.2.4-1ubuntu1.3`
+### `dpkg` source package: `gnupg2=2.2.19-3ubuntu2`
 
 Binary Packages:
 
-- `dirmngr=2.2.4-1ubuntu1.3`
-- `gnupg=2.2.4-1ubuntu1.3`
-- `gnupg-l10n=2.2.4-1ubuntu1.3`
-- `gnupg-utils=2.2.4-1ubuntu1.3`
-- `gpg=2.2.4-1ubuntu1.3`
-- `gpg-agent=2.2.4-1ubuntu1.3`
-- `gpg-wks-client=2.2.4-1ubuntu1.3`
-- `gpg-wks-server=2.2.4-1ubuntu1.3`
-- `gpgconf=2.2.4-1ubuntu1.3`
-- `gpgsm=2.2.4-1ubuntu1.3`
-- `gpgv=2.2.4-1ubuntu1.3`
+- `gpgv=2.2.19-3ubuntu2`
 
-Licenses: (parsed from: `/usr/share/doc/dirmngr/copyright`, `/usr/share/doc/gnupg/copyright`, `/usr/share/doc/gnupg-l10n/copyright`, `/usr/share/doc/gnupg-utils/copyright`, `/usr/share/doc/gpg/copyright`, `/usr/share/doc/gpg-agent/copyright`, `/usr/share/doc/gpg-wks-client/copyright`, `/usr/share/doc/gpg-wks-server/copyright`, `/usr/share/doc/gpgconf/copyright`, `/usr/share/doc/gpgsm/copyright`, `/usr/share/doc/gpgv/copyright`)
+Licenses: (parsed from: `/usr/share/doc/gpgv/copyright`)
 
 - `BSD-3-clause`
+- `CC0-1.0`
 - `Expat`
 - `GPL-3`
 - `GPL-3+`
@@ -803,46 +887,50 @@ Licenses: (parsed from: `/usr/share/doc/dirmngr/copyright`, `/usr/share/doc/gnup
 Source:
 
 ```console
-$ apt-get source -qq --print-uris gnupg2=2.2.4-1ubuntu1.3
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.4-1ubuntu1.3.dsc' gnupg2_2.2.4-1ubuntu1.3.dsc 3816 SHA512:3efcaaf8b3c15d75f160447fef982d6ada0b13ef97622a61b7f10d8990dc6dda9d38667e7f80cb8d895a90b00bf118f3b795c36084d68c981f766df76dd1f45e
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.4.orig.tar.bz2' gnupg2_2.2.4.orig.tar.bz2 6571487 SHA512:3d5c93b7662433103e9549d066a6b1a0c09d595851fab712d2ee844a55157e952a8a2dd5deff70fa8dd6817481f81c3fe5135603bca03206857310d04c1067a8
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.4.orig.tar.bz2.asc' gnupg2_2.2.4.orig.tar.bz2.asc 952 SHA512:85c60b8ff5f7d307d5b741e446915ea067804ad27b4a4b779fbafc11800b0cfb2a94d956b502164a3781b5ad2807434215a3413b913ce22d656838163dc1dabb
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.4-1ubuntu1.3.debian.tar.bz2' gnupg2_2.2.4-1ubuntu1.3.debian.tar.bz2 85796 SHA512:76e34e17b0df0647a60a7216ebc5d9f7a6ad6d35165514cc7fbffe579668e78ce152449eb460a462e2522d2d3b5c06f9681da9686ba31ffe115917e4818030df
+$ apt-get source -qq --print-uris gnupg2=2.2.19-3ubuntu2
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.19-3ubuntu2.dsc' gnupg2_2.2.19-3ubuntu2.dsc 3968 SHA256:f33406a797da145bfbb64a1e0bc42d904350b716408fc6c4d31ac3f7804c0244
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.19.orig.tar.bz2' gnupg2_2.2.19.orig.tar.bz2 6754972 SHA256:242554c0e06f3a83c420b052f750b65ead711cc3fddddb5e7274fcdbb4e9dec0
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.19.orig.tar.bz2.asc' gnupg2_2.2.19.orig.tar.bz2.asc 906 SHA256:9665fd179a29412115289bd18109629b855bf78adb6d262cfd4fb00ea09491d7
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.19-3ubuntu2.debian.tar.xz' gnupg2_2.2.19-3ubuntu2.debian.tar.xz 65068 SHA256:fd2dc1a844dbce1b989e8c6f7d8199c950bd3c35c8aefa553dcc27f9cb977ac6
 ```
 
-### `dpkg` source package: `gnutls28=3.5.18-1ubuntu1.4`
+### `dpkg` source package: `gnutls28=3.6.13-2ubuntu1.3`
 
 Binary Packages:
 
-- `libgnutls30:amd64=3.5.18-1ubuntu1.4`
+- `libgnutls30:amd64=3.6.13-2ubuntu1.3`
 
 Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 
+- `Apache-2.0`
+- `BSD-3-Clause`
 - `CC0 license`
+- `Expat`
 - `GFDL-1.3`
 - `GPL`
 - `GPL-3`
+- `GPLv3+`
 - `LGPL`
 - `LGPL-3`
-- `LGPL2.1`
-- `The MIT License (MIT)`
+- `LGPLv2.1+`
+- `LGPLv3+_or_GPLv2+`
 - `The main library is licensed under GNU Lesser`
 
 Source:
 
 ```console
-$ apt-get source -qq --print-uris gnutls28=3.5.18-1ubuntu1.4
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.5.18-1ubuntu1.4.dsc' gnutls28_3.5.18-1ubuntu1.4.dsc 2780 SHA512:e8a0d6c2b9ba082f3019e6d287d0734dd26b2f5bd624b6a7a80d46c62a146fff2663124ed3f722d9acd694bd7044fc902bccbd7f7cadff4a0b2aa25fdf272bfd
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.5.18.orig.tar.xz' gnutls28_3.5.18.orig.tar.xz 7261980 SHA512:434cf33a4221fe2edce1b531cb53690d14a0991cb2056006021f625fb018987351f8ec917c3a7803e5e64179cf1647a3002ae783736ffca3188d2d294b76df52
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.5.18.orig.tar.xz.asc' gnutls28_3.5.18.orig.tar.xz.asc 534 SHA512:c5716fed2d87b88690194cef3aa6ad6674162c77ea6bd536dcff7c32dafe66304d4d2d8cefecf9ee709cf0fae8dae40e9e71dc2c69fd55abf8a15fb6cee52950
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.5.18-1ubuntu1.4.debian.tar.xz' gnutls28_3.5.18-1ubuntu1.4.debian.tar.xz 83784 SHA512:807eb86a8c91caf999fc6ffe98b522d44926792d0252a18f220052455c7e4c1b321c03c6e2be355cc87b19ec34abb6206ea2af5cd147ad7d2a5b4e541c0c2339
+$ apt-get source -qq --print-uris gnutls28=3.6.13-2ubuntu1.3
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.13-2ubuntu1.3.dsc' gnutls28_3.6.13-2ubuntu1.3.dsc 3594 SHA512:9a773f3bdf9048448a0ba8fbd9ab3d2883621df20f7bc62f7e298331d32be9c361ce4e9c3cfb702be543cb15c6743ada1a70dc28533beb736305a8e9f0d514c8
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.13.orig.tar.xz' gnutls28_3.6.13.orig.tar.xz 5958956 SHA512:23581952cb72c9a34f378c002bb62413d5a1243b74b48ad8dc49eaea4020d33c550f8dc1dd374cf7fbfa4187b0ca1c5698c8a0430398268a8b8a863f8633305c
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.13.orig.tar.xz.asc' gnutls28_3.6.13.orig.tar.xz.asc 667 SHA512:b343a8ace6a5c81c0c44b2cb65d8e83dfe5963c9bab04d9131fa8fd03cdf0c6f990d720af8767084e01bf5f7a7dbd0f048aefe68c3b6f1dc1ea1899d567a72f7
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.13-2ubuntu1.3.debian.tar.xz' gnutls28_3.6.13-2ubuntu1.3.debian.tar.xz 64836 SHA512:b28fe3c01879a57fe15e39dd8bd23b236c0b7b2addfec1fbc2808034ea6e4d3feb0c365c46f7872fb604feb082116be6313fce008d7c3f4c4574e235404c6f1c
 ```
 
-### `dpkg` source package: `grep=3.1-2build1`
+### `dpkg` source package: `grep=3.4-1`
 
 Binary Packages:
 
-- `grep=3.1-2build1`
+- `grep=3.4-1`
 
 Licenses: (parsed from: `/usr/share/doc/grep/copyright`)
 
@@ -852,17 +940,18 @@ Licenses: (parsed from: `/usr/share/doc/grep/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris grep=3.1-2build1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/grep/grep_3.1-2build1.dsc' grep_3.1-2build1.dsc 2116 SHA512:420de2689ce397d7ae7cfa80bb3f2285445325269f649c387cd265770ba8ea6c0d7a87b5f40d86f88959f807ed77a5dffd6ebf2abdddf05c5c5653df3c6a1232
-'http://archive.ubuntu.com/ubuntu/pool/main/g/grep/grep_3.1.orig.tar.xz' grep_3.1.orig.tar.xz 1370880 SHA512:05494381c7dd8aad7e2ee4c17450de8d7b969a99dcfe17747db60df3475bf02d5323d091e896e8343e4f3251c29dc7f0b7a9f93c575c9d58ee2a57014c2c9d26
-'http://archive.ubuntu.com/ubuntu/pool/main/g/grep/grep_3.1-2build1.debian.tar.bz2' grep_3.1-2build1.debian.tar.bz2 110087 SHA512:ca29a8001c406a2914a9edc1859f2615abc08dc1c8c8a42e48036844ee6249436dba7a43f5e5c078cb44605d620cd0d93904c92178acf73b42cb6faf416be310
+$ apt-get source -qq --print-uris grep=3.4-1
+'http://archive.ubuntu.com/ubuntu/pool/main/g/grep/grep_3.4-1.dsc' grep_3.4-1.dsc 1674 SHA256:785f527cede9631f075bdd6c7f35e65e6b82897d009682766cf35839a393277d
+'http://archive.ubuntu.com/ubuntu/pool/main/g/grep/grep_3.4.orig.tar.xz' grep_3.4.orig.tar.xz 1555820 SHA256:58e6751c41a7c25bfc6e9363a41786cff3ba5709cf11d5ad903cf7cce31cc3fb
+'http://archive.ubuntu.com/ubuntu/pool/main/g/grep/grep_3.4.orig.tar.xz.asc' grep_3.4.orig.tar.xz.asc 833 SHA256:4c1871ff6b79c5e5ce0a192272c171d06ec20762b4b258688b1ca2e47d94b23e
+'http://archive.ubuntu.com/ubuntu/pool/main/g/grep/grep_3.4-1.debian.tar.xz' grep_3.4-1.debian.tar.xz 104364 SHA256:582d181804ce72fcfc4c6a9f13ea1dd73ad04c2723b5da346b69ee5cd24a7d08
 ```
 
-### `dpkg` source package: `gzip=1.6-5ubuntu1`
+### `dpkg` source package: `gzip=1.10-0ubuntu4`
 
 Binary Packages:
 
-- `gzip=1.6-5ubuntu1`
+- `gzip=1.10-0ubuntu4`
 
 Licenses: (parsed from: `/usr/share/doc/gzip/copyright`)
 
@@ -871,25 +960,25 @@ Licenses: (parsed from: `/usr/share/doc/gzip/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris gzip=1.6-5ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gzip/gzip_1.6-5ubuntu1.dsc' gzip_1.6-5ubuntu1.dsc 2023 SHA256:439e340fce084b9b30e22a5537712f9b4727a20e77952addeea7633a4e9ef073
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gzip/gzip_1.6.orig.tar.gz' gzip_1.6.orig.tar.gz 1074924 SHA256:97eb83b763d9e5ad35f351fe5517e6b71521d7aac7acf3e3cacdb6b1496d8f7e
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gzip/gzip_1.6-5ubuntu1.debian.tar.xz' gzip_1.6-5ubuntu1.debian.tar.xz 15516 SHA256:db01e3f2195cf0ebcf43ad38d07a70059b6b5b292706f2412de34928b9146db5
+$ apt-get source -qq --print-uris gzip=1.10-0ubuntu4
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gzip/gzip_1.10-0ubuntu4.dsc' gzip_1.10-0ubuntu4.dsc 2134 SHA256:b1b05c873448fe2ae1029f55cfea8ae5139d0d88a66ed97768da911e833c9578
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gzip/gzip_1.10.orig.tar.gz' gzip_1.10.orig.tar.gz 1201421 SHA256:c91f74430bf7bc20402e1f657d0b252cb80aa66ba333a25704512af346633c68
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gzip/gzip_1.10-0ubuntu4.debian.tar.xz' gzip_1.10-0ubuntu4.debian.tar.xz 26592 SHA256:da4c6907f9769be8622349c1a5b81ba5d2ab03c82f1e116c2f3f1a9f00bb8055
 ```
 
-### `dpkg` source package: `heimdal=7.5.0+dfsg-1`
+### `dpkg` source package: `heimdal=7.7.0+dfsg-1ubuntu1`
 
 Binary Packages:
 
-- `libasn1-8-heimdal:amd64=7.5.0+dfsg-1`
-- `libgssapi3-heimdal:amd64=7.5.0+dfsg-1`
-- `libhcrypto4-heimdal:amd64=7.5.0+dfsg-1`
-- `libheimbase1-heimdal:amd64=7.5.0+dfsg-1`
-- `libheimntlm0-heimdal:amd64=7.5.0+dfsg-1`
-- `libhx509-5-heimdal:amd64=7.5.0+dfsg-1`
-- `libkrb5-26-heimdal:amd64=7.5.0+dfsg-1`
-- `libroken18-heimdal:amd64=7.5.0+dfsg-1`
-- `libwind0-heimdal:amd64=7.5.0+dfsg-1`
+- `libasn1-8-heimdal:amd64=7.7.0+dfsg-1ubuntu1`
+- `libgssapi3-heimdal:amd64=7.7.0+dfsg-1ubuntu1`
+- `libhcrypto4-heimdal:amd64=7.7.0+dfsg-1ubuntu1`
+- `libheimbase1-heimdal:amd64=7.7.0+dfsg-1ubuntu1`
+- `libheimntlm0-heimdal:amd64=7.7.0+dfsg-1ubuntu1`
+- `libhx509-5-heimdal:amd64=7.7.0+dfsg-1ubuntu1`
+- `libkrb5-26-heimdal:amd64=7.7.0+dfsg-1ubuntu1`
+- `libroken18-heimdal:amd64=7.7.0+dfsg-1ubuntu1`
+- `libwind0-heimdal:amd64=7.7.0+dfsg-1ubuntu1`
 
 Licenses: (parsed from: `/usr/share/doc/libasn1-8-heimdal/copyright`, `/usr/share/doc/libgssapi3-heimdal/copyright`, `/usr/share/doc/libhcrypto4-heimdal/copyright`, `/usr/share/doc/libheimbase1-heimdal/copyright`, `/usr/share/doc/libheimntlm0-heimdal/copyright`, `/usr/share/doc/libhx509-5-heimdal/copyright`, `/usr/share/doc/libkrb5-26-heimdal/copyright`, `/usr/share/doc/libroken18-heimdal/copyright`, `/usr/share/doc/libwind0-heimdal/copyright`)
 
@@ -902,17 +991,17 @@ Licenses: (parsed from: `/usr/share/doc/libasn1-8-heimdal/copyright`, `/usr/shar
 Source:
 
 ```console
-$ apt-get source -qq --print-uris heimdal=7.5.0+dfsg-1
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.5.0+dfsg-1.dsc' heimdal_7.5.0+dfsg-1.dsc 3674 SHA256:98ce6bf21ac01400ec10a3620fe3c047da4cf63269f521ba96c59bbcaed822bf
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.5.0+dfsg.orig.tar.gz' heimdal_7.5.0+dfsg.orig.tar.gz 8955005 SHA256:489119b7a1a900b88163765654dc59cba9a321b078fafc76629e2b85ef140867
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.5.0+dfsg-1.debian.tar.xz' heimdal_7.5.0+dfsg-1.debian.tar.xz 125776 SHA256:7ad6c3f3968989ff06181409e1515a3feaf5a630d27ade7f2f018c9241f8c225
+$ apt-get source -qq --print-uris heimdal=7.7.0+dfsg-1ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.7.0+dfsg-1ubuntu1.dsc' heimdal_7.7.0+dfsg-1ubuntu1.dsc 3633 SHA256:46b7873a11c8279f5efec50f16b5ed4abafa5a957224c3f624229f9d888e1ebe
+'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.7.0+dfsg.orig.tar.xz' heimdal_7.7.0+dfsg.orig.tar.xz 5945252 SHA256:6822c9547188b753b6325047fda9255744e4ebbbe02bb0dade78c261061fefac
+'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.7.0+dfsg-1ubuntu1.debian.tar.xz' heimdal_7.7.0+dfsg-1ubuntu1.debian.tar.xz 128604 SHA256:0c0b4572de525c3c294bcdbde95ebfc3386461c47c2e8d1a86fe0d37da6bd479
 ```
 
-### `dpkg` source package: `hostname=3.20`
+### `dpkg` source package: `hostname=3.23`
 
 Binary Packages:
 
-- `hostname=3.20`
+- `hostname=3.23`
 
 Licenses: (parsed from: `/usr/share/doc/hostname/copyright`)
 
@@ -921,16 +1010,16 @@ Licenses: (parsed from: `/usr/share/doc/hostname/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris hostname=3.20
-'http://archive.ubuntu.com/ubuntu/pool/main/h/hostname/hostname_3.20.dsc' hostname_3.20.dsc 1429 SHA256:1fd7b0b2b61e58aa0e50de4d375072c938cb3cc4b722bc73e085e3a3691d9114
-'http://archive.ubuntu.com/ubuntu/pool/main/h/hostname/hostname_3.20.tar.gz' hostname_3.20.tar.gz 13336 SHA256:e7ed56f8c532573ff34d9bd6e7a10d04fbbb2c7fae187898805868e5fed24ab0
+$ apt-get source -qq --print-uris hostname=3.23
+'http://archive.ubuntu.com/ubuntu/pool/main/h/hostname/hostname_3.23.dsc' hostname_3.23.dsc 1402 SHA256:0694c083fad82da1fd33204557a30bfc745a689a64030ba360062daafe03ede0
+'http://archive.ubuntu.com/ubuntu/pool/main/h/hostname/hostname_3.23.tar.gz' hostname_3.23.tar.gz 13672 SHA256:bc6d1954b22849869ff8b2a602e39f08b1702f686d4b58dd7927cdeb5b4876ef
 ```
 
-### `dpkg` source package: `init-system-helpers=1.51`
+### `dpkg` source package: `init-system-helpers=1.57`
 
 Binary Packages:
 
-- `init-system-helpers=1.51`
+- `init-system-helpers=1.57`
 
 Licenses: (parsed from: `/usr/share/doc/init-system-helpers/copyright`)
 
@@ -941,16 +1030,16 @@ Licenses: (parsed from: `/usr/share/doc/init-system-helpers/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris init-system-helpers=1.51
-'http://archive.ubuntu.com/ubuntu/pool/main/i/init-system-helpers/init-system-helpers_1.51.dsc' init-system-helpers_1.51.dsc 1963 SHA256:82f0e30fef2ad14c65f9c7d8ccafd43549451041fdf661dca28b963a6cef02e4
-'http://archive.ubuntu.com/ubuntu/pool/main/i/init-system-helpers/init-system-helpers_1.51.tar.xz' init-system-helpers_1.51.tar.xz 37468 SHA256:e18b28efe8df087146d9c1e4e9c25386ee1b7312f518d48a2a38469a6c661be0
+$ apt-get source -qq --print-uris init-system-helpers=1.57
+'http://archive.ubuntu.com/ubuntu/pool/main/i/init-system-helpers/init-system-helpers_1.57.dsc' init-system-helpers_1.57.dsc 1896 SHA256:88bb5af040c99f010b6d6947ff5c80ae4863ff787e0eeae91e99dcd15a10dbb8
+'http://archive.ubuntu.com/ubuntu/pool/main/i/init-system-helpers/init-system-helpers_1.57.tar.xz' init-system-helpers_1.57.tar.xz 40460 SHA256:e9d83fd8756a42666fb5d19a8835813823295846659b4e58f138bb9b54e9f5dd
 ```
 
-### `dpkg` source package: `keyutils=1.5.9-9.2ubuntu2`
+### `dpkg` source package: `keyutils=1.6-6ubuntu1`
 
 Binary Packages:
 
-- `libkeyutils1:amd64=1.5.9-9.2ubuntu2`
+- `libkeyutils1:amd64=1.6-6ubuntu1`
 
 Licenses: (parsed from: `/usr/share/doc/libkeyutils1/copyright`)
 
@@ -962,20 +1051,20 @@ Licenses: (parsed from: `/usr/share/doc/libkeyutils1/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris keyutils=1.5.9-9.2ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/k/keyutils/keyutils_1.5.9-9.2ubuntu2.dsc' keyutils_1.5.9-9.2ubuntu2.dsc 2237 SHA256:67cb7c4b1dadc2c0ca85286ef8f11f7e71f91b67d47fca58ecd41e1bd83271ad
-'http://archive.ubuntu.com/ubuntu/pool/main/k/keyutils/keyutils_1.5.9.orig.tar.bz2' keyutils_1.5.9.orig.tar.bz2 74683 SHA256:4da2c5552c688b65ab14d4fd40fbdf720c8b396d8ece643e040cf6e707e083ae
-'http://archive.ubuntu.com/ubuntu/pool/main/k/keyutils/keyutils_1.5.9-9.2ubuntu2.debian.tar.xz' keyutils_1.5.9-9.2ubuntu2.debian.tar.xz 18492 SHA256:51706bd0d480913584d3fa8fcfe32dcf210742bb75c08e6a2d5f022748654086
+$ apt-get source -qq --print-uris keyutils=1.6-6ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/main/k/keyutils/keyutils_1.6-6ubuntu1.dsc' keyutils_1.6-6ubuntu1.dsc 2148 SHA256:76dfe0a0d9bb0a417d9c20c2f20b0beb9097dccd30c30a41375ef99cf0a710b6
+'http://archive.ubuntu.com/ubuntu/pool/main/k/keyutils/keyutils_1.6.orig.tar.bz2' keyutils_1.6.orig.tar.bz2 93973 SHA256:d3aef20cec0005c0fa6b4be40079885567473185b1a57b629b030e67942c7115
+'http://archive.ubuntu.com/ubuntu/pool/main/k/keyutils/keyutils_1.6-6ubuntu1.debian.tar.xz' keyutils_1.6-6ubuntu1.debian.tar.xz 13636 SHA256:a4ae24062e9d20a0e2092e4cb342b664c0211ba7efdfeb7bde5f8d209c9ad1db
 ```
 
-### `dpkg` source package: `krb5=1.16-2ubuntu0.1`
+### `dpkg` source package: `krb5=1.17-6ubuntu4`
 
 Binary Packages:
 
-- `libgssapi-krb5-2:amd64=1.16-2ubuntu0.1`
-- `libk5crypto3:amd64=1.16-2ubuntu0.1`
-- `libkrb5-3:amd64=1.16-2ubuntu0.1`
-- `libkrb5support0:amd64=1.16-2ubuntu0.1`
+- `libgssapi-krb5-2:amd64=1.17-6ubuntu4`
+- `libk5crypto3:amd64=1.17-6ubuntu4`
+- `libkrb5-3:amd64=1.17-6ubuntu4`
+- `libkrb5support0:amd64=1.17-6ubuntu4`
 
 Licenses: (parsed from: `/usr/share/doc/libgssapi-krb5-2/copyright`, `/usr/share/doc/libk5crypto3/copyright`, `/usr/share/doc/libkrb5-3/copyright`, `/usr/share/doc/libkrb5support0/copyright`)
 
@@ -984,46 +1073,17 @@ Licenses: (parsed from: `/usr/share/doc/libgssapi-krb5-2/copyright`, `/usr/share
 Source:
 
 ```console
-$ apt-get source -qq --print-uris krb5=1.16-2ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.16-2ubuntu0.1.dsc' krb5_1.16-2ubuntu0.1.dsc 3563 SHA512:a73ea88dc4ac0583330fa93a790def3ae57b201b148995f48f301cddd0975dcbfe54ac099e9dacf6dfe089e177819865c652328d49af98c742d683a62a3a4946
-'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.16.orig.tar.gz' krb5_1.16.orig.tar.gz 9474479 SHA512:7e162467b95dad2b6aaa11686d08a00f1cc4eb08247fca8f0e5a8bcaa5f9f7b42cdf00db69c5c6111bdf9eb8063d53cef3bb207ce5d6a287615ca10b710153f9
-'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.16-2ubuntu0.1.debian.tar.xz' krb5_1.16-2ubuntu0.1.debian.tar.xz 99820 SHA512:80836484a0405bc271e21a04c12547a840a360276bfb30ae1fcb648e9ed67232bfad92c60614463acbe61701c58e72b49ffc892bcf00924c4dbdfac88a59f36c
+$ apt-get source -qq --print-uris krb5=1.17-6ubuntu4
+'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.17-6ubuntu4.dsc' krb5_1.17-6ubuntu4.dsc 3654 SHA256:e2e56f3faf968072ef89201a04e85cd59e003d123bd5a06e3a05f59a01c94301
+'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.17.orig.tar.gz' krb5_1.17.orig.tar.gz 8761763 SHA256:5a6e2284a53de5702d3dc2be3b9339c963f9b5397d3fbbc53beb249380a781f5
+'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.17-6ubuntu4.debian.tar.xz' krb5_1.17-6ubuntu4.debian.tar.xz 144560 SHA256:17d09fbe6a54de93fe2f21f1c384a55d0913862dec7ca96b2c0489266f3c16fd
 ```
 
-### `dpkg` source package: `libassuan=2.5.1-2`
+### `dpkg` source package: `libbsd=0.10.0-1`
 
 Binary Packages:
 
-- `libassuan0:amd64=2.5.1-2`
-
-Licenses: (parsed from: `/usr/share/doc/libassuan0/copyright`)
-
-- `GAP`
-- `GAP~FSF`
-- `GPL-2`
-- `GPL-2+`
-- `GPL-2+ with libtool exception`
-- `GPL-3`
-- `GPL-3+`
-- `LGPL-2.1`
-- `LGPL-2.1+`
-- `LGPL-3`
-- `LGPL-3+`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris libassuan=2.5.1-2
-'http://archive.ubuntu.com/ubuntu/pool/main/liba/libassuan/libassuan_2.5.1-2.dsc' libassuan_2.5.1-2.dsc 2215 SHA256:e954a7ef30815e62832ca4a1d2959142e264795e7ec78ba369752353135beb68
-'http://archive.ubuntu.com/ubuntu/pool/main/liba/libassuan/libassuan_2.5.1.orig.tar.bz2' libassuan_2.5.1.orig.tar.bz2 564857 SHA256:47f96c37b4f2aac289f0bc1bacfa8bd8b4b209a488d3d15e2229cb6cc9b26449
-'http://archive.ubuntu.com/ubuntu/pool/main/liba/libassuan/libassuan_2.5.1-2.debian.tar.xz' libassuan_2.5.1-2.debian.tar.xz 15236 SHA256:4a67901dcb0e92cd40e0d5d7148ebe6f929378671df373eb68b48acb560d641f
-```
-
-### `dpkg` source package: `libbsd=0.8.7-1ubuntu0.1`
-
-Binary Packages:
-
-- `libbsd0:amd64=0.8.7-1ubuntu0.1`
+- `libbsd0:amd64=0.10.0-1`
 
 Licenses: (parsed from: `/usr/share/doc/libbsd0/copyright`)
 
@@ -1033,8 +1093,8 @@ Licenses: (parsed from: `/usr/share/doc/libbsd0/copyright`)
 - `BSD-2-clause-verbatim`
 - `BSD-3-clause`
 - `BSD-3-clause-John-Birrell`
-- `BSD-3-clause-Peter-Wemm`
 - `BSD-3-clause-Regents`
+- `BSD-3-clause-author`
 - `BSD-4-clause-Christopher-G-Demetriou`
 - `BSD-4-clause-Niels-Provos`
 - `BSD-5-clause-Peter-Wemm`
@@ -1048,18 +1108,18 @@ Licenses: (parsed from: `/usr/share/doc/libbsd0/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libbsd=0.8.7-1ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/libb/libbsd/libbsd_0.8.7-1ubuntu0.1.dsc' libbsd_0.8.7-1ubuntu0.1.dsc 2280 SHA512:a843bcd758e78f005d073a8ca8cfc2813b076851c4dccb307bf12d6870c3fc555e45e89e56d4160a630ae31d59e945f4d41170ac0a9ad9e72e021743b080ad7c
-'http://archive.ubuntu.com/ubuntu/pool/main/libb/libbsd/libbsd_0.8.7.orig.tar.xz' libbsd_0.8.7.orig.tar.xz 371772 SHA512:605a14eb5d33c0e45c3bd29e585ebc15832e2ed1efa9356291a0562622168da96db1a20766e9dae8910ea0c1516429f43905edc8d4f2a40a5a341a689d08fcc3
-'http://archive.ubuntu.com/ubuntu/pool/main/libb/libbsd/libbsd_0.8.7.orig.tar.xz.asc' libbsd_0.8.7.orig.tar.xz.asc 833 SHA512:05b65159a7fd4e256fe41df10f3cc389d84ade4e4a5a8786f8b1990951be10b33ec9fbc6cbea16ae0c44a490253511fb2cd6c23422e11e16dbf80bef7f3eb812
-'http://archive.ubuntu.com/ubuntu/pool/main/libb/libbsd/libbsd_0.8.7-1ubuntu0.1.debian.tar.xz' libbsd_0.8.7-1ubuntu0.1.debian.tar.xz 16608 SHA512:ac2c3278effcba412e732a60258c011b1e6bd0ae9ab28e434fb852df35950905293bba9e2d37466dd29b943763e7e186d3145e81c22f3879b5706f2890e62a17
+$ apt-get source -qq --print-uris libbsd=0.10.0-1
+'http://archive.ubuntu.com/ubuntu/pool/main/libb/libbsd/libbsd_0.10.0-1.dsc' libbsd_0.10.0-1.dsc 2197 SHA256:7c05e2c73658f64cbd4e1762b716cc7c4c1d68391191e82c7d266a351430edd6
+'http://archive.ubuntu.com/ubuntu/pool/main/libb/libbsd/libbsd_0.10.0.orig.tar.xz' libbsd_0.10.0.orig.tar.xz 393576 SHA256:34b8adc726883d0e85b3118fa13605e179a62b31ba51f676136ecb2d0bc1a887
+'http://archive.ubuntu.com/ubuntu/pool/main/libb/libbsd/libbsd_0.10.0.orig.tar.xz.asc' libbsd_0.10.0.orig.tar.xz.asc 833 SHA256:4362f6d811ffc06659ac5cf777d8d01157bedfc28720b41fb485afb0a5acc0c7
+'http://archive.ubuntu.com/ubuntu/pool/main/libb/libbsd/libbsd_0.10.0-1.debian.tar.xz' libbsd_0.10.0-1.debian.tar.xz 16660 SHA256:4cf37d6d5b72702b31b07384612e07173e94e081feef71fec206f86ab38f2411
 ```
 
-### `dpkg` source package: `libcap-ng=0.7.7-3.1`
+### `dpkg` source package: `libcap-ng=0.7.9-2.1build1`
 
 Binary Packages:
 
-- `libcap-ng0:amd64=0.7.7-3.1`
+- `libcap-ng0:amd64=0.7.9-2.1build1`
 
 Licenses: (parsed from: `/usr/share/doc/libcap-ng0/copyright`)
 
@@ -1070,36 +1130,56 @@ Licenses: (parsed from: `/usr/share/doc/libcap-ng0/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libcap-ng=0.7.7-3.1
-'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcap-ng/libcap-ng_0.7.7-3.1.dsc' libcap-ng_0.7.7-3.1.dsc 2266 SHA256:f545d107ed3e6160b16aac09e242d1ccc054bfca76f6d70731a83c031b416f53
-'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcap-ng/libcap-ng_0.7.7.orig.tar.gz' libcap-ng_0.7.7.orig.tar.gz 420178 SHA256:615549ce39b333f6b78baee0c0b4ef18bc726c6bf1cca123dfd89dd963f6d06b
-'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcap-ng/libcap-ng_0.7.7-3.1.debian.tar.xz' libcap-ng_0.7.7-3.1.debian.tar.xz 5432 SHA256:074bf729c3081af729e7e0fbbe3354ddecc16e045245e7d4f44003b9f1f1adc6
+$ apt-get source -qq --print-uris libcap-ng=0.7.9-2.1build1
+'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcap-ng/libcap-ng_0.7.9-2.1build1.dsc' libcap-ng_0.7.9-2.1build1.dsc 2158 SHA256:6d74cf5c418659d70bce8e9a4bf6f0ef0210dbcadac15e0c4d4471c4671230a1
+'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcap-ng/libcap-ng_0.7.9.orig.tar.gz' libcap-ng_0.7.9.orig.tar.gz 449038 SHA256:4a1532bcf3731aade40936f6d6a586ed5a66ca4c7455e1338d1f6c3e09221328
+'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcap-ng/libcap-ng_0.7.9-2.1build1.debian.tar.xz' libcap-ng_0.7.9-2.1build1.debian.tar.xz 6256 SHA256:b73a0a36bb0c1c8144828552dedb7b3493f4a08b1c31a0f1d7046cf1682eac7d
 ```
 
-### `dpkg` source package: `libedit=3.1-20170329-1`
+### `dpkg` source package: `libcbor=0.6.0-0ubuntu1`
 
 Binary Packages:
 
-- `libedit2:amd64=3.1-20170329-1`
+- `libcbor0.6:amd64=0.6.0-0ubuntu1`
 
-**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
-If source is available (seen below), check the contents of `debian/copyright` within it.
+Licenses: (parsed from: `/usr/share/doc/libcbor0.6/copyright`)
 
+- `Apache-2.0`
+- `Expat`
 
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libedit=3.1-20170329-1
-'http://archive.ubuntu.com/ubuntu/pool/main/libe/libedit/libedit_3.1-20170329-1.dsc' libedit_3.1-20170329-1.dsc 2269 SHA256:1e657cfcfbbe5c550b844f17cfeb1d8591136fa57300e6cff2b56e5a3e25ad3f
-'http://archive.ubuntu.com/ubuntu/pool/main/libe/libedit/libedit_3.1-20170329.orig.tar.gz' libedit_3.1-20170329.orig.tar.gz 508504 SHA256:91f2d90fbd2a048ff6dad7131d9a39e690fd8a8fd982a353f1333dd4017dd4be
-'http://archive.ubuntu.com/ubuntu/pool/main/libe/libedit/libedit_3.1-20170329-1.debian.tar.bz2' libedit_3.1-20170329-1.debian.tar.bz2 11267 SHA256:7dd7a23b07b082d058b7fb741d3b750b80699472e7c8efd1935a9e7c59a49a39
+$ apt-get source -qq --print-uris libcbor=0.6.0-0ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcbor/libcbor_0.6.0-0ubuntu1.dsc' libcbor_0.6.0-0ubuntu1.dsc 2115 SHA256:403caca4382a40d55caf3d88b792e45fa79a2f20746f422a3ba5cabb113444f6
+'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcbor/libcbor_0.6.0.orig.tar.gz' libcbor_0.6.0.orig.tar.gz 262622 SHA256:ad97dfe6462a28956be38c924a5a557acf303d8454ca121e02150a5b87e03ee7
+'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcbor/libcbor_0.6.0-0ubuntu1.debian.tar.xz' libcbor_0.6.0-0ubuntu1.debian.tar.xz 5832 SHA256:719b8d56482b3ffc8adc05b16211d4b9bcce43ab877801801fd3927a9a8e66e1
 ```
 
-### `dpkg` source package: `liberror-perl=0.17025-1`
+### `dpkg` source package: `libedit=3.1-20191231-1`
 
 Binary Packages:
 
-- `liberror-perl=0.17025-1`
+- `libedit2:amd64=3.1-20191231-1`
+
+Licenses: (parsed from: `/usr/share/doc/libedit2/copyright`)
+
+- `BSD-3-clause`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris libedit=3.1-20191231-1
+'http://archive.ubuntu.com/ubuntu/pool/main/libe/libedit/libedit_3.1-20191231-1.dsc' libedit_3.1-20191231-1.dsc 2129 SHA256:1be31eebf9cf3b38a9e7c3c4d4b37f002e3f89df48f00dec32506cbe9337ae38
+'http://archive.ubuntu.com/ubuntu/pool/main/libe/libedit/libedit_3.1-20191231.orig.tar.gz' libedit_3.1-20191231.orig.tar.gz 516801 SHA256:dbb82cb7e116a5f8025d35ef5b4f7d4a3cdd0a3909a146a39112095a2d229071
+'http://archive.ubuntu.com/ubuntu/pool/main/libe/libedit/libedit_3.1-20191231-1.debian.tar.xz' libedit_3.1-20191231-1.debian.tar.xz 14168 SHA256:f815baa1932f9df5d4cdb316a85ebd3cc91441c4d83ba2c8454f342573ed0eab
+```
+
+### `dpkg` source package: `liberror-perl=0.17029-1`
+
+Binary Packages:
+
+- `liberror-perl=0.17029-1`
 
 Licenses: (parsed from: `/usr/share/doc/liberror-perl/copyright`)
 
@@ -1111,36 +1191,57 @@ Licenses: (parsed from: `/usr/share/doc/liberror-perl/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris liberror-perl=0.17025-1
-'http://archive.ubuntu.com/ubuntu/pool/main/libe/liberror-perl/liberror-perl_0.17025-1.dsc' liberror-perl_0.17025-1.dsc 2077 SHA256:994800c0123fe452ca1f1019e5bf71755c3200231d84999a31dd19be16ada41b
-'http://archive.ubuntu.com/ubuntu/pool/main/libe/liberror-perl/liberror-perl_0.17025.orig.tar.gz' liberror-perl_0.17025.orig.tar.gz 32013 SHA256:6c9f474ad3d4fe0cabff6b6be532cb1dd348245986d4a6b600ad921d5cfdefaf
-'http://archive.ubuntu.com/ubuntu/pool/main/libe/liberror-perl/liberror-perl_0.17025-1.debian.tar.xz' liberror-perl_0.17025-1.debian.tar.xz 4108 SHA256:0288dcf7eeff5cddfaf8c6bdfbe9fc170a1d333bb6d88489ca8158c929a44f76
+$ apt-get source -qq --print-uris liberror-perl=0.17029-1
+'http://archive.ubuntu.com/ubuntu/pool/main/libe/liberror-perl/liberror-perl_0.17029-1.dsc' liberror-perl_0.17029-1.dsc 2336 SHA256:0590467fe8c5f81bff9336e991462b2a9994b4876f4b732c8b8b31e927987cd7
+'http://archive.ubuntu.com/ubuntu/pool/main/libe/liberror-perl/liberror-perl_0.17029.orig.tar.gz' liberror-perl_0.17029.orig.tar.gz 33304 SHA256:1a23f7913032aed6d4b68321373a3899ca66590f4727391a091ec19c95bf7adc
+'http://archive.ubuntu.com/ubuntu/pool/main/libe/liberror-perl/liberror-perl_0.17029-1.debian.tar.xz' liberror-perl_0.17029-1.debian.tar.xz 4552 SHA256:a753b142c4c33ebf9cc98ae5f7a08da13b7c9ca2823ec26e45c96efb9c15c42e
 ```
 
-### `dpkg` source package: `libffi=3.2.1-8`
+### `dpkg` source package: `libffi=3.3-4`
 
 Binary Packages:
 
-- `libffi6:amd64=3.2.1-8`
+- `libffi7:amd64=3.3-4`
 
-Licenses: (parsed from: `/usr/share/doc/libffi6/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libffi7/copyright`)
 
 - `GPL`
 
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libffi=3.2.1-8
-'http://archive.ubuntu.com/ubuntu/pool/main/libf/libffi/libffi_3.2.1-8.dsc' libffi_3.2.1-8.dsc 1959 SHA256:a07201eb5374cfab35703a6f4c88a494bb23ece91da5481497bc25404c57eaf4
-'http://archive.ubuntu.com/ubuntu/pool/main/libf/libffi/libffi_3.2.1.orig.tar.gz' libffi_3.2.1.orig.tar.gz 940837 SHA256:d06ebb8e1d9a22d19e38d63fdb83954253f39bedc5d46232a05645685722ca37
-'http://archive.ubuntu.com/ubuntu/pool/main/libf/libffi/libffi_3.2.1-8.debian.tar.xz' libffi_3.2.1-8.debian.tar.xz 11660 SHA256:1eb0b13e0c0fc989ed98011d18dcddf8a05af17380fe1258883761a8d16586b4
+$ apt-get source -qq --print-uris libffi=3.3-4
+'http://archive.ubuntu.com/ubuntu/pool/main/libf/libffi/libffi_3.3-4.dsc' libffi_3.3-4.dsc 1932 SHA256:4190ad8e7ae9167a0c67c5926bc3705acb191745cca93ef845dbc06fc097f380
+'http://archive.ubuntu.com/ubuntu/pool/main/libf/libffi/libffi_3.3.orig.tar.gz' libffi_3.3.orig.tar.gz 1305466 SHA256:72fba7922703ddfa7a028d513ac15a85c8d54c8d67f55fa5a4802885dc652056
+'http://archive.ubuntu.com/ubuntu/pool/main/libf/libffi/libffi_3.3-4.debian.tar.xz' libffi_3.3-4.debian.tar.xz 9016 SHA256:0e8a6d9d87202d04d7646178479c3d365a845f9723da26625d533a169b378100
 ```
 
-### `dpkg` source package: `libgcrypt20=1.8.1-4ubuntu1.2`
+### `dpkg` source package: `libfido2=1.3.1-1ubuntu2`
 
 Binary Packages:
 
-- `libgcrypt20:amd64=1.8.1-4ubuntu1.2`
+- `libfido2-1:amd64=1.3.1-1ubuntu2`
+
+Licenses: (parsed from: `/usr/share/doc/libfido2-1/copyright`)
+
+- `BSD-2-clause`
+- `ISC`
+- `public-domain`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris libfido2=1.3.1-1ubuntu2
+'http://archive.ubuntu.com/ubuntu/pool/main/libf/libfido2/libfido2_1.3.1-1ubuntu2.dsc' libfido2_1.3.1-1ubuntu2.dsc 2315 SHA256:2ff6b7cc320b84461404fa3830dfb5b705f7920b431173479144c73b4b50a59c
+'http://archive.ubuntu.com/ubuntu/pool/main/libf/libfido2/libfido2_1.3.1.orig.tar.gz' libfido2_1.3.1.orig.tar.gz 1512676 SHA256:ba35e22016b60c1e4be66dff3cd6a60c1fe4bfa0d91ec0b89ca9da25ebeaaf41
+'http://archive.ubuntu.com/ubuntu/pool/main/libf/libfido2/libfido2_1.3.1-1ubuntu2.debian.tar.xz' libfido2_1.3.1-1ubuntu2.debian.tar.xz 73992 SHA256:678fed0bfe9ae7cdb1834caedfeb0d1c86a16c4476f679de017b39f2b356a2f8
+```
+
+### `dpkg` source package: `libgcrypt20=1.8.5-5ubuntu1`
+
+Binary Packages:
+
+- `libgcrypt20:amd64=1.8.5-5ubuntu1`
 
 Licenses: (parsed from: `/usr/share/doc/libgcrypt20/copyright`)
 
@@ -1150,18 +1251,18 @@ Licenses: (parsed from: `/usr/share/doc/libgcrypt20/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libgcrypt20=1.8.1-4ubuntu1.2
-'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgcrypt20/libgcrypt20_1.8.1-4ubuntu1.2.dsc' libgcrypt20_1.8.1-4ubuntu1.2.dsc 3035 SHA512:2cab68715075be201f98da207fd67354637c5a275fa4585bed5cf234b9aca50b479ed7aa4144d77005e0bc5f9680b16d364f27d57353ef5341a7327de512e705
-'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgcrypt20/libgcrypt20_1.8.1.orig.tar.bz2' libgcrypt20_1.8.1.orig.tar.bz2 2967344 SHA512:27c9d2fd9cba5afca71d421c9299d6942463975fae0bd10d4ff42cda2d7ea213e6b73c071a40fcf23ff52a93394cc7505ab332f8a4a3321826460e471eda5b4e
-'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgcrypt20/libgcrypt20_1.8.1.orig.tar.bz2.asc' libgcrypt20_1.8.1.orig.tar.bz2.asc 310 SHA512:2e03cade8815ef146ea186efcdef2be5e1a0cfae3b9f8fcd7d7f774503b93ab29dbd2b284c1ad260181419ae0fc23462762e9a5e20193f89af76ca4ea0c1bccf
-'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgcrypt20/libgcrypt20_1.8.1-4ubuntu1.2.debian.tar.xz' libgcrypt20_1.8.1-4ubuntu1.2.debian.tar.xz 33112 SHA512:7f9196009c18514110d69f457b50dc2ff296943e04f91021193f9549f67be399013cede511131ca54dd32bfa662f26569f52a850a09823a641b640b1664ff68b
+$ apt-get source -qq --print-uris libgcrypt20=1.8.5-5ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgcrypt20/libgcrypt20_1.8.5-5ubuntu1.dsc' libgcrypt20_1.8.5-5ubuntu1.dsc 2944 SHA256:d3f3f499949d51909b12eb09b30c3d2f8f999ecf9f8e9bb33516d6cf5cff978c
+'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgcrypt20/libgcrypt20_1.8.5.orig.tar.bz2' libgcrypt20_1.8.5.orig.tar.bz2 2991291 SHA256:3b4a2a94cb637eff5bdebbcaf46f4d95c4f25206f459809339cdada0eb577ac3
+'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgcrypt20/libgcrypt20_1.8.5.orig.tar.bz2.asc' libgcrypt20_1.8.5.orig.tar.bz2.asc 488 SHA256:4b24fda7847cd2b70ab19f4c38004a76bbdac46a1ddccff973ae88ba1296a22d
+'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgcrypt20/libgcrypt20_1.8.5-5ubuntu1.debian.tar.xz' libgcrypt20_1.8.5-5ubuntu1.debian.tar.xz 32788 SHA256:c69bfdd42f4470894e6e4be0b742fb61aea85e16432a47a8365991adcc3de712
 ```
 
-### `dpkg` source package: `libgpg-error=1.27-6`
+### `dpkg` source package: `libgpg-error=1.37-1`
 
 Binary Packages:
 
-- `libgpg-error0:amd64=1.27-6`
+- `libgpg-error0:amd64=1.37-1`
 
 Licenses: (parsed from: `/usr/share/doc/libgpg-error0/copyright`)
 
@@ -1175,17 +1276,18 @@ Licenses: (parsed from: `/usr/share/doc/libgpg-error0/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libgpg-error=1.27-6
-'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgpg-error/libgpg-error_1.27-6.dsc' libgpg-error_1.27-6.dsc 2343 SHA256:d4cc2c1691b295f558d5b347df8a8ad2f0260cf57146180bed223b94ffacafbb
-'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgpg-error/libgpg-error_1.27.orig.tar.bz2' libgpg-error_1.27.orig.tar.bz2 813060 SHA256:4f93aac6fecb7da2b92871bb9ee33032be6a87b174f54abf8ddf0911a22d29d2
-'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgpg-error/libgpg-error_1.27-6.debian.tar.xz' libgpg-error_1.27-6.debian.tar.xz 20556 SHA256:89bc57dc3df449febf037226daf1aee830455c4efa493c0e3bdeab2a48971479
+$ apt-get source -qq --print-uris libgpg-error=1.37-1
+'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgpg-error/libgpg-error_1.37-1.dsc' libgpg-error_1.37-1.dsc 2220 SHA256:e789ed6bf791c90e9ba28dc3923f54379862ca65bd286495942176dcfad5d8a7
+'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgpg-error/libgpg-error_1.37.orig.tar.bz2' libgpg-error_1.37.orig.tar.bz2 937282 SHA256:b32d6ff72a73cf79797f7f2d039e95e9c6f92f0c1450215410840ab62aea9763
+'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgpg-error/libgpg-error_1.37.orig.tar.bz2.asc' libgpg-error_1.37.orig.tar.bz2.asc 488 SHA256:394f0904c386f88e2b2db5042880a2a302cbc6e4ab902bacf3d338ded038066b
+'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgpg-error/libgpg-error_1.37-1.debian.tar.xz' libgpg-error_1.37-1.debian.tar.xz 17332 SHA256:09843b599726c1ab7b1fcd86ce617bd91d6378ff754c6da0b7e536ed1c3b6c16
 ```
 
-### `dpkg` source package: `libidn2=2.0.4-1.1ubuntu0.2`
+### `dpkg` source package: `libidn2=2.2.0-2`
 
 Binary Packages:
 
-- `libidn2-0:amd64=2.0.4-1.1ubuntu0.2`
+- `libidn2-0:amd64=2.2.0-2`
 
 Licenses: (parsed from: `/usr/share/doc/libidn2-0/copyright`)
 
@@ -1200,37 +1302,17 @@ Licenses: (parsed from: `/usr/share/doc/libidn2-0/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libidn2=2.0.4-1.1ubuntu0.2
-'http://archive.ubuntu.com/ubuntu/pool/main/libi/libidn2/libidn2_2.0.4-1.1ubuntu0.2.dsc' libidn2_2.0.4-1.1ubuntu0.2.dsc 2391 SHA512:5c6d826b5994bdeb59f7d71b060643e051ed32ee0c013f638cb80cbb1fb3ad60671b20503bb47fbfabd29005bd3848a95f3bdae7b4ef6ae1d55cabfb4745fc9c
-'http://archive.ubuntu.com/ubuntu/pool/main/libi/libidn2/libidn2_2.0.4.orig.tar.gz' libidn2_2.0.4.orig.tar.gz 2008524 SHA512:1e51bd4b8f8907531576291f1c2a8865d17429b4105418b4c98754eb982cd1cbb3adbeab4ec0c1c561d2dba11d876c7c09e5dc5b315c55a2c24986d7a2a3b4d2
-'http://archive.ubuntu.com/ubuntu/pool/main/libi/libidn2/libidn2_2.0.4-1.1ubuntu0.2.debian.tar.xz' libidn2_2.0.4-1.1ubuntu0.2.debian.tar.xz 10290460 SHA512:b46d51758767ae8d7cc5e9fe59df28c559baac7677bfbfd6a2e51b84c29211e38a5f85ec27afd9e72ec333ea81d03ae783a03e1d8202a0f6ef52dd7bde47475f
+$ apt-get source -qq --print-uris libidn2=2.2.0-2
+'http://archive.ubuntu.com/ubuntu/pool/main/libi/libidn2/libidn2_2.2.0-2.dsc' libidn2_2.2.0-2.dsc 2436 SHA256:a5c5ece3748beaba9ce0a0b29cdab2fe9d861a965a7a96101a49f194acf759d6
+'http://archive.ubuntu.com/ubuntu/pool/main/libi/libidn2/libidn2_2.2.0.orig.tar.gz' libidn2_2.2.0.orig.tar.gz 2110743 SHA256:fc734732b506d878753ec6606982bf7b936e868c25c30ddb0d83f7d7056381fe
+'http://archive.ubuntu.com/ubuntu/pool/main/libi/libidn2/libidn2_2.2.0-2.debian.tar.xz' libidn2_2.2.0-2.debian.tar.xz 11184 SHA256:b38ce002d7eb1abbf2c870ac9570cd06a5087693f359b133defbf44b06f8784d
 ```
 
-### `dpkg` source package: `libksba=1.3.5-2`
+### `dpkg` source package: `libpng1.6=1.6.37-2`
 
 Binary Packages:
 
-- `libksba8:amd64=1.3.5-2`
-
-Licenses: (parsed from: `/usr/share/doc/libksba8/copyright`)
-
-- `GPL-3`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris libksba=1.3.5-2
-'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.3.5-2.dsc' libksba_1.3.5-2.dsc 2526 SHA256:4fd08fd129f97ab1df86c220b88b7b2c6e4e04aa90bfd3ae364d18022256bef8
-'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.3.5.orig.tar.bz2' libksba_1.3.5.orig.tar.bz2 620649 SHA256:41444fd7a6ff73a79ad9728f985e71c9ba8cd3e5e53358e70d5f066d35c1a340
-'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.3.5.orig.tar.bz2.asc' libksba_1.3.5.orig.tar.bz2.asc 287 SHA256:a954b03144ee882c838853da24fd7b6868b78df72a18c71079217d968698a76f
-'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.3.5-2.debian.tar.xz' libksba_1.3.5-2.debian.tar.xz 13852 SHA256:98c985bff973be1aecc702fa15887ff1e5b8de481d1dc3e99423a587754eaabd
-```
-
-### `dpkg` source package: `libpng1.6=1.6.34-1ubuntu0.18.04.2`
-
-Binary Packages:
-
-- `libpng16-16:amd64=1.6.34-1ubuntu0.18.04.2`
+- `libpng16-16:amd64=1.6.37-2`
 
 Licenses: (parsed from: `/usr/share/doc/libpng16-16/copyright`)
 
@@ -1246,17 +1328,17 @@ Licenses: (parsed from: `/usr/share/doc/libpng16-16/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libpng1.6=1.6.34-1ubuntu0.18.04.2
-'http://archive.ubuntu.com/ubuntu/pool/main/libp/libpng1.6/libpng1.6_1.6.34-1ubuntu0.18.04.2.dsc' libpng1.6_1.6.34-1ubuntu0.18.04.2.dsc 2362 SHA512:306827271e4b470dacd142c5b7b4c8d97561c5b2fa39ea5fc36f20bc29f6929c868a0e926179835a24569825def8a778872100b54fbbd1f4b03a817730c40238
-'http://archive.ubuntu.com/ubuntu/pool/main/libp/libpng1.6/libpng1.6_1.6.34.orig.tar.xz' libpng1.6_1.6.34.orig.tar.xz 997968 SHA512:89407c5abc1623faaa3992fc1e4a62def671d9a7401108dfceee895d5f16fe7030090bea89b34a36d377d8e6a5d40046886991f663ce075d1a2d31bf9eaf3c51
-'http://archive.ubuntu.com/ubuntu/pool/main/libp/libpng1.6/libpng1.6_1.6.34-1ubuntu0.18.04.2.debian.tar.xz' libpng1.6_1.6.34-1ubuntu0.18.04.2.debian.tar.xz 24572 SHA512:7b13f1e486f15260f90376604e92c4050ffbf9023bcca17e527b9d5cf81fffdce83301893d635049939d12608a12835f9e3cbf4321b24dbd08afc5efe8d1a50d
+$ apt-get source -qq --print-uris libpng1.6=1.6.37-2
+'http://archive.ubuntu.com/ubuntu/pool/main/libp/libpng1.6/libpng1.6_1.6.37-2.dsc' libpng1.6_1.6.37-2.dsc 2225 SHA256:4567a54b5804e068e61477e9cd78346557b85b72add10ef10f130a5be169662e
+'http://archive.ubuntu.com/ubuntu/pool/main/libp/libpng1.6/libpng1.6_1.6.37.orig.tar.gz' libpng1.6_1.6.37.orig.tar.gz 1508805 SHA256:ca74a0dace179a8422187671aee97dd3892b53e168627145271cad5b5ac81307
+'http://archive.ubuntu.com/ubuntu/pool/main/libp/libpng1.6/libpng1.6_1.6.37-2.debian.tar.xz' libpng1.6_1.6.37-2.debian.tar.xz 31844 SHA256:097cee0f0da4013d0231d37e090204ab3fa592b4fecdaaed3fca8d13affcaae8
 ```
 
-### `dpkg` source package: `libpsl=0.19.1-5build1`
+### `dpkg` source package: `libpsl=0.21.0-1ubuntu1`
 
 Binary Packages:
 
-- `libpsl5:amd64=0.19.1-5build1`
+- `libpsl5:amd64=0.21.0-1ubuntu1`
 
 Licenses: (parsed from: `/usr/share/doc/libpsl5/copyright`)
 
@@ -1266,37 +1348,36 @@ Licenses: (parsed from: `/usr/share/doc/libpsl5/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libpsl=0.19.1-5build1
-'http://archive.ubuntu.com/ubuntu/pool/main/libp/libpsl/libpsl_0.19.1-5build1.dsc' libpsl_0.19.1-5build1.dsc 2229 SHA256:cb9bcc439b8e37ee27bd3e69a8afa6dd2a59c90ba45de4d533df256f61c8a4f5
-'http://archive.ubuntu.com/ubuntu/pool/main/libp/libpsl/libpsl_0.19.1.orig.tar.gz' libpsl_0.19.1.orig.tar.gz 8578385 SHA256:e370181114b8ef9daf2bb6db49b1edb842335839c15a088e7ec0a35e04e9a227
-'http://archive.ubuntu.com/ubuntu/pool/main/libp/libpsl/libpsl_0.19.1-5build1.debian.tar.xz' libpsl_0.19.1-5build1.debian.tar.xz 9860 SHA256:53285bee66ac22a25dd41f7778cc4e94ae3d61929eb6701a8064a38a964e40e2
+$ apt-get source -qq --print-uris libpsl=0.21.0-1ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/main/libp/libpsl/libpsl_0.21.0-1ubuntu1.dsc' libpsl_0.21.0-1ubuntu1.dsc 2383 SHA256:38d6cf06b8ac1929efe109ac3d5f37ea6e89ea82f7a5125db4dc7a7b5f3faf94
+'http://archive.ubuntu.com/ubuntu/pool/main/libp/libpsl/libpsl_0.21.0.orig.tar.gz' libpsl_0.21.0.orig.tar.gz 8598583 SHA256:055aa87ec166c7afb985d0816c07ff440e1eb899881a318c51c69a0aeea8e279
+'http://archive.ubuntu.com/ubuntu/pool/main/libp/libpsl/libpsl_0.21.0-1ubuntu1.debian.tar.xz' libpsl_0.21.0-1ubuntu1.debian.tar.xz 12476 SHA256:efd6c7ae8c244b582d6af943b5925d95a31a183abf695301f2fa49de9f694671
 ```
 
-### `dpkg` source package: `libseccomp=2.4.3-1ubuntu3.18.04.3`
+### `dpkg` source package: `libseccomp=2.4.3-1ubuntu3.20.04.3`
 
 Binary Packages:
 
-- `libseccomp2:amd64=2.4.3-1ubuntu3.18.04.3`
+- `libseccomp2:amd64=2.4.3-1ubuntu3.20.04.3`
 
 Licenses: (parsed from: `/usr/share/doc/libseccomp2/copyright`)
 
-- `LGPL-2`
-- `LGPL-2.0+`
+- `LGPL-2.1`
 
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libseccomp=2.4.3-1ubuntu3.18.04.3
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3-1ubuntu3.18.04.3.dsc' libseccomp_2.4.3-1ubuntu3.18.04.3.dsc 1951 SHA512:5a16b743f8e8e0d13348e731e5a8519a8b4db4f7f933f613d4422b48f62406b8e89d6f7c83f4c12d12b665aea62f6849a09356ed4bc91c8aa949aee1516fc302
+$ apt-get source -qq --print-uris libseccomp=2.4.3-1ubuntu3.20.04.3
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3-1ubuntu3.20.04.3.dsc' libseccomp_2.4.3-1ubuntu3.20.04.3.dsc 2226 SHA512:7510d7ea834c48b67f3c40bb94b554029e5ea53e024808510da15550205cee369815a162f8697dd915fdd3d89c7afea60da89721d049769f51f2d4c5c9423feb
 'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3.orig.tar.gz' libseccomp_2.4.3.orig.tar.gz 598147 SHA512:7b7af2e98493243ffe1934fefff5723b24ae9b9bdc4bf039343ee8456c15acb0ea34e81ec292a41143848272aeca794ef92ad38fc3f42c77465170cb540479ef
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3-1ubuntu3.18.04.3.debian.tar.xz' libseccomp_2.4.3-1ubuntu3.18.04.3.debian.tar.xz 27652 SHA512:22d929d8ff17b5edd9767e4c5b32e31d0c6a5fa57b39043c8a1738336ef449324516b0ea8441b2dd7d294651a3de010a71f0a8183feb7a5bda84401879a479f9
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3-1ubuntu3.20.04.3.debian.tar.xz' libseccomp_2.4.3-1ubuntu3.20.04.3.debian.tar.xz 36444 SHA512:445b0bac2e39586aa99307fb558623bc8064fb4638ca650698344aab40d3a639c5a8f6c23384a36b9250eb8a682e06831315fc6d7910e768903b7cfac137ecbd
 ```
 
-### `dpkg` source package: `libselinux=2.7-2build2`
+### `dpkg` source package: `libselinux=3.0-1build2`
 
 Binary Packages:
 
-- `libselinux1:amd64=2.7-2build2`
+- `libselinux1:amd64=3.0-1build2`
 
 Licenses: (parsed from: `/usr/share/doc/libselinux1/copyright`)
 
@@ -1306,18 +1387,18 @@ Licenses: (parsed from: `/usr/share/doc/libselinux1/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libselinux=2.7-2build2
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libselinux/libselinux_2.7-2build2.dsc' libselinux_2.7-2build2.dsc 2468 SHA256:86f2d8422230927aa3274773e2b8a9ed15cb539804c378e75515afcd28545c37
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libselinux/libselinux_2.7.orig.tar.gz' libselinux_2.7.orig.tar.gz 187574 SHA256:d0fec0769b3ad60aa7baf9b9a4b7a056827769dc2dadda0dc0eb59b3d1c18c57
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libselinux/libselinux_2.7-2build2.debian.tar.xz' libselinux_2.7-2build2.debian.tar.xz 23176 SHA256:ef7a781c247797b66f4d68907d8dd6fec7188d0a08e2a8541437d5f7f6796105
+$ apt-get source -qq --print-uris libselinux=3.0-1build2
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libselinux/libselinux_3.0-1build2.dsc' libselinux_3.0-1build2.dsc 2565 SHA256:9a8d6c354ed06350606c009d899d117e71fda20887792b2c25b38222d0190d93
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libselinux/libselinux_3.0.orig.tar.gz' libselinux_3.0.orig.tar.gz 212096 SHA256:2ea2b30f671dae9d6b1391cbe8fb2ce5d36a3ee4fb1cd3c32f0d933c31b82433
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libselinux/libselinux_3.0-1build2.debian.tar.xz' libselinux_3.0-1build2.debian.tar.xz 23720 SHA256:ed85da0fe5561205c95f0f622562425dc7d8dd61ffd213a7fa914d778fe8da71
 ```
 
-### `dpkg` source package: `libsemanage=2.7-2build2`
+### `dpkg` source package: `libsemanage=3.0-1build2`
 
 Binary Packages:
 
-- `libsemanage-common=2.7-2build2`
-- `libsemanage1:amd64=2.7-2build2`
+- `libsemanage-common=3.0-1build2`
+- `libsemanage1:amd64=3.0-1build2`
 
 Licenses: (parsed from: `/usr/share/doc/libsemanage-common/copyright`, `/usr/share/doc/libsemanage1/copyright`)
 
@@ -1327,17 +1408,17 @@ Licenses: (parsed from: `/usr/share/doc/libsemanage-common/copyright`, `/usr/sha
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libsemanage=2.7-2build2
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsemanage/libsemanage_2.7-2build2.dsc' libsemanage_2.7-2build2.dsc 2555 SHA256:4454d11e7228df1e5166907867bbd1be4e6cc8b20c6834dc690fb0dcf19d1c43
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsemanage/libsemanage_2.7.orig.tar.gz' libsemanage_2.7.orig.tar.gz 153465 SHA256:07e9477714ce6a4557a1fe924ea4cb06501b62d0fa0e3c0dc32a2cf47cb8d476
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsemanage/libsemanage_2.7-2build2.debian.tar.xz' libsemanage_2.7-2build2.debian.tar.xz 17136 SHA256:d6d11ecc5687baa3b07a2a2360a9cbc4b93424a9728aa17b81cd9faf13855c3a
+$ apt-get source -qq --print-uris libsemanage=3.0-1build2
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsemanage/libsemanage_3.0-1build2.dsc' libsemanage_3.0-1build2.dsc 2678 SHA256:6231f4b00991657fafef2595eb571b2bcbe437de4ec9dc9929c0e69187db5f33
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsemanage/libsemanage_3.0.orig.tar.gz' libsemanage_3.0.orig.tar.gz 180745 SHA256:a497b0720d54eac427f1f3f618eed417e50ed8f4e47ed0f7a1d391bd416e84cf
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsemanage/libsemanage_3.0-1build2.debian.tar.xz' libsemanage_3.0-1build2.debian.tar.xz 17176 SHA256:38a646f91532c920c8c15a695c3585397ddbf032ecf49c52eb89d53c8eac48fb
 ```
 
-### `dpkg` source package: `libsepol=2.7-1`
+### `dpkg` source package: `libsepol=3.0-1`
 
 Binary Packages:
 
-- `libsepol1:amd64=2.7-1`
+- `libsepol1:amd64=3.0-1`
 
 Licenses: (parsed from: `/usr/share/doc/libsepol1/copyright`)
 
@@ -1347,17 +1428,40 @@ Licenses: (parsed from: `/usr/share/doc/libsepol1/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libsepol=2.7-1
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsepol/libsepol_2.7-1.dsc' libsepol_2.7-1.dsc 1814 SHA256:7de809477acd60d256eca160d5fc6986e5e65227706b1cdb23f8139bb49d2782
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsepol/libsepol_2.7.orig.tar.gz' libsepol_2.7.orig.tar.gz 471147 SHA256:d69d3bd8ec901a3bd5adf2be2fb47fb1a685ed73066ab482e7e505371a48f9e7
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsepol/libsepol_2.7-1.debian.tar.xz' libsepol_2.7-1.debian.tar.xz 13944 SHA256:56b1c2b0e492b2089f23a0d7a95a260377a0e3adefc60e90c0ff6eff6be08450
+$ apt-get source -qq --print-uris libsepol=3.0-1
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsepol/libsepol_3.0-1.dsc' libsepol_3.0-1.dsc 1770 SHA256:0073de5844605d380dd56f6630678ad91459496dc768fa9eb4d8cc7f693f5c1a
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsepol/libsepol_3.0.orig.tar.gz' libsepol_3.0.orig.tar.gz 473864 SHA256:5b7ae1881909f1048b06f7a0c364c5c8a86ec12e0ec76e740fe9595a6033eb79
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsepol/libsepol_3.0-1.debian.tar.xz' libsepol_3.0-1.debian.tar.xz 14224 SHA256:a16b5bc3c041e016d01794d1a1b9826ed4426862622c05526e93607c325ec328
 ```
 
-### `dpkg` source package: `libtasn1-6=4.13-2`
+### `dpkg` source package: `libssh=0.9.3-2ubuntu2.1`
 
 Binary Packages:
 
-- `libtasn1-6:amd64=4.13-2`
+- `libssh-4:amd64=0.9.3-2ubuntu2.1`
+
+Licenses: (parsed from: `/usr/share/doc/libssh-4/copyright`)
+
+- `BSD-2-clause`
+- `BSD-3-clause`
+- `LGPL-2.1`
+- `LGPL-2.1+~OpenSSL`
+- `public-domain`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris libssh=0.9.3-2ubuntu2.1
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.9.3-2ubuntu2.1.dsc' libssh_0.9.3-2ubuntu2.1.dsc 2538 SHA512:a0b51fd53355d282334d2ab1124de8c5995788160646d2a70a6d7027e0e2d49a82889ea9aa4a6d3ee0a7aaa7389370b49507bb24a6144578928417fafb47b29c
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.9.3.orig.tar.xz' libssh_0.9.3.orig.tar.xz 500068 SHA512:6e59718565daeca6d224426cc1095a112deff9af8e0b021917e04f08bb7409263c35724de95f591f38e26f0fb3bbbbc69b679b6775edc21dec158d241b076c6f
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.9.3-2ubuntu2.1.debian.tar.xz' libssh_0.9.3-2ubuntu2.1.debian.tar.xz 28488 SHA512:cecd6d2f385fa4c440aa03a7d864387bb1d5ca2f2e252103c295b1596b8b1336bfdefa2dd38ffaf7396423c9b7dafe005896177ded669a5790fd7320643d01b4
+```
+
+### `dpkg` source package: `libtasn1-6=4.16.0-2`
+
+Binary Packages:
+
+- `libtasn1-6:amd64=4.16.0-2`
 
 Licenses: (parsed from: `/usr/share/doc/libtasn1-6/copyright`)
 
@@ -1369,18 +1473,18 @@ Licenses: (parsed from: `/usr/share/doc/libtasn1-6/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libtasn1-6=4.13-2
-'http://archive.ubuntu.com/ubuntu/pool/main/libt/libtasn1-6/libtasn1-6_4.13-2.dsc' libtasn1-6_4.13-2.dsc 2574 SHA256:8f583c0ae8568ccf7fcf66c387963ef949d644cfca56d66512a17cb91c3a44fd
-'http://archive.ubuntu.com/ubuntu/pool/main/libt/libtasn1-6/libtasn1-6_4.13.orig.tar.gz' libtasn1-6_4.13.orig.tar.gz 1891703 SHA256:7e528e8c317ddd156230c4e31d082cd13e7ddeb7a54824be82632209550c8cca
-'http://archive.ubuntu.com/ubuntu/pool/main/libt/libtasn1-6/libtasn1-6_4.13.orig.tar.gz.asc' libtasn1-6_4.13.orig.tar.gz.asc 774 SHA256:90261376528edf44831d1369847088cc2fb48669860d343961daca42e674b226
-'http://archive.ubuntu.com/ubuntu/pool/main/libt/libtasn1-6/libtasn1-6_4.13-2.debian.tar.xz' libtasn1-6_4.13-2.debian.tar.xz 63332 SHA256:f36a43fb898c031b6b1a5f43b35af1aea95ac164bb2b57c7f07d1c098ed9f7eb
+$ apt-get source -qq --print-uris libtasn1-6=4.16.0-2
+'http://archive.ubuntu.com/ubuntu/pool/main/libt/libtasn1-6/libtasn1-6_4.16.0-2.dsc' libtasn1-6_4.16.0-2.dsc 2586 SHA256:fd4a387c71f95c3eceb1072a3f42c7021d73128027ea41a18d6efc6cbfdd764a
+'http://archive.ubuntu.com/ubuntu/pool/main/libt/libtasn1-6/libtasn1-6_4.16.0.orig.tar.gz' libtasn1-6_4.16.0.orig.tar.gz 1812442 SHA256:0e0fb0903839117cb6e3b56e68222771bebf22ad7fc2295a0ed7d576e8d4329d
+'http://archive.ubuntu.com/ubuntu/pool/main/libt/libtasn1-6/libtasn1-6_4.16.0.orig.tar.gz.asc' libtasn1-6_4.16.0.orig.tar.gz.asc 488 SHA256:06c201e8c3b43c27465ed79294d4c4ec8dcd3e95e4a6176ecbf273229ee3e2d0
+'http://archive.ubuntu.com/ubuntu/pool/main/libt/libtasn1-6/libtasn1-6_4.16.0-2.debian.tar.xz' libtasn1-6_4.16.0-2.debian.tar.xz 17740 SHA256:c1a89b0bac0fb7c83ebac4eafbca0475c24350ade6ccaef31266424725610624
 ```
 
-### `dpkg` source package: `libunistring=0.9.9-0ubuntu2`
+### `dpkg` source package: `libunistring=0.9.10-2`
 
 Binary Packages:
 
-- `libunistring2:amd64=0.9.9-0ubuntu2`
+- `libunistring2:amd64=0.9.10-2`
 
 Licenses: (parsed from: `/usr/share/doc/libunistring2/copyright`)
 
@@ -1399,21 +1503,41 @@ Licenses: (parsed from: `/usr/share/doc/libunistring2/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libunistring=0.9.9-0ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/libu/libunistring/libunistring_0.9.9-0ubuntu2.dsc' libunistring_0.9.9-0ubuntu2.dsc 2006 SHA512:c06c7a7a04dbaef582ed90334e740b70704187df303c033a6298592cdb783f1099ea9a62b787df4b5cbd504ad76f5ff112a3508fda5134b749a25c3222ac9eb1
-'http://archive.ubuntu.com/ubuntu/pool/main/libu/libunistring/libunistring_0.9.9.orig.tar.xz' libunistring_0.9.9.orig.tar.xz 2042992 SHA512:c5f3619d0b064c0256dc9326b609cb72871c85102cd67cfc46d85f72b67c564924cd76198c6d6ab60fbf7d6f76ddcb9fbe6c8116f779ca7e24570ae84e31fea8
-'http://archive.ubuntu.com/ubuntu/pool/main/libu/libunistring/libunistring_0.9.9-0ubuntu2.debian.tar.xz' libunistring_0.9.9-0ubuntu2.debian.tar.xz 40424 SHA512:e9c6f76208bef66892b584d83e68b60a05a9cf0b67b1ac10532e996a081319d110a92b440713cb9a46fc45404723a5c81420ede10af2ab8e89432c693db4e1ef
+$ apt-get source -qq --print-uris libunistring=0.9.10-2
+'http://archive.ubuntu.com/ubuntu/pool/main/libu/libunistring/libunistring_0.9.10-2.dsc' libunistring_0.9.10-2.dsc 2206 SHA256:c6faf64e2d978ec074ebf88264730121dfd03cc1639df94b5dc3eb05b1678532
+'http://archive.ubuntu.com/ubuntu/pool/main/libu/libunistring/libunistring_0.9.10.orig.tar.xz' libunistring_0.9.10.orig.tar.xz 2051320 SHA256:eb8fb2c3e4b6e2d336608377050892b54c3c983b646c561836550863003c05d7
+'http://archive.ubuntu.com/ubuntu/pool/main/libu/libunistring/libunistring_0.9.10.orig.tar.xz.asc' libunistring_0.9.10.orig.tar.xz.asc 1310 SHA256:e1606f691034fa21b00e08269622743547c16d21cca6c8a64156b4774a49e78e
+'http://archive.ubuntu.com/ubuntu/pool/main/libu/libunistring/libunistring_0.9.10-2.debian.tar.xz' libunistring_0.9.10-2.debian.tar.xz 40708 SHA256:5e291a1a15549d12c64575c72868a8c94586715d35062b5efb48fe9a9d09924e
 ```
 
-### `dpkg` source package: `libzstd=1.3.3+dfsg-2ubuntu1.1`
+### `dpkg` source package: `libxcrypt=1:4.4.10-10ubuntu4`
 
 Binary Packages:
 
-- `libzstd1:amd64=1.3.3+dfsg-2ubuntu1.1`
+- `libcrypt1:amd64=1:4.4.10-10ubuntu4`
+
+**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
+If source is available (seen below), check the contents of `debian/copyright` within it.
+
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris libxcrypt=1:4.4.10-10ubuntu4
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxcrypt/libxcrypt_4.4.10-10ubuntu4.dsc' libxcrypt_4.4.10-10ubuntu4.dsc 2216 SHA256:457576b36eaa34dcf28b19e942908221d0618e9e4a2c0b9e11ba9693770756a2
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxcrypt/libxcrypt_4.4.10.orig.tar.xz' libxcrypt_4.4.10.orig.tar.xz 372652 SHA256:f790a8eac4e4af3124d2844a24a7afb3a972368e4dff63d701599c2f2d065fd3
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxcrypt/libxcrypt_4.4.10-10ubuntu4.debian.tar.xz' libxcrypt_4.4.10-10ubuntu4.debian.tar.xz 5760 SHA256:b2e665b5224911d24dbcbddfc61b7a27428c3ecb744f29ceea1b2984496f2ffa
+```
+
+### `dpkg` source package: `libzstd=1.4.4+dfsg-3`
+
+Binary Packages:
+
+- `libzstd1:amd64=1.4.4+dfsg-3`
 
 Licenses: (parsed from: `/usr/share/doc/libzstd1/copyright`)
 
-- `BSD-3-clause-with-patent-grant`
+- `BSD-3-clause`
 - `Expat`
 - `GPL-2`
 - `GPL-2+`
@@ -1422,17 +1546,17 @@ Licenses: (parsed from: `/usr/share/doc/libzstd1/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libzstd=1.3.3+dfsg-2ubuntu1.1
-'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.3.3+dfsg-2ubuntu1.1.dsc' libzstd_1.3.3+dfsg-2ubuntu1.1.dsc 2390 SHA512:8b0c42432f98edf887951e95964acd710e284f0a458b9f05be1ca1428c7c4d491547ee791f0f6c3f854dea057800b716799b69eecfc42d011c6898345570e7d1
-'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.3.3+dfsg.orig.tar.xz' libzstd_1.3.3+dfsg.orig.tar.xz 1333584 SHA512:40f66d34247f549b6861677a520bdce722036c49bc78096981b3b6b4cbb798780c6afccaff18e843016ec7aab55b8bb3ce3ddbfb089efb5d83028058df5e755c
-'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.3.3+dfsg-2ubuntu1.1.debian.tar.xz' libzstd_1.3.3+dfsg-2ubuntu1.1.debian.tar.xz 12808 SHA512:ae7a558e5ad31ac579856d0ca7f941f95ef570b8b6612249f3f932d85310d56ef7cc4deba4d7ff3a14e46fea25e1eb663b8b841ba4442aa4f7bbe3f2961c3993
+$ apt-get source -qq --print-uris libzstd=1.4.4+dfsg-3
+'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.4.4+dfsg-3.dsc' libzstd_1.4.4+dfsg-3.dsc 2266 SHA256:f6e3cc2b022b9812daca4f427a00fc6e109e6e1e72e64d6a254add040853b110
+'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.4.4+dfsg.orig.tar.xz' libzstd_1.4.4+dfsg.orig.tar.xz 1357144 SHA256:be9f9bfd3f6816f21e1108869a9acad6efdc4882ed3f7a1f58ec752f67864890
+'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.4.4+dfsg-3.debian.tar.xz' libzstd_1.4.4+dfsg-3.debian.tar.xz 16068 SHA256:f7fec89f1fae04dfa551d124973167e09e84c864a25961aa20727cc91277b0e6
 ```
 
-### `dpkg` source package: `lsb=9.20170808ubuntu1`
+### `dpkg` source package: `lsb=11.1.0ubuntu2`
 
 Binary Packages:
 
-- `lsb-base=9.20170808ubuntu1`
+- `lsb-base=11.1.0ubuntu2`
 
 Licenses: (parsed from: `/usr/share/doc/lsb-base/copyright`)
 
@@ -1442,16 +1566,16 @@ Licenses: (parsed from: `/usr/share/doc/lsb-base/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris lsb=9.20170808ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lsb/lsb_9.20170808ubuntu1.dsc' lsb_9.20170808ubuntu1.dsc 2126 SHA256:9b98df7b442472d172612bf6855b4dbc3cd6d5892d8073605dda786fec94af5f
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lsb/lsb_9.20170808ubuntu1.tar.xz' lsb_9.20170808ubuntu1.tar.xz 45492 SHA256:b26bcb746e0bff05ad3e15dfbeb0ba7ea2a8d031f765a6cfa568c57d14c522c4
+$ apt-get source -qq --print-uris lsb=11.1.0ubuntu2
+'http://archive.ubuntu.com/ubuntu/pool/main/l/lsb/lsb_11.1.0ubuntu2.dsc' lsb_11.1.0ubuntu2.dsc 2230 SHA256:983ff4ab1ab2b39af974e4b8f4373ab4028d0ee5a409e7cd40401fa8e6ecabde
+'http://archive.ubuntu.com/ubuntu/pool/main/l/lsb/lsb_11.1.0ubuntu2.tar.xz' lsb_11.1.0ubuntu2.tar.xz 46024 SHA256:c6ab63b6702dc633988690aacde8ece3e460f8acd8f1af8e6a67ab2fe0798f41
 ```
 
-### `dpkg` source package: `lz4=0.0~r131-2ubuntu3`
+### `dpkg` source package: `lz4=1.9.2-2`
 
 Binary Packages:
 
-- `liblz4-1:amd64=0.0~r131-2ubuntu3`
+- `liblz4-1:amd64=1.9.2-2`
 
 Licenses: (parsed from: `/usr/share/doc/liblz4-1/copyright`)
 
@@ -1462,17 +1586,17 @@ Licenses: (parsed from: `/usr/share/doc/liblz4-1/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris lz4=0.0~r131-2ubuntu3
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lz4/lz4_0.0~r131-2ubuntu3.dsc' lz4_0.0~r131-2ubuntu3.dsc 2129 SHA256:b6f9a71053ff1414f695790833e689dc8bd4c48169b05a8df8de47edba7a7b58
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lz4/lz4_0.0~r131.orig.tar.gz' lz4_0.0~r131.orig.tar.gz 133784 SHA256:9d4d00614d6b9dec3114b33d1224b6262b99ace24434c53487a0c8fd0b18cfed
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lz4/lz4_0.0~r131-2ubuntu3.debian.tar.xz' lz4_0.0~r131-2ubuntu3.debian.tar.xz 5340 SHA256:94834bac922397529ffc185f9c4c7e7a6eb1ef3bc527f3fcd26e36fc9430afa7
+$ apt-get source -qq --print-uris lz4=1.9.2-2
+'http://archive.ubuntu.com/ubuntu/pool/main/l/lz4/lz4_1.9.2-2.dsc' lz4_1.9.2-2.dsc 1956 SHA256:103fa80edbf501cf6e6d9ee0ed3d75d6111cd06026b00aaccaa11fe5555b71a6
+'http://archive.ubuntu.com/ubuntu/pool/main/l/lz4/lz4_1.9.2.orig.tar.gz' lz4_1.9.2.orig.tar.gz 305796 SHA256:658ba6191fa44c92280d4aa2c271b0f4fbc0e34d249578dd05e50e76d0e5efcc
+'http://archive.ubuntu.com/ubuntu/pool/main/l/lz4/lz4_1.9.2-2.debian.tar.xz' lz4_1.9.2-2.debian.tar.xz 12712 SHA256:8970a0afc2f1633bbc8b7f55fa36ba711fb4d0c1811e591ad8f52d1d1968592c
 ```
 
-### `dpkg` source package: `mawk=1.3.3-17ubuntu3`
+### `dpkg` source package: `mawk=1.3.4.20200120-2`
 
 Binary Packages:
 
-- `mawk=1.3.3-17ubuntu3`
+- `mawk=1.3.4.20200120-2`
 
 Licenses: (parsed from: `/usr/share/doc/mawk/copyright`)
 
@@ -1481,39 +1605,41 @@ Licenses: (parsed from: `/usr/share/doc/mawk/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris mawk=1.3.3-17ubuntu3
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.3-17ubuntu3.dsc' mawk_1.3.3-17ubuntu3.dsc 1970 SHA256:2893a0c18b75c41d480be67d5d4edb7124ed7e9b5ed643d2670aa34481f7a77c
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.3.orig.tar.gz' mawk_1.3.3.orig.tar.gz 209942 SHA256:32649c46063d4ef0777a12ae6e9a26bcc920833d54e1abca7edb8d37481e7485
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.3-17ubuntu3.diff.gz' mawk_1.3.3-17ubuntu3.diff.gz 64052 SHA256:d1be148525885cb1869e35514f55005b5043f3310b08c444625005a3e14c81fc
+$ apt-get source -qq --print-uris mawk=1.3.4.20200120-2
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.4.20200120-2.dsc' mawk_1.3.4.20200120-2.dsc 1915 SHA256:5069c46872ac74f5221250dfb88b31b1f2dbb8a2617c1e013f8f80cc34638c6d
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.4.20200120.orig.tar.gz' mawk_1.3.4.20200120.orig.tar.gz 468855 SHA256:7fd4cd1e1fae9290fe089171181bbc6291dfd9bca939ca804f0ddb851c8b8237
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.4.20200120-2.debian.tar.xz' mawk_1.3.4.20200120-2.debian.tar.xz 7504 SHA256:b772ed2f016b0286980c46cbc1f1f4ae62887ef2aa3dff6ef10cae638f923f26
 ```
 
-### `dpkg` source package: `mercurial=4.5.3-1ubuntu2.1`
+### `dpkg` source package: `mercurial=5.3.1-1ubuntu1`
 
 Binary Packages:
 
-- `mercurial=4.5.3-1ubuntu2.1`
-- `mercurial-common=4.5.3-1ubuntu2.1`
+- `mercurial=5.3.1-1ubuntu1`
+- `mercurial-common=5.3.1-1ubuntu1`
 
 Licenses: (parsed from: `/usr/share/doc/mercurial/copyright`, `/usr/share/doc/mercurial-common/copyright`)
 
 - `GPL-2`
 - `GPL-2+`
+- `LGPL-2.1`
+- `LGPL-2.1+`
 
 Source:
 
 ```console
-$ apt-get source -qq --print-uris mercurial=4.5.3-1ubuntu2.1
-'http://archive.ubuntu.com/ubuntu/pool/universe/m/mercurial/mercurial_4.5.3-1ubuntu2.1.dsc' mercurial_4.5.3-1ubuntu2.1.dsc 2760 SHA512:5340e0fb12f2d205a327ec8ac82d61b08eed8ad37848bcba37b40b5bfc758f37a7463d88d92359073925bab19cb708883510afb6118e541e14fe76a2c84972cc
-'http://archive.ubuntu.com/ubuntu/pool/universe/m/mercurial/mercurial_4.5.3.orig.tar.gz' mercurial_4.5.3.orig.tar.gz 5884837 SHA512:9c23ffefb0a194b5a88ee783186347c21e7d973524ba40119439702953b35b01ad6fbc32ce09ae169f1020963e92312a39321b1da3ffe06db1d44158761abbec
-'http://archive.ubuntu.com/ubuntu/pool/universe/m/mercurial/mercurial_4.5.3.orig.tar.gz.asc' mercurial_4.5.3.orig.tar.gz.asc 833 SHA512:c34d9e3ac1a04cc8b35405828ab4d8a7c98ef775f4af5e8ac3b347b504ca608bcd66f06646aeb554688aa95f14900e1a611675aabf385efd7b322548051c25eb
-'http://archive.ubuntu.com/ubuntu/pool/universe/m/mercurial/mercurial_4.5.3-1ubuntu2.1.debian.tar.xz' mercurial_4.5.3-1ubuntu2.1.debian.tar.xz 61912 SHA512:1ffee389075de0f74afc611c7e2d1f65488d4a9da9518c7f51d45c859a18af310c130db7a939bad8deefd1c55591b507a02b75eeeec46738c0e192b6cd8469b1
+$ apt-get source -qq --print-uris mercurial=5.3.1-1ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/universe/m/mercurial/mercurial_5.3.1-1ubuntu1.dsc' mercurial_5.3.1-1ubuntu1.dsc 2795 SHA256:cc26cde9e6862ae50f706832eb319dd5fb7cd5308ed11528d7689ba624edf2a7
+'http://archive.ubuntu.com/ubuntu/pool/universe/m/mercurial/mercurial_5.3.1.orig.tar.gz' mercurial_5.3.1.orig.tar.gz 7511733 SHA256:f7c1f96de2199d6b38593ea865f08c0521fbd8e2fd52bd332414bf9fe5bf72d9
+'http://archive.ubuntu.com/ubuntu/pool/universe/m/mercurial/mercurial_5.3.1.orig.tar.gz.asc' mercurial_5.3.1.orig.tar.gz.asc 833 SHA256:4542e22bb7f238f5bc1cc08b0225325e07c5947f7e45434c801651eec44ab67d
+'http://archive.ubuntu.com/ubuntu/pool/universe/m/mercurial/mercurial_5.3.1-1ubuntu1.debian.tar.xz' mercurial_5.3.1-1ubuntu1.debian.tar.xz 58972 SHA256:d0b2b14812b0fa4c6cf6e19b2eacd8d9d4df5e0ca0fb782a0b6b105057e359a6
 ```
 
-### `dpkg` source package: `mime-support=3.60ubuntu1`
+### `dpkg` source package: `mime-support=3.64ubuntu1`
 
 Binary Packages:
 
-- `mime-support=3.60ubuntu1`
+- `mime-support=3.64ubuntu1`
 
 Licenses: (parsed from: `/usr/share/doc/mime-support/copyright`)
 
@@ -1523,20 +1649,41 @@ Licenses: (parsed from: `/usr/share/doc/mime-support/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris mime-support=3.60ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mime-support/mime-support_3.60ubuntu1.dsc' mime-support_3.60ubuntu1.dsc 1712 SHA256:1e58e26d0f87f25ebe6c08007e9d354a24457ab73d40a1eb3b9ab62ea0d366d5
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mime-support/mime-support_3.60ubuntu1.tar.gz' mime-support_3.60ubuntu1.tar.gz 37743 SHA256:cb1bc122ac2dc7046f6c0c06146ac0897a3c1c02e7e5e53cdd30817db2c62d33
+$ apt-get source -qq --print-uris mime-support=3.64ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mime-support/mime-support_3.64ubuntu1.dsc' mime-support_3.64ubuntu1.dsc 1729 SHA256:669ba4f3fd7594f1c32731b5636b499f44f21c7667148f6f0d16043708743fdc
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mime-support/mime-support_3.64ubuntu1.tar.xz' mime-support_3.64ubuntu1.tar.xz 33980 SHA256:5007d2ebc25935bfca6d4bdac0efdfc089a38c1be49d19f0422559f666e4f2c4
 ```
 
-### `dpkg` source package: `ncurses=6.1-1ubuntu1.18.04`
+### `dpkg` source package: `mpdecimal=2.4.2-3`
 
 Binary Packages:
 
-- `libncurses5:amd64=6.1-1ubuntu1.18.04`
-- `libncursesw5:amd64=6.1-1ubuntu1.18.04`
-- `libtinfo5:amd64=6.1-1ubuntu1.18.04`
-- `ncurses-base=6.1-1ubuntu1.18.04`
-- `ncurses-bin=6.1-1ubuntu1.18.04`
+- `libmpdec2:amd64=2.4.2-3`
+
+Licenses: (parsed from: `/usr/share/doc/libmpdec2/copyright`)
+
+- `BSD`
+- `GPL-2`
+- `GPL-2+`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris mpdecimal=2.4.2-3
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mpdecimal/mpdecimal_2.4.2-3.dsc' mpdecimal_2.4.2-3.dsc 1932 SHA256:4cdd04de9915af3c9d787f4922affc1993d76c25cd0715ffdd2658da37c86753
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mpdecimal/mpdecimal_2.4.2.orig.tar.gz' mpdecimal_2.4.2.orig.tar.gz 2271529 SHA256:83c628b90f009470981cf084c5418329c88b19835d8af3691b930afccb7d79c7
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mpdecimal/mpdecimal_2.4.2-3.debian.tar.xz' mpdecimal_2.4.2-3.debian.tar.xz 6352 SHA256:1baf12776a911bc77f76e16aa7600d4ace21a27817f4a56373093065205a9292
+```
+
+### `dpkg` source package: `ncurses=6.2-0ubuntu2`
+
+Binary Packages:
+
+- `libncurses6:amd64=6.2-0ubuntu2`
+- `libncursesw6:amd64=6.2-0ubuntu2`
+- `libtinfo6:amd64=6.2-0ubuntu2`
+- `ncurses-base=6.2-0ubuntu2`
+- `ncurses-bin=6.2-0ubuntu2`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1545,21 +1692,20 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris ncurses=6.1-1ubuntu1.18.04
-'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.1-1ubuntu1.18.04.dsc' ncurses_6.1-1ubuntu1.18.04.dsc 4702 SHA512:e998c05380a2599d3f37572e720ab60854a1c83bacdf921372767e320d4063c2af611d45409201dbc77e6c6b981537eec246f46326bae6a69536ddf974007ab1
-'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.1.orig.tar.gz' ncurses_6.1.orig.tar.gz 3365395 SHA512:e308af43f8b7e01e98a55f4f6c4ee4d1c39ce09d95399fa555b3f0cdf5fd0db0f4c4d820b4af78a63f6cf6d8627587114a40af48cfc066134b600520808a77ee
-'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.1.orig.tar.gz.asc' ncurses_6.1.orig.tar.gz.asc 251 SHA512:53659ddf0890683f1d9bf895d7d5b0693d95e102cde4440685a3d0c97230c4930203a9383bd9833ba4639713a12b0afd2b3ebecd9fa5640fb6f2b5fa8e662441
-'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.1-1ubuntu1.18.04.debian.tar.xz' ncurses_6.1-1ubuntu1.18.04.debian.tar.xz 57464 SHA512:ec0211e25ecc865296afd54eeae8314718ca2d443936e016dd74dacfaa1f1de79778b1d50fe9377488f07e40fce82ed367348db30889757efd1db4f96630a6fa
+$ apt-get source -qq --print-uris ncurses=6.2-0ubuntu2
+'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.2-0ubuntu2.dsc' ncurses_6.2-0ubuntu2.dsc 3831 SHA256:b580e8d50864a61bad0cedb17c8005ec6c24cd85d8ebbe472d1170552c8cd3bd
+'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.2.orig.tar.gz' ncurses_6.2.orig.tar.gz 3425862 SHA256:30306e0c76e0f9f1f0de987cf1c82a5c21e1ce6568b9227f7da5b71cbea86c9d
+'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.2-0ubuntu2.debian.tar.xz' ncurses_6.2-0ubuntu2.debian.tar.xz 61192 SHA256:3377d203f2ab08b119ed22ac420152f3c28872201e35b25e62dfe07641ed750a
 ```
 
-### `dpkg` source package: `nettle=3.4-1`
+### `dpkg` source package: `nettle=3.5.1+really3.5.1-2`
 
 Binary Packages:
 
-- `libhogweed4:amd64=3.4-1`
-- `libnettle6:amd64=3.4-1`
+- `libhogweed5:amd64=3.5.1+really3.5.1-2`
+- `libnettle7:amd64=3.5.1+really3.5.1-2`
 
-Licenses: (parsed from: `/usr/share/doc/libhogweed4/copyright`, `/usr/share/doc/libnettle6/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libhogweed5/copyright`, `/usr/share/doc/libnettle7/copyright`)
 
 - `GAP`
 - `GPL`
@@ -1576,18 +1722,18 @@ Licenses: (parsed from: `/usr/share/doc/libhogweed4/copyright`, `/usr/share/doc/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris nettle=3.4-1
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.4-1.dsc' nettle_3.4-1.dsc 2238 SHA256:0ceb4600fdedf43916e95fb6b354ebb4038f00f5814433582d0481b510310e86
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.4.orig.tar.gz' nettle_3.4.orig.tar.gz 1935069 SHA256:ae7a42df026550b85daca8389b6a60ba6313b0567f374392e54918588a411e94
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.4.orig.tar.gz.asc' nettle_3.4.orig.tar.gz.asc 1238 SHA256:86d7441c7334dd95d16b1ca488fd94ec45ed6406714d4ed9887c7212e337eb2a
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.4-1.debian.tar.xz' nettle_3.4-1.debian.tar.xz 19884 SHA256:9bfc25562ed36449e75741b0473e0e558bc9ef5c20ca24e7c650fea87d631c03
+$ apt-get source -qq --print-uris nettle=3.5.1+really3.5.1-2
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.5.1+really3.5.1-2.dsc' nettle_3.5.1+really3.5.1-2.dsc 2375 SHA256:a64c789e3997a2bba012e0c136de9c11b1bc95cf03069c35d26b00582481eecf
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.5.1+really3.5.1.orig.tar.gz' nettle_3.5.1+really3.5.1.orig.tar.gz 1989593 SHA256:75cca1998761b02e16f2db56da52992aef622bf55a3b45ec538bc2eedadc9419
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.5.1+really3.5.1.orig.tar.gz.asc' nettle_3.5.1+really3.5.1.orig.tar.gz.asc 573 SHA256:557116e471c7c4556148866b5cec056d6de5f26d080e5930154018be6a9d893e
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.5.1+really3.5.1-2.debian.tar.xz' nettle_3.5.1+really3.5.1-2.debian.tar.xz 20044 SHA256:7e816adb06d13913bcd350ca6cb777230b82508ca2d358a4062e5676bf335529
 ```
 
-### `dpkg` source package: `nghttp2=1.30.0-1ubuntu1`
+### `dpkg` source package: `nghttp2=1.40.0-1build1`
 
 Binary Packages:
 
-- `libnghttp2-14:amd64=1.30.0-1ubuntu1`
+- `libnghttp2-14:amd64=1.40.0-1build1`
 
 Licenses: (parsed from: `/usr/share/doc/libnghttp2-14/copyright`)
 
@@ -1602,38 +1748,18 @@ Licenses: (parsed from: `/usr/share/doc/libnghttp2-14/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris nghttp2=1.30.0-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nghttp2/nghttp2_1.30.0-1ubuntu1.dsc' nghttp2_1.30.0-1ubuntu1.dsc 2674 SHA256:1848fdc28933b7ee23dbebe3c9dcd0ca9182f95a278d627758d5ccfa2e0b44ad
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nghttp2/nghttp2_1.30.0.orig.tar.bz2' nghttp2_1.30.0.orig.tar.bz2 1839714 SHA256:f66918dd03773f4847da1d069295c758ce478cbd1fe58298a37d65e1dce056d8
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nghttp2/nghttp2_1.30.0-1ubuntu1.debian.tar.xz' nghttp2_1.30.0-1ubuntu1.debian.tar.xz 13244 SHA256:eb99f2c10cd872ce750964fc59734aa70b89ad04179291a23bfbee0e1a2903d3
+$ apt-get source -qq --print-uris nghttp2=1.40.0-1build1
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nghttp2/nghttp2_1.40.0-1build1.dsc' nghttp2_1.40.0-1build1.dsc 2572 SHA256:2f945c4799485cae7ad8f0d1cf1720986bf13f6c65bab7582ef2ae51a48e3661
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nghttp2/nghttp2_1.40.0.orig.tar.bz2' nghttp2_1.40.0.orig.tar.bz2 1937537 SHA256:82758e13727945f2408d0612762e4655180b039f058d5ff40d055fa1497bd94f
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nghttp2/nghttp2_1.40.0-1build1.debian.tar.xz' nghttp2_1.40.0-1build1.debian.tar.xz 12772 SHA256:d71772f726b343c803954c0bccf3150b736d0e1a7c82a03dc7560fc8bd3a0189
 ```
 
-### `dpkg` source package: `npth=1.5-3`
+### `dpkg` source package: `openldap=2.4.49+dfsg-2ubuntu1.3`
 
 Binary Packages:
 
-- `libnpth0:amd64=1.5-3`
-
-Licenses: (parsed from: `/usr/share/doc/libnpth0/copyright`)
-
-- `LGPL-2.1`
-- `LGPL-2.1+`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris npth=1.5-3
-'http://archive.ubuntu.com/ubuntu/pool/main/n/npth/npth_1.5-3.dsc' npth_1.5-3.dsc 1954 SHA256:98e02623d39451685321ab638e12cd0b85f7829f6b174d03dbb806b8d899ae3f
-'http://archive.ubuntu.com/ubuntu/pool/main/n/npth/npth_1.5.orig.tar.bz2' npth_1.5.orig.tar.bz2 299308 SHA256:294a690c1f537b92ed829d867bee537e46be93fbd60b16c04630fbbfcd9db3c2
-'http://archive.ubuntu.com/ubuntu/pool/main/n/npth/npth_1.5-3.debian.tar.xz' npth_1.5-3.debian.tar.xz 10480 SHA256:5cbaf91c95c90ab82053110eeec5ac72f5a3cab36829edb0579f1fb759ec5fec
-```
-
-### `dpkg` source package: `openldap=2.4.45+dfsg-1ubuntu1.6`
-
-Binary Packages:
-
-- `libldap-2.4-2:amd64=2.4.45+dfsg-1ubuntu1.6`
-- `libldap-common=2.4.45+dfsg-1ubuntu1.6`
+- `libldap-2.4-2:amd64=2.4.49+dfsg-2ubuntu1.3`
+- `libldap-common=2.4.49+dfsg-2ubuntu1.3`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1643,11 +1769,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `openssh=1:7.6p1-4ubuntu0.3`
+### `dpkg` source package: `openssh=1:8.2p1-4ubuntu0.1`
 
 Binary Packages:
 
-- `openssh-client=1:7.6p1-4ubuntu0.3`
+- `openssh-client=1:8.2p1-4ubuntu0.1`
 
 Licenses: (parsed from: `/usr/share/doc/openssh-client/copyright`)
 
@@ -1663,18 +1789,18 @@ Licenses: (parsed from: `/usr/share/doc/openssh-client/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openssh=1:7.6p1-4ubuntu0.3
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_7.6p1-4ubuntu0.3.dsc' openssh_7.6p1-4ubuntu0.3.dsc 3220 SHA512:0873d1711a591380e389552d9ca09b470c276b4037cf38068e2a8adfaec9b33d897602d040a55a0e71ed3f18f4e04ab036ea8d9f0710be9816f2d60871c0dc26
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_7.6p1.orig.tar.gz' openssh_7.6p1.orig.tar.gz 1489788 SHA512:de17fdcb8239401f76740c8d689a8761802f6df94e68d953f3c70b9f4f8bdb403617c48c1d01cc8c368d88e9d50aee540bf03d5a36687dfb39dfd28d73029d72
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_7.6p1.orig.tar.gz.asc' openssh_7.6p1.orig.tar.gz.asc 683 SHA512:2e98dcafc5933a2b2353b1dddc5182e2091643c6ccdb51d928e433bce7ad37cecb9b45c406975b530e859eb748c3e5c61a6d52b8e1df3d34202fafb77406ef8b
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_7.6p1-4ubuntu0.3.debian.tar.xz' openssh_7.6p1-4ubuntu0.3.debian.tar.xz 167500 SHA512:7f627306cf98fd96511c817528bba2727d88be655633486d8b6821a73e7d5e055ec7088fd155fc4b1f8db48dbe5996f299f3a33d55c2bb9f09e9fa6a3fcba301
+$ apt-get source -qq --print-uris openssh=1:8.2p1-4ubuntu0.1
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.2p1-4ubuntu0.1.dsc' openssh_8.2p1-4ubuntu0.1.dsc 3098 SHA512:0e51e026137b7e93d36167da66b8135e722f90cfc7d3a648336dab728f71e74988d1605bb73c788f1cf01161ceed7120a21a07c49e540c8ea16db853e496c51f
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.2p1.orig.tar.gz' openssh_8.2p1.orig.tar.gz 1701197 SHA512:c4db64e52a3a4c410de9de49f9cb104dd493b10250af3599b92457dd986277b3fd99a6f51cec94892fd1be5bd0369c5757262ea7805f0de464b245c3d34c120a
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.2p1-4ubuntu0.1.debian.tar.xz' openssh_8.2p1-4ubuntu0.1.debian.tar.xz 174784 SHA512:cca56b046669198489802c00d495b507f5a47b2f92b80f8e073eeae199bf2f5948078feefd2aaa9eeaec6ec93a8bebc7a68db6c0bc43bcb5325e43a9b4bc8ebe
 ```
 
-### `dpkg` source package: `openssl1.0=1.0.2n-1ubuntu5.4`
+### `dpkg` source package: `openssl=1.1.1f-1ubuntu2`
 
 Binary Packages:
 
-- `libssl1.0.0:amd64=1.0.2n-1ubuntu5.4`
+- `libssl1.1:amd64=1.1.1f-1ubuntu2`
+- `openssl=1.1.1f-1ubuntu2`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1683,39 +1809,18 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openssl1.0=1.0.2n-1ubuntu5.4
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl1.0/openssl1.0_1.0.2n-1ubuntu5.4.dsc' openssl1.0_1.0.2n-1ubuntu5.4.dsc 2713 SHA512:bfb29d59394f5fba4956668e90a7c70ee445475030e86b0c2dd236b6ead43d4afafcbc9783e812d2335a748efac0ae67093cd5df25ba0488097f880456206b5b
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl1.0/openssl1.0_1.0.2n.orig.tar.gz' openssl1.0_1.0.2n.orig.tar.gz 5375802 SHA512:144bf0d6aa27b4af01df0b7b734c39962649e1711554247d42e05e14d8945742b18745aefdba162e2dfc762b941fd7d3b2d5dc6a781ae4ba10a6f5a3cadb0687
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl1.0/openssl1.0_1.0.2n.orig.tar.gz.asc' openssl1.0_1.0.2n.orig.tar.gz.asc 455 SHA512:7a4d82d1abbfdac92f87839321a40348099fa32193e97042c1d5ff0b0ac719104e0e2b079e0669e603c98c7d2313d0e0de4c1aec0c9180eadd1dd241e7f1985a
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl1.0/openssl1.0_1.0.2n-1ubuntu5.4.debian.tar.xz' openssl1.0_1.0.2n-1ubuntu5.4.debian.tar.xz 116892 SHA512:512265c5b7e6f8f2faa8ff5efd401eb1b8633166c31bbe13f827ba762058c734601843326c2f2b35ce9c2aef5cde25379475ad30cee2c107e7186dc5d66899b3
+$ apt-get source -qq --print-uris openssl=1.1.1f-1ubuntu2
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.dsc' openssl_1.1.1f-1ubuntu2.dsc 2705 SHA256:2704b83cc9f62d3ff30bff22a032b543620ade054da30c600fd0e2385c8d7c1b
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f.orig.tar.gz' openssl_1.1.1f.orig.tar.gz 9792828 SHA256:186c6bfe6ecfba7a5b48c47f8a1673d0f3b0e5ba2e25602dd23b629975da3f35
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f.orig.tar.gz.asc' openssl_1.1.1f.orig.tar.gz.asc 488 SHA256:e9c68097b05be8873e41bd33a9269378ca58e515fbaa30a512c315b602d41dda
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.debian.tar.xz' openssl_1.1.1f-1ubuntu2.debian.tar.xz 141644 SHA256:2a2709358bc19e4f8a1f23e25c8457c1d4c69a78d47aa4fc8dbda14545a8ec5e
 ```
 
-### `dpkg` source package: `openssl=1.1.1-1ubuntu2.1~18.04.6`
+### `dpkg` source package: `p11-kit=0.23.20-1build1`
 
 Binary Packages:
 
-- `libssl1.1:amd64=1.1.1-1ubuntu2.1~18.04.6`
-- `openssl=1.1.1-1ubuntu2.1~18.04.6`
-
-**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
-If source is available (seen below), check the contents of `debian/copyright` within it.
-
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris openssl=1.1.1-1ubuntu2.1~18.04.6
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1-1ubuntu2.1~18.04.6.dsc' openssl_1.1.1-1ubuntu2.1~18.04.6.dsc 2754 SHA512:c16af42e0bb9530125f52ec1af1cef1743de3bfa1e82c51bddf43780b0f6298ddd60fbb260d713df56fc97f46614b922bb04a45f7ed94fadca1f00bff6d55cae
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1.orig.tar.gz' openssl_1.1.1.orig.tar.gz 8337920 SHA512:c0284a4fe84bdf765ca5bc5148da4441ffc36392cfecaf9d372af00cf93b6de5681cab1248b6f8246474532155dc205da5ad49549ad7c61c07c917145e7c9c71
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1.orig.tar.gz.asc' openssl_1.1.1.orig.tar.gz.asc 488 SHA512:cc69ad07a2edc17b579018bac4683f7d48deb8cde4a0f53eb777d2546eec9be6d13a610299705f3b87a7e4e8492432260cd7efc89d124c7fe1def309bbee461f
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1-1ubuntu2.1~18.04.6.debian.tar.xz' openssl_1.1.1-1ubuntu2.1~18.04.6.debian.tar.xz 104692 SHA512:c1945f1641cc7edc9fbf6d9a2384d2fd05442f7d1460a3d7085f90b760ff4d5578d4bd33c662effcd1b92459fee6472415672350005a784fc9eaa19b96cd2fd1
-```
-
-### `dpkg` source package: `p11-kit=0.23.9-2`
-
-Binary Packages:
-
-- `libp11-kit0:amd64=0.23.9-2`
+- `libp11-kit0:amd64=0.23.20-1build1`
 
 Licenses: (parsed from: `/usr/share/doc/libp11-kit0/copyright`)
 
@@ -1728,21 +1833,21 @@ Licenses: (parsed from: `/usr/share/doc/libp11-kit0/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris p11-kit=0.23.9-2
-'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.9-2.dsc' p11-kit_0.23.9-2.dsc 2458 SHA256:e4c271a89abf52a95d23cca02bd6fb6ea5d5611b139ac63b0db728e7d9895449
-'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.9.orig.tar.gz' p11-kit_0.23.9.orig.tar.gz 1091561 SHA256:e1c1649c335107a8d33cf3762eb7f57b2d0681f0c7d8353627293a58d6b4db63
-'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.9.orig.tar.gz.asc' p11-kit_0.23.9.orig.tar.gz.asc 900 SHA256:334562f6a37f96339173a33a90b246466e0b2673e03658b205d75ebbb63bad10
-'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.9-2.debian.tar.xz' p11-kit_0.23.9-2.debian.tar.xz 21704 SHA256:fa6af69f96f6ccdce95d61e39662a38768b05f8872b2b2008d56cc4fff0ed3fd
+$ apt-get source -qq --print-uris p11-kit=0.23.20-1build1
+'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.20-1build1.dsc' p11-kit_0.23.20-1build1.dsc 2466 SHA256:25b3e4f00439457152fa958f1b54e0222fbb98585aa174308b6d6534b94445c3
+'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.20.orig.tar.xz' p11-kit_0.23.20.orig.tar.xz 822588 SHA256:14d86024c3dfd6b967d9bc0b4ec7b2973014fe7423481f4d230a1a63b8aa6104
+'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.20.orig.tar.xz.asc' p11-kit_0.23.20.orig.tar.xz.asc 854 SHA256:6429a15c3c071629add6712ed75916df90043d47250edb9235d89ee197f613b8
+'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.20-1build1.debian.tar.xz' p11-kit_0.23.20-1build1.debian.tar.xz 22004 SHA256:c43279d68adc9f710ff438f7084316e1e3ca9918f7c653bf1cb932927c415960
 ```
 
-### `dpkg` source package: `pam=1.1.8-3.6ubuntu2.18.04.2`
+### `dpkg` source package: `pam=1.3.1-5ubuntu4.1`
 
 Binary Packages:
 
-- `libpam-modules:amd64=1.1.8-3.6ubuntu2.18.04.2`
-- `libpam-modules-bin=1.1.8-3.6ubuntu2.18.04.2`
-- `libpam-runtime=1.1.8-3.6ubuntu2.18.04.2`
-- `libpam0g:amd64=1.1.8-3.6ubuntu2.18.04.2`
+- `libpam-modules:amd64=1.3.1-5ubuntu4.1`
+- `libpam-modules-bin=1.3.1-5ubuntu4.1`
+- `libpam-runtime=1.3.1-5ubuntu4.1`
+- `libpam0g:amd64=1.3.1-5ubuntu4.1`
 
 Licenses: (parsed from: `/usr/share/doc/libpam-modules/copyright`, `/usr/share/doc/libpam-modules-bin/copyright`, `/usr/share/doc/libpam-runtime/copyright`, `/usr/share/doc/libpam0g/copyright`)
 
@@ -1751,16 +1856,17 @@ Licenses: (parsed from: `/usr/share/doc/libpam-modules/copyright`, `/usr/share/d
 Source:
 
 ```console
-$ apt-get source -qq --print-uris pam=1.1.8-3.6ubuntu2.18.04.2
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.1.8-3.6ubuntu2.18.04.2.dsc' pam_1.1.8-3.6ubuntu2.18.04.2.dsc 2557 SHA512:244e2c6f339822de9eb5419f86d620d346ad32121b71efb673628835ac3e6c2b0eb62eb552a26a8d6647e3fc182d3e2f949725dc5c5e50329285c5c49ec5e70b
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.1.8-3.6ubuntu2.18.04.2.tar.gz' pam_1.1.8-3.6ubuntu2.18.04.2.tar.gz 1991026 SHA512:12f83aabb144253d761bc3b6f96614a122b4bfafc89ec4baa0805ca50df47986e7f7b025aa79e21fcf61c9ab308983064de17ffbcbe39f4333104e6d3b7d5ff6
+$ apt-get source -qq --print-uris pam=1.3.1-5ubuntu4.1
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.3.1-5ubuntu4.1.dsc' pam_1.3.1-5ubuntu4.1.dsc 2707 SHA512:0fe1765785d9642b9dac56a5e0db8ebbbe2ce82d91cb92c8f050fe066d5c5e742a3562fab0a1f3618707052b2a813c08cb398fa6cf6900866286b3fdfe6e4214
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.3.1.orig.tar.xz' pam_1.3.1.orig.tar.xz 912332 SHA512:6bc8e2a5b64686f0a23846221c5228c88418ba485b17c53b3a12f91262b5bb73566d6b6a5daa1f63bbae54310aee918b987e44a72ce809b4e7c668f0fadfe08e
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.3.1-5ubuntu4.1.debian.tar.xz' pam_1.3.1-5ubuntu4.1.debian.tar.xz 159852 SHA512:f43e7b4bfb1fe42d29099dc404e8b50a661acf8f53b3183ec3fdacc09946b7742a5b70387cde7728557199cb5914e39a330106176d406fcd51b79ecd7e479336
 ```
 
-### `dpkg` source package: `pcre2=10.31-2`
+### `dpkg` source package: `pcre2=10.34-7`
 
 Binary Packages:
 
-- `libpcre2-8-0:amd64=10.31-2`
+- `libpcre2-8-0:amd64=10.34-7`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1769,17 +1875,17 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris pcre2=10.31-2
-'http://archive.ubuntu.com/ubuntu/pool/universe/p/pcre2/pcre2_10.31-2.dsc' pcre2_10.31-2.dsc 2342 SHA256:0f9c472d2ccdacb16e81c134eda8f21e0bc009ed08b8cc24ad27ff6aaa3514f5
-'http://archive.ubuntu.com/ubuntu/pool/universe/p/pcre2/pcre2_10.31.orig.tar.gz' pcre2_10.31.orig.tar.gz 2130574 SHA256:e11ebd99dd23a7bccc9127d95d9978101b5f3cf0a6e7d25a1b1ca165a97166c4
-'http://archive.ubuntu.com/ubuntu/pool/universe/p/pcre2/pcre2_10.31-2.diff.gz' pcre2_10.31-2.diff.gz 4640 SHA256:36ed87a47c98fe2f45988a60e0302882fc43ba34b5a2b62cf6e164a0af632789
+$ apt-get source -qq --print-uris pcre2=10.34-7
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pcre2/pcre2_10.34-7.dsc' pcre2_10.34-7.dsc 2286 SHA256:c3e2bfd8fabf594238b3f17074dc8ac483aaf80a9f12dbfe927b80a74558732e
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pcre2/pcre2_10.34.orig.tar.gz' pcre2_10.34.orig.tar.gz 2271533 SHA256:da6aba7ba2509e918e41f4f744a59fa41a2425c59a298a232e7fe85691e00379
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pcre2/pcre2_10.34-7.diff.gz' pcre2_10.34-7.diff.gz 7068 SHA256:7d44ac1b171ef7f7051213a3a8505b28f3809ed3e2fb348567a29fdf5f2b5fdf
 ```
 
-### `dpkg` source package: `pcre3=2:8.39-9`
+### `dpkg` source package: `pcre3=2:8.39-12build1`
 
 Binary Packages:
 
-- `libpcre3:amd64=2:8.39-9`
+- `libpcre3:amd64=2:8.39-12build1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1788,22 +1894,22 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris pcre3=2:8.39-9
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pcre3/pcre3_8.39-9.dsc' pcre3_8.39-9.dsc 2224 SHA256:cfbe37b2022027f62f236d74bb6af90befd2964161d77b2fd459c75ae7c36e36
+$ apt-get source -qq --print-uris pcre3=2:8.39-12build1
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pcre3/pcre3_8.39-12build1.dsc' pcre3_8.39-12build1.dsc 2133 SHA256:e1dd0e352e5ba90aa89016dc3ad8b5990c1a8743c1550c613c7a9d9079a2da67
 'http://archive.ubuntu.com/ubuntu/pool/main/p/pcre3/pcre3_8.39.orig.tar.bz2' pcre3_8.39.orig.tar.bz2 1560758 SHA256:b858099f82483031ee02092711689e7245586ada49e534a06e678b8ea9549e8b
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pcre3/pcre3_8.39-9.debian.tar.gz' pcre3_8.39-9.debian.tar.gz 26333 SHA256:68be90799b722a8d5a075c3d2f48718cb21e2e736e0edf1e7e46a87c51215f55
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pcre3/pcre3_8.39-12build1.debian.tar.gz' pcre3_8.39-12build1.debian.tar.gz 26478 SHA256:8f92c016f9200aad9a9028bbd96eded68394c756b09df76db2c0a54e8a1802c6
 ```
 
-### `dpkg` source package: `perl=5.26.1-6ubuntu0.3`
+### `dpkg` source package: `perl=5.30.0-9ubuntu0.2`
 
 Binary Packages:
 
-- `libperl5.26:amd64=5.26.1-6ubuntu0.3`
-- `perl=5.26.1-6ubuntu0.3`
-- `perl-base=5.26.1-6ubuntu0.3`
-- `perl-modules-5.26=5.26.1-6ubuntu0.3`
+- `libperl5.30:amd64=5.30.0-9ubuntu0.2`
+- `perl=5.30.0-9ubuntu0.2`
+- `perl-base=5.30.0-9ubuntu0.2`
+- `perl-modules-5.30=5.30.0-9ubuntu0.2`
 
-Licenses: (parsed from: `/usr/share/doc/libperl5.26/copyright`, `/usr/share/doc/perl/copyright`, `/usr/share/doc/perl-base/copyright`, `/usr/share/doc/perl-modules-5.26/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libperl5.30/copyright`, `/usr/share/doc/perl/copyright`, `/usr/share/doc/perl-base/copyright`, `/usr/share/doc/perl-modules-5.30/copyright`)
 
 - `Artistic`
 - `Artistic,`
@@ -1828,48 +1934,29 @@ Licenses: (parsed from: `/usr/share/doc/libperl5.26/copyright`, `/usr/share/doc/
 - `REGCOMP`
 - `REGCOMP,`
 - `RRA-KEEP-THIS-NOTICE`
-- `S2P`
 - `SDBM-PUBLIC-DOMAIN`
 - `TEXT-TABS`
 - `Unicode`
 - `ZLIB`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
-
-
-### `dpkg` source package: `pinentry=1.1.0-1`
-
-Binary Packages:
-
-- `pinentry-curses=1.1.0-1`
-
-Licenses: (parsed from: `/usr/share/doc/pinentry-curses/copyright`)
-
-- `GPL-2`
-- `GPL-2+`
-- `LGPL-3`
-- `LGPL-3+`
-- `X11`
-
 Source:
 
 ```console
-$ apt-get source -qq --print-uris pinentry=1.1.0-1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pinentry/pinentry_1.1.0-1.dsc' pinentry_1.1.0-1.dsc 2910 SHA256:8cda3442923c0e18f9c3d5a2817a97a54db7447046b9c469e890abd19c680247
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pinentry/pinentry_1.1.0.orig.tar.bz2' pinentry_1.1.0.orig.tar.bz2 467702 SHA256:68076686fa724a290ea49cdf0d1c0c1500907d1b759a3bcbfbec0293e8f56570
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pinentry/pinentry_1.1.0.orig.tar.bz2.asc' pinentry_1.1.0.orig.tar.bz2.asc 534 SHA256:0e3a7633b9fddf9c01c3dcf74aeb94888cc6d5d233f0b8357b0b9c1a1fed9a73
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pinentry/pinentry_1.1.0-1.debian.tar.xz' pinentry_1.1.0-1.debian.tar.xz 15408 SHA256:ddee92638e762f125ac09b86b4f3b31e2d240e8d2dcce940302293bb2ea0873e
+$ apt-get source -qq --print-uris perl=5.30.0-9ubuntu0.2
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.30.0-9ubuntu0.2.dsc' perl_5.30.0-9ubuntu0.2.dsc 2962 SHA512:497f54e6e2d142b7a03cdee4999ea8d861911e2aa8115bb6895c244c4f285a00648bd6e1038c56017b7370c9b4b474dbe212071a65054c7435dbab66d2cd0ed3
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.30.0.orig-regen-configure.tar.gz' perl_5.30.0.orig-regen-configure.tar.gz 833235 SHA512:ab977887b53249a2423708aa38ecbb8bdbfdb7ba533a795eaa20bac427b2eb326756b076ca11088036550a4db24418903c0565d168fe9641e18077a76d04274a
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.30.0.orig.tar.xz' perl_5.30.0.orig.tar.xz 12419868 SHA512:68a295eccd64debd9d6a10f0d5577f872a19ad8c2d702798f6b0f45b8c3af6ab3230768056e2131e9e2e2506d1035b27cfd627c845e32263fe448649c4b98ae9
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.30.0-9ubuntu0.2.debian.tar.xz' perl_5.30.0-9ubuntu0.2.debian.tar.xz 167248 SHA512:841504df745d755603b6a592484ff91a44e4346adc96b01a0c0bce09205f46d4250a6aafbb7462510a150d1d2904ef6889f014bd5d33efc5f18bafd71cef8bce
 ```
 
-### `dpkg` source package: `procps=2:3.3.12-3ubuntu1.2`
+### `dpkg` source package: `procps=2:3.3.16-1ubuntu2`
 
 Binary Packages:
 
-- `libprocps6:amd64=2:3.3.12-3ubuntu1.2`
-- `procps=2:3.3.12-3ubuntu1.2`
+- `libprocps8:amd64=2:3.3.16-1ubuntu2`
+- `procps=2:3.3.16-1ubuntu2`
 
-Licenses: (parsed from: `/usr/share/doc/libprocps6/copyright`, `/usr/share/doc/procps/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libprocps8/copyright`, `/usr/share/doc/procps/copyright`)
 
 - `GPL-2`
 - `GPL-2.0+`
@@ -1881,19 +1968,39 @@ Licenses: (parsed from: `/usr/share/doc/libprocps6/copyright`, `/usr/share/doc/p
 Source:
 
 ```console
-$ apt-get source -qq --print-uris procps=2:3.3.12-3ubuntu1.2
-'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_3.3.12-3ubuntu1.2.dsc' procps_3.3.12-3ubuntu1.2.dsc 1920 SHA512:0ba0450d7411075000e5be9f64c92c73cf9f029fac707a13ad9bba692042a70c6f5535b31793eaca31670be61408e3a49cd861a0078859c57798a991e713459b
-'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_3.3.12.orig.tar.xz' procps_3.3.12.orig.tar.xz 840540 SHA512:cb26a6b8419cc41134ccd072e1b38919ffd7126a99055a64726dc1d55149a2278fbf84528a71388196351e5bc72e81b18ce2a4f576a111d3741971327b30e6f8
-'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_3.3.12-3ubuntu1.2.debian.tar.xz' procps_3.3.12-3ubuntu1.2.debian.tar.xz 37736 SHA512:36ef9f540a72538f4a6fb02bfb53bf0b4689077c733b7dc4e301f968e2698667e6ad997f30a0ad21d189a8ee4bef7de2710441a8cc9f1ecb3aff6f67f182d49e
+$ apt-get source -qq --print-uris procps=2:3.3.16-1ubuntu2
+'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_3.3.16-1ubuntu2.dsc' procps_3.3.16-1ubuntu2.dsc 2248 SHA256:1cd439a6bd527ab1d676fb6d0119cc825d4f7990b8b0f1daeaaad566925ab830
+'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_3.3.16.orig.tar.xz' procps_3.3.16.orig.tar.xz 621892 SHA256:2919299e579d29be3501a802dfe77e6f23be228149d0396d83d0ffbe8fa7efbf
+'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_3.3.16-1ubuntu2.debian.tar.xz' procps_3.3.16-1ubuntu2.debian.tar.xz 32916 SHA256:eb4d6806dbcf8ab69c4913c50d04f9d99e95f02dab82bda80140abd85d27d5b7
 ```
 
-### `dpkg` source package: `python-defaults=2.7.15~rc1-1`
+### `dpkg` source package: `python-certifi=2019.11.28-1`
 
 Binary Packages:
 
-- `libpython-stdlib:amd64=2.7.15~rc1-1`
-- `python=2.7.15~rc1-1`
-- `python-minimal=2.7.15~rc1-1`
+- `python3-certifi=2019.11.28-1`
+
+Licenses: (parsed from: `/usr/share/doc/python3-certifi/copyright`)
+
+- `GPL-2`
+- `MPL-2`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris python-certifi=2019.11.28-1
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python-certifi/python-certifi_2019.11.28-1.dsc' python-certifi_2019.11.28-1.dsc 1726 SHA256:0b80ff1bc0a6db1caa3b0d1b7ff257ed1ea5caf82f62c4351ef320e07b631ed4
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python-certifi/python-certifi_2019.11.28.orig.tar.xz' python-certifi_2019.11.28.orig.tar.xz 142676 SHA256:1179028db926d69bc57d9d13381ccaf39da5f40184909860babb94caa294aeba
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python-certifi/python-certifi_2019.11.28-1.debian.tar.xz' python-certifi_2019.11.28-1.debian.tar.xz 7612 SHA256:2fc3b18a83ee7ebdf1c96099ea58d14bac5e4eba26d7379ca92ca93212362c04
+```
+
+### `dpkg` source package: `python-defaults=2.7.17-2ubuntu4`
+
+Binary Packages:
+
+- `libpython2-stdlib:amd64=2.7.17-2ubuntu4`
+- `python2=2.7.17-2ubuntu4`
+- `python2-minimal=2.7.17-2ubuntu4`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1902,19 +2009,59 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris python-defaults=2.7.15~rc1-1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python-defaults/python-defaults_2.7.15~rc1-1.dsc' python-defaults_2.7.15~rc1-1.dsc 2633 SHA256:1089e25a274fb86e8dfbab1b661ecb5ef2b7610e1b6e3fbf8388f875758f7c2c
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python-defaults/python-defaults_2.7.15~rc1-1.tar.gz' python-defaults_2.7.15~rc1-1.tar.gz 1958015 SHA256:f3bed2b81091821d2e514c2e17c6846f7e744487fd15f7d3c48fa1c91b9cd49b
+$ apt-get source -qq --print-uris python-defaults=2.7.17-2ubuntu4
+'http://archive.ubuntu.com/ubuntu/pool/universe/p/python-defaults/python-defaults_2.7.17-2ubuntu4.dsc' python-defaults_2.7.17-2ubuntu4.dsc 2558 SHA256:3b07888350cc8d6f8506b0a42b65e4f83e21b582c2fd6f29b91bca181ba0666e
+'http://archive.ubuntu.com/ubuntu/pool/universe/p/python-defaults/python-defaults_2.7.17-2ubuntu4.tar.gz' python-defaults_2.7.17-2ubuntu4.tar.gz 82316 SHA256:571c7958e16daab3b3350f061fa3a4c2a30250fc9f8f5ef29a68a012fe83c1af
 ```
 
-### `dpkg` source package: `python2.7=2.7.17-1~18.04ubuntu1.2`
+### `dpkg` source package: `python-fastimport=0.9.8-5build1`
 
 Binary Packages:
 
-- `libpython2.7-minimal:amd64=2.7.17-1~18.04ubuntu1.2`
-- `libpython2.7-stdlib:amd64=2.7.17-1~18.04ubuntu1.2`
-- `python2.7=2.7.17-1~18.04ubuntu1.2`
-- `python2.7-minimal=2.7.17-1~18.04ubuntu1.2`
+- `python3-fastimport=0.9.8-5build1`
+
+Licenses: (parsed from: `/usr/share/doc/python3-fastimport/copyright`)
+
+- `GPL-2`
+- `GPL-2+`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris python-fastimport=0.9.8-5build1
+'http://archive.ubuntu.com/ubuntu/pool/universe/p/python-fastimport/python-fastimport_0.9.8-5build1.dsc' python-fastimport_0.9.8-5build1.dsc 2244 SHA256:2ca7934d75936cc98c4520b19844a02ba23c7325116dd0cd37b55a0265dbbf0f
+'http://archive.ubuntu.com/ubuntu/pool/universe/p/python-fastimport/python-fastimport_0.9.8.orig.tar.gz' python-fastimport_0.9.8.orig.tar.gz 39512 SHA256:b2f2e8eb97000256e1aab83d2a0a053fc7b93c3aa4f7e9b971a5703dfc5963b9
+'http://archive.ubuntu.com/ubuntu/pool/universe/p/python-fastimport/python-fastimport_0.9.8-5build1.debian.tar.xz' python-fastimport_0.9.8-5build1.debian.tar.xz 13644 SHA256:f83a7b8f5824f22c46aacb7ededbed2d801cbcedf67500c5ac3bc71aa6aa981c
+```
+
+### `dpkg` source package: `python-urllib3=1.25.8-2ubuntu0.1`
+
+Binary Packages:
+
+- `python3-urllib3=1.25.8-2ubuntu0.1`
+
+Licenses: (parsed from: `/usr/share/doc/python3-urllib3/copyright`)
+
+- `Expat`
+- `PSF-2`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris python-urllib3=1.25.8-2ubuntu0.1
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python-urllib3/python-urllib3_1.25.8-2ubuntu0.1.dsc' python-urllib3_1.25.8-2ubuntu0.1.dsc 2332 SHA512:a7badcae163036079bbeda6bb68ac471df55db3dbe439417731d8921a7bb7afc620ae013b834f5d6c597334b3a658360033b0f1e3d9343bb3c14be47e5fbd98a
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python-urllib3/python-urllib3_1.25.8.orig.tar.gz' python-urllib3_1.25.8.orig.tar.gz 261077 SHA512:6e380d98d9a8b06534abfab4eb67b685a8311a091e31adcefe2b0ffc61d2b728229df067790b20358f2646e9054a546450c3351e4aa618f31d85573ea50ceaa2
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python-urllib3/python-urllib3_1.25.8-2ubuntu0.1.debian.tar.xz' python-urllib3_1.25.8-2ubuntu0.1.debian.tar.xz 12640 SHA512:272e07cce618b8a512f0226a7577c5df61bf3c6a196b07249876a7491e2af5964be890f23613294836a3d102d02485198dd316412e316cafc67499873eb4993a
+```
+
+### `dpkg` source package: `python2.7=2.7.18-1~20.04`
+
+Binary Packages:
+
+- `libpython2.7-minimal:amd64=2.7.18-1~20.04`
+- `libpython2.7-stdlib:amd64=2.7.18-1~20.04`
+- `python2.7=2.7.18-1~20.04`
+- `python2.7-minimal=2.7.18-1~20.04`
 
 Licenses: (parsed from: `/usr/share/doc/libpython2.7-minimal/copyright`, `/usr/share/doc/libpython2.7-stdlib/copyright`, `/usr/share/doc/python2.7/copyright`, `/usr/share/doc/python2.7-minimal/copyright`)
 
@@ -1938,20 +2085,78 @@ Licenses: (parsed from: `/usr/share/doc/libpython2.7-minimal/copyright`, `/usr/s
 Source:
 
 ```console
-$ apt-get source -qq --print-uris python2.7=2.7.17-1~18.04ubuntu1.2
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.17-1~18.04ubuntu1.2.dsc' python2.7_2.7.17-1~18.04ubuntu1.2.dsc 3483 SHA512:5450e075e251ba89bb299da7468875428b81a9249bb0a72fd845aa517bbae52f876c339f9064861f287e62adb7db70d5c2ad3cdd1ac425a2371372775fc4277f
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.17.orig.tar.gz' python2.7_2.7.17.orig.tar.gz 17535962 SHA512:f526baff7f1a9451244edb04e2aca63336b656aac178f4f64c135390b5b1185990ccff0c48f602914dd1c49c9e075951d372b4f2daac39e336c23ae84ef4ca16
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.17-1~18.04ubuntu1.2.diff.gz' python2.7_2.7.17-1~18.04ubuntu1.2.diff.gz 294617 SHA512:a92eb8fe030174bc0b063d71e58dcb364a0d62bf554afae01da6dc121246442149630c104d2d4f49a0d7a247042ffa176973baf5f6d516f772b986f4dbdaf19e
+$ apt-get source -qq --print-uris python2.7=2.7.18-1~20.04
+'http://archive.ubuntu.com/ubuntu/pool/universe/p/python2.7/python2.7_2.7.18-1~20.04.dsc' python2.7_2.7.18-1~20.04.dsc 2944 SHA512:c08b2386c342aa65899f7a0e3d14812fbca79ebd81306492741d8eb26d070dadbd162a48e7a0c09f1d1175902116f635f1874a3896871f1c2331bdba79b4ace7
+'http://archive.ubuntu.com/ubuntu/pool/universe/p/python2.7/python2.7_2.7.18.orig.tar.gz' python2.7_2.7.18.orig.tar.gz 17539408 SHA512:9a81cea8f8853b183364b399a238604075b00d18badb0cde118b20fe4428135de5d75a3feca0d56a3d8d40d557e3933de573671072d9da6f76f84435d23bf1ba
+'http://archive.ubuntu.com/ubuntu/pool/universe/p/python2.7/python2.7_2.7.18-1~20.04.diff.gz' python2.7_2.7.18-1~20.04.diff.gz 287081 SHA512:282392b04d2d92143d1d0f764e66fb50bd09c6223680e0cdc6c25c7db5c16ae4b96f1a2756d3fe7b2c05fef4cdb062d2b7ea5cb084169b648749a2c51ff5ab70
 ```
 
-### `dpkg` source package: `readline=7.0-3`
+### `dpkg` source package: `python3-defaults=3.8.2-0ubuntu2`
 
 Binary Packages:
 
-- `libreadline7:amd64=7.0-3`
-- `readline-common=7.0-3`
+- `libpython3-stdlib:amd64=3.8.2-0ubuntu2`
+- `python3=3.8.2-0ubuntu2`
+- `python3-minimal=3.8.2-0ubuntu2`
 
-Licenses: (parsed from: `/usr/share/doc/libreadline7/copyright`, `/usr/share/doc/readline-common/copyright`)
+**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
+If source is available (seen below), check the contents of `debian/copyright` within it.
+
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris python3-defaults=3.8.2-0ubuntu2
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-defaults/python3-defaults_3.8.2-0ubuntu2.dsc' python3-defaults_3.8.2-0ubuntu2.dsc 2879 SHA256:3fa296ea2cd52738ebc44a1b83a8df500bf654356336d9bf057144171fe9ee7d
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-defaults/python3-defaults_3.8.2-0ubuntu2.tar.gz' python3-defaults_3.8.2-0ubuntu2.tar.gz 138226 SHA256:e4969a54306421ebfd195d0c064935db7c53f9f152d8abaae63da33819235e9a
+```
+
+### `dpkg` source package: `python3.8=3.8.5-1~20.04`
+
+Binary Packages:
+
+- `libpython3.8-minimal:amd64=3.8.5-1~20.04`
+- `libpython3.8-stdlib:amd64=3.8.5-1~20.04`
+- `python3.8=3.8.5-1~20.04`
+- `python3.8-minimal=3.8.5-1~20.04`
+
+Licenses: (parsed from: `/usr/share/doc/libpython3.8-minimal/copyright`, `/usr/share/doc/libpython3.8-stdlib/copyright`, `/usr/share/doc/python3.8/copyright`, `/usr/share/doc/python3.8-minimal/copyright`)
+
+- `* Permission to use this software in any way is granted without`
+- `By obtaining, using, and/or copying this software and/or its`
+- `GPL-2`
+- `Permission  is  hereby granted,  free  of charge,  to  any person`
+- `Permission is hereby granted, free of charge, to any person obtaining`
+- `Permission to use, copy, modify,`
+- `Redistribution`
+- `This software is provided 'as-is', without any express`
+- `This software is provided as-is, without express`
+- `binary forms, with`
+- `distribute this software`
+- `distribute this software and`
+- `distribute this software for any`
+- `implied`
+- `its`
+- `use in source`
+- `without`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris python3.8=3.8.5-1~20.04
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.5-1~20.04.dsc' python3.8_3.8.5-1~20.04.dsc 3340 SHA512:4db414a66d5c633bea398e6c7600be87392abf968e224d3c4a9df2870ecfa24d0aa8846997504b089013018ca8ae0298262ddf0859322065dbb098d456f00b32
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.5.orig.tar.xz' python3.8_3.8.5.orig.tar.xz 18019640 SHA512:460cee65d7df7150694590575502d7f22e548ebfc99c8f8b363eef8bf30ee72e58d8ffacb1d607824f877f880eb9fd6775a508388029583e1e1df3380f3f9587
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.5-1~20.04.debian.tar.xz' python3.8_3.8.5-1~20.04.debian.tar.xz 210244 SHA512:810d54363ef596ecfba8065cf6f11fcbe7e3a80087d0a0418f5c562fecf42b0ddf5d6e9b97d3ce06c83cb68daeeb7eec0829be038976c541d12b923a30c481d5
+```
+
+### `dpkg` source package: `readline=8.0-4`
+
+Binary Packages:
+
+- `libreadline8:amd64=8.0-4`
+- `readline-common=8.0-4`
+
+Licenses: (parsed from: `/usr/share/doc/libreadline8/copyright`, `/usr/share/doc/readline-common/copyright`)
 
 - `GFDL`
 - `GPL-3`
@@ -1959,17 +2164,17 @@ Licenses: (parsed from: `/usr/share/doc/libreadline7/copyright`, `/usr/share/doc
 Source:
 
 ```console
-$ apt-get source -qq --print-uris readline=7.0-3
-'http://archive.ubuntu.com/ubuntu/pool/main/r/readline/readline_7.0-3.dsc' readline_7.0-3.dsc 2538 SHA256:f27a5dc9053b88641e3effc6c03b7840cbbbd887e8dcaf05d9e336c7bc7c6a53
-'http://archive.ubuntu.com/ubuntu/pool/main/r/readline/readline_7.0.orig.tar.gz' readline_7.0.orig.tar.gz 2910016 SHA256:750d437185286f40a369e1e4f4764eda932b9459b5ec9a731628393dd3d32334
-'http://archive.ubuntu.com/ubuntu/pool/main/r/readline/readline_7.0-3.debian.tar.xz' readline_7.0-3.debian.tar.xz 30012 SHA256:bf166310d6ca7716f2bd0e9e06cee2458b0157f7989d028730fc305643560175
+$ apt-get source -qq --print-uris readline=8.0-4
+'http://archive.ubuntu.com/ubuntu/pool/main/r/readline/readline_8.0-4.dsc' readline_8.0-4.dsc 2434 SHA256:ac9c7bb7380fe740aef09f54becf482eb81032a33dc11f1a8f00e933c5f168f4
+'http://archive.ubuntu.com/ubuntu/pool/main/r/readline/readline_8.0.orig.tar.gz' readline_8.0.orig.tar.gz 2975937 SHA256:e339f51971478d369f8a053a330a190781acb9864cf4c541060f12078948e461
+'http://archive.ubuntu.com/ubuntu/pool/main/r/readline/readline_8.0-4.debian.tar.xz' readline_8.0-4.debian.tar.xz 30408 SHA256:60ed18dab6d6b7fc998a263d917f06d9cce6e1ccd19cd8bf4a9d33c5350cf8d6
 ```
 
-### `dpkg` source package: `rtmpdump=2.4+20151223.gitfa8646d.1-1`
+### `dpkg` source package: `rtmpdump=2.4+20151223.gitfa8646d.1-2build1`
 
 Binary Packages:
 
-- `librtmp1:amd64=2.4+20151223.gitfa8646d.1-1`
+- `librtmp1:amd64=2.4+20151223.gitfa8646d.1-2build1`
 
 Licenses: (parsed from: `/usr/share/doc/librtmp1/copyright`)
 
@@ -1979,17 +2184,17 @@ Licenses: (parsed from: `/usr/share/doc/librtmp1/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris rtmpdump=2.4+20151223.gitfa8646d.1-1
-'http://archive.ubuntu.com/ubuntu/pool/main/r/rtmpdump/rtmpdump_2.4+20151223.gitfa8646d.1-1.dsc' rtmpdump_2.4+20151223.gitfa8646d.1-1.dsc 2315 SHA256:e56822b88625bf6a51f06652fc36fa2a1348b4325ac76541800cd078192aa3d2
+$ apt-get source -qq --print-uris rtmpdump=2.4+20151223.gitfa8646d.1-2build1
+'http://archive.ubuntu.com/ubuntu/pool/main/r/rtmpdump/rtmpdump_2.4+20151223.gitfa8646d.1-2build1.dsc' rtmpdump_2.4+20151223.gitfa8646d.1-2build1.dsc 2439 SHA256:fd89213f2d41b00c212a411a945146c6b2e00fce1d1819a9ec380b0d91bd1077
 'http://archive.ubuntu.com/ubuntu/pool/main/r/rtmpdump/rtmpdump_2.4+20151223.gitfa8646d.1.orig.tar.gz' rtmpdump_2.4+20151223.gitfa8646d.1.orig.tar.gz 142213 SHA256:5c032f5c8cc2937eb55a81a94effdfed3b0a0304b6376147b86f951e225e3ab5
-'http://archive.ubuntu.com/ubuntu/pool/main/r/rtmpdump/rtmpdump_2.4+20151223.gitfa8646d.1-1.debian.tar.xz' rtmpdump_2.4+20151223.gitfa8646d.1-1.debian.tar.xz 8044 SHA256:675847f5cddb860256cbf2e7d5b85918aa53b59b0fd97a466b39a5c77a399537
+'http://archive.ubuntu.com/ubuntu/pool/main/r/rtmpdump/rtmpdump_2.4+20151223.gitfa8646d.1-2build1.debian.tar.xz' rtmpdump_2.4+20151223.gitfa8646d.1-2build1.debian.tar.xz 8216 SHA256:b256cc2aa96c9b99918052c4badfab0339ba95a852eab5ae37aa8b53c259efd2
 ```
 
-### `dpkg` source package: `sed=4.4-2`
+### `dpkg` source package: `sed=4.7-1`
 
 Binary Packages:
 
-- `sed=4.4-2`
+- `sed=4.7-1`
 
 Licenses: (parsed from: `/usr/share/doc/sed/copyright`)
 
@@ -1998,17 +2203,17 @@ Licenses: (parsed from: `/usr/share/doc/sed/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris sed=4.4-2
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sed/sed_4.4-2.dsc' sed_4.4-2.dsc 2006 SHA256:0e025a69a04c867048f918778771e2ba79d6ddfd62cb5ce6c3a6e255c005706c
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sed/sed_4.4.orig.tar.xz' sed_4.4.orig.tar.xz 1181664 SHA256:cbd6ebc5aaf080ed60d0162d7f6aeae58211a1ee9ba9bb25623daa6cd942683b
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sed/sed_4.4-2.debian.tar.xz' sed_4.4-2.debian.tar.xz 59600 SHA256:9f9b8bec0438ea0d0bd4315548de519543385c8196bcfcc61362f38f4cc6e7ed
+$ apt-get source -qq --print-uris sed=4.7-1
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sed/sed_4.7-1.dsc' sed_4.7-1.dsc 1880 SHA256:dd0e8daed987929920f7729771f9c7a5b48d094923aaf686efd2ab19db776108
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sed/sed_4.7.orig.tar.xz' sed_4.7.orig.tar.xz 1298316 SHA256:2885768cd0a29ff8d58a6280a270ff161f6a3deb5690b2be6c49f46d4c67bd6a
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sed/sed_4.7-1.debian.tar.xz' sed_4.7-1.debian.tar.xz 59824 SHA256:a2ab8d50807fd2242f86d6c6257399e790445ab6f8932f7f487d34361b4fc483
 ```
 
-### `dpkg` source package: `sensible-utils=0.0.12`
+### `dpkg` source package: `sensible-utils=0.0.12+nmu1`
 
 Binary Packages:
 
-- `sensible-utils=0.0.12`
+- `sensible-utils=0.0.12+nmu1`
 
 Licenses: (parsed from: `/usr/share/doc/sensible-utils/copyright`)
 
@@ -2021,16 +2226,16 @@ Licenses: (parsed from: `/usr/share/doc/sensible-utils/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris sensible-utils=0.0.12
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sensible-utils/sensible-utils_0.0.12.dsc' sensible-utils_0.0.12.dsc 1732 SHA256:1b62cc5f7561b3f5692a6edaec942e2e97e8368dabff8c865867d428eecb1221
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sensible-utils/sensible-utils_0.0.12.tar.xz' sensible-utils_0.0.12.tar.xz 62152 SHA256:99ba2ebf8c57447c69d426b99b84ff9dc817be0bc4988ec6890a14558c529e2e
+$ apt-get source -qq --print-uris sensible-utils=0.0.12+nmu1
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sensible-utils/sensible-utils_0.0.12+nmu1.dsc' sensible-utils_0.0.12+nmu1.dsc 1753 SHA256:68bcb3e542e29a8a0bf281d9145d0e4cd9def529af2ba0cfe0afee3c5af958bc
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sensible-utils/sensible-utils_0.0.12+nmu1.tar.xz' sensible-utils_0.0.12+nmu1.tar.xz 61988 SHA256:53c6606facf083adbbf0da04e6d774b31ff3f46c7ba36a82d3f182779f4c3f5b
 ```
 
-### `dpkg` source package: `serf=1.3.9-6`
+### `dpkg` source package: `serf=1.3.9-8build1`
 
 Binary Packages:
 
-- `libserf-1-1:amd64=1.3.9-6`
+- `libserf-1-1:amd64=1.3.9-8build1`
 
 Licenses: (parsed from: `/usr/share/doc/libserf-1-1/copyright`)
 
@@ -2041,17 +2246,13 @@ Licenses: (parsed from: `/usr/share/doc/libserf-1-1/copyright`)
 **WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
 This is *usually* due to a new package version being released and the old version being removed.
 
-The source package *may* still be available for download from:
 
-- http://snapshot.debian.org/package/serf/1.3.9-6/
-
-
-### `dpkg` source package: `shadow=1:4.5-1ubuntu2`
+### `dpkg` source package: `shadow=1:4.8.1-1ubuntu5.20.04`
 
 Binary Packages:
 
-- `login=1:4.5-1ubuntu2`
-- `passwd=1:4.5-1ubuntu2`
+- `login=1:4.8.1-1ubuntu5.20.04`
+- `passwd=1:4.8.1-1ubuntu5.20.04`
 
 Licenses: (parsed from: `/usr/share/doc/login/copyright`, `/usr/share/doc/passwd/copyright`)
 
@@ -2060,36 +2261,36 @@ Licenses: (parsed from: `/usr/share/doc/login/copyright`, `/usr/share/doc/passwd
 Source:
 
 ```console
-$ apt-get source -qq --print-uris shadow=1:4.5-1ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.5-1ubuntu2.dsc' shadow_4.5-1ubuntu2.dsc 2426 SHA512:69714d4cd1903f091bc2c4759d98ce588cc90e9f2ab49226b46872eb2b2cf4f996f30b8da146a2950e164d24fa265f90e689043152d79d1bc255add5f90d54a3
-'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.5.orig.tar.xz' shadow_4.5.orig.tar.xz 1344524 SHA512:4278544efdd6d800a3c46cfcb144f209ace14ebe017ba1c0d05425fac7868062a73afa8522036a2bc0a16f6f1e7c16373a204463221012367ce0e8e9ef4c4a4d
-'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.5-1ubuntu2.debian.tar.xz' shadow_4.5-1ubuntu2.debian.tar.xz 471472 SHA512:d4017784bfc5118b86533da52909459adf4e79ffa049d8029437860bfaeac91eabd40e6510f67bba6f8b2d74fde62c24eb8e37a7b4637d14eeb63aecaf2294cc
+$ apt-get source -qq --print-uris shadow=1:4.8.1-1ubuntu5.20.04
+'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1-1ubuntu5.20.04.dsc' shadow_4.8.1-1ubuntu5.20.04.dsc 1729 SHA512:fc557d6572f8732cc21f8bb69df08f6a289b3615e19f0374a4e4812b89e793e3f071c552a69c43cbb82e659ac735b3ad6d62d3205f3a12591037e3669430ea5d
+'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1.orig.tar.xz' shadow_4.8.1.orig.tar.xz 1611196 SHA512:780a983483d847ed3c91c82064a0fa902b6f4185225978241bc3bc03fcc3aa143975b46aee43151c6ba43efcfdb1819516b76ba7ad3d1d3c34fcc38ea42e917b
+'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1-1ubuntu5.20.04.debian.tar.xz' shadow_4.8.1-1ubuntu5.20.04.debian.tar.xz 85640 SHA512:237d007329c915889766807ad85c8954fe8cf81b8aa074cdc8eba46e6157cd9386dc53cd5054f13618af30af30033074e0881c2f3f43d5f7e86224b2a261791c
 ```
 
-### `dpkg` source package: `six=1.11.0-2`
+### `dpkg` source package: `six=1.14.0-2`
 
 Binary Packages:
 
-- `python-six=1.11.0-2`
+- `python3-six=1.14.0-2`
 
-Licenses: (parsed from: `/usr/share/doc/python-six/copyright`)
+Licenses: (parsed from: `/usr/share/doc/python3-six/copyright`)
 
 - `Expat`
 
 Source:
 
 ```console
-$ apt-get source -qq --print-uris six=1.11.0-2
-'http://archive.ubuntu.com/ubuntu/pool/main/s/six/six_1.11.0-2.dsc' six_1.11.0-2.dsc 2316 SHA256:c0391b38bc251a3df586bdb163cb250af78aee69bbb27880215a350caaea53f2
-'http://archive.ubuntu.com/ubuntu/pool/main/s/six/six_1.11.0.orig.tar.gz' six_1.11.0.orig.tar.gz 29860 SHA256:70e8a77beed4562e7f14fe23a786b54f6296e34344c23bc42f07b15018ff98e9
-'http://archive.ubuntu.com/ubuntu/pool/main/s/six/six_1.11.0-2.debian.tar.xz' six_1.11.0-2.debian.tar.xz 4176 SHA256:bbd91dcb509a1f083bf531062b77dfdf2cbd2badca0fbe5d81957fe852ac4a7a
+$ apt-get source -qq --print-uris six=1.14.0-2
+'http://archive.ubuntu.com/ubuntu/pool/main/s/six/six_1.14.0-2.dsc' six_1.14.0-2.dsc 2426 SHA256:1655e1f7246bd08332615eb3f6bb7769435724cd60e2ed0c0ce717e1ffd89416
+'http://archive.ubuntu.com/ubuntu/pool/main/s/six/six_1.14.0.orig.tar.gz' six_1.14.0.orig.tar.gz 33857 SHA256:236bdbdce46e6e6a3d61a337c0f8b763ca1e8717c03b369e87a7ec7ce1319c0a
+'http://archive.ubuntu.com/ubuntu/pool/main/s/six/six_1.14.0-2.debian.tar.xz' six_1.14.0-2.debian.tar.xz 4368 SHA256:02a80f76758dde7a8b2f42cd05a20db56d956f4678a882f0aba905ee49847050
 ```
 
-### `dpkg` source package: `sqlite3=3.22.0-1ubuntu0.4`
+### `dpkg` source package: `sqlite3=3.31.1-4ubuntu0.2`
 
 Binary Packages:
 
-- `libsqlite3-0:amd64=3.22.0-1ubuntu0.4`
+- `libsqlite3-0:amd64=3.31.1-4ubuntu0.2`
 
 Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 
@@ -2100,85 +2301,93 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris sqlite3=3.22.0-1ubuntu0.4
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.22.0-1ubuntu0.4.dsc' sqlite3_3.22.0-1ubuntu0.4.dsc 2512 SHA512:5b0de02a1ee10ef1d38bbd66e5148f044574aba7211cbe003855b8141062955913514501adac6208297f435c02160a39e14dbad934907afd49a506a34ae4ea9a
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.22.0.orig-www.tar.xz' sqlite3_3.22.0.orig-www.tar.xz 3564688 SHA512:e469878137ec3d06886fe096c4325451e8c9b73f6841d28fac9bed45e698bdc1222739570abf2ce456e0853b0c6876b1c79ca0896826295f64d27b276541c1f8
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.22.0.orig.tar.xz' sqlite3_3.22.0.orig.tar.xz 6019648 SHA512:ce3b05cb9f75a5c7a5e8562b70e72e23c043222fd61995f795cbcc40f3f8efcac2660e57b588a15bfdce28c8eb644745bb73af35f5b98ba956dd77457d661dfa
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.22.0-1ubuntu0.4.debian.tar.xz' sqlite3_3.22.0-1ubuntu0.4.debian.tar.xz 47632 SHA512:1b280b6c301b2f3c15ebdfe6085584cef34257edae14c94d7d6e8d06a7b884a96029d354cb3f09df6b6427f671a24cc25ee1ebc178c7168cd0a52bce8c8b5cf0
+$ apt-get source -qq --print-uris sqlite3=3.31.1-4ubuntu0.2
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.31.1-4ubuntu0.2.dsc' sqlite3_3.31.1-4ubuntu0.2.dsc 2519 SHA512:d7adfe86e7996d2a45238bc3b782de6894a585bba1498b3747aacb15313160354bc072ab2e257a2a034ce44921bd07329b8a9172290428f753274b6d7b00326e
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.31.1.orig-www.tar.xz' sqlite3_3.31.1.orig-www.tar.xz 5764424 SHA512:a47adacd46c673cfd674cb64fb54b054e69560aed8c8c429773f0eccdcdbce4be538397506eca8e2d169f4b46d0d47442b273e12d82f8c87e1aadf3ade458db6
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.31.1.orig.tar.xz' sqlite3_3.31.1.orig.tar.xz 7108036 SHA512:67e1050efe2988fa3d0d7e4a87e147a8114c6ff9b6ca5307a068befb38e861930eaee0135048ff1abb1e6323b507cbc68a0aac3a8fe5f095d6fcea1547a7efaf
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.31.1-4ubuntu0.2.debian.tar.xz' sqlite3_3.31.1-4ubuntu0.2.debian.tar.xz 33492 SHA512:87cc51bce108d6306d815683a1825b43a6e7a7d8dc2bade8ce34d3850b8a4437034b1383f5e60b8d9c4569e8ab5bb3eb28febda7745f4a9db01b5e1b0b11d5ae
 ```
 
-### `dpkg` source package: `subversion=1.9.7-4ubuntu1`
+### `dpkg` source package: `subversion=1.13.0-3`
 
 Binary Packages:
 
-- `libsvn1:amd64=1.9.7-4ubuntu1`
-- `subversion=1.9.7-4ubuntu1`
+- `libsvn1:amd64=1.13.0-3`
+- `subversion=1.13.0-3`
 
 Licenses: (parsed from: `/usr/share/doc/libsvn1/copyright`, `/usr/share/doc/subversion/copyright`)
 
+- `AFL-3`
 - `Apache-2.0`
+- `BSD-2-clause`
+- `BSD-3-clause`
+- `Expat`
 - `GPL-2`
+- `GPL-2+`
 - `GPL-3`
+- `GPL-3+`
+- `Svnwrap`
+- `Unicode`
+- `Utfwidth`
 
 Source:
 
 ```console
-$ apt-get source -qq --print-uris subversion=1.9.7-4ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/universe/s/subversion/subversion_1.9.7-4ubuntu1.dsc' subversion_1.9.7-4ubuntu1.dsc 3118 SHA256:13e18929d55c09986a758d3245ff246996d7f75f9d6f7313c394ba4d0a73b5ed
-'http://archive.ubuntu.com/ubuntu/pool/universe/s/subversion/subversion_1.9.7.orig.tar.gz' subversion_1.9.7.orig.tar.gz 10643686 SHA256:c72a209c883e20245f14c4e644803f50ae83ae24652e385ff5e82300a0d06c3c
-'http://archive.ubuntu.com/ubuntu/pool/universe/s/subversion/subversion_1.9.7-4ubuntu1.debian.tar.xz' subversion_1.9.7-4ubuntu1.debian.tar.xz 2270568 SHA256:67ea7ddc37e697340eaa9f8fea08980ba01b529f3ab6487eeb8726bc9ae77f29
+$ apt-get source -qq --print-uris subversion=1.13.0-3
+'http://archive.ubuntu.com/ubuntu/pool/universe/s/subversion/subversion_1.13.0-3.dsc' subversion_1.13.0-3.dsc 3650 SHA256:60a21b226bfec8c6c81da3ab0049866298481da1898db8304a0c718dcb157d84
+'http://archive.ubuntu.com/ubuntu/pool/universe/s/subversion/subversion_1.13.0.orig.tar.gz' subversion_1.13.0.orig.tar.gz 11544359 SHA256:daad440c03b8a86fcca804ea82217bb1902cfcae1b7d28c624143c58dcb96931
+'http://archive.ubuntu.com/ubuntu/pool/universe/s/subversion/subversion_1.13.0.orig.tar.gz.asc' subversion_1.13.0.orig.tar.gz.asc 2954 SHA256:ed4f87b947b8172fcaa4c741d8ccc7929914b18cf1ccffc32b4f159fdee3070d
+'http://archive.ubuntu.com/ubuntu/pool/universe/s/subversion/subversion_1.13.0-3.debian.tar.xz' subversion_1.13.0-3.debian.tar.xz 421004 SHA256:4bae277b8c9622ed8475f1b3172239854b5de5d603f6491a11f9fcdc6ce9d04f
 ```
 
-### `dpkg` source package: `systemd=237-3ubuntu10.42`
+### `dpkg` source package: `systemd=245.4-4ubuntu3.2`
 
 Binary Packages:
 
-- `libsystemd0:amd64=237-3ubuntu10.42`
-- `libudev1:amd64=237-3ubuntu10.42`
+- `libsystemd0:amd64=245.4-4ubuntu3.2`
+- `libudev1:amd64=245.4-4ubuntu3.2`
 
 Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/libudev1/copyright`)
 
 - `CC0-1.0`
 - `Expat`
 - `GPL-2`
+- `GPL-2 with Linux-syscall-note exception`
 - `GPL-2+`
 - `LGPL-2.1`
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=237-3ubuntu10.42
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.42.dsc' systemd_237-3ubuntu10.42.dsc 5182 SHA512:cd9cea067ac21e9d627c3f28acd6f10e5511a9591d5283e9aab4ae01dc4178e332ccf074bc5dfbc0a7adc7a1ca2687d85d769123af34c59ea9b957ccf2dc54c3
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237.orig.tar.gz' systemd_237.orig.tar.gz 6871350 SHA512:15ef4b92815a6dd9a6c51672dbc00fd7cd0f08068ef0cbeaca574f68d330b28bc67ba1946f24f75ef3d9e7b63843a73eea700db54688061dbf5c9f8470394c3b
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.42.debian.tar.xz' systemd_237-3ubuntu10.42.debian.tar.xz 275288 SHA512:d68b1dcd71ab49bd5b672a456923b50203b866dfd9ac79aa7aefe37e8799d2b37245dc850089e2d700ba129e7ca4f791a164321c46c08f97866c3b67d0345df7
-```
 
-### `dpkg` source package: `sysvinit=2.88dsf-59.10ubuntu1`
+### `dpkg` source package: `sysvinit=2.96-2.1ubuntu1`
 
 Binary Packages:
 
-- `sysvinit-utils=2.88dsf-59.10ubuntu1`
+- `sysvinit-utils=2.96-2.1ubuntu1`
 
 Licenses: (parsed from: `/usr/share/doc/sysvinit-utils/copyright`)
 
 - `GPL-2`
+- `GPL-2+`
 
 Source:
 
 ```console
-$ apt-get source -qq --print-uris sysvinit=2.88dsf-59.10ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sysvinit/sysvinit_2.88dsf-59.10ubuntu1.dsc' sysvinit_2.88dsf-59.10ubuntu1.dsc 2428 SHA256:030f4e8a71381529da3141988344d6e1d0e05ba437e0cdd38d2f3786185bf285
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sysvinit/sysvinit_2.88dsf.orig.tar.gz' sysvinit_2.88dsf.orig.tar.gz 125330 SHA256:b016f937958d2809a020d407e1287bdc09abf1d44efaa96530e2ea57f544f4e8
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sysvinit/sysvinit_2.88dsf-59.10ubuntu1.debian.tar.xz' sysvinit_2.88dsf-59.10ubuntu1.debian.tar.xz 132736 SHA256:faee591309aa0065aa43f44a1e840eb01db7f55379af2b45949534bd0317b734
+$ apt-get source -qq --print-uris sysvinit=2.96-2.1ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sysvinit/sysvinit_2.96-2.1ubuntu1.dsc' sysvinit_2.96-2.1ubuntu1.dsc 2751 SHA256:c8b5f2ef86c4c1b8bf6b8a48408a4aa0815b0cf416df51dc0a9b6b8134f7e42c
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sysvinit/sysvinit_2.96.orig.tar.xz' sysvinit_2.96.orig.tar.xz 122164 SHA256:2a2e26b72aa235a23ab1c8471005f890309ce1196c83fbc9413c57b9ab62b587
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sysvinit/sysvinit_2.96.orig.tar.xz.asc' sysvinit_2.96.orig.tar.xz.asc 313 SHA256:dfc184b95da12c8c888c8ae6b0f26fe8a23b07fbcdd240f6600a8a78b9439fa0
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sysvinit/sysvinit_2.96-2.1ubuntu1.debian.tar.xz' sysvinit_2.96-2.1ubuntu1.debian.tar.xz 128840 SHA256:528041e261c90a957d9794bddb07217c89484d9c76a0279da508baec9684c4e6
 ```
 
-### `dpkg` source package: `tar=1.29b-2ubuntu0.1`
+### `dpkg` source package: `tar=1.30+dfsg-7`
 
 Binary Packages:
 
-- `tar=1.29b-2ubuntu0.1`
+- `tar=1.30+dfsg-7`
 
 Licenses: (parsed from: `/usr/share/doc/tar/copyright`)
 
@@ -2188,31 +2397,31 @@ Licenses: (parsed from: `/usr/share/doc/tar/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris tar=1.29b-2ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.29b-2ubuntu0.1.dsc' tar_1.29b-2ubuntu0.1.dsc 1426 SHA512:07cd0e105d5620c2f9b77c1a8b6f1016f2c83a022a38d0fa9e94bc07ffe3f716df609b8c92808e5e3e80db8eaece3b076643debd54c653eda76eb1973a56e9ab
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.29b.orig.tar.xz' tar_1.29b.orig.tar.xz 1822008 SHA512:6814c906f3bf3d1421d46e63aff7921acffbd2b2a0a7e5c20b472a821eab839d6eab93653d964ae16376b65da223c57a92455f44793522c84c8b1343af20b106
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.29b-2ubuntu0.1.debian.tar.xz' tar_1.29b-2ubuntu0.1.debian.tar.xz 31672 SHA512:e4756dd0ad0d765af0c6639695b17cc86f80033a45705cdcb845639bab7d3aed0fac8d86ac28a0aa2e024bdb4dad43376f4a02c915a0921609deeeed74637bd7
+$ apt-get source -qq --print-uris tar=1.30+dfsg-7
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.30+dfsg-7.dsc' tar_1.30+dfsg-7.dsc 1981 SHA256:5117afe47b5aab94c592d52c11c74dba146a11a7cdc22dbe067a4b5a5e895729
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.30+dfsg.orig.tar.xz' tar_1.30+dfsg.orig.tar.xz 1883220 SHA256:c02f3747ffe02017878303dde8b78e79cd220364c5e8048cf92320232e38912d
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.30+dfsg-7.debian.tar.xz' tar_1.30+dfsg-7.debian.tar.xz 22168 SHA256:12763df7f214458a56edc4a4b27adb2cb2041d597d74212ba34736f02bb68cd3
 ```
 
-### `dpkg` source package: `tzdata=2020a-0ubuntu0.18.04`
+### `dpkg` source package: `tzdata=2020a-0ubuntu0.20.04`
 
 Binary Packages:
 
-- `tzdata=2020a-0ubuntu0.18.04`
+- `tzdata=2020a-0ubuntu0.20.04`
 
-**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
-If source is available (seen below), check the contents of `debian/copyright` within it.
+Licenses: (parsed from: `/usr/share/doc/tzdata/copyright`)
 
+- `ICU`
 
 **WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `ubuntu-keyring=2018.09.18.1~18.04.0`
+### `dpkg` source package: `ubuntu-keyring=2020.02.11.2`
 
 Binary Packages:
 
-- `ubuntu-keyring=2018.09.18.1~18.04.0`
+- `ubuntu-keyring=2020.02.11.2`
 
 Licenses: (parsed from: `/usr/share/doc/ubuntu-keyring/copyright`)
 
@@ -2221,16 +2430,16 @@ Licenses: (parsed from: `/usr/share/doc/ubuntu-keyring/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris ubuntu-keyring=2018.09.18.1~18.04.0
-'http://archive.ubuntu.com/ubuntu/pool/main/u/ubuntu-keyring/ubuntu-keyring_2018.09.18.1~18.04.0.dsc' ubuntu-keyring_2018.09.18.1~18.04.0.dsc 1503 SHA512:1aa2656d79d925d42857de9eb79fac8433fc5ec0cc1daaa55af31f1eb4f482646f48e0e37d8d794ffafccbae34698503aa183b27666b18fc00c38e1b41c92f06
-'http://archive.ubuntu.com/ubuntu/pool/main/u/ubuntu-keyring/ubuntu-keyring_2018.09.18.1~18.04.0.tar.gz' ubuntu-keyring_2018.09.18.1~18.04.0.tar.gz 34238 SHA512:7e0b6b9b4f900139c6743037b18591abba0183db94bf6d988b65c2eafe7bd53900f52af0cea14e1a80f4fd54eef39ef7b5dbf66802b53c022e40802a287912b1
+$ apt-get source -qq --print-uris ubuntu-keyring=2020.02.11.2
+'http://archive.ubuntu.com/ubuntu/pool/main/u/ubuntu-keyring/ubuntu-keyring_2020.02.11.2.dsc' ubuntu-keyring_2020.02.11.2.dsc 1863 SHA256:f8544b69a2e982c3f588a588b306ae8f6eefea8194324680c0676244e251314f
+'http://archive.ubuntu.com/ubuntu/pool/main/u/ubuntu-keyring/ubuntu-keyring_2020.02.11.2.tar.gz' ubuntu-keyring_2020.02.11.2.tar.gz 39180 SHA256:d2ee9deedb99f5a2b8bee2c0f9e85834638bfbc46d7a59edba7ce2bb6229bcec
 ```
 
-### `dpkg` source package: `ucf=3.0038`
+### `dpkg` source package: `ucf=3.0038+nmu1`
 
 Binary Packages:
 
-- `ucf=3.0038`
+- `ucf=3.0038+nmu1`
 
 Licenses: (parsed from: `/usr/share/doc/ucf/copyright`)
 
@@ -2239,16 +2448,16 @@ Licenses: (parsed from: `/usr/share/doc/ucf/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris ucf=3.0038
-'http://archive.ubuntu.com/ubuntu/pool/main/u/ucf/ucf_3.0038.dsc' ucf_3.0038.dsc 1445 SHA256:5fab6d0af664eac92b3404c6bb62d0a3ceb88cd21a1462b9a262d1292c77328f
-'http://archive.ubuntu.com/ubuntu/pool/main/u/ucf/ucf_3.0038.tar.xz' ucf_3.0038.tar.xz 65416 SHA256:262ccd52637c869ac851838a176d76e90db8d3f12373e3b62eb89e217f93fe7e
+$ apt-get source -qq --print-uris ucf=3.0038+nmu1
+'http://archive.ubuntu.com/ubuntu/pool/main/u/ucf/ucf_3.0038+nmu1.dsc' ucf_3.0038+nmu1.dsc 1420 SHA256:89b6f921a30e04a946f62e6996be7c16f2f7c383d20783cd4704b502c6d5b125
+'http://archive.ubuntu.com/ubuntu/pool/main/u/ucf/ucf_3.0038+nmu1.tar.xz' ucf_3.0038+nmu1.tar.xz 65860 SHA256:d00bc3dd8d2f91317f52b5352fe129023c72babad55bc0dd4ece7b34183c7436
 ```
 
-### `dpkg` source package: `unzip=6.0-21ubuntu1`
+### `dpkg` source package: `unzip=6.0-25ubuntu1`
 
 Binary Packages:
 
-- `unzip=6.0-21ubuntu1`
+- `unzip=6.0-25ubuntu1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -2257,25 +2466,45 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris unzip=6.0-21ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/u/unzip/unzip_6.0-21ubuntu1.dsc' unzip_6.0-21ubuntu1.dsc 1800 SHA256:76f9c291eae4039e31fda029426c96a332d3ce905a2306998ff55798d03ea44d
+$ apt-get source -qq --print-uris unzip=6.0-25ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/main/u/unzip/unzip_6.0-25ubuntu1.dsc' unzip_6.0-25ubuntu1.dsc 1833 SHA256:893fcd9e73c91c4df06716f9620adf1ec701a4846b6269c513785a125e55550c
 'http://archive.ubuntu.com/ubuntu/pool/main/u/unzip/unzip_6.0.orig.tar.gz' unzip_6.0.orig.tar.gz 1376845 SHA256:036d96991646d0449ed0aa952e4fbe21b476ce994abc276e49d30e686708bd37
-'http://archive.ubuntu.com/ubuntu/pool/main/u/unzip/unzip_6.0-21ubuntu1.debian.tar.xz' unzip_6.0-21ubuntu1.debian.tar.xz 21080 SHA256:8db974c22a5ef50029eb9a7e5429ff099e1cf7cfd36d3951fa4e00e4fd47843f
+'http://archive.ubuntu.com/ubuntu/pool/main/u/unzip/unzip_6.0-25ubuntu1.debian.tar.xz' unzip_6.0-25ubuntu1.debian.tar.xz 26276 SHA256:6a22b0d23cf8b9e1a74626d7d9af5efe1257e157f20006272dc68693a13f3b45
 ```
 
-### `dpkg` source package: `util-linux=2.31.1-0.4ubuntu3.7`
+### `dpkg` source package: `utf8proc=2.5.0-1`
 
 Binary Packages:
 
-- `bsdutils=1:2.31.1-0.4ubuntu3.7`
-- `fdisk=2.31.1-0.4ubuntu3.7`
-- `libblkid1:amd64=2.31.1-0.4ubuntu3.7`
-- `libfdisk1:amd64=2.31.1-0.4ubuntu3.7`
-- `libmount1:amd64=2.31.1-0.4ubuntu3.7`
-- `libsmartcols1:amd64=2.31.1-0.4ubuntu3.7`
-- `libuuid1:amd64=2.31.1-0.4ubuntu3.7`
-- `mount=2.31.1-0.4ubuntu3.7`
-- `util-linux=2.31.1-0.4ubuntu3.7`
+- `libutf8proc2:amd64=2.5.0-1`
+
+Licenses: (parsed from: `/usr/share/doc/libutf8proc2/copyright`)
+
+- `Expat`
+- `Unicode`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris utf8proc=2.5.0-1
+'http://archive.ubuntu.com/ubuntu/pool/universe/u/utf8proc/utf8proc_2.5.0-1.dsc' utf8proc_2.5.0-1.dsc 2154 SHA256:2137104a3712875650629305fe7d7ef37d4d99328846c18b087b289c0ddbf27c
+'http://archive.ubuntu.com/ubuntu/pool/universe/u/utf8proc/utf8proc_2.5.0.orig.tar.gz' utf8proc_2.5.0.orig.tar.gz 155485 SHA256:d4e8dfc898cfd062493cb7f42d95d70ccdd3a4cd4d90bec0c71b47cca688f1be
+'http://archive.ubuntu.com/ubuntu/pool/universe/u/utf8proc/utf8proc_2.5.0-1.debian.tar.xz' utf8proc_2.5.0-1.debian.tar.xz 5240 SHA256:333496cf4e178b5ccf4972fa52523d07a21a0cabf0cb123133c6c71f98e92eff
+```
+
+### `dpkg` source package: `util-linux=2.34-0.1ubuntu9.1`
+
+Binary Packages:
+
+- `bsdutils=1:2.34-0.1ubuntu9.1`
+- `fdisk=2.34-0.1ubuntu9.1`
+- `libblkid1:amd64=2.34-0.1ubuntu9.1`
+- `libfdisk1:amd64=2.34-0.1ubuntu9.1`
+- `libmount1:amd64=2.34-0.1ubuntu9.1`
+- `libsmartcols1:amd64=2.34-0.1ubuntu9.1`
+- `libuuid1:amd64=2.34-0.1ubuntu9.1`
+- `mount=2.34-0.1ubuntu9.1`
+- `util-linux=2.34-0.1ubuntu9.1`
 
 Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/fdisk/copyright`, `/usr/share/doc/libblkid1/copyright`, `/usr/share/doc/libfdisk1/copyright`, `/usr/share/doc/libmount1/copyright`, `/usr/share/doc/libsmartcols1/copyright`, `/usr/share/doc/libuuid1/copyright`, `/usr/share/doc/mount/copyright`, `/usr/share/doc/util-linux/copyright`)
 
@@ -2299,17 +2528,17 @@ Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/fdi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris util-linux=2.31.1-0.4ubuntu3.7
-'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.31.1-0.4ubuntu3.7.dsc' util-linux_2.31.1-0.4ubuntu3.7.dsc 4122 SHA512:2602472fb8da0cedd750f9df51b3a5ff4a04be4fcc8843d2b9294495d5697c7209111ec2889f980da7051c39ee186ab3d69fdefea08a1531c9686e4ac9427a1e
-'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.31.1.orig.tar.xz' util-linux_2.31.1.orig.tar.xz 4514032 SHA512:0a3dc7a4c80f180d99ff64452e6e7269688a7d066a212ab15eafb3b9aaedf0b5294345bc1087dc9655f0efc82d4bb7dff9b669b5ee338a5f13aaff7407fe384f
-'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.31.1-0.4ubuntu3.7.debian.tar.xz' util-linux_2.31.1-0.4ubuntu3.7.debian.tar.xz 102216 SHA512:f94ae8ca8fa4d3a79a2c909807bbee0bc28156abe33e072a47149fab6f820aab462f2869f564c9a30ef20c0ca21f2b777809324c7c426bf58f584ea4efe3596f
+$ apt-get source -qq --print-uris util-linux=2.34-0.1ubuntu9.1
+'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.34-0.1ubuntu9.1.dsc' util-linux_2.34-0.1ubuntu9.1.dsc 4067 SHA512:cd98079e1a347852d84c0ebbfac643e7d7d66d7524a060a8bbb8df45153728dae957793b0cefacd4744fbbe4396efcd45e32beeaf8ab3afe347124373554ddbe
+'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.34.orig.tar.xz' util-linux_2.34.orig.tar.xz 4974812 SHA512:2d0b76f63d32e7afb7acf61a83fabbfd58baa34ab78b3a331ce87f9c676a5fd71c56a493ded95039540d2c46b6048caaa38d7fb4491eb3d52d7b09dc54655cd7
+'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.34-0.1ubuntu9.1.debian.tar.xz' util-linux_2.34-0.1ubuntu9.1.debian.tar.xz 91620 SHA512:b0ed129f1e7febe6a7370ef2becaca376b7bea478af084769f61c0b78cf4d3f5a0b5d8fe7c75017e74a8c4c6d22a37a2a9d7221c60822677220fa719d7f3b609
 ```
 
-### `dpkg` source package: `wget=1.19.4-1ubuntu2.2`
+### `dpkg` source package: `wget=1.20.3-1ubuntu1`
 
 Binary Packages:
 
-- `wget=1.19.4-1ubuntu2.2`
+- `wget=1.20.3-1ubuntu1`
 
 Licenses: (parsed from: `/usr/share/doc/wget/copyright`)
 
@@ -2319,18 +2548,18 @@ Licenses: (parsed from: `/usr/share/doc/wget/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris wget=1.19.4-1ubuntu2.2
-'http://archive.ubuntu.com/ubuntu/pool/main/w/wget/wget_1.19.4-1ubuntu2.2.dsc' wget_1.19.4-1ubuntu2.2.dsc 2226 SHA512:7fbc8eccfcb3e559f4f25c4159b06a9663f87c02ab63a9eebc63a812a6a0d72958329f4c8f60fd3dc0272bb586a13535389e0fe5d5a6a2b42f909f567976dd57
-'http://archive.ubuntu.com/ubuntu/pool/main/w/wget/wget_1.19.4.orig.tar.gz' wget_1.19.4.orig.tar.gz 4310657 SHA512:e84b0c40235b160ade69e18f2f139c782eb2387edc97a847c11dbb906c0273daf6d0ef5afe20360ba965c7da8b5e109f5a45e39ea93d20ec945575203235943a
-'http://archive.ubuntu.com/ubuntu/pool/main/w/wget/wget_1.19.4.orig.tar.gz.asc' wget_1.19.4.orig.tar.gz.asc 1241 SHA512:63ad8a3184a98dbda966a535964e37c84291a13fe15f7defb6fb3672f7148d66143498354e818eabc1e506ae9a16f7c9b8188fa22c2fed3a02aa9cb6d1de3a38
-'http://archive.ubuntu.com/ubuntu/pool/main/w/wget/wget_1.19.4-1ubuntu2.2.debian.tar.xz' wget_1.19.4-1ubuntu2.2.debian.tar.xz 66156 SHA512:c458c630d82aaeffa0f4df6a543aa9b3a312d5b4aad4835d6da37736f165bb1151a9337ad65298c8b50c4a07de40d40303f0fc5953f2086a1909878f97c7b262
+$ apt-get source -qq --print-uris wget=1.20.3-1ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/main/w/wget/wget_1.20.3-1ubuntu1.dsc' wget_1.20.3-1ubuntu1.dsc 2280 SHA256:e40e00e9f93f1c049cd2b7942c9c9e31504acd56350b31f1ecad6ae220a44dfd
+'http://archive.ubuntu.com/ubuntu/pool/main/w/wget/wget_1.20.3.orig.tar.gz' wget_1.20.3.orig.tar.gz 4489249 SHA256:31cccfc6630528db1c8e3a06f6decf2a370060b982841cfab2b8677400a5092e
+'http://archive.ubuntu.com/ubuntu/pool/main/w/wget/wget_1.20.3.orig.tar.gz.asc' wget_1.20.3.orig.tar.gz.asc 833 SHA256:7b295c84ab6f90c328a203e234e4b2f5f45cb8d2e29eac43a977073933cd49a2
+'http://archive.ubuntu.com/ubuntu/pool/main/w/wget/wget_1.20.3-1ubuntu1.debian.tar.xz' wget_1.20.3-1ubuntu1.debian.tar.xz 63312 SHA256:95ae56081866b9e6dfb2a2d2dc2208ba0cf3c76bb5d7e680cc56b18b3ec66c1e
 ```
 
-### `dpkg` source package: `xz-utils=5.2.2-1.3`
+### `dpkg` source package: `xz-utils=5.2.4-1ubuntu1`
 
 Binary Packages:
 
-- `liblzma5:amd64=5.2.2-1.3`
+- `liblzma5:amd64=5.2.4-1ubuntu1`
 
 Licenses: (parsed from: `/usr/share/doc/liblzma5/copyright`)
 
@@ -2353,28 +2582,23 @@ Licenses: (parsed from: `/usr/share/doc/liblzma5/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris xz-utils=5.2.2-1.3
-'http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.2-1.3.dsc' xz-utils_5.2.2-1.3.dsc 2575 SHA256:3ea4e6a32f6265b152f89ceafe78c8839e5f4bb1cad137b159fe2013817f9342
-'http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.2.orig.tar.xz' xz-utils_5.2.2.orig.tar.xz 1016404 SHA256:f341b1906ebcdde291dd619399ae944600edc9193619dd0c0110a5f05bfcc89e
-'http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.2.orig.tar.xz.asc' xz-utils_5.2.2.orig.tar.xz.asc 543 SHA256:2cc0575556e1331b3f468e6e7dca5969ce86efcc315d62672279b4e68b2e449f
-'http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.2-1.3.debian.tar.xz' xz-utils_5.2.2-1.3.debian.tar.xz 108680 SHA256:d76c3acf39d0999c14384695394970e8f98853fd6736ba91972d3e67106bc6f6
+$ apt-get source -qq --print-uris xz-utils=5.2.4-1ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.4-1ubuntu1.dsc' xz-utils_5.2.4-1ubuntu1.dsc 2629 SHA512:09c0668c76bd1653460ae2207f2666785d6ec7bae424d168e2f5dc2c98d2c34b7f983963be27c39ac05df0ad76ccfe088b55a64a09319f26b785544d5c8ffb66
+'http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.4.orig.tar.xz' xz-utils_5.2.4.orig.tar.xz 1053868 SHA512:00db7dd31a61541b1ce6946e0f21106f418dd1ac3f27cdb8682979cbc3bd777cd6dd1f04f9ba257a0a7e24041e15ca40d0dd5c130380dce62280af67a0beb97f
+'http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.4.orig.tar.xz.asc' xz-utils_5.2.4.orig.tar.xz.asc 879 SHA512:dbfce0556bc85545ce3566a01c25e4876f560409fc2d48f2dc382b10fbd2538c61d8f2c3667d86fc7313aec86c05e53926015000320f19615e97875adae42450
+'http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.4-1ubuntu1.debian.tar.xz' xz-utils_5.2.4-1ubuntu1.debian.tar.xz 135512 SHA512:9ec339da084b6aedd5d9dfafe879f7b90ae6dc473458dd8eda234e087f3aa80480b7b0792b54588d57e1b41a2c42f28ef87b8e6a8cd4bb51d43e2517f701724f
 ```
 
-### `dpkg` source package: `zlib=1:1.2.11.dfsg-0ubuntu2`
+### `dpkg` source package: `zlib=1:1.2.11.dfsg-2ubuntu1.1`
 
 Binary Packages:
 
-- `zlib1g:amd64=1:1.2.11.dfsg-0ubuntu2`
+- `zlib1g:amd64=1:1.2.11.dfsg-2ubuntu1.1`
 
-**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
-If source is available (seen below), check the contents of `debian/copyright` within it.
+Licenses: (parsed from: `/usr/share/doc/zlib1g/copyright`)
 
+- `Zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris zlib=1:1.2.11.dfsg-0ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg-0ubuntu2.dsc' zlib_1.2.11.dfsg-0ubuntu2.dsc 2676 SHA256:e733161caf3c6864deec55f40f80c0872f7c83bd9c6e9f937472f227ad912281
-'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg.orig.tar.xz' zlib_1.2.11.dfsg.orig.tar.xz 287216 SHA256:881c8a90f488def83488aa91fd68563c023013a4b9b07a040f6da2727d76ad60
-'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg-0ubuntu2.debian.tar.xz' zlib_1.2.11.dfsg-0ubuntu2.debian.tar.xz 18344 SHA256:afad42904f793d13a0b631e082e575d90a7c7c443973d08a00061a9bbb5ca380
-```
