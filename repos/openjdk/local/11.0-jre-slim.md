@@ -1,9 +1,9 @@
-# `openjdk:11.0.9-jre-slim-buster`
+# `openjdk:11.0.9.1-jre-slim-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:b3ef1631b43b401222aef8c7fefc1849bd1404f306013148039d824ff4835d16`
-- Created: `2020-10-22T23:37:53.392080767Z`
+- Image ID: `sha256:e5a708708f23ba1c3a28dd2adb7c6223c570c6e9fb6aab3b63ece693f6991248`
+- Created: `2020-11-12T01:31:45.33818686Z`
 - Virtual Size: ~ 204.95 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -12,7 +12,7 @@
   - `PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=C.UTF-8`
   - `JAVA_HOME=/usr/local/openjdk-11`
-  - `JAVA_VERSION=11.0.9`
+  - `JAVA_VERSION=11.0.9.1`
 
 ## `dpkg` (`.deb`-based packages)
 
