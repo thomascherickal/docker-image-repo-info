@@ -62,6 +62,20 @@
 -	[`swift:5.2-xenial`](#swift52-xenial)
 -	[`swift:5.2-xenial-slim`](#swift52-xenial-slim)
 -	[`swift:5.3`](#swift53)
+-	[`swift:5.3.1`](#swift531)
+-	[`swift:5.3.1-amazonlinux2`](#swift531-amazonlinux2)
+-	[`swift:5.3.1-amazonlinux2-slim`](#swift531-amazonlinux2-slim)
+-	[`swift:5.3.1-bionic`](#swift531-bionic)
+-	[`swift:5.3.1-bionic-slim`](#swift531-bionic-slim)
+-	[`swift:5.3.1-centos7`](#swift531-centos7)
+-	[`swift:5.3.1-centos7-slim`](#swift531-centos7-slim)
+-	[`swift:5.3.1-centos8`](#swift531-centos8)
+-	[`swift:5.3.1-centos8-slim`](#swift531-centos8-slim)
+-	[`swift:5.3.1-focal`](#swift531-focal)
+-	[`swift:5.3.1-focal-slim`](#swift531-focal-slim)
+-	[`swift:5.3.1-slim`](#swift531-slim)
+-	[`swift:5.3.1-xenial`](#swift531-xenial)
+-	[`swift:5.3.1-xenial-slim`](#swift531-xenial-slim)
 -	[`swift:5.3-amazonlinux2`](#swift53-amazonlinux2)
 -	[`swift:5.3-amazonlinux2-slim`](#swift53-amazonlinux2-slim)
 -	[`swift:5.3-bionic`](#swift53-bionic)
@@ -4685,6 +4699,62 @@ RUN swift --version
 		Last Modified: Sat, 26 Sep 2020 03:15:23 GMT  
 		Size: 417.5 MB (417501094 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `swift:5.3.1`
+
+**does not exist** (yet?)
+
+## `swift:5.3.1-amazonlinux2`
+
+**does not exist** (yet?)
+
+## `swift:5.3.1-amazonlinux2-slim`
+
+**does not exist** (yet?)
+
+## `swift:5.3.1-bionic`
+
+**does not exist** (yet?)
+
+## `swift:5.3.1-bionic-slim`
+
+**does not exist** (yet?)
+
+## `swift:5.3.1-centos7`
+
+**does not exist** (yet?)
+
+## `swift:5.3.1-centos7-slim`
+
+**does not exist** (yet?)
+
+## `swift:5.3.1-centos8`
+
+**does not exist** (yet?)
+
+## `swift:5.3.1-centos8-slim`
+
+**does not exist** (yet?)
+
+## `swift:5.3.1-focal`
+
+**does not exist** (yet?)
+
+## `swift:5.3.1-focal-slim`
+
+**does not exist** (yet?)
+
+## `swift:5.3.1-slim`
+
+**does not exist** (yet?)
+
+## `swift:5.3.1-xenial`
+
+**does not exist** (yet?)
+
+## `swift:5.3.1-xenial-slim`
+
+**does not exist** (yet?)
 
 ## `swift:5.3-amazonlinux2`
 
