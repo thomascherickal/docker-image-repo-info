@@ -10,7 +10,7 @@
 ## `rakudo-star:2020.10`
 
 ```console
-$ docker pull rakudo-star@sha256:47ca25ba73d0a7f147b6ee422c22fc5511e776d29c8ed3b2808a81661d4dd3ac
+$ docker pull rakudo-star@sha256:8e055b973e9d1d38f995fb0434744e0f530c1492ba355521588bc0640cac3e71
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -21,14 +21,14 @@ $ docker pull rakudo-star@sha256:47ca25ba73d0a7f147b6ee422c22fc5511e776d29c8ed3b
 ### `rakudo-star:2020.10` - linux; amd64
 
 ```console
-$ docker pull rakudo-star@sha256:d93aac0d97e4cf88c2096a115082abbc1a59e0f32a571e970f5dfa67d8d8c0ef
+$ docker pull rakudo-star@sha256:5885b3f55ca687d7a9ee2b46f951a28fc170637b0602d88bb9432e9cad1ed9b2
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
 -	Total Size: **160.1 MB (160068712 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2cefa3cb01e3f6a8862e3e8c1a462badb2ca7eca7d125f32c39b130154690551`
+-	Image ID: `sha256:bcb32caf587bb1f6e8cf5120a225ecbb92703fa9411c8f444b1450bc97b74a41`
 -	Default Command: `["raku"]`
 
 ```dockerfile
@@ -52,9 +52,9 @@ ARG rakudo_version=2020.10
 ENV rakudo_version=2020.10
 # Fri, 13 Nov 2020 19:38:21 GMT
 RUN buildDeps='         gcc         libc6-dev         make     '         url="https://rakudo.org/dl/star/rakudo-star-${rakudo_version}.tar.gz"     keyserver='ha.pool.sks-keyservers.net'     keyfp='B6F697742EFCAF5F23CE51D5031D65902E840821'     tmpdir="$(mktemp -d)"     && set -eux     && export GNUPGHOME="$tmpdir"     && apt-get update     && apt-get install -y --no-install-recommends $buildDeps     && rm -rf /var/lib/apt/lists/*     && mkdir ${tmpdir}/rakudo         && curl -fsSL ${url}.asc -o ${tmpdir}/rakudo.tar.gz.asc     && curl -fsSL $url -o ${tmpdir}/rakudo.tar.gz     && gpg --batch --keyserver $keyserver --recv-keys $keyfp     && gpg --batch --verify ${tmpdir}/rakudo.tar.gz.asc ${tmpdir}/rakudo.tar.gz         && tar xzf ${tmpdir}/rakudo.tar.gz --strip-components=1 -C ${tmpdir}/rakudo     && (         cd ${tmpdir}/rakudo         && bash bin/rstar install -p /usr     )     && rm -rf $tmpdir     && apt-get purge -y --auto-remove $buildDeps
-# Fri, 13 Nov 2020 19:38:22 GMT
-ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/perl6/site/bin
-# Fri, 13 Nov 2020 19:38:22 GMT
+# Tue, 17 Nov 2020 21:16:28 GMT
+ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/perl6/core/bin:/usr/share/perl6/site/bin:/usr/share/perl6/vendor/bin
+# Tue, 17 Nov 2020 21:16:29 GMT
 CMD ["raku"]
 ```
 
@@ -87,14 +87,14 @@ CMD ["raku"]
 ### `rakudo-star:2020.10` - linux; arm64 variant v8
 
 ```console
-$ docker pull rakudo-star@sha256:1bdc9a9b501e5396ba17a9fd4b8402390aaca21f78f59e801d1e64ed20c2ab62
+$ docker pull rakudo-star@sha256:85ef27b9c1b84635a9338efb8b46f90e2a52843a88ec944254e38bb82dd99738
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
 -	Total Size: **158.8 MB (158806981 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1d36851047e6af41bd85a81382d814541ca529a3a3e622291b3a55a2c08caa08`
+-	Image ID: `sha256:b4a4c567ad78f60e3023e1070c3f1d20502843e5656c902b93a4730dfeb1cec9`
 -	Default Command: `["raku"]`
 
 ```dockerfile
@@ -118,9 +118,9 @@ ARG rakudo_version=2020.10
 ENV rakudo_version=2020.10
 # Fri, 13 Nov 2020 20:08:52 GMT
 RUN buildDeps='         gcc         libc6-dev         make     '         url="https://rakudo.org/dl/star/rakudo-star-${rakudo_version}.tar.gz"     keyserver='ha.pool.sks-keyservers.net'     keyfp='B6F697742EFCAF5F23CE51D5031D65902E840821'     tmpdir="$(mktemp -d)"     && set -eux     && export GNUPGHOME="$tmpdir"     && apt-get update     && apt-get install -y --no-install-recommends $buildDeps     && rm -rf /var/lib/apt/lists/*     && mkdir ${tmpdir}/rakudo         && curl -fsSL ${url}.asc -o ${tmpdir}/rakudo.tar.gz.asc     && curl -fsSL $url -o ${tmpdir}/rakudo.tar.gz     && gpg --batch --keyserver $keyserver --recv-keys $keyfp     && gpg --batch --verify ${tmpdir}/rakudo.tar.gz.asc ${tmpdir}/rakudo.tar.gz         && tar xzf ${tmpdir}/rakudo.tar.gz --strip-components=1 -C ${tmpdir}/rakudo     && (         cd ${tmpdir}/rakudo         && bash bin/rstar install -p /usr     )     && rm -rf $tmpdir     && apt-get purge -y --auto-remove $buildDeps
-# Fri, 13 Nov 2020 20:08:54 GMT
-ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/perl6/site/bin
-# Fri, 13 Nov 2020 20:08:55 GMT
+# Tue, 17 Nov 2020 21:05:02 GMT
+ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/perl6/core/bin:/usr/share/perl6/site/bin:/usr/share/perl6/vendor/bin
+# Tue, 17 Nov 2020 21:05:03 GMT
 CMD ["raku"]
 ```
 
@@ -153,7 +153,7 @@ CMD ["raku"]
 ## `rakudo-star:2020.10-alpine`
 
 ```console
-$ docker pull rakudo-star@sha256:e647202443d167e89b1eafb463394dab4dcd5df724d73361275ca672b16f8ebc
+$ docker pull rakudo-star@sha256:d540e3ab9bfd88e5239dc73778a9f9f6a7e7961cf0eb884fc3f553f2722e5ffa
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -164,14 +164,14 @@ $ docker pull rakudo-star@sha256:e647202443d167e89b1eafb463394dab4dcd5df724d7336
 ### `rakudo-star:2020.10-alpine` - linux; amd64
 
 ```console
-$ docker pull rakudo-star@sha256:39fc580cfb96fb3d00c35eabe8237c76406249a4680466fbb8d0300f6682924a
+$ docker pull rakudo-star@sha256:f1392cb2d9c49f3d577b70fc64ddc4a1010113db7f36ef7aece170c0b0fd7139
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
 -	Total Size: **42.5 MB (42503162 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:bdba8d1e59eb45693c0ccc241ff91b4954c741a3ca1cecba299e72a1aed06341`
+-	Image ID: `sha256:da208902968e5a30b98044d280426db55b9a4fc7515c1c5f47bc01e5406ac9e2`
 -	Default Command: `["raku"]`
 
 ```dockerfile
@@ -187,9 +187,9 @@ ARG rakudo_version=2020.10
 ENV rakudo_version=2020.10
 # Fri, 13 Nov 2020 19:50:04 GMT
 RUN buildDeps='         bash         gcc         gnupg         libc-dev         make         perl     '         url="https://rakudo.org/dl/star/rakudo-star-${rakudo_version}.tar.gz"     keyserver='ha.pool.sks-keyservers.net'     keyfp='B6F697742EFCAF5F23CE51D5031D65902E840821'     tmpdir="$(mktemp -d)"     && set -eux     && export GNUPGHOME="$tmpdir"     && apk add --no-cache --virtual .build-deps $buildDeps     && mkdir ${tmpdir}/rakudo         && wget ${url}.asc -O ${tmpdir}/rakudo.tar.gz.asc     && wget $url -O ${tmpdir}/rakudo.tar.gz     && gpg --batch --keyserver $keyserver --recv-keys $keyfp     && gpg --batch --verify ${tmpdir}/rakudo.tar.gz.asc ${tmpdir}/rakudo.tar.gz         && tar xzf ${tmpdir}/rakudo.tar.gz --strip-components=1 -C ${tmpdir}/rakudo     && (         cd ${tmpdir}/rakudo         && bash bin/rstar install -p /usr     )     && rm -rf $tmpdir     && apk del --no-network .build-deps
-# Fri, 13 Nov 2020 19:50:04 GMT
-ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/perl6/site/bin
-# Fri, 13 Nov 2020 19:50:04 GMT
+# Tue, 17 Nov 2020 21:16:33 GMT
+ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/perl6/core/bin:/usr/share/perl6/site/bin:/usr/share/perl6/vendor/bin
+# Tue, 17 Nov 2020 21:16:33 GMT
 CMD ["raku"]
 ```
 
@@ -210,14 +210,14 @@ CMD ["raku"]
 ### `rakudo-star:2020.10-alpine` - linux; arm64 variant v8
 
 ```console
-$ docker pull rakudo-star@sha256:0a592f5c626a95fc1bf849279e54886da6964294139015c75e16a81dd16ed0a2
+$ docker pull rakudo-star@sha256:1b150b8c713f8c8e4a5f2ccd08e338e0df490103b9e2952f8337b80a73a2f8df
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
 -	Total Size: **42.1 MB (42063171 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d626035c1f22f25ffff298a76eaa9659c3773fbc93904985cbf0283775e0eb2c`
+-	Image ID: `sha256:8fd3befdda8c6101aaa40b54a01fd0ae30331ffa564dc1acc1f4c0d907aba7a8`
 -	Default Command: `["raku"]`
 
 ```dockerfile
@@ -233,9 +233,9 @@ ARG rakudo_version=2020.10
 ENV rakudo_version=2020.10
 # Fri, 13 Nov 2020 20:30:53 GMT
 RUN buildDeps='         bash         gcc         gnupg         libc-dev         make         perl     '         url="https://rakudo.org/dl/star/rakudo-star-${rakudo_version}.tar.gz"     keyserver='ha.pool.sks-keyservers.net'     keyfp='B6F697742EFCAF5F23CE51D5031D65902E840821'     tmpdir="$(mktemp -d)"     && set -eux     && export GNUPGHOME="$tmpdir"     && apk add --no-cache --virtual .build-deps $buildDeps     && mkdir ${tmpdir}/rakudo         && wget ${url}.asc -O ${tmpdir}/rakudo.tar.gz.asc     && wget $url -O ${tmpdir}/rakudo.tar.gz     && gpg --batch --keyserver $keyserver --recv-keys $keyfp     && gpg --batch --verify ${tmpdir}/rakudo.tar.gz.asc ${tmpdir}/rakudo.tar.gz         && tar xzf ${tmpdir}/rakudo.tar.gz --strip-components=1 -C ${tmpdir}/rakudo     && (         cd ${tmpdir}/rakudo         && bash bin/rstar install -p /usr     )     && rm -rf $tmpdir     && apk del --no-network .build-deps
-# Fri, 13 Nov 2020 20:30:55 GMT
-ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/perl6/site/bin
-# Fri, 13 Nov 2020 20:30:55 GMT
+# Tue, 17 Nov 2020 21:05:10 GMT
+ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/perl6/core/bin:/usr/share/perl6/site/bin:/usr/share/perl6/vendor/bin
+# Tue, 17 Nov 2020 21:05:10 GMT
 CMD ["raku"]
 ```
 
@@ -256,7 +256,7 @@ CMD ["raku"]
 ## `rakudo-star:alpine`
 
 ```console
-$ docker pull rakudo-star@sha256:e647202443d167e89b1eafb463394dab4dcd5df724d73361275ca672b16f8ebc
+$ docker pull rakudo-star@sha256:d540e3ab9bfd88e5239dc73778a9f9f6a7e7961cf0eb884fc3f553f2722e5ffa
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -267,14 +267,14 @@ $ docker pull rakudo-star@sha256:e647202443d167e89b1eafb463394dab4dcd5df724d7336
 ### `rakudo-star:alpine` - linux; amd64
 
 ```console
-$ docker pull rakudo-star@sha256:39fc580cfb96fb3d00c35eabe8237c76406249a4680466fbb8d0300f6682924a
+$ docker pull rakudo-star@sha256:f1392cb2d9c49f3d577b70fc64ddc4a1010113db7f36ef7aece170c0b0fd7139
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
 -	Total Size: **42.5 MB (42503162 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:bdba8d1e59eb45693c0ccc241ff91b4954c741a3ca1cecba299e72a1aed06341`
+-	Image ID: `sha256:da208902968e5a30b98044d280426db55b9a4fc7515c1c5f47bc01e5406ac9e2`
 -	Default Command: `["raku"]`
 
 ```dockerfile
@@ -290,9 +290,9 @@ ARG rakudo_version=2020.10
 ENV rakudo_version=2020.10
 # Fri, 13 Nov 2020 19:50:04 GMT
 RUN buildDeps='         bash         gcc         gnupg         libc-dev         make         perl     '         url="https://rakudo.org/dl/star/rakudo-star-${rakudo_version}.tar.gz"     keyserver='ha.pool.sks-keyservers.net'     keyfp='B6F697742EFCAF5F23CE51D5031D65902E840821'     tmpdir="$(mktemp -d)"     && set -eux     && export GNUPGHOME="$tmpdir"     && apk add --no-cache --virtual .build-deps $buildDeps     && mkdir ${tmpdir}/rakudo         && wget ${url}.asc -O ${tmpdir}/rakudo.tar.gz.asc     && wget $url -O ${tmpdir}/rakudo.tar.gz     && gpg --batch --keyserver $keyserver --recv-keys $keyfp     && gpg --batch --verify ${tmpdir}/rakudo.tar.gz.asc ${tmpdir}/rakudo.tar.gz         && tar xzf ${tmpdir}/rakudo.tar.gz --strip-components=1 -C ${tmpdir}/rakudo     && (         cd ${tmpdir}/rakudo         && bash bin/rstar install -p /usr     )     && rm -rf $tmpdir     && apk del --no-network .build-deps
-# Fri, 13 Nov 2020 19:50:04 GMT
-ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/perl6/site/bin
-# Fri, 13 Nov 2020 19:50:04 GMT
+# Tue, 17 Nov 2020 21:16:33 GMT
+ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/perl6/core/bin:/usr/share/perl6/site/bin:/usr/share/perl6/vendor/bin
+# Tue, 17 Nov 2020 21:16:33 GMT
 CMD ["raku"]
 ```
 
@@ -313,14 +313,14 @@ CMD ["raku"]
 ### `rakudo-star:alpine` - linux; arm64 variant v8
 
 ```console
-$ docker pull rakudo-star@sha256:0a592f5c626a95fc1bf849279e54886da6964294139015c75e16a81dd16ed0a2
+$ docker pull rakudo-star@sha256:1b150b8c713f8c8e4a5f2ccd08e338e0df490103b9e2952f8337b80a73a2f8df
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
 -	Total Size: **42.1 MB (42063171 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d626035c1f22f25ffff298a76eaa9659c3773fbc93904985cbf0283775e0eb2c`
+-	Image ID: `sha256:8fd3befdda8c6101aaa40b54a01fd0ae30331ffa564dc1acc1f4c0d907aba7a8`
 -	Default Command: `["raku"]`
 
 ```dockerfile
@@ -336,9 +336,9 @@ ARG rakudo_version=2020.10
 ENV rakudo_version=2020.10
 # Fri, 13 Nov 2020 20:30:53 GMT
 RUN buildDeps='         bash         gcc         gnupg         libc-dev         make         perl     '         url="https://rakudo.org/dl/star/rakudo-star-${rakudo_version}.tar.gz"     keyserver='ha.pool.sks-keyservers.net'     keyfp='B6F697742EFCAF5F23CE51D5031D65902E840821'     tmpdir="$(mktemp -d)"     && set -eux     && export GNUPGHOME="$tmpdir"     && apk add --no-cache --virtual .build-deps $buildDeps     && mkdir ${tmpdir}/rakudo         && wget ${url}.asc -O ${tmpdir}/rakudo.tar.gz.asc     && wget $url -O ${tmpdir}/rakudo.tar.gz     && gpg --batch --keyserver $keyserver --recv-keys $keyfp     && gpg --batch --verify ${tmpdir}/rakudo.tar.gz.asc ${tmpdir}/rakudo.tar.gz         && tar xzf ${tmpdir}/rakudo.tar.gz --strip-components=1 -C ${tmpdir}/rakudo     && (         cd ${tmpdir}/rakudo         && bash bin/rstar install -p /usr     )     && rm -rf $tmpdir     && apk del --no-network .build-deps
-# Fri, 13 Nov 2020 20:30:55 GMT
-ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/perl6/site/bin
-# Fri, 13 Nov 2020 20:30:55 GMT
+# Tue, 17 Nov 2020 21:05:10 GMT
+ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/perl6/core/bin:/usr/share/perl6/site/bin:/usr/share/perl6/vendor/bin
+# Tue, 17 Nov 2020 21:05:10 GMT
 CMD ["raku"]
 ```
 
@@ -359,7 +359,7 @@ CMD ["raku"]
 ## `rakudo-star:latest`
 
 ```console
-$ docker pull rakudo-star@sha256:47ca25ba73d0a7f147b6ee422c22fc5511e776d29c8ed3b2808a81661d4dd3ac
+$ docker pull rakudo-star@sha256:8e055b973e9d1d38f995fb0434744e0f530c1492ba355521588bc0640cac3e71
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -370,14 +370,14 @@ $ docker pull rakudo-star@sha256:47ca25ba73d0a7f147b6ee422c22fc5511e776d29c8ed3b
 ### `rakudo-star:latest` - linux; amd64
 
 ```console
-$ docker pull rakudo-star@sha256:d93aac0d97e4cf88c2096a115082abbc1a59e0f32a571e970f5dfa67d8d8c0ef
+$ docker pull rakudo-star@sha256:5885b3f55ca687d7a9ee2b46f951a28fc170637b0602d88bb9432e9cad1ed9b2
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
 -	Total Size: **160.1 MB (160068712 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2cefa3cb01e3f6a8862e3e8c1a462badb2ca7eca7d125f32c39b130154690551`
+-	Image ID: `sha256:bcb32caf587bb1f6e8cf5120a225ecbb92703fa9411c8f444b1450bc97b74a41`
 -	Default Command: `["raku"]`
 
 ```dockerfile
@@ -401,9 +401,9 @@ ARG rakudo_version=2020.10
 ENV rakudo_version=2020.10
 # Fri, 13 Nov 2020 19:38:21 GMT
 RUN buildDeps='         gcc         libc6-dev         make     '         url="https://rakudo.org/dl/star/rakudo-star-${rakudo_version}.tar.gz"     keyserver='ha.pool.sks-keyservers.net'     keyfp='B6F697742EFCAF5F23CE51D5031D65902E840821'     tmpdir="$(mktemp -d)"     && set -eux     && export GNUPGHOME="$tmpdir"     && apt-get update     && apt-get install -y --no-install-recommends $buildDeps     && rm -rf /var/lib/apt/lists/*     && mkdir ${tmpdir}/rakudo         && curl -fsSL ${url}.asc -o ${tmpdir}/rakudo.tar.gz.asc     && curl -fsSL $url -o ${tmpdir}/rakudo.tar.gz     && gpg --batch --keyserver $keyserver --recv-keys $keyfp     && gpg --batch --verify ${tmpdir}/rakudo.tar.gz.asc ${tmpdir}/rakudo.tar.gz         && tar xzf ${tmpdir}/rakudo.tar.gz --strip-components=1 -C ${tmpdir}/rakudo     && (         cd ${tmpdir}/rakudo         && bash bin/rstar install -p /usr     )     && rm -rf $tmpdir     && apt-get purge -y --auto-remove $buildDeps
-# Fri, 13 Nov 2020 19:38:22 GMT
-ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/perl6/site/bin
-# Fri, 13 Nov 2020 19:38:22 GMT
+# Tue, 17 Nov 2020 21:16:28 GMT
+ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/perl6/core/bin:/usr/share/perl6/site/bin:/usr/share/perl6/vendor/bin
+# Tue, 17 Nov 2020 21:16:29 GMT
 CMD ["raku"]
 ```
 
@@ -436,14 +436,14 @@ CMD ["raku"]
 ### `rakudo-star:latest` - linux; arm64 variant v8
 
 ```console
-$ docker pull rakudo-star@sha256:1bdc9a9b501e5396ba17a9fd4b8402390aaca21f78f59e801d1e64ed20c2ab62
+$ docker pull rakudo-star@sha256:85ef27b9c1b84635a9338efb8b46f90e2a52843a88ec944254e38bb82dd99738
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
 -	Total Size: **158.8 MB (158806981 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1d36851047e6af41bd85a81382d814541ca529a3a3e622291b3a55a2c08caa08`
+-	Image ID: `sha256:b4a4c567ad78f60e3023e1070c3f1d20502843e5656c902b93a4730dfeb1cec9`
 -	Default Command: `["raku"]`
 
 ```dockerfile
@@ -467,9 +467,9 @@ ARG rakudo_version=2020.10
 ENV rakudo_version=2020.10
 # Fri, 13 Nov 2020 20:08:52 GMT
 RUN buildDeps='         gcc         libc6-dev         make     '         url="https://rakudo.org/dl/star/rakudo-star-${rakudo_version}.tar.gz"     keyserver='ha.pool.sks-keyservers.net'     keyfp='B6F697742EFCAF5F23CE51D5031D65902E840821'     tmpdir="$(mktemp -d)"     && set -eux     && export GNUPGHOME="$tmpdir"     && apt-get update     && apt-get install -y --no-install-recommends $buildDeps     && rm -rf /var/lib/apt/lists/*     && mkdir ${tmpdir}/rakudo         && curl -fsSL ${url}.asc -o ${tmpdir}/rakudo.tar.gz.asc     && curl -fsSL $url -o ${tmpdir}/rakudo.tar.gz     && gpg --batch --keyserver $keyserver --recv-keys $keyfp     && gpg --batch --verify ${tmpdir}/rakudo.tar.gz.asc ${tmpdir}/rakudo.tar.gz         && tar xzf ${tmpdir}/rakudo.tar.gz --strip-components=1 -C ${tmpdir}/rakudo     && (         cd ${tmpdir}/rakudo         && bash bin/rstar install -p /usr     )     && rm -rf $tmpdir     && apt-get purge -y --auto-remove $buildDeps
-# Fri, 13 Nov 2020 20:08:54 GMT
-ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/perl6/site/bin
-# Fri, 13 Nov 2020 20:08:55 GMT
+# Tue, 17 Nov 2020 21:05:02 GMT
+ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/perl6/core/bin:/usr/share/perl6/site/bin:/usr/share/perl6/vendor/bin
+# Tue, 17 Nov 2020 21:05:03 GMT
 CMD ["raku"]
 ```
 
