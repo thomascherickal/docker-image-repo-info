@@ -1,17 +1,17 @@
-# `node:14.15.0-stretch`
+# `node:14.15.1-stretch`
 
 ## Docker Metadata
 
-- Image ID: `sha256:b90fa0d7cbd1b1e1fa3b1cfa852e99752201157014c5ec6aec92441f306589bb`
-- Created: `2020-10-28T00:36:16.004015505Z`
-- Virtual Size: ~ 942.96 Mb  
+- Image ID: `sha256:4c7835fa737e1f06d2e86f9c7fcbe7e42635de6d770d13a1d67d89cad1bb3d7f`
+- Created: `2020-11-18T07:34:04.795687522Z`
+- Virtual Size: ~ 943.13 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
 - Command: `["node"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `NODE_VERSION=14.15.0`
+  - `NODE_VERSION=14.15.1`
   - `YARN_VERSION=1.22.5`
 
 ## `dpkg` (`.deb`-based packages)
@@ -1256,12 +1256,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/fonts-dejavu/2.37-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/fonts-dejavu/2.37-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `freetype=2.6.3-3.2+deb9u1`
+### `dpkg` source package: `freetype=2.6.3-3.2+deb9u2`
 
 Binary Packages:
 
-- `libfreetype6:amd64=2.6.3-3.2+deb9u1`
-- `libfreetype6-dev=2.6.3-3.2+deb9u1`
+- `libfreetype6:amd64=2.6.3-3.2+deb9u2`
+- `libfreetype6-dev=2.6.3-3.2+deb9u2`
 
 Licenses: (parsed from: `/usr/share/doc/libfreetype6/copyright`, `/usr/share/doc/libfreetype6-dev/copyright`)
 
@@ -1277,17 +1277,17 @@ Licenses: (parsed from: `/usr/share/doc/libfreetype6/copyright`, `/usr/share/doc
 Source:
 
 ```console
-$ apt-get source -qq --print-uris freetype=2.6.3-3.2+deb9u1
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.6.3-3.2+deb9u1.dsc' freetype_2.6.3-3.2+deb9u1.dsc 2165 SHA256:3722fb56c793ba2a93e46bb3156c81430247a3be84841b07290af1d2c5df9bfa
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.6.3.orig.tar.gz' freetype_2.6.3.orig.tar.gz 7313547 SHA256:814a22aad85e8ca2cb4acfc2e9dc59caa6eded4f6619590f7bd0a721e4b076a3
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.6.3-3.2+deb9u1.diff.gz' freetype_2.6.3-3.2+deb9u1.diff.gz 40763 SHA256:26822de2fe918a287779817dea689660bee1bfcf69ba43977b9b32b16a56bba3
+$ apt-get source -qq --print-uris freetype=2.6.3-3.2+deb9u2
+'http://security.debian.org/debian-security/pool/updates/main/f/freetype/freetype_2.6.3-3.2+deb9u2.dsc' freetype_2.6.3-3.2+deb9u2.dsc 2324 SHA256:c57c062194bac5cee81fce562d9bb8a5d76b262a6ff4c3dc5a1408c92563054f
+'http://security.debian.org/debian-security/pool/updates/main/f/freetype/freetype_2.6.3.orig.tar.gz' freetype_2.6.3.orig.tar.gz 7313547 SHA256:814a22aad85e8ca2cb4acfc2e9dc59caa6eded4f6619590f7bd0a721e4b076a3
+'http://security.debian.org/debian-security/pool/updates/main/f/freetype/freetype_2.6.3-3.2+deb9u2.diff.gz' freetype_2.6.3-3.2+deb9u2.diff.gz 41518 SHA256:c05e7510d0309638d51f9fbf4d5f9872b040dd9fd155ec83e6d363d09f550297
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/freetype/2.6.3-3.2+deb9u1/ (for browsing the source)
-- https://sources.debian.net/src/freetype/2.6.3-3.2+deb9u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/freetype/2.6.3-3.2+deb9u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/freetype/2.6.3-3.2+deb9u2/ (for browsing the source)
+- https://sources.debian.net/src/freetype/2.6.3-3.2+deb9u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/freetype/2.6.3-3.2+deb9u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gcc-6=6.3.0-18+deb9u1`
 
@@ -2253,20 +2253,20 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/keyutils/1.5.9-9/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/keyutils/1.5.9-9/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `krb5=1.15-1+deb9u1`
+### `dpkg` source package: `krb5=1.15-1+deb9u2`
 
 Binary Packages:
 
-- `krb5-multidev=1.15-1+deb9u1`
-- `libgssapi-krb5-2:amd64=1.15-1+deb9u1`
-- `libgssrpc4:amd64=1.15-1+deb9u1`
-- `libk5crypto3:amd64=1.15-1+deb9u1`
-- `libkadm5clnt-mit11:amd64=1.15-1+deb9u1`
-- `libkadm5srv-mit11:amd64=1.15-1+deb9u1`
-- `libkdb5-8:amd64=1.15-1+deb9u1`
-- `libkrb5-3:amd64=1.15-1+deb9u1`
-- `libkrb5-dev=1.15-1+deb9u1`
-- `libkrb5support0:amd64=1.15-1+deb9u1`
+- `krb5-multidev=1.15-1+deb9u2`
+- `libgssapi-krb5-2:amd64=1.15-1+deb9u2`
+- `libgssrpc4:amd64=1.15-1+deb9u2`
+- `libk5crypto3:amd64=1.15-1+deb9u2`
+- `libkadm5clnt-mit11:amd64=1.15-1+deb9u2`
+- `libkadm5srv-mit11:amd64=1.15-1+deb9u2`
+- `libkdb5-8:amd64=1.15-1+deb9u2`
+- `libkrb5-3:amd64=1.15-1+deb9u2`
+- `libkrb5-dev=1.15-1+deb9u2`
+- `libkrb5support0:amd64=1.15-1+deb9u2`
 
 Licenses: (parsed from: `/usr/share/doc/krb5-multidev/copyright`, `/usr/share/doc/libgssapi-krb5-2/copyright`, `/usr/share/doc/libgssrpc4/copyright`, `/usr/share/doc/libk5crypto3/copyright`, `/usr/share/doc/libkadm5clnt-mit11/copyright`, `/usr/share/doc/libkadm5srv-mit11/copyright`, `/usr/share/doc/libkdb5-8/copyright`, `/usr/share/doc/libkrb5-3/copyright`, `/usr/share/doc/libkrb5-dev/copyright`, `/usr/share/doc/libkrb5support0/copyright`)
 
@@ -2275,17 +2275,17 @@ Licenses: (parsed from: `/usr/share/doc/krb5-multidev/copyright`, `/usr/share/do
 Source:
 
 ```console
-$ apt-get source -qq --print-uris krb5=1.15-1+deb9u1
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.15-1+deb9u1.dsc' krb5_1.15-1+deb9u1.dsc 3373 SHA256:cb69444c826f380c9d3ea7c5e6bf04105ca2fceb26ecc14b293f458f337f34c2
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.15.orig.tar.gz' krb5_1.15.orig.tar.gz 9327157 SHA256:fd34752774c808ab4f6f864f935c49945f5a56b62240b1ad4ab1af7b4ded127c
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.15-1+deb9u1.debian.tar.xz' krb5_1.15-1+deb9u1.debian.tar.xz 144944 SHA256:f04183b2ecfd0fe488975338eb4f900d5f605c81a9ae279451ceda948d99a21c
+$ apt-get source -qq --print-uris krb5=1.15-1+deb9u2
+'http://security.debian.org/debian-security/pool/updates/main/k/krb5/krb5_1.15-1+deb9u2.dsc' krb5_1.15-1+deb9u2.dsc 3456 SHA256:8e5b510ef402e1e2df71959e3572c63ecc63781bbb1280047a61d95d6402ae34
+'http://security.debian.org/debian-security/pool/updates/main/k/krb5/krb5_1.15.orig.tar.gz' krb5_1.15.orig.tar.gz 9327157 SHA256:fd34752774c808ab4f6f864f935c49945f5a56b62240b1ad4ab1af7b4ded127c
+'http://security.debian.org/debian-security/pool/updates/main/k/krb5/krb5_1.15-1+deb9u2.debian.tar.xz' krb5_1.15-1+deb9u2.debian.tar.xz 145852 SHA256:b2c78df115be1b8758ce2ddaf5fe89eeaca192bc36d72a3c91bffa48c0cb1e62
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/krb5/1.15-1+deb9u1/ (for browsing the source)
-- https://sources.debian.net/src/krb5/1.15-1+deb9u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/krb5/1.15-1+deb9u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/krb5/1.15-1+deb9u2/ (for browsing the source)
+- https://sources.debian.net/src/krb5/1.15-1+deb9u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/krb5/1.15-1+deb9u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lcms2=2.8-4+deb9u1`
 
@@ -2581,12 +2581,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libevent/2.0.21-stable-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libevent/2.0.21-stable-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libexif=0.6.21-2+deb9u4`
+### `dpkg` source package: `libexif=0.6.21-2+deb9u5`
 
 Binary Packages:
 
-- `libexif-dev=0.6.21-2+deb9u4`
-- `libexif12:amd64=0.6.21-2+deb9u4`
+- `libexif-dev=0.6.21-2+deb9u5`
+- `libexif12:amd64=0.6.21-2+deb9u5`
 
 Licenses: (parsed from: `/usr/share/doc/libexif-dev/copyright`, `/usr/share/doc/libexif12/copyright`)
 
@@ -2599,17 +2599,17 @@ Licenses: (parsed from: `/usr/share/doc/libexif-dev/copyright`, `/usr/share/doc/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libexif=0.6.21-2+deb9u4
-'http://deb.debian.org/debian/pool/main/libe/libexif/libexif_0.6.21-2+deb9u4.dsc' libexif_0.6.21-2+deb9u4.dsc 2098 SHA256:4812b8a88cf3a6bbb2794497effc98af6e60b9dfbdcad2ea9d1aaf96a7328d14
-'http://deb.debian.org/debian/pool/main/libe/libexif/libexif_0.6.21.orig.tar.gz' libexif_0.6.21.orig.tar.gz 2081615 SHA256:edb7eb13664cf950a6edd132b75e99afe61c5effe2f16494e6d27bc404b287bf
-'http://deb.debian.org/debian/pool/main/libe/libexif/libexif_0.6.21-2+deb9u4.debian.tar.xz' libexif_0.6.21-2+deb9u4.debian.tar.xz 16296 SHA256:7cfbf1f2a33ea0ac85292aedae2708337de529be0f43f4303da5348b353b9b93
+$ apt-get source -qq --print-uris libexif=0.6.21-2+deb9u5
+'http://security.debian.org/debian-security/pool/updates/main/libe/libexif/libexif_0.6.21-2+deb9u5.dsc' libexif_0.6.21-2+deb9u5.dsc 2098 SHA256:f4549ada3f168339a331fca1e12106b81d95a7b707bba3735d99aaee2c2f4ab0
+'http://security.debian.org/debian-security/pool/updates/main/libe/libexif/libexif_0.6.21.orig.tar.gz' libexif_0.6.21.orig.tar.gz 2081615 SHA256:edb7eb13664cf950a6edd132b75e99afe61c5effe2f16494e6d27bc404b287bf
+'http://security.debian.org/debian-security/pool/updates/main/libe/libexif/libexif_0.6.21-2+deb9u5.debian.tar.xz' libexif_0.6.21-2+deb9u5.debian.tar.xz 16596 SHA256:a5328d0212118eb41c757edc55e39e1c8b0d748bfd8b247f2d1e05a63658d1d5
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/libexif/0.6.21-2+deb9u4/ (for browsing the source)
-- https://sources.debian.net/src/libexif/0.6.21-2+deb9u4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libexif/0.6.21-2+deb9u4/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/libexif/0.6.21-2+deb9u5/ (for browsing the source)
+- https://sources.debian.net/src/libexif/0.6.21-2+deb9u5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libexif/0.6.21-2+deb9u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libffi=3.2.1-6`
 
@@ -2898,12 +2898,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/liblqr/0.4.2-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/liblqr/0.4.2-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libmaxminddb=1.2.0-1`
+### `dpkg` source package: `libmaxminddb=1.2.0-1+deb9u1`
 
 Binary Packages:
 
-- `libmaxminddb-dev:amd64=1.2.0-1+b1`
-- `libmaxminddb0:amd64=1.2.0-1+b1`
+- `libmaxminddb-dev:amd64=1.2.0-1+deb9u1`
+- `libmaxminddb0:amd64=1.2.0-1+deb9u1`
 
 Licenses: (parsed from: `/usr/share/doc/libmaxminddb-dev/copyright`, `/usr/share/doc/libmaxminddb0/copyright`)
 
@@ -2918,17 +2918,17 @@ Licenses: (parsed from: `/usr/share/doc/libmaxminddb-dev/copyright`, `/usr/share
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libmaxminddb=1.2.0-1
-'http://deb.debian.org/debian/pool/main/libm/libmaxminddb/libmaxminddb_1.2.0-1.dsc' libmaxminddb_1.2.0-1.dsc 2115 SHA256:0c191c97687ec3bf9280d6564823c34ff203b91accf8915684b4358e84c2ab7e
-'http://deb.debian.org/debian/pool/main/libm/libmaxminddb/libmaxminddb_1.2.0.orig.tar.gz' libmaxminddb_1.2.0.orig.tar.gz 310051 SHA256:27726894d30644be604058fb3c9c90d1afe42beb071890dbc29c7e27fbf55fa9
-'http://deb.debian.org/debian/pool/main/libm/libmaxminddb/libmaxminddb_1.2.0-1.debian.tar.xz' libmaxminddb_1.2.0-1.debian.tar.xz 4228 SHA256:21f9cb39d1ae5d9e4da58b2a4d567b4db48f885b8f031e83e0a5c1ec6806ae48
+$ apt-get source -qq --print-uris libmaxminddb=1.2.0-1+deb9u1
+'http://security.debian.org/debian-security/pool/updates/main/libm/libmaxminddb/libmaxminddb_1.2.0-1+deb9u1.dsc' libmaxminddb_1.2.0-1+deb9u1.dsc 2326 SHA256:d04b7e266b9e50dd972a9f2b8d2d8595b80e3f635579b58e650460b1bf1b7dbc
+'http://security.debian.org/debian-security/pool/updates/main/libm/libmaxminddb/libmaxminddb_1.2.0.orig.tar.gz' libmaxminddb_1.2.0.orig.tar.gz 310051 SHA256:27726894d30644be604058fb3c9c90d1afe42beb071890dbc29c7e27fbf55fa9
+'http://security.debian.org/debian-security/pool/updates/main/libm/libmaxminddb/libmaxminddb_1.2.0-1+deb9u1.debian.tar.xz' libmaxminddb_1.2.0-1+deb9u1.debian.tar.xz 5860 SHA256:91aeb2612291166a1cddcb566408632adee31d26d3ff78866345273bd5111252
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/libmaxminddb/1.2.0-1/ (for browsing the source)
-- https://sources.debian.net/src/libmaxminddb/1.2.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libmaxminddb/1.2.0-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/libmaxminddb/1.2.0-1+deb9u1/ (for browsing the source)
+- https://sources.debian.net/src/libmaxminddb/1.2.0-1+deb9u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libmaxminddb/1.2.0-1+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libmnl=1.0.4-2`
 
@@ -3864,11 +3864,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libyaml/0.1.7-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libyaml/0.1.7-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `linux=4.9.228-1`
+### `dpkg` source package: `linux=4.9.240-2`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=4.9.228-1`
+- `linux-libc-dev:amd64=4.9.240-2`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -3881,17 +3881,17 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris linux=4.9.228-1
-'http://deb.debian.org/debian/pool/main/l/linux/linux_4.9.228-1.dsc' linux_4.9.228-1.dsc 125025 SHA256:407ba2a1617eec38c81fdb4b428464b731492d602b2453f49d1f7f3a7fa22186
-'http://deb.debian.org/debian/pool/main/l/linux/linux_4.9.228.orig.tar.xz' linux_4.9.228.orig.tar.xz 94892688 SHA256:527805935303b1e1e530cc660f6c500b9f105504b9dc1028e0bc9f3f890ba91e
-'http://deb.debian.org/debian/pool/main/l/linux/linux_4.9.228-1.debian.tar.xz' linux_4.9.228-1.debian.tar.xz 1296988 SHA256:0922b51cd071f57407033363cbbfbe5da9272787c1faf40b991939cca2e1c58d
+$ apt-get source -qq --print-uris linux=4.9.240-2
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.9.240-2.dsc' linux_4.9.240-2.dsc 125025 SHA256:0b22b0b2e5e589c159ccc0cf5d8b05bea1949e8c045c3e7351960d59075dce89
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.9.240.orig.tar.xz' linux_4.9.240.orig.tar.xz 94916396 SHA256:373b3a5c86a213db3d57cdc82d163968b03717f2a2edcbb3959e48a35c95649c
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.9.240-2.debian.tar.xz' linux_4.9.240-2.debian.tar.xz 1310080 SHA256:d72e645bedf22296818a1e56597b23f154c1c1fda3ef9700a264ca4050f5af65
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/linux/4.9.228-1/ (for browsing the source)
-- https://sources.debian.net/src/linux/4.9.228-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/4.9.228-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/linux/4.9.240-2/ (for browsing the source)
+- https://sources.debian.net/src/linux/4.9.240-2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/linux/4.9.240-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lsb=9.20161125`
 
@@ -4022,13 +4022,13 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/make-dfsg/4.1-9.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/make-dfsg/4.1-9.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `mariadb-10.1=10.1.45-0+deb9u1`
+### `dpkg` source package: `mariadb-10.1=10.1.47-0+deb9u1`
 
 Binary Packages:
 
-- `libmariadbclient-dev=10.1.45-0+deb9u1`
-- `libmariadbclient-dev-compat:amd64=10.1.45-0+deb9u1`
-- `libmariadbclient18:amd64=10.1.45-0+deb9u1`
+- `libmariadbclient-dev=10.1.47-0+deb9u1`
+- `libmariadbclient-dev-compat:amd64=10.1.47-0+deb9u1`
+- `libmariadbclient18:amd64=10.1.47-0+deb9u1`
 
 Licenses: (parsed from: `/usr/share/doc/libmariadbclient-dev/copyright`, `/usr/share/doc/libmariadbclient-dev-compat/copyright`, `/usr/share/doc/libmariadbclient18/copyright`)
 
@@ -4055,18 +4055,18 @@ Licenses: (parsed from: `/usr/share/doc/libmariadbclient-dev/copyright`, `/usr/s
 Source:
 
 ```console
-$ apt-get source -qq --print-uris mariadb-10.1=10.1.45-0+deb9u1
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.1/mariadb-10.1_10.1.45-0+deb9u1.dsc' mariadb-10.1_10.1.45-0+deb9u1.dsc 4530 SHA256:ec3cdad72e3ffab63fa28298032efbda0f593cace0649a36452b736e1c0a0e4f
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.1/mariadb-10.1_10.1.45.orig.tar.gz' mariadb-10.1_10.1.45.orig.tar.gz 63673824 SHA256:9d8f0f71f9613b2028ffc5c5be8b98948ec955eb0d89600d18ed7cc04807dad5
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.1/mariadb-10.1_10.1.45.orig.tar.gz.asc' mariadb-10.1_10.1.45.orig.tar.gz.asc 195 SHA256:5f6680f59d58052a5468cae0c099247b6738fec8f54fd46984fc823e16e7a9d4
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.1/mariadb-10.1_10.1.45-0+deb9u1.debian.tar.xz' mariadb-10.1_10.1.45-0+deb9u1.debian.tar.xz 230700 SHA256:e05d181eea6b449d1ae00bdad64a198c6b5c033e9bdbb07621ec8cdd472b1be7
+$ apt-get source -qq --print-uris mariadb-10.1=10.1.47-0+deb9u1
+'http://security.debian.org/debian-security/pool/updates/main/m/mariadb-10.1/mariadb-10.1_10.1.47-0+deb9u1.dsc' mariadb-10.1_10.1.47-0+deb9u1.dsc 4530 SHA256:4bd10bf10fb091cfa97de6e7849ca9a80659f1624551ecdfe1a531b6d961ca83
+'http://security.debian.org/debian-security/pool/updates/main/m/mariadb-10.1/mariadb-10.1_10.1.47.orig.tar.gz' mariadb-10.1_10.1.47.orig.tar.gz 63751492 SHA256:a4267487dbddf1dc1faed6e2a322c50a3e80d5d271cb487e8bdad6840e003227
+'http://security.debian.org/debian-security/pool/updates/main/m/mariadb-10.1/mariadb-10.1_10.1.47.orig.tar.gz.asc' mariadb-10.1_10.1.47.orig.tar.gz.asc 195 SHA256:0f53780aed2f95daec547786314df48da7a3b9c5c4dcb06a1422f71db4559d61
+'http://security.debian.org/debian-security/pool/updates/main/m/mariadb-10.1/mariadb-10.1_10.1.47-0+deb9u1.debian.tar.xz' mariadb-10.1_10.1.47-0+deb9u1.debian.tar.xz 230508 SHA256:df3392c203c7feba2f91b4cb78b2a8a17463a700ce529acc5696f803e2303113
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/mariadb-10.1/10.1.45-0+deb9u1/ (for browsing the source)
-- https://sources.debian.net/src/mariadb-10.1/10.1.45-0+deb9u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mariadb-10.1/10.1.45-0+deb9u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/mariadb-10.1/10.1.47-0+deb9u1/ (for browsing the source)
+- https://sources.debian.net/src/mariadb-10.1/10.1.47-0+deb9u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/mariadb-10.1/10.1.47-0+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mawk=1.3.3-17`
 
@@ -4460,12 +4460,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/openjpeg2/2.1.2-1.1+deb9u5/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/openjpeg2/2.1.2-1.1+deb9u5/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openldap=2.4.44+dfsg-5+deb9u4`
+### `dpkg` source package: `openldap=2.4.44+dfsg-5+deb9u5`
 
 Binary Packages:
 
-- `libldap-2.4-2:amd64=2.4.44+dfsg-5+deb9u4`
-- `libldap-common=2.4.44+dfsg-5+deb9u4`
+- `libldap-2.4-2:amd64=2.4.44+dfsg-5+deb9u5`
+- `libldap-common=2.4.44+dfsg-5+deb9u5`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -4474,17 +4474,17 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openldap=2.4.44+dfsg-5+deb9u4
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.44+dfsg-5+deb9u4.dsc' openldap_2.4.44+dfsg-5+deb9u4.dsc 3143 SHA256:07ad0dadb47a8ed0ee5aa6a207859873fdd296511433ca170bc635fad659f02a
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.44+dfsg.orig.tar.gz' openldap_2.4.44+dfsg.orig.tar.gz 4826590 SHA256:d5187c229bec163c5d97845846e1b87917755f85b04f444c08836384f4bd7ffe
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.44+dfsg-5+deb9u4.debian.tar.xz' openldap_2.4.44+dfsg-5+deb9u4.debian.tar.xz 169396 SHA256:03b7a898ea970c05c8a7f80505c6317e7570e87954ee21df00593c1f2c1412ab
+$ apt-get source -qq --print-uris openldap=2.4.44+dfsg-5+deb9u5
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.44+dfsg-5+deb9u5.dsc' openldap_2.4.44+dfsg-5+deb9u5.dsc 3017 SHA256:efc44737dac6b547e13cf304a35193002412476c12744576d55c09248c8036b4
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.44+dfsg.orig.tar.gz' openldap_2.4.44+dfsg.orig.tar.gz 4826590 SHA256:d5187c229bec163c5d97845846e1b87917755f85b04f444c08836384f4bd7ffe
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.44+dfsg-5+deb9u5.debian.tar.xz' openldap_2.4.44+dfsg-5+deb9u5.debian.tar.xz 169732 SHA256:d3b46b5331eb00e0332e2e8e8e8fb10fb070464c14f96e1438105e7e6dfab4c4
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/openldap/2.4.44+dfsg-5+deb9u4/ (for browsing the source)
-- https://sources.debian.net/src/openldap/2.4.44+dfsg-5+deb9u4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openldap/2.4.44+dfsg-5+deb9u4/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/openldap/2.4.44+dfsg-5+deb9u5/ (for browsing the source)
+- https://sources.debian.net/src/openldap/2.4.44+dfsg-5+deb9u5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openldap/2.4.44+dfsg-5+deb9u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssh=1:7.4p1-10+deb9u7`
 
@@ -5430,11 +5430,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tiff/4.0.8-2+deb9u5/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tiff/4.0.8-2+deb9u5/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tzdata=2020a-0+deb9u1`
+### `dpkg` source package: `tzdata=2020d-0+deb9u1`
 
 Binary Packages:
 
-- `tzdata=2020a-0+deb9u1`
+- `tzdata=2020d-0+deb9u1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -5443,18 +5443,18 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris tzdata=2020a-0+deb9u1
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a-0+deb9u1.dsc' tzdata_2020a-0+deb9u1.dsc 2270 SHA256:9d8d6d11d324336958b3f13dacd180372b6cffe830263dfa1b187be4c30c3ddc
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a.orig.tar.gz' tzdata_2020a.orig.tar.gz 397245 SHA256:547161eca24d344e0b5f96aff6a76b454da295dc14ed4ca50c2355043fb899a2
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a.orig.tar.gz.asc' tzdata_2020a.orig.tar.gz.asc 833 SHA256:a92f085fe1e7f8bc0f0a0bc4432f27e6cf2d69e64d4a90958bd023eb0ccf45f9
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a-0+deb9u1.debian.tar.xz' tzdata_2020a-0+deb9u1.debian.tar.xz 101968 SHA256:dc85bbeec67c115c5dd61673b37eb3a7c1d7402160cf6f790e0ffa816dea9205
+$ apt-get source -qq --print-uris tzdata=2020d-0+deb9u1
+'http://security.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2020d-0+deb9u1.dsc' tzdata_2020d-0+deb9u1.dsc 2270 SHA256:93c50069f4e16bacbd1f8ef7cf4c33b6a4c2c22859bdb777e819b7dccd1d6a1e
+'http://security.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2020d.orig.tar.gz' tzdata_2020d.orig.tar.gz 401479 SHA256:8d813957de363387696f05af8a8889afa282ab5016a764c701a20758d39cbaf3
+'http://security.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2020d.orig.tar.gz.asc' tzdata_2020d.orig.tar.gz.asc 833 SHA256:dab20578e9ef6823d7cc4593b28b453fc2edb929954e25259942654d1611adb8
+'http://security.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2020d-0+deb9u1.debian.tar.xz' tzdata_2020d-0+deb9u1.debian.tar.xz 103184 SHA256:ab8b467867ea886324f2af22ad01e0575d46ed7cdb73165e8952d951ab5a4891
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/tzdata/2020a-0+deb9u1/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2020a-0+deb9u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2020a-0+deb9u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/tzdata/2020d-0+deb9u1/ (for browsing the source)
+- https://sources.debian.net/src/tzdata/2020d-0+deb9u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tzdata/2020d-0+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0036`
 
