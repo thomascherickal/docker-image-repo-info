@@ -5439,7 +5439,7 @@ EXPOSE 8080
 ## `adminer:4.7-fastcgi`
 
 ```console
-$ docker pull adminer@sha256:65d5ac200dc15cc20b6945985d6c4777987b0580313a64a091b1a0e6b5973c29
+$ docker pull adminer@sha256:32a4d6d549d05c422ff13b498aac96261acbb5d22ad969d305c1544b0ac96331
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6091,14 +6091,14 @@ CMD ["php-fpm"]
 ### `adminer:4.7-fastcgi` - linux; 386
 
 ```console
-$ docker pull adminer@sha256:ee8351e10609a23762cd0a26d052b80209a1b34228c9b84f2031410e8f5cb9d0
+$ docker pull adminer@sha256:6e145e7af3e322953b6d673649b4df952bbc7c27979ab6ede40f912456362ef4
 ```
 
 -	Docker Version: 19.03.12
--	Manifest MIME: `application/vnd.docker.distribution.manifest.v1+json`
--	Total Size: **34.3 MB (34321293 bytes)**  
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **34.3 MB (34321261 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `9a57d173fdde4c7520d53a8c1e916ac412fb9fbcfd5638587d3af659716c687d`
+-	Image ID: `sha256:9713270e08609e1dba75785780a56fa07d36cbb5ed6a7b6a6ab69c7b5fbd2b58`
 -	Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
 -	Default Command: `["php-fpm"]`
 
@@ -6178,78 +6178,74 @@ ENTRYPOINT ["entrypoint.sh" "docker-php-entrypoint"]
 # Fri, 06 Nov 2020 03:09:06 GMT
 USER adminer
 # Fri, 06 Nov 2020 03:09:06 GMT
-RUN ["\/bin\/sh","-c","#(nop) ","CMD [\"php-fpm\"]"]
+CMD ["php-fpm"]
 ```
 
 -	Layers:
-	-	`sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4`  
-		Last Modified: Sat, 14 Nov 2015 09:09:44 GMT  
-		Size: 32.0 B  
-		MIME: application/octet-stream
-	-	`sha256:dbbba64b1a0872ae9ee42ef244f26da17022c2339c1537b55934b8bd6273a827`  
-		Last Modified: Fri, 06 Nov 2020 03:09:35 GMT  
-		Size: 498.0 B  
-		MIME: application/octet-stream
-	-	`sha256:7b46ef3b00f7c4797ee2111877da080fd7e51bd65566a1a86cce5c1cb8ca49e6`  
-		Last Modified: Fri, 06 Nov 2020 03:09:35 GMT  
-		Size: 570.7 KB (570688 bytes)  
-		MIME: application/octet-stream
-	-	`sha256:dc2e0af6580ee4ab73723bda9487727099561b3aca52d91210f554be7dc1d8c8`  
-		Last Modified: Fri, 06 Nov 2020 03:09:35 GMT  
-		Size: 1.5 KB (1476 bytes)  
-		MIME: application/octet-stream
-	-	`sha256:aa29e77db6671f45d6c474c21b1d28a4b0f324d30e9d381645997faadc6d5244`  
-		Last Modified: Fri, 06 Nov 2020 03:09:36 GMT  
-		Size: 4.5 MB (4518106 bytes)  
-		MIME: application/octet-stream
-	-	`sha256:26be2706144dafd2691065947897837d8600d77a0a34caffdd6469a6eec18d1b`  
-		Last Modified: Fri, 06 Nov 2020 03:09:34 GMT  
-		Size: 1.3 KB (1348 bytes)  
-		MIME: application/octet-stream
-	-	`sha256:71a8b68b75c4b71920a0a7f294dfd2f07fe6d2bbf29b880e4de580535aee8699`  
-		Last Modified: Fri, 06 Nov 2020 03:09:36 GMT  
-		Size: 309.0 B  
-		MIME: application/octet-stream
-	-	`sha256:c81ade4e2f80389543961619f7ce6b57161aaa62f962b460322bde07f8a57cca`  
-		Last Modified: Fri, 06 Nov 2020 02:14:14 GMT  
-		Size: 8.4 KB (8443 bytes)  
-		MIME: application/octet-stream
-	-	`sha256:937ea2ca17d4343e9a0c4796e829b0e9c69422fbecc11a413d2aa2e261da39ce`  
-		Last Modified: Fri, 06 Nov 2020 02:14:15 GMT  
-		Size: 16.9 KB (16892 bytes)  
-		MIME: application/octet-stream
-	-	`sha256:388577f95e53f3315840e5b80a29ca9f16c17b54844108e13dcedbf5fb8a16c1`  
-		Last Modified: Fri, 06 Nov 2020 02:14:14 GMT  
-		Size: 2.3 KB (2258 bytes)  
-		MIME: application/octet-stream
-	-	`sha256:b11d0971f582b736cb6d41bb6acfda85aa838598a734c55b010727680f6bdbcc`  
-		Last Modified: Fri, 06 Nov 2020 02:14:19 GMT  
-		Size: 14.6 MB (14637441 bytes)  
-		MIME: application/octet-stream
-	-	`sha256:20fe274d0c5c79286cbda85ea1bf046ec9049635d9a7b79e7020e7de340f5ae1`  
-		Last Modified: Fri, 06 Nov 2020 02:14:14 GMT  
-		Size: 499.0 B  
-		MIME: application/octet-stream
-	-	`sha256:c12032d8511a39ac88eb2ad41d01fd4ffb93a192302534c13d7dc849a99ab478`  
-		Last Modified: Fri, 06 Nov 2020 02:14:17 GMT  
-		Size: 10.3 MB (10330803 bytes)  
-		MIME: application/octet-stream
-	-	`sha256:f5729dcb8d303f82a7f8cf3df49048e34ce8ee89f79155fb08a475da46b64308`  
-		Last Modified: Thu, 22 Oct 2020 05:10:21 GMT  
-		Size: 220.0 B  
-		MIME: application/octet-stream
-	-	`sha256:f8d58e2433b13446c863e85b34f8e4c93ca9d5b3b93d2bac415fd9cdf77bcec4`  
-		Last Modified: Thu, 22 Oct 2020 05:10:21 GMT  
-		Size: 1.2 KB (1232 bytes)  
-		MIME: application/octet-stream
-	-	`sha256:30be8ffd290910905a5fb7cbb70252eb0f59edb09db20bdc21f3b65456acc28f`  
-		Last Modified: Thu, 22 Oct 2020 05:10:23 GMT  
-		Size: 1.4 MB (1439641 bytes)  
-		MIME: application/octet-stream
 	-	`sha256:d6ca64ac6f4b6382142ce9a3501652938130a6ec4bb02f3f455ee1f980834cfe`  
 		Last Modified: Thu, 22 Oct 2020 02:00:57 GMT  
 		Size: 2.8 MB (2791407 bytes)  
-		MIME: application/octet-stream
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:30be8ffd290910905a5fb7cbb70252eb0f59edb09db20bdc21f3b65456acc28f`  
+		Last Modified: Thu, 22 Oct 2020 05:10:23 GMT  
+		Size: 1.4 MB (1439641 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:f8d58e2433b13446c863e85b34f8e4c93ca9d5b3b93d2bac415fd9cdf77bcec4`  
+		Last Modified: Thu, 22 Oct 2020 05:10:21 GMT  
+		Size: 1.2 KB (1232 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:f5729dcb8d303f82a7f8cf3df49048e34ce8ee89f79155fb08a475da46b64308`  
+		Last Modified: Thu, 22 Oct 2020 05:10:21 GMT  
+		Size: 220.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c12032d8511a39ac88eb2ad41d01fd4ffb93a192302534c13d7dc849a99ab478`  
+		Last Modified: Fri, 06 Nov 2020 02:14:17 GMT  
+		Size: 10.3 MB (10330803 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:20fe274d0c5c79286cbda85ea1bf046ec9049635d9a7b79e7020e7de340f5ae1`  
+		Last Modified: Fri, 06 Nov 2020 02:14:14 GMT  
+		Size: 499.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:b11d0971f582b736cb6d41bb6acfda85aa838598a734c55b010727680f6bdbcc`  
+		Last Modified: Fri, 06 Nov 2020 02:14:19 GMT  
+		Size: 14.6 MB (14637441 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:388577f95e53f3315840e5b80a29ca9f16c17b54844108e13dcedbf5fb8a16c1`  
+		Last Modified: Fri, 06 Nov 2020 02:14:14 GMT  
+		Size: 2.3 KB (2258 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:937ea2ca17d4343e9a0c4796e829b0e9c69422fbecc11a413d2aa2e261da39ce`  
+		Last Modified: Fri, 06 Nov 2020 02:14:15 GMT  
+		Size: 16.9 KB (16892 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c81ade4e2f80389543961619f7ce6b57161aaa62f962b460322bde07f8a57cca`  
+		Last Modified: Fri, 06 Nov 2020 02:14:14 GMT  
+		Size: 8.4 KB (8443 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:71a8b68b75c4b71920a0a7f294dfd2f07fe6d2bbf29b880e4de580535aee8699`  
+		Last Modified: Fri, 06 Nov 2020 03:09:36 GMT  
+		Size: 309.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:26be2706144dafd2691065947897837d8600d77a0a34caffdd6469a6eec18d1b`  
+		Last Modified: Fri, 06 Nov 2020 03:09:34 GMT  
+		Size: 1.3 KB (1348 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:aa29e77db6671f45d6c474c21b1d28a4b0f324d30e9d381645997faadc6d5244`  
+		Last Modified: Fri, 06 Nov 2020 03:09:36 GMT  
+		Size: 4.5 MB (4518106 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:dc2e0af6580ee4ab73723bda9487727099561b3aca52d91210f554be7dc1d8c8`  
+		Last Modified: Fri, 06 Nov 2020 03:09:35 GMT  
+		Size: 1.5 KB (1476 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:7b46ef3b00f7c4797ee2111877da080fd7e51bd65566a1a86cce5c1cb8ca49e6`  
+		Last Modified: Fri, 06 Nov 2020 03:09:35 GMT  
+		Size: 570.7 KB (570688 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:dbbba64b1a0872ae9ee42ef244f26da17022c2339c1537b55934b8bd6273a827`  
+		Last Modified: Fri, 06 Nov 2020 03:09:35 GMT  
+		Size: 498.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adminer:4.7-fastcgi` - linux; ppc64le
 
