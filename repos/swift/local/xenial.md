@@ -1,10 +1,10 @@
-# `swift:5.3-xenial`
+# `swift:5.3.1-xenial`
 
 ## Docker Metadata
 
-- Image ID: `sha256:e73dd1f86769d32d34b3ec6bf9046f4360806295aae41066db9e86e14804e3f4`
-- Created: `2020-10-23T18:46:32.497909465Z`
-- Virtual Size: ~ 1.74 Gb  
+- Image ID: `sha256:faf47ab0b05c2cef48795f7f36d13440c332a55d9543f6b8627502a26b0727ee`
+- Created: `2020-11-16T19:48:14.903186569Z`
+- Virtual Size: ~ 1.76 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -12,8 +12,8 @@
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561`
   - `SWIFT_PLATFORM=ubuntu16.04`
-  - `SWIFT_BRANCH=swift-5.3-release`
-  - `SWIFT_VERSION=swift-5.3-RELEASE`
+  - `SWIFT_BRANCH=swift-5.3.1-release`
+  - `SWIFT_VERSION=swift-5.3.1-RELEASE`
   - `SWIFT_WEBROOT=https://swift.org/builds/`
 - Labels:
   - `Description=Docker Container for the Swift programming language`
@@ -1184,14 +1184,9 @@ Licenses: (parsed from: `/usr/share/doc/krb5-locales/copyright`, `/usr/share/doc
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris krb5=1.13.2+dfsg-5ubuntu2.1
-'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.13.2+dfsg-5ubuntu2.1.dsc' krb5_1.13.2+dfsg-5ubuntu2.1.dsc 3520 SHA512:1f00e7694e015d400d73503a54503aeb3fd32deb5927110fc1f805abb5d90a6112fff2829aec4fff7afcd7ec66559cb2b5153fd86cb9548deb6d246131a51b34
-'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.13.2+dfsg.orig.tar.gz' krb5_1.13.2+dfsg.orig.tar.gz 11884064 SHA512:d9562deaee7144c786c279e6e3415fe248fa1a71db8868ff05d1d7ef651274146d9e2c96f37c045fefd43364662ec41714bdd2d59a5ff16634ad7a510d4b3eab
-'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.13.2+dfsg-5ubuntu2.1.debian.tar.xz' krb5_1.13.2+dfsg-5ubuntu2.1.debian.tar.xz 113600 SHA512:2cc82e691667bb37f52e70b9fd9e1529ea07e981945becbbd7ecf2907e0d2dd23755779c114269c4cdbdf0b168766888582d8274b48f82126f7d87d4ce31bdcc
-```
 
 ### `dpkg` source package: `less=481-2.1ubuntu0.2`
 

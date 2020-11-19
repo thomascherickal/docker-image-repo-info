@@ -1,10 +1,10 @@
-# `swift:5.3-slim`
+# `swift:5.3.1-slim`
 
 ## Docker Metadata
 
-- Image ID: `sha256:e8e137c754a9de284d1f49e10b53d3801cece8a0cc29d773b1e2cff8054fe3d0`
-- Created: `2020-09-26T02:43:25.096050773Z`
-- Virtual Size: ~ 209.33 Mb  
+- Image ID: `sha256:bc0d35704e943730ce3a5a90439c890ab314535b35c7beb02ce125d37837dd61`
+- Created: `2020-11-16T19:49:52.564053126Z`
+- Virtual Size: ~ 209.35 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -12,8 +12,8 @@
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561`
   - `SWIFT_PLATFORM=ubuntu18.04`
-  - `SWIFT_BRANCH=swift-5.3-release`
-  - `SWIFT_VERSION=swift-5.3-RELEASE`
+  - `SWIFT_BRANCH=swift-5.3.1-release`
+  - `SWIFT_VERSION=swift-5.3.1-RELEASE`
   - `SWIFT_WEBROOT=https://swift.org/builds/`
 - Labels:
   - `Description=Docker Container for the Swift programming language`
@@ -749,14 +749,9 @@ Licenses: (parsed from: `/usr/share/doc/krb5-locales/copyright`, `/usr/share/doc
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris krb5=1.16-2ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.16-2ubuntu0.1.dsc' krb5_1.16-2ubuntu0.1.dsc 3563 SHA512:a73ea88dc4ac0583330fa93a790def3ae57b201b148995f48f301cddd0975dcbfe54ac099e9dacf6dfe089e177819865c652328d49af98c742d683a62a3a4946
-'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.16.orig.tar.gz' krb5_1.16.orig.tar.gz 9474479 SHA512:7e162467b95dad2b6aaa11686d08a00f1cc4eb08247fca8f0e5a8bcaa5f9f7b42cdf00db69c5c6111bdf9eb8063d53cef3bb207ce5d6a287615ca10b710153f9
-'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.16-2ubuntu0.1.debian.tar.xz' krb5_1.16-2ubuntu0.1.debian.tar.xz 99820 SHA512:80836484a0405bc271e21a04c12547a840a360276bfb30ae1fcb648e9ed67232bfad92c60614463acbe61701c58e72b49ffc892bcf00924c4dbdfac88a59f36c
-```
 
 ### `dpkg` source package: `libcap-ng=0.7.7-3.1`
 
