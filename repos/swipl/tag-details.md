@@ -3,6 +3,7 @@
 # Tags of `swipl`
 
 -	[`swipl:8.2.2`](#swipl822)
+-	[`swipl:8.3.13`](#swipl8313)
 -	[`swipl:latest`](#swipllatest)
 -	[`swipl:stable`](#swiplstable)
 
@@ -149,6 +150,10 @@ CMD ["swipl"]
 		Last Modified: Wed, 18 Nov 2020 11:19:01 GMT  
 		Size: 8.5 MB (8547219 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `swipl:8.3.13`
+
+**does not exist** (yet?)
 
 ## `swipl:latest`
 
