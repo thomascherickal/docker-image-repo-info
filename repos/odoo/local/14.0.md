@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:fa9ee392a4951c09b82024803109dd6ed8c5ff3a7754f8667da81fc76b042b68`
-- Created: `2020-11-12T19:23:03.539387668Z`
+- Image ID: `sha256:75c21f4d0287ede36cdb23b4027b60035bf8008fa5fe36d71e63e8822c5b6074`
+- Created: `2020-11-18T06:29:57.018713332Z`
 - Virtual Size: ~ 1.22 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -1971,31 +1971,6 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libdatrie/0.2.12-2/ (for browsing the source)
 - https://sources.debian.net/src/libdatrie/0.2.12-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libdatrie/0.2.12-2/ (for access to the source package after it no longer exists in the archive)
-
-### `dpkg` source package: `libedit=3.1-20181209-1`
-
-Binary Packages:
-
-- `libedit2:amd64=3.1-20181209-1`
-
-Licenses: (parsed from: `/usr/share/doc/libedit2/copyright`)
-
-- `BSD-3-clause`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris libedit=3.1-20181209-1
-'http://deb.debian.org/debian/pool/main/libe/libedit/libedit_3.1-20181209-1.dsc' libedit_3.1-20181209-1.dsc 2129 SHA256:147972bfbdd01d2e34f498327be6964b7c836d23eb6a13c1ab2becf756db5217
-'http://deb.debian.org/debian/pool/main/libe/libedit/libedit_3.1-20181209.orig.tar.gz' libedit_3.1-20181209.orig.tar.gz 521931 SHA256:2811d70c0b000f2ca91b7cb1a37203134441743c4fcc9c37b0b687f328611064
-'http://deb.debian.org/debian/pool/main/libe/libedit/libedit_3.1-20181209-1.debian.tar.xz' libedit_3.1-20181209-1.debian.tar.xz 14044 SHA256:605baee35b231f631d4ca046a8b7de4c34403ddf7c1bf418cec8cd7e027d9f8c
-```
-
-Other potentially useful URLs:
-
-- https://sources.debian.net/src/libedit/3.1-20181209-1/ (for browsing the source)
-- https://sources.debian.net/src/libedit/3.1-20181209-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libedit/3.1-20181209-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libffi=3.2.1-9`
 
@@ -9574,12 +9549,12 @@ Licenses: (parsed from: `/usr/share/doc/odoo/copyright`)
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `openldap=2.4.47+dfsg-3+deb10u2`
+### `dpkg` source package: `openldap=2.4.47+dfsg-3+deb10u4`
 
 Binary Packages:
 
-- `libldap-2.4-2:amd64=2.4.47+dfsg-3+deb10u2`
-- `libldap-common=2.4.47+dfsg-3+deb10u2`
+- `libldap-2.4-2:amd64=2.4.47+dfsg-3+deb10u4`
+- `libldap-common=2.4.47+dfsg-3+deb10u4`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -9588,17 +9563,17 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openldap=2.4.47+dfsg-3+deb10u2
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.47+dfsg-3+deb10u2.dsc' openldap_2.4.47+dfsg-3+deb10u2.dsc 3022 SHA256:e909c6be4bfd1bacf644959bc18ebeebaa13606879f11a7876d044cd688a6f62
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.47+dfsg.orig.tar.gz' openldap_2.4.47+dfsg.orig.tar.gz 4872293 SHA256:8f1ac7a4be7dd8ef158361efbfe16509756d3d9b396f5f378c3cf5c727807651
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.47+dfsg-3+deb10u2.debian.tar.xz' openldap_2.4.47+dfsg-3+deb10u2.debian.tar.xz 168684 SHA256:0f6f81f18a2407bd1a6c6003659d8b33145f31033b6f7fd026607554f0bdfcb0
+$ apt-get source -qq --print-uris openldap=2.4.47+dfsg-3+deb10u4
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.47+dfsg-3+deb10u4.dsc' openldap_2.4.47+dfsg-3+deb10u4.dsc 3022 SHA256:dc2cb7560c5e8a3eb8456a867be5c1e17ad3cbba662b92dbac5c42c86ddbcaf0
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.47+dfsg.orig.tar.gz' openldap_2.4.47+dfsg.orig.tar.gz 4872293 SHA256:8f1ac7a4be7dd8ef158361efbfe16509756d3d9b396f5f378c3cf5c727807651
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.47+dfsg-3+deb10u4.debian.tar.xz' openldap_2.4.47+dfsg-3+deb10u4.debian.tar.xz 169604 SHA256:2d64862980b182dfa8c1a8b6585729e29e837cf972602e21b18094da8efbb885
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/openldap/2.4.47+dfsg-3+deb10u2/ (for browsing the source)
-- https://sources.debian.net/src/openldap/2.4.47+dfsg-3+deb10u2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openldap/2.4.47+dfsg-3+deb10u2/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/openldap/2.4.47+dfsg-3+deb10u4/ (for browsing the source)
+- https://sources.debian.net/src/openldap/2.4.47+dfsg-3+deb10u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openldap/2.4.47+dfsg-3+deb10u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssl=1.1.1d-0+deb10u3`
 
@@ -9943,12 +9918,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/polib/1.1.0-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/polib/1.1.0-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `postgresql-13=13.0-1.pgdg100+1`
+### `dpkg` source package: `postgresql-13=13.1-1.pgdg100+1`
 
 Binary Packages:
 
-- `libpq5:amd64=13.0-1.pgdg100+1`
-- `postgresql-client-13=13.0-1.pgdg100+1`
+- `libpq5:amd64=13.1-1.pgdg100+1`
+- `postgresql-client-13=13.1-1.pgdg100+1`
 
 Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`, `/usr/share/doc/postgresql-client-13/copyright`)
 
@@ -9972,12 +9947,12 @@ Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`, `/usr/share/doc/postg
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `postgresql-common=220.pgdg100+1`
+### `dpkg` source package: `postgresql-common=223.pgdg100+1`
 
 Binary Packages:
 
-- `postgresql-client=13+220.pgdg100+1`
-- `postgresql-client-common=220.pgdg100+1`
+- `postgresql-client=13+223.pgdg100+1`
+- `postgresql-client-common=223.pgdg100+1`
 
 Licenses: (parsed from: `/usr/share/doc/postgresql-client/copyright`, `/usr/share/doc/postgresql-client-common/copyright`)
 
@@ -11845,11 +11820,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tiff/4.1.0+git191117-2~deb10u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tiff/4.1.0+git191117-2~deb10u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tzdata=2020a-0+deb10u1`
+### `dpkg` source package: `tzdata=2020d-0+deb10u1`
 
 Binary Packages:
 
-- `tzdata=2020a-0+deb10u1`
+- `tzdata=2020d-0+deb10u1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -11858,18 +11833,18 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris tzdata=2020a-0+deb10u1
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a-0+deb10u1.dsc' tzdata_2020a-0+deb10u1.dsc 2264 SHA256:24c86ca3f4755af8bd1ce2cd985382a490476f20006806fe5ec5c0f6b2a417c9
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a.orig.tar.gz' tzdata_2020a.orig.tar.gz 397245 SHA256:547161eca24d344e0b5f96aff6a76b454da295dc14ed4ca50c2355043fb899a2
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a.orig.tar.gz.asc' tzdata_2020a.orig.tar.gz.asc 833 SHA256:a92f085fe1e7f8bc0f0a0bc4432f27e6cf2d69e64d4a90958bd023eb0ccf45f9
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a-0+deb10u1.debian.tar.xz' tzdata_2020a-0+deb10u1.debian.tar.xz 104936 SHA256:df174cf4f4414006677b626f15b51a04762a2a0ef0171ce2f0c6856710a16d53
+$ apt-get source -qq --print-uris tzdata=2020d-0+deb10u1
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020d-0+deb10u1.dsc' tzdata_2020d-0+deb10u1.dsc 2264 SHA256:d5ce8c1729f34377334a0c8fad5ccd5b9cd88c314c28ad4dee119fa3489c8762
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020d.orig.tar.gz' tzdata_2020d.orig.tar.gz 401479 SHA256:8d813957de363387696f05af8a8889afa282ab5016a764c701a20758d39cbaf3
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020d.orig.tar.gz.asc' tzdata_2020d.orig.tar.gz.asc 833 SHA256:dab20578e9ef6823d7cc4593b28b453fc2edb929954e25259942654d1611adb8
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020d-0+deb10u1.debian.tar.xz' tzdata_2020d-0+deb10u1.debian.tar.xz 106172 SHA256:ae1b0588f5528e02c738cd7df8612c906a973911f9c18b18b76769380124610f
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/tzdata/2020a-0+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2020a-0+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2020a-0+deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/tzdata/2020d-0+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/tzdata/2020d-0+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tzdata/2020d-0+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0038+nmu1`
 
