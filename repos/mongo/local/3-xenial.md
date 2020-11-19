@@ -1,10 +1,10 @@
-# `mongo:3.6.20-xenial`
+# `mongo:3.6.21-xenial`
 
 ## Docker Metadata
 
-- Image ID: `sha256:af40c6796a735b4902cab7a2004c4d3f6678f71ae5166d2233d7bb2793103cb7`
-- Created: `2020-10-23T18:19:09.320316889Z`
-- Virtual Size: ~ 444.88 Mb  
+- Image ID: `sha256:d532351ad41faf8fff6defdbf6d9f707e9eef8e17b8d6ab5eba7ea44a1cdcf6f`
+- Created: `2020-11-16T19:26:36.743557806Z`
+- Virtual Size: ~ 445.92 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -17,7 +17,7 @@
   - `MONGO_PACKAGE=mongodb-org`
   - `MONGO_REPO=repo.mongodb.org`
   - `MONGO_MAJOR=3.6`
-  - `MONGO_VERSION=3.6.20`
+  - `MONGO_VERSION=3.6.21`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -965,15 +965,15 @@ $ apt-get source -qq --print-uris mawk=1.3.3-17ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.3-17ubuntu2.diff.gz' mawk_1.3.3-17ubuntu2.diff.gz 63882 SHA256:670103046767474be29e80f2143dc67e3d0b958972f5942c3df94883f978eded
 ```
 
-### `dpkg` source package: `mongodb-org=3.6.20`
+### `dpkg` source package: `mongodb-org=3.6.21`
 
 Binary Packages:
 
-- `mongodb-org=3.6.20`
-- `mongodb-org-mongos=3.6.20`
-- `mongodb-org-server=3.6.20`
-- `mongodb-org-shell=3.6.20`
-- `mongodb-org-tools=3.6.20`
+- `mongodb-org=3.6.21`
+- `mongodb-org-mongos=3.6.21`
+- `mongodb-org-server=3.6.21`
+- `mongodb-org-shell=3.6.21`
+- `mongodb-org-tools=3.6.21`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1298,19 +1298,24 @@ $ apt-get source -qq --print-uris tar=1.28-2.1ubuntu0.1
 'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.28-2.1ubuntu0.1.debian.tar.xz' tar_1.28-2.1ubuntu0.1.debian.tar.xz 36868 SHA512:17c96a2fec2c40c92f4f28a5c054811b8a6623cf5c5f6eb7b1f782fb41a1f5e6f516a38fae96dee8b4250acbe0f4dd162801406fcc495a0ffcf1a7257e1206dd
 ```
 
-### `dpkg` source package: `tzdata=2020a-0ubuntu0.16.04`
+### `dpkg` source package: `tzdata=2020d-0ubuntu0.16.04`
 
 Binary Packages:
 
-- `tzdata=2020a-0ubuntu0.16.04`
+- `tzdata=2020d-0ubuntu0.16.04`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris tzdata=2020d-0ubuntu0.16.04
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2020d-0ubuntu0.16.04.dsc' tzdata_2020d-0ubuntu0.16.04.dsc 2136 SHA512:6fc4dad73a394203049930a5dd37da531a9fc7940f760f620657f910ef93782b614ec8b7bddac63ece8a0c144bd22d81f8c0f20c49f362abda75f504a4f7a359
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2020d.orig.tar.gz' tzdata_2020d.orig.tar.gz 401479 SHA512:362e4569a666b0776614be3f63f1fe3d5ae259055e7051c9875f36023db9c52b0c5a10c19067114443a4cf2bf92475f8a0aebdf79bac836d967527fcdea4e9b6
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2020d-0ubuntu0.16.04.debian.tar.xz' tzdata_2020d-0ubuntu0.16.04.debian.tar.xz 101772 SHA512:83b9c51008d31e7e872e2cb169555d55fe1250dcb5f388c9048edbf6848dae09a9bd3e205cef7523bef77c1bc73373b87576956eb20946e4289ee33070d9ad5b
+```
 
 ### `dpkg` source package: `ubuntu-keyring=2012.05.19.1`
 
