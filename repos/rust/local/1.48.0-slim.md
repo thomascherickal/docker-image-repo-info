@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:f354cdf7e57182e8dc583dde13456905b6fd628a309d697bcb09d2b0d86833de`
-- Created: `2020-10-13T19:12:16.973259427Z`
-- Virtual Size: ~ 668.92 Mb  
+- Image ID: `sha256:e2cf0322c151f0d4b5b25361c3394a24a32047d23b53e433cd346092451016bf`
+- Created: `2020-11-19T20:31:17.329088106Z`
+- Virtual Size: ~ 680.59 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["bash"]`
@@ -12,7 +12,7 @@
   - `PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `RUSTUP_HOME=/usr/local/rustup`
   - `CARGO_HOME=/usr/local/cargo`
-  - `RUST_VERSION=1.47.0`
+  - `RUST_VERSION=1.48.0`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -1257,11 +1257,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libzstd/1.3.8+dfsg-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libzstd/1.3.8+dfsg-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `linux=4.19.146-1`
+### `dpkg` source package: `linux=4.19.152-1`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=4.19.146-1`
+- `linux-libc-dev:amd64=4.19.152-1`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -1276,17 +1276,17 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris linux=4.19.146-1
-'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.146-1.dsc' linux_4.19.146-1.dsc 191615 SHA256:d073e1201130f87ae9fbbef9657ac0d196367ded2ff3bd25a109fe94f71c5e30
-'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.146.orig.tar.xz' linux_4.19.146.orig.tar.xz 107530016 SHA256:161f45802adbe953ed67cc2997e3aebc9dbd762a49f1ac11ac45d13a2e5176b0
-'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.146-1.debian.tar.xz' linux_4.19.146-1.debian.tar.xz 1433256 SHA256:f501206bbe2ed8d2ac4ffbbe6d8c552d0f08b02e8a9895a3f4a5c278bce80435
+$ apt-get source -qq --print-uris linux=4.19.152-1
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.152-1.dsc' linux_4.19.152-1.dsc 191615 SHA256:f499079f030828dfe42f4146dbc5090bb0b88553ff5ae7fcabbe8a535ff782ea
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.152.orig.tar.xz' linux_4.19.152.orig.tar.xz 107539124 SHA256:6773903b52e79373f31c5542311800cb3534dcaf47eadc764770c419f25fd40e
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.152-1.debian.tar.xz' linux_4.19.152-1.debian.tar.xz 1438044 SHA256:dd63f5cbbfa110c50711247ee9e70ee0928497c7c5072e2b25d6c43ae9aba4b7
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/linux/4.19.146-1/ (for browsing the source)
-- https://sources.debian.net/src/linux/4.19.146-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/4.19.146-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/linux/4.19.152-1/ (for browsing the source)
+- https://sources.debian.net/src/linux/4.19.152-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/linux/4.19.152-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lz4=1.8.3-1`
 
@@ -1756,11 +1756,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tar/1.30+dfsg-6/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tar/1.30+dfsg-6/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tzdata=2020a-0+deb10u1`
+### `dpkg` source package: `tzdata=2020d-0+deb10u1`
 
 Binary Packages:
 
-- `tzdata=2020a-0+deb10u1`
+- `tzdata=2020d-0+deb10u1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1769,18 +1769,18 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris tzdata=2020a-0+deb10u1
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a-0+deb10u1.dsc' tzdata_2020a-0+deb10u1.dsc 2264 SHA256:24c86ca3f4755af8bd1ce2cd985382a490476f20006806fe5ec5c0f6b2a417c9
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a.orig.tar.gz' tzdata_2020a.orig.tar.gz 397245 SHA256:547161eca24d344e0b5f96aff6a76b454da295dc14ed4ca50c2355043fb899a2
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a.orig.tar.gz.asc' tzdata_2020a.orig.tar.gz.asc 833 SHA256:a92f085fe1e7f8bc0f0a0bc4432f27e6cf2d69e64d4a90958bd023eb0ccf45f9
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a-0+deb10u1.debian.tar.xz' tzdata_2020a-0+deb10u1.debian.tar.xz 104936 SHA256:df174cf4f4414006677b626f15b51a04762a2a0ef0171ce2f0c6856710a16d53
+$ apt-get source -qq --print-uris tzdata=2020d-0+deb10u1
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020d-0+deb10u1.dsc' tzdata_2020d-0+deb10u1.dsc 2264 SHA256:d5ce8c1729f34377334a0c8fad5ccd5b9cd88c314c28ad4dee119fa3489c8762
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020d.orig.tar.gz' tzdata_2020d.orig.tar.gz 401479 SHA256:8d813957de363387696f05af8a8889afa282ab5016a764c701a20758d39cbaf3
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020d.orig.tar.gz.asc' tzdata_2020d.orig.tar.gz.asc 833 SHA256:dab20578e9ef6823d7cc4593b28b453fc2edb929954e25259942654d1611adb8
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020d-0+deb10u1.debian.tar.xz' tzdata_2020d-0+deb10u1.debian.tar.xz 106172 SHA256:ae1b0588f5528e02c738cd7df8612c906a973911f9c18b18b76769380124610f
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/tzdata/2020a-0+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2020a-0+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2020a-0+deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/tzdata/2020d-0+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/tzdata/2020d-0+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tzdata/2020d-0+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `util-linux=2.33.1-0.1`
 
