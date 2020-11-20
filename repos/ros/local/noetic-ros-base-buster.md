@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:3540d48d6a11fc5e420789a3cf1e29d3d94c5226cbbe3880d8368f9340ef8a22`
-- Created: `2020-10-13T19:26:21.54301644Z`
+- Image ID: `sha256:cc3d12a2b68c2b2652caf124725c6d9f240d6ff269a0ed9115f5b8e25ade278e`
+- Created: `2020-11-18T12:34:40.257667252Z`
 - Virtual Size: ~ 1.34 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -3006,11 +3006,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libzstd/1.3.8+dfsg-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libzstd/1.3.8+dfsg-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `linux=4.19.146-1`
+### `dpkg` source package: `linux=4.19.152-1`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=4.19.146-1`
+- `linux-libc-dev:amd64=4.19.152-1`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -3025,17 +3025,17 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris linux=4.19.146-1
-'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.146-1.dsc' linux_4.19.146-1.dsc 191615 SHA256:d073e1201130f87ae9fbbef9657ac0d196367ded2ff3bd25a109fe94f71c5e30
-'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.146.orig.tar.xz' linux_4.19.146.orig.tar.xz 107530016 SHA256:161f45802adbe953ed67cc2997e3aebc9dbd762a49f1ac11ac45d13a2e5176b0
-'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.146-1.debian.tar.xz' linux_4.19.146-1.debian.tar.xz 1433256 SHA256:f501206bbe2ed8d2ac4ffbbe6d8c552d0f08b02e8a9895a3f4a5c278bce80435
+$ apt-get source -qq --print-uris linux=4.19.152-1
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.152-1.dsc' linux_4.19.152-1.dsc 191615 SHA256:f499079f030828dfe42f4146dbc5090bb0b88553ff5ae7fcabbe8a535ff782ea
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.152.orig.tar.xz' linux_4.19.152.orig.tar.xz 107539124 SHA256:6773903b52e79373f31c5542311800cb3534dcaf47eadc764770c419f25fd40e
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.152-1.debian.tar.xz' linux_4.19.152-1.debian.tar.xz 1438044 SHA256:dd63f5cbbfa110c50711247ee9e70ee0928497c7c5072e2b25d6c43ae9aba4b7
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/linux/4.19.146-1/ (for browsing the source)
-- https://sources.debian.net/src/linux/4.19.146-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/4.19.146-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/linux/4.19.152-1/ (for browsing the source)
+- https://sources.debian.net/src/linux/4.19.152-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/linux/4.19.152-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lksctp-tools=1.0.18+dfsg-1`
 
@@ -3199,14 +3199,14 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/make-dfsg/4.2.1-1.2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/make-dfsg/4.2.1-1.2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `mariadb-10.3=1:10.3.23-0+deb10u1`
+### `dpkg` source package: `mariadb-10.3=1:10.3.25-0+deb10u1`
 
 Binary Packages:
 
-- `libmariadb-dev=1:10.3.23-0+deb10u1`
-- `libmariadb-dev-compat:amd64=1:10.3.23-0+deb10u1`
-- `libmariadb3:amd64=1:10.3.23-0+deb10u1`
-- `mariadb-common=1:10.3.23-0+deb10u1`
+- `libmariadb-dev=1:10.3.25-0+deb10u1`
+- `libmariadb-dev-compat:amd64=1:10.3.25-0+deb10u1`
+- `libmariadb3:amd64=1:10.3.25-0+deb10u1`
+- `mariadb-common=1:10.3.25-0+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/libmariadb-dev/copyright`, `/usr/share/doc/libmariadb-dev-compat/copyright`, `/usr/share/doc/libmariadb3/copyright`, `/usr/share/doc/mariadb-common/copyright`)
 
@@ -3233,18 +3233,18 @@ Licenses: (parsed from: `/usr/share/doc/libmariadb-dev/copyright`, `/usr/share/d
 Source:
 
 ```console
-$ apt-get source -qq --print-uris mariadb-10.3=1:10.3.23-0+deb10u1
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.23-0+deb10u1.dsc' mariadb-10.3_10.3.23-0+deb10u1.dsc 4812 SHA256:c366bb61801471ad8a4ad0491ec684de214f9dac2a26b4d402f137de51285570
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.23.orig.tar.gz' mariadb-10.3_10.3.23.orig.tar.gz 72582611 SHA256:fc405022457d8eec5991b870cc1c9a07b83b551d6165c414c4d8f31523aa86ae
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.23.orig.tar.gz.asc' mariadb-10.3_10.3.23.orig.tar.gz.asc 195 SHA256:641e4d384fca5a93a2382b6d522881c6076e72c201afaf8d6a470d6e9c2b6b12
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.23-0+deb10u1.debian.tar.xz' mariadb-10.3_10.3.23-0+deb10u1.debian.tar.xz 223744 SHA256:d447215b78567b2efa40af745fc641e47debbb8d4d304e31ba2efbb05dbbfefd
+$ apt-get source -qq --print-uris mariadb-10.3=1:10.3.25-0+deb10u1
+'http://security.debian.org/debian-security/pool/updates/main/m/mariadb-10.3/mariadb-10.3_10.3.25-0+deb10u1.dsc' mariadb-10.3_10.3.25-0+deb10u1.dsc 4812 SHA256:e3c70464cfaa7674f6484eea3e38d6bd0b984677d2b66aca8ed62a97685ac5e5
+'http://security.debian.org/debian-security/pool/updates/main/m/mariadb-10.3/mariadb-10.3_10.3.25.orig.tar.gz' mariadb-10.3_10.3.25.orig.tar.gz 72710424 SHA256:12898196fce9d30a5a7639071b719b5b0cf5fbb9b0c8fa9f1cb95310cea09b6d
+'http://security.debian.org/debian-security/pool/updates/main/m/mariadb-10.3/mariadb-10.3_10.3.25.orig.tar.gz.asc' mariadb-10.3_10.3.25.orig.tar.gz.asc 195 SHA256:d54f0952ab17561b88db94c7324f77659e5e0f354b0fc8029512f75592dd7527
+'http://security.debian.org/debian-security/pool/updates/main/m/mariadb-10.3/mariadb-10.3_10.3.25-0+deb10u1.debian.tar.xz' mariadb-10.3_10.3.25-0+deb10u1.debian.tar.xz 222432 SHA256:f1d44943786217e050053a28a225b12b531fd8c578dbd66446a729e251e3d169
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/mariadb-10.3/1:10.3.23-0+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/mariadb-10.3/1:10.3.23-0+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mariadb-10.3/1:10.3.23-0+deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/mariadb-10.3/1:10.3.25-0+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/mariadb-10.3/1:10.3.25-0+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/mariadb-10.3/1:10.3.25-0+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mawk=1.3.3-17`
 
@@ -3686,13 +3686,13 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/ocl-icd/2.2.12-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/ocl-icd/2.2.12-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openldap=2.4.47+dfsg-3+deb10u2`
+### `dpkg` source package: `openldap=2.4.47+dfsg-3+deb10u4`
 
 Binary Packages:
 
-- `libldap-2.4-2:amd64=2.4.47+dfsg-3+deb10u2`
-- `libldap-common=2.4.47+dfsg-3+deb10u2`
-- `libldap2-dev:amd64=2.4.47+dfsg-3+deb10u2`
+- `libldap-2.4-2:amd64=2.4.47+dfsg-3+deb10u4`
+- `libldap-common=2.4.47+dfsg-3+deb10u4`
+- `libldap2-dev:amd64=2.4.47+dfsg-3+deb10u4`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -3701,17 +3701,17 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openldap=2.4.47+dfsg-3+deb10u2
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.47+dfsg-3+deb10u2.dsc' openldap_2.4.47+dfsg-3+deb10u2.dsc 3022 SHA256:e909c6be4bfd1bacf644959bc18ebeebaa13606879f11a7876d044cd688a6f62
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.47+dfsg.orig.tar.gz' openldap_2.4.47+dfsg.orig.tar.gz 4872293 SHA256:8f1ac7a4be7dd8ef158361efbfe16509756d3d9b396f5f378c3cf5c727807651
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.47+dfsg-3+deb10u2.debian.tar.xz' openldap_2.4.47+dfsg-3+deb10u2.debian.tar.xz 168684 SHA256:0f6f81f18a2407bd1a6c6003659d8b33145f31033b6f7fd026607554f0bdfcb0
+$ apt-get source -qq --print-uris openldap=2.4.47+dfsg-3+deb10u4
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.47+dfsg-3+deb10u4.dsc' openldap_2.4.47+dfsg-3+deb10u4.dsc 3022 SHA256:dc2cb7560c5e8a3eb8456a867be5c1e17ad3cbba662b92dbac5c42c86ddbcaf0
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.47+dfsg.orig.tar.gz' openldap_2.4.47+dfsg.orig.tar.gz 4872293 SHA256:8f1ac7a4be7dd8ef158361efbfe16509756d3d9b396f5f378c3cf5c727807651
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.47+dfsg-3+deb10u4.debian.tar.xz' openldap_2.4.47+dfsg-3+deb10u4.debian.tar.xz 169604 SHA256:2d64862980b182dfa8c1a8b6585729e29e837cf972602e21b18094da8efbb885
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/openldap/2.4.47+dfsg-3+deb10u2/ (for browsing the source)
-- https://sources.debian.net/src/openldap/2.4.47+dfsg-3+deb10u2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openldap/2.4.47+dfsg-3+deb10u2/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/openldap/2.4.47+dfsg-3+deb10u4/ (for browsing the source)
+- https://sources.debian.net/src/openldap/2.4.47+dfsg-3+deb10u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openldap/2.4.47+dfsg-3+deb10u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openmpi=3.1.3-11`
 
@@ -6569,11 +6569,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tinyxml2/7.0.0+dfsg-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tinyxml2/7.0.0+dfsg-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tzdata=2020a-0+deb10u1`
+### `dpkg` source package: `tzdata=2020d-0+deb10u1`
 
 Binary Packages:
 
-- `tzdata=2020a-0+deb10u1`
+- `tzdata=2020d-0+deb10u1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -6582,18 +6582,18 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris tzdata=2020a-0+deb10u1
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a-0+deb10u1.dsc' tzdata_2020a-0+deb10u1.dsc 2264 SHA256:24c86ca3f4755af8bd1ce2cd985382a490476f20006806fe5ec5c0f6b2a417c9
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a.orig.tar.gz' tzdata_2020a.orig.tar.gz 397245 SHA256:547161eca24d344e0b5f96aff6a76b454da295dc14ed4ca50c2355043fb899a2
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a.orig.tar.gz.asc' tzdata_2020a.orig.tar.gz.asc 833 SHA256:a92f085fe1e7f8bc0f0a0bc4432f27e6cf2d69e64d4a90958bd023eb0ccf45f9
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a-0+deb10u1.debian.tar.xz' tzdata_2020a-0+deb10u1.debian.tar.xz 104936 SHA256:df174cf4f4414006677b626f15b51a04762a2a0ef0171ce2f0c6856710a16d53
+$ apt-get source -qq --print-uris tzdata=2020d-0+deb10u1
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020d-0+deb10u1.dsc' tzdata_2020d-0+deb10u1.dsc 2264 SHA256:d5ce8c1729f34377334a0c8fad5ccd5b9cd88c314c28ad4dee119fa3489c8762
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020d.orig.tar.gz' tzdata_2020d.orig.tar.gz 401479 SHA256:8d813957de363387696f05af8a8889afa282ab5016a764c701a20758d39cbaf3
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020d.orig.tar.gz.asc' tzdata_2020d.orig.tar.gz.asc 833 SHA256:dab20578e9ef6823d7cc4593b28b453fc2edb929954e25259942654d1611adb8
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020d-0+deb10u1.debian.tar.xz' tzdata_2020d-0+deb10u1.debian.tar.xz 106172 SHA256:ae1b0588f5528e02c738cd7df8612c906a973911f9c18b18b76769380124610f
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/tzdata/2020a-0+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2020a-0+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2020a-0+deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/tzdata/2020d-0+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/tzdata/2020d-0+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tzdata/2020d-0+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0038+nmu1`
 
