@@ -1,10 +1,10 @@
-# `tomcat:8.5.59-jdk15-openjdk-slim-buster`
+# `tomcat:8.5.60-jdk15-openjdk-slim-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:08d127b0db842038e2d2c86e0fb8d97410d4c5a735888c5c9954190197893088`
-- Created: `2020-11-06T20:33:44.386703936Z`
-- Virtual Size: ~ 433.70 Mb  
+- Image ID: `sha256:23c5272b5b810021553bf8a4d4f8c80ad56b38336854ebfb25d3e01f34b6c6ca`
+- Created: `2020-11-18T17:29:27.384261087Z`
+- Virtual Size: ~ 433.82 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["catalina.sh","run"]`
@@ -18,8 +18,8 @@
   - `LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib`
   - `GPG_KEYS=05AB33110949707C93A279E3D3EFE6B686867BA6 07E48665A34DCAFAE522E5E6266191C37C037D42 47309207D818FFD8DCD3F83F1931D684307A10A5 541FBE7D8F78B25E055DDEE13C370389288584E7 61B832AC2F1C5A90F0F9B00A1C506407564C17A3 713DA88BE50911535FE716F5208B0AB1D63011C7 79F7026C690BAA50B92CD8B66A3AD3F4F22C4FED 9BA44C2621385CB966EBA586F72C284D731FABEE A27677289986DB50844682F8ACB77FC2E86E29AC A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243 F3A04C595DB5B6A5F1ECA43E3B7BBB100D811BBE F7DA48BB64BCB84ECBA7EE6935CD23C10D498E23`
   - `TOMCAT_MAJOR=8`
-  - `TOMCAT_VERSION=8.5.59`
-  - `TOMCAT_SHA512=3106fa39f1859ba31c87d245eaf8efe9c1f2f4837dc4f259c245d2c9b55d3593e97a9925e7d012d397987279965b8e24d940cfdda062d8ac9b64e41396120bd9`
+  - `TOMCAT_VERSION=8.5.60`
+  - `TOMCAT_SHA512=460b4d0f2d445670b69ff97d4295628b9ce444c294e301b4c0c5e4c48b42bb1a642769f075dfe105b7d7257d9aba62b75a6ea5b6fb65487891ab23d7bb3d6140`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -1611,11 +1611,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tar/1.30+dfsg-6/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tar/1.30+dfsg-6/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tzdata=2020a-0+deb10u1`
+### `dpkg` source package: `tzdata=2020d-0+deb10u1`
 
 Binary Packages:
 
-- `tzdata=2020a-0+deb10u1`
+- `tzdata=2020d-0+deb10u1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1624,18 +1624,18 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris tzdata=2020a-0+deb10u1
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a-0+deb10u1.dsc' tzdata_2020a-0+deb10u1.dsc 2264 SHA256:24c86ca3f4755af8bd1ce2cd985382a490476f20006806fe5ec5c0f6b2a417c9
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a.orig.tar.gz' tzdata_2020a.orig.tar.gz 397245 SHA256:547161eca24d344e0b5f96aff6a76b454da295dc14ed4ca50c2355043fb899a2
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a.orig.tar.gz.asc' tzdata_2020a.orig.tar.gz.asc 833 SHA256:a92f085fe1e7f8bc0f0a0bc4432f27e6cf2d69e64d4a90958bd023eb0ccf45f9
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a-0+deb10u1.debian.tar.xz' tzdata_2020a-0+deb10u1.debian.tar.xz 104936 SHA256:df174cf4f4414006677b626f15b51a04762a2a0ef0171ce2f0c6856710a16d53
+$ apt-get source -qq --print-uris tzdata=2020d-0+deb10u1
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020d-0+deb10u1.dsc' tzdata_2020d-0+deb10u1.dsc 2264 SHA256:d5ce8c1729f34377334a0c8fad5ccd5b9cd88c314c28ad4dee119fa3489c8762
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020d.orig.tar.gz' tzdata_2020d.orig.tar.gz 401479 SHA256:8d813957de363387696f05af8a8889afa282ab5016a764c701a20758d39cbaf3
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020d.orig.tar.gz.asc' tzdata_2020d.orig.tar.gz.asc 833 SHA256:dab20578e9ef6823d7cc4593b28b453fc2edb929954e25259942654d1611adb8
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020d-0+deb10u1.debian.tar.xz' tzdata_2020d-0+deb10u1.debian.tar.xz 106172 SHA256:ae1b0588f5528e02c738cd7df8612c906a973911f9c18b18b76769380124610f
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/tzdata/2020a-0+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2020a-0+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2020a-0+deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/tzdata/2020d-0+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/tzdata/2020d-0+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tzdata/2020d-0+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `util-linux=2.33.1-0.1`
 

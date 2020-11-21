@@ -1,10 +1,10 @@
-# `tomcat:8.5.59-jdk11-openjdk-buster`
+# `tomcat:8.5.60-jdk11-openjdk-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:838296205e635b13b6a4cd995f282042946972a9d524360802cb4599b3d2d8ca`
-- Created: `2020-11-12T03:48:39.095482605Z`
-- Virtual Size: ~ 647.35 Mb  
+- Image ID: `sha256:f640964ce4e025407aef2a79c56d3d9e4a9a67f7f46c7002ec3fed9adc3dade5`
+- Created: `2020-11-19T06:20:38.287824157Z`
+- Virtual Size: ~ 647.45 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["catalina.sh","run"]`
@@ -18,8 +18,8 @@
   - `LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib`
   - `GPG_KEYS=05AB33110949707C93A279E3D3EFE6B686867BA6 07E48665A34DCAFAE522E5E6266191C37C037D42 47309207D818FFD8DCD3F83F1931D684307A10A5 541FBE7D8F78B25E055DDEE13C370389288584E7 61B832AC2F1C5A90F0F9B00A1C506407564C17A3 713DA88BE50911535FE716F5208B0AB1D63011C7 79F7026C690BAA50B92CD8B66A3AD3F4F22C4FED 9BA44C2621385CB966EBA586F72C284D731FABEE A27677289986DB50844682F8ACB77FC2E86E29AC A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243 F3A04C595DB5B6A5F1ECA43E3B7BBB100D811BBE F7DA48BB64BCB84ECBA7EE6935CD23C10D498E23`
   - `TOMCAT_MAJOR=8`
-  - `TOMCAT_VERSION=8.5.59`
-  - `TOMCAT_SHA512=3106fa39f1859ba31c87d245eaf8efe9c1f2f4837dc4f259c245d2c9b55d3593e97a9925e7d012d397987279965b8e24d940cfdda062d8ac9b64e41396120bd9`
+  - `TOMCAT_VERSION=8.5.60`
+  - `TOMCAT_SHA512=460b4d0f2d445670b69ff97d4295628b9ce444c294e301b4c0c5e4c48b42bb1a642769f075dfe105b7d7257d9aba62b75a6ea5b6fb65487891ab23d7bb3d6140`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -786,11 +786,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/fonts-dejavu/2.37-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/fonts-dejavu/2.37-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `freetype=2.9.1-3+deb10u1`
+### `dpkg` source package: `freetype=2.9.1-3+deb10u2`
 
 Binary Packages:
 
-- `libfreetype6:amd64=2.9.1-3+deb10u1`
+- `libfreetype6:amd64=2.9.1-3+deb10u2`
 
 Licenses: (parsed from: `/usr/share/doc/libfreetype6/copyright`)
 
@@ -812,22 +812,22 @@ Licenses: (parsed from: `/usr/share/doc/libfreetype6/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris freetype=2.9.1-3+deb10u1
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.9.1-3+deb10u1.dsc' freetype_2.9.1-3+deb10u1.dsc 3690 SHA256:ef4825d67d044be4ea2e86444eae166057f8bd7d5606abf82d5095f47a3a7bd1
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.9.1.orig-ft2demos.tar.gz' freetype_2.9.1.orig-ft2demos.tar.gz 294850 SHA256:3d440aad3481285c7455f1593577e375c9d5792c800bbaba68d46fd75130fab9
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.9.1.orig-ft2demos.tar.gz.asc' freetype_2.9.1.orig-ft2demos.tar.gz.asc 359 SHA256:665b8357378dc715fbac964d05cdcc2a2f7fd1e9d7918a27bf50f4d0a17f0d30
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.9.1.orig-ft2docs.tar.gz' freetype_2.9.1.orig-ft2docs.tar.gz 2123920 SHA256:f57c1297f5ad2ad4764f491317fa0f548bd307c4513185d4a0602412e83b1dc9
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.9.1.orig-ft2docs.tar.gz.asc' freetype_2.9.1.orig-ft2docs.tar.gz.asc 359 SHA256:c4c674db43603f719018716970569d1722d0de46fa94757eb7f39266d72cdbd1
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.9.1.orig.tar.gz' freetype_2.9.1.orig.tar.gz 2533956 SHA256:ec391504e55498adceb30baceebd147a6e963f636eb617424bcfc47a169898ce
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.9.1.orig.tar.gz.asc' freetype_2.9.1.orig.tar.gz.asc 359 SHA256:2c2c5ae3b3838053b94366639e802b18bc4761003ea15ce73402d276baec424d
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.9.1-3+deb10u1.debian.tar.xz' freetype_2.9.1-3+deb10u1.debian.tar.xz 111972 SHA256:7a2765961a01332f2d402d86a126a9480efb326c995b0db2108c0f825d78cbe2
+$ apt-get source -qq --print-uris freetype=2.9.1-3+deb10u2
+'http://security.debian.org/debian-security/pool/updates/main/f/freetype/freetype_2.9.1-3+deb10u2.dsc' freetype_2.9.1-3+deb10u2.dsc 3845 SHA256:374330a49a699ec8dc4fff06b3270ae4d236d5b68a1258d60512f6edc9ddd1d1
+'http://security.debian.org/debian-security/pool/updates/main/f/freetype/freetype_2.9.1.orig-ft2demos.tar.gz' freetype_2.9.1.orig-ft2demos.tar.gz 294850 SHA256:3d440aad3481285c7455f1593577e375c9d5792c800bbaba68d46fd75130fab9
+'http://security.debian.org/debian-security/pool/updates/main/f/freetype/freetype_2.9.1.orig-ft2demos.tar.gz.asc' freetype_2.9.1.orig-ft2demos.tar.gz.asc 359 SHA256:665b8357378dc715fbac964d05cdcc2a2f7fd1e9d7918a27bf50f4d0a17f0d30
+'http://security.debian.org/debian-security/pool/updates/main/f/freetype/freetype_2.9.1.orig-ft2docs.tar.gz' freetype_2.9.1.orig-ft2docs.tar.gz 2123920 SHA256:f57c1297f5ad2ad4764f491317fa0f548bd307c4513185d4a0602412e83b1dc9
+'http://security.debian.org/debian-security/pool/updates/main/f/freetype/freetype_2.9.1.orig-ft2docs.tar.gz.asc' freetype_2.9.1.orig-ft2docs.tar.gz.asc 359 SHA256:c4c674db43603f719018716970569d1722d0de46fa94757eb7f39266d72cdbd1
+'http://security.debian.org/debian-security/pool/updates/main/f/freetype/freetype_2.9.1.orig.tar.gz' freetype_2.9.1.orig.tar.gz 2533956 SHA256:ec391504e55498adceb30baceebd147a6e963f636eb617424bcfc47a169898ce
+'http://security.debian.org/debian-security/pool/updates/main/f/freetype/freetype_2.9.1.orig.tar.gz.asc' freetype_2.9.1.orig.tar.gz.asc 359 SHA256:2c2c5ae3b3838053b94366639e802b18bc4761003ea15ce73402d276baec424d
+'http://security.debian.org/debian-security/pool/updates/main/f/freetype/freetype_2.9.1-3+deb10u2.debian.tar.xz' freetype_2.9.1-3+deb10u2.debian.tar.xz 112652 SHA256:0fdd4dc35e232a9dc09450fc0b961e0642c6a54135abea53be64991f26d31cc6
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/freetype/2.9.1-3+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/freetype/2.9.1-3+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/freetype/2.9.1-3+deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/freetype/2.9.1-3+deb10u2/ (for browsing the source)
+- https://sources.debian.net/src/freetype/2.9.1-3+deb10u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/freetype/2.9.1-3+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gcc-8=8.3.0-6`
 
@@ -2222,12 +2222,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/npth/1.6-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/npth/1.6-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openldap=2.4.47+dfsg-3+deb10u2`
+### `dpkg` source package: `openldap=2.4.47+dfsg-3+deb10u4`
 
 Binary Packages:
 
-- `libldap-2.4-2:amd64=2.4.47+dfsg-3+deb10u2`
-- `libldap-common=2.4.47+dfsg-3+deb10u2`
+- `libldap-2.4-2:amd64=2.4.47+dfsg-3+deb10u4`
+- `libldap-common=2.4.47+dfsg-3+deb10u4`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -2236,17 +2236,17 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openldap=2.4.47+dfsg-3+deb10u2
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.47+dfsg-3+deb10u2.dsc' openldap_2.4.47+dfsg-3+deb10u2.dsc 3022 SHA256:e909c6be4bfd1bacf644959bc18ebeebaa13606879f11a7876d044cd688a6f62
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.47+dfsg.orig.tar.gz' openldap_2.4.47+dfsg.orig.tar.gz 4872293 SHA256:8f1ac7a4be7dd8ef158361efbfe16509756d3d9b396f5f378c3cf5c727807651
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.47+dfsg-3+deb10u2.debian.tar.xz' openldap_2.4.47+dfsg-3+deb10u2.debian.tar.xz 168684 SHA256:0f6f81f18a2407bd1a6c6003659d8b33145f31033b6f7fd026607554f0bdfcb0
+$ apt-get source -qq --print-uris openldap=2.4.47+dfsg-3+deb10u4
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.47+dfsg-3+deb10u4.dsc' openldap_2.4.47+dfsg-3+deb10u4.dsc 3022 SHA256:dc2cb7560c5e8a3eb8456a867be5c1e17ad3cbba662b92dbac5c42c86ddbcaf0
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.47+dfsg.orig.tar.gz' openldap_2.4.47+dfsg.orig.tar.gz 4872293 SHA256:8f1ac7a4be7dd8ef158361efbfe16509756d3d9b396f5f378c3cf5c727807651
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.47+dfsg-3+deb10u4.debian.tar.xz' openldap_2.4.47+dfsg-3+deb10u4.debian.tar.xz 169604 SHA256:2d64862980b182dfa8c1a8b6585729e29e837cf972602e21b18094da8efbb885
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/openldap/2.4.47+dfsg-3+deb10u2/ (for browsing the source)
-- https://sources.debian.net/src/openldap/2.4.47+dfsg-3+deb10u2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openldap/2.4.47+dfsg-3+deb10u2/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/openldap/2.4.47+dfsg-3+deb10u4/ (for browsing the source)
+- https://sources.debian.net/src/openldap/2.4.47+dfsg-3+deb10u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openldap/2.4.47+dfsg-3+deb10u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssh=1:7.9p1-10+deb10u2`
 
@@ -2909,11 +2909,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tar/1.30+dfsg-6/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tar/1.30+dfsg-6/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tzdata=2020a-0+deb10u1`
+### `dpkg` source package: `tzdata=2020d-0+deb10u1`
 
 Binary Packages:
 
-- `tzdata=2020a-0+deb10u1`
+- `tzdata=2020d-0+deb10u1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -2922,18 +2922,18 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris tzdata=2020a-0+deb10u1
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a-0+deb10u1.dsc' tzdata_2020a-0+deb10u1.dsc 2264 SHA256:24c86ca3f4755af8bd1ce2cd985382a490476f20006806fe5ec5c0f6b2a417c9
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a.orig.tar.gz' tzdata_2020a.orig.tar.gz 397245 SHA256:547161eca24d344e0b5f96aff6a76b454da295dc14ed4ca50c2355043fb899a2
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a.orig.tar.gz.asc' tzdata_2020a.orig.tar.gz.asc 833 SHA256:a92f085fe1e7f8bc0f0a0bc4432f27e6cf2d69e64d4a90958bd023eb0ccf45f9
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a-0+deb10u1.debian.tar.xz' tzdata_2020a-0+deb10u1.debian.tar.xz 104936 SHA256:df174cf4f4414006677b626f15b51a04762a2a0ef0171ce2f0c6856710a16d53
+$ apt-get source -qq --print-uris tzdata=2020d-0+deb10u1
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020d-0+deb10u1.dsc' tzdata_2020d-0+deb10u1.dsc 2264 SHA256:d5ce8c1729f34377334a0c8fad5ccd5b9cd88c314c28ad4dee119fa3489c8762
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020d.orig.tar.gz' tzdata_2020d.orig.tar.gz 401479 SHA256:8d813957de363387696f05af8a8889afa282ab5016a764c701a20758d39cbaf3
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020d.orig.tar.gz.asc' tzdata_2020d.orig.tar.gz.asc 833 SHA256:dab20578e9ef6823d7cc4593b28b453fc2edb929954e25259942654d1611adb8
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020d-0+deb10u1.debian.tar.xz' tzdata_2020d-0+deb10u1.debian.tar.xz 106172 SHA256:ae1b0588f5528e02c738cd7df8612c906a973911f9c18b18b76769380124610f
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/tzdata/2020a-0+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2020a-0+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2020a-0+deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/tzdata/2020d-0+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/tzdata/2020d-0+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tzdata/2020d-0+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0038+nmu1`
 
