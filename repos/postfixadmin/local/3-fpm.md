@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:07d414f698fdc134d84821937b545c319395f177848a01128c8e2ea5e8392fcd`
-- Created: `2020-11-19T05:15:07.986929533Z`
-- Virtual Size: ~ 404.53 Mb  
+- Image ID: `sha256:09e0bc8463a4e03dc4430671253a734edf249169e4dbbb957dc0f2742b125d76`
+- Created: `2020-11-24T02:00:23.756287726Z`
+- Virtual Size: ~ 407.67 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/docker-entrypoint.sh"]`
@@ -1206,14 +1206,14 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/keyutils/1.6-6/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/keyutils/1.6-6/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `krb5=1.17-3`
+### `dpkg` source package: `krb5=1.17-3+deb10u1`
 
 Binary Packages:
 
-- `libgssapi-krb5-2:amd64=1.17-3`
-- `libk5crypto3:amd64=1.17-3`
-- `libkrb5-3:amd64=1.17-3`
-- `libkrb5support0:amd64=1.17-3`
+- `libgssapi-krb5-2:amd64=1.17-3+deb10u1`
+- `libk5crypto3:amd64=1.17-3+deb10u1`
+- `libkrb5-3:amd64=1.17-3+deb10u1`
+- `libkrb5support0:amd64=1.17-3+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/libgssapi-krb5-2/copyright`, `/usr/share/doc/libk5crypto3/copyright`, `/usr/share/doc/libkrb5-3/copyright`, `/usr/share/doc/libkrb5support0/copyright`)
 
@@ -1222,17 +1222,17 @@ Licenses: (parsed from: `/usr/share/doc/libgssapi-krb5-2/copyright`, `/usr/share
 Source:
 
 ```console
-$ apt-get source -qq --print-uris krb5=1.17-3
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17-3.dsc' krb5_1.17-3.dsc 3302 SHA256:56112c60a10a49126359478893d2f51cee5513e41f6ec7269360c7abe8850f3f
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17.orig.tar.gz' krb5_1.17.orig.tar.gz 8761763 SHA256:5a6e2284a53de5702d3dc2be3b9339c963f9b5397d3fbbc53beb249380a781f5
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17-3.debian.tar.xz' krb5_1.17-3.debian.tar.xz 99396 SHA256:35da9d221e3a29c57c38c9d326d625a5b9199f3d7d64983483bd82f871083c9f
+$ apt-get source -qq --print-uris krb5=1.17-3+deb10u1
+'http://security.debian.org/debian-security/pool/updates/main/k/krb5/krb5_1.17-3+deb10u1.dsc' krb5_1.17-3+deb10u1.dsc 3573 SHA256:e9edb5d47d4f7dc345e01adc45f1d302f5f19012f8c38d234ef9b2c08bbef7cc
+'http://security.debian.org/debian-security/pool/updates/main/k/krb5/krb5_1.17.orig.tar.gz' krb5_1.17.orig.tar.gz 8761763 SHA256:5a6e2284a53de5702d3dc2be3b9339c963f9b5397d3fbbc53beb249380a781f5
+'http://security.debian.org/debian-security/pool/updates/main/k/krb5/krb5_1.17-3+deb10u1.debian.tar.xz' krb5_1.17-3+deb10u1.debian.tar.xz 100584 SHA256:396ecf9ec5b4ac91d2ce8527d7f6b2309e70fc5b14ea1158eb7e367c48e9c5ca
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/krb5/1.17-3/ (for browsing the source)
-- https://sources.debian.net/src/krb5/1.17-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/krb5/1.17-3/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/krb5/1.17-3+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/krb5/1.17-3+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/krb5/1.17-3+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libbsd=0.9.1-2`
 
@@ -2633,6 +2633,34 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/util-linux/2.33.1-0.1/ (for browsing the source)
 - https://sources.debian.net/src/util-linux/2.33.1-0.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/util-linux/2.33.1-0.1/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `uw-imap=8:2007f~dfsg-6`
+
+Binary Packages:
+
+- `libc-client2007e=8:2007f~dfsg-6`
+- `mlock=8:2007f~dfsg-6`
+
+Licenses: (parsed from: `/usr/share/doc/libc-client2007e/copyright`, `/usr/share/doc/mlock/copyright`)
+
+- `Apache-2.0`
+- `GPL-2`
+- `GPL-2+`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris uw-imap=8:2007f~dfsg-6
+'http://deb.debian.org/debian/pool/main/u/uw-imap/uw-imap_2007f~dfsg-6.dsc' uw-imap_2007f~dfsg-6.dsc 2128 SHA256:b8891d31b6df15f437a27368453d56b059057e8fc2d5448bd59ccdf5e409fb5c
+'http://deb.debian.org/debian/pool/main/u/uw-imap/uw-imap_2007f~dfsg.orig.tar.gz' uw-imap_2007f~dfsg.orig.tar.gz 1607992 SHA256:4fdec0b5a085a7269db87214276e14ce79afdf7efec2ca8d431ab176b9062a8a
+'http://deb.debian.org/debian/pool/main/u/uw-imap/uw-imap_2007f~dfsg-6.debian.tar.xz' uw-imap_2007f~dfsg-6.debian.tar.xz 43756 SHA256:b4448f8630344da8a758d8db3f989272cd7f476adbae1f457d49f61793b71632
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/uw-imap/8:2007f~dfsg-6/ (for browsing the source)
+- https://sources.debian.net/src/uw-imap/8:2007f~dfsg-6/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/uw-imap/8:2007f~dfsg-6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `xz-utils=5.2.4-1`
 
