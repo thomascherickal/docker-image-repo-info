@@ -1,10 +1,10 @@
-# `orientdb:3.1.4`
+# `orientdb:3.1.5`
 
 ## Docker Metadata
 
-- Image ID: `sha256:6a3c229b7b82e0847b76ddb9a27fbe59ec364af5a1d8b15e49b3c19588205829`
-- Created: `2020-11-18T19:10:57.568109423Z`
-- Virtual Size: ~ 351.89 Mb  
+- Image ID: `sha256:fce99d93ef8257fa98609299367e6ec5ec62a6702b0e77fdcd77ce68926865f9`
+- Created: `2020-11-24T23:20:20.558674598Z`
+- Virtual Size: ~ 351.91 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["server.sh"]`
@@ -13,10 +13,10 @@
   - `LANG=C.UTF-8`
   - `JAVA_HOME=/usr/local/openjdk-8`
   - `JAVA_VERSION=8u275`
-  - `ORIENTDB_VERSION=3.1.4`
-  - `ORIENTDB_DOWNLOAD_MD5=702dc7c1863a8e84837111123353544c`
-  - `ORIENTDB_DOWNLOAD_SHA1=bafc6fba83fd741bdedc48747519e37c5d0098ba`
-  - `ORIENTDB_DOWNLOAD_URL=https://repo1.maven.org/maven2/com/orientechnologies/orientdb-community/3.1.4/orientdb-community-3.1.4.tar.gz`
+  - `ORIENTDB_VERSION=3.1.5`
+  - `ORIENTDB_DOWNLOAD_MD5=9cd529204aa78e9783552ba8402380f0`
+  - `ORIENTDB_DOWNLOAD_SHA1=c2ed59fc2f4f3fecbe1986b6ae4b3604841b39d3`
+  - `ORIENTDB_DOWNLOAD_URL=https://repo1.maven.org/maven2/com/orientechnologies/orientdb-community/3.1.5/orientdb-community-3.1.5.tar.gz`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -912,15 +912,15 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/keyutils/1.6-6/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/keyutils/1.6-6/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `krb5=1.17-3`
+### `dpkg` source package: `krb5=1.17-3+deb10u1`
 
 Binary Packages:
 
-- `krb5-locales=1.17-3`
-- `libgssapi-krb5-2:amd64=1.17-3`
-- `libk5crypto3:amd64=1.17-3`
-- `libkrb5-3:amd64=1.17-3`
-- `libkrb5support0:amd64=1.17-3`
+- `krb5-locales=1.17-3+deb10u1`
+- `libgssapi-krb5-2:amd64=1.17-3+deb10u1`
+- `libk5crypto3:amd64=1.17-3+deb10u1`
+- `libkrb5-3:amd64=1.17-3+deb10u1`
+- `libkrb5support0:amd64=1.17-3+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/krb5-locales/copyright`, `/usr/share/doc/libgssapi-krb5-2/copyright`, `/usr/share/doc/libk5crypto3/copyright`, `/usr/share/doc/libkrb5-3/copyright`, `/usr/share/doc/libkrb5support0/copyright`)
 
@@ -929,17 +929,17 @@ Licenses: (parsed from: `/usr/share/doc/krb5-locales/copyright`, `/usr/share/doc
 Source:
 
 ```console
-$ apt-get source -qq --print-uris krb5=1.17-3
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17-3.dsc' krb5_1.17-3.dsc 3302 SHA256:56112c60a10a49126359478893d2f51cee5513e41f6ec7269360c7abe8850f3f
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17.orig.tar.gz' krb5_1.17.orig.tar.gz 8761763 SHA256:5a6e2284a53de5702d3dc2be3b9339c963f9b5397d3fbbc53beb249380a781f5
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17-3.debian.tar.xz' krb5_1.17-3.debian.tar.xz 99396 SHA256:35da9d221e3a29c57c38c9d326d625a5b9199f3d7d64983483bd82f871083c9f
+$ apt-get source -qq --print-uris krb5=1.17-3+deb10u1
+'http://security.debian.org/debian-security/pool/updates/main/k/krb5/krb5_1.17-3+deb10u1.dsc' krb5_1.17-3+deb10u1.dsc 3573 SHA256:e9edb5d47d4f7dc345e01adc45f1d302f5f19012f8c38d234ef9b2c08bbef7cc
+'http://security.debian.org/debian-security/pool/updates/main/k/krb5/krb5_1.17.orig.tar.gz' krb5_1.17.orig.tar.gz 8761763 SHA256:5a6e2284a53de5702d3dc2be3b9339c963f9b5397d3fbbc53beb249380a781f5
+'http://security.debian.org/debian-security/pool/updates/main/k/krb5/krb5_1.17-3+deb10u1.debian.tar.xz' krb5_1.17-3+deb10u1.debian.tar.xz 100584 SHA256:396ecf9ec5b4ac91d2ce8527d7f6b2309e70fc5b14ea1158eb7e367c48e9c5ca
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/krb5/1.17-3/ (for browsing the source)
-- https://sources.debian.net/src/krb5/1.17-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/krb5/1.17-3/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/krb5/1.17-3+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/krb5/1.17-3+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/krb5/1.17-3+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libcap-ng=0.7.9-2`
 
