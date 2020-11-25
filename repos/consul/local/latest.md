@@ -1,17 +1,17 @@
-# `consul:1.8.5`
+# `consul:1.9.0`
 
 ## Docker Metadata
 
-- Image ID: `sha256:4f7b214361a700e6ca4a014ff49035be3678c9375ba478a7b20bd0859bdcd9a9`
-- Created: `2020-10-24T00:19:47.787149019Z`
-- Virtual Size: ~ 121.83 Mb  
+- Image ID: `sha256:7c239afe7006ea6f61ef8f831dece8e59dd43483f68b08f752569b2cf8cfc2bd`
+- Created: `2020-11-25T00:29:00.64277432Z`
+- Virtual Size: ~ 120.38 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
 - Command: `["agent","-dev","-client","0.0.0.0"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `CONSUL_VERSION=1.8.5`
+  - `CONSUL_VERSION=1.9.0`
   - `HASHICORP_RELEASES=https://releases.hashicorp.com`
 - Labels:
   - `org.opencontainers.image.authors=Consul Team <consul@hashicorp.com>`
@@ -208,16 +208,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libc6-compat`
 
 ```console
-libc6-compat-1.1.24-r9 description:
+libc6-compat-1.1.24-r10 description:
 compatibility libraries for glibc
 
-libc6-compat-1.1.24-r9 webpage:
+libc6-compat-1.1.24-r10 webpage:
 https://musl.libc.org/
 
-libc6-compat-1.1.24-r9 installed size:
+libc6-compat-1.1.24-r10 installed size:
 12288
 
-libc6-compat-1.1.24-r9 license:
+libc6-compat-1.1.24-r10 license:
 MIT
 
 ```
@@ -310,16 +310,16 @@ ISC
 ### `apk` package: `musl`
 
 ```console
-musl-1.1.24-r9 description:
+musl-1.1.24-r10 description:
 the musl c library (libc) implementation
 
-musl-1.1.24-r9 webpage:
+musl-1.1.24-r10 webpage:
 https://musl.libc.org/
 
-musl-1.1.24-r9 installed size:
+musl-1.1.24-r10 installed size:
 614400
 
-musl-1.1.24-r9 license:
+musl-1.1.24-r10 license:
 MIT
 
 ```
