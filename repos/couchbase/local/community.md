@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:948d0290473b21f92cf588a14a833e7c610b4f532667ce8be0c8a0c89d14c3f2`
-- Created: `2020-10-23T18:26:20.771918485Z`
-- Virtual Size: ~ 840.53 Mb  
+- Image ID: `sha256:c91876cdf9a3c516ec4f0dc96d19625181f50dc02c7e034ee37fc16838858cdf`
+- Created: `2020-11-25T22:48:14.029896507Z`
+- Virtual Size: ~ 840.66 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -212,11 +212,11 @@ $ apt-get source -qq --print-uris bzip2=1.0.6-8ubuntu0.2
 'http://archive.ubuntu.com/ubuntu/pool/main/b/bzip2/bzip2_1.0.6-8ubuntu0.2.debian.tar.bz2' bzip2_1.0.6-8ubuntu0.2.debian.tar.bz2 61599 SHA512:3c9ee464d8303a7c2c7a6dbaffd4bdd88752a65f1a2f968f8c4ed8084d732fb0c72614e5a88f4b9ee43228befb07ec5c283ab1e5995d38f7cd8239eab9c5101b
 ```
 
-### `dpkg` source package: `ca-certificates=20190110~16.04.1`
+### `dpkg` source package: `ca-certificates=20201027ubuntu0.16.04.1`
 
 Binary Packages:
 
-- `ca-certificates=20190110~16.04.1`
+- `ca-certificates=20201027ubuntu0.16.04.1`
 
 Licenses: (parsed from: `/usr/share/doc/ca-certificates/copyright`)
 
@@ -224,9 +224,13 @@ Licenses: (parsed from: `/usr/share/doc/ca-certificates/copyright`)
 - `GPL-2+`
 - `MPL-2.0`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris ca-certificates=20201027ubuntu0.16.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20201027ubuntu0.16.04.1.dsc' ca-certificates_20201027ubuntu0.16.04.1.dsc 1997 SHA512:2172b9d9c2db4c6e72671a3e1ff5367af03d174c9ad2404e08fc974d010bd7c3a88109972360d134de647e10f44d312e5dd50a60496e0696c69e9d7096d1e588
+'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20201027ubuntu0.16.04.1.tar.xz' ca-certificates_20201027ubuntu0.16.04.1.tar.xz 241984 SHA512:b04247b94f0bbe98994d2be59e6335e56d9a9e7e5e001f5ee015edef1a41541e4ff6f29d8102327538685b04a51b6319683d2938be2a0ce7b0159811bf1c47f1
+```
 
 ### `dpkg` source package: `cdebconf=0.198ubuntu1`
 
@@ -1248,11 +1252,11 @@ $ apt-get source -qq --print-uris pcre3=2:8.38-3.1
 'http://archive.ubuntu.com/ubuntu/pool/main/p/pcre3/pcre3_8.38-3.1.debian.tar.gz' pcre3_8.38-3.1.debian.tar.gz 32289 SHA256:9ee1b838c1de50cb5f6641016d0dd21b06f1038b9b7c3b1098e0a89b9c24b39f
 ```
 
-### `dpkg` source package: `perl=5.22.1-9ubuntu0.6`
+### `dpkg` source package: `perl=5.22.1-9ubuntu0.9`
 
 Binary Packages:
 
-- `perl-base=5.22.1-9ubuntu0.6`
+- `perl-base=5.22.1-9ubuntu0.9`
 
 Licenses: (parsed from: `/usr/share/doc/perl-base/copyright`)
 
@@ -1283,9 +1287,14 @@ Licenses: (parsed from: `/usr/share/doc/perl-base/copyright`)
 - `Unicode`
 - `ZLIB`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris perl=5.22.1-9ubuntu0.9
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.22.1-9ubuntu0.9.dsc' perl_5.22.1-9ubuntu0.9.dsc 2480 SHA512:78551f83138bae837431f926892f0dc07490b18b9e84c33a7baa1f301818cad74d40460889542f757530334510dc8bf7a60723fa9e3c5ff22c73abc8d8f49d63
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.22.1.orig.tar.xz' perl_5.22.1.orig.tar.xz 11223940 SHA512:f214bf6959e582a04034c9343a270fcc4fdcf959a8fbb393433865446e634024809d194cfd07ab614b2c09a5a73caec0a74945bbbb3d690663a5f6f10eb168b8
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.22.1-9ubuntu0.9.debian.tar.xz' perl_5.22.1-9ubuntu0.9.debian.tar.xz 167048 SHA512:77a9b2cbc73521969c77530819544c4f2a20e21bca2ee17092906b2804b5d575efc66626c1a9698dea4a3e4f2fd78c19f0c83a7824eb085e4bfd5fdcd2e28177
+```
 
 ### `dpkg` source package: `procps=2:3.3.10-4ubuntu2.5`
 
@@ -1497,19 +1506,24 @@ $ apt-get source -qq --print-uris tar=1.28-2.1ubuntu0.1
 'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.28-2.1ubuntu0.1.debian.tar.xz' tar_1.28-2.1ubuntu0.1.debian.tar.xz 36868 SHA512:17c96a2fec2c40c92f4f28a5c054811b8a6623cf5c5f6eb7b1f782fb41a1f5e6f516a38fae96dee8b4250acbe0f4dd162801406fcc495a0ffcf1a7257e1206dd
 ```
 
-### `dpkg` source package: `tzdata=2020a-0ubuntu0.16.04`
+### `dpkg` source package: `tzdata=2020d-0ubuntu0.16.04`
 
 Binary Packages:
 
-- `tzdata=2020a-0ubuntu0.16.04`
+- `tzdata=2020d-0ubuntu0.16.04`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris tzdata=2020d-0ubuntu0.16.04
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2020d-0ubuntu0.16.04.dsc' tzdata_2020d-0ubuntu0.16.04.dsc 2136 SHA512:6fc4dad73a394203049930a5dd37da531a9fc7940f760f620657f910ef93782b614ec8b7bddac63ece8a0c144bd22d81f8c0f20c49f362abda75f504a4f7a359
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2020d.orig.tar.gz' tzdata_2020d.orig.tar.gz 401479 SHA512:362e4569a666b0776614be3f63f1fe3d5ae259055e7051c9875f36023db9c52b0c5a10c19067114443a4cf2bf92475f8a0aebdf79bac836d967527fcdea4e9b6
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2020d-0ubuntu0.16.04.debian.tar.xz' tzdata_2020d-0ubuntu0.16.04.debian.tar.xz 101772 SHA512:83b9c51008d31e7e872e2cb169555d55fe1250dcb5f388c9048edbf6848dae09a9bd3e205cef7523bef77c1bc73373b87576956eb20946e4289ee33070d9ad5b
+```
 
 ### `dpkg` source package: `ubuntu-keyring=2012.05.19.1`
 
