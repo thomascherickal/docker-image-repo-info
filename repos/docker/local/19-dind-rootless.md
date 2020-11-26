@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:76688e5913de798a21eb564589a0b9f1c22c429111614af8e793e12a82a89752`
-- Created: `2020-11-06T18:20:29.047083508Z`
-- Virtual Size: ~ 296.85 Mb  
+- Image ID: `sha256:0ecc7eff4f052985de175418e125b299f26778f3a45a637b4cb303a34d4e6842`
+- Created: `2020-11-25T22:20:08.268795509Z`
+- Virtual Size: ~ 286.51 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["dockerd-entrypoint.sh"]`
@@ -13,7 +13,6 @@
   - `DOCKER_VERSION=19.03.13`
   - `DOCKER_TLS_CERTDIR=/certs`
   - `DIND_COMMIT=ed89041433a031cafc0a0f19cfe573c31688d377`
-  - `ROOTLESSKIT_VERSION=0.11.0`
 
 ## `apk` (`.apk`-based packages)
 
