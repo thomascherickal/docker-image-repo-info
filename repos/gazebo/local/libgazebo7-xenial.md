@@ -4334,14 +4334,9 @@ Licenses: (parsed from: `/usr/share/doc/libpoppler58/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris poppler=0.41.0-0ubuntu1.15
-'http://archive.ubuntu.com/ubuntu/pool/main/p/poppler/poppler_0.41.0-0ubuntu1.15.dsc' poppler_0.41.0-0ubuntu1.15.dsc 3376 SHA512:7398c3b5957706cf1ea909986f26649fc6135a2c55598e52c7dadc3502ff45b6767fcd9a81a9d7d90ce20faa1f8263e92d51bac9b16ab14e7947d3e7f01b4b91
-'http://archive.ubuntu.com/ubuntu/pool/main/p/poppler/poppler_0.41.0.orig.tar.xz' poppler_0.41.0.orig.tar.xz 1655448 SHA512:b2b99ac056efaae26f0bffc20756f17524011b7718a554ff48901422e7ab8caa4f879b800eacce1af5ae468346fa0beb569a4378f028a7d7cf0c9cc45f0d2402
-'http://archive.ubuntu.com/ubuntu/pool/main/p/poppler/poppler_0.41.0-0ubuntu1.15.debian.tar.xz' poppler_0.41.0-0ubuntu1.15.debian.tar.xz 56288 SHA512:3efe845b959b9618d2e8581cc295249e2de5cfe95d4d95dcbbf724fb05a44f8d33c9547bdfa4d6e234b9dd9c6ee8b3ed6d08f2151381181caab189e4ced77e7d
-```
 
 ### `dpkg` source package: `postgresql-9.5=9.5.24-0ubuntu0.16.04.1`
 
