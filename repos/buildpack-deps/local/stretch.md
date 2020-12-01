@@ -4867,20 +4867,13 @@ Licenses: (parsed from: `/usr/share/doc/libpq-dev/copyright`, `/usr/share/doc/li
 - `nagaysau-ishii`
 - `rijndael`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris postgresql-9.6=9.6.19-0+deb9u1
-'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-9.6/postgresql-9.6_9.6.19-0+deb9u1.dsc' postgresql-9.6_9.6.19-0+deb9u1.dsc 3698 SHA256:47d25e579a0ce6b10a0be91ccd7f7d932b7d6d50b78c288c62e78a0f52522a2a
-'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-9.6/postgresql-9.6_9.6.19.orig.tar.bz2' postgresql-9.6_9.6.19.orig.tar.bz2 18880036 SHA256:61f93a94ccddbe0b2d1afaf03f04ba605d8af5b774ff9b830e5adeb50ab55cb0
-'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-9.6/postgresql-9.6_9.6.19-0+deb9u1.debian.tar.xz' postgresql-9.6_9.6.19-0+deb9u1.debian.tar.xz 30256 SHA256:af121bdb428a6677c097068a2c4cded67aa30fa1fd08af58fcda44c2043a64cb
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/postgresql-9.6/9.6.19-0+deb9u1/
 
-- https://sources.debian.net/src/postgresql-9.6/9.6.19-0+deb9u1/ (for browsing the source)
-- https://sources.debian.net/src/postgresql-9.6/9.6.19-0+deb9u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/postgresql-9.6/9.6.19-0+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `procps=2:3.3.12-3+deb9u1`
 
