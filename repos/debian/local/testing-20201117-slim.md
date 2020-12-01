@@ -208,20 +208,13 @@ Licenses: (parsed from: `/usr/share/doc/bash/copyright`)
 
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris bash=5.1~rc2-1
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.1~rc2-1.dsc' bash_5.1~rc2-1.dsc 2324 SHA256:2e500effc33722fcaec52a989b53df8e0b4eae1171c97dccc87f4061768263b7
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.1~rc2.orig.tar.xz' bash_5.1~rc2.orig.tar.xz 5768912 SHA256:c191335496bd91ab85a6eed85e9ffcdaaf23edb77d23d69fdfd7bf65e29b7f80
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.1~rc2-1.debian.tar.xz' bash_5.1~rc2-1.debian.tar.xz 88176 SHA256:51242ef94a38881008ef7b7571f17c07e15ddb1af0c02f3f9ab43bf0a98bab7a
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/bash/5.1~rc2-1/
 
-- https://sources.debian.net/src/bash/5.1~rc2-1/ (for browsing the source)
-- https://sources.debian.net/src/bash/5.1~rc2-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/bash/5.1~rc2-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `bzip2=1.0.8-4`
 
@@ -556,20 +549,13 @@ Licenses: (parsed from: `/usr/share/doc/gcc-10-base/copyright`, `/usr/share/doc/
 - `GPL-3`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-10=10.2.0-16
-'http://deb.debian.org/debian/pool/main/g/gcc-10/gcc-10_10.2.0-16.dsc' gcc-10_10.2.0-16.dsc 27608 SHA256:ec903af2b9ce6d69a2f5122ef14d698a883afcb4a5b2e108de08c80c1cedf80c
-'http://deb.debian.org/debian/pool/main/g/gcc-10/gcc-10_10.2.0.orig.tar.gz' gcc-10_10.2.0.orig.tar.gz 97337200 SHA256:a04738b0cfcdef4c9b5a04f587cc53dfb45fabb8c363cda1a91cb667bd9ad553
-'http://deb.debian.org/debian/pool/main/g/gcc-10/gcc-10_10.2.0-16.debian.tar.xz' gcc-10_10.2.0-16.debian.tar.xz 2213372 SHA256:c5226eb55ea905725c32547e102f6ecb25086f9b56e82656650144f676a208f7
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gcc-10/10.2.0-16/
 
-- https://sources.debian.net/src/gcc-10/10.2.0-16/ (for browsing the source)
-- https://sources.debian.net/src/gcc-10/10.2.0-16/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gcc-10/10.2.0-16/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gcc-9=9.3.0-18`
 
@@ -1797,20 +1783,13 @@ Licenses: (parsed from: `/usr/share/doc/tar/copyright`)
 - `GPL-2`
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tar=1.30+dfsg-7
-'http://deb.debian.org/debian/pool/main/t/tar/tar_1.30+dfsg-7.dsc' tar_1.30+dfsg-7.dsc 1981 SHA256:5117afe47b5aab94c592d52c11c74dba146a11a7cdc22dbe067a4b5a5e895729
-'http://deb.debian.org/debian/pool/main/t/tar/tar_1.30+dfsg.orig.tar.xz' tar_1.30+dfsg.orig.tar.xz 1883220 SHA256:c02f3747ffe02017878303dde8b78e79cd220364c5e8048cf92320232e38912d
-'http://deb.debian.org/debian/pool/main/t/tar/tar_1.30+dfsg-7.debian.tar.xz' tar_1.30+dfsg-7.debian.tar.xz 22168 SHA256:12763df7f214458a56edc4a4b27adb2cb2041d597d74212ba34736f02bb68cd3
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tar/1.30+dfsg-7/
 
-- https://sources.debian.net/src/tar/1.30+dfsg-7/ (for browsing the source)
-- https://sources.debian.net/src/tar/1.30+dfsg-7/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tar/1.30+dfsg-7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tzdata=2020d-1`
 
