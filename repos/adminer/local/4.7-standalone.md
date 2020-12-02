@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:476c78d02a958aa51aa0c946e5470ad5e4134de61ffe0ebc8cbb2d46e398729a`
-- Created: `2020-11-06T02:45:10.930947688Z`
-- Virtual Size: ~ 89.88 Mb  
+- Image ID: `sha256:2024ca63f7f4cb414030b7865c7a5be9d2edb2bf1455fb933b0bc5ebceb74528`
+- Created: `2020-12-01T07:47:19.041281662Z`
+- Virtual Size: ~ 90.49 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
-  - `PHP_VERSION=7.4.12`
-  - `PHP_URL=https://www.php.net/distributions/php-7.4.12.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.12.tar.xz.asc`
-  - `PHP_SHA256=e82d2bcead05255f6b7d2ff4e2561bc334204955820cabc2457b5239fde96b76`
+  - `PHP_VERSION=7.4.13`
+  - `PHP_URL=https://www.php.net/distributions/php-7.4.13.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.13.tar.xz.asc`
+  - `PHP_SHA256=aead303e3abac23106529560547baebbedba0bb2943b91d5aa08fff1f41680f4`
   - `ADMINER_VERSION=4.7.7`
   - `ADMINER_DOWNLOAD_SHA256=566152a2d86186dcfb28856b4ed0dfdb60e355d93ab693f7931201f75868fff0`
   - `ADMINER_SRC_DOWNLOAD_SHA256=5d28c03739ce647a48ebe77e8db247b7f5ec7a2ee66ccabe00743c117d50e319`
@@ -302,16 +302,16 @@ custom
 ### `apk` package: `libpq`
 
 ```console
-libpq-12.4-r0 description:
+libpq-12.5-r0 description:
 PostgreSQL libraries
 
-libpq-12.4-r0 webpage:
+libpq-12.5-r0 webpage:
 https://www.postgresql.org/
 
-libpq-12.4-r0 installed size:
+libpq-12.5-r0 installed size:
 327680
 
-libpq-12.4-r0 license:
+libpq-12.5-r0 license:
 PostgreSQL
 
 ```
@@ -404,16 +404,16 @@ MIT
 ### `apk` package: `musl`
 
 ```console
-musl-1.1.24-r9 description:
+musl-1.1.24-r10 description:
 the musl c library (libc) implementation
 
-musl-1.1.24-r9 webpage:
+musl-1.1.24-r10 webpage:
 https://musl.libc.org/
 
-musl-1.1.24-r9 installed size:
+musl-1.1.24-r10 installed size:
 614400
 
-musl-1.1.24-r9 license:
+musl-1.1.24-r10 license:
 MIT
 
 ```
