@@ -1,7 +1,7 @@
 ## `drupal:9-fpm-alpine3.12`
 
 ```console
-$ docker pull drupal@sha256:9df0ac195abfe571b7ae9b6523269245a0bca71fd848880d2b02fde86fd6c815
+$ docker pull drupal@sha256:60169628d683def78808c3b1b3c6bd40e0a928031eac5ce16fe3a8ec5044b4ee
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -17,14 +17,14 @@ $ docker pull drupal@sha256:9df0ac195abfe571b7ae9b6523269245a0bca71fd848880d2b02
 ### `drupal:9-fpm-alpine3.12` - linux; amd64
 
 ```console
-$ docker pull drupal@sha256:b6f25bd1a81f400d17a6c3f58de75b4e4affeb10c52b091ef849f792d3bae0ce
+$ docker pull drupal@sha256:0e319331a3d4e421bb8b8679eb0d4621deab3a8e6b38906f733705e5eea04e83
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **51.5 MB (51530712 bytes)**  
+-	Total Size: **51.5 MB (51534302 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:780405a2c135aa7b3fbfdd6fc24e1f0b623865f920ab85c8c02f463dabdaa699`
+-	Image ID: `sha256:88b639837ba26778dce6c3884687335b2484164a2ce3c7edb50b7b5b18d56cb2`
 -	Entrypoint: `["docker-php-entrypoint"]`
 -	Default Command: `["php-fpm"]`
 
@@ -87,13 +87,13 @@ RUN set -eux; 		apk add --no-cache --virtual .build-deps 		coreutils 		freetype-
 RUN { 		echo 'opcache.memory_consumption=128'; 		echo 'opcache.interned_strings_buffer=8'; 		echo 'opcache.max_accelerated_files=4000'; 		echo 'opcache.revalidate_freq=60'; 		echo 'opcache.fast_shutdown=1'; 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
 # Tue, 01 Dec 2020 07:54:26 GMT
 COPY file:b6bcca04faa508806d0159296c412dceded25d0b0fb2121ecdc43d6442801f70 in /usr/local/bin/ 
-# Tue, 01 Dec 2020 07:54:27 GMT
-ENV DRUPAL_VERSION=9.0.8
-# Tue, 01 Dec 2020 07:54:27 GMT
+# Tue, 01 Dec 2020 23:30:32 GMT
+ENV DRUPAL_VERSION=9.0.9
+# Tue, 01 Dec 2020 23:30:32 GMT
 WORKDIR /opt/drupal
-# Tue, 01 Dec 2020 07:54:49 GMT
+# Tue, 01 Dec 2020 23:31:05 GMT
 RUN set -eux; 	export COMPOSER_HOME="$(mktemp -d)"; 	composer create-project --no-interaction "drupal/recommended-project:$DRUPAL_VERSION" ./; 	chown -R www-data:www-data web/sites web/modules web/themes; 	rmdir /var/www/html; 	ln -sf /opt/drupal/web /var/www/html; 	rm -rf "$COMPOSER_HOME"
-# Tue, 01 Dec 2020 07:54:50 GMT
+# Tue, 01 Dec 2020 23:31:06 GMT
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/drupal/vendor/bin
 ```
 
@@ -150,13 +150,13 @@ ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/drupa
 		Last Modified: Tue, 01 Dec 2020 07:59:38 GMT  
 		Size: 508.3 KB (508275 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:91d7f197b1580a1a6b5dcdf09fd19dc2a0ad1ebad2ec701391d5c5b3cba9a7a3`  
-		Last Modified: Tue, 01 Dec 2020 07:59:37 GMT  
-		Size: 115.0 B  
+	-	`sha256:82c070f2c1aab78c42f7b3c9735e15378cd1039ecc1f1beb008bc10b97f536cb`  
+		Last Modified: Tue, 01 Dec 2020 23:35:04 GMT  
+		Size: 113.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a6f8c78a22df1c5af8bc095c3ce0f90f1cd62e2f75e498001123c8232201018d`  
-		Last Modified: Tue, 01 Dec 2020 07:59:43 GMT  
-		Size: 17.2 MB (17231741 bytes)  
+	-	`sha256:6e5a92df07e281836a4d0dd83438e394eac5e0524af1a2a9934c7353a98190c1`  
+		Last Modified: Tue, 01 Dec 2020 23:35:10 GMT  
+		Size: 17.2 MB (17235333 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `drupal:9-fpm-alpine3.12` - linux; arm variant v6
