@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:fee824a1da2688c6fe42a96206a51913ed7b1e3271ea271b83fd198de3623569`
-- Created: `2020-11-25T22:58:06.563562213Z`
+- Image ID: `sha256:8499d54027ba4118c400d34014c33e04f4afeaa40e28d836a8350d0a5f24c23b`
+- Created: `2020-12-01T02:24:41.209350713Z`
 - Virtual Size: ~ 1.41 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -3374,14 +3374,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 - `GPL-2`
 - `redpine-signals`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=4.4.0-194.226
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0-194.226.dsc' linux_4.4.0-194.226.dsc 11596 SHA512:c29227608e7adebe8ddaec1bceb2e0300fb6cb1ef55679311a3eee1d4d6f8b233174a3186ddc50deb3224ee27e03ebb9dedb297d37ea3a9499c07a0e2c8b675d
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0.orig.tar.gz' linux_4.4.0.orig.tar.gz 132860730 SHA512:28ef89b62f663f2d90b58274799b7ebeff04699f08d0b83f650b0de179d4ef354450c81ecda07522b493c43d5eb2d530fa0f552a2794d48f84878e05efa39cc3
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0-194.226.diff.gz' linux_4.4.0-194.226.diff.gz 16775263 SHA512:c63471bda5d161de4f9703c78bc9010f95d4868d49d159495debbcd7e3347aecae428e06e955a07cecd29150a3510580840e72cf2db4193d5d3a8bf21f4a68f1
-```
 
 ### `dpkg` source package: `llvm-toolchain-6.0=1:6.0-1ubuntu2~16.04.1`
 
@@ -4324,19 +4319,24 @@ $ apt-get source -qq --print-uris pkg-config=0.29.1-0ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/p/pkg-config/pkg-config_0.29.1-0ubuntu1.diff.gz' pkg-config_0.29.1-0ubuntu1.diff.gz 12597 SHA256:1c44aeeec1896a69f21861e9b9e18bb783258d57f4bd678b173b3890f1a209bf
 ```
 
-### `dpkg` source package: `poppler=0.41.0-0ubuntu1.15`
+### `dpkg` source package: `poppler=0.41.0-0ubuntu1.16`
 
 Binary Packages:
 
-- `libpoppler58:amd64=0.41.0-0ubuntu1.15`
+- `libpoppler58:amd64=0.41.0-0ubuntu1.16`
 
 Licenses: (parsed from: `/usr/share/doc/libpoppler58/copyright`)
 
 - `GPL-2`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris poppler=0.41.0-0ubuntu1.16
+'http://archive.ubuntu.com/ubuntu/pool/main/p/poppler/poppler_0.41.0-0ubuntu1.16.dsc' poppler_0.41.0-0ubuntu1.16.dsc 3376 SHA512:61fc6b5630e3390ae036b2f8c0ae4093b8e362e4e800554a2b77d0368b1d5a7a9a7a8faee6a13aac8cadd790c259827402d4e9c83ac12d721338e1d0218e7c7d
+'http://archive.ubuntu.com/ubuntu/pool/main/p/poppler/poppler_0.41.0.orig.tar.xz' poppler_0.41.0.orig.tar.xz 1655448 SHA512:b2b99ac056efaae26f0bffc20756f17524011b7718a554ff48901422e7ab8caa4f879b800eacce1af5ae468346fa0beb569a4378f028a7d7cf0c9cc45f0d2402
+'http://archive.ubuntu.com/ubuntu/pool/main/p/poppler/poppler_0.41.0-0ubuntu1.16.debian.tar.xz' poppler_0.41.0-0ubuntu1.16.debian.tar.xz 56380 SHA512:30197dc8ecdd18370f8d83a788efd506d5b509e5b685444768bd6b4006594ced051f0634be97a26f5a74fc0b5bb2fcc9eb57ca665c6b11487ee036ff3a39053a
+```
 
 ### `dpkg` source package: `postgresql-9.5=9.5.24-0ubuntu0.16.04.1`
 

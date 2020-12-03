@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:121a8792b84b51482364df137788ff5f219ea48b7e58942f9c57971c27055a09`
-- Created: `2020-11-25T22:55:34.668350844Z`
-- Virtual Size: ~ 608.74 Mb  
+- Image ID: `sha256:d34022c2c5fa4d14f041c544f56a46267ef7903286ee492c296d691fa3bbb2bd`
+- Created: `2020-12-01T02:22:00.373561842Z`
+- Virtual Size: ~ 608.72 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/gzserver_entrypoint.sh"]`
@@ -3691,19 +3691,24 @@ $ apt-get source -qq --print-uris pinentry=0.9.7-3
 'http://archive.ubuntu.com/ubuntu/pool/main/p/pinentry/pinentry_0.9.7-3.debian.tar.xz' pinentry_0.9.7-3.debian.tar.xz 13032 SHA256:1d3f5b2ad83234537482ec0b78c5b411b25c84e91dfa1fdbebb1dbc8f1677b8f
 ```
 
-### `dpkg` source package: `poppler=0.41.0-0ubuntu1.15`
+### `dpkg` source package: `poppler=0.41.0-0ubuntu1.16`
 
 Binary Packages:
 
-- `libpoppler58:amd64=0.41.0-0ubuntu1.15`
+- `libpoppler58:amd64=0.41.0-0ubuntu1.16`
 
 Licenses: (parsed from: `/usr/share/doc/libpoppler58/copyright`)
 
 - `GPL-2`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris poppler=0.41.0-0ubuntu1.16
+'http://archive.ubuntu.com/ubuntu/pool/main/p/poppler/poppler_0.41.0-0ubuntu1.16.dsc' poppler_0.41.0-0ubuntu1.16.dsc 3376 SHA512:61fc6b5630e3390ae036b2f8c0ae4093b8e362e4e800554a2b77d0368b1d5a7a9a7a8faee6a13aac8cadd790c259827402d4e9c83ac12d721338e1d0218e7c7d
+'http://archive.ubuntu.com/ubuntu/pool/main/p/poppler/poppler_0.41.0.orig.tar.xz' poppler_0.41.0.orig.tar.xz 1655448 SHA512:b2b99ac056efaae26f0bffc20756f17524011b7718a554ff48901422e7ab8caa4f879b800eacce1af5ae468346fa0beb569a4378f028a7d7cf0c9cc45f0d2402
+'http://archive.ubuntu.com/ubuntu/pool/main/p/poppler/poppler_0.41.0-0ubuntu1.16.debian.tar.xz' poppler_0.41.0-0ubuntu1.16.debian.tar.xz 56380 SHA512:30197dc8ecdd18370f8d83a788efd506d5b509e5b685444768bd6b4006594ced051f0634be97a26f5a74fc0b5bb2fcc9eb57ca665c6b11487ee036ff3a39053a
+```
 
 ### `dpkg` source package: `postgresql-9.5=9.5.24-0ubuntu0.16.04.1`
 
