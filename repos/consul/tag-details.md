@@ -8,6 +8,7 @@
 -	[`consul:1.7.10`](#consul1710)
 -	[`consul:1.8`](#consul18)
 -	[`consul:1.8.6`](#consul186)
+-	[`consul:1.8.7-beta1`](#consul187-beta1)
 -	[`consul:1.9`](#consul19)
 -	[`consul:1.9.0`](#consul190)
 -	[`consul:latest`](#consullatest)
@@ -1889,6 +1890,15 @@ CMD ["agent" "-dev" "-client" "0.0.0.0"]
 		Last Modified: Sat, 21 Nov 2020 01:39:33 GMT  
 		Size: 1.7 KB (1707 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `consul:1.8.7-beta1`
+
+```console
+$ docker pull consul@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `consul:1.9`
 
