@@ -1,10 +1,10 @@
-# `php:7.4.12-zts-buster`
+# `php:8.0.0-zts-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:267b6d02292e1a529041c9c8e9430e20aa53c9980548cc8a2de76a056c29f73a`
-- Created: `2020-11-18T09:52:30.175919557Z`
-- Virtual Size: ~ 388.38 Mb  
+- Image ID: `sha256:8ab4cf288d8f5a73859c55b7943a2a1bf7c4cc91415691b3dfc2bd3f62f74b34`
+- Created: `2020-12-01T03:43:45.504257633Z`
+- Virtual Size: ~ 389.86 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -13,15 +13,15 @@
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `PHPIZE_DEPS=autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c`
   - `PHP_INI_DIR=/usr/local/etc/php`
-  - `PHP_EXTRA_CONFIGURE_ARGS=--enable-maintainer-zts --disable-cgi`
+  - `PHP_EXTRA_CONFIGURE_ARGS=--enable-zts --disable-cgi`
   - `PHP_CFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
-  - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
-  - `PHP_VERSION=7.4.12`
-  - `PHP_URL=https://www.php.net/distributions/php-7.4.12.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.12.tar.xz.asc`
-  - `PHP_SHA256=e82d2bcead05255f6b7d2ff4e2561bc334204955820cabc2457b5239fde96b76`
+  - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F`
+  - `PHP_VERSION=8.0.0`
+  - `PHP_URL=https://www.php.net/distributions/php-8.0.0.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.0.tar.xz.asc`
+  - `PHP_SHA256=b5278b3eef584f0c075d15666da4e952fa3859ee509d6b0cc2ed13df13f65ebb`
 
 ## `dpkg` (`.deb`-based packages)
 

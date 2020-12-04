@@ -1,10 +1,10 @@
-# `php:7.4.12-fpm-alpine3.12`
+# `php:8.0.0-fpm-alpine3.12`
 
 ## Docker Metadata
 
-- Image ID: `sha256:4ed2f3cb319d6477e426e8e4e7adee3b889e5de07fb4ab170f6375c6a4a37f40`
-- Created: `2020-11-05T20:51:40.32857406Z`
-- Virtual Size: ~ 81.46 Mb  
+- Image ID: `sha256:6bd7d9173974aa91f797aa3f86b9b095c6799160cd6ba9e41c7b506361a9c8e6`
+- Created: `2020-12-01T04:04:27.831338083Z`
+- Virtual Size: ~ 83.53 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -17,11 +17,11 @@
   - `PHP_CFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
-  - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
-  - `PHP_VERSION=7.4.12`
-  - `PHP_URL=https://www.php.net/distributions/php-7.4.12.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.12.tar.xz.asc`
-  - `PHP_SHA256=e82d2bcead05255f6b7d2ff4e2561bc334204955820cabc2457b5239fde96b76`
+  - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F`
+  - `PHP_VERSION=8.0.0`
+  - `PHP_URL=https://www.php.net/distributions/php-8.0.0.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.0.tar.xz.asc`
+  - `PHP_SHA256=b5278b3eef584f0c075d15666da4e952fa3859ee509d6b0cc2ed13df13f65ebb`
 
 ## `apk` (`.apk`-based packages)
 
@@ -317,16 +317,16 @@ MIT
 ### `apk` package: `musl`
 
 ```console
-musl-1.1.24-r9 description:
+musl-1.1.24-r10 description:
 the musl c library (libc) implementation
 
-musl-1.1.24-r9 webpage:
+musl-1.1.24-r10 webpage:
 https://musl.libc.org/
 
-musl-1.1.24-r9 installed size:
+musl-1.1.24-r10 installed size:
 614400
 
-musl-1.1.24-r9 license:
+musl-1.1.24-r10 license:
 MIT
 
 ```
