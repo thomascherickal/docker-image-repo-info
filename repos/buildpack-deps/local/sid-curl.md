@@ -711,20 +711,13 @@ Licenses: (parsed from: `/usr/share/doc/gcc-9-base/copyright`)
 - `LGPL`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-9=9.3.0-18
-'http://deb.debian.org/debian/pool/main/g/gcc-9/gcc-9_9.3.0-18.dsc' gcc-9_9.3.0-18.dsc 21922 SHA256:01a22647d58fee930898429a0b93d299f4bfe199c0722f2866d6bb1660e722fe
-'http://deb.debian.org/debian/pool/main/g/gcc-9/gcc-9_9.3.0.orig.tar.gz' gcc-9_9.3.0.orig.tar.gz 88686943 SHA256:824044ffa96eb337bb1c1d4cf6a82691d0290d6f42e1d13362eea855458de060
-'http://deb.debian.org/debian/pool/main/g/gcc-9/gcc-9_9.3.0-18.debian.tar.xz' gcc-9_9.3.0-18.debian.tar.xz 779156 SHA256:9927b48ca00a503f19312dfe7f30f36288138f1b093ffc0cc0ea2e9844522e32
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gcc-9/9.3.0-18/
 
-- https://sources.debian.net/src/gcc-9/9.3.0-18/ (for browsing the source)
-- https://sources.debian.net/src/gcc-9/9.3.0-18/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gcc-9/9.3.0-18/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `glibc=2.31-4`
 
@@ -1975,20 +1968,13 @@ Licenses: (parsed from: `/usr/share/doc/libnghttp2-14/copyright`)
 - `SIL-OFL-1.1`
 - `all-permissive`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris nghttp2=1.41.0-3
-'http://deb.debian.org/debian/pool/main/n/nghttp2/nghttp2_1.41.0-3.dsc' nghttp2_1.41.0-3.dsc 2548 SHA256:8cedd25c6c25f3d995e453da434113d54f3fe14aa7be5dea5b99edd258b6afbb
-'http://deb.debian.org/debian/pool/main/n/nghttp2/nghttp2_1.41.0.orig.tar.bz2' nghttp2_1.41.0.orig.tar.bz2 1943304 SHA256:645ca078e7ec276dcfa27175f3af6140c8badc7358ec9d2892b6ab2bcee72240
-'http://deb.debian.org/debian/pool/main/n/nghttp2/nghttp2_1.41.0-3.debian.tar.xz' nghttp2_1.41.0-3.debian.tar.xz 13688 SHA256:2b4b585b2bbe7532e6b4a96aa5b83137665aa7819910888e589a6f3de35b8db6
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/nghttp2/1.41.0-3/
 
-- https://sources.debian.net/src/nghttp2/1.41.0-3/ (for browsing the source)
-- https://sources.debian.net/src/nghttp2/1.41.0-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/nghttp2/1.41.0-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `npth=1.6-3`
 

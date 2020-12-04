@@ -102,21 +102,13 @@ Licenses: (parsed from: `/usr/share/doc/libapr1/copyright`)
 
 - `Apache-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apr=1.7.0-3
-'http://deb.debian.org/debian/pool/main/a/apr/apr_1.7.0-3.dsc' apr_1.7.0-3.dsc 2297 SHA256:8bfd016555907f71d97addda58753fa337309e1d8af5123fa0d10e993799589a
-'http://deb.debian.org/debian/pool/main/a/apr/apr_1.7.0.orig.tar.bz2' apr_1.7.0.orig.tar.bz2 872238 SHA256:e2e148f0b2e99b8e5c6caa09f6d4fb4dd3e83f744aa72a952f94f5a14436f7ea
-'http://deb.debian.org/debian/pool/main/a/apr/apr_1.7.0.orig.tar.bz2.asc' apr_1.7.0.orig.tar.bz2.asc 801 SHA256:5a6c4e721ed82116d7877254ae11c076014040af2ff816ea15ec81e77a4a7d43
-'http://deb.debian.org/debian/pool/main/a/apr/apr_1.7.0-3.debian.tar.xz' apr_1.7.0-3.debian.tar.xz 213980 SHA256:5a1683f5bc996ac2b912adc763f310b5bec2b2bd7194ca878a2ed43557805db8
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/apr/1.7.0-3/
 
-- https://sources.debian.net/src/apr/1.7.0-3/ (for browsing the source)
-- https://sources.debian.net/src/apr/1.7.0-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apr/1.7.0-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `apt=2.1.11`
 
@@ -130,19 +122,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.1.11
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.1.11.dsc' apt_2.1.11.dsc 2760 SHA256:995d0cccb33dce462889c5531dd94aa21ad73510d6f667b4fe84f82dfe85944d
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.1.11.tar.xz' apt_2.1.11.tar.xz 2179936 SHA256:f49f0652d5d2cfa157f0197d9ce03953970a108813568bb1c69553fd3d5a4be3
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/apt/2.1.11/
 
-- https://sources.debian.net/src/apt/2.1.11/ (for browsing the source)
-- https://sources.debian.net/src/apt/2.1.11/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apt/2.1.11/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `attr=1:2.4.48-5`
 
@@ -788,20 +774,13 @@ Licenses: (parsed from: `/usr/share/doc/gcc-9-base/copyright`)
 - `LGPL`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-9=9.3.0-18
-'http://deb.debian.org/debian/pool/main/g/gcc-9/gcc-9_9.3.0-18.dsc' gcc-9_9.3.0-18.dsc 21922 SHA256:01a22647d58fee930898429a0b93d299f4bfe199c0722f2866d6bb1660e722fe
-'http://deb.debian.org/debian/pool/main/g/gcc-9/gcc-9_9.3.0.orig.tar.gz' gcc-9_9.3.0.orig.tar.gz 88686943 SHA256:824044ffa96eb337bb1c1d4cf6a82691d0290d6f42e1d13362eea855458de060
-'http://deb.debian.org/debian/pool/main/g/gcc-9/gcc-9_9.3.0-18.debian.tar.xz' gcc-9_9.3.0-18.debian.tar.xz 779156 SHA256:9927b48ca00a503f19312dfe7f30f36288138f1b093ffc0cc0ea2e9844522e32
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gcc-9/9.3.0-18/
 
-- https://sources.debian.net/src/gcc-9/9.3.0-18/ (for browsing the source)
-- https://sources.debian.net/src/gcc-9/9.3.0-18/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gcc-9/9.3.0-18/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gdbm=1.18.1-5.1`
 
