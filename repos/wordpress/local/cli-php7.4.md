@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:58f91ceba42b7e6aa8e5285ab7a1f0b1cdbacd185a33589400f9e5d601954af4`
-- Created: `2020-11-06T02:33:26.858594381Z`
-- Virtual Size: ~ 138.32 Mb  
+- Image ID: `sha256:602500eff4ddc70e705add0e5258bfc408f0e7c608c0e39d0c461990bc1f8f00`
+- Created: `2020-12-01T09:33:22.239853852Z`
+- Virtual Size: ~ 138.92 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
-  - `PHP_VERSION=7.4.12`
-  - `PHP_URL=https://www.php.net/distributions/php-7.4.12.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.12.tar.xz.asc`
-  - `PHP_SHA256=e82d2bcead05255f6b7d2ff4e2561bc334204955820cabc2457b5239fde96b76`
+  - `PHP_VERSION=7.4.13`
+  - `PHP_URL=https://www.php.net/distributions/php-7.4.13.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.13.tar.xz.asc`
+  - `PHP_SHA256=aead303e3abac23106529560547baebbedba0bb2943b91d5aa08fff1f41680f4`
   - `WORDPRESS_CLI_GPG_KEY=63AF7AA15067C05616FDDD88A3A2E8F226F0BC06`
   - `WORDPRESS_CLI_VERSION=2.4.0`
   - `WORDPRESS_CLI_SHA512=4049c7e45e14276a70a41c3b0864be7a6a8cfa8ea65ebac8b184a4f503a91baa1a0d29260d03248bc74aef70729824330fb6b396336172a624332e16f64e37ef`
@@ -727,16 +727,16 @@ GPL-2.0-or-later
 ### `apk` package: `musl`
 
 ```console
-musl-1.1.24-r9 description:
+musl-1.1.24-r10 description:
 the musl c library (libc) implementation
 
-musl-1.1.24-r9 webpage:
+musl-1.1.24-r10 webpage:
 https://musl.libc.org/
 
-musl-1.1.24-r9 installed size:
+musl-1.1.24-r10 installed size:
 614400
 
-musl-1.1.24-r9 license:
+musl-1.1.24-r10 license:
 MIT
 
 ```
