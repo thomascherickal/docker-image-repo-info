@@ -2,16 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:bf75938ba90f85c325feb5fa3f12049c2b2c732b09c1dcc57ae452cf8f1b80cc`
-- Created: `2020-12-02T00:07:34.904905993Z`
-- Virtual Size: ~ 36.34 Mb  
+- Image ID: `sha256:011325cb62ca483cf6594d3b2d1c6d71845f376804d3df2f3d9c259293c8e9ae`
+- Created: `2020-12-05T00:23:10.384080268Z`
+- Virtual Size: ~ 36.35 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
 - Labels:
-  - `build-date=20201201`
+  - `build-date=20201204`
   - `name=Photon OS x86_64/3.0 Base Image`
   - `vendor=VMware`
 
@@ -83,7 +83,7 @@ Licenses (from `rpm --query`): GPLv3
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `glibc-2.28-8.ph3.x86_64`
+### `rpm` package: `glibc-2.28-9.ph3.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+
 
@@ -125,7 +125,7 @@ Licenses (from `rpm --query`): MIT
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `libsolv-0.6.35-4.ph3.x86_64`
+### `rpm` package: `libsolv-0.6.35-5.ph3.x86_64`
 
 Licenses (from `rpm --query`): BSD
 
@@ -155,7 +155,7 @@ Licenses (from `rpm --query`): MPLv2.0
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `nss-libs-3.44-4.ph3.x86_64`
+### `rpm` package: `nss-libs-3.44-5.ph3.x86_64`
 
 Licenses (from `rpm --query`): MPLv2.0
 
@@ -203,13 +203,13 @@ Licenses (from `rpm --query`): Public Domain
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `tdnf-2.1.2-1.ph3.x86_64`
+### `rpm` package: `tdnf-2.1.2-2.ph3.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2.1,GPLv2
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `tdnf-cli-libs-2.1.2-1.ph3.x86_64`
+### `rpm` package: `tdnf-cli-libs-2.1.2-2.ph3.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2.1,GPLv2
 
