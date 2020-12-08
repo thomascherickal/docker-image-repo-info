@@ -1882,13 +1882,21 @@ Licenses: (parsed from: `/usr/share/doc/libncursesw6/copyright`, `/usr/share/doc
 - `MIT/X11`
 - `X11`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris ncurses=6.2+20200918-1
+'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.2+20200918-1.dsc' ncurses_6.2+20200918-1.dsc 4106 SHA256:098f2b79a8479389189c657597131b4d7afcfdfb65670409da45ece4f538e8f5
+'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.2+20200918.orig.tar.gz' ncurses_6.2+20200918.orig.tar.gz 3527965 SHA256:892bee4263afa0a0977c8d51424b303bc3b0b437e28b19dc8e2c7251747220bb
+'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.2+20200918.orig.tar.gz.asc' ncurses_6.2+20200918.orig.tar.gz.asc 265 SHA256:3220c8c2a6e4f9ee70aa9bd2c77e07779efabcca0cdd62298b86989e13829e15
+'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.2+20200918-1.debian.tar.xz' ncurses_6.2+20200918-1.debian.tar.xz 51396 SHA256:1a009aa361094e070834286a787b31c5d57b1db391bd0e4e5e1da61cf83a3b1b
+```
 
-- http://snapshot.debian.org/package/ncurses/6.2+20200918-1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/ncurses/6.2+20200918-1/ (for browsing the source)
+- https://sources.debian.net/src/ncurses/6.2+20200918-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/ncurses/6.2+20200918-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `netbase=6.2`
 
@@ -2498,13 +2506,20 @@ Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/lib
 - `MIT`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris util-linux=2.36.1-1
+'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.36.1-1.dsc' util-linux_2.36.1-1.dsc 4337 SHA256:2fa0da46a77250dda438e4eb126844b2af6bb0e30fa67dd4bbc51c9e3c256152
+'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.36.1.orig.tar.xz' util-linux_2.36.1.orig.tar.xz 5231880 SHA256:09fac242172cd8ec27f0739d8d192402c69417617091d8c6e974841568f37eed
+'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.36.1-1.debian.tar.xz' util-linux_2.36.1-1.debian.tar.xz 94900 SHA256:52e29b1440830e87adc345424f564f793669bd45f51415b08621fdeaad3f30d2
+```
 
-- http://snapshot.debian.org/package/util-linux/2.36.1-1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/util-linux/2.36.1-1/ (for browsing the source)
+- https://sources.debian.net/src/util-linux/2.36.1-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/util-linux/2.36.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `wget=1.20.3-1`
 

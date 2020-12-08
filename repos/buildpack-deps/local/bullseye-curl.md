@@ -78,19 +78,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.1.11
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.1.11.dsc' apt_2.1.11.dsc 2760 SHA256:995d0cccb33dce462889c5531dd94aa21ad73510d6f667b4fe84f82dfe85944d
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.1.11.tar.xz' apt_2.1.11.tar.xz 2179936 SHA256:f49f0652d5d2cfa157f0197d9ce03953970a108813568bb1c69553fd3d5a4be3
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/apt/2.1.11/
 
-- https://sources.debian.net/src/apt/2.1.11/ (for browsing the source)
-- https://sources.debian.net/src/apt/2.1.11/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apt/2.1.11/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `attr=1:2.4.48-5`
 
@@ -710,20 +704,13 @@ Licenses: (parsed from: `/usr/share/doc/gcc-9-base/copyright`)
 - `LGPL`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-9=9.3.0-18
-'http://deb.debian.org/debian/pool/main/g/gcc-9/gcc-9_9.3.0-18.dsc' gcc-9_9.3.0-18.dsc 21922 SHA256:01a22647d58fee930898429a0b93d299f4bfe199c0722f2866d6bb1660e722fe
-'http://deb.debian.org/debian/pool/main/g/gcc-9/gcc-9_9.3.0.orig.tar.gz' gcc-9_9.3.0.orig.tar.gz 88686943 SHA256:824044ffa96eb337bb1c1d4cf6a82691d0290d6f42e1d13362eea855458de060
-'http://deb.debian.org/debian/pool/main/g/gcc-9/gcc-9_9.3.0-18.debian.tar.xz' gcc-9_9.3.0-18.debian.tar.xz 779156 SHA256:9927b48ca00a503f19312dfe7f30f36288138f1b093ffc0cc0ea2e9844522e32
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gcc-9/9.3.0-18/
 
-- https://sources.debian.net/src/gcc-9/9.3.0-18/ (for browsing the source)
-- https://sources.debian.net/src/gcc-9/9.3.0-18/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gcc-9/9.3.0-18/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `glibc=2.31-4`
 
