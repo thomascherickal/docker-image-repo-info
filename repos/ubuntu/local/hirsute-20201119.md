@@ -652,14 +652,13 @@ Licenses: (parsed from: `/usr/share/doc/libcap-ng0/copyright`)
 - `GPL-3`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libcap-ng=0.7.9-2.2
-'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcap-ng/libcap-ng_0.7.9-2.2.dsc' libcap-ng_0.7.9-2.2.dsc 2081 SHA512:c94566b5dfb5eacc3510206530691ec5d821bdceb96f286c254b0b1c3a4d2157e784e3bc87d94599101d814b9115947152183c51ef8e9dd098298023a32a0dab
-'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcap-ng/libcap-ng_0.7.9.orig.tar.gz' libcap-ng_0.7.9.orig.tar.gz 449038 SHA512:095edabaf76a943aab0645b843b14e20b1733ba1d47a8e34d82f6586ca9a1512ba2677d232b13dd3900b913837401bb58bf74481970e967ba19041959dc43259
-'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcap-ng/libcap-ng_0.7.9-2.2.debian.tar.xz' libcap-ng_0.7.9-2.2.debian.tar.xz 6308 SHA512:d5599574bb0e449edd7859f23de718b9e52dcc7296bea88807a4369fa3089d93b72a316bf9ed2398e9bac864d25f4ea6aa0772c2ddac1e204f0a1e2d4929ff29
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/libcap-ng/0.7.9-2.2/
+
 
 ### `dpkg` source package: `libffi=3.4~20200819gead65ca871-0ubuntu3`
 
@@ -1292,15 +1291,13 @@ Licenses: (parsed from: `/usr/share/doc/perl-base/copyright`)
 - `Unicode`
 - `ZLIB`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris perl=5.30.3-4
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.30.3-4.dsc' perl_5.30.3-4.dsc 2983 SHA512:d29a64f19026ed8be20d2c11a82dac5e827c9807b5904bdeabd65e39c523d643ece92821fc3d55033dd5689f4644754cc10e1ee5c1c56d12923c3df1d01fb1e8
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.30.3.orig-regen-configure.tar.gz' perl_5.30.3.orig-regen-configure.tar.gz 870970 SHA512:947dee318e03fb1a03d3e6c0754a4aae5677616451c05cf411ab76a9b729589db02a28883bb153a325ba02b38f20a6aec11a65308e2ac101f0d86da9482e0ad8
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.30.3.orig.tar.xz' perl_5.30.3.orig.tar.xz 12375128 SHA512:0ea62cf17532ee99217a218c39aa530472857c7a1982494f3a01693683062b4cdebe383a79f7b64452c713337b554ed5e0fd6eda018ea29e83c3538a13c24f3c
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.30.3-4.debian.tar.xz' perl_5.30.3-4.debian.tar.xz 171184 SHA512:3b5b5059300b8ae9c36a6eb79bb0692393ad33c755575ab82937b87e1bc7742983e7f89a1c40c3de8cd369056e46f25c92b41352cf7458ccd25fc9bdee93bf95
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/perl/5.30.3-4/
+
 
 ### `dpkg` source package: `procps=2:3.3.16-5ubuntu2`
 
