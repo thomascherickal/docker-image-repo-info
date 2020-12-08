@@ -746,25 +746,13 @@ Licenses: (parsed from: `/usr/share/doc/libfreetype6/copyright`)
 - `Public-Domain`
 - `Zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris freetype=2.9.1-3+deb10u1
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.9.1-3+deb10u1.dsc' freetype_2.9.1-3+deb10u1.dsc 3690 SHA256:ef4825d67d044be4ea2e86444eae166057f8bd7d5606abf82d5095f47a3a7bd1
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.9.1.orig-ft2demos.tar.gz' freetype_2.9.1.orig-ft2demos.tar.gz 294850 SHA256:3d440aad3481285c7455f1593577e375c9d5792c800bbaba68d46fd75130fab9
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.9.1.orig-ft2demos.tar.gz.asc' freetype_2.9.1.orig-ft2demos.tar.gz.asc 359 SHA256:665b8357378dc715fbac964d05cdcc2a2f7fd1e9d7918a27bf50f4d0a17f0d30
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.9.1.orig-ft2docs.tar.gz' freetype_2.9.1.orig-ft2docs.tar.gz 2123920 SHA256:f57c1297f5ad2ad4764f491317fa0f548bd307c4513185d4a0602412e83b1dc9
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.9.1.orig-ft2docs.tar.gz.asc' freetype_2.9.1.orig-ft2docs.tar.gz.asc 359 SHA256:c4c674db43603f719018716970569d1722d0de46fa94757eb7f39266d72cdbd1
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.9.1.orig.tar.gz' freetype_2.9.1.orig.tar.gz 2533956 SHA256:ec391504e55498adceb30baceebd147a6e963f636eb617424bcfc47a169898ce
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.9.1.orig.tar.gz.asc' freetype_2.9.1.orig.tar.gz.asc 359 SHA256:2c2c5ae3b3838053b94366639e802b18bc4761003ea15ce73402d276baec424d
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.9.1-3+deb10u1.debian.tar.xz' freetype_2.9.1-3+deb10u1.debian.tar.xz 111972 SHA256:7a2765961a01332f2d402d86a126a9480efb326c995b0db2108c0f825d78cbe2
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/freetype/2.9.1-3+deb10u1/
 
-- https://sources.debian.net/src/freetype/2.9.1-3+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/freetype/2.9.1-3+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/freetype/2.9.1-3+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gcc-8=8.3.0-6`
 
@@ -1156,20 +1144,13 @@ Licenses: (parsed from: `/usr/share/doc/libgssapi-krb5-2/copyright`, `/usr/share
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris krb5=1.17-3
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17-3.dsc' krb5_1.17-3.dsc 3302 SHA256:56112c60a10a49126359478893d2f51cee5513e41f6ec7269360c7abe8850f3f
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17.orig.tar.gz' krb5_1.17.orig.tar.gz 8761763 SHA256:5a6e2284a53de5702d3dc2be3b9339c963f9b5397d3fbbc53beb249380a781f5
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17-3.debian.tar.xz' krb5_1.17-3.debian.tar.xz 99396 SHA256:35da9d221e3a29c57c38c9d326d625a5b9199f3d7d64983483bd82f871083c9f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/krb5/1.17-3/
 
-- https://sources.debian.net/src/krb5/1.17-3/ (for browsing the source)
-- https://sources.debian.net/src/krb5/1.17-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/krb5/1.17-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libassuan=2.5.2-1`
 
@@ -1945,20 +1926,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openldap=2.4.47+dfsg-3+deb10u2
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.47+dfsg-3+deb10u2.dsc' openldap_2.4.47+dfsg-3+deb10u2.dsc 3022 SHA256:e909c6be4bfd1bacf644959bc18ebeebaa13606879f11a7876d044cd688a6f62
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.47+dfsg.orig.tar.gz' openldap_2.4.47+dfsg.orig.tar.gz 4872293 SHA256:8f1ac7a4be7dd8ef158361efbfe16509756d3d9b396f5f378c3cf5c727807651
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.47+dfsg-3+deb10u2.debian.tar.xz' openldap_2.4.47+dfsg-3+deb10u2.debian.tar.xz 168684 SHA256:0f6f81f18a2407bd1a6c6003659d8b33145f31033b6f7fd026607554f0bdfcb0
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/openldap/2.4.47+dfsg-3+deb10u2/
 
-- https://sources.debian.net/src/openldap/2.4.47+dfsg-3+deb10u2/ (for browsing the source)
-- https://sources.debian.net/src/openldap/2.4.47+dfsg-3+deb10u2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openldap/2.4.47+dfsg-3+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssl=1.1.1d-0+deb10u3`
 
@@ -2327,10 +2301,10 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris sqlite3=3.27.2-3
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.27.2-3.dsc' sqlite3_3.27.2-3.dsc 2398 SHA256:4d8c953891d6268911aa273f8cb7c9e0bdd026c7918f6203fd019d3e16cea1cc
+'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.27.2-3+deb10u1.dsc' sqlite3_3.27.2-3+deb10u1.dsc 2430 SHA256:6faf359c70d0618558056d6dee9f05ea810ff57aebb141ac28129c17e685cf1b
 'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.27.2.orig-www.tar.xz' sqlite3_3.27.2.orig-www.tar.xz 5602752 SHA256:b50bea0e1974b33bcb2cec4c29fcdeecd8f960020ce0310b15fb123938844bee
 'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.27.2.orig.tar.xz' sqlite3_3.27.2.orig.tar.xz 6844832 SHA256:6cb1606bbc38270739d256b5ab1cf94dccf5b2a3b4cbceb0545aac76f6ef40f2
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.27.2-3.debian.tar.xz' sqlite3_3.27.2-3.debian.tar.xz 30372 SHA256:0a95abfc23baa8d0fa2ec7fc6b96f46e34c37f23ff540bc041eff111e6550af9
+'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.27.2-3+deb10u1.debian.tar.xz' sqlite3_3.27.2-3+deb10u1.debian.tar.xz 38844 SHA256:ccabd6cc3d05887f2dd239065f3c3063f766e9e187804a89f04cbcbdb49a6b7e
 ```
 
 Other potentially useful URLs:
@@ -2356,20 +2330,13 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=241-7~deb10u4
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_241-7~deb10u4.dsc' systemd_241-7~deb10u4.dsc 4946 SHA256:52707608012c7b13d19ebbbfff704311e33f884f0f843811874e266dcf2faf71
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_241.orig.tar.gz' systemd_241.orig.tar.gz 7640538 SHA256:b2561a8e1d10a2c248253f0dda31a85dd6d69f2b54177de55e02cd1d2778316e
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_241-7~deb10u4.debian.tar.xz' systemd_241-7~deb10u4.debian.tar.xz 178136 SHA256:ff8ed4b3d9c30e14659278f17ea4cfc63c4b1af199a98a861abc670dfdd991cb
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/systemd/241-7~deb10u4/
 
-- https://sources.debian.net/src/systemd/241-7~deb10u4/ (for browsing the source)
-- https://sources.debian.net/src/systemd/241-7~deb10u4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/systemd/241-7~deb10u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sysvinit=2.93-8`
 
@@ -2434,21 +2401,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2020a-0+deb10u1
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a-0+deb10u1.dsc' tzdata_2020a-0+deb10u1.dsc 2264 SHA256:24c86ca3f4755af8bd1ce2cd985382a490476f20006806fe5ec5c0f6b2a417c9
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a.orig.tar.gz' tzdata_2020a.orig.tar.gz 397245 SHA256:547161eca24d344e0b5f96aff6a76b454da295dc14ed4ca50c2355043fb899a2
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a.orig.tar.gz.asc' tzdata_2020a.orig.tar.gz.asc 833 SHA256:a92f085fe1e7f8bc0f0a0bc4432f27e6cf2d69e64d4a90958bd023eb0ccf45f9
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020a-0+deb10u1.debian.tar.xz' tzdata_2020a-0+deb10u1.debian.tar.xz 104936 SHA256:df174cf4f4414006677b626f15b51a04762a2a0ef0171ce2f0c6856710a16d53
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2020a-0+deb10u1/
 
-- https://sources.debian.net/src/tzdata/2020a-0+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2020a-0+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2020a-0+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0038+nmu1`
 
