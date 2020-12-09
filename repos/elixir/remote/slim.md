@@ -1,7 +1,7 @@
 ## `elixir:slim`
 
 ```console
-$ docker pull elixir@sha256:b9df7c7bd347ca530f217974bd80d51bfb194fcb8cff469ce864ba09479bd35d
+$ docker pull elixir@sha256:360867e5fccda4da3c0cf0fd1e78bdd3285ec6a940126cc058c34d3afcd98158
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -16,14 +16,14 @@ $ docker pull elixir@sha256:b9df7c7bd347ca530f217974bd80d51bfb194fcb8cff469ce864
 ### `elixir:slim` - linux; amd64
 
 ```console
-$ docker pull elixir@sha256:99d387c62e7736c114840eb82abc4967a504e6f4e3d23173c71ce06abd0fd61c
+$ docker pull elixir@sha256:d8f5eb273b6a1be905faa5e199cd633603faad4612a7ef56f8322af3b4459d0e
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **118.5 MB (118530018 bytes)**  
+-	Total Size: **118.5 MB (118534468 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ff38a4196c402d916e97ae73517b56bd870f3a706ef68f9824630ff651b4bfdf`
+-	Image ID: `sha256:24852e0d83212a090bc14f0ae5672403181d4a59e8e0bfd273cbeaea29481da3`
 -	Default Command: `["iex"]`
 
 ```dockerfile
@@ -31,19 +31,19 @@ $ docker pull elixir@sha256:99d387c62e7736c114840eb82abc4967a504e6f4e3d23173c71c
 ADD file:9a4fd72d749f4a791e75e0f6fc6028d0771e3381b6d84a8d0b07a4887bc7c641 in / 
 # Tue, 17 Nov 2020 20:20:58 GMT
 CMD ["bash"]
-# Mon, 23 Nov 2020 23:38:59 GMT
-ENV OTP_VERSION=23.1.4
-# Mon, 23 Nov 2020 23:38:59 GMT
-LABEL org.opencontainers.image.version=23.1.4
-# Mon, 23 Nov 2020 23:53:19 GMT
-RUN set -xe 	&& OTP_DOWNLOAD_URL="https://github.com/erlang/otp/archive/OTP-${OTP_VERSION}.tar.gz" 	&& OTP_DOWNLOAD_SHA256="8f6718b82bbca72d7dfe0b0de10b6e043cefe9e5ac08d3f84e18f8522d794967" 	&& fetchDeps=' 		curl 		ca-certificates' 	&& apt-get update 	&& apt-get install -y --no-install-recommends $fetchDeps 	&& curl -fSL -o otp-src.tar.gz "$OTP_DOWNLOAD_URL" 	&& echo "$OTP_DOWNLOAD_SHA256  otp-src.tar.gz" | sha256sum -c - 	&& runtimeDeps=' 		libodbc1 		libssl1.1 		libsctp1 	' 	&& buildDeps=' 		autoconf 		dpkg-dev 		gcc 		g++ 		make 		libncurses-dev 		unixodbc-dev 		libssl-dev 		libsctp-dev 	' 	&& apt-get install -y --no-install-recommends $runtimeDeps 	&& apt-get install -y --no-install-recommends $buildDeps 	&& export ERL_TOP="/usr/src/otp_src_${OTP_VERSION%%@*}" 	&& mkdir -vp $ERL_TOP 	&& tar -xzf otp-src.tar.gz -C $ERL_TOP --strip-components=1 	&& rm otp-src.tar.gz 	&& ( cd $ERL_TOP 	  && ./otp_build autoconf 	  && gnuArch="$(dpkg-architecture --query DEB_HOST_GNU_TYPE)" 	  && ./configure --build="$gnuArch" 	  && make -j$(nproc) 	  && make install ) 	&& find /usr/local -name examples | xargs rm -rf 	&& apt-get purge -y --auto-remove $buildDeps $fetchDeps 	&& rm -rf $ERL_TOP /var/lib/apt/lists/*
-# Mon, 23 Nov 2020 23:53:20 GMT
+# Wed, 09 Dec 2020 02:33:44 GMT
+ENV OTP_VERSION=23.1.5
+# Wed, 09 Dec 2020 02:33:44 GMT
+LABEL org.opencontainers.image.version=23.1.5
+# Wed, 09 Dec 2020 02:45:07 GMT
+RUN set -xe 	&& OTP_DOWNLOAD_URL="https://github.com/erlang/otp/archive/OTP-${OTP_VERSION}.tar.gz" 	&& OTP_DOWNLOAD_SHA256="31719b8681e7f9ad6f30e329a0a0e5c4dd23dea858021573395fcdbea0d7702c" 	&& fetchDeps=' 		curl 		ca-certificates' 	&& apt-get update 	&& apt-get install -y --no-install-recommends $fetchDeps 	&& curl -fSL -o otp-src.tar.gz "$OTP_DOWNLOAD_URL" 	&& echo "$OTP_DOWNLOAD_SHA256  otp-src.tar.gz" | sha256sum -c - 	&& runtimeDeps=' 		libodbc1 		libssl1.1 		libsctp1 	' 	&& buildDeps=' 		autoconf 		dpkg-dev 		gcc 		g++ 		make 		libncurses-dev 		unixodbc-dev 		libssl-dev 		libsctp-dev 	' 	&& apt-get install -y --no-install-recommends $runtimeDeps 	&& apt-get install -y --no-install-recommends $buildDeps 	&& export ERL_TOP="/usr/src/otp_src_${OTP_VERSION%%@*}" 	&& mkdir -vp $ERL_TOP 	&& tar -xzf otp-src.tar.gz -C $ERL_TOP --strip-components=1 	&& rm otp-src.tar.gz 	&& ( cd $ERL_TOP 	  && ./otp_build autoconf 	  && gnuArch="$(dpkg-architecture --query DEB_HOST_GNU_TYPE)" 	  && ./configure --build="$gnuArch" 	  && make -j$(nproc) 	  && make install ) 	&& find /usr/local -name examples | xargs rm -rf 	&& apt-get purge -y --auto-remove $buildDeps $fetchDeps 	&& rm -rf $ERL_TOP /var/lib/apt/lists/*
+# Wed, 09 Dec 2020 02:45:07 GMT
 CMD ["erl"]
-# Tue, 24 Nov 2020 02:03:44 GMT
+# Wed, 09 Dec 2020 04:43:47 GMT
 ENV ELIXIR_VERSION=v1.11.2 LANG=C.UTF-8
-# Tue, 24 Nov 2020 02:05:30 GMT
+# Wed, 09 Dec 2020 04:45:44 GMT
 RUN set -xe 	&& ELIXIR_DOWNLOAD_URL="https://github.com/elixir-lang/elixir/archive/${ELIXIR_VERSION}.tar.gz" 	&& ELIXIR_DOWNLOAD_SHA256="318f0a6cb372186b0cf45d2e9c9889b4c9e941643fd67ca0ab1ec32710ab6bf5" 	&& buildDeps=' 		ca-certificates 		curl 		make 	' 	&& apt-get update 	&& apt-get install -y --no-install-recommends $buildDeps 	&& curl -fSL -o elixir-src.tar.gz $ELIXIR_DOWNLOAD_URL 	&& echo "$ELIXIR_DOWNLOAD_SHA256  elixir-src.tar.gz" | sha256sum -c - 	&& mkdir -p /usr/local/src/elixir 	&& tar -xzC /usr/local/src/elixir --strip-components=1 -f elixir-src.tar.gz 	&& rm elixir-src.tar.gz 	&& cd /usr/local/src/elixir 	&& make install clean 	&& apt-get purge -y --auto-remove $buildDeps 	&& rm -rf /var/lib/apt/lists/*
-# Tue, 24 Nov 2020 02:05:30 GMT
+# Wed, 09 Dec 2020 04:45:44 GMT
 CMD ["iex"]
 ```
 
@@ -52,13 +52,13 @@ CMD ["iex"]
 		Last Modified: Tue, 17 Nov 2020 20:27:06 GMT  
 		Size: 50.4 MB (50397725 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6a59df892a6a5a7f3bccb6d54fd860c7bbeb9908e867203f72a28c71992fcbd5`  
-		Last Modified: Tue, 24 Nov 2020 00:10:50 GMT  
-		Size: 60.6 MB (60647397 bytes)  
+	-	`sha256:5f07d6edee27f3c924ad0040d3e9d041b758e26d74d2ebb3c3c911785d74e065`  
+		Last Modified: Wed, 09 Dec 2020 04:05:37 GMT  
+		Size: 60.7 MB (60651803 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:206175e04c7db35e55fabb22edbda825c8c11695e22a1f63b823a0a392bf9b91`  
-		Last Modified: Tue, 24 Nov 2020 02:09:06 GMT  
-		Size: 7.5 MB (7484896 bytes)  
+	-	`sha256:da4f567009bec3034e61744f9903a0f124611359cb3d039596fe218cb8bac4ac`  
+		Last Modified: Wed, 09 Dec 2020 05:01:59 GMT  
+		Size: 7.5 MB (7484940 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `elixir:slim` - linux; arm variant v7
@@ -160,14 +160,14 @@ CMD ["iex"]
 ### `elixir:slim` - linux; 386
 
 ```console
-$ docker pull elixir@sha256:dfb836c97ca04573274566a719493e155ddc96bd239d7f8ca01d824b1e39ad13
+$ docker pull elixir@sha256:a6ee4a49b8209ae5c658da44f0a22f20be0a25c1cbbd1f12f19e1c1c6918a833
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **118.7 MB (118652994 bytes)**  
+-	Total Size: **118.7 MB (118657689 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4b110a724b68ff2745a14ebb58453be73ae00c21a309f6c2a4b364af84231f7d`
+-	Image ID: `sha256:c0ee2ffc74f3191ab5fd21a86fd2f9f938f440a96afb1bba4f576c99cc15f83b`
 -	Default Command: `["iex"]`
 
 ```dockerfile
@@ -175,19 +175,19 @@ $ docker pull elixir@sha256:dfb836c97ca04573274566a719493e155ddc96bd239d7f8ca01d
 ADD file:4805e11ec22df9454eb4759523111e031e84c8078bcaef178f089baca9e83cdb in / 
 # Tue, 17 Nov 2020 20:19:40 GMT
 CMD ["bash"]
-# Tue, 24 Nov 2020 00:07:00 GMT
-ENV OTP_VERSION=23.1.4
-# Tue, 24 Nov 2020 00:07:00 GMT
-LABEL org.opencontainers.image.version=23.1.4
-# Tue, 24 Nov 2020 00:18:23 GMT
-RUN set -xe 	&& OTP_DOWNLOAD_URL="https://github.com/erlang/otp/archive/OTP-${OTP_VERSION}.tar.gz" 	&& OTP_DOWNLOAD_SHA256="8f6718b82bbca72d7dfe0b0de10b6e043cefe9e5ac08d3f84e18f8522d794967" 	&& fetchDeps=' 		curl 		ca-certificates' 	&& apt-get update 	&& apt-get install -y --no-install-recommends $fetchDeps 	&& curl -fSL -o otp-src.tar.gz "$OTP_DOWNLOAD_URL" 	&& echo "$OTP_DOWNLOAD_SHA256  otp-src.tar.gz" | sha256sum -c - 	&& runtimeDeps=' 		libodbc1 		libssl1.1 		libsctp1 	' 	&& buildDeps=' 		autoconf 		dpkg-dev 		gcc 		g++ 		make 		libncurses-dev 		unixodbc-dev 		libssl-dev 		libsctp-dev 	' 	&& apt-get install -y --no-install-recommends $runtimeDeps 	&& apt-get install -y --no-install-recommends $buildDeps 	&& export ERL_TOP="/usr/src/otp_src_${OTP_VERSION%%@*}" 	&& mkdir -vp $ERL_TOP 	&& tar -xzf otp-src.tar.gz -C $ERL_TOP --strip-components=1 	&& rm otp-src.tar.gz 	&& ( cd $ERL_TOP 	  && ./otp_build autoconf 	  && gnuArch="$(dpkg-architecture --query DEB_HOST_GNU_TYPE)" 	  && ./configure --build="$gnuArch" 	  && make -j$(nproc) 	  && make install ) 	&& find /usr/local -name examples | xargs rm -rf 	&& apt-get purge -y --auto-remove $buildDeps $fetchDeps 	&& rm -rf $ERL_TOP /var/lib/apt/lists/*
-# Tue, 24 Nov 2020 00:18:24 GMT
+# Wed, 09 Dec 2020 03:04:21 GMT
+ENV OTP_VERSION=23.1.5
+# Wed, 09 Dec 2020 03:04:22 GMT
+LABEL org.opencontainers.image.version=23.1.5
+# Wed, 09 Dec 2020 03:21:50 GMT
+RUN set -xe 	&& OTP_DOWNLOAD_URL="https://github.com/erlang/otp/archive/OTP-${OTP_VERSION}.tar.gz" 	&& OTP_DOWNLOAD_SHA256="31719b8681e7f9ad6f30e329a0a0e5c4dd23dea858021573395fcdbea0d7702c" 	&& fetchDeps=' 		curl 		ca-certificates' 	&& apt-get update 	&& apt-get install -y --no-install-recommends $fetchDeps 	&& curl -fSL -o otp-src.tar.gz "$OTP_DOWNLOAD_URL" 	&& echo "$OTP_DOWNLOAD_SHA256  otp-src.tar.gz" | sha256sum -c - 	&& runtimeDeps=' 		libodbc1 		libssl1.1 		libsctp1 	' 	&& buildDeps=' 		autoconf 		dpkg-dev 		gcc 		g++ 		make 		libncurses-dev 		unixodbc-dev 		libssl-dev 		libsctp-dev 	' 	&& apt-get install -y --no-install-recommends $runtimeDeps 	&& apt-get install -y --no-install-recommends $buildDeps 	&& export ERL_TOP="/usr/src/otp_src_${OTP_VERSION%%@*}" 	&& mkdir -vp $ERL_TOP 	&& tar -xzf otp-src.tar.gz -C $ERL_TOP --strip-components=1 	&& rm otp-src.tar.gz 	&& ( cd $ERL_TOP 	  && ./otp_build autoconf 	  && gnuArch="$(dpkg-architecture --query DEB_HOST_GNU_TYPE)" 	  && ./configure --build="$gnuArch" 	  && make -j$(nproc) 	  && make install ) 	&& find /usr/local -name examples | xargs rm -rf 	&& apt-get purge -y --auto-remove $buildDeps $fetchDeps 	&& rm -rf $ERL_TOP /var/lib/apt/lists/*
+# Wed, 09 Dec 2020 03:21:50 GMT
 CMD ["erl"]
-# Tue, 24 Nov 2020 01:09:43 GMT
+# Wed, 09 Dec 2020 04:56:58 GMT
 ENV ELIXIR_VERSION=v1.11.2 LANG=C.UTF-8
-# Tue, 24 Nov 2020 01:11:38 GMT
+# Wed, 09 Dec 2020 04:59:03 GMT
 RUN set -xe 	&& ELIXIR_DOWNLOAD_URL="https://github.com/elixir-lang/elixir/archive/${ELIXIR_VERSION}.tar.gz" 	&& ELIXIR_DOWNLOAD_SHA256="318f0a6cb372186b0cf45d2e9c9889b4c9e941643fd67ca0ab1ec32710ab6bf5" 	&& buildDeps=' 		ca-certificates 		curl 		make 	' 	&& apt-get update 	&& apt-get install -y --no-install-recommends $buildDeps 	&& curl -fSL -o elixir-src.tar.gz $ELIXIR_DOWNLOAD_URL 	&& echo "$ELIXIR_DOWNLOAD_SHA256  elixir-src.tar.gz" | sha256sum -c - 	&& mkdir -p /usr/local/src/elixir 	&& tar -xzC /usr/local/src/elixir --strip-components=1 -f elixir-src.tar.gz 	&& rm elixir-src.tar.gz 	&& cd /usr/local/src/elixir 	&& make install clean 	&& apt-get purge -y --auto-remove $buildDeps 	&& rm -rf /var/lib/apt/lists/*
-# Tue, 24 Nov 2020 01:11:38 GMT
+# Wed, 09 Dec 2020 04:59:03 GMT
 CMD ["iex"]
 ```
 
@@ -196,26 +196,26 @@ CMD ["iex"]
 		Last Modified: Tue, 17 Nov 2020 20:26:25 GMT  
 		Size: 51.2 MB (51159492 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d376f5586a3c7c86cbdeb94ef0e45803189b52cc84fbdf4b875c2ffa3cd63dcf`  
-		Last Modified: Tue, 24 Nov 2020 00:32:21 GMT  
-		Size: 60.0 MB (60008935 bytes)  
+	-	`sha256:56701f19d1cf833e0da376b2a7bc4e4c0eedf77ea75c67c831262ab1cf2fcba0`  
+		Last Modified: Wed, 09 Dec 2020 04:37:30 GMT  
+		Size: 60.0 MB (60013569 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:89cf1d6d38733a5835006f87bd6454cd126aa98e9f8ba69c84cb829864b75933`  
-		Last Modified: Tue, 24 Nov 2020 01:15:34 GMT  
-		Size: 7.5 MB (7484567 bytes)  
+	-	`sha256:cb5296a666f04073aad3e922ee67e4c424ca0c7ee616fe2b7930ee21581f7b96`  
+		Last Modified: Wed, 09 Dec 2020 05:16:08 GMT  
+		Size: 7.5 MB (7484628 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `elixir:slim` - linux; ppc64le
 
 ```console
-$ docker pull elixir@sha256:9c34dd48916f439018d49967f84deead54132c74b3f463f08daf3c3a2e267f82
+$ docker pull elixir@sha256:cd34778df9f26e336e1fbd8b5c7102ab2a868447d13ed4281a96da36ad1fc4c9
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **120.1 MB (120133434 bytes)**  
+-	Total Size: **120.1 MB (120142155 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d2401148ddc39095720f9d03054700e3c3f29befedb7598f0128fbe2fb65b835`
+-	Image ID: `sha256:ec84ef84979cdbdbce627e5e3d9028398f432a9e73401f1d77a676951bb76080`
 -	Default Command: `["iex"]`
 
 ```dockerfile
@@ -223,19 +223,19 @@ $ docker pull elixir@sha256:9c34dd48916f439018d49967f84deead54132c74b3f463f08daf
 ADD file:b5112ae3b22de1d8a373191ad01151a6c1cdde605887b1836672be39787e2213 in / 
 # Tue, 17 Nov 2020 23:22:37 GMT
 CMD ["bash"]
-# Mon, 23 Nov 2020 23:44:17 GMT
-ENV OTP_VERSION=23.1.4
-# Mon, 23 Nov 2020 23:44:30 GMT
-LABEL org.opencontainers.image.version=23.1.4
-# Mon, 23 Nov 2020 23:58:51 GMT
-RUN set -xe 	&& OTP_DOWNLOAD_URL="https://github.com/erlang/otp/archive/OTP-${OTP_VERSION}.tar.gz" 	&& OTP_DOWNLOAD_SHA256="8f6718b82bbca72d7dfe0b0de10b6e043cefe9e5ac08d3f84e18f8522d794967" 	&& fetchDeps=' 		curl 		ca-certificates' 	&& apt-get update 	&& apt-get install -y --no-install-recommends $fetchDeps 	&& curl -fSL -o otp-src.tar.gz "$OTP_DOWNLOAD_URL" 	&& echo "$OTP_DOWNLOAD_SHA256  otp-src.tar.gz" | sha256sum -c - 	&& runtimeDeps=' 		libodbc1 		libssl1.1 		libsctp1 	' 	&& buildDeps=' 		autoconf 		dpkg-dev 		gcc 		g++ 		make 		libncurses-dev 		unixodbc-dev 		libssl-dev 		libsctp-dev 	' 	&& apt-get install -y --no-install-recommends $runtimeDeps 	&& apt-get install -y --no-install-recommends $buildDeps 	&& export ERL_TOP="/usr/src/otp_src_${OTP_VERSION%%@*}" 	&& mkdir -vp $ERL_TOP 	&& tar -xzf otp-src.tar.gz -C $ERL_TOP --strip-components=1 	&& rm otp-src.tar.gz 	&& ( cd $ERL_TOP 	  && ./otp_build autoconf 	  && gnuArch="$(dpkg-architecture --query DEB_HOST_GNU_TYPE)" 	  && ./configure --build="$gnuArch" 	  && make -j$(nproc) 	  && make install ) 	&& find /usr/local -name examples | xargs rm -rf 	&& apt-get purge -y --auto-remove $buildDeps $fetchDeps 	&& rm -rf $ERL_TOP /var/lib/apt/lists/*
-# Mon, 23 Nov 2020 23:59:05 GMT
+# Wed, 09 Dec 2020 03:03:14 GMT
+ENV OTP_VERSION=23.1.5
+# Wed, 09 Dec 2020 03:03:21 GMT
+LABEL org.opencontainers.image.version=23.1.5
+# Wed, 09 Dec 2020 03:35:20 GMT
+RUN set -xe 	&& OTP_DOWNLOAD_URL="https://github.com/erlang/otp/archive/OTP-${OTP_VERSION}.tar.gz" 	&& OTP_DOWNLOAD_SHA256="31719b8681e7f9ad6f30e329a0a0e5c4dd23dea858021573395fcdbea0d7702c" 	&& fetchDeps=' 		curl 		ca-certificates' 	&& apt-get update 	&& apt-get install -y --no-install-recommends $fetchDeps 	&& curl -fSL -o otp-src.tar.gz "$OTP_DOWNLOAD_URL" 	&& echo "$OTP_DOWNLOAD_SHA256  otp-src.tar.gz" | sha256sum -c - 	&& runtimeDeps=' 		libodbc1 		libssl1.1 		libsctp1 	' 	&& buildDeps=' 		autoconf 		dpkg-dev 		gcc 		g++ 		make 		libncurses-dev 		unixodbc-dev 		libssl-dev 		libsctp-dev 	' 	&& apt-get install -y --no-install-recommends $runtimeDeps 	&& apt-get install -y --no-install-recommends $buildDeps 	&& export ERL_TOP="/usr/src/otp_src_${OTP_VERSION%%@*}" 	&& mkdir -vp $ERL_TOP 	&& tar -xzf otp-src.tar.gz -C $ERL_TOP --strip-components=1 	&& rm otp-src.tar.gz 	&& ( cd $ERL_TOP 	  && ./otp_build autoconf 	  && gnuArch="$(dpkg-architecture --query DEB_HOST_GNU_TYPE)" 	  && ./configure --build="$gnuArch" 	  && make -j$(nproc) 	  && make install ) 	&& find /usr/local -name examples | xargs rm -rf 	&& apt-get purge -y --auto-remove $buildDeps $fetchDeps 	&& rm -rf $ERL_TOP /var/lib/apt/lists/*
+# Wed, 09 Dec 2020 03:35:40 GMT
 CMD ["erl"]
-# Tue, 24 Nov 2020 04:16:13 GMT
+# Wed, 09 Dec 2020 05:21:42 GMT
 ENV ELIXIR_VERSION=v1.11.2 LANG=C.UTF-8
-# Tue, 24 Nov 2020 04:20:14 GMT
+# Wed, 09 Dec 2020 05:26:49 GMT
 RUN set -xe 	&& ELIXIR_DOWNLOAD_URL="https://github.com/elixir-lang/elixir/archive/${ELIXIR_VERSION}.tar.gz" 	&& ELIXIR_DOWNLOAD_SHA256="318f0a6cb372186b0cf45d2e9c9889b4c9e941643fd67ca0ab1ec32710ab6bf5" 	&& buildDeps=' 		ca-certificates 		curl 		make 	' 	&& apt-get update 	&& apt-get install -y --no-install-recommends $buildDeps 	&& curl -fSL -o elixir-src.tar.gz $ELIXIR_DOWNLOAD_URL 	&& echo "$ELIXIR_DOWNLOAD_SHA256  elixir-src.tar.gz" | sha256sum -c - 	&& mkdir -p /usr/local/src/elixir 	&& tar -xzC /usr/local/src/elixir --strip-components=1 -f elixir-src.tar.gz 	&& rm elixir-src.tar.gz 	&& cd /usr/local/src/elixir 	&& make install clean 	&& apt-get purge -y --auto-remove $buildDeps 	&& rm -rf /var/lib/apt/lists/*
-# Tue, 24 Nov 2020 04:20:18 GMT
+# Wed, 09 Dec 2020 05:26:55 GMT
 CMD ["iex"]
 ```
 
@@ -244,13 +244,13 @@ CMD ["iex"]
 		Last Modified: Tue, 17 Nov 2020 23:31:43 GMT  
 		Size: 54.1 MB (54143125 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dcf0d08cc23abc17b2d0c68aeea76355042b5fa811eb290b3d944accde876a6f`  
-		Last Modified: Tue, 24 Nov 2020 00:11:22 GMT  
-		Size: 58.5 MB (58504216 bytes)  
+	-	`sha256:d4d10af056a55a6cee29dfd3e8d36d1d19b27927baeee0fbdce87a34a68b0eac`  
+		Last Modified: Wed, 09 Dec 2020 04:55:47 GMT  
+		Size: 58.5 MB (58512567 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:de8da2ef5db7b0c8c723cf25e5f75b2a9e801074c5165c425b6f9be29607218d`  
-		Last Modified: Tue, 24 Nov 2020 04:24:49 GMT  
-		Size: 7.5 MB (7486093 bytes)  
+	-	`sha256:7fb7e59d2b89e54831f08be9691d5450d0d2aaab570a3067c9c97a29460a4fa5`  
+		Last Modified: Wed, 09 Dec 2020 05:54:48 GMT  
+		Size: 7.5 MB (7486463 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `elixir:slim` - linux; s390x
