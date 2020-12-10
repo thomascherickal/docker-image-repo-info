@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:8cb7f52eddfa973547cc74232d4227e394ed8e3dd325aa8f614e6689af7755b7`
-- Created: `2020-11-03T23:21:41.630373332Z`
-- Virtual Size: ~ 430.90 Mb  
+- Image ID: `sha256:6d811d4aeecf5879556f450cd36f6baaced7591d5e9e8ee0ec4971c167f1338a`
+- Created: `2020-12-08T00:51:29.371338011Z`
+- Virtual Size: ~ 426.17 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -17,7 +17,7 @@
   - `K8S_TOOLS_VERSION=0.5.0`
   - `GOSU_VERSION=1.11`
 - Labels:
-  - `org.label-schema.build-date=20200809`
+  - `org.label-schema.build-date=20201204`
   - `org.label-schema.description=Percona Server for MongoDB is our free and open-source drop-in replacement for MongoDB Community Edition. It offers all the features and benefits of MongoDB Community Edition, plus additional enterprise-grade functionality.`
   - `org.label-schema.license=SSPLv1`
   - `org.label-schema.name=Percona Server for MongoDB`

@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:293ef5aca12c193a7ca04e27ef23bfa659360ac667b0e24aa1fa7edd1c2ccce2`
-- Created: `2020-11-26T18:22:01.147054637Z`
-- Virtual Size: ~ 604.11 Mb  
+- Image ID: `sha256:41370b19b67aa296306b0172907bb8058e50086190a13b3390985c57bcbef8b9`
+- Created: `2020-12-08T00:49:45.787153954Z`
+- Virtual Size: ~ 599.08 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -15,7 +15,7 @@
   - `OS_VER=el8`
   - `FULL_PERCONA_VERSION=5.7.32-35.1.el8`
 - Labels:
-  - `org.label-schema.build-date=20200809`
+  - `org.label-schema.build-date=20201204`
   - `org.label-schema.license=GPLv2`
   - `org.label-schema.name=CentOS Base Image`
   - `org.label-schema.schema-version=1.0`
