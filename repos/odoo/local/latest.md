@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:8363e01420b14f57c3634d1998a67fd98e5fa7df68eb4c5d210f5b14772efbc1`
-- Created: `2020-11-24T00:51:28.452283453Z`
+- Image ID: `sha256:8336349dcd3487c36812156094b29fc04e9cadc66a0e2fe0b5acb23ddcac25ee`
+- Created: `2020-12-09T04:28:34.683418854Z`
 - Virtual Size: ~ 1.24 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -2861,11 +2861,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libxext/2:1.3.3-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libxext/2:1.3.3-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libxml2=2.9.4+dfsg1-7`
+### `dpkg` source package: `libxml2=2.9.4+dfsg1-7+deb10u1`
 
 Binary Packages:
 
-- `libxml2:amd64=2.9.4+dfsg1-7+b3`
+- `libxml2:amd64=2.9.4+dfsg1-7+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/libxml2/copyright`)
 
@@ -2875,7 +2875,7 @@ Licenses: (parsed from: `/usr/share/doc/libxml2/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libxml2=2.9.4+dfsg1-7
+$ apt-get source -qq --print-uris libxml2=2.9.4+dfsg1-7+deb10u1
 'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.4+dfsg1-7+deb10u1.dsc' libxml2_2.9.4+dfsg1-7+deb10u1.dsc 3008 SHA256:07f3101267382dec2b478f09573dd78e14dae960a95a404fdde74a5240158e19
 'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.4+dfsg1.orig.tar.xz' libxml2_2.9.4+dfsg1.orig.tar.xz 2446412 SHA256:a74ad55e346aa0b2b41903e66d21f8f3d2a736b3f41e32496376861ab484184e
 'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.4+dfsg1-7+deb10u1.debian.tar.xz' libxml2_2.9.4+dfsg1-7+deb10u1.debian.tar.xz 38280 SHA256:f94491b42a58f875c0c08f53c2facb48bfd94e8b66181e1ac7e29b8e965cc9ba
@@ -2883,9 +2883,9 @@ $ apt-get source -qq --print-uris libxml2=2.9.4+dfsg1-7
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/libxml2/2.9.4+dfsg1-7/ (for browsing the source)
-- https://sources.debian.net/src/libxml2/2.9.4+dfsg1-7/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libxml2/2.9.4+dfsg1-7/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/libxml2/2.9.4+dfsg1-7+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/libxml2/2.9.4+dfsg1-7+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libxml2/2.9.4+dfsg1-7+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libxmu=2:1.1.2-2`
 
@@ -9505,11 +9505,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/npth/1.6-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/npth/1.6-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `odoo=14.0.20201123`
+### `dpkg` source package: `odoo=14.0.20201208`
 
 Binary Packages:
 
-- `odoo=14.0.20201123`
+- `odoo=14.0.20201208`
 
 Licenses: (parsed from: `/usr/share/doc/odoo/copyright`)
 
