@@ -10,7 +10,7 @@
 ## `swipl:8.2.3`
 
 ```console
-$ docker pull swipl@sha256:0b5cafb4492160e770becfb1a990f8f6ecaf1bbbe5ac48f7ac85881c7e39a863
+$ docker pull swipl@sha256:ec624be578a88fc95f051ce58e62b3cd668fa4b32d68a69743ac43eead67a2f3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -22,89 +22,89 @@ $ docker pull swipl@sha256:0b5cafb4492160e770becfb1a990f8f6ecaf1bbbe5ac48f7ac858
 ### `swipl:8.2.3` - linux; amd64
 
 ```console
-$ docker pull swipl@sha256:5c62fbb0c02f9b3ef6913cb0a5debb6f604061bf08d929d0e905aa625632fa74
+$ docker pull swipl@sha256:e60e539ef5395db5c10e7aa1a1a24b544c70eba4dd221968ef036761e236328e
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **56.2 MB (56236605 bytes)**  
+-	Total Size: **56.2 MB (56236541 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0c8b6a7006eef6c3847867e6993eb0581a87d353ebb11e8fd45c888af0d9eb48`
+-	Image ID: `sha256:a24bcb487f93858b72a169a7a3214272efb805c02c0c3b3118ba91fe42ebbab4`
 -	Default Command: `["swipl"]`
 
 ```dockerfile
-# Tue, 17 Nov 2020 20:24:29 GMT
-ADD file:02294bc9e72a3f3314955f0b5e0e728cd75321e88a1fae9bfbac77c76bfaf05d in / 
-# Tue, 17 Nov 2020 20:24:29 GMT
+# Fri, 11 Dec 2020 02:08:58 GMT
+ADD file:f03e68a10b84e2342cfffbb8cdec1117c7f5e5d0dd004072e84efb62cfdf157c in / 
+# Fri, 11 Dec 2020 02:08:58 GMT
 CMD ["bash"]
-# Wed, 18 Nov 2020 16:11:25 GMT
+# Fri, 11 Dec 2020 19:52:34 GMT
 LABEL maintainer=Dave Curylo <dave@curylo.org>, Michael Hendricks <michael@ndrix.org>
-# Wed, 18 Nov 2020 16:11:39 GMT
+# Fri, 11 Dec 2020 19:52:46 GMT
 RUN apt-get update &&     apt-get install -y --no-install-recommends     libtcmalloc-minimal4     libarchive13     libyaml-dev     libgmp10     libossp-uuid16     libssl1.1     ca-certificates     libdb5.3     libpcre3     libedit2     libgeos-c1v5     libspatialindex4v5     unixodbc     odbc-postgresql     tdsodbc     libmariadbclient18     libsqlite3-0     libserd-0-0     libraptor2-0 &&     dpkgArch="$(dpkg --print-architecture)" &&     rm -rf /var/lib/apt/lists/*
-# Wed, 18 Nov 2020 16:11:39 GMT
+# Fri, 11 Dec 2020 19:52:47 GMT
 ENV LANG=C.UTF-8
-# Tue, 24 Nov 2020 01:25:07 GMT
+# Fri, 11 Dec 2020 20:30:46 GMT
 RUN set -eux;     SWIPL_VER=8.2.3;     SWIPL_CHECKSUM=9403972f9d87f1f4971fbd4a5644b4976b1b18fc174be84506c6b713bd1f9c93;     BUILD_DEPS='make cmake ninja-build gcc g++ wget git autoconf libarchive-dev libgmp-dev libossp-uuid-dev libpcre3-dev libreadline-dev libedit-dev libssl-dev zlib1g-dev libdb-dev unixodbc-dev libsqlite3-dev libserd-dev libraptor2-dev libgeos++-dev libspatialindex-dev libgoogle-perftools-dev';     dpkgArch="$(dpkg --print-architecture)";     apt-get update; apt-get install -y --no-install-recommends $BUILD_DEPS; rm -rf /var/lib/apt/lists/*;     mkdir /tmp/src;     cd /tmp/src;     wget -q https://www.swi-prolog.org/download/stable/src/swipl-$SWIPL_VER.tar.gz;     echo "$SWIPL_CHECKSUM  swipl-$SWIPL_VER.tar.gz" >> swipl-$SWIPL_VER.tar.gz-CHECKSUM;     sha256sum -c swipl-$SWIPL_VER.tar.gz-CHECKSUM;     tar -xzf swipl-$SWIPL_VER.tar.gz;     mkdir swipl-$SWIPL_VER/build;     cd swipl-$SWIPL_VER/build;     cmake -DCMAKE_BUILD_TYPE=Release           -DSWIPL_PACKAGES_X=OFF 	  -DSWIPL_PACKAGES_JAVA=OFF 	  -DCMAKE_INSTALL_PREFIX=/usr 	  -G Ninja           ..;     ../scripts/pgo-compile.sh;     ninja;     ninja install;     rm -rf /tmp/src;     mkdir -p /usr/share/swi-prolog/pack;     cd /usr/share/swi-prolog/pack;     install_addin () {         git clone "$2" "$1";         git -C "$1" checkout -q "$3";         if [ "$1" = 'prosqlite' ]; then rm -rf "$1/lib"; fi;         swipl -g "pack_rebuild($1)" -t halt;         find "$1" -mindepth 1 -maxdepth 1 ! -name lib ! -name prolog ! -name pack.pl -exec rm -rf {} +;         find "$1" -name .git -exec rm -rf {} +;         find "$1" -name '*.so' -exec strip {} +;     };     dpkgArch="$(dpkg --print-architecture)";     install_addin space https://github.com/JanWielemaker/space.git cd6fefa63317a7a6effb61a1c5aee634ebe2ca05;     install_addin prosqlite https://github.com/nicos-angelopoulos/prosqlite.git cfd2f68709f5fb61833c0e2f8e9c6546e542009c;     [ "$dpkgArch" = 'armhf' ] || [ "$dpkgArch" = 'armel' ] || install_addin rocksdb https://github.com/JanWielemaker/rocksdb.git f110766ee97cfbc6fddd4c33b7238f00e76ecc18;     [ "$dpkgArch" = 'armhf' ] || [ "$dpkgArch" = 'armel' ] ||  install_addin hdt https://github.com/JanWielemaker/hdt.git e0a0eff87fc3318434cb493690c570e1255ed30e;     install_addin rserve_client https://github.com/JanWielemaker/rserve_client.git f8e83a4e1e4600baef4222dc4c2904a41a79a5ad;     apt-get purge -y --auto-remove $BUILD_DEPS
-# Tue, 24 Nov 2020 01:25:07 GMT
+# Fri, 11 Dec 2020 20:30:46 GMT
 CMD ["swipl"]
 ```
 
 -	Layers:
-	-	`sha256:4297e02295585beb3f148a5740b644ce87e059455f8d98a5adb7bf95105e011c`  
-		Last Modified: Tue, 17 Nov 2020 20:30:42 GMT  
-		Size: 22.5 MB (22527663 bytes)  
+	-	`sha256:e50c3c9ef5a201a24959788dcbc7ebf88d95c63e132a4d7396ce541127afd88e`  
+		Last Modified: Fri, 11 Dec 2020 02:15:43 GMT  
+		Size: 22.5 MB (22527860 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:281a2c8969fdd723b376fc6907214f76b52b6164d2f90fc9cd5bb30e0af9d8ec`  
-		Last Modified: Wed, 18 Nov 2020 16:33:26 GMT  
-		Size: 24.9 MB (24879611 bytes)  
+	-	`sha256:c82e74273b88e5281d93ae65ec620075fecaca3ff02fd8e0ef6da6e192c64082`  
+		Last Modified: Fri, 11 Dec 2020 20:31:11 GMT  
+		Size: 24.9 MB (24879481 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3d91c511d4843ee32376785cae1587883c6657e137f5792efa0bdd2c01c4da69`  
-		Last Modified: Tue, 24 Nov 2020 01:25:24 GMT  
-		Size: 8.8 MB (8829331 bytes)  
+	-	`sha256:b46e708bdf4a2d18aa539bcb68b1810e959bf67907494e0ec2b07ddc9078eaa8`  
+		Last Modified: Fri, 11 Dec 2020 20:31:19 GMT  
+		Size: 8.8 MB (8829200 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `swipl:8.2.3` - linux; arm variant v7
 
 ```console
-$ docker pull swipl@sha256:4356ee781df3d57d9bedc8c488acb0edff30ee1a9faa8d704d89ebfd452d2d14
+$ docker pull swipl@sha256:3048a88829159d2a8c5390e0ad8cf28d0b54afcf8335e3063353b5bde67ac59e
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **48.4 MB (48355198 bytes)**  
+-	Total Size: **48.4 MB (48355266 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a4725591ea13235a9318a3d3e77340e83c72d6e45ca27ae8d915d8a5cacd9d25`
+-	Image ID: `sha256:c69df5e0245996c7458156a1f5b49d46322b26b0cfa32de7594dfd9a8a9a447e`
 -	Default Command: `["swipl"]`
 
 ```dockerfile
-# Tue, 17 Nov 2020 20:27:23 GMT
-ADD file:de081793a94d15fb89877812e1c838c9e3836070e36a6fb7f01b858a884b6680 in / 
-# Tue, 17 Nov 2020 20:27:24 GMT
+# Fri, 11 Dec 2020 02:28:33 GMT
+ADD file:a5ae44ff42f691e7afa1f743d1f05f6fd72d9c1737ae20b97977f9de76811260 in / 
+# Fri, 11 Dec 2020 02:28:34 GMT
 CMD ["bash"]
-# Wed, 18 Nov 2020 07:13:40 GMT
+# Fri, 11 Dec 2020 20:46:51 GMT
 LABEL maintainer=Dave Curylo <dave@curylo.org>, Michael Hendricks <michael@ndrix.org>
-# Wed, 18 Nov 2020 07:14:09 GMT
+# Fri, 11 Dec 2020 20:47:17 GMT
 RUN apt-get update &&     apt-get install -y --no-install-recommends     libtcmalloc-minimal4     libarchive13     libyaml-dev     libgmp10     libossp-uuid16     libssl1.1     ca-certificates     libdb5.3     libpcre3     libedit2     libgeos-c1v5     libspatialindex4v5     unixodbc     odbc-postgresql     tdsodbc     libmariadbclient18     libsqlite3-0     libserd-0-0     libraptor2-0 &&     dpkgArch="$(dpkg --print-architecture)" &&     rm -rf /var/lib/apt/lists/*
-# Wed, 18 Nov 2020 07:14:10 GMT
+# Fri, 11 Dec 2020 20:47:18 GMT
 ENV LANG=C.UTF-8
-# Mon, 23 Nov 2020 23:47:06 GMT
+# Fri, 11 Dec 2020 20:57:00 GMT
 RUN set -eux;     SWIPL_VER=8.2.3;     SWIPL_CHECKSUM=9403972f9d87f1f4971fbd4a5644b4976b1b18fc174be84506c6b713bd1f9c93;     BUILD_DEPS='make cmake ninja-build gcc g++ wget git autoconf libarchive-dev libgmp-dev libossp-uuid-dev libpcre3-dev libreadline-dev libedit-dev libssl-dev zlib1g-dev libdb-dev unixodbc-dev libsqlite3-dev libserd-dev libraptor2-dev libgeos++-dev libspatialindex-dev libgoogle-perftools-dev';     dpkgArch="$(dpkg --print-architecture)";     apt-get update; apt-get install -y --no-install-recommends $BUILD_DEPS; rm -rf /var/lib/apt/lists/*;     mkdir /tmp/src;     cd /tmp/src;     wget -q https://www.swi-prolog.org/download/stable/src/swipl-$SWIPL_VER.tar.gz;     echo "$SWIPL_CHECKSUM  swipl-$SWIPL_VER.tar.gz" >> swipl-$SWIPL_VER.tar.gz-CHECKSUM;     sha256sum -c swipl-$SWIPL_VER.tar.gz-CHECKSUM;     tar -xzf swipl-$SWIPL_VER.tar.gz;     mkdir swipl-$SWIPL_VER/build;     cd swipl-$SWIPL_VER/build;     cmake -DCMAKE_BUILD_TYPE=Release           -DSWIPL_PACKAGES_X=OFF 	  -DSWIPL_PACKAGES_JAVA=OFF 	  -DCMAKE_INSTALL_PREFIX=/usr 	  -G Ninja           ..;     ../scripts/pgo-compile.sh;     ninja;     ninja install;     rm -rf /tmp/src;     mkdir -p /usr/share/swi-prolog/pack;     cd /usr/share/swi-prolog/pack;     install_addin () {         git clone "$2" "$1";         git -C "$1" checkout -q "$3";         if [ "$1" = 'prosqlite' ]; then rm -rf "$1/lib"; fi;         swipl -g "pack_rebuild($1)" -t halt;         find "$1" -mindepth 1 -maxdepth 1 ! -name lib ! -name prolog ! -name pack.pl -exec rm -rf {} +;         find "$1" -name .git -exec rm -rf {} +;         find "$1" -name '*.so' -exec strip {} +;     };     dpkgArch="$(dpkg --print-architecture)";     install_addin space https://github.com/JanWielemaker/space.git cd6fefa63317a7a6effb61a1c5aee634ebe2ca05;     install_addin prosqlite https://github.com/nicos-angelopoulos/prosqlite.git cfd2f68709f5fb61833c0e2f8e9c6546e542009c;     [ "$dpkgArch" = 'armhf' ] || [ "$dpkgArch" = 'armel' ] || install_addin rocksdb https://github.com/JanWielemaker/rocksdb.git f110766ee97cfbc6fddd4c33b7238f00e76ecc18;     [ "$dpkgArch" = 'armhf' ] || [ "$dpkgArch" = 'armel' ] ||  install_addin hdt https://github.com/JanWielemaker/hdt.git e0a0eff87fc3318434cb493690c570e1255ed30e;     install_addin rserve_client https://github.com/JanWielemaker/rserve_client.git f8e83a4e1e4600baef4222dc4c2904a41a79a5ad;     apt-get purge -y --auto-remove $BUILD_DEPS
-# Mon, 23 Nov 2020 23:47:08 GMT
+# Fri, 11 Dec 2020 20:57:02 GMT
 CMD ["swipl"]
 ```
 
 -	Layers:
-	-	`sha256:a97dc136886474245bdc5c70c58e70e18fc55d193dae8225f0543e0b500b484a`  
-		Last Modified: Tue, 17 Nov 2020 20:35:46 GMT  
-		Size: 19.3 MB (19313228 bytes)  
+	-	`sha256:3844aeda5f39338d766015a56d78b18d6d4d4b95b0e6b41f8d37105ee5b91a80`  
+		Last Modified: Fri, 11 Dec 2020 02:37:12 GMT  
+		Size: 19.3 MB (19313560 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:286b0f47619fa3179237da8390d467340be01e9ad2c3f66bf7969a6ade5e9f2d`  
-		Last Modified: Wed, 18 Nov 2020 07:19:14 GMT  
-		Size: 22.9 MB (22862518 bytes)  
+	-	`sha256:d60fcd8d92aaff5ec9add2fbeaf1cadb7c830ba2575215ca303e5eaf1e43c555`  
+		Last Modified: Fri, 11 Dec 2020 20:57:35 GMT  
+		Size: 22.9 MB (22862408 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f5a8508b246c6609c75790613047ca75f7b3fe17dc3e06e47cb22e14b88a9ed7`  
-		Last Modified: Mon, 23 Nov 2020 23:47:28 GMT  
-		Size: 6.2 MB (6179452 bytes)  
+	-	`sha256:249ab606c757150f223df82ec1f766b3d83fc94267f1c04c55bc7de13b76c03a`  
+		Last Modified: Fri, 11 Dec 2020 20:57:46 GMT  
+		Size: 6.2 MB (6179298 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `swipl:8.2.3` - linux; arm64 variant v8
@@ -154,7 +154,7 @@ CMD ["swipl"]
 ## `swipl:8.3.13`
 
 ```console
-$ docker pull swipl@sha256:c0a3f4e8386700e6e5ebcf82ffd01ae9a64678ebdf0d362e5bf87fc84f465c07
+$ docker pull swipl@sha256:b6c5545a9ea69cbfa553ab40bf36c1cdc9731dcd290f53da16b2798cb42028cb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -166,89 +166,89 @@ $ docker pull swipl@sha256:c0a3f4e8386700e6e5ebcf82ffd01ae9a64678ebdf0d362e5bf87
 ### `swipl:8.3.13` - linux; amd64
 
 ```console
-$ docker pull swipl@sha256:f53c08f85c90776443eb14919fcce1dee5508bcf35149226e227cd2706ca05dd
+$ docker pull swipl@sha256:59c43f867447c31c4eb0770a5ec580ec72e22394d4d115b00f44373f5f35cf42
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **56.3 MB (56328805 bytes)**  
+-	Total Size: **56.3 MB (56328909 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:962826b616db9632f7cf6c04c335998703b2114c3b07df28549b9b330afd676e`
+-	Image ID: `sha256:9ca73691a625f1b64e43d85d2dd38c8b179825eb4c3273a8c658fe0a3b12db88`
 -	Default Command: `["swipl"]`
 
 ```dockerfile
-# Tue, 17 Nov 2020 20:24:29 GMT
-ADD file:02294bc9e72a3f3314955f0b5e0e728cd75321e88a1fae9bfbac77c76bfaf05d in / 
-# Tue, 17 Nov 2020 20:24:29 GMT
+# Fri, 11 Dec 2020 02:08:58 GMT
+ADD file:f03e68a10b84e2342cfffbb8cdec1117c7f5e5d0dd004072e84efb62cfdf157c in / 
+# Fri, 11 Dec 2020 02:08:58 GMT
 CMD ["bash"]
-# Wed, 18 Nov 2020 16:11:25 GMT
+# Fri, 11 Dec 2020 19:52:34 GMT
 LABEL maintainer=Dave Curylo <dave@curylo.org>, Michael Hendricks <michael@ndrix.org>
-# Wed, 18 Nov 2020 16:11:39 GMT
+# Fri, 11 Dec 2020 19:52:46 GMT
 RUN apt-get update &&     apt-get install -y --no-install-recommends     libtcmalloc-minimal4     libarchive13     libyaml-dev     libgmp10     libossp-uuid16     libssl1.1     ca-certificates     libdb5.3     libpcre3     libedit2     libgeos-c1v5     libspatialindex4v5     unixodbc     odbc-postgresql     tdsodbc     libmariadbclient18     libsqlite3-0     libserd-0-0     libraptor2-0 &&     dpkgArch="$(dpkg --print-architecture)" &&     rm -rf /var/lib/apt/lists/*
-# Wed, 18 Nov 2020 16:11:39 GMT
+# Fri, 11 Dec 2020 19:52:47 GMT
 ENV LANG=C.UTF-8
-# Thu, 19 Nov 2020 07:59:48 GMT
+# Fri, 11 Dec 2020 20:11:35 GMT
 RUN set -eux;     SWIPL_VER=8.3.13;     SWIPL_CHECKSUM=a999505cf514b707575e20acc53840ee3c8edd4b8f492772a76f2f91f2f6b189;     BUILD_DEPS='make cmake ninja-build gcc g++ wget git autoconf libarchive-dev libgmp-dev libossp-uuid-dev libpcre3-dev libreadline-dev libedit-dev libssl-dev zlib1g-dev libdb-dev unixodbc-dev libsqlite3-dev libserd-dev libraptor2-dev libgeos++-dev libspatialindex-dev libgoogle-perftools-dev';     dpkgArch="$(dpkg --print-architecture)";     apt-get update; apt-get install -y --no-install-recommends $BUILD_DEPS; rm -rf /var/lib/apt/lists/*;     mkdir /tmp/src;     cd /tmp/src;     wget -q https://www.swi-prolog.org/download/devel/src/swipl-$SWIPL_VER.tar.gz;     echo "$SWIPL_CHECKSUM  swipl-$SWIPL_VER.tar.gz" >> swipl-$SWIPL_VER.tar.gz-CHECKSUM;     sha256sum -c swipl-$SWIPL_VER.tar.gz-CHECKSUM;     tar -xzf swipl-$SWIPL_VER.tar.gz;     mkdir swipl-$SWIPL_VER/build;     cd swipl-$SWIPL_VER/build;     cmake -DCMAKE_BUILD_TYPE=Release           -DSWIPL_PACKAGES_X=OFF 	  -DSWIPL_PACKAGES_JAVA=OFF 	  -DCMAKE_INSTALL_PREFIX=/usr 	  -G Ninja           ..;     ../scripts/pgo-compile.sh;     ninja;     ninja install;     rm -rf /tmp/src;     mkdir -p /usr/share/swi-prolog/pack;     cd /usr/share/swi-prolog/pack;     install_addin () {         git clone "$2" "$1";         git -C "$1" checkout -q "$3";         if [ "$1" = 'prosqlite' ]; then rm -rf "$1/lib"; fi;         swipl -g "pack_rebuild($1)" -t halt;         find "$1" -mindepth 1 -maxdepth 1 ! -name lib ! -name prolog ! -name pack.pl -exec rm -rf {} +;         find "$1" -name .git -exec rm -rf {} +;         find "$1" -name '*.so' -exec strip {} +;     };     dpkgArch="$(dpkg --print-architecture)";     install_addin space https://github.com/JanWielemaker/space.git cd6fefa63317a7a6effb61a1c5aee634ebe2ca05;     install_addin prosqlite https://github.com/nicos-angelopoulos/prosqlite.git cfd2f68709f5fb61833c0e2f8e9c6546e542009c;     [ "$dpkgArch" = 'armhf' ] || [ "$dpkgArch" = 'armel' ] || install_addin rocksdb https://github.com/JanWielemaker/rocksdb.git f110766ee97cfbc6fddd4c33b7238f00e76ecc18;     [ "$dpkgArch" = 'armhf' ] || [ "$dpkgArch" = 'armel' ] ||  install_addin hdt https://github.com/JanWielemaker/hdt.git e0a0eff87fc3318434cb493690c570e1255ed30e;     install_addin rserve_client https://github.com/JanWielemaker/rserve_client.git f8e83a4e1e4600baef4222dc4c2904a41a79a5ad;     apt-get purge -y --auto-remove $BUILD_DEPS
-# Thu, 19 Nov 2020 07:59:49 GMT
+# Fri, 11 Dec 2020 20:11:35 GMT
 CMD ["swipl"]
 ```
 
 -	Layers:
-	-	`sha256:4297e02295585beb3f148a5740b644ce87e059455f8d98a5adb7bf95105e011c`  
-		Last Modified: Tue, 17 Nov 2020 20:30:42 GMT  
-		Size: 22.5 MB (22527663 bytes)  
+	-	`sha256:e50c3c9ef5a201a24959788dcbc7ebf88d95c63e132a4d7396ce541127afd88e`  
+		Last Modified: Fri, 11 Dec 2020 02:15:43 GMT  
+		Size: 22.5 MB (22527860 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:281a2c8969fdd723b376fc6907214f76b52b6164d2f90fc9cd5bb30e0af9d8ec`  
-		Last Modified: Wed, 18 Nov 2020 16:33:26 GMT  
-		Size: 24.9 MB (24879611 bytes)  
+	-	`sha256:c82e74273b88e5281d93ae65ec620075fecaca3ff02fd8e0ef6da6e192c64082`  
+		Last Modified: Fri, 11 Dec 2020 20:31:11 GMT  
+		Size: 24.9 MB (24879481 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6b593c19109e1b6a70962e49b305f335b822c4fe457cb88f0bf6103a8c044fdf`  
-		Last Modified: Thu, 19 Nov 2020 08:00:18 GMT  
-		Size: 8.9 MB (8921531 bytes)  
+	-	`sha256:446835b553f030562339d700fdb7aa722192e2951035be8027da1f06c3922c32`  
+		Last Modified: Fri, 11 Dec 2020 20:31:09 GMT  
+		Size: 8.9 MB (8921568 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `swipl:8.3.13` - linux; arm variant v7
 
 ```console
-$ docker pull swipl@sha256:50455f826a122c5143b5e1ecc4013c97fe7db1cad4c2aad19118796c79cbf128
+$ docker pull swipl@sha256:8b76bc7a37aa9f37f7cd5bf570aa75e0ab9d72a6e9d37a3c18b03f6a09491ff8
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **48.4 MB (48444822 bytes)**  
+-	Total Size: **48.4 MB (48445023 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a050a279087fbaa870cec8ed92f5a6da95c359df0228982ad7e552ba6116dc9a`
+-	Image ID: `sha256:64be3eb4919e2fdb77d67d75a509b9604a835bd4ffd2b039a5fc28fc5c69aa66`
 -	Default Command: `["swipl"]`
 
 ```dockerfile
-# Tue, 17 Nov 2020 20:27:23 GMT
-ADD file:de081793a94d15fb89877812e1c838c9e3836070e36a6fb7f01b858a884b6680 in / 
-# Tue, 17 Nov 2020 20:27:24 GMT
+# Fri, 11 Dec 2020 02:28:33 GMT
+ADD file:a5ae44ff42f691e7afa1f743d1f05f6fd72d9c1737ae20b97977f9de76811260 in / 
+# Fri, 11 Dec 2020 02:28:34 GMT
 CMD ["bash"]
-# Wed, 18 Nov 2020 07:13:40 GMT
+# Fri, 11 Dec 2020 20:46:51 GMT
 LABEL maintainer=Dave Curylo <dave@curylo.org>, Michael Hendricks <michael@ndrix.org>
-# Wed, 18 Nov 2020 07:14:09 GMT
+# Fri, 11 Dec 2020 20:47:17 GMT
 RUN apt-get update &&     apt-get install -y --no-install-recommends     libtcmalloc-minimal4     libarchive13     libyaml-dev     libgmp10     libossp-uuid16     libssl1.1     ca-certificates     libdb5.3     libpcre3     libedit2     libgeos-c1v5     libspatialindex4v5     unixodbc     odbc-postgresql     tdsodbc     libmariadbclient18     libsqlite3-0     libserd-0-0     libraptor2-0 &&     dpkgArch="$(dpkg --print-architecture)" &&     rm -rf /var/lib/apt/lists/*
-# Wed, 18 Nov 2020 07:14:10 GMT
+# Fri, 11 Dec 2020 20:47:18 GMT
 ENV LANG=C.UTF-8
-# Thu, 19 Nov 2020 02:53:35 GMT
+# Fri, 11 Dec 2020 20:52:15 GMT
 RUN set -eux;     SWIPL_VER=8.3.13;     SWIPL_CHECKSUM=a999505cf514b707575e20acc53840ee3c8edd4b8f492772a76f2f91f2f6b189;     BUILD_DEPS='make cmake ninja-build gcc g++ wget git autoconf libarchive-dev libgmp-dev libossp-uuid-dev libpcre3-dev libreadline-dev libedit-dev libssl-dev zlib1g-dev libdb-dev unixodbc-dev libsqlite3-dev libserd-dev libraptor2-dev libgeos++-dev libspatialindex-dev libgoogle-perftools-dev';     dpkgArch="$(dpkg --print-architecture)";     apt-get update; apt-get install -y --no-install-recommends $BUILD_DEPS; rm -rf /var/lib/apt/lists/*;     mkdir /tmp/src;     cd /tmp/src;     wget -q https://www.swi-prolog.org/download/devel/src/swipl-$SWIPL_VER.tar.gz;     echo "$SWIPL_CHECKSUM  swipl-$SWIPL_VER.tar.gz" >> swipl-$SWIPL_VER.tar.gz-CHECKSUM;     sha256sum -c swipl-$SWIPL_VER.tar.gz-CHECKSUM;     tar -xzf swipl-$SWIPL_VER.tar.gz;     mkdir swipl-$SWIPL_VER/build;     cd swipl-$SWIPL_VER/build;     cmake -DCMAKE_BUILD_TYPE=Release           -DSWIPL_PACKAGES_X=OFF 	  -DSWIPL_PACKAGES_JAVA=OFF 	  -DCMAKE_INSTALL_PREFIX=/usr 	  -G Ninja           ..;     ../scripts/pgo-compile.sh;     ninja;     ninja install;     rm -rf /tmp/src;     mkdir -p /usr/share/swi-prolog/pack;     cd /usr/share/swi-prolog/pack;     install_addin () {         git clone "$2" "$1";         git -C "$1" checkout -q "$3";         if [ "$1" = 'prosqlite' ]; then rm -rf "$1/lib"; fi;         swipl -g "pack_rebuild($1)" -t halt;         find "$1" -mindepth 1 -maxdepth 1 ! -name lib ! -name prolog ! -name pack.pl -exec rm -rf {} +;         find "$1" -name .git -exec rm -rf {} +;         find "$1" -name '*.so' -exec strip {} +;     };     dpkgArch="$(dpkg --print-architecture)";     install_addin space https://github.com/JanWielemaker/space.git cd6fefa63317a7a6effb61a1c5aee634ebe2ca05;     install_addin prosqlite https://github.com/nicos-angelopoulos/prosqlite.git cfd2f68709f5fb61833c0e2f8e9c6546e542009c;     [ "$dpkgArch" = 'armhf' ] || [ "$dpkgArch" = 'armel' ] || install_addin rocksdb https://github.com/JanWielemaker/rocksdb.git f110766ee97cfbc6fddd4c33b7238f00e76ecc18;     [ "$dpkgArch" = 'armhf' ] || [ "$dpkgArch" = 'armel' ] ||  install_addin hdt https://github.com/JanWielemaker/hdt.git e0a0eff87fc3318434cb493690c570e1255ed30e;     install_addin rserve_client https://github.com/JanWielemaker/rserve_client.git f8e83a4e1e4600baef4222dc4c2904a41a79a5ad;     apt-get purge -y --auto-remove $BUILD_DEPS
-# Thu, 19 Nov 2020 02:53:37 GMT
+# Fri, 11 Dec 2020 20:52:19 GMT
 CMD ["swipl"]
 ```
 
 -	Layers:
-	-	`sha256:a97dc136886474245bdc5c70c58e70e18fc55d193dae8225f0543e0b500b484a`  
-		Last Modified: Tue, 17 Nov 2020 20:35:46 GMT  
-		Size: 19.3 MB (19313228 bytes)  
+	-	`sha256:3844aeda5f39338d766015a56d78b18d6d4d4b95b0e6b41f8d37105ee5b91a80`  
+		Last Modified: Fri, 11 Dec 2020 02:37:12 GMT  
+		Size: 19.3 MB (19313560 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:286b0f47619fa3179237da8390d467340be01e9ad2c3f66bf7969a6ade5e9f2d`  
-		Last Modified: Wed, 18 Nov 2020 07:19:14 GMT  
-		Size: 22.9 MB (22862518 bytes)  
+	-	`sha256:d60fcd8d92aaff5ec9add2fbeaf1cadb7c830ba2575215ca303e5eaf1e43c555`  
+		Last Modified: Fri, 11 Dec 2020 20:57:35 GMT  
+		Size: 22.9 MB (22862408 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6215a3157b07d03a0393436411dd42bb86196e0f5c0ace974416dcb4da41b91c`  
-		Last Modified: Thu, 19 Nov 2020 02:54:02 GMT  
-		Size: 6.3 MB (6269076 bytes)  
+	-	`sha256:aebde8be70379d4638ac1fbab3a5a3bf7dc50e50eaf18a21cec014b02f137fdf`  
+		Last Modified: Fri, 11 Dec 2020 20:57:31 GMT  
+		Size: 6.3 MB (6269055 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `swipl:8.3.13` - linux; arm64 variant v8
@@ -298,7 +298,7 @@ CMD ["swipl"]
 ## `swipl:latest`
 
 ```console
-$ docker pull swipl@sha256:c0a3f4e8386700e6e5ebcf82ffd01ae9a64678ebdf0d362e5bf87fc84f465c07
+$ docker pull swipl@sha256:b6c5545a9ea69cbfa553ab40bf36c1cdc9731dcd290f53da16b2798cb42028cb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -310,89 +310,89 @@ $ docker pull swipl@sha256:c0a3f4e8386700e6e5ebcf82ffd01ae9a64678ebdf0d362e5bf87
 ### `swipl:latest` - linux; amd64
 
 ```console
-$ docker pull swipl@sha256:f53c08f85c90776443eb14919fcce1dee5508bcf35149226e227cd2706ca05dd
+$ docker pull swipl@sha256:59c43f867447c31c4eb0770a5ec580ec72e22394d4d115b00f44373f5f35cf42
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **56.3 MB (56328805 bytes)**  
+-	Total Size: **56.3 MB (56328909 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:962826b616db9632f7cf6c04c335998703b2114c3b07df28549b9b330afd676e`
+-	Image ID: `sha256:9ca73691a625f1b64e43d85d2dd38c8b179825eb4c3273a8c658fe0a3b12db88`
 -	Default Command: `["swipl"]`
 
 ```dockerfile
-# Tue, 17 Nov 2020 20:24:29 GMT
-ADD file:02294bc9e72a3f3314955f0b5e0e728cd75321e88a1fae9bfbac77c76bfaf05d in / 
-# Tue, 17 Nov 2020 20:24:29 GMT
+# Fri, 11 Dec 2020 02:08:58 GMT
+ADD file:f03e68a10b84e2342cfffbb8cdec1117c7f5e5d0dd004072e84efb62cfdf157c in / 
+# Fri, 11 Dec 2020 02:08:58 GMT
 CMD ["bash"]
-# Wed, 18 Nov 2020 16:11:25 GMT
+# Fri, 11 Dec 2020 19:52:34 GMT
 LABEL maintainer=Dave Curylo <dave@curylo.org>, Michael Hendricks <michael@ndrix.org>
-# Wed, 18 Nov 2020 16:11:39 GMT
+# Fri, 11 Dec 2020 19:52:46 GMT
 RUN apt-get update &&     apt-get install -y --no-install-recommends     libtcmalloc-minimal4     libarchive13     libyaml-dev     libgmp10     libossp-uuid16     libssl1.1     ca-certificates     libdb5.3     libpcre3     libedit2     libgeos-c1v5     libspatialindex4v5     unixodbc     odbc-postgresql     tdsodbc     libmariadbclient18     libsqlite3-0     libserd-0-0     libraptor2-0 &&     dpkgArch="$(dpkg --print-architecture)" &&     rm -rf /var/lib/apt/lists/*
-# Wed, 18 Nov 2020 16:11:39 GMT
+# Fri, 11 Dec 2020 19:52:47 GMT
 ENV LANG=C.UTF-8
-# Thu, 19 Nov 2020 07:59:48 GMT
+# Fri, 11 Dec 2020 20:11:35 GMT
 RUN set -eux;     SWIPL_VER=8.3.13;     SWIPL_CHECKSUM=a999505cf514b707575e20acc53840ee3c8edd4b8f492772a76f2f91f2f6b189;     BUILD_DEPS='make cmake ninja-build gcc g++ wget git autoconf libarchive-dev libgmp-dev libossp-uuid-dev libpcre3-dev libreadline-dev libedit-dev libssl-dev zlib1g-dev libdb-dev unixodbc-dev libsqlite3-dev libserd-dev libraptor2-dev libgeos++-dev libspatialindex-dev libgoogle-perftools-dev';     dpkgArch="$(dpkg --print-architecture)";     apt-get update; apt-get install -y --no-install-recommends $BUILD_DEPS; rm -rf /var/lib/apt/lists/*;     mkdir /tmp/src;     cd /tmp/src;     wget -q https://www.swi-prolog.org/download/devel/src/swipl-$SWIPL_VER.tar.gz;     echo "$SWIPL_CHECKSUM  swipl-$SWIPL_VER.tar.gz" >> swipl-$SWIPL_VER.tar.gz-CHECKSUM;     sha256sum -c swipl-$SWIPL_VER.tar.gz-CHECKSUM;     tar -xzf swipl-$SWIPL_VER.tar.gz;     mkdir swipl-$SWIPL_VER/build;     cd swipl-$SWIPL_VER/build;     cmake -DCMAKE_BUILD_TYPE=Release           -DSWIPL_PACKAGES_X=OFF 	  -DSWIPL_PACKAGES_JAVA=OFF 	  -DCMAKE_INSTALL_PREFIX=/usr 	  -G Ninja           ..;     ../scripts/pgo-compile.sh;     ninja;     ninja install;     rm -rf /tmp/src;     mkdir -p /usr/share/swi-prolog/pack;     cd /usr/share/swi-prolog/pack;     install_addin () {         git clone "$2" "$1";         git -C "$1" checkout -q "$3";         if [ "$1" = 'prosqlite' ]; then rm -rf "$1/lib"; fi;         swipl -g "pack_rebuild($1)" -t halt;         find "$1" -mindepth 1 -maxdepth 1 ! -name lib ! -name prolog ! -name pack.pl -exec rm -rf {} +;         find "$1" -name .git -exec rm -rf {} +;         find "$1" -name '*.so' -exec strip {} +;     };     dpkgArch="$(dpkg --print-architecture)";     install_addin space https://github.com/JanWielemaker/space.git cd6fefa63317a7a6effb61a1c5aee634ebe2ca05;     install_addin prosqlite https://github.com/nicos-angelopoulos/prosqlite.git cfd2f68709f5fb61833c0e2f8e9c6546e542009c;     [ "$dpkgArch" = 'armhf' ] || [ "$dpkgArch" = 'armel' ] || install_addin rocksdb https://github.com/JanWielemaker/rocksdb.git f110766ee97cfbc6fddd4c33b7238f00e76ecc18;     [ "$dpkgArch" = 'armhf' ] || [ "$dpkgArch" = 'armel' ] ||  install_addin hdt https://github.com/JanWielemaker/hdt.git e0a0eff87fc3318434cb493690c570e1255ed30e;     install_addin rserve_client https://github.com/JanWielemaker/rserve_client.git f8e83a4e1e4600baef4222dc4c2904a41a79a5ad;     apt-get purge -y --auto-remove $BUILD_DEPS
-# Thu, 19 Nov 2020 07:59:49 GMT
+# Fri, 11 Dec 2020 20:11:35 GMT
 CMD ["swipl"]
 ```
 
 -	Layers:
-	-	`sha256:4297e02295585beb3f148a5740b644ce87e059455f8d98a5adb7bf95105e011c`  
-		Last Modified: Tue, 17 Nov 2020 20:30:42 GMT  
-		Size: 22.5 MB (22527663 bytes)  
+	-	`sha256:e50c3c9ef5a201a24959788dcbc7ebf88d95c63e132a4d7396ce541127afd88e`  
+		Last Modified: Fri, 11 Dec 2020 02:15:43 GMT  
+		Size: 22.5 MB (22527860 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:281a2c8969fdd723b376fc6907214f76b52b6164d2f90fc9cd5bb30e0af9d8ec`  
-		Last Modified: Wed, 18 Nov 2020 16:33:26 GMT  
-		Size: 24.9 MB (24879611 bytes)  
+	-	`sha256:c82e74273b88e5281d93ae65ec620075fecaca3ff02fd8e0ef6da6e192c64082`  
+		Last Modified: Fri, 11 Dec 2020 20:31:11 GMT  
+		Size: 24.9 MB (24879481 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6b593c19109e1b6a70962e49b305f335b822c4fe457cb88f0bf6103a8c044fdf`  
-		Last Modified: Thu, 19 Nov 2020 08:00:18 GMT  
-		Size: 8.9 MB (8921531 bytes)  
+	-	`sha256:446835b553f030562339d700fdb7aa722192e2951035be8027da1f06c3922c32`  
+		Last Modified: Fri, 11 Dec 2020 20:31:09 GMT  
+		Size: 8.9 MB (8921568 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `swipl:latest` - linux; arm variant v7
 
 ```console
-$ docker pull swipl@sha256:50455f826a122c5143b5e1ecc4013c97fe7db1cad4c2aad19118796c79cbf128
+$ docker pull swipl@sha256:8b76bc7a37aa9f37f7cd5bf570aa75e0ab9d72a6e9d37a3c18b03f6a09491ff8
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **48.4 MB (48444822 bytes)**  
+-	Total Size: **48.4 MB (48445023 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a050a279087fbaa870cec8ed92f5a6da95c359df0228982ad7e552ba6116dc9a`
+-	Image ID: `sha256:64be3eb4919e2fdb77d67d75a509b9604a835bd4ffd2b039a5fc28fc5c69aa66`
 -	Default Command: `["swipl"]`
 
 ```dockerfile
-# Tue, 17 Nov 2020 20:27:23 GMT
-ADD file:de081793a94d15fb89877812e1c838c9e3836070e36a6fb7f01b858a884b6680 in / 
-# Tue, 17 Nov 2020 20:27:24 GMT
+# Fri, 11 Dec 2020 02:28:33 GMT
+ADD file:a5ae44ff42f691e7afa1f743d1f05f6fd72d9c1737ae20b97977f9de76811260 in / 
+# Fri, 11 Dec 2020 02:28:34 GMT
 CMD ["bash"]
-# Wed, 18 Nov 2020 07:13:40 GMT
+# Fri, 11 Dec 2020 20:46:51 GMT
 LABEL maintainer=Dave Curylo <dave@curylo.org>, Michael Hendricks <michael@ndrix.org>
-# Wed, 18 Nov 2020 07:14:09 GMT
+# Fri, 11 Dec 2020 20:47:17 GMT
 RUN apt-get update &&     apt-get install -y --no-install-recommends     libtcmalloc-minimal4     libarchive13     libyaml-dev     libgmp10     libossp-uuid16     libssl1.1     ca-certificates     libdb5.3     libpcre3     libedit2     libgeos-c1v5     libspatialindex4v5     unixodbc     odbc-postgresql     tdsodbc     libmariadbclient18     libsqlite3-0     libserd-0-0     libraptor2-0 &&     dpkgArch="$(dpkg --print-architecture)" &&     rm -rf /var/lib/apt/lists/*
-# Wed, 18 Nov 2020 07:14:10 GMT
+# Fri, 11 Dec 2020 20:47:18 GMT
 ENV LANG=C.UTF-8
-# Thu, 19 Nov 2020 02:53:35 GMT
+# Fri, 11 Dec 2020 20:52:15 GMT
 RUN set -eux;     SWIPL_VER=8.3.13;     SWIPL_CHECKSUM=a999505cf514b707575e20acc53840ee3c8edd4b8f492772a76f2f91f2f6b189;     BUILD_DEPS='make cmake ninja-build gcc g++ wget git autoconf libarchive-dev libgmp-dev libossp-uuid-dev libpcre3-dev libreadline-dev libedit-dev libssl-dev zlib1g-dev libdb-dev unixodbc-dev libsqlite3-dev libserd-dev libraptor2-dev libgeos++-dev libspatialindex-dev libgoogle-perftools-dev';     dpkgArch="$(dpkg --print-architecture)";     apt-get update; apt-get install -y --no-install-recommends $BUILD_DEPS; rm -rf /var/lib/apt/lists/*;     mkdir /tmp/src;     cd /tmp/src;     wget -q https://www.swi-prolog.org/download/devel/src/swipl-$SWIPL_VER.tar.gz;     echo "$SWIPL_CHECKSUM  swipl-$SWIPL_VER.tar.gz" >> swipl-$SWIPL_VER.tar.gz-CHECKSUM;     sha256sum -c swipl-$SWIPL_VER.tar.gz-CHECKSUM;     tar -xzf swipl-$SWIPL_VER.tar.gz;     mkdir swipl-$SWIPL_VER/build;     cd swipl-$SWIPL_VER/build;     cmake -DCMAKE_BUILD_TYPE=Release           -DSWIPL_PACKAGES_X=OFF 	  -DSWIPL_PACKAGES_JAVA=OFF 	  -DCMAKE_INSTALL_PREFIX=/usr 	  -G Ninja           ..;     ../scripts/pgo-compile.sh;     ninja;     ninja install;     rm -rf /tmp/src;     mkdir -p /usr/share/swi-prolog/pack;     cd /usr/share/swi-prolog/pack;     install_addin () {         git clone "$2" "$1";         git -C "$1" checkout -q "$3";         if [ "$1" = 'prosqlite' ]; then rm -rf "$1/lib"; fi;         swipl -g "pack_rebuild($1)" -t halt;         find "$1" -mindepth 1 -maxdepth 1 ! -name lib ! -name prolog ! -name pack.pl -exec rm -rf {} +;         find "$1" -name .git -exec rm -rf {} +;         find "$1" -name '*.so' -exec strip {} +;     };     dpkgArch="$(dpkg --print-architecture)";     install_addin space https://github.com/JanWielemaker/space.git cd6fefa63317a7a6effb61a1c5aee634ebe2ca05;     install_addin prosqlite https://github.com/nicos-angelopoulos/prosqlite.git cfd2f68709f5fb61833c0e2f8e9c6546e542009c;     [ "$dpkgArch" = 'armhf' ] || [ "$dpkgArch" = 'armel' ] || install_addin rocksdb https://github.com/JanWielemaker/rocksdb.git f110766ee97cfbc6fddd4c33b7238f00e76ecc18;     [ "$dpkgArch" = 'armhf' ] || [ "$dpkgArch" = 'armel' ] ||  install_addin hdt https://github.com/JanWielemaker/hdt.git e0a0eff87fc3318434cb493690c570e1255ed30e;     install_addin rserve_client https://github.com/JanWielemaker/rserve_client.git f8e83a4e1e4600baef4222dc4c2904a41a79a5ad;     apt-get purge -y --auto-remove $BUILD_DEPS
-# Thu, 19 Nov 2020 02:53:37 GMT
+# Fri, 11 Dec 2020 20:52:19 GMT
 CMD ["swipl"]
 ```
 
 -	Layers:
-	-	`sha256:a97dc136886474245bdc5c70c58e70e18fc55d193dae8225f0543e0b500b484a`  
-		Last Modified: Tue, 17 Nov 2020 20:35:46 GMT  
-		Size: 19.3 MB (19313228 bytes)  
+	-	`sha256:3844aeda5f39338d766015a56d78b18d6d4d4b95b0e6b41f8d37105ee5b91a80`  
+		Last Modified: Fri, 11 Dec 2020 02:37:12 GMT  
+		Size: 19.3 MB (19313560 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:286b0f47619fa3179237da8390d467340be01e9ad2c3f66bf7969a6ade5e9f2d`  
-		Last Modified: Wed, 18 Nov 2020 07:19:14 GMT  
-		Size: 22.9 MB (22862518 bytes)  
+	-	`sha256:d60fcd8d92aaff5ec9add2fbeaf1cadb7c830ba2575215ca303e5eaf1e43c555`  
+		Last Modified: Fri, 11 Dec 2020 20:57:35 GMT  
+		Size: 22.9 MB (22862408 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6215a3157b07d03a0393436411dd42bb86196e0f5c0ace974416dcb4da41b91c`  
-		Last Modified: Thu, 19 Nov 2020 02:54:02 GMT  
-		Size: 6.3 MB (6269076 bytes)  
+	-	`sha256:aebde8be70379d4638ac1fbab3a5a3bf7dc50e50eaf18a21cec014b02f137fdf`  
+		Last Modified: Fri, 11 Dec 2020 20:57:31 GMT  
+		Size: 6.3 MB (6269055 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `swipl:latest` - linux; arm64 variant v8
@@ -442,7 +442,7 @@ CMD ["swipl"]
 ## `swipl:stable`
 
 ```console
-$ docker pull swipl@sha256:0b5cafb4492160e770becfb1a990f8f6ecaf1bbbe5ac48f7ac85881c7e39a863
+$ docker pull swipl@sha256:ec624be578a88fc95f051ce58e62b3cd668fa4b32d68a69743ac43eead67a2f3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -454,89 +454,89 @@ $ docker pull swipl@sha256:0b5cafb4492160e770becfb1a990f8f6ecaf1bbbe5ac48f7ac858
 ### `swipl:stable` - linux; amd64
 
 ```console
-$ docker pull swipl@sha256:5c62fbb0c02f9b3ef6913cb0a5debb6f604061bf08d929d0e905aa625632fa74
+$ docker pull swipl@sha256:e60e539ef5395db5c10e7aa1a1a24b544c70eba4dd221968ef036761e236328e
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **56.2 MB (56236605 bytes)**  
+-	Total Size: **56.2 MB (56236541 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0c8b6a7006eef6c3847867e6993eb0581a87d353ebb11e8fd45c888af0d9eb48`
+-	Image ID: `sha256:a24bcb487f93858b72a169a7a3214272efb805c02c0c3b3118ba91fe42ebbab4`
 -	Default Command: `["swipl"]`
 
 ```dockerfile
-# Tue, 17 Nov 2020 20:24:29 GMT
-ADD file:02294bc9e72a3f3314955f0b5e0e728cd75321e88a1fae9bfbac77c76bfaf05d in / 
-# Tue, 17 Nov 2020 20:24:29 GMT
+# Fri, 11 Dec 2020 02:08:58 GMT
+ADD file:f03e68a10b84e2342cfffbb8cdec1117c7f5e5d0dd004072e84efb62cfdf157c in / 
+# Fri, 11 Dec 2020 02:08:58 GMT
 CMD ["bash"]
-# Wed, 18 Nov 2020 16:11:25 GMT
+# Fri, 11 Dec 2020 19:52:34 GMT
 LABEL maintainer=Dave Curylo <dave@curylo.org>, Michael Hendricks <michael@ndrix.org>
-# Wed, 18 Nov 2020 16:11:39 GMT
+# Fri, 11 Dec 2020 19:52:46 GMT
 RUN apt-get update &&     apt-get install -y --no-install-recommends     libtcmalloc-minimal4     libarchive13     libyaml-dev     libgmp10     libossp-uuid16     libssl1.1     ca-certificates     libdb5.3     libpcre3     libedit2     libgeos-c1v5     libspatialindex4v5     unixodbc     odbc-postgresql     tdsodbc     libmariadbclient18     libsqlite3-0     libserd-0-0     libraptor2-0 &&     dpkgArch="$(dpkg --print-architecture)" &&     rm -rf /var/lib/apt/lists/*
-# Wed, 18 Nov 2020 16:11:39 GMT
+# Fri, 11 Dec 2020 19:52:47 GMT
 ENV LANG=C.UTF-8
-# Tue, 24 Nov 2020 01:25:07 GMT
+# Fri, 11 Dec 2020 20:30:46 GMT
 RUN set -eux;     SWIPL_VER=8.2.3;     SWIPL_CHECKSUM=9403972f9d87f1f4971fbd4a5644b4976b1b18fc174be84506c6b713bd1f9c93;     BUILD_DEPS='make cmake ninja-build gcc g++ wget git autoconf libarchive-dev libgmp-dev libossp-uuid-dev libpcre3-dev libreadline-dev libedit-dev libssl-dev zlib1g-dev libdb-dev unixodbc-dev libsqlite3-dev libserd-dev libraptor2-dev libgeos++-dev libspatialindex-dev libgoogle-perftools-dev';     dpkgArch="$(dpkg --print-architecture)";     apt-get update; apt-get install -y --no-install-recommends $BUILD_DEPS; rm -rf /var/lib/apt/lists/*;     mkdir /tmp/src;     cd /tmp/src;     wget -q https://www.swi-prolog.org/download/stable/src/swipl-$SWIPL_VER.tar.gz;     echo "$SWIPL_CHECKSUM  swipl-$SWIPL_VER.tar.gz" >> swipl-$SWIPL_VER.tar.gz-CHECKSUM;     sha256sum -c swipl-$SWIPL_VER.tar.gz-CHECKSUM;     tar -xzf swipl-$SWIPL_VER.tar.gz;     mkdir swipl-$SWIPL_VER/build;     cd swipl-$SWIPL_VER/build;     cmake -DCMAKE_BUILD_TYPE=Release           -DSWIPL_PACKAGES_X=OFF 	  -DSWIPL_PACKAGES_JAVA=OFF 	  -DCMAKE_INSTALL_PREFIX=/usr 	  -G Ninja           ..;     ../scripts/pgo-compile.sh;     ninja;     ninja install;     rm -rf /tmp/src;     mkdir -p /usr/share/swi-prolog/pack;     cd /usr/share/swi-prolog/pack;     install_addin () {         git clone "$2" "$1";         git -C "$1" checkout -q "$3";         if [ "$1" = 'prosqlite' ]; then rm -rf "$1/lib"; fi;         swipl -g "pack_rebuild($1)" -t halt;         find "$1" -mindepth 1 -maxdepth 1 ! -name lib ! -name prolog ! -name pack.pl -exec rm -rf {} +;         find "$1" -name .git -exec rm -rf {} +;         find "$1" -name '*.so' -exec strip {} +;     };     dpkgArch="$(dpkg --print-architecture)";     install_addin space https://github.com/JanWielemaker/space.git cd6fefa63317a7a6effb61a1c5aee634ebe2ca05;     install_addin prosqlite https://github.com/nicos-angelopoulos/prosqlite.git cfd2f68709f5fb61833c0e2f8e9c6546e542009c;     [ "$dpkgArch" = 'armhf' ] || [ "$dpkgArch" = 'armel' ] || install_addin rocksdb https://github.com/JanWielemaker/rocksdb.git f110766ee97cfbc6fddd4c33b7238f00e76ecc18;     [ "$dpkgArch" = 'armhf' ] || [ "$dpkgArch" = 'armel' ] ||  install_addin hdt https://github.com/JanWielemaker/hdt.git e0a0eff87fc3318434cb493690c570e1255ed30e;     install_addin rserve_client https://github.com/JanWielemaker/rserve_client.git f8e83a4e1e4600baef4222dc4c2904a41a79a5ad;     apt-get purge -y --auto-remove $BUILD_DEPS
-# Tue, 24 Nov 2020 01:25:07 GMT
+# Fri, 11 Dec 2020 20:30:46 GMT
 CMD ["swipl"]
 ```
 
 -	Layers:
-	-	`sha256:4297e02295585beb3f148a5740b644ce87e059455f8d98a5adb7bf95105e011c`  
-		Last Modified: Tue, 17 Nov 2020 20:30:42 GMT  
-		Size: 22.5 MB (22527663 bytes)  
+	-	`sha256:e50c3c9ef5a201a24959788dcbc7ebf88d95c63e132a4d7396ce541127afd88e`  
+		Last Modified: Fri, 11 Dec 2020 02:15:43 GMT  
+		Size: 22.5 MB (22527860 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:281a2c8969fdd723b376fc6907214f76b52b6164d2f90fc9cd5bb30e0af9d8ec`  
-		Last Modified: Wed, 18 Nov 2020 16:33:26 GMT  
-		Size: 24.9 MB (24879611 bytes)  
+	-	`sha256:c82e74273b88e5281d93ae65ec620075fecaca3ff02fd8e0ef6da6e192c64082`  
+		Last Modified: Fri, 11 Dec 2020 20:31:11 GMT  
+		Size: 24.9 MB (24879481 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3d91c511d4843ee32376785cae1587883c6657e137f5792efa0bdd2c01c4da69`  
-		Last Modified: Tue, 24 Nov 2020 01:25:24 GMT  
-		Size: 8.8 MB (8829331 bytes)  
+	-	`sha256:b46e708bdf4a2d18aa539bcb68b1810e959bf67907494e0ec2b07ddc9078eaa8`  
+		Last Modified: Fri, 11 Dec 2020 20:31:19 GMT  
+		Size: 8.8 MB (8829200 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `swipl:stable` - linux; arm variant v7
 
 ```console
-$ docker pull swipl@sha256:4356ee781df3d57d9bedc8c488acb0edff30ee1a9faa8d704d89ebfd452d2d14
+$ docker pull swipl@sha256:3048a88829159d2a8c5390e0ad8cf28d0b54afcf8335e3063353b5bde67ac59e
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **48.4 MB (48355198 bytes)**  
+-	Total Size: **48.4 MB (48355266 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a4725591ea13235a9318a3d3e77340e83c72d6e45ca27ae8d915d8a5cacd9d25`
+-	Image ID: `sha256:c69df5e0245996c7458156a1f5b49d46322b26b0cfa32de7594dfd9a8a9a447e`
 -	Default Command: `["swipl"]`
 
 ```dockerfile
-# Tue, 17 Nov 2020 20:27:23 GMT
-ADD file:de081793a94d15fb89877812e1c838c9e3836070e36a6fb7f01b858a884b6680 in / 
-# Tue, 17 Nov 2020 20:27:24 GMT
+# Fri, 11 Dec 2020 02:28:33 GMT
+ADD file:a5ae44ff42f691e7afa1f743d1f05f6fd72d9c1737ae20b97977f9de76811260 in / 
+# Fri, 11 Dec 2020 02:28:34 GMT
 CMD ["bash"]
-# Wed, 18 Nov 2020 07:13:40 GMT
+# Fri, 11 Dec 2020 20:46:51 GMT
 LABEL maintainer=Dave Curylo <dave@curylo.org>, Michael Hendricks <michael@ndrix.org>
-# Wed, 18 Nov 2020 07:14:09 GMT
+# Fri, 11 Dec 2020 20:47:17 GMT
 RUN apt-get update &&     apt-get install -y --no-install-recommends     libtcmalloc-minimal4     libarchive13     libyaml-dev     libgmp10     libossp-uuid16     libssl1.1     ca-certificates     libdb5.3     libpcre3     libedit2     libgeos-c1v5     libspatialindex4v5     unixodbc     odbc-postgresql     tdsodbc     libmariadbclient18     libsqlite3-0     libserd-0-0     libraptor2-0 &&     dpkgArch="$(dpkg --print-architecture)" &&     rm -rf /var/lib/apt/lists/*
-# Wed, 18 Nov 2020 07:14:10 GMT
+# Fri, 11 Dec 2020 20:47:18 GMT
 ENV LANG=C.UTF-8
-# Mon, 23 Nov 2020 23:47:06 GMT
+# Fri, 11 Dec 2020 20:57:00 GMT
 RUN set -eux;     SWIPL_VER=8.2.3;     SWIPL_CHECKSUM=9403972f9d87f1f4971fbd4a5644b4976b1b18fc174be84506c6b713bd1f9c93;     BUILD_DEPS='make cmake ninja-build gcc g++ wget git autoconf libarchive-dev libgmp-dev libossp-uuid-dev libpcre3-dev libreadline-dev libedit-dev libssl-dev zlib1g-dev libdb-dev unixodbc-dev libsqlite3-dev libserd-dev libraptor2-dev libgeos++-dev libspatialindex-dev libgoogle-perftools-dev';     dpkgArch="$(dpkg --print-architecture)";     apt-get update; apt-get install -y --no-install-recommends $BUILD_DEPS; rm -rf /var/lib/apt/lists/*;     mkdir /tmp/src;     cd /tmp/src;     wget -q https://www.swi-prolog.org/download/stable/src/swipl-$SWIPL_VER.tar.gz;     echo "$SWIPL_CHECKSUM  swipl-$SWIPL_VER.tar.gz" >> swipl-$SWIPL_VER.tar.gz-CHECKSUM;     sha256sum -c swipl-$SWIPL_VER.tar.gz-CHECKSUM;     tar -xzf swipl-$SWIPL_VER.tar.gz;     mkdir swipl-$SWIPL_VER/build;     cd swipl-$SWIPL_VER/build;     cmake -DCMAKE_BUILD_TYPE=Release           -DSWIPL_PACKAGES_X=OFF 	  -DSWIPL_PACKAGES_JAVA=OFF 	  -DCMAKE_INSTALL_PREFIX=/usr 	  -G Ninja           ..;     ../scripts/pgo-compile.sh;     ninja;     ninja install;     rm -rf /tmp/src;     mkdir -p /usr/share/swi-prolog/pack;     cd /usr/share/swi-prolog/pack;     install_addin () {         git clone "$2" "$1";         git -C "$1" checkout -q "$3";         if [ "$1" = 'prosqlite' ]; then rm -rf "$1/lib"; fi;         swipl -g "pack_rebuild($1)" -t halt;         find "$1" -mindepth 1 -maxdepth 1 ! -name lib ! -name prolog ! -name pack.pl -exec rm -rf {} +;         find "$1" -name .git -exec rm -rf {} +;         find "$1" -name '*.so' -exec strip {} +;     };     dpkgArch="$(dpkg --print-architecture)";     install_addin space https://github.com/JanWielemaker/space.git cd6fefa63317a7a6effb61a1c5aee634ebe2ca05;     install_addin prosqlite https://github.com/nicos-angelopoulos/prosqlite.git cfd2f68709f5fb61833c0e2f8e9c6546e542009c;     [ "$dpkgArch" = 'armhf' ] || [ "$dpkgArch" = 'armel' ] || install_addin rocksdb https://github.com/JanWielemaker/rocksdb.git f110766ee97cfbc6fddd4c33b7238f00e76ecc18;     [ "$dpkgArch" = 'armhf' ] || [ "$dpkgArch" = 'armel' ] ||  install_addin hdt https://github.com/JanWielemaker/hdt.git e0a0eff87fc3318434cb493690c570e1255ed30e;     install_addin rserve_client https://github.com/JanWielemaker/rserve_client.git f8e83a4e1e4600baef4222dc4c2904a41a79a5ad;     apt-get purge -y --auto-remove $BUILD_DEPS
-# Mon, 23 Nov 2020 23:47:08 GMT
+# Fri, 11 Dec 2020 20:57:02 GMT
 CMD ["swipl"]
 ```
 
 -	Layers:
-	-	`sha256:a97dc136886474245bdc5c70c58e70e18fc55d193dae8225f0543e0b500b484a`  
-		Last Modified: Tue, 17 Nov 2020 20:35:46 GMT  
-		Size: 19.3 MB (19313228 bytes)  
+	-	`sha256:3844aeda5f39338d766015a56d78b18d6d4d4b95b0e6b41f8d37105ee5b91a80`  
+		Last Modified: Fri, 11 Dec 2020 02:37:12 GMT  
+		Size: 19.3 MB (19313560 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:286b0f47619fa3179237da8390d467340be01e9ad2c3f66bf7969a6ade5e9f2d`  
-		Last Modified: Wed, 18 Nov 2020 07:19:14 GMT  
-		Size: 22.9 MB (22862518 bytes)  
+	-	`sha256:d60fcd8d92aaff5ec9add2fbeaf1cadb7c830ba2575215ca303e5eaf1e43c555`  
+		Last Modified: Fri, 11 Dec 2020 20:57:35 GMT  
+		Size: 22.9 MB (22862408 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f5a8508b246c6609c75790613047ca75f7b3fe17dc3e06e47cb22e14b88a9ed7`  
-		Last Modified: Mon, 23 Nov 2020 23:47:28 GMT  
-		Size: 6.2 MB (6179452 bytes)  
+	-	`sha256:249ab606c757150f223df82ec1f766b3d83fc94267f1c04c55bc7de13b76c03a`  
+		Last Modified: Fri, 11 Dec 2020 20:57:46 GMT  
+		Size: 6.2 MB (6179298 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `swipl:stable` - linux; arm64 variant v8
