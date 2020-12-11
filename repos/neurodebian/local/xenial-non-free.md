@@ -86,13 +86,9 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=1.2.32ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.2.32ubuntu0.1.dsc' apt_1.2.32ubuntu0.1.dsc 2218 SHA512:0d0925594dc5c4d188928cac86d5a0c4176f3877b26af1bc119b6dde1bf64b5d94375b39c26276e8b21fe5dd11106f9d26be05d570a831b4e7e1dd1de88db67a
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.2.32ubuntu0.1.tar.xz' apt_1.2.32ubuntu0.1.tar.xz 2095712 SHA512:8f28f0c96148186621ed8cc65e3913322154fc467e2fb414ef67bac492a953480a539de358b3ef8432e1b0b10baa03d9e2c7b495705f82608f009f9061c67c07
-```
 
 ### `dpkg` source package: `attr=1:2.4.47-2`
 

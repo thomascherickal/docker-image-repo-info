@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:800f4718de059d84f113194fedd6191f3f6904af9a8daee6834c9db58ff980d3`
-- Created: `2020-11-18T00:10:35.049971867Z`
+- Image ID: `sha256:65e14b08c68c94814159844d257bcd370d1a317e0cccd44d64440e6bd2ef1dd3`
+- Created: `2020-12-11T17:12:58.867694774Z`
 - Virtual Size: ~ 133.46 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -66,12 +66,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/adduser/3.118/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/adduser/3.118/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `apt=1.8.2.1`
+### `dpkg` source package: `apt=1.8.2.2`
 
 Binary Packages:
 
-- `apt=1.8.2.1`
-- `libapt-pkg5.0:amd64=1.8.2.1`
+- `apt=1.8.2.2`
+- `libapt-pkg5.0:amd64=1.8.2.2`
 
 Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-pkg5.0/copyright`)
 
@@ -81,16 +81,16 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 Source:
 
 ```console
-$ apt-get source -qq --print-uris apt=1.8.2.1
-'http://deb.debian.org/debian/pool/main/a/apt/apt_1.8.2.1.dsc' apt_1.8.2.1.dsc 2774 SHA256:8e6af99e5eab948853dcffde8bf8b2cc9acdd53fcdadf3505a3c0234b69eabb1
-'http://deb.debian.org/debian/pool/main/a/apt/apt_1.8.2.1.tar.xz' apt_1.8.2.1.tar.xz 2189236 SHA256:6d447f2e9437ec24e78350b63bb0592bee1f050811d51990b0c783183b0983f8
+$ apt-get source -qq --print-uris apt=1.8.2.2
+'http://security.debian.org/debian-security/pool/updates/main/a/apt/apt_1.8.2.2.dsc' apt_1.8.2.2.dsc 2774 SHA256:fb213748b5b829f68b7f6c8d83ad72a21990d0f194b6e6f950509b6b05346f58
+'http://security.debian.org/debian-security/pool/updates/main/a/apt/apt_1.8.2.2.tar.xz' apt_1.8.2.2.tar.xz 2191728 SHA256:f5030de22a5cc80db6fe0d42373b5df25d7dc56e94d9155f2eaa80dbd65e82fa
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/apt/1.8.2.1/ (for browsing the source)
-- https://sources.debian.net/src/apt/1.8.2.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apt/1.8.2.1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/apt/1.8.2.2/ (for browsing the source)
+- https://sources.debian.net/src/apt/1.8.2.2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/apt/1.8.2.2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `attr=1:2.4.48-4`
 
@@ -149,23 +149,29 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/audit/1:2.8.4-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/audit/1:2.8.4-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `base-files=10.3+deb10u6`
+### `dpkg` source package: `base-files=10.3+deb10u7`
 
 Binary Packages:
 
-- `base-files=10.3+deb10u6`
+- `base-files=10.3+deb10u7`
 
 Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris base-files=10.3+deb10u7
+'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3+deb10u7.dsc' base-files_10.3+deb10u7.dsc 1103 SHA256:abf584495de0ddf2ff8350b734c915ff610f9f7f4133dee3f5eea7bc135a7d33
+'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3+deb10u7.tar.xz' base-files_10.3+deb10u7.tar.xz 65376 SHA256:ef14b448eb7b72e8ce5cbc2c5eef60bed41dcfaf503a1ea6048f7b8e2fba9c47
+```
 
-- http://snapshot.debian.org/package/base-files/10.3+deb10u6/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/base-files/10.3+deb10u7/ (for browsing the source)
+- https://sources.debian.net/src/base-files/10.3+deb10u7/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/base-files/10.3+deb10u7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-passwd=3.5.46`
 
@@ -1871,11 +1877,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/shadow/1:4.5-1.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/shadow/1:4.5-1.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `sqlite3=3.27.2-3`
+### `dpkg` source package: `sqlite3=3.27.2-3+deb10u1`
 
 Binary Packages:
 
-- `libsqlite3-0:amd64=3.27.2-3`
+- `libsqlite3-0:amd64=3.27.2-3+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 
@@ -1886,7 +1892,7 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris sqlite3=3.27.2-3
+$ apt-get source -qq --print-uris sqlite3=3.27.2-3+deb10u1
 'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.27.2-3+deb10u1.dsc' sqlite3_3.27.2-3+deb10u1.dsc 2430 SHA256:6faf359c70d0618558056d6dee9f05ea810ff57aebb141ac28129c17e685cf1b
 'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.27.2.orig-www.tar.xz' sqlite3_3.27.2.orig-www.tar.xz 5602752 SHA256:b50bea0e1974b33bcb2cec4c29fcdeecd8f960020ce0310b15fb123938844bee
 'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.27.2.orig.tar.xz' sqlite3_3.27.2.orig.tar.xz 6844832 SHA256:6cb1606bbc38270739d256b5ab1cf94dccf5b2a3b4cbceb0545aac76f6ef40f2
@@ -1895,16 +1901,16 @@ $ apt-get source -qq --print-uris sqlite3=3.27.2-3
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/sqlite3/3.27.2-3/ (for browsing the source)
-- https://sources.debian.net/src/sqlite3/3.27.2-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sqlite3/3.27.2-3/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/sqlite3/3.27.2-3+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/sqlite3/3.27.2-3+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/sqlite3/3.27.2-3+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `systemd=241-7~deb10u4`
+### `dpkg` source package: `systemd=241-7~deb10u5`
 
 Binary Packages:
 
-- `libsystemd0:amd64=241-7~deb10u4`
-- `libudev1:amd64=241-7~deb10u4`
+- `libsystemd0:amd64=241-7~deb10u5`
+- `libudev1:amd64=241-7~deb10u5`
 
 Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/libudev1/copyright`)
 
@@ -1916,13 +1922,20 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris systemd=241-7~deb10u5
+'http://deb.debian.org/debian/pool/main/s/systemd/systemd_241-7~deb10u5.dsc' systemd_241-7~deb10u5.dsc 4946 SHA256:b061c7dff79c40ca45f3a8d4a8632cc3c012e7a2212cf8e9ae189a6b2a4b4e35
+'http://deb.debian.org/debian/pool/main/s/systemd/systemd_241.orig.tar.gz' systemd_241.orig.tar.gz 7640538 SHA256:b2561a8e1d10a2c248253f0dda31a85dd6d69f2b54177de55e02cd1d2778316e
+'http://deb.debian.org/debian/pool/main/s/systemd/systemd_241-7~deb10u5.debian.tar.xz' systemd_241-7~deb10u5.debian.tar.xz 179676 SHA256:c0121499947286d99de53844cafafae6bca6f54e734572496ae7ba24b9db7cee
+```
 
-- http://snapshot.debian.org/package/systemd/241-7~deb10u4/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/systemd/241-7~deb10u5/ (for browsing the source)
+- https://sources.debian.net/src/systemd/241-7~deb10u5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/systemd/241-7~deb10u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sysvinit=2.93-8`
 
