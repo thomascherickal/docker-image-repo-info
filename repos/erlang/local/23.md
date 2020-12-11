@@ -1,20 +1,20 @@
-# `erlang:23.1.4.0`
+# `erlang:23.1.5.0`
 
 ## Docker Metadata
 
-- Image ID: `sha256:c683456f9254670ae92b1ec7aa4c1302d8353f038c374cb5b84b28512595f356`
-- Created: `2020-12-04T22:35:31.491881974Z`
+- Image ID: `sha256:d46f84c5caf3f58700bd26b3434d096e50bdb343ce976a4d1065cf459bb98fcf`
+- Created: `2020-12-09T02:33:40.476503671Z`
 - Virtual Size: ~ 1.22 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["erl"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `OTP_VERSION=23.1.4`
+  - `OTP_VERSION=23.1.5`
   - `REBAR3_VERSION=3.14.3`
   - `REBAR_VERSION=2.6.4`
 - Labels:
-  - `org.opencontainers.image.version=23.1.4`
+  - `org.opencontainers.image.version=23.1.5`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -798,11 +798,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/cryptsetup/2:2.1.0-5+deb10u2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/cryptsetup/2:2.1.0-5+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `cups=2.2.10-6+deb10u3`
+### `dpkg` source package: `cups=2.2.10-6+deb10u4`
 
 Binary Packages:
 
-- `libcups2:amd64=2.2.10-6+deb10u3`
+- `libcups2:amd64=2.2.10-6+deb10u4`
 
 Licenses: (parsed from: `/usr/share/doc/libcups2/copyright`)
 
@@ -813,13 +813,21 @@ Licenses: (parsed from: `/usr/share/doc/libcups2/copyright`)
 - `LGPL-2.0 with AOSDL exception`
 - `Zlib`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris cups=2.2.10-6+deb10u4
+'http://deb.debian.org/debian/pool/main/c/cups/cups_2.2.10-6+deb10u4.dsc' cups_2.2.10-6+deb10u4.dsc 3472 SHA256:5b6fc094d7ec4fdf21d6f6c2d35e8b20015d6ecf2e4178aed0a587f869e43883
+'http://deb.debian.org/debian/pool/main/c/cups/cups_2.2.10.orig.tar.gz' cups_2.2.10.orig.tar.gz 10403568 SHA256:77c8b2b3bb7fe8b5fbfffc307f2c817b2d7ec67b657f261a1dd1c61ab81205bb
+'http://deb.debian.org/debian/pool/main/c/cups/cups_2.2.10.orig.tar.gz.asc' cups_2.2.10.orig.tar.gz.asc 864 SHA256:be235dd0cc526e5bde2a67f0dc2888be5d8dc40d1dfa44ab1a322d83f606e82d
+'http://deb.debian.org/debian/pool/main/c/cups/cups_2.2.10-6+deb10u4.debian.tar.xz' cups_2.2.10-6+deb10u4.debian.tar.xz 361288 SHA256:c5e1fd533a8e2489d29beb5caafb8fb8cbd4e9acea5bfadf1417eec5d8260aeb
+```
 
-- http://snapshot.debian.org/package/cups/2.2.10-6+deb10u3/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/cups/2.2.10-6+deb10u4/ (for browsing the source)
+- https://sources.debian.net/src/cups/2.2.10-6+deb10u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/cups/2.2.10-6+deb10u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `curl=7.64.0-4+deb10u1`
 
@@ -6241,13 +6249,9 @@ Other potentially useful URLs:
 
 Binary Packages:
 
-- `libpam-systemd:amd64=241-7~deb10u4`
-- `libsystemd0:amd64=241-7~deb10u4`
 - `libudev1:amd64=241-7~deb10u4`
-- `systemd=241-7~deb10u4`
-- `systemd-sysv=241-7~deb10u4`
 
-Licenses: (parsed from: `/usr/share/doc/libpam-systemd/copyright`, `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/libudev1/copyright`, `/usr/share/doc/systemd/copyright`, `/usr/share/doc/systemd-sysv/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libudev1/copyright`)
 
 - `CC0-1.0`
 - `Expat`
@@ -6264,6 +6268,40 @@ The source package *may* still be available for download from:
 
 - http://snapshot.debian.org/package/systemd/241-7~deb10u4/
 
+
+### `dpkg` source package: `systemd=241-7~deb10u5`
+
+Binary Packages:
+
+- `libpam-systemd:amd64=241-7~deb10u5`
+- `libsystemd0:amd64=241-7~deb10u5`
+- `systemd=241-7~deb10u5`
+- `systemd-sysv=241-7~deb10u5`
+
+Licenses: (parsed from: `/usr/share/doc/libpam-systemd/copyright`, `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/systemd/copyright`, `/usr/share/doc/systemd-sysv/copyright`)
+
+- `CC0-1.0`
+- `Expat`
+- `GPL-2`
+- `GPL-2+`
+- `LGPL-2.1`
+- `LGPL-2.1+`
+- `public-domain`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris systemd=241-7~deb10u5
+'http://deb.debian.org/debian/pool/main/s/systemd/systemd_241-7~deb10u5.dsc' systemd_241-7~deb10u5.dsc 4946 SHA256:b061c7dff79c40ca45f3a8d4a8632cc3c012e7a2212cf8e9ae189a6b2a4b4e35
+'http://deb.debian.org/debian/pool/main/s/systemd/systemd_241.orig.tar.gz' systemd_241.orig.tar.gz 7640538 SHA256:b2561a8e1d10a2c248253f0dda31a85dd6d69f2b54177de55e02cd1d2778316e
+'http://deb.debian.org/debian/pool/main/s/systemd/systemd_241-7~deb10u5.debian.tar.xz' systemd_241-7~deb10u5.debian.tar.xz 179676 SHA256:c0121499947286d99de53844cafafae6bca6f54e734572496ae7ba24b9db7cee
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/systemd/241-7~deb10u5/ (for browsing the source)
+- https://sources.debian.net/src/systemd/241-7~deb10u5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/systemd/241-7~deb10u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sysvinit=2.93-8`
 
