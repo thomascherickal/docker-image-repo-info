@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:3be2cf2ae9dce24b718710e821f1fb04526bd15739edb47d405320c3f4dd2d0b`
-- Created: `2020-10-22T06:11:14.156230295Z`
-- Virtual Size: ~ 136.34 Mb  
+- Image ID: `sha256:b67a97f125e909d872072d2586cf2cb9e4e71b0b8ca84e1c1a6079f986f46ece`
+- Created: `2020-12-11T03:05:01.115247259Z`
+- Virtual Size: ~ 136.80 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -1038,16 +1038,16 @@ ISC
 ### `apk` package: `musl`
 
 ```console
-musl-1.1.24-r9 description:
+musl-1.1.24-r10 description:
 the musl c library (libc) implementation
 
-musl-1.1.24-r9 webpage:
+musl-1.1.24-r10 webpage:
 https://musl.libc.org/
 
-musl-1.1.24-r9 installed size:
+musl-1.1.24-r10 installed size:
 614400
 
-musl-1.1.24-r9 license:
+musl-1.1.24-r10 license:
 MIT
 
 ```
@@ -1055,16 +1055,16 @@ MIT
 ### `apk` package: `musl-utils`
 
 ```console
-musl-utils-1.1.24-r9 description:
+musl-utils-1.1.24-r10 description:
 the musl c library (libc) implementation
 
-musl-utils-1.1.24-r9 webpage:
+musl-utils-1.1.24-r10 webpage:
 https://musl.libc.org/
 
-musl-utils-1.1.24-r9 installed size:
+musl-utils-1.1.24-r10 installed size:
 151552
 
-musl-utils-1.1.24-r9 license:
+musl-utils-1.1.24-r10 license:
 MIT BSD GPL2+
 
 ```
@@ -1140,16 +1140,16 @@ GPL-2.0-or-later
 ### `apk` package: `runtime-dependencies`
 
 ```console
-runtime-dependencies-20201022.060502 description:
+runtime-dependencies-20201211.025842 description:
 virtual meta package
 
-runtime-dependencies-20201022.060502 webpage:
+runtime-dependencies-20201211.025842 webpage:
 
 
-runtime-dependencies-20201022.060502 installed size:
+runtime-dependencies-20201211.025842 installed size:
 0
 
-runtime-dependencies-20201022.060502 license:
+runtime-dependencies-20201211.025842 license:
 
 
 ```
@@ -1242,16 +1242,16 @@ MIT
 ### `apk` package: `tzdata`
 
 ```console
-tzdata-2020c-r0 description:
+tzdata-2020c-r1 description:
 Timezone data
 
-tzdata-2020c-r0 webpage:
+tzdata-2020c-r1 webpage:
 https://www.iana.org/time-zones
 
-tzdata-2020c-r0 installed size:
+tzdata-2020c-r1 installed size:
 3526656
 
-tzdata-2020c-r0 license:
+tzdata-2020c-r1 license:
 Public-Domain
 
 ```

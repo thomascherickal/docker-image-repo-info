@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:0073e8472cebc4ede105e2675f8bb492ea4ce59d134f44b1af1969aee4a890ca`
-- Created: `2020-10-22T06:11:36.583062522Z`
-- Virtual Size: ~ 434.61 Mb  
+- Image ID: `sha256:9ae7fb19c6f259433762f5f330bcb068df121b268e1a38e960fb0e14eff0b49b`
+- Created: `2020-12-11T03:05:29.076264136Z`
+- Virtual Size: ~ 435.07 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -1106,16 +1106,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.69.1-r1 description:
+libcurl-7.69.1-r2 description:
 The multiprotocol file transfer library
 
-libcurl-7.69.1-r1 webpage:
+libcurl-7.69.1-r2 webpage:
 https://curl.haxx.se/
 
-libcurl-7.69.1-r1 installed size:
+libcurl-7.69.1-r2 installed size:
 458752
 
-libcurl-7.69.1-r1 license:
+libcurl-7.69.1-r2 license:
 MIT
 
 ```
@@ -1446,16 +1446,16 @@ LGPL-3.0-or-later
 ### `apk` package: `musl`
 
 ```console
-musl-1.1.24-r9 description:
+musl-1.1.24-r10 description:
 the musl c library (libc) implementation
 
-musl-1.1.24-r9 webpage:
+musl-1.1.24-r10 webpage:
 https://musl.libc.org/
 
-musl-1.1.24-r9 installed size:
+musl-1.1.24-r10 installed size:
 614400
 
-musl-1.1.24-r9 license:
+musl-1.1.24-r10 license:
 MIT
 
 ```
@@ -1463,16 +1463,16 @@ MIT
 ### `apk` package: `musl-dev`
 
 ```console
-musl-dev-1.1.24-r9 description:
+musl-dev-1.1.24-r10 description:
 the musl c library (libc) implementation (development files)
 
-musl-dev-1.1.24-r9 webpage:
+musl-dev-1.1.24-r10 webpage:
 https://musl.libc.org/
 
-musl-dev-1.1.24-r9 installed size:
+musl-dev-1.1.24-r10 installed size:
 11284480
 
-musl-dev-1.1.24-r9 license:
+musl-dev-1.1.24-r10 license:
 MIT
 
 ```
@@ -1480,16 +1480,16 @@ MIT
 ### `apk` package: `musl-utils`
 
 ```console
-musl-utils-1.1.24-r9 description:
+musl-utils-1.1.24-r10 description:
 the musl c library (libc) implementation
 
-musl-utils-1.1.24-r9 webpage:
+musl-utils-1.1.24-r10 webpage:
 https://musl.libc.org/
 
-musl-utils-1.1.24-r9 installed size:
+musl-utils-1.1.24-r10 installed size:
 151552
 
-musl-utils-1.1.24-r9 license:
+musl-utils-1.1.24-r10 license:
 MIT BSD GPL2+
 
 ```
@@ -1650,16 +1650,16 @@ rhash-libs-1.3.9-r1 license:
 ### `apk` package: `runtime-dependencies`
 
 ```console
-runtime-dependencies-20201022.060502 description:
+runtime-dependencies-20201211.025842 description:
 virtual meta package
 
-runtime-dependencies-20201022.060502 webpage:
+runtime-dependencies-20201211.025842 webpage:
 
 
-runtime-dependencies-20201022.060502 installed size:
+runtime-dependencies-20201211.025842 installed size:
 0
 
-runtime-dependencies-20201022.060502 license:
+runtime-dependencies-20201211.025842 license:
 
 
 ```
@@ -1752,16 +1752,16 @@ MIT
 ### `apk` package: `tzdata`
 
 ```console
-tzdata-2020c-r0 description:
+tzdata-2020c-r1 description:
 Timezone data
 
-tzdata-2020c-r0 webpage:
+tzdata-2020c-r1 webpage:
 https://www.iana.org/time-zones
 
-tzdata-2020c-r0 installed size:
+tzdata-2020c-r1 installed size:
 3526656
 
-tzdata-2020c-r0 license:
+tzdata-2020c-r1 license:
 Public-Domain
 
 ```
