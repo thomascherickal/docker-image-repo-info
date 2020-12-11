@@ -1,16 +1,16 @@
-# `mono:6.10.0.104-slim`
+# `mono:6.12.0.107-slim`
 
 ## Docker Metadata
 
-- Image ID: `sha256:2452815b8c37bc96ea426ec2f1186a97e324ac5037e7f1a97a171adb6230dab4`
-- Created: `2020-11-18T07:09:24.780317579Z`
-- Virtual Size: ~ 268.49 Mb  
+- Image ID: `sha256:be26e7ac872c9fc5fb61ab40207c6d3b1d121dfbb7430a08ddb0840dd0bf2184`
+- Created: `2020-12-11T01:20:26.891735931Z`
+- Virtual Size: ~ 268.45 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["bash"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `MONO_VERSION=6.10.0.104`
+  - `MONO_VERSION=6.12.0.107`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -946,27 +946,34 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/keyutils/1.6-6/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/keyutils/1.6-6/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `krb5=1.17-3`
+### `dpkg` source package: `krb5=1.17-3+deb10u1`
 
 Binary Packages:
 
-- `krb5-locales=1.17-3`
-- `libgssapi-krb5-2:amd64=1.17-3`
-- `libk5crypto3:amd64=1.17-3`
-- `libkrb5-3:amd64=1.17-3`
-- `libkrb5support0:amd64=1.17-3`
+- `krb5-locales=1.17-3+deb10u1`
+- `libgssapi-krb5-2:amd64=1.17-3+deb10u1`
+- `libk5crypto3:amd64=1.17-3+deb10u1`
+- `libkrb5-3:amd64=1.17-3+deb10u1`
+- `libkrb5support0:amd64=1.17-3+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/krb5-locales/copyright`, `/usr/share/doc/libgssapi-krb5-2/copyright`, `/usr/share/doc/libk5crypto3/copyright`, `/usr/share/doc/libkrb5-3/copyright`, `/usr/share/doc/libkrb5support0/copyright`)
 
 - `GPL-2`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris krb5=1.17-3+deb10u1
+'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17-3+deb10u1.dsc' krb5_1.17-3+deb10u1.dsc 3573 SHA256:e9edb5d47d4f7dc345e01adc45f1d302f5f19012f8c38d234ef9b2c08bbef7cc
+'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17.orig.tar.gz' krb5_1.17.orig.tar.gz 8761763 SHA256:5a6e2284a53de5702d3dc2be3b9339c963f9b5397d3fbbc53beb249380a781f5
+'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17-3+deb10u1.debian.tar.xz' krb5_1.17-3+deb10u1.debian.tar.xz 100584 SHA256:396ecf9ec5b4ac91d2ce8527d7f6b2309e70fc5b14ea1158eb7e367c48e9c5ca
+```
 
-- http://snapshot.debian.org/package/krb5/1.17-3/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/krb5/1.17-3+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/krb5/1.17-3+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/krb5/1.17-3+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libcap-ng=0.7.9-2`
 
@@ -1443,28 +1450,28 @@ $ apt-get source -qq --print-uris mono-llvm=6.0+mono20190708165219-0xamarin2+deb
 'http://download.mono-project.com/repo/debian/pool/main/m/mono-llvm/mono-llvm_6.0+mono20190708165219-0xamarin2+debian10b1.debian.tar.xz' mono-llvm_6.0+mono20190708165219-0xamarin2+debian10b1.debian.tar.xz 6076 SHA256:547af3657e92984d434e8611830025b5a51533bc5a84d439719bb6fd7a597f9d
 ```
 
-### `dpkg` source package: `mono=6.10.0.104-0xamarin16+debian10b1`
+### `dpkg` source package: `mono=6.12.0.107-0xamarin13+debian10b1`
 
 Binary Packages:
 
-- `ca-certificates-mono=6.10.0.104-0xamarin16+debian10b1`
-- `libmono-btls-interface4.0-cil=6.10.0.104-0xamarin16+debian10b1`
-- `libmono-corlib4.5-cil=6.10.0.104-0xamarin16+debian10b1`
-- `libmono-i18n-west4.0-cil=6.10.0.104-0xamarin16+debian10b1`
-- `libmono-i18n4.0-cil=6.10.0.104-0xamarin16+debian10b1`
-- `libmono-security4.0-cil=6.10.0.104-0xamarin16+debian10b1`
-- `libmono-system-configuration4.0-cil=6.10.0.104-0xamarin16+debian10b1`
-- `libmono-system-core4.0-cil=6.10.0.104-0xamarin16+debian10b1`
-- `libmono-system-numerics4.0-cil=6.10.0.104-0xamarin16+debian10b1`
-- `libmono-system-security4.0-cil=6.10.0.104-0xamarin16+debian10b1`
-- `libmono-system-xml4.0-cil=6.10.0.104-0xamarin16+debian10b1`
-- `libmono-system4.0-cil=6.10.0.104-0xamarin16+debian10b1`
-- `mono-4.0-gac=6.10.0.104-0xamarin16+debian10b1`
-- `mono-gac=6.10.0.104-0xamarin16+debian10b1`
-- `mono-llvm-support=6.10.0.104-0xamarin16+debian10b1`
-- `mono-runtime=6.10.0.104-0xamarin16+debian10b1`
-- `mono-runtime-common=6.10.0.104-0xamarin16+debian10b1`
-- `mono-runtime-sgen=6.10.0.104-0xamarin16+debian10b1`
+- `ca-certificates-mono=6.12.0.107-0xamarin13+debian10b1`
+- `libmono-btls-interface4.0-cil=6.12.0.107-0xamarin13+debian10b1`
+- `libmono-corlib4.5-cil=6.12.0.107-0xamarin13+debian10b1`
+- `libmono-i18n-west4.0-cil=6.12.0.107-0xamarin13+debian10b1`
+- `libmono-i18n4.0-cil=6.12.0.107-0xamarin13+debian10b1`
+- `libmono-security4.0-cil=6.12.0.107-0xamarin13+debian10b1`
+- `libmono-system-configuration4.0-cil=6.12.0.107-0xamarin13+debian10b1`
+- `libmono-system-core4.0-cil=6.12.0.107-0xamarin13+debian10b1`
+- `libmono-system-numerics4.0-cil=6.12.0.107-0xamarin13+debian10b1`
+- `libmono-system-security4.0-cil=6.12.0.107-0xamarin13+debian10b1`
+- `libmono-system-xml4.0-cil=6.12.0.107-0xamarin13+debian10b1`
+- `libmono-system4.0-cil=6.12.0.107-0xamarin13+debian10b1`
+- `mono-4.0-gac=6.12.0.107-0xamarin13+debian10b1`
+- `mono-gac=6.12.0.107-0xamarin13+debian10b1`
+- `mono-llvm-support=6.12.0.107-0xamarin13+debian10b1`
+- `mono-runtime=6.12.0.107-0xamarin13+debian10b1`
+- `mono-runtime-common=6.12.0.107-0xamarin13+debian10b1`
+- `mono-runtime-sgen=6.12.0.107-0xamarin13+debian10b1`
 
 Licenses: (parsed from: `/usr/share/doc/ca-certificates-mono/copyright`, `/usr/share/doc/libmono-btls-interface4.0-cil/copyright`, `/usr/share/doc/libmono-corlib4.5-cil/copyright`, `/usr/share/doc/libmono-i18n-west4.0-cil/copyright`, `/usr/share/doc/libmono-i18n4.0-cil/copyright`, `/usr/share/doc/libmono-security4.0-cil/copyright`, `/usr/share/doc/libmono-system-configuration4.0-cil/copyright`, `/usr/share/doc/libmono-system-core4.0-cil/copyright`, `/usr/share/doc/libmono-system-numerics4.0-cil/copyright`, `/usr/share/doc/libmono-system-security4.0-cil/copyright`, `/usr/share/doc/libmono-system-xml4.0-cil/copyright`, `/usr/share/doc/libmono-system4.0-cil/copyright`, `/usr/share/doc/mono-4.0-gac/copyright`, `/usr/share/doc/mono-gac/copyright`, `/usr/share/doc/mono-llvm-support/copyright`, `/usr/share/doc/mono-runtime/copyright`, `/usr/share/doc/mono-runtime-common/copyright`, `/usr/share/doc/mono-runtime-sgen/copyright`)
 
@@ -1488,10 +1495,10 @@ Licenses: (parsed from: `/usr/share/doc/ca-certificates-mono/copyright`, `/usr/s
 Source:
 
 ```console
-$ apt-get source -qq --print-uris mono=6.10.0.104-0xamarin16+debian10b1
-'http://download.mono-project.com/repo/debian/pool/main/m/mono/mono_6.10.0.104-0xamarin16+debian10b1.dsc' mono_6.10.0.104-0xamarin16+debian10b1.dsc 19005 SHA256:e97fa6b72263a4cc8454f8427721df595a3f54fb8b5bccdd25dac4079c4599b4
-'http://download.mono-project.com/repo/debian/pool/main/m/mono/mono_6.10.0.104.orig.tar.xz' mono_6.10.0.104.orig.tar.xz 292616252 SHA256:b8d6eb70a252d2efad8384d66b529883dc59e581565d617fa57f8e79317e332c
-'http://download.mono-project.com/repo/debian/pool/main/m/mono/mono_6.10.0.104-0xamarin16+debian10b1.debian.tar.xz' mono_6.10.0.104-0xamarin16+debian10b1.debian.tar.xz 160572 SHA256:2df804e2d60e27440e09059f5d2898b83746a94b86ebfa4f4ddf54471a35d807
+$ apt-get source -qq --print-uris mono=6.12.0.107-0xamarin13+debian10b1
+'http://download.mono-project.com/repo/debian/pool/main/m/mono/mono_6.12.0.107-0xamarin13+debian10b1.dsc' mono_6.12.0.107-0xamarin13+debian10b1.dsc 19005 SHA256:7be5ea8afc0d957afce3ebaabbc5ee32ba501907573cf9e8a24b509d455fb3e6
+'http://download.mono-project.com/repo/debian/pool/main/m/mono/mono_6.12.0.107.orig.tar.xz' mono_6.12.0.107.orig.tar.xz 291862192 SHA256:61f3cd629f8e99371c6b47c1f8d96b8ac46d9e851b5531eef20cdf9ab60d2a5f
+'http://download.mono-project.com/repo/debian/pool/main/m/mono/mono_6.12.0.107-0xamarin13+debian10b1.debian.tar.xz' mono_6.12.0.107-0xamarin13+debian10b1.debian.tar.xz 167364 SHA256:43edc2e09b43c4b01545c1fe4c1a58be3a42b0fa99eaab10f380fe0c86bb7f88
 ```
 
 ### `dpkg` source package: `ncurses=6.1+20181013-2+deb10u2`
@@ -1584,12 +1591,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/nettle/3.4.1-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/nettle/3.4.1-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openssl=1.1.1d-0+deb10u3`
+### `dpkg` source package: `openssl=1.1.1d-0+deb10u4`
 
 Binary Packages:
 
-- `libssl1.1:amd64=1.1.1d-0+deb10u3`
-- `openssl=1.1.1d-0+deb10u3`
+- `libssl1.1:amd64=1.1.1d-0+deb10u4`
+- `openssl=1.1.1d-0+deb10u4`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1598,18 +1605,18 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openssl=1.1.1d-0+deb10u3
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1d-0+deb10u3.dsc' openssl_1.1.1d-0+deb10u3.dsc 2472 SHA256:7dc19c6d2bf8ee424b3a39d49edd975e2a8b87655eb0a6a81431efde57a44b14
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1d.orig.tar.gz' openssl_1.1.1d.orig.tar.gz 8845861 SHA256:1e3a91bc1f9dfce01af26026f856e064eab4c8ee0a8f457b5ae30b40b8b711f2
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1d.orig.tar.gz.asc' openssl_1.1.1d.orig.tar.gz.asc 488 SHA256:f3fd3299a79421fffd51d35f62636b8e987dab1d3033d93a19d7685868e15395
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1d-0+deb10u3.debian.tar.xz' openssl_1.1.1d-0+deb10u3.debian.tar.xz 86692 SHA256:59db3dc3bf8e8abee0dc6dd6c62b644e57ac7a0e3ab98ace563885a4f3b205cd
+$ apt-get source -qq --print-uris openssl=1.1.1d-0+deb10u4
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1d-0+deb10u4.dsc' openssl_1.1.1d-0+deb10u4.dsc 2472 SHA256:b902902750711baf35c087bd220f0fc055ad41f9e810df07246e035fac195cf1
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1d.orig.tar.gz' openssl_1.1.1d.orig.tar.gz 8845861 SHA256:1e3a91bc1f9dfce01af26026f856e064eab4c8ee0a8f457b5ae30b40b8b711f2
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1d.orig.tar.gz.asc' openssl_1.1.1d.orig.tar.gz.asc 488 SHA256:f3fd3299a79421fffd51d35f62636b8e987dab1d3033d93a19d7685868e15395
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1d-0+deb10u4.debian.tar.xz' openssl_1.1.1d-0+deb10u4.debian.tar.xz 91472 SHA256:3f6a76b437f5407fe9dba0a47b9d5ba427c83255f17769c4d8532788146fa6ca
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/openssl/1.1.1d-0+deb10u3/ (for browsing the source)
-- https://sources.debian.net/src/openssl/1.1.1d-0+deb10u3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openssl/1.1.1d-0+deb10u3/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/openssl/1.1.1d-0+deb10u4/ (for browsing the source)
+- https://sources.debian.net/src/openssl/1.1.1d-0+deb10u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openssl/1.1.1d-0+deb10u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `p11-kit=0.23.15-2`
 
