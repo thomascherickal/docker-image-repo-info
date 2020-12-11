@@ -1,7 +1,7 @@
 ## `caddy:2-alpine`
 
 ```console
-$ docker pull caddy@sha256:ea06de9c9cb10eacb9f77e50817d2ad8dd63c977549f26c19d57df1a194fefdc
+$ docker pull caddy@sha256:d0c60d9e1e2ac42b19bfa1f605d1ea15e0b242ae4a71817886d695ff53761b74
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -16,259 +16,259 @@ $ docker pull caddy@sha256:ea06de9c9cb10eacb9f77e50817d2ad8dd63c977549f26c19d57d
 ### `caddy:2-alpine` - linux; amd64
 
 ```console
-$ docker pull caddy@sha256:4ebad49f78a3f98164d89431978046ee6e94f1e8a70454abc7f49ce1a5ee7826
+$ docker pull caddy@sha256:5c14834055e3ec0800789a46db92258f78556ef9971457022234e3487c2ae207
 ```
 
--	Docker Version: 18.09.7
+-	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **14.6 MB (14635232 bytes)**  
+-	Total Size: **14.6 MB (14635309 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4bb0137bab0e21a92b0bc9ec1cc22c259b097d5bf239b161ae1eac0de1833e67`
+-	Image ID: `sha256:4daabe9339412068d7bcc4c9b0ac275c67c82d8c819e4b37a387b50fa8e9a61b`
 -	Default Command: `["caddy","run","--config","\/etc\/caddy\/Caddyfile","--adapter","caddyfile"]`
 
 ```dockerfile
-# Thu, 22 Oct 2020 02:19:24 GMT
-ADD file:f17f65714f703db9012f00e5ec98d0b2541ff6147c2633f7ab9ba659d0c507f4 in / 
-# Thu, 22 Oct 2020 02:19:24 GMT
+# Fri, 11 Dec 2020 02:04:06 GMT
+ADD file:62a1e09319acb6d1bad91ef1c35aabdc7e5e19883a77f30f1951ccfffc812124 in / 
+# Fri, 11 Dec 2020 02:04:07 GMT
 CMD ["/bin/sh"]
-# Thu, 22 Oct 2020 04:33:22 GMT
+# Fri, 11 Dec 2020 02:28:03 GMT
 RUN apk add --no-cache ca-certificates mailcap
-# Thu, 22 Oct 2020 04:33:55 GMT
+# Fri, 11 Dec 2020 02:28:21 GMT
 RUN set -eux; 	mkdir -p 		/config/caddy 		/data/caddy 		/etc/caddy 		/usr/share/caddy 	; 	wget -O /etc/caddy/Caddyfile "https://github.com/caddyserver/dist/raw/56302336e0bb7c8c5dff34cbcb1d833791478226/config/Caddyfile"; 	wget -O /usr/share/caddy/index.html "https://github.com/caddyserver/dist/raw/56302336e0bb7c8c5dff34cbcb1d833791478226/welcome/index.html"
-# Thu, 22 Oct 2020 04:33:55 GMT
+# Fri, 11 Dec 2020 02:28:21 GMT
 ENV CADDY_VERSION=v2.2.1
-# Thu, 22 Oct 2020 04:33:59 GMT
+# Fri, 11 Dec 2020 02:28:23 GMT
 RUN set -eux; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		x86_64)  binArch='amd64'; checksum='66a21e0643fd2538ffe88ab93cb4a158b94873c1ce7494543a8355c8a3492d5fa43f4fa030dfc9e9833d15fe04f010063c61cb3f04ad5ac6bcff80396f928a08' ;; 		armhf)   binArch='armv6'; checksum='7e358d452fe7bbc0cdcba8a800339e34bd6277f698909d1d7a3b2ebd722653899b9bff6b7e8b996e9f054356374537f9971c1d5aed95f117dcce6be08e80446e' ;; 		armv7)   binArch='armv7'; checksum='ed847f91c9726ba4f25dbf9954ebe072c893f3eecfac3b83ee5c541fc762f88f59b4bd8aa35d54dd1ac043ca6e54235a197137529fe003792fdc3801a5100cd0' ;; 		aarch64) binArch='arm64'; checksum='dfc7ef12feea26b13b818cac8492664662c24835db1f8b862500debfddd30b7399d3ccc18a52fc8cc62b82ddb4cc41f2810580c1727b6c22e27dd74724bfae96' ;; 		ppc64el|ppc64le) binArch='ppc64le'; checksum='3b38fcb4752be955e05156d2510825e93c7f83592a405d22f9ecd63cecd1d102b2aae4b50ce8586c035edd5d53075d4daeac986bc2cc1e2e1f41c6d9723066c5' ;; 		s390x)   binArch='s390x'; checksum='ebd76de742d38556aa6a7c68c000d530f46989f3db712b486d4dbe653ca69c3ba2333d19337e85d63c619f5c410f1d22dc982d9cdb6ce5e1ed94dbf29ec15190' ;; 		*) echo >&2 "error: unsupported architecture ($apkArch)"; exit 1 ;;	esac; 	wget -O /tmp/caddy.tar.gz "https://github.com/caddyserver/caddy/releases/download/v2.2.1/caddy_2.2.1_linux_${binArch}.tar.gz"; 	echo "$checksum  /tmp/caddy.tar.gz" | sha512sum -c; 	tar x -z -f /tmp/caddy.tar.gz -C /usr/bin caddy; 	rm -f /tmp/caddy.tar.gz; 	chmod +x /usr/bin/caddy; 	caddy version
-# Thu, 22 Oct 2020 04:34:00 GMT
+# Fri, 11 Dec 2020 02:28:24 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 22 Oct 2020 04:34:01 GMT
+# Fri, 11 Dec 2020 02:28:25 GMT
 ENV XDG_CONFIG_HOME=/config
-# Thu, 22 Oct 2020 04:34:01 GMT
+# Fri, 11 Dec 2020 02:28:25 GMT
 ENV XDG_DATA_HOME=/data
-# Thu, 22 Oct 2020 04:34:01 GMT
+# Fri, 11 Dec 2020 02:28:25 GMT
 VOLUME [/config]
-# Thu, 22 Oct 2020 04:34:02 GMT
+# Fri, 11 Dec 2020 02:28:25 GMT
 VOLUME [/data]
-# Thu, 22 Oct 2020 04:34:02 GMT
+# Fri, 11 Dec 2020 02:28:25 GMT
 LABEL org.opencontainers.image.version=v2.2.1
-# Thu, 22 Oct 2020 04:34:02 GMT
+# Fri, 11 Dec 2020 02:28:25 GMT
 LABEL org.opencontainers.image.title=Caddy
-# Thu, 22 Oct 2020 04:34:03 GMT
+# Fri, 11 Dec 2020 02:28:26 GMT
 LABEL org.opencontainers.image.description=a powerful, enterprise-ready, open source web server with automatic HTTPS written in Go
-# Thu, 22 Oct 2020 04:34:03 GMT
+# Fri, 11 Dec 2020 02:28:26 GMT
 LABEL org.opencontainers.image.url=https://caddyserver.com
-# Thu, 22 Oct 2020 04:34:03 GMT
+# Fri, 11 Dec 2020 02:28:26 GMT
 LABEL org.opencontainers.image.documentation=https://caddyserver.com/docs
-# Thu, 22 Oct 2020 04:34:04 GMT
+# Fri, 11 Dec 2020 02:28:26 GMT
 LABEL org.opencontainers.image.vendor=Light Code Labs
-# Thu, 22 Oct 2020 04:34:04 GMT
+# Fri, 11 Dec 2020 02:28:26 GMT
 LABEL org.opencontainers.image.licenses=Apache-2.0
-# Thu, 22 Oct 2020 04:34:05 GMT
+# Fri, 11 Dec 2020 02:28:27 GMT
 LABEL org.opencontainers.image.source=https://github.com/caddyserver/caddy-docker
-# Thu, 22 Oct 2020 04:34:05 GMT
+# Fri, 11 Dec 2020 02:28:27 GMT
 EXPOSE 80
-# Thu, 22 Oct 2020 04:34:05 GMT
+# Fri, 11 Dec 2020 02:28:27 GMT
 EXPOSE 443
-# Thu, 22 Oct 2020 04:34:06 GMT
+# Fri, 11 Dec 2020 02:28:27 GMT
 EXPOSE 2019
-# Thu, 22 Oct 2020 04:34:06 GMT
+# Fri, 11 Dec 2020 02:28:28 GMT
 WORKDIR /srv
-# Thu, 22 Oct 2020 04:34:06 GMT
+# Fri, 11 Dec 2020 02:28:28 GMT
 CMD ["caddy" "run" "--config" "/etc/caddy/Caddyfile" "--adapter" "caddyfile"]
 ```
 
 -	Layers:
-	-	`sha256:188c0c94c7c576fff0792aca7ec73d67a2f7f4cb3a6e53a84559337260b36964`  
-		Last Modified: Thu, 22 Oct 2020 02:19:57 GMT  
-		Size: 2.8 MB (2796860 bytes)  
+	-	`sha256:05e7bc50f07f000e9993ec0d264b9ffcbb9a01a4d69c68f556d25e9811a8f7f4`  
+		Last Modified: Fri, 11 Dec 2020 02:04:37 GMT  
+		Size: 2.8 MB (2796945 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:da2e2d825895b6421ca5dbd63db0d99f790ef84a84c7bcaff51e60b654397858`  
-		Last Modified: Thu, 22 Oct 2020 04:34:47 GMT  
-		Size: 300.0 KB (299956 bytes)  
+	-	`sha256:df5605df8a1fb0ca66be628849d6c0ca12c0e472c9652ff8fd4ec82d45cac011`  
+		Last Modified: Fri, 11 Dec 2020 02:29:00 GMT  
+		Size: 299.9 KB (299945 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2aaf2e3dee2e74b401fce928bf9502e48df68da4e8c1933bfd6b00b1137529fc`  
-		Last Modified: Thu, 22 Oct 2020 04:35:02 GMT  
-		Size: 5.8 KB (5754 bytes)  
+	-	`sha256:4428f13c7edb68201eb53fc2a833e3e1831b1bfc66d8ca591d7d7981e8dcdb57`  
+		Last Modified: Fri, 11 Dec 2020 02:29:08 GMT  
+		Size: 5.8 KB (5758 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b2215cf93250599c5db984cee0fddd5d0cd59ef035ab5a317387b67211bde86d`  
-		Last Modified: Thu, 22 Oct 2020 04:35:06 GMT  
-		Size: 11.5 MB (11532508 bytes)  
+	-	`sha256:86b931870cc5c313c5b12bd911762577180c41684025e803ac19870628f24474`  
+		Last Modified: Fri, 11 Dec 2020 02:29:11 GMT  
+		Size: 11.5 MB (11532507 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:060365e49ba5ee96a2859e269b366f5a5c9f386e5bdbf07d2ef31b1fc6934baa`  
-		Last Modified: Thu, 22 Oct 2020 04:35:02 GMT  
+	-	`sha256:8010bdd923cf20d340b6e9f06cac8c3f1e1984172c4f4d095cd9b443b03ad818`  
+		Last Modified: Fri, 11 Dec 2020 02:29:08 GMT  
 		Size: 154.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `caddy:2-alpine` - linux; arm variant v6
 
 ```console
-$ docker pull caddy@sha256:abba73dc860b2f35703cb7d27f08baf5bfc084e18e627b94661d01a8e2befdaf
+$ docker pull caddy@sha256:ee965d543057e5cb4af597d364066251a9852583059cd38488243306b724a778
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **13.8 MB (13784259 bytes)**  
+-	Total Size: **13.8 MB (13784367 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3f0aad5a281913821dd39ffed5e144daae22ac81ac4314731395ab65eedde72a`
+-	Image ID: `sha256:3d7753d72769487802d1fee3d3f07ee3ce735418d63d93259ad8125a3ae2de1e`
 -	Default Command: `["caddy","run","--config","\/etc\/caddy\/Caddyfile","--adapter","caddyfile"]`
 
 ```dockerfile
-# Thu, 22 Oct 2020 02:01:09 GMT
-ADD file:dec4d3b6cf21c59820d1d74a554d0a193b5f4859e00b932f31ffe73f554d5afb in / 
-# Thu, 22 Oct 2020 02:01:12 GMT
+# Fri, 11 Dec 2020 02:17:15 GMT
+ADD file:1a9c0a67560d338c0c0e7005d8915d998fc9cf3e9f53bfd7e42e8391f0a39bce in / 
+# Fri, 11 Dec 2020 02:17:15 GMT
 CMD ["/bin/sh"]
-# Thu, 22 Oct 2020 02:58:10 GMT
+# Fri, 11 Dec 2020 03:09:32 GMT
 RUN apk add --no-cache ca-certificates mailcap
-# Thu, 22 Oct 2020 02:58:45 GMT
+# Fri, 11 Dec 2020 03:10:12 GMT
 RUN set -eux; 	mkdir -p 		/config/caddy 		/data/caddy 		/etc/caddy 		/usr/share/caddy 	; 	wget -O /etc/caddy/Caddyfile "https://github.com/caddyserver/dist/raw/56302336e0bb7c8c5dff34cbcb1d833791478226/config/Caddyfile"; 	wget -O /usr/share/caddy/index.html "https://github.com/caddyserver/dist/raw/56302336e0bb7c8c5dff34cbcb1d833791478226/welcome/index.html"
-# Thu, 22 Oct 2020 02:58:46 GMT
+# Fri, 11 Dec 2020 03:10:13 GMT
 ENV CADDY_VERSION=v2.2.1
-# Thu, 22 Oct 2020 02:58:55 GMT
+# Fri, 11 Dec 2020 03:10:17 GMT
 RUN set -eux; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		x86_64)  binArch='amd64'; checksum='66a21e0643fd2538ffe88ab93cb4a158b94873c1ce7494543a8355c8a3492d5fa43f4fa030dfc9e9833d15fe04f010063c61cb3f04ad5ac6bcff80396f928a08' ;; 		armhf)   binArch='armv6'; checksum='7e358d452fe7bbc0cdcba8a800339e34bd6277f698909d1d7a3b2ebd722653899b9bff6b7e8b996e9f054356374537f9971c1d5aed95f117dcce6be08e80446e' ;; 		armv7)   binArch='armv7'; checksum='ed847f91c9726ba4f25dbf9954ebe072c893f3eecfac3b83ee5c541fc762f88f59b4bd8aa35d54dd1ac043ca6e54235a197137529fe003792fdc3801a5100cd0' ;; 		aarch64) binArch='arm64'; checksum='dfc7ef12feea26b13b818cac8492664662c24835db1f8b862500debfddd30b7399d3ccc18a52fc8cc62b82ddb4cc41f2810580c1727b6c22e27dd74724bfae96' ;; 		ppc64el|ppc64le) binArch='ppc64le'; checksum='3b38fcb4752be955e05156d2510825e93c7f83592a405d22f9ecd63cecd1d102b2aae4b50ce8586c035edd5d53075d4daeac986bc2cc1e2e1f41c6d9723066c5' ;; 		s390x)   binArch='s390x'; checksum='ebd76de742d38556aa6a7c68c000d530f46989f3db712b486d4dbe653ca69c3ba2333d19337e85d63c619f5c410f1d22dc982d9cdb6ce5e1ed94dbf29ec15190' ;; 		*) echo >&2 "error: unsupported architecture ($apkArch)"; exit 1 ;;	esac; 	wget -O /tmp/caddy.tar.gz "https://github.com/caddyserver/caddy/releases/download/v2.2.1/caddy_2.2.1_linux_${binArch}.tar.gz"; 	echo "$checksum  /tmp/caddy.tar.gz" | sha512sum -c; 	tar x -z -f /tmp/caddy.tar.gz -C /usr/bin caddy; 	rm -f /tmp/caddy.tar.gz; 	chmod +x /usr/bin/caddy; 	caddy version
-# Thu, 22 Oct 2020 02:58:59 GMT
+# Fri, 11 Dec 2020 03:10:19 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 22 Oct 2020 02:59:00 GMT
+# Fri, 11 Dec 2020 03:10:20 GMT
 ENV XDG_CONFIG_HOME=/config
-# Thu, 22 Oct 2020 02:59:01 GMT
+# Fri, 11 Dec 2020 03:10:21 GMT
 ENV XDG_DATA_HOME=/data
-# Thu, 22 Oct 2020 02:59:01 GMT
+# Fri, 11 Dec 2020 03:10:21 GMT
 VOLUME [/config]
-# Thu, 22 Oct 2020 02:59:03 GMT
+# Fri, 11 Dec 2020 03:10:22 GMT
 VOLUME [/data]
-# Thu, 22 Oct 2020 02:59:08 GMT
+# Fri, 11 Dec 2020 03:10:23 GMT
 LABEL org.opencontainers.image.version=v2.2.1
-# Thu, 22 Oct 2020 02:59:09 GMT
+# Fri, 11 Dec 2020 03:10:24 GMT
 LABEL org.opencontainers.image.title=Caddy
-# Thu, 22 Oct 2020 02:59:10 GMT
+# Fri, 11 Dec 2020 03:10:25 GMT
 LABEL org.opencontainers.image.description=a powerful, enterprise-ready, open source web server with automatic HTTPS written in Go
-# Thu, 22 Oct 2020 02:59:11 GMT
+# Fri, 11 Dec 2020 03:10:26 GMT
 LABEL org.opencontainers.image.url=https://caddyserver.com
-# Thu, 22 Oct 2020 02:59:11 GMT
+# Fri, 11 Dec 2020 03:10:27 GMT
 LABEL org.opencontainers.image.documentation=https://caddyserver.com/docs
-# Thu, 22 Oct 2020 02:59:12 GMT
+# Fri, 11 Dec 2020 03:10:29 GMT
 LABEL org.opencontainers.image.vendor=Light Code Labs
-# Thu, 22 Oct 2020 02:59:13 GMT
+# Fri, 11 Dec 2020 03:10:30 GMT
 LABEL org.opencontainers.image.licenses=Apache-2.0
-# Thu, 22 Oct 2020 02:59:14 GMT
+# Fri, 11 Dec 2020 03:10:31 GMT
 LABEL org.opencontainers.image.source=https://github.com/caddyserver/caddy-docker
-# Thu, 22 Oct 2020 02:59:15 GMT
+# Fri, 11 Dec 2020 03:10:31 GMT
 EXPOSE 80
-# Thu, 22 Oct 2020 02:59:19 GMT
+# Fri, 11 Dec 2020 03:10:32 GMT
 EXPOSE 443
-# Thu, 22 Oct 2020 02:59:20 GMT
+# Fri, 11 Dec 2020 03:10:33 GMT
 EXPOSE 2019
-# Thu, 22 Oct 2020 02:59:21 GMT
+# Fri, 11 Dec 2020 03:10:35 GMT
 WORKDIR /srv
-# Thu, 22 Oct 2020 02:59:22 GMT
+# Fri, 11 Dec 2020 03:10:39 GMT
 CMD ["caddy" "run" "--config" "/etc/caddy/Caddyfile" "--adapter" "caddyfile"]
 ```
 
 -	Layers:
-	-	`sha256:bad30e7b45c14f784ef29a828b5fc69db0ebdefebcde6a7c98f4f77ffc93a546`  
-		Last Modified: Thu, 22 Oct 2020 02:01:42 GMT  
-		Size: 2.6 MB (2601912 bytes)  
+	-	`sha256:f1c16df8fee33d421d08790b17ca2af67a3fe49e77b6b991dd0c30631f5d1baf`  
+		Last Modified: Fri, 11 Dec 2020 02:17:57 GMT  
+		Size: 2.6 MB (2601992 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f7369c3ac4b39c55c74e96dd3eb61ac2fa65e5671b1c2acca9697a7c9d20c3cf`  
-		Last Modified: Thu, 22 Oct 2020 02:59:49 GMT  
-		Size: 300.1 KB (300086 bytes)  
+	-	`sha256:34b99de35a1926a351b1570538a0daebdec8818671a5888a2a050cd69e07311c`  
+		Last Modified: Fri, 11 Dec 2020 03:11:13 GMT  
+		Size: 300.1 KB (300118 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ba8f4045920069dff3382a5993783c5d846d9e28d0f5a63c475ed298fce0abb7`  
-		Last Modified: Thu, 22 Oct 2020 03:00:03 GMT  
+	-	`sha256:e3a7ab50db8ca6e467811f1281518708c79ffb3eba857ede634fe075aa109cf4`  
+		Last Modified: Fri, 11 Dec 2020 03:11:23 GMT  
 		Size: 5.8 KB (5828 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0db6bde4735da15e5db23ad62f3d64d78aed8713a40d12547f5538c15c90f9da`  
-		Last Modified: Thu, 22 Oct 2020 03:00:06 GMT  
-		Size: 10.9 MB (10876280 bytes)  
+	-	`sha256:5b0c5497e98ba2efc52fb51339d08617c1ffc210163f8774632f307c81683deb`  
+		Last Modified: Fri, 11 Dec 2020 03:11:27 GMT  
+		Size: 10.9 MB (10876275 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5a95efd7a14ed98a53a238da45faa7e3b0fdd2a93529b83bfe9d0823dafac67c`  
-		Last Modified: Thu, 22 Oct 2020 03:00:03 GMT  
-		Size: 153.0 B  
+	-	`sha256:140a3a819ce00971b2089202730b7c285ca9a6ab1f5832820b20a043fd51fcc9`  
+		Last Modified: Fri, 11 Dec 2020 03:11:23 GMT  
+		Size: 154.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `caddy:2-alpine` - linux; arm variant v7
 
 ```console
-$ docker pull caddy@sha256:8cf66cbe3c03273ca54bdab908092a6a9b9f02d39595ed15b1111f1465430426
+$ docker pull caddy@sha256:2d82fb7e660d56846fa3c33deb953bfc6c464bfb8fba608c237b4a5e0eee33c8
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
 -	Total Size: **13.6 MB (13565251 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b20723dea614fc40d9f3cb59eddd33bf0e89dfda3f8ed4a7b404ef334632a4b9`
+-	Image ID: `sha256:28e57be32d04a04308b9f9c3fcbac701e798783ecbe10f243a411262f5a05cb0`
 -	Default Command: `["caddy","run","--config","\/etc\/caddy\/Caddyfile","--adapter","caddyfile"]`
 
 ```dockerfile
-# Thu, 22 Oct 2020 01:58:13 GMT
-ADD file:46f89172426e9f5b1d669a2ca7ab218fc2deaef1caeeab88f2b5bd443ac9773d in / 
-# Thu, 22 Oct 2020 01:58:14 GMT
+# Fri, 11 Dec 2020 02:20:33 GMT
+ADD file:0e85952ec585d17378d9bb15a94ddc10c3ed8f766f275cf50fb36be1126f35d2 in / 
+# Fri, 11 Dec 2020 02:20:34 GMT
 CMD ["/bin/sh"]
-# Thu, 22 Oct 2020 03:04:57 GMT
+# Fri, 11 Dec 2020 03:06:25 GMT
 RUN apk add --no-cache ca-certificates mailcap
-# Thu, 22 Oct 2020 03:05:45 GMT
+# Fri, 11 Dec 2020 03:07:06 GMT
 RUN set -eux; 	mkdir -p 		/config/caddy 		/data/caddy 		/etc/caddy 		/usr/share/caddy 	; 	wget -O /etc/caddy/Caddyfile "https://github.com/caddyserver/dist/raw/56302336e0bb7c8c5dff34cbcb1d833791478226/config/Caddyfile"; 	wget -O /usr/share/caddy/index.html "https://github.com/caddyserver/dist/raw/56302336e0bb7c8c5dff34cbcb1d833791478226/welcome/index.html"
-# Thu, 22 Oct 2020 03:05:45 GMT
+# Fri, 11 Dec 2020 03:07:07 GMT
 ENV CADDY_VERSION=v2.2.1
-# Thu, 22 Oct 2020 03:05:50 GMT
+# Fri, 11 Dec 2020 03:07:11 GMT
 RUN set -eux; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		x86_64)  binArch='amd64'; checksum='66a21e0643fd2538ffe88ab93cb4a158b94873c1ce7494543a8355c8a3492d5fa43f4fa030dfc9e9833d15fe04f010063c61cb3f04ad5ac6bcff80396f928a08' ;; 		armhf)   binArch='armv6'; checksum='7e358d452fe7bbc0cdcba8a800339e34bd6277f698909d1d7a3b2ebd722653899b9bff6b7e8b996e9f054356374537f9971c1d5aed95f117dcce6be08e80446e' ;; 		armv7)   binArch='armv7'; checksum='ed847f91c9726ba4f25dbf9954ebe072c893f3eecfac3b83ee5c541fc762f88f59b4bd8aa35d54dd1ac043ca6e54235a197137529fe003792fdc3801a5100cd0' ;; 		aarch64) binArch='arm64'; checksum='dfc7ef12feea26b13b818cac8492664662c24835db1f8b862500debfddd30b7399d3ccc18a52fc8cc62b82ddb4cc41f2810580c1727b6c22e27dd74724bfae96' ;; 		ppc64el|ppc64le) binArch='ppc64le'; checksum='3b38fcb4752be955e05156d2510825e93c7f83592a405d22f9ecd63cecd1d102b2aae4b50ce8586c035edd5d53075d4daeac986bc2cc1e2e1f41c6d9723066c5' ;; 		s390x)   binArch='s390x'; checksum='ebd76de742d38556aa6a7c68c000d530f46989f3db712b486d4dbe653ca69c3ba2333d19337e85d63c619f5c410f1d22dc982d9cdb6ce5e1ed94dbf29ec15190' ;; 		*) echo >&2 "error: unsupported architecture ($apkArch)"; exit 1 ;;	esac; 	wget -O /tmp/caddy.tar.gz "https://github.com/caddyserver/caddy/releases/download/v2.2.1/caddy_2.2.1_linux_${binArch}.tar.gz"; 	echo "$checksum  /tmp/caddy.tar.gz" | sha512sum -c; 	tar x -z -f /tmp/caddy.tar.gz -C /usr/bin caddy; 	rm -f /tmp/caddy.tar.gz; 	chmod +x /usr/bin/caddy; 	caddy version
-# Thu, 22 Oct 2020 03:05:52 GMT
+# Fri, 11 Dec 2020 03:07:13 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 22 Oct 2020 03:05:53 GMT
+# Fri, 11 Dec 2020 03:07:14 GMT
 ENV XDG_CONFIG_HOME=/config
-# Thu, 22 Oct 2020 03:05:53 GMT
+# Fri, 11 Dec 2020 03:07:15 GMT
 ENV XDG_DATA_HOME=/data
-# Thu, 22 Oct 2020 03:05:54 GMT
+# Fri, 11 Dec 2020 03:07:16 GMT
 VOLUME [/config]
-# Thu, 22 Oct 2020 03:05:55 GMT
+# Fri, 11 Dec 2020 03:07:17 GMT
 VOLUME [/data]
-# Thu, 22 Oct 2020 03:05:56 GMT
+# Fri, 11 Dec 2020 03:07:18 GMT
 LABEL org.opencontainers.image.version=v2.2.1
-# Thu, 22 Oct 2020 03:05:57 GMT
+# Fri, 11 Dec 2020 03:07:19 GMT
 LABEL org.opencontainers.image.title=Caddy
-# Thu, 22 Oct 2020 03:05:57 GMT
+# Fri, 11 Dec 2020 03:07:19 GMT
 LABEL org.opencontainers.image.description=a powerful, enterprise-ready, open source web server with automatic HTTPS written in Go
-# Thu, 22 Oct 2020 03:05:58 GMT
+# Fri, 11 Dec 2020 03:07:20 GMT
 LABEL org.opencontainers.image.url=https://caddyserver.com
-# Thu, 22 Oct 2020 03:05:58 GMT
+# Fri, 11 Dec 2020 03:07:21 GMT
 LABEL org.opencontainers.image.documentation=https://caddyserver.com/docs
-# Thu, 22 Oct 2020 03:05:59 GMT
+# Fri, 11 Dec 2020 03:07:21 GMT
 LABEL org.opencontainers.image.vendor=Light Code Labs
-# Thu, 22 Oct 2020 03:06:00 GMT
+# Fri, 11 Dec 2020 03:07:22 GMT
 LABEL org.opencontainers.image.licenses=Apache-2.0
-# Thu, 22 Oct 2020 03:06:00 GMT
+# Fri, 11 Dec 2020 03:07:23 GMT
 LABEL org.opencontainers.image.source=https://github.com/caddyserver/caddy-docker
-# Thu, 22 Oct 2020 03:06:01 GMT
+# Fri, 11 Dec 2020 03:07:24 GMT
 EXPOSE 80
-# Thu, 22 Oct 2020 03:06:02 GMT
+# Fri, 11 Dec 2020 03:07:25 GMT
 EXPOSE 443
-# Thu, 22 Oct 2020 03:06:02 GMT
+# Fri, 11 Dec 2020 03:07:26 GMT
 EXPOSE 2019
-# Thu, 22 Oct 2020 03:06:03 GMT
+# Fri, 11 Dec 2020 03:07:27 GMT
 WORKDIR /srv
-# Thu, 22 Oct 2020 03:06:04 GMT
+# Fri, 11 Dec 2020 03:07:28 GMT
 CMD ["caddy" "run" "--config" "/etc/caddy/Caddyfile" "--adapter" "caddyfile"]
 ```
 
 -	Layers:
-	-	`sha256:5f2023fd85a4e68f37fe41421fd89f30e69b98a645613521c57c01317561eee3`  
-		Last Modified: Thu, 22 Oct 2020 01:58:45 GMT  
-		Size: 2.4 MB (2405675 bytes)  
+	-	`sha256:f70c74f2e22556cebd0cbbff78c03d4f0560d76979bf799d67730340a639aa57`  
+		Last Modified: Fri, 11 Dec 2020 02:21:18 GMT  
+		Size: 2.4 MB (2405692 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:58a8e7fe5034ac502626b0a921d79be80c092890176e33b236c489d6f00710a2`  
-		Last Modified: Thu, 22 Oct 2020 03:06:32 GMT  
-		Size: 299.2 KB (299211 bytes)  
+	-	`sha256:dada83e01881dc169d8c4b56f8745a2ca2786a0632c41c34d585236d7a2472b9`  
+		Last Modified: Fri, 11 Dec 2020 03:08:02 GMT  
+		Size: 299.2 KB (299200 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:14db75acdaca15b1e81890f29b3b757fcc73e7a69a55f5ed659bf800f6340108`  
-		Last Modified: Thu, 22 Oct 2020 03:06:43 GMT  
-		Size: 5.8 KB (5828 bytes)  
+	-	`sha256:2348443ed0fb4b09e2d5b6d636d90e4bbf2024e934143fadfcc35bbc65a709a1`  
+		Last Modified: Fri, 11 Dec 2020 03:08:15 GMT  
+		Size: 5.8 KB (5824 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d2197c38adf245bca8f229a4cd718c4d0f619a87bae5786572ccdac1a286882c`  
-		Last Modified: Thu, 22 Oct 2020 03:06:46 GMT  
-		Size: 10.9 MB (10854384 bytes)  
+	-	`sha256:ab8462380e6876aca9643bcf369ffc7b958a08c3fd3fc56a861ca651a1fcaf9c`  
+		Last Modified: Fri, 11 Dec 2020 03:08:19 GMT  
+		Size: 10.9 MB (10854381 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bb0104bc6a595940856019d00d9ff8e04365338a7964d948b64cc44bf73cc59e`  
-		Last Modified: Thu, 22 Oct 2020 03:06:42 GMT  
-		Size: 153.0 B  
+	-	`sha256:7a7839ddc84cd5ea73da141c2726d80c7493a37772c128eb7f60b1621784acf0`  
+		Last Modified: Fri, 11 Dec 2020 03:08:15 GMT  
+		Size: 154.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `caddy:2-alpine` - linux; arm64 variant v8
@@ -446,85 +446,85 @@ CMD ["caddy" "run" "--config" "/etc/caddy/Caddyfile" "--adapter" "caddyfile"]
 ### `caddy:2-alpine` - linux; s390x
 
 ```console
-$ docker pull caddy@sha256:3e18b421d651721239cb3422bc890d1211535681219b7696816f487b4cebc4ec
+$ docker pull caddy@sha256:90b5dcd8d713f82a46c2039baee451f911f8d25f27431e6b44655f8b2803c557
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **14.1 MB (14074857 bytes)**  
+-	Total Size: **14.1 MB (14074992 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d4d5562f1d148d3d67ff7f5995be8f860553ad0f3d07091335643306b83385e1`
+-	Image ID: `sha256:19f49a1c397b4a9cdc0f9a6cd1eb6aea12154952a3d4ead09ddd6c9595bb4361`
 -	Default Command: `["caddy","run","--config","\/etc\/caddy\/Caddyfile","--adapter","caddyfile"]`
 
 ```dockerfile
-# Thu, 22 Oct 2020 01:59:08 GMT
-ADD file:e07d6f40b1afc3d3eff230bc89e84704eb762706a373a60c6bea6a45b2287464 in / 
-# Thu, 22 Oct 2020 01:59:09 GMT
+# Fri, 11 Dec 2020 02:09:52 GMT
+ADD file:c9395a36a4e03768aabd282eb1f31705cc00181d3147222d9c940eaa5a8fd511 in / 
+# Fri, 11 Dec 2020 02:09:53 GMT
 CMD ["/bin/sh"]
-# Thu, 22 Oct 2020 02:41:09 GMT
+# Fri, 11 Dec 2020 02:43:00 GMT
 RUN apk add --no-cache ca-certificates mailcap
-# Thu, 22 Oct 2020 02:41:31 GMT
+# Fri, 11 Dec 2020 02:43:32 GMT
 RUN set -eux; 	mkdir -p 		/config/caddy 		/data/caddy 		/etc/caddy 		/usr/share/caddy 	; 	wget -O /etc/caddy/Caddyfile "https://github.com/caddyserver/dist/raw/56302336e0bb7c8c5dff34cbcb1d833791478226/config/Caddyfile"; 	wget -O /usr/share/caddy/index.html "https://github.com/caddyserver/dist/raw/56302336e0bb7c8c5dff34cbcb1d833791478226/welcome/index.html"
-# Thu, 22 Oct 2020 02:41:31 GMT
+# Fri, 11 Dec 2020 02:43:33 GMT
 ENV CADDY_VERSION=v2.2.1
-# Thu, 22 Oct 2020 02:41:34 GMT
+# Fri, 11 Dec 2020 02:43:38 GMT
 RUN set -eux; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		x86_64)  binArch='amd64'; checksum='66a21e0643fd2538ffe88ab93cb4a158b94873c1ce7494543a8355c8a3492d5fa43f4fa030dfc9e9833d15fe04f010063c61cb3f04ad5ac6bcff80396f928a08' ;; 		armhf)   binArch='armv6'; checksum='7e358d452fe7bbc0cdcba8a800339e34bd6277f698909d1d7a3b2ebd722653899b9bff6b7e8b996e9f054356374537f9971c1d5aed95f117dcce6be08e80446e' ;; 		armv7)   binArch='armv7'; checksum='ed847f91c9726ba4f25dbf9954ebe072c893f3eecfac3b83ee5c541fc762f88f59b4bd8aa35d54dd1ac043ca6e54235a197137529fe003792fdc3801a5100cd0' ;; 		aarch64) binArch='arm64'; checksum='dfc7ef12feea26b13b818cac8492664662c24835db1f8b862500debfddd30b7399d3ccc18a52fc8cc62b82ddb4cc41f2810580c1727b6c22e27dd74724bfae96' ;; 		ppc64el|ppc64le) binArch='ppc64le'; checksum='3b38fcb4752be955e05156d2510825e93c7f83592a405d22f9ecd63cecd1d102b2aae4b50ce8586c035edd5d53075d4daeac986bc2cc1e2e1f41c6d9723066c5' ;; 		s390x)   binArch='s390x'; checksum='ebd76de742d38556aa6a7c68c000d530f46989f3db712b486d4dbe653ca69c3ba2333d19337e85d63c619f5c410f1d22dc982d9cdb6ce5e1ed94dbf29ec15190' ;; 		*) echo >&2 "error: unsupported architecture ($apkArch)"; exit 1 ;;	esac; 	wget -O /tmp/caddy.tar.gz "https://github.com/caddyserver/caddy/releases/download/v2.2.1/caddy_2.2.1_linux_${binArch}.tar.gz"; 	echo "$checksum  /tmp/caddy.tar.gz" | sha512sum -c; 	tar x -z -f /tmp/caddy.tar.gz -C /usr/bin caddy; 	rm -f /tmp/caddy.tar.gz; 	chmod +x /usr/bin/caddy; 	caddy version
-# Thu, 22 Oct 2020 02:41:36 GMT
+# Fri, 11 Dec 2020 02:43:41 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 22 Oct 2020 02:41:36 GMT
+# Fri, 11 Dec 2020 02:43:42 GMT
 ENV XDG_CONFIG_HOME=/config
-# Thu, 22 Oct 2020 02:41:36 GMT
+# Fri, 11 Dec 2020 02:43:43 GMT
 ENV XDG_DATA_HOME=/data
-# Thu, 22 Oct 2020 02:41:37 GMT
+# Fri, 11 Dec 2020 02:43:44 GMT
 VOLUME [/config]
-# Thu, 22 Oct 2020 02:41:37 GMT
+# Fri, 11 Dec 2020 02:43:44 GMT
 VOLUME [/data]
-# Thu, 22 Oct 2020 02:41:37 GMT
+# Fri, 11 Dec 2020 02:43:45 GMT
 LABEL org.opencontainers.image.version=v2.2.1
-# Thu, 22 Oct 2020 02:41:37 GMT
+# Fri, 11 Dec 2020 02:43:45 GMT
 LABEL org.opencontainers.image.title=Caddy
-# Thu, 22 Oct 2020 02:41:38 GMT
+# Fri, 11 Dec 2020 02:43:46 GMT
 LABEL org.opencontainers.image.description=a powerful, enterprise-ready, open source web server with automatic HTTPS written in Go
-# Thu, 22 Oct 2020 02:41:38 GMT
+# Fri, 11 Dec 2020 02:43:46 GMT
 LABEL org.opencontainers.image.url=https://caddyserver.com
-# Thu, 22 Oct 2020 02:41:38 GMT
+# Fri, 11 Dec 2020 02:43:47 GMT
 LABEL org.opencontainers.image.documentation=https://caddyserver.com/docs
-# Thu, 22 Oct 2020 02:41:39 GMT
+# Fri, 11 Dec 2020 02:43:47 GMT
 LABEL org.opencontainers.image.vendor=Light Code Labs
-# Thu, 22 Oct 2020 02:41:39 GMT
+# Fri, 11 Dec 2020 02:43:47 GMT
 LABEL org.opencontainers.image.licenses=Apache-2.0
-# Thu, 22 Oct 2020 02:41:39 GMT
+# Fri, 11 Dec 2020 02:43:48 GMT
 LABEL org.opencontainers.image.source=https://github.com/caddyserver/caddy-docker
-# Thu, 22 Oct 2020 02:41:40 GMT
+# Fri, 11 Dec 2020 02:43:49 GMT
 EXPOSE 80
-# Thu, 22 Oct 2020 02:41:40 GMT
+# Fri, 11 Dec 2020 02:43:49 GMT
 EXPOSE 443
-# Thu, 22 Oct 2020 02:41:40 GMT
+# Fri, 11 Dec 2020 02:43:50 GMT
 EXPOSE 2019
-# Thu, 22 Oct 2020 02:41:41 GMT
+# Fri, 11 Dec 2020 02:43:50 GMT
 WORKDIR /srv
-# Thu, 22 Oct 2020 02:41:41 GMT
+# Fri, 11 Dec 2020 02:43:50 GMT
 CMD ["caddy" "run" "--config" "/etc/caddy/Caddyfile" "--adapter" "caddyfile"]
 ```
 
 -	Layers:
-	-	`sha256:a4c84ece3d2b98927d25f13a4f367bfd96cbfae272f6ff1117d74c84b92d11d3`  
-		Last Modified: Thu, 22 Oct 2020 01:59:37 GMT  
-		Size: 2.6 MB (2565829 bytes)  
+	-	`sha256:7c2470fe3d16cb70fca0826168095a96838b1322a8cd1502b28284ee8561b491`  
+		Last Modified: Fri, 11 Dec 2020 02:10:27 GMT  
+		Size: 2.6 MB (2565988 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f1f988ff23f3cbb35bfed69e33f3b7ee69403bfae4f46363a08eea4830053e9c`  
-		Last Modified: Thu, 22 Oct 2020 02:42:01 GMT  
-		Size: 300.5 KB (300481 bytes)  
+	-	`sha256:a5c7871a798b8122182b3e65559fefc21812c1f2c881d60555d71c1353136d54`  
+		Last Modified: Fri, 11 Dec 2020 02:44:24 GMT  
+		Size: 300.5 KB (300467 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ebd6a4e0db99510879c5dfceabd1e629a0692c4544bb0da34971f8722b881e92`  
-		Last Modified: Thu, 22 Oct 2020 02:42:09 GMT  
-		Size: 5.8 KB (5834 bytes)  
+	-	`sha256:0752f95e37b35ec8cf81bd3caab7ba2ea836620747fa2d720c5b64709254ddae`  
+		Last Modified: Fri, 11 Dec 2020 02:44:32 GMT  
+		Size: 5.8 KB (5827 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:06e13b938aa802e74610585cabba77d625db4baf219f577a81195c272408c7d3`  
-		Last Modified: Thu, 22 Oct 2020 02:42:16 GMT  
-		Size: 11.2 MB (11202559 bytes)  
+	-	`sha256:82f574024c894c439da18a68fa9e20ef03be94dd77a2b1934242463f93d518b0`  
+		Last Modified: Fri, 11 Dec 2020 02:44:34 GMT  
+		Size: 11.2 MB (11202556 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a221fff082950a8a98db12eb99f532a39008f0d6e21684bc1aed06fa1ed2a764`  
-		Last Modified: Thu, 22 Oct 2020 02:42:10 GMT  
+	-	`sha256:26947b55683beda16dec6f01fc3ef037d91c61349dae0527952bafce3c03d5c0`  
+		Last Modified: Fri, 11 Dec 2020 02:44:32 GMT  
 		Size: 154.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
