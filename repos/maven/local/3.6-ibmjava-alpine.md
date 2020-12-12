@@ -2,16 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:447d55d81829b3fe737f4c5e5db24f31b11ec097a9e1798c2d3c3575085aab06`
-- Created: `2020-10-22T08:42:04.347614922Z`
-- Virtual Size: ~ 274.10 Mb  
+- Image ID: `sha256:e70e90f83c93c914d0389eeee55939a191fb4788bc82a8e21dd1d5b6d6315c19`
+- Created: `2020-12-11T21:34:49.351669102Z`
+- Virtual Size: ~ 274.38 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/mvn-entrypoint.sh"]`
 - Command: `["mvn"]`
 - Environment:
   - `PATH=/opt/ibm/java/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `JAVA_VERSION=1.8.0_sr6fp16`
+  - `JAVA_VERSION=1.8.0_sr6fp20`
   - `JAVA_HOME=/opt/ibm/java/jre`
   - `IBM_JAVA_OPTIONS=-XX:+UseContainerSupport`
   - `MAVEN_HOME=/usr/share/maven`
@@ -141,16 +141,16 @@ MPL-2.0 GPL-2.0-or-later
 ### `apk` package: `curl`
 
 ```console
-curl-7.69.1-r1 description:
+curl-7.69.1-r3 description:
 URL retrival utility and library
 
-curl-7.69.1-r1 webpage:
+curl-7.69.1-r3 webpage:
 https://curl.haxx.se/
 
-curl-7.69.1-r1 installed size:
+curl-7.69.1-r3 installed size:
 229376
 
-curl-7.69.1-r1 license:
+curl-7.69.1-r3 license:
 MIT
 
 ```
@@ -226,16 +226,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.69.1-r1 description:
+libcurl-7.69.1-r3 description:
 The multiprotocol file transfer library
 
-libcurl-7.69.1-r1 webpage:
+libcurl-7.69.1-r3 webpage:
 https://curl.haxx.se/
 
-libcurl-7.69.1-r1 installed size:
+libcurl-7.69.1-r3 installed size:
 458752
 
-libcurl-7.69.1-r1 license:
+libcurl-7.69.1-r3 license:
 MIT
 
 ```
@@ -311,16 +311,16 @@ ISC
 ### `apk` package: `musl`
 
 ```console
-musl-1.1.24-r9 description:
+musl-1.1.24-r10 description:
 the musl c library (libc) implementation
 
-musl-1.1.24-r9 webpage:
+musl-1.1.24-r10 webpage:
 https://musl.libc.org/
 
-musl-1.1.24-r9 installed size:
+musl-1.1.24-r10 installed size:
 614400
 
-musl-1.1.24-r9 license:
+musl-1.1.24-r10 license:
 MIT
 
 ```
@@ -328,16 +328,16 @@ MIT
 ### `apk` package: `musl-utils`
 
 ```console
-musl-utils-1.1.24-r9 description:
+musl-utils-1.1.24-r10 description:
 the musl c library (libc) implementation
 
-musl-utils-1.1.24-r9 webpage:
+musl-utils-1.1.24-r10 webpage:
 https://musl.libc.org/
 
-musl-utils-1.1.24-r9 installed size:
+musl-utils-1.1.24-r10 installed size:
 151552
 
-musl-utils-1.1.24-r9 license:
+musl-utils-1.1.24-r10 license:
 MIT BSD GPL2+
 
 ```
