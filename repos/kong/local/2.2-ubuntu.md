@@ -89,13 +89,9 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=1.2.32ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.2.32ubuntu0.1.dsc' apt_1.2.32ubuntu0.1.dsc 2218 SHA512:0d0925594dc5c4d188928cac86d5a0c4176f3877b26af1bc119b6dde1bf64b5d94375b39c26276e8b21fe5dd11106f9d26be05d570a831b4e7e1dd1de88db67a
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.2.32ubuntu0.1.tar.xz' apt_1.2.32ubuntu0.1.tar.xz 2095712 SHA512:8f28f0c96148186621ed8cc65e3913322154fc467e2fb414ef67bac492a953480a539de358b3ef8432e1b0b10baa03d9e2c7b495705f82608f009f9061c67c07
-```
 
 ### `dpkg` source package: `attr=1:2.4.47-2`
 
@@ -305,14 +301,9 @@ Licenses: (parsed from: `/usr/share/doc/libcurl3-gnutls/copyright`)
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.47.0-1ubuntu2.16
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.47.0-1ubuntu2.16.dsc' curl_7.47.0-1ubuntu2.16.dsc 2733 SHA512:3421dcd95e341597dbd531b0c6056e299f7e61ed3e15d06a59f231988fc7508d337230658f50d3b1b90bb8d1346cd2ee4a58ef1c34cb553b0dd79579c939b4dc
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.47.0.orig.tar.gz' curl_7.47.0.orig.tar.gz 4563163 SHA512:567d6a17bad1439147a419eff7e3b4a8f81104e903d856a33a1ccfaf77723cc70004fa697505443a5edcee1b644eba2c79484b41c00e35320bec6ef928db43d9
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.47.0-1ubuntu2.16.debian.tar.xz' curl_7.47.0-1ubuntu2.16.debian.tar.xz 57440 SHA512:2a15355264bd5a4ab8fcabdbe3da4d94694b7606fc172fb12b1c4ed2692dc6174bd4cddf3b1adaa3ee40d250f1af6d84fe67b51e9876bf5a484ee108e6674c43
-```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.26.dfsg1-14ubuntu0.2`
 
@@ -1404,14 +1395,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssl=1.0.2g-1ubuntu4.17
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.0.2g-1ubuntu4.17.dsc' openssl_1.0.2g-1ubuntu4.17.dsc 2453 SHA512:05d469083cecdd1f237fe539778b8f6fe69b073e6e147a26a225d86d91de76602db37ae93cbfffcadfb97ad139895c81a9ff1ed158eec7cb1c90829f950d4e2a
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.0.2g.orig.tar.gz' openssl_1.0.2g.orig.tar.gz 5266102 SHA512:4d96b6c8a232203483d6e8bee81da01ba10977bfbac92f25304a36dec9ea584b7ef917bc45e097cc7dbe681d71a4570d649c22244c178393ae91fab48323f735
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.0.2g-1ubuntu4.17.debian.tar.xz' openssl_1.0.2g-1ubuntu4.17.debian.tar.xz 137312 SHA512:ddd764c12d0057253d233c2b3e6af93cf7440a4815875ed2550ecef297401353d0c8a6d652ae23a159060ddeebfee5e1a5831d59359d8cd7bad2c06b9dae99fe
-```
 
 ### `dpkg` source package: `p11-kit=0.23.2-5~ubuntu16.04.1`
 
