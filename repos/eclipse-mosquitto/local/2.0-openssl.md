@@ -1,18 +1,18 @@
-# `eclipse-mosquitto:2.0.0-openssl`
+# `eclipse-mosquitto:2.0.1-openssl`
 
 ## Docker Metadata
 
-- Image ID: `sha256:fad68d0e0fffb59fc65550b4c03570e240b1844f634f51abe94043764296276e`
-- Created: `2020-12-03T22:24:12.304542357Z`
-- Virtual Size: ~ 7.65 Mb  
+- Image ID: `sha256:61ae8f4ca8a70e9d312651a2a61f7872942b8116fa7e2093f0729476617def9d`
+- Created: `2020-12-11T03:08:56.928506411Z`
+- Virtual Size: ~ 7.05 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
 - Command: `["/usr/sbin/mosquitto","-c","/mosquitto/config/mosquitto.conf"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `VERSION=2.0.0`
-  - `DOWNLOAD_SHA256=ca8c21d1b04037df27639de9ea8f82fa73e1cbd24e83e6394ed67b537c4b6d86`
+  - `VERSION=2.0.1`
+  - `DOWNLOAD_SHA256=84fa7646b35176259e990f25608e9f8223a5ef42543cd5c192baaa5e648359b5`
   - `GPG_KEYS=A0D6EEA1DCAE49A635A3B2F0779B22DFB3E717B7`
   - `LWS_VERSION=2.4.2`
   - `LWS_SHA256=73012d7fcf428dedccc816e83a63a01462e27819d5537b8e0d0c7264bfacfad6`
@@ -214,16 +214,16 @@ MIT
 ### `apk` package: `musl-utils`
 
 ```console
-musl-utils-1.1.24-r9 description:
+musl-utils-1.1.24-r10 description:
 the musl c library (libc) implementation
 
-musl-utils-1.1.24-r9 webpage:
+musl-utils-1.1.24-r10 webpage:
 https://musl.libc.org/
 
-musl-utils-1.1.24-r9 installed size:
+musl-utils-1.1.24-r10 installed size:
 151552
 
-musl-utils-1.1.24-r9 license:
+musl-utils-1.1.24-r10 license:
 MIT BSD GPL2+
 
 ```
