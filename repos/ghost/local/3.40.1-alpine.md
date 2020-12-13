@@ -1,10 +1,10 @@
-# `ghost:3.39.3-alpine`
+# `ghost:3.40.1-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:f77d81494e49b68272bc24b953f207c8cccbe706d4b0f032887c9691a11823ca`
-- Created: `2020-12-10T02:24:11.110633005Z`
-- Virtual Size: ~ 376.70 Mb  
+- Image ID: `sha256:ef011e139135cf76b3f9d5b5fd626a806ad956246b7e8b462e441a92aca96d6d`
+- Created: `2020-12-12T18:17:00.039060379Z`
+- Virtual Size: ~ 358.77 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -14,10 +14,10 @@
   - `NODE_VERSION=12.20.0`
   - `YARN_VERSION=1.22.5`
   - `NODE_ENV=production`
-  - `GHOST_CLI_VERSION=1.15.2`
+  - `GHOST_CLI_VERSION=1.15.3`
   - `GHOST_INSTALL=/var/lib/ghost`
   - `GHOST_CONTENT=/var/lib/ghost/content`
-  - `GHOST_VERSION=3.39.3`
+  - `GHOST_VERSION=3.40.1`
 
 ## `apk` (`.apk`-based packages)
 
@@ -228,16 +228,16 @@ ISC
 ### `apk` package: `musl`
 
 ```console
-musl-1.1.24-r9 description:
+musl-1.1.24-r10 description:
 the musl c library (libc) implementation
 
-musl-1.1.24-r9 webpage:
+musl-1.1.24-r10 webpage:
 https://musl.libc.org/
 
-musl-1.1.24-r9 installed size:
+musl-1.1.24-r10 installed size:
 614400
 
-musl-1.1.24-r9 license:
+musl-1.1.24-r10 license:
 MIT
 
 ```
@@ -245,16 +245,16 @@ MIT
 ### `apk` package: `musl-utils`
 
 ```console
-musl-utils-1.1.24-r9 description:
+musl-utils-1.1.24-r10 description:
 the musl c library (libc) implementation
 
-musl-utils-1.1.24-r9 webpage:
+musl-utils-1.1.24-r10 webpage:
 https://musl.libc.org/
 
-musl-utils-1.1.24-r9 installed size:
+musl-utils-1.1.24-r10 installed size:
 151552
 
-musl-utils-1.1.24-r9 license:
+musl-utils-1.1.24-r10 license:
 MIT BSD GPL2+
 
 ```
