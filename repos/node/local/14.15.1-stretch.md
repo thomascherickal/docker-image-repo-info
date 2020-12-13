@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:4c7835fa737e1f06d2e86f9c7fcbe7e42635de6d770d13a1d67d89cad1bb3d7f`
-- Created: `2020-11-18T07:34:04.795687522Z`
-- Virtual Size: ~ 943.13 Mb  
+- Image ID: `sha256:5d3b556415e22b59ff1160ff69f0e6f902eeada327fdc682c0df66b589a5bd07`
+- Created: `2020-12-12T16:41:50.662340338Z`
+- Virtual Size: ~ 943.15 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -116,12 +116,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/apr/1.5.2-5/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/apr/1.5.2-5/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `apt=1.4.10`
+### `dpkg` source package: `apt=1.4.11`
 
 Binary Packages:
 
-- `apt=1.4.10`
-- `libapt-pkg5.0:amd64=1.4.10`
+- `apt=1.4.11`
+- `libapt-pkg5.0:amd64=1.4.11`
 
 Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-pkg5.0/copyright`)
 
@@ -131,16 +131,16 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 Source:
 
 ```console
-$ apt-get source -qq --print-uris apt=1.4.10
-'http://deb.debian.org/debian/pool/main/a/apt/apt_1.4.10.dsc' apt_1.4.10.dsc 2553 SHA256:4b05e85f29d5f9809e33b237612bffefc8afd9df30da18a6c34ac6ce58b60596
-'http://deb.debian.org/debian/pool/main/a/apt/apt_1.4.10.tar.xz' apt_1.4.10.tar.xz 2080560 SHA256:eaa314e8ebc9e62fedf316d196d1a99d894fd715e6385ed18afd41cc2cd5b127
+$ apt-get source -qq --print-uris apt=1.4.11
+'http://security.debian.org/debian-security/pool/updates/main/a/apt/apt_1.4.11.dsc' apt_1.4.11.dsc 2553 SHA256:019679d78fbfc08b4bebd7ace4ff6d8ec3e519096eab7bf2bd50ec6a0de9ea7d
+'http://security.debian.org/debian-security/pool/updates/main/a/apt/apt_1.4.11.tar.xz' apt_1.4.11.tar.xz 2083192 SHA256:4d37de2dbe19385adc56a2f2e323d2fdcbc64d0d282a13f561288505a6e17363
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/apt/1.4.10/ (for browsing the source)
-- https://sources.debian.net/src/apt/1.4.10/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apt/1.4.10/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/apt/1.4.11/ (for browsing the source)
+- https://sources.debian.net/src/apt/1.4.11/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/apt/1.4.11/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `atk1.0=2.22.0-1`
 
@@ -4460,24 +4460,31 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/openjpeg2/2.1.2-1.1+deb9u5/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/openjpeg2/2.1.2-1.1+deb9u5/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openldap=2.4.44+dfsg-5+deb9u5`
+### `dpkg` source package: `openldap=2.4.44+dfsg-5+deb9u6`
 
 Binary Packages:
 
-- `libldap-2.4-2:amd64=2.4.44+dfsg-5+deb9u5`
-- `libldap-common=2.4.44+dfsg-5+deb9u5`
+- `libldap-2.4-2:amd64=2.4.44+dfsg-5+deb9u6`
+- `libldap-common=2.4.44+dfsg-5+deb9u6`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris openldap=2.4.44+dfsg-5+deb9u6
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.44+dfsg-5+deb9u6.dsc' openldap_2.4.44+dfsg-5+deb9u6.dsc 3017 SHA256:a7a8776db8d918c9023d273293cc7de947a8b91713c278265366d87a5dbc20e7
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.44+dfsg.orig.tar.gz' openldap_2.4.44+dfsg.orig.tar.gz 4826590 SHA256:d5187c229bec163c5d97845846e1b87917755f85b04f444c08836384f4bd7ffe
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.44+dfsg-5+deb9u6.debian.tar.xz' openldap_2.4.44+dfsg-5+deb9u6.debian.tar.xz 170160 SHA256:3fa90cda891238b2a5090e1b885c0c1a5406270ef4c4c9deb614d48bb7d0b360
+```
 
-- http://snapshot.debian.org/package/openldap/2.4.44+dfsg-5+deb9u5/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/openldap/2.4.44+dfsg-5+deb9u6/ (for browsing the source)
+- https://sources.debian.net/src/openldap/2.4.44+dfsg-5+deb9u6/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openldap/2.4.44+dfsg-5+deb9u6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssh=1:7.4p1-10+deb9u7`
 
@@ -4839,12 +4846,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/pkg-config/0.29-4/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/pkg-config/0.29-4/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `postgresql-9.6=9.6.19-0+deb9u1`
+### `dpkg` source package: `postgresql-9.6=9.6.20-0+deb9u1`
 
 Binary Packages:
 
-- `libpq-dev=9.6.19-0+deb9u1`
-- `libpq5:amd64=9.6.19-0+deb9u1`
+- `libpq-dev=9.6.20-0+deb9u1`
+- `libpq5:amd64=9.6.20-0+deb9u1`
 
 Licenses: (parsed from: `/usr/share/doc/libpq-dev/copyright`, `/usr/share/doc/libpq5/copyright`)
 
@@ -4863,13 +4870,20 @@ Licenses: (parsed from: `/usr/share/doc/libpq-dev/copyright`, `/usr/share/doc/li
 - `nagaysau-ishii`
 - `rijndael`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris postgresql-9.6=9.6.20-0+deb9u1
+'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-9.6/postgresql-9.6_9.6.20-0+deb9u1.dsc' postgresql-9.6_9.6.20-0+deb9u1.dsc 3701 SHA256:587f13783bf63e7d02d7753014f2fed9107e6027c49dfa82bcb9f9b56353455a
+'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-9.6/postgresql-9.6_9.6.20.orig.tar.bz2' postgresql-9.6_9.6.20.orig.tar.bz2 18944478 SHA256:3d08cba409d45ab62d42b24431a0d55e7537bcd1db2d979f5f2eefe34d487bb6
+'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-9.6/postgresql-9.6_9.6.20-0+deb9u1.debian.tar.xz' postgresql-9.6_9.6.20-0+deb9u1.debian.tar.xz 177896 SHA256:e2284c1def58fc13f2a4fde2d105beec80c4d71dc94aee262b99d858a04b5d32
+```
 
-- http://snapshot.debian.org/package/postgresql-9.6/9.6.19-0+deb9u1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/postgresql-9.6/9.6.20-0+deb9u1/ (for browsing the source)
+- https://sources.debian.net/src/postgresql-9.6/9.6.20-0+deb9u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/postgresql-9.6/9.6.20-0+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `procps=2:3.3.12-3+deb9u1`
 
@@ -4997,14 +5011,14 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/python3-defaults/3.5.3-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/python3-defaults/3.5.3-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `python3.5=3.5.3-1+deb9u2`
+### `dpkg` source package: `python3.5=3.5.3-1+deb9u3`
 
 Binary Packages:
 
-- `libpython3.5-minimal:amd64=3.5.3-1+deb9u2`
-- `libpython3.5-stdlib:amd64=3.5.3-1+deb9u2`
-- `python3.5=3.5.3-1+deb9u2`
-- `python3.5-minimal=3.5.3-1+deb9u2`
+- `libpython3.5-minimal:amd64=3.5.3-1+deb9u3`
+- `libpython3.5-stdlib:amd64=3.5.3-1+deb9u3`
+- `python3.5=3.5.3-1+deb9u3`
+- `python3.5-minimal=3.5.3-1+deb9u3`
 
 Licenses: (parsed from: `/usr/share/doc/libpython3.5-minimal/copyright`, `/usr/share/doc/libpython3.5-stdlib/copyright`, `/usr/share/doc/python3.5/copyright`, `/usr/share/doc/python3.5-minimal/copyright`)
 
@@ -5035,13 +5049,20 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.5-minimal/copyright`, `/usr/s
 - `use in source`
 - `without`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris python3.5=3.5.3-1+deb9u3
+'http://security.debian.org/debian-security/pool/updates/main/p/python3.5/python3.5_3.5.3-1+deb9u3.dsc' python3.5_3.5.3-1+deb9u3.dsc 3370 SHA256:5239b3f3e272d68fcb834dc59a34677988037817a45acbf88e3cace53e6af41d
+'http://security.debian.org/debian-security/pool/updates/main/p/python3.5/python3.5_3.5.3.orig.tar.xz' python3.5_3.5.3.orig.tar.xz 15213396 SHA256:eefe2ad6575855423ab630f5b51a8ef6e5556f774584c06beab4926f930ddbb0
+'http://security.debian.org/debian-security/pool/updates/main/p/python3.5/python3.5_3.5.3-1+deb9u3.debian.tar.xz' python3.5_3.5.3-1+deb9u3.debian.tar.xz 250516 SHA256:112d70ba85641fa036753555c82a205403f18bfbeb6d48acee66a3f987d72552
+```
 
-- http://snapshot.debian.org/package/python3.5/3.5.3-1+deb9u2/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/python3.5/3.5.3-1+deb9u3/ (for browsing the source)
+- https://sources.debian.net/src/python3.5/3.5.3-1+deb9u3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/python3.5/3.5.3-1+deb9u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `readline=7.0-3`
 
@@ -5242,12 +5263,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/six/1.10.0-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/six/1.10.0-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `sqlite3=3.16.2-5+deb9u2`
+### `dpkg` source package: `sqlite3=3.16.2-5+deb9u3`
 
 Binary Packages:
 
-- `libsqlite3-0:amd64=3.16.2-5+deb9u2`
-- `libsqlite3-dev:amd64=3.16.2-5+deb9u2`
+- `libsqlite3-0:amd64=3.16.2-5+deb9u3`
+- `libsqlite3-dev:amd64=3.16.2-5+deb9u3`
 
 Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`, `/usr/share/doc/libsqlite3-dev/copyright`)
 
@@ -5255,13 +5276,21 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`, `/usr/share/doc
 - `GPL-2+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris sqlite3=3.16.2-5+deb9u3
+'http://security.debian.org/debian-security/pool/updates/main/s/sqlite3/sqlite3_3.16.2-5+deb9u3.dsc' sqlite3_3.16.2-5+deb9u3.dsc 2538 SHA256:5740232134049763d1fd103bfc96a003e0c75f541b0a0a64500fa782d04f1f78
+'http://security.debian.org/debian-security/pool/updates/main/s/sqlite3/sqlite3_3.16.2.orig-www.tar.xz' sqlite3_3.16.2.orig-www.tar.xz 3383968 SHA256:d5dd3de405c55c63c9f99fbfcf3defc91a54a81b5656c510cd46544aaed134fa
+'http://security.debian.org/debian-security/pool/updates/main/s/sqlite3/sqlite3_3.16.2.orig.tar.xz' sqlite3_3.16.2.orig.tar.xz 5634120 SHA256:bf7b1e8ea7577253b7f8a8287d111d542d1792cf1768edc66541ac851ff92453
+'http://security.debian.org/debian-security/pool/updates/main/s/sqlite3/sqlite3_3.16.2-5+deb9u3.debian.tar.xz' sqlite3_3.16.2-5+deb9u3.debian.tar.xz 37752 SHA256:8194b95caa0c56e90ae78a9924b23c73ae88ec5c754e075d6d3a6278779c7f79
+```
 
-- http://snapshot.debian.org/package/sqlite3/3.16.2-5+deb9u2/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/sqlite3/3.16.2-5+deb9u3/ (for browsing the source)
+- https://sources.debian.net/src/sqlite3/3.16.2-5+deb9u3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/sqlite3/3.16.2-5+deb9u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `subversion=1.9.5-1+deb9u5`
 
