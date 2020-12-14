@@ -8893,7 +8893,7 @@ CMD ["mvn"]
 ## `maven:3.6.3-openjdk-16`
 
 ```console
-$ docker pull maven@sha256:230101b256eaa074047a7e32c1382a57d7d10ba7adcdde6268c3ce25f0b0ba28
+$ docker pull maven@sha256:335ad1929e70d4b34e3ad3a65ea20fd6502c72d347c1d47e3833fa1ff8fa6b13
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -8997,14 +8997,14 @@ CMD ["mvn"]
 ### `maven:3.6.3-openjdk-16` - linux; arm64 variant v8
 
 ```console
-$ docker pull maven@sha256:e05418c744d5b7c5f2b924a2cdad8c4a14d6a4e53e68e8539e421e09a482d9fe
+$ docker pull maven@sha256:911206d766efa5850611a9e545571bf35bb5ed668ef20b1b4d7a171b4522ba5c
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **357.3 MB (357277393 bytes)**  
+-	Total Size: **357.4 MB (357374898 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:69a584ecfc1a56f84b2480afab3cdffd5bc6ef3ae939a0ac9a6c70ddd8ef22a3`
+-	Image ID: `sha256:dec75fa7e1414cb56a601ec1e97658f061b55461ee072cd1c9a520df883cd8e8`
 -	Entrypoint: `["\/usr\/local\/bin\/mvn-entrypoint.sh"]`
 -	Default Command: `["mvn"]`
 
@@ -9023,37 +9023,37 @@ ENV LANG=C.UTF-8
 ENV JAVA_HOME=/usr/java/openjdk-16
 # Mon, 16 Nov 2020 20:04:06 GMT
 ENV PATH=/usr/java/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 03 Dec 2020 23:15:58 GMT
-ENV JAVA_VERSION=16-ea+27
-# Thu, 03 Dec 2020 23:17:01 GMT
-RUN set -eux; 		objdump="$(command -v objdump)"; 	arch="$(objdump --file-headers "$objdump" | awk -F '[:,]+[[:space:]]+' '$1 == "architecture" { print $2 }')"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/27/GPL/openjdk-16-ea+27_linux-aarch64_bin.tar.gz; 			downloadSha256=7c667e8a1806b76ab4970334f7b4d88ea96860876cdd1566f9b1936dc03c5d85; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/27/GPL/openjdk-16-ea+27_linux-x64_bin.tar.gz; 			downloadSha256=dcaff2a2377fbf6fc3fc87e6d4ad1e73827f535c2bf7591c63a416e766f303d6; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		curl -fL -o openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		ln -sfT "$JAVA_HOME" /usr/java/default; 	ln -sfT "$JAVA_HOME" /usr/java/latest; 	for bin in "$JAVA_HOME/bin/"*; do 		base="$(basename "$bin")"; 		[ ! -e "/usr/bin/$base" ]; 		alternatives --install "/usr/bin/$base" "$base" "$bin" 20000; 	done; 		java -Xshare:dump; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/pki/ca-trust/extracted/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
-# Thu, 03 Dec 2020 23:17:03 GMT
+# Mon, 14 Dec 2020 21:45:21 GMT
+ENV JAVA_VERSION=16-ea+28
+# Mon, 14 Dec 2020 21:46:20 GMT
+RUN set -eux; 		objdump="$(command -v objdump)"; 	arch="$(objdump --file-headers "$objdump" | awk -F '[:,]+[[:space:]]+' '$1 == "architecture" { print $2 }')"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/28/GPL/openjdk-16-ea+28_linux-aarch64_bin.tar.gz; 			downloadSha256=ec5240a695751612960e7459476c6081e69a03aebe4ff3c7ae964b9235dfe9a4; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/28/GPL/openjdk-16-ea+28_linux-x64_bin.tar.gz; 			downloadSha256=2c2f2136a72e53deedef4e4e35d3d34315093a16732b9d112297e11e0661ea05; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		curl -fL -o openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		ln -sfT "$JAVA_HOME" /usr/java/default; 	ln -sfT "$JAVA_HOME" /usr/java/latest; 	for bin in "$JAVA_HOME/bin/"*; do 		base="$(basename "$bin")"; 		[ ! -e "/usr/bin/$base" ]; 		alternatives --install "/usr/bin/$base" "$base" "$bin" 20000; 	done; 		java -Xshare:dump; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/pki/ca-trust/extracted/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Mon, 14 Dec 2020 21:46:22 GMT
 CMD ["jshell"]
-# Fri, 04 Dec 2020 00:43:07 GMT
+# Mon, 14 Dec 2020 22:20:53 GMT
 ARG MAVEN_VERSION=3.6.3
-# Fri, 04 Dec 2020 00:43:08 GMT
+# Mon, 14 Dec 2020 22:20:54 GMT
 ARG USER_HOME_DIR=/root
-# Fri, 04 Dec 2020 00:43:10 GMT
+# Mon, 14 Dec 2020 22:20:55 GMT
 ARG SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0
-# Fri, 04 Dec 2020 00:43:11 GMT
+# Mon, 14 Dec 2020 22:20:56 GMT
 ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries
-# Fri, 04 Dec 2020 00:44:39 GMT
+# Mon, 14 Dec 2020 22:22:28 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries MAVEN_VERSION=3.6.3 SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0 USER_HOME_DIR=/root
 RUN microdnf install findutils git
-# Fri, 04 Dec 2020 00:44:58 GMT
+# Mon, 14 Dec 2020 22:22:35 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries MAVEN_VERSION=3.6.3 SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0 USER_HOME_DIR=/root
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref   && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz   && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha512sum -c -   && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1   && rm -f /tmp/apache-maven.tar.gz   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
-# Fri, 04 Dec 2020 00:45:00 GMT
+# Mon, 14 Dec 2020 22:22:36 GMT
 ENV MAVEN_HOME=/usr/share/maven
-# Fri, 04 Dec 2020 00:45:02 GMT
+# Mon, 14 Dec 2020 22:22:36 GMT
 ENV MAVEN_CONFIG=/root/.m2
-# Fri, 04 Dec 2020 00:45:03 GMT
+# Mon, 14 Dec 2020 22:22:37 GMT
 COPY file:1b3da5c58894f705e7387946301c0c52edb6271761ea3cd80b86a848847a64cd in /usr/local/bin/mvn-entrypoint.sh 
-# Fri, 04 Dec 2020 00:45:04 GMT
+# Mon, 14 Dec 2020 22:22:37 GMT
 COPY file:2bbb488dd73c55d658b91943cfdf9c26975a320ceafc45dda94c95b03e518ad3 in /usr/share/maven/ref/ 
-# Fri, 04 Dec 2020 00:45:05 GMT
+# Mon, 14 Dec 2020 22:22:38 GMT
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
-# Fri, 04 Dec 2020 00:45:07 GMT
+# Mon, 14 Dec 2020 22:22:39 GMT
 CMD ["mvn"]
 ```
 
@@ -9066,31 +9066,31 @@ CMD ["mvn"]
 		Last Modified: Mon, 16 Nov 2020 20:08:26 GMT  
 		Size: 14.1 MB (14060251 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7594791970de9d32fa94b1423d6ba6bed70a13e8b608769d533b68059e58a500`  
-		Last Modified: Thu, 03 Dec 2020 23:21:07 GMT  
-		Size: 179.1 MB (179103477 bytes)  
+	-	`sha256:3a646e33798def91183b743583b469701e36f78d759d3f926592a0a290f3a6a1`  
+		Last Modified: Mon, 14 Dec 2020 21:51:50 GMT  
+		Size: 179.2 MB (179196563 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cfb4e0ff39a8f92effc8886cd08f94ce1487add11adb55f88de805b3d39dee09`  
-		Last Modified: Fri, 04 Dec 2020 00:48:05 GMT  
-		Size: 112.5 MB (112548657 bytes)  
+	-	`sha256:70547f70f0334633e817fa1a9357861e4b29ebb747329500533943f31ecddf0b`  
+		Last Modified: Mon, 14 Dec 2020 22:25:40 GMT  
+		Size: 112.6 MB (112553081 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:595fd20ff9f877d08d7c6c49a8d6442c2107ff1efa7e66f2bdcf4771a92f5de1`  
-		Last Modified: Fri, 04 Dec 2020 00:47:46 GMT  
-		Size: 9.6 MB (9581208 bytes)  
+	-	`sha256:79bb7d584cedb05eda62c8b26f62491c694cbabf250982fe24f7d2a1bf180ed5`  
+		Last Modified: Mon, 14 Dec 2020 22:25:21 GMT  
+		Size: 9.6 MB (9581206 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:691bc772193944eecfd6556eb3e13f1b96f907dda1a7e3d3d91b13c56cdc0c99`  
-		Last Modified: Fri, 04 Dec 2020 00:47:44 GMT  
-		Size: 858.0 B  
+	-	`sha256:473932a8f070763e3cb226f37c7d5a49e6667b31064d712f256e7d6a8e4ecce4`  
+		Last Modified: Mon, 14 Dec 2020 22:25:20 GMT  
+		Size: 859.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cd0fb851ec99caa6bd92e082c8604316b2a2959cc9a8988cf9225f575e8c9332`  
-		Last Modified: Fri, 04 Dec 2020 00:47:44 GMT  
-		Size: 364.0 B  
+	-	`sha256:e79a4f0d12beabf8a4321670df66ebdc1ceae572c1f3d52e736ad29db8bafaf8`  
+		Last Modified: Mon, 14 Dec 2020 22:25:19 GMT  
+		Size: 360.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `maven:3.6.3-openjdk-16-slim`
 
 ```console
-$ docker pull maven@sha256:0c81ec73b33a83e1b488c4771841833702b84cc5c5647813c5bf8287ba7b548c
+$ docker pull maven@sha256:0be83d45efbb70949627aa71cb1281daa40965a3e729428058c02b3307b90e70
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -9198,14 +9198,14 @@ CMD ["mvn"]
 ### `maven:3.6.3-openjdk-16-slim` - linux; arm64 variant v8
 
 ```console
-$ docker pull maven@sha256:59d8b4197dc71eaa0648fbc089f994bd5b7475dd33c650e2358dbaa37b316403
+$ docker pull maven@sha256:5998209114e1ae7ae59e141b68f588c140dad54294be2ea9ccad598a8cf9b062
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **220.7 MB (220655324 bytes)**  
+-	Total Size: **220.7 MB (220746302 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a7c67bffb85553247bac0d3a9d68fad05f9983b168807faadf58c5b4b5fb9ec9`
+-	Image ID: `sha256:c195b8c46f70303763f68ce7a5f05f481024c4e18cf005c03613f192e4e60219`
 -	Entrypoint: `["\/usr\/local\/bin\/mvn-entrypoint.sh"]`
 -	Default Command: `["mvn"]`
 
@@ -9224,37 +9224,37 @@ ENV JAVA_HOME=/usr/local/openjdk-16
 ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Fri, 11 Dec 2020 17:08:48 GMT
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
-# Fri, 11 Dec 2020 17:08:49 GMT
-ENV JAVA_VERSION=16-ea+27
-# Fri, 11 Dec 2020 17:09:49 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/27/GPL/openjdk-16-ea+27_linux-aarch64_bin.tar.gz; 			downloadSha256=7c667e8a1806b76ab4970334f7b4d88ea96860876cdd1566f9b1936dc03c5d85; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/27/GPL/openjdk-16-ea+27_linux-x64_bin.tar.gz; 			downloadSha256=dcaff2a2377fbf6fc3fc87e6d4ad1e73827f535c2bf7591c63a416e766f303d6; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
-# Fri, 11 Dec 2020 17:09:52 GMT
+# Mon, 14 Dec 2020 21:48:10 GMT
+ENV JAVA_VERSION=16-ea+28
+# Mon, 14 Dec 2020 21:48:33 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/28/GPL/openjdk-16-ea+28_linux-aarch64_bin.tar.gz; 			downloadSha256=ec5240a695751612960e7459476c6081e69a03aebe4ff3c7ae964b9235dfe9a4; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/28/GPL/openjdk-16-ea+28_linux-x64_bin.tar.gz; 			downloadSha256=2c2f2136a72e53deedef4e4e35d3d34315093a16732b9d112297e11e0661ea05; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Mon, 14 Dec 2020 21:48:35 GMT
 CMD ["jshell"]
-# Sat, 12 Dec 2020 06:35:44 GMT
+# Mon, 14 Dec 2020 22:22:57 GMT
 ARG MAVEN_VERSION=3.6.3
-# Sat, 12 Dec 2020 06:35:44 GMT
+# Mon, 14 Dec 2020 22:22:57 GMT
 ARG USER_HOME_DIR=/root
-# Sat, 12 Dec 2020 06:35:45 GMT
+# Mon, 14 Dec 2020 22:22:58 GMT
 ARG SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0
-# Sat, 12 Dec 2020 06:35:46 GMT
+# Mon, 14 Dec 2020 22:22:58 GMT
 ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries
-# Sat, 12 Dec 2020 06:35:59 GMT
+# Mon, 14 Dec 2020 22:23:12 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries MAVEN_VERSION=3.6.3 SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0 USER_HOME_DIR=/root
 RUN apt-get update &&     apt-get install -y       curl procps   && rm -rf /var/lib/apt/lists/*
-# Sat, 12 Dec 2020 06:36:03 GMT
+# Mon, 14 Dec 2020 22:23:17 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries MAVEN_VERSION=3.6.3 SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0 USER_HOME_DIR=/root
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref   && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz   && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha512sum -c -   && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1   && rm -f /tmp/apache-maven.tar.gz   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
-# Sat, 12 Dec 2020 06:36:04 GMT
+# Mon, 14 Dec 2020 22:23:17 GMT
 ENV MAVEN_HOME=/usr/share/maven
-# Sat, 12 Dec 2020 06:36:05 GMT
+# Mon, 14 Dec 2020 22:23:18 GMT
 ENV MAVEN_CONFIG=/root/.m2
-# Sat, 12 Dec 2020 06:36:05 GMT
+# Mon, 14 Dec 2020 22:23:19 GMT
 COPY file:1b3da5c58894f705e7387946301c0c52edb6271761ea3cd80b86a848847a64cd in /usr/local/bin/mvn-entrypoint.sh 
-# Sat, 12 Dec 2020 06:36:06 GMT
+# Mon, 14 Dec 2020 22:23:19 GMT
 COPY file:2bbb488dd73c55d658b91943cfdf9c26975a320ceafc45dda94c95b03e518ad3 in /usr/share/maven/ref/ 
-# Sat, 12 Dec 2020 06:36:07 GMT
+# Mon, 14 Dec 2020 22:23:21 GMT
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
-# Sat, 12 Dec 2020 06:36:08 GMT
+# Mon, 14 Dec 2020 22:23:21 GMT
 CMD ["mvn"]
 ```
 
@@ -9271,25 +9271,25 @@ CMD ["mvn"]
 		Last Modified: Fri, 11 Dec 2020 17:15:20 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:00d76c291acdb49321f30f8c730437bbeb5a81e9816b79743a8b26b306352d50`  
-		Last Modified: Fri, 11 Dec 2020 17:15:44 GMT  
-		Size: 179.5 MB (179478874 bytes)  
+	-	`sha256:3d96682bd0f04032273234a4dc7839bec88b38b3f5b9456d6a08ff84c29fba5d`  
+		Last Modified: Mon, 14 Dec 2020 21:54:00 GMT  
+		Size: 179.6 MB (179569887 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fbf689e74a0f6d463acb02c1e3d8e2727d163c177e026e42f4368f555a6cd819`  
-		Last Modified: Sat, 12 Dec 2020 06:38:40 GMT  
-		Size: 2.6 MB (2636587 bytes)  
+	-	`sha256:52e5d367b7febc01226b55167c723c48497ab7b5f2226d22c0884da043924901`  
+		Last Modified: Mon, 14 Dec 2020 22:25:51 GMT  
+		Size: 2.6 MB (2636582 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:837c96f26ca36354b682c48f5401ad9f99f5e411c673c7400a9d4a5599370ba4`  
-		Last Modified: Sat, 12 Dec 2020 06:38:41 GMT  
-		Size: 9.6 MB (9581237 bytes)  
+	-	`sha256:7852cb21dc556a62a9a86fa2eb04c7eea9e8d233ee21a207a9eb860cc85ba9d2`  
+		Last Modified: Mon, 14 Dec 2020 22:25:52 GMT  
+		Size: 9.6 MB (9581208 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f4f773b48e7f70b9d766f76bb1b33553a1e4a0ae6af65e7a85fa46c150bc92f3`  
-		Last Modified: Sat, 12 Dec 2020 06:38:40 GMT  
-		Size: 859.0 B  
+	-	`sha256:6defae664f58ae72e8352f7b80a9046acaa6e25e1aed83db66b55a5e4ddac15c`  
+		Last Modified: Mon, 14 Dec 2020 22:25:50 GMT  
+		Size: 857.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2528f5e011c481f8e05b0f8825737cb6f0c16f4b7a8320f1a3cebb6ba545e944`  
-		Last Modified: Sat, 12 Dec 2020 06:38:40 GMT  
-		Size: 362.0 B  
+	-	`sha256:dfdd117d4e3e5742210279a7c94de1bf8f4fcb70c0c7e50da90f48d0a71a0929`  
+		Last Modified: Mon, 14 Dec 2020 22:25:49 GMT  
+		Size: 363.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `maven:3.6.3-openjdk-8`
@@ -17708,7 +17708,7 @@ CMD ["mvn"]
 ## `maven:3.6-openjdk-16`
 
 ```console
-$ docker pull maven@sha256:230101b256eaa074047a7e32c1382a57d7d10ba7adcdde6268c3ce25f0b0ba28
+$ docker pull maven@sha256:335ad1929e70d4b34e3ad3a65ea20fd6502c72d347c1d47e3833fa1ff8fa6b13
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -17812,14 +17812,14 @@ CMD ["mvn"]
 ### `maven:3.6-openjdk-16` - linux; arm64 variant v8
 
 ```console
-$ docker pull maven@sha256:e05418c744d5b7c5f2b924a2cdad8c4a14d6a4e53e68e8539e421e09a482d9fe
+$ docker pull maven@sha256:911206d766efa5850611a9e545571bf35bb5ed668ef20b1b4d7a171b4522ba5c
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **357.3 MB (357277393 bytes)**  
+-	Total Size: **357.4 MB (357374898 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:69a584ecfc1a56f84b2480afab3cdffd5bc6ef3ae939a0ac9a6c70ddd8ef22a3`
+-	Image ID: `sha256:dec75fa7e1414cb56a601ec1e97658f061b55461ee072cd1c9a520df883cd8e8`
 -	Entrypoint: `["\/usr\/local\/bin\/mvn-entrypoint.sh"]`
 -	Default Command: `["mvn"]`
 
@@ -17838,37 +17838,37 @@ ENV LANG=C.UTF-8
 ENV JAVA_HOME=/usr/java/openjdk-16
 # Mon, 16 Nov 2020 20:04:06 GMT
 ENV PATH=/usr/java/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 03 Dec 2020 23:15:58 GMT
-ENV JAVA_VERSION=16-ea+27
-# Thu, 03 Dec 2020 23:17:01 GMT
-RUN set -eux; 		objdump="$(command -v objdump)"; 	arch="$(objdump --file-headers "$objdump" | awk -F '[:,]+[[:space:]]+' '$1 == "architecture" { print $2 }')"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/27/GPL/openjdk-16-ea+27_linux-aarch64_bin.tar.gz; 			downloadSha256=7c667e8a1806b76ab4970334f7b4d88ea96860876cdd1566f9b1936dc03c5d85; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/27/GPL/openjdk-16-ea+27_linux-x64_bin.tar.gz; 			downloadSha256=dcaff2a2377fbf6fc3fc87e6d4ad1e73827f535c2bf7591c63a416e766f303d6; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		curl -fL -o openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		ln -sfT "$JAVA_HOME" /usr/java/default; 	ln -sfT "$JAVA_HOME" /usr/java/latest; 	for bin in "$JAVA_HOME/bin/"*; do 		base="$(basename "$bin")"; 		[ ! -e "/usr/bin/$base" ]; 		alternatives --install "/usr/bin/$base" "$base" "$bin" 20000; 	done; 		java -Xshare:dump; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/pki/ca-trust/extracted/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
-# Thu, 03 Dec 2020 23:17:03 GMT
+# Mon, 14 Dec 2020 21:45:21 GMT
+ENV JAVA_VERSION=16-ea+28
+# Mon, 14 Dec 2020 21:46:20 GMT
+RUN set -eux; 		objdump="$(command -v objdump)"; 	arch="$(objdump --file-headers "$objdump" | awk -F '[:,]+[[:space:]]+' '$1 == "architecture" { print $2 }')"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/28/GPL/openjdk-16-ea+28_linux-aarch64_bin.tar.gz; 			downloadSha256=ec5240a695751612960e7459476c6081e69a03aebe4ff3c7ae964b9235dfe9a4; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/28/GPL/openjdk-16-ea+28_linux-x64_bin.tar.gz; 			downloadSha256=2c2f2136a72e53deedef4e4e35d3d34315093a16732b9d112297e11e0661ea05; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		curl -fL -o openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		ln -sfT "$JAVA_HOME" /usr/java/default; 	ln -sfT "$JAVA_HOME" /usr/java/latest; 	for bin in "$JAVA_HOME/bin/"*; do 		base="$(basename "$bin")"; 		[ ! -e "/usr/bin/$base" ]; 		alternatives --install "/usr/bin/$base" "$base" "$bin" 20000; 	done; 		java -Xshare:dump; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/pki/ca-trust/extracted/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Mon, 14 Dec 2020 21:46:22 GMT
 CMD ["jshell"]
-# Fri, 04 Dec 2020 00:43:07 GMT
+# Mon, 14 Dec 2020 22:20:53 GMT
 ARG MAVEN_VERSION=3.6.3
-# Fri, 04 Dec 2020 00:43:08 GMT
+# Mon, 14 Dec 2020 22:20:54 GMT
 ARG USER_HOME_DIR=/root
-# Fri, 04 Dec 2020 00:43:10 GMT
+# Mon, 14 Dec 2020 22:20:55 GMT
 ARG SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0
-# Fri, 04 Dec 2020 00:43:11 GMT
+# Mon, 14 Dec 2020 22:20:56 GMT
 ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries
-# Fri, 04 Dec 2020 00:44:39 GMT
+# Mon, 14 Dec 2020 22:22:28 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries MAVEN_VERSION=3.6.3 SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0 USER_HOME_DIR=/root
 RUN microdnf install findutils git
-# Fri, 04 Dec 2020 00:44:58 GMT
+# Mon, 14 Dec 2020 22:22:35 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries MAVEN_VERSION=3.6.3 SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0 USER_HOME_DIR=/root
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref   && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz   && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha512sum -c -   && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1   && rm -f /tmp/apache-maven.tar.gz   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
-# Fri, 04 Dec 2020 00:45:00 GMT
+# Mon, 14 Dec 2020 22:22:36 GMT
 ENV MAVEN_HOME=/usr/share/maven
-# Fri, 04 Dec 2020 00:45:02 GMT
+# Mon, 14 Dec 2020 22:22:36 GMT
 ENV MAVEN_CONFIG=/root/.m2
-# Fri, 04 Dec 2020 00:45:03 GMT
+# Mon, 14 Dec 2020 22:22:37 GMT
 COPY file:1b3da5c58894f705e7387946301c0c52edb6271761ea3cd80b86a848847a64cd in /usr/local/bin/mvn-entrypoint.sh 
-# Fri, 04 Dec 2020 00:45:04 GMT
+# Mon, 14 Dec 2020 22:22:37 GMT
 COPY file:2bbb488dd73c55d658b91943cfdf9c26975a320ceafc45dda94c95b03e518ad3 in /usr/share/maven/ref/ 
-# Fri, 04 Dec 2020 00:45:05 GMT
+# Mon, 14 Dec 2020 22:22:38 GMT
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
-# Fri, 04 Dec 2020 00:45:07 GMT
+# Mon, 14 Dec 2020 22:22:39 GMT
 CMD ["mvn"]
 ```
 
@@ -17881,31 +17881,31 @@ CMD ["mvn"]
 		Last Modified: Mon, 16 Nov 2020 20:08:26 GMT  
 		Size: 14.1 MB (14060251 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7594791970de9d32fa94b1423d6ba6bed70a13e8b608769d533b68059e58a500`  
-		Last Modified: Thu, 03 Dec 2020 23:21:07 GMT  
-		Size: 179.1 MB (179103477 bytes)  
+	-	`sha256:3a646e33798def91183b743583b469701e36f78d759d3f926592a0a290f3a6a1`  
+		Last Modified: Mon, 14 Dec 2020 21:51:50 GMT  
+		Size: 179.2 MB (179196563 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cfb4e0ff39a8f92effc8886cd08f94ce1487add11adb55f88de805b3d39dee09`  
-		Last Modified: Fri, 04 Dec 2020 00:48:05 GMT  
-		Size: 112.5 MB (112548657 bytes)  
+	-	`sha256:70547f70f0334633e817fa1a9357861e4b29ebb747329500533943f31ecddf0b`  
+		Last Modified: Mon, 14 Dec 2020 22:25:40 GMT  
+		Size: 112.6 MB (112553081 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:595fd20ff9f877d08d7c6c49a8d6442c2107ff1efa7e66f2bdcf4771a92f5de1`  
-		Last Modified: Fri, 04 Dec 2020 00:47:46 GMT  
-		Size: 9.6 MB (9581208 bytes)  
+	-	`sha256:79bb7d584cedb05eda62c8b26f62491c694cbabf250982fe24f7d2a1bf180ed5`  
+		Last Modified: Mon, 14 Dec 2020 22:25:21 GMT  
+		Size: 9.6 MB (9581206 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:691bc772193944eecfd6556eb3e13f1b96f907dda1a7e3d3d91b13c56cdc0c99`  
-		Last Modified: Fri, 04 Dec 2020 00:47:44 GMT  
-		Size: 858.0 B  
+	-	`sha256:473932a8f070763e3cb226f37c7d5a49e6667b31064d712f256e7d6a8e4ecce4`  
+		Last Modified: Mon, 14 Dec 2020 22:25:20 GMT  
+		Size: 859.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cd0fb851ec99caa6bd92e082c8604316b2a2959cc9a8988cf9225f575e8c9332`  
-		Last Modified: Fri, 04 Dec 2020 00:47:44 GMT  
-		Size: 364.0 B  
+	-	`sha256:e79a4f0d12beabf8a4321670df66ebdc1ceae572c1f3d52e736ad29db8bafaf8`  
+		Last Modified: Mon, 14 Dec 2020 22:25:19 GMT  
+		Size: 360.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `maven:3.6-openjdk-16-slim`
 
 ```console
-$ docker pull maven@sha256:0c81ec73b33a83e1b488c4771841833702b84cc5c5647813c5bf8287ba7b548c
+$ docker pull maven@sha256:0be83d45efbb70949627aa71cb1281daa40965a3e729428058c02b3307b90e70
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -18013,14 +18013,14 @@ CMD ["mvn"]
 ### `maven:3.6-openjdk-16-slim` - linux; arm64 variant v8
 
 ```console
-$ docker pull maven@sha256:59d8b4197dc71eaa0648fbc089f994bd5b7475dd33c650e2358dbaa37b316403
+$ docker pull maven@sha256:5998209114e1ae7ae59e141b68f588c140dad54294be2ea9ccad598a8cf9b062
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **220.7 MB (220655324 bytes)**  
+-	Total Size: **220.7 MB (220746302 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a7c67bffb85553247bac0d3a9d68fad05f9983b168807faadf58c5b4b5fb9ec9`
+-	Image ID: `sha256:c195b8c46f70303763f68ce7a5f05f481024c4e18cf005c03613f192e4e60219`
 -	Entrypoint: `["\/usr\/local\/bin\/mvn-entrypoint.sh"]`
 -	Default Command: `["mvn"]`
 
@@ -18039,37 +18039,37 @@ ENV JAVA_HOME=/usr/local/openjdk-16
 ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Fri, 11 Dec 2020 17:08:48 GMT
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
-# Fri, 11 Dec 2020 17:08:49 GMT
-ENV JAVA_VERSION=16-ea+27
-# Fri, 11 Dec 2020 17:09:49 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/27/GPL/openjdk-16-ea+27_linux-aarch64_bin.tar.gz; 			downloadSha256=7c667e8a1806b76ab4970334f7b4d88ea96860876cdd1566f9b1936dc03c5d85; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/27/GPL/openjdk-16-ea+27_linux-x64_bin.tar.gz; 			downloadSha256=dcaff2a2377fbf6fc3fc87e6d4ad1e73827f535c2bf7591c63a416e766f303d6; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
-# Fri, 11 Dec 2020 17:09:52 GMT
+# Mon, 14 Dec 2020 21:48:10 GMT
+ENV JAVA_VERSION=16-ea+28
+# Mon, 14 Dec 2020 21:48:33 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/28/GPL/openjdk-16-ea+28_linux-aarch64_bin.tar.gz; 			downloadSha256=ec5240a695751612960e7459476c6081e69a03aebe4ff3c7ae964b9235dfe9a4; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/28/GPL/openjdk-16-ea+28_linux-x64_bin.tar.gz; 			downloadSha256=2c2f2136a72e53deedef4e4e35d3d34315093a16732b9d112297e11e0661ea05; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Mon, 14 Dec 2020 21:48:35 GMT
 CMD ["jshell"]
-# Sat, 12 Dec 2020 06:35:44 GMT
+# Mon, 14 Dec 2020 22:22:57 GMT
 ARG MAVEN_VERSION=3.6.3
-# Sat, 12 Dec 2020 06:35:44 GMT
+# Mon, 14 Dec 2020 22:22:57 GMT
 ARG USER_HOME_DIR=/root
-# Sat, 12 Dec 2020 06:35:45 GMT
+# Mon, 14 Dec 2020 22:22:58 GMT
 ARG SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0
-# Sat, 12 Dec 2020 06:35:46 GMT
+# Mon, 14 Dec 2020 22:22:58 GMT
 ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries
-# Sat, 12 Dec 2020 06:35:59 GMT
+# Mon, 14 Dec 2020 22:23:12 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries MAVEN_VERSION=3.6.3 SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0 USER_HOME_DIR=/root
 RUN apt-get update &&     apt-get install -y       curl procps   && rm -rf /var/lib/apt/lists/*
-# Sat, 12 Dec 2020 06:36:03 GMT
+# Mon, 14 Dec 2020 22:23:17 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries MAVEN_VERSION=3.6.3 SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0 USER_HOME_DIR=/root
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref   && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz   && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha512sum -c -   && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1   && rm -f /tmp/apache-maven.tar.gz   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
-# Sat, 12 Dec 2020 06:36:04 GMT
+# Mon, 14 Dec 2020 22:23:17 GMT
 ENV MAVEN_HOME=/usr/share/maven
-# Sat, 12 Dec 2020 06:36:05 GMT
+# Mon, 14 Dec 2020 22:23:18 GMT
 ENV MAVEN_CONFIG=/root/.m2
-# Sat, 12 Dec 2020 06:36:05 GMT
+# Mon, 14 Dec 2020 22:23:19 GMT
 COPY file:1b3da5c58894f705e7387946301c0c52edb6271761ea3cd80b86a848847a64cd in /usr/local/bin/mvn-entrypoint.sh 
-# Sat, 12 Dec 2020 06:36:06 GMT
+# Mon, 14 Dec 2020 22:23:19 GMT
 COPY file:2bbb488dd73c55d658b91943cfdf9c26975a320ceafc45dda94c95b03e518ad3 in /usr/share/maven/ref/ 
-# Sat, 12 Dec 2020 06:36:07 GMT
+# Mon, 14 Dec 2020 22:23:21 GMT
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
-# Sat, 12 Dec 2020 06:36:08 GMT
+# Mon, 14 Dec 2020 22:23:21 GMT
 CMD ["mvn"]
 ```
 
@@ -18086,25 +18086,25 @@ CMD ["mvn"]
 		Last Modified: Fri, 11 Dec 2020 17:15:20 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:00d76c291acdb49321f30f8c730437bbeb5a81e9816b79743a8b26b306352d50`  
-		Last Modified: Fri, 11 Dec 2020 17:15:44 GMT  
-		Size: 179.5 MB (179478874 bytes)  
+	-	`sha256:3d96682bd0f04032273234a4dc7839bec88b38b3f5b9456d6a08ff84c29fba5d`  
+		Last Modified: Mon, 14 Dec 2020 21:54:00 GMT  
+		Size: 179.6 MB (179569887 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fbf689e74a0f6d463acb02c1e3d8e2727d163c177e026e42f4368f555a6cd819`  
-		Last Modified: Sat, 12 Dec 2020 06:38:40 GMT  
-		Size: 2.6 MB (2636587 bytes)  
+	-	`sha256:52e5d367b7febc01226b55167c723c48497ab7b5f2226d22c0884da043924901`  
+		Last Modified: Mon, 14 Dec 2020 22:25:51 GMT  
+		Size: 2.6 MB (2636582 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:837c96f26ca36354b682c48f5401ad9f99f5e411c673c7400a9d4a5599370ba4`  
-		Last Modified: Sat, 12 Dec 2020 06:38:41 GMT  
-		Size: 9.6 MB (9581237 bytes)  
+	-	`sha256:7852cb21dc556a62a9a86fa2eb04c7eea9e8d233ee21a207a9eb860cc85ba9d2`  
+		Last Modified: Mon, 14 Dec 2020 22:25:52 GMT  
+		Size: 9.6 MB (9581208 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f4f773b48e7f70b9d766f76bb1b33553a1e4a0ae6af65e7a85fa46c150bc92f3`  
-		Last Modified: Sat, 12 Dec 2020 06:38:40 GMT  
-		Size: 859.0 B  
+	-	`sha256:6defae664f58ae72e8352f7b80a9046acaa6e25e1aed83db66b55a5e4ddac15c`  
+		Last Modified: Mon, 14 Dec 2020 22:25:50 GMT  
+		Size: 857.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2528f5e011c481f8e05b0f8825737cb6f0c16f4b7a8320f1a3cebb6ba545e944`  
-		Last Modified: Sat, 12 Dec 2020 06:38:40 GMT  
-		Size: 362.0 B  
+	-	`sha256:dfdd117d4e3e5742210279a7c94de1bf8f4fcb70c0c7e50da90f48d0a71a0929`  
+		Last Modified: Mon, 14 Dec 2020 22:25:49 GMT  
+		Size: 363.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `maven:3.6-openjdk-8`
@@ -26421,7 +26421,7 @@ CMD ["mvn"]
 ## `maven:3-openjdk-16`
 
 ```console
-$ docker pull maven@sha256:230101b256eaa074047a7e32c1382a57d7d10ba7adcdde6268c3ce25f0b0ba28
+$ docker pull maven@sha256:335ad1929e70d4b34e3ad3a65ea20fd6502c72d347c1d47e3833fa1ff8fa6b13
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -26525,14 +26525,14 @@ CMD ["mvn"]
 ### `maven:3-openjdk-16` - linux; arm64 variant v8
 
 ```console
-$ docker pull maven@sha256:e05418c744d5b7c5f2b924a2cdad8c4a14d6a4e53e68e8539e421e09a482d9fe
+$ docker pull maven@sha256:911206d766efa5850611a9e545571bf35bb5ed668ef20b1b4d7a171b4522ba5c
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **357.3 MB (357277393 bytes)**  
+-	Total Size: **357.4 MB (357374898 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:69a584ecfc1a56f84b2480afab3cdffd5bc6ef3ae939a0ac9a6c70ddd8ef22a3`
+-	Image ID: `sha256:dec75fa7e1414cb56a601ec1e97658f061b55461ee072cd1c9a520df883cd8e8`
 -	Entrypoint: `["\/usr\/local\/bin\/mvn-entrypoint.sh"]`
 -	Default Command: `["mvn"]`
 
@@ -26551,37 +26551,37 @@ ENV LANG=C.UTF-8
 ENV JAVA_HOME=/usr/java/openjdk-16
 # Mon, 16 Nov 2020 20:04:06 GMT
 ENV PATH=/usr/java/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 03 Dec 2020 23:15:58 GMT
-ENV JAVA_VERSION=16-ea+27
-# Thu, 03 Dec 2020 23:17:01 GMT
-RUN set -eux; 		objdump="$(command -v objdump)"; 	arch="$(objdump --file-headers "$objdump" | awk -F '[:,]+[[:space:]]+' '$1 == "architecture" { print $2 }')"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/27/GPL/openjdk-16-ea+27_linux-aarch64_bin.tar.gz; 			downloadSha256=7c667e8a1806b76ab4970334f7b4d88ea96860876cdd1566f9b1936dc03c5d85; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/27/GPL/openjdk-16-ea+27_linux-x64_bin.tar.gz; 			downloadSha256=dcaff2a2377fbf6fc3fc87e6d4ad1e73827f535c2bf7591c63a416e766f303d6; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		curl -fL -o openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		ln -sfT "$JAVA_HOME" /usr/java/default; 	ln -sfT "$JAVA_HOME" /usr/java/latest; 	for bin in "$JAVA_HOME/bin/"*; do 		base="$(basename "$bin")"; 		[ ! -e "/usr/bin/$base" ]; 		alternatives --install "/usr/bin/$base" "$base" "$bin" 20000; 	done; 		java -Xshare:dump; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/pki/ca-trust/extracted/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
-# Thu, 03 Dec 2020 23:17:03 GMT
+# Mon, 14 Dec 2020 21:45:21 GMT
+ENV JAVA_VERSION=16-ea+28
+# Mon, 14 Dec 2020 21:46:20 GMT
+RUN set -eux; 		objdump="$(command -v objdump)"; 	arch="$(objdump --file-headers "$objdump" | awk -F '[:,]+[[:space:]]+' '$1 == "architecture" { print $2 }')"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/28/GPL/openjdk-16-ea+28_linux-aarch64_bin.tar.gz; 			downloadSha256=ec5240a695751612960e7459476c6081e69a03aebe4ff3c7ae964b9235dfe9a4; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/28/GPL/openjdk-16-ea+28_linux-x64_bin.tar.gz; 			downloadSha256=2c2f2136a72e53deedef4e4e35d3d34315093a16732b9d112297e11e0661ea05; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		curl -fL -o openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		ln -sfT "$JAVA_HOME" /usr/java/default; 	ln -sfT "$JAVA_HOME" /usr/java/latest; 	for bin in "$JAVA_HOME/bin/"*; do 		base="$(basename "$bin")"; 		[ ! -e "/usr/bin/$base" ]; 		alternatives --install "/usr/bin/$base" "$base" "$bin" 20000; 	done; 		java -Xshare:dump; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/pki/ca-trust/extracted/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Mon, 14 Dec 2020 21:46:22 GMT
 CMD ["jshell"]
-# Fri, 04 Dec 2020 00:43:07 GMT
+# Mon, 14 Dec 2020 22:20:53 GMT
 ARG MAVEN_VERSION=3.6.3
-# Fri, 04 Dec 2020 00:43:08 GMT
+# Mon, 14 Dec 2020 22:20:54 GMT
 ARG USER_HOME_DIR=/root
-# Fri, 04 Dec 2020 00:43:10 GMT
+# Mon, 14 Dec 2020 22:20:55 GMT
 ARG SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0
-# Fri, 04 Dec 2020 00:43:11 GMT
+# Mon, 14 Dec 2020 22:20:56 GMT
 ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries
-# Fri, 04 Dec 2020 00:44:39 GMT
+# Mon, 14 Dec 2020 22:22:28 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries MAVEN_VERSION=3.6.3 SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0 USER_HOME_DIR=/root
 RUN microdnf install findutils git
-# Fri, 04 Dec 2020 00:44:58 GMT
+# Mon, 14 Dec 2020 22:22:35 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries MAVEN_VERSION=3.6.3 SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0 USER_HOME_DIR=/root
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref   && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz   && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha512sum -c -   && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1   && rm -f /tmp/apache-maven.tar.gz   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
-# Fri, 04 Dec 2020 00:45:00 GMT
+# Mon, 14 Dec 2020 22:22:36 GMT
 ENV MAVEN_HOME=/usr/share/maven
-# Fri, 04 Dec 2020 00:45:02 GMT
+# Mon, 14 Dec 2020 22:22:36 GMT
 ENV MAVEN_CONFIG=/root/.m2
-# Fri, 04 Dec 2020 00:45:03 GMT
+# Mon, 14 Dec 2020 22:22:37 GMT
 COPY file:1b3da5c58894f705e7387946301c0c52edb6271761ea3cd80b86a848847a64cd in /usr/local/bin/mvn-entrypoint.sh 
-# Fri, 04 Dec 2020 00:45:04 GMT
+# Mon, 14 Dec 2020 22:22:37 GMT
 COPY file:2bbb488dd73c55d658b91943cfdf9c26975a320ceafc45dda94c95b03e518ad3 in /usr/share/maven/ref/ 
-# Fri, 04 Dec 2020 00:45:05 GMT
+# Mon, 14 Dec 2020 22:22:38 GMT
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
-# Fri, 04 Dec 2020 00:45:07 GMT
+# Mon, 14 Dec 2020 22:22:39 GMT
 CMD ["mvn"]
 ```
 
@@ -26594,31 +26594,31 @@ CMD ["mvn"]
 		Last Modified: Mon, 16 Nov 2020 20:08:26 GMT  
 		Size: 14.1 MB (14060251 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7594791970de9d32fa94b1423d6ba6bed70a13e8b608769d533b68059e58a500`  
-		Last Modified: Thu, 03 Dec 2020 23:21:07 GMT  
-		Size: 179.1 MB (179103477 bytes)  
+	-	`sha256:3a646e33798def91183b743583b469701e36f78d759d3f926592a0a290f3a6a1`  
+		Last Modified: Mon, 14 Dec 2020 21:51:50 GMT  
+		Size: 179.2 MB (179196563 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cfb4e0ff39a8f92effc8886cd08f94ce1487add11adb55f88de805b3d39dee09`  
-		Last Modified: Fri, 04 Dec 2020 00:48:05 GMT  
-		Size: 112.5 MB (112548657 bytes)  
+	-	`sha256:70547f70f0334633e817fa1a9357861e4b29ebb747329500533943f31ecddf0b`  
+		Last Modified: Mon, 14 Dec 2020 22:25:40 GMT  
+		Size: 112.6 MB (112553081 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:595fd20ff9f877d08d7c6c49a8d6442c2107ff1efa7e66f2bdcf4771a92f5de1`  
-		Last Modified: Fri, 04 Dec 2020 00:47:46 GMT  
-		Size: 9.6 MB (9581208 bytes)  
+	-	`sha256:79bb7d584cedb05eda62c8b26f62491c694cbabf250982fe24f7d2a1bf180ed5`  
+		Last Modified: Mon, 14 Dec 2020 22:25:21 GMT  
+		Size: 9.6 MB (9581206 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:691bc772193944eecfd6556eb3e13f1b96f907dda1a7e3d3d91b13c56cdc0c99`  
-		Last Modified: Fri, 04 Dec 2020 00:47:44 GMT  
-		Size: 858.0 B  
+	-	`sha256:473932a8f070763e3cb226f37c7d5a49e6667b31064d712f256e7d6a8e4ecce4`  
+		Last Modified: Mon, 14 Dec 2020 22:25:20 GMT  
+		Size: 859.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cd0fb851ec99caa6bd92e082c8604316b2a2959cc9a8988cf9225f575e8c9332`  
-		Last Modified: Fri, 04 Dec 2020 00:47:44 GMT  
-		Size: 364.0 B  
+	-	`sha256:e79a4f0d12beabf8a4321670df66ebdc1ceae572c1f3d52e736ad29db8bafaf8`  
+		Last Modified: Mon, 14 Dec 2020 22:25:19 GMT  
+		Size: 360.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `maven:3-openjdk-16-slim`
 
 ```console
-$ docker pull maven@sha256:0c81ec73b33a83e1b488c4771841833702b84cc5c5647813c5bf8287ba7b548c
+$ docker pull maven@sha256:0be83d45efbb70949627aa71cb1281daa40965a3e729428058c02b3307b90e70
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -26726,14 +26726,14 @@ CMD ["mvn"]
 ### `maven:3-openjdk-16-slim` - linux; arm64 variant v8
 
 ```console
-$ docker pull maven@sha256:59d8b4197dc71eaa0648fbc089f994bd5b7475dd33c650e2358dbaa37b316403
+$ docker pull maven@sha256:5998209114e1ae7ae59e141b68f588c140dad54294be2ea9ccad598a8cf9b062
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **220.7 MB (220655324 bytes)**  
+-	Total Size: **220.7 MB (220746302 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a7c67bffb85553247bac0d3a9d68fad05f9983b168807faadf58c5b4b5fb9ec9`
+-	Image ID: `sha256:c195b8c46f70303763f68ce7a5f05f481024c4e18cf005c03613f192e4e60219`
 -	Entrypoint: `["\/usr\/local\/bin\/mvn-entrypoint.sh"]`
 -	Default Command: `["mvn"]`
 
@@ -26752,37 +26752,37 @@ ENV JAVA_HOME=/usr/local/openjdk-16
 ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Fri, 11 Dec 2020 17:08:48 GMT
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ]
-# Fri, 11 Dec 2020 17:08:49 GMT
-ENV JAVA_VERSION=16-ea+27
-# Fri, 11 Dec 2020 17:09:49 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/27/GPL/openjdk-16-ea+27_linux-aarch64_bin.tar.gz; 			downloadSha256=7c667e8a1806b76ab4970334f7b4d88ea96860876cdd1566f9b1936dc03c5d85; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/27/GPL/openjdk-16-ea+27_linux-x64_bin.tar.gz; 			downloadSha256=dcaff2a2377fbf6fc3fc87e6d4ad1e73827f535c2bf7591c63a416e766f303d6; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
-# Fri, 11 Dec 2020 17:09:52 GMT
+# Mon, 14 Dec 2020 21:48:10 GMT
+ENV JAVA_VERSION=16-ea+28
+# Mon, 14 Dec 2020 21:48:33 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		arm64 | aarch64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/28/GPL/openjdk-16-ea+28_linux-aarch64_bin.tar.gz; 			downloadSha256=ec5240a695751612960e7459476c6081e69a03aebe4ff3c7ae964b9235dfe9a4; 			;; 		amd64 | i386:x86-64) 			downloadUrl=https://download.java.net/java/early_access/jdk16/28/GPL/openjdk-16-ea+28_linux-x64_bin.tar.gz; 			downloadSha256=2c2f2136a72e53deedef4e4e35d3d34315093a16732b9d112297e11e0661ea05; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O openjdk.tgz "$downloadUrl" --progress=dot:giga; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'if ! [ -d "$JAVA_HOME" ]; then echo >&2 "error: missing JAVA_HOME environment variable"; exit 1; fi'; 		echo 'cacertsFile=; for f in "$JAVA_HOME/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts"; do if [ -e "$f" ]; then cacertsFile="$f"; break; fi; done'; 		echo 'if [ -z "$cacertsFile" ] || ! [ -f "$cacertsFile" ]; then echo >&2 "error: failed to find cacerts file in $JAVA_HOME"; exit 1; fi'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$cacertsFile"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Mon, 14 Dec 2020 21:48:35 GMT
 CMD ["jshell"]
-# Sat, 12 Dec 2020 06:35:44 GMT
+# Mon, 14 Dec 2020 22:22:57 GMT
 ARG MAVEN_VERSION=3.6.3
-# Sat, 12 Dec 2020 06:35:44 GMT
+# Mon, 14 Dec 2020 22:22:57 GMT
 ARG USER_HOME_DIR=/root
-# Sat, 12 Dec 2020 06:35:45 GMT
+# Mon, 14 Dec 2020 22:22:58 GMT
 ARG SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0
-# Sat, 12 Dec 2020 06:35:46 GMT
+# Mon, 14 Dec 2020 22:22:58 GMT
 ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries
-# Sat, 12 Dec 2020 06:35:59 GMT
+# Mon, 14 Dec 2020 22:23:12 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries MAVEN_VERSION=3.6.3 SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0 USER_HOME_DIR=/root
 RUN apt-get update &&     apt-get install -y       curl procps   && rm -rf /var/lib/apt/lists/*
-# Sat, 12 Dec 2020 06:36:03 GMT
+# Mon, 14 Dec 2020 22:23:17 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries MAVEN_VERSION=3.6.3 SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0 USER_HOME_DIR=/root
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref   && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz   && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha512sum -c -   && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1   && rm -f /tmp/apache-maven.tar.gz   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
-# Sat, 12 Dec 2020 06:36:04 GMT
+# Mon, 14 Dec 2020 22:23:17 GMT
 ENV MAVEN_HOME=/usr/share/maven
-# Sat, 12 Dec 2020 06:36:05 GMT
+# Mon, 14 Dec 2020 22:23:18 GMT
 ENV MAVEN_CONFIG=/root/.m2
-# Sat, 12 Dec 2020 06:36:05 GMT
+# Mon, 14 Dec 2020 22:23:19 GMT
 COPY file:1b3da5c58894f705e7387946301c0c52edb6271761ea3cd80b86a848847a64cd in /usr/local/bin/mvn-entrypoint.sh 
-# Sat, 12 Dec 2020 06:36:06 GMT
+# Mon, 14 Dec 2020 22:23:19 GMT
 COPY file:2bbb488dd73c55d658b91943cfdf9c26975a320ceafc45dda94c95b03e518ad3 in /usr/share/maven/ref/ 
-# Sat, 12 Dec 2020 06:36:07 GMT
+# Mon, 14 Dec 2020 22:23:21 GMT
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
-# Sat, 12 Dec 2020 06:36:08 GMT
+# Mon, 14 Dec 2020 22:23:21 GMT
 CMD ["mvn"]
 ```
 
@@ -26799,25 +26799,25 @@ CMD ["mvn"]
 		Last Modified: Fri, 11 Dec 2020 17:15:20 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:00d76c291acdb49321f30f8c730437bbeb5a81e9816b79743a8b26b306352d50`  
-		Last Modified: Fri, 11 Dec 2020 17:15:44 GMT  
-		Size: 179.5 MB (179478874 bytes)  
+	-	`sha256:3d96682bd0f04032273234a4dc7839bec88b38b3f5b9456d6a08ff84c29fba5d`  
+		Last Modified: Mon, 14 Dec 2020 21:54:00 GMT  
+		Size: 179.6 MB (179569887 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fbf689e74a0f6d463acb02c1e3d8e2727d163c177e026e42f4368f555a6cd819`  
-		Last Modified: Sat, 12 Dec 2020 06:38:40 GMT  
-		Size: 2.6 MB (2636587 bytes)  
+	-	`sha256:52e5d367b7febc01226b55167c723c48497ab7b5f2226d22c0884da043924901`  
+		Last Modified: Mon, 14 Dec 2020 22:25:51 GMT  
+		Size: 2.6 MB (2636582 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:837c96f26ca36354b682c48f5401ad9f99f5e411c673c7400a9d4a5599370ba4`  
-		Last Modified: Sat, 12 Dec 2020 06:38:41 GMT  
-		Size: 9.6 MB (9581237 bytes)  
+	-	`sha256:7852cb21dc556a62a9a86fa2eb04c7eea9e8d233ee21a207a9eb860cc85ba9d2`  
+		Last Modified: Mon, 14 Dec 2020 22:25:52 GMT  
+		Size: 9.6 MB (9581208 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f4f773b48e7f70b9d766f76bb1b33553a1e4a0ae6af65e7a85fa46c150bc92f3`  
-		Last Modified: Sat, 12 Dec 2020 06:38:40 GMT  
-		Size: 859.0 B  
+	-	`sha256:6defae664f58ae72e8352f7b80a9046acaa6e25e1aed83db66b55a5e4ddac15c`  
+		Last Modified: Mon, 14 Dec 2020 22:25:50 GMT  
+		Size: 857.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2528f5e011c481f8e05b0f8825737cb6f0c16f4b7a8320f1a3cebb6ba545e944`  
-		Last Modified: Sat, 12 Dec 2020 06:38:40 GMT  
-		Size: 362.0 B  
+	-	`sha256:dfdd117d4e3e5742210279a7c94de1bf8f4fcb70c0c7e50da90f48d0a71a0929`  
+		Last Modified: Mon, 14 Dec 2020 22:25:49 GMT  
+		Size: 363.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `maven:3-openjdk-8`
