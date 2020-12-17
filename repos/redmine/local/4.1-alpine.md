@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:08a1414db38346739e8aea9ca4c9b429ab68eab03a71c8bd6410e5a295fd4981`
-- Created: `2020-06-27T00:27:18.043222544Z`
-- Virtual Size: ~ 419.83 Mb  
+- Image ID: `sha256:fb14c4304f9c451fcb42d549fbdbec6fa0338e3e7fa2bdb219a6958b82c9cbb5`
+- Created: `2020-12-17T19:39:12.799983766Z`
+- Virtual Size: ~ 419.95 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -215,16 +215,16 @@ MPL-2.0 GPL-2.0-or-later
 ### `apk` package: `ca-certificates-cacert`
 
 ```console
-ca-certificates-cacert-20191127-r1 description:
+ca-certificates-cacert-20191127-r2 description:
 Mozilla bundled certificates
 
-ca-certificates-cacert-20191127-r1 webpage:
+ca-certificates-cacert-20191127-r2 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-cacert-20191127-r1 installed size:
+ca-certificates-cacert-20191127-r2 installed size:
 245760
 
-ca-certificates-cacert-20191127-r1 license:
+ca-certificates-cacert-20191127-r2 license:
 MPL-2.0 GPL-2.0-or-later
 
 ```
@@ -249,16 +249,16 @@ LGPL-2.0-or-later MPL-1.1
 ### `apk` package: `cups-libs`
 
 ```console
-cups-libs-2.2.12-r1 description:
+cups-libs-2.2.12-r2 description:
 CUPS libraries
 
-cups-libs-2.2.12-r1 webpage:
+cups-libs-2.2.12-r2 webpage:
 https://www.cups.org/
 
-cups-libs-2.2.12-r1 installed size:
+cups-libs-2.2.12-r2 installed size:
 569344
 
-cups-libs-2.2.12-r1 license:
+cups-libs-2.2.12-r2 license:
 GPL-2.0-only
 
 ```
@@ -351,16 +351,16 @@ GPL-2.0-or-later, LGPL-2.0-or-later
 ### `apk` package: `freetype`
 
 ```console
-freetype-2.10.1-r0 description:
+freetype-2.10.1-r1 description:
 TrueType font rendering library
 
-freetype-2.10.1-r0 webpage:
+freetype-2.10.1-r1 webpage:
 https://www.freetype.org/
 
-freetype-2.10.1-r0 installed size:
+freetype-2.10.1-r1 installed size:
 737280
 
-freetype-2.10.1-r0 license:
+freetype-2.10.1-r1 license:
 FTL GPL-2.0-or-later
 
 ```
@@ -521,16 +521,16 @@ LGPL-3.0
 ### `apk` package: `gnutls`
 
 ```console
-gnutls-3.6.14-r0 description:
+gnutls-3.6.15-r0 description:
 A TLS protocol implementation
 
-gnutls-3.6.14-r0 webpage:
+gnutls-3.6.15-r0 webpage:
 https://www.gnutls.org/
 
-gnutls-3.6.14-r0 installed size:
-1757184
+gnutls-3.6.15-r0 installed size:
+1769472
 
-gnutls-3.6.14-r0 license:
+gnutls-3.6.15-r0 license:
 GPL-3.0-or-later
 
 ```
@@ -725,16 +725,16 @@ LGPL-2.1-only
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1g-r0 description:
+libcrypto1.1-1.1.1i-r0 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1g-r0 webpage:
+libcrypto1.1-1.1.1i-r0 webpage:
 https://www.openssl.org
 
-libcrypto1.1-1.1.1g-r0 installed size:
-2760704
+libcrypto1.1-1.1.1i-r0 installed size:
+2764800
 
-libcrypto1.1-1.1.1g-r0 license:
+libcrypto1.1-1.1.1i-r0 license:
 OpenSSL
 
 ```
@@ -742,16 +742,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.67.0-r0 description:
+libcurl-7.67.0-r3 description:
 The multiprotocol file transfer library
 
-libcurl-7.67.0-r0 webpage:
+libcurl-7.67.0-r3 webpage:
 https://curl.haxx.se/
 
-libcurl-7.67.0-r0 installed size:
+libcurl-7.67.0-r3 installed size:
 458752
 
-libcurl-7.67.0-r0 license:
+libcurl-7.67.0-r3 license:
 MIT
 
 ```
@@ -827,16 +827,16 @@ MIT
 ### `apk` package: `libgcc`
 
 ```console
-libgcc-9.2.0-r4 description:
+libgcc-9.3.0-r0 description:
 GNU C compiler runtime libraries
 
-libgcc-9.2.0-r4 webpage:
+libgcc-9.3.0-r0 webpage:
 http://gcc.gnu.org
 
-libgcc-9.2.0-r4 installed size:
+libgcc-9.3.0-r0 installed size:
 90112
 
-libgcc-9.2.0-r4 license:
+libgcc-9.3.0-r0 license:
 GPL LGPL
 
 ```
@@ -912,16 +912,16 @@ BSD-3-Clause IJG Zlib
 ### `apk` package: `libldap`
 
 ```console
-libldap-2.4.48-r2 description:
+libldap-2.4.48-r3 description:
 OpenLDAP libraries
 
-libldap-2.4.48-r2 webpage:
+libldap-2.4.48-r3 webpage:
 http://www.openldap.org/
 
-libldap-2.4.48-r2 installed size:
+libldap-2.4.48-r3 installed size:
 626688
 
-libldap-2.4.48-r2 license:
+libldap-2.4.48-r3 license:
 custom
 
 ```
@@ -980,16 +980,16 @@ Libpng
 ### `apk` package: `libpq`
 
 ```console
-libpq-12.2-r0 description:
+libpq-12.5-r0 description:
 PostgreSQL libraries
 
-libpq-12.2-r0 webpage:
+libpq-12.5-r0 webpage:
 https://www.postgresql.org/
 
-libpq-12.2-r0 installed size:
+libpq-12.5-r0 installed size:
 327680
 
-libpq-12.2-r0 license:
+libpq-12.5-r0 license:
 PostgreSQL
 
 ```
@@ -1048,16 +1048,16 @@ custom
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1g-r0 description:
+libssl1.1-1.1.1i-r0 description:
 SSL shared libraries
 
-libssl1.1-1.1.1g-r0 webpage:
+libssl1.1-1.1.1i-r0 webpage:
 https://www.openssl.org
 
-libssl1.1-1.1.1g-r0 installed size:
+libssl1.1-1.1.1i-r0 installed size:
 540672
 
-libssl1.1-1.1.1g-r0 license:
+libssl1.1-1.1.1i-r0 license:
 OpenSSL
 
 ```
@@ -1065,16 +1065,16 @@ OpenSSL
 ### `apk` package: `libstdc++`
 
 ```console
-libstdc++-9.2.0-r4 description:
+libstdc++-9.3.0-r0 description:
 GNU C++ standard runtime library
 
-libstdc++-9.2.0-r4 webpage:
+libstdc++-9.3.0-r0 webpage:
 http://gcc.gnu.org
 
-libstdc++-9.2.0-r4 installed size:
+libstdc++-9.3.0-r0 installed size:
 1671168
 
-libstdc++-9.2.0-r4 license:
+libstdc++-9.3.0-r0 license:
 GPL LGPL
 
 ```
@@ -1167,16 +1167,16 @@ BSD-3-Clause
 ### `apk` package: `libx11`
 
 ```console
-libx11-1.6.9-r0 description:
+libx11-1.6.12-r0 description:
 X11 client-side library
 
-libx11-1.6.9-r0 webpage:
+libx11-1.6.12-r0 webpage:
 http://xorg.freedesktop.org/
 
-libx11-1.6.9-r0 installed size:
+libx11-1.6.12-r0 installed size:
 3391488
 
-libx11-1.6.9-r0 license:
+libx11-1.6.12-r0 license:
 custom:XFREE86
 
 ```
@@ -1269,16 +1269,16 @@ MIT
 ### `apk` package: `libxml2`
 
 ```console
-libxml2-2.9.10-r3 description:
+libxml2-2.9.10-r4 description:
 XML parsing library, version 2
 
-libxml2-2.9.10-r3 webpage:
+libxml2-2.9.10-r4 webpage:
 http://www.xmlsoft.org/
 
-libxml2-2.9.10-r3 installed size:
+libxml2-2.9.10-r4 installed size:
 1220608
 
-libxml2-2.9.10-r3 license:
+libxml2-2.9.10-r4 license:
 MIT
 
 ```
@@ -1337,16 +1337,16 @@ BSD-2-Clause GPL-2.0-only
 ### `apk` package: `mariadb-connector-c`
 
 ```console
-mariadb-connector-c-3.1.6-r0 description:
+mariadb-connector-c-3.1.6-r1 description:
 The MariaDB Native Client library (C driver)
 
-mariadb-connector-c-3.1.6-r0 webpage:
+mariadb-connector-c-3.1.6-r1 webpage:
 https://mariadb.org/
 
-mariadb-connector-c-3.1.6-r0 installed size:
+mariadb-connector-c-3.1.6-r1 installed size:
 536576
 
-mariadb-connector-c-3.1.6-r0 license:
+mariadb-connector-c-3.1.6-r1 license:
 LGPL-2.1-or-later
 
 ```
@@ -1371,16 +1371,16 @@ GPL-2.0-or-later
 ### `apk` package: `musl`
 
 ```console
-musl-1.1.24-r2 description:
+musl-1.1.24-r3 description:
 the musl c library (libc) implementation
 
-musl-1.1.24-r2 webpage:
+musl-1.1.24-r3 webpage:
 https://musl.libc.org/
 
-musl-1.1.24-r2 installed size:
+musl-1.1.24-r3 installed size:
 614400
 
-musl-1.1.24-r2 license:
+musl-1.1.24-r3 license:
 MIT
 
 ```
@@ -1388,16 +1388,16 @@ MIT
 ### `apk` package: `musl-utils`
 
 ```console
-musl-utils-1.1.24-r2 description:
+musl-utils-1.1.24-r3 description:
 the musl c library (libc) implementation
 
-musl-utils-1.1.24-r2 webpage:
+musl-utils-1.1.24-r3 webpage:
 https://musl.libc.org/
 
-musl-utils-1.1.24-r2 installed size:
+musl-utils-1.1.24-r3 installed size:
 151552
 
-musl-utils-1.1.24-r2 license:
+musl-utils-1.1.24-r3 license:
 MIT BSD GPL2+
 
 ```
@@ -1507,16 +1507,16 @@ BSD
 ### `apk` package: `p11-kit`
 
 ```console
-p11-kit-0.23.18.1-r0 description:
+p11-kit-0.23.18.1-r1 description:
 Library for loading and sharing PKCS#11 modules
 
-p11-kit-0.23.18.1-r0 webpage:
+p11-kit-0.23.18.1-r1 webpage:
 https://p11-glue.freedesktop.org/
 
-p11-kit-0.23.18.1-r0 installed size:
+p11-kit-0.23.18.1-r1 installed size:
 1245184
 
-p11-kit-0.23.18.1-r0 license:
+p11-kit-0.23.18.1-r1 license:
 BSD-3-Clause
 
 ```
@@ -1541,16 +1541,16 @@ LGPL-2.1-or-later
 ### `apk` package: `pcre`
 
 ```console
-pcre-8.43-r0 description:
+pcre-8.43-r1 description:
 Perl-compatible regular expression library
 
-pcre-8.43-r0 webpage:
+pcre-8.43-r1 webpage:
 http://pcre.sourceforge.net
 
-pcre-8.43-r0 installed size:
+pcre-8.43-r1 installed size:
 401408
 
-pcre-8.43-r0 license:
+pcre-8.43-r1 license:
 BSD-3-Clause
 
 ```
@@ -1643,16 +1643,16 @@ custom
 ### `apk` package: `python3`
 
 ```console
-python3-3.8.2-r0 description:
+python3-3.8.2-r1 description:
 A high-level scripting language
 
-python3-3.8.2-r0 webpage:
+python3-3.8.2-r1 webpage:
 https://www.python.org/
 
-python3-3.8.2-r0 installed size:
-58839040
+python3-3.8.2-r1 installed size:
+58851328
 
-python3-3.8.2-r0 license:
+python3-3.8.2-r1 license:
 PSF-2.0
 
 ```
@@ -1847,16 +1847,16 @@ MIT
 ### `apk` package: `tzdata`
 
 ```console
-tzdata-2020a-r0 description:
+tzdata-2020c-r1 description:
 Timezone data
 
-tzdata-2020a-r0 webpage:
+tzdata-2020c-r1 webpage:
 https://www.iana.org/time-zones
 
-tzdata-2020a-r0 installed size:
+tzdata-2020c-r1 installed size:
 3526656
 
-tzdata-2020a-r0 license:
+tzdata-2020c-r1 license:
 Public-Domain
 
 ```
