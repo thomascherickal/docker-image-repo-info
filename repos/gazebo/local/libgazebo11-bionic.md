@@ -1756,14 +1756,9 @@ Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/lib
 - `GPL-2`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glibc=2.27-3ubuntu1.3
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.27-3ubuntu1.3.dsc' glibc_2.27-3ubuntu1.3.dsc 9612 SHA512:6ec933fbb36d3a57963f660c9563b022f809fd7a1fbde7a40bb9aff1b1c3e15a4e2afe4c039475a7f40ffd668023b71011ab788f45f5cbf4e0eed48992f34942
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.27.orig.tar.xz' glibc_2.27.orig.tar.xz 15923832 SHA512:a0580fb52bc4ea8bb6e6734086b0dc66bd661060cdd837965880b989866490063c2420f250fb19b54e3547c58a5a7f8e012699e6513ce413746fd236ddd239e8
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.27-3ubuntu1.3.debian.tar.xz' glibc_2.27-3ubuntu1.3.debian.tar.xz 1091232 SHA512:af39aa3f6a8d464e294f4cdcd7d5ee068ab34a8b7f6664e6e291da30259c32af686e5d8b374504f2407db6b5b86a90f2219a010061bebe962e2d76857072b384
-```
 
 ### `dpkg` source package: `gmp=2:6.1.2+dfsg-2`
 
@@ -3347,15 +3342,9 @@ Licenses: (parsed from: `/usr/share/doc/libinput-bin/copyright`, `/usr/share/doc
 - `Expat`
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libinput=1.10.4-1ubuntu0.18.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/libi/libinput/libinput_1.10.4-1ubuntu0.18.04.1.dsc' libinput_1.10.4-1ubuntu0.18.04.1.dsc 2634 SHA512:416966572a027ecdcf5ec46a19777aba84fd305583bc8d694924ccc652281285444b4b10e985124b4d3569860715875840b538f12deb4eea8d63811630da79b4
-'http://archive.ubuntu.com/ubuntu/pool/main/libi/libinput/libinput_1.10.4.orig.tar.xz' libinput_1.10.4.orig.tar.xz 493152 SHA512:b6f24f135e2396d53c0576a3b3887cd3736f2209fc448c6419cd1f1d7ee6aedff8e067f4b780f50ada5a4418d5bc47a4010cb328f366ee7fd1a2dba1ffc96c38
-'http://archive.ubuntu.com/ubuntu/pool/main/libi/libinput/libinput_1.10.4.orig.tar.xz.asc' libinput_1.10.4.orig.tar.xz.asc 241 SHA512:6d36abc31fcbb0892e694159a42905576bdb9e818f57ca7845ad3015a6fa9db80afbd0e98034a13eabcef67b5fe0ed705830db6f9805900c9f86a1e986daad17
-'http://archive.ubuntu.com/ubuntu/pool/main/libi/libinput/libinput_1.10.4-1ubuntu0.18.04.1.debian.tar.xz' libinput_1.10.4-1ubuntu0.18.04.1.debian.tar.xz 9140 SHA512:482ffbaa5177e53d74cb33b59662c6dfc71327f8d41343a677d925fb618959efb8eb0ac9f0893b0d228b842f4990155c0acbcdfb31f1eeae47ed4f9338f2f717
-```
 
 ### `dpkg` source package: `libjpeg-turbo=1.5.2-0ubuntu5.18.04.4`
 
