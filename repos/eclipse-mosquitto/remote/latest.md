@@ -1,7 +1,7 @@
 ## `eclipse-mosquitto:latest`
 
 ```console
-$ docker pull eclipse-mosquitto@sha256:ac272867b8baf642e5c6d5a29a2267afbdd7dffeaa1ea416e3ae8d62c21dadaf
+$ docker pull eclipse-mosquitto@sha256:74f94ec33aea42674b37082255cb7405217597c81af5fecf4e7dfda23aaa486f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -220,51 +220,51 @@ CMD ["/usr/sbin/mosquitto" "-c" "/mosquitto/config/mosquitto.conf"]
 ### `eclipse-mosquitto:latest` - linux; ppc64le
 
 ```console
-$ docker pull eclipse-mosquitto@sha256:f0272c5a9c14d2eb013bca8931e81fe2e6e01616a82c71e038e47ec7f40c345b
+$ docker pull eclipse-mosquitto@sha256:0e0592b74b9dab1f73ec199b86e6535f8bfcecade8e8cd26feb992eab17a2041
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **4.7 MB (4650167 bytes)**  
+-	Total Size: **4.7 MB (4651960 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:97396f5df4c7ba09668eab7ed25df0550832ce3471d72a4518117a530ff92be3`
+-	Image ID: `sha256:9b0d548d2b035a2f9e23dd412d9cfdeb0d2e19cc9e807113485aa466cca95beb`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["\/usr\/sbin\/mosquitto","-c","\/mosquitto\/config\/mosquitto.conf"]`
 
 ```dockerfile
-# Fri, 11 Dec 2020 03:30:29 GMT
-ADD file:9b4b44ee9eaddedc13f114bb55c9abeabceff6abd47f4a660734e431d22fcdce in / 
-# Fri, 11 Dec 2020 03:30:32 GMT
+# Thu, 17 Dec 2020 00:20:42 GMT
+ADD file:0a38c9b4955f8faa79627c166fca80ef342e443a16ce2925a30eeae317bbd786 in / 
+# Thu, 17 Dec 2020 00:20:48 GMT
 CMD ["/bin/sh"]
-# Fri, 11 Dec 2020 05:13:13 GMT
+# Thu, 17 Dec 2020 01:57:09 GMT
 LABEL maintainer=Roger Light <roger@atchoo.org> description=Eclipse Mosquitto MQTT Broker
-# Fri, 11 Dec 2020 05:15:52 GMT
+# Thu, 17 Dec 2020 01:59:34 GMT
 ENV VERSION=1.6.12 DOWNLOAD_SHA256=548d73d19fb787dd0530334e398fd256ef3a581181678488a741a995c4f007fb GPG_KEYS=A0D6EEA1DCAE49A635A3B2F0779B22DFB3E717B7 LWS_VERSION=2.4.2 LWS_SHA256=73012d7fcf428dedccc816e83a63a01462e27819d5537b8e0d0c7264bfacfad6
-# Fri, 11 Dec 2020 05:16:27 GMT
+# Thu, 17 Dec 2020 02:00:17 GMT
 RUN set -x &&     apk --no-cache add --virtual build-deps         build-base         cmake         gnupg         libressl-dev         util-linux-dev &&     wget https://github.com/warmcat/libwebsockets/archive/v${LWS_VERSION}.tar.gz -O /tmp/lws.tar.gz &&     echo "$LWS_SHA256  /tmp/lws.tar.gz" | sha256sum -c - &&     mkdir -p /build/lws &&     tar --strip=1 -xf /tmp/lws.tar.gz -C /build/lws &&     rm /tmp/lws.tar.gz &&     cd /build/lws &&     cmake .         -DCMAKE_BUILD_TYPE=MinSizeRel         -DCMAKE_INSTALL_PREFIX=/usr         -DLWS_IPV6=ON         -DLWS_WITHOUT_BUILTIN_GETIFADDRS=ON         -DLWS_WITHOUT_CLIENT=ON         -DLWS_WITHOUT_EXTENSIONS=ON         -DLWS_WITHOUT_TESTAPPS=ON         -DLWS_WITH_SHARED=OFF         -DLWS_WITH_ZIP_FOPS=OFF         -DLWS_WITH_ZLIB=OFF &&     make -j "$(nproc)" &&     rm -rf /root/.cmake &&     wget https://mosquitto.org/files/source/mosquitto-${VERSION}.tar.gz -O /tmp/mosq.tar.gz &&     echo "$DOWNLOAD_SHA256  /tmp/mosq.tar.gz" | sha256sum -c - &&     wget https://mosquitto.org/files/source/mosquitto-${VERSION}.tar.gz.asc -O /tmp/mosq.tar.gz.asc &&     export GNUPGHOME="$(mktemp -d)" &&     found='';     for server in         ha.pool.sks-keyservers.net         hkp://keyserver.ubuntu.com:80         hkp://p80.pool.sks-keyservers.net:80         pgp.mit.edu     ; do         echo "Fetching GPG key $GPG_KEYS from $server";         gpg --keyserver "$server" --keyserver-options timeout=10 --recv-keys "$GPG_KEYS" && found=yes && break;     done;     test -z "$found" && echo >&2 "error: failed to fetch GPG key $GPG_KEYS" && exit 1;     gpg --batch --verify /tmp/mosq.tar.gz.asc /tmp/mosq.tar.gz &&     gpgconf --kill all &&     rm -rf "$GNUPGHOME" /tmp/mosq.tar.gz.asc &&     mkdir -p /build/mosq &&     tar --strip=1 -xf /tmp/mosq.tar.gz -C /build/mosq &&     rm /tmp/mosq.tar.gz &&     make -C /build/mosq -j "$(nproc)"         CFLAGS="-Wall -O2 -I/build/lws/include"         LDFLAGS="-L/build/lws/lib"         WITH_ADNS=no         WITH_DOCS=no         WITH_SHARED_LIBRARIES=yes         WITH_SRV=no         WITH_STRIP=yes         WITH_TLS_PSK=no         WITH_WEBSOCKETS=yes         prefix=/usr         binary &&     addgroup -S -g 1883 mosquitto 2>/dev/null &&     adduser -S -u 1883 -D -H -h /var/empty -s /sbin/nologin -G mosquitto -g mosquitto mosquitto 2>/dev/null &&     mkdir -p /mosquitto/config /mosquitto/data /mosquitto/log &&     install -d /usr/sbin/ &&     install -s -m755 /build/mosq/client/mosquitto_pub /usr/bin/mosquitto_pub &&     install -s -m755 /build/mosq/client/mosquitto_rr /usr/bin/mosquitto_rr &&     install -s -m755 /build/mosq/client/mosquitto_sub /usr/bin/mosquitto_sub &&     install -s -m644 /build/mosq/lib/libmosquitto.so.1 /usr/lib/libmosquitto.so.1 &&     install -s -m755 /build/mosq/src/mosquitto /usr/sbin/mosquitto &&     install -s -m755 /build/mosq/src/mosquitto_passwd /usr/bin/mosquitto_passwd &&     install -m644 /build/mosq/mosquitto.conf /mosquitto/config/mosquitto.conf &&     chown -R mosquitto:mosquitto /mosquitto &&     apk --no-cache add         ca-certificates         libressl &&     apk del build-deps &&     rm -rf /build
-# Fri, 11 Dec 2020 05:16:34 GMT
+# Thu, 17 Dec 2020 02:00:23 GMT
 VOLUME [/mosquitto/data /mosquitto/log]
-# Fri, 11 Dec 2020 05:16:37 GMT
+# Thu, 17 Dec 2020 02:00:25 GMT
 COPY file:232de3a06de79606b9743327f59defda56818d50c1027dd2f0f1c5fb7917db2e in / 
-# Fri, 11 Dec 2020 05:16:43 GMT
+# Thu, 17 Dec 2020 02:00:28 GMT
 EXPOSE 1883
-# Fri, 11 Dec 2020 05:16:53 GMT
+# Thu, 17 Dec 2020 02:00:30 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Fri, 11 Dec 2020 05:17:00 GMT
+# Thu, 17 Dec 2020 02:00:33 GMT
 CMD ["/usr/sbin/mosquitto" "-c" "/mosquitto/config/mosquitto.conf"]
 ```
 
 -	Layers:
-	-	`sha256:ed596bc4dd0a0c7ff1952005f6cae53a061e1c7998282289586bbfc17a2fd6db`  
-		Last Modified: Fri, 11 Dec 2020 03:31:06 GMT  
-		Size: 2.8 MB (2803424 bytes)  
+	-	`sha256:a9d343b7bcc225fe7ac17d96a81329510ab7f31a50472311cafe7168d3107317`  
+		Last Modified: Thu, 17 Dec 2020 00:21:33 GMT  
+		Size: 2.8 MB (2805226 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:58cb00d56e1c394e00dbda2825bd3a2fe826c2b68661fbc0725dc291813be17e`  
-		Last Modified: Fri, 11 Dec 2020 05:20:01 GMT  
-		Size: 1.8 MB (1846505 bytes)  
+	-	`sha256:7a174acb8a387ec3ef13a688fce1eceb15ffb51695655d13990dd66c59a29d90`  
+		Last Modified: Thu, 17 Dec 2020 02:03:38 GMT  
+		Size: 1.8 MB (1846496 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:49b204df40496385245db6eaab545876e440c12a71f38dc82ea73919218d2c4b`  
-		Last Modified: Fri, 11 Dec 2020 05:20:00 GMT  
+	-	`sha256:29dc47220ff97335b872dcfe04856e05c3d3b716f685f7959b31a259b58674a7`  
+		Last Modified: Thu, 17 Dec 2020 02:03:37 GMT  
 		Size: 238.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
