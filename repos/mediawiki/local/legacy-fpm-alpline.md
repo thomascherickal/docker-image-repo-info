@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:4b2e2364a8153c637f1b2f4ab479ccd47c34df3821582e747e6ce0bfdb4a6f56`
-- Created: `2020-12-12T00:00:55.403834801Z`
-- Virtual Size: ~ 429.17 Mb  
+- Image ID: `sha256:ae3380757ad9e0d5d61d201413e3bec7ef6d501e6c61677705cfcf41ef6cc36d`
+- Created: `2020-12-17T18:21:09.922816194Z`
+- Virtual Size: ~ 429.31 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -234,16 +234,16 @@ GPL-2.0-only
 ### `apk` package: `curl`
 
 ```console
-curl-7.69.1-r2 description:
+curl-7.69.1-r3 description:
 URL retrival utility and library
 
-curl-7.69.1-r2 webpage:
+curl-7.69.1-r3 webpage:
 https://curl.haxx.se/
 
-curl-7.69.1-r2 installed size:
+curl-7.69.1-r3 installed size:
 229376
 
-curl-7.69.1-r2 license:
+curl-7.69.1-r3 license:
 MIT
 
 ```
@@ -506,16 +506,16 @@ MIT ICU Unicode-TOU
 ### `apk` package: `imagemagick`
 
 ```console
-imagemagick-7.0.10.25-r0 description:
+imagemagick-7.0.10.48-r0 description:
 Collection of tools and libraries for many image formats
 
-imagemagick-7.0.10.25-r0 webpage:
+imagemagick-7.0.10.48-r0 webpage:
 https://www.imagemagick.org/
 
-imagemagick-7.0.10.25-r0 installed size:
-4501504
+imagemagick-7.0.10.48-r0 installed size:
+4640768
 
-imagemagick-7.0.10.25-r0 license:
+imagemagick-7.0.10.48-r0 license:
 ImageMagick
 
 ```
@@ -523,16 +523,16 @@ ImageMagick
 ### `apk` package: `imagemagick-libs`
 
 ```console
-imagemagick-libs-7.0.10.25-r0 description:
+imagemagick-libs-7.0.10.48-r0 description:
 Collection of tools and libraries for many image formats (libraries)
 
-imagemagick-libs-7.0.10.25-r0 webpage:
+imagemagick-libs-7.0.10.48-r0 webpage:
 https://www.imagemagick.org/
 
-imagemagick-libs-7.0.10.25-r0 installed size:
-3293184
+imagemagick-libs-7.0.10.48-r0 installed size:
+3313664
 
-imagemagick-libs-7.0.10.25-r0 license:
+imagemagick-libs-7.0.10.48-r0 license:
 ImageMagick
 
 ```
@@ -659,16 +659,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1g-r0 description:
+libcrypto1.1-1.1.1i-r0 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1g-r0 webpage:
+libcrypto1.1-1.1.1i-r0 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1g-r0 installed size:
-2760704
+libcrypto1.1-1.1.1i-r0 installed size:
+2764800
 
-libcrypto1.1-1.1.1g-r0 license:
+libcrypto1.1-1.1.1i-r0 license:
 OpenSSL
 
 ```
@@ -676,16 +676,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.69.1-r2 description:
+libcurl-7.69.1-r3 description:
 The multiprotocol file transfer library
 
-libcurl-7.69.1-r2 webpage:
+libcurl-7.69.1-r3 webpage:
 https://curl.haxx.se/
 
-libcurl-7.69.1-r2 installed size:
+libcurl-7.69.1-r3 installed size:
 458752
 
-libcurl-7.69.1-r2 license:
+libcurl-7.69.1-r3 license:
 MIT
 
 ```
@@ -897,16 +897,16 @@ ISC
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1g-r0 description:
+libssl1.1-1.1.1i-r0 description:
 SSL shared libraries
 
-libssl1.1-1.1.1g-r0 webpage:
+libssl1.1-1.1.1i-r0 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1g-r0 installed size:
+libssl1.1-1.1.1i-r0 installed size:
 540672
 
-libssl1.1-1.1.1g-r0 license:
+libssl1.1-1.1.1i-r0 license:
 OpenSSL
 
 ```
@@ -1254,16 +1254,16 @@ MIT
 ### `apk` package: `openssl`
 
 ```console
-openssl-1.1.1g-r0 description:
+openssl-1.1.1i-r0 description:
 Toolkit for Transport Layer Security (TLS)
 
-openssl-1.1.1g-r0 webpage:
+openssl-1.1.1i-r0 webpage:
 https://www.openssl.org/
 
-openssl-1.1.1g-r0 installed size:
+openssl-1.1.1i-r0 installed size:
 675840
 
-openssl-1.1.1g-r0 license:
+openssl-1.1.1i-r0 license:
 OpenSSL
 
 ```
@@ -1271,16 +1271,16 @@ OpenSSL
 ### `apk` package: `p11-kit`
 
 ```console
-p11-kit-0.23.20-r5 description:
+p11-kit-0.23.22-r0 description:
 Library for loading and sharing PKCS#11 modules
 
-p11-kit-0.23.20-r5 webpage:
+p11-kit-0.23.22-r0 webpage:
 https://p11-glue.freedesktop.org/
 
-p11-kit-0.23.20-r5 installed size:
-1216512
+p11-kit-0.23.22-r0 installed size:
+1228800
 
-p11-kit-0.23.20-r5 license:
+p11-kit-0.23.22-r0 license:
 BSD-3-Clause
 
 ```
