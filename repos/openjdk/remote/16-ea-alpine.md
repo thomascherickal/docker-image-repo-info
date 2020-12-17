@@ -1,7 +1,7 @@
 ## `openjdk:16-ea-alpine`
 
 ```console
-$ docker pull openjdk@sha256:7c65dc1d294298e6ce75a062d88d14df99c2c26f284970d7267c58dcaa0064f7
+$ docker pull openjdk@sha256:dd2c25fd1c7c0fffb632f0cf566e09744f478efceeced172d1d3779652cec13c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,45 +11,45 @@ $ docker pull openjdk@sha256:7c65dc1d294298e6ce75a062d88d14df99c2c26f284970d7267
 ### `openjdk:16-ea-alpine` - linux; amd64
 
 ```console
-$ docker pull openjdk@sha256:99d5e38dd4a15adbbc9ce7b22b0ac47ff6a538a56bc8bfffba4fb9827013fad0
+$ docker pull openjdk@sha256:c334e736e4e8cddd58c92682d69a1275f462750b099092498976365da53f709f
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **188.0 MB (188016984 bytes)**  
+-	Total Size: **188.0 MB (188020264 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0acc06434965edce175275550e45038a12aaa2a51fa56a9f4b186f58acc4db87`
+-	Image ID: `sha256:785ec88a68e0d78cf1da92735771bf56bebfa93609b75eb700ae78a89980c5ea`
 -	Default Command: `["jshell"]`
 
 ```dockerfile
-# Fri, 11 Dec 2020 02:04:06 GMT
-ADD file:62a1e09319acb6d1bad91ef1c35aabdc7e5e19883a77f30f1951ccfffc812124 in / 
-# Fri, 11 Dec 2020 02:04:07 GMT
+# Thu, 17 Dec 2020 00:19:41 GMT
+ADD file:ec475c2abb2d46435286b5ae5efacf5b50b1a9e3b6293b69db3c0172b5b9658b in / 
+# Thu, 17 Dec 2020 00:19:42 GMT
 CMD ["/bin/sh"]
-# Fri, 11 Dec 2020 15:37:11 GMT
+# Thu, 17 Dec 2020 13:15:27 GMT
 RUN apk add --no-cache java-cacerts
-# Fri, 11 Dec 2020 15:37:11 GMT
+# Thu, 17 Dec 2020 13:15:27 GMT
 ENV JAVA_HOME=/opt/openjdk-16
-# Fri, 11 Dec 2020 15:37:12 GMT
+# Thu, 17 Dec 2020 13:15:28 GMT
 ENV PATH=/opt/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 11 Dec 2020 15:37:12 GMT
+# Thu, 17 Dec 2020 13:15:28 GMT
 ENV JAVA_VERSION=16-ea+23
-# Fri, 11 Dec 2020 15:37:48 GMT
+# Thu, 17 Dec 2020 13:16:13 GMT
 RUN set -eux; 		arch="$(apk --print-arch)"; 	case "$arch" in 		x86_64) 			downloadUrl=https://download.java.net/java/early_access/alpine/23/binaries/openjdk-16-ea+23_linux-x64-musl_bin.tar.gz; 			downloadSha256=4e1d9054a4407e63fbb74155b247cf3926cffe9491074ace6d8a51d78dd0958d; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum -c -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/ssl/certs/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
-# Fri, 11 Dec 2020 15:37:48 GMT
+# Thu, 17 Dec 2020 13:16:14 GMT
 CMD ["jshell"]
 ```
 
 -	Layers:
-	-	`sha256:05e7bc50f07f000e9993ec0d264b9ffcbb9a01a4d69c68f556d25e9811a8f7f4`  
-		Last Modified: Fri, 11 Dec 2020 02:04:37 GMT  
-		Size: 2.8 MB (2796945 bytes)  
+	-	`sha256:801bfaa63ef2094d770c809815b9e2b9c1194728e5e754ef7bc764030e140cea`  
+		Last Modified: Wed, 16 Dec 2020 19:34:50 GMT  
+		Size: 2.8 MB (2799066 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3030ddbe078fa840b91b9c4cdecffd7efa208af278d07528dad2fec84d6fcd14`  
-		Last Modified: Fri, 11 Dec 2020 15:43:38 GMT  
-		Size: 926.4 KB (926397 bytes)  
+	-	`sha256:2e7f0194508bfdf90c2d4c810091723a528db557a8f15dc3342de6f146b13a31`  
+		Last Modified: Thu, 17 Dec 2020 13:21:09 GMT  
+		Size: 927.2 KB (927220 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:83b68ff00bbded1d7455a824d6f54c9d200746afa482ceaa4a54644064f00c0b`  
-		Last Modified: Fri, 11 Dec 2020 15:43:54 GMT  
-		Size: 184.3 MB (184293642 bytes)  
+	-	`sha256:d12c6ae52764c63121af92fc8ae8af14d42a3a2cbbd239516e262a14c7aca7ac`  
+		Last Modified: Thu, 17 Dec 2020 13:21:43 GMT  
+		Size: 184.3 MB (184293978 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
