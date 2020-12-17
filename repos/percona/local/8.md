@@ -1,19 +1,19 @@
-# `percona:8.0.21-12-centos`
+# `percona:8.0.22-13-centos`
 
 ## Docker Metadata
 
-- Image ID: `sha256:ad6eaa5a5b74f49021eb4f5fb528744e2e3bceda5acf7e918cbbe8839fafb578`
-- Created: `2020-12-08T00:48:46.670840289Z`
-- Virtual Size: ~ 744.11 Mb  
+- Image ID: `sha256:2ef86f7cd16d0a330e95d544ac8d2972013aeea59202bf620660b1330103584f`
+- Created: `2020-12-14T21:37:16.734269668Z`
+- Virtual Size: ~ 749.57 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
 - Command: `["mysqld"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `PS_VERSION=8.0.21-12.2`
+  - `PS_VERSION=8.0.22-13.1`
   - `OS_VER=el8`
-  - `FULL_PERCONA_VERSION=8.0.21-12.2.el8`
+  - `FULL_PERCONA_VERSION=8.0.22-13.1.el8`
 - Labels:
   - `org.label-schema.build-date=20201204`
   - `org.label-schema.license=GPLv2`
