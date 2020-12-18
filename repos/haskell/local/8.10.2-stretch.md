@@ -1844,20 +1844,13 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 - `Unicode-data`
 - `Xen-interface`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=4.9.240-2
-'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.9.240-2.dsc' linux_4.9.240-2.dsc 125025 SHA256:0b22b0b2e5e589c159ccc0cf5d8b05bea1949e8c045c3e7351960d59075dce89
-'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.9.240.orig.tar.xz' linux_4.9.240.orig.tar.xz 94916396 SHA256:373b3a5c86a213db3d57cdc82d163968b03717f2a2edcbb3959e48a35c95649c
-'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.9.240-2.debian.tar.xz' linux_4.9.240-2.debian.tar.xz 1310080 SHA256:d72e645bedf22296818a1e56597b23f154c1c1fda3ef9700a264ca4050f5af65
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/linux/4.9.240-2/
 
-- https://sources.debian.net/src/linux/4.9.240-2/ (for browsing the source)
-- https://sources.debian.net/src/linux/4.9.240-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/4.9.240-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lsb=9.20161125`
 
