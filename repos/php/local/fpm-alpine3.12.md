@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:a6360d4560f717af0d4b0677b58b39ca25373f64fac2570a580b832798480000`
-- Created: `2020-12-11T08:12:38.335372993Z`
+- Image ID: `sha256:924778312b98ea5155d8e4383d0724b4d51a439bf5eac24eecc3225d2e323db2`
+- Created: `2020-12-17T08:56:51.347249543Z`
 - Virtual Size: ~ 82.94 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -147,16 +147,16 @@ MPL-2.0 GPL-2.0-or-later
 ### `apk` package: `curl`
 
 ```console
-curl-7.69.1-r2 description:
+curl-7.69.1-r3 description:
 URL retrival utility and library
 
-curl-7.69.1-r2 webpage:
+curl-7.69.1-r3 webpage:
 https://curl.haxx.se/
 
-curl-7.69.1-r2 installed size:
+curl-7.69.1-r3 installed size:
 229376
 
-curl-7.69.1-r2 license:
+curl-7.69.1-r3 license:
 MIT
 
 ```
@@ -198,16 +198,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1g-r0 description:
+libcrypto1.1-1.1.1i-r0 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1g-r0 webpage:
+libcrypto1.1-1.1.1i-r0 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1g-r0 installed size:
-2760704
+libcrypto1.1-1.1.1i-r0 installed size:
+2764800
 
-libcrypto1.1-1.1.1g-r0 license:
+libcrypto1.1-1.1.1i-r0 license:
 OpenSSL
 
 ```
@@ -215,16 +215,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.69.1-r2 description:
+libcurl-7.69.1-r3 description:
 The multiprotocol file transfer library
 
-libcurl-7.69.1-r2 webpage:
+libcurl-7.69.1-r3 webpage:
 https://curl.haxx.se/
 
-libcurl-7.69.1-r2 installed size:
+libcurl-7.69.1-r3 installed size:
 458752
 
-libcurl-7.69.1-r2 license:
+libcurl-7.69.1-r3 license:
 MIT
 
 ```
@@ -266,16 +266,16 @@ ISC
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1g-r0 description:
+libssl1.1-1.1.1i-r0 description:
 SSL shared libraries
 
-libssl1.1-1.1.1g-r0 webpage:
+libssl1.1-1.1.1i-r0 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1g-r0 installed size:
+libssl1.1-1.1.1i-r0 installed size:
 540672
 
-libssl1.1-1.1.1g-r0 license:
+libssl1.1-1.1.1i-r0 license:
 OpenSSL
 
 ```
@@ -419,16 +419,16 @@ BSD-2-Clause
 ### `apk` package: `openssl`
 
 ```console
-openssl-1.1.1g-r0 description:
+openssl-1.1.1i-r0 description:
 Toolkit for Transport Layer Security (TLS)
 
-openssl-1.1.1g-r0 webpage:
+openssl-1.1.1i-r0 webpage:
 https://www.openssl.org/
 
-openssl-1.1.1g-r0 installed size:
+openssl-1.1.1i-r0 installed size:
 675840
 
-openssl-1.1.1g-r0 license:
+openssl-1.1.1i-r0 license:
 OpenSSL
 
 ```
