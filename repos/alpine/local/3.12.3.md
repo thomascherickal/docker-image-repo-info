@@ -1,10 +1,10 @@
-# `alpine:3.12.2`
+# `alpine:3.12.3`
 
 ## Docker Metadata
 
-- Image ID: `sha256:b14afc6dfb98a401691d5625cd08aa8459c847cd809101c4802907916a1e4da5`
-- Created: `2020-12-11T02:04:07.192210007Z`
-- Virtual Size: ~ 5.57 Mb  
+- Image ID: `sha256:389fef7118515c70fd6c0e0d50bb75669942ea722ccb976507d7b087e54d5a23`
+- Created: `2020-12-17T00:19:42.11518025Z`
+- Virtual Size: ~ 5.58 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/sh"]`
@@ -118,16 +118,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1g-r0 description:
+libcrypto1.1-1.1.1i-r0 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1g-r0 webpage:
+libcrypto1.1-1.1.1i-r0 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1g-r0 installed size:
-2760704
+libcrypto1.1-1.1.1i-r0 installed size:
+2764800
 
-libcrypto1.1-1.1.1g-r0 license:
+libcrypto1.1-1.1.1i-r0 license:
 OpenSSL
 
 ```
@@ -135,16 +135,16 @@ OpenSSL
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1g-r0 description:
+libssl1.1-1.1.1i-r0 description:
 SSL shared libraries
 
-libssl1.1-1.1.1g-r0 webpage:
+libssl1.1-1.1.1i-r0 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1g-r0 installed size:
+libssl1.1-1.1.1i-r0 installed size:
 540672
 
-libssl1.1-1.1.1g-r0 license:
+libssl1.1-1.1.1i-r0 license:
 OpenSSL
 
 ```
