@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:7a6a00e765485cfb791dbd74ee02ebec2442a9c4f9647c6bbededa5406fb8836`
-- Created: `2020-12-12T01:46:28.415506382Z`
-- Virtual Size: ~ 138.33 Mb  
+- Image ID: `sha256:7d7224ce6eaca9a12cfdbd09e659d459b4bc7347984b981b83692b78fe4817f9`
+- Created: `2020-12-17T18:48:51.559155934Z`
+- Virtual Size: ~ 138.35 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -183,16 +183,16 @@ MPL-2.0 GPL-2.0-or-later
 ### `apk` package: `curl`
 
 ```console
-curl-7.69.1-r2 description:
+curl-7.69.1-r3 description:
 URL retrival utility and library
 
-curl-7.69.1-r2 webpage:
+curl-7.69.1-r3 webpage:
 https://curl.haxx.se/
 
-curl-7.69.1-r2 installed size:
+curl-7.69.1-r3 installed size:
 229376
 
-curl-7.69.1-r2 license:
+curl-7.69.1-r3 license:
 MIT
 
 ```
@@ -251,16 +251,16 @@ FTL GPL-2.0-or-later
 ### `apk` package: `imagemagick-libs`
 
 ```console
-imagemagick-libs-7.0.10.25-r0 description:
+imagemagick-libs-7.0.10.48-r0 description:
 Collection of tools and libraries for many image formats (libraries)
 
-imagemagick-libs-7.0.10.25-r0 webpage:
+imagemagick-libs-7.0.10.48-r0 webpage:
 https://www.imagemagick.org/
 
-imagemagick-libs-7.0.10.25-r0 installed size:
-3293184
+imagemagick-libs-7.0.10.48-r0 installed size:
+3313664
 
-imagemagick-libs-7.0.10.25-r0 license:
+imagemagick-libs-7.0.10.48-r0 license:
 ImageMagick
 
 ```
@@ -370,16 +370,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1g-r0 description:
+libcrypto1.1-1.1.1i-r0 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1g-r0 webpage:
+libcrypto1.1-1.1.1i-r0 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1g-r0 installed size:
-2760704
+libcrypto1.1-1.1.1i-r0 installed size:
+2764800
 
-libcrypto1.1-1.1.1g-r0 license:
+libcrypto1.1-1.1.1i-r0 license:
 OpenSSL
 
 ```
@@ -387,16 +387,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.69.1-r2 description:
+libcurl-7.69.1-r3 description:
 The multiprotocol file transfer library
 
-libcurl-7.69.1-r2 webpage:
+libcurl-7.69.1-r3 webpage:
 https://curl.haxx.se/
 
-libcurl-7.69.1-r2 installed size:
+libcurl-7.69.1-r3 installed size:
 458752
 
-libcurl-7.69.1-r2 license:
+libcurl-7.69.1-r3 license:
 MIT
 
 ```
@@ -506,16 +506,16 @@ ISC
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1g-r0 description:
+libssl1.1-1.1.1i-r0 description:
 SSL shared libraries
 
-libssl1.1-1.1.1g-r0 webpage:
+libssl1.1-1.1.1i-r0 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1g-r0 installed size:
+libssl1.1-1.1.1i-r0 installed size:
 540672
 
-libssl1.1-1.1.1g-r0 license:
+libssl1.1-1.1.1i-r0 license:
 OpenSSL
 
 ```
@@ -846,16 +846,16 @@ BSD-2-Clause
 ### `apk` package: `openssl`
 
 ```console
-openssl-1.1.1g-r0 description:
+openssl-1.1.1i-r0 description:
 Toolkit for Transport Layer Security (TLS)
 
-openssl-1.1.1g-r0 webpage:
+openssl-1.1.1i-r0 webpage:
 https://www.openssl.org/
 
-openssl-1.1.1g-r0 installed size:
+openssl-1.1.1i-r0 installed size:
 675840
 
-openssl-1.1.1g-r0 license:
+openssl-1.1.1i-r0 license:
 OpenSSL
 
 ```
