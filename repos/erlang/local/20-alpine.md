@@ -2,16 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:78861bbea4a0ae994014e2d0ea30cfae3d24ffdb017aaa5e62ed17f7cf3946a0`
-- Created: `2020-04-24T15:25:00.911956376Z`
-- Virtual Size: ~ 77.29 Mb  
+- Image ID: `sha256:6047b0dc3ba71f35b3441a073b4e98774097be0a27e28dfd05019e4d223c237f`
+- Created: `2020-12-16T20:01:53.840937858Z`
+- Virtual Size: ~ 78.09 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["erl"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `OTP_VERSION=20.3.8.26`
-  - `REBAR3_VERSION=3.13.1`
+  - `REBAR3_VERSION=3.14.3`
 
 ## `apk` (`.apk`-based packages)
 
@@ -86,16 +86,16 @@ GPL-2.0
 ### `apk` package: `ca-certificates`
 
 ```console
-ca-certificates-20191127-r0 description:
-Common CA certificates PEM files
+ca-certificates-20191127-r2 description:
+Common CA certificates PEM files from Mozilla
 
-ca-certificates-20191127-r0 webpage:
+ca-certificates-20191127-r2 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-20191127-r0 installed size:
-741376
+ca-certificates-20191127-r2 installed size:
+737280
 
-ca-certificates-20191127-r0 license:
+ca-certificates-20191127-r2 license:
 MPL-2.0 GPL-2.0-or-later
 
 ```
@@ -205,16 +205,16 @@ GPL-2.0 and GPL-2.0-or-later and LGPL-2.0 and MIT
 ### `apk` package: `musl`
 
 ```console
-musl-1.1.20-r5 description:
+musl-1.1.20-r6 description:
 the musl c library (libc) implementation
 
-musl-1.1.20-r5 webpage:
+musl-1.1.20-r6 webpage:
 http://www.musl-libc.org/
 
-musl-1.1.20-r5 installed size:
+musl-1.1.20-r6 installed size:
 602112
 
-musl-1.1.20-r5 license:
+musl-1.1.20-r6 license:
 MIT
 
 ```
@@ -222,16 +222,16 @@ MIT
 ### `apk` package: `musl-utils`
 
 ```console
-musl-utils-1.1.20-r5 description:
+musl-utils-1.1.20-r6 description:
 the musl c library (libc) implementation
 
-musl-utils-1.1.20-r5 webpage:
+musl-utils-1.1.20-r6 webpage:
 http://www.musl-libc.org/
 
-musl-utils-1.1.20-r5 installed size:
+musl-utils-1.1.20-r6 installed size:
 139264
 
-musl-utils-1.1.20-r5 license:
+musl-utils-1.1.20-r6 license:
 MIT BSD GPL2+
 
 ```

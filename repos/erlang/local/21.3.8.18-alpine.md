@@ -2,16 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:d4193c988171b781d60f6c0837e456d1a33146bba3600965265636a7f82ebce0`
-- Created: `2020-10-05T21:57:53.983258172Z`
-- Virtual Size: ~ 73.49 Mb  
+- Image ID: `sha256:5eed2cc502ba144be13e32b9d32787d10582c13961440e40b32f3bc61775a551`
+- Created: `2020-12-16T19:39:46.803040169Z`
+- Virtual Size: ~ 74.20 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["erl"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `OTP_VERSION=21.3.8.18`
-  - `REBAR3_VERSION=3.14.1`
+  - `REBAR3_VERSION=3.14.3`
 - Labels:
   - `org.opencontainers.image.version=21.3.8.18`
 
@@ -207,16 +207,16 @@ GPL-2.0 and GPL-2.0-or-later and LGPL-2.0 and MIT
 ### `apk` package: `musl`
 
 ```console
-musl-1.1.20-r5 description:
+musl-1.1.20-r6 description:
 the musl c library (libc) implementation
 
-musl-1.1.20-r5 webpage:
+musl-1.1.20-r6 webpage:
 http://www.musl-libc.org/
 
-musl-1.1.20-r5 installed size:
+musl-1.1.20-r6 installed size:
 602112
 
-musl-1.1.20-r5 license:
+musl-1.1.20-r6 license:
 MIT
 
 ```
@@ -224,16 +224,16 @@ MIT
 ### `apk` package: `musl-utils`
 
 ```console
-musl-utils-1.1.20-r5 description:
+musl-utils-1.1.20-r6 description:
 the musl c library (libc) implementation
 
-musl-utils-1.1.20-r5 webpage:
+musl-utils-1.1.20-r6 webpage:
 http://www.musl-libc.org/
 
-musl-utils-1.1.20-r5 installed size:
+musl-utils-1.1.20-r6 installed size:
 139264
 
-musl-utils-1.1.20-r5 license:
+musl-utils-1.1.20-r6 license:
 MIT BSD GPL2+
 
 ```
