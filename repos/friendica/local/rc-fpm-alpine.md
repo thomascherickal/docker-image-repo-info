@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:81ad906de5ea394cf616419a089329f2020c1161600a774fc1d94e23f46ca3f1`
-- Created: `2020-12-11T23:39:27.770490897Z`
-- Virtual Size: ~ 127.56 Mb  
+- Image ID: `sha256:ba4b71eb738d11899d9066c8ae8133259129b8db01e3080b69b265fd009d29c1`
+- Created: `2020-12-17T18:09:43.855422887Z`
+- Virtual Size: ~ 124.16 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint-dev.sh"]`
@@ -166,16 +166,16 @@ MPL-2.0 GPL-2.0-or-later
 ### `apk` package: `curl`
 
 ```console
-curl-7.69.1-r2 description:
+curl-7.69.1-r3 description:
 URL retrival utility and library
 
-curl-7.69.1-r2 webpage:
+curl-7.69.1-r3 webpage:
 https://curl.haxx.se/
 
-curl-7.69.1-r2 installed size:
+curl-7.69.1-r3 installed size:
 229376
 
-curl-7.69.1-r2 license:
+curl-7.69.1-r3 license:
 MIT
 
 ```
@@ -302,16 +302,16 @@ GPL-3.0-or-later
 ### `apk` package: `imagemagick-libs`
 
 ```console
-imagemagick-libs-7.0.10.25-r0 description:
+imagemagick-libs-7.0.10.48-r0 description:
 Collection of tools and libraries for many image formats (libraries)
 
-imagemagick-libs-7.0.10.25-r0 webpage:
+imagemagick-libs-7.0.10.48-r0 webpage:
 https://www.imagemagick.org/
 
-imagemagick-libs-7.0.10.25-r0 installed size:
-3293184
+imagemagick-libs-7.0.10.48-r0 installed size:
+3313664
 
-imagemagick-libs-7.0.10.25-r0 license:
+imagemagick-libs-7.0.10.48-r0 license:
 ImageMagick
 
 ```
@@ -421,16 +421,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.69.1-r2 description:
+libcurl-7.69.1-r3 description:
 The multiprotocol file transfer library
 
-libcurl-7.69.1-r2 webpage:
+libcurl-7.69.1-r3 webpage:
 https://curl.haxx.se/
 
-libcurl-7.69.1-r2 installed size:
+libcurl-7.69.1-r3 installed size:
 458752
 
-libcurl-7.69.1-r2 license:
+libcurl-7.69.1-r3 license:
 MIT
 
 ```
@@ -982,16 +982,16 @@ MIT
 ### `apk` package: `openssl`
 
 ```console
-openssl-1.1.1g-r0 description:
+openssl-1.1.1i-r0 description:
 Toolkit for Transport Layer Security (TLS)
 
-openssl-1.1.1g-r0 webpage:
+openssl-1.1.1i-r0 webpage:
 https://www.openssl.org/
 
-openssl-1.1.1g-r0 installed size:
+openssl-1.1.1i-r0 installed size:
 675840
 
-openssl-1.1.1g-r0 license:
+openssl-1.1.1i-r0 license:
 OpenSSL
 
 ```
@@ -999,16 +999,16 @@ OpenSSL
 ### `apk` package: `p11-kit`
 
 ```console
-p11-kit-0.23.20-r5 description:
+p11-kit-0.23.22-r0 description:
 Library for loading and sharing PKCS#11 modules
 
-p11-kit-0.23.20-r5 webpage:
+p11-kit-0.23.22-r0 webpage:
 https://p11-glue.freedesktop.org/
 
-p11-kit-0.23.20-r5 installed size:
-1216512
+p11-kit-0.23.22-r0 installed size:
+1228800
 
-p11-kit-0.23.20-r5 license:
+p11-kit-0.23.22-r0 license:
 BSD-3-Clause
 
 ```
