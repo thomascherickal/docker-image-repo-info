@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:4fb0070fb1190aa3cf93fc965254a0cb9ffb839408e0d8ff58e1a50abc9ca617`
-- Created: `2020-12-11T23:25:59.323248046Z`
-- Virtual Size: ~ 93.33 Mb  
+- Image ID: `sha256:d17a5619198d8ee95af05a524ce5a34ad52125fb49e4a70a4c65b2e2f123a253`
+- Created: `2020-12-17T17:56:36.095480138Z`
+- Virtual Size: ~ 89.90 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
@@ -149,16 +149,16 @@ MPL-2.0 GPL-2.0-or-later
 ### `apk` package: `curl`
 
 ```console
-curl-7.69.1-r2 description:
+curl-7.69.1-r3 description:
 URL retrival utility and library
 
-curl-7.69.1-r2 webpage:
+curl-7.69.1-r3 webpage:
 https://curl.haxx.se/
 
-curl-7.69.1-r2 installed size:
+curl-7.69.1-r3 installed size:
 229376
 
-curl-7.69.1-r2 license:
+curl-7.69.1-r3 license:
 MIT
 
 ```
@@ -251,16 +251,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.69.1-r2 description:
+libcurl-7.69.1-r3 description:
 The multiprotocol file transfer library
 
-libcurl-7.69.1-r2 webpage:
+libcurl-7.69.1-r3 webpage:
 https://curl.haxx.se/
 
-libcurl-7.69.1-r2 installed size:
+libcurl-7.69.1-r3 installed size:
 458752
 
-libcurl-7.69.1-r2 license:
+libcurl-7.69.1-r3 license:
 MIT
 
 ```
@@ -506,16 +506,16 @@ BSD-2-Clause
 ### `apk` package: `openssl`
 
 ```console
-openssl-1.1.1g-r0 description:
+openssl-1.1.1i-r0 description:
 Toolkit for Transport Layer Security (TLS)
 
-openssl-1.1.1g-r0 webpage:
+openssl-1.1.1i-r0 webpage:
 https://www.openssl.org/
 
-openssl-1.1.1g-r0 installed size:
+openssl-1.1.1i-r0 installed size:
 675840
 
-openssl-1.1.1g-r0 license:
+openssl-1.1.1i-r0 license:
 OpenSSL
 
 ```
