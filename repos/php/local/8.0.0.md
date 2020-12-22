@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:35e9498b740f5706fe02e86ee2c55366932a0962c345b99c7a74cbbd9a2d26ac`
-- Created: `2020-12-11T07:25:41.107333353Z`
-- Virtual Size: ~ 406.62 Mb  
+- Image ID: `sha256:6d35ee0216ef29d529965df0af92a2104a4e68059cce60a5b25302ce8adca7b7`
+- Created: `2020-12-18T21:09:07.860173359Z`
+- Virtual Size: ~ 422.51 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -13,6 +13,7 @@
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `PHPIZE_DEPS=autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c`
   - `PHP_INI_DIR=/usr/local/etc/php`
+  - `PHP_EXTRA_CONFIGURE_ARGS=--enable-embed`
   - `PHP_CFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
