@@ -1,9 +1,9 @@
-# `openjdk:16-ea-28-jdk-oraclelinux7`
+# `openjdk:16-ea-29-jdk-oraclelinux7`
 
 ## Docker Metadata
 
-- Image ID: `sha256:aa0407097e64eec31a3213e40c57325090ce6d7de737a35a165ce6316689ced2`
-- Created: `2020-12-18T04:49:33.551935149Z`
+- Image ID: `sha256:209b97bc25cd123ae43329f896fc910a62f360f0ed50e0bc494691ad68c4c953`
+- Created: `2020-12-18T20:54:00.652717777Z`
 - Virtual Size: ~ 490.36 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -12,7 +12,7 @@
   - `PATH=/usr/java/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=en_US.UTF-8`
   - `JAVA_HOME=/usr/java/openjdk-16`
-  - `JAVA_VERSION=16-ea+28`
+  - `JAVA_VERSION=16-ea+29`
 - Labels:
   - `org.opencontainers.image.authors=Oracle Linux Product Team <ol-ovm-info_ww@oracle.com>`
   - `org.opencontainers.image.description=Oracle Linux is an open-source       operating system available under the GNU General Public License (GPLv2) and       is suitable for both general purpose or Oracle workloads.`
