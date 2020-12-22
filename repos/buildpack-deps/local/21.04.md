@@ -980,14 +980,13 @@ Licenses: (parsed from: `/usr/share/doc/gir1.2-gdkpixbuf-2.0/copyright`, `/usr/s
 - `LGPL-2+`
 - `MPL-1.1-or-LGPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gdk-pixbuf=2.40.0+dfsg-8
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gdk-pixbuf/gdk-pixbuf_2.40.0+dfsg-8.dsc' gdk-pixbuf_2.40.0+dfsg-8.dsc 3613 SHA512:78c21d40cf76701d9a06dd57fb06572bce54c2585a0c00d611ceafaa1f8ae69c796c46e6bdb535390db6445b4ee2c5fcd293749e3f052b3edeeff374fa2eab99
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gdk-pixbuf/gdk-pixbuf_2.40.0+dfsg.orig.tar.xz' gdk-pixbuf_2.40.0+dfsg.orig.tar.xz 5626144 SHA512:bb8a9d1837bffdc5f50307dba1a1e6f1ac015e6e670ea6cae6d0bc997afa106ff0d928cb847d76848c480a06e1ad3945274b4913eaa4d9a8074797fc82bb7c1f
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gdk-pixbuf/gdk-pixbuf_2.40.0+dfsg-8.debian.tar.xz' gdk-pixbuf_2.40.0+dfsg-8.debian.tar.xz 19740 SHA512:10a27ba4cc826f4496cfdd8b5cc520d60b82f5a452577b739655525c4535d2dec73a4721e55d30b100afa11060350bb9a2810691c87f75f213c06bd1b1a51871
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/gdk-pixbuf/2.40.0+dfsg-8/
+
 
 ### `dpkg` source package: `git=1:2.29.2-1ubuntu1`
 
@@ -1382,15 +1381,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris icu=67.1-4
-'http://archive.ubuntu.com/ubuntu/pool/main/i/icu/icu_67.1-4.dsc' icu_67.1-4.dsc 2219 SHA512:f9b19b2fb67fe6957fb9ee494b5095fd68c944edef42f1e05e12fc975ba62ab69ee0a2d9fa868bdba1161c175f4c6cc2d82e67ef7403d4af43dda58f02f3607b
-'http://archive.ubuntu.com/ubuntu/pool/main/i/icu/icu_67.1.orig.tar.gz' icu_67.1.orig.tar.gz 24518055 SHA512:4779f1ce1ca7976f6fad6768853ea8c540da54d11509e3b6cfd864a04b5f2db1c3d4b546387f91ad02fb90804525bc37d2543173f0d705d6ca11dc6f2b7640a8
-'http://archive.ubuntu.com/ubuntu/pool/main/i/icu/icu_67.1.orig.tar.gz.asc' icu_67.1.orig.tar.gz.asc 833 SHA512:3d731cfbb200f150f6fda348a100226ad7a56dea428a46745bcaf5be3ad6a0bf3ef685acfdf759f51a53704d78b4a02ee90ecbf50f2e18d14fcef5050afd8f54
-'http://archive.ubuntu.com/ubuntu/pool/main/i/icu/icu_67.1-4.debian.tar.xz' icu_67.1-4.debian.tar.xz 29480 SHA512:0b95795c7230c58fa6d0bfc13cb07431375026467d3845004aebb374c0fe5be38aacdd9ecbc2d769afb37924c1eb607a9bcd5f821dfe028b06e4cd6c3802bad7
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/icu/67.1-4/
+
 
 ### `dpkg` source package: `ilmbase=2.5.3-2`
 
@@ -3810,14 +3807,13 @@ Licenses: (parsed from: `/usr/share/doc/libreadline-dev/copyright`, `/usr/share/
 - `GFDL`
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris readline=8.1~rc3-1
-'http://archive.ubuntu.com/ubuntu/pool/main/r/readline/readline_8.1~rc3-1.dsc' readline_8.1~rc3-1.dsc 2446 SHA512:53efe820c4da6cc1210c8113c869ddf735d0c78898b75e447ccc19277709d4fcc8ce2f150554aa39588cdc3e2b2a7203a47959dd76187e5d696878e6e7d8e8af
-'http://archive.ubuntu.com/ubuntu/pool/main/r/readline/readline_8.1~rc3.orig.tar.gz' readline_8.1~rc3.orig.tar.gz 2992934 SHA512:88301670c8da5ffb5aeb662c453f22a598c3d2cd3319f428c001986ad021ec1005c491a4e96d764f133d078842af87e74c6dfb09612f469396b814991164db7e
-'http://archive.ubuntu.com/ubuntu/pool/main/r/readline/readline_8.1~rc3-1.debian.tar.xz' readline_8.1~rc3-1.debian.tar.xz 29212 SHA512:47c9efd8cbe9b1ad30e570b04a81ac13263ca8f4f665f2366882e9d9e896b2aba2e2a09ebfd1fe7206bb9101057bf892e7b4d0d0dd34393ffd803f7183c60b5c
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/readline/8.1~rc3-1/
+
 
 ### `dpkg` source package: `rpcsvc-proto=1.4.2-0ubuntu4`
 
