@@ -134,20 +134,13 @@ Licenses: (parsed from: `/usr/share/doc/libaudit-common/copyright`, `/usr/share/
 - `GPL-2`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris audit=1:2.8.5-3.1
-'http://deb.debian.org/debian/pool/main/a/audit/audit_2.8.5-3.1.dsc' audit_2.8.5-3.1.dsc 2755 SHA256:6948cf0949661bae1291a5efb69fa70a2640996fe5dfce6f336ab72734ecaea7
-'http://deb.debian.org/debian/pool/main/a/audit/audit_2.8.5.orig.tar.gz' audit_2.8.5.orig.tar.gz 1140694 SHA256:0e5d4103646e00f8d1981e1cd2faea7a2ae28e854c31a803e907a383c5e2ecb7
-'http://deb.debian.org/debian/pool/main/a/audit/audit_2.8.5-3.1.debian.tar.xz' audit_2.8.5-3.1.debian.tar.xz 17556 SHA256:788e4d5dd61e7409378269ac45aeecede78b40d0ac9fc6fd64a223a918184a9f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/audit/1:2.8.5-3.1/
 
-- https://sources.debian.net/src/audit/1:2.8.5-3.1/ (for browsing the source)
-- https://sources.debian.net/src/audit/1:2.8.5-3.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/audit/1:2.8.5-3.1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-files=11`
 
@@ -856,20 +849,13 @@ Licenses: (parsed from: `/usr/share/doc/iproute2/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris iproute2=5.9.0-1
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.9.0-1.dsc' iproute2_5.9.0-1.dsc 1831 SHA256:7931432bf7a029626ba11a70dd7f7ca50df86d8949f5496da8a7a9a8ae76f7b3
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.9.0.orig.tar.xz' iproute2_5.9.0.orig.tar.xz 786524 SHA256:a25dac94bcdcf2f73316c7f812115ea7a5710580bad892b08a83d00c6b33dacf
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_5.9.0-1.debian.tar.xz' iproute2_5.9.0-1.debian.tar.xz 35980 SHA256:29183cfb3eb5ff5a97c95ec74243ccf726fb697bd18d7069e83d12fa0f41788d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/iproute2/5.9.0-1/
 
-- https://sources.debian.net/src/iproute2/5.9.0-1/ (for browsing the source)
-- https://sources.debian.net/src/iproute2/5.9.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/iproute2/5.9.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `iptables=1.8.6-1`
 
@@ -1172,21 +1158,13 @@ Licenses: (parsed from: `/usr/share/doc/libseccomp2/copyright`)
 
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libseccomp=2.5.0-3
-'http://deb.debian.org/debian/pool/main/libs/libseccomp/libseccomp_2.5.0-3.dsc' libseccomp_2.5.0-3.dsc 2676 SHA256:d3e0819d1da3b8739042b6faeb8b4a08f47acafdd82e4c2dd79fc973a21a9ce8
-'http://deb.debian.org/debian/pool/main/libs/libseccomp/libseccomp_2.5.0.orig.tar.gz' libseccomp_2.5.0.orig.tar.gz 638793 SHA256:1ffa7038d2720ad191919816db3479295a4bcca1ec14e02f672539f4983014f3
-'http://deb.debian.org/debian/pool/main/libs/libseccomp/libseccomp_2.5.0.orig.tar.gz.asc' libseccomp_2.5.0.orig.tar.gz.asc 833 SHA256:50de52e9e147dbb1e4ed937fe0d1a3d4a7af5e418908a0ed9c41b8ad2fc1e1fa
-'http://deb.debian.org/debian/pool/main/libs/libseccomp/libseccomp_2.5.0-3.debian.tar.xz' libseccomp_2.5.0-3.debian.tar.xz 24464 SHA256:c3eaeb70a504cf9f0b432d61f2e94a1e5be3e2aed4fcc205a6392b96eb1a5e42
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libseccomp/2.5.0-3/
 
-- https://sources.debian.net/src/libseccomp/2.5.0-3/ (for browsing the source)
-- https://sources.debian.net/src/libseccomp/2.5.0-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libseccomp/2.5.0-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libselinux=3.1-2`
 
@@ -1423,20 +1401,13 @@ Licenses: (parsed from: `/usr/share/doc/liblz4-1/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris lz4=1.9.2-2
-'http://deb.debian.org/debian/pool/main/l/lz4/lz4_1.9.2-2.dsc' lz4_1.9.2-2.dsc 1956 SHA256:103fa80edbf501cf6e6d9ee0ed3d75d6111cd06026b00aaccaa11fe5555b71a6
-'http://deb.debian.org/debian/pool/main/l/lz4/lz4_1.9.2.orig.tar.gz' lz4_1.9.2.orig.tar.gz 305796 SHA256:658ba6191fa44c92280d4aa2c271b0f4fbc0e34d249578dd05e50e76d0e5efcc
-'http://deb.debian.org/debian/pool/main/l/lz4/lz4_1.9.2-2.debian.tar.xz' lz4_1.9.2-2.debian.tar.xz 12712 SHA256:8970a0afc2f1633bbc8b7f55fa36ba711fb4d0c1811e591ad8f52d1d1968592c
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/lz4/1.9.2-2/
 
-- https://sources.debian.net/src/lz4/1.9.2-2/ (for browsing the source)
-- https://sources.debian.net/src/lz4/1.9.2-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/lz4/1.9.2-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mawk=1.3.4.20200120-2`
 
@@ -1741,9 +1712,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris systemd=247.1-3
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_247.1-3.dsc' systemd_247.1-3.dsc 5167 SHA256:ba0f5895eb14024d5cbcdc8a10e2e668110d4cf483d9543d81ffec60881a9f7e
+'http://deb.debian.org/debian/pool/main/s/systemd/systemd_247.1-3+deb11u1.dsc' systemd_247.1-3+deb11u1.dsc 5224 SHA256:75c338e598cd12babed151840938b2253c0fecc06b9bbfa12b13006f2299b0a3
 'http://deb.debian.org/debian/pool/main/s/systemd/systemd_247.1.orig.tar.gz' systemd_247.1.orig.tar.gz 9889494 SHA256:ff0503472d8680e93c14518442d94071c42452d7ad283d6a2042f11077b19230
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_247.1-3.debian.tar.xz' systemd_247.1-3.debian.tar.xz 152356 SHA256:12c3a64e2195bb6e562458075efc8f35120af4f8da11a933798064bdbd70d88e
+'http://deb.debian.org/debian/pool/main/s/systemd/systemd_247.1-3+deb11u1.debian.tar.xz' systemd_247.1-3+deb11u1.debian.tar.xz 153020 SHA256:a3c90d79f2f6b6e32b8799d1e395826a62eb52acdc3d0b9b697151ea9d58f361
 ```
 
 Other potentially useful URLs:
@@ -1862,20 +1833,13 @@ Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/lib
 - `MIT`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris util-linux=2.36.1-2
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.36.1-2.dsc' util-linux_2.36.1-2.dsc 4337 SHA256:65af10bd74048bd01cbd75032f61451e94d0b26041ecb63fef55dcd24ea8348b
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.36.1.orig.tar.xz' util-linux_2.36.1.orig.tar.xz 5231880 SHA256:09fac242172cd8ec27f0739d8d192402c69417617091d8c6e974841568f37eed
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.36.1-2.debian.tar.xz' util-linux_2.36.1-2.debian.tar.xz 96312 SHA256:75b17972b22dcf3a11c402bc23a3106cb814ca4b0275f470e65ba136975e4f12
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/util-linux/2.36.1-2/
 
-- https://sources.debian.net/src/util-linux/2.36.1-2/ (for browsing the source)
-- https://sources.debian.net/src/util-linux/2.36.1-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/util-linux/2.36.1-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `xz-utils=5.2.4-1`
 
