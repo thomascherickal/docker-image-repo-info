@@ -1715,20 +1715,13 @@ Licenses: (parsed from: `/usr/share/doc/liblz4-1/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris lz4=1.9.2-2
-'http://deb.debian.org/debian/pool/main/l/lz4/lz4_1.9.2-2.dsc' lz4_1.9.2-2.dsc 1956 SHA256:103fa80edbf501cf6e6d9ee0ed3d75d6111cd06026b00aaccaa11fe5555b71a6
-'http://deb.debian.org/debian/pool/main/l/lz4/lz4_1.9.2.orig.tar.gz' lz4_1.9.2.orig.tar.gz 305796 SHA256:658ba6191fa44c92280d4aa2c271b0f4fbc0e34d249578dd05e50e76d0e5efcc
-'http://deb.debian.org/debian/pool/main/l/lz4/lz4_1.9.2-2.debian.tar.xz' lz4_1.9.2-2.debian.tar.xz 12712 SHA256:8970a0afc2f1633bbc8b7f55fa36ba711fb4d0c1811e591ad8f52d1d1968592c
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/lz4/1.9.2-2/
 
-- https://sources.debian.net/src/lz4/1.9.2-2/ (for browsing the source)
-- https://sources.debian.net/src/lz4/1.9.2-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/lz4/1.9.2-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mawk=1.3.4.20200120-2`
 
@@ -2278,9 +2271,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris systemd=247.1-3
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_247.1-3.dsc' systemd_247.1-3.dsc 5167 SHA256:ba0f5895eb14024d5cbcdc8a10e2e668110d4cf483d9543d81ffec60881a9f7e
+'http://deb.debian.org/debian/pool/main/s/systemd/systemd_247.1-3+deb11u1.dsc' systemd_247.1-3+deb11u1.dsc 5224 SHA256:75c338e598cd12babed151840938b2253c0fecc06b9bbfa12b13006f2299b0a3
 'http://deb.debian.org/debian/pool/main/s/systemd/systemd_247.1.orig.tar.gz' systemd_247.1.orig.tar.gz 9889494 SHA256:ff0503472d8680e93c14518442d94071c42452d7ad283d6a2042f11077b19230
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_247.1-3.debian.tar.xz' systemd_247.1-3.debian.tar.xz 152356 SHA256:12c3a64e2195bb6e562458075efc8f35120af4f8da11a933798064bdbd70d88e
+'http://deb.debian.org/debian/pool/main/s/systemd/systemd_247.1-3+deb11u1.debian.tar.xz' systemd_247.1-3+deb11u1.debian.tar.xz 153020 SHA256:a3c90d79f2f6b6e32b8799d1e395826a62eb52acdc3d0b9b697151ea9d58f361
 ```
 
 Other potentially useful URLs:
@@ -2399,20 +2392,13 @@ Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/lib
 - `MIT`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris util-linux=2.36.1-2
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.36.1-2.dsc' util-linux_2.36.1-2.dsc 4337 SHA256:65af10bd74048bd01cbd75032f61451e94d0b26041ecb63fef55dcd24ea8348b
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.36.1.orig.tar.xz' util-linux_2.36.1.orig.tar.xz 5231880 SHA256:09fac242172cd8ec27f0739d8d192402c69417617091d8c6e974841568f37eed
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.36.1-2.debian.tar.xz' util-linux_2.36.1-2.debian.tar.xz 96312 SHA256:75b17972b22dcf3a11c402bc23a3106cb814ca4b0275f470e65ba136975e4f12
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/util-linux/2.36.1-2/
 
-- https://sources.debian.net/src/util-linux/2.36.1-2/ (for browsing the source)
-- https://sources.debian.net/src/util-linux/2.36.1-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/util-linux/2.36.1-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `wget=1.20.3-1`
 

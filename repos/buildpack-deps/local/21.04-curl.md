@@ -908,15 +908,13 @@ Licenses: (parsed from: `/usr/share/doc/libksba8/copyright`)
 - `GPL-3`
 - `LGPL-2.1-or-later`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libksba=1.5.0-2
-'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.5.0-2.dsc' libksba_1.5.0-2.dsc 2470 SHA512:5cd3a0c450dcc649417a6e8b4d3ccbd9d319dad36d4f337fff8758c1ef9f2e76d806c9d78f6ec1d8e4c15f961930b299b34c45f46fd69c01d5e9d3b958e50ebb
-'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.5.0.orig.tar.bz2' libksba_1.5.0.orig.tar.bz2 656518 SHA512:84383e8b084bf47ac646a9aacb174e510ffcab4b966b649e4351990eaf7ce78cc9d199e6c4f3a1be697888c857ee86ecef949c06156790c7d8d0bd0fb0142721
-'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.5.0.orig.tar.bz2.asc' libksba_1.5.0.orig.tar.bz2.asc 228 SHA512:04f2ebeb83ee672b67542ff1c068f0e61bbea61b3917dd9e7af5fceb85e2e4dec191cf1e487344e50f26893c4b9045ba7f21cc6968b4ef675a2407681b856aaf
-'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.5.0-2.debian.tar.xz' libksba_1.5.0-2.debian.tar.xz 13780 SHA512:ead8a222e4f8ce022d571f1203b4bf07c747c61168fb0c57e9e9f1bddfa3d7ee7945fe054deb6ce7fd22854dbb0040a61ac0eafaccc903d59d3cd2507c0f69b0
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/libksba/1.5.0-2/
+
 
 ### `dpkg` source package: `libnsl=1.3.0-0ubuntu3`
 
