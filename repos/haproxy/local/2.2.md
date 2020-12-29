@@ -2,12 +2,12 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:b5cf79a9a418029a83d802f592e7af8c7b86e63fe965984432ed4a46f512706c`
-- Created: `2020-12-11T06:33:58.791500311Z`
-- Virtual Size: ~ 93.41 Mb  
+- Image ID: `sha256:ddc63c7152d840278f4731533b7398ac573beb1df8adeff6d8f865d86fa09efa`
+- Created: `2020-12-29T01:25:17.835306886Z`
+- Virtual Size: ~ 93.44 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Entrypoint: `["/docker-entrypoint.sh"]`
+- Entrypoint: `["docker-entrypoint.sh"]`
 - Command: `["haproxy","-f","/usr/local/etc/haproxy/haproxy.cfg"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
