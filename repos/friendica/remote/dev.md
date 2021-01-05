@@ -1,7 +1,7 @@
 ## `friendica:dev`
 
 ```console
-$ docker pull friendica@sha256:fc7438d5ebd0f2510287ce7742b6b9063b7e924f101804a8ec0aec1f14bf8b34
+$ docker pull friendica@sha256:9b58af74286e9db65dca7fc2263ab5103473d35c5dc67b2d5631199d657ef363
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -18,14 +18,14 @@ $ docker pull friendica@sha256:fc7438d5ebd0f2510287ce7742b6b9063b7e924f101804a8e
 ### `friendica:dev` - linux; amd64
 
 ```console
-$ docker pull friendica@sha256:d847d2df5b37cb7d9ac1a4827e1eae320231e05dcf69ff8ee7d3cba278e3b7c6
+$ docker pull friendica@sha256:ba0bd4c60967ce98c474a03e4a2c38120dd589331956b6cce1720dba649b0d6d
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **183.2 MB (183232420 bytes)**  
+-	Total Size: **183.2 MB (183232419 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3058ecb14a0d38e2adfda094a93a28093814853705a553dc558cbacb69b75bcc`
+-	Image ID: `sha256:1c048d6ef21af55cd7be29452e06dfac7b47c96a919704ba7fc24d9167df3550`
 -	Entrypoint: `["\/entrypoint-dev.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -110,17 +110,17 @@ RUN set -ex;     {         echo 'opcache.enable=1' ;         echo 'opcache.inter
 VOLUME [/var/www/html]
 # Fri, 11 Dec 2020 23:31:13 GMT
 RUN set -ex;    a2enmod rewrite remoteip ;    {     echo RemoteIPHeader X-Real-IP ;     echo RemoteIPTrustedProxy 10.0.0.0/8 ;     echo RemoteIPTrustedProxy 172.16.0.0/12 ;     echo RemoteIPTrustedProxy 192.168.0.0/16 ;    } > /etc/apache2/conf-available/remoteip.conf;    a2enconf remoteip
-# Fri, 11 Dec 2020 23:38:50 GMT
-ENV FRIENDICA_VERSION=2020.12-dev
-# Fri, 11 Dec 2020 23:38:50 GMT
-ENV FRIENDICA_ADDONS=2020.12-dev
-# Fri, 11 Dec 2020 23:38:51 GMT
+# Tue, 05 Jan 2021 22:20:38 GMT
+ENV FRIENDICA_VERSION=2021.03-dev
+# Tue, 05 Jan 2021 22:20:38 GMT
+ENV FRIENDICA_ADDONS=2021.03-dev
+# Tue, 05 Jan 2021 22:20:38 GMT
 COPY multi:b20e37902564ea2dd022293f7b41911842ada0268aa69dff8006238a11a5b5e0 in / 
-# Fri, 11 Dec 2020 23:38:52 GMT
+# Tue, 05 Jan 2021 22:20:39 GMT
 COPY multi:923de5042cde61ed518a7067985e18cb873d0cd10946593bfb44de6ba9e078ed in /usr/src/friendica/config/ 
-# Fri, 11 Dec 2020 23:38:52 GMT
+# Tue, 05 Jan 2021 22:20:39 GMT
 ENTRYPOINT ["/entrypoint-dev.sh"]
-# Fri, 11 Dec 2020 23:38:53 GMT
+# Tue, 05 Jan 2021 22:20:39 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -201,26 +201,26 @@ CMD ["apache2-foreground"]
 		Last Modified: Fri, 11 Dec 2020 23:40:06 GMT  
 		Size: 543.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f981c9b671c196a89ec92d60d3c4e99ec7f3e497d969a157cae12f50fd2b797c`  
-		Last Modified: Fri, 11 Dec 2020 23:41:17 GMT  
-		Size: 3.3 KB (3261 bytes)  
+	-	`sha256:ac3137336411978e7f1a0999226c25dbd4206d806c193c3b025d792d93bfd6ac`  
+		Last Modified: Tue, 05 Jan 2021 22:22:07 GMT  
+		Size: 3.3 KB (3260 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:56b5daa9a36786d502219d96a92ee378a7077487ab6449a36d8a62f356c6c403`  
-		Last Modified: Fri, 11 Dec 2020 23:41:17 GMT  
+	-	`sha256:c72df51e78413a83c4829eb8b8b16d9b81c6df712d8374f6a106d4a3455d1b9e`  
+		Last Modified: Tue, 05 Jan 2021 22:22:07 GMT  
 		Size: 1.1 KB (1065 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `friendica:dev` - linux; arm variant v5
 
 ```console
-$ docker pull friendica@sha256:8aa63500625ab00e33803ff6509ab740ddf96efec02f4eccbdf9785dfba4f6f4
+$ docker pull friendica@sha256:7da74844c64a4cd2ab2339f2a0799b90d68c03dc98eed4e0575ac40501842896
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **158.8 MB (158803457 bytes)**  
+-	Total Size: **158.8 MB (158803460 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:545e2b7d17239ffbe25cfab665c339d639bd90af7acb6754f32d511c3dc9647b`
+-	Image ID: `sha256:c3c664ecd89c717a161c55f3053ba403c76a7875966875dfd71a443b1ff42f4a`
 -	Entrypoint: `["\/entrypoint-dev.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -305,17 +305,17 @@ RUN set -ex;     {         echo 'opcache.enable=1' ;         echo 'opcache.inter
 VOLUME [/var/www/html]
 # Fri, 11 Dec 2020 16:48:28 GMT
 RUN set -ex;    a2enmod rewrite remoteip ;    {     echo RemoteIPHeader X-Real-IP ;     echo RemoteIPTrustedProxy 10.0.0.0/8 ;     echo RemoteIPTrustedProxy 172.16.0.0/12 ;     echo RemoteIPTrustedProxy 192.168.0.0/16 ;    } > /etc/apache2/conf-available/remoteip.conf;    a2enconf remoteip
-# Fri, 11 Dec 2020 16:57:13 GMT
-ENV FRIENDICA_VERSION=2020.12-dev
-# Fri, 11 Dec 2020 16:57:13 GMT
-ENV FRIENDICA_ADDONS=2020.12-dev
-# Fri, 11 Dec 2020 16:57:15 GMT
+# Tue, 05 Jan 2021 21:50:46 GMT
+ENV FRIENDICA_VERSION=2021.03-dev
+# Tue, 05 Jan 2021 21:50:47 GMT
+ENV FRIENDICA_ADDONS=2021.03-dev
+# Tue, 05 Jan 2021 21:50:49 GMT
 COPY multi:b20e37902564ea2dd022293f7b41911842ada0268aa69dff8006238a11a5b5e0 in / 
-# Fri, 11 Dec 2020 16:57:16 GMT
+# Tue, 05 Jan 2021 21:50:50 GMT
 COPY multi:923de5042cde61ed518a7067985e18cb873d0cd10946593bfb44de6ba9e078ed in /usr/src/friendica/config/ 
-# Fri, 11 Dec 2020 16:57:18 GMT
+# Tue, 05 Jan 2021 21:50:51 GMT
 ENTRYPOINT ["/entrypoint-dev.sh"]
-# Fri, 11 Dec 2020 16:57:19 GMT
+# Tue, 05 Jan 2021 21:50:52 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -396,26 +396,26 @@ CMD ["apache2-foreground"]
 		Last Modified: Fri, 11 Dec 2020 16:58:33 GMT  
 		Size: 545.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e73bd6ff84758150fa5ebd32220a109a267ab6dc8ba738f38561990c66d607cc`  
-		Last Modified: Fri, 11 Dec 2020 16:59:28 GMT  
-		Size: 3.3 KB (3260 bytes)  
+	-	`sha256:34cb7a079eaa5f4e4c8488170642b68d1ba515d98c64ff021ca90c45b7c4e9b6`  
+		Last Modified: Tue, 05 Jan 2021 21:52:29 GMT  
+		Size: 3.3 KB (3261 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8aef8e65004fdf2f98b4117e3f3b0b6bf94ba3f0f1faba35c0f272c8bf8195b8`  
-		Last Modified: Fri, 11 Dec 2020 16:59:28 GMT  
-		Size: 1.1 KB (1091 bytes)  
+	-	`sha256:a24405d3a0472cad142db57c1f29e79d34c50db95ab0d072f82b72889c03e37e`  
+		Last Modified: Tue, 05 Jan 2021 21:52:29 GMT  
+		Size: 1.1 KB (1093 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `friendica:dev` - linux; arm variant v7
 
 ```console
-$ docker pull friendica@sha256:e4c7e90744dab7837e4373ff673e1effa407e29049a7f13a633b55eb5a23db5c
+$ docker pull friendica@sha256:fa124d19b80d5aafed670abda277492dc84d871e7667827fdf193916d6c6957a
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **153.4 MB (153415053 bytes)**  
+-	Total Size: **153.4 MB (153415048 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a9e6c3cb8f5e3faa545dff36dc6aeb2550290e5ecf0741a2cfe4d14c171956e9`
+-	Image ID: `sha256:9bebdd855a1d8a65ac213b8c1ca5a0db9b4e71543cd939f4a586d9056f5f3e90`
 -	Entrypoint: `["\/entrypoint-dev.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -500,17 +500,17 @@ RUN set -ex;     {         echo 'opcache.enable=1' ;         echo 'opcache.inter
 VOLUME [/var/www/html]
 # Sat, 12 Dec 2020 00:55:40 GMT
 RUN set -ex;    a2enmod rewrite remoteip ;    {     echo RemoteIPHeader X-Real-IP ;     echo RemoteIPTrustedProxy 10.0.0.0/8 ;     echo RemoteIPTrustedProxy 172.16.0.0/12 ;     echo RemoteIPTrustedProxy 192.168.0.0/16 ;    } > /etc/apache2/conf-available/remoteip.conf;    a2enconf remoteip
-# Sat, 12 Dec 2020 01:05:29 GMT
-ENV FRIENDICA_VERSION=2020.12-dev
-# Sat, 12 Dec 2020 01:05:30 GMT
-ENV FRIENDICA_ADDONS=2020.12-dev
-# Sat, 12 Dec 2020 01:05:32 GMT
+# Tue, 05 Jan 2021 22:01:45 GMT
+ENV FRIENDICA_VERSION=2021.03-dev
+# Tue, 05 Jan 2021 22:01:46 GMT
+ENV FRIENDICA_ADDONS=2021.03-dev
+# Tue, 05 Jan 2021 22:01:47 GMT
 COPY multi:b20e37902564ea2dd022293f7b41911842ada0268aa69dff8006238a11a5b5e0 in / 
-# Sat, 12 Dec 2020 01:05:33 GMT
+# Tue, 05 Jan 2021 22:01:49 GMT
 COPY multi:923de5042cde61ed518a7067985e18cb873d0cd10946593bfb44de6ba9e078ed in /usr/src/friendica/config/ 
-# Sat, 12 Dec 2020 01:05:34 GMT
+# Tue, 05 Jan 2021 22:01:49 GMT
 ENTRYPOINT ["/entrypoint-dev.sh"]
-# Sat, 12 Dec 2020 01:05:36 GMT
+# Tue, 05 Jan 2021 22:01:52 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -591,13 +591,13 @@ CMD ["apache2-foreground"]
 		Last Modified: Sat, 12 Dec 2020 01:07:25 GMT  
 		Size: 543.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0021d0963d1257239e8b44a95a4e3b86930c3c1c26ac4cae937ea07cfbb628ea`  
-		Last Modified: Sat, 12 Dec 2020 01:08:49 GMT  
-		Size: 3.3 KB (3261 bytes)  
+	-	`sha256:a983f501bb9009cce93d91ae194641e2cefb826ffad150e37d9ad41b599ee8bf`  
+		Last Modified: Tue, 05 Jan 2021 22:04:32 GMT  
+		Size: 3.3 KB (3260 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6e6ed803e305fbce69015dd1c6c841b6a0638fbdae7782acc3c8cf0eb6c44dc8`  
-		Last Modified: Sat, 12 Dec 2020 01:08:49 GMT  
-		Size: 1.1 KB (1096 bytes)  
+	-	`sha256:8db8e5f2457e57cf93d2ee5e61f36696af33effa8e33a57665005bcf6060689d`  
+		Last Modified: Tue, 05 Jan 2021 22:04:32 GMT  
+		Size: 1.1 KB (1092 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `friendica:dev` - linux; arm64 variant v8
@@ -993,14 +993,14 @@ CMD ["apache2-foreground"]
 ### `friendica:dev` - linux; mips64le
 
 ```console
-$ docker pull friendica@sha256:d9c1f8b84094906e27a7d4c6e0b4e289312d714b1d3a6ccfa43369492ca9ae6f
+$ docker pull friendica@sha256:4783d3681fd538a2fd8c96dcf3f36dac68644cf23c28d5a0862b5f77391effe2
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **164.6 MB (164618448 bytes)**  
+-	Total Size: **164.6 MB (164618455 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1cad466b8f62aec9044dfdbfb11db7f6a94335754eb3e3864d74ae39ef24cf09`
+-	Image ID: `sha256:e0e40fc416bcc4fb63bd2dcb3e1909401839aef5edc1a07573336dfdedfffec4`
 -	Entrypoint: `["\/entrypoint-dev.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -1085,17 +1085,17 @@ RUN set -ex;     {         echo 'opcache.enable=1' ;         echo 'opcache.inter
 VOLUME [/var/www/html]
 # Fri, 11 Dec 2020 17:33:00 GMT
 RUN set -ex;    a2enmod rewrite remoteip ;    {     echo RemoteIPHeader X-Real-IP ;     echo RemoteIPTrustedProxy 10.0.0.0/8 ;     echo RemoteIPTrustedProxy 172.16.0.0/12 ;     echo RemoteIPTrustedProxy 192.168.0.0/16 ;    } > /etc/apache2/conf-available/remoteip.conf;    a2enconf remoteip
-# Fri, 11 Dec 2020 17:41:32 GMT
-ENV FRIENDICA_VERSION=2020.12-dev
-# Fri, 11 Dec 2020 17:41:32 GMT
-ENV FRIENDICA_ADDONS=2020.12-dev
-# Fri, 11 Dec 2020 17:41:33 GMT
+# Tue, 05 Jan 2021 22:08:40 GMT
+ENV FRIENDICA_VERSION=2021.03-dev
+# Tue, 05 Jan 2021 22:08:40 GMT
+ENV FRIENDICA_ADDONS=2021.03-dev
+# Tue, 05 Jan 2021 22:08:41 GMT
 COPY multi:b20e37902564ea2dd022293f7b41911842ada0268aa69dff8006238a11a5b5e0 in / 
-# Fri, 11 Dec 2020 17:41:34 GMT
+# Tue, 05 Jan 2021 22:08:42 GMT
 COPY multi:923de5042cde61ed518a7067985e18cb873d0cd10946593bfb44de6ba9e078ed in /usr/src/friendica/config/ 
-# Fri, 11 Dec 2020 17:41:34 GMT
+# Tue, 05 Jan 2021 22:08:42 GMT
 ENTRYPOINT ["/entrypoint-dev.sh"]
-# Fri, 11 Dec 2020 17:41:34 GMT
+# Tue, 05 Jan 2021 22:08:42 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -1176,13 +1176,13 @@ CMD ["apache2-foreground"]
 		Last Modified: Fri, 11 Dec 2020 17:42:16 GMT  
 		Size: 542.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:29e0f19ee52e671f3b171f7b4481dbeaa7f82a85a2cc286f96e862d4b3d10db6`  
-		Last Modified: Fri, 11 Dec 2020 17:44:11 GMT  
+	-	`sha256:e911a20ed559215481a249da1368c16877b7397936b48c225476013b578dba35`  
+		Last Modified: Tue, 05 Jan 2021 22:10:56 GMT  
 		Size: 3.3 KB (3260 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2c59046889ebb3005c349139ac25fb159d76c1bc0b296bdaad619d67d075e201`  
-		Last Modified: Fri, 11 Dec 2020 17:44:10 GMT  
-		Size: 1.1 KB (1063 bytes)  
+	-	`sha256:746963066c93f3fe4a3699d892daec3e5de066268d333ecf02f760ce5912af85`  
+		Last Modified: Tue, 05 Jan 2021 22:10:55 GMT  
+		Size: 1.1 KB (1070 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `friendica:dev` - linux; ppc64le
