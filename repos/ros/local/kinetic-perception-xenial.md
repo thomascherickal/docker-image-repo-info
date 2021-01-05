@@ -3226,14 +3226,9 @@ Licenses: (parsed from: `/usr/share/doc/libproxy1v5/copyright`)
 - `GPL`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libproxy=0.4.11-5ubuntu1.1
-'http://archive.ubuntu.com/ubuntu/pool/main/libp/libproxy/libproxy_0.4.11-5ubuntu1.1.dsc' libproxy_0.4.11-5ubuntu1.1.dsc 3263 SHA512:f3716c887fe3ce3631d55ebae48ba78beeeae8cdc914cf33eee3df8adaa19085664ab10eef17e4f062699f4826e1cb34e4e4a7598820b5c62686cbe27bf125ac
-'http://archive.ubuntu.com/ubuntu/pool/main/libp/libproxy/libproxy_0.4.11.orig.tar.gz' libproxy_0.4.11.orig.tar.gz 93757 SHA512:563a837946a73c41e0773cec93332c6308245c0b807a40a0fb052c2445deae4a117ba2780a350c799717fd11c4dbe410183a38ea050a4f04db0b1adcb6f9ad98
-'http://archive.ubuntu.com/ubuntu/pool/main/libp/libproxy/libproxy_0.4.11-5ubuntu1.1.debian.tar.xz' libproxy_0.4.11-5ubuntu1.1.debian.tar.xz 10824 SHA512:97e325166ea38568fc50736489f22a6415f849b5b3f3903b99ef7815ec40f074885ebec471f77c555453c6cfb889ae34010ae7c306280d5ad4c44a5a71d31197
-```
 
 ### `dpkg` source package: `libpthread-stubs=0.3-4`
 

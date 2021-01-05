@@ -2995,14 +2995,9 @@ Licenses: (parsed from: `/usr/share/doc/libproxy1v5/copyright`)
 - `GPL`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libproxy=0.4.15-1ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/libp/libproxy/libproxy_0.4.15-1ubuntu0.1.dsc' libproxy_0.4.15-1ubuntu0.1.dsc 3398 SHA512:e926acae80704e143556ad5723a687df84f1ba43b4add809b8523983f9fe5b3cd3302964d633aabd8d23c0ece82d177b64e9cc57e9dd36a21f2e969b13a50c60
-'http://archive.ubuntu.com/ubuntu/pool/main/libp/libproxy/libproxy_0.4.15.orig.tar.gz' libproxy_0.4.15.orig.tar.gz 93084 SHA512:8f68bd56e44aeb3f553f4657bef82a5d14302780508dafa32454d6f724b724c884ceed6042f8df53a081d26ea0b05598cf35eab44823257c47c5ef8afb36442b
-'http://archive.ubuntu.com/ubuntu/pool/main/libp/libproxy/libproxy_0.4.15-1ubuntu0.1.debian.tar.xz' libproxy_0.4.15-1ubuntu0.1.debian.tar.xz 10784 SHA512:a983a28580ed4bf5e7aba6f5972f4ea11261ed2027e140fce65b5b67560e43798c065e77c7ab319750ce837166e74b4f8ba4ecf64b5312b6e0abf33dfcae1e17
-```
 
 ### `dpkg` source package: `libpsl=0.19.1-5build1`
 
@@ -3814,9 +3809,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris linux=4.15.0-128.131
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-128.131.dsc' linux_4.15.0-128.131.dsc 7373 SHA512:513e4011181e94f09b06102f2c96fa28955588d0b391816e85f462c474057aa9379a8bee67712eddd3c0e475ffdfef7d95ba649b6b4cf2446254102622e85bf0
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0.orig.tar.gz' linux_4.15.0.orig.tar.gz 157656459 SHA512:0fab606a295e0857f774f8adaa9d56bf2cb227fbab2daed374415da216391b156f49e606ba37ac402987c5796d408807da5d1a42c0d85a8552f109a3e279443d
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-128.131.diff.gz' linux_4.15.0-128.131.diff.gz 10436987 SHA512:08379e706a22c71f6d3b936884813e57620ff29b81ccdc436b3bcebe945499eb779d5a76727163cec5b16f5ecdc0060975a8e4d5b8aafb0147c1e2dd37b7d6d9
+'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-128.131.dsc' linux_4.15.0-128.131.dsc 7373 SHA512:513e4011181e94f09b06102f2c96fa28955588d0b391816e85f462c474057aa9379a8bee67712eddd3c0e475ffdfef7d95ba649b6b4cf2446254102622e85bf0
+'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0.orig.tar.gz' linux_4.15.0.orig.tar.gz 157656459 SHA512:0fab606a295e0857f774f8adaa9d56bf2cb227fbab2daed374415da216391b156f49e606ba37ac402987c5796d408807da5d1a42c0d85a8552f109a3e279443d
+'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-128.131.diff.gz' linux_4.15.0-128.131.diff.gz 10436987 SHA512:08379e706a22c71f6d3b936884813e57620ff29b81ccdc436b3bcebe945499eb779d5a76727163cec5b16f5ecdc0060975a8e4d5b8aafb0147c1e2dd37b7d6d9
 ```
 
 ### `dpkg` source package: `lksctp-tools=1.0.17+dfsg-2`

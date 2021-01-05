@@ -4068,14 +4068,9 @@ Licenses: (parsed from: `/usr/share/doc/libproxy1v5/copyright`)
 - `GPL`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libproxy=0.4.15-1ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/libp/libproxy/libproxy_0.4.15-1ubuntu0.1.dsc' libproxy_0.4.15-1ubuntu0.1.dsc 3398 SHA512:e926acae80704e143556ad5723a687df84f1ba43b4add809b8523983f9fe5b3cd3302964d633aabd8d23c0ece82d177b64e9cc57e9dd36a21f2e969b13a50c60
-'http://archive.ubuntu.com/ubuntu/pool/main/libp/libproxy/libproxy_0.4.15.orig.tar.gz' libproxy_0.4.15.orig.tar.gz 93084 SHA512:8f68bd56e44aeb3f553f4657bef82a5d14302780508dafa32454d6f724b724c884ceed6042f8df53a081d26ea0b05598cf35eab44823257c47c5ef8afb36442b
-'http://archive.ubuntu.com/ubuntu/pool/main/libp/libproxy/libproxy_0.4.15-1ubuntu0.1.debian.tar.xz' libproxy_0.4.15-1ubuntu0.1.debian.tar.xz 10784 SHA512:a983a28580ed4bf5e7aba6f5972f4ea11261ed2027e140fce65b5b67560e43798c065e77c7ab319750ce837166e74b4f8ba4ecf64b5312b6e0abf33dfcae1e17
-```
 
 ### `dpkg` source package: `libpsl=0.19.1-5build1`
 
