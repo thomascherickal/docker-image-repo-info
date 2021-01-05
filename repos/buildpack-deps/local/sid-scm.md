@@ -223,20 +223,13 @@ Licenses: (parsed from: `/usr/share/doc/bash/copyright`)
 
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris bash=5.1-1
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.1-1.dsc' bash_5.1-1.dsc 2296 SHA256:e2b46b32653337da3fb1aa22a66c25091e0e60712defc5c8daf7307fe08e0715
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.1.orig.tar.xz' bash_5.1.orig.tar.xz 5802740 SHA256:d5eeee4f953c09826409d572e2e8996a2140d67eb8f382ce1f3a9d23883ad696
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.1-1.debian.tar.xz' bash_5.1-1.debian.tar.xz 88208 SHA256:6d5ad13e95a916823c67cd7ab5b93d96a27fc2bc7215d30e5bf984ec07efae78
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/bash/5.1-1/
 
-- https://sources.debian.net/src/bash/5.1-1/ (for browsing the source)
-- https://sources.debian.net/src/bash/5.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/bash/5.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `brotli=1.0.9-2`
 
@@ -2004,19 +1997,13 @@ Licenses: (parsed from: `/usr/share/doc/media-types/copyright`)
 
 - `ad-hoc`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris media-types=1.0.1
-'http://deb.debian.org/debian/pool/main/m/media-types/media-types_1.0.1.dsc' media-types_1.0.1.dsc 1620 SHA256:27320b07c598d33a19ded0b9920503586f70fd36c32a1d82998ead1acb4a1f6f
-'http://deb.debian.org/debian/pool/main/m/media-types/media-types_1.0.1.tar.xz' media-types_1.0.1.tar.xz 16800 SHA256:7151b15eb08fded02feaca70b17f819dc074365dadef26c5ea36f555a80f9817
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/media-types/1.0.1/
 
-- https://sources.debian.net/src/media-types/1.0.1/ (for browsing the source)
-- https://sources.debian.net/src/media-types/1.0.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/media-types/1.0.1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mercurial=5.5.2-1`
 
@@ -2088,21 +2075,13 @@ Licenses: (parsed from: `/usr/share/doc/libncurses6/copyright`, `/usr/share/doc/
 - `MIT/X11`
 - `X11`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ncurses=6.2+20201114-1
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.2+20201114-1.dsc' ncurses_6.2+20201114-1.dsc 4106 SHA256:f5b5501772eef9f0aa380b7c06d837548f0c91ea98847ea16830c9e7c5b9d814
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.2+20201114.orig.tar.gz' ncurses_6.2+20201114.orig.tar.gz 3539796 SHA256:aa3f8cfaff2a2b78f184274ec43d9da910c864e4b4d80fc47b5b48cba9154cd2
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.2+20201114.orig.tar.gz.asc' ncurses_6.2+20201114.orig.tar.gz.asc 265 SHA256:91615d9d5575f9e974e78c6aca55e1885f42d1b2600cebec407be4471bb7a27d
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.2+20201114-1.debian.tar.xz' ncurses_6.2+20201114-1.debian.tar.xz 51472 SHA256:dcf5095667a4639cf8a8e48dfe9f70122bad30c3ccbf75761a070e5d0b4a037f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/ncurses/6.2+20201114-1/
 
-- https://sources.debian.net/src/ncurses/6.2+20201114-1/ (for browsing the source)
-- https://sources.debian.net/src/ncurses/6.2+20201114-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/ncurses/6.2+20201114-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `netbase=6.2`
 

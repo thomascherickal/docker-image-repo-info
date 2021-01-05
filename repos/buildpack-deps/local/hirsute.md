@@ -199,15 +199,9 @@ Licenses: (parsed from: `/usr/share/doc/automake/copyright`)
 - `GPL-3+`
 - `permissive`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris automake-1.16=1:1.16.3-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/a/automake-1.16/automake-1.16_1.16.3-1ubuntu1.dsc' automake-1.16_1.16.3-1ubuntu1.dsc 2596 SHA512:588d864d36d7940b4064878b8d78698d86810d154a3ad8da6b841ea68278e03a948d2d5a93772d2469809bbe4e094582ab203b96fda6896586162b45ffb0f4ed
-'http://archive.ubuntu.com/ubuntu/pool/main/a/automake-1.16/automake-1.16_1.16.3.orig.tar.xz' automake-1.16_1.16.3.orig.tar.xz 1590708 SHA512:7265aeb7f82a8a205761d76e6ade7b7e97831c283349fd80f86e511f4b0b3e17f429d1506fca84c76079f63781e5dbf5ca81455d6bf6cda27d2e5c3d23b0d1aa
-'http://archive.ubuntu.com/ubuntu/pool/main/a/automake-1.16/automake-1.16_1.16.3.orig.tar.xz.asc' automake-1.16_1.16.3.orig.tar.xz.asc 833 SHA512:dc3d1db453f21f375b1632ec70f3658a2987e0e23bcfc47d3e0fffea7ed886d7a8e0af869fb1e8ac18bbec81959379bf14c5f1bbfd6b1c053179122f4d6fb73a
-'http://archive.ubuntu.com/ubuntu/pool/main/a/automake-1.16/automake-1.16_1.16.3-1ubuntu1.debian.tar.xz' automake-1.16_1.16.3-1ubuntu1.debian.tar.xz 13156 SHA512:a2c8e5512e11e9e4833364d4725373d30a58ce8974e3c16ffeaa797d97c36a1d7285e3bf5c0f547c19e0cbb5025df49c5d685ed61e59625ba90c71445ffba9d9
-```
 
 ### `dpkg` source package: `autotools-dev=20180224.1`
 
@@ -2471,14 +2465,13 @@ Licenses: (parsed from: `/usr/share/doc/libtirpc-common/copyright`, `/usr/share/
 - `PERMISSIVE`
 - `__AUTO_PERMISSIVE__`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libtirpc=1.2.6-3
-'http://archive.ubuntu.com/ubuntu/pool/main/libt/libtirpc/libtirpc_1.2.6-3.dsc' libtirpc_1.2.6-3.dsc 2111 SHA512:8303b291f2608533ebf57e5b45c71d313d4eb926e2e6e831be4343a4cf4a4b71233b52fd4c10a224e168dbf51ee8a324500a78997b638cd3fdde28e28d3686d1
-'http://archive.ubuntu.com/ubuntu/pool/main/libt/libtirpc/libtirpc_1.2.6.orig.tar.bz2' libtirpc_1.2.6.orig.tar.bz2 513150 SHA512:bcb6b5c062c1301aa1246ec93ae0a5c1d221b8421126d020863517cb814b43ed038fb6c0c2faf4e68ff133b69abefe4f4d42bfc870671da6c27ca941a30b155a
-'http://archive.ubuntu.com/ubuntu/pool/main/libt/libtirpc/libtirpc_1.2.6-3.debian.tar.xz' libtirpc_1.2.6-3.debian.tar.xz 10732 SHA512:508153c1f3dd9fc76d587caab316daa964e5bba0b1c39c45a5e44708c9db5d89ed3f5d83d223166655897fce263da01b08e91c63ba2c5f710f97292d43395a50
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/libtirpc/1.2.6-3/
+
 
 ### `dpkg` source package: `libtool=2.4.6-14`
 
@@ -2632,14 +2625,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libxcb=1.14-2
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxcb/libxcb_1.14-2.dsc' libxcb_1.14-2.dsc 5344 SHA512:6b1b271519993b813a0cf664074494f7260a6eb3a8dc820ec5cbd486e2d07df356132f0c05fdcda806b1fbb570e08c1701d40255c3e59c760bbee238832d3680
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxcb/libxcb_1.14.orig.tar.gz' libxcb_1.14.orig.tar.gz 640322 SHA512:6114d8c233b42b56604787a0475e924143aa13f1d382e6029b2150a4360c12ce78073409f754fbb1e5d9f99fc26900c0a4c59e9cfbd4c3d0a3af0c1306e62da1
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxcb/libxcb_1.14-2.diff.gz' libxcb_1.14-2.diff.gz 25716 SHA512:c1b2159b673bb91dbc3c7812ce28dad9cc256296025c2b4db7e75e28b0ab6e7f69ff47154e6ea3e2784ad9b4297f3a0cb3e7adea38c73f16ccb33f577f16ba0d
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/libxcb/1.14-2/
+
 
 ### `dpkg` source package: `libxcrypt=1:4.4.17-1ubuntu1`
 
@@ -3152,15 +3144,13 @@ Licenses: (parsed from: `/usr/share/doc/libncurses-dev/copyright`, `/usr/share/d
 - `MIT/X11`
 - `X11`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ncurses=6.2+20201114-1
-'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.2+20201114-1.dsc' ncurses_6.2+20201114-1.dsc 4106 SHA512:5ff043f3938be9c008ed09d883122a16c47251fdb743595b879947c52975fd67fecc66feb0b2ac4c74f12f5e2f4d0a0fc7a96d15fcfe618c1d6376a56c55619d
-'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.2+20201114.orig.tar.gz' ncurses_6.2+20201114.orig.tar.gz 3539796 SHA512:d163bc8f08f6b2406f8f562fecd9035e0e6f2db8b539cbcaeb4a80b15027b518026526eac1b2681da82b8d03dd1c924a85de1294e6ace2a5dbc03126512a3e2c
-'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.2+20201114.orig.tar.gz.asc' ncurses_6.2+20201114.orig.tar.gz.asc 265 SHA512:210035a4ec94cdb650ac4cf7990791dc482ea941b410dcf635525fa3282df28464a1b8c0e5a4721868ccbe2609bae2db3632ecd166d239ef84471c536ce81f9c
-'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.2+20201114-1.debian.tar.xz' ncurses_6.2+20201114-1.debian.tar.xz 51472 SHA512:cccbe8bdb50c76b150b4013f7a468734fd05bdaad1cab64579ad374b0a023e33e9a042fed00114ff7e17a616ff622dfe446b94ba285843668f442624a31d4cb9
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/ncurses/6.2+20201114-1/
+
 
 ### `dpkg` source package: `ncurses=6.2-1`
 

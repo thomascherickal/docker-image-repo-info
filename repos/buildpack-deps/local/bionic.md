@@ -2650,14 +2650,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=4.15.0-128.131
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-128.131.dsc' linux_4.15.0-128.131.dsc 7373 SHA512:513e4011181e94f09b06102f2c96fa28955588d0b391816e85f462c474057aa9379a8bee67712eddd3c0e475ffdfef7d95ba649b6b4cf2446254102622e85bf0
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0.orig.tar.gz' linux_4.15.0.orig.tar.gz 157656459 SHA512:0fab606a295e0857f774f8adaa9d56bf2cb227fbab2daed374415da216391b156f49e606ba37ac402987c5796d408807da5d1a42c0d85a8552f109a3e279443d
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-128.131.diff.gz' linux_4.15.0-128.131.diff.gz 10436987 SHA512:08379e706a22c71f6d3b936884813e57620ff29b81ccdc436b3bcebe945499eb779d5a76727163cec5b16f5ecdc0060975a8e4d5b8aafb0147c1e2dd37b7d6d9
-```
 
 ### `dpkg` source package: `lsb=9.20170808ubuntu1`
 
@@ -3062,14 +3057,9 @@ Licenses: (parsed from: `/usr/share/doc/libopenexr-dev/copyright`, `/usr/share/d
 
 - `openexr`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openexr=2.2.0-11.1ubuntu1.3
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openexr/openexr_2.2.0-11.1ubuntu1.3.dsc' openexr_2.2.0-11.1ubuntu1.3.dsc 2403 SHA512:425d006d15458deddb507e1b167d81effa77c0973696e81de65d480e53cc8a64df8943df132a3162b76ab54655d51855fe695258879640662f7fdf44067c0489
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openexr/openexr_2.2.0.orig.tar.gz' openexr_2.2.0.orig.tar.gz 14489661 SHA512:017abbeeb6b814508180721bc8e8940094965c4c55b135a198c6bcb109a04bf7f72e4aee81ee72cb2185fe818a41d892b383e8d2d59f40c673198948cb79279a
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openexr/openexr_2.2.0-11.1ubuntu1.3.debian.tar.xz' openexr_2.2.0-11.1ubuntu1.3.debian.tar.xz 30448 SHA512:69e9a7773c24cab8f63191a3fc40d9eaecaae75cf52b30aff9349400601a60c3cc9700c0959c7a710b2c2085b32cd31eca001c73f1e0b181ba5276328a6e6f41
-```
 
 ### `dpkg` source package: `openldap=2.4.45+dfsg-1ubuntu1.8`
 

@@ -124,21 +124,13 @@ Licenses: (parsed from: `/usr/share/doc/libapr1/copyright`)
 
 - `Apache-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apr=1.7.0-4
-'http://deb.debian.org/debian/pool/main/a/apr/apr_1.7.0-4.dsc' apr_1.7.0-4.dsc 2250 SHA256:fde2a8cf7f5c436572546575209fd7ab6fd944cf1c1af3bb337b60404dd39977
-'http://deb.debian.org/debian/pool/main/a/apr/apr_1.7.0.orig.tar.bz2' apr_1.7.0.orig.tar.bz2 872238 SHA256:e2e148f0b2e99b8e5c6caa09f6d4fb4dd3e83f744aa72a952f94f5a14436f7ea
-'http://deb.debian.org/debian/pool/main/a/apr/apr_1.7.0.orig.tar.bz2.asc' apr_1.7.0.orig.tar.bz2.asc 801 SHA256:5a6c4e721ed82116d7877254ae11c076014040af2ff816ea15ec81e77a4a7d43
-'http://deb.debian.org/debian/pool/main/a/apr/apr_1.7.0-4.debian.tar.xz' apr_1.7.0-4.debian.tar.xz 214168 SHA256:34bff9c2ebcd15ab01ee686363b0b29e6375d01de953381abd228b9eaf8f2d00
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/apr/1.7.0-4/
 
-- https://sources.debian.net/src/apr/1.7.0-4/ (for browsing the source)
-- https://sources.debian.net/src/apr/1.7.0-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apr/1.7.0-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `apt=2.1.12`
 
@@ -906,20 +898,13 @@ Licenses: (parsed from: `/usr/share/doc/libelf1/copyright`)
 - `GPL-3`
 - `LGPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris elfutils=0.182-1
-'http://deb.debian.org/debian/pool/main/e/elfutils/elfutils_0.182-1.dsc' elfutils_0.182-1.dsc 3031 SHA256:cd7d0fc46d74543a5cfb124f7db6426311417b5f24293df094fced6c36896e64
-'http://deb.debian.org/debian/pool/main/e/elfutils/elfutils_0.182.orig.tar.bz2' elfutils_0.182.orig.tar.bz2 9096742 SHA256:ecc406914edf335f0b7fc084ebe6c460c4d6d5175bfdd6688c1c78d9146b8858
-'http://deb.debian.org/debian/pool/main/e/elfutils/elfutils_0.182-1.debian.tar.xz' elfutils_0.182-1.debian.tar.xz 32628 SHA256:0459834bc50c91d5d9c4d398f2cdd3bbd9857734e48101ff4e334611989ba723
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/elfutils/0.182-1/
 
-- https://sources.debian.net/src/elfutils/0.182-1/ (for browsing the source)
-- https://sources.debian.net/src/elfutils/0.182-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/elfutils/0.182-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `expat=2.2.10-1`
 
@@ -3229,20 +3214,13 @@ Licenses: (parsed from: `/usr/share/doc/libtirpc-common/copyright`, `/usr/share/
 - `PERMISSIVE`
 - `__AUTO_PERMISSIVE__`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libtirpc=1.2.6-3
-'http://deb.debian.org/debian/pool/main/libt/libtirpc/libtirpc_1.2.6-3.dsc' libtirpc_1.2.6-3.dsc 2111 SHA256:86a2ea8d9935cbb44b8e71a570bcd21f8781998fd04592dd38b795d858a50ba6
-'http://deb.debian.org/debian/pool/main/libt/libtirpc/libtirpc_1.2.6.orig.tar.bz2' libtirpc_1.2.6.orig.tar.bz2 513150 SHA256:4278e9a5181d5af9cd7885322fdecebc444f9a3da87c526e7d47f7a12a37d1cc
-'http://deb.debian.org/debian/pool/main/libt/libtirpc/libtirpc_1.2.6-3.debian.tar.xz' libtirpc_1.2.6-3.debian.tar.xz 10732 SHA256:4acd4c0755d1dfbf2c0ad9bca5734478fc7e9ab800aee19f104cca5e6da0e7f1
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libtirpc/1.2.6-3/
 
-- https://sources.debian.net/src/libtirpc/1.2.6-3/ (for browsing the source)
-- https://sources.debian.net/src/libtirpc/1.2.6-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libtirpc/1.2.6-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libtool=2.4.6-14`
 
@@ -4782,19 +4760,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3-defaults=3.9.0-4
-'http://deb.debian.org/debian/pool/main/p/python3-defaults/python3-defaults_3.9.0-4.dsc' python3-defaults_3.9.0-4.dsc 2798 SHA256:9e73277c4565065a6e5b07af4fb582d259d2f7333bcb68ebc83f321671b48162
-'http://deb.debian.org/debian/pool/main/p/python3-defaults/python3-defaults_3.9.0-4.tar.gz' python3-defaults_3.9.0-4.tar.gz 139204 SHA256:f5a92c7df40e70724f36b224f56eca53dd81345d586bda566b55391b44710f65
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/python3-defaults/3.9.0-4/
 
-- https://sources.debian.net/src/python3-defaults/3.9.0-4/ (for browsing the source)
-- https://sources.debian.net/src/python3-defaults/3.9.0-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python3-defaults/3.9.0-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `python3-stdlib-extensions=3.8.6-1`
 
@@ -4807,20 +4779,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3-stdlib-extensions=3.8.6-1
-'http://deb.debian.org/debian/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.8.6-1.dsc' python3-stdlib-extensions_3.8.6-1.dsc 2524 SHA256:9000b443b12d851b975732a15d408b947b5f92e955b3cff4f4bf24bb0c66f35e
-'http://deb.debian.org/debian/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.8.6.orig.tar.xz' python3-stdlib-extensions_3.8.6.orig.tar.xz 1077316 SHA256:741f284583ae84a2a232929d2d7fbef7d9f93ba7ae2f1677ed9b3c256e7f6f62
-'http://deb.debian.org/debian/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.8.6-1.debian.tar.xz' python3-stdlib-extensions_3.8.6-1.debian.tar.xz 17896 SHA256:dad28332ba4ade9c22046b2a22a14a75363e204413adbb094aec7493cb6cef0f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/python3-stdlib-extensions/3.8.6-1/
 
-- https://sources.debian.net/src/python3-stdlib-extensions/3.8.6-1/ (for browsing the source)
-- https://sources.debian.net/src/python3-stdlib-extensions/3.8.6-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python3-stdlib-extensions/3.8.6-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `python3.9=3.9.1-1`
 

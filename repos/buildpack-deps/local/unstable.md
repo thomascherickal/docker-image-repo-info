@@ -244,21 +244,13 @@ Licenses: (parsed from: `/usr/share/doc/automake/copyright`)
 - `GPL-3+`
 - `permissive`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris automake-1.16=1:1.16.3-1
-'http://deb.debian.org/debian/pool/main/a/automake-1.16/automake-1.16_1.16.3-1.dsc' automake-1.16_1.16.3-1.dsc 2561 SHA256:68afe28efe3593674774697ad3292a9a0180a73be24ce08fcf9334965c1dfdf9
-'http://deb.debian.org/debian/pool/main/a/automake-1.16/automake-1.16_1.16.3.orig.tar.xz' automake-1.16_1.16.3.orig.tar.xz 1590708 SHA256:ff2bf7656c4d1c6fdda3b8bebb21f09153a736bcba169aaf65eab25fa113bf3a
-'http://deb.debian.org/debian/pool/main/a/automake-1.16/automake-1.16_1.16.3.orig.tar.xz.asc' automake-1.16_1.16.3.orig.tar.xz.asc 833 SHA256:fe4e9d6e0cf15448618385cbc055ef0a03c0de63b3771180013029db7fece7e4
-'http://deb.debian.org/debian/pool/main/a/automake-1.16/automake-1.16_1.16.3-1.debian.tar.xz' automake-1.16_1.16.3-1.debian.tar.xz 12464 SHA256:fdc821461a53b1f75a0bf24be7c0614e2eeabd8be74e3dc3c8b32630e05157f1
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/automake-1.16/1:1.16.3-1/
 
-- https://sources.debian.net/src/automake-1.16/1:1.16.3-1/ (for browsing the source)
-- https://sources.debian.net/src/automake-1.16/1:1.16.3-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/automake-1.16/1:1.16.3-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `autotools-dev=20180224.1`
 
@@ -337,20 +329,13 @@ Licenses: (parsed from: `/usr/share/doc/bash/copyright`)
 
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris bash=5.1-1
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.1-1.dsc' bash_5.1-1.dsc 2296 SHA256:e2b46b32653337da3fb1aa22a66c25091e0e60712defc5c8daf7307fe08e0715
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.1.orig.tar.xz' bash_5.1.orig.tar.xz 5802740 SHA256:d5eeee4f953c09826409d572e2e8996a2140d67eb8f382ce1f3a9d23883ad696
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.1-1.debian.tar.xz' bash_5.1-1.debian.tar.xz 88208 SHA256:6d5ad13e95a916823c67cd7ab5b93d96a27fc2bc7215d30e5bf984ec07efae78
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/bash/5.1-1/
 
-- https://sources.debian.net/src/bash/5.1-1/ (for browsing the source)
-- https://sources.debian.net/src/bash/5.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/bash/5.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `binutils=2.35.1-4`
 
@@ -2343,20 +2328,13 @@ Licenses: (parsed from: `/usr/share/doc/libdeflate-dev/copyright`, `/usr/share/d
 
 - `Expat`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libdeflate=1.6-1
-'http://deb.debian.org/debian/pool/main/libd/libdeflate/libdeflate_1.6-1.dsc' libdeflate_1.6-1.dsc 2170 SHA256:1b71463fffa26cba6b824b7dac54e10a586d38ef01d32e183e6a691e4228f8ec
-'http://deb.debian.org/debian/pool/main/libd/libdeflate/libdeflate_1.6.orig.tar.gz' libdeflate_1.6.orig.tar.gz 139031 SHA256:60748f3f7b22dae846bc489b22a4f1b75eab052bf403dd8e16c8279f16f5171e
-'http://deb.debian.org/debian/pool/main/libd/libdeflate/libdeflate_1.6-1.debian.tar.xz' libdeflate_1.6-1.debian.tar.xz 4572 SHA256:18bbc4c62a402f874fac07e8fc7fcb56797e924a9297abdd865e6e5665d97aa1
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libdeflate/1.6-1/
 
-- https://sources.debian.net/src/libdeflate/1.6-1/ (for browsing the source)
-- https://sources.debian.net/src/libdeflate/1.6-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libdeflate/1.6-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libedit=3.1-20191231-1`
 
@@ -2609,20 +2587,13 @@ Licenses: (parsed from: `/usr/share/doc/libheif1/copyright`)
 - `LGPL-3+`
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libheif=1.10.0-1
-'http://deb.debian.org/debian/pool/main/libh/libheif/libheif_1.10.0-1.dsc' libheif_1.10.0-1.dsc 2283 SHA256:ebbc99c0f124fd7a54c0b819dc01c713463cac221b97cb328f0b0cc4d6b92bc8
-'http://deb.debian.org/debian/pool/main/libh/libheif/libheif_1.10.0.orig.tar.gz' libheif_1.10.0.orig.tar.gz 1681115 SHA256:ad5af1276f341277dc537b0d19a4193e0833c247b2aacb936e0c5494141533ae
-'http://deb.debian.org/debian/pool/main/libh/libheif/libheif_1.10.0-1.debian.tar.xz' libheif_1.10.0-1.debian.tar.xz 6740 SHA256:1919c77025427a0458df56b84c9a421e8656e88e878451ea93687fe85caad131
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libheif/1.10.0-1/
 
-- https://sources.debian.net/src/libheif/1.10.0-1/ (for browsing the source)
-- https://sources.debian.net/src/libheif/1.10.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libheif/1.10.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libice=2:1.0.10-1`
 
@@ -2695,20 +2666,13 @@ Licenses: (parsed from: `/usr/share/doc/libjpeg-dev/copyright`, `/usr/share/doc/
 - `BSD-BY-LC-NE`
 - `Expat`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libjpeg-turbo=1:2.0.5-1.1
-'http://deb.debian.org/debian/pool/main/libj/libjpeg-turbo/libjpeg-turbo_2.0.5-1.1.dsc' libjpeg-turbo_2.0.5-1.1.dsc 2298 SHA256:c591cf0cc7b1316f3247c873ad4fb7a1c8d3d049338dc5876006da67dd20dea3
-'http://deb.debian.org/debian/pool/main/libj/libjpeg-turbo/libjpeg-turbo_2.0.5.orig.tar.gz' libjpeg-turbo_2.0.5.orig.tar.gz 2162983 SHA256:16f8f6f2715b3a38ab562a84357c793dd56ae9899ce130563c72cd93d8357b5d
-'http://deb.debian.org/debian/pool/main/libj/libjpeg-turbo/libjpeg-turbo_2.0.5-1.1.debian.tar.xz' libjpeg-turbo_2.0.5-1.1.debian.tar.xz 87212 SHA256:d4370be8fabaef3be0007a75df92f964986f03d648c5f97cbeb750067f53a493
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libjpeg-turbo/1:2.0.5-1.1/
 
-- https://sources.debian.net/src/libjpeg-turbo/1:2.0.5-1.1/ (for browsing the source)
-- https://sources.debian.net/src/libjpeg-turbo/1:2.0.5-1.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libjpeg-turbo/1:2.0.5-1.1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libksba=1.5.0-2`
 
@@ -3949,19 +3913,13 @@ Licenses: (parsed from: `/usr/share/doc/media-types/copyright`)
 
 - `ad-hoc`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris media-types=1.0.1
-'http://deb.debian.org/debian/pool/main/m/media-types/media-types_1.0.1.dsc' media-types_1.0.1.dsc 1620 SHA256:27320b07c598d33a19ded0b9920503586f70fd36c32a1d82998ead1acb4a1f6f
-'http://deb.debian.org/debian/pool/main/m/media-types/media-types_1.0.1.tar.xz' media-types_1.0.1.tar.xz 16800 SHA256:7151b15eb08fded02feaca70b17f819dc074365dadef26c5ea36f555a80f9817
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/media-types/1.0.1/
 
-- https://sources.debian.net/src/media-types/1.0.1/ (for browsing the source)
-- https://sources.debian.net/src/media-types/1.0.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/media-types/1.0.1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mercurial=5.5.2-1`
 
@@ -4113,21 +4071,13 @@ Licenses: (parsed from: `/usr/share/doc/libncurses-dev/copyright`, `/usr/share/d
 - `MIT/X11`
 - `X11`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ncurses=6.2+20201114-1
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.2+20201114-1.dsc' ncurses_6.2+20201114-1.dsc 4106 SHA256:f5b5501772eef9f0aa380b7c06d837548f0c91ea98847ea16830c9e7c5b9d814
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.2+20201114.orig.tar.gz' ncurses_6.2+20201114.orig.tar.gz 3539796 SHA256:aa3f8cfaff2a2b78f184274ec43d9da910c864e4b4d80fc47b5b48cba9154cd2
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.2+20201114.orig.tar.gz.asc' ncurses_6.2+20201114.orig.tar.gz.asc 265 SHA256:91615d9d5575f9e974e78c6aca55e1885f42d1b2600cebec407be4471bb7a27d
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.2+20201114-1.debian.tar.xz' ncurses_6.2+20201114-1.debian.tar.xz 51472 SHA256:dcf5095667a4639cf8a8e48dfe9f70122bad30c3ccbf75761a070e5d0b4a037f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/ncurses/6.2+20201114-1/
 
-- https://sources.debian.net/src/ncurses/6.2+20201114-1/ (for browsing the source)
-- https://sources.debian.net/src/ncurses/6.2+20201114-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/ncurses/6.2+20201114-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `netbase=6.2`
 
