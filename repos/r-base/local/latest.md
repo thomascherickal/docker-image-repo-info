@@ -794,20 +794,13 @@ Licenses: (parsed from: `/usr/share/doc/libelf1/copyright`)
 - `GPL-3`
 - `LGPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris elfutils=0.182-1
-'http://deb.debian.org/debian/pool/main/e/elfutils/elfutils_0.182-1.dsc' elfutils_0.182-1.dsc 3031 SHA256:cd7d0fc46d74543a5cfb124f7db6426311417b5f24293df094fced6c36896e64
-'http://deb.debian.org/debian/pool/main/e/elfutils/elfutils_0.182.orig.tar.bz2' elfutils_0.182.orig.tar.bz2 9096742 SHA256:ecc406914edf335f0b7fc084ebe6c460c4d6d5175bfdd6688c1c78d9146b8858
-'http://deb.debian.org/debian/pool/main/e/elfutils/elfutils_0.182-1.debian.tar.xz' elfutils_0.182-1.debian.tar.xz 32628 SHA256:0459834bc50c91d5d9c4d398f2cdd3bbd9857734e48101ff4e334611989ba723
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/elfutils/0.182-1/
 
-- https://sources.debian.net/src/elfutils/0.182-1/ (for browsing the source)
-- https://sources.debian.net/src/elfutils/0.182-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/elfutils/0.182-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `expat=2.2.10-1`
 
@@ -1252,21 +1245,13 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 - `LGPLv3+_or_GPLv2+`
 - `The main library is licensed under GNU Lesser`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gnutls28=3.6.15-4
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.15-4.dsc' gnutls28_3.6.15-4.dsc 3496 SHA256:697b456a8858ec035e431130bdf1fbb74c889b62ab7ef8a53c4d321d465f6de0
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.15.orig.tar.xz' gnutls28_3.6.15.orig.tar.xz 6081656 SHA256:0ea8c3283de8d8335d7ae338ef27c53a916f15f382753b174c18b45ffd481558
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.15.orig.tar.xz.asc' gnutls28_3.6.15.orig.tar.xz.asc 833 SHA256:49abc685c9504b4b4de7a0cd8075ee9a4c01f0a6e2b2c9b86a24c58b1e7ac7c5
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.15-4.debian.tar.xz' gnutls28_3.6.15-4.debian.tar.xz 63856 SHA256:561f540c56da648cc79fe1c06f50be8ba315d7572bd0094134eb3b7bc7489f7e
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gnutls28/3.6.15-4/
 
-- https://sources.debian.net/src/gnutls28/3.6.15-4/ (for browsing the source)
-- https://sources.debian.net/src/gnutls28/3.6.15-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gnutls28/3.6.15-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `graphite2=1.3.14-1`
 
