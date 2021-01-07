@@ -1,7 +1,7 @@
 ## `php:7-zts-alpine`
 
 ```console
-$ docker pull php@sha256:bb8a1f8a0ce236c7d59a0d1e0281b0b20e5e671cd00917295726447b1c1d446b
+$ docker pull php@sha256:107bf6c3eac78637535aeb3b99c7c6b0dec1fe221f2314f3951bef435b9b76b4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -116,14 +116,14 @@ CMD ["php" "-a"]
 ### `php:7-zts-alpine` - linux; arm variant v6
 
 ```console
-$ docker pull php@sha256:d3b9ec2f84a7627dcbad38d88ca3e35104abe3e7f149c2d1941e931af8569649
+$ docker pull php@sha256:014ef7945eb18caa55ab98ffac89ddec4e466c8684f23efb11ae6ade1adaa94c
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **24.4 MB (24394308 bytes)**  
+-	Total Size: **24.4 MB (24401034 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1596dcd77fdd0a50901ce8018d06900665cf84f66a94d3b0d863166f47fbfdab`
+-	Image ID: `sha256:a0184dcf1f69245f98a6acbc417535b9e2a9a575dd63483c1b2fe4df706f4fda`
 -	Entrypoint: `["docker-php-entrypoint"]`
 -	Default Command: `["php","-a"]`
 
@@ -152,25 +152,25 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -pie
 # Thu, 17 Dec 2020 04:22:12 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 17 Dec 2020 04:22:13 GMT
-ENV PHP_VERSION=7.4.13
-# Thu, 17 Dec 2020 04:22:14 GMT
-ENV PHP_URL=https://www.php.net/distributions/php-7.4.13.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-7.4.13.tar.xz.asc
-# Thu, 17 Dec 2020 04:22:17 GMT
-ENV PHP_SHA256=aead303e3abac23106529560547baebbedba0bb2943b91d5aa08fff1f41680f4
-# Thu, 17 Dec 2020 04:22:33 GMT
+# Thu, 07 Jan 2021 18:02:44 GMT
+ENV PHP_VERSION=7.4.14
+# Thu, 07 Jan 2021 18:02:48 GMT
+ENV PHP_URL=https://www.php.net/distributions/php-7.4.14.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-7.4.14.tar.xz.asc
+# Thu, 07 Jan 2021 18:02:49 GMT
+ENV PHP_SHA256=f9f3c37969fcd9006c1dbb1dd76ab53f28c698a1646fa2dde8547c3f45e02886
+# Thu, 07 Jan 2021 18:02:54 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 17 Dec 2020 04:22:33 GMT
+# Thu, 07 Jan 2021 18:02:55 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 17 Dec 2020 04:26:26 GMT
+# Thu, 07 Jan 2021 18:06:52 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--with-pic 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 		php --version
-# Thu, 17 Dec 2020 04:26:30 GMT
+# Thu, 07 Jan 2021 18:06:54 GMT
 COPY multi:afab483600631d4d87fe030871bbb016f1c2b73c0b72609d857bace419af7f5d in /usr/local/bin/ 
-# Thu, 17 Dec 2020 04:26:34 GMT
+# Thu, 07 Jan 2021 18:06:58 GMT
 RUN docker-php-ext-enable sodium
-# Thu, 17 Dec 2020 04:26:35 GMT
+# Thu, 07 Jan 2021 18:06:59 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Thu, 17 Dec 2020 04:26:35 GMT
+# Thu, 07 Jan 2021 18:07:00 GMT
 CMD ["php" "-a"]
 ```
 
@@ -191,38 +191,38 @@ CMD ["php" "-a"]
 		Last Modified: Thu, 17 Dec 2020 05:38:56 GMT  
 		Size: 267.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2ea0cc4db53bdc8fdd1a6bf196ec2fc4831ab1238a02a4e205edd0af50e2a225`  
-		Last Modified: Thu, 17 Dec 2020 05:40:35 GMT  
-		Size: 10.3 MB (10338588 bytes)  
+	-	`sha256:de698546f848307a076744ce76f549e0feb485349e5e3b6f20b259aa093ebd25`  
+		Last Modified: Thu, 07 Jan 2021 18:49:27 GMT  
+		Size: 10.3 MB (10345693 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8a343a5139d35933202b264c653b651a92d1ded3a324864c936057fb493ffa9d`  
-		Last Modified: Thu, 17 Dec 2020 05:40:34 GMT  
-		Size: 495.0 B  
+	-	`sha256:d84c984c251e27712a2a1ce3d6bf39237030c5671873a0b578ec32cf0522bd5d`  
+		Last Modified: Thu, 07 Jan 2021 18:49:24 GMT  
+		Size: 497.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e1c380ec7f40e2618301fc7c5538910750d4e257bdf2967ec99506b48c4f8f84`  
-		Last Modified: Thu, 17 Dec 2020 05:40:38 GMT  
-		Size: 10.1 MB (10120112 bytes)  
+	-	`sha256:1360cf9a6bac36e908e0cf6cdd9931a3ac4ed8b727dd8bf23bdc1d47582a4e67`  
+		Last Modified: Thu, 07 Jan 2021 18:49:28 GMT  
+		Size: 10.1 MB (10119725 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:21ada1a1779a4e8131be000bf0a2044f634f119bce45ab8b79780f3850007e33`  
-		Last Modified: Thu, 17 Dec 2020 05:40:36 GMT  
+	-	`sha256:33f35b09ecca4de60f6e04e34d5a30e7c705fcc6554d89fb7e1ceadfd49e86cb`  
+		Last Modified: Thu, 07 Jan 2021 18:49:24 GMT  
 		Size: 2.3 KB (2258 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:70557f51c6d1c0a9be018c6dda760a4172fd14ae792a308e64491cb71b735340`  
-		Last Modified: Thu, 17 Dec 2020 05:40:34 GMT  
-		Size: 16.9 KB (16878 bytes)  
+	-	`sha256:49bcdf3c0737ac88cd0dca9e4c3660f7ed3abf9db4a9904dd37fea9a8f4bd952`  
+		Last Modified: Thu, 07 Jan 2021 18:49:24 GMT  
+		Size: 16.9 KB (16884 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `php:7-zts-alpine` - linux; arm variant v7
 
 ```console
-$ docker pull php@sha256:c6783bda4087337c60fe2327bd11ce77ecb3a896a9b1bddd26be530a4457100e
+$ docker pull php@sha256:7417b48dab05c8d3fe65508a9fab735843481386f53b9ba914efcb0a9fd44e4e
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **23.5 MB (23450454 bytes)**  
+-	Total Size: **23.5 MB (23457379 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f3b865d53a477e257a758dfb9b2883dae0e6848004270c95ebae0be3233dc9c1`
+-	Image ID: `sha256:eeb22a136ab1b7fb34e347b50b31dfc43614338096d10e6dc9ea7fce2b1e0d9b`
 -	Entrypoint: `["docker-php-entrypoint"]`
 -	Default Command: `["php","-a"]`
 
@@ -251,25 +251,25 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -pie
 # Thu, 17 Dec 2020 04:18:11 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 17 Dec 2020 04:18:12 GMT
-ENV PHP_VERSION=7.4.13
-# Thu, 17 Dec 2020 04:18:12 GMT
-ENV PHP_URL=https://www.php.net/distributions/php-7.4.13.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-7.4.13.tar.xz.asc
-# Thu, 17 Dec 2020 04:18:14 GMT
-ENV PHP_SHA256=aead303e3abac23106529560547baebbedba0bb2943b91d5aa08fff1f41680f4
-# Thu, 17 Dec 2020 04:18:21 GMT
+# Thu, 07 Jan 2021 17:26:46 GMT
+ENV PHP_VERSION=7.4.14
+# Thu, 07 Jan 2021 17:26:46 GMT
+ENV PHP_URL=https://www.php.net/distributions/php-7.4.14.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-7.4.14.tar.xz.asc
+# Thu, 07 Jan 2021 17:26:47 GMT
+ENV PHP_SHA256=f9f3c37969fcd9006c1dbb1dd76ab53f28c698a1646fa2dde8547c3f45e02886
+# Thu, 07 Jan 2021 17:26:52 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 17 Dec 2020 04:18:22 GMT
+# Thu, 07 Jan 2021 17:26:52 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 17 Dec 2020 04:21:38 GMT
+# Thu, 07 Jan 2021 17:29:10 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--with-pic 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 		php --version
-# Thu, 17 Dec 2020 04:21:43 GMT
+# Thu, 07 Jan 2021 17:29:11 GMT
 COPY multi:afab483600631d4d87fe030871bbb016f1c2b73c0b72609d857bace419af7f5d in /usr/local/bin/ 
-# Thu, 17 Dec 2020 04:21:46 GMT
+# Thu, 07 Jan 2021 17:29:14 GMT
 RUN docker-php-ext-enable sodium
-# Thu, 17 Dec 2020 04:21:48 GMT
+# Thu, 07 Jan 2021 17:29:14 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Thu, 17 Dec 2020 04:21:49 GMT
+# Thu, 07 Jan 2021 17:29:15 GMT
 CMD ["php" "-a"]
 ```
 
@@ -290,25 +290,25 @@ CMD ["php" "-a"]
 		Last Modified: Thu, 17 Dec 2020 05:28:23 GMT  
 		Size: 268.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:aa2a06341fd29a79bebe91b177fdc7bba0eb461ab8f32763e9d304d351ff5361`  
-		Last Modified: Thu, 17 Dec 2020 05:30:38 GMT  
-		Size: 10.3 MB (10338569 bytes)  
+	-	`sha256:bfeb60672b670ed93c11d7f0aec25492a2403c49c892afc5bcd2f22cbb4a6807`  
+		Last Modified: Thu, 07 Jan 2021 18:42:23 GMT  
+		Size: 10.3 MB (10345679 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:78c8fe8460780f14b526619f0ed8184b11f4517a95d21e0bc53582b7eb33378e`  
-		Last Modified: Thu, 17 Dec 2020 05:30:37 GMT  
-		Size: 494.0 B  
+	-	`sha256:8d8ba08c0a672109cfdb78908e331ae8f30e5c6050975c8684d986693858d9de`  
+		Last Modified: Thu, 07 Jan 2021 18:42:23 GMT  
+		Size: 496.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:55539b62dea4a6e25176477a1406dc6c51b07de0d603a11955783813b2d273e8`  
-		Last Modified: Thu, 17 Dec 2020 05:30:41 GMT  
-		Size: 9.5 MB (9468678 bytes)  
+	-	`sha256:082537eab2c111c9be272dca8efb09d8971cfe40af747c5d52d3d2a955228712`  
+		Last Modified: Thu, 07 Jan 2021 18:42:25 GMT  
+		Size: 9.5 MB (9468498 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c290aeb415b6616d5eedeb9fb7106c9b2b92614d2f41cb4ef84e5bf48d50d6fa`  
-		Last Modified: Thu, 17 Dec 2020 05:30:37 GMT  
-		Size: 2.3 KB (2260 bytes)  
+	-	`sha256:79c6d0e88cf46d7233abe3f89ea9398e9df20dfbd459562c9a0295b1c29d0819`  
+		Last Modified: Thu, 07 Jan 2021 18:42:23 GMT  
+		Size: 2.3 KB (2257 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2e320882f2928529e289fa0a9fd14732cb1558cc3a4b9afa08ca60d3432c0f08`  
-		Last Modified: Thu, 17 Dec 2020 05:30:37 GMT  
-		Size: 16.9 KB (16852 bytes)  
+	-	`sha256:37e860b1efe069604c4ca759acc969575fcc005837e0facca8e5c8750d0e31d5`  
+		Last Modified: Thu, 07 Jan 2021 18:42:23 GMT  
+		Size: 16.8 KB (16848 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `php:7-zts-alpine` - linux; arm64 variant v8
@@ -611,14 +611,14 @@ CMD ["php" "-a"]
 ### `php:7-zts-alpine` - linux; s390x
 
 ```console
-$ docker pull php@sha256:b3ff46bf5b517810d583627dbbc9de7df03eea1d648caf6e271c8da07f9cf9c1
+$ docker pull php@sha256:b68130530bdd66d17f66119dc57028d9e7e65d41ff6c9fef83dbd0b6037fefac
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **24.7 MB (24691434 bytes)**  
+-	Total Size: **24.7 MB (24698737 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:603d11ba9ee637170d5376be3f25c35d31744c56312faaffffefbe27db35d099`
+-	Image ID: `sha256:63c68470775a9fff69f76f2726e0e47ced38f1dc3bfeb9ffcb0334e3faa67774`
 -	Entrypoint: `["docker-php-entrypoint"]`
 -	Default Command: `["php","-a"]`
 
@@ -647,25 +647,25 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -pie
 # Thu, 17 Dec 2020 06:33:55 GMT
 ENV GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312
-# Thu, 17 Dec 2020 06:33:56 GMT
-ENV PHP_VERSION=7.4.13
-# Thu, 17 Dec 2020 06:33:56 GMT
-ENV PHP_URL=https://www.php.net/distributions/php-7.4.13.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-7.4.13.tar.xz.asc
-# Thu, 17 Dec 2020 06:33:57 GMT
-ENV PHP_SHA256=aead303e3abac23106529560547baebbedba0bb2943b91d5aa08fff1f41680f4
-# Thu, 17 Dec 2020 06:34:02 GMT
+# Thu, 07 Jan 2021 18:02:36 GMT
+ENV PHP_VERSION=7.4.14
+# Thu, 07 Jan 2021 18:02:36 GMT
+ENV PHP_URL=https://www.php.net/distributions/php-7.4.14.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-7.4.14.tar.xz.asc
+# Thu, 07 Jan 2021 18:02:37 GMT
+ENV PHP_SHA256=f9f3c37969fcd9006c1dbb1dd76ab53f28c698a1646fa2dde8547c3f45e02886
+# Thu, 07 Jan 2021 18:02:41 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 17 Dec 2020 06:34:03 GMT
+# Thu, 07 Jan 2021 18:02:42 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 17 Dec 2020 06:39:18 GMT
+# Thu, 07 Jan 2021 18:05:41 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--with-pic 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 		php --version
-# Thu, 17 Dec 2020 06:39:21 GMT
+# Thu, 07 Jan 2021 18:05:42 GMT
 COPY multi:afab483600631d4d87fe030871bbb016f1c2b73c0b72609d857bace419af7f5d in /usr/local/bin/ 
-# Thu, 17 Dec 2020 06:39:23 GMT
+# Thu, 07 Jan 2021 18:05:43 GMT
 RUN docker-php-ext-enable sodium
-# Thu, 17 Dec 2020 06:39:24 GMT
+# Thu, 07 Jan 2021 18:05:43 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Thu, 17 Dec 2020 06:39:24 GMT
+# Thu, 07 Jan 2021 18:05:43 GMT
 CMD ["php" "-a"]
 ```
 
@@ -686,23 +686,23 @@ CMD ["php" "-a"]
 		Last Modified: Thu, 17 Dec 2020 08:07:31 GMT  
 		Size: 266.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:155028724c11ff56a38e1399cb9ad44616598de8d790b5178f8f92d2c94076db`  
-		Last Modified: Thu, 17 Dec 2020 08:09:28 GMT  
-		Size: 10.3 MB (10338589 bytes)  
+	-	`sha256:e8913fe92193bce45342d76db1e5e2ba2bb4854ac56bca0f1046989acf1597c9`  
+		Last Modified: Thu, 07 Jan 2021 18:51:57 GMT  
+		Size: 10.3 MB (10345693 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e7af140e596499c7686bd1e269014c12ea1d707a5634f9cbd1e964a5ce4a390c`  
-		Last Modified: Thu, 17 Dec 2020 08:09:27 GMT  
-		Size: 494.0 B  
+	-	`sha256:de5d43f5fe3a83284e591c9b65693b9b576684ff6b2d84de3b4f8b634443fa95`  
+		Last Modified: Thu, 07 Jan 2021 18:51:56 GMT  
+		Size: 501.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9eafda02726058f136559dd73da6ead7a16a2741a6f99a7b1d54c1cb85cdb67c`  
-		Last Modified: Thu, 17 Dec 2020 08:09:30 GMT  
-		Size: 10.4 MB (10381914 bytes)  
+	-	`sha256:d7c7948fb6f9d389115cc99a3037134fd3d53170f9a325c3ef617298a4e0cc2d`  
+		Last Modified: Thu, 07 Jan 2021 18:51:59 GMT  
+		Size: 10.4 MB (10382109 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6d034d4b15f104612a09ddca15decbf8b7b2afb3fc35cf6a0655a1e07882370e`  
-		Last Modified: Thu, 17 Dec 2020 08:09:27 GMT  
-		Size: 2.3 KB (2260 bytes)  
+	-	`sha256:e3991d9407301e67fb9f2fd3ff05f615ecf21254f69e9b8f9e5673e295a289ab`  
+		Last Modified: Thu, 07 Jan 2021 18:51:57 GMT  
+		Size: 2.3 KB (2257 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c400a98ead65e2d0bc312ad7539f3f885c8ae1582df948e03e7a7f6105c89a4b`  
-		Last Modified: Thu, 17 Dec 2020 08:09:28 GMT  
+	-	`sha256:9fdca0c9deb344a35c02a312f899e71291b54873ddfba943e695c0ad754f3a16`  
+		Last Modified: Thu, 07 Jan 2021 18:51:56 GMT  
 		Size: 16.9 KB (16878 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
