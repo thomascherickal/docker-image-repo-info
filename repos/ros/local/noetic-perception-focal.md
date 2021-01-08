@@ -3838,14 +3838,9 @@ Licenses: (parsed from: `/usr/share/doc/libegl-dev/copyright`, `/usr/share/doc/l
 - `MIT`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libglvnd=1.3.1-1ubuntu0.20.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/libg/libglvnd/libglvnd_1.3.1-1ubuntu0.20.04.1.dsc' libglvnd_1.3.1-1ubuntu0.20.04.1.dsc 2763 SHA512:db6326423cdc4bb30d4cb93efb76ca20c2409909f30e64f4554908c0fcd008466c17048a31373de193bc4c81209946196a9fafe18cca91f2d1ca9d9bfbe6b02c
-'http://archive.ubuntu.com/ubuntu/pool/main/libg/libglvnd/libglvnd_1.3.1.orig.tar.gz' libglvnd_1.3.1.orig.tar.gz 1031831 SHA512:6f7957839171fdbe0f8ab061da8f49a28b9021d6103a1e7b07edd63885129c83a92ac0878d06c295f7db67257108b27d0edcacc3a2859ba8c542c0a7c03715d1
-'http://archive.ubuntu.com/ubuntu/pool/main/libg/libglvnd/libglvnd_1.3.1-1ubuntu0.20.04.1.debian.tar.xz' libglvnd_1.3.1-1ubuntu0.20.04.1.debian.tar.xz 21884 SHA512:b020690adc6de6617a0c4da422fe30a83ef48849219b501c9d60e11489f8bf27238ee9a7f7a39a99bc04c2852bfbb640e4d4719c40aeaa9127b7bfda5368c793
-```
 
 ### `dpkg` source package: `libgpg-error=1.37-1`
 
@@ -5783,14 +5778,9 @@ Licenses: (parsed from: `/usr/share/doc/libegl-mesa0/copyright`, `/usr/share/doc
 - `MLAA`
 - `SGI`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mesa=20.0.8-0ubuntu1~20.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_20.0.8-0ubuntu1~20.04.1.dsc' mesa_20.0.8-0ubuntu1~20.04.1.dsc 5398 SHA512:0eddc1273c157e0825e8b360fbe7399a9885b7f131d06510348c6b3010a0d3eb863e9b552640f2fa00082a030bc2c0a2d5f6eeb98b9116738a3e447c2d3c7471
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_20.0.8.orig.tar.gz' mesa_20.0.8.orig.tar.gz 19030315 SHA512:d6a0365c8248c704548d74d6035da43a0791f3306176e873f7929ae34ac2254370190c6cd40cf5e8bfc2455dfbc02f40569a9b12c4b18c2048b29e635427cd53
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_20.0.8-0ubuntu1~20.04.1.diff.gz' mesa_20.0.8-0ubuntu1~20.04.1.diff.gz 114033 SHA512:b29115f72ff32dea1a43a0e216ea13f86763096bf9dad40112a0e821e6631da77ec0568995ae366d905f04c11a10254cf0f735573438c652252f9ecfdc259178
-```
 
 ### `dpkg` source package: `mime-support=3.64ubuntu1`
 
@@ -6448,15 +6438,9 @@ Licenses: (parsed from: `/usr/share/doc/libopenexr-dev/copyright`, `/usr/share/d
 - `GPL-2+`
 - `openexr`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openexr=2.3.0-6ubuntu0.2
-'http://archive.ubuntu.com/ubuntu/pool/universe/o/openexr/openexr_2.3.0-6ubuntu0.2.dsc' openexr_2.3.0-6ubuntu0.2.dsc 2638 SHA512:67974c2e8d22f9540aabc12300d7de2468ab176567b8cff0cea6fe7b5c50d8899f2ea7c68993c8157b3a381b3b3f4d498c745a96c29749d4427f1a5bb6344590
-'http://archive.ubuntu.com/ubuntu/pool/universe/o/openexr/openexr_2.3.0.orig.tar.gz' openexr_2.3.0.orig.tar.gz 18416222 SHA512:f6810505428674451627ef09e5dfbf13d7413e118f9defec4d160d9f1327b47699fe770a96b61da7820d2a357ccb722ad909ba4ba0924703fa5fd532cdf0da69
-'http://archive.ubuntu.com/ubuntu/pool/universe/o/openexr/openexr_2.3.0.orig.tar.gz.asc' openexr_2.3.0.orig.tar.gz.asc 566 SHA512:7110ddb22b2be7b570dcb1df278b2f7f39f2c5afd470094fd2a41c2f376d3991f756cbc5bef76dfc5bd7e1f55442bc8dff468d47224a495838083ef7de0c2a40
-'http://archive.ubuntu.com/ubuntu/pool/universe/o/openexr/openexr_2.3.0-6ubuntu0.2.debian.tar.xz' openexr_2.3.0-6ubuntu0.2.debian.tar.xz 33680 SHA512:619ac9d2350220003ba6d6f3e1ff9381f57b9150db328931b44fd0ddfabb411a52d7d4764597913cf087d0e4d57595ed17110709719bff0026779e7e9227d026
-```
 
 ### `dpkg` source package: `openjpeg2=2.3.1-1ubuntu4`
 
@@ -10789,14 +10773,9 @@ Licenses: (parsed from: `/usr/share/doc/tzdata/copyright`)
 
 - `ICU`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2020d-0ubuntu0.20.04
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2020d-0ubuntu0.20.04.dsc' tzdata_2020d-0ubuntu0.20.04.dsc 2141 SHA512:f755cff2ac7867149315c0db02bf22ceba64fe5e31bee94d0df8867b6ca6dee948b80c217a197970f04b4d4b034d49b4a3e74960a59310fa81d3fbf6f263a8fe
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2020d.orig.tar.gz' tzdata_2020d.orig.tar.gz 401479 SHA512:362e4569a666b0776614be3f63f1fe3d5ae259055e7051c9875f36023db9c52b0c5a10c19067114443a4cf2bf92475f8a0aebdf79bac836d967527fcdea4e9b6
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2020d-0ubuntu0.20.04.debian.tar.xz' tzdata_2020d-0ubuntu0.20.04.debian.tar.xz 165800 SHA512:0a8b11921a6acbe60326e8251b0249552c3c1fa857fc7c8bfad9198c20c837d0019d4bea98176824beec68b12cddc098d9d83510b3a61c15247b117d8bf3e3f2
-```
 
 ### `dpkg` source package: `u-msgpack-python=2.1-1build1`
 

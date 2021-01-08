@@ -3441,14 +3441,9 @@ Licenses: (parsed from: `/usr/share/doc/libp11-kit0/copyright`)
 - `permissive-like-automake-output`
 - `same-as-rest-of-p11kit`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris p11-kit=0.23.2-5~ubuntu16.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.2-5~ubuntu16.04.1.dsc' p11-kit_0.23.2-5~ubuntu16.04.1.dsc 2326 SHA512:e9563291cf8752d08dc5632652c87f8f8552f27f7b54209339ee1b1d67ec8674882621c4a7f381f455e3454acb6afd6f232c61b71ae84b16f3eecdd209247bd3
-'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.2.orig.tar.gz' p11-kit_0.23.2.orig.tar.gz 1022733 SHA512:b665d89f0d752a41b01ec53e29c801c4fdcaf3f21fce524984b10acef0477ad5dbac085edd35ffb747423d0e1e09660b8d29501c979cf54937d3b9d2561cf18f
-'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.2-5~ubuntu16.04.1.debian.tar.xz' p11-kit_0.23.2-5~ubuntu16.04.1.debian.tar.xz 15208 SHA512:26514c75dd90eb2816a66b4e7fc37087600092111fd7a4b47919bee6c9e2c62a5f67d2f167ecdce4c449eb0b7f08c0286e08eaccdc334eadfd3f1a1e39c9242b
-```
 
 ### `dpkg` source package: `pam=1.1.8-3.2ubuntu2.3`
 
@@ -5735,14 +5730,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2020d-0ubuntu0.16.04
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2020d-0ubuntu0.16.04.dsc' tzdata_2020d-0ubuntu0.16.04.dsc 2136 SHA512:6fc4dad73a394203049930a5dd37da531a9fc7940f760f620657f910ef93782b614ec8b7bddac63ece8a0c144bd22d81f8c0f20c49f362abda75f504a4f7a359
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2020d.orig.tar.gz' tzdata_2020d.orig.tar.gz 401479 SHA512:362e4569a666b0776614be3f63f1fe3d5ae259055e7051c9875f36023db9c52b0c5a10c19067114443a4cf2bf92475f8a0aebdf79bac836d967527fcdea4e9b6
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2020d-0ubuntu0.16.04.debian.tar.xz' tzdata_2020d-0ubuntu0.16.04.debian.tar.xz 101772 SHA512:83b9c51008d31e7e872e2cb169555d55fe1250dcb5f388c9048edbf6848dae09a9bd3e205cef7523bef77c1bc73373b87576956eb20946e4289ee33070d9ad5b
-```
 
 ### `dpkg` source package: `ubuntu-keyring=2012.05.19.1`
 
