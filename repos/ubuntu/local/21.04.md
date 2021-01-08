@@ -46,13 +46,9 @@ Licenses: (parsed from: `/usr/share/doc/adduser/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris adduser=3.118ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/a/adduser/adduser_3.118ubuntu2.dsc' adduser_3.118ubuntu2.dsc 1131 SHA512:c6a2226a509c17b2b7ec23fa474a10e3afce3259f8b244cf748ef9d8e88fa500f7e1d84145fd0e7d01d6e2782787430cd46130eb556df69c5c1611aaa26a94c7
-'http://archive.ubuntu.com/ubuntu/pool/main/a/adduser/adduser_3.118ubuntu2.tar.xz' adduser_3.118ubuntu2.tar.xz 222364 SHA512:6236481388a235723c74575cb987a403ee62536f10dd02262c4cf168174269d7c83a2e444ca2efb33ccf0bf430c1773189364609f295de3e8708f9a7c9d378fa
-```
 
 ### `dpkg` source package: `apt=2.1.11`
 
@@ -228,14 +224,9 @@ Licenses: (parsed from: `/usr/share/doc/dash/copyright`)
 - `GPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris dash=0.5.11+git20200708+dd9ef66+really0.5.10.2-0ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/d/dash/dash_0.5.11+git20200708+dd9ef66+really0.5.10.2-0ubuntu1.dsc' dash_0.5.11+git20200708+dd9ef66+really0.5.10.2-0ubuntu1.dsc 2332 SHA512:45750288adc5f6aed7ea8d3988d8f1abbb8b459612235a58c77a7dad792772d3e9d697ef343867804575526213da094f8babb0b57527e4bc9cf093acb10cb879
-'http://archive.ubuntu.com/ubuntu/pool/main/d/dash/dash_0.5.11+git20200708+dd9ef66+really0.5.10.2.orig.tar.gz' dash_0.5.11+git20200708+dd9ef66+really0.5.10.2.orig.tar.gz 225196 SHA512:0ae29be77794df0ba254967649b9728611a75fbb3acd32ab6634d76399d1ce97c7d12d31da465482a7e4f3207093415c496c39525cace9b78ab3cb9444dd7640
-'http://archive.ubuntu.com/ubuntu/pool/main/d/dash/dash_0.5.11+git20200708+dd9ef66+really0.5.10.2-0ubuntu1.debian.tar.xz' dash_0.5.11+git20200708+dd9ef66+really0.5.10.2-0ubuntu1.debian.tar.xz 45520 SHA512:a59067eaf75c780dfc0b5bbf796c73f29fbf63e4fb389012707c91f6898caf6b917a79319fdec65f33584b9cf8fa2649992f71e878c65a1338886fccb091f47f
-```
 
 ### `dpkg` source package: `db5.3=5.3.28+dfsg1-0.6ubuntu3`
 
@@ -1005,14 +996,13 @@ Licenses: (parsed from: `/usr/share/doc/libzstd1/copyright`)
 - `GPL-2+`
 - `zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libzstd=1.4.5+dfsg-4
-'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.4.5+dfsg-4.dsc' libzstd_1.4.5+dfsg-4.dsc 2291 SHA512:2e0515b1b4870dccbb98c53d735467f7b24d106b4e031c5e707eb5b90de37450d441273e1812385de45cb4082cca0bc58586de53bb10167264f7475cdf3b5cb0
-'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.4.5+dfsg.orig.tar.xz' libzstd_1.4.5+dfsg.orig.tar.xz 1387864 SHA512:347f4b5ac24a75ffc510dc746b5fa26c5d71609ca5dcd4a9c5d4c43aa6f2df510d2e8d998d550e52e5b6f368277a8bf6fa82801a3581f79b866c6a340d0220a7
-'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.4.5+dfsg-4.debian.tar.xz' libzstd_1.4.5+dfsg-4.debian.tar.xz 12724 SHA512:5a9ca0b4d9bd16748365869d8530df01074956458b61c89cf298f1584b80e10ff91147ec903071f513b58f9ccfa2f6114a295233dbb1b31f116ce617e18fd267
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/libzstd/1.4.5+dfsg-4/
+
 
 ### `dpkg` source package: `lsb=11.1.0ubuntu2`
 
@@ -1162,15 +1152,9 @@ Licenses: (parsed from: `/usr/share/doc/libp11-kit0/copyright`)
 - `permissive-like-automake-output`
 - `same-as-rest-of-p11kit`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris p11-kit=0.23.21-2build1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.21-2build1.dsc' p11-kit_0.23.21-2build1.dsc 2557 SHA512:0c19b974d43b28c892262a99c9dce7b625e7caa43cd0d21b43591a6b469435e2c259d130fd6775e7e2a6b425f4ce88e458193d61f2c87c480ed71f572f4285f5
-'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.21.orig.tar.xz' p11-kit_0.23.21.orig.tar.xz 827064 SHA512:4c796ca2c72a650f105a7a70aa62e55edb12e1c151e91ef92bfeee6c5c68982b36023400b42c4efcb1d351b7848e8618c26607cdb0f77b48ae40e2ecfd713e3e
-'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.21.orig.tar.xz.asc' p11-kit_0.23.21.orig.tar.xz.asc 854 SHA512:8bf48da323fe9c6161673c49870852d34fede5beb6a624ce73090599d3729633153f03dc06aa77478174b1e4e4840c3fe74cd84219747446e2fa29f2a895cfa5
-'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.21-2build1.debian.tar.xz' p11-kit_0.23.21-2build1.debian.tar.xz 22788 SHA512:88a6885d6a83c3e7f8ed18148c18603b14ee567b9020e324f9873f4e73ffa75b682ce6138566265abfce134d15fba14200069e21127ff0849fa6bf7392ad3e29
-```
 
 ### `dpkg` source package: `pam=1.3.1-5ubuntu6`
 
