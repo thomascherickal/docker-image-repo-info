@@ -25,6 +25,22 @@
 -	[`julia:1.5-buster`](#julia15-buster)
 -	[`julia:1.5-windowsservercore-1809`](#julia15-windowsservercore-1809)
 -	[`julia:1.5-windowsservercore-ltsc2016`](#julia15-windowsservercore-ltsc2016)
+-	[`julia:1.6`](#julia16)
+-	[`julia:1.6.0`](#julia160)
+-	[`julia:1.6.0-beta1`](#julia160-beta1)
+-	[`julia:1.6.0-beta1-buster`](#julia160-beta1-buster)
+-	[`julia:1.6.0-beta1-windowsservercore-1809`](#julia160-beta1-windowsservercore-1809)
+-	[`julia:1.6.0-beta1-windowsservercore-ltsc2016`](#julia160-beta1-windowsservercore-ltsc2016)
+-	[`julia:1.6.0-buster`](#julia160-buster)
+-	[`julia:1.6.0-windowsservercore-1809`](#julia160-windowsservercore-1809)
+-	[`julia:1.6.0-windowsservercore-ltsc2016`](#julia160-windowsservercore-ltsc2016)
+-	[`julia:1.6-buster`](#julia16-buster)
+-	[`julia:1.6-rc`](#julia16-rc)
+-	[`julia:1.6-rc-buster`](#julia16-rc-buster)
+-	[`julia:1.6-rc-windowsservercore-1809`](#julia16-rc-windowsservercore-1809)
+-	[`julia:1.6-rc-windowsservercore-ltsc2016`](#julia16-rc-windowsservercore-ltsc2016)
+-	[`julia:1.6-windowsservercore-1809`](#julia16-windowsservercore-1809)
+-	[`julia:1.6-windowsservercore-ltsc2016`](#julia16-windowsservercore-ltsc2016)
 -	[`julia:1-alpine`](#julia1-alpine)
 -	[`julia:1-alpine3.12`](#julia1-alpine312)
 -	[`julia:1-buster`](#julia1-buster)
@@ -3415,6 +3431,70 @@ CMD ["julia"]
 		Last Modified: Wed, 09 Dec 2020 17:29:42 GMT  
 		Size: 1.2 KB (1170 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `julia:1.6`
+
+**does not exist** (yet?)
+
+## `julia:1.6.0`
+
+**does not exist** (yet?)
+
+## `julia:1.6.0-beta1`
+
+**does not exist** (yet?)
+
+## `julia:1.6.0-beta1-buster`
+
+**does not exist** (yet?)
+
+## `julia:1.6.0-beta1-windowsservercore-1809`
+
+**does not exist** (yet?)
+
+## `julia:1.6.0-beta1-windowsservercore-ltsc2016`
+
+**does not exist** (yet?)
+
+## `julia:1.6.0-buster`
+
+**does not exist** (yet?)
+
+## `julia:1.6.0-windowsservercore-1809`
+
+**does not exist** (yet?)
+
+## `julia:1.6.0-windowsservercore-ltsc2016`
+
+**does not exist** (yet?)
+
+## `julia:1.6-buster`
+
+**does not exist** (yet?)
+
+## `julia:1.6-rc`
+
+**does not exist** (yet?)
+
+## `julia:1.6-rc-buster`
+
+**does not exist** (yet?)
+
+## `julia:1.6-rc-windowsservercore-1809`
+
+**does not exist** (yet?)
+
+## `julia:1.6-rc-windowsservercore-ltsc2016`
+
+**does not exist** (yet?)
+
+## `julia:1.6-windowsservercore-1809`
+
+**does not exist** (yet?)
+
+## `julia:1.6-windowsservercore-ltsc2016`
+
+**does not exist** (yet?)
 
 ## `julia:1-alpine`
 
