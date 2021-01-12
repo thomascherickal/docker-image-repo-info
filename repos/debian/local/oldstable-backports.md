@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:1ba51cbb49e16a847a39fef54521434adf3b0078627627ae3d08fd66fa5b939e`
-- Created: `2020-12-11T02:07:24.750540339Z`
+- Image ID: `sha256:e2791a0818b5428d24dc1f11a2614bb141d1b8e3c505193cc8aa406cc11fe979`
+- Created: `2021-01-12T00:33:55.099585108Z`
 - Virtual Size: ~ 100.66 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -1445,23 +1445,30 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tar/1.29b-1.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tar/1.29b-1.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tzdata=2020d-0+deb9u1`
+### `dpkg` source package: `tzdata=2020e-0+deb9u1`
 
 Binary Packages:
 
-- `tzdata=2020d-0+deb9u1`
+- `tzdata=2020e-0+deb9u1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris tzdata=2020e-0+deb9u1
+'http://security.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2020e-0+deb9u1.dsc' tzdata_2020e-0+deb9u1.dsc 2029 SHA256:f3405f11c8c82e5dc87530264b3167926a4c78794a003d9efe5e8ad8babf2fc2
+'http://security.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2020e.orig.tar.gz' tzdata_2020e.orig.tar.gz 411619 SHA256:0be1ba329eae29ae1b54057c3547b3e672f73b3ae7643aa87dac85122bec037e
+'http://security.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2020e-0+deb9u1.debian.tar.xz' tzdata_2020e-0+deb9u1.debian.tar.xz 103208 SHA256:bf1d839755ffffce418f13d2701f62164c14502be5e85eeaa7eb219af31774f9
+```
 
-- http://snapshot.debian.org/package/tzdata/2020d-0+deb9u1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/tzdata/2020e-0+deb9u1/ (for browsing the source)
+- https://sources.debian.net/src/tzdata/2020e-0+deb9u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tzdata/2020e-0+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ustr=1.0.4-6`
 
