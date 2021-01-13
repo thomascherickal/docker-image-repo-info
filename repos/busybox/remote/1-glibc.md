@@ -1,7 +1,7 @@
 ## `busybox:1-glibc`
 
 ```console
-$ docker pull busybox@sha256:894869cb9a724c3b23ed68ff8233f81d4454184959b4bcfa6dcfac74fb01cea1
+$ docker pull busybox@sha256:cd0b1e981431aff21bfd6601f61d47360535ca229e8dfa00b98b2951c007e5cb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -96,27 +96,27 @@ CMD ["sh"]
 ### `busybox:1-glibc` - linux; arm64 variant v8
 
 ```console
-$ docker pull busybox@sha256:a7c12177ea8e0d22208e57ff2228cd9eb437619a701b5e63645e04d491d3ce65
+$ docker pull busybox@sha256:90a1ce72cbf89d50618665a71a5bd34286e0fabbfd1423d546cad0701d9ba4e2
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **2.1 MB (2136210 bytes)**  
+-	Total Size: **2.1 MB (2133353 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:095587c27da84d3f134ca7d7bd23f7b9d9efd44ce5cf6748d4f3847df0c74690`
+-	Image ID: `sha256:3fc37796ad27041bf2846d4c63cdda34ddb5074a83114d2b7c30e0645322ec88`
 -	Default Command: `["sh"]`
 
 ```dockerfile
-# Wed, 30 Dec 2020 00:39:50 GMT
-ADD file:b7223da53278f62e527a07f2116306fbe97bc0a46ff26f869cffb9dc4c58dfad in / 
-# Wed, 30 Dec 2020 00:39:51 GMT
+# Wed, 13 Jan 2021 05:45:12 GMT
+ADD file:9c4ba71aac235b0308d86c7fe3ecf3685d3c5f16287903711c30d6ef5653521f in / 
+# Wed, 13 Jan 2021 05:45:13 GMT
 CMD ["sh"]
 ```
 
 -	Layers:
-	-	`sha256:862e8dd851151a47692f363100c3f3af99b2f47622255fd63b9af0eeb3ebc634`  
-		Last Modified: Wed, 30 Dec 2020 00:40:55 GMT  
-		Size: 2.1 MB (2136210 bytes)  
+	-	`sha256:060a6aaf22373e4a4f5be3ecce3a7332b7336509a7fcf5855e4fdec67e53677c`  
+		Last Modified: Wed, 13 Jan 2021 05:46:56 GMT  
+		Size: 2.1 MB (2133353 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `busybox:1-glibc` - linux; 386
