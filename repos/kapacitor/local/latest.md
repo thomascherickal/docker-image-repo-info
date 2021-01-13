@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:b49569552306c82bf2364e3e40253c6d5a85530ed401d0ec2df9e1ca84970a5c`
-- Created: `2020-12-18T02:56:13.411044795Z`
-- Virtual Size: ~ 246.06 Mb  
+- Image ID: `sha256:926bd22bb3ad08561211d142db17e500eaa3e35ad041a3cef90e2dbf407e9b28`
+- Created: `2021-01-13T00:08:19.731374532Z`
+- Virtual Size: ~ 246.07 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -345,12 +345,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/coreutils/8.26-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/coreutils/8.26-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `curl=7.52.1-5+deb9u12`
+### `dpkg` source package: `curl=7.52.1-5+deb9u13`
 
 Binary Packages:
 
-- `curl=7.52.1-5+deb9u12`
-- `libcurl3:amd64=7.52.1-5+deb9u12`
+- `curl=7.52.1-5+deb9u13`
+- `libcurl3:amd64=7.52.1-5+deb9u13`
 
 Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl3/copyright`)
 
@@ -361,13 +361,20 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris curl=7.52.1-5+deb9u13
+'http://security.debian.org/debian-security/pool/updates/main/c/curl/curl_7.52.1-5+deb9u13.dsc' curl_7.52.1-5+deb9u13.dsc 2797 SHA256:394b35eceaaf3c3545b3fcc673ef43c4d81f0f26f27392333e7c593e63c2d24e
+'http://security.debian.org/debian-security/pool/updates/main/c/curl/curl_7.52.1.orig.tar.gz' curl_7.52.1.orig.tar.gz 3504621 SHA256:a8984e8b20880b621f61a62d95ff3c0763a3152093a9f9ce4287cfd614add6ae
+'http://security.debian.org/debian-security/pool/updates/main/c/curl/curl_7.52.1-5+deb9u13.debian.tar.xz' curl_7.52.1-5+deb9u13.debian.tar.xz 48744 SHA256:685ebde74e62c02bb6c0c55b0430be76ee85fe038f468b47330c23c18f74647f
+```
 
-- http://snapshot.debian.org/package/curl/7.52.1-5+deb9u12/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/curl/7.52.1-5+deb9u13/ (for browsing the source)
+- https://sources.debian.net/src/curl/7.52.1-5+deb9u13/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/curl/7.52.1-5+deb9u13/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27~101-g0780600+dfsg-3+deb9u1`
 
@@ -1814,11 +1821,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/openssl/1.1.0l-1~deb9u2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/openssl/1.1.0l-1~deb9u2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `p11-kit=0.23.3-2`
+### `dpkg` source package: `p11-kit=0.23.3-2+deb9u1`
 
 Binary Packages:
 
-- `libp11-kit0:amd64=0.23.3-2`
+- `libp11-kit0:amd64=0.23.3-2+deb9u1`
 
 Licenses: (parsed from: `/usr/share/doc/libp11-kit0/copyright`)
 
@@ -1831,18 +1838,18 @@ Licenses: (parsed from: `/usr/share/doc/libp11-kit0/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris p11-kit=0.23.3-2
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.23.3-2.dsc' p11-kit_0.23.3-2.dsc 2452 SHA256:fc8e87147d30de8d33e78adb805530d582655999762129b75097a9824679b0cc
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.23.3.orig.tar.gz' p11-kit_0.23.3.orig.tar.gz 1047441 SHA256:d487f04dba3f9e8256f53034c59c944ca45fd7b8434c095da6a74079644dcd82
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.23.3.orig.tar.gz.asc' p11-kit_0.23.3.orig.tar.gz.asc 543 SHA256:a9268313ad8e6c3dae5f4cf9006d8a773861e567c98786482304b3cc91883647
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.23.3-2.debian.tar.xz' p11-kit_0.23.3-2.debian.tar.xz 19784 SHA256:952f55f8c5e2cdc03c8388b59b0bd77bb53eb8f2c2ca2a686cfc91b52100e257
+$ apt-get source -qq --print-uris p11-kit=0.23.3-2+deb9u1
+'http://security.debian.org/debian-security/pool/updates/main/p/p11-kit/p11-kit_0.23.3-2+deb9u1.dsc' p11-kit_0.23.3-2+deb9u1.dsc 2480 SHA256:39e9f079a37cc8d70ef185fef05d28a3ba60c6a05b8df050be903a5696989cfd
+'http://security.debian.org/debian-security/pool/updates/main/p/p11-kit/p11-kit_0.23.3.orig.tar.gz' p11-kit_0.23.3.orig.tar.gz 1047441 SHA256:d487f04dba3f9e8256f53034c59c944ca45fd7b8434c095da6a74079644dcd82
+'http://security.debian.org/debian-security/pool/updates/main/p/p11-kit/p11-kit_0.23.3.orig.tar.gz.asc' p11-kit_0.23.3.orig.tar.gz.asc 543 SHA256:a9268313ad8e6c3dae5f4cf9006d8a773861e567c98786482304b3cc91883647
+'http://security.debian.org/debian-security/pool/updates/main/p/p11-kit/p11-kit_0.23.3-2+deb9u1.debian.tar.xz' p11-kit_0.23.3-2+deb9u1.debian.tar.xz 22948 SHA256:843ca4c9bab2c2a062681e14935f8a5e383f7fc11b085a16992959b548edc4d2
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/p11-kit/0.23.3-2/ (for browsing the source)
-- https://sources.debian.net/src/p11-kit/0.23.3-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/p11-kit/0.23.3-2/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/p11-kit/0.23.3-2+deb9u1/ (for browsing the source)
+- https://sources.debian.net/src/p11-kit/0.23.3-2+deb9u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/p11-kit/0.23.3-2+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pam=1.1.8-3.6`
 
@@ -2216,23 +2223,30 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tar/1.29b-1.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tar/1.29b-1.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tzdata=2020d-0+deb9u1`
+### `dpkg` source package: `tzdata=2020e-0+deb9u1`
 
 Binary Packages:
 
-- `tzdata=2020d-0+deb9u1`
+- `tzdata=2020e-0+deb9u1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris tzdata=2020e-0+deb9u1
+'http://security.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2020e-0+deb9u1.dsc' tzdata_2020e-0+deb9u1.dsc 2029 SHA256:f3405f11c8c82e5dc87530264b3167926a4c78794a003d9efe5e8ad8babf2fc2
+'http://security.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2020e.orig.tar.gz' tzdata_2020e.orig.tar.gz 411619 SHA256:0be1ba329eae29ae1b54057c3547b3e672f73b3ae7643aa87dac85122bec037e
+'http://security.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2020e-0+deb9u1.debian.tar.xz' tzdata_2020e-0+deb9u1.debian.tar.xz 103208 SHA256:bf1d839755ffffce418f13d2701f62164c14502be5e85eeaa7eb219af31774f9
+```
 
-- http://snapshot.debian.org/package/tzdata/2020d-0+deb9u1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/tzdata/2020e-0+deb9u1/ (for browsing the source)
+- https://sources.debian.net/src/tzdata/2020e-0+deb9u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tzdata/2020e-0+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ustr=1.0.4-6`
 
