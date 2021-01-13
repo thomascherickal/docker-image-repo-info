@@ -1,7 +1,7 @@
 ## `redis:alpine`
 
 ```console
-$ docker pull redis@sha256:72c8d355b5490c1c55c163532037ea83f197d1b53e6255172d3f0801e3fe6dc0
+$ docker pull redis@sha256:2b4dfb8f9490f86a15471684091b77b605a56c0fff16394aece7d245a74a91d1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -163,14 +163,14 @@ CMD ["redis-server"]
 ### `redis:alpine` - linux; arm variant v7
 
 ```console
-$ docker pull redis@sha256:9594ac6f66ecf3029a9e99a9929cb72e0926c597f9faae06bc7e1f4d30f07d74
+$ docker pull redis@sha256:b9e964c8b46a0f01e24ba5c39265394aa20f1a0122d138f5879b741b999917c2
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **10.0 MB (9977149 bytes)**  
+-	Total Size: **10.0 MB (9982717 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:870ef2c3fb1111bc95061a54acab6716db31ed4bb1606981a8a86fba5c4dae75`
+-	Image ID: `sha256:a3c74e17caf1a3ab46745e8feff9fb3547a18749dc75b2ad85e6c707ced85b04`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["redis-server"]`
 
@@ -183,27 +183,27 @@ CMD ["/bin/sh"]
 RUN addgroup -S -g 1000 redis && adduser -S -G redis -u 999 redis
 # Thu, 17 Dec 2020 06:01:46 GMT
 RUN apk add --no-cache 		'su-exec>=0.2' 		tzdata
-# Thu, 17 Dec 2020 06:03:17 GMT
-ENV REDIS_VERSION=6.0.9
-# Thu, 17 Dec 2020 06:03:19 GMT
-ENV REDIS_DOWNLOAD_URL=http://download.redis.io/releases/redis-6.0.9.tar.gz
-# Thu, 17 Dec 2020 06:03:20 GMT
-ENV REDIS_DOWNLOAD_SHA=dc2bdcf81c620e9f09cfd12e85d3bc631c897b2db7a55218fd8a65eaa37f86dd
-# Thu, 17 Dec 2020 06:04:08 GMT
+# Wed, 13 Jan 2021 03:00:58 GMT
+ENV REDIS_VERSION=6.0.10
+# Wed, 13 Jan 2021 03:00:58 GMT
+ENV REDIS_DOWNLOAD_URL=http://download.redis.io/releases/redis-6.0.10.tar.gz
+# Wed, 13 Jan 2021 03:00:59 GMT
+ENV REDIS_DOWNLOAD_SHA=79bbb894f9dceb33ca699ee3ca4a4e1228be7fb5547aeb2f99d921e86c1285bd
+# Wed, 13 Jan 2021 03:01:45 GMT
 RUN set -eux; 		apk add --no-cache --virtual .build-deps 		coreutils 		dpkg-dev dpkg 		gcc 		linux-headers 		make 		musl-dev 		openssl-dev 		wget 	; 		wget -O redis.tar.gz "$REDIS_DOWNLOAD_URL"; 	echo "$REDIS_DOWNLOAD_SHA *redis.tar.gz" | sha256sum -c -; 	mkdir -p /usr/src/redis; 	tar -xzf redis.tar.gz -C /usr/src/redis --strip-components=1; 	rm redis.tar.gz; 		grep -E '^ *createBoolConfig[(]"protected-mode",.*, *1 *,.*[)],$' /usr/src/redis/src/config.c; 	sed -ri 's!^( *createBoolConfig[(]"protected-mode",.*, *)1( *,.*[)],)$!\10\2!' /usr/src/redis/src/config.c; 	grep -E '^ *createBoolConfig[(]"protected-mode",.*, *0 *,.*[)],$' /usr/src/redis/src/config.c; 		gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	extraJemallocConfigureFlags="--build=$gnuArch"; 	dpkgArch="$(dpkg --print-architecture)"; 	case "${dpkgArch##*-}" in 		amd64 | i386 | x32) extraJemallocConfigureFlags="$extraJemallocConfigureFlags --with-lg-page=12" ;; 		*) extraJemallocConfigureFlags="$extraJemallocConfigureFlags --with-lg-page=16" ;; 	esac; 	extraJemallocConfigureFlags="$extraJemallocConfigureFlags --with-lg-hugepage=21"; 	grep -F 'cd jemalloc && ./configure ' /usr/src/redis/deps/Makefile; 	sed -ri 's!cd jemalloc && ./configure !&'"$extraJemallocConfigureFlags"' !' /usr/src/redis/deps/Makefile; 	grep -F "cd jemalloc && ./configure $extraJemallocConfigureFlags " /usr/src/redis/deps/Makefile; 		export BUILD_TLS=yes; 	make -C /usr/src/redis -j "$(nproc)" all; 	make -C /usr/src/redis install; 		serverMd5="$(md5sum /usr/local/bin/redis-server | cut -d' ' -f1)"; export serverMd5; 	find /usr/local/bin/redis* -maxdepth 0 		-type f -not -name redis-server 		-exec sh -eux -c ' 			md5="$(md5sum "$1" | cut -d" " -f1)"; 			test "$md5" = "$serverMd5"; 		' -- '{}' ';' 		-exec ln -svfT 'redis-server' '{}' ';' 	; 		rm -r /usr/src/redis; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .redis-rundeps $runDeps; 	apk del --no-network .build-deps; 		redis-cli --version; 	redis-server --version
-# Thu, 17 Dec 2020 06:04:10 GMT
+# Wed, 13 Jan 2021 03:01:47 GMT
 RUN mkdir /data && chown redis:redis /data
-# Thu, 17 Dec 2020 06:04:11 GMT
+# Wed, 13 Jan 2021 03:01:48 GMT
 VOLUME [/data]
-# Thu, 17 Dec 2020 06:04:12 GMT
+# Wed, 13 Jan 2021 03:01:49 GMT
 WORKDIR /data
-# Thu, 17 Dec 2020 06:04:12 GMT
+# Wed, 13 Jan 2021 03:01:50 GMT
 COPY file:c48b97ea65422782310396358f838c38c0747767dd606a88d4c3d0b034a60762 in /usr/local/bin/ 
-# Thu, 17 Dec 2020 06:04:13 GMT
+# Wed, 13 Jan 2021 03:01:52 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 17 Dec 2020 06:04:14 GMT
+# Wed, 13 Jan 2021 03:01:52 GMT
 EXPOSE 6379
-# Thu, 17 Dec 2020 06:04:14 GMT
+# Wed, 13 Jan 2021 03:01:53 GMT
 CMD ["redis-server"]
 ```
 
@@ -220,17 +220,17 @@ CMD ["redis-server"]
 		Last Modified: Thu, 17 Dec 2020 06:06:17 GMT  
 		Size: 378.5 KB (378466 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8bcb1fcc8eabf7f528b6a3cd9edf881d3219a04017daef0bdb8e20130a32fae2`  
-		Last Modified: Thu, 17 Dec 2020 06:06:43 GMT  
-		Size: 7.2 MB (7189318 bytes)  
+	-	`sha256:172ba23d3682bb23ead5d0ede269720a991a230e5803f8425eef9b802ea15046`  
+		Last Modified: Wed, 13 Jan 2021 03:04:03 GMT  
+		Size: 7.2 MB (7194885 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3b4bd8537de40948acbdf3da3070577e868daf715fc0c7a0dd7c6650261eb080`  
-		Last Modified: Thu, 17 Dec 2020 06:06:40 GMT  
+	-	`sha256:f78bd18371cb082187479ce83f91d7f096161aa8cf8da06595d4991992573c1f`  
+		Last Modified: Wed, 13 Jan 2021 03:04:03 GMT  
 		Size: 136.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:319bd33431bd30a78915052dcded54c9160c7e91d8d1388c3100dc06a6580aca`  
-		Last Modified: Thu, 17 Dec 2020 06:06:40 GMT  
-		Size: 414.0 B  
+	-	`sha256:4d5ee10d0a4e9a859c2870044d039d2126c8fa53eb9150ea8eb957a79c99eff3`  
+		Last Modified: Wed, 13 Jan 2021 03:04:00 GMT  
+		Size: 415.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `redis:alpine` - linux; arm64 variant v8
