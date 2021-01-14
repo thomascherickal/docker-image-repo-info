@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:d85a8872e3faabd6a7d7836a6107b8e33e754a478861f3b0452c05965f7361e6`
-- Created: `2020-12-15T22:47:56.982932329Z`
-- Virtual Size: ~ 103.47 Mb  
+- Image ID: `sha256:53dcac5ef0ea60a603bddffdf96d1a3c795e7727c9c12f96b6815acb1478c9d4`
+- Created: `2021-01-12T23:06:06.755501497Z`
+- Virtual Size: ~ 103.48 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["hy"]`
@@ -1112,12 +1112,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/netbase/5.4/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/netbase/5.4/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openssl=1.1.0l-1~deb9u1`
+### `dpkg` source package: `openssl=1.1.0l-1~deb9u2`
 
 Binary Packages:
 
-- `libssl1.1:amd64=1.1.0l-1~deb9u1`
-- `openssl=1.1.0l-1~deb9u1`
+- `libssl1.1:amd64=1.1.0l-1~deb9u2`
+- `openssl=1.1.0l-1~deb9u2`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1126,18 +1126,18 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openssl=1.1.0l-1~deb9u1
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.0l-1~deb9u1.dsc' openssl_1.1.0l-1~deb9u1.dsc 2437 SHA256:9ae8fb3e89110ad3c75ba6a52b8f40cc5419b56f31c5c8b6f6aca0949cd90ea7
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.0l.orig.tar.gz' openssl_1.1.0l.orig.tar.gz 5294857 SHA256:74a2f756c64fd7386a29184dc0344f4831192d61dc2481a93a4c5dd727f41148
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.0l.orig.tar.gz.asc' openssl_1.1.0l.orig.tar.gz.asc 488 SHA256:afc83de9f9f1ef5f79ab8a31bbdeb26f9ac9a07cfdab7628a773267d31f85e42
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.0l-1~deb9u1.debian.tar.xz' openssl_1.1.0l-1~deb9u1.debian.tar.xz 72100 SHA256:78290d8a50219fe9c1c5676084a5567b23aff12f701bcd975e4c0d32264d5116
+$ apt-get source -qq --print-uris openssl=1.1.0l-1~deb9u2
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.0l-1~deb9u2.dsc' openssl_1.1.0l-1~deb9u2.dsc 2611 SHA256:f314e49b7d8419cb3cadc15315159c6c61a39a837c645eeec4569862c4be366c
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.0l.orig.tar.gz' openssl_1.1.0l.orig.tar.gz 5294857 SHA256:74a2f756c64fd7386a29184dc0344f4831192d61dc2481a93a4c5dd727f41148
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.0l.orig.tar.gz.asc' openssl_1.1.0l.orig.tar.gz.asc 488 SHA256:afc83de9f9f1ef5f79ab8a31bbdeb26f9ac9a07cfdab7628a773267d31f85e42
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.0l-1~deb9u2.debian.tar.xz' openssl_1.1.0l-1~deb9u2.debian.tar.xz 76012 SHA256:4e240509d4b36ff7c76b3cb927fc05b7b40a55424eab53d1ef79d211eda0878e
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/openssl/1.1.0l-1~deb9u1/ (for browsing the source)
-- https://sources.debian.net/src/openssl/1.1.0l-1~deb9u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openssl/1.1.0l-1~deb9u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/openssl/1.1.0l-1~deb9u2/ (for browsing the source)
+- https://sources.debian.net/src/openssl/1.1.0l-1~deb9u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openssl/1.1.0l-1~deb9u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pam=1.1.8-3.6`
 
@@ -1456,23 +1456,30 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tar/1.29b-1.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tar/1.29b-1.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tzdata=2020d-0+deb9u1`
+### `dpkg` source package: `tzdata=2020e-0+deb9u1`
 
 Binary Packages:
 
-- `tzdata=2020d-0+deb9u1`
+- `tzdata=2020e-0+deb9u1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris tzdata=2020e-0+deb9u1
+'http://security.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2020e-0+deb9u1.dsc' tzdata_2020e-0+deb9u1.dsc 2029 SHA256:f3405f11c8c82e5dc87530264b3167926a4c78794a003d9efe5e8ad8babf2fc2
+'http://security.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2020e.orig.tar.gz' tzdata_2020e.orig.tar.gz 411619 SHA256:0be1ba329eae29ae1b54057c3547b3e672f73b3ae7643aa87dac85122bec037e
+'http://security.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2020e-0+deb9u1.debian.tar.xz' tzdata_2020e-0+deb9u1.debian.tar.xz 103208 SHA256:bf1d839755ffffce418f13d2701f62164c14502be5e85eeaa7eb219af31774f9
+```
 
-- http://snapshot.debian.org/package/tzdata/2020d-0+deb9u1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/tzdata/2020e-0+deb9u1/ (for browsing the source)
+- https://sources.debian.net/src/tzdata/2020e-0+deb9u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tzdata/2020e-0+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ustr=1.0.4-6`
 
