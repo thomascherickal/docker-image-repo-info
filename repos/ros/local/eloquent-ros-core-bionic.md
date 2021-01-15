@@ -1075,9 +1075,14 @@ Licenses: (parsed from: `/usr/share/doc/python3-lark-parser/copyright`)
 
 - `MIT`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris lark-parser=0.7.2-1osrf~bionic
+'http://packages.ros.org/ros2/ubuntu/pool/main/l/lark-parser/lark-parser_0.7.2-1osrf~bionic.debian.tar.xz' lark-parser_0.7.2-1osrf~bionic.debian.tar.xz 1652 SHA512:3439d332aa7a26f10fcdd32e907ce12ada54c209ca5bf7b867c673fb8c7996a6e5806768c96840c197e81c711f1f7228a7c8e35773c78431e160f287c5f12852
+'http://packages.ros.org/ros2/ubuntu/pool/main/l/lark-parser/lark-parser_0.7.2-1osrf~bionic.dsc' lark-parser_0.7.2-1osrf~bionic.dsc 1185 SHA512:1241666053b039bcd4912bb47757eb7e2cb19302017fb85f45a9210e1541f1d2b0376e75b80b786dd0c3a4b1a456b89f3d322439abada73610c046850ea8a56c
+'http://packages.ros.org/ros2/ubuntu/pool/main/l/lark-parser/lark-parser_0.7.2.orig.tar.gz' lark-parser_0.7.2.orig.tar.gz 292186 SHA512:30da31e4521091efe69e71db9aff0292797fc1c8d8b12955c69d97ef4e82b098cdc4a034bdaa4169eda8f96316f4c2dafd41168b5338912f57a358a151978610
+```
 
 ### `dpkg` source package: `libarchive=3.2.2-3.1ubuntu0.6`
 
@@ -5018,14 +5023,9 @@ Licenses: (parsed from: `/usr/share/doc/tar/copyright`)
 - `GPL-2`
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tar=1.29b-2ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.29b-2ubuntu0.1.dsc' tar_1.29b-2ubuntu0.1.dsc 1426 SHA512:07cd0e105d5620c2f9b77c1a8b6f1016f2c83a022a38d0fa9e94bc07ffe3f716df609b8c92808e5e3e80db8eaece3b076643debd54c653eda76eb1973a56e9ab
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.29b.orig.tar.xz' tar_1.29b.orig.tar.xz 1822008 SHA512:6814c906f3bf3d1421d46e63aff7921acffbd2b2a0a7e5c20b472a821eab839d6eab93653d964ae16376b65da223c57a92455f44793522c84c8b1343af20b106
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.29b-2ubuntu0.1.debian.tar.xz' tar_1.29b-2ubuntu0.1.debian.tar.xz 31672 SHA512:e4756dd0ad0d765af0c6639695b17cc86f80033a45705cdcb845639bab7d3aed0fac8d86ac28a0aa2e024bdb4dad43376f4a02c915a0921609deeeed74637bd7
-```
 
 ### `dpkg` source package: `tinyxml2=6.0.0+dfsg-1`
 
