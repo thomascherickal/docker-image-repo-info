@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:a6e2f73722d804095bb1e054d745c8c321a1d67a9c74028fc0e49bd4f41396f3`
-- Created: `2021-01-06T21:39:04.743511056Z`
+- Image ID: `sha256:5415890d2650e2bba3adec947123ea31053b0fa49a230821ce8a9165bb0ea580`
+- Created: `2021-01-15T02:11:21.188218895Z`
 - Virtual Size: ~ 546.33 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -20,13 +20,6 @@
   - `TOMCAT_MAJOR=8`
   - `TOMCAT_VERSION=8.5.61`
   - `TOMCAT_SHA512=55d7d0442a3c1bae7e470ba75c7473a8deeaf33c60ff66cecdc136ae0b0e852b871940c5deb720d501b444ccb00f0b8520b1930cbf564c2f46ceaf1e0367d41b`
-- Labels:
-  - `org.opencontainers.image.authors=Oracle Linux Product Team <ol-ovm-info_ww@oracle.com>`
-  - `org.opencontainers.image.description=Oracle Linux is an open-source       operating system available under the GNU General Public License (GPLv2) and       is suitable for both general purpose or Oracle workloads.`
-  - `org.opencontainers.image.source=https://github.com/oracle/container-images/tree/dist-amd64/7-slim`
-  - `org.opencontainers.image.title=Oracle Linux 7 (slim)`
-  - `org.opencontainers.image.url=https://github.com/oracle/container-images`
-  - `org.opencontainers.image.vendor=Oracle America, Inc`
 
 ## `rpm` (`.rpm`-based packages)
 
