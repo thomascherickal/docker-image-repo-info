@@ -1488,14 +1488,9 @@ Licenses: (parsed from: `/usr/share/doc/tar/copyright`)
 - `GPL-2`
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tar=1.28-2.1ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.28-2.1ubuntu0.1.dsc' tar_1.28-2.1ubuntu0.1.dsc 2025 SHA512:8684a8b31fe8068e852f3cddaf58906b7cbff7bae57d949ed5c74e4f57ba346527e10eaa82ca590d4f14d8265a98f8621e0d64608ea6eee805812ae822582e45
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.28.orig.tar.xz' tar_1.28.orig.tar.xz 1756440 SHA512:dc91045b84bf5df513ae936be14977b029644a77ac03f58d21d34e61e50d8069f95526b9e706f2da7d41d3d0ed7de88bf13c2c066e63a80e5651a24077e604c2
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.28-2.1ubuntu0.1.debian.tar.xz' tar_1.28-2.1ubuntu0.1.debian.tar.xz 36868 SHA512:17c96a2fec2c40c92f4f28a5c054811b8a6623cf5c5f6eb7b1f782fb41a1f5e6f516a38fae96dee8b4250acbe0f4dd162801406fcc495a0ffcf1a7257e1206dd
-```
 
 ### `dpkg` source package: `tzdata=2020d-0ubuntu0.16.04`
 
