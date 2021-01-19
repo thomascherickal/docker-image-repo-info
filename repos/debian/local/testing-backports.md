@@ -932,20 +932,13 @@ Licenses: (parsed from: `/usr/share/doc/libbpf0/copyright`)
 - `GPL-2+`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libbpf=0.3-1
-'http://deb.debian.org/debian/pool/main/libb/libbpf/libbpf_0.3-1.dsc' libbpf_0.3-1.dsc 1846 SHA256:55892a32f115ec35d8c2ae220fab9162794cca8fe50875873d001b3ab90bbbf2
-'http://deb.debian.org/debian/pool/main/libb/libbpf/libbpf_0.3.orig.tar.gz' libbpf_0.3.orig.tar.gz 979131 SHA256:c168d84a75b541f753ceb49015d9eb886e3fb5cca87cdd9aabce7e10ad3a1efc
-'http://deb.debian.org/debian/pool/main/libb/libbpf/libbpf_0.3-1.debian.tar.xz' libbpf_0.3-1.debian.tar.xz 5368 SHA256:cab4b3358490802be62c16064429fdf2384629f4be23211416432a26b8b69965
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libbpf/0.3-1/
 
-- https://sources.debian.net/src/libbpf/0.3-1/ (for browsing the source)
-- https://sources.debian.net/src/libbpf/0.3-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libbpf/0.3-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libbsd=0.10.0-1`
 
@@ -1143,20 +1136,13 @@ Licenses: (parsed from: `/usr/share/doc/libidn2-0/copyright`)
 - `LGPL-3+`
 - `Unicode`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libidn2=2.3.0-4
-'http://deb.debian.org/debian/pool/main/libi/libidn2/libidn2_2.3.0-4.dsc' libidn2_2.3.0-4.dsc 2046 SHA256:77e2918866e2e0bda02e61f23d9a03173bccea3c96af557d7d81f7921f80d91b
-'http://deb.debian.org/debian/pool/main/libi/libidn2/libidn2_2.3.0.orig.tar.gz' libidn2_2.3.0.orig.tar.gz 2164993 SHA256:e1cb1db3d2e249a6a3eb6f0946777c2e892d5c5dc7bd91c74394fc3a01cab8b5
-'http://deb.debian.org/debian/pool/main/libi/libidn2/libidn2_2.3.0-4.debian.tar.xz' libidn2_2.3.0-4.debian.tar.xz 11476 SHA256:11d256a27af58908cc7ddf7dc4e3987f5752156de43707604762d0095bf1042e
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libidn2/2.3.0-4/
 
-- https://sources.debian.net/src/libidn2/2.3.0-4/ (for browsing the source)
-- https://sources.debian.net/src/libidn2/2.3.0-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libidn2/2.3.0-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libmnl=1.0.4-3`
 
@@ -1596,20 +1582,13 @@ Licenses: (parsed from: `/usr/share/doc/libpam-modules/copyright`, `/usr/share/d
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pam=1.3.1-5
-'http://deb.debian.org/debian/pool/main/p/pam/pam_1.3.1-5.dsc' pam_1.3.1-5.dsc 2648 SHA256:6be33a9db415ff3e474a10d1a0c41fca3dbe90ae8c9ddd9a4a997892b11d67ab
-'http://deb.debian.org/debian/pool/main/p/pam/pam_1.3.1.orig.tar.xz' pam_1.3.1.orig.tar.xz 912332 SHA256:eff47a4ecd833fbf18de9686632a70ee8d0794b79aecb217ebd0ce11db4cd0db
-'http://deb.debian.org/debian/pool/main/p/pam/pam_1.3.1-5.debian.tar.xz' pam_1.3.1-5.debian.tar.xz 114384 SHA256:be2c2b27efd6bea02f9d102d7d8c58374557beb7245b2a9d75ecc829e9449f62
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/pam/1.3.1-5/
 
-- https://sources.debian.net/src/pam/1.3.1-5/ (for browsing the source)
-- https://sources.debian.net/src/pam/1.3.1-5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/pam/1.3.1-5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pcre2=10.36-2`
 
@@ -1926,20 +1905,13 @@ Licenses: (parsed from: `/usr/share/doc/libxxhash0/copyright`)
 - `BSD-2-clause`
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris xxhash=0.8.0-1
-'http://deb.debian.org/debian/pool/main/x/xxhash/xxhash_0.8.0-1.dsc' xxhash_0.8.0-1.dsc 1601 SHA256:1926a58706bf07202366d04e0a062e05cad342c78c83f892da7fa2781fd17220
-'http://deb.debian.org/debian/pool/main/x/xxhash/xxhash_0.8.0.orig.tar.gz' xxhash_0.8.0.orig.tar.gz 145909 SHA256:7054c3ebd169c97b64a92d7b994ab63c70dd53a06974f1f630ab782c28db0f4f
-'http://deb.debian.org/debian/pool/main/x/xxhash/xxhash_0.8.0-1.debian.tar.xz' xxhash_0.8.0-1.debian.tar.xz 3772 SHA256:2543f82555a56cd044c6c908373dd249b6055d1ca197eba87942249da89dc3fd
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/xxhash/0.8.0-1/
 
-- https://sources.debian.net/src/xxhash/0.8.0-1/ (for browsing the source)
-- https://sources.debian.net/src/xxhash/0.8.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/xxhash/0.8.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `xz-utils=5.2.5-1.0`
 
