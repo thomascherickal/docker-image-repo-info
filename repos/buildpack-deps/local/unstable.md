@@ -1213,21 +1213,13 @@ Licenses: (parsed from: `/usr/share/doc/libgdbm-compat4/copyright`, `/usr/share/
 - `GPL-3`
 - `GPL-3+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gdbm=1.18.1-5.1
-'http://deb.debian.org/debian/pool/main/g/gdbm/gdbm_1.18.1-5.1.dsc' gdbm_1.18.1-5.1.dsc 2618 SHA256:ce82bb222ea3386616f79ae0c1798cc9074b8882f017d3d0a6a60fedcfa8eedd
-'http://deb.debian.org/debian/pool/main/g/gdbm/gdbm_1.18.1.orig.tar.gz' gdbm_1.18.1.orig.tar.gz 941863 SHA256:86e613527e5dba544e73208f42b78b7c022d4fa5a6d5498bf18c8d6f745b91dc
-'http://deb.debian.org/debian/pool/main/g/gdbm/gdbm_1.18.1.orig.tar.gz.asc' gdbm_1.18.1.orig.tar.gz.asc 412 SHA256:3254738e7689e44ac65e78a766806828b8282e6bb1c0e5bb6156a99e567889a5
-'http://deb.debian.org/debian/pool/main/g/gdbm/gdbm_1.18.1-5.1.debian.tar.xz' gdbm_1.18.1-5.1.debian.tar.xz 16812 SHA256:da287cf407b905a548a5fa3c6e6a501d1de30bdbb19820f8e675a9cf75310955
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gdbm/1.18.1-5.1/
 
-- https://sources.debian.net/src/gdbm/1.18.1-5.1/ (for browsing the source)
-- https://sources.debian.net/src/gdbm/1.18.1-5.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gdbm/1.18.1-5.1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gdk-pixbuf-xlib=2.40.2-2`
 
@@ -1863,20 +1855,13 @@ Licenses: (parsed from: `/usr/share/doc/libxtables12/copyright`)
 - `GPL-2+`
 - `custom`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris iptables=1.8.6-1
-'http://deb.debian.org/debian/pool/main/i/iptables/iptables_1.8.6-1.dsc' iptables_1.8.6-1.dsc 2719 SHA256:425a5c18b34d76acda4b4ff86ae1f4128f6c20b3e611aea3fe6e0849b94e87e1
-'http://deb.debian.org/debian/pool/main/i/iptables/iptables_1.8.6.orig.tar.bz2' iptables_1.8.6.orig.tar.bz2 715744 SHA256:a0f4fe0c3eb8faa5bd9c8376d132f340b9558e750c91deb2d5028aa3d0047767
-'http://deb.debian.org/debian/pool/main/i/iptables/iptables_1.8.6-1.debian.tar.xz' iptables_1.8.6-1.debian.tar.xz 23704 SHA256:e2fe8f88618a23a3553ad29387a650cc6d5c66d668b557f812a792a643310fa2
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/iptables/1.8.6-1/
 
-- https://sources.debian.net/src/iptables/1.8.6-1/ (for browsing the source)
-- https://sources.debian.net/src/iptables/1.8.6-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/iptables/1.8.6-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `iputils=3:20200821-2`
 
@@ -2062,21 +2047,13 @@ Licenses: (parsed from: `/usr/share/doc/libassuan0/copyright`)
 - `LGPL-3`
 - `LGPL-3+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libassuan=2.5.3-7.1
-'http://deb.debian.org/debian/pool/main/liba/libassuan/libassuan_2.5.3-7.1.dsc' libassuan_2.5.3-7.1.dsc 2627 SHA256:9e4cfaef54fee1b6c1fd32fdfe6fc90b2dde78755517ee0ff56859e69251fb07
-'http://deb.debian.org/debian/pool/main/liba/libassuan/libassuan_2.5.3.orig.tar.bz2' libassuan_2.5.3.orig.tar.bz2 572348 SHA256:91bcb0403866b4e7c4bc1cc52ed4c364a9b5414b3994f718c70303f7f765e702
-'http://deb.debian.org/debian/pool/main/liba/libassuan/libassuan_2.5.3.orig.tar.bz2.asc' libassuan_2.5.3.orig.tar.bz2.asc 952 SHA256:53b16a6619a2690b4f22da645a1d0c14b5664825c87b165ca5bd0de32607888a
-'http://deb.debian.org/debian/pool/main/liba/libassuan/libassuan_2.5.3-7.1.debian.tar.xz' libassuan_2.5.3-7.1.debian.tar.xz 13952 SHA256:c6783e12dc1fb65681c083274f52cb3286da18dcf8a5b38a6de10143003e0681
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libassuan/2.5.3-7.1/
 
-- https://sources.debian.net/src/libassuan/2.5.3-7.1/ (for browsing the source)
-- https://sources.debian.net/src/libassuan/2.5.3-7.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libassuan/2.5.3-7.1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libbsd=0.10.0-1`
 
@@ -2440,21 +2417,13 @@ Licenses: (parsed from: `/usr/share/doc/libfido2-1/copyright`)
 - `ISC`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libfido2=1.5.0-2
-'http://deb.debian.org/debian/pool/main/libf/libfido2/libfido2_1.5.0-2.dsc' libfido2_1.5.0-2.dsc 2565 SHA256:98bbcee76760b582ea0b4dbce5a405cc19ab30637266e00c3694b5611f3d16bb
-'http://deb.debian.org/debian/pool/main/libf/libfido2/libfido2_1.5.0.orig.tar.gz' libfido2_1.5.0.orig.tar.gz 407259 SHA256:5990f923c9390fe1e6a00ba5d1d1f74030e7344b855e971d9fb7223e70ff3122
-'http://deb.debian.org/debian/pool/main/libf/libfido2/libfido2_1.5.0.orig.tar.gz.asc' libfido2_1.5.0.orig.tar.gz.asc 488 SHA256:028ca3ea440f59a7903535eb460ca1f3ef7efc550753b9162af2e8e9f501a955
-'http://deb.debian.org/debian/pool/main/libf/libfido2/libfido2_1.5.0-2.debian.tar.xz' libfido2_1.5.0-2.debian.tar.xz 73184 SHA256:b77e3749ff7c35c78ae837603c1330f40a3abf6ff7731f802959160f808243ba
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libfido2/1.5.0-2/
 
-- https://sources.debian.net/src/libfido2/1.5.0-2/ (for browsing the source)
-- https://sources.debian.net/src/libfido2/1.5.0-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libfido2/1.5.0-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libgcrypt20=1.8.7-2`
 
@@ -4262,21 +4231,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssl=1.1.1i-1
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1i-1.dsc' openssl_1.1.1i-1.dsc 2446 SHA256:ea809208300125aa3158d037bcec55f6e25e18b8f3fa5e2abd6bab544725cb54
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1i.orig.tar.gz' openssl_1.1.1i.orig.tar.gz 9808346 SHA256:e8be6a35fe41d10603c3cc635e93289ed00bf34b79671a3a4de64fcee00d5242
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1i.orig.tar.gz.asc' openssl_1.1.1i.orig.tar.gz.asc 488 SHA256:da48cfca2d64bdfca7a2c39c13571e2f1d3d7ea996d9365de5cae5a9e33b9791
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1i-1.debian.tar.xz' openssl_1.1.1i-1.debian.tar.xz 84364 SHA256:1164a248cdd37a83fdee8d82339b011d3b07c89728df7cbbdffa87cb72960a6e
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/openssl/1.1.1i-1/
 
-- https://sources.debian.net/src/openssl/1.1.1i-1/ (for browsing the source)
-- https://sources.debian.net/src/openssl/1.1.1i-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openssl/1.1.1i-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `p11-kit=0.23.21-2`
 
@@ -5359,21 +5320,13 @@ Licenses: (parsed from: `/usr/share/doc/liblzma-dev/copyright`, `/usr/share/doc/
 - `permissive-nowarranty`
 - `probably-PD`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris xz-utils=5.2.4-1
-'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.4-1.dsc' xz-utils_5.2.4-1.dsc 2518 SHA256:b1572c4efb3c8ebf6f0e044b70e1e0451c919a99d3f80be03b624a54dd7ea593
-'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.4.orig.tar.xz' xz-utils_5.2.4.orig.tar.xz 1053868 SHA256:9717ae363760dedf573dad241420c5fea86256b65bc21d2cf71b2b12f0544f4b
-'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.4.orig.tar.xz.asc' xz-utils_5.2.4.orig.tar.xz.asc 879 SHA256:88290c1deeaf674ae2a4821f4373fe0e4cc2a94199eae6dcc26df1e70cc15303
-'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.4-1.debian.tar.xz' xz-utils_5.2.4-1.debian.tar.xz 135296 SHA256:d37b558444b76e88a69601df008cf1c0343c58cb7765b7bbb2099b0a19619361
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/xz-utils/5.2.4-1/
 
-- https://sources.debian.net/src/xz-utils/5.2.4-1/ (for browsing the source)
-- https://sources.debian.net/src/xz-utils/5.2.4-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/xz-utils/5.2.4-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `zlib=1:1.2.11.dfsg-2`
 

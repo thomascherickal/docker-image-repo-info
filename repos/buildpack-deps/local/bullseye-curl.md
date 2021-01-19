@@ -642,20 +642,13 @@ Licenses: (parsed from: `/usr/share/doc/findutils/copyright`)
 - `GFDL-1.3`
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris findutils=4.7.0+git20201010-2
-'http://deb.debian.org/debian/pool/main/f/findutils/findutils_4.7.0+git20201010-2.dsc' findutils_4.7.0+git20201010-2.dsc 2136 SHA256:9ba9f5e02b662d1d6d404aa21d9e5827dac60e0c1879a82698ba0c8be6cf062e
-'http://deb.debian.org/debian/pool/main/f/findutils/findutils_4.7.0+git20201010.orig.tar.xz' findutils_4.7.0+git20201010.orig.tar.xz 1950076 SHA256:f690859f9615cc8fdf04e6f0675c2d1881e9655dffe065cab5fd7f04d8fe6768
-'http://deb.debian.org/debian/pool/main/f/findutils/findutils_4.7.0+git20201010-2.debian.tar.xz' findutils_4.7.0+git20201010-2.debian.tar.xz 27852 SHA256:4555e249a33b492959d15c1fabe19724b4a49e491a83d46ee248d600c58ed397
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/findutils/4.7.0+git20201010-2/
 
-- https://sources.debian.net/src/findutils/4.7.0+git20201010-2/ (for browsing the source)
-- https://sources.debian.net/src/findutils/4.7.0+git20201010-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/findutils/4.7.0+git20201010-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gcc-10=10.2.1-3`
 

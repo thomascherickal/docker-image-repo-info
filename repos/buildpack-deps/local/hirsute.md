@@ -364,14 +364,9 @@ Licenses: (parsed from: `/usr/share/doc/libcairo-gobject2/copyright`, `/usr/shar
 
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris cairo=1.16.0-4ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cairo/cairo_1.16.0-4ubuntu1.dsc' cairo_1.16.0-4ubuntu1.dsc 2950 SHA512:262536534fc2de2df617ff360ba0daafb74907a694081ca0de7612b176da43a04a09ef9a0ae3c2db2ebd0f3329c1d236d8ba9d13e91ad6095015a88d7b4ef432
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cairo/cairo_1.16.0.orig.tar.xz' cairo_1.16.0.orig.tar.xz 41997432 SHA512:9eb27c4cf01c0b8b56f2e15e651f6d4e52c99d0005875546405b64f1132aed12fbf84727273f493d84056a13105e065009d89e94a8bfaf2be2649e232b82377f
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cairo/cairo_1.16.0-4ubuntu1.debian.tar.xz' cairo_1.16.0-4ubuntu1.debian.tar.xz 30416 SHA512:908c4f86c37e01123d572280b093211e6d4eacfd74fbd8f88be17b18070fc48305fb2bdf9d3da4eca026a439e10228c9a466641e49c32f07285ae2948f6a3620
-```
 
 ### `dpkg` source package: `cdebconf=0.254ubuntu1`
 
@@ -1229,14 +1224,9 @@ Licenses: (parsed from: `/usr/share/doc/gzip/copyright`)
 - `GPL-3`
 - `GPL-3+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gzip=1.10-2ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gzip/gzip_1.10-2ubuntu1.dsc' gzip_1.10-2ubuntu1.dsc 2074 SHA512:e116e7438cf5e77837f867ff60f7211703cc02409a12aa2db8d16842ba76f0b75961ede88abb5ab457ed2b7113e8717c104f94c66c059280654a16823c50fa07
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gzip/gzip_1.10.orig.tar.gz' gzip_1.10.orig.tar.gz 1201421 SHA512:7939043e74554ced0c1c05d354ab4eb36cd6dce89ad79d02ccdc5ed6b7ee390759689b2d47c07227b9b44a62851afe7c76c4cae9f92527d999f3f1b4df1cccff
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gzip/gzip_1.10-2ubuntu1.debian.tar.xz' gzip_1.10-2ubuntu1.debian.tar.xz 33288 SHA512:39d000ae7356a28275b475e08e296b07d9efc589fa7379aaab4e70fc599378ba56e8f492ebb26ba618b7dc09bd8eb56b2babe5c5d826db852fdd5cf496cd318a
-```
 
 ### `dpkg` source package: `harfbuzz=2.6.7-1ubuntu1`
 
@@ -1545,14 +1535,13 @@ Licenses: (parsed from: `/usr/share/doc/liblcms2-2/copyright`, `/usr/share/doc/l
 - `GPL-2+`
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris lcms2=2.9-4
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lcms2/lcms2_2.9-4.dsc' lcms2_2.9-4.dsc 1956 SHA512:c0ebd8cf4512fb1195ba17cba3cd28773ebef7952b8682dda4285ed98f8bf62321716e2fd345d8a0f2de206ffb3dc858b223c0301222a0ccebf08fd5fafaefa5
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lcms2/lcms2_2.9.orig.tar.gz' lcms2_2.9.orig.tar.gz 10974649 SHA512:70b1c51fa8d137d5072425e580745ff1fbf49c6e8bb1da0a8adb0647d3b7c095208793cb02de1e8d1a01363b8575fa60c61bedbff99bbec57a44228239cb00e5
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lcms2/lcms2_2.9-4.debian.tar.xz' lcms2_2.9-4.debian.tar.xz 10748 SHA512:0f3527accbf235dc642b3b3f082414c7e5ccce043d94b07fe323ec8aa9982e658ade3a35503931d777a43abecad9c055ece193772af6094145c7ac3194cda338
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/lcms2/2.9-4/
+
 
 ### `dpkg` source package: `libassuan=2.5.3-7.1`
 
@@ -1818,15 +1807,13 @@ Licenses: (parsed from: `/usr/share/doc/libfido2-1/copyright`)
 - `ISC`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libfido2=1.5.0-2
-'http://archive.ubuntu.com/ubuntu/pool/main/libf/libfido2/libfido2_1.5.0-2.dsc' libfido2_1.5.0-2.dsc 2565 SHA512:25f21b52bc39847685b4057dcd9f0025c56cbe2f8e75918d1142178281ece3ef93631fc5c9ac2d6db6e9ac6b0260e8f2a5087144757e2e6278da04891569090e
-'http://archive.ubuntu.com/ubuntu/pool/main/libf/libfido2/libfido2_1.5.0.orig.tar.gz' libfido2_1.5.0.orig.tar.gz 407259 SHA512:240e2368e43846fddf5e98bbcc247468833565bcde4ec27976b88c814d787f1a477241a82b064818aa0eb0a98ff46a65d80b8243f4d0bbd763270e42492354e2
-'http://archive.ubuntu.com/ubuntu/pool/main/libf/libfido2/libfido2_1.5.0.orig.tar.gz.asc' libfido2_1.5.0.orig.tar.gz.asc 488 SHA512:d779fb493c9500b5c73e309fac896e8f4aa7f295a5cba8df70e3ca67c46bfbf658e6ee5379c530e8ac943b2bb3997800cb1fb1c85f3d4c85af5c30b369a87c85
-'http://archive.ubuntu.com/ubuntu/pool/main/libf/libfido2/libfido2_1.5.0-2.debian.tar.xz' libfido2_1.5.0-2.debian.tar.xz 73184 SHA512:cd0ce3927a552a6da96893dc54cd0b062a3a4ff1328fa5a8afa82714dbdbb78d6a38ba6bf7f6c0911c074a9cfb5babd17128830f4f45e775fe7b045d37fd1005
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/libfido2/1.5.0-2/
+
 
 ### `dpkg` source package: `libgcrypt20=1.8.7-2ubuntu1`
 
@@ -1910,14 +1897,13 @@ Licenses: (parsed from: `/usr/share/doc/libidn2-0/copyright`)
 - `LGPL-3+`
 - `Unicode`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libidn2=2.3.0-4
-'http://archive.ubuntu.com/ubuntu/pool/main/libi/libidn2/libidn2_2.3.0-4.dsc' libidn2_2.3.0-4.dsc 2046 SHA512:95e0065a023d5b9bbc1291009d4ecd42267a2fed498128cf84308b8552bbbd77d1ae91c620050d813863777665ec2f452674c3e805ec58f2f51dbd5c06fe6395
-'http://archive.ubuntu.com/ubuntu/pool/main/libi/libidn2/libidn2_2.3.0.orig.tar.gz' libidn2_2.3.0.orig.tar.gz 2164993 SHA512:a2bf6d2249948bce14fbbc802f8af1c9b427fc9bf64203a2f3d7239d8e6061d0a8e7970a23e8e5889110a654a321e0504c7a6d049bb501e7f6a23d42b50b6187
-'http://archive.ubuntu.com/ubuntu/pool/main/libi/libidn2/libidn2_2.3.0-4.debian.tar.xz' libidn2_2.3.0-4.debian.tar.xz 11476 SHA512:fb79c61ac24d596106dcb31b88fc2a72617fe381ff4e659b90919a2267ada52039d36823668e0b66c517e8f14310b63172a03f9a32fb103e1c6317fedf5f4032
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/libidn2/2.3.0-4/
+
 
 ### `dpkg` source package: `libjpeg-turbo=2.0.3-0ubuntu2`
 
