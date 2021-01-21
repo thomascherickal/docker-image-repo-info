@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:d34022c2c5fa4d14f041c544f56a46267ef7903286ee492c296d691fa3bbb2bd`
-- Created: `2020-12-01T02:22:00.373561842Z`
-- Virtual Size: ~ 608.72 Mb  
+- Image ID: `sha256:ad815b2ec4129e47e114f361444cd4f0f292810613573b1c862968250dbcc8eb`
+- Created: `2021-01-21T08:21:51.051405284Z`
+- Virtual Size: ~ 609.79 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/gzserver_entrypoint.sh"]`
@@ -75,21 +75,25 @@ $ apt-get source -qq --print-uris apparmor=2.10.95-0ubuntu2.11
 'http://archive.ubuntu.com/ubuntu/pool/main/a/apparmor/apparmor_2.10.95-0ubuntu2.11.debian.tar.xz' apparmor_2.10.95-0ubuntu2.11.debian.tar.xz 98980 SHA512:6e410dd41e0d7f09d08ee1e1ad3cd6e82496a82afe158a37af7a3992d93095dbff11d22797fb19fac6d3b158e6ba80f840c380d99e703b41c428f182b22e42aa
 ```
 
-### `dpkg` source package: `apt=1.2.32ubuntu0.1`
+### `dpkg` source package: `apt=1.2.32ubuntu0.2`
 
 Binary Packages:
 
-- `apt=1.2.32ubuntu0.1`
-- `libapt-pkg5.0:amd64=1.2.32ubuntu0.1`
+- `apt=1.2.32ubuntu0.2`
+- `libapt-pkg5.0:amd64=1.2.32ubuntu0.2`
 
 Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-pkg5.0/copyright`)
 
 - `GPL-2`
 - `GPLv2+`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris apt=1.2.32ubuntu0.2
+'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.2.32ubuntu0.2.dsc' apt_1.2.32ubuntu0.2.dsc 2526 SHA512:c91eba6c9405512c3e53dc1808c9ea17627a077354d2bd571ee37f4ae6ded08a4ee4f28ea75d2e64d76d84197f5479f4fd9522f98e61774679e904d144c9b429
+'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.2.32ubuntu0.2.tar.xz' apt_1.2.32ubuntu0.2.tar.xz 2099548 SHA512:7145c708f5c42b09b06d208ef352f157040548cfc4228d22148078d55beac06556198fede666ef6753feea1c6fa6a21ebf960510f4773900ba95edcfa83f62e6
+```
 
 ### `dpkg` source package: `armadillo=1:6.500.5+dfsg-1`
 
@@ -399,12 +403,12 @@ $ apt-get source -qq --print-uris crystalhd=1:0.0~git20110715.fdd2f19-11build1
 'http://archive.ubuntu.com/ubuntu/pool/universe/c/crystalhd/crystalhd_0.0~git20110715.fdd2f19-11build1.debian.tar.xz' crystalhd_0.0~git20110715.fdd2f19-11build1.debian.tar.xz 15240 SHA256:646168058a9a41b20a392fe20f7a2a88caaa1a42fc3e002635c33f0cf129ed0f
 ```
 
-### `dpkg` source package: `curl=7.47.0-1ubuntu2.16`
+### `dpkg` source package: `curl=7.47.0-1ubuntu2.18`
 
 Binary Packages:
 
-- `libcurl3:amd64=7.47.0-1ubuntu2.16`
-- `libcurl3-gnutls:amd64=7.47.0-1ubuntu2.16`
+- `libcurl3:amd64=7.47.0-1ubuntu2.18`
+- `libcurl3-gnutls:amd64=7.47.0-1ubuntu2.18`
 
 Licenses: (parsed from: `/usr/share/doc/libcurl3/copyright`, `/usr/share/doc/libcurl3-gnutls/copyright`)
 
@@ -415,9 +419,14 @@ Licenses: (parsed from: `/usr/share/doc/libcurl3/copyright`, `/usr/share/doc/lib
 - `other`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris curl=7.47.0-1ubuntu2.18
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.47.0-1ubuntu2.18.dsc' curl_7.47.0-1ubuntu2.18.dsc 2733 SHA512:80b1f030901705f12a3ba3ecec1b2da34f76c5ffc4ed54055cc160ffacf1b677dc069179b2d3ffb24c22176f68cd761e0b93cc94165c035ce5a94fc7ba2670f0
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.47.0.orig.tar.gz' curl_7.47.0.orig.tar.gz 4563163 SHA512:567d6a17bad1439147a419eff7e3b4a8f81104e903d856a33a1ccfaf77723cc70004fa697505443a5edcee1b644eba2c79484b41c00e35320bec6ef928db43d9
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.47.0-1ubuntu2.18.debian.tar.xz' curl_7.47.0-1ubuntu2.18.debian.tar.xz 60604 SHA512:435f81a36d17e098f879795a51483562829a84406383f65430a34f40f7efb58e35be5dc61ba5c2895e3cef5d35e6b8908147f1f8f47f2d6b6598ba8b0c15e228
+```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.26.dfsg1-14ubuntu0.2`
 
@@ -1420,11 +1429,11 @@ $ apt-get source -qq --print-uris insserv=1.14.0-5ubuntu3
 'http://archive.ubuntu.com/ubuntu/pool/main/i/insserv/insserv_1.14.0-5ubuntu3.debian.tar.xz' insserv_1.14.0-5ubuntu3.debian.tar.xz 48124 SHA256:a4d0d0703fa398819ab7b4cad573f334feee80aac5520202457519e737b4648a
 ```
 
-### `dpkg` source package: `jasper=1.900.1-debian1-2.4ubuntu1.2`
+### `dpkg` source package: `jasper=1.900.1-debian1-2.4ubuntu1.3`
 
 Binary Packages:
 
-- `libjasper1:amd64=1.900.1-debian1-2.4ubuntu1.2`
+- `libjasper1:amd64=1.900.1-debian1-2.4ubuntu1.3`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -3405,19 +3414,24 @@ $ apt-get source -qq --print-uris ogre-1.9=1.9.0+dfsg1-7
 'http://archive.ubuntu.com/ubuntu/pool/universe/o/ogre-1.9/ogre-1.9_1.9.0+dfsg1-7.debian.tar.xz' ogre-1.9_1.9.0+dfsg1-7.debian.tar.xz 24664 SHA256:6b6eb83a0d43650c1d79c2418fd6c9a2442a1c85efe329cecf7dbdcd9b79bc06
 ```
 
-### `dpkg` source package: `openexr=2.2.0-10ubuntu2.3`
+### `dpkg` source package: `openexr=2.2.0-10ubuntu2.4`
 
 Binary Packages:
 
-- `libopenexr22:amd64=2.2.0-10ubuntu2.3`
+- `libopenexr22:amd64=2.2.0-10ubuntu2.4`
 
 Licenses: (parsed from: `/usr/share/doc/libopenexr22/copyright`)
 
 - `openexr`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris openexr=2.2.0-10ubuntu2.4
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openexr/openexr_2.2.0-10ubuntu2.4.dsc' openexr_2.2.0-10ubuntu2.4.dsc 2395 SHA512:106406eeefdf722914e9b3c3eaf0d72b8358865dadef35c230d9a7f56a6fbe506e89e43fb994b20014ea7148c656450c1cf6d34fdcfe0f3afd5881d026180557
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openexr/openexr_2.2.0.orig.tar.gz' openexr_2.2.0.orig.tar.gz 14489661 SHA512:017abbeeb6b814508180721bc8e8940094965c4c55b135a198c6bcb109a04bf7f72e4aee81ee72cb2185fe818a41d892b383e8d2d59f40c673198948cb79279a
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openexr/openexr_2.2.0-10ubuntu2.4.debian.tar.xz' openexr_2.2.0-10ubuntu2.4.debian.tar.xz 45728 SHA512:f748a1caaa35a2f92f5cea3c852168054f9802f3a6a12a43c62a82723b39d80d463c110a1c46461dafec7cb0ef69be72716a9fa7fd34d589f1dde033253c9b16
+```
 
 ### `dpkg` source package: `openjpeg2=2.1.2-1.1+deb9u5build0.16.04.1`
 
@@ -3487,19 +3501,24 @@ $ apt-get source -qq --print-uris openldap=2.4.42+dfsg-2ubuntu3.11
 'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.42+dfsg-2ubuntu3.11.debian.tar.xz' openldap_2.4.42+dfsg-2ubuntu3.11.debian.tar.xz 183320 SHA512:cee22eb64b028773d7e4245e967e734fca5a02d25e3841a526a8f2c5a698f96b95d500093c51fe53e4fcf487556032dfd30c265e3e367a5229a8ab1b09f9088d
 ```
 
-### `dpkg` source package: `openssl=1.0.2g-1ubuntu4.17`
+### `dpkg` source package: `openssl=1.0.2g-1ubuntu4.18`
 
 Binary Packages:
 
-- `libssl1.0.0:amd64=1.0.2g-1ubuntu4.17`
+- `libssl1.0.0:amd64=1.0.2g-1ubuntu4.18`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris openssl=1.0.2g-1ubuntu4.18
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.0.2g-1ubuntu4.18.dsc' openssl_1.0.2g-1ubuntu4.18.dsc 2453 SHA512:3326f5ac9ee817b6afe1959ecd0157370d04bdcdda98011c4d373a224a07c481ba56107aed401b4b06109486495ecc2434f120888791357063ef2b3363c608ed
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.0.2g.orig.tar.gz' openssl_1.0.2g.orig.tar.gz 5266102 SHA512:4d96b6c8a232203483d6e8bee81da01ba10977bfbac92f25304a36dec9ea584b7ef917bc45e097cc7dbe681d71a4570d649c22244c178393ae91fab48323f735
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.0.2g-1ubuntu4.18.debian.tar.xz' openssl_1.0.2g-1ubuntu4.18.debian.tar.xz 140736 SHA512:e4dcc700d308edf302b0317495918f8e4946e47d375d3e811bff60fc6a2775277465073d567cf62cc7fc0a36e9526600d56705eac1f515c4f5302a1511ecb4ba
+```
 
 ### `dpkg` source package: `opus=1.1.2-1ubuntu1`
 
@@ -3539,11 +3558,11 @@ $ apt-get source -qq --print-uris orc=1:0.4.25-1
 'http://archive.ubuntu.com/ubuntu/pool/main/o/orc/orc_0.4.25-1.debian.tar.xz' orc_0.4.25-1.debian.tar.xz 5044 SHA256:470827b05344905ca68af316e9835fbbd86d368aa7ee12c090a2ade91099b1cb
 ```
 
-### `dpkg` source package: `p11-kit=0.23.2-5~ubuntu16.04.1`
+### `dpkg` source package: `p11-kit=0.23.2-5~ubuntu16.04.2`
 
 Binary Packages:
 
-- `libp11-kit0:amd64=0.23.2-5~ubuntu16.04.1`
+- `libp11-kit0:amd64=0.23.2-5~ubuntu16.04.2`
 
 Licenses: (parsed from: `/usr/share/doc/libp11-kit0/copyright`)
 
@@ -3553,9 +3572,14 @@ Licenses: (parsed from: `/usr/share/doc/libp11-kit0/copyright`)
 - `permissive-like-automake-output`
 - `same-as-rest-of-p11kit`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris p11-kit=0.23.2-5~ubuntu16.04.2
+'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.2-5~ubuntu16.04.2.dsc' p11-kit_0.23.2-5~ubuntu16.04.2.dsc 2340 SHA512:e4d824b1373e304eb2e9f590c24ca125ba98b0b1019980679675c84b3c6c6626c09d01c83fa8f6b6b45dad0ed70a1aab386824f983a91bf325db43b0e4d0f38c
+'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.2.orig.tar.gz' p11-kit_0.23.2.orig.tar.gz 1022733 SHA512:b665d89f0d752a41b01ec53e29c801c4fdcaf3f21fce524984b10acef0477ad5dbac085edd35ffb747423d0e1e09660b8d29501c979cf54937d3b9d2561cf18f
+'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.2-5~ubuntu16.04.2.debian.tar.xz' p11-kit_0.23.2-5~ubuntu16.04.2.debian.tar.xz 17648 SHA512:0364e155a73d67c8d709769dcea3deb28d9878d802779e2648d284243af12fb861c803d6742c2ce7a898657ec9b2127fa30ba150323964e0a951ea69335a5196
+```
 
 ### `dpkg` source package: `pam=1.1.8-3.2ubuntu2.3`
 
@@ -4229,20 +4253,25 @@ $ apt-get source -qq --print-uris sysvinit=2.88dsf-59.3ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/s/sysvinit/sysvinit_2.88dsf-59.3ubuntu2.debian.tar.xz' sysvinit_2.88dsf-59.3ubuntu2.debian.tar.xz 134864 SHA256:d4cf7aa3d6c1f8727cbd699395053d541844a9ff02ea5e6a1119eb90604586b8
 ```
 
-### `dpkg` source package: `tar=1.28-2.1ubuntu0.1`
+### `dpkg` source package: `tar=1.28-2.1ubuntu0.2`
 
 Binary Packages:
 
-- `tar=1.28-2.1ubuntu0.1`
+- `tar=1.28-2.1ubuntu0.2`
 
 Licenses: (parsed from: `/usr/share/doc/tar/copyright`)
 
 - `GPL-2`
 - `GPL-3`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris tar=1.28-2.1ubuntu0.2
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.28-2.1ubuntu0.2.dsc' tar_1.28-2.1ubuntu0.2.dsc 1865 SHA512:c54bd26c1f337b9996d21b6a487dbba955b42059b8fb32cb5d812cb7cbb4f288681f976a567425ce81234ee5f919991d04bdce5f19f5c8ee9fbf0381df409535
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.28.orig.tar.xz' tar_1.28.orig.tar.xz 1756440 SHA512:dc91045b84bf5df513ae936be14977b029644a77ac03f58d21d34e61e50d8069f95526b9e706f2da7d41d3d0ed7de88bf13c2c066e63a80e5651a24077e604c2
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.28-2.1ubuntu0.2.debian.tar.xz' tar_1.28-2.1ubuntu0.2.debian.tar.xz 39348 SHA512:a646e5331c9f5b3c193b564798a2c02e85b861afda3a49c7f91bcc1a1c46bf9a2e824e6a34cd1ef0e470412a768258323594bb1490c0ae41643fb5018105442e
+```
 
 ### `dpkg` source package: `tbb=4.4~20151115-0ubuntu3`
 
