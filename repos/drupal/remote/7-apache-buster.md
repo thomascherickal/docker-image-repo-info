@@ -1,7 +1,7 @@
 ## `drupal:7-apache-buster`
 
 ```console
-$ docker pull drupal@sha256:9954ca8e1f61639752d738a578e5d0a1fa5619343f839a4c4f961258d4e5a660
+$ docker pull drupal@sha256:f33be67f924cefa595b6b7e60234a14465d195c785a92f3abae893e0945470d0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -175,14 +175,14 @@ RUN set -eux; 	curl -fSL "https://ftp.drupal.org/files/projects/drupal-${DRUPAL_
 ### `drupal:7-apache-buster` - linux; arm variant v5
 
 ```console
-$ docker pull drupal@sha256:2cfeb730d76f497955da2c1a311dba38125cfcf51ac8607eb52701ca9af2341d
+$ docker pull drupal@sha256:044bfbe58f86a63b60ffad11e6ddd629dc6db6ac1ada7a587342475809d71c4f
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **130.2 MB (130207207 bytes)**  
+-	Total Size: **130.2 MB (130207277 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e3b03159b7d52c9300f7c00ada761da478998f0977234561e22753d7af36ad2d`
+-	Image ID: `sha256:a24cfaf404610801f07704ebf6fc63a58e32f3ad171db800c65a4d8f7ed17615`
 -	Entrypoint: `["docker-php-entrypoint"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -235,31 +235,31 @@ RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
 # Tue, 12 Jan 2021 08:41:55 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		libargon2-dev 		libcurl4-openssl-dev 		libedit-dev 		libonig-dev 		libsodium-dev 		libsqlite3-dev 		libssl-dev 		libxml2-dev 		zlib1g-dev 		${PHP_EXTRA_BUILD_DEPS:-} 	; 	rm -rf /var/lib/apt/lists/*; 		export 		CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)"; 	if [ ! -d /usr/include/curl ]; then 		ln -sT "/usr/include/$debMultiarch/curl" /usr/local/include/curl; 	fi; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--with-pic 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-gnu' && echo '--without-pcre-jit') 		--with-libdir="lib/$debMultiarch" 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -executable -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 		php --version
-# Tue, 12 Jan 2021 08:41:57 GMT
-COPY multi:dc714d093d9a94baf082b278964398d495faeef837d3357693090c43ebfb6fb4 in /usr/local/bin/ 
-# Tue, 12 Jan 2021 08:41:59 GMT
+# Thu, 21 Jan 2021 19:50:16 GMT
+COPY multi:e4407f0002276f00cc93b01e48696c1f677a5f7d3d194b3a84bec1cc5e733bcb in /usr/local/bin/ 
+# Thu, 21 Jan 2021 19:50:21 GMT
 RUN docker-php-ext-enable sodium
-# Tue, 12 Jan 2021 08:42:00 GMT
+# Thu, 21 Jan 2021 19:50:22 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Tue, 12 Jan 2021 08:42:01 GMT
+# Thu, 21 Jan 2021 19:50:23 GMT
 STOPSIGNAL SIGWINCH
-# Tue, 12 Jan 2021 08:42:01 GMT
+# Thu, 21 Jan 2021 19:50:24 GMT
 COPY file:e3123fcb6566efa979f945bfac1c94c854a559d7b82723e42118882a8ac4de66 in /usr/local/bin/ 
-# Tue, 12 Jan 2021 08:42:02 GMT
+# Thu, 21 Jan 2021 19:50:25 GMT
 WORKDIR /var/www/html
-# Tue, 12 Jan 2021 08:42:03 GMT
+# Thu, 21 Jan 2021 19:50:26 GMT
 EXPOSE 80
-# Tue, 12 Jan 2021 08:42:03 GMT
+# Thu, 21 Jan 2021 19:50:27 GMT
 CMD ["apache2-foreground"]
-# Tue, 12 Jan 2021 14:29:47 GMT
+# Thu, 21 Jan 2021 20:38:37 GMT
 RUN set -eux; 		if command -v a2enmod; then 		a2enmod rewrite; 	fi; 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 	apt-get install -y --no-install-recommends 		libfreetype6-dev 		libjpeg-dev 		libpng-dev 		libpq-dev 		libzip-dev 	; 		docker-php-ext-configure gd 		--with-freetype 		--with-jpeg=/usr 	; 		docker-php-ext-install -j "$(nproc)" 		gd 		opcache 		pdo_mysql 		pdo_pgsql 		zip 	; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark; 	ldd "$(php -r 'echo ini_get("extension_dir");')"/*.so 		| awk '/=>/ { print $3 }' 		| sort -u 		| xargs -r dpkg-query -S 		| cut -d: -f1 		| sort -u 		| xargs -rt apt-mark manual; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*
-# Tue, 12 Jan 2021 14:29:49 GMT
+# Thu, 21 Jan 2021 20:38:40 GMT
 RUN { 		echo 'opcache.memory_consumption=128'; 		echo 'opcache.interned_strings_buffer=8'; 		echo 'opcache.max_accelerated_files=4000'; 		echo 'opcache.revalidate_freq=60'; 		echo 'opcache.fast_shutdown=1'; 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
-# Thu, 21 Jan 2021 02:48:32 GMT
+# Thu, 21 Jan 2021 20:38:40 GMT
 ENV DRUPAL_VERSION=7.78
-# Thu, 21 Jan 2021 02:48:33 GMT
+# Thu, 21 Jan 2021 20:38:41 GMT
 ENV DRUPAL_MD5=67c8e2974421e8d549ad705169977498
-# Thu, 21 Jan 2021 02:48:40 GMT
+# Thu, 21 Jan 2021 20:38:44 GMT
 RUN set -eux; 	curl -fSL "https://ftp.drupal.org/files/projects/drupal-${DRUPAL_VERSION}.tar.gz" -o drupal.tar.gz; 	echo "${DRUPAL_MD5} *drupal.tar.gz" | md5sum -c -; 	tar -xz --strip-components=1 -f drupal.tar.gz; 	rm drupal.tar.gz; 	chown -R www-data:www-data sites modules themes
 ```
 
@@ -304,28 +304,28 @@ RUN set -eux; 	curl -fSL "https://ftp.drupal.org/files/projects/drupal-${DRUPAL_
 		Last Modified: Tue, 12 Jan 2021 09:29:21 GMT  
 		Size: 12.9 MB (12905178 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8f6de68f7ddaac3886cfa6d157f13404fa7834a772053028dfb678c2223f08c0`  
-		Last Modified: Tue, 12 Jan 2021 09:29:19 GMT  
-		Size: 2.3 KB (2269 bytes)  
+	-	`sha256:0e197e9473724c152289d38b7cb531570ae3a4d990c18190ba5a9c76b74cb969`  
+		Last Modified: Thu, 21 Jan 2021 19:57:57 GMT  
+		Size: 2.3 KB (2281 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:27a7396d90dbc83d610e6f819bfbde0e46ceee4310537ea8fa8dcacb3f0b245d`  
-		Last Modified: Tue, 12 Jan 2021 09:29:18 GMT  
-		Size: 247.0 B  
+	-	`sha256:5fefb53002a46e92f5fe161aa494a7d7be2829e33a103dbe3086384e0f2d8035`  
+		Last Modified: Thu, 21 Jan 2021 19:57:58 GMT  
+		Size: 251.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:36c35ff4b8f90ff56f3b4a2f66dd6691fc338cb660d62004e280cbc926c00102`  
-		Last Modified: Tue, 12 Jan 2021 09:29:17 GMT  
-		Size: 893.0 B  
+	-	`sha256:189ef1f5bef71a209a3f85eb841d0035045bec1cc5ec2591004b601a4fb0c0a0`  
+		Last Modified: Thu, 21 Jan 2021 19:57:58 GMT  
+		Size: 899.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:42d649604a441b256317e4d9e447d70e86d706d3dc379ed8e653e146aaaecef1`  
-		Last Modified: Tue, 12 Jan 2021 14:31:59 GMT  
-		Size: 1.6 MB (1594405 bytes)  
+	-	`sha256:9f86541449a9f772cb838e262ba1dd4e373459dd189cb7d9401776f3efe5e12f`  
+		Last Modified: Thu, 21 Jan 2021 20:41:09 GMT  
+		Size: 1.6 MB (1594451 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:936952d58130fdeb8fa07dcc251bcc5f564755d49dba8b62f504fe45406952bd`  
-		Last Modified: Tue, 12 Jan 2021 14:31:58 GMT  
-		Size: 326.0 B  
+	-	`sha256:4c7d1397cc4ca7fd2c673f803969c5b2ba0a37d57dd38a81ed764ffc557818f3`  
+		Last Modified: Thu, 21 Jan 2021 20:41:09 GMT  
+		Size: 328.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1ff800e8d4f868ac9d9c07fbfe9f9b5c56ba22223f9db7f9fb1cad8e632b0e5e`  
-		Last Modified: Thu, 21 Jan 2021 02:49:19 GMT  
+	-	`sha256:c64cb3e46ea3334acf67940382852ee6768b7d44b59f0bfbf10f0f882056da83`  
+		Last Modified: Thu, 21 Jan 2021 20:41:11 GMT  
 		Size: 3.4 MB (3359597 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
