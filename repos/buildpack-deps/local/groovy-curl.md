@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:84cff1e3b81f50e0ab9e8526661f26be09e92c6f9ed85223734e54d23628aa8f`
-- Created: `2020-12-17T17:12:07.836811565Z`
-- Virtual Size: ~ 101.60 Mb  
+- Image ID: `sha256:4163d807a1b90f9f0f29410067e477266bbeae327d4a96a02c44316b90bbb7fd`
+- Created: `2021-01-21T07:49:30.339862078Z`
+- Virtual Size: ~ 101.62 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -54,12 +54,12 @@ $ apt-get source -qq --print-uris adduser=3.118ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/a/adduser/adduser_3.118ubuntu2.tar.xz' adduser_3.118ubuntu2.tar.xz 222364 SHA512:6236481388a235723c74575cb987a403ee62536f10dd02262c4cf168174269d7c83a2e444ca2efb33ccf0bf430c1773189364609f295de3e8708f9a7c9d378fa
 ```
 
-### `dpkg` source package: `apt=2.1.10`
+### `dpkg` source package: `apt=2.1.10ubuntu0.1`
 
 Binary Packages:
 
-- `apt=2.1.10`
-- `libapt-pkg6.0:amd64=2.1.10`
+- `apt=2.1.10ubuntu0.1`
+- `libapt-pkg6.0:amd64=2.1.10ubuntu0.1`
 
 Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-pkg6.0/copyright`)
 
@@ -69,9 +69,9 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 Source:
 
 ```console
-$ apt-get source -qq --print-uris apt=2.1.10
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.1.10.dsc' apt_2.1.10.dsc 2760 SHA512:fee6ee60ca70c95038ae2884710b4844845006d94a30c69252ae3326f3cc24ef142ecc4a648f707d23d678d4f07d4d3522fa035ed7fb5ae8a0123b19550f4bbd
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.1.10.tar.xz' apt_2.1.10.tar.xz 2179772 SHA512:f620e3373c0c19c237f7c40f15dc86d9f0c31aa0578a0f38d3f2cb65b7e7d16689a048574dc05b8729b0bef501c2e0d0e85e567ebfc47830334da0cd7540c84f
+$ apt-get source -qq --print-uris apt=2.1.10ubuntu0.1
+'http://security.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.1.10ubuntu0.1.dsc' apt_2.1.10ubuntu0.1.dsc 2854 SHA512:59352b2452c90c3cadcba6ec3f953f80cf0d2a0d30babce747f1907477d1bbcf3eca6378b851134ccc6603f5382a278477138e43e187d3249700bbd793d94ca7
+'http://security.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.1.10ubuntu0.1.tar.xz' apt_2.1.10ubuntu0.1.tar.xz 2182444 SHA512:9dfb8e52cb46e35cf75001d6ebc991c1a0e4fbef6d9913195733b5a2668f477a6a877042bed77ff8eb3c297f814d48dcc915613f261abe65c28e542ff79e95fc
 ```
 
 ### `dpkg` source package: `attr=1:2.4.48-5`
@@ -1484,30 +1484,11 @@ $ apt-get source -qq --print-uris openldap=2.4.53+dfsg-1ubuntu1.2
 'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.53+dfsg-1ubuntu1.2.debian.tar.xz' openldap_2.4.53+dfsg-1ubuntu1.2.debian.tar.xz 182640 SHA512:249f0733b7d4ee1b6353ae44810eafd2f4e47043161402089686bacffc68672f1a1f15e2ec4fefd86b24d09f8ed8a0403254178e8c4a45b4c774bcfc3be9116b
 ```
 
-### `dpkg` source package: `openssl=1.1.1f-1ubuntu4`
-
-Binary Packages:
-
-- `libssl1.1:amd64=1.1.1f-1ubuntu4`
-
-**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
-If source is available (seen below), check the contents of `debian/copyright` within it.
-
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris openssl=1.1.1f-1ubuntu4
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu4.dsc' openssl_1.1.1f-1ubuntu4.dsc 2705 SHA512:b0c4209047983a2a629751d1ad7cb3b9d2cfb040ed02eb964775a33a0588c5d9adc4db5a19554dc00c1f5e6496572018cbcc6abf39777cbeb4b3f73fc6becc87
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f.orig.tar.gz' openssl_1.1.1f.orig.tar.gz 9792828 SHA512:b00bd9b5ad5298fbceeec6bb19c1ab0c106ca5cfb31178497c58bf7e0e0cf30fcc19c20f84e23af31cc126bf2447d3e4f8461db97bafa7bd78f69561932f000c
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f.orig.tar.gz.asc' openssl_1.1.1f.orig.tar.gz.asc 488 SHA512:63b01ffc23b2fec2cfc147d382b486a136e5610e181be94aa333022803a442ded37e8276fefb62b3176b571b94a1d2243c05b86b52ad7784fe0068d1ad948562
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu4.debian.tar.xz' openssl_1.1.1f-1ubuntu4.debian.tar.xz 149616 SHA512:0afc642ee3c0a36afa45c9f4c5f9288ffd6767bae6089a2a4cc199ea8d05c72590fb75409a2e9203e1a4c5691f8d6760236af0085322a2d8c4344e3e1f4b3ef6
-```
-
 ### `dpkg` source package: `openssl=1.1.1f-1ubuntu4.1`
 
 Binary Packages:
 
+- `libssl1.1:amd64=1.1.1f-1ubuntu4.1`
 - `openssl=1.1.1f-1ubuntu4.1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
@@ -1524,11 +1505,11 @@ $ apt-get source -qq --print-uris openssl=1.1.1f-1ubuntu4.1
 'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu4.1.debian.tar.xz' openssl_1.1.1f-1ubuntu4.1.debian.tar.xz 154368 SHA512:e997a4ed8ff5d9c3e23e580d79f57019dfc02ca376ffffe895bf2d07f132fbf9796bab421a4e624d248783d75f2d10868f9271c94b5f5328ce1f44333d1ce2f0
 ```
 
-### `dpkg` source package: `p11-kit=0.23.21-2build1`
+### `dpkg` source package: `p11-kit=0.23.21-2ubuntu0.1`
 
 Binary Packages:
 
-- `libp11-kit0:amd64=0.23.21-2build1`
+- `libp11-kit0:amd64=0.23.21-2ubuntu0.1`
 
 Licenses: (parsed from: `/usr/share/doc/libp11-kit0/copyright`)
 
@@ -1541,11 +1522,11 @@ Licenses: (parsed from: `/usr/share/doc/libp11-kit0/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris p11-kit=0.23.21-2build1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.21-2build1.dsc' p11-kit_0.23.21-2build1.dsc 2557 SHA512:0c19b974d43b28c892262a99c9dce7b625e7caa43cd0d21b43591a6b469435e2c259d130fd6775e7e2a6b425f4ce88e458193d61f2c87c480ed71f572f4285f5
+$ apt-get source -qq --print-uris p11-kit=0.23.21-2ubuntu0.1
+'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.21-2ubuntu0.1.dsc' p11-kit_0.23.21-2ubuntu0.1.dsc 2532 SHA512:475a8c1c8886263034a80ce7c6613b57a18b2d955bba52f8127dc941099edd0d590bafc5a40054f2a44847b9165c98279f94dbd3dc07ba184aba5761b198b4c3
 'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.21.orig.tar.xz' p11-kit_0.23.21.orig.tar.xz 827064 SHA512:4c796ca2c72a650f105a7a70aa62e55edb12e1c151e91ef92bfeee6c5c68982b36023400b42c4efcb1d351b7848e8618c26607cdb0f77b48ae40e2ecfd713e3e
 'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.21.orig.tar.xz.asc' p11-kit_0.23.21.orig.tar.xz.asc 854 SHA512:8bf48da323fe9c6161673c49870852d34fede5beb6a624ce73090599d3729633153f03dc06aa77478174b1e4e4840c3fe74cd84219747446e2fa29f2a895cfa5
-'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.21-2build1.debian.tar.xz' p11-kit_0.23.21-2build1.debian.tar.xz 22788 SHA512:88a6885d6a83c3e7f8ed18148c18603b14ee567b9020e324f9873f4e73ffa75b682ce6138566265abfce134d15fba14200069e21127ff0849fa6bf7392ad3e29
+'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.21-2ubuntu0.1.debian.tar.xz' p11-kit_0.23.21-2ubuntu0.1.debian.tar.xz 25452 SHA512:5280a369943121705aecafc4649496ef36c12d45e23c0f7025c22e20a10e0e0e4d4a686fa6627e4c82261904fb8f9f4847034c43ba777fb7e20c64176777bd0c
 ```
 
 ### `dpkg` source package: `pam=1.3.1-5ubuntu6`
@@ -1874,11 +1855,11 @@ $ apt-get source -qq --print-uris sysvinit=2.96-3ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/s/sysvinit/sysvinit_2.96-3ubuntu1.debian.tar.xz' sysvinit_2.96-3ubuntu1.debian.tar.xz 128020 SHA512:b02a958fc940dbc1b7e6091b04dc1f65162dcedd1a612254427faa12c162c7e0a0f19169ceafc3c045fd7c693a9e134e6fd95d48422c3299c0d53a2425062c35
 ```
 
-### `dpkg` source package: `tar=1.30+dfsg-7`
+### `dpkg` source package: `tar=1.30+dfsg-7ubuntu0.20.10.1`
 
 Binary Packages:
 
-- `tar=1.30+dfsg-7`
+- `tar=1.30+dfsg-7ubuntu0.20.10.1`
 
 Licenses: (parsed from: `/usr/share/doc/tar/copyright`)
 
@@ -1888,25 +1869,30 @@ Licenses: (parsed from: `/usr/share/doc/tar/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris tar=1.30+dfsg-7
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.30+dfsg-7.dsc' tar_1.30+dfsg-7.dsc 1981 SHA512:f4bd8b1605b40b64d340ec6640e0c3d745c6a420238158d07b1ed9110d0adf2ef16a0c55d3dfce28c0ff9e4befa255bda369f6247fb612c44e50dd5dd2e748dc
+$ apt-get source -qq --print-uris tar=1.30+dfsg-7ubuntu0.20.10.1
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.30+dfsg-7ubuntu0.20.10.1.dsc' tar_1.30+dfsg-7ubuntu0.20.10.1.dsc 1946 SHA512:05fb6f4d91d208e2d552e925fe358806bb35e605787180f7816c240c5bd596e3f2bfaf1d977a1b478f83a6f262ce534e8c96e6df405b39ad8853d1f14c73d57f
 'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.30+dfsg.orig.tar.xz' tar_1.30+dfsg.orig.tar.xz 1883220 SHA512:f9b3843bd4da03f58d6f88de70ecb36b8ac29312714fd2120ff00f17c99e6d77cc82a8f9de348f4c2bdba9a6cc8e8c6c78039b6c14cdee15d68f2517000c36f2
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.30+dfsg-7.debian.tar.xz' tar_1.30+dfsg-7.debian.tar.xz 22168 SHA512:86bb22465adc886b86a79704ea398bf68bd8365f6b149ac555d9e4d3b7d24231c08c2ab8065661fac45ea2b199e415dbb33e55a4b0e5edf06c361092b6a847e3
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.30+dfsg-7ubuntu0.20.10.1.debian.tar.xz' tar_1.30+dfsg-7ubuntu0.20.10.1.debian.tar.xz 22620 SHA512:c54a02ce0cc2cd8b456c1c1aaee864c16915947be8267945dfa255629b7859a1e843854ec132ac958735fae01513feab6eb7222cb02965256b776301f7ada38f
 ```
 
-### `dpkg` source package: `tzdata=2020d-1ubuntu1`
+### `dpkg` source package: `tzdata=2020f-0ubuntu0.20.10.1`
 
 Binary Packages:
 
-- `tzdata=2020d-1ubuntu1`
+- `tzdata=2020f-0ubuntu0.20.10.1`
 
 Licenses: (parsed from: `/usr/share/doc/tzdata/copyright`)
 
 - `ICU`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris tzdata=2020f-0ubuntu0.20.10.1
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2020f-0ubuntu0.20.10.1.dsc' tzdata_2020f-0ubuntu0.20.10.1.dsc 2149 SHA512:113693a43d1a18837c1c62508e796ce0de218307030d1697050467c63a390e029893ec9c93d4f0be31061bb36d6a3b23e169284321f0a55fa13fcd9d3f528129
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2020f.orig.tar.gz' tzdata_2020f.orig.tar.gz 411739 SHA512:dd312def18c807452fda2e697514e2064c5f51ebdbedd0cfe6f231252c76ee5d4409f653b295ed5657b7d30b868690047fdb70a10942e69eaa40b77473e3f9ca
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2020f-0ubuntu0.20.10.1.debian.tar.xz' tzdata_2020f-0ubuntu0.20.10.1.debian.tar.xz 165240 SHA512:e3b571a250fc9319b35fc9e8f9cd1152856cec2e0bc144e3512a76b846c7caa596073ac0b1c2af1e14d41ce7134ae8df4d732a7a69ef97de5bff2175e00a078a
+```
 
 ### `dpkg` source package: `ubuntu-keyring=2020.06.17.1`
 

@@ -2673,20 +2673,13 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.9-minimal/copyright`, `/usr/s
 - `use in source`
 - `without`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3.9=3.9.1-2
-'http://deb.debian.org/debian/pool/main/p/python3.9/python3.9_3.9.1-2.dsc' python3.9_3.9.1-2.dsc 3415 SHA256:305623dd48f90a89a11323655e6d4f9731c528eee970d18e0ed66da966e58275
-'http://deb.debian.org/debian/pool/main/p/python3.9/python3.9_3.9.1.orig.tar.xz' python3.9_3.9.1.orig.tar.xz 18897104 SHA256:991c3f8ac97992f3d308fefeb03a64db462574eadbff34ce8bc5bb583d9903ff
-'http://deb.debian.org/debian/pool/main/p/python3.9/python3.9_3.9.1-2.debian.tar.xz' python3.9_3.9.1-2.debian.tar.xz 295124 SHA256:9ed94a73d8a7fcd12052030b042de61ba1fc0572d7711e87aa2cdf65d9d7aac0
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/python3.9/3.9.1-2/
 
-- https://sources.debian.net/src/python3.9/3.9.1-2/ (for browsing the source)
-- https://sources.debian.net/src/python3.9/3.9.1-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python3.9/3.9.1-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `readline=8.1-1`
 
@@ -2846,21 +2839,13 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 - `GPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sqlite3=3.34.0-1
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.34.0-1.dsc' sqlite3_3.34.0-1.dsc 2410 SHA256:bdc132afa2c270a8b8dcb16f3862cd1ad775d10daf546cf1db782044b0b8cc32
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.34.0.orig-www.tar.xz' sqlite3_3.34.0.orig-www.tar.xz 5539580 SHA256:ade6d0b7a1307e85074903c951b6f394888d04c72d585d70ba1bfe9a2b975409
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.34.0.orig.tar.xz' sqlite3_3.34.0.orig.tar.xz 7340388 SHA256:42678052d06b0146244ef6a65aff83943fb9d16226d68eea7fb58a3b2cf9630b
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.34.0-1.debian.tar.xz' sqlite3_3.34.0-1.debian.tar.xz 21456 SHA256:cdce039f7cf5bbde36855ff70864655cc2e514fcb6e2d8d89bfa58484bb75da6
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/sqlite3/3.34.0-1/
 
-- https://sources.debian.net/src/sqlite3/3.34.0-1/ (for browsing the source)
-- https://sources.debian.net/src/sqlite3/3.34.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sqlite3/3.34.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `subversion=1.14.0-3`
 
