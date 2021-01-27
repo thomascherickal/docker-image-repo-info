@@ -1,7 +1,7 @@
 ## `kong:centos`
 
 ```console
-$ docker pull kong@sha256:24859fdc4ec94d813fc09fe5ba61be9ea9becf8f6d09d7c5b956b650b1bfdd7c
+$ docker pull kong@sha256:176363657cdf7dc411f1d738aae37ff5016542170c9a2696607361cb5cfb9b91
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull kong@sha256:24859fdc4ec94d813fc09fe5ba61be9ea9becf8f6d09d7c5b956b6
 ### `kong:centos` - linux; amd64
 
 ```console
-$ docker pull kong@sha256:60b12ba268c4a866d1add6a80ddf5db9b21b999d17618670423ca69285b996db
+$ docker pull kong@sha256:c59b96b4d57a32a72e9b8be4b6e1c14c6a1e3bb3340d80266fae91460769ef40
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **127.4 MB (127391058 bytes)**  
+-	Total Size: **127.4 MB (127400802 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a456825d3bd4323426411c3664b786e230578fb4d643fc59c1a756933ca42d63`
+-	Image ID: `sha256:a6ddf4deeb4ee04ebf0f68f79a2ee0486fd26465754de034da59bd93c53d6b5b`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["kong","docker-start"]`
 
@@ -39,26 +39,26 @@ ENV ASSET=ce
 ARG EE_PORTS
 # Sat, 14 Nov 2020 01:01:34 GMT
 COPY file:ff02c070e4c89f043b176279a7e41464b5fab8cb98cfcd6332fad2d2741fc41d in /tmp/kong.rpm 
-# Wed, 13 Jan 2021 21:21:11 GMT
-ARG KONG_VERSION=2.3.0
-# Wed, 13 Jan 2021 21:21:11 GMT
-ENV KONG_VERSION=2.3.0
-# Wed, 13 Jan 2021 21:21:12 GMT
-ARG KONG_SHA256=306dade5e8c5a8342b2c489a30aa587eacd31be22dff078b787285d301408cd3
-# Wed, 13 Jan 2021 21:21:40 GMT
-# ARGS: KONG_SHA256=306dade5e8c5a8342b2c489a30aa587eacd31be22dff078b787285d301408cd3
+# Wed, 27 Jan 2021 06:33:26 GMT
+ARG KONG_VERSION=2.3.1
+# Wed, 27 Jan 2021 06:33:27 GMT
+ENV KONG_VERSION=2.3.1
+# Wed, 27 Jan 2021 06:33:27 GMT
+ARG KONG_SHA256=c95c8306f31eb9bb3fce6d3436d3782eb352dfb17dca10edad8a0f0d982b1219
+# Wed, 27 Jan 2021 06:33:56 GMT
+# ARGS: KONG_SHA256=c95c8306f31eb9bb3fce6d3436d3782eb352dfb17dca10edad8a0f0d982b1219
 RUN set -ex;   if [ "$ASSET" = "ce" ] ; then     curl -fL "https://bintray.com/kong/kong-rpm/download_file?file_path=centos/7/kong-$KONG_VERSION.el7.amd64.rpm" -o /tmp/kong.rpm     && echo "$KONG_SHA256  /tmp/kong.rpm" | sha256sum -c -;   fi;   yum install -y -q unzip shadow-utils git   && yum clean all -q   && rm -fr /var/cache/yum/* /tmp/yum_save*.yumtx /root/.pki   && yum install -y /tmp/kong.rpm   && yum clean all   && rm /tmp/kong.rpm   && chown kong:0 /usr/local/bin/kong   && chown -R kong:0 /usr/local/kong &&   if [ "$ASSET" = "ce" ] ; then     kong version ;   fi;
-# Wed, 13 Jan 2021 21:21:40 GMT
+# Wed, 27 Jan 2021 06:33:56 GMT
 COPY file:c60e90d02b3d93627e1f0d577e2298e266f50cc620574d3ef11b8b30cd8a906c in /docker-entrypoint.sh 
-# Wed, 13 Jan 2021 21:21:41 GMT
+# Wed, 27 Jan 2021 06:33:56 GMT
 USER kong
-# Wed, 13 Jan 2021 21:21:41 GMT
+# Wed, 27 Jan 2021 06:33:57 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 13 Jan 2021 21:21:41 GMT
+# Wed, 27 Jan 2021 06:33:57 GMT
 EXPOSE 8000 8001 8443 8444
-# Wed, 13 Jan 2021 21:21:41 GMT
+# Wed, 27 Jan 2021 06:33:57 GMT
 STOPSIGNAL SIGQUIT
-# Wed, 13 Jan 2021 21:21:41 GMT
+# Wed, 27 Jan 2021 06:33:57 GMT
 CMD ["kong" "docker-start"]
 ```
 
@@ -71,11 +71,11 @@ CMD ["kong" "docker-start"]
 		Last Modified: Sat, 14 Nov 2020 01:03:42 GMT  
 		Size: 129.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:67ee1dcb5626eb3f5d25875679d0f99369984de57183869d464511476fe319c1`  
-		Last Modified: Wed, 13 Jan 2021 21:23:55 GMT  
-		Size: 51.3 MB (51293039 bytes)  
+	-	`sha256:8db8e71dccdabe2284554e8e30b0937710417a94f009b08bbbc6c7f88bac451a`  
+		Last Modified: Wed, 27 Jan 2021 06:36:22 GMT  
+		Size: 51.3 MB (51302781 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:592aaf7c3c68bd535f7b0a5567fcb75b508ba1f4edb2c29063124c26fd819850`  
-		Last Modified: Wed, 13 Jan 2021 21:23:44 GMT  
-		Size: 733.0 B  
+	-	`sha256:c2de3757aca98a38a9abef3cdbfd3ac04a92c479502e5ae467734ecc9c60fdcc`  
+		Last Modified: Wed, 27 Jan 2021 06:36:11 GMT  
+		Size: 735.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
