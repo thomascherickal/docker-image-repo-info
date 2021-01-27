@@ -1,7 +1,7 @@
 ## `swift:amazonlinux2-slim`
 
 ```console
-$ docker pull swift@sha256:4f51ffc4ba48a66c5fd403018a24f5389b6f2e9c037e6069ba6790005ee8b8ce
+$ docker pull swift@sha256:d71b2bb3f8bae7c8f105b969f1d2bdad07322cad80fdb8002c8d2af38aefd1aa
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,47 +11,47 @@ $ docker pull swift@sha256:4f51ffc4ba48a66c5fd403018a24f5389b6f2e9c037e6069ba679
 ### `swift:amazonlinux2-slim` - linux; amd64
 
 ```console
-$ docker pull swift@sha256:ed5825d412f72fb339c1d99fdaba52689bc6c42f053d0167ea78e477cb7893a2
+$ docker pull swift@sha256:8916f441b3e9513d4352fdceaaa6bdf884ca663723d70579b6a3cad36f617f39
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **194.9 MB (194948236 bytes)**  
+-	Total Size: **196.5 MB (196484161 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:aac7b71d6f736b9154c7a7eb8fc03c9b584455fc05c12ed1175ab89d9426c655`
+-	Image ID: `sha256:b0c9d6b8489c5dea125ed884527a2823b7ad036029657f732246715f996eaaae`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 23 Dec 2020 20:20:09 GMT
-ADD file:15991ffbefc01e13f134972ce0eabc6b7901ea9ab4d56347bee5057302cf4848 in / 
-# Wed, 23 Dec 2020 20:20:09 GMT
+# Wed, 27 Jan 2021 22:19:43 GMT
+ADD file:bcd0b903093ee2c81a54e8bdc50176f4038662ab936aa0d94af08458d508aef6 in / 
+# Wed, 27 Jan 2021 22:19:43 GMT
 CMD ["/bin/bash"]
-# Wed, 23 Dec 2020 20:49:15 GMT
+# Wed, 27 Jan 2021 22:41:47 GMT
 LABEL maintainer=Swift Infrastructure <swift-infrastructure@swift.org>
-# Wed, 23 Dec 2020 20:49:15 GMT
+# Wed, 27 Jan 2021 22:41:47 GMT
 LABEL description=Docker Container for the Swift programming language
-# Wed, 23 Dec 2020 20:51:19 GMT
+# Wed, 27 Jan 2021 22:43:55 GMT
 ARG SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561
-# Wed, 23 Dec 2020 20:51:22 GMT
+# Wed, 27 Jan 2021 22:43:55 GMT
 ARG SWIFT_PLATFORM=amazonlinux2
-# Wed, 23 Dec 2020 20:51:26 GMT
+# Wed, 27 Jan 2021 22:43:56 GMT
 ARG SWIFT_BRANCH=swift-5.3.2-release
-# Wed, 23 Dec 2020 20:51:27 GMT
+# Wed, 27 Jan 2021 22:43:56 GMT
 ARG SWIFT_VERSION=swift-5.3.2-RELEASE
-# Wed, 23 Dec 2020 20:51:27 GMT
+# Wed, 27 Jan 2021 22:43:56 GMT
 ARG SWIFT_WEBROOT=https://swift.org/builds/
-# Wed, 23 Dec 2020 20:51:27 GMT
+# Wed, 27 Jan 2021 22:43:56 GMT
 ENV SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561 SWIFT_PLATFORM=amazonlinux2 SWIFT_BRANCH=swift-5.3.2-release SWIFT_VERSION=swift-5.3.2-RELEASE SWIFT_WEBROOT=https://swift.org/builds/
-# Wed, 23 Dec 2020 20:52:38 GMT
+# Wed, 27 Jan 2021 22:45:12 GMT
 RUN set -e;     SWIFT_WEBDIR="$SWIFT_WEBROOT/$SWIFT_BRANCH/$(echo $SWIFT_PLATFORM | tr -d .)/"     && SWIFT_BIN_URL="$SWIFT_WEBDIR/$SWIFT_VERSION/$SWIFT_VERSION-$SWIFT_PLATFORM.tar.gz"     && SWIFT_SIG_URL="$SWIFT_BIN_URL.sig"     && export GNUPGHOME="$(mktemp -d)"     && curl -fsSL "$SWIFT_BIN_URL" -o swift.tar.gz "$SWIFT_SIG_URL" -o swift.tar.gz.sig     && gpg --batch --quiet --keyserver ha.pool.sks-keyservers.net --recv-keys "$SWIFT_SIGNING_KEY"     && gpg --batch --verify swift.tar.gz.sig swift.tar.gz     && yum -y install tar gzip     && tar -xzf swift.tar.gz --directory / --strip-components=1 $SWIFT_VERSION-$SWIFT_PLATFORM/usr/lib/swift/linux     && chmod -R o+r /usr/lib/swift     && rm -rf "$GNUPGHOME" swift.tar.gz.sig swift.tar.gz     && yum autoremove -y tar gzip
 ```
 
 -	Layers:
-	-	`sha256:4232b9ee675bb1f9a32337ec3f266a570b75c54c3c3f173b1abb998e9984ad8c`  
-		Last Modified: Wed, 23 Dec 2020 20:21:42 GMT  
-		Size: 62.0 MB (62007428 bytes)  
+	-	`sha256:62350c28fdb7b7cbd0e199dd893555ed129ed85da482d882b1eeb574988ea7d6`  
+		Last Modified: Wed, 27 Jan 2021 22:21:18 GMT  
+		Size: 62.0 MB (61996576 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ae490507c8f024589a57ee68afbeb6de046cf9b8f470ede38e3bbf21611c6864`  
-		Last Modified: Wed, 23 Dec 2020 21:00:34 GMT  
-		Size: 132.9 MB (132940808 bytes)  
+	-	`sha256:376a83b86718038609d03f7025fc0919f27b0757ca3923bed889b39652e08a54`  
+		Last Modified: Wed, 27 Jan 2021 22:53:13 GMT  
+		Size: 134.5 MB (134487585 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
