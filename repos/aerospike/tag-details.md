@@ -10,19 +10,39 @@
 
 ## `aerospike:5.1.0.25`
 
-**does not exist** (yet?)
+```console
+$ docker pull aerospike@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `aerospike:5.2.0.17`
 
-**does not exist** (yet?)
+```console
+$ docker pull aerospike@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `aerospike:5.3.0.8`
 
-**does not exist** (yet?)
+```console
+$ docker pull aerospike@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `aerospike:5.4.0.3`
 
-**does not exist** (yet?)
+```console
+$ docker pull aerospike@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `aerospike:latest`
 
