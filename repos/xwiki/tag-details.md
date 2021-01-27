@@ -17,6 +17,15 @@
 -	[`xwiki:12.6-postgres-tomcat`](#xwiki126-postgres-tomcat)
 -	[`xwiki:12-mysql-tomcat`](#xwiki12-mysql-tomcat)
 -	[`xwiki:12-postgres-tomcat`](#xwiki12-postgres-tomcat)
+-	[`xwiki:13`](#xwiki13)
+-	[`xwiki:13.0`](#xwiki130)
+-	[`xwiki:13.0.0`](#xwiki1300)
+-	[`xwiki:13.0.0-mysql-tomcat`](#xwiki1300-mysql-tomcat)
+-	[`xwiki:13.0.0-postgres-tomcat`](#xwiki1300-postgres-tomcat)
+-	[`xwiki:13.0-mysql-tomcat`](#xwiki130-mysql-tomcat)
+-	[`xwiki:13.0-postgres-tomcat`](#xwiki130-postgres-tomcat)
+-	[`xwiki:13-mysql-tomcat`](#xwiki13-mysql-tomcat)
+-	[`xwiki:13-postgres-tomcat`](#xwiki13-postgres-tomcat)
 -	[`xwiki:latest`](#xwikilatest)
 -	[`xwiki:lts`](#xwikilts)
 -	[`xwiki:lts-mysql`](#xwikilts-mysql)
@@ -3425,6 +3434,87 @@ CMD ["xwiki"]
 		Last Modified: Fri, 22 Jan 2021 23:56:26 GMT  
 		Size: 2.5 KB (2504 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `xwiki:13`
+
+```console
+$ docker pull xwiki@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
+## `xwiki:13.0`
+
+```console
+$ docker pull xwiki@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
+## `xwiki:13.0.0`
+
+```console
+$ docker pull xwiki@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
+## `xwiki:13.0.0-mysql-tomcat`
+
+```console
+$ docker pull xwiki@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
+## `xwiki:13.0.0-postgres-tomcat`
+
+```console
+$ docker pull xwiki@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
+## `xwiki:13.0-mysql-tomcat`
+
+```console
+$ docker pull xwiki@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
+## `xwiki:13.0-postgres-tomcat`
+
+```console
+$ docker pull xwiki@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
+## `xwiki:13-mysql-tomcat`
+
+```console
+$ docker pull xwiki@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
+## `xwiki:13-postgres-tomcat`
+
+```console
+$ docker pull xwiki@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `xwiki:latest`
 
