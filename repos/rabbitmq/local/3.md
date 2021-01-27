@@ -1,10 +1,10 @@
-# `rabbitmq:3.8.10`
+# `rabbitmq:3.8.11`
 
 ## Docker Metadata
 
-- Image ID: `sha256:c1c7f03b78c5bfdba1f239e6743416e2b8d92a1bc7257dd9803aa412f05ea564`
-- Created: `2021-01-19T23:43:57.747033758Z`
-- Virtual Size: ~ 167.84 Mb  
+- Image ID: `sha256:c05fdf32bdad877b587fa9ff4f158c4c7ec56972aa9865a2b72ad1b2dc9b2dce`
+- Created: `2021-01-23T00:35:17.624150445Z`
+- Virtual Size: ~ 156.21 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -14,10 +14,10 @@
   - `OPENSSL_VERSION=1.1.1i`
   - `OPENSSL_SOURCE_SHA256=e8be6a35fe41d10603c3cc635e93289ed00bf34b79671a3a4de64fcee00d5242`
   - `OPENSSL_PGP_KEY_IDS=0x8657ABB260F056B1E5190839D9C4D26D0E604491 0x5B2545DAB21995F4088CEFAA36CEE4DEB00CFE33 0xED230BEC4D4F2518B9D7DF41F0DB4D21C1D35231 0xC1F33DD8CE1D4CC613AF14DA9195C48241FBF7DD 0x7953AC1FBC3DC8B3B292393ED5E9E43F7DF9EE8C 0xE5E52560DD91C556DDBDA5D02064C53641C25E5D`
-  - `OTP_VERSION=23.2.2`
-  - `OTP_SOURCE_SHA256=04994a2dffee0170554797b3d258b4f4727e54c772e721202e9fb22d6827e4de`
+  - `OTP_VERSION=23.2.3`
+  - `OTP_SOURCE_SHA256=d978ea01def07d2533cba3277b27cad9640589f36e39582fdeed0966b471bf3f`
   - `RABBITMQ_DATA_DIR=/var/lib/rabbitmq`
-  - `RABBITMQ_VERSION=3.8.10`
+  - `RABBITMQ_VERSION=3.8.11`
   - `RABBITMQ_PGP_KEY_ID=0x0A9AF2115F4687BD29803A206B73A36E6026DFCA`
   - `RABBITMQ_HOME=/opt/rabbitmq`
   - `RABBITMQ_LOGS=-`
@@ -66,21 +66,25 @@ $ apt-get source -qq --print-uris adduser=3.116ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/a/adduser/adduser_3.116ubuntu1.tar.xz' adduser_3.116ubuntu1.tar.xz 216868 SHA256:f34f1d95e96ecae3b068a3dd666848f82f06cbb26152c56a6b72bd71555a8f18
 ```
 
-### `dpkg` source package: `apt=1.6.12ubuntu0.1`
+### `dpkg` source package: `apt=1.6.12ubuntu0.2`
 
 Binary Packages:
 
-- `apt=1.6.12ubuntu0.1`
-- `libapt-pkg5.0:amd64=1.6.12ubuntu0.1`
+- `apt=1.6.12ubuntu0.2`
+- `libapt-pkg5.0:amd64=1.6.12ubuntu0.2`
 
 Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-pkg5.0/copyright`)
 
 - `GPL-2`
 - `GPLv2+`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris apt=1.6.12ubuntu0.2
+'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.6.12ubuntu0.2.dsc' apt_1.6.12ubuntu0.2.dsc 2869 SHA512:25da70d550b26552df598eb68129d939afffb4a840bdb37d3bce11167b79692eecc90e886e4c5833fc5248808658646627318f94276fc3eae570921ac60ad9ed
+'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.6.12ubuntu0.2.tar.xz' apt_1.6.12ubuntu0.2.tar.xz 2174360 SHA512:2a1b7aee29aae1581d78513c99062314f1c0beb1b99a9a245d78022ee96487af815f325d43ce4b698c5aa5e6ce6f55047926e7683c894645db3aabe21bb0c6c7
+```
 
 ### `dpkg` source package: `attr=1:2.4.47-2build1`
 
@@ -448,28 +452,14 @@ $ apt-get source -qq --print-uris gcc-8=8.4.0-1ubuntu1~18.04
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-8/gcc-8_8.4.0-1ubuntu1~18.04.diff.gz' gcc-8_8.4.0-1ubuntu1~18.04.diff.gz 510634 SHA512:7bd97a04eccd35c3483a82b238d8d54c91071c4d1361cb30fb3fbf7b512c84b9d0bc80499373f2da3e17520d112125ebfebae6b93746feede78f9eecc1ccd4ac
 ```
 
-### `dpkg` source package: `glibc=2.27-3ubuntu1.3`
-
-Binary Packages:
-
-- `libc-bin=2.27-3ubuntu1.3`
-
-Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`)
-
-- `GPL-2`
-- `LGPL-2.1`
-
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
-
-
 ### `dpkg` source package: `glibc=2.27-3ubuntu1.4`
 
 Binary Packages:
 
+- `libc-bin=2.27-3ubuntu1.4`
 - `libc6:amd64=2.27-3ubuntu1.4`
 
-Licenses: (parsed from: `/usr/share/doc/libc6/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/libc6/copyright`)
 
 - `GPL-2`
 - `LGPL-2.1`
@@ -1040,11 +1030,11 @@ $ apt-get source -qq --print-uris nettle=3.4-1
 'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.4-1.debian.tar.xz' nettle_3.4-1.debian.tar.xz 19884 SHA256:9bfc25562ed36449e75741b0473e0e558bc9ef5c20ca24e7c650fea87d631c03
 ```
 
-### `dpkg` source package: `p11-kit=0.23.9-2`
+### `dpkg` source package: `p11-kit=0.23.9-2ubuntu0.1`
 
 Binary Packages:
 
-- `libp11-kit0:amd64=0.23.9-2`
+- `libp11-kit0:amd64=0.23.9-2ubuntu0.1`
 
 Licenses: (parsed from: `/usr/share/doc/libp11-kit0/copyright`)
 
@@ -1057,11 +1047,11 @@ Licenses: (parsed from: `/usr/share/doc/libp11-kit0/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris p11-kit=0.23.9-2
-'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.9-2.dsc' p11-kit_0.23.9-2.dsc 2458 SHA256:e4c271a89abf52a95d23cca02bd6fb6ea5d5611b139ac63b0db728e7d9895449
-'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.9.orig.tar.gz' p11-kit_0.23.9.orig.tar.gz 1091561 SHA256:e1c1649c335107a8d33cf3762eb7f57b2d0681f0c7d8353627293a58d6b4db63
-'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.9.orig.tar.gz.asc' p11-kit_0.23.9.orig.tar.gz.asc 900 SHA256:334562f6a37f96339173a33a90b246466e0b2673e03658b205d75ebbb63bad10
-'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.9-2.debian.tar.xz' p11-kit_0.23.9-2.debian.tar.xz 21704 SHA256:fa6af69f96f6ccdce95d61e39662a38768b05f8872b2b2008d56cc4fff0ed3fd
+$ apt-get source -qq --print-uris p11-kit=0.23.9-2ubuntu0.1
+'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.9-2ubuntu0.1.dsc' p11-kit_0.23.9-2ubuntu0.1.dsc 2573 SHA512:f7494e246f8a092a240fa0eecc2c0352a6f48ea5f245dfb46ce3daae2579384c418534d18d0dfde6ee973b01aa5376676d9c7829262e36854881a6d1b0eb3030
+'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.9.orig.tar.gz' p11-kit_0.23.9.orig.tar.gz 1091561 SHA512:6a8a569483763d3ffacadf669b8ba9b9be38a77dd8dc366ca0cb91c44753517fa1879d4422e4e8dfbcac594565727839a619566a170c0f94f8e112f18b0086ed
+'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.9.orig.tar.gz.asc' p11-kit_0.23.9.orig.tar.gz.asc 900 SHA512:c6e3cda0a2f3a75126fa046ead97e2914c277bda7e7cb6712f48bd993f5f441b6f5c14d6e74a2042c600cfe4526494872e6fef2fd7453aebb975696de1bff9b2
+'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.9-2ubuntu0.1.debian.tar.xz' p11-kit_0.23.9-2ubuntu0.1.debian.tar.xz 24380 SHA512:460f4179781768a4a4b686955f16f335565d50f7a2d74c298216fe6725ce4e04119f49605752026f65bf56e143e560718969c5983decc906d3246f0a01c46178
 ```
 
 ### `dpkg` source package: `pam=1.1.8-3.6ubuntu2.18.04.2`
@@ -1237,12 +1227,12 @@ $ apt-get source -qq --print-uris shadow=1:4.5-1ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.5-1ubuntu2.debian.tar.xz' shadow_4.5-1ubuntu2.debian.tar.xz 471472 SHA512:d4017784bfc5118b86533da52909459adf4e79ffa049d8029437860bfaeac91eabd40e6510f67bba6f8b2d74fde62c24eb8e37a7b4637d14eeb63aecaf2294cc
 ```
 
-### `dpkg` source package: `systemd=237-3ubuntu10.43`
+### `dpkg` source package: `systemd=237-3ubuntu10.44`
 
 Binary Packages:
 
-- `libsystemd0:amd64=237-3ubuntu10.43`
-- `libudev1:amd64=237-3ubuntu10.43`
+- `libsystemd0:amd64=237-3ubuntu10.44`
+- `libudev1:amd64=237-3ubuntu10.44`
 
 Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/libudev1/copyright`)
 
@@ -1254,9 +1244,14 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris systemd=237-3ubuntu10.44
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.44.dsc' systemd_237-3ubuntu10.44.dsc 5220 SHA512:37eaf84e1c83462aaceb4b32a0d28bcf983beab30d293ef92f5ee74bf8ebdfdd7eb954be377bdfd931b9f941f9cee11a421617d356dc9c45dfc8cdb0b9bc5ac3
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237.orig.tar.gz' systemd_237.orig.tar.gz 6871350 SHA512:15ef4b92815a6dd9a6c51672dbc00fd7cd0f08068ef0cbeaca574f68d330b28bc67ba1946f24f75ef3d9e7b63843a73eea700db54688061dbf5c9f8470394c3b
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.44.debian.tar.xz' systemd_237-3ubuntu10.44.debian.tar.xz 283916 SHA512:02e65b13363a07aa835bbc70c326faf3cd48e8e0b71f6b738faf9041cea1852cf208b491b59ac7d3e38d0c9e0429f4def5a6362cfc0dd08f531350301a2eb991
+```
 
 ### `dpkg` source package: `sysvinit=2.88dsf-59.10ubuntu1`
 
@@ -1277,20 +1272,25 @@ $ apt-get source -qq --print-uris sysvinit=2.88dsf-59.10ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/s/sysvinit/sysvinit_2.88dsf-59.10ubuntu1.debian.tar.xz' sysvinit_2.88dsf-59.10ubuntu1.debian.tar.xz 132736 SHA256:faee591309aa0065aa43f44a1e840eb01db7f55379af2b45949534bd0317b734
 ```
 
-### `dpkg` source package: `tar=1.29b-2ubuntu0.1`
+### `dpkg` source package: `tar=1.29b-2ubuntu0.2`
 
 Binary Packages:
 
-- `tar=1.29b-2ubuntu0.1`
+- `tar=1.29b-2ubuntu0.2`
 
 Licenses: (parsed from: `/usr/share/doc/tar/copyright`)
 
 - `GPL-2`
 - `GPL-3`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris tar=1.29b-2ubuntu0.2
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.29b-2ubuntu0.2.dsc' tar_1.29b-2ubuntu0.2.dsc 1906 SHA512:0b82b33e124d2aa84685cf179c966186cc5bdc0d2ad3479e2ec14fc7569fb323179521d2cdb956d09c72bd5c23ab3757734012b837e46752d03c926de8c7e1a0
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.29b.orig.tar.xz' tar_1.29b.orig.tar.xz 1822008 SHA512:6814c906f3bf3d1421d46e63aff7921acffbd2b2a0a7e5c20b472a821eab839d6eab93653d964ae16376b65da223c57a92455f44793522c84c8b1343af20b106
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.29b-2ubuntu0.2.debian.tar.xz' tar_1.29b-2ubuntu0.2.debian.tar.xz 34136 SHA512:83c56c1c111a48ed4e1e8dc77bef53b8348a73bc37bdf567c2bb0b887f351892c586256f936eecd865d8422151820861e919165d84e45a036adf5c904453100a
+```
 
 ### `dpkg` source package: `ubuntu-keyring=2018.09.18.1~18.04.0`
 
