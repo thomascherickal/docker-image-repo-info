@@ -1,10 +1,10 @@
-# `hylang:0.19.0-python3.8-buster`
+# `hylang:0.20.0-python3.8-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:c31228a013ead15ed4d85fad984430dcae1df7e0d16bf0eefb767a3e2b6ef928`
-- Created: `2021-01-12T23:05:11.60106652Z`
-- Virtual Size: ~ 120.62 Mb  
+- Image ID: `sha256:ed76b9e3ae469581fe19d9586ed70749d0ea1293cfbeb3b0d60ba88d9a78b5a3`
+- Created: `2021-01-25T23:52:48.246867842Z`
+- Virtual Size: ~ 121.30 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["hy"]`
@@ -13,10 +13,10 @@
   - `LANG=C.UTF-8`
   - `GPG_KEY=E3FF2839C048B25C084DEBE9B26995E310250568`
   - `PYTHON_VERSION=3.8.7`
-  - `PYTHON_PIP_VERSION=20.3.3`
-  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/5f38681f7f5872e4032860b54e9cc11cf0374932/get-pip.py`
-  - `PYTHON_GET_PIP_SHA256=6a0b13826862f33c13b614a921d36253bfa1ae779c5fbf569876f3585057e9d2`
-  - `HY_VERSION=0.19.0`
+  - `PYTHON_PIP_VERSION=21.0`
+  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/8cc88aca7d9775fce279e8b84ef163cf1d3e8a2e/get-pip.py`
+  - `PYTHON_GET_PIP_SHA256=ffb67da2e976f48dd29714fc64812d1ac419eb7d48079737166dd95640d1debd`
+  - `HY_VERSION=0.20.0`
 
 ## `dpkg` (`.deb`-based packages)
 

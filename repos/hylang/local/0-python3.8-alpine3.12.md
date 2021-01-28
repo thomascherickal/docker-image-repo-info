@@ -1,10 +1,10 @@
-# `hylang:0.19.0-python3.8-alpine3.12`
+# `hylang:0.20.0-python3.8-alpine3.12`
 
 ## Docker Metadata
 
-- Image ID: `sha256:f0c2e5cb0f61c10b655f374217c6e42696f8a9f923376a1c4124cd371b653584`
-- Created: `2020-12-22T19:53:29.264009624Z`
-- Virtual Size: ~ 51.96 Mb  
+- Image ID: `sha256:73942edb7839c1eee53d93e1e90dde52cff8875a26061e1d89b713de2c9115ba`
+- Created: `2021-01-25T23:52:58.734912455Z`
+- Virtual Size: ~ 50.54 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["hy"]`
@@ -13,10 +13,10 @@
   - `LANG=C.UTF-8`
   - `GPG_KEY=E3FF2839C048B25C084DEBE9B26995E310250568`
   - `PYTHON_VERSION=3.8.7`
-  - `PYTHON_PIP_VERSION=20.3.3`
-  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/5f38681f7f5872e4032860b54e9cc11cf0374932/get-pip.py`
-  - `PYTHON_GET_PIP_SHA256=6a0b13826862f33c13b614a921d36253bfa1ae779c5fbf569876f3585057e9d2`
-  - `HY_VERSION=0.19.0`
+  - `PYTHON_PIP_VERSION=21.0`
+  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/8cc88aca7d9775fce279e8b84ef163cf1d3e8a2e/get-pip.py`
+  - `PYTHON_GET_PIP_SHA256=ffb67da2e976f48dd29714fc64812d1ac419eb7d48079737166dd95640d1debd`
+  - `HY_VERSION=0.20.0`
 
 ## `apk` (`.apk`-based packages)
 
