@@ -346,13 +346,9 @@ Licenses: (parsed from: `/usr/share/doc/dpkg/copyright`)
 - `public-domain-md5`
 - `public-domain-s-s-d`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris dpkg=1.20.5ubuntu3
-'http://archive.ubuntu.com/ubuntu/pool/main/d/dpkg/dpkg_1.20.5ubuntu3.dsc' dpkg_1.20.5ubuntu3.dsc 2264 SHA512:3db9a8a933e6932316da0e6ed6f68cb8d4dc636df72ab9d3c62cd6b2b3632aabfc0cdff2c24ec826acdadbe64288967277c76f0a978676c04d85b8508cad0c50
-'http://archive.ubuntu.com/ubuntu/pool/main/d/dpkg/dpkg_1.20.5ubuntu3.tar.xz' dpkg_1.20.5ubuntu3.tar.xz 4743056 SHA512:d2b7d4fbc3149be78ec86e01a88980018c4299d944e1631d76abaf596641d9b7d6fc45b08af116c4f60cab56b7eb2009c946ecaee1813ec35fc2ec8b8e190192
-```
 
 ### `dpkg` source package: `e2fsprogs=1.45.6-1ubuntu1`
 
@@ -643,14 +639,9 @@ Licenses: (parsed from: `/usr/share/doc/libgssapi-krb5-2/copyright`, `/usr/share
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris krb5=1.17-10ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.17-10ubuntu1.dsc' krb5_1.17-10ubuntu1.dsc 3639 SHA512:3340542b574f9459cdff666ca68ec98387ab11feaee97ff93be94933c9d1926602bdc1910e65d8b5b0ae3489031341f0cd233e803338dd148967b6d93f89f4aa
-'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.17.orig.tar.gz' krb5_1.17.orig.tar.gz 8761763 SHA512:7462a578b936bd17f155a362dbb5d388e157a80a096549028be6c55400b11361c7f8a28e424fd5674801873651df4e694d536cae66728b7ae5e840e532358c52
-'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.17-10ubuntu1.debian.tar.xz' krb5_1.17-10ubuntu1.debian.tar.xz 144960 SHA512:424203dabaf1527d3290ce94a3c83b725becd4367a3303473796420f48ac6f433db070307d22fce89f35955ac2c91ea4a88266eafdd8f46d85e5ab1a168ffa2c
-```
 
 ### `dpkg` source package: `libcap-ng=0.7.9-2.2build1`
 
