@@ -1,7 +1,7 @@
 ## `telegraf:latest`
 
 ```console
-$ docker pull telegraf@sha256:3ee26dbb9ceb18c3a2a364dbe4781eaf55d7d026784f67c594820f4c32d705ca
+$ docker pull telegraf@sha256:c9703aa340e2c28306c93c3b0eff87e0760f20cf8f299ad577220a62b61cbb0c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -13,14 +13,14 @@ $ docker pull telegraf@sha256:3ee26dbb9ceb18c3a2a364dbe4781eaf55d7d026784f67c594
 ### `telegraf:latest` - linux; amd64
 
 ```console
-$ docker pull telegraf@sha256:e1b99a9e01b4f159a36ab2e4798c5ca285142f05384269d13da56e8fb2e9dffa
+$ docker pull telegraf@sha256:a05a950f2d426641b1f549806943ee1f7f862522a004aa5a1ff91bd0d662ee84
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **108.3 MB (108346701 bytes)**  
+-	Total Size: **108.3 MB (108348187 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d9cdf69cbb5fc3c19afff822bd05018704cce13f7985649587e3e3437c259bab`
+-	Image ID: `sha256:2fe56be3a20fc85dc845c8c73e677bb9c51a4757cb632af00f18c63b27a3ce05`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["telegraf"]`
 
@@ -37,17 +37,17 @@ RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update &&     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends iputils-ping snmp procps lm-sensors &&     rm -rf /var/lib/apt/lists/*
 # Wed, 13 Jan 2021 04:53:37 GMT
 RUN set -ex &&     mkdir ~/.gnupg;     echo "disable-ipv6" >> ~/.gnupg/dirmngr.conf;     for key in         05CE15085FC09D18E99EFB22684A14CF2582E0C5 ;     do         gpg --keyserver ha.pool.sks-keyservers.net --recv-keys "$key" ||         gpg --keyserver pgp.mit.edu --recv-keys "$key" ||         gpg --keyserver keyserver.pgp.com --recv-keys "$key" ;     done
-# Thu, 28 Jan 2021 00:25:46 GMT
-ENV TELEGRAF_VERSION=1.17.1
-# Thu, 28 Jan 2021 00:25:50 GMT
+# Fri, 29 Jan 2021 04:32:20 GMT
+ENV TELEGRAF_VERSION=1.17.2
+# Fri, 29 Jan 2021 04:32:24 GMT
 RUN ARCH= && dpkgArch="$(dpkg --print-architecture)" &&     case "${dpkgArch##*-}" in       amd64) ARCH='amd64';;       arm64) ARCH='arm64';;       armhf) ARCH='armhf';;       armel) ARCH='armel';;       *)     echo "Unsupported architecture: ${dpkgArch}"; exit 1;;     esac &&     wget --no-verbose https://dl.influxdata.com/telegraf/releases/telegraf_${TELEGRAF_VERSION}-1_${ARCH}.deb.asc &&     wget --no-verbose https://dl.influxdata.com/telegraf/releases/telegraf_${TELEGRAF_VERSION}-1_${ARCH}.deb &&     gpg --batch --verify telegraf_${TELEGRAF_VERSION}-1_${ARCH}.deb.asc telegraf_${TELEGRAF_VERSION}-1_${ARCH}.deb &&     dpkg -i telegraf_${TELEGRAF_VERSION}-1_${ARCH}.deb &&     rm -f telegraf_${TELEGRAF_VERSION}-1_${ARCH}.deb*
-# Thu, 28 Jan 2021 00:25:50 GMT
+# Fri, 29 Jan 2021 04:32:24 GMT
 EXPOSE 8092/udp 8094 8125/udp
-# Thu, 28 Jan 2021 00:25:50 GMT
+# Fri, 29 Jan 2021 04:32:24 GMT
 COPY file:7e725b38b34580a28d521266535fcafc651af09f8af8fc6e03ef74768e1b69a2 in /entrypoint.sh 
-# Thu, 28 Jan 2021 00:25:50 GMT
+# Fri, 29 Jan 2021 04:32:25 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Thu, 28 Jan 2021 00:25:50 GMT
+# Fri, 29 Jan 2021 04:32:25 GMT
 CMD ["telegraf"]
 ```
 
@@ -72,13 +72,13 @@ CMD ["telegraf"]
 		Last Modified: Wed, 13 Jan 2021 04:54:32 GMT  
 		Size: 2.9 KB (2870 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:230515cbe63fe7a10125a20b1ad64ee6a6044fa4f256a3cb1222f2584817920c`  
-		Last Modified: Thu, 28 Jan 2021 00:26:26 GMT  
-		Size: 22.7 MB (22723924 bytes)  
+	-	`sha256:6b755b74a2742266b814d5b3f189f8e1763c5138ddd24a6b2179e019925a4378`  
+		Last Modified: Fri, 29 Jan 2021 04:33:11 GMT  
+		Size: 22.7 MB (22725409 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:259bcb045331de2042dd0b86a6cd455087a4f7543d9857f1eb09161128ca0e32`  
-		Last Modified: Thu, 28 Jan 2021 00:26:20 GMT  
-		Size: 183.0 B  
+	-	`sha256:395a1e47e5e9b6e8ad986cfc21c216a8c86294cc0d34e0b13b0681af187bc85c`  
+		Last Modified: Fri, 29 Jan 2021 04:33:06 GMT  
+		Size: 184.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `telegraf:latest` - linux; arm variant v7
