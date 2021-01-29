@@ -4152,14 +4152,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 - `GPL-2`
 - `redpine-signals`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=4.4.0-200.232
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0-200.232.dsc' linux_4.4.0-200.232.dsc 11596 SHA512:f50087e03ceefcd787c8e0ecf1b8cd4400e49d6837da0e351e809f0fe6dbe6ffd5fbff0c2f64e9167bfe644208d83807ec65dffea9e575b3aa32a193f67b130e
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0.orig.tar.gz' linux_4.4.0.orig.tar.gz 132860730 SHA512:28ef89b62f663f2d90b58274799b7ebeff04699f08d0b83f650b0de179d4ef354450c81ecda07522b493c43d5eb2d530fa0f552a2794d48f84878e05efa39cc3
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0-200.232.diff.gz' linux_4.4.0-200.232.diff.gz 16904146 SHA512:b75129ed595bc79a9aeee1cbe90a7615cce90e96cd77478a0e5c676d2248ebb66d90ae128cd7c81ed63436d5bbe286aac0828b94913de35023692bc5c14b5577
-```
 
 ### `dpkg` source package: `lksctp-tools=1.0.16+dfsg-3`
 
@@ -8643,14 +8638,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sudo=1.8.16-0ubuntu1.9
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sudo/sudo_1.8.16-0ubuntu1.9.dsc' sudo_1.8.16-0ubuntu1.9.dsc 2106 SHA512:7b1050f64f163686c2ea906ca5af5ab4adef815cf35ac83a7f7b4f9e4513f183f7e3185509e0616151200ca8e45e4942fa2e4fdd31962b151e5a10a9e63f0349
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sudo/sudo_1.8.16.orig.tar.gz' sudo_1.8.16.orig.tar.gz 2707358 SHA512:7cf5399eb65c4b39071213c27c34d35ed2ea9c4578f19f6e8d3777179914fa30a2848c042e9f85e90e3b5d056322b9eb6c79e2d3b9b210a795e9921a1b00200b
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sudo/sudo_1.8.16-0ubuntu1.9.debian.tar.xz' sudo_1.8.16-0ubuntu1.9.debian.tar.xz 42552 SHA512:70e93b519e3d66144f2c9c014ebcebdd2b9efc55954bd7a57bae9b9e0fd7a7b4d2c84d16a83b6b4739a473b80621021bd9f790aec5a7a1c80b16c6164acdd4cd
-```
 
 ### `dpkg` source package: `superlu=4.3+dfsg-3`
 
@@ -8919,14 +8909,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2020f-0ubuntu0.16.04
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2020f-0ubuntu0.16.04.dsc' tzdata_2020f-0ubuntu0.16.04.dsc 2136 SHA512:e102767b728d2217ed2d0839b8308d82abe1822195c8cda4e3fc7eb8d1b7d71fb4159231e6296998d0cede3e1f115c8ffdd036111ac44a5aa130ebc0bec3c402
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2020f.orig.tar.gz' tzdata_2020f.orig.tar.gz 411739 SHA512:dd312def18c807452fda2e697514e2064c5f51ebdbedd0cfe6f231252c76ee5d4409f653b295ed5657b7d30b868690047fdb70a10942e69eaa40b77473e3f9ca
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2020f-0ubuntu0.16.04.debian.tar.xz' tzdata_2020f-0ubuntu0.16.04.debian.tar.xz 101792 SHA512:47342fafbb3ffb9246b0f3c4cbef67c6efd0d9cc1ee3bd6938ed76ae8a5997a235c005fd4905395038b6c575015760a535a1c091a4ead4f37f70ebc25b088b49
-```
 
 ### `dpkg` source package: `ubuntu-keyring=2012.05.19.1`
 

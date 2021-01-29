@@ -1947,14 +1947,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=4.15.0-134.138
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-134.138.dsc' linux_4.15.0-134.138.dsc 7373 SHA512:6c0d8ef78d9737c00074cdd393c644f41a3ef4a6628a54513e229646ccb5b59bbdbdd477e20e7ead7822a4abadb239d6ba4ff379bb8d3b198e8014d716339c31
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0.orig.tar.gz' linux_4.15.0.orig.tar.gz 157656459 SHA512:0fab606a295e0857f774f8adaa9d56bf2cb227fbab2daed374415da216391b156f49e606ba37ac402987c5796d408807da5d1a42c0d85a8552f109a3e279443d
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-134.138.diff.gz' linux_4.15.0-134.138.diff.gz 10555324 SHA512:2bde6982e5765a3a1951258c139369cb2f4aefd764090d0a021c6f25ba3e6987a0551ec610f2d2966efc5ae4a6f8b027865073d19da5a53843fcf02737262c3c
-```
 
 ### `dpkg` source package: `lsb=9.20170808ubuntu1`
 
@@ -6032,14 +6027,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sudo=1.8.21p2-3ubuntu1.3
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sudo/sudo_1.8.21p2-3ubuntu1.3.dsc' sudo_1.8.21p2-3ubuntu1.3.dsc 1784 SHA512:bcde24f1819a62f2fd2dac5772643f59cfdbe443e51351540db06124ab55d63e889e43337ffd65da1c1074398e8954c76469b370eb13ef0b6f2f0ac37a48bdbe
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sudo/sudo_1.8.21p2.orig.tar.gz' sudo_1.8.21p2.orig.tar.gz 3008808 SHA512:fa9eb3324ad05cb7ca7637cadf3c2fe4b0d781c8a970942b356d12b1b8a22d6f16f293c2f547fe54cb71848770da1af3626da9fb44f92d18b8f523b0a1f723da
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sudo/sudo_1.8.21p2-3ubuntu1.3.debian.tar.xz' sudo_1.8.21p2-3ubuntu1.3.debian.tar.xz 35032 SHA512:a4ba7a020eaedcf0d4391a211b25b2b5337110d23c930e76cc76e7edc870012b8162a1f5c16b9bea8d719598b5fc1f3cfe281629980f950cd5f4ef6417a84626
-```
 
 ### `dpkg` source package: `systemd=237-3ubuntu10.44`
 
@@ -6158,14 +6148,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2020f-0ubuntu0.18.04
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2020f-0ubuntu0.18.04.dsc' tzdata_2020f-0ubuntu0.18.04.dsc 2122 SHA512:76fbafca91209a5a6bdb6e9f0ba6d28ef83179699821fd7029d06e7b5362a6f2482c4c7c8d7640004a116b3df4f480930a44a850c4a56b456831760b25b513b1
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2020f.orig.tar.gz' tzdata_2020f.orig.tar.gz 411739 SHA512:dd312def18c807452fda2e697514e2064c5f51ebdbedd0cfe6f231252c76ee5d4409f653b295ed5657b7d30b868690047fdb70a10942e69eaa40b77473e3f9ca
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2020f-0ubuntu0.18.04.debian.tar.xz' tzdata_2020f-0ubuntu0.18.04.debian.tar.xz 106268 SHA512:3a8b2d0d177256733e0aebbe46cd4513f567851a6a50eb51603aabff328043a7dd7d92191f494756de415c4e17dbe64a34e46fabecb9920ac7e4d0cf8699fc42
-```
 
 ### `dpkg` source package: `ubuntu-keyring=2018.09.18.1~18.04.0`
 
