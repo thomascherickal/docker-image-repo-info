@@ -1,10 +1,10 @@
-# `flink:1.10.3-scala_2.12`
+# `flink:1.12.1-scala_2.12-java8`
 
 ## Docker Metadata
 
-- Image ID: `sha256:daa5c717ed23f5e0da902363cea89ce706e43aa2bc226702e14bb8ceecba9fc3`
-- Created: `2021-01-30T01:46:06.343665051Z`
-- Virtual Size: ~ 590.09 Mb  
+- Image ID: `sha256:92c7f9488f5d87e3e49db7675b4aa7b6ce4e0cb57099748189edf8dba9e13448`
+- Created: `2021-01-30T01:48:36.263094381Z`
+- Virtual Size: ~ 642.89 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -15,8 +15,8 @@
   - `JAVA_HOME=/usr/local/openjdk-8`
   - `JAVA_VERSION=8u282`
   - `GOSU_VERSION=1.11`
-  - `FLINK_TGZ_URL=https://www.apache.org/dyn/closer.cgi?action=download&filename=flink/flink-1.10.3/flink-1.10.3-bin-scala_2.12.tgz`
-  - `FLINK_ASC_URL=https://www.apache.org/dist/flink/flink-1.10.3/flink-1.10.3-bin-scala_2.12.tgz.asc`
+  - `FLINK_TGZ_URL=https://www.apache.org/dyn/closer.cgi?action=download&filename=flink/flink-1.12.1/flink-1.12.1-bin-scala_2.12.tgz`
+  - `FLINK_ASC_URL=https://www.apache.org/dist/flink/flink-1.12.1/flink-1.12.1-bin-scala_2.12.tgz.asc`
   - `GPG_KEY=F8E419AA0B60C28879E876859DFF40967ABFC5A4`
   - `CHECK_GPG=true`
   - `FLINK_HOME=/opt/flink`
@@ -1151,6 +1151,37 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/iputils/3:20180629-2+deb10u1/ (for browsing the source)
 - https://sources.debian.net/src/iputils/3:20180629-2+deb10u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/iputils/3:20180629-2+deb10u1/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `jemalloc=5.1.0-3`
+
+Binary Packages:
+
+- `libjemalloc-dev=5.1.0-3`
+- `libjemalloc2:amd64=5.1.0-3`
+
+Licenses: (parsed from: `/usr/share/doc/libjemalloc-dev/copyright`, `/usr/share/doc/libjemalloc2/copyright`)
+
+- `BSD-2-Clause`
+- `BSD-2-Clause-Chemeris`
+- `BSD-3-Clause`
+- `BSD-3-Clause-Google`
+- `BSD-3-Clause-Hiroshima-University`
+- `Expat`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris jemalloc=5.1.0-3
+'http://deb.debian.org/debian/pool/main/j/jemalloc/jemalloc_5.1.0-3.dsc' jemalloc_5.1.0-3.dsc 1983 SHA256:0dcb72fc25ed6abaf07e17b93c59125371760d0aa556d0b569c167b93c897e31
+'http://deb.debian.org/debian/pool/main/j/jemalloc/jemalloc_5.1.0.orig.tar.bz2' jemalloc_5.1.0.orig.tar.bz2 515622 SHA256:5396e61cc6103ac393136c309fae09e44d74743c86f90e266948c50f3dbb7268
+'http://deb.debian.org/debian/pool/main/j/jemalloc/jemalloc_5.1.0-3.debian.tar.xz' jemalloc_5.1.0-3.debian.tar.xz 13832 SHA256:b17df42bef93ae542b6f32a45cfa6eeb6796cf6dd075ecd67f06282dbf22a5a1
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/jemalloc/5.1.0-3/ (for browsing the source)
+- https://sources.debian.net/src/jemalloc/5.1.0-3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/jemalloc/5.1.0-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `keyutils=1.6-6`
 
