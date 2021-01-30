@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:2e72afafb4d20afe3d117fd70a544e8e97d0074185838573d16214da6c67dda0`
-- Created: `2021-01-21T19:19:51.872211359Z`
-- Virtual Size: ~ 346.18 Mb  
+- Image ID: `sha256:aa8ccb46044cc6bf64dba3b548ca79a20aa46f145554f6ddf2b3ca24ec44134f`
+- Created: `2021-01-27T22:38:12.466336225Z`
+- Virtual Size: ~ 346.20 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -957,28 +957,28 @@ Enabling amzn2-core-source repository
 https://cdn.amazonlinux.com/2/core/2.0/SRPMS/34112b4f91c3e1ecf2b2e90cfd565b12690fa3c6a3e71a5ac19029d2a9bd3869//../../../../../blobstore/00cb374f99a5b72b94488de57839437aa5c13e3223ab300c6cad54784e65831b/openssl-1.0.2k-19.amzn2.0.4.src.rpm
 ```
 
-### `rpm` package: `p11-kit-0.23.21-2.amzn2.0.1.x86_64`
+### `rpm` package: `p11-kit-0.23.22-1.amzn2.0.1.x86_64`
 
 Licenses (from `rpm --query`): BSD
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls p11-kit-0.23.21-2.amzn2.0.1
+$ yumdownloader --quiet --source --urls p11-kit-0.23.22-1.amzn2.0.1
 Enabling amzn2-core-source repository
-https://cdn.amazonlinux.com/2/core/2.0/SRPMS/34112b4f91c3e1ecf2b2e90cfd565b12690fa3c6a3e71a5ac19029d2a9bd3869//../../../../../blobstore/ad9304630207d3224be8d47e53fe8bafa265a677f3dcec50b3e7ddde9d8d02f1/p11-kit-0.23.21-2.amzn2.0.1.src.rpm
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/34112b4f91c3e1ecf2b2e90cfd565b12690fa3c6a3e71a5ac19029d2a9bd3869//../../../../../blobstore/79c2f1cc336aa17382372c2c5577054870d1d123e5ce606f33bc2443e9c91347/p11-kit-0.23.22-1.amzn2.0.1.src.rpm
 ```
 
-### `rpm` package: `p11-kit-trust-0.23.21-2.amzn2.0.1.x86_64`
+### `rpm` package: `p11-kit-trust-0.23.22-1.amzn2.0.1.x86_64`
 
 Licenses (from `rpm --query`): BSD
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls p11-kit-trust-0.23.21-2.amzn2.0.1
+$ yumdownloader --quiet --source --urls p11-kit-trust-0.23.22-1.amzn2.0.1
 Enabling amzn2-core-source repository
-https://cdn.amazonlinux.com/2/core/2.0/SRPMS/34112b4f91c3e1ecf2b2e90cfd565b12690fa3c6a3e71a5ac19029d2a9bd3869//../../../../../blobstore/ad9304630207d3224be8d47e53fe8bafa265a677f3dcec50b3e7ddde9d8d02f1/p11-kit-0.23.21-2.amzn2.0.1.src.rpm
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/34112b4f91c3e1ecf2b2e90cfd565b12690fa3c6a3e71a5ac19029d2a9bd3869//../../../../../blobstore/79c2f1cc336aa17382372c2c5577054870d1d123e5ce606f33bc2443e9c91347/p11-kit-0.23.22-1.amzn2.0.1.src.rpm
 ```
 
 ### `rpm` package: `pcre-8.32-17.amzn2.0.2.x86_64`
@@ -1245,16 +1245,16 @@ Enabling amzn2-core-source repository
 https://cdn.amazonlinux.com/2/core/2.0/SRPMS/34112b4f91c3e1ecf2b2e90cfd565b12690fa3c6a3e71a5ac19029d2a9bd3869//../../../../../blobstore/4b1c6b66180103d5b68ebb82a59533f8c260f28e69c3a2b378c11b6e384a38f7/system-release-2-13.amzn2.src.rpm
 ```
 
-### `rpm` package: `tzdata-2020a-1.amzn2.noarch`
+### `rpm` package: `tzdata-2020d-2.amzn2.noarch`
 
 Licenses (from `rpm --query`): Public Domain
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls tzdata-2020a-1.amzn2.noarch
+$ yumdownloader --quiet --source --urls tzdata-2020d-2.amzn2.noarch
 Enabling amzn2-core-source repository
-https://cdn.amazonlinux.com/2/core/2.0/SRPMS/34112b4f91c3e1ecf2b2e90cfd565b12690fa3c6a3e71a5ac19029d2a9bd3869//../../../../../blobstore/a8c5d5a4f72ae69a4623a911e8a6696ae99f6f2b0ca662372fa7adfad9c1535f/tzdata-2020a-1.amzn2.src.rpm
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/34112b4f91c3e1ecf2b2e90cfd565b12690fa3c6a3e71a5ac19029d2a9bd3869//../../../../../blobstore/524c36fe7d1d5f7939c6ce1eb3b1491b43537756080d6b201dde99e4c88366ae/tzdata-2020d-2.amzn2.src.rpm
 ```
 
 ### `rpm` package: `vim-minimal-8.1.1602-1.amzn2.x86_64`
