@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:59191ac46ddbd748e22baccad61ea02f6ef726b842a6d1f920d27e66a459defe`
-- Created: `2021-01-21T22:26:19.535647319Z`
-- Virtual Size: ~ 120.26 Mb  
+- Image ID: `sha256:46a18be40948ecb89b6acb3e3004189470dde7f1d7590c62f1aed487c9767d08`
+- Created: `2021-01-29T05:15:48.32846734Z`
+- Virtual Size: ~ 119.65 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint-dev.sh"]`
@@ -64,16 +64,16 @@ MIT
 ### `apk` package: `apk-tools`
 
 ```console
-apk-tools-2.12.0-r4 description:
+apk-tools-2.12.1-r0 description:
 Alpine Package Keeper - package manager for alpine
 
-apk-tools-2.12.0-r4 webpage:
+apk-tools-2.12.1-r0 webpage:
 https://gitlab.alpinelinux.org/alpine/apk-tools
 
-apk-tools-2.12.0-r4 installed size:
+apk-tools-2.12.1-r0 installed size:
 311296
 
-apk-tools-2.12.0-r4 license:
+apk-tools-2.12.1-r0 license:
 GPL-2.0-only
 
 ```
@@ -115,16 +115,16 @@ MIT
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.32.1-r0 description:
+busybox-1.32.1-r2 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.32.1-r0 webpage:
+busybox-1.32.1-r2 webpage:
 https://busybox.net/
 
-busybox-1.32.1-r0 installed size:
+busybox-1.32.1-r2 installed size:
 946176
 
-busybox-1.32.1-r0 license:
+busybox-1.32.1-r2 license:
 GPL-2.0-only
 
 ```
@@ -897,16 +897,16 @@ MIT
 ### `apk` package: `musl-utils`
 
 ```console
-musl-utils-1.2.2_pre7-r0 description:
+musl-utils-1.2.2-r0 description:
 the musl c library (libc) implementation
 
-musl-utils-1.2.2_pre7-r0 webpage:
+musl-utils-1.2.2-r0 webpage:
 https://musl.libc.org/
 
-musl-utils-1.2.2_pre7-r0 installed size:
+musl-utils-1.2.2-r0 installed size:
 143360
 
-musl-utils-1.2.2_pre7-r0 license:
+musl-utils-1.2.2-r0 license:
 MIT BSD GPL2+
 
 ```
@@ -1101,16 +1101,16 @@ BSD-3-Clause
 ### `apk` package: `sqlite-libs`
 
 ```console
-sqlite-libs-3.34.0-r1 description:
+sqlite-libs-3.34.1-r0 description:
 Sqlite3 library
 
-sqlite-libs-3.34.0-r1 webpage:
+sqlite-libs-3.34.1-r0 webpage:
 https://www.sqlite.org/
 
-sqlite-libs-3.34.0-r1 installed size:
+sqlite-libs-3.34.1-r0 installed size:
 970752
 
-sqlite-libs-3.34.0-r1 license:
+sqlite-libs-3.34.1-r0 license:
 Public-Domain
 
 ```
@@ -1118,16 +1118,16 @@ Public-Domain
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.32.1-r0 description:
+ssl_client-1.32.1-r2 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.32.1-r0 webpage:
+ssl_client-1.32.1-r2 webpage:
 https://busybox.net/
 
-ssl_client-1.32.1-r0 installed size:
+ssl_client-1.32.1-r2 installed size:
 28672
 
-ssl_client-1.32.1-r0 license:
+ssl_client-1.32.1-r2 license:
 GPL-2.0-only
 
 ```
