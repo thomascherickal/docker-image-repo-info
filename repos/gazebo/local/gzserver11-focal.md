@@ -264,13 +264,9 @@ Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris base-files=11ubuntu5.2
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_11ubuntu5.2.dsc' base-files_11ubuntu5.2.dsc 1676 SHA512:8f10b639796469f1d8b9eff30fccf8418148b8a4d863771ce9f5936c4b33ff9e1d4adfd0a7140a5eff54096c31c0cb566996215b7985cbf591594cf9a0d23fd9
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_11ubuntu5.2.tar.xz' base-files_11ubuntu5.2.tar.xz 80528 SHA512:45aee06a5fb08562aff51fd1ceedbf9749535820754b9a64da989326b6c05c2e73b88d1cb3e03d078ce899a84b4c383cd19ad6a5be32573c936293bd5d2932cf
-```
 
 ### `dpkg` source package: `base-passwd=3.5.47`
 
@@ -1439,14 +1435,9 @@ Licenses: (parsed from: `/usr/share/doc/libglib2.0-0/copyright`)
 - `GPL-2+`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glib2.0=2.64.3-1~ubuntu20.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.64.3-1~ubuntu20.04.1.dsc' glib2.0_2.64.3-1~ubuntu20.04.1.dsc 3256 SHA512:37318872e0a19da2664a945436647bbab52947e5eff00630cdd85828689bdabbac59ee06448698fa0f2ab5fd8270521167c0bf83557fee82bef80c6a3efe85ff
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.64.3.orig.tar.xz' glib2.0_2.64.3.orig.tar.xz 4778964 SHA512:a3828c37a50e86eb8791be53bd8af848d144e4580841ffab28f3b6eae5144f5cdf4a5d4b43130615b97488e700b274c2468fc7d561b3701a1fc686349501a1db
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.64.3-1~ubuntu20.04.1.debian.tar.xz' glib2.0_2.64.3-1~ubuntu20.04.1.debian.tar.xz 91792 SHA512:b9cbb32bfb50e7136a0135b35770a16ba2b6366d5fc55c2bc9d3c3e7d69aafdb8debf5a7f679cc8fafdb0c278703f772855742bad702deceb847e04d4bb0a902
-```
 
 ### `dpkg` source package: `glibc=2.31-0ubuntu9.1`
 
@@ -6216,14 +6207,9 @@ Licenses: (parsed from: `/usr/share/doc/tzdata/copyright`)
 
 - `ICU`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2020f-0ubuntu0.20.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2020f-0ubuntu0.20.04.1.dsc' tzdata_2020f-0ubuntu0.20.04.1.dsc 2149 SHA512:0875ee801239786f8f2a22cb54592ebfd77797bacc4ce51d84c3fa3b3524f50568b550579c302dc1c8abb0412539b65ac1addb0e96ee36a3a31e45449807faa5
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2020f.orig.tar.gz' tzdata_2020f.orig.tar.gz 411739 SHA512:dd312def18c807452fda2e697514e2064c5f51ebdbedd0cfe6f231252c76ee5d4409f653b295ed5657b7d30b868690047fdb70a10942e69eaa40b77473e3f9ca
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2020f-0ubuntu0.20.04.1.debian.tar.xz' tzdata_2020f-0ubuntu0.20.04.1.debian.tar.xz 166416 SHA512:449efefe43374fdd75a27b3e86398b1bcd9eafdfce8b5f244fa7f4a3e9f45c3fb2f5d54899a53fa0932fd3284dc910d0f08506a7ae93f302360c10c74fcd7d8d
-```
 
 ### `dpkg` source package: `ubuntu-keyring=2020.02.11.2`
 

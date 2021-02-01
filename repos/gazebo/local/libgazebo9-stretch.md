@@ -1225,20 +1225,13 @@ Licenses: (parsed from: `/usr/share/doc/libavcodec-dev/copyright`, `/usr/share/d
 - `man-page`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ffmpeg=7:3.2.15-0+deb9u1
-'http://security.debian.org/debian-security/pool/updates/main/f/ffmpeg/ffmpeg_3.2.15-0+deb9u1.dsc' ffmpeg_3.2.15-0+deb9u1.dsc 4914 SHA256:85f2011b7e42085c0c4e967937b22f2b610779fc82ec4e15199f7931edb9defc
-'http://security.debian.org/debian-security/pool/updates/main/f/ffmpeg/ffmpeg_3.2.15.orig.tar.xz' ffmpeg_3.2.15.orig.tar.xz 8055152 SHA256:3d8bc9b12413b98811106f1c24df48ff14d6ea7ef65b31c4d8beec632382098e
-'http://security.debian.org/debian-security/pool/updates/main/f/ffmpeg/ffmpeg_3.2.15-0+deb9u1.debian.tar.xz' ffmpeg_3.2.15-0+deb9u1.debian.tar.xz 39880 SHA256:fa85ad18f269ddb0cb51450c65c0663557ea7f2c2d4ee51e385633258dcaa125
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/ffmpeg/7:3.2.15-0+deb9u1/
 
-- https://sources.debian.net/src/ffmpeg/7:3.2.15-0+deb9u1/ (for browsing the source)
-- https://sources.debian.net/src/ffmpeg/7:3.2.15-0+deb9u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/ffmpeg/7:3.2.15-0+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `fftw3=3.3.5-3`
 
@@ -5726,21 +5719,13 @@ Licenses: (parsed from: `/usr/share/doc/libmariadbclient-dev/copyright`, `/usr/s
 - `unlimited-free-doc`
 - `zlib/libpng`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mariadb-10.1=10.1.47-0+deb9u1
-'http://security.debian.org/debian-security/pool/updates/main/m/mariadb-10.1/mariadb-10.1_10.1.47-0+deb9u1.dsc' mariadb-10.1_10.1.47-0+deb9u1.dsc 4530 SHA256:4bd10bf10fb091cfa97de6e7849ca9a80659f1624551ecdfe1a531b6d961ca83
-'http://security.debian.org/debian-security/pool/updates/main/m/mariadb-10.1/mariadb-10.1_10.1.47.orig.tar.gz' mariadb-10.1_10.1.47.orig.tar.gz 63751492 SHA256:a4267487dbddf1dc1faed6e2a322c50a3e80d5d271cb487e8bdad6840e003227
-'http://security.debian.org/debian-security/pool/updates/main/m/mariadb-10.1/mariadb-10.1_10.1.47.orig.tar.gz.asc' mariadb-10.1_10.1.47.orig.tar.gz.asc 195 SHA256:0f53780aed2f95daec547786314df48da7a3b9c5c4dcb06a1422f71db4559d61
-'http://security.debian.org/debian-security/pool/updates/main/m/mariadb-10.1/mariadb-10.1_10.1.47-0+deb9u1.debian.tar.xz' mariadb-10.1_10.1.47-0+deb9u1.debian.tar.xz 230508 SHA256:df3392c203c7feba2f91b4cb78b2a8a17463a700ce529acc5696f803e2303113
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mariadb-10.1/10.1.47-0+deb9u1/
 
-- https://sources.debian.net/src/mariadb-10.1/10.1.47-0+deb9u1/ (for browsing the source)
-- https://sources.debian.net/src/mariadb-10.1/10.1.47-0+deb9u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mariadb-10.1/10.1.47-0+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mawk=1.3.3-17`
 
