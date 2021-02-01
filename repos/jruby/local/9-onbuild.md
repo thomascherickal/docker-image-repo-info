@@ -2,16 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:4198860cffaf5e16981322308a27b514fe4d12c117cad0bf8f2465b21eaad149`
-- Created: `2021-01-21T04:13:08.527485511Z`
-- Virtual Size: ~ 581.12 Mb  
+- Image ID: `sha256:186f3a0715218c011f02a375ab203be29c4b970824266d726aef49089042bb55`
+- Created: `2021-02-01T21:07:20.058455888Z`
+- Virtual Size: ~ 581.71 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["irb"]`
 - Environment:
   - `PATH=/usr/local/bundle/bin:/opt/jruby/bin:/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `LANG=C.UTF-8`
   - `JAVA_HOME=/usr/local/openjdk-8`
+  - `LANG=C.UTF-8`
   - `JAVA_VERSION=8u282`
   - `JRUBY_VERSION=9.2.14.0`
   - `JRUBY_SHA256=32e73b2551f01e459ece84f732bcbf80712c3b71b6df7dbd063354b4d277e0b5`
@@ -310,11 +310,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/bzip2/1.0.6-9.2~deb10u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/bzip2/1.0.6-9.2~deb10u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `ca-certificates=20200601~deb10u1`
+### `dpkg` source package: `ca-certificates=20200601~deb10u2`
 
 Binary Packages:
 
-- `ca-certificates=20200601~deb10u1`
+- `ca-certificates=20200601~deb10u2`
 
 Licenses: (parsed from: `/usr/share/doc/ca-certificates/copyright`)
 
@@ -325,16 +325,16 @@ Licenses: (parsed from: `/usr/share/doc/ca-certificates/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris ca-certificates=20200601~deb10u1
-'http://deb.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_20200601~deb10u1.dsc' ca-certificates_20200601~deb10u1.dsc 1837 SHA256:41120aa922b9520b73b88ef3fef18b807c7e5b6dd98c9dec51a3841dabe7fcb8
-'http://deb.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_20200601~deb10u1.tar.xz' ca-certificates_20200601~deb10u1.tar.xz 245828 SHA256:5911c0471fd83141285c56c414be7f6e7176f28dc8d14a3c55f06303b79a92aa
+$ apt-get source -qq --print-uris ca-certificates=20200601~deb10u2
+'http://deb.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_20200601~deb10u2.dsc' ca-certificates_20200601~deb10u2.dsc 1907 SHA256:b89cbd8c235e131ee10cb85a9bd4b3e429874c1e0577c5ed35121f8590d4d029
+'http://deb.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_20200601~deb10u2.tar.xz' ca-certificates_20200601~deb10u2.tar.xz 245804 SHA256:13ffd04d36230309ff383ad4ccbefb1852b1483f0ac3da75b4979906933ba5e8
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/ca-certificates/20200601~deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/ca-certificates/20200601~deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/ca-certificates/20200601~deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/ca-certificates/20200601~deb10u2/ (for browsing the source)
+- https://sources.debian.net/src/ca-certificates/20200601~deb10u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/ca-certificates/20200601~deb10u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cdebconf=0.249`
 
@@ -1942,11 +1942,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libzstd/1.3.8+dfsg-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libzstd/1.3.8+dfsg-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `linux=4.19.160-2`
+### `dpkg` source package: `linux=4.19.171-2`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=4.19.160-2`
+- `linux-libc-dev:amd64=4.19.171-2`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -1961,17 +1961,17 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris linux=4.19.160-2
-'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.160-2.dsc' linux_4.19.160-2.dsc 191615 SHA256:f7021b8e8041e66c1193b97e13ba62f93344178b45616c2417be74822ca98214
-'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.160.orig.tar.xz' linux_4.19.160.orig.tar.xz 107559120 SHA256:e07b8b2809ef3a447e5b45fbcf67bae69a03f00bb385f16b745f79078434db98
-'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.160-2.debian.tar.xz' linux_4.19.160-2.debian.tar.xz 2844076 SHA256:7b97a0ece477e2a65ca1abcd99e62a6495a7d7baeb86eb9e4023f884866bb92f
+$ apt-get source -qq --print-uris linux=4.19.171-2
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.171-2.dsc' linux_4.19.171-2.dsc 191615 SHA256:ca98606eee90b205af7cc9aa7df470e9985ea08a4e6468c6c0cde258a55763a3
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.171.orig.tar.xz' linux_4.19.171.orig.tar.xz 107575880 SHA256:a675203341bfc2876a6361874c40b40190017c95bd51917372e13ef82652bcb0
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.171-2.debian.tar.xz' linux_4.19.171-2.debian.tar.xz 1480804 SHA256:fac20c813357c8072499e91b2f4a9ca7ec653e7f620ba09be25a84811566d78f
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/linux/4.19.160-2/ (for browsing the source)
-- https://sources.debian.net/src/linux/4.19.160-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/4.19.160-2/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/linux/4.19.171-2/ (for browsing the source)
+- https://sources.debian.net/src/linux/4.19.171-2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/linux/4.19.171-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lsb=10.2019051400`
 
@@ -2950,21 +2950,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2020e-0+deb10u1
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020e-0+deb10u1.dsc' tzdata_2020e-0+deb10u1.dsc 2264 SHA256:5a71897dde8b6c3ff6240ebe0c550b2287432e2a3f30f8eccc47722e3f809a00
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020e.orig.tar.gz' tzdata_2020e.orig.tar.gz 411619 SHA256:0be1ba329eae29ae1b54057c3547b3e672f73b3ae7643aa87dac85122bec037e
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020e.orig.tar.gz.asc' tzdata_2020e.orig.tar.gz.asc 833 SHA256:3d3f95883bdfb1a9b06a1f8a1010378421e6d603a281f3d3085ce84a10e0e722
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020e-0+deb10u1.debian.tar.xz' tzdata_2020e-0+deb10u1.debian.tar.xz 106176 SHA256:9c895355a497621b27dbcdf74271efc3512136b1a07d07b0e3c179b5582beda3
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2020e-0+deb10u1/
 
-- https://sources.debian.net/src/tzdata/2020e-0+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2020e-0+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2020e-0+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0038+nmu1`
 
