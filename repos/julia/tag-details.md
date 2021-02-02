@@ -17,11 +17,13 @@
 -	[`julia:1.5.3`](#julia153)
 -	[`julia:1.5.3-alpine`](#julia153-alpine)
 -	[`julia:1.5.3-alpine3.12`](#julia153-alpine312)
+-	[`julia:1.5.3-alpine3.13`](#julia153-alpine313)
 -	[`julia:1.5.3-buster`](#julia153-buster)
 -	[`julia:1.5.3-windowsservercore-1809`](#julia153-windowsservercore-1809)
 -	[`julia:1.5.3-windowsservercore-ltsc2016`](#julia153-windowsservercore-ltsc2016)
 -	[`julia:1.5-alpine`](#julia15-alpine)
 -	[`julia:1.5-alpine3.12`](#julia15-alpine312)
+-	[`julia:1.5-alpine3.13`](#julia15-alpine313)
 -	[`julia:1.5-buster`](#julia15-buster)
 -	[`julia:1.5-windowsservercore-1809`](#julia15-windowsservercore-1809)
 -	[`julia:1.5-windowsservercore-ltsc2016`](#julia15-windowsservercore-ltsc2016)
@@ -43,11 +45,13 @@
 -	[`julia:1.6-windowsservercore-ltsc2016`](#julia16-windowsservercore-ltsc2016)
 -	[`julia:1-alpine`](#julia1-alpine)
 -	[`julia:1-alpine3.12`](#julia1-alpine312)
+-	[`julia:1-alpine3.13`](#julia1-alpine313)
 -	[`julia:1-buster`](#julia1-buster)
 -	[`julia:1-windowsservercore-1809`](#julia1-windowsservercore-1809)
 -	[`julia:1-windowsservercore-ltsc2016`](#julia1-windowsservercore-ltsc2016)
 -	[`julia:alpine`](#juliaalpine)
 -	[`julia:alpine3.12`](#juliaalpine312)
+-	[`julia:alpine3.13`](#juliaalpine313)
 -	[`julia:buster`](#juliabuster)
 -	[`julia:latest`](#julialatest)
 -	[`julia:windowsservercore-1809`](#juliawindowsservercore-1809)
@@ -2738,6 +2742,10 @@ CMD ["julia"]
 		Size: 109.7 MB (109710325 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `julia:1.5.3-alpine3.13`
+
+**does not exist** (yet?)
+
 ## `julia:1.5.3-buster`
 
 ```console
@@ -3136,6 +3144,10 @@ CMD ["julia"]
 		Last Modified: Thu, 17 Dec 2020 13:07:07 GMT  
 		Size: 109.7 MB (109710325 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `julia:1.5-alpine3.13`
+
+**does not exist** (yet?)
 
 ## `julia:1.5-buster`
 
@@ -5824,6 +5836,10 @@ CMD ["julia"]
 		Size: 109.7 MB (109710325 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `julia:1-alpine3.13`
+
+**does not exist** (yet?)
+
 ## `julia:1-buster`
 
 ```console
@@ -6222,6 +6238,10 @@ CMD ["julia"]
 		Last Modified: Thu, 17 Dec 2020 13:07:07 GMT  
 		Size: 109.7 MB (109710325 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `julia:alpine3.13`
+
+**does not exist** (yet?)
 
 ## `julia:buster`
 
