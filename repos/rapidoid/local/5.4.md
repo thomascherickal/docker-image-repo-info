@@ -2,16 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:858cc443c604c173013fe5f6d5f8d63de5ac643913facd7b82b6f521d8282691`
-- Created: `2021-01-21T04:25:11.353242887Z`
-- Virtual Size: ~ 210.42 Mb  
+- Image ID: `sha256:88a7f9a2a2e4abc30d2ca82d0cef914bb0b3a969334b202a86add55990c4a2d1`
+- Created: `2021-02-01T22:15:41.432036993Z`
+- Virtual Size: ~ 211.93 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/opt/entrypoint.sh"]`
 - Environment:
   - `PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `LANG=C.UTF-8`
   - `JAVA_HOME=/usr/local/openjdk-8`
+  - `LANG=C.UTF-8`
   - `JAVA_VERSION=8u282`
   - `GPG_KEY=E306FEF548C686C23DC00242B9B08D8F616EF49C`
   - `RAPIDOID_JAR=/opt/rapidoid.jar`
@@ -257,11 +257,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/bzip2/1.0.6-9.2~deb10u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/bzip2/1.0.6-9.2~deb10u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `ca-certificates=20200601~deb10u1`
+### `dpkg` source package: `ca-certificates=20200601~deb10u2`
 
 Binary Packages:
 
-- `ca-certificates=20200601~deb10u1`
+- `ca-certificates=20200601~deb10u2`
 
 Licenses: (parsed from: `/usr/share/doc/ca-certificates/copyright`)
 
@@ -272,16 +272,16 @@ Licenses: (parsed from: `/usr/share/doc/ca-certificates/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris ca-certificates=20200601~deb10u1
-'http://deb.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_20200601~deb10u1.dsc' ca-certificates_20200601~deb10u1.dsc 1837 SHA256:41120aa922b9520b73b88ef3fef18b807c7e5b6dd98c9dec51a3841dabe7fcb8
-'http://deb.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_20200601~deb10u1.tar.xz' ca-certificates_20200601~deb10u1.tar.xz 245828 SHA256:5911c0471fd83141285c56c414be7f6e7176f28dc8d14a3c55f06303b79a92aa
+$ apt-get source -qq --print-uris ca-certificates=20200601~deb10u2
+'http://deb.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_20200601~deb10u2.dsc' ca-certificates_20200601~deb10u2.dsc 1907 SHA256:b89cbd8c235e131ee10cb85a9bd4b3e429874c1e0577c5ed35121f8590d4d029
+'http://deb.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_20200601~deb10u2.tar.xz' ca-certificates_20200601~deb10u2.tar.xz 245804 SHA256:13ffd04d36230309ff383ad4ccbefb1852b1483f0ac3da75b4979906933ba5e8
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/ca-certificates/20200601~deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/ca-certificates/20200601~deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/ca-certificates/20200601~deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/ca-certificates/20200601~deb10u2/ (for browsing the source)
+- https://sources.debian.net/src/ca-certificates/20200601~deb10u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/ca-certificates/20200601~deb10u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cdebconf=0.249`
 
@@ -2049,21 +2049,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2020e-0+deb10u1
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020e-0+deb10u1.dsc' tzdata_2020e-0+deb10u1.dsc 2264 SHA256:5a71897dde8b6c3ff6240ebe0c550b2287432e2a3f30f8eccc47722e3f809a00
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020e.orig.tar.gz' tzdata_2020e.orig.tar.gz 411619 SHA256:0be1ba329eae29ae1b54057c3547b3e672f73b3ae7643aa87dac85122bec037e
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020e.orig.tar.gz.asc' tzdata_2020e.orig.tar.gz.asc 833 SHA256:3d3f95883bdfb1a9b06a1f8a1010378421e6d603a281f3d3085ce84a10e0e722
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020e-0+deb10u1.debian.tar.xz' tzdata_2020e-0+deb10u1.debian.tar.xz 106176 SHA256:9c895355a497621b27dbcdf74271efc3512136b1a07d07b0e3c179b5582beda3
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2020e-0+deb10u1/
 
-- https://sources.debian.net/src/tzdata/2020e-0+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2020e-0+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2020e-0+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `util-linux=2.33.1-0.1`
 
