@@ -457,14 +457,9 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.72.0-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.72.0-1ubuntu1.dsc' curl_7.72.0-1ubuntu1.dsc 2768 SHA512:3c82fd80f4a64cf12fe603723be1a85a5e02512d01221bf7f97227f183458938af554052f1790b6da924dec00712a271a3b33aa7b5f84650507aaf46b9280e67
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.72.0.orig.tar.gz' curl_7.72.0.orig.tar.gz 4051784 SHA512:f1946394595baa2b2889c4fed5e8745036cecfe9c425010c41fbc4baa71ffd7ff3e78289dd7ee14f0c74c482056838e5408d63f9ee9ee06c31ed920282f08507
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.72.0-1ubuntu1.debian.tar.xz' curl_7.72.0-1ubuntu1.debian.tar.xz 30984 SHA512:aa0c47ce900e7010a3c385e923cf1e3941ec7338cdd45a1787e0d920cda658f12910b15375bb4940de5600aca0b0989b632875551f217db009bb663b4fd1bf67
-```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2ubuntu1`
 
@@ -2304,14 +2299,13 @@ Licenses: (parsed from: `/usr/share/doc/gir1.2-rsvg-2.0/copyright`, `/usr/share/
 - `Unlicense,`
 - `zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris librsvg=2.50.2+dfsg-1
-'http://archive.ubuntu.com/ubuntu/pool/main/libr/librsvg/librsvg_2.50.2+dfsg-1.dsc' librsvg_2.50.2+dfsg-1.dsc 2963 SHA512:0c07238b9c9339493887e55d00dc26020c8aad1e439bcdda704a98f7bfc62d34dc1be9c39e2458f2aceb1151b8443633c3b104af75aaa82e6c8fbe6cb714c0d0
-'http://archive.ubuntu.com/ubuntu/pool/main/libr/librsvg/librsvg_2.50.2+dfsg.orig.tar.xz' librsvg_2.50.2+dfsg.orig.tar.xz 13703308 SHA512:9ee8de542291da59b9122f0b80c2f2a867ffcd1bda9494ee0cc6b7a5a91c574ab21e73cae5633311a1bdcabedcd9d198c49c92b9eb939fb99b94c30cb7475de9
-'http://archive.ubuntu.com/ubuntu/pool/main/libr/librsvg/librsvg_2.50.2+dfsg-1.debian.tar.xz' librsvg_2.50.2+dfsg-1.debian.tar.xz 30372 SHA512:52d9f00179f2e70eaf3dd484c9e3b9b8caa54336ac4d71aad37a65c47ac43f342794a7c2dfcecd0e42898ce21c00090524d071d2039b22358aaf9fb612cf9f0f
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/librsvg/2.50.2+dfsg-1/
+
 
 ### `dpkg` source package: `libseccomp=2.4.3-1ubuntu6`
 
@@ -2409,15 +2403,13 @@ Licenses: (parsed from: `/usr/share/doc/libsigsegv2/copyright`)
 - `permissive-fsf`
 - `permissive-other`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libsigsegv=2.12-3
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsigsegv/libsigsegv_2.12-3.dsc' libsigsegv_2.12-3.dsc 2341 SHA512:fc90d994b6709aad67b9f3996cbf1d7328bbe9634819a306bf89fd1fec4586ef7ae6efdb7a2fe2f6f6be208f966db6f59e179962072cb1e57d0d41ceb336d3ab
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsigsegv/libsigsegv_2.12.orig.tar.gz' libsigsegv_2.12.orig.tar.gz 451408 SHA512:27986e8aaf4357ed131032aa7c281a5a28c5759530c62bb76f034aea33959547dcaae805e06347a1f532f0488b72fbbbdac4400f74e8d3f2128511526e8a5913
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsigsegv/libsigsegv_2.12.orig.tar.gz.asc' libsigsegv_2.12.orig.tar.gz.asc 2442 SHA512:d0311e322975a2a1e5fe965dd5ee0bdf4daf10892f056e9c9ec07097f51bd9229d88efd1ab29277776bb79e7e854c834e13b108e81d1fef10701b2e3e416ea57
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsigsegv/libsigsegv_2.12-3.debian.tar.xz' libsigsegv_2.12-3.debian.tar.xz 8504 SHA512:1fc89800af3e00cca813bf5ac1e9b5075788743534734e3e9fc457c11698652f74e74f32abd924bd958c796313fd1971be5c4dea47f0444cddfddd2798254dab
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/libsigsegv/2.12-3/
+
 
 ### `dpkg` source package: `libsm=2:1.2.3-1`
 
@@ -3261,15 +3253,13 @@ Licenses: (parsed from: `/usr/share/doc/libhogweed6/copyright`, `/usr/share/doc/
 - `LGPL-3+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris nettle=3.6-2
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.6-2.dsc' nettle_3.6-2.dsc 2254 SHA512:1b5f93a849d74d97c8d211444c50a333f4592c0c54a1348e5adab3b9392c20fbc454c9f4f3f831ee946f83310d10bd649de3b5f8797ba76eed709fd8d699f4b4
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.6.orig.tar.gz' nettle_3.6.orig.tar.gz 2288173 SHA512:2471af875e51327af61af8bda53cd9c3adc27b6e32592a4b5b10b3ec60999ebf771ab9c54c747b0bade4b3b5a717e77fdbdb53699dd9e8a9ed4eee07f46aed51
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.6.orig.tar.gz.asc' nettle_3.6.orig.tar.gz.asc 573 SHA512:006c821e599d8fb64b3e5b71182909c5e5921b35e5223f749b69a2c5507b41220595c3c2fa46a484ae1254b8eb4f4c7bfccfd808a03ca79e9c1fd7cbb8ed7216
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.6-2.debian.tar.xz' nettle_3.6-2.debian.tar.xz 21136 SHA512:00aa9109859953aa0dd25c5f68661174acff20271d7f5f2991edbb2f997acfffc927c772e298486d6f438d4402d8e79c64fef6864ecad3c464600771e34b8436
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/nettle/3.6-2/
+
 
 ### `dpkg` source package: `nghttp2=1.42.0-1`
 
@@ -4186,14 +4176,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris unzip=6.0-25ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/u/unzip/unzip_6.0-25ubuntu1.dsc' unzip_6.0-25ubuntu1.dsc 1833 SHA512:c224c5ccfb3c26a542fbf153c65978b1146a7525893abbe9af3ab7dd430f842b2a114b65ab58198ab349218df019ed4f0c03d8237a8a8d413b60df8011554cde
-'http://archive.ubuntu.com/ubuntu/pool/main/u/unzip/unzip_6.0.orig.tar.gz' unzip_6.0.orig.tar.gz 1376845 SHA512:0694e403ebc57b37218e00ec1a406cae5cc9c5b52b6798e0d4590840b6cdbf9ddc0d9471f67af783e960f8fa2e620394d51384257dca23d06bcd90224a80ce5d
-'http://archive.ubuntu.com/ubuntu/pool/main/u/unzip/unzip_6.0-25ubuntu1.debian.tar.xz' unzip_6.0-25ubuntu1.debian.tar.xz 26276 SHA512:c3c9d8d8335bb45760a775cf463e24a326974bbc899266a6419233bd4e44879cdff366f1c4e735199ff27235070556f79b022a5d538c68e5ebe9dee34d94af13
-```
 
 ### `dpkg` source package: `utf8proc=2.5.0-1`
 

@@ -326,14 +326,9 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.72.0-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.72.0-1ubuntu1.dsc' curl_7.72.0-1ubuntu1.dsc 2768 SHA512:3c82fd80f4a64cf12fe603723be1a85a5e02512d01221bf7f97227f183458938af554052f1790b6da924dec00712a271a3b33aa7b5f84650507aaf46b9280e67
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.72.0.orig.tar.gz' curl_7.72.0.orig.tar.gz 4051784 SHA512:f1946394595baa2b2889c4fed5e8745036cecfe9c425010c41fbc4baa71ffd7ff3e78289dd7ee14f0c74c482056838e5408d63f9ee9ee06c31ed920282f08507
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.72.0-1ubuntu1.debian.tar.xz' curl_7.72.0-1ubuntu1.debian.tar.xz 30984 SHA512:aa0c47ce900e7010a3c385e923cf1e3941ec7338cdd45a1787e0d920cda658f12910b15375bb4940de5600aca0b0989b632875551f217db009bb663b4fd1bf67
-```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2ubuntu1`
 
@@ -1733,15 +1728,13 @@ Licenses: (parsed from: `/usr/share/doc/libhogweed6/copyright`, `/usr/share/doc/
 - `LGPL-3+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris nettle=3.6-2
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.6-2.dsc' nettle_3.6-2.dsc 2254 SHA512:1b5f93a849d74d97c8d211444c50a333f4592c0c54a1348e5adab3b9392c20fbc454c9f4f3f831ee946f83310d10bd649de3b5f8797ba76eed709fd8d699f4b4
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.6.orig.tar.gz' nettle_3.6.orig.tar.gz 2288173 SHA512:2471af875e51327af61af8bda53cd9c3adc27b6e32592a4b5b10b3ec60999ebf771ab9c54c747b0bade4b3b5a717e77fdbdb53699dd9e8a9ed4eee07f46aed51
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.6.orig.tar.gz.asc' nettle_3.6.orig.tar.gz.asc 573 SHA512:006c821e599d8fb64b3e5b71182909c5e5921b35e5223f749b69a2c5507b41220595c3c2fa46a484ae1254b8eb4f4c7bfccfd808a03ca79e9c1fd7cbb8ed7216
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.6-2.debian.tar.xz' nettle_3.6-2.debian.tar.xz 21136 SHA512:00aa9109859953aa0dd25c5f68661174acff20271d7f5f2991edbb2f997acfffc927c772e298486d6f438d4402d8e79c64fef6864ecad3c464600771e34b8436
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/nettle/3.6-2/
+
 
 ### `dpkg` source package: `nghttp2=1.42.0-1`
 
