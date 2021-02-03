@@ -1,7 +1,7 @@
 ## `buildpack-deps:hirsute-scm`
 
 ```console
-$ docker pull buildpack-deps@sha256:ada35f8a8b7e0055b0d7a061dde3d34de2c4174142d7e8a1a7f42f190bf36529
+$ docker pull buildpack-deps@sha256:c0d0cc2611c926dd46ab70cd7e3d73200bfdb87b05da609e0747ba909d1f5be6
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -9,7 +9,6 @@ $ docker pull buildpack-deps@sha256:ada35f8a8b7e0055b0d7a061dde3d34de2c4174142d7
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
-	-	linux; ppc64le
 	-	linux; s390x
 
 ### `buildpack-deps:hirsute-scm` - linux; amd64
@@ -184,64 +183,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercuri
 	-	`sha256:eb27a0d471d121cf1567635f8f1346d8fdfdc67a4eb8e5984916e4cab1be9e87`  
 		Last Modified: Thu, 21 Jan 2021 06:23:56 GMT  
 		Size: 44.1 MB (44086923 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-
-### `buildpack-deps:hirsute-scm` - linux; ppc64le
-
-```console
-$ docker pull buildpack-deps@sha256:bd9d858b62c509ad77b643a6f06b4d9dff9d6422339437618e59e00e83cf658e
-```
-
--	Docker Version: 19.03.12
--	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **98.0 MB (98047388 bytes)**  
-	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a5bbdeffc345b7f3b85dc299d030ad5e84e558bdd34cff9274273796ff304f03`
--	Default Command: `["\/bin\/bash"]`
-
-```dockerfile
-# Thu, 21 Jan 2021 03:52:02 GMT
-ADD file:3d7449eef944b930488986ed089606017a4392e5e8231031c80e680e31b4da77 in / 
-# Thu, 21 Jan 2021 03:52:14 GMT
-RUN set -xe 		&& echo '#!/bin/sh' > /usr/sbin/policy-rc.d 	&& echo 'exit 101' >> /usr/sbin/policy-rc.d 	&& chmod +x /usr/sbin/policy-rc.d 		&& dpkg-divert --local --rename --add /sbin/initctl 	&& cp -a /usr/sbin/policy-rc.d /sbin/initctl 	&& sed -i 's/^exit.*/exit 0/' /sbin/initctl 		&& echo 'force-unsafe-io' > /etc/dpkg/dpkg.cfg.d/docker-apt-speedup 		&& echo 'DPkg::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' > /etc/apt/apt.conf.d/docker-clean 	&& echo 'APT::Update::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' >> /etc/apt/apt.conf.d/docker-clean 	&& echo 'Dir::Cache::pkgcache ""; Dir::Cache::srcpkgcache "";' >> /etc/apt/apt.conf.d/docker-clean 		&& echo 'Acquire::Languages "none";' > /etc/apt/apt.conf.d/docker-no-languages 		&& echo 'Acquire::GzipIndexes "true"; Acquire::CompressionTypes::Order:: "gz";' > /etc/apt/apt.conf.d/docker-gzip-indexes 		&& echo 'Apt::AutoRemove::SuggestsImportant "false";' > /etc/apt/apt.conf.d/docker-autoremove-suggests
-# Thu, 21 Jan 2021 03:52:29 GMT
-RUN [ -z "$(apt-get indextargets)" ]
-# Thu, 21 Jan 2021 03:52:41 GMT
-RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
-# Thu, 21 Jan 2021 03:52:47 GMT
-CMD ["/bin/bash"]
-# Thu, 21 Jan 2021 07:34:09 GMT
-RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 		tzdata 	; 	rm -rf /var/lib/apt/lists/*
-# Thu, 21 Jan 2021 07:35:09 GMT
-RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Thu, 21 Jan 2021 07:37:19 GMT
-RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
-```
-
--	Layers:
-	-	`sha256:55aebc4be35f4811f0c02de6f92178fd8f7b65e395e8cb03da193bac6fafea1d`  
-		Last Modified: Thu, 21 Jan 2021 03:55:55 GMT  
-		Size: 37.1 MB (37120027 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cdf4a190c1c2a83741c3769bb3ad14038be64a619a04aa712f80ce3a1f5218e5`  
-		Last Modified: Thu, 21 Jan 2021 03:55:47 GMT  
-		Size: 849.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:009631d025b1b2b9e034f9fd76ed1e632a0dc6f0aeec51263339007901b56748`  
-		Last Modified: Thu, 21 Jan 2021 03:55:47 GMT  
-		Size: 189.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c02946107bd138c77db9eab66487871adfba9c8b7b078d2990a469890389ec91`  
-		Last Modified: Thu, 21 Jan 2021 08:10:57 GMT  
-		Size: 6.1 MB (6054214 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a8cd4a6aa56af3abb812e969114f97e4dc21f400bccfa57cd61e6a36d310c99d`  
-		Last Modified: Thu, 21 Jan 2021 08:10:56 GMT  
-		Size: 4.8 MB (4827138 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2be0c8d3e6c904e1ab054ea36644f54cd5145a5631456649af11bbbaba489e5f`  
-		Last Modified: Thu, 21 Jan 2021 08:11:24 GMT  
-		Size: 50.0 MB (50044971 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `buildpack-deps:hirsute-scm` - linux; s390x
