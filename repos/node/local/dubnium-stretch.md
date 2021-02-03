@@ -4045,21 +4045,13 @@ Licenses: (parsed from: `/usr/share/doc/libmariadbclient-dev/copyright`, `/usr/s
 - `unlimited-free-doc`
 - `zlib/libpng`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mariadb-10.1=10.1.47-0+deb9u1
-'http://security.debian.org/debian-security/pool/updates/main/m/mariadb-10.1/mariadb-10.1_10.1.47-0+deb9u1.dsc' mariadb-10.1_10.1.47-0+deb9u1.dsc 4530 SHA256:4bd10bf10fb091cfa97de6e7849ca9a80659f1624551ecdfe1a531b6d961ca83
-'http://security.debian.org/debian-security/pool/updates/main/m/mariadb-10.1/mariadb-10.1_10.1.47.orig.tar.gz' mariadb-10.1_10.1.47.orig.tar.gz 63751492 SHA256:a4267487dbddf1dc1faed6e2a322c50a3e80d5d271cb487e8bdad6840e003227
-'http://security.debian.org/debian-security/pool/updates/main/m/mariadb-10.1/mariadb-10.1_10.1.47.orig.tar.gz.asc' mariadb-10.1_10.1.47.orig.tar.gz.asc 195 SHA256:0f53780aed2f95daec547786314df48da7a3b9c5c4dcb06a1422f71db4559d61
-'http://security.debian.org/debian-security/pool/updates/main/m/mariadb-10.1/mariadb-10.1_10.1.47-0+deb9u1.debian.tar.xz' mariadb-10.1_10.1.47-0+deb9u1.debian.tar.xz 230508 SHA256:df3392c203c7feba2f91b4cb78b2a8a17463a700ce529acc5696f803e2303113
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mariadb-10.1/10.1.47-0+deb9u1/
 
-- https://sources.debian.net/src/mariadb-10.1/10.1.47-0+deb9u1/ (for browsing the source)
-- https://sources.debian.net/src/mariadb-10.1/10.1.47-0+deb9u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mariadb-10.1/10.1.47-0+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mawk=1.3.3-17`
 
@@ -4464,20 +4456,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openldap=2.4.44+dfsg-5+deb9u6
-'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.44+dfsg-5+deb9u6.dsc' openldap_2.4.44+dfsg-5+deb9u6.dsc 3017 SHA256:a7a8776db8d918c9023d273293cc7de947a8b91713c278265366d87a5dbc20e7
-'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.44+dfsg.orig.tar.gz' openldap_2.4.44+dfsg.orig.tar.gz 4826590 SHA256:d5187c229bec163c5d97845846e1b87917755f85b04f444c08836384f4bd7ffe
-'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.44+dfsg-5+deb9u6.debian.tar.xz' openldap_2.4.44+dfsg-5+deb9u6.debian.tar.xz 170160 SHA256:3fa90cda891238b2a5090e1b885c0c1a5406270ef4c4c9deb614d48bb7d0b360
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/openldap/2.4.44+dfsg-5+deb9u6/
 
-- https://sources.debian.net/src/openldap/2.4.44+dfsg-5+deb9u6/ (for browsing the source)
-- https://sources.debian.net/src/openldap/2.4.44+dfsg-5+deb9u6/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openldap/2.4.44+dfsg-5+deb9u6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssh=1:7.4p1-10+deb9u7`
 
@@ -5433,20 +5418,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2020e-0+deb9u1
-'http://security.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2020e-0+deb9u1.dsc' tzdata_2020e-0+deb9u1.dsc 2029 SHA256:f3405f11c8c82e5dc87530264b3167926a4c78794a003d9efe5e8ad8babf2fc2
-'http://security.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2020e.orig.tar.gz' tzdata_2020e.orig.tar.gz 411619 SHA256:0be1ba329eae29ae1b54057c3547b3e672f73b3ae7643aa87dac85122bec037e
-'http://security.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2020e-0+deb9u1.debian.tar.xz' tzdata_2020e-0+deb9u1.debian.tar.xz 103208 SHA256:bf1d839755ffffce418f13d2701f62164c14502be5e85eeaa7eb219af31774f9
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2020e-0+deb9u1/
 
-- https://sources.debian.net/src/tzdata/2020e-0+deb9u1/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2020e-0+deb9u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2020e-0+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0036`
 
