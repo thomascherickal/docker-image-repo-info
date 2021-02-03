@@ -1,13 +1,14 @@
 ## `irssi:1-alpine`
 
 ```console
-$ docker pull irssi@sha256:038683c80cf9cbe6d1ca1fd7f72e08e12e53816e83e2c08d710a4e471fe3e2ce
+$ docker pull irssi@sha256:c25ee7f62ca4d46118f3bf6d99d0ca677217345c4c39af3c81d4dc064d9d5273
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
 -	Platforms:
 	-	linux; amd64
 	-	linux; arm variant v6
+	-	linux; arm variant v7
 	-	linux; arm64 variant v8
 	-	linux; 386
 	-	linux; ppc64le
@@ -123,6 +124,62 @@ CMD ["irssi"]
 	-	`sha256:dbedcbb647790af67b3c5fd5a9718fbe5ffa60962c014b389a35c30a0cbaadb3`  
 		Last Modified: Thu, 17 Dec 2020 01:43:56 GMT  
 		Size: 6.3 MB (6291918 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `irssi:1-alpine` - linux; arm variant v7
+
+```console
+$ docker pull irssi@sha256:0349e6f55f49688826896f680cbbdf0faef6215e9cf8f1a7ac192f8776c427b9
+```
+
+-	Docker Version: 19.03.12
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **17.0 MB (17026128 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:989a3c7caba88843c2d38885aed0d403ad18bc94cf3360b629dc846e96e19837`
+-	Default Command: `["irssi"]`
+
+```dockerfile
+# Wed, 16 Dec 2020 23:58:28 GMT
+ADD file:6757438ec5b22931a1c6a274c9c1eca94f0715a405d2ba91bd8b95704ba969ca in / 
+# Wed, 16 Dec 2020 23:58:29 GMT
+CMD ["/bin/sh"]
+# Thu, 17 Dec 2020 06:41:23 GMT
+RUN apk add --no-cache 		ca-certificates 		perl-libwww
+# Thu, 17 Dec 2020 06:41:26 GMT
+ENV HOME=/home/user
+# Thu, 17 Dec 2020 06:41:30 GMT
+RUN set -eux; 	adduser -u 1001 -D -h "$HOME" user; 	mkdir "$HOME/.irssi"; 	chown -R user:user "$HOME"
+# Thu, 17 Dec 2020 06:41:31 GMT
+ENV LANG=C.UTF-8
+# Thu, 17 Dec 2020 06:41:33 GMT
+ENV IRSSI_VERSION=1.2.2
+# Thu, 17 Dec 2020 06:42:13 GMT
+RUN set -eux; 		apk add --no-cache --virtual .build-deps 		autoconf 		automake 		coreutils 		dpkg-dev dpkg 		gcc 		glib-dev 		gnupg 		libc-dev 		libtool 		lynx 		make 		ncurses-dev 		openssl 		openssl-dev 		perl-dev 		pkgconf 		tar 	; 		wget "https://github.com/irssi/irssi/releases/download/${IRSSI_VERSION}/irssi-${IRSSI_VERSION}.tar.xz" -O /tmp/irssi.tar.xz; 	wget "https://github.com/irssi/irssi/releases/download/${IRSSI_VERSION}/irssi-${IRSSI_VERSION}.tar.xz.asc" -O /tmp/irssi.tar.xz.asc; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 7EE65E3082A5FB06AC7C368D00CCB587DDBEF0E1; 	gpg --batch --verify /tmp/irssi.tar.xz.asc /tmp/irssi.tar.xz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /tmp/irssi.tar.xz.asc; 		mkdir -p /usr/src/irssi; 	tar -xf /tmp/irssi.tar.xz -C /usr/src/irssi --strip-components 1; 	rm /tmp/irssi.tar.xz; 		cd /usr/src/irssi; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--enable-true-color 		--with-bot 		--with-proxy 		--with-socks 	; 	make -j "$(nproc)"; 	make install; 		cd /; 	rm -rf /usr/src/irssi; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .irssi-rundeps $runDeps; 	apk del --no-network .build-deps; 		irssi --version
+# Thu, 17 Dec 2020 06:42:14 GMT
+WORKDIR /home/user
+# Thu, 17 Dec 2020 06:42:15 GMT
+USER user
+# Thu, 17 Dec 2020 06:42:16 GMT
+CMD ["irssi"]
+```
+
+-	Layers:
+	-	`sha256:71728559ce1f58d5e0ef30be5b1d7628ff967d4038f9202818dd3d8c76feb8ab`  
+		Last Modified: Wed, 16 Dec 2020 23:59:11 GMT  
+		Size: 2.4 MB (2422964 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:85167c5ffe77cc7bdd20b2c21fcdd73fedd45a537473ca88a2656e35c33da583`  
+		Last Modified: Thu, 17 Dec 2020 06:42:54 GMT  
+		Size: 8.5 MB (8519311 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:488f6846997914a7aedd46f1cbdb5a645ad16161634d0bd3fe5cca526e539e99`  
+		Last Modified: Thu, 17 Dec 2020 06:42:50 GMT  
+		Size: 1.3 KB (1271 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:9a30b53b5c8e70e1a0b26a162d7b2e1193ec54697865e065961e4fcc81abd7de`  
+		Last Modified: Thu, 17 Dec 2020 06:42:52 GMT  
+		Size: 6.1 MB (6082582 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `irssi:1-alpine` - linux; arm64 variant v8
