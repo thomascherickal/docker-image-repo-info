@@ -260,20 +260,13 @@ Licenses: (parsed from: `/usr/share/doc/r-cran-boot/copyright`)
 
 - `'unlimited distribution'`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris boot=1.3-25-2
-'http://deb.debian.org/debian/pool/main/b/boot/boot_1.3-25-2.dsc' boot_1.3-25-2.dsc 1796 SHA256:94fcdd9573d5576ea9f8ad389b8b0608853037fa5dc7fd3ec2ae4ba4c8a26676
-'http://deb.debian.org/debian/pool/main/b/boot/boot_1.3-25.orig.tar.gz' boot_1.3-25.orig.tar.gz 235959 SHA256:464835fcb453072346ce49e4ae318e04c9dba682349be49db616623b6088fbbe
-'http://deb.debian.org/debian/pool/main/b/boot/boot_1.3-25-2.debian.tar.xz' boot_1.3-25-2.debian.tar.xz 5212 SHA256:4760612eccd445c50fcd89a815e316b61697ccd45094da94bd568a3f2a057ba3
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/boot/1.3-25-2/
 
-- https://sources.debian.net/src/boot/1.3-25-2/ (for browsing the source)
-- https://sources.debian.net/src/boot/1.3-25-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/boot/1.3-25-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `brotli=1.0.9-2`
 
@@ -790,21 +783,13 @@ Licenses: (parsed from: `/usr/share/doc/e2fsprogs/copyright`, `/usr/share/doc/li
 - `GPL-2`
 - `LGPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris e2fsprogs=1.45.6-1
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.45.6-1.dsc' e2fsprogs_1.45.6-1.dsc 2955 SHA256:22fe3cb0e2a32fba560d2da31866e82efefc3d08daf9497423cac617608c3d0d
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.45.6.orig.tar.gz' e2fsprogs_1.45.6.orig.tar.gz 7938544 SHA256:5f64ac50a2b60b8e67c5b382bb137dec39344017103caffc3a61554424f2d693
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.45.6.orig.tar.gz.asc' e2fsprogs_1.45.6.orig.tar.gz.asc 488 SHA256:831c29bd04c5b21faf2aa2d5fa3b409148973e3ef0d15f67315a5c429180d945
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.45.6-1.debian.tar.xz' e2fsprogs_1.45.6-1.debian.tar.xz 80452 SHA256:839b31654b2d72706c61ec49a47a8e33b7df41c6c7a427977bcc5afa9a6ffc3e
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/e2fsprogs/1.45.6-1/
 
-- https://sources.debian.net/src/e2fsprogs/1.45.6-1/ (for browsing the source)
-- https://sources.debian.net/src/e2fsprogs/1.45.6-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/e2fsprogs/1.45.6-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ed=1.16-1`
 
@@ -2873,10 +2858,16 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris linux=5.10.5-1
-'http://http.debian.net/debian/pool/main/l/linux/linux_5.10.5-1.dsc' linux_5.10.5-1.dsc 194993 SHA256:3fdf89a0935ebadf4f5ac50e3fcf1fc756a937f803c16074246b727eb3020dd8
-'http://http.debian.net/debian/pool/main/l/linux/linux_5.10.5.orig.tar.xz' linux_5.10.5.orig.tar.xz 121440392 SHA256:de9c540dd73e214f84bf28380d37064a873b9cb31a4f268e5b9dd2eecf03cbf4
-'http://http.debian.net/debian/pool/main/l/linux/linux_5.10.5-1.debian.tar.xz' linux_5.10.5-1.debian.tar.xz 3913176 SHA256:d71dbdb88e8bbfcf97953d1c1f476e74cd9411814679b9e364b8d956f682764f
+'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.5-1.dsc' linux_5.10.5-1.dsc 194993 SHA256:3fdf89a0935ebadf4f5ac50e3fcf1fc756a937f803c16074246b727eb3020dd8
+'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.5.orig.tar.xz' linux_5.10.5.orig.tar.xz 121440392 SHA256:de9c540dd73e214f84bf28380d37064a873b9cb31a4f268e5b9dd2eecf03cbf4
+'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.5-1.debian.tar.xz' linux_5.10.5-1.debian.tar.xz 3913176 SHA256:d71dbdb88e8bbfcf97953d1c1f476e74cd9411814679b9e364b8d956f682764f
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/linux/5.10.5-1/ (for browsing the source)
+- https://sources.debian.net/src/linux/5.10.5-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/linux/5.10.5-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `littler=0.3.12-1`
 
@@ -3226,20 +3217,13 @@ Licenses: (parsed from: `/usr/share/doc/libopenblas0-pthread/copyright`)
 - `BSD-3-clause`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openblas=0.3.13+ds-1
-'http://deb.debian.org/debian/pool/main/o/openblas/openblas_0.3.13+ds-1.dsc' openblas_0.3.13+ds-1.dsc 4891 SHA256:1579cf20580ef54a6d752abb0c975e6e2732b05543d01a68682578db612d951f
-'http://deb.debian.org/debian/pool/main/o/openblas/openblas_0.3.13+ds.orig.tar.xz' openblas_0.3.13+ds.orig.tar.xz 1694132 SHA256:4cc8fe4b324c1a051d06b9ebbaf1ac49a434c7ae7a193a72530e7b41b98ad11c
-'http://deb.debian.org/debian/pool/main/o/openblas/openblas_0.3.13+ds-1.debian.tar.xz' openblas_0.3.13+ds-1.debian.tar.xz 22816 SHA256:4ef23db1097d8059d787a8483976395a8120a39555462b116ce9c463fc171ec4
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/openblas/0.3.13+ds-1/
 
-- https://sources.debian.net/src/openblas/0.3.13+ds-1/ (for browsing the source)
-- https://sources.debian.net/src/openblas/0.3.13+ds-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openblas/0.3.13+ds-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openldap=2.4.56+dfsg-1`
 
@@ -3251,20 +3235,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openldap=2.4.56+dfsg-1
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.56+dfsg-1.dsc' openldap_2.4.56+dfsg-1.dsc 3061 SHA256:e9c0f2ec40b811b2c88b034bafc68c70fce630db36900aefc1d166820103a6bf
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.56+dfsg.orig.tar.gz' openldap_2.4.56+dfsg.orig.tar.gz 5054166 SHA256:868bf5a6b2c6ed4b525b88cb725f5782657c3a95dd27cb09525ab47e8d736d81
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.56+dfsg-1.debian.tar.xz' openldap_2.4.56+dfsg-1.debian.tar.xz 168016 SHA256:1f31919bca235c94814963a862b9d5c0697028cc33e908d6aae973749e4949bc
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/openldap/2.4.56+dfsg-1/
 
-- https://sources.debian.net/src/openldap/2.4.56+dfsg-1/ (for browsing the source)
-- https://sources.debian.net/src/openldap/2.4.56+dfsg-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openldap/2.4.56+dfsg-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssl=1.1.1i-1`
 
@@ -3601,20 +3578,13 @@ Licenses: (parsed from: `/usr/share/doc/r-cran-class/copyright`)
 - `GPL-2`
 - `GPL-2 | GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris r-cran-class=7.3-17-1
-'http://deb.debian.org/debian/pool/main/r/r-cran-class/r-cran-class_7.3-17-1.dsc' r-cran-class_7.3-17-1.dsc 1870 SHA256:43520184c5219164298c12781542f90a09c0c297ac7c5667fbd33d4e0be8427d
-'http://deb.debian.org/debian/pool/main/r/r-cran-class/r-cran-class_7.3-17.orig.tar.gz' r-cran-class_7.3-17.orig.tar.gz 20748 SHA256:be1f85b6df7556db93f50cb08106aac6620d4b5bb3fee846422863a022461313
-'http://deb.debian.org/debian/pool/main/r/r-cran-class/r-cran-class_7.3-17-1.debian.tar.xz' r-cran-class_7.3-17-1.debian.tar.xz 3120 SHA256:11291b18381b8f2f1aa8a885b710675bfe3be5b89050a6b97d7b469920aa4a88
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/r-cran-class/7.3-17-1/
 
-- https://sources.debian.net/src/r-cran-class/7.3-17-1/ (for browsing the source)
-- https://sources.debian.net/src/r-cran-class/7.3-17-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/r-cran-class/7.3-17-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `r-cran-mass=7.3-53-1`
 
@@ -3653,20 +3623,13 @@ Licenses: (parsed from: `/usr/share/doc/r-cran-nnet/copyright`)
 - `GPL-2`
 - `GPL-2 | GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris r-cran-nnet=7.3-14-1
-'http://deb.debian.org/debian/pool/main/r/r-cran-nnet/r-cran-nnet_7.3-14-1.dsc' r-cran-nnet_7.3-14-1.dsc 1845 SHA256:f373c8d98d3af3339bffaaf6cb0cfabfe2cd0da71429c640dbd6b1a3586162a1
-'http://deb.debian.org/debian/pool/main/r/r-cran-nnet/r-cran-nnet_7.3-14.orig.tar.gz' r-cran-nnet_7.3-14.orig.tar.gz 29128 SHA256:5d1b9e9764d74d16c651f18f949aa4e9e2995ba64633cbfa2c6a7355ae30f4af
-'http://deb.debian.org/debian/pool/main/r/r-cran-nnet/r-cran-nnet_7.3-14-1.debian.tar.xz' r-cran-nnet_7.3-14-1.debian.tar.xz 3140 SHA256:43f640cf6cf50a5eb98bbab86f1f035faa259e32c42028f3563516680415b44d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/r-cran-nnet/7.3-14-1/
 
-- https://sources.debian.net/src/r-cran-nnet/7.3-14-1/ (for browsing the source)
-- https://sources.debian.net/src/r-cran-nnet/7.3-14-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/r-cran-nnet/7.3-14-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `r-cran-spatial=7.3-12-1`
 
@@ -3679,20 +3642,13 @@ Licenses: (parsed from: `/usr/share/doc/r-cran-spatial/copyright`)
 - `GPL-2`
 - `GPL-2 | GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris r-cran-spatial=7.3-12-1
-'http://deb.debian.org/debian/pool/main/r/r-cran-spatial/r-cran-spatial_7.3-12-1.dsc' r-cran-spatial_7.3-12-1.dsc 1881 SHA256:69d6bb1b16bcaa01242594d46f5b1eed7e58587a254cce44f0ce2afa8fa4af60
-'http://deb.debian.org/debian/pool/main/r/r-cran-spatial/r-cran-spatial_7.3-12.orig.tar.gz' r-cran-spatial_7.3-12.orig.tar.gz 44612 SHA256:7639039ee7407bd088e1b253376b2cb4fcdf4cc9124d6b48e4119d5cda872d63
-'http://deb.debian.org/debian/pool/main/r/r-cran-spatial/r-cran-spatial_7.3-12-1.debian.tar.xz' r-cran-spatial_7.3-12-1.debian.tar.xz 3068 SHA256:1ce5a3b90c180abf7c88eec581edfed091e12671b8c7d5acb6a6690c0dd8e2dc
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/r-cran-spatial/7.3-12-1/
 
-- https://sources.debian.net/src/r-cran-spatial/7.3-12-1/ (for browsing the source)
-- https://sources.debian.net/src/r-cran-spatial/7.3-12-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/r-cran-spatial/7.3-12-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `readline=8.1-1`
 
@@ -4089,21 +4045,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2020f-1
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020f-1.dsc' tzdata_2020f-1.dsc 2237 SHA256:3c06e34890c1bd0a664639633762e279f95d9783040c8326d24ea6c6b1daa6e2
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020f.orig.tar.gz' tzdata_2020f.orig.tar.gz 411739 SHA256:121131918c3ae6dc5d40f0eb87563a2be920b71a76e2392c09519a5e4a666881
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020f.orig.tar.gz.asc' tzdata_2020f.orig.tar.gz.asc 833 SHA256:5b10a0a0cad012e4cd9683b7d3d69160803b93d2fd66cdb6de5fa35d471df6f2
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2020f-1.debian.tar.xz' tzdata_2020f-1.debian.tar.xz 105144 SHA256:1a45295c1bebd4f1379082a476612915b8550e9c382a08c65def0ea2e5a94bcb
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2020f-1/
 
-- https://sources.debian.net/src/tzdata/2020f-1/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2020f-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2020f-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0043`
 
