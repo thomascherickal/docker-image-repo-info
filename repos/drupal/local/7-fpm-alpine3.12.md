@@ -1,10 +1,10 @@
-# `drupal:7.78-fpm-alpine3.12`
+# `drupal:7.78-php7.4-fpm-alpine3.12`
 
 ## Docker Metadata
 
-- Image ID: `sha256:524902dae9f55aab691d9d5798b4fec651c317bf7618f57cd81fcd0dfc84bf6f`
-- Created: `2021-01-21T22:08:24.347584613Z`
-- Virtual Size: ~ 102.99 Mb  
+- Image ID: `sha256:df6e46f373023fd2f5745ea008b9e67aaf1845bd8ae3ad62b09c15017c7a5270`
+- Created: `2021-02-01T19:28:37.458376367Z`
+- Virtual Size: ~ 101.21 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`

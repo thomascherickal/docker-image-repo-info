@@ -1,4 +1,4 @@
-# `drupal:8.9.13-apache-buster`
+# `drupal:8.9.13-php7.4-apache-buster`
 
 ## Docker Metadata
 

@@ -1,4 +1,4 @@
-# `drupal:8.9.13-fpm-buster`
+# `drupal:8.9.13-php7.4-fpm-buster`
 
 ## Docker Metadata
 
