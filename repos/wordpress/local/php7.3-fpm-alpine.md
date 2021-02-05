@@ -1,10 +1,10 @@
-# `wordpress:5.6.0-php7.3-fpm-alpine`
+# `wordpress:5.6.1-php7.3-fpm-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:8cc6b8f5ae3daa07e767e31b92823d0bb5b83506fbfd7d0c6cacac61e7d993d8`
-- Created: `2021-01-29T04:52:51.083496868Z`
-- Virtual Size: ~ 240.54 Mb  
+- Image ID: `sha256:eb3f424a1179f355f4fa06ce0e51abf7ef4e76abb40a86d645f9d7c84706a681`
+- Created: `2021-02-05T05:09:05.122697282Z`
+- Virtual Size: ~ 240.74 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -18,10 +18,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=CBAF69F173A0FEA4B537F470D66C9593118BCCB6 F38252826ACD957EF380D39F2F7956BC5DA04B5D`
-  - `PHP_VERSION=7.3.26`
-  - `PHP_URL=https://www.php.net/distributions/php-7.3.26.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.3.26.tar.xz.asc`
-  - `PHP_SHA256=d93052f4cb2882090b6a37fd1e0c764be1605a2461152b7f6b8f04fa48875208`
+  - `PHP_VERSION=7.3.27`
+  - `PHP_URL=https://www.php.net/distributions/php-7.3.27.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.3.27.tar.xz.asc`
+  - `PHP_SHA256=65f616e2d5b6faacedf62830fa047951b0136d5da34ae59e6744cbaf5dca148d`
 
 ## `apk` (`.apk`-based packages)
 
@@ -844,16 +844,16 @@ Libpng
 ### `apk` package: `librsvg`
 
 ```console
-librsvg-2.50.2-r0 description:
+librsvg-2.50.3-r0 description:
 SAX-based renderer for SVG files into a GdkPixbuf
 
-librsvg-2.50.2-r0 webpage:
+librsvg-2.50.3-r0 webpage:
 https://wiki.gnome.org/Projects/LibRsvg
 
-librsvg-2.50.2-r0 installed size:
-10670080
+librsvg-2.50.3-r0 installed size:
+10653696
 
-librsvg-2.50.2-r0 license:
+librsvg-2.50.3-r0 license:
 LGPL-2.1-or-later
 
 ```
