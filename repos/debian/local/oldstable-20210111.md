@@ -1455,20 +1455,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2020e-0+deb9u1
-'http://security.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2020e-0+deb9u1.dsc' tzdata_2020e-0+deb9u1.dsc 2029 SHA256:f3405f11c8c82e5dc87530264b3167926a4c78794a003d9efe5e8ad8babf2fc2
-'http://security.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2020e.orig.tar.gz' tzdata_2020e.orig.tar.gz 411619 SHA256:0be1ba329eae29ae1b54057c3547b3e672f73b3ae7643aa87dac85122bec037e
-'http://security.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2020e-0+deb9u1.debian.tar.xz' tzdata_2020e-0+deb9u1.debian.tar.xz 103208 SHA256:bf1d839755ffffce418f13d2701f62164c14502be5e85eeaa7eb219af31774f9
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2020e-0+deb9u1/
 
-- https://sources.debian.net/src/tzdata/2020e-0+deb9u1/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2020e-0+deb9u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2020e-0+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ustr=1.0.4-6`
 
