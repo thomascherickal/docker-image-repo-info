@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:10b1bc7c0021db6bbb1fdaeae0b942026f83c00c739f397db8fe30d7f709efd2`
-- Created: `2020-12-17T14:10:20.928124106Z`
-- Virtual Size: ~ 9.49 Mb  
+- Image ID: `sha256:8cbb8f5b8382b3976a4d163b0370caafcaafc33614ba2c01f917ca13dc01c41d`
+- Created: `2021-02-03T01:24:26.775393072Z`
+- Virtual Size: ~ 8.11 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -19,16 +19,16 @@
 ### `apk` package: `alpine-baselayout`
 
 ```console
-alpine-baselayout-3.2.0-r7 description:
+alpine-baselayout-3.2.0-r8 description:
 Alpine base dir structure and init scripts
 
-alpine-baselayout-3.2.0-r7 webpage:
+alpine-baselayout-3.2.0-r8 webpage:
 https://git.alpinelinux.org/cgit/aports/tree/main/alpine-baselayout
 
-alpine-baselayout-3.2.0-r7 installed size:
+alpine-baselayout-3.2.0-r8 installed size:
 409600
 
-alpine-baselayout-3.2.0-r7 license:
+alpine-baselayout-3.2.0-r8 license:
 GPL-2.0-only
 
 ```
@@ -53,16 +53,16 @@ MIT
 ### `apk` package: `apk-tools`
 
 ```console
-apk-tools-2.10.5-r1 description:
+apk-tools-2.12.1-r0 description:
 Alpine Package Keeper - package manager for alpine
 
-apk-tools-2.10.5-r1 webpage:
+apk-tools-2.12.1-r0 webpage:
 https://gitlab.alpinelinux.org/alpine/apk-tools
 
-apk-tools-2.10.5-r1 installed size:
-262144
+apk-tools-2.12.1-r0 installed size:
+311296
 
-apk-tools-2.10.5-r1 license:
+apk-tools-2.12.1-r0 license:
 GPL-2.0-only
 
 ```
@@ -70,16 +70,16 @@ GPL-2.0-only
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.31.1-r19 description:
+busybox-1.32.1-r2 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.31.1-r19 webpage:
+busybox-1.32.1-r2 webpage:
 https://busybox.net/
 
-busybox-1.31.1-r19 installed size:
-962560
+busybox-1.32.1-r2 installed size:
+946176
 
-busybox-1.31.1-r19 license:
+busybox-1.32.1-r2 license:
 GPL-2.0-only
 
 ```
@@ -87,51 +87,34 @@ GPL-2.0-only
 ### `apk` package: `ca-certificates-bundle`
 
 ```console
-ca-certificates-bundle-20191127-r4 description:
+ca-certificates-bundle-20191127-r5 description:
 Pre generated bundle of Mozilla certificates
 
-ca-certificates-bundle-20191127-r4 webpage:
+ca-certificates-bundle-20191127-r5 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-bundle-20191127-r4 installed size:
+ca-certificates-bundle-20191127-r5 installed size:
 233472
 
-ca-certificates-bundle-20191127-r4 license:
-MPL-2.0 GPL-2.0-or-later
+ca-certificates-bundle-20191127-r5 license:
+MPL-2.0 AND MIT
 
 ```
 
-### `apk` package: `cyrus-sasl-plain`
+### `apk` package: `gdbm`
 
 ```console
-cyrus-sasl-plain-2.1.27-r6 description:
-Cyrus SASL plugin for plain
+gdbm-1.19-r0 description:
+GNU dbm is a set of database routines that use extensible hashing
 
-cyrus-sasl-plain-2.1.27-r6 webpage:
-https://www.cyrusimap.org/sasl/
+gdbm-1.19-r0 webpage:
+https://www.gnu.org/software/gdbm/
 
-cyrus-sasl-plain-2.1.27-r6 installed size:
-36864
+gdbm-1.19-r0 installed size:
+229376
 
-cyrus-sasl-plain-2.1.27-r6 license:
-custom
-
-```
-
-### `apk` package: `db`
-
-```console
-db-5.3.28-r1 description:
-The Berkeley DB embedded database system
-
-db-5.3.28-r1 webpage:
-https://www.oracle.com/technology/software/products/berkeley-db/index.html
-
-db-5.3.28-r1 installed size:
-1564672
-
-db-5.3.28-r1 license:
-custom
+gdbm-1.19-r0 license:
+GPL-3.0-or-later
 
 ```
 
@@ -162,7 +145,7 @@ libcrypto1.1-1.1.1i-r0 webpage:
 https://www.openssl.org/
 
 libcrypto1.1-1.1.1i-r0 installed size:
-2764800
+2768896
 
 libcrypto1.1-1.1.1i-r0 license:
 OpenSSL
@@ -172,16 +155,16 @@ OpenSSL
 ### `apk` package: `libevent`
 
 ```console
-libevent-2.1.11-r1 description:
+libevent-2.1.12-r1 description:
 An event notification library
 
-libevent-2.1.11-r1 webpage:
-http://libevent.org/
+libevent-2.1.12-r1 webpage:
+https://libevent.org/
 
-libevent-2.1.11-r1 installed size:
-692224
+libevent-2.1.12-r1 installed size:
+704512
 
-libevent-2.1.11-r1 license:
+libevent-2.1.12-r1 license:
 BSD-3-Clause
 
 ```
@@ -189,16 +172,16 @@ BSD-3-Clause
 ### `apk` package: `libsasl`
 
 ```console
-libsasl-2.1.27-r6 description:
+libsasl-2.1.27-r10 description:
 Cyrus Simple Authentication and Security Layer (SASL) library
 
-libsasl-2.1.27-r6 webpage:
+libsasl-2.1.27-r10 webpage:
 https://www.cyrusimap.org/sasl/
 
-libsasl-2.1.27-r6 installed size:
-180224
+libsasl-2.1.27-r10 installed size:
+196608
 
-libsasl-2.1.27-r6 license:
+libsasl-2.1.27-r10 license:
 custom
 
 ```
@@ -240,16 +223,16 @@ ISC
 ### `apk` package: `musl`
 
 ```console
-musl-1.1.24-r10 description:
+musl-1.2.2-r0 description:
 the musl c library (libc) implementation
 
-musl-1.1.24-r10 webpage:
+musl-1.2.2-r0 webpage:
 https://musl.libc.org/
 
-musl-1.1.24-r10 installed size:
-614400
+musl-1.2.2-r0 installed size:
+622592
 
-musl-1.1.24-r10 license:
+musl-1.2.2-r0 license:
 MIT
 
 ```
@@ -257,16 +240,16 @@ MIT
 ### `apk` package: `musl-utils`
 
 ```console
-musl-utils-1.1.24-r10 description:
+musl-utils-1.2.2-r0 description:
 the musl c library (libc) implementation
 
-musl-utils-1.1.24-r10 webpage:
+musl-utils-1.2.2-r0 webpage:
 https://musl.libc.org/
 
-musl-utils-1.1.24-r10 installed size:
-151552
+musl-utils-1.2.2-r0 installed size:
+143360
 
-musl-utils-1.1.24-r10 license:
+musl-utils-1.2.2-r0 license:
 MIT BSD GPL2+
 
 ```
@@ -274,16 +257,16 @@ MIT BSD GPL2+
 ### `apk` package: `scanelf`
 
 ```console
-scanelf-1.2.6-r0 description:
+scanelf-1.2.8-r0 description:
 Scan ELF binaries for stuff
 
-scanelf-1.2.6-r0 webpage:
+scanelf-1.2.8-r0 webpage:
 https://wiki.gentoo.org/wiki/Hardened/PaX_Utilities
 
-scanelf-1.2.6-r0 installed size:
+scanelf-1.2.8-r0 installed size:
 94208
 
-scanelf-1.2.6-r0 license:
+scanelf-1.2.8-r0 license:
 GPL-2.0-only
 
 ```
@@ -291,16 +274,16 @@ GPL-2.0-only
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.31.1-r19 description:
+ssl_client-1.32.1-r2 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.31.1-r19 webpage:
+ssl_client-1.32.1-r2 webpage:
 https://busybox.net/
 
-ssl_client-1.31.1-r19 installed size:
+ssl_client-1.32.1-r2 installed size:
 28672
 
-ssl_client-1.31.1-r19 license:
+ssl_client-1.32.1-r2 license:
 GPL-2.0-only
 
 ```
