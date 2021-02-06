@@ -581,13 +581,9 @@ Licenses: (parsed from: `/usr/share/doc/ca-certificates/copyright`)
 - `GPL-2+`
 - `MPL-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ca-certificates=20201027ubuntu0.20.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20201027ubuntu0.20.04.1.dsc' ca-certificates_20201027ubuntu0.20.04.1.dsc 1945 SHA512:32df164149775001a030721767a21b99133638d9293ff4085bbee56a8e38219d8d4f7d8b2ddfee021dcdb05e300c8f94312707881bbeb1bffa406728b319d7fe
-'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20201027ubuntu0.20.04.1.tar.xz' ca-certificates_20201027ubuntu0.20.04.1.tar.xz 242452 SHA512:4639732f2445a495c861ea933d43fc431b5ea907272e31f72cb6a955ecf827c76f6d043cb82da0e8742af6abc6a80b20b96540c17a75d0b6452c01eb8203cd76
-```
 
 ### `dpkg` source package: `cairo=1.16.0-4ubuntu1`
 
@@ -7121,14 +7117,9 @@ Licenses: (parsed from: `/usr/share/doc/libmysqlclient21/copyright`)
 - `public-domain`
 - `zlib/libpng`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mysql-8.0=8.0.22-0ubuntu0.20.04.3
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.22-0ubuntu0.20.04.3.dsc' mysql-8.0_8.0.22-0ubuntu0.20.04.3.dsc 3434 SHA512:c3df63bf95481f085cdeb36c6164444c2cb2b16e93327119a38ea4b2d4e1e33d8cbefbf80c4119880013246b241ab7842c695f50598e178cc01b9e753c810b27
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.22.orig.tar.gz' mysql-8.0_8.0.22.orig.tar.gz 285934450 SHA512:792f2ada93ec67a4679228478c6b798e81d9e9f6d13c7f4977cb7682738a4aae3cb483294edc6b2fde16c3960e51af8786216c063ab500840afd39a609e4b612
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.22-0ubuntu0.20.04.3.debian.tar.xz' mysql-8.0_8.0.22-0ubuntu0.20.04.3.debian.tar.xz 159724 SHA512:148695d27ad4c4a966ee7b59d1c21599c5b6e5cd0bad3bdc5c3436d62012b60636296ff73070cb42a753ae20073d8ddfeb865d895df256afeecfd892d841d584
-```
 
 ### `dpkg` source package: `mysql-defaults=1.0.5ubuntu2`
 
