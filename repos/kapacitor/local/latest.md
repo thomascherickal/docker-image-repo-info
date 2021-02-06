@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:1b3b1dcad68c15053fe069ea6f98b83e4b52fca30dd16d11e11b5cab2d63c438`
-- Created: `2021-01-28T23:20:45.188328886Z`
-- Virtual Size: ~ 242.65 Mb  
+- Image ID: `sha256:fb5fce69def3c60c8198860552549dd860756a314c08f4b601768a06e00a20d0`
+- Created: `2021-02-06T00:34:34.464875042Z`
+- Virtual Size: ~ 243.53 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -70,9 +70,10 @@ Other potentially useful URLs:
 Binary Packages:
 
 - `apt=1.4.11`
+- `apt-transport-https=1.4.11`
 - `libapt-pkg5.0:amd64=1.4.11`
 
-Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-pkg5.0/copyright`)
+Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/apt-transport-https/copyright`, `/usr/share/doc/libapt-pkg5.0/copyright`)
 
 - `GPL-2`
 - `GPLv2+`
@@ -351,8 +352,9 @@ Binary Packages:
 
 - `curl=7.52.1-5+deb9u13`
 - `libcurl3:amd64=7.52.1-5+deb9u13`
+- `libcurl3-gnutls:amd64=7.52.1-5+deb9u13`
 
-Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl3/copyright`)
+Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl3/copyright`, `/usr/share/doc/libcurl3-gnutls/copyright`)
 
 - `BSD-3-Clause`
 - `BSD-4-Clause`
@@ -1743,24 +1745,31 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/npth/1.3-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/npth/1.3-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openldap=2.4.44+dfsg-5+deb9u6`
+### `dpkg` source package: `openldap=2.4.44+dfsg-5+deb9u7`
 
 Binary Packages:
 
-- `libldap-2.4-2:amd64=2.4.44+dfsg-5+deb9u6`
-- `libldap-common=2.4.44+dfsg-5+deb9u6`
+- `libldap-2.4-2:amd64=2.4.44+dfsg-5+deb9u7`
+- `libldap-common=2.4.44+dfsg-5+deb9u7`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris openldap=2.4.44+dfsg-5+deb9u7
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.44+dfsg-5+deb9u7.dsc' openldap_2.4.44+dfsg-5+deb9u7.dsc 3017 SHA256:9b00375bbc5c65d7cc1923d2a1ee236e1434e1293895160bd4369f4e16c01177
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.44+dfsg.orig.tar.gz' openldap_2.4.44+dfsg.orig.tar.gz 4826590 SHA256:d5187c229bec163c5d97845846e1b87917755f85b04f444c08836384f4bd7ffe
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.44+dfsg-5+deb9u7.debian.tar.xz' openldap_2.4.44+dfsg-5+deb9u7.debian.tar.xz 173548 SHA256:e66b4686c6fc47be154bb528a2936f1ab12632953d3d4c6ec4d2ebaf5ea0b681
+```
 
-- http://snapshot.debian.org/package/openldap/2.4.44+dfsg-5+deb9u6/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/openldap/2.4.44+dfsg-5+deb9u7/ (for browsing the source)
+- https://sources.debian.net/src/openldap/2.4.44+dfsg-5+deb9u7/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openldap/2.4.44+dfsg-5+deb9u7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssl1.0=1.0.2u-1~deb9u3`
 
