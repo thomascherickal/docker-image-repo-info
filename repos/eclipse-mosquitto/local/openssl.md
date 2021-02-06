@@ -1,21 +1,23 @@
-# `eclipse-mosquitto:1.6.12-openssl`
+# `eclipse-mosquitto:2.0.7-openssl`
 
 ## Docker Metadata
 
-- Image ID: `sha256:157cae6ae46639829d359468618f24080c02c40a70ef43f2b1e79b53edaa4332`
-- Created: `2020-12-17T13:54:54.099637115Z`
-- Virtual Size: ~ 6.77 Mb  
+- Image ID: `sha256:703ffbbc1614ee40e1cf09f8321b499535696a5b830a2b5ecbafb1c354be742f`
+- Created: `2021-02-05T02:21:02.949017869Z`
+- Virtual Size: ~ 7.06 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
 - Command: `["/usr/sbin/mosquitto","-c","/mosquitto/config/mosquitto.conf"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `VERSION=1.6.12`
-  - `DOWNLOAD_SHA256=548d73d19fb787dd0530334e398fd256ef3a581181678488a741a995c4f007fb`
+  - `VERSION=2.0.7`
+  - `DOWNLOAD_SHA256=a98054f0b8161588975ef24e1d467550d3935f4c16ccee63ecb623248a28356e`
   - `GPG_KEYS=A0D6EEA1DCAE49A635A3B2F0779B22DFB3E717B7`
   - `LWS_VERSION=2.4.2`
   - `LWS_SHA256=73012d7fcf428dedccc816e83a63a01462e27819d5537b8e0d0c7264bfacfad6`
+  - `CJSON_VERSION=1.7.14`
+  - `CJSON_SHA256=fb50a663eefdc76bafa80c82bc045af13b1363e8f45cec8b442007aef6a41343`
 - Labels:
   - `description=Eclipse Mosquitto MQTT Broker`
   - `maintainer=Roger Light <roger@atchoo.org>`
