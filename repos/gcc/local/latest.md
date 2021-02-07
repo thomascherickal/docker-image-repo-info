@@ -137,8 +137,8 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris apt=1.8.2.2
-'http://security.debian.org/debian-security/pool/updates/main/a/apt/apt_1.8.2.2.dsc' apt_1.8.2.2.dsc 2774 SHA256:fb213748b5b829f68b7f6c8d83ad72a21990d0f194b6e6f950509b6b05346f58
-'http://security.debian.org/debian-security/pool/updates/main/a/apt/apt_1.8.2.2.tar.xz' apt_1.8.2.2.tar.xz 2191728 SHA256:f5030de22a5cc80db6fe0d42373b5df25d7dc56e94d9155f2eaa80dbd65e82fa
+'http://deb.debian.org/debian/pool/main/a/apt/apt_1.8.2.2.dsc' apt_1.8.2.2.dsc 2774 SHA256:fb213748b5b829f68b7f6c8d83ad72a21990d0f194b6e6f950509b6b05346f58
+'http://deb.debian.org/debian/pool/main/a/apt/apt_1.8.2.2.tar.xz' apt_1.8.2.2.tar.xz 2191728 SHA256:f5030de22a5cc80db6fe0d42373b5df25d7dc56e94d9155f2eaa80dbd65e82fa
 ```
 
 Other potentially useful URLs:
@@ -310,19 +310,13 @@ Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris base-files=10.3+deb10u7
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3+deb10u7.dsc' base-files_10.3+deb10u7.dsc 1103 SHA256:abf584495de0ddf2ff8350b734c915ff610f9f7f4133dee3f5eea7bc135a7d33
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3+deb10u7.tar.xz' base-files_10.3+deb10u7.tar.xz 65376 SHA256:ef14b448eb7b72e8ce5cbc2c5eef60bed41dcfaf503a1ea6048f7b8e2fba9c47
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/base-files/10.3+deb10u7/
 
-- https://sources.debian.net/src/base-files/10.3+deb10u7/ (for browsing the source)
-- https://sources.debian.net/src/base-files/10.3+deb10u7/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/base-files/10.3+deb10u7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-passwd=3.5.46`
 
@@ -444,19 +438,13 @@ Licenses: (parsed from: `/usr/share/doc/ca-certificates/copyright`)
 - `GPL-2+`
 - `MPL-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ca-certificates=20200601~deb10u1
-'http://deb.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_20200601~deb10u1.dsc' ca-certificates_20200601~deb10u1.dsc 1837 SHA256:41120aa922b9520b73b88ef3fef18b807c7e5b6dd98c9dec51a3841dabe7fcb8
-'http://deb.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_20200601~deb10u1.tar.xz' ca-certificates_20200601~deb10u1.tar.xz 245828 SHA256:5911c0471fd83141285c56c414be7f6e7176f28dc8d14a3c55f06303b79a92aa
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/ca-certificates/20200601~deb10u1/
 
-- https://sources.debian.net/src/ca-certificates/20200601~deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/ca-certificates/20200601~deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/ca-certificates/20200601~deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cairo=1.16.0-4`
 
@@ -471,20 +459,13 @@ Licenses: (parsed from: `/usr/share/doc/libcairo-gobject2/copyright`, `/usr/shar
 
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris cairo=1.16.0-4
-'http://deb.debian.org/debian/pool/main/c/cairo/cairo_1.16.0-4.dsc' cairo_1.16.0-4.dsc 2806 SHA256:cd511a989ea189a15527f0b745196185df71dd3ab7396228cee0709d8b1c9616
-'http://deb.debian.org/debian/pool/main/c/cairo/cairo_1.16.0.orig.tar.xz' cairo_1.16.0.orig.tar.xz 41997432 SHA256:5e7b29b3f113ef870d1e3ecf8adf21f923396401604bda16d44be45e66052331
-'http://deb.debian.org/debian/pool/main/c/cairo/cairo_1.16.0-4.debian.tar.xz' cairo_1.16.0-4.debian.tar.xz 30248 SHA256:e2b4c5aae085857e91de4529c00043997b55bb17ebccd3744bf04ac4ccfd31df
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/cairo/1.16.0-4/
 
-- https://sources.debian.net/src/cairo/1.16.0-4/ (for browsing the source)
-- https://sources.debian.net/src/cairo/1.16.0-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/cairo/1.16.0-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cdebconf=0.249`
 
@@ -956,9 +937,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris file=1:5.35-4+deb10u1
-'http://deb.debian.org/debian/pool/main/f/file/file_5.35-4+deb10u1.dsc' file_5.35-4+deb10u1.dsc 1984 SHA256:d1e2d532fc2cf5cfd947b98152916b28c7a6f2c0d6b5da460dea4bc34ca01607
-'http://deb.debian.org/debian/pool/main/f/file/file_5.35.orig.tar.xz' file_5.35.orig.tar.xz 643268 SHA256:60b5b8bc762d35452c7995f3db7e8a5e2004d736b8763f086585a5b1af57a632
-'http://deb.debian.org/debian/pool/main/f/file/file_5.35-4+deb10u1.debian.tar.xz' file_5.35-4+deb10u1.debian.tar.xz 56264 SHA256:7bbb38f82e1d461d923ca9a3bd9691ebca1920d04d2d78199b098c40474e9dcb
+'http://security.debian.org/debian-security/pool/updates/main/f/file/file_5.35-4+deb10u1.dsc' file_5.35-4+deb10u1.dsc 1984 SHA256:d1e2d532fc2cf5cfd947b98152916b28c7a6f2c0d6b5da460dea4bc34ca01607
+'http://security.debian.org/debian-security/pool/updates/main/f/file/file_5.35.orig.tar.xz' file_5.35.orig.tar.xz 643268 SHA256:60b5b8bc762d35452c7995f3db7e8a5e2004d736b8763f086585a5b1af57a632
+'http://security.debian.org/debian-security/pool/updates/main/f/file/file_5.35-4+deb10u1.debian.tar.xz' file_5.35-4+deb10u1.debian.tar.xz 56264 SHA256:7bbb38f82e1d461d923ca9a3bd9691ebca1920d04d2d78199b098c40474e9dcb
 ```
 
 Other potentially useful URLs:
@@ -1461,21 +1442,13 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls-dane0/copyright`, `/usr/share/
 - `The MIT License (MIT)`
 - `The main library is licensed under GNU Lesser`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gnutls28=3.6.7-4+deb10u5
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.7-4+deb10u5.dsc' gnutls28_3.6.7-4+deb10u5.dsc 3354 SHA256:d91aef3a450b7dceef817264996a3c11b72dd7fb8e892897b63d7e52bd078e4a
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.7.orig.tar.xz' gnutls28_3.6.7.orig.tar.xz 8153728 SHA256:5b3409ad5aaf239808730d1ee12fdcd148c0be00262c7edf157af655a8a188e2
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.7.orig.tar.xz.asc' gnutls28_3.6.7.orig.tar.xz.asc 534 SHA256:a14d0a7b9295b65ae797a70f8e765024a2e363dca03d008bfce0aec2b3f292b0
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.7-4+deb10u5.debian.tar.xz' gnutls28_3.6.7-4+deb10u5.debian.tar.xz 89484 SHA256:d719d468f59aef1c480dda91ffee6d0c728e8635a0808f199d999d04f128b70a
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gnutls28/3.6.7-4+deb10u5/
 
-- https://sources.debian.net/src/gnutls28/3.6.7-4+deb10u5/ (for browsing the source)
-- https://sources.debian.net/src/gnutls28/3.6.7-4+deb10u5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gnutls28/3.6.7-4+deb10u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gobject-introspection=1.58.3-2`
 
@@ -1823,20 +1796,13 @@ Licenses: (parsed from: `/usr/share/doc/iproute2/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris iproute2=4.20.0-2
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_4.20.0-2.dsc' iproute2_4.20.0-2.dsc 1884 SHA256:006d839d17b2871c8e8b655782b59311b2b56ed883760011173bb4df2da1a0fb
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_4.20.0.orig.tar.xz' iproute2_4.20.0.orig.tar.xz 707016 SHA256:c8adaa6a40f888476b23acb283cfa30c0dd55f07b5aa20663ed5ba2ef1f6fda8
-'http://deb.debian.org/debian/pool/main/i/iproute2/iproute2_4.20.0-2.debian.tar.xz' iproute2_4.20.0-2.debian.tar.xz 144416 SHA256:32220902a0bfdae209ffa7aee610cd70d49c759eeada1d9008b84782d1515e00
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/iproute2/4.20.0-2/
 
-- https://sources.debian.net/src/iproute2/4.20.0-2/ (for browsing the source)
-- https://sources.debian.net/src/iproute2/4.20.0-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/iproute2/4.20.0-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `iptables=1.8.2-4`
 
@@ -2639,20 +2605,13 @@ Licenses: (parsed from: `/usr/share/doc/libmaxminddb-dev/copyright`, `/usr/share
 - `GPL`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libmaxminddb=1.3.2-1
-'http://deb.debian.org/debian/pool/main/libm/libmaxminddb/libmaxminddb_1.3.2-1.dsc' libmaxminddb_1.3.2-1.dsc 2104 SHA256:c75309a506da7a68fe74b13ab3f8f3024a377859ec9fb77aa2e4c057550c1158
-'http://deb.debian.org/debian/pool/main/libm/libmaxminddb/libmaxminddb_1.3.2.orig.tar.gz' libmaxminddb_1.3.2.orig.tar.gz 248665 SHA256:5fa35b5e7ae3ed11b9c392d6ea38572966c1ceaeab4e2598174911978ea0c027
-'http://deb.debian.org/debian/pool/main/libm/libmaxminddb/libmaxminddb_1.3.2-1.debian.tar.xz' libmaxminddb_1.3.2-1.debian.tar.xz 4868 SHA256:25b816d507995b6fe8d8430f43215f79cc1191e0f931e130e70a7060fa2992ee
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libmaxminddb/1.3.2-1/
 
-- https://sources.debian.net/src/libmaxminddb/1.3.2-1/ (for browsing the source)
-- https://sources.debian.net/src/libmaxminddb/1.3.2-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libmaxminddb/1.3.2-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libmnl=1.0.4-2`
 
@@ -4169,10 +4128,10 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris openssl=1.1.1d-0+deb10u4
-'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1d-0+deb10u4.dsc' openssl_1.1.1d-0+deb10u4.dsc 2472 SHA256:b902902750711baf35c087bd220f0fc055ad41f9e810df07246e035fac195cf1
-'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1d.orig.tar.gz' openssl_1.1.1d.orig.tar.gz 8845861 SHA256:1e3a91bc1f9dfce01af26026f856e064eab4c8ee0a8f457b5ae30b40b8b711f2
-'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1d.orig.tar.gz.asc' openssl_1.1.1d.orig.tar.gz.asc 488 SHA256:f3fd3299a79421fffd51d35f62636b8e987dab1d3033d93a19d7685868e15395
-'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1d-0+deb10u4.debian.tar.xz' openssl_1.1.1d-0+deb10u4.debian.tar.xz 91472 SHA256:3f6a76b437f5407fe9dba0a47b9d5ba427c83255f17769c4d8532788146fa6ca
+'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1d-0+deb10u4.dsc' openssl_1.1.1d-0+deb10u4.dsc 2472 SHA256:b902902750711baf35c087bd220f0fc055ad41f9e810df07246e035fac195cf1
+'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1d.orig.tar.gz' openssl_1.1.1d.orig.tar.gz 8845861 SHA256:1e3a91bc1f9dfce01af26026f856e064eab4c8ee0a8f457b5ae30b40b8b711f2
+'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1d.orig.tar.gz.asc' openssl_1.1.1d.orig.tar.gz.asc 488 SHA256:f3fd3299a79421fffd51d35f62636b8e987dab1d3033d93a19d7685868e15395
+'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1d-0+deb10u4.debian.tar.xz' openssl_1.1.1d-0+deb10u4.debian.tar.xz 91472 SHA256:3f6a76b437f5407fe9dba0a47b9d5ba427c83255f17769c4d8532788146fa6ca
 ```
 
 Other potentially useful URLs:
@@ -4200,10 +4159,10 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris p11-kit=0.23.15-2+deb10u1
-'http://security.debian.org/debian-security/pool/updates/main/p/p11-kit/p11-kit_0.23.15-2+deb10u1.dsc' p11-kit_0.23.15-2+deb10u1.dsc 2607 SHA256:d0c7215905c92f521b7b5a4dd98e2ad85abd40a05430dcf2a17dcc3e21f96389
-'http://security.debian.org/debian-security/pool/updates/main/p/p11-kit/p11-kit_0.23.15.orig.tar.gz' p11-kit_0.23.15.orig.tar.gz 1276733 SHA256:f7c139a0c77a1f0012619003e542060ba8f94799a0ef463026db390680e4d798
-'http://security.debian.org/debian-security/pool/updates/main/p/p11-kit/p11-kit_0.23.15.orig.tar.gz.asc' p11-kit_0.23.15.orig.tar.gz.asc 879 SHA256:e28bd948178e2f91e18fbb4387d7b6532aa44eb92ac4c67a6485bc9cd9c79db8
-'http://security.debian.org/debian-security/pool/updates/main/p/p11-kit/p11-kit_0.23.15-2+deb10u1.debian.tar.xz' p11-kit_0.23.15-2+deb10u1.debian.tar.xz 25496 SHA256:9f90af175ef68fdb3aca71f22074fa1860f88a820e29e1290ee51d606c53b572
+'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.23.15-2+deb10u1.dsc' p11-kit_0.23.15-2+deb10u1.dsc 2607 SHA256:d0c7215905c92f521b7b5a4dd98e2ad85abd40a05430dcf2a17dcc3e21f96389
+'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.23.15.orig.tar.gz' p11-kit_0.23.15.orig.tar.gz 1276733 SHA256:f7c139a0c77a1f0012619003e542060ba8f94799a0ef463026db390680e4d798
+'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.23.15.orig.tar.gz.asc' p11-kit_0.23.15.orig.tar.gz.asc 879 SHA256:e28bd948178e2f91e18fbb4387d7b6532aa44eb92ac4c67a6485bc9cd9c79db8
+'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.23.15-2+deb10u1.debian.tar.xz' p11-kit_0.23.15-2+deb10u1.debian.tar.xz 25496 SHA256:9f90af175ef68fdb3aca71f22074fa1860f88a820e29e1290ee51d606c53b572
 ```
 
 Other potentially useful URLs:
@@ -4512,20 +4471,13 @@ Licenses: (parsed from: `/usr/share/doc/libpq-dev/copyright`, `/usr/share/doc/li
 - `nagaysau-ishii`
 - `rijndael`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris postgresql-11=11.9-0+deb10u1
-'http://deb.debian.org/debian/pool/main/p/postgresql-11/postgresql-11_11.9-0+deb10u1.dsc' postgresql-11_11.9-0+deb10u1.dsc 3738 SHA256:d4538af8c4f86e48ada0a32c113b0d10df21c640d190e2eac8bfee63a11ec3ed
-'http://deb.debian.org/debian/pool/main/p/postgresql-11/postgresql-11_11.9.orig.tar.bz2' postgresql-11_11.9.orig.tar.bz2 19959019 SHA256:35618aa72e0372091f923c42389c6febd07513157b4fbb9408371706afbb6635
-'http://deb.debian.org/debian/pool/main/p/postgresql-11/postgresql-11_11.9-0+deb10u1.debian.tar.xz' postgresql-11_11.9-0+deb10u1.debian.tar.xz 25536 SHA256:7044369b5353aa91e672fae6122812682b863468db4fa631d952d34daf8baf36
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/postgresql-11/11.9-0+deb10u1/
 
-- https://sources.debian.net/src/postgresql-11/11.9-0+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/postgresql-11/11.9-0+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/postgresql-11/11.9-0+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `procps=2:3.3.15-2`
 
@@ -4988,20 +4940,13 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=241-7~deb10u5
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_241-7~deb10u5.dsc' systemd_241-7~deb10u5.dsc 4946 SHA256:b061c7dff79c40ca45f3a8d4a8632cc3c012e7a2212cf8e9ae189a6b2a4b4e35
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_241.orig.tar.gz' systemd_241.orig.tar.gz 7640538 SHA256:b2561a8e1d10a2c248253f0dda31a85dd6d69f2b54177de55e02cd1d2778316e
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_241-7~deb10u5.debian.tar.xz' systemd_241-7~deb10u5.debian.tar.xz 179676 SHA256:c0121499947286d99de53844cafafae6bca6f54e734572496ae7ba24b9db7cee
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/systemd/241-7~deb10u5/
 
-- https://sources.debian.net/src/systemd/241-7~deb10u5/ (for browsing the source)
-- https://sources.debian.net/src/systemd/241-7~deb10u5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/systemd/241-7~deb10u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sysvinit=2.93-8`
 
@@ -5174,20 +5119,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris unzip=6.0-23+deb10u1
-'http://deb.debian.org/debian/pool/main/u/unzip/unzip_6.0-23+deb10u1.dsc' unzip_6.0-23+deb10u1.dsc 1376 SHA256:17c827fcb399d9e82bd08a7574838d95b10a335294edad6f604175dc1e7e8859
-'http://deb.debian.org/debian/pool/main/u/unzip/unzip_6.0.orig.tar.gz' unzip_6.0.orig.tar.gz 1376845 SHA256:036d96991646d0449ed0aa952e4fbe21b476ce994abc276e49d30e686708bd37
-'http://deb.debian.org/debian/pool/main/u/unzip/unzip_6.0-23+deb10u1.debian.tar.xz' unzip_6.0-23+deb10u1.debian.tar.xz 23012 SHA256:f64e87c377aea1139e2d2d6cc0ea8edb089951d28089e1e5de567a6cb715d384
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/unzip/6.0-23+deb10u1/
 
-- https://sources.debian.net/src/unzip/6.0-23+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/unzip/6.0-23+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/unzip/6.0-23+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `utf8proc=2.3.0-1`
 
