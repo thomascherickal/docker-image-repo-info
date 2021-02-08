@@ -35,6 +35,8 @@
 -	[`maven:3.6.3-openjdk-15-slim`](#maven363-openjdk-15-slim)
 -	[`maven:3.6.3-openjdk-16`](#maven363-openjdk-16)
 -	[`maven:3.6.3-openjdk-16-slim`](#maven363-openjdk-16-slim)
+-	[`maven:3.6.3-openjdk-17`](#maven363-openjdk-17)
+-	[`maven:3.6.3-openjdk-17-slim`](#maven363-openjdk-17-slim)
 -	[`maven:3.6.3-openjdk-8`](#maven363-openjdk-8)
 -	[`maven:3.6.3-openjdk-8-slim`](#maven363-openjdk-8-slim)
 -	[`maven:3.6-adoptopenjdk`](#maven36-adoptopenjdk)
@@ -67,6 +69,8 @@
 -	[`maven:3.6-openjdk-15-slim`](#maven36-openjdk-15-slim)
 -	[`maven:3.6-openjdk-16`](#maven36-openjdk-16)
 -	[`maven:3.6-openjdk-16-slim`](#maven36-openjdk-16-slim)
+-	[`maven:3.6-openjdk-17`](#maven36-openjdk-17)
+-	[`maven:3.6-openjdk-17-slim`](#maven36-openjdk-17-slim)
 -	[`maven:3.6-openjdk-8`](#maven36-openjdk-8)
 -	[`maven:3.6-openjdk-8-slim`](#maven36-openjdk-8-slim)
 -	[`maven:3-adoptopenjdk`](#maven3-adoptopenjdk)
@@ -98,6 +102,8 @@
 -	[`maven:3-openjdk-15-slim`](#maven3-openjdk-15-slim)
 -	[`maven:3-openjdk-16`](#maven3-openjdk-16)
 -	[`maven:3-openjdk-16-slim`](#maven3-openjdk-16-slim)
+-	[`maven:3-openjdk-17`](#maven3-openjdk-17)
+-	[`maven:3-openjdk-17-slim`](#maven3-openjdk-17-slim)
 -	[`maven:3-openjdk-8`](#maven3-openjdk-8)
 -	[`maven:3-openjdk-8-slim`](#maven3-openjdk-8-slim)
 -	[`maven:adoptopenjdk`](#mavenadoptopenjdk)
@@ -9238,6 +9244,14 @@ CMD ["mvn"]
 		Size: 364.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `maven:3.6.3-openjdk-17`
+
+**does not exist** (yet?)
+
+## `maven:3.6.3-openjdk-17-slim`
+
+**does not exist** (yet?)
+
 ## `maven:3.6.3-openjdk-8`
 
 ```console
@@ -18011,6 +18025,14 @@ CMD ["mvn"]
 		Size: 364.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `maven:3.6-openjdk-17`
+
+**does not exist** (yet?)
+
+## `maven:3.6-openjdk-17-slim`
+
+**does not exist** (yet?)
+
 ## `maven:3.6-openjdk-8`
 
 ```console
@@ -26681,6 +26703,14 @@ CMD ["mvn"]
 		Last Modified: Sat, 06 Feb 2021 03:23:08 GMT  
 		Size: 364.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `maven:3-openjdk-17`
+
+**does not exist** (yet?)
+
+## `maven:3-openjdk-17-slim`
+
+**does not exist** (yet?)
 
 ## `maven:3-openjdk-8`
 
