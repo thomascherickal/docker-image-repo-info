@@ -14,7 +14,7 @@
 ## `httpd:2`
 
 ```console
-$ docker pull httpd@sha256:2fab99fb3b1c7ddfa99d7dc55de8dad0a62dbe3e7c605d78ecbdf2c6c49fd636
+$ docker pull httpd@sha256:a0221881241adf0ee1f2efbc4976f858cb12333675b94b8cf4c42c0e4b11d710
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -99,137 +99,137 @@ CMD ["httpd-foreground"]
 ### `httpd:2` - linux; arm variant v5
 
 ```console
-$ docker pull httpd@sha256:fffd57dbfc3cf78a31e2ccf18f0c55e1ea3bdcd9750654494c11e206b789ac8e
+$ docker pull httpd@sha256:0d194eeae372df4f45cf2c343effb69bfab6a1c3ec248c5fd6dbfd1d79a60e79
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **50.9 MB (50944151 bytes)**  
+-	Total Size: **50.9 MB (50931345 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a49e1afb81687343d29d931d555a884b09d7dc58fdc22d91ec0453a364308a9a`
+-	Image ID: `sha256:1e2b7fc204d76ee9f8d652652296c874d769866fb2c3a9b319ac7eac63e85799`
 -	Default Command: `["httpd-foreground"]`
 
 ```dockerfile
-# Tue, 12 Jan 2021 00:51:34 GMT
-ADD file:57136a762436a5d41e60c61db0d89baea17a289845ea55565e45cc79a9e81e23 in / 
-# Tue, 12 Jan 2021 00:51:37 GMT
+# Tue, 09 Feb 2021 02:50:10 GMT
+ADD file:fbd00ef7871dc27d7ed5fa8c238cdc80652bd87b8033be7de9e54a799bbf10a4 in / 
+# Tue, 09 Feb 2021 02:50:11 GMT
 CMD ["bash"]
-# Tue, 12 Jan 2021 10:37:44 GMT
+# Tue, 09 Feb 2021 03:56:21 GMT
 ENV HTTPD_PREFIX=/usr/local/apache2
-# Tue, 12 Jan 2021 10:37:45 GMT
+# Tue, 09 Feb 2021 03:56:22 GMT
 ENV PATH=/usr/local/apache2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 12 Jan 2021 10:37:47 GMT
+# Tue, 09 Feb 2021 03:56:24 GMT
 RUN mkdir -p "$HTTPD_PREFIX" 	&& chown www-data:www-data "$HTTPD_PREFIX"
-# Tue, 12 Jan 2021 10:37:48 GMT
+# Tue, 09 Feb 2021 03:56:25 GMT
 WORKDIR /usr/local/apache2
-# Tue, 12 Jan 2021 10:38:01 GMT
+# Tue, 09 Feb 2021 03:56:37 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libaprutil1-ldap 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 12 Jan 2021 10:38:03 GMT
+# Tue, 09 Feb 2021 03:56:37 GMT
 ENV HTTPD_VERSION=2.4.46
-# Tue, 12 Jan 2021 10:38:04 GMT
+# Tue, 09 Feb 2021 03:56:38 GMT
 ENV HTTPD_SHA256=740eddf6e1c641992b22359cabc66e6325868c3c5e2e3f98faf349b61ecf41ea
-# Tue, 12 Jan 2021 10:38:06 GMT
+# Tue, 09 Feb 2021 03:56:39 GMT
 ENV HTTPD_PATCHES=
-# Tue, 12 Jan 2021 10:41:42 GMT
+# Tue, 09 Feb 2021 04:00:26 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		bzip2 		ca-certificates 		dirmngr 		dpkg-dev 		gcc 		gnupg 		libapr1-dev 		libaprutil1-dev 		libbrotli-dev 		libcurl4-openssl-dev 		libjansson-dev 		liblua5.2-dev 		libnghttp2-dev 		libpcre3-dev 		libssl-dev 		libxml2-dev 		make 		wget 		zlib1g-dev 	; 	rm -r /var/lib/apt/lists/*; 		ddist() { 		local f="$1"; shift; 		local distFile="$1"; shift; 		local success=; 		local distUrl=; 		for distUrl in 			'https://www.apache.org/dyn/closer.cgi?action=download&filename=' 			https://www-us.apache.org/dist/ 			https://www.apache.org/dist/ 			https://archive.apache.org/dist/ 		; do 			if wget -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then 				success=1; 				break; 			fi; 		done; 		[ -n "$success" ]; 	}; 		ddist 'httpd.tar.bz2' "httpd/httpd-$HTTPD_VERSION.tar.bz2"; 	echo "$HTTPD_SHA256 *httpd.tar.bz2" | sha256sum -c -; 		ddist 'httpd.tar.bz2.asc' "httpd/httpd-$HTTPD_VERSION.tar.bz2.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	for key in 		DE29FB3971E71543FD2DC049508EAEC5302DA568 		13155B0E9E634F42BF6C163FDDBA64BA2C312D2F 		8B39757B1D8A994DF2433ED58B3A601F08C975E5 		31EE1A81B8D066548156D37B7D6DBFD1F08E012A 		A10208FEC3152DD7C0C9B59B361522D782AB7BD1 		3DE024AFDA7A4B15CB6C14410F81AA8AB0D5F771 		EB138C6AF0FC691001B16D93344A844D751D7F27 		CBA5A7C21EC143314C41393E5B968010E04F9A89 		3C016F2B764621BB549C66B516A96495E2226795 		937FB3994A242BA9BF49E93021454AF0CC8B0F7E 		EAD1359A4C0F2D37472AAF28F55DF0293A4E7AC9 		4C1EADADB4EF5007579C919C6635B6C0DE885DD3 		01E475360FCCF1D0F24B9D145D414AE1E005C9CB 		92CCEF0AA7DD46AC3A0F498BCA6939748103A37E 		D395C7573A68B9796D38C258153FA0CD75A67692 		FA39B617B61493FD283503E7EED1EA392261D073 		984FB3350C1D5C7A3282255BB31B213D208F5064 		FE7A49DAA875E890B4167F76CCB2EB46E76CF6D0 		39F6691A0ECF0C50E8BB849CF78875F642721F00 		29A2BA848177B73878277FA475CAA2A3F39B3750 		120A8667241AEDD4A78B46104C042818311A3DE5 		453510BDA6C5855624E009236D0BC73A40581837 		0DE5C55C6BF3B2352DABB89E13249B4FEC88A0BF 		7CDBED100806552182F98844E8E7E00B4DAA1988 		A8BA9617EF3BCCAC3B29B869EDB105896F9522D8 		3E6AC004854F3A7F03566B592FF06894E55B0D0E 		5B5181C2C0AB13E59DA3F7A3EC582EB639FF092C 		A93D62ECC3C8EA12DB220EC934EA76E6791485A8 		65B2D44FE74BD5E3DE3AC3F082781DE46D5954FA 		8935926745E1CE7E3ED748F6EC99EE267EB5F61A 		B9E8213AEFB861AF35A41F2C995E35221AD84DFF 		E3480043595621FE56105F112AB12A7ADC55C003 		93525CFCF6FDFFB3FD9700DD5A4B10AE43B56A27 	; do 		gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 	done; 	gpg --batch --verify httpd.tar.bz2.asc httpd.tar.bz2; 	command -v gpgconf && gpgconf --kill all || :; 	rm -rf "$GNUPGHOME" httpd.tar.bz2.asc; 		mkdir -p src; 	tar -xf httpd.tar.bz2 -C src --strip-components=1; 	rm httpd.tar.bz2; 	cd src; 		patches() { 		while [ "$#" -gt 0 ]; do 			local patchFile="$1"; shift; 			local patchSha256="$1"; shift; 			ddist "$patchFile" "httpd/patches/apply_to_$HTTPD_VERSION/$patchFile"; 			echo "$patchSha256 *$patchFile" | sha256sum -c -; 			patch -p0 < "$patchFile"; 			rm -f "$patchFile"; 		done; 	}; 	patches $HTTPD_PATCHES; 		gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	CFLAGS="$(dpkg-buildflags --get CFLAGS)"; 	CPPFLAGS="$(dpkg-buildflags --get CPPFLAGS)"; 	LDFLAGS="$(dpkg-buildflags --get LDFLAGS)"; 	./configure 		--build="$gnuArch" 		--prefix="$HTTPD_PREFIX" 		--enable-mods-shared=reallyall 		--enable-mpms-shared=all 		--enable-pie 		CFLAGS="-pipe $CFLAGS" 		CPPFLAGS="$CPPFLAGS" 		LDFLAGS="-Wl,--as-needed $LDFLAGS" 	; 	make -j "$(nproc)"; 	make install; 		cd ..; 	rm -r src man manual; 		sed -ri 		-e 's!^(\s*CustomLog)\s+\S+!\1 /proc/self/fd/1!g' 		-e 's!^(\s*ErrorLog)\s+\S+!\1 /proc/self/fd/2!g' 		-e 's!^(\s*TransferLog)\s+\S+!\1 /proc/self/fd/1!g' 		"$HTTPD_PREFIX/conf/httpd.conf" 		"$HTTPD_PREFIX/conf/extra/httpd-ssl.conf" 	; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		httpd -v
-# Tue, 12 Jan 2021 10:41:45 GMT
+# Tue, 09 Feb 2021 04:00:30 GMT
 STOPSIGNAL SIGWINCH
-# Tue, 12 Jan 2021 10:41:46 GMT
+# Tue, 09 Feb 2021 04:00:31 GMT
 COPY file:c432ff61c4993ecdef4786f48d91a96f8f0707f6179816ccb98db661bfb96b90 in /usr/local/bin/ 
-# Tue, 12 Jan 2021 10:41:47 GMT
+# Tue, 09 Feb 2021 04:00:32 GMT
 EXPOSE 80
-# Tue, 12 Jan 2021 10:41:49 GMT
+# Tue, 09 Feb 2021 04:00:34 GMT
 CMD ["httpd-foreground"]
 ```
 
 -	Layers:
-	-	`sha256:2e2535e18472e7491a1d935b1f44ac842e4cc5c4d3de40cecb77b56b44515910`  
-		Last Modified: Tue, 12 Jan 2021 01:00:19 GMT  
-		Size: 24.9 MB (24851909 bytes)  
+	-	`sha256:8e683fcc73f4da7d69ce1d5f4e1d77510aa459490068f38db2d8663698b391a0`  
+		Last Modified: Tue, 09 Feb 2021 02:59:07 GMT  
+		Size: 24.8 MB (24839297 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a3203cc3d562f4f0f53ee0ca45776aa3a5f8bd74b80c8f21fed1aa29be38a0d5`  
-		Last Modified: Tue, 12 Jan 2021 10:42:12 GMT  
-		Size: 177.0 B  
+	-	`sha256:16bddfc2f91fc07f20b4673260755f73bfdc4b023e041793555a072c9247c2b6`  
+		Last Modified: Tue, 09 Feb 2021 04:00:50 GMT  
+		Size: 175.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2abf929f86b4aee63a2cc03455d5e237c6595841030f75c10f3dc816c18c4acf`  
-		Last Modified: Tue, 12 Jan 2021 10:42:14 GMT  
-		Size: 2.4 MB (2436603 bytes)  
+	-	`sha256:ca65e22c20d513faeb92fc270f096117266b3e432d89c2246374ed329ece2458`  
+		Last Modified: Tue, 09 Feb 2021 04:00:51 GMT  
+		Size: 2.4 MB (2436524 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ecc0a5ac5c1c10afa1663a05ca02365bb8c97f333a30c960f50f9ede8c481e4e`  
-		Last Modified: Tue, 12 Jan 2021 10:42:19 GMT  
-		Size: 23.7 MB (23655165 bytes)  
+	-	`sha256:1f464eb3a7f560d8de547c77405d6010cbdcef89cdcb56b09ebb7f2d07ae1c1c`  
+		Last Modified: Tue, 09 Feb 2021 04:00:56 GMT  
+		Size: 23.7 MB (23655052 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1a9c044cb116aa3d4a4ecaa2dc8c8201554b8d1eed78040b016b713e554cad4e`  
-		Last Modified: Tue, 12 Jan 2021 10:42:13 GMT  
+	-	`sha256:01c416d1ee26e52ae351edc81d74edec230e795316e727c4055cf8322ac442c5`  
+		Last Modified: Tue, 09 Feb 2021 04:00:50 GMT  
 		Size: 297.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `httpd:2` - linux; arm variant v7
 
 ```console
-$ docker pull httpd@sha256:ccc0952b400e7474e0d663e53411eaa51b93f91866077eb60c331bdad3d6720d
+$ docker pull httpd@sha256:a2fe278542099e227cd10c77cb45ea5cfa42deecbafa3a1d9a5fe4dc5858de42
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **48.2 MB (48221484 bytes)**  
+-	Total Size: **48.2 MB (48209115 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:be275c86577572adfd5274e4fe6752b379cabe623c3fc5625c0e56945996fd60`
+-	Image ID: `sha256:d8c0ac39cbcbbc5540d2b1435b9dd99081dfab8270fbaeef27aa80387dcd5d36`
 -	Default Command: `["httpd-foreground"]`
 
 ```dockerfile
-# Tue, 12 Jan 2021 00:01:09 GMT
-ADD file:1db27e410cc7caf4a97a7313c57260fd01aa134b84306914ef0948dcca27372d in / 
-# Tue, 12 Jan 2021 00:01:12 GMT
+# Tue, 09 Feb 2021 03:00:57 GMT
+ADD file:e675d50366bde57173a75f9a29367d765e7da2b7254c5254b64e777cf6870502 in / 
+# Tue, 09 Feb 2021 03:01:00 GMT
 CMD ["bash"]
-# Tue, 12 Jan 2021 01:36:31 GMT
+# Tue, 09 Feb 2021 03:59:49 GMT
 ENV HTTPD_PREFIX=/usr/local/apache2
-# Tue, 12 Jan 2021 01:36:32 GMT
+# Tue, 09 Feb 2021 03:59:50 GMT
 ENV PATH=/usr/local/apache2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 12 Jan 2021 01:36:36 GMT
+# Tue, 09 Feb 2021 03:59:52 GMT
 RUN mkdir -p "$HTTPD_PREFIX" 	&& chown www-data:www-data "$HTTPD_PREFIX"
-# Tue, 12 Jan 2021 01:36:41 GMT
+# Tue, 09 Feb 2021 03:59:53 GMT
 WORKDIR /usr/local/apache2
-# Tue, 12 Jan 2021 01:36:52 GMT
+# Tue, 09 Feb 2021 04:00:07 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libaprutil1-ldap 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 12 Jan 2021 01:36:53 GMT
+# Tue, 09 Feb 2021 04:00:09 GMT
 ENV HTTPD_VERSION=2.4.46
-# Tue, 12 Jan 2021 01:36:53 GMT
+# Tue, 09 Feb 2021 04:00:10 GMT
 ENV HTTPD_SHA256=740eddf6e1c641992b22359cabc66e6325868c3c5e2e3f98faf349b61ecf41ea
-# Tue, 12 Jan 2021 01:36:54 GMT
+# Tue, 09 Feb 2021 04:00:12 GMT
 ENV HTTPD_PATCHES=
-# Tue, 12 Jan 2021 01:40:02 GMT
+# Tue, 09 Feb 2021 04:03:50 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		bzip2 		ca-certificates 		dirmngr 		dpkg-dev 		gcc 		gnupg 		libapr1-dev 		libaprutil1-dev 		libbrotli-dev 		libcurl4-openssl-dev 		libjansson-dev 		liblua5.2-dev 		libnghttp2-dev 		libpcre3-dev 		libssl-dev 		libxml2-dev 		make 		wget 		zlib1g-dev 	; 	rm -r /var/lib/apt/lists/*; 		ddist() { 		local f="$1"; shift; 		local distFile="$1"; shift; 		local success=; 		local distUrl=; 		for distUrl in 			'https://www.apache.org/dyn/closer.cgi?action=download&filename=' 			https://www-us.apache.org/dist/ 			https://www.apache.org/dist/ 			https://archive.apache.org/dist/ 		; do 			if wget -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then 				success=1; 				break; 			fi; 		done; 		[ -n "$success" ]; 	}; 		ddist 'httpd.tar.bz2' "httpd/httpd-$HTTPD_VERSION.tar.bz2"; 	echo "$HTTPD_SHA256 *httpd.tar.bz2" | sha256sum -c -; 		ddist 'httpd.tar.bz2.asc' "httpd/httpd-$HTTPD_VERSION.tar.bz2.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	for key in 		DE29FB3971E71543FD2DC049508EAEC5302DA568 		13155B0E9E634F42BF6C163FDDBA64BA2C312D2F 		8B39757B1D8A994DF2433ED58B3A601F08C975E5 		31EE1A81B8D066548156D37B7D6DBFD1F08E012A 		A10208FEC3152DD7C0C9B59B361522D782AB7BD1 		3DE024AFDA7A4B15CB6C14410F81AA8AB0D5F771 		EB138C6AF0FC691001B16D93344A844D751D7F27 		CBA5A7C21EC143314C41393E5B968010E04F9A89 		3C016F2B764621BB549C66B516A96495E2226795 		937FB3994A242BA9BF49E93021454AF0CC8B0F7E 		EAD1359A4C0F2D37472AAF28F55DF0293A4E7AC9 		4C1EADADB4EF5007579C919C6635B6C0DE885DD3 		01E475360FCCF1D0F24B9D145D414AE1E005C9CB 		92CCEF0AA7DD46AC3A0F498BCA6939748103A37E 		D395C7573A68B9796D38C258153FA0CD75A67692 		FA39B617B61493FD283503E7EED1EA392261D073 		984FB3350C1D5C7A3282255BB31B213D208F5064 		FE7A49DAA875E890B4167F76CCB2EB46E76CF6D0 		39F6691A0ECF0C50E8BB849CF78875F642721F00 		29A2BA848177B73878277FA475CAA2A3F39B3750 		120A8667241AEDD4A78B46104C042818311A3DE5 		453510BDA6C5855624E009236D0BC73A40581837 		0DE5C55C6BF3B2352DABB89E13249B4FEC88A0BF 		7CDBED100806552182F98844E8E7E00B4DAA1988 		A8BA9617EF3BCCAC3B29B869EDB105896F9522D8 		3E6AC004854F3A7F03566B592FF06894E55B0D0E 		5B5181C2C0AB13E59DA3F7A3EC582EB639FF092C 		A93D62ECC3C8EA12DB220EC934EA76E6791485A8 		65B2D44FE74BD5E3DE3AC3F082781DE46D5954FA 		8935926745E1CE7E3ED748F6EC99EE267EB5F61A 		B9E8213AEFB861AF35A41F2C995E35221AD84DFF 		E3480043595621FE56105F112AB12A7ADC55C003 		93525CFCF6FDFFB3FD9700DD5A4B10AE43B56A27 	; do 		gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 	done; 	gpg --batch --verify httpd.tar.bz2.asc httpd.tar.bz2; 	command -v gpgconf && gpgconf --kill all || :; 	rm -rf "$GNUPGHOME" httpd.tar.bz2.asc; 		mkdir -p src; 	tar -xf httpd.tar.bz2 -C src --strip-components=1; 	rm httpd.tar.bz2; 	cd src; 		patches() { 		while [ "$#" -gt 0 ]; do 			local patchFile="$1"; shift; 			local patchSha256="$1"; shift; 			ddist "$patchFile" "httpd/patches/apply_to_$HTTPD_VERSION/$patchFile"; 			echo "$patchSha256 *$patchFile" | sha256sum -c -; 			patch -p0 < "$patchFile"; 			rm -f "$patchFile"; 		done; 	}; 	patches $HTTPD_PATCHES; 		gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	CFLAGS="$(dpkg-buildflags --get CFLAGS)"; 	CPPFLAGS="$(dpkg-buildflags --get CPPFLAGS)"; 	LDFLAGS="$(dpkg-buildflags --get LDFLAGS)"; 	./configure 		--build="$gnuArch" 		--prefix="$HTTPD_PREFIX" 		--enable-mods-shared=reallyall 		--enable-mpms-shared=all 		--enable-pie 		CFLAGS="-pipe $CFLAGS" 		CPPFLAGS="$CPPFLAGS" 		LDFLAGS="-Wl,--as-needed $LDFLAGS" 	; 	make -j "$(nproc)"; 	make install; 		cd ..; 	rm -r src man manual; 		sed -ri 		-e 's!^(\s*CustomLog)\s+\S+!\1 /proc/self/fd/1!g' 		-e 's!^(\s*ErrorLog)\s+\S+!\1 /proc/self/fd/2!g' 		-e 's!^(\s*TransferLog)\s+\S+!\1 /proc/self/fd/1!g' 		"$HTTPD_PREFIX/conf/httpd.conf" 		"$HTTPD_PREFIX/conf/extra/httpd-ssl.conf" 	; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		httpd -v
-# Tue, 12 Jan 2021 01:40:04 GMT
+# Tue, 09 Feb 2021 04:03:52 GMT
 STOPSIGNAL SIGWINCH
-# Tue, 12 Jan 2021 01:40:05 GMT
+# Tue, 09 Feb 2021 04:03:52 GMT
 COPY file:c432ff61c4993ecdef4786f48d91a96f8f0707f6179816ccb98db661bfb96b90 in /usr/local/bin/ 
-# Tue, 12 Jan 2021 01:40:06 GMT
+# Tue, 09 Feb 2021 04:03:53 GMT
 EXPOSE 80
-# Tue, 12 Jan 2021 01:40:07 GMT
+# Tue, 09 Feb 2021 04:03:55 GMT
 CMD ["httpd-foreground"]
 ```
 
 -	Layers:
-	-	`sha256:be493c6a598447fe5f46a390f3bee10f2d2ba2215d39829fe84eb40a7add18fc`  
-		Last Modified: Tue, 12 Jan 2021 00:11:14 GMT  
-		Size: 22.7 MB (22715905 bytes)  
+	-	`sha256:db574d82360c3b60abadbef4f3daf8dee01f24741fc6ab3692aa543558d8b624`  
+		Last Modified: Tue, 09 Feb 2021 03:09:46 GMT  
+		Size: 22.7 MB (22703384 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c8355468587cf6d37ed8c36b13dd5a0515fdbcfb5d914d91d3849d526caaaee7`  
-		Last Modified: Tue, 12 Jan 2021 01:40:41 GMT  
-		Size: 178.0 B  
+	-	`sha256:a52b3fb1afbcbee6c9e53d63d0cda2dbd4a45b0dd85c33dac980db68d9a61038`  
+		Last Modified: Tue, 09 Feb 2021 04:04:25 GMT  
+		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8d726322ec76c4c4447b23a0a103d00dadc398747f8a0a5b831ab7737c836548`  
-		Last Modified: Tue, 12 Jan 2021 01:40:43 GMT  
-		Size: 2.3 MB (2291215 bytes)  
+	-	`sha256:832c089dfee72911132be78f09ec4ef4250ea7405090f7b3378a4ab9ed076d24`  
+		Last Modified: Tue, 09 Feb 2021 04:04:26 GMT  
+		Size: 2.3 MB (2291202 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:74906bc92d051f76794c8953c7b2e52c999c20ab548e417b82d2c744ad8da326`  
-		Last Modified: Tue, 12 Jan 2021 01:40:51 GMT  
-		Size: 23.2 MB (23213889 bytes)  
+	-	`sha256:13bbb4f777e29eabb7a5a6fb861bac8db06add9c51e669f669c4657174c66a93`  
+		Last Modified: Tue, 09 Feb 2021 04:04:31 GMT  
+		Size: 23.2 MB (23214059 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fc7b1825e74fdcd59fec667ca601f9458b66bd8bf8a3f1f74ba236ec4f300eb0`  
-		Last Modified: Tue, 12 Jan 2021 01:40:42 GMT  
-		Size: 297.0 B  
+	-	`sha256:701fd804e9ead3786f30fae116b30e8575d7a2fdcb8cd857645bd0b30abad94a`  
+		Last Modified: Tue, 09 Feb 2021 04:04:25 GMT  
+		Size: 294.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `httpd:2` - linux; arm64 variant v8
@@ -371,69 +371,69 @@ CMD ["httpd-foreground"]
 ### `httpd:2` - linux; mips64le
 
 ```console
-$ docker pull httpd@sha256:cd7757f03b37e942ff97f09e2ebf242a5d14d746238d4a7e25924cd4737f1484
+$ docker pull httpd@sha256:7262b2de48950cd36ddaf7ffa12e406a6786af4223a97300b267f4479f1a3dfa
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **52.6 MB (52638051 bytes)**  
+-	Total Size: **52.6 MB (52623893 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:edb1c382dbe9b47319c14aea12632c7693e0ab577603babcdd6235ddbc865493`
+-	Image ID: `sha256:a59c940a82eb08fac420630e96a4d9aabdffed02ca4f8ad5a084e07ac42f0a5a`
 -	Default Command: `["httpd-foreground"]`
 
 ```dockerfile
-# Tue, 12 Jan 2021 01:16:21 GMT
-ADD file:e75a4429a4b3b0f7a646f85af88d412a98006cdf44ea6744b90fea7419840831 in / 
-# Tue, 12 Jan 2021 01:16:22 GMT
+# Tue, 09 Feb 2021 03:09:26 GMT
+ADD file:0222a151f4e5033d9eae98ce2b703a63f52d049dd72ac40bdd0dc2dafe619f0a in / 
+# Tue, 09 Feb 2021 03:09:27 GMT
 CMD ["bash"]
-# Tue, 12 Jan 2021 02:16:13 GMT
+# Tue, 09 Feb 2021 04:23:18 GMT
 ENV HTTPD_PREFIX=/usr/local/apache2
-# Tue, 12 Jan 2021 02:16:13 GMT
+# Tue, 09 Feb 2021 04:23:18 GMT
 ENV PATH=/usr/local/apache2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 12 Jan 2021 02:16:15 GMT
+# Tue, 09 Feb 2021 04:23:20 GMT
 RUN mkdir -p "$HTTPD_PREFIX" 	&& chown www-data:www-data "$HTTPD_PREFIX"
-# Tue, 12 Jan 2021 02:16:16 GMT
+# Tue, 09 Feb 2021 04:23:21 GMT
 WORKDIR /usr/local/apache2
-# Tue, 12 Jan 2021 02:16:29 GMT
+# Tue, 09 Feb 2021 04:23:34 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libaprutil1-ldap 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 12 Jan 2021 02:16:29 GMT
+# Tue, 09 Feb 2021 04:23:34 GMT
 ENV HTTPD_VERSION=2.4.46
-# Tue, 12 Jan 2021 02:16:30 GMT
+# Tue, 09 Feb 2021 04:23:35 GMT
 ENV HTTPD_SHA256=740eddf6e1c641992b22359cabc66e6325868c3c5e2e3f98faf349b61ecf41ea
-# Tue, 12 Jan 2021 02:16:30 GMT
+# Tue, 09 Feb 2021 04:23:35 GMT
 ENV HTTPD_PATCHES=
-# Tue, 12 Jan 2021 02:23:26 GMT
+# Tue, 09 Feb 2021 04:30:36 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		bzip2 		ca-certificates 		dirmngr 		dpkg-dev 		gcc 		gnupg 		libapr1-dev 		libaprutil1-dev 		libbrotli-dev 		libcurl4-openssl-dev 		libjansson-dev 		liblua5.2-dev 		libnghttp2-dev 		libpcre3-dev 		libssl-dev 		libxml2-dev 		make 		wget 		zlib1g-dev 	; 	rm -r /var/lib/apt/lists/*; 		ddist() { 		local f="$1"; shift; 		local distFile="$1"; shift; 		local success=; 		local distUrl=; 		for distUrl in 			'https://www.apache.org/dyn/closer.cgi?action=download&filename=' 			https://www-us.apache.org/dist/ 			https://www.apache.org/dist/ 			https://archive.apache.org/dist/ 		; do 			if wget -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then 				success=1; 				break; 			fi; 		done; 		[ -n "$success" ]; 	}; 		ddist 'httpd.tar.bz2' "httpd/httpd-$HTTPD_VERSION.tar.bz2"; 	echo "$HTTPD_SHA256 *httpd.tar.bz2" | sha256sum -c -; 		ddist 'httpd.tar.bz2.asc' "httpd/httpd-$HTTPD_VERSION.tar.bz2.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	for key in 		DE29FB3971E71543FD2DC049508EAEC5302DA568 		13155B0E9E634F42BF6C163FDDBA64BA2C312D2F 		8B39757B1D8A994DF2433ED58B3A601F08C975E5 		31EE1A81B8D066548156D37B7D6DBFD1F08E012A 		A10208FEC3152DD7C0C9B59B361522D782AB7BD1 		3DE024AFDA7A4B15CB6C14410F81AA8AB0D5F771 		EB138C6AF0FC691001B16D93344A844D751D7F27 		CBA5A7C21EC143314C41393E5B968010E04F9A89 		3C016F2B764621BB549C66B516A96495E2226795 		937FB3994A242BA9BF49E93021454AF0CC8B0F7E 		EAD1359A4C0F2D37472AAF28F55DF0293A4E7AC9 		4C1EADADB4EF5007579C919C6635B6C0DE885DD3 		01E475360FCCF1D0F24B9D145D414AE1E005C9CB 		92CCEF0AA7DD46AC3A0F498BCA6939748103A37E 		D395C7573A68B9796D38C258153FA0CD75A67692 		FA39B617B61493FD283503E7EED1EA392261D073 		984FB3350C1D5C7A3282255BB31B213D208F5064 		FE7A49DAA875E890B4167F76CCB2EB46E76CF6D0 		39F6691A0ECF0C50E8BB849CF78875F642721F00 		29A2BA848177B73878277FA475CAA2A3F39B3750 		120A8667241AEDD4A78B46104C042818311A3DE5 		453510BDA6C5855624E009236D0BC73A40581837 		0DE5C55C6BF3B2352DABB89E13249B4FEC88A0BF 		7CDBED100806552182F98844E8E7E00B4DAA1988 		A8BA9617EF3BCCAC3B29B869EDB105896F9522D8 		3E6AC004854F3A7F03566B592FF06894E55B0D0E 		5B5181C2C0AB13E59DA3F7A3EC582EB639FF092C 		A93D62ECC3C8EA12DB220EC934EA76E6791485A8 		65B2D44FE74BD5E3DE3AC3F082781DE46D5954FA 		8935926745E1CE7E3ED748F6EC99EE267EB5F61A 		B9E8213AEFB861AF35A41F2C995E35221AD84DFF 		E3480043595621FE56105F112AB12A7ADC55C003 		93525CFCF6FDFFB3FD9700DD5A4B10AE43B56A27 	; do 		gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 	done; 	gpg --batch --verify httpd.tar.bz2.asc httpd.tar.bz2; 	command -v gpgconf && gpgconf --kill all || :; 	rm -rf "$GNUPGHOME" httpd.tar.bz2.asc; 		mkdir -p src; 	tar -xf httpd.tar.bz2 -C src --strip-components=1; 	rm httpd.tar.bz2; 	cd src; 		patches() { 		while [ "$#" -gt 0 ]; do 			local patchFile="$1"; shift; 			local patchSha256="$1"; shift; 			ddist "$patchFile" "httpd/patches/apply_to_$HTTPD_VERSION/$patchFile"; 			echo "$patchSha256 *$patchFile" | sha256sum -c -; 			patch -p0 < "$patchFile"; 			rm -f "$patchFile"; 		done; 	}; 	patches $HTTPD_PATCHES; 		gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	CFLAGS="$(dpkg-buildflags --get CFLAGS)"; 	CPPFLAGS="$(dpkg-buildflags --get CPPFLAGS)"; 	LDFLAGS="$(dpkg-buildflags --get LDFLAGS)"; 	./configure 		--build="$gnuArch" 		--prefix="$HTTPD_PREFIX" 		--enable-mods-shared=reallyall 		--enable-mpms-shared=all 		--enable-pie 		CFLAGS="-pipe $CFLAGS" 		CPPFLAGS="$CPPFLAGS" 		LDFLAGS="-Wl,--as-needed $LDFLAGS" 	; 	make -j "$(nproc)"; 	make install; 		cd ..; 	rm -r src man manual; 		sed -ri 		-e 's!^(\s*CustomLog)\s+\S+!\1 /proc/self/fd/1!g' 		-e 's!^(\s*ErrorLog)\s+\S+!\1 /proc/self/fd/2!g' 		-e 's!^(\s*TransferLog)\s+\S+!\1 /proc/self/fd/1!g' 		"$HTTPD_PREFIX/conf/httpd.conf" 		"$HTTPD_PREFIX/conf/extra/httpd-ssl.conf" 	; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		httpd -v
-# Tue, 12 Jan 2021 02:23:27 GMT
+# Tue, 09 Feb 2021 04:30:37 GMT
 STOPSIGNAL SIGWINCH
-# Tue, 12 Jan 2021 02:23:27 GMT
+# Tue, 09 Feb 2021 04:30:37 GMT
 COPY file:c432ff61c4993ecdef4786f48d91a96f8f0707f6179816ccb98db661bfb96b90 in /usr/local/bin/ 
-# Tue, 12 Jan 2021 02:23:27 GMT
+# Tue, 09 Feb 2021 04:30:37 GMT
 EXPOSE 80
-# Tue, 12 Jan 2021 02:23:28 GMT
+# Tue, 09 Feb 2021 04:30:38 GMT
 CMD ["httpd-foreground"]
 ```
 
 -	Layers:
-	-	`sha256:c8d46df0b1a64c5ee6879aa09ea5818b36bcae5d39b941d7262bcff617be9873`  
-		Last Modified: Tue, 12 Jan 2021 01:23:17 GMT  
-		Size: 25.8 MB (25778695 bytes)  
+	-	`sha256:dfb81134097d874e01b495d1fba82e384056d0a3a45f01a69a2e86ae82af1e96`  
+		Last Modified: Tue, 09 Feb 2021 03:15:55 GMT  
+		Size: 25.8 MB (25764640 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:311b6b68560b6e56d34fac46720e35cca709b87ae065e0b1e4e1bd86e6002064`  
-		Last Modified: Tue, 12 Jan 2021 02:23:54 GMT  
-		Size: 147.0 B  
+	-	`sha256:583311ee2a57ef346b05890d4aa358cd48830dd93249cb7591183daee07e5a66`  
+		Last Modified: Tue, 09 Feb 2021 04:30:57 GMT  
+		Size: 143.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5366ac3e71a1c0db6998673ea22c43535bc98debae925d9fe51f069ab65816c5`  
-		Last Modified: Tue, 12 Jan 2021 02:23:55 GMT  
-		Size: 2.3 MB (2343541 bytes)  
+	-	`sha256:bd644e48a9914329962724a8ce13e80b852e81e321c217138a9748b6d0a9ba25`  
+		Last Modified: Tue, 09 Feb 2021 04:30:58 GMT  
+		Size: 2.3 MB (2343514 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:121aa19ac808586d1b1803c8afb1e9a525ab88fe346c4f66167b477697cbe0f6`  
-		Last Modified: Tue, 12 Jan 2021 02:24:09 GMT  
-		Size: 24.5 MB (24515370 bytes)  
+	-	`sha256:a5678d57ccfb85674024f57466373d579dcff0cee9acb110f8013af44b49636d`  
+		Last Modified: Tue, 09 Feb 2021 04:31:12 GMT  
+		Size: 24.5 MB (24515304 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e9f43fbafdcb1ddef9294490a2acd475a29e2b68a6c20a1f784f13c90585d3fc`  
-		Last Modified: Tue, 12 Jan 2021 02:23:54 GMT  
-		Size: 298.0 B  
+	-	`sha256:aa445a5a953c8df960ba76c8e743eb7c242ad8681cb2f8a33bc1f922e18b0063`  
+		Last Modified: Tue, 09 Feb 2021 04:30:56 GMT  
+		Size: 292.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `httpd:2` - linux; ppc64le
@@ -575,7 +575,7 @@ CMD ["httpd-foreground"]
 ## `httpd:2.4`
 
 ```console
-$ docker pull httpd@sha256:6e1a77aedb883df70e7c80b43d776f1ed2ebba724de678ca11e12073c3759b4c
+$ docker pull httpd@sha256:a0221881241adf0ee1f2efbc4976f858cb12333675b94b8cf4c42c0e4b11d710
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -932,69 +932,69 @@ CMD ["httpd-foreground"]
 ### `httpd:2.4` - linux; mips64le
 
 ```console
-$ docker pull httpd@sha256:cd7757f03b37e942ff97f09e2ebf242a5d14d746238d4a7e25924cd4737f1484
+$ docker pull httpd@sha256:7262b2de48950cd36ddaf7ffa12e406a6786af4223a97300b267f4479f1a3dfa
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **52.6 MB (52638051 bytes)**  
+-	Total Size: **52.6 MB (52623893 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:edb1c382dbe9b47319c14aea12632c7693e0ab577603babcdd6235ddbc865493`
+-	Image ID: `sha256:a59c940a82eb08fac420630e96a4d9aabdffed02ca4f8ad5a084e07ac42f0a5a`
 -	Default Command: `["httpd-foreground"]`
 
 ```dockerfile
-# Tue, 12 Jan 2021 01:16:21 GMT
-ADD file:e75a4429a4b3b0f7a646f85af88d412a98006cdf44ea6744b90fea7419840831 in / 
-# Tue, 12 Jan 2021 01:16:22 GMT
+# Tue, 09 Feb 2021 03:09:26 GMT
+ADD file:0222a151f4e5033d9eae98ce2b703a63f52d049dd72ac40bdd0dc2dafe619f0a in / 
+# Tue, 09 Feb 2021 03:09:27 GMT
 CMD ["bash"]
-# Tue, 12 Jan 2021 02:16:13 GMT
+# Tue, 09 Feb 2021 04:23:18 GMT
 ENV HTTPD_PREFIX=/usr/local/apache2
-# Tue, 12 Jan 2021 02:16:13 GMT
+# Tue, 09 Feb 2021 04:23:18 GMT
 ENV PATH=/usr/local/apache2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 12 Jan 2021 02:16:15 GMT
+# Tue, 09 Feb 2021 04:23:20 GMT
 RUN mkdir -p "$HTTPD_PREFIX" 	&& chown www-data:www-data "$HTTPD_PREFIX"
-# Tue, 12 Jan 2021 02:16:16 GMT
+# Tue, 09 Feb 2021 04:23:21 GMT
 WORKDIR /usr/local/apache2
-# Tue, 12 Jan 2021 02:16:29 GMT
+# Tue, 09 Feb 2021 04:23:34 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libaprutil1-ldap 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 12 Jan 2021 02:16:29 GMT
+# Tue, 09 Feb 2021 04:23:34 GMT
 ENV HTTPD_VERSION=2.4.46
-# Tue, 12 Jan 2021 02:16:30 GMT
+# Tue, 09 Feb 2021 04:23:35 GMT
 ENV HTTPD_SHA256=740eddf6e1c641992b22359cabc66e6325868c3c5e2e3f98faf349b61ecf41ea
-# Tue, 12 Jan 2021 02:16:30 GMT
+# Tue, 09 Feb 2021 04:23:35 GMT
 ENV HTTPD_PATCHES=
-# Tue, 12 Jan 2021 02:23:26 GMT
+# Tue, 09 Feb 2021 04:30:36 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		bzip2 		ca-certificates 		dirmngr 		dpkg-dev 		gcc 		gnupg 		libapr1-dev 		libaprutil1-dev 		libbrotli-dev 		libcurl4-openssl-dev 		libjansson-dev 		liblua5.2-dev 		libnghttp2-dev 		libpcre3-dev 		libssl-dev 		libxml2-dev 		make 		wget 		zlib1g-dev 	; 	rm -r /var/lib/apt/lists/*; 		ddist() { 		local f="$1"; shift; 		local distFile="$1"; shift; 		local success=; 		local distUrl=; 		for distUrl in 			'https://www.apache.org/dyn/closer.cgi?action=download&filename=' 			https://www-us.apache.org/dist/ 			https://www.apache.org/dist/ 			https://archive.apache.org/dist/ 		; do 			if wget -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then 				success=1; 				break; 			fi; 		done; 		[ -n "$success" ]; 	}; 		ddist 'httpd.tar.bz2' "httpd/httpd-$HTTPD_VERSION.tar.bz2"; 	echo "$HTTPD_SHA256 *httpd.tar.bz2" | sha256sum -c -; 		ddist 'httpd.tar.bz2.asc' "httpd/httpd-$HTTPD_VERSION.tar.bz2.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	for key in 		DE29FB3971E71543FD2DC049508EAEC5302DA568 		13155B0E9E634F42BF6C163FDDBA64BA2C312D2F 		8B39757B1D8A994DF2433ED58B3A601F08C975E5 		31EE1A81B8D066548156D37B7D6DBFD1F08E012A 		A10208FEC3152DD7C0C9B59B361522D782AB7BD1 		3DE024AFDA7A4B15CB6C14410F81AA8AB0D5F771 		EB138C6AF0FC691001B16D93344A844D751D7F27 		CBA5A7C21EC143314C41393E5B968010E04F9A89 		3C016F2B764621BB549C66B516A96495E2226795 		937FB3994A242BA9BF49E93021454AF0CC8B0F7E 		EAD1359A4C0F2D37472AAF28F55DF0293A4E7AC9 		4C1EADADB4EF5007579C919C6635B6C0DE885DD3 		01E475360FCCF1D0F24B9D145D414AE1E005C9CB 		92CCEF0AA7DD46AC3A0F498BCA6939748103A37E 		D395C7573A68B9796D38C258153FA0CD75A67692 		FA39B617B61493FD283503E7EED1EA392261D073 		984FB3350C1D5C7A3282255BB31B213D208F5064 		FE7A49DAA875E890B4167F76CCB2EB46E76CF6D0 		39F6691A0ECF0C50E8BB849CF78875F642721F00 		29A2BA848177B73878277FA475CAA2A3F39B3750 		120A8667241AEDD4A78B46104C042818311A3DE5 		453510BDA6C5855624E009236D0BC73A40581837 		0DE5C55C6BF3B2352DABB89E13249B4FEC88A0BF 		7CDBED100806552182F98844E8E7E00B4DAA1988 		A8BA9617EF3BCCAC3B29B869EDB105896F9522D8 		3E6AC004854F3A7F03566B592FF06894E55B0D0E 		5B5181C2C0AB13E59DA3F7A3EC582EB639FF092C 		A93D62ECC3C8EA12DB220EC934EA76E6791485A8 		65B2D44FE74BD5E3DE3AC3F082781DE46D5954FA 		8935926745E1CE7E3ED748F6EC99EE267EB5F61A 		B9E8213AEFB861AF35A41F2C995E35221AD84DFF 		E3480043595621FE56105F112AB12A7ADC55C003 		93525CFCF6FDFFB3FD9700DD5A4B10AE43B56A27 	; do 		gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 	done; 	gpg --batch --verify httpd.tar.bz2.asc httpd.tar.bz2; 	command -v gpgconf && gpgconf --kill all || :; 	rm -rf "$GNUPGHOME" httpd.tar.bz2.asc; 		mkdir -p src; 	tar -xf httpd.tar.bz2 -C src --strip-components=1; 	rm httpd.tar.bz2; 	cd src; 		patches() { 		while [ "$#" -gt 0 ]; do 			local patchFile="$1"; shift; 			local patchSha256="$1"; shift; 			ddist "$patchFile" "httpd/patches/apply_to_$HTTPD_VERSION/$patchFile"; 			echo "$patchSha256 *$patchFile" | sha256sum -c -; 			patch -p0 < "$patchFile"; 			rm -f "$patchFile"; 		done; 	}; 	patches $HTTPD_PATCHES; 		gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	CFLAGS="$(dpkg-buildflags --get CFLAGS)"; 	CPPFLAGS="$(dpkg-buildflags --get CPPFLAGS)"; 	LDFLAGS="$(dpkg-buildflags --get LDFLAGS)"; 	./configure 		--build="$gnuArch" 		--prefix="$HTTPD_PREFIX" 		--enable-mods-shared=reallyall 		--enable-mpms-shared=all 		--enable-pie 		CFLAGS="-pipe $CFLAGS" 		CPPFLAGS="$CPPFLAGS" 		LDFLAGS="-Wl,--as-needed $LDFLAGS" 	; 	make -j "$(nproc)"; 	make install; 		cd ..; 	rm -r src man manual; 		sed -ri 		-e 's!^(\s*CustomLog)\s+\S+!\1 /proc/self/fd/1!g' 		-e 's!^(\s*ErrorLog)\s+\S+!\1 /proc/self/fd/2!g' 		-e 's!^(\s*TransferLog)\s+\S+!\1 /proc/self/fd/1!g' 		"$HTTPD_PREFIX/conf/httpd.conf" 		"$HTTPD_PREFIX/conf/extra/httpd-ssl.conf" 	; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		httpd -v
-# Tue, 12 Jan 2021 02:23:27 GMT
+# Tue, 09 Feb 2021 04:30:37 GMT
 STOPSIGNAL SIGWINCH
-# Tue, 12 Jan 2021 02:23:27 GMT
+# Tue, 09 Feb 2021 04:30:37 GMT
 COPY file:c432ff61c4993ecdef4786f48d91a96f8f0707f6179816ccb98db661bfb96b90 in /usr/local/bin/ 
-# Tue, 12 Jan 2021 02:23:27 GMT
+# Tue, 09 Feb 2021 04:30:37 GMT
 EXPOSE 80
-# Tue, 12 Jan 2021 02:23:28 GMT
+# Tue, 09 Feb 2021 04:30:38 GMT
 CMD ["httpd-foreground"]
 ```
 
 -	Layers:
-	-	`sha256:c8d46df0b1a64c5ee6879aa09ea5818b36bcae5d39b941d7262bcff617be9873`  
-		Last Modified: Tue, 12 Jan 2021 01:23:17 GMT  
-		Size: 25.8 MB (25778695 bytes)  
+	-	`sha256:dfb81134097d874e01b495d1fba82e384056d0a3a45f01a69a2e86ae82af1e96`  
+		Last Modified: Tue, 09 Feb 2021 03:15:55 GMT  
+		Size: 25.8 MB (25764640 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:311b6b68560b6e56d34fac46720e35cca709b87ae065e0b1e4e1bd86e6002064`  
-		Last Modified: Tue, 12 Jan 2021 02:23:54 GMT  
-		Size: 147.0 B  
+	-	`sha256:583311ee2a57ef346b05890d4aa358cd48830dd93249cb7591183daee07e5a66`  
+		Last Modified: Tue, 09 Feb 2021 04:30:57 GMT  
+		Size: 143.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5366ac3e71a1c0db6998673ea22c43535bc98debae925d9fe51f069ab65816c5`  
-		Last Modified: Tue, 12 Jan 2021 02:23:55 GMT  
-		Size: 2.3 MB (2343541 bytes)  
+	-	`sha256:bd644e48a9914329962724a8ce13e80b852e81e321c217138a9748b6d0a9ba25`  
+		Last Modified: Tue, 09 Feb 2021 04:30:58 GMT  
+		Size: 2.3 MB (2343514 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:121aa19ac808586d1b1803c8afb1e9a525ab88fe346c4f66167b477697cbe0f6`  
-		Last Modified: Tue, 12 Jan 2021 02:24:09 GMT  
-		Size: 24.5 MB (24515370 bytes)  
+	-	`sha256:a5678d57ccfb85674024f57466373d579dcff0cee9acb110f8013af44b49636d`  
+		Last Modified: Tue, 09 Feb 2021 04:31:12 GMT  
+		Size: 24.5 MB (24515304 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e9f43fbafdcb1ddef9294490a2acd475a29e2b68a6c20a1f784f13c90585d3fc`  
-		Last Modified: Tue, 12 Jan 2021 02:23:54 GMT  
-		Size: 298.0 B  
+	-	`sha256:aa445a5a953c8df960ba76c8e743eb7c242ad8681cb2f8a33bc1f922e18b0063`  
+		Last Modified: Tue, 09 Feb 2021 04:30:56 GMT  
+		Size: 292.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `httpd:2.4` - linux; ppc64le
@@ -1136,7 +1136,7 @@ CMD ["httpd-foreground"]
 ## `httpd:2.4.46`
 
 ```console
-$ docker pull httpd@sha256:6e1a77aedb883df70e7c80b43d776f1ed2ebba724de678ca11e12073c3759b4c
+$ docker pull httpd@sha256:a0221881241adf0ee1f2efbc4976f858cb12333675b94b8cf4c42c0e4b11d710
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1493,69 +1493,69 @@ CMD ["httpd-foreground"]
 ### `httpd:2.4.46` - linux; mips64le
 
 ```console
-$ docker pull httpd@sha256:cd7757f03b37e942ff97f09e2ebf242a5d14d746238d4a7e25924cd4737f1484
+$ docker pull httpd@sha256:7262b2de48950cd36ddaf7ffa12e406a6786af4223a97300b267f4479f1a3dfa
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **52.6 MB (52638051 bytes)**  
+-	Total Size: **52.6 MB (52623893 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:edb1c382dbe9b47319c14aea12632c7693e0ab577603babcdd6235ddbc865493`
+-	Image ID: `sha256:a59c940a82eb08fac420630e96a4d9aabdffed02ca4f8ad5a084e07ac42f0a5a`
 -	Default Command: `["httpd-foreground"]`
 
 ```dockerfile
-# Tue, 12 Jan 2021 01:16:21 GMT
-ADD file:e75a4429a4b3b0f7a646f85af88d412a98006cdf44ea6744b90fea7419840831 in / 
-# Tue, 12 Jan 2021 01:16:22 GMT
+# Tue, 09 Feb 2021 03:09:26 GMT
+ADD file:0222a151f4e5033d9eae98ce2b703a63f52d049dd72ac40bdd0dc2dafe619f0a in / 
+# Tue, 09 Feb 2021 03:09:27 GMT
 CMD ["bash"]
-# Tue, 12 Jan 2021 02:16:13 GMT
+# Tue, 09 Feb 2021 04:23:18 GMT
 ENV HTTPD_PREFIX=/usr/local/apache2
-# Tue, 12 Jan 2021 02:16:13 GMT
+# Tue, 09 Feb 2021 04:23:18 GMT
 ENV PATH=/usr/local/apache2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 12 Jan 2021 02:16:15 GMT
+# Tue, 09 Feb 2021 04:23:20 GMT
 RUN mkdir -p "$HTTPD_PREFIX" 	&& chown www-data:www-data "$HTTPD_PREFIX"
-# Tue, 12 Jan 2021 02:16:16 GMT
+# Tue, 09 Feb 2021 04:23:21 GMT
 WORKDIR /usr/local/apache2
-# Tue, 12 Jan 2021 02:16:29 GMT
+# Tue, 09 Feb 2021 04:23:34 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libaprutil1-ldap 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 12 Jan 2021 02:16:29 GMT
+# Tue, 09 Feb 2021 04:23:34 GMT
 ENV HTTPD_VERSION=2.4.46
-# Tue, 12 Jan 2021 02:16:30 GMT
+# Tue, 09 Feb 2021 04:23:35 GMT
 ENV HTTPD_SHA256=740eddf6e1c641992b22359cabc66e6325868c3c5e2e3f98faf349b61ecf41ea
-# Tue, 12 Jan 2021 02:16:30 GMT
+# Tue, 09 Feb 2021 04:23:35 GMT
 ENV HTTPD_PATCHES=
-# Tue, 12 Jan 2021 02:23:26 GMT
+# Tue, 09 Feb 2021 04:30:36 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		bzip2 		ca-certificates 		dirmngr 		dpkg-dev 		gcc 		gnupg 		libapr1-dev 		libaprutil1-dev 		libbrotli-dev 		libcurl4-openssl-dev 		libjansson-dev 		liblua5.2-dev 		libnghttp2-dev 		libpcre3-dev 		libssl-dev 		libxml2-dev 		make 		wget 		zlib1g-dev 	; 	rm -r /var/lib/apt/lists/*; 		ddist() { 		local f="$1"; shift; 		local distFile="$1"; shift; 		local success=; 		local distUrl=; 		for distUrl in 			'https://www.apache.org/dyn/closer.cgi?action=download&filename=' 			https://www-us.apache.org/dist/ 			https://www.apache.org/dist/ 			https://archive.apache.org/dist/ 		; do 			if wget -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then 				success=1; 				break; 			fi; 		done; 		[ -n "$success" ]; 	}; 		ddist 'httpd.tar.bz2' "httpd/httpd-$HTTPD_VERSION.tar.bz2"; 	echo "$HTTPD_SHA256 *httpd.tar.bz2" | sha256sum -c -; 		ddist 'httpd.tar.bz2.asc' "httpd/httpd-$HTTPD_VERSION.tar.bz2.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	for key in 		DE29FB3971E71543FD2DC049508EAEC5302DA568 		13155B0E9E634F42BF6C163FDDBA64BA2C312D2F 		8B39757B1D8A994DF2433ED58B3A601F08C975E5 		31EE1A81B8D066548156D37B7D6DBFD1F08E012A 		A10208FEC3152DD7C0C9B59B361522D782AB7BD1 		3DE024AFDA7A4B15CB6C14410F81AA8AB0D5F771 		EB138C6AF0FC691001B16D93344A844D751D7F27 		CBA5A7C21EC143314C41393E5B968010E04F9A89 		3C016F2B764621BB549C66B516A96495E2226795 		937FB3994A242BA9BF49E93021454AF0CC8B0F7E 		EAD1359A4C0F2D37472AAF28F55DF0293A4E7AC9 		4C1EADADB4EF5007579C919C6635B6C0DE885DD3 		01E475360FCCF1D0F24B9D145D414AE1E005C9CB 		92CCEF0AA7DD46AC3A0F498BCA6939748103A37E 		D395C7573A68B9796D38C258153FA0CD75A67692 		FA39B617B61493FD283503E7EED1EA392261D073 		984FB3350C1D5C7A3282255BB31B213D208F5064 		FE7A49DAA875E890B4167F76CCB2EB46E76CF6D0 		39F6691A0ECF0C50E8BB849CF78875F642721F00 		29A2BA848177B73878277FA475CAA2A3F39B3750 		120A8667241AEDD4A78B46104C042818311A3DE5 		453510BDA6C5855624E009236D0BC73A40581837 		0DE5C55C6BF3B2352DABB89E13249B4FEC88A0BF 		7CDBED100806552182F98844E8E7E00B4DAA1988 		A8BA9617EF3BCCAC3B29B869EDB105896F9522D8 		3E6AC004854F3A7F03566B592FF06894E55B0D0E 		5B5181C2C0AB13E59DA3F7A3EC582EB639FF092C 		A93D62ECC3C8EA12DB220EC934EA76E6791485A8 		65B2D44FE74BD5E3DE3AC3F082781DE46D5954FA 		8935926745E1CE7E3ED748F6EC99EE267EB5F61A 		B9E8213AEFB861AF35A41F2C995E35221AD84DFF 		E3480043595621FE56105F112AB12A7ADC55C003 		93525CFCF6FDFFB3FD9700DD5A4B10AE43B56A27 	; do 		gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 	done; 	gpg --batch --verify httpd.tar.bz2.asc httpd.tar.bz2; 	command -v gpgconf && gpgconf --kill all || :; 	rm -rf "$GNUPGHOME" httpd.tar.bz2.asc; 		mkdir -p src; 	tar -xf httpd.tar.bz2 -C src --strip-components=1; 	rm httpd.tar.bz2; 	cd src; 		patches() { 		while [ "$#" -gt 0 ]; do 			local patchFile="$1"; shift; 			local patchSha256="$1"; shift; 			ddist "$patchFile" "httpd/patches/apply_to_$HTTPD_VERSION/$patchFile"; 			echo "$patchSha256 *$patchFile" | sha256sum -c -; 			patch -p0 < "$patchFile"; 			rm -f "$patchFile"; 		done; 	}; 	patches $HTTPD_PATCHES; 		gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	CFLAGS="$(dpkg-buildflags --get CFLAGS)"; 	CPPFLAGS="$(dpkg-buildflags --get CPPFLAGS)"; 	LDFLAGS="$(dpkg-buildflags --get LDFLAGS)"; 	./configure 		--build="$gnuArch" 		--prefix="$HTTPD_PREFIX" 		--enable-mods-shared=reallyall 		--enable-mpms-shared=all 		--enable-pie 		CFLAGS="-pipe $CFLAGS" 		CPPFLAGS="$CPPFLAGS" 		LDFLAGS="-Wl,--as-needed $LDFLAGS" 	; 	make -j "$(nproc)"; 	make install; 		cd ..; 	rm -r src man manual; 		sed -ri 		-e 's!^(\s*CustomLog)\s+\S+!\1 /proc/self/fd/1!g' 		-e 's!^(\s*ErrorLog)\s+\S+!\1 /proc/self/fd/2!g' 		-e 's!^(\s*TransferLog)\s+\S+!\1 /proc/self/fd/1!g' 		"$HTTPD_PREFIX/conf/httpd.conf" 		"$HTTPD_PREFIX/conf/extra/httpd-ssl.conf" 	; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		httpd -v
-# Tue, 12 Jan 2021 02:23:27 GMT
+# Tue, 09 Feb 2021 04:30:37 GMT
 STOPSIGNAL SIGWINCH
-# Tue, 12 Jan 2021 02:23:27 GMT
+# Tue, 09 Feb 2021 04:30:37 GMT
 COPY file:c432ff61c4993ecdef4786f48d91a96f8f0707f6179816ccb98db661bfb96b90 in /usr/local/bin/ 
-# Tue, 12 Jan 2021 02:23:27 GMT
+# Tue, 09 Feb 2021 04:30:37 GMT
 EXPOSE 80
-# Tue, 12 Jan 2021 02:23:28 GMT
+# Tue, 09 Feb 2021 04:30:38 GMT
 CMD ["httpd-foreground"]
 ```
 
 -	Layers:
-	-	`sha256:c8d46df0b1a64c5ee6879aa09ea5818b36bcae5d39b941d7262bcff617be9873`  
-		Last Modified: Tue, 12 Jan 2021 01:23:17 GMT  
-		Size: 25.8 MB (25778695 bytes)  
+	-	`sha256:dfb81134097d874e01b495d1fba82e384056d0a3a45f01a69a2e86ae82af1e96`  
+		Last Modified: Tue, 09 Feb 2021 03:15:55 GMT  
+		Size: 25.8 MB (25764640 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:311b6b68560b6e56d34fac46720e35cca709b87ae065e0b1e4e1bd86e6002064`  
-		Last Modified: Tue, 12 Jan 2021 02:23:54 GMT  
-		Size: 147.0 B  
+	-	`sha256:583311ee2a57ef346b05890d4aa358cd48830dd93249cb7591183daee07e5a66`  
+		Last Modified: Tue, 09 Feb 2021 04:30:57 GMT  
+		Size: 143.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5366ac3e71a1c0db6998673ea22c43535bc98debae925d9fe51f069ab65816c5`  
-		Last Modified: Tue, 12 Jan 2021 02:23:55 GMT  
-		Size: 2.3 MB (2343541 bytes)  
+	-	`sha256:bd644e48a9914329962724a8ce13e80b852e81e321c217138a9748b6d0a9ba25`  
+		Last Modified: Tue, 09 Feb 2021 04:30:58 GMT  
+		Size: 2.3 MB (2343514 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:121aa19ac808586d1b1803c8afb1e9a525ab88fe346c4f66167b477697cbe0f6`  
-		Last Modified: Tue, 12 Jan 2021 02:24:09 GMT  
-		Size: 24.5 MB (24515370 bytes)  
+	-	`sha256:a5678d57ccfb85674024f57466373d579dcff0cee9acb110f8013af44b49636d`  
+		Last Modified: Tue, 09 Feb 2021 04:31:12 GMT  
+		Size: 24.5 MB (24515304 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e9f43fbafdcb1ddef9294490a2acd475a29e2b68a6c20a1f784f13c90585d3fc`  
-		Last Modified: Tue, 12 Jan 2021 02:23:54 GMT  
-		Size: 298.0 B  
+	-	`sha256:aa445a5a953c8df960ba76c8e743eb7c242ad8681cb2f8a33bc1f922e18b0063`  
+		Last Modified: Tue, 09 Feb 2021 04:30:56 GMT  
+		Size: 292.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `httpd:2.4.46` - linux; ppc64le
@@ -3665,7 +3665,7 @@ CMD ["httpd-foreground"]
 ## `httpd:latest`
 
 ```console
-$ docker pull httpd@sha256:6e1a77aedb883df70e7c80b43d776f1ed2ebba724de678ca11e12073c3759b4c
+$ docker pull httpd@sha256:a0221881241adf0ee1f2efbc4976f858cb12333675b94b8cf4c42c0e4b11d710
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4022,69 +4022,69 @@ CMD ["httpd-foreground"]
 ### `httpd:latest` - linux; mips64le
 
 ```console
-$ docker pull httpd@sha256:cd7757f03b37e942ff97f09e2ebf242a5d14d746238d4a7e25924cd4737f1484
+$ docker pull httpd@sha256:7262b2de48950cd36ddaf7ffa12e406a6786af4223a97300b267f4479f1a3dfa
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **52.6 MB (52638051 bytes)**  
+-	Total Size: **52.6 MB (52623893 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:edb1c382dbe9b47319c14aea12632c7693e0ab577603babcdd6235ddbc865493`
+-	Image ID: `sha256:a59c940a82eb08fac420630e96a4d9aabdffed02ca4f8ad5a084e07ac42f0a5a`
 -	Default Command: `["httpd-foreground"]`
 
 ```dockerfile
-# Tue, 12 Jan 2021 01:16:21 GMT
-ADD file:e75a4429a4b3b0f7a646f85af88d412a98006cdf44ea6744b90fea7419840831 in / 
-# Tue, 12 Jan 2021 01:16:22 GMT
+# Tue, 09 Feb 2021 03:09:26 GMT
+ADD file:0222a151f4e5033d9eae98ce2b703a63f52d049dd72ac40bdd0dc2dafe619f0a in / 
+# Tue, 09 Feb 2021 03:09:27 GMT
 CMD ["bash"]
-# Tue, 12 Jan 2021 02:16:13 GMT
+# Tue, 09 Feb 2021 04:23:18 GMT
 ENV HTTPD_PREFIX=/usr/local/apache2
-# Tue, 12 Jan 2021 02:16:13 GMT
+# Tue, 09 Feb 2021 04:23:18 GMT
 ENV PATH=/usr/local/apache2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 12 Jan 2021 02:16:15 GMT
+# Tue, 09 Feb 2021 04:23:20 GMT
 RUN mkdir -p "$HTTPD_PREFIX" 	&& chown www-data:www-data "$HTTPD_PREFIX"
-# Tue, 12 Jan 2021 02:16:16 GMT
+# Tue, 09 Feb 2021 04:23:21 GMT
 WORKDIR /usr/local/apache2
-# Tue, 12 Jan 2021 02:16:29 GMT
+# Tue, 09 Feb 2021 04:23:34 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libaprutil1-ldap 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 12 Jan 2021 02:16:29 GMT
+# Tue, 09 Feb 2021 04:23:34 GMT
 ENV HTTPD_VERSION=2.4.46
-# Tue, 12 Jan 2021 02:16:30 GMT
+# Tue, 09 Feb 2021 04:23:35 GMT
 ENV HTTPD_SHA256=740eddf6e1c641992b22359cabc66e6325868c3c5e2e3f98faf349b61ecf41ea
-# Tue, 12 Jan 2021 02:16:30 GMT
+# Tue, 09 Feb 2021 04:23:35 GMT
 ENV HTTPD_PATCHES=
-# Tue, 12 Jan 2021 02:23:26 GMT
+# Tue, 09 Feb 2021 04:30:36 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		bzip2 		ca-certificates 		dirmngr 		dpkg-dev 		gcc 		gnupg 		libapr1-dev 		libaprutil1-dev 		libbrotli-dev 		libcurl4-openssl-dev 		libjansson-dev 		liblua5.2-dev 		libnghttp2-dev 		libpcre3-dev 		libssl-dev 		libxml2-dev 		make 		wget 		zlib1g-dev 	; 	rm -r /var/lib/apt/lists/*; 		ddist() { 		local f="$1"; shift; 		local distFile="$1"; shift; 		local success=; 		local distUrl=; 		for distUrl in 			'https://www.apache.org/dyn/closer.cgi?action=download&filename=' 			https://www-us.apache.org/dist/ 			https://www.apache.org/dist/ 			https://archive.apache.org/dist/ 		; do 			if wget -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then 				success=1; 				break; 			fi; 		done; 		[ -n "$success" ]; 	}; 		ddist 'httpd.tar.bz2' "httpd/httpd-$HTTPD_VERSION.tar.bz2"; 	echo "$HTTPD_SHA256 *httpd.tar.bz2" | sha256sum -c -; 		ddist 'httpd.tar.bz2.asc' "httpd/httpd-$HTTPD_VERSION.tar.bz2.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	for key in 		DE29FB3971E71543FD2DC049508EAEC5302DA568 		13155B0E9E634F42BF6C163FDDBA64BA2C312D2F 		8B39757B1D8A994DF2433ED58B3A601F08C975E5 		31EE1A81B8D066548156D37B7D6DBFD1F08E012A 		A10208FEC3152DD7C0C9B59B361522D782AB7BD1 		3DE024AFDA7A4B15CB6C14410F81AA8AB0D5F771 		EB138C6AF0FC691001B16D93344A844D751D7F27 		CBA5A7C21EC143314C41393E5B968010E04F9A89 		3C016F2B764621BB549C66B516A96495E2226795 		937FB3994A242BA9BF49E93021454AF0CC8B0F7E 		EAD1359A4C0F2D37472AAF28F55DF0293A4E7AC9 		4C1EADADB4EF5007579C919C6635B6C0DE885DD3 		01E475360FCCF1D0F24B9D145D414AE1E005C9CB 		92CCEF0AA7DD46AC3A0F498BCA6939748103A37E 		D395C7573A68B9796D38C258153FA0CD75A67692 		FA39B617B61493FD283503E7EED1EA392261D073 		984FB3350C1D5C7A3282255BB31B213D208F5064 		FE7A49DAA875E890B4167F76CCB2EB46E76CF6D0 		39F6691A0ECF0C50E8BB849CF78875F642721F00 		29A2BA848177B73878277FA475CAA2A3F39B3750 		120A8667241AEDD4A78B46104C042818311A3DE5 		453510BDA6C5855624E009236D0BC73A40581837 		0DE5C55C6BF3B2352DABB89E13249B4FEC88A0BF 		7CDBED100806552182F98844E8E7E00B4DAA1988 		A8BA9617EF3BCCAC3B29B869EDB105896F9522D8 		3E6AC004854F3A7F03566B592FF06894E55B0D0E 		5B5181C2C0AB13E59DA3F7A3EC582EB639FF092C 		A93D62ECC3C8EA12DB220EC934EA76E6791485A8 		65B2D44FE74BD5E3DE3AC3F082781DE46D5954FA 		8935926745E1CE7E3ED748F6EC99EE267EB5F61A 		B9E8213AEFB861AF35A41F2C995E35221AD84DFF 		E3480043595621FE56105F112AB12A7ADC55C003 		93525CFCF6FDFFB3FD9700DD5A4B10AE43B56A27 	; do 		gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 	done; 	gpg --batch --verify httpd.tar.bz2.asc httpd.tar.bz2; 	command -v gpgconf && gpgconf --kill all || :; 	rm -rf "$GNUPGHOME" httpd.tar.bz2.asc; 		mkdir -p src; 	tar -xf httpd.tar.bz2 -C src --strip-components=1; 	rm httpd.tar.bz2; 	cd src; 		patches() { 		while [ "$#" -gt 0 ]; do 			local patchFile="$1"; shift; 			local patchSha256="$1"; shift; 			ddist "$patchFile" "httpd/patches/apply_to_$HTTPD_VERSION/$patchFile"; 			echo "$patchSha256 *$patchFile" | sha256sum -c -; 			patch -p0 < "$patchFile"; 			rm -f "$patchFile"; 		done; 	}; 	patches $HTTPD_PATCHES; 		gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	CFLAGS="$(dpkg-buildflags --get CFLAGS)"; 	CPPFLAGS="$(dpkg-buildflags --get CPPFLAGS)"; 	LDFLAGS="$(dpkg-buildflags --get LDFLAGS)"; 	./configure 		--build="$gnuArch" 		--prefix="$HTTPD_PREFIX" 		--enable-mods-shared=reallyall 		--enable-mpms-shared=all 		--enable-pie 		CFLAGS="-pipe $CFLAGS" 		CPPFLAGS="$CPPFLAGS" 		LDFLAGS="-Wl,--as-needed $LDFLAGS" 	; 	make -j "$(nproc)"; 	make install; 		cd ..; 	rm -r src man manual; 		sed -ri 		-e 's!^(\s*CustomLog)\s+\S+!\1 /proc/self/fd/1!g' 		-e 's!^(\s*ErrorLog)\s+\S+!\1 /proc/self/fd/2!g' 		-e 's!^(\s*TransferLog)\s+\S+!\1 /proc/self/fd/1!g' 		"$HTTPD_PREFIX/conf/httpd.conf" 		"$HTTPD_PREFIX/conf/extra/httpd-ssl.conf" 	; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		httpd -v
-# Tue, 12 Jan 2021 02:23:27 GMT
+# Tue, 09 Feb 2021 04:30:37 GMT
 STOPSIGNAL SIGWINCH
-# Tue, 12 Jan 2021 02:23:27 GMT
+# Tue, 09 Feb 2021 04:30:37 GMT
 COPY file:c432ff61c4993ecdef4786f48d91a96f8f0707f6179816ccb98db661bfb96b90 in /usr/local/bin/ 
-# Tue, 12 Jan 2021 02:23:27 GMT
+# Tue, 09 Feb 2021 04:30:37 GMT
 EXPOSE 80
-# Tue, 12 Jan 2021 02:23:28 GMT
+# Tue, 09 Feb 2021 04:30:38 GMT
 CMD ["httpd-foreground"]
 ```
 
 -	Layers:
-	-	`sha256:c8d46df0b1a64c5ee6879aa09ea5818b36bcae5d39b941d7262bcff617be9873`  
-		Last Modified: Tue, 12 Jan 2021 01:23:17 GMT  
-		Size: 25.8 MB (25778695 bytes)  
+	-	`sha256:dfb81134097d874e01b495d1fba82e384056d0a3a45f01a69a2e86ae82af1e96`  
+		Last Modified: Tue, 09 Feb 2021 03:15:55 GMT  
+		Size: 25.8 MB (25764640 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:311b6b68560b6e56d34fac46720e35cca709b87ae065e0b1e4e1bd86e6002064`  
-		Last Modified: Tue, 12 Jan 2021 02:23:54 GMT  
-		Size: 147.0 B  
+	-	`sha256:583311ee2a57ef346b05890d4aa358cd48830dd93249cb7591183daee07e5a66`  
+		Last Modified: Tue, 09 Feb 2021 04:30:57 GMT  
+		Size: 143.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5366ac3e71a1c0db6998673ea22c43535bc98debae925d9fe51f069ab65816c5`  
-		Last Modified: Tue, 12 Jan 2021 02:23:55 GMT  
-		Size: 2.3 MB (2343541 bytes)  
+	-	`sha256:bd644e48a9914329962724a8ce13e80b852e81e321c217138a9748b6d0a9ba25`  
+		Last Modified: Tue, 09 Feb 2021 04:30:58 GMT  
+		Size: 2.3 MB (2343514 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:121aa19ac808586d1b1803c8afb1e9a525ab88fe346c4f66167b477697cbe0f6`  
-		Last Modified: Tue, 12 Jan 2021 02:24:09 GMT  
-		Size: 24.5 MB (24515370 bytes)  
+	-	`sha256:a5678d57ccfb85674024f57466373d579dcff0cee9acb110f8013af44b49636d`  
+		Last Modified: Tue, 09 Feb 2021 04:31:12 GMT  
+		Size: 24.5 MB (24515304 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e9f43fbafdcb1ddef9294490a2acd475a29e2b68a6c20a1f784f13c90585d3fc`  
-		Last Modified: Tue, 12 Jan 2021 02:23:54 GMT  
-		Size: 298.0 B  
+	-	`sha256:aa445a5a953c8df960ba76c8e743eb7c242ad8681cb2f8a33bc1f922e18b0063`  
+		Last Modified: Tue, 09 Feb 2021 04:30:56 GMT  
+		Size: 292.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `httpd:latest` - linux; ppc64le
