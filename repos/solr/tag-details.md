@@ -53,6 +53,10 @@
 -	[`solr:8.7.0`](#solr870)
 -	[`solr:8.7.0-slim`](#solr870-slim)
 -	[`solr:8.7-slim`](#solr87-slim)
+-	[`solr:8.8`](#solr88)
+-	[`solr:8.8.0`](#solr880)
+-	[`solr:8.8.0-slim`](#solr880-slim)
+-	[`solr:8.8-slim`](#solr88-slim)
 -	[`solr:8-slim`](#solr8-slim)
 -	[`solr:latest`](#solrlatest)
 -	[`solr:slim`](#solrslim)
@@ -11459,6 +11463,42 @@ CMD ["solr-foreground"]
 		Last Modified: Mon, 01 Feb 2021 22:56:04 GMT  
 		Size: 6.3 KB (6274 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `solr:8.8`
+
+```console
+$ docker pull solr@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
+## `solr:8.8.0`
+
+```console
+$ docker pull solr@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
+## `solr:8.8.0-slim`
+
+```console
+$ docker pull solr@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
+## `solr:8.8-slim`
+
+```console
+$ docker pull solr@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `solr:8-slim`
 
