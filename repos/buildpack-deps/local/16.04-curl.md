@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:74e7f88be679901bc894a446317c6419444940a29a231e40070b2a7ca3dec8e2`
-- Created: `2021-01-21T07:55:43.639451316Z`
-- Virtual Size: ~ 150.03 Mb  
+- Image ID: `sha256:906b1598100430ad830d5e91197c0d2cb5a097fa5efb985e343e638c6417f85c`
+- Created: `2021-02-05T22:23:15.148226838Z`
+- Virtual Size: ~ 150.08 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -79,9 +79,10 @@ $ apt-get source -qq --print-uris apparmor=2.10.95-0ubuntu2.11
 Binary Packages:
 
 - `apt=1.2.32ubuntu0.2`
+- `apt-transport-https=1.2.32ubuntu0.2`
 - `libapt-pkg5.0:amd64=1.2.32ubuntu0.2`
 
-Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-pkg5.0/copyright`)
+Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/apt-transport-https/copyright`, `/usr/share/doc/libapt-pkg5.0/copyright`)
 
 - `GPL-2`
 - `GPLv2+`
@@ -210,11 +211,11 @@ $ apt-get source -qq --print-uris bzip2=1.0.6-8ubuntu0.2
 'http://archive.ubuntu.com/ubuntu/pool/main/b/bzip2/bzip2_1.0.6-8ubuntu0.2.debian.tar.bz2' bzip2_1.0.6-8ubuntu0.2.debian.tar.bz2 61599 SHA512:3c9ee464d8303a7c2c7a6dbaffd4bdd88752a65f1a2f968f8c4ed8084d732fb0c72614e5a88f4b9ee43228befb07ec5c283ab1e5995d38f7cd8239eab9c5101b
 ```
 
-### `dpkg` source package: `ca-certificates=20201027ubuntu0.16.04.1`
+### `dpkg` source package: `ca-certificates=20210119~16.04.1`
 
 Binary Packages:
 
-- `ca-certificates=20201027ubuntu0.16.04.1`
+- `ca-certificates=20210119~16.04.1`
 
 Licenses: (parsed from: `/usr/share/doc/ca-certificates/copyright`)
 
@@ -222,9 +223,13 @@ Licenses: (parsed from: `/usr/share/doc/ca-certificates/copyright`)
 - `GPL-2+`
 - `MPL-2.0`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris ca-certificates=20210119~16.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20210119~16.04.1.dsc' ca-certificates_20210119~16.04.1.dsc 1969 SHA512:06fad3f3dc9b7e540b55b5f1f373809a75bd9ae288bdf191f34f0372e95e512ce1d01672050d70876c562b7f0487ac3a927d7b814b4459ef554d9bd1ae02c791
+'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20210119~16.04.1.tar.xz' ca-certificates_20210119~16.04.1.tar.xz 231888 SHA512:5318b1b1bd43ef031d6430602a16bec731cd09b3da65aff6a5c26e8a2d4cb04d2f23e5fd2d099d698a9535364fd6daf58e24532c44758093a1c46112cd0de837
+```
 
 ### `dpkg` source package: `cdebconf=0.198ubuntu1`
 
@@ -1234,14 +1239,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openldap=2.4.42+dfsg-2ubuntu3.11
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.42+dfsg-2ubuntu3.11.dsc' openldap_2.4.42+dfsg-2ubuntu3.11.dsc 3058 SHA512:61ab2e2fd9696eeea80cdfd3416508058408fcb1ac4ddbcafd9502480df8f731bcd1f77757f1f113e7a35276d5b00f0fcb07af852dd5e0afdc23420b43381f16
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.42+dfsg.orig.tar.gz' openldap_2.4.42+dfsg.orig.tar.gz 4813173 SHA512:4ed671baef513927cc340dac15b8979dba766d4fd629cae0bad1e125d09bc4ae61fda6912e06c53f8ef2cee6c2e28379b4e0c419c00c8254dc0cc0c715caf200
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.42+dfsg-2ubuntu3.11.debian.tar.xz' openldap_2.4.42+dfsg-2ubuntu3.11.debian.tar.xz 183320 SHA512:cee22eb64b028773d7e4245e967e734fca5a02d25e3841a526a8f2c5a698f96b95d500093c51fe53e4fcf487556032dfd30c265e3e367a5229a8ab1b09f9088d
-```
 
 ### `dpkg` source package: `openssl=1.0.2g-1ubuntu4.18`
 
@@ -1584,19 +1584,24 @@ $ apt-get source -qq --print-uris tar=1.28-2.1ubuntu0.2
 'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.28-2.1ubuntu0.2.debian.tar.xz' tar_1.28-2.1ubuntu0.2.debian.tar.xz 39348 SHA512:a646e5331c9f5b3c193b564798a2c02e85b861afda3a49c7f91bcc1a1c46bf9a2e824e6a34cd1ef0e470412a768258323594bb1490c0ae41643fb5018105442e
 ```
 
-### `dpkg` source package: `tzdata=2020f-0ubuntu0.16.04`
+### `dpkg` source package: `tzdata=2021a-0ubuntu0.16.04`
 
 Binary Packages:
 
-- `tzdata=2020f-0ubuntu0.16.04`
+- `tzdata=2021a-0ubuntu0.16.04`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris tzdata=2021a-0ubuntu0.16.04
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2021a-0ubuntu0.16.04.dsc' tzdata_2021a-0ubuntu0.16.04.dsc 2136 SHA512:5b004d4f9e9dcb7a0240ab39ccf4e372886535372fbece88e02efaf671a9f1e97ac96c0d1f40a61aa985302cfcf48bbbad9de00d04306f012eeaef4ea0bdf8b0
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA512:7cdd762ec90ce12a30fa36b1d66d1ea82d9fa21e514e2b9c7fcbe2541514ee0fadf30843ff352c65512fb270857b51d1517b45e1232b89c6f954ba9ff1833bb3
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2021a-0ubuntu0.16.04.debian.tar.xz' tzdata_2021a-0ubuntu0.16.04.debian.tar.xz 101912 SHA512:f0dea129f545c609aa2c2e51d765d75dd344e31fcae96b8e881856df6d04faf8899df2be8ef3b234b13fa23976d14a56d77995770a58a7dde5c294e1a9dce426
+```
 
 ### `dpkg` source package: `ubuntu-keyring=2012.05.19.1`
 

@@ -308,14 +308,9 @@ Licenses: (parsed from: `/usr/share/doc/binutils/copyright`, `/usr/share/doc/bin
 - `GPL`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris binutils=2.35.50.20210106-1ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.35.50.20210106-1ubuntu2.dsc' binutils_2.35.50.20210106-1ubuntu2.dsc 8851 SHA512:7b9c5b59e19cb02028ec5600e9b04848557bd099201314510bc89a66fdbdc195e7d896140023095d31a9a6604e79751b44daefd4f7f706658f182a22b43a1584
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.35.50.20210106.orig.tar.xz' binutils_2.35.50.20210106.orig.tar.xz 21900028 SHA512:3d8334475eb55fffc9872f9ef73a7b0b4f4e01da5bd24d9ee47c361a8486dbc6f896bc9654f4b16137cc7832e472b02b1c9bed516da898656872330e33989802
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.35.50.20210106-1ubuntu2.debian.tar.xz' binutils_2.35.50.20210106-1ubuntu2.debian.tar.xz 112728 SHA512:3f794d2598ec599a6ee62f7ddf5220b6d3f46a6d2c623f8b79b74466bcff66d8c89784a94a0b45a3adfbee5b1be6446f5f1803d1509268f40a67edcc1cda6b5c
-```
 
 ### `dpkg` source package: `brotli=1.0.9-2build2`
 
@@ -912,14 +907,9 @@ Licenses: (parsed from: `/usr/share/doc/cpp-10/copyright`, `/usr/share/doc/g++-1
 - `GPL-3`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-10=10.2.1-6ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.2.1-6ubuntu1.dsc' gcc-10_10.2.1-6ubuntu1.dsc 30462 SHA512:31e1b3e3da87a1cd77daf7d6cc7f92a3a81fe9f9de690e3f1df6f06e723b065e02830d664801362206ef8874e8bce16ec993c6da683ad364ffe6ab522de4c124
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.2.1.orig.tar.xz' gcc-10_10.2.1.orig.tar.xz 81984400 SHA512:d64991e458cd913b012543db518bf3de5c1fe2b074661b1a7c0ba53733ac3d6d38e8831682710c996659b2b3cac949e46573b03cf4018fc33211c69086a00c8b
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.2.1-6ubuntu1.debian.tar.xz' gcc-10_10.2.1-6ubuntu1.debian.tar.xz 2368144 SHA512:6d6db137dfeb8beefa4b39b6002d14288735eb93af3c1d45a5df7118a2fb5fef7b32e77d0cd81affb55818bb226f74c576853659358115512cef751de31aba47
-```
 
 ### `dpkg` source package: `gcc-defaults=1.189ubuntu1`
 
@@ -1044,14 +1034,9 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 - `dlmalloc`
 - `mingw-runtime`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris git=1:2.29.2-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.29.2-1ubuntu1.dsc' git_2.29.2-1ubuntu1.dsc 2998 SHA512:8253fb328b6e01aeb055d09449d2f8f95763f1b3b4f02da4d76dcdaa6b7a59a528a50a9567d96fd131c30c79209dbc01a7a761b18cdbe9e9f83da30be4a7e989
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.29.2.orig.tar.xz' git_2.29.2.orig.tar.xz 6187988 SHA512:34117628c6d43ac0940c43bffaa1bda7f12af863728f391492725a3e57d1bbda523cf7734e90f463fe9a9ae4e70fc1cc2523643dbb3c27377d98dc4736b0ea62
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.29.2-1ubuntu1.debian.tar.xz' git_2.29.2-1ubuntu1.debian.tar.xz 664700 SHA512:464962791227ba21c2e384ad16d86be5c3ebee83fd09536a0a7957e8f50087bfab96a142cb40e240c4738a0a20a7eea065092193e50a64dee6356d49704aec41
-```
 
 ### `dpkg` source package: `glib2.0=2.66.4-1`
 
@@ -1391,15 +1376,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris icu=67.1-5
-'http://archive.ubuntu.com/ubuntu/pool/main/i/icu/icu_67.1-5.dsc' icu_67.1-5.dsc 2236 SHA512:56087d9bdfa476ae60ec90ee01260b5855aff6fdc2a965211b6c55722a1b4d03d03ba540e8eb5f2b8e57664a3156998f2f7dbd1e946210a51cfc372640feccde
-'http://archive.ubuntu.com/ubuntu/pool/main/i/icu/icu_67.1.orig.tar.gz' icu_67.1.orig.tar.gz 24518055 SHA512:4779f1ce1ca7976f6fad6768853ea8c540da54d11509e3b6cfd864a04b5f2db1c3d4b546387f91ad02fb90804525bc37d2543173f0d705d6ca11dc6f2b7640a8
-'http://archive.ubuntu.com/ubuntu/pool/main/i/icu/icu_67.1.orig.tar.gz.asc' icu_67.1.orig.tar.gz.asc 833 SHA512:3d731cfbb200f150f6fda348a100226ad7a56dea428a46745bcaf5be3ad6a0bf3ef685acfdf759f51a53704d78b4a02ee90ecbf50f2e18d14fcef5050afd8f54
-'http://archive.ubuntu.com/ubuntu/pool/main/i/icu/icu_67.1-5.debian.tar.xz' icu_67.1-5.debian.tar.xz 29712 SHA512:877b48ff4f59aecf77e0e0ef2b6f6a859a9bbd2697ce6d64862a99176ea7f0275643f3477503711576217a43fc62f70b5d384ce5d5e58c46c81990a0715dca61
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/icu/67.1-5/
+
 
 ### `dpkg` source package: `ilmbase=2.5.3-2`
 
@@ -3978,15 +3961,13 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`, `/usr/share/doc
 - `GPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sqlite3=3.34.0-1
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.34.0-1.dsc' sqlite3_3.34.0-1.dsc 2410 SHA512:889eada39d276cdeb7baa52ef194320ec80ffa8a1fd4b68ddd8d8c720e4bfbf0d2975e60048bd763607dc833e4d35fdb97c6ee13c1ddc8a5ae08c31a9bb9e245
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.34.0.orig-www.tar.xz' sqlite3_3.34.0.orig-www.tar.xz 5539580 SHA512:1a77b68150204c911fea20e342142c6aa0d2407085a5355ca0069d4fbf9cfdd35ef75c29658ab64f48dc5214ec5ad2fb73cdc7306d62ab2371dfbe4fec3d4551
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.34.0.orig.tar.xz' sqlite3_3.34.0.orig.tar.xz 7340388 SHA512:ca08bf0db197e4e1c5a1f7d5f93a843b2c2c3e6c141fd6f56a09d3c5940f9b1c1ded942be437a93bc9080851138b466edc8a6a2edee144626049f441fac81586
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.34.0-1.debian.tar.xz' sqlite3_3.34.0-1.debian.tar.xz 21456 SHA512:cee0cc17a8091c7e25386245025e94f69da383e35a6550cb26cc8916daf8742948776f726d9aa7ac808faf8b7351d1f468189d3ee6c34516334ed7fa94fffb94
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/sqlite3/3.34.0-1/
+
 
 ### `dpkg` source package: `subversion=1.14.0-3build2`
 

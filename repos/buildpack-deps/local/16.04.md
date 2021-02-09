@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:3b06d7c680da2d2b0c14e790ffd4f4baa70e7f945dab20d5e6731bfe78a1ee0c`
-- Created: `2021-01-21T07:58:24.231699208Z`
-- Virtual Size: ~ 655.98 Mb  
+- Image ID: `sha256:ecee6a4fe71d8d06e7d7db0df31c0b5255dde3637b3e4694b33c36e891d61024`
+- Created: `2021-02-05T22:26:03.548213373Z`
+- Virtual Size: ~ 656.03 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -117,9 +117,10 @@ $ apt-get source -qq --print-uris apr=1.5.2-3
 Binary Packages:
 
 - `apt=1.2.32ubuntu0.2`
+- `apt-transport-https=1.2.32ubuntu0.2`
 - `libapt-pkg5.0:amd64=1.2.32ubuntu0.2`
 
-Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-pkg5.0/copyright`)
+Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/apt-transport-https/copyright`, `/usr/share/doc/libapt-pkg5.0/copyright`)
 
 - `GPL-2`
 - `GPLv2+`
@@ -413,11 +414,11 @@ $ apt-get source -qq --print-uris bzr=2.7.0-2ubuntu3.1
 'http://archive.ubuntu.com/ubuntu/pool/main/b/bzr/bzr_2.7.0-2ubuntu3.1.debian.tar.xz' bzr_2.7.0-2ubuntu3.1.debian.tar.xz 42660 SHA512:3d6f07cadfac56c0aea0b8a02921d558ad6a16665abf6ce2b88b3277b8ae3fd9fe1d8cbd98571e3e637b361281a78996a69da15b9d469110716b4d5fcd727a7f
 ```
 
-### `dpkg` source package: `ca-certificates=20201027ubuntu0.16.04.1`
+### `dpkg` source package: `ca-certificates=20210119~16.04.1`
 
 Binary Packages:
 
-- `ca-certificates=20201027ubuntu0.16.04.1`
+- `ca-certificates=20210119~16.04.1`
 
 Licenses: (parsed from: `/usr/share/doc/ca-certificates/copyright`)
 
@@ -425,9 +426,13 @@ Licenses: (parsed from: `/usr/share/doc/ca-certificates/copyright`)
 - `GPL-2+`
 - `MPL-2.0`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris ca-certificates=20210119~16.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20210119~16.04.1.dsc' ca-certificates_20210119~16.04.1.dsc 1969 SHA512:06fad3f3dc9b7e540b55b5f1f373809a75bd9ae288bdf191f34f0372e95e512ce1d01672050d70876c562b7f0487ac3a927d7b814b4459ef554d9bd1ae02c791
+'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20210119~16.04.1.tar.xz' ca-certificates_20210119~16.04.1.tar.xz 231888 SHA512:5318b1b1bd43ef031d6430602a16bec731cd09b3da65aff6a5c26e8a2d4cb04d2f23e5fd2d099d698a9535364fd6daf58e24532c44758093a1c46112cd0de837
+```
 
 ### `dpkg` source package: `cairo=1.14.6-1`
 
@@ -2906,20 +2911,25 @@ $ apt-get source -qq --print-uris libyaml=0.1.6-3
 'http://archive.ubuntu.com/ubuntu/pool/main/liby/libyaml/libyaml_0.1.6-3.debian.tar.xz' libyaml_0.1.6-3.debian.tar.xz 4268 SHA256:fd567e6918903833e5c4f1f87254c550eca07c2bba1ccbe6031da33243cf4297
 ```
 
-### `dpkg` source package: `linux=4.4.0-200.232`
+### `dpkg` source package: `linux=4.4.0-201.233`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=4.4.0-200.232`
+- `linux-libc-dev:amd64=4.4.0-201.233`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 - `redpine-signals`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris linux=4.4.0-201.233
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0-201.233.dsc' linux_4.4.0-201.233.dsc 11941 SHA512:6e2390d07e23903c6e2f34f21831f68923fca2f6175b257183890d329816efaebf360b63be18be59e48080cf885a6df89cdeb9af6086687bab3fda469110fd48
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0.orig.tar.gz' linux_4.4.0.orig.tar.gz 132860730 SHA512:28ef89b62f663f2d90b58274799b7ebeff04699f08d0b83f650b0de179d4ef354450c81ecda07522b493c43d5eb2d530fa0f552a2794d48f84878e05efa39cc3
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0-201.233.diff.gz' linux_4.4.0-201.233.diff.gz 16923157 SHA512:2aedc1d5cb9eef53a44e8b2b1240001eace2b98940068f8387553a01974b453b9cd32d4741727116d5d87b9be89a3c93adc1ee5e9120a8a7a11bb6d1c2cd85e9
+```
 
 ### `dpkg` source package: `lsb=9.20160110ubuntu0.2`
 
@@ -3157,13 +3167,13 @@ $ apt-get source -qq --print-uris mpfr4=3.1.4-1
 'http://archive.ubuntu.com/ubuntu/pool/main/m/mpfr4/mpfr4_3.1.4-1.debian.tar.xz' mpfr4_3.1.4-1.debian.tar.xz 9656 SHA256:e0562521ac0ef9fc2039ef1305962ee1ad529ae2210e197cee0080b1facc4d60
 ```
 
-### `dpkg` source package: `mysql-5.7=5.7.32-0ubuntu0.16.04.1`
+### `dpkg` source package: `mysql-5.7=5.7.33-0ubuntu0.16.04.1`
 
 Binary Packages:
 
-- `libmysqlclient-dev=5.7.32-0ubuntu0.16.04.1`
-- `libmysqlclient20:amd64=5.7.32-0ubuntu0.16.04.1`
-- `mysql-common=5.7.32-0ubuntu0.16.04.1`
+- `libmysqlclient-dev=5.7.33-0ubuntu0.16.04.1`
+- `libmysqlclient20:amd64=5.7.33-0ubuntu0.16.04.1`
+- `mysql-common=5.7.33-0ubuntu0.16.04.1`
 
 Licenses: (parsed from: `/usr/share/doc/libmysqlclient-dev/copyright`, `/usr/share/doc/libmysqlclient20/copyright`, `/usr/share/doc/mysql-common/copyright`)
 
@@ -3181,9 +3191,14 @@ Licenses: (parsed from: `/usr/share/doc/libmysqlclient-dev/copyright`, `/usr/sha
 - `public-domain`
 - `zlib/libpng`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris mysql-5.7=5.7.33-0ubuntu0.16.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-5.7_5.7.33-0ubuntu0.16.04.1.dsc' mysql-5.7_5.7.33-0ubuntu0.16.04.1.dsc 3380 SHA512:e1ac33c094ef9a5212d85e2bbec9d706555eadb09066d22499447617df2a087d2bc04e62dcf44f18c10110e0add874778324e97933d7ee033040b9f4e8ac1016
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-5.7_5.7.33.orig.tar.gz' mysql-5.7_5.7.33.orig.tar.gz 52912380 SHA512:1d1e1e5934fb17ff731fea45b88d4af6a394c2fbf0177a87803b18cb0eb4fb8d4939f82fc22b6cbc2af64022a44e206cd23e2e88ce11cc119c3ea22129d54e7a
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-5.7_5.7.33-0ubuntu0.16.04.1.debian.tar.xz' mysql-5.7_5.7.33-0ubuntu0.16.04.1.debian.tar.xz 251296 SHA512:5804e3796d7e9337aa5587fc37ab1e1188b9df889404b73661c0b783a972bd119abd1575bb6334da1d2f7a6e366b4a645723f2aa06b2b214583ef74ef60fb458
+```
 
 ### `dpkg` source package: `ncurses=6.0+20160213-1ubuntu1`
 
@@ -3289,14 +3304,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openldap=2.4.42+dfsg-2ubuntu3.11
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.42+dfsg-2ubuntu3.11.dsc' openldap_2.4.42+dfsg-2ubuntu3.11.dsc 3058 SHA512:61ab2e2fd9696eeea80cdfd3416508058408fcb1ac4ddbcafd9502480df8f731bcd1f77757f1f113e7a35276d5b00f0fcb07af852dd5e0afdc23420b43381f16
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.42+dfsg.orig.tar.gz' openldap_2.4.42+dfsg.orig.tar.gz 4813173 SHA512:4ed671baef513927cc340dac15b8979dba766d4fd629cae0bad1e125d09bc4ae61fda6912e06c53f8ef2cee6c2e28379b4e0c419c00c8254dc0cc0c715caf200
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.42+dfsg-2ubuntu3.11.debian.tar.xz' openldap_2.4.42+dfsg-2ubuntu3.11.debian.tar.xz 183320 SHA512:cee22eb64b028773d7e4245e967e734fca5a02d25e3841a526a8f2c5a698f96b95d500093c51fe53e4fcf487556032dfd30c265e3e367a5229a8ab1b09f9088d
-```
 
 ### `dpkg` source package: `openssh=1:7.2p2-4ubuntu2.10`
 
@@ -3930,19 +3940,24 @@ $ apt-get source -qq --print-uris tiff=4.0.6-1ubuntu0.7
 'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.0.6-1ubuntu0.7.debian.tar.xz' tiff_4.0.6-1ubuntu0.7.debian.tar.xz 63940 SHA512:ca2b3fc10697d4254854308d084c1a90d39a2fed4784457189edde377abc98f2fca001d73d25a38963153ff95e96403135bb6c4e3ff1facb7c142d00b17cde05
 ```
 
-### `dpkg` source package: `tzdata=2020f-0ubuntu0.16.04`
+### `dpkg` source package: `tzdata=2021a-0ubuntu0.16.04`
 
 Binary Packages:
 
-- `tzdata=2020f-0ubuntu0.16.04`
+- `tzdata=2021a-0ubuntu0.16.04`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris tzdata=2021a-0ubuntu0.16.04
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2021a-0ubuntu0.16.04.dsc' tzdata_2021a-0ubuntu0.16.04.dsc 2136 SHA512:5b004d4f9e9dcb7a0240ab39ccf4e372886535372fbece88e02efaf671a9f1e97ac96c0d1f40a61aa985302cfcf48bbbad9de00d04306f012eeaef4ea0bdf8b0
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA512:7cdd762ec90ce12a30fa36b1d66d1ea82d9fa21e514e2b9c7fcbe2541514ee0fadf30843ff352c65512fb270857b51d1517b45e1232b89c6f954ba9ff1833bb3
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2021a-0ubuntu0.16.04.debian.tar.xz' tzdata_2021a-0ubuntu0.16.04.debian.tar.xz 101912 SHA512:f0dea129f545c609aa2c2e51d765d75dd344e31fcae96b8e881856df6d04faf8899df2be8ef3b234b13fa23976d14a56d77995770a58a7dde5c294e1a9dce426
+```
 
 ### `dpkg` source package: `ubuntu-keyring=2012.05.19.1`
 

@@ -553,14 +553,9 @@ Licenses: (parsed from: `/usr/share/doc/gcc-10-base/copyright`, `/usr/share/doc/
 - `GPL-3`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-10=10.2.1-6ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.2.1-6ubuntu1.dsc' gcc-10_10.2.1-6ubuntu1.dsc 30462 SHA512:31e1b3e3da87a1cd77daf7d6cc7f92a3a81fe9f9de690e3f1df6f06e723b065e02830d664801362206ef8874e8bce16ec993c6da683ad364ffe6ab522de4c124
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.2.1.orig.tar.xz' gcc-10_10.2.1.orig.tar.xz 81984400 SHA512:d64991e458cd913b012543db518bf3de5c1fe2b074661b1a7c0ba53733ac3d6d38e8831682710c996659b2b3cac949e46573b03cf4018fc33211c69086a00c8b
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.2.1-6ubuntu1.debian.tar.xz' gcc-10_10.2.1-6ubuntu1.debian.tar.xz 2368144 SHA512:6d6db137dfeb8beefa4b39b6002d14288735eb93af3c1d45a5df7118a2fb5fef7b32e77d0cd81affb55818bb226f74c576853659358115512cef751de31aba47
-```
 
 ### `dpkg` source package: `gdbm=1.19-2`
 
@@ -614,14 +609,9 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 - `dlmalloc`
 - `mingw-runtime`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris git=1:2.29.2-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.29.2-1ubuntu1.dsc' git_2.29.2-1ubuntu1.dsc 2998 SHA512:8253fb328b6e01aeb055d09449d2f8f95763f1b3b4f02da4d76dcdaa6b7a59a528a50a9567d96fd131c30c79209dbc01a7a761b18cdbe9e9f83da30be4a7e989
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.29.2.orig.tar.xz' git_2.29.2.orig.tar.xz 6187988 SHA512:34117628c6d43ac0940c43bffaa1bda7f12af863728f391492725a3e57d1bbda523cf7734e90f463fe9a9ae4e70fc1cc2523643dbb3c27377d98dc4736b0ea62
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.29.2-1ubuntu1.debian.tar.xz' git_2.29.2-1ubuntu1.debian.tar.xz 664700 SHA512:464962791227ba21c2e384ad16d86be5c3ebee83fd09536a0a7957e8f50087bfab96a142cb40e240c4738a0a20a7eea065092193e50a64dee6356d49704aec41
-```
 
 ### `dpkg` source package: `glibc=2.32-0ubuntu6`
 
@@ -2209,15 +2199,13 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 - `GPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sqlite3=3.34.0-1
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.34.0-1.dsc' sqlite3_3.34.0-1.dsc 2410 SHA512:889eada39d276cdeb7baa52ef194320ec80ffa8a1fd4b68ddd8d8c720e4bfbf0d2975e60048bd763607dc833e4d35fdb97c6ee13c1ddc8a5ae08c31a9bb9e245
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.34.0.orig-www.tar.xz' sqlite3_3.34.0.orig-www.tar.xz 5539580 SHA512:1a77b68150204c911fea20e342142c6aa0d2407085a5355ca0069d4fbf9cfdd35ef75c29658ab64f48dc5214ec5ad2fb73cdc7306d62ab2371dfbe4fec3d4551
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.34.0.orig.tar.xz' sqlite3_3.34.0.orig.tar.xz 7340388 SHA512:ca08bf0db197e4e1c5a1f7d5f93a843b2c2c3e6c141fd6f56a09d3c5940f9b1c1ded942be437a93bc9080851138b466edc8a6a2edee144626049f441fac81586
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.34.0-1.debian.tar.xz' sqlite3_3.34.0-1.debian.tar.xz 21456 SHA512:cee0cc17a8091c7e25386245025e94f69da383e35a6550cb26cc8916daf8742948776f726d9aa7ac808faf8b7351d1f468189d3ee6c34516334ed7fa94fffb94
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/sqlite3/3.34.0-1/
+
 
 ### `dpkg` source package: `subversion=1.14.0-3build2`
 
