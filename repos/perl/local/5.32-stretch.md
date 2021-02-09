@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:e835a6a89dc68f65f30954127246ed0ab83eb7ae6f39f75b285d14906bbb5644`
-- Created: `2021-01-27T01:02:05.253486783Z`
-- Virtual Size: ~ 889.76 Mb  
+- Image ID: `sha256:7a91f1f6ec0076dca576aae60c94d840264008d39df2f1e8fb2f1a83d596d1cc`
+- Created: `2021-02-06T01:34:35.663783286Z`
+- Virtual Size: ~ 890.02 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["perl5.32.1","-de0"]`
@@ -120,9 +120,10 @@ Other potentially useful URLs:
 Binary Packages:
 
 - `apt=1.4.11`
+- `apt-transport-https=1.4.11`
 - `libapt-pkg5.0:amd64=1.4.11`
 
-Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-pkg5.0/copyright`)
+Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/apt-transport-https/copyright`, `/usr/share/doc/libapt-pkg5.0/copyright`)
 
 - `GPL-2`
 - `GPLv2+`
@@ -2007,23 +2008,23 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/ilmbase/2.2.0-12/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/ilmbase/2.2.0-12/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `imagemagick=8:6.9.7.4+dfsg-11+deb9u10`
+### `dpkg` source package: `imagemagick=8:6.9.7.4+dfsg-11+deb9u11`
 
 Binary Packages:
 
-- `imagemagick=8:6.9.7.4+dfsg-11+deb9u10`
-- `imagemagick-6-common=8:6.9.7.4+dfsg-11+deb9u10`
-- `imagemagick-6.q16=8:6.9.7.4+dfsg-11+deb9u10`
-- `libmagickcore-6-arch-config:amd64=8:6.9.7.4+dfsg-11+deb9u10`
-- `libmagickcore-6-headers=8:6.9.7.4+dfsg-11+deb9u10`
-- `libmagickcore-6.q16-3:amd64=8:6.9.7.4+dfsg-11+deb9u10`
-- `libmagickcore-6.q16-3-extra:amd64=8:6.9.7.4+dfsg-11+deb9u10`
-- `libmagickcore-6.q16-dev:amd64=8:6.9.7.4+dfsg-11+deb9u10`
-- `libmagickcore-dev=8:6.9.7.4+dfsg-11+deb9u10`
-- `libmagickwand-6-headers=8:6.9.7.4+dfsg-11+deb9u10`
-- `libmagickwand-6.q16-3:amd64=8:6.9.7.4+dfsg-11+deb9u10`
-- `libmagickwand-6.q16-dev:amd64=8:6.9.7.4+dfsg-11+deb9u10`
-- `libmagickwand-dev=8:6.9.7.4+dfsg-11+deb9u10`
+- `imagemagick=8:6.9.7.4+dfsg-11+deb9u11`
+- `imagemagick-6-common=8:6.9.7.4+dfsg-11+deb9u11`
+- `imagemagick-6.q16=8:6.9.7.4+dfsg-11+deb9u11`
+- `libmagickcore-6-arch-config:amd64=8:6.9.7.4+dfsg-11+deb9u11`
+- `libmagickcore-6-headers=8:6.9.7.4+dfsg-11+deb9u11`
+- `libmagickcore-6.q16-3:amd64=8:6.9.7.4+dfsg-11+deb9u11`
+- `libmagickcore-6.q16-3-extra:amd64=8:6.9.7.4+dfsg-11+deb9u11`
+- `libmagickcore-6.q16-dev:amd64=8:6.9.7.4+dfsg-11+deb9u11`
+- `libmagickcore-dev=8:6.9.7.4+dfsg-11+deb9u11`
+- `libmagickwand-6-headers=8:6.9.7.4+dfsg-11+deb9u11`
+- `libmagickwand-6.q16-3:amd64=8:6.9.7.4+dfsg-11+deb9u11`
+- `libmagickwand-6.q16-dev:amd64=8:6.9.7.4+dfsg-11+deb9u11`
+- `libmagickwand-dev=8:6.9.7.4+dfsg-11+deb9u11`
 
 Licenses: (parsed from: `/usr/share/doc/imagemagick/copyright`, `/usr/share/doc/imagemagick-6-common/copyright`, `/usr/share/doc/imagemagick-6.q16/copyright`, `/usr/share/doc/libmagickcore-6-arch-config/copyright`, `/usr/share/doc/libmagickcore-6-headers/copyright`, `/usr/share/doc/libmagickcore-6.q16-3/copyright`, `/usr/share/doc/libmagickcore-6.q16-3-extra/copyright`, `/usr/share/doc/libmagickcore-6.q16-dev/copyright`, `/usr/share/doc/libmagickcore-dev/copyright`, `/usr/share/doc/libmagickwand-6-headers/copyright`, `/usr/share/doc/libmagickwand-6.q16-3/copyright`, `/usr/share/doc/libmagickwand-6.q16-dev/copyright`, `/usr/share/doc/libmagickwand-dev/copyright`)
 
@@ -2051,13 +2052,20 @@ Licenses: (parsed from: `/usr/share/doc/imagemagick/copyright`, `/usr/share/doc/
 - `Perllikelicence`
 - `TatcherUlrichPublicDomain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris imagemagick=8:6.9.7.4+dfsg-11+deb9u11
+'http://security.debian.org/debian-security/pool/updates/main/i/imagemagick/imagemagick_6.9.7.4+dfsg-11+deb9u11.dsc' imagemagick_6.9.7.4+dfsg-11+deb9u11.dsc 4824 SHA256:13f138f85832e9469f41663601b68828191b438e613b10c1d131fa82766ed0fe
+'http://security.debian.org/debian-security/pool/updates/main/i/imagemagick/imagemagick_6.9.7.4+dfsg.orig.tar.xz' imagemagick_6.9.7.4+dfsg.orig.tar.xz 8929800 SHA256:47fb2cdd26f5913318c4504f16ea363e04d1f400dda9ec52e461ab661d724026
+'http://security.debian.org/debian-security/pool/updates/main/i/imagemagick/imagemagick_6.9.7.4+dfsg-11+deb9u11.debian.tar.xz' imagemagick_6.9.7.4+dfsg-11+deb9u11.debian.tar.xz 269016 SHA256:0f9aff7784e097129e93903387a0ae7fab4d0ea2da52ebc3b693ed58786b42e1
+```
 
-- http://snapshot.debian.org/package/imagemagick/8:6.9.7.4+dfsg-11+deb9u10/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/imagemagick/8:6.9.7.4+dfsg-11+deb9u11/ (for browsing the source)
+- https://sources.debian.net/src/imagemagick/8:6.9.7.4+dfsg-11+deb9u11/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/imagemagick/8:6.9.7.4+dfsg-11+deb9u11/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `init-system-helpers=1.48`
 
@@ -4014,13 +4022,13 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/make-dfsg/4.1-9.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/make-dfsg/4.1-9.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `mariadb-10.1=10.1.47-0+deb9u1`
+### `dpkg` source package: `mariadb-10.1=10.1.48-0+deb9u1`
 
 Binary Packages:
 
-- `libmariadbclient-dev=10.1.47-0+deb9u1`
-- `libmariadbclient-dev-compat:amd64=10.1.47-0+deb9u1`
-- `libmariadbclient18:amd64=10.1.47-0+deb9u1`
+- `libmariadbclient-dev=10.1.48-0+deb9u1`
+- `libmariadbclient-dev-compat:amd64=10.1.48-0+deb9u1`
+- `libmariadbclient18:amd64=10.1.48-0+deb9u1`
 
 Licenses: (parsed from: `/usr/share/doc/libmariadbclient-dev/copyright`, `/usr/share/doc/libmariadbclient-dev-compat/copyright`, `/usr/share/doc/libmariadbclient18/copyright`)
 
@@ -4044,13 +4052,21 @@ Licenses: (parsed from: `/usr/share/doc/libmariadbclient-dev/copyright`, `/usr/s
 - `unlimited-free-doc`
 - `zlib/libpng`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris mariadb-10.1=10.1.48-0+deb9u1
+'http://security.debian.org/debian-security/pool/updates/main/m/mariadb-10.1/mariadb-10.1_10.1.48-0+deb9u1.dsc' mariadb-10.1_10.1.48-0+deb9u1.dsc 4530 SHA256:4e56388e48003b70794b13744381dcaad61c64b290b720a3e1ba96077b921965
+'http://security.debian.org/debian-security/pool/updates/main/m/mariadb-10.1/mariadb-10.1_10.1.48.orig.tar.gz' mariadb-10.1_10.1.48.orig.tar.gz 63769566 SHA256:069d58b1e2c06bb1e6c31249eda34138f41fb8ae3dec7ecaeba8035812c87cf9
+'http://security.debian.org/debian-security/pool/updates/main/m/mariadb-10.1/mariadb-10.1_10.1.48.orig.tar.gz.asc' mariadb-10.1_10.1.48.orig.tar.gz.asc 195 SHA256:6f66d57dadaf6b22c5310e4f7eeb5352e99ab918f6a249a1c81d32a1900e132c
+'http://security.debian.org/debian-security/pool/updates/main/m/mariadb-10.1/mariadb-10.1_10.1.48-0+deb9u1.debian.tar.xz' mariadb-10.1_10.1.48-0+deb9u1.debian.tar.xz 230568 SHA256:734a621e5d35a072766d2aeba5989f8bc4c635c94c018e9052b93c8846a6c35d
+```
 
-- http://snapshot.debian.org/package/mariadb-10.1/10.1.47-0+deb9u1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/mariadb-10.1/10.1.48-0+deb9u1/ (for browsing the source)
+- https://sources.debian.net/src/mariadb-10.1/10.1.48-0+deb9u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/mariadb-10.1/10.1.48-0+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mawk=1.3.3-17`
 
@@ -4444,24 +4460,31 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/openjpeg2/2.1.2-1.1+deb9u5/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/openjpeg2/2.1.2-1.1+deb9u5/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openldap=2.4.44+dfsg-5+deb9u6`
+### `dpkg` source package: `openldap=2.4.44+dfsg-5+deb9u7`
 
 Binary Packages:
 
-- `libldap-2.4-2:amd64=2.4.44+dfsg-5+deb9u6`
-- `libldap-common=2.4.44+dfsg-5+deb9u6`
+- `libldap-2.4-2:amd64=2.4.44+dfsg-5+deb9u7`
+- `libldap-common=2.4.44+dfsg-5+deb9u7`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris openldap=2.4.44+dfsg-5+deb9u7
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.44+dfsg-5+deb9u7.dsc' openldap_2.4.44+dfsg-5+deb9u7.dsc 3017 SHA256:9b00375bbc5c65d7cc1923d2a1ee236e1434e1293895160bd4369f4e16c01177
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.44+dfsg.orig.tar.gz' openldap_2.4.44+dfsg.orig.tar.gz 4826590 SHA256:d5187c229bec163c5d97845846e1b87917755f85b04f444c08836384f4bd7ffe
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.44+dfsg-5+deb9u7.debian.tar.xz' openldap_2.4.44+dfsg-5+deb9u7.debian.tar.xz 173548 SHA256:e66b4686c6fc47be154bb528a2936f1ab12632953d3d4c6ec4d2ebaf5ea0b681
+```
 
-- http://snapshot.debian.org/package/openldap/2.4.44+dfsg-5+deb9u6/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/openldap/2.4.44+dfsg-5+deb9u7/ (for browsing the source)
+- https://sources.debian.net/src/openldap/2.4.44+dfsg-5+deb9u7/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openldap/2.4.44+dfsg-5+deb9u7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssh=1:7.4p1-10+deb9u7`
 
