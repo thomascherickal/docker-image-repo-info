@@ -1,18 +1,18 @@
-# `aerospike:5.4.0.3`
+# `aerospike:5.5.0.2`
 
 ## Docker Metadata
 
-- Image ID: `sha256:93f0263228dbe7a2edb80d610c8684e20899cdffeaa63a45ff8848da9e1fbef9`
-- Created: `2021-01-27T22:02:36.601335675Z`
-- Virtual Size: ~ 194.65 Mb  
+- Image ID: `sha256:7dda8faf276140484ab9154a4c3af89ea747dc8cfaad4249aab5612a0a4dfffa`
+- Created: `2021-02-09T04:52:24.875765704Z`
+- Virtual Size: ~ 194.74 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/bin/dumb-init","--","/entrypoint.sh"]`
 - Command: `["asd"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `AEROSPIKE_VERSION=5.4.0.3`
-  - `AEROSPIKE_SHA256=31468e3c70e0296f59b2f865dbe2f3329885459db069143fc6ee94e265a060bc`
+  - `AEROSPIKE_VERSION=5.5.0.2`
+  - `AEROSPIKE_SHA256=f09ef2ecbfcb6810d4a068f64a22b68f4bc0b770da7578edab616bacb0d8a576`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -66,11 +66,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/adduser/3.115/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/adduser/3.115/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `aerospike-server-community=5.4.0.3-1`
+### `dpkg` source package: `aerospike-server-community=5.5.0.2-1`
 
 Binary Packages:
 
-- `aerospike-server-community=5.4.0.3-1`
+- `aerospike-server-community=5.5.0.2-1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -80,11 +80,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `aerospike-tools=4.0.4`
+### `dpkg` source package: `aerospike-tools=5.0.1`
 
 Binary Packages:
 
-- `aerospike-tools=4.0.4`
+- `aerospike-tools=5.0.1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1829,24 +1829,31 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/nghttp2/1.18.1-1+deb9u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/nghttp2/1.18.1-1+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openldap=2.4.44+dfsg-5+deb9u6`
+### `dpkg` source package: `openldap=2.4.44+dfsg-5+deb9u7`
 
 Binary Packages:
 
-- `libldap-2.4-2:amd64=2.4.44+dfsg-5+deb9u6`
-- `libldap-common=2.4.44+dfsg-5+deb9u6`
+- `libldap-2.4-2:amd64=2.4.44+dfsg-5+deb9u7`
+- `libldap-common=2.4.44+dfsg-5+deb9u7`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris openldap=2.4.44+dfsg-5+deb9u7
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.44+dfsg-5+deb9u7.dsc' openldap_2.4.44+dfsg-5+deb9u7.dsc 3017 SHA256:9b00375bbc5c65d7cc1923d2a1ee236e1434e1293895160bd4369f4e16c01177
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.44+dfsg.orig.tar.gz' openldap_2.4.44+dfsg.orig.tar.gz 4826590 SHA256:d5187c229bec163c5d97845846e1b87917755f85b04f444c08836384f4bd7ffe
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.44+dfsg-5+deb9u7.debian.tar.xz' openldap_2.4.44+dfsg-5+deb9u7.debian.tar.xz 173548 SHA256:e66b4686c6fc47be154bb528a2936f1ab12632953d3d4c6ec4d2ebaf5ea0b681
+```
 
-- http://snapshot.debian.org/package/openldap/2.4.44+dfsg-5+deb9u6/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/openldap/2.4.44+dfsg-5+deb9u7/ (for browsing the source)
+- https://sources.debian.net/src/openldap/2.4.44+dfsg-5+deb9u7/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openldap/2.4.44+dfsg-5+deb9u7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssl1.0=1.0.2u-1~deb9u3`
 
@@ -2503,23 +2510,30 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tar/1.29b-1.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tar/1.29b-1.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tzdata=2020e-0+deb9u1`
+### `dpkg` source package: `tzdata=2021a-0+deb9u1`
 
 Binary Packages:
 
-- `tzdata=2020e-0+deb9u1`
+- `tzdata=2021a-0+deb9u1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris tzdata=2021a-0+deb9u1
+'http://security.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a-0+deb9u1.dsc' tzdata_2021a-0+deb9u1.dsc 2029 SHA256:cea5ffa909e7463a567405b6e8f997b16517b525d4d3a213f498d206dfff3204
+'http://security.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA256:39e7d2ba08c68cbaefc8de3227aab0dec2521be8042cf56855f7dc3a9fb14e08
+'http://security.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a-0+deb9u1.debian.tar.xz' tzdata_2021a-0+deb9u1.debian.tar.xz 103220 SHA256:4e8f5eab78b57e8bd6d1de652c1fc6bc63e08b29ccda795276d3ee293fb71bb8
+```
 
-- http://snapshot.debian.org/package/tzdata/2020e-0+deb9u1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/tzdata/2021a-0+deb9u1/ (for browsing the source)
+- https://sources.debian.net/src/tzdata/2021a-0+deb9u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tzdata/2021a-0+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ustr=1.0.4-6`
 
