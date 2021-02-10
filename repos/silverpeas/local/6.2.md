@@ -7528,14 +7528,9 @@ Licenses: (parsed from: `/usr/share/doc/openjdk-11-jdk/copyright`, `/usr/share/d
 - `LGPL-2`
 - `LGPL-2-1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openjdk-lts=11.0.9.1+1-0ubuntu1~20.04
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openjdk-lts/openjdk-lts_11.0.9.1+1-0ubuntu1~20.04.dsc' openjdk-lts_11.0.9.1+1-0ubuntu1~20.04.dsc 4919 SHA512:4cb4411ef9cd356fe11d692df0ecf00d207249d2b42ed53dab4435c6c4d781909ffe7545783e5fa9df74d61125f84fa842166b893084b0aa553134605239d479
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openjdk-lts/openjdk-lts_11.0.9.1+1.orig.tar.gz' openjdk-lts_11.0.9.1+1.orig.tar.gz 118096491 SHA512:ea41071c892f329854d93d1d1884f91a036fdcf1875b37507e1b036ab6f3ffe46b0746ffa4d7b993be0ee43022e50a515dd274597989fd5fafbc72d4c25d48ad
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openjdk-lts/openjdk-lts_11.0.9.1+1-0ubuntu1~20.04.debian.tar.xz' openjdk-lts_11.0.9.1+1-0ubuntu1~20.04.debian.tar.xz 201812 SHA512:380bb4a2a88bf8080a97a3d4f875638fe190615094637fe847ee6a7cb538ee4b138551b5c16ec7c7d46b5a0875791f506107d8142b8e548b5f3d7986b5b1749d
-```
 
 ### `dpkg` source package: `openjpeg2=2.3.1-1ubuntu4.20.04.1`
 
@@ -7575,14 +7570,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openldap=2.4.49+dfsg-2ubuntu1.5
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.49+dfsg-2ubuntu1.5.dsc' openldap_2.4.49+dfsg-2ubuntu1.5.dsc 3136 SHA512:ffe904a011735298fd42943cb420bfd47ed9b1b8f11ca17da0f7d95c11bdcab86becea0fd8f170c35ea1031f702b90c3bf9b21d973f47b91af8727392d19c5e7
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.49+dfsg.orig.tar.gz' openldap_2.4.49+dfsg.orig.tar.gz 4844726 SHA512:c2096f6e37bae8e4d4dcc5cc8dad783996bc8677e7e62a06b9f55857f8950726ca3e3b0d8368563c8985123175f63625354ad5ac271db8b55d3ac62e8906d4c7
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.49+dfsg-2ubuntu1.5.debian.tar.xz' openldap_2.4.49+dfsg-2ubuntu1.5.debian.tar.xz 183076 SHA512:4870e739fdda7dd6ed8ce67fa6db89ee6e90e419eb7265c47cc7fdd5db6d7226ef4cd12bfc26cc800d5b3522a709bd11e3513ca35eb6d88727878b0c9b33fc2b
-```
 
 ### `dpkg` source package: `openssl=1.1.1f-1ubuntu2.1`
 
