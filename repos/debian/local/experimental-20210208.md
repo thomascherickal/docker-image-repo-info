@@ -78,19 +78,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.1.18
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.1.18.dsc' apt_2.1.18.dsc 2784 SHA256:0aaef5cc2260d31d2415fcf5aaa3fdfacf882b2771e234ab2235998a0fefb2ec
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.1.18.tar.xz' apt_2.1.18.tar.xz 2192808 SHA256:224ade1bc189303b0620c55ac278cb419fdff7693765e6e864f82cf73bd3c766
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/apt/2.1.18/
 
-- https://sources.debian.net/src/apt/2.1.18/ (for browsing the source)
-- https://sources.debian.net/src/apt/2.1.18/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apt/2.1.18/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `attr=1:2.4.48-6`
 
@@ -184,13 +178,19 @@ Licenses: (parsed from: `/usr/share/doc/base-passwd/copyright`)
 - `GPL-2`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris base-passwd=3.5.49
+'http://deb.debian.org/debian/pool/main/b/base-passwd/base-passwd_3.5.49.dsc' base-passwd_3.5.49.dsc 1757 SHA256:8e8c81bbc7e7163fe9d471c195a191597624b789e7df2cd9358691a4c821b7c2
+'http://deb.debian.org/debian/pool/main/b/base-passwd/base-passwd_3.5.49.tar.xz' base-passwd_3.5.49.tar.xz 53152 SHA256:5d0617b70a81f937a8ba91a1c4bf03bff472f84a0f3b841f67d945fecf539801
+```
 
-- http://snapshot.debian.org/package/base-passwd/3.5.49/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/base-passwd/3.5.49/ (for browsing the source)
+- https://sources.debian.net/src/base-passwd/3.5.49/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/base-passwd/3.5.49/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `bash=5.1-2`
 
@@ -1852,13 +1852,20 @@ Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/lib
 - `MIT`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris util-linux=2.36.1-7
+'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.36.1-7.dsc' util-linux_2.36.1-7.dsc 4271 SHA256:659947b09a7c95769e3ac28fed878f8dc73d9655c7386837f3b4fb31f9c382d5
+'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.36.1.orig.tar.xz' util-linux_2.36.1.orig.tar.xz 5231880 SHA256:09fac242172cd8ec27f0739d8d192402c69417617091d8c6e974841568f37eed
+'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.36.1-7.debian.tar.xz' util-linux_2.36.1-7.debian.tar.xz 98140 SHA256:85def546377248a05e8af87482458ae6a39f081e626d3752c567e87de8dca24e
+```
 
-- http://snapshot.debian.org/package/util-linux/2.36.1-7/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/util-linux/2.36.1-7/ (for browsing the source)
+- https://sources.debian.net/src/util-linux/2.36.1-7/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/util-linux/2.36.1-7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `xxhash=0.8.0-2`
 
