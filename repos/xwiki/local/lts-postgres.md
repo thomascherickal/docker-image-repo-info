@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:a2c44603636be051edbe2ada9b35dbecdead5dc8865321b44ac53632502f7c2c`
-- Created: `2021-02-03T22:03:28.928435471Z`
+- Image ID: `sha256:7d3bbdce1305ff6feb274e159e7b6d9afa53a210ac877e8fce6a140f8368a2b3`
+- Created: `2021-02-12T01:01:41.879467834Z`
 - Virtual Size: ~ 1.31 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -23,9 +23,9 @@
   - `TOMCAT_MAJOR=8`
   - `TOMCAT_VERSION=8.5.63`
   - `TOMCAT_SHA512=f6379373fa688a6a6a49b47589fe02b753dbb639cd85e5deeb9481651343172fbbcc2944e0d3975cce471ca0dcf8f906b7bdab908253d685f588dcafe99de880`
-  - `XWIKI_VERSION=12.10.3`
-  - `XWIKI_URL_PREFIX=https://maven.xwiki.org/releases/org/xwiki/platform/xwiki-platform-distribution-war/12.10.3`
-  - `XWIKI_DOWNLOAD_SHA256=402d97322fa9234a844b03630324bbd9a2152ff320e3c27c8ec3fc12a082223f`
+  - `XWIKI_VERSION=12.10.4`
+  - `XWIKI_URL_PREFIX=https://maven.xwiki.org/releases/org/xwiki/platform/xwiki-platform-distribution-war/12.10.4`
+  - `XWIKI_DOWNLOAD_SHA256=fd213ff52d575cfec4c7f0c2c1e20312075d131fbc08285cc7d3b1234437eaa4`
 
 ## `dpkg` (`.deb`-based packages)
 
