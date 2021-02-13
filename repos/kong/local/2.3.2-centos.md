@@ -1,10 +1,10 @@
-# `kong:2.3.1-centos`
+# `kong:2.3.2-centos`
 
 ## Docker Metadata
 
-- Image ID: `sha256:a6ddf4deeb4ee04ebf0f68f79a2ee0486fd26465754de034da59bd93c53d6b5b`
-- Created: `2021-01-27T06:33:57.739038395Z`
-- Virtual Size: ~ 364.96 Mb  
+- Image ID: `sha256:793035e30a2dff29e7b79510065aef13499f016f8318e9a75377b095fc7d59e7`
+- Created: `2021-02-10T19:21:44.3353378Z`
+- Virtual Size: ~ 365.06 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -12,7 +12,7 @@
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `ASSET=ce`
-  - `KONG_VERSION=2.3.1`
+  - `KONG_VERSION=2.3.2`
 - Labels:
   - `maintainer=Kong <support@konghq.com>`
   - `org.label-schema.build-date=20201113`
@@ -831,7 +831,7 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/kmod-20-28.el7.src.rpm
 ```
 
-### `rpm` package: `kong-2.3.1-1.x86_64`
+### `rpm` package: `kong-2.3.2-1.x86_64`
 
 Licenses (from `rpm --query`): ASL 2.0
 
@@ -1621,18 +1621,18 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/pcre-8.32-17.el7.src.rpm
 ```
 
-### `rpm` package: `perl-5.16.3-297.el7.x86_64`
+### `rpm` package: `perl-5.16.3-299.el7_9.x86_64`
 
 Licenses (from `rpm --query`): (GPL+ or Artistic) and (GPLv2+ or Artistic) and Copyright Only and MIT and Public Domain and UCD
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls perl-5.16.3-297.el7
+$ yumdownloader --quiet --source --urls perl-5.16.3-299.el7_9
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
-http://vault.centos.org/centos/7/os/Source//SPackages/perl-5.16.3-297.el7.src.rpm
+http://vault.centos.org/centos/7/updates/Source//SPackages/perl-5.16.3-299.el7_9.src.rpm
 ```
 
 ### `rpm` package: `perl-Carp-1.26-244.el7.noarch`
@@ -1789,18 +1789,18 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/perl-PathTools-3.40-5.el7.src.rpm
 ```
 
-### `rpm` package: `perl-Pod-Escapes-1.04-297.el7.noarch`
+### `rpm` package: `perl-Pod-Escapes-1.04-299.el7_9.noarch`
 
 Licenses (from `rpm --query`): GPL+ or Artistic
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls perl-Pod-Escapes-1.04-297.el7.noarch
+$ yumdownloader --quiet --source --urls perl-Pod-Escapes-1.04-299.el7_9.noarch
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
-http://vault.centos.org/centos/7/os/Source//SPackages/perl-5.16.3-297.el7.src.rpm
+http://vault.centos.org/centos/7/updates/Source//SPackages/perl-5.16.3-299.el7_9.src.rpm
 ```
 
 ### `rpm` package: `perl-Pod-Perldoc-3.20-4.el7.noarch`
@@ -1957,32 +1957,32 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/perl-constant-1.27-2.el7.src.rpm
 ```
 
-### `rpm` package: `perl-libs-5.16.3-297.el7.x86_64`
+### `rpm` package: `perl-libs-5.16.3-299.el7_9.x86_64`
 
 Licenses (from `rpm --query`): GPL+ or Artistic
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls perl-libs-5.16.3-297.el7
+$ yumdownloader --quiet --source --urls perl-libs-5.16.3-299.el7_9
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
-http://vault.centos.org/centos/7/os/Source//SPackages/perl-5.16.3-297.el7.src.rpm
+http://vault.centos.org/centos/7/updates/Source//SPackages/perl-5.16.3-299.el7_9.src.rpm
 ```
 
-### `rpm` package: `perl-macros-5.16.3-297.el7.x86_64`
+### `rpm` package: `perl-macros-5.16.3-299.el7_9.x86_64`
 
 Licenses (from `rpm --query`): GPL+ or Artistic
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls perl-macros-5.16.3-297.el7
+$ yumdownloader --quiet --source --urls perl-macros-5.16.3-299.el7_9
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
-http://vault.centos.org/centos/7/os/Source//SPackages/perl-5.16.3-297.el7.src.rpm
+http://vault.centos.org/centos/7/updates/Source//SPackages/perl-5.16.3-299.el7_9.src.rpm
 ```
 
 ### `rpm` package: `perl-parent-0.225-244.el7.noarch`
@@ -2657,30 +2657,30 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/yum-utils-1.1.31-54.el7_8.src.rpm
 ```
 
-### `rpm` package: `zlib-1.2.7-18.el7.x86_64`
+### `rpm` package: `zlib-1.2.7-19.el7_9.x86_64`
 
 Licenses (from `rpm --query`): zlib and Boost
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls zlib-1.2.7-18.el7
+$ yumdownloader --quiet --source --urls zlib-1.2.7-19.el7_9
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
-http://vault.centos.org/centos/7/os/Source//SPackages/zlib-1.2.7-18.el7.src.rpm
+http://vault.centos.org/centos/7/updates/Source//SPackages/zlib-1.2.7-19.el7_9.src.rpm
 ```
 
-### `rpm` package: `zlib-devel-1.2.7-18.el7.x86_64`
+### `rpm` package: `zlib-devel-1.2.7-19.el7_9.x86_64`
 
 Licenses (from `rpm --query`): zlib and Boost
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls zlib-devel-1.2.7-18.el7
+$ yumdownloader --quiet --source --urls zlib-devel-1.2.7-19.el7_9
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
-http://vault.centos.org/centos/7/os/Source//SPackages/zlib-1.2.7-18.el7.src.rpm
+http://vault.centos.org/centos/7/updates/Source//SPackages/zlib-1.2.7-19.el7_9.src.rpm
 ```
