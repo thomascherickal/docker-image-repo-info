@@ -1,9 +1,9 @@
-# `postgres:10.15-alpine`
+# `postgres:10.16-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:c9192ffc3b869e6e12ec10dbeb95395046d6b1b9f7318277a2023bc79868a8ef`
-- Created: `2021-01-29T03:29:12.11587889Z`
+- Image ID: `sha256:58f61816613acbd8b25670ec0d253b6d51bc521489aa3a9d718ead9edca8854a`
+- Created: `2021-02-12T19:52:10.175955764Z`
 - Virtual Size: ~ 72.67 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -13,8 +13,8 @@
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=en_US.utf8`
   - `PG_MAJOR=10`
-  - `PG_VERSION=10.15`
-  - `PG_SHA256=5956bce0becffa77883c41594c95a23110b94f10cd66a1157e373c3575921f7e`
+  - `PG_VERSION=10.16`
+  - `PG_SHA256=a35c718b1b6690e01c69626d467edb933784f8d1d6741e21fe6cce0738467bb3`
   - `PGDATA=/var/lib/postgresql/data`
 
 ## `apk` (`.apk`-based packages)
