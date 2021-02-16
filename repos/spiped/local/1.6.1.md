@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:67f39dd2d121caaec0db3bb313564c512f9f974333b8a772963e9a9790a21a3f`
-- Created: `2021-02-09T11:22:14.96488762Z`
+- Image ID: `sha256:897fcb40d5e49b8a35aa9e61c14eff1f62c615775ab19bff009fbbeafff2b106`
+- Created: `2021-02-13T00:10:02.08112799Z`
 - Virtual Size: ~ 100.68 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -12,7 +12,6 @@
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `SPIPED_VERSION=1.6.1`
-  - `SPIPED_DOWNLOAD_URL=https://www.tarsnap.com/spiped/spiped-1.6.1.tgz`
   - `SPIPED_DOWNLOAD_SHA256=8d7089979db79a531a0ecc507b113ac6f2cf5f19305571eff1d3413e0ab33713`
 
 ## `dpkg` (`.deb`-based packages)
