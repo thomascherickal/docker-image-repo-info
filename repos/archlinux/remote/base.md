@@ -1,7 +1,7 @@
 ## `archlinux:base`
 
 ```console
-$ docker pull archlinux@sha256:dcde75fac283b82760b5b64eba36447ced63b2cad28a3ed7abad6c2a72385b23
+$ docker pull archlinux@sha256:3db6e9da1f9c0cdb0001641f9bd7b69d3d6c1303b6cc1ca4d653dc57c9bb0a2d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,33 +11,33 @@ $ docker pull archlinux@sha256:dcde75fac283b82760b5b64eba36447ced63b2cad28a3ed7a
 ### `archlinux:base` - linux; amd64
 
 ```console
-$ docker pull archlinux@sha256:ea46b488af1e6404726ed9ea75163306577a91c9d7b70b5dca0436b04e9050e4
+$ docker pull archlinux@sha256:124ae4a044205dd2ef846b92e716c703971c0c597af7de195006bcba45243b56
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **134.0 MB (134017265 bytes)**  
+-	Total Size: **134.0 MB (134033601 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a8a9773ce02f7576af38d726ee080ce64e8990817cb4e83d8f731467753d4bdf`
+-	Image ID: `sha256:93655578cd5a0d3f8532f7918fe6d3a4a03e8811132338a25f7ccfce08db60b5`
 -	Default Command: `["\/usr\/bin\/bash"]`
 
 ```dockerfile
-# Mon, 08 Feb 2021 20:22:09 GMT
-COPY dir:16314dbe99357cc1ddbbf2872360e72f7580f879299ca6c7845cce0fe0411cbf in / 
-# Mon, 08 Feb 2021 20:22:10 GMT
+# Tue, 16 Feb 2021 23:20:31 GMT
+COPY dir:1927c0bb46df4244490d63da65861cb03ba9c9d1d1e39e1fdb6b4caa9a0c5765 in / 
+# Tue, 16 Feb 2021 23:20:32 GMT
 RUN ldconfig
-# Mon, 08 Feb 2021 20:22:11 GMT
+# Tue, 16 Feb 2021 23:20:32 GMT
 ENV LANG=en_US.UTF-8
-# Mon, 08 Feb 2021 20:22:11 GMT
+# Tue, 16 Feb 2021 23:20:33 GMT
 CMD ["/usr/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:3a05001ad92479eeb43b61ef312f164a302b213b065b36902397589acd0b4b43`  
-		Last Modified: Mon, 08 Feb 2021 20:24:29 GMT  
-		Size: 134.0 MB (134010614 bytes)  
+	-	`sha256:6a08684bfda006cbff01d3a86a3466fd1e811a61806e68914506eac1488118b1`  
+		Last Modified: Tue, 16 Feb 2021 23:22:14 GMT  
+		Size: 134.0 MB (134026957 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0a1ff60e1cc468612875a2945ec4cb30b92e0e579232d321cef72fff2d0c0944`  
-		Last Modified: Mon, 08 Feb 2021 20:24:00 GMT  
-		Size: 6.7 KB (6651 bytes)  
+	-	`sha256:f2a01e95d2222ac6e43c1ac1b645e0e1ec7ab303fdbfea8e3e5f6e17db3ae3d2`  
+		Last Modified: Tue, 16 Feb 2021 23:21:50 GMT  
+		Size: 6.6 KB (6644 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
