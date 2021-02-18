@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:9d8423aa17f3a38e691314bdcb868de9795737a032c65aa850a5c61c3da785f4`
-- Created: `2021-02-02T23:24:47.392050863Z`
-- Virtual Size: ~ 358.42 Mb  
+- Image ID: `sha256:58b40397de53aa5b31fdc275f8b93fbfb49fa0826a7acf942b75798da57eca72`
+- Created: `2021-02-18T09:04:31.367448745Z`
+- Virtual Size: ~ 358.55 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -181,16 +181,16 @@ MIT
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.32.1-r2 description:
+busybox-1.32.1-r3 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.32.1-r2 webpage:
+busybox-1.32.1-r3 webpage:
 https://busybox.net/
 
-busybox-1.32.1-r2 installed size:
+busybox-1.32.1-r3 installed size:
 946176
 
-busybox-1.32.1-r2 license:
+busybox-1.32.1-r3 license:
 GPL-2.0-only
 
 ```
@@ -470,16 +470,16 @@ GPL
 ### `apk` package: `git`
 
 ```console
-git-2.30.0-r0 description:
+git-2.30.1-r0 description:
 Distributed version control system
 
-git-2.30.0-r0 webpage:
+git-2.30.1-r0 webpage:
 https://www.git-scm.com/
 
-git-2.30.0-r0 installed size:
-10608640
+git-2.30.1-r0 installed size:
+10612736
 
-git-2.30.0-r0 license:
+git-2.30.1-r0 license:
 GPL-2.0-or-later
 
 ```
@@ -487,16 +487,16 @@ GPL-2.0-or-later
 ### `apk` package: `glib`
 
 ```console
-glib-2.66.4-r0 description:
+glib-2.66.7-r0 description:
 Common C routines used by Gtk+ and other libs
 
-glib-2.66.4-r0 webpage:
+glib-2.66.7-r0 webpage:
 https://developer.gnome.org/glib/
 
-glib-2.66.4-r0 installed size:
+glib-2.66.7-r0 installed size:
 3403776
 
-glib-2.66.4-r0 license:
+glib-2.66.7-r0 license:
 LGPL-2.1-or-later
 
 ```
@@ -725,16 +725,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1i-r0 description:
+libcrypto1.1-1.1.1j-r0 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1i-r0 webpage:
+libcrypto1.1-1.1.1j-r0 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1i-r0 installed size:
+libcrypto1.1-1.1.1j-r0 installed size:
 2768896
 
-libcrypto1.1-1.1.1i-r0 license:
+libcrypto1.1-1.1.1j-r0 license:
 OpenSSL
 
 ```
@@ -929,16 +929,16 @@ BSD-3-Clause IJG Zlib
 ### `apk` package: `libldap`
 
 ```console
-libldap-2.4.56-r0 description:
+libldap-2.4.57-r0 description:
 OpenLDAP libraries
 
-libldap-2.4.56-r0 webpage:
+libldap-2.4.57-r0 webpage:
 https://www.openldap.org/
 
-libldap-2.4.56-r0 installed size:
+libldap-2.4.57-r0 installed size:
 630784
 
-libldap-2.4.56-r0 license:
+libldap-2.4.57-r0 license:
 custom
 
 ```
@@ -1065,16 +1065,16 @@ custom
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1i-r0 description:
+libssl1.1-1.1.1j-r0 description:
 SSL shared libraries
 
-libssl1.1-1.1.1i-r0 webpage:
+libssl1.1-1.1.1j-r0 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1i-r0 installed size:
+libssl1.1-1.1.1j-r0 installed size:
 540672
 
-libssl1.1-1.1.1i-r0 license:
+libssl1.1-1.1.1j-r0 license:
 OpenSSL
 
 ```
@@ -1541,16 +1541,16 @@ BSD-3-Clause
 ### `apk` package: `pango`
 
 ```console
-pango-1.48.1-r0 description:
+pango-1.48.2-r0 description:
 library for layout and rendering of text
 
-pango-1.48.1-r0 webpage:
+pango-1.48.2-r0 webpage:
 https://www.pango.org/
 
-pango-1.48.1-r0 installed size:
+pango-1.48.2-r0 installed size:
 602112
 
-pango-1.48.1-r0 license:
+pango-1.48.2-r0 license:
 LGPL-2.1-or-later
 
 ```
@@ -1745,16 +1745,16 @@ Public-Domain
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.32.1-r2 description:
+ssl_client-1.32.1-r3 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.32.1-r2 webpage:
+ssl_client-1.32.1-r3 webpage:
 https://busybox.net/
 
-ssl_client-1.32.1-r2 installed size:
+ssl_client-1.32.1-r3 installed size:
 28672
 
-ssl_client-1.32.1-r2 license:
+ssl_client-1.32.1-r3 license:
 GPL-2.0-only
 
 ```
@@ -1779,16 +1779,16 @@ MIT
 ### `apk` package: `subversion`
 
 ```console
-subversion-1.14.0-r0 description:
+subversion-1.14.1-r0 description:
 Replacement for CVS, another versioning system (svn)
 
-subversion-1.14.0-r0 webpage:
+subversion-1.14.1-r0 webpage:
 https://subversion.apache.org/
 
-subversion-1.14.0-r0 installed size:
+subversion-1.14.1-r0 installed size:
 1064960
 
-subversion-1.14.0-r0 license:
+subversion-1.14.1-r0 license:
 Apache-2.0 BSD
 
 ```
@@ -1796,16 +1796,16 @@ Apache-2.0 BSD
 ### `apk` package: `subversion-libs`
 
 ```console
-subversion-libs-1.14.0-r0 description:
+subversion-libs-1.14.1-r0 description:
 Replacement for CVS, another versioning system (svn) (libraries)
 
-subversion-libs-1.14.0-r0 webpage:
+subversion-libs-1.14.1-r0 webpage:
 https://subversion.apache.org/
 
-subversion-libs-1.14.0-r0 installed size:
+subversion-libs-1.14.1-r0 installed size:
 3710976
 
-subversion-libs-1.14.0-r0 license:
+subversion-libs-1.14.1-r0 license:
 Apache-2.0 BSD
 
 ```
