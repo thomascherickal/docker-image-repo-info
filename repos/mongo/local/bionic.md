@@ -1,10 +1,10 @@
-# `mongo:4.4.3-bionic`
+# `mongo:4.4.4-bionic`
 
 ## Docker Metadata
 
-- Image ID: `sha256:ca8e14b1fda68aedb435fec2a6eaa326cf5633fc57b7e28b5cc37d938ead9edd`
-- Created: `2021-01-21T10:23:52.871325502Z`
-- Virtual Size: ~ 492.94 Mb  
+- Image ID: `sha256:b8264a857eba49a59ffba446beaa10e6f3a5c5b775c78b656aee476c8dc5c426`
+- Created: `2021-02-17T00:17:46.512358942Z`
+- Virtual Size: ~ 448.65 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -17,7 +17,7 @@
   - `MONGO_PACKAGE=mongodb-org`
   - `MONGO_REPO=repo.mongodb.org`
   - `MONGO_MAJOR=4.4`
-  - `MONGO_VERSION=4.4.3`
+  - `MONGO_VERSION=4.4.4`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -1187,11 +1187,11 @@ $ apt-get source -qq --print-uris mawk=1.3.3-17ubuntu3
 'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.3-17ubuntu3.diff.gz' mawk_1.3.3-17ubuntu3.diff.gz 64052 SHA256:d1be148525885cb1869e35514f55005b5043f3310b08c444625005a3e14c81fc
 ```
 
-### `dpkg` source package: `mongodb-database-tools=100.2.1`
+### `dpkg` source package: `mongodb-database-tools=100.3.0-1-g8b223b0a`
 
 Binary Packages:
 
-- `mongodb-database-tools=100.2.1`
+- `mongodb-database-tools=100.3.0-1-g8b223b0a`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1201,16 +1201,16 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `mongodb-org=4.4.3`
+### `dpkg` source package: `mongodb-org=4.4.4`
 
 Binary Packages:
 
-- `mongodb-org=4.4.3`
-- `mongodb-org-database-tools-extra=4.4.3`
-- `mongodb-org-mongos=4.4.3`
-- `mongodb-org-server=4.4.3`
-- `mongodb-org-shell=4.4.3`
-- `mongodb-org-tools=4.4.3`
+- `mongodb-org=4.4.4`
+- `mongodb-org-database-tools-extra=4.4.4`
+- `mongodb-org-mongos=4.4.4`
+- `mongodb-org-server=4.4.4`
+- `mongodb-org-shell=4.4.4`
+- `mongodb-org-tools=4.4.4`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1746,19 +1746,24 @@ $ apt-get source -qq --print-uris tar=1.29b-2ubuntu0.2
 'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.29b-2ubuntu0.2.debian.tar.xz' tar_1.29b-2ubuntu0.2.debian.tar.xz 34136 SHA512:83c56c1c111a48ed4e1e8dc77bef53b8348a73bc37bdf567c2bb0b887f351892c586256f936eecd865d8422151820861e919165d84e45a036adf5c904453100a
 ```
 
-### `dpkg` source package: `tzdata=2020f-0ubuntu0.18.04`
+### `dpkg` source package: `tzdata=2021a-0ubuntu0.18.04`
 
 Binary Packages:
 
-- `tzdata=2020f-0ubuntu0.18.04`
+- `tzdata=2021a-0ubuntu0.18.04`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris tzdata=2021a-0ubuntu0.18.04
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2021a-0ubuntu0.18.04.dsc' tzdata_2021a-0ubuntu0.18.04.dsc 2122 SHA512:8fe939f272d2bffdac7e9c9239756a8ebe3e5675ef15d5561ddadc54e2a8f1a7e7fcd619bc0897c2b8af9363c2f05f8da07f5a847c4c606a0f12024bfa101b30
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA512:7cdd762ec90ce12a30fa36b1d66d1ea82d9fa21e514e2b9c7fcbe2541514ee0fadf30843ff352c65512fb270857b51d1517b45e1232b89c6f954ba9ff1833bb3
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2021a-0ubuntu0.18.04.debian.tar.xz' tzdata_2021a-0ubuntu0.18.04.debian.tar.xz 106356 SHA512:3d988f952d4f6ce3bf4bca1a41695acddc616e8b3cceb3a85de74371b4d0a096ba12c52782466b1c6db3bd8d7688018eb56c31f30d4650517bb1494b846cba04
+```
 
 ### `dpkg` source package: `ubuntu-keyring=2018.09.18.1~18.04.0`
 
