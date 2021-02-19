@@ -2,20 +2,20 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:598b4c9b08a34d54257895652ae7b48e3bc662a78912388ef3e446c4abf5c6ce`
-- Created: `2021-02-05T05:28:41.321119351Z`
+- Image ID: `sha256:a7e30f3ce086d2d1910554b1728f91bfdb63df29011c5876057d38991ee60da5`
+- Created: `2021-02-18T07:03:26.547167856Z`
 - Virtual Size: ~ 85.03 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["iex"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `OTP_VERSION=23.2.4`
+  - `OTP_VERSION=23.2.5`
   - `REBAR3_VERSION=3.14.3`
   - `ELIXIR_VERSION=v1.11.3`
   - `LANG=C.UTF-8`
 - Labels:
-  - `org.opencontainers.image.version=23.2.4`
+  - `org.opencontainers.image.version=23.2.5`
 
 ## `apk` (`.apk`-based packages)
 
@@ -73,16 +73,16 @@ GPL-2.0-only
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.32.1-r2 description:
+busybox-1.32.1-r3 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.32.1-r2 webpage:
+busybox-1.32.1-r3 webpage:
 https://busybox.net/
 
-busybox-1.32.1-r2 installed size:
+busybox-1.32.1-r3 installed size:
 946176
 
-busybox-1.32.1-r2 license:
+busybox-1.32.1-r3 license:
 GPL-2.0-only
 
 ```
@@ -141,16 +141,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1i-r0 description:
+libcrypto1.1-1.1.1j-r0 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1i-r0 webpage:
+libcrypto1.1-1.1.1j-r0 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1i-r0 installed size:
+libcrypto1.1-1.1.1j-r0 installed size:
 2768896
 
-libcrypto1.1-1.1.1i-r0 license:
+libcrypto1.1-1.1.1j-r0 license:
 OpenSSL
 
 ```
@@ -175,16 +175,16 @@ GPL-2.0-only AND LGPL-2.1-or-later
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1i-r0 description:
+libssl1.1-1.1.1j-r0 description:
 SSL shared libraries
 
-libssl1.1-1.1.1i-r0 webpage:
+libssl1.1-1.1.1j-r0 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1i-r0 installed size:
+libssl1.1-1.1.1j-r0 installed size:
 540672
 
-libssl1.1-1.1.1i-r0 license:
+libssl1.1-1.1.1j-r0 license:
 OpenSSL
 
 ```
@@ -328,16 +328,16 @@ GPL-2.0-only
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.32.1-r2 description:
+ssl_client-1.32.1-r3 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.32.1-r2 webpage:
+ssl_client-1.32.1-r3 webpage:
 https://busybox.net/
 
-ssl_client-1.32.1-r2 installed size:
+ssl_client-1.32.1-r3 installed size:
 28672
 
-ssl_client-1.32.1-r2 license:
+ssl_client-1.32.1-r3 license:
 GPL-2.0-only
 
 ```
