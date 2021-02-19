@@ -1,9 +1,9 @@
-# `wordpress:beta-5.7-beta2-fpm-alpine`
+# `wordpress:beta-5.7-beta3-fpm-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:2afda9d0b2a02832bb85939cb2b874a395ffe983e329bfd18da7b0152b72e21d`
-- Created: `2021-02-10T19:36:10.891584211Z`
+- Image ID: `sha256:3040e0d17c99a1f1f26d5dc09e09ff55c446810d45875941d8a50ce1e49eb406`
+- Created: `2021-02-18T08:09:47.798375494Z`
 - Virtual Size: ~ 247.96 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -164,16 +164,16 @@ MIT
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.32.1-r2 description:
+busybox-1.32.1-r3 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.32.1-r2 webpage:
+busybox-1.32.1-r3 webpage:
 https://busybox.net/
 
-busybox-1.32.1-r2 installed size:
+busybox-1.32.1-r3 installed size:
 946176
 
-busybox-1.32.1-r2 license:
+busybox-1.32.1-r3 license:
 GPL-2.0-only
 
 ```
@@ -402,16 +402,16 @@ AGPL-3.0-or-later
 ### `apk` package: `glib`
 
 ```console
-glib-2.66.4-r0 description:
+glib-2.66.7-r0 description:
 Common C routines used by Gtk+ and other libs
 
-glib-2.66.4-r0 webpage:
+glib-2.66.7-r0 webpage:
 https://developer.gnome.org/glib/
 
-glib-2.66.4-r0 installed size:
+glib-2.66.7-r0 installed size:
 3403776
 
-glib-2.66.4-r0 license:
+glib-2.66.7-r0 license:
 LGPL-2.1-or-later
 
 ```
@@ -640,16 +640,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1i-r0 description:
+libcrypto1.1-1.1.1j-r0 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1i-r0 webpage:
+libcrypto1.1-1.1.1j-r0 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1i-r0 installed size:
+libcrypto1.1-1.1.1j-r0 installed size:
 2768896
 
-libcrypto1.1-1.1.1i-r0 license:
+libcrypto1.1-1.1.1j-r0 license:
 OpenSSL
 
 ```
@@ -878,16 +878,16 @@ ISC
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1i-r0 description:
+libssl1.1-1.1.1j-r0 description:
 SSL shared libraries
 
-libssl1.1-1.1.1i-r0 webpage:
+libssl1.1-1.1.1j-r0 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1i-r0 installed size:
+libssl1.1-1.1.1j-r0 installed size:
 540672
 
-libssl1.1-1.1.1i-r0 license:
+libssl1.1-1.1.1j-r0 license:
 OpenSSL
 
 ```
@@ -1269,16 +1269,16 @@ BSD-2-Clause
 ### `apk` package: `openssl`
 
 ```console
-openssl-1.1.1i-r0 description:
+openssl-1.1.1j-r0 description:
 Toolkit for Transport Layer Security (TLS)
 
-openssl-1.1.1i-r0 webpage:
+openssl-1.1.1j-r0 webpage:
 https://www.openssl.org/
 
-openssl-1.1.1i-r0 installed size:
-679936
+openssl-1.1.1j-r0 installed size:
+675840
 
-openssl-1.1.1i-r0 license:
+openssl-1.1.1j-r0 license:
 OpenSSL
 
 ```
@@ -1303,16 +1303,16 @@ BSD-3-Clause
 ### `apk` package: `pango`
 
 ```console
-pango-1.48.1-r0 description:
+pango-1.48.2-r0 description:
 library for layout and rendering of text
 
-pango-1.48.1-r0 webpage:
+pango-1.48.2-r0 webpage:
 https://www.pango.org/
 
-pango-1.48.1-r0 installed size:
+pango-1.48.2-r0 installed size:
 602112
 
-pango-1.48.1-r0 license:
+pango-1.48.2-r0 license:
 LGPL-2.1-or-later
 
 ```
@@ -1456,16 +1456,16 @@ Public-Domain
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.32.1-r2 description:
+ssl_client-1.32.1-r3 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.32.1-r2 webpage:
+ssl_client-1.32.1-r3 webpage:
 https://busybox.net/
 
-ssl_client-1.32.1-r2 installed size:
+ssl_client-1.32.1-r3 installed size:
 28672
 
-ssl_client-1.32.1-r2 license:
+ssl_client-1.32.1-r3 license:
 GPL-2.0-only
 
 ```
