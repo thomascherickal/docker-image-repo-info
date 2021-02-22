@@ -2089,15 +2089,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssl1.0=1.0.2n-1ubuntu5.5
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl1.0/openssl1.0_1.0.2n-1ubuntu5.5.dsc' openssl1.0_1.0.2n-1ubuntu5.5.dsc 2713 SHA512:530664ac134d81e5df95e42f89ae131f06c1880829129183b0450e7fb5431fe862f44922ab7c3153d68bcf97fc7de049720323a50b27b4e3e3097fe74d82d5bd
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl1.0/openssl1.0_1.0.2n.orig.tar.gz' openssl1.0_1.0.2n.orig.tar.gz 5375802 SHA512:144bf0d6aa27b4af01df0b7b734c39962649e1711554247d42e05e14d8945742b18745aefdba162e2dfc762b941fd7d3b2d5dc6a781ae4ba10a6f5a3cadb0687
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl1.0/openssl1.0_1.0.2n.orig.tar.gz.asc' openssl1.0_1.0.2n.orig.tar.gz.asc 455 SHA512:7a4d82d1abbfdac92f87839321a40348099fa32193e97042c1d5ff0b0ac719104e0e2b079e0669e603c98c7d2313d0e0de4c1aec0c9180eadd1dd241e7f1985a
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl1.0/openssl1.0_1.0.2n-1ubuntu5.5.debian.tar.xz' openssl1.0_1.0.2n-1ubuntu5.5.debian.tar.xz 120384 SHA512:c3d8ea33bd5735f9ddb5992c6488826f48aad5599360df3e29b8ff744e6ee46bdd189b93cd3657f9ae6befb06000c0bb0a65b4c8bc3a45cb839e49c808dc4ebd
-```
 
 ### `dpkg` source package: `openssl=1.1.1-1ubuntu2.1~18.04.7`
 
@@ -2110,15 +2104,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssl=1.1.1-1ubuntu2.1~18.04.7
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1-1ubuntu2.1~18.04.7.dsc' openssl_1.1.1-1ubuntu2.1~18.04.7.dsc 2754 SHA512:021e2302c7bb5a5206d9da79ef829a576e604a52719ef7487c13af6be375c599d75415b3b90234a91314730b4de0f7192fe91a320f23d2bba33bfc17b4ab1999
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1.orig.tar.gz' openssl_1.1.1.orig.tar.gz 8337920 SHA512:c0284a4fe84bdf765ca5bc5148da4441ffc36392cfecaf9d372af00cf93b6de5681cab1248b6f8246474532155dc205da5ad49549ad7c61c07c917145e7c9c71
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1.orig.tar.gz.asc' openssl_1.1.1.orig.tar.gz.asc 488 SHA512:cc69ad07a2edc17b579018bac4683f7d48deb8cde4a0f53eb777d2546eec9be6d13a610299705f3b87a7e4e8492432260cd7efc89d124c7fe1def309bbee461f
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1-1ubuntu2.1~18.04.7.debian.tar.xz' openssl_1.1.1-1ubuntu2.1~18.04.7.debian.tar.xz 109396 SHA512:392df550d5d84c16938dcb170ec038b44afbee3387be33bc7172a08b392aa0f0ff0d99bc7b25a2edc4e831ddab3265b746631effb01ed1ea350b0c5684e0318a
-```
 
 ### `dpkg` source package: `p11-kit=0.23.9-2ubuntu0.1`
 
