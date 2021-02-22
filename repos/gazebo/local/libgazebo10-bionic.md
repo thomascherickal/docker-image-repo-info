@@ -5434,15 +5434,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssl=1.1.1-1ubuntu2.1~18.04.7
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1-1ubuntu2.1~18.04.7.dsc' openssl_1.1.1-1ubuntu2.1~18.04.7.dsc 2754 SHA512:021e2302c7bb5a5206d9da79ef829a576e604a52719ef7487c13af6be375c599d75415b3b90234a91314730b4de0f7192fe91a320f23d2bba33bfc17b4ab1999
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1.orig.tar.gz' openssl_1.1.1.orig.tar.gz 8337920 SHA512:c0284a4fe84bdf765ca5bc5148da4441ffc36392cfecaf9d372af00cf93b6de5681cab1248b6f8246474532155dc205da5ad49549ad7c61c07c917145e7c9c71
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1.orig.tar.gz.asc' openssl_1.1.1.orig.tar.gz.asc 488 SHA512:cc69ad07a2edc17b579018bac4683f7d48deb8cde4a0f53eb777d2546eec9be6d13a610299705f3b87a7e4e8492432260cd7efc89d124c7fe1def309bbee461f
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1-1ubuntu2.1~18.04.7.debian.tar.xz' openssl_1.1.1-1ubuntu2.1~18.04.7.debian.tar.xz 109396 SHA512:392df550d5d84c16938dcb170ec038b44afbee3387be33bc7172a08b392aa0f0ff0d99bc7b25a2edc4e831ddab3265b746631effb01ed1ea350b0c5684e0318a
-```
 
 ### `dpkg` source package: `opus=1.1.2-1ubuntu1`
 
