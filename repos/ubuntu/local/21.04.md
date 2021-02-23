@@ -64,13 +64,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.1.18
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.1.18.dsc' apt_2.1.18.dsc 2784 SHA512:5b61b2c916b34aa4a0c5b9ae42475c973d6fee2271e2b61c388ae56662847c19e57bbede8b770e0107642fe0365ce5c35662d46d71091e8f709cb6ab3a7a0756
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.1.18.tar.xz' apt_2.1.18.tar.xz 2192808 SHA512:4e2db10fdb84e92152ad0e47429ff84a5dc126e018dc57f51e4662946d28771d79e6dbbe7680249cdcb6d18a378d73266fb9be58b6dd3844af0b56ce33c5bfd1
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/apt/2.1.18/
+
 
 ### `dpkg` source package: `attr=1:2.4.48-6`
 
@@ -108,14 +108,9 @@ Licenses: (parsed from: `/usr/share/doc/libaudit-common/copyright`, `/usr/share/
 - `GPL-2`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris audit=1:2.8.5-3ubuntu3
-'http://archive.ubuntu.com/ubuntu/pool/main/a/audit/audit_2.8.5-3ubuntu3.dsc' audit_2.8.5-3ubuntu3.dsc 2854 SHA512:d3264720dd890f7900b13d3346792f522856038369eaa9d3d10ec68d9105a13a14bdd2c3aafeb29cec31f174c058cba04e0474e430567325770425086d43d18b
-'http://archive.ubuntu.com/ubuntu/pool/main/a/audit/audit_2.8.5.orig.tar.gz' audit_2.8.5.orig.tar.gz 1140694 SHA512:7d416aaa21c1a167f8e911ca82aecbaba804424f3243f505066c43ecc4a62a34feb2c27555e99d3268608404793dccca0f828c63670e3aa816016fb493f8174a
-'http://archive.ubuntu.com/ubuntu/pool/main/a/audit/audit_2.8.5-3ubuntu3.debian.tar.xz' audit_2.8.5-3ubuntu3.debian.tar.xz 19984 SHA512:695c0dcab50d9675471eb7dc4d7b9d0dfd43f9b3a165144fad87203dea63c49ced94b4dbe1c43fc8f1f6063da338b8a25f277f70d07fd51d7e675634c228d575
-```
 
 ### `dpkg` source package: `base-files=11ubuntu16`
 
@@ -146,13 +141,13 @@ Licenses: (parsed from: `/usr/share/doc/base-passwd/copyright`)
 - `GPL-2`
 - `PD`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris base-passwd=3.5.48
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-passwd/base-passwd_3.5.48.dsc' base-passwd_3.5.48.dsc 1757 SHA512:cf4eeec8ee970f47c35d851cd1813622c64a9cc3852f6d1134d2415f0c2f16b295a8fecfe7ad7b021a1f01449512b2cd0140cb42897e8c6968f4589a68fb01e6
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-passwd/base-passwd_3.5.48.tar.xz' base-passwd_3.5.48.tar.xz 53080 SHA512:9a7c39e7e196e2a78de0ebde926326eac96cbe676d8f5791416241c23c01b85cc9870a1dd96da0f37bdfdf1b32e4458eb3cbd2898091e9dd5ca3f082578e2d95
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/base-passwd/3.5.48/
+
 
 ### `dpkg` source package: `bash=5.1-1ubuntu1`
 
@@ -386,15 +381,9 @@ Licenses: (parsed from: `/usr/share/doc/findutils/copyright`)
 - `GFDL-1.3`
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris findutils=4.7.0-1ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/f/findutils/findutils_4.7.0-1ubuntu2.dsc' findutils_4.7.0-1ubuntu2.dsc 2409 SHA512:41cd927580386a080a7ef3728f284abd579935b5d87c8eb1ed6cbef1df19a03ee3a3644bb5a1240a72d31105d3c432c949eaab8d26e02ed0426cf5fb166e545a
-'http://archive.ubuntu.com/ubuntu/pool/main/f/findutils/findutils_4.7.0.orig.tar.xz' findutils_4.7.0.orig.tar.xz 1895048 SHA512:650a24507f8f4ebff83ad28dd27daa4785b4038dcaadc4fe00823b976e848527074cce3f9ec34065b7f037436d2aa6e9ec099bc05d7472c29864ac2c69de7f2e
-'http://archive.ubuntu.com/ubuntu/pool/main/f/findutils/findutils_4.7.0.orig.tar.xz.asc' findutils_4.7.0.orig.tar.xz.asc 488 SHA512:a4868a6f36d7224f05a19096a9ef2e1eedfdc77beb5d4098b0c94634cf9a757d47e2ccdf3451f48c45667a1fa3f30e209a022bf287cad6b3109b37cccea0cb72
-'http://archive.ubuntu.com/ubuntu/pool/main/f/findutils/findutils_4.7.0-1ubuntu2.debian.tar.xz' findutils_4.7.0-1ubuntu2.debian.tar.xz 28212 SHA512:9f6eb5bb161ec7b224ce0d6edecc19a425779fc539627e9c053a46e53d3b232336adb5a75a56a5e60b2e4507be87d335c802d49e63f63d8727fd20b8c8025665
-```
 
 ### `dpkg` source package: `gcc-10=10.2.1-6ubuntu1`
 
@@ -429,14 +418,9 @@ Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/lib
 - `GPL-2`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glibc=2.32-0ubuntu6
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.32-0ubuntu6.dsc' glibc_2.32-0ubuntu6.dsc 8950 SHA512:d145765fcc0cc1108b777fffc1344c134c444dcf128689dd35cf77df7a16c87120670348d14c36224d8a530ae64d504bd744812c45c4f62ec17778b93a0fe37d
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.32.orig.tar.xz' glibc_2.32.orig.tar.xz 16744512 SHA512:8460c155b7003e04f18dabece4ed9ad77445fa2288a7dc08e80a8fc4c418828af29e0649951bd71a54ea2ad2d4da7570aafd9bdfe4a37e9951b772b442afe50b
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.32-0ubuntu6.debian.tar.xz' glibc_2.32-0ubuntu6.debian.tar.xz 872612 SHA512:ec2e3b72e99356c738276e7a403b7fcc1e879bd4fb739953e39cd3e76db63bafcd16cb3449f2b046c57e07ce84c96ccd8e45e135661d8cf966c08801564bde9a
-```
 
 ### `dpkg` source package: `gmp=2:6.2.0+dfsg-6ubuntu1`
 
@@ -451,14 +435,9 @@ Licenses: (parsed from: `/usr/share/doc/libgmp10/copyright`)
 - `GPL-3`
 - `LGPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gmp=2:6.2.0+dfsg-6ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.2.0+dfsg-6ubuntu1.dsc' gmp_6.2.0+dfsg-6ubuntu1.dsc 2230 SHA512:3c81d30c5ffde286ca315db3226e22887d4828b3534355fd8900d855d650679a58732de176c7569b98cf59b65b77644e09e06b9909289a07bb8d1330b6e8db9a
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.2.0+dfsg.orig.tar.xz' gmp_6.2.0+dfsg.orig.tar.xz 1842912 SHA512:6ed6df69ced53b13e3e2d64d94f8a34c3257abd4c0967f16d48b064956e260a3d8fb424c84d47dca6d1308bd16b347af3740fce68ebd2d45f1d7f752422c2496
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.2.0+dfsg-6ubuntu1.debian.tar.xz' gmp_6.2.0+dfsg-6ubuntu1.debian.tar.xz 54484 SHA512:0c1e932f495d69f886d4b2118ee4eb10587a0164a36c0c0f4c5302ec3aa9960ad9c1a68afab6ef220c2a4bfaa1dea7522410a224b69c253ce497ac6d6198475a
-```
 
 ### `dpkg` source package: `gnupg2=2.2.20-1ubuntu1`
 
@@ -1247,14 +1226,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pcre2=10.35-2ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pcre2/pcre2_10.35-2ubuntu1.dsc' pcre2_10.35-2ubuntu1.dsc 2199 SHA512:3f4f1ff57adfa7d4394bdf95b48689f38fb6176f9b4ee8d402045bcca80c8bd158cd8b6b7f504238f18e348340e5295f6584fc758ce05f84e23934d0f2f0bb42
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pcre2/pcre2_10.35.orig.tar.gz' pcre2_10.35.orig.tar.gz 2299082 SHA512:f9386de9211919da68ad0882dbfb72b344306280b3c4515f496cff4e3ff5c11e29fb71539a357a43a71ef668a742a54cc327a1dc3a00c767fbd0264933beecee
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pcre2/pcre2_10.35-2ubuntu1.diff.gz' pcre2_10.35-2ubuntu1.diff.gz 6824 SHA512:804c0e95e52d92f8960d7224a2aa5393a749cfbef39d5a0466f1f208854661d1f1c7d17e0b6ec7a61f7288a93f7f3629ec2afceb97cf26262413b40f85cd6aeb
-```
 
 ### `dpkg` source package: `pcre3=2:8.39-13`
 
@@ -1311,15 +1285,13 @@ Licenses: (parsed from: `/usr/share/doc/perl-base/copyright`)
 - `Unicode`
 - `ZLIB`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris perl=5.32.0-6
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.32.0-6.dsc' perl_5.32.0-6.dsc 2997 SHA512:f3ba6e772589db7af38c7eb50c88d93494191c03854d0e838961035f79d3ab08d595e7d24aed4f16d1962fd8a7f0269af0a68f2e68aacb6662f1ae2a741ff384
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.32.0.orig-regen-configure.tar.gz' perl_5.32.0.orig-regen-configure.tar.gz 833536 SHA512:e9e224f39cfca20957048ba0b64412c298d896b78ec5b4ac6e638a2600fe9cbc52467a54e2db98ad36ec393500c2a728cc216feafc55b429cf81f476cba97069
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.32.0.orig.tar.xz' perl_5.32.0.orig.tar.xz 12717336 SHA512:1540247415893bbd94dfeede7b4fba6052688dc0bf27ced817f448246fcdc6e9a6486abc34577dec5b00bf02ed607b2d24ccd4977c3b3c51e8e6edfc0b81c760
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.32.0-6.debian.tar.xz' perl_5.32.0-6.debian.tar.xz 164248 SHA512:ecff08e71574c9dfa6838442d729811ca72f8e606bfd73847619052a9ebe7e9788a69d460ef7d357031b6cdba325b66699ecad10c7dbc555f464425e37b4dbc7
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/perl/5.32.0-6/
+
 
 ### `dpkg` source package: `procps=2:3.3.16-5ubuntu2`
 
@@ -1425,14 +1397,9 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=247.1-4ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_247.1-4ubuntu1.dsc' systemd_247.1-4ubuntu1.dsc 5341 SHA512:58c4ab65a6910ba3630688512cac025c9864054fa2d9ff6fb15978b8aed614f27ee9218942e89a747f2a15d7381075ca3b60c3c5a1e0f94975d1bed2fb67b0cc
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_247.1.orig.tar.gz' systemd_247.1.orig.tar.gz 9889494 SHA512:2a737afcee4409c2be073d8cb650c3465a25c101b3c3072ea6e6a0614d06e3ed7ae55c84f9ae60555915ad1480b3a13aa72fef4b9210139afe6b0d7a7629385a
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_247.1-4ubuntu1.debian.tar.xz' systemd_247.1-4ubuntu1.debian.tar.xz 192828 SHA512:468225c9219ae7e814200cbe8d616b22a8d0d36bc9b3ee3169f06a7dd3f325929b2be91f4b47ce75debbe5871e73c6253ffad39b47d4e9ab3fe20981b8dd4fa8
-```
 
 ### `dpkg` source package: `sysvinit=2.96-5ubuntu1`
 
@@ -1466,14 +1433,13 @@ Licenses: (parsed from: `/usr/share/doc/tar/copyright`)
 - `GPL-2`
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tar=1.32+dfsg-1
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.32+dfsg-1.dsc' tar_1.32+dfsg-1.dsc 2015 SHA512:f14fd11f940bf1a14e9c1d23408d75195e9ce52dace1ace1a20ab0c73742ccb3a8d7b329e8f457a6fecb7405e9ead50623809ea90307fb7a036da14d6310eef0
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.32+dfsg.orig.tar.xz' tar_1.32+dfsg.orig.tar.xz 1910772 SHA512:a2bd8eb0afbb08fdf7a5df8ce7c915dd2871bc2cecb3e3f7f175ebfd5f2182c52a28ea7b78ff2a64d247085e41a1b22e79e004b30a9e85dd23bf0908c46712de
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.32+dfsg-1.debian.tar.xz' tar_1.32+dfsg-1.debian.tar.xz 19460 SHA512:601411c7752e60e5e6d8a76ae94c20cd590d1d7c88e140b4cd0943616d42ed0976d0e1b46a8a9f395fece5b6ac31f9892639fc022a23e193a6ca7345d61de4bb
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/tar/1.32+dfsg-1/
+
 
 ### `dpkg` source package: `ubuntu-keyring=2020.06.17.1`
 
