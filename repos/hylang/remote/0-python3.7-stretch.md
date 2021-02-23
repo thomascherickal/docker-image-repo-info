@@ -1,7 +1,7 @@
 ## `hylang:0-python3.7-stretch`
 
 ```console
-$ docker pull hylang@sha256:f2a18af09a2e2d1131bde687ebb3034d228d6cc65cdede0e4a7c2236fa1565a4
+$ docker pull hylang@sha256:ef6270c7850416faf58d46d06c2ea5ae1d80ab5283d36255be176d1deb32e784
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -243,14 +243,14 @@ CMD ["hy"]
 ### `hylang:0-python3.7-stretch` - linux; arm64 variant v8
 
 ```console
-$ docker pull hylang@sha256:e6297a629cb244072c444e2ec8f719c6fd9896c5d976c605299ec203ebdb00f9
+$ docker pull hylang@sha256:94c046dcf6992e22cf6447d9bcb53758bab62bb6e8c27160bed662b6a68ace49
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **37.6 MB (37587237 bytes)**  
+-	Total Size: **37.6 MB (37587396 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:77d83862eec845beb2b5629f9bc274793a04d7ce9a435829842f68e95125e8e8`
+-	Image ID: `sha256:78b3834ca7c30f615d30aaa3e067d98f4fdd8d10ca12309d92b4f164d3231f32`
 -	Default Command: `["hy"]`
 
 ```dockerfile
@@ -274,19 +274,19 @@ RUN set -ex 		&& savedAptMark="$(apt-mark showmanual)" 	&& apt-get update && apt
 RUN cd /usr/local/bin 	&& ln -s idle3 idle 	&& ln -s pydoc3 pydoc 	&& ln -s python3 python 	&& ln -s python3-config python-config
 # Tue, 16 Feb 2021 20:33:00 GMT
 ENV PYTHON_PIP_VERSION=21.0.1
-# Tue, 16 Feb 2021 20:33:01 GMT
-ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/4be3fe44ad9dedc028629ed1497052d65d281b8e/get-pip.py
-# Tue, 16 Feb 2021 20:33:02 GMT
-ENV PYTHON_GET_PIP_SHA256=8006625804f55e1bd99ad4214fd07082fee27a1c35945648a58f9087a714e9d4
-# Tue, 16 Feb 2021 20:33:27 GMT
+# Mon, 22 Feb 2021 23:21:00 GMT
+ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/b60e2320d9e8d02348525bd74e871e466afdf77c/get-pip.py
+# Mon, 22 Feb 2021 23:21:01 GMT
+ENV PYTHON_GET_PIP_SHA256=c3b81e5d06371e135fb3156dc7d8fd6270735088428c4a9a5ec1f342e2024565
+# Mon, 22 Feb 2021 23:21:29 GMT
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends wget; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum --check --strict -; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		"pip==$PYTHON_PIP_VERSION" 	; 	pip --version; 		find /usr/local -depth 		\( 			\( -type d -a \( -name test -o -name tests -o -name idle_test \) \) 			-o 			\( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) 		\) -exec rm -rf '{}' +; 	rm -f get-pip.py
-# Tue, 16 Feb 2021 20:33:28 GMT
+# Mon, 22 Feb 2021 23:21:30 GMT
 CMD ["python3"]
-# Tue, 16 Feb 2021 22:49:03 GMT
+# Tue, 23 Feb 2021 01:32:47 GMT
 ENV HY_VERSION=0.20.0
-# Tue, 16 Feb 2021 22:49:12 GMT
+# Tue, 23 Feb 2021 01:32:57 GMT
 RUN pip install --no-cache-dir "hy == $HY_VERSION"
-# Tue, 16 Feb 2021 22:49:13 GMT
+# Tue, 23 Feb 2021 01:32:58 GMT
 CMD ["hy"]
 ```
 
@@ -307,13 +307,13 @@ CMD ["hy"]
 		Last Modified: Tue, 16 Feb 2021 21:55:53 GMT  
 		Size: 241.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d03ba389277dfc645c5cd037b49b772ff9a4d3bf2927ff47e52fc20239134339`  
-		Last Modified: Tue, 16 Feb 2021 21:55:54 GMT  
-		Size: 2.4 MB (2446611 bytes)  
+	-	`sha256:925ac329a3ec0d7683b677ea787a8106b53b0232b6f784e48010292289572829`  
+		Last Modified: Mon, 22 Feb 2021 23:29:15 GMT  
+		Size: 2.4 MB (2446638 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:46584731f14492e914df7c77f9a11e655881915639dfbbd6655d067ea184960f`  
-		Last Modified: Tue, 16 Feb 2021 22:53:03 GMT  
-		Size: 2.8 MB (2827806 bytes)  
+	-	`sha256:8f8838ad243f46f6ab06dfe0fbb6032a3f554c426ed497212f7a76e2d90445e4`  
+		Last Modified: Tue, 23 Feb 2021 01:37:43 GMT  
+		Size: 2.8 MB (2827938 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `hylang:0-python3.7-stretch` - linux; 386

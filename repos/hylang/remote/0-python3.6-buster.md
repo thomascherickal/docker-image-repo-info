@@ -1,7 +1,7 @@
 ## `hylang:0-python3.6-buster`
 
 ```console
-$ docker pull hylang@sha256:9e840f0bc8627ecf240ac17cd369ad375ad432cb5e373a74205a877bbd857c45
+$ docker pull hylang@sha256:a9f9a53b875120ac26a77055ec7ad4b025dddb380ffb14bd6c061ff95d1cdc98
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -246,14 +246,14 @@ CMD ["hy"]
 ### `hylang:0-python3.6-buster` - linux; arm64 variant v8
 
 ```console
-$ docker pull hylang@sha256:7ac2e6f944b46c3432556370c85ed18b5676f452865c693e681f96884af816f0
+$ docker pull hylang@sha256:0ff6286493ea09c2c850035f50965a3ab65a54e5bb5b3713d3e925258f7f9059
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **43.5 MB (43477740 bytes)**  
+-	Total Size: **43.5 MB (43478005 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:786e0fb5700fa19035062900d5612a78f47cfbe0d33dc2841c531ea2af9e01b9`
+-	Image ID: `sha256:96cd688e3a6d1ce2b002ba1511d6f4757afcc0c2920d9835ff4390872f9cf5d7`
 -	Default Command: `["hy"]`
 
 ```dockerfile
@@ -277,19 +277,19 @@ RUN set -ex 		&& savedAptMark="$(apt-mark showmanual)" 	&& apt-get update && apt
 RUN cd /usr/local/bin 	&& ln -s idle3 idle 	&& ln -s pydoc3 pydoc 	&& ln -s python3 python 	&& ln -s python3-config python-config
 # Tue, 16 Feb 2021 21:20:45 GMT
 ENV PYTHON_PIP_VERSION=21.0.1
-# Tue, 16 Feb 2021 21:20:46 GMT
-ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/4be3fe44ad9dedc028629ed1497052d65d281b8e/get-pip.py
-# Tue, 16 Feb 2021 21:20:47 GMT
-ENV PYTHON_GET_PIP_SHA256=8006625804f55e1bd99ad4214fd07082fee27a1c35945648a58f9087a714e9d4
-# Tue, 16 Feb 2021 21:21:11 GMT
+# Mon, 22 Feb 2021 23:22:50 GMT
+ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/b60e2320d9e8d02348525bd74e871e466afdf77c/get-pip.py
+# Mon, 22 Feb 2021 23:22:51 GMT
+ENV PYTHON_GET_PIP_SHA256=c3b81e5d06371e135fb3156dc7d8fd6270735088428c4a9a5ec1f342e2024565
+# Mon, 22 Feb 2021 23:23:22 GMT
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends wget; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum --check --strict -; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		"pip==$PYTHON_PIP_VERSION" 	; 	pip --version; 		find /usr/local -depth 		\( 			\( -type d -a \( -name test -o -name tests -o -name idle_test \) \) 			-o 			\( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) 		\) -exec rm -rf '{}' +; 	rm -f get-pip.py
-# Tue, 16 Feb 2021 21:21:13 GMT
+# Mon, 22 Feb 2021 23:23:23 GMT
 CMD ["python3"]
-# Tue, 16 Feb 2021 22:49:56 GMT
+# Tue, 23 Feb 2021 01:33:39 GMT
 ENV HY_VERSION=0.20.0
-# Tue, 16 Feb 2021 22:50:05 GMT
+# Tue, 23 Feb 2021 01:33:48 GMT
 RUN pip install --no-cache-dir "hy == $HY_VERSION"
-# Tue, 16 Feb 2021 22:50:06 GMT
+# Tue, 23 Feb 2021 01:33:49 GMT
 CMD ["hy"]
 ```
 
@@ -310,13 +310,13 @@ CMD ["hy"]
 		Last Modified: Tue, 16 Feb 2021 21:56:36 GMT  
 		Size: 232.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:477e1c33763e37c7aaf20526b0f01e7b08c2aa107cd4cde56c30c8cd93ece9d1`  
-		Last Modified: Tue, 16 Feb 2021 21:56:37 GMT  
-		Size: 2.5 MB (2452288 bytes)  
+	-	`sha256:a043a822d8ca0102a515502fedca907a902e721696d8332a9d830bf3124ba5e2`  
+		Last Modified: Mon, 22 Feb 2021 23:29:45 GMT  
+		Size: 2.5 MB (2452457 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2a80680f8f79a0e149a00921ed1e7e9474383f451677f9863684258758e6f918`  
-		Last Modified: Tue, 16 Feb 2021 22:53:38 GMT  
-		Size: 2.8 MB (2812650 bytes)  
+	-	`sha256:28688565a6b2c55df05bc3ff19d5f5823852eb7f054b437c2eeebb54ee5a798f`  
+		Last Modified: Tue, 23 Feb 2021 01:38:22 GMT  
+		Size: 2.8 MB (2812746 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `hylang:0-python3.6-buster` - linux; 386
