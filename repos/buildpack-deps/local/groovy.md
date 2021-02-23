@@ -1072,14 +1072,9 @@ Licenses: (parsed from: `/usr/share/doc/gir1.2-gdkpixbuf-2.0/copyright`, `/usr/s
 - `LGPL-2+`
 - `MPL-1.1-or-LGPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gdk-pixbuf=2.40.0+dfsg-5ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gdk-pixbuf/gdk-pixbuf_2.40.0+dfsg-5ubuntu0.1.dsc' gdk-pixbuf_2.40.0+dfsg-5ubuntu0.1.dsc 3184 SHA512:18414bac0e707c84eeac5536cb4fb0db3af374d8f14e53a2dcc31897b893c05612abd733c2331146e7eca0b03e1ba06e790620985862fafca5552a7cabf60531
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gdk-pixbuf/gdk-pixbuf_2.40.0+dfsg.orig.tar.xz' gdk-pixbuf_2.40.0+dfsg.orig.tar.xz 5626144 SHA512:bb8a9d1837bffdc5f50307dba1a1e6f1ac015e6e670ea6cae6d0bc997afa106ff0d928cb847d76848c480a06e1ad3945274b4913eaa4d9a8074797fc82bb7c1f
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gdk-pixbuf/gdk-pixbuf_2.40.0+dfsg-5ubuntu0.1.debian.tar.xz' gdk-pixbuf_2.40.0+dfsg-5ubuntu0.1.debian.tar.xz 18720 SHA512:29ce73584f427f3c23b28e17a8a51d104e7c18dc154cf6806dedf6bf5652ad814dccd716076d69d0c434a6c0266327b9d8f473b7198432a77357ca584d4ee5e2
-```
 
 ### `dpkg` source package: `git=1:2.27.0-1ubuntu1`
 

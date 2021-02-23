@@ -108,14 +108,9 @@ Licenses: (parsed from: `/usr/share/doc/libaudit-common/copyright`, `/usr/share/
 - `GPL-2`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris audit=1:2.8.5-3ubuntu3
-'http://archive.ubuntu.com/ubuntu/pool/main/a/audit/audit_2.8.5-3ubuntu3.dsc' audit_2.8.5-3ubuntu3.dsc 2854 SHA512:d3264720dd890f7900b13d3346792f522856038369eaa9d3d10ec68d9105a13a14bdd2c3aafeb29cec31f174c058cba04e0474e430567325770425086d43d18b
-'http://archive.ubuntu.com/ubuntu/pool/main/a/audit/audit_2.8.5.orig.tar.gz' audit_2.8.5.orig.tar.gz 1140694 SHA512:7d416aaa21c1a167f8e911ca82aecbaba804424f3243f505066c43ecc4a62a34feb2c27555e99d3268608404793dccca0f828c63670e3aa816016fb493f8174a
-'http://archive.ubuntu.com/ubuntu/pool/main/a/audit/audit_2.8.5-3ubuntu3.debian.tar.xz' audit_2.8.5-3ubuntu3.debian.tar.xz 19984 SHA512:695c0dcab50d9675471eb7dc4d7b9d0dfd43f9b3a165144fad87203dea63c49ced94b4dbe1c43fc8f1f6063da338b8a25f277f70d07fd51d7e675634c228d575
-```
 
 ### `dpkg` source package: `base-files=11ubuntu16`
 
@@ -532,14 +527,9 @@ Licenses: (parsed from: `/usr/share/doc/libgmp10/copyright`)
 - `GPL-3`
 - `LGPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gmp=2:6.2.0+dfsg-6ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.2.0+dfsg-6ubuntu1.dsc' gmp_6.2.0+dfsg-6ubuntu1.dsc 2230 SHA512:3c81d30c5ffde286ca315db3226e22887d4828b3534355fd8900d855d650679a58732de176c7569b98cf59b65b77644e09e06b9909289a07bb8d1330b6e8db9a
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.2.0+dfsg.orig.tar.xz' gmp_6.2.0+dfsg.orig.tar.xz 1842912 SHA512:6ed6df69ced53b13e3e2d64d94f8a34c3257abd4c0967f16d48b064956e260a3d8fb424c84d47dca6d1308bd16b347af3740fce68ebd2d45f1d7f752422c2496
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.2.0+dfsg-6ubuntu1.debian.tar.xz' gmp_6.2.0+dfsg-6ubuntu1.debian.tar.xz 54484 SHA512:0c1e932f495d69f886d4b2118ee4eb10587a0164a36c0c0f4c5302ec3aa9960ad9c1a68afab6ef220c2a4bfaa1dea7522410a224b69c253ce497ac6d6198475a
-```
 
 ### `dpkg` source package: `gnupg2=2.2.20-1ubuntu2`
 
@@ -1613,15 +1603,13 @@ Licenses: (parsed from: `/usr/share/doc/perl-base/copyright`)
 - `Unicode`
 - `ZLIB`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris perl=5.32.0-6
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.32.0-6.dsc' perl_5.32.0-6.dsc 2997 SHA512:f3ba6e772589db7af38c7eb50c88d93494191c03854d0e838961035f79d3ab08d595e7d24aed4f16d1962fd8a7f0269af0a68f2e68aacb6662f1ae2a741ff384
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.32.0.orig-regen-configure.tar.gz' perl_5.32.0.orig-regen-configure.tar.gz 833536 SHA512:e9e224f39cfca20957048ba0b64412c298d896b78ec5b4ac6e638a2600fe9cbc52467a54e2db98ad36ec393500c2a728cc216feafc55b429cf81f476cba97069
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.32.0.orig.tar.xz' perl_5.32.0.orig.tar.xz 12717336 SHA512:1540247415893bbd94dfeede7b4fba6052688dc0bf27ced817f448246fcdc6e9a6486abc34577dec5b00bf02ed607b2d24ccd4977c3b3c51e8e6edfc0b81c760
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.32.0-6.debian.tar.xz' perl_5.32.0-6.debian.tar.xz 164248 SHA512:ecff08e71574c9dfa6838442d729811ca72f8e606bfd73847619052a9ebe7e9788a69d460ef7d357031b6cdba325b66699ecad10c7dbc555f464425e37b4dbc7
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/perl/5.32.0-6/
+
 
 ### `dpkg` source package: `pinentry=1.1.0-4build1`
 
