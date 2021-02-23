@@ -10,8 +10,8 @@
 -	[`ghost:2-alpine`](#ghost2-alpine)
 -	[`ghost:3`](#ghost3)
 -	[`ghost:3.41`](#ghost341)
--	[`ghost:3.41.6`](#ghost3416)
--	[`ghost:3.41.6-alpine`](#ghost3416-alpine)
+-	[`ghost:3.41.7`](#ghost3417)
+-	[`ghost:3.41.7-alpine`](#ghost3417-alpine)
 -	[`ghost:3.41-alpine`](#ghost341-alpine)
 -	[`ghost:3-alpine`](#ghost3-alpine)
 -	[`ghost:alpine`](#ghostalpine)
@@ -3224,7 +3224,7 @@ CMD ["node" "current/index.js"]
 ## `ghost:3`
 
 ```console
-$ docker pull ghost@sha256:53639e149d69d139444b0f6142c68ed1b9fc5e01bae4e6b660a876a36ac09ae0
+$ docker pull ghost@sha256:1b7926854d06bb1423dcd7b96a530e5568fb03e6dbed3f606d8353cb9ced46b9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3238,14 +3238,14 @@ $ docker pull ghost@sha256:53639e149d69d139444b0f6142c68ed1b9fc5e01bae4e6b660a87
 ### `ghost:3` - linux; amd64
 
 ```console
-$ docker pull ghost@sha256:cc1e0964e3f6613ccb62933a3ab6b1b5b72e04155239e3ce3bbc8fd187472d2d
+$ docker pull ghost@sha256:79995d5d2da7d0c8d5a469a7cb8d0f204f8b0955ce8295bb607fabfa78143344
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **131.7 MB (131719041 bytes)**  
+-	Total Size: **132.3 MB (132345849 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:35f749f4f347a299f024f46ab2e91bcc4197fa116ea6f1e01ad80ca53df9484f`
+-	Image ID: `sha256:6fbc9282e04b343f9773dd83f7c398b589a7ca2593d32cdb823d1ddc6c128772`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -3284,21 +3284,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Sat, 13 Feb 2021 01:01:15 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Thu, 18 Feb 2021 07:14:19 GMT
-ENV GHOST_VERSION=3.41.6
-# Thu, 18 Feb 2021 07:15:42 GMT
+# Tue, 23 Feb 2021 00:26:50 GMT
+ENV GHOST_VERSION=3.41.7
+# Tue, 23 Feb 2021 00:28:11 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		gosu node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	gosu node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	gosu node ghost config paths.contentPath "$GHOST_CONTENT"; 		gosu node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! gosu node yarn add "sqlite3@$sqlite3Version" --force; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends g++ gcc libc-dev libvips-dev make python3; 		rm -rf /var/lib/apt/lists/*; 				npm_config_python='python3' gosu node yarn add "sqlite3@$sqlite3Version" --force --build-from-source; 				apt-mark showmanual | xargs apt-mark auto > /dev/null; 		[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 		apt-get purge -y --auto-remove; 	fi; 		gosu node yarn cache clean; 	gosu node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Thu, 18 Feb 2021 07:15:43 GMT
+# Tue, 23 Feb 2021 00:28:13 GMT
 WORKDIR /var/lib/ghost
-# Thu, 18 Feb 2021 07:15:43 GMT
+# Tue, 23 Feb 2021 00:28:13 GMT
 VOLUME [/var/lib/ghost/content]
-# Thu, 18 Feb 2021 07:15:44 GMT
+# Tue, 23 Feb 2021 00:28:13 GMT
 COPY file:303989b132b5193e832753e2c7236a4050fdc0fe60a54dc1f0c4a44422a2d1ca in /usr/local/bin 
-# Thu, 18 Feb 2021 07:15:44 GMT
+# Tue, 23 Feb 2021 00:28:13 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 18 Feb 2021 07:15:44 GMT
+# Tue, 23 Feb 2021 00:28:14 GMT
 EXPOSE 2368
-# Thu, 18 Feb 2021 07:15:44 GMT
+# Tue, 23 Feb 2021 00:28:14 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -3331,26 +3331,26 @@ CMD ["node" "current/index.js"]
 		Last Modified: Sat, 13 Feb 2021 01:08:45 GMT  
 		Size: 7.4 MB (7438665 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:52103ff94a547511fdd44a32e932c2959b28683a8350c56cac6c185ce0a2cf8e`  
-		Last Modified: Thu, 18 Feb 2021 07:17:55 GMT  
-		Size: 68.9 MB (68861136 bytes)  
+	-	`sha256:cf091d7714145aabe0426ffbe22863b961c46554eb783a45de872733ce945adc`  
+		Last Modified: Tue, 23 Feb 2021 00:30:31 GMT  
+		Size: 69.5 MB (69487942 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:98257415218050f498f4cb894d513894d4abbe7c7fb3daabfcf8f2083101a998`  
-		Last Modified: Thu, 18 Feb 2021 07:17:39 GMT  
-		Size: 543.0 B  
+	-	`sha256:a76c25fe97bc52da8863c9fa98bb33a0b7318331ac856e8ecd4e97889451b45e`  
+		Last Modified: Tue, 23 Feb 2021 00:30:12 GMT  
+		Size: 545.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ghost:3` - linux; arm variant v7
 
 ```console
-$ docker pull ghost@sha256:b8c071c41deeb95165a5cdf9aeaddda4fb55d7c610b54919b786e4b6c1af80e6
+$ docker pull ghost@sha256:c07cb5a581ba2c92e5bdf1db856a7f21816a5b1a68e887fce3f1c4c44352426c
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **127.2 MB (127166634 bytes)**  
+-	Total Size: **127.8 MB (127792600 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:dfa003d3406a6269146d2ce1e2247c915c9f000d170d3f90726b37b6cbbdacc7`
+-	Image ID: `sha256:947a0027696ebc802dcbb53ced4985f8aa7bc0f9d10b4dca355c10560171be75`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -3389,21 +3389,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Sat, 13 Feb 2021 02:01:55 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Thu, 18 Feb 2021 01:57:11 GMT
-ENV GHOST_VERSION=3.41.6
-# Thu, 18 Feb 2021 02:04:53 GMT
+# Tue, 23 Feb 2021 00:25:26 GMT
+ENV GHOST_VERSION=3.41.7
+# Tue, 23 Feb 2021 00:32:13 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		gosu node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	gosu node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	gosu node ghost config paths.contentPath "$GHOST_CONTENT"; 		gosu node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! gosu node yarn add "sqlite3@$sqlite3Version" --force; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends g++ gcc libc-dev libvips-dev make python3; 		rm -rf /var/lib/apt/lists/*; 				npm_config_python='python3' gosu node yarn add "sqlite3@$sqlite3Version" --force --build-from-source; 				apt-mark showmanual | xargs apt-mark auto > /dev/null; 		[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 		apt-get purge -y --auto-remove; 	fi; 		gosu node yarn cache clean; 	gosu node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Thu, 18 Feb 2021 02:04:58 GMT
+# Tue, 23 Feb 2021 00:32:21 GMT
 WORKDIR /var/lib/ghost
-# Thu, 18 Feb 2021 02:04:59 GMT
+# Tue, 23 Feb 2021 00:32:23 GMT
 VOLUME [/var/lib/ghost/content]
-# Thu, 18 Feb 2021 02:04:59 GMT
+# Tue, 23 Feb 2021 00:32:24 GMT
 COPY file:303989b132b5193e832753e2c7236a4050fdc0fe60a54dc1f0c4a44422a2d1ca in /usr/local/bin 
-# Thu, 18 Feb 2021 02:05:00 GMT
+# Tue, 23 Feb 2021 00:32:25 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 18 Feb 2021 02:05:01 GMT
+# Tue, 23 Feb 2021 00:32:26 GMT
 EXPOSE 2368
-# Thu, 18 Feb 2021 02:05:02 GMT
+# Tue, 23 Feb 2021 00:32:28 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -3436,26 +3436,26 @@ CMD ["node" "current/index.js"]
 		Last Modified: Sat, 13 Feb 2021 02:26:55 GMT  
 		Size: 7.4 MB (7438587 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8723e7016a74ae500ee3c0a0818ffcfa1605ab6a7a3f2d2cc0d4babc960fe52a`  
-		Last Modified: Thu, 18 Feb 2021 02:12:18 GMT  
-		Size: 70.7 MB (70740554 bytes)  
+	-	`sha256:4f65f7b3017084f5d10ca062986e3bc143d92ce91bd35002e1bddedc62d21c1b`  
+		Last Modified: Tue, 23 Feb 2021 00:39:48 GMT  
+		Size: 71.4 MB (71366520 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7084866b72dff1703c8ad2705d9f7202b3a61f19a92d405c32f9f0bf4bac8ea6`  
-		Last Modified: Thu, 18 Feb 2021 02:11:39 GMT  
+	-	`sha256:be3f49c82a9374c00beddfdfed00684c74529feceb4c0c848ff6eb505ace7bf0`  
+		Last Modified: Tue, 23 Feb 2021 00:39:09 GMT  
 		Size: 546.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ghost:3` - linux; arm64 variant v8
 
 ```console
-$ docker pull ghost@sha256:7fe0986023503e260f023a21153fc473fd7426f8ffb02a6f303bb55a62368587
+$ docker pull ghost@sha256:b47c23cf01f8258adfe94d8133f4d6137003f67a10231d245619c532037b2fd3
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **115.6 MB (115581299 bytes)**  
+-	Total Size: **116.2 MB (116206494 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:25f92ca23a060bacee7e0f40f100008b1e75a1e2d5f72cd335fe5e9fab7aec88`
+-	Image ID: `sha256:1a50b82aa7d237926f301210f262bce239bad237f52905947b762dd367e2e2d8`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -3494,21 +3494,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Sat, 13 Feb 2021 02:30:34 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Thu, 18 Feb 2021 02:26:28 GMT
-ENV GHOST_VERSION=3.41.6
-# Thu, 18 Feb 2021 02:33:58 GMT
+# Mon, 22 Feb 2021 23:39:47 GMT
+ENV GHOST_VERSION=3.41.7
+# Mon, 22 Feb 2021 23:46:47 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		gosu node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	gosu node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	gosu node ghost config paths.contentPath "$GHOST_CONTENT"; 		gosu node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! gosu node yarn add "sqlite3@$sqlite3Version" --force; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends g++ gcc libc-dev libvips-dev make python3; 		rm -rf /var/lib/apt/lists/*; 				npm_config_python='python3' gosu node yarn add "sqlite3@$sqlite3Version" --force --build-from-source; 				apt-mark showmanual | xargs apt-mark auto > /dev/null; 		[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 		apt-get purge -y --auto-remove; 	fi; 		gosu node yarn cache clean; 	gosu node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Thu, 18 Feb 2021 02:34:09 GMT
+# Mon, 22 Feb 2021 23:46:52 GMT
 WORKDIR /var/lib/ghost
-# Thu, 18 Feb 2021 02:34:10 GMT
+# Mon, 22 Feb 2021 23:46:53 GMT
 VOLUME [/var/lib/ghost/content]
-# Thu, 18 Feb 2021 02:34:11 GMT
+# Mon, 22 Feb 2021 23:46:54 GMT
 COPY file:303989b132b5193e832753e2c7236a4050fdc0fe60a54dc1f0c4a44422a2d1ca in /usr/local/bin 
-# Thu, 18 Feb 2021 02:34:17 GMT
+# Mon, 22 Feb 2021 23:46:55 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 18 Feb 2021 02:34:18 GMT
+# Mon, 22 Feb 2021 23:46:56 GMT
 EXPOSE 2368
-# Thu, 18 Feb 2021 02:34:19 GMT
+# Mon, 22 Feb 2021 23:46:57 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -3541,13 +3541,13 @@ CMD ["node" "current/index.js"]
 		Last Modified: Sat, 13 Feb 2021 02:53:31 GMT  
 		Size: 7.4 MB (7438560 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:731debf179c91ddc68c0634e8dd40f4ee0dcf3f10858fb2b1b4f99f389e17803`  
-		Last Modified: Thu, 18 Feb 2021 02:41:37 GMT  
-		Size: 54.1 MB (54070163 bytes)  
+	-	`sha256:164d5cc380ec2462d03dd4fa71b64d81c6c3da5fc8a91e2df19b4364d1e244a4`  
+		Last Modified: Mon, 22 Feb 2021 23:53:54 GMT  
+		Size: 54.7 MB (54695357 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f3d270d927c7813e7c540c8d00227a196118cef3d25a6a5a5dc287f39bc3aff4`  
-		Last Modified: Thu, 18 Feb 2021 02:41:09 GMT  
-		Size: 545.0 B  
+	-	`sha256:ccc5e02a1b8546658e8eca5fc3585e5f2221aa508a23dfe18437921301c34138`  
+		Last Modified: Mon, 22 Feb 2021 23:53:34 GMT  
+		Size: 546.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ghost:3` - linux; ppc64le
@@ -3658,14 +3658,14 @@ CMD ["node" "current/index.js"]
 ### `ghost:3` - linux; s390x
 
 ```console
-$ docker pull ghost@sha256:fc7919dedf44164dbfc50b772e79f5b2d94d2d79d3e1b235504e6b8235532ba4
+$ docker pull ghost@sha256:c7b300415985e97e3c49c1feaf3bcdd5ba1e4120158510ae83d3d75e6d221c78
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **115.6 MB (115601567 bytes)**  
+-	Total Size: **116.2 MB (116228826 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4550e6711f25a5e8896142a2984fb2ccd1527846e2c07c6194c98a4fc3543835`
+-	Image ID: `sha256:3d8afe6638d706ace19ed90fdc6a8e82fed848092a4144dd5e97cd08af32067f`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -3704,21 +3704,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Sat, 13 Feb 2021 03:25:34 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Thu, 18 Feb 2021 02:23:41 GMT
-ENV GHOST_VERSION=3.41.6
-# Thu, 18 Feb 2021 02:26:36 GMT
+# Mon, 22 Feb 2021 23:54:34 GMT
+ENV GHOST_VERSION=3.41.7
+# Tue, 23 Feb 2021 00:02:49 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		gosu node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	gosu node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	gosu node ghost config paths.contentPath "$GHOST_CONTENT"; 		gosu node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! gosu node yarn add "sqlite3@$sqlite3Version" --force; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends g++ gcc libc-dev libvips-dev make python3; 		rm -rf /var/lib/apt/lists/*; 				npm_config_python='python3' gosu node yarn add "sqlite3@$sqlite3Version" --force --build-from-source; 				apt-mark showmanual | xargs apt-mark auto > /dev/null; 		[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 		apt-get purge -y --auto-remove; 	fi; 		gosu node yarn cache clean; 	gosu node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Thu, 18 Feb 2021 02:26:44 GMT
+# Tue, 23 Feb 2021 00:03:13 GMT
 WORKDIR /var/lib/ghost
-# Thu, 18 Feb 2021 02:26:44 GMT
+# Tue, 23 Feb 2021 00:03:13 GMT
 VOLUME [/var/lib/ghost/content]
-# Thu, 18 Feb 2021 02:26:44 GMT
+# Tue, 23 Feb 2021 00:03:14 GMT
 COPY file:303989b132b5193e832753e2c7236a4050fdc0fe60a54dc1f0c4a44422a2d1ca in /usr/local/bin 
-# Thu, 18 Feb 2021 02:26:44 GMT
+# Tue, 23 Feb 2021 00:03:14 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 18 Feb 2021 02:26:45 GMT
+# Tue, 23 Feb 2021 00:03:15 GMT
 EXPOSE 2368
-# Thu, 18 Feb 2021 02:26:45 GMT
+# Tue, 23 Feb 2021 00:03:16 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -3751,19 +3751,19 @@ CMD ["node" "current/index.js"]
 		Last Modified: Sat, 13 Feb 2021 03:35:30 GMT  
 		Size: 7.4 MB (7438611 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:365915fef8c404d62997f4f8851049587a7f30082fc3ca2a7c025e0329adc22b`  
-		Last Modified: Thu, 18 Feb 2021 02:27:25 GMT  
-		Size: 54.1 MB (54054443 bytes)  
+	-	`sha256:b9e1c67a9c0235fb2757f3c5f01f7713ae28963992f473fe0d80b823fb438aff`  
+		Last Modified: Tue, 23 Feb 2021 00:04:00 GMT  
+		Size: 54.7 MB (54681703 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:31cc60a5ea63704f57eb030778c53032e089f8b108838d3a585ae46f599608ab`  
-		Last Modified: Thu, 18 Feb 2021 02:27:14 GMT  
-		Size: 545.0 B  
+	-	`sha256:5d7819acd69f969d75d02d79ebdb5fa2112fd3b6e04107dc75bdc93b8c0d7627`  
+		Last Modified: Tue, 23 Feb 2021 00:03:48 GMT  
+		Size: 544.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `ghost:3.41`
 
 ```console
-$ docker pull ghost@sha256:53639e149d69d139444b0f6142c68ed1b9fc5e01bae4e6b660a876a36ac09ae0
+$ docker pull ghost@sha256:1b7926854d06bb1423dcd7b96a530e5568fb03e6dbed3f606d8353cb9ced46b9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3777,14 +3777,14 @@ $ docker pull ghost@sha256:53639e149d69d139444b0f6142c68ed1b9fc5e01bae4e6b660a87
 ### `ghost:3.41` - linux; amd64
 
 ```console
-$ docker pull ghost@sha256:cc1e0964e3f6613ccb62933a3ab6b1b5b72e04155239e3ce3bbc8fd187472d2d
+$ docker pull ghost@sha256:79995d5d2da7d0c8d5a469a7cb8d0f204f8b0955ce8295bb607fabfa78143344
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **131.7 MB (131719041 bytes)**  
+-	Total Size: **132.3 MB (132345849 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:35f749f4f347a299f024f46ab2e91bcc4197fa116ea6f1e01ad80ca53df9484f`
+-	Image ID: `sha256:6fbc9282e04b343f9773dd83f7c398b589a7ca2593d32cdb823d1ddc6c128772`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -3823,21 +3823,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Sat, 13 Feb 2021 01:01:15 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Thu, 18 Feb 2021 07:14:19 GMT
-ENV GHOST_VERSION=3.41.6
-# Thu, 18 Feb 2021 07:15:42 GMT
+# Tue, 23 Feb 2021 00:26:50 GMT
+ENV GHOST_VERSION=3.41.7
+# Tue, 23 Feb 2021 00:28:11 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		gosu node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	gosu node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	gosu node ghost config paths.contentPath "$GHOST_CONTENT"; 		gosu node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! gosu node yarn add "sqlite3@$sqlite3Version" --force; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends g++ gcc libc-dev libvips-dev make python3; 		rm -rf /var/lib/apt/lists/*; 				npm_config_python='python3' gosu node yarn add "sqlite3@$sqlite3Version" --force --build-from-source; 				apt-mark showmanual | xargs apt-mark auto > /dev/null; 		[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 		apt-get purge -y --auto-remove; 	fi; 		gosu node yarn cache clean; 	gosu node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Thu, 18 Feb 2021 07:15:43 GMT
+# Tue, 23 Feb 2021 00:28:13 GMT
 WORKDIR /var/lib/ghost
-# Thu, 18 Feb 2021 07:15:43 GMT
+# Tue, 23 Feb 2021 00:28:13 GMT
 VOLUME [/var/lib/ghost/content]
-# Thu, 18 Feb 2021 07:15:44 GMT
+# Tue, 23 Feb 2021 00:28:13 GMT
 COPY file:303989b132b5193e832753e2c7236a4050fdc0fe60a54dc1f0c4a44422a2d1ca in /usr/local/bin 
-# Thu, 18 Feb 2021 07:15:44 GMT
+# Tue, 23 Feb 2021 00:28:13 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 18 Feb 2021 07:15:44 GMT
+# Tue, 23 Feb 2021 00:28:14 GMT
 EXPOSE 2368
-# Thu, 18 Feb 2021 07:15:44 GMT
+# Tue, 23 Feb 2021 00:28:14 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -3870,26 +3870,26 @@ CMD ["node" "current/index.js"]
 		Last Modified: Sat, 13 Feb 2021 01:08:45 GMT  
 		Size: 7.4 MB (7438665 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:52103ff94a547511fdd44a32e932c2959b28683a8350c56cac6c185ce0a2cf8e`  
-		Last Modified: Thu, 18 Feb 2021 07:17:55 GMT  
-		Size: 68.9 MB (68861136 bytes)  
+	-	`sha256:cf091d7714145aabe0426ffbe22863b961c46554eb783a45de872733ce945adc`  
+		Last Modified: Tue, 23 Feb 2021 00:30:31 GMT  
+		Size: 69.5 MB (69487942 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:98257415218050f498f4cb894d513894d4abbe7c7fb3daabfcf8f2083101a998`  
-		Last Modified: Thu, 18 Feb 2021 07:17:39 GMT  
-		Size: 543.0 B  
+	-	`sha256:a76c25fe97bc52da8863c9fa98bb33a0b7318331ac856e8ecd4e97889451b45e`  
+		Last Modified: Tue, 23 Feb 2021 00:30:12 GMT  
+		Size: 545.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ghost:3.41` - linux; arm variant v7
 
 ```console
-$ docker pull ghost@sha256:b8c071c41deeb95165a5cdf9aeaddda4fb55d7c610b54919b786e4b6c1af80e6
+$ docker pull ghost@sha256:c07cb5a581ba2c92e5bdf1db856a7f21816a5b1a68e887fce3f1c4c44352426c
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **127.2 MB (127166634 bytes)**  
+-	Total Size: **127.8 MB (127792600 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:dfa003d3406a6269146d2ce1e2247c915c9f000d170d3f90726b37b6cbbdacc7`
+-	Image ID: `sha256:947a0027696ebc802dcbb53ced4985f8aa7bc0f9d10b4dca355c10560171be75`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -3928,21 +3928,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Sat, 13 Feb 2021 02:01:55 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Thu, 18 Feb 2021 01:57:11 GMT
-ENV GHOST_VERSION=3.41.6
-# Thu, 18 Feb 2021 02:04:53 GMT
+# Tue, 23 Feb 2021 00:25:26 GMT
+ENV GHOST_VERSION=3.41.7
+# Tue, 23 Feb 2021 00:32:13 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		gosu node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	gosu node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	gosu node ghost config paths.contentPath "$GHOST_CONTENT"; 		gosu node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! gosu node yarn add "sqlite3@$sqlite3Version" --force; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends g++ gcc libc-dev libvips-dev make python3; 		rm -rf /var/lib/apt/lists/*; 				npm_config_python='python3' gosu node yarn add "sqlite3@$sqlite3Version" --force --build-from-source; 				apt-mark showmanual | xargs apt-mark auto > /dev/null; 		[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 		apt-get purge -y --auto-remove; 	fi; 		gosu node yarn cache clean; 	gosu node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Thu, 18 Feb 2021 02:04:58 GMT
+# Tue, 23 Feb 2021 00:32:21 GMT
 WORKDIR /var/lib/ghost
-# Thu, 18 Feb 2021 02:04:59 GMT
+# Tue, 23 Feb 2021 00:32:23 GMT
 VOLUME [/var/lib/ghost/content]
-# Thu, 18 Feb 2021 02:04:59 GMT
+# Tue, 23 Feb 2021 00:32:24 GMT
 COPY file:303989b132b5193e832753e2c7236a4050fdc0fe60a54dc1f0c4a44422a2d1ca in /usr/local/bin 
-# Thu, 18 Feb 2021 02:05:00 GMT
+# Tue, 23 Feb 2021 00:32:25 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 18 Feb 2021 02:05:01 GMT
+# Tue, 23 Feb 2021 00:32:26 GMT
 EXPOSE 2368
-# Thu, 18 Feb 2021 02:05:02 GMT
+# Tue, 23 Feb 2021 00:32:28 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -3975,26 +3975,26 @@ CMD ["node" "current/index.js"]
 		Last Modified: Sat, 13 Feb 2021 02:26:55 GMT  
 		Size: 7.4 MB (7438587 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8723e7016a74ae500ee3c0a0818ffcfa1605ab6a7a3f2d2cc0d4babc960fe52a`  
-		Last Modified: Thu, 18 Feb 2021 02:12:18 GMT  
-		Size: 70.7 MB (70740554 bytes)  
+	-	`sha256:4f65f7b3017084f5d10ca062986e3bc143d92ce91bd35002e1bddedc62d21c1b`  
+		Last Modified: Tue, 23 Feb 2021 00:39:48 GMT  
+		Size: 71.4 MB (71366520 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7084866b72dff1703c8ad2705d9f7202b3a61f19a92d405c32f9f0bf4bac8ea6`  
-		Last Modified: Thu, 18 Feb 2021 02:11:39 GMT  
+	-	`sha256:be3f49c82a9374c00beddfdfed00684c74529feceb4c0c848ff6eb505ace7bf0`  
+		Last Modified: Tue, 23 Feb 2021 00:39:09 GMT  
 		Size: 546.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ghost:3.41` - linux; arm64 variant v8
 
 ```console
-$ docker pull ghost@sha256:7fe0986023503e260f023a21153fc473fd7426f8ffb02a6f303bb55a62368587
+$ docker pull ghost@sha256:b47c23cf01f8258adfe94d8133f4d6137003f67a10231d245619c532037b2fd3
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **115.6 MB (115581299 bytes)**  
+-	Total Size: **116.2 MB (116206494 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:25f92ca23a060bacee7e0f40f100008b1e75a1e2d5f72cd335fe5e9fab7aec88`
+-	Image ID: `sha256:1a50b82aa7d237926f301210f262bce239bad237f52905947b762dd367e2e2d8`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -4033,21 +4033,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Sat, 13 Feb 2021 02:30:34 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Thu, 18 Feb 2021 02:26:28 GMT
-ENV GHOST_VERSION=3.41.6
-# Thu, 18 Feb 2021 02:33:58 GMT
+# Mon, 22 Feb 2021 23:39:47 GMT
+ENV GHOST_VERSION=3.41.7
+# Mon, 22 Feb 2021 23:46:47 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		gosu node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	gosu node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	gosu node ghost config paths.contentPath "$GHOST_CONTENT"; 		gosu node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! gosu node yarn add "sqlite3@$sqlite3Version" --force; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends g++ gcc libc-dev libvips-dev make python3; 		rm -rf /var/lib/apt/lists/*; 				npm_config_python='python3' gosu node yarn add "sqlite3@$sqlite3Version" --force --build-from-source; 				apt-mark showmanual | xargs apt-mark auto > /dev/null; 		[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 		apt-get purge -y --auto-remove; 	fi; 		gosu node yarn cache clean; 	gosu node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Thu, 18 Feb 2021 02:34:09 GMT
+# Mon, 22 Feb 2021 23:46:52 GMT
 WORKDIR /var/lib/ghost
-# Thu, 18 Feb 2021 02:34:10 GMT
+# Mon, 22 Feb 2021 23:46:53 GMT
 VOLUME [/var/lib/ghost/content]
-# Thu, 18 Feb 2021 02:34:11 GMT
+# Mon, 22 Feb 2021 23:46:54 GMT
 COPY file:303989b132b5193e832753e2c7236a4050fdc0fe60a54dc1f0c4a44422a2d1ca in /usr/local/bin 
-# Thu, 18 Feb 2021 02:34:17 GMT
+# Mon, 22 Feb 2021 23:46:55 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 18 Feb 2021 02:34:18 GMT
+# Mon, 22 Feb 2021 23:46:56 GMT
 EXPOSE 2368
-# Thu, 18 Feb 2021 02:34:19 GMT
+# Mon, 22 Feb 2021 23:46:57 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -4080,13 +4080,13 @@ CMD ["node" "current/index.js"]
 		Last Modified: Sat, 13 Feb 2021 02:53:31 GMT  
 		Size: 7.4 MB (7438560 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:731debf179c91ddc68c0634e8dd40f4ee0dcf3f10858fb2b1b4f99f389e17803`  
-		Last Modified: Thu, 18 Feb 2021 02:41:37 GMT  
-		Size: 54.1 MB (54070163 bytes)  
+	-	`sha256:164d5cc380ec2462d03dd4fa71b64d81c6c3da5fc8a91e2df19b4364d1e244a4`  
+		Last Modified: Mon, 22 Feb 2021 23:53:54 GMT  
+		Size: 54.7 MB (54695357 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f3d270d927c7813e7c540c8d00227a196118cef3d25a6a5a5dc287f39bc3aff4`  
-		Last Modified: Thu, 18 Feb 2021 02:41:09 GMT  
-		Size: 545.0 B  
+	-	`sha256:ccc5e02a1b8546658e8eca5fc3585e5f2221aa508a23dfe18437921301c34138`  
+		Last Modified: Mon, 22 Feb 2021 23:53:34 GMT  
+		Size: 546.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ghost:3.41` - linux; ppc64le
@@ -4197,14 +4197,14 @@ CMD ["node" "current/index.js"]
 ### `ghost:3.41` - linux; s390x
 
 ```console
-$ docker pull ghost@sha256:fc7919dedf44164dbfc50b772e79f5b2d94d2d79d3e1b235504e6b8235532ba4
+$ docker pull ghost@sha256:c7b300415985e97e3c49c1feaf3bcdd5ba1e4120158510ae83d3d75e6d221c78
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **115.6 MB (115601567 bytes)**  
+-	Total Size: **116.2 MB (116228826 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4550e6711f25a5e8896142a2984fb2ccd1527846e2c07c6194c98a4fc3543835`
+-	Image ID: `sha256:3d8afe6638d706ace19ed90fdc6a8e82fed848092a4144dd5e97cd08af32067f`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -4243,21 +4243,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Sat, 13 Feb 2021 03:25:34 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Thu, 18 Feb 2021 02:23:41 GMT
-ENV GHOST_VERSION=3.41.6
-# Thu, 18 Feb 2021 02:26:36 GMT
+# Mon, 22 Feb 2021 23:54:34 GMT
+ENV GHOST_VERSION=3.41.7
+# Tue, 23 Feb 2021 00:02:49 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		gosu node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	gosu node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	gosu node ghost config paths.contentPath "$GHOST_CONTENT"; 		gosu node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! gosu node yarn add "sqlite3@$sqlite3Version" --force; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends g++ gcc libc-dev libvips-dev make python3; 		rm -rf /var/lib/apt/lists/*; 				npm_config_python='python3' gosu node yarn add "sqlite3@$sqlite3Version" --force --build-from-source; 				apt-mark showmanual | xargs apt-mark auto > /dev/null; 		[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 		apt-get purge -y --auto-remove; 	fi; 		gosu node yarn cache clean; 	gosu node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Thu, 18 Feb 2021 02:26:44 GMT
+# Tue, 23 Feb 2021 00:03:13 GMT
 WORKDIR /var/lib/ghost
-# Thu, 18 Feb 2021 02:26:44 GMT
+# Tue, 23 Feb 2021 00:03:13 GMT
 VOLUME [/var/lib/ghost/content]
-# Thu, 18 Feb 2021 02:26:44 GMT
+# Tue, 23 Feb 2021 00:03:14 GMT
 COPY file:303989b132b5193e832753e2c7236a4050fdc0fe60a54dc1f0c4a44422a2d1ca in /usr/local/bin 
-# Thu, 18 Feb 2021 02:26:44 GMT
+# Tue, 23 Feb 2021 00:03:14 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 18 Feb 2021 02:26:45 GMT
+# Tue, 23 Feb 2021 00:03:15 GMT
 EXPOSE 2368
-# Thu, 18 Feb 2021 02:26:45 GMT
+# Tue, 23 Feb 2021 00:03:16 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -4290,19 +4290,19 @@ CMD ["node" "current/index.js"]
 		Last Modified: Sat, 13 Feb 2021 03:35:30 GMT  
 		Size: 7.4 MB (7438611 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:365915fef8c404d62997f4f8851049587a7f30082fc3ca2a7c025e0329adc22b`  
-		Last Modified: Thu, 18 Feb 2021 02:27:25 GMT  
-		Size: 54.1 MB (54054443 bytes)  
+	-	`sha256:b9e1c67a9c0235fb2757f3c5f01f7713ae28963992f473fe0d80b823fb438aff`  
+		Last Modified: Tue, 23 Feb 2021 00:04:00 GMT  
+		Size: 54.7 MB (54681703 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:31cc60a5ea63704f57eb030778c53032e089f8b108838d3a585ae46f599608ab`  
-		Last Modified: Thu, 18 Feb 2021 02:27:14 GMT  
-		Size: 545.0 B  
+	-	`sha256:5d7819acd69f969d75d02d79ebdb5fa2112fd3b6e04107dc75bdc93b8c0d7627`  
+		Last Modified: Tue, 23 Feb 2021 00:03:48 GMT  
+		Size: 544.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-## `ghost:3.41.6`
+## `ghost:3.41.7`
 
 ```console
-$ docker pull ghost@sha256:53639e149d69d139444b0f6142c68ed1b9fc5e01bae4e6b660a876a36ac09ae0
+$ docker pull ghost@sha256:5a30a428c14f90e8c2f3235307706a2616e58d1b29c6f506f00a8d27df6226cc
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4310,20 +4310,19 @@ $ docker pull ghost@sha256:53639e149d69d139444b0f6142c68ed1b9fc5e01bae4e6b660a87
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
-	-	linux; ppc64le
 	-	linux; s390x
 
-### `ghost:3.41.6` - linux; amd64
+### `ghost:3.41.7` - linux; amd64
 
 ```console
-$ docker pull ghost@sha256:cc1e0964e3f6613ccb62933a3ab6b1b5b72e04155239e3ce3bbc8fd187472d2d
+$ docker pull ghost@sha256:79995d5d2da7d0c8d5a469a7cb8d0f204f8b0955ce8295bb607fabfa78143344
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **131.7 MB (131719041 bytes)**  
+-	Total Size: **132.3 MB (132345849 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:35f749f4f347a299f024f46ab2e91bcc4197fa116ea6f1e01ad80ca53df9484f`
+-	Image ID: `sha256:6fbc9282e04b343f9773dd83f7c398b589a7ca2593d32cdb823d1ddc6c128772`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -4362,21 +4361,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Sat, 13 Feb 2021 01:01:15 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Thu, 18 Feb 2021 07:14:19 GMT
-ENV GHOST_VERSION=3.41.6
-# Thu, 18 Feb 2021 07:15:42 GMT
+# Tue, 23 Feb 2021 00:26:50 GMT
+ENV GHOST_VERSION=3.41.7
+# Tue, 23 Feb 2021 00:28:11 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		gosu node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	gosu node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	gosu node ghost config paths.contentPath "$GHOST_CONTENT"; 		gosu node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! gosu node yarn add "sqlite3@$sqlite3Version" --force; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends g++ gcc libc-dev libvips-dev make python3; 		rm -rf /var/lib/apt/lists/*; 				npm_config_python='python3' gosu node yarn add "sqlite3@$sqlite3Version" --force --build-from-source; 				apt-mark showmanual | xargs apt-mark auto > /dev/null; 		[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 		apt-get purge -y --auto-remove; 	fi; 		gosu node yarn cache clean; 	gosu node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Thu, 18 Feb 2021 07:15:43 GMT
+# Tue, 23 Feb 2021 00:28:13 GMT
 WORKDIR /var/lib/ghost
-# Thu, 18 Feb 2021 07:15:43 GMT
+# Tue, 23 Feb 2021 00:28:13 GMT
 VOLUME [/var/lib/ghost/content]
-# Thu, 18 Feb 2021 07:15:44 GMT
+# Tue, 23 Feb 2021 00:28:13 GMT
 COPY file:303989b132b5193e832753e2c7236a4050fdc0fe60a54dc1f0c4a44422a2d1ca in /usr/local/bin 
-# Thu, 18 Feb 2021 07:15:44 GMT
+# Tue, 23 Feb 2021 00:28:13 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 18 Feb 2021 07:15:44 GMT
+# Tue, 23 Feb 2021 00:28:14 GMT
 EXPOSE 2368
-# Thu, 18 Feb 2021 07:15:44 GMT
+# Tue, 23 Feb 2021 00:28:14 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -4409,26 +4408,26 @@ CMD ["node" "current/index.js"]
 		Last Modified: Sat, 13 Feb 2021 01:08:45 GMT  
 		Size: 7.4 MB (7438665 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:52103ff94a547511fdd44a32e932c2959b28683a8350c56cac6c185ce0a2cf8e`  
-		Last Modified: Thu, 18 Feb 2021 07:17:55 GMT  
-		Size: 68.9 MB (68861136 bytes)  
+	-	`sha256:cf091d7714145aabe0426ffbe22863b961c46554eb783a45de872733ce945adc`  
+		Last Modified: Tue, 23 Feb 2021 00:30:31 GMT  
+		Size: 69.5 MB (69487942 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:98257415218050f498f4cb894d513894d4abbe7c7fb3daabfcf8f2083101a998`  
-		Last Modified: Thu, 18 Feb 2021 07:17:39 GMT  
-		Size: 543.0 B  
+	-	`sha256:a76c25fe97bc52da8863c9fa98bb33a0b7318331ac856e8ecd4e97889451b45e`  
+		Last Modified: Tue, 23 Feb 2021 00:30:12 GMT  
+		Size: 545.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `ghost:3.41.6` - linux; arm variant v7
+### `ghost:3.41.7` - linux; arm variant v7
 
 ```console
-$ docker pull ghost@sha256:b8c071c41deeb95165a5cdf9aeaddda4fb55d7c610b54919b786e4b6c1af80e6
+$ docker pull ghost@sha256:c07cb5a581ba2c92e5bdf1db856a7f21816a5b1a68e887fce3f1c4c44352426c
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **127.2 MB (127166634 bytes)**  
+-	Total Size: **127.8 MB (127792600 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:dfa003d3406a6269146d2ce1e2247c915c9f000d170d3f90726b37b6cbbdacc7`
+-	Image ID: `sha256:947a0027696ebc802dcbb53ced4985f8aa7bc0f9d10b4dca355c10560171be75`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -4467,21 +4466,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Sat, 13 Feb 2021 02:01:55 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Thu, 18 Feb 2021 01:57:11 GMT
-ENV GHOST_VERSION=3.41.6
-# Thu, 18 Feb 2021 02:04:53 GMT
+# Tue, 23 Feb 2021 00:25:26 GMT
+ENV GHOST_VERSION=3.41.7
+# Tue, 23 Feb 2021 00:32:13 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		gosu node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	gosu node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	gosu node ghost config paths.contentPath "$GHOST_CONTENT"; 		gosu node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! gosu node yarn add "sqlite3@$sqlite3Version" --force; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends g++ gcc libc-dev libvips-dev make python3; 		rm -rf /var/lib/apt/lists/*; 				npm_config_python='python3' gosu node yarn add "sqlite3@$sqlite3Version" --force --build-from-source; 				apt-mark showmanual | xargs apt-mark auto > /dev/null; 		[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 		apt-get purge -y --auto-remove; 	fi; 		gosu node yarn cache clean; 	gosu node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Thu, 18 Feb 2021 02:04:58 GMT
+# Tue, 23 Feb 2021 00:32:21 GMT
 WORKDIR /var/lib/ghost
-# Thu, 18 Feb 2021 02:04:59 GMT
+# Tue, 23 Feb 2021 00:32:23 GMT
 VOLUME [/var/lib/ghost/content]
-# Thu, 18 Feb 2021 02:04:59 GMT
+# Tue, 23 Feb 2021 00:32:24 GMT
 COPY file:303989b132b5193e832753e2c7236a4050fdc0fe60a54dc1f0c4a44422a2d1ca in /usr/local/bin 
-# Thu, 18 Feb 2021 02:05:00 GMT
+# Tue, 23 Feb 2021 00:32:25 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 18 Feb 2021 02:05:01 GMT
+# Tue, 23 Feb 2021 00:32:26 GMT
 EXPOSE 2368
-# Thu, 18 Feb 2021 02:05:02 GMT
+# Tue, 23 Feb 2021 00:32:28 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -4514,26 +4513,26 @@ CMD ["node" "current/index.js"]
 		Last Modified: Sat, 13 Feb 2021 02:26:55 GMT  
 		Size: 7.4 MB (7438587 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8723e7016a74ae500ee3c0a0818ffcfa1605ab6a7a3f2d2cc0d4babc960fe52a`  
-		Last Modified: Thu, 18 Feb 2021 02:12:18 GMT  
-		Size: 70.7 MB (70740554 bytes)  
+	-	`sha256:4f65f7b3017084f5d10ca062986e3bc143d92ce91bd35002e1bddedc62d21c1b`  
+		Last Modified: Tue, 23 Feb 2021 00:39:48 GMT  
+		Size: 71.4 MB (71366520 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7084866b72dff1703c8ad2705d9f7202b3a61f19a92d405c32f9f0bf4bac8ea6`  
-		Last Modified: Thu, 18 Feb 2021 02:11:39 GMT  
+	-	`sha256:be3f49c82a9374c00beddfdfed00684c74529feceb4c0c848ff6eb505ace7bf0`  
+		Last Modified: Tue, 23 Feb 2021 00:39:09 GMT  
 		Size: 546.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `ghost:3.41.6` - linux; arm64 variant v8
+### `ghost:3.41.7` - linux; arm64 variant v8
 
 ```console
-$ docker pull ghost@sha256:7fe0986023503e260f023a21153fc473fd7426f8ffb02a6f303bb55a62368587
+$ docker pull ghost@sha256:b47c23cf01f8258adfe94d8133f4d6137003f67a10231d245619c532037b2fd3
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **115.6 MB (115581299 bytes)**  
+-	Total Size: **116.2 MB (116206494 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:25f92ca23a060bacee7e0f40f100008b1e75a1e2d5f72cd335fe5e9fab7aec88`
+-	Image ID: `sha256:1a50b82aa7d237926f301210f262bce239bad237f52905947b762dd367e2e2d8`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -4572,21 +4571,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Sat, 13 Feb 2021 02:30:34 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Thu, 18 Feb 2021 02:26:28 GMT
-ENV GHOST_VERSION=3.41.6
-# Thu, 18 Feb 2021 02:33:58 GMT
+# Mon, 22 Feb 2021 23:39:47 GMT
+ENV GHOST_VERSION=3.41.7
+# Mon, 22 Feb 2021 23:46:47 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		gosu node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	gosu node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	gosu node ghost config paths.contentPath "$GHOST_CONTENT"; 		gosu node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! gosu node yarn add "sqlite3@$sqlite3Version" --force; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends g++ gcc libc-dev libvips-dev make python3; 		rm -rf /var/lib/apt/lists/*; 				npm_config_python='python3' gosu node yarn add "sqlite3@$sqlite3Version" --force --build-from-source; 				apt-mark showmanual | xargs apt-mark auto > /dev/null; 		[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 		apt-get purge -y --auto-remove; 	fi; 		gosu node yarn cache clean; 	gosu node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Thu, 18 Feb 2021 02:34:09 GMT
+# Mon, 22 Feb 2021 23:46:52 GMT
 WORKDIR /var/lib/ghost
-# Thu, 18 Feb 2021 02:34:10 GMT
+# Mon, 22 Feb 2021 23:46:53 GMT
 VOLUME [/var/lib/ghost/content]
-# Thu, 18 Feb 2021 02:34:11 GMT
+# Mon, 22 Feb 2021 23:46:54 GMT
 COPY file:303989b132b5193e832753e2c7236a4050fdc0fe60a54dc1f0c4a44422a2d1ca in /usr/local/bin 
-# Thu, 18 Feb 2021 02:34:17 GMT
+# Mon, 22 Feb 2021 23:46:55 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 18 Feb 2021 02:34:18 GMT
+# Mon, 22 Feb 2021 23:46:56 GMT
 EXPOSE 2368
-# Thu, 18 Feb 2021 02:34:19 GMT
+# Mon, 22 Feb 2021 23:46:57 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -4619,131 +4618,26 @@ CMD ["node" "current/index.js"]
 		Last Modified: Sat, 13 Feb 2021 02:53:31 GMT  
 		Size: 7.4 MB (7438560 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:731debf179c91ddc68c0634e8dd40f4ee0dcf3f10858fb2b1b4f99f389e17803`  
-		Last Modified: Thu, 18 Feb 2021 02:41:37 GMT  
-		Size: 54.1 MB (54070163 bytes)  
+	-	`sha256:164d5cc380ec2462d03dd4fa71b64d81c6c3da5fc8a91e2df19b4364d1e244a4`  
+		Last Modified: Mon, 22 Feb 2021 23:53:54 GMT  
+		Size: 54.7 MB (54695357 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f3d270d927c7813e7c540c8d00227a196118cef3d25a6a5a5dc287f39bc3aff4`  
-		Last Modified: Thu, 18 Feb 2021 02:41:09 GMT  
-		Size: 545.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-
-### `ghost:3.41.6` - linux; ppc64le
-
-```console
-$ docker pull ghost@sha256:34600c222a2926690c7921d127d37e80880346b1fb30a59f3d5081b987b7c96a
-```
-
--	Docker Version: 19.03.12
--	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **121.1 MB (121069408 bytes)**  
-	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3637e6d37f58c574984f080ff79bb17a5a74f012371c375fa3a51ec5dd8525e3`
--	Entrypoint: `["docker-entrypoint.sh"]`
--	Default Command: `["node","current\/index.js"]`
-
-```dockerfile
-# Tue, 09 Feb 2021 02:19:19 GMT
-ADD file:9a8cfdf0eab394a693b5cde0700ad47b6e8506ef0b79fabb8a07874b96e6c394 in / 
-# Tue, 09 Feb 2021 02:19:34 GMT
-CMD ["bash"]
-# Tue, 09 Feb 2021 12:53:38 GMT
-RUN groupadd --gid 1000 node   && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
-# Sat, 13 Feb 2021 01:12:24 GMT
-ENV NODE_VERSION=12.20.2
-# Sat, 13 Feb 2021 01:15:47 GMT
-RUN ARCH= && dpkgArch="$(dpkg --print-architecture)"     && case "${dpkgArch##*-}" in       amd64) ARCH='x64';;       ppc64el) ARCH='ppc64le';;       s390x) ARCH='s390x';;       arm64) ARCH='arm64';;       armhf) ARCH='armv7l';;       i386) ARCH='x86';;       *) echo "unsupported architecture"; exit 1 ;;     esac     && set -ex     && apt-get update && apt-get install -y ca-certificates curl wget gnupg dirmngr xz-utils libatomic1 --no-install-recommends     && rm -rf /var/lib/apt/lists/*     && for key in       4ED778F539E3634C779C87C6D7062848A1AB005C       94AE36675C464D64BAFA68DD7434390BDBE9B9C5       74F12602B6F1C4E913FAA37AD3A89613643B6201       71DCFD284A79C3B38668286BC97EC7A07EDE3FC1       8FCCA13FEF1D0C2E91008E09770F7A9A5AE15600       C4F0DFFF4E8C1A8236409D08E73BC641CC11F4C8       C82FA3AE1CBEDC6BE46B9360C43CEC45C17AB93C       DD8F2338BAE7501E3DD5AC78C273792F7D83545D       A48C2BEE680E841632CD4E44F07496B3EB3C1762       108F52B48DB57BB0CC439B2997B01419BD92F80A       B9E2F5981AA6E0CD28160D9FF13993A75599653C     ; do       gpg --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys "$key" ||       gpg --batch --keyserver hkp://ipv4.pool.sks-keyservers.net --recv-keys "$key" ||       gpg --batch --keyserver hkp://pgp.mit.edu:80 --recv-keys "$key" ;     done     && curl -fsSLO --compressed "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-$ARCH.tar.xz"     && curl -fsSLO --compressed "https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc"     && gpg --batch --decrypt --output SHASUMS256.txt SHASUMS256.txt.asc     && grep " node-v$NODE_VERSION-linux-$ARCH.tar.xz\$" SHASUMS256.txt | sha256sum -c -     && tar -xJf "node-v$NODE_VERSION-linux-$ARCH.tar.xz" -C /usr/local --strip-components=1 --no-same-owner     && rm "node-v$NODE_VERSION-linux-$ARCH.tar.xz" SHASUMS256.txt.asc SHASUMS256.txt     && apt-mark auto '.*' > /dev/null     && find /usr/local -type f -executable -exec ldd '{}' ';'       | awk '/=>/ { print $(NF-1) }'       | sort -u       | xargs -r dpkg-query --search       | cut -d: -f1       | sort -u       | xargs -r apt-mark manual     && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false     && ln -s /usr/local/bin/node /usr/local/bin/nodejs     && node --version     && npm --version
-# Sat, 13 Feb 2021 01:15:56 GMT
-ENV YARN_VERSION=1.22.5
-# Sat, 13 Feb 2021 01:19:36 GMT
-RUN set -ex   && savedAptMark="$(apt-mark showmanual)"   && apt-get update && apt-get install -y ca-certificates curl wget gnupg dirmngr --no-install-recommends   && rm -rf /var/lib/apt/lists/*   && for key in     6A010C5166006599AA17F08146C2130DFD2497F5   ; do     gpg --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys "$key" ||     gpg --batch --keyserver hkp://ipv4.pool.sks-keyservers.net --recv-keys "$key" ||     gpg --batch --keyserver hkp://pgp.mit.edu:80 --recv-keys "$key" ;   done   && curl -fsSLO --compressed "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz"   && curl -fsSLO --compressed "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz.asc"   && gpg --batch --verify yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz   && mkdir -p /opt   && tar -xzf yarn-v$YARN_VERSION.tar.gz -C /opt/   && ln -s /opt/yarn-v$YARN_VERSION/bin/yarn /usr/local/bin/yarn   && ln -s /opt/yarn-v$YARN_VERSION/bin/yarnpkg /usr/local/bin/yarnpkg   && rm yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz   && apt-mark auto '.*' > /dev/null   && { [ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; }   && find /usr/local -type f -executable -exec ldd '{}' ';'     | awk '/=>/ { print $(NF-1) }'     | sort -u     | xargs -r dpkg-query --search     | cut -d: -f1     | sort -u     | xargs -r apt-mark manual   && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false   && yarn --version
-# Sat, 13 Feb 2021 01:19:39 GMT
-COPY file:238737301d47304174e4d24f4def935b29b3069c03c72ae8de97d94624382fce in /usr/local/bin/ 
-# Sat, 13 Feb 2021 01:19:43 GMT
-ENTRYPOINT ["docker-entrypoint.sh"]
-# Sat, 13 Feb 2021 01:19:50 GMT
-CMD ["node"]
-# Sat, 13 Feb 2021 03:36:32 GMT
-ENV GOSU_VERSION=1.12
-# Sat, 13 Feb 2021 03:39:02 GMT
-RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates dirmngr gnupg wget; 	rm -rf /var/lib/apt/lists/*; 		dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	command -v gpgconf && gpgconf --kill all || :; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
-# Sat, 13 Feb 2021 03:39:05 GMT
-ENV NODE_ENV=production
-# Sat, 13 Feb 2021 03:39:18 GMT
-ENV GHOST_CLI_VERSION=1.15.3
-# Sat, 13 Feb 2021 03:40:35 GMT
-RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean --force
-# Sat, 13 Feb 2021 03:40:43 GMT
-ENV GHOST_INSTALL=/var/lib/ghost
-# Sat, 13 Feb 2021 03:40:46 GMT
-ENV GHOST_CONTENT=/var/lib/ghost/content
-# Thu, 18 Feb 2021 03:43:17 GMT
-ENV GHOST_VERSION=3.41.6
-# Thu, 18 Feb 2021 04:33:17 GMT
-RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		gosu node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	gosu node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	gosu node ghost config paths.contentPath "$GHOST_CONTENT"; 		gosu node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! gosu node yarn add "sqlite3@$sqlite3Version" --force; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends g++ gcc libc-dev libvips-dev make python3; 		rm -rf /var/lib/apt/lists/*; 				npm_config_python='python3' gosu node yarn add "sqlite3@$sqlite3Version" --force --build-from-source; 				apt-mark showmanual | xargs apt-mark auto > /dev/null; 		[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 		apt-get purge -y --auto-remove; 	fi; 		gosu node yarn cache clean; 	gosu node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Thu, 18 Feb 2021 04:33:28 GMT
-WORKDIR /var/lib/ghost
-# Thu, 18 Feb 2021 04:33:35 GMT
-VOLUME [/var/lib/ghost/content]
-# Thu, 18 Feb 2021 04:33:42 GMT
-COPY file:303989b132b5193e832753e2c7236a4050fdc0fe60a54dc1f0c4a44422a2d1ca in /usr/local/bin 
-# Thu, 18 Feb 2021 04:34:00 GMT
-ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 18 Feb 2021 04:34:11 GMT
-EXPOSE 2368
-# Thu, 18 Feb 2021 04:34:24 GMT
-CMD ["node" "current/index.js"]
-```
-
--	Layers:
-	-	`sha256:9996b4fb6bc1c50f95ba30f8988c9c89526556fa320d3fda59d3d8359f7810d6`  
-		Last Modified: Tue, 09 Feb 2021 02:27:59 GMT  
-		Size: 30.5 MB (30519509 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:50d9f2eaf0a2d5749fb51abff637993f94058c4f419dc9d96c58b074aa653f90`  
-		Last Modified: Tue, 09 Feb 2021 13:37:18 GMT  
-		Size: 4.2 KB (4185 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cc3f9ab9a738511b6aa8361412644e5d7a3dc5ebe68bda232ffaf919915bb60c`  
-		Last Modified: Sat, 13 Feb 2021 02:01:59 GMT  
-		Size: 24.0 MB (23951005 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:02f86a53cbb4dc12aa45d6b6952f0532c6857a54fda0479c48bed4ac37b2298c`  
-		Last Modified: Sat, 13 Feb 2021 02:01:54 GMT  
-		Size: 2.8 MB (2769294 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0298438aeb544e6a23058be26d28942d190e224d20dbf919841552e21910be0b`  
-		Last Modified: Sat, 13 Feb 2021 02:01:54 GMT  
-		Size: 284.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f7de8442a746d7f488f01f5fc4ee72c206771d8faa74ad75a9dc9523d0ecd27c`  
-		Last Modified: Sat, 13 Feb 2021 04:22:27 GMT  
-		Size: 1.3 MB (1338589 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dca126241e13bb9c46e3307d9ba2b50de7aeb7af39f99544f5a4d5ba2352564d`  
-		Last Modified: Sat, 13 Feb 2021 04:23:34 GMT  
-		Size: 7.4 MB (7438619 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:428116f82f566e42aa65b136562020fa199c98971ff29c98914d44378ed2758e`  
-		Last Modified: Thu, 18 Feb 2021 04:37:39 GMT  
-		Size: 55.0 MB (55047377 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:47a9843f9c2363d929a37943933f929eb81449c0cf72b8b228d7bd7924f18d5a`  
-		Last Modified: Thu, 18 Feb 2021 04:37:19 GMT  
+	-	`sha256:ccc5e02a1b8546658e8eca5fc3585e5f2221aa508a23dfe18437921301c34138`  
+		Last Modified: Mon, 22 Feb 2021 23:53:34 GMT  
 		Size: 546.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `ghost:3.41.6` - linux; s390x
+### `ghost:3.41.7` - linux; s390x
 
 ```console
-$ docker pull ghost@sha256:fc7919dedf44164dbfc50b772e79f5b2d94d2d79d3e1b235504e6b8235532ba4
+$ docker pull ghost@sha256:c7b300415985e97e3c49c1feaf3bcdd5ba1e4120158510ae83d3d75e6d221c78
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **115.6 MB (115601567 bytes)**  
+-	Total Size: **116.2 MB (116228826 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4550e6711f25a5e8896142a2984fb2ccd1527846e2c07c6194c98a4fc3543835`
+-	Image ID: `sha256:3d8afe6638d706ace19ed90fdc6a8e82fed848092a4144dd5e97cd08af32067f`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -4782,21 +4676,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Sat, 13 Feb 2021 03:25:34 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Thu, 18 Feb 2021 02:23:41 GMT
-ENV GHOST_VERSION=3.41.6
-# Thu, 18 Feb 2021 02:26:36 GMT
+# Mon, 22 Feb 2021 23:54:34 GMT
+ENV GHOST_VERSION=3.41.7
+# Tue, 23 Feb 2021 00:02:49 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		gosu node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	gosu node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	gosu node ghost config paths.contentPath "$GHOST_CONTENT"; 		gosu node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! gosu node yarn add "sqlite3@$sqlite3Version" --force; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends g++ gcc libc-dev libvips-dev make python3; 		rm -rf /var/lib/apt/lists/*; 				npm_config_python='python3' gosu node yarn add "sqlite3@$sqlite3Version" --force --build-from-source; 				apt-mark showmanual | xargs apt-mark auto > /dev/null; 		[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 		apt-get purge -y --auto-remove; 	fi; 		gosu node yarn cache clean; 	gosu node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Thu, 18 Feb 2021 02:26:44 GMT
+# Tue, 23 Feb 2021 00:03:13 GMT
 WORKDIR /var/lib/ghost
-# Thu, 18 Feb 2021 02:26:44 GMT
+# Tue, 23 Feb 2021 00:03:13 GMT
 VOLUME [/var/lib/ghost/content]
-# Thu, 18 Feb 2021 02:26:44 GMT
+# Tue, 23 Feb 2021 00:03:14 GMT
 COPY file:303989b132b5193e832753e2c7236a4050fdc0fe60a54dc1f0c4a44422a2d1ca in /usr/local/bin 
-# Thu, 18 Feb 2021 02:26:44 GMT
+# Tue, 23 Feb 2021 00:03:14 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 18 Feb 2021 02:26:45 GMT
+# Tue, 23 Feb 2021 00:03:15 GMT
 EXPOSE 2368
-# Thu, 18 Feb 2021 02:26:45 GMT
+# Tue, 23 Feb 2021 00:03:16 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -4829,19 +4723,19 @@ CMD ["node" "current/index.js"]
 		Last Modified: Sat, 13 Feb 2021 03:35:30 GMT  
 		Size: 7.4 MB (7438611 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:365915fef8c404d62997f4f8851049587a7f30082fc3ca2a7c025e0329adc22b`  
-		Last Modified: Thu, 18 Feb 2021 02:27:25 GMT  
-		Size: 54.1 MB (54054443 bytes)  
+	-	`sha256:b9e1c67a9c0235fb2757f3c5f01f7713ae28963992f473fe0d80b823fb438aff`  
+		Last Modified: Tue, 23 Feb 2021 00:04:00 GMT  
+		Size: 54.7 MB (54681703 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:31cc60a5ea63704f57eb030778c53032e089f8b108838d3a585ae46f599608ab`  
-		Last Modified: Thu, 18 Feb 2021 02:27:14 GMT  
-		Size: 545.0 B  
+	-	`sha256:5d7819acd69f969d75d02d79ebdb5fa2112fd3b6e04107dc75bdc93b8c0d7627`  
+		Last Modified: Tue, 23 Feb 2021 00:03:48 GMT  
+		Size: 544.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-## `ghost:3.41.6-alpine`
+## `ghost:3.41.7-alpine`
 
 ```console
-$ docker pull ghost@sha256:da967f5fd11e2f66c7857e80fc52ecf61e0509fdab1a1ab3aa9fff6ca7fe3091
+$ docker pull ghost@sha256:6a175be24788f3e847552336349ed61c0845e90c066ee205aad91e48681781d0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4851,17 +4745,17 @@ $ docker pull ghost@sha256:da967f5fd11e2f66c7857e80fc52ecf61e0509fdab1a1ab3aa9ff
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
 
-### `ghost:3.41.6-alpine` - linux; amd64
+### `ghost:3.41.7-alpine` - linux; amd64
 
 ```console
-$ docker pull ghost@sha256:91135d3f68dcf246cf98e436ee96c0b262b881b2ae7f8685a50a66cce7643e62
+$ docker pull ghost@sha256:37d87f8709fca7526e4faa963b6e4923e5428e57a9819db8f7d75512392cc332
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **108.0 MB (107981573 bytes)**  
+-	Total Size: **108.6 MB (108607680 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:8df629f051b7e94098ae8310984844d7e5b3f4e0c9a19724ac5dd9c96a0a9372`
+-	Image ID: `sha256:edff6fec1ce156383469cbb81d091b665fc7d07884ec7c98a3c6d1bf318993b7`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -4898,21 +4792,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Sat, 13 Feb 2021 01:03:22 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Thu, 18 Feb 2021 07:15:49 GMT
-ENV GHOST_VERSION=3.41.6
-# Thu, 18 Feb 2021 07:17:12 GMT
+# Tue, 23 Feb 2021 00:28:20 GMT
+ENV GHOST_VERSION=3.41.7
+# Tue, 23 Feb 2021 00:29:43 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		su-exec node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	su-exec node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	su-exec node ghost config paths.contentPath "$GHOST_CONTENT"; 		su-exec node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! su-exec node yarn add "sqlite3@$sqlite3Version" --force; then 		apk add --no-cache --virtual .build-deps g++ gcc libc-dev make python3 vips-dev; 				npm_config_python='python3' su-exec node yarn add "sqlite3@$sqlite3Version" --force --build-from-source; 				apk del --no-network .build-deps; 	fi; 		su-exec node yarn cache clean; 	su-exec node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Thu, 18 Feb 2021 07:17:13 GMT
+# Tue, 23 Feb 2021 00:29:44 GMT
 WORKDIR /var/lib/ghost
-# Thu, 18 Feb 2021 07:17:13 GMT
+# Tue, 23 Feb 2021 00:29:44 GMT
 VOLUME [/var/lib/ghost/content]
-# Thu, 18 Feb 2021 07:17:14 GMT
+# Tue, 23 Feb 2021 00:29:45 GMT
 COPY file:87209c4c75826f5d839c2f3270a782740f42eecf4bc96b2f6dbae79b08c17e21 in /usr/local/bin 
-# Thu, 18 Feb 2021 07:17:14 GMT
+# Tue, 23 Feb 2021 00:29:45 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 18 Feb 2021 07:17:14 GMT
+# Tue, 23 Feb 2021 00:29:45 GMT
 EXPOSE 2368
-# Thu, 18 Feb 2021 07:17:14 GMT
+# Tue, 23 Feb 2021 00:29:45 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -4945,26 +4839,26 @@ CMD ["node" "current/index.js"]
 		Last Modified: Sat, 13 Feb 2021 01:09:09 GMT  
 		Size: 7.4 MB (7438611 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c63d39f31ef44ee4f04d228c4ef9c9dd66e0287af47487f94d875be672de23f7`  
-		Last Modified: Thu, 18 Feb 2021 07:18:19 GMT  
-		Size: 69.9 MB (69875598 bytes)  
+	-	`sha256:dcfd15109123a26f1defd46ccd306142e6964436a428d19a06f953a4cdb76d17`  
+		Last Modified: Tue, 23 Feb 2021 00:30:54 GMT  
+		Size: 70.5 MB (70501705 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e5c4e850a5843d7bc3f245c5235d1447c17323f24f08ac98022ff667f25da28e`  
-		Last Modified: Thu, 18 Feb 2021 07:18:02 GMT  
+	-	`sha256:78f6198d959ea7cb84fde8b74167b15a32f7aebdc448ee2185853528723c0a1b`  
+		Last Modified: Tue, 23 Feb 2021 00:30:37 GMT  
 		Size: 549.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `ghost:3.41.6-alpine` - linux; arm variant v6
+### `ghost:3.41.7-alpine` - linux; arm variant v6
 
 ```console
-$ docker pull ghost@sha256:4335642bfc907574ad85670ad4e4abb8ef3f6974ec65f18cf5c83036e333e977
+$ docker pull ghost@sha256:01028ab285fbe925f7e962ce8046c30f09c2fb776f16bfb3931dd7895b7e4583
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **91.9 MB (91937472 bytes)**  
+-	Total Size: **92.6 MB (92561118 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:94e007c3c8ed6d833ab8161769b6937c12feb469ca6430ce4668b3da6454b927`
+-	Image ID: `sha256:154913a9e3db998a38491f8956c11790be15fda41b2fe30d7cd21509ac2c472a`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -5001,21 +4895,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Sat, 13 Feb 2021 02:08:59 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Thu, 18 Feb 2021 01:24:58 GMT
-ENV GHOST_VERSION=3.41.6
-# Thu, 18 Feb 2021 01:33:13 GMT
+# Mon, 22 Feb 2021 23:55:28 GMT
+ENV GHOST_VERSION=3.41.7
+# Tue, 23 Feb 2021 00:03:53 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		su-exec node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	su-exec node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	su-exec node ghost config paths.contentPath "$GHOST_CONTENT"; 		su-exec node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! su-exec node yarn add "sqlite3@$sqlite3Version" --force; then 		apk add --no-cache --virtual .build-deps g++ gcc libc-dev make python3 vips-dev; 				npm_config_python='python3' su-exec node yarn add "sqlite3@$sqlite3Version" --force --build-from-source; 				apk del --no-network .build-deps; 	fi; 		su-exec node yarn cache clean; 	su-exec node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Thu, 18 Feb 2021 01:33:22 GMT
+# Tue, 23 Feb 2021 00:04:02 GMT
 WORKDIR /var/lib/ghost
-# Thu, 18 Feb 2021 01:33:22 GMT
+# Tue, 23 Feb 2021 00:04:03 GMT
 VOLUME [/var/lib/ghost/content]
-# Thu, 18 Feb 2021 01:33:23 GMT
+# Tue, 23 Feb 2021 00:04:04 GMT
 COPY file:87209c4c75826f5d839c2f3270a782740f42eecf4bc96b2f6dbae79b08c17e21 in /usr/local/bin 
-# Thu, 18 Feb 2021 01:33:24 GMT
+# Tue, 23 Feb 2021 00:04:04 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 18 Feb 2021 01:33:25 GMT
+# Tue, 23 Feb 2021 00:04:05 GMT
 EXPOSE 2368
-# Thu, 18 Feb 2021 01:33:26 GMT
+# Tue, 23 Feb 2021 00:04:06 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -5048,26 +4942,26 @@ CMD ["node" "current/index.js"]
 		Last Modified: Sat, 13 Feb 2021 02:25:22 GMT  
 		Size: 7.4 MB (7438724 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b1e01ad74886955a47831c3d3ee20b1c0edbf350ce29ab5c5441836fe4f24995`  
-		Last Modified: Thu, 18 Feb 2021 01:34:35 GMT  
-		Size: 54.6 MB (54592589 bytes)  
+	-	`sha256:10ea472dba2751bca8f9dd4fea81c59236d908e5cd429f0022feb58185dee804`  
+		Last Modified: Tue, 23 Feb 2021 00:05:20 GMT  
+		Size: 55.2 MB (55216234 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e23787102112a52ad3c0552549ffb4c535f274a7a00de497f955da4862eab30d`  
-		Last Modified: Thu, 18 Feb 2021 01:34:00 GMT  
-		Size: 546.0 B  
+	-	`sha256:d811ebdd8bae45cba7ccf7646380ac5660925842b807603f2b6ee9970fa368ec`  
+		Last Modified: Tue, 23 Feb 2021 00:04:40 GMT  
+		Size: 547.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `ghost:3.41.6-alpine` - linux; arm variant v7
+### `ghost:3.41.7-alpine` - linux; arm variant v7
 
 ```console
-$ docker pull ghost@sha256:4b6245302d938bf046e5f19b062e78032e7e89e64111a2c400480068406a359c
+$ docker pull ghost@sha256:523f3b86d0b3899c7d09892d7ac5552af6dca0ed2e48deeed22421a8cd1b481d
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **90.7 MB (90737172 bytes)**  
+-	Total Size: **91.4 MB (91357584 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e44f041ea7ed22b4781d125a1d24832fb488c290187a7a895138c40bd0fcaf9e`
+-	Image ID: `sha256:7bd47465832080540a8fcce72140805deec193474d566ea243d93573cae65890`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -5104,21 +4998,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Sat, 13 Feb 2021 02:09:56 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Thu, 18 Feb 2021 02:05:22 GMT
-ENV GHOST_VERSION=3.41.6
-# Thu, 18 Feb 2021 02:10:56 GMT
+# Tue, 23 Feb 2021 00:32:35 GMT
+ENV GHOST_VERSION=3.41.7
+# Tue, 23 Feb 2021 00:38:22 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		su-exec node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	su-exec node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	su-exec node ghost config paths.contentPath "$GHOST_CONTENT"; 		su-exec node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! su-exec node yarn add "sqlite3@$sqlite3Version" --force; then 		apk add --no-cache --virtual .build-deps g++ gcc libc-dev make python3 vips-dev; 				npm_config_python='python3' su-exec node yarn add "sqlite3@$sqlite3Version" --force --build-from-source; 				apk del --no-network .build-deps; 	fi; 		su-exec node yarn cache clean; 	su-exec node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Thu, 18 Feb 2021 02:11:04 GMT
+# Tue, 23 Feb 2021 00:38:32 GMT
 WORKDIR /var/lib/ghost
-# Thu, 18 Feb 2021 02:11:05 GMT
+# Tue, 23 Feb 2021 00:38:33 GMT
 VOLUME [/var/lib/ghost/content]
-# Thu, 18 Feb 2021 02:11:05 GMT
+# Tue, 23 Feb 2021 00:38:34 GMT
 COPY file:87209c4c75826f5d839c2f3270a782740f42eecf4bc96b2f6dbae79b08c17e21 in /usr/local/bin 
-# Thu, 18 Feb 2021 02:11:06 GMT
+# Tue, 23 Feb 2021 00:38:35 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 18 Feb 2021 02:11:07 GMT
+# Tue, 23 Feb 2021 00:38:36 GMT
 EXPOSE 2368
-# Thu, 18 Feb 2021 02:11:07 GMT
+# Tue, 23 Feb 2021 00:38:37 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -5151,26 +5045,26 @@ CMD ["node" "current/index.js"]
 		Last Modified: Sat, 13 Feb 2021 02:27:40 GMT  
 		Size: 7.4 MB (7438581 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:015f5917d93bfdaf52055e9381e7ed397c3700d66baf5624afa61ecea458ecc0`  
-		Last Modified: Thu, 18 Feb 2021 02:13:04 GMT  
-		Size: 54.1 MB (54094247 bytes)  
+	-	`sha256:e449c6e90fabdd16125116f80aa56725b24db9d7c74de245811d0a2e783fe1b6`  
+		Last Modified: Tue, 23 Feb 2021 00:40:33 GMT  
+		Size: 54.7 MB (54714658 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:940f8e562e9204d54bf76d0cdb6e1934346925e688b4c5c15a9aa79832b7c74a`  
-		Last Modified: Thu, 18 Feb 2021 02:12:31 GMT  
-		Size: 546.0 B  
+	-	`sha256:9f75e39f389eaa2f63495957ed3150457c598adb01bac84e608bf34ca1a0510a`  
+		Last Modified: Tue, 23 Feb 2021 00:40:00 GMT  
+		Size: 547.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `ghost:3.41.6-alpine` - linux; arm64 variant v8
+### `ghost:3.41.7-alpine` - linux; arm64 variant v8
 
 ```console
-$ docker pull ghost@sha256:c7740ffa53f631ad2b824a9ac49b16b2472ecb196a856a3a37138ef3fcee48cd
+$ docker pull ghost@sha256:63faf22c5c69690723ce1f32b7e5516a5a2142f0ac94384c00a86464f6107ad4
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **93.0 MB (93003160 bytes)**  
+-	Total Size: **93.6 MB (93623360 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:76f5d7d6b78c5892f37c56a3eedafcbf6ef0c26851ffdab60454bbc13c55fabe`
+-	Image ID: `sha256:69468db60f49e220cfd80ffe92712defffc2869bf5b473ad161e3eab4912ce9f`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -5207,21 +5101,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Sat, 13 Feb 2021 02:37:57 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Thu, 18 Feb 2021 02:34:36 GMT
-ENV GHOST_VERSION=3.41.6
-# Thu, 18 Feb 2021 02:40:18 GMT
+# Mon, 22 Feb 2021 23:47:12 GMT
+ENV GHOST_VERSION=3.41.7
+# Mon, 22 Feb 2021 23:52:42 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		su-exec node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	su-exec node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	su-exec node ghost config paths.contentPath "$GHOST_CONTENT"; 		su-exec node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! su-exec node yarn add "sqlite3@$sqlite3Version" --force; then 		apk add --no-cache --virtual .build-deps g++ gcc libc-dev make python3 vips-dev; 				npm_config_python='python3' su-exec node yarn add "sqlite3@$sqlite3Version" --force --build-from-source; 				apk del --no-network .build-deps; 	fi; 		su-exec node yarn cache clean; 	su-exec node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Thu, 18 Feb 2021 02:40:24 GMT
+# Mon, 22 Feb 2021 23:52:52 GMT
 WORKDIR /var/lib/ghost
-# Thu, 18 Feb 2021 02:40:25 GMT
+# Mon, 22 Feb 2021 23:52:53 GMT
 VOLUME [/var/lib/ghost/content]
-# Thu, 18 Feb 2021 02:40:26 GMT
+# Mon, 22 Feb 2021 23:52:53 GMT
 COPY file:87209c4c75826f5d839c2f3270a782740f42eecf4bc96b2f6dbae79b08c17e21 in /usr/local/bin 
-# Thu, 18 Feb 2021 02:40:26 GMT
+# Mon, 22 Feb 2021 23:52:54 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 18 Feb 2021 02:40:27 GMT
+# Mon, 22 Feb 2021 23:52:55 GMT
 EXPOSE 2368
-# Thu, 18 Feb 2021 02:40:28 GMT
+# Mon, 22 Feb 2021 23:52:56 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -5254,19 +5148,19 @@ CMD ["node" "current/index.js"]
 		Last Modified: Sat, 13 Feb 2021 02:54:04 GMT  
 		Size: 7.4 MB (7438612 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:40f02d5d57511ad91d9baebb6a7a412c041395716ad129677fb0029b5d7c3932`  
-		Last Modified: Thu, 18 Feb 2021 02:42:11 GMT  
-		Size: 54.8 MB (54773465 bytes)  
+	-	`sha256:b6e89dea1db288966ae4afa542b990100e527229f990eb5a023768052deb27de`  
+		Last Modified: Mon, 22 Feb 2021 23:54:31 GMT  
+		Size: 55.4 MB (55393666 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:481bb0b380ed50258735a2cdc9dd641b9be2c441e07c93619d3824bdb73d08c5`  
-		Last Modified: Thu, 18 Feb 2021 02:41:47 GMT  
-		Size: 548.0 B  
+	-	`sha256:0892a15759924b20f89f83c756c30b813ce32ec7a9e9bf288b321461778e3aba`  
+		Last Modified: Mon, 22 Feb 2021 23:54:06 GMT  
+		Size: 547.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `ghost:3.41-alpine`
 
 ```console
-$ docker pull ghost@sha256:da967f5fd11e2f66c7857e80fc52ecf61e0509fdab1a1ab3aa9fff6ca7fe3091
+$ docker pull ghost@sha256:6a175be24788f3e847552336349ed61c0845e90c066ee205aad91e48681781d0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -5279,14 +5173,14 @@ $ docker pull ghost@sha256:da967f5fd11e2f66c7857e80fc52ecf61e0509fdab1a1ab3aa9ff
 ### `ghost:3.41-alpine` - linux; amd64
 
 ```console
-$ docker pull ghost@sha256:91135d3f68dcf246cf98e436ee96c0b262b881b2ae7f8685a50a66cce7643e62
+$ docker pull ghost@sha256:37d87f8709fca7526e4faa963b6e4923e5428e57a9819db8f7d75512392cc332
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **108.0 MB (107981573 bytes)**  
+-	Total Size: **108.6 MB (108607680 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:8df629f051b7e94098ae8310984844d7e5b3f4e0c9a19724ac5dd9c96a0a9372`
+-	Image ID: `sha256:edff6fec1ce156383469cbb81d091b665fc7d07884ec7c98a3c6d1bf318993b7`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -5323,21 +5217,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Sat, 13 Feb 2021 01:03:22 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Thu, 18 Feb 2021 07:15:49 GMT
-ENV GHOST_VERSION=3.41.6
-# Thu, 18 Feb 2021 07:17:12 GMT
+# Tue, 23 Feb 2021 00:28:20 GMT
+ENV GHOST_VERSION=3.41.7
+# Tue, 23 Feb 2021 00:29:43 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		su-exec node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	su-exec node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	su-exec node ghost config paths.contentPath "$GHOST_CONTENT"; 		su-exec node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! su-exec node yarn add "sqlite3@$sqlite3Version" --force; then 		apk add --no-cache --virtual .build-deps g++ gcc libc-dev make python3 vips-dev; 				npm_config_python='python3' su-exec node yarn add "sqlite3@$sqlite3Version" --force --build-from-source; 				apk del --no-network .build-deps; 	fi; 		su-exec node yarn cache clean; 	su-exec node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Thu, 18 Feb 2021 07:17:13 GMT
+# Tue, 23 Feb 2021 00:29:44 GMT
 WORKDIR /var/lib/ghost
-# Thu, 18 Feb 2021 07:17:13 GMT
+# Tue, 23 Feb 2021 00:29:44 GMT
 VOLUME [/var/lib/ghost/content]
-# Thu, 18 Feb 2021 07:17:14 GMT
+# Tue, 23 Feb 2021 00:29:45 GMT
 COPY file:87209c4c75826f5d839c2f3270a782740f42eecf4bc96b2f6dbae79b08c17e21 in /usr/local/bin 
-# Thu, 18 Feb 2021 07:17:14 GMT
+# Tue, 23 Feb 2021 00:29:45 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 18 Feb 2021 07:17:14 GMT
+# Tue, 23 Feb 2021 00:29:45 GMT
 EXPOSE 2368
-# Thu, 18 Feb 2021 07:17:14 GMT
+# Tue, 23 Feb 2021 00:29:45 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -5370,26 +5264,26 @@ CMD ["node" "current/index.js"]
 		Last Modified: Sat, 13 Feb 2021 01:09:09 GMT  
 		Size: 7.4 MB (7438611 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c63d39f31ef44ee4f04d228c4ef9c9dd66e0287af47487f94d875be672de23f7`  
-		Last Modified: Thu, 18 Feb 2021 07:18:19 GMT  
-		Size: 69.9 MB (69875598 bytes)  
+	-	`sha256:dcfd15109123a26f1defd46ccd306142e6964436a428d19a06f953a4cdb76d17`  
+		Last Modified: Tue, 23 Feb 2021 00:30:54 GMT  
+		Size: 70.5 MB (70501705 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e5c4e850a5843d7bc3f245c5235d1447c17323f24f08ac98022ff667f25da28e`  
-		Last Modified: Thu, 18 Feb 2021 07:18:02 GMT  
+	-	`sha256:78f6198d959ea7cb84fde8b74167b15a32f7aebdc448ee2185853528723c0a1b`  
+		Last Modified: Tue, 23 Feb 2021 00:30:37 GMT  
 		Size: 549.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ghost:3.41-alpine` - linux; arm variant v6
 
 ```console
-$ docker pull ghost@sha256:4335642bfc907574ad85670ad4e4abb8ef3f6974ec65f18cf5c83036e333e977
+$ docker pull ghost@sha256:01028ab285fbe925f7e962ce8046c30f09c2fb776f16bfb3931dd7895b7e4583
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **91.9 MB (91937472 bytes)**  
+-	Total Size: **92.6 MB (92561118 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:94e007c3c8ed6d833ab8161769b6937c12feb469ca6430ce4668b3da6454b927`
+-	Image ID: `sha256:154913a9e3db998a38491f8956c11790be15fda41b2fe30d7cd21509ac2c472a`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -5426,21 +5320,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Sat, 13 Feb 2021 02:08:59 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Thu, 18 Feb 2021 01:24:58 GMT
-ENV GHOST_VERSION=3.41.6
-# Thu, 18 Feb 2021 01:33:13 GMT
+# Mon, 22 Feb 2021 23:55:28 GMT
+ENV GHOST_VERSION=3.41.7
+# Tue, 23 Feb 2021 00:03:53 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		su-exec node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	su-exec node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	su-exec node ghost config paths.contentPath "$GHOST_CONTENT"; 		su-exec node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! su-exec node yarn add "sqlite3@$sqlite3Version" --force; then 		apk add --no-cache --virtual .build-deps g++ gcc libc-dev make python3 vips-dev; 				npm_config_python='python3' su-exec node yarn add "sqlite3@$sqlite3Version" --force --build-from-source; 				apk del --no-network .build-deps; 	fi; 		su-exec node yarn cache clean; 	su-exec node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Thu, 18 Feb 2021 01:33:22 GMT
+# Tue, 23 Feb 2021 00:04:02 GMT
 WORKDIR /var/lib/ghost
-# Thu, 18 Feb 2021 01:33:22 GMT
+# Tue, 23 Feb 2021 00:04:03 GMT
 VOLUME [/var/lib/ghost/content]
-# Thu, 18 Feb 2021 01:33:23 GMT
+# Tue, 23 Feb 2021 00:04:04 GMT
 COPY file:87209c4c75826f5d839c2f3270a782740f42eecf4bc96b2f6dbae79b08c17e21 in /usr/local/bin 
-# Thu, 18 Feb 2021 01:33:24 GMT
+# Tue, 23 Feb 2021 00:04:04 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 18 Feb 2021 01:33:25 GMT
+# Tue, 23 Feb 2021 00:04:05 GMT
 EXPOSE 2368
-# Thu, 18 Feb 2021 01:33:26 GMT
+# Tue, 23 Feb 2021 00:04:06 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -5473,26 +5367,26 @@ CMD ["node" "current/index.js"]
 		Last Modified: Sat, 13 Feb 2021 02:25:22 GMT  
 		Size: 7.4 MB (7438724 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b1e01ad74886955a47831c3d3ee20b1c0edbf350ce29ab5c5441836fe4f24995`  
-		Last Modified: Thu, 18 Feb 2021 01:34:35 GMT  
-		Size: 54.6 MB (54592589 bytes)  
+	-	`sha256:10ea472dba2751bca8f9dd4fea81c59236d908e5cd429f0022feb58185dee804`  
+		Last Modified: Tue, 23 Feb 2021 00:05:20 GMT  
+		Size: 55.2 MB (55216234 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e23787102112a52ad3c0552549ffb4c535f274a7a00de497f955da4862eab30d`  
-		Last Modified: Thu, 18 Feb 2021 01:34:00 GMT  
-		Size: 546.0 B  
+	-	`sha256:d811ebdd8bae45cba7ccf7646380ac5660925842b807603f2b6ee9970fa368ec`  
+		Last Modified: Tue, 23 Feb 2021 00:04:40 GMT  
+		Size: 547.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ghost:3.41-alpine` - linux; arm variant v7
 
 ```console
-$ docker pull ghost@sha256:4b6245302d938bf046e5f19b062e78032e7e89e64111a2c400480068406a359c
+$ docker pull ghost@sha256:523f3b86d0b3899c7d09892d7ac5552af6dca0ed2e48deeed22421a8cd1b481d
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **90.7 MB (90737172 bytes)**  
+-	Total Size: **91.4 MB (91357584 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e44f041ea7ed22b4781d125a1d24832fb488c290187a7a895138c40bd0fcaf9e`
+-	Image ID: `sha256:7bd47465832080540a8fcce72140805deec193474d566ea243d93573cae65890`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -5529,21 +5423,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Sat, 13 Feb 2021 02:09:56 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Thu, 18 Feb 2021 02:05:22 GMT
-ENV GHOST_VERSION=3.41.6
-# Thu, 18 Feb 2021 02:10:56 GMT
+# Tue, 23 Feb 2021 00:32:35 GMT
+ENV GHOST_VERSION=3.41.7
+# Tue, 23 Feb 2021 00:38:22 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		su-exec node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	su-exec node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	su-exec node ghost config paths.contentPath "$GHOST_CONTENT"; 		su-exec node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! su-exec node yarn add "sqlite3@$sqlite3Version" --force; then 		apk add --no-cache --virtual .build-deps g++ gcc libc-dev make python3 vips-dev; 				npm_config_python='python3' su-exec node yarn add "sqlite3@$sqlite3Version" --force --build-from-source; 				apk del --no-network .build-deps; 	fi; 		su-exec node yarn cache clean; 	su-exec node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Thu, 18 Feb 2021 02:11:04 GMT
+# Tue, 23 Feb 2021 00:38:32 GMT
 WORKDIR /var/lib/ghost
-# Thu, 18 Feb 2021 02:11:05 GMT
+# Tue, 23 Feb 2021 00:38:33 GMT
 VOLUME [/var/lib/ghost/content]
-# Thu, 18 Feb 2021 02:11:05 GMT
+# Tue, 23 Feb 2021 00:38:34 GMT
 COPY file:87209c4c75826f5d839c2f3270a782740f42eecf4bc96b2f6dbae79b08c17e21 in /usr/local/bin 
-# Thu, 18 Feb 2021 02:11:06 GMT
+# Tue, 23 Feb 2021 00:38:35 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 18 Feb 2021 02:11:07 GMT
+# Tue, 23 Feb 2021 00:38:36 GMT
 EXPOSE 2368
-# Thu, 18 Feb 2021 02:11:07 GMT
+# Tue, 23 Feb 2021 00:38:37 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -5576,26 +5470,26 @@ CMD ["node" "current/index.js"]
 		Last Modified: Sat, 13 Feb 2021 02:27:40 GMT  
 		Size: 7.4 MB (7438581 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:015f5917d93bfdaf52055e9381e7ed397c3700d66baf5624afa61ecea458ecc0`  
-		Last Modified: Thu, 18 Feb 2021 02:13:04 GMT  
-		Size: 54.1 MB (54094247 bytes)  
+	-	`sha256:e449c6e90fabdd16125116f80aa56725b24db9d7c74de245811d0a2e783fe1b6`  
+		Last Modified: Tue, 23 Feb 2021 00:40:33 GMT  
+		Size: 54.7 MB (54714658 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:940f8e562e9204d54bf76d0cdb6e1934346925e688b4c5c15a9aa79832b7c74a`  
-		Last Modified: Thu, 18 Feb 2021 02:12:31 GMT  
-		Size: 546.0 B  
+	-	`sha256:9f75e39f389eaa2f63495957ed3150457c598adb01bac84e608bf34ca1a0510a`  
+		Last Modified: Tue, 23 Feb 2021 00:40:00 GMT  
+		Size: 547.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ghost:3.41-alpine` - linux; arm64 variant v8
 
 ```console
-$ docker pull ghost@sha256:c7740ffa53f631ad2b824a9ac49b16b2472ecb196a856a3a37138ef3fcee48cd
+$ docker pull ghost@sha256:63faf22c5c69690723ce1f32b7e5516a5a2142f0ac94384c00a86464f6107ad4
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **93.0 MB (93003160 bytes)**  
+-	Total Size: **93.6 MB (93623360 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:76f5d7d6b78c5892f37c56a3eedafcbf6ef0c26851ffdab60454bbc13c55fabe`
+-	Image ID: `sha256:69468db60f49e220cfd80ffe92712defffc2869bf5b473ad161e3eab4912ce9f`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -5632,21 +5526,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Sat, 13 Feb 2021 02:37:57 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Thu, 18 Feb 2021 02:34:36 GMT
-ENV GHOST_VERSION=3.41.6
-# Thu, 18 Feb 2021 02:40:18 GMT
+# Mon, 22 Feb 2021 23:47:12 GMT
+ENV GHOST_VERSION=3.41.7
+# Mon, 22 Feb 2021 23:52:42 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		su-exec node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	su-exec node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	su-exec node ghost config paths.contentPath "$GHOST_CONTENT"; 		su-exec node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! su-exec node yarn add "sqlite3@$sqlite3Version" --force; then 		apk add --no-cache --virtual .build-deps g++ gcc libc-dev make python3 vips-dev; 				npm_config_python='python3' su-exec node yarn add "sqlite3@$sqlite3Version" --force --build-from-source; 				apk del --no-network .build-deps; 	fi; 		su-exec node yarn cache clean; 	su-exec node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Thu, 18 Feb 2021 02:40:24 GMT
+# Mon, 22 Feb 2021 23:52:52 GMT
 WORKDIR /var/lib/ghost
-# Thu, 18 Feb 2021 02:40:25 GMT
+# Mon, 22 Feb 2021 23:52:53 GMT
 VOLUME [/var/lib/ghost/content]
-# Thu, 18 Feb 2021 02:40:26 GMT
+# Mon, 22 Feb 2021 23:52:53 GMT
 COPY file:87209c4c75826f5d839c2f3270a782740f42eecf4bc96b2f6dbae79b08c17e21 in /usr/local/bin 
-# Thu, 18 Feb 2021 02:40:26 GMT
+# Mon, 22 Feb 2021 23:52:54 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 18 Feb 2021 02:40:27 GMT
+# Mon, 22 Feb 2021 23:52:55 GMT
 EXPOSE 2368
-# Thu, 18 Feb 2021 02:40:28 GMT
+# Mon, 22 Feb 2021 23:52:56 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -5679,19 +5573,19 @@ CMD ["node" "current/index.js"]
 		Last Modified: Sat, 13 Feb 2021 02:54:04 GMT  
 		Size: 7.4 MB (7438612 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:40f02d5d57511ad91d9baebb6a7a412c041395716ad129677fb0029b5d7c3932`  
-		Last Modified: Thu, 18 Feb 2021 02:42:11 GMT  
-		Size: 54.8 MB (54773465 bytes)  
+	-	`sha256:b6e89dea1db288966ae4afa542b990100e527229f990eb5a023768052deb27de`  
+		Last Modified: Mon, 22 Feb 2021 23:54:31 GMT  
+		Size: 55.4 MB (55393666 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:481bb0b380ed50258735a2cdc9dd641b9be2c441e07c93619d3824bdb73d08c5`  
-		Last Modified: Thu, 18 Feb 2021 02:41:47 GMT  
-		Size: 548.0 B  
+	-	`sha256:0892a15759924b20f89f83c756c30b813ce32ec7a9e9bf288b321461778e3aba`  
+		Last Modified: Mon, 22 Feb 2021 23:54:06 GMT  
+		Size: 547.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `ghost:3-alpine`
 
 ```console
-$ docker pull ghost@sha256:da967f5fd11e2f66c7857e80fc52ecf61e0509fdab1a1ab3aa9fff6ca7fe3091
+$ docker pull ghost@sha256:6a175be24788f3e847552336349ed61c0845e90c066ee205aad91e48681781d0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -5704,14 +5598,14 @@ $ docker pull ghost@sha256:da967f5fd11e2f66c7857e80fc52ecf61e0509fdab1a1ab3aa9ff
 ### `ghost:3-alpine` - linux; amd64
 
 ```console
-$ docker pull ghost@sha256:91135d3f68dcf246cf98e436ee96c0b262b881b2ae7f8685a50a66cce7643e62
+$ docker pull ghost@sha256:37d87f8709fca7526e4faa963b6e4923e5428e57a9819db8f7d75512392cc332
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **108.0 MB (107981573 bytes)**  
+-	Total Size: **108.6 MB (108607680 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:8df629f051b7e94098ae8310984844d7e5b3f4e0c9a19724ac5dd9c96a0a9372`
+-	Image ID: `sha256:edff6fec1ce156383469cbb81d091b665fc7d07884ec7c98a3c6d1bf318993b7`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -5748,21 +5642,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Sat, 13 Feb 2021 01:03:22 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Thu, 18 Feb 2021 07:15:49 GMT
-ENV GHOST_VERSION=3.41.6
-# Thu, 18 Feb 2021 07:17:12 GMT
+# Tue, 23 Feb 2021 00:28:20 GMT
+ENV GHOST_VERSION=3.41.7
+# Tue, 23 Feb 2021 00:29:43 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		su-exec node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	su-exec node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	su-exec node ghost config paths.contentPath "$GHOST_CONTENT"; 		su-exec node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! su-exec node yarn add "sqlite3@$sqlite3Version" --force; then 		apk add --no-cache --virtual .build-deps g++ gcc libc-dev make python3 vips-dev; 				npm_config_python='python3' su-exec node yarn add "sqlite3@$sqlite3Version" --force --build-from-source; 				apk del --no-network .build-deps; 	fi; 		su-exec node yarn cache clean; 	su-exec node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Thu, 18 Feb 2021 07:17:13 GMT
+# Tue, 23 Feb 2021 00:29:44 GMT
 WORKDIR /var/lib/ghost
-# Thu, 18 Feb 2021 07:17:13 GMT
+# Tue, 23 Feb 2021 00:29:44 GMT
 VOLUME [/var/lib/ghost/content]
-# Thu, 18 Feb 2021 07:17:14 GMT
+# Tue, 23 Feb 2021 00:29:45 GMT
 COPY file:87209c4c75826f5d839c2f3270a782740f42eecf4bc96b2f6dbae79b08c17e21 in /usr/local/bin 
-# Thu, 18 Feb 2021 07:17:14 GMT
+# Tue, 23 Feb 2021 00:29:45 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 18 Feb 2021 07:17:14 GMT
+# Tue, 23 Feb 2021 00:29:45 GMT
 EXPOSE 2368
-# Thu, 18 Feb 2021 07:17:14 GMT
+# Tue, 23 Feb 2021 00:29:45 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -5795,26 +5689,26 @@ CMD ["node" "current/index.js"]
 		Last Modified: Sat, 13 Feb 2021 01:09:09 GMT  
 		Size: 7.4 MB (7438611 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c63d39f31ef44ee4f04d228c4ef9c9dd66e0287af47487f94d875be672de23f7`  
-		Last Modified: Thu, 18 Feb 2021 07:18:19 GMT  
-		Size: 69.9 MB (69875598 bytes)  
+	-	`sha256:dcfd15109123a26f1defd46ccd306142e6964436a428d19a06f953a4cdb76d17`  
+		Last Modified: Tue, 23 Feb 2021 00:30:54 GMT  
+		Size: 70.5 MB (70501705 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e5c4e850a5843d7bc3f245c5235d1447c17323f24f08ac98022ff667f25da28e`  
-		Last Modified: Thu, 18 Feb 2021 07:18:02 GMT  
+	-	`sha256:78f6198d959ea7cb84fde8b74167b15a32f7aebdc448ee2185853528723c0a1b`  
+		Last Modified: Tue, 23 Feb 2021 00:30:37 GMT  
 		Size: 549.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ghost:3-alpine` - linux; arm variant v6
 
 ```console
-$ docker pull ghost@sha256:4335642bfc907574ad85670ad4e4abb8ef3f6974ec65f18cf5c83036e333e977
+$ docker pull ghost@sha256:01028ab285fbe925f7e962ce8046c30f09c2fb776f16bfb3931dd7895b7e4583
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **91.9 MB (91937472 bytes)**  
+-	Total Size: **92.6 MB (92561118 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:94e007c3c8ed6d833ab8161769b6937c12feb469ca6430ce4668b3da6454b927`
+-	Image ID: `sha256:154913a9e3db998a38491f8956c11790be15fda41b2fe30d7cd21509ac2c472a`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -5851,21 +5745,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Sat, 13 Feb 2021 02:08:59 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Thu, 18 Feb 2021 01:24:58 GMT
-ENV GHOST_VERSION=3.41.6
-# Thu, 18 Feb 2021 01:33:13 GMT
+# Mon, 22 Feb 2021 23:55:28 GMT
+ENV GHOST_VERSION=3.41.7
+# Tue, 23 Feb 2021 00:03:53 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		su-exec node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	su-exec node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	su-exec node ghost config paths.contentPath "$GHOST_CONTENT"; 		su-exec node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! su-exec node yarn add "sqlite3@$sqlite3Version" --force; then 		apk add --no-cache --virtual .build-deps g++ gcc libc-dev make python3 vips-dev; 				npm_config_python='python3' su-exec node yarn add "sqlite3@$sqlite3Version" --force --build-from-source; 				apk del --no-network .build-deps; 	fi; 		su-exec node yarn cache clean; 	su-exec node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Thu, 18 Feb 2021 01:33:22 GMT
+# Tue, 23 Feb 2021 00:04:02 GMT
 WORKDIR /var/lib/ghost
-# Thu, 18 Feb 2021 01:33:22 GMT
+# Tue, 23 Feb 2021 00:04:03 GMT
 VOLUME [/var/lib/ghost/content]
-# Thu, 18 Feb 2021 01:33:23 GMT
+# Tue, 23 Feb 2021 00:04:04 GMT
 COPY file:87209c4c75826f5d839c2f3270a782740f42eecf4bc96b2f6dbae79b08c17e21 in /usr/local/bin 
-# Thu, 18 Feb 2021 01:33:24 GMT
+# Tue, 23 Feb 2021 00:04:04 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 18 Feb 2021 01:33:25 GMT
+# Tue, 23 Feb 2021 00:04:05 GMT
 EXPOSE 2368
-# Thu, 18 Feb 2021 01:33:26 GMT
+# Tue, 23 Feb 2021 00:04:06 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -5898,26 +5792,26 @@ CMD ["node" "current/index.js"]
 		Last Modified: Sat, 13 Feb 2021 02:25:22 GMT  
 		Size: 7.4 MB (7438724 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b1e01ad74886955a47831c3d3ee20b1c0edbf350ce29ab5c5441836fe4f24995`  
-		Last Modified: Thu, 18 Feb 2021 01:34:35 GMT  
-		Size: 54.6 MB (54592589 bytes)  
+	-	`sha256:10ea472dba2751bca8f9dd4fea81c59236d908e5cd429f0022feb58185dee804`  
+		Last Modified: Tue, 23 Feb 2021 00:05:20 GMT  
+		Size: 55.2 MB (55216234 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e23787102112a52ad3c0552549ffb4c535f274a7a00de497f955da4862eab30d`  
-		Last Modified: Thu, 18 Feb 2021 01:34:00 GMT  
-		Size: 546.0 B  
+	-	`sha256:d811ebdd8bae45cba7ccf7646380ac5660925842b807603f2b6ee9970fa368ec`  
+		Last Modified: Tue, 23 Feb 2021 00:04:40 GMT  
+		Size: 547.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ghost:3-alpine` - linux; arm variant v7
 
 ```console
-$ docker pull ghost@sha256:4b6245302d938bf046e5f19b062e78032e7e89e64111a2c400480068406a359c
+$ docker pull ghost@sha256:523f3b86d0b3899c7d09892d7ac5552af6dca0ed2e48deeed22421a8cd1b481d
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **90.7 MB (90737172 bytes)**  
+-	Total Size: **91.4 MB (91357584 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e44f041ea7ed22b4781d125a1d24832fb488c290187a7a895138c40bd0fcaf9e`
+-	Image ID: `sha256:7bd47465832080540a8fcce72140805deec193474d566ea243d93573cae65890`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -5954,21 +5848,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Sat, 13 Feb 2021 02:09:56 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Thu, 18 Feb 2021 02:05:22 GMT
-ENV GHOST_VERSION=3.41.6
-# Thu, 18 Feb 2021 02:10:56 GMT
+# Tue, 23 Feb 2021 00:32:35 GMT
+ENV GHOST_VERSION=3.41.7
+# Tue, 23 Feb 2021 00:38:22 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		su-exec node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	su-exec node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	su-exec node ghost config paths.contentPath "$GHOST_CONTENT"; 		su-exec node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! su-exec node yarn add "sqlite3@$sqlite3Version" --force; then 		apk add --no-cache --virtual .build-deps g++ gcc libc-dev make python3 vips-dev; 				npm_config_python='python3' su-exec node yarn add "sqlite3@$sqlite3Version" --force --build-from-source; 				apk del --no-network .build-deps; 	fi; 		su-exec node yarn cache clean; 	su-exec node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Thu, 18 Feb 2021 02:11:04 GMT
+# Tue, 23 Feb 2021 00:38:32 GMT
 WORKDIR /var/lib/ghost
-# Thu, 18 Feb 2021 02:11:05 GMT
+# Tue, 23 Feb 2021 00:38:33 GMT
 VOLUME [/var/lib/ghost/content]
-# Thu, 18 Feb 2021 02:11:05 GMT
+# Tue, 23 Feb 2021 00:38:34 GMT
 COPY file:87209c4c75826f5d839c2f3270a782740f42eecf4bc96b2f6dbae79b08c17e21 in /usr/local/bin 
-# Thu, 18 Feb 2021 02:11:06 GMT
+# Tue, 23 Feb 2021 00:38:35 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 18 Feb 2021 02:11:07 GMT
+# Tue, 23 Feb 2021 00:38:36 GMT
 EXPOSE 2368
-# Thu, 18 Feb 2021 02:11:07 GMT
+# Tue, 23 Feb 2021 00:38:37 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -6001,26 +5895,26 @@ CMD ["node" "current/index.js"]
 		Last Modified: Sat, 13 Feb 2021 02:27:40 GMT  
 		Size: 7.4 MB (7438581 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:015f5917d93bfdaf52055e9381e7ed397c3700d66baf5624afa61ecea458ecc0`  
-		Last Modified: Thu, 18 Feb 2021 02:13:04 GMT  
-		Size: 54.1 MB (54094247 bytes)  
+	-	`sha256:e449c6e90fabdd16125116f80aa56725b24db9d7c74de245811d0a2e783fe1b6`  
+		Last Modified: Tue, 23 Feb 2021 00:40:33 GMT  
+		Size: 54.7 MB (54714658 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:940f8e562e9204d54bf76d0cdb6e1934346925e688b4c5c15a9aa79832b7c74a`  
-		Last Modified: Thu, 18 Feb 2021 02:12:31 GMT  
-		Size: 546.0 B  
+	-	`sha256:9f75e39f389eaa2f63495957ed3150457c598adb01bac84e608bf34ca1a0510a`  
+		Last Modified: Tue, 23 Feb 2021 00:40:00 GMT  
+		Size: 547.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ghost:3-alpine` - linux; arm64 variant v8
 
 ```console
-$ docker pull ghost@sha256:c7740ffa53f631ad2b824a9ac49b16b2472ecb196a856a3a37138ef3fcee48cd
+$ docker pull ghost@sha256:63faf22c5c69690723ce1f32b7e5516a5a2142f0ac94384c00a86464f6107ad4
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **93.0 MB (93003160 bytes)**  
+-	Total Size: **93.6 MB (93623360 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:76f5d7d6b78c5892f37c56a3eedafcbf6ef0c26851ffdab60454bbc13c55fabe`
+-	Image ID: `sha256:69468db60f49e220cfd80ffe92712defffc2869bf5b473ad161e3eab4912ce9f`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -6057,21 +5951,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Sat, 13 Feb 2021 02:37:57 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Thu, 18 Feb 2021 02:34:36 GMT
-ENV GHOST_VERSION=3.41.6
-# Thu, 18 Feb 2021 02:40:18 GMT
+# Mon, 22 Feb 2021 23:47:12 GMT
+ENV GHOST_VERSION=3.41.7
+# Mon, 22 Feb 2021 23:52:42 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		su-exec node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	su-exec node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	su-exec node ghost config paths.contentPath "$GHOST_CONTENT"; 		su-exec node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! su-exec node yarn add "sqlite3@$sqlite3Version" --force; then 		apk add --no-cache --virtual .build-deps g++ gcc libc-dev make python3 vips-dev; 				npm_config_python='python3' su-exec node yarn add "sqlite3@$sqlite3Version" --force --build-from-source; 				apk del --no-network .build-deps; 	fi; 		su-exec node yarn cache clean; 	su-exec node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Thu, 18 Feb 2021 02:40:24 GMT
+# Mon, 22 Feb 2021 23:52:52 GMT
 WORKDIR /var/lib/ghost
-# Thu, 18 Feb 2021 02:40:25 GMT
+# Mon, 22 Feb 2021 23:52:53 GMT
 VOLUME [/var/lib/ghost/content]
-# Thu, 18 Feb 2021 02:40:26 GMT
+# Mon, 22 Feb 2021 23:52:53 GMT
 COPY file:87209c4c75826f5d839c2f3270a782740f42eecf4bc96b2f6dbae79b08c17e21 in /usr/local/bin 
-# Thu, 18 Feb 2021 02:40:26 GMT
+# Mon, 22 Feb 2021 23:52:54 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 18 Feb 2021 02:40:27 GMT
+# Mon, 22 Feb 2021 23:52:55 GMT
 EXPOSE 2368
-# Thu, 18 Feb 2021 02:40:28 GMT
+# Mon, 22 Feb 2021 23:52:56 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -6104,19 +5998,19 @@ CMD ["node" "current/index.js"]
 		Last Modified: Sat, 13 Feb 2021 02:54:04 GMT  
 		Size: 7.4 MB (7438612 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:40f02d5d57511ad91d9baebb6a7a412c041395716ad129677fb0029b5d7c3932`  
-		Last Modified: Thu, 18 Feb 2021 02:42:11 GMT  
-		Size: 54.8 MB (54773465 bytes)  
+	-	`sha256:b6e89dea1db288966ae4afa542b990100e527229f990eb5a023768052deb27de`  
+		Last Modified: Mon, 22 Feb 2021 23:54:31 GMT  
+		Size: 55.4 MB (55393666 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:481bb0b380ed50258735a2cdc9dd641b9be2c441e07c93619d3824bdb73d08c5`  
-		Last Modified: Thu, 18 Feb 2021 02:41:47 GMT  
-		Size: 548.0 B  
+	-	`sha256:0892a15759924b20f89f83c756c30b813ce32ec7a9e9bf288b321461778e3aba`  
+		Last Modified: Mon, 22 Feb 2021 23:54:06 GMT  
+		Size: 547.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `ghost:alpine`
 
 ```console
-$ docker pull ghost@sha256:da967f5fd11e2f66c7857e80fc52ecf61e0509fdab1a1ab3aa9fff6ca7fe3091
+$ docker pull ghost@sha256:6a175be24788f3e847552336349ed61c0845e90c066ee205aad91e48681781d0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6129,14 +6023,14 @@ $ docker pull ghost@sha256:da967f5fd11e2f66c7857e80fc52ecf61e0509fdab1a1ab3aa9ff
 ### `ghost:alpine` - linux; amd64
 
 ```console
-$ docker pull ghost@sha256:91135d3f68dcf246cf98e436ee96c0b262b881b2ae7f8685a50a66cce7643e62
+$ docker pull ghost@sha256:37d87f8709fca7526e4faa963b6e4923e5428e57a9819db8f7d75512392cc332
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **108.0 MB (107981573 bytes)**  
+-	Total Size: **108.6 MB (108607680 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:8df629f051b7e94098ae8310984844d7e5b3f4e0c9a19724ac5dd9c96a0a9372`
+-	Image ID: `sha256:edff6fec1ce156383469cbb81d091b665fc7d07884ec7c98a3c6d1bf318993b7`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -6173,21 +6067,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Sat, 13 Feb 2021 01:03:22 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Thu, 18 Feb 2021 07:15:49 GMT
-ENV GHOST_VERSION=3.41.6
-# Thu, 18 Feb 2021 07:17:12 GMT
+# Tue, 23 Feb 2021 00:28:20 GMT
+ENV GHOST_VERSION=3.41.7
+# Tue, 23 Feb 2021 00:29:43 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		su-exec node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	su-exec node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	su-exec node ghost config paths.contentPath "$GHOST_CONTENT"; 		su-exec node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! su-exec node yarn add "sqlite3@$sqlite3Version" --force; then 		apk add --no-cache --virtual .build-deps g++ gcc libc-dev make python3 vips-dev; 				npm_config_python='python3' su-exec node yarn add "sqlite3@$sqlite3Version" --force --build-from-source; 				apk del --no-network .build-deps; 	fi; 		su-exec node yarn cache clean; 	su-exec node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Thu, 18 Feb 2021 07:17:13 GMT
+# Tue, 23 Feb 2021 00:29:44 GMT
 WORKDIR /var/lib/ghost
-# Thu, 18 Feb 2021 07:17:13 GMT
+# Tue, 23 Feb 2021 00:29:44 GMT
 VOLUME [/var/lib/ghost/content]
-# Thu, 18 Feb 2021 07:17:14 GMT
+# Tue, 23 Feb 2021 00:29:45 GMT
 COPY file:87209c4c75826f5d839c2f3270a782740f42eecf4bc96b2f6dbae79b08c17e21 in /usr/local/bin 
-# Thu, 18 Feb 2021 07:17:14 GMT
+# Tue, 23 Feb 2021 00:29:45 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 18 Feb 2021 07:17:14 GMT
+# Tue, 23 Feb 2021 00:29:45 GMT
 EXPOSE 2368
-# Thu, 18 Feb 2021 07:17:14 GMT
+# Tue, 23 Feb 2021 00:29:45 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -6220,26 +6114,26 @@ CMD ["node" "current/index.js"]
 		Last Modified: Sat, 13 Feb 2021 01:09:09 GMT  
 		Size: 7.4 MB (7438611 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c63d39f31ef44ee4f04d228c4ef9c9dd66e0287af47487f94d875be672de23f7`  
-		Last Modified: Thu, 18 Feb 2021 07:18:19 GMT  
-		Size: 69.9 MB (69875598 bytes)  
+	-	`sha256:dcfd15109123a26f1defd46ccd306142e6964436a428d19a06f953a4cdb76d17`  
+		Last Modified: Tue, 23 Feb 2021 00:30:54 GMT  
+		Size: 70.5 MB (70501705 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e5c4e850a5843d7bc3f245c5235d1447c17323f24f08ac98022ff667f25da28e`  
-		Last Modified: Thu, 18 Feb 2021 07:18:02 GMT  
+	-	`sha256:78f6198d959ea7cb84fde8b74167b15a32f7aebdc448ee2185853528723c0a1b`  
+		Last Modified: Tue, 23 Feb 2021 00:30:37 GMT  
 		Size: 549.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ghost:alpine` - linux; arm variant v6
 
 ```console
-$ docker pull ghost@sha256:4335642bfc907574ad85670ad4e4abb8ef3f6974ec65f18cf5c83036e333e977
+$ docker pull ghost@sha256:01028ab285fbe925f7e962ce8046c30f09c2fb776f16bfb3931dd7895b7e4583
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **91.9 MB (91937472 bytes)**  
+-	Total Size: **92.6 MB (92561118 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:94e007c3c8ed6d833ab8161769b6937c12feb469ca6430ce4668b3da6454b927`
+-	Image ID: `sha256:154913a9e3db998a38491f8956c11790be15fda41b2fe30d7cd21509ac2c472a`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -6276,21 +6170,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Sat, 13 Feb 2021 02:08:59 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Thu, 18 Feb 2021 01:24:58 GMT
-ENV GHOST_VERSION=3.41.6
-# Thu, 18 Feb 2021 01:33:13 GMT
+# Mon, 22 Feb 2021 23:55:28 GMT
+ENV GHOST_VERSION=3.41.7
+# Tue, 23 Feb 2021 00:03:53 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		su-exec node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	su-exec node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	su-exec node ghost config paths.contentPath "$GHOST_CONTENT"; 		su-exec node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! su-exec node yarn add "sqlite3@$sqlite3Version" --force; then 		apk add --no-cache --virtual .build-deps g++ gcc libc-dev make python3 vips-dev; 				npm_config_python='python3' su-exec node yarn add "sqlite3@$sqlite3Version" --force --build-from-source; 				apk del --no-network .build-deps; 	fi; 		su-exec node yarn cache clean; 	su-exec node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Thu, 18 Feb 2021 01:33:22 GMT
+# Tue, 23 Feb 2021 00:04:02 GMT
 WORKDIR /var/lib/ghost
-# Thu, 18 Feb 2021 01:33:22 GMT
+# Tue, 23 Feb 2021 00:04:03 GMT
 VOLUME [/var/lib/ghost/content]
-# Thu, 18 Feb 2021 01:33:23 GMT
+# Tue, 23 Feb 2021 00:04:04 GMT
 COPY file:87209c4c75826f5d839c2f3270a782740f42eecf4bc96b2f6dbae79b08c17e21 in /usr/local/bin 
-# Thu, 18 Feb 2021 01:33:24 GMT
+# Tue, 23 Feb 2021 00:04:04 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 18 Feb 2021 01:33:25 GMT
+# Tue, 23 Feb 2021 00:04:05 GMT
 EXPOSE 2368
-# Thu, 18 Feb 2021 01:33:26 GMT
+# Tue, 23 Feb 2021 00:04:06 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -6323,26 +6217,26 @@ CMD ["node" "current/index.js"]
 		Last Modified: Sat, 13 Feb 2021 02:25:22 GMT  
 		Size: 7.4 MB (7438724 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b1e01ad74886955a47831c3d3ee20b1c0edbf350ce29ab5c5441836fe4f24995`  
-		Last Modified: Thu, 18 Feb 2021 01:34:35 GMT  
-		Size: 54.6 MB (54592589 bytes)  
+	-	`sha256:10ea472dba2751bca8f9dd4fea81c59236d908e5cd429f0022feb58185dee804`  
+		Last Modified: Tue, 23 Feb 2021 00:05:20 GMT  
+		Size: 55.2 MB (55216234 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e23787102112a52ad3c0552549ffb4c535f274a7a00de497f955da4862eab30d`  
-		Last Modified: Thu, 18 Feb 2021 01:34:00 GMT  
-		Size: 546.0 B  
+	-	`sha256:d811ebdd8bae45cba7ccf7646380ac5660925842b807603f2b6ee9970fa368ec`  
+		Last Modified: Tue, 23 Feb 2021 00:04:40 GMT  
+		Size: 547.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ghost:alpine` - linux; arm variant v7
 
 ```console
-$ docker pull ghost@sha256:4b6245302d938bf046e5f19b062e78032e7e89e64111a2c400480068406a359c
+$ docker pull ghost@sha256:523f3b86d0b3899c7d09892d7ac5552af6dca0ed2e48deeed22421a8cd1b481d
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **90.7 MB (90737172 bytes)**  
+-	Total Size: **91.4 MB (91357584 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e44f041ea7ed22b4781d125a1d24832fb488c290187a7a895138c40bd0fcaf9e`
+-	Image ID: `sha256:7bd47465832080540a8fcce72140805deec193474d566ea243d93573cae65890`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -6379,21 +6273,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Sat, 13 Feb 2021 02:09:56 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Thu, 18 Feb 2021 02:05:22 GMT
-ENV GHOST_VERSION=3.41.6
-# Thu, 18 Feb 2021 02:10:56 GMT
+# Tue, 23 Feb 2021 00:32:35 GMT
+ENV GHOST_VERSION=3.41.7
+# Tue, 23 Feb 2021 00:38:22 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		su-exec node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	su-exec node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	su-exec node ghost config paths.contentPath "$GHOST_CONTENT"; 		su-exec node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! su-exec node yarn add "sqlite3@$sqlite3Version" --force; then 		apk add --no-cache --virtual .build-deps g++ gcc libc-dev make python3 vips-dev; 				npm_config_python='python3' su-exec node yarn add "sqlite3@$sqlite3Version" --force --build-from-source; 				apk del --no-network .build-deps; 	fi; 		su-exec node yarn cache clean; 	su-exec node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Thu, 18 Feb 2021 02:11:04 GMT
+# Tue, 23 Feb 2021 00:38:32 GMT
 WORKDIR /var/lib/ghost
-# Thu, 18 Feb 2021 02:11:05 GMT
+# Tue, 23 Feb 2021 00:38:33 GMT
 VOLUME [/var/lib/ghost/content]
-# Thu, 18 Feb 2021 02:11:05 GMT
+# Tue, 23 Feb 2021 00:38:34 GMT
 COPY file:87209c4c75826f5d839c2f3270a782740f42eecf4bc96b2f6dbae79b08c17e21 in /usr/local/bin 
-# Thu, 18 Feb 2021 02:11:06 GMT
+# Tue, 23 Feb 2021 00:38:35 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 18 Feb 2021 02:11:07 GMT
+# Tue, 23 Feb 2021 00:38:36 GMT
 EXPOSE 2368
-# Thu, 18 Feb 2021 02:11:07 GMT
+# Tue, 23 Feb 2021 00:38:37 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -6426,26 +6320,26 @@ CMD ["node" "current/index.js"]
 		Last Modified: Sat, 13 Feb 2021 02:27:40 GMT  
 		Size: 7.4 MB (7438581 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:015f5917d93bfdaf52055e9381e7ed397c3700d66baf5624afa61ecea458ecc0`  
-		Last Modified: Thu, 18 Feb 2021 02:13:04 GMT  
-		Size: 54.1 MB (54094247 bytes)  
+	-	`sha256:e449c6e90fabdd16125116f80aa56725b24db9d7c74de245811d0a2e783fe1b6`  
+		Last Modified: Tue, 23 Feb 2021 00:40:33 GMT  
+		Size: 54.7 MB (54714658 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:940f8e562e9204d54bf76d0cdb6e1934346925e688b4c5c15a9aa79832b7c74a`  
-		Last Modified: Thu, 18 Feb 2021 02:12:31 GMT  
-		Size: 546.0 B  
+	-	`sha256:9f75e39f389eaa2f63495957ed3150457c598adb01bac84e608bf34ca1a0510a`  
+		Last Modified: Tue, 23 Feb 2021 00:40:00 GMT  
+		Size: 547.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ghost:alpine` - linux; arm64 variant v8
 
 ```console
-$ docker pull ghost@sha256:c7740ffa53f631ad2b824a9ac49b16b2472ecb196a856a3a37138ef3fcee48cd
+$ docker pull ghost@sha256:63faf22c5c69690723ce1f32b7e5516a5a2142f0ac94384c00a86464f6107ad4
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **93.0 MB (93003160 bytes)**  
+-	Total Size: **93.6 MB (93623360 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:76f5d7d6b78c5892f37c56a3eedafcbf6ef0c26851ffdab60454bbc13c55fabe`
+-	Image ID: `sha256:69468db60f49e220cfd80ffe92712defffc2869bf5b473ad161e3eab4912ce9f`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -6482,21 +6376,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Sat, 13 Feb 2021 02:37:57 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Thu, 18 Feb 2021 02:34:36 GMT
-ENV GHOST_VERSION=3.41.6
-# Thu, 18 Feb 2021 02:40:18 GMT
+# Mon, 22 Feb 2021 23:47:12 GMT
+ENV GHOST_VERSION=3.41.7
+# Mon, 22 Feb 2021 23:52:42 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		su-exec node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	su-exec node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	su-exec node ghost config paths.contentPath "$GHOST_CONTENT"; 		su-exec node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! su-exec node yarn add "sqlite3@$sqlite3Version" --force; then 		apk add --no-cache --virtual .build-deps g++ gcc libc-dev make python3 vips-dev; 				npm_config_python='python3' su-exec node yarn add "sqlite3@$sqlite3Version" --force --build-from-source; 				apk del --no-network .build-deps; 	fi; 		su-exec node yarn cache clean; 	su-exec node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Thu, 18 Feb 2021 02:40:24 GMT
+# Mon, 22 Feb 2021 23:52:52 GMT
 WORKDIR /var/lib/ghost
-# Thu, 18 Feb 2021 02:40:25 GMT
+# Mon, 22 Feb 2021 23:52:53 GMT
 VOLUME [/var/lib/ghost/content]
-# Thu, 18 Feb 2021 02:40:26 GMT
+# Mon, 22 Feb 2021 23:52:53 GMT
 COPY file:87209c4c75826f5d839c2f3270a782740f42eecf4bc96b2f6dbae79b08c17e21 in /usr/local/bin 
-# Thu, 18 Feb 2021 02:40:26 GMT
+# Mon, 22 Feb 2021 23:52:54 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 18 Feb 2021 02:40:27 GMT
+# Mon, 22 Feb 2021 23:52:55 GMT
 EXPOSE 2368
-# Thu, 18 Feb 2021 02:40:28 GMT
+# Mon, 22 Feb 2021 23:52:56 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -6529,19 +6423,19 @@ CMD ["node" "current/index.js"]
 		Last Modified: Sat, 13 Feb 2021 02:54:04 GMT  
 		Size: 7.4 MB (7438612 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:40f02d5d57511ad91d9baebb6a7a412c041395716ad129677fb0029b5d7c3932`  
-		Last Modified: Thu, 18 Feb 2021 02:42:11 GMT  
-		Size: 54.8 MB (54773465 bytes)  
+	-	`sha256:b6e89dea1db288966ae4afa542b990100e527229f990eb5a023768052deb27de`  
+		Last Modified: Mon, 22 Feb 2021 23:54:31 GMT  
+		Size: 55.4 MB (55393666 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:481bb0b380ed50258735a2cdc9dd641b9be2c441e07c93619d3824bdb73d08c5`  
-		Last Modified: Thu, 18 Feb 2021 02:41:47 GMT  
-		Size: 548.0 B  
+	-	`sha256:0892a15759924b20f89f83c756c30b813ce32ec7a9e9bf288b321461778e3aba`  
+		Last Modified: Mon, 22 Feb 2021 23:54:06 GMT  
+		Size: 547.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `ghost:latest`
 
 ```console
-$ docker pull ghost@sha256:53639e149d69d139444b0f6142c68ed1b9fc5e01bae4e6b660a876a36ac09ae0
+$ docker pull ghost@sha256:1b7926854d06bb1423dcd7b96a530e5568fb03e6dbed3f606d8353cb9ced46b9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6555,14 +6449,14 @@ $ docker pull ghost@sha256:53639e149d69d139444b0f6142c68ed1b9fc5e01bae4e6b660a87
 ### `ghost:latest` - linux; amd64
 
 ```console
-$ docker pull ghost@sha256:cc1e0964e3f6613ccb62933a3ab6b1b5b72e04155239e3ce3bbc8fd187472d2d
+$ docker pull ghost@sha256:79995d5d2da7d0c8d5a469a7cb8d0f204f8b0955ce8295bb607fabfa78143344
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **131.7 MB (131719041 bytes)**  
+-	Total Size: **132.3 MB (132345849 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:35f749f4f347a299f024f46ab2e91bcc4197fa116ea6f1e01ad80ca53df9484f`
+-	Image ID: `sha256:6fbc9282e04b343f9773dd83f7c398b589a7ca2593d32cdb823d1ddc6c128772`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -6601,21 +6495,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Sat, 13 Feb 2021 01:01:15 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Thu, 18 Feb 2021 07:14:19 GMT
-ENV GHOST_VERSION=3.41.6
-# Thu, 18 Feb 2021 07:15:42 GMT
+# Tue, 23 Feb 2021 00:26:50 GMT
+ENV GHOST_VERSION=3.41.7
+# Tue, 23 Feb 2021 00:28:11 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		gosu node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	gosu node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	gosu node ghost config paths.contentPath "$GHOST_CONTENT"; 		gosu node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! gosu node yarn add "sqlite3@$sqlite3Version" --force; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends g++ gcc libc-dev libvips-dev make python3; 		rm -rf /var/lib/apt/lists/*; 				npm_config_python='python3' gosu node yarn add "sqlite3@$sqlite3Version" --force --build-from-source; 				apt-mark showmanual | xargs apt-mark auto > /dev/null; 		[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 		apt-get purge -y --auto-remove; 	fi; 		gosu node yarn cache clean; 	gosu node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Thu, 18 Feb 2021 07:15:43 GMT
+# Tue, 23 Feb 2021 00:28:13 GMT
 WORKDIR /var/lib/ghost
-# Thu, 18 Feb 2021 07:15:43 GMT
+# Tue, 23 Feb 2021 00:28:13 GMT
 VOLUME [/var/lib/ghost/content]
-# Thu, 18 Feb 2021 07:15:44 GMT
+# Tue, 23 Feb 2021 00:28:13 GMT
 COPY file:303989b132b5193e832753e2c7236a4050fdc0fe60a54dc1f0c4a44422a2d1ca in /usr/local/bin 
-# Thu, 18 Feb 2021 07:15:44 GMT
+# Tue, 23 Feb 2021 00:28:13 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 18 Feb 2021 07:15:44 GMT
+# Tue, 23 Feb 2021 00:28:14 GMT
 EXPOSE 2368
-# Thu, 18 Feb 2021 07:15:44 GMT
+# Tue, 23 Feb 2021 00:28:14 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -6648,26 +6542,26 @@ CMD ["node" "current/index.js"]
 		Last Modified: Sat, 13 Feb 2021 01:08:45 GMT  
 		Size: 7.4 MB (7438665 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:52103ff94a547511fdd44a32e932c2959b28683a8350c56cac6c185ce0a2cf8e`  
-		Last Modified: Thu, 18 Feb 2021 07:17:55 GMT  
-		Size: 68.9 MB (68861136 bytes)  
+	-	`sha256:cf091d7714145aabe0426ffbe22863b961c46554eb783a45de872733ce945adc`  
+		Last Modified: Tue, 23 Feb 2021 00:30:31 GMT  
+		Size: 69.5 MB (69487942 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:98257415218050f498f4cb894d513894d4abbe7c7fb3daabfcf8f2083101a998`  
-		Last Modified: Thu, 18 Feb 2021 07:17:39 GMT  
-		Size: 543.0 B  
+	-	`sha256:a76c25fe97bc52da8863c9fa98bb33a0b7318331ac856e8ecd4e97889451b45e`  
+		Last Modified: Tue, 23 Feb 2021 00:30:12 GMT  
+		Size: 545.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ghost:latest` - linux; arm variant v7
 
 ```console
-$ docker pull ghost@sha256:b8c071c41deeb95165a5cdf9aeaddda4fb55d7c610b54919b786e4b6c1af80e6
+$ docker pull ghost@sha256:c07cb5a581ba2c92e5bdf1db856a7f21816a5b1a68e887fce3f1c4c44352426c
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **127.2 MB (127166634 bytes)**  
+-	Total Size: **127.8 MB (127792600 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:dfa003d3406a6269146d2ce1e2247c915c9f000d170d3f90726b37b6cbbdacc7`
+-	Image ID: `sha256:947a0027696ebc802dcbb53ced4985f8aa7bc0f9d10b4dca355c10560171be75`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -6706,21 +6600,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Sat, 13 Feb 2021 02:01:55 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Thu, 18 Feb 2021 01:57:11 GMT
-ENV GHOST_VERSION=3.41.6
-# Thu, 18 Feb 2021 02:04:53 GMT
+# Tue, 23 Feb 2021 00:25:26 GMT
+ENV GHOST_VERSION=3.41.7
+# Tue, 23 Feb 2021 00:32:13 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		gosu node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	gosu node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	gosu node ghost config paths.contentPath "$GHOST_CONTENT"; 		gosu node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! gosu node yarn add "sqlite3@$sqlite3Version" --force; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends g++ gcc libc-dev libvips-dev make python3; 		rm -rf /var/lib/apt/lists/*; 				npm_config_python='python3' gosu node yarn add "sqlite3@$sqlite3Version" --force --build-from-source; 				apt-mark showmanual | xargs apt-mark auto > /dev/null; 		[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 		apt-get purge -y --auto-remove; 	fi; 		gosu node yarn cache clean; 	gosu node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Thu, 18 Feb 2021 02:04:58 GMT
+# Tue, 23 Feb 2021 00:32:21 GMT
 WORKDIR /var/lib/ghost
-# Thu, 18 Feb 2021 02:04:59 GMT
+# Tue, 23 Feb 2021 00:32:23 GMT
 VOLUME [/var/lib/ghost/content]
-# Thu, 18 Feb 2021 02:04:59 GMT
+# Tue, 23 Feb 2021 00:32:24 GMT
 COPY file:303989b132b5193e832753e2c7236a4050fdc0fe60a54dc1f0c4a44422a2d1ca in /usr/local/bin 
-# Thu, 18 Feb 2021 02:05:00 GMT
+# Tue, 23 Feb 2021 00:32:25 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 18 Feb 2021 02:05:01 GMT
+# Tue, 23 Feb 2021 00:32:26 GMT
 EXPOSE 2368
-# Thu, 18 Feb 2021 02:05:02 GMT
+# Tue, 23 Feb 2021 00:32:28 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -6753,26 +6647,26 @@ CMD ["node" "current/index.js"]
 		Last Modified: Sat, 13 Feb 2021 02:26:55 GMT  
 		Size: 7.4 MB (7438587 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8723e7016a74ae500ee3c0a0818ffcfa1605ab6a7a3f2d2cc0d4babc960fe52a`  
-		Last Modified: Thu, 18 Feb 2021 02:12:18 GMT  
-		Size: 70.7 MB (70740554 bytes)  
+	-	`sha256:4f65f7b3017084f5d10ca062986e3bc143d92ce91bd35002e1bddedc62d21c1b`  
+		Last Modified: Tue, 23 Feb 2021 00:39:48 GMT  
+		Size: 71.4 MB (71366520 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7084866b72dff1703c8ad2705d9f7202b3a61f19a92d405c32f9f0bf4bac8ea6`  
-		Last Modified: Thu, 18 Feb 2021 02:11:39 GMT  
+	-	`sha256:be3f49c82a9374c00beddfdfed00684c74529feceb4c0c848ff6eb505ace7bf0`  
+		Last Modified: Tue, 23 Feb 2021 00:39:09 GMT  
 		Size: 546.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ghost:latest` - linux; arm64 variant v8
 
 ```console
-$ docker pull ghost@sha256:7fe0986023503e260f023a21153fc473fd7426f8ffb02a6f303bb55a62368587
+$ docker pull ghost@sha256:b47c23cf01f8258adfe94d8133f4d6137003f67a10231d245619c532037b2fd3
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **115.6 MB (115581299 bytes)**  
+-	Total Size: **116.2 MB (116206494 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:25f92ca23a060bacee7e0f40f100008b1e75a1e2d5f72cd335fe5e9fab7aec88`
+-	Image ID: `sha256:1a50b82aa7d237926f301210f262bce239bad237f52905947b762dd367e2e2d8`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -6811,21 +6705,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Sat, 13 Feb 2021 02:30:34 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Thu, 18 Feb 2021 02:26:28 GMT
-ENV GHOST_VERSION=3.41.6
-# Thu, 18 Feb 2021 02:33:58 GMT
+# Mon, 22 Feb 2021 23:39:47 GMT
+ENV GHOST_VERSION=3.41.7
+# Mon, 22 Feb 2021 23:46:47 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		gosu node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	gosu node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	gosu node ghost config paths.contentPath "$GHOST_CONTENT"; 		gosu node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! gosu node yarn add "sqlite3@$sqlite3Version" --force; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends g++ gcc libc-dev libvips-dev make python3; 		rm -rf /var/lib/apt/lists/*; 				npm_config_python='python3' gosu node yarn add "sqlite3@$sqlite3Version" --force --build-from-source; 				apt-mark showmanual | xargs apt-mark auto > /dev/null; 		[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 		apt-get purge -y --auto-remove; 	fi; 		gosu node yarn cache clean; 	gosu node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Thu, 18 Feb 2021 02:34:09 GMT
+# Mon, 22 Feb 2021 23:46:52 GMT
 WORKDIR /var/lib/ghost
-# Thu, 18 Feb 2021 02:34:10 GMT
+# Mon, 22 Feb 2021 23:46:53 GMT
 VOLUME [/var/lib/ghost/content]
-# Thu, 18 Feb 2021 02:34:11 GMT
+# Mon, 22 Feb 2021 23:46:54 GMT
 COPY file:303989b132b5193e832753e2c7236a4050fdc0fe60a54dc1f0c4a44422a2d1ca in /usr/local/bin 
-# Thu, 18 Feb 2021 02:34:17 GMT
+# Mon, 22 Feb 2021 23:46:55 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 18 Feb 2021 02:34:18 GMT
+# Mon, 22 Feb 2021 23:46:56 GMT
 EXPOSE 2368
-# Thu, 18 Feb 2021 02:34:19 GMT
+# Mon, 22 Feb 2021 23:46:57 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -6858,13 +6752,13 @@ CMD ["node" "current/index.js"]
 		Last Modified: Sat, 13 Feb 2021 02:53:31 GMT  
 		Size: 7.4 MB (7438560 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:731debf179c91ddc68c0634e8dd40f4ee0dcf3f10858fb2b1b4f99f389e17803`  
-		Last Modified: Thu, 18 Feb 2021 02:41:37 GMT  
-		Size: 54.1 MB (54070163 bytes)  
+	-	`sha256:164d5cc380ec2462d03dd4fa71b64d81c6c3da5fc8a91e2df19b4364d1e244a4`  
+		Last Modified: Mon, 22 Feb 2021 23:53:54 GMT  
+		Size: 54.7 MB (54695357 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f3d270d927c7813e7c540c8d00227a196118cef3d25a6a5a5dc287f39bc3aff4`  
-		Last Modified: Thu, 18 Feb 2021 02:41:09 GMT  
-		Size: 545.0 B  
+	-	`sha256:ccc5e02a1b8546658e8eca5fc3585e5f2221aa508a23dfe18437921301c34138`  
+		Last Modified: Mon, 22 Feb 2021 23:53:34 GMT  
+		Size: 546.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ghost:latest` - linux; ppc64le
@@ -6975,14 +6869,14 @@ CMD ["node" "current/index.js"]
 ### `ghost:latest` - linux; s390x
 
 ```console
-$ docker pull ghost@sha256:fc7919dedf44164dbfc50b772e79f5b2d94d2d79d3e1b235504e6b8235532ba4
+$ docker pull ghost@sha256:c7b300415985e97e3c49c1feaf3bcdd5ba1e4120158510ae83d3d75e6d221c78
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **115.6 MB (115601567 bytes)**  
+-	Total Size: **116.2 MB (116228826 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4550e6711f25a5e8896142a2984fb2ccd1527846e2c07c6194c98a4fc3543835`
+-	Image ID: `sha256:3d8afe6638d706ace19ed90fdc6a8e82fed848092a4144dd5e97cd08af32067f`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -7021,21 +6915,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Sat, 13 Feb 2021 03:25:34 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Thu, 18 Feb 2021 02:23:41 GMT
-ENV GHOST_VERSION=3.41.6
-# Thu, 18 Feb 2021 02:26:36 GMT
+# Mon, 22 Feb 2021 23:54:34 GMT
+ENV GHOST_VERSION=3.41.7
+# Tue, 23 Feb 2021 00:02:49 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		gosu node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	gosu node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	gosu node ghost config paths.contentPath "$GHOST_CONTENT"; 		gosu node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! gosu node yarn add "sqlite3@$sqlite3Version" --force; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends g++ gcc libc-dev libvips-dev make python3; 		rm -rf /var/lib/apt/lists/*; 				npm_config_python='python3' gosu node yarn add "sqlite3@$sqlite3Version" --force --build-from-source; 				apt-mark showmanual | xargs apt-mark auto > /dev/null; 		[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 		apt-get purge -y --auto-remove; 	fi; 		gosu node yarn cache clean; 	gosu node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Thu, 18 Feb 2021 02:26:44 GMT
+# Tue, 23 Feb 2021 00:03:13 GMT
 WORKDIR /var/lib/ghost
-# Thu, 18 Feb 2021 02:26:44 GMT
+# Tue, 23 Feb 2021 00:03:13 GMT
 VOLUME [/var/lib/ghost/content]
-# Thu, 18 Feb 2021 02:26:44 GMT
+# Tue, 23 Feb 2021 00:03:14 GMT
 COPY file:303989b132b5193e832753e2c7236a4050fdc0fe60a54dc1f0c4a44422a2d1ca in /usr/local/bin 
-# Thu, 18 Feb 2021 02:26:44 GMT
+# Tue, 23 Feb 2021 00:03:14 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 18 Feb 2021 02:26:45 GMT
+# Tue, 23 Feb 2021 00:03:15 GMT
 EXPOSE 2368
-# Thu, 18 Feb 2021 02:26:45 GMT
+# Tue, 23 Feb 2021 00:03:16 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -7068,11 +6962,11 @@ CMD ["node" "current/index.js"]
 		Last Modified: Sat, 13 Feb 2021 03:35:30 GMT  
 		Size: 7.4 MB (7438611 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:365915fef8c404d62997f4f8851049587a7f30082fc3ca2a7c025e0329adc22b`  
-		Last Modified: Thu, 18 Feb 2021 02:27:25 GMT  
-		Size: 54.1 MB (54054443 bytes)  
+	-	`sha256:b9e1c67a9c0235fb2757f3c5f01f7713ae28963992f473fe0d80b823fb438aff`  
+		Last Modified: Tue, 23 Feb 2021 00:04:00 GMT  
+		Size: 54.7 MB (54681703 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:31cc60a5ea63704f57eb030778c53032e089f8b108838d3a585ae46f599608ab`  
-		Last Modified: Thu, 18 Feb 2021 02:27:14 GMT  
-		Size: 545.0 B  
+	-	`sha256:5d7819acd69f969d75d02d79ebdb5fa2112fd3b6e04107dc75bdc93b8c0d7627`  
+		Last Modified: Tue, 23 Feb 2021 00:03:48 GMT  
+		Size: 544.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
