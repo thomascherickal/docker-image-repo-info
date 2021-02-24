@@ -1,7 +1,7 @@
 ## `clojure:latest`
 
 ```console
-$ docker pull clojure@sha256:97c23e4d8a139f2dc8c70f4371dc13b7a1df377b805d0fe03d47b09e8d0dd60d
+$ docker pull clojure@sha256:7d8262a930a669388c56dd107db1d568a6357fc61f578d3a4433c27fec5db307
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,14 +12,14 @@ $ docker pull clojure@sha256:97c23e4d8a139f2dc8c70f4371dc13b7a1df377b805d0fe03d4
 ### `clojure:latest` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:ff8869d2695da7cfeeda0dcb07228076f45ba5bb9cc1a17d60f393962c7ece77
+$ docker pull clojure@sha256:4977d0204cfce4c8e4d91ebf88ec680015c21f2918eb10396305c1396dae2b23
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **351.1 MB (351103346 bytes)**  
+-	Total Size: **347.0 MB (346990198 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1f828276bd93e82e10fad25fd8b51a42b8f947ce92a058791964020dc7c0043a`
+-	Image ID: `sha256:9c1a6659794e7a16ce941c09f624eac94016a5fc5937b87578c877287c81c4ce`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -69,15 +69,15 @@ RUN apt-get update && apt-get install -y gnupg wget && rm -rf /var/lib/apt/lists
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/:/usr/local/bin/
 # Wed, 10 Feb 2021 06:14:20 GMT
 ENV LEIN_ROOT=1
-# Wed, 10 Feb 2021 06:14:24 GMT
-RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Mon, 22 Feb 2021 22:19:52 GMT
-ENV CLOJURE_VERSION=1.10.2.790
-# Mon, 22 Feb 2021 22:19:53 GMT
+# Wed, 24 Feb 2021 18:21:48 GMT
+RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.2"]])' > project.clj   && lein deps && rm project.clj
+# Wed, 24 Feb 2021 18:21:48 GMT
+ENV CLOJURE_VERSION=1.10.2.796
+# Wed, 24 Feb 2021 18:21:48 GMT
 WORKDIR /tmp
-# Mon, 22 Feb 2021 22:20:15 GMT
-RUN apt-get update && apt-get install -y curl make rlwrap wget && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "53771e15b9d15f9c87b59096d098af93430f80b7fea09602b1733b1cc62fd515 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apt-get purge -y --auto-remove curl wget
-# Mon, 22 Feb 2021 22:20:15 GMT
+# Wed, 24 Feb 2021 18:22:08 GMT
+RUN apt-get update && apt-get install -y curl make rlwrap wget && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "0ea8633c7f53eb76098132d4a4536169395be24bbdc253cff4d10251e2ea6e45 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apt-get purge -y --auto-remove curl wget
+# Wed, 24 Feb 2021 18:22:08 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -110,26 +110,26 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 10 Feb 2021 06:25:57 GMT  
 		Size: 11.8 MB (11794555 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2838d534ec617c8c5a7c0369f2982d892ce5ffa0513e013be37b068b49cbf79c`  
-		Last Modified: Wed, 10 Feb 2021 06:25:55 GMT  
-		Size: 4.2 MB (4168772 bytes)  
+	-	`sha256:4579553e995f4131bc888107a4a76882b5b254a8500968d952b363a49ec5d8e2`  
+		Last Modified: Wed, 24 Feb 2021 18:30:51 GMT  
+		Size: 4.2 MB (4195324 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:04d6ad72a743d3d76e6bc7e6f25083f4b672710226e49f9022e39abaea8480c6`  
-		Last Modified: Mon, 22 Feb 2021 22:29:32 GMT  
-		Size: 42.6 MB (42596491 bytes)  
+	-	`sha256:2e37e2f680d985f058c9b1820c863efeeaf9c9e42465ad1ee71f8e1f27433d2c`  
+		Last Modified: Wed, 24 Feb 2021 18:30:54 GMT  
+		Size: 38.5 MB (38456791 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:latest` - linux; arm64 variant v8
 
 ```console
-$ docker pull clojure@sha256:afd16ec388e7950ade95e6e493cd134eca95547d72ce74e4ae185edaef2d1aca
+$ docker pull clojure@sha256:58c6bbb9b022cc1ffa941082436e37895336631fb85f74b029292c57cf73da8c
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **346.8 MB (346805177 bytes)**  
+-	Total Size: **342.7 MB (342693064 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ee4bc326518259129e228f9787f80a0dd6ecac7284bcb69378c293e13a12dd56`
+-	Image ID: `sha256:3aa432b8d7f9cf6f96b5d036905b0f485fc26670bed13c0e05d8c9f298a2cc22`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -179,15 +179,15 @@ RUN apt-get update && apt-get install -y gnupg wget && rm -rf /var/lib/apt/lists
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/:/usr/local/bin/
 # Wed, 10 Feb 2021 02:53:43 GMT
 ENV LEIN_ROOT=1
-# Wed, 10 Feb 2021 02:53:50 GMT
-RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Mon, 22 Feb 2021 22:39:58 GMT
-ENV CLOJURE_VERSION=1.10.2.790
-# Mon, 22 Feb 2021 22:39:59 GMT
+# Wed, 24 Feb 2021 18:50:37 GMT
+RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.2"]])' > project.clj   && lein deps && rm project.clj
+# Wed, 24 Feb 2021 18:50:37 GMT
+ENV CLOJURE_VERSION=1.10.2.796
+# Wed, 24 Feb 2021 18:50:38 GMT
 WORKDIR /tmp
-# Mon, 22 Feb 2021 22:40:41 GMT
-RUN apt-get update && apt-get install -y curl make rlwrap wget && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "53771e15b9d15f9c87b59096d098af93430f80b7fea09602b1733b1cc62fd515 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apt-get purge -y --auto-remove curl wget
-# Mon, 22 Feb 2021 22:40:43 GMT
+# Wed, 24 Feb 2021 18:51:17 GMT
+RUN apt-get update && apt-get install -y curl make rlwrap wget && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "0ea8633c7f53eb76098132d4a4536169395be24bbdc253cff4d10251e2ea6e45 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apt-get purge -y --auto-remove curl wget
+# Wed, 24 Feb 2021 18:51:19 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -220,11 +220,11 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 10 Feb 2021 03:08:08 GMT  
 		Size: 11.8 MB (11794502 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:531674994e42a4a52f12f8b4b0e85d00aba7cca1bea6e8cc776930dbef7d78cc`  
-		Last Modified: Wed, 10 Feb 2021 03:08:07 GMT  
-		Size: 4.2 MB (4168878 bytes)  
+	-	`sha256:df403af5705953f4a82b178f2cf2e09d6e344ba396b444c3ee2159d17ebc93b2`  
+		Last Modified: Wed, 24 Feb 2021 19:02:42 GMT  
+		Size: 4.2 MB (4195568 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b03a765a014d6bb0f2fdeca309c24bc463ec7ad630a45bf1077d28e3a544c9b1`  
-		Last Modified: Mon, 22 Feb 2021 22:51:57 GMT  
-		Size: 42.1 MB (42102343 bytes)  
+	-	`sha256:f270a635cdc077936303fe553669392467184ea1b818c05e5a9a553aabe73a7e`  
+		Last Modified: Wed, 24 Feb 2021 19:02:50 GMT  
+		Size: 38.0 MB (37963540 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip

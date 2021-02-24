@@ -1,7 +1,7 @@
 ## `clojure:openjdk-15`
 
 ```console
-$ docker pull clojure@sha256:6b4697fc6cd84c26d9e094d203c4da6e9139ed78fe1d179db3cdec922e752986
+$ docker pull clojure@sha256:a2ab714428e6a27a8d17fb9e24e60ca29218df83d8adc0fd9675cb8f21986619
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,14 +12,14 @@ $ docker pull clojure@sha256:6b4697fc6cd84c26d9e094d203c4da6e9139ed78fe1d179db3c
 ### `clojure:openjdk-15` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:9a6a9616e6d28ef646f90806c0572cd38f9e78866dd4077f57b74e465a80f771
+$ docker pull clojure@sha256:7b703b807454f84e23b1b83abca4b3d3333ba455b46cebeaf896af6e73379621
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **242.5 MB (242515679 bytes)**  
+-	Total Size: **242.5 MB (242540400 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b157f86bd23ee1b7d2e49e6303a3a431ea17898d898cf406b2aa45c502496bea`
+-	Image ID: `sha256:e1ac56f1b5cf6aa05781d0279a7af4d832ec6876a3c854d77f5b87d1dc805289`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -55,9 +55,9 @@ RUN apt-get update && apt-get install -y gnupg wget && rm -rf /var/lib/apt/lists
 ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
 # Wed, 10 Feb 2021 06:19:43 GMT
 ENV LEIN_ROOT=1
-# Wed, 10 Feb 2021 06:19:48 GMT
-RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Wed, 10 Feb 2021 06:19:48 GMT
+# Wed, 24 Feb 2021 18:24:50 GMT
+RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.2"]])' > project.clj   && lein deps && rm project.clj
+# Wed, 24 Feb 2021 18:24:50 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -82,22 +82,22 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 10 Feb 2021 06:28:07 GMT  
 		Size: 11.8 MB (11798297 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3438c33bfd84165d34cc10c4f2e501302c5c741d724dee3312ae98ae745f35b5`  
-		Last Modified: Wed, 10 Feb 2021 06:28:06 GMT  
-		Size: 4.2 MB (4180249 bytes)  
+	-	`sha256:ac57818610f37027e282f267115441d720d4fa108ffba467024abe4d9c4238e8`  
+		Last Modified: Wed, 24 Feb 2021 18:32:47 GMT  
+		Size: 4.2 MB (4204970 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:openjdk-15` - linux; arm64 variant v8
 
 ```console
-$ docker pull clojure@sha256:1b55d779c7d7eefff0d2eee284bbdb6037e8c37380500a1881caf019bc73b7d8
+$ docker pull clojure@sha256:42675b807cc1cc8af0c76b18ef3cd27a82080bd0e66249165c6c724a3bb114a4
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **220.2 MB (220216130 bytes)**  
+-	Total Size: **220.2 MB (220240935 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:9e1a67264c782e8ef93ab814dceb25e61207dd5ebe50fc47208f34f6061ac018`
+-	Image ID: `sha256:456cce5558f9187d978fd7c215069341fe3f30068218055018023dad2350228c`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -133,9 +133,9 @@ RUN apt-get update && apt-get install -y gnupg wget && rm -rf /var/lib/apt/lists
 ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
 # Wed, 10 Feb 2021 02:58:44 GMT
 ENV LEIN_ROOT=1
-# Wed, 10 Feb 2021 02:58:56 GMT
-RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.1"]])' > project.clj   && lein deps && rm project.clj
-# Wed, 10 Feb 2021 02:58:57 GMT
+# Wed, 24 Feb 2021 18:54:22 GMT
+RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.2"]])' > project.clj   && lein deps && rm project.clj
+# Wed, 24 Feb 2021 18:54:22 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -160,7 +160,7 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 10 Feb 2021 03:10:07 GMT  
 		Size: 11.8 MB (11798388 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ea9b62047619e0a8d97a01526c16a134c1a16fd619957926ffef19d23e3da3bc`  
-		Last Modified: Wed, 10 Feb 2021 03:10:07 GMT  
-		Size: 4.2 MB (4180332 bytes)  
+	-	`sha256:4960a5b1e97f219a972350f69db721af84ea49357668e18f6fa6d819fceface9`  
+		Last Modified: Wed, 24 Feb 2021 19:04:28 GMT  
+		Size: 4.2 MB (4205137 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
