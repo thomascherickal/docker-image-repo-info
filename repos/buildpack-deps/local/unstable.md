@@ -3801,21 +3801,13 @@ Licenses: (parsed from: `/usr/share/doc/libmariadb-dev/copyright`, `/usr/share/d
 - `unlimited-free-doc`
 - `zlib/libpng`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mariadb-10.5=1:10.5.8-3
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.5/mariadb-10.5_10.5.8-3.dsc' mariadb-10.5_10.5.8-3.dsc 4829 SHA256:13c67261c9ad6be811b070c44637df0cc1f3dfa8d9502b27145d420c36aeae8d
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.5/mariadb-10.5_10.5.8.orig.tar.gz' mariadb-10.5_10.5.8.orig.tar.gz 88206163 SHA256:eb4824f6f2c532cd3fc6a6bce7bf78ea7c6b949f8bdd07656b2c84344e757be8
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.5/mariadb-10.5_10.5.8.orig.tar.gz.asc' mariadb-10.5_10.5.8.orig.tar.gz.asc 195 SHA256:7368d5430ae0ac8d7e821e7b75cdadfc13e9b605283a8e6fa181b1557f452afa
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.5/mariadb-10.5_10.5.8-3.debian.tar.xz' mariadb-10.5_10.5.8-3.debian.tar.xz 230424 SHA256:c2a3a4fe7dfc906f7d15de4352c1c0616bfda70a241acf6329d28e3b7b4062d4
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mariadb-10.5/1:10.5.8-3/
 
-- https://sources.debian.net/src/mariadb-10.5/1:10.5.8-3/ (for browsing the source)
-- https://sources.debian.net/src/mariadb-10.5/1:10.5.8-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mariadb-10.5/1:10.5.8-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mawk=1.3.4.20200120-2`
 
@@ -4081,21 +4073,13 @@ Licenses: (parsed from: `/usr/share/doc/libhogweed6/copyright`, `/usr/share/doc/
 - `LGPL-3+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris nettle=3.7-2
-'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.7-2.dsc' nettle_3.7-2.dsc 2254 SHA256:fddd19823872c631d311a09931cd7c929425a6d1f5a9e72d4411276b0c27b015
-'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.7.orig.tar.gz' nettle_3.7.orig.tar.gz 2375067 SHA256:f001f64eb444bf13dd91bceccbc20acbc60c4311d6e2b20878452eb9a9cec75a
-'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.7.orig.tar.gz.asc' nettle_3.7.orig.tar.gz.asc 573 SHA256:1f5ed81582441eb4d953ef8666521ebc349f41f7dde5e11cb0845a2c049941b1
-'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.7-2.debian.tar.xz' nettle_3.7-2.debian.tar.xz 21488 SHA256:2c9c92affa350a61ff9e3b903528d43d9efd7c1534a0ff558dcab905e81d8ccd
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/nettle/3.7-2/
 
-- https://sources.debian.net/src/nettle/3.7-2/ (for browsing the source)
-- https://sources.debian.net/src/nettle/3.7-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/nettle/3.7-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `nghttp2=1.42.0-1`
 
@@ -4334,20 +4318,13 @@ Licenses: (parsed from: `/usr/share/doc/libpam-modules/copyright`, `/usr/share/d
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pam=1.4.0-4
-'http://deb.debian.org/debian/pool/main/p/pam/pam_1.4.0-4.dsc' pam_1.4.0-4.dsc 2169 SHA256:405af22331c36ebab9c78e3291bd7cc41d2ad54256336e5ec42584da011a7f6d
-'http://deb.debian.org/debian/pool/main/p/pam/pam_1.4.0.orig.tar.xz' pam_1.4.0.orig.tar.xz 988908 SHA256:cd6d928c51e64139be3bdb38692c68183a509b83d4f2c221024ccd4bcddfd034
-'http://deb.debian.org/debian/pool/main/p/pam/pam_1.4.0-4.debian.tar.xz' pam_1.4.0-4.debian.tar.xz 113772 SHA256:a5ece7c3183e3d3d90326cb6a570dba5fc5272db35ccf1246d2d31caa7f6c920
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/pam/1.4.0-4/
 
-- https://sources.debian.net/src/pam/1.4.0-4/ (for browsing the source)
-- https://sources.debian.net/src/pam/1.4.0-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/pam/1.4.0-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pango1.0=1.46.2-3`
 
@@ -4504,21 +4481,13 @@ Licenses: (parsed from: `/usr/share/doc/libperl5.32/copyright`, `/usr/share/doc/
 - `Unicode`
 - `ZLIB`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris perl=5.32.1-2
-'http://deb.debian.org/debian/pool/main/p/perl/perl_5.32.1-2.dsc' perl_5.32.1-2.dsc 2882 SHA256:22b10cd2980a4b1008402d11a7aa992f2f33cae2748143bd75428cf9e0f77d1b
-'http://deb.debian.org/debian/pool/main/p/perl/perl_5.32.1.orig-regen-configure.tar.gz' perl_5.32.1.orig-regen-configure.tar.gz 871331 SHA256:1d179b41283f12ad83f9758430f6ddc49bdf20db5c396aeae7e51ebb4e4afd29
-'http://deb.debian.org/debian/pool/main/p/perl/perl_5.32.1.orig.tar.xz' perl_5.32.1.orig.tar.xz 12610988 SHA256:57cc47c735c8300a8ce2fa0643507b44c4ae59012bfdad0121313db639e02309
-'http://deb.debian.org/debian/pool/main/p/perl/perl_5.32.1-2.debian.tar.xz' perl_5.32.1-2.debian.tar.xz 164308 SHA256:a113ab976545fd3ea67d3ca55aea14ae8b8904e00e046aa150099bf368c1141d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/perl/5.32.1-2/
 
-- https://sources.debian.net/src/perl/5.32.1-2/ (for browsing the source)
-- https://sources.debian.net/src/perl/5.32.1-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/perl/5.32.1-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pinentry=1.1.0-4`
 

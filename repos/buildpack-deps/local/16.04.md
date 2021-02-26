@@ -2922,14 +2922,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 - `GPL-2`
 - `redpine-signals`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=4.4.0-201.233
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0-201.233.dsc' linux_4.4.0-201.233.dsc 11941 SHA512:6e2390d07e23903c6e2f34f21831f68923fca2f6175b257183890d329816efaebf360b63be18be59e48080cf885a6df89cdeb9af6086687bab3fda469110fd48
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0.orig.tar.gz' linux_4.4.0.orig.tar.gz 132860730 SHA512:28ef89b62f663f2d90b58274799b7ebeff04699f08d0b83f650b0de179d4ef354450c81ecda07522b493c43d5eb2d530fa0f552a2794d48f84878e05efa39cc3
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0-201.233.diff.gz' linux_4.4.0-201.233.diff.gz 16923157 SHA512:2aedc1d5cb9eef53a44e8b2b1240001eace2b98940068f8387553a01974b453b9cd32d4741727116d5d87b9be89a3c93adc1ee5e9120a8a7a11bb6d1c2cd85e9
-```
 
 ### `dpkg` source package: `lsb=9.20160110ubuntu0.2`
 
@@ -3636,14 +3631,9 @@ Licenses: (parsed from: `/usr/share/doc/libpython2.7-minimal/copyright`, `/usr/s
 - `implied`
 - `see above, some license as Python`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python2.7=2.7.12-1ubuntu0~16.04.13
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.12-1ubuntu0~16.04.13.dsc' python2.7_2.7.12-1ubuntu0~16.04.13.dsc 3391 SHA512:1e81dceda74f2b7f19b73df055761c85e5d07d35895ffe76fb63834d9b14cafdc9857027f640d4fb54bbe67e20adac3ec8edc2307f9bf1d5ae24732066f7d538
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.12.orig.tar.gz' python2.7_2.7.12.orig.tar.gz 16935960 SHA512:e3c04b1c66ff659c08e09a5adc34fd856ca0c786e5820c05471747416fef38555f1711978ac5e81ff4fdf7c16311796212f638e5e2d43e2404b2a42fc139edb0
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.12-1ubuntu0~16.04.13.diff.gz' python2.7_2.7.12-1ubuntu0~16.04.13.diff.gz 310476 SHA512:f5eb6d6759fdaacf395b4418f8fb539db80017b35bbceed97c90d30f7a3585d2bab16ea03d0073d95dec79a7042e0123067640feaa8004f6d0740999f2b3fb30
-```
 
 ### `dpkg` source package: `readline6=6.3-8ubuntu2`
 
@@ -3926,14 +3916,9 @@ Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`, `/usr/share/doc/lib
 
 - `Hylafax`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tiff=4.0.6-1ubuntu0.7
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.0.6-1ubuntu0.7.dsc' tiff_4.0.6-1ubuntu0.7.dsc 2399 SHA512:4e81b6c50f1e84e1a58e034c92f2acaacdb916ac169987c190725b0774b47757bc490b2dd810cf2b479ca882662ee6dee2c9f679c06606310934eb79b0c26e4b
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.0.6.orig.tar.gz' tiff_4.0.6.orig.tar.gz 2192991 SHA512:2c8dbaaaab9f82a7722bfe8cb6fcfcf67472beb692f1b7dafaf322759e7016dad1bc58457c0f03db50aa5bd088fef2b37358fcbc1524e20e9e14a9620373fdf8
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.0.6-1ubuntu0.7.debian.tar.xz' tiff_4.0.6-1ubuntu0.7.debian.tar.xz 63940 SHA512:ca2b3fc10697d4254854308d084c1a90d39a2fed4784457189edde377abc98f2fca001d73d25a38963153ff95e96403135bb6c4e3ff1facb7c142d00b17cde05
-```
 
 ### `dpkg` source package: `tzdata=2021a-0ubuntu0.16.04`
 
