@@ -443,10 +443,16 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris cluster=2.1.1-1
-'http://http.debian.net/debian/pool/main/c/cluster/cluster_2.1.1-1.dsc' cluster_2.1.1-1.dsc 1831 SHA256:7170cfee7df016f2c14601f298a747b0ff4db3408085d18aec70b3d2aee6cfff
-'http://http.debian.net/debian/pool/main/c/cluster/cluster_2.1.1.orig.tar.gz' cluster_2.1.1.orig.tar.gz 397306 SHA256:bdb8c709ec9b84922e185f68e1e817a83dfb130b2ef8c4beaee19ce382358063
-'http://http.debian.net/debian/pool/main/c/cluster/cluster_2.1.1-1.debian.tar.xz' cluster_2.1.1-1.debian.tar.xz 4224 SHA256:77e91f19a56e5bee486bfc3c27f919b5c41ada177231332c1d43f0d4abe5e2f9
+'http://deb.debian.org/debian/pool/main/c/cluster/cluster_2.1.1-1.dsc' cluster_2.1.1-1.dsc 1831 SHA256:7170cfee7df016f2c14601f298a747b0ff4db3408085d18aec70b3d2aee6cfff
+'http://deb.debian.org/debian/pool/main/c/cluster/cluster_2.1.1.orig.tar.gz' cluster_2.1.1.orig.tar.gz 397306 SHA256:bdb8c709ec9b84922e185f68e1e817a83dfb130b2ef8c4beaee19ce382358063
+'http://deb.debian.org/debian/pool/main/c/cluster/cluster_2.1.1-1.debian.tar.xz' cluster_2.1.1-1.debian.tar.xz 4224 SHA256:77e91f19a56e5bee486bfc3c27f919b5c41ada177231332c1d43f0d4abe5e2f9
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/cluster/2.1.1-1/ (for browsing the source)
+- https://sources.debian.net/src/cluster/2.1.1-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/cluster/2.1.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `codetools=0.2-18-1`
 
@@ -2874,10 +2880,16 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris mgcv=1.8-34-1
-'http://http.debian.net/debian/pool/main/m/mgcv/mgcv_1.8-34-1.dsc' mgcv_1.8-34-1.dsc 1833 SHA256:582792a38891f3f38b3585dbf2cf9b3b3dbacbfc5ceda4a5a15a927e58bd5fbb
-'http://http.debian.net/debian/pool/main/m/mgcv/mgcv_1.8-34.orig.tar.gz' mgcv_1.8-34.orig.tar.gz 1149538 SHA256:15b13af3b7d226d9835ba64551e0477d8323f85b6ebe721ab651f3b17af273de
-'http://http.debian.net/debian/pool/main/m/mgcv/mgcv_1.8-34-1.debian.tar.xz' mgcv_1.8-34-1.debian.tar.xz 5304 SHA256:51f95305d46fced8cba796862b81368cddce79f403e85e00f1ce918bd179fdd2
+'http://deb.debian.org/debian/pool/main/m/mgcv/mgcv_1.8-34-1.dsc' mgcv_1.8-34-1.dsc 1833 SHA256:582792a38891f3f38b3585dbf2cf9b3b3dbacbfc5ceda4a5a15a927e58bd5fbb
+'http://deb.debian.org/debian/pool/main/m/mgcv/mgcv_1.8-34.orig.tar.gz' mgcv_1.8-34.orig.tar.gz 1149538 SHA256:15b13af3b7d226d9835ba64551e0477d8323f85b6ebe721ab651f3b17af273de
+'http://deb.debian.org/debian/pool/main/m/mgcv/mgcv_1.8-34-1.debian.tar.xz' mgcv_1.8-34-1.debian.tar.xz 5304 SHA256:51f95305d46fced8cba796862b81368cddce79f403e85e00f1ce918bd179fdd2
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/mgcv/1.8-34-1/ (for browsing the source)
+- https://sources.debian.net/src/mgcv/1.8-34-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/mgcv/1.8-34-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mpclib3=1.2.0-1`
 
@@ -3426,10 +3438,16 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris r-base=4.0.4-1
-'http://http.debian.net/debian/pool/main/r/r-base/r-base_4.0.4-1.dsc' r-base_4.0.4-1.dsc 3019 SHA256:28d1a991b23cd94a10335c8245a21ffc1a82617c7ecbd9e17bc4ffeb54c9fe71
-'http://http.debian.net/debian/pool/main/r/r-base/r-base_4.0.4.orig.tar.gz' r-base_4.0.4.orig.tar.gz 33687611 SHA256:523f27d69744a08c8f0bd5e1e6c3d89a4db29ed983388ba70963a3cd3a4a802e
-'http://http.debian.net/debian/pool/main/r/r-base/r-base_4.0.4-1.debian.tar.xz' r-base_4.0.4-1.debian.tar.xz 97360 SHA256:de97e6ecc4c7141719918fe23425ee52862739a5997d94d5fe93280070412678
+'http://deb.debian.org/debian/pool/main/r/r-base/r-base_4.0.4-1.dsc' r-base_4.0.4-1.dsc 3019 SHA256:28d1a991b23cd94a10335c8245a21ffc1a82617c7ecbd9e17bc4ffeb54c9fe71
+'http://deb.debian.org/debian/pool/main/r/r-base/r-base_4.0.4.orig.tar.gz' r-base_4.0.4.orig.tar.gz 33687611 SHA256:523f27d69744a08c8f0bd5e1e6c3d89a4db29ed983388ba70963a3cd3a4a802e
+'http://deb.debian.org/debian/pool/main/r/r-base/r-base_4.0.4-1.debian.tar.xz' r-base_4.0.4-1.debian.tar.xz 97360 SHA256:de97e6ecc4c7141719918fe23425ee52862739a5997d94d5fe93280070412678
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/r-base/4.0.4-1/ (for browsing the source)
+- https://sources.debian.net/src/r-base/4.0.4-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/r-base/4.0.4-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `r-cran-class=7.3-18-1`
 
@@ -3817,20 +3835,13 @@ Licenses: (parsed from: `/usr/share/doc/tar/copyright`)
 - `GPL-2`
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tar=1.32+dfsg-1
-'http://deb.debian.org/debian/pool/main/t/tar/tar_1.32+dfsg-1.dsc' tar_1.32+dfsg-1.dsc 2015 SHA256:8154c63983aadb982496a047384688c223bb8ffe50146dd05d4138c66dec75cd
-'http://deb.debian.org/debian/pool/main/t/tar/tar_1.32+dfsg.orig.tar.xz' tar_1.32+dfsg.orig.tar.xz 1910772 SHA256:9cb89ab8997d5469b24c7a676f0f0ae5b84d730c3d44d9afeabad63431ec8d27
-'http://deb.debian.org/debian/pool/main/t/tar/tar_1.32+dfsg-1.debian.tar.xz' tar_1.32+dfsg-1.debian.tar.xz 19460 SHA256:2d4bfe8c6121762fb99d440ad6ab98ad761e02d933d53bdaa5d932661473868c
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tar/1.32+dfsg-1/
 
-- https://sources.debian.net/src/tar/1.32+dfsg-1/ (for browsing the source)
-- https://sources.debian.net/src/tar/1.32+dfsg-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tar/1.32+dfsg-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tcl8.6=8.6.11+dfsg-1`
 
@@ -4212,9 +4223,15 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris xorg=1:7.7+22
-'http://http.debian.net/debian/pool/main/x/xorg/xorg_7.7+22.dsc' xorg_7.7+22.dsc 1975 SHA256:5b273e9b4ece8f4525e73721cc1f14ea0772007035c24b5e35269bcdca45b69a
-'http://http.debian.net/debian/pool/main/x/xorg/xorg_7.7+22.tar.gz' xorg_7.7+22.tar.gz 287402 SHA256:4e39d07914480826f02f8ba293dc07e5595a2789c53ee47d92cc5ee992ef2ed5
+'http://deb.debian.org/debian/pool/main/x/xorg/xorg_7.7+22.dsc' xorg_7.7+22.dsc 1975 SHA256:5b273e9b4ece8f4525e73721cc1f14ea0772007035c24b5e35269bcdca45b69a
+'http://deb.debian.org/debian/pool/main/x/xorg/xorg_7.7+22.tar.gz' xorg_7.7+22.tar.gz 287402 SHA256:4e39d07914480826f02f8ba293dc07e5595a2789c53ee47d92cc5ee992ef2ed5
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/xorg/1:7.7+22/ (for browsing the source)
+- https://sources.debian.net/src/xorg/1:7.7+22/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/xorg/1:7.7+22/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `xxhash=0.8.0-2`
 
