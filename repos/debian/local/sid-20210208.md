@@ -360,19 +360,13 @@ Licenses: (parsed from: `/usr/share/doc/debconf/copyright`)
 
 - `BSD-2-clause`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris debconf=1.5.74
-'http://deb.debian.org/debian/pool/main/d/debconf/debconf_1.5.74.dsc' debconf_1.5.74.dsc 2082 SHA256:7576b8798165e30aaea23bad812eec729dd091a1ca59063328e7f68223b79af1
-'http://deb.debian.org/debian/pool/main/d/debconf/debconf_1.5.74.tar.xz' debconf_1.5.74.tar.xz 571108 SHA256:11b3fa02ddafe813c301aa150fef4d510d77afa64cbfe09c7e614995147c48e0
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/debconf/1.5.74/
 
-- https://sources.debian.net/src/debconf/1.5.74/ (for browsing the source)
-- https://sources.debian.net/src/debconf/1.5.74/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/debconf/1.5.74/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `debian-archive-keyring=2019.1`
 
