@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:d6d4bee71a07f413f6cdbc32419a28096872505f7f21c6e766e1dedae5078080`
-- Created: `2021-01-21T03:38:46.812507264Z`
+- Image ID: `sha256:bbd39996e8ff6b7585d7bf15f1bf54826a3a615521c5f2ad814eb03182dc532c`
+- Created: `2021-03-04T02:24:57.603616158Z`
 - Virtual Size: ~ 79.49 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -54,12 +54,12 @@ $ apt-get source -qq --print-uris adduser=3.118ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/a/adduser/adduser_3.118ubuntu2.tar.xz' adduser_3.118ubuntu2.tar.xz 222364 SHA512:6236481388a235723c74575cb987a403ee62536f10dd02262c4cf168174269d7c83a2e444ca2efb33ccf0bf430c1773189364609f295de3e8708f9a7c9d378fa
 ```
 
-### `dpkg` source package: `apt=2.1.10ubuntu0.1`
+### `dpkg` source package: `apt=2.1.10ubuntu0.2`
 
 Binary Packages:
 
-- `apt=2.1.10ubuntu0.1`
-- `libapt-pkg6.0:amd64=2.1.10ubuntu0.1`
+- `apt=2.1.10ubuntu0.2`
+- `libapt-pkg6.0:amd64=2.1.10ubuntu0.2`
 
 Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-pkg6.0/copyright`)
 
@@ -69,9 +69,9 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 Source:
 
 ```console
-$ apt-get source -qq --print-uris apt=2.1.10ubuntu0.1
-'http://security.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.1.10ubuntu0.1.dsc' apt_2.1.10ubuntu0.1.dsc 2854 SHA512:59352b2452c90c3cadcba6ec3f953f80cf0d2a0d30babce747f1907477d1bbcf3eca6378b851134ccc6603f5382a278477138e43e187d3249700bbd793d94ca7
-'http://security.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.1.10ubuntu0.1.tar.xz' apt_2.1.10ubuntu0.1.tar.xz 2182444 SHA512:9dfb8e52cb46e35cf75001d6ebc991c1a0e4fbef6d9913195733b5a2668f477a6a877042bed77ff8eb3c297f814d48dcc915613f261abe65c28e542ff79e95fc
+$ apt-get source -qq --print-uris apt=2.1.10ubuntu0.2
+'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.1.10ubuntu0.2.dsc' apt_2.1.10ubuntu0.2.dsc 2883 SHA512:33ac8540ba8df9c0e075afd22a89494d8765808283c22d41aa5970536125d9659f411ec2a5c5019af0a11f7713ccc4f5b43f9099329597cdc829b7a3e12ed6e0
+'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.1.10ubuntu0.2.tar.xz' apt_2.1.10ubuntu0.2.tar.xz 2185240 SHA512:0a5032a33901877c0221aa13d87e55593665ea23d98b6fcb05244c758fd6d02dc0cf6fbdba2d63338708bcaf023b7968878023481944e403608d78622e85e448
 ```
 
 ### `dpkg` source package: `attr=1:2.4.48-5`
@@ -470,11 +470,11 @@ $ apt-get source -qq --print-uris gmp=2:6.2.0+dfsg-6ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.2.0+dfsg-6ubuntu1.debian.tar.xz' gmp_6.2.0+dfsg-6ubuntu1.debian.tar.xz 54484 SHA512:0c1e932f495d69f886d4b2118ee4eb10587a0164a36c0c0f4c5302ec3aa9960ad9c1a68afab6ef220c2a4bfaa1dea7522410a224b69c253ce497ac6d6198475a
 ```
 
-### `dpkg` source package: `gnupg2=2.2.20-1ubuntu1`
+### `dpkg` source package: `gnupg2=2.2.20-1ubuntu1.1`
 
 Binary Packages:
 
-- `gpgv=2.2.20-1ubuntu1`
+- `gpgv=2.2.20-1ubuntu1.1`
 
 Licenses: (parsed from: `/usr/share/doc/gpgv/copyright`)
 
@@ -494,11 +494,11 @@ Licenses: (parsed from: `/usr/share/doc/gpgv/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris gnupg2=2.2.20-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.20-1ubuntu1.dsc' gnupg2_2.2.20-1ubuntu1.dsc 3971 SHA512:dae355ed676febcae7d2db47e4ae41e635a78cbe3977ea8a98ce79f38664d20677027b86049b005fc1718d1f67a93470ab1a68997ef84d6bb7cdd477702db731
+$ apt-get source -qq --print-uris gnupg2=2.2.20-1ubuntu1.1
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.20-1ubuntu1.1.dsc' gnupg2_2.2.20-1ubuntu1.1.dsc 3942 SHA512:b33311888fc6af53d7c0148a50bd8d6f29a2537defca8c9c8c82e5219389868a95c18ef5e7689026afb084d10f5ff40e132e03f5c3559f824ed5b3f17ee03f69
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.20.orig.tar.bz2' gnupg2_2.2.20.orig.tar.bz2 6786913 SHA512:3e69f102366ec3415f439ab81aae2458182fa1a18dfb86565b1d9dc638f3fc4c179a5947f0042b7c5a813345676285a662793664a1803ea9ad8328f0548e0edc
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.20.orig.tar.bz2.asc' gnupg2_2.2.20.orig.tar.bz2.asc 1357 SHA512:0972788af253f84959ab3142e3d4bf025b7e7077377574e69851ae3d37cbf296211fdf50cd77fe47f844bc3383489ff88cf35186d2f72cb0adc84cdfe77bfd26
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.20-1ubuntu1.debian.tar.xz' gnupg2_2.2.20-1ubuntu1.debian.tar.xz 64332 SHA512:a4d158b8f7399c31473990cc147698bbd4513de459315b26e6df66e45e9d9291c5ce46322c006a698b90be2ce789b08b3ea03a19ec89266a721118e6819941b9
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.20-1ubuntu1.1.debian.tar.xz' gnupg2_2.2.20-1ubuntu1.1.debian.tar.xz 64832 SHA512:fd6806376f2438dc906e286047350123eb5be546f95e90dbad159aa9802c92ecee9dc9ab5b104f625a6d525f6c51b1cb88f730bcaa464d14c3d2f35558c0fa0e
 ```
 
 ### `dpkg` source package: `gnutls28=3.6.15-4ubuntu2`
@@ -554,11 +554,11 @@ $ apt-get source -qq --print-uris grep=3.4-1
 'http://archive.ubuntu.com/ubuntu/pool/main/g/grep/grep_3.4-1.debian.tar.xz' grep_3.4-1.debian.tar.xz 104364 SHA512:4939721cfc9cbec0c6c3fb5cb123da3c2d4040e6fa46e84fe4bc26adbca1bd357f92864ef13c367e90ae6e3875cfe4aee1388fe52e293bd409653350aed4a9a6
 ```
 
-### `dpkg` source package: `gzip=1.10-2ubuntu1`
+### `dpkg` source package: `gzip=1.10-2ubuntu1.1`
 
 Binary Packages:
 
-- `gzip=1.10-2ubuntu1`
+- `gzip=1.10-2ubuntu1.1`
 
 Licenses: (parsed from: `/usr/share/doc/gzip/copyright`)
 
@@ -571,10 +571,10 @@ Licenses: (parsed from: `/usr/share/doc/gzip/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris gzip=1.10-2ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gzip/gzip_1.10-2ubuntu1.dsc' gzip_1.10-2ubuntu1.dsc 2074 SHA512:e116e7438cf5e77837f867ff60f7211703cc02409a12aa2db8d16842ba76f0b75961ede88abb5ab457ed2b7113e8717c104f94c66c059280654a16823c50fa07
+$ apt-get source -qq --print-uris gzip=1.10-2ubuntu1.1
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gzip/gzip_1.10-2ubuntu1.1.dsc' gzip_1.10-2ubuntu1.1.dsc 2082 SHA512:525dc0bcc89818a1f4f89ca66ae0c04f5caee9ee088f0a600daf2c486f0885dffd354ea3ef81bff916b9aa86f4318d996ace34a8f1327bc658e9b20508710d6a
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gzip/gzip_1.10.orig.tar.gz' gzip_1.10.orig.tar.gz 1201421 SHA512:7939043e74554ced0c1c05d354ab4eb36cd6dce89ad79d02ccdc5ed6b7ee390759689b2d47c07227b9b44a62851afe7c76c4cae9f92527d999f3f1b4df1cccff
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gzip/gzip_1.10-2ubuntu1.debian.tar.xz' gzip_1.10-2ubuntu1.debian.tar.xz 33288 SHA512:39d000ae7356a28275b475e08e296b07d9efc589fa7379aaab4e70fc599378ba56e8f492ebb26ba618b7dc09bd8eb56b2babe5c5d826db852fdd5cf496cd318a
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gzip/gzip_1.10-2ubuntu1.1.debian.tar.xz' gzip_1.10-2ubuntu1.1.debian.tar.xz 33900 SHA512:ae11cb8ea0eac3ba42a514234a74e437fab88fec352572d97964299e149520a408fb14ffe4a991f9ee39bf82e09d65f89a39e735242001ba951b74aecc684c80
 ```
 
 ### `dpkg` source package: `hostname=3.23`
@@ -1179,19 +1179,25 @@ $ apt-get source -qq --print-uris nettle=3.6-2
 'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.6-2.debian.tar.xz' nettle_3.6-2.debian.tar.xz 21136 SHA512:00aa9109859953aa0dd25c5f68661174acff20271d7f5f2991edbb2f997acfffc927c772e298486d6f438d4402d8e79c64fef6864ecad3c464600771e34b8436
 ```
 
-### `dpkg` source package: `openssl=1.1.1f-1ubuntu4.1`
+### `dpkg` source package: `openssl=1.1.1f-1ubuntu4.2`
 
 Binary Packages:
 
-- `libssl1.1:amd64=1.1.1f-1ubuntu4.1`
+- `libssl1.1:amd64=1.1.1f-1ubuntu4.2`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris openssl=1.1.1f-1ubuntu4.2
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu4.2.dsc' openssl_1.1.1f-1ubuntu4.2.dsc 2713 SHA512:bd951ed6e01ff7c1bfe1faafab8f3609909426ef970c6d58d28a9ec9aab2488f6c7fe431b44e95815489c477bbe340e4030b5723074de4678ce3a1f89fff6564
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f.orig.tar.gz' openssl_1.1.1f.orig.tar.gz 9792828 SHA512:b00bd9b5ad5298fbceeec6bb19c1ab0c106ca5cfb31178497c58bf7e0e0cf30fcc19c20f84e23af31cc126bf2447d3e4f8461db97bafa7bd78f69561932f000c
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f.orig.tar.gz.asc' openssl_1.1.1f.orig.tar.gz.asc 488 SHA512:63b01ffc23b2fec2cfc147d382b486a136e5610e181be94aa333022803a442ded37e8276fefb62b3176b571b94a1d2243c05b86b52ad7784fe0068d1ad948562
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu4.2.debian.tar.xz' openssl_1.1.1f-1ubuntu4.2.debian.tar.xz 155948 SHA512:bf73a4e745611e7bd9eb82227b0844c3e45b50f1e10826dbd43cd0f14b82be8cb6ce797a204c8f84d76a7e6f5e51a8c5321f51370b13d2cdd7d4081278f1b20c
+```
 
 ### `dpkg` source package: `p11-kit=0.23.21-2ubuntu0.1`
 
@@ -1409,12 +1415,12 @@ $ apt-get source -qq --print-uris shadow=1:4.8.1-1ubuntu6
 'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1-1ubuntu6.debian.tar.xz' shadow_4.8.1-1ubuntu6.debian.tar.xz 85620 SHA512:a2bd0a0845a860dfbb5fceafa3f7a8cb088960271889e0681e0a15c4bd1c12aacf7388507db96a3320e5303c22e120c1f3c00bf3c9e0ebab41b32528b58a2e22
 ```
 
-### `dpkg` source package: `systemd=246.6-1ubuntu1`
+### `dpkg` source package: `systemd=246.6-1ubuntu1.1`
 
 Binary Packages:
 
-- `libsystemd0:amd64=246.6-1ubuntu1`
-- `libudev1:amd64=246.6-1ubuntu1`
+- `libsystemd0:amd64=246.6-1ubuntu1.1`
+- `libudev1:amd64=246.6-1ubuntu1.1`
 
 Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/libudev1/copyright`)
 
@@ -1430,10 +1436,10 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris systemd=246.6-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_246.6-1ubuntu1.dsc' systemd_246.6-1ubuntu1.dsc 5323 SHA512:2c07a956e716479bfb250b8d02c8eed8b9f55c9d9775b72c406854047265e32d450e626e98cf05468f234f8959e4fad28b1f5b5e43c816bf6cf4a494da374d83
+$ apt-get source -qq --print-uris systemd=246.6-1ubuntu1.1
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_246.6-1ubuntu1.1.dsc' systemd_246.6-1ubuntu1.1.dsc 5364 SHA512:b746e0f68950f6f1179889f3bc1913abf61c2781e79f5a01c7774fae798f785c5dadac8ef4a9c2608374d05daf7f526ab0f34eec4bbd5a02b62423f0490074ae
 'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_246.6.orig.tar.gz' systemd_246.6.orig.tar.gz 9545237 SHA512:1936b291d9831cf61f800fe718a4c2c2fe9b2a11fd817fe32bd48da2087a675dfc91013209a3478ea52e8ada593300ed906e248b8081dcf9141bf1cc17483ea9
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_246.6-1ubuntu1.debian.tar.xz' systemd_246.6-1ubuntu1.debian.tar.xz 192992 SHA512:8770157b2c2a327e2a184193e9b97589dcbb6cea24b9ca7542b5442afae0c4c4a89de43ec858f389af1827960628970e42b64dc9ae8937494c4eadbe877751d1
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_246.6-1ubuntu1.1.debian.tar.xz' systemd_246.6-1ubuntu1.1.debian.tar.xz 199572 SHA512:cc1451f475dc904fbebe57512fd9ae6ee17df3cdf1439df18d4cbfee94bcd7da3083a5fb389d6dfbbe6fd4301f2d180c35b7e3ccba2ca7a7dab0fd68f4bdbfd0
 ```
 
 ### `dpkg` source package: `sysvinit=2.96-3ubuntu1`
