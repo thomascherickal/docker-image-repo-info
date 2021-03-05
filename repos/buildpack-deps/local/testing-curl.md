@@ -2141,20 +2141,13 @@ Licenses: (parsed from: `/usr/share/doc/tar/copyright`)
 - `GPL-2`
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tar=1.32+dfsg-1
-'http://deb.debian.org/debian/pool/main/t/tar/tar_1.32+dfsg-1.dsc' tar_1.32+dfsg-1.dsc 2015 SHA256:8154c63983aadb982496a047384688c223bb8ffe50146dd05d4138c66dec75cd
-'http://deb.debian.org/debian/pool/main/t/tar/tar_1.32+dfsg.orig.tar.xz' tar_1.32+dfsg.orig.tar.xz 1910772 SHA256:9cb89ab8997d5469b24c7a676f0f0ae5b84d730c3d44d9afeabad63431ec8d27
-'http://deb.debian.org/debian/pool/main/t/tar/tar_1.32+dfsg-1.debian.tar.xz' tar_1.32+dfsg-1.debian.tar.xz 19460 SHA256:2d4bfe8c6121762fb99d440ad6ab98ad761e02d933d53bdaa5d932661473868c
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tar/1.32+dfsg-1/
 
-- https://sources.debian.net/src/tar/1.32+dfsg-1/ (for browsing the source)
-- https://sources.debian.net/src/tar/1.32+dfsg-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tar/1.32+dfsg-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tzdata=2021a-1`
 

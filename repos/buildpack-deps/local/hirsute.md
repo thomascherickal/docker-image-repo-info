@@ -128,10 +128,10 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris attr=1:2.4.48-6
-'http://archive.ubuntu.com/ubuntu/pool/main/a/attr/attr_2.4.48-6.dsc' attr_2.4.48-6.dsc 2433 SHA512:07c45ec6e1c07aae661a31ff7ef81655a3c5e0080be38ce3a6aea116ecba0c5e0fe5154099b8841d7b4e1c9becb81c2d8465191ab121675c0a93efc88dfbc713
+'http://archive.ubuntu.com/ubuntu/pool/main/a/attr/attr_2.4.48-6build1.dsc' attr_2.4.48-6build1.dsc 2482 SHA512:099ac327a747ddb50fc8ff279ed2215e1bb00fb9b5fdac61e951f33a3a8e515b737e6658f630033c5ed35c013dfebf24b7bb351c49b1d710b9d7a24514df5786
 'http://archive.ubuntu.com/ubuntu/pool/main/a/attr/attr_2.4.48.orig.tar.gz' attr_2.4.48.orig.tar.gz 467840 SHA512:75f870a0e6e19b8975f3fdceee786fbaff3eadaa9ab9af01996ffa8e50fe5b2bba6e4c22c44a6722d11b55feb9e89895d0151d6811c1d2b475ef4ed145f0c923
 'http://archive.ubuntu.com/ubuntu/pool/main/a/attr/attr_2.4.48.orig.tar.gz.asc' attr_2.4.48.orig.tar.gz.asc 833 SHA512:39e5879d4879003ba5e1fcb727f91f7661cede12692ae128110328a6c1c5a1e2f79a1329ee4d065f3cc3e0d3d18423f5b5a5b170b5cb49c6888de90d31dcaf9c
-'http://archive.ubuntu.com/ubuntu/pool/main/a/attr/attr_2.4.48-6.debian.tar.xz' attr_2.4.48-6.debian.tar.xz 27260 SHA512:002bc4594aa1691cddd0efa1a68508bda7a52583aad48b474e60cbc9fbcea2fa42f8607d7c86aa75cb424ea7cab191f5d5cb7a988f1c386fa21a07edb98773cc
+'http://archive.ubuntu.com/ubuntu/pool/main/a/attr/attr_2.4.48-6build1.debian.tar.xz' attr_2.4.48-6build1.debian.tar.xz 27332 SHA512:eed6bb2b3869a23ab89c0349bb1bd1b7c51fb2f225291d49d08c19aa501af81e2fa650b46a5369bb87011413236eacc91b1f468d33630d6af5e3cf12adc68084
 ```
 
 ### `dpkg` source package: `audit=1:2.8.5-3ubuntu3`
@@ -810,18 +810,13 @@ Licenses: (parsed from: `/usr/share/doc/libfreetype-dev/copyright`, `/usr/share/
 - `Public-Domain`
 - `Zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris freetype=2.10.4+dfsg-1
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.10.4+dfsg-1.dsc' freetype_2.10.4+dfsg-1.dsc 3693 SHA512:5baa3cf53dfea6426980f414d43dd3bfba467b079d955779300cb64c2f9add33aa7841190329cebc45e9a2de56ad20763c6581c9c2266392e2cff861c5b8b783
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.10.4+dfsg.orig-ft2demos.tar.xz' freetype_2.10.4+dfsg.orig-ft2demos.tar.xz 236712 SHA512:d2afc19e5fabbee5205fcc992f6c19bab03485b7af4f55bb2d2dd0a4a9492a3f593540862ca116b54cf161b240d7966cb31a9793578d164fc418449e339e2fa8
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.10.4+dfsg.orig-ft2demos.tar.xz.asc' freetype_2.10.4+dfsg.orig-ft2demos.tar.xz.asc 195 SHA512:6b297a67afd11d21e705f6bfd82ffefec2a3a424a6a1bc5b24b80f037337f888677d7af3bab5d0be13d779162de8d4ae8f30f7fd978de6f6693567f4899980bf
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.10.4+dfsg.orig-ft2docs.tar.xz' freetype_2.10.4+dfsg.orig-ft2docs.tar.xz 2079084 SHA512:171da6c6a172869e9bec0da67cb1abdb0fdb124870f13b751b4e9b1b5e342fb2af38cb606db1c3dcf18076a077e694b7b8dd055dd7f4ab49afe7e1d61b4f9ba8
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.10.4+dfsg.orig-ft2docs.tar.xz.asc' freetype_2.10.4+dfsg.orig-ft2docs.tar.xz.asc 195 SHA512:c42ed2aea76eee7f4e775e26276fd260249b672c06ae0c73f378bc0ac7425e36683c4f8b4a8875d5f31f08d9f8e3a7ba0b427d9a5308c8aa90718c42edf13c52
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.10.4+dfsg.orig.tar.xz' freetype_2.10.4+dfsg.orig.tar.xz 2259340 SHA512:4d02111df4eb932cb1fd4890e6487a0a6830d98dbf35a6377b0fb2b66af89b06a449e149950271adbbff7411e2949e5a2a4ad6cd376e06287b5892dbe3bce3dc
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.10.4+dfsg-1.debian.tar.xz' freetype_2.10.4+dfsg-1.debian.tar.xz 116636 SHA512:0d69ceff879f5a30b6c416b381293cf72ed481eedfdee63a7cde89d12203749f0e81b9f668a8af8ebeec43cc507f03ae15f93803797380c4b77040df6654d7e4
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/freetype/2.10.4+dfsg-1/
+
 
 ### `dpkg` source package: `fribidi=1.0.8-2`
 
@@ -2240,14 +2235,9 @@ Licenses: (parsed from: `/usr/share/doc/libselinux1/copyright`, `/usr/share/doc/
 - `GPL-2`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libselinux=3.1-2build2
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libselinux/libselinux_3.1-2build2.dsc' libselinux_3.1-2build2.dsc 2680 SHA512:a65e54000b657a729b4cc1a232a74b250e9d84ddf791d2e03f83716c3af9dd4edd0f8a4955a8d92c0f32f72bf38924cf0b4e823f6a3852011f09dc8ed00772c0
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libselinux/libselinux_3.1.orig.tar.gz' libselinux_3.1.orig.tar.gz 204703 SHA512:57730cddd2d4751556d9e1f207c0f85119c81848f0620c16239e997150989e3f9a586a8c23861fd51ed89f7e084ad441190a58a288258a49a95f7beef7dbbb13
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libselinux/libselinux_3.1-2build2.debian.tar.xz' libselinux_3.1-2build2.debian.tar.xz 23880 SHA512:bafa346a9073c0217d4280c80f76dce69a23bfdaa66c9d61a0ec209e5ed651c0f0f9e20e3669ac751ae86ae157772a5403914bc033b49f00ed72c51fe694c718
-```
 
 ### `dpkg` source package: `libsemanage=3.1-1build2`
 
@@ -4066,15 +4056,9 @@ Licenses: (parsed from: `/usr/share/doc/wget/copyright`)
 - `GFDL-1.2`
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris wget=1.21-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/w/wget/wget_1.21-1ubuntu1.dsc' wget_1.21-1ubuntu1.dsc 2260 SHA512:56322a76fad682f669bfa2caf913d2e887f0d34642157255d630a8274d0a2d72cec832988c89c577f92d7aecbab413853e1e9c09cfb03651e8d97a7a5856df85
-'http://archive.ubuntu.com/ubuntu/pool/main/w/wget/wget_1.21.orig.tar.gz' wget_1.21.orig.tar.gz 4866788 SHA512:13313a98f91ef34ad90103f076285549eb4887d77953e9f192d3b0667642b5ceb9e2e30091f766cbf1d6ed423499c497ed85d826f3f3e92f0711aa06d8303c5a
-'http://archive.ubuntu.com/ubuntu/pool/main/w/wget/wget_1.21.orig.tar.gz.asc' wget_1.21.orig.tar.gz.asc 854 SHA512:1bdaedc164800158625fddbc842c2cbe246d3e3c2f07546ecebacc8c1ea44779aab31a707d792f965669f2403941d4869e59719198563a0f39099145609310d1
-'http://archive.ubuntu.com/ubuntu/pool/main/w/wget/wget_1.21-1ubuntu1.debian.tar.xz' wget_1.21-1ubuntu1.debian.tar.xz 63388 SHA512:6213a76b085d9afee038037af06ec2f18655572763b3b949c837a552fea081d03d4b186c332db1afcea6797e3e5381597a3a2b547bc3cd1d646142e34a950dd4
-```
 
 ### `dpkg` source package: `xorg-sgml-doctools=1:1.11-1.1`
 

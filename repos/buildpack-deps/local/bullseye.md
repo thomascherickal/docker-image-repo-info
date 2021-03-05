@@ -2575,20 +2575,13 @@ Licenses: (parsed from: `/usr/share/doc/libjpeg-dev/copyright`, `/usr/share/doc/
 - `BSD-BY-LC-NE`
 - `Expat`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libjpeg-turbo=1:2.0.5-2
-'http://deb.debian.org/debian/pool/main/libj/libjpeg-turbo/libjpeg-turbo_2.0.5-2.dsc' libjpeg-turbo_2.0.5-2.dsc 2315 SHA256:f5a49841f0f8d57a819e18933d14567e9cb0ef0d8092bf64c40369b996cee226
-'http://deb.debian.org/debian/pool/main/libj/libjpeg-turbo/libjpeg-turbo_2.0.5.orig.tar.gz' libjpeg-turbo_2.0.5.orig.tar.gz 2162983 SHA256:16f8f6f2715b3a38ab562a84357c793dd56ae9899ce130563c72cd93d8357b5d
-'http://deb.debian.org/debian/pool/main/libj/libjpeg-turbo/libjpeg-turbo_2.0.5-2.debian.tar.xz' libjpeg-turbo_2.0.5-2.debian.tar.xz 87828 SHA256:f03137a5e69a8179b962d23dafb71a7d67b468346331e113d328a79d9a3b15b4
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libjpeg-turbo/1:2.0.5-2/
 
-- https://sources.debian.net/src/libjpeg-turbo/1:2.0.5-2/ (for browsing the source)
-- https://sources.debian.net/src/libjpeg-turbo/1:2.0.5-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libjpeg-turbo/1:2.0.5-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libksba=1.5.0-3`
 
@@ -3748,21 +3741,13 @@ Licenses: (parsed from: `/usr/share/doc/libmariadb-dev/copyright`, `/usr/share/d
 - `unlimited-free-doc`
 - `zlib/libpng`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mariadb-10.5=1:10.5.8-3
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.5/mariadb-10.5_10.5.8-3.dsc' mariadb-10.5_10.5.8-3.dsc 4829 SHA256:13c67261c9ad6be811b070c44637df0cc1f3dfa8d9502b27145d420c36aeae8d
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.5/mariadb-10.5_10.5.8.orig.tar.gz' mariadb-10.5_10.5.8.orig.tar.gz 88206163 SHA256:eb4824f6f2c532cd3fc6a6bce7bf78ea7c6b949f8bdd07656b2c84344e757be8
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.5/mariadb-10.5_10.5.8.orig.tar.gz.asc' mariadb-10.5_10.5.8.orig.tar.gz.asc 195 SHA256:7368d5430ae0ac8d7e821e7b75cdadfc13e9b605283a8e6fa181b1557f452afa
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.5/mariadb-10.5_10.5.8-3.debian.tar.xz' mariadb-10.5_10.5.8-3.debian.tar.xz 230424 SHA256:c2a3a4fe7dfc906f7d15de4352c1c0616bfda70a241acf6329d28e3b7b4062d4
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mariadb-10.5/1:10.5.8-3/
 
-- https://sources.debian.net/src/mariadb-10.5/1:10.5.8-3/ (for browsing the source)
-- https://sources.debian.net/src/mariadb-10.5/1:10.5.8-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mariadb-10.5/1:10.5.8-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mawk=1.3.4.20200120-2`
 
@@ -4955,21 +4940,13 @@ Licenses: (parsed from: `/usr/share/doc/sysvinit-utils/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sysvinit=2.96-5
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96-5.dsc' sysvinit_2.96-5.dsc 2612 SHA256:8d30544cea96d93b875a41d403500db61b9e0abb7175eb69ac76a19f3b69d6da
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96.orig.tar.xz' sysvinit_2.96.orig.tar.xz 122164 SHA256:2a2e26b72aa235a23ab1c8471005f890309ce1196c83fbc9413c57b9ab62b587
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96.orig.tar.xz.asc' sysvinit_2.96.orig.tar.xz.asc 313 SHA256:dfc184b95da12c8c888c8ae6b0f26fe8a23b07fbcdd240f6600a8a78b9439fa0
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96-5.debian.tar.xz' sysvinit_2.96-5.debian.tar.xz 128096 SHA256:956f0b67990f83cdb437e4663729450dfa5b014b1b268ab3739eb034431544b6
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/sysvinit/2.96-5/
 
-- https://sources.debian.net/src/sysvinit/2.96-5/ (for browsing the source)
-- https://sources.debian.net/src/sysvinit/2.96-5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sysvinit/2.96-5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tar=1.32+dfsg-1`
 
