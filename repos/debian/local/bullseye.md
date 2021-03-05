@@ -1696,21 +1696,13 @@ Licenses: (parsed from: `/usr/share/doc/sysvinit-utils/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sysvinit=2.96-5
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96-5.dsc' sysvinit_2.96-5.dsc 2612 SHA256:8d30544cea96d93b875a41d403500db61b9e0abb7175eb69ac76a19f3b69d6da
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96.orig.tar.xz' sysvinit_2.96.orig.tar.xz 122164 SHA256:2a2e26b72aa235a23ab1c8471005f890309ce1196c83fbc9413c57b9ab62b587
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96.orig.tar.xz.asc' sysvinit_2.96.orig.tar.xz.asc 313 SHA256:dfc184b95da12c8c888c8ae6b0f26fe8a23b07fbcdd240f6600a8a78b9439fa0
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96-5.debian.tar.xz' sysvinit_2.96-5.debian.tar.xz 128096 SHA256:956f0b67990f83cdb437e4663729450dfa5b014b1b268ab3739eb034431544b6
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/sysvinit/2.96-5/
 
-- https://sources.debian.net/src/sysvinit/2.96-5/ (for browsing the source)
-- https://sources.debian.net/src/sysvinit/2.96-5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sysvinit/2.96-5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tar=1.32+dfsg-1`
 
@@ -1723,20 +1715,13 @@ Licenses: (parsed from: `/usr/share/doc/tar/copyright`)
 - `GPL-2`
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tar=1.32+dfsg-1
-'http://deb.debian.org/debian/pool/main/t/tar/tar_1.32+dfsg-1.dsc' tar_1.32+dfsg-1.dsc 2015 SHA256:8154c63983aadb982496a047384688c223bb8ffe50146dd05d4138c66dec75cd
-'http://deb.debian.org/debian/pool/main/t/tar/tar_1.32+dfsg.orig.tar.xz' tar_1.32+dfsg.orig.tar.xz 1910772 SHA256:9cb89ab8997d5469b24c7a676f0f0ae5b84d730c3d44d9afeabad63431ec8d27
-'http://deb.debian.org/debian/pool/main/t/tar/tar_1.32+dfsg-1.debian.tar.xz' tar_1.32+dfsg-1.debian.tar.xz 19460 SHA256:2d4bfe8c6121762fb99d440ad6ab98ad761e02d933d53bdaa5d932661473868c
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tar/1.32+dfsg-1/
 
-- https://sources.debian.net/src/tar/1.32+dfsg-1/ (for browsing the source)
-- https://sources.debian.net/src/tar/1.32+dfsg-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tar/1.32+dfsg-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tzdata=2021a-1`
 
