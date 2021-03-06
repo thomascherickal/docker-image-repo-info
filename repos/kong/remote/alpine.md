@@ -1,7 +1,7 @@
 ## `kong:alpine`
 
 ```console
-$ docker pull kong@sha256:4ca006af9c6b02a31533c5569cb6613968556824ae2552053b284e075b7db4c4
+$ docker pull kong@sha256:c41708bc235dfb1bda2193a88c67d7f75f12bc0ca069f77444fc5b471c2e1d9c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,14 +12,14 @@ $ docker pull kong@sha256:4ca006af9c6b02a31533c5569cb6613968556824ae2552053b284e
 ### `kong:alpine` - linux; amd64
 
 ```console
-$ docker pull kong@sha256:264012de525385f2db42318611e387b306380354d273e81e6e56e120b6517338
+$ docker pull kong@sha256:deeeaa21a4b3a279fe081ba1d29f6c2d61ffd29509bb17c819a5a8ac02e11f7e
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **50.9 MB (50938390 bytes)**  
+-	Total Size: **51.0 MB (50950868 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:cfb50817914445878879a768e55a80d4ecca29754f7b653bf1c070b5598bc1ae`
+-	Image ID: `sha256:07cad33482c5789135c18490d8bc58a5ca33594e4bccff7ae6425a59dca3b0c9`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["kong","docker-start"]`
 
@@ -28,41 +28,41 @@ $ docker pull kong@sha256:264012de525385f2db42318611e387b306380354d273e81e6e56e1
 ADD file:7eeea546ecde7a036bf634c08719879d32c7ec6ae599708cd91dc1b830735223 in / 
 # Wed, 24 Feb 2021 20:20:12 GMT
 CMD ["/bin/sh"]
-# Wed, 24 Feb 2021 23:54:42 GMT
+# Sat, 06 Mar 2021 07:30:26 GMT
 LABEL maintainer=Kong <support@konghq.com>
-# Wed, 24 Feb 2021 23:54:42 GMT
+# Sat, 06 Mar 2021 07:30:26 GMT
 ARG ASSET=ce
-# Wed, 24 Feb 2021 23:54:42 GMT
+# Sat, 06 Mar 2021 07:30:26 GMT
 ENV ASSET=ce
-# Wed, 24 Feb 2021 23:54:43 GMT
+# Sat, 06 Mar 2021 07:30:26 GMT
 ARG EE_PORTS
-# Wed, 24 Feb 2021 23:54:43 GMT
+# Sat, 06 Mar 2021 07:30:27 GMT
 COPY file:9073480627c34fa516ae48557d24314a31d17b88798bd04c46162029e368d39c in /tmp/kong.tar.gz 
-# Wed, 24 Feb 2021 23:54:43 GMT
-ARG KONG_VERSION=2.3.2
-# Wed, 24 Feb 2021 23:54:43 GMT
-ENV KONG_VERSION=2.3.2
-# Wed, 24 Feb 2021 23:54:43 GMT
-ARG KONG_AMD64_SHA=4c2e26b3719349d02fe0585a74fcb187e638095b42eea3d08f96d8a30e56e07e
-# Wed, 24 Feb 2021 23:54:44 GMT
-ENV KONG_AMD64_SHA=4c2e26b3719349d02fe0585a74fcb187e638095b42eea3d08f96d8a30e56e07e
-# Wed, 24 Feb 2021 23:54:44 GMT
-ARG KONG_ARM64_SHA=0f5770d67dda761437f365686f87ce821e5848ca0583e502bf5edfb0ba2bfbc3
-# Wed, 24 Feb 2021 23:54:44 GMT
-ENV KONG_ARM64_SHA=0f5770d67dda761437f365686f87ce821e5848ca0583e502bf5edfb0ba2bfbc3
-# Wed, 24 Feb 2021 23:54:51 GMT
+# Sat, 06 Mar 2021 07:30:27 GMT
+ARG KONG_VERSION=2.3.3
+# Sat, 06 Mar 2021 07:30:27 GMT
+ENV KONG_VERSION=2.3.3
+# Sat, 06 Mar 2021 07:30:27 GMT
+ARG KONG_AMD64_SHA=82a4eac75d45a1f2ce65ae185467e20533428b3d368e5e091fe4ddf427296e0b
+# Sat, 06 Mar 2021 07:30:27 GMT
+ENV KONG_AMD64_SHA=82a4eac75d45a1f2ce65ae185467e20533428b3d368e5e091fe4ddf427296e0b
+# Sat, 06 Mar 2021 07:30:28 GMT
+ARG KONG_ARM64_SHA=b2b8a0fe0cdb81d244e08c23a3143e4ae08b7c771a2cc35e24ffabfc54f4ba60
+# Sat, 06 Mar 2021 07:30:28 GMT
+ENV KONG_ARM64_SHA=b2b8a0fe0cdb81d244e08c23a3143e4ae08b7c771a2cc35e24ffabfc54f4ba60
+# Sat, 06 Mar 2021 07:30:36 GMT
 RUN set -eux; 	arch="$(apk --print-arch)"; 	case "${arch}" in 		x86_64) arch='amd64'; KONG_SHA256=$KONG_AMD64_SHA ;; 		aarch64) arch='arm64'; KONG_SHA256=$KONG_ARM64_SHA ;; 	esac;     if [ "$ASSET" = "ce" ] ; then         apk add --no-cache --virtual .build-deps curl wget tar ca-certificates &&         curl -fL "https://bintray.com/kong/kong-alpine-tar/download_file?file_path=kong-$KONG_VERSION.$arch.apk.tar.gz" -o /tmp/kong.tar.gz &&         echo "$KONG_SHA256  /tmp/kong.tar.gz" | sha256sum -c -;         apk del .build-deps;     fi;     mkdir /kong;     tar -C /kong -xzf /tmp/kong.tar.gz &&     mv /kong/usr/local/* /usr/local &&     mv /kong/etc/* /etc &&     rm -rf /kong &&     apk add --no-cache libstdc++ libgcc openssl pcre perl tzdata libcap zip bash   zlib zlib-dev git ca-certificates &&     adduser -S kong &&     mkdir -p "/usr/local/kong" &&     chown -R kong:0 /usr/local/kong &&     chown kong:0 /usr/local/bin/kong &&     chmod -R g=u /usr/local/kong &&     rm -rf /tmp/kong.tar.gz &&     if [ "$ASSET" = "ce" ] ; then       kong version ;     fi;
-# Wed, 24 Feb 2021 23:54:51 GMT
+# Sat, 06 Mar 2021 07:30:37 GMT
 COPY file:c60e90d02b3d93627e1f0d577e2298e266f50cc620574d3ef11b8b30cd8a906c in /docker-entrypoint.sh 
-# Wed, 24 Feb 2021 23:54:52 GMT
+# Sat, 06 Mar 2021 07:30:37 GMT
 USER kong
-# Wed, 24 Feb 2021 23:54:52 GMT
+# Sat, 06 Mar 2021 07:30:37 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 24 Feb 2021 23:54:52 GMT
+# Sat, 06 Mar 2021 07:30:37 GMT
 EXPOSE 8000 8001 8443 8444
-# Wed, 24 Feb 2021 23:54:52 GMT
+# Sat, 06 Mar 2021 07:30:37 GMT
 STOPSIGNAL SIGQUIT
-# Wed, 24 Feb 2021 23:54:52 GMT
+# Sat, 06 Mar 2021 07:30:38 GMT
 CMD ["kong" "docker-start"]
 ```
 
@@ -71,17 +71,17 @@ CMD ["kong" "docker-start"]
 		Last Modified: Wed, 24 Feb 2021 20:20:43 GMT  
 		Size: 2.8 MB (2815313 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dab3768d001dd6ad72a6b6e9c47c8de3967efb8031eb5471e0a48d98f2619558`  
-		Last Modified: Wed, 24 Feb 2021 23:57:37 GMT  
+	-	`sha256:caafd1a253b0f537460746cdcf3618b9f1b7018ee9fd49fc3afe37a66e4148c5`  
+		Last Modified: Sat, 06 Mar 2021 07:38:16 GMT  
 		Size: 132.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e24fc8c85ed2920bce371544b9e89e3aab573f62b95d1d49df9a02c2a51936e5`  
-		Last Modified: Wed, 24 Feb 2021 23:57:52 GMT  
-		Size: 48.1 MB (48122212 bytes)  
+	-	`sha256:8e4a2464daa995ef790c6a61cea31a358dcbb7493dddbcb8b88ebe870123aeeb`  
+		Last Modified: Sat, 06 Mar 2021 07:38:25 GMT  
+		Size: 48.1 MB (48134689 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:96136c04ffeebb0b7fc6524bf5277a483472101f625f359f94a50e827ce264fc`  
-		Last Modified: Wed, 24 Feb 2021 23:57:37 GMT  
-		Size: 733.0 B  
+	-	`sha256:f82817593c0d29810791181961affa528c92368e76123198121fa27605e6ae6e`  
+		Last Modified: Sat, 06 Mar 2021 07:38:16 GMT  
+		Size: 734.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `kong:alpine` - linux; arm64 variant v8
