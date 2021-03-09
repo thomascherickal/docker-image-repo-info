@@ -1,7 +1,7 @@
 ## `clojure:openjdk-15-tools-deps-1.10.2.796`
 
 ```console
-$ docker pull clojure@sha256:fb87b6443f11a48c6800fdbc4795ac6f1417c787ba003133b1f2bf2e4530cb48
+$ docker pull clojure@sha256:8cc1ff55bb95c94b5a718ac1f3a396591ce565f4ed8af8dff3bb112199ff5808
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,14 +12,14 @@ $ docker pull clojure@sha256:fb87b6443f11a48c6800fdbc4795ac6f1417c787ba003133b1f
 ### `clojure:openjdk-15-tools-deps-1.10.2.796` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:d7ca1117aeeb20a002ac93788559a2d4098d15d83cfd17d9e136f25e752bc8ad
+$ docker pull clojure@sha256:226caeb6087bb805e8172487b5565eb8dc3d9482363c5556db750c4ecd90ecab
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **269.1 MB (269127953 bytes)**  
+-	Total Size: **269.1 MB (269130160 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5721bbf129cd84fbd35217255e34cbdd056b3cafdd686ef96547daf0c910fae3`
+-	Image ID: `sha256:c8cdc82fb8db03d87bc67a7d534f9877c261017274567b5d9bcd0fb2f7639484`
 -	Default Command: `["sh","-c","sleep 1 && exec clj"]`
 
 ```dockerfile
@@ -27,29 +27,29 @@ $ docker pull clojure@sha256:d7ca1117aeeb20a002ac93788559a2d4098d15d83cfd17d9e13
 ADD file:d5c41bfaf15180481d8606f50799297e3f49b8a258c7c2cd988ab2bf0013272d in / 
 # Tue, 09 Feb 2021 02:20:56 GMT
 CMD ["bash"]
-# Tue, 09 Feb 2021 17:10:17 GMT
+# Tue, 09 Mar 2021 20:57:00 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates p11-kit 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 09 Feb 2021 17:12:41 GMT
+# Tue, 09 Mar 2021 21:01:35 GMT
 ENV JAVA_HOME=/usr/local/openjdk-15
-# Tue, 09 Feb 2021 17:12:42 GMT
+# Tue, 09 Mar 2021 21:01:36 GMT
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ] # backwards compatibility
-# Tue, 09 Feb 2021 17:12:42 GMT
+# Tue, 09 Mar 2021 21:01:36 GMT
 ENV PATH=/usr/local/openjdk-15/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 09 Feb 2021 17:12:42 GMT
+# Tue, 09 Mar 2021 21:01:37 GMT
 ENV LANG=C.UTF-8
-# Tue, 09 Feb 2021 17:12:42 GMT
+# Tue, 09 Mar 2021 21:01:37 GMT
 ENV JAVA_VERSION=15.0.2
-# Tue, 09 Feb 2021 17:13:02 GMT
+# Tue, 09 Mar 2021 21:01:50 GMT
 RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://download.java.net/java/GA/jdk15.0.2/0d1cfde4252546c6931946de8db48ee2/7/GPL/openjdk-15.0.2_linux-x64_bin.tar.gz'; 			downloadSha256='91ac6fc353b6bf39d995572b700e37a20e119a87034eeb939a6f24356fbcd207'; 			;; 		'arm64') 			downloadUrl='https://download.java.net/java/GA/jdk15.0.2/0d1cfde4252546c6931946de8db48ee2/7/GPL/openjdk-15.0.2_linux-aarch64_bin.tar.gz'; 			downloadSha256='3958f01858f9290c48c23e7804a0af3624e8eca6749b085c425df4c4f2f7dcbc'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
-# Tue, 09 Feb 2021 17:13:03 GMT
+# Tue, 09 Mar 2021 21:01:51 GMT
 CMD ["jshell"]
-# Wed, 24 Feb 2021 18:25:12 GMT
+# Tue, 09 Mar 2021 21:50:01 GMT
 ENV CLOJURE_VERSION=1.10.2.796
-# Wed, 24 Feb 2021 18:25:12 GMT
+# Tue, 09 Mar 2021 21:50:01 GMT
 WORKDIR /tmp
-# Wed, 24 Feb 2021 18:25:33 GMT
+# Tue, 09 Mar 2021 21:50:18 GMT
 RUN apt-get update && apt-get install -y curl make rlwrap wget && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "0ea8633c7f53eb76098132d4a4536169395be24bbdc253cff4d10251e2ea6e45 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apt-get purge -y --auto-remove curl wget
-# Wed, 24 Feb 2021 18:25:33 GMT
+# Tue, 09 Mar 2021 21:50:18 GMT
 CMD ["sh" "-c" "sleep 1 && exec clj"]
 ```
 
@@ -58,21 +58,21 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 		Last Modified: Tue, 09 Feb 2021 02:26:39 GMT  
 		Size: 27.1 MB (27095142 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a91c0c19c84860aaa974864243509770a5b009f3a88b4a228010a9ade71ac968`  
-		Last Modified: Tue, 09 Feb 2021 17:20:14 GMT  
-		Size: 3.3 MB (3267910 bytes)  
+	-	`sha256:c3f1fbf102b7eaa0998133d35bbcc37641d4d23626a4a2673cb9a2393cb7c34c`  
+		Last Modified: Tue, 09 Mar 2021 21:10:48 GMT  
+		Size: 3.3 MB (3268548 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1ed56c6d65ad3b4703a485f5bb3943573367e8ef76fcba6f59af2429c6a48f3e`  
-		Last Modified: Tue, 09 Feb 2021 17:22:30 GMT  
-		Size: 209.0 B  
+	-	`sha256:3dd8a9c0aa2d3c2824cda489386aab6f22b531483077bfc2eb5b3a9f496b518b`  
+		Last Modified: Tue, 09 Mar 2021 21:17:53 GMT  
+		Size: 212.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:864d472a3a430c411fc89d39316777c13aceb4870e95e4f70c75d44abe458c5a`  
-		Last Modified: Tue, 09 Feb 2021 17:22:51 GMT  
-		Size: 196.2 MB (196173872 bytes)  
+	-	`sha256:7e5ad54c94206a793de773d834eabbb929cc23a20345c9e79637969b39fc1ee5`  
+		Last Modified: Tue, 09 Mar 2021 21:18:09 GMT  
+		Size: 196.2 MB (196173943 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b9dfa96fc311d51b7a276511849ceb76dd0aa5e7e1d3257bed9f7ebf15f91d50`  
-		Last Modified: Wed, 24 Feb 2021 18:33:12 GMT  
-		Size: 42.6 MB (42590820 bytes)  
+	-	`sha256:ec6a62062390b2ea697299be58ab3144f766692af98b7c659c40f654743a208b`  
+		Last Modified: Tue, 09 Mar 2021 22:04:25 GMT  
+		Size: 42.6 MB (42592315 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:openjdk-15-tools-deps-1.10.2.796` - linux; arm64 variant v8
