@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:84b691ac5047e84a067322e7fd97ecaf701dfc4207586888d6d9ac392d985992`
-- Created: `2021-02-18T07:37:05.447456463Z`
+- Image ID: `sha256:1ede5a240b3ad9376996eaaa11f00f9a60508745c63417b52a281fda87d12bfd`
+- Created: `2021-03-06T09:30:33.946237443Z`
 - Virtual Size: ~ 119.65 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -166,16 +166,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `curl`
 
 ```console
-curl-7.74.0-r0 description:
+curl-7.74.0-r1 description:
 URL retrival utility and library
 
-curl-7.74.0-r0 webpage:
+curl-7.74.0-r1 webpage:
 https://curl.haxx.se/
 
-curl-7.74.0-r0 installed size:
+curl-7.74.0-r1 installed size:
 245760
 
-curl-7.74.0-r0 license:
+curl-7.74.0-r1 license:
 MIT
 
 ```
@@ -421,16 +421,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.74.0-r0 description:
+libcurl-7.74.0-r1 description:
 The multiprotocol file transfer library
 
-libcurl-7.74.0-r0 webpage:
+libcurl-7.74.0-r1 webpage:
 https://curl.haxx.se/
 
-libcurl-7.74.0-r0 installed size:
+libcurl-7.74.0-r1 installed size:
 495616
 
-libcurl-7.74.0-r0 license:
+libcurl-7.74.0-r1 license:
 MIT
 
 ```
@@ -523,16 +523,16 @@ BSD-3-Clause IJG Zlib
 ### `apk` package: `libldap`
 
 ```console
-libldap-2.4.57-r0 description:
+libldap-2.4.57-r1 description:
 OpenLDAP libraries
 
-libldap-2.4.57-r0 webpage:
+libldap-2.4.57-r1 webpage:
 https://www.openldap.org/
 
-libldap-2.4.57-r0 installed size:
+libldap-2.4.57-r1 installed size:
 630784
 
-libldap-2.4.57-r0 license:
+libldap-2.4.57-r1 license:
 custom
 
 ```
