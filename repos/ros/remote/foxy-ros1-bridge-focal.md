@@ -1,7 +1,7 @@
 ## `ros:foxy-ros1-bridge-focal`
 
 ```console
-$ docker pull ros@sha256:0912a25e5a7f3afb17c746c49219a586f0e08c064589c6f60bff63b85ad0c285
+$ docker pull ros@sha256:f751d1ef52fcbfaf2b5b0b92ea24b9d00c560f31f6316c8ab0b6d4058430cece
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,14 +12,14 @@ $ docker pull ros@sha256:0912a25e5a7f3afb17c746c49219a586f0e08c064589c6f60bff63b
 ### `ros:foxy-ros1-bridge-focal` - linux; amd64
 
 ```console
-$ docker pull ros@sha256:24aa340bb7dbef162b73a53335ec783b7ca43362bae1e065c12d2875ea1d8f5e
+$ docker pull ros@sha256:ea5c7007c038baa2fa11ba2f7774907a2050877d2ff8a83da7705a15ce20e546
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **341.0 MB (340955911 bytes)**  
+-	Total Size: **341.3 MB (341285799 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:73867179d92807e943b46c2d9b170b066f88b3f55535e3e978796b6244e45dfd`
+-	Image ID: `sha256:e94bdd806a76cfc841e40db22dd642eab68958f1023b03784491592261f616be`
 -	Entrypoint: `["\/ros_entrypoint.sh"]`
 -	Default Command: `["bash"]`
 
@@ -34,49 +34,49 @@ RUN [ -z "$(apt-get indextargets)" ]
 RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
 # Thu, 04 Mar 2021 02:24:42 GMT
 CMD ["/bin/bash"]
-# Thu, 04 Mar 2021 04:11:38 GMT
+# Fri, 12 Mar 2021 10:03:09 GMT
 RUN echo 'Etc/UTC' > /etc/timezone &&     ln -s /usr/share/zoneinfo/Etc/UTC /etc/localtime &&     apt-get update &&     apt-get install -q -y --no-install-recommends tzdata &&     rm -rf /var/lib/apt/lists/*
-# Thu, 04 Mar 2021 05:26:56 GMT
+# Fri, 12 Mar 2021 14:11:54 GMT
 RUN apt-get update && apt-get install -q -y --no-install-recommends     dirmngr     gnupg2     && rm -rf /var/lib/apt/lists/*
-# Thu, 04 Mar 2021 05:26:57 GMT
+# Fri, 12 Mar 2021 14:11:55 GMT
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
-# Thu, 04 Mar 2021 05:48:20 GMT
+# Fri, 12 Mar 2021 14:48:31 GMT
 RUN echo "deb http://packages.ros.org/ros2/ubuntu focal main" > /etc/apt/sources.list.d/ros2-latest.list
-# Thu, 04 Mar 2021 05:48:20 GMT
+# Fri, 12 Mar 2021 14:48:31 GMT
 ENV LANG=C.UTF-8
-# Thu, 04 Mar 2021 05:48:20 GMT
+# Fri, 12 Mar 2021 14:48:31 GMT
 ENV LC_ALL=C.UTF-8
-# Thu, 04 Mar 2021 05:48:20 GMT
+# Fri, 12 Mar 2021 14:48:32 GMT
 ENV ROS_DISTRO=foxy
-# Thu, 04 Mar 2021 05:49:52 GMT
+# Fri, 12 Mar 2021 14:50:44 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends     ros-foxy-ros-core=0.9.2-1*     && rm -rf /var/lib/apt/lists/*
-# Thu, 04 Mar 2021 05:49:53 GMT
+# Fri, 12 Mar 2021 14:50:46 GMT
 COPY file:57f71198b74c2c1967889acdfddb85d428137580d18be4211971fc7381557b6c in / 
-# Thu, 04 Mar 2021 05:49:53 GMT
+# Fri, 12 Mar 2021 14:50:46 GMT
 ENTRYPOINT ["/ros_entrypoint.sh"]
-# Thu, 04 Mar 2021 05:49:54 GMT
+# Fri, 12 Mar 2021 14:50:46 GMT
 CMD ["bash"]
-# Thu, 04 Mar 2021 05:50:42 GMT
+# Fri, 12 Mar 2021 14:51:57 GMT
 RUN apt-get update && apt-get install --no-install-recommends -y     build-essential     git     python3-colcon-common-extensions     python3-colcon-mixin     python3-rosdep     python3-vcstool     && rm -rf /var/lib/apt/lists/*
-# Thu, 04 Mar 2021 05:50:47 GMT
+# Fri, 12 Mar 2021 14:52:05 GMT
 RUN rosdep init &&   rosdep update --rosdistro $ROS_DISTRO
-# Thu, 04 Mar 2021 05:50:50 GMT
+# Fri, 12 Mar 2021 14:52:11 GMT
 RUN colcon mixin add default       https://raw.githubusercontent.com/colcon/colcon-mixin-repository/master/index.yaml &&     colcon mixin update &&     colcon metadata add default       https://raw.githubusercontent.com/colcon/colcon-metadata-repository/master/index.yaml &&     colcon metadata update
-# Thu, 04 Mar 2021 05:51:00 GMT
+# Fri, 12 Mar 2021 14:52:30 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends     ros-foxy-ros-base=0.9.2-1*     && rm -rf /var/lib/apt/lists/*
-# Thu, 04 Mar 2021 05:51:11 GMT
+# Fri, 12 Mar 2021 14:52:38 GMT
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
-# Thu, 04 Mar 2021 05:51:12 GMT
+# Fri, 12 Mar 2021 14:52:39 GMT
 RUN echo "deb http://packages.ros.org/ros/ubuntu focal main" > /etc/apt/sources.list.d/ros1-latest.list
-# Thu, 04 Mar 2021 05:51:12 GMT
+# Fri, 12 Mar 2021 14:52:40 GMT
 ENV ROS1_DISTRO=noetic
-# Thu, 04 Mar 2021 05:51:12 GMT
+# Fri, 12 Mar 2021 14:52:40 GMT
 ENV ROS2_DISTRO=foxy
-# Thu, 04 Mar 2021 05:52:12 GMT
+# Fri, 12 Mar 2021 14:54:14 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends     ros-noetic-ros-comm=1.15.9-1*     ros-noetic-roscpp-tutorials=0.10.2-1*     ros-noetic-rospy-tutorials=0.10.2-1*     && rm -rf /var/lib/apt/lists/*
-# Thu, 04 Mar 2021 05:52:41 GMT
+# Fri, 12 Mar 2021 14:54:56 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends     ros-foxy-ros1-bridge=0.9.6-1*     ros-foxy-demo-nodes-cpp=0.9.3-1*     ros-foxy-demo-nodes-py=0.9.3-1*     && rm -rf /var/lib/apt/lists/*
-# Thu, 04 Mar 2021 05:52:42 GMT
+# Fri, 12 Mar 2021 14:54:57 GMT
 COPY file:f2fca591c0e2a31379c7ea28a9948ef5ee9d4a95b4831016253c1ef1a4f39718 in / 
 ```
 
@@ -93,65 +93,65 @@ COPY file:f2fca591c0e2a31379c7ea28a9948ef5ee9d4a95b4831016253c1ef1a4f39718 in /
 		Last Modified: Thu, 04 Mar 2021 02:25:50 GMT  
 		Size: 162.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c6feb7b35b48a6d7b9001d90f52185993d6984828fb9c5eb938874fe345fab7d`  
-		Last Modified: Thu, 04 Mar 2021 04:22:47 GMT  
-		Size: 1.2 MB (1182675 bytes)  
+	-	`sha256:d07cfec6f2da960164171c5970a0a257d0cedb5f791a43019ec06be3f6be3842`  
+		Last Modified: Fri, 12 Mar 2021 10:28:38 GMT  
+		Size: 1.2 MB (1182808 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4bdfe30201b587d8cebd373924e6d165c74b66b433667bda14a07c311ffb5e5f`  
-		Last Modified: Thu, 04 Mar 2021 05:59:21 GMT  
-		Size: 5.5 MB (5546765 bytes)  
+	-	`sha256:694590d03abf5d1734a02addbf98c8bae4b3ad1ebdf9523ec5687888462f1360`  
+		Last Modified: Fri, 12 Mar 2021 15:09:45 GMT  
+		Size: 5.5 MB (5547975 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:70cd989e5d6bcfcb3cdf8ce4e16118dfb75f90f1546b66f157f4a5de43c8cae5`  
-		Last Modified: Thu, 04 Mar 2021 05:59:19 GMT  
-		Size: 1.4 KB (1414 bytes)  
+	-	`sha256:52b6051fbcd3c71d56397c8f01cf7b807b358b76dfbd34be6f585e364b69645f`  
+		Last Modified: Fri, 12 Mar 2021 15:09:43 GMT  
+		Size: 1.4 KB (1419 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6843b85bba1953ad2b9a7f3dd014f7af4bb9b47d08bfb91b63beeafedfa6b353`  
-		Last Modified: Thu, 04 Mar 2021 06:05:53 GMT  
-		Size: 227.0 B  
+	-	`sha256:837d766562deb82c9084eba6327232cd4556395a71f01dd9b332f90c6227c866`  
+		Last Modified: Fri, 12 Mar 2021 15:21:36 GMT  
+		Size: 228.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:41fb72eb3e1ce2ae57c083a146dc824c8e8ecea72a1d7363e7e7c2712caac88f`  
-		Last Modified: Thu, 04 Mar 2021 06:06:25 GMT  
-		Size: 119.9 MB (119923843 bytes)  
+	-	`sha256:c90bd24ef449c28ac57a9d1f5569b16fc4f3854556f724d0fdf912fa8342e098`  
+		Last Modified: Fri, 12 Mar 2021 15:22:05 GMT  
+		Size: 119.9 MB (119922541 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fc279ebdd4b88466c6e823e786040716536eecaea9b696fdcd6b57758108c5d7`  
-		Last Modified: Thu, 04 Mar 2021 06:05:53 GMT  
+	-	`sha256:ceffd927c98156d4f3401a2ae01025bf7177ea7f571811fba792882dc15349f9`  
+		Last Modified: Fri, 12 Mar 2021 15:21:36 GMT  
 		Size: 195.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:59279d71b42e5834afb161a4a3739eb9466598b77aa4cd3422796e5a6e52c3a1`  
-		Last Modified: Thu, 04 Mar 2021 06:06:43 GMT  
-		Size: 66.6 MB (66590319 bytes)  
+	-	`sha256:e49cd9b4aaae33b403826447698e5b2d9a55c391a8cb2faa2b919c3bdcfa62f1`  
+		Last Modified: Fri, 12 Mar 2021 15:22:31 GMT  
+		Size: 66.6 MB (66602795 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bcc0b2fbc34ceee4214b2fa79e9fa130ddf2e8d4d47c51bc249f72959e9aa55b`  
-		Last Modified: Thu, 04 Mar 2021 06:06:30 GMT  
-		Size: 213.9 KB (213943 bytes)  
+	-	`sha256:d01beda68eba9054f2d79fa6b1a1cabd5f2947feea80e02af6c3dfdf8e0ac4e1`  
+		Last Modified: Fri, 12 Mar 2021 15:22:16 GMT  
+		Size: 214.1 KB (214131 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d71d1504fd22f1987cdd022ac8c73d739e31e860e312a5f4bc74dc322a1692b4`  
-		Last Modified: Thu, 04 Mar 2021 06:06:29 GMT  
-		Size: 2.0 KB (2002 bytes)  
+	-	`sha256:3bd71cb244a504612ba2719b9bf5e285b2439b73b87e73ea3c6c3296841debea`  
+		Last Modified: Fri, 12 Mar 2021 15:22:17 GMT  
+		Size: 2.1 KB (2080 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b8230224af89564ba95f2370d7bed708e5b19b55631a408b9cfb24c0148dd59b`  
-		Last Modified: Thu, 04 Mar 2021 06:06:33 GMT  
-		Size: 10.3 MB (10278672 bytes)  
+	-	`sha256:1217227c893bbc5db7eedfb889576f19673b34e9239974b9b95d4fa40c6e624a`  
+		Last Modified: Fri, 12 Mar 2021 15:22:19 GMT  
+		Size: 10.6 MB (10583601 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b26c4af5287119ea0c222c68b778a8a4fc5ee23994d0c5abd5d37f1d768136ab`  
-		Last Modified: Thu, 04 Mar 2021 06:06:49 GMT  
+	-	`sha256:afe81b797126ed5203d3fa1a321900215fedd314c98bf9018a55ca7266e2d557`  
+		Last Modified: Fri, 12 Mar 2021 15:22:51 GMT  
 		Size: 154.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2de58387b84f93412db77777d4f5cc2be538a1b61f8e5f798a68beb48716610a`  
-		Last Modified: Thu, 04 Mar 2021 06:06:49 GMT  
-		Size: 222.0 B  
+	-	`sha256:f59639c7a83f8992afacaa6931857ef00595a6b60fc6de3f7289e06ff0818c40`  
+		Last Modified: Fri, 12 Mar 2021 15:22:49 GMT  
+		Size: 225.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b5284512728427b5a0018224dcf5fecced67c12ebecce908996cb644f408addd`  
-		Last Modified: Thu, 04 Mar 2021 06:07:13 GMT  
-		Size: 76.1 MB (76103308 bytes)  
+	-	`sha256:148fd548e5797721d33354fcbee0e630b7c7864abeab72b03dd3b037175448dd`  
+		Last Modified: Fri, 12 Mar 2021 15:23:13 GMT  
+		Size: 76.1 MB (76113114 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b5c3489df40dc28149fc99ad4d10b9d4d1d92548c19a32b2fe1dcaab1a9a54bd`  
-		Last Modified: Thu, 04 Mar 2021 06:06:58 GMT  
-		Size: 32.5 MB (32543130 bytes)  
+	-	`sha256:fc9f096ad6c92800d4ce6d4f3c4f99640c2eaeb13b5c988baae61b448bc61989`  
+		Last Modified: Fri, 12 Mar 2021 15:22:57 GMT  
+		Size: 32.5 MB (32545492 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:25919bd0b5cd8f11d475338ce1246af3a2d7d273b4ea7cf768d69620224e0e4d`  
-		Last Modified: Thu, 04 Mar 2021 06:06:49 GMT  
-		Size: 245.0 B  
+	-	`sha256:808d1217b37e66ca278dec35f74fa65b693e508f5a7fd5d4b557312e78699411`  
+		Last Modified: Fri, 12 Mar 2021 15:22:49 GMT  
+		Size: 244.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ros:foxy-ros1-bridge-focal` - linux; arm64 variant v8
