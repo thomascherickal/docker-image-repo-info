@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:32ec776f673e11e0353e581e1527aa897bc607089cc1e754ca5468c5eb47002c`
-- Created: `2021-02-09T18:28:49.354681976Z`
-- Virtual Size: ~ 147.29 Mb  
+- Image ID: `sha256:e36536bb999a4ea7d01fef90d96212a4317ad2d75da62aecdbdd57facc75c5aa`
+- Created: `2021-03-12T13:24:52.978601967Z`
+- Virtual Size: ~ 147.26 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["swipl"]`
@@ -1066,11 +1066,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libarchive/3.2.2-2+deb9u2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libarchive/3.2.2-2+deb9u2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libbsd=0.8.3-1`
+### `dpkg` source package: `libbsd=0.8.3-1+deb9u1`
 
 Binary Packages:
 
-- `libbsd0:amd64=0.8.3-1`
+- `libbsd0:amd64=0.8.3-1+deb9u1`
 
 Licenses: (parsed from: `/usr/share/doc/libbsd0/copyright`)
 
@@ -1094,18 +1094,18 @@ Licenses: (parsed from: `/usr/share/doc/libbsd0/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libbsd=0.8.3-1
-'http://deb.debian.org/debian/pool/main/libb/libbsd/libbsd_0.8.3-1.dsc' libbsd_0.8.3-1.dsc 2212 SHA256:8b53b3731a95f00a0f47195e6afdf8dc4bcb3ed3b9b0d3e7046d8c9c98e5c8f2
-'http://deb.debian.org/debian/pool/main/libb/libbsd/libbsd_0.8.3.orig.tar.xz' libbsd_0.8.3.orig.tar.xz 356772 SHA256:934b634f4dfd865b6482650b8f522c70ae65c463529de8be907b53c89c3a34a8
-'http://deb.debian.org/debian/pool/main/libb/libbsd/libbsd_0.8.3.orig.tar.xz.asc' libbsd_0.8.3.orig.tar.xz.asc 819 SHA256:c0e26a577d19404d05515e0559b9224106a59ecd30910d6896694c4a5a4b021d
-'http://deb.debian.org/debian/pool/main/libb/libbsd/libbsd_0.8.3-1.debian.tar.xz' libbsd_0.8.3-1.debian.tar.xz 14924 SHA256:c2beb8b2c4678c9f700b09834d1083fb6b1f883b112e493bd1ed1177355114fc
+$ apt-get source -qq --print-uris libbsd=0.8.3-1+deb9u1
+'http://security.debian.org/debian-security/pool/updates/main/libb/libbsd/libbsd_0.8.3-1+deb9u1.dsc' libbsd_0.8.3-1+deb9u1.dsc 2413 SHA256:dfb47f704674611973bfa38ed9afd32e3febcb60c63687b3a9b8b62393386708
+'http://security.debian.org/debian-security/pool/updates/main/libb/libbsd/libbsd_0.8.3.orig.tar.xz' libbsd_0.8.3.orig.tar.xz 356772 SHA256:934b634f4dfd865b6482650b8f522c70ae65c463529de8be907b53c89c3a34a8
+'http://security.debian.org/debian-security/pool/updates/main/libb/libbsd/libbsd_0.8.3.orig.tar.xz.asc' libbsd_0.8.3.orig.tar.xz.asc 819 SHA256:c0e26a577d19404d05515e0559b9224106a59ecd30910d6896694c4a5a4b021d
+'http://security.debian.org/debian-security/pool/updates/main/libb/libbsd/libbsd_0.8.3-1+deb9u1.debian.tar.xz' libbsd_0.8.3-1+deb9u1.debian.tar.xz 15632 SHA256:3627593370b371f219682b9852d6d53ad85e923e9a6adf9953ef4c8b290e3b77
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/libbsd/0.8.3-1/ (for browsing the source)
-- https://sources.debian.net/src/libbsd/0.8.3-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libbsd/0.8.3-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/libbsd/0.8.3-1+deb9u1/ (for browsing the source)
+- https://sources.debian.net/src/libbsd/0.8.3-1+deb9u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libbsd/0.8.3-1+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libcap-ng=0.7.7-3`
 
@@ -1864,43 +1864,58 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/nghttp2/1.18.1-1+deb9u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/nghttp2/1.18.1-1+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openldap=2.4.44+dfsg-5+deb9u7`
+### `dpkg` source package: `openldap=2.4.44+dfsg-5+deb9u8`
 
 Binary Packages:
 
-- `libldap-2.4-2:amd64=2.4.44+dfsg-5+deb9u7`
-- `libldap-common=2.4.44+dfsg-5+deb9u7`
+- `libldap-2.4-2:amd64=2.4.44+dfsg-5+deb9u8`
+- `libldap-common=2.4.44+dfsg-5+deb9u8`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris openldap=2.4.44+dfsg-5+deb9u8
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.44+dfsg-5+deb9u8.dsc' openldap_2.4.44+dfsg-5+deb9u8.dsc 3017 SHA256:aa2bb5935871f2fa0a6207f8a8986b4977f97726678b63af0deedf2f60f55483
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.44+dfsg.orig.tar.gz' openldap_2.4.44+dfsg.orig.tar.gz 4826590 SHA256:d5187c229bec163c5d97845846e1b87917755f85b04f444c08836384f4bd7ffe
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.44+dfsg-5+deb9u8.debian.tar.xz' openldap_2.4.44+dfsg-5+deb9u8.debian.tar.xz 173772 SHA256:fe52bd332837e8d9d766b7616a1df6a617fc80e594508f3f2e9f9366b2df8347
+```
 
-- http://snapshot.debian.org/package/openldap/2.4.44+dfsg-5+deb9u7/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/openldap/2.4.44+dfsg-5+deb9u8/ (for browsing the source)
+- https://sources.debian.net/src/openldap/2.4.44+dfsg-5+deb9u8/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openldap/2.4.44+dfsg-5+deb9u8/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openssl=1.1.0l-1~deb9u2`
+### `dpkg` source package: `openssl=1.1.0l-1~deb9u3`
 
 Binary Packages:
 
-- `libssl1.1:amd64=1.1.0l-1~deb9u2`
-- `openssl=1.1.0l-1~deb9u2`
+- `libssl1.1:amd64=1.1.0l-1~deb9u3`
+- `openssl=1.1.0l-1~deb9u3`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris openssl=1.1.0l-1~deb9u3
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.0l-1~deb9u3.dsc' openssl_1.1.0l-1~deb9u3.dsc 2611 SHA256:c1669406f898cf604fd36a0e15142e80326c12206585527be20150e04b323e8a
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.0l.orig.tar.gz' openssl_1.1.0l.orig.tar.gz 5294857 SHA256:74a2f756c64fd7386a29184dc0344f4831192d61dc2481a93a4c5dd727f41148
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.0l.orig.tar.gz.asc' openssl_1.1.0l.orig.tar.gz.asc 488 SHA256:afc83de9f9f1ef5f79ab8a31bbdeb26f9ac9a07cfdab7628a773267d31f85e42
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.0l-1~deb9u3.debian.tar.xz' openssl_1.1.0l-1~deb9u3.debian.tar.xz 77112 SHA256:aa9f7f6b3bd71c70f72321ee421e3d69f1eaa2ef4d4cf7b9ea2d49d9908f7606
+```
 
-- http://snapshot.debian.org/package/openssl/1.1.0l-1~deb9u2/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/openssl/1.1.0l-1~deb9u3/ (for browsing the source)
+- https://sources.debian.net/src/openssl/1.1.0l-1~deb9u3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openssl/1.1.0l-1~deb9u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ossp-uuid=1.6.2-1.5`
 
