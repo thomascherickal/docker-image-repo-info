@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:03bc9abd481e9786b7ec05dcaf6d155dd54e164dd6b816255b66a06579d11550`
-- Created: `2021-03-04T02:20:54.004648709Z`
+- Image ID: `sha256:e7131bc6df739f15afadd5fe0dfb84cae51ef6ff4e55dad2d433a3d661bcf10b`
+- Created: `2021-03-06T09:16:33.598403887Z`
 - Virtual Size: ~ 136.32 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -18,10 +18,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
-  - `PHP_VERSION=7.4.15`
-  - `PHP_URL=https://www.php.net/distributions/php-7.4.15.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.15.tar.xz.asc`
-  - `PHP_SHA256=9b859c65f0cf7b3eff9d4a28cfab719fb3d36a1db3c20d874a79b5ec44d43cb8`
+  - `PHP_VERSION=7.4.16`
+  - `PHP_URL=https://www.php.net/distributions/php-7.4.16.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.16.tar.xz.asc`
+  - `PHP_SHA256=1c16cefaf88ded4c92eed6a8a41eb682bb2ef42429deb55f1c4ba159053fb98b`
   - `JOOMLA_INSTALLATION_DISABLE_LOCALHOST_CHECK=1`
   - `JOOMLA_VERSION=3.9.25`
   - `JOOMLA_SHA512=83fc90cb09d710e30dc8e8f50c4e6074ab74fb6a431a851b2567e30273e2a27686d9702cc0cdbae7dc2db09efa0081f8418064b691de43fee1af15f7a195fa25`
@@ -186,16 +186,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `curl`
 
 ```console
-curl-7.74.0-r0 description:
+curl-7.74.0-r1 description:
 URL retrival utility and library
 
-curl-7.74.0-r0 webpage:
+curl-7.74.0-r1 webpage:
 https://curl.haxx.se/
 
-curl-7.74.0-r0 installed size:
+curl-7.74.0-r1 installed size:
 245760
 
-curl-7.74.0-r0 license:
+curl-7.74.0-r1 license:
 MIT
 
 ```
@@ -305,16 +305,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.74.0-r0 description:
+libcurl-7.74.0-r1 description:
 The multiprotocol file transfer library
 
-libcurl-7.74.0-r0 webpage:
+libcurl-7.74.0-r1 webpage:
 https://curl.haxx.se/
 
-libcurl-7.74.0-r0 installed size:
+libcurl-7.74.0-r1 installed size:
 495616
 
-libcurl-7.74.0-r0 license:
+libcurl-7.74.0-r1 license:
 MIT
 
 ```
@@ -373,16 +373,16 @@ BSD-3-Clause IJG Zlib
 ### `apk` package: `libldap`
 
 ```console
-libldap-2.4.57-r0 description:
+libldap-2.4.57-r1 description:
 OpenLDAP libraries
 
-libldap-2.4.57-r0 webpage:
+libldap-2.4.57-r1 webpage:
 https://www.openldap.org/
 
-libldap-2.4.57-r0 installed size:
+libldap-2.4.57-r1 installed size:
 630784
 
-libldap-2.4.57-r0 license:
+libldap-2.4.57-r1 license:
 custom
 
 ```
@@ -441,16 +441,16 @@ Libpng
 ### `apk` package: `libpq`
 
 ```console
-libpq-13.1-r2 description:
+libpq-13.2-r0 description:
 PostgreSQL libraries
 
-libpq-13.1-r2 webpage:
+libpq-13.2-r0 webpage:
 https://www.postgresql.org/
 
-libpq-13.1-r2 installed size:
+libpq-13.2-r0 installed size:
 335872
 
-libpq-13.1-r2 license:
+libpq-13.2-r0 license:
 PostgreSQL
 
 ```

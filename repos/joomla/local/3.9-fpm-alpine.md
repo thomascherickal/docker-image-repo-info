@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:6adba6ee9370637107220bbbe546ad35be1022a280868ef7a27f51429711bea3`
-- Created: `2021-03-04T02:20:21.707712573Z`
+- Image ID: `sha256:fc30147bd08f69d5d164cae726625fdf9ce6d1081493a5535b84f56cc4aac3ce`
+- Created: `2021-03-06T09:10:47.757427911Z`
 - Virtual Size: ~ 129.61 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -186,16 +186,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `curl`
 
 ```console
-curl-7.74.0-r0 description:
+curl-7.74.0-r1 description:
 URL retrival utility and library
 
-curl-7.74.0-r0 webpage:
+curl-7.74.0-r1 webpage:
 https://curl.haxx.se/
 
-curl-7.74.0-r0 installed size:
+curl-7.74.0-r1 installed size:
 245760
 
-curl-7.74.0-r0 license:
+curl-7.74.0-r1 license:
 MIT
 
 ```
@@ -305,16 +305,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.74.0-r0 description:
+libcurl-7.74.0-r1 description:
 The multiprotocol file transfer library
 
-libcurl-7.74.0-r0 webpage:
+libcurl-7.74.0-r1 webpage:
 https://curl.haxx.se/
 
-libcurl-7.74.0-r0 installed size:
+libcurl-7.74.0-r1 installed size:
 495616
 
-libcurl-7.74.0-r0 license:
+libcurl-7.74.0-r1 license:
 MIT
 
 ```
@@ -373,16 +373,16 @@ BSD-3-Clause IJG Zlib
 ### `apk` package: `libldap`
 
 ```console
-libldap-2.4.57-r0 description:
+libldap-2.4.57-r1 description:
 OpenLDAP libraries
 
-libldap-2.4.57-r0 webpage:
+libldap-2.4.57-r1 webpage:
 https://www.openldap.org/
 
-libldap-2.4.57-r0 installed size:
+libldap-2.4.57-r1 installed size:
 630784
 
-libldap-2.4.57-r0 license:
+libldap-2.4.57-r1 license:
 custom
 
 ```
@@ -441,16 +441,16 @@ Libpng
 ### `apk` package: `libpq`
 
 ```console
-libpq-13.1-r2 description:
+libpq-13.2-r0 description:
 PostgreSQL libraries
 
-libpq-13.1-r2 webpage:
+libpq-13.2-r0 webpage:
 https://www.postgresql.org/
 
-libpq-13.1-r2 installed size:
+libpq-13.2-r0 installed size:
 335872
 
-libpq-13.1-r2 license:
+libpq-13.2-r0 license:
 PostgreSQL
 
 ```
