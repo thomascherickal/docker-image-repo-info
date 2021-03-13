@@ -1,10 +1,10 @@
-# `tomcat:10.0.2-jdk15-openjdk-oraclelinux7`
+# `tomcat:10.0.4-jdk15-openjdk-oraclelinux7`
 
 ## Docker Metadata
 
-- Image ID: `sha256:a2033682a54e8f7ea0ff4f62956f21c4120a633794ee90e280f3f1dfad6c2539`
-- Created: `2021-03-10T01:03:28.006063199Z`
-- Virtual Size: ~ 547.01 Mb  
+- Image ID: `sha256:ccaacfbd35a06ad14cf6a028eff6a896a164caf2b454a3c3c4b71db35e54ac41`
+- Created: `2021-03-11T00:28:38.061198103Z`
+- Virtual Size: ~ 547.54 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["catalina.sh","run"]`
@@ -18,8 +18,8 @@
   - `LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib`
   - `GPG_KEYS=A9C5DF4D22E99998D9875A5110C01C5A2F6059E7`
   - `TOMCAT_MAJOR=10`
-  - `TOMCAT_VERSION=10.0.2`
-  - `TOMCAT_SHA512=eff1b4eab98c0f5cda196eb413f82bad9aec551d00f9ae0c0d5a17f5b21b1c62b0e8349291269fd15f5fff173b70099f4105821655ae98ced71238b593476d62`
+  - `TOMCAT_VERSION=10.0.4`
+  - `TOMCAT_SHA512=c88e2068e33ed0e08985770da252440f3341c6e1ef7198aacba84492084ada3cd888f7fe52297898f44668672b80c97a39057b8c46a9dcdc4c981d36c05a9969`
 
 ## `rpm` (`.rpm`-based packages)
 
