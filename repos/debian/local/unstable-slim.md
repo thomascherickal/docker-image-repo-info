@@ -1540,20 +1540,13 @@ Licenses: (parsed from: `/usr/share/doc/libpam-modules/copyright`, `/usr/share/d
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pam=1.4.0-6
-'http://deb.debian.org/debian/pool/main/p/pam/pam_1.4.0-6.dsc' pam_1.4.0-6.dsc 2169 SHA256:1147a787ce8b65676ebe0037d66eb21c71436d5c8db41d2d69456e9fea7031a3
-'http://deb.debian.org/debian/pool/main/p/pam/pam_1.4.0.orig.tar.xz' pam_1.4.0.orig.tar.xz 988908 SHA256:cd6d928c51e64139be3bdb38692c68183a509b83d4f2c221024ccd4bcddfd034
-'http://deb.debian.org/debian/pool/main/p/pam/pam_1.4.0-6.debian.tar.xz' pam_1.4.0-6.debian.tar.xz 115628 SHA256:01555c413669922d03eab697f4a24c81f512f4afb65a0008b9fff4018d4799b5
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/pam/1.4.0-6/
 
-- https://sources.debian.net/src/pam/1.4.0-6/ (for browsing the source)
-- https://sources.debian.net/src/pam/1.4.0-6/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/pam/1.4.0-6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pcre2=10.36-2`
 
