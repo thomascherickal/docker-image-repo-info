@@ -1,4 +1,4 @@
-## `archlinux:base-devel`
+## `archlinux:base-devel-20210314.0.17164`
 
 ```console
 $ docker pull archlinux@sha256:d4dbfd0933bcca45168b4f7dd5926f09bf4f7e1a23cece71e73723ef6bf85425
@@ -8,7 +8,7 @@ $ docker pull archlinux@sha256:d4dbfd0933bcca45168b4f7dd5926f09bf4f7e1a23cece71e
 -	Platforms:
 	-	linux; amd64
 
-### `archlinux:base-devel` - linux; amd64
+### `archlinux:base-devel-20210314.0.17164` - linux; amd64
 
 ```console
 $ docker pull archlinux@sha256:9432319430e7043b6996e95ab07412d82c00a4bc7e8bdb898952328ea4d27f9e
