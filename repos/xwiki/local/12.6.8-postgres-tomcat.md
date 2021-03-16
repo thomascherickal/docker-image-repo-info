@@ -834,14 +834,9 @@ Licenses: (parsed from: `/usr/share/doc/libglib2.0-0/copyright`)
 - `GPL-2+`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glib2.0=2.64.6-1~ubuntu20.04.2
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.64.6-1~ubuntu20.04.2.dsc' glib2.0_2.64.6-1~ubuntu20.04.2.dsc 3338 SHA512:e115b94aaaf3fe1464734217384bb2a0e386cbb77b9eb34c00d40a5f02f6c6016bd9dc7be47af68f2406503fd1ef7cc6d9a139e5426dc0750d7d6ad54cff0f8f
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.64.6.orig.tar.xz' glib2.0_2.64.6.orig.tar.xz 4781576 SHA512:5cd82c4d9b143e7aa130c24e25fb9def06dd915ef8ad8ed3883931bf5cddecf69c2e669ef6aa1d910484ede75b671e7c48a4f3fe50aa78955bff57b04f0cf958
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.64.6-1~ubuntu20.04.2.debian.tar.xz' glib2.0_2.64.6-1~ubuntu20.04.2.debian.tar.xz 108060 SHA512:2a4d3a9886bfdf2a503ffe4dd95cf28942a5ec14d739b918c7824cab5e29e2b090410f46b68be1d7098a56d2ae4738eaf4d3cd97001df8a62e657aba4c78262c
-```
 
 ### `dpkg` source package: `glibc=2.31-0ubuntu9.2`
 

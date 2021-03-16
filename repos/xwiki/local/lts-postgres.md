@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:06feaa3b9f0980f12de3a2677e84a1ec0e0c523c60f65c200a348913062474e2`
-- Created: `2021-03-11T01:44:31.647529259Z`
+- Image ID: `sha256:ae01ee33f2cf3bb31d27f56349462ad52c5357dd21f2d746b5f2b31ec8209b17`
+- Created: `2021-03-13T12:28:57.94150325Z`
 - Virtual Size: ~ 1.29 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -23,9 +23,9 @@
   - `TOMCAT_MAJOR=8`
   - `TOMCAT_VERSION=8.5.64`
   - `TOMCAT_SHA512=4b63a55b7beb38a3be6cbaeec525a596c8aeddfd595bd0c6d23f282af709085fcc4f526e3a577c58201d93b71c0f4d3a1a4abf8c2f886c4f7911d8dcfb839280`
-  - `XWIKI_VERSION=12.10.4`
-  - `XWIKI_URL_PREFIX=https://maven.xwiki.org/releases/org/xwiki/platform/xwiki-platform-distribution-war/12.10.4`
-  - `XWIKI_DOWNLOAD_SHA256=fd213ff52d575cfec4c7f0c2c1e20312075d131fbc08285cc7d3b1234437eaa4`
+  - `XWIKI_VERSION=12.10.5`
+  - `XWIKI_URL_PREFIX=https://maven.xwiki.org/releases/org/xwiki/platform/xwiki-platform-distribution-war/12.10.5`
+  - `XWIKI_DOWNLOAD_SHA256=3ec3d0ea12e763cc8eb7a1d818428f033c3d5fd6804bced52f33c29c13db0cc5`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -834,14 +834,9 @@ Licenses: (parsed from: `/usr/share/doc/libglib2.0-0/copyright`)
 - `GPL-2+`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glib2.0=2.64.6-1~ubuntu20.04.2
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.64.6-1~ubuntu20.04.2.dsc' glib2.0_2.64.6-1~ubuntu20.04.2.dsc 3338 SHA512:e115b94aaaf3fe1464734217384bb2a0e386cbb77b9eb34c00d40a5f02f6c6016bd9dc7be47af68f2406503fd1ef7cc6d9a139e5426dc0750d7d6ad54cff0f8f
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.64.6.orig.tar.xz' glib2.0_2.64.6.orig.tar.xz 4781576 SHA512:5cd82c4d9b143e7aa130c24e25fb9def06dd915ef8ad8ed3883931bf5cddecf69c2e669ef6aa1d910484ede75b671e7c48a4f3fe50aa78955bff57b04f0cf958
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.64.6-1~ubuntu20.04.2.debian.tar.xz' glib2.0_2.64.6-1~ubuntu20.04.2.debian.tar.xz 108060 SHA512:2a4d3a9886bfdf2a503ffe4dd95cf28942a5ec14d739b918c7824cab5e29e2b090410f46b68be1d7098a56d2ae4738eaf4d3cd97001df8a62e657aba4c78262c
-```
 
 ### `dpkg` source package: `glibc=2.31-0ubuntu9.2`
 
