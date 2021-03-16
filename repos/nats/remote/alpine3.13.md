@@ -1,4 +1,4 @@
-## `nats:2-alpine`
+## `nats:alpine3.13`
 
 ```console
 $ docker pull nats@sha256:04056aae6c6ae545f8a1e126c8a861e9b9533ed7f14949e4fe9e9769821dd073
@@ -11,7 +11,7 @@ $ docker pull nats@sha256:04056aae6c6ae545f8a1e126c8a861e9b9533ed7f14949e4fe9e97
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
 
-### `nats:2-alpine` - linux; amd64
+### `nats:alpine3.13` - linux; amd64
 
 ```console
 $ docker pull nats@sha256:0588bdd49eff9fbe5a97b3e59d8be059b2a3e28fc10028e5acc783c04168af62
@@ -64,7 +64,7 @@ CMD ["nats-server" "--config" "/etc/nats/nats-server.conf"]
 		Size: 414.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `nats:2-alpine` - linux; arm variant v6
+### `nats:alpine3.13` - linux; arm variant v6
 
 ```console
 $ docker pull nats@sha256:3b09aaa49e9ec674f064d69adde7ff3746fac00a4dfcd49c74bbde754a6486a3
@@ -117,7 +117,7 @@ CMD ["nats-server" "--config" "/etc/nats/nats-server.conf"]
 		Size: 413.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `nats:2-alpine` - linux; arm variant v7
+### `nats:alpine3.13` - linux; arm variant v7
 
 ```console
 $ docker pull nats@sha256:b864b2dd1d22aa7b79f42ac9e76d8a2cf236482a1a80366dd63d147cfd836c11
@@ -170,7 +170,7 @@ CMD ["nats-server" "--config" "/etc/nats/nats-server.conf"]
 		Size: 415.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `nats:2-alpine` - linux; arm64 variant v8
+### `nats:alpine3.13` - linux; arm64 variant v8
 
 ```console
 $ docker pull nats@sha256:ba5427cdb73e45d940e785bc123b0ecc0fe7aacb57e7222a188b75f29c54adf1
