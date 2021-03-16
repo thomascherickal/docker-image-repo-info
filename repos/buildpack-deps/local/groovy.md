@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:dd206c46f501acb331a16aabffa24c8fe89718f874a13f78759ac941ecbb9031`
-- Created: `2021-03-04T03:50:42.969439076Z`
-- Virtual Size: ~ 711.62 Mb  
+- Image ID: `sha256:12eb9c66bfc9e9b397fe92a3c1c33c35cfa3900b79ed7f1c21b9bfadbba4abd0`
+- Created: `2021-03-12T03:09:59.732387421Z`
+- Virtual Size: ~ 712.45 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -1085,12 +1085,12 @@ $ apt-get source -qq --print-uris gdk-pixbuf=2.40.0+dfsg-5ubuntu0.2
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gdk-pixbuf/gdk-pixbuf_2.40.0+dfsg-5ubuntu0.2.debian.tar.xz' gdk-pixbuf_2.40.0+dfsg-5ubuntu0.2.debian.tar.xz 19184 SHA512:776dde20d9876809d68f4afbbfe1a1165c516844dca6ae4c5fb5831368fabc9aaeeed2b5e0febaa487bd8e344970e2becd41a305facf98f0ae722a3ef85e45fb
 ```
 
-### `dpkg` source package: `git=1:2.27.0-1ubuntu1`
+### `dpkg` source package: `git=1:2.27.0-1ubuntu1.1`
 
 Binary Packages:
 
-- `git=1:2.27.0-1ubuntu1`
-- `git-man=1:2.27.0-1ubuntu1`
+- `git=1:2.27.0-1ubuntu1.1`
+- `git-man=1:2.27.0-1ubuntu1.1`
 
 Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/copyright`)
 
@@ -1116,21 +1116,21 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris git=1:2.27.0-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.27.0-1ubuntu1.dsc' git_2.27.0-1ubuntu1.dsc 2991 SHA512:37156a5667907c88dd713cdf3efd463c74fd96f5a6bf67f3cf102e91f969f9cd682ba51bf610382d28b10af4612d65f34cd78cb4a3b9256ac422eec1b71ea140
+$ apt-get source -qq --print-uris git=1:2.27.0-1ubuntu1.1
+'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.27.0-1ubuntu1.1.dsc' git_2.27.0-1ubuntu1.1.dsc 2962 SHA512:c94a7bac229b6596eb4c28e6559bf8e261a1f558405753cdb3277a4fe6b1012df8492bf55884ac4019c4b5d8ff981932e896b0a580186fb995162082b95e58fa
 'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.27.0.orig.tar.xz' git_2.27.0.orig.tar.xz 6074636 SHA512:8ddea44503db7caf1f6080e64555541aa64a7b8761fd6541965ee244d9c4a47befccda1a239f11d86c2ad0ff24923d084f65712f5f2d6cfa178573e3471c6c33
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.27.0-1ubuntu1.debian.tar.xz' git_2.27.0-1ubuntu1.debian.tar.xz 652712 SHA512:392bbd0494e86a2e3a06e57e6ad18d160f7540f0f965882190db43691c58153e01be9090ad44cb54e2a4a6a96e63e21eaa38b26424cb3e9b910a774b8679f7eb
+'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.27.0-1ubuntu1.1.debian.tar.xz' git_2.27.0-1ubuntu1.1.debian.tar.xz 655812 SHA512:36a754303ed9d730cc6383ff8163afd79da945e274241389aa4345e4dfc4b3e0e3e98f7af4db15d99b76a6c28308f715ce02b682c7dfb2d67bac0ea177e293bc
 ```
 
-### `dpkg` source package: `glib2.0=2.66.1-2`
+### `dpkg` source package: `glib2.0=2.66.1-2ubuntu0.1`
 
 Binary Packages:
 
-- `libglib2.0-0:amd64=2.66.1-2`
-- `libglib2.0-bin=2.66.1-2`
-- `libglib2.0-data=2.66.1-2`
-- `libglib2.0-dev:amd64=2.66.1-2`
-- `libglib2.0-dev-bin=2.66.1-2`
+- `libglib2.0-0:amd64=2.66.1-2ubuntu0.1`
+- `libglib2.0-bin=2.66.1-2ubuntu0.1`
+- `libglib2.0-data=2.66.1-2ubuntu0.1`
+- `libglib2.0-dev:amd64=2.66.1-2ubuntu0.1`
+- `libglib2.0-dev-bin=2.66.1-2ubuntu0.1`
 
 Licenses: (parsed from: `/usr/share/doc/libglib2.0-0/copyright`, `/usr/share/doc/libglib2.0-bin/copyright`, `/usr/share/doc/libglib2.0-data/copyright`, `/usr/share/doc/libglib2.0-dev/copyright`, `/usr/share/doc/libglib2.0-dev-bin/copyright`)
 
@@ -1138,14 +1138,9 @@ Licenses: (parsed from: `/usr/share/doc/libglib2.0-0/copyright`, `/usr/share/doc
 - `GPL-2+`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glib2.0=2.66.1-2
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.66.1-2.dsc' glib2.0_2.66.1-2.dsc 3235 SHA512:6b72e8586ce0796e71ed3c23e758049520634d693efc710a25601272e983716be34eff1ff3b5c8bc425e2d2b601f4c5abcf51cf32014a44411e9e21169824cc2
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.66.1.orig.tar.xz' glib2.0_2.66.1.orig.tar.xz 4834784 SHA512:7e1d649fc4d5c275793d028a1710f7f50ef4968e5c07fe8c8e500e08b997e0b05be6b7428d5475b42d6a1aafeb993e9f3a31c07bb065a6924bdaa30b2b0bf5c4
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.66.1-2.debian.tar.xz' glib2.0_2.66.1-2.debian.tar.xz 121056 SHA512:54467c8d153614ad266ebda7c9183726e6fb2034fc36af364bb4886290398ab26d39b67146bb99fb0cefbf5999a9953268914e1c7be11a21206e0b61eff26166
-```
 
 ### `dpkg` source package: `glibc=2.32-0ubuntu3`
 
@@ -2948,14 +2943,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=5.8.0-44.50
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.8.0-44.50.dsc' linux_5.8.0-44.50.dsc 8562 SHA512:9b629d752b9c6febbef49bab88d29780f23fe50878382f7c6eb40bec8b53583467036303db1fea9c5eb4adb3e837dc34ca121f018f995fa9e6186a2fe1c1c533
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.8.0.orig.tar.gz' linux_5.8.0.orig.tar.gz 178322327 SHA512:24b71be99aa6b599b237f26c891ed6ed5d255f81adf73cdc65d72d1497edd9303001fb4c4ee1bfd30be821f6883321cb17400493547c0023f4e9137d60ea4e97
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.8.0-44.50.diff.gz' linux_5.8.0-44.50.diff.gz 4260901 SHA512:8761d79609fbec3263647083659a5c885e2943e2f243e0a8c783c41887ec82716d63c6dd970e8186e86e14c6f7f78b65406d25534cf3e382be586059482041fb
-```
 
 ### `dpkg` source package: `lsb=11.1.0ubuntu2`
 
@@ -3402,11 +3392,11 @@ $ apt-get source -qq --print-uris openldap=2.4.53+dfsg-1ubuntu1.4
 'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.53+dfsg-1ubuntu1.4.debian.tar.xz' openldap_2.4.53+dfsg-1ubuntu1.4.debian.tar.xz 186512 SHA512:9642ecd85dd3999388c8340bc552009edb113b1f5b673086676e6e6e11c412fbb4453c66ae55ca7fa96a4a00750f2e7963ae6b40a5dfe23acdb9926777fb289a
 ```
 
-### `dpkg` source package: `openssh=1:8.3p1-1`
+### `dpkg` source package: `openssh=1:8.3p1-1ubuntu0.1`
 
 Binary Packages:
 
-- `openssh-client=1:8.3p1-1`
+- `openssh-client=1:8.3p1-1ubuntu0.1`
 
 Licenses: (parsed from: `/usr/share/doc/openssh-client/copyright`)
 
@@ -3422,11 +3412,11 @@ Licenses: (parsed from: `/usr/share/doc/openssh-client/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openssh=1:8.3p1-1
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.3p1-1.dsc' openssh_8.3p1-1.dsc 3342 SHA512:98f47b52110af25aff0ea690b1536961d9800cb0f131e7bf9e305d2ca999a85a040588abc83bf1acd11bcf16dcc8c88d77fcc151737833f2df854cf56bc47be4
+$ apt-get source -qq --print-uris openssh=1:8.3p1-1ubuntu0.1
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.3p1-1ubuntu0.1.dsc' openssh_8.3p1-1ubuntu0.1.dsc 3342 SHA512:b6accb80ceca9e207c2836447f257d2dfbb85d7f478925a0031cd77cdaacedd82b1fff9286c675b7cb45aec66145de72b23f8094242fb9db93e8c52242ae7119
 'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.3p1.orig.tar.gz' openssh_8.3p1.orig.tar.gz 1706358 SHA512:b5232f7c85bf59ae2ff9d17b030117012e257e3b8c0d5ac60bb139a85b1fbf298b40f2e04203a2e13ca7273053ed668b9dedd54d3a67a7cb8e8e58c0228c5f40
 'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.3p1.orig.tar.gz.asc' openssh_8.3p1.orig.tar.gz.asc 683 SHA512:569fa12b3671af15bd7cd54fc7b13d1d64f3e96eb28f6dc430082f7bec4595689c633d3d56c23faad45b73e4da666c3ec090de26bf54f49410ba9bb8b5363e75
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.3p1-1.debian.tar.xz' openssh_8.3p1-1.debian.tar.xz 176252 SHA512:2e984027a3d68259d517fe91c056ac0b1016703f55a01dee5a7a20ecf13b9177ef6192521cf4e1aff183cae4b40c1a056f06aec5213f6238cd9a543bb3283e7d
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.3p1-1ubuntu0.1.debian.tar.xz' openssh_8.3p1-1ubuntu0.1.debian.tar.xz 176524 SHA512:14911cf4a7c3925326c49ffee852a3cb867810ddc42c33ac597694aa2bcd12ad250097f3791faaad49cd55a3673eb32119df909c717685d03ef022c7a7a4205f
 ```
 
 ### `dpkg` source package: `openssl=1.1.1f-1ubuntu4.2`
