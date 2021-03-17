@@ -1180,14 +1180,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 - `GPL-2`
 - `redpine-signals`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=4.4.0-203.235
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0-203.235.dsc' linux_4.4.0-203.235.dsc 11941 SHA512:28465ea8ddb9dbaba85eb99f82c961e5937f384760b52e475a8a00034e40ff4ed2edf66b9d72a1e9f6e727d7427b088065d0152ccb5ab26c508538201f0da37c
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0.orig.tar.gz' linux_4.4.0.orig.tar.gz 132860730 SHA512:28ef89b62f663f2d90b58274799b7ebeff04699f08d0b83f650b0de179d4ef354450c81ecda07522b493c43d5eb2d530fa0f552a2794d48f84878e05efa39cc3
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0-203.235.diff.gz' linux_4.4.0-203.235.diff.gz 16959512 SHA512:9dab727d9256a27764b8081df25a37da3a0842e2d67d9036011f5940ce885f07c889ba405dc8144306bf055f9858874ebd12f5d8a6d968bd96690299004c35d8
-```
 
 ### `dpkg` source package: `lsb=9.20160110ubuntu0.2`
 
