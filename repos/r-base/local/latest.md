@@ -1143,10 +1143,16 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris glib2.0=2.66.7-2
-'http://http.debian.net/debian/pool/main/g/glib2.0/glib2.0_2.66.7-2.dsc' glib2.0_2.66.7-2.dsc 3386 SHA256:549f7f21ece26b3074cbb4560f37719d89c5356464a0f65cc18207b6de096793
-'http://http.debian.net/debian/pool/main/g/glib2.0/glib2.0_2.66.7.orig.tar.xz' glib2.0_2.66.7.orig.tar.xz 4844892 SHA256:09f158769f6f26b31074e15b1ac80ec39b13b53102dfae66cfe826fb2cc65502
-'http://http.debian.net/debian/pool/main/g/glib2.0/glib2.0_2.66.7-2.debian.tar.xz' glib2.0_2.66.7-2.debian.tar.xz 101748 SHA256:c276bc7e31fbe0d3285faac4a4792dab4ab90ef953ba416adc33601c71355c53
+'http://deb.debian.org/debian/pool/main/g/glib2.0/glib2.0_2.66.7-2.dsc' glib2.0_2.66.7-2.dsc 3386 SHA256:549f7f21ece26b3074cbb4560f37719d89c5356464a0f65cc18207b6de096793
+'http://deb.debian.org/debian/pool/main/g/glib2.0/glib2.0_2.66.7.orig.tar.xz' glib2.0_2.66.7.orig.tar.xz 4844892 SHA256:09f158769f6f26b31074e15b1ac80ec39b13b53102dfae66cfe826fb2cc65502
+'http://deb.debian.org/debian/pool/main/g/glib2.0/glib2.0_2.66.7-2.debian.tar.xz' glib2.0_2.66.7-2.debian.tar.xz 101748 SHA256:c276bc7e31fbe0d3285faac4a4792dab4ab90ef953ba416adc33601c71355c53
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/glib2.0/2.66.7-2/ (for browsing the source)
+- https://sources.debian.net/src/glib2.0/2.66.7-2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/glib2.0/2.66.7-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `glibc=2.31-9`
 
