@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:e4370ed5ebe20012b37ca2c29d324b86d02bfaa5fef7c71cbc4065076a6be996`
-- Created: `2021-03-11T19:28:41.887169881Z`
-- Virtual Size: ~ 751.10 Mb  
+- Image ID: `sha256:fd400f968a9e9b04ff1944e203880b00f2ac79652adc10c7bc836c14411360b2`
+- Created: `2021-03-13T12:06:41.265586207Z`
+- Virtual Size: ~ 747.16 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -2147,11 +2147,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libxslt/1.1.32-2.2~deb10u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libxslt/1.1.32-2.2~deb10u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libzstd=1.3.8+dfsg-3`
+### `dpkg` source package: `libzstd=1.3.8+dfsg-3+deb10u2`
 
 Binary Packages:
 
-- `libzstd1:amd64=1.3.8+dfsg-3`
+- `libzstd1:amd64=1.3.8+dfsg-3+deb10u2`
 
 Licenses: (parsed from: `/usr/share/doc/libzstd1/copyright`)
 
@@ -2164,17 +2164,17 @@ Licenses: (parsed from: `/usr/share/doc/libzstd1/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libzstd=1.3.8+dfsg-3
-'http://deb.debian.org/debian/pool/main/libz/libzstd/libzstd_1.3.8+dfsg-3.dsc' libzstd_1.3.8+dfsg-3.dsc 2285 SHA256:d5a46f4c8ecaffac70eb8799a7a221cf8c877d830bb2803364aeb6c825afa6e3
-'http://deb.debian.org/debian/pool/main/libz/libzstd/libzstd_1.3.8+dfsg.orig.tar.xz' libzstd_1.3.8+dfsg.orig.tar.xz 1299276 SHA256:03851f2c26ffbf1d43633df3f98966f3c62e698e91ef4dc90523915bc934e5f7
-'http://deb.debian.org/debian/pool/main/libz/libzstd/libzstd_1.3.8+dfsg-3.debian.tar.xz' libzstd_1.3.8+dfsg-3.debian.tar.xz 10396 SHA256:392a971d6bba30b6cb3e5ff04efb10c45b052e458dfc6631ede9e024341321f9
+$ apt-get source -qq --print-uris libzstd=1.3.8+dfsg-3+deb10u2
+'http://security.debian.org/debian-security/pool/updates/main/libz/libzstd/libzstd_1.3.8+dfsg-3+deb10u2.dsc' libzstd_1.3.8+dfsg-3+deb10u2.dsc 1947 SHA256:572fae1c7dc9bace3b9f7fcdeabf30dd1d00d0462e319ccec7b58b0adbf7dc85
+'http://security.debian.org/debian-security/pool/updates/main/libz/libzstd/libzstd_1.3.8+dfsg.orig.tar.xz' libzstd_1.3.8+dfsg.orig.tar.xz 1299276 SHA256:03851f2c26ffbf1d43633df3f98966f3c62e698e91ef4dc90523915bc934e5f7
+'http://security.debian.org/debian-security/pool/updates/main/libz/libzstd/libzstd_1.3.8+dfsg-3+deb10u2.debian.tar.xz' libzstd_1.3.8+dfsg-3+deb10u2.debian.tar.xz 11648 SHA256:1f107f6cdc3bf46fb2aebf9c5c997ed2a125ac2fb1d28e939da857d5b061079e
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/libzstd/1.3.8+dfsg-3/ (for browsing the source)
-- https://sources.debian.net/src/libzstd/1.3.8+dfsg-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libzstd/1.3.8+dfsg-3/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/libzstd/1.3.8+dfsg-3+deb10u2/ (for browsing the source)
+- https://sources.debian.net/src/libzstd/1.3.8+dfsg-3+deb10u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libzstd/1.3.8+dfsg-3+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `linux=4.19.171-2`
 
@@ -2645,37 +2645,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/openldap/2.4.47+dfsg-3+deb10u6/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/openldap/2.4.47+dfsg-3+deb10u6/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openssl=1.1.1d-0+deb10u4`
-
-Binary Packages:
-
-- `openssl=1.1.1d-0+deb10u4`
-
-**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
-If source is available (seen below), check the contents of `debian/copyright` within it.
-
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris openssl=1.1.1d-0+deb10u4
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1d-0+deb10u4.dsc' openssl_1.1.1d-0+deb10u4.dsc 2472 SHA256:b902902750711baf35c087bd220f0fc055ad41f9e810df07246e035fac195cf1
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1d.orig.tar.gz' openssl_1.1.1d.orig.tar.gz 8845861 SHA256:1e3a91bc1f9dfce01af26026f856e064eab4c8ee0a8f457b5ae30b40b8b711f2
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1d.orig.tar.gz.asc' openssl_1.1.1d.orig.tar.gz.asc 488 SHA256:f3fd3299a79421fffd51d35f62636b8e987dab1d3033d93a19d7685868e15395
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1d-0+deb10u4.debian.tar.xz' openssl_1.1.1d-0+deb10u4.debian.tar.xz 91472 SHA256:3f6a76b437f5407fe9dba0a47b9d5ba427c83255f17769c4d8532788146fa6ca
-```
-
-Other potentially useful URLs:
-
-- https://sources.debian.net/src/openssl/1.1.1d-0+deb10u4/ (for browsing the source)
-- https://sources.debian.net/src/openssl/1.1.1d-0+deb10u4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openssl/1.1.1d-0+deb10u4/ (for access to the source package after it no longer exists in the archive)
-
 ### `dpkg` source package: `openssl=1.1.1d-0+deb10u5`
 
 Binary Packages:
 
 - `libssl1.1:amd64=1.1.1d-0+deb10u5`
+- `openssl=1.1.1d-0+deb10u5`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -3250,11 +3225,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tar/1.30+dfsg-6/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tar/1.30+dfsg-6/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tiff=4.1.0+git191117-2~deb10u1`
+### `dpkg` source package: `tiff=4.1.0+git191117-2~deb10u2`
 
 Binary Packages:
 
-- `libtiff5:amd64=4.1.0+git191117-2~deb10u1`
+- `libtiff5:amd64=4.1.0+git191117-2~deb10u2`
 
 Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`)
 
@@ -3263,17 +3238,17 @@ Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris tiff=4.1.0+git191117-2~deb10u1
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.1.0+git191117-2~deb10u1.dsc' tiff_4.1.0+git191117-2~deb10u1.dsc 2274 SHA256:fc63d46d3fbc75c2f03b09b79f9297d701a2b08c968bc8b5826f9e71df5180c8
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.1.0+git191117.orig.tar.xz' tiff_4.1.0+git191117.orig.tar.xz 1533524 SHA256:67e1d045e994adb7144b0cca228d70dd6d520aaf8c75c342064bc0fd601e6e42
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.1.0+git191117-2~deb10u1.debian.tar.xz' tiff_4.1.0+git191117-2~deb10u1.debian.tar.xz 19440 SHA256:e9dcc77d338663f6be84efe32ae5d4ec9b48923c731aa939f37aa909e60d9f10
+$ apt-get source -qq --print-uris tiff=4.1.0+git191117-2~deb10u2
+'http://security.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.1.0+git191117-2~deb10u2.dsc' tiff_4.1.0+git191117-2~deb10u2.dsc 2274 SHA256:5cb0e00ee767c39a2b398942fd20291403a3e6b41ac296e99b158b5cefb1cdab
+'http://security.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.1.0+git191117.orig.tar.xz' tiff_4.1.0+git191117.orig.tar.xz 1533524 SHA256:67e1d045e994adb7144b0cca228d70dd6d520aaf8c75c342064bc0fd601e6e42
+'http://security.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.1.0+git191117-2~deb10u2.debian.tar.xz' tiff_4.1.0+git191117-2~deb10u2.debian.tar.xz 20396 SHA256:0d7c74f2ecd6423af258148822b74a6d1f537f6cb931daf17998db5ff5cb7a44
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/tiff/4.1.0+git191117-2~deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/tiff/4.1.0+git191117-2~deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tiff/4.1.0+git191117-2~deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/tiff/4.1.0+git191117-2~deb10u2/ (for browsing the source)
+- https://sources.debian.net/src/tiff/4.1.0+git191117-2~deb10u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tiff/4.1.0+git191117-2~deb10u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tzdata=2021a-0+deb10u1`
 
