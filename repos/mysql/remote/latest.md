@@ -1,7 +1,7 @@
 ## `mysql:latest`
 
 ```console
-$ docker pull mysql@sha256:bfb6bdc172e101a3e7ab321f541bd4e3f9ac11bac8da7ea0708defcaf2c7554e
+$ docker pull mysql@sha256:5d1d733f32c28d47061e9d5c2b1fb49b4628c4432901632a70019ec950eda491
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull mysql@sha256:bfb6bdc172e101a3e7ab321f541bd4e3f9ac11bac8da7ea0708de
 ### `mysql:latest` - linux; amd64
 
 ```console
-$ docker pull mysql@sha256:faa0f261263965c7e4e80dfd1ba5510d53d41d16d3cf944f75a9add47ddf9e00
+$ docker pull mysql@sha256:d5ba356f580dce71bebfc9fb0cd29b446cfb3aedff699fa9a1e34c2ffc88dd13
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **159.3 MB (159284745 bytes)**  
+-	Total Size: **159.3 MB (159284777 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:808391de2156a514274092b19fe6c08ea6dec801f2a268f00c0f2f5e4c2af1cb`
+-	Image ID: `sha256:26d0ac143221341c36402a139826e938d2ea6f2e458005a71699975c84e96ade`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mysqld"]`
 
@@ -53,15 +53,15 @@ RUN { 		echo mysql-community-server mysql-community-server/data-dir select ''; 	
 VOLUME [/var/lib/mysql]
 # Fri, 12 Mar 2021 11:19:42 GMT
 COPY dir:2e040acc386ebd23b8571951a51e6cb93647df091bc26159b8c757ef82b3fcda in /etc/mysql/ 
-# Wed, 17 Mar 2021 20:19:59 GMT
-COPY file:cba08b48de5bd6f582fe9afb63f5e5a697a18ca3046a42a13aa9517e9153e6f5 in /usr/local/bin/ 
-# Wed, 17 Mar 2021 20:20:00 GMT
+# Fri, 19 Mar 2021 17:20:33 GMT
+COPY file:2c6221a2517649db2e9dd27098cc9ae1bdaff205f8d6f0299b20a41b86084d77 in /usr/local/bin/ 
+# Fri, 19 Mar 2021 17:20:34 GMT
 RUN ln -s usr/local/bin/docker-entrypoint.sh /entrypoint.sh # backwards compat
-# Wed, 17 Mar 2021 20:20:00 GMT
+# Fri, 19 Mar 2021 17:20:34 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Wed, 17 Mar 2021 20:20:00 GMT
+# Fri, 19 Mar 2021 17:20:34 GMT
 EXPOSE 3306 33060
-# Wed, 17 Mar 2021 20:20:01 GMT
+# Fri, 19 Mar 2021 17:20:34 GMT
 CMD ["mysqld"]
 ```
 
@@ -106,11 +106,11 @@ CMD ["mysqld"]
 		Last Modified: Fri, 12 Mar 2021 11:22:26 GMT  
 		Size: 844.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:460de37ce6f9af2b8871689805f9de3a498a47966a640d769024a6f59ef57d10`  
-		Last Modified: Wed, 17 Mar 2021 20:20:30 GMT  
-		Size: 5.5 KB (5487 bytes)  
+	-	`sha256:ef8b369352ae528672fd3c53de6054268aee4b4a9b0b34ba08ed79c4b4326d42`  
+		Last Modified: Fri, 19 Mar 2021 17:21:06 GMT  
+		Size: 5.5 KB (5519 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9c38e51eabd2c1b007232a1f380582c2e62a47f0c881d8182f95ac9ff9b97e3a`  
-		Last Modified: Wed, 17 Mar 2021 20:20:29 GMT  
+	-	`sha256:ebd210f0917d0f2635be71c1f9dba8dfc4c5325e159c32ff1206aab9f0c2d9a4`  
+		Last Modified: Fri, 19 Mar 2021 17:21:06 GMT  
 		Size: 121.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
