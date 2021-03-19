@@ -942,14 +942,9 @@ Licenses: (parsed from: `/usr/share/doc/libglib2.0-0/copyright`)
 
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glib2.0=2.48.2-0ubuntu4.7
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.48.2-0ubuntu4.7.dsc' glib2.0_2.48.2-0ubuntu4.7.dsc 3173 SHA512:168056634b3f91d6b7576296d6637714630d2562bb4ee84718fcf76f06433a77a60993f3ff1f5da1a6a0281714fa1c65650df5989b26c89e92a341ec98d32646
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.48.2.orig.tar.xz' glib2.0_2.48.2.orig.tar.xz 6408644 SHA512:2eac104eb2207d0a6488992e48069a34b417f51e141364f281ab7b0953a6de88be177b1c694dd9464a856c9a5d8021e3cf0193a8d9c5aaf6ea11f1f9ff743c43
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.48.2-0ubuntu4.7.debian.tar.xz' glib2.0_2.48.2-0ubuntu4.7.debian.tar.xz 91564 SHA512:147af4cbb491cc370c67db0a43082b6b298d7311e1358a0ed8c64b5dd8d40c4608743a2efc90c81e50136f9d33c26a1b2836affebecc095d47fe92cbec48cfed
-```
 
 ### `dpkg` source package: `glibc=2.23-0ubuntu11.2`
 
@@ -1782,14 +1777,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 - `GPL-2`
 - `redpine-signals`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=4.4.0-203.235
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0-203.235.dsc' linux_4.4.0-203.235.dsc 11941 SHA512:28465ea8ddb9dbaba85eb99f82c961e5937f384760b52e475a8a00034e40ff4ed2edf66b9d72a1e9f6e727d7427b088065d0152ccb5ab26c508538201f0da37c
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0.orig.tar.gz' linux_4.4.0.orig.tar.gz 132860730 SHA512:28ef89b62f663f2d90b58274799b7ebeff04699f08d0b83f650b0de179d4ef354450c81ecda07522b493c43d5eb2d530fa0f552a2794d48f84878e05efa39cc3
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0-203.235.diff.gz' linux_4.4.0-203.235.diff.gz 16959512 SHA512:9dab727d9256a27764b8081df25a37da3a0842e2d67d9036011f5940ce885f07c889ba405dc8144306bf055f9858874ebd12f5d8a6d968bd96690299004c35d8
-```
 
 ### `dpkg` source package: `lksctp-tools=1.0.16+dfsg-3`
 
