@@ -6711,14 +6711,9 @@ Licenses: (parsed from: `/usr/share/doc/libruby2.5/copyright`, `/usr/share/doc/r
 - `Unicode`
 - `zlib/libpng`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ruby2.5=2.5.1-1ubuntu1.7
-'http://archive.ubuntu.com/ubuntu/pool/main/r/ruby2.5/ruby2.5_2.5.1-1ubuntu1.7.dsc' ruby2.5_2.5.1-1ubuntu1.7.dsc 2560 SHA512:2744ea562989c6d010db9469f69638d4ef47eaf20af4c7cde5eb00fc0965ac0c77e808c9289662e4a96f43021048a64f9cfe2153e34be1b97e6b7124ffa226c7
-'http://archive.ubuntu.com/ubuntu/pool/main/r/ruby2.5/ruby2.5_2.5.1.orig.tar.gz' ruby2.5_2.5.1.orig.tar.gz 15669354 SHA512:c6f418653f46efd9980a5f19c8f31b626ab6a0473f59cc4c136a13e4bc5f2cac672341224f0d8c0739bcf9260f20db901b42d6f02e5c91daadb04c67613ed03e
-'http://archive.ubuntu.com/ubuntu/pool/main/r/ruby2.5/ruby2.5_2.5.1-1ubuntu1.7.debian.tar.xz' ruby2.5_2.5.1-1ubuntu1.7.debian.tar.xz 131240 SHA512:8f0257e869c7a1d4a9a0c2afb6b3e3abca0f5cbb614c5bdb712f7f337278bd53b547696f68ede4345685fcf68b657edddd0148fe8aad8d141795e4d3b2d20cc2
-```
 
 ### `dpkg` source package: `rubygems-integration=1.11`
 
@@ -7058,14 +7053,9 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=237-3ubuntu10.44
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.44.dsc' systemd_237-3ubuntu10.44.dsc 5220 SHA512:37eaf84e1c83462aaceb4b32a0d28bcf983beab30d293ef92f5ee74bf8ebdfdd7eb954be377bdfd931b9f941f9cee11a421617d356dc9c45dfc8cdb0b9bc5ac3
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237.orig.tar.gz' systemd_237.orig.tar.gz 6871350 SHA512:15ef4b92815a6dd9a6c51672dbc00fd7cd0f08068ef0cbeaca574f68d330b28bc67ba1946f24f75ef3d9e7b63843a73eea700db54688061dbf5c9f8470394c3b
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.44.debian.tar.xz' systemd_237-3ubuntu10.44.debian.tar.xz 283916 SHA512:02e65b13363a07aa835bbc70c326faf3cd48e8e0b71f6b738faf9041cea1852cf208b491b59ac7d3e38d0c9e0429f4def5a6362cfc0dd08f531350301a2eb991
-```
 
 ### `dpkg` source package: `sysvinit=2.88dsf-59.10ubuntu1`
 
