@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:cf92241175ae4197bb4cbcb99b62d8e89327e97e85e1e85d9b3b12d4e249e9f6`
-- Created: `2021-03-12T14:57:23.480079194Z`
+- Image ID: `sha256:f8652da72d531ad23420d821b2ca6402c4a389b97bb79d908c1b375ec402a074`
+- Created: `2021-03-22T19:33:06.500314151Z`
 - Virtual Size: ~ 1.19 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -6935,11 +6935,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `ros-rolling-demo-nodes-cpp=0.12.0-1focal.20210213.035439`
+### `dpkg` source package: `ros-rolling-demo-nodes-cpp=0.12.0-3focal.20210313.005133`
 
 Binary Packages:
 
-- `ros-rolling-demo-nodes-cpp=0.12.0-1focal.20210213.035439`
+- `ros-rolling-demo-nodes-cpp=0.12.0-3focal.20210313.005133`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -6949,11 +6949,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `ros-rolling-demo-nodes-py=0.12.0-1focal.20210213.032120`
+### `dpkg` source package: `ros-rolling-demo-nodes-py=0.12.0-3focal.20210313.001123`
 
 Binary Packages:
 
-- `ros-rolling-demo-nodes-py=0.12.0-1focal.20210213.032120`
+- `ros-rolling-demo-nodes-py=0.12.0-3focal.20210313.001123`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -7005,11 +7005,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `ros-rolling-example-interfaces=0.9.0-2focal.20210213.025037`
+### `dpkg` source package: `ros-rolling-example-interfaces=0.9.0-3focal.20210312.232009`
 
 Binary Packages:
 
-- `ros-rolling-example-interfaces=0.9.0-2focal.20210213.025037`
+- `ros-rolling-example-interfaces=0.9.0-3focal.20210312.232009`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -7747,11 +7747,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `ros-rolling-ros1-bridge=0.10.1-1focal.20210213.040500`
+### `dpkg` source package: `ros-rolling-ros1-bridge=0.10.1-1focal.20210313.010130`
 
 Binary Packages:
 
-- `ros-rolling-ros1-bridge=0.10.1-1focal.20210213.040500`
+- `ros-rolling-ros1-bridge=0.10.1-1focal.20210313.010130`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
