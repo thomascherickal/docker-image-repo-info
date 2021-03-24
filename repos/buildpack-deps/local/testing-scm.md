@@ -2225,21 +2225,13 @@ Licenses: (parsed from: `/usr/share/doc/openssh-client/copyright`)
 - `Powell-BSD-style`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssh=1:8.4p1-4
-'http://deb.debian.org/debian/pool/main/o/openssh/openssh_8.4p1-4.dsc' openssh_8.4p1-4.dsc 3353 SHA256:90b6960dfb1977c0435ece58626178c92f7cf0d8541bf6bc994aaa5b7789cd52
-'http://deb.debian.org/debian/pool/main/o/openssh/openssh_8.4p1.orig.tar.gz' openssh_8.4p1.orig.tar.gz 1742201 SHA256:5a01d22e407eb1c05ba8a8f7c654d388a13e9f226e4ed33bd38748dafa1d2b24
-'http://deb.debian.org/debian/pool/main/o/openssh/openssh_8.4p1.orig.tar.gz.asc' openssh_8.4p1.orig.tar.gz.asc 683 SHA256:ccd9dd484651ce4cc926228f6e1b46afaf0c5ab98a866217fa0ef1074370ea2b
-'http://deb.debian.org/debian/pool/main/o/openssh/openssh_8.4p1-4.debian.tar.xz' openssh_8.4p1-4.debian.tar.xz 178920 SHA256:b1a4ea6486978c984cea450ddc4da04b106f2e34a14886b394027fbaec83d275
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/openssh/1:8.4p1-4/
 
-- https://sources.debian.net/src/openssh/1:8.4p1-4/ (for browsing the source)
-- https://sources.debian.net/src/openssh/1:8.4p1-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openssh/1:8.4p1-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssl=1.1.1j-1`
 
@@ -2793,20 +2785,13 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=247.3-1
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_247.3-1.dsc' systemd_247.3-1.dsc 5167 SHA256:6cb274436b236ebfdde4e588da296e918ab590a1dac19847a05743b3cf9cc79f
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_247.3.orig.tar.gz' systemd_247.3.orig.tar.gz 9895385 SHA256:2869986e219a8dfc96cc0dffac66e0c13bb70a89e16b85a3948876c146cfa3e0
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_247.3-1.debian.tar.xz' systemd_247.3-1.debian.tar.xz 159632 SHA256:171fd135dbb67b70144b24ace49f8cf745f5f65c6b0e562ab4e9b6e21a3aad93
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/systemd/247.3-1/
 
-- https://sources.debian.net/src/systemd/247.3-1/ (for browsing the source)
-- https://sources.debian.net/src/systemd/247.3-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/systemd/247.3-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sysvinit=2.96-6`
 
