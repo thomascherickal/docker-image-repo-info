@@ -2053,20 +2053,13 @@ Licenses: (parsed from: `/usr/share/doc/imagemagick/copyright`, `/usr/share/doc/
 - `Perllikelicence`
 - `TatcherUlrichPublicDomain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris imagemagick=8:6.9.7.4+dfsg-11+deb9u11
-'http://security.debian.org/debian-security/pool/updates/main/i/imagemagick/imagemagick_6.9.7.4+dfsg-11+deb9u11.dsc' imagemagick_6.9.7.4+dfsg-11+deb9u11.dsc 4824 SHA256:13f138f85832e9469f41663601b68828191b438e613b10c1d131fa82766ed0fe
-'http://security.debian.org/debian-security/pool/updates/main/i/imagemagick/imagemagick_6.9.7.4+dfsg.orig.tar.xz' imagemagick_6.9.7.4+dfsg.orig.tar.xz 8929800 SHA256:47fb2cdd26f5913318c4504f16ea363e04d1f400dda9ec52e461ab661d724026
-'http://security.debian.org/debian-security/pool/updates/main/i/imagemagick/imagemagick_6.9.7.4+dfsg-11+deb9u11.debian.tar.xz' imagemagick_6.9.7.4+dfsg-11+deb9u11.debian.tar.xz 269016 SHA256:0f9aff7784e097129e93903387a0ae7fab4d0ea2da52ebc3b693ed58786b42e1
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/imagemagick/8:6.9.7.4+dfsg-11+deb9u11/
 
-- https://sources.debian.net/src/imagemagick/8:6.9.7.4+dfsg-11+deb9u11/ (for browsing the source)
-- https://sources.debian.net/src/imagemagick/8:6.9.7.4+dfsg-11+deb9u11/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/imagemagick/8:6.9.7.4+dfsg-11+deb9u11/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `init-system-helpers=1.48`
 
@@ -4053,21 +4046,13 @@ Licenses: (parsed from: `/usr/share/doc/libmariadbclient-dev/copyright`, `/usr/s
 - `unlimited-free-doc`
 - `zlib/libpng`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mariadb-10.1=10.1.48-0+deb9u1
-'http://security.debian.org/debian-security/pool/updates/main/m/mariadb-10.1/mariadb-10.1_10.1.48-0+deb9u1.dsc' mariadb-10.1_10.1.48-0+deb9u1.dsc 4530 SHA256:4e56388e48003b70794b13744381dcaad61c64b290b720a3e1ba96077b921965
-'http://security.debian.org/debian-security/pool/updates/main/m/mariadb-10.1/mariadb-10.1_10.1.48.orig.tar.gz' mariadb-10.1_10.1.48.orig.tar.gz 63769566 SHA256:069d58b1e2c06bb1e6c31249eda34138f41fb8ae3dec7ecaeba8035812c87cf9
-'http://security.debian.org/debian-security/pool/updates/main/m/mariadb-10.1/mariadb-10.1_10.1.48.orig.tar.gz.asc' mariadb-10.1_10.1.48.orig.tar.gz.asc 195 SHA256:6f66d57dadaf6b22c5310e4f7eeb5352e99ab918f6a249a1c81d32a1900e132c
-'http://security.debian.org/debian-security/pool/updates/main/m/mariadb-10.1/mariadb-10.1_10.1.48-0+deb9u1.debian.tar.xz' mariadb-10.1_10.1.48-0+deb9u1.debian.tar.xz 230568 SHA256:734a621e5d35a072766d2aeba5989f8bc4c635c94c018e9052b93c8846a6c35d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mariadb-10.1/10.1.48-0+deb9u1/
 
-- https://sources.debian.net/src/mariadb-10.1/10.1.48-0+deb9u1/ (for browsing the source)
-- https://sources.debian.net/src/mariadb-10.1/10.1.48-0+deb9u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mariadb-10.1/10.1.48-0+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mawk=1.3.3-17`
 
