@@ -207,7 +207,7 @@ CMD ["thrift"]
 ## `thrift:0.12`
 
 ```console
-$ docker pull thrift@sha256:062db7bc69ea84e6203bfcf8cabc1c63a1e0c34b92cd5ba5bcf81bc9f1147dfe
+$ docker pull thrift@sha256:4caa1328d5a88c10da4bbcecd8db9243f17a345a1aaf7314ea6774b9103f47ef
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -217,57 +217,57 @@ $ docker pull thrift@sha256:062db7bc69ea84e6203bfcf8cabc1c63a1e0c34b92cd5ba5bcf8
 ### `thrift:0.12` - linux; amd64
 
 ```console
-$ docker pull thrift@sha256:f11eb89c783ff57db7d93685ccdb5aeddf76d0f639c04d076ca18ee71903260d
+$ docker pull thrift@sha256:0e7e86fb9bdbe526afd33a430f2c20aa490a956e7ced00f56a4bbd55ec6c87f8
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **43.7 MB (43748686 bytes)**  
+-	Total Size: **43.7 MB (43748179 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d558186ced11c9d1d61e404043dc6e30315014278a59fd88ea7aaa389beb548f`
+-	Image ID: `sha256:2c1a8da17b2088f60923f614ec1fb1e3cbc43f7996da7441b1d1902d10e19f4e`
 -	Default Command: `["thrift"]`
 
 ```dockerfile
-# Thu, 04 Mar 2021 02:24:26 GMT
-ADD file:d65963eb4f4b3a8c8e57119725a91036e8932a3e8f604e7edc21ff9665472da9 in / 
-# Thu, 04 Mar 2021 02:24:27 GMT
+# Thu, 25 Mar 2021 22:32:58 GMT
+ADD file:e80ae8d359b484dac5346f98c549abc694e1d0c87e1d9753d495aed4d9c8b2b3 in / 
+# Thu, 25 Mar 2021 22:32:59 GMT
 RUN set -xe 		&& echo '#!/bin/sh' > /usr/sbin/policy-rc.d 	&& echo 'exit 101' >> /usr/sbin/policy-rc.d 	&& chmod +x /usr/sbin/policy-rc.d 		&& dpkg-divert --local --rename --add /sbin/initctl 	&& cp -a /usr/sbin/policy-rc.d /sbin/initctl 	&& sed -i 's/^exit.*/exit 0/' /sbin/initctl 		&& echo 'force-unsafe-io' > /etc/dpkg/dpkg.cfg.d/docker-apt-speedup 		&& echo 'DPkg::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' > /etc/apt/apt.conf.d/docker-clean 	&& echo 'APT::Update::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' >> /etc/apt/apt.conf.d/docker-clean 	&& echo 'Dir::Cache::pkgcache ""; Dir::Cache::srcpkgcache "";' >> /etc/apt/apt.conf.d/docker-clean 		&& echo 'Acquire::Languages "none";' > /etc/apt/apt.conf.d/docker-no-languages 		&& echo 'Acquire::GzipIndexes "true"; Acquire::CompressionTypes::Order:: "gz";' > /etc/apt/apt.conf.d/docker-gzip-indexes 		&& echo 'Apt::AutoRemove::SuggestsImportant "false";' > /etc/apt/apt.conf.d/docker-autoremove-suggests
-# Thu, 04 Mar 2021 02:24:28 GMT
+# Thu, 25 Mar 2021 22:33:00 GMT
 RUN [ -z "$(apt-get indextargets)" ]
-# Thu, 04 Mar 2021 02:24:29 GMT
+# Thu, 25 Mar 2021 22:33:01 GMT
 RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
-# Thu, 04 Mar 2021 02:24:29 GMT
+# Thu, 25 Mar 2021 22:33:02 GMT
 CMD ["/bin/bash"]
-# Thu, 04 Mar 2021 05:04:59 GMT
+# Fri, 26 Mar 2021 16:21:23 GMT
 ENV THRIFT_VERSION=v0.12.0
-# Thu, 04 Mar 2021 05:10:01 GMT
+# Fri, 26 Mar 2021 16:27:59 GMT
 RUN buildDeps=" 		automake 		bison 		curl 		flex 		g++ 		libboost-dev 		libboost-filesystem-dev 		libboost-program-options-dev 		libboost-system-dev 		libboost-test-dev 		libevent-dev 		libssl-dev 		libtool 		make 		pkg-config 	"; 	apt-get update && apt-get install -y --no-install-recommends $buildDeps && rm -rf /var/lib/apt/lists/* 	&& curl -k -sSL "https://github.com/apache/thrift/archive/${THRIFT_VERSION}.tar.gz" -o thrift.tar.gz 	&& mkdir -p /usr/src/thrift 	&& tar zxf thrift.tar.gz -C /usr/src/thrift --strip-components=1 	&& rm thrift.tar.gz 	&& cd /usr/src/thrift 	&& ./bootstrap.sh 	&& ./configure --disable-libs 	&& make 	&& make install 	&& cd / 	&& rm -rf /usr/src/thrift 	&& apt-get purge -y --auto-remove $buildDeps 	&& rm -rf /var/cache/apt/* 	&& rm -rf /var/lib/apt/lists/* 	&& rm -rf /tmp/* 	&& rm -rf /var/tmp/*
-# Thu, 04 Mar 2021 05:10:01 GMT
+# Fri, 26 Mar 2021 16:28:00 GMT
 CMD ["thrift"]
 ```
 
 -	Layers:
-	-	`sha256:92dc2a97ff99354714f17180401813eb3073e4f62a67643d66b461505a604cbe`  
-		Last Modified: Mon, 01 Mar 2021 16:09:46 GMT  
-		Size: 26.7 MB (26710147 bytes)  
+	-	`sha256:6e0aa5e7af40303f56126b1469d1f37525b3a55a788836a6c9b773f6ce8bc446`  
+		Last Modified: Thu, 25 Mar 2021 22:34:24 GMT  
+		Size: 26.7 MB (26710781 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:be13a9d27eb82db7e9c7f3a76f70919a2d690e34e78cda8cae60161b0f5e9137`  
-		Last Modified: Thu, 04 Mar 2021 02:25:42 GMT  
+	-	`sha256:d47239a868b3375462d644f2ffb1b20114623fac03109d2950bdf0d57ab487d2`  
+		Last Modified: Thu, 25 Mar 2021 22:34:20 GMT  
 		Size: 850.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c8299583700ab4cc65a0126f99ca6f2b836a097dedcc64270094bea59b8b4306`  
-		Last Modified: Thu, 04 Mar 2021 02:25:41 GMT  
-		Size: 162.0 B  
+	-	`sha256:49cbb10cca8504e3dbd65eb5db3c1dd0cd27070154386f819c5936de321c14b1`  
+		Last Modified: Thu, 25 Mar 2021 22:34:20 GMT  
+		Size: 189.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cae41dd676211583e05400946769c16d7561161e296315138cbed7d1d917dcce`  
-		Last Modified: Thu, 04 Mar 2021 05:10:38 GMT  
-		Size: 17.0 MB (17037527 bytes)  
+	-	`sha256:2e7fb4b8fa1ed56a35adecd107487e51fcfd991cefc23697a4cf58b65339f660`  
+		Last Modified: Fri, 26 Mar 2021 16:28:20 GMT  
+		Size: 17.0 MB (17036359 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `thrift:0.12.0`
 
 ```console
-$ docker pull thrift@sha256:062db7bc69ea84e6203bfcf8cabc1c63a1e0c34b92cd5ba5bcf81bc9f1147dfe
+$ docker pull thrift@sha256:4caa1328d5a88c10da4bbcecd8db9243f17a345a1aaf7314ea6774b9103f47ef
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -277,51 +277,51 @@ $ docker pull thrift@sha256:062db7bc69ea84e6203bfcf8cabc1c63a1e0c34b92cd5ba5bcf8
 ### `thrift:0.12.0` - linux; amd64
 
 ```console
-$ docker pull thrift@sha256:f11eb89c783ff57db7d93685ccdb5aeddf76d0f639c04d076ca18ee71903260d
+$ docker pull thrift@sha256:0e7e86fb9bdbe526afd33a430f2c20aa490a956e7ced00f56a4bbd55ec6c87f8
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **43.7 MB (43748686 bytes)**  
+-	Total Size: **43.7 MB (43748179 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d558186ced11c9d1d61e404043dc6e30315014278a59fd88ea7aaa389beb548f`
+-	Image ID: `sha256:2c1a8da17b2088f60923f614ec1fb1e3cbc43f7996da7441b1d1902d10e19f4e`
 -	Default Command: `["thrift"]`
 
 ```dockerfile
-# Thu, 04 Mar 2021 02:24:26 GMT
-ADD file:d65963eb4f4b3a8c8e57119725a91036e8932a3e8f604e7edc21ff9665472da9 in / 
-# Thu, 04 Mar 2021 02:24:27 GMT
+# Thu, 25 Mar 2021 22:32:58 GMT
+ADD file:e80ae8d359b484dac5346f98c549abc694e1d0c87e1d9753d495aed4d9c8b2b3 in / 
+# Thu, 25 Mar 2021 22:32:59 GMT
 RUN set -xe 		&& echo '#!/bin/sh' > /usr/sbin/policy-rc.d 	&& echo 'exit 101' >> /usr/sbin/policy-rc.d 	&& chmod +x /usr/sbin/policy-rc.d 		&& dpkg-divert --local --rename --add /sbin/initctl 	&& cp -a /usr/sbin/policy-rc.d /sbin/initctl 	&& sed -i 's/^exit.*/exit 0/' /sbin/initctl 		&& echo 'force-unsafe-io' > /etc/dpkg/dpkg.cfg.d/docker-apt-speedup 		&& echo 'DPkg::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' > /etc/apt/apt.conf.d/docker-clean 	&& echo 'APT::Update::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' >> /etc/apt/apt.conf.d/docker-clean 	&& echo 'Dir::Cache::pkgcache ""; Dir::Cache::srcpkgcache "";' >> /etc/apt/apt.conf.d/docker-clean 		&& echo 'Acquire::Languages "none";' > /etc/apt/apt.conf.d/docker-no-languages 		&& echo 'Acquire::GzipIndexes "true"; Acquire::CompressionTypes::Order:: "gz";' > /etc/apt/apt.conf.d/docker-gzip-indexes 		&& echo 'Apt::AutoRemove::SuggestsImportant "false";' > /etc/apt/apt.conf.d/docker-autoremove-suggests
-# Thu, 04 Mar 2021 02:24:28 GMT
+# Thu, 25 Mar 2021 22:33:00 GMT
 RUN [ -z "$(apt-get indextargets)" ]
-# Thu, 04 Mar 2021 02:24:29 GMT
+# Thu, 25 Mar 2021 22:33:01 GMT
 RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
-# Thu, 04 Mar 2021 02:24:29 GMT
+# Thu, 25 Mar 2021 22:33:02 GMT
 CMD ["/bin/bash"]
-# Thu, 04 Mar 2021 05:04:59 GMT
+# Fri, 26 Mar 2021 16:21:23 GMT
 ENV THRIFT_VERSION=v0.12.0
-# Thu, 04 Mar 2021 05:10:01 GMT
+# Fri, 26 Mar 2021 16:27:59 GMT
 RUN buildDeps=" 		automake 		bison 		curl 		flex 		g++ 		libboost-dev 		libboost-filesystem-dev 		libboost-program-options-dev 		libboost-system-dev 		libboost-test-dev 		libevent-dev 		libssl-dev 		libtool 		make 		pkg-config 	"; 	apt-get update && apt-get install -y --no-install-recommends $buildDeps && rm -rf /var/lib/apt/lists/* 	&& curl -k -sSL "https://github.com/apache/thrift/archive/${THRIFT_VERSION}.tar.gz" -o thrift.tar.gz 	&& mkdir -p /usr/src/thrift 	&& tar zxf thrift.tar.gz -C /usr/src/thrift --strip-components=1 	&& rm thrift.tar.gz 	&& cd /usr/src/thrift 	&& ./bootstrap.sh 	&& ./configure --disable-libs 	&& make 	&& make install 	&& cd / 	&& rm -rf /usr/src/thrift 	&& apt-get purge -y --auto-remove $buildDeps 	&& rm -rf /var/cache/apt/* 	&& rm -rf /var/lib/apt/lists/* 	&& rm -rf /tmp/* 	&& rm -rf /var/tmp/*
-# Thu, 04 Mar 2021 05:10:01 GMT
+# Fri, 26 Mar 2021 16:28:00 GMT
 CMD ["thrift"]
 ```
 
 -	Layers:
-	-	`sha256:92dc2a97ff99354714f17180401813eb3073e4f62a67643d66b461505a604cbe`  
-		Last Modified: Mon, 01 Mar 2021 16:09:46 GMT  
-		Size: 26.7 MB (26710147 bytes)  
+	-	`sha256:6e0aa5e7af40303f56126b1469d1f37525b3a55a788836a6c9b773f6ce8bc446`  
+		Last Modified: Thu, 25 Mar 2021 22:34:24 GMT  
+		Size: 26.7 MB (26710781 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:be13a9d27eb82db7e9c7f3a76f70919a2d690e34e78cda8cae60161b0f5e9137`  
-		Last Modified: Thu, 04 Mar 2021 02:25:42 GMT  
+	-	`sha256:d47239a868b3375462d644f2ffb1b20114623fac03109d2950bdf0d57ab487d2`  
+		Last Modified: Thu, 25 Mar 2021 22:34:20 GMT  
 		Size: 850.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c8299583700ab4cc65a0126f99ca6f2b836a097dedcc64270094bea59b8b4306`  
-		Last Modified: Thu, 04 Mar 2021 02:25:41 GMT  
-		Size: 162.0 B  
+	-	`sha256:49cbb10cca8504e3dbd65eb5db3c1dd0cd27070154386f819c5936de321c14b1`  
+		Last Modified: Thu, 25 Mar 2021 22:34:20 GMT  
+		Size: 189.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cae41dd676211583e05400946769c16d7561161e296315138cbed7d1d917dcce`  
-		Last Modified: Thu, 04 Mar 2021 05:10:38 GMT  
-		Size: 17.0 MB (17037527 bytes)  
+	-	`sha256:2e7fb4b8fa1ed56a35adecd107487e51fcfd991cefc23697a4cf58b65339f660`  
+		Last Modified: Fri, 26 Mar 2021 16:28:20 GMT  
+		Size: 17.0 MB (17036359 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `thrift:0.9`
@@ -423,7 +423,7 @@ CMD ["thrift"]
 ## `thrift:latest`
 
 ```console
-$ docker pull thrift@sha256:062db7bc69ea84e6203bfcf8cabc1c63a1e0c34b92cd5ba5bcf81bc9f1147dfe
+$ docker pull thrift@sha256:4caa1328d5a88c10da4bbcecd8db9243f17a345a1aaf7314ea6774b9103f47ef
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -433,49 +433,49 @@ $ docker pull thrift@sha256:062db7bc69ea84e6203bfcf8cabc1c63a1e0c34b92cd5ba5bcf8
 ### `thrift:latest` - linux; amd64
 
 ```console
-$ docker pull thrift@sha256:f11eb89c783ff57db7d93685ccdb5aeddf76d0f639c04d076ca18ee71903260d
+$ docker pull thrift@sha256:0e7e86fb9bdbe526afd33a430f2c20aa490a956e7ced00f56a4bbd55ec6c87f8
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **43.7 MB (43748686 bytes)**  
+-	Total Size: **43.7 MB (43748179 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d558186ced11c9d1d61e404043dc6e30315014278a59fd88ea7aaa389beb548f`
+-	Image ID: `sha256:2c1a8da17b2088f60923f614ec1fb1e3cbc43f7996da7441b1d1902d10e19f4e`
 -	Default Command: `["thrift"]`
 
 ```dockerfile
-# Thu, 04 Mar 2021 02:24:26 GMT
-ADD file:d65963eb4f4b3a8c8e57119725a91036e8932a3e8f604e7edc21ff9665472da9 in / 
-# Thu, 04 Mar 2021 02:24:27 GMT
+# Thu, 25 Mar 2021 22:32:58 GMT
+ADD file:e80ae8d359b484dac5346f98c549abc694e1d0c87e1d9753d495aed4d9c8b2b3 in / 
+# Thu, 25 Mar 2021 22:32:59 GMT
 RUN set -xe 		&& echo '#!/bin/sh' > /usr/sbin/policy-rc.d 	&& echo 'exit 101' >> /usr/sbin/policy-rc.d 	&& chmod +x /usr/sbin/policy-rc.d 		&& dpkg-divert --local --rename --add /sbin/initctl 	&& cp -a /usr/sbin/policy-rc.d /sbin/initctl 	&& sed -i 's/^exit.*/exit 0/' /sbin/initctl 		&& echo 'force-unsafe-io' > /etc/dpkg/dpkg.cfg.d/docker-apt-speedup 		&& echo 'DPkg::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' > /etc/apt/apt.conf.d/docker-clean 	&& echo 'APT::Update::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' >> /etc/apt/apt.conf.d/docker-clean 	&& echo 'Dir::Cache::pkgcache ""; Dir::Cache::srcpkgcache "";' >> /etc/apt/apt.conf.d/docker-clean 		&& echo 'Acquire::Languages "none";' > /etc/apt/apt.conf.d/docker-no-languages 		&& echo 'Acquire::GzipIndexes "true"; Acquire::CompressionTypes::Order:: "gz";' > /etc/apt/apt.conf.d/docker-gzip-indexes 		&& echo 'Apt::AutoRemove::SuggestsImportant "false";' > /etc/apt/apt.conf.d/docker-autoremove-suggests
-# Thu, 04 Mar 2021 02:24:28 GMT
+# Thu, 25 Mar 2021 22:33:00 GMT
 RUN [ -z "$(apt-get indextargets)" ]
-# Thu, 04 Mar 2021 02:24:29 GMT
+# Thu, 25 Mar 2021 22:33:01 GMT
 RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
-# Thu, 04 Mar 2021 02:24:29 GMT
+# Thu, 25 Mar 2021 22:33:02 GMT
 CMD ["/bin/bash"]
-# Thu, 04 Mar 2021 05:04:59 GMT
+# Fri, 26 Mar 2021 16:21:23 GMT
 ENV THRIFT_VERSION=v0.12.0
-# Thu, 04 Mar 2021 05:10:01 GMT
+# Fri, 26 Mar 2021 16:27:59 GMT
 RUN buildDeps=" 		automake 		bison 		curl 		flex 		g++ 		libboost-dev 		libboost-filesystem-dev 		libboost-program-options-dev 		libboost-system-dev 		libboost-test-dev 		libevent-dev 		libssl-dev 		libtool 		make 		pkg-config 	"; 	apt-get update && apt-get install -y --no-install-recommends $buildDeps && rm -rf /var/lib/apt/lists/* 	&& curl -k -sSL "https://github.com/apache/thrift/archive/${THRIFT_VERSION}.tar.gz" -o thrift.tar.gz 	&& mkdir -p /usr/src/thrift 	&& tar zxf thrift.tar.gz -C /usr/src/thrift --strip-components=1 	&& rm thrift.tar.gz 	&& cd /usr/src/thrift 	&& ./bootstrap.sh 	&& ./configure --disable-libs 	&& make 	&& make install 	&& cd / 	&& rm -rf /usr/src/thrift 	&& apt-get purge -y --auto-remove $buildDeps 	&& rm -rf /var/cache/apt/* 	&& rm -rf /var/lib/apt/lists/* 	&& rm -rf /tmp/* 	&& rm -rf /var/tmp/*
-# Thu, 04 Mar 2021 05:10:01 GMT
+# Fri, 26 Mar 2021 16:28:00 GMT
 CMD ["thrift"]
 ```
 
 -	Layers:
-	-	`sha256:92dc2a97ff99354714f17180401813eb3073e4f62a67643d66b461505a604cbe`  
-		Last Modified: Mon, 01 Mar 2021 16:09:46 GMT  
-		Size: 26.7 MB (26710147 bytes)  
+	-	`sha256:6e0aa5e7af40303f56126b1469d1f37525b3a55a788836a6c9b773f6ce8bc446`  
+		Last Modified: Thu, 25 Mar 2021 22:34:24 GMT  
+		Size: 26.7 MB (26710781 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:be13a9d27eb82db7e9c7f3a76f70919a2d690e34e78cda8cae60161b0f5e9137`  
-		Last Modified: Thu, 04 Mar 2021 02:25:42 GMT  
+	-	`sha256:d47239a868b3375462d644f2ffb1b20114623fac03109d2950bdf0d57ab487d2`  
+		Last Modified: Thu, 25 Mar 2021 22:34:20 GMT  
 		Size: 850.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c8299583700ab4cc65a0126f99ca6f2b836a097dedcc64270094bea59b8b4306`  
-		Last Modified: Thu, 04 Mar 2021 02:25:41 GMT  
-		Size: 162.0 B  
+	-	`sha256:49cbb10cca8504e3dbd65eb5db3c1dd0cd27070154386f819c5936de321c14b1`  
+		Last Modified: Thu, 25 Mar 2021 22:34:20 GMT  
+		Size: 189.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cae41dd676211583e05400946769c16d7561161e296315138cbed7d1d917dcce`  
-		Last Modified: Thu, 04 Mar 2021 05:10:38 GMT  
-		Size: 17.0 MB (17037527 bytes)  
+	-	`sha256:2e7fb4b8fa1ed56a35adecd107487e51fcfd991cefc23697a4cf58b65339f660`  
+		Last Modified: Fri, 26 Mar 2021 16:28:20 GMT  
+		Size: 17.0 MB (17036359 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
