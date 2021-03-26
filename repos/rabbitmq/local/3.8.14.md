@@ -2,20 +2,20 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:a9a6e9454f3d6ade91776181f3ff2a439b102c3190a06cfa8706e5f0a1881453`
-- Created: `2021-03-18T19:41:16.350385975Z`
-- Virtual Size: ~ 156.27 Mb  
+- Image ID: `sha256:0d8eb73345b6df179787745ed4d53f007fdca56d8068124cdf0d5c898f95c122`
+- Created: `2021-03-26T07:45:01.870454341Z`
+- Virtual Size: ~ 156.35 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
 - Command: `["rabbitmq-server"]`
 - Environment:
   - `PATH=/opt/rabbitmq/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `OPENSSL_VERSION=1.1.1j`
-  - `OPENSSL_SOURCE_SHA256=aaf2fcb575cdf6491b98ab4829abf78a3dec8402b8b81efc8f23c00d443981bf`
+  - `OPENSSL_VERSION=1.1.1k`
+  - `OPENSSL_SOURCE_SHA256=892a0875b9872acd04a9fde79b1f943075d5ea162415de3047c327df33fbaee5`
   - `OPENSSL_PGP_KEY_IDS=0x8657ABB260F056B1E5190839D9C4D26D0E604491 0x5B2545DAB21995F4088CEFAA36CEE4DEB00CFE33 0xED230BEC4D4F2518B9D7DF41F0DB4D21C1D35231 0xC1F33DD8CE1D4CC613AF14DA9195C48241FBF7DD 0x7953AC1FBC3DC8B3B292393ED5E9E43F7DF9EE8C 0xE5E52560DD91C556DDBDA5D02064C53641C25E5D`
-  - `OTP_VERSION=23.2.7`
-  - `OTP_SOURCE_SHA256=31201e8b4af1c242eb613636cf29c0e6cc78c5702446f238f1b9715ac9aea06b`
+  - `OTP_VERSION=23.3`
+  - `OTP_SOURCE_SHA256=879bdfef750887a11c368fcf5df52b8a704d79e4ccbf83dee0f88ffdf3cff753`
   - `RABBITMQ_DATA_DIR=/var/lib/rabbitmq`
   - `RABBITMQ_VERSION=3.8.14`
   - `RABBITMQ_PGP_KEY_ID=0x0A9AF2115F4687BD29803A206B73A36E6026DFCA`
@@ -893,11 +893,11 @@ $ apt-get source -qq --print-uris libunistring=0.9.9-0ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/libu/libunistring/libunistring_0.9.9-0ubuntu2.debian.tar.xz' libunistring_0.9.9-0ubuntu2.debian.tar.xz 40424 SHA512:e9c6f76208bef66892b584d83e68b60a05a9cf0b67b1ac10532e996a081319d110a92b440713cb9a46fc45404723a5c81420ede10af2ab8e89432c693db4e1ef
 ```
 
-### `dpkg` source package: `libzstd=1.3.3+dfsg-2ubuntu1.1`
+### `dpkg` source package: `libzstd=1.3.3+dfsg-2ubuntu1.2`
 
 Binary Packages:
 
-- `libzstd1:amd64=1.3.3+dfsg-2ubuntu1.1`
+- `libzstd1:amd64=1.3.3+dfsg-2ubuntu1.2`
 
 Licenses: (parsed from: `/usr/share/doc/libzstd1/copyright`)
 
@@ -907,9 +907,14 @@ Licenses: (parsed from: `/usr/share/doc/libzstd1/copyright`)
 - `GPL-2+`
 - `zlib`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris libzstd=1.3.3+dfsg-2ubuntu1.2
+'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.3.3+dfsg-2ubuntu1.2.dsc' libzstd_1.3.3+dfsg-2ubuntu1.2.dsc 2406 SHA512:ba1f7d18723eafcd18f2722a0005be04d0104c87a7cd80e2ffff91395df87213df3d6969d59e4260930ce583070d319847982c175dc99859bc8f0f964fbf1ad2
+'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.3.3+dfsg.orig.tar.xz' libzstd_1.3.3+dfsg.orig.tar.xz 1333584 SHA512:40f66d34247f549b6861677a520bdce722036c49bc78096981b3b6b4cbb798780c6afccaff18e843016ec7aab55b8bb3ce3ddbfb089efb5d83028058df5e755c
+'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.3.3+dfsg-2ubuntu1.2.debian.tar.xz' libzstd_1.3.3+dfsg-2ubuntu1.2.debian.tar.xz 13764 SHA512:f14aa9e453c7041a79dd90a52b5955b86fa86886b89ef26d4d257aa017a50d97410e8b875593992ad7d4b7e8e8d55743b8c66706be62cd4234f81e49c8bfc05d
+```
 
 ### `dpkg` source package: `lsb=9.20170808ubuntu1`
 
@@ -1222,12 +1227,12 @@ $ apt-get source -qq --print-uris shadow=1:4.5-1ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.5-1ubuntu2.debian.tar.xz' shadow_4.5-1ubuntu2.debian.tar.xz 471472 SHA512:d4017784bfc5118b86533da52909459adf4e79ffa049d8029437860bfaeac91eabd40e6510f67bba6f8b2d74fde62c24eb8e37a7b4637d14eeb63aecaf2294cc
 ```
 
-### `dpkg` source package: `systemd=237-3ubuntu10.44`
+### `dpkg` source package: `systemd=237-3ubuntu10.45`
 
 Binary Packages:
 
-- `libsystemd0:amd64=237-3ubuntu10.44`
-- `libudev1:amd64=237-3ubuntu10.44`
+- `libsystemd0:amd64=237-3ubuntu10.45`
+- `libudev1:amd64=237-3ubuntu10.45`
 
 Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/libudev1/copyright`)
 
@@ -1239,9 +1244,14 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris systemd=237-3ubuntu10.45
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.45.dsc' systemd_237-3ubuntu10.45.dsc 5187 SHA512:aceb425851d8b45f817ab6b9baaa3d162de46a0a81eef6f1e9384a9881b5464ef11f3663ae761764248e96343e27d4bf7fdf7b81f9a9368546f60c0dde80e9f1
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237.orig.tar.gz' systemd_237.orig.tar.gz 6871350 SHA512:15ef4b92815a6dd9a6c51672dbc00fd7cd0f08068ef0cbeaca574f68d330b28bc67ba1946f24f75ef3d9e7b63843a73eea700db54688061dbf5c9f8470394c3b
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.45.debian.tar.xz' systemd_237-3ubuntu10.45.debian.tar.xz 289580 SHA512:38648ff7c9e06899dce3b0f66eb6b21bdaf6be19696d6ea9626079fa55e4b1258690a6f3b94429d9b5269ade5d1b56803620919b1ed7c4ed07596353eff8abbd
+```
 
 ### `dpkg` source package: `sysvinit=2.88dsf-59.10ubuntu1`
 

@@ -2,20 +2,20 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:19b14650a4dcf0db628fbedbb61918cdee2ab041fb5320ce22ff56a61141f09a`
-- Created: `2021-03-18T19:42:04.902729738Z`
-- Virtual Size: ~ 144.27 Mb  
+- Image ID: `sha256:63013d2d75877c1bc4d66c4b1edf870d306c01b1d15eae02df7da217bf36734d`
+- Created: `2021-03-25T22:31:00.935747931Z`
+- Virtual Size: ~ 144.34 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
 - Command: `["rabbitmq-server"]`
 - Environment:
   - `PATH=/opt/rabbitmq/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `OPENSSL_VERSION=1.1.1j`
-  - `OPENSSL_SOURCE_SHA256=aaf2fcb575cdf6491b98ab4829abf78a3dec8402b8b81efc8f23c00d443981bf`
+  - `OPENSSL_VERSION=1.1.1k`
+  - `OPENSSL_SOURCE_SHA256=892a0875b9872acd04a9fde79b1f943075d5ea162415de3047c327df33fbaee5`
   - `OPENSSL_PGP_KEY_IDS=0x8657ABB260F056B1E5190839D9C4D26D0E604491 0x5B2545DAB21995F4088CEFAA36CEE4DEB00CFE33 0xED230BEC4D4F2518B9D7DF41F0DB4D21C1D35231 0xC1F33DD8CE1D4CC613AF14DA9195C48241FBF7DD 0x7953AC1FBC3DC8B3B292393ED5E9E43F7DF9EE8C 0xE5E52560DD91C556DDBDA5D02064C53641C25E5D`
-  - `OTP_VERSION=23.2.7`
-  - `OTP_SOURCE_SHA256=31201e8b4af1c242eb613636cf29c0e6cc78c5702446f238f1b9715ac9aea06b`
+  - `OTP_VERSION=23.3`
+  - `OTP_SOURCE_SHA256=879bdfef750887a11c368fcf5df52b8a704d79e4ccbf83dee0f88ffdf3cff753`
   - `RABBITMQ_DATA_DIR=/var/lib/rabbitmq`
   - `RABBITMQ_VERSION=3.8.14`
   - `RABBITMQ_PGP_KEY_ID=0x0A9AF2115F4687BD29803A206B73A36E6026DFCA`
@@ -201,16 +201,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1j-r0 description:
+libcrypto1.1-1.1.1k-r0 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1j-r0 webpage:
+libcrypto1.1-1.1.1k-r0 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1j-r0 installed size:
+libcrypto1.1-1.1.1k-r0 installed size:
 2768896
 
-libcrypto1.1-1.1.1j-r0 license:
+libcrypto1.1-1.1.1k-r0 license:
 OpenSSL
 
 ```
@@ -269,16 +269,16 @@ GPL-2.0 LGPL-2.1+
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1j-r0 description:
+libssl1.1-1.1.1k-r0 description:
 SSL shared libraries
 
-libssl1.1-1.1.1j-r0 webpage:
+libssl1.1-1.1.1k-r0 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1j-r0 installed size:
+libssl1.1-1.1.1k-r0 installed size:
 540672
 
-libssl1.1-1.1.1j-r0 license:
+libssl1.1-1.1.1k-r0 license:
 OpenSSL
 
 ```
