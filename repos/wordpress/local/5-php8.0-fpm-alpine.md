@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:9b3600ac5b81f966129d6e46c879d227be8438c8644eda448f57ad021ab8ce72`
-- Created: `2021-03-23T01:32:19.03390088Z`
+- Image ID: `sha256:bd046881402370744eb45ea82f31657a2da7df53fd802688de867c1af2a77e7e`
+- Created: `2021-03-27T14:00:02.770014845Z`
 - Virtual Size: ~ 199.20 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -334,16 +334,16 @@ LGPL-3.0-or-later OR GPL-2.0-or-later
 ### `apk` package: `gnutls`
 
 ```console
-gnutls-3.7.0-r0 description:
+gnutls-3.7.1-r0 description:
 TLS protocol implementation
 
-gnutls-3.7.0-r0 webpage:
+gnutls-3.7.1-r0 webpage:
 https://www.gnutls.org/
 
-gnutls-3.7.0-r0 installed size:
-1912832
+gnutls-3.7.1-r0 installed size:
+1892352
 
-gnutls-3.7.0-r0 license:
+gnutls-3.7.1-r0 license:
 LGPL-2.1-or-later
 
 ```
@@ -436,16 +436,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1j-r0 description:
+libcrypto1.1-1.1.1k-r0 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1j-r0 webpage:
+libcrypto1.1-1.1.1k-r0 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1j-r0 installed size:
+libcrypto1.1-1.1.1k-r0 installed size:
 2768896
 
-libcrypto1.1-1.1.1j-r0 license:
+libcrypto1.1-1.1.1k-r0 license:
 OpenSSL
 
 ```
@@ -572,16 +572,16 @@ ISC
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1j-r0 description:
+libssl1.1-1.1.1k-r0 description:
 SSL shared libraries
 
-libssl1.1-1.1.1j-r0 webpage:
+libssl1.1-1.1.1k-r0 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1j-r0 installed size:
+libssl1.1-1.1.1k-r0 installed size:
 540672
 
-libssl1.1-1.1.1j-r0 license:
+libssl1.1-1.1.1k-r0 license:
 OpenSSL
 
 ```
@@ -810,16 +810,16 @@ BSD-2-Clause
 ### `apk` package: `openssl`
 
 ```console
-openssl-1.1.1j-r0 description:
+openssl-1.1.1k-r0 description:
 Toolkit for Transport Layer Security (TLS)
 
-openssl-1.1.1j-r0 webpage:
+openssl-1.1.1k-r0 webpage:
 https://www.openssl.org/
 
-openssl-1.1.1j-r0 installed size:
+openssl-1.1.1k-r0 installed size:
 675840
 
-openssl-1.1.1j-r0 license:
+openssl-1.1.1k-r0 license:
 OpenSSL
 
 ```
@@ -946,16 +946,16 @@ GPL-3.0-or-later
 ### `apk` package: `tiff`
 
 ```console
-tiff-4.1.0-r2 description:
+tiff-4.2.0-r0 description:
 Provides support for the Tag Image File Format or TIFF
 
-tiff-4.1.0-r2 webpage:
+tiff-4.2.0-r0 webpage:
 https://gitlab.com/libtiff/libtiff
 
-tiff-4.1.0-r2 installed size:
-450560
+tiff-4.2.0-r0 installed size:
+462848
 
-tiff-4.1.0-r2 license:
+tiff-4.2.0-r0 license:
 libtiff
 
 ```
