@@ -72,7 +72,7 @@
 ## `golang:1`
 
 ```console
-$ docker pull golang@sha256:a37245d58df7ad850743282c85f1960c741438844b4892bdc85734b2467cb972
+$ docker pull golang@sha256:39a70c954a032db55e1bcb2a3c195c3c0edfa2cb2082adbb15990fcd5724477c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -91,73 +91,73 @@ $ docker pull golang@sha256:a37245d58df7ad850743282c85f1960c741438844b4892bdc857
 ### `golang:1` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:6247840c3865d9bfb709e6fa43c3cf2f6fc1334e36c6cb8712cf59205b0b31e0
+$ docker pull golang@sha256:dabc19f6f1adbbc27ce339b6abff0064106c2cb993fc82c407698f07d5ad151e
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **317.8 MB (317817106 bytes)**  
+-	Total Size: **317.9 MB (317850483 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:64bd1a7b99b7ba1d5f1c21d4c4625f29858cce169e724dabb30dc8c994ed44c3`
+-	Image ID: `sha256:217d1e25596170633bd1e02c19d3c614986fe3853d492b3a2d4cc6e719381ea2`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Fri, 26 Mar 2021 15:20:41 GMT
-ADD file:89234bb2f86c7eb890235a48904d1c9898a8d287a525c4fe5698d4a04cdd8f12 in / 
-# Fri, 26 Mar 2021 15:20:42 GMT
+# Tue, 30 Mar 2021 21:49:16 GMT
+ADD file:c254898ceb4172f05cd40460f8d0b1ca2d39d5178bdddd4e794c7d3fc5a60a03 in / 
+# Tue, 30 Mar 2021 21:49:16 GMT
 CMD ["bash"]
-# Sat, 27 Mar 2021 05:53:29 GMT
+# Tue, 30 Mar 2021 23:03:10 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
-# Sat, 27 Mar 2021 05:53:35 GMT
+# Tue, 30 Mar 2021 23:03:21 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Sat, 27 Mar 2021 05:53:54 GMT
+# Tue, 30 Mar 2021 23:03:52 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:05 GMT
+# Wed, 31 Mar 2021 20:11:57 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:06 GMT
+# Wed, 31 Mar 2021 20:11:57 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:18:06 GMT
+# Wed, 31 Mar 2021 20:11:57 GMT
 ENV GOLANG_VERSION=1.16.2
-# Sun, 28 Mar 2021 00:18:17 GMT
+# Wed, 31 Mar 2021 20:12:08 GMT
 RUN set -eux; 		dpkgArch="$(dpkg --print-architecture)"; 	url=; 	case "${dpkgArch##*-}" in 		'amd64') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-amd64.tar.gz'; 			sha256='542e936b19542e62679766194364f45141fde55169db2d8d01046555ca9eb4b8'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-armv6l.tar.gz'; 			sha256='49765b1ac36f77a84ce8186b08713c3811db5426e4ecfaa4344453e12d756c22'; 			;; 		'arm64') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-arm64.tar.gz'; 			sha256='6924601d998a0917694fd14261347e3798bd2ad6b13c4d7f2edd70c9d57f62ab'; 			;; 		'i386') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-386.tar.gz'; 			sha256='3638abf8e8272a4ddc3e5189487c932d680abfb151e2c48ae18c9a04a90ded73'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-ppc64le.tar.gz'; 			sha256='e1dcc9b460b2d522added8dfce764a06c5e455c8047b45b67a06f7f5ab19c4e0'; 			;; 		's390x') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-s390x.tar.gz'; 			sha256='a686743b0803d54e051756ce946d9d72436f23e9f815739c947934e0052bf9ff'; 			;; 		*) echo >&2 "error: unsupported architecture '$dpkgArch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 		sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		echo >&2; 		echo >&2 "warning: current architecture ($dpkgArch) does not have a corresponding Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc" --progress=dot:giga; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum --strict --check -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends golang-go; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				go install std; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 		; 	fi; 		go version
-# Sun, 28 Mar 2021 00:18:18 GMT
+# Wed, 31 Mar 2021 20:12:09 GMT
 ENV GOPATH=/go
-# Sun, 28 Mar 2021 00:18:18 GMT
+# Wed, 31 Mar 2021 20:12:09 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:18:19 GMT
+# Wed, 31 Mar 2021 20:12:10 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Sun, 28 Mar 2021 00:18:20 GMT
+# Wed, 31 Mar 2021 20:12:10 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:8bf9c589d5f9475f1fcc050e02308d6b4eeb86eab7752ef948a13693e81a6aaa`  
-		Last Modified: Fri, 26 Mar 2021 15:27:11 GMT  
-		Size: 50.4 MB (50400278 bytes)  
+	-	`sha256:004f1eed87df3f75f5e2a1a649fa7edd7f713d1300532fd0909bb39cd48437d7`  
+		Last Modified: Tue, 30 Mar 2021 21:53:41 GMT  
+		Size: 50.4 MB (50432842 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4c70e46d8b5f0e1d77797b7a0565b7a316bd8c7c024f5cca82592128af142dac`  
-		Last Modified: Sat, 27 Mar 2021 06:03:41 GMT  
-		Size: 7.8 MB (7832558 bytes)  
+	-	`sha256:5d6f1e8117dbb1c6a57603cb4f321a861a08105a81bcc6b01b0ec2b78c8523a5`  
+		Last Modified: Tue, 30 Mar 2021 23:14:05 GMT  
+		Size: 7.8 MB (7832608 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ea848ad42f0d1676b3a0ce709208ba3fa154cd53370c50e7cf8e580c63d96ae0`  
-		Last Modified: Sat, 27 Mar 2021 06:03:41 GMT  
-		Size: 10.0 MB (9997159 bytes)  
+	-	`sha256:48c2faf66abec3dce9f54d6722ff592fce6dd4fb58a0d0b72282936c6598a3b3`  
+		Last Modified: Tue, 30 Mar 2021 23:14:05 GMT  
+		Size: 10.0 MB (9997208 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:48fe137f8d2641315dd2f93c46dfdb671ce7399edc1f44f10cc68984f2809d8e`  
-		Last Modified: Sat, 27 Mar 2021 06:04:05 GMT  
-		Size: 51.8 MB (51839972 bytes)  
+	-	`sha256:234b70d0479d7f16d7ee8d04e4ffdacc57d7d14313faf59d332f18b2e9418743`  
+		Last Modified: Tue, 30 Mar 2021 23:14:37 GMT  
+		Size: 51.8 MB (51840782 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e53aa3cb0a1b20fe535fb0954912e16192c1fa053d0f6f2df21d1f5a50f8139c`  
-		Last Modified: Sun, 28 Mar 2021 00:20:35 GMT  
-		Size: 68.7 MB (68736693 bytes)  
+	-	`sha256:f5e9f83ff9bcf98a081ea281823c299a293e0870c4fd132c22cf425b01bd310e`  
+		Last Modified: Wed, 31 Mar 2021 20:21:23 GMT  
+		Size: 68.7 MB (68736521 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d33aad0a69811ebff8950e59bd61ab326225562bb2757c92673e3f91061dd280`  
-		Last Modified: Sun, 28 Mar 2021 00:20:45 GMT  
-		Size: 129.0 MB (129010291 bytes)  
+	-	`sha256:abff7ae5ce6584ffabbc37f4da5db276ef2c999823396c28c894a2accadadad7`  
+		Last Modified: Wed, 31 Mar 2021 20:21:33 GMT  
+		Size: 129.0 MB (129010366 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:996781d6304ab92c67a9228d5c68c6829dbd06ae8f0f4acb8a00326a1aab6c51`  
-		Last Modified: Sun, 28 Mar 2021 00:20:24 GMT  
-		Size: 155.0 B  
+	-	`sha256:26b15789ebb1ee2fa09a78a3c616664936f679eafbf8fd14b07094bf285267a4`  
+		Last Modified: Wed, 31 Mar 2021 20:21:12 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1` - linux; arm variant v5
@@ -858,7 +858,7 @@ WORKDIR C:\gopath
 ## `golang:1-alpine`
 
 ```console
-$ docker pull golang@sha256:52dbfc81ec12df22e2ab1e7c9c4f4ee3dff73514e56a54924714d29ac03ff791
+$ docker pull golang@sha256:ae07fbf6c791da6ba6f16b58b2b60f1b7c0c6b478238e7f3784c42d6eeb0d0ad
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -874,121 +874,121 @@ $ docker pull golang@sha256:52dbfc81ec12df22e2ab1e7c9c4f4ee3dff73514e56a54924714
 ### `golang:1-alpine` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:4aee936562c29840e20ddb14bdbe028f7a7f376f2932096f5bfcc1931ec9f7c1
+$ docker pull golang@sha256:4891e17c9d2de88ebd1d9421919539226a76773d6ad1b4ac7376b286039c9be2
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **108.8 MB (108786138 bytes)**  
+-	Total Size: **108.8 MB (108786071 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5e238f856b8c39829309b40af496f71cfcf6e406ac005b1bbd1de9c50b2ed275`
+-	Image ID: `sha256:0fa0b8680167825684c347a60a168e134b449ba1cdef59c88f69223f716bccd2`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:19:32 GMT
-ADD file:6b081cabb4b256ee07587d249c4989b5b679375529542b81550a65b6f19f274e in / 
-# Thu, 25 Mar 2021 22:19:32 GMT
+# Wed, 31 Mar 2021 20:10:06 GMT
+ADD file:7119167b56ff1228b2fb639c768955ce9db7a999cd947179240b216dfa5ccbb9 in / 
+# Wed, 31 Mar 2021 20:10:06 GMT
 CMD ["/bin/sh"]
-# Fri, 26 Mar 2021 04:48:00 GMT
+# Wed, 31 Mar 2021 20:12:47 GMT
 RUN apk add --no-cache 		ca-certificates
-# Fri, 26 Mar 2021 04:48:01 GMT
+# Wed, 31 Mar 2021 20:12:48 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Fri, 26 Mar 2021 04:48:01 GMT
+# Wed, 31 Mar 2021 20:12:48 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:48:01 GMT
+# Wed, 31 Mar 2021 20:12:48 GMT
 ENV GOLANG_VERSION=1.16.2
-# Fri, 26 Mar 2021 04:49:57 GMT
+# Wed, 31 Mar 2021 20:14:27 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Fri, 26 Mar 2021 04:49:57 GMT
+# Wed, 31 Mar 2021 20:14:28 GMT
 ENV GOPATH=/go
-# Fri, 26 Mar 2021 04:49:57 GMT
+# Wed, 31 Mar 2021 20:14:28 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:49:59 GMT
+# Wed, 31 Mar 2021 20:14:29 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Fri, 26 Mar 2021 04:49:59 GMT
+# Wed, 31 Mar 2021 20:14:29 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:9aae54b2144e5b2b00c610f8805128f4f86822e1e52d3714c463744a431f0f4a`  
-		Last Modified: Thu, 25 Mar 2021 22:20:18 GMT  
-		Size: 2.8 MB (2811681 bytes)  
+	-	`sha256:ca3cd42a7c9525f6ce3d64c1a70982613a8235f0cc057ec9244052921853ef15`  
+		Last Modified: Wed, 31 Mar 2021 20:10:46 GMT  
+		Size: 2.8 MB (2811947 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9f73940e57d360e45588f2a826fa219a35089234eadac5c3e5d54dfac02c0a7d`  
-		Last Modified: Fri, 26 Mar 2021 04:59:58 GMT  
-		Size: 281.3 KB (281262 bytes)  
+	-	`sha256:dbcca316e5c32a932c66cfa46736e3998e69caeb857e570566ec63ab0377044a`  
+		Last Modified: Wed, 31 Mar 2021 20:22:40 GMT  
+		Size: 281.3 KB (281274 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ff472ba555d2504b7af85b2deac3b22d39a3dfa1510a54701764c4afd7bc7c43`  
-		Last Modified: Fri, 26 Mar 2021 04:59:59 GMT  
-		Size: 154.0 B  
+	-	`sha256:b65b403d39c8273b612240b85430a925f80b8b5719979c21e1387246faa62bd3`  
+		Last Modified: Wed, 31 Mar 2021 20:22:40 GMT  
+		Size: 155.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e4c1c61433975e8c3140ea23e09f8e224f43040721f5ca051e74120c8acb8631`  
-		Last Modified: Fri, 26 Mar 2021 05:00:17 GMT  
-		Size: 105.7 MB (105692885 bytes)  
+	-	`sha256:0d70e27e35ebcf8beb7c4148da1ce06b0c6a2f74b29fdd43ba616133688f5a6b`  
+		Last Modified: Wed, 31 Mar 2021 20:22:56 GMT  
+		Size: 105.7 MB (105692539 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ef687b4c646763d350c57c7a1405c68f0e9c4ee361dfa7b700103e0fc7a00111`  
-		Last Modified: Fri, 26 Mar 2021 04:59:58 GMT  
+	-	`sha256:a8bdf7aa1b335f83aa7f89629118092911e4fd5282650af173dcf08de463314b`  
+		Last Modified: Wed, 31 Mar 2021 20:22:40 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1-alpine` - linux; arm variant v6
 
 ```console
-$ docker pull golang@sha256:4581f323d2873e87c832fc181893d3faba5b1a4ad3850bca3ddf00c07f314673
+$ docker pull golang@sha256:f88a71a15bad8bd35f7a34beedd41fb5b1dacd66b7de65debd05c581d0bc5a6d
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **104.8 MB (104799033 bytes)**  
+-	Total Size: **104.8 MB (104799871 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3eb354b806d2d61481eda1ad01a705bead65acb2792492a16a69ab14a09b9c7b`
+-	Image ID: `sha256:c29d2c7b4afe4a2c6aeee33a4bcf0743e200bae254c88dede0ff53c47a3e2b66`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:50:09 GMT
-ADD file:ca4136238cb9a01d079efd129bccd1470945d7d4320da61373af90645a4b1146 in / 
-# Thu, 25 Mar 2021 22:50:28 GMT
+# Wed, 31 Mar 2021 17:18:49 GMT
+ADD file:988879d74f643b89539e5a0b6d74221621f19f4f87f722614addadc46ce47200 in / 
+# Wed, 31 Mar 2021 17:18:50 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:27:14 GMT
+# Wed, 31 Mar 2021 18:28:21 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:27:20 GMT
+# Wed, 31 Mar 2021 18:28:24 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:27:23 GMT
+# Wed, 31 Mar 2021 18:28:25 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:27:25 GMT
+# Wed, 31 Mar 2021 18:28:25 GMT
 ENV GOLANG_VERSION=1.16.2
-# Thu, 25 Mar 2021 23:30:58 GMT
+# Wed, 31 Mar 2021 18:44:29 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:31:10 GMT
+# Wed, 31 Mar 2021 18:44:47 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:31:13 GMT
+# Wed, 31 Mar 2021 18:44:50 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:31:19 GMT
+# Wed, 31 Mar 2021 18:44:52 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:31:22 GMT
+# Wed, 31 Mar 2021 18:44:54 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:bca6a70a54896d072b6919d2ae18d3ef685bc7aed783731f68a4adac0fb93d52`  
-		Last Modified: Thu, 25 Mar 2021 22:54:24 GMT  
-		Size: 2.6 MB (2622062 bytes)  
+	-	`sha256:bb87125c6ee1ce30c6b33d2c96a9fbe46da4a290f7cb1dd73fd62d4e06503699`  
+		Last Modified: Wed, 31 Mar 2021 17:19:55 GMT  
+		Size: 2.6 MB (2622116 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4ea05802fe691d87fddb107a6821e75df7c3f57bc6cb2e90cddd4b45a233d0f0`  
-		Last Modified: Thu, 25 Mar 2021 23:44:44 GMT  
-		Size: 281.4 KB (281380 bytes)  
+	-	`sha256:f0eb8dc77a7b333e6a40d00034c58c9612b3c2a7d33ea6c7dbf62e416baac7ea`  
+		Last Modified: Wed, 31 Mar 2021 19:22:13 GMT  
+		Size: 281.4 KB (281371 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1d164f70ad230af42bb09ffd3d6494a6bb012bc5731d7fbd2b3e1c3bcec9c4f6`  
-		Last Modified: Thu, 25 Mar 2021 23:44:44 GMT  
+	-	`sha256:0ec5882b9b78ec27dce64542bb1bd7c56d4913cde0d929356e9353ea6caac515`  
+		Last Modified: Wed, 31 Mar 2021 19:22:13 GMT  
 		Size: 154.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2622573d65ac2b2f3da8dcf9071b0b381b5aa588c86752685ccd5d4b4174d753`  
-		Last Modified: Thu, 25 Mar 2021 23:45:33 GMT  
-		Size: 101.9 MB (101895281 bytes)  
+	-	`sha256:a02b4132f4d532190e4bab920cfc597ca4d398959a8793bf22e055a54a230dd9`  
+		Last Modified: Wed, 31 Mar 2021 19:22:50 GMT  
+		Size: 101.9 MB (101896075 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:944207996fc4aeb8e8071cdb07931a55bf81ec3d36df949c73bf70becdc05bf1`  
-		Last Modified: Thu, 25 Mar 2021 23:44:44 GMT  
-		Size: 156.0 B  
+	-	`sha256:3ac885759424a47ac2b08ab253206844465a38311eb822180b7167f46dabc078`  
+		Last Modified: Wed, 31 Mar 2021 19:22:13 GMT  
+		Size: 155.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1-alpine` - linux; arm variant v7
@@ -1234,67 +1234,67 @@ WORKDIR /go
 ### `golang:1-alpine` - linux; s390x
 
 ```console
-$ docker pull golang@sha256:4c352be0f34f970f599e9bfc918e7e143c9e449bf1011b4db242960fa3b0ce29
+$ docker pull golang@sha256:8c4e3b53cda6084d770562ad07862f14e46dbe320d25e134df885da22b5fc73a
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **107.7 MB (107672720 bytes)**  
+-	Total Size: **107.7 MB (107671895 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:14b21f09f9677a233b9aa93c45819a64db388ddddc009f0af5a3291737dea67c`
+-	Image ID: `sha256:cfb7100ad492885a8b3136c41523fdb186f32c64072e1f09a3153db1d730add0`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:41:34 GMT
-ADD file:44e2c7cd992fc98df702bef7022e0f8c4ee86312c311ab5ae185fd5fc878edf9 in / 
-# Thu, 25 Mar 2021 22:41:34 GMT
+# Wed, 31 Mar 2021 17:14:58 GMT
+ADD file:3f5fe04867af3c9f2cfc5b315d97097145ae11343399985386321a8db21d7786 in / 
+# Wed, 31 Mar 2021 17:14:58 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:18:24 GMT
+# Wed, 31 Mar 2021 18:32:50 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:18:24 GMT
+# Wed, 31 Mar 2021 18:32:51 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:18:25 GMT
+# Wed, 31 Mar 2021 18:32:51 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:18:25 GMT
+# Wed, 31 Mar 2021 18:32:51 GMT
 ENV GOLANG_VERSION=1.16.2
-# Thu, 25 Mar 2021 23:20:28 GMT
+# Wed, 31 Mar 2021 18:34:22 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:20:33 GMT
+# Wed, 31 Mar 2021 18:34:27 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:20:33 GMT
+# Wed, 31 Mar 2021 18:34:27 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:20:34 GMT
+# Wed, 31 Mar 2021 18:34:28 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:20:34 GMT
+# Wed, 31 Mar 2021 18:34:28 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:a266c0a9554add02ea09a46b8584cb36b7f606b7b4398b9ad7369f899f8360df`  
-		Last Modified: Thu, 25 Mar 2021 22:42:07 GMT  
-		Size: 2.6 MB (2602387 bytes)  
+	-	`sha256:1d4058bbeedf5296bcaf5ae8f37c8cd58152acad3ec45a536e08b83f5d3abe83`  
+		Last Modified: Wed, 31 Mar 2021 17:15:36 GMT  
+		Size: 2.6 MB (2602591 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5f7a13aca3904b3b663e1f8170de727ebe3a4616cb36dcadfd015e2e663c24bb`  
-		Last Modified: Thu, 25 Mar 2021 23:26:06 GMT  
-		Size: 281.7 KB (281700 bytes)  
+	-	`sha256:27c9dd6f50e848494b74d743acede663c4566d6c904f83c807df6ed135c0bac2`  
+		Last Modified: Wed, 31 Mar 2021 18:40:22 GMT  
+		Size: 281.7 KB (281696 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0511116a12ff773aa9cf992f6fa81a1e4a4404f1ba284f6526e7439c07e3a651`  
-		Last Modified: Thu, 25 Mar 2021 23:26:06 GMT  
-		Size: 154.0 B  
+	-	`sha256:55a3302e682073b38a23dae31007fd1b72ed66261ca926cc100f29e177732a0a`  
+		Last Modified: Wed, 31 Mar 2021 18:40:25 GMT  
+		Size: 153.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c02165d3cb72f8bcf539749e1ddc8cfa7ea879be0c3c874454f40917d73c1b75`  
-		Last Modified: Thu, 25 Mar 2021 23:26:18 GMT  
-		Size: 104.8 MB (104788324 bytes)  
+	-	`sha256:bd4a9647efdfd2fe83835843ee761ff6c800604a0a2514db1cc014e18fa55664`  
+		Last Modified: Wed, 31 Mar 2021 18:40:34 GMT  
+		Size: 104.8 MB (104787299 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dde3ae89753fd12e06acc2bdf800133400dfd5d70ce659ed027e5a67e6eccbd3`  
-		Last Modified: Thu, 25 Mar 2021 23:26:06 GMT  
-		Size: 155.0 B  
+	-	`sha256:af5d3e1bba60e9d306da5ecd18bbbf586943da4bdc6d87c1c20338b0371f3552`  
+		Last Modified: Wed, 31 Mar 2021 18:40:23 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:1-alpine3.12`
 
 ```console
-$ docker pull golang@sha256:561ee1bc422ca797037621cc563e93cab4f1d08f74622c6de4bcbc610e2939ef
+$ docker pull golang@sha256:2b00d0c0560d9c294ef2ae13b58b8a76b9fbbaeee3243edecfa6d1320ed39533
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1310,120 +1310,120 @@ $ docker pull golang@sha256:561ee1bc422ca797037621cc563e93cab4f1d08f74622c6de4bc
 ### `golang:1-alpine3.12` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:09fa448029d63639e1097fd3cc3dc053c6e9bb739353f3eed4dc0f27503e397d
+$ docker pull golang@sha256:192f68738589059dad4cb032b386678b3270bd2132db329791f4f78efe1642ea
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **108.8 MB (108808237 bytes)**  
+-	Total Size: **108.8 MB (108808450 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7352b1cc5adbfd2878d91c0618249d10f58d551f235fae3f2271feaaa44e54cd`
+-	Image ID: `sha256:2a057958e00857b4458bfcf9ec1a0f23911501d424ebd9c09fd0460b9bf0da13`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:19:38 GMT
-ADD file:b2c067f4304d00c91fc9fd92f2e58853412cc705dfda4d1cf658fab965d5802c in / 
-# Thu, 25 Mar 2021 22:19:38 GMT
+# Wed, 31 Mar 2021 20:10:13 GMT
+ADD file:f77db8e5b937d8ebb7e254eccd4d311798ea9f4dd5081ea2a7e2b1d3790300c2 in / 
+# Wed, 31 Mar 2021 20:10:13 GMT
 CMD ["/bin/sh"]
-# Fri, 26 Mar 2021 04:50:11 GMT
+# Wed, 31 Mar 2021 20:14:43 GMT
 RUN apk add --no-cache 		ca-certificates
-# Fri, 26 Mar 2021 04:50:12 GMT
+# Wed, 31 Mar 2021 20:14:44 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Fri, 26 Mar 2021 04:50:12 GMT
+# Wed, 31 Mar 2021 20:14:44 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:50:12 GMT
+# Wed, 31 Mar 2021 20:14:44 GMT
 ENV GOLANG_VERSION=1.16.2
-# Fri, 26 Mar 2021 04:53:15 GMT
+# Wed, 31 Mar 2021 20:16:22 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Fri, 26 Mar 2021 04:53:16 GMT
+# Wed, 31 Mar 2021 20:16:23 GMT
 ENV GOPATH=/go
-# Fri, 26 Mar 2021 04:53:17 GMT
+# Wed, 31 Mar 2021 20:16:24 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:53:18 GMT
+# Wed, 31 Mar 2021 20:16:25 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Fri, 26 Mar 2021 04:53:19 GMT
+# Wed, 31 Mar 2021 20:16:25 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:22599d3e9e25e799b87521b94e20d20a601ffad16cf676274fdf94b089e4b979`  
-		Last Modified: Thu, 25 Mar 2021 22:20:35 GMT  
-		Size: 2.8 MB (2799762 bytes)  
+	-	`sha256:532819f3e44cebad88c82f5393801acb876b7a61d36b84bce646561789bb2018`  
+		Last Modified: Wed, 31 Mar 2021 20:11:03 GMT  
+		Size: 2.8 MB (2799712 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:994b649ee80af61fec0aab2113abbcce972dced9ddb604f8e2721a943dfca8f3`  
-		Last Modified: Fri, 26 Mar 2021 05:00:47 GMT  
-		Size: 280.9 KB (280878 bytes)  
+	-	`sha256:93cbbf235a55c104bafc6765f3c92a36489a596041551360d566152f2af01b59`  
+		Last Modified: Wed, 31 Mar 2021 20:22:25 GMT  
+		Size: 280.9 KB (280881 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dae587f6cd93b42cb17ce4c64b07191a204f7adde25a351026cc7cb254d28096`  
-		Last Modified: Fri, 26 Mar 2021 05:00:47 GMT  
-		Size: 152.0 B  
+	-	`sha256:e13f184a059628efa0b05f924f5b1e223377ebd57cdec0597912aabcd4b2129b`  
+		Last Modified: Wed, 31 Mar 2021 20:23:29 GMT  
+		Size: 153.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:aafd978e81e70299617e9a17892cd9a9d4f7dc84047441436c96f989cfe5c5cb`  
-		Last Modified: Fri, 26 Mar 2021 05:01:09 GMT  
-		Size: 105.7 MB (105727289 bytes)  
+	-	`sha256:695e77d5e927c2c1fe01389a3296f98344eb8b879e021a23ea7b8112b26d85c4`  
+		Last Modified: Wed, 31 Mar 2021 20:23:52 GMT  
+		Size: 105.7 MB (105727548 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4e86f102f01f6c8b27a4a8f10f5c23dda108131d0a445d1cd9802f32ccbb1012`  
-		Last Modified: Fri, 26 Mar 2021 05:00:46 GMT  
+	-	`sha256:0c328638b4633f6d3d893398135b3ace48e3677af7a11714949e3eea543cc5fe`  
+		Last Modified: Wed, 31 Mar 2021 20:23:28 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1-alpine3.12` - linux; arm variant v6
 
 ```console
-$ docker pull golang@sha256:648bdf6a519a1a104b50a7366a09c6b37bb12facf572f525951d0563d070df71
+$ docker pull golang@sha256:d6166c33d95f84d9d59dc71fe8ddc31fb464d4faf647c8531aa9d211fbdcd738
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **104.8 MB (104808565 bytes)**  
+-	Total Size: **104.8 MB (104807795 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:8ee8657e3509984061a9c4e96771256644bd31e2f7e3e6f9efbf813b4370d1ae`
+-	Image ID: `sha256:4f53734f2b88f9cbb49d827023d5f83812713cf89f357745dc17c6ca29f0f987`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:50:43 GMT
-ADD file:65a3462a527f49c8c625927be6b8b57b4257c8cc37d685055a1f183d76c68920 in / 
-# Thu, 25 Mar 2021 22:50:47 GMT
+# Wed, 31 Mar 2021 17:19:11 GMT
+ADD file:00ac3d0df16779e7564cda9cbf94eef90ffa8043778a867272ff0135a1fb537f in / 
+# Wed, 31 Mar 2021 17:19:12 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:31:38 GMT
+# Wed, 31 Mar 2021 18:45:17 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:31:44 GMT
+# Wed, 31 Mar 2021 18:45:20 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:31:46 GMT
+# Wed, 31 Mar 2021 18:45:21 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:31:48 GMT
+# Wed, 31 Mar 2021 18:45:22 GMT
 ENV GOLANG_VERSION=1.16.2
-# Thu, 25 Mar 2021 23:35:13 GMT
+# Wed, 31 Mar 2021 19:00:13 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:35:18 GMT
+# Wed, 31 Mar 2021 19:00:20 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:35:20 GMT
+# Wed, 31 Mar 2021 19:00:21 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:35:26 GMT
+# Wed, 31 Mar 2021 19:00:24 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:35:28 GMT
+# Wed, 31 Mar 2021 19:00:25 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:181a1446f0acaaa0871cec07aba4f733041f2d80ffbe01b19df43fe005df29f3`  
-		Last Modified: Thu, 25 Mar 2021 22:55:06 GMT  
-		Size: 2.6 MB (2604815 bytes)  
+	-	`sha256:66e54586dae0889b30da12f7a66838d9b86511b58696c83c3b9166ff1a534bbe`  
+		Last Modified: Wed, 31 Mar 2021 17:20:05 GMT  
+		Size: 2.6 MB (2604658 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:045419b8095ca1008ec369ea0965cfdae0dd0c90bea499bd8b42e5e45ab92cc5`  
-		Last Modified: Thu, 25 Mar 2021 23:46:09 GMT  
-		Size: 281.0 KB (280982 bytes)  
+	-	`sha256:0aa6796eed51884cd0436f134281af9489342ecf256aec0b31ca83f254ccd0d1`  
+		Last Modified: Wed, 31 Mar 2021 19:23:16 GMT  
+		Size: 281.0 KB (280979 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4ddbec85c64c1987da76dd94cb01590f1166da94443b5fa33ea1f633108a00fb`  
-		Last Modified: Thu, 25 Mar 2021 23:46:09 GMT  
-		Size: 154.0 B  
+	-	`sha256:1c043dc86373f816c29db582d9bddada9a00eeb3812a357a2dfd8e3f68d9a413`  
+		Last Modified: Wed, 31 Mar 2021 19:23:15 GMT  
+		Size: 153.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df1a3afcb046023a49c401c5e2308e16ee27a898f9f3387da58bcfa0ef11053a`  
-		Last Modified: Thu, 25 Mar 2021 23:46:42 GMT  
-		Size: 101.9 MB (101922458 bytes)  
+	-	`sha256:82c0b57107c7cd93ef0603a634622d63dd0585336bd5a2b844cfe780e60f8fab`  
+		Last Modified: Wed, 31 Mar 2021 19:23:47 GMT  
+		Size: 101.9 MB (101921849 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:647725af6164f31c936582ee2a2e74167e4c2c5d8cbacbfb7f8fcb4d9fac47cd`  
-		Last Modified: Thu, 25 Mar 2021 23:46:09 GMT  
+	-	`sha256:f3f763024bc32463f49f970db09f1cfa36ad87c9ac838d2b28ad36cda03ba923`  
+		Last Modified: Wed, 31 Mar 2021 19:23:15 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -1670,67 +1670,67 @@ WORKDIR /go
 ### `golang:1-alpine3.12` - linux; s390x
 
 ```console
-$ docker pull golang@sha256:218ee5dc5ff4546d9be56ff3f1bfcdb4164833d5ecac5ca8d5639c8d2561c869
+$ docker pull golang@sha256:7e47b0232f4073e1c855b37041c14354fc7e2c08fbf5a6a17cb02b34ec8c8aad
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **107.7 MB (107660727 bytes)**  
+-	Total Size: **107.7 MB (107660586 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:83387ea1e0de2529a16511f814924b896e0bc245aa1c92531275a0f76a9a2b35`
+-	Image ID: `sha256:ad37b5f0ed4fa5b570c4aaac6694b6395933363eb43ba6b0f860d8b0d377a495`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:41:39 GMT
-ADD file:12766b6fe7c37292d91bd1469b27dc9fb362e3109e9b3f377cff030bc0ca5386 in / 
-# Thu, 25 Mar 2021 22:41:39 GMT
+# Wed, 31 Mar 2021 17:15:04 GMT
+ADD file:1f37b92ea1f573c4810b1d056dc4880cf4035e143451d9b2b76fac1e3b462248 in / 
+# Wed, 31 Mar 2021 17:15:04 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:20:43 GMT
+# Wed, 31 Mar 2021 18:34:37 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:20:44 GMT
+# Wed, 31 Mar 2021 18:34:38 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:20:44 GMT
+# Wed, 31 Mar 2021 18:34:38 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:20:44 GMT
+# Wed, 31 Mar 2021 18:34:39 GMT
 ENV GOLANG_VERSION=1.16.2
-# Thu, 25 Mar 2021 23:22:10 GMT
+# Wed, 31 Mar 2021 18:36:08 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:22:15 GMT
+# Wed, 31 Mar 2021 18:36:14 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:22:15 GMT
+# Wed, 31 Mar 2021 18:36:14 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:22:16 GMT
+# Wed, 31 Mar 2021 18:36:15 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:22:17 GMT
+# Wed, 31 Mar 2021 18:36:15 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:be2cdf7cbb6a1aec476a957daaae210624b2b112c20f27f55bbcf2bdc74db281`  
-		Last Modified: Thu, 25 Mar 2021 22:42:19 GMT  
-		Size: 2.6 MB (2567457 bytes)  
+	-	`sha256:38ca5430c9af12b6b6dee7c10eb6b1eb0e4eb4f5f02a97890579c4b049d00233`  
+		Last Modified: Wed, 31 Mar 2021 17:15:46 GMT  
+		Size: 2.6 MB (2567453 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:aaddff0ad4814b86163108d94e8b39f43a463cb6c267218cec9cdeffc540308a`  
-		Last Modified: Thu, 25 Mar 2021 23:26:32 GMT  
+	-	`sha256:1dcb296d6fc71cd9057e3d03d0ea4ebe30a620f7c6ce57eb78f4c137e77a9a47`  
+		Last Modified: Wed, 31 Mar 2021 18:40:52 GMT  
 		Size: 281.4 KB (281355 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1b123ead7d9076567abb17998ba938b85be4f09afb27464b9c66734b580e1d5a`  
-		Last Modified: Thu, 25 Mar 2021 23:26:32 GMT  
+	-	`sha256:5783b7db1c405d51f50a261ae252c97941c44ffeb93cb10c2e2bdd458296774a`  
+		Last Modified: Wed, 31 Mar 2021 18:40:52 GMT  
 		Size: 153.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:127148b5f4ad531f5e05093db97daeb0a3cc2fb7fb77b5c1938e3cd239d79fec`  
-		Last Modified: Thu, 25 Mar 2021 23:26:44 GMT  
-		Size: 104.8 MB (104811606 bytes)  
+	-	`sha256:688bee172ee7101a6933e6df21647e155e8aee9549b551ffd448ed54e19b8e7a`  
+		Last Modified: Wed, 31 Mar 2021 18:41:07 GMT  
+		Size: 104.8 MB (104811470 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:89781a746445f6113e018850bb62a631f1b5a225d0166a2c697551a93c8d6fd6`  
-		Last Modified: Thu, 25 Mar 2021 23:26:32 GMT  
-		Size: 156.0 B  
+	-	`sha256:a3f579176032da1bacfaea3c32010b4673f4230534f6740d89bece53b21515d5`  
+		Last Modified: Wed, 31 Mar 2021 18:40:52 GMT  
+		Size: 155.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:1-alpine3.13`
 
 ```console
-$ docker pull golang@sha256:52dbfc81ec12df22e2ab1e7c9c4f4ee3dff73514e56a54924714d29ac03ff791
+$ docker pull golang@sha256:ae07fbf6c791da6ba6f16b58b2b60f1b7c0c6b478238e7f3784c42d6eeb0d0ad
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1746,121 +1746,121 @@ $ docker pull golang@sha256:52dbfc81ec12df22e2ab1e7c9c4f4ee3dff73514e56a54924714
 ### `golang:1-alpine3.13` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:4aee936562c29840e20ddb14bdbe028f7a7f376f2932096f5bfcc1931ec9f7c1
+$ docker pull golang@sha256:4891e17c9d2de88ebd1d9421919539226a76773d6ad1b4ac7376b286039c9be2
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **108.8 MB (108786138 bytes)**  
+-	Total Size: **108.8 MB (108786071 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5e238f856b8c39829309b40af496f71cfcf6e406ac005b1bbd1de9c50b2ed275`
+-	Image ID: `sha256:0fa0b8680167825684c347a60a168e134b449ba1cdef59c88f69223f716bccd2`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:19:32 GMT
-ADD file:6b081cabb4b256ee07587d249c4989b5b679375529542b81550a65b6f19f274e in / 
-# Thu, 25 Mar 2021 22:19:32 GMT
+# Wed, 31 Mar 2021 20:10:06 GMT
+ADD file:7119167b56ff1228b2fb639c768955ce9db7a999cd947179240b216dfa5ccbb9 in / 
+# Wed, 31 Mar 2021 20:10:06 GMT
 CMD ["/bin/sh"]
-# Fri, 26 Mar 2021 04:48:00 GMT
+# Wed, 31 Mar 2021 20:12:47 GMT
 RUN apk add --no-cache 		ca-certificates
-# Fri, 26 Mar 2021 04:48:01 GMT
+# Wed, 31 Mar 2021 20:12:48 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Fri, 26 Mar 2021 04:48:01 GMT
+# Wed, 31 Mar 2021 20:12:48 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:48:01 GMT
+# Wed, 31 Mar 2021 20:12:48 GMT
 ENV GOLANG_VERSION=1.16.2
-# Fri, 26 Mar 2021 04:49:57 GMT
+# Wed, 31 Mar 2021 20:14:27 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Fri, 26 Mar 2021 04:49:57 GMT
+# Wed, 31 Mar 2021 20:14:28 GMT
 ENV GOPATH=/go
-# Fri, 26 Mar 2021 04:49:57 GMT
+# Wed, 31 Mar 2021 20:14:28 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:49:59 GMT
+# Wed, 31 Mar 2021 20:14:29 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Fri, 26 Mar 2021 04:49:59 GMT
+# Wed, 31 Mar 2021 20:14:29 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:9aae54b2144e5b2b00c610f8805128f4f86822e1e52d3714c463744a431f0f4a`  
-		Last Modified: Thu, 25 Mar 2021 22:20:18 GMT  
-		Size: 2.8 MB (2811681 bytes)  
+	-	`sha256:ca3cd42a7c9525f6ce3d64c1a70982613a8235f0cc057ec9244052921853ef15`  
+		Last Modified: Wed, 31 Mar 2021 20:10:46 GMT  
+		Size: 2.8 MB (2811947 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9f73940e57d360e45588f2a826fa219a35089234eadac5c3e5d54dfac02c0a7d`  
-		Last Modified: Fri, 26 Mar 2021 04:59:58 GMT  
-		Size: 281.3 KB (281262 bytes)  
+	-	`sha256:dbcca316e5c32a932c66cfa46736e3998e69caeb857e570566ec63ab0377044a`  
+		Last Modified: Wed, 31 Mar 2021 20:22:40 GMT  
+		Size: 281.3 KB (281274 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ff472ba555d2504b7af85b2deac3b22d39a3dfa1510a54701764c4afd7bc7c43`  
-		Last Modified: Fri, 26 Mar 2021 04:59:59 GMT  
-		Size: 154.0 B  
+	-	`sha256:b65b403d39c8273b612240b85430a925f80b8b5719979c21e1387246faa62bd3`  
+		Last Modified: Wed, 31 Mar 2021 20:22:40 GMT  
+		Size: 155.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e4c1c61433975e8c3140ea23e09f8e224f43040721f5ca051e74120c8acb8631`  
-		Last Modified: Fri, 26 Mar 2021 05:00:17 GMT  
-		Size: 105.7 MB (105692885 bytes)  
+	-	`sha256:0d70e27e35ebcf8beb7c4148da1ce06b0c6a2f74b29fdd43ba616133688f5a6b`  
+		Last Modified: Wed, 31 Mar 2021 20:22:56 GMT  
+		Size: 105.7 MB (105692539 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ef687b4c646763d350c57c7a1405c68f0e9c4ee361dfa7b700103e0fc7a00111`  
-		Last Modified: Fri, 26 Mar 2021 04:59:58 GMT  
+	-	`sha256:a8bdf7aa1b335f83aa7f89629118092911e4fd5282650af173dcf08de463314b`  
+		Last Modified: Wed, 31 Mar 2021 20:22:40 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1-alpine3.13` - linux; arm variant v6
 
 ```console
-$ docker pull golang@sha256:4581f323d2873e87c832fc181893d3faba5b1a4ad3850bca3ddf00c07f314673
+$ docker pull golang@sha256:f88a71a15bad8bd35f7a34beedd41fb5b1dacd66b7de65debd05c581d0bc5a6d
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **104.8 MB (104799033 bytes)**  
+-	Total Size: **104.8 MB (104799871 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3eb354b806d2d61481eda1ad01a705bead65acb2792492a16a69ab14a09b9c7b`
+-	Image ID: `sha256:c29d2c7b4afe4a2c6aeee33a4bcf0743e200bae254c88dede0ff53c47a3e2b66`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:50:09 GMT
-ADD file:ca4136238cb9a01d079efd129bccd1470945d7d4320da61373af90645a4b1146 in / 
-# Thu, 25 Mar 2021 22:50:28 GMT
+# Wed, 31 Mar 2021 17:18:49 GMT
+ADD file:988879d74f643b89539e5a0b6d74221621f19f4f87f722614addadc46ce47200 in / 
+# Wed, 31 Mar 2021 17:18:50 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:27:14 GMT
+# Wed, 31 Mar 2021 18:28:21 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:27:20 GMT
+# Wed, 31 Mar 2021 18:28:24 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:27:23 GMT
+# Wed, 31 Mar 2021 18:28:25 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:27:25 GMT
+# Wed, 31 Mar 2021 18:28:25 GMT
 ENV GOLANG_VERSION=1.16.2
-# Thu, 25 Mar 2021 23:30:58 GMT
+# Wed, 31 Mar 2021 18:44:29 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:31:10 GMT
+# Wed, 31 Mar 2021 18:44:47 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:31:13 GMT
+# Wed, 31 Mar 2021 18:44:50 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:31:19 GMT
+# Wed, 31 Mar 2021 18:44:52 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:31:22 GMT
+# Wed, 31 Mar 2021 18:44:54 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:bca6a70a54896d072b6919d2ae18d3ef685bc7aed783731f68a4adac0fb93d52`  
-		Last Modified: Thu, 25 Mar 2021 22:54:24 GMT  
-		Size: 2.6 MB (2622062 bytes)  
+	-	`sha256:bb87125c6ee1ce30c6b33d2c96a9fbe46da4a290f7cb1dd73fd62d4e06503699`  
+		Last Modified: Wed, 31 Mar 2021 17:19:55 GMT  
+		Size: 2.6 MB (2622116 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4ea05802fe691d87fddb107a6821e75df7c3f57bc6cb2e90cddd4b45a233d0f0`  
-		Last Modified: Thu, 25 Mar 2021 23:44:44 GMT  
-		Size: 281.4 KB (281380 bytes)  
+	-	`sha256:f0eb8dc77a7b333e6a40d00034c58c9612b3c2a7d33ea6c7dbf62e416baac7ea`  
+		Last Modified: Wed, 31 Mar 2021 19:22:13 GMT  
+		Size: 281.4 KB (281371 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1d164f70ad230af42bb09ffd3d6494a6bb012bc5731d7fbd2b3e1c3bcec9c4f6`  
-		Last Modified: Thu, 25 Mar 2021 23:44:44 GMT  
+	-	`sha256:0ec5882b9b78ec27dce64542bb1bd7c56d4913cde0d929356e9353ea6caac515`  
+		Last Modified: Wed, 31 Mar 2021 19:22:13 GMT  
 		Size: 154.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2622573d65ac2b2f3da8dcf9071b0b381b5aa588c86752685ccd5d4b4174d753`  
-		Last Modified: Thu, 25 Mar 2021 23:45:33 GMT  
-		Size: 101.9 MB (101895281 bytes)  
+	-	`sha256:a02b4132f4d532190e4bab920cfc597ca4d398959a8793bf22e055a54a230dd9`  
+		Last Modified: Wed, 31 Mar 2021 19:22:50 GMT  
+		Size: 101.9 MB (101896075 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:944207996fc4aeb8e8071cdb07931a55bf81ec3d36df949c73bf70becdc05bf1`  
-		Last Modified: Thu, 25 Mar 2021 23:44:44 GMT  
-		Size: 156.0 B  
+	-	`sha256:3ac885759424a47ac2b08ab253206844465a38311eb822180b7167f46dabc078`  
+		Last Modified: Wed, 31 Mar 2021 19:22:13 GMT  
+		Size: 155.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1-alpine3.13` - linux; arm variant v7
@@ -2106,67 +2106,67 @@ WORKDIR /go
 ### `golang:1-alpine3.13` - linux; s390x
 
 ```console
-$ docker pull golang@sha256:4c352be0f34f970f599e9bfc918e7e143c9e449bf1011b4db242960fa3b0ce29
+$ docker pull golang@sha256:8c4e3b53cda6084d770562ad07862f14e46dbe320d25e134df885da22b5fc73a
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **107.7 MB (107672720 bytes)**  
+-	Total Size: **107.7 MB (107671895 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:14b21f09f9677a233b9aa93c45819a64db388ddddc009f0af5a3291737dea67c`
+-	Image ID: `sha256:cfb7100ad492885a8b3136c41523fdb186f32c64072e1f09a3153db1d730add0`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:41:34 GMT
-ADD file:44e2c7cd992fc98df702bef7022e0f8c4ee86312c311ab5ae185fd5fc878edf9 in / 
-# Thu, 25 Mar 2021 22:41:34 GMT
+# Wed, 31 Mar 2021 17:14:58 GMT
+ADD file:3f5fe04867af3c9f2cfc5b315d97097145ae11343399985386321a8db21d7786 in / 
+# Wed, 31 Mar 2021 17:14:58 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:18:24 GMT
+# Wed, 31 Mar 2021 18:32:50 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:18:24 GMT
+# Wed, 31 Mar 2021 18:32:51 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:18:25 GMT
+# Wed, 31 Mar 2021 18:32:51 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:18:25 GMT
+# Wed, 31 Mar 2021 18:32:51 GMT
 ENV GOLANG_VERSION=1.16.2
-# Thu, 25 Mar 2021 23:20:28 GMT
+# Wed, 31 Mar 2021 18:34:22 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:20:33 GMT
+# Wed, 31 Mar 2021 18:34:27 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:20:33 GMT
+# Wed, 31 Mar 2021 18:34:27 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:20:34 GMT
+# Wed, 31 Mar 2021 18:34:28 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:20:34 GMT
+# Wed, 31 Mar 2021 18:34:28 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:a266c0a9554add02ea09a46b8584cb36b7f606b7b4398b9ad7369f899f8360df`  
-		Last Modified: Thu, 25 Mar 2021 22:42:07 GMT  
-		Size: 2.6 MB (2602387 bytes)  
+	-	`sha256:1d4058bbeedf5296bcaf5ae8f37c8cd58152acad3ec45a536e08b83f5d3abe83`  
+		Last Modified: Wed, 31 Mar 2021 17:15:36 GMT  
+		Size: 2.6 MB (2602591 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5f7a13aca3904b3b663e1f8170de727ebe3a4616cb36dcadfd015e2e663c24bb`  
-		Last Modified: Thu, 25 Mar 2021 23:26:06 GMT  
-		Size: 281.7 KB (281700 bytes)  
+	-	`sha256:27c9dd6f50e848494b74d743acede663c4566d6c904f83c807df6ed135c0bac2`  
+		Last Modified: Wed, 31 Mar 2021 18:40:22 GMT  
+		Size: 281.7 KB (281696 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0511116a12ff773aa9cf992f6fa81a1e4a4404f1ba284f6526e7439c07e3a651`  
-		Last Modified: Thu, 25 Mar 2021 23:26:06 GMT  
-		Size: 154.0 B  
+	-	`sha256:55a3302e682073b38a23dae31007fd1b72ed66261ca926cc100f29e177732a0a`  
+		Last Modified: Wed, 31 Mar 2021 18:40:25 GMT  
+		Size: 153.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c02165d3cb72f8bcf539749e1ddc8cfa7ea879be0c3c874454f40917d73c1b75`  
-		Last Modified: Thu, 25 Mar 2021 23:26:18 GMT  
-		Size: 104.8 MB (104788324 bytes)  
+	-	`sha256:bd4a9647efdfd2fe83835843ee761ff6c800604a0a2514db1cc014e18fa55664`  
+		Last Modified: Wed, 31 Mar 2021 18:40:34 GMT  
+		Size: 104.8 MB (104787299 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dde3ae89753fd12e06acc2bdf800133400dfd5d70ce659ed027e5a67e6eccbd3`  
-		Last Modified: Thu, 25 Mar 2021 23:26:06 GMT  
-		Size: 155.0 B  
+	-	`sha256:af5d3e1bba60e9d306da5ecd18bbbf586943da4bdc6d87c1c20338b0371f3552`  
+		Last Modified: Wed, 31 Mar 2021 18:40:23 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:1-buster`
 
 ```console
-$ docker pull golang@sha256:5e7e4d55a6c14081660a177570584e45e93a325f97a84bcf0b4534b3a784d3ec
+$ docker pull golang@sha256:7a894f6fac60d7c83dbf1fa47e448e04af8b8c3c4eaa4048be6a5888b518a60c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2183,73 +2183,73 @@ $ docker pull golang@sha256:5e7e4d55a6c14081660a177570584e45e93a325f97a84bcf0b45
 ### `golang:1-buster` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:6247840c3865d9bfb709e6fa43c3cf2f6fc1334e36c6cb8712cf59205b0b31e0
+$ docker pull golang@sha256:dabc19f6f1adbbc27ce339b6abff0064106c2cb993fc82c407698f07d5ad151e
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **317.8 MB (317817106 bytes)**  
+-	Total Size: **317.9 MB (317850483 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:64bd1a7b99b7ba1d5f1c21d4c4625f29858cce169e724dabb30dc8c994ed44c3`
+-	Image ID: `sha256:217d1e25596170633bd1e02c19d3c614986fe3853d492b3a2d4cc6e719381ea2`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Fri, 26 Mar 2021 15:20:41 GMT
-ADD file:89234bb2f86c7eb890235a48904d1c9898a8d287a525c4fe5698d4a04cdd8f12 in / 
-# Fri, 26 Mar 2021 15:20:42 GMT
+# Tue, 30 Mar 2021 21:49:16 GMT
+ADD file:c254898ceb4172f05cd40460f8d0b1ca2d39d5178bdddd4e794c7d3fc5a60a03 in / 
+# Tue, 30 Mar 2021 21:49:16 GMT
 CMD ["bash"]
-# Sat, 27 Mar 2021 05:53:29 GMT
+# Tue, 30 Mar 2021 23:03:10 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
-# Sat, 27 Mar 2021 05:53:35 GMT
+# Tue, 30 Mar 2021 23:03:21 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Sat, 27 Mar 2021 05:53:54 GMT
+# Tue, 30 Mar 2021 23:03:52 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:05 GMT
+# Wed, 31 Mar 2021 20:11:57 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:06 GMT
+# Wed, 31 Mar 2021 20:11:57 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:18:06 GMT
+# Wed, 31 Mar 2021 20:11:57 GMT
 ENV GOLANG_VERSION=1.16.2
-# Sun, 28 Mar 2021 00:18:17 GMT
+# Wed, 31 Mar 2021 20:12:08 GMT
 RUN set -eux; 		dpkgArch="$(dpkg --print-architecture)"; 	url=; 	case "${dpkgArch##*-}" in 		'amd64') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-amd64.tar.gz'; 			sha256='542e936b19542e62679766194364f45141fde55169db2d8d01046555ca9eb4b8'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-armv6l.tar.gz'; 			sha256='49765b1ac36f77a84ce8186b08713c3811db5426e4ecfaa4344453e12d756c22'; 			;; 		'arm64') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-arm64.tar.gz'; 			sha256='6924601d998a0917694fd14261347e3798bd2ad6b13c4d7f2edd70c9d57f62ab'; 			;; 		'i386') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-386.tar.gz'; 			sha256='3638abf8e8272a4ddc3e5189487c932d680abfb151e2c48ae18c9a04a90ded73'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-ppc64le.tar.gz'; 			sha256='e1dcc9b460b2d522added8dfce764a06c5e455c8047b45b67a06f7f5ab19c4e0'; 			;; 		's390x') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-s390x.tar.gz'; 			sha256='a686743b0803d54e051756ce946d9d72436f23e9f815739c947934e0052bf9ff'; 			;; 		*) echo >&2 "error: unsupported architecture '$dpkgArch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 		sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		echo >&2; 		echo >&2 "warning: current architecture ($dpkgArch) does not have a corresponding Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc" --progress=dot:giga; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum --strict --check -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends golang-go; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				go install std; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 		; 	fi; 		go version
-# Sun, 28 Mar 2021 00:18:18 GMT
+# Wed, 31 Mar 2021 20:12:09 GMT
 ENV GOPATH=/go
-# Sun, 28 Mar 2021 00:18:18 GMT
+# Wed, 31 Mar 2021 20:12:09 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:18:19 GMT
+# Wed, 31 Mar 2021 20:12:10 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Sun, 28 Mar 2021 00:18:20 GMT
+# Wed, 31 Mar 2021 20:12:10 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:8bf9c589d5f9475f1fcc050e02308d6b4eeb86eab7752ef948a13693e81a6aaa`  
-		Last Modified: Fri, 26 Mar 2021 15:27:11 GMT  
-		Size: 50.4 MB (50400278 bytes)  
+	-	`sha256:004f1eed87df3f75f5e2a1a649fa7edd7f713d1300532fd0909bb39cd48437d7`  
+		Last Modified: Tue, 30 Mar 2021 21:53:41 GMT  
+		Size: 50.4 MB (50432842 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4c70e46d8b5f0e1d77797b7a0565b7a316bd8c7c024f5cca82592128af142dac`  
-		Last Modified: Sat, 27 Mar 2021 06:03:41 GMT  
-		Size: 7.8 MB (7832558 bytes)  
+	-	`sha256:5d6f1e8117dbb1c6a57603cb4f321a861a08105a81bcc6b01b0ec2b78c8523a5`  
+		Last Modified: Tue, 30 Mar 2021 23:14:05 GMT  
+		Size: 7.8 MB (7832608 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ea848ad42f0d1676b3a0ce709208ba3fa154cd53370c50e7cf8e580c63d96ae0`  
-		Last Modified: Sat, 27 Mar 2021 06:03:41 GMT  
-		Size: 10.0 MB (9997159 bytes)  
+	-	`sha256:48c2faf66abec3dce9f54d6722ff592fce6dd4fb58a0d0b72282936c6598a3b3`  
+		Last Modified: Tue, 30 Mar 2021 23:14:05 GMT  
+		Size: 10.0 MB (9997208 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:48fe137f8d2641315dd2f93c46dfdb671ce7399edc1f44f10cc68984f2809d8e`  
-		Last Modified: Sat, 27 Mar 2021 06:04:05 GMT  
-		Size: 51.8 MB (51839972 bytes)  
+	-	`sha256:234b70d0479d7f16d7ee8d04e4ffdacc57d7d14313faf59d332f18b2e9418743`  
+		Last Modified: Tue, 30 Mar 2021 23:14:37 GMT  
+		Size: 51.8 MB (51840782 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e53aa3cb0a1b20fe535fb0954912e16192c1fa053d0f6f2df21d1f5a50f8139c`  
-		Last Modified: Sun, 28 Mar 2021 00:20:35 GMT  
-		Size: 68.7 MB (68736693 bytes)  
+	-	`sha256:f5e9f83ff9bcf98a081ea281823c299a293e0870c4fd132c22cf425b01bd310e`  
+		Last Modified: Wed, 31 Mar 2021 20:21:23 GMT  
+		Size: 68.7 MB (68736521 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d33aad0a69811ebff8950e59bd61ab326225562bb2757c92673e3f91061dd280`  
-		Last Modified: Sun, 28 Mar 2021 00:20:45 GMT  
-		Size: 129.0 MB (129010291 bytes)  
+	-	`sha256:abff7ae5ce6584ffabbc37f4da5db276ef2c999823396c28c894a2accadadad7`  
+		Last Modified: Wed, 31 Mar 2021 20:21:33 GMT  
+		Size: 129.0 MB (129010366 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:996781d6304ab92c67a9228d5c68c6829dbd06ae8f0f4acb8a00326a1aab6c51`  
-		Last Modified: Sun, 28 Mar 2021 00:20:24 GMT  
-		Size: 155.0 B  
+	-	`sha256:26b15789ebb1ee2fa09a78a3c616664936f679eafbf8fd14b07094bf285267a4`  
+		Last Modified: Wed, 31 Mar 2021 20:21:12 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1-buster` - linux; arm variant v5
@@ -2935,7 +2935,7 @@ WORKDIR C:\gopath
 ## `golang:1-stretch`
 
 ```console
-$ docker pull golang@sha256:fd33ea27ab2941b88f518d96aab76aa40ec6e32c9d619f0b832072ebfec2d0e4
+$ docker pull golang@sha256:1bf98b13aa56635f0a69bdb9bc35cba11a672fd65f7d429dfdeb721b0d9dbc16
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2948,72 +2948,72 @@ $ docker pull golang@sha256:fd33ea27ab2941b88f518d96aab76aa40ec6e32c9d619f0b8320
 ### `golang:1-stretch` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:9ebb8e1de83d2095f9c840eece75af6146e8754b17b50803ff57770deaf0b2b1
+$ docker pull golang@sha256:b115ccd7afca7d356cdf85196351f801cf3615f48a682a186df09e680b314397
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **297.6 MB (297635345 bytes)**  
+-	Total Size: **297.6 MB (297635779 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:33056ca8809bab51fa6f3d2afb1282c3fc97d683990e52d979bd70a456d14cbc`
+-	Image ID: `sha256:ad59aded19e0b9361014c0d0980cd524931cdbc7f0498ee3eb4fd9c1d22d2882`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Fri, 26 Mar 2021 15:23:17 GMT
-ADD file:f7a6b2066de76eb559d8ab8bf8972d519c3b4dcafc62e46253227559091f7c8f in / 
-# Fri, 26 Mar 2021 15:23:18 GMT
+# Tue, 30 Mar 2021 21:50:43 GMT
+ADD file:e52290391b221e1a4e52cf4e41ffe7e14f162475964fa01638e03b3ead673ba1 in / 
+# Tue, 30 Mar 2021 21:50:43 GMT
 CMD ["bash"]
-# Sat, 27 Mar 2021 05:57:11 GMT
+# Tue, 30 Mar 2021 23:08:00 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		apt-transport-https 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
-# Sat, 27 Mar 2021 05:57:18 GMT
+# Tue, 30 Mar 2021 23:08:09 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Sat, 27 Mar 2021 05:57:45 GMT
+# Tue, 30 Mar 2021 23:08:42 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		bzr 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:35 GMT
+# Wed, 31 Mar 2021 20:12:26 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:35 GMT
+# Wed, 31 Mar 2021 20:12:26 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:18:35 GMT
+# Wed, 31 Mar 2021 20:12:27 GMT
 ENV GOLANG_VERSION=1.16.2
-# Sun, 28 Mar 2021 00:18:52 GMT
+# Wed, 31 Mar 2021 20:12:39 GMT
 RUN set -eux; 		dpkgArch="$(dpkg --print-architecture)"; 	url=; 	case "${dpkgArch##*-}" in 		'amd64') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-amd64.tar.gz'; 			sha256='542e936b19542e62679766194364f45141fde55169db2d8d01046555ca9eb4b8'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-armv6l.tar.gz'; 			sha256='49765b1ac36f77a84ce8186b08713c3811db5426e4ecfaa4344453e12d756c22'; 			;; 		'arm64') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-arm64.tar.gz'; 			sha256='6924601d998a0917694fd14261347e3798bd2ad6b13c4d7f2edd70c9d57f62ab'; 			;; 		'i386') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-386.tar.gz'; 			sha256='3638abf8e8272a4ddc3e5189487c932d680abfb151e2c48ae18c9a04a90ded73'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-ppc64le.tar.gz'; 			sha256='e1dcc9b460b2d522added8dfce764a06c5e455c8047b45b67a06f7f5ab19c4e0'; 			;; 		's390x') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-s390x.tar.gz'; 			sha256='a686743b0803d54e051756ce946d9d72436f23e9f815739c947934e0052bf9ff'; 			;; 		*) echo >&2 "error: unsupported architecture '$dpkgArch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 		sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		echo >&2; 		echo >&2 "warning: current architecture ($dpkgArch) does not have a corresponding Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc" --progress=dot:giga; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum --strict --check -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends golang-go; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				go install std; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 		; 	fi; 		go version
-# Sun, 28 Mar 2021 00:18:53 GMT
+# Wed, 31 Mar 2021 20:12:40 GMT
 ENV GOPATH=/go
-# Sun, 28 Mar 2021 00:18:54 GMT
+# Wed, 31 Mar 2021 20:12:40 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:18:55 GMT
+# Wed, 31 Mar 2021 20:12:41 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Sun, 28 Mar 2021 00:18:55 GMT
+# Wed, 31 Mar 2021 20:12:41 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:1dfe7e1e1bffb84b5330514880896199259b01ebe2b9d531dd88f7ce7db8cd18`  
-		Last Modified: Fri, 26 Mar 2021 15:32:18 GMT  
-		Size: 45.4 MB (45379513 bytes)  
+	-	`sha256:00168f89dbe8f3c9985e536784c27517f6cc35ea56263469449a6b73e0bed595`  
+		Last Modified: Tue, 30 Mar 2021 21:56:37 GMT  
+		Size: 45.4 MB (45379949 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df86b11a61e4b8cbb37a4a570baf51ae6bbc8cbf231f56401403e21dea70144d`  
-		Last Modified: Sat, 27 Mar 2021 06:06:53 GMT  
-		Size: 11.3 MB (11286512 bytes)  
+	-	`sha256:da61ad49fa9961d6dfe53dc067fd690133f205498e8045e8f7ef6b9da0d42bd2`  
+		Last Modified: Tue, 30 Mar 2021 23:17:25 GMT  
+		Size: 11.3 MB (11286658 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:006eb4a69e602dcb61f4680d7e4a0d4853902062ab1230263e33125ae86b2700`  
-		Last Modified: Sat, 27 Mar 2021 06:06:52 GMT  
-		Size: 4.3 MB (4342442 bytes)  
+	-	`sha256:af62e04c0f85ed10801df4314d8cb9ba5e6c391f6a3c1db1080a0a78c8d4ed9d`  
+		Last Modified: Tue, 30 Mar 2021 23:17:23 GMT  
+		Size: 4.3 MB (4342466 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6c1c07de8af095e25b339c838c0a02c16fda79738e6c03e266875a048b28222f`  
-		Last Modified: Sat, 27 Mar 2021 06:07:16 GMT  
-		Size: 49.8 MB (49787143 bytes)  
+	-	`sha256:aae835e2c68ef1d48a4ffef72547a79926019aec6a2bbeb5372f1e832ef453dd`  
+		Last Modified: Tue, 30 Mar 2021 23:17:49 GMT  
+		Size: 49.8 MB (49787075 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6944064dc3f76beb34bb375de67aee01c0cae51b0932b24877292f47eb248a50`  
-		Last Modified: Sun, 28 Mar 2021 00:21:12 GMT  
-		Size: 57.8 MB (57829197 bytes)  
+	-	`sha256:3c53dd465b309b4f16b31d4c5fc9821fc17e70e316c32456d7a0e9ac5a953f37`  
+		Last Modified: Wed, 31 Mar 2021 20:22:03 GMT  
+		Size: 57.8 MB (57829044 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:12a5a22b04dfb4eccaff81c96a5d652de8ccf86b701a38017904ea6854988b63`  
-		Last Modified: Sun, 28 Mar 2021 00:21:22 GMT  
-		Size: 129.0 MB (129010382 bytes)  
+	-	`sha256:9a5819b2b790ab264aa3dd395d6d8cded7b56b85f9470682ac226f89927a1078`  
+		Last Modified: Wed, 31 Mar 2021 20:22:18 GMT  
+		Size: 129.0 MB (129010431 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a42f7444dde50000bec9c4e20ad0518840c29de157d2c75d0913e2c999991999`  
-		Last Modified: Sun, 28 Mar 2021 00:21:02 GMT  
+	-	`sha256:9d7fa061e36ba9a055069006d99dfeea27fb3174a09a0bdb4ee47dd31d2f6033`  
+		Last Modified: Wed, 31 Mar 2021 20:21:52 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -3649,7 +3649,7 @@ WORKDIR C:\gopath
 ## `golang:1.15`
 
 ```console
-$ docker pull golang@sha256:c77000dbcd08d91fee1f5b67b9e563f94cca1271d3a64c0fb5fd526da6f7b092
+$ docker pull golang@sha256:622fa5008c46805a815b26d442748fe1a01f56fd5a883263e4b551bb16b70b3f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3668,73 +3668,73 @@ $ docker pull golang@sha256:c77000dbcd08d91fee1f5b67b9e563f94cca1271d3a64c0fb5fd
 ### `golang:1.15` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:2a663a98ba344f8f32b663c6274e5a2c03503c038b2cfb054e84bd6cea7d76c0
+$ docker pull golang@sha256:efee673095bb6b0698c13540bdbf94dd765b9235435ed6ce29ece67ef8a63340
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **309.9 MB (309877717 bytes)**  
+-	Total Size: **309.9 MB (309911015 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:74fe9d9959d375d859b37d7675d4ea5320db56497372198f178f7505213c3b92`
+-	Image ID: `sha256:95e3e1bab2d1177e9b686eac9a6cf5813c55949a61ce967dd3ea8b5be6358fe5`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Fri, 26 Mar 2021 15:20:41 GMT
-ADD file:89234bb2f86c7eb890235a48904d1c9898a8d287a525c4fe5698d4a04cdd8f12 in / 
-# Fri, 26 Mar 2021 15:20:42 GMT
+# Tue, 30 Mar 2021 21:49:16 GMT
+ADD file:c254898ceb4172f05cd40460f8d0b1ca2d39d5178bdddd4e794c7d3fc5a60a03 in / 
+# Tue, 30 Mar 2021 21:49:16 GMT
 CMD ["bash"]
-# Sat, 27 Mar 2021 05:53:29 GMT
+# Tue, 30 Mar 2021 23:03:10 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
-# Sat, 27 Mar 2021 05:53:35 GMT
+# Tue, 30 Mar 2021 23:03:21 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Sat, 27 Mar 2021 05:53:54 GMT
+# Tue, 30 Mar 2021 23:03:52 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:05 GMT
+# Wed, 31 Mar 2021 20:11:57 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:06 GMT
+# Wed, 31 Mar 2021 20:11:57 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:19:07 GMT
+# Wed, 31 Mar 2021 20:16:38 GMT
 ENV GOLANG_VERSION=1.15.10
-# Sun, 28 Mar 2021 00:19:17 GMT
+# Wed, 31 Mar 2021 20:16:48 GMT
 RUN set -eux; 		dpkgArch="$(dpkg --print-architecture)"; 	url=; 	case "${dpkgArch##*-}" in 		'amd64') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-amd64.tar.gz'; 			sha256='4aa1267517df32f2bf1cc3d55dfc27d0c6b2c2b0989449c96dd19273ccca051d'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-armv6l.tar.gz'; 			sha256='10739f7a87544acca49c9f1c025ae1821ce83601228a968bd7102357ae89887b'; 			;; 		'arm64') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-arm64.tar.gz'; 			sha256='ca3f3e84d863d8e758bfaab65430b12b6cff8f5a5648139245321d3401da64a7'; 			;; 		'i386') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-386.tar.gz'; 			sha256='69a29473c9e8eded5b5885a45773e4f1b9661383ce577199c4c70efe4c67bc59'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-ppc64le.tar.gz'; 			sha256='49128af704c37a356b1d14d814e4cf64218a8c6cabb22249e0c0068b35f710d3'; 			;; 		's390x') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-s390x.tar.gz'; 			sha256='230e0e50fe0df0ba380804c02f1d88a801c6dee38582c4a9502e79dc744c7bb0'; 			;; 		*) echo >&2 "error: unsupported architecture '$dpkgArch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://storage.googleapis.com/golang/go1.15.10.src.tar.gz'; 		sha256='c1dbca6e0910b41d61a95bf9878f6d6e93d15d884c226b91d9d4b1113c10dd65'; 		echo >&2; 		echo >&2 "warning: current architecture ($dpkgArch) does not have a corresponding Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc" --progress=dot:giga; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum --strict --check -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends golang-go; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				go install std; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 		; 	fi; 		go version
-# Sun, 28 Mar 2021 00:19:18 GMT
+# Wed, 31 Mar 2021 20:16:49 GMT
 ENV GOPATH=/go
-# Sun, 28 Mar 2021 00:19:18 GMT
+# Wed, 31 Mar 2021 20:16:49 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:19:19 GMT
+# Wed, 31 Mar 2021 20:16:50 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Sun, 28 Mar 2021 00:19:19 GMT
+# Wed, 31 Mar 2021 20:16:51 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:8bf9c589d5f9475f1fcc050e02308d6b4eeb86eab7752ef948a13693e81a6aaa`  
-		Last Modified: Fri, 26 Mar 2021 15:27:11 GMT  
-		Size: 50.4 MB (50400278 bytes)  
+	-	`sha256:004f1eed87df3f75f5e2a1a649fa7edd7f713d1300532fd0909bb39cd48437d7`  
+		Last Modified: Tue, 30 Mar 2021 21:53:41 GMT  
+		Size: 50.4 MB (50432842 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4c70e46d8b5f0e1d77797b7a0565b7a316bd8c7c024f5cca82592128af142dac`  
-		Last Modified: Sat, 27 Mar 2021 06:03:41 GMT  
-		Size: 7.8 MB (7832558 bytes)  
+	-	`sha256:5d6f1e8117dbb1c6a57603cb4f321a861a08105a81bcc6b01b0ec2b78c8523a5`  
+		Last Modified: Tue, 30 Mar 2021 23:14:05 GMT  
+		Size: 7.8 MB (7832608 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ea848ad42f0d1676b3a0ce709208ba3fa154cd53370c50e7cf8e580c63d96ae0`  
-		Last Modified: Sat, 27 Mar 2021 06:03:41 GMT  
-		Size: 10.0 MB (9997159 bytes)  
+	-	`sha256:48c2faf66abec3dce9f54d6722ff592fce6dd4fb58a0d0b72282936c6598a3b3`  
+		Last Modified: Tue, 30 Mar 2021 23:14:05 GMT  
+		Size: 10.0 MB (9997208 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:48fe137f8d2641315dd2f93c46dfdb671ce7399edc1f44f10cc68984f2809d8e`  
-		Last Modified: Sat, 27 Mar 2021 06:04:05 GMT  
-		Size: 51.8 MB (51839972 bytes)  
+	-	`sha256:234b70d0479d7f16d7ee8d04e4ffdacc57d7d14313faf59d332f18b2e9418743`  
+		Last Modified: Tue, 30 Mar 2021 23:14:37 GMT  
+		Size: 51.8 MB (51840782 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e53aa3cb0a1b20fe535fb0954912e16192c1fa053d0f6f2df21d1f5a50f8139c`  
-		Last Modified: Sun, 28 Mar 2021 00:20:35 GMT  
-		Size: 68.7 MB (68736693 bytes)  
+	-	`sha256:f5e9f83ff9bcf98a081ea281823c299a293e0870c4fd132c22cf425b01bd310e`  
+		Last Modified: Wed, 31 Mar 2021 20:21:23 GMT  
+		Size: 68.7 MB (68736521 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ccdd004acfd8c80b2e52c4550f001d50b5bf7d5e98adbc1b887b075567a7fd8e`  
-		Last Modified: Sun, 28 Mar 2021 00:22:04 GMT  
-		Size: 121.1 MB (121070903 bytes)  
+	-	`sha256:e029dc4668e6ef180685ac8f080088333b201dd05bc33e87fdfacc5bcccb30ed`  
+		Last Modified: Wed, 31 Mar 2021 20:24:29 GMT  
+		Size: 121.1 MB (121070898 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9019dd7c1066a531134ff4453583c717f95975fe4b96738376c72d8d81dd088e`  
-		Last Modified: Sun, 28 Mar 2021 00:21:45 GMT  
-		Size: 154.0 B  
+	-	`sha256:2ce48311bb5fb4195fb2b42fc33ca8ed09525d8d1ea8f7906ffa6d652da88631`  
+		Last Modified: Wed, 31 Mar 2021 20:24:10 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1.15` - linux; arm variant v5
@@ -4435,7 +4435,7 @@ WORKDIR C:\gopath
 ## `golang:1.15-alpine`
 
 ```console
-$ docker pull golang@sha256:20394befaa591b234ce3a451e18b5eb9361494908036eca2ee17fa41e8f600ef
+$ docker pull golang@sha256:f6a0b79f5d5a31fab030cad6f4d21917d461931f5f6860295c0cf638b213038f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4451,120 +4451,120 @@ $ docker pull golang@sha256:20394befaa591b234ce3a451e18b5eb9361494908036eca2ee17
 ### `golang:1.15-alpine` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:6e24550c2712c5dbacdfeff0726efac31fd6f670483bb02f820689e4e833722b
+$ docker pull golang@sha256:bdd5153d12b1db5b48c4e0099b3e2e19aa2964f9c0bf787805eb29b027a67bb4
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **109.9 MB (109884007 bytes)**  
+-	Total Size: **109.9 MB (109883751 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a0ce913c8aafbdd5b416f4b10dcfcf0fc32ebab6a13afd2c6674e741bea63f92`
+-	Image ID: `sha256:be9dced0e9c61f07f82ff89fe24a0454add488fdebb3585809b484be7e79d938`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:19:32 GMT
-ADD file:6b081cabb4b256ee07587d249c4989b5b679375529542b81550a65b6f19f274e in / 
-# Thu, 25 Mar 2021 22:19:32 GMT
+# Wed, 31 Mar 2021 20:10:06 GMT
+ADD file:7119167b56ff1228b2fb639c768955ce9db7a999cd947179240b216dfa5ccbb9 in / 
+# Wed, 31 Mar 2021 20:10:06 GMT
 CMD ["/bin/sh"]
-# Fri, 26 Mar 2021 04:48:00 GMT
+# Wed, 31 Mar 2021 20:12:47 GMT
 RUN apk add --no-cache 		ca-certificates
-# Fri, 26 Mar 2021 04:48:01 GMT
+# Wed, 31 Mar 2021 20:12:48 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Fri, 26 Mar 2021 04:48:01 GMT
+# Wed, 31 Mar 2021 20:12:48 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:53:43 GMT
+# Wed, 31 Mar 2021 20:17:12 GMT
 ENV GOLANG_VERSION=1.15.10
-# Fri, 26 Mar 2021 04:56:42 GMT
+# Wed, 31 Mar 2021 20:18:44 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='387' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.15.10.src.tar.gz'; 	sha256='c1dbca6e0910b41d61a95bf9878f6d6e93d15d884c226b91d9d4b1113c10dd65'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Fri, 26 Mar 2021 04:56:43 GMT
+# Wed, 31 Mar 2021 20:18:45 GMT
 ENV GOPATH=/go
-# Fri, 26 Mar 2021 04:56:44 GMT
+# Wed, 31 Mar 2021 20:18:45 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:56:46 GMT
+# Wed, 31 Mar 2021 20:18:46 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Fri, 26 Mar 2021 04:56:46 GMT
+# Wed, 31 Mar 2021 20:18:46 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:9aae54b2144e5b2b00c610f8805128f4f86822e1e52d3714c463744a431f0f4a`  
-		Last Modified: Thu, 25 Mar 2021 22:20:18 GMT  
-		Size: 2.8 MB (2811681 bytes)  
+	-	`sha256:ca3cd42a7c9525f6ce3d64c1a70982613a8235f0cc057ec9244052921853ef15`  
+		Last Modified: Wed, 31 Mar 2021 20:10:46 GMT  
+		Size: 2.8 MB (2811947 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9f73940e57d360e45588f2a826fa219a35089234eadac5c3e5d54dfac02c0a7d`  
-		Last Modified: Fri, 26 Mar 2021 04:59:58 GMT  
-		Size: 281.3 KB (281262 bytes)  
+	-	`sha256:dbcca316e5c32a932c66cfa46736e3998e69caeb857e570566ec63ab0377044a`  
+		Last Modified: Wed, 31 Mar 2021 20:22:40 GMT  
+		Size: 281.3 KB (281274 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ff472ba555d2504b7af85b2deac3b22d39a3dfa1510a54701764c4afd7bc7c43`  
-		Last Modified: Fri, 26 Mar 2021 04:59:59 GMT  
-		Size: 154.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b1b665c161b76d6e3e7bb109285097beb6122cd50ef723fcf2495b6ce73e6e44`  
-		Last Modified: Fri, 26 Mar 2021 05:01:50 GMT  
-		Size: 106.8 MB (106790755 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e7931ed63562564d5be0f7860f7fd53e2edfaa0805258540d337e755cee690cf`  
-		Last Modified: Fri, 26 Mar 2021 05:01:28 GMT  
+	-	`sha256:b65b403d39c8273b612240b85430a925f80b8b5719979c21e1387246faa62bd3`  
+		Last Modified: Wed, 31 Mar 2021 20:22:40 GMT  
 		Size: 155.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c1220b2ee03d817e3a9db177c2dd717e78d68c754bac0fbfbb319488dbcac3d6`  
+		Last Modified: Wed, 31 Mar 2021 20:25:28 GMT  
+		Size: 106.8 MB (106790219 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:11437b7b95304e43c69dfced1368785059ddf56ad1bfc51f120ef0464f9ffdb9`  
+		Last Modified: Wed, 31 Mar 2021 20:25:13 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1.15-alpine` - linux; arm variant v6
 
 ```console
-$ docker pull golang@sha256:4b0d3fb11bc2f39dc50a85fe53fc0b6a81b9572034eebfc6bab30886557e4c59
+$ docker pull golang@sha256:b7f7da63a3296f20e4a4b6986f4e6dfc2913894ad1a3bcb2b470cfd61fe35742
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **105.6 MB (105563296 bytes)**  
+-	Total Size: **105.6 MB (105563790 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:de9b7e68dbb60ea30016f3edc5ff2ed2293fc9c8ac1c7e7eee3ff0ac6ed5635e`
+-	Image ID: `sha256:79d12ee59cca81018861589074053cb08e7c5a9427c778dd31aad32171bd3ec2`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:50:09 GMT
-ADD file:ca4136238cb9a01d079efd129bccd1470945d7d4320da61373af90645a4b1146 in / 
-# Thu, 25 Mar 2021 22:50:28 GMT
+# Wed, 31 Mar 2021 17:18:49 GMT
+ADD file:988879d74f643b89539e5a0b6d74221621f19f4f87f722614addadc46ce47200 in / 
+# Wed, 31 Mar 2021 17:18:50 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:27:14 GMT
+# Wed, 31 Mar 2021 18:28:21 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:27:20 GMT
+# Wed, 31 Mar 2021 18:28:24 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:27:23 GMT
+# Wed, 31 Mar 2021 18:28:25 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:35:43 GMT
+# Wed, 31 Mar 2021 19:00:37 GMT
 ENV GOLANG_VERSION=1.15.10
-# Thu, 25 Mar 2021 23:38:44 GMT
+# Wed, 31 Mar 2021 19:13:15 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='387' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.15.10.src.tar.gz'; 	sha256='c1dbca6e0910b41d61a95bf9878f6d6e93d15d884c226b91d9d4b1113c10dd65'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:38:49 GMT
+# Wed, 31 Mar 2021 19:13:21 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:38:51 GMT
+# Wed, 31 Mar 2021 19:13:23 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:38:55 GMT
+# Wed, 31 Mar 2021 19:13:26 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:39:00 GMT
+# Wed, 31 Mar 2021 19:13:28 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:bca6a70a54896d072b6919d2ae18d3ef685bc7aed783731f68a4adac0fb93d52`  
-		Last Modified: Thu, 25 Mar 2021 22:54:24 GMT  
-		Size: 2.6 MB (2622062 bytes)  
+	-	`sha256:bb87125c6ee1ce30c6b33d2c96a9fbe46da4a290f7cb1dd73fd62d4e06503699`  
+		Last Modified: Wed, 31 Mar 2021 17:19:55 GMT  
+		Size: 2.6 MB (2622116 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4ea05802fe691d87fddb107a6821e75df7c3f57bc6cb2e90cddd4b45a233d0f0`  
-		Last Modified: Thu, 25 Mar 2021 23:44:44 GMT  
-		Size: 281.4 KB (281380 bytes)  
+	-	`sha256:f0eb8dc77a7b333e6a40d00034c58c9612b3c2a7d33ea6c7dbf62e416baac7ea`  
+		Last Modified: Wed, 31 Mar 2021 19:22:13 GMT  
+		Size: 281.4 KB (281371 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1d164f70ad230af42bb09ffd3d6494a6bb012bc5731d7fbd2b3e1c3bcec9c4f6`  
-		Last Modified: Thu, 25 Mar 2021 23:44:44 GMT  
+	-	`sha256:0ec5882b9b78ec27dce64542bb1bd7c56d4913cde0d929356e9353ea6caac515`  
+		Last Modified: Wed, 31 Mar 2021 19:22:13 GMT  
 		Size: 154.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:57e04ae646ad142727a71bd484d9cf7abc46a03486388bb05e498884c9cdef74`  
-		Last Modified: Thu, 25 Mar 2021 23:47:23 GMT  
-		Size: 102.7 MB (102659544 bytes)  
+	-	`sha256:884bc77bcba8c1b3c55526ef751b4a543583762abf115b20731e3dcdb2bb0d57`  
+		Last Modified: Wed, 31 Mar 2021 19:24:35 GMT  
+		Size: 102.7 MB (102659993 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3590fe869a1ae6fe147fbe1c990d74a99091d0ba57492ad6219cc0ba7e36af81`  
-		Last Modified: Thu, 25 Mar 2021 23:46:51 GMT  
+	-	`sha256:a4d017842f8f66ddc088839043f86907fc667c06efdff0e06eb5d5a07be88db0`  
+		Last Modified: Wed, 31 Mar 2021 19:24:03 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -4811,67 +4811,67 @@ WORKDIR /go
 ### `golang:1.15-alpine` - linux; s390x
 
 ```console
-$ docker pull golang@sha256:b9bdac74c70abaf4e4b516c8934732586e1d9b5ace7d069643aadb6c468b36db
+$ docker pull golang@sha256:0ec0e006da609f9e4992aa8e2f4d49d2a16187cb731109bf71bb6fd4f6a71b7b
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **108.8 MB (108804942 bytes)**  
+-	Total Size: **108.8 MB (108801229 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:de1ad86fce5220113d95245b2f4076e5248f0fc0771b95e9f1e6584825655788`
+-	Image ID: `sha256:bb9813cd7f2769f5e9eee7f56589814353c067bbc4aca3d6aefb49a3f14a1686`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:41:34 GMT
-ADD file:44e2c7cd992fc98df702bef7022e0f8c4ee86312c311ab5ae185fd5fc878edf9 in / 
-# Thu, 25 Mar 2021 22:41:34 GMT
+# Wed, 31 Mar 2021 17:14:58 GMT
+ADD file:3f5fe04867af3c9f2cfc5b315d97097145ae11343399985386321a8db21d7786 in / 
+# Wed, 31 Mar 2021 17:14:58 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:18:24 GMT
+# Wed, 31 Mar 2021 18:32:50 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:18:24 GMT
+# Wed, 31 Mar 2021 18:32:51 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:18:25 GMT
+# Wed, 31 Mar 2021 18:32:51 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:22:34 GMT
+# Wed, 31 Mar 2021 18:36:29 GMT
 ENV GOLANG_VERSION=1.15.10
-# Thu, 25 Mar 2021 23:23:49 GMT
+# Wed, 31 Mar 2021 18:37:52 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='387' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.15.10.src.tar.gz'; 	sha256='c1dbca6e0910b41d61a95bf9878f6d6e93d15d884c226b91d9d4b1113c10dd65'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:23:54 GMT
+# Wed, 31 Mar 2021 18:37:57 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:23:54 GMT
+# Wed, 31 Mar 2021 18:37:58 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:23:55 GMT
+# Wed, 31 Mar 2021 18:37:58 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:23:55 GMT
+# Wed, 31 Mar 2021 18:37:59 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:a266c0a9554add02ea09a46b8584cb36b7f606b7b4398b9ad7369f899f8360df`  
-		Last Modified: Thu, 25 Mar 2021 22:42:07 GMT  
-		Size: 2.6 MB (2602387 bytes)  
+	-	`sha256:1d4058bbeedf5296bcaf5ae8f37c8cd58152acad3ec45a536e08b83f5d3abe83`  
+		Last Modified: Wed, 31 Mar 2021 17:15:36 GMT  
+		Size: 2.6 MB (2602591 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5f7a13aca3904b3b663e1f8170de727ebe3a4616cb36dcadfd015e2e663c24bb`  
-		Last Modified: Thu, 25 Mar 2021 23:26:06 GMT  
-		Size: 281.7 KB (281700 bytes)  
+	-	`sha256:27c9dd6f50e848494b74d743acede663c4566d6c904f83c807df6ed135c0bac2`  
+		Last Modified: Wed, 31 Mar 2021 18:40:22 GMT  
+		Size: 281.7 KB (281696 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0511116a12ff773aa9cf992f6fa81a1e4a4404f1ba284f6526e7439c07e3a651`  
-		Last Modified: Thu, 25 Mar 2021 23:26:06 GMT  
-		Size: 154.0 B  
+	-	`sha256:55a3302e682073b38a23dae31007fd1b72ed66261ca926cc100f29e177732a0a`  
+		Last Modified: Wed, 31 Mar 2021 18:40:25 GMT  
+		Size: 153.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ee85fb00fca6e704a3d8277765d6f193a435abc15f840daf5cab5d1978295909`  
-		Last Modified: Thu, 25 Mar 2021 23:27:17 GMT  
-		Size: 105.9 MB (105920545 bytes)  
+	-	`sha256:9f4d2266417869e05e6310c284f9354fe87d3655995b4124edd5d4bde9e6e7f3`  
+		Last Modified: Wed, 31 Mar 2021 18:41:38 GMT  
+		Size: 105.9 MB (105916633 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dcae75938a2f93a0529f8438a372c3fb739a888e646e3876f65704628925ed08`  
-		Last Modified: Thu, 25 Mar 2021 23:27:04 GMT  
+	-	`sha256:c12ff3dfbc97fde9eb1fe510933e7325fd6723fe486b4664ae50c1c398f1c71a`  
+		Last Modified: Wed, 31 Mar 2021 18:41:23 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:1.15-alpine3.12`
 
 ```console
-$ docker pull golang@sha256:3692e192ac4a430d7a7c87fa029f5530f952c257357544ca62aa8d8c9355a379
+$ docker pull golang@sha256:22add8fff7d14bb21090f0ebbb1c35c239f0176e5d29bb967af74926c04e1838
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4887,121 +4887,121 @@ $ docker pull golang@sha256:3692e192ac4a430d7a7c87fa029f5530f952c257357544ca62aa
 ### `golang:1.15-alpine3.12` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:cda970666a382316cfab7a0152c998a4171a0e42140e3fea717d090290750856
+$ docker pull golang@sha256:c1bcd869659b03c7086da4aef50c8909b4a027aeb804e04ea7e859942912f7ee
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **109.9 MB (109891521 bytes)**  
+-	Total Size: **109.9 MB (109892600 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:8b72cb43d5db553b048a9707091e861ccb42c21cfc0d9bfb4fe88c361a11b296`
+-	Image ID: `sha256:500d52d14c022a06dec8dcf58242d6cc7962c2866dd0a7b1f17063095616b88c`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:19:38 GMT
-ADD file:b2c067f4304d00c91fc9fd92f2e58853412cc705dfda4d1cf658fab965d5802c in / 
-# Thu, 25 Mar 2021 22:19:38 GMT
+# Wed, 31 Mar 2021 20:10:13 GMT
+ADD file:f77db8e5b937d8ebb7e254eccd4d311798ea9f4dd5081ea2a7e2b1d3790300c2 in / 
+# Wed, 31 Mar 2021 20:10:13 GMT
 CMD ["/bin/sh"]
-# Fri, 26 Mar 2021 04:50:11 GMT
+# Wed, 31 Mar 2021 20:14:43 GMT
 RUN apk add --no-cache 		ca-certificates
-# Fri, 26 Mar 2021 04:50:12 GMT
+# Wed, 31 Mar 2021 20:14:44 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Fri, 26 Mar 2021 04:50:12 GMT
+# Wed, 31 Mar 2021 20:14:44 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:56:55 GMT
+# Wed, 31 Mar 2021 20:18:53 GMT
 ENV GOLANG_VERSION=1.15.10
-# Fri, 26 Mar 2021 04:59:06 GMT
+# Wed, 31 Mar 2021 20:20:23 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='387' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.15.10.src.tar.gz'; 	sha256='c1dbca6e0910b41d61a95bf9878f6d6e93d15d884c226b91d9d4b1113c10dd65'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Fri, 26 Mar 2021 04:59:07 GMT
+# Wed, 31 Mar 2021 20:20:24 GMT
 ENV GOPATH=/go
-# Fri, 26 Mar 2021 04:59:08 GMT
+# Wed, 31 Mar 2021 20:20:24 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:59:09 GMT
+# Wed, 31 Mar 2021 20:20:25 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Fri, 26 Mar 2021 04:59:09 GMT
+# Wed, 31 Mar 2021 20:20:25 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:22599d3e9e25e799b87521b94e20d20a601ffad16cf676274fdf94b089e4b979`  
-		Last Modified: Thu, 25 Mar 2021 22:20:35 GMT  
-		Size: 2.8 MB (2799762 bytes)  
+	-	`sha256:532819f3e44cebad88c82f5393801acb876b7a61d36b84bce646561789bb2018`  
+		Last Modified: Wed, 31 Mar 2021 20:11:03 GMT  
+		Size: 2.8 MB (2799712 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:994b649ee80af61fec0aab2113abbcce972dced9ddb604f8e2721a943dfca8f3`  
-		Last Modified: Fri, 26 Mar 2021 05:00:47 GMT  
-		Size: 280.9 KB (280878 bytes)  
+	-	`sha256:93cbbf235a55c104bafc6765f3c92a36489a596041551360d566152f2af01b59`  
+		Last Modified: Wed, 31 Mar 2021 20:22:25 GMT  
+		Size: 280.9 KB (280881 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dae587f6cd93b42cb17ce4c64b07191a204f7adde25a351026cc7cb254d28096`  
-		Last Modified: Fri, 26 Mar 2021 05:00:47 GMT  
-		Size: 152.0 B  
+	-	`sha256:e13f184a059628efa0b05f924f5b1e223377ebd57cdec0597912aabcd4b2129b`  
+		Last Modified: Wed, 31 Mar 2021 20:23:29 GMT  
+		Size: 153.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:589a06b0631bfe1090cbcb938656dc35af03041a561a3dfc9f0e85e93a520a48`  
-		Last Modified: Fri, 26 Mar 2021 05:02:32 GMT  
-		Size: 106.8 MB (106810573 bytes)  
+	-	`sha256:1ec81731eed009f8d947489208d3bc2fe161411bd6ad9543fc2af27bb229d352`  
+		Last Modified: Wed, 31 Mar 2021 20:26:05 GMT  
+		Size: 106.8 MB (106811699 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bceeb5e7f7db2d02eb4835b1d53023c4b85911c979f4a1bf5be7416746e7b69d`  
-		Last Modified: Fri, 26 Mar 2021 05:02:09 GMT  
-		Size: 156.0 B  
+	-	`sha256:0fec2af768a6dad08fb2f9bf5396591d7ab1b7bff816d42c96f7c5169ab05502`  
+		Last Modified: Wed, 31 Mar 2021 20:25:48 GMT  
+		Size: 155.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1.15-alpine3.12` - linux; arm variant v6
 
 ```console
-$ docker pull golang@sha256:754efbea1218ef8aa4b075f63ee04f73360a224b92f96b167fbbddac7e46d474
+$ docker pull golang@sha256:8d967bf7af0c7dea133ace6d2b61e4008d93c056cee197a7abf67349e61ed750
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **105.6 MB (105557983 bytes)**  
+-	Total Size: **105.6 MB (105557732 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7c146f40e606f658ab4d396f50bef68a04fe2de3e41f45e51d68ad7646999842`
+-	Image ID: `sha256:a5cba1b9d7910ba1f4d6db569029ed473a70817ebcedab3cdf04c990c75cedbc`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:50:43 GMT
-ADD file:65a3462a527f49c8c625927be6b8b57b4257c8cc37d685055a1f183d76c68920 in / 
-# Thu, 25 Mar 2021 22:50:47 GMT
+# Wed, 31 Mar 2021 17:19:11 GMT
+ADD file:00ac3d0df16779e7564cda9cbf94eef90ffa8043778a867272ff0135a1fb537f in / 
+# Wed, 31 Mar 2021 17:19:12 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:31:38 GMT
+# Wed, 31 Mar 2021 18:45:17 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:31:44 GMT
+# Wed, 31 Mar 2021 18:45:20 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:31:46 GMT
+# Wed, 31 Mar 2021 18:45:21 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:39:49 GMT
+# Wed, 31 Mar 2021 19:13:42 GMT
 ENV GOLANG_VERSION=1.15.10
-# Thu, 25 Mar 2021 23:43:57 GMT
+# Wed, 31 Mar 2021 19:21:36 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='387' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.15.10.src.tar.gz'; 	sha256='c1dbca6e0910b41d61a95bf9878f6d6e93d15d884c226b91d9d4b1113c10dd65'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:44:05 GMT
+# Wed, 31 Mar 2021 19:21:40 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:44:08 GMT
+# Wed, 31 Mar 2021 19:21:42 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:44:13 GMT
+# Wed, 31 Mar 2021 19:21:44 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:44:16 GMT
+# Wed, 31 Mar 2021 19:21:45 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:181a1446f0acaaa0871cec07aba4f733041f2d80ffbe01b19df43fe005df29f3`  
-		Last Modified: Thu, 25 Mar 2021 22:55:06 GMT  
-		Size: 2.6 MB (2604815 bytes)  
+	-	`sha256:66e54586dae0889b30da12f7a66838d9b86511b58696c83c3b9166ff1a534bbe`  
+		Last Modified: Wed, 31 Mar 2021 17:20:05 GMT  
+		Size: 2.6 MB (2604658 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:045419b8095ca1008ec369ea0965cfdae0dd0c90bea499bd8b42e5e45ab92cc5`  
-		Last Modified: Thu, 25 Mar 2021 23:46:09 GMT  
-		Size: 281.0 KB (280982 bytes)  
+	-	`sha256:0aa6796eed51884cd0436f134281af9489342ecf256aec0b31ca83f254ccd0d1`  
+		Last Modified: Wed, 31 Mar 2021 19:23:16 GMT  
+		Size: 281.0 KB (280979 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4ddbec85c64c1987da76dd94cb01590f1166da94443b5fa33ea1f633108a00fb`  
-		Last Modified: Thu, 25 Mar 2021 23:46:09 GMT  
-		Size: 154.0 B  
+	-	`sha256:1c043dc86373f816c29db582d9bddada9a00eeb3812a357a2dfd8e3f68d9a413`  
+		Last Modified: Wed, 31 Mar 2021 19:23:15 GMT  
+		Size: 153.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8ca0a381ab053ca44a8625b8e2ca49dd44dc85ce2a413e6a95655379b561e9e2`  
-		Last Modified: Thu, 25 Mar 2021 23:48:08 GMT  
-		Size: 102.7 MB (102671877 bytes)  
+	-	`sha256:031875ceeaab9b0b96a47b7ed9ec2a0098a9d8662d1c2a57785eb95dbf36d419`  
+		Last Modified: Wed, 31 Mar 2021 19:25:23 GMT  
+		Size: 102.7 MB (102671786 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:90b04a1ba4ca2f6db58c75f5e77a21dc06efcc031539095b5b174c4d5a4e1822`  
-		Last Modified: Thu, 25 Mar 2021 23:47:38 GMT  
-		Size: 155.0 B  
+	-	`sha256:15870044ac3cd6474d13a6fd94871020ad8801d56fa4387bb9507968da9b093d`  
+		Last Modified: Wed, 31 Mar 2021 19:24:49 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1.15-alpine3.12` - linux; arm variant v7
@@ -5247,67 +5247,67 @@ WORKDIR /go
 ### `golang:1.15-alpine3.12` - linux; s390x
 
 ```console
-$ docker pull golang@sha256:6dbff6b1ee4c4b76df506b8ecbd308e44656aacf2333a8f6a7a44dceb394b219
+$ docker pull golang@sha256:254d9ec27b5c8f49f0f05d484c30502cad5a417b29f26a2bb866ec65e68333b0
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **108.8 MB (108771518 bytes)**  
+-	Total Size: **108.8 MB (108772225 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:45976b99e6ea86de03ab00b342c94531f117dcf74d233d4e4e0ad959d105070d`
+-	Image ID: `sha256:d4a2b390a7d78f2fe7563b366f809c167cd79cbce69d8a437c27025404851e7a`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:41:39 GMT
-ADD file:12766b6fe7c37292d91bd1469b27dc9fb362e3109e9b3f377cff030bc0ca5386 in / 
-# Thu, 25 Mar 2021 22:41:39 GMT
+# Wed, 31 Mar 2021 17:15:04 GMT
+ADD file:1f37b92ea1f573c4810b1d056dc4880cf4035e143451d9b2b76fac1e3b462248 in / 
+# Wed, 31 Mar 2021 17:15:04 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:20:43 GMT
+# Wed, 31 Mar 2021 18:34:37 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:20:44 GMT
+# Wed, 31 Mar 2021 18:34:38 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:20:44 GMT
+# Wed, 31 Mar 2021 18:34:38 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:24:07 GMT
+# Wed, 31 Mar 2021 18:38:18 GMT
 ENV GOLANG_VERSION=1.15.10
-# Thu, 25 Mar 2021 23:25:18 GMT
+# Wed, 31 Mar 2021 18:39:40 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='387' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.15.10.src.tar.gz'; 	sha256='c1dbca6e0910b41d61a95bf9878f6d6e93d15d884c226b91d9d4b1113c10dd65'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:25:24 GMT
+# Wed, 31 Mar 2021 18:39:46 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:25:24 GMT
+# Wed, 31 Mar 2021 18:39:46 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:25:25 GMT
+# Wed, 31 Mar 2021 18:39:47 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:25:25 GMT
+# Wed, 31 Mar 2021 18:39:47 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:be2cdf7cbb6a1aec476a957daaae210624b2b112c20f27f55bbcf2bdc74db281`  
-		Last Modified: Thu, 25 Mar 2021 22:42:19 GMT  
-		Size: 2.6 MB (2567457 bytes)  
+	-	`sha256:38ca5430c9af12b6b6dee7c10eb6b1eb0e4eb4f5f02a97890579c4b049d00233`  
+		Last Modified: Wed, 31 Mar 2021 17:15:46 GMT  
+		Size: 2.6 MB (2567453 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:aaddff0ad4814b86163108d94e8b39f43a463cb6c267218cec9cdeffc540308a`  
-		Last Modified: Thu, 25 Mar 2021 23:26:32 GMT  
+	-	`sha256:1dcb296d6fc71cd9057e3d03d0ea4ebe30a620f7c6ce57eb78f4c137e77a9a47`  
+		Last Modified: Wed, 31 Mar 2021 18:40:52 GMT  
 		Size: 281.4 KB (281355 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1b123ead7d9076567abb17998ba938b85be4f09afb27464b9c66734b580e1d5a`  
-		Last Modified: Thu, 25 Mar 2021 23:26:32 GMT  
+	-	`sha256:5783b7db1c405d51f50a261ae252c97941c44ffeb93cb10c2e2bdd458296774a`  
+		Last Modified: Wed, 31 Mar 2021 18:40:52 GMT  
 		Size: 153.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8cebfd1941157e288978467728664c86b2e5d1ca688f2b9517f91225540d4986`  
-		Last Modified: Thu, 25 Mar 2021 23:27:43 GMT  
-		Size: 105.9 MB (105922397 bytes)  
+	-	`sha256:fbb58064707977215f9632cdb206eaec9d63534f602e5682c22634dcfbb2cbd5`  
+		Last Modified: Wed, 31 Mar 2021 18:42:02 GMT  
+		Size: 105.9 MB (105923109 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f25b19b8cefe5aeeac1f7cd05502c7c2990aabd3661d8636693d6bdaaf3df542`  
-		Last Modified: Thu, 25 Mar 2021 23:27:34 GMT  
-		Size: 156.0 B  
+	-	`sha256:e273a64a6b34c09c3baa0d7e2dc15a36980a72e658c1570903625ebac61f7f16`  
+		Last Modified: Wed, 31 Mar 2021 18:41:52 GMT  
+		Size: 155.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:1.15-alpine3.13`
 
 ```console
-$ docker pull golang@sha256:20394befaa591b234ce3a451e18b5eb9361494908036eca2ee17fa41e8f600ef
+$ docker pull golang@sha256:f6a0b79f5d5a31fab030cad6f4d21917d461931f5f6860295c0cf638b213038f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -5323,120 +5323,120 @@ $ docker pull golang@sha256:20394befaa591b234ce3a451e18b5eb9361494908036eca2ee17
 ### `golang:1.15-alpine3.13` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:6e24550c2712c5dbacdfeff0726efac31fd6f670483bb02f820689e4e833722b
+$ docker pull golang@sha256:bdd5153d12b1db5b48c4e0099b3e2e19aa2964f9c0bf787805eb29b027a67bb4
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **109.9 MB (109884007 bytes)**  
+-	Total Size: **109.9 MB (109883751 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a0ce913c8aafbdd5b416f4b10dcfcf0fc32ebab6a13afd2c6674e741bea63f92`
+-	Image ID: `sha256:be9dced0e9c61f07f82ff89fe24a0454add488fdebb3585809b484be7e79d938`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:19:32 GMT
-ADD file:6b081cabb4b256ee07587d249c4989b5b679375529542b81550a65b6f19f274e in / 
-# Thu, 25 Mar 2021 22:19:32 GMT
+# Wed, 31 Mar 2021 20:10:06 GMT
+ADD file:7119167b56ff1228b2fb639c768955ce9db7a999cd947179240b216dfa5ccbb9 in / 
+# Wed, 31 Mar 2021 20:10:06 GMT
 CMD ["/bin/sh"]
-# Fri, 26 Mar 2021 04:48:00 GMT
+# Wed, 31 Mar 2021 20:12:47 GMT
 RUN apk add --no-cache 		ca-certificates
-# Fri, 26 Mar 2021 04:48:01 GMT
+# Wed, 31 Mar 2021 20:12:48 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Fri, 26 Mar 2021 04:48:01 GMT
+# Wed, 31 Mar 2021 20:12:48 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:53:43 GMT
+# Wed, 31 Mar 2021 20:17:12 GMT
 ENV GOLANG_VERSION=1.15.10
-# Fri, 26 Mar 2021 04:56:42 GMT
+# Wed, 31 Mar 2021 20:18:44 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='387' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.15.10.src.tar.gz'; 	sha256='c1dbca6e0910b41d61a95bf9878f6d6e93d15d884c226b91d9d4b1113c10dd65'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Fri, 26 Mar 2021 04:56:43 GMT
+# Wed, 31 Mar 2021 20:18:45 GMT
 ENV GOPATH=/go
-# Fri, 26 Mar 2021 04:56:44 GMT
+# Wed, 31 Mar 2021 20:18:45 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:56:46 GMT
+# Wed, 31 Mar 2021 20:18:46 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Fri, 26 Mar 2021 04:56:46 GMT
+# Wed, 31 Mar 2021 20:18:46 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:9aae54b2144e5b2b00c610f8805128f4f86822e1e52d3714c463744a431f0f4a`  
-		Last Modified: Thu, 25 Mar 2021 22:20:18 GMT  
-		Size: 2.8 MB (2811681 bytes)  
+	-	`sha256:ca3cd42a7c9525f6ce3d64c1a70982613a8235f0cc057ec9244052921853ef15`  
+		Last Modified: Wed, 31 Mar 2021 20:10:46 GMT  
+		Size: 2.8 MB (2811947 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9f73940e57d360e45588f2a826fa219a35089234eadac5c3e5d54dfac02c0a7d`  
-		Last Modified: Fri, 26 Mar 2021 04:59:58 GMT  
-		Size: 281.3 KB (281262 bytes)  
+	-	`sha256:dbcca316e5c32a932c66cfa46736e3998e69caeb857e570566ec63ab0377044a`  
+		Last Modified: Wed, 31 Mar 2021 20:22:40 GMT  
+		Size: 281.3 KB (281274 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ff472ba555d2504b7af85b2deac3b22d39a3dfa1510a54701764c4afd7bc7c43`  
-		Last Modified: Fri, 26 Mar 2021 04:59:59 GMT  
-		Size: 154.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b1b665c161b76d6e3e7bb109285097beb6122cd50ef723fcf2495b6ce73e6e44`  
-		Last Modified: Fri, 26 Mar 2021 05:01:50 GMT  
-		Size: 106.8 MB (106790755 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e7931ed63562564d5be0f7860f7fd53e2edfaa0805258540d337e755cee690cf`  
-		Last Modified: Fri, 26 Mar 2021 05:01:28 GMT  
+	-	`sha256:b65b403d39c8273b612240b85430a925f80b8b5719979c21e1387246faa62bd3`  
+		Last Modified: Wed, 31 Mar 2021 20:22:40 GMT  
 		Size: 155.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c1220b2ee03d817e3a9db177c2dd717e78d68c754bac0fbfbb319488dbcac3d6`  
+		Last Modified: Wed, 31 Mar 2021 20:25:28 GMT  
+		Size: 106.8 MB (106790219 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:11437b7b95304e43c69dfced1368785059ddf56ad1bfc51f120ef0464f9ffdb9`  
+		Last Modified: Wed, 31 Mar 2021 20:25:13 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1.15-alpine3.13` - linux; arm variant v6
 
 ```console
-$ docker pull golang@sha256:4b0d3fb11bc2f39dc50a85fe53fc0b6a81b9572034eebfc6bab30886557e4c59
+$ docker pull golang@sha256:b7f7da63a3296f20e4a4b6986f4e6dfc2913894ad1a3bcb2b470cfd61fe35742
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **105.6 MB (105563296 bytes)**  
+-	Total Size: **105.6 MB (105563790 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:de9b7e68dbb60ea30016f3edc5ff2ed2293fc9c8ac1c7e7eee3ff0ac6ed5635e`
+-	Image ID: `sha256:79d12ee59cca81018861589074053cb08e7c5a9427c778dd31aad32171bd3ec2`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:50:09 GMT
-ADD file:ca4136238cb9a01d079efd129bccd1470945d7d4320da61373af90645a4b1146 in / 
-# Thu, 25 Mar 2021 22:50:28 GMT
+# Wed, 31 Mar 2021 17:18:49 GMT
+ADD file:988879d74f643b89539e5a0b6d74221621f19f4f87f722614addadc46ce47200 in / 
+# Wed, 31 Mar 2021 17:18:50 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:27:14 GMT
+# Wed, 31 Mar 2021 18:28:21 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:27:20 GMT
+# Wed, 31 Mar 2021 18:28:24 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:27:23 GMT
+# Wed, 31 Mar 2021 18:28:25 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:35:43 GMT
+# Wed, 31 Mar 2021 19:00:37 GMT
 ENV GOLANG_VERSION=1.15.10
-# Thu, 25 Mar 2021 23:38:44 GMT
+# Wed, 31 Mar 2021 19:13:15 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='387' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.15.10.src.tar.gz'; 	sha256='c1dbca6e0910b41d61a95bf9878f6d6e93d15d884c226b91d9d4b1113c10dd65'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:38:49 GMT
+# Wed, 31 Mar 2021 19:13:21 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:38:51 GMT
+# Wed, 31 Mar 2021 19:13:23 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:38:55 GMT
+# Wed, 31 Mar 2021 19:13:26 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:39:00 GMT
+# Wed, 31 Mar 2021 19:13:28 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:bca6a70a54896d072b6919d2ae18d3ef685bc7aed783731f68a4adac0fb93d52`  
-		Last Modified: Thu, 25 Mar 2021 22:54:24 GMT  
-		Size: 2.6 MB (2622062 bytes)  
+	-	`sha256:bb87125c6ee1ce30c6b33d2c96a9fbe46da4a290f7cb1dd73fd62d4e06503699`  
+		Last Modified: Wed, 31 Mar 2021 17:19:55 GMT  
+		Size: 2.6 MB (2622116 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4ea05802fe691d87fddb107a6821e75df7c3f57bc6cb2e90cddd4b45a233d0f0`  
-		Last Modified: Thu, 25 Mar 2021 23:44:44 GMT  
-		Size: 281.4 KB (281380 bytes)  
+	-	`sha256:f0eb8dc77a7b333e6a40d00034c58c9612b3c2a7d33ea6c7dbf62e416baac7ea`  
+		Last Modified: Wed, 31 Mar 2021 19:22:13 GMT  
+		Size: 281.4 KB (281371 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1d164f70ad230af42bb09ffd3d6494a6bb012bc5731d7fbd2b3e1c3bcec9c4f6`  
-		Last Modified: Thu, 25 Mar 2021 23:44:44 GMT  
+	-	`sha256:0ec5882b9b78ec27dce64542bb1bd7c56d4913cde0d929356e9353ea6caac515`  
+		Last Modified: Wed, 31 Mar 2021 19:22:13 GMT  
 		Size: 154.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:57e04ae646ad142727a71bd484d9cf7abc46a03486388bb05e498884c9cdef74`  
-		Last Modified: Thu, 25 Mar 2021 23:47:23 GMT  
-		Size: 102.7 MB (102659544 bytes)  
+	-	`sha256:884bc77bcba8c1b3c55526ef751b4a543583762abf115b20731e3dcdb2bb0d57`  
+		Last Modified: Wed, 31 Mar 2021 19:24:35 GMT  
+		Size: 102.7 MB (102659993 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3590fe869a1ae6fe147fbe1c990d74a99091d0ba57492ad6219cc0ba7e36af81`  
-		Last Modified: Thu, 25 Mar 2021 23:46:51 GMT  
+	-	`sha256:a4d017842f8f66ddc088839043f86907fc667c06efdff0e06eb5d5a07be88db0`  
+		Last Modified: Wed, 31 Mar 2021 19:24:03 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -5683,67 +5683,67 @@ WORKDIR /go
 ### `golang:1.15-alpine3.13` - linux; s390x
 
 ```console
-$ docker pull golang@sha256:b9bdac74c70abaf4e4b516c8934732586e1d9b5ace7d069643aadb6c468b36db
+$ docker pull golang@sha256:0ec0e006da609f9e4992aa8e2f4d49d2a16187cb731109bf71bb6fd4f6a71b7b
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **108.8 MB (108804942 bytes)**  
+-	Total Size: **108.8 MB (108801229 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:de1ad86fce5220113d95245b2f4076e5248f0fc0771b95e9f1e6584825655788`
+-	Image ID: `sha256:bb9813cd7f2769f5e9eee7f56589814353c067bbc4aca3d6aefb49a3f14a1686`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:41:34 GMT
-ADD file:44e2c7cd992fc98df702bef7022e0f8c4ee86312c311ab5ae185fd5fc878edf9 in / 
-# Thu, 25 Mar 2021 22:41:34 GMT
+# Wed, 31 Mar 2021 17:14:58 GMT
+ADD file:3f5fe04867af3c9f2cfc5b315d97097145ae11343399985386321a8db21d7786 in / 
+# Wed, 31 Mar 2021 17:14:58 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:18:24 GMT
+# Wed, 31 Mar 2021 18:32:50 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:18:24 GMT
+# Wed, 31 Mar 2021 18:32:51 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:18:25 GMT
+# Wed, 31 Mar 2021 18:32:51 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:22:34 GMT
+# Wed, 31 Mar 2021 18:36:29 GMT
 ENV GOLANG_VERSION=1.15.10
-# Thu, 25 Mar 2021 23:23:49 GMT
+# Wed, 31 Mar 2021 18:37:52 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='387' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.15.10.src.tar.gz'; 	sha256='c1dbca6e0910b41d61a95bf9878f6d6e93d15d884c226b91d9d4b1113c10dd65'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:23:54 GMT
+# Wed, 31 Mar 2021 18:37:57 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:23:54 GMT
+# Wed, 31 Mar 2021 18:37:58 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:23:55 GMT
+# Wed, 31 Mar 2021 18:37:58 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:23:55 GMT
+# Wed, 31 Mar 2021 18:37:59 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:a266c0a9554add02ea09a46b8584cb36b7f606b7b4398b9ad7369f899f8360df`  
-		Last Modified: Thu, 25 Mar 2021 22:42:07 GMT  
-		Size: 2.6 MB (2602387 bytes)  
+	-	`sha256:1d4058bbeedf5296bcaf5ae8f37c8cd58152acad3ec45a536e08b83f5d3abe83`  
+		Last Modified: Wed, 31 Mar 2021 17:15:36 GMT  
+		Size: 2.6 MB (2602591 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5f7a13aca3904b3b663e1f8170de727ebe3a4616cb36dcadfd015e2e663c24bb`  
-		Last Modified: Thu, 25 Mar 2021 23:26:06 GMT  
-		Size: 281.7 KB (281700 bytes)  
+	-	`sha256:27c9dd6f50e848494b74d743acede663c4566d6c904f83c807df6ed135c0bac2`  
+		Last Modified: Wed, 31 Mar 2021 18:40:22 GMT  
+		Size: 281.7 KB (281696 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0511116a12ff773aa9cf992f6fa81a1e4a4404f1ba284f6526e7439c07e3a651`  
-		Last Modified: Thu, 25 Mar 2021 23:26:06 GMT  
-		Size: 154.0 B  
+	-	`sha256:55a3302e682073b38a23dae31007fd1b72ed66261ca926cc100f29e177732a0a`  
+		Last Modified: Wed, 31 Mar 2021 18:40:25 GMT  
+		Size: 153.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ee85fb00fca6e704a3d8277765d6f193a435abc15f840daf5cab5d1978295909`  
-		Last Modified: Thu, 25 Mar 2021 23:27:17 GMT  
-		Size: 105.9 MB (105920545 bytes)  
+	-	`sha256:9f4d2266417869e05e6310c284f9354fe87d3655995b4124edd5d4bde9e6e7f3`  
+		Last Modified: Wed, 31 Mar 2021 18:41:38 GMT  
+		Size: 105.9 MB (105916633 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dcae75938a2f93a0529f8438a372c3fb739a888e646e3876f65704628925ed08`  
-		Last Modified: Thu, 25 Mar 2021 23:27:04 GMT  
+	-	`sha256:c12ff3dfbc97fde9eb1fe510933e7325fd6723fe486b4664ae50c1c398f1c71a`  
+		Last Modified: Wed, 31 Mar 2021 18:41:23 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:1.15-buster`
 
 ```console
-$ docker pull golang@sha256:f33cd19b2369b2713056c4caa7815b320e9614fd1d0007d9d2e2334728434732
+$ docker pull golang@sha256:6b588a301352e9887560894e1a3a0a42e4df5fd175a70eadfe276618c9f394b8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -5760,73 +5760,73 @@ $ docker pull golang@sha256:f33cd19b2369b2713056c4caa7815b320e9614fd1d0007d9d2e2
 ### `golang:1.15-buster` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:2a663a98ba344f8f32b663c6274e5a2c03503c038b2cfb054e84bd6cea7d76c0
+$ docker pull golang@sha256:efee673095bb6b0698c13540bdbf94dd765b9235435ed6ce29ece67ef8a63340
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **309.9 MB (309877717 bytes)**  
+-	Total Size: **309.9 MB (309911015 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:74fe9d9959d375d859b37d7675d4ea5320db56497372198f178f7505213c3b92`
+-	Image ID: `sha256:95e3e1bab2d1177e9b686eac9a6cf5813c55949a61ce967dd3ea8b5be6358fe5`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Fri, 26 Mar 2021 15:20:41 GMT
-ADD file:89234bb2f86c7eb890235a48904d1c9898a8d287a525c4fe5698d4a04cdd8f12 in / 
-# Fri, 26 Mar 2021 15:20:42 GMT
+# Tue, 30 Mar 2021 21:49:16 GMT
+ADD file:c254898ceb4172f05cd40460f8d0b1ca2d39d5178bdddd4e794c7d3fc5a60a03 in / 
+# Tue, 30 Mar 2021 21:49:16 GMT
 CMD ["bash"]
-# Sat, 27 Mar 2021 05:53:29 GMT
+# Tue, 30 Mar 2021 23:03:10 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
-# Sat, 27 Mar 2021 05:53:35 GMT
+# Tue, 30 Mar 2021 23:03:21 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Sat, 27 Mar 2021 05:53:54 GMT
+# Tue, 30 Mar 2021 23:03:52 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:05 GMT
+# Wed, 31 Mar 2021 20:11:57 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:06 GMT
+# Wed, 31 Mar 2021 20:11:57 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:19:07 GMT
+# Wed, 31 Mar 2021 20:16:38 GMT
 ENV GOLANG_VERSION=1.15.10
-# Sun, 28 Mar 2021 00:19:17 GMT
+# Wed, 31 Mar 2021 20:16:48 GMT
 RUN set -eux; 		dpkgArch="$(dpkg --print-architecture)"; 	url=; 	case "${dpkgArch##*-}" in 		'amd64') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-amd64.tar.gz'; 			sha256='4aa1267517df32f2bf1cc3d55dfc27d0c6b2c2b0989449c96dd19273ccca051d'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-armv6l.tar.gz'; 			sha256='10739f7a87544acca49c9f1c025ae1821ce83601228a968bd7102357ae89887b'; 			;; 		'arm64') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-arm64.tar.gz'; 			sha256='ca3f3e84d863d8e758bfaab65430b12b6cff8f5a5648139245321d3401da64a7'; 			;; 		'i386') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-386.tar.gz'; 			sha256='69a29473c9e8eded5b5885a45773e4f1b9661383ce577199c4c70efe4c67bc59'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-ppc64le.tar.gz'; 			sha256='49128af704c37a356b1d14d814e4cf64218a8c6cabb22249e0c0068b35f710d3'; 			;; 		's390x') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-s390x.tar.gz'; 			sha256='230e0e50fe0df0ba380804c02f1d88a801c6dee38582c4a9502e79dc744c7bb0'; 			;; 		*) echo >&2 "error: unsupported architecture '$dpkgArch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://storage.googleapis.com/golang/go1.15.10.src.tar.gz'; 		sha256='c1dbca6e0910b41d61a95bf9878f6d6e93d15d884c226b91d9d4b1113c10dd65'; 		echo >&2; 		echo >&2 "warning: current architecture ($dpkgArch) does not have a corresponding Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc" --progress=dot:giga; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum --strict --check -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends golang-go; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				go install std; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 		; 	fi; 		go version
-# Sun, 28 Mar 2021 00:19:18 GMT
+# Wed, 31 Mar 2021 20:16:49 GMT
 ENV GOPATH=/go
-# Sun, 28 Mar 2021 00:19:18 GMT
+# Wed, 31 Mar 2021 20:16:49 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:19:19 GMT
+# Wed, 31 Mar 2021 20:16:50 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Sun, 28 Mar 2021 00:19:19 GMT
+# Wed, 31 Mar 2021 20:16:51 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:8bf9c589d5f9475f1fcc050e02308d6b4eeb86eab7752ef948a13693e81a6aaa`  
-		Last Modified: Fri, 26 Mar 2021 15:27:11 GMT  
-		Size: 50.4 MB (50400278 bytes)  
+	-	`sha256:004f1eed87df3f75f5e2a1a649fa7edd7f713d1300532fd0909bb39cd48437d7`  
+		Last Modified: Tue, 30 Mar 2021 21:53:41 GMT  
+		Size: 50.4 MB (50432842 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4c70e46d8b5f0e1d77797b7a0565b7a316bd8c7c024f5cca82592128af142dac`  
-		Last Modified: Sat, 27 Mar 2021 06:03:41 GMT  
-		Size: 7.8 MB (7832558 bytes)  
+	-	`sha256:5d6f1e8117dbb1c6a57603cb4f321a861a08105a81bcc6b01b0ec2b78c8523a5`  
+		Last Modified: Tue, 30 Mar 2021 23:14:05 GMT  
+		Size: 7.8 MB (7832608 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ea848ad42f0d1676b3a0ce709208ba3fa154cd53370c50e7cf8e580c63d96ae0`  
-		Last Modified: Sat, 27 Mar 2021 06:03:41 GMT  
-		Size: 10.0 MB (9997159 bytes)  
+	-	`sha256:48c2faf66abec3dce9f54d6722ff592fce6dd4fb58a0d0b72282936c6598a3b3`  
+		Last Modified: Tue, 30 Mar 2021 23:14:05 GMT  
+		Size: 10.0 MB (9997208 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:48fe137f8d2641315dd2f93c46dfdb671ce7399edc1f44f10cc68984f2809d8e`  
-		Last Modified: Sat, 27 Mar 2021 06:04:05 GMT  
-		Size: 51.8 MB (51839972 bytes)  
+	-	`sha256:234b70d0479d7f16d7ee8d04e4ffdacc57d7d14313faf59d332f18b2e9418743`  
+		Last Modified: Tue, 30 Mar 2021 23:14:37 GMT  
+		Size: 51.8 MB (51840782 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e53aa3cb0a1b20fe535fb0954912e16192c1fa053d0f6f2df21d1f5a50f8139c`  
-		Last Modified: Sun, 28 Mar 2021 00:20:35 GMT  
-		Size: 68.7 MB (68736693 bytes)  
+	-	`sha256:f5e9f83ff9bcf98a081ea281823c299a293e0870c4fd132c22cf425b01bd310e`  
+		Last Modified: Wed, 31 Mar 2021 20:21:23 GMT  
+		Size: 68.7 MB (68736521 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ccdd004acfd8c80b2e52c4550f001d50b5bf7d5e98adbc1b887b075567a7fd8e`  
-		Last Modified: Sun, 28 Mar 2021 00:22:04 GMT  
-		Size: 121.1 MB (121070903 bytes)  
+	-	`sha256:e029dc4668e6ef180685ac8f080088333b201dd05bc33e87fdfacc5bcccb30ed`  
+		Last Modified: Wed, 31 Mar 2021 20:24:29 GMT  
+		Size: 121.1 MB (121070898 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9019dd7c1066a531134ff4453583c717f95975fe4b96738376c72d8d81dd088e`  
-		Last Modified: Sun, 28 Mar 2021 00:21:45 GMT  
-		Size: 154.0 B  
+	-	`sha256:2ce48311bb5fb4195fb2b42fc33ca8ed09525d8d1ea8f7906ffa6d652da88631`  
+		Last Modified: Wed, 31 Mar 2021 20:24:10 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1.15-buster` - linux; arm variant v5
@@ -6512,7 +6512,7 @@ WORKDIR C:\gopath
 ## `golang:1.15-stretch`
 
 ```console
-$ docker pull golang@sha256:ff70310367b044701f72775e2a9edee454ad33c5c3d15789b125456490f4a223
+$ docker pull golang@sha256:340fb51ddbfef0da2ba9d53d39d4b07506d00fd4af37f93f7b54b7c1af875681
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6525,73 +6525,73 @@ $ docker pull golang@sha256:ff70310367b044701f72775e2a9edee454ad33c5c3d15789b125
 ### `golang:1.15-stretch` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:83278616678276428ea41d0e30e5df7ce78d5f1f8fe3046e11b2fe3928bc6d34
+$ docker pull golang@sha256:e6b2f29df1d3b2e58a0c8a491f0aa337a75a6c46029bc12900c782c3ac71ae52
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **289.7 MB (289695916 bytes)**  
+-	Total Size: **289.7 MB (289696276 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ae7ec3a748cb1dfcf5f4884cc38368054df5ff770d16087f6f4d745026f60085`
+-	Image ID: `sha256:1d99243603e884c6edd5ae78a357743971969a466b54b94c396290afa3f999e9`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Fri, 26 Mar 2021 15:23:17 GMT
-ADD file:f7a6b2066de76eb559d8ab8bf8972d519c3b4dcafc62e46253227559091f7c8f in / 
-# Fri, 26 Mar 2021 15:23:18 GMT
+# Tue, 30 Mar 2021 21:50:43 GMT
+ADD file:e52290391b221e1a4e52cf4e41ffe7e14f162475964fa01638e03b3ead673ba1 in / 
+# Tue, 30 Mar 2021 21:50:43 GMT
 CMD ["bash"]
-# Sat, 27 Mar 2021 05:57:11 GMT
+# Tue, 30 Mar 2021 23:08:00 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		apt-transport-https 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
-# Sat, 27 Mar 2021 05:57:18 GMT
+# Tue, 30 Mar 2021 23:08:09 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Sat, 27 Mar 2021 05:57:45 GMT
+# Tue, 30 Mar 2021 23:08:42 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		bzr 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:35 GMT
+# Wed, 31 Mar 2021 20:12:26 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:35 GMT
+# Wed, 31 Mar 2021 20:12:26 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:19:23 GMT
+# Wed, 31 Mar 2021 20:16:54 GMT
 ENV GOLANG_VERSION=1.15.10
-# Sun, 28 Mar 2021 00:19:35 GMT
+# Wed, 31 Mar 2021 20:17:07 GMT
 RUN set -eux; 		dpkgArch="$(dpkg --print-architecture)"; 	url=; 	case "${dpkgArch##*-}" in 		'amd64') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-amd64.tar.gz'; 			sha256='4aa1267517df32f2bf1cc3d55dfc27d0c6b2c2b0989449c96dd19273ccca051d'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-armv6l.tar.gz'; 			sha256='10739f7a87544acca49c9f1c025ae1821ce83601228a968bd7102357ae89887b'; 			;; 		'arm64') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-arm64.tar.gz'; 			sha256='ca3f3e84d863d8e758bfaab65430b12b6cff8f5a5648139245321d3401da64a7'; 			;; 		'i386') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-386.tar.gz'; 			sha256='69a29473c9e8eded5b5885a45773e4f1b9661383ce577199c4c70efe4c67bc59'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-ppc64le.tar.gz'; 			sha256='49128af704c37a356b1d14d814e4cf64218a8c6cabb22249e0c0068b35f710d3'; 			;; 		's390x') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-s390x.tar.gz'; 			sha256='230e0e50fe0df0ba380804c02f1d88a801c6dee38582c4a9502e79dc744c7bb0'; 			;; 		*) echo >&2 "error: unsupported architecture '$dpkgArch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://storage.googleapis.com/golang/go1.15.10.src.tar.gz'; 		sha256='c1dbca6e0910b41d61a95bf9878f6d6e93d15d884c226b91d9d4b1113c10dd65'; 		echo >&2; 		echo >&2 "warning: current architecture ($dpkgArch) does not have a corresponding Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc" --progress=dot:giga; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum --strict --check -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends golang-go; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				go install std; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 		; 	fi; 		go version
-# Sun, 28 Mar 2021 00:19:36 GMT
+# Wed, 31 Mar 2021 20:17:08 GMT
 ENV GOPATH=/go
-# Sun, 28 Mar 2021 00:19:36 GMT
+# Wed, 31 Mar 2021 20:17:08 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:19:37 GMT
+# Wed, 31 Mar 2021 20:17:09 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Sun, 28 Mar 2021 00:19:37 GMT
+# Wed, 31 Mar 2021 20:17:09 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:1dfe7e1e1bffb84b5330514880896199259b01ebe2b9d531dd88f7ce7db8cd18`  
-		Last Modified: Fri, 26 Mar 2021 15:32:18 GMT  
-		Size: 45.4 MB (45379513 bytes)  
+	-	`sha256:00168f89dbe8f3c9985e536784c27517f6cc35ea56263469449a6b73e0bed595`  
+		Last Modified: Tue, 30 Mar 2021 21:56:37 GMT  
+		Size: 45.4 MB (45379949 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df86b11a61e4b8cbb37a4a570baf51ae6bbc8cbf231f56401403e21dea70144d`  
-		Last Modified: Sat, 27 Mar 2021 06:06:53 GMT  
-		Size: 11.3 MB (11286512 bytes)  
+	-	`sha256:da61ad49fa9961d6dfe53dc067fd690133f205498e8045e8f7ef6b9da0d42bd2`  
+		Last Modified: Tue, 30 Mar 2021 23:17:25 GMT  
+		Size: 11.3 MB (11286658 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:006eb4a69e602dcb61f4680d7e4a0d4853902062ab1230263e33125ae86b2700`  
-		Last Modified: Sat, 27 Mar 2021 06:06:52 GMT  
-		Size: 4.3 MB (4342442 bytes)  
+	-	`sha256:af62e04c0f85ed10801df4314d8cb9ba5e6c391f6a3c1db1080a0a78c8d4ed9d`  
+		Last Modified: Tue, 30 Mar 2021 23:17:23 GMT  
+		Size: 4.3 MB (4342466 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6c1c07de8af095e25b339c838c0a02c16fda79738e6c03e266875a048b28222f`  
-		Last Modified: Sat, 27 Mar 2021 06:07:16 GMT  
-		Size: 49.8 MB (49787143 bytes)  
+	-	`sha256:aae835e2c68ef1d48a4ffef72547a79926019aec6a2bbeb5372f1e832ef453dd`  
+		Last Modified: Tue, 30 Mar 2021 23:17:49 GMT  
+		Size: 49.8 MB (49787075 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6944064dc3f76beb34bb375de67aee01c0cae51b0932b24877292f47eb248a50`  
-		Last Modified: Sun, 28 Mar 2021 00:21:12 GMT  
-		Size: 57.8 MB (57829197 bytes)  
+	-	`sha256:3c53dd465b309b4f16b31d4c5fc9821fc17e70e316c32456d7a0e9ac5a953f37`  
+		Last Modified: Wed, 31 Mar 2021 20:22:03 GMT  
+		Size: 57.8 MB (57829044 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:364613603856d59495e800e8f809c7b66246262043ffae11d6ab93a50c6ca6d8`  
-		Last Modified: Sun, 28 Mar 2021 00:22:33 GMT  
-		Size: 121.1 MB (121070952 bytes)  
+	-	`sha256:380e91b0b369665e9377751579647e4fd148d858d34a2e879c127f099cf45307`  
+		Last Modified: Wed, 31 Mar 2021 20:25:00 GMT  
+		Size: 121.1 MB (121070929 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1c95310e285575e4ce3b7e338e6a82b68c9f841f3f98755cf2cc73dc45165aaa`  
-		Last Modified: Sun, 28 Mar 2021 00:22:15 GMT  
-		Size: 157.0 B  
+	-	`sha256:65239db755e09779520054ee953b11877740fefe27593ac6027343de02cb5cea`  
+		Last Modified: Wed, 31 Mar 2021 20:24:41 GMT  
+		Size: 155.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1.15-stretch` - linux; arm variant v7
@@ -7226,7 +7226,7 @@ WORKDIR C:\gopath
 ## `golang:1.15.10`
 
 ```console
-$ docker pull golang@sha256:c77000dbcd08d91fee1f5b67b9e563f94cca1271d3a64c0fb5fd526da6f7b092
+$ docker pull golang@sha256:622fa5008c46805a815b26d442748fe1a01f56fd5a883263e4b551bb16b70b3f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -7245,73 +7245,73 @@ $ docker pull golang@sha256:c77000dbcd08d91fee1f5b67b9e563f94cca1271d3a64c0fb5fd
 ### `golang:1.15.10` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:2a663a98ba344f8f32b663c6274e5a2c03503c038b2cfb054e84bd6cea7d76c0
+$ docker pull golang@sha256:efee673095bb6b0698c13540bdbf94dd765b9235435ed6ce29ece67ef8a63340
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **309.9 MB (309877717 bytes)**  
+-	Total Size: **309.9 MB (309911015 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:74fe9d9959d375d859b37d7675d4ea5320db56497372198f178f7505213c3b92`
+-	Image ID: `sha256:95e3e1bab2d1177e9b686eac9a6cf5813c55949a61ce967dd3ea8b5be6358fe5`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Fri, 26 Mar 2021 15:20:41 GMT
-ADD file:89234bb2f86c7eb890235a48904d1c9898a8d287a525c4fe5698d4a04cdd8f12 in / 
-# Fri, 26 Mar 2021 15:20:42 GMT
+# Tue, 30 Mar 2021 21:49:16 GMT
+ADD file:c254898ceb4172f05cd40460f8d0b1ca2d39d5178bdddd4e794c7d3fc5a60a03 in / 
+# Tue, 30 Mar 2021 21:49:16 GMT
 CMD ["bash"]
-# Sat, 27 Mar 2021 05:53:29 GMT
+# Tue, 30 Mar 2021 23:03:10 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
-# Sat, 27 Mar 2021 05:53:35 GMT
+# Tue, 30 Mar 2021 23:03:21 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Sat, 27 Mar 2021 05:53:54 GMT
+# Tue, 30 Mar 2021 23:03:52 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:05 GMT
+# Wed, 31 Mar 2021 20:11:57 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:06 GMT
+# Wed, 31 Mar 2021 20:11:57 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:19:07 GMT
+# Wed, 31 Mar 2021 20:16:38 GMT
 ENV GOLANG_VERSION=1.15.10
-# Sun, 28 Mar 2021 00:19:17 GMT
+# Wed, 31 Mar 2021 20:16:48 GMT
 RUN set -eux; 		dpkgArch="$(dpkg --print-architecture)"; 	url=; 	case "${dpkgArch##*-}" in 		'amd64') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-amd64.tar.gz'; 			sha256='4aa1267517df32f2bf1cc3d55dfc27d0c6b2c2b0989449c96dd19273ccca051d'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-armv6l.tar.gz'; 			sha256='10739f7a87544acca49c9f1c025ae1821ce83601228a968bd7102357ae89887b'; 			;; 		'arm64') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-arm64.tar.gz'; 			sha256='ca3f3e84d863d8e758bfaab65430b12b6cff8f5a5648139245321d3401da64a7'; 			;; 		'i386') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-386.tar.gz'; 			sha256='69a29473c9e8eded5b5885a45773e4f1b9661383ce577199c4c70efe4c67bc59'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-ppc64le.tar.gz'; 			sha256='49128af704c37a356b1d14d814e4cf64218a8c6cabb22249e0c0068b35f710d3'; 			;; 		's390x') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-s390x.tar.gz'; 			sha256='230e0e50fe0df0ba380804c02f1d88a801c6dee38582c4a9502e79dc744c7bb0'; 			;; 		*) echo >&2 "error: unsupported architecture '$dpkgArch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://storage.googleapis.com/golang/go1.15.10.src.tar.gz'; 		sha256='c1dbca6e0910b41d61a95bf9878f6d6e93d15d884c226b91d9d4b1113c10dd65'; 		echo >&2; 		echo >&2 "warning: current architecture ($dpkgArch) does not have a corresponding Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc" --progress=dot:giga; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum --strict --check -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends golang-go; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				go install std; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 		; 	fi; 		go version
-# Sun, 28 Mar 2021 00:19:18 GMT
+# Wed, 31 Mar 2021 20:16:49 GMT
 ENV GOPATH=/go
-# Sun, 28 Mar 2021 00:19:18 GMT
+# Wed, 31 Mar 2021 20:16:49 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:19:19 GMT
+# Wed, 31 Mar 2021 20:16:50 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Sun, 28 Mar 2021 00:19:19 GMT
+# Wed, 31 Mar 2021 20:16:51 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:8bf9c589d5f9475f1fcc050e02308d6b4eeb86eab7752ef948a13693e81a6aaa`  
-		Last Modified: Fri, 26 Mar 2021 15:27:11 GMT  
-		Size: 50.4 MB (50400278 bytes)  
+	-	`sha256:004f1eed87df3f75f5e2a1a649fa7edd7f713d1300532fd0909bb39cd48437d7`  
+		Last Modified: Tue, 30 Mar 2021 21:53:41 GMT  
+		Size: 50.4 MB (50432842 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4c70e46d8b5f0e1d77797b7a0565b7a316bd8c7c024f5cca82592128af142dac`  
-		Last Modified: Sat, 27 Mar 2021 06:03:41 GMT  
-		Size: 7.8 MB (7832558 bytes)  
+	-	`sha256:5d6f1e8117dbb1c6a57603cb4f321a861a08105a81bcc6b01b0ec2b78c8523a5`  
+		Last Modified: Tue, 30 Mar 2021 23:14:05 GMT  
+		Size: 7.8 MB (7832608 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ea848ad42f0d1676b3a0ce709208ba3fa154cd53370c50e7cf8e580c63d96ae0`  
-		Last Modified: Sat, 27 Mar 2021 06:03:41 GMT  
-		Size: 10.0 MB (9997159 bytes)  
+	-	`sha256:48c2faf66abec3dce9f54d6722ff592fce6dd4fb58a0d0b72282936c6598a3b3`  
+		Last Modified: Tue, 30 Mar 2021 23:14:05 GMT  
+		Size: 10.0 MB (9997208 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:48fe137f8d2641315dd2f93c46dfdb671ce7399edc1f44f10cc68984f2809d8e`  
-		Last Modified: Sat, 27 Mar 2021 06:04:05 GMT  
-		Size: 51.8 MB (51839972 bytes)  
+	-	`sha256:234b70d0479d7f16d7ee8d04e4ffdacc57d7d14313faf59d332f18b2e9418743`  
+		Last Modified: Tue, 30 Mar 2021 23:14:37 GMT  
+		Size: 51.8 MB (51840782 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e53aa3cb0a1b20fe535fb0954912e16192c1fa053d0f6f2df21d1f5a50f8139c`  
-		Last Modified: Sun, 28 Mar 2021 00:20:35 GMT  
-		Size: 68.7 MB (68736693 bytes)  
+	-	`sha256:f5e9f83ff9bcf98a081ea281823c299a293e0870c4fd132c22cf425b01bd310e`  
+		Last Modified: Wed, 31 Mar 2021 20:21:23 GMT  
+		Size: 68.7 MB (68736521 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ccdd004acfd8c80b2e52c4550f001d50b5bf7d5e98adbc1b887b075567a7fd8e`  
-		Last Modified: Sun, 28 Mar 2021 00:22:04 GMT  
-		Size: 121.1 MB (121070903 bytes)  
+	-	`sha256:e029dc4668e6ef180685ac8f080088333b201dd05bc33e87fdfacc5bcccb30ed`  
+		Last Modified: Wed, 31 Mar 2021 20:24:29 GMT  
+		Size: 121.1 MB (121070898 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9019dd7c1066a531134ff4453583c717f95975fe4b96738376c72d8d81dd088e`  
-		Last Modified: Sun, 28 Mar 2021 00:21:45 GMT  
-		Size: 154.0 B  
+	-	`sha256:2ce48311bb5fb4195fb2b42fc33ca8ed09525d8d1ea8f7906ffa6d652da88631`  
+		Last Modified: Wed, 31 Mar 2021 20:24:10 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1.15.10` - linux; arm variant v5
@@ -8012,7 +8012,7 @@ WORKDIR C:\gopath
 ## `golang:1.15.10-alpine`
 
 ```console
-$ docker pull golang@sha256:20394befaa591b234ce3a451e18b5eb9361494908036eca2ee17fa41e8f600ef
+$ docker pull golang@sha256:f6a0b79f5d5a31fab030cad6f4d21917d461931f5f6860295c0cf638b213038f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -8028,120 +8028,120 @@ $ docker pull golang@sha256:20394befaa591b234ce3a451e18b5eb9361494908036eca2ee17
 ### `golang:1.15.10-alpine` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:6e24550c2712c5dbacdfeff0726efac31fd6f670483bb02f820689e4e833722b
+$ docker pull golang@sha256:bdd5153d12b1db5b48c4e0099b3e2e19aa2964f9c0bf787805eb29b027a67bb4
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **109.9 MB (109884007 bytes)**  
+-	Total Size: **109.9 MB (109883751 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a0ce913c8aafbdd5b416f4b10dcfcf0fc32ebab6a13afd2c6674e741bea63f92`
+-	Image ID: `sha256:be9dced0e9c61f07f82ff89fe24a0454add488fdebb3585809b484be7e79d938`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:19:32 GMT
-ADD file:6b081cabb4b256ee07587d249c4989b5b679375529542b81550a65b6f19f274e in / 
-# Thu, 25 Mar 2021 22:19:32 GMT
+# Wed, 31 Mar 2021 20:10:06 GMT
+ADD file:7119167b56ff1228b2fb639c768955ce9db7a999cd947179240b216dfa5ccbb9 in / 
+# Wed, 31 Mar 2021 20:10:06 GMT
 CMD ["/bin/sh"]
-# Fri, 26 Mar 2021 04:48:00 GMT
+# Wed, 31 Mar 2021 20:12:47 GMT
 RUN apk add --no-cache 		ca-certificates
-# Fri, 26 Mar 2021 04:48:01 GMT
+# Wed, 31 Mar 2021 20:12:48 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Fri, 26 Mar 2021 04:48:01 GMT
+# Wed, 31 Mar 2021 20:12:48 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:53:43 GMT
+# Wed, 31 Mar 2021 20:17:12 GMT
 ENV GOLANG_VERSION=1.15.10
-# Fri, 26 Mar 2021 04:56:42 GMT
+# Wed, 31 Mar 2021 20:18:44 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='387' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.15.10.src.tar.gz'; 	sha256='c1dbca6e0910b41d61a95bf9878f6d6e93d15d884c226b91d9d4b1113c10dd65'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Fri, 26 Mar 2021 04:56:43 GMT
+# Wed, 31 Mar 2021 20:18:45 GMT
 ENV GOPATH=/go
-# Fri, 26 Mar 2021 04:56:44 GMT
+# Wed, 31 Mar 2021 20:18:45 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:56:46 GMT
+# Wed, 31 Mar 2021 20:18:46 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Fri, 26 Mar 2021 04:56:46 GMT
+# Wed, 31 Mar 2021 20:18:46 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:9aae54b2144e5b2b00c610f8805128f4f86822e1e52d3714c463744a431f0f4a`  
-		Last Modified: Thu, 25 Mar 2021 22:20:18 GMT  
-		Size: 2.8 MB (2811681 bytes)  
+	-	`sha256:ca3cd42a7c9525f6ce3d64c1a70982613a8235f0cc057ec9244052921853ef15`  
+		Last Modified: Wed, 31 Mar 2021 20:10:46 GMT  
+		Size: 2.8 MB (2811947 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9f73940e57d360e45588f2a826fa219a35089234eadac5c3e5d54dfac02c0a7d`  
-		Last Modified: Fri, 26 Mar 2021 04:59:58 GMT  
-		Size: 281.3 KB (281262 bytes)  
+	-	`sha256:dbcca316e5c32a932c66cfa46736e3998e69caeb857e570566ec63ab0377044a`  
+		Last Modified: Wed, 31 Mar 2021 20:22:40 GMT  
+		Size: 281.3 KB (281274 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ff472ba555d2504b7af85b2deac3b22d39a3dfa1510a54701764c4afd7bc7c43`  
-		Last Modified: Fri, 26 Mar 2021 04:59:59 GMT  
-		Size: 154.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b1b665c161b76d6e3e7bb109285097beb6122cd50ef723fcf2495b6ce73e6e44`  
-		Last Modified: Fri, 26 Mar 2021 05:01:50 GMT  
-		Size: 106.8 MB (106790755 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e7931ed63562564d5be0f7860f7fd53e2edfaa0805258540d337e755cee690cf`  
-		Last Modified: Fri, 26 Mar 2021 05:01:28 GMT  
+	-	`sha256:b65b403d39c8273b612240b85430a925f80b8b5719979c21e1387246faa62bd3`  
+		Last Modified: Wed, 31 Mar 2021 20:22:40 GMT  
 		Size: 155.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c1220b2ee03d817e3a9db177c2dd717e78d68c754bac0fbfbb319488dbcac3d6`  
+		Last Modified: Wed, 31 Mar 2021 20:25:28 GMT  
+		Size: 106.8 MB (106790219 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:11437b7b95304e43c69dfced1368785059ddf56ad1bfc51f120ef0464f9ffdb9`  
+		Last Modified: Wed, 31 Mar 2021 20:25:13 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1.15.10-alpine` - linux; arm variant v6
 
 ```console
-$ docker pull golang@sha256:4b0d3fb11bc2f39dc50a85fe53fc0b6a81b9572034eebfc6bab30886557e4c59
+$ docker pull golang@sha256:b7f7da63a3296f20e4a4b6986f4e6dfc2913894ad1a3bcb2b470cfd61fe35742
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **105.6 MB (105563296 bytes)**  
+-	Total Size: **105.6 MB (105563790 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:de9b7e68dbb60ea30016f3edc5ff2ed2293fc9c8ac1c7e7eee3ff0ac6ed5635e`
+-	Image ID: `sha256:79d12ee59cca81018861589074053cb08e7c5a9427c778dd31aad32171bd3ec2`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:50:09 GMT
-ADD file:ca4136238cb9a01d079efd129bccd1470945d7d4320da61373af90645a4b1146 in / 
-# Thu, 25 Mar 2021 22:50:28 GMT
+# Wed, 31 Mar 2021 17:18:49 GMT
+ADD file:988879d74f643b89539e5a0b6d74221621f19f4f87f722614addadc46ce47200 in / 
+# Wed, 31 Mar 2021 17:18:50 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:27:14 GMT
+# Wed, 31 Mar 2021 18:28:21 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:27:20 GMT
+# Wed, 31 Mar 2021 18:28:24 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:27:23 GMT
+# Wed, 31 Mar 2021 18:28:25 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:35:43 GMT
+# Wed, 31 Mar 2021 19:00:37 GMT
 ENV GOLANG_VERSION=1.15.10
-# Thu, 25 Mar 2021 23:38:44 GMT
+# Wed, 31 Mar 2021 19:13:15 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='387' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.15.10.src.tar.gz'; 	sha256='c1dbca6e0910b41d61a95bf9878f6d6e93d15d884c226b91d9d4b1113c10dd65'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:38:49 GMT
+# Wed, 31 Mar 2021 19:13:21 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:38:51 GMT
+# Wed, 31 Mar 2021 19:13:23 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:38:55 GMT
+# Wed, 31 Mar 2021 19:13:26 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:39:00 GMT
+# Wed, 31 Mar 2021 19:13:28 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:bca6a70a54896d072b6919d2ae18d3ef685bc7aed783731f68a4adac0fb93d52`  
-		Last Modified: Thu, 25 Mar 2021 22:54:24 GMT  
-		Size: 2.6 MB (2622062 bytes)  
+	-	`sha256:bb87125c6ee1ce30c6b33d2c96a9fbe46da4a290f7cb1dd73fd62d4e06503699`  
+		Last Modified: Wed, 31 Mar 2021 17:19:55 GMT  
+		Size: 2.6 MB (2622116 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4ea05802fe691d87fddb107a6821e75df7c3f57bc6cb2e90cddd4b45a233d0f0`  
-		Last Modified: Thu, 25 Mar 2021 23:44:44 GMT  
-		Size: 281.4 KB (281380 bytes)  
+	-	`sha256:f0eb8dc77a7b333e6a40d00034c58c9612b3c2a7d33ea6c7dbf62e416baac7ea`  
+		Last Modified: Wed, 31 Mar 2021 19:22:13 GMT  
+		Size: 281.4 KB (281371 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1d164f70ad230af42bb09ffd3d6494a6bb012bc5731d7fbd2b3e1c3bcec9c4f6`  
-		Last Modified: Thu, 25 Mar 2021 23:44:44 GMT  
+	-	`sha256:0ec5882b9b78ec27dce64542bb1bd7c56d4913cde0d929356e9353ea6caac515`  
+		Last Modified: Wed, 31 Mar 2021 19:22:13 GMT  
 		Size: 154.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:57e04ae646ad142727a71bd484d9cf7abc46a03486388bb05e498884c9cdef74`  
-		Last Modified: Thu, 25 Mar 2021 23:47:23 GMT  
-		Size: 102.7 MB (102659544 bytes)  
+	-	`sha256:884bc77bcba8c1b3c55526ef751b4a543583762abf115b20731e3dcdb2bb0d57`  
+		Last Modified: Wed, 31 Mar 2021 19:24:35 GMT  
+		Size: 102.7 MB (102659993 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3590fe869a1ae6fe147fbe1c990d74a99091d0ba57492ad6219cc0ba7e36af81`  
-		Last Modified: Thu, 25 Mar 2021 23:46:51 GMT  
+	-	`sha256:a4d017842f8f66ddc088839043f86907fc667c06efdff0e06eb5d5a07be88db0`  
+		Last Modified: Wed, 31 Mar 2021 19:24:03 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -8388,67 +8388,67 @@ WORKDIR /go
 ### `golang:1.15.10-alpine` - linux; s390x
 
 ```console
-$ docker pull golang@sha256:b9bdac74c70abaf4e4b516c8934732586e1d9b5ace7d069643aadb6c468b36db
+$ docker pull golang@sha256:0ec0e006da609f9e4992aa8e2f4d49d2a16187cb731109bf71bb6fd4f6a71b7b
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **108.8 MB (108804942 bytes)**  
+-	Total Size: **108.8 MB (108801229 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:de1ad86fce5220113d95245b2f4076e5248f0fc0771b95e9f1e6584825655788`
+-	Image ID: `sha256:bb9813cd7f2769f5e9eee7f56589814353c067bbc4aca3d6aefb49a3f14a1686`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:41:34 GMT
-ADD file:44e2c7cd992fc98df702bef7022e0f8c4ee86312c311ab5ae185fd5fc878edf9 in / 
-# Thu, 25 Mar 2021 22:41:34 GMT
+# Wed, 31 Mar 2021 17:14:58 GMT
+ADD file:3f5fe04867af3c9f2cfc5b315d97097145ae11343399985386321a8db21d7786 in / 
+# Wed, 31 Mar 2021 17:14:58 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:18:24 GMT
+# Wed, 31 Mar 2021 18:32:50 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:18:24 GMT
+# Wed, 31 Mar 2021 18:32:51 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:18:25 GMT
+# Wed, 31 Mar 2021 18:32:51 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:22:34 GMT
+# Wed, 31 Mar 2021 18:36:29 GMT
 ENV GOLANG_VERSION=1.15.10
-# Thu, 25 Mar 2021 23:23:49 GMT
+# Wed, 31 Mar 2021 18:37:52 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='387' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.15.10.src.tar.gz'; 	sha256='c1dbca6e0910b41d61a95bf9878f6d6e93d15d884c226b91d9d4b1113c10dd65'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:23:54 GMT
+# Wed, 31 Mar 2021 18:37:57 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:23:54 GMT
+# Wed, 31 Mar 2021 18:37:58 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:23:55 GMT
+# Wed, 31 Mar 2021 18:37:58 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:23:55 GMT
+# Wed, 31 Mar 2021 18:37:59 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:a266c0a9554add02ea09a46b8584cb36b7f606b7b4398b9ad7369f899f8360df`  
-		Last Modified: Thu, 25 Mar 2021 22:42:07 GMT  
-		Size: 2.6 MB (2602387 bytes)  
+	-	`sha256:1d4058bbeedf5296bcaf5ae8f37c8cd58152acad3ec45a536e08b83f5d3abe83`  
+		Last Modified: Wed, 31 Mar 2021 17:15:36 GMT  
+		Size: 2.6 MB (2602591 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5f7a13aca3904b3b663e1f8170de727ebe3a4616cb36dcadfd015e2e663c24bb`  
-		Last Modified: Thu, 25 Mar 2021 23:26:06 GMT  
-		Size: 281.7 KB (281700 bytes)  
+	-	`sha256:27c9dd6f50e848494b74d743acede663c4566d6c904f83c807df6ed135c0bac2`  
+		Last Modified: Wed, 31 Mar 2021 18:40:22 GMT  
+		Size: 281.7 KB (281696 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0511116a12ff773aa9cf992f6fa81a1e4a4404f1ba284f6526e7439c07e3a651`  
-		Last Modified: Thu, 25 Mar 2021 23:26:06 GMT  
-		Size: 154.0 B  
+	-	`sha256:55a3302e682073b38a23dae31007fd1b72ed66261ca926cc100f29e177732a0a`  
+		Last Modified: Wed, 31 Mar 2021 18:40:25 GMT  
+		Size: 153.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ee85fb00fca6e704a3d8277765d6f193a435abc15f840daf5cab5d1978295909`  
-		Last Modified: Thu, 25 Mar 2021 23:27:17 GMT  
-		Size: 105.9 MB (105920545 bytes)  
+	-	`sha256:9f4d2266417869e05e6310c284f9354fe87d3655995b4124edd5d4bde9e6e7f3`  
+		Last Modified: Wed, 31 Mar 2021 18:41:38 GMT  
+		Size: 105.9 MB (105916633 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dcae75938a2f93a0529f8438a372c3fb739a888e646e3876f65704628925ed08`  
-		Last Modified: Thu, 25 Mar 2021 23:27:04 GMT  
+	-	`sha256:c12ff3dfbc97fde9eb1fe510933e7325fd6723fe486b4664ae50c1c398f1c71a`  
+		Last Modified: Wed, 31 Mar 2021 18:41:23 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:1.15.10-alpine3.12`
 
 ```console
-$ docker pull golang@sha256:3692e192ac4a430d7a7c87fa029f5530f952c257357544ca62aa8d8c9355a379
+$ docker pull golang@sha256:22add8fff7d14bb21090f0ebbb1c35c239f0176e5d29bb967af74926c04e1838
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -8464,121 +8464,121 @@ $ docker pull golang@sha256:3692e192ac4a430d7a7c87fa029f5530f952c257357544ca62aa
 ### `golang:1.15.10-alpine3.12` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:cda970666a382316cfab7a0152c998a4171a0e42140e3fea717d090290750856
+$ docker pull golang@sha256:c1bcd869659b03c7086da4aef50c8909b4a027aeb804e04ea7e859942912f7ee
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **109.9 MB (109891521 bytes)**  
+-	Total Size: **109.9 MB (109892600 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:8b72cb43d5db553b048a9707091e861ccb42c21cfc0d9bfb4fe88c361a11b296`
+-	Image ID: `sha256:500d52d14c022a06dec8dcf58242d6cc7962c2866dd0a7b1f17063095616b88c`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:19:38 GMT
-ADD file:b2c067f4304d00c91fc9fd92f2e58853412cc705dfda4d1cf658fab965d5802c in / 
-# Thu, 25 Mar 2021 22:19:38 GMT
+# Wed, 31 Mar 2021 20:10:13 GMT
+ADD file:f77db8e5b937d8ebb7e254eccd4d311798ea9f4dd5081ea2a7e2b1d3790300c2 in / 
+# Wed, 31 Mar 2021 20:10:13 GMT
 CMD ["/bin/sh"]
-# Fri, 26 Mar 2021 04:50:11 GMT
+# Wed, 31 Mar 2021 20:14:43 GMT
 RUN apk add --no-cache 		ca-certificates
-# Fri, 26 Mar 2021 04:50:12 GMT
+# Wed, 31 Mar 2021 20:14:44 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Fri, 26 Mar 2021 04:50:12 GMT
+# Wed, 31 Mar 2021 20:14:44 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:56:55 GMT
+# Wed, 31 Mar 2021 20:18:53 GMT
 ENV GOLANG_VERSION=1.15.10
-# Fri, 26 Mar 2021 04:59:06 GMT
+# Wed, 31 Mar 2021 20:20:23 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='387' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.15.10.src.tar.gz'; 	sha256='c1dbca6e0910b41d61a95bf9878f6d6e93d15d884c226b91d9d4b1113c10dd65'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Fri, 26 Mar 2021 04:59:07 GMT
+# Wed, 31 Mar 2021 20:20:24 GMT
 ENV GOPATH=/go
-# Fri, 26 Mar 2021 04:59:08 GMT
+# Wed, 31 Mar 2021 20:20:24 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:59:09 GMT
+# Wed, 31 Mar 2021 20:20:25 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Fri, 26 Mar 2021 04:59:09 GMT
+# Wed, 31 Mar 2021 20:20:25 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:22599d3e9e25e799b87521b94e20d20a601ffad16cf676274fdf94b089e4b979`  
-		Last Modified: Thu, 25 Mar 2021 22:20:35 GMT  
-		Size: 2.8 MB (2799762 bytes)  
+	-	`sha256:532819f3e44cebad88c82f5393801acb876b7a61d36b84bce646561789bb2018`  
+		Last Modified: Wed, 31 Mar 2021 20:11:03 GMT  
+		Size: 2.8 MB (2799712 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:994b649ee80af61fec0aab2113abbcce972dced9ddb604f8e2721a943dfca8f3`  
-		Last Modified: Fri, 26 Mar 2021 05:00:47 GMT  
-		Size: 280.9 KB (280878 bytes)  
+	-	`sha256:93cbbf235a55c104bafc6765f3c92a36489a596041551360d566152f2af01b59`  
+		Last Modified: Wed, 31 Mar 2021 20:22:25 GMT  
+		Size: 280.9 KB (280881 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dae587f6cd93b42cb17ce4c64b07191a204f7adde25a351026cc7cb254d28096`  
-		Last Modified: Fri, 26 Mar 2021 05:00:47 GMT  
-		Size: 152.0 B  
+	-	`sha256:e13f184a059628efa0b05f924f5b1e223377ebd57cdec0597912aabcd4b2129b`  
+		Last Modified: Wed, 31 Mar 2021 20:23:29 GMT  
+		Size: 153.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:589a06b0631bfe1090cbcb938656dc35af03041a561a3dfc9f0e85e93a520a48`  
-		Last Modified: Fri, 26 Mar 2021 05:02:32 GMT  
-		Size: 106.8 MB (106810573 bytes)  
+	-	`sha256:1ec81731eed009f8d947489208d3bc2fe161411bd6ad9543fc2af27bb229d352`  
+		Last Modified: Wed, 31 Mar 2021 20:26:05 GMT  
+		Size: 106.8 MB (106811699 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bceeb5e7f7db2d02eb4835b1d53023c4b85911c979f4a1bf5be7416746e7b69d`  
-		Last Modified: Fri, 26 Mar 2021 05:02:09 GMT  
-		Size: 156.0 B  
+	-	`sha256:0fec2af768a6dad08fb2f9bf5396591d7ab1b7bff816d42c96f7c5169ab05502`  
+		Last Modified: Wed, 31 Mar 2021 20:25:48 GMT  
+		Size: 155.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1.15.10-alpine3.12` - linux; arm variant v6
 
 ```console
-$ docker pull golang@sha256:754efbea1218ef8aa4b075f63ee04f73360a224b92f96b167fbbddac7e46d474
+$ docker pull golang@sha256:8d967bf7af0c7dea133ace6d2b61e4008d93c056cee197a7abf67349e61ed750
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **105.6 MB (105557983 bytes)**  
+-	Total Size: **105.6 MB (105557732 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7c146f40e606f658ab4d396f50bef68a04fe2de3e41f45e51d68ad7646999842`
+-	Image ID: `sha256:a5cba1b9d7910ba1f4d6db569029ed473a70817ebcedab3cdf04c990c75cedbc`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:50:43 GMT
-ADD file:65a3462a527f49c8c625927be6b8b57b4257c8cc37d685055a1f183d76c68920 in / 
-# Thu, 25 Mar 2021 22:50:47 GMT
+# Wed, 31 Mar 2021 17:19:11 GMT
+ADD file:00ac3d0df16779e7564cda9cbf94eef90ffa8043778a867272ff0135a1fb537f in / 
+# Wed, 31 Mar 2021 17:19:12 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:31:38 GMT
+# Wed, 31 Mar 2021 18:45:17 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:31:44 GMT
+# Wed, 31 Mar 2021 18:45:20 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:31:46 GMT
+# Wed, 31 Mar 2021 18:45:21 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:39:49 GMT
+# Wed, 31 Mar 2021 19:13:42 GMT
 ENV GOLANG_VERSION=1.15.10
-# Thu, 25 Mar 2021 23:43:57 GMT
+# Wed, 31 Mar 2021 19:21:36 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='387' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.15.10.src.tar.gz'; 	sha256='c1dbca6e0910b41d61a95bf9878f6d6e93d15d884c226b91d9d4b1113c10dd65'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:44:05 GMT
+# Wed, 31 Mar 2021 19:21:40 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:44:08 GMT
+# Wed, 31 Mar 2021 19:21:42 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:44:13 GMT
+# Wed, 31 Mar 2021 19:21:44 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:44:16 GMT
+# Wed, 31 Mar 2021 19:21:45 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:181a1446f0acaaa0871cec07aba4f733041f2d80ffbe01b19df43fe005df29f3`  
-		Last Modified: Thu, 25 Mar 2021 22:55:06 GMT  
-		Size: 2.6 MB (2604815 bytes)  
+	-	`sha256:66e54586dae0889b30da12f7a66838d9b86511b58696c83c3b9166ff1a534bbe`  
+		Last Modified: Wed, 31 Mar 2021 17:20:05 GMT  
+		Size: 2.6 MB (2604658 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:045419b8095ca1008ec369ea0965cfdae0dd0c90bea499bd8b42e5e45ab92cc5`  
-		Last Modified: Thu, 25 Mar 2021 23:46:09 GMT  
-		Size: 281.0 KB (280982 bytes)  
+	-	`sha256:0aa6796eed51884cd0436f134281af9489342ecf256aec0b31ca83f254ccd0d1`  
+		Last Modified: Wed, 31 Mar 2021 19:23:16 GMT  
+		Size: 281.0 KB (280979 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4ddbec85c64c1987da76dd94cb01590f1166da94443b5fa33ea1f633108a00fb`  
-		Last Modified: Thu, 25 Mar 2021 23:46:09 GMT  
-		Size: 154.0 B  
+	-	`sha256:1c043dc86373f816c29db582d9bddada9a00eeb3812a357a2dfd8e3f68d9a413`  
+		Last Modified: Wed, 31 Mar 2021 19:23:15 GMT  
+		Size: 153.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8ca0a381ab053ca44a8625b8e2ca49dd44dc85ce2a413e6a95655379b561e9e2`  
-		Last Modified: Thu, 25 Mar 2021 23:48:08 GMT  
-		Size: 102.7 MB (102671877 bytes)  
+	-	`sha256:031875ceeaab9b0b96a47b7ed9ec2a0098a9d8662d1c2a57785eb95dbf36d419`  
+		Last Modified: Wed, 31 Mar 2021 19:25:23 GMT  
+		Size: 102.7 MB (102671786 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:90b04a1ba4ca2f6db58c75f5e77a21dc06efcc031539095b5b174c4d5a4e1822`  
-		Last Modified: Thu, 25 Mar 2021 23:47:38 GMT  
-		Size: 155.0 B  
+	-	`sha256:15870044ac3cd6474d13a6fd94871020ad8801d56fa4387bb9507968da9b093d`  
+		Last Modified: Wed, 31 Mar 2021 19:24:49 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1.15.10-alpine3.12` - linux; arm variant v7
@@ -8824,67 +8824,67 @@ WORKDIR /go
 ### `golang:1.15.10-alpine3.12` - linux; s390x
 
 ```console
-$ docker pull golang@sha256:6dbff6b1ee4c4b76df506b8ecbd308e44656aacf2333a8f6a7a44dceb394b219
+$ docker pull golang@sha256:254d9ec27b5c8f49f0f05d484c30502cad5a417b29f26a2bb866ec65e68333b0
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **108.8 MB (108771518 bytes)**  
+-	Total Size: **108.8 MB (108772225 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:45976b99e6ea86de03ab00b342c94531f117dcf74d233d4e4e0ad959d105070d`
+-	Image ID: `sha256:d4a2b390a7d78f2fe7563b366f809c167cd79cbce69d8a437c27025404851e7a`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:41:39 GMT
-ADD file:12766b6fe7c37292d91bd1469b27dc9fb362e3109e9b3f377cff030bc0ca5386 in / 
-# Thu, 25 Mar 2021 22:41:39 GMT
+# Wed, 31 Mar 2021 17:15:04 GMT
+ADD file:1f37b92ea1f573c4810b1d056dc4880cf4035e143451d9b2b76fac1e3b462248 in / 
+# Wed, 31 Mar 2021 17:15:04 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:20:43 GMT
+# Wed, 31 Mar 2021 18:34:37 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:20:44 GMT
+# Wed, 31 Mar 2021 18:34:38 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:20:44 GMT
+# Wed, 31 Mar 2021 18:34:38 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:24:07 GMT
+# Wed, 31 Mar 2021 18:38:18 GMT
 ENV GOLANG_VERSION=1.15.10
-# Thu, 25 Mar 2021 23:25:18 GMT
+# Wed, 31 Mar 2021 18:39:40 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='387' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.15.10.src.tar.gz'; 	sha256='c1dbca6e0910b41d61a95bf9878f6d6e93d15d884c226b91d9d4b1113c10dd65'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:25:24 GMT
+# Wed, 31 Mar 2021 18:39:46 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:25:24 GMT
+# Wed, 31 Mar 2021 18:39:46 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:25:25 GMT
+# Wed, 31 Mar 2021 18:39:47 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:25:25 GMT
+# Wed, 31 Mar 2021 18:39:47 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:be2cdf7cbb6a1aec476a957daaae210624b2b112c20f27f55bbcf2bdc74db281`  
-		Last Modified: Thu, 25 Mar 2021 22:42:19 GMT  
-		Size: 2.6 MB (2567457 bytes)  
+	-	`sha256:38ca5430c9af12b6b6dee7c10eb6b1eb0e4eb4f5f02a97890579c4b049d00233`  
+		Last Modified: Wed, 31 Mar 2021 17:15:46 GMT  
+		Size: 2.6 MB (2567453 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:aaddff0ad4814b86163108d94e8b39f43a463cb6c267218cec9cdeffc540308a`  
-		Last Modified: Thu, 25 Mar 2021 23:26:32 GMT  
+	-	`sha256:1dcb296d6fc71cd9057e3d03d0ea4ebe30a620f7c6ce57eb78f4c137e77a9a47`  
+		Last Modified: Wed, 31 Mar 2021 18:40:52 GMT  
 		Size: 281.4 KB (281355 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1b123ead7d9076567abb17998ba938b85be4f09afb27464b9c66734b580e1d5a`  
-		Last Modified: Thu, 25 Mar 2021 23:26:32 GMT  
+	-	`sha256:5783b7db1c405d51f50a261ae252c97941c44ffeb93cb10c2e2bdd458296774a`  
+		Last Modified: Wed, 31 Mar 2021 18:40:52 GMT  
 		Size: 153.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8cebfd1941157e288978467728664c86b2e5d1ca688f2b9517f91225540d4986`  
-		Last Modified: Thu, 25 Mar 2021 23:27:43 GMT  
-		Size: 105.9 MB (105922397 bytes)  
+	-	`sha256:fbb58064707977215f9632cdb206eaec9d63534f602e5682c22634dcfbb2cbd5`  
+		Last Modified: Wed, 31 Mar 2021 18:42:02 GMT  
+		Size: 105.9 MB (105923109 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f25b19b8cefe5aeeac1f7cd05502c7c2990aabd3661d8636693d6bdaaf3df542`  
-		Last Modified: Thu, 25 Mar 2021 23:27:34 GMT  
-		Size: 156.0 B  
+	-	`sha256:e273a64a6b34c09c3baa0d7e2dc15a36980a72e658c1570903625ebac61f7f16`  
+		Last Modified: Wed, 31 Mar 2021 18:41:52 GMT  
+		Size: 155.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:1.15.10-alpine3.13`
 
 ```console
-$ docker pull golang@sha256:20394befaa591b234ce3a451e18b5eb9361494908036eca2ee17fa41e8f600ef
+$ docker pull golang@sha256:f6a0b79f5d5a31fab030cad6f4d21917d461931f5f6860295c0cf638b213038f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -8900,120 +8900,120 @@ $ docker pull golang@sha256:20394befaa591b234ce3a451e18b5eb9361494908036eca2ee17
 ### `golang:1.15.10-alpine3.13` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:6e24550c2712c5dbacdfeff0726efac31fd6f670483bb02f820689e4e833722b
+$ docker pull golang@sha256:bdd5153d12b1db5b48c4e0099b3e2e19aa2964f9c0bf787805eb29b027a67bb4
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **109.9 MB (109884007 bytes)**  
+-	Total Size: **109.9 MB (109883751 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a0ce913c8aafbdd5b416f4b10dcfcf0fc32ebab6a13afd2c6674e741bea63f92`
+-	Image ID: `sha256:be9dced0e9c61f07f82ff89fe24a0454add488fdebb3585809b484be7e79d938`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:19:32 GMT
-ADD file:6b081cabb4b256ee07587d249c4989b5b679375529542b81550a65b6f19f274e in / 
-# Thu, 25 Mar 2021 22:19:32 GMT
+# Wed, 31 Mar 2021 20:10:06 GMT
+ADD file:7119167b56ff1228b2fb639c768955ce9db7a999cd947179240b216dfa5ccbb9 in / 
+# Wed, 31 Mar 2021 20:10:06 GMT
 CMD ["/bin/sh"]
-# Fri, 26 Mar 2021 04:48:00 GMT
+# Wed, 31 Mar 2021 20:12:47 GMT
 RUN apk add --no-cache 		ca-certificates
-# Fri, 26 Mar 2021 04:48:01 GMT
+# Wed, 31 Mar 2021 20:12:48 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Fri, 26 Mar 2021 04:48:01 GMT
+# Wed, 31 Mar 2021 20:12:48 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:53:43 GMT
+# Wed, 31 Mar 2021 20:17:12 GMT
 ENV GOLANG_VERSION=1.15.10
-# Fri, 26 Mar 2021 04:56:42 GMT
+# Wed, 31 Mar 2021 20:18:44 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='387' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.15.10.src.tar.gz'; 	sha256='c1dbca6e0910b41d61a95bf9878f6d6e93d15d884c226b91d9d4b1113c10dd65'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Fri, 26 Mar 2021 04:56:43 GMT
+# Wed, 31 Mar 2021 20:18:45 GMT
 ENV GOPATH=/go
-# Fri, 26 Mar 2021 04:56:44 GMT
+# Wed, 31 Mar 2021 20:18:45 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:56:46 GMT
+# Wed, 31 Mar 2021 20:18:46 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Fri, 26 Mar 2021 04:56:46 GMT
+# Wed, 31 Mar 2021 20:18:46 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:9aae54b2144e5b2b00c610f8805128f4f86822e1e52d3714c463744a431f0f4a`  
-		Last Modified: Thu, 25 Mar 2021 22:20:18 GMT  
-		Size: 2.8 MB (2811681 bytes)  
+	-	`sha256:ca3cd42a7c9525f6ce3d64c1a70982613a8235f0cc057ec9244052921853ef15`  
+		Last Modified: Wed, 31 Mar 2021 20:10:46 GMT  
+		Size: 2.8 MB (2811947 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9f73940e57d360e45588f2a826fa219a35089234eadac5c3e5d54dfac02c0a7d`  
-		Last Modified: Fri, 26 Mar 2021 04:59:58 GMT  
-		Size: 281.3 KB (281262 bytes)  
+	-	`sha256:dbcca316e5c32a932c66cfa46736e3998e69caeb857e570566ec63ab0377044a`  
+		Last Modified: Wed, 31 Mar 2021 20:22:40 GMT  
+		Size: 281.3 KB (281274 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ff472ba555d2504b7af85b2deac3b22d39a3dfa1510a54701764c4afd7bc7c43`  
-		Last Modified: Fri, 26 Mar 2021 04:59:59 GMT  
-		Size: 154.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b1b665c161b76d6e3e7bb109285097beb6122cd50ef723fcf2495b6ce73e6e44`  
-		Last Modified: Fri, 26 Mar 2021 05:01:50 GMT  
-		Size: 106.8 MB (106790755 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e7931ed63562564d5be0f7860f7fd53e2edfaa0805258540d337e755cee690cf`  
-		Last Modified: Fri, 26 Mar 2021 05:01:28 GMT  
+	-	`sha256:b65b403d39c8273b612240b85430a925f80b8b5719979c21e1387246faa62bd3`  
+		Last Modified: Wed, 31 Mar 2021 20:22:40 GMT  
 		Size: 155.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c1220b2ee03d817e3a9db177c2dd717e78d68c754bac0fbfbb319488dbcac3d6`  
+		Last Modified: Wed, 31 Mar 2021 20:25:28 GMT  
+		Size: 106.8 MB (106790219 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:11437b7b95304e43c69dfced1368785059ddf56ad1bfc51f120ef0464f9ffdb9`  
+		Last Modified: Wed, 31 Mar 2021 20:25:13 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1.15.10-alpine3.13` - linux; arm variant v6
 
 ```console
-$ docker pull golang@sha256:4b0d3fb11bc2f39dc50a85fe53fc0b6a81b9572034eebfc6bab30886557e4c59
+$ docker pull golang@sha256:b7f7da63a3296f20e4a4b6986f4e6dfc2913894ad1a3bcb2b470cfd61fe35742
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **105.6 MB (105563296 bytes)**  
+-	Total Size: **105.6 MB (105563790 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:de9b7e68dbb60ea30016f3edc5ff2ed2293fc9c8ac1c7e7eee3ff0ac6ed5635e`
+-	Image ID: `sha256:79d12ee59cca81018861589074053cb08e7c5a9427c778dd31aad32171bd3ec2`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:50:09 GMT
-ADD file:ca4136238cb9a01d079efd129bccd1470945d7d4320da61373af90645a4b1146 in / 
-# Thu, 25 Mar 2021 22:50:28 GMT
+# Wed, 31 Mar 2021 17:18:49 GMT
+ADD file:988879d74f643b89539e5a0b6d74221621f19f4f87f722614addadc46ce47200 in / 
+# Wed, 31 Mar 2021 17:18:50 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:27:14 GMT
+# Wed, 31 Mar 2021 18:28:21 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:27:20 GMT
+# Wed, 31 Mar 2021 18:28:24 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:27:23 GMT
+# Wed, 31 Mar 2021 18:28:25 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:35:43 GMT
+# Wed, 31 Mar 2021 19:00:37 GMT
 ENV GOLANG_VERSION=1.15.10
-# Thu, 25 Mar 2021 23:38:44 GMT
+# Wed, 31 Mar 2021 19:13:15 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='387' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.15.10.src.tar.gz'; 	sha256='c1dbca6e0910b41d61a95bf9878f6d6e93d15d884c226b91d9d4b1113c10dd65'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:38:49 GMT
+# Wed, 31 Mar 2021 19:13:21 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:38:51 GMT
+# Wed, 31 Mar 2021 19:13:23 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:38:55 GMT
+# Wed, 31 Mar 2021 19:13:26 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:39:00 GMT
+# Wed, 31 Mar 2021 19:13:28 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:bca6a70a54896d072b6919d2ae18d3ef685bc7aed783731f68a4adac0fb93d52`  
-		Last Modified: Thu, 25 Mar 2021 22:54:24 GMT  
-		Size: 2.6 MB (2622062 bytes)  
+	-	`sha256:bb87125c6ee1ce30c6b33d2c96a9fbe46da4a290f7cb1dd73fd62d4e06503699`  
+		Last Modified: Wed, 31 Mar 2021 17:19:55 GMT  
+		Size: 2.6 MB (2622116 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4ea05802fe691d87fddb107a6821e75df7c3f57bc6cb2e90cddd4b45a233d0f0`  
-		Last Modified: Thu, 25 Mar 2021 23:44:44 GMT  
-		Size: 281.4 KB (281380 bytes)  
+	-	`sha256:f0eb8dc77a7b333e6a40d00034c58c9612b3c2a7d33ea6c7dbf62e416baac7ea`  
+		Last Modified: Wed, 31 Mar 2021 19:22:13 GMT  
+		Size: 281.4 KB (281371 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1d164f70ad230af42bb09ffd3d6494a6bb012bc5731d7fbd2b3e1c3bcec9c4f6`  
-		Last Modified: Thu, 25 Mar 2021 23:44:44 GMT  
+	-	`sha256:0ec5882b9b78ec27dce64542bb1bd7c56d4913cde0d929356e9353ea6caac515`  
+		Last Modified: Wed, 31 Mar 2021 19:22:13 GMT  
 		Size: 154.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:57e04ae646ad142727a71bd484d9cf7abc46a03486388bb05e498884c9cdef74`  
-		Last Modified: Thu, 25 Mar 2021 23:47:23 GMT  
-		Size: 102.7 MB (102659544 bytes)  
+	-	`sha256:884bc77bcba8c1b3c55526ef751b4a543583762abf115b20731e3dcdb2bb0d57`  
+		Last Modified: Wed, 31 Mar 2021 19:24:35 GMT  
+		Size: 102.7 MB (102659993 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3590fe869a1ae6fe147fbe1c990d74a99091d0ba57492ad6219cc0ba7e36af81`  
-		Last Modified: Thu, 25 Mar 2021 23:46:51 GMT  
+	-	`sha256:a4d017842f8f66ddc088839043f86907fc667c06efdff0e06eb5d5a07be88db0`  
+		Last Modified: Wed, 31 Mar 2021 19:24:03 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -9260,67 +9260,67 @@ WORKDIR /go
 ### `golang:1.15.10-alpine3.13` - linux; s390x
 
 ```console
-$ docker pull golang@sha256:b9bdac74c70abaf4e4b516c8934732586e1d9b5ace7d069643aadb6c468b36db
+$ docker pull golang@sha256:0ec0e006da609f9e4992aa8e2f4d49d2a16187cb731109bf71bb6fd4f6a71b7b
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **108.8 MB (108804942 bytes)**  
+-	Total Size: **108.8 MB (108801229 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:de1ad86fce5220113d95245b2f4076e5248f0fc0771b95e9f1e6584825655788`
+-	Image ID: `sha256:bb9813cd7f2769f5e9eee7f56589814353c067bbc4aca3d6aefb49a3f14a1686`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:41:34 GMT
-ADD file:44e2c7cd992fc98df702bef7022e0f8c4ee86312c311ab5ae185fd5fc878edf9 in / 
-# Thu, 25 Mar 2021 22:41:34 GMT
+# Wed, 31 Mar 2021 17:14:58 GMT
+ADD file:3f5fe04867af3c9f2cfc5b315d97097145ae11343399985386321a8db21d7786 in / 
+# Wed, 31 Mar 2021 17:14:58 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:18:24 GMT
+# Wed, 31 Mar 2021 18:32:50 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:18:24 GMT
+# Wed, 31 Mar 2021 18:32:51 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:18:25 GMT
+# Wed, 31 Mar 2021 18:32:51 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:22:34 GMT
+# Wed, 31 Mar 2021 18:36:29 GMT
 ENV GOLANG_VERSION=1.15.10
-# Thu, 25 Mar 2021 23:23:49 GMT
+# Wed, 31 Mar 2021 18:37:52 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='387' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.15.10.src.tar.gz'; 	sha256='c1dbca6e0910b41d61a95bf9878f6d6e93d15d884c226b91d9d4b1113c10dd65'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:23:54 GMT
+# Wed, 31 Mar 2021 18:37:57 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:23:54 GMT
+# Wed, 31 Mar 2021 18:37:58 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:23:55 GMT
+# Wed, 31 Mar 2021 18:37:58 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:23:55 GMT
+# Wed, 31 Mar 2021 18:37:59 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:a266c0a9554add02ea09a46b8584cb36b7f606b7b4398b9ad7369f899f8360df`  
-		Last Modified: Thu, 25 Mar 2021 22:42:07 GMT  
-		Size: 2.6 MB (2602387 bytes)  
+	-	`sha256:1d4058bbeedf5296bcaf5ae8f37c8cd58152acad3ec45a536e08b83f5d3abe83`  
+		Last Modified: Wed, 31 Mar 2021 17:15:36 GMT  
+		Size: 2.6 MB (2602591 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5f7a13aca3904b3b663e1f8170de727ebe3a4616cb36dcadfd015e2e663c24bb`  
-		Last Modified: Thu, 25 Mar 2021 23:26:06 GMT  
-		Size: 281.7 KB (281700 bytes)  
+	-	`sha256:27c9dd6f50e848494b74d743acede663c4566d6c904f83c807df6ed135c0bac2`  
+		Last Modified: Wed, 31 Mar 2021 18:40:22 GMT  
+		Size: 281.7 KB (281696 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0511116a12ff773aa9cf992f6fa81a1e4a4404f1ba284f6526e7439c07e3a651`  
-		Last Modified: Thu, 25 Mar 2021 23:26:06 GMT  
-		Size: 154.0 B  
+	-	`sha256:55a3302e682073b38a23dae31007fd1b72ed66261ca926cc100f29e177732a0a`  
+		Last Modified: Wed, 31 Mar 2021 18:40:25 GMT  
+		Size: 153.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ee85fb00fca6e704a3d8277765d6f193a435abc15f840daf5cab5d1978295909`  
-		Last Modified: Thu, 25 Mar 2021 23:27:17 GMT  
-		Size: 105.9 MB (105920545 bytes)  
+	-	`sha256:9f4d2266417869e05e6310c284f9354fe87d3655995b4124edd5d4bde9e6e7f3`  
+		Last Modified: Wed, 31 Mar 2021 18:41:38 GMT  
+		Size: 105.9 MB (105916633 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dcae75938a2f93a0529f8438a372c3fb739a888e646e3876f65704628925ed08`  
-		Last Modified: Thu, 25 Mar 2021 23:27:04 GMT  
+	-	`sha256:c12ff3dfbc97fde9eb1fe510933e7325fd6723fe486b4664ae50c1c398f1c71a`  
+		Last Modified: Wed, 31 Mar 2021 18:41:23 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:1.15.10-buster`
 
 ```console
-$ docker pull golang@sha256:f33cd19b2369b2713056c4caa7815b320e9614fd1d0007d9d2e2334728434732
+$ docker pull golang@sha256:6b588a301352e9887560894e1a3a0a42e4df5fd175a70eadfe276618c9f394b8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -9337,73 +9337,73 @@ $ docker pull golang@sha256:f33cd19b2369b2713056c4caa7815b320e9614fd1d0007d9d2e2
 ### `golang:1.15.10-buster` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:2a663a98ba344f8f32b663c6274e5a2c03503c038b2cfb054e84bd6cea7d76c0
+$ docker pull golang@sha256:efee673095bb6b0698c13540bdbf94dd765b9235435ed6ce29ece67ef8a63340
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **309.9 MB (309877717 bytes)**  
+-	Total Size: **309.9 MB (309911015 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:74fe9d9959d375d859b37d7675d4ea5320db56497372198f178f7505213c3b92`
+-	Image ID: `sha256:95e3e1bab2d1177e9b686eac9a6cf5813c55949a61ce967dd3ea8b5be6358fe5`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Fri, 26 Mar 2021 15:20:41 GMT
-ADD file:89234bb2f86c7eb890235a48904d1c9898a8d287a525c4fe5698d4a04cdd8f12 in / 
-# Fri, 26 Mar 2021 15:20:42 GMT
+# Tue, 30 Mar 2021 21:49:16 GMT
+ADD file:c254898ceb4172f05cd40460f8d0b1ca2d39d5178bdddd4e794c7d3fc5a60a03 in / 
+# Tue, 30 Mar 2021 21:49:16 GMT
 CMD ["bash"]
-# Sat, 27 Mar 2021 05:53:29 GMT
+# Tue, 30 Mar 2021 23:03:10 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
-# Sat, 27 Mar 2021 05:53:35 GMT
+# Tue, 30 Mar 2021 23:03:21 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Sat, 27 Mar 2021 05:53:54 GMT
+# Tue, 30 Mar 2021 23:03:52 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:05 GMT
+# Wed, 31 Mar 2021 20:11:57 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:06 GMT
+# Wed, 31 Mar 2021 20:11:57 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:19:07 GMT
+# Wed, 31 Mar 2021 20:16:38 GMT
 ENV GOLANG_VERSION=1.15.10
-# Sun, 28 Mar 2021 00:19:17 GMT
+# Wed, 31 Mar 2021 20:16:48 GMT
 RUN set -eux; 		dpkgArch="$(dpkg --print-architecture)"; 	url=; 	case "${dpkgArch##*-}" in 		'amd64') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-amd64.tar.gz'; 			sha256='4aa1267517df32f2bf1cc3d55dfc27d0c6b2c2b0989449c96dd19273ccca051d'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-armv6l.tar.gz'; 			sha256='10739f7a87544acca49c9f1c025ae1821ce83601228a968bd7102357ae89887b'; 			;; 		'arm64') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-arm64.tar.gz'; 			sha256='ca3f3e84d863d8e758bfaab65430b12b6cff8f5a5648139245321d3401da64a7'; 			;; 		'i386') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-386.tar.gz'; 			sha256='69a29473c9e8eded5b5885a45773e4f1b9661383ce577199c4c70efe4c67bc59'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-ppc64le.tar.gz'; 			sha256='49128af704c37a356b1d14d814e4cf64218a8c6cabb22249e0c0068b35f710d3'; 			;; 		's390x') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-s390x.tar.gz'; 			sha256='230e0e50fe0df0ba380804c02f1d88a801c6dee38582c4a9502e79dc744c7bb0'; 			;; 		*) echo >&2 "error: unsupported architecture '$dpkgArch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://storage.googleapis.com/golang/go1.15.10.src.tar.gz'; 		sha256='c1dbca6e0910b41d61a95bf9878f6d6e93d15d884c226b91d9d4b1113c10dd65'; 		echo >&2; 		echo >&2 "warning: current architecture ($dpkgArch) does not have a corresponding Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc" --progress=dot:giga; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum --strict --check -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends golang-go; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				go install std; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 		; 	fi; 		go version
-# Sun, 28 Mar 2021 00:19:18 GMT
+# Wed, 31 Mar 2021 20:16:49 GMT
 ENV GOPATH=/go
-# Sun, 28 Mar 2021 00:19:18 GMT
+# Wed, 31 Mar 2021 20:16:49 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:19:19 GMT
+# Wed, 31 Mar 2021 20:16:50 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Sun, 28 Mar 2021 00:19:19 GMT
+# Wed, 31 Mar 2021 20:16:51 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:8bf9c589d5f9475f1fcc050e02308d6b4eeb86eab7752ef948a13693e81a6aaa`  
-		Last Modified: Fri, 26 Mar 2021 15:27:11 GMT  
-		Size: 50.4 MB (50400278 bytes)  
+	-	`sha256:004f1eed87df3f75f5e2a1a649fa7edd7f713d1300532fd0909bb39cd48437d7`  
+		Last Modified: Tue, 30 Mar 2021 21:53:41 GMT  
+		Size: 50.4 MB (50432842 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4c70e46d8b5f0e1d77797b7a0565b7a316bd8c7c024f5cca82592128af142dac`  
-		Last Modified: Sat, 27 Mar 2021 06:03:41 GMT  
-		Size: 7.8 MB (7832558 bytes)  
+	-	`sha256:5d6f1e8117dbb1c6a57603cb4f321a861a08105a81bcc6b01b0ec2b78c8523a5`  
+		Last Modified: Tue, 30 Mar 2021 23:14:05 GMT  
+		Size: 7.8 MB (7832608 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ea848ad42f0d1676b3a0ce709208ba3fa154cd53370c50e7cf8e580c63d96ae0`  
-		Last Modified: Sat, 27 Mar 2021 06:03:41 GMT  
-		Size: 10.0 MB (9997159 bytes)  
+	-	`sha256:48c2faf66abec3dce9f54d6722ff592fce6dd4fb58a0d0b72282936c6598a3b3`  
+		Last Modified: Tue, 30 Mar 2021 23:14:05 GMT  
+		Size: 10.0 MB (9997208 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:48fe137f8d2641315dd2f93c46dfdb671ce7399edc1f44f10cc68984f2809d8e`  
-		Last Modified: Sat, 27 Mar 2021 06:04:05 GMT  
-		Size: 51.8 MB (51839972 bytes)  
+	-	`sha256:234b70d0479d7f16d7ee8d04e4ffdacc57d7d14313faf59d332f18b2e9418743`  
+		Last Modified: Tue, 30 Mar 2021 23:14:37 GMT  
+		Size: 51.8 MB (51840782 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e53aa3cb0a1b20fe535fb0954912e16192c1fa053d0f6f2df21d1f5a50f8139c`  
-		Last Modified: Sun, 28 Mar 2021 00:20:35 GMT  
-		Size: 68.7 MB (68736693 bytes)  
+	-	`sha256:f5e9f83ff9bcf98a081ea281823c299a293e0870c4fd132c22cf425b01bd310e`  
+		Last Modified: Wed, 31 Mar 2021 20:21:23 GMT  
+		Size: 68.7 MB (68736521 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ccdd004acfd8c80b2e52c4550f001d50b5bf7d5e98adbc1b887b075567a7fd8e`  
-		Last Modified: Sun, 28 Mar 2021 00:22:04 GMT  
-		Size: 121.1 MB (121070903 bytes)  
+	-	`sha256:e029dc4668e6ef180685ac8f080088333b201dd05bc33e87fdfacc5bcccb30ed`  
+		Last Modified: Wed, 31 Mar 2021 20:24:29 GMT  
+		Size: 121.1 MB (121070898 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9019dd7c1066a531134ff4453583c717f95975fe4b96738376c72d8d81dd088e`  
-		Last Modified: Sun, 28 Mar 2021 00:21:45 GMT  
-		Size: 154.0 B  
+	-	`sha256:2ce48311bb5fb4195fb2b42fc33ca8ed09525d8d1ea8f7906ffa6d652da88631`  
+		Last Modified: Wed, 31 Mar 2021 20:24:10 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1.15.10-buster` - linux; arm variant v5
@@ -10089,7 +10089,7 @@ WORKDIR C:\gopath
 ## `golang:1.15.10-stretch`
 
 ```console
-$ docker pull golang@sha256:ff70310367b044701f72775e2a9edee454ad33c5c3d15789b125456490f4a223
+$ docker pull golang@sha256:340fb51ddbfef0da2ba9d53d39d4b07506d00fd4af37f93f7b54b7c1af875681
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -10102,73 +10102,73 @@ $ docker pull golang@sha256:ff70310367b044701f72775e2a9edee454ad33c5c3d15789b125
 ### `golang:1.15.10-stretch` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:83278616678276428ea41d0e30e5df7ce78d5f1f8fe3046e11b2fe3928bc6d34
+$ docker pull golang@sha256:e6b2f29df1d3b2e58a0c8a491f0aa337a75a6c46029bc12900c782c3ac71ae52
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **289.7 MB (289695916 bytes)**  
+-	Total Size: **289.7 MB (289696276 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ae7ec3a748cb1dfcf5f4884cc38368054df5ff770d16087f6f4d745026f60085`
+-	Image ID: `sha256:1d99243603e884c6edd5ae78a357743971969a466b54b94c396290afa3f999e9`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Fri, 26 Mar 2021 15:23:17 GMT
-ADD file:f7a6b2066de76eb559d8ab8bf8972d519c3b4dcafc62e46253227559091f7c8f in / 
-# Fri, 26 Mar 2021 15:23:18 GMT
+# Tue, 30 Mar 2021 21:50:43 GMT
+ADD file:e52290391b221e1a4e52cf4e41ffe7e14f162475964fa01638e03b3ead673ba1 in / 
+# Tue, 30 Mar 2021 21:50:43 GMT
 CMD ["bash"]
-# Sat, 27 Mar 2021 05:57:11 GMT
+# Tue, 30 Mar 2021 23:08:00 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		apt-transport-https 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
-# Sat, 27 Mar 2021 05:57:18 GMT
+# Tue, 30 Mar 2021 23:08:09 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Sat, 27 Mar 2021 05:57:45 GMT
+# Tue, 30 Mar 2021 23:08:42 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		bzr 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:35 GMT
+# Wed, 31 Mar 2021 20:12:26 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:35 GMT
+# Wed, 31 Mar 2021 20:12:26 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:19:23 GMT
+# Wed, 31 Mar 2021 20:16:54 GMT
 ENV GOLANG_VERSION=1.15.10
-# Sun, 28 Mar 2021 00:19:35 GMT
+# Wed, 31 Mar 2021 20:17:07 GMT
 RUN set -eux; 		dpkgArch="$(dpkg --print-architecture)"; 	url=; 	case "${dpkgArch##*-}" in 		'amd64') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-amd64.tar.gz'; 			sha256='4aa1267517df32f2bf1cc3d55dfc27d0c6b2c2b0989449c96dd19273ccca051d'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-armv6l.tar.gz'; 			sha256='10739f7a87544acca49c9f1c025ae1821ce83601228a968bd7102357ae89887b'; 			;; 		'arm64') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-arm64.tar.gz'; 			sha256='ca3f3e84d863d8e758bfaab65430b12b6cff8f5a5648139245321d3401da64a7'; 			;; 		'i386') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-386.tar.gz'; 			sha256='69a29473c9e8eded5b5885a45773e4f1b9661383ce577199c4c70efe4c67bc59'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-ppc64le.tar.gz'; 			sha256='49128af704c37a356b1d14d814e4cf64218a8c6cabb22249e0c0068b35f710d3'; 			;; 		's390x') 			url='https://storage.googleapis.com/golang/go1.15.10.linux-s390x.tar.gz'; 			sha256='230e0e50fe0df0ba380804c02f1d88a801c6dee38582c4a9502e79dc744c7bb0'; 			;; 		*) echo >&2 "error: unsupported architecture '$dpkgArch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://storage.googleapis.com/golang/go1.15.10.src.tar.gz'; 		sha256='c1dbca6e0910b41d61a95bf9878f6d6e93d15d884c226b91d9d4b1113c10dd65'; 		echo >&2; 		echo >&2 "warning: current architecture ($dpkgArch) does not have a corresponding Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc" --progress=dot:giga; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum --strict --check -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends golang-go; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				go install std; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 		; 	fi; 		go version
-# Sun, 28 Mar 2021 00:19:36 GMT
+# Wed, 31 Mar 2021 20:17:08 GMT
 ENV GOPATH=/go
-# Sun, 28 Mar 2021 00:19:36 GMT
+# Wed, 31 Mar 2021 20:17:08 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:19:37 GMT
+# Wed, 31 Mar 2021 20:17:09 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Sun, 28 Mar 2021 00:19:37 GMT
+# Wed, 31 Mar 2021 20:17:09 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:1dfe7e1e1bffb84b5330514880896199259b01ebe2b9d531dd88f7ce7db8cd18`  
-		Last Modified: Fri, 26 Mar 2021 15:32:18 GMT  
-		Size: 45.4 MB (45379513 bytes)  
+	-	`sha256:00168f89dbe8f3c9985e536784c27517f6cc35ea56263469449a6b73e0bed595`  
+		Last Modified: Tue, 30 Mar 2021 21:56:37 GMT  
+		Size: 45.4 MB (45379949 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df86b11a61e4b8cbb37a4a570baf51ae6bbc8cbf231f56401403e21dea70144d`  
-		Last Modified: Sat, 27 Mar 2021 06:06:53 GMT  
-		Size: 11.3 MB (11286512 bytes)  
+	-	`sha256:da61ad49fa9961d6dfe53dc067fd690133f205498e8045e8f7ef6b9da0d42bd2`  
+		Last Modified: Tue, 30 Mar 2021 23:17:25 GMT  
+		Size: 11.3 MB (11286658 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:006eb4a69e602dcb61f4680d7e4a0d4853902062ab1230263e33125ae86b2700`  
-		Last Modified: Sat, 27 Mar 2021 06:06:52 GMT  
-		Size: 4.3 MB (4342442 bytes)  
+	-	`sha256:af62e04c0f85ed10801df4314d8cb9ba5e6c391f6a3c1db1080a0a78c8d4ed9d`  
+		Last Modified: Tue, 30 Mar 2021 23:17:23 GMT  
+		Size: 4.3 MB (4342466 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6c1c07de8af095e25b339c838c0a02c16fda79738e6c03e266875a048b28222f`  
-		Last Modified: Sat, 27 Mar 2021 06:07:16 GMT  
-		Size: 49.8 MB (49787143 bytes)  
+	-	`sha256:aae835e2c68ef1d48a4ffef72547a79926019aec6a2bbeb5372f1e832ef453dd`  
+		Last Modified: Tue, 30 Mar 2021 23:17:49 GMT  
+		Size: 49.8 MB (49787075 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6944064dc3f76beb34bb375de67aee01c0cae51b0932b24877292f47eb248a50`  
-		Last Modified: Sun, 28 Mar 2021 00:21:12 GMT  
-		Size: 57.8 MB (57829197 bytes)  
+	-	`sha256:3c53dd465b309b4f16b31d4c5fc9821fc17e70e316c32456d7a0e9ac5a953f37`  
+		Last Modified: Wed, 31 Mar 2021 20:22:03 GMT  
+		Size: 57.8 MB (57829044 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:364613603856d59495e800e8f809c7b66246262043ffae11d6ab93a50c6ca6d8`  
-		Last Modified: Sun, 28 Mar 2021 00:22:33 GMT  
-		Size: 121.1 MB (121070952 bytes)  
+	-	`sha256:380e91b0b369665e9377751579647e4fd148d858d34a2e879c127f099cf45307`  
+		Last Modified: Wed, 31 Mar 2021 20:25:00 GMT  
+		Size: 121.1 MB (121070929 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1c95310e285575e4ce3b7e338e6a82b68c9f841f3f98755cf2cc73dc45165aaa`  
-		Last Modified: Sun, 28 Mar 2021 00:22:15 GMT  
-		Size: 157.0 B  
+	-	`sha256:65239db755e09779520054ee953b11877740fefe27593ac6027343de02cb5cea`  
+		Last Modified: Wed, 31 Mar 2021 20:24:41 GMT  
+		Size: 155.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1.15.10-stretch` - linux; arm variant v7
@@ -10803,7 +10803,7 @@ WORKDIR C:\gopath
 ## `golang:1.16`
 
 ```console
-$ docker pull golang@sha256:a37245d58df7ad850743282c85f1960c741438844b4892bdc85734b2467cb972
+$ docker pull golang@sha256:39a70c954a032db55e1bcb2a3c195c3c0edfa2cb2082adbb15990fcd5724477c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -10822,73 +10822,73 @@ $ docker pull golang@sha256:a37245d58df7ad850743282c85f1960c741438844b4892bdc857
 ### `golang:1.16` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:6247840c3865d9bfb709e6fa43c3cf2f6fc1334e36c6cb8712cf59205b0b31e0
+$ docker pull golang@sha256:dabc19f6f1adbbc27ce339b6abff0064106c2cb993fc82c407698f07d5ad151e
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **317.8 MB (317817106 bytes)**  
+-	Total Size: **317.9 MB (317850483 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:64bd1a7b99b7ba1d5f1c21d4c4625f29858cce169e724dabb30dc8c994ed44c3`
+-	Image ID: `sha256:217d1e25596170633bd1e02c19d3c614986fe3853d492b3a2d4cc6e719381ea2`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Fri, 26 Mar 2021 15:20:41 GMT
-ADD file:89234bb2f86c7eb890235a48904d1c9898a8d287a525c4fe5698d4a04cdd8f12 in / 
-# Fri, 26 Mar 2021 15:20:42 GMT
+# Tue, 30 Mar 2021 21:49:16 GMT
+ADD file:c254898ceb4172f05cd40460f8d0b1ca2d39d5178bdddd4e794c7d3fc5a60a03 in / 
+# Tue, 30 Mar 2021 21:49:16 GMT
 CMD ["bash"]
-# Sat, 27 Mar 2021 05:53:29 GMT
+# Tue, 30 Mar 2021 23:03:10 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
-# Sat, 27 Mar 2021 05:53:35 GMT
+# Tue, 30 Mar 2021 23:03:21 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Sat, 27 Mar 2021 05:53:54 GMT
+# Tue, 30 Mar 2021 23:03:52 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:05 GMT
+# Wed, 31 Mar 2021 20:11:57 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:06 GMT
+# Wed, 31 Mar 2021 20:11:57 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:18:06 GMT
+# Wed, 31 Mar 2021 20:11:57 GMT
 ENV GOLANG_VERSION=1.16.2
-# Sun, 28 Mar 2021 00:18:17 GMT
+# Wed, 31 Mar 2021 20:12:08 GMT
 RUN set -eux; 		dpkgArch="$(dpkg --print-architecture)"; 	url=; 	case "${dpkgArch##*-}" in 		'amd64') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-amd64.tar.gz'; 			sha256='542e936b19542e62679766194364f45141fde55169db2d8d01046555ca9eb4b8'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-armv6l.tar.gz'; 			sha256='49765b1ac36f77a84ce8186b08713c3811db5426e4ecfaa4344453e12d756c22'; 			;; 		'arm64') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-arm64.tar.gz'; 			sha256='6924601d998a0917694fd14261347e3798bd2ad6b13c4d7f2edd70c9d57f62ab'; 			;; 		'i386') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-386.tar.gz'; 			sha256='3638abf8e8272a4ddc3e5189487c932d680abfb151e2c48ae18c9a04a90ded73'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-ppc64le.tar.gz'; 			sha256='e1dcc9b460b2d522added8dfce764a06c5e455c8047b45b67a06f7f5ab19c4e0'; 			;; 		's390x') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-s390x.tar.gz'; 			sha256='a686743b0803d54e051756ce946d9d72436f23e9f815739c947934e0052bf9ff'; 			;; 		*) echo >&2 "error: unsupported architecture '$dpkgArch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 		sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		echo >&2; 		echo >&2 "warning: current architecture ($dpkgArch) does not have a corresponding Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc" --progress=dot:giga; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum --strict --check -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends golang-go; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				go install std; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 		; 	fi; 		go version
-# Sun, 28 Mar 2021 00:18:18 GMT
+# Wed, 31 Mar 2021 20:12:09 GMT
 ENV GOPATH=/go
-# Sun, 28 Mar 2021 00:18:18 GMT
+# Wed, 31 Mar 2021 20:12:09 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:18:19 GMT
+# Wed, 31 Mar 2021 20:12:10 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Sun, 28 Mar 2021 00:18:20 GMT
+# Wed, 31 Mar 2021 20:12:10 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:8bf9c589d5f9475f1fcc050e02308d6b4eeb86eab7752ef948a13693e81a6aaa`  
-		Last Modified: Fri, 26 Mar 2021 15:27:11 GMT  
-		Size: 50.4 MB (50400278 bytes)  
+	-	`sha256:004f1eed87df3f75f5e2a1a649fa7edd7f713d1300532fd0909bb39cd48437d7`  
+		Last Modified: Tue, 30 Mar 2021 21:53:41 GMT  
+		Size: 50.4 MB (50432842 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4c70e46d8b5f0e1d77797b7a0565b7a316bd8c7c024f5cca82592128af142dac`  
-		Last Modified: Sat, 27 Mar 2021 06:03:41 GMT  
-		Size: 7.8 MB (7832558 bytes)  
+	-	`sha256:5d6f1e8117dbb1c6a57603cb4f321a861a08105a81bcc6b01b0ec2b78c8523a5`  
+		Last Modified: Tue, 30 Mar 2021 23:14:05 GMT  
+		Size: 7.8 MB (7832608 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ea848ad42f0d1676b3a0ce709208ba3fa154cd53370c50e7cf8e580c63d96ae0`  
-		Last Modified: Sat, 27 Mar 2021 06:03:41 GMT  
-		Size: 10.0 MB (9997159 bytes)  
+	-	`sha256:48c2faf66abec3dce9f54d6722ff592fce6dd4fb58a0d0b72282936c6598a3b3`  
+		Last Modified: Tue, 30 Mar 2021 23:14:05 GMT  
+		Size: 10.0 MB (9997208 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:48fe137f8d2641315dd2f93c46dfdb671ce7399edc1f44f10cc68984f2809d8e`  
-		Last Modified: Sat, 27 Mar 2021 06:04:05 GMT  
-		Size: 51.8 MB (51839972 bytes)  
+	-	`sha256:234b70d0479d7f16d7ee8d04e4ffdacc57d7d14313faf59d332f18b2e9418743`  
+		Last Modified: Tue, 30 Mar 2021 23:14:37 GMT  
+		Size: 51.8 MB (51840782 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e53aa3cb0a1b20fe535fb0954912e16192c1fa053d0f6f2df21d1f5a50f8139c`  
-		Last Modified: Sun, 28 Mar 2021 00:20:35 GMT  
-		Size: 68.7 MB (68736693 bytes)  
+	-	`sha256:f5e9f83ff9bcf98a081ea281823c299a293e0870c4fd132c22cf425b01bd310e`  
+		Last Modified: Wed, 31 Mar 2021 20:21:23 GMT  
+		Size: 68.7 MB (68736521 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d33aad0a69811ebff8950e59bd61ab326225562bb2757c92673e3f91061dd280`  
-		Last Modified: Sun, 28 Mar 2021 00:20:45 GMT  
-		Size: 129.0 MB (129010291 bytes)  
+	-	`sha256:abff7ae5ce6584ffabbc37f4da5db276ef2c999823396c28c894a2accadadad7`  
+		Last Modified: Wed, 31 Mar 2021 20:21:33 GMT  
+		Size: 129.0 MB (129010366 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:996781d6304ab92c67a9228d5c68c6829dbd06ae8f0f4acb8a00326a1aab6c51`  
-		Last Modified: Sun, 28 Mar 2021 00:20:24 GMT  
-		Size: 155.0 B  
+	-	`sha256:26b15789ebb1ee2fa09a78a3c616664936f679eafbf8fd14b07094bf285267a4`  
+		Last Modified: Wed, 31 Mar 2021 20:21:12 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1.16` - linux; arm variant v5
@@ -11589,7 +11589,7 @@ WORKDIR C:\gopath
 ## `golang:1.16-alpine`
 
 ```console
-$ docker pull golang@sha256:52dbfc81ec12df22e2ab1e7c9c4f4ee3dff73514e56a54924714d29ac03ff791
+$ docker pull golang@sha256:ae07fbf6c791da6ba6f16b58b2b60f1b7c0c6b478238e7f3784c42d6eeb0d0ad
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11605,121 +11605,121 @@ $ docker pull golang@sha256:52dbfc81ec12df22e2ab1e7c9c4f4ee3dff73514e56a54924714
 ### `golang:1.16-alpine` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:4aee936562c29840e20ddb14bdbe028f7a7f376f2932096f5bfcc1931ec9f7c1
+$ docker pull golang@sha256:4891e17c9d2de88ebd1d9421919539226a76773d6ad1b4ac7376b286039c9be2
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **108.8 MB (108786138 bytes)**  
+-	Total Size: **108.8 MB (108786071 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5e238f856b8c39829309b40af496f71cfcf6e406ac005b1bbd1de9c50b2ed275`
+-	Image ID: `sha256:0fa0b8680167825684c347a60a168e134b449ba1cdef59c88f69223f716bccd2`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:19:32 GMT
-ADD file:6b081cabb4b256ee07587d249c4989b5b679375529542b81550a65b6f19f274e in / 
-# Thu, 25 Mar 2021 22:19:32 GMT
+# Wed, 31 Mar 2021 20:10:06 GMT
+ADD file:7119167b56ff1228b2fb639c768955ce9db7a999cd947179240b216dfa5ccbb9 in / 
+# Wed, 31 Mar 2021 20:10:06 GMT
 CMD ["/bin/sh"]
-# Fri, 26 Mar 2021 04:48:00 GMT
+# Wed, 31 Mar 2021 20:12:47 GMT
 RUN apk add --no-cache 		ca-certificates
-# Fri, 26 Mar 2021 04:48:01 GMT
+# Wed, 31 Mar 2021 20:12:48 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Fri, 26 Mar 2021 04:48:01 GMT
+# Wed, 31 Mar 2021 20:12:48 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:48:01 GMT
+# Wed, 31 Mar 2021 20:12:48 GMT
 ENV GOLANG_VERSION=1.16.2
-# Fri, 26 Mar 2021 04:49:57 GMT
+# Wed, 31 Mar 2021 20:14:27 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Fri, 26 Mar 2021 04:49:57 GMT
+# Wed, 31 Mar 2021 20:14:28 GMT
 ENV GOPATH=/go
-# Fri, 26 Mar 2021 04:49:57 GMT
+# Wed, 31 Mar 2021 20:14:28 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:49:59 GMT
+# Wed, 31 Mar 2021 20:14:29 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Fri, 26 Mar 2021 04:49:59 GMT
+# Wed, 31 Mar 2021 20:14:29 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:9aae54b2144e5b2b00c610f8805128f4f86822e1e52d3714c463744a431f0f4a`  
-		Last Modified: Thu, 25 Mar 2021 22:20:18 GMT  
-		Size: 2.8 MB (2811681 bytes)  
+	-	`sha256:ca3cd42a7c9525f6ce3d64c1a70982613a8235f0cc057ec9244052921853ef15`  
+		Last Modified: Wed, 31 Mar 2021 20:10:46 GMT  
+		Size: 2.8 MB (2811947 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9f73940e57d360e45588f2a826fa219a35089234eadac5c3e5d54dfac02c0a7d`  
-		Last Modified: Fri, 26 Mar 2021 04:59:58 GMT  
-		Size: 281.3 KB (281262 bytes)  
+	-	`sha256:dbcca316e5c32a932c66cfa46736e3998e69caeb857e570566ec63ab0377044a`  
+		Last Modified: Wed, 31 Mar 2021 20:22:40 GMT  
+		Size: 281.3 KB (281274 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ff472ba555d2504b7af85b2deac3b22d39a3dfa1510a54701764c4afd7bc7c43`  
-		Last Modified: Fri, 26 Mar 2021 04:59:59 GMT  
-		Size: 154.0 B  
+	-	`sha256:b65b403d39c8273b612240b85430a925f80b8b5719979c21e1387246faa62bd3`  
+		Last Modified: Wed, 31 Mar 2021 20:22:40 GMT  
+		Size: 155.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e4c1c61433975e8c3140ea23e09f8e224f43040721f5ca051e74120c8acb8631`  
-		Last Modified: Fri, 26 Mar 2021 05:00:17 GMT  
-		Size: 105.7 MB (105692885 bytes)  
+	-	`sha256:0d70e27e35ebcf8beb7c4148da1ce06b0c6a2f74b29fdd43ba616133688f5a6b`  
+		Last Modified: Wed, 31 Mar 2021 20:22:56 GMT  
+		Size: 105.7 MB (105692539 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ef687b4c646763d350c57c7a1405c68f0e9c4ee361dfa7b700103e0fc7a00111`  
-		Last Modified: Fri, 26 Mar 2021 04:59:58 GMT  
+	-	`sha256:a8bdf7aa1b335f83aa7f89629118092911e4fd5282650af173dcf08de463314b`  
+		Last Modified: Wed, 31 Mar 2021 20:22:40 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1.16-alpine` - linux; arm variant v6
 
 ```console
-$ docker pull golang@sha256:4581f323d2873e87c832fc181893d3faba5b1a4ad3850bca3ddf00c07f314673
+$ docker pull golang@sha256:f88a71a15bad8bd35f7a34beedd41fb5b1dacd66b7de65debd05c581d0bc5a6d
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **104.8 MB (104799033 bytes)**  
+-	Total Size: **104.8 MB (104799871 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3eb354b806d2d61481eda1ad01a705bead65acb2792492a16a69ab14a09b9c7b`
+-	Image ID: `sha256:c29d2c7b4afe4a2c6aeee33a4bcf0743e200bae254c88dede0ff53c47a3e2b66`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:50:09 GMT
-ADD file:ca4136238cb9a01d079efd129bccd1470945d7d4320da61373af90645a4b1146 in / 
-# Thu, 25 Mar 2021 22:50:28 GMT
+# Wed, 31 Mar 2021 17:18:49 GMT
+ADD file:988879d74f643b89539e5a0b6d74221621f19f4f87f722614addadc46ce47200 in / 
+# Wed, 31 Mar 2021 17:18:50 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:27:14 GMT
+# Wed, 31 Mar 2021 18:28:21 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:27:20 GMT
+# Wed, 31 Mar 2021 18:28:24 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:27:23 GMT
+# Wed, 31 Mar 2021 18:28:25 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:27:25 GMT
+# Wed, 31 Mar 2021 18:28:25 GMT
 ENV GOLANG_VERSION=1.16.2
-# Thu, 25 Mar 2021 23:30:58 GMT
+# Wed, 31 Mar 2021 18:44:29 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:31:10 GMT
+# Wed, 31 Mar 2021 18:44:47 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:31:13 GMT
+# Wed, 31 Mar 2021 18:44:50 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:31:19 GMT
+# Wed, 31 Mar 2021 18:44:52 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:31:22 GMT
+# Wed, 31 Mar 2021 18:44:54 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:bca6a70a54896d072b6919d2ae18d3ef685bc7aed783731f68a4adac0fb93d52`  
-		Last Modified: Thu, 25 Mar 2021 22:54:24 GMT  
-		Size: 2.6 MB (2622062 bytes)  
+	-	`sha256:bb87125c6ee1ce30c6b33d2c96a9fbe46da4a290f7cb1dd73fd62d4e06503699`  
+		Last Modified: Wed, 31 Mar 2021 17:19:55 GMT  
+		Size: 2.6 MB (2622116 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4ea05802fe691d87fddb107a6821e75df7c3f57bc6cb2e90cddd4b45a233d0f0`  
-		Last Modified: Thu, 25 Mar 2021 23:44:44 GMT  
-		Size: 281.4 KB (281380 bytes)  
+	-	`sha256:f0eb8dc77a7b333e6a40d00034c58c9612b3c2a7d33ea6c7dbf62e416baac7ea`  
+		Last Modified: Wed, 31 Mar 2021 19:22:13 GMT  
+		Size: 281.4 KB (281371 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1d164f70ad230af42bb09ffd3d6494a6bb012bc5731d7fbd2b3e1c3bcec9c4f6`  
-		Last Modified: Thu, 25 Mar 2021 23:44:44 GMT  
+	-	`sha256:0ec5882b9b78ec27dce64542bb1bd7c56d4913cde0d929356e9353ea6caac515`  
+		Last Modified: Wed, 31 Mar 2021 19:22:13 GMT  
 		Size: 154.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2622573d65ac2b2f3da8dcf9071b0b381b5aa588c86752685ccd5d4b4174d753`  
-		Last Modified: Thu, 25 Mar 2021 23:45:33 GMT  
-		Size: 101.9 MB (101895281 bytes)  
+	-	`sha256:a02b4132f4d532190e4bab920cfc597ca4d398959a8793bf22e055a54a230dd9`  
+		Last Modified: Wed, 31 Mar 2021 19:22:50 GMT  
+		Size: 101.9 MB (101896075 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:944207996fc4aeb8e8071cdb07931a55bf81ec3d36df949c73bf70becdc05bf1`  
-		Last Modified: Thu, 25 Mar 2021 23:44:44 GMT  
-		Size: 156.0 B  
+	-	`sha256:3ac885759424a47ac2b08ab253206844465a38311eb822180b7167f46dabc078`  
+		Last Modified: Wed, 31 Mar 2021 19:22:13 GMT  
+		Size: 155.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1.16-alpine` - linux; arm variant v7
@@ -11965,67 +11965,67 @@ WORKDIR /go
 ### `golang:1.16-alpine` - linux; s390x
 
 ```console
-$ docker pull golang@sha256:4c352be0f34f970f599e9bfc918e7e143c9e449bf1011b4db242960fa3b0ce29
+$ docker pull golang@sha256:8c4e3b53cda6084d770562ad07862f14e46dbe320d25e134df885da22b5fc73a
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **107.7 MB (107672720 bytes)**  
+-	Total Size: **107.7 MB (107671895 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:14b21f09f9677a233b9aa93c45819a64db388ddddc009f0af5a3291737dea67c`
+-	Image ID: `sha256:cfb7100ad492885a8b3136c41523fdb186f32c64072e1f09a3153db1d730add0`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:41:34 GMT
-ADD file:44e2c7cd992fc98df702bef7022e0f8c4ee86312c311ab5ae185fd5fc878edf9 in / 
-# Thu, 25 Mar 2021 22:41:34 GMT
+# Wed, 31 Mar 2021 17:14:58 GMT
+ADD file:3f5fe04867af3c9f2cfc5b315d97097145ae11343399985386321a8db21d7786 in / 
+# Wed, 31 Mar 2021 17:14:58 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:18:24 GMT
+# Wed, 31 Mar 2021 18:32:50 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:18:24 GMT
+# Wed, 31 Mar 2021 18:32:51 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:18:25 GMT
+# Wed, 31 Mar 2021 18:32:51 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:18:25 GMT
+# Wed, 31 Mar 2021 18:32:51 GMT
 ENV GOLANG_VERSION=1.16.2
-# Thu, 25 Mar 2021 23:20:28 GMT
+# Wed, 31 Mar 2021 18:34:22 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:20:33 GMT
+# Wed, 31 Mar 2021 18:34:27 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:20:33 GMT
+# Wed, 31 Mar 2021 18:34:27 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:20:34 GMT
+# Wed, 31 Mar 2021 18:34:28 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:20:34 GMT
+# Wed, 31 Mar 2021 18:34:28 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:a266c0a9554add02ea09a46b8584cb36b7f606b7b4398b9ad7369f899f8360df`  
-		Last Modified: Thu, 25 Mar 2021 22:42:07 GMT  
-		Size: 2.6 MB (2602387 bytes)  
+	-	`sha256:1d4058bbeedf5296bcaf5ae8f37c8cd58152acad3ec45a536e08b83f5d3abe83`  
+		Last Modified: Wed, 31 Mar 2021 17:15:36 GMT  
+		Size: 2.6 MB (2602591 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5f7a13aca3904b3b663e1f8170de727ebe3a4616cb36dcadfd015e2e663c24bb`  
-		Last Modified: Thu, 25 Mar 2021 23:26:06 GMT  
-		Size: 281.7 KB (281700 bytes)  
+	-	`sha256:27c9dd6f50e848494b74d743acede663c4566d6c904f83c807df6ed135c0bac2`  
+		Last Modified: Wed, 31 Mar 2021 18:40:22 GMT  
+		Size: 281.7 KB (281696 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0511116a12ff773aa9cf992f6fa81a1e4a4404f1ba284f6526e7439c07e3a651`  
-		Last Modified: Thu, 25 Mar 2021 23:26:06 GMT  
-		Size: 154.0 B  
+	-	`sha256:55a3302e682073b38a23dae31007fd1b72ed66261ca926cc100f29e177732a0a`  
+		Last Modified: Wed, 31 Mar 2021 18:40:25 GMT  
+		Size: 153.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c02165d3cb72f8bcf539749e1ddc8cfa7ea879be0c3c874454f40917d73c1b75`  
-		Last Modified: Thu, 25 Mar 2021 23:26:18 GMT  
-		Size: 104.8 MB (104788324 bytes)  
+	-	`sha256:bd4a9647efdfd2fe83835843ee761ff6c800604a0a2514db1cc014e18fa55664`  
+		Last Modified: Wed, 31 Mar 2021 18:40:34 GMT  
+		Size: 104.8 MB (104787299 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dde3ae89753fd12e06acc2bdf800133400dfd5d70ce659ed027e5a67e6eccbd3`  
-		Last Modified: Thu, 25 Mar 2021 23:26:06 GMT  
-		Size: 155.0 B  
+	-	`sha256:af5d3e1bba60e9d306da5ecd18bbbf586943da4bdc6d87c1c20338b0371f3552`  
+		Last Modified: Wed, 31 Mar 2021 18:40:23 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:1.16-alpine3.12`
 
 ```console
-$ docker pull golang@sha256:561ee1bc422ca797037621cc563e93cab4f1d08f74622c6de4bcbc610e2939ef
+$ docker pull golang@sha256:2b00d0c0560d9c294ef2ae13b58b8a76b9fbbaeee3243edecfa6d1320ed39533
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12041,120 +12041,120 @@ $ docker pull golang@sha256:561ee1bc422ca797037621cc563e93cab4f1d08f74622c6de4bc
 ### `golang:1.16-alpine3.12` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:09fa448029d63639e1097fd3cc3dc053c6e9bb739353f3eed4dc0f27503e397d
+$ docker pull golang@sha256:192f68738589059dad4cb032b386678b3270bd2132db329791f4f78efe1642ea
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **108.8 MB (108808237 bytes)**  
+-	Total Size: **108.8 MB (108808450 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7352b1cc5adbfd2878d91c0618249d10f58d551f235fae3f2271feaaa44e54cd`
+-	Image ID: `sha256:2a057958e00857b4458bfcf9ec1a0f23911501d424ebd9c09fd0460b9bf0da13`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:19:38 GMT
-ADD file:b2c067f4304d00c91fc9fd92f2e58853412cc705dfda4d1cf658fab965d5802c in / 
-# Thu, 25 Mar 2021 22:19:38 GMT
+# Wed, 31 Mar 2021 20:10:13 GMT
+ADD file:f77db8e5b937d8ebb7e254eccd4d311798ea9f4dd5081ea2a7e2b1d3790300c2 in / 
+# Wed, 31 Mar 2021 20:10:13 GMT
 CMD ["/bin/sh"]
-# Fri, 26 Mar 2021 04:50:11 GMT
+# Wed, 31 Mar 2021 20:14:43 GMT
 RUN apk add --no-cache 		ca-certificates
-# Fri, 26 Mar 2021 04:50:12 GMT
+# Wed, 31 Mar 2021 20:14:44 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Fri, 26 Mar 2021 04:50:12 GMT
+# Wed, 31 Mar 2021 20:14:44 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:50:12 GMT
+# Wed, 31 Mar 2021 20:14:44 GMT
 ENV GOLANG_VERSION=1.16.2
-# Fri, 26 Mar 2021 04:53:15 GMT
+# Wed, 31 Mar 2021 20:16:22 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Fri, 26 Mar 2021 04:53:16 GMT
+# Wed, 31 Mar 2021 20:16:23 GMT
 ENV GOPATH=/go
-# Fri, 26 Mar 2021 04:53:17 GMT
+# Wed, 31 Mar 2021 20:16:24 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:53:18 GMT
+# Wed, 31 Mar 2021 20:16:25 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Fri, 26 Mar 2021 04:53:19 GMT
+# Wed, 31 Mar 2021 20:16:25 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:22599d3e9e25e799b87521b94e20d20a601ffad16cf676274fdf94b089e4b979`  
-		Last Modified: Thu, 25 Mar 2021 22:20:35 GMT  
-		Size: 2.8 MB (2799762 bytes)  
+	-	`sha256:532819f3e44cebad88c82f5393801acb876b7a61d36b84bce646561789bb2018`  
+		Last Modified: Wed, 31 Mar 2021 20:11:03 GMT  
+		Size: 2.8 MB (2799712 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:994b649ee80af61fec0aab2113abbcce972dced9ddb604f8e2721a943dfca8f3`  
-		Last Modified: Fri, 26 Mar 2021 05:00:47 GMT  
-		Size: 280.9 KB (280878 bytes)  
+	-	`sha256:93cbbf235a55c104bafc6765f3c92a36489a596041551360d566152f2af01b59`  
+		Last Modified: Wed, 31 Mar 2021 20:22:25 GMT  
+		Size: 280.9 KB (280881 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dae587f6cd93b42cb17ce4c64b07191a204f7adde25a351026cc7cb254d28096`  
-		Last Modified: Fri, 26 Mar 2021 05:00:47 GMT  
-		Size: 152.0 B  
+	-	`sha256:e13f184a059628efa0b05f924f5b1e223377ebd57cdec0597912aabcd4b2129b`  
+		Last Modified: Wed, 31 Mar 2021 20:23:29 GMT  
+		Size: 153.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:aafd978e81e70299617e9a17892cd9a9d4f7dc84047441436c96f989cfe5c5cb`  
-		Last Modified: Fri, 26 Mar 2021 05:01:09 GMT  
-		Size: 105.7 MB (105727289 bytes)  
+	-	`sha256:695e77d5e927c2c1fe01389a3296f98344eb8b879e021a23ea7b8112b26d85c4`  
+		Last Modified: Wed, 31 Mar 2021 20:23:52 GMT  
+		Size: 105.7 MB (105727548 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4e86f102f01f6c8b27a4a8f10f5c23dda108131d0a445d1cd9802f32ccbb1012`  
-		Last Modified: Fri, 26 Mar 2021 05:00:46 GMT  
+	-	`sha256:0c328638b4633f6d3d893398135b3ace48e3677af7a11714949e3eea543cc5fe`  
+		Last Modified: Wed, 31 Mar 2021 20:23:28 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1.16-alpine3.12` - linux; arm variant v6
 
 ```console
-$ docker pull golang@sha256:648bdf6a519a1a104b50a7366a09c6b37bb12facf572f525951d0563d070df71
+$ docker pull golang@sha256:d6166c33d95f84d9d59dc71fe8ddc31fb464d4faf647c8531aa9d211fbdcd738
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **104.8 MB (104808565 bytes)**  
+-	Total Size: **104.8 MB (104807795 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:8ee8657e3509984061a9c4e96771256644bd31e2f7e3e6f9efbf813b4370d1ae`
+-	Image ID: `sha256:4f53734f2b88f9cbb49d827023d5f83812713cf89f357745dc17c6ca29f0f987`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:50:43 GMT
-ADD file:65a3462a527f49c8c625927be6b8b57b4257c8cc37d685055a1f183d76c68920 in / 
-# Thu, 25 Mar 2021 22:50:47 GMT
+# Wed, 31 Mar 2021 17:19:11 GMT
+ADD file:00ac3d0df16779e7564cda9cbf94eef90ffa8043778a867272ff0135a1fb537f in / 
+# Wed, 31 Mar 2021 17:19:12 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:31:38 GMT
+# Wed, 31 Mar 2021 18:45:17 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:31:44 GMT
+# Wed, 31 Mar 2021 18:45:20 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:31:46 GMT
+# Wed, 31 Mar 2021 18:45:21 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:31:48 GMT
+# Wed, 31 Mar 2021 18:45:22 GMT
 ENV GOLANG_VERSION=1.16.2
-# Thu, 25 Mar 2021 23:35:13 GMT
+# Wed, 31 Mar 2021 19:00:13 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:35:18 GMT
+# Wed, 31 Mar 2021 19:00:20 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:35:20 GMT
+# Wed, 31 Mar 2021 19:00:21 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:35:26 GMT
+# Wed, 31 Mar 2021 19:00:24 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:35:28 GMT
+# Wed, 31 Mar 2021 19:00:25 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:181a1446f0acaaa0871cec07aba4f733041f2d80ffbe01b19df43fe005df29f3`  
-		Last Modified: Thu, 25 Mar 2021 22:55:06 GMT  
-		Size: 2.6 MB (2604815 bytes)  
+	-	`sha256:66e54586dae0889b30da12f7a66838d9b86511b58696c83c3b9166ff1a534bbe`  
+		Last Modified: Wed, 31 Mar 2021 17:20:05 GMT  
+		Size: 2.6 MB (2604658 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:045419b8095ca1008ec369ea0965cfdae0dd0c90bea499bd8b42e5e45ab92cc5`  
-		Last Modified: Thu, 25 Mar 2021 23:46:09 GMT  
-		Size: 281.0 KB (280982 bytes)  
+	-	`sha256:0aa6796eed51884cd0436f134281af9489342ecf256aec0b31ca83f254ccd0d1`  
+		Last Modified: Wed, 31 Mar 2021 19:23:16 GMT  
+		Size: 281.0 KB (280979 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4ddbec85c64c1987da76dd94cb01590f1166da94443b5fa33ea1f633108a00fb`  
-		Last Modified: Thu, 25 Mar 2021 23:46:09 GMT  
-		Size: 154.0 B  
+	-	`sha256:1c043dc86373f816c29db582d9bddada9a00eeb3812a357a2dfd8e3f68d9a413`  
+		Last Modified: Wed, 31 Mar 2021 19:23:15 GMT  
+		Size: 153.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df1a3afcb046023a49c401c5e2308e16ee27a898f9f3387da58bcfa0ef11053a`  
-		Last Modified: Thu, 25 Mar 2021 23:46:42 GMT  
-		Size: 101.9 MB (101922458 bytes)  
+	-	`sha256:82c0b57107c7cd93ef0603a634622d63dd0585336bd5a2b844cfe780e60f8fab`  
+		Last Modified: Wed, 31 Mar 2021 19:23:47 GMT  
+		Size: 101.9 MB (101921849 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:647725af6164f31c936582ee2a2e74167e4c2c5d8cbacbfb7f8fcb4d9fac47cd`  
-		Last Modified: Thu, 25 Mar 2021 23:46:09 GMT  
+	-	`sha256:f3f763024bc32463f49f970db09f1cfa36ad87c9ac838d2b28ad36cda03ba923`  
+		Last Modified: Wed, 31 Mar 2021 19:23:15 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -12401,67 +12401,67 @@ WORKDIR /go
 ### `golang:1.16-alpine3.12` - linux; s390x
 
 ```console
-$ docker pull golang@sha256:218ee5dc5ff4546d9be56ff3f1bfcdb4164833d5ecac5ca8d5639c8d2561c869
+$ docker pull golang@sha256:7e47b0232f4073e1c855b37041c14354fc7e2c08fbf5a6a17cb02b34ec8c8aad
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **107.7 MB (107660727 bytes)**  
+-	Total Size: **107.7 MB (107660586 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:83387ea1e0de2529a16511f814924b896e0bc245aa1c92531275a0f76a9a2b35`
+-	Image ID: `sha256:ad37b5f0ed4fa5b570c4aaac6694b6395933363eb43ba6b0f860d8b0d377a495`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:41:39 GMT
-ADD file:12766b6fe7c37292d91bd1469b27dc9fb362e3109e9b3f377cff030bc0ca5386 in / 
-# Thu, 25 Mar 2021 22:41:39 GMT
+# Wed, 31 Mar 2021 17:15:04 GMT
+ADD file:1f37b92ea1f573c4810b1d056dc4880cf4035e143451d9b2b76fac1e3b462248 in / 
+# Wed, 31 Mar 2021 17:15:04 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:20:43 GMT
+# Wed, 31 Mar 2021 18:34:37 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:20:44 GMT
+# Wed, 31 Mar 2021 18:34:38 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:20:44 GMT
+# Wed, 31 Mar 2021 18:34:38 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:20:44 GMT
+# Wed, 31 Mar 2021 18:34:39 GMT
 ENV GOLANG_VERSION=1.16.2
-# Thu, 25 Mar 2021 23:22:10 GMT
+# Wed, 31 Mar 2021 18:36:08 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:22:15 GMT
+# Wed, 31 Mar 2021 18:36:14 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:22:15 GMT
+# Wed, 31 Mar 2021 18:36:14 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:22:16 GMT
+# Wed, 31 Mar 2021 18:36:15 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:22:17 GMT
+# Wed, 31 Mar 2021 18:36:15 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:be2cdf7cbb6a1aec476a957daaae210624b2b112c20f27f55bbcf2bdc74db281`  
-		Last Modified: Thu, 25 Mar 2021 22:42:19 GMT  
-		Size: 2.6 MB (2567457 bytes)  
+	-	`sha256:38ca5430c9af12b6b6dee7c10eb6b1eb0e4eb4f5f02a97890579c4b049d00233`  
+		Last Modified: Wed, 31 Mar 2021 17:15:46 GMT  
+		Size: 2.6 MB (2567453 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:aaddff0ad4814b86163108d94e8b39f43a463cb6c267218cec9cdeffc540308a`  
-		Last Modified: Thu, 25 Mar 2021 23:26:32 GMT  
+	-	`sha256:1dcb296d6fc71cd9057e3d03d0ea4ebe30a620f7c6ce57eb78f4c137e77a9a47`  
+		Last Modified: Wed, 31 Mar 2021 18:40:52 GMT  
 		Size: 281.4 KB (281355 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1b123ead7d9076567abb17998ba938b85be4f09afb27464b9c66734b580e1d5a`  
-		Last Modified: Thu, 25 Mar 2021 23:26:32 GMT  
+	-	`sha256:5783b7db1c405d51f50a261ae252c97941c44ffeb93cb10c2e2bdd458296774a`  
+		Last Modified: Wed, 31 Mar 2021 18:40:52 GMT  
 		Size: 153.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:127148b5f4ad531f5e05093db97daeb0a3cc2fb7fb77b5c1938e3cd239d79fec`  
-		Last Modified: Thu, 25 Mar 2021 23:26:44 GMT  
-		Size: 104.8 MB (104811606 bytes)  
+	-	`sha256:688bee172ee7101a6933e6df21647e155e8aee9549b551ffd448ed54e19b8e7a`  
+		Last Modified: Wed, 31 Mar 2021 18:41:07 GMT  
+		Size: 104.8 MB (104811470 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:89781a746445f6113e018850bb62a631f1b5a225d0166a2c697551a93c8d6fd6`  
-		Last Modified: Thu, 25 Mar 2021 23:26:32 GMT  
-		Size: 156.0 B  
+	-	`sha256:a3f579176032da1bacfaea3c32010b4673f4230534f6740d89bece53b21515d5`  
+		Last Modified: Wed, 31 Mar 2021 18:40:52 GMT  
+		Size: 155.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:1.16-alpine3.13`
 
 ```console
-$ docker pull golang@sha256:52dbfc81ec12df22e2ab1e7c9c4f4ee3dff73514e56a54924714d29ac03ff791
+$ docker pull golang@sha256:ae07fbf6c791da6ba6f16b58b2b60f1b7c0c6b478238e7f3784c42d6eeb0d0ad
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12477,121 +12477,121 @@ $ docker pull golang@sha256:52dbfc81ec12df22e2ab1e7c9c4f4ee3dff73514e56a54924714
 ### `golang:1.16-alpine3.13` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:4aee936562c29840e20ddb14bdbe028f7a7f376f2932096f5bfcc1931ec9f7c1
+$ docker pull golang@sha256:4891e17c9d2de88ebd1d9421919539226a76773d6ad1b4ac7376b286039c9be2
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **108.8 MB (108786138 bytes)**  
+-	Total Size: **108.8 MB (108786071 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5e238f856b8c39829309b40af496f71cfcf6e406ac005b1bbd1de9c50b2ed275`
+-	Image ID: `sha256:0fa0b8680167825684c347a60a168e134b449ba1cdef59c88f69223f716bccd2`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:19:32 GMT
-ADD file:6b081cabb4b256ee07587d249c4989b5b679375529542b81550a65b6f19f274e in / 
-# Thu, 25 Mar 2021 22:19:32 GMT
+# Wed, 31 Mar 2021 20:10:06 GMT
+ADD file:7119167b56ff1228b2fb639c768955ce9db7a999cd947179240b216dfa5ccbb9 in / 
+# Wed, 31 Mar 2021 20:10:06 GMT
 CMD ["/bin/sh"]
-# Fri, 26 Mar 2021 04:48:00 GMT
+# Wed, 31 Mar 2021 20:12:47 GMT
 RUN apk add --no-cache 		ca-certificates
-# Fri, 26 Mar 2021 04:48:01 GMT
+# Wed, 31 Mar 2021 20:12:48 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Fri, 26 Mar 2021 04:48:01 GMT
+# Wed, 31 Mar 2021 20:12:48 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:48:01 GMT
+# Wed, 31 Mar 2021 20:12:48 GMT
 ENV GOLANG_VERSION=1.16.2
-# Fri, 26 Mar 2021 04:49:57 GMT
+# Wed, 31 Mar 2021 20:14:27 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Fri, 26 Mar 2021 04:49:57 GMT
+# Wed, 31 Mar 2021 20:14:28 GMT
 ENV GOPATH=/go
-# Fri, 26 Mar 2021 04:49:57 GMT
+# Wed, 31 Mar 2021 20:14:28 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:49:59 GMT
+# Wed, 31 Mar 2021 20:14:29 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Fri, 26 Mar 2021 04:49:59 GMT
+# Wed, 31 Mar 2021 20:14:29 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:9aae54b2144e5b2b00c610f8805128f4f86822e1e52d3714c463744a431f0f4a`  
-		Last Modified: Thu, 25 Mar 2021 22:20:18 GMT  
-		Size: 2.8 MB (2811681 bytes)  
+	-	`sha256:ca3cd42a7c9525f6ce3d64c1a70982613a8235f0cc057ec9244052921853ef15`  
+		Last Modified: Wed, 31 Mar 2021 20:10:46 GMT  
+		Size: 2.8 MB (2811947 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9f73940e57d360e45588f2a826fa219a35089234eadac5c3e5d54dfac02c0a7d`  
-		Last Modified: Fri, 26 Mar 2021 04:59:58 GMT  
-		Size: 281.3 KB (281262 bytes)  
+	-	`sha256:dbcca316e5c32a932c66cfa46736e3998e69caeb857e570566ec63ab0377044a`  
+		Last Modified: Wed, 31 Mar 2021 20:22:40 GMT  
+		Size: 281.3 KB (281274 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ff472ba555d2504b7af85b2deac3b22d39a3dfa1510a54701764c4afd7bc7c43`  
-		Last Modified: Fri, 26 Mar 2021 04:59:59 GMT  
-		Size: 154.0 B  
+	-	`sha256:b65b403d39c8273b612240b85430a925f80b8b5719979c21e1387246faa62bd3`  
+		Last Modified: Wed, 31 Mar 2021 20:22:40 GMT  
+		Size: 155.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e4c1c61433975e8c3140ea23e09f8e224f43040721f5ca051e74120c8acb8631`  
-		Last Modified: Fri, 26 Mar 2021 05:00:17 GMT  
-		Size: 105.7 MB (105692885 bytes)  
+	-	`sha256:0d70e27e35ebcf8beb7c4148da1ce06b0c6a2f74b29fdd43ba616133688f5a6b`  
+		Last Modified: Wed, 31 Mar 2021 20:22:56 GMT  
+		Size: 105.7 MB (105692539 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ef687b4c646763d350c57c7a1405c68f0e9c4ee361dfa7b700103e0fc7a00111`  
-		Last Modified: Fri, 26 Mar 2021 04:59:58 GMT  
+	-	`sha256:a8bdf7aa1b335f83aa7f89629118092911e4fd5282650af173dcf08de463314b`  
+		Last Modified: Wed, 31 Mar 2021 20:22:40 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1.16-alpine3.13` - linux; arm variant v6
 
 ```console
-$ docker pull golang@sha256:4581f323d2873e87c832fc181893d3faba5b1a4ad3850bca3ddf00c07f314673
+$ docker pull golang@sha256:f88a71a15bad8bd35f7a34beedd41fb5b1dacd66b7de65debd05c581d0bc5a6d
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **104.8 MB (104799033 bytes)**  
+-	Total Size: **104.8 MB (104799871 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3eb354b806d2d61481eda1ad01a705bead65acb2792492a16a69ab14a09b9c7b`
+-	Image ID: `sha256:c29d2c7b4afe4a2c6aeee33a4bcf0743e200bae254c88dede0ff53c47a3e2b66`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:50:09 GMT
-ADD file:ca4136238cb9a01d079efd129bccd1470945d7d4320da61373af90645a4b1146 in / 
-# Thu, 25 Mar 2021 22:50:28 GMT
+# Wed, 31 Mar 2021 17:18:49 GMT
+ADD file:988879d74f643b89539e5a0b6d74221621f19f4f87f722614addadc46ce47200 in / 
+# Wed, 31 Mar 2021 17:18:50 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:27:14 GMT
+# Wed, 31 Mar 2021 18:28:21 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:27:20 GMT
+# Wed, 31 Mar 2021 18:28:24 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:27:23 GMT
+# Wed, 31 Mar 2021 18:28:25 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:27:25 GMT
+# Wed, 31 Mar 2021 18:28:25 GMT
 ENV GOLANG_VERSION=1.16.2
-# Thu, 25 Mar 2021 23:30:58 GMT
+# Wed, 31 Mar 2021 18:44:29 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:31:10 GMT
+# Wed, 31 Mar 2021 18:44:47 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:31:13 GMT
+# Wed, 31 Mar 2021 18:44:50 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:31:19 GMT
+# Wed, 31 Mar 2021 18:44:52 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:31:22 GMT
+# Wed, 31 Mar 2021 18:44:54 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:bca6a70a54896d072b6919d2ae18d3ef685bc7aed783731f68a4adac0fb93d52`  
-		Last Modified: Thu, 25 Mar 2021 22:54:24 GMT  
-		Size: 2.6 MB (2622062 bytes)  
+	-	`sha256:bb87125c6ee1ce30c6b33d2c96a9fbe46da4a290f7cb1dd73fd62d4e06503699`  
+		Last Modified: Wed, 31 Mar 2021 17:19:55 GMT  
+		Size: 2.6 MB (2622116 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4ea05802fe691d87fddb107a6821e75df7c3f57bc6cb2e90cddd4b45a233d0f0`  
-		Last Modified: Thu, 25 Mar 2021 23:44:44 GMT  
-		Size: 281.4 KB (281380 bytes)  
+	-	`sha256:f0eb8dc77a7b333e6a40d00034c58c9612b3c2a7d33ea6c7dbf62e416baac7ea`  
+		Last Modified: Wed, 31 Mar 2021 19:22:13 GMT  
+		Size: 281.4 KB (281371 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1d164f70ad230af42bb09ffd3d6494a6bb012bc5731d7fbd2b3e1c3bcec9c4f6`  
-		Last Modified: Thu, 25 Mar 2021 23:44:44 GMT  
+	-	`sha256:0ec5882b9b78ec27dce64542bb1bd7c56d4913cde0d929356e9353ea6caac515`  
+		Last Modified: Wed, 31 Mar 2021 19:22:13 GMT  
 		Size: 154.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2622573d65ac2b2f3da8dcf9071b0b381b5aa588c86752685ccd5d4b4174d753`  
-		Last Modified: Thu, 25 Mar 2021 23:45:33 GMT  
-		Size: 101.9 MB (101895281 bytes)  
+	-	`sha256:a02b4132f4d532190e4bab920cfc597ca4d398959a8793bf22e055a54a230dd9`  
+		Last Modified: Wed, 31 Mar 2021 19:22:50 GMT  
+		Size: 101.9 MB (101896075 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:944207996fc4aeb8e8071cdb07931a55bf81ec3d36df949c73bf70becdc05bf1`  
-		Last Modified: Thu, 25 Mar 2021 23:44:44 GMT  
-		Size: 156.0 B  
+	-	`sha256:3ac885759424a47ac2b08ab253206844465a38311eb822180b7167f46dabc078`  
+		Last Modified: Wed, 31 Mar 2021 19:22:13 GMT  
+		Size: 155.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1.16-alpine3.13` - linux; arm variant v7
@@ -12837,67 +12837,67 @@ WORKDIR /go
 ### `golang:1.16-alpine3.13` - linux; s390x
 
 ```console
-$ docker pull golang@sha256:4c352be0f34f970f599e9bfc918e7e143c9e449bf1011b4db242960fa3b0ce29
+$ docker pull golang@sha256:8c4e3b53cda6084d770562ad07862f14e46dbe320d25e134df885da22b5fc73a
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **107.7 MB (107672720 bytes)**  
+-	Total Size: **107.7 MB (107671895 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:14b21f09f9677a233b9aa93c45819a64db388ddddc009f0af5a3291737dea67c`
+-	Image ID: `sha256:cfb7100ad492885a8b3136c41523fdb186f32c64072e1f09a3153db1d730add0`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:41:34 GMT
-ADD file:44e2c7cd992fc98df702bef7022e0f8c4ee86312c311ab5ae185fd5fc878edf9 in / 
-# Thu, 25 Mar 2021 22:41:34 GMT
+# Wed, 31 Mar 2021 17:14:58 GMT
+ADD file:3f5fe04867af3c9f2cfc5b315d97097145ae11343399985386321a8db21d7786 in / 
+# Wed, 31 Mar 2021 17:14:58 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:18:24 GMT
+# Wed, 31 Mar 2021 18:32:50 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:18:24 GMT
+# Wed, 31 Mar 2021 18:32:51 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:18:25 GMT
+# Wed, 31 Mar 2021 18:32:51 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:18:25 GMT
+# Wed, 31 Mar 2021 18:32:51 GMT
 ENV GOLANG_VERSION=1.16.2
-# Thu, 25 Mar 2021 23:20:28 GMT
+# Wed, 31 Mar 2021 18:34:22 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:20:33 GMT
+# Wed, 31 Mar 2021 18:34:27 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:20:33 GMT
+# Wed, 31 Mar 2021 18:34:27 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:20:34 GMT
+# Wed, 31 Mar 2021 18:34:28 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:20:34 GMT
+# Wed, 31 Mar 2021 18:34:28 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:a266c0a9554add02ea09a46b8584cb36b7f606b7b4398b9ad7369f899f8360df`  
-		Last Modified: Thu, 25 Mar 2021 22:42:07 GMT  
-		Size: 2.6 MB (2602387 bytes)  
+	-	`sha256:1d4058bbeedf5296bcaf5ae8f37c8cd58152acad3ec45a536e08b83f5d3abe83`  
+		Last Modified: Wed, 31 Mar 2021 17:15:36 GMT  
+		Size: 2.6 MB (2602591 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5f7a13aca3904b3b663e1f8170de727ebe3a4616cb36dcadfd015e2e663c24bb`  
-		Last Modified: Thu, 25 Mar 2021 23:26:06 GMT  
-		Size: 281.7 KB (281700 bytes)  
+	-	`sha256:27c9dd6f50e848494b74d743acede663c4566d6c904f83c807df6ed135c0bac2`  
+		Last Modified: Wed, 31 Mar 2021 18:40:22 GMT  
+		Size: 281.7 KB (281696 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0511116a12ff773aa9cf992f6fa81a1e4a4404f1ba284f6526e7439c07e3a651`  
-		Last Modified: Thu, 25 Mar 2021 23:26:06 GMT  
-		Size: 154.0 B  
+	-	`sha256:55a3302e682073b38a23dae31007fd1b72ed66261ca926cc100f29e177732a0a`  
+		Last Modified: Wed, 31 Mar 2021 18:40:25 GMT  
+		Size: 153.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c02165d3cb72f8bcf539749e1ddc8cfa7ea879be0c3c874454f40917d73c1b75`  
-		Last Modified: Thu, 25 Mar 2021 23:26:18 GMT  
-		Size: 104.8 MB (104788324 bytes)  
+	-	`sha256:bd4a9647efdfd2fe83835843ee761ff6c800604a0a2514db1cc014e18fa55664`  
+		Last Modified: Wed, 31 Mar 2021 18:40:34 GMT  
+		Size: 104.8 MB (104787299 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dde3ae89753fd12e06acc2bdf800133400dfd5d70ce659ed027e5a67e6eccbd3`  
-		Last Modified: Thu, 25 Mar 2021 23:26:06 GMT  
-		Size: 155.0 B  
+	-	`sha256:af5d3e1bba60e9d306da5ecd18bbbf586943da4bdc6d87c1c20338b0371f3552`  
+		Last Modified: Wed, 31 Mar 2021 18:40:23 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:1.16-buster`
 
 ```console
-$ docker pull golang@sha256:5e7e4d55a6c14081660a177570584e45e93a325f97a84bcf0b4534b3a784d3ec
+$ docker pull golang@sha256:7a894f6fac60d7c83dbf1fa47e448e04af8b8c3c4eaa4048be6a5888b518a60c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12914,73 +12914,73 @@ $ docker pull golang@sha256:5e7e4d55a6c14081660a177570584e45e93a325f97a84bcf0b45
 ### `golang:1.16-buster` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:6247840c3865d9bfb709e6fa43c3cf2f6fc1334e36c6cb8712cf59205b0b31e0
+$ docker pull golang@sha256:dabc19f6f1adbbc27ce339b6abff0064106c2cb993fc82c407698f07d5ad151e
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **317.8 MB (317817106 bytes)**  
+-	Total Size: **317.9 MB (317850483 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:64bd1a7b99b7ba1d5f1c21d4c4625f29858cce169e724dabb30dc8c994ed44c3`
+-	Image ID: `sha256:217d1e25596170633bd1e02c19d3c614986fe3853d492b3a2d4cc6e719381ea2`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Fri, 26 Mar 2021 15:20:41 GMT
-ADD file:89234bb2f86c7eb890235a48904d1c9898a8d287a525c4fe5698d4a04cdd8f12 in / 
-# Fri, 26 Mar 2021 15:20:42 GMT
+# Tue, 30 Mar 2021 21:49:16 GMT
+ADD file:c254898ceb4172f05cd40460f8d0b1ca2d39d5178bdddd4e794c7d3fc5a60a03 in / 
+# Tue, 30 Mar 2021 21:49:16 GMT
 CMD ["bash"]
-# Sat, 27 Mar 2021 05:53:29 GMT
+# Tue, 30 Mar 2021 23:03:10 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
-# Sat, 27 Mar 2021 05:53:35 GMT
+# Tue, 30 Mar 2021 23:03:21 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Sat, 27 Mar 2021 05:53:54 GMT
+# Tue, 30 Mar 2021 23:03:52 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:05 GMT
+# Wed, 31 Mar 2021 20:11:57 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:06 GMT
+# Wed, 31 Mar 2021 20:11:57 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:18:06 GMT
+# Wed, 31 Mar 2021 20:11:57 GMT
 ENV GOLANG_VERSION=1.16.2
-# Sun, 28 Mar 2021 00:18:17 GMT
+# Wed, 31 Mar 2021 20:12:08 GMT
 RUN set -eux; 		dpkgArch="$(dpkg --print-architecture)"; 	url=; 	case "${dpkgArch##*-}" in 		'amd64') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-amd64.tar.gz'; 			sha256='542e936b19542e62679766194364f45141fde55169db2d8d01046555ca9eb4b8'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-armv6l.tar.gz'; 			sha256='49765b1ac36f77a84ce8186b08713c3811db5426e4ecfaa4344453e12d756c22'; 			;; 		'arm64') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-arm64.tar.gz'; 			sha256='6924601d998a0917694fd14261347e3798bd2ad6b13c4d7f2edd70c9d57f62ab'; 			;; 		'i386') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-386.tar.gz'; 			sha256='3638abf8e8272a4ddc3e5189487c932d680abfb151e2c48ae18c9a04a90ded73'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-ppc64le.tar.gz'; 			sha256='e1dcc9b460b2d522added8dfce764a06c5e455c8047b45b67a06f7f5ab19c4e0'; 			;; 		's390x') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-s390x.tar.gz'; 			sha256='a686743b0803d54e051756ce946d9d72436f23e9f815739c947934e0052bf9ff'; 			;; 		*) echo >&2 "error: unsupported architecture '$dpkgArch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 		sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		echo >&2; 		echo >&2 "warning: current architecture ($dpkgArch) does not have a corresponding Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc" --progress=dot:giga; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum --strict --check -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends golang-go; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				go install std; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 		; 	fi; 		go version
-# Sun, 28 Mar 2021 00:18:18 GMT
+# Wed, 31 Mar 2021 20:12:09 GMT
 ENV GOPATH=/go
-# Sun, 28 Mar 2021 00:18:18 GMT
+# Wed, 31 Mar 2021 20:12:09 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:18:19 GMT
+# Wed, 31 Mar 2021 20:12:10 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Sun, 28 Mar 2021 00:18:20 GMT
+# Wed, 31 Mar 2021 20:12:10 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:8bf9c589d5f9475f1fcc050e02308d6b4eeb86eab7752ef948a13693e81a6aaa`  
-		Last Modified: Fri, 26 Mar 2021 15:27:11 GMT  
-		Size: 50.4 MB (50400278 bytes)  
+	-	`sha256:004f1eed87df3f75f5e2a1a649fa7edd7f713d1300532fd0909bb39cd48437d7`  
+		Last Modified: Tue, 30 Mar 2021 21:53:41 GMT  
+		Size: 50.4 MB (50432842 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4c70e46d8b5f0e1d77797b7a0565b7a316bd8c7c024f5cca82592128af142dac`  
-		Last Modified: Sat, 27 Mar 2021 06:03:41 GMT  
-		Size: 7.8 MB (7832558 bytes)  
+	-	`sha256:5d6f1e8117dbb1c6a57603cb4f321a861a08105a81bcc6b01b0ec2b78c8523a5`  
+		Last Modified: Tue, 30 Mar 2021 23:14:05 GMT  
+		Size: 7.8 MB (7832608 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ea848ad42f0d1676b3a0ce709208ba3fa154cd53370c50e7cf8e580c63d96ae0`  
-		Last Modified: Sat, 27 Mar 2021 06:03:41 GMT  
-		Size: 10.0 MB (9997159 bytes)  
+	-	`sha256:48c2faf66abec3dce9f54d6722ff592fce6dd4fb58a0d0b72282936c6598a3b3`  
+		Last Modified: Tue, 30 Mar 2021 23:14:05 GMT  
+		Size: 10.0 MB (9997208 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:48fe137f8d2641315dd2f93c46dfdb671ce7399edc1f44f10cc68984f2809d8e`  
-		Last Modified: Sat, 27 Mar 2021 06:04:05 GMT  
-		Size: 51.8 MB (51839972 bytes)  
+	-	`sha256:234b70d0479d7f16d7ee8d04e4ffdacc57d7d14313faf59d332f18b2e9418743`  
+		Last Modified: Tue, 30 Mar 2021 23:14:37 GMT  
+		Size: 51.8 MB (51840782 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e53aa3cb0a1b20fe535fb0954912e16192c1fa053d0f6f2df21d1f5a50f8139c`  
-		Last Modified: Sun, 28 Mar 2021 00:20:35 GMT  
-		Size: 68.7 MB (68736693 bytes)  
+	-	`sha256:f5e9f83ff9bcf98a081ea281823c299a293e0870c4fd132c22cf425b01bd310e`  
+		Last Modified: Wed, 31 Mar 2021 20:21:23 GMT  
+		Size: 68.7 MB (68736521 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d33aad0a69811ebff8950e59bd61ab326225562bb2757c92673e3f91061dd280`  
-		Last Modified: Sun, 28 Mar 2021 00:20:45 GMT  
-		Size: 129.0 MB (129010291 bytes)  
+	-	`sha256:abff7ae5ce6584ffabbc37f4da5db276ef2c999823396c28c894a2accadadad7`  
+		Last Modified: Wed, 31 Mar 2021 20:21:33 GMT  
+		Size: 129.0 MB (129010366 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:996781d6304ab92c67a9228d5c68c6829dbd06ae8f0f4acb8a00326a1aab6c51`  
-		Last Modified: Sun, 28 Mar 2021 00:20:24 GMT  
-		Size: 155.0 B  
+	-	`sha256:26b15789ebb1ee2fa09a78a3c616664936f679eafbf8fd14b07094bf285267a4`  
+		Last Modified: Wed, 31 Mar 2021 20:21:12 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1.16-buster` - linux; arm variant v5
@@ -13666,7 +13666,7 @@ WORKDIR C:\gopath
 ## `golang:1.16-stretch`
 
 ```console
-$ docker pull golang@sha256:fd33ea27ab2941b88f518d96aab76aa40ec6e32c9d619f0b832072ebfec2d0e4
+$ docker pull golang@sha256:1bf98b13aa56635f0a69bdb9bc35cba11a672fd65f7d429dfdeb721b0d9dbc16
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -13679,72 +13679,72 @@ $ docker pull golang@sha256:fd33ea27ab2941b88f518d96aab76aa40ec6e32c9d619f0b8320
 ### `golang:1.16-stretch` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:9ebb8e1de83d2095f9c840eece75af6146e8754b17b50803ff57770deaf0b2b1
+$ docker pull golang@sha256:b115ccd7afca7d356cdf85196351f801cf3615f48a682a186df09e680b314397
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **297.6 MB (297635345 bytes)**  
+-	Total Size: **297.6 MB (297635779 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:33056ca8809bab51fa6f3d2afb1282c3fc97d683990e52d979bd70a456d14cbc`
+-	Image ID: `sha256:ad59aded19e0b9361014c0d0980cd524931cdbc7f0498ee3eb4fd9c1d22d2882`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Fri, 26 Mar 2021 15:23:17 GMT
-ADD file:f7a6b2066de76eb559d8ab8bf8972d519c3b4dcafc62e46253227559091f7c8f in / 
-# Fri, 26 Mar 2021 15:23:18 GMT
+# Tue, 30 Mar 2021 21:50:43 GMT
+ADD file:e52290391b221e1a4e52cf4e41ffe7e14f162475964fa01638e03b3ead673ba1 in / 
+# Tue, 30 Mar 2021 21:50:43 GMT
 CMD ["bash"]
-# Sat, 27 Mar 2021 05:57:11 GMT
+# Tue, 30 Mar 2021 23:08:00 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		apt-transport-https 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
-# Sat, 27 Mar 2021 05:57:18 GMT
+# Tue, 30 Mar 2021 23:08:09 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Sat, 27 Mar 2021 05:57:45 GMT
+# Tue, 30 Mar 2021 23:08:42 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		bzr 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:35 GMT
+# Wed, 31 Mar 2021 20:12:26 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:35 GMT
+# Wed, 31 Mar 2021 20:12:26 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:18:35 GMT
+# Wed, 31 Mar 2021 20:12:27 GMT
 ENV GOLANG_VERSION=1.16.2
-# Sun, 28 Mar 2021 00:18:52 GMT
+# Wed, 31 Mar 2021 20:12:39 GMT
 RUN set -eux; 		dpkgArch="$(dpkg --print-architecture)"; 	url=; 	case "${dpkgArch##*-}" in 		'amd64') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-amd64.tar.gz'; 			sha256='542e936b19542e62679766194364f45141fde55169db2d8d01046555ca9eb4b8'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-armv6l.tar.gz'; 			sha256='49765b1ac36f77a84ce8186b08713c3811db5426e4ecfaa4344453e12d756c22'; 			;; 		'arm64') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-arm64.tar.gz'; 			sha256='6924601d998a0917694fd14261347e3798bd2ad6b13c4d7f2edd70c9d57f62ab'; 			;; 		'i386') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-386.tar.gz'; 			sha256='3638abf8e8272a4ddc3e5189487c932d680abfb151e2c48ae18c9a04a90ded73'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-ppc64le.tar.gz'; 			sha256='e1dcc9b460b2d522added8dfce764a06c5e455c8047b45b67a06f7f5ab19c4e0'; 			;; 		's390x') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-s390x.tar.gz'; 			sha256='a686743b0803d54e051756ce946d9d72436f23e9f815739c947934e0052bf9ff'; 			;; 		*) echo >&2 "error: unsupported architecture '$dpkgArch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 		sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		echo >&2; 		echo >&2 "warning: current architecture ($dpkgArch) does not have a corresponding Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc" --progress=dot:giga; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum --strict --check -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends golang-go; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				go install std; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 		; 	fi; 		go version
-# Sun, 28 Mar 2021 00:18:53 GMT
+# Wed, 31 Mar 2021 20:12:40 GMT
 ENV GOPATH=/go
-# Sun, 28 Mar 2021 00:18:54 GMT
+# Wed, 31 Mar 2021 20:12:40 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:18:55 GMT
+# Wed, 31 Mar 2021 20:12:41 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Sun, 28 Mar 2021 00:18:55 GMT
+# Wed, 31 Mar 2021 20:12:41 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:1dfe7e1e1bffb84b5330514880896199259b01ebe2b9d531dd88f7ce7db8cd18`  
-		Last Modified: Fri, 26 Mar 2021 15:32:18 GMT  
-		Size: 45.4 MB (45379513 bytes)  
+	-	`sha256:00168f89dbe8f3c9985e536784c27517f6cc35ea56263469449a6b73e0bed595`  
+		Last Modified: Tue, 30 Mar 2021 21:56:37 GMT  
+		Size: 45.4 MB (45379949 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df86b11a61e4b8cbb37a4a570baf51ae6bbc8cbf231f56401403e21dea70144d`  
-		Last Modified: Sat, 27 Mar 2021 06:06:53 GMT  
-		Size: 11.3 MB (11286512 bytes)  
+	-	`sha256:da61ad49fa9961d6dfe53dc067fd690133f205498e8045e8f7ef6b9da0d42bd2`  
+		Last Modified: Tue, 30 Mar 2021 23:17:25 GMT  
+		Size: 11.3 MB (11286658 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:006eb4a69e602dcb61f4680d7e4a0d4853902062ab1230263e33125ae86b2700`  
-		Last Modified: Sat, 27 Mar 2021 06:06:52 GMT  
-		Size: 4.3 MB (4342442 bytes)  
+	-	`sha256:af62e04c0f85ed10801df4314d8cb9ba5e6c391f6a3c1db1080a0a78c8d4ed9d`  
+		Last Modified: Tue, 30 Mar 2021 23:17:23 GMT  
+		Size: 4.3 MB (4342466 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6c1c07de8af095e25b339c838c0a02c16fda79738e6c03e266875a048b28222f`  
-		Last Modified: Sat, 27 Mar 2021 06:07:16 GMT  
-		Size: 49.8 MB (49787143 bytes)  
+	-	`sha256:aae835e2c68ef1d48a4ffef72547a79926019aec6a2bbeb5372f1e832ef453dd`  
+		Last Modified: Tue, 30 Mar 2021 23:17:49 GMT  
+		Size: 49.8 MB (49787075 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6944064dc3f76beb34bb375de67aee01c0cae51b0932b24877292f47eb248a50`  
-		Last Modified: Sun, 28 Mar 2021 00:21:12 GMT  
-		Size: 57.8 MB (57829197 bytes)  
+	-	`sha256:3c53dd465b309b4f16b31d4c5fc9821fc17e70e316c32456d7a0e9ac5a953f37`  
+		Last Modified: Wed, 31 Mar 2021 20:22:03 GMT  
+		Size: 57.8 MB (57829044 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:12a5a22b04dfb4eccaff81c96a5d652de8ccf86b701a38017904ea6854988b63`  
-		Last Modified: Sun, 28 Mar 2021 00:21:22 GMT  
-		Size: 129.0 MB (129010382 bytes)  
+	-	`sha256:9a5819b2b790ab264aa3dd395d6d8cded7b56b85f9470682ac226f89927a1078`  
+		Last Modified: Wed, 31 Mar 2021 20:22:18 GMT  
+		Size: 129.0 MB (129010431 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a42f7444dde50000bec9c4e20ad0518840c29de157d2c75d0913e2c999991999`  
-		Last Modified: Sun, 28 Mar 2021 00:21:02 GMT  
+	-	`sha256:9d7fa061e36ba9a055069006d99dfeea27fb3174a09a0bdb4ee47dd31d2f6033`  
+		Last Modified: Wed, 31 Mar 2021 20:21:52 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -14380,7 +14380,7 @@ WORKDIR C:\gopath
 ## `golang:1.16.2`
 
 ```console
-$ docker pull golang@sha256:a37245d58df7ad850743282c85f1960c741438844b4892bdc85734b2467cb972
+$ docker pull golang@sha256:39a70c954a032db55e1bcb2a3c195c3c0edfa2cb2082adbb15990fcd5724477c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -14399,73 +14399,73 @@ $ docker pull golang@sha256:a37245d58df7ad850743282c85f1960c741438844b4892bdc857
 ### `golang:1.16.2` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:6247840c3865d9bfb709e6fa43c3cf2f6fc1334e36c6cb8712cf59205b0b31e0
+$ docker pull golang@sha256:dabc19f6f1adbbc27ce339b6abff0064106c2cb993fc82c407698f07d5ad151e
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **317.8 MB (317817106 bytes)**  
+-	Total Size: **317.9 MB (317850483 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:64bd1a7b99b7ba1d5f1c21d4c4625f29858cce169e724dabb30dc8c994ed44c3`
+-	Image ID: `sha256:217d1e25596170633bd1e02c19d3c614986fe3853d492b3a2d4cc6e719381ea2`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Fri, 26 Mar 2021 15:20:41 GMT
-ADD file:89234bb2f86c7eb890235a48904d1c9898a8d287a525c4fe5698d4a04cdd8f12 in / 
-# Fri, 26 Mar 2021 15:20:42 GMT
+# Tue, 30 Mar 2021 21:49:16 GMT
+ADD file:c254898ceb4172f05cd40460f8d0b1ca2d39d5178bdddd4e794c7d3fc5a60a03 in / 
+# Tue, 30 Mar 2021 21:49:16 GMT
 CMD ["bash"]
-# Sat, 27 Mar 2021 05:53:29 GMT
+# Tue, 30 Mar 2021 23:03:10 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
-# Sat, 27 Mar 2021 05:53:35 GMT
+# Tue, 30 Mar 2021 23:03:21 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Sat, 27 Mar 2021 05:53:54 GMT
+# Tue, 30 Mar 2021 23:03:52 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:05 GMT
+# Wed, 31 Mar 2021 20:11:57 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:06 GMT
+# Wed, 31 Mar 2021 20:11:57 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:18:06 GMT
+# Wed, 31 Mar 2021 20:11:57 GMT
 ENV GOLANG_VERSION=1.16.2
-# Sun, 28 Mar 2021 00:18:17 GMT
+# Wed, 31 Mar 2021 20:12:08 GMT
 RUN set -eux; 		dpkgArch="$(dpkg --print-architecture)"; 	url=; 	case "${dpkgArch##*-}" in 		'amd64') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-amd64.tar.gz'; 			sha256='542e936b19542e62679766194364f45141fde55169db2d8d01046555ca9eb4b8'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-armv6l.tar.gz'; 			sha256='49765b1ac36f77a84ce8186b08713c3811db5426e4ecfaa4344453e12d756c22'; 			;; 		'arm64') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-arm64.tar.gz'; 			sha256='6924601d998a0917694fd14261347e3798bd2ad6b13c4d7f2edd70c9d57f62ab'; 			;; 		'i386') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-386.tar.gz'; 			sha256='3638abf8e8272a4ddc3e5189487c932d680abfb151e2c48ae18c9a04a90ded73'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-ppc64le.tar.gz'; 			sha256='e1dcc9b460b2d522added8dfce764a06c5e455c8047b45b67a06f7f5ab19c4e0'; 			;; 		's390x') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-s390x.tar.gz'; 			sha256='a686743b0803d54e051756ce946d9d72436f23e9f815739c947934e0052bf9ff'; 			;; 		*) echo >&2 "error: unsupported architecture '$dpkgArch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 		sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		echo >&2; 		echo >&2 "warning: current architecture ($dpkgArch) does not have a corresponding Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc" --progress=dot:giga; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum --strict --check -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends golang-go; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				go install std; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 		; 	fi; 		go version
-# Sun, 28 Mar 2021 00:18:18 GMT
+# Wed, 31 Mar 2021 20:12:09 GMT
 ENV GOPATH=/go
-# Sun, 28 Mar 2021 00:18:18 GMT
+# Wed, 31 Mar 2021 20:12:09 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:18:19 GMT
+# Wed, 31 Mar 2021 20:12:10 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Sun, 28 Mar 2021 00:18:20 GMT
+# Wed, 31 Mar 2021 20:12:10 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:8bf9c589d5f9475f1fcc050e02308d6b4eeb86eab7752ef948a13693e81a6aaa`  
-		Last Modified: Fri, 26 Mar 2021 15:27:11 GMT  
-		Size: 50.4 MB (50400278 bytes)  
+	-	`sha256:004f1eed87df3f75f5e2a1a649fa7edd7f713d1300532fd0909bb39cd48437d7`  
+		Last Modified: Tue, 30 Mar 2021 21:53:41 GMT  
+		Size: 50.4 MB (50432842 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4c70e46d8b5f0e1d77797b7a0565b7a316bd8c7c024f5cca82592128af142dac`  
-		Last Modified: Sat, 27 Mar 2021 06:03:41 GMT  
-		Size: 7.8 MB (7832558 bytes)  
+	-	`sha256:5d6f1e8117dbb1c6a57603cb4f321a861a08105a81bcc6b01b0ec2b78c8523a5`  
+		Last Modified: Tue, 30 Mar 2021 23:14:05 GMT  
+		Size: 7.8 MB (7832608 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ea848ad42f0d1676b3a0ce709208ba3fa154cd53370c50e7cf8e580c63d96ae0`  
-		Last Modified: Sat, 27 Mar 2021 06:03:41 GMT  
-		Size: 10.0 MB (9997159 bytes)  
+	-	`sha256:48c2faf66abec3dce9f54d6722ff592fce6dd4fb58a0d0b72282936c6598a3b3`  
+		Last Modified: Tue, 30 Mar 2021 23:14:05 GMT  
+		Size: 10.0 MB (9997208 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:48fe137f8d2641315dd2f93c46dfdb671ce7399edc1f44f10cc68984f2809d8e`  
-		Last Modified: Sat, 27 Mar 2021 06:04:05 GMT  
-		Size: 51.8 MB (51839972 bytes)  
+	-	`sha256:234b70d0479d7f16d7ee8d04e4ffdacc57d7d14313faf59d332f18b2e9418743`  
+		Last Modified: Tue, 30 Mar 2021 23:14:37 GMT  
+		Size: 51.8 MB (51840782 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e53aa3cb0a1b20fe535fb0954912e16192c1fa053d0f6f2df21d1f5a50f8139c`  
-		Last Modified: Sun, 28 Mar 2021 00:20:35 GMT  
-		Size: 68.7 MB (68736693 bytes)  
+	-	`sha256:f5e9f83ff9bcf98a081ea281823c299a293e0870c4fd132c22cf425b01bd310e`  
+		Last Modified: Wed, 31 Mar 2021 20:21:23 GMT  
+		Size: 68.7 MB (68736521 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d33aad0a69811ebff8950e59bd61ab326225562bb2757c92673e3f91061dd280`  
-		Last Modified: Sun, 28 Mar 2021 00:20:45 GMT  
-		Size: 129.0 MB (129010291 bytes)  
+	-	`sha256:abff7ae5ce6584ffabbc37f4da5db276ef2c999823396c28c894a2accadadad7`  
+		Last Modified: Wed, 31 Mar 2021 20:21:33 GMT  
+		Size: 129.0 MB (129010366 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:996781d6304ab92c67a9228d5c68c6829dbd06ae8f0f4acb8a00326a1aab6c51`  
-		Last Modified: Sun, 28 Mar 2021 00:20:24 GMT  
-		Size: 155.0 B  
+	-	`sha256:26b15789ebb1ee2fa09a78a3c616664936f679eafbf8fd14b07094bf285267a4`  
+		Last Modified: Wed, 31 Mar 2021 20:21:12 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1.16.2` - linux; arm variant v5
@@ -15166,7 +15166,7 @@ WORKDIR C:\gopath
 ## `golang:1.16.2-alpine`
 
 ```console
-$ docker pull golang@sha256:52dbfc81ec12df22e2ab1e7c9c4f4ee3dff73514e56a54924714d29ac03ff791
+$ docker pull golang@sha256:ae07fbf6c791da6ba6f16b58b2b60f1b7c0c6b478238e7f3784c42d6eeb0d0ad
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -15182,121 +15182,121 @@ $ docker pull golang@sha256:52dbfc81ec12df22e2ab1e7c9c4f4ee3dff73514e56a54924714
 ### `golang:1.16.2-alpine` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:4aee936562c29840e20ddb14bdbe028f7a7f376f2932096f5bfcc1931ec9f7c1
+$ docker pull golang@sha256:4891e17c9d2de88ebd1d9421919539226a76773d6ad1b4ac7376b286039c9be2
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **108.8 MB (108786138 bytes)**  
+-	Total Size: **108.8 MB (108786071 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5e238f856b8c39829309b40af496f71cfcf6e406ac005b1bbd1de9c50b2ed275`
+-	Image ID: `sha256:0fa0b8680167825684c347a60a168e134b449ba1cdef59c88f69223f716bccd2`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:19:32 GMT
-ADD file:6b081cabb4b256ee07587d249c4989b5b679375529542b81550a65b6f19f274e in / 
-# Thu, 25 Mar 2021 22:19:32 GMT
+# Wed, 31 Mar 2021 20:10:06 GMT
+ADD file:7119167b56ff1228b2fb639c768955ce9db7a999cd947179240b216dfa5ccbb9 in / 
+# Wed, 31 Mar 2021 20:10:06 GMT
 CMD ["/bin/sh"]
-# Fri, 26 Mar 2021 04:48:00 GMT
+# Wed, 31 Mar 2021 20:12:47 GMT
 RUN apk add --no-cache 		ca-certificates
-# Fri, 26 Mar 2021 04:48:01 GMT
+# Wed, 31 Mar 2021 20:12:48 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Fri, 26 Mar 2021 04:48:01 GMT
+# Wed, 31 Mar 2021 20:12:48 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:48:01 GMT
+# Wed, 31 Mar 2021 20:12:48 GMT
 ENV GOLANG_VERSION=1.16.2
-# Fri, 26 Mar 2021 04:49:57 GMT
+# Wed, 31 Mar 2021 20:14:27 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Fri, 26 Mar 2021 04:49:57 GMT
+# Wed, 31 Mar 2021 20:14:28 GMT
 ENV GOPATH=/go
-# Fri, 26 Mar 2021 04:49:57 GMT
+# Wed, 31 Mar 2021 20:14:28 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:49:59 GMT
+# Wed, 31 Mar 2021 20:14:29 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Fri, 26 Mar 2021 04:49:59 GMT
+# Wed, 31 Mar 2021 20:14:29 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:9aae54b2144e5b2b00c610f8805128f4f86822e1e52d3714c463744a431f0f4a`  
-		Last Modified: Thu, 25 Mar 2021 22:20:18 GMT  
-		Size: 2.8 MB (2811681 bytes)  
+	-	`sha256:ca3cd42a7c9525f6ce3d64c1a70982613a8235f0cc057ec9244052921853ef15`  
+		Last Modified: Wed, 31 Mar 2021 20:10:46 GMT  
+		Size: 2.8 MB (2811947 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9f73940e57d360e45588f2a826fa219a35089234eadac5c3e5d54dfac02c0a7d`  
-		Last Modified: Fri, 26 Mar 2021 04:59:58 GMT  
-		Size: 281.3 KB (281262 bytes)  
+	-	`sha256:dbcca316e5c32a932c66cfa46736e3998e69caeb857e570566ec63ab0377044a`  
+		Last Modified: Wed, 31 Mar 2021 20:22:40 GMT  
+		Size: 281.3 KB (281274 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ff472ba555d2504b7af85b2deac3b22d39a3dfa1510a54701764c4afd7bc7c43`  
-		Last Modified: Fri, 26 Mar 2021 04:59:59 GMT  
-		Size: 154.0 B  
+	-	`sha256:b65b403d39c8273b612240b85430a925f80b8b5719979c21e1387246faa62bd3`  
+		Last Modified: Wed, 31 Mar 2021 20:22:40 GMT  
+		Size: 155.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e4c1c61433975e8c3140ea23e09f8e224f43040721f5ca051e74120c8acb8631`  
-		Last Modified: Fri, 26 Mar 2021 05:00:17 GMT  
-		Size: 105.7 MB (105692885 bytes)  
+	-	`sha256:0d70e27e35ebcf8beb7c4148da1ce06b0c6a2f74b29fdd43ba616133688f5a6b`  
+		Last Modified: Wed, 31 Mar 2021 20:22:56 GMT  
+		Size: 105.7 MB (105692539 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ef687b4c646763d350c57c7a1405c68f0e9c4ee361dfa7b700103e0fc7a00111`  
-		Last Modified: Fri, 26 Mar 2021 04:59:58 GMT  
+	-	`sha256:a8bdf7aa1b335f83aa7f89629118092911e4fd5282650af173dcf08de463314b`  
+		Last Modified: Wed, 31 Mar 2021 20:22:40 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1.16.2-alpine` - linux; arm variant v6
 
 ```console
-$ docker pull golang@sha256:4581f323d2873e87c832fc181893d3faba5b1a4ad3850bca3ddf00c07f314673
+$ docker pull golang@sha256:f88a71a15bad8bd35f7a34beedd41fb5b1dacd66b7de65debd05c581d0bc5a6d
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **104.8 MB (104799033 bytes)**  
+-	Total Size: **104.8 MB (104799871 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3eb354b806d2d61481eda1ad01a705bead65acb2792492a16a69ab14a09b9c7b`
+-	Image ID: `sha256:c29d2c7b4afe4a2c6aeee33a4bcf0743e200bae254c88dede0ff53c47a3e2b66`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:50:09 GMT
-ADD file:ca4136238cb9a01d079efd129bccd1470945d7d4320da61373af90645a4b1146 in / 
-# Thu, 25 Mar 2021 22:50:28 GMT
+# Wed, 31 Mar 2021 17:18:49 GMT
+ADD file:988879d74f643b89539e5a0b6d74221621f19f4f87f722614addadc46ce47200 in / 
+# Wed, 31 Mar 2021 17:18:50 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:27:14 GMT
+# Wed, 31 Mar 2021 18:28:21 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:27:20 GMT
+# Wed, 31 Mar 2021 18:28:24 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:27:23 GMT
+# Wed, 31 Mar 2021 18:28:25 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:27:25 GMT
+# Wed, 31 Mar 2021 18:28:25 GMT
 ENV GOLANG_VERSION=1.16.2
-# Thu, 25 Mar 2021 23:30:58 GMT
+# Wed, 31 Mar 2021 18:44:29 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:31:10 GMT
+# Wed, 31 Mar 2021 18:44:47 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:31:13 GMT
+# Wed, 31 Mar 2021 18:44:50 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:31:19 GMT
+# Wed, 31 Mar 2021 18:44:52 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:31:22 GMT
+# Wed, 31 Mar 2021 18:44:54 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:bca6a70a54896d072b6919d2ae18d3ef685bc7aed783731f68a4adac0fb93d52`  
-		Last Modified: Thu, 25 Mar 2021 22:54:24 GMT  
-		Size: 2.6 MB (2622062 bytes)  
+	-	`sha256:bb87125c6ee1ce30c6b33d2c96a9fbe46da4a290f7cb1dd73fd62d4e06503699`  
+		Last Modified: Wed, 31 Mar 2021 17:19:55 GMT  
+		Size: 2.6 MB (2622116 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4ea05802fe691d87fddb107a6821e75df7c3f57bc6cb2e90cddd4b45a233d0f0`  
-		Last Modified: Thu, 25 Mar 2021 23:44:44 GMT  
-		Size: 281.4 KB (281380 bytes)  
+	-	`sha256:f0eb8dc77a7b333e6a40d00034c58c9612b3c2a7d33ea6c7dbf62e416baac7ea`  
+		Last Modified: Wed, 31 Mar 2021 19:22:13 GMT  
+		Size: 281.4 KB (281371 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1d164f70ad230af42bb09ffd3d6494a6bb012bc5731d7fbd2b3e1c3bcec9c4f6`  
-		Last Modified: Thu, 25 Mar 2021 23:44:44 GMT  
+	-	`sha256:0ec5882b9b78ec27dce64542bb1bd7c56d4913cde0d929356e9353ea6caac515`  
+		Last Modified: Wed, 31 Mar 2021 19:22:13 GMT  
 		Size: 154.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2622573d65ac2b2f3da8dcf9071b0b381b5aa588c86752685ccd5d4b4174d753`  
-		Last Modified: Thu, 25 Mar 2021 23:45:33 GMT  
-		Size: 101.9 MB (101895281 bytes)  
+	-	`sha256:a02b4132f4d532190e4bab920cfc597ca4d398959a8793bf22e055a54a230dd9`  
+		Last Modified: Wed, 31 Mar 2021 19:22:50 GMT  
+		Size: 101.9 MB (101896075 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:944207996fc4aeb8e8071cdb07931a55bf81ec3d36df949c73bf70becdc05bf1`  
-		Last Modified: Thu, 25 Mar 2021 23:44:44 GMT  
-		Size: 156.0 B  
+	-	`sha256:3ac885759424a47ac2b08ab253206844465a38311eb822180b7167f46dabc078`  
+		Last Modified: Wed, 31 Mar 2021 19:22:13 GMT  
+		Size: 155.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1.16.2-alpine` - linux; arm variant v7
@@ -15542,67 +15542,67 @@ WORKDIR /go
 ### `golang:1.16.2-alpine` - linux; s390x
 
 ```console
-$ docker pull golang@sha256:4c352be0f34f970f599e9bfc918e7e143c9e449bf1011b4db242960fa3b0ce29
+$ docker pull golang@sha256:8c4e3b53cda6084d770562ad07862f14e46dbe320d25e134df885da22b5fc73a
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **107.7 MB (107672720 bytes)**  
+-	Total Size: **107.7 MB (107671895 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:14b21f09f9677a233b9aa93c45819a64db388ddddc009f0af5a3291737dea67c`
+-	Image ID: `sha256:cfb7100ad492885a8b3136c41523fdb186f32c64072e1f09a3153db1d730add0`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:41:34 GMT
-ADD file:44e2c7cd992fc98df702bef7022e0f8c4ee86312c311ab5ae185fd5fc878edf9 in / 
-# Thu, 25 Mar 2021 22:41:34 GMT
+# Wed, 31 Mar 2021 17:14:58 GMT
+ADD file:3f5fe04867af3c9f2cfc5b315d97097145ae11343399985386321a8db21d7786 in / 
+# Wed, 31 Mar 2021 17:14:58 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:18:24 GMT
+# Wed, 31 Mar 2021 18:32:50 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:18:24 GMT
+# Wed, 31 Mar 2021 18:32:51 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:18:25 GMT
+# Wed, 31 Mar 2021 18:32:51 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:18:25 GMT
+# Wed, 31 Mar 2021 18:32:51 GMT
 ENV GOLANG_VERSION=1.16.2
-# Thu, 25 Mar 2021 23:20:28 GMT
+# Wed, 31 Mar 2021 18:34:22 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:20:33 GMT
+# Wed, 31 Mar 2021 18:34:27 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:20:33 GMT
+# Wed, 31 Mar 2021 18:34:27 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:20:34 GMT
+# Wed, 31 Mar 2021 18:34:28 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:20:34 GMT
+# Wed, 31 Mar 2021 18:34:28 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:a266c0a9554add02ea09a46b8584cb36b7f606b7b4398b9ad7369f899f8360df`  
-		Last Modified: Thu, 25 Mar 2021 22:42:07 GMT  
-		Size: 2.6 MB (2602387 bytes)  
+	-	`sha256:1d4058bbeedf5296bcaf5ae8f37c8cd58152acad3ec45a536e08b83f5d3abe83`  
+		Last Modified: Wed, 31 Mar 2021 17:15:36 GMT  
+		Size: 2.6 MB (2602591 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5f7a13aca3904b3b663e1f8170de727ebe3a4616cb36dcadfd015e2e663c24bb`  
-		Last Modified: Thu, 25 Mar 2021 23:26:06 GMT  
-		Size: 281.7 KB (281700 bytes)  
+	-	`sha256:27c9dd6f50e848494b74d743acede663c4566d6c904f83c807df6ed135c0bac2`  
+		Last Modified: Wed, 31 Mar 2021 18:40:22 GMT  
+		Size: 281.7 KB (281696 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0511116a12ff773aa9cf992f6fa81a1e4a4404f1ba284f6526e7439c07e3a651`  
-		Last Modified: Thu, 25 Mar 2021 23:26:06 GMT  
-		Size: 154.0 B  
+	-	`sha256:55a3302e682073b38a23dae31007fd1b72ed66261ca926cc100f29e177732a0a`  
+		Last Modified: Wed, 31 Mar 2021 18:40:25 GMT  
+		Size: 153.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c02165d3cb72f8bcf539749e1ddc8cfa7ea879be0c3c874454f40917d73c1b75`  
-		Last Modified: Thu, 25 Mar 2021 23:26:18 GMT  
-		Size: 104.8 MB (104788324 bytes)  
+	-	`sha256:bd4a9647efdfd2fe83835843ee761ff6c800604a0a2514db1cc014e18fa55664`  
+		Last Modified: Wed, 31 Mar 2021 18:40:34 GMT  
+		Size: 104.8 MB (104787299 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dde3ae89753fd12e06acc2bdf800133400dfd5d70ce659ed027e5a67e6eccbd3`  
-		Last Modified: Thu, 25 Mar 2021 23:26:06 GMT  
-		Size: 155.0 B  
+	-	`sha256:af5d3e1bba60e9d306da5ecd18bbbf586943da4bdc6d87c1c20338b0371f3552`  
+		Last Modified: Wed, 31 Mar 2021 18:40:23 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:1.16.2-alpine3.12`
 
 ```console
-$ docker pull golang@sha256:561ee1bc422ca797037621cc563e93cab4f1d08f74622c6de4bcbc610e2939ef
+$ docker pull golang@sha256:2b00d0c0560d9c294ef2ae13b58b8a76b9fbbaeee3243edecfa6d1320ed39533
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -15618,120 +15618,120 @@ $ docker pull golang@sha256:561ee1bc422ca797037621cc563e93cab4f1d08f74622c6de4bc
 ### `golang:1.16.2-alpine3.12` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:09fa448029d63639e1097fd3cc3dc053c6e9bb739353f3eed4dc0f27503e397d
+$ docker pull golang@sha256:192f68738589059dad4cb032b386678b3270bd2132db329791f4f78efe1642ea
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **108.8 MB (108808237 bytes)**  
+-	Total Size: **108.8 MB (108808450 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7352b1cc5adbfd2878d91c0618249d10f58d551f235fae3f2271feaaa44e54cd`
+-	Image ID: `sha256:2a057958e00857b4458bfcf9ec1a0f23911501d424ebd9c09fd0460b9bf0da13`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:19:38 GMT
-ADD file:b2c067f4304d00c91fc9fd92f2e58853412cc705dfda4d1cf658fab965d5802c in / 
-# Thu, 25 Mar 2021 22:19:38 GMT
+# Wed, 31 Mar 2021 20:10:13 GMT
+ADD file:f77db8e5b937d8ebb7e254eccd4d311798ea9f4dd5081ea2a7e2b1d3790300c2 in / 
+# Wed, 31 Mar 2021 20:10:13 GMT
 CMD ["/bin/sh"]
-# Fri, 26 Mar 2021 04:50:11 GMT
+# Wed, 31 Mar 2021 20:14:43 GMT
 RUN apk add --no-cache 		ca-certificates
-# Fri, 26 Mar 2021 04:50:12 GMT
+# Wed, 31 Mar 2021 20:14:44 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Fri, 26 Mar 2021 04:50:12 GMT
+# Wed, 31 Mar 2021 20:14:44 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:50:12 GMT
+# Wed, 31 Mar 2021 20:14:44 GMT
 ENV GOLANG_VERSION=1.16.2
-# Fri, 26 Mar 2021 04:53:15 GMT
+# Wed, 31 Mar 2021 20:16:22 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Fri, 26 Mar 2021 04:53:16 GMT
+# Wed, 31 Mar 2021 20:16:23 GMT
 ENV GOPATH=/go
-# Fri, 26 Mar 2021 04:53:17 GMT
+# Wed, 31 Mar 2021 20:16:24 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:53:18 GMT
+# Wed, 31 Mar 2021 20:16:25 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Fri, 26 Mar 2021 04:53:19 GMT
+# Wed, 31 Mar 2021 20:16:25 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:22599d3e9e25e799b87521b94e20d20a601ffad16cf676274fdf94b089e4b979`  
-		Last Modified: Thu, 25 Mar 2021 22:20:35 GMT  
-		Size: 2.8 MB (2799762 bytes)  
+	-	`sha256:532819f3e44cebad88c82f5393801acb876b7a61d36b84bce646561789bb2018`  
+		Last Modified: Wed, 31 Mar 2021 20:11:03 GMT  
+		Size: 2.8 MB (2799712 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:994b649ee80af61fec0aab2113abbcce972dced9ddb604f8e2721a943dfca8f3`  
-		Last Modified: Fri, 26 Mar 2021 05:00:47 GMT  
-		Size: 280.9 KB (280878 bytes)  
+	-	`sha256:93cbbf235a55c104bafc6765f3c92a36489a596041551360d566152f2af01b59`  
+		Last Modified: Wed, 31 Mar 2021 20:22:25 GMT  
+		Size: 280.9 KB (280881 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dae587f6cd93b42cb17ce4c64b07191a204f7adde25a351026cc7cb254d28096`  
-		Last Modified: Fri, 26 Mar 2021 05:00:47 GMT  
-		Size: 152.0 B  
+	-	`sha256:e13f184a059628efa0b05f924f5b1e223377ebd57cdec0597912aabcd4b2129b`  
+		Last Modified: Wed, 31 Mar 2021 20:23:29 GMT  
+		Size: 153.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:aafd978e81e70299617e9a17892cd9a9d4f7dc84047441436c96f989cfe5c5cb`  
-		Last Modified: Fri, 26 Mar 2021 05:01:09 GMT  
-		Size: 105.7 MB (105727289 bytes)  
+	-	`sha256:695e77d5e927c2c1fe01389a3296f98344eb8b879e021a23ea7b8112b26d85c4`  
+		Last Modified: Wed, 31 Mar 2021 20:23:52 GMT  
+		Size: 105.7 MB (105727548 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4e86f102f01f6c8b27a4a8f10f5c23dda108131d0a445d1cd9802f32ccbb1012`  
-		Last Modified: Fri, 26 Mar 2021 05:00:46 GMT  
+	-	`sha256:0c328638b4633f6d3d893398135b3ace48e3677af7a11714949e3eea543cc5fe`  
+		Last Modified: Wed, 31 Mar 2021 20:23:28 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1.16.2-alpine3.12` - linux; arm variant v6
 
 ```console
-$ docker pull golang@sha256:648bdf6a519a1a104b50a7366a09c6b37bb12facf572f525951d0563d070df71
+$ docker pull golang@sha256:d6166c33d95f84d9d59dc71fe8ddc31fb464d4faf647c8531aa9d211fbdcd738
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **104.8 MB (104808565 bytes)**  
+-	Total Size: **104.8 MB (104807795 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:8ee8657e3509984061a9c4e96771256644bd31e2f7e3e6f9efbf813b4370d1ae`
+-	Image ID: `sha256:4f53734f2b88f9cbb49d827023d5f83812713cf89f357745dc17c6ca29f0f987`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:50:43 GMT
-ADD file:65a3462a527f49c8c625927be6b8b57b4257c8cc37d685055a1f183d76c68920 in / 
-# Thu, 25 Mar 2021 22:50:47 GMT
+# Wed, 31 Mar 2021 17:19:11 GMT
+ADD file:00ac3d0df16779e7564cda9cbf94eef90ffa8043778a867272ff0135a1fb537f in / 
+# Wed, 31 Mar 2021 17:19:12 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:31:38 GMT
+# Wed, 31 Mar 2021 18:45:17 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:31:44 GMT
+# Wed, 31 Mar 2021 18:45:20 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:31:46 GMT
+# Wed, 31 Mar 2021 18:45:21 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:31:48 GMT
+# Wed, 31 Mar 2021 18:45:22 GMT
 ENV GOLANG_VERSION=1.16.2
-# Thu, 25 Mar 2021 23:35:13 GMT
+# Wed, 31 Mar 2021 19:00:13 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:35:18 GMT
+# Wed, 31 Mar 2021 19:00:20 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:35:20 GMT
+# Wed, 31 Mar 2021 19:00:21 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:35:26 GMT
+# Wed, 31 Mar 2021 19:00:24 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:35:28 GMT
+# Wed, 31 Mar 2021 19:00:25 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:181a1446f0acaaa0871cec07aba4f733041f2d80ffbe01b19df43fe005df29f3`  
-		Last Modified: Thu, 25 Mar 2021 22:55:06 GMT  
-		Size: 2.6 MB (2604815 bytes)  
+	-	`sha256:66e54586dae0889b30da12f7a66838d9b86511b58696c83c3b9166ff1a534bbe`  
+		Last Modified: Wed, 31 Mar 2021 17:20:05 GMT  
+		Size: 2.6 MB (2604658 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:045419b8095ca1008ec369ea0965cfdae0dd0c90bea499bd8b42e5e45ab92cc5`  
-		Last Modified: Thu, 25 Mar 2021 23:46:09 GMT  
-		Size: 281.0 KB (280982 bytes)  
+	-	`sha256:0aa6796eed51884cd0436f134281af9489342ecf256aec0b31ca83f254ccd0d1`  
+		Last Modified: Wed, 31 Mar 2021 19:23:16 GMT  
+		Size: 281.0 KB (280979 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4ddbec85c64c1987da76dd94cb01590f1166da94443b5fa33ea1f633108a00fb`  
-		Last Modified: Thu, 25 Mar 2021 23:46:09 GMT  
-		Size: 154.0 B  
+	-	`sha256:1c043dc86373f816c29db582d9bddada9a00eeb3812a357a2dfd8e3f68d9a413`  
+		Last Modified: Wed, 31 Mar 2021 19:23:15 GMT  
+		Size: 153.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df1a3afcb046023a49c401c5e2308e16ee27a898f9f3387da58bcfa0ef11053a`  
-		Last Modified: Thu, 25 Mar 2021 23:46:42 GMT  
-		Size: 101.9 MB (101922458 bytes)  
+	-	`sha256:82c0b57107c7cd93ef0603a634622d63dd0585336bd5a2b844cfe780e60f8fab`  
+		Last Modified: Wed, 31 Mar 2021 19:23:47 GMT  
+		Size: 101.9 MB (101921849 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:647725af6164f31c936582ee2a2e74167e4c2c5d8cbacbfb7f8fcb4d9fac47cd`  
-		Last Modified: Thu, 25 Mar 2021 23:46:09 GMT  
+	-	`sha256:f3f763024bc32463f49f970db09f1cfa36ad87c9ac838d2b28ad36cda03ba923`  
+		Last Modified: Wed, 31 Mar 2021 19:23:15 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -15978,67 +15978,67 @@ WORKDIR /go
 ### `golang:1.16.2-alpine3.12` - linux; s390x
 
 ```console
-$ docker pull golang@sha256:218ee5dc5ff4546d9be56ff3f1bfcdb4164833d5ecac5ca8d5639c8d2561c869
+$ docker pull golang@sha256:7e47b0232f4073e1c855b37041c14354fc7e2c08fbf5a6a17cb02b34ec8c8aad
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **107.7 MB (107660727 bytes)**  
+-	Total Size: **107.7 MB (107660586 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:83387ea1e0de2529a16511f814924b896e0bc245aa1c92531275a0f76a9a2b35`
+-	Image ID: `sha256:ad37b5f0ed4fa5b570c4aaac6694b6395933363eb43ba6b0f860d8b0d377a495`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:41:39 GMT
-ADD file:12766b6fe7c37292d91bd1469b27dc9fb362e3109e9b3f377cff030bc0ca5386 in / 
-# Thu, 25 Mar 2021 22:41:39 GMT
+# Wed, 31 Mar 2021 17:15:04 GMT
+ADD file:1f37b92ea1f573c4810b1d056dc4880cf4035e143451d9b2b76fac1e3b462248 in / 
+# Wed, 31 Mar 2021 17:15:04 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:20:43 GMT
+# Wed, 31 Mar 2021 18:34:37 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:20:44 GMT
+# Wed, 31 Mar 2021 18:34:38 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:20:44 GMT
+# Wed, 31 Mar 2021 18:34:38 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:20:44 GMT
+# Wed, 31 Mar 2021 18:34:39 GMT
 ENV GOLANG_VERSION=1.16.2
-# Thu, 25 Mar 2021 23:22:10 GMT
+# Wed, 31 Mar 2021 18:36:08 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:22:15 GMT
+# Wed, 31 Mar 2021 18:36:14 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:22:15 GMT
+# Wed, 31 Mar 2021 18:36:14 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:22:16 GMT
+# Wed, 31 Mar 2021 18:36:15 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:22:17 GMT
+# Wed, 31 Mar 2021 18:36:15 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:be2cdf7cbb6a1aec476a957daaae210624b2b112c20f27f55bbcf2bdc74db281`  
-		Last Modified: Thu, 25 Mar 2021 22:42:19 GMT  
-		Size: 2.6 MB (2567457 bytes)  
+	-	`sha256:38ca5430c9af12b6b6dee7c10eb6b1eb0e4eb4f5f02a97890579c4b049d00233`  
+		Last Modified: Wed, 31 Mar 2021 17:15:46 GMT  
+		Size: 2.6 MB (2567453 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:aaddff0ad4814b86163108d94e8b39f43a463cb6c267218cec9cdeffc540308a`  
-		Last Modified: Thu, 25 Mar 2021 23:26:32 GMT  
+	-	`sha256:1dcb296d6fc71cd9057e3d03d0ea4ebe30a620f7c6ce57eb78f4c137e77a9a47`  
+		Last Modified: Wed, 31 Mar 2021 18:40:52 GMT  
 		Size: 281.4 KB (281355 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1b123ead7d9076567abb17998ba938b85be4f09afb27464b9c66734b580e1d5a`  
-		Last Modified: Thu, 25 Mar 2021 23:26:32 GMT  
+	-	`sha256:5783b7db1c405d51f50a261ae252c97941c44ffeb93cb10c2e2bdd458296774a`  
+		Last Modified: Wed, 31 Mar 2021 18:40:52 GMT  
 		Size: 153.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:127148b5f4ad531f5e05093db97daeb0a3cc2fb7fb77b5c1938e3cd239d79fec`  
-		Last Modified: Thu, 25 Mar 2021 23:26:44 GMT  
-		Size: 104.8 MB (104811606 bytes)  
+	-	`sha256:688bee172ee7101a6933e6df21647e155e8aee9549b551ffd448ed54e19b8e7a`  
+		Last Modified: Wed, 31 Mar 2021 18:41:07 GMT  
+		Size: 104.8 MB (104811470 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:89781a746445f6113e018850bb62a631f1b5a225d0166a2c697551a93c8d6fd6`  
-		Last Modified: Thu, 25 Mar 2021 23:26:32 GMT  
-		Size: 156.0 B  
+	-	`sha256:a3f579176032da1bacfaea3c32010b4673f4230534f6740d89bece53b21515d5`  
+		Last Modified: Wed, 31 Mar 2021 18:40:52 GMT  
+		Size: 155.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:1.16.2-alpine3.13`
 
 ```console
-$ docker pull golang@sha256:52dbfc81ec12df22e2ab1e7c9c4f4ee3dff73514e56a54924714d29ac03ff791
+$ docker pull golang@sha256:ae07fbf6c791da6ba6f16b58b2b60f1b7c0c6b478238e7f3784c42d6eeb0d0ad
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -16054,121 +16054,121 @@ $ docker pull golang@sha256:52dbfc81ec12df22e2ab1e7c9c4f4ee3dff73514e56a54924714
 ### `golang:1.16.2-alpine3.13` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:4aee936562c29840e20ddb14bdbe028f7a7f376f2932096f5bfcc1931ec9f7c1
+$ docker pull golang@sha256:4891e17c9d2de88ebd1d9421919539226a76773d6ad1b4ac7376b286039c9be2
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **108.8 MB (108786138 bytes)**  
+-	Total Size: **108.8 MB (108786071 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5e238f856b8c39829309b40af496f71cfcf6e406ac005b1bbd1de9c50b2ed275`
+-	Image ID: `sha256:0fa0b8680167825684c347a60a168e134b449ba1cdef59c88f69223f716bccd2`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:19:32 GMT
-ADD file:6b081cabb4b256ee07587d249c4989b5b679375529542b81550a65b6f19f274e in / 
-# Thu, 25 Mar 2021 22:19:32 GMT
+# Wed, 31 Mar 2021 20:10:06 GMT
+ADD file:7119167b56ff1228b2fb639c768955ce9db7a999cd947179240b216dfa5ccbb9 in / 
+# Wed, 31 Mar 2021 20:10:06 GMT
 CMD ["/bin/sh"]
-# Fri, 26 Mar 2021 04:48:00 GMT
+# Wed, 31 Mar 2021 20:12:47 GMT
 RUN apk add --no-cache 		ca-certificates
-# Fri, 26 Mar 2021 04:48:01 GMT
+# Wed, 31 Mar 2021 20:12:48 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Fri, 26 Mar 2021 04:48:01 GMT
+# Wed, 31 Mar 2021 20:12:48 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:48:01 GMT
+# Wed, 31 Mar 2021 20:12:48 GMT
 ENV GOLANG_VERSION=1.16.2
-# Fri, 26 Mar 2021 04:49:57 GMT
+# Wed, 31 Mar 2021 20:14:27 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Fri, 26 Mar 2021 04:49:57 GMT
+# Wed, 31 Mar 2021 20:14:28 GMT
 ENV GOPATH=/go
-# Fri, 26 Mar 2021 04:49:57 GMT
+# Wed, 31 Mar 2021 20:14:28 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:49:59 GMT
+# Wed, 31 Mar 2021 20:14:29 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Fri, 26 Mar 2021 04:49:59 GMT
+# Wed, 31 Mar 2021 20:14:29 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:9aae54b2144e5b2b00c610f8805128f4f86822e1e52d3714c463744a431f0f4a`  
-		Last Modified: Thu, 25 Mar 2021 22:20:18 GMT  
-		Size: 2.8 MB (2811681 bytes)  
+	-	`sha256:ca3cd42a7c9525f6ce3d64c1a70982613a8235f0cc057ec9244052921853ef15`  
+		Last Modified: Wed, 31 Mar 2021 20:10:46 GMT  
+		Size: 2.8 MB (2811947 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9f73940e57d360e45588f2a826fa219a35089234eadac5c3e5d54dfac02c0a7d`  
-		Last Modified: Fri, 26 Mar 2021 04:59:58 GMT  
-		Size: 281.3 KB (281262 bytes)  
+	-	`sha256:dbcca316e5c32a932c66cfa46736e3998e69caeb857e570566ec63ab0377044a`  
+		Last Modified: Wed, 31 Mar 2021 20:22:40 GMT  
+		Size: 281.3 KB (281274 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ff472ba555d2504b7af85b2deac3b22d39a3dfa1510a54701764c4afd7bc7c43`  
-		Last Modified: Fri, 26 Mar 2021 04:59:59 GMT  
-		Size: 154.0 B  
+	-	`sha256:b65b403d39c8273b612240b85430a925f80b8b5719979c21e1387246faa62bd3`  
+		Last Modified: Wed, 31 Mar 2021 20:22:40 GMT  
+		Size: 155.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e4c1c61433975e8c3140ea23e09f8e224f43040721f5ca051e74120c8acb8631`  
-		Last Modified: Fri, 26 Mar 2021 05:00:17 GMT  
-		Size: 105.7 MB (105692885 bytes)  
+	-	`sha256:0d70e27e35ebcf8beb7c4148da1ce06b0c6a2f74b29fdd43ba616133688f5a6b`  
+		Last Modified: Wed, 31 Mar 2021 20:22:56 GMT  
+		Size: 105.7 MB (105692539 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ef687b4c646763d350c57c7a1405c68f0e9c4ee361dfa7b700103e0fc7a00111`  
-		Last Modified: Fri, 26 Mar 2021 04:59:58 GMT  
+	-	`sha256:a8bdf7aa1b335f83aa7f89629118092911e4fd5282650af173dcf08de463314b`  
+		Last Modified: Wed, 31 Mar 2021 20:22:40 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1.16.2-alpine3.13` - linux; arm variant v6
 
 ```console
-$ docker pull golang@sha256:4581f323d2873e87c832fc181893d3faba5b1a4ad3850bca3ddf00c07f314673
+$ docker pull golang@sha256:f88a71a15bad8bd35f7a34beedd41fb5b1dacd66b7de65debd05c581d0bc5a6d
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **104.8 MB (104799033 bytes)**  
+-	Total Size: **104.8 MB (104799871 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3eb354b806d2d61481eda1ad01a705bead65acb2792492a16a69ab14a09b9c7b`
+-	Image ID: `sha256:c29d2c7b4afe4a2c6aeee33a4bcf0743e200bae254c88dede0ff53c47a3e2b66`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:50:09 GMT
-ADD file:ca4136238cb9a01d079efd129bccd1470945d7d4320da61373af90645a4b1146 in / 
-# Thu, 25 Mar 2021 22:50:28 GMT
+# Wed, 31 Mar 2021 17:18:49 GMT
+ADD file:988879d74f643b89539e5a0b6d74221621f19f4f87f722614addadc46ce47200 in / 
+# Wed, 31 Mar 2021 17:18:50 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:27:14 GMT
+# Wed, 31 Mar 2021 18:28:21 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:27:20 GMT
+# Wed, 31 Mar 2021 18:28:24 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:27:23 GMT
+# Wed, 31 Mar 2021 18:28:25 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:27:25 GMT
+# Wed, 31 Mar 2021 18:28:25 GMT
 ENV GOLANG_VERSION=1.16.2
-# Thu, 25 Mar 2021 23:30:58 GMT
+# Wed, 31 Mar 2021 18:44:29 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:31:10 GMT
+# Wed, 31 Mar 2021 18:44:47 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:31:13 GMT
+# Wed, 31 Mar 2021 18:44:50 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:31:19 GMT
+# Wed, 31 Mar 2021 18:44:52 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:31:22 GMT
+# Wed, 31 Mar 2021 18:44:54 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:bca6a70a54896d072b6919d2ae18d3ef685bc7aed783731f68a4adac0fb93d52`  
-		Last Modified: Thu, 25 Mar 2021 22:54:24 GMT  
-		Size: 2.6 MB (2622062 bytes)  
+	-	`sha256:bb87125c6ee1ce30c6b33d2c96a9fbe46da4a290f7cb1dd73fd62d4e06503699`  
+		Last Modified: Wed, 31 Mar 2021 17:19:55 GMT  
+		Size: 2.6 MB (2622116 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4ea05802fe691d87fddb107a6821e75df7c3f57bc6cb2e90cddd4b45a233d0f0`  
-		Last Modified: Thu, 25 Mar 2021 23:44:44 GMT  
-		Size: 281.4 KB (281380 bytes)  
+	-	`sha256:f0eb8dc77a7b333e6a40d00034c58c9612b3c2a7d33ea6c7dbf62e416baac7ea`  
+		Last Modified: Wed, 31 Mar 2021 19:22:13 GMT  
+		Size: 281.4 KB (281371 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1d164f70ad230af42bb09ffd3d6494a6bb012bc5731d7fbd2b3e1c3bcec9c4f6`  
-		Last Modified: Thu, 25 Mar 2021 23:44:44 GMT  
+	-	`sha256:0ec5882b9b78ec27dce64542bb1bd7c56d4913cde0d929356e9353ea6caac515`  
+		Last Modified: Wed, 31 Mar 2021 19:22:13 GMT  
 		Size: 154.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2622573d65ac2b2f3da8dcf9071b0b381b5aa588c86752685ccd5d4b4174d753`  
-		Last Modified: Thu, 25 Mar 2021 23:45:33 GMT  
-		Size: 101.9 MB (101895281 bytes)  
+	-	`sha256:a02b4132f4d532190e4bab920cfc597ca4d398959a8793bf22e055a54a230dd9`  
+		Last Modified: Wed, 31 Mar 2021 19:22:50 GMT  
+		Size: 101.9 MB (101896075 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:944207996fc4aeb8e8071cdb07931a55bf81ec3d36df949c73bf70becdc05bf1`  
-		Last Modified: Thu, 25 Mar 2021 23:44:44 GMT  
-		Size: 156.0 B  
+	-	`sha256:3ac885759424a47ac2b08ab253206844465a38311eb822180b7167f46dabc078`  
+		Last Modified: Wed, 31 Mar 2021 19:22:13 GMT  
+		Size: 155.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1.16.2-alpine3.13` - linux; arm variant v7
@@ -16414,67 +16414,67 @@ WORKDIR /go
 ### `golang:1.16.2-alpine3.13` - linux; s390x
 
 ```console
-$ docker pull golang@sha256:4c352be0f34f970f599e9bfc918e7e143c9e449bf1011b4db242960fa3b0ce29
+$ docker pull golang@sha256:8c4e3b53cda6084d770562ad07862f14e46dbe320d25e134df885da22b5fc73a
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **107.7 MB (107672720 bytes)**  
+-	Total Size: **107.7 MB (107671895 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:14b21f09f9677a233b9aa93c45819a64db388ddddc009f0af5a3291737dea67c`
+-	Image ID: `sha256:cfb7100ad492885a8b3136c41523fdb186f32c64072e1f09a3153db1d730add0`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:41:34 GMT
-ADD file:44e2c7cd992fc98df702bef7022e0f8c4ee86312c311ab5ae185fd5fc878edf9 in / 
-# Thu, 25 Mar 2021 22:41:34 GMT
+# Wed, 31 Mar 2021 17:14:58 GMT
+ADD file:3f5fe04867af3c9f2cfc5b315d97097145ae11343399985386321a8db21d7786 in / 
+# Wed, 31 Mar 2021 17:14:58 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:18:24 GMT
+# Wed, 31 Mar 2021 18:32:50 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:18:24 GMT
+# Wed, 31 Mar 2021 18:32:51 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:18:25 GMT
+# Wed, 31 Mar 2021 18:32:51 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:18:25 GMT
+# Wed, 31 Mar 2021 18:32:51 GMT
 ENV GOLANG_VERSION=1.16.2
-# Thu, 25 Mar 2021 23:20:28 GMT
+# Wed, 31 Mar 2021 18:34:22 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:20:33 GMT
+# Wed, 31 Mar 2021 18:34:27 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:20:33 GMT
+# Wed, 31 Mar 2021 18:34:27 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:20:34 GMT
+# Wed, 31 Mar 2021 18:34:28 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:20:34 GMT
+# Wed, 31 Mar 2021 18:34:28 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:a266c0a9554add02ea09a46b8584cb36b7f606b7b4398b9ad7369f899f8360df`  
-		Last Modified: Thu, 25 Mar 2021 22:42:07 GMT  
-		Size: 2.6 MB (2602387 bytes)  
+	-	`sha256:1d4058bbeedf5296bcaf5ae8f37c8cd58152acad3ec45a536e08b83f5d3abe83`  
+		Last Modified: Wed, 31 Mar 2021 17:15:36 GMT  
+		Size: 2.6 MB (2602591 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5f7a13aca3904b3b663e1f8170de727ebe3a4616cb36dcadfd015e2e663c24bb`  
-		Last Modified: Thu, 25 Mar 2021 23:26:06 GMT  
-		Size: 281.7 KB (281700 bytes)  
+	-	`sha256:27c9dd6f50e848494b74d743acede663c4566d6c904f83c807df6ed135c0bac2`  
+		Last Modified: Wed, 31 Mar 2021 18:40:22 GMT  
+		Size: 281.7 KB (281696 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0511116a12ff773aa9cf992f6fa81a1e4a4404f1ba284f6526e7439c07e3a651`  
-		Last Modified: Thu, 25 Mar 2021 23:26:06 GMT  
-		Size: 154.0 B  
+	-	`sha256:55a3302e682073b38a23dae31007fd1b72ed66261ca926cc100f29e177732a0a`  
+		Last Modified: Wed, 31 Mar 2021 18:40:25 GMT  
+		Size: 153.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c02165d3cb72f8bcf539749e1ddc8cfa7ea879be0c3c874454f40917d73c1b75`  
-		Last Modified: Thu, 25 Mar 2021 23:26:18 GMT  
-		Size: 104.8 MB (104788324 bytes)  
+	-	`sha256:bd4a9647efdfd2fe83835843ee761ff6c800604a0a2514db1cc014e18fa55664`  
+		Last Modified: Wed, 31 Mar 2021 18:40:34 GMT  
+		Size: 104.8 MB (104787299 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dde3ae89753fd12e06acc2bdf800133400dfd5d70ce659ed027e5a67e6eccbd3`  
-		Last Modified: Thu, 25 Mar 2021 23:26:06 GMT  
-		Size: 155.0 B  
+	-	`sha256:af5d3e1bba60e9d306da5ecd18bbbf586943da4bdc6d87c1c20338b0371f3552`  
+		Last Modified: Wed, 31 Mar 2021 18:40:23 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:1.16.2-buster`
 
 ```console
-$ docker pull golang@sha256:5e7e4d55a6c14081660a177570584e45e93a325f97a84bcf0b4534b3a784d3ec
+$ docker pull golang@sha256:7a894f6fac60d7c83dbf1fa47e448e04af8b8c3c4eaa4048be6a5888b518a60c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -16491,73 +16491,73 @@ $ docker pull golang@sha256:5e7e4d55a6c14081660a177570584e45e93a325f97a84bcf0b45
 ### `golang:1.16.2-buster` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:6247840c3865d9bfb709e6fa43c3cf2f6fc1334e36c6cb8712cf59205b0b31e0
+$ docker pull golang@sha256:dabc19f6f1adbbc27ce339b6abff0064106c2cb993fc82c407698f07d5ad151e
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **317.8 MB (317817106 bytes)**  
+-	Total Size: **317.9 MB (317850483 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:64bd1a7b99b7ba1d5f1c21d4c4625f29858cce169e724dabb30dc8c994ed44c3`
+-	Image ID: `sha256:217d1e25596170633bd1e02c19d3c614986fe3853d492b3a2d4cc6e719381ea2`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Fri, 26 Mar 2021 15:20:41 GMT
-ADD file:89234bb2f86c7eb890235a48904d1c9898a8d287a525c4fe5698d4a04cdd8f12 in / 
-# Fri, 26 Mar 2021 15:20:42 GMT
+# Tue, 30 Mar 2021 21:49:16 GMT
+ADD file:c254898ceb4172f05cd40460f8d0b1ca2d39d5178bdddd4e794c7d3fc5a60a03 in / 
+# Tue, 30 Mar 2021 21:49:16 GMT
 CMD ["bash"]
-# Sat, 27 Mar 2021 05:53:29 GMT
+# Tue, 30 Mar 2021 23:03:10 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
-# Sat, 27 Mar 2021 05:53:35 GMT
+# Tue, 30 Mar 2021 23:03:21 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Sat, 27 Mar 2021 05:53:54 GMT
+# Tue, 30 Mar 2021 23:03:52 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:05 GMT
+# Wed, 31 Mar 2021 20:11:57 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:06 GMT
+# Wed, 31 Mar 2021 20:11:57 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:18:06 GMT
+# Wed, 31 Mar 2021 20:11:57 GMT
 ENV GOLANG_VERSION=1.16.2
-# Sun, 28 Mar 2021 00:18:17 GMT
+# Wed, 31 Mar 2021 20:12:08 GMT
 RUN set -eux; 		dpkgArch="$(dpkg --print-architecture)"; 	url=; 	case "${dpkgArch##*-}" in 		'amd64') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-amd64.tar.gz'; 			sha256='542e936b19542e62679766194364f45141fde55169db2d8d01046555ca9eb4b8'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-armv6l.tar.gz'; 			sha256='49765b1ac36f77a84ce8186b08713c3811db5426e4ecfaa4344453e12d756c22'; 			;; 		'arm64') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-arm64.tar.gz'; 			sha256='6924601d998a0917694fd14261347e3798bd2ad6b13c4d7f2edd70c9d57f62ab'; 			;; 		'i386') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-386.tar.gz'; 			sha256='3638abf8e8272a4ddc3e5189487c932d680abfb151e2c48ae18c9a04a90ded73'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-ppc64le.tar.gz'; 			sha256='e1dcc9b460b2d522added8dfce764a06c5e455c8047b45b67a06f7f5ab19c4e0'; 			;; 		's390x') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-s390x.tar.gz'; 			sha256='a686743b0803d54e051756ce946d9d72436f23e9f815739c947934e0052bf9ff'; 			;; 		*) echo >&2 "error: unsupported architecture '$dpkgArch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 		sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		echo >&2; 		echo >&2 "warning: current architecture ($dpkgArch) does not have a corresponding Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc" --progress=dot:giga; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum --strict --check -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends golang-go; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				go install std; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 		; 	fi; 		go version
-# Sun, 28 Mar 2021 00:18:18 GMT
+# Wed, 31 Mar 2021 20:12:09 GMT
 ENV GOPATH=/go
-# Sun, 28 Mar 2021 00:18:18 GMT
+# Wed, 31 Mar 2021 20:12:09 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:18:19 GMT
+# Wed, 31 Mar 2021 20:12:10 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Sun, 28 Mar 2021 00:18:20 GMT
+# Wed, 31 Mar 2021 20:12:10 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:8bf9c589d5f9475f1fcc050e02308d6b4eeb86eab7752ef948a13693e81a6aaa`  
-		Last Modified: Fri, 26 Mar 2021 15:27:11 GMT  
-		Size: 50.4 MB (50400278 bytes)  
+	-	`sha256:004f1eed87df3f75f5e2a1a649fa7edd7f713d1300532fd0909bb39cd48437d7`  
+		Last Modified: Tue, 30 Mar 2021 21:53:41 GMT  
+		Size: 50.4 MB (50432842 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4c70e46d8b5f0e1d77797b7a0565b7a316bd8c7c024f5cca82592128af142dac`  
-		Last Modified: Sat, 27 Mar 2021 06:03:41 GMT  
-		Size: 7.8 MB (7832558 bytes)  
+	-	`sha256:5d6f1e8117dbb1c6a57603cb4f321a861a08105a81bcc6b01b0ec2b78c8523a5`  
+		Last Modified: Tue, 30 Mar 2021 23:14:05 GMT  
+		Size: 7.8 MB (7832608 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ea848ad42f0d1676b3a0ce709208ba3fa154cd53370c50e7cf8e580c63d96ae0`  
-		Last Modified: Sat, 27 Mar 2021 06:03:41 GMT  
-		Size: 10.0 MB (9997159 bytes)  
+	-	`sha256:48c2faf66abec3dce9f54d6722ff592fce6dd4fb58a0d0b72282936c6598a3b3`  
+		Last Modified: Tue, 30 Mar 2021 23:14:05 GMT  
+		Size: 10.0 MB (9997208 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:48fe137f8d2641315dd2f93c46dfdb671ce7399edc1f44f10cc68984f2809d8e`  
-		Last Modified: Sat, 27 Mar 2021 06:04:05 GMT  
-		Size: 51.8 MB (51839972 bytes)  
+	-	`sha256:234b70d0479d7f16d7ee8d04e4ffdacc57d7d14313faf59d332f18b2e9418743`  
+		Last Modified: Tue, 30 Mar 2021 23:14:37 GMT  
+		Size: 51.8 MB (51840782 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e53aa3cb0a1b20fe535fb0954912e16192c1fa053d0f6f2df21d1f5a50f8139c`  
-		Last Modified: Sun, 28 Mar 2021 00:20:35 GMT  
-		Size: 68.7 MB (68736693 bytes)  
+	-	`sha256:f5e9f83ff9bcf98a081ea281823c299a293e0870c4fd132c22cf425b01bd310e`  
+		Last Modified: Wed, 31 Mar 2021 20:21:23 GMT  
+		Size: 68.7 MB (68736521 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d33aad0a69811ebff8950e59bd61ab326225562bb2757c92673e3f91061dd280`  
-		Last Modified: Sun, 28 Mar 2021 00:20:45 GMT  
-		Size: 129.0 MB (129010291 bytes)  
+	-	`sha256:abff7ae5ce6584ffabbc37f4da5db276ef2c999823396c28c894a2accadadad7`  
+		Last Modified: Wed, 31 Mar 2021 20:21:33 GMT  
+		Size: 129.0 MB (129010366 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:996781d6304ab92c67a9228d5c68c6829dbd06ae8f0f4acb8a00326a1aab6c51`  
-		Last Modified: Sun, 28 Mar 2021 00:20:24 GMT  
-		Size: 155.0 B  
+	-	`sha256:26b15789ebb1ee2fa09a78a3c616664936f679eafbf8fd14b07094bf285267a4`  
+		Last Modified: Wed, 31 Mar 2021 20:21:12 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1.16.2-buster` - linux; arm variant v5
@@ -17243,7 +17243,7 @@ WORKDIR C:\gopath
 ## `golang:1.16.2-stretch`
 
 ```console
-$ docker pull golang@sha256:fd33ea27ab2941b88f518d96aab76aa40ec6e32c9d619f0b832072ebfec2d0e4
+$ docker pull golang@sha256:1bf98b13aa56635f0a69bdb9bc35cba11a672fd65f7d429dfdeb721b0d9dbc16
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -17256,72 +17256,72 @@ $ docker pull golang@sha256:fd33ea27ab2941b88f518d96aab76aa40ec6e32c9d619f0b8320
 ### `golang:1.16.2-stretch` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:9ebb8e1de83d2095f9c840eece75af6146e8754b17b50803ff57770deaf0b2b1
+$ docker pull golang@sha256:b115ccd7afca7d356cdf85196351f801cf3615f48a682a186df09e680b314397
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **297.6 MB (297635345 bytes)**  
+-	Total Size: **297.6 MB (297635779 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:33056ca8809bab51fa6f3d2afb1282c3fc97d683990e52d979bd70a456d14cbc`
+-	Image ID: `sha256:ad59aded19e0b9361014c0d0980cd524931cdbc7f0498ee3eb4fd9c1d22d2882`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Fri, 26 Mar 2021 15:23:17 GMT
-ADD file:f7a6b2066de76eb559d8ab8bf8972d519c3b4dcafc62e46253227559091f7c8f in / 
-# Fri, 26 Mar 2021 15:23:18 GMT
+# Tue, 30 Mar 2021 21:50:43 GMT
+ADD file:e52290391b221e1a4e52cf4e41ffe7e14f162475964fa01638e03b3ead673ba1 in / 
+# Tue, 30 Mar 2021 21:50:43 GMT
 CMD ["bash"]
-# Sat, 27 Mar 2021 05:57:11 GMT
+# Tue, 30 Mar 2021 23:08:00 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		apt-transport-https 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
-# Sat, 27 Mar 2021 05:57:18 GMT
+# Tue, 30 Mar 2021 23:08:09 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Sat, 27 Mar 2021 05:57:45 GMT
+# Tue, 30 Mar 2021 23:08:42 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		bzr 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:35 GMT
+# Wed, 31 Mar 2021 20:12:26 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:35 GMT
+# Wed, 31 Mar 2021 20:12:26 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:18:35 GMT
+# Wed, 31 Mar 2021 20:12:27 GMT
 ENV GOLANG_VERSION=1.16.2
-# Sun, 28 Mar 2021 00:18:52 GMT
+# Wed, 31 Mar 2021 20:12:39 GMT
 RUN set -eux; 		dpkgArch="$(dpkg --print-architecture)"; 	url=; 	case "${dpkgArch##*-}" in 		'amd64') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-amd64.tar.gz'; 			sha256='542e936b19542e62679766194364f45141fde55169db2d8d01046555ca9eb4b8'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-armv6l.tar.gz'; 			sha256='49765b1ac36f77a84ce8186b08713c3811db5426e4ecfaa4344453e12d756c22'; 			;; 		'arm64') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-arm64.tar.gz'; 			sha256='6924601d998a0917694fd14261347e3798bd2ad6b13c4d7f2edd70c9d57f62ab'; 			;; 		'i386') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-386.tar.gz'; 			sha256='3638abf8e8272a4ddc3e5189487c932d680abfb151e2c48ae18c9a04a90ded73'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-ppc64le.tar.gz'; 			sha256='e1dcc9b460b2d522added8dfce764a06c5e455c8047b45b67a06f7f5ab19c4e0'; 			;; 		's390x') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-s390x.tar.gz'; 			sha256='a686743b0803d54e051756ce946d9d72436f23e9f815739c947934e0052bf9ff'; 			;; 		*) echo >&2 "error: unsupported architecture '$dpkgArch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 		sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		echo >&2; 		echo >&2 "warning: current architecture ($dpkgArch) does not have a corresponding Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc" --progress=dot:giga; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum --strict --check -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends golang-go; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				go install std; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 		; 	fi; 		go version
-# Sun, 28 Mar 2021 00:18:53 GMT
+# Wed, 31 Mar 2021 20:12:40 GMT
 ENV GOPATH=/go
-# Sun, 28 Mar 2021 00:18:54 GMT
+# Wed, 31 Mar 2021 20:12:40 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:18:55 GMT
+# Wed, 31 Mar 2021 20:12:41 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Sun, 28 Mar 2021 00:18:55 GMT
+# Wed, 31 Mar 2021 20:12:41 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:1dfe7e1e1bffb84b5330514880896199259b01ebe2b9d531dd88f7ce7db8cd18`  
-		Last Modified: Fri, 26 Mar 2021 15:32:18 GMT  
-		Size: 45.4 MB (45379513 bytes)  
+	-	`sha256:00168f89dbe8f3c9985e536784c27517f6cc35ea56263469449a6b73e0bed595`  
+		Last Modified: Tue, 30 Mar 2021 21:56:37 GMT  
+		Size: 45.4 MB (45379949 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df86b11a61e4b8cbb37a4a570baf51ae6bbc8cbf231f56401403e21dea70144d`  
-		Last Modified: Sat, 27 Mar 2021 06:06:53 GMT  
-		Size: 11.3 MB (11286512 bytes)  
+	-	`sha256:da61ad49fa9961d6dfe53dc067fd690133f205498e8045e8f7ef6b9da0d42bd2`  
+		Last Modified: Tue, 30 Mar 2021 23:17:25 GMT  
+		Size: 11.3 MB (11286658 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:006eb4a69e602dcb61f4680d7e4a0d4853902062ab1230263e33125ae86b2700`  
-		Last Modified: Sat, 27 Mar 2021 06:06:52 GMT  
-		Size: 4.3 MB (4342442 bytes)  
+	-	`sha256:af62e04c0f85ed10801df4314d8cb9ba5e6c391f6a3c1db1080a0a78c8d4ed9d`  
+		Last Modified: Tue, 30 Mar 2021 23:17:23 GMT  
+		Size: 4.3 MB (4342466 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6c1c07de8af095e25b339c838c0a02c16fda79738e6c03e266875a048b28222f`  
-		Last Modified: Sat, 27 Mar 2021 06:07:16 GMT  
-		Size: 49.8 MB (49787143 bytes)  
+	-	`sha256:aae835e2c68ef1d48a4ffef72547a79926019aec6a2bbeb5372f1e832ef453dd`  
+		Last Modified: Tue, 30 Mar 2021 23:17:49 GMT  
+		Size: 49.8 MB (49787075 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6944064dc3f76beb34bb375de67aee01c0cae51b0932b24877292f47eb248a50`  
-		Last Modified: Sun, 28 Mar 2021 00:21:12 GMT  
-		Size: 57.8 MB (57829197 bytes)  
+	-	`sha256:3c53dd465b309b4f16b31d4c5fc9821fc17e70e316c32456d7a0e9ac5a953f37`  
+		Last Modified: Wed, 31 Mar 2021 20:22:03 GMT  
+		Size: 57.8 MB (57829044 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:12a5a22b04dfb4eccaff81c96a5d652de8ccf86b701a38017904ea6854988b63`  
-		Last Modified: Sun, 28 Mar 2021 00:21:22 GMT  
-		Size: 129.0 MB (129010382 bytes)  
+	-	`sha256:9a5819b2b790ab264aa3dd395d6d8cded7b56b85f9470682ac226f89927a1078`  
+		Last Modified: Wed, 31 Mar 2021 20:22:18 GMT  
+		Size: 129.0 MB (129010431 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a42f7444dde50000bec9c4e20ad0518840c29de157d2c75d0913e2c999991999`  
-		Last Modified: Sun, 28 Mar 2021 00:21:02 GMT  
+	-	`sha256:9d7fa061e36ba9a055069006d99dfeea27fb3174a09a0bdb4ee47dd31d2f6033`  
+		Last Modified: Wed, 31 Mar 2021 20:21:52 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -17957,7 +17957,7 @@ WORKDIR C:\gopath
 ## `golang:alpine`
 
 ```console
-$ docker pull golang@sha256:52dbfc81ec12df22e2ab1e7c9c4f4ee3dff73514e56a54924714d29ac03ff791
+$ docker pull golang@sha256:ae07fbf6c791da6ba6f16b58b2b60f1b7c0c6b478238e7f3784c42d6eeb0d0ad
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -17973,121 +17973,121 @@ $ docker pull golang@sha256:52dbfc81ec12df22e2ab1e7c9c4f4ee3dff73514e56a54924714
 ### `golang:alpine` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:4aee936562c29840e20ddb14bdbe028f7a7f376f2932096f5bfcc1931ec9f7c1
+$ docker pull golang@sha256:4891e17c9d2de88ebd1d9421919539226a76773d6ad1b4ac7376b286039c9be2
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **108.8 MB (108786138 bytes)**  
+-	Total Size: **108.8 MB (108786071 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5e238f856b8c39829309b40af496f71cfcf6e406ac005b1bbd1de9c50b2ed275`
+-	Image ID: `sha256:0fa0b8680167825684c347a60a168e134b449ba1cdef59c88f69223f716bccd2`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:19:32 GMT
-ADD file:6b081cabb4b256ee07587d249c4989b5b679375529542b81550a65b6f19f274e in / 
-# Thu, 25 Mar 2021 22:19:32 GMT
+# Wed, 31 Mar 2021 20:10:06 GMT
+ADD file:7119167b56ff1228b2fb639c768955ce9db7a999cd947179240b216dfa5ccbb9 in / 
+# Wed, 31 Mar 2021 20:10:06 GMT
 CMD ["/bin/sh"]
-# Fri, 26 Mar 2021 04:48:00 GMT
+# Wed, 31 Mar 2021 20:12:47 GMT
 RUN apk add --no-cache 		ca-certificates
-# Fri, 26 Mar 2021 04:48:01 GMT
+# Wed, 31 Mar 2021 20:12:48 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Fri, 26 Mar 2021 04:48:01 GMT
+# Wed, 31 Mar 2021 20:12:48 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:48:01 GMT
+# Wed, 31 Mar 2021 20:12:48 GMT
 ENV GOLANG_VERSION=1.16.2
-# Fri, 26 Mar 2021 04:49:57 GMT
+# Wed, 31 Mar 2021 20:14:27 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Fri, 26 Mar 2021 04:49:57 GMT
+# Wed, 31 Mar 2021 20:14:28 GMT
 ENV GOPATH=/go
-# Fri, 26 Mar 2021 04:49:57 GMT
+# Wed, 31 Mar 2021 20:14:28 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:49:59 GMT
+# Wed, 31 Mar 2021 20:14:29 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Fri, 26 Mar 2021 04:49:59 GMT
+# Wed, 31 Mar 2021 20:14:29 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:9aae54b2144e5b2b00c610f8805128f4f86822e1e52d3714c463744a431f0f4a`  
-		Last Modified: Thu, 25 Mar 2021 22:20:18 GMT  
-		Size: 2.8 MB (2811681 bytes)  
+	-	`sha256:ca3cd42a7c9525f6ce3d64c1a70982613a8235f0cc057ec9244052921853ef15`  
+		Last Modified: Wed, 31 Mar 2021 20:10:46 GMT  
+		Size: 2.8 MB (2811947 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9f73940e57d360e45588f2a826fa219a35089234eadac5c3e5d54dfac02c0a7d`  
-		Last Modified: Fri, 26 Mar 2021 04:59:58 GMT  
-		Size: 281.3 KB (281262 bytes)  
+	-	`sha256:dbcca316e5c32a932c66cfa46736e3998e69caeb857e570566ec63ab0377044a`  
+		Last Modified: Wed, 31 Mar 2021 20:22:40 GMT  
+		Size: 281.3 KB (281274 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ff472ba555d2504b7af85b2deac3b22d39a3dfa1510a54701764c4afd7bc7c43`  
-		Last Modified: Fri, 26 Mar 2021 04:59:59 GMT  
-		Size: 154.0 B  
+	-	`sha256:b65b403d39c8273b612240b85430a925f80b8b5719979c21e1387246faa62bd3`  
+		Last Modified: Wed, 31 Mar 2021 20:22:40 GMT  
+		Size: 155.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e4c1c61433975e8c3140ea23e09f8e224f43040721f5ca051e74120c8acb8631`  
-		Last Modified: Fri, 26 Mar 2021 05:00:17 GMT  
-		Size: 105.7 MB (105692885 bytes)  
+	-	`sha256:0d70e27e35ebcf8beb7c4148da1ce06b0c6a2f74b29fdd43ba616133688f5a6b`  
+		Last Modified: Wed, 31 Mar 2021 20:22:56 GMT  
+		Size: 105.7 MB (105692539 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ef687b4c646763d350c57c7a1405c68f0e9c4ee361dfa7b700103e0fc7a00111`  
-		Last Modified: Fri, 26 Mar 2021 04:59:58 GMT  
+	-	`sha256:a8bdf7aa1b335f83aa7f89629118092911e4fd5282650af173dcf08de463314b`  
+		Last Modified: Wed, 31 Mar 2021 20:22:40 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:alpine` - linux; arm variant v6
 
 ```console
-$ docker pull golang@sha256:4581f323d2873e87c832fc181893d3faba5b1a4ad3850bca3ddf00c07f314673
+$ docker pull golang@sha256:f88a71a15bad8bd35f7a34beedd41fb5b1dacd66b7de65debd05c581d0bc5a6d
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **104.8 MB (104799033 bytes)**  
+-	Total Size: **104.8 MB (104799871 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3eb354b806d2d61481eda1ad01a705bead65acb2792492a16a69ab14a09b9c7b`
+-	Image ID: `sha256:c29d2c7b4afe4a2c6aeee33a4bcf0743e200bae254c88dede0ff53c47a3e2b66`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:50:09 GMT
-ADD file:ca4136238cb9a01d079efd129bccd1470945d7d4320da61373af90645a4b1146 in / 
-# Thu, 25 Mar 2021 22:50:28 GMT
+# Wed, 31 Mar 2021 17:18:49 GMT
+ADD file:988879d74f643b89539e5a0b6d74221621f19f4f87f722614addadc46ce47200 in / 
+# Wed, 31 Mar 2021 17:18:50 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:27:14 GMT
+# Wed, 31 Mar 2021 18:28:21 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:27:20 GMT
+# Wed, 31 Mar 2021 18:28:24 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:27:23 GMT
+# Wed, 31 Mar 2021 18:28:25 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:27:25 GMT
+# Wed, 31 Mar 2021 18:28:25 GMT
 ENV GOLANG_VERSION=1.16.2
-# Thu, 25 Mar 2021 23:30:58 GMT
+# Wed, 31 Mar 2021 18:44:29 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:31:10 GMT
+# Wed, 31 Mar 2021 18:44:47 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:31:13 GMT
+# Wed, 31 Mar 2021 18:44:50 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:31:19 GMT
+# Wed, 31 Mar 2021 18:44:52 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:31:22 GMT
+# Wed, 31 Mar 2021 18:44:54 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:bca6a70a54896d072b6919d2ae18d3ef685bc7aed783731f68a4adac0fb93d52`  
-		Last Modified: Thu, 25 Mar 2021 22:54:24 GMT  
-		Size: 2.6 MB (2622062 bytes)  
+	-	`sha256:bb87125c6ee1ce30c6b33d2c96a9fbe46da4a290f7cb1dd73fd62d4e06503699`  
+		Last Modified: Wed, 31 Mar 2021 17:19:55 GMT  
+		Size: 2.6 MB (2622116 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4ea05802fe691d87fddb107a6821e75df7c3f57bc6cb2e90cddd4b45a233d0f0`  
-		Last Modified: Thu, 25 Mar 2021 23:44:44 GMT  
-		Size: 281.4 KB (281380 bytes)  
+	-	`sha256:f0eb8dc77a7b333e6a40d00034c58c9612b3c2a7d33ea6c7dbf62e416baac7ea`  
+		Last Modified: Wed, 31 Mar 2021 19:22:13 GMT  
+		Size: 281.4 KB (281371 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1d164f70ad230af42bb09ffd3d6494a6bb012bc5731d7fbd2b3e1c3bcec9c4f6`  
-		Last Modified: Thu, 25 Mar 2021 23:44:44 GMT  
+	-	`sha256:0ec5882b9b78ec27dce64542bb1bd7c56d4913cde0d929356e9353ea6caac515`  
+		Last Modified: Wed, 31 Mar 2021 19:22:13 GMT  
 		Size: 154.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2622573d65ac2b2f3da8dcf9071b0b381b5aa588c86752685ccd5d4b4174d753`  
-		Last Modified: Thu, 25 Mar 2021 23:45:33 GMT  
-		Size: 101.9 MB (101895281 bytes)  
+	-	`sha256:a02b4132f4d532190e4bab920cfc597ca4d398959a8793bf22e055a54a230dd9`  
+		Last Modified: Wed, 31 Mar 2021 19:22:50 GMT  
+		Size: 101.9 MB (101896075 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:944207996fc4aeb8e8071cdb07931a55bf81ec3d36df949c73bf70becdc05bf1`  
-		Last Modified: Thu, 25 Mar 2021 23:44:44 GMT  
-		Size: 156.0 B  
+	-	`sha256:3ac885759424a47ac2b08ab253206844465a38311eb822180b7167f46dabc078`  
+		Last Modified: Wed, 31 Mar 2021 19:22:13 GMT  
+		Size: 155.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:alpine` - linux; arm variant v7
@@ -18333,67 +18333,67 @@ WORKDIR /go
 ### `golang:alpine` - linux; s390x
 
 ```console
-$ docker pull golang@sha256:4c352be0f34f970f599e9bfc918e7e143c9e449bf1011b4db242960fa3b0ce29
+$ docker pull golang@sha256:8c4e3b53cda6084d770562ad07862f14e46dbe320d25e134df885da22b5fc73a
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **107.7 MB (107672720 bytes)**  
+-	Total Size: **107.7 MB (107671895 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:14b21f09f9677a233b9aa93c45819a64db388ddddc009f0af5a3291737dea67c`
+-	Image ID: `sha256:cfb7100ad492885a8b3136c41523fdb186f32c64072e1f09a3153db1d730add0`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:41:34 GMT
-ADD file:44e2c7cd992fc98df702bef7022e0f8c4ee86312c311ab5ae185fd5fc878edf9 in / 
-# Thu, 25 Mar 2021 22:41:34 GMT
+# Wed, 31 Mar 2021 17:14:58 GMT
+ADD file:3f5fe04867af3c9f2cfc5b315d97097145ae11343399985386321a8db21d7786 in / 
+# Wed, 31 Mar 2021 17:14:58 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:18:24 GMT
+# Wed, 31 Mar 2021 18:32:50 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:18:24 GMT
+# Wed, 31 Mar 2021 18:32:51 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:18:25 GMT
+# Wed, 31 Mar 2021 18:32:51 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:18:25 GMT
+# Wed, 31 Mar 2021 18:32:51 GMT
 ENV GOLANG_VERSION=1.16.2
-# Thu, 25 Mar 2021 23:20:28 GMT
+# Wed, 31 Mar 2021 18:34:22 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:20:33 GMT
+# Wed, 31 Mar 2021 18:34:27 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:20:33 GMT
+# Wed, 31 Mar 2021 18:34:27 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:20:34 GMT
+# Wed, 31 Mar 2021 18:34:28 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:20:34 GMT
+# Wed, 31 Mar 2021 18:34:28 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:a266c0a9554add02ea09a46b8584cb36b7f606b7b4398b9ad7369f899f8360df`  
-		Last Modified: Thu, 25 Mar 2021 22:42:07 GMT  
-		Size: 2.6 MB (2602387 bytes)  
+	-	`sha256:1d4058bbeedf5296bcaf5ae8f37c8cd58152acad3ec45a536e08b83f5d3abe83`  
+		Last Modified: Wed, 31 Mar 2021 17:15:36 GMT  
+		Size: 2.6 MB (2602591 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5f7a13aca3904b3b663e1f8170de727ebe3a4616cb36dcadfd015e2e663c24bb`  
-		Last Modified: Thu, 25 Mar 2021 23:26:06 GMT  
-		Size: 281.7 KB (281700 bytes)  
+	-	`sha256:27c9dd6f50e848494b74d743acede663c4566d6c904f83c807df6ed135c0bac2`  
+		Last Modified: Wed, 31 Mar 2021 18:40:22 GMT  
+		Size: 281.7 KB (281696 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0511116a12ff773aa9cf992f6fa81a1e4a4404f1ba284f6526e7439c07e3a651`  
-		Last Modified: Thu, 25 Mar 2021 23:26:06 GMT  
-		Size: 154.0 B  
+	-	`sha256:55a3302e682073b38a23dae31007fd1b72ed66261ca926cc100f29e177732a0a`  
+		Last Modified: Wed, 31 Mar 2021 18:40:25 GMT  
+		Size: 153.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c02165d3cb72f8bcf539749e1ddc8cfa7ea879be0c3c874454f40917d73c1b75`  
-		Last Modified: Thu, 25 Mar 2021 23:26:18 GMT  
-		Size: 104.8 MB (104788324 bytes)  
+	-	`sha256:bd4a9647efdfd2fe83835843ee761ff6c800604a0a2514db1cc014e18fa55664`  
+		Last Modified: Wed, 31 Mar 2021 18:40:34 GMT  
+		Size: 104.8 MB (104787299 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dde3ae89753fd12e06acc2bdf800133400dfd5d70ce659ed027e5a67e6eccbd3`  
-		Last Modified: Thu, 25 Mar 2021 23:26:06 GMT  
-		Size: 155.0 B  
+	-	`sha256:af5d3e1bba60e9d306da5ecd18bbbf586943da4bdc6d87c1c20338b0371f3552`  
+		Last Modified: Wed, 31 Mar 2021 18:40:23 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:alpine3.12`
 
 ```console
-$ docker pull golang@sha256:561ee1bc422ca797037621cc563e93cab4f1d08f74622c6de4bcbc610e2939ef
+$ docker pull golang@sha256:2b00d0c0560d9c294ef2ae13b58b8a76b9fbbaeee3243edecfa6d1320ed39533
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -18409,120 +18409,120 @@ $ docker pull golang@sha256:561ee1bc422ca797037621cc563e93cab4f1d08f74622c6de4bc
 ### `golang:alpine3.12` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:09fa448029d63639e1097fd3cc3dc053c6e9bb739353f3eed4dc0f27503e397d
+$ docker pull golang@sha256:192f68738589059dad4cb032b386678b3270bd2132db329791f4f78efe1642ea
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **108.8 MB (108808237 bytes)**  
+-	Total Size: **108.8 MB (108808450 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7352b1cc5adbfd2878d91c0618249d10f58d551f235fae3f2271feaaa44e54cd`
+-	Image ID: `sha256:2a057958e00857b4458bfcf9ec1a0f23911501d424ebd9c09fd0460b9bf0da13`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:19:38 GMT
-ADD file:b2c067f4304d00c91fc9fd92f2e58853412cc705dfda4d1cf658fab965d5802c in / 
-# Thu, 25 Mar 2021 22:19:38 GMT
+# Wed, 31 Mar 2021 20:10:13 GMT
+ADD file:f77db8e5b937d8ebb7e254eccd4d311798ea9f4dd5081ea2a7e2b1d3790300c2 in / 
+# Wed, 31 Mar 2021 20:10:13 GMT
 CMD ["/bin/sh"]
-# Fri, 26 Mar 2021 04:50:11 GMT
+# Wed, 31 Mar 2021 20:14:43 GMT
 RUN apk add --no-cache 		ca-certificates
-# Fri, 26 Mar 2021 04:50:12 GMT
+# Wed, 31 Mar 2021 20:14:44 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Fri, 26 Mar 2021 04:50:12 GMT
+# Wed, 31 Mar 2021 20:14:44 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:50:12 GMT
+# Wed, 31 Mar 2021 20:14:44 GMT
 ENV GOLANG_VERSION=1.16.2
-# Fri, 26 Mar 2021 04:53:15 GMT
+# Wed, 31 Mar 2021 20:16:22 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Fri, 26 Mar 2021 04:53:16 GMT
+# Wed, 31 Mar 2021 20:16:23 GMT
 ENV GOPATH=/go
-# Fri, 26 Mar 2021 04:53:17 GMT
+# Wed, 31 Mar 2021 20:16:24 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:53:18 GMT
+# Wed, 31 Mar 2021 20:16:25 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Fri, 26 Mar 2021 04:53:19 GMT
+# Wed, 31 Mar 2021 20:16:25 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:22599d3e9e25e799b87521b94e20d20a601ffad16cf676274fdf94b089e4b979`  
-		Last Modified: Thu, 25 Mar 2021 22:20:35 GMT  
-		Size: 2.8 MB (2799762 bytes)  
+	-	`sha256:532819f3e44cebad88c82f5393801acb876b7a61d36b84bce646561789bb2018`  
+		Last Modified: Wed, 31 Mar 2021 20:11:03 GMT  
+		Size: 2.8 MB (2799712 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:994b649ee80af61fec0aab2113abbcce972dced9ddb604f8e2721a943dfca8f3`  
-		Last Modified: Fri, 26 Mar 2021 05:00:47 GMT  
-		Size: 280.9 KB (280878 bytes)  
+	-	`sha256:93cbbf235a55c104bafc6765f3c92a36489a596041551360d566152f2af01b59`  
+		Last Modified: Wed, 31 Mar 2021 20:22:25 GMT  
+		Size: 280.9 KB (280881 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dae587f6cd93b42cb17ce4c64b07191a204f7adde25a351026cc7cb254d28096`  
-		Last Modified: Fri, 26 Mar 2021 05:00:47 GMT  
-		Size: 152.0 B  
+	-	`sha256:e13f184a059628efa0b05f924f5b1e223377ebd57cdec0597912aabcd4b2129b`  
+		Last Modified: Wed, 31 Mar 2021 20:23:29 GMT  
+		Size: 153.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:aafd978e81e70299617e9a17892cd9a9d4f7dc84047441436c96f989cfe5c5cb`  
-		Last Modified: Fri, 26 Mar 2021 05:01:09 GMT  
-		Size: 105.7 MB (105727289 bytes)  
+	-	`sha256:695e77d5e927c2c1fe01389a3296f98344eb8b879e021a23ea7b8112b26d85c4`  
+		Last Modified: Wed, 31 Mar 2021 20:23:52 GMT  
+		Size: 105.7 MB (105727548 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4e86f102f01f6c8b27a4a8f10f5c23dda108131d0a445d1cd9802f32ccbb1012`  
-		Last Modified: Fri, 26 Mar 2021 05:00:46 GMT  
+	-	`sha256:0c328638b4633f6d3d893398135b3ace48e3677af7a11714949e3eea543cc5fe`  
+		Last Modified: Wed, 31 Mar 2021 20:23:28 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:alpine3.12` - linux; arm variant v6
 
 ```console
-$ docker pull golang@sha256:648bdf6a519a1a104b50a7366a09c6b37bb12facf572f525951d0563d070df71
+$ docker pull golang@sha256:d6166c33d95f84d9d59dc71fe8ddc31fb464d4faf647c8531aa9d211fbdcd738
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **104.8 MB (104808565 bytes)**  
+-	Total Size: **104.8 MB (104807795 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:8ee8657e3509984061a9c4e96771256644bd31e2f7e3e6f9efbf813b4370d1ae`
+-	Image ID: `sha256:4f53734f2b88f9cbb49d827023d5f83812713cf89f357745dc17c6ca29f0f987`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:50:43 GMT
-ADD file:65a3462a527f49c8c625927be6b8b57b4257c8cc37d685055a1f183d76c68920 in / 
-# Thu, 25 Mar 2021 22:50:47 GMT
+# Wed, 31 Mar 2021 17:19:11 GMT
+ADD file:00ac3d0df16779e7564cda9cbf94eef90ffa8043778a867272ff0135a1fb537f in / 
+# Wed, 31 Mar 2021 17:19:12 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:31:38 GMT
+# Wed, 31 Mar 2021 18:45:17 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:31:44 GMT
+# Wed, 31 Mar 2021 18:45:20 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:31:46 GMT
+# Wed, 31 Mar 2021 18:45:21 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:31:48 GMT
+# Wed, 31 Mar 2021 18:45:22 GMT
 ENV GOLANG_VERSION=1.16.2
-# Thu, 25 Mar 2021 23:35:13 GMT
+# Wed, 31 Mar 2021 19:00:13 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:35:18 GMT
+# Wed, 31 Mar 2021 19:00:20 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:35:20 GMT
+# Wed, 31 Mar 2021 19:00:21 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:35:26 GMT
+# Wed, 31 Mar 2021 19:00:24 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:35:28 GMT
+# Wed, 31 Mar 2021 19:00:25 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:181a1446f0acaaa0871cec07aba4f733041f2d80ffbe01b19df43fe005df29f3`  
-		Last Modified: Thu, 25 Mar 2021 22:55:06 GMT  
-		Size: 2.6 MB (2604815 bytes)  
+	-	`sha256:66e54586dae0889b30da12f7a66838d9b86511b58696c83c3b9166ff1a534bbe`  
+		Last Modified: Wed, 31 Mar 2021 17:20:05 GMT  
+		Size: 2.6 MB (2604658 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:045419b8095ca1008ec369ea0965cfdae0dd0c90bea499bd8b42e5e45ab92cc5`  
-		Last Modified: Thu, 25 Mar 2021 23:46:09 GMT  
-		Size: 281.0 KB (280982 bytes)  
+	-	`sha256:0aa6796eed51884cd0436f134281af9489342ecf256aec0b31ca83f254ccd0d1`  
+		Last Modified: Wed, 31 Mar 2021 19:23:16 GMT  
+		Size: 281.0 KB (280979 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4ddbec85c64c1987da76dd94cb01590f1166da94443b5fa33ea1f633108a00fb`  
-		Last Modified: Thu, 25 Mar 2021 23:46:09 GMT  
-		Size: 154.0 B  
+	-	`sha256:1c043dc86373f816c29db582d9bddada9a00eeb3812a357a2dfd8e3f68d9a413`  
+		Last Modified: Wed, 31 Mar 2021 19:23:15 GMT  
+		Size: 153.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df1a3afcb046023a49c401c5e2308e16ee27a898f9f3387da58bcfa0ef11053a`  
-		Last Modified: Thu, 25 Mar 2021 23:46:42 GMT  
-		Size: 101.9 MB (101922458 bytes)  
+	-	`sha256:82c0b57107c7cd93ef0603a634622d63dd0585336bd5a2b844cfe780e60f8fab`  
+		Last Modified: Wed, 31 Mar 2021 19:23:47 GMT  
+		Size: 101.9 MB (101921849 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:647725af6164f31c936582ee2a2e74167e4c2c5d8cbacbfb7f8fcb4d9fac47cd`  
-		Last Modified: Thu, 25 Mar 2021 23:46:09 GMT  
+	-	`sha256:f3f763024bc32463f49f970db09f1cfa36ad87c9ac838d2b28ad36cda03ba923`  
+		Last Modified: Wed, 31 Mar 2021 19:23:15 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -18769,67 +18769,67 @@ WORKDIR /go
 ### `golang:alpine3.12` - linux; s390x
 
 ```console
-$ docker pull golang@sha256:218ee5dc5ff4546d9be56ff3f1bfcdb4164833d5ecac5ca8d5639c8d2561c869
+$ docker pull golang@sha256:7e47b0232f4073e1c855b37041c14354fc7e2c08fbf5a6a17cb02b34ec8c8aad
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **107.7 MB (107660727 bytes)**  
+-	Total Size: **107.7 MB (107660586 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:83387ea1e0de2529a16511f814924b896e0bc245aa1c92531275a0f76a9a2b35`
+-	Image ID: `sha256:ad37b5f0ed4fa5b570c4aaac6694b6395933363eb43ba6b0f860d8b0d377a495`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:41:39 GMT
-ADD file:12766b6fe7c37292d91bd1469b27dc9fb362e3109e9b3f377cff030bc0ca5386 in / 
-# Thu, 25 Mar 2021 22:41:39 GMT
+# Wed, 31 Mar 2021 17:15:04 GMT
+ADD file:1f37b92ea1f573c4810b1d056dc4880cf4035e143451d9b2b76fac1e3b462248 in / 
+# Wed, 31 Mar 2021 17:15:04 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:20:43 GMT
+# Wed, 31 Mar 2021 18:34:37 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:20:44 GMT
+# Wed, 31 Mar 2021 18:34:38 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:20:44 GMT
+# Wed, 31 Mar 2021 18:34:38 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:20:44 GMT
+# Wed, 31 Mar 2021 18:34:39 GMT
 ENV GOLANG_VERSION=1.16.2
-# Thu, 25 Mar 2021 23:22:10 GMT
+# Wed, 31 Mar 2021 18:36:08 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:22:15 GMT
+# Wed, 31 Mar 2021 18:36:14 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:22:15 GMT
+# Wed, 31 Mar 2021 18:36:14 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:22:16 GMT
+# Wed, 31 Mar 2021 18:36:15 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:22:17 GMT
+# Wed, 31 Mar 2021 18:36:15 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:be2cdf7cbb6a1aec476a957daaae210624b2b112c20f27f55bbcf2bdc74db281`  
-		Last Modified: Thu, 25 Mar 2021 22:42:19 GMT  
-		Size: 2.6 MB (2567457 bytes)  
+	-	`sha256:38ca5430c9af12b6b6dee7c10eb6b1eb0e4eb4f5f02a97890579c4b049d00233`  
+		Last Modified: Wed, 31 Mar 2021 17:15:46 GMT  
+		Size: 2.6 MB (2567453 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:aaddff0ad4814b86163108d94e8b39f43a463cb6c267218cec9cdeffc540308a`  
-		Last Modified: Thu, 25 Mar 2021 23:26:32 GMT  
+	-	`sha256:1dcb296d6fc71cd9057e3d03d0ea4ebe30a620f7c6ce57eb78f4c137e77a9a47`  
+		Last Modified: Wed, 31 Mar 2021 18:40:52 GMT  
 		Size: 281.4 KB (281355 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1b123ead7d9076567abb17998ba938b85be4f09afb27464b9c66734b580e1d5a`  
-		Last Modified: Thu, 25 Mar 2021 23:26:32 GMT  
+	-	`sha256:5783b7db1c405d51f50a261ae252c97941c44ffeb93cb10c2e2bdd458296774a`  
+		Last Modified: Wed, 31 Mar 2021 18:40:52 GMT  
 		Size: 153.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:127148b5f4ad531f5e05093db97daeb0a3cc2fb7fb77b5c1938e3cd239d79fec`  
-		Last Modified: Thu, 25 Mar 2021 23:26:44 GMT  
-		Size: 104.8 MB (104811606 bytes)  
+	-	`sha256:688bee172ee7101a6933e6df21647e155e8aee9549b551ffd448ed54e19b8e7a`  
+		Last Modified: Wed, 31 Mar 2021 18:41:07 GMT  
+		Size: 104.8 MB (104811470 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:89781a746445f6113e018850bb62a631f1b5a225d0166a2c697551a93c8d6fd6`  
-		Last Modified: Thu, 25 Mar 2021 23:26:32 GMT  
-		Size: 156.0 B  
+	-	`sha256:a3f579176032da1bacfaea3c32010b4673f4230534f6740d89bece53b21515d5`  
+		Last Modified: Wed, 31 Mar 2021 18:40:52 GMT  
+		Size: 155.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:alpine3.13`
 
 ```console
-$ docker pull golang@sha256:52dbfc81ec12df22e2ab1e7c9c4f4ee3dff73514e56a54924714d29ac03ff791
+$ docker pull golang@sha256:ae07fbf6c791da6ba6f16b58b2b60f1b7c0c6b478238e7f3784c42d6eeb0d0ad
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -18845,121 +18845,121 @@ $ docker pull golang@sha256:52dbfc81ec12df22e2ab1e7c9c4f4ee3dff73514e56a54924714
 ### `golang:alpine3.13` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:4aee936562c29840e20ddb14bdbe028f7a7f376f2932096f5bfcc1931ec9f7c1
+$ docker pull golang@sha256:4891e17c9d2de88ebd1d9421919539226a76773d6ad1b4ac7376b286039c9be2
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **108.8 MB (108786138 bytes)**  
+-	Total Size: **108.8 MB (108786071 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5e238f856b8c39829309b40af496f71cfcf6e406ac005b1bbd1de9c50b2ed275`
+-	Image ID: `sha256:0fa0b8680167825684c347a60a168e134b449ba1cdef59c88f69223f716bccd2`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:19:32 GMT
-ADD file:6b081cabb4b256ee07587d249c4989b5b679375529542b81550a65b6f19f274e in / 
-# Thu, 25 Mar 2021 22:19:32 GMT
+# Wed, 31 Mar 2021 20:10:06 GMT
+ADD file:7119167b56ff1228b2fb639c768955ce9db7a999cd947179240b216dfa5ccbb9 in / 
+# Wed, 31 Mar 2021 20:10:06 GMT
 CMD ["/bin/sh"]
-# Fri, 26 Mar 2021 04:48:00 GMT
+# Wed, 31 Mar 2021 20:12:47 GMT
 RUN apk add --no-cache 		ca-certificates
-# Fri, 26 Mar 2021 04:48:01 GMT
+# Wed, 31 Mar 2021 20:12:48 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Fri, 26 Mar 2021 04:48:01 GMT
+# Wed, 31 Mar 2021 20:12:48 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:48:01 GMT
+# Wed, 31 Mar 2021 20:12:48 GMT
 ENV GOLANG_VERSION=1.16.2
-# Fri, 26 Mar 2021 04:49:57 GMT
+# Wed, 31 Mar 2021 20:14:27 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Fri, 26 Mar 2021 04:49:57 GMT
+# Wed, 31 Mar 2021 20:14:28 GMT
 ENV GOPATH=/go
-# Fri, 26 Mar 2021 04:49:57 GMT
+# Wed, 31 Mar 2021 20:14:28 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 26 Mar 2021 04:49:59 GMT
+# Wed, 31 Mar 2021 20:14:29 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Fri, 26 Mar 2021 04:49:59 GMT
+# Wed, 31 Mar 2021 20:14:29 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:9aae54b2144e5b2b00c610f8805128f4f86822e1e52d3714c463744a431f0f4a`  
-		Last Modified: Thu, 25 Mar 2021 22:20:18 GMT  
-		Size: 2.8 MB (2811681 bytes)  
+	-	`sha256:ca3cd42a7c9525f6ce3d64c1a70982613a8235f0cc057ec9244052921853ef15`  
+		Last Modified: Wed, 31 Mar 2021 20:10:46 GMT  
+		Size: 2.8 MB (2811947 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9f73940e57d360e45588f2a826fa219a35089234eadac5c3e5d54dfac02c0a7d`  
-		Last Modified: Fri, 26 Mar 2021 04:59:58 GMT  
-		Size: 281.3 KB (281262 bytes)  
+	-	`sha256:dbcca316e5c32a932c66cfa46736e3998e69caeb857e570566ec63ab0377044a`  
+		Last Modified: Wed, 31 Mar 2021 20:22:40 GMT  
+		Size: 281.3 KB (281274 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ff472ba555d2504b7af85b2deac3b22d39a3dfa1510a54701764c4afd7bc7c43`  
-		Last Modified: Fri, 26 Mar 2021 04:59:59 GMT  
-		Size: 154.0 B  
+	-	`sha256:b65b403d39c8273b612240b85430a925f80b8b5719979c21e1387246faa62bd3`  
+		Last Modified: Wed, 31 Mar 2021 20:22:40 GMT  
+		Size: 155.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e4c1c61433975e8c3140ea23e09f8e224f43040721f5ca051e74120c8acb8631`  
-		Last Modified: Fri, 26 Mar 2021 05:00:17 GMT  
-		Size: 105.7 MB (105692885 bytes)  
+	-	`sha256:0d70e27e35ebcf8beb7c4148da1ce06b0c6a2f74b29fdd43ba616133688f5a6b`  
+		Last Modified: Wed, 31 Mar 2021 20:22:56 GMT  
+		Size: 105.7 MB (105692539 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ef687b4c646763d350c57c7a1405c68f0e9c4ee361dfa7b700103e0fc7a00111`  
-		Last Modified: Fri, 26 Mar 2021 04:59:58 GMT  
+	-	`sha256:a8bdf7aa1b335f83aa7f89629118092911e4fd5282650af173dcf08de463314b`  
+		Last Modified: Wed, 31 Mar 2021 20:22:40 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:alpine3.13` - linux; arm variant v6
 
 ```console
-$ docker pull golang@sha256:4581f323d2873e87c832fc181893d3faba5b1a4ad3850bca3ddf00c07f314673
+$ docker pull golang@sha256:f88a71a15bad8bd35f7a34beedd41fb5b1dacd66b7de65debd05c581d0bc5a6d
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **104.8 MB (104799033 bytes)**  
+-	Total Size: **104.8 MB (104799871 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3eb354b806d2d61481eda1ad01a705bead65acb2792492a16a69ab14a09b9c7b`
+-	Image ID: `sha256:c29d2c7b4afe4a2c6aeee33a4bcf0743e200bae254c88dede0ff53c47a3e2b66`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:50:09 GMT
-ADD file:ca4136238cb9a01d079efd129bccd1470945d7d4320da61373af90645a4b1146 in / 
-# Thu, 25 Mar 2021 22:50:28 GMT
+# Wed, 31 Mar 2021 17:18:49 GMT
+ADD file:988879d74f643b89539e5a0b6d74221621f19f4f87f722614addadc46ce47200 in / 
+# Wed, 31 Mar 2021 17:18:50 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:27:14 GMT
+# Wed, 31 Mar 2021 18:28:21 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:27:20 GMT
+# Wed, 31 Mar 2021 18:28:24 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:27:23 GMT
+# Wed, 31 Mar 2021 18:28:25 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:27:25 GMT
+# Wed, 31 Mar 2021 18:28:25 GMT
 ENV GOLANG_VERSION=1.16.2
-# Thu, 25 Mar 2021 23:30:58 GMT
+# Wed, 31 Mar 2021 18:44:29 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:31:10 GMT
+# Wed, 31 Mar 2021 18:44:47 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:31:13 GMT
+# Wed, 31 Mar 2021 18:44:50 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:31:19 GMT
+# Wed, 31 Mar 2021 18:44:52 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:31:22 GMT
+# Wed, 31 Mar 2021 18:44:54 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:bca6a70a54896d072b6919d2ae18d3ef685bc7aed783731f68a4adac0fb93d52`  
-		Last Modified: Thu, 25 Mar 2021 22:54:24 GMT  
-		Size: 2.6 MB (2622062 bytes)  
+	-	`sha256:bb87125c6ee1ce30c6b33d2c96a9fbe46da4a290f7cb1dd73fd62d4e06503699`  
+		Last Modified: Wed, 31 Mar 2021 17:19:55 GMT  
+		Size: 2.6 MB (2622116 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4ea05802fe691d87fddb107a6821e75df7c3f57bc6cb2e90cddd4b45a233d0f0`  
-		Last Modified: Thu, 25 Mar 2021 23:44:44 GMT  
-		Size: 281.4 KB (281380 bytes)  
+	-	`sha256:f0eb8dc77a7b333e6a40d00034c58c9612b3c2a7d33ea6c7dbf62e416baac7ea`  
+		Last Modified: Wed, 31 Mar 2021 19:22:13 GMT  
+		Size: 281.4 KB (281371 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1d164f70ad230af42bb09ffd3d6494a6bb012bc5731d7fbd2b3e1c3bcec9c4f6`  
-		Last Modified: Thu, 25 Mar 2021 23:44:44 GMT  
+	-	`sha256:0ec5882b9b78ec27dce64542bb1bd7c56d4913cde0d929356e9353ea6caac515`  
+		Last Modified: Wed, 31 Mar 2021 19:22:13 GMT  
 		Size: 154.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2622573d65ac2b2f3da8dcf9071b0b381b5aa588c86752685ccd5d4b4174d753`  
-		Last Modified: Thu, 25 Mar 2021 23:45:33 GMT  
-		Size: 101.9 MB (101895281 bytes)  
+	-	`sha256:a02b4132f4d532190e4bab920cfc597ca4d398959a8793bf22e055a54a230dd9`  
+		Last Modified: Wed, 31 Mar 2021 19:22:50 GMT  
+		Size: 101.9 MB (101896075 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:944207996fc4aeb8e8071cdb07931a55bf81ec3d36df949c73bf70becdc05bf1`  
-		Last Modified: Thu, 25 Mar 2021 23:44:44 GMT  
-		Size: 156.0 B  
+	-	`sha256:3ac885759424a47ac2b08ab253206844465a38311eb822180b7167f46dabc078`  
+		Last Modified: Wed, 31 Mar 2021 19:22:13 GMT  
+		Size: 155.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:alpine3.13` - linux; arm variant v7
@@ -19205,67 +19205,67 @@ WORKDIR /go
 ### `golang:alpine3.13` - linux; s390x
 
 ```console
-$ docker pull golang@sha256:4c352be0f34f970f599e9bfc918e7e143c9e449bf1011b4db242960fa3b0ce29
+$ docker pull golang@sha256:8c4e3b53cda6084d770562ad07862f14e46dbe320d25e134df885da22b5fc73a
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **107.7 MB (107672720 bytes)**  
+-	Total Size: **107.7 MB (107671895 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:14b21f09f9677a233b9aa93c45819a64db388ddddc009f0af5a3291737dea67c`
+-	Image ID: `sha256:cfb7100ad492885a8b3136c41523fdb186f32c64072e1f09a3153db1d730add0`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 25 Mar 2021 22:41:34 GMT
-ADD file:44e2c7cd992fc98df702bef7022e0f8c4ee86312c311ab5ae185fd5fc878edf9 in / 
-# Thu, 25 Mar 2021 22:41:34 GMT
+# Wed, 31 Mar 2021 17:14:58 GMT
+ADD file:3f5fe04867af3c9f2cfc5b315d97097145ae11343399985386321a8db21d7786 in / 
+# Wed, 31 Mar 2021 17:14:58 GMT
 CMD ["/bin/sh"]
-# Thu, 25 Mar 2021 23:18:24 GMT
+# Wed, 31 Mar 2021 18:32:50 GMT
 RUN apk add --no-cache 		ca-certificates
-# Thu, 25 Mar 2021 23:18:24 GMT
+# Wed, 31 Mar 2021 18:32:51 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Thu, 25 Mar 2021 23:18:25 GMT
+# Wed, 31 Mar 2021 18:32:51 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:18:25 GMT
+# Wed, 31 Mar 2021 18:32:51 GMT
 ENV GOLANG_VERSION=1.16.2
-# Thu, 25 Mar 2021 23:20:28 GMT
+# Wed, 31 Mar 2021 18:34:22 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bash 		gcc 		gnupg 		go 		musl-dev 		openssl 	; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			export GOARCH='amd64' GOOS='linux'; 			;; 		'armhf') 			export GOARCH='arm' GOARM='6' GOOS='linux'; 			;; 		'armv7') 			export GOARCH='arm' GOARM='7' GOOS='linux'; 			;; 		'aarch64') 			export GOARCH='arm64' GOOS='linux'; 			;; 		'x86') 			export GO386='softfloat' GOARCH='386' GOOS='linux'; 			;; 		'ppc64le') 			export GOARCH='ppc64le' GOOS='linux'; 			;; 		's390x') 			export GOARCH='s390x' GOOS='linux'; 			;; 		*) echo >&2 "error: unsupported architecture '$apkArch' (likely packaging update needed)"; exit 1 ;; 	esac; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 	sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url"; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		( 		cd /usr/local/go/src; 		export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 		if [ "${GO386:-}" = 'softfloat' ]; then 			GO386= ./bootstrap.bash; 			export GOROOT_BOOTSTRAP="/usr/local/go-$GOOS-$GOARCH-bootstrap"; 			"$GOROOT_BOOTSTRAP/bin/go" version; 		fi; 		./make.bash; 		if [ "${GO386:-}" = 'softfloat' ]; then 			rm -rf "$GOROOT_BOOTSTRAP"; 		fi; 	); 		apk del --no-network .build-deps; 		go install std; 		rm -rf 		/usr/local/go/pkg/*/cmd 		/usr/local/go/pkg/bootstrap 		/usr/local/go/pkg/obj 		/usr/local/go/pkg/tool/*/api 		/usr/local/go/pkg/tool/*/go_bootstrap 		/usr/local/go/src/cmd/dist/dist 	; 		go version
-# Thu, 25 Mar 2021 23:20:33 GMT
+# Wed, 31 Mar 2021 18:34:27 GMT
 ENV GOPATH=/go
-# Thu, 25 Mar 2021 23:20:33 GMT
+# Wed, 31 Mar 2021 18:34:27 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 25 Mar 2021 23:20:34 GMT
+# Wed, 31 Mar 2021 18:34:28 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 25 Mar 2021 23:20:34 GMT
+# Wed, 31 Mar 2021 18:34:28 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:a266c0a9554add02ea09a46b8584cb36b7f606b7b4398b9ad7369f899f8360df`  
-		Last Modified: Thu, 25 Mar 2021 22:42:07 GMT  
-		Size: 2.6 MB (2602387 bytes)  
+	-	`sha256:1d4058bbeedf5296bcaf5ae8f37c8cd58152acad3ec45a536e08b83f5d3abe83`  
+		Last Modified: Wed, 31 Mar 2021 17:15:36 GMT  
+		Size: 2.6 MB (2602591 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5f7a13aca3904b3b663e1f8170de727ebe3a4616cb36dcadfd015e2e663c24bb`  
-		Last Modified: Thu, 25 Mar 2021 23:26:06 GMT  
-		Size: 281.7 KB (281700 bytes)  
+	-	`sha256:27c9dd6f50e848494b74d743acede663c4566d6c904f83c807df6ed135c0bac2`  
+		Last Modified: Wed, 31 Mar 2021 18:40:22 GMT  
+		Size: 281.7 KB (281696 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0511116a12ff773aa9cf992f6fa81a1e4a4404f1ba284f6526e7439c07e3a651`  
-		Last Modified: Thu, 25 Mar 2021 23:26:06 GMT  
-		Size: 154.0 B  
+	-	`sha256:55a3302e682073b38a23dae31007fd1b72ed66261ca926cc100f29e177732a0a`  
+		Last Modified: Wed, 31 Mar 2021 18:40:25 GMT  
+		Size: 153.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c02165d3cb72f8bcf539749e1ddc8cfa7ea879be0c3c874454f40917d73c1b75`  
-		Last Modified: Thu, 25 Mar 2021 23:26:18 GMT  
-		Size: 104.8 MB (104788324 bytes)  
+	-	`sha256:bd4a9647efdfd2fe83835843ee761ff6c800604a0a2514db1cc014e18fa55664`  
+		Last Modified: Wed, 31 Mar 2021 18:40:34 GMT  
+		Size: 104.8 MB (104787299 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dde3ae89753fd12e06acc2bdf800133400dfd5d70ce659ed027e5a67e6eccbd3`  
-		Last Modified: Thu, 25 Mar 2021 23:26:06 GMT  
-		Size: 155.0 B  
+	-	`sha256:af5d3e1bba60e9d306da5ecd18bbbf586943da4bdc6d87c1c20338b0371f3552`  
+		Last Modified: Wed, 31 Mar 2021 18:40:23 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:buster`
 
 ```console
-$ docker pull golang@sha256:5e7e4d55a6c14081660a177570584e45e93a325f97a84bcf0b4534b3a784d3ec
+$ docker pull golang@sha256:7a894f6fac60d7c83dbf1fa47e448e04af8b8c3c4eaa4048be6a5888b518a60c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -19282,73 +19282,73 @@ $ docker pull golang@sha256:5e7e4d55a6c14081660a177570584e45e93a325f97a84bcf0b45
 ### `golang:buster` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:6247840c3865d9bfb709e6fa43c3cf2f6fc1334e36c6cb8712cf59205b0b31e0
+$ docker pull golang@sha256:dabc19f6f1adbbc27ce339b6abff0064106c2cb993fc82c407698f07d5ad151e
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **317.8 MB (317817106 bytes)**  
+-	Total Size: **317.9 MB (317850483 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:64bd1a7b99b7ba1d5f1c21d4c4625f29858cce169e724dabb30dc8c994ed44c3`
+-	Image ID: `sha256:217d1e25596170633bd1e02c19d3c614986fe3853d492b3a2d4cc6e719381ea2`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Fri, 26 Mar 2021 15:20:41 GMT
-ADD file:89234bb2f86c7eb890235a48904d1c9898a8d287a525c4fe5698d4a04cdd8f12 in / 
-# Fri, 26 Mar 2021 15:20:42 GMT
+# Tue, 30 Mar 2021 21:49:16 GMT
+ADD file:c254898ceb4172f05cd40460f8d0b1ca2d39d5178bdddd4e794c7d3fc5a60a03 in / 
+# Tue, 30 Mar 2021 21:49:16 GMT
 CMD ["bash"]
-# Sat, 27 Mar 2021 05:53:29 GMT
+# Tue, 30 Mar 2021 23:03:10 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
-# Sat, 27 Mar 2021 05:53:35 GMT
+# Tue, 30 Mar 2021 23:03:21 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Sat, 27 Mar 2021 05:53:54 GMT
+# Tue, 30 Mar 2021 23:03:52 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:05 GMT
+# Wed, 31 Mar 2021 20:11:57 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:06 GMT
+# Wed, 31 Mar 2021 20:11:57 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:18:06 GMT
+# Wed, 31 Mar 2021 20:11:57 GMT
 ENV GOLANG_VERSION=1.16.2
-# Sun, 28 Mar 2021 00:18:17 GMT
+# Wed, 31 Mar 2021 20:12:08 GMT
 RUN set -eux; 		dpkgArch="$(dpkg --print-architecture)"; 	url=; 	case "${dpkgArch##*-}" in 		'amd64') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-amd64.tar.gz'; 			sha256='542e936b19542e62679766194364f45141fde55169db2d8d01046555ca9eb4b8'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-armv6l.tar.gz'; 			sha256='49765b1ac36f77a84ce8186b08713c3811db5426e4ecfaa4344453e12d756c22'; 			;; 		'arm64') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-arm64.tar.gz'; 			sha256='6924601d998a0917694fd14261347e3798bd2ad6b13c4d7f2edd70c9d57f62ab'; 			;; 		'i386') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-386.tar.gz'; 			sha256='3638abf8e8272a4ddc3e5189487c932d680abfb151e2c48ae18c9a04a90ded73'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-ppc64le.tar.gz'; 			sha256='e1dcc9b460b2d522added8dfce764a06c5e455c8047b45b67a06f7f5ab19c4e0'; 			;; 		's390x') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-s390x.tar.gz'; 			sha256='a686743b0803d54e051756ce946d9d72436f23e9f815739c947934e0052bf9ff'; 			;; 		*) echo >&2 "error: unsupported architecture '$dpkgArch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 		sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		echo >&2; 		echo >&2 "warning: current architecture ($dpkgArch) does not have a corresponding Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc" --progress=dot:giga; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum --strict --check -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends golang-go; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				go install std; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 		; 	fi; 		go version
-# Sun, 28 Mar 2021 00:18:18 GMT
+# Wed, 31 Mar 2021 20:12:09 GMT
 ENV GOPATH=/go
-# Sun, 28 Mar 2021 00:18:18 GMT
+# Wed, 31 Mar 2021 20:12:09 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:18:19 GMT
+# Wed, 31 Mar 2021 20:12:10 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Sun, 28 Mar 2021 00:18:20 GMT
+# Wed, 31 Mar 2021 20:12:10 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:8bf9c589d5f9475f1fcc050e02308d6b4eeb86eab7752ef948a13693e81a6aaa`  
-		Last Modified: Fri, 26 Mar 2021 15:27:11 GMT  
-		Size: 50.4 MB (50400278 bytes)  
+	-	`sha256:004f1eed87df3f75f5e2a1a649fa7edd7f713d1300532fd0909bb39cd48437d7`  
+		Last Modified: Tue, 30 Mar 2021 21:53:41 GMT  
+		Size: 50.4 MB (50432842 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4c70e46d8b5f0e1d77797b7a0565b7a316bd8c7c024f5cca82592128af142dac`  
-		Last Modified: Sat, 27 Mar 2021 06:03:41 GMT  
-		Size: 7.8 MB (7832558 bytes)  
+	-	`sha256:5d6f1e8117dbb1c6a57603cb4f321a861a08105a81bcc6b01b0ec2b78c8523a5`  
+		Last Modified: Tue, 30 Mar 2021 23:14:05 GMT  
+		Size: 7.8 MB (7832608 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ea848ad42f0d1676b3a0ce709208ba3fa154cd53370c50e7cf8e580c63d96ae0`  
-		Last Modified: Sat, 27 Mar 2021 06:03:41 GMT  
-		Size: 10.0 MB (9997159 bytes)  
+	-	`sha256:48c2faf66abec3dce9f54d6722ff592fce6dd4fb58a0d0b72282936c6598a3b3`  
+		Last Modified: Tue, 30 Mar 2021 23:14:05 GMT  
+		Size: 10.0 MB (9997208 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:48fe137f8d2641315dd2f93c46dfdb671ce7399edc1f44f10cc68984f2809d8e`  
-		Last Modified: Sat, 27 Mar 2021 06:04:05 GMT  
-		Size: 51.8 MB (51839972 bytes)  
+	-	`sha256:234b70d0479d7f16d7ee8d04e4ffdacc57d7d14313faf59d332f18b2e9418743`  
+		Last Modified: Tue, 30 Mar 2021 23:14:37 GMT  
+		Size: 51.8 MB (51840782 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e53aa3cb0a1b20fe535fb0954912e16192c1fa053d0f6f2df21d1f5a50f8139c`  
-		Last Modified: Sun, 28 Mar 2021 00:20:35 GMT  
-		Size: 68.7 MB (68736693 bytes)  
+	-	`sha256:f5e9f83ff9bcf98a081ea281823c299a293e0870c4fd132c22cf425b01bd310e`  
+		Last Modified: Wed, 31 Mar 2021 20:21:23 GMT  
+		Size: 68.7 MB (68736521 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d33aad0a69811ebff8950e59bd61ab326225562bb2757c92673e3f91061dd280`  
-		Last Modified: Sun, 28 Mar 2021 00:20:45 GMT  
-		Size: 129.0 MB (129010291 bytes)  
+	-	`sha256:abff7ae5ce6584ffabbc37f4da5db276ef2c999823396c28c894a2accadadad7`  
+		Last Modified: Wed, 31 Mar 2021 20:21:33 GMT  
+		Size: 129.0 MB (129010366 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:996781d6304ab92c67a9228d5c68c6829dbd06ae8f0f4acb8a00326a1aab6c51`  
-		Last Modified: Sun, 28 Mar 2021 00:20:24 GMT  
-		Size: 155.0 B  
+	-	`sha256:26b15789ebb1ee2fa09a78a3c616664936f679eafbf8fd14b07094bf285267a4`  
+		Last Modified: Wed, 31 Mar 2021 20:21:12 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:buster` - linux; arm variant v5
@@ -19858,7 +19858,7 @@ WORKDIR /go
 ## `golang:latest`
 
 ```console
-$ docker pull golang@sha256:a37245d58df7ad850743282c85f1960c741438844b4892bdc85734b2467cb972
+$ docker pull golang@sha256:39a70c954a032db55e1bcb2a3c195c3c0edfa2cb2082adbb15990fcd5724477c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -19877,73 +19877,73 @@ $ docker pull golang@sha256:a37245d58df7ad850743282c85f1960c741438844b4892bdc857
 ### `golang:latest` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:6247840c3865d9bfb709e6fa43c3cf2f6fc1334e36c6cb8712cf59205b0b31e0
+$ docker pull golang@sha256:dabc19f6f1adbbc27ce339b6abff0064106c2cb993fc82c407698f07d5ad151e
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **317.8 MB (317817106 bytes)**  
+-	Total Size: **317.9 MB (317850483 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:64bd1a7b99b7ba1d5f1c21d4c4625f29858cce169e724dabb30dc8c994ed44c3`
+-	Image ID: `sha256:217d1e25596170633bd1e02c19d3c614986fe3853d492b3a2d4cc6e719381ea2`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Fri, 26 Mar 2021 15:20:41 GMT
-ADD file:89234bb2f86c7eb890235a48904d1c9898a8d287a525c4fe5698d4a04cdd8f12 in / 
-# Fri, 26 Mar 2021 15:20:42 GMT
+# Tue, 30 Mar 2021 21:49:16 GMT
+ADD file:c254898ceb4172f05cd40460f8d0b1ca2d39d5178bdddd4e794c7d3fc5a60a03 in / 
+# Tue, 30 Mar 2021 21:49:16 GMT
 CMD ["bash"]
-# Sat, 27 Mar 2021 05:53:29 GMT
+# Tue, 30 Mar 2021 23:03:10 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
-# Sat, 27 Mar 2021 05:53:35 GMT
+# Tue, 30 Mar 2021 23:03:21 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Sat, 27 Mar 2021 05:53:54 GMT
+# Tue, 30 Mar 2021 23:03:52 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:05 GMT
+# Wed, 31 Mar 2021 20:11:57 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:06 GMT
+# Wed, 31 Mar 2021 20:11:57 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:18:06 GMT
+# Wed, 31 Mar 2021 20:11:57 GMT
 ENV GOLANG_VERSION=1.16.2
-# Sun, 28 Mar 2021 00:18:17 GMT
+# Wed, 31 Mar 2021 20:12:08 GMT
 RUN set -eux; 		dpkgArch="$(dpkg --print-architecture)"; 	url=; 	case "${dpkgArch##*-}" in 		'amd64') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-amd64.tar.gz'; 			sha256='542e936b19542e62679766194364f45141fde55169db2d8d01046555ca9eb4b8'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-armv6l.tar.gz'; 			sha256='49765b1ac36f77a84ce8186b08713c3811db5426e4ecfaa4344453e12d756c22'; 			;; 		'arm64') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-arm64.tar.gz'; 			sha256='6924601d998a0917694fd14261347e3798bd2ad6b13c4d7f2edd70c9d57f62ab'; 			;; 		'i386') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-386.tar.gz'; 			sha256='3638abf8e8272a4ddc3e5189487c932d680abfb151e2c48ae18c9a04a90ded73'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-ppc64le.tar.gz'; 			sha256='e1dcc9b460b2d522added8dfce764a06c5e455c8047b45b67a06f7f5ab19c4e0'; 			;; 		's390x') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-s390x.tar.gz'; 			sha256='a686743b0803d54e051756ce946d9d72436f23e9f815739c947934e0052bf9ff'; 			;; 		*) echo >&2 "error: unsupported architecture '$dpkgArch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 		sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		echo >&2; 		echo >&2 "warning: current architecture ($dpkgArch) does not have a corresponding Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc" --progress=dot:giga; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum --strict --check -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends golang-go; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				go install std; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 		; 	fi; 		go version
-# Sun, 28 Mar 2021 00:18:18 GMT
+# Wed, 31 Mar 2021 20:12:09 GMT
 ENV GOPATH=/go
-# Sun, 28 Mar 2021 00:18:18 GMT
+# Wed, 31 Mar 2021 20:12:09 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:18:19 GMT
+# Wed, 31 Mar 2021 20:12:10 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Sun, 28 Mar 2021 00:18:20 GMT
+# Wed, 31 Mar 2021 20:12:10 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:8bf9c589d5f9475f1fcc050e02308d6b4eeb86eab7752ef948a13693e81a6aaa`  
-		Last Modified: Fri, 26 Mar 2021 15:27:11 GMT  
-		Size: 50.4 MB (50400278 bytes)  
+	-	`sha256:004f1eed87df3f75f5e2a1a649fa7edd7f713d1300532fd0909bb39cd48437d7`  
+		Last Modified: Tue, 30 Mar 2021 21:53:41 GMT  
+		Size: 50.4 MB (50432842 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4c70e46d8b5f0e1d77797b7a0565b7a316bd8c7c024f5cca82592128af142dac`  
-		Last Modified: Sat, 27 Mar 2021 06:03:41 GMT  
-		Size: 7.8 MB (7832558 bytes)  
+	-	`sha256:5d6f1e8117dbb1c6a57603cb4f321a861a08105a81bcc6b01b0ec2b78c8523a5`  
+		Last Modified: Tue, 30 Mar 2021 23:14:05 GMT  
+		Size: 7.8 MB (7832608 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ea848ad42f0d1676b3a0ce709208ba3fa154cd53370c50e7cf8e580c63d96ae0`  
-		Last Modified: Sat, 27 Mar 2021 06:03:41 GMT  
-		Size: 10.0 MB (9997159 bytes)  
+	-	`sha256:48c2faf66abec3dce9f54d6722ff592fce6dd4fb58a0d0b72282936c6598a3b3`  
+		Last Modified: Tue, 30 Mar 2021 23:14:05 GMT  
+		Size: 10.0 MB (9997208 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:48fe137f8d2641315dd2f93c46dfdb671ce7399edc1f44f10cc68984f2809d8e`  
-		Last Modified: Sat, 27 Mar 2021 06:04:05 GMT  
-		Size: 51.8 MB (51839972 bytes)  
+	-	`sha256:234b70d0479d7f16d7ee8d04e4ffdacc57d7d14313faf59d332f18b2e9418743`  
+		Last Modified: Tue, 30 Mar 2021 23:14:37 GMT  
+		Size: 51.8 MB (51840782 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e53aa3cb0a1b20fe535fb0954912e16192c1fa053d0f6f2df21d1f5a50f8139c`  
-		Last Modified: Sun, 28 Mar 2021 00:20:35 GMT  
-		Size: 68.7 MB (68736693 bytes)  
+	-	`sha256:f5e9f83ff9bcf98a081ea281823c299a293e0870c4fd132c22cf425b01bd310e`  
+		Last Modified: Wed, 31 Mar 2021 20:21:23 GMT  
+		Size: 68.7 MB (68736521 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d33aad0a69811ebff8950e59bd61ab326225562bb2757c92673e3f91061dd280`  
-		Last Modified: Sun, 28 Mar 2021 00:20:45 GMT  
-		Size: 129.0 MB (129010291 bytes)  
+	-	`sha256:abff7ae5ce6584ffabbc37f4da5db276ef2c999823396c28c894a2accadadad7`  
+		Last Modified: Wed, 31 Mar 2021 20:21:33 GMT  
+		Size: 129.0 MB (129010366 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:996781d6304ab92c67a9228d5c68c6829dbd06ae8f0f4acb8a00326a1aab6c51`  
-		Last Modified: Sun, 28 Mar 2021 00:20:24 GMT  
-		Size: 155.0 B  
+	-	`sha256:26b15789ebb1ee2fa09a78a3c616664936f679eafbf8fd14b07094bf285267a4`  
+		Last Modified: Wed, 31 Mar 2021 20:21:12 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:latest` - linux; arm variant v5
@@ -20820,7 +20820,7 @@ WORKDIR C:\gopath
 ## `golang:stretch`
 
 ```console
-$ docker pull golang@sha256:fd33ea27ab2941b88f518d96aab76aa40ec6e32c9d619f0b832072ebfec2d0e4
+$ docker pull golang@sha256:1bf98b13aa56635f0a69bdb9bc35cba11a672fd65f7d429dfdeb721b0d9dbc16
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -20833,72 +20833,72 @@ $ docker pull golang@sha256:fd33ea27ab2941b88f518d96aab76aa40ec6e32c9d619f0b8320
 ### `golang:stretch` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:9ebb8e1de83d2095f9c840eece75af6146e8754b17b50803ff57770deaf0b2b1
+$ docker pull golang@sha256:b115ccd7afca7d356cdf85196351f801cf3615f48a682a186df09e680b314397
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **297.6 MB (297635345 bytes)**  
+-	Total Size: **297.6 MB (297635779 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:33056ca8809bab51fa6f3d2afb1282c3fc97d683990e52d979bd70a456d14cbc`
+-	Image ID: `sha256:ad59aded19e0b9361014c0d0980cd524931cdbc7f0498ee3eb4fd9c1d22d2882`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Fri, 26 Mar 2021 15:23:17 GMT
-ADD file:f7a6b2066de76eb559d8ab8bf8972d519c3b4dcafc62e46253227559091f7c8f in / 
-# Fri, 26 Mar 2021 15:23:18 GMT
+# Tue, 30 Mar 2021 21:50:43 GMT
+ADD file:e52290391b221e1a4e52cf4e41ffe7e14f162475964fa01638e03b3ead673ba1 in / 
+# Tue, 30 Mar 2021 21:50:43 GMT
 CMD ["bash"]
-# Sat, 27 Mar 2021 05:57:11 GMT
+# Tue, 30 Mar 2021 23:08:00 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		apt-transport-https 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
-# Sat, 27 Mar 2021 05:57:18 GMT
+# Tue, 30 Mar 2021 23:08:09 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Sat, 27 Mar 2021 05:57:45 GMT
+# Tue, 30 Mar 2021 23:08:42 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		bzr 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:35 GMT
+# Wed, 31 Mar 2021 20:12:26 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 28 Mar 2021 00:18:35 GMT
+# Wed, 31 Mar 2021 20:12:26 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:18:35 GMT
+# Wed, 31 Mar 2021 20:12:27 GMT
 ENV GOLANG_VERSION=1.16.2
-# Sun, 28 Mar 2021 00:18:52 GMT
+# Wed, 31 Mar 2021 20:12:39 GMT
 RUN set -eux; 		dpkgArch="$(dpkg --print-architecture)"; 	url=; 	case "${dpkgArch##*-}" in 		'amd64') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-amd64.tar.gz'; 			sha256='542e936b19542e62679766194364f45141fde55169db2d8d01046555ca9eb4b8'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-armv6l.tar.gz'; 			sha256='49765b1ac36f77a84ce8186b08713c3811db5426e4ecfaa4344453e12d756c22'; 			;; 		'arm64') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-arm64.tar.gz'; 			sha256='6924601d998a0917694fd14261347e3798bd2ad6b13c4d7f2edd70c9d57f62ab'; 			;; 		'i386') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-386.tar.gz'; 			sha256='3638abf8e8272a4ddc3e5189487c932d680abfb151e2c48ae18c9a04a90ded73'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-ppc64le.tar.gz'; 			sha256='e1dcc9b460b2d522added8dfce764a06c5e455c8047b45b67a06f7f5ab19c4e0'; 			;; 		's390x') 			url='https://storage.googleapis.com/golang/go1.16.2.linux-s390x.tar.gz'; 			sha256='a686743b0803d54e051756ce946d9d72436f23e9f815739c947934e0052bf9ff'; 			;; 		*) echo >&2 "error: unsupported architecture '$dpkgArch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://storage.googleapis.com/golang/go1.16.2.src.tar.gz'; 		sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea'; 		echo >&2; 		echo >&2 "warning: current architecture ($dpkgArch) does not have a corresponding Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc" --progress=dot:giga; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum --strict --check -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC EC91 7721 F63B D38B 4796'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends golang-go; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				go install std; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 		; 	fi; 		go version
-# Sun, 28 Mar 2021 00:18:53 GMT
+# Wed, 31 Mar 2021 20:12:40 GMT
 ENV GOPATH=/go
-# Sun, 28 Mar 2021 00:18:54 GMT
+# Wed, 31 Mar 2021 20:12:40 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sun, 28 Mar 2021 00:18:55 GMT
+# Wed, 31 Mar 2021 20:12:41 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Sun, 28 Mar 2021 00:18:55 GMT
+# Wed, 31 Mar 2021 20:12:41 GMT
 WORKDIR /go
 ```
 
 -	Layers:
-	-	`sha256:1dfe7e1e1bffb84b5330514880896199259b01ebe2b9d531dd88f7ce7db8cd18`  
-		Last Modified: Fri, 26 Mar 2021 15:32:18 GMT  
-		Size: 45.4 MB (45379513 bytes)  
+	-	`sha256:00168f89dbe8f3c9985e536784c27517f6cc35ea56263469449a6b73e0bed595`  
+		Last Modified: Tue, 30 Mar 2021 21:56:37 GMT  
+		Size: 45.4 MB (45379949 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df86b11a61e4b8cbb37a4a570baf51ae6bbc8cbf231f56401403e21dea70144d`  
-		Last Modified: Sat, 27 Mar 2021 06:06:53 GMT  
-		Size: 11.3 MB (11286512 bytes)  
+	-	`sha256:da61ad49fa9961d6dfe53dc067fd690133f205498e8045e8f7ef6b9da0d42bd2`  
+		Last Modified: Tue, 30 Mar 2021 23:17:25 GMT  
+		Size: 11.3 MB (11286658 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:006eb4a69e602dcb61f4680d7e4a0d4853902062ab1230263e33125ae86b2700`  
-		Last Modified: Sat, 27 Mar 2021 06:06:52 GMT  
-		Size: 4.3 MB (4342442 bytes)  
+	-	`sha256:af62e04c0f85ed10801df4314d8cb9ba5e6c391f6a3c1db1080a0a78c8d4ed9d`  
+		Last Modified: Tue, 30 Mar 2021 23:17:23 GMT  
+		Size: 4.3 MB (4342466 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6c1c07de8af095e25b339c838c0a02c16fda79738e6c03e266875a048b28222f`  
-		Last Modified: Sat, 27 Mar 2021 06:07:16 GMT  
-		Size: 49.8 MB (49787143 bytes)  
+	-	`sha256:aae835e2c68ef1d48a4ffef72547a79926019aec6a2bbeb5372f1e832ef453dd`  
+		Last Modified: Tue, 30 Mar 2021 23:17:49 GMT  
+		Size: 49.8 MB (49787075 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6944064dc3f76beb34bb375de67aee01c0cae51b0932b24877292f47eb248a50`  
-		Last Modified: Sun, 28 Mar 2021 00:21:12 GMT  
-		Size: 57.8 MB (57829197 bytes)  
+	-	`sha256:3c53dd465b309b4f16b31d4c5fc9821fc17e70e316c32456d7a0e9ac5a953f37`  
+		Last Modified: Wed, 31 Mar 2021 20:22:03 GMT  
+		Size: 57.8 MB (57829044 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:12a5a22b04dfb4eccaff81c96a5d652de8ccf86b701a38017904ea6854988b63`  
-		Last Modified: Sun, 28 Mar 2021 00:21:22 GMT  
-		Size: 129.0 MB (129010382 bytes)  
+	-	`sha256:9a5819b2b790ab264aa3dd395d6d8cded7b56b85f9470682ac226f89927a1078`  
+		Last Modified: Wed, 31 Mar 2021 20:22:18 GMT  
+		Size: 129.0 MB (129010431 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a42f7444dde50000bec9c4e20ad0518840c29de157d2c75d0913e2c999991999`  
-		Last Modified: Sun, 28 Mar 2021 00:21:02 GMT  
+	-	`sha256:9d7fa061e36ba9a055069006d99dfeea27fb3174a09a0bdb4ee47dd31d2f6033`  
+		Last Modified: Wed, 31 Mar 2021 20:21:52 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
