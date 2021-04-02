@@ -1,7 +1,7 @@
 ## `r-base:latest`
 
 ```console
-$ docker pull r-base@sha256:2fca5275e982e6524de032e45f2833645b64c6c1648384f8aebcfe970b448ab0
+$ docker pull r-base@sha256:41d22a7a9dd54150433bdf5d5055877fa64e0fbdff752b6cd826bcf3315f81d5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -14,14 +14,14 @@ $ docker pull r-base@sha256:2fca5275e982e6524de032e45f2833645b64c6c1648384f8aebc
 ### `r-base:latest` - linux; amd64
 
 ```console
-$ docker pull r-base@sha256:113d93a47de8e5e233cb2f73373fbac6cb96a818cea3dd616d49186d65d23d5d
+$ docker pull r-base@sha256:af1b9007d8c81d0cc3cf8d11eed912537623b08a0bf8697ddba18f091bed64ec
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **322.9 MB (322899704 bytes)**  
+-	Total Size: **323.9 MB (323897200 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:14dd8148598f927fd02ac08bca0d3ccde628ea34a669f75ea292e900b2385309`
+-	Image ID: `sha256:9f8020514dfa2784462c2ab3d5a1d402ae370067dfd4065c36de0c8ba09ab56b`
 -	Default Command: `["R"]`
 
 ```dockerfile
@@ -43,11 +43,13 @@ ENV LC_ALL=en_US.UTF-8
 ENV LANG=en_US.UTF-8
 # Wed, 31 Mar 2021 14:00:12 GMT
 RUN echo "deb http://http.debian.net/debian sid main" > /etc/apt/sources.list.d/debian-unstable.list         && echo 'APT::Default-Release "testing";' > /etc/apt/apt.conf.d/default         && echo 'APT::Install-Recommends "false";' > /etc/apt/apt.conf.d/90local-no-recommends
-# Wed, 31 Mar 2021 14:00:12 GMT
-ENV R_BASE_VERSION=4.0.4
-# Wed, 31 Mar 2021 14:01:26 GMT
-RUN apt-get update         && apt-get install -t unstable -y --no-install-recommends                 gcc-9-base                 libopenblas0-pthread 		littler                 r-cran-littler 		r-base=${R_BASE_VERSION}-* 		r-base-dev=${R_BASE_VERSION}-* 		r-recommended=${R_BASE_VERSION}-* 	&& ln -s /usr/lib/R/site-library/littler/examples/install.r /usr/local/bin/install.r 	&& ln -s /usr/lib/R/site-library/littler/examples/install2.r /usr/local/bin/install2.r 	&& ln -s /usr/lib/R/site-library/littler/examples/installBioc.r /usr/local/bin/installBioc.r 	&& ln -s /usr/lib/R/site-library/littler/examples/installDeps.r /usr/local/bin/installDeps.r 	&& ln -s /usr/lib/R/site-library/littler/examples/installGithub.r /usr/local/bin/installGithub.r 	&& ln -s /usr/lib/R/site-library/littler/examples/testInstalled.r /usr/local/bin/testInstalled.r 	&& install.r docopt 	&& rm -rf /tmp/downloaded_packages/ /tmp/*.rds 	&& rm -rf /var/lib/apt/lists/*
-# Wed, 31 Mar 2021 14:01:28 GMT
+# Fri, 02 Apr 2021 18:38:49 GMT
+ENV R_BASE_VERSION=4.0.5
+# Fri, 02 Apr 2021 18:38:50 GMT
+RUN echo "deb http://deb.debian.org/debian experimental main" > /etc/apt/sources.list.d/experimental.list     && echo "deb [trusted=yes] https://eddelbuettel.github.io/ppaR400 ./" > /etc/apt/sources.list.d/edd-r4.list
+# Fri, 02 Apr 2021 18:39:56 GMT
+RUN apt-get update         && apt-get install -y --no-install-recommends                 gcc-9-base                 libopenblas0-pthread 		littler                 r-cran-littler 		r-base=${R_BASE_VERSION}-* 		r-base-dev=${R_BASE_VERSION}-*                 r-base-core=${R_BASE_VERSION}-* 		r-recommended=${R_BASE_VERSION}-* 	&& ln -s /usr/lib/R/site-library/littler/examples/install.r /usr/local/bin/install.r 	&& ln -s /usr/lib/R/site-library/littler/examples/install2.r /usr/local/bin/install2.r 	&& ln -s /usr/lib/R/site-library/littler/examples/installBioc.r /usr/local/bin/installBioc.r 	&& ln -s /usr/lib/R/site-library/littler/examples/installDeps.r /usr/local/bin/installDeps.r 	&& ln -s /usr/lib/R/site-library/littler/examples/installGithub.r /usr/local/bin/installGithub.r 	&& ln -s /usr/lib/R/site-library/littler/examples/testInstalled.r /usr/local/bin/testInstalled.r 	&& install.r docopt 	&& rm -rf /tmp/downloaded_packages/ /tmp/*.rds 	&& rm -rf /var/lib/apt/lists/*
+# Fri, 02 Apr 2021 18:39:58 GMT
 CMD ["R"]
 ```
 
@@ -72,22 +74,26 @@ CMD ["R"]
 		Last Modified: Wed, 31 Mar 2021 14:01:53 GMT  
 		Size: 351.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e1b73484d95845fddf0bd4b13003bd074799523b6a722ac577ff56cca22ead36`  
-		Last Modified: Wed, 31 Mar 2021 14:02:30 GMT  
-		Size: 241.5 MB (241536948 bytes)  
+	-	`sha256:bf4aad63e756385206bdfa2a4730ead3d2ed716f1fd74169adb4c0690080534c`  
+		Last Modified: Fri, 02 Apr 2021 18:40:21 GMT  
+		Size: 293.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:dacc3d4038d7a8e85d8e39f0d96ad8648830ccb99c32e9f62170981433ae0ff2`  
+		Last Modified: Fri, 02 Apr 2021 18:41:04 GMT  
+		Size: 242.5 MB (242534151 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `r-base:latest` - linux; arm64 variant v8
 
 ```console
-$ docker pull r-base@sha256:f29496d04d20e06f7d45a2801df0d7ff58e1179316c482e28ead2228e3eb53e0
+$ docker pull r-base@sha256:04ee057922d716542df86dee50448cec991b9e8d875671cecf2e591ec69f89f0
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **310.5 MB (310543008 bytes)**  
+-	Total Size: **311.5 MB (311476289 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2a7055a4c66d4f04f8f7b5f4f85f7c05f396140ca6c41b73f9afe50cc4218b02`
+-	Image ID: `sha256:917fbf45f92c3a87dee003685ab1979ab729995d6ae9b4fa3dbb917f283bd55a`
 -	Default Command: `["R"]`
 
 ```dockerfile
@@ -109,11 +115,13 @@ ENV LC_ALL=en_US.UTF-8
 ENV LANG=en_US.UTF-8
 # Wed, 31 Mar 2021 14:22:15 GMT
 RUN echo "deb http://http.debian.net/debian sid main" > /etc/apt/sources.list.d/debian-unstable.list         && echo 'APT::Default-Release "testing";' > /etc/apt/apt.conf.d/default         && echo 'APT::Install-Recommends "false";' > /etc/apt/apt.conf.d/90local-no-recommends
-# Wed, 31 Mar 2021 14:22:16 GMT
-ENV R_BASE_VERSION=4.0.4
-# Wed, 31 Mar 2021 14:23:58 GMT
-RUN apt-get update         && apt-get install -t unstable -y --no-install-recommends                 gcc-9-base                 libopenblas0-pthread 		littler                 r-cran-littler 		r-base=${R_BASE_VERSION}-* 		r-base-dev=${R_BASE_VERSION}-* 		r-recommended=${R_BASE_VERSION}-* 	&& ln -s /usr/lib/R/site-library/littler/examples/install.r /usr/local/bin/install.r 	&& ln -s /usr/lib/R/site-library/littler/examples/install2.r /usr/local/bin/install2.r 	&& ln -s /usr/lib/R/site-library/littler/examples/installBioc.r /usr/local/bin/installBioc.r 	&& ln -s /usr/lib/R/site-library/littler/examples/installDeps.r /usr/local/bin/installDeps.r 	&& ln -s /usr/lib/R/site-library/littler/examples/installGithub.r /usr/local/bin/installGithub.r 	&& ln -s /usr/lib/R/site-library/littler/examples/testInstalled.r /usr/local/bin/testInstalled.r 	&& install.r docopt 	&& rm -rf /tmp/downloaded_packages/ /tmp/*.rds 	&& rm -rf /var/lib/apt/lists/*
-# Wed, 31 Mar 2021 14:24:03 GMT
+# Fri, 02 Apr 2021 19:25:14 GMT
+ENV R_BASE_VERSION=4.0.5
+# Fri, 02 Apr 2021 19:25:17 GMT
+RUN echo "deb http://deb.debian.org/debian experimental main" > /etc/apt/sources.list.d/experimental.list     && echo "deb [trusted=yes] https://eddelbuettel.github.io/ppaR400 ./" > /etc/apt/sources.list.d/edd-r4.list
+# Fri, 02 Apr 2021 19:27:01 GMT
+RUN apt-get update         && apt-get install -y --no-install-recommends                 gcc-9-base                 libopenblas0-pthread 		littler                 r-cran-littler 		r-base=${R_BASE_VERSION}-* 		r-base-dev=${R_BASE_VERSION}-*                 r-base-core=${R_BASE_VERSION}-* 		r-recommended=${R_BASE_VERSION}-* 	&& ln -s /usr/lib/R/site-library/littler/examples/install.r /usr/local/bin/install.r 	&& ln -s /usr/lib/R/site-library/littler/examples/install2.r /usr/local/bin/install2.r 	&& ln -s /usr/lib/R/site-library/littler/examples/installBioc.r /usr/local/bin/installBioc.r 	&& ln -s /usr/lib/R/site-library/littler/examples/installDeps.r /usr/local/bin/installDeps.r 	&& ln -s /usr/lib/R/site-library/littler/examples/installGithub.r /usr/local/bin/installGithub.r 	&& ln -s /usr/lib/R/site-library/littler/examples/testInstalled.r /usr/local/bin/testInstalled.r 	&& install.r docopt 	&& rm -rf /tmp/downloaded_packages/ /tmp/*.rds 	&& rm -rf /var/lib/apt/lists/*
+# Fri, 02 Apr 2021 19:27:06 GMT
 CMD ["R"]
 ```
 
@@ -138,22 +146,26 @@ CMD ["R"]
 		Last Modified: Wed, 31 Mar 2021 14:24:28 GMT  
 		Size: 351.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f27321d0f3669b21fa8c32f742892b61241d66f69b0526eeed89304124d62a05`  
-		Last Modified: Wed, 31 Mar 2021 14:25:13 GMT  
-		Size: 230.5 MB (230492678 bytes)  
+	-	`sha256:7deb90318bb05ae2bafb8f5f89905821bbcdfa7e0cd51ef970821d275c5fb6e8`  
+		Last Modified: Fri, 02 Apr 2021 19:27:23 GMT  
+		Size: 296.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:b694158ddafd8f34e2523c4936f239f1bcca716d6ff449c65d1a438b946ccffd`  
+		Last Modified: Fri, 02 Apr 2021 19:28:13 GMT  
+		Size: 231.4 MB (231425663 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `r-base:latest` - linux; ppc64le
 
 ```console
-$ docker pull r-base@sha256:ab164eba73b3445e2920bb87cb929dd0d0069a4b16fb42f789b9766d076d7ea9
+$ docker pull r-base@sha256:95d0fa7b1456ccbd1a8a210b813fe59b70a713083313a80953746c6d710a2878
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **320.8 MB (320786790 bytes)**  
+-	Total Size: **321.7 MB (321717753 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b3dee9f921f1ad8d99b9e688adb6fdd6f3187d41852b03a5f23232db672fb90d`
+-	Image ID: `sha256:a03a067e1f4c4a1cf934cf453918a85bc96e7bca346eef202dae379bf18c7135`
 -	Default Command: `["R"]`
 
 ```dockerfile
@@ -175,11 +187,13 @@ ENV LC_ALL=en_US.UTF-8
 ENV LANG=en_US.UTF-8
 # Wed, 31 Mar 2021 16:36:30 GMT
 RUN echo "deb http://http.debian.net/debian sid main" > /etc/apt/sources.list.d/debian-unstable.list         && echo 'APT::Default-Release "testing";' > /etc/apt/apt.conf.d/default         && echo 'APT::Install-Recommends "false";' > /etc/apt/apt.conf.d/90local-no-recommends
-# Wed, 31 Mar 2021 16:36:37 GMT
-ENV R_BASE_VERSION=4.0.4
-# Wed, 31 Mar 2021 16:47:47 GMT
-RUN apt-get update         && apt-get install -t unstable -y --no-install-recommends                 gcc-9-base                 libopenblas0-pthread 		littler                 r-cran-littler 		r-base=${R_BASE_VERSION}-* 		r-base-dev=${R_BASE_VERSION}-* 		r-recommended=${R_BASE_VERSION}-* 	&& ln -s /usr/lib/R/site-library/littler/examples/install.r /usr/local/bin/install.r 	&& ln -s /usr/lib/R/site-library/littler/examples/install2.r /usr/local/bin/install2.r 	&& ln -s /usr/lib/R/site-library/littler/examples/installBioc.r /usr/local/bin/installBioc.r 	&& ln -s /usr/lib/R/site-library/littler/examples/installDeps.r /usr/local/bin/installDeps.r 	&& ln -s /usr/lib/R/site-library/littler/examples/installGithub.r /usr/local/bin/installGithub.r 	&& ln -s /usr/lib/R/site-library/littler/examples/testInstalled.r /usr/local/bin/testInstalled.r 	&& install.r docopt 	&& rm -rf /tmp/downloaded_packages/ /tmp/*.rds 	&& rm -rf /var/lib/apt/lists/*
-# Wed, 31 Mar 2021 16:47:53 GMT
+# Fri, 02 Apr 2021 18:47:39 GMT
+ENV R_BASE_VERSION=4.0.5
+# Fri, 02 Apr 2021 18:48:58 GMT
+RUN echo "deb http://deb.debian.org/debian experimental main" > /etc/apt/sources.list.d/experimental.list     && echo "deb [trusted=yes] https://eddelbuettel.github.io/ppaR400 ./" > /etc/apt/sources.list.d/edd-r4.list
+# Fri, 02 Apr 2021 19:21:12 GMT
+RUN apt-get update         && apt-get install -y --no-install-recommends                 gcc-9-base                 libopenblas0-pthread 		littler                 r-cran-littler 		r-base=${R_BASE_VERSION}-* 		r-base-dev=${R_BASE_VERSION}-*                 r-base-core=${R_BASE_VERSION}-* 		r-recommended=${R_BASE_VERSION}-* 	&& ln -s /usr/lib/R/site-library/littler/examples/install.r /usr/local/bin/install.r 	&& ln -s /usr/lib/R/site-library/littler/examples/install2.r /usr/local/bin/install2.r 	&& ln -s /usr/lib/R/site-library/littler/examples/installBioc.r /usr/local/bin/installBioc.r 	&& ln -s /usr/lib/R/site-library/littler/examples/installDeps.r /usr/local/bin/installDeps.r 	&& ln -s /usr/lib/R/site-library/littler/examples/installGithub.r /usr/local/bin/installGithub.r 	&& ln -s /usr/lib/R/site-library/littler/examples/testInstalled.r /usr/local/bin/testInstalled.r 	&& install.r docopt 	&& rm -rf /tmp/downloaded_packages/ /tmp/*.rds 	&& rm -rf /var/lib/apt/lists/*
+# Fri, 02 Apr 2021 19:21:38 GMT
 CMD ["R"]
 ```
 
@@ -204,22 +218,26 @@ CMD ["R"]
 		Last Modified: Wed, 31 Mar 2021 16:48:19 GMT  
 		Size: 351.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7e4f2b64e7bf12b4233155bd92d035c666865967e5e8c3ca800d62195ed5d06c`  
-		Last Modified: Wed, 31 Mar 2021 16:49:02 GMT  
-		Size: 235.3 MB (235286148 bytes)  
+	-	`sha256:bdb9547c29c72e68fff1cda0a3c5edf3367fe7b57cfbf9aec3f04d9a6894fb52`  
+		Last Modified: Fri, 02 Apr 2021 19:22:22 GMT  
+		Size: 294.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:6d290a46527a6d907edf0271ad2ea036291dc04cb492591e5a1df471696a128d`  
+		Last Modified: Fri, 02 Apr 2021 19:23:07 GMT  
+		Size: 236.2 MB (236216817 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `r-base:latest` - linux; s390x
 
 ```console
-$ docker pull r-base@sha256:254e46f6da1ce20c02be7f4d5844bffa73c989ab95bde57302ad3404f2949e0c
+$ docker pull r-base@sha256:544017496bd01a6b9d6156904e809ec40814cd5d625421de2cfd332ead4cf702
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **289.3 MB (289262036 bytes)**  
+-	Total Size: **290.2 MB (290207311 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:32bb97e2f0177423bd859138e4e362ffdaa935edbd30f0fcdbb1e2d4a47afa64`
+-	Image ID: `sha256:d21c702728f58b3c680b21fec71269eab0fbb0048cfb8f05635bb9df031e4d66`
 -	Default Command: `["R"]`
 
 ```dockerfile
@@ -241,11 +259,13 @@ ENV LC_ALL=en_US.UTF-8
 ENV LANG=en_US.UTF-8
 # Wed, 31 Mar 2021 02:15:55 GMT
 RUN echo "deb http://http.debian.net/debian sid main" > /etc/apt/sources.list.d/debian-unstable.list         && echo 'APT::Default-Release "testing";' > /etc/apt/apt.conf.d/default         && echo 'APT::Install-Recommends "false";' > /etc/apt/apt.conf.d/90local-no-recommends
-# Wed, 31 Mar 2021 02:15:55 GMT
-ENV R_BASE_VERSION=4.0.4
-# Wed, 31 Mar 2021 02:17:09 GMT
-RUN apt-get update         && apt-get install -t unstable -y --no-install-recommends                 gcc-9-base                 libopenblas0-pthread 		littler                 r-cran-littler 		r-base=${R_BASE_VERSION}-* 		r-base-dev=${R_BASE_VERSION}-* 		r-recommended=${R_BASE_VERSION}-* 	&& ln -s /usr/lib/R/site-library/littler/examples/install.r /usr/local/bin/install.r 	&& ln -s /usr/lib/R/site-library/littler/examples/install2.r /usr/local/bin/install2.r 	&& ln -s /usr/lib/R/site-library/littler/examples/installBioc.r /usr/local/bin/installBioc.r 	&& ln -s /usr/lib/R/site-library/littler/examples/installDeps.r /usr/local/bin/installDeps.r 	&& ln -s /usr/lib/R/site-library/littler/examples/installGithub.r /usr/local/bin/installGithub.r 	&& ln -s /usr/lib/R/site-library/littler/examples/testInstalled.r /usr/local/bin/testInstalled.r 	&& install.r docopt 	&& rm -rf /tmp/downloaded_packages/ /tmp/*.rds 	&& rm -rf /var/lib/apt/lists/*
-# Wed, 31 Mar 2021 02:17:21 GMT
+# Fri, 02 Apr 2021 18:48:00 GMT
+ENV R_BASE_VERSION=4.0.5
+# Fri, 02 Apr 2021 18:48:01 GMT
+RUN echo "deb http://deb.debian.org/debian experimental main" > /etc/apt/sources.list.d/experimental.list     && echo "deb [trusted=yes] https://eddelbuettel.github.io/ppaR400 ./" > /etc/apt/sources.list.d/edd-r4.list
+# Fri, 02 Apr 2021 18:49:16 GMT
+RUN apt-get update         && apt-get install -y --no-install-recommends                 gcc-9-base                 libopenblas0-pthread 		littler                 r-cran-littler 		r-base=${R_BASE_VERSION}-* 		r-base-dev=${R_BASE_VERSION}-*                 r-base-core=${R_BASE_VERSION}-* 		r-recommended=${R_BASE_VERSION}-* 	&& ln -s /usr/lib/R/site-library/littler/examples/install.r /usr/local/bin/install.r 	&& ln -s /usr/lib/R/site-library/littler/examples/install2.r /usr/local/bin/install2.r 	&& ln -s /usr/lib/R/site-library/littler/examples/installBioc.r /usr/local/bin/installBioc.r 	&& ln -s /usr/lib/R/site-library/littler/examples/installDeps.r /usr/local/bin/installDeps.r 	&& ln -s /usr/lib/R/site-library/littler/examples/installGithub.r /usr/local/bin/installGithub.r 	&& ln -s /usr/lib/R/site-library/littler/examples/testInstalled.r /usr/local/bin/testInstalled.r 	&& install.r docopt 	&& rm -rf /tmp/downloaded_packages/ /tmp/*.rds 	&& rm -rf /var/lib/apt/lists/*
+# Fri, 02 Apr 2021 18:49:35 GMT
 CMD ["R"]
 ```
 
@@ -270,7 +290,11 @@ CMD ["R"]
 		Last Modified: Wed, 31 Mar 2021 02:17:46 GMT  
 		Size: 348.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e93211c767e5c6138c810c33e46f3859714cf339a51ad5fad042eedb27b027a7`  
-		Last Modified: Wed, 31 Mar 2021 02:18:11 GMT  
-		Size: 209.6 MB (209558437 bytes)  
+	-	`sha256:61ec789f1b83aaf9ef65bd0b6f97c786306fc2d219c156e466ae093bf4d54122`  
+		Last Modified: Fri, 02 Apr 2021 18:49:53 GMT  
+		Size: 291.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:9dd214d4f8233671cbbb1285589b9b1635ade670a46981e3f888669ba4364748`  
+		Last Modified: Fri, 02 Apr 2021 18:50:17 GMT  
+		Size: 210.5 MB (210503421 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
