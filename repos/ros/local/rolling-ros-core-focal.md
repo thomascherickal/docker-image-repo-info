@@ -364,14 +364,9 @@ Licenses: (parsed from: `/usr/share/doc/libcurl4/copyright`)
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.68.0-1ubuntu2.4
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.4.dsc' curl_7.68.0-1ubuntu2.4.dsc 2733 SHA512:1dcbd2b618e4dd7bea2096f5a33da9c0ec1843481c208d06782541f9804658ef2a33bd1a05283c35bd4a256eed35d7dc4539d4c50d4d39d6a0f2690279f43daa
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0.orig.tar.gz' curl_7.68.0.orig.tar.gz 4096350 SHA512:58b42c08b1cf4cb6e68f8e469d5b5f6298eebe286ba2677ad29e1a7eefd15b8609af54544f4c5a7dadebbd3b23bd77700830f2f60fbea7ae3f2f306e640010b0
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.4.debian.tar.xz' curl_7.68.0-1ubuntu2.4.debian.tar.xz 38608 SHA512:487f50938042d2376c118b4e0233c6bfbc90bd2420bfd113fa47be52f21c3d0dce8bc4f83f6207ba729c22c42ee811dff8fe7dbecb5b3ecdd99847ce5725a43f
-```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2`
 
@@ -1612,14 +1607,9 @@ Licenses: (parsed from: `/usr/share/doc/python3-lxml/copyright`)
 - `GPL2`
 - `later`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris lxml=4.5.0-1ubuntu0.2
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lxml/lxml_4.5.0-1ubuntu0.2.dsc' lxml_4.5.0-1ubuntu0.2.dsc 2352 SHA512:eb7deb392ef0a27e41c9625d53fa5340e8f9724fdbb9481fa5ca0e8282c44a0df3ec6e578d98b2acc85e1e416d33510c73149706fc467930b83c3ea4d15142b2
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lxml/lxml_4.5.0.orig.tar.gz' lxml_4.5.0.orig.tar.gz 4531832 SHA512:7cb957b2ab9931c32984ad0808f51e650e82e2d9b14df3fd8df2dd8f2c5c261d26ebf2c672b723e89b00b867a0a8dbb9130023e48a5f302fd02d5409e1c8cd6c
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lxml/lxml_4.5.0-1ubuntu0.2.debian.tar.xz' lxml_4.5.0-1ubuntu0.2.debian.tar.xz 9812 SHA512:40316ea0736ec96a141eec8e117f064309191440d4f40ac230e51121fe362c1bd382a3209c7f1e607ef8085f4a535cde7740b4f423b6921bbce96ac06baa9fab
-```
 
 ### `dpkg` source package: `lz4=1.9.2-2`
 
@@ -2189,14 +2179,9 @@ Licenses: (parsed from: `/usr/share/doc/python3-pygments/copyright`)
 
 - `Apache-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pygments=2.3.1+dfsg-1ubuntu2.1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pygments/pygments_2.3.1+dfsg-1ubuntu2.1.dsc' pygments_2.3.1+dfsg-1ubuntu2.1.dsc 2475 SHA512:706d91d248360712a63f19c58a4152e94b33b42a1c8a3292c3d306d5e5142d5f13241b6d74ef3427194e1f079d538594a97bc488e2d94dcbf8f280a24d944901
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pygments/pygments_2.3.1+dfsg.orig.tar.gz' pygments_2.3.1+dfsg.orig.tar.gz 1110919 SHA512:5a3a7412b92c5d1cf2a0f9faed36d8b39b7518fc24ec0bd936c20ca9188a219d8307051b4073165c2cda4bba1a2a2f5d09369d661b0b9ef39015ace5f6095cc8
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pygments/pygments_2.3.1+dfsg-1ubuntu2.1.debian.tar.xz' pygments_2.3.1+dfsg-1ubuntu2.1.debian.tar.xz 9288 SHA512:62a13c5b4d92cbf4599a5f17262e60ffe7ace81f845e6a6ba45eb86b3f1c43568d1610a8c74380bec248fb7ff886349ab2b9495c0f438f013bc8d96162cbd55e
-```
 
 ### `dpkg` source package: `pyparsing=2.4.6-1`
 
@@ -2731,14 +2716,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3-rospkg-modules=1.2.10-1
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-rospkg-modules/python3-rospkg-modules_1.2.10-1.debian.tar.xz' python3-rospkg-modules_1.2.10-1.debian.tar.xz 1172 SHA512:65cee4d28b0320fc3931a7a546e463bb6f8f5b18235076442cbf47502bb62aa08282f4fa12135ac5ef20e6d6ffe49c61eec427efdcbbc3816e59ff556587f628
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-rospkg-modules/python3-rospkg-modules_1.2.10-1.dsc' python3-rospkg-modules_1.2.10-1.dsc 947 SHA512:a35e6b66570813b6d8d0318b0149fd46709e209461a9290f34d1d82a35585bc18e1eab35ab29e2d9d2384e9772b9d3bbf1742033a946efcaf2b34b8e32d70e1d
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-rospkg-modules/python3-rospkg-modules_1.2.10.orig.tar.gz' python3-rospkg-modules_1.2.10.orig.tar.gz 41498 SHA512:dfce6e9a545cf1a1c166ff4b4f05b94a4302ca554b71932f2800d8c7a42b2db856b78b1e6c48ed17fde70e158b5a6c689973038cbdbec6c4684fb232c27e3d55
-```
 
 ### `dpkg` source package: `python3-stdlib-extensions=3.8.5-1~20.04.1`
 

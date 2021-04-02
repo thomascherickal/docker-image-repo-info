@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:ddf5648900708daec77878a199287ab52eb6437e8b59fbdb38e7a30b715cf09f`
-- Created: `2021-03-27T09:18:20.727271796Z`
+- Image ID: `sha256:6627f0a73b25b1036491314b65d3b791f5342c382cb9d0521c22225f2b1eadc5`
+- Created: `2021-03-31T14:36:19.521752975Z`
 - Virtual Size: ~ 2.48 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -3564,11 +3564,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/lcms2/2.8-4+deb9u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/lcms2/2.8-4+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `leptonlib=1.74.1-1`
+### `dpkg` source package: `leptonlib=1.74.1-1+deb9u1`
 
 Binary Packages:
 
-- `liblept5=1.74.1-1`
+- `liblept5=1.74.1-1+deb9u1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -3577,17 +3577,17 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris leptonlib=1.74.1-1
-'http://deb.debian.org/debian/pool/main/l/leptonlib/leptonlib_1.74.1-1.dsc' leptonlib_1.74.1-1.dsc 1908 SHA256:fc9a55a4fffed792550e14b2263683c634afbb1a1222ffb51b6f5083f622e8b5
-'http://deb.debian.org/debian/pool/main/l/leptonlib/leptonlib_1.74.1.orig.tar.gz' leptonlib_1.74.1.orig.tar.gz 10899752 SHA256:6d40c7318b2b60fec5173475e8a34c1e08799d668a533d1756c9dfeb874a9d8a
-'http://deb.debian.org/debian/pool/main/l/leptonlib/leptonlib_1.74.1-1.debian.tar.xz' leptonlib_1.74.1-1.debian.tar.xz 6108 SHA256:e69836bf75c36d44574ef49be5c90cbf5324e84465ae4a128b8ef1f42e81d7ac
+$ apt-get source -qq --print-uris leptonlib=1.74.1-1+deb9u1
+'http://security.debian.org/debian-security/pool/updates/main/l/leptonlib/leptonlib_1.74.1-1+deb9u1.dsc' leptonlib_1.74.1-1+deb9u1.dsc 2109 SHA256:c63ef213483f0e0832e40916717d2ea5e21be261c27bdacea7820c9368580801
+'http://security.debian.org/debian-security/pool/updates/main/l/leptonlib/leptonlib_1.74.1.orig.tar.gz' leptonlib_1.74.1.orig.tar.gz 10899752 SHA256:6d40c7318b2b60fec5173475e8a34c1e08799d668a533d1756c9dfeb874a9d8a
+'http://security.debian.org/debian-security/pool/updates/main/l/leptonlib/leptonlib_1.74.1-1+deb9u1.debian.tar.xz' leptonlib_1.74.1-1+deb9u1.debian.tar.xz 8484 SHA256:6c489632f9fda615260a8099d2ce51427492753e02db3d568973248c31543775
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/leptonlib/1.74.1-1/ (for browsing the source)
-- https://sources.debian.net/src/leptonlib/1.74.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/leptonlib/1.74.1-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/leptonlib/1.74.1-1+deb9u1/ (for browsing the source)
+- https://sources.debian.net/src/leptonlib/1.74.1-1+deb9u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/leptonlib/1.74.1-1+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libaec=0.3.2-1`
 
