@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:68a76bc5fa7e92217be4fca36f6b4b647ddebbe95c8af8c304cc9b9341c4c7b4`
-- Created: `2021-03-26T21:07:27.438988467Z`
-- Virtual Size: ~ 50.57 Mb  
+- Image ID: `sha256:6ffc816e5bec1c3b065870a03b9d2934011f6082059d6de48fe4ef0c3b4e3303`
+- Created: `2021-04-03T00:43:20.885856417Z`
+- Virtual Size: ~ 50.58 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["hy"]`
@@ -12,10 +12,10 @@
   - `PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=C.UTF-8`
   - `GPG_KEY=E3FF2839C048B25C084DEBE9B26995E310250568`
-  - `PYTHON_VERSION=3.8.8`
+  - `PYTHON_VERSION=3.8.9`
   - `PYTHON_PIP_VERSION=21.0.1`
-  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/b60e2320d9e8d02348525bd74e871e466afdf77c/get-pip.py`
-  - `PYTHON_GET_PIP_SHA256=c3b81e5d06371e135fb3156dc7d8fd6270735088428c4a9a5ec1f342e2024565`
+  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/29f37dbe6b3842ccd52d61816a3044173962ebeb/public/get-pip.py`
+  - `PYTHON_GET_PIP_SHA256=e03eb8a33d3b441ff484c56a436ff10680479d4bd14e59268e67977ed40904de`
   - `HY_VERSION=0.20.0`
 
 ## `apk` (`.apk`-based packages)
@@ -74,16 +74,16 @@ GPL-2.0-only
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.31.1-r19 description:
+busybox-1.31.1-r20 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.31.1-r19 webpage:
+busybox-1.31.1-r20 webpage:
 https://busybox.net/
 
-busybox-1.31.1-r19 installed size:
+busybox-1.31.1-r20 installed size:
 962560
 
-busybox-1.31.1-r19 license:
+busybox-1.31.1-r20 license:
 GPL-2.0-only
 
 ```
@@ -550,16 +550,16 @@ Public-Domain
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.31.1-r19 description:
+ssl_client-1.31.1-r20 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.31.1-r19 webpage:
+ssl_client-1.31.1-r20 webpage:
 https://busybox.net/
 
-ssl_client-1.31.1-r19 installed size:
+ssl_client-1.31.1-r20 installed size:
 28672
 
-ssl_client-1.31.1-r19 license:
+ssl_client-1.31.1-r20 license:
 GPL-2.0-only
 
 ```

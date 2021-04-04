@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:a65bf740b61d4af859ecd75c7df801c796077b87cdaff939e2782248b7f376bb`
-- Created: `2021-03-26T21:07:43.515451032Z`
-- Virtual Size: ~ 48.96 Mb  
+- Image ID: `sha256:95c5b4bb61309a93647bece52f460ba6553c8dadc52e58c9347ccbeaf537d125`
+- Created: `2021-04-03T00:44:08.54760383Z`
+- Virtual Size: ~ 48.97 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["hy"]`
@@ -14,8 +14,8 @@
   - `GPG_KEY=0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D`
   - `PYTHON_VERSION=3.7.10`
   - `PYTHON_PIP_VERSION=21.0.1`
-  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/b60e2320d9e8d02348525bd74e871e466afdf77c/get-pip.py`
-  - `PYTHON_GET_PIP_SHA256=c3b81e5d06371e135fb3156dc7d8fd6270735088428c4a9a5ec1f342e2024565`
+  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/29f37dbe6b3842ccd52d61816a3044173962ebeb/public/get-pip.py`
+  - `PYTHON_GET_PIP_SHA256=e03eb8a33d3b441ff484c56a436ff10680479d4bd14e59268e67977ed40904de`
   - `HY_VERSION=0.20.0`
 
 ## `apk` (`.apk`-based packages)
@@ -57,16 +57,16 @@ MIT
 ### `apk` package: `apk-tools`
 
 ```console
-apk-tools-2.12.1-r0 description:
+apk-tools-2.12.4-r0 description:
 Alpine Package Keeper - package manager for alpine
 
-apk-tools-2.12.1-r0 webpage:
+apk-tools-2.12.4-r0 webpage:
 https://gitlab.alpinelinux.org/alpine/apk-tools
 
-apk-tools-2.12.1-r0 installed size:
+apk-tools-2.12.4-r0 installed size:
 311296
 
-apk-tools-2.12.1-r0 license:
+apk-tools-2.12.4-r0 license:
 GPL-2.0-only
 
 ```
@@ -74,16 +74,16 @@ GPL-2.0-only
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.32.1-r3 description:
+busybox-1.32.1-r5 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.32.1-r3 webpage:
+busybox-1.32.1-r5 webpage:
 https://busybox.net/
 
-busybox-1.32.1-r3 installed size:
+busybox-1.32.1-r5 installed size:
 946176
 
-busybox-1.32.1-r3 license:
+busybox-1.32.1-r5 license:
 GPL-2.0-only
 
 ```
@@ -550,16 +550,16 @@ Public-Domain
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.32.1-r3 description:
+ssl_client-1.32.1-r5 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.32.1-r3 webpage:
+ssl_client-1.32.1-r5 webpage:
 https://busybox.net/
 
-ssl_client-1.32.1-r3 installed size:
+ssl_client-1.32.1-r5 installed size:
 28672
 
-ssl_client-1.32.1-r3 license:
+ssl_client-1.32.1-r5 license:
 GPL-2.0-only
 
 ```
