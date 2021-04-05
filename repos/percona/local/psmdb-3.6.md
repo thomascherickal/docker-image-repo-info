@@ -1,19 +1,19 @@
-# `percona:psmdb-3.6.22`
+# `percona:psmdb-3.6.23`
 
 ## Docker Metadata
 
-- Image ID: `sha256:53f66a663c8b4e5fd5c6c53e2b286233279a80c8f3001833583bc2244bbc9b5d`
-- Created: `2021-03-06T01:13:46.173773424Z`
-- Virtual Size: ~ 408.40 Mb  
+- Image ID: `sha256:22b8b918a0a6e6aaa8c251ee25ea4cc67f831b3b5c03319409480c8086423a51`
+- Created: `2021-04-01T11:52:44.878122374Z`
+- Virtual Size: ~ 408.42 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
 - Command: `["mongod"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `PSMDB_VERSION=3.6.22-12.0`
+  - `PSMDB_VERSION=3.6.23-13.0`
   - `OS_VER=el8`
-  - `FULL_PERCONA_VERSION=3.6.22-12.0.el8`
+  - `FULL_PERCONA_VERSION=3.6.23-13.0.el8`
   - `K8S_TOOLS_VERSION=0.5.0`
 - Labels:
   - `org.label-schema.build-date=20201204`
