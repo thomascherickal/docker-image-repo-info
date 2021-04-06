@@ -1,10 +1,10 @@
-# `ruby:3.0.0-alpine3.13`
+# `ruby:3.0.1-alpine3.13`
 
 ## Docker Metadata
 
-- Image ID: `sha256:ec42221cd21973e325ec13c3c9f4092a5705429154bb6e7b30e281527fe3e00c`
-- Created: `2021-04-01T10:43:41.482245834Z`
-- Virtual Size: ~ 59.76 Mb  
+- Image ID: `sha256:4d82b2766a781c37c0f13cd3ce521f60553ff15302fea0001daba6ce29ca8ab8`
+- Created: `2021-04-05T19:03:00.935187927Z`
+- Virtual Size: ~ 60.04 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["irb"]`
@@ -12,8 +12,8 @@
   - `PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=C.UTF-8`
   - `RUBY_MAJOR=3.0`
-  - `RUBY_VERSION=3.0.0`
-  - `RUBY_DOWNLOAD_SHA256=68bfaeef027b6ccd0032504a68ae69721a70e97d921ff328c0c8836c798f6cb1`
+  - `RUBY_VERSION=3.0.1`
+  - `RUBY_DOWNLOAD_SHA256=d06bccd382d03724b69f674bc46cd6957ba08ed07522694ce44b9e8ffc9c48e2`
   - `GEM_HOME=/usr/local/bundle`
   - `BUNDLE_SILENCE_ROOT_WARNING=1`
   - `BUNDLE_APP_CONFIG=/usr/local/bundle`
