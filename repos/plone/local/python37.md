@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:c9aa96e9aac8a512d3c3bb8bbbce815968824b0d75043b25d6553e2af96d6918`
-- Created: `2021-04-01T10:17:36.282042767Z`
-- Virtual Size: ~ 747.20 Mb  
+- Image ID: `sha256:ac6ddb2226fd3cdad4de5899160beb6916aa134bda800e9847fc1de2caddd10e`
+- Created: `2021-04-03T00:17:30.937785868Z`
+- Virtual Size: ~ 747.19 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -15,8 +15,8 @@
   - `GPG_KEY=0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D`
   - `PYTHON_VERSION=3.7.10`
   - `PYTHON_PIP_VERSION=21.0.1`
-  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/b60e2320d9e8d02348525bd74e871e466afdf77c/get-pip.py`
-  - `PYTHON_GET_PIP_SHA256=c3b81e5d06371e135fb3156dc7d8fd6270735088428c4a9a5ec1f342e2024565`
+  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/29f37dbe6b3842ccd52d61816a3044173962ebeb/public/get-pip.py`
+  - `PYTHON_GET_PIP_SHA256=e03eb8a33d3b441ff484c56a436ff10680479d4bd14e59268e67977ed40904de`
   - `PIP=21.0.1`
   - `ZC_BUILDOUT=2.13.4`
   - `SETUPTOOLS=51.3.3`
@@ -2586,11 +2586,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/nss/2:3.42.1-1+deb10u3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/nss/2:3.42.1-1+deb10u3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openjpeg2=2.3.0-2+deb10u1`
+### `dpkg` source package: `openjpeg2=2.3.0-2+deb10u2`
 
 Binary Packages:
 
-- `libopenjp2-7:amd64=2.3.0-2+deb10u1`
+- `libopenjp2-7:amd64=2.3.0-2+deb10u2`
 
 Licenses: (parsed from: `/usr/share/doc/libopenjp2-7/copyright`)
 
@@ -2607,17 +2607,17 @@ Licenses: (parsed from: `/usr/share/doc/libopenjp2-7/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openjpeg2=2.3.0-2+deb10u1
-'http://deb.debian.org/debian/pool/main/o/openjpeg2/openjpeg2_2.3.0-2+deb10u1.dsc' openjpeg2_2.3.0-2+deb10u1.dsc 2590 SHA256:a8b1faaf14416687c5cf25bb95662ab4c9e2e552069c226666e685d5fa6cc212
-'http://deb.debian.org/debian/pool/main/o/openjpeg2/openjpeg2_2.3.0.orig.tar.gz' openjpeg2_2.3.0.orig.tar.gz 2074456 SHA256:fd5ca8cf3f195b0a54c56193c5897bb423c00db577afda4033318006769a5833
-'http://deb.debian.org/debian/pool/main/o/openjpeg2/openjpeg2_2.3.0-2+deb10u1.debian.tar.xz' openjpeg2_2.3.0-2+deb10u1.debian.tar.xz 21984 SHA256:9ba5f95157fc8f861ee5bae029ee2956e837e29a701e0212dc7b6bf6c256c707
+$ apt-get source -qq --print-uris openjpeg2=2.3.0-2+deb10u2
+'http://security.debian.org/debian-security/pool/updates/main/o/openjpeg2/openjpeg2_2.3.0-2+deb10u2.dsc' openjpeg2_2.3.0-2+deb10u2.dsc 2764 SHA256:6094cdce898466329764177f33c596786a10587c8d7608fd2d2cfcbc029a46b2
+'http://security.debian.org/debian-security/pool/updates/main/o/openjpeg2/openjpeg2_2.3.0.orig.tar.gz' openjpeg2_2.3.0.orig.tar.gz 2074456 SHA256:fd5ca8cf3f195b0a54c56193c5897bb423c00db577afda4033318006769a5833
+'http://security.debian.org/debian-security/pool/updates/main/o/openjpeg2/openjpeg2_2.3.0-2+deb10u2.debian.tar.xz' openjpeg2_2.3.0-2+deb10u2.debian.tar.xz 26324 SHA256:ab1d20e7298e86e124ffa4f18a929adaa75a0cee35755a8f7571acbbaca9093c
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/openjpeg2/2.3.0-2+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/openjpeg2/2.3.0-2+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openjpeg2/2.3.0-2+deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/openjpeg2/2.3.0-2+deb10u2/ (for browsing the source)
+- https://sources.debian.net/src/openjpeg2/2.3.0-2+deb10u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openjpeg2/2.3.0-2+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openldap=2.4.47+dfsg-3+deb10u6`
 
