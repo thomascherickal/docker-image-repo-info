@@ -1,7 +1,7 @@
 ## `maven:ibmjava`
 
 ```console
-$ docker pull maven@sha256:84d21409e1164f895ef37ec50ec9ace4d3e4f4e25a8fcc24dcc2060d0fe17bcf
+$ docker pull maven@sha256:b16095612acaf237ef3f95ddd9335ddd8d31d10ca55281de405b9bf2b24a561c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -14,14 +14,14 @@ $ docker pull maven@sha256:84d21409e1164f895ef37ec50ec9ace4d3e4f4e25a8fcc24dcc20
 ### `maven:ibmjava` - linux; amd64
 
 ```console
-$ docker pull maven@sha256:6ca06c798f75337b2ac016689efd019330367f28a62bce58dabafc5c54318b26
+$ docker pull maven@sha256:67608463abd1081ae37b4978d65826a0374034a5567a936e8306b25de307edbb
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **236.3 MB (236311214 bytes)**  
+-	Total Size: **236.4 MB (236354274 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ad8f5e6bed8748d2cd78f41c2cac72a479bad1a8f884858b9b35e3f4de4948a6`
+-	Image ID: `sha256:f4c0cb7f42067456a17a99f0246283fe14d9eaabff8c8bf9c3dd33e94baad2b9`
 -	Entrypoint: `["\/usr\/local\/bin\/mvn-entrypoint.sh"]`
 -	Default Command: `["mvn"]`
 
@@ -46,28 +46,28 @@ ENV JAVA_VERSION=1.8.0_sr6fp26
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        amd64|x86_64)          ESUM='c51b7afed4911a4eefdf02c44ee440de726a5a605c5507cc50d4795394b418c2';          YML_FILE='sdk/linux/x86_64/index.yml';          ;;        i386)          ESUM='dfe87d34c40cd0c23dc4b7ee47c85f84e26d21ff75476b234998bb9132379659';          YML_FILE='sdk/linux/i386/index.yml';          ;;        ppc64el|ppc64le)          ESUM='bbc55934ec867290cd9307422beae48e5032dfabb7cb496bed6e47b7ab3f90be';          YML_FILE='sdk/linux/ppc64le/index.yml';          ;;        s390)          ESUM='a1ed2722f283a3f3eb0a71f23354b0b4d2761865e759a3bf7f89297e17c20e6f';          YML_FILE='sdk/linux/s390/index.yml';          ;;        s390x)          ESUM='c2ddf185daafacd0b50f3e4e593d613b2e9b70d66b88a8da6ee313181376aef6';          YML_FILE='sdk/linux/s390x/index.yml';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     BASE_URL="https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/java/meta/";     wget -q -U UA_IBM_JAVA_Docker -O /tmp/index.yml ${BASE_URL}/${YML_FILE};     JAVA_URL=$(sed -n '/^'${JAVA_VERSION}:'/{n;s/\s*uri:\s//p}'< /tmp/index.yml);     wget -q -U UA_IBM_JAVA_Docker -O /tmp/ibm-java.bin ${JAVA_URL};     echo "${ESUM}  /tmp/ibm-java.bin" | sha256sum -c -;     echo "INSTALLER_UI=silent" > /tmp/response.properties;     echo "USER_INSTALL_DIR=/opt/ibm/java" >> /tmp/response.properties;     echo "LICENSE_ACCEPTED=TRUE" >> /tmp/response.properties;     mkdir -p /opt/ibm;     chmod +x /tmp/ibm-java.bin;     /tmp/ibm-java.bin -i silent -f /tmp/response.properties;     rm -f /tmp/response.properties;     rm -f /tmp/index.yml;     rm -f /tmp/ibm-java.bin;
 # Fri, 26 Mar 2021 09:34:34 GMT
 ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin IBM_JAVA_OPTIONS=-XX:+UseContainerSupport
-# Fri, 26 Mar 2021 18:59:51 GMT
-ARG MAVEN_VERSION=3.6.3
-# Fri, 26 Mar 2021 18:59:51 GMT
+# Mon, 05 Apr 2021 17:53:05 GMT
+ARG MAVEN_VERSION=3.8.1
+# Mon, 05 Apr 2021 17:53:05 GMT
 ARG USER_HOME_DIR=/root
-# Fri, 26 Mar 2021 18:59:51 GMT
-ARG SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0
-# Fri, 26 Mar 2021 18:59:52 GMT
-ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries
-# Fri, 26 Mar 2021 19:00:22 GMT
-# ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries MAVEN_VERSION=3.6.3 SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0 USER_HOME_DIR=/root
+# Mon, 05 Apr 2021 17:53:06 GMT
+ARG SHA=0ec48eb515d93f8515d4abe465570dfded6fa13a3ceb9aab8031428442d9912ec20f066b2afbf56964ffe1ceb56f80321b50db73cf77a0e2445ad0211fb8e38d
+# Mon, 05 Apr 2021 17:53:06 GMT
+ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/3.8.1/binaries
+# Mon, 05 Apr 2021 17:53:36 GMT
+# ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.8.1/binaries MAVEN_VERSION=3.8.1 SHA=0ec48eb515d93f8515d4abe465570dfded6fa13a3ceb9aab8031428442d9912ec20f066b2afbf56964ffe1ceb56f80321b50db73cf77a0e2445ad0211fb8e38d USER_HOME_DIR=/root
 RUN apt-get update && apt-get install -y curl   && mkdir -p /usr/share/maven /usr/share/maven/ref   && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz   && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha512sum -c -   && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1   && rm -f /tmp/apache-maven.tar.gz   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
-# Fri, 26 Mar 2021 19:00:22 GMT
+# Mon, 05 Apr 2021 17:53:36 GMT
 ENV MAVEN_HOME=/usr/share/maven
-# Fri, 26 Mar 2021 19:00:22 GMT
+# Mon, 05 Apr 2021 17:53:37 GMT
 ENV MAVEN_CONFIG=/root/.m2
-# Fri, 26 Mar 2021 19:00:23 GMT
+# Mon, 05 Apr 2021 17:53:37 GMT
 COPY file:1b3da5c58894f705e7387946301c0c52edb6271761ea3cd80b86a848847a64cd in /usr/local/bin/mvn-entrypoint.sh 
-# Fri, 26 Mar 2021 19:00:23 GMT
+# Mon, 05 Apr 2021 17:53:37 GMT
 COPY file:2bbb488dd73c55d658b91943cfdf9c26975a320ceafc45dda94c95b03e518ad3 in /usr/share/maven/ref/ 
-# Fri, 26 Mar 2021 19:00:23 GMT
+# Mon, 05 Apr 2021 17:53:38 GMT
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
-# Fri, 26 Mar 2021 19:00:23 GMT
+# Mon, 05 Apr 2021 17:53:38 GMT
 CMD ["mvn"]
 ```
 
@@ -92,30 +92,30 @@ CMD ["mvn"]
 		Last Modified: Fri, 26 Mar 2021 09:37:24 GMT  
 		Size: 168.0 MB (168001680 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c9721e0329ab14ceaa26804c63d6f3514324d0452cabfbc5b7c2e0cb8e7470a1`  
-		Last Modified: Fri, 26 Mar 2021 19:07:07 GMT  
-		Size: 38.6 MB (38638089 bytes)  
+	-	`sha256:191123f915a8a832f3d9551f2e6ca4ff3af4540d22cdc2ddbd039abfffaa3b2c`  
+		Last Modified: Mon, 05 Apr 2021 18:04:13 GMT  
+		Size: 38.7 MB (38681148 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:85818b5e8a7e711d07943f0ac2c8189dd1805076d29a745413b92f2c8c8f819b`  
-		Last Modified: Fri, 26 Mar 2021 19:07:03 GMT  
-		Size: 849.0 B  
+	-	`sha256:a78e7276c0fd392b900ee1fad28e18cf847e79d6abd7ac24b42703da05106f95`  
+		Last Modified: Mon, 05 Apr 2021 18:04:09 GMT  
+		Size: 850.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7f353b568c8be7dc131661aed6f85830d73b20597a4408fa1fd7ec7db5090d1d`  
-		Last Modified: Fri, 26 Mar 2021 19:07:03 GMT  
+	-	`sha256:a90227f982f4216ce414b3cfd451f4202b8c062a5a2d435512ba5039dd462622`  
+		Last Modified: Mon, 05 Apr 2021 18:04:09 GMT  
 		Size: 361.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `maven:ibmjava` - linux; 386
 
 ```console
-$ docker pull maven@sha256:c7574f1c24db77e686caf22931770850bdb6d493739ccf4577c2b3a93fe3fae5
+$ docker pull maven@sha256:b3e505d04bf82f43856001c2fa4fb919e36b38e6c1320d48281eba2d438b3b86
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **223.2 MB (223187745 bytes)**  
+-	Total Size: **223.2 MB (223222944 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0ce6b6966d088c6367a7f7042552878b72b54b5603809f21f07674bdd5e1d399`
+-	Image ID: `sha256:29113402c4922c6a24b4519d8efe500ce6c63328eea738aa0dc3695acd9bad12`
 -	Entrypoint: `["\/usr\/local\/bin\/mvn-entrypoint.sh"]`
 -	Default Command: `["mvn"]`
 
@@ -140,28 +140,28 @@ ENV JAVA_VERSION=1.8.0_sr6fp26
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        amd64|x86_64)          ESUM='c51b7afed4911a4eefdf02c44ee440de726a5a605c5507cc50d4795394b418c2';          YML_FILE='sdk/linux/x86_64/index.yml';          ;;        i386)          ESUM='dfe87d34c40cd0c23dc4b7ee47c85f84e26d21ff75476b234998bb9132379659';          YML_FILE='sdk/linux/i386/index.yml';          ;;        ppc64el|ppc64le)          ESUM='bbc55934ec867290cd9307422beae48e5032dfabb7cb496bed6e47b7ab3f90be';          YML_FILE='sdk/linux/ppc64le/index.yml';          ;;        s390)          ESUM='a1ed2722f283a3f3eb0a71f23354b0b4d2761865e759a3bf7f89297e17c20e6f';          YML_FILE='sdk/linux/s390/index.yml';          ;;        s390x)          ESUM='c2ddf185daafacd0b50f3e4e593d613b2e9b70d66b88a8da6ee313181376aef6';          YML_FILE='sdk/linux/s390x/index.yml';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     BASE_URL="https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/java/meta/";     wget -q -U UA_IBM_JAVA_Docker -O /tmp/index.yml ${BASE_URL}/${YML_FILE};     JAVA_URL=$(sed -n '/^'${JAVA_VERSION}:'/{n;s/\s*uri:\s//p}'< /tmp/index.yml);     wget -q -U UA_IBM_JAVA_Docker -O /tmp/ibm-java.bin ${JAVA_URL};     echo "${ESUM}  /tmp/ibm-java.bin" | sha256sum -c -;     echo "INSTALLER_UI=silent" > /tmp/response.properties;     echo "USER_INSTALL_DIR=/opt/ibm/java" >> /tmp/response.properties;     echo "LICENSE_ACCEPTED=TRUE" >> /tmp/response.properties;     mkdir -p /opt/ibm;     chmod +x /tmp/ibm-java.bin;     /tmp/ibm-java.bin -i silent -f /tmp/response.properties;     rm -f /tmp/response.properties;     rm -f /tmp/index.yml;     rm -f /tmp/ibm-java.bin;
 # Fri, 26 Mar 2021 12:32:08 GMT
 ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin IBM_JAVA_OPTIONS=-XX:+UseContainerSupport
-# Fri, 26 Mar 2021 14:53:07 GMT
-ARG MAVEN_VERSION=3.6.3
-# Fri, 26 Mar 2021 14:53:07 GMT
+# Mon, 05 Apr 2021 17:39:55 GMT
+ARG MAVEN_VERSION=3.8.1
+# Mon, 05 Apr 2021 17:39:55 GMT
 ARG USER_HOME_DIR=/root
-# Fri, 26 Mar 2021 14:53:08 GMT
-ARG SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0
-# Fri, 26 Mar 2021 14:53:08 GMT
-ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries
-# Fri, 26 Mar 2021 14:53:49 GMT
-# ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries MAVEN_VERSION=3.6.3 SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0 USER_HOME_DIR=/root
+# Mon, 05 Apr 2021 17:39:55 GMT
+ARG SHA=0ec48eb515d93f8515d4abe465570dfded6fa13a3ceb9aab8031428442d9912ec20f066b2afbf56964ffe1ceb56f80321b50db73cf77a0e2445ad0211fb8e38d
+# Mon, 05 Apr 2021 17:39:56 GMT
+ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/3.8.1/binaries
+# Mon, 05 Apr 2021 17:40:30 GMT
+# ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.8.1/binaries MAVEN_VERSION=3.8.1 SHA=0ec48eb515d93f8515d4abe465570dfded6fa13a3ceb9aab8031428442d9912ec20f066b2afbf56964ffe1ceb56f80321b50db73cf77a0e2445ad0211fb8e38d USER_HOME_DIR=/root
 RUN apt-get update && apt-get install -y curl   && mkdir -p /usr/share/maven /usr/share/maven/ref   && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz   && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha512sum -c -   && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1   && rm -f /tmp/apache-maven.tar.gz   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
-# Fri, 26 Mar 2021 14:53:49 GMT
+# Mon, 05 Apr 2021 17:40:30 GMT
 ENV MAVEN_HOME=/usr/share/maven
-# Fri, 26 Mar 2021 14:53:50 GMT
+# Mon, 05 Apr 2021 17:40:30 GMT
 ENV MAVEN_CONFIG=/root/.m2
-# Fri, 26 Mar 2021 14:53:50 GMT
+# Mon, 05 Apr 2021 17:40:30 GMT
 COPY file:1b3da5c58894f705e7387946301c0c52edb6271761ea3cd80b86a848847a64cd in /usr/local/bin/mvn-entrypoint.sh 
-# Fri, 26 Mar 2021 14:53:50 GMT
+# Mon, 05 Apr 2021 17:40:31 GMT
 COPY file:2bbb488dd73c55d658b91943cfdf9c26975a320ceafc45dda94c95b03e518ad3 in /usr/share/maven/ref/ 
-# Fri, 26 Mar 2021 14:53:50 GMT
+# Mon, 05 Apr 2021 17:40:31 GMT
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
-# Fri, 26 Mar 2021 14:53:51 GMT
+# Mon, 05 Apr 2021 17:40:31 GMT
 CMD ["mvn"]
 ```
 
@@ -186,30 +186,30 @@ CMD ["mvn"]
 		Last Modified: Fri, 26 Mar 2021 12:33:46 GMT  
 		Size: 156.2 MB (156172173 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f58f39a84992e3152a3ae3d2f6c53a342c5872f104825e8ae8961bd3b063f166`  
-		Last Modified: Fri, 26 Mar 2021 14:54:23 GMT  
-		Size: 36.9 MB (36886695 bytes)  
+	-	`sha256:23a78e6b6eff7ac7de2b31bde8754a2941df42c47c7034e05c68f2057bc02d18`  
+		Last Modified: Mon, 05 Apr 2021 17:41:00 GMT  
+		Size: 36.9 MB (36921888 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e78b417127fb584559b21a997ea2cb671de0ff8018a86b35a7a166360183e307`  
-		Last Modified: Fri, 26 Mar 2021 14:54:18 GMT  
-		Size: 850.0 B  
+	-	`sha256:2125c6ec30fbaccf482ed63d6e8544721acf032aace75c6e03c452189684275f`  
+		Last Modified: Mon, 05 Apr 2021 17:40:56 GMT  
+		Size: 854.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8423f3e12f11d84510f86b164042ffd82330b369d325c3e22400dfc84984290b`  
-		Last Modified: Fri, 26 Mar 2021 14:54:18 GMT  
-		Size: 361.0 B  
+	-	`sha256:54c07f03d443ea29681691ac0e24f4682a1bcfa3ea4593a5f16845bde3dd7cb9`  
+		Last Modified: Mon, 05 Apr 2021 17:40:56 GMT  
+		Size: 363.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `maven:ibmjava` - linux; ppc64le
 
 ```console
-$ docker pull maven@sha256:3b2358dcfcd281ea1793c93610c9dc9abb5f42f52087ac4fb019bd281f16ee56
+$ docker pull maven@sha256:732e0ac7b839e77e189ca72f373c3581aa8687f096ef4bc3898c0cbf4bbbb128
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **235.6 MB (235581594 bytes)**  
+-	Total Size: **235.6 MB (235622200 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:dc6d527cbb61b8d393fb7bc592d242534831241092b4e5e3042fe9600d16be8a`
+-	Image ID: `sha256:aac4107743fdc1cb1617d14e326ea78b6b1dd54b98bc29559ae88ed52b5e16c7`
 -	Entrypoint: `["\/usr\/local\/bin\/mvn-entrypoint.sh"]`
 -	Default Command: `["mvn"]`
 
@@ -234,28 +234,28 @@ ENV JAVA_VERSION=1.8.0_sr6fp26
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        amd64|x86_64)          ESUM='c51b7afed4911a4eefdf02c44ee440de726a5a605c5507cc50d4795394b418c2';          YML_FILE='sdk/linux/x86_64/index.yml';          ;;        i386)          ESUM='dfe87d34c40cd0c23dc4b7ee47c85f84e26d21ff75476b234998bb9132379659';          YML_FILE='sdk/linux/i386/index.yml';          ;;        ppc64el|ppc64le)          ESUM='bbc55934ec867290cd9307422beae48e5032dfabb7cb496bed6e47b7ab3f90be';          YML_FILE='sdk/linux/ppc64le/index.yml';          ;;        s390)          ESUM='a1ed2722f283a3f3eb0a71f23354b0b4d2761865e759a3bf7f89297e17c20e6f';          YML_FILE='sdk/linux/s390/index.yml';          ;;        s390x)          ESUM='c2ddf185daafacd0b50f3e4e593d613b2e9b70d66b88a8da6ee313181376aef6';          YML_FILE='sdk/linux/s390x/index.yml';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     BASE_URL="https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/java/meta/";     wget -q -U UA_IBM_JAVA_Docker -O /tmp/index.yml ${BASE_URL}/${YML_FILE};     JAVA_URL=$(sed -n '/^'${JAVA_VERSION}:'/{n;s/\s*uri:\s//p}'< /tmp/index.yml);     wget -q -U UA_IBM_JAVA_Docker -O /tmp/ibm-java.bin ${JAVA_URL};     echo "${ESUM}  /tmp/ibm-java.bin" | sha256sum -c -;     echo "INSTALLER_UI=silent" > /tmp/response.properties;     echo "USER_INSTALL_DIR=/opt/ibm/java" >> /tmp/response.properties;     echo "LICENSE_ACCEPTED=TRUE" >> /tmp/response.properties;     mkdir -p /opt/ibm;     chmod +x /tmp/ibm-java.bin;     /tmp/ibm-java.bin -i silent -f /tmp/response.properties;     rm -f /tmp/response.properties;     rm -f /tmp/index.yml;     rm -f /tmp/ibm-java.bin;
 # Fri, 26 Mar 2021 15:02:33 GMT
 ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin IBM_JAVA_OPTIONS=-XX:+UseContainerSupport
-# Sat, 27 Mar 2021 05:02:00 GMT
-ARG MAVEN_VERSION=3.6.3
-# Sat, 27 Mar 2021 05:02:05 GMT
+# Mon, 05 Apr 2021 17:31:15 GMT
+ARG MAVEN_VERSION=3.8.1
+# Mon, 05 Apr 2021 17:31:22 GMT
 ARG USER_HOME_DIR=/root
-# Sat, 27 Mar 2021 05:02:07 GMT
-ARG SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0
-# Sat, 27 Mar 2021 05:02:09 GMT
-ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries
-# Sat, 27 Mar 2021 05:02:51 GMT
-# ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries MAVEN_VERSION=3.6.3 SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0 USER_HOME_DIR=/root
+# Mon, 05 Apr 2021 17:31:27 GMT
+ARG SHA=0ec48eb515d93f8515d4abe465570dfded6fa13a3ceb9aab8031428442d9912ec20f066b2afbf56964ffe1ceb56f80321b50db73cf77a0e2445ad0211fb8e38d
+# Mon, 05 Apr 2021 17:31:33 GMT
+ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/3.8.1/binaries
+# Mon, 05 Apr 2021 17:32:52 GMT
+# ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.8.1/binaries MAVEN_VERSION=3.8.1 SHA=0ec48eb515d93f8515d4abe465570dfded6fa13a3ceb9aab8031428442d9912ec20f066b2afbf56964ffe1ceb56f80321b50db73cf77a0e2445ad0211fb8e38d USER_HOME_DIR=/root
 RUN apt-get update && apt-get install -y curl   && mkdir -p /usr/share/maven /usr/share/maven/ref   && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz   && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha512sum -c -   && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1   && rm -f /tmp/apache-maven.tar.gz   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
-# Sat, 27 Mar 2021 05:02:55 GMT
+# Mon, 05 Apr 2021 17:32:57 GMT
 ENV MAVEN_HOME=/usr/share/maven
-# Sat, 27 Mar 2021 05:02:57 GMT
+# Mon, 05 Apr 2021 17:32:59 GMT
 ENV MAVEN_CONFIG=/root/.m2
-# Sat, 27 Mar 2021 05:02:59 GMT
+# Mon, 05 Apr 2021 17:33:00 GMT
 COPY file:1b3da5c58894f705e7387946301c0c52edb6271761ea3cd80b86a848847a64cd in /usr/local/bin/mvn-entrypoint.sh 
-# Sat, 27 Mar 2021 05:02:59 GMT
+# Mon, 05 Apr 2021 17:33:01 GMT
 COPY file:2bbb488dd73c55d658b91943cfdf9c26975a320ceafc45dda94c95b03e518ad3 in /usr/share/maven/ref/ 
-# Sat, 27 Mar 2021 05:03:03 GMT
+# Mon, 05 Apr 2021 17:33:05 GMT
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
-# Sat, 27 Mar 2021 05:03:05 GMT
+# Mon, 05 Apr 2021 17:33:07 GMT
 CMD ["mvn"]
 ```
 
@@ -280,30 +280,30 @@ CMD ["mvn"]
 		Last Modified: Fri, 26 Mar 2021 15:04:19 GMT  
 		Size: 167.7 MB (167715540 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e1588f008a54b9a581f8c06eaf16800bd8f0e1ce6fa24af860995dc74de3fbaf`  
-		Last Modified: Sat, 27 Mar 2021 05:06:28 GMT  
-		Size: 34.4 MB (34357804 bytes)  
+	-	`sha256:d6a261a23194016632fd62d3816014089b60ec216cf24e5d741951ff7f7f497f`  
+		Last Modified: Mon, 05 Apr 2021 17:36:17 GMT  
+		Size: 34.4 MB (34398411 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c8614862acee5f8f465f611136361c8cae6edc5f8a1916220a5551e10c0b75f3`  
-		Last Modified: Sat, 27 Mar 2021 05:06:23 GMT  
-		Size: 852.0 B  
+	-	`sha256:fe13a2fb2bea445f02895a8ba339fb1ef993a01ead05cf272dd083e1fca83bc7`  
+		Last Modified: Mon, 05 Apr 2021 17:36:12 GMT  
+		Size: 853.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7acfd672b7d55cd631947fd546513ecdbc314e35a59a988765258654b5586d47`  
-		Last Modified: Sat, 27 Mar 2021 05:06:23 GMT  
-		Size: 363.0 B  
+	-	`sha256:a7c615da99187a899b74138601ad4605d513c7a746249a806ee2870768e2348b`  
+		Last Modified: Mon, 05 Apr 2021 17:36:12 GMT  
+		Size: 361.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `maven:ibmjava` - linux; s390x
 
 ```console
-$ docker pull maven@sha256:b980f20ededec02887e36a05065e22adbb4ff8336821a92a7f4b4d8057303db6
+$ docker pull maven@sha256:d07fa8ed90534cfde02daa4a962df943e636a85f69adaa3966c4da56d2351c37
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **218.8 MB (218783670 bytes)**  
+-	Total Size: **218.8 MB (218823223 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f6b6f199b4df98211c8299950676d7d01c0342844cd65a529a89c02ffbd07358`
+-	Image ID: `sha256:67bf59df385bc23d857bb2e83488b778f7f157f9063f757561dcf8a685378b4a`
 -	Entrypoint: `["\/usr\/local\/bin\/mvn-entrypoint.sh"]`
 -	Default Command: `["mvn"]`
 
@@ -328,28 +328,28 @@ ENV JAVA_VERSION=1.8.0_sr6fp26
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        amd64|x86_64)          ESUM='c51b7afed4911a4eefdf02c44ee440de726a5a605c5507cc50d4795394b418c2';          YML_FILE='sdk/linux/x86_64/index.yml';          ;;        i386)          ESUM='dfe87d34c40cd0c23dc4b7ee47c85f84e26d21ff75476b234998bb9132379659';          YML_FILE='sdk/linux/i386/index.yml';          ;;        ppc64el|ppc64le)          ESUM='bbc55934ec867290cd9307422beae48e5032dfabb7cb496bed6e47b7ab3f90be';          YML_FILE='sdk/linux/ppc64le/index.yml';          ;;        s390)          ESUM='a1ed2722f283a3f3eb0a71f23354b0b4d2761865e759a3bf7f89297e17c20e6f';          YML_FILE='sdk/linux/s390/index.yml';          ;;        s390x)          ESUM='c2ddf185daafacd0b50f3e4e593d613b2e9b70d66b88a8da6ee313181376aef6';          YML_FILE='sdk/linux/s390x/index.yml';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     BASE_URL="https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/java/meta/";     wget -q -U UA_IBM_JAVA_Docker -O /tmp/index.yml ${BASE_URL}/${YML_FILE};     JAVA_URL=$(sed -n '/^'${JAVA_VERSION}:'/{n;s/\s*uri:\s//p}'< /tmp/index.yml);     wget -q -U UA_IBM_JAVA_Docker -O /tmp/ibm-java.bin ${JAVA_URL};     echo "${ESUM}  /tmp/ibm-java.bin" | sha256sum -c -;     echo "INSTALLER_UI=silent" > /tmp/response.properties;     echo "USER_INSTALL_DIR=/opt/ibm/java" >> /tmp/response.properties;     echo "LICENSE_ACCEPTED=TRUE" >> /tmp/response.properties;     mkdir -p /opt/ibm;     chmod +x /tmp/ibm-java.bin;     /tmp/ibm-java.bin -i silent -f /tmp/response.properties;     rm -f /tmp/response.properties;     rm -f /tmp/index.yml;     rm -f /tmp/ibm-java.bin;
 # Fri, 26 Mar 2021 09:17:18 GMT
 ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin IBM_JAVA_OPTIONS=-XX:+UseContainerSupport
-# Fri, 26 Mar 2021 14:28:10 GMT
-ARG MAVEN_VERSION=3.6.3
-# Fri, 26 Mar 2021 14:28:11 GMT
+# Mon, 05 Apr 2021 17:44:06 GMT
+ARG MAVEN_VERSION=3.8.1
+# Mon, 05 Apr 2021 17:44:07 GMT
 ARG USER_HOME_DIR=/root
-# Fri, 26 Mar 2021 14:28:11 GMT
-ARG SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0
-# Fri, 26 Mar 2021 14:28:11 GMT
-ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries
-# Fri, 26 Mar 2021 14:28:34 GMT
-# ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries MAVEN_VERSION=3.6.3 SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0 USER_HOME_DIR=/root
+# Mon, 05 Apr 2021 17:44:07 GMT
+ARG SHA=0ec48eb515d93f8515d4abe465570dfded6fa13a3ceb9aab8031428442d9912ec20f066b2afbf56964ffe1ceb56f80321b50db73cf77a0e2445ad0211fb8e38d
+# Mon, 05 Apr 2021 17:44:07 GMT
+ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/3.8.1/binaries
+# Mon, 05 Apr 2021 17:44:32 GMT
+# ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.8.1/binaries MAVEN_VERSION=3.8.1 SHA=0ec48eb515d93f8515d4abe465570dfded6fa13a3ceb9aab8031428442d9912ec20f066b2afbf56964ffe1ceb56f80321b50db73cf77a0e2445ad0211fb8e38d USER_HOME_DIR=/root
 RUN apt-get update && apt-get install -y curl   && mkdir -p /usr/share/maven /usr/share/maven/ref   && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz   && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha512sum -c -   && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1   && rm -f /tmp/apache-maven.tar.gz   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
-# Fri, 26 Mar 2021 14:28:37 GMT
+# Mon, 05 Apr 2021 17:44:33 GMT
 ENV MAVEN_HOME=/usr/share/maven
-# Fri, 26 Mar 2021 14:28:37 GMT
+# Mon, 05 Apr 2021 17:44:33 GMT
 ENV MAVEN_CONFIG=/root/.m2
-# Fri, 26 Mar 2021 14:28:37 GMT
+# Mon, 05 Apr 2021 17:44:33 GMT
 COPY file:1b3da5c58894f705e7387946301c0c52edb6271761ea3cd80b86a848847a64cd in /usr/local/bin/mvn-entrypoint.sh 
-# Fri, 26 Mar 2021 14:28:38 GMT
+# Mon, 05 Apr 2021 17:44:33 GMT
 COPY file:2bbb488dd73c55d658b91943cfdf9c26975a320ceafc45dda94c95b03e518ad3 in /usr/share/maven/ref/ 
-# Fri, 26 Mar 2021 14:28:39 GMT
+# Mon, 05 Apr 2021 17:44:34 GMT
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
-# Fri, 26 Mar 2021 14:28:39 GMT
+# Mon, 05 Apr 2021 17:44:34 GMT
 CMD ["mvn"]
 ```
 
@@ -374,15 +374,15 @@ CMD ["mvn"]
 		Last Modified: Fri, 26 Mar 2021 09:18:24 GMT  
 		Size: 158.3 MB (158331939 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9c68804a3b933136b6508ee60acf19b661b0a9cd44e367d2c2a1474de467ce12`  
-		Last Modified: Fri, 26 Mar 2021 14:31:21 GMT  
-		Size: 32.4 MB (32391393 bytes)  
+	-	`sha256:2f5b729d8668ec336751fbe1f78d42df646d04eefe5b9cfd72210eb259ba3350`  
+		Last Modified: Mon, 05 Apr 2021 17:46:25 GMT  
+		Size: 32.4 MB (32430940 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5f28503fa73d709286ddc50bb3d466d039e367d8fe82476d179d6824de4c162c`  
-		Last Modified: Fri, 26 Mar 2021 14:31:18 GMT  
-		Size: 851.0 B  
+	-	`sha256:8cd4556a4eeda65d197d386dce8c736670c624a0b116fc0072d022351d22750a`  
+		Last Modified: Mon, 05 Apr 2021 17:46:22 GMT  
+		Size: 854.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:12c258eaf26c1b446644c0094062c1dd6c8f70099839a20249d2da84dedbd72a`  
-		Last Modified: Fri, 26 Mar 2021 14:31:20 GMT  
-		Size: 359.0 B  
+	-	`sha256:efa6f38d03240b1ff6253b4490190d1e6fd46d4a96b8940577f1eca318cdcf2a`  
+		Last Modified: Mon, 05 Apr 2021 17:46:22 GMT  
+		Size: 362.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip

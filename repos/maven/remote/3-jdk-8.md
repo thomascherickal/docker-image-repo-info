@@ -1,7 +1,7 @@
 ## `maven:3-jdk-8`
 
 ```console
-$ docker pull maven@sha256:ac624d39dd0b7bed827d4b0d1bbaeb457012e0cba0fb6c53ce34b00bed16ec08
+$ docker pull maven@sha256:c96cf846c5b183c0e4c9562da219fe96ebdc5fdf3c07f7f2291ed7c3e95341d3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull maven@sha256:ac624d39dd0b7bed827d4b0d1bbaeb457012e0cba0fb6c53ce34b
 ### `maven:3-jdk-8` - linux; amd64
 
 ```console
-$ docker pull maven@sha256:09c4bf58d7e7e31bdc1ab73ef10349b3a47c9a814e715e409034fb3293253ce2
+$ docker pull maven@sha256:9af8a062b676a5caeec16b7721692992d78b65a416faff208f33e5c9cef9449a
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **240.9 MB (240886476 bytes)**  
+-	Total Size: **240.9 MB (240916236 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d1b3f61d61f20df0822e905b6e016bc5619a78134373cc54468e204e7e7c756d`
+-	Image ID: `sha256:2ba57adda7a95d7cac1215a5f9dc54cfb791de9c0257e316ecad721af53540b2`
 -	Entrypoint: `["\/usr\/local\/bin\/mvn-entrypoint.sh"]`
 -	Default Command: `["mvn"]`
 
@@ -47,28 +47,28 @@ ENV LANG=C.UTF-8
 ENV JAVA_VERSION=8u282
 # Wed, 31 Mar 2021 05:46:17 GMT
 RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u282-b08/OpenJDK8U-jdk_x64_linux_8u282b08.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
-# Thu, 01 Apr 2021 02:44:30 GMT
-ARG MAVEN_VERSION=3.6.3
-# Thu, 01 Apr 2021 02:44:30 GMT
+# Mon, 05 Apr 2021 17:48:47 GMT
+ARG MAVEN_VERSION=3.8.1
+# Mon, 05 Apr 2021 17:48:47 GMT
 ARG USER_HOME_DIR=/root
-# Thu, 01 Apr 2021 02:44:31 GMT
-ARG SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0
-# Thu, 01 Apr 2021 02:44:31 GMT
-ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries
-# Thu, 01 Apr 2021 02:44:33 GMT
-# ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.6.3/binaries MAVEN_VERSION=3.6.3 SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0 USER_HOME_DIR=/root
+# Mon, 05 Apr 2021 17:48:47 GMT
+ARG SHA=0ec48eb515d93f8515d4abe465570dfded6fa13a3ceb9aab8031428442d9912ec20f066b2afbf56964ffe1ceb56f80321b50db73cf77a0e2445ad0211fb8e38d
+# Mon, 05 Apr 2021 17:48:48 GMT
+ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/3.8.1/binaries
+# Mon, 05 Apr 2021 17:48:57 GMT
+# ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.8.1/binaries MAVEN_VERSION=3.8.1 SHA=0ec48eb515d93f8515d4abe465570dfded6fa13a3ceb9aab8031428442d9912ec20f066b2afbf56964ffe1ceb56f80321b50db73cf77a0e2445ad0211fb8e38d USER_HOME_DIR=/root
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref   && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz   && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha512sum -c -   && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1   && rm -f /tmp/apache-maven.tar.gz   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
-# Thu, 01 Apr 2021 02:44:34 GMT
+# Mon, 05 Apr 2021 17:48:57 GMT
 ENV MAVEN_HOME=/usr/share/maven
-# Thu, 01 Apr 2021 02:44:34 GMT
+# Mon, 05 Apr 2021 17:48:57 GMT
 ENV MAVEN_CONFIG=/root/.m2
-# Thu, 01 Apr 2021 02:44:34 GMT
+# Mon, 05 Apr 2021 17:48:57 GMT
 COPY file:1b3da5c58894f705e7387946301c0c52edb6271761ea3cd80b86a848847a64cd in /usr/local/bin/mvn-entrypoint.sh 
-# Thu, 01 Apr 2021 02:44:34 GMT
+# Mon, 05 Apr 2021 17:48:57 GMT
 COPY file:2bbb488dd73c55d658b91943cfdf9c26975a320ceafc45dda94c95b03e518ad3 in /usr/share/maven/ref/ 
-# Thu, 01 Apr 2021 02:44:34 GMT
+# Mon, 05 Apr 2021 17:48:58 GMT
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
-# Thu, 01 Apr 2021 02:44:35 GMT
+# Mon, 05 Apr 2021 17:48:58 GMT
 CMD ["mvn"]
 ```
 
@@ -101,15 +101,15 @@ CMD ["mvn"]
 		Last Modified: Wed, 31 Mar 2021 06:00:54 GMT  
 		Size: 105.9 MB (105913832 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d7d7fe135d55893af3f9d1c2cf72ed2df50c1e416f9c98d0feb35bdecc9c014f`  
-		Last Modified: Thu, 01 Apr 2021 02:50:04 GMT  
-		Size: 9.6 MB (9581197 bytes)  
+	-	`sha256:0f19ad27ec632b16110a6ff8c7bbc191539fbfd1184f4bb45eb7a934bc186b36`  
+		Last Modified: Mon, 05 Apr 2021 17:58:35 GMT  
+		Size: 9.6 MB (9610957 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:71a3a5508994401f1787edf60c88fa6d67256f8a5f14f08a510ec4b8af5b2047`  
-		Last Modified: Thu, 01 Apr 2021 02:50:02 GMT  
-		Size: 856.0 B  
+	-	`sha256:facd7604de7bcfba054a679e55a3e6d2a82649b80607c840d44ecbc5a50ad0b8`  
+		Last Modified: Mon, 05 Apr 2021 17:58:34 GMT  
+		Size: 858.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:73dccb1622e9308969a27e0d61ed3823af62e4bb3f81e4d06d551f9d7707e921`  
-		Last Modified: Thu, 01 Apr 2021 02:50:02 GMT  
-		Size: 362.0 B  
+	-	`sha256:4995c028ead38f3bcaf740a7917eac156038cef1dba72de1c075a16b0cd2c671`  
+		Last Modified: Mon, 05 Apr 2021 17:58:34 GMT  
+		Size: 360.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
