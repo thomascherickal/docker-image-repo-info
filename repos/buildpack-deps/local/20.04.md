@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:7509b1c6388e657909572b9d9d0b5516f86e4d10b3f3c20e03ed31d6a4b68e73`
-- Created: `2021-03-26T10:42:12.602455124Z`
-- Virtual Size: ~ 700.50 Mb  
+- Image ID: `sha256:7d835c1f42e3b688b629895f87ad411fa02be9f3e808ac7844a1463c58337616`
+- Created: `2021-04-03T01:52:57.92176614Z`
+- Virtual Size: ~ 700.52 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -498,14 +498,14 @@ $ apt-get source -qq --print-uris coreutils=8.30-3ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/c/coreutils/coreutils_8.30-3ubuntu2.debian.tar.xz' coreutils_8.30-3ubuntu2.debian.tar.xz 39636 SHA256:98204ef9d94e5c567880cd0245fdb7940eaf7592d6c6830c300ad117628b351f
 ```
 
-### `dpkg` source package: `curl=7.68.0-1ubuntu2.4`
+### `dpkg` source package: `curl=7.68.0-1ubuntu2.5`
 
 Binary Packages:
 
-- `curl=7.68.0-1ubuntu2.4`
-- `libcurl3-gnutls:amd64=7.68.0-1ubuntu2.4`
-- `libcurl4:amd64=7.68.0-1ubuntu2.4`
-- `libcurl4-openssl-dev:amd64=7.68.0-1ubuntu2.4`
+- `curl=7.68.0-1ubuntu2.5`
+- `libcurl3-gnutls:amd64=7.68.0-1ubuntu2.5`
+- `libcurl4:amd64=7.68.0-1ubuntu2.5`
+- `libcurl4-openssl-dev:amd64=7.68.0-1ubuntu2.5`
 
 Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/doc/libcurl4/copyright`, `/usr/share/doc/libcurl4-openssl-dev/copyright`)
 
@@ -516,9 +516,14 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris curl=7.68.0-1ubuntu2.5
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.5.dsc' curl_7.68.0-1ubuntu2.5.dsc 2733 SHA512:9a263b8d663872613288c21f5af9985fc1fa71b4ac07c7ee5b4bd39db1e868c8bedf120e6f557fe92fb0ca5e4c3a05cff7fab16889d4014b069e383758f727b5
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0.orig.tar.gz' curl_7.68.0.orig.tar.gz 4096350 SHA512:58b42c08b1cf4cb6e68f8e469d5b5f6298eebe286ba2677ad29e1a7eefd15b8609af54544f4c5a7dadebbd3b23bd77700830f2f60fbea7ae3f2f306e640010b0
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.5.debian.tar.xz' curl_7.68.0-1ubuntu2.5.debian.tar.xz 42240 SHA512:5b33a667f486f5aa81edb050be60d97aaad02f74114e7ea7cb3964a01fd9d85e5e1a1bf9a3d72f23307b8abaa7bea64008259f0d851ac351b57254b2bfd7bafb
+```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2`
 
@@ -3222,12 +3227,12 @@ $ apt-get source -qq --print-uris npth=1.6-1
 'http://archive.ubuntu.com/ubuntu/pool/main/n/npth/npth_1.6-1.debian.tar.xz' npth_1.6-1.debian.tar.xz 10532 SHA256:d312d4a3cf1d082e2f2cf3ea752c41d34f7e120f77a941c6c1680e6093834353
 ```
 
-### `dpkg` source package: `openexr=2.3.0-6ubuntu0.3`
+### `dpkg` source package: `openexr=2.3.0-6ubuntu0.5`
 
 Binary Packages:
 
-- `libopenexr-dev=2.3.0-6ubuntu0.3`
-- `libopenexr24:amd64=2.3.0-6ubuntu0.3`
+- `libopenexr-dev=2.3.0-6ubuntu0.5`
+- `libopenexr24:amd64=2.3.0-6ubuntu0.5`
 
 Licenses: (parsed from: `/usr/share/doc/libopenexr-dev/copyright`, `/usr/share/doc/libopenexr24/copyright`)
 
@@ -3236,9 +3241,15 @@ Licenses: (parsed from: `/usr/share/doc/libopenexr-dev/copyright`, `/usr/share/d
 - `GPL-2+`
 - `openexr`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris openexr=2.3.0-6ubuntu0.5
+'http://archive.ubuntu.com/ubuntu/pool/universe/o/openexr/openexr_2.3.0-6ubuntu0.5.dsc' openexr_2.3.0-6ubuntu0.5.dsc 2638 SHA512:b77e6d69deaf92ca2a3990578aaf21bfc4ec5c6fab9e42b93819dce0fe4c5432feeeae4abaf2cdbc160ff9ac5099b1622a36fbcd41845c4c1355bc76a28a6dcc
+'http://archive.ubuntu.com/ubuntu/pool/universe/o/openexr/openexr_2.3.0.orig.tar.gz' openexr_2.3.0.orig.tar.gz 18416222 SHA512:f6810505428674451627ef09e5dfbf13d7413e118f9defec4d160d9f1327b47699fe770a96b61da7820d2a357ccb722ad909ba4ba0924703fa5fd532cdf0da69
+'http://archive.ubuntu.com/ubuntu/pool/universe/o/openexr/openexr_2.3.0.orig.tar.gz.asc' openexr_2.3.0.orig.tar.gz.asc 566 SHA512:7110ddb22b2be7b570dcb1df278b2f7f39f2c5afd470094fd2a41c2f376d3991f756cbc5bef76dfc5bd7e1f55442bc8dff468d47224a495838083ef7de0c2a40
+'http://archive.ubuntu.com/ubuntu/pool/universe/o/openexr/openexr_2.3.0-6ubuntu0.5.debian.tar.xz' openexr_2.3.0-6ubuntu0.5.debian.tar.xz 40348 SHA512:a7454052906c5b683ab905a80933a323de29dfbbbe9ed2b5160e7c5fe6db4197c03d6bb463b428c7e706702a2f0c9112debbfdc5f9a430225e81b57f949c9200
+```
 
 ### `dpkg` source package: `openldap=2.4.49+dfsg-2ubuntu1.7`
 
@@ -4131,11 +4142,11 @@ $ apt-get source -qq --print-uris tzdata=2021a-0ubuntu0.20.04
 'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2021a-0ubuntu0.20.04.debian.tar.xz' tzdata_2021a-0ubuntu0.20.04.debian.tar.xz 166616 SHA512:6660c8062063897a08abf8832d214fa09983f6d9115f3bc92775596eff24dbeca9f7f3f628c30a51710155bfea88341694ab4a3115a3da48d0616bfbbcc82a66
 ```
 
-### `dpkg` source package: `ubuntu-keyring=2020.02.11.2`
+### `dpkg` source package: `ubuntu-keyring=2020.02.11.4`
 
 Binary Packages:
 
-- `ubuntu-keyring=2020.02.11.2`
+- `ubuntu-keyring=2020.02.11.4`
 
 Licenses: (parsed from: `/usr/share/doc/ubuntu-keyring/copyright`)
 
@@ -4144,9 +4155,9 @@ Licenses: (parsed from: `/usr/share/doc/ubuntu-keyring/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris ubuntu-keyring=2020.02.11.2
-'http://archive.ubuntu.com/ubuntu/pool/main/u/ubuntu-keyring/ubuntu-keyring_2020.02.11.2.dsc' ubuntu-keyring_2020.02.11.2.dsc 1863 SHA256:f8544b69a2e982c3f588a588b306ae8f6eefea8194324680c0676244e251314f
-'http://archive.ubuntu.com/ubuntu/pool/main/u/ubuntu-keyring/ubuntu-keyring_2020.02.11.2.tar.gz' ubuntu-keyring_2020.02.11.2.tar.gz 39180 SHA256:d2ee9deedb99f5a2b8bee2c0f9e85834638bfbc46d7a59edba7ce2bb6229bcec
+$ apt-get source -qq --print-uris ubuntu-keyring=2020.02.11.4
+'http://archive.ubuntu.com/ubuntu/pool/main/u/ubuntu-keyring/ubuntu-keyring_2020.02.11.4.dsc' ubuntu-keyring_2020.02.11.4.dsc 1863 SHA512:1232fc109f9afe7f4245f841cb992aeb7329ec1c3d310a174b837c0584005a7c46ce73f6d49a52a3e6c0eea03369ea5f308093c1a849e8f6597f6df792a87fb1
+'http://archive.ubuntu.com/ubuntu/pool/main/u/ubuntu-keyring/ubuntu-keyring_2020.02.11.4.tar.gz' ubuntu-keyring_2020.02.11.4.tar.gz 39250 SHA512:318562b6892dad995e334ec44f08f065b4c6abed2d29c1f96f6ee0fa4d91a5cedc9b62a152c56cdf26a30c3ea97a58c1d037e892d155af5593a4e26b9a25a1ae
 ```
 
 ### `dpkg` source package: `ucf=3.0038+nmu1`

@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:4ac1a0b16e1a3f2700278fd879a8d28da68f46efc04bddcfbdc205d5403b5edd`
-- Created: `2021-03-26T10:46:25.504307268Z`
-- Virtual Size: ~ 712.46 Mb  
+- Image ID: `sha256:aebf61fcd4f88b7d3ed9fdf0ce1080c85023069e3307fed9ee1e2c102f7aa145`
+- Created: `2021-04-03T01:57:09.714456681Z`
+- Virtual Size: ~ 712.47 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -500,14 +500,14 @@ $ apt-get source -qq --print-uris coreutils=8.32-3ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/c/coreutils/coreutils_8.32-3ubuntu1.debian.tar.xz' coreutils_8.32-3ubuntu1.debian.tar.xz 40716 SHA512:87a9050739a7712cb9a4b262a58393f88d979f02fef46f448eb052f1a08b35c2903c6d925d3cc8c3b72b6f8c37cff30e71136f23f7f1dd1ebc3709d116904673
 ```
 
-### `dpkg` source package: `curl=7.68.0-1ubuntu4.2`
+### `dpkg` source package: `curl=7.68.0-1ubuntu4.3`
 
 Binary Packages:
 
-- `curl=7.68.0-1ubuntu4.2`
-- `libcurl3-gnutls:amd64=7.68.0-1ubuntu4.2`
-- `libcurl4:amd64=7.68.0-1ubuntu4.2`
-- `libcurl4-openssl-dev:amd64=7.68.0-1ubuntu4.2`
+- `curl=7.68.0-1ubuntu4.3`
+- `libcurl3-gnutls:amd64=7.68.0-1ubuntu4.3`
+- `libcurl4:amd64=7.68.0-1ubuntu4.3`
+- `libcurl4-openssl-dev:amd64=7.68.0-1ubuntu4.3`
 
 Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/doc/libcurl4/copyright`, `/usr/share/doc/libcurl4-openssl-dev/copyright`)
 
@@ -518,9 +518,14 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris curl=7.68.0-1ubuntu4.3
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu4.3.dsc' curl_7.68.0-1ubuntu4.3.dsc 2733 SHA512:57d9bd31ff58c942ac90298437f694ee60a25248f56c9df6634e63bbd2bf865d869bd9c76043f16714ce6ce854d65d7698510074197094a016ff855e1e7a5013
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0.orig.tar.gz' curl_7.68.0.orig.tar.gz 4096350 SHA512:58b42c08b1cf4cb6e68f8e469d5b5f6298eebe286ba2677ad29e1a7eefd15b8609af54544f4c5a7dadebbd3b23bd77700830f2f60fbea7ae3f2f306e640010b0
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu4.3.debian.tar.xz' curl_7.68.0-1ubuntu4.3.debian.tar.xz 42244 SHA512:4e60483c468c3da8a811f3d39a272f13b290f62a47d06f8690fa6002a5b3ede1f62203adf6ef3284374274395da2af6f7b3a28931f10538a8536849c4128b9b5
+```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2ubuntu1`
 
@@ -3329,12 +3334,12 @@ $ apt-get source -qq --print-uris npth=1.6-2
 'http://archive.ubuntu.com/ubuntu/pool/main/n/npth/npth_1.6-2.debian.tar.xz' npth_1.6-2.debian.tar.xz 10612 SHA512:b76317daa87dcbfe2f5d294b8b350cb210b780192fe15618172679caaa235f90969814b66fcc43838c2df43a77317bba0dcd29c0aaf72a603dcb1d26fbbf52d1
 ```
 
-### `dpkg` source package: `openexr=2.5.3-2`
+### `dpkg` source package: `openexr=2.5.3-2ubuntu0.2`
 
 Binary Packages:
 
-- `libopenexr-dev=2.5.3-2`
-- `libopenexr25:amd64=2.5.3-2`
+- `libopenexr-dev=2.5.3-2ubuntu0.2`
+- `libopenexr25:amd64=2.5.3-2ubuntu0.2`
 
 Licenses: (parsed from: `/usr/share/doc/libopenexr-dev/copyright`, `/usr/share/doc/libopenexr25/copyright`)
 
@@ -3344,11 +3349,11 @@ Licenses: (parsed from: `/usr/share/doc/libopenexr-dev/copyright`, `/usr/share/d
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openexr=2.5.3-2
-'http://archive.ubuntu.com/ubuntu/pool/universe/o/openexr/openexr_2.5.3-2.dsc' openexr_2.5.3-2.dsc 2683 SHA512:de885eb84079f52dc343dca0b33083ce978a29790498d1489c19b51fa0b3d1ce106e95bb964bdf7cd743f7928d1cd27771b19f55a0cc24816dd4d13d5ee2b85d
+$ apt-get source -qq --print-uris openexr=2.5.3-2ubuntu0.2
+'http://archive.ubuntu.com/ubuntu/pool/universe/o/openexr/openexr_2.5.3-2ubuntu0.2.dsc' openexr_2.5.3-2ubuntu0.2.dsc 2643 SHA512:8751d50d1fc89ca0b0d151a678958fb233d213c9190fdd9ffcc6bf6d86c3754dd14787217f61babbf2abcebef0e116a19f397c1a9e31013f540829a23f9959e5
 'http://archive.ubuntu.com/ubuntu/pool/universe/o/openexr/openexr_2.5.3.orig.tar.gz' openexr_2.5.3.orig.tar.gz 27534825 SHA512:6da03193d4fea1e97e35008f59304ab408c521ead8495ba411cde5c172cf953be97999971f57398b813d14f1af1d722539a6b74d5ee54b9e74769ea8258d36ba
 'http://archive.ubuntu.com/ubuntu/pool/universe/o/openexr/openexr_2.5.3.orig.tar.gz.asc' openexr_2.5.3.orig.tar.gz.asc 287 SHA512:9b3978e44b531429aba42b9cc4969a470898d9d74652e3809edb0273ba9b127c471aec6570b5d352be738f59810091c0df2c70d39c16d2c32833d173b270f72c
-'http://archive.ubuntu.com/ubuntu/pool/universe/o/openexr/openexr_2.5.3-2.debian.tar.xz' openexr_2.5.3-2.debian.tar.xz 21400 SHA512:cddac0ea39b3929f0281ba8afbee138649b603ada31d082639d698ae1881dc0c3aa5cbaf3c6368768f417509db28b95a7c2e345849aa97c7269430fc3b713040
+'http://archive.ubuntu.com/ubuntu/pool/universe/o/openexr/openexr_2.5.3-2ubuntu0.2.debian.tar.xz' openexr_2.5.3-2ubuntu0.2.debian.tar.xz 28800 SHA512:6a02f7f54ed992409e09c6b957e03dbbc525e2a5d74836ea5d2c7ff02f07d8adf58b57b08566f02ea70f031a697c55ba20aee0c1ba3c98b62564d6371d21fe57
 ```
 
 ### `dpkg` source package: `openjpeg2=2.3.1-1ubuntu4.20.10.1`

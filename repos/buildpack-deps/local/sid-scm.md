@@ -2129,21 +2129,13 @@ Licenses: (parsed from: `/usr/share/doc/libhogweed6/copyright`, `/usr/share/doc/
 - `LGPL-3+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris nettle=3.7-2.1
-'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.7-2.1.dsc' nettle_3.7-2.1.dsc 2262 SHA256:13661e99da0ef9455e5c7a0716a93c2918349539e2681db232b8ca2b27409c87
-'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.7.orig.tar.gz' nettle_3.7.orig.tar.gz 2375067 SHA256:f001f64eb444bf13dd91bceccbc20acbc60c4311d6e2b20878452eb9a9cec75a
-'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.7.orig.tar.gz.asc' nettle_3.7.orig.tar.gz.asc 573 SHA256:1f5ed81582441eb4d953ef8666521ebc349f41f7dde5e11cb0845a2c049941b1
-'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.7-2.1.debian.tar.xz' nettle_3.7-2.1.debian.tar.xz 30880 SHA256:343ab79dbe2907eb276b756ad6a90ba8775cf41b49b5cdffc149e142a9d269fb
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/nettle/3.7-2.1/
 
-- https://sources.debian.net/src/nettle/3.7-2.1/ (for browsing the source)
-- https://sources.debian.net/src/nettle/3.7-2.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/nettle/3.7-2.1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `nghttp2=1.43.0-1`
 
@@ -2496,20 +2488,13 @@ Licenses: (parsed from: `/usr/share/doc/libprocps8/copyright`, `/usr/share/doc/p
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris procps=2:3.3.17-4
-'http://deb.debian.org/debian/pool/main/p/procps/procps_3.3.17-4.dsc' procps_3.3.17-4.dsc 2136 SHA256:e06cdd7eadc0f7aeb26bf347bbbb15a7274fadf7c77a1a5de17bab12abdbe94e
-'http://deb.debian.org/debian/pool/main/p/procps/procps_3.3.17.orig.tar.xz' procps_3.3.17.orig.tar.xz 1008428 SHA256:4518b3e7aafd34ec07d0063d250fd474999b20b200218c3ae56f5d2113f141b4
-'http://deb.debian.org/debian/pool/main/p/procps/procps_3.3.17-4.debian.tar.xz' procps_3.3.17-4.debian.tar.xz 28576 SHA256:5afd67b31bc2f87f22be5f02ea2316235d42ced3736bb89c3d2a08d4276eb4ba
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/procps/2:3.3.17-4/
 
-- https://sources.debian.net/src/procps/2:3.3.17-4/ (for browsing the source)
-- https://sources.debian.net/src/procps/2:3.3.17-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/procps/2:3.3.17-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `python3-defaults=3.9.2-2`
 
@@ -2523,19 +2508,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3-defaults=3.9.2-2
-'http://deb.debian.org/debian/pool/main/p/python3-defaults/python3-defaults_3.9.2-2.dsc' python3-defaults_3.9.2-2.dsc 2249 SHA256:242de119c57ee5e6c4c3128ca7201a5d08fe951e3396d98784938daec20d15c2
-'http://deb.debian.org/debian/pool/main/p/python3-defaults/python3-defaults_3.9.2-2.tar.gz' python3-defaults_3.9.2-2.tar.gz 140710 SHA256:390f62a7e34e8d38e94bde241a589a0ae8693186f3b203553fb229b244f57f57
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/python3-defaults/3.9.2-2/
 
-- https://sources.debian.net/src/python3-defaults/3.9.2-2/ (for browsing the source)
-- https://sources.debian.net/src/python3-defaults/3.9.2-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python3-defaults/3.9.2-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `python3.9=3.9.2-1`
 
