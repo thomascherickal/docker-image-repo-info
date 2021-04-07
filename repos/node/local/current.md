@@ -1,17 +1,17 @@
-# `node:15.12.0-stretch`
+# `node:15.13.0-stretch`
 
 ## Docker Metadata
 
-- Image ID: `sha256:b58fc2b5cce833adb72b167b6f4050f715e1bd3dbf742ce81353c12135f0f0b5`
-- Created: `2021-03-31T05:01:45.84782077Z`
-- Virtual Size: ~ 935.99 Mb  
+- Image ID: `sha256:998feddbb5886701dd1dd8dbf1add35495d02d0025eee4eabf9e4cb20519fd14`
+- Created: `2021-04-02T00:36:47.542931809Z`
+- Virtual Size: ~ 936.14 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
 - Command: `["node"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `NODE_VERSION=15.12.0`
+  - `NODE_VERSION=15.13.0`
   - `YARN_VERSION=1.22.5`
 
 ## `dpkg` (`.deb`-based packages)
@@ -5050,20 +5050,13 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.5-minimal/copyright`, `/usr/s
 - `use in source`
 - `without`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3.5=3.5.3-1+deb9u3
-'http://security.debian.org/debian-security/pool/updates/main/p/python3.5/python3.5_3.5.3-1+deb9u3.dsc' python3.5_3.5.3-1+deb9u3.dsc 3370 SHA256:5239b3f3e272d68fcb834dc59a34677988037817a45acbf88e3cace53e6af41d
-'http://security.debian.org/debian-security/pool/updates/main/p/python3.5/python3.5_3.5.3.orig.tar.xz' python3.5_3.5.3.orig.tar.xz 15213396 SHA256:eefe2ad6575855423ab630f5b51a8ef6e5556f774584c06beab4926f930ddbb0
-'http://security.debian.org/debian-security/pool/updates/main/p/python3.5/python3.5_3.5.3-1+deb9u3.debian.tar.xz' python3.5_3.5.3-1+deb9u3.debian.tar.xz 250516 SHA256:112d70ba85641fa036753555c82a205403f18bfbeb6d48acee66a3f987d72552
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/python3.5/3.5.3-1+deb9u3/
 
-- https://sources.debian.net/src/python3.5/3.5.3-1+deb9u3/ (for browsing the source)
-- https://sources.debian.net/src/python3.5/3.5.3-1+deb9u3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python3.5/3.5.3-1+deb9u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `readline=7.0-3`
 
