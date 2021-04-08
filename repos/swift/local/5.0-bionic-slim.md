@@ -73,8 +73,8 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris apt=1.6.12ubuntu0.2
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.6.12ubuntu0.2.dsc' apt_1.6.12ubuntu0.2.dsc 2869 SHA512:25da70d550b26552df598eb68129d939afffb4a840bdb37d3bce11167b79692eecc90e886e4c5833fc5248808658646627318f94276fc3eae570921ac60ad9ed
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.6.12ubuntu0.2.tar.xz' apt_1.6.12ubuntu0.2.tar.xz 2174360 SHA512:2a1b7aee29aae1581d78513c99062314f1c0beb1b99a9a245d78022ee96487af815f325d43ce4b698c5aa5e6ce6f55047926e7683c894645db3aabe21bb0c6c7
+'http://security.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.6.12ubuntu0.2.dsc' apt_1.6.12ubuntu0.2.dsc 2869 SHA512:25da70d550b26552df598eb68129d939afffb4a840bdb37d3bce11167b79692eecc90e886e4c5833fc5248808658646627318f94276fc3eae570921ac60ad9ed
+'http://security.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.6.12ubuntu0.2.tar.xz' apt_1.6.12ubuntu0.2.tar.xz 2174360 SHA512:2a1b7aee29aae1581d78513c99062314f1c0beb1b99a9a245d78022ee96487af815f325d43ce4b698c5aa5e6ce6f55047926e7683c894645db3aabe21bb0c6c7
 ```
 
 ### `dpkg` source package: `attr=1:2.4.47-2build1`
