@@ -1,10 +1,10 @@
-# `drupal:7.78-php7.4-apache-buster`
+# `drupal:7.79-php7.4-apache-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:70606971989185c95ebaf2b3f819faa782a70a426e27bf80b97d9322c394274e`
-- Created: `2021-04-01T07:09:07.714137582Z`
-- Virtual Size: ~ 431.84 Mb  
+- Image ID: `sha256:7f83cc0bf1d76cf0bde62cb5d926401642f0740833341f25496b3247ec113a5e`
+- Created: `2021-04-07T19:33:57.771038176Z`
+- Virtual Size: ~ 431.87 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -25,8 +25,8 @@
   - `PHP_URL=https://www.php.net/distributions/php-7.4.16.tar.xz`
   - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.16.tar.xz.asc`
   - `PHP_SHA256=1c16cefaf88ded4c92eed6a8a41eb682bb2ef42429deb55f1c4ba159053fb98b`
-  - `DRUPAL_VERSION=7.78`
-  - `DRUPAL_MD5=67c8e2974421e8d549ad705169977498`
+  - `DRUPAL_VERSION=7.79`
+  - `DRUPAL_MD5=672d35b4e172721452f351ee01644d76`
 
 ## `dpkg` (`.deb`-based packages)
 
