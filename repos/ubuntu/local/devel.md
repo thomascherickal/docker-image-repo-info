@@ -60,13 +60,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.2.2
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.2.2.dsc' apt_2.2.2.dsc 2780 SHA512:2fad4cab6fd214e93cfba3f9ca2701e2a9cfae8f0e543acc17fe6b91215cd78e30b6593c1de140abd72424ccd98022747d8595526003636c420852be8f530cf8
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.2.2.tar.xz' apt_2.2.2.tar.xz 2195340 SHA512:6ebc81c0af868999e4404fb51033fa51d8c9c3a30fa024dae82f4c766fd298cfe8cdf25a5f1b7bb4397b22ddd4be584f5f92267e6ed388e5cad6983a7a01bab2
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/apt/2.2.2/
+
 
 ### `dpkg` source package: `attr=1:2.4.48-6build1`
 
@@ -406,14 +406,9 @@ Licenses: (parsed from: `/usr/share/doc/gcc-10-base/copyright`)
 - `GPL-3`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-10=10.2.1-23ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.2.1-23ubuntu2.dsc' gcc-10_10.2.1-23ubuntu2.dsc 23769 SHA512:0208ba0becf05fd72a0066b27198611af24459a6f413b4230cc6e408d028d27fd37da3a2ba1f1a3c0cce4954012fe561e61752ed576302fb83083123c670a25c
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.2.1.orig.tar.xz' gcc-10_10.2.1.orig.tar.xz 81984400 SHA512:d64991e458cd913b012543db518bf3de5c1fe2b074661b1a7c0ba53733ac3d6d38e8831682710c996659b2b3cac949e46573b03cf4018fc33211c69086a00c8b
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.2.1-23ubuntu2.debian.tar.xz' gcc-10_10.2.1-23ubuntu2.debian.tar.xz 2454056 SHA512:9ed9ed08705fc65d466c5d31969992a1a405bae38c4970ab3ab43d6bd5fa3d30892e5fd4f98ef08fd855923cb89585f74b751f8fe561dfa4ca98b6d7092ec877
-```
 
 ### `dpkg` source package: `gcc-11=11-20210327-1ubuntu1`
 
@@ -432,14 +427,9 @@ Licenses: (parsed from: `/usr/share/doc/gcc-11-base/copyright`, `/usr/share/doc/
 - `GPL-3`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-11=11-20210327-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-11/gcc-11_11-20210327-1ubuntu1.dsc' gcc-11_11-20210327-1ubuntu1.dsc 30391 SHA512:f11988f2549157a8cab6a92c65873481a2e75421b1b0e792d17cfff67ba51f060db86119018e277787f677930bcdb3f8cb4ad73f2ceb71b6750de1ecebd4bc33
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-11/gcc-11_11-20210327.orig.tar.gz' gcc-11_11-20210327.orig.tar.gz 81458320 SHA512:75ab3c242ee2e8bc9bd7f570b0cd4bcd9b3230d8b3fe79a7e48109f67cb817a0ae77fca19bf6c90251c1df765b38aa6bfc841c2fa472cfde25293fdf1ddb8c8a
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-11/gcc-11_11-20210327-1ubuntu1.debian.tar.xz' gcc-11_11-20210327-1ubuntu1.debian.tar.xz 535944 SHA512:decc903f01bc4228347abbe37b36e696963988cde124412d36ea1cbb3ad4f1c0c56081b0d808a3aa2b33dbdded170ad2c4ce847f779795d666503c1370cdf2dc
-```
 
 ### `dpkg` source package: `glibc=2.33-0ubuntu4`
 
@@ -1616,11 +1606,6 @@ Licenses: (parsed from: `/usr/share/doc/zlib1g/copyright`)
 
 - `Zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris zlib=1:1.2.11.dfsg-2ubuntu5
-'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg-2ubuntu5.dsc' zlib_1.2.11.dfsg-2ubuntu5.dsc 2970 SHA512:f890ced33f3e10ae4c0fe578fa08e6bad6f16b0cb5d6790d33633d0fa9846f8e0a1b38ddc7b88492cf49c28ddd4d8a3c70e379c62997855d1d94a0b82596bcae
-'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg.orig.tar.gz' zlib_1.2.11.dfsg.orig.tar.gz 370248 SHA512:92819807c0b8de655021bb2d5d182f9b6b381d3072d8c8dc1df34bbaa25d36bcba140c85f754a43cc466aac65850b7a7366aa0c93e804180e5b255e61d5748de
-'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg-2ubuntu5.debian.tar.xz' zlib_1.2.11.dfsg-2ubuntu5.debian.tar.xz 51008 SHA512:941b377b20b03fb19f9c9a6018f45d16769995a54de2eaa37604a2e63c3956d29723b608c9a1ee99e1f716dc90368b6eb6bb4b49af1c9e3b29136d6931630576
-```
