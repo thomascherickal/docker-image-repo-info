@@ -1,9 +1,9 @@
-# `gcc:10.2.0`
+# `gcc:10.3.0`
 
 ## Docker Metadata
 
-- Image ID: `sha256:987c8580a0414da100aa064858402973013584a5225239e9a8a9f93fab64c491`
-- Created: `2021-03-31T18:20:18.286072956Z`
+- Image ID: `sha256:660a5d2c5990281687a46b99338fcd88fa72230f2d3fe5ff62cbf89a7ef48ee2`
+- Created: `2021-04-09T23:32:19.636302686Z`
 - Virtual Size: ~ 1.19 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -12,7 +12,7 @@
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `GPG_KEYS=B215C1633BCA0477615F1B35A5B3A004745C015A 	B3C42148A44E6983B3E4CC0793FA9B1AB75C61B8 	90AA470469D3965A87A5DCB494D03953902C9419 	80F98B2E0DAB6C8281BDF541A7C8C3B2F71EDF1C 	7F74F97C103468EE5D750B583AB00996FC26A641 	33C235A34C46AA3FFB293709A328C3A2C3C45C06`
   - `GCC_MIRRORS=https://ftpmirror.gnu.org/gcc 		https://mirrors.kernel.org/gnu/gcc 		https://bigsearcher.com/mirrors/gcc/releases 		http://www.netgull.com/gcc/releases 		https://ftpmirror.gnu.org/gcc 		ftp://ftp.gnu.org/gnu/gcc`
-  - `GCC_VERSION=10.2.0`
+  - `GCC_VERSION=10.3.0`
 
 ## `dpkg` (`.deb`-based packages)
 
