@@ -1,7 +1,7 @@
 ## `hylang:python3.7-stretch`
 
 ```console
-$ docker pull hylang@sha256:37f80f0d95eb15b6ab923b627939b135b4dfe8c16337209861e43a2b4b7fdacb
+$ docker pull hylang@sha256:fee7a67bb93e11d352492571da7ffea74ebf91cacc0f25dfac02d9b6d4b1c8f1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -319,75 +319,75 @@ CMD ["hy"]
 ### `hylang:python3.7-stretch` - linux; 386
 
 ```console
-$ docker pull hylang@sha256:4b849c91a53c49969940ebf55517f5f61baf0fb937a8debb5449b6db109dff73
+$ docker pull hylang@sha256:818fb34ae543d4049a07360080f8570c6e8c52c6a366476dc2dc99f96a451f75
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **41.0 MB (41035424 bytes)**  
+-	Total Size: **41.0 MB (41031712 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:10f658b498c0e1c974fb33a44cfae6f6c76261f73430724eccccdc577e009051`
+-	Image ID: `sha256:1786630eed0cf34a3e4d1d628f0d6bfc43297715a6192efbabb28aaa5cfc00c2`
 -	Default Command: `["hy"]`
 
 ```dockerfile
-# Tue, 30 Mar 2021 21:41:46 GMT
-ADD file:c94c3cb12401f9ab9b318b2eb6437af10ec4e1a900ac780a88531798c6f82344 in / 
-# Tue, 30 Mar 2021 21:41:47 GMT
+# Sat, 10 Apr 2021 00:41:29 GMT
+ADD file:9cb229e455510ee74de0debdecc6c327e9bda29ac2126c12d9a19d5ef8227d3a in / 
+# Sat, 10 Apr 2021 00:41:29 GMT
 CMD ["bash"]
-# Wed, 31 Mar 2021 10:13:52 GMT
+# Sat, 10 Apr 2021 01:58:41 GMT
 ENV PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 31 Mar 2021 10:13:52 GMT
+# Sat, 10 Apr 2021 01:58:42 GMT
 ENV LANG=C.UTF-8
-# Wed, 31 Mar 2021 10:14:07 GMT
+# Sat, 10 Apr 2021 01:58:49 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		netbase 	; 	rm -rf /var/lib/apt/lists/*
-# Wed, 31 Mar 2021 10:14:08 GMT
+# Sat, 10 Apr 2021 01:58:50 GMT
 ENV GPG_KEY=0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D
-# Wed, 31 Mar 2021 10:14:08 GMT
+# Sat, 10 Apr 2021 01:58:50 GMT
 ENV PYTHON_VERSION=3.7.10
-# Fri, 02 Apr 2021 23:42:24 GMT
+# Sat, 10 Apr 2021 02:07:14 GMT
 RUN set -ex 		&& savedAptMark="$(apt-mark showmanual)" 	&& apt-get update && apt-get install -y --no-install-recommends 		dpkg-dev 		gcc 		libbluetooth-dev 		libbz2-dev 		libc6-dev 		libexpat1-dev 		libffi-dev 		libgdbm-dev 		liblzma-dev 		libncursesw5-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		make 		tk-dev 		uuid-dev 		wget 		xz-utils 		zlib1g-dev 		$(command -v gpg > /dev/null || echo 'gnupg dirmngr') 		&& wget -O python.tar.xz "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz" 	&& wget -O python.tar.xz.asc "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz.asc" 	&& export GNUPGHOME="$(mktemp -d)" 	&& gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys "$GPG_KEY" 	&& gpg --batch --verify python.tar.xz.asc python.tar.xz 	&& { command -v gpgconf > /dev/null && gpgconf --kill all || :; } 	&& rm -rf "$GNUPGHOME" python.tar.xz.asc 	&& mkdir -p /usr/src/python 	&& tar -xJC /usr/src/python --strip-components=1 -f python.tar.xz 	&& rm python.tar.xz 		&& cd /usr/src/python 	&& gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)" 	&& ./configure 		--build="$gnuArch" 		--enable-loadable-sqlite-extensions 		--enable-optimizations 		--enable-option-checking=fatal 		--enable-shared 		--with-system-expat 		--with-system-ffi 		--without-ensurepip 	&& make -j "$(nproc)" 		LDFLAGS="-Wl,--strip-all" 		PROFILE_TASK='-m test.regrtest --pgo 			test_array 			test_base64 			test_binascii 			test_binhex 			test_binop 			test_bytes 			test_c_locale_coercion 			test_class 			test_cmath 			test_codecs 			test_compile 			test_complex 			test_csv 			test_decimal 			test_dict 			test_float 			test_fstring 			test_hashlib 			test_io 			test_iter 			test_json 			test_long 			test_math 			test_memoryview 			test_pickle 			test_re 			test_set 			test_slice 			test_struct 			test_threading 			test_time 			test_traceback 			test_unicode 		' 	&& make install 	&& rm -rf /usr/src/python 		&& find /usr/local -depth 		\( 			\( -type d -a \( -name test -o -name tests -o -name idle_test \) \) 			-o \( -type f -a \( -name '*.pyc' -o -name '*.pyo' -o -name '*.a' \) \) 			-o \( -type f -a -name 'wininst-*.exe' \) 		\) -exec rm -rf '{}' + 		&& ldconfig 		&& apt-mark auto '.*' > /dev/null 	&& apt-mark manual $savedAptMark 	&& find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	&& apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false 	&& rm -rf /var/lib/apt/lists/* 		&& python3 --version
-# Fri, 02 Apr 2021 23:42:26 GMT
+# Sat, 10 Apr 2021 02:07:15 GMT
 RUN cd /usr/local/bin 	&& ln -s idle3 idle 	&& ln -s pydoc3 pydoc 	&& ln -s python3 python 	&& ln -s python3-config python-config
-# Fri, 02 Apr 2021 23:42:26 GMT
+# Sat, 10 Apr 2021 02:07:15 GMT
 ENV PYTHON_PIP_VERSION=21.0.1
-# Fri, 02 Apr 2021 23:42:27 GMT
+# Sat, 10 Apr 2021 02:07:16 GMT
 ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/29f37dbe6b3842ccd52d61816a3044173962ebeb/public/get-pip.py
-# Fri, 02 Apr 2021 23:42:27 GMT
+# Sat, 10 Apr 2021 02:07:16 GMT
 ENV PYTHON_GET_PIP_SHA256=e03eb8a33d3b441ff484c56a436ff10680479d4bd14e59268e67977ed40904de
-# Fri, 02 Apr 2021 23:43:26 GMT
+# Sat, 10 Apr 2021 02:07:32 GMT
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends wget; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum --check --strict -; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		"pip==$PYTHON_PIP_VERSION" 	; 	pip --version; 		find /usr/local -depth 		\( 			\( -type d -a \( -name test -o -name tests -o -name idle_test \) \) 			-o 			\( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) 		\) -exec rm -rf '{}' +; 	rm -f get-pip.py
-# Fri, 02 Apr 2021 23:43:27 GMT
+# Sat, 10 Apr 2021 02:07:33 GMT
 CMD ["python3"]
-# Sat, 03 Apr 2021 01:21:24 GMT
+# Sat, 10 Apr 2021 15:44:20 GMT
 ENV HY_VERSION=0.20.0
-# Sat, 03 Apr 2021 01:21:29 GMT
+# Sat, 10 Apr 2021 15:44:25 GMT
 RUN pip install --no-cache-dir "hy == $HY_VERSION"
-# Sat, 03 Apr 2021 01:21:29 GMT
+# Sat, 10 Apr 2021 15:44:26 GMT
 CMD ["hy"]
 ```
 
 -	Layers:
-	-	`sha256:c3a5c9ffa733bd9d18d6c2c637bd77621d41bec602c341641491678e003c6398`  
-		Last Modified: Tue, 30 Mar 2021 21:50:06 GMT  
-		Size: 23.2 MB (23156176 bytes)  
+	-	`sha256:b18a2540ebf57cd924b9ebbf39001a2241653243e9ee3af58fa9f77a2644b7ee`  
+		Last Modified: Sat, 10 Apr 2021 00:49:18 GMT  
+		Size: 23.2 MB (23156271 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f7594e071a2529de9524335d1b4aa0621ef2e6eeed6ade6259b476d034184c04`  
-		Last Modified: Wed, 31 Mar 2021 11:14:18 GMT  
-		Size: 2.5 MB (2509177 bytes)  
+	-	`sha256:469c83238ca2d74b674ce034318207d9c08fa74cd860b5d09c8775a36b3bdabe`  
+		Last Modified: Sat, 10 Apr 2021 02:36:08 GMT  
+		Size: 2.5 MB (2509002 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:46361d697d749f1d368684b4b388887be5486e9dac5ffe9e3edc5618f2e3c114`  
-		Last Modified: Sat, 03 Apr 2021 00:57:39 GMT  
-		Size: 10.1 MB (10093632 bytes)  
+	-	`sha256:4cada2f89ffe7d3c3a40f7701c1c9a62be6eb128be84a9518717c5703dca5087`  
+		Last Modified: Sat, 10 Apr 2021 02:36:12 GMT  
+		Size: 10.1 MB (10089889 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:79547415438640a0831aa23b08a940eaa00dd0b10e8021fb4b2e7d82b7dd6183`  
-		Last Modified: Sat, 03 Apr 2021 00:57:37 GMT  
+	-	`sha256:6179e6ecbef17d1a62f169df5e2df7f17131f925be8cbffff043e6ab62bfd6c6`  
+		Last Modified: Sat, 10 Apr 2021 02:36:07 GMT  
 		Size: 241.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2d1ab354cd8b7ddc53032978869b8fabfd354384415ab3cb75a592232f293fd4`  
-		Last Modified: Sat, 03 Apr 2021 00:57:38 GMT  
-		Size: 2.4 MB (2447649 bytes)  
+	-	`sha256:559c55a49763af007a56e4056c2c6f248d8e3ccb6e679f737e2166400b21f6a9`  
+		Last Modified: Sat, 10 Apr 2021 02:36:08 GMT  
+		Size: 2.4 MB (2447517 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eccf62821269f24e8d068c3f1255ee7a3b087aca69de826006b4086821a3b092`  
-		Last Modified: Sat, 03 Apr 2021 01:29:47 GMT  
-		Size: 2.8 MB (2828549 bytes)  
+	-	`sha256:c8b4fa82de4860fb3dc9ba497c0578fcf077073d6b537724631bc98002ce51ec`  
+		Last Modified: Sat, 10 Apr 2021 15:51:08 GMT  
+		Size: 2.8 MB (2828792 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
