@@ -1,7 +1,7 @@
 ## `mediawiki:legacylts-fpm`
 
 ```console
-$ docker pull mediawiki@sha256:ccf94bb51537bf2dc282f5f4bef9d7ea4f10252b8b941a08f1a1b2ca800690f2
+$ docker pull mediawiki@sha256:b3ef598aa0c7fd52c5cfa93dd87242de732e88a1e47c18928712bea08160dfff
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -322,14 +322,14 @@ CMD ["php-fpm"]
 ### `mediawiki:legacylts-fpm` - linux; arm variant v7
 
 ```console
-$ docker pull mediawiki@sha256:1314e39ffdae0b49bfae4e0a91762d13cef0ea0cb1029dd0913622630ce797c6
+$ docker pull mediawiki@sha256:e8465a4ee55a17704c14be00992fba17594ee01b4fa51a832d5d0a8709cb5d15
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **217.1 MB (217119205 bytes)**  
+-	Total Size: **217.1 MB (217111419 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0b591bdb890bf85fafede7a8b0f61ebed362ebef602804eaed30e31f1855f2df`
+-	Image ID: `sha256:095d5d84ebd2bc8e6173929b1f2fa0bfd0758a233d01d23ffaec65c473ff9fe9`
 -	Entrypoint: `["docker-php-entrypoint"]`
 -	Default Command: `["php-fpm"]`
 
@@ -398,11 +398,11 @@ RUN { 		echo 'opcache.memory_consumption=128'; 		echo 'opcache.interned_strings_
 RUN set -eux; 	mkdir -p /var/www/data; 	chown -R www-data:www-data /var/www/data
 # Thu, 01 Apr 2021 02:08:59 GMT
 ENV MEDIAWIKI_MAJOR_VERSION=1.31
-# Thu, 01 Apr 2021 02:09:01 GMT
-ENV MEDIAWIKI_VERSION=1.31.12
-# Thu, 01 Apr 2021 02:09:37 GMT
+# Sat, 10 Apr 2021 01:18:46 GMT
+ENV MEDIAWIKI_VERSION=1.31.14
+# Sat, 10 Apr 2021 01:19:34 GMT
 RUN set -eux; 	fetchDeps=" 		gnupg 		dirmngr 	"; 	apt-get update; 	apt-get install -y --no-install-recommends $fetchDeps; 		curl -fSL "https://releases.wikimedia.org/mediawiki/${MEDIAWIKI_MAJOR_VERSION}/mediawiki-${MEDIAWIKI_VERSION}.tar.gz" -o mediawiki.tar.gz; 	curl -fSL "https://releases.wikimedia.org/mediawiki/${MEDIAWIKI_MAJOR_VERSION}/mediawiki-${MEDIAWIKI_VERSION}.tar.gz.sig" -o mediawiki.tar.gz.sig; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 		D7D6767D135A514BEB86E9BA75682B08E8A3FEC4 		441276E9CCD15F44F6D97D18C119E1A64D70938E 		F7F780D82EBFB8A56556E7EE82403E59F9F8CD79 		1D98867E82982C8FE0ABC25F9B69B3109D3BB7B0 	; 	gpg --batch --verify mediawiki.tar.gz.sig mediawiki.tar.gz; 	tar -x --strip-components=1 -f mediawiki.tar.gz; 	gpgconf --kill all; 	rm -r "$GNUPGHOME" mediawiki.tar.gz.sig mediawiki.tar.gz; 	chown -R www-data:www-data extensions skins cache images; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; 	rm -rf /var/lib/apt/lists/*
-# Thu, 01 Apr 2021 02:09:40 GMT
+# Sat, 10 Apr 2021 01:19:36 GMT
 CMD ["php-fpm"]
 ```
 
@@ -467,9 +467,9 @@ CMD ["php-fpm"]
 		Last Modified: Thu, 01 Apr 2021 02:11:08 GMT  
 		Size: 169.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1b3116cb3cd47db8f6597c075186fc99bdefdd0716880de929aec9c7b0c4dcec`  
-		Last Modified: Thu, 01 Apr 2021 02:13:48 GMT  
-		Size: 36.2 MB (36191181 bytes)  
+	-	`sha256:0226d1d19258020b10f66ef016dac53635d3812fc6320c051964999ebf4b9c87`  
+		Last Modified: Sat, 10 Apr 2021 01:23:43 GMT  
+		Size: 36.2 MB (36183395 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mediawiki:legacylts-fpm` - linux; arm64 variant v8
