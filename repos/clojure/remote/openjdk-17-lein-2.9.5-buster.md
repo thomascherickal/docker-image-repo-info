@@ -1,7 +1,7 @@
 ## `clojure:openjdk-17-lein-2.9.5-buster`
 
 ```console
-$ docker pull clojure@sha256:a91d8acb2a2c29580a0f18f2063b10f1002deda3a11940a01c7bc7be619f008f
+$ docker pull clojure@sha256:e7520090d6bdfc8819f225a48a6473399b7f2e5eaef1c1b33a19b2c0cf97834e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,14 +12,14 @@ $ docker pull clojure@sha256:a91d8acb2a2c29580a0f18f2063b10f1002deda3a11940a01c7
 ### `clojure:openjdk-17-lein-2.9.5-buster` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:5868a57a369d326c9dfc00c563cb30778fe55c5ece786dd88535b228da83cea8
+$ docker pull clojure@sha256:dc99d68f9f06a96a4278acb97a0b566e47df0c5f1b123e61f7ea21b5cbb77383
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **335.9 MB (335924779 bytes)**  
+-	Total Size: **336.2 MB (336181654 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c31b2ab9638bd7a9738567903265bfd407387a8faf46ab904def455a311446c4`
+-	Image ID: `sha256:ac2f28036deb57ca3e750f79f7e2365429867e00ba37477a4f8b75169b5680fa`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -41,27 +41,27 @@ ENV JAVA_HOME=/usr/local/openjdk-17
 ENV PATH=/usr/local/openjdk-17/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 31 Mar 2021 05:40:26 GMT
 ENV LANG=C.UTF-8
-# Fri, 02 Apr 2021 18:26:11 GMT
-ENV JAVA_VERSION=17-ea+16
-# Fri, 02 Apr 2021 18:26:21 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://download.java.net/java/early_access/jdk17/16/GPL/openjdk-17-ea+16_linux-x64_bin.tar.gz'; 			downloadSha256='ee7a5b391e275d159e623b7a35008d180c0ff362e93216395412aae871a1790a'; 			;; 		'arm64') 			downloadUrl='https://download.java.net/java/early_access/jdk17/16/GPL/openjdk-17-ea+16_linux-aarch64_bin.tar.gz'; 			downloadSha256='7554740bd86ea06cfdead0b768cd15758ea76d21ba2140b9b7b9bb1e45fd0c39'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
-# Fri, 02 Apr 2021 18:26:22 GMT
+# Fri, 09 Apr 2021 18:55:37 GMT
+ENV JAVA_VERSION=17-ea+17
+# Fri, 09 Apr 2021 18:55:47 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://download.java.net/java/early_access/jdk17/17/GPL/openjdk-17-ea+17_linux-x64_bin.tar.gz'; 			downloadSha256='a53ace955971ef1ad745c2e9fef7f76b57b51d57e7076dd3a55243ab65febf87'; 			;; 		'arm64') 			downloadUrl='https://download.java.net/java/early_access/jdk17/17/GPL/openjdk-17-ea+17_linux-aarch64_bin.tar.gz'; 			downloadSha256='ccd8ee7bb908835e697ebae8dbe38d2cf68d9f266e2d9787bdf34d26da30e45b'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Fri, 09 Apr 2021 18:55:48 GMT
 CMD ["jshell"]
-# Fri, 02 Apr 2021 18:52:40 GMT
+# Fri, 09 Apr 2021 19:34:07 GMT
 ENV LEIN_VERSION=2.9.5
-# Fri, 02 Apr 2021 18:52:41 GMT
+# Fri, 09 Apr 2021 19:34:07 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Fri, 02 Apr 2021 18:52:41 GMT
+# Fri, 09 Apr 2021 19:34:07 GMT
 WORKDIR /tmp
-# Fri, 02 Apr 2021 18:52:48 GMT
+# Fri, 09 Apr 2021 19:34:14 GMT
 RUN apt-get update && apt-get install -y gnupg && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "3601d55c4b5ac5c654e4ebd0d75abf7ad683f48cba8a7af1a8730b6590187b8a *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg
-# Fri, 02 Apr 2021 18:52:49 GMT
+# Fri, 09 Apr 2021 19:34:15 GMT
 ENV PATH=/usr/local/openjdk-17/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Fri, 02 Apr 2021 18:52:49 GMT
+# Fri, 09 Apr 2021 19:34:15 GMT
 ENV LEIN_ROOT=1
-# Fri, 02 Apr 2021 18:52:53 GMT
+# Fri, 09 Apr 2021 19:34:18 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.3"]])' > project.clj   && lein deps && rm project.clj
-# Fri, 02 Apr 2021 18:52:53 GMT
+# Fri, 09 Apr 2021 19:34:18 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -86,30 +86,30 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 31 Mar 2021 05:51:50 GMT  
 		Size: 13.9 MB (13921332 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d29b46743795ff97831c5bb41b53bf78e6f0e68c6b4ee4d0d1756dad18c8895b`  
-		Last Modified: Fri, 02 Apr 2021 18:32:58 GMT  
-		Size: 185.8 MB (185820893 bytes)  
+	-	`sha256:593128b16c8200a79e445704857e2a55bddd99b70c712246986664ed03215154`  
+		Last Modified: Fri, 09 Apr 2021 19:02:31 GMT  
+		Size: 186.1 MB (186077846 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:750ada8eaedf0cc57d802145a6749011019ff61f177887e853bacf7556601ae4`  
-		Last Modified: Fri, 02 Apr 2021 18:57:52 GMT  
-		Size: 11.9 MB (11875389 bytes)  
+	-	`sha256:148be07c1019ac9ca646af86ba1c7ff2cb1ec39e32250b281d9b1e884a661ffd`  
+		Last Modified: Fri, 09 Apr 2021 19:39:16 GMT  
+		Size: 11.9 MB (11875341 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6f2bd7233019e0f0b6488af1a6b9f3b6dd1c6747ff17ee47a02a4fd77df93b8d`  
-		Last Modified: Fri, 02 Apr 2021 18:57:52 GMT  
-		Size: 4.2 MB (4203725 bytes)  
+	-	`sha256:a2407746e9cd6716a651fd3852e33f3431fe06b51dd3a166911777b303dc6404`  
+		Last Modified: Fri, 09 Apr 2021 19:39:16 GMT  
+		Size: 4.2 MB (4203695 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:openjdk-17-lein-2.9.5-buster` - linux; arm64 variant v8
 
 ```console
-$ docker pull clojure@sha256:06c796a23f061283fdabe7ad61fa4ce30a53433e5983260ceece5fae2d87d936
+$ docker pull clojure@sha256:2bc802cc2cb5bfc804990a357ab4a3a748601bcd752e8820b9c5759ccdaab3b0
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **331.7 MB (331705283 bytes)**  
+-	Total Size: **331.9 MB (331949747 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7afa9c251f84831d7e5b5daaa6518c48c250afc0b752b9ea4a4a1d8b1310db8d`
+-	Image ID: `sha256:165b2cdd70dd81d1bb395047616e4e0b64a1c5a7e86d475a0bc5369042984b83`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -131,27 +131,27 @@ ENV JAVA_HOME=/usr/local/openjdk-17
 ENV PATH=/usr/local/openjdk-17/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 31 Mar 2021 01:38:04 GMT
 ENV LANG=C.UTF-8
-# Fri, 02 Apr 2021 19:13:27 GMT
-ENV JAVA_VERSION=17-ea+16
-# Fri, 02 Apr 2021 19:13:54 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://download.java.net/java/early_access/jdk17/16/GPL/openjdk-17-ea+16_linux-x64_bin.tar.gz'; 			downloadSha256='ee7a5b391e275d159e623b7a35008d180c0ff362e93216395412aae871a1790a'; 			;; 		'arm64') 			downloadUrl='https://download.java.net/java/early_access/jdk17/16/GPL/openjdk-17-ea+16_linux-aarch64_bin.tar.gz'; 			downloadSha256='7554740bd86ea06cfdead0b768cd15758ea76d21ba2140b9b7b9bb1e45fd0c39'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
-# Fri, 02 Apr 2021 19:14:19 GMT
+# Fri, 09 Apr 2021 18:42:16 GMT
+ENV JAVA_VERSION=17-ea+17
+# Fri, 09 Apr 2021 18:42:34 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://download.java.net/java/early_access/jdk17/17/GPL/openjdk-17-ea+17_linux-x64_bin.tar.gz'; 			downloadSha256='a53ace955971ef1ad745c2e9fef7f76b57b51d57e7076dd3a55243ab65febf87'; 			;; 		'arm64') 			downloadUrl='https://download.java.net/java/early_access/jdk17/17/GPL/openjdk-17-ea+17_linux-aarch64_bin.tar.gz'; 			downloadSha256='ccd8ee7bb908835e697ebae8dbe38d2cf68d9f266e2d9787bdf34d26da30e45b'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Fri, 09 Apr 2021 18:42:36 GMT
 CMD ["jshell"]
-# Fri, 02 Apr 2021 19:47:43 GMT
+# Fri, 09 Apr 2021 19:45:27 GMT
 ENV LEIN_VERSION=2.9.5
-# Fri, 02 Apr 2021 19:47:44 GMT
+# Fri, 09 Apr 2021 19:45:28 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Fri, 02 Apr 2021 19:47:45 GMT
+# Fri, 09 Apr 2021 19:45:29 GMT
 WORKDIR /tmp
-# Fri, 02 Apr 2021 19:47:59 GMT
+# Fri, 09 Apr 2021 19:45:41 GMT
 RUN apt-get update && apt-get install -y gnupg && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "3601d55c4b5ac5c654e4ebd0d75abf7ad683f48cba8a7af1a8730b6590187b8a *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip.asc && gpg --batch --keyserver keys.openpgp.org --recv-key 20242BACBBE95ADA22D0AFD7808A33D379C806C3 && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.zip.asc leiningen-$LEIN_VERSION-standalone.zip && rm leiningen-$LEIN_VERSION-standalone.zip.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.zip /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg
-# Fri, 02 Apr 2021 19:48:00 GMT
+# Fri, 09 Apr 2021 19:45:42 GMT
 ENV PATH=/usr/local/openjdk-17/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Fri, 02 Apr 2021 19:48:00 GMT
+# Fri, 09 Apr 2021 19:45:43 GMT
 ENV LEIN_ROOT=1
-# Fri, 02 Apr 2021 19:48:07 GMT
+# Fri, 09 Apr 2021 19:45:49 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.3"]])' > project.clj   && lein deps && rm project.clj
-# Fri, 02 Apr 2021 19:48:08 GMT
+# Fri, 09 Apr 2021 19:45:50 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -176,15 +176,15 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 31 Mar 2021 01:49:05 GMT  
 		Size: 14.7 MB (14673676 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c21528a8d589b6ece42f2559172b731f76479ba6e86fd6b968b1fc278201ff5f`  
-		Last Modified: Fri, 02 Apr 2021 19:22:48 GMT  
-		Size: 181.9 MB (181882309 bytes)  
+	-	`sha256:f3854132c9285f3d7ca2043c05afcc5b145beb56f47c7555bc6d579cb885cc84`  
+		Last Modified: Fri, 09 Apr 2021 18:48:48 GMT  
+		Size: 182.1 MB (182126705 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:36bfb767d44a3cae873ddc185d94ee90035f5b3598282e7b501b218f14623efa`  
-		Last Modified: Fri, 02 Apr 2021 19:53:59 GMT  
-		Size: 11.9 MB (11875251 bytes)  
+	-	`sha256:088085596e7001b016792848abaefbe924dea65629caddabfc1b369f24afc74a`  
+		Last Modified: Fri, 09 Apr 2021 19:51:16 GMT  
+		Size: 11.9 MB (11875284 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f08af4420a5875361d43ecbc4068089fe9c74f8a432e52105fed51ae95db46a7`  
-		Last Modified: Fri, 02 Apr 2021 19:53:58 GMT  
-		Size: 4.2 MB (4203698 bytes)  
+	-	`sha256:891ffd64316b8518c094c808eb9a5fbd32d7ba793177c035818df6c38b952bcf`  
+		Last Modified: Fri, 09 Apr 2021 19:51:15 GMT  
+		Size: 4.2 MB (4203733 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
