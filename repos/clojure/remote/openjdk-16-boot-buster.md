@@ -1,7 +1,7 @@
 ## `clojure:openjdk-16-boot-buster`
 
 ```console
-$ docker pull clojure@sha256:09bf790dbb2128151fc0aaa2f3f17119b8bf1b17f8120b2afec1458334b72355
+$ docker pull clojure@sha256:825273bfd505e5bc87e65b581215000851d8026de1c0a8f004e2887923cb0c91
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -102,89 +102,89 @@ CMD ["boot" "repl"]
 ### `clojure:openjdk-16-boot-buster` - linux; arm64 variant v8
 
 ```console
-$ docker pull clojure@sha256:a7812c7562e8be39333c409ff36fc450a3a11bc5c1e8d7ca9bbc39f784e2b2dd
+$ docker pull clojure@sha256:0751e96511df6ff1a7dbea578f10321d4e4493a88f57daf99d2d40f4d5a247c4
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **371.8 MB (371835637 bytes)**  
+-	Total Size: **371.8 MB (371838290 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:83e1871bacc68bc7cee2c8ec68ac99c2bf87ef1910ceb93b294adf1aa850fb3c`
+-	Image ID: `sha256:a50e48fb0acf2e5bccb18f0337adee574b39a2db7fff51e399a20c8cb7c403c7`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
-# Tue, 30 Mar 2021 21:46:50 GMT
-ADD file:6a5cce92f1039ef2cb7ac6dd999c9f84289a9f6e1c0891d1edf791ea73b7e125 in / 
-# Tue, 30 Mar 2021 21:46:53 GMT
+# Sat, 10 Apr 2021 00:40:59 GMT
+ADD file:320ad0e2a3d6c676ddb8ce5646b5a94d18d82a8868955da3a9379a261dfe1ffe in / 
+# Sat, 10 Apr 2021 00:41:01 GMT
 CMD ["bash"]
-# Wed, 31 Mar 2021 00:15:08 GMT
+# Sat, 10 Apr 2021 01:46:32 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
-# Wed, 31 Mar 2021 00:15:20 GMT
+# Sat, 10 Apr 2021 01:46:45 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Wed, 31 Mar 2021 00:15:58 GMT
+# Sat, 10 Apr 2021 01:47:28 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
-# Wed, 31 Mar 2021 01:38:00 GMT
+# Sat, 10 Apr 2021 23:01:15 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		bzip2 		unzip 		xz-utils 				binutils 				fontconfig libfreetype6 				ca-certificates p11-kit 	; 	rm -rf /var/lib/apt/lists/*
-# Wed, 31 Mar 2021 01:40:24 GMT
+# Sat, 10 Apr 2021 23:02:25 GMT
 ENV JAVA_HOME=/usr/local/openjdk-16
-# Wed, 31 Mar 2021 01:40:25 GMT
+# Sat, 10 Apr 2021 23:02:26 GMT
 ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 31 Mar 2021 01:40:26 GMT
+# Sat, 10 Apr 2021 23:02:28 GMT
 ENV LANG=C.UTF-8
-# Wed, 31 Mar 2021 01:40:27 GMT
+# Sat, 10 Apr 2021 23:02:30 GMT
 ENV JAVA_VERSION=16
-# Wed, 31 Mar 2021 01:40:47 GMT
+# Sat, 10 Apr 2021 23:02:50 GMT
 RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://download.java.net/java/GA/jdk16/7863447f0ab643c585b9bdebf67c69db/36/GPL/openjdk-16_linux-x64_bin.tar.gz'; 			downloadSha256='e952958f16797ad7dc7cd8b724edd69ec7e0e0434537d80d6b5165193e33b931'; 			;; 		'arm64') 			downloadUrl='https://download.java.net/java/GA/jdk16/7863447f0ab643c585b9bdebf67c69db/36/GPL/openjdk-16_linux-aarch64_bin.tar.gz'; 			downloadSha256='273d3ae0ff14af801c5ffa71fd081f1cc505354f308ce11c77af55302c83d2bf'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
-# Wed, 31 Mar 2021 01:40:50 GMT
+# Sat, 10 Apr 2021 23:02:51 GMT
 CMD ["jshell"]
-# Thu, 01 Apr 2021 03:28:40 GMT
+# Sun, 11 Apr 2021 05:30:27 GMT
 ENV BOOT_VERSION=2.8.3
-# Thu, 01 Apr 2021 03:28:41 GMT
+# Sun, 11 Apr 2021 05:30:27 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Thu, 01 Apr 2021 03:28:43 GMT
+# Sun, 11 Apr 2021 05:30:28 GMT
 WORKDIR /tmp
-# Thu, 01 Apr 2021 03:28:47 GMT
+# Sun, 11 Apr 2021 05:30:31 GMT
 RUN mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot
-# Thu, 01 Apr 2021 03:28:48 GMT
+# Sun, 11 Apr 2021 05:30:32 GMT
 ENV PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Thu, 01 Apr 2021 03:28:50 GMT
+# Sun, 11 Apr 2021 05:30:32 GMT
 ENV BOOT_AS_ROOT=yes
-# Thu, 01 Apr 2021 03:29:18 GMT
+# Sun, 11 Apr 2021 05:31:01 GMT
 RUN boot
-# Thu, 01 Apr 2021 03:29:20 GMT
+# Sun, 11 Apr 2021 05:31:03 GMT
 CMD ["boot" "repl"]
 ```
 
 -	Layers:
-	-	`sha256:ef28e7e77ecbd3b3b426832bc12e8f5e629959683767466e9bac149c3286e126`  
-		Last Modified: Tue, 30 Mar 2021 21:54:03 GMT  
-		Size: 49.2 MB (49225808 bytes)  
+	-	`sha256:01cf0f0da10ede0eec0fc1c5fbfdeb63a447dfcc0a3c4419c0a4c3f0a2826636`  
+		Last Modified: Sat, 10 Apr 2021 00:47:28 GMT  
+		Size: 49.2 MB (49225782 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:344d2d9a9cf41c137b0dbb41df255f95fb812a23771a10ee2ab5a8a5047c62c4`  
-		Last Modified: Wed, 31 Mar 2021 00:29:59 GMT  
-		Size: 7.7 MB (7694530 bytes)  
+	-	`sha256:c667eb56cd05909001c1c50e81cbc75e290fd8e353f974bab4246a0d4fc484ca`  
+		Last Modified: Sat, 10 Apr 2021 02:01:00 GMT  
+		Size: 7.7 MB (7695101 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:299f3631f6b52be065a7342da0a46978d55cbd0d15c57fae22f4ca24efcc295a`  
-		Last Modified: Wed, 31 Mar 2021 00:29:59 GMT  
-		Size: 10.0 MB (9984391 bytes)  
+	-	`sha256:27ca15a4cef673e0e1a7bc3e659f4653df9bce82b945e367475e436852cc7880`  
+		Last Modified: Sat, 10 Apr 2021 02:00:59 GMT  
+		Size: 10.0 MB (9984406 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ba70c372ae296f23e908bf1e1ed9f4c0c81a8a6d7fc48c0e2db16035bb9b7a54`  
-		Last Modified: Wed, 31 Mar 2021 00:30:24 GMT  
-		Size: 52.2 MB (52165620 bytes)  
+	-	`sha256:6b7f1cf823a7fca9771e278355d8924fac8d9cef1f8e3ecbc87332c4859d1d4f`  
+		Last Modified: Sat, 10 Apr 2021 02:01:23 GMT  
+		Size: 52.2 MB (52167974 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1ca103f822d8cb58a9704fc742e0a249375e6458c2a46de766e57f6cc850ee8d`  
-		Last Modified: Wed, 31 Mar 2021 01:49:05 GMT  
-		Size: 14.7 MB (14673676 bytes)  
+	-	`sha256:5c00066088349286faa32311c9ea25724917bd388d9a9fdf3b8b0235bfcd5cac`  
+		Last Modified: Sat, 10 Apr 2021 23:07:43 GMT  
+		Size: 14.7 MB (14673668 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9d4c55a268674cf216552357f0333f81f5900a7659cd2ea61633168e14ab7750`  
-		Last Modified: Wed, 31 Mar 2021 01:50:59 GMT  
-		Size: 179.3 MB (179264151 bytes)  
+	-	`sha256:fe3d67f3af2583a5960405703bb04e5e502c0052724c3dbaa861557964cfbda5`  
+		Last Modified: Sat, 10 Apr 2021 23:08:53 GMT  
+		Size: 179.3 MB (179264199 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7c5ba2bb4b79405e3b7c0488475d4e24581b87e338e6fe4091756c17f8794ab5`  
-		Last Modified: Thu, 01 Apr 2021 03:43:02 GMT  
+	-	`sha256:377dfd4349587186f4b99c60e674b8223c4c7c3bda01438db56fee07559eeb72`  
+		Last Modified: Sun, 11 Apr 2021 05:37:20 GMT  
 		Size: 6.9 KB (6922 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4f0de4c0cf365235907f79841a602e23280e001b3ea3bc6b7f18614ba3aba432`  
-		Last Modified: Thu, 01 Apr 2021 03:43:08 GMT  
-		Size: 58.8 MB (58820539 bytes)  
+	-	`sha256:964013bcd80dd8abc1abf0ad014b82206d94e1a48624e8d5c185f3065153ed48`  
+		Last Modified: Sun, 11 Apr 2021 05:37:26 GMT  
+		Size: 58.8 MB (58820238 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
