@@ -92,13 +92,9 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.0.4
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.0.4.dsc' apt_2.0.4.dsc 2843 SHA512:bbc466f979809c15d3396e26da37afc78688b3d454a900dcb95d727748946c8be91b13791031e057622c8fc94c875fa00e528829cbdb54a0991134321c514baf
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.0.4.tar.xz' apt_2.0.4.tar.xz 2171696 SHA512:4272fccb590599372a5dac2db1ce0af777bdffbb8b7ff12b2ef07363dd3f7ff93977f50b49d7454b6ec03f3814dd432803c0d98b723c08a63bafb5c42dfa66ad
-```
 
 ### `dpkg` source package: `attr=1:2.4.48-5`
 
@@ -1698,14 +1694,9 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=245.4-4ubuntu3.5
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.5.dsc' systemd_245.4-4ubuntu3.5.dsc 5258 SHA512:ec38a58e62f2db26e84559b3b6aca597a529ad972016ad877cdac74bab4a4b309e436d2f0c8fc3d39ce3954f24d780a5daddb3399fe87b623a63f3db8b399ee5
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4.orig.tar.gz' systemd_245.4.orig.tar.gz 9000780 SHA512:02036bb1ab05301a9d0dfdd4b9c9376e90134474482531e6e292122380be2f24f99177493dd3af6f8af1a8ed2599ee0996da91a3b1b7872bbfaf26a1c3e61b4c
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.5.debian.tar.xz' systemd_245.4-4ubuntu3.5.debian.tar.xz 235044 SHA512:d8634d5f7007db4692105249aee9727afbbaadfd0cf5b308f039c90da0c383c970f359d2aa10a002f5c164b7696e42c404949cdfda998f5b2ebcc44e567f2436
-```
 
 ### `dpkg` source package: `sysvinit=2.96-2.1ubuntu1`
 
