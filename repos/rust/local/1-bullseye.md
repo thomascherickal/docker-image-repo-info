@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:4bf8404d24739e4d6c05d585a3797b2ef79b50c687dc89a90c71884bc8a5c20c`
-- Created: `2021-04-01T19:07:21.437395874Z`
+- Image ID: `sha256:d2832408932577fa7aeeccb0024ce1838c81f7f4ddcf27c2e865f373765c2795`
+- Created: `2021-04-10T17:43:58.48789265Z`
 - Virtual Size: ~ 1.28 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -1459,27 +1459,34 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/glib2.0/2.66.8-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/glib2.0/2.66.8-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `glibc=2.31-10`
+### `dpkg` source package: `glibc=2.31-11`
 
 Binary Packages:
 
-- `libc-bin=2.31-10`
-- `libc-dev-bin=2.31-10`
-- `libc6:amd64=2.31-10`
-- `libc6-dev:amd64=2.31-10`
+- `libc-bin=2.31-11`
+- `libc-dev-bin=2.31-11`
+- `libc6:amd64=2.31-11`
+- `libc6-dev:amd64=2.31-11`
 
 Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/libc-dev-bin/copyright`, `/usr/share/doc/libc6/copyright`, `/usr/share/doc/libc6-dev/copyright`)
 
 - `GPL-2`
 - `LGPL-2.1`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris glibc=2.31-11
+'http://deb.debian.org/debian/pool/main/g/glibc/glibc_2.31-11.dsc' glibc_2.31-11.dsc 8315 SHA256:3ac44dc944e7d90e07a097f3799334eec1008b9a8c59ff130124ad131d70140c
+'http://deb.debian.org/debian/pool/main/g/glibc/glibc_2.31.orig.tar.xz' glibc_2.31.orig.tar.xz 17254692 SHA256:3dc7704b6166839c37d7047626fd199f3d4c09aca0d90e48c51c31c967dce34e
+'http://deb.debian.org/debian/pool/main/g/glibc/glibc_2.31-11.debian.tar.xz' glibc_2.31-11.debian.tar.xz 906700 SHA256:f45496f2283617f4f8aaef680a61b3b4ead5717bb5692834974a84ab7b562f09
+```
 
-- http://snapshot.debian.org/package/glibc/2.31-10/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/glibc/2.31-11/ (for browsing the source)
+- https://sources.debian.net/src/glibc/2.31-11/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/glibc/2.31-11/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gmp=2:6.2.1+dfsg-1`
 
@@ -3681,11 +3688,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libzstd/1.4.8+dfsg-2.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libzstd/1.4.8+dfsg-2.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `linux=5.10.24-1`
+### `dpkg` source package: `linux=5.10.26-1`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=5.10.24-1`
+- `linux-libc-dev:amd64=5.10.26-1`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -3701,17 +3708,17 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris linux=5.10.24-1
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.24-1.dsc' linux_5.10.24-1.dsc 195000 SHA256:0cb0148aa5e604288bb1bece1ae66d05ce669365fe21ac95ca0549cd7e51e5c2
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.24.orig.tar.xz' linux_5.10.24.orig.tar.xz 121501420 SHA256:d908d43daef722d52894eff41bef55f331bdfb17947e00dbbb35d900bd58dbfd
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.24-1.debian.tar.xz' linux_5.10.24-1.debian.tar.xz 1351444 SHA256:c7cbff34198258a61cf86c536eda2cd1ae3d2036c1e6632873fb31e340bedf71
+$ apt-get source -qq --print-uris linux=5.10.26-1
+'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.26-1.dsc' linux_5.10.26-1.dsc 195000 SHA256:8c5aae2fe96726282de8712ba9f16de7faf8b021619c23bbad0b92ea52dacdf4
+'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.26.orig.tar.xz' linux_5.10.26.orig.tar.xz 121499348 SHA256:e351bf3613952608c266d63a30d2629d2d033231cd60b8292eac5ce358ab24cd
+'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.26-1.debian.tar.xz' linux_5.10.26-1.debian.tar.xz 4147240 SHA256:06553e63779befff2607dad5d7a6b429332d1ab078f2a001e9cb6c4598e3dde4
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/linux/5.10.24-1/ (for browsing the source)
-- https://sources.debian.net/src/linux/5.10.24-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/5.10.24-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/linux/5.10.26-1/ (for browsing the source)
+- https://sources.debian.net/src/linux/5.10.26-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/linux/5.10.26-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lsb=11.1.0`
 
@@ -5575,13 +5582,13 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/xxhash/0.8.0-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/xxhash/0.8.0-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `xz-utils=5.2.5-1.0`
+### `dpkg` source package: `xz-utils=5.2.5-2`
 
 Binary Packages:
 
-- `liblzma-dev:amd64=5.2.5-1.0`
-- `liblzma5:amd64=5.2.5-1.0`
-- `xz-utils=5.2.5-1.0`
+- `liblzma-dev:amd64=5.2.5-2`
+- `liblzma5:amd64=5.2.5-2`
+- `xz-utils=5.2.5-2`
 
 Licenses: (parsed from: `/usr/share/doc/liblzma-dev/copyright`, `/usr/share/doc/liblzma5/copyright`, `/usr/share/doc/xz-utils/copyright`)
 
@@ -5604,18 +5611,18 @@ Licenses: (parsed from: `/usr/share/doc/liblzma-dev/copyright`, `/usr/share/doc/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris xz-utils=5.2.5-1.0
-'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.5-1.0.dsc' xz-utils_5.2.5-1.0.dsc 2527 SHA256:21fef59fb4b1ee054f5a29830e7e1416348c3a56cf24efbb422eefebbcbe094d
+$ apt-get source -qq --print-uris xz-utils=5.2.5-2
+'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.5-2.dsc' xz-utils_5.2.5-2.dsc 2312 SHA256:fa2706f0c863bee4715460bc9103c6fb73ad2cbc12d8d6d7d5dced81ab349949
 'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.5.orig.tar.xz' xz-utils_5.2.5.orig.tar.xz 1148824 SHA256:3e1e518ffc912f86608a8cb35e4bd41ad1aec210df2a47aaa1f95e7f5576ef56
 'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.5.orig.tar.xz.asc' xz-utils_5.2.5.orig.tar.xz.asc 833 SHA256:6efc0075a58912e640119d2b52ef7d1518b260d8720fadc73df21ab7fc727624
-'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.5-1.0.debian.tar.xz' xz-utils_5.2.5-1.0.debian.tar.xz 31636 SHA256:163c5236a25cc8432fe6c2785c4c66916ea71e1e966130492bbe34f9a1ee679a
+'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.5-2.debian.tar.xz' xz-utils_5.2.5-2.debian.tar.xz 33532 SHA256:7bf06a86c35cc6b21a7731df9e11d241f8d3c16b0fe6ed78d64506d1bc29b06e
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/xz-utils/5.2.5-1.0/ (for browsing the source)
-- https://sources.debian.net/src/xz-utils/5.2.5-1.0/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/xz-utils/5.2.5-1.0/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/xz-utils/5.2.5-2/ (for browsing the source)
+- https://sources.debian.net/src/xz-utils/5.2.5-2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/xz-utils/5.2.5-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `zlib=1:1.2.11.dfsg-2`
 
