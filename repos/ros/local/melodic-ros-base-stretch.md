@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:ad88fe112ef954583459bc9376e879b2ae6ba28497e75efa9b2847c877d3aa89`
-- Created: `2021-03-31T14:33:22.354362899Z`
+- Image ID: `sha256:be125969d803945a54c0268fe35f535c6bac0302fffb270f16428ca291aac35c`
+- Created: `2021-04-10T17:25:45.95601835Z`
 - Virtual Size: ~ 1.25 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -5518,33 +5518,43 @@ $ apt-get source -qq --print-uris python-rosinstall=0.7.8-1
 'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rosinstall/python-rosinstall_0.7.8.orig.tar.gz' python-rosinstall_0.7.8.orig.tar.gz 26425 SHA512:013b313b9e442e9b68f7aad0a372d2c1dfb9efeb66b9f20d01943bf58808e0e0bc69db848ba1c2460f0ecfaba89d385e987ccb574a7139b6500d5f958eda4d1b
 ```
 
-### `dpkg` source package: `python-rospkg-modules=1.2.10-1`
+### `dpkg` source package: `python-rospkg-modules=1.3.0-1`
 
 Binary Packages:
 
-- `python-rospkg-modules=1.2.10-1`
+- `python-rospkg-modules=1.3.0-1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris python-rospkg-modules=1.3.0-1
+'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rospkg-modules/python-rospkg-modules_1.3.0-1.debian.tar.xz' python-rospkg-modules_1.3.0-1.debian.tar.xz 1104 SHA512:8ae7890504dd9f5e4f725a044a22d716adcd05f5047429474c0e476f88c5cb48419f8d85a64eab3f2df5251793532ad8afd817b25347a304ad3c2305d450c174
+'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rospkg-modules/python-rospkg-modules_1.3.0-1.dsc' python-rospkg-modules_1.3.0-1.dsc 953 SHA512:f1d7c570a56ebc7a1bbedd2fa09ff48c09df4570957ce1364d7521539debde1276c82705d126717ef7a543dc629f34cfcc47c0a0fc1a63c36c16fbe11d37b8e7
+'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rospkg-modules/python-rospkg-modules_1.3.0.orig.tar.gz' python-rospkg-modules_1.3.0.orig.tar.gz 41083 SHA512:f794781b1c54eab5afa1d1aca57bd9176e72d69ad937de38933b4055d6f9cf1eb01567e52324cc9bc20a8a3785046d6870fa8077bd8aa0727344e829c96ffe17
+```
 
-### `dpkg` source package: `python-rospkg=1.2.10-100`
+### `dpkg` source package: `python-rospkg=1.3.0-100`
 
 Binary Packages:
 
-- `python-rospkg=1.2.10-100`
+- `python-rospkg=1.3.0-100`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris python-rospkg=1.3.0-100
+'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rospkg/python-rospkg_1.3.0-100.debian.tar.xz' python-rospkg_1.3.0-100.debian.tar.xz 1088 SHA512:2ebef0838274e566cf7729210261080e56b6b90197781dc1d65b16a6d8f5f529e311d1c8e3a1ceb83c9586e93145e416e8ead848803367f6a6a31a82d9d27393
+'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rospkg/python-rospkg_1.3.0-100.dsc' python-rospkg_1.3.0-100.dsc 889 SHA512:8160e10b760fffc3dd78a70aa314ade8ef0d393de56bf6809845b448ce323d39a21934499af45b22db1ad97c7ab603d8228778a58040121f5df481e007b7b77a
+'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rospkg/python-rospkg_1.3.0.orig.tar.gz' python-rospkg_1.3.0.orig.tar.gz 17690 SHA512:3e4cc71cec471f06c833c01e32b9f2d3e426cfa3b07857118dc1e597af6489ee5cadb7fdf146f656eea8c6e0830a00c9fb6a47084ec3688e954776a78eec61a6
+```
 
 ### `dpkg` source package: `python-setuptools=33.1.1-1`
 
@@ -5684,17 +5694,17 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/python3-defaults/3.5.3-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/python3-defaults/3.5.3-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `python3.5=3.5.3-1+deb9u3`
+### `dpkg` source package: `python3.5=3.5.3-1+deb9u4`
 
 Binary Packages:
 
-- `libpython3.5:amd64=3.5.3-1+deb9u3`
-- `libpython3.5-dev:amd64=3.5.3-1+deb9u3`
-- `libpython3.5-minimal:amd64=3.5.3-1+deb9u3`
-- `libpython3.5-stdlib:amd64=3.5.3-1+deb9u3`
-- `python3.5=3.5.3-1+deb9u3`
-- `python3.5-dev=3.5.3-1+deb9u3`
-- `python3.5-minimal=3.5.3-1+deb9u3`
+- `libpython3.5:amd64=3.5.3-1+deb9u4`
+- `libpython3.5-dev:amd64=3.5.3-1+deb9u4`
+- `libpython3.5-minimal:amd64=3.5.3-1+deb9u4`
+- `libpython3.5-stdlib:amd64=3.5.3-1+deb9u4`
+- `python3.5=3.5.3-1+deb9u4`
+- `python3.5-dev=3.5.3-1+deb9u4`
+- `python3.5-minimal=3.5.3-1+deb9u4`
 
 Licenses: (parsed from: `/usr/share/doc/libpython3.5/copyright`, `/usr/share/doc/libpython3.5-dev/copyright`, `/usr/share/doc/libpython3.5-minimal/copyright`, `/usr/share/doc/libpython3.5-stdlib/copyright`, `/usr/share/doc/python3.5/copyright`, `/usr/share/doc/python3.5-dev/copyright`, `/usr/share/doc/python3.5-minimal/copyright`)
 
@@ -5725,13 +5735,20 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.5/copyright`, `/usr/share/doc
 - `use in source`
 - `without`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris python3.5=3.5.3-1+deb9u4
+'http://security.debian.org/debian-security/pool/updates/main/p/python3.5/python3.5_3.5.3-1+deb9u4.dsc' python3.5_3.5.3-1+deb9u4.dsc 3354 SHA256:eee0035e5dc676720e4371901f5c0b3c00eea900393cda93f50c515338c9a391
+'http://security.debian.org/debian-security/pool/updates/main/p/python3.5/python3.5_3.5.3.orig.tar.xz' python3.5_3.5.3.orig.tar.xz 15213396 SHA256:eefe2ad6575855423ab630f5b51a8ef6e5556f774584c06beab4926f930ddbb0
+'http://security.debian.org/debian-security/pool/updates/main/p/python3.5/python3.5_3.5.3-1+deb9u4.debian.tar.xz' python3.5_3.5.3-1+deb9u4.debian.tar.xz 256016 SHA256:304dba39605003b6a20a069fbd35dc73ff5d9ff0c8c50013572a5d89dcd11d0c
+```
 
-- http://snapshot.debian.org/package/python3.5/3.5.3-1+deb9u3/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/python3.5/3.5.3-1+deb9u4/ (for browsing the source)
+- https://sources.debian.net/src/python3.5/3.5.3-1+deb9u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/python3.5/3.5.3-1+deb9u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pyyaml=3.12-1`
 

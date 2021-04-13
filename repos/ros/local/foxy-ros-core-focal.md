@@ -1284,9 +1284,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris libseccomp=2.4.3-1ubuntu3.20.04.3
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3-1ubuntu3.20.04.3.dsc' libseccomp_2.4.3-1ubuntu3.20.04.3.dsc 2226 SHA512:7510d7ea834c48b67f3c40bb94b554029e5ea53e024808510da15550205cee369815a162f8697dd915fdd3d89c7afea60da89721d049769f51f2d4c5c9423feb
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3.orig.tar.gz' libseccomp_2.4.3.orig.tar.gz 598147 SHA512:7b7af2e98493243ffe1934fefff5723b24ae9b9bdc4bf039343ee8456c15acb0ea34e81ec292a41143848272aeca794ef92ad38fc3f42c77465170cb540479ef
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3-1ubuntu3.20.04.3.debian.tar.xz' libseccomp_2.4.3-1ubuntu3.20.04.3.debian.tar.xz 36444 SHA512:445b0bac2e39586aa99307fb558623bc8064fb4638ca650698344aab40d3a639c5a8f6c23384a36b9250eb8a682e06831315fc6d7910e768903b7cfac137ecbd
+'http://security.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3-1ubuntu3.20.04.3.dsc' libseccomp_2.4.3-1ubuntu3.20.04.3.dsc 2226 SHA512:7510d7ea834c48b67f3c40bb94b554029e5ea53e024808510da15550205cee369815a162f8697dd915fdd3d89c7afea60da89721d049769f51f2d4c5c9423feb
+'http://security.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3.orig.tar.gz' libseccomp_2.4.3.orig.tar.gz 598147 SHA512:7b7af2e98493243ffe1934fefff5723b24ae9b9bdc4bf039343ee8456c15acb0ea34e81ec292a41143848272aeca794ef92ad38fc3f42c77465170cb540479ef
+'http://security.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3-1ubuntu3.20.04.3.debian.tar.xz' libseccomp_2.4.3-1ubuntu3.20.04.3.debian.tar.xz 36444 SHA512:445b0bac2e39586aa99307fb558623bc8064fb4638ca650698344aab40d3a639c5a8f6c23384a36b9250eb8a682e06831315fc6d7910e768903b7cfac137ecbd
 ```
 
 ### `dpkg` source package: `libselinux=3.0-1build2`
@@ -1571,9 +1571,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris linux=5.4.0-70.78
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-70.78.dsc' linux_5.4.0-70.78.dsc 6875 SHA512:66191af9cfaa9fea601153c749d264b02792a6b07ceb75571c544a7cfa632c5632c9284951852d0c1f523ee4566b5668243d603e7d831a31e0c0fde598db34ab
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0.orig.tar.gz' linux_5.4.0.orig.tar.gz 170244619 SHA512:62b09a7231fd793973c5f59b16c4f6ffce621188b02a71915874b05e8e3f956fb6146d4a4fb1a4475bebe463949ca5a18da12842c3ce7c52e996e6bc4012a074
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-70.78.diff.gz' linux_5.4.0-70.78.diff.gz 7520218 SHA512:2982f01eb154ff66ce7fc886ffcfa6361816372f65a1edcd5b415c37a107d30dbb963f9bc517c8ffdb716f52f5f63aed1e37eb3399663a245aa3564832a19c60
+'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-70.78.dsc' linux_5.4.0-70.78.dsc 6875 SHA512:66191af9cfaa9fea601153c749d264b02792a6b07ceb75571c544a7cfa632c5632c9284951852d0c1f523ee4566b5668243d603e7d831a31e0c0fde598db34ab
+'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0.orig.tar.gz' linux_5.4.0.orig.tar.gz 170244619 SHA512:62b09a7231fd793973c5f59b16c4f6ffce621188b02a71915874b05e8e3f956fb6146d4a4fb1a4475bebe463949ca5a18da12842c3ce7c52e996e6bc4012a074
+'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-70.78.diff.gz' linux_5.4.0-70.78.diff.gz 7520218 SHA512:2982f01eb154ff66ce7fc886ffcfa6361816372f65a1edcd5b415c37a107d30dbb963f9bc517c8ffdb716f52f5f63aed1e37eb3399663a245aa3564832a19c60
 ```
 
 ### `dpkg` source package: `lsb=11.1.0ubuntu2`

@@ -2499,9 +2499,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris linux=4.15.0-140.144
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-140.144.dsc' linux_4.15.0-140.144.dsc 7373 SHA512:28aecde90c10a97d93dea7db1e03fe7753026c8894b6959e7981f09343718a8f7a6eb95baf851e4b2d05da5039555734b7630216bf084574d6200c671866fea8
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0.orig.tar.gz' linux_4.15.0.orig.tar.gz 157656459 SHA512:0fab606a295e0857f774f8adaa9d56bf2cb227fbab2daed374415da216391b156f49e606ba37ac402987c5796d408807da5d1a42c0d85a8552f109a3e279443d
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-140.144.diff.gz' linux_4.15.0-140.144.diff.gz 10740997 SHA512:b4cfeec53dc87a57bfa68ce99b404483ca3636e75eb4122c09efd187c0125332b56f6510a45ef8c7a1347e3db5827b652b420393741431b298b56141384084b4
+'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-140.144.dsc' linux_4.15.0-140.144.dsc 7373 SHA512:28aecde90c10a97d93dea7db1e03fe7753026c8894b6959e7981f09343718a8f7a6eb95baf851e4b2d05da5039555734b7630216bf084574d6200c671866fea8
+'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0.orig.tar.gz' linux_4.15.0.orig.tar.gz 157656459 SHA512:0fab606a295e0857f774f8adaa9d56bf2cb227fbab2daed374415da216391b156f49e606ba37ac402987c5796d408807da5d1a42c0d85a8552f109a3e279443d
+'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-140.144.diff.gz' linux_4.15.0-140.144.diff.gz 10740997 SHA512:b4cfeec53dc87a57bfa68ce99b404483ca3636e75eb4122c09efd187c0125332b56f6510a45ef8c7a1347e3db5827b652b420393741431b298b56141384084b4
 ```
 
 ### `dpkg` source package: `lksctp-tools=1.0.17+dfsg-2`
