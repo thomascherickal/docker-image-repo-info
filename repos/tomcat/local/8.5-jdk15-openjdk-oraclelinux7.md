@@ -407,12 +407,7 @@ https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/texi
 
 Licenses (from `rpm --query`): GPLv2
 
-Source:
-
-```console
-$ yumdownloader --quiet --source --urls kernel-container-3.10.0-0.0.0.2.el7
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/kernel-transition-3.10.0-0.0.0.2.el7.src.rpm
-```
+**WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
 ### `rpm` package: `keyutils-libs-1.5.8-3.el7.x86_64`
 
