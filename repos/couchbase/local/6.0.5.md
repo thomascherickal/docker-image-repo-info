@@ -901,9 +901,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris libseccomp=2.4.3-1ubuntu3.16.04.3
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3-1ubuntu3.16.04.3.dsc' libseccomp_2.4.3-1ubuntu3.16.04.3.dsc 1951 SHA512:41c8a65ea259c373628221db6834524d25dc780de408d880a508fb2d5d8e35dbb280863168f2c045f2bbedef6fd692e0f39888bdbed6569c5696ea43dcf125d1
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3.orig.tar.gz' libseccomp_2.4.3.orig.tar.gz 598147 SHA512:7b7af2e98493243ffe1934fefff5723b24ae9b9bdc4bf039343ee8456c15acb0ea34e81ec292a41143848272aeca794ef92ad38fc3f42c77465170cb540479ef
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3-1ubuntu3.16.04.3.debian.tar.xz' libseccomp_2.4.3-1ubuntu3.16.04.3.debian.tar.xz 27452 SHA512:ffb534c30fced0f5651f4ac41f3a7d00e468dcff833445b0e2207dcfaa25bc31a77b5d481a9d4a38fbb37cf9e96f62ebccb2bb4b0660c69e1f15dc90ac094678
+'http://security.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3-1ubuntu3.16.04.3.dsc' libseccomp_2.4.3-1ubuntu3.16.04.3.dsc 1951 SHA512:41c8a65ea259c373628221db6834524d25dc780de408d880a508fb2d5d8e35dbb280863168f2c045f2bbedef6fd692e0f39888bdbed6569c5696ea43dcf125d1
+'http://security.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3.orig.tar.gz' libseccomp_2.4.3.orig.tar.gz 598147 SHA512:7b7af2e98493243ffe1934fefff5723b24ae9b9bdc4bf039343ee8456c15acb0ea34e81ec292a41143848272aeca794ef92ad38fc3f42c77465170cb540479ef
+'http://security.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3-1ubuntu3.16.04.3.debian.tar.xz' libseccomp_2.4.3-1ubuntu3.16.04.3.debian.tar.xz 27452 SHA512:ffb534c30fced0f5651f4ac41f3a7d00e468dcff833445b0e2207dcfaa25bc31a77b5d481a9d4a38fbb37cf9e96f62ebccb2bb4b0660c69e1f15dc90ac094678
 ```
 
 ### `dpkg` source package: `libselinux=2.4-3build2`
