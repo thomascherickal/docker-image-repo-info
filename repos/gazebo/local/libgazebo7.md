@@ -2601,9 +2601,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris libseccomp=2.4.3-1ubuntu3.16.04.3
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3-1ubuntu3.16.04.3.dsc' libseccomp_2.4.3-1ubuntu3.16.04.3.dsc 1951 SHA512:41c8a65ea259c373628221db6834524d25dc780de408d880a508fb2d5d8e35dbb280863168f2c045f2bbedef6fd692e0f39888bdbed6569c5696ea43dcf125d1
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3.orig.tar.gz' libseccomp_2.4.3.orig.tar.gz 598147 SHA512:7b7af2e98493243ffe1934fefff5723b24ae9b9bdc4bf039343ee8456c15acb0ea34e81ec292a41143848272aeca794ef92ad38fc3f42c77465170cb540479ef
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3-1ubuntu3.16.04.3.debian.tar.xz' libseccomp_2.4.3-1ubuntu3.16.04.3.debian.tar.xz 27452 SHA512:ffb534c30fced0f5651f4ac41f3a7d00e468dcff833445b0e2207dcfaa25bc31a77b5d481a9d4a38fbb37cf9e96f62ebccb2bb4b0660c69e1f15dc90ac094678
+'http://security.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3-1ubuntu3.16.04.3.dsc' libseccomp_2.4.3-1ubuntu3.16.04.3.dsc 1951 SHA512:41c8a65ea259c373628221db6834524d25dc780de408d880a508fb2d5d8e35dbb280863168f2c045f2bbedef6fd692e0f39888bdbed6569c5696ea43dcf125d1
+'http://security.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3.orig.tar.gz' libseccomp_2.4.3.orig.tar.gz 598147 SHA512:7b7af2e98493243ffe1934fefff5723b24ae9b9bdc4bf039343ee8456c15acb0ea34e81ec292a41143848272aeca794ef92ad38fc3f42c77465170cb540479ef
+'http://security.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.4.3-1ubuntu3.16.04.3.debian.tar.xz' libseccomp_2.4.3-1ubuntu3.16.04.3.debian.tar.xz 27452 SHA512:ffb534c30fced0f5651f4ac41f3a7d00e468dcff833445b0e2207dcfaa25bc31a77b5d481a9d4a38fbb37cf9e96f62ebccb2bb4b0660c69e1f15dc90ac094678
 ```
 
 ### `dpkg` source package: `libselinux=2.4-3build2`
@@ -3369,14 +3369,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 - `GPL-2`
 - `redpine-signals`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=4.4.0-206.238
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0-206.238.dsc' linux_4.4.0-206.238.dsc 11941 SHA512:97dfb8bc303fe9ba2ba6909f356f77ecc3c06e3fc781b301b961d209e3d2c8c7fefe70a73aa406fecf4fed71e1c94fb2f68134ff33db68e4c293434b7785c4e3
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0.orig.tar.gz' linux_4.4.0.orig.tar.gz 132860730 SHA512:28ef89b62f663f2d90b58274799b7ebeff04699f08d0b83f650b0de179d4ef354450c81ecda07522b493c43d5eb2d530fa0f552a2794d48f84878e05efa39cc3
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.4.0-206.238.diff.gz' linux_4.4.0-206.238.diff.gz 16987911 SHA512:42e20df61b84cc5e1cfe96e254155a9564f3164b7b2a4a4ed228267225cb529c7af694259deac751c105da165bf98c3bcfa15b0929e75e35f7f3cee710c2877d
-```
 
 ### `dpkg` source package: `llvm-toolchain-6.0=1:6.0-1ubuntu2~16.04.1`
 
@@ -3853,14 +3848,9 @@ Licenses: (parsed from: `/usr/share/doc/libhogweed4/copyright`, `/usr/share/doc/
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris nettle=3.2-1ubuntu0.16.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.2-1ubuntu0.16.04.1.dsc' nettle_3.2-1ubuntu0.16.04.1.dsc 2200 SHA512:5908a35a2f45bccb890a1b1c7df32d4501e5eaf99d08a8f2c33a3cd2322efed1d5a42e8a8900e0e5c30cacb6e86f96e2e810c3e36f4a6f8d0a2e9e0ed5bdbbeb
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.2.orig.tar.gz' nettle_3.2.orig.tar.gz 1879604 SHA512:9f2c802e8b683d1c2fd8d16ab33b2a1efda33a1bf33196be39031a2d0677f2e78d67221a718997780e157aa72973da7d9d549429e706fcfcdff97ee3bbef615a
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.2-1ubuntu0.16.04.1.debian.tar.xz' nettle_3.2-1ubuntu0.16.04.1.debian.tar.xz 21340 SHA512:97a4c851a63dad2298809aa29f2ab8a37367fc21f5d134ad297124f648991e5da648a628a068e423fd3375633ed364ba920cdd03bb36f3ad349c9b598d21ff67
-```
 
 ### `dpkg` source package: `npth=1.2-3`
 
