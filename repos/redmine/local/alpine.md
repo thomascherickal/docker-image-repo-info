@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:d5aa389f0b143c0ea7e350e485f5936594d02e5f31ee239353156b2609330376`
-- Created: `2021-04-05T20:47:15.301693887Z`
-- Virtual Size: ~ 372.25 Mb  
+- Image ID: `sha256:c11c138047e0867375b6b8fbf8c705def2bab8b87a1e2eb18f12a35ffd5fae73`
+- Created: `2021-04-15T11:21:52.846449287Z`
+- Virtual Size: ~ 372.54 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -80,16 +80,16 @@ custom
 ### `apk` package: `apk-tools`
 
 ```console
-apk-tools-2.12.4-r0 description:
+apk-tools-2.12.5-r0 description:
 Alpine Package Keeper - package manager for alpine
 
-apk-tools-2.12.4-r0 webpage:
+apk-tools-2.12.5-r0 webpage:
 https://gitlab.alpinelinux.org/alpine/apk-tools
 
-apk-tools-2.12.4-r0 installed size:
+apk-tools-2.12.5-r0 installed size:
 311296
 
-apk-tools-2.12.4-r0 license:
+apk-tools-2.12.5-r0 license:
 GPL-2.0-only
 
 ```
@@ -182,16 +182,16 @@ MIT
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.32.1-r5 description:
+busybox-1.32.1-r6 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.32.1-r5 webpage:
+busybox-1.32.1-r6 webpage:
 https://busybox.net/
 
-busybox-1.32.1-r5 installed size:
+busybox-1.32.1-r6 installed size:
 946176
 
-busybox-1.32.1-r5 license:
+busybox-1.32.1-r6 license:
 GPL-2.0-only
 
 ```
@@ -743,16 +743,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.74.0-r1 description:
+libcurl-7.76.1-r0 description:
 The multiprotocol file transfer library
 
-libcurl-7.74.0-r1 webpage:
-https://curl.haxx.se/
+libcurl-7.76.1-r0 webpage:
+https://curl.se/
 
-libcurl-7.74.0-r1 installed size:
-495616
+libcurl-7.76.1-r0 installed size:
+499712
 
-libcurl-7.74.0-r1 license:
+libcurl-7.76.1-r0 license:
 MIT
 
 ```
@@ -1032,16 +1032,16 @@ GPL-2.0 LGPL-2.1+
 ### `apk` package: `librsvg`
 
 ```console
-librsvg-2.50.3-r0 description:
+librsvg-2.50.4-r0 description:
 SAX-based renderer for SVG files into a GdkPixbuf
 
-librsvg-2.50.3-r0 webpage:
+librsvg-2.50.4-r0 webpage:
 https://wiki.gnome.org/Projects/LibRsvg
 
-librsvg-2.50.3-r0 installed size:
-10653696
+librsvg-2.50.4-r0 installed size:
+10768384
 
-librsvg-2.50.3-r0 license:
+librsvg-2.50.4-r0 license:
 LGPL-2.1-or-later
 
 ```
@@ -1746,16 +1746,16 @@ Public-Domain
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.32.1-r5 description:
+ssl_client-1.32.1-r6 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.32.1-r5 webpage:
+ssl_client-1.32.1-r6 webpage:
 https://busybox.net/
 
-ssl_client-1.32.1-r5 installed size:
+ssl_client-1.32.1-r6 installed size:
 28672
 
-ssl_client-1.32.1-r5 license:
+ssl_client-1.32.1-r6 license:
 GPL-2.0-only
 
 ```
