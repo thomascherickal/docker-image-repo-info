@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:0d9ffdec9a24c864640b5e25ed19f26464c206b5423df96aaed62ccd4becaea5`
-- Created: `2021-04-01T17:52:49.030089709Z`
-- Virtual Size: ~ 137.07 Mb  
+- Image ID: `sha256:65fb140272cb5e4984ce9eac1a9086ce06ccc5c5b7d6eb1b0cf43cb40507f152`
+- Created: `2021-04-15T08:53:12.954514132Z`
+- Virtual Size: ~ 137.08 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -52,16 +52,16 @@ MIT
 ### `apk` package: `apk-tools`
 
 ```console
-apk-tools-2.10.5-r1 description:
+apk-tools-2.10.6-r0 description:
 Alpine Package Keeper - package manager for alpine
 
-apk-tools-2.10.5-r1 webpage:
+apk-tools-2.10.6-r0 webpage:
 https://gitlab.alpinelinux.org/alpine/apk-tools
 
-apk-tools-2.10.5-r1 installed size:
-262144
+apk-tools-2.10.6-r0 installed size:
+266240
 
-apk-tools-2.10.5-r1 license:
+apk-tools-2.10.6-r0 license:
 GPL-2.0-only
 
 ```
@@ -1140,16 +1140,16 @@ GPL-2.0-or-later
 ### `apk` package: `runtime-dependencies`
 
 ```console
-runtime-dependencies-20210401.174902 description:
+runtime-dependencies-20210415.084930 description:
 virtual meta package
 
-runtime-dependencies-20210401.174902 webpage:
+runtime-dependencies-20210415.084930 webpage:
 
 
-runtime-dependencies-20210401.174902 installed size:
+runtime-dependencies-20210415.084930 installed size:
 0
 
-runtime-dependencies-20210401.174902 license:
+runtime-dependencies-20210415.084930 license:
 
 
 ```

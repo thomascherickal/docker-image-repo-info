@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:d2ab11ca8f6374fc1adc2dc533e83e5e048b94095d9b0ed356a5608341d71053`
-- Created: `2021-04-01T17:53:03.876842572Z`
-- Virtual Size: ~ 435.35 Mb  
+- Image ID: `sha256:a504340efb3ee87ba29443a5a485e2ef4001245a9c52aeb7abd49e71f9ce7c0f`
+- Created: `2021-04-15T08:53:32.842315009Z`
+- Virtual Size: ~ 435.39 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -52,16 +52,16 @@ MIT
 ### `apk` package: `apk-tools`
 
 ```console
-apk-tools-2.10.5-r1 description:
+apk-tools-2.10.6-r0 description:
 Alpine Package Keeper - package manager for alpine
 
-apk-tools-2.10.5-r1 webpage:
+apk-tools-2.10.6-r0 webpage:
 https://gitlab.alpinelinux.org/alpine/apk-tools
 
-apk-tools-2.10.5-r1 installed size:
-262144
+apk-tools-2.10.6-r0 installed size:
+266240
 
-apk-tools-2.10.5-r1 license:
+apk-tools-2.10.6-r0 license:
 GPL-2.0-only
 
 ```
@@ -1106,16 +1106,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.69.1-r3 description:
+libcurl-7.76.1-r0 description:
 The multiprotocol file transfer library
 
-libcurl-7.69.1-r3 webpage:
-https://curl.haxx.se/
+libcurl-7.76.1-r0 webpage:
+https://curl.se/
 
-libcurl-7.69.1-r3 installed size:
-458752
+libcurl-7.76.1-r0 installed size:
+499712
 
-libcurl-7.69.1-r3 license:
+libcurl-7.76.1-r0 license:
 MIT
 
 ```
@@ -1650,16 +1650,16 @@ rhash-libs-1.3.9-r1 license:
 ### `apk` package: `runtime-dependencies`
 
 ```console
-runtime-dependencies-20210401.174902 description:
+runtime-dependencies-20210415.084930 description:
 virtual meta package
 
-runtime-dependencies-20210401.174902 webpage:
+runtime-dependencies-20210415.084930 webpage:
 
 
-runtime-dependencies-20210401.174902 installed size:
+runtime-dependencies-20210415.084930 installed size:
 0
 
-runtime-dependencies-20210401.174902 license:
+runtime-dependencies-20210415.084930 license:
 
 
 ```
