@@ -1,4 +1,4 @@
-## `openjdk:17-jdk-oracle`
+## `openjdk:17-ea-18-oraclelinux8`
 
 ```console
 $ docker pull openjdk@sha256:9a8224f952ad77ebfe4dff55d92fabbdd6662ec07906d5e9af908a939a5548ba
@@ -9,7 +9,7 @@ $ docker pull openjdk@sha256:9a8224f952ad77ebfe4dff55d92fabbdd6662ec07906d5e9af9
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
-### `openjdk:17-jdk-oracle` - linux; amd64
+### `openjdk:17-ea-18-oraclelinux8` - linux; amd64
 
 ```console
 $ docker pull openjdk@sha256:dd7c4ef0efae41fbcbb8ca197884df5d935895aca7f3c83d1b7240947664995a
@@ -57,7 +57,7 @@ CMD ["jshell"]
 		Size: 186.0 MB (186001704 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `openjdk:17-jdk-oracle` - linux; arm64 variant v8
+### `openjdk:17-ea-18-oraclelinux8` - linux; arm64 variant v8
 
 ```console
 $ docker pull openjdk@sha256:52e6f8172b687ea1d42fed3b600533300dc48bafda1b56bece51f16cc5a8cfbe
