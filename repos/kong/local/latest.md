@@ -1,10 +1,10 @@
-# `kong:2.3.3-alpine`
+# `kong:2.4.0-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:a80622064f4858c37e944be6839acce6659e7b4f05081feeb90e9779134b59da`
-- Created: `2021-04-01T14:25:29.741921795Z`
-- Virtual Size: ~ 142.94 Mb  
+- Image ID: `sha256:04e950e221f43ed7989260b2a61accb568d9d3cdd7df13c9a42f4edd83329851`
+- Created: `2021-04-14T19:23:41.19940982Z`
+- Virtual Size: ~ 143.53 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -12,9 +12,9 @@
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `ASSET=ce`
-  - `KONG_VERSION=2.3.3`
-  - `KONG_AMD64_SHA=82a4eac75d45a1f2ce65ae185467e20533428b3d368e5e091fe4ddf427296e0b`
-  - `KONG_ARM64_SHA=b2b8a0fe0cdb81d244e08c23a3143e4ae08b7c771a2cc35e24ffabfc54f4ba60`
+  - `KONG_VERSION=2.4.0`
+  - `KONG_AMD64_SHA=a69246ac847e63fa878a4c91fcd097d3ce11db00fd2ce647f1afdf60b5271fa8`
+  - `KONG_ARM64_SHA=59150130fa4571a406ba72e71dc9ac64ccf48bdf3941ee1965e6a3626d0fbc18`
 - Labels:
   - `maintainer=Kong <support@konghq.com>`
 
@@ -57,16 +57,16 @@ MIT
 ### `apk` package: `apk-tools`
 
 ```console
-apk-tools-2.10.5-r0 description:
+apk-tools-2.10.6-r0 description:
 Alpine Package Keeper - package manager for alpine
 
-apk-tools-2.10.5-r0 webpage:
-https://git.alpinelinux.org/cgit/apk-tools/
+apk-tools-2.10.6-r0 webpage:
+https://gitlab.alpinelinux.org/alpine/apk-tools
 
-apk-tools-2.10.5-r0 installed size:
-262144
+apk-tools-2.10.6-r0 installed size:
+266240
 
-apk-tools-2.10.5-r0 license:
+apk-tools-2.10.6-r0 license:
 GPL2
 
 ```
