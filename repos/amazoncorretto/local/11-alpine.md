@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:98c3d00ca4066cfe49fbe117b164f50cbc74d63cf62ddcbbcaaea9c21c96c06c`
-- Created: `2021-04-01T13:29:19.7661194Z`
-- Virtual Size: ~ 323.07 Mb  
+- Image ID: `sha256:0727713de19bed425d50af8f1ff96eb336fbe16990074ac14fe340c1a1e94b23`
+- Created: `2021-04-14T19:39:02.491155723Z`
+- Virtual Size: ~ 323.08 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/sh"]`
@@ -69,16 +69,16 @@ https://github.com/corretto/corretto-11/blob/develop/LICENSE
 ### `apk` package: `apk-tools`
 
 ```console
-apk-tools-2.10.5-r1 description:
+apk-tools-2.10.6-r0 description:
 Alpine Package Keeper - package manager for alpine
 
-apk-tools-2.10.5-r1 webpage:
+apk-tools-2.10.6-r0 webpage:
 https://gitlab.alpinelinux.org/alpine/apk-tools
 
-apk-tools-2.10.5-r1 installed size:
-262144
+apk-tools-2.10.6-r0 installed size:
+266240
 
-apk-tools-2.10.5-r1 license:
+apk-tools-2.10.6-r0 license:
 GPL-2.0-only
 
 ```
