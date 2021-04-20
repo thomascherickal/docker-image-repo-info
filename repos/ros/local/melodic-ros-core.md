@@ -3175,14 +3175,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python-rosdep-modules=0.20.0-1
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rosdep-modules/python-rosdep-modules_0.20.0-1.debian.tar.xz' python-rosdep-modules_0.20.0-1.debian.tar.xz 2064 SHA512:72126552df50fb6b4456fb6792a50ee2970118fa6f9b2d3c16f59a21065f624c3382e9d4c948e3a860f25a7c792c16c909598308acf32f3c6aafaec733105041
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rosdep-modules/python-rosdep-modules_0.20.0-1.dsc' python-rosdep-modules_0.20.0-1.dsc 1010 SHA512:39f60afd87bfb3e2ba23b55714ee455d63dcff8aed153f594eca4aebc061603e2187565a8ef004d7ff570b4f108c43439fbd48a7725034a76e0456897f9f959e
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rosdep-modules/python-rosdep-modules_0.20.0.orig.tar.gz' python-rosdep-modules_0.20.0.orig.tar.gz 88553 SHA512:eae16aa6dca774163d3097be63996ba1d876a3fe9d980d237b17a51883b4d1057cc0f58e7672c7a886d3a4a8ce678e8e00029cba3180af07d29af4c306278a52
-```
 
 ### `dpkg` source package: `python-rosdistro-modules=0.8.3-1`
 
@@ -4636,14 +4631,9 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=237-3ubuntu10.45
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.45.dsc' systemd_237-3ubuntu10.45.dsc 5187 SHA512:aceb425851d8b45f817ab6b9baaa3d162de46a0a81eef6f1e9384a9881b5464ef11f3663ae761764248e96343e27d4bf7fdf7b81f9a9368546f60c0dde80e9f1
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237.orig.tar.gz' systemd_237.orig.tar.gz 6871350 SHA512:15ef4b92815a6dd9a6c51672dbc00fd7cd0f08068ef0cbeaca574f68d330b28bc67ba1946f24f75ef3d9e7b63843a73eea700db54688061dbf5c9f8470394c3b
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.45.debian.tar.xz' systemd_237-3ubuntu10.45.debian.tar.xz 289580 SHA512:38648ff7c9e06899dce3b0f66eb6b21bdaf6be19696d6ea9626079fa55e4b1258690a6f3b94429d9b5269ade5d1b56803620919b1ed7c4ed07596353eff8abbd
-```
 
 ### `dpkg` source package: `sysvinit=2.88dsf-59.10ubuntu1`
 

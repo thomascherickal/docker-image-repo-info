@@ -3821,14 +3821,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python-rosdep-modules=0.20.0-1
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rosdep-modules/python-rosdep-modules_0.20.0-1.debian.tar.xz' python-rosdep-modules_0.20.0-1.debian.tar.xz 2064 SHA512:72126552df50fb6b4456fb6792a50ee2970118fa6f9b2d3c16f59a21065f624c3382e9d4c948e3a860f25a7c792c16c909598308acf32f3c6aafaec733105041
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rosdep-modules/python-rosdep-modules_0.20.0-1.dsc' python-rosdep-modules_0.20.0-1.dsc 1010 SHA512:39f60afd87bfb3e2ba23b55714ee455d63dcff8aed153f594eca4aebc061603e2187565a8ef004d7ff570b4f108c43439fbd48a7725034a76e0456897f9f959e
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rosdep-modules/python-rosdep-modules_0.20.0.orig.tar.gz' python-rosdep-modules_0.20.0.orig.tar.gz 88553 SHA512:eae16aa6dca774163d3097be63996ba1d876a3fe9d980d237b17a51883b4d1057cc0f58e7672c7a886d3a4a8ce678e8e00029cba3180af07d29af4c306278a52
-```
 
 ### `dpkg` source package: `python-rosdistro-modules=0.8.3-1`
 
@@ -3963,20 +3958,13 @@ Licenses: (parsed from: `/usr/share/doc/libpython2.7/copyright`, `/usr/share/doc
 - `implied`
 - `see above, some license as Python`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python2.7=2.7.13-2+deb9u4
-'http://security.debian.org/debian-security/pool/updates/main/p/python2.7/python2.7_2.7.13-2+deb9u4.dsc' python2.7_2.7.13-2+deb9u4.dsc 3529 SHA256:e4f8b227d30ca0cae71bb1ae0e938788a89882299c03d558ee042d74e5ec80d6
-'http://security.debian.org/debian-security/pool/updates/main/p/python2.7/python2.7_2.7.13.orig.tar.gz' python2.7_2.7.13.orig.tar.gz 17076672 SHA256:a4f05a0720ce0fd92626f0278b6b433eee9a6173ddf2bced7957dfb599a5ece1
-'http://security.debian.org/debian-security/pool/updates/main/p/python2.7/python2.7_2.7.13-2+deb9u4.diff.gz' python2.7_2.7.13-2+deb9u4.diff.gz 296390 SHA256:87709d2c0db04eb19afbe3ef91914b9a3ff14e5e69bf661bd825a34baaee7a42
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/python2.7/2.7.13-2+deb9u4/
 
-- https://sources.debian.net/src/python2.7/2.7.13-2+deb9u4/ (for browsing the source)
-- https://sources.debian.net/src/python2.7/2.7.13-2+deb9u4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python2.7/2.7.13-2+deb9u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `python3-defaults=3.5.3-1`
 
