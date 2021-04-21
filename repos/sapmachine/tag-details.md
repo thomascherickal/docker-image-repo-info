@@ -3,7 +3,7 @@
 # Tags of `sapmachine`
 
 -	[`sapmachine:11`](#sapmachine11)
--	[`sapmachine:11.0.10`](#sapmachine11010)
+-	[`sapmachine:11.0.11`](#sapmachine11011)
 -	[`sapmachine:16`](#sapmachine16)
 -	[`sapmachine:latest`](#sapmachinelatest)
 -	[`sapmachine:lts`](#sapmachinelts)
@@ -74,27 +74,27 @@ CMD ["jshell"]
 		Size: 198.1 MB (198090112 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-## `sapmachine:11.0.10`
+## `sapmachine:11.0.11`
 
 ```console
-$ docker pull sapmachine@sha256:991e410d020cc537d25c4049435c98e7d5887761c0b6c3c7d9e6cf335cca3948
+$ docker pull sapmachine@sha256:c2929de8054e16f5ffc0c1b3a4f6fb7c2c9176e29fdf929de71601e3a6f95b40
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
 -	Platforms:
 	-	linux; amd64
 
-### `sapmachine:11.0.10` - linux; amd64
+### `sapmachine:11.0.11` - linux; amd64
 
 ```console
-$ docker pull sapmachine@sha256:c79a54508f9defa56cc7dd9ccbfb61dfd914c4d17185ef8ed31b7b213ec0ac3b
+$ docker pull sapmachine@sha256:1592515e06c22922a4c8ae888201d6edcd1c1da0a211e320868d911b97ce8abc
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **234.8 MB (234820719 bytes)**  
+-	Total Size: **235.0 MB (234981808 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2d8553260b2515ba0bca34273ecb762987afb4038132090d2746209ead2ff9ca`
+-	Image ID: `sha256:5eb5e95adf1b6cedc62dccc8072d39e5550b197141a49183e6c3b43a3f20be50`
 -	Default Command: `["jshell"]`
 
 ```dockerfile
@@ -110,11 +110,11 @@ RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
 CMD ["/bin/bash"]
 # Sat, 03 Apr 2021 02:46:37 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends wget ca-certificates gnupg2     && rm -rf /var/lib/apt/lists/*
-# Sat, 03 Apr 2021 02:47:41 GMT
-RUN export GNUPGHOME="$(mktemp -d)"     && wget -q -O - https://dist.sapmachine.io/debian/sapmachine.old.key | gpg --batch --import     && gpg --batch --export --armor 'DA4C 00C1 BDB1 3763 8608 4E20 C7EB 4578 740A EEA2' > /etc/apt/trusted.gpg.d/sapmachine.old.gpg.asc     && wget -q -O - https://dist.sapmachine.io/debian/sapmachine.key | gpg --batch --import     && gpg --batch --export --armor 'CACB 9FE0 9150 307D 1D22 D829 6275 4C3B 3ABC FE23' > /etc/apt/trusted.gpg.d/sapmachine.gpg.asc     && gpgconf --kill all && rm -rf "$GNUPGHOME"     && echo "deb http://dist.sapmachine.io/debian/amd64/ ./" > /etc/apt/sources.list.d/sapmachine.list     && apt-get update     && apt-get -y --no-install-recommends install sapmachine-11-jdk=11.0.10     && rm -rf /var/lib/apt/lists/*
-# Sat, 03 Apr 2021 02:47:42 GMT
+# Tue, 20 Apr 2021 23:50:27 GMT
+RUN export GNUPGHOME="$(mktemp -d)"     && wget -q -O - https://dist.sapmachine.io/debian/sapmachine.old.key | gpg --batch --import     && gpg --batch --export --armor 'DA4C 00C1 BDB1 3763 8608 4E20 C7EB 4578 740A EEA2' > /etc/apt/trusted.gpg.d/sapmachine.old.gpg.asc     && wget -q -O - https://dist.sapmachine.io/debian/sapmachine.key | gpg --batch --import     && gpg --batch --export --armor 'CACB 9FE0 9150 307D 1D22 D829 6275 4C3B 3ABC FE23' > /etc/apt/trusted.gpg.d/sapmachine.gpg.asc     && gpgconf --kill all && rm -rf "$GNUPGHOME"     && echo "deb http://dist.sapmachine.io/debian/amd64/ ./" > /etc/apt/sources.list.d/sapmachine.list     && apt-get update     && apt-get -y --no-install-recommends install sapmachine-11-jdk=11.0.11     && rm -rf /var/lib/apt/lists/*
+# Tue, 20 Apr 2021 23:50:27 GMT
 ENV JAVA_HOME=/usr/lib/jvm/sapmachine-11
-# Sat, 03 Apr 2021 02:47:42 GMT
+# Tue, 20 Apr 2021 23:50:28 GMT
 CMD ["jshell"]
 ```
 
@@ -135,9 +135,9 @@ CMD ["jshell"]
 		Last Modified: Sat, 03 Apr 2021 02:47:59 GMT  
 		Size: 8.3 MB (8321645 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:80c0ab80783aa9c0f12f52650cb8b46292ae77e1898051a570080bb513c44129`  
-		Last Modified: Sat, 03 Apr 2021 02:48:51 GMT  
-		Size: 197.9 MB (197929023 bytes)  
+	-	`sha256:c75a5d646b564ed3f920240f766074e33005071097724ef2b3db433be452ba33`  
+		Last Modified: Tue, 20 Apr 2021 23:51:02 GMT  
+		Size: 198.1 MB (198090112 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `sapmachine:16`
