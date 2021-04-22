@@ -1,18 +1,18 @@
-# `hylang:1.0a1-python3.9-alpine3.13`
+# `hylang:1.0a1-python3.10-rc-alpine3.13`
 
 ## Docker Metadata
 
-- Image ID: `sha256:600afaee5647fb1085ab28f0afd579cc40ef3f311dd4525bf904eea34670c353`
-- Created: `2021-04-20T01:20:26.730068026Z`
-- Virtual Size: ~ 52.30 Mb  
+- Image ID: `sha256:21e6aba85591c4965e3f097219e782c056364d21db8101644a8b12b148606f23`
+- Created: `2021-04-20T01:22:22.342988613Z`
+- Virtual Size: ~ 52.51 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["hy"]`
 - Environment:
   - `PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=C.UTF-8`
-  - `GPG_KEY=E3FF2839C048B25C084DEBE9B26995E310250568`
-  - `PYTHON_VERSION=3.9.4`
+  - `GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D`
+  - `PYTHON_VERSION=3.10.0a7`
   - `PYTHON_PIP_VERSION=21.0.1`
   - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/29f37dbe6b3842ccd52d61816a3044173962ebeb/public/get-pip.py`
   - `PYTHON_GET_PIP_SHA256=e03eb8a33d3b441ff484c56a436ff10680479d4bd14e59268e67977ed40904de`

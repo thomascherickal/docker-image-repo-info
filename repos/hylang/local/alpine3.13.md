@@ -1,10 +1,10 @@
-# `hylang:0.20.0-python3.8-alpine3.13`
+# `hylang:1.0a1-python3.9-alpine3.13`
 
 ## Docker Metadata
 
-- Image ID: `sha256:3a0e42fe35f58be10ba83e0b2687ae22fede613965f2bded46080b6e97fb6683`
-- Created: `2021-04-15T11:44:48.489151668Z`
-- Virtual Size: ~ 50.35 Mb  
+- Image ID: `sha256:600afaee5647fb1085ab28f0afd579cc40ef3f311dd4525bf904eea34670c353`
+- Created: `2021-04-20T01:20:26.730068026Z`
+- Virtual Size: ~ 52.30 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["hy"]`
@@ -12,11 +12,11 @@
   - `PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=C.UTF-8`
   - `GPG_KEY=E3FF2839C048B25C084DEBE9B26995E310250568`
-  - `PYTHON_VERSION=3.8.9`
+  - `PYTHON_VERSION=3.9.4`
   - `PYTHON_PIP_VERSION=21.0.1`
   - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/29f37dbe6b3842ccd52d61816a3044173962ebeb/public/get-pip.py`
   - `PYTHON_GET_PIP_SHA256=e03eb8a33d3b441ff484c56a436ff10680479d4bd14e59268e67977ed40904de`
-  - `HY_VERSION=0.20.0`
+  - `HY_VERSION=1.0a1`
 
 ## `apk` (`.apk`-based packages)
 
@@ -561,6 +561,23 @@ ssl_client-1.32.1-r6 installed size:
 
 ssl_client-1.32.1-r6 license:
 GPL-2.0-only
+
+```
+
+### `apk` package: `tzdata`
+
+```console
+tzdata-2021a-r0 description:
+Timezone data
+
+tzdata-2021a-r0 webpage:
+https://www.iana.org/time-zones
+
+tzdata-2021a-r0 installed size:
+3518464
+
+tzdata-2021a-r0 license:
+Public-Domain
 
 ```
 

@@ -1,18 +1,18 @@
-# `hylang:1.0a1-python3.6-buster`
+# `hylang:1.0a1-python3.10-rc-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:892c6269b72250f819fb5ceab85137029c05b5a88253879a316fa21502c95bc2`
-- Created: `2021-04-20T01:21:41.069685865Z`
-- Virtual Size: ~ 119.21 Mb  
+- Image ID: `sha256:573d5daf6ac92702ca8b93e0b7eafc32d22f28ab2bde6ad8002d3b6395980299`
+- Created: `2021-04-20T01:22:13.91066723Z`
+- Virtual Size: ~ 122.27 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["hy"]`
 - Environment:
   - `PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=C.UTF-8`
-  - `GPG_KEY=0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D`
-  - `PYTHON_VERSION=3.6.13`
+  - `GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D`
+  - `PYTHON_VERSION=3.10.0a7`
   - `PYTHON_PIP_VERSION=21.0.1`
   - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/29f37dbe6b3842ccd52d61816a3044173962ebeb/public/get-pip.py`
   - `PYTHON_GET_PIP_SHA256=e03eb8a33d3b441ff484c56a436ff10680479d4bd14e59268e67977ed40904de`
