@@ -2,16 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:04efee4d4c00fdbc1933b236b477df80ab199ec32c6ec6d14018bfb32ccd7cfa`
-- Created: `2021-04-14T22:57:27.07174521Z`
-- Virtual Size: ~ 186.39 Mb  
+- Image ID: `sha256:9ce62f50d25705f72c6c0989ff9d7e51d814cc834ec6fab773b2769cb5120585`
+- Created: `2021-04-20T23:27:09.730428483Z`
+- Virtual Size: ~ 182.74 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
 - Command: `["influxd"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `INFLUXDB_VERSION=1.8.3-c1.8.3`
+  - `INFLUXDB_VERSION=1.8.5-c1.8.5`
 
 ## `apk` (`.apk`-based packages)
 
