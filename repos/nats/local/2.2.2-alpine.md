@@ -1,17 +1,17 @@
-# `nats:2.2.1-alpine3.13`
+# `nats:2.2.2-alpine3.13`
 
 ## Docker Metadata
 
-- Image ID: `sha256:d14bc60ccc43c89281be8e1cb48cba172a1bc16e08228e9fed919e32c40e64e6`
-- Created: `2021-04-14T23:13:03.480276504Z`
-- Virtual Size: ~ 16.86 Mb  
+- Image ID: `sha256:e29560428628215cddf73747b2d824f6479740731a1d2819a6d4c86a2bd8c03b`
+- Created: `2021-04-22T23:02:01.811667352Z`
+- Virtual Size: ~ 16.90 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
 - Command: `["nats-server","--config","/etc/nats/nats-server.conf"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `NATS_SERVER=2.2.1`
+  - `NATS_SERVER=2.2.2`
 
 ## `apk` (`.apk`-based packages)
 
