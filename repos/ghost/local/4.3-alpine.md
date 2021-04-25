@@ -1,9 +1,9 @@
-# `ghost:4.3.0-alpine`
+# `ghost:4.3.2-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:94ccf7b4bce09b9d08ee5002db3fde6ff8a91d71b3539f6b05f1ddae00654018`
-- Created: `2021-04-21T21:45:10.001976397Z`
+- Image ID: `sha256:10f8283cfe2f1389ebe2688f2ea836b1e3922d9bea70521efcb3e1334287a04c`
+- Created: `2021-04-22T22:59:33.159932982Z`
 - Virtual Size: ~ 422.28 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -17,7 +17,7 @@
   - `GHOST_CLI_VERSION=1.16.3`
   - `GHOST_INSTALL=/var/lib/ghost`
   - `GHOST_CONTENT=/var/lib/ghost/content`
-  - `GHOST_VERSION=4.3.0`
+  - `GHOST_VERSION=4.3.2`
 
 ## `apk` (`.apk`-based packages)
 
