@@ -1,10 +1,10 @@
-# `amazoncorretto:15-alpine`
+# `amazoncorretto:8-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:23e76ee0c28398ab725e7d4a6034567f810a7125f3873049b88ff52ccc4315bc`
-- Created: `2021-04-14T19:39:28.814445994Z`
-- Virtual Size: ~ 357.76 Mb  
+- Image ID: `sha256:a49dc0e3993ba2b79800dfa61af11876aad3ac15bfb8d280b35e81049b7a6ef3`
+- Created: `2021-04-20T23:20:20.278473166Z`
+- Virtual Size: ~ 201.57 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/sh"]`
@@ -49,20 +49,37 @@ MIT
 
 ```
 
-### `apk` package: `amazon-corretto-15`
+### `apk` package: `amazon-corretto-8`
 
 ```console
-amazon-corretto-15-15.0.2.7.1-r0 description:
-Corretto15
+amazon-corretto-8-8.292.10.1-r0 description:
+Corretto-8
 
-amazon-corretto-15-15.0.2.7.1-r0 webpage:
-https://github.com/corretto/corretto-jdk
+amazon-corretto-8-8.292.10.1-r0 webpage:
+https://github.com/corretto/corretto-8
 
-amazon-corretto-15-15.0.2.7.1-r0 installed size:
-351608832
+amazon-corretto-8-8.292.10.1-r0 installed size:
+91938816
 
-amazon-corretto-15-15.0.2.7.1-r0 license:
-https://github.com/corretto/corretto-jdk/blob/develop/LICENSE
+amazon-corretto-8-8.292.10.1-r0 license:
+https://github.com/corretto/corretto-8/blob/develop/LICENSE
+
+```
+
+### `apk` package: `amazon-corretto-8-jre`
+
+```console
+amazon-corretto-8-jre-8.292.10.1-r0 description:
+Amazon Corretto 8 Java Runtime
+
+amazon-corretto-8-jre-8.292.10.1-r0 webpage:
+https://github.com/corretto/corretto-8
+
+amazon-corretto-8-jre-8.292.10.1-r0 installed size:
+104574976
+
+amazon-corretto-8-jre-8.292.10.1-r0 license:
+https://github.com/corretto/corretto-8/blob/develop/LICENSE
 
 ```
 
@@ -168,23 +185,6 @@ OpenSSL
 
 ```
 
-### `apk` package: `libgcc`
-
-```console
-libgcc-9.3.0-r2 description:
-GNU C compiler runtime libraries
-
-libgcc-9.3.0-r2 webpage:
-https://gcc.gnu.org
-
-libgcc-9.3.0-r2 installed size:
-90112
-
-libgcc-9.3.0-r2 license:
-GPL-2.0-or-later LGPL-2.1-or-later
-
-```
-
 ### `apk` package: `libssl1.1`
 
 ```console
@@ -199,23 +199,6 @@ libssl1.1-1.1.1k-r0 installed size:
 
 libssl1.1-1.1.1k-r0 license:
 OpenSSL
-
-```
-
-### `apk` package: `libstdc++`
-
-```console
-libstdc++-9.3.0-r2 description:
-GNU C++ standard runtime library
-
-libstdc++-9.3.0-r2 webpage:
-https://gcc.gnu.org
-
-libstdc++-9.3.0-r2 installed size:
-1671168
-
-libstdc++-9.3.0-r2 license:
-GPL-2.0-or-later LGPL-2.1-or-later
 
 ```
 
