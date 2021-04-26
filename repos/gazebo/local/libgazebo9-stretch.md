@@ -1609,14 +1609,9 @@ Licenses: (parsed from: `/usr/share/doc/gazebo9/copyright`, `/usr/share/doc/gaze
 - `LGPL-3+`
 - `ZLIB`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gazebo9=9.16.0-1~stretch
-'http://packages.osrfoundation.org/gazebo/debian-stable/pool/main/g/gazebo9/gazebo9_9.16.0-1~stretch.dsc' gazebo9_9.16.0-1~stretch.dsc 2150 SHA256:d948096725435ae00dada31a12b7eb36be504a11f82c71c6610e0c58cb882ba7
-'http://packages.osrfoundation.org/gazebo/debian-stable/pool/main/g/gazebo9/gazebo9_9.16.0.orig.tar.bz2' gazebo9_9.16.0.orig.tar.bz2 56085464 SHA256:8cf2805f254a32896002d4b6a24578c9dc1c5628123a5c30b7c6cb443461d15b
-'http://packages.osrfoundation.org/gazebo/debian-stable/pool/main/g/gazebo9/gazebo9_9.16.0-1~stretch.debian.tar.xz' gazebo9_9.16.0-1~stretch.debian.tar.xz 6940 SHA256:0f4ca810d8aef13fc8cb44bd3bf27f6940246cd49e12732a9295a5d546b3a2a1
-```
 
 ### `dpkg` source package: `gcc-6=6.3.0-18+deb9u1`
 

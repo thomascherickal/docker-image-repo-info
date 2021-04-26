@@ -746,13 +746,9 @@ Licenses: (parsed from: `/usr/share/doc/distro-info-data/copyright`)
 
 - `ISC`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris distro-info-data=0.37ubuntu0.9
-'http://archive.ubuntu.com/ubuntu/pool/main/d/distro-info-data/distro-info-data_0.37ubuntu0.9.dsc' distro-info-data_0.37ubuntu0.9.dsc 1758 SHA512:a0e82aed71f128b6209947b3d813b67d0da6cf78c9203f5465a71017833092cb7d6d2b3f32fd117d4bd9d515487dd6672d3db501f049de84ebe46f9847f34998
-'http://archive.ubuntu.com/ubuntu/pool/main/d/distro-info-data/distro-info-data_0.37ubuntu0.9.tar.xz' distro-info-data_0.37ubuntu0.9.tar.xz 7212 SHA512:6627c65618a4c29cd5e6cad9b9e20d13d62bb2330cb93eaa77eef5370305af58c0c74d42fa854359d5ae5674500344f20fe59edd529f9fe74792b5e9c2541e38
-```
 
 ### `dpkg` source package: `double-conversion=2.0.1-4ubuntu1`
 
@@ -1236,14 +1232,9 @@ Licenses: (parsed from: `/usr/share/doc/gazebo9/copyright`, `/usr/share/doc/gaze
 - `LGPL-3+`
 - `ZLIB`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gazebo9=9.16.0-1~bionic
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo9/gazebo9_9.16.0-1~bionic.dsc' gazebo9_9.16.0-1~bionic.dsc 2136 SHA256:750903cd074703bde4c8d7f21c9503ca2cfbb7fbee065a10c02a782f8dc77c86
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo9/gazebo9_9.16.0.orig.tar.bz2' gazebo9_9.16.0.orig.tar.bz2 56085464 SHA256:8cf2805f254a32896002d4b6a24578c9dc1c5628123a5c30b7c6cb443461d15b
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo9/gazebo9_9.16.0-1~bionic.debian.tar.xz' gazebo9_9.16.0-1~bionic.debian.tar.xz 6896 SHA256:4647ec65f395f22e06f526a79fdcbee699824a3a3e685370d18f98c2714b2460
-```
 
 ### `dpkg` source package: `gcc-6=6.5.0-2ubuntu1~18.04`
 
@@ -2464,14 +2455,9 @@ Licenses: (parsed from: `/usr/share/doc/libcaca0/copyright`)
 
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libcaca=0.99.beta19-2ubuntu0.18.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcaca/libcaca_0.99.beta19-2ubuntu0.18.04.1.dsc' libcaca_0.99.beta19-2ubuntu0.18.04.1.dsc 2339 SHA512:fd0f16b3991057b0201680094dc5ae02ea18ee5011245d04b051e067a74ef10fcbfe3d18500e58e7c5c0ca5aacdfad01bc0204654eeba12cb6850b2b762e006f
-'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcaca/libcaca_0.99.beta19.orig.tar.gz' libcaca_0.99.beta19.orig.tar.gz 1203495 SHA512:780fc7684d40207cc10df3f87d6d8f1d47ddfffa0e76e41a5ce671b82d5c7f090facb054c3d49ca7c4ea1a619625bb9085ce52f837f50792b4a2d776a4c68e15
-'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcaca/libcaca_0.99.beta19-2ubuntu0.18.04.1.debian.tar.xz' libcaca_0.99.beta19-2ubuntu0.18.04.1.debian.tar.xz 12708 SHA512:334ab2ca47267500a1000a81345036675f19c380d7d299d9a71674daa34652b94c118895088b0e471021d9410c3052611d8d1549b6303013a92127741ee417dc
-```
 
 ### `dpkg` source package: `libcap-ng=0.7.7-3.1`
 
