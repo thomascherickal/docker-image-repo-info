@@ -1,10 +1,10 @@
-# `monica:2.20.0-fpm-alpine`
+# `monica:2.21.0-fpm-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:18e1119bc0d3b400010cd68c8516682c2e1a46fd4be55ee02f18b14c0d9e51da`
-- Created: `2021-04-15T10:46:36.461609332Z`
-- Virtual Size: ~ 368.94 Mb  
+- Image ID: `sha256:666ba50d1c485c9c73afb28e7827adbd04d75d7eacc7d065e5666609097eef5d`
+- Created: `2021-04-26T19:49:17.107386674Z`
+- Virtual Size: ~ 355.83 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/entrypoint.sh"]`
@@ -26,16 +26,16 @@
   - `PHP_OPCACHE_MAX_ACCELERATED_FILES=20000`
   - `PHP_OPCACHE_MEMORY_CONSUMPTION=192`
   - `PHP_OPCACHE_MAX_WASTED_PERCENTAGE=10`
-  - `MONICA_VERSION=v2.20.0`
+  - `MONICA_VERSION=v2.21.0`
 - Labels:
   - `org.opencontainers.image.authors=Alexis Saettler <alexis@saettler.org>`
   - `org.opencontainers.image.description=This is MonicaHQ, your personal memory! MonicaHQ is like a CRM but for the friends, family, and acquaintances around you.`
-  - `org.opencontainers.image.revision=6952f414171b4352d39f316484f02e3ee9adf4bc`
+  - `org.opencontainers.image.revision=7901b24e8eed864f4e645aedb424222cd3b0ef72`
   - `org.opencontainers.image.source=https://github.com/monicahq/docker`
   - `org.opencontainers.image.title=MonicaHQ, the Personal Relationship Manager`
   - `org.opencontainers.image.url=https://monicahq.com`
   - `org.opencontainers.image.vendor=Monica`
-  - `org.opencontainers.image.version=v2.20.0`
+  - `org.opencontainers.image.version=v2.21.0`
 
 ## `apk` (`.apk`-based packages)
 
@@ -518,16 +518,16 @@ GPL-2.0-or-later LGPL-2.1-or-later
 ### `apk` package: `libjpeg-turbo`
 
 ```console
-libjpeg-turbo-2.0.6-r0 description:
+libjpeg-turbo-2.1.0-r0 description:
 Accelerated baseline JPEG compression and decompression library
 
-libjpeg-turbo-2.0.6-r0 webpage:
+libjpeg-turbo-2.1.0-r0 webpage:
 https://libjpeg-turbo.org/
 
-libjpeg-turbo-2.0.6-r0 installed size:
-1056768
+libjpeg-turbo-2.1.0-r0 installed size:
+1101824
 
-libjpeg-turbo-2.0.6-r0 license:
+libjpeg-turbo-2.1.0-r0 license:
 BSD-3-Clause IJG Zlib
 
 ```
