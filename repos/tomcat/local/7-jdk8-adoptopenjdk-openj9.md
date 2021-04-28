@@ -1,10 +1,10 @@
-# `tomcat:7.0.108-jdk8-adoptopenjdk-openj9`
+# `tomcat:7.0.109-jdk8-adoptopenjdk-openj9`
 
 ## Docker Metadata
 
-- Image ID: `sha256:5cef9760dfedf71c1e37485ea1ed55f1e5bd5612966c59aad46b4d96ff8e089b`
-- Created: `2021-04-24T05:42:32.645638469Z`
-- Virtual Size: ~ 373.90 Mb  
+- Image ID: `sha256:130f40a5c838a1a6cdf6d78d3302c56ea4bf215f403bbde9fd7d2c5da1e909db`
+- Created: `2021-04-26T23:52:44.946094574Z`
+- Virtual Size: ~ 387.78 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["catalina.sh","run"]`
@@ -21,8 +21,8 @@
   - `LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib`
   - `GPG_KEYS=05AB33110949707C93A279E3D3EFE6B686867BA6 07E48665A34DCAFAE522E5E6266191C37C037D42 47309207D818FFD8DCD3F83F1931D684307A10A5 541FBE7D8F78B25E055DDEE13C370389288584E7 61B832AC2F1C5A90F0F9B00A1C506407564C17A3 713DA88BE50911535FE716F5208B0AB1D63011C7 79F7026C690BAA50B92CD8B66A3AD3F4F22C4FED 9BA44C2621385CB966EBA586F72C284D731FABEE A27677289986DB50844682F8ACB77FC2E86E29AC A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243 F3A04C595DB5B6A5F1ECA43E3B7BBB100D811BBE F7DA48BB64BCB84ECBA7EE6935CD23C10D498E23`
   - `TOMCAT_MAJOR=7`
-  - `TOMCAT_VERSION=7.0.108`
-  - `TOMCAT_SHA512=78961dd302e4398dc760bf9b93fd8f456d06f5a542535688b87320c2d5558d70168cddb0fd4d85965a453bd75c737d5237cf64bf9e40da93eebd957ee763946c`
+  - `TOMCAT_VERSION=7.0.109`
+  - `TOMCAT_SHA512=612e830913bf1401bc9540e2273e465b0ee7ef63750a9969a80f1e9da9edb4888aa621fcc6fa5ba23cff94a40e91eb97e3f969b8064dabd49b2d0ea29e59b57e`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -645,10 +645,9 @@ $ apt-get source -qq --print-uris gcc-10=10.2.0-5ubuntu1~20.04
 Binary Packages:
 
 - `libc-bin=2.31-0ubuntu9.2`
-- `libc6:amd64=2.31-0ubuntu9.2`
 - `locales=2.31-0ubuntu9.2`
 
-Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/libc6/copyright`, `/usr/share/doc/locales/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/locales/copyright`)
 
 - `GPL-2`
 - `LGPL-2.1`
@@ -661,6 +660,21 @@ $ apt-get source -qq --print-uris glibc=2.31-0ubuntu9.2
 'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31.orig.tar.xz' glibc_2.31.orig.tar.xz 17317924 SHA512:2ff56628fe935cacbdf1825534f15d45cb87a159cbdb2e6a981590eeb6174ed4b3ff7041519cdecbd4f624ac20b745e2dd9614c420dd3ea186b8f36bc4c2453c
 'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31-0ubuntu9.2.debian.tar.xz' glibc_2.31-0ubuntu9.2.debian.tar.xz 847208 SHA512:6985930d47b70f2c3cfd0ece3d5dce8414befd061cfbae7a1e8804f02ef81d73d4a219bc780492c8a6ca3c5a559b58082bea57372b2b9072539059a1694578e0
 ```
+
+### `dpkg` source package: `glibc=2.31-0ubuntu9.3`
+
+Binary Packages:
+
+- `libc6:amd64=2.31-0ubuntu9.3`
+
+Licenses: (parsed from: `/usr/share/doc/libc6/copyright`)
+
+- `GPL-2`
+- `LGPL-2.1`
+
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
+
 
 ### `dpkg` source package: `gmp=2:6.2.0+dfsg-4`
 
@@ -1408,9 +1422,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris openldap=2.4.49+dfsg-2ubuntu1.7
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.49+dfsg-2ubuntu1.7.dsc' openldap_2.4.49+dfsg-2ubuntu1.7.dsc 3136 SHA512:1c0074dc61978760fdc0d216471320a97b895e8188c8e4cbf8fef50dd441693a05c179036ec33d677da9713afc16ba584b813c9c0aa6976b3a8358bd96a27779
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.49+dfsg.orig.tar.gz' openldap_2.4.49+dfsg.orig.tar.gz 4844726 SHA512:c2096f6e37bae8e4d4dcc5cc8dad783996bc8677e7e62a06b9f55857f8950726ca3e3b0d8368563c8985123175f63625354ad5ac271db8b55d3ac62e8906d4c7
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.49+dfsg-2ubuntu1.7.debian.tar.xz' openldap_2.4.49+dfsg-2ubuntu1.7.debian.tar.xz 186816 SHA512:537346c4413441d7c80d60b87cab2ad0d464e791dc3a1dc79910488619299df5c6bbb733b62b8a9338a95822e43794bd0f47ed327f1ce8c82a06637947b7c009
+'http://security.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.49+dfsg-2ubuntu1.7.dsc' openldap_2.4.49+dfsg-2ubuntu1.7.dsc 3136 SHA512:1c0074dc61978760fdc0d216471320a97b895e8188c8e4cbf8fef50dd441693a05c179036ec33d677da9713afc16ba584b813c9c0aa6976b3a8358bd96a27779
+'http://security.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.49+dfsg.orig.tar.gz' openldap_2.4.49+dfsg.orig.tar.gz 4844726 SHA512:c2096f6e37bae8e4d4dcc5cc8dad783996bc8677e7e62a06b9f55857f8950726ca3e3b0d8368563c8985123175f63625354ad5ac271db8b55d3ac62e8906d4c7
+'http://security.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.49+dfsg-2ubuntu1.7.debian.tar.xz' openldap_2.4.49+dfsg-2ubuntu1.7.debian.tar.xz 186816 SHA512:537346c4413441d7c80d60b87cab2ad0d464e791dc3a1dc79910488619299df5c6bbb733b62b8a9338a95822e43794bd0f47ed327f1ce8c82a06637947b7c009
 ```
 
 ### `dpkg` source package: `openssl=1.1.1f-1ubuntu2.3`
