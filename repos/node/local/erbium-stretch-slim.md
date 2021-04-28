@@ -1,4 +1,4 @@
-# `node:12.22.1-stretch-slim`
+# `node:12-slim`
 
 ## Docker Metadata
 

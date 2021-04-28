@@ -1,4 +1,4 @@
-# `node:10.24.1-stretch-slim`
+# `node:10-slim`
 
 ## Docker Metadata
 

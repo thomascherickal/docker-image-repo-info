@@ -1,4 +1,4 @@
-# `node:10.24.1-alpine3.11`
+# `node:10-alpine`
 
 ## Docker Metadata
 

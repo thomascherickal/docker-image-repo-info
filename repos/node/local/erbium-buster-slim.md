@@ -1,4 +1,4 @@
-# `node:12.22.1-buster-slim`
+# `node:12-buster-slim`
 
 ## Docker Metadata
 

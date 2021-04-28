@@ -1,4 +1,4 @@
-# `node:12.22.1-stretch`
+# `node:12`
 
 ## Docker Metadata
 

@@ -1,4 +1,4 @@
-# `node:15.14.0-buster`
+# `node:15-buster`
 
 ## Docker Metadata
 
