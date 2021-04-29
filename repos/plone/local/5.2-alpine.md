@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:626ca1adf4519b03f765fdfe4a300570ac6bf93c041c10c1d11553c43ce689bf`
-- Created: `2021-04-15T11:43:13.954949695Z`
-- Virtual Size: ~ 490.19 Mb  
+- Image ID: `sha256:31a49827e4cf41d1110fa280900826d6d562cf83625a056df1fae10745ddfbca`
+- Created: `2021-04-27T23:55:21.662404742Z`
+- Virtual Size: ~ 497.47 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -14,9 +14,9 @@
   - `LANG=C.UTF-8`
   - `GPG_KEY=E3FF2839C048B25C084DEBE9B26995E310250568`
   - `PYTHON_VERSION=3.8.9`
-  - `PYTHON_PIP_VERSION=21.0.1`
-  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/29f37dbe6b3842ccd52d61816a3044173962ebeb/public/get-pip.py`
-  - `PYTHON_GET_PIP_SHA256=e03eb8a33d3b441ff484c56a436ff10680479d4bd14e59268e67977ed40904de`
+  - `PYTHON_PIP_VERSION=21.1`
+  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/ab9dde151f662745c13461f00c453dcf32a51ea9/public/get-pip.py`
+  - `PYTHON_GET_PIP_SHA256=0ed17e859b835ad5bf00851f4dc8bbc3520c13dfff6c131d410cdb3a92ff0af9`
   - `PIP=21.0.1`
   - `ZC_BUILDOUT=2.13.4`
   - `SETUPTOOLS=51.3.3`
@@ -456,16 +456,16 @@ LGPL-2.1-or-later
 ### `apk` package: `libjpeg-turbo`
 
 ```console
-libjpeg-turbo-2.0.6-r0 description:
+libjpeg-turbo-2.1.0-r0 description:
 Accelerated baseline JPEG compression and decompression library
 
-libjpeg-turbo-2.0.6-r0 webpage:
+libjpeg-turbo-2.1.0-r0 webpage:
 https://libjpeg-turbo.org/
 
-libjpeg-turbo-2.0.6-r0 installed size:
-1056768
+libjpeg-turbo-2.1.0-r0 installed size:
+1101824
 
-libjpeg-turbo-2.0.6-r0 license:
+libjpeg-turbo-2.1.0-r0 license:
 BSD-3-Clause IJG Zlib
 
 ```
