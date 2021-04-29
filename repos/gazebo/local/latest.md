@@ -2451,13 +2451,9 @@ Licenses: (parsed from: `/usr/share/doc/ignition-tools/copyright`, `/usr/share/d
 - `Apache`
 - `Apache-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ignition-tools=1.1.0-1~focal
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-tools/ignition-tools_1.1.0-1~focal.dsc' ignition-tools_1.1.0-1~focal.dsc 890 SHA256:cd64e047771fc89b94142626b497eef5fdc89715ecc0a1fee4e665316d56b091
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-tools/ignition-tools_1.1.0-1~focal.tar.xz' ignition-tools_1.1.0-1~focal.tar.xz 212288 SHA256:aa7f8a62f573e6000735e2e8098117a60f854bc5ca24e89e7ba6b3b775a59a86
-```
 
 ### `dpkg` source package: `ignition-transport8=8.2.0-1~focal`
 
@@ -6133,9 +6129,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris openldap=2.4.49+dfsg-2ubuntu1.7
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.49+dfsg-2ubuntu1.7.dsc' openldap_2.4.49+dfsg-2ubuntu1.7.dsc 3136 SHA512:1c0074dc61978760fdc0d216471320a97b895e8188c8e4cbf8fef50dd441693a05c179036ec33d677da9713afc16ba584b813c9c0aa6976b3a8358bd96a27779
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.49+dfsg.orig.tar.gz' openldap_2.4.49+dfsg.orig.tar.gz 4844726 SHA512:c2096f6e37bae8e4d4dcc5cc8dad783996bc8677e7e62a06b9f55857f8950726ca3e3b0d8368563c8985123175f63625354ad5ac271db8b55d3ac62e8906d4c7
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.49+dfsg-2ubuntu1.7.debian.tar.xz' openldap_2.4.49+dfsg-2ubuntu1.7.debian.tar.xz 186816 SHA512:537346c4413441d7c80d60b87cab2ad0d464e791dc3a1dc79910488619299df5c6bbb733b62b8a9338a95822e43794bd0f47ed327f1ce8c82a06637947b7c009
+'http://security.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.49+dfsg-2ubuntu1.7.dsc' openldap_2.4.49+dfsg-2ubuntu1.7.dsc 3136 SHA512:1c0074dc61978760fdc0d216471320a97b895e8188c8e4cbf8fef50dd441693a05c179036ec33d677da9713afc16ba584b813c9c0aa6976b3a8358bd96a27779
+'http://security.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.49+dfsg.orig.tar.gz' openldap_2.4.49+dfsg.orig.tar.gz 4844726 SHA512:c2096f6e37bae8e4d4dcc5cc8dad783996bc8677e7e62a06b9f55857f8950726ca3e3b0d8368563c8985123175f63625354ad5ac271db8b55d3ac62e8906d4c7
+'http://security.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.49+dfsg-2ubuntu1.7.debian.tar.xz' openldap_2.4.49+dfsg-2ubuntu1.7.debian.tar.xz 186816 SHA512:537346c4413441d7c80d60b87cab2ad0d464e791dc3a1dc79910488619299df5c6bbb733b62b8a9338a95822e43794bd0f47ed327f1ce8c82a06637947b7c009
 ```
 
 ### `dpkg` source package: `openmpi=4.0.3-0ubuntu1`

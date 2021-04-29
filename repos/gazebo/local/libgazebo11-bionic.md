@@ -2263,13 +2263,9 @@ Licenses: (parsed from: `/usr/share/doc/ignition-tools/copyright`, `/usr/share/d
 - `Apache`
 - `Apache-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ignition-tools=1.1.0-1~bionic
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-tools/ignition-tools_1.1.0-1~bionic.dsc' ignition-tools_1.1.0-1~bionic.dsc 894 SHA256:5377dd6699b86639de08e018b78d68482021a703227f3e25e556dd064d773c9b
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-tools/ignition-tools_1.1.0-1~bionic.tar.xz' ignition-tools_1.1.0-1~bionic.tar.xz 212508 SHA256:7d806c7a467c91dbf4c372d401561fc4046ecb34605882221f7e4a14b799df70
-```
 
 ### `dpkg` source package: `ignition-transport8=8.2.0-1~bionic`
 
