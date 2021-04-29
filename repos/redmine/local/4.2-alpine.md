@@ -1,10 +1,10 @@
-# `redmine:4.2.0-alpine`
+# `redmine:4.2.1-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:c11c138047e0867375b6b8fbf8c705def2bab8b87a1e2eb18f12a35ffd5fae73`
-- Created: `2021-04-15T11:21:52.846449287Z`
-- Virtual Size: ~ 372.54 Mb  
+- Image ID: `sha256:c0667e653f3d8c799dfd38a1a123f8fdcf9003d35bb554a5d011dfda5ec8180f`
+- Created: `2021-04-26T23:35:02.339884356Z`
+- Virtual Size: ~ 372.60 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -20,8 +20,8 @@
   - `BUNDLE_APP_CONFIG=/usr/local/bundle`
   - `RAILS_ENV=production`
   - `HOME=/home/redmine`
-  - `REDMINE_VERSION=4.2.0`
-  - `REDMINE_DOWNLOAD_SHA256=295864c580afa2a926e7a17f2ad10693f9b7a6d9f1ef523edb96b2368e7f07e5`
+  - `REDMINE_VERSION=4.2.1`
+  - `REDMINE_DOWNLOAD_SHA256=ad4109c3425f1cfe4c8961f6ae6494c76e20d81ed946caa1e297d9eda13b41b4`
   - `BUNDLE_FORCE_RUBY_PLATFORM=1`
 
 ## `apk` (`.apk`-based packages)
@@ -488,16 +488,16 @@ GPL-2.0-or-later
 ### `apk` package: `glib`
 
 ```console
-glib-2.66.7-r1 description:
+glib-2.66.8-r0 description:
 Common C routines used by Gtk+ and other libs
 
-glib-2.66.7-r1 webpage:
+glib-2.66.8-r0 webpage:
 https://developer.gnome.org/glib/
 
-glib-2.66.7-r1 installed size:
+glib-2.66.8-r0 installed size:
 3403776
 
-glib-2.66.7-r1 license:
+glib-2.66.8-r0 license:
 LGPL-2.1-or-later
 
 ```
@@ -913,16 +913,16 @@ LGPL-2.1-or-later
 ### `apk` package: `libjpeg-turbo`
 
 ```console
-libjpeg-turbo-2.0.6-r0 description:
+libjpeg-turbo-2.1.0-r0 description:
 Accelerated baseline JPEG compression and decompression library
 
-libjpeg-turbo-2.0.6-r0 webpage:
+libjpeg-turbo-2.1.0-r0 webpage:
 https://libjpeg-turbo.org/
 
-libjpeg-turbo-2.0.6-r0 installed size:
-1056768
+libjpeg-turbo-2.1.0-r0 installed size:
+1101824
 
-libjpeg-turbo-2.0.6-r0 license:
+libjpeg-turbo-2.1.0-r0 license:
 BSD-3-Clause IJG Zlib
 
 ```
@@ -1457,16 +1457,16 @@ MIT
 ### `apk` package: `nettle`
 
 ```console
-nettle-3.7-r0 description:
+nettle-3.7.2-r0 description:
 A low-level cryptographic library
 
-nettle-3.7-r0 webpage:
+nettle-3.7.2-r0 webpage:
 https://www.lysator.liu.se/~nisse/nettle/
 
-nettle-3.7-r0 installed size:
-573440
+nettle-3.7.2-r0 installed size:
+577536
 
-nettle-3.7-r0 license:
+nettle-3.7.2-r0 license:
 LGPL-2.0-or-later
 
 ```
