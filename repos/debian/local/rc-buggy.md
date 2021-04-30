@@ -1627,21 +1627,13 @@ Licenses: (parsed from: `/usr/share/doc/perl-base/copyright`)
 - `Unicode`
 - `ZLIB`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris perl=5.32.1-3
-'http://deb.debian.org/debian/pool/main/p/perl/perl_5.32.1-3.dsc' perl_5.32.1-3.dsc 2886 SHA256:1e4a48b1ad467a853b14f43c44ff7b969d5e590c01cea2d0b2d6374cedaaf50f
-'http://deb.debian.org/debian/pool/main/p/perl/perl_5.32.1.orig-regen-configure.tar.gz' perl_5.32.1.orig-regen-configure.tar.gz 871331 SHA256:1d179b41283f12ad83f9758430f6ddc49bdf20db5c396aeae7e51ebb4e4afd29
-'http://deb.debian.org/debian/pool/main/p/perl/perl_5.32.1.orig.tar.xz' perl_5.32.1.orig.tar.xz 12610988 SHA256:57cc47c735c8300a8ce2fa0643507b44c4ae59012bfdad0121313db639e02309
-'http://deb.debian.org/debian/pool/main/p/perl/perl_5.32.1-3.debian.tar.xz' perl_5.32.1-3.debian.tar.xz 164680 SHA256:1e6f590e5d438f9e5fea962bdb9be7ba1206c32f3c56c88ed19385a7f252fb8d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/perl/5.32.1-3/
 
-- https://sources.debian.net/src/perl/5.32.1-3/ (for browsing the source)
-- https://sources.debian.net/src/perl/5.32.1-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/perl/5.32.1-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sed=4.7-1`
 
