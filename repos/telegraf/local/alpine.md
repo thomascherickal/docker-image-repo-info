@@ -2,16 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:1330fc073e6b2a12593edf47eb9054e5a01a46ce5c9da1e6920ae0b1fd2390e3`
-- Created: `2021-04-15T02:36:26.803421544Z`
-- Virtual Size: ~ 107.28 Mb  
+- Image ID: `sha256:82d424fa1659c5711d90313a78c69a40b42b00ce5220ff7160223b55a8a9bec5`
+- Created: `2021-04-30T19:21:28.481985512Z`
+- Virtual Size: ~ 107.29 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
 - Command: `["telegraf"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `TELEGRAF_VERSION=1.18.1`
+  - `TELEGRAF_VERSION=1.18.2`
 
 ## `apk` (`.apk`-based packages)
 
