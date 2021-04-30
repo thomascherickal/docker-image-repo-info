@@ -3,7 +3,7 @@
 # Tags of `silverpeas`
 
 -	[`silverpeas:6.0.2`](#silverpeas602)
--	[`silverpeas:6.1.2`](#silverpeas612)
+-	[`silverpeas:6.1.3`](#silverpeas613)
 -	[`silverpeas:6.2`](#silverpeas62)
 -	[`silverpeas:latest`](#silverpeaslatest)
 
@@ -164,27 +164,27 @@ CMD ["/opt/run.sh"]
 		Size: 604.7 MB (604696449 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-## `silverpeas:6.1.2`
+## `silverpeas:6.1.3`
 
 ```console
-$ docker pull silverpeas@sha256:a21a80b89b27e84b148bcfac5fa204ac3070d92c6c2c4e6020010e03bcb96618
+$ docker pull silverpeas@sha256:e7aef6ef3129f537ff831b903b95a73b147c2678fc945d240f08a6d9b40ce382
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
 -	Platforms:
 	-	linux; amd64
 
-### `silverpeas:6.1.2` - linux; amd64
+### `silverpeas:6.1.3` - linux; amd64
 
 ```console
-$ docker pull silverpeas@sha256:c91f0bddf36989198192d95d8b1b8035da3b8a3277c52e20894674ce3b334fe5
+$ docker pull silverpeas@sha256:84cda2637d42abe415d1e3f988a373b3d769a490c33ff43d1a638ab3df318a04
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **1.4 GB (1426647796 bytes)**  
+-	Total Size: **1.4 GB (1426659827 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1a84f4348fade8a46cb4cb3916cfd9e334ac7f38968289c52a351b9c82e1eb1c`
+-	Image ID: `sha256:3ea294c0750de4ecb85c5837cae19d6ad98b3a497679eacbc2351266c53c9ad9`
 -	Default Command: `["\/opt\/run.sh"]`
 
 ```dockerfile
@@ -231,31 +231,31 @@ ENV JAVA_HOME=/docker-java-home
 ENV SILVERPEAS_HOME=/opt/silverpeas
 # Sat, 24 Apr 2021 02:36:58 GMT
 ENV JBOSS_HOME=/opt/wildfly
-# Sat, 24 Apr 2021 02:36:58 GMT
-ENV SILVERPEAS_VERSION=6.1.2
-# Sat, 24 Apr 2021 02:36:58 GMT
+# Thu, 29 Apr 2021 20:26:06 GMT
+ENV SILVERPEAS_VERSION=6.1.3
+# Thu, 29 Apr 2021 20:26:06 GMT
 ENV WILDFLY_VERSION=18.0.1
-# Sat, 24 Apr 2021 02:36:58 GMT
-LABEL name=Silverpeas 6 description=Image to install and to run Silverpeas 6 vendor=Silverpeas version=6.1.2 build=1
-# Sat, 24 Apr 2021 02:37:13 GMT
+# Thu, 29 Apr 2021 20:26:06 GMT
+LABEL name=Silverpeas 6 description=Image to install and to run Silverpeas 6 vendor=Silverpeas version=6.1.3 build=1
+# Thu, 29 Apr 2021 20:26:37 GMT
 # ARGS: DEFAULT_LOCALE=en_US.UTF-8
 RUN wget -nc https://www.silverpeas.org/files/silverpeas-${SILVERPEAS_VERSION}-wildfly${WILDFLY_VERSION%.?.?}.zip   && wget -nc https://www.silverpeas.org/files/silverpeas-${SILVERPEAS_VERSION}-wildfly${WILDFLY_VERSION%.?.?}.zip.asc   && gpg --keyserver ha.pool.sks-keyservers.net --recv-keys 3F4657EF9C591F2FEA458FEBC19391EB3DF442B6   && gpg --batch --verify silverpeas-${SILVERPEAS_VERSION}-wildfly${WILDFLY_VERSION%.?.?}.zip.asc silverpeas-${SILVERPEAS_VERSION}-wildfly${WILDFLY_VERSION%.?.?}.zip   && wget -nc http://download.jboss.org/wildfly/${WILDFLY_VERSION}.Final/wildfly-${WILDFLY_VERSION}.Final.zip   && unzip silverpeas-${SILVERPEAS_VERSION}-wildfly${WILDFLY_VERSION%.?.?}.zip -d /opt   && unzip wildfly-${WILDFLY_VERSION}.Final.zip -d /opt   && mv /opt/silverpeas-${SILVERPEAS_VERSION}-wildfly${WILDFLY_VERSION%.?.?} /opt/silverpeas   && mv /opt/wildfly-${WILDFLY_VERSION}.Final /opt/wildfly   && rm *.zip   && mkdir -p /root/.m2
-# Sat, 24 Apr 2021 02:37:14 GMT
+# Thu, 29 Apr 2021 20:26:38 GMT
 COPY file:4d0e637a3e1ce0b8143795fd5df1997a7ee18fba27382849ed23e9ecb8142009 in /root/.m2/ 
-# Sat, 24 Apr 2021 02:37:14 GMT
+# Thu, 29 Apr 2021 20:26:38 GMT
 WORKDIR /opt/silverpeas/bin
-# Sat, 24 Apr 2021 02:37:14 GMT
+# Thu, 29 Apr 2021 20:26:39 GMT
 COPY file:bd0a4d5e9017df7c7d4b9ba1011c737b2e2fcbe0966662e3315fabb5498b8aa3 in /opt/ 
-# Sat, 24 Apr 2021 02:37:15 GMT
+# Thu, 29 Apr 2021 20:26:39 GMT
 COPY file:b5a807d0a061fd9e87c6acfc7080c110a5f3c030251fe9a4c995cec7603e12d2 in /opt/silverpeas/configuration/silverpeas/ 
-# Sat, 24 Apr 2021 02:39:09 GMT
+# Thu, 29 Apr 2021 20:28:55 GMT
 # ARGS: DEFAULT_LOCALE=en_US.UTF-8
 RUN ./silverpeas construct   && rm ../log/build-*   && touch .install
-# Sat, 24 Apr 2021 02:39:12 GMT
+# Thu, 29 Apr 2021 20:28:58 GMT
 EXPOSE 8000 9990
-# Sat, 24 Apr 2021 02:39:12 GMT
+# Thu, 29 Apr 2021 20:28:58 GMT
 VOLUME [/opt/silverpeas/log /opt/silverpeas/data /opt/silverpeas/properties /opt/silverpeas/xmlcomponents/workflows]
-# Sat, 24 Apr 2021 02:39:12 GMT
+# Thu, 29 Apr 2021 20:28:58 GMT
 CMD ["/opt/run.sh"]
 ```
 
@@ -296,25 +296,25 @@ CMD ["/opt/run.sh"]
 		Last Modified: Sat, 24 Apr 2021 02:51:32 GMT  
 		Size: 130.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1d334605094cbcc1a69f26f2c31f266960f25f73d254eaabceeba290b2bb69da`  
-		Last Modified: Sat, 24 Apr 2021 02:51:41 GMT  
-		Size: 190.5 MB (190469441 bytes)  
+	-	`sha256:e705e09ff8f37b4bc69406180c0c9363b01f10395089161e43455604c7867914`  
+		Last Modified: Thu, 29 Apr 2021 20:29:27 GMT  
+		Size: 190.5 MB (190469424 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4158d4e013e5db3736115f71b5e127c4d719c1252ccf95864876eb3cd2b51218`  
-		Last Modified: Sat, 24 Apr 2021 02:51:28 GMT  
-		Size: 404.0 B  
+	-	`sha256:39d9127ab3ac6bd3031d5310a6e21875db3240b0fe85e69f401985d6f3807464`  
+		Last Modified: Thu, 29 Apr 2021 20:29:13 GMT  
+		Size: 405.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8111618f89e936acdb42e9f646391883a450de95a026463e3e2e578cc1720425`  
-		Last Modified: Sat, 24 Apr 2021 02:51:28 GMT  
-		Size: 758.0 B  
+	-	`sha256:9b85a4d2f10f261d4bb8cf0ef754ccad50e22260a0bdcb923d8f68db041cfa88`  
+		Last Modified: Thu, 29 Apr 2021 20:29:14 GMT  
+		Size: 759.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:47648e986cdc032b05e5ce452583137da66cd79b99b852cbe248df20e23f3479`  
-		Last Modified: Sat, 24 Apr 2021 02:51:28 GMT  
-		Size: 385.0 B  
+	-	`sha256:c943e51d2a332f475fa77bfa4c96534c7fd60d60c5bc4740fa8a3c7d2eb36775`  
+		Last Modified: Thu, 29 Apr 2021 20:29:13 GMT  
+		Size: 382.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a18dd540459ff47bc917081aebcbb3cd5c4086efb2c10497e8ca468729a3b0ca`  
-		Last Modified: Sat, 24 Apr 2021 02:52:06 GMT  
-		Size: 716.3 MB (716274224 bytes)  
+	-	`sha256:a83c16657abe0295b3fb7c1a57b15bd45dfc6c2a884f28436117df21c0578ea1`  
+		Last Modified: Thu, 29 Apr 2021 20:29:50 GMT  
+		Size: 716.3 MB (716286273 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `silverpeas:6.2`
