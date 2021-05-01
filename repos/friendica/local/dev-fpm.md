@@ -1,9 +1,9 @@
-# `friendica:2021.03-dev-fpm`
+# `friendica:2021.06-dev-fpm`
 
 ## Docker Metadata
 
-- Image ID: `sha256:6e62175629c32eb8b74631c65935c2f3bcbdea944da87545c74105671cc5959b`
-- Created: `2021-04-26T19:34:04.7339094Z`
+- Image ID: `sha256:a0f270cba76fdc9fc896609543aa416f23c62e4dbc8d39436c5c8a92791fe666`
+- Created: `2021-04-29T21:39:17.105728501Z`
 - Virtual Size: ~ 490.04 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -18,13 +18,13 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=CBAF69F173A0FEA4B537F470D66C9593118BCCB6 F38252826ACD957EF380D39F2F7956BC5DA04B5D`
-  - `PHP_VERSION=7.3.27`
-  - `PHP_URL=https://www.php.net/distributions/php-7.3.27.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.3.27.tar.xz.asc`
-  - `PHP_SHA256=65f616e2d5b6faacedf62830fa047951b0136d5da34ae59e6744cbaf5dca148d`
+  - `PHP_VERSION=7.3.28`
+  - `PHP_URL=https://www.php.net/distributions/php-7.3.28.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.3.28.tar.xz.asc`
+  - `PHP_SHA256=a2a84dbec8c1eee3f46c5f249eaaa2ecb3f9e7a6f5d0604d2df44ff8d4904dbe`
   - `TINI_VERSION=v0.19.0`
-  - `FRIENDICA_VERSION=2021.03-dev`
-  - `FRIENDICA_ADDONS=2021.03-dev`
+  - `FRIENDICA_VERSION=2021.06-dev`
+  - `FRIENDICA_ADDONS=2021.06-dev`
 
 ## `dpkg` (`.deb`-based packages)
 

@@ -1,10 +1,10 @@
-# `friendica:2021.01-apache`
+# `friendica:2021.04-apache`
 
 ## Docker Metadata
 
-- Image ID: `sha256:1883ac8f37b09acd9c06d327f2c7a3994ab7c2b73ed493cac7636df02006036d`
-- Created: `2021-04-26T19:33:47.334113314Z`
-- Virtual Size: ~ 616.13 Mb  
+- Image ID: `sha256:bf0e1ce607a643b6fefe9a1c2d0fdde098d51ceb4d494a3cf60b2f0288b87985`
+- Created: `2021-04-29T21:38:26.795062059Z`
+- Virtual Size: ~ 616.29 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -21,13 +21,13 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=CBAF69F173A0FEA4B537F470D66C9593118BCCB6 F38252826ACD957EF380D39F2F7956BC5DA04B5D`
-  - `PHP_VERSION=7.3.27`
-  - `PHP_URL=https://www.php.net/distributions/php-7.3.27.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.3.27.tar.xz.asc`
-  - `PHP_SHA256=65f616e2d5b6faacedf62830fa047951b0136d5da34ae59e6744cbaf5dca148d`
+  - `PHP_VERSION=7.3.28`
+  - `PHP_URL=https://www.php.net/distributions/php-7.3.28.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.3.28.tar.xz.asc`
+  - `PHP_SHA256=a2a84dbec8c1eee3f46c5f249eaaa2ecb3f9e7a6f5d0604d2df44ff8d4904dbe`
   - `TINI_VERSION=v0.19.0`
-  - `FRIENDICA_VERSION=2021.01`
-  - `FRIENDICA_ADDONS=2021.01`
+  - `FRIENDICA_VERSION=2021.04`
+  - `FRIENDICA_ADDONS=2021.04`
 
 ## `dpkg` (`.deb`-based packages)
 
