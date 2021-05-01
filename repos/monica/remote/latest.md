@@ -1,7 +1,7 @@
 ## `monica:latest`
 
 ```console
-$ docker pull monica@sha256:f4b536b41a924a428955b6acc9ee451463478128578ce8d6dbcd3422c1724d93
+$ docker pull monica@sha256:93822be70fd62535d2a97ca9e7c0361cf95d939d85c22af42dff12d136420c9b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -806,14 +806,14 @@ CMD ["apache2-foreground"]
 ### `monica:latest` - linux; 386
 
 ```console
-$ docker pull monica@sha256:48a9d59bc7f1358806250f75363afe4aec466570f546be40fe520490d52bde78
+$ docker pull monica@sha256:f35f6c66983831c72238f0e5f3e2289e96713ad58c53f20a1d7419e9f5790d7b
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **205.7 MB (205729918 bytes)**  
+-	Total Size: **205.8 MB (205761605 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:38f068db3952f579a359e43758b05e15cb921b49fe268864e013de99a24750f4`
+-	Image ID: `sha256:4813db18aa52d696f1170eba3d8c0a7f50209afa53dae43182ed11e15c607b2d`
 -	Entrypoint: `["\/usr\/local\/bin\/entrypoint.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -900,17 +900,17 @@ RUN set -ex;         a2enmod headers rewrite remoteip;     {         echo Remote
 RUN set -ex;     APACHE_DOCUMENT_ROOT=/var/www/html/public;     sed -ri -e "s!/var/www/html!${APACHE_DOCUMENT_ROOT}!g" $APACHE_CONFDIR/sites-available/*.conf;     sed -ri -e "s!/var/www/!${APACHE_DOCUMENT_ROOT}!g" $APACHE_CONFDIR/apache2.conf $APACHE_CONFDIR/conf-available/*.conf
 # Mon, 26 Apr 2021 19:41:11 GMT
 WORKDIR /var/www/html
-# Mon, 26 Apr 2021 19:41:11 GMT
-ENV MONICA_VERSION=v2.21.0
-# Mon, 26 Apr 2021 19:41:11 GMT
-LABEL org.opencontainers.image.revision=7901b24e8eed864f4e645aedb424222cd3b0ef72 org.opencontainers.image.version=v2.21.0
-# Mon, 26 Apr 2021 19:41:35 GMT
+# Fri, 30 Apr 2021 21:38:47 GMT
+ENV MONICA_VERSION=v2.22.0
+# Fri, 30 Apr 2021 21:38:47 GMT
+LABEL org.opencontainers.image.revision=1a16bea897fa59f6849df42f6e207e23c1a4487a org.opencontainers.image.version=v2.22.0
+# Fri, 30 Apr 2021 21:39:24 GMT
 RUN set -ex;     fetchDeps="         gnupg     ";     apt-get update;     apt-get install -y --no-install-recommends $fetchDeps;         for ext in tar.bz2 tar.bz2.asc; do         curl -fsSL -o monica-${MONICA_VERSION}.$ext "https://github.com/monicahq/monica/releases/download/${MONICA_VERSION}/monica-${MONICA_VERSION}.$ext";     done;         GPGKEY='BDAB0D0D36A00466A2964E85DE15667131EA6018';     export GNUPGHOME="$(mktemp -d)";     gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$GPGKEY";     gpg --batch --verify monica-${MONICA_VERSION}.tar.bz2.asc monica-${MONICA_VERSION}.tar.bz2;         tar -xf monica-${MONICA_VERSION}.tar.bz2 -C /var/www/html --strip-components=1;         gpgconf --kill all;     rm -r "$GNUPGHOME" monica-${MONICA_VERSION}.tar.bz2 monica-${MONICA_VERSION}.tar.bz2.asc;         cp /var/www/html/.env.example /var/www/html/.env;     chown -R www-data:www-data /var/www/html;         apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps;     rm -rf /var/lib/apt/lists/*
-# Mon, 26 Apr 2021 19:41:38 GMT
-COPY multi:aec98ea2c6fccdbefed9f2908282c495dd184d4d94c7452e4cdb9b0ddeec1338 in /usr/local/bin/ 
-# Mon, 26 Apr 2021 19:41:38 GMT
+# Fri, 30 Apr 2021 21:39:26 GMT
+COPY multi:85b3759a52f40d2acec5e07ba573013a5a43cf771d99e2e28d8935a550602418 in /usr/local/bin/ 
+# Fri, 30 Apr 2021 21:39:26 GMT
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
-# Mon, 26 Apr 2021 19:41:38 GMT
+# Fri, 30 Apr 2021 21:39:27 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -991,13 +991,13 @@ CMD ["apache2-foreground"]
 		Last Modified: Mon, 26 Apr 2021 19:48:42 GMT  
 		Size: 8.3 KB (8301 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9ad1d478d2883d40d2c0e13e62d9a96e5306ada209cdb577b53031692e52c382`  
-		Last Modified: Mon, 26 Apr 2021 19:48:55 GMT  
-		Size: 36.0 MB (35953525 bytes)  
+	-	`sha256:b8cad693d1f483efcdd4173f50a76f731bde26a3f68bac9f83b34c9f2559e13b`  
+		Last Modified: Fri, 30 Apr 2021 21:42:35 GMT  
+		Size: 36.0 MB (35985340 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:349b53ec0b18e1e9c2997e247b2776d61b189dbe12853f2564d545694345d0a7`  
-		Last Modified: Mon, 26 Apr 2021 19:48:41 GMT  
-		Size: 1.2 KB (1238 bytes)  
+	-	`sha256:1de817faa92bc7e9bd8e1116eb736417af4a7218c57173f26cf91091145ae46c`  
+		Last Modified: Fri, 30 Apr 2021 21:42:14 GMT  
+		Size: 1.1 KB (1110 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `monica:latest` - linux; mips64le
