@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:d495e8c3a8e1952128a44ace52041bf97d0ae1952d993656dddb8393d0a11056`
-- Created: `2021-04-28T20:18:41.326147757Z`
-- Virtual Size: ~ 169.36 Mb  
+- Image ID: `sha256:184ae1d9c9f0c247af5763a655131eacfc228dc5c4aae86e65f2e38e8dbca6d1`
+- Created: `2021-04-29T21:11:46.60026968Z`
+- Virtual Size: ~ 169.32 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -18,10 +18,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F`
-  - `PHP_VERSION=8.0.3`
-  - `PHP_URL=https://www.php.net/distributions/php-8.0.3.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.3.tar.xz.asc`
-  - `PHP_SHA256=c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251`
+  - `PHP_VERSION=8.0.5`
+  - `PHP_URL=https://www.php.net/distributions/php-8.0.5.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.5.tar.xz.asc`
+  - `PHP_SHA256=5dd358b35ecd5890a4f09fb68035a72fe6b45d3ead6999ea95981a107fd1f2ab`
   - `DRUPAL_VERSION=9.1.7`
 
 ## `apk` (`.apk`-based packages)
@@ -318,16 +318,16 @@ BSD-3-Clause
 ### `apk` package: `libjpeg-turbo`
 
 ```console
-libjpeg-turbo-2.0.5-r0 description:
+libjpeg-turbo-2.1.0-r0 description:
 Accelerated baseline JPEG compression and decompression library
 
-libjpeg-turbo-2.0.5-r0 webpage:
+libjpeg-turbo-2.1.0-r0 webpage:
 https://libjpeg-turbo.org/
 
-libjpeg-turbo-2.0.5-r0 installed size:
-1056768
+libjpeg-turbo-2.1.0-r0 installed size:
+1101824
 
-libjpeg-turbo-2.0.5-r0 license:
+libjpeg-turbo-2.1.0-r0 license:
 BSD-3-Clause IJG Zlib
 
 ```
