@@ -1,18 +1,18 @@
-# `aerospike:5.3.0.16`
+# `aerospike:ee-5.4.0.11`
 
 ## Docker Metadata
 
-- Image ID: `sha256:374ba444a1b3ec957ee2608e5985d6292add7085c6ae0b61ce0a65624d75b12d`
-- Created: `2021-04-15T18:19:48.978156575Z`
-- Virtual Size: ~ 194.60 Mb  
+- Image ID: `sha256:e7c2d0a4524c35ecfbf84e36a0233473db16eca09cd5d0de8e61e6b8dbed6b65`
+- Created: `2021-05-01T04:48:00.993920439Z`
+- Virtual Size: ~ 199.30 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/bin/dumb-init","--","/entrypoint.sh"]`
 - Command: `["asd"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `AEROSPIKE_VERSION=5.3.0.16`
-  - `AEROSPIKE_SHA256=9bcda09cf0c1570747a6d97e3de8a550b31ff6cd74700200a75539323229055d`
+  - `AEROSPIKE_VERSION=5.4.0.11`
+  - `AEROSPIKE_SHA256=a23c586ae4fdd31f916b2dda5b7c9f86a4a529cc32b110f13fda6fa393e5be93`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -66,11 +66,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/adduser/3.115/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/adduser/3.115/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `aerospike-server-community=5.3.0.16-1`
+### `dpkg` source package: `aerospike-server-enterprise=5.4.0.11-1`
 
 Binary Packages:
 
-- `aerospike-server-community=5.3.0.16-1`
+- `aerospike-server-enterprise=5.4.0.11-1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1835,6 +1835,7 @@ Binary Packages:
 
 - `libldap-2.4-2:amd64=2.4.44+dfsg-5+deb9u8`
 - `libldap-common=2.4.44+dfsg-5+deb9u8`
+- `libldap2-dev:amd64=2.4.44+dfsg-5+deb9u8`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -2149,14 +2150,14 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/python-defaults/2.7.13-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/python-defaults/2.7.13-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `python2.7=2.7.13-2+deb9u4`
+### `dpkg` source package: `python2.7=2.7.13-2+deb9u5`
 
 Binary Packages:
 
-- `libpython2.7-minimal:amd64=2.7.13-2+deb9u4`
-- `libpython2.7-stdlib:amd64=2.7.13-2+deb9u4`
-- `python2.7=2.7.13-2+deb9u4`
-- `python2.7-minimal=2.7.13-2+deb9u4`
+- `libpython2.7-minimal:amd64=2.7.13-2+deb9u5`
+- `libpython2.7-stdlib:amd64=2.7.13-2+deb9u5`
+- `python2.7=2.7.13-2+deb9u5`
+- `python2.7-minimal=2.7.13-2+deb9u5`
 
 Licenses: (parsed from: `/usr/share/doc/libpython2.7-minimal/copyright`, `/usr/share/doc/libpython2.7-stdlib/copyright`, `/usr/share/doc/python2.7/copyright`, `/usr/share/doc/python2.7-minimal/copyright`)
 
@@ -2177,13 +2178,20 @@ Licenses: (parsed from: `/usr/share/doc/libpython2.7-minimal/copyright`, `/usr/s
 - `implied`
 - `see above, some license as Python`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris python2.7=2.7.13-2+deb9u5
+'http://security.debian.org/debian-security/pool/updates/main/p/python2.7/python2.7_2.7.13-2+deb9u5.dsc' python2.7_2.7.13-2+deb9u5.dsc 3354 SHA256:5f2545960641218514c1613d930345b240cee7e09b2a24d4f3afac15cf216488
+'http://security.debian.org/debian-security/pool/updates/main/p/python2.7/python2.7_2.7.13.orig.tar.gz' python2.7_2.7.13.orig.tar.gz 17076672 SHA256:a4f05a0720ce0fd92626f0278b6b433eee9a6173ddf2bced7957dfb599a5ece1
+'http://security.debian.org/debian-security/pool/updates/main/p/python2.7/python2.7_2.7.13-2+deb9u5.diff.gz' python2.7_2.7.13-2+deb9u5.diff.gz 304643 SHA256:31ce7558f655511278b89a6db05f8c5f7025e7173edf3f1792bdd5acf006a65b
+```
 
-- http://snapshot.debian.org/package/python2.7/2.7.13-2+deb9u4/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/python2.7/2.7.13-2+deb9u5/ (for browsing the source)
+- https://sources.debian.net/src/python2.7/2.7.13-2+deb9u5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/python2.7/2.7.13-2+deb9u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `python3-defaults=3.5.3-1`
 

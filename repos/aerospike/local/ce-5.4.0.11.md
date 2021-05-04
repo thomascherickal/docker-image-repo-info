@@ -1,4 +1,4 @@
-# `aerospike:5.4.0.11`
+# `aerospike:ce-5.4.0.11`
 
 ## Docker Metadata
 
