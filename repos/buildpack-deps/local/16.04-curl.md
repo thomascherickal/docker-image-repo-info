@@ -91,8 +91,8 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris apt=1.2.32ubuntu0.2
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.2.32ubuntu0.2.dsc' apt_1.2.32ubuntu0.2.dsc 2526 SHA512:c91eba6c9405512c3e53dc1808c9ea17627a077354d2bd571ee37f4ae6ded08a4ee4f28ea75d2e64d76d84197f5479f4fd9522f98e61774679e904d144c9b429
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.2.32ubuntu0.2.tar.xz' apt_1.2.32ubuntu0.2.tar.xz 2099548 SHA512:7145c708f5c42b09b06d208ef352f157040548cfc4228d22148078d55beac06556198fede666ef6753feea1c6fa6a21ebf960510f4773900ba95edcfa83f62e6
+'http://security.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.2.32ubuntu0.2.dsc' apt_1.2.32ubuntu0.2.dsc 2526 SHA512:c91eba6c9405512c3e53dc1808c9ea17627a077354d2bd571ee37f4ae6ded08a4ee4f28ea75d2e64d76d84197f5479f4fd9522f98e61774679e904d144c9b429
+'http://security.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.2.32ubuntu0.2.tar.xz' apt_1.2.32ubuntu0.2.tar.xz 2099548 SHA512:7145c708f5c42b09b06d208ef352f157040548cfc4228d22148078d55beac06556198fede666ef6753feea1c6fa6a21ebf960510f4773900ba95edcfa83f62e6
 ```
 
 ### `dpkg` source package: `attr=1:2.4.47-2`
@@ -446,13 +446,9 @@ Licenses: (parsed from: `/usr/share/doc/dpkg/copyright`)
 - `public-domain-md5`
 - `public-domain-s-s-d`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris dpkg=1.18.4ubuntu1.6
-'http://archive.ubuntu.com/ubuntu/pool/main/d/dpkg/dpkg_1.18.4ubuntu1.6.dsc' dpkg_1.18.4ubuntu1.6.dsc 2211 SHA512:aad304d96fcfb39f53f04b3ee90b0d648f52881fa66d0dcd8543afaac6b785fc34783b79070e40bb26352a0b7a00f08be4c221edccf11b6f9c8c3a9fa39b45f1
-'http://archive.ubuntu.com/ubuntu/pool/main/d/dpkg/dpkg_1.18.4ubuntu1.6.tar.xz' dpkg_1.18.4ubuntu1.6.tar.xz 4297512 SHA512:6b270f36d7d65e93dc8d70c695d1cdb160f7b168588df6cfbf62d8800de130bee01176332e9b13177f47e0c036ec2a3dc586cec2a6c6e18f00f79b3cd7bf6365
-```
 
 ### `dpkg` source package: `e2fsprogs=1.42.13-1ubuntu1.2`
 
@@ -949,9 +945,14 @@ Licenses: (parsed from: `/usr/share/doc/libseccomp2/copyright`)
 - `LGPL-2`
 - `LGPL-2.0+`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris libseccomp=2.5.1-1ubuntu1~16.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.5.1-1ubuntu1~16.04.1.dsc' libseccomp_2.5.1-1ubuntu1~16.04.1.dsc 2303 SHA512:457ac79f79d99ad60f2063b4809e22cb82272df312fee2cef9058160c2596af130bffa4902b37e20dd2c0e924371605627a4bf4d2604ad12be82bfc1ebecc16b
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.5.1.orig.tar.gz' libseccomp_2.5.1.orig.tar.gz 638811 SHA512:2be80a6323f9282dbeae8791724e5778b32e2382b2a3d1b0f77366371ec4072ea28128204f675cce101c091c0420d12c497e1a9ccbb7dc5bcbf61bfd777160af
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.5.1-1ubuntu1~16.04.1.debian.tar.xz' libseccomp_2.5.1-1ubuntu1~16.04.1.debian.tar.xz 18572 SHA512:2ec59f6be5bdcca16eff07b917d6f6a7dc6ce1a77c0eeccac3ffb048b94f093307e23525dc7c30fede7ce13d8747efaa3bd744b6c6bfc8bcf1b65a853ea4b39e
+```
 
 ### `dpkg` source package: `libselinux=2.4-3build2`
 
@@ -1534,9 +1535,14 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris systemd=229-4ubuntu21.31
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_229-4ubuntu21.31.dsc' systemd_229-4ubuntu21.31.dsc 4643 SHA512:943ec0083ff45b277b559098f8c8b14f08000969be130445a7e10aa8c6939448bbf6cce372ccdddf7e2ad9de26895be825e07e3cd6434efeaff4e1072ed2d7ce
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_229.orig.tar.gz' systemd_229.orig.tar.gz 4319173 SHA512:d692c0c9fc82f2fce64a5ec1caa4a0f8cf9edaeb1bdaaa1c462669db8f78b3dd6b33c87ef926ff21823582d0460f7b63aa3755792f9ae2cd6fb813ba08a35c39
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_229-4ubuntu21.31.debian.tar.xz' systemd_229-4ubuntu21.31.debian.tar.xz 315956 SHA512:8c82953d97cd9e0f76242f5b3102001d8e601020d432e1db580e028ce63967d33ffa1c52717d1ff0c241fab559e4c1433e734086af3d8706ea50256c78619bc1
+```
 
 ### `dpkg` source package: `sysvinit=2.88dsf-59.3ubuntu2`
 
