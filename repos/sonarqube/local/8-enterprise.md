@@ -1,10 +1,10 @@
-# `sonarqube:8.8.0-enterprise`
+# `sonarqube:8.9.0-enterprise`
 
 ## Docker Metadata
 
-- Image ID: `sha256:10ee2b81f01e615b5bc6eea07fa8340f31aef8ea2c74331a756632804a649350`
-- Created: `2021-04-15T02:56:54.375866115Z`
-- Virtual Size: ~ 599.67 Mb  
+- Image ID: `sha256:a7ac5a05a3fd68daa1d8c381969a3ed236b00293f77919f9ace936dfc09ac8d5`
+- Created: `2021-05-04T19:28:21.154509655Z`
+- Virtual Size: ~ 599.92 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["bin/run.sh"]`
@@ -17,7 +17,7 @@
   - `LC_ALL=en_US.UTF-8`
   - `JAVA_HOME=/opt/java/openjdk`
   - `SONARQUBE_HOME=/opt/sonarqube`
-  - `SONAR_VERSION=8.8.0.42792`
+  - `SONAR_VERSION=8.9.0.43852`
   - `SQ_DATA_DIR=/opt/sonarqube/data`
   - `SQ_EXTENSIONS_DIR=/opt/sonarqube/extensions`
   - `SQ_LOGS_DIR=/opt/sonarqube/logs`
@@ -215,16 +215,16 @@ FTL GPL-2.0-or-later
 ### `apk` package: `glibc`
 
 ```console
-glibc-2.32-r0 description:
+glibc-2.33-r0 description:
 GNU C Library compatibility layer
 
-glibc-2.32-r0 webpage:
+glibc-2.33-r0 webpage:
 https://github.com/sgerrand/alpine-pkg-glibc
 
-glibc-2.32-r0 installed size:
-9404416
+glibc-2.33-r0 installed size:
+9445376
 
-glibc-2.32-r0 license:
+glibc-2.33-r0 license:
 LGPL
 
 ```
@@ -232,16 +232,16 @@ LGPL
 ### `apk` package: `glibc-bin`
 
 ```console
-glibc-bin-2.32-r0 description:
+glibc-bin-2.33-r0 description:
 GNU C Library compatibility layer
 
-glibc-bin-2.32-r0 webpage:
+glibc-bin-2.33-r0 webpage:
 https://github.com/sgerrand/alpine-pkg-glibc
 
-glibc-bin-2.32-r0 installed size:
-2617344
+glibc-bin-2.33-r0 installed size:
+2633728
 
-glibc-bin-2.32-r0 license:
+glibc-bin-2.33-r0 license:
 LGPL
 
 ```
