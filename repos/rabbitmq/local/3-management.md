@@ -1,10 +1,10 @@
-# `rabbitmq:3.8.15-management`
+# `rabbitmq:3.8.16-management`
 
 ## Docker Metadata
 
-- Image ID: `sha256:1083f9e8b66774d69fbd249b12649c7d7043c48118844a576ebc8dabb516cb50`
-- Created: `2021-05-03T22:26:20.682831232Z`
-- Virtual Size: ~ 186.19 Mb  
+- Image ID: `sha256:02bec1b7553c0b43237cfd5c6cf96cc6a44b9178ff10a840ac5665db3046fd32`
+- Created: `2021-05-06T23:09:48.183132113Z`
+- Virtual Size: ~ 186.32 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -14,10 +14,10 @@
   - `OPENSSL_VERSION=1.1.1k`
   - `OPENSSL_SOURCE_SHA256=892a0875b9872acd04a9fde79b1f943075d5ea162415de3047c327df33fbaee5`
   - `OPENSSL_PGP_KEY_IDS=0x8657ABB260F056B1E5190839D9C4D26D0E604491 0x5B2545DAB21995F4088CEFAA36CEE4DEB00CFE33 0xED230BEC4D4F2518B9D7DF41F0DB4D21C1D35231 0xC1F33DD8CE1D4CC613AF14DA9195C48241FBF7DD 0x7953AC1FBC3DC8B3B292393ED5E9E43F7DF9EE8C 0xE5E52560DD91C556DDBDA5D02064C53641C25E5D`
-  - `OTP_VERSION=23.3.2`
-  - `OTP_SOURCE_SHA256=bb40ca2723fe51891850dc3bdf9e0409f195c73312e22e41e123ec55f26cc31f`
+  - `OTP_VERSION=23.3.3`
+  - `OTP_SOURCE_SHA256=de68cf6c3ad18aaf89d0f5109714a03193e0e996f0bb009de48d4539e0f194dd`
   - `RABBITMQ_DATA_DIR=/var/lib/rabbitmq`
-  - `RABBITMQ_VERSION=3.8.15`
+  - `RABBITMQ_VERSION=3.8.16`
   - `RABBITMQ_PGP_KEY_ID=0x0A9AF2115F4687BD29803A206B73A36E6026DFCA`
   - `RABBITMQ_HOME=/opt/rabbitmq`
   - `RABBITMQ_LOGS=-`
@@ -1424,14 +1424,9 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=237-3ubuntu10.46
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.46.dsc' systemd_237-3ubuntu10.46.dsc 5220 SHA512:b9d8b4443e01c99accd98b1bb10a0999eb3ae6cc90c3d3ee9888115c8f8592997c6f2310581dd7a8b283de0d56c5262ebbaf6abee9fe44abaadf18bd960f7637
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237.orig.tar.gz' systemd_237.orig.tar.gz 6871350 SHA512:15ef4b92815a6dd9a6c51672dbc00fd7cd0f08068ef0cbeaca574f68d330b28bc67ba1946f24f75ef3d9e7b63843a73eea700db54688061dbf5c9f8470394c3b
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.46.debian.tar.xz' systemd_237-3ubuntu10.46.debian.tar.xz 290944 SHA512:e452a765928c5296c8328f86b46b2a393934c51bc4d0c9740d1caf38312406cd966e2f4de830067bfba515fed342961ccfac38102013d75ece6c948e7535c31f
-```
 
 ### `dpkg` source package: `sysvinit=2.88dsf-59.10ubuntu1`
 
