@@ -1,9 +1,9 @@
-# `php:7.4.18-zts-alpine3.13`
+# `php:7.4.19-zts-alpine3.13`
 
 ## Docker Metadata
 
-- Image ID: `sha256:617d9a8a1ef8a95f137f21dafea9633663a65e725f948ba02e116db2491bb664`
-- Created: `2021-05-01T04:19:00.742879552Z`
+- Image ID: `sha256:1e3a1db6f88400774fcb293f6b9aa6b8bff1984759d0594b64c246102a933e30`
+- Created: `2021-05-06T22:37:38.950135444Z`
 - Virtual Size: ~ 65.50 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -18,10 +18,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
-  - `PHP_VERSION=7.4.18`
-  - `PHP_URL=https://www.php.net/distributions/php-7.4.18.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.18.tar.xz.asc`
-  - `PHP_SHA256=ab97f22b128d21dcbc009b50a37aaea0051b2721cbcd122d9e00e6ffc3c4b7e1`
+  - `PHP_VERSION=7.4.19`
+  - `PHP_URL=https://www.php.net/distributions/php-7.4.19.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.19.tar.xz.asc`
+  - `PHP_SHA256=6c17172c4a411ccb694d9752de899bb63c72a0a3ebe5089116bc13658a1467b2`
 
 ## `apk` (`.apk`-based packages)
 

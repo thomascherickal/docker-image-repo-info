@@ -1,9 +1,9 @@
-# `php:7.4.18-cli-buster`
+# `php:7.4.19-cli-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:7ac4635154d79a27a042542192406ba1352af0afdc6c04e8aea026c3527fd080`
-- Created: `2021-05-01T03:52:23.705192105Z`
+- Image ID: `sha256:98ba5f1889be42eb0f15003f56aa2bbd8e5507586a73ee62585f184da381ed1f`
+- Created: `2021-05-06T21:58:26.294799258Z`
 - Virtual Size: ~ 419.94 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -18,10 +18,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
-  - `PHP_VERSION=7.4.18`
-  - `PHP_URL=https://www.php.net/distributions/php-7.4.18.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.18.tar.xz.asc`
-  - `PHP_SHA256=ab97f22b128d21dcbc009b50a37aaea0051b2721cbcd122d9e00e6ffc3c4b7e1`
+  - `PHP_VERSION=7.4.19`
+  - `PHP_URL=https://www.php.net/distributions/php-7.4.19.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.19.tar.xz.asc`
+  - `PHP_SHA256=6c17172c4a411ccb694d9752de899bb63c72a0a3ebe5089116bc13658a1467b2`
 
 ## `dpkg` (`.deb`-based packages)
 
