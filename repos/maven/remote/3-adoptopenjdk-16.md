@@ -1,7 +1,7 @@
 ## `maven:3-adoptopenjdk-16`
 
 ```console
-$ docker pull maven@sha256:6fc7a9eac1e97614571f3751667d3c187fad53f7cb2ab77b024c2171adda3a3d
+$ docker pull maven@sha256:9534483325a7988d288888f2281bbae9a09741ff548c23e6dd90d22d1cefdee5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -15,14 +15,14 @@ $ docker pull maven@sha256:6fc7a9eac1e97614571f3751667d3c187fad53f7cb2ab77b024c2
 ### `maven:3-adoptopenjdk-16` - linux; amd64
 
 ```console
-$ docker pull maven@sha256:7ec00a328176c258e57c6f704f534c4795b041583398c28ad46d48f1e5c0ae53
+$ docker pull maven@sha256:9a4f5f8508a8880d8099c659649fc65e6b10e131600c2ff5f73089b67cda213c
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **291.8 MB (291786674 bytes)**  
+-	Total Size: **291.8 MB (291828088 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c37527df4c5baad264517397779269134582fd74a1043be494b3d69b786ac1ce`
+-	Image ID: `sha256:fb6a660327cc7bef744593a6bc2dcec59f3ffca6db89a44c9a13080641cea9f0`
 -	Entrypoint: `["\/usr\/local\/bin\/mvn-entrypoint.sh"]`
 -	Default Command: `["mvn"]`
 
@@ -41,39 +41,39 @@ CMD ["/bin/bash"]
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Fri, 23 Apr 2021 23:23:01 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends tzdata curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Fri, 23 Apr 2021 23:24:07 GMT
-ENV JAVA_VERSION=jdk-16+36
-# Fri, 23 Apr 2021 23:24:16 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='7217a9f9be3b0c8dfc78538f95fd2deb493eb651152d975062920566492b2574';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk16-binaries/releases/download/jdk-16%2B36/OpenJDK16-jdk_aarch64_linux_hotspot_16_36.tar.gz';          ;;        armhf|armv7l)          ESUM='f1d32ba01a40c98889f31368c0e987d6bbda65a7c50b8c088623b48e3a90104a';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk16-binaries/releases/download/jdk-16%2B36/OpenJDK16-jdk_arm_linux_hotspot_16_36.tar.gz';          ;;        ppc64el|ppc64le)          ESUM='07438952a22007c308440072cf3835c1c075e7102670cc666a3c47c8648da35a';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk16-binaries/releases/download/jdk-16%2B36/OpenJDK16-jdk_ppc64le_linux_hotspot_16_36.tar.gz';          ;;        s390x)          ESUM='df34376116433f0e46c5e4935d73a0827d37b34d029f592d3b9383c92b024952';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk16-binaries/releases/download/jdk-16%2B36/OpenJDK16-jdk_s390x_linux_hotspot_16_36.tar.gz';          ;;        amd64|x86_64)          ESUM='2e031cf37018161c9e59b45fa4b98ff2ce4ce9297b824c512989d579a70f8422';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk16-binaries/releases/download/jdk-16%2B36/OpenJDK16-jdk_x64_linux_hotspot_16_36.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Fri, 23 Apr 2021 23:24:16 GMT
+# Mon, 10 May 2021 18:20:11 GMT
+ENV JAVA_VERSION=jdk-16.0.1+9
+# Mon, 10 May 2021 18:20:22 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='3447ec27a6dbd4f3a6180a0d4371bb09aa428c16eea9983e515a7400cc9f5c85';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk16-binaries/releases/download/jdk-16.0.1%2B9/OpenJDK16U-jdk_aarch64_linux_hotspot_16.0.1_9.tar.gz';          ;;        armhf|armv7l)          ESUM='20fc395d8ea2659e6407cd4ec233dc4399f61b7610f3a16495deb23c1e3b81df';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk16-binaries/releases/download/jdk-16.0.1%2B9/OpenJDK16U-jdk_arm_linux_hotspot_16.0.1_9.tar.gz';          ;;        ppc64el|ppc64le)          ESUM='8d8e35ca5a7e24f16384bf32b110562921c19b4cfe65969980937bf879462bc6';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk16-binaries/releases/download/jdk-16.0.1%2B9/OpenJDK16U-jdk_ppc64le_linux_hotspot_16.0.1_9.tar.gz';          ;;        s390x)          ESUM='421cd44661cdbf0c2da79ab3104c81a1fa171b974038e55b1b3d4a042865588f';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk16-binaries/releases/download/jdk-16.0.1%2B9/OpenJDK16U-jdk_s390x_linux_hotspot_16.0.1_9.tar.gz';          ;;        amd64|x86_64)          ESUM='7fdda042207efcedd30cd76d6295ed56b9c2e248cb3682c50898a560d4aa1c6f';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk16-binaries/releases/download/jdk-16.0.1%2B9/OpenJDK16U-jdk_x64_linux_hotspot_16.0.1_9.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
+# Mon, 10 May 2021 18:20:22 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 23 Apr 2021 23:24:16 GMT
+# Mon, 10 May 2021 18:20:22 GMT
 CMD ["jshell"]
-# Sat, 24 Apr 2021 04:45:25 GMT
+# Tue, 11 May 2021 01:48:44 GMT
 ARG MAVEN_VERSION=3.8.1
-# Sat, 24 Apr 2021 04:45:25 GMT
+# Tue, 11 May 2021 01:48:44 GMT
 ARG USER_HOME_DIR=/root
-# Sat, 24 Apr 2021 04:45:25 GMT
+# Tue, 11 May 2021 01:48:44 GMT
 ARG SHA=0ec48eb515d93f8515d4abe465570dfded6fa13a3ceb9aab8031428442d9912ec20f066b2afbf56964ffe1ceb56f80321b50db73cf77a0e2445ad0211fb8e38d
-# Sat, 24 Apr 2021 04:45:26 GMT
+# Tue, 11 May 2021 01:48:45 GMT
 ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/3.8.1/binaries
-# Sat, 24 Apr 2021 04:45:33 GMT
+# Tue, 11 May 2021 01:48:54 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.8.1/binaries MAVEN_VERSION=3.8.1 SHA=0ec48eb515d93f8515d4abe465570dfded6fa13a3ceb9aab8031428442d9912ec20f066b2afbf56964ffe1ceb56f80321b50db73cf77a0e2445ad0211fb8e38d USER_HOME_DIR=/root
 RUN apt-get update     && apt-get install -y git     && rm -rf /var/lib/apt/lists/*
-# Sat, 24 Apr 2021 04:45:42 GMT
+# Tue, 11 May 2021 01:48:57 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.8.1/binaries MAVEN_VERSION=3.8.1 SHA=0ec48eb515d93f8515d4abe465570dfded6fa13a3ceb9aab8031428442d9912ec20f066b2afbf56964ffe1ceb56f80321b50db73cf77a0e2445ad0211fb8e38d USER_HOME_DIR=/root
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref   && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz   && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha512sum -c -   && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1   && rm -f /tmp/apache-maven.tar.gz   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
-# Sat, 24 Apr 2021 04:45:42 GMT
+# Tue, 11 May 2021 01:48:57 GMT
 ENV MAVEN_HOME=/usr/share/maven
-# Sat, 24 Apr 2021 04:45:42 GMT
+# Tue, 11 May 2021 01:48:58 GMT
 ENV MAVEN_CONFIG=/root/.m2
-# Sat, 24 Apr 2021 04:45:43 GMT
+# Tue, 11 May 2021 01:48:58 GMT
 COPY file:1b3da5c58894f705e7387946301c0c52edb6271761ea3cd80b86a848847a64cd in /usr/local/bin/mvn-entrypoint.sh 
-# Sat, 24 Apr 2021 04:45:43 GMT
+# Tue, 11 May 2021 01:48:58 GMT
 COPY file:2bbb488dd73c55d658b91943cfdf9c26975a320ceafc45dda94c95b03e518ad3 in /usr/share/maven/ref/ 
-# Sat, 24 Apr 2021 04:45:43 GMT
+# Tue, 11 May 2021 01:48:59 GMT
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
-# Sat, 24 Apr 2021 04:45:43 GMT
+# Tue, 11 May 2021 01:48:59 GMT
 CMD ["mvn"]
 ```
 
@@ -94,25 +94,25 @@ CMD ["mvn"]
 		Last Modified: Fri, 23 Apr 2021 23:32:39 GMT  
 		Size: 16.0 MB (16034099 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:aaa80679f30cc0dbca01e4884b717e38ae5fdd159412b9cbe18a91fa33817de4`  
-		Last Modified: Fri, 23 Apr 2021 23:35:22 GMT  
-		Size: 206.4 MB (206431566 bytes)  
+	-	`sha256:5164702e25082379c4f2c69d01a694a1dc707f3ef24dd7b6bce03bfb2a14ba63`  
+		Last Modified: Mon, 10 May 2021 18:29:17 GMT  
+		Size: 206.5 MB (206472203 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8d49b5e0db898eef0002d5611d685f4d7800075f2609a9d01b0a881ac0b4b533`  
-		Last Modified: Sat, 24 Apr 2021 04:50:54 GMT  
-		Size: 31.2 MB (31168204 bytes)  
+	-	`sha256:2953a2803190aa0bfd2194a004c461aa7063dff0801e28afc1e19fb86ad92760`  
+		Last Modified: Tue, 11 May 2021 01:54:11 GMT  
+		Size: 31.2 MB (31168964 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a5843f1350683b07b49c30be0b95401eeafac6ca27f168aa2ce8b9fa6a450a6c`  
-		Last Modified: Sat, 24 Apr 2021 04:50:49 GMT  
-		Size: 9.6 MB (9610927 bytes)  
+	-	`sha256:5783d1dc3236cb30d4912b905c10c1db3e8ff6f316382cc0ce432c764bb7fc8e`  
+		Last Modified: Tue, 11 May 2021 01:54:07 GMT  
+		Size: 9.6 MB (9610947 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f3cc083ea898521e9f57cf71f8e85cbd6245fa5b3a8fd0cc567c19ab3e7df22b`  
-		Last Modified: Sat, 24 Apr 2021 04:50:49 GMT  
+	-	`sha256:6946d8db9e4a99865b11134422d1848f0f51ee4987c90daa54b10c7c3d7ec7c4`  
+		Last Modified: Tue, 11 May 2021 01:54:06 GMT  
 		Size: 852.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4d2dd9eb9a395fed2e3218c1e971ea24cbf3a835b69690591a58edd74ef625d3`  
-		Last Modified: Sat, 24 Apr 2021 04:50:49 GMT  
-		Size: 362.0 B  
+	-	`sha256:4894842fe123bb2e39950711349cf941ccadd65ec296702e13053798aa0fc38b`  
+		Last Modified: Tue, 11 May 2021 01:54:06 GMT  
+		Size: 359.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `maven:3-adoptopenjdk-16` - linux; arm variant v7
