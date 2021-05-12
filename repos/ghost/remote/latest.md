@@ -1,7 +1,7 @@
 ## `ghost:latest`
 
 ```console
-$ docker pull ghost@sha256:48c70f8c058e300720a026c5224d9ccca3a69e90c54b3a226eaee61b86efbb53
+$ docker pull ghost@sha256:85111c464f7c74740db78b43f06fccefe37bd5af48a6f2089f783abd9db4b32c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -120,14 +120,14 @@ CMD ["node" "current/index.js"]
 ### `ghost:latest` - linux; arm variant v7
 
 ```console
-$ docker pull ghost@sha256:f1a39b6b4c380dde9b3065f1dacb5402b151fee555305b7a2a024129cd460e07
+$ docker pull ghost@sha256:94905ab2a7614248bf555a9084c43429f7b4be4275dfae4150e71983efd31849
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **138.2 MB (138217212 bytes)**  
+-	Total Size: **144.8 MB (144812081 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0a0499114cf9dec43120b0beb1b88f0006746ad797ca4303d07132fa1c345ed1`
+-	Image ID: `sha256:d00d9ef7a792ba391cdcf7ff6c30bcdff3c2b72b44bb479dae93c1dd7ca759ec`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -158,29 +158,29 @@ ENV GOSU_VERSION=1.12
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates dirmngr gnupg wget; 	rm -rf /var/lib/apt/lists/*; 		dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	command -v gpgconf && gpgconf --kill all || :; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
 # Tue, 13 Apr 2021 22:04:03 GMT
 ENV NODE_ENV=production
-# Wed, 05 May 2021 20:36:25 GMT
-ENV GHOST_CLI_VERSION=1.17.0
-# Wed, 05 May 2021 20:37:18 GMT
+# Tue, 11 May 2021 22:05:38 GMT
+ENV GHOST_CLI_VERSION=1.17.1
+# Tue, 11 May 2021 22:07:02 GMT
 RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean --force
-# Wed, 05 May 2021 20:37:21 GMT
+# Tue, 11 May 2021 22:07:10 GMT
 ENV GHOST_INSTALL=/var/lib/ghost
-# Wed, 05 May 2021 20:37:22 GMT
+# Tue, 11 May 2021 22:07:14 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Wed, 05 May 2021 20:37:24 GMT
-ENV GHOST_VERSION=4.4.0
-# Wed, 05 May 2021 20:46:25 GMT
+# Tue, 11 May 2021 22:07:17 GMT
+ENV GHOST_VERSION=4.5.0
+# Tue, 11 May 2021 22:16:03 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		gosu node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	gosu node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	gosu node ghost config paths.contentPath "$GHOST_CONTENT"; 		gosu node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! gosu node yarn add "sqlite3@$sqlite3Version" --force; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends g++ gcc libc-dev libvips-dev make python3; 		rm -rf /var/lib/apt/lists/*; 				npm_config_python='python3' gosu node yarn add "sqlite3@$sqlite3Version" --force --build-from-source --ignore-optional; 				apt-mark showmanual | xargs apt-mark auto > /dev/null; 		[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 		apt-get purge -y --auto-remove; 	fi; 		gosu node yarn cache clean; 	gosu node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Wed, 05 May 2021 20:46:35 GMT
+# Tue, 11 May 2021 22:16:14 GMT
 WORKDIR /var/lib/ghost
-# Wed, 05 May 2021 20:46:36 GMT
+# Tue, 11 May 2021 22:16:21 GMT
 VOLUME [/var/lib/ghost/content]
-# Wed, 05 May 2021 20:46:39 GMT
+# Tue, 11 May 2021 22:16:25 GMT
 COPY file:303989b132b5193e832753e2c7236a4050fdc0fe60a54dc1f0c4a44422a2d1ca in /usr/local/bin 
-# Wed, 05 May 2021 20:46:41 GMT
+# Tue, 11 May 2021 22:16:27 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Wed, 05 May 2021 20:46:43 GMT
+# Tue, 11 May 2021 22:16:29 GMT
 EXPOSE 2368
-# Wed, 05 May 2021 20:46:45 GMT
+# Tue, 11 May 2021 22:16:32 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -209,16 +209,16 @@ CMD ["node" "current/index.js"]
 		Last Modified: Tue, 13 Apr 2021 22:20:51 GMT  
 		Size: 1.4 MB (1370032 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f8750fe2fd663d3de1db9e515aa4951a247bc6fdaaf50cc135bd446e80cf79b9`  
-		Last Modified: Wed, 05 May 2021 21:12:21 GMT  
-		Size: 9.4 MB (9401301 bytes)  
+	-	`sha256:5b296bdf262a5f37c1f6e28b6d456ee8d312c942b2564d5ea99450220ce829ab`  
+		Last Modified: Tue, 11 May 2021 22:42:32 GMT  
+		Size: 9.4 MB (9402496 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:033018545b151536a0d214299f0a4c92ea1610b62441a83aaf509601c9520865`  
-		Last Modified: Wed, 05 May 2021 21:13:37 GMT  
-		Size: 68.7 MB (68739310 bytes)  
+	-	`sha256:81d4abd926e0310cbdee1accf8d2656131c984f44b83789c273f3dc24769d3e3`  
+		Last Modified: Tue, 11 May 2021 22:42:54 GMT  
+		Size: 75.3 MB (75332984 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:88c91fb49fe020713792d8e1dcb45b9afb2df24c6843091dc24067a0db917aaa`  
-		Last Modified: Wed, 05 May 2021 21:12:11 GMT  
+	-	`sha256:4057099229202c545caa6d93e008591509b0adb8d0b2b297bc01a7ba8cf2e66c`  
+		Last Modified: Tue, 11 May 2021 22:42:24 GMT  
 		Size: 550.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -330,14 +330,14 @@ CMD ["node" "current/index.js"]
 ### `ghost:latest` - linux; ppc64le
 
 ```console
-$ docker pull ghost@sha256:8c0bb0ae05c91076841fc65ec16120a337e2e5387d331bc43e318c53d4a840ad
+$ docker pull ghost@sha256:5df0f0c1afb21fb36428c8cd43ef954913aa6c90e6491879452ed426abd27f21
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **144.0 MB (144002056 bytes)**  
+-	Total Size: **151.5 MB (151548652 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4c4f6477ed2f9c68bf46b8d3fc5cacc6edfd8b6fb9c6639479e4e4b2bbdf0eb8`
+-	Image ID: `sha256:8b895564f9da9db4e4fded5e29834206b5fe757ad554fc13de21a0fc6783dfbc`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -368,29 +368,29 @@ ENV GOSU_VERSION=1.12
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates dirmngr gnupg wget; 	rm -rf /var/lib/apt/lists/*; 		dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	command -v gpgconf && gpgconf --kill all || :; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
 # Tue, 13 Apr 2021 22:24:06 GMT
 ENV NODE_ENV=production
-# Wed, 05 May 2021 21:40:18 GMT
-ENV GHOST_CLI_VERSION=1.17.0
-# Wed, 05 May 2021 21:41:46 GMT
+# Tue, 11 May 2021 22:21:53 GMT
+ENV GHOST_CLI_VERSION=1.17.1
+# Tue, 11 May 2021 22:23:53 GMT
 RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean --force
-# Wed, 05 May 2021 21:42:01 GMT
+# Tue, 11 May 2021 22:24:08 GMT
 ENV GHOST_INSTALL=/var/lib/ghost
-# Wed, 05 May 2021 21:42:08 GMT
+# Tue, 11 May 2021 22:24:13 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Wed, 05 May 2021 21:42:28 GMT
-ENV GHOST_VERSION=4.4.0
-# Wed, 05 May 2021 22:25:44 GMT
+# Tue, 11 May 2021 22:24:20 GMT
+ENV GHOST_VERSION=4.5.0
+# Tue, 11 May 2021 22:53:36 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		gosu node ghost install "$GHOST_VERSION" --db sqlite3 --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"; 		cd "$GHOST_INSTALL"; 	gosu node ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://localhost:2368 --dbpath "$GHOST_CONTENT/data/ghost.db"; 	gosu node ghost config paths.contentPath "$GHOST_CONTENT"; 		gosu node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	sqlite3Version="$(node -p 'require("./package.json").optionalDependencies.sqlite3')"; 	if ! gosu node yarn add "sqlite3@$sqlite3Version" --force; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends g++ gcc libc-dev libvips-dev make python3; 		rm -rf /var/lib/apt/lists/*; 				npm_config_python='python3' gosu node yarn add "sqlite3@$sqlite3Version" --force --build-from-source --ignore-optional; 				apt-mark showmanual | xargs apt-mark auto > /dev/null; 		[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 		apt-get purge -y --auto-remove; 	fi; 		gosu node yarn cache clean; 	gosu node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Wed, 05 May 2021 22:25:54 GMT
+# Tue, 11 May 2021 22:53:48 GMT
 WORKDIR /var/lib/ghost
-# Wed, 05 May 2021 22:25:59 GMT
+# Tue, 11 May 2021 22:53:51 GMT
 VOLUME [/var/lib/ghost/content]
-# Wed, 05 May 2021 22:26:02 GMT
+# Tue, 11 May 2021 22:53:53 GMT
 COPY file:303989b132b5193e832753e2c7236a4050fdc0fe60a54dc1f0c4a44422a2d1ca in /usr/local/bin 
-# Wed, 05 May 2021 22:26:08 GMT
+# Tue, 11 May 2021 22:53:59 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Wed, 05 May 2021 22:26:15 GMT
+# Tue, 11 May 2021 22:54:02 GMT
 EXPOSE 2368
-# Wed, 05 May 2021 22:26:20 GMT
+# Tue, 11 May 2021 22:54:05 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -419,17 +419,17 @@ CMD ["node" "current/index.js"]
 		Last Modified: Tue, 13 Apr 2021 23:38:12 GMT  
 		Size: 1.3 MB (1338483 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9f589255854c611b33cb54965b212c863d9bc550d0525acbcded4f8eb8aa14f7`  
-		Last Modified: Wed, 05 May 2021 23:16:29 GMT  
-		Size: 9.4 MB (9401601 bytes)  
+	-	`sha256:4856e738cdc7c21791ccf53ce7731a5bbae71432c8e5e0ed5d4c921dd4d8bab1`  
+		Last Modified: Tue, 11 May 2021 23:30:30 GMT  
+		Size: 9.4 MB (9402045 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:749da0c0f6ab79118be4384e2ff02d72233bde99cbc7d7282a804e9542a441bf`  
-		Last Modified: Wed, 05 May 2021 23:20:27 GMT  
-		Size: 63.1 MB (63073323 bytes)  
+	-	`sha256:a3593d7ea33f5ed3d1ab9d8b818103a94416be5d615189fa244e58dfbf261ac1`  
+		Last Modified: Tue, 11 May 2021 23:32:55 GMT  
+		Size: 70.6 MB (70619473 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4f9780d025d2b53580a7f6f079dd18b523f739e57428dc8857453b481bf5c0f8`  
-		Last Modified: Wed, 05 May 2021 23:14:52 GMT  
-		Size: 546.0 B  
+	-	`sha256:faaeef6f7ac6310f8a0e8ae176e5b50f5f057f174094b6d4b76c936b20166a4f`  
+		Last Modified: Tue, 11 May 2021 23:28:55 GMT  
+		Size: 548.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ghost:latest` - linux; s390x
