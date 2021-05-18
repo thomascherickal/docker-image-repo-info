@@ -28,7 +28,7 @@ alpine-baselayout-3.2.0-r8 webpage:
 https://git.alpinelinux.org/cgit/aports/tree/main/alpine-baselayout
 
 alpine-baselayout-3.2.0-r8 installed size:
-409600
+400 KiB
 
 alpine-baselayout-3.2.0-r8 license:
 GPL-2.0-only
@@ -45,7 +45,7 @@ alpine-keys-2.2-r0 webpage:
 https://alpinelinux.org
 
 alpine-keys-2.2-r0 installed size:
-106496
+104 KiB
 
 alpine-keys-2.2-r0 license:
 MIT
@@ -62,7 +62,7 @@ apk-tools-2.12.5-r0 webpage:
 https://gitlab.alpinelinux.org/alpine/apk-tools
 
 apk-tools-2.12.5-r0 installed size:
-311296
+304 KiB
 
 apk-tools-2.12.5-r0 license:
 GPL-2.0-only
@@ -79,7 +79,7 @@ bash-5.1.0-r0 webpage:
 https://www.gnu.org/software/bash/bash.html
 
 bash-5.1.0-r0 installed size:
-1327104
+1296 KiB
 
 bash-5.1.0-r0 license:
 GPL-3.0-or-later
@@ -96,7 +96,7 @@ busybox-1.32.1-r6 webpage:
 https://busybox.net/
 
 busybox-1.32.1-r6 installed size:
-946176
+924 KiB
 
 busybox-1.32.1-r6 license:
 GPL-2.0-only
@@ -113,7 +113,7 @@ ca-certificates-20191127-r5 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
 ca-certificates-20191127-r5 installed size:
-688128
+672 KiB
 
 ca-certificates-20191127-r5 license:
 MPL-2.0 AND MIT
@@ -130,7 +130,7 @@ ca-certificates-bundle-20191127-r5 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
 ca-certificates-bundle-20191127-r5 installed size:
-233472
+228 KiB
 
 ca-certificates-bundle-20191127-r5 license:
 MPL-2.0 AND MIT
@@ -147,7 +147,7 @@ gdbm-1.19-r0 webpage:
 https://www.gnu.org/software/gdbm/
 
 gdbm-1.19-r0 installed size:
-229376
+224 KiB
 
 gdbm-1.19-r0 license:
 GPL-3.0-or-later
@@ -164,7 +164,7 @@ glib-2.66.7-r1 webpage:
 https://developer.gnome.org/glib/
 
 glib-2.66.7-r1 installed size:
-3403776
+3324 KiB
 
 glib-2.66.7-r1 license:
 LGPL-2.1-or-later
@@ -181,7 +181,7 @@ gmp-6.2.1-r0 webpage:
 https://gmplib.org/
 
 gmp-6.2.1-r0 installed size:
-425984
+416 KiB
 
 gmp-6.2.1-r0 license:
 LGPL-3.0-or-later OR GPL-2.0-or-later
@@ -198,7 +198,7 @@ gnupg-2.2.27-r0 webpage:
 https://www.gnupg.org/
 
 gnupg-2.2.27-r0 installed size:
-4530176
+4424 KiB
 
 gnupg-2.2.27-r0 license:
 GPL-3.0-or-later
@@ -215,7 +215,7 @@ gnutls-3.7.1-r0 webpage:
 https://www.gnutls.org/
 
 gnutls-3.7.1-r0 installed size:
-1892352
+1848 KiB
 
 gnutls-3.7.1-r0 license:
 LGPL-2.1-or-later
@@ -232,7 +232,7 @@ libassuan-2.5.4-r0 webpage:
 https://www.gnupg.org/software/libassuan/index.html
 
 libassuan-2.5.4-r0 installed size:
-90112
+88 KiB
 
 libassuan-2.5.4-r0 license:
 LGPL-2.1-or-later
@@ -249,7 +249,7 @@ libblkid-2.36.1-r1 webpage:
 https://git.kernel.org/cgit/utils/util-linux/util-linux.git
 
 libblkid-2.36.1-r1 installed size:
-299008
+292 KiB
 
 libblkid-2.36.1-r1 license:
 GPL-3.0-or-later AND GPL-2.0-or-later AND GPL-2.0-only AND
@@ -266,7 +266,7 @@ libbz2-1.0.8-r1 webpage:
 http://sources.redhat.com/bzip2
 
 libbz2-1.0.8-r1 installed size:
-73728
+72 KiB
 
 libbz2-1.0.8-r1 license:
 bzip2-1.0.6
@@ -283,7 +283,7 @@ libc-utils-0.7.2-r3 webpage:
 https://alpinelinux.org
 
 libc-utils-0.7.2-r3 installed size:
-4096
+4096 B
 
 libc-utils-0.7.2-r3 license:
 BSD-2-Clause AND BSD-3-Clause
@@ -300,7 +300,7 @@ libcap-2.46-r0 webpage:
 https://sites.google.com/site/fullycapable/
 
 libcap-2.46-r0 installed size:
-143360
+140 KiB
 
 libcap-2.46-r0 license:
 BSD-3-Clause OR GPL-2.0-only
@@ -317,7 +317,7 @@ libcrypto1.1-1.1.1k-r0 webpage:
 https://www.openssl.org/
 
 libcrypto1.1-1.1.1k-r0 installed size:
-2768896
+2704 KiB
 
 libcrypto1.1-1.1.1k-r0 license:
 OpenSSL
@@ -334,7 +334,7 @@ libffi-3.3-r2 webpage:
 https://sourceware.org/libffi
 
 libffi-3.3-r2 installed size:
-53248
+52 KiB
 
 libffi-3.3-r2 license:
 MIT
@@ -351,7 +351,7 @@ libgcrypt-1.8.7-r0 webpage:
 https://www.gnupg.org/
 
 libgcrypt-1.8.7-r0 installed size:
-1150976
+1124 KiB
 
 libgcrypt-1.8.7-r0 license:
 LGPL-2.1-or-later
@@ -368,7 +368,7 @@ libgpg-error-1.41-r0 webpage:
 https://www.gnupg.org/
 
 libgpg-error-1.41-r0 installed size:
-212992
+208 KiB
 
 libgpg-error-1.41-r0 license:
 GPL-2.0-or-later LGPL-2.1-or-later
@@ -385,7 +385,7 @@ libintl-0.20.2-r2 webpage:
 https://www.gnu.org/software/gettext/gettext.html
 
 libintl-0.20.2-r2 installed size:
-57344
+56 KiB
 
 libintl-0.20.2-r2 license:
 LGPL-2.1-or-later
@@ -402,7 +402,7 @@ libksba-1.5.0-r0 webpage:
 https://www.gnupg.org/software/libksba/index.html
 
 libksba-1.5.0-r0 installed size:
-229376
+224 KiB
 
 libksba-1.5.0-r0 license:
 GPL-2.0-or-later or GPL-3.0-or-later
@@ -419,7 +419,7 @@ libldap-2.4.57-r1 webpage:
 https://www.openldap.org/
 
 libldap-2.4.57-r1 installed size:
-630784
+616 KiB
 
 libldap-2.4.57-r1 license:
 custom
@@ -436,7 +436,7 @@ libmount-2.36.1-r1 webpage:
 https://git.kernel.org/cgit/utils/util-linux/util-linux.git
 
 libmount-2.36.1-r1 installed size:
-335872
+328 KiB
 
 libmount-2.36.1-r1 license:
 GPL-3.0-or-later AND GPL-2.0-or-later AND GPL-2.0-only AND
@@ -453,7 +453,7 @@ libsasl-2.1.27-r10 webpage:
 https://www.cyrusimap.org/sasl/
 
 libsasl-2.1.27-r10 installed size:
-196608
+192 KiB
 
 libsasl-2.1.27-r10 license:
 custom
@@ -470,7 +470,7 @@ libsecret-0.20.4-r0 webpage:
 https://wiki.gnome.org/Projects/Libsecret
 
 libsecret-0.20.4-r0 installed size:
-442368
+432 KiB
 
 libsecret-0.20.4-r0 license:
 LGPL-2.0-or-later
@@ -487,7 +487,7 @@ libssl1.1-1.1.1k-r0 webpage:
 https://www.openssl.org/
 
 libssl1.1-1.1.1k-r0 installed size:
-540672
+528 KiB
 
 libssl1.1-1.1.1k-r0 license:
 OpenSSL
@@ -504,7 +504,7 @@ libtasn1-4.16.0-r1 webpage:
 https://www.gnu.org/software/gnutls/
 
 libtasn1-4.16.0-r1 installed size:
-90112
+88 KiB
 
 libtasn1-4.16.0-r1 license:
 LGPL-2.1-or-later
@@ -521,7 +521,7 @@ libtls-standalone-2.9.1-r1 webpage:
 https://www.libressl.org/
 
 libtls-standalone-2.9.1-r1 installed size:
-110592
+108 KiB
 
 libtls-standalone-2.9.1-r1 license:
 ISC
@@ -538,7 +538,7 @@ libunistring-0.9.10-r0 webpage:
 https://www.gnu.org/software/libunistring/
 
 libunistring-0.9.10-r0 installed size:
-1540096
+1504 KiB
 
 libunistring-0.9.10-r0 license:
 GPL-2.0+ OR LGPL-3.0+
@@ -555,7 +555,7 @@ musl-1.2.2-r0 webpage:
 https://musl.libc.org/
 
 musl-1.2.2-r0 installed size:
-622592
+608 KiB
 
 musl-1.2.2-r0 license:
 MIT
@@ -572,7 +572,7 @@ musl-utils-1.2.2-r0 webpage:
 https://musl.libc.org/
 
 musl-utils-1.2.2-r0 installed size:
-143360
+140 KiB
 
 musl-utils-1.2.2-r0 license:
 MIT BSD GPL2+
@@ -589,7 +589,7 @@ ncurses-libs-6.2_p20210109-r0 webpage:
 https://invisible-island.net/ncurses/
 
 ncurses-libs-6.2_p20210109-r0 installed size:
-507904
+496 KiB
 
 ncurses-libs-6.2_p20210109-r0 license:
 MIT
@@ -606,7 +606,7 @@ ncurses-terminfo-base-6.2_p20210109-r0 webpage:
 https://invisible-island.net/ncurses/
 
 ncurses-terminfo-base-6.2_p20210109-r0 installed size:
-221184
+216 KiB
 
 ncurses-terminfo-base-6.2_p20210109-r0 license:
 MIT
@@ -623,7 +623,7 @@ nettle-3.7-r0 webpage:
 https://www.lysator.liu.se/~nisse/nettle/
 
 nettle-3.7-r0 installed size:
-573440
+560 KiB
 
 nettle-3.7-r0 license:
 LGPL-2.0-or-later
@@ -640,7 +640,7 @@ npth-1.6-r0 webpage:
 ftp://ftp.gnupg.org/gcrypt/npth/
 
 npth-1.6-r0 installed size:
-32768
+32 KiB
 
 npth-1.6-r0 license:
 LGPL-3.0-or-later or GPL-2.0-or-later or (LGPL-3.0-or-later and GPL-2.0-or-later)
@@ -657,7 +657,7 @@ p11-kit-0.23.22-r0 webpage:
 https://p11-glue.freedesktop.org/
 
 p11-kit-0.23.22-r0 installed size:
-1228800
+1200 KiB
 
 p11-kit-0.23.22-r0 license:
 BSD-3-Clause
@@ -674,7 +674,7 @@ pcre-8.44-r0 webpage:
 http://pcre.sourceforge.net
 
 pcre-8.44-r0 installed size:
-401408
+392 KiB
 
 pcre-8.44-r0 license:
 BSD-3-Clause
@@ -691,7 +691,7 @@ pinentry-1.1.1-r0 webpage:
 https://www.gnupg.org/aegypten2/
 
 pinentry-1.1.1-r0 installed size:
-81920
+80 KiB
 
 pinentry-1.1.1-r0 license:
 GPL-2.0-or-later
@@ -708,7 +708,7 @@ readline-8.1.0-r0 webpage:
 https://tiswww.cwru.edu/php/chet/readline/rltop.html
 
 readline-8.1.0-r0 installed size:
-315392
+308 KiB
 
 readline-8.1.0-r0 license:
 GPL-2.0-or-later
@@ -725,7 +725,7 @@ run-parts-4.11.2-r0 webpage:
 https://packages.qa.debian.org/d/debianutils.html
 
 run-parts-4.11.2-r0 installed size:
-36864
+36 KiB
 
 run-parts-4.11.2-r0 license:
 GPL-2.0-or-later
@@ -742,7 +742,7 @@ scanelf-1.2.8-r0 webpage:
 https://wiki.gentoo.org/wiki/Hardened/PaX_Utilities
 
 scanelf-1.2.8-r0 installed size:
-94208
+92 KiB
 
 scanelf-1.2.8-r0 license:
 GPL-2.0-only
@@ -759,7 +759,7 @@ sqlite-libs-3.34.1-r0 webpage:
 https://www.sqlite.org/
 
 sqlite-libs-3.34.1-r0 installed size:
-970752
+948 KiB
 
 sqlite-libs-3.34.1-r0 license:
 Public-Domain
@@ -776,7 +776,7 @@ ssl_client-1.32.1-r6 webpage:
 https://busybox.net/
 
 ssl_client-1.32.1-r6 installed size:
-28672
+28 KiB
 
 ssl_client-1.32.1-r6 license:
 GPL-2.0-only
@@ -793,7 +793,7 @@ tzdata-2021a-r0 webpage:
 https://www.iana.org/time-zones
 
 tzdata-2021a-r0 installed size:
-3518464
+3436 KiB
 
 tzdata-2021a-r0 license:
 Public-Domain
@@ -810,7 +810,7 @@ zlib-1.2.11-r3 webpage:
 https://zlib.net/
 
 zlib-1.2.11-r3 installed size:
-110592
+108 KiB
 
 zlib-1.2.11-r3 license:
 Zlib
