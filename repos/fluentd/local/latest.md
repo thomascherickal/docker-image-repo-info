@@ -31,7 +31,7 @@ alpine-baselayout-3.1.0-r3 webpage:
 https://git.alpinelinux.org/cgit/aports/tree/main/alpine-baselayout
 
 alpine-baselayout-3.1.0-r3 installed size:
-409600
+400 KiB
 
 alpine-baselayout-3.1.0-r3 license:
 GPL-2.0
@@ -48,7 +48,7 @@ alpine-keys-2.1-r1 webpage:
 http://alpinelinux.org
 
 alpine-keys-2.1-r1 installed size:
-98304
+96 KiB
 
 alpine-keys-2.1-r1 license:
 MIT
@@ -65,7 +65,7 @@ apk-tools-2.10.3-r1 webpage:
 https://git.alpinelinux.org/cgit/apk-tools/
 
 apk-tools-2.10.3-r1 installed size:
-262144
+256 KiB
 
 apk-tools-2.10.3-r1 license:
 GPL2
@@ -82,7 +82,7 @@ busybox-1.29.3-r10 webpage:
 http://busybox.net
 
 busybox-1.29.3-r10 installed size:
-905216
+884 KiB
 
 busybox-1.29.3-r10 license:
 GPL-2.0
@@ -99,7 +99,7 @@ ca-certificates-20191127-r2 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
 ca-certificates-20191127-r2 installed size:
-737280
+720 KiB
 
 ca-certificates-20191127-r2 license:
 MPL-2.0 GPL-2.0-or-later
@@ -116,7 +116,7 @@ ca-certificates-cacert-20191127-r0 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
 ca-certificates-cacert-20191127-r0 installed size:
-245760
+240 KiB
 
 ca-certificates-cacert-20191127-r0 license:
 MPL-2.0 GPL-2.0-or-later
@@ -133,7 +133,7 @@ gmp-6.1.2-r1 webpage:
 https://gmplib.org/
 
 gmp-6.1.2-r1 installed size:
-421888
+412 KiB
 
 gmp-6.1.2-r1 license:
 LGPL-3.0
@@ -150,7 +150,7 @@ libc-utils-0.7.1-r0 webpage:
 http://alpinelinux.org
 
 libc-utils-0.7.1-r0 installed size:
-4096
+4096 B
 
 libc-utils-0.7.1-r0 license:
 BSD
@@ -167,7 +167,7 @@ libcrypto1.1-1.1.1g-r0 webpage:
 https://www.openssl.org
 
 libcrypto1.1-1.1.1g-r0 installed size:
-2760704
+2696 KiB
 
 libcrypto1.1-1.1.1g-r0 license:
 OpenSSL
@@ -184,7 +184,7 @@ libssl1.1-1.1.1g-r0 webpage:
 https://www.openssl.org
 
 libssl1.1-1.1.1g-r0 installed size:
-536576
+524 KiB
 
 libssl1.1-1.1.1g-r0 license:
 OpenSSL
@@ -201,7 +201,7 @@ libtls-standalone-2.7.4-r6 webpage:
 http://www.libressl.org/
 
 libtls-standalone-2.7.4-r6 installed size:
-110592
+108 KiB
 
 libtls-standalone-2.7.4-r6 license:
 ISC
@@ -218,7 +218,7 @@ musl-1.1.20-r6 webpage:
 http://www.musl-libc.org/
 
 musl-1.1.20-r6 installed size:
-602112
+588 KiB
 
 musl-1.1.20-r6 license:
 MIT
@@ -235,7 +235,7 @@ musl-utils-1.1.20-r6 webpage:
 http://www.musl-libc.org/
 
 musl-utils-1.1.20-r6 installed size:
-139264
+136 KiB
 
 musl-utils-1.1.20-r6 license:
 MIT BSD GPL2+
@@ -252,7 +252,7 @@ ncurses-libs-6.1_p20190105-r0 webpage:
 https://www.gnu.org/software/ncurses/
 
 ncurses-libs-6.1_p20190105-r0 installed size:
-499712
+488 KiB
 
 ncurses-libs-6.1_p20190105-r0 license:
 MIT
@@ -269,7 +269,7 @@ ncurses-terminfo-6.1_p20190105-r0 webpage:
 https://www.gnu.org/software/ncurses/
 
 ncurses-terminfo-6.1_p20190105-r0 installed size:
-7274496
+7104 KiB
 
 ncurses-terminfo-6.1_p20190105-r0 license:
 MIT
@@ -286,7 +286,7 @@ ncurses-terminfo-base-6.1_p20190105-r0 webpage:
 https://www.gnu.org/software/ncurses/
 
 ncurses-terminfo-base-6.1_p20190105-r0 installed size:
-94208
+92 KiB
 
 ncurses-terminfo-base-6.1_p20190105-r0 license:
 MIT
@@ -303,7 +303,7 @@ readline-7.0.003-r1 webpage:
 https://tiswww.cwru.edu/php/chet/readline/rltop.html
 
 readline-7.0.003-r1 installed size:
-294912
+288 KiB
 
 readline-7.0.003-r1 license:
 GPL
@@ -320,7 +320,7 @@ ruby-2.5.8-r0 webpage:
 http://www.ruby-lang.org/en/
 
 ruby-2.5.8-r0 installed size:
-40960
+40 KiB
 
 ruby-2.5.8-r0 license:
 Ruby BSD-2-Clause
@@ -337,7 +337,7 @@ ruby-etc-2.5.8-r0 webpage:
 http://www.ruby-lang.org/en/
 
 ruby-etc-2.5.8-r0 installed size:
-77824
+76 KiB
 
 ruby-etc-2.5.8-r0 license:
 BSD-2-Clause
@@ -354,7 +354,7 @@ ruby-irb-2.5.8-r0 webpage:
 http://www.ruby-lang.org/en/
 
 ruby-irb-2.5.8-r0 installed size:
-319488
+312 KiB
 
 ruby-irb-2.5.8-r0 license:
 Ruby BSD-2-Clause
@@ -371,7 +371,7 @@ ruby-libs-2.5.8-r0 webpage:
 http://www.ruby-lang.org/en/
 
 ruby-libs-2.5.8-r0 installed size:
-13099008
+12 MiB
 
 ruby-libs-2.5.8-r0 license:
 Ruby BSD-2-Clause
@@ -388,7 +388,7 @@ ruby-webrick-2.5.8-r0 webpage:
 http://www.ruby-lang.org/en/
 
 ruby-webrick-2.5.8-r0 installed size:
-315392
+308 KiB
 
 ruby-webrick-2.5.8-r0 license:
 BSD-2-Clause
@@ -405,7 +405,7 @@ scanelf-1.2.3-r0 webpage:
 https://wiki.gentoo.org/wiki/Hardened/PaX_Utilities
 
 scanelf-1.2.3-r0 installed size:
-98304
+96 KiB
 
 scanelf-1.2.3-r0 license:
 GPL-2.0
@@ -422,7 +422,7 @@ ssl_client-1.29.3-r10 webpage:
 http://busybox.net
 
 ssl_client-1.29.3-r10 installed size:
-28672
+28 KiB
 
 ssl_client-1.29.3-r10 license:
 GPL-2.0
@@ -439,7 +439,7 @@ tini-0.18.0-r0 webpage:
 https://github.com/krallin/tini
 
 tini-0.18.0-r0 installed size:
-36864
+36 KiB
 
 tini-0.18.0-r0 license:
 MIT
@@ -456,7 +456,7 @@ yaml-0.2.1-r0 webpage:
 http://pyyaml.org/wiki/LibYAML
 
 yaml-0.2.1-r0 installed size:
-126976
+124 KiB
 
 yaml-0.2.1-r0 license:
 MIT
@@ -473,7 +473,7 @@ zlib-1.2.11-r1 webpage:
 http://zlib.net
 
 zlib-1.2.11-r1 installed size:
-110592
+108 KiB
 
 zlib-1.2.11-r1 license:
 zlib
