@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:35f1d5ea625ff4a1425ff14ce42137483342a8fda023b21d49bde2e7bcb9c429`
-- Created: `2021-05-01T05:52:29.11866227Z`
+- Image ID: `sha256:8924196063304ca4db891afc7caca1aabb24370ee9e69ee2aad3fa30c53ef693`
+- Created: `2021-05-07T00:51:29.387031066Z`
 - Virtual Size: ~ 89.86 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -18,10 +18,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
-  - `PHP_VERSION=7.4.18`
-  - `PHP_URL=https://www.php.net/distributions/php-7.4.18.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.18.tar.xz.asc`
-  - `PHP_SHA256=ab97f22b128d21dcbc009b50a37aaea0051b2721cbcd122d9e00e6ffc3c4b7e1`
+  - `PHP_VERSION=7.4.19`
+  - `PHP_URL=https://www.php.net/distributions/php-7.4.19.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.19.tar.xz.asc`
+  - `PHP_SHA256=6c17172c4a411ccb694d9752de899bb63c72a0a3ebe5089116bc13658a1467b2`
   - `ADMINER_VERSION=4.8.0`
   - `ADMINER_DOWNLOAD_SHA256=e274268e0e0f2a6b8040c000a969889062904ae7a5ccbaf013dc890e12e32eaa`
   - `ADMINER_SRC_DOWNLOAD_SHA256=55b52851faa5661667edb003b00cf520ebeb1e41cfcea4a7fc028ed0f55ff557`
@@ -38,7 +38,7 @@ alpine-baselayout-3.2.0-r8 webpage:
 https://git.alpinelinux.org/cgit/aports/tree/main/alpine-baselayout
 
 alpine-baselayout-3.2.0-r8 installed size:
-409600
+400 KiB
 
 alpine-baselayout-3.2.0-r8 license:
 GPL-2.0-only
@@ -55,7 +55,7 @@ alpine-keys-2.2-r0 webpage:
 https://alpinelinux.org
 
 alpine-keys-2.2-r0 installed size:
-106496
+104 KiB
 
 alpine-keys-2.2-r0 license:
 MIT
@@ -72,7 +72,7 @@ apk-tools-2.12.5-r0 webpage:
 https://gitlab.alpinelinux.org/alpine/apk-tools
 
 apk-tools-2.12.5-r0 installed size:
-311296
+304 KiB
 
 apk-tools-2.12.5-r0 license:
 GPL-2.0-only
@@ -89,7 +89,7 @@ argon2-libs-20190702-r1 webpage:
 https://github.com/P-H-C/phc-winner-argon2
 
 argon2-libs-20190702-r1 installed size:
-53248
+52 KiB
 
 argon2-libs-20190702-r1 license:
 Apache-2.0 CC0-1.0
@@ -106,7 +106,7 @@ brotli-libs-1.0.9-r3 webpage:
 https://github.com/google/brotli
 
 brotli-libs-1.0.9-r3 installed size:
-737280
+720 KiB
 
 brotli-libs-1.0.9-r3 license:
 MIT
@@ -123,7 +123,7 @@ busybox-1.32.1-r6 webpage:
 https://busybox.net/
 
 busybox-1.32.1-r6 installed size:
-946176
+924 KiB
 
 busybox-1.32.1-r6 license:
 GPL-2.0-only
@@ -140,7 +140,7 @@ ca-certificates-20191127-r5 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
 ca-certificates-20191127-r5 installed size:
-688128
+672 KiB
 
 ca-certificates-20191127-r5 license:
 MPL-2.0 AND MIT
@@ -157,7 +157,7 @@ ca-certificates-bundle-20191127-r5 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
 ca-certificates-bundle-20191127-r5 installed size:
-233472
+228 KiB
 
 ca-certificates-bundle-20191127-r5 license:
 MPL-2.0 AND MIT
@@ -174,7 +174,7 @@ curl-7.76.1-r0 webpage:
 https://curl.se/
 
 curl-7.76.1-r0 installed size:
-249856
+244 KiB
 
 curl-7.76.1-r0 license:
 MIT
@@ -191,7 +191,7 @@ freetds-1.2.18-r0 webpage:
 https://www.freetds.org/
 
 freetds-1.2.18-r0 installed size:
-1884160
+1840 KiB
 
 freetds-1.2.18-r0 license:
 GPL-2.0-or-later OR LGPL-2.0-or-later
@@ -208,7 +208,7 @@ gdbm-1.19-r0 webpage:
 https://www.gnu.org/software/gdbm/
 
 gdbm-1.19-r0 installed size:
-229376
+224 KiB
 
 gdbm-1.19-r0 license:
 GPL-3.0-or-later
@@ -225,7 +225,7 @@ libacl-2.2.53-r0 webpage:
 https://savannah.nongnu.org/projects/acl
 
 libacl-2.2.53-r0 installed size:
-45056
+44 KiB
 
 libacl-2.2.53-r0 license:
 LGPL-2.1-or-later AND GPL-2.0-or-later
@@ -242,7 +242,7 @@ libc-utils-0.7.2-r3 webpage:
 https://alpinelinux.org
 
 libc-utils-0.7.2-r3 installed size:
-4096
+4096 B
 
 libc-utils-0.7.2-r3 license:
 BSD-2-Clause AND BSD-3-Clause
@@ -259,7 +259,7 @@ libcrypto1.1-1.1.1k-r0 webpage:
 https://www.openssl.org/
 
 libcrypto1.1-1.1.1k-r0 installed size:
-2768896
+2704 KiB
 
 libcrypto1.1-1.1.1k-r0 license:
 OpenSSL
@@ -276,7 +276,7 @@ libcurl-7.76.1-r0 webpage:
 https://curl.se/
 
 libcurl-7.76.1-r0 installed size:
-499712
+488 KiB
 
 libcurl-7.76.1-r0 license:
 MIT
@@ -293,7 +293,7 @@ libedit-20191231.3.1-r1 webpage:
 https://www.thrysoee.dk/editline
 
 libedit-20191231.3.1-r1 installed size:
-200704
+196 KiB
 
 libedit-20191231.3.1-r1 license:
 BSD-3-Clause
@@ -310,7 +310,7 @@ libldap-2.4.57-r1 webpage:
 https://www.openldap.org/
 
 libldap-2.4.57-r1 installed size:
-630784
+616 KiB
 
 libldap-2.4.57-r1 license:
 custom
@@ -327,7 +327,7 @@ libpq-13.2-r0 webpage:
 https://www.postgresql.org/
 
 libpq-13.2-r0 installed size:
-335872
+328 KiB
 
 libpq-13.2-r0 license:
 PostgreSQL
@@ -344,7 +344,7 @@ libsasl-2.1.27-r10 webpage:
 https://www.cyrusimap.org/sasl/
 
 libsasl-2.1.27-r10 installed size:
-196608
+192 KiB
 
 libsasl-2.1.27-r10 license:
 custom
@@ -361,7 +361,7 @@ libsodium-1.0.18-r0 webpage:
 https://github.com/jedisct1/libsodium
 
 libsodium-1.0.18-r0 installed size:
-348160
+340 KiB
 
 libsodium-1.0.18-r0 license:
 ISC
@@ -378,7 +378,7 @@ libssl1.1-1.1.1k-r0 webpage:
 https://www.openssl.org/
 
 libssl1.1-1.1.1k-r0 installed size:
-540672
+528 KiB
 
 libssl1.1-1.1.1k-r0 license:
 OpenSSL
@@ -395,7 +395,7 @@ libtls-standalone-2.9.1-r1 webpage:
 https://www.libressl.org/
 
 libtls-standalone-2.9.1-r1 installed size:
-110592
+108 KiB
 
 libtls-standalone-2.9.1-r1 license:
 ISC
@@ -412,7 +412,7 @@ libxml2-2.9.10-r6 webpage:
 http://www.xmlsoft.org/
 
 libxml2-2.9.10-r6 installed size:
-1224704
+1196 KiB
 
 libxml2-2.9.10-r6 license:
 MIT
@@ -429,7 +429,7 @@ musl-1.2.2-r0 webpage:
 https://musl.libc.org/
 
 musl-1.2.2-r0 installed size:
-622592
+608 KiB
 
 musl-1.2.2-r0 license:
 MIT
@@ -446,7 +446,7 @@ musl-utils-1.2.2-r0 webpage:
 https://musl.libc.org/
 
 musl-utils-1.2.2-r0 installed size:
-143360
+140 KiB
 
 musl-utils-1.2.2-r0 license:
 MIT BSD GPL2+
@@ -463,7 +463,7 @@ ncurses-libs-6.2_p20210109-r0 webpage:
 https://invisible-island.net/ncurses/
 
 ncurses-libs-6.2_p20210109-r0 installed size:
-507904
+496 KiB
 
 ncurses-libs-6.2_p20210109-r0 license:
 MIT
@@ -480,7 +480,7 @@ ncurses-terminfo-base-6.2_p20210109-r0 webpage:
 https://invisible-island.net/ncurses/
 
 ncurses-terminfo-base-6.2_p20210109-r0 installed size:
-221184
+216 KiB
 
 ncurses-terminfo-base-6.2_p20210109-r0 license:
 MIT
@@ -497,7 +497,7 @@ nghttp2-libs-1.42.0-r1 webpage:
 https://nghttp2.org
 
 nghttp2-libs-1.42.0-r1 installed size:
-172032
+168 KiB
 
 nghttp2-libs-1.42.0-r1 license:
 MIT
@@ -514,7 +514,7 @@ oniguruma-6.9.6-r0 webpage:
 https://github.com/kkos/oniguruma
 
 oniguruma-6.9.6-r0 installed size:
-569344
+556 KiB
 
 oniguruma-6.9.6-r0 license:
 BSD-2-Clause
@@ -531,7 +531,7 @@ openssl-1.1.1k-r0 webpage:
 https://www.openssl.org/
 
 openssl-1.1.1k-r0 installed size:
-675840
+660 KiB
 
 openssl-1.1.1k-r0 license:
 OpenSSL
@@ -548,7 +548,7 @@ readline-8.1.0-r0 webpage:
 https://tiswww.cwru.edu/php/chet/readline/rltop.html
 
 readline-8.1.0-r0 installed size:
-315392
+308 KiB
 
 readline-8.1.0-r0 license:
 GPL-2.0-or-later
@@ -565,7 +565,7 @@ scanelf-1.2.8-r0 webpage:
 https://wiki.gentoo.org/wiki/Hardened/PaX_Utilities
 
 scanelf-1.2.8-r0 installed size:
-94208
+92 KiB
 
 scanelf-1.2.8-r0 license:
 GPL-2.0-only
@@ -582,7 +582,7 @@ sqlite-libs-3.34.1-r0 webpage:
 https://www.sqlite.org/
 
 sqlite-libs-3.34.1-r0 installed size:
-970752
+948 KiB
 
 sqlite-libs-3.34.1-r0 license:
 Public-Domain
@@ -599,7 +599,7 @@ ssl_client-1.32.1-r6 webpage:
 https://busybox.net/
 
 ssl_client-1.32.1-r6 installed size:
-28672
+28 KiB
 
 ssl_client-1.32.1-r6 license:
 GPL-2.0-only
@@ -616,7 +616,7 @@ tar-1.34-r0 webpage:
 https://www.gnu.org/software/tar/
 
 tar-1.34-r0 installed size:
-499712
+488 KiB
 
 tar-1.34-r0 license:
 GPL-3.0-or-later
@@ -633,7 +633,7 @@ unixodbc-2.3.9-r1 webpage:
 http://www.unixodbc.org/
 
 unixodbc-2.3.9-r1 installed size:
-716800
+700 KiB
 
 unixodbc-2.3.9-r1 license:
 LGPL-2.0-or-later
@@ -650,7 +650,7 @@ xz-5.2.5-r0 webpage:
 https://tukaani.org/xz
 
 xz-5.2.5-r0 installed size:
-163840
+160 KiB
 
 xz-5.2.5-r0 license:
 GPL-2.0-or-later AND Public-Domain AND LGPL-2.1-or-later
@@ -667,7 +667,7 @@ xz-libs-5.2.5-r0 webpage:
 https://tukaani.org/xz
 
 xz-libs-5.2.5-r0 installed size:
-151552
+148 KiB
 
 xz-libs-5.2.5-r0 license:
 GPL-2.0-or-later AND Public-Domain AND LGPL-2.1-or-later
@@ -684,7 +684,7 @@ zlib-1.2.11-r3 webpage:
 https://zlib.net/
 
 zlib-1.2.11-r3 installed size:
-110592
+108 KiB
 
 zlib-1.2.11-r3 license:
 Zlib
