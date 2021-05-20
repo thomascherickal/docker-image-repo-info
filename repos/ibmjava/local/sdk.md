@@ -2,15 +2,15 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:956aeeefc2adb22d20ff37f88057ede1b3a531aae8578df33d5152024b5c845a`
-- Created: `2021-04-24T00:24:46.381779146Z`
-- Virtual Size: ~ 312.61 Mb  
+- Image ID: `sha256:df167f4003574e8e821bf5b6db868d8d29b818b4f3db6baa3bf79c867e019de5`
+- Created: `2021-05-19T22:40:53.104700409Z`
+- Virtual Size: ~ 311.07 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
 - Environment:
   - `PATH=/opt/ibm/java/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `JAVA_VERSION=1.8.0_sr6fp26`
+  - `JAVA_VERSION=1.8.0_sr6fp30`
   - `JAVA_HOME=/opt/ibm/java/jre`
   - `IBM_JAVA_OPTIONS=-XX:+UseContainerSupport`
 
@@ -1232,12 +1232,12 @@ $ apt-get source -qq --print-uris shadow=1:4.5-1ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.5-1ubuntu2.debian.tar.xz' shadow_4.5-1ubuntu2.debian.tar.xz 471472 SHA512:d4017784bfc5118b86533da52909459adf4e79ffa049d8029437860bfaeac91eabd40e6510f67bba6f8b2d74fde62c24eb8e37a7b4637d14eeb63aecaf2294cc
 ```
 
-### `dpkg` source package: `systemd=237-3ubuntu10.46`
+### `dpkg` source package: `systemd=237-3ubuntu10.47`
 
 Binary Packages:
 
-- `libsystemd0:amd64=237-3ubuntu10.46`
-- `libudev1:amd64=237-3ubuntu10.46`
+- `libsystemd0:amd64=237-3ubuntu10.47`
+- `libudev1:amd64=237-3ubuntu10.47`
 
 Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/libudev1/copyright`)
 
@@ -1249,9 +1249,14 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris systemd=237-3ubuntu10.47
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.47.dsc' systemd_237-3ubuntu10.47.dsc 5216 SHA512:7bd3c633c969fb024b1169f36f4588e9850155a651c3478abbaf93b102aa5ced9b597ecaa36ea9f754a0743cb15594934af3dc99e653ad582942b46396e746ad
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237.orig.tar.gz' systemd_237.orig.tar.gz 6871350 SHA512:15ef4b92815a6dd9a6c51672dbc00fd7cd0f08068ef0cbeaca574f68d330b28bc67ba1946f24f75ef3d9e7b63843a73eea700db54688061dbf5c9f8470394c3b
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.47.debian.tar.xz' systemd_237-3ubuntu10.47.debian.tar.xz 291420 SHA512:3db203d14c3fcb9d076c2b40690c9fff9b2268d8a31d51d14f803f1021c8b926cfd6f1dda1b7a87e9698a82bf97cbf1e7b0b0ac404a4bb086a702df1f9cbbe8a
+```
 
 ### `dpkg` source package: `sysvinit=2.88dsf-59.10ubuntu1`
 
