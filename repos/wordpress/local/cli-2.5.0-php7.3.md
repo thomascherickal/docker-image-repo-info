@@ -1,10 +1,10 @@
-# `wordpress:cli-2.4.0`
+# `wordpress:cli-2.5.0-php7.3`
 
 ## Docker Metadata
 
-- Image ID: `sha256:0c08272cc51e1e5afea485b0fbe1f07eeb9feba4641429e51b8c34583dc4d2f8`
-- Created: `2021-05-07T01:49:24.790088474Z`
-- Virtual Size: ~ 136.62 Mb  
+- Image ID: `sha256:4887f6b392d1c6de7ea684c12577f758645feb8b2ef8ea77c21496cd269f3bfa`
+- Created: `2021-05-19T23:45:49.616206254Z`
+- Virtual Size: ~ 130.27 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -16,14 +16,14 @@
   - `PHP_CFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
-  - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
-  - `PHP_VERSION=7.4.19`
-  - `PHP_URL=https://www.php.net/distributions/php-7.4.19.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.19.tar.xz.asc`
-  - `PHP_SHA256=6c17172c4a411ccb694d9752de899bb63c72a0a3ebe5089116bc13658a1467b2`
+  - `GPG_KEYS=CBAF69F173A0FEA4B537F470D66C9593118BCCB6 F38252826ACD957EF380D39F2F7956BC5DA04B5D`
+  - `PHP_VERSION=7.3.28`
+  - `PHP_URL=https://www.php.net/distributions/php-7.3.28.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.3.28.tar.xz.asc`
+  - `PHP_SHA256=a2a84dbec8c1eee3f46c5f249eaaa2ecb3f9e7a6f5d0604d2df44ff8d4904dbe`
   - `WORDPRESS_CLI_GPG_KEY=63AF7AA15067C05616FDDD88A3A2E8F226F0BC06`
-  - `WORDPRESS_CLI_VERSION=2.4.0`
-  - `WORDPRESS_CLI_SHA512=4049c7e45e14276a70a41c3b0864be7a6a8cfa8ea65ebac8b184a4f503a91baa1a0d29260d03248bc74aef70729824330fb6b396336172a624332e16f64e37ef`
+  - `WORDPRESS_CLI_VERSION=2.5.0`
+  - `WORDPRESS_CLI_SHA512=08dd9035fda1d529807380d5b757839e2809e289eb1a698fe33e7e21a1431d3f77c551c2b2db5adc55083d5075ea4137407994111890f765e790a97e6d9ca7af`
 
 ## `apk` (`.apk`-based packages)
 
@@ -823,23 +823,6 @@ nghttp2-libs-1.42.0-r1 installed size:
 
 nghttp2-libs-1.42.0-r1 license:
 MIT
-
-```
-
-### `apk` package: `oniguruma`
-
-```console
-oniguruma-6.9.6-r0 description:
-a regular expressions library
-
-oniguruma-6.9.6-r0 webpage:
-https://github.com/kkos/oniguruma
-
-oniguruma-6.9.6-r0 installed size:
-556 KiB
-
-oniguruma-6.9.6-r0 license:
-BSD-2-Clause
 
 ```
 

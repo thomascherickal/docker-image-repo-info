@@ -1,10 +1,10 @@
-# `wordpress:cli-2.4.0-php7.3`
+# `wordpress:cli-2.5.0-php8.0`
 
 ## Docker Metadata
 
-- Image ID: `sha256:a13c38e048e7a88f67e3b84435c334bf9255904518c86021931e9f5894afc785`
-- Created: `2021-04-29T22:08:25.362047121Z`
-- Virtual Size: ~ 129.74 Mb  
+- Image ID: `sha256:d0f9cefa98e0dd2aceead7017f6193c00ece1b483ce06333da824c4cb33bd1bf`
+- Created: `2021-05-19T23:45:56.470997447Z`
+- Virtual Size: ~ 128.56 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -16,14 +16,14 @@
   - `PHP_CFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
-  - `GPG_KEYS=CBAF69F173A0FEA4B537F470D66C9593118BCCB6 F38252826ACD957EF380D39F2F7956BC5DA04B5D`
-  - `PHP_VERSION=7.3.28`
-  - `PHP_URL=https://www.php.net/distributions/php-7.3.28.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.3.28.tar.xz.asc`
-  - `PHP_SHA256=a2a84dbec8c1eee3f46c5f249eaaa2ecb3f9e7a6f5d0604d2df44ff8d4904dbe`
+  - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F`
+  - `PHP_VERSION=8.0.6`
+  - `PHP_URL=https://www.php.net/distributions/php-8.0.6.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.6.tar.xz.asc`
+  - `PHP_SHA256=e9871d3b6c391fe9e89f86f6334852dcc10eeaaa8d5565beb8436e7f0cf30e20`
   - `WORDPRESS_CLI_GPG_KEY=63AF7AA15067C05616FDDD88A3A2E8F226F0BC06`
-  - `WORDPRESS_CLI_VERSION=2.4.0`
-  - `WORDPRESS_CLI_SHA512=4049c7e45e14276a70a41c3b0864be7a6a8cfa8ea65ebac8b184a4f503a91baa1a0d29260d03248bc74aef70729824330fb6b396336172a624332e16f64e37ef`
+  - `WORDPRESS_CLI_VERSION=2.5.0`
+  - `WORDPRESS_CLI_SHA512=08dd9035fda1d529807380d5b757839e2809e289eb1a698fe33e7e21a1431d3f77c551c2b2db5adc55083d5075ea4137407994111890f765e790a97e6d9ca7af`
 
 ## `apk` (`.apk`-based packages)
 
@@ -197,40 +197,6 @@ MIT
 
 ```
 
-### `apk` package: `expat`
-
-```console
-expat-2.2.10-r1 description:
-XML Parser library written in C
-
-expat-2.2.10-r1 webpage:
-http://www.libexpat.org/
-
-expat-2.2.10-r1 installed size:
-184 KiB
-
-expat-2.2.10-r1 license:
-MIT
-
-```
-
-### `apk` package: `fontconfig`
-
-```console
-fontconfig-2.13.1-r3 description:
-Library for configuring and customizing font access
-
-fontconfig-2.13.1-r3 webpage:
-https://www.freedesktop.org/wiki/Software/fontconfig
-
-fontconfig-2.13.1-r3 installed size:
-632 KiB
-
-fontconfig-2.13.1-r3 license:
-MIT
-
-```
-
 ### `apk` package: `freetype`
 
 ```console
@@ -245,40 +211,6 @@ freetype-2.10.4-r1 installed size:
 
 freetype-2.10.4-r1 license:
 FTL GPL-2.0-or-later
-
-```
-
-### `apk` package: `imagemagick-libs`
-
-```console
-imagemagick-libs-7.0.10.57-r0 description:
-Collection of tools and libraries for many image formats (libraries)
-
-imagemagick-libs-7.0.10.57-r0 webpage:
-https://www.imagemagick.org/
-
-imagemagick-libs-7.0.10.57-r0 installed size:
-3244 KiB
-
-imagemagick-libs-7.0.10.57-r0 license:
-ImageMagick
-
-```
-
-### `apk` package: `lcms2`
-
-```console
-lcms2-2.11-r0 description:
-Color Management Engine
-
-lcms2-2.11-r0 webpage:
-http://www.littlecms.com
-
-lcms2-2.11-r0 installed size:
-332 KiB
-
-lcms2-2.11-r0 license:
-MIT GPL-3.0-only
 
 ```
 
@@ -313,23 +245,6 @@ libacl-2.2.53-r0 installed size:
 
 libacl-2.2.53-r0 license:
 LGPL-2.1-or-later AND GPL-2.0-or-later
-
-```
-
-### `apk` package: `libbsd`
-
-```console
-libbsd-0.10.0-r0 description:
-commonly-used BSD functions not implemented by all libcs
-
-libbsd-0.10.0-r0 webpage:
-https://libbsd.freedesktop.org/
-
-libbsd-0.10.0-r0 installed size:
-92 KiB
-
-libbsd-0.10.0-r0 license:
-BSD
 
 ```
 
@@ -452,23 +367,6 @@ BSD-3-Clause IJG Zlib
 
 ```
 
-### `apk` package: `libltdl`
-
-```console
-libltdl-2.4.6-r7 description:
-Runtime libraries for GNU Libtool Dynamic Module Loader
-
-libltdl-2.4.6-r7 webpage:
-https://www.gnu.org/software/libtool
-
-libltdl-2.4.6-r7 installed size:
-52 KiB
-
-libltdl-2.4.6-r7 license:
-LGPL-2.0+
-
-```
-
 ### `apk` package: `libpng`
 
 ```console
@@ -551,108 +449,6 @@ libtls-standalone-2.9.1-r1 installed size:
 
 libtls-standalone-2.9.1-r1 license:
 ISC
-
-```
-
-### `apk` package: `libuuid`
-
-```console
-libuuid-2.36.1-r1 description:
-DCE compatible Universally Unique Identifier library
-
-libuuid-2.36.1-r1 webpage:
-https://git.kernel.org/cgit/utils/util-linux/util-linux.git
-
-libuuid-2.36.1-r1 installed size:
-40 KiB
-
-libuuid-2.36.1-r1 license:
-GPL-3.0-or-later AND GPL-2.0-or-later AND GPL-2.0-only AND
-
-```
-
-### `apk` package: `libx11`
-
-```console
-libx11-1.7.0-r0 description:
-X11 client-side library
-
-libx11-1.7.0-r0 webpage:
-http://xorg.freedesktop.org/
-
-libx11-1.7.0-r0 installed size:
-3240 KiB
-
-libx11-1.7.0-r0 license:
-custom:XFREE86
-
-```
-
-### `apk` package: `libxau`
-
-```console
-libxau-1.0.9-r0 description:
-X11 authorisation library
-
-libxau-1.0.9-r0 webpage:
-http://xorg.freedesktop.org/
-
-libxau-1.0.9-r0 installed size:
-28 KiB
-
-libxau-1.0.9-r0 license:
-MIT
-
-```
-
-### `apk` package: `libxcb`
-
-```console
-libxcb-1.14-r1 description:
-X11 client-side library
-
-libxcb-1.14-r1 webpage:
-https://xcb.freedesktop.org
-
-libxcb-1.14-r1 installed size:
-996 KiB
-
-libxcb-1.14-r1 license:
-MIT
-
-```
-
-### `apk` package: `libxdmcp`
-
-```console
-libxdmcp-1.1.3-r0 description:
-X11 Display Manager Control Protocol library
-
-libxdmcp-1.1.3-r0 webpage:
-http://xorg.freedesktop.org/
-
-libxdmcp-1.1.3-r0 installed size:
-40 KiB
-
-libxdmcp-1.1.3-r0 license:
-MIT
-
-```
-
-### `apk` package: `libxext`
-
-```console
-libxext-1.3.4-r0 description:
-X11 miscellaneous extensions library
-
-libxext-1.3.4-r0 webpage:
-http://xorg.freedesktop.org/
-
-libxext-1.3.4-r0 installed size:
-84 KiB
-
-libxext-1.3.4-r0 license:
-MIT
 
 ```
 
@@ -823,6 +619,23 @@ nghttp2-libs-1.42.0-r1 installed size:
 
 nghttp2-libs-1.42.0-r1 license:
 MIT
+
+```
+
+### `apk` package: `oniguruma`
+
+```console
+oniguruma-6.9.6-r0 description:
+a regular expressions library
+
+oniguruma-6.9.6-r0 webpage:
+https://github.com/kkos/oniguruma
+
+oniguruma-6.9.6-r0 installed size:
+556 KiB
+
+oniguruma-6.9.6-r0 license:
+BSD-2-Clause
 
 ```
 
