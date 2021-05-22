@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:88b2e6b105da7a59c28cf75ea6c02002b345bdf3d2728f3ea1c14fb8f2dc7b13`
-- Created: `2021-05-11T00:31:36.513174498Z`
-- Virtual Size: ~ 186.32 Mb  
+- Image ID: `sha256:246db2517862b705e7a7187bf0e9d04595033385b7656fe3f8ca909b3db5cad3`
+- Created: `2021-05-21T17:36:36.348395347Z`
+- Virtual Size: ~ 186.33 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -14,8 +14,8 @@
   - `OPENSSL_VERSION=1.1.1k`
   - `OPENSSL_SOURCE_SHA256=892a0875b9872acd04a9fde79b1f943075d5ea162415de3047c327df33fbaee5`
   - `OPENSSL_PGP_KEY_IDS=0x8657ABB260F056B1E5190839D9C4D26D0E604491 0x5B2545DAB21995F4088CEFAA36CEE4DEB00CFE33 0xED230BEC4D4F2518B9D7DF41F0DB4D21C1D35231 0xC1F33DD8CE1D4CC613AF14DA9195C48241FBF7DD 0x7953AC1FBC3DC8B3B292393ED5E9E43F7DF9EE8C 0xE5E52560DD91C556DDBDA5D02064C53641C25E5D`
-  - `OTP_VERSION=23.3.4`
-  - `OTP_SOURCE_SHA256=e19e6e0eebcee3b6165db33a8f7cea7d70c5b98ea41bd336a6fe26ddf775a2bb`
+  - `OTP_VERSION=23.3.4.1`
+  - `OTP_SOURCE_SHA256=ec2998933ff634552b3daadd85c1cf9b93abb06497e3722c9b1596b2f7931bd9`
   - `RABBITMQ_DATA_DIR=/var/lib/rabbitmq`
   - `RABBITMQ_VERSION=3.8.16`
   - `RABBITMQ_PGP_KEY_ID=0x0A9AF2115F4687BD29803A206B73A36E6026DFCA`
@@ -1407,12 +1407,12 @@ $ apt-get source -qq --print-uris sqlite3=3.22.0-1ubuntu0.4
 'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.22.0-1ubuntu0.4.debian.tar.xz' sqlite3_3.22.0-1ubuntu0.4.debian.tar.xz 47632 SHA512:1b280b6c301b2f3c15ebdfe6085584cef34257edae14c94d7d6e8d06a7b884a96029d354cb3f09df6b6427f671a24cc25ee1ebc178c7168cd0a52bce8c8b5cf0
 ```
 
-### `dpkg` source package: `systemd=237-3ubuntu10.46`
+### `dpkg` source package: `systemd=237-3ubuntu10.47`
 
 Binary Packages:
 
-- `libsystemd0:amd64=237-3ubuntu10.46`
-- `libudev1:amd64=237-3ubuntu10.46`
+- `libsystemd0:amd64=237-3ubuntu10.47`
+- `libudev1:amd64=237-3ubuntu10.47`
 
 Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/libudev1/copyright`)
 
@@ -1424,9 +1424,14 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris systemd=237-3ubuntu10.47
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.47.dsc' systemd_237-3ubuntu10.47.dsc 5216 SHA512:7bd3c633c969fb024b1169f36f4588e9850155a651c3478abbaf93b102aa5ced9b597ecaa36ea9f754a0743cb15594934af3dc99e653ad582942b46396e746ad
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237.orig.tar.gz' systemd_237.orig.tar.gz 6871350 SHA512:15ef4b92815a6dd9a6c51672dbc00fd7cd0f08068ef0cbeaca574f68d330b28bc67ba1946f24f75ef3d9e7b63843a73eea700db54688061dbf5c9f8470394c3b
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.47.debian.tar.xz' systemd_237-3ubuntu10.47.debian.tar.xz 291420 SHA512:3db203d14c3fcb9d076c2b40690c9fff9b2268d8a31d51d14f803f1021c8b926cfd6f1dda1b7a87e9698a82bf97cbf1e7b0b0ac404a4bb086a702df1f9cbbe8a
+```
 
 ### `dpkg` source package: `sysvinit=2.88dsf-59.10ubuntu1`
 
