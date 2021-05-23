@@ -34,7 +34,7 @@ alpine-baselayout-3.2.0-r7 webpage:
 https://git.alpinelinux.org/cgit/aports/tree/main/alpine-baselayout
 
 alpine-baselayout-3.2.0-r7 installed size:
-409600
+400 KiB
 
 alpine-baselayout-3.2.0-r7 license:
 GPL-2.0-only
@@ -51,7 +51,7 @@ alpine-keys-2.2-r0 webpage:
 https://alpinelinux.org
 
 alpine-keys-2.2-r0 installed size:
-106496
+104 KiB
 
 alpine-keys-2.2-r0 license:
 MIT
@@ -68,7 +68,7 @@ apk-tools-2.10.6-r0 webpage:
 https://gitlab.alpinelinux.org/alpine/apk-tools
 
 apk-tools-2.10.6-r0 installed size:
-266240
+260 KiB
 
 apk-tools-2.10.6-r0 license:
 GPL-2.0-only
@@ -85,7 +85,7 @@ busybox-1.31.1-r20 webpage:
 https://busybox.net/
 
 busybox-1.31.1-r20 installed size:
-962560
+940 KiB
 
 busybox-1.31.1-r20 license:
 GPL-2.0-only
@@ -102,7 +102,7 @@ ca-certificates-20191127-r4 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
 ca-certificates-20191127-r4 installed size:
-688128
+672 KiB
 
 ca-certificates-20191127-r4 license:
 MPL-2.0 GPL-2.0-or-later
@@ -119,7 +119,7 @@ ca-certificates-bundle-20191127-r4 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
 ca-certificates-bundle-20191127-r4 installed size:
-233472
+228 KiB
 
 ca-certificates-bundle-20191127-r4 license:
 MPL-2.0 GPL-2.0-or-later
@@ -136,7 +136,7 @@ libc-utils-0.7.2-r3 webpage:
 https://alpinelinux.org
 
 libc-utils-0.7.2-r3 installed size:
-4096
+4096 B
 
 libc-utils-0.7.2-r3 license:
 BSD-2-Clause AND BSD-3-Clause
@@ -153,7 +153,7 @@ libcrypto1.1-1.1.1k-r0 webpage:
 https://www.openssl.org/
 
 libcrypto1.1-1.1.1k-r0 installed size:
-2764800
+2700 KiB
 
 libcrypto1.1-1.1.1k-r0 license:
 OpenSSL
@@ -170,7 +170,7 @@ libssl1.1-1.1.1k-r0 webpage:
 https://www.openssl.org/
 
 libssl1.1-1.1.1k-r0 installed size:
-540672
+528 KiB
 
 libssl1.1-1.1.1k-r0 license:
 OpenSSL
@@ -187,7 +187,7 @@ libtls-standalone-2.9.1-r1 webpage:
 https://www.libressl.org/
 
 libtls-standalone-2.9.1-r1 installed size:
-110592
+108 KiB
 
 libtls-standalone-2.9.1-r1 license:
 ISC
@@ -204,7 +204,7 @@ musl-1.1.24-r10 webpage:
 https://musl.libc.org/
 
 musl-1.1.24-r10 installed size:
-614400
+600 KiB
 
 musl-1.1.24-r10 license:
 MIT
@@ -221,7 +221,7 @@ musl-utils-1.1.24-r10 webpage:
 https://musl.libc.org/
 
 musl-utils-1.1.24-r10 installed size:
-151552
+148 KiB
 
 musl-utils-1.1.24-r10 license:
 MIT BSD GPL2+
@@ -238,7 +238,7 @@ scanelf-1.2.6-r0 webpage:
 https://wiki.gentoo.org/wiki/Hardened/PaX_Utilities
 
 scanelf-1.2.6-r0 installed size:
-94208
+92 KiB
 
 scanelf-1.2.6-r0 license:
 GPL-2.0-only
@@ -255,7 +255,7 @@ ssl_client-1.31.1-r20 webpage:
 https://busybox.net/
 
 ssl_client-1.31.1-r20 installed size:
-28672
+28 KiB
 
 ssl_client-1.31.1-r20 license:
 GPL-2.0-only
@@ -272,7 +272,7 @@ zlib-1.2.11-r3 webpage:
 https://zlib.net/
 
 zlib-1.2.11-r3 installed size:
-110592
+108 KiB
 
 zlib-1.2.11-r3 license:
 Zlib
