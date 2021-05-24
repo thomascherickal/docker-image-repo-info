@@ -2,21 +2,21 @@
 
 # Tags of `sonarqube`
 
--	[`sonarqube:8-community`](#sonarqube8-community)
--	[`sonarqube:8-datacenter-app`](#sonarqube8-datacenter-app)
--	[`sonarqube:8-datacenter-search`](#sonarqube8-datacenter-search)
--	[`sonarqube:8-developer`](#sonarqube8-developer)
--	[`sonarqube:8-enterprise`](#sonarqube8-enterprise)
--	[`sonarqube:8.9-community`](#sonarqube89-community)
--	[`sonarqube:8.9-datacenter-app`](#sonarqube89-datacenter-app)
--	[`sonarqube:8.9-datacenter-search`](#sonarqube89-datacenter-search)
--	[`sonarqube:8.9-developer`](#sonarqube89-developer)
--	[`sonarqube:8.9-enterprise`](#sonarqube89-enterprise)
 -	[`sonarqube:8.9.0-community`](#sonarqube890-community)
 -	[`sonarqube:8.9.0-datacenter-app`](#sonarqube890-datacenter-app)
 -	[`sonarqube:8.9.0-datacenter-search`](#sonarqube890-datacenter-search)
 -	[`sonarqube:8.9.0-developer`](#sonarqube890-developer)
 -	[`sonarqube:8.9.0-enterprise`](#sonarqube890-enterprise)
+-	[`sonarqube:8.9-community`](#sonarqube89-community)
+-	[`sonarqube:8.9-datacenter-app`](#sonarqube89-datacenter-app)
+-	[`sonarqube:8.9-datacenter-search`](#sonarqube89-datacenter-search)
+-	[`sonarqube:8.9-developer`](#sonarqube89-developer)
+-	[`sonarqube:8.9-enterprise`](#sonarqube89-enterprise)
+-	[`sonarqube:8-community`](#sonarqube8-community)
+-	[`sonarqube:8-datacenter-app`](#sonarqube8-datacenter-app)
+-	[`sonarqube:8-datacenter-search`](#sonarqube8-datacenter-search)
+-	[`sonarqube:8-developer`](#sonarqube8-developer)
+-	[`sonarqube:8-enterprise`](#sonarqube8-enterprise)
 -	[`sonarqube:community`](#sonarqubecommunity)
 -	[`sonarqube:datacenter-app`](#sonarqubedatacenter-app)
 -	[`sonarqube:datacenter-search`](#sonarqubedatacenter-search)
@@ -30,7 +30,7 @@
 -	[`sonarqube:lts-developer`](#sonarqubelts-developer)
 -	[`sonarqube:lts-enterprise`](#sonarqubelts-enterprise)
 
-## `sonarqube:8-community`
+## `sonarqube:8.9.0-community`
 
 ```console
 $ docker pull sonarqube@sha256:33c14ecfcd97c49e26deabefe97cb8b9b4735a5bee1afb91bfe8fac57e9d39e1
@@ -40,7 +40,7 @@ $ docker pull sonarqube@sha256:33c14ecfcd97c49e26deabefe97cb8b9b4735a5bee1afb91b
 -	Platforms:
 	-	linux; amd64
 
-### `sonarqube:8-community` - linux; amd64
+### `sonarqube:8.9.0-community` - linux; amd64
 
 ```console
 $ docker pull sonarqube@sha256:836e3b543f34c36438456e0c7a03fef314cbb77741e790920aa2565d83f0c9e4
@@ -108,7 +108,7 @@ CMD ["bin/sonar.sh"]
 		Size: 1.1 KB (1096 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-## `sonarqube:8-datacenter-app`
+## `sonarqube:8.9.0-datacenter-app`
 
 ```console
 $ docker pull sonarqube@sha256:13a5bdf6df840ee45c24f3eb1c53d3195642c9f1c1ec869cd6cc54e56fea96c1
@@ -118,7 +118,7 @@ $ docker pull sonarqube@sha256:13a5bdf6df840ee45c24f3eb1c53d3195642c9f1c1ec869cd
 -	Platforms:
 	-	linux; amd64
 
-### `sonarqube:8-datacenter-app` - linux; amd64
+### `sonarqube:8.9.0-datacenter-app` - linux; amd64
 
 ```console
 $ docker pull sonarqube@sha256:688c69ce60f6cdb16c5e0ae59d2c9de74683e4ae02f9ec2565c0abd9e5f85ae0
@@ -186,7 +186,7 @@ CMD ["bin/sonar.sh"]
 		Size: 1.4 KB (1394 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-## `sonarqube:8-datacenter-search`
+## `sonarqube:8.9.0-datacenter-search`
 
 ```console
 $ docker pull sonarqube@sha256:151b27986623bcdd02a32dab3795653c7bc54bc89766afec5dc2bfcbabe2961e
@@ -196,7 +196,7 @@ $ docker pull sonarqube@sha256:151b27986623bcdd02a32dab3795653c7bc54bc89766afec5
 -	Platforms:
 	-	linux; amd64
 
-### `sonarqube:8-datacenter-search` - linux; amd64
+### `sonarqube:8.9.0-datacenter-search` - linux; amd64
 
 ```console
 $ docker pull sonarqube@sha256:9ef03851f47284153be39a12d9dc7efbc1739a51ab85032117963a6ef35d171b
@@ -264,7 +264,7 @@ CMD ["bin/sonar.sh"]
 		Size: 1.4 KB (1407 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-## `sonarqube:8-developer`
+## `sonarqube:8.9.0-developer`
 
 ```console
 $ docker pull sonarqube@sha256:525410c8cc381ca08e484856db0e59495af4581b964fcc9971078ee94d53538d
@@ -274,7 +274,7 @@ $ docker pull sonarqube@sha256:525410c8cc381ca08e484856db0e59495af4581b964fcc997
 -	Platforms:
 	-	linux; amd64
 
-### `sonarqube:8-developer` - linux; amd64
+### `sonarqube:8.9.0-developer` - linux; amd64
 
 ```console
 $ docker pull sonarqube@sha256:7c0edcb99c964984db6d24330db33bb12de1e8ae0d5974d77640b1efea1483d1
@@ -342,7 +342,7 @@ CMD ["bin/sonar.sh"]
 		Size: 1.1 KB (1097 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-## `sonarqube:8-enterprise`
+## `sonarqube:8.9.0-enterprise`
 
 ```console
 $ docker pull sonarqube@sha256:58e4d0661e4c060767708aeb82a6c5d7ed1e367ca11c750f361d9b15dad5671b
@@ -352,7 +352,7 @@ $ docker pull sonarqube@sha256:58e4d0661e4c060767708aeb82a6c5d7ed1e367ca11c750f3
 -	Platforms:
 	-	linux; amd64
 
-### `sonarqube:8-enterprise` - linux; amd64
+### `sonarqube:8.9.0-enterprise` - linux; amd64
 
 ```console
 $ docker pull sonarqube@sha256:55d397a400d11411a7225a9ecedaeaf6f45096f1252b01feadbb0e9682f5a9fa
@@ -810,7 +810,7 @@ CMD ["bin/sonar.sh"]
 		Size: 1.1 KB (1096 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-## `sonarqube:8.9.0-community`
+## `sonarqube:8-community`
 
 ```console
 $ docker pull sonarqube@sha256:33c14ecfcd97c49e26deabefe97cb8b9b4735a5bee1afb91bfe8fac57e9d39e1
@@ -820,7 +820,7 @@ $ docker pull sonarqube@sha256:33c14ecfcd97c49e26deabefe97cb8b9b4735a5bee1afb91b
 -	Platforms:
 	-	linux; amd64
 
-### `sonarqube:8.9.0-community` - linux; amd64
+### `sonarqube:8-community` - linux; amd64
 
 ```console
 $ docker pull sonarqube@sha256:836e3b543f34c36438456e0c7a03fef314cbb77741e790920aa2565d83f0c9e4
@@ -888,7 +888,7 @@ CMD ["bin/sonar.sh"]
 		Size: 1.1 KB (1096 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-## `sonarqube:8.9.0-datacenter-app`
+## `sonarqube:8-datacenter-app`
 
 ```console
 $ docker pull sonarqube@sha256:13a5bdf6df840ee45c24f3eb1c53d3195642c9f1c1ec869cd6cc54e56fea96c1
@@ -898,7 +898,7 @@ $ docker pull sonarqube@sha256:13a5bdf6df840ee45c24f3eb1c53d3195642c9f1c1ec869cd
 -	Platforms:
 	-	linux; amd64
 
-### `sonarqube:8.9.0-datacenter-app` - linux; amd64
+### `sonarqube:8-datacenter-app` - linux; amd64
 
 ```console
 $ docker pull sonarqube@sha256:688c69ce60f6cdb16c5e0ae59d2c9de74683e4ae02f9ec2565c0abd9e5f85ae0
@@ -966,7 +966,7 @@ CMD ["bin/sonar.sh"]
 		Size: 1.4 KB (1394 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-## `sonarqube:8.9.0-datacenter-search`
+## `sonarqube:8-datacenter-search`
 
 ```console
 $ docker pull sonarqube@sha256:151b27986623bcdd02a32dab3795653c7bc54bc89766afec5dc2bfcbabe2961e
@@ -976,7 +976,7 @@ $ docker pull sonarqube@sha256:151b27986623bcdd02a32dab3795653c7bc54bc89766afec5
 -	Platforms:
 	-	linux; amd64
 
-### `sonarqube:8.9.0-datacenter-search` - linux; amd64
+### `sonarqube:8-datacenter-search` - linux; amd64
 
 ```console
 $ docker pull sonarqube@sha256:9ef03851f47284153be39a12d9dc7efbc1739a51ab85032117963a6ef35d171b
@@ -1044,7 +1044,7 @@ CMD ["bin/sonar.sh"]
 		Size: 1.4 KB (1407 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-## `sonarqube:8.9.0-developer`
+## `sonarqube:8-developer`
 
 ```console
 $ docker pull sonarqube@sha256:525410c8cc381ca08e484856db0e59495af4581b964fcc9971078ee94d53538d
@@ -1054,7 +1054,7 @@ $ docker pull sonarqube@sha256:525410c8cc381ca08e484856db0e59495af4581b964fcc997
 -	Platforms:
 	-	linux; amd64
 
-### `sonarqube:8.9.0-developer` - linux; amd64
+### `sonarqube:8-developer` - linux; amd64
 
 ```console
 $ docker pull sonarqube@sha256:7c0edcb99c964984db6d24330db33bb12de1e8ae0d5974d77640b1efea1483d1
@@ -1122,7 +1122,7 @@ CMD ["bin/sonar.sh"]
 		Size: 1.1 KB (1097 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-## `sonarqube:8.9.0-enterprise`
+## `sonarqube:8-enterprise`
 
 ```console
 $ docker pull sonarqube@sha256:58e4d0661e4c060767708aeb82a6c5d7ed1e367ca11c750f361d9b15dad5671b
@@ -1132,7 +1132,7 @@ $ docker pull sonarqube@sha256:58e4d0661e4c060767708aeb82a6c5d7ed1e367ca11c750f3
 -	Platforms:
 	-	linux; amd64
 
-### `sonarqube:8.9.0-enterprise` - linux; amd64
+### `sonarqube:8-enterprise` - linux; amd64
 
 ```console
 $ docker pull sonarqube@sha256:55d397a400d11411a7225a9ecedaeaf6f45096f1252b01feadbb0e9682f5a9fa
