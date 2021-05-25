@@ -3430,20 +3430,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libx11=2:1.6.4-3+deb9u3
-'http://security.debian.org/debian-security/pool/updates/main/libx/libx11/libx11_1.6.4-3+deb9u3.dsc' libx11_1.6.4-3+deb9u3.dsc 2425 SHA256:50b0a6ee00b6019b39b5bf513001b4d085fcaecdb34f4f432695b8dd56b2dce4
-'http://security.debian.org/debian-security/pool/updates/main/libx/libx11/libx11_1.6.4.orig.tar.gz' libx11_1.6.4.orig.tar.gz 3095115 SHA256:5d7fbb9e15c27900ea8963218a59750b674a8d7c94161b66e96fcfbdaa1c6263
-'http://security.debian.org/debian-security/pool/updates/main/libx/libx11/libx11_1.6.4-3+deb9u3.diff.gz' libx11_1.6.4-3+deb9u3.diff.gz 47484 SHA256:86c81692699b0a1d73f13f8c7ca49dbdebe949ce2f2ceae3972bbccab4783fb6
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libx11/2:1.6.4-3+deb9u3/
 
-- https://sources.debian.net/src/libx11/2:1.6.4-3+deb9u3/ (for browsing the source)
-- https://sources.debian.net/src/libx11/2:1.6.4-3+deb9u3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libx11/2:1.6.4-3+deb9u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libxau=1:1.0.8-1`
 

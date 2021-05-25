@@ -3710,14 +3710,9 @@ Licenses: (parsed from: `/usr/share/doc/libpam-modules/copyright`, `/usr/share/d
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pam=1.3.1-5ubuntu4.1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.3.1-5ubuntu4.1.dsc' pam_1.3.1-5ubuntu4.1.dsc 2707 SHA512:0fe1765785d9642b9dac56a5e0db8ebbbe2ce82d91cb92c8f050fe066d5c5e742a3562fab0a1f3618707052b2a813c08cb398fa6cf6900866286b3fdfe6e4214
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.3.1.orig.tar.xz' pam_1.3.1.orig.tar.xz 912332 SHA512:6bc8e2a5b64686f0a23846221c5228c88418ba485b17c53b3a12f91262b5bb73566d6b6a5daa1f63bbae54310aee918b987e44a72ce809b4e7c668f0fadfe08e
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.3.1-5ubuntu4.1.debian.tar.xz' pam_1.3.1-5ubuntu4.1.debian.tar.xz 159852 SHA512:f43e7b4bfb1fe42d29099dc404e8b50a661acf8f53b3183ec3fdacc09946b7742a5b70387cde7728557199cb5914e39a330106176d406fcd51b79ecd7e479336
-```
 
 ### `dpkg` source package: `pango1.0=1.44.7-2ubuntu4`
 
