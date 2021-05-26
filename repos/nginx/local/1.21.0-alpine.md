@@ -1,17 +1,17 @@
-# `nginx:1.19.10-alpine`
+# `nginx:1.21.0-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:a64a6e03b0551e1cefa94db6cc6677fb1efed3c557d173f79584ff4ec474b5ae`
-- Created: `2021-04-14T23:14:38.270015592Z`
-- Virtual Size: ~ 22.60 Mb  
+- Image ID: `sha256:a6eb2a334a9fcf41788e0cff252f749df07427df29e50f0b141cc5ed1094006d`
+- Created: `2021-05-25T15:44:29.163542797Z`
+- Virtual Size: ~ 22.63 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
 - Command: `["nginx","-g","daemon off;"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `NGINX_VERSION=1.19.10`
+  - `NGINX_VERSION=1.21.0`
   - `NJS_VERSION=0.5.3`
   - `PKG_RELEASE=1`
 - Labels:
@@ -345,16 +345,16 @@ LGPL-2.1-or-later
 ### `apk` package: `libjpeg-turbo`
 
 ```console
-libjpeg-turbo-2.0.6-r0 description:
+libjpeg-turbo-2.1.0-r0 description:
 Accelerated baseline JPEG compression and decompression library
 
-libjpeg-turbo-2.0.6-r0 webpage:
+libjpeg-turbo-2.1.0-r0 webpage:
 https://libjpeg-turbo.org/
 
-libjpeg-turbo-2.0.6-r0 installed size:
-1032 KiB
+libjpeg-turbo-2.1.0-r0 installed size:
+1076 KiB
 
-libjpeg-turbo-2.0.6-r0 license:
+libjpeg-turbo-2.1.0-r0 license:
 BSD-3-Clause IJG Zlib
 
 ```
@@ -549,16 +549,16 @@ MIT
 ### `apk` package: `nginx`
 
 ```console
-nginx-1.19.10-r1 description:
+nginx-1.21.0-r1 description:
 High performance web server
 
-nginx-1.19.10-r1 webpage:
+nginx-1.21.0-r1 webpage:
 https://nginx.org/
 
-nginx-1.19.10-r1 installed size:
-2580 KiB
+nginx-1.21.0-r1 installed size:
+2568 KiB
 
-nginx-1.19.10-r1 license:
+nginx-1.21.0-r1 license:
 2-clause BSD-like license
 
 ```
@@ -566,16 +566,16 @@ nginx-1.19.10-r1 license:
 ### `apk` package: `nginx-module-geoip`
 
 ```console
-nginx-module-geoip-1.19.10-r1 description:
+nginx-module-geoip-1.21.0-r1 description:
 nginx GeoIP dynamic modules
 
-nginx-module-geoip-1.19.10-r1 webpage:
+nginx-module-geoip-1.21.0-r1 webpage:
 https://nginx.org/
 
-nginx-module-geoip-1.19.10-r1 installed size:
+nginx-module-geoip-1.21.0-r1 installed size:
 116 KiB
 
-nginx-module-geoip-1.19.10-r1 license:
+nginx-module-geoip-1.21.0-r1 license:
 2-clause BSD-like license
 
 ```
@@ -583,16 +583,16 @@ nginx-module-geoip-1.19.10-r1 license:
 ### `apk` package: `nginx-module-image-filter`
 
 ```console
-nginx-module-image-filter-1.19.10-r1 description:
+nginx-module-image-filter-1.21.0-r1 description:
 nginx image filter dynamic module
 
-nginx-module-image-filter-1.19.10-r1 webpage:
+nginx-module-image-filter-1.21.0-r1 webpage:
 https://nginx.org/
 
-nginx-module-image-filter-1.19.10-r1 installed size:
+nginx-module-image-filter-1.21.0-r1 installed size:
 88 KiB
 
-nginx-module-image-filter-1.19.10-r1 license:
+nginx-module-image-filter-1.21.0-r1 license:
 2-clause BSD-like license
 
 ```
@@ -600,16 +600,16 @@ nginx-module-image-filter-1.19.10-r1 license:
 ### `apk` package: `nginx-module-njs`
 
 ```console
-nginx-module-njs-1.19.10.0.5.3-r1 description:
+nginx-module-njs-1.21.0.0.5.3-r1 description:
 nginx njs dynamic modules
 
-nginx-module-njs-1.19.10.0.5.3-r1 webpage:
+nginx-module-njs-1.21.0.0.5.3-r1 webpage:
 https://nginx.org/
 
-nginx-module-njs-1.19.10.0.5.3-r1 installed size:
+nginx-module-njs-1.21.0.0.5.3-r1 installed size:
 3456 KiB
 
-nginx-module-njs-1.19.10.0.5.3-r1 license:
+nginx-module-njs-1.21.0.0.5.3-r1 license:
 2-clause BSD-like license
 
 ```
@@ -617,16 +617,16 @@ nginx-module-njs-1.19.10.0.5.3-r1 license:
 ### `apk` package: `nginx-module-xslt`
 
 ```console
-nginx-module-xslt-1.19.10-r1 description:
+nginx-module-xslt-1.21.0-r1 description:
 nginx xslt dynamic module
 
-nginx-module-xslt-1.19.10-r1 webpage:
+nginx-module-xslt-1.21.0-r1 webpage:
 https://nginx.org/
 
-nginx-module-xslt-1.19.10-r1 installed size:
+nginx-module-xslt-1.21.0-r1 installed size:
 84 KiB
 
-nginx-module-xslt-1.19.10-r1 license:
+nginx-module-xslt-1.21.0-r1 license:
 2-clause BSD-like license
 
 ```

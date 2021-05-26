@@ -1,17 +1,17 @@
-# `nginx:1.19.10-perl`
+# `nginx:1.21.0-perl`
 
 ## Docker Metadata
 
-- Image ID: `sha256:8be276a776372c5ce6c971a5f8afcc58353af563e12301b9713409151b51594f`
-- Created: `2021-05-12T08:40:58.335417113Z`
-- Virtual Size: ~ 178.80 Mb  
+- Image ID: `sha256:274c86cb2e41cc87817dc383da4f53d27483c385b0fdcb3b1f091ddfa3a10913`
+- Created: `2021-05-25T15:44:14.837235496Z`
+- Virtual Size: ~ 178.79 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
 - Command: `["nginx","-g","daemon off;"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `NGINX_VERSION=1.19.10`
+  - `NGINX_VERSION=1.21.0`
   - `NJS_VERSION=0.5.3`
   - `PKG_RELEASE=1~buster`
 - Labels:
@@ -1717,12 +1717,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libwebp/0.6.1-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libwebp/0.6.1-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libx11=2:1.6.7-1+deb10u1`
+### `dpkg` source package: `libx11=2:1.6.7-1+deb10u2`
 
 Binary Packages:
 
-- `libx11-6:amd64=2:1.6.7-1+deb10u1`
-- `libx11-data=2:1.6.7-1+deb10u1`
+- `libx11-6:amd64=2:1.6.7-1+deb10u2`
+- `libx11-data=2:1.6.7-1+deb10u2`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1731,18 +1731,18 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libx11=2:1.6.7-1+deb10u1
-'http://deb.debian.org/debian/pool/main/libx/libx11/libx11_1.6.7-1+deb10u1.dsc' libx11_1.6.7-1+deb10u1.dsc 2651 SHA256:32165ead57fed813168f87bd43d5dd387c2a27bba4c77bd8e8075cee90f90fce
-'http://deb.debian.org/debian/pool/main/libx/libx11/libx11_1.6.7.orig.tar.gz' libx11_1.6.7.orig.tar.gz 2972354 SHA256:f62ab88c2a87b55e1dc338726a55bb6ed8048084fe6a3294a7ae324ca45159d1
-'http://deb.debian.org/debian/pool/main/libx/libx11/libx11_1.6.7.orig.tar.gz.asc' libx11_1.6.7.orig.tar.gz.asc 404 SHA256:01a06afbe0574a30721d98f1c80b668ebc46410a9e8b2eb81e69b4bd8667c386
-'http://deb.debian.org/debian/pool/main/libx/libx11/libx11_1.6.7-1+deb10u1.diff.gz' libx11_1.6.7-1+deb10u1.diff.gz 52461 SHA256:ea3a943ea781136b3d5320010039e42039b0e58d5aeeca2d2b7a0593f9ce04ef
+$ apt-get source -qq --print-uris libx11=2:1.6.7-1+deb10u2
+'http://security.debian.org/debian-security/pool/updates/main/libx/libx11/libx11_1.6.7-1+deb10u2.dsc' libx11_1.6.7-1+deb10u2.dsc 2680 SHA256:49e4b4ea6c4f4c4d6dcb31e09450dd285a9dc6f232ee5aa727b8a5b7fc4f42c1
+'http://security.debian.org/debian-security/pool/updates/main/libx/libx11/libx11_1.6.7.orig.tar.gz' libx11_1.6.7.orig.tar.gz 2972354 SHA256:f62ab88c2a87b55e1dc338726a55bb6ed8048084fe6a3294a7ae324ca45159d1
+'http://security.debian.org/debian-security/pool/updates/main/libx/libx11/libx11_1.6.7.orig.tar.gz.asc' libx11_1.6.7.orig.tar.gz.asc 404 SHA256:01a06afbe0574a30721d98f1c80b668ebc46410a9e8b2eb81e69b4bd8667c386
+'http://security.debian.org/debian-security/pool/updates/main/libx/libx11/libx11_1.6.7-1+deb10u2.diff.gz' libx11_1.6.7-1+deb10u2.diff.gz 53354 SHA256:a2ba03e672aab422b356352406c827eaeecd3e3ffbdf39022556a6a459d08b16
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/libx11/2:1.6.7-1+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/libx11/2:1.6.7-1+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libx11/2:1.6.7-1+deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/libx11/2:1.6.7-1+deb10u2/ (for browsing the source)
+- https://sources.debian.net/src/libx11/2:1.6.7-1+deb10u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libx11/2:1.6.7-1+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libxau=1:1.0.8-1`
 
@@ -2099,11 +2099,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/nghttp2/1.36.0-2+deb10u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/nghttp2/1.36.0-2+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `nginx-module-geoip=1.19.10-1~buster`
+### `dpkg` source package: `nginx-module-geoip=1.21.0-1~buster`
 
 Binary Packages:
 
-- `nginx-module-geoip=1.19.10-1~buster`
+- `nginx-module-geoip=1.21.0-1~buster`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -2113,11 +2113,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `nginx-module-image-filter=1.19.10-1~buster`
+### `dpkg` source package: `nginx-module-image-filter=1.21.0-1~buster`
 
 Binary Packages:
 
-- `nginx-module-image-filter=1.19.10-1~buster`
+- `nginx-module-image-filter=1.21.0-1~buster`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -2127,11 +2127,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `nginx-module-njs=1.19.10+0.5.3-1~buster`
+### `dpkg` source package: `nginx-module-njs=1.21.0+0.5.3-1~buster`
 
 Binary Packages:
 
-- `nginx-module-njs=1.19.10+0.5.3-1~buster`
+- `nginx-module-njs=1.21.0+0.5.3-1~buster`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -2141,11 +2141,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `nginx-module-perl=1.19.10-1~buster`
+### `dpkg` source package: `nginx-module-perl=1.21.0-1~buster`
 
 Binary Packages:
 
-- `nginx-module-perl=1.19.10-1~buster`
+- `nginx-module-perl=1.21.0-1~buster`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -2155,11 +2155,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `nginx-module-xslt=1.19.10-1~buster`
+### `dpkg` source package: `nginx-module-xslt=1.21.0-1~buster`
 
 Binary Packages:
 
-- `nginx-module-xslt=1.19.10-1~buster`
+- `nginx-module-xslt=1.21.0-1~buster`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -2169,11 +2169,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `nginx=1.19.10-1~buster`
+### `dpkg` source package: `nginx=1.21.0-1~buster`
 
 Binary Packages:
 
-- `nginx=1.19.10-1~buster`
+- `nginx=1.21.0-1~buster`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
