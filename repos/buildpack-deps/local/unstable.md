@@ -3521,20 +3521,13 @@ Licenses: (parsed from: `/usr/share/doc/libxml2/copyright`, `/usr/share/doc/libx
 - `ISC`
 - `MIT-1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libxml2=2.9.10+dfsg-6.6
-'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.10+dfsg-6.6.dsc' libxml2_2.9.10+dfsg-6.6.dsc 2827 SHA256:401eadd23af32d6c635e269f2bc6adf7efde7c061857111de3d1d6d4e3e6a6ee
-'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.10+dfsg.orig.tar.xz' libxml2_2.9.10+dfsg.orig.tar.xz 2503560 SHA256:65ee7a2f5e100c64ddf7beb92297c9b2a30b994a76cd1fab67470cf22db6b7d0
-'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.10+dfsg-6.6.debian.tar.xz' libxml2_2.9.10+dfsg-6.6.debian.tar.xz 31704 SHA256:cb46109eb57f4cb1d2ed0a5c4999f70152b5b3bc3b452af01f3e96b5098d159e
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libxml2/2.9.10+dfsg-6.6/
 
-- https://sources.debian.net/src/libxml2/2.9.10+dfsg-6.6/ (for browsing the source)
-- https://sources.debian.net/src/libxml2/2.9.10+dfsg-6.6/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libxml2/2.9.10+dfsg-6.6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libxrender=1:0.9.10-1`
 
@@ -3866,21 +3859,13 @@ Licenses: (parsed from: `/usr/share/doc/libmariadb-dev/copyright`, `/usr/share/d
 - `unlimited-free-doc`
 - `zlib/libpng`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mariadb-10.5=1:10.5.9-1
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.5/mariadb-10.5_10.5.9-1.dsc' mariadb-10.5_10.5.9-1.dsc 4739 SHA256:2b08908d6c5bc7d6128d71bb23e6a8db5966069e27ccef0998570267ef8f54d6
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.5/mariadb-10.5_10.5.9.orig.tar.gz' mariadb-10.5_10.5.9.orig.tar.gz 88639930 SHA256:40ab19aeb8de141fdc188cf2251213c9e7351bee4d0cd29db704fae68d1068cf
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.5/mariadb-10.5_10.5.9.orig.tar.gz.asc' mariadb-10.5_10.5.9.orig.tar.gz.asc 195 SHA256:35a23c2a2a37693925bd7c73277c22e71877646f08d6d4c88de2c50e08120796
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.5/mariadb-10.5_10.5.9-1.debian.tar.xz' mariadb-10.5_10.5.9-1.debian.tar.xz 230604 SHA256:2d8a6644801c6af10ab798509127bcd272c838d78cd2f5b8a6352a1318209380
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mariadb-10.5/1:10.5.9-1/
 
-- https://sources.debian.net/src/mariadb-10.5/1:10.5.9-1/ (for browsing the source)
-- https://sources.debian.net/src/mariadb-10.5/1:10.5.9-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mariadb-10.5/1:10.5.9-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mawk=1.3.4.20200120-2`
 
@@ -3945,21 +3930,13 @@ Licenses: (parsed from: `/usr/share/doc/mercurial/copyright`, `/usr/share/doc/me
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mercurial=5.6.1-2
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.6.1-2.dsc' mercurial_5.6.1-2.dsc 2709 SHA256:9dbef682e7c3e95ef7f4ffbb4af1ee48cef345c1855f661dbdc9ebdeca66c9bb
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.6.1.orig.tar.gz' mercurial_5.6.1.orig.tar.gz 7836342 SHA256:e55c254f4904c45226a106780e57f4279aee03368f6ff6a981d5d2a38243ffad
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.6.1.orig.tar.gz.asc' mercurial_5.6.1.orig.tar.gz.asc 833 SHA256:bef5ca673b6fe7ab213e07826c2196dd41710df4739f9a49e57dc3d3d38a6d36
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.6.1-2.debian.tar.xz' mercurial_5.6.1-2.debian.tar.xz 64120 SHA256:8e0dab6e154def53acb5b391396d80f8c5ae0e2bfda3620bae546d12f9869625
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mercurial/5.6.1-2/
 
-- https://sources.debian.net/src/mercurial/5.6.1-2/ (for browsing the source)
-- https://sources.debian.net/src/mercurial/5.6.1-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mercurial/5.6.1-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mpclib3=1.2.0-1`
 

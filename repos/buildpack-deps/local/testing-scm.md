@@ -1930,20 +1930,13 @@ Licenses: (parsed from: `/usr/share/doc/liblz4-1/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris lz4=1.9.3-1
-'http://deb.debian.org/debian/pool/main/l/lz4/lz4_1.9.3-1.dsc' lz4_1.9.3-1.dsc 1959 SHA256:587dfa6ede9af7eabea15522aeba5dc99c07e6ebfc22fb0c8b182f238d3d43fb
-'http://deb.debian.org/debian/pool/main/l/lz4/lz4_1.9.3.orig.tar.gz' lz4_1.9.3.orig.tar.gz 320958 SHA256:030644df4611007ff7dc962d981f390361e6c97a34e5cbc393ddfbe019ffe2c1
-'http://deb.debian.org/debian/pool/main/l/lz4/lz4_1.9.3-1.debian.tar.xz' lz4_1.9.3-1.debian.tar.xz 13536 SHA256:6d9a7eaf8b9c695553d92a0e15c99cdd5acddd2b609decebbd046cd935c52265
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/lz4/1.9.3-1/
 
-- https://sources.debian.net/src/lz4/1.9.3-1/ (for browsing the source)
-- https://sources.debian.net/src/lz4/1.9.3-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/lz4/1.9.3-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mawk=1.3.4.20200120-2`
 
@@ -2212,20 +2205,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openldap=2.4.57+dfsg-2
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.57+dfsg-2.dsc' openldap_2.4.57+dfsg-2.dsc 3061 SHA256:1fcfd2ce54964068ddf36b64727c99d767e73f7520d6525a286f8e3564821971
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.57+dfsg.orig.tar.gz' openldap_2.4.57+dfsg.orig.tar.gz 5054318 SHA256:009cc88733eaf41a21607e073a19bce53d7d6ed90a5c280e80880978c4e91db7
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.57+dfsg-2.debian.tar.xz' openldap_2.4.57+dfsg-2.debian.tar.xz 168496 SHA256:e1ca889e9e7a6ea2eb8adde95119df4a08199c10bd772263989138e85171cc62
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/openldap/2.4.57+dfsg-2/
 
-- https://sources.debian.net/src/openldap/2.4.57+dfsg-2/ (for browsing the source)
-- https://sources.debian.net/src/openldap/2.4.57+dfsg-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openldap/2.4.57+dfsg-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssh=1:8.4p1-5`
 

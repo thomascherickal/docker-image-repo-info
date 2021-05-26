@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:693cac43db41def70e3d8c2d42f2959bcabb25ff94b0137a3710b84f8997b78f`
-- Created: `2021-05-19T20:25:59.945324046Z`
-- Virtual Size: ~ 717.09 Mb  
+- Image ID: `sha256:1d5c2f76e33b815b2800a0f6ea8e3a3fc270bc4d0a801c83a77601730f84f24b`
+- Created: `2021-05-26T00:53:52.89924416Z`
+- Virtual Size: ~ 712.42 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -2685,13 +2685,13 @@ $ apt-get source -qq --print-uris libwmf=0.2.8.4-17ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/libw/libwmf/libwmf_0.2.8.4-17ubuntu1.debian.tar.xz' libwmf_0.2.8.4-17ubuntu1.debian.tar.xz 12968 SHA512:7f5119e8e78973b6739ff6314239a7348e49e2e9cfd71d40c16b6c30e3de82c022252b197094536db1acf950a5216a0be19b44c651af8083515661535c998673
 ```
 
-### `dpkg` source package: `libx11=2:1.6.12-1`
+### `dpkg` source package: `libx11=2:1.6.12-1ubuntu0.1`
 
 Binary Packages:
 
-- `libx11-6:amd64=2:1.6.12-1`
-- `libx11-data=2:1.6.12-1`
-- `libx11-dev:amd64=2:1.6.12-1`
+- `libx11-6:amd64=2:1.6.12-1ubuntu0.1`
+- `libx11-data=2:1.6.12-1ubuntu0.1`
+- `libx11-dev:amd64=2:1.6.12-1ubuntu0.1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -2700,11 +2700,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libx11=2:1.6.12-1
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.6.12-1.dsc' libx11_1.6.12-1.dsc 2545 SHA512:8044467c7a4670dba407e12338d634ec29f838289876310742f9d668cfb18118e7cbaf09b49fa0f32bcd03df4a73e8e9b22642ae4f188ef40ed62929e0c53591
+$ apt-get source -qq --print-uris libx11=2:1.6.12-1ubuntu0.1
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.6.12-1ubuntu0.1.dsc' libx11_1.6.12-1ubuntu0.1.dsc 2660 SHA512:e795b024dd0fcadafc1e80c49c7674143a54854cea72ffe27ebd19312eca4a40a4190463d801b539387152d0c14cd12fb55b53953a8c4a1af7f26758d0b92462
 'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.6.12.orig.tar.gz' libx11_1.6.12.orig.tar.gz 3168158 SHA512:be86b8ad874311bc9d4bd28f33ecdbf2dd391b4a17bdf456c0f8b483f740145cd976b68fa7afee806223acff319e77e163a612b82f7fa9dfa898a31cfbbda851
 'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.6.12.orig.tar.gz.asc' libx11_1.6.12.orig.tar.gz.asc 833 SHA512:0096d221e82387d0e7613b8f75c2bac3ec35800815252414e1b2cb0c1480e64f01610fce70a1e327b677c3afe2bf6ca20fe4cebd73f652b28b99a843e813c458
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.6.12-1.diff.gz' libx11_1.6.12-1.diff.gz 52052 SHA512:143b05a79d4b2a066bc38282f8e756e2ca8edaf39f6f53eb3f2ec696e3a815e1c856565ccdbcaeb25cbf220117ff2a717cd9daac082ae0449baab259a5f7c05c
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.6.12-1ubuntu0.1.diff.gz' libx11_1.6.12-1ubuntu0.1.diff.gz 54734 SHA512:162a087ecdf3f3ee146adb690f0cd4e23d2f1c102a1ec609aa696f68773af3cda6928ed389fd1cda4e4540df7e5fba06d5fb655d9badc265803db309b517bdf4
 ```
 
 ### `dpkg` source package: `libxau=1:1.0.9-0ubuntu1`
@@ -3475,14 +3475,14 @@ $ apt-get source -qq --print-uris p11-kit=0.23.21-2ubuntu0.1
 'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.21-2ubuntu0.1.debian.tar.xz' p11-kit_0.23.21-2ubuntu0.1.debian.tar.xz 25452 SHA512:5280a369943121705aecafc4649496ef36c12d45e23c0f7025c22e20a10e0e0e4d4a686fa6627e4c82261904fb8f9f4847034c43ba777fb7e20c64176777bd0c
 ```
 
-### `dpkg` source package: `pam=1.3.1-5ubuntu6`
+### `dpkg` source package: `pam=1.3.1-5ubuntu6.20.10.1`
 
 Binary Packages:
 
-- `libpam-modules:amd64=1.3.1-5ubuntu6`
-- `libpam-modules-bin=1.3.1-5ubuntu6`
-- `libpam-runtime=1.3.1-5ubuntu6`
-- `libpam0g:amd64=1.3.1-5ubuntu6`
+- `libpam-modules:amd64=1.3.1-5ubuntu6.20.10.1`
+- `libpam-modules-bin=1.3.1-5ubuntu6.20.10.1`
+- `libpam-runtime=1.3.1-5ubuntu6.20.10.1`
+- `libpam0g:amd64=1.3.1-5ubuntu6.20.10.1`
 
 Licenses: (parsed from: `/usr/share/doc/libpam-modules/copyright`, `/usr/share/doc/libpam-modules-bin/copyright`, `/usr/share/doc/libpam-runtime/copyright`, `/usr/share/doc/libpam0g/copyright`)
 
@@ -3491,10 +3491,10 @@ Licenses: (parsed from: `/usr/share/doc/libpam-modules/copyright`, `/usr/share/d
 Source:
 
 ```console
-$ apt-get source -qq --print-uris pam=1.3.1-5ubuntu6
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.3.1-5ubuntu6.dsc' pam_1.3.1-5ubuntu6.dsc 2699 SHA512:436e65b46b14cb02b6d13255143f8a06064a52c3a3fa8dae7a2305f1e7a3017db19389693c0150a9a4aacc40ad3664318178ebdafd081b1057fd083920391a34
+$ apt-get source -qq --print-uris pam=1.3.1-5ubuntu6.20.10.1
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.3.1-5ubuntu6.20.10.1.dsc' pam_1.3.1-5ubuntu6.20.10.1.dsc 2731 SHA512:31e6b5c28a2d32fa2690fcc4b062eeed5dfe2d013f34c774140f6e06e8afe14f07ac72b3c426a5901baaa2ef6c0907100537107c5f2c972a9eff8c1b3908619c
 'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.3.1.orig.tar.xz' pam_1.3.1.orig.tar.xz 912332 SHA512:6bc8e2a5b64686f0a23846221c5228c88418ba485b17c53b3a12f91262b5bb73566d6b6a5daa1f63bbae54310aee918b987e44a72ce809b4e7c668f0fadfe08e
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.3.1-5ubuntu6.debian.tar.xz' pam_1.3.1-5ubuntu6.debian.tar.xz 160300 SHA512:c3e8d10c1d799a8b34d29d584d34813191f7dab1124ae9824d6df5e3eea49fb76b4647b30ecaad69bc06031eb02b0cbc8612673e85944690ea7f88b874ac369c
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.3.1-5ubuntu6.20.10.1.debian.tar.xz' pam_1.3.1-5ubuntu6.20.10.1.debian.tar.xz 172912 SHA512:1f1562469ab02a6c4666d3d984edb350fff23907ca41c906f6dab996a4c1f08ea0d8c25dc65d3f6940d1c9f57ea1e06898e569b321bfefa8774771361954788e
 ```
 
 ### `dpkg` source package: `pango1.0=1.46.2-1`

@@ -2412,14 +2412,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libx11=2:1.6.4-3ubuntu0.3
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.6.4-3ubuntu0.3.dsc' libx11_1.6.4-3ubuntu0.3.dsc 2512 SHA512:30b631362563320c87a82d44cc140374b4a45beb02ddddd3856ef96d87f9f331177bc08a1da125f590fe6433ca80bf6ddd3764621c8831beaea31e1b3662d524
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.6.4.orig.tar.gz' libx11_1.6.4.orig.tar.gz 3095115 SHA512:253597837e9074f962aacf8d9974491b134591b18b61835f5ab14a6488fbcb15b7761b5ce8c43cfbba10db052933a582bab0fe0980e2388189d60e39a46a0107
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.6.4-3ubuntu0.3.diff.gz' libx11_1.6.4-3ubuntu0.3.diff.gz 49007 SHA512:2ba8f13f173a55da3433946237333c99fc5be9b3e9d9c557eebfc3a620d7a3da71d2c7f89e3c31f17e597d01cb6da978f83727ccebcc76f264fef19cf16bf738
-```
 
 ### `dpkg` source package: `libxau=1:1.0.8-1ubuntu1`
 
