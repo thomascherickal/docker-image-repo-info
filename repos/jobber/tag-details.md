@@ -2,12 +2,12 @@
 
 # Tags of `jobber`
 
--	[`jobber:1-alpine3.11`](#jobber1-alpine311)
--	[`jobber:1.4-alpine3.11`](#jobber14-alpine311)
 -	[`jobber:1.4.4-alpine3.11`](#jobber144-alpine311)
+-	[`jobber:1.4-alpine3.11`](#jobber14-alpine311)
+-	[`jobber:1-alpine3.11`](#jobber1-alpine311)
 -	[`jobber:latest`](#jobberlatest)
 
-## `jobber:1-alpine3.11`
+## `jobber:1.4.4-alpine3.11`
 
 ```console
 $ docker pull jobber@sha256:10e354645c84f98fcb5b3a49b578e47d3ad16406e94d763e6e1784397fef208c
@@ -17,7 +17,7 @@ $ docker pull jobber@sha256:10e354645c84f98fcb5b3a49b578e47d3ad16406e94d763e6e17
 -	Platforms:
 	-	linux; amd64
 
-### `jobber:1-alpine3.11` - linux; amd64
+### `jobber:1.4.4-alpine3.11` - linux; amd64
 
 ```console
 $ docker pull jobber@sha256:e56fb65be9c98aaea8ba176013070a04454ea9b4cfdf37b3d9c1f4c443856225
@@ -147,7 +147,7 @@ CMD ["/usr/libexec/jobberrunner" "-u" "/var/jobber/1000/cmd.sock" "/home/jobberu
 		Size: 234.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-## `jobber:1.4.4-alpine3.11`
+## `jobber:1-alpine3.11`
 
 ```console
 $ docker pull jobber@sha256:10e354645c84f98fcb5b3a49b578e47d3ad16406e94d763e6e1784397fef208c
@@ -157,7 +157,7 @@ $ docker pull jobber@sha256:10e354645c84f98fcb5b3a49b578e47d3ad16406e94d763e6e17
 -	Platforms:
 	-	linux; amd64
 
-### `jobber:1.4.4-alpine3.11` - linux; amd64
+### `jobber:1-alpine3.11` - linux; amd64
 
 ```console
 $ docker pull jobber@sha256:e56fb65be9c98aaea8ba176013070a04454ea9b4cfdf37b3d9c1f4c443856225
