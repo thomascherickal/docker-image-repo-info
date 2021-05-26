@@ -1,18 +1,18 @@
-# `httpd:2.4.46`
+# `httpd:2.4.48`
 
 ## Docker Metadata
 
-- Image ID: `sha256:f3cffeea581b3306a13d80b25a437f73f767b8f27afdb29393b3764b9dfaea69`
-- Created: `2021-05-12T07:49:27.800664514Z`
-- Virtual Size: ~ 137.58 Mb  
+- Image ID: `sha256:39c2d1c9326678290fb11469ffde9785efa212f6cdfbea6d68a3d01ac11b41ae`
+- Created: `2021-05-26T00:23:59.233513625Z`
+- Virtual Size: ~ 137.84 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["httpd-foreground"]`
 - Environment:
   - `PATH=/usr/local/apache2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `HTTPD_PREFIX=/usr/local/apache2`
-  - `HTTPD_VERSION=2.4.46`
-  - `HTTPD_SHA256=740eddf6e1c641992b22359cabc66e6325868c3c5e2e3f98faf349b61ecf41ea`
+  - `HTTPD_VERSION=2.4.48`
+  - `HTTPD_SHA256=1bc826e7b2e88108c7e4bf43c026636f77a41d849cfb667aa7b5c0b86dbf966c`
   - `HTTPD_PATCHES=`
 
 ## `dpkg` (`.deb`-based packages)
