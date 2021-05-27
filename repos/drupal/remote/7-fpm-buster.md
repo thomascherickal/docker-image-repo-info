@@ -1,7 +1,7 @@
 ## `drupal:7-fpm-buster`
 
 ```console
-$ docker pull drupal@sha256:0ce3358b06866ae264891d429af1bb3a6735cd077e9baacf5a7b355c7ab6043e
+$ docker pull drupal@sha256:ee5e666c976410d63cbee73d331fd396c55608204130423ec29959994b051d1b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -417,14 +417,14 @@ RUN set -eux; 	curl -fSL "https://ftp.drupal.org/files/projects/drupal-${DRUPAL_
 ### `drupal:7-fpm-buster` - linux; arm64 variant v8
 
 ```console
-$ docker pull drupal@sha256:7ba8a9f4cfe91a174102f131fb2dcb6c887617c378d69be326ad280a94b3481d
+$ docker pull drupal@sha256:3a9fe7592ae21a3eb14d60393844492b650acddb97da609fa69609173669acde
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **140.3 MB (140312204 bytes)**  
+-	Total Size: **140.3 MB (140312010 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2acf622a5e8c3d2af359c14c23b8cb2913b2cd154fe8913b059630a803d39907`
+-	Image ID: `sha256:a4427467b7aa00681e6529ef008abe4276e87bd7a02fc825335f257441b99333`
 -	Entrypoint: `["docker-php-entrypoint"]`
 -	Default Command: `["php-fpm"]`
 
@@ -481,15 +481,15 @@ STOPSIGNAL SIGQUIT
 EXPOSE 9000
 # Wed, 12 May 2021 07:08:57 GMT
 CMD ["php-fpm"]
-# Thu, 13 May 2021 07:08:29 GMT
+# Thu, 27 May 2021 13:35:34 GMT
 RUN set -eux; 		if command -v a2enmod; then 		a2enmod rewrite; 	fi; 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 	apt-get install -y --no-install-recommends 		libfreetype6-dev 		libjpeg-dev 		libpng-dev 		libpq-dev 		libzip-dev 	; 		docker-php-ext-configure gd 		--with-freetype 		--with-jpeg=/usr 	; 		docker-php-ext-install -j "$(nproc)" 		gd 		opcache 		pdo_mysql 		pdo_pgsql 		zip 	; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark; 	ldd "$(php -r 'echo ini_get("extension_dir");')"/*.so 		| awk '/=>/ { print $3 }' 		| sort -u 		| xargs -r dpkg-query -S 		| cut -d: -f1 		| sort -u 		| xargs -rt apt-mark manual; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*
-# Thu, 13 May 2021 07:08:32 GMT
+# Thu, 27 May 2021 13:35:35 GMT
 RUN { 		echo 'opcache.memory_consumption=128'; 		echo 'opcache.interned_strings_buffer=8'; 		echo 'opcache.max_accelerated_files=4000'; 		echo 'opcache.revalidate_freq=60'; 		echo 'opcache.fast_shutdown=1'; 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
-# Thu, 13 May 2021 07:13:20 GMT
+# Thu, 27 May 2021 13:42:12 GMT
 ENV DRUPAL_VERSION=7.80
-# Thu, 13 May 2021 07:13:21 GMT
+# Thu, 27 May 2021 13:42:12 GMT
 ENV DRUPAL_MD5=cfbbc4cde2782f4e7298db3991ca6f56
-# Thu, 13 May 2021 07:13:26 GMT
+# Thu, 27 May 2021 13:42:13 GMT
 RUN set -eux; 	curl -fSL "https://ftp.drupal.org/files/projects/drupal-${DRUPAL_VERSION}.tar.gz" -o drupal.tar.gz; 	echo "${DRUPAL_MD5} *drupal.tar.gz" | md5sum -c -; 	tar -xz --strip-components=1 -f drupal.tar.gz; 	rm drupal.tar.gz; 	chown -R www-data:www-data sites modules themes
 ```
 
@@ -534,16 +534,16 @@ RUN set -eux; 	curl -fSL "https://ftp.drupal.org/files/projects/drupal-${DRUPAL_
 		Last Modified: Wed, 12 May 2021 07:54:12 GMT  
 		Size: 8.4 KB (8446 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:deb895c5cf0d94c4a9badc71d2205c32b1a7bd6411f754fe48ae3fa74dc9dff6`  
-		Last Modified: Thu, 13 May 2021 07:17:44 GMT  
-		Size: 1.7 MB (1668108 bytes)  
+	-	`sha256:464680b421279438e572288db74ed29bd4252c59399c22966021f8f2d019baa0`  
+		Last Modified: Thu, 27 May 2021 13:53:24 GMT  
+		Size: 1.7 MB (1667913 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:738d0ce07ffd465c6b5ab60f25096eda5d8e10fd999d7b6e453d8da4589d6ce1`  
-		Last Modified: Thu, 13 May 2021 07:17:43 GMT  
-		Size: 329.0 B  
+	-	`sha256:dcec9166acfd269fc21d6ce9951ca2c6dd3770616ed5d69125e6a12fd044f970`  
+		Last Modified: Thu, 27 May 2021 13:53:23 GMT  
+		Size: 330.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0d7247bae6946a15522c28e67040f0f5f3b51f2a9fa3340d40cc9d895f5432c4`  
-		Last Modified: Thu, 13 May 2021 07:21:01 GMT  
+	-	`sha256:6e4842193a90a6136e30e9051ad72dd0be3a16624f02af0810b2df5fbc4409ea`  
+		Last Modified: Thu, 27 May 2021 14:01:16 GMT  
 		Size: 3.4 MB (3365847 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
