@@ -1,7 +1,7 @@
 ## `buildpack-deps:xenial-curl`
 
 ```console
-$ docker pull buildpack-deps@sha256:9e63c1c4844303e269b7f9673ba2d0be44c4b4fe5f957a16e78e5dd7e790e7a4
+$ docker pull buildpack-deps@sha256:c4a387ee775e9775924d1afdf46a8f935c40754ed8e166bd9829cd1817966c73
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -68,30 +68,30 @@ RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get 
 ### `buildpack-deps:xenial-curl` - linux; arm variant v7
 
 ```console
-$ docker pull buildpack-deps@sha256:01f8dc3e9f642eabd3f6647f7e2ae8e97a3eb3f7f8f9eca63fbaeaca5a3b14e6
+$ docker pull buildpack-deps@sha256:1c9c3d78c87225883bb1769ce1c15fb3001fb7d80c04989a9fb698a5cab33dfd
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **46.9 MB (46925118 bytes)**  
+-	Total Size: **46.9 MB (46925207 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ae0bc5f29baf04e29c4ce0564e6094a4bfe2ac5eb6a0f819ec2cca8d51039020`
+-	Image ID: `sha256:f9e336c0162d26891011eae9e5ec0a049a07d6f69441132106d10353ea98ccc5`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 19 May 2021 20:23:21 GMT
+# Wed, 26 May 2021 17:01:40 GMT
 ADD file:7e5c1f0262200ed290a61913d7f2c3b2b064c9b02aa1a55a818e38ab1316bbda in / 
-# Wed, 19 May 2021 20:23:24 GMT
+# Wed, 26 May 2021 17:01:41 GMT
 RUN set -xe 		&& echo '#!/bin/sh' > /usr/sbin/policy-rc.d 	&& echo 'exit 101' >> /usr/sbin/policy-rc.d 	&& chmod +x /usr/sbin/policy-rc.d 		&& dpkg-divert --local --rename --add /sbin/initctl 	&& cp -a /usr/sbin/policy-rc.d /sbin/initctl 	&& sed -i 's/^exit.*/exit 0/' /sbin/initctl 		&& echo 'force-unsafe-io' > /etc/dpkg/dpkg.cfg.d/docker-apt-speedup 		&& echo 'DPkg::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' > /etc/apt/apt.conf.d/docker-clean 	&& echo 'APT::Update::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' >> /etc/apt/apt.conf.d/docker-clean 	&& echo 'Dir::Cache::pkgcache ""; Dir::Cache::srcpkgcache "";' >> /etc/apt/apt.conf.d/docker-clean 		&& echo 'Acquire::Languages "none";' > /etc/apt/apt.conf.d/docker-no-languages 		&& echo 'Acquire::GzipIndexes "true"; Acquire::CompressionTypes::Order:: "gz";' > /etc/apt/apt.conf.d/docker-gzip-indexes 		&& echo 'Apt::AutoRemove::SuggestsImportant "false";' > /etc/apt/apt.conf.d/docker-autoremove-suggests
-# Wed, 19 May 2021 20:23:26 GMT
+# Wed, 26 May 2021 17:01:41 GMT
 RUN rm -rf /var/lib/apt/lists/*
-# Wed, 19 May 2021 20:23:28 GMT
+# Wed, 26 May 2021 17:01:42 GMT
 RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
-# Wed, 19 May 2021 20:23:29 GMT
+# Wed, 26 May 2021 17:01:42 GMT
 CMD ["/bin/bash"]
-# Wed, 19 May 2021 21:28:04 GMT
+# Thu, 27 May 2021 00:56:09 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		apt-transport-https 		ca-certificates 		curl 		netbase 		wget 		tzdata 	; 	rm -rf /var/lib/apt/lists/*
-# Wed, 19 May 2021 21:28:07 GMT
+# Thu, 27 May 2021 00:56:10 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
 ```
 
@@ -100,21 +100,21 @@ RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get 
 		Last Modified: Wed, 19 May 2021 20:24:51 GMT  
 		Size: 40.3 MB (40292258 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:452bc1820a9d9923cac2a73df110a9ad72318825a2ff4807ed5e89708052cea5`  
-		Last Modified: Wed, 19 May 2021 20:24:39 GMT  
-		Size: 853.0 B  
+	-	`sha256:d3f08183c6e31c7e342a25706e54f9869aaf760990cb4a4ccbd4ed8aa917076c`  
+		Last Modified: Wed, 26 May 2021 17:05:29 GMT  
+		Size: 849.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1217aa77f4015a99b17bec638b9f07cdf319ff342015b6c42800a588797d54a7`  
-		Last Modified: Wed, 19 May 2021 20:24:39 GMT  
-		Size: 509.0 B  
+	-	`sha256:2f5e978cf38433440cb631931ba431ef9da5d6e3ee162ca67891562db1df11af`  
+		Last Modified: Wed, 26 May 2021 17:05:29 GMT  
+		Size: 510.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4f84e209d76ee2a0ef7c673bb433398f6e5765eed483d8f68f8015126a1d3ce5`  
-		Last Modified: Wed, 19 May 2021 20:24:39 GMT  
-		Size: 169.0 B  
+	-	`sha256:4087b5e6a0394da1cbb5e8e721ff4d4cb511d79e6a83e7e1d84ed9352de6aac0`  
+		Last Modified: Wed, 26 May 2021 17:05:29 GMT  
+		Size: 171.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5d211c86448c1fd41ff2496deb0812683724288208ef625161a910292af2f04c`  
-		Last Modified: Wed, 19 May 2021 21:34:29 GMT  
-		Size: 6.6 MB (6631329 bytes)  
+	-	`sha256:eb5b7b840c8d25fa5152edd3cdea7365a94e9495f6c28611639569ab06a659fe`  
+		Last Modified: Thu, 27 May 2021 01:13:15 GMT  
+		Size: 6.6 MB (6631419 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `buildpack-deps:xenial-curl` - linux; arm64 variant v8
