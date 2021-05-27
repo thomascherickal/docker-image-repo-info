@@ -1,7 +1,7 @@
 ## `matomo:4-fpm`
 
 ```console
-$ docker pull matomo@sha256:6296c3df69ec7aa17694cfa365211850286ebae0d53e9f995454912422967a34
+$ docker pull matomo@sha256:c91a383d679f5b5c1602d225c3ba3fbe400462eed7a752b767e387b6d6e70e66
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -320,14 +320,14 @@ CMD ["php-fpm"]
 ### `matomo:4-fpm` - linux; arm variant v7
 
 ```console
-$ docker pull matomo@sha256:d733038fde5c0f156e6de3f1cf3a8dc8b8335ad7fe65cd20089417e91239ccd6
+$ docker pull matomo@sha256:5d1cb8c0a01f5781b08ab4e0002edfc91182b1436fe17e9cf184031142aa96a5
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **137.1 MB (137058943 bytes)**  
+-	Total Size: **137.1 MB (137065598 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:80e97ed469c18f95c50deed4c0ef26a43671163eed955babf46d8dd53b69cb56`
+-	Image ID: `sha256:d0cbd718eadf50d1383027835f28f8d807e059088b977962d510c680c6716606`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -384,25 +384,25 @@ STOPSIGNAL SIGQUIT
 EXPOSE 9000
 # Wed, 12 May 2021 11:43:33 GMT
 CMD ["php-fpm"]
-# Thu, 13 May 2021 06:22:15 GMT
+# Thu, 27 May 2021 06:38:50 GMT
 LABEL maintainer=pierre@piwik.org
-# Thu, 13 May 2021 06:24:22 GMT
+# Thu, 27 May 2021 06:41:33 GMT
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 	apt-get install -y --no-install-recommends 		libfreetype6-dev 		libjpeg-dev 		libldap2-dev 		libpng-dev 		libzip-dev 	; 		debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)"; 	docker-php-ext-configure gd --with-freetype --with-jpeg; 	docker-php-ext-configure ldap --with-libdir="lib/$debMultiarch"; 	docker-php-ext-install -j "$(nproc)" 		gd 		ldap 		mysqli 		opcache 		pdo_mysql 		zip 	; 		pecl install APCu-5.1.20; 	pecl install redis-5.3.4; 		docker-php-ext-enable 		apcu 		redis 	; 	rm -r /tmp/pear; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark; 	ldd "$(php -r 'echo ini_get("extension_dir");')"/*.so 		| awk '/=>/ { print $3 }' 		| sort -u 		| xargs -r dpkg-query -S 		| cut -d: -f1 		| sort -u 		| xargs -rt apt-mark manual; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*
-# Thu, 13 May 2021 06:24:25 GMT
+# Thu, 27 May 2021 06:41:35 GMT
 RUN { 		echo 'opcache.memory_consumption=128'; 		echo 'opcache.interned_strings_buffer=8'; 		echo 'opcache.max_accelerated_files=4000'; 		echo 'opcache.revalidate_freq=2'; 		echo 'opcache.fast_shutdown=1'; 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
-# Mon, 17 May 2021 22:03:24 GMT
-ENV MATOMO_VERSION=4.3.0
-# Mon, 17 May 2021 22:03:57 GMT
+# Thu, 27 May 2021 06:41:36 GMT
+ENV MATOMO_VERSION=4.3.1
+# Thu, 27 May 2021 06:41:57 GMT
 RUN set -ex; 	fetchDeps=" 		dirmngr 		gnupg 	"; 	apt-get update; 	apt-get install -y --no-install-recommends 		$fetchDeps 	; 		curl -fsSL -o matomo.tar.gz 		"https://builds.matomo.org/matomo-${MATOMO_VERSION}.tar.gz"; 	curl -fsSL -o matomo.tar.gz.asc 		"https://builds.matomo.org/matomo-${MATOMO_VERSION}.tar.gz.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 814E346FA01A20DBB04B6807B5DBD5925590A237; 	gpg --batch --verify matomo.tar.gz.asc matomo.tar.gz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" matomo.tar.gz.asc; 	tar -xzf matomo.tar.gz -C /usr/src/; 	rm matomo.tar.gz; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; 	rm -rf /var/lib/apt/lists/*
-# Mon, 17 May 2021 22:03:59 GMT
+# Thu, 27 May 2021 06:41:58 GMT
 COPY file:5a36d7fba12e383595e7235267e54c5714dbf865acd4c4596c92ac0f17d139b3 in /usr/local/etc/php/conf.d/php-matomo.ini 
-# Mon, 17 May 2021 22:04:00 GMT
+# Thu, 27 May 2021 06:41:58 GMT
 COPY file:0fafaeb399f05cbf0a84d0276a6353eb053cd1a1537e5631be96c2a2ffa2fd31 in /entrypoint.sh 
-# Mon, 17 May 2021 22:04:01 GMT
+# Thu, 27 May 2021 06:41:58 GMT
 VOLUME [/var/www/html]
-# Mon, 17 May 2021 22:04:02 GMT
+# Thu, 27 May 2021 06:41:59 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Mon, 17 May 2021 22:04:02 GMT
+# Thu, 27 May 2021 06:41:59 GMT
 CMD ["php-fpm"]
 ```
 
@@ -447,25 +447,25 @@ CMD ["php-fpm"]
 		Last Modified: Wed, 12 May 2021 12:48:11 GMT  
 		Size: 8.4 KB (8447 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d0d80285cf79c7fd5b280f0662b3e7f838a27a3cc9c9a9af1b24e285d95cda41`  
-		Last Modified: Thu, 13 May 2021 06:26:05 GMT  
-		Size: 2.8 MB (2832032 bytes)  
+	-	`sha256:5c43eb46b57c379bbaa9cd12aa844e711fd565b25398b69919d717e827e81ced`  
+		Last Modified: Thu, 27 May 2021 06:47:28 GMT  
+		Size: 2.8 MB (2831980 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:510b4a2626ecce4e0f1be911fb8d0fe55af414181a6db03551c92b660e9aa520`  
-		Last Modified: Thu, 13 May 2021 06:26:03 GMT  
-		Size: 329.0 B  
+	-	`sha256:62431ac5c5fba7fd415abb0d17dd1e5b8e21632a0056067e9bbef3258c63c357`  
+		Last Modified: Thu, 27 May 2021 06:47:27 GMT  
+		Size: 331.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d5c4d13c4d3a9e88a5b71b9535b52d54f0c82a92928457d77608aad9d5caf157`  
-		Last Modified: Mon, 17 May 2021 22:05:31 GMT  
-		Size: 15.1 MB (15091073 bytes)  
+	-	`sha256:b180f7a6539ebbf646fb20c5677042b1ecd2dd6f53e850144c2e1c8cb80ad8fd`  
+		Last Modified: Thu, 27 May 2021 06:47:33 GMT  
+		Size: 15.1 MB (15097778 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8c943d1cfd540359aae5bbdfb026c3957b318341f8bf8654d479bcd60766b192`  
-		Last Modified: Mon, 17 May 2021 22:05:24 GMT  
-		Size: 308.0 B  
+	-	`sha256:ac61f95a6918fe11788547a20eac1ef4d83de0894d16da491ef5b470d413d62a`  
+		Last Modified: Thu, 27 May 2021 06:47:27 GMT  
+		Size: 309.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a474099c7e75ee53ee5570ed978808faa8b3554d11a638695efe17173acfb373`  
-		Last Modified: Mon, 17 May 2021 22:05:24 GMT  
-		Size: 227.0 B  
+	-	`sha256:7e5992f3f779795da096c908bdde94bb72ac205f7734b0f89b5a06593afe9e53`  
+		Last Modified: Thu, 27 May 2021 06:47:27 GMT  
+		Size: 226.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `matomo:4-fpm` - linux; arm64 variant v8
