@@ -1,7 +1,7 @@
 ## `friendica:stable-fpm-alpine`
 
 ```console
-$ docker pull friendica@sha256:52904e551ce817b1113c4b5e9dbcd5c6e1ec8f0b0e448a5c8641b37bcfca1985
+$ docker pull friendica@sha256:1be87e3fd2ee9535bc6e0276b83225bd4ad8442410142d6fc719b51034aec9e7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -487,14 +487,14 @@ CMD ["php-fpm"]
 ### `friendica:stable-fpm-alpine` - linux; arm64 variant v8
 
 ```console
-$ docker pull friendica@sha256:29c022c6f14cea306508f757d690fd135a4f32781d899642a0ffb371bfb65680
+$ docker pull friendica@sha256:dafec374cf68151c28b7fef47f0f626441eaa0da9d4e578b38f5e04ddc8a658c
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **96.3 MB (96299090 bytes)**  
+-	Total Size: **96.3 MB (96294063 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:abe3e9b72e24b2e212a073fe12ae8149ae1d9d29c00a6ff480eb334c8cec5a4d`
+-	Image ID: `sha256:895eeb8eba749387328023337ee5ec47235fa8dfc8d2517d2917afd8a7b359eb`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -551,27 +551,27 @@ STOPSIGNAL SIGQUIT
 EXPOSE 9000
 # Thu, 29 Apr 2021 19:25:16 GMT
 CMD ["php-fpm"]
-# Thu, 29 Apr 2021 20:49:52 GMT
+# Wed, 26 May 2021 20:58:49 GMT
 RUN set -ex;     apk add --no-cache         rsync         git         msmtp         shadow         tini;
-# Thu, 29 Apr 2021 20:53:40 GMT
+# Wed, 26 May 2021 21:00:40 GMT
 RUN set -ex;         apk add --no-cache --virtual .build-deps         mariadb-client         bash         $PHPIZE_DEPS         libpng-dev         libjpeg-turbo-dev         imagemagick-dev         libtool         libmemcached-dev         cyrus-sasl-dev         libjpeg-turbo-dev         freetype-dev         librsvg         pcre-dev         libzip-dev         icu-dev         openldap-dev     ;         docker-php-ext-configure gd         --with-gd         --with-freetype-dir=/usr/include/         --with-png-dir=/usr/include/         --with-jpeg-dir=/usr/include/     ;         docker-php-ext-install -j "$(nproc)"         pdo_mysql         gd         zip         opcache         pcntl         ldap     ;         pecl install APCu-5.1.20;     pecl install memcached-3.1.5;     pecl install redis-5.3.4;     pecl install imagick-3.4.4;         docker-php-ext-enable         apcu         memcached         redis         imagick     ;         runDeps="$(         scanelf --needed --nobanner --format '%n#p' --recursive /usr/local/lib/php/extensions             | tr ',' '\n'             | sort -u             | awk 'system("[ -e /usr/local/lib" $1 " ]") == 0 { next } { print "so:" $1 }'     )";     apk add --no-network --virtual .friendica-phpext-rundeps $runDeps;     apk del --no-network .build-deps;
-# Thu, 29 Apr 2021 20:53:43 GMT
+# Wed, 26 May 2021 21:00:41 GMT
 RUN set -ex;     {         echo 'opcache.enable=1' ;         echo 'opcache.interned_strings_buffer=8';         echo 'opcache.max_accelerated_files=10000';         echo 'opcache.memory_consumption=128';         echo 'opcache.save_comments=1';         echo 'opcache.revalidte_freq=1';     } > /usr/local/etc/php/conf.d/opcache-recommended.ini;         {         echo sendmail_path = "/usr/bin/msmtp -t";     } > /usr/local/etc/php/conf.d/sendmail.ini;         echo 'apc.enable_cli=1' >> /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini;         echo 'memory_limit=512M' > /usr/local/etc/php/conf.d/memory-limit.ini;         mkdir /var/www/data;     chown -R www-data:root /var/www;     chmod -R g=u /var/www
-# Thu, 29 Apr 2021 20:53:44 GMT
+# Wed, 26 May 2021 21:00:41 GMT
 VOLUME [/var/www/html]
-# Thu, 29 Apr 2021 20:58:22 GMT
+# Wed, 26 May 2021 21:02:38 GMT
 ENV FRIENDICA_VERSION=2021.04
-# Thu, 29 Apr 2021 20:58:23 GMT
+# Wed, 26 May 2021 21:02:38 GMT
 ENV FRIENDICA_ADDONS=2021.04
-# Thu, 29 Apr 2021 20:58:40 GMT
+# Wed, 26 May 2021 21:02:50 GMT
 RUN set -ex;     curl -fsSL -o friendica.tar.gz         "https://files.friendi.ca/friendica-full-${FRIENDICA_VERSION}.tar.gz";     tar -xzf friendica.tar.gz -C /usr/src/;     rm friendica.tar.gz;     mv -f /usr/src/friendica-full-${FRIENDICA_VERSION}/ /usr/src/friendica;     chmod 777 /usr/src/friendica/view/smarty3;     curl -fsSL -o friendica_addons.tar.gz         "https://files.friendi.ca/friendica-addons-${FRIENDICA_ADDONS}.tar.gz";     mkdir -p /usr/src/friendica/proxy;     mkdir -p /usr/src/friendica/addon;     tar -xzf friendica_addons.tar.gz -C /usr/src/friendica/addon --strip-components=1;     rm friendica_addons.tar.gz;
-# Thu, 29 Apr 2021 20:58:47 GMT
+# Wed, 26 May 2021 21:02:51 GMT
 COPY multi:3209742e8a927dbca8685b55decf65ccc1e1ba0dc4386b61a0e5c04e963d86c1 in / 
-# Thu, 29 Apr 2021 20:58:53 GMT
+# Wed, 26 May 2021 21:02:52 GMT
 COPY multi:33c6df8ca48b360ac89b7ca8e8b370fe30a626687aacfad3b3c3d5c1924a5777 in /usr/src/friendica/config/ 
-# Thu, 29 Apr 2021 20:58:54 GMT
+# Wed, 26 May 2021 21:02:52 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Thu, 29 Apr 2021 20:59:01 GMT
+# Wed, 26 May 2021 21:02:52 GMT
 CMD ["php-fpm"]
 ```
 
@@ -616,29 +616,29 @@ CMD ["php-fpm"]
 		Last Modified: Thu, 29 Apr 2021 19:52:12 GMT  
 		Size: 8.4 KB (8416 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ed09b17dbaa4b180ce279edd25308d9f3a6ec28a81160658a280eaf9c3faa8bb`  
-		Last Modified: Thu, 29 Apr 2021 21:02:23 GMT  
-		Size: 9.7 MB (9706480 bytes)  
+	-	`sha256:39aaa8f37f62fea5dad5d135ecaebe05d59d510f7a327d9be0ba7d29fec1fdb5`  
+		Last Modified: Wed, 26 May 2021 21:05:38 GMT  
+		Size: 9.7 MB (9706456 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b371aa8cb14ed399d1aac77690243712e3dd6e3aa1efce0614396746d9ccbbe5`  
-		Last Modified: Thu, 29 Apr 2021 21:02:21 GMT  
-		Size: 8.0 MB (8011661 bytes)  
+	-	`sha256:266eb4a5ae4dcd67f28b056b79d76e1a1aeae303569df419a0a7466f82d63be5`  
+		Last Modified: Wed, 26 May 2021 21:05:35 GMT  
+		Size: 8.0 MB (8006654 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5157d207fe5b13d6bebab245ebc7ec32d52ad9060f8f26d6bc71a11516b443d1`  
-		Last Modified: Thu, 29 Apr 2021 21:02:19 GMT  
-		Size: 577.0 B  
+	-	`sha256:3b61379c7b355a411671b259523df2c523e710135b642126b89449a0bdc41954`  
+		Last Modified: Wed, 26 May 2021 21:05:34 GMT  
+		Size: 573.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f4db974873ce547849c19edf4e914d75df6be655d88a5fb5e79a0d4a54a6dce7`  
-		Last Modified: Thu, 29 Apr 2021 21:04:41 GMT  
-		Size: 47.8 MB (47759891 bytes)  
+	-	`sha256:fbcfcf075af2903279a9e899d339fd446d68430b364eae37b1105b75886529ad`  
+		Last Modified: Wed, 26 May 2021 21:07:59 GMT  
+		Size: 47.8 MB (47759901 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:24329ad1db045024c319a86fdbbccdf50fc9766c955a625207fef0321c07beae`  
-		Last Modified: Thu, 29 Apr 2021 21:04:30 GMT  
-		Size: 2.6 KB (2627 bytes)  
+	-	`sha256:c0cee51e7e9f762e8d3a33701f129b79773aa9eb718f33f827b53285ccf022bd`  
+		Last Modified: Wed, 26 May 2021 21:07:52 GMT  
+		Size: 2.6 KB (2628 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eb2d5104cc8c60edeba46c18e6a8ac633fa905f7ede6982bf0d84481fd687582`  
-		Last Modified: Thu, 29 Apr 2021 21:04:30 GMT  
-		Size: 1.1 KB (1142 bytes)  
+	-	`sha256:a3756a0a1185b529a05553cb4b68cec1a0cee01f35a0f4745798c92b0dd0fee1`  
+		Last Modified: Wed, 26 May 2021 21:07:51 GMT  
+		Size: 1.1 KB (1139 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `friendica:stable-fpm-alpine` - linux; 386
