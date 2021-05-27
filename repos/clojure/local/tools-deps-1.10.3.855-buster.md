@@ -1,19 +1,19 @@
-# `clojure:openjdk-8-tools-deps`
+# `clojure:openjdk-11-tools-deps`
 
 ## Docker Metadata
 
-- Image ID: `sha256:da91edb2b09a700554efe342dbe7daa2efff1d81aa985167fd81825d7b92bdaa`
-- Created: `2021-05-17T23:30:51.812890984Z`
-- Virtual Size: ~ 560.79 Mb  
+- Image ID: `sha256:4be699d4a16dae26a3d24e2ae881a9811d2213747983a819927a1bcbb2072f77`
+- Created: `2021-05-26T18:26:06.730910784Z`
+- Virtual Size: ~ 694.04 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["sh","-c","sleep 1 && exec clj"]`
 - Environment:
-  - `PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `JAVA_HOME=/usr/local/openjdk-8`
+  - `PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
+  - `JAVA_HOME=/usr/local/openjdk-11`
   - `LANG=C.UTF-8`
-  - `JAVA_VERSION=8u292`
-  - `CLOJURE_VERSION=1.10.3.839`
+  - `JAVA_VERSION=11.0.11+9`
+  - `CLOJURE_VERSION=1.10.3.855`
 
 ## `dpkg` (`.deb`-based packages)
 
