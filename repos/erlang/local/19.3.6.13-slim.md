@@ -2,15 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:0533866420d0577162938d8d78a7578a6aefe4695d798df3ccc4479ef8d52f57`
-- Created: `2021-05-12T06:14:50.169936857Z`
-- Virtual Size: ~ 514.93 Mb  
+- Image ID: `sha256:751deaa33cc64d9890e7970f18b68fb902a72a4b412fa873980341ae3c34e386`
+- Created: `2021-05-26T23:24:20.762362862Z`
+- Virtual Size: ~ 896.14 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["erl"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `OTP_VERSION=19.3.6.13`
+  - `REBAR3_VERSION=3.15.2`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -2161,27 +2162,34 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libtool/2.4.6-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libtool/2.4.6-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libx11=2:1.6.4-3+deb9u3`
+### `dpkg` source package: `libx11=2:1.6.4-3+deb9u4`
 
 Binary Packages:
 
-- `libx11-6:amd64=2:1.6.4-3+deb9u3`
-- `libx11-data=2:1.6.4-3+deb9u3`
-- `libx11-dev:amd64=2:1.6.4-3+deb9u3`
-- `libx11-xcb-dev:amd64=2:1.6.4-3+deb9u3`
-- `libx11-xcb1:amd64=2:1.6.4-3+deb9u3`
+- `libx11-6:amd64=2:1.6.4-3+deb9u4`
+- `libx11-data=2:1.6.4-3+deb9u4`
+- `libx11-dev:amd64=2:1.6.4-3+deb9u4`
+- `libx11-xcb-dev:amd64=2:1.6.4-3+deb9u4`
+- `libx11-xcb1:amd64=2:1.6.4-3+deb9u4`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris libx11=2:1.6.4-3+deb9u4
+'http://security.debian.org/debian-security/pool/updates/main/libx/libx11/libx11_1.6.4-3+deb9u4.dsc' libx11_1.6.4-3+deb9u4.dsc 2425 SHA256:b46e8118a765bbb982543fe95f511f1bf67e7ae88447607eb347fd2554459d7e
+'http://security.debian.org/debian-security/pool/updates/main/libx/libx11/libx11_1.6.4.orig.tar.gz' libx11_1.6.4.orig.tar.gz 3095115 SHA256:5d7fbb9e15c27900ea8963218a59750b674a8d7c94161b66e96fcfbdaa1c6263
+'http://security.debian.org/debian-security/pool/updates/main/libx/libx11/libx11_1.6.4-3+deb9u4.diff.gz' libx11_1.6.4-3+deb9u4.diff.gz 49416 SHA256:c9231f7fe464d31d7d03e260db39648002830163a1a57658e52af1825ab2dde5
+```
 
-- http://snapshot.debian.org/package/libx11/2:1.6.4-3+deb9u3/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/libx11/2:1.6.4-3+deb9u4/ (for browsing the source)
+- https://sources.debian.net/src/libx11/2:1.6.4-3+deb9u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libx11/2:1.6.4-3+deb9u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libxau=1:1.0.8-1`
 

@@ -2,16 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:fe2c53e482e6f95f39778b7e86656f7857cd95ad788cb9b4f9a91ed404cd4185`
-- Created: `2021-04-14T21:23:16.210828408Z`
-- Virtual Size: ~ 72.19 Mb  
+- Image ID: `sha256:5627f623741f4018ab3d11ac7524e6e488946b554912b16f488d59edfd4dff1b`
+- Created: `2021-05-26T23:05:52.799978613Z`
+- Virtual Size: ~ 72.20 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["erl"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `OTP_VERSION=20.3.8.26`
-  - `REBAR3_VERSION=3.14.4`
+  - `REBAR3_VERSION=3.15.2`
 
 ## `apk` (`.apk`-based packages)
 

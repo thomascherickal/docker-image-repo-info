@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:0f68b89feba49546073611bffb85e3960fe3a5314d8f3bacbd87e5b9cfed0308`
-- Created: `2021-05-21T18:44:14.764814096Z`
+- Image ID: `sha256:2a870975579bffa6050face1e4b04cb9e720df6d286746887b4d3675eb6d55ef`
+- Created: `2021-05-26T19:26:04.173401311Z`
 - Virtual Size: ~ 69.89 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -11,7 +11,7 @@
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `OTP_VERSION=24.0.1`
-  - `REBAR3_VERSION=3.16.0`
+  - `REBAR3_VERSION=3.16.1`
 - Labels:
   - `org.opencontainers.image.version=24.0.1`
 
