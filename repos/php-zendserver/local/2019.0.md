@@ -1756,14 +1756,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libx11=2:1.6.4-3ubuntu0.3
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.6.4-3ubuntu0.3.dsc' libx11_1.6.4-3ubuntu0.3.dsc 2512 SHA512:30b631362563320c87a82d44cc140374b4a45beb02ddddd3856ef96d87f9f331177bc08a1da125f590fe6433ca80bf6ddd3764621c8831beaea31e1b3662d524
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.6.4.orig.tar.gz' libx11_1.6.4.orig.tar.gz 3095115 SHA512:253597837e9074f962aacf8d9974491b134591b18b61835f5ab14a6488fbcb15b7761b5ce8c43cfbba10db052933a582bab0fe0980e2388189d60e39a46a0107
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.6.4-3ubuntu0.3.diff.gz' libx11_1.6.4-3ubuntu0.3.diff.gz 49007 SHA512:2ba8f13f173a55da3433946237333c99fc5be9b3e9d9c557eebfc3a620d7a3da71d2c7f89e3c31f17e597d01cb6da978f83727ccebcc76f264fef19cf16bf738
-```
 
 ### `dpkg` source package: `libxau=1:1.0.8-1ubuntu1`
 
@@ -2227,14 +2222,9 @@ Licenses: (parsed from: `/usr/share/doc/libnginx-mod-http-geoip/copyright`, `/us
 - `BSD-4-clause`
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris nginx=1.14.0-0ubuntu1.7
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nginx/nginx_1.14.0-0ubuntu1.7.dsc' nginx_1.14.0-0ubuntu1.7.dsc 4305 SHA512:6ac8411afa8ba92e742ce4bce4c0adf6f2b3a1f7c435307ef3884033f1ffbca1f25d54672328f66634bd289ec7a92d8bc500f7c019b9410c5088dc5743173227
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nginx/nginx_1.14.0.orig.tar.gz' nginx_1.14.0.orig.tar.gz 1016272 SHA512:40f086c9f741727e6f55802b6c3a66f081f7c49c38646dc1491aa3e3c35bae12b65ea6594386609fc849bcd99a60d7cd8ecb3f8d519e0e9ab8db01d653e930e9
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nginx/nginx_1.14.0-0ubuntu1.7.debian.tar.xz' nginx_1.14.0-0ubuntu1.7.debian.tar.xz 926652 SHA512:c8274da2366c70b418ea34bea8b0cc3fd5fb64db7ba0f07a3e23e4b5569da67338001e7837eaf51f9073905335016a966ed8845f16f52129cd8dd35eb571e6d6
-```
 
 ### `dpkg` source package: `npth=1.5-3`
 
@@ -2381,13 +2371,9 @@ Licenses: (parsed from: `/usr/share/doc/libpam-modules/copyright`, `/usr/share/d
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pam=1.1.8-3.6ubuntu2.18.04.2
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.1.8-3.6ubuntu2.18.04.2.dsc' pam_1.1.8-3.6ubuntu2.18.04.2.dsc 2557 SHA512:244e2c6f339822de9eb5419f86d620d346ad32121b71efb673628835ac3e6c2b0eb62eb552a26a8d6647e3fc182d3e2f949725dc5c5e50329285c5c49ec5e70b
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.1.8-3.6ubuntu2.18.04.2.tar.gz' pam_1.1.8-3.6ubuntu2.18.04.2.tar.gz 1991026 SHA512:12f83aabb144253d761bc3b6f96614a122b4bfafc89ec4baa0805ca50df47986e7f7b025aa79e21fcf61c9ab308983064de17ffbcbe39f4333104e6d3b7d5ff6
-```
 
 ### `dpkg` source package: `patch=2.7.6-2ubuntu1.1`
 
