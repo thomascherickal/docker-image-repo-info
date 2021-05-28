@@ -2745,14 +2745,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3-stdlib-extensions=3.8.5-1~20.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.8.5-1~20.04.1.dsc' python3-stdlib-extensions_3.8.5-1~20.04.1.dsc 2588 SHA512:6dc8cbaf0eec86c392d12751bb752d334c1c7dcd860b8146591bf0aecf632d36a4de35c495d134df833a09f8c2d78d6676af786c3131515b558a380d87464c94
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.8.5.orig.tar.xz' python3-stdlib-extensions_3.8.5.orig.tar.xz 1074164 SHA512:71dfd69b86015b42be696f8c52ac4d491423e0174138c1c8a11383e39868b774fdb673fced6915bede17fdb053aaa05384bed2d6a0908676c58dc775aeb7afbe
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.8.5-1~20.04.1.debian.tar.xz' python3-stdlib-extensions_3.8.5-1~20.04.1.debian.tar.xz 17996 SHA512:c821a1fd7cd0cce0e48f83b6ebd9a90e094c44bfdf1f0d2cd0b60a7f748a42266f41cb14a6edac4723df10ccda3f7e783854af6529cf6418d13699059f08c629
-```
 
 ### `dpkg` source package: `python3.8=3.8.5-1~20.04.2`
 
