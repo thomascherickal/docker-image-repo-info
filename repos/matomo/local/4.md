@@ -1,10 +1,10 @@
-# `matomo:4.3.0-apache`
+# `matomo:4.3.1-apache`
 
 ## Docker Metadata
 
-- Image ID: `sha256:fb83753421a7538411cebb0da4324cb45e10c4900d790e080dfb054175071531`
-- Created: `2021-05-17T19:52:59.666179193Z`
-- Virtual Size: ~ 472.64 Mb  
+- Image ID: `sha256:b9a82afcffa1329f386f94a1623d0a994724b506fdad8912ba1a2c22c468ed39`
+- Created: `2021-05-26T23:39:19.152659168Z`
+- Virtual Size: ~ 472.66 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -25,7 +25,7 @@
   - `PHP_URL=https://www.php.net/distributions/php-7.4.19.tar.xz`
   - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.19.tar.xz.asc`
   - `PHP_SHA256=6c17172c4a411ccb694d9752de899bb63c72a0a3ebe5089116bc13658a1467b2`
-  - `MATOMO_VERSION=4.3.0`
+  - `MATOMO_VERSION=4.3.1`
 - Labels:
   - `maintainer=pierre@piwik.org`
 
