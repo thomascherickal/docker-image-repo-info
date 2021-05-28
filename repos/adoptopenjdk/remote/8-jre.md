@@ -1,7 +1,7 @@
 ## `adoptopenjdk:8-jre`
 
 ```console
-$ docker pull adoptopenjdk@sha256:4865dd7d01174a04b5c674c53122be6ff09923cc623a986e1d4de0c3c2ae2722
+$ docker pull adoptopenjdk@sha256:5b55ef54f25717b7680db93625a6969d52d5608a0d7984f007ad291b82d531e8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -133,36 +133,36 @@ ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/
 ### `adoptopenjdk:8-jre` - linux; arm64 variant v8
 
 ```console
-$ docker pull adoptopenjdk@sha256:181d8d28a1b5b85529219fd1920f6b8873d2c6e0ffe7bcbb9d5750368de0e1b6
+$ docker pull adoptopenjdk@sha256:756a42b514ba44b15536e1df05c9e29b1bf4a0daf71cfeb3a2a90e3ea8247ff4
 ```
 
 -	Docker Version: 19.03.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **84.1 MB (84069039 bytes)**  
+-	Total Size: **84.1 MB (84067838 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a1997ceaf1319f4a0ad06162ec710faee9271743e3ca23ece2c56b2361880cef`
+-	Image ID: `sha256:e74828513f27e64184a10901e887d54bbce90ed20bd6ec52df56b6a27a2f2188`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Fri, 23 Apr 2021 22:47:51 GMT
+# Thu, 27 May 2021 12:29:57 GMT
 ADD file:57e6f432b1329c286e596ded8065bebdfc70a87fae91dd79bd805363ef008e5d in / 
-# Fri, 23 Apr 2021 22:47:54 GMT
+# Thu, 27 May 2021 12:29:58 GMT
 RUN set -xe 		&& echo '#!/bin/sh' > /usr/sbin/policy-rc.d 	&& echo 'exit 101' >> /usr/sbin/policy-rc.d 	&& chmod +x /usr/sbin/policy-rc.d 		&& dpkg-divert --local --rename --add /sbin/initctl 	&& cp -a /usr/sbin/policy-rc.d /sbin/initctl 	&& sed -i 's/^exit.*/exit 0/' /sbin/initctl 		&& echo 'force-unsafe-io' > /etc/dpkg/dpkg.cfg.d/docker-apt-speedup 		&& echo 'DPkg::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' > /etc/apt/apt.conf.d/docker-clean 	&& echo 'APT::Update::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' >> /etc/apt/apt.conf.d/docker-clean 	&& echo 'Dir::Cache::pkgcache ""; Dir::Cache::srcpkgcache "";' >> /etc/apt/apt.conf.d/docker-clean 		&& echo 'Acquire::Languages "none";' > /etc/apt/apt.conf.d/docker-no-languages 		&& echo 'Acquire::GzipIndexes "true"; Acquire::CompressionTypes::Order:: "gz";' > /etc/apt/apt.conf.d/docker-gzip-indexes 		&& echo 'Apt::AutoRemove::SuggestsImportant "false";' > /etc/apt/apt.conf.d/docker-autoremove-suggests
-# Fri, 23 Apr 2021 22:47:57 GMT
+# Thu, 27 May 2021 12:29:59 GMT
 RUN [ -z "$(apt-get indextargets)" ]
-# Fri, 23 Apr 2021 22:47:59 GMT
+# Thu, 27 May 2021 12:30:00 GMT
 RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
-# Fri, 23 Apr 2021 22:47:59 GMT
+# Thu, 27 May 2021 12:30:00 GMT
 CMD ["/bin/bash"]
-# Fri, 23 Apr 2021 23:13:07 GMT
+# Thu, 27 May 2021 20:31:40 GMT
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Fri, 23 Apr 2021 23:13:41 GMT
+# Thu, 27 May 2021 20:31:55 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends tzdata curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Mon, 10 May 2021 17:39:41 GMT
+# Thu, 27 May 2021 20:31:55 GMT
 ENV JAVA_VERSION=jdk8u292-b10
-# Mon, 10 May 2021 17:40:06 GMT
+# Thu, 27 May 2021 20:32:13 GMT
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='b062ec775e6c2961532d9afeae4027fe3ac2cf4344cbc912a401be5bfb6ca221';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u292-b10/OpenJDK8U-jre_aarch64_linux_hotspot_8u292b10.tar.gz';          ;;        armhf|armv7l)          ESUM='7f7707a7a3998737d2221080ea65d50ea96f5dde5226961ebcebd3ec99a82a32';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u292-b10/OpenJDK8U-jre_arm_linux_hotspot_8u292b10.tar.gz';          ;;        ppc64el|ppc64le)          ESUM='245ecd0dfde7e763c0b65028aa0440489466926be2ba018977ac9047dc328a8e';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u292-b10/OpenJDK8U-jre_ppc64le_linux_hotspot_8u292b10.tar.gz';          ;;        s390x)          ESUM='170c12f2017c212b23c1ba47728dcf9f5f2c9f2e29abf503136a8e55f513e048';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u292-b10/OpenJDK8U-jre_s390x_linux_hotspot_8u292b10.tar.gz';          LIBFFI_SUM='05e456a2e8ad9f20db846ccb96c483235c3243e27025c3e8e8e358411fd48be9';          LIBFFI_URL='http://launchpadlibrarian.net/354371408/libffi6_3.2.1-8_s390x.deb';          curl -LfsSo /tmp/libffi6.deb ${LIBFFI_URL};          echo "${LIBFFI_SUM} /tmp/libffi6.deb" | sha256sum -c -;          apt-get install -y --no-install-recommends /tmp/libffi6.deb;          rm -rf /tmp/libffi6.deb;          ;;        amd64|x86_64)          ESUM='cad66f48f90167ed19030c71f8f0580702c43cce5ce5a0d76833f7a5ae7c402a';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u292-b10/OpenJDK8U-jre_x64_linux_hotspot_8u292b10.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Mon, 10 May 2021 17:40:07 GMT
+# Thu, 27 May 2021 20:32:13 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ```
 
@@ -171,21 +171,21 @@ ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/
 		Last Modified: Fri, 16 Apr 2021 08:25:26 GMT  
 		Size: 27.1 MB (27144417 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9bf18fab4cfbf479fa9f8409ad47e2702c63241304c2cdd4c33f2a1633c5f85e`  
-		Last Modified: Fri, 23 Apr 2021 22:50:04 GMT  
-		Size: 850.0 B  
+	-	`sha256:c937c19c2d76950fb80c27261cfc3ba1515cd1d701bf7c5b570ce4d14a7b9688`  
+		Last Modified: Thu, 27 May 2021 12:31:57 GMT  
+		Size: 851.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5979309c983a2adeff352538937475cf961d49c34194fa2aab142effe19ed9c1`  
-		Last Modified: Fri, 23 Apr 2021 22:50:04 GMT  
-		Size: 189.0 B  
+	-	`sha256:ba4ad27543765699a5feb74058f25dff93de058fe2ccca9bd8f3f419d4c3d0bd`  
+		Last Modified: Thu, 27 May 2021 12:31:57 GMT  
+		Size: 188.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b6482171366cbde14bd4de2fe7eade385c2d307e224a008056f39e553b9c93d7`  
-		Last Modified: Fri, 23 Apr 2021 23:18:01 GMT  
-		Size: 15.9 MB (15895133 bytes)  
+	-	`sha256:cd3605b52bdc11515ca48a75175687bc98f47b3754856ca0a1e75b63d84e81a4`  
+		Last Modified: Thu, 27 May 2021 20:35:28 GMT  
+		Size: 15.9 MB (15893911 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:789be64bb708375944787f18aecaaecc86c52dbc1fd01a1af3612d5287e6a144`  
-		Last Modified: Mon, 10 May 2021 17:43:01 GMT  
-		Size: 41.0 MB (41028450 bytes)  
+	-	`sha256:6d5591ee80a9ba10f6028c5fbc19d566090169a55acfea4f8512d1f3976bca97`  
+		Last Modified: Thu, 27 May 2021 20:35:57 GMT  
+		Size: 41.0 MB (41028471 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adoptopenjdk:8-jre` - linux; ppc64le
