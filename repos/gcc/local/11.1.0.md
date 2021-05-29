@@ -3524,20 +3524,13 @@ Licenses: (parsed from: `/usr/share/doc/libxml2/copyright`, `/usr/share/doc/libx
 - `ISC`
 - `MIT-1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libxml2=2.9.10+dfsg-6.6
-'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.10+dfsg-6.6.dsc' libxml2_2.9.10+dfsg-6.6.dsc 2827 SHA256:401eadd23af32d6c635e269f2bc6adf7efde7c061857111de3d1d6d4e3e6a6ee
-'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.10+dfsg.orig.tar.xz' libxml2_2.9.10+dfsg.orig.tar.xz 2503560 SHA256:65ee7a2f5e100c64ddf7beb92297c9b2a30b994a76cd1fab67470cf22db6b7d0
-'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.10+dfsg-6.6.debian.tar.xz' libxml2_2.9.10+dfsg-6.6.debian.tar.xz 31704 SHA256:cb46109eb57f4cb1d2ed0a5c4999f70152b5b3bc3b452af01f3e96b5098d159e
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libxml2/2.9.10+dfsg-6.6/
 
-- https://sources.debian.net/src/libxml2/2.9.10+dfsg-6.6/ (for browsing the source)
-- https://sources.debian.net/src/libxml2/2.9.10+dfsg-6.6/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libxml2/2.9.10+dfsg-6.6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libxrender=1:0.9.10-1`
 
