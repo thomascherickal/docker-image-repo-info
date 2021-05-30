@@ -3855,21 +3855,13 @@ Licenses: (parsed from: `/usr/share/doc/libmariadb-dev/copyright`, `/usr/share/d
 - `unlimited-free-doc`
 - `zlib/libpng`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mariadb-10.5=1:10.5.9-1
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.5/mariadb-10.5_10.5.9-1.dsc' mariadb-10.5_10.5.9-1.dsc 4739 SHA256:2b08908d6c5bc7d6128d71bb23e6a8db5966069e27ccef0998570267ef8f54d6
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.5/mariadb-10.5_10.5.9.orig.tar.gz' mariadb-10.5_10.5.9.orig.tar.gz 88639930 SHA256:40ab19aeb8de141fdc188cf2251213c9e7351bee4d0cd29db704fae68d1068cf
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.5/mariadb-10.5_10.5.9.orig.tar.gz.asc' mariadb-10.5_10.5.9.orig.tar.gz.asc 195 SHA256:35a23c2a2a37693925bd7c73277c22e71877646f08d6d4c88de2c50e08120796
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.5/mariadb-10.5_10.5.9-1.debian.tar.xz' mariadb-10.5_10.5.9-1.debian.tar.xz 230604 SHA256:2d8a6644801c6af10ab798509127bcd272c838d78cd2f5b8a6352a1318209380
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mariadb-10.5/1:10.5.9-1/
 
-- https://sources.debian.net/src/mariadb-10.5/1:10.5.9-1/ (for browsing the source)
-- https://sources.debian.net/src/mariadb-10.5/1:10.5.9-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mariadb-10.5/1:10.5.9-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mawk=1.3.4.20200120-2`
 
