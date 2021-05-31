@@ -1,4 +1,4 @@
-# `neo4j:4.2.6-enterprise`
+# `neo4j:4.2.7-enterprise`
 
 ## Docker Metadata
 
