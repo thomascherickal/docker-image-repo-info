@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:c9b2833379d66ca1e65ab7023cc7b322522cbffeb322fc7fb999e9df398b1ebf`
-- Created: `2021-05-27T18:25:57.621550407Z`
-- Virtual Size: ~ 224.47 Mb  
+- Image ID: `sha256:ac7469600dd6a554de2a2d06f9478dd7d5352a845dd43fb873923740fb174f2b`
+- Created: `2021-06-01T17:38:54.338467504Z`
+- Virtual Size: ~ 224.49 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -14,8 +14,8 @@
   - `OPENSSL_VERSION=1.1.1k`
   - `OPENSSL_SOURCE_SHA256=892a0875b9872acd04a9fde79b1f943075d5ea162415de3047c327df33fbaee5`
   - `OPENSSL_PGP_KEY_IDS=0x8657ABB260F056B1E5190839D9C4D26D0E604491 0x5B2545DAB21995F4088CEFAA36CEE4DEB00CFE33 0xED230BEC4D4F2518B9D7DF41F0DB4D21C1D35231 0xC1F33DD8CE1D4CC613AF14DA9195C48241FBF7DD 0x7953AC1FBC3DC8B3B292393ED5E9E43F7DF9EE8C 0xE5E52560DD91C556DDBDA5D02064C53641C25E5D`
-  - `OTP_VERSION=24.0.1`
-  - `OTP_SOURCE_SHA256=e69bfaf8431252944ae87e7f031ef174ccdf61336334e70770af397d80ea7a6b`
+  - `OTP_VERSION=24.0.2`
+  - `OTP_SOURCE_SHA256=882e8a93194c32cf8335f62c86489c1850d5a5ec9bdfa35fff55b9317213ab8e`
   - `RABBITMQ_DATA_DIR=/var/lib/rabbitmq`
   - `RABBITMQ_VERSION=3.8.16`
   - `RABBITMQ_PGP_KEY_ID=0x0A9AF2115F4687BD29803A206B73A36E6026DFCA`
@@ -1313,14 +1313,14 @@ $ apt-get source -qq --print-uris python3-defaults=3.8.2-0ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-defaults/python3-defaults_3.8.2-0ubuntu2.tar.gz' python3-defaults_3.8.2-0ubuntu2.tar.gz 138226 SHA256:e4969a54306421ebfd195d0c064935db7c53f9f152d8abaae63da33819235e9a
 ```
 
-### `dpkg` source package: `python3.8=3.8.5-1~20.04.2`
+### `dpkg` source package: `python3.8=3.8.5-1~20.04.3`
 
 Binary Packages:
 
-- `libpython3.8-minimal:amd64=3.8.5-1~20.04.2`
-- `libpython3.8-stdlib:amd64=3.8.5-1~20.04.2`
-- `python3.8=3.8.5-1~20.04.2`
-- `python3.8-minimal=3.8.5-1~20.04.2`
+- `libpython3.8-minimal:amd64=3.8.5-1~20.04.3`
+- `libpython3.8-stdlib:amd64=3.8.5-1~20.04.3`
+- `python3.8=3.8.5-1~20.04.3`
+- `python3.8-minimal=3.8.5-1~20.04.3`
 
 Licenses: (parsed from: `/usr/share/doc/libpython3.8-minimal/copyright`, `/usr/share/doc/libpython3.8-stdlib/copyright`, `/usr/share/doc/python3.8/copyright`, `/usr/share/doc/python3.8-minimal/copyright`)
 
@@ -1345,10 +1345,10 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.8-minimal/copyright`, `/usr/s
 Source:
 
 ```console
-$ apt-get source -qq --print-uris python3.8=3.8.5-1~20.04.2
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.5-1~20.04.2.dsc' python3.8_3.8.5-1~20.04.2.dsc 3323 SHA512:fc74878958a9447513124b0982ac59e1dbbaf02ba061a0bdc9472e5ee383d5a1f47b483e2844a672745bb275b597f958f8e939f8b32a393e9c665b2a1d9c7dbe
+$ apt-get source -qq --print-uris python3.8=3.8.5-1~20.04.3
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.5-1~20.04.3.dsc' python3.8_3.8.5-1~20.04.3.dsc 3323 SHA512:de45f62a00fe3e7765e6a4e7565e5b07fa86198623c21bce1d97a8ff9629126346a03f63f0303e9224ca361d4a24f9435227b349bd4c843259d042f5a8c8303b
 'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.5.orig.tar.xz' python3.8_3.8.5.orig.tar.xz 18019640 SHA512:460cee65d7df7150694590575502d7f22e548ebfc99c8f8b363eef8bf30ee72e58d8ffacb1d607824f877f880eb9fd6775a508388029583e1e1df3380f3f9587
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.5-1~20.04.2.debian.tar.xz' python3.8_3.8.5-1~20.04.2.debian.tar.xz 212668 SHA512:5d61547f867e21d46fcc0bbcde38fded6ac0554e46c888d9b454f90974332205969da9eb3ff73796408a3302095f69f2f1e884f81ca975c09b4bf8557c74c67b
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.5-1~20.04.3.debian.tar.xz' python3.8_3.8.5-1~20.04.3.debian.tar.xz 214704 SHA512:031ff3d86962c0cdb9f3bd94bb20c65667f3752f70e56537ea51a27b80b7bbdcc1dc6482addf23ffd9a41d84f27bba1a8c2c68d469d29af174303801c428ea1f
 ```
 
 ### `dpkg` source package: `readline=8.0-4`
