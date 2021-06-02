@@ -3926,21 +3926,13 @@ Licenses: (parsed from: `/usr/share/doc/mercurial/copyright`, `/usr/share/doc/me
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mercurial=5.6.1-2
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.6.1-2.dsc' mercurial_5.6.1-2.dsc 2709 SHA256:9dbef682e7c3e95ef7f4ffbb4af1ee48cef345c1855f661dbdc9ebdeca66c9bb
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.6.1.orig.tar.gz' mercurial_5.6.1.orig.tar.gz 7836342 SHA256:e55c254f4904c45226a106780e57f4279aee03368f6ff6a981d5d2a38243ffad
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.6.1.orig.tar.gz.asc' mercurial_5.6.1.orig.tar.gz.asc 833 SHA256:bef5ca673b6fe7ab213e07826c2196dd41710df4739f9a49e57dc3d3d38a6d36
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.6.1-2.debian.tar.xz' mercurial_5.6.1-2.debian.tar.xz 64120 SHA256:8e0dab6e154def53acb5b391396d80f8c5ae0e2bfda3620bae546d12f9869625
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mercurial/5.6.1-2/
 
-- https://sources.debian.net/src/mercurial/5.6.1-2/ (for browsing the source)
-- https://sources.debian.net/src/mercurial/5.6.1-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mercurial/5.6.1-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mpclib3=1.2.0-1`
 
