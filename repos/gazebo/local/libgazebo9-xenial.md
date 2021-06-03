@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:71d1c3ed4c39ad91c3cb3d8aa7fce7e7a1ff597ddd4fd3945ffe7fb15eb82c9c`
-- Created: `2021-04-28T19:09:20.645304397Z`
-- Virtual Size: ~ 1.43 Gb  
+- Image ID: `sha256:6e8ade7641faa63d29760e26910ac741932bdb17aefd6c43eac4b04143a5f0a8`
+- Created: `2021-06-02T03:27:10.774879709Z`
+- Virtual Size: ~ 1.44 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/gzserver_entrypoint.sh"]`
@@ -825,13 +825,13 @@ $ apt-get source -qq --print-uris distro-info-data=0.28ubuntu0.17
 'http://archive.ubuntu.com/ubuntu/pool/main/d/distro-info-data/distro-info-data_0.28ubuntu0.17.tar.xz' distro-info-data_0.28ubuntu0.17.tar.xz 7368 SHA512:c656c2ce3c416a2fc97ec1428632fd3659af4ada0ffd294ce6f924a0b8842ebee8b1d2dd0dd7f79b0a9cb37158fcaa050e5551c1efb595bae8efd6f9f63d0c1e
 ```
 
-### `dpkg` source package: `dpkg=1.18.4ubuntu1.6`
+### `dpkg` source package: `dpkg=1.18.4ubuntu1.7`
 
 Binary Packages:
 
-- `dpkg=1.18.4ubuntu1.6`
-- `dpkg-dev=1.18.4ubuntu1.6`
-- `libdpkg-perl=1.18.4ubuntu1.6`
+- `dpkg=1.18.4ubuntu1.7`
+- `dpkg-dev=1.18.4ubuntu1.7`
+- `libdpkg-perl=1.18.4ubuntu1.7`
 
 Licenses: (parsed from: `/usr/share/doc/dpkg/copyright`, `/usr/share/doc/dpkg-dev/copyright`, `/usr/share/doc/libdpkg-perl/copyright`)
 
@@ -841,9 +841,13 @@ Licenses: (parsed from: `/usr/share/doc/dpkg/copyright`, `/usr/share/doc/dpkg-de
 - `public-domain-md5`
 - `public-domain-s-s-d`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris dpkg=1.18.4ubuntu1.7
+'http://archive.ubuntu.com/ubuntu/pool/main/d/dpkg/dpkg_1.18.4ubuntu1.7.dsc' dpkg_1.18.4ubuntu1.7.dsc 2196 SHA512:584fcb2ee1876ee6d500f492ba104082e46c5a7d0f89e2fc402114474f89a8166abb90b497b44471ddd7f3d3381fd5fdcc7d9e7e08b286de864710e4334bcd3a
+'http://archive.ubuntu.com/ubuntu/pool/main/d/dpkg/dpkg_1.18.4ubuntu1.7.tar.xz' dpkg_1.18.4ubuntu1.7.tar.xz 4298460 SHA512:4a953d961495ff7172ccb2e1f2e48216e52cf7faf127089039e7b122c2c9a6823c1e8e55f8a3cea353798955d5491f946dc46d4e52145c449980ebe6a981e7e0
+```
 
 ### `dpkg` source package: `e2fsprogs=1.42.13-1ubuntu1.2`
 
@@ -1213,15 +1217,15 @@ $ apt-get source -qq --print-uris game-music-emu=0.6.0-3ubuntu0.16.04.1
 'http://archive.ubuntu.com/ubuntu/pool/universe/g/game-music-emu/game-music-emu_0.6.0-3ubuntu0.16.04.1.debian.tar.xz' game-music-emu_0.6.0-3ubuntu0.16.04.1.debian.tar.xz 5592 SHA512:94081604ff85c42caa29351963294258e43304145bc926f34db428029b0854968f1587c84fa5f5eb28a63a704e114f354058ec59f4ebd9e3681fe7d530c9a85f
 ```
 
-### `dpkg` source package: `gazebo9=9.17.0-1~xenial`
+### `dpkg` source package: `gazebo9=9.18.0-1~xenial`
 
 Binary Packages:
 
-- `gazebo9=9.17.0-1~xenial`
-- `gazebo9-common=9.17.0-1~xenial`
-- `gazebo9-plugin-base=9.17.0-1~xenial`
-- `libgazebo9:amd64=9.17.0-1~xenial`
-- `libgazebo9-dev:amd64=9.17.0-1~xenial`
+- `gazebo9=9.18.0-1~xenial`
+- `gazebo9-common=9.18.0-1~xenial`
+- `gazebo9-plugin-base=9.18.0-1~xenial`
+- `libgazebo9:amd64=9.18.0-1~xenial`
+- `libgazebo9-dev:amd64=9.18.0-1~xenial`
 
 Licenses: (parsed from: `/usr/share/doc/gazebo9/copyright`, `/usr/share/doc/gazebo9-common/copyright`, `/usr/share/doc/gazebo9-plugin-base/copyright`, `/usr/share/doc/libgazebo9/copyright`, `/usr/share/doc/libgazebo9-dev/copyright`)
 
@@ -1237,9 +1241,14 @@ Licenses: (parsed from: `/usr/share/doc/gazebo9/copyright`, `/usr/share/doc/gaze
 - `LGPL-3+`
 - `ZLIB`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris gazebo9=9.18.0-1~xenial
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo9/gazebo9_9.18.0-1~xenial.dsc' gazebo9_9.18.0-1~xenial.dsc 2146 SHA256:aa7fcd184f09f67dc516899b5f2d865895a21271fb7ff012fe2def8b95066eef
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo9/gazebo9_9.18.0.orig.tar.bz2' gazebo9_9.18.0.orig.tar.bz2 55788706 SHA256:6d00de6e6e796285f844515ea9c774e10e2df8f554456d09bd439dfa172a2449
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo9/gazebo9_9.18.0-1~xenial.debian.tar.xz' gazebo9_9.18.0-1~xenial.debian.tar.xz 6956 SHA256:d09c5c378232f6a291eb0499f5f2129b69fe18c0ec53999ace51dcbfe8b0e42d
+```
 
 ### `dpkg` source package: `gcc-5=5.4.0-6ubuntu1~16.04.12`
 
@@ -1468,12 +1477,9 @@ $ apt-get source -qq --print-uris glib2.0=2.48.2-0ubuntu4.8
 Binary Packages:
 
 - `libc-bin=2.23-0ubuntu11.2`
-- `libc-dev-bin=2.23-0ubuntu11.2`
-- `libc6:amd64=2.23-0ubuntu11.2`
-- `libc6-dev:amd64=2.23-0ubuntu11.2`
 - `multiarch-support=2.23-0ubuntu11.2`
 
-Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/libc-dev-bin/copyright`, `/usr/share/doc/libc6/copyright`, `/usr/share/doc/libc6-dev/copyright`, `/usr/share/doc/multiarch-support/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/multiarch-support/copyright`)
 
 - `GPL-2`
 - `LGPL-2.1`
@@ -1481,6 +1487,28 @@ Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/lib
 **WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
 This is *usually* due to a new package version being released and the old version being removed.
 
+
+### `dpkg` source package: `glibc=2.23-0ubuntu11.3`
+
+Binary Packages:
+
+- `libc-dev-bin=2.23-0ubuntu11.3`
+- `libc6:amd64=2.23-0ubuntu11.3`
+- `libc6-dev:amd64=2.23-0ubuntu11.3`
+
+Licenses: (parsed from: `/usr/share/doc/libc-dev-bin/copyright`, `/usr/share/doc/libc6/copyright`, `/usr/share/doc/libc6-dev/copyright`)
+
+- `GPL-2`
+- `LGPL-2.1`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris glibc=2.23-0ubuntu11.3
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.23-0ubuntu11.3.dsc' glibc_2.23-0ubuntu11.3.dsc 8547 SHA512:73ec4bcd6e9fd35ec2f7b4a0c646e0974ae302915a525cf3ff5a4aa7a21c04104aa201718d1f18ab792518c64cf803b3d46a560347784e3c96432da140719d49
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.23.orig.tar.xz' glibc_2.23.orig.tar.xz 13849968 SHA512:f2c3460d04226cbb5ff54755efb6f337356d9c063d71f736d8e5f631aaa85bfa89c4e2da1cd29f93383310994a18b21327512efd145d4c8dffd6c1412a002191
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.23-0ubuntu11.3.debian.tar.xz' glibc_2.23-0ubuntu11.3.debian.tar.xz 1253716 SHA512:41c5c9dc2ff20a1c0b781d700a94daeda087f3b58cbccc68f36695d6d3ee83c06eed2083bfaf3220ab7ebbbd35c0cca15f63b087ca981a39ed29a71430ba216c
+```
 
 ### `dpkg` source package: `gmp=2:6.1.0+dfsg-2`
 
@@ -4061,6 +4089,29 @@ $ apt-get source -qq --print-uris libzip=1.0.1-0ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/universe/libz/libzip/libzip_1.0.1-0ubuntu1.dsc' libzip_1.0.1-0ubuntu1.dsc 1873 SHA256:de3b583625ac643ee635f111ef1f51d268c90def8bc05b430652b89903e1a88a
 'http://archive.ubuntu.com/ubuntu/pool/universe/libz/libzip/libzip_1.0.1.orig.tar.gz' libzip_1.0.1.orig.tar.gz 659452 SHA256:0cef914d8f5105ccac44484f61413daa08d7204758e77240a4d20ebf967f3d49
 'http://archive.ubuntu.com/ubuntu/pool/universe/libz/libzip/libzip_1.0.1-0ubuntu1.debian.tar.xz' libzip_1.0.1-0ubuntu1.debian.tar.xz 4564 SHA256:2e03e8ec880901fbf6d8a3c3f31b60c88ac0aa0b264890daf3a250f996b60d44
+```
+
+### `dpkg` source package: `libzstd=1.3.1+dfsg-1~ubuntu0.16.04.1`
+
+Binary Packages:
+
+- `libzstd1=1.3.1+dfsg-1~ubuntu0.16.04.1`
+
+Licenses: (parsed from: `/usr/share/doc/libzstd1/copyright`)
+
+- `BSD-3-clause-with-patent-grant`
+- `Expat`
+- `GPL-2`
+- `GPL-2+`
+- `zlib`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris libzstd=1.3.1+dfsg-1~ubuntu0.16.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.3.1+dfsg-1~ubuntu0.16.04.1.dsc' libzstd_1.3.1+dfsg-1~ubuntu0.16.04.1.dsc 2224 SHA512:c0a076cb4d436a100bc9fa2ff49bdd198242c9e1bf886e7b315ad81e345d4aa21b4058001080c4987bc2d5ce1a462f43205bb9b0a6970b52b71e60c36396fc00
+'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.3.1+dfsg.orig.tar.xz' libzstd_1.3.1+dfsg.orig.tar.xz 1016592 SHA512:a3e8b9592797aa3e62fb006a0b8d41c7eb1a7dd12027830d9b8664e6d2b1189233a1563d6bc006256e52fb18203afb5e05b861372524c4393e255cd55edfb19b
+'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.3.1+dfsg-1~ubuntu0.16.04.1.debian.tar.xz' libzstd_1.3.1+dfsg-1~ubuntu0.16.04.1.debian.tar.xz 10024 SHA512:d22b513ad3be36fca335fd67b302fb3a08bcfc2fd45527a8592ff56060c15f89061f53a208ed8ca4ea4f10c0b7bb742e9411ad07dd3aa0803c959871f1c6fde3
 ```
 
 ### `dpkg` source package: `linux=4.4.0-210.242`
