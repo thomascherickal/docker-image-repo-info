@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:7f05eafada690f6c9dd04e6554310579b40e4485354407cc000d3dbad8df92ab`
-- Created: `2021-04-29T21:50:25.915443931Z`
-- Virtual Size: ~ 472.55 Mb  
+- Image ID: `sha256:4d167822c20adb6e1d239165b9afea867b28c558ed6a541a8b389156d45d1d33`
+- Created: `2021-06-01T20:26:50.278586296Z`
+- Virtual Size: ~ 478.67 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -17,11 +17,11 @@
   - `PHP_CFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
-  - `GPG_KEYS=CBAF69F173A0FEA4B537F470D66C9593118BCCB6 F38252826ACD957EF380D39F2F7956BC5DA04B5D`
-  - `PHP_VERSION=7.3.28`
-  - `PHP_URL=https://www.php.net/distributions/php-7.3.28.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.3.28.tar.xz.asc`
-  - `PHP_SHA256=a2a84dbec8c1eee3f46c5f249eaaa2ecb3f9e7a6f5d0604d2df44ff8d4904dbe`
+  - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
+  - `PHP_VERSION=7.4.19`
+  - `PHP_URL=https://www.php.net/distributions/php-7.4.19.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.19.tar.xz.asc`
+  - `PHP_SHA256=6c17172c4a411ccb694d9752de899bb63c72a0a3ebe5089116bc13658a1467b2`
   - `MEDIAWIKI_MAJOR_VERSION=1.35`
   - `MEDIAWIKI_VERSION=1.35.2`
 
@@ -1033,16 +1033,16 @@ BSD-3-Clause
 ### `apk` package: `libx11`
 
 ```console
-libx11-1.7.0-r0 description:
+libx11-1.7.1-r0 description:
 X11 client-side library
 
-libx11-1.7.0-r0 webpage:
+libx11-1.7.1-r0 webpage:
 http://xorg.freedesktop.org/
 
-libx11-1.7.0-r0 installed size:
+libx11-1.7.1-r0 installed size:
 3240 KiB
 
-libx11-1.7.0-r0 license:
+libx11-1.7.1-r0 license:
 custom:XFREE86
 
 ```
@@ -1268,6 +1268,23 @@ MIT
 
 ```
 
+### `apk` package: `oniguruma`
+
+```console
+oniguruma-6.9.6-r0 description:
+a regular expressions library
+
+oniguruma-6.9.6-r0 webpage:
+https://github.com/kkos/oniguruma
+
+oniguruma-6.9.6-r0 installed size:
+556 KiB
+
+oniguruma-6.9.6-r0 license:
+BSD-2-Clause
+
+```
+
 ### `apk` package: `openssl`
 
 ```console
@@ -1390,16 +1407,16 @@ ISC
 ### `apk` package: `python3`
 
 ```console
-python3-3.8.8-r0 description:
+python3-3.8.10-r0 description:
 A high-level scripting language
 
-python3-3.8.8-r0 webpage:
+python3-3.8.10-r0 webpage:
 https://www.python.org/
 
-python3-3.8.8-r0 installed size:
+python3-3.8.10-r0 installed size:
 44 MiB
 
-python3-3.8.8-r0 license:
+python3-3.8.10-r0 license:
 PSF-2.0
 
 ```
