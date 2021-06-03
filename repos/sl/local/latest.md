@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:2315bcdb85b04d9c6474f23f39c118a56831e25a1462b7168a9f4034b57a5660`
-- Created: `2021-05-04T23:21:34.846867193Z`
+- Image ID: `sha256:2bb14f939ea6e5be43f53faa0ae01b745084991daef27017985df2a81f44c6b2`
+- Created: `2021-06-02T05:46:17.55026666Z`
 - Virtual Size: ~ 186.54 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -11,7 +11,7 @@
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
 - Labels:
-  - `build-date=20210504`
+  - `build-date=20210601`
   - `name=SL7 Base Image`
   - `vendor=Scientific Linux`
 
@@ -485,17 +485,17 @@ Enabling repos-source repository
 http://ftp.scientificlinux.org/linux/scientific/7/SRPMS//vendor/geoipupdate-2.5.0-1.el7.src.rpm
 ```
 
-### `rpm` package: `glib2-2.56.1-8.el7.x86_64`
+### `rpm` package: `glib2-2.56.1-9.el7_9.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls glib2-2.56.1-8.el7
+$ yumdownloader --quiet --source --urls glib2-2.56.1-9.el7_9
 Enabling sl-source repository
 Enabling repos-source repository
-http://ftp.scientificlinux.org/linux/scientific/7/SRPMS//vendor/glib2-2.56.1-8.el7.src.rpm
+http://ftp.scientificlinux.org/linux/scientific/7/SRPMS//vendor/glib2-2.56.1-9.el7_9.src.rpm
 ```
 
 ### `rpm` package: `glibc-2.17-324.el7_9.x86_64`
