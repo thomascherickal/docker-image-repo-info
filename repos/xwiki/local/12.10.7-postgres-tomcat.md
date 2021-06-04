@@ -3306,14 +3306,9 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.8/copyright`, `/usr/share/doc
 - `use in source`
 - `without`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3.8=3.8.5-1~20.04.2
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.5-1~20.04.2.dsc' python3.8_3.8.5-1~20.04.2.dsc 3323 SHA512:fc74878958a9447513124b0982ac59e1dbbaf02ba061a0bdc9472e5ee383d5a1f47b483e2844a672745bb275b597f958f8e939f8b32a393e9c665b2a1d9c7dbe
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.5.orig.tar.xz' python3.8_3.8.5.orig.tar.xz 18019640 SHA512:460cee65d7df7150694590575502d7f22e548ebfc99c8f8b363eef8bf30ee72e58d8ffacb1d607824f877f880eb9fd6775a508388029583e1e1df3380f3f9587
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.5-1~20.04.2.debian.tar.xz' python3.8_3.8.5-1~20.04.2.debian.tar.xz 212668 SHA512:5d61547f867e21d46fcc0bbcde38fded6ac0554e46c888d9b454f90974332205969da9eb3ff73796408a3302095f69f2f1e884f81ca975c09b4bf8557c74c67b
-```
 
 ### `dpkg` source package: `raptor2=2.0.15-0ubuntu1.20.04.1`
 
