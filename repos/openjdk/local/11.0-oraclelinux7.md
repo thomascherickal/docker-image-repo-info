@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:54e3de212ac83a6c741444acc301095606877211032b726b63eeaef119e1fb85`
-- Created: `2021-05-06T00:29:09.078508686Z`
-- Virtual Size: ~ 515.78 Mb  
+- Image ID: `sha256:167ff678e1d88987f1cebe354993f56b5f4c738b29e80c003d44dba8b3bc4329`
+- Created: `2021-06-01T15:40:09.053090551Z`
+- Virtual Size: ~ 515.79 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["jshell"]`
@@ -115,15 +115,15 @@ $ yumdownloader --quiet --source --urls cpio-2.11-28.el7
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/cpio-2.11-28.el7.src.rpm
 ```
 
-### `rpm` package: `curl-7.29.0-59.0.1.el7_9.1.x86_64`
+### `rpm` package: `curl-7.29.0-59.0.3.el7_9.1.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls curl-7.29.0-59.0.1.el7_9.1
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/curl-7.29.0-59.0.1.el7_9.1.src.rpm
+$ yumdownloader --quiet --source --urls curl-7.29.0-59.0.3.el7_9.1
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/curl-7.29.0-59.0.3.el7_9.1.src.rpm
 ```
 
 ### `rpm` package: `cyrus-sasl-lib-2.1.26-23.el7.x86_64`
@@ -280,15 +280,15 @@ $ yumdownloader --quiet --source --urls gdbm-1.10-8.el7
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/gdbm-1.10-8.el7.src.rpm
 ```
 
-### `rpm` package: `glib2-2.56.1-8.el7.x86_64`
+### `rpm` package: `glib2-2.56.1-9.el7_9.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls glib2-2.56.1-8.el7
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/glib2-2.56.1-8.el7.src.rpm
+$ yumdownloader --quiet --source --urls glib2-2.56.1-9.el7_9
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/glib2-2.56.1-9.el7_9.src.rpm
 ```
 
 ### `rpm` package: `glibc-2.17-324.0.1.el7_9.x86_64`
@@ -490,15 +490,15 @@ $ yumdownloader --quiet --source --urls libcom_err-1.42.9-19.el7
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/e2fsprogs-1.42.9-19.el7.src.rpm
 ```
 
-### `rpm` package: `libcurl-7.29.0-59.0.1.el7_9.1.x86_64`
+### `rpm` package: `libcurl-7.29.0-59.0.3.el7_9.1.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls libcurl-7.29.0-59.0.1.el7_9.1
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/curl-7.29.0-59.0.1.el7_9.1.src.rpm
+$ yumdownloader --quiet --source --urls libcurl-7.29.0-59.0.3.el7_9.1
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/curl-7.29.0-59.0.3.el7_9.1.src.rpm
 ```
 
 ### `rpm` package: `libdb-5.3.21-25.el7.x86_64`
@@ -853,15 +853,15 @@ $ yumdownloader --quiet --source --urls openldap-2.4.44-23.el7_9
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/openldap-2.4.44-23.el7_9.src.rpm
 ```
 
-### `rpm` package: `openssl-libs-1.0.2k-21.el7_9.x86_64`
+### `rpm` package: `openssl-libs-1.0.2k-21.0.3.el7_9.x86_64`
 
 Licenses (from `rpm --query`): OpenSSL
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls openssl-libs-1.0.2k-21.el7_9
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/openssl-1.0.2k-21.el7_9.src.rpm
+$ yumdownloader --quiet --source --urls openssl-libs-1.0.2k-21.0.3.el7_9
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/openssl-1.0.2k-21.0.3.el7_9.src.rpm
 ```
 
 ### `rpm` package: `oraclelinux-release-7.9-1.0.9.el7.x86_64`
