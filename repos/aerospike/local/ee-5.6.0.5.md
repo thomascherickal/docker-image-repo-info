@@ -1,18 +1,18 @@
-# `aerospike:ce-5.6.0.4`
+# `aerospike:ee-5.6.0.5`
 
 ## Docker Metadata
 
-- Image ID: `sha256:a7e7dafec0369d583d475358eac3e86b2c3bc6dad9eba58a5d6982206ee09381`
-- Created: `2021-05-27T19:20:06.194614054Z`
-- Virtual Size: ~ 213.35 Mb  
+- Image ID: `sha256:bba1de89285726e3dcf82d53c25a1d64f7b99de5bc33b07cc725c492242d3ae9`
+- Created: `2021-06-02T19:53:08.049680036Z`
+- Virtual Size: ~ 218.57 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/bin/dumb-init","--","/entrypoint.sh"]`
 - Command: `["asd"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `AEROSPIKE_VERSION=5.6.0.4`
-  - `AEROSPIKE_SHA256=1717dc48edf3c7b8595c7ee12580fdfab382ac1c0af86c7f9d95fbf0037b99dd`
+  - `AEROSPIKE_VERSION=5.6.0.5`
+  - `AEROSPIKE_SHA256=4beb4c5858e24736c9414da70a74e3c29a8d2c796bf1c3982cc502661f892bf1`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -69,11 +69,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/adduser/3.118/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/adduser/3.118/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `aerospike-server-community=5.6.0.4-1`
+### `dpkg` source package: `aerospike-server-enterprise=5.6.0.5-1`
 
 Binary Packages:
 
-- `aerospike-server-community=5.6.0.4-1`
+- `aerospike-server-enterprise=5.6.0.5-1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1886,6 +1886,7 @@ Binary Packages:
 
 - `libldap-2.4-2:amd64=2.4.47+dfsg-3+deb10u6`
 - `libldap-common=2.4.47+dfsg-3+deb10u6`
+- `libldap2-dev:amd64=2.4.47+dfsg-3+deb10u6`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
