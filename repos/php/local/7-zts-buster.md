@@ -1,10 +1,10 @@
-# `php:7.4.19-zts-buster`
+# `php:7.4.20-zts-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:563fcdaaf1d3d8d13db01849f7900747b04a9f81467fc8ad604f4fe8293c8257`
-- Created: `2021-05-12T13:30:57.856499289Z`
-- Virtual Size: ~ 388.47 Mb  
+- Image ID: `sha256:f70ddf30f6bd7b3ae1ab08080da1a1e5a2b2dff84c785cd3311857f167747cc0`
+- Created: `2021-06-03T22:03:26.868280087Z`
+- Virtual Size: ~ 388.48 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -18,10 +18,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
-  - `PHP_VERSION=7.4.19`
-  - `PHP_URL=https://www.php.net/distributions/php-7.4.19.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.19.tar.xz.asc`
-  - `PHP_SHA256=6c17172c4a411ccb694d9752de899bb63c72a0a3ebe5089116bc13658a1467b2`
+  - `PHP_VERSION=7.4.20`
+  - `PHP_URL=https://www.php.net/distributions/php-7.4.20.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.20.tar.xz.asc`
+  - `PHP_SHA256=1fa46ca6790d780bf2cb48961df65f0ca3640c4533f0bca743cd61b71cb66335`
 
 ## `dpkg` (`.deb`-based packages)
 

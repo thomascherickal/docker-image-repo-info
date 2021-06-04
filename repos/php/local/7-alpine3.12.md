@@ -1,10 +1,10 @@
-# `php:7.4.19-cli-alpine3.12`
+# `php:7.4.20-cli-alpine3.12`
 
 ## Docker Metadata
 
-- Image ID: `sha256:faa1e605e02f8234762a6e8dfb8a52bc7d1faf64ea8d2ee98d457ce985997379`
-- Created: `2021-05-06T22:43:50.33786746Z`
-- Virtual Size: ~ 81.48 Mb  
+- Image ID: `sha256:37163abaf4e88e1790855e171543d50ae9fb5235eff794ec2beb758b55a4c26b`
+- Created: `2021-06-03T22:38:34.797667473Z`
+- Virtual Size: ~ 81.98 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
-  - `PHP_VERSION=7.4.19`
-  - `PHP_URL=https://www.php.net/distributions/php-7.4.19.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.19.tar.xz.asc`
-  - `PHP_SHA256=6c17172c4a411ccb694d9752de899bb63c72a0a3ebe5089116bc13658a1467b2`
+  - `PHP_VERSION=7.4.20`
+  - `PHP_URL=https://www.php.net/distributions/php-7.4.20.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.20.tar.xz.asc`
+  - `PHP_SHA256=1fa46ca6790d780bf2cb48961df65f0ca3640c4533f0bca743cd61b71cb66335`
 
 ## `apk` (`.apk`-based packages)
 
@@ -214,16 +214,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.76.1-r0 description:
+libcurl-7.77.0-r0 description:
 The multiprotocol file transfer library
 
-libcurl-7.76.1-r0 webpage:
+libcurl-7.77.0-r0 webpage:
 https://curl.se/
 
-libcurl-7.76.1-r0 installed size:
-488 KiB
+libcurl-7.77.0-r0 installed size:
+500 KiB
 
-libcurl-7.76.1-r0 license:
+libcurl-7.77.0-r0 license:
 MIT
 
 ```
