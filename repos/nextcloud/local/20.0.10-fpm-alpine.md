@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:981bac2c6823691792b1d87bebb19e94a63de3631f94507f05aa3b800dea0e68`
-- Created: `2021-05-22T05:02:19.136771672Z`
-- Virtual Size: ~ 497.32 Mb  
+- Image ID: `sha256:4faa6cb10e5ff58dd52bab35837b82ce2f50bbae8cd464d430265bef3dc5288f`
+- Created: `2021-06-04T01:02:06.969228498Z`
+- Virtual Size: ~ 497.82 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -18,10 +18,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
-  - `PHP_VERSION=7.4.19`
-  - `PHP_URL=https://www.php.net/distributions/php-7.4.19.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.19.tar.xz.asc`
-  - `PHP_SHA256=6c17172c4a411ccb694d9752de899bb63c72a0a3ebe5089116bc13658a1467b2`
+  - `PHP_VERSION=7.4.20`
+  - `PHP_URL=https://www.php.net/distributions/php-7.4.20.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.20.tar.xz.asc`
+  - `PHP_SHA256=1fa46ca6790d780bf2cb48961df65f0ca3640c4533f0bca743cd61b71cb66335`
   - `PHP_MEMORY_LIMIT=512M`
   - `PHP_UPLOAD_LIMIT=512M`
   - `NEXTCLOUD_VERSION=20.0.10`
@@ -286,16 +286,16 @@ MIT ICU Unicode-TOU
 ### `apk` package: `imagemagick-libs`
 
 ```console
-imagemagick-libs-7.0.10.57-r0 description:
+imagemagick-libs-7.0.11.13-r0 description:
 Collection of tools and libraries for many image formats (libraries)
 
-imagemagick-libs-7.0.10.57-r0 webpage:
+imagemagick-libs-7.0.11.13-r0 webpage:
 https://www.imagemagick.org/
 
-imagemagick-libs-7.0.10.57-r0 installed size:
-3244 KiB
+imagemagick-libs-7.0.11.13-r0 installed size:
+3252 KiB
 
-imagemagick-libs-7.0.10.57-r0 license:
+imagemagick-libs-7.0.11.13-r0 license:
 ImageMagick
 
 ```
@@ -405,16 +405,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.76.1-r0 description:
+libcurl-7.77.0-r0 description:
 The multiprotocol file transfer library
 
-libcurl-7.76.1-r0 webpage:
+libcurl-7.77.0-r0 webpage:
 https://curl.se/
 
-libcurl-7.76.1-r0 installed size:
-488 KiB
+libcurl-7.77.0-r0 installed size:
+500 KiB
 
-libcurl-7.76.1-r0 license:
+libcurl-7.77.0-r0 license:
 MIT
 
 ```
@@ -541,16 +541,16 @@ Libpng
 ### `apk` package: `libpq`
 
 ```console
-libpq-13.2-r0 description:
+libpq-13.3-r0 description:
 PostgreSQL libraries
 
-libpq-13.2-r0 webpage:
+libpq-13.3-r0 webpage:
 https://www.postgresql.org/
 
-libpq-13.2-r0 installed size:
+libpq-13.3-r0 installed size:
 328 KiB
 
-libpq-13.2-r0 license:
+libpq-13.3-r0 license:
 PostgreSQL
 
 ```
@@ -677,16 +677,16 @@ BSD-3-Clause
 ### `apk` package: `libx11`
 
 ```console
-libx11-1.7.0-r0 description:
+libx11-1.7.1-r0 description:
 X11 client-side library
 
-libx11-1.7.0-r0 webpage:
+libx11-1.7.1-r0 webpage:
 http://xorg.freedesktop.org/
 
-libx11-1.7.0-r0 installed size:
+libx11-1.7.1-r0 installed size:
 3240 KiB
 
-libx11-1.7.0-r0 license:
+libx11-1.7.1-r0 license:
 custom:XFREE86
 
 ```
