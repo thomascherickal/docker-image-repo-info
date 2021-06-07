@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:9478bff21ce68adb19a17ce1d1a018f188d1a48fc43f3befaa843f6b853a60af`
-- Created: `2021-06-02T19:55:39.899753111Z`
-- Virtual Size: ~ 101.40 Mb  
+- Image ID: `sha256:d29e50c7ee07959b0081429828f2ced2e061de84d977c8a6e232b5932e1cb839`
+- Created: `2021-06-03T23:12:54.673034103Z`
+- Virtual Size: ~ 101.90 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -18,10 +18,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
-  - `PHP_VERSION=7.4.19`
-  - `PHP_URL=https://www.php.net/distributions/php-7.4.19.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.19.tar.xz.asc`
-  - `PHP_SHA256=6c17172c4a411ccb694d9752de899bb63c72a0a3ebe5089116bc13658a1467b2`
+  - `PHP_VERSION=7.4.20`
+  - `PHP_URL=https://www.php.net/distributions/php-7.4.20.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.20.tar.xz.asc`
+  - `PHP_SHA256=1fa46ca6790d780bf2cb48961df65f0ca3640c4533f0bca743cd61b71cb66335`
   - `DRUPAL_VERSION=7.81`
   - `DRUPAL_MD5=ca21e214b3de1453e71f2eb1ab182c3d`
 
@@ -285,16 +285,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.76.1-r0 description:
+libcurl-7.77.0-r0 description:
 The multiprotocol file transfer library
 
-libcurl-7.76.1-r0 webpage:
+libcurl-7.77.0-r0 webpage:
 https://curl.se/
 
-libcurl-7.76.1-r0 installed size:
-488 KiB
+libcurl-7.77.0-r0 installed size:
+500 KiB
 
-libcurl-7.76.1-r0 license:
+libcurl-7.77.0-r0 license:
 MIT
 
 ```
@@ -370,16 +370,16 @@ Libpng
 ### `apk` package: `libpq`
 
 ```console
-libpq-12.6-r0 description:
+libpq-12.7-r0 description:
 PostgreSQL libraries
 
-libpq-12.6-r0 webpage:
+libpq-12.7-r0 webpage:
 https://www.postgresql.org/
 
-libpq-12.6-r0 installed size:
+libpq-12.7-r0 installed size:
 320 KiB
 
-libpq-12.6-r0 license:
+libpq-12.7-r0 license:
 PostgreSQL
 
 ```

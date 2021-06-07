@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:eee20944ca3fa40043e0d3f78feaf5ebec1f1b8673be4a9c567f2d64f85ce72f`
-- Created: `2021-05-27T00:17:02.267008118Z`
-- Virtual Size: ~ 173.02 Mb  
+- Image ID: `sha256:f3fbc031673c177f912b4f481f20d07dd325c0af506060ddc5e1ee4eb0e5f43a`
+- Created: `2021-06-03T23:12:34.796744693Z`
+- Virtual Size: ~ 173.52 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -18,10 +18,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
-  - `PHP_VERSION=7.4.19`
-  - `PHP_URL=https://www.php.net/distributions/php-7.4.19.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.19.tar.xz.asc`
-  - `PHP_SHA256=6c17172c4a411ccb694d9752de899bb63c72a0a3ebe5089116bc13658a1467b2`
+  - `PHP_VERSION=7.4.20`
+  - `PHP_URL=https://www.php.net/distributions/php-7.4.20.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.20.tar.xz.asc`
+  - `PHP_SHA256=1fa46ca6790d780bf2cb48961df65f0ca3640c4533f0bca743cd61b71cb66335`
   - `DRUPAL_VERSION=8.9.16`
 
 ## `apk` (`.apk`-based packages)
@@ -284,16 +284,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.76.1-r0 description:
+libcurl-7.77.0-r0 description:
 The multiprotocol file transfer library
 
-libcurl-7.76.1-r0 webpage:
+libcurl-7.77.0-r0 webpage:
 https://curl.se/
 
-libcurl-7.76.1-r0 installed size:
-488 KiB
+libcurl-7.77.0-r0 installed size:
+500 KiB
 
-libcurl-7.76.1-r0 license:
+libcurl-7.77.0-r0 license:
 MIT
 
 ```
@@ -369,16 +369,16 @@ Libpng
 ### `apk` package: `libpq`
 
 ```console
-libpq-12.6-r0 description:
+libpq-12.7-r0 description:
 PostgreSQL libraries
 
-libpq-12.6-r0 webpage:
+libpq-12.7-r0 webpage:
 https://www.postgresql.org/
 
-libpq-12.6-r0 installed size:
+libpq-12.7-r0 installed size:
 320 KiB
 
-libpq-12.6-r0 license:
+libpq-12.7-r0 license:
 PostgreSQL
 
 ```

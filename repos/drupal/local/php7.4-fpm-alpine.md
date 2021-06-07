@@ -1,10 +1,10 @@
-# `drupal:9.1.9-php7.4-fpm-alpine3.12`
+# `drupal:9.1.10-php7.4-fpm-alpine3.12`
 
 ## Docker Metadata
 
-- Image ID: `sha256:02c5792de050ac770b2fe47e8d6b847abe6f539038c23c86eaa1f0485b9b0dd3`
-- Created: `2021-05-27T00:12:34.476639261Z`
-- Virtual Size: ~ 167.13 Mb  
+- Image ID: `sha256:019250726300d09ad5b8a8de410acf5674e91733def0d42f51cf7ee709074b77`
+- Created: `2021-06-05T00:21:20.042871832Z`
+- Virtual Size: ~ 167.78 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -18,11 +18,11 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
-  - `PHP_VERSION=7.4.19`
-  - `PHP_URL=https://www.php.net/distributions/php-7.4.19.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.19.tar.xz.asc`
-  - `PHP_SHA256=6c17172c4a411ccb694d9752de899bb63c72a0a3ebe5089116bc13658a1467b2`
-  - `DRUPAL_VERSION=9.1.9`
+  - `PHP_VERSION=7.4.20`
+  - `PHP_URL=https://www.php.net/distributions/php-7.4.20.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.20.tar.xz.asc`
+  - `PHP_SHA256=1fa46ca6790d780bf2cb48961df65f0ca3640c4533f0bca743cd61b71cb66335`
+  - `DRUPAL_VERSION=9.1.10`
 
 ## `apk` (`.apk`-based packages)
 
@@ -284,16 +284,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.76.1-r0 description:
+libcurl-7.77.0-r0 description:
 The multiprotocol file transfer library
 
-libcurl-7.76.1-r0 webpage:
+libcurl-7.77.0-r0 webpage:
 https://curl.se/
 
-libcurl-7.76.1-r0 installed size:
-488 KiB
+libcurl-7.77.0-r0 installed size:
+500 KiB
 
-libcurl-7.76.1-r0 license:
+libcurl-7.77.0-r0 license:
 MIT
 
 ```
@@ -369,16 +369,16 @@ Libpng
 ### `apk` package: `libpq`
 
 ```console
-libpq-12.6-r0 description:
+libpq-12.7-r0 description:
 PostgreSQL libraries
 
-libpq-12.6-r0 webpage:
+libpq-12.7-r0 webpage:
 https://www.postgresql.org/
 
-libpq-12.6-r0 installed size:
+libpq-12.7-r0 installed size:
 320 KiB
 
-libpq-12.6-r0 license:
+libpq-12.7-r0 license:
 PostgreSQL
 
 ```
