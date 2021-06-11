@@ -78,19 +78,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.2.3
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.2.3.dsc' apt_2.2.3.dsc 2780 SHA256:2a812edfcd65294abe737ec446c1da9d678cce42af2117ff5e17440572f935d2
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.2.3.tar.xz' apt_2.2.3.tar.xz 2195960 SHA256:2880474bc08c79f103cd30d24a9c30c78b480c65076e466d24df93b9fa05ab27
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/apt/2.2.3/
 
-- https://sources.debian.net/src/apt/2.2.3/ (for browsing the source)
-- https://sources.debian.net/src/apt/2.2.3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apt/2.2.3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `attr=1:2.4.48-6`
 
@@ -253,19 +247,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris cdebconf=0.257
-'http://deb.debian.org/debian/pool/main/c/cdebconf/cdebconf_0.257.dsc' cdebconf_0.257.dsc 2750 SHA256:ee295b4389c60c43d69bf56dcceec1f002cbc52e8df8d4dc6e9bb8fef9d20a0d
-'http://deb.debian.org/debian/pool/main/c/cdebconf/cdebconf_0.257.tar.xz' cdebconf_0.257.tar.xz 278384 SHA256:86f961c12cbaffeec88f5b15c04c6fda2df4670b0bde793e052b929361867986
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/cdebconf/0.257/
 
-- https://sources.debian.net/src/cdebconf/0.257/ (for browsing the source)
-- https://sources.debian.net/src/cdebconf/0.257/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/cdebconf/0.257/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `coreutils=8.32-4`
 
@@ -360,19 +348,13 @@ Licenses: (parsed from: `/usr/share/doc/debconf/copyright`)
 
 - `BSD-2-clause`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris debconf=1.5.76
-'http://deb.debian.org/debian/pool/main/d/debconf/debconf_1.5.76.dsc' debconf_1.5.76.dsc 2082 SHA256:8721e7ec2a99878b44f63855288abfd9b94aaa6e7d1d6972b2cf75280ee5abc8
-'http://deb.debian.org/debian/pool/main/d/debconf/debconf_1.5.76.tar.xz' debconf_1.5.76.tar.xz 571228 SHA256:0d06a42493a54b44e5e0572d0217e3ca1d95dd89a5cd914491f32be79c82cc9e
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/debconf/1.5.76/
 
-- https://sources.debian.net/src/debconf/1.5.76/ (for browsing the source)
-- https://sources.debian.net/src/debconf/1.5.76/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/debconf/1.5.76/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `debian-archive-keyring=2021.1.1`
 
