@@ -1,21 +1,21 @@
-# `eclipse-mosquitto:2.0.10`
+# `eclipse-mosquitto:2.0.11`
 
 ## Docker Metadata
 
-- Image ID: `sha256:7e47c4a289482d2e875e3c499782fa065cea7c6c8928014fed812918bbc42e3e`
-- Created: `2021-04-14T20:22:23.131528799Z`
-- Virtual Size: ~ 9.83 Mb  
+- Image ID: `sha256:7593d452cd8c5c2f93fca5d3362b909c09ab92c343fbabde4107b9f739197d53`
+- Created: `2021-06-09T17:20:22.122344461Z`
+- Virtual Size: ~ 9.95 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
 - Command: `["/usr/sbin/mosquitto","-c","/mosquitto/config/mosquitto.conf"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `VERSION=2.0.10`
-  - `DOWNLOAD_SHA256=0188f7b21b91d6d80e992b8d6116ba851468b3bd154030e8a003ed28fb6f4a44`
+  - `VERSION=2.0.11`
+  - `DOWNLOAD_SHA256=7b36a7198bce85cf31b132f5c6ee36dcf5dadf86fb768501eb1e11ce95d4f78a`
   - `GPG_KEYS=A0D6EEA1DCAE49A635A3B2F0779B22DFB3E717B7`
-  - `LWS_VERSION=2.4.2`
-  - `LWS_SHA256=73012d7fcf428dedccc816e83a63a01462e27819d5537b8e0d0c7264bfacfad6`
+  - `LWS_VERSION=4.2.0`
+  - `LWS_SHA256=a57e9a4765dbcd4d880feba8089b43ed69995eaf10d5d61a07981d9ddd975f40`
   - `CJSON_VERSION=1.7.14`
   - `CJSON_SHA256=fb50a663eefdc76bafa80c82bc045af13b1363e8f45cec8b442007aef6a41343`
 - Labels:
