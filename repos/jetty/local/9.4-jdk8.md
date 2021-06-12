@@ -1,10 +1,10 @@
-# `jetty:9.4.41-jdk8`
+# `jetty:9.4.42-jdk8`
 
 ## Docker Metadata
 
-- Image ID: `sha256:2cff4fe10ed1848561e8a7b92e4f99dc8ab66aa3c744966e58edaf74a392a474`
-- Created: `2021-05-25T01:24:59.624056308Z`
-- Virtual Size: ~ 525.65 Mb  
+- Image ID: `sha256:871844307c2f1430bbd7de8cf4781c83641e940eb4a4e12a8b77307ccb470ec6`
+- Created: `2021-06-10T18:29:15.901463808Z`
+- Virtual Size: ~ 525.66 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -14,11 +14,11 @@
   - `JAVA_HOME=/usr/local/openjdk-8`
   - `LANG=C.UTF-8`
   - `JAVA_VERSION=8u292`
-  - `JETTY_VERSION=9.4.41.v20210516`
+  - `JETTY_VERSION=9.4.42.v20210604`
   - `JETTY_HOME=/usr/local/jetty`
   - `JETTY_BASE=/var/lib/jetty`
   - `TMPDIR=/tmp/jetty`
-  - `JETTY_TGZ_URL=https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/9.4.41.v20210516/jetty-home-9.4.41.v20210516.tar.gz`
+  - `JETTY_TGZ_URL=https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/9.4.42.v20210604/jetty-home-9.4.42.v20210604.tar.gz`
   - `JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA8706B53C61C3351A438A3B7D 	5989BAF76217B843D66BE55B2D0E1FB8FE4B68B4 	B59B67FD7904984367F931800818D9D68FB67BAC 	BFBB21C246D7776836287A48A04E0C74ABB35FEA 	8B096546B1A8F02656B15D3B1677D141BCF3584D 	FBA2B18D238AB852DF95745C76157BDF03D0DCD6 	5C9579B3DB2E506429319AAEF33B071B29559E1E 	F254B35617DC255D9344BCFA873A8E86B4372146`
 
 ## `dpkg` (`.deb`-based packages)
