@@ -1104,14 +1104,9 @@ Licenses: (parsed from: `/usr/share/doc/gazebo9/copyright`, `/usr/share/doc/gaze
 - `LGPL-3+`
 - `ZLIB`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gazebo9=9.18.0-1~bionic
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo9/gazebo9_9.18.0-1~bionic.dsc' gazebo9_9.18.0-1~bionic.dsc 2136 SHA256:ec99a900a8dc063418df13fb3f0defb7fa3f71f217a628e8419ba18e70512363
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo9/gazebo9_9.18.0.orig.tar.bz2' gazebo9_9.18.0.orig.tar.bz2 55788706 SHA256:6d00de6e6e796285f844515ea9c774e10e2df8f554456d09bd439dfa172a2449
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo9/gazebo9_9.18.0-1~bionic.debian.tar.xz' gazebo9_9.18.0-1~bionic.debian.tar.xz 6928 SHA256:48b9373c7dba483e20491cb11d86932cae856b34c73b8ad90f2a855f51a0e26d
-```
 
 ### `dpkg` source package: `gcc-7=7.5.0-3ubuntu1~18.04`
 
