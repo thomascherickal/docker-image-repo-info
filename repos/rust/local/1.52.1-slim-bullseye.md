@@ -1661,21 +1661,13 @@ Licenses: (parsed from: `/usr/share/doc/libhogweed6/copyright`, `/usr/share/doc/
 - `LGPL-3+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris nettle=3.7.2-3
-'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.7.2-3.dsc' nettle_3.7.2-3.dsc 2274 SHA256:fe98e5b915f8db8f1ade4c584550e07aa66013d3ad2a0012baad021b5bef284f
-'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.7.2.orig.tar.gz' nettle_3.7.2.orig.tar.gz 2382309 SHA256:8d2a604ef1cde4cd5fb77e422531ea25ad064679ff0adf956e78b3352e0ef162
-'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.7.2.orig.tar.gz.asc' nettle_3.7.2.orig.tar.gz.asc 573 SHA256:6183e94ac98dbd68ed25af0c54b7d76ebf2f0c80b415f8fffc7bb416aafa6ff2
-'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.7.2-3.debian.tar.xz' nettle_3.7.2-3.debian.tar.xz 21876 SHA256:afaa3a2f43de7e1317cad111d5bb3095ac4dbd855e044afbd93f00a5a99c607d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/nettle/3.7.2-3/
 
-- https://sources.debian.net/src/nettle/3.7.2-3/ (for browsing the source)
-- https://sources.debian.net/src/nettle/3.7.2-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/nettle/3.7.2-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssl=1.1.1k-1`
 
