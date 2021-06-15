@@ -1,9 +1,9 @@
-# `caddy:2.4.1-builder-alpine`
+# `caddy:2.4.2-builder-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:7f90ff5c6beb48277d3e07a8da0449c1144258e429e37e2f4f65928387fa8f5f`
-- Created: `2021-06-10T23:19:03.970357641Z`
+- Image ID: `sha256:4d58d2ab3ddba126c2fd014ebdac7030a6d1c5eac1d0c5ea0ac1509d9c8c882d`
+- Created: `2021-06-14T17:19:50.141824062Z`
 - Virtual Size: ~ 317.95 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -13,7 +13,7 @@
   - `GOLANG_VERSION=1.16.5`
   - `GOPATH=/go`
   - `XCADDY_VERSION=v0.1.9`
-  - `CADDY_VERSION=v2.4.1`
+  - `CADDY_VERSION=v2.4.2`
   - `XCADDY_SKIP_CLEANUP=1`
 
 ## `apk` (`.apk`-based packages)
