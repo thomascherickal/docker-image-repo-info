@@ -1,10 +1,10 @@
-# `wordpress:beta-5.8-beta1-php7.3-fpm-alpine`
+# `wordpress:beta-5.8-beta2-fpm-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:777c5430e8f04b6fcd871d0adadaf597a8d7053449eb957298ccca0dfbabf6c9`
-- Created: `2021-06-09T18:35:13.670730036Z`
-- Virtual Size: ~ 241.91 Mb  
+- Image ID: `sha256:42482018531a4c43658fa90fbc322af1afad51c0baab95b4615dafa23c2d7fb5`
+- Created: `2021-06-15T22:22:34.708535372Z`
+- Virtual Size: ~ 248.95 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -17,11 +17,11 @@
   - `PHP_CFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
-  - `GPG_KEYS=CBAF69F173A0FEA4B537F470D66C9593118BCCB6 F38252826ACD957EF380D39F2F7956BC5DA04B5D`
-  - `PHP_VERSION=7.3.28`
-  - `PHP_URL=https://www.php.net/distributions/php-7.3.28.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.3.28.tar.xz.asc`
-  - `PHP_SHA256=a2a84dbec8c1eee3f46c5f249eaaa2ecb3f9e7a6f5d0604d2df44ff8d4904dbe`
+  - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
+  - `PHP_VERSION=7.4.20`
+  - `PHP_URL=https://www.php.net/distributions/php-7.4.20.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.20.tar.xz.asc`
+  - `PHP_SHA256=1fa46ca6790d780bf2cb48961df65f0ca3640c4533f0bca743cd61b71cb66335`
 
 ## `apk` (`.apk`-based packages)
 
@@ -487,16 +487,16 @@ MIT
 ### `apk` package: `imagemagick`
 
 ```console
-imagemagick-7.0.10.57-r0 description:
+imagemagick-7.0.11.13-r0 description:
 Collection of tools and libraries for many image formats
 
-imagemagick-7.0.10.57-r0 webpage:
+imagemagick-7.0.11.13-r0 webpage:
 https://www.imagemagick.org/
 
-imagemagick-7.0.10.57-r0 installed size:
+imagemagick-7.0.11.13-r0 installed size:
 4560 KiB
 
-imagemagick-7.0.10.57-r0 license:
+imagemagick-7.0.11.13-r0 license:
 ImageMagick
 
 ```
@@ -504,16 +504,16 @@ ImageMagick
 ### `apk` package: `imagemagick-libs`
 
 ```console
-imagemagick-libs-7.0.10.57-r0 description:
+imagemagick-libs-7.0.11.13-r0 description:
 Collection of tools and libraries for many image formats (libraries)
 
-imagemagick-libs-7.0.10.57-r0 webpage:
+imagemagick-libs-7.0.11.13-r0 webpage:
 https://www.imagemagick.org/
 
-imagemagick-libs-7.0.10.57-r0 installed size:
-3244 KiB
+imagemagick-libs-7.0.11.13-r0 installed size:
+3252 KiB
 
-imagemagick-libs-7.0.10.57-r0 license:
+imagemagick-libs-7.0.11.13-r0 license:
 ImageMagick
 
 ```
@@ -657,16 +657,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.76.1-r0 description:
+libcurl-7.77.0-r0 description:
 The multiprotocol file transfer library
 
-libcurl-7.76.1-r0 webpage:
+libcurl-7.77.0-r0 webpage:
 https://curl.se/
 
-libcurl-7.76.1-r0 installed size:
-488 KiB
+libcurl-7.77.0-r0 installed size:
+500 KiB
 
-libcurl-7.76.1-r0 license:
+libcurl-7.77.0-r0 license:
 MIT
 
 ```
@@ -997,16 +997,16 @@ BSD-3-Clause
 ### `apk` package: `libx11`
 
 ```console
-libx11-1.7.0-r0 description:
+libx11-1.7.1-r0 description:
 X11 client-side library
 
-libx11-1.7.0-r0 webpage:
+libx11-1.7.1-r0 webpage:
 http://xorg.freedesktop.org/
 
-libx11-1.7.0-r0 installed size:
+libx11-1.7.1-r0 installed size:
 3240 KiB
 
-libx11-1.7.0-r0 license:
+libx11-1.7.1-r0 license:
 custom:XFREE86
 
 ```
@@ -1246,6 +1246,23 @@ nghttp2-libs-1.42.0-r1 installed size:
 
 nghttp2-libs-1.42.0-r1 license:
 MIT
+
+```
+
+### `apk` package: `oniguruma`
+
+```console
+oniguruma-6.9.6-r0 description:
+a regular expressions library
+
+oniguruma-6.9.6-r0 webpage:
+https://github.com/kkos/oniguruma
+
+oniguruma-6.9.6-r0 installed size:
+556 KiB
+
+oniguruma-6.9.6-r0 license:
+BSD-2-Clause
 
 ```
 
