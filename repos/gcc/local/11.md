@@ -549,19 +549,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris cdebconf=0.257
-'http://deb.debian.org/debian/pool/main/c/cdebconf/cdebconf_0.257.dsc' cdebconf_0.257.dsc 2750 SHA256:ee295b4389c60c43d69bf56dcceec1f002cbc52e8df8d4dc6e9bb8fef9d20a0d
-'http://deb.debian.org/debian/pool/main/c/cdebconf/cdebconf_0.257.tar.xz' cdebconf_0.257.tar.xz 278384 SHA256:86f961c12cbaffeec88f5b15c04c6fda2df4670b0bde793e052b929361867986
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/cdebconf/0.257/
 
-- https://sources.debian.net/src/cdebconf/0.257/ (for browsing the source)
-- https://sources.debian.net/src/cdebconf/0.257/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/cdebconf/0.257/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `coreutils=8.32-4`
 
@@ -3347,21 +3341,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libx11=2:1.7.0-2
-'http://deb.debian.org/debian/pool/main/libx/libx11/libx11_1.7.0-2.dsc' libx11_1.7.0-2.dsc 2564 SHA256:1540dcbbbdf7e08405d133127ca6f63fe191a3946ae9c5afc95293bc12f784a1
-'http://deb.debian.org/debian/pool/main/libx/libx11/libx11_1.7.0.orig.tar.gz' libx11_1.7.0.orig.tar.gz 3165477 SHA256:c48ec61785ec68fc6a9a6aca0a9578393414fe2562e3cc9cca30234345c7b6ac
-'http://deb.debian.org/debian/pool/main/libx/libx11/libx11_1.7.0.orig.tar.gz.asc' libx11_1.7.0.orig.tar.gz.asc 833 SHA256:f84ea8a3a7c64ea045f8d115e2b0d14d3468e487f85f0084c0809f5c2d234c78
-'http://deb.debian.org/debian/pool/main/libx/libx11/libx11_1.7.0-2.diff.gz' libx11_1.7.0-2.diff.gz 73844 SHA256:910d4a1527458ff020f0bab9df55bab44d63db8247543d2b2256c7b258ce439c
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libx11/2:1.7.0-2/
 
-- https://sources.debian.net/src/libx11/2:1.7.0-2/ (for browsing the source)
-- https://sources.debian.net/src/libx11/2:1.7.0-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libx11/2:1.7.0-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libxau=1:1.0.9-1`
 
