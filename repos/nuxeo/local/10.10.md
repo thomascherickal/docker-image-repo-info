@@ -1056,20 +1056,13 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.64.0-4+deb10u1
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.64.0-4+deb10u1.dsc' curl_7.64.0-4+deb10u1.dsc 2719 SHA256:bdbc61f9785516009ae74bb3775e21bed7ab8fdd7bfef4a1a4f471d5218adf3e
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.64.0.orig.tar.gz' curl_7.64.0.orig.tar.gz 4032645 SHA256:cb90d2eb74d4e358c1ed1489f8e3af96b50ea4374ad71f143fa4595e998d81b5
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.64.0-4+deb10u1.debian.tar.xz' curl_7.64.0-4+deb10u1.debian.tar.xz 34156 SHA256:911407ad8d73d0592db7f1a015656089563bb7dab279ec33bff855adf56bcf1b
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/curl/7.64.0-4+deb10u1/
 
-- https://sources.debian.net/src/curl/7.64.0-4+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/curl/7.64.0-4+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/curl/7.64.0-4+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-1+deb10u1`
 
@@ -2429,20 +2422,13 @@ Licenses: (parsed from: `/usr/share/doc/libgstreamer-plugins-base1.0-0/copyright
 - `LGPL-2+`
 - `MIT/X11 (BSD like) LGPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gst-plugins-base1.0=1.14.4-2
-'http://deb.debian.org/debian/pool/main/g/gst-plugins-base1.0/gst-plugins-base1.0_1.14.4-2.dsc' gst-plugins-base1.0_1.14.4-2.dsc 4246 SHA256:7047d8cf6221f0ea01a885152e2fd9625e32b0d7e95c0fd65ae1f9b0dea78097
-'http://deb.debian.org/debian/pool/main/g/gst-plugins-base1.0/gst-plugins-base1.0_1.14.4.orig.tar.xz' gst-plugins-base1.0_1.14.4.orig.tar.xz 3703232 SHA256:ca6139490e48863e7706d870ff4e8ac9f417b56f3b9e4b3ce490c13b09a77461
-'http://deb.debian.org/debian/pool/main/g/gst-plugins-base1.0/gst-plugins-base1.0_1.14.4-2.debian.tar.xz' gst-plugins-base1.0_1.14.4-2.debian.tar.xz 45244 SHA256:587dc73d816fc44a6a1fbe8f0279df3be901831ddaf3d16d36852df37011ad19
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gst-plugins-base1.0/1.14.4-2/
 
-- https://sources.debian.net/src/gst-plugins-base1.0/1.14.4-2/ (for browsing the source)
-- https://sources.debian.net/src/gst-plugins-base1.0/1.14.4-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gst-plugins-base1.0/1.14.4-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gstreamer1.0=1.14.4-1`
 
@@ -4415,20 +4401,13 @@ Licenses: (parsed from: `/usr/share/doc/libimage-exiftool-perl/copyright`)
 - `GPL-1`
 - `GPL-1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libimage-exiftool-perl=11.16-1
-'http://deb.debian.org/debian/pool/main/libi/libimage-exiftool-perl/libimage-exiftool-perl_11.16-1.dsc' libimage-exiftool-perl_11.16-1.dsc 2366 SHA256:219230190503eaffe68cc10ec7e7521c0a13de3380719577b6a852eaef785d10
-'http://deb.debian.org/debian/pool/main/libi/libimage-exiftool-perl/libimage-exiftool-perl_11.16.orig.tar.gz' libimage-exiftool-perl_11.16.orig.tar.gz 4483254 SHA256:0440342f76099a6773cf9d65d5762be5fd16775f652a562bb127d39a409526c9
-'http://deb.debian.org/debian/pool/main/libi/libimage-exiftool-perl/libimage-exiftool-perl_11.16-1.debian.tar.xz' libimage-exiftool-perl_11.16-1.debian.tar.xz 7864 SHA256:7404f441c93d52f8b4f2f3f303efd8c9eb47e41806ebfe0eda5a66534ee5e040
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libimage-exiftool-perl/11.16-1/
 
-- https://sources.debian.net/src/libimage-exiftool-perl/11.16-1/ (for browsing the source)
-- https://sources.debian.net/src/libimage-exiftool-perl/11.16-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libimage-exiftool-perl/11.16-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libjpeg-turbo=1:1.5.2-2`
 
@@ -5937,20 +5916,13 @@ Licenses: (parsed from: `/usr/share/doc/libwebp6/copyright`, `/usr/share/doc/lib
 
 - `Apache-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libwebp=0.6.1-2
-'http://deb.debian.org/debian/pool/main/libw/libwebp/libwebp_0.6.1-2.dsc' libwebp_0.6.1-2.dsc 2064 SHA256:321ee69e44f0d037d5fec47692251e35ed22c9ad0bbf0a6bf0fae990a52319f4
-'http://deb.debian.org/debian/pool/main/libw/libwebp/libwebp_0.6.1.orig.tar.gz' libwebp_0.6.1.orig.tar.gz 3554290 SHA256:a86045e3ec24704bddbaa369ca30980d6bf4f2625f4cdca03715e91f9c08bbb4
-'http://deb.debian.org/debian/pool/main/libw/libwebp/libwebp_0.6.1-2.debian.tar.xz' libwebp_0.6.1-2.debian.tar.xz 9532 SHA256:5af543e277abb97f6b2c72ca0d7ce95de79108d88da383d511ef729683fa7a45
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libwebp/0.6.1-2/
 
-- https://sources.debian.net/src/libwebp/0.6.1-2/ (for browsing the source)
-- https://sources.debian.net/src/libwebp/0.6.1-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libwebp/0.6.1-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libwpd=0.10.3-1`
 
@@ -6350,9 +6322,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris libxml2=2.9.4+dfsg1-7
-'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.4+dfsg1-7+deb10u1.dsc' libxml2_2.9.4+dfsg1-7+deb10u1.dsc 3008 SHA256:07f3101267382dec2b478f09573dd78e14dae960a95a404fdde74a5240158e19
+'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.4+dfsg1-7+deb10u2.dsc' libxml2_2.9.4+dfsg1-7+deb10u2.dsc 3163 SHA256:1a5189b5c4238d4d833ad7b18e56e23e50252b62dddc90b3aff67018bce1f3aa
 'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.4+dfsg1.orig.tar.xz' libxml2_2.9.4+dfsg1.orig.tar.xz 2446412 SHA256:a74ad55e346aa0b2b41903e66d21f8f3d2a736b3f41e32496376861ab484184e
-'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.4+dfsg1-7+deb10u1.debian.tar.xz' libxml2_2.9.4+dfsg1-7+deb10u1.debian.tar.xz 38280 SHA256:f94491b42a58f875c0c08f53c2facb48bfd94e8b66181e1ac7e29b8e965cc9ba
+'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.4+dfsg1-7+deb10u2.debian.tar.xz' libxml2_2.9.4+dfsg1-7+deb10u2.debian.tar.xz 40924 SHA256:07d0f31c11472f5a3407db92d363c30ad26100a11b5a181a6cf664af531f43fd
 ```
 
 Other potentially useful URLs:
@@ -6811,9 +6783,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris lz4=1.8.3-1
-'http://deb.debian.org/debian/pool/main/l/lz4/lz4_1.8.3-1.dsc' lz4_1.8.3-1.dsc 1932 SHA256:fed178383bc99451256cedf0d39731d106f70103125c043e4ef7112a642190b5
+'http://deb.debian.org/debian/pool/main/l/lz4/lz4_1.8.3-1+deb10u1.dsc' lz4_1.8.3-1+deb10u1.dsc 2119 SHA256:22a32d93f1e1525efd33e80b8c8ffb9ad74b5baf441aa3534e875523d9b5eb93
 'http://deb.debian.org/debian/pool/main/l/lz4/lz4_1.8.3.orig.tar.gz' lz4_1.8.3.orig.tar.gz 327897 SHA256:33af5936ac06536805f9745e0b6d61da606a1f8b4cc5c04dd3cbaca3b9b4fc43
-'http://deb.debian.org/debian/pool/main/l/lz4/lz4_1.8.3-1.debian.tar.xz' lz4_1.8.3-1.debian.tar.xz 11336 SHA256:e98f02ec04236c616ea003d0a0e50818b2a959436fcd833ba1bcfc14664ab156
+'http://deb.debian.org/debian/pool/main/l/lz4/lz4_1.8.3-1+deb10u1.debian.tar.xz' lz4_1.8.3-1+deb10u1.debian.tar.xz 12068 SHA256:6d9896c90c93f312af743b2c6ea1b62ba8defe8696acf7a009bed03b012db60a
 ```
 
 Other potentially useful URLs:
@@ -7375,20 +7347,13 @@ Licenses: (parsed from: `/usr/share/doc/libopenjp2-7/copyright`)
 - `ZLIB`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openjpeg2=2.3.0-2+deb10u1
-'http://deb.debian.org/debian/pool/main/o/openjpeg2/openjpeg2_2.3.0-2+deb10u1.dsc' openjpeg2_2.3.0-2+deb10u1.dsc 2590 SHA256:a8b1faaf14416687c5cf25bb95662ab4c9e2e552069c226666e685d5fa6cc212
-'http://deb.debian.org/debian/pool/main/o/openjpeg2/openjpeg2_2.3.0.orig.tar.gz' openjpeg2_2.3.0.orig.tar.gz 2074456 SHA256:fd5ca8cf3f195b0a54c56193c5897bb423c00db577afda4033318006769a5833
-'http://deb.debian.org/debian/pool/main/o/openjpeg2/openjpeg2_2.3.0-2+deb10u1.debian.tar.xz' openjpeg2_2.3.0-2+deb10u1.debian.tar.xz 21984 SHA256:9ba5f95157fc8f861ee5bae029ee2956e837e29a701e0212dc7b6bf6c256c707
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/openjpeg2/2.3.0-2+deb10u1/
 
-- https://sources.debian.net/src/openjpeg2/2.3.0-2+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/openjpeg2/2.3.0-2+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openjpeg2/2.3.0-2+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openldap=2.4.47+dfsg-3+deb10u2`
 
