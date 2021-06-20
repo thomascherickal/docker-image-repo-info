@@ -195,8 +195,8 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris apt=1.8.2.2
-'http://deb.debian.org/debian/pool/main/a/apt/apt_1.8.2.2.dsc' apt_1.8.2.2.dsc 2774 SHA256:fb213748b5b829f68b7f6c8d83ad72a21990d0f194b6e6f950509b6b05346f58
-'http://deb.debian.org/debian/pool/main/a/apt/apt_1.8.2.2.tar.xz' apt_1.8.2.2.tar.xz 2191728 SHA256:f5030de22a5cc80db6fe0d42373b5df25d7dc56e94d9155f2eaa80dbd65e82fa
+'http://security.debian.org/debian-security/pool/updates/main/a/apt/apt_1.8.2.2.dsc' apt_1.8.2.2.dsc 2774 SHA256:fb213748b5b829f68b7f6c8d83ad72a21990d0f194b6e6f950509b6b05346f58
+'http://security.debian.org/debian-security/pool/updates/main/a/apt/apt_1.8.2.2.tar.xz' apt_1.8.2.2.tar.xz 2191728 SHA256:f5030de22a5cc80db6fe0d42373b5df25d7dc56e94d9155f2eaa80dbd65e82fa
 ```
 
 Other potentially useful URLs:
@@ -564,20 +564,13 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.64.0-4+deb10u1
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.64.0-4+deb10u1.dsc' curl_7.64.0-4+deb10u1.dsc 2719 SHA256:bdbc61f9785516009ae74bb3775e21bed7ab8fdd7bfef4a1a4f471d5218adf3e
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.64.0.orig.tar.gz' curl_7.64.0.orig.tar.gz 4032645 SHA256:cb90d2eb74d4e358c1ed1489f8e3af96b50ea4374ad71f143fa4595e998d81b5
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.64.0-4+deb10u1.debian.tar.xz' curl_7.64.0-4+deb10u1.debian.tar.xz 34156 SHA256:911407ad8d73d0592db7f1a015656089563bb7dab279ec33bff855adf56bcf1b
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/curl/7.64.0-4+deb10u1/
 
-- https://sources.debian.net/src/curl/7.64.0-4+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/curl/7.64.0-4+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/curl/7.64.0-4+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-1+deb10u1`
 
@@ -1941,20 +1934,13 @@ Licenses: (parsed from: `/usr/share/doc/libxml2/copyright`)
 - `ISC`
 - `MIT-1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libxml2=2.9.4+dfsg1-7+deb10u1
-'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.4+dfsg1-7+deb10u1.dsc' libxml2_2.9.4+dfsg1-7+deb10u1.dsc 3008 SHA256:07f3101267382dec2b478f09573dd78e14dae960a95a404fdde74a5240158e19
-'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.4+dfsg1.orig.tar.xz' libxml2_2.9.4+dfsg1.orig.tar.xz 2446412 SHA256:a74ad55e346aa0b2b41903e66d21f8f3d2a736b3f41e32496376861ab484184e
-'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.4+dfsg1-7+deb10u1.debian.tar.xz' libxml2_2.9.4+dfsg1-7+deb10u1.debian.tar.xz 38280 SHA256:f94491b42a58f875c0c08f53c2facb48bfd94e8b66181e1ac7e29b8e965cc9ba
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libxml2/2.9.4+dfsg1-7+deb10u1/
 
-- https://sources.debian.net/src/libxml2/2.9.4+dfsg1-7+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/libxml2/2.9.4+dfsg1-7+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libxml2/2.9.4+dfsg1-7+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libzstd=1.3.8+dfsg-3`
 
@@ -2068,9 +2054,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris lz4=1.8.3-1
-'http://deb.debian.org/debian/pool/main/l/lz4/lz4_1.8.3-1.dsc' lz4_1.8.3-1.dsc 1932 SHA256:fed178383bc99451256cedf0d39731d106f70103125c043e4ef7112a642190b5
+'http://deb.debian.org/debian/pool/main/l/lz4/lz4_1.8.3-1+deb10u1.dsc' lz4_1.8.3-1+deb10u1.dsc 2119 SHA256:22a32d93f1e1525efd33e80b8c8ffb9ad74b5baf441aa3534e875523d9b5eb93
 'http://deb.debian.org/debian/pool/main/l/lz4/lz4_1.8.3.orig.tar.gz' lz4_1.8.3.orig.tar.gz 327897 SHA256:33af5936ac06536805f9745e0b6d61da606a1f8b4cc5c04dd3cbaca3b9b4fc43
-'http://deb.debian.org/debian/pool/main/l/lz4/lz4_1.8.3-1.debian.tar.xz' lz4_1.8.3-1.debian.tar.xz 11336 SHA256:e98f02ec04236c616ea003d0a0e50818b2a959436fcd833ba1bcfc14664ab156
+'http://deb.debian.org/debian/pool/main/l/lz4/lz4_1.8.3-1+deb10u1.debian.tar.xz' lz4_1.8.3-1+deb10u1.debian.tar.xz 12068 SHA256:6d9896c90c93f312af743b2c6ea1b62ba8defe8696acf7a009bed03b012db60a
 ```
 
 Other potentially useful URLs:
