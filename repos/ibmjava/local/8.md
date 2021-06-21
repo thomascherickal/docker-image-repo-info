@@ -2,12 +2,12 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:411bbc88b2f89981c5cfe9aebf1e9ac5f1d979e199a074fa35092e83ab4ec6b7`
-- Created: `2021-06-03T21:24:47.087006091Z`
-- Virtual Size: ~ 267.05 Mb  
+- Image ID: `sha256:a88d22d1bd2ef5ecabe40773943bc721e0c4500375984bb33d941198da6e836a`
+- Created: `2021-06-18T01:27:18.080385991Z`
+- Virtual Size: ~ 267.09 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Command: `["/bin/bash"]`
+- Command: `["bash"]`
 - Environment:
   - `PATH=/opt/ibm/java/jre/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `JAVA_VERSION=1.8.0_sr6fp31`
@@ -919,11 +919,11 @@ $ apt-get source -qq --print-uris lsb=9.20170808ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/l/lsb/lsb_9.20170808ubuntu1.tar.xz' lsb_9.20170808ubuntu1.tar.xz 45492 SHA256:b26bcb746e0bff05ad3e15dfbeb0ba7ea2a8d031f765a6cfa568c57d14c522c4
 ```
 
-### `dpkg` source package: `lz4=0.0~r131-2ubuntu3`
+### `dpkg` source package: `lz4=0.0~r131-2ubuntu3.1`
 
 Binary Packages:
 
-- `liblz4-1:amd64=0.0~r131-2ubuntu3`
+- `liblz4-1:amd64=0.0~r131-2ubuntu3.1`
 
 Licenses: (parsed from: `/usr/share/doc/liblz4-1/copyright`)
 
@@ -934,10 +934,10 @@ Licenses: (parsed from: `/usr/share/doc/liblz4-1/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris lz4=0.0~r131-2ubuntu3
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lz4/lz4_0.0~r131-2ubuntu3.dsc' lz4_0.0~r131-2ubuntu3.dsc 2129 SHA256:b6f9a71053ff1414f695790833e689dc8bd4c48169b05a8df8de47edba7a7b58
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lz4/lz4_0.0~r131.orig.tar.gz' lz4_0.0~r131.orig.tar.gz 133784 SHA256:9d4d00614d6b9dec3114b33d1224b6262b99ace24434c53487a0c8fd0b18cfed
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lz4/lz4_0.0~r131-2ubuntu3.debian.tar.xz' lz4_0.0~r131-2ubuntu3.debian.tar.xz 5340 SHA256:94834bac922397529ffc185f9c4c7e7a6eb1ef3bc527f3fcd26e36fc9430afa7
+$ apt-get source -qq --print-uris lz4=0.0~r131-2ubuntu3.1
+'http://archive.ubuntu.com/ubuntu/pool/main/l/lz4/lz4_0.0~r131-2ubuntu3.1.dsc' lz4_0.0~r131-2ubuntu3.1.dsc 2108 SHA512:a90ae7ae8793f180a604cb20a43ca5a69d837aaf9df7bbe6c23d6f6a4700ad9b81d06cb7503d5d3f2d0f2b9bbbe3013601eeb47641c3d12113ea66900876c6f4
+'http://archive.ubuntu.com/ubuntu/pool/main/l/lz4/lz4_0.0~r131.orig.tar.gz' lz4_0.0~r131.orig.tar.gz 133784 SHA512:60bd95d529691ffee2c43f0d8a62484c3cff74c0154094f073192606806ac8182dced61e0534ffa7e0ccf5f18e9a8cfd2738883a83814c0711a6d7f1d1b252e5
+'http://archive.ubuntu.com/ubuntu/pool/main/l/lz4/lz4_0.0~r131-2ubuntu3.1.debian.tar.xz' lz4_0.0~r131-2ubuntu3.1.debian.tar.xz 5848 SHA512:d2fbe7c7edc933391275d7a29a5e0893cc358454a7d54ee352cb9eb91532cf9d97daedd08b2c921373b0fff3a45522e07fef18f522b04160dc09432c0cf2acdc
 ```
 
 ### `dpkg` source package: `mawk=1.3.3-17ubuntu3`
@@ -1004,15 +1004,9 @@ Licenses: (parsed from: `/usr/share/doc/libhogweed4/copyright`, `/usr/share/doc/
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris nettle=3.4-1ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.4-1ubuntu0.1.dsc' nettle_3.4-1ubuntu0.1.dsc 2353 SHA512:b005f3128cf0d678148e4e4586d8656368ce600c98734b08ea41b450bd549a6666f9fb619699d594f36889903c595a45a15c25a119375de6be36a7c29225b61c
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.4.orig.tar.gz' nettle_3.4.orig.tar.gz 1935069 SHA512:3bea3aabd2c99cc42d084a94fd6b0b5dbdb24cd6c7020271a6ee87a81a904b21b21756f590cb1afdf2e85fd1cb59e5c3651c5c4032e30204e7ea6f8801d1ea3b
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.4.orig.tar.gz.asc' nettle_3.4.orig.tar.gz.asc 1238 SHA512:0c3f4d1732bbd07447496ed1de66b33d0ea7e1b3ece9725a67bf9d2fa2ad5ce53eb3894bdc5366b184dd03fb9aafb401e38c140d44e7af1f6aeabcfa98be8b83
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.4-1ubuntu0.1.debian.tar.xz' nettle_3.4-1ubuntu0.1.debian.tar.xz 23832 SHA512:69ebe5af89b53a1f12c638f9b87ceac4bf5b4a617f1da16780dbc2b907e06e2d188509126e566faf89c4359f7e6198208b83ba0dd0a5fb234252133df40cd23b
-```
 
 ### `dpkg` source package: `openssl=1.1.1-1ubuntu2.1~18.04.9`
 
@@ -1059,22 +1053,26 @@ $ apt-get source -qq --print-uris p11-kit=0.23.9-2ubuntu0.1
 'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.9-2ubuntu0.1.debian.tar.xz' p11-kit_0.23.9-2ubuntu0.1.debian.tar.xz 24380 SHA512:460f4179781768a4a4b686955f16f335565d50f7a2d74c298216fe6725ce4e04119f49605752026f65bf56e143e560718969c5983decc906d3246f0a01c46178
 ```
 
-### `dpkg` source package: `pam=1.1.8-3.6ubuntu2.18.04.2`
+### `dpkg` source package: `pam=1.1.8-3.6ubuntu2.18.04.3`
 
 Binary Packages:
 
-- `libpam-modules:amd64=1.1.8-3.6ubuntu2.18.04.2`
-- `libpam-modules-bin=1.1.8-3.6ubuntu2.18.04.2`
-- `libpam-runtime=1.1.8-3.6ubuntu2.18.04.2`
-- `libpam0g:amd64=1.1.8-3.6ubuntu2.18.04.2`
+- `libpam-modules:amd64=1.1.8-3.6ubuntu2.18.04.3`
+- `libpam-modules-bin=1.1.8-3.6ubuntu2.18.04.3`
+- `libpam-runtime=1.1.8-3.6ubuntu2.18.04.3`
+- `libpam0g:amd64=1.1.8-3.6ubuntu2.18.04.3`
 
 Licenses: (parsed from: `/usr/share/doc/libpam-modules/copyright`, `/usr/share/doc/libpam-modules-bin/copyright`, `/usr/share/doc/libpam-runtime/copyright`, `/usr/share/doc/libpam0g/copyright`)
 
 - `GPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris pam=1.1.8-3.6ubuntu2.18.04.3
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.1.8-3.6ubuntu2.18.04.3.dsc' pam_1.1.8-3.6ubuntu2.18.04.3.dsc 2557 SHA512:2ef95d8bdbc9edbad8f20c1db07bd07c0a9b32d431ff144c92e8739ed2f1a43580a257ba5c45505a471265c55d7ae4dee86667bb0424fd3541abbca22aa51c46
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.1.8-3.6ubuntu2.18.04.3.tar.gz' pam_1.1.8-3.6ubuntu2.18.04.3.tar.gz 2011024 SHA512:18a11b3b9e355354ab1a9ae11f7870727a1bb9cfddfc080b2f0df43afafec6f23ce9f60d8d870eb282bd47bb20a4deab9fc0ec4a4fc1d7db50081ecef2257d11
+```
 
 ### `dpkg` source package: `pcre3=2:8.39-9`
 
