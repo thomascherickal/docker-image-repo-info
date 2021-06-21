@@ -163,19 +163,13 @@ Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris base-files=10.3+deb10u9
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3+deb10u9.dsc' base-files_10.3+deb10u9.dsc 1103 SHA256:9b365291e8da86412c97d3dee80e2570287d21dc105d916137334e36415918cf
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3+deb10u9.tar.xz' base-files_10.3+deb10u9.tar.xz 65484 SHA256:8527cedc376063fb5fa8f58b0f1444e2d72453b0c885c686b85857c13b592a93
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/base-files/10.3+deb10u9/
 
-- https://sources.debian.net/src/base-files/10.3+deb10u9/ (for browsing the source)
-- https://sources.debian.net/src/base-files/10.3+deb10u9/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/base-files/10.3+deb10u9/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-passwd=3.5.46`
 
@@ -747,21 +741,13 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 - `The MIT License (MIT)`
 - `The main library is licensed under GNU Lesser`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gnutls28=3.6.7-4+deb10u6
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.7-4+deb10u6.dsc' gnutls28_3.6.7-4+deb10u6.dsc 3354 SHA256:206f6f03abd5d6c83ddb6a454af7e96dcdee14156f877e6b311ceed9e2a2115e
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.7.orig.tar.xz' gnutls28_3.6.7.orig.tar.xz 8153728 SHA256:5b3409ad5aaf239808730d1ee12fdcd148c0be00262c7edf157af655a8a188e2
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.7.orig.tar.xz.asc' gnutls28_3.6.7.orig.tar.xz.asc 534 SHA256:a14d0a7b9295b65ae797a70f8e765024a2e363dca03d008bfce0aec2b3f292b0
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.7-4+deb10u6.debian.tar.xz' gnutls28_3.6.7-4+deb10u6.debian.tar.xz 90436 SHA256:6158e0ebb12a23ca44ce90d8e677af355d04bdf66d97ca1d5a59049c1b455b3c
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gnutls28/3.6.7-4+deb10u6/
 
-- https://sources.debian.net/src/gnutls28/3.6.7-4+deb10u6/ (for browsing the source)
-- https://sources.debian.net/src/gnutls28/3.6.7-4+deb10u6/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gnutls28/3.6.7-4+deb10u6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gpm=1.20.7-5`
 
@@ -1360,9 +1346,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris lz4=1.8.3-1
-'http://deb.debian.org/debian/pool/main/l/lz4/lz4_1.8.3-1.dsc' lz4_1.8.3-1.dsc 1932 SHA256:fed178383bc99451256cedf0d39731d106f70103125c043e4ef7112a642190b5
+'http://deb.debian.org/debian/pool/main/l/lz4/lz4_1.8.3-1+deb10u1.dsc' lz4_1.8.3-1+deb10u1.dsc 2119 SHA256:22a32d93f1e1525efd33e80b8c8ffb9ad74b5baf441aa3534e875523d9b5eb93
 'http://deb.debian.org/debian/pool/main/l/lz4/lz4_1.8.3.orig.tar.gz' lz4_1.8.3.orig.tar.gz 327897 SHA256:33af5936ac06536805f9745e0b6d61da606a1f8b4cc5c04dd3cbaca3b9b4fc43
-'http://deb.debian.org/debian/pool/main/l/lz4/lz4_1.8.3-1.debian.tar.xz' lz4_1.8.3-1.debian.tar.xz 11336 SHA256:e98f02ec04236c616ea003d0a0e50818b2a959436fcd833ba1bcfc14664ab156
+'http://deb.debian.org/debian/pool/main/l/lz4/lz4_1.8.3-1+deb10u1.debian.tar.xz' lz4_1.8.3-1+deb10u1.debian.tar.xz 12068 SHA256:6d9896c90c93f312af743b2c6ea1b62ba8defe8696acf7a009bed03b012db60a
 ```
 
 Other potentially useful URLs:
@@ -1636,10 +1622,10 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris openssl=1.1.1d-0+deb10u6
-'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1d-0+deb10u6.dsc' openssl_1.1.1d-0+deb10u6.dsc 2472 SHA256:c9e0fa4cb288ceaa8718d1de3b980a5d65f5302eed866de53aff0922707d96e4
-'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1d.orig.tar.gz' openssl_1.1.1d.orig.tar.gz 8845861 SHA256:1e3a91bc1f9dfce01af26026f856e064eab4c8ee0a8f457b5ae30b40b8b711f2
-'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1d.orig.tar.gz.asc' openssl_1.1.1d.orig.tar.gz.asc 488 SHA256:f3fd3299a79421fffd51d35f62636b8e987dab1d3033d93a19d7685868e15395
-'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1d-0+deb10u6.debian.tar.xz' openssl_1.1.1d-0+deb10u6.debian.tar.xz 99740 SHA256:617063d8e99e888198f9aeae9cfc363b5799c4712881a8e525a6339b921580ff
+'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1d-0+deb10u6.dsc' openssl_1.1.1d-0+deb10u6.dsc 2472 SHA256:c9e0fa4cb288ceaa8718d1de3b980a5d65f5302eed866de53aff0922707d96e4
+'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1d.orig.tar.gz' openssl_1.1.1d.orig.tar.gz 8845861 SHA256:1e3a91bc1f9dfce01af26026f856e064eab4c8ee0a8f457b5ae30b40b8b711f2
+'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1d.orig.tar.gz.asc' openssl_1.1.1d.orig.tar.gz.asc 488 SHA256:f3fd3299a79421fffd51d35f62636b8e987dab1d3033d93a19d7685868e15395
+'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1d-0+deb10u6.debian.tar.xz' openssl_1.1.1d-0+deb10u6.debian.tar.xz 99740 SHA256:617063d8e99e888198f9aeae9cfc363b5799c4712881a8e525a6339b921580ff
 ```
 
 Other potentially useful URLs:
