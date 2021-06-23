@@ -2,16 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:ad468f6cc283a828fd111e76b2b679ec7769fb1270bf2fdb7c64fb0f5782e741`
-- Created: `2021-06-05T00:35:00.412133271Z`
-- Virtual Size: ~ 36.26 Mb  
+- Image ID: `sha256:34772bc276e610fd7531ddfbccbefbf1283e81c07a0f5d74d4f45baa6b24305e`
+- Created: `2021-06-22T21:54:13.502061921Z`
+- Virtual Size: ~ 36.30 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
 - Labels:
-  - `build-date=20210604`
+  - `build-date=20210621`
   - `name=Photon OS x86_64/4.0 Base Image`
   - `vendor=VMware`
 
@@ -137,7 +137,7 @@ Licenses (from `rpm --query`): MIT
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `libsolv-0.6.35-7.ph4.x86_64`
+### `rpm` package: `libsolv-0.6.35-8.ph4.x86_64`
 
 Licenses (from `rpm --query`): BSD
 
@@ -161,13 +161,13 @@ Licenses (from `rpm --query`): MIT
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `nspr-4.29-1.ph4.x86_64`
+### `rpm` package: `nspr-4.30-1.ph4.x86_64`
 
 Licenses (from `rpm --query`): MPLv2.0
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `nss-libs-3.57-2.ph4.x86_64`
+### `rpm` package: `nss-libs-3.66-1.ph4.x86_64`
 
 Licenses (from `rpm --query`): MPLv2.0
 
@@ -215,13 +215,13 @@ Licenses (from `rpm --query`): Public Domain
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `tdnf-3.0.0-5.ph4.x86_64`
+### `rpm` package: `tdnf-3.1.0-1.ph4.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2.1,GPLv2
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `tdnf-cli-libs-3.0.0-5.ph4.x86_64`
+### `rpm` package: `tdnf-cli-libs-3.1.0-1.ph4.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2.1,GPLv2
 
