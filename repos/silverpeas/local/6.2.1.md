@@ -148,14 +148,9 @@ Licenses: (parsed from: `/usr/share/doc/alsa-ucm-conf/copyright`)
 
 - `BSD-3-clause`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris alsa-ucm-conf=1.2.2-1ubuntu0.7
-'http://archive.ubuntu.com/ubuntu/pool/main/a/alsa-ucm-conf/alsa-ucm-conf_1.2.2-1ubuntu0.7.dsc' alsa-ucm-conf_1.2.2-1ubuntu0.7.dsc 1427 SHA512:179ac023843a512581b65238efacbe2a44c2e3f449036d7d67202755a6d0e463d42b37c6e78b53af7e978158b18a0e28e87be8c628b938ad90a7548bdb33fae3
-'http://archive.ubuntu.com/ubuntu/pool/main/a/alsa-ucm-conf/alsa-ucm-conf_1.2.2.orig.tar.bz2' alsa-ucm-conf_1.2.2.orig.tar.bz2 14608 SHA512:25e3f341c110772c7cffc8c7745b320f2ddd12fe6460380c088939b5dc67b99ae4ad92e69375179574e0e1c40d14ff49961e86494e223fde009e51590f00ca8f
-'http://archive.ubuntu.com/ubuntu/pool/main/a/alsa-ucm-conf/alsa-ucm-conf_1.2.2-1ubuntu0.7.debian.tar.xz' alsa-ucm-conf_1.2.2-1ubuntu0.7.debian.tar.xz 16440 SHA512:ee077db4b90d7d10f8a3686e17fa51d264b0e65f52859d2c7fddfd323bf2345619d2160cb804c9b54842f9fc99c4be17cd69231abd53da2677a8d06b71f730ee
-```
 
 ### `dpkg` source package: `aom=1.0.0.errata1-3build1`
 
@@ -1768,14 +1763,9 @@ Licenses: (parsed from: `/usr/share/doc/gcc-10-base/copyright`, `/usr/share/doc/
 - `GPL-3`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-10=10.2.0-5ubuntu1~20.04
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.2.0-5ubuntu1~20.04.dsc' gcc-10_10.2.0-5ubuntu1~20.04.dsc 31163 SHA512:706dbc165819f21cc0ffc0d8e9ac3058db6bd2309a0665b7d83992b39985ff232cdadd165361cdb1216a5e17d16573eacc64e470d965290206c202c80108e1bb
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.2.0.orig.tar.gz' gcc-10_10.2.0.orig.tar.gz 94773960 SHA512:70911f9489225ddb10527f122be77d20cbaf2e4f2bfe92f756d33ec35c0aba352f342a7ee296310a149ea112f97e835f0d3d61f9bc9d416cfc43ccacb325e7ca
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.2.0-5ubuntu1~20.04.debian.tar.xz' gcc-10_10.2.0-5ubuntu1~20.04.debian.tar.xz 2024876 SHA512:d61af9c1eddf504f7b9ff2721b1f077a11059f0dba50392505c591bebd363bbe3a3b46f9fa67c090ac63bfcea6990efd47d647c35507c48f34f12b68a58fb94a
-```
 
 ### `dpkg` source package: `gcc-9=9.3.0-17ubuntu1~20.04`
 
@@ -8077,14 +8067,9 @@ Licenses: (parsed from: `/usr/share/doc/libpulse0/copyright`)
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pulseaudio=1:13.99.1-1ubuntu3.10
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pulseaudio/pulseaudio_13.99.1-1ubuntu3.10.dsc' pulseaudio_13.99.1-1ubuntu3.10.dsc 3863 SHA512:823aa4d5e225aa0069e06cf4ada1af4ba3e02c3c03d317c6674da77fde590384cc39ae7fb834401ca59e9f2a2ab1e40a2786287b6173c42356a5e1a38a216182
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pulseaudio/pulseaudio_13.99.1.orig.tar.xz' pulseaudio_13.99.1.orig.tar.xz 1955840 SHA512:426530b6b9dd94dcc848067376857faae42e86878a82784c5bafa615a68dcc7e22702e0cb5835f91160f19fc9934fe3d53b7d387e3f42b6595fa934b172fe2aa
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pulseaudio/pulseaudio_13.99.1-1ubuntu3.10.debian.tar.xz' pulseaudio_13.99.1-1ubuntu3.10.debian.tar.xz 152856 SHA512:124b21cfe52be02867a9d3b9673b92cda53ca3bc11f4502cb92e8750ee0d6d58b5d40bf69c5033a7b3c56fa5b7a0eedac6dd2185bd57e045c535b01a4db8ceca
-```
 
 ### `dpkg` source package: `pygobject=3.36.0-1`
 
