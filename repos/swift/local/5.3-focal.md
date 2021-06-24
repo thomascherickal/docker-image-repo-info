@@ -586,14 +586,9 @@ Licenses: (parsed from: `/usr/share/doc/gcc-10-base/copyright`, `/usr/share/doc/
 - `GPL-3`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-10=10.2.0-5ubuntu1~20.04
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.2.0-5ubuntu1~20.04.dsc' gcc-10_10.2.0-5ubuntu1~20.04.dsc 31163 SHA512:706dbc165819f21cc0ffc0d8e9ac3058db6bd2309a0665b7d83992b39985ff232cdadd165361cdb1216a5e17d16573eacc64e470d965290206c202c80108e1bb
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.2.0.orig.tar.gz' gcc-10_10.2.0.orig.tar.gz 94773960 SHA512:70911f9489225ddb10527f122be77d20cbaf2e4f2bfe92f756d33ec35c0aba352f342a7ee296310a149ea112f97e835f0d3d61f9bc9d416cfc43ccacb325e7ca
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.2.0-5ubuntu1~20.04.debian.tar.xz' gcc-10_10.2.0-5ubuntu1~20.04.debian.tar.xz 2024876 SHA512:d61af9c1eddf504f7b9ff2721b1f077a11059f0dba50392505c591bebd363bbe3a3b46f9fa67c090ac63bfcea6990efd47d647c35507c48f34f12b68a58fb94a
-```
 
 ### `dpkg` source package: `gcc-9=9.3.0-17ubuntu1~20.04`
 
@@ -1705,14 +1700,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=5.4.0-74.83
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-74.83.dsc' linux_5.4.0-74.83.dsc 7220 SHA512:0f043990ecc6c5967d898c6a145da0ffe072826470392279e12cc4e686b163b6795d54353646f2a6007b8c986950d31fa5e73a26b619f1b8ae20e86d76373b93
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0.orig.tar.gz' linux_5.4.0.orig.tar.gz 170244619 SHA512:62b09a7231fd793973c5f59b16c4f6ffce621188b02a71915874b05e8e3f956fb6146d4a4fb1a4475bebe463949ca5a18da12842c3ce7c52e996e6bc4012a074
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-74.83.diff.gz' linux_5.4.0-74.83.diff.gz 7906456 SHA512:bfc08ab4e81769a5189bfdf7c8dee3848ba2e3dc616d6c452e74e6cf778f42f7ed2ea9708b179d6c982250b453d808b14c88feba1c5eaf35c0d5d83502d01b61
-```
 
 ### `dpkg` source package: `lsb=11.1.0ubuntu2`
 
