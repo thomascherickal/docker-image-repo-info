@@ -1,17 +1,17 @@
-# `telegraf:1.18`
+# `telegraf:1.19`
 
 ## Docker Metadata
 
-- Image ID: `sha256:870ee38129f8445492e28f0bcab38e1b212de617e813dac5645ab81f510dd435`
-- Created: `2021-05-24T19:45:51.492436411Z`
-- Virtual Size: ~ 313.99 Mb  
+- Image ID: `sha256:54a74e9389e63957a2acf34e734546a4ca0d2ec45cbffecd6b50b556e215cb51`
+- Created: `2021-06-24T23:21:22.258327256Z`
+- Virtual Size: ~ 328.94 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
 - Command: `["telegraf"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `TELEGRAF_VERSION=1.18.3`
+  - `TELEGRAF_VERSION=1.19.0`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -151,23 +151,29 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/audit/1:2.8.4-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/audit/1:2.8.4-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `base-files=10.3+deb10u9`
+### `dpkg` source package: `base-files=10.3+deb10u10`
 
 Binary Packages:
 
-- `base-files=10.3+deb10u9`
+- `base-files=10.3+deb10u10`
 
 Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris base-files=10.3+deb10u10
+'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3+deb10u10.dsc' base-files_10.3+deb10u10.dsc 1107 SHA256:ebb4c3a480daeb828df9ad7785e7983759834b4afd56f948a6963f0716a1f4d7
+'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3+deb10u10.tar.xz' base-files_10.3+deb10u10.tar.xz 65428 SHA256:4184366300f9909f07935b668cef02c70f8856bd375eeb7d5eac149c6fb6a674
+```
 
-- http://snapshot.debian.org/package/base-files/10.3+deb10u9/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/base-files/10.3+deb10u10/ (for browsing the source)
+- https://sources.debian.net/src/base-files/10.3+deb10u10/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/base-files/10.3+deb10u10/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-passwd=3.5.46`
 
@@ -804,11 +810,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/gnupg2/2.2.12-1+deb10u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/gnupg2/2.2.12-1+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `gnutls28=3.6.7-4+deb10u6`
+### `dpkg` source package: `gnutls28=3.6.7-4+deb10u7`
 
 Binary Packages:
 
-- `libgnutls30:amd64=3.6.7-4+deb10u6`
+- `libgnutls30:amd64=3.6.7-4+deb10u7`
 
 Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 
@@ -824,13 +830,21 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 - `The MIT License (MIT)`
 - `The main library is licensed under GNU Lesser`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris gnutls28=3.6.7-4+deb10u7
+'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.7-4+deb10u7.dsc' gnutls28_3.6.7-4+deb10u7.dsc 3354 SHA256:dac5aff80109fa5e05f4ab1cb5d402ee9caeefebaa12daf034bcdd7e614af6b2
+'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.7.orig.tar.xz' gnutls28_3.6.7.orig.tar.xz 8153728 SHA256:5b3409ad5aaf239808730d1ee12fdcd148c0be00262c7edf157af655a8a188e2
+'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.7.orig.tar.xz.asc' gnutls28_3.6.7.orig.tar.xz.asc 534 SHA256:a14d0a7b9295b65ae797a70f8e765024a2e363dca03d008bfce0aec2b3f292b0
+'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.7-4+deb10u7.debian.tar.xz' gnutls28_3.6.7-4+deb10u7.debian.tar.xz 94000 SHA256:4f399badd85387e1dd42c811e16d10c4c22196e57142a7325ec44c52b3c6a168
+```
 
-- http://snapshot.debian.org/package/gnutls28/3.6.7-4+deb10u6/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/gnutls28/3.6.7-4+deb10u7/ (for browsing the source)
+- https://sources.debian.net/src/gnutls28/3.6.7-4+deb10u7/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/gnutls28/3.6.7-4+deb10u7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `grep=3.3-1`
 
@@ -1183,11 +1197,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libffi/3.2.1-9/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libffi/3.2.1-9/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libgcrypt20=1.8.4-5`
+### `dpkg` source package: `libgcrypt20=1.8.4-5+deb10u1`
 
 Binary Packages:
 
-- `libgcrypt20:amd64=1.8.4-5`
+- `libgcrypt20:amd64=1.8.4-5+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/libgcrypt20/copyright`)
 
@@ -1197,18 +1211,18 @@ Licenses: (parsed from: `/usr/share/doc/libgcrypt20/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libgcrypt20=1.8.4-5
-'http://deb.debian.org/debian/pool/main/libg/libgcrypt20/libgcrypt20_1.8.4-5.dsc' libgcrypt20_1.8.4-5.dsc 2806 SHA256:9450f74a867017adbce0dece0653ced251c742947e5d14721c6021a74b78bf65
+$ apt-get source -qq --print-uris libgcrypt20=1.8.4-5+deb10u1
+'http://deb.debian.org/debian/pool/main/libg/libgcrypt20/libgcrypt20_1.8.4-5+deb10u1.dsc' libgcrypt20_1.8.4-5+deb10u1.dsc 2838 SHA256:b81da28242d5516fdd74449a48c67ab11f247070acfb11156d04e19a06cb0e63
 'http://deb.debian.org/debian/pool/main/libg/libgcrypt20/libgcrypt20_1.8.4.orig.tar.bz2' libgcrypt20_1.8.4.orig.tar.bz2 2990108 SHA256:f638143a0672628fde0cad745e9b14deb85dffb175709cacc1f4fe24b93f2227
 'http://deb.debian.org/debian/pool/main/libg/libgcrypt20/libgcrypt20_1.8.4.orig.tar.bz2.asc' libgcrypt20_1.8.4.orig.tar.bz2.asc 534 SHA256:97df94317ad273cffce4e78ad34ad0664819b44496f6528818a4298a691209a3
-'http://deb.debian.org/debian/pool/main/libg/libgcrypt20/libgcrypt20_1.8.4-5.debian.tar.xz' libgcrypt20_1.8.4-5.debian.tar.xz 29372 SHA256:bb65f021c13ef1296e575d176bcf073208067c59e0647fb47e33c01e04d24027
+'http://deb.debian.org/debian/pool/main/libg/libgcrypt20/libgcrypt20_1.8.4-5+deb10u1.debian.tar.xz' libgcrypt20_1.8.4-5+deb10u1.debian.tar.xz 30712 SHA256:5ab932db1f9c2c9e5d3e86266d020a492bbae845367982a0c7d5ec78abf55027
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/libgcrypt20/1.8.4-5/ (for browsing the source)
-- https://sources.debian.net/src/libgcrypt20/1.8.4-5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libgcrypt20/1.8.4-5/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/libgcrypt20/1.8.4-5+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/libgcrypt20/1.8.4-5+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libgcrypt20/1.8.4-5+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libgpg-error=1.35-1`
 
@@ -1628,11 +1642,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/lsb/10.2019051400/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/lsb/10.2019051400/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `lz4=1.8.3-1`
+### `dpkg` source package: `lz4=1.8.3-1+deb10u1`
 
 Binary Packages:
 
-- `liblz4-1:amd64=1.8.3-1`
+- `liblz4-1:amd64=1.8.3-1+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/liblz4-1/copyright`)
 
@@ -1643,7 +1657,7 @@ Licenses: (parsed from: `/usr/share/doc/liblz4-1/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris lz4=1.8.3-1
+$ apt-get source -qq --print-uris lz4=1.8.3-1+deb10u1
 'http://deb.debian.org/debian/pool/main/l/lz4/lz4_1.8.3-1+deb10u1.dsc' lz4_1.8.3-1+deb10u1.dsc 2119 SHA256:22a32d93f1e1525efd33e80b8c8ffb9ad74b5baf441aa3534e875523d9b5eb93
 'http://deb.debian.org/debian/pool/main/l/lz4/lz4_1.8.3.orig.tar.gz' lz4_1.8.3.orig.tar.gz 327897 SHA256:33af5936ac06536805f9745e0b6d61da606a1f8b4cc5c04dd3cbaca3b9b4fc43
 'http://deb.debian.org/debian/pool/main/l/lz4/lz4_1.8.3-1+deb10u1.debian.tar.xz' lz4_1.8.3-1+deb10u1.debian.tar.xz 12068 SHA256:6d9896c90c93f312af743b2c6ea1b62ba8defe8696acf7a009bed03b012db60a
@@ -1651,16 +1665,16 @@ $ apt-get source -qq --print-uris lz4=1.8.3-1
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/lz4/1.8.3-1/ (for browsing the source)
-- https://sources.debian.net/src/lz4/1.8.3-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/lz4/1.8.3-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/lz4/1.8.3-1+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/lz4/1.8.3-1+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/lz4/1.8.3-1+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `mariadb-10.3=1:10.3.27-0+deb10u1`
+### `dpkg` source package: `mariadb-10.3=1:10.3.29-0+deb10u1`
 
 Binary Packages:
 
-- `libmariadb3:amd64=1:10.3.27-0+deb10u1`
-- `mariadb-common=1:10.3.27-0+deb10u1`
+- `libmariadb3:amd64=1:10.3.29-0+deb10u1`
+- `mariadb-common=1:10.3.29-0+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/libmariadb3/copyright`, `/usr/share/doc/mariadb-common/copyright`)
 
@@ -1684,13 +1698,21 @@ Licenses: (parsed from: `/usr/share/doc/libmariadb3/copyright`, `/usr/share/doc/
 - `unlimited-free-doc`
 - `zlib/libpng`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris mariadb-10.3=1:10.3.29-0+deb10u1
+'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.29-0+deb10u1.dsc' mariadb-10.3_10.3.29-0+deb10u1.dsc 4812 SHA256:35bdde3bfa68570d85a4f0ecde276f885e5af5ab1c9877611f0b6fcc4fe776d6
+'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.29.orig.tar.gz' mariadb-10.3_10.3.29.orig.tar.gz 73261682 SHA256:304a9e94c50636b591ac7cbfe459cb341d345c4bd0ef5e45fb9a692268e6db38
+'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.29.orig.tar.gz.asc' mariadb-10.3_10.3.29.orig.tar.gz.asc 195 SHA256:a8589036d5099e1395d25d21545088f51c4f6ee54f2e930e36114dc0c6c74ec7
+'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.29-0+deb10u1.debian.tar.xz' mariadb-10.3_10.3.29-0+deb10u1.debian.tar.xz 221320 SHA256:2356baf372d5c1c8ca32735ee6e87af4512305b2fa016a42b811859e59bd08e7
+```
 
-- http://snapshot.debian.org/package/mariadb-10.3/1:10.3.27-0+deb10u1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/mariadb-10.3/1:10.3.29-0+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/mariadb-10.3/1:10.3.29-0+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/mariadb-10.3/1:10.3.29-0+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mawk=1.3.3-17`
 
@@ -1829,12 +1851,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/netbase/5.6/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/netbase/5.6/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `nettle=3.4.1-1`
+### `dpkg` source package: `nettle=3.4.1-1+deb10u1`
 
 Binary Packages:
 
-- `libhogweed4:amd64=3.4.1-1`
-- `libnettle6:amd64=3.4.1-1`
+- `libhogweed4:amd64=3.4.1-1+deb10u1`
+- `libnettle6:amd64=3.4.1-1+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/libhogweed4/copyright`, `/usr/share/doc/libnettle6/copyright`)
 
@@ -1853,18 +1875,18 @@ Licenses: (parsed from: `/usr/share/doc/libhogweed4/copyright`, `/usr/share/doc/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris nettle=3.4.1-1
-'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.4.1-1.dsc' nettle_3.4.1-1.dsc 2258 SHA256:829d6f504938a22a704042211fe351f2e27c52d3811f42c508e95421a9c634fb
-'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.4.1.orig.tar.gz' nettle_3.4.1.orig.tar.gz 1947053 SHA256:f941cf1535cd5d1819be5ccae5babef01f6db611f9b5a777bae9c7604b8a92ad
-'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.4.1.orig.tar.gz.asc' nettle_3.4.1.orig.tar.gz.asc 2476 SHA256:07b265366b46bc67950da3f34687235eaa85c45b326e42bb7c9b58830b651d28
-'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.4.1-1.debian.tar.xz' nettle_3.4.1-1.debian.tar.xz 19988 SHA256:0339933966853cc0c3b2a9721f44116ee31d136d9983d33275d1beb291c11edb
+$ apt-get source -qq --print-uris nettle=3.4.1-1+deb10u1
+'http://security.debian.org/debian-security/pool/updates/main/n/nettle/nettle_3.4.1-1+deb10u1.dsc' nettle_3.4.1-1+deb10u1.dsc 2290 SHA256:b38c9a78ae0732a94d06dbc811479f6ee8357bd47604dfa92f0d0801b148eebc
+'http://security.debian.org/debian-security/pool/updates/main/n/nettle/nettle_3.4.1.orig.tar.gz' nettle_3.4.1.orig.tar.gz 1947053 SHA256:f941cf1535cd5d1819be5ccae5babef01f6db611f9b5a777bae9c7604b8a92ad
+'http://security.debian.org/debian-security/pool/updates/main/n/nettle/nettle_3.4.1.orig.tar.gz.asc' nettle_3.4.1.orig.tar.gz.asc 2476 SHA256:07b265366b46bc67950da3f34687235eaa85c45b326e42bb7c9b58830b651d28
+'http://security.debian.org/debian-security/pool/updates/main/n/nettle/nettle_3.4.1-1+deb10u1.debian.tar.xz' nettle_3.4.1-1+deb10u1.debian.tar.xz 26508 SHA256:b847de5ccd50b9bc0aa56dd7fe750c224683174676dde69c86f62bece52ff4ba
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/nettle/3.4.1-1/ (for browsing the source)
-- https://sources.debian.net/src/nettle/3.4.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/nettle/3.4.1-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/nettle/3.4.1-1+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/nettle/3.4.1-1+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/nettle/3.4.1-1+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `nghttp2=1.36.0-2+deb10u1`
 
@@ -2467,11 +2489,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tcp-wrappers/7.6.q-28/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tcp-wrappers/7.6.q-28/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `telegraf=1.18.3-1`
+### `dpkg` source package: `telegraf=1.19.0-1`
 
 Binary Packages:
 
-- `telegraf=1.18.3-1`
+- `telegraf=1.19.0-1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
