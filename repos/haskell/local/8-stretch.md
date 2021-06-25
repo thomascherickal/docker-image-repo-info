@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:853d213a6d77e88a77be8d8980bd03ceb3a2e3a12f76276cb7df32f9fd61db58`
-- Created: `2021-05-12T07:24:42.423683971Z`
+- Image ID: `sha256:4e6cf0fca74d1b36fa27b728b87ad9532dbd3670e2a8926afcc69a6b9be8a9a7`
+- Created: `2021-06-23T06:12:37.197562109Z`
 - Virtual Size: ~ 1.48 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -363,13 +363,13 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/coreutils/8.26-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/coreutils/8.26-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `curl=7.52.1-5+deb9u13`
+### `dpkg` source package: `curl=7.52.1-5+deb9u14`
 
 Binary Packages:
 
-- `curl=7.52.1-5+deb9u13`
-- `libcurl3:amd64=7.52.1-5+deb9u13`
-- `libcurl3-gnutls:amd64=7.52.1-5+deb9u13`
+- `curl=7.52.1-5+deb9u14`
+- `libcurl3:amd64=7.52.1-5+deb9u14`
+- `libcurl3-gnutls:amd64=7.52.1-5+deb9u14`
 
 Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl3/copyright`, `/usr/share/doc/libcurl3-gnutls/copyright`)
 
@@ -380,13 +380,20 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris curl=7.52.1-5+deb9u14
+'http://security.debian.org/debian-security/pool/updates/main/c/curl/curl_7.52.1-5+deb9u14.dsc' curl_7.52.1-5+deb9u14.dsc 2797 SHA256:eeddbe48282f5ce93ad24d3dd5a431ee294617e104d35ea274b38a0f09c2f568
+'http://security.debian.org/debian-security/pool/updates/main/c/curl/curl_7.52.1.orig.tar.gz' curl_7.52.1.orig.tar.gz 3504621 SHA256:a8984e8b20880b621f61a62d95ff3c0763a3152093a9f9ce4287cfd614add6ae
+'http://security.debian.org/debian-security/pool/updates/main/c/curl/curl_7.52.1-5+deb9u14.debian.tar.xz' curl_7.52.1-5+deb9u14.debian.tar.xz 62860 SHA256:1294a6c5f5411b05d4972b97b51b3a72cdc06f250f5d0ccdcf418c5cf3fab615
+```
 
-- http://snapshot.debian.org/package/curl/7.52.1-5+deb9u13/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/curl/7.52.1-5+deb9u14/ (for browsing the source)
+- https://sources.debian.net/src/curl/7.52.1-5+deb9u14/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/curl/7.52.1-5+deb9u14/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27~101-g0780600+dfsg-3+deb9u1`
 
@@ -1823,11 +1830,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libunistring/0.9.6+really0.9.3-0.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libunistring/0.9.6+really0.9.3-0.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `linux=4.9.258-1`
+### `dpkg` source package: `linux=4.9.272-1`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=4.9.258-1`
+- `linux-libc-dev:amd64=4.9.272-1`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -1840,17 +1847,17 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris linux=4.9.258-1
-'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.9.258-1.dsc' linux_4.9.258-1.dsc 125025 SHA256:ff37a5b00748eab759bc2d7d2ed0429a7d001f34517564813568b34e24014fd2
-'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.9.258.orig.tar.xz' linux_4.9.258.orig.tar.xz 94938520 SHA256:9ce4411eb1fe1262f2aa64890ebcf9a40e8c161931b8b1902cd0929f853d8e29
-'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.9.258-1.debian.tar.xz' linux_4.9.258-1.debian.tar.xz 1345948 SHA256:29347a7d10edc34823689db995b0b5d143bae3bedb3c3dcf7986ca051f5717ff
+$ apt-get source -qq --print-uris linux=4.9.272-1
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.9.272-1.dsc' linux_4.9.272-1.dsc 125025 SHA256:5b2b4ad3a786de305e58d3e05dff38776065ae4781585be037ce6fe387da06a6
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.9.272.orig.tar.xz' linux_4.9.272.orig.tar.xz 94953184 SHA256:e6bdb214f4958246399198a0f7838b69ad499a88ca8c45e5c3e4d91e1d201566
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.9.272-1.debian.tar.xz' linux_4.9.272-1.debian.tar.xz 1321172 SHA256:3842d7ecee586c30efd86d4758ef39d55b16fb194ce57bf0a98e99663a26dca3
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/linux/4.9.258-1/ (for browsing the source)
-- https://sources.debian.net/src/linux/4.9.258-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/4.9.258-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/linux/4.9.272-1/ (for browsing the source)
+- https://sources.debian.net/src/linux/4.9.272-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/linux/4.9.272-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lsb=9.20161125`
 
@@ -1877,11 +1884,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/lsb/9.20161125/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/lsb/9.20161125/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `lz4=0.0~r131-2`
+### `dpkg` source package: `lz4=0.0~r131-2+deb9u1`
 
 Binary Packages:
 
-- `liblz4-1:amd64=0.0~r131-2+b1`
+- `liblz4-1:amd64=0.0~r131-2+deb9u1`
 
 Licenses: (parsed from: `/usr/share/doc/liblz4-1/copyright`)
 
@@ -1892,17 +1899,17 @@ Licenses: (parsed from: `/usr/share/doc/liblz4-1/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris lz4=0.0~r131-2
-'http://deb.debian.org/debian/pool/main/l/lz4/lz4_0.0~r131-2.dsc' lz4_0.0~r131-2.dsc 1973 SHA256:304cf9dddee387377929adf3f2cef0ae19fb2e56b6cc9eab05798845b58bd9b6
-'http://deb.debian.org/debian/pool/main/l/lz4/lz4_0.0~r131.orig.tar.gz' lz4_0.0~r131.orig.tar.gz 133784 SHA256:9d4d00614d6b9dec3114b33d1224b6262b99ace24434c53487a0c8fd0b18cfed
-'http://deb.debian.org/debian/pool/main/l/lz4/lz4_0.0~r131-2.debian.tar.xz' lz4_0.0~r131-2.debian.tar.xz 4936 SHA256:966df055dd8fa7f292c283452b43a5d2d2047d542fe49e97025006e69525e224
+$ apt-get source -qq --print-uris lz4=0.0~r131-2+deb9u1
+'http://security.debian.org/debian-security/pool/updates/main/l/lz4/lz4_0.0~r131-2+deb9u1.dsc' lz4_0.0~r131-2+deb9u1.dsc 2015 SHA256:dd0fe6a29303b74f3269c0c41bbc18df745f039c57c589e9fb7b1b22b6a694bc
+'http://security.debian.org/debian-security/pool/updates/main/l/lz4/lz4_0.0~r131.orig.tar.gz' lz4_0.0~r131.orig.tar.gz 133784 SHA256:9d4d00614d6b9dec3114b33d1224b6262b99ace24434c53487a0c8fd0b18cfed
+'http://security.debian.org/debian-security/pool/updates/main/l/lz4/lz4_0.0~r131-2+deb9u1.debian.tar.xz' lz4_0.0~r131-2+deb9u1.debian.tar.xz 5316 SHA256:cd17d69b2aacc8c7ace3364b8ad1f0e36f7238e9486a60f49f75d8b66e87c006
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/lz4/0.0~r131-2/ (for browsing the source)
-- https://sources.debian.net/src/lz4/0.0~r131-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/lz4/0.0~r131-2/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/lz4/0.0~r131-2+deb9u1/ (for browsing the source)
+- https://sources.debian.net/src/lz4/0.0~r131-2+deb9u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/lz4/0.0~r131-2+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `make-dfsg=4.1-9.1`
 
