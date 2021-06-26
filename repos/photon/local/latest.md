@@ -2,16 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:34772bc276e610fd7531ddfbccbefbf1283e81c07a0f5d74d4f45baa6b24305e`
-- Created: `2021-06-22T21:54:13.502061921Z`
-- Virtual Size: ~ 36.30 Mb  
+- Image ID: `sha256:088064182a65aabba353098beb23bb4a12051c9c4e6d023e81b0017554fe125b`
+- Created: `2021-06-26T03:00:55.890886995Z`
+- Virtual Size: ~ 36.52 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
 - Labels:
-  - `build-date=20210621`
+  - `build-date=20210625`
   - `name=Photon OS x86_64/4.0 Base Image`
   - `vendor=VMware`
 
@@ -119,7 +119,7 @@ Licenses (from `rpm --query`): GPLv2+
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `libgcrypt-1.8.6-2.ph4.x86_64`
+### `rpm` package: `libgcrypt-1.9.3-1.ph4.x86_64`
 
 Licenses (from `rpm --query`): GPLv2+ and LGPLv2+
 
@@ -149,7 +149,7 @@ Licenses (from `rpm --query`): BSD
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `lua-5.3.6-1.ph4.x86_64`
+### `rpm` package: `lua-5.4.3-1.ph4.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
@@ -203,7 +203,7 @@ Licenses (from `rpm --query`): GPLv3+
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `rpm-libs-4.16.1.2-4.ph4.x86_64`
+### `rpm` package: `rpm-libs-4.16.1.2-5.ph4.x86_64`
 
 Licenses (from `rpm --query`): GPLv2+
 
