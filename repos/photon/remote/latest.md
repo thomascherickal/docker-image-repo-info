@@ -1,7 +1,7 @@
 ## `photon:latest`
 
 ```console
-$ docker pull photon@sha256:0bd1e0138ffd05eef5e7584f6889926a1fa516e73c56bdfb24b1502eb94bfbc2
+$ docker pull photon@sha256:5816a5831b44cbbca7793a132e9d74962d8df8b3c2d238c92c039ed0fe6d6364
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -40,27 +40,27 @@ CMD ["/bin/bash"]
 ### `photon:latest` - linux; arm64 variant v8
 
 ```console
-$ docker pull photon@sha256:cf8970608063411068b6613dda480762f16f5b28aecad05c25d180eb56830910
+$ docker pull photon@sha256:78331b9ffd6eac6db4b7610dc19bc8b5f9dc15076ee534f54c4db008163d87fd
 ```
 
--	Docker Version: 19.03.12
+-	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **14.8 MB (14829104 bytes)**  
+-	Total Size: **14.9 MB (14949126 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3bd5bce94d9136f825b593b0568ccc9176d54d920b445a7b1bb48ea8aaa9bce3`
+-	Image ID: `sha256:af9109c4e639828064813cc7053c808a04e29e63d96abd936e50045f081dd3fc`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Tue, 22 Jun 2021 20:40:02 GMT
-ADD file:a681c715ab0201e91f2ba6e1f152ddb02b3cdb9c1ea162091334c89699e0081c in / 
-# Tue, 22 Jun 2021 20:40:02 GMT
-LABEL name=Photon OS aarch64/4.0 Base Image vendor=VMware build-date=20210621
-# Tue, 22 Jun 2021 20:40:02 GMT
+# Sat, 26 Jun 2021 02:25:54 GMT
+ADD file:ba66c3814a075f729f3cbcb8823d4530cae4bb2a504a27db0b9bf7c777b03178 in / 
+# Sat, 26 Jun 2021 02:25:54 GMT
+LABEL name=Photon OS aarch64/4.0 Base Image vendor=VMware build-date=20210625
+# Sat, 26 Jun 2021 02:25:55 GMT
 CMD ["/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:1cd78edd07f5d800b36c3efb37deb8ed372b680a77b1f9ef976829081032e553`  
-		Last Modified: Tue, 22 Jun 2021 20:40:31 GMT  
-		Size: 14.8 MB (14829104 bytes)  
+	-	`sha256:9817f3f8002f1b6160a96dd2fc56907cae92f957ae310d327b8f753b8b8b4176`  
+		Last Modified: Sat, 26 Jun 2021 02:26:25 GMT  
+		Size: 14.9 MB (14949126 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
