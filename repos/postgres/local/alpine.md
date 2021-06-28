@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:0ad8200ddbe2ee02d4e5ec5dfa0a03dba1bb71ab574bca059da3568d7078282f`
-- Created: `2021-05-14T19:43:31.483320134Z`
-- Virtual Size: ~ 159.52 Mb  
+- Image ID: `sha256:d3a70afcf848f415052a47e453baa40a53c123a227736e8d6e247ae0cf851846`
+- Created: `2021-06-25T19:12:46.051592948Z`
+- Virtual Size: ~ 191.49 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -22,16 +22,16 @@
 ### `apk` package: `alpine-baselayout`
 
 ```console
-alpine-baselayout-3.2.0-r8 description:
+alpine-baselayout-3.2.0-r15 description:
 Alpine base dir structure and init scripts
 
-alpine-baselayout-3.2.0-r8 webpage:
+alpine-baselayout-3.2.0-r15 webpage:
 https://git.alpinelinux.org/cgit/aports/tree/main/alpine-baselayout
 
-alpine-baselayout-3.2.0-r8 installed size:
-400 KiB
+alpine-baselayout-3.2.0-r15 installed size:
+404 KiB
 
-alpine-baselayout-3.2.0-r8 license:
+alpine-baselayout-3.2.0-r15 license:
 GPL-2.0-only
 
 ```
@@ -39,16 +39,16 @@ GPL-2.0-only
 ### `apk` package: `alpine-keys`
 
 ```console
-alpine-keys-2.2-r0 description:
+alpine-keys-2.3-r1 description:
 Public keys for Alpine Linux packages
 
-alpine-keys-2.2-r0 webpage:
+alpine-keys-2.3-r1 webpage:
 https://alpinelinux.org
 
-alpine-keys-2.2-r0 installed size:
-104 KiB
+alpine-keys-2.3-r1 installed size:
+116 KiB
 
-alpine-keys-2.2-r0 license:
+alpine-keys-2.3-r1 license:
 MIT
 
 ```
@@ -56,16 +56,16 @@ MIT
 ### `apk` package: `apk-tools`
 
 ```console
-apk-tools-2.12.5-r0 description:
+apk-tools-2.12.5-r1 description:
 Alpine Package Keeper - package manager for alpine
 
-apk-tools-2.12.5-r0 webpage:
+apk-tools-2.12.5-r1 webpage:
 https://gitlab.alpinelinux.org/alpine/apk-tools
 
-apk-tools-2.12.5-r0 installed size:
+apk-tools-2.12.5-r1 installed size:
 304 KiB
 
-apk-tools-2.12.5-r0 license:
+apk-tools-2.12.5-r1 license:
 GPL-2.0-only
 
 ```
@@ -73,16 +73,16 @@ GPL-2.0-only
 ### `apk` package: `bash`
 
 ```console
-bash-5.1.0-r0 description:
+bash-5.1.4-r0 description:
 The GNU Bourne Again shell
 
-bash-5.1.0-r0 webpage:
+bash-5.1.4-r0 webpage:
 https://www.gnu.org/software/bash/bash.html
 
-bash-5.1.0-r0 installed size:
+bash-5.1.4-r0 installed size:
 1296 KiB
 
-bash-5.1.0-r0 license:
+bash-5.1.4-r0 license:
 GPL-3.0-or-later
 
 ```
@@ -90,16 +90,16 @@ GPL-3.0-or-later
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.32.1-r6 description:
+busybox-1.33.1-r2 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.32.1-r6 webpage:
+busybox-1.33.1-r2 webpage:
 https://busybox.net/
 
-busybox-1.32.1-r6 installed size:
-924 KiB
+busybox-1.33.1-r2 installed size:
+928 KiB
 
-busybox-1.32.1-r6 license:
+busybox-1.33.1-r2 license:
 GPL-2.0-only
 
 ```
@@ -175,16 +175,16 @@ OpenSSL
 ### `apk` package: `libedit`
 
 ```console
-libedit-20191231.3.1-r1 description:
+libedit-20210216.3.1-r0 description:
 BSD line editing library
 
-libedit-20191231.3.1-r1 webpage:
+libedit-20210216.3.1-r0 webpage:
 https://www.thrysoee.dk/editline
 
-libedit-20191231.3.1-r1 installed size:
+libedit-20210216.3.1-r0 installed size:
 196 KiB
 
-libedit-20191231.3.1-r1 license:
+libedit-20210216.3.1-r0 license:
 BSD-3-Clause
 
 ```
@@ -209,16 +209,16 @@ MIT
 ### `apk` package: `libgcc`
 
 ```console
-libgcc-10.2.1_pre1-r3 description:
+libgcc-10.3.1_git20210424-r2 description:
 GNU C compiler runtime libraries
 
-libgcc-10.2.1_pre1-r3 webpage:
+libgcc-10.3.1_git20210424-r2 webpage:
 https://gcc.gnu.org
 
-libgcc-10.2.1_pre1-r3 installed size:
+libgcc-10.3.1_git20210424-r2 installed size:
 112 KiB
 
-libgcc-10.2.1_pre1-r3 license:
+libgcc-10.3.1_git20210424-r2 license:
 GPL-2.0-or-later LGPL-2.1-or-later
 
 ```
@@ -226,16 +226,16 @@ GPL-2.0-or-later LGPL-2.1-or-later
 ### `apk` package: `libgcrypt`
 
 ```console
-libgcrypt-1.8.7-r0 description:
-general purpose crypto library based on the code used in GnuPG
+libgcrypt-1.9.3-r0 description:
+General purpose crypto library based on the code used in GnuPG
 
-libgcrypt-1.8.7-r0 webpage:
+libgcrypt-1.9.3-r0 webpage:
 https://www.gnupg.org/
 
-libgcrypt-1.8.7-r0 installed size:
-1124 KiB
+libgcrypt-1.9.3-r0 installed size:
+1220 KiB
 
-libgcrypt-1.8.7-r0 license:
+libgcrypt-1.9.3-r0 license:
 LGPL-2.1-or-later
 
 ```
@@ -243,17 +243,34 @@ LGPL-2.1-or-later
 ### `apk` package: `libgpg-error`
 
 ```console
-libgpg-error-1.41-r0 description:
+libgpg-error-1.42-r0 description:
 Support library for libgcrypt
 
-libgpg-error-1.41-r0 webpage:
+libgpg-error-1.42-r0 webpage:
 https://www.gnupg.org/
 
-libgpg-error-1.41-r0 installed size:
-208 KiB
+libgpg-error-1.42-r0 installed size:
+212 KiB
 
-libgpg-error-1.41-r0 license:
+libgpg-error-1.42-r0 license:
 GPL-2.0-or-later LGPL-2.1-or-later
+
+```
+
+### `apk` package: `libretls`
+
+```console
+libretls-3.3.3-r0 description:
+port of libtls from libressl to openssl
+
+libretls-3.3.3-r0 webpage:
+https://git.causal.agency/libretls/
+
+libretls-3.3.3-r0 installed size:
+84 KiB
+
+libretls-3.3.3-r0 license:
+ISC AND (BSD-3-Clause OR MIT)
 
 ```
 
@@ -277,50 +294,33 @@ OpenSSL
 ### `apk` package: `libstdc++`
 
 ```console
-libstdc++-10.2.1_pre1-r3 description:
+libstdc++-10.3.1_git20210424-r2 description:
 GNU C++ standard runtime library
 
-libstdc++-10.2.1_pre1-r3 webpage:
+libstdc++-10.3.1_git20210424-r2 webpage:
 https://gcc.gnu.org
 
-libstdc++-10.2.1_pre1-r3 installed size:
-1668 KiB
+libstdc++-10.3.1_git20210424-r2 installed size:
+1664 KiB
 
-libstdc++-10.2.1_pre1-r3 license:
+libstdc++-10.3.1_git20210424-r2 license:
 GPL-2.0-or-later LGPL-2.1-or-later
-
-```
-
-### `apk` package: `libtls-standalone`
-
-```console
-libtls-standalone-2.9.1-r1 description:
-libtls extricated from libressl sources
-
-libtls-standalone-2.9.1-r1 webpage:
-https://www.libressl.org/
-
-libtls-standalone-2.9.1-r1 installed size:
-108 KiB
-
-libtls-standalone-2.9.1-r1 license:
-ISC
 
 ```
 
 ### `apk` package: `libuuid`
 
 ```console
-libuuid-2.36.1-r1 description:
+libuuid-2.37-r0 description:
 DCE compatible Universally Unique Identifier library
 
-libuuid-2.36.1-r1 webpage:
+libuuid-2.37-r0 webpage:
 https://git.kernel.org/cgit/utils/util-linux/util-linux.git
 
-libuuid-2.36.1-r1 installed size:
+libuuid-2.37-r0 installed size:
 40 KiB
 
-libuuid-2.36.1-r1 license:
+libuuid-2.37-r0 license:
 GPL-3.0-or-later AND GPL-2.0-or-later AND GPL-2.0-only AND
 
 ```
@@ -328,16 +328,16 @@ GPL-3.0-or-later AND GPL-2.0-or-later AND GPL-2.0-only AND
 ### `apk` package: `libxml2`
 
 ```console
-libxml2-2.9.10-r6 description:
+libxml2-2.9.12-r1 description:
 XML parsing library, version 2
 
-libxml2-2.9.10-r6 webpage:
+libxml2-2.9.12-r1 webpage:
 http://www.xmlsoft.org/
 
-libxml2-2.9.10-r6 installed size:
-1196 KiB
+libxml2-2.9.12-r1 installed size:
+1200 KiB
 
-libxml2-2.9.10-r6 license:
+libxml2-2.9.12-r1 license:
 MIT
 
 ```
@@ -345,33 +345,33 @@ MIT
 ### `apk` package: `libxslt`
 
 ```console
-libxslt-1.1.34-r0 description:
+libxslt-1.1.34-r1 description:
 XML stylesheet transformation library
 
-libxslt-1.1.34-r0 webpage:
+libxslt-1.1.34-r1 webpage:
 http://xmlsoft.org/XSLT/
 
-libxslt-1.1.34-r0 installed size:
+libxslt-1.1.34-r1 installed size:
 360 KiB
 
-libxslt-1.1.34-r0 license:
+libxslt-1.1.34-r1 license:
 custom
 
 ```
 
-### `apk` package: `llvm10-libs`
+### `apk` package: `llvm11-libs`
 
 ```console
-llvm10-libs-10.0.1-r1 description:
-LLVM 10 runtime library
+llvm11-libs-11.1.0-r2 description:
+LLVM 11 runtime library
 
-llvm10-libs-10.0.1-r1 webpage:
+llvm11-libs-11.1.0-r2 webpage:
 https://llvm.org/
 
-llvm10-libs-10.0.1-r1 installed size:
-60 MiB
+llvm11-libs-11.1.0-r2 installed size:
+90 MiB
 
-llvm10-libs-10.0.1-r1 license:
+llvm11-libs-11.1.0-r2 license:
 Apache-2.0
 
 ```
@@ -379,16 +379,16 @@ Apache-2.0
 ### `apk` package: `musl`
 
 ```console
-musl-1.2.2-r0 description:
+musl-1.2.2-r3 description:
 the musl c library (libc) implementation
 
-musl-1.2.2-r0 webpage:
+musl-1.2.2-r3 webpage:
 https://musl.libc.org/
 
-musl-1.2.2-r0 installed size:
+musl-1.2.2-r3 installed size:
 608 KiB
 
-musl-1.2.2-r0 license:
+musl-1.2.2-r3 license:
 MIT
 
 ```
@@ -396,16 +396,16 @@ MIT
 ### `apk` package: `musl-utils`
 
 ```console
-musl-utils-1.2.2-r0 description:
+musl-utils-1.2.2-r3 description:
 the musl c library (libc) implementation
 
-musl-utils-1.2.2-r0 webpage:
+musl-utils-1.2.2-r3 webpage:
 https://musl.libc.org/
 
-musl-utils-1.2.2-r0 installed size:
-140 KiB
+musl-utils-1.2.2-r3 installed size:
+144 KiB
 
-musl-utils-1.2.2-r0 license:
+musl-utils-1.2.2-r3 license:
 MIT BSD GPL2+
 
 ```
@@ -413,16 +413,16 @@ MIT BSD GPL2+
 ### `apk` package: `ncurses-libs`
 
 ```console
-ncurses-libs-6.2_p20210109-r0 description:
+ncurses-libs-6.2_p20210612-r0 description:
 Ncurses libraries
 
-ncurses-libs-6.2_p20210109-r0 webpage:
+ncurses-libs-6.2_p20210612-r0 webpage:
 https://invisible-island.net/ncurses/
 
-ncurses-libs-6.2_p20210109-r0 installed size:
-496 KiB
+ncurses-libs-6.2_p20210612-r0 installed size:
+500 KiB
 
-ncurses-libs-6.2_p20210109-r0 license:
+ncurses-libs-6.2_p20210612-r0 license:
 MIT
 
 ```
@@ -430,16 +430,16 @@ MIT
 ### `apk` package: `ncurses-terminfo-base`
 
 ```console
-ncurses-terminfo-base-6.2_p20210109-r0 description:
+ncurses-terminfo-base-6.2_p20210612-r0 description:
 Descriptions of common terminals
 
-ncurses-terminfo-base-6.2_p20210109-r0 webpage:
+ncurses-terminfo-base-6.2_p20210612-r0 webpage:
 https://invisible-island.net/ncurses/
 
-ncurses-terminfo-base-6.2_p20210109-r0 installed size:
+ncurses-terminfo-base-6.2_p20210612-r0 installed size:
 216 KiB
 
-ncurses-terminfo-base-6.2_p20210109-r0 license:
+ncurses-terminfo-base-6.2_p20210612-r0 license:
 MIT
 
 ```
@@ -464,16 +464,16 @@ GPL-2.0-or-later
 ### `apk` package: `scanelf`
 
 ```console
-scanelf-1.2.8-r0 description:
+scanelf-1.3.2-r0 description:
 Scan ELF binaries for stuff
 
-scanelf-1.2.8-r0 webpage:
+scanelf-1.3.2-r0 webpage:
 https://wiki.gentoo.org/wiki/Hardened/PaX_Utilities
 
-scanelf-1.2.8-r0 installed size:
+scanelf-1.3.2-r0 installed size:
 92 KiB
 
-scanelf-1.2.8-r0 license:
+scanelf-1.3.2-r0 license:
 GPL-2.0-only
 
 ```
@@ -481,16 +481,16 @@ GPL-2.0-only
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.32.1-r6 description:
+ssl_client-1.33.1-r2 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.32.1-r6 webpage:
+ssl_client-1.33.1-r2 webpage:
 https://busybox.net/
 
-ssl_client-1.32.1-r6 installed size:
+ssl_client-1.33.1-r2 installed size:
 28 KiB
 
-ssl_client-1.32.1-r6 license:
+ssl_client-1.33.1-r2 license:
 GPL-2.0-only
 
 ```
