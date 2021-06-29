@@ -26,6 +26,14 @@
 -	[`influxdb:1.8.6-data-alpine`](#influxdb186-data-alpine)
 -	[`influxdb:1.8.6-meta`](#influxdb186-meta)
 -	[`influxdb:1.8.6-meta-alpine`](#influxdb186-meta-alpine)
+-	[`influxdb:1.9-data`](#influxdb19-data)
+-	[`influxdb:1.9-data-alpine`](#influxdb19-data-alpine)
+-	[`influxdb:1.9-meta`](#influxdb19-meta)
+-	[`influxdb:1.9-meta-alpine`](#influxdb19-meta-alpine)
+-	[`influxdb:1.9.2-data`](#influxdb192-data)
+-	[`influxdb:1.9.2-data-alpine`](#influxdb192-data-alpine)
+-	[`influxdb:1.9.2-meta`](#influxdb192-meta)
+-	[`influxdb:1.9.2-meta-alpine`](#influxdb192-meta-alpine)
 -	[`influxdb:2.0`](#influxdb20)
 -	[`influxdb:2.0-alpine`](#influxdb20-alpine)
 -	[`influxdb:2.0.7`](#influxdb207)
@@ -2692,6 +2700,78 @@ CMD ["influxd-meta"]
 		Last Modified: Mon, 24 May 2021 19:24:10 GMT  
 		Size: 375.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `influxdb:1.9-data`
+
+```console
+$ docker pull influxdb@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
+## `influxdb:1.9-data-alpine`
+
+```console
+$ docker pull influxdb@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
+## `influxdb:1.9-meta`
+
+```console
+$ docker pull influxdb@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
+## `influxdb:1.9-meta-alpine`
+
+```console
+$ docker pull influxdb@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
+## `influxdb:1.9.2-data`
+
+```console
+$ docker pull influxdb@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
+## `influxdb:1.9.2-data-alpine`
+
+```console
+$ docker pull influxdb@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
+## `influxdb:1.9.2-meta`
+
+```console
+$ docker pull influxdb@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
+
+## `influxdb:1.9.2-meta-alpine`
+
+```console
+$ docker pull influxdb@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms:
 
 ## `influxdb:2.0`
 
