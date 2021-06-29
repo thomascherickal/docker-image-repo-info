@@ -1,10 +1,10 @@
-# `rabbitmq:3.8.17`
+# `rabbitmq:3.8.18`
 
 ## Docker Metadata
 
-- Image ID: `sha256:30d400376643bbad5851d921f88af3949253bbbadd08b79fdb7cdbbc28e7c23c`
-- Created: `2021-06-18T03:16:36.996961105Z`
-- Virtual Size: ~ 193.45 Mb  
+- Image ID: `sha256:b2429e5be819d4fd1057eea16494a95ac9a656887d7d3c18a6b79992b56a18c4`
+- Created: `2021-06-29T02:23:35.561259366Z`
+- Virtual Size: ~ 218.99 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -14,10 +14,10 @@
   - `OPENSSL_VERSION=1.1.1k`
   - `OPENSSL_SOURCE_SHA256=892a0875b9872acd04a9fde79b1f943075d5ea162415de3047c327df33fbaee5`
   - `OPENSSL_PGP_KEY_IDS=0x8657ABB260F056B1E5190839D9C4D26D0E604491 0x5B2545DAB21995F4088CEFAA36CEE4DEB00CFE33 0xED230BEC4D4F2518B9D7DF41F0DB4D21C1D35231 0xC1F33DD8CE1D4CC613AF14DA9195C48241FBF7DD 0x7953AC1FBC3DC8B3B292393ED5E9E43F7DF9EE8C 0xE5E52560DD91C556DDBDA5D02064C53641C25E5D`
-  - `OTP_VERSION=24.0.2`
-  - `OTP_SOURCE_SHA256=882e8a93194c32cf8335f62c86489c1850d5a5ec9bdfa35fff55b9317213ab8e`
+  - `OTP_VERSION=24.0.3`
+  - `OTP_SOURCE_SHA256=64a70fb19da9c94d11f4e756998a2e91d8c8400d7d72960b15ad544af60ebe45`
   - `RABBITMQ_DATA_DIR=/var/lib/rabbitmq`
-  - `RABBITMQ_VERSION=3.8.17`
+  - `RABBITMQ_VERSION=3.8.18`
   - `RABBITMQ_PGP_KEY_ID=0x0A9AF2115F4687BD29803A206B73A36E6026DFCA`
   - `RABBITMQ_HOME=/opt/rabbitmq`
   - `RABBITMQ_LOGS=-`
@@ -410,13 +410,13 @@ $ apt-get source -qq --print-uris findutils=4.7.0-1ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/f/findutils/findutils_4.7.0-1ubuntu1.debian.tar.xz' findutils_4.7.0-1ubuntu1.debian.tar.xz 27700 SHA256:dfb2329fd141384c2d76409c2e99f164cc25954115529245d80d5d41e3167731
 ```
 
-### `dpkg` source package: `gcc-10=10.2.0-5ubuntu1~20.04`
+### `dpkg` source package: `gcc-10=10.3.0-1ubuntu1~20.04`
 
 Binary Packages:
 
-- `gcc-10-base:amd64=10.2.0-5ubuntu1~20.04`
-- `libgcc-s1:amd64=10.2.0-5ubuntu1~20.04`
-- `libstdc++6:amd64=10.2.0-5ubuntu1~20.04`
+- `gcc-10-base:amd64=10.3.0-1ubuntu1~20.04`
+- `libgcc-s1:amd64=10.3.0-1ubuntu1~20.04`
+- `libstdc++6:amd64=10.3.0-1ubuntu1~20.04`
 
 Licenses: (parsed from: `/usr/share/doc/gcc-10-base/copyright`, `/usr/share/doc/libgcc-s1/copyright`, `/usr/share/doc/libstdc++6/copyright`)
 
@@ -427,9 +427,14 @@ Licenses: (parsed from: `/usr/share/doc/gcc-10-base/copyright`, `/usr/share/doc/
 - `GPL-3`
 - `LGPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris gcc-10=10.3.0-1ubuntu1~20.04
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.3.0-1ubuntu1~20.04.dsc' gcc-10_10.3.0-1ubuntu1~20.04.dsc 31155 SHA512:c67d612edfbf2a97d4c3f436b1fdbc08b7387907a3e0cc49a9ba2a360db054b3d07082097c4b98abc9ace7b8902637f8d7126de229c164cab743eff4fd5d7520
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.3.0.orig.tar.gz' gcc-10_10.3.0.orig.tar.gz 83679201 SHA512:c7f0fb09c79bc8c372171df7f23af6970a389dcc1237ebc0821c0a754d93c6e4065433f7ad63aed9f9b8fce2da7fce3caa61ae2e2afab494d06bf33b06a10775
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.3.0-1ubuntu1~20.04.debian.tar.xz' gcc-10_10.3.0-1ubuntu1~20.04.debian.tar.xz 580864 SHA512:3ae060b517a67ae2410b48c83a7836ec25e83422cb3db5dbe55cce9e97609aff82062aa55a84c64ca9c52f405a41d2da20c1d016b15521102cac3b82895f3975
+```
 
 ### `dpkg` source package: `gcc-9=9.3.0-17ubuntu1~20.04`
 
