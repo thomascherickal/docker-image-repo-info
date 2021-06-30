@@ -1,7 +1,7 @@
 ## `python:alpine3.13`
 
 ```console
-$ docker pull python@sha256:f4ab442a6696c5e616a0a7d9466fb8dfbf5c648dcb434016838e5283a8e0b0ff
+$ docker pull python@sha256:166eab4efc17440730c63d56f81dd1f43cc392299d394309f0946bd88fb3445b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -149,14 +149,14 @@ CMD ["python3"]
 ### `python:alpine3.13` - linux; arm variant v7
 
 ```console
-$ docker pull python@sha256:aa3bd28fc3ee4687f8693a1f8a788934452de3e40d228378f89a5112036c2258
+$ docker pull python@sha256:91c91d56b20fbd3beb594a40f8ffdd34418b22380f7a4b4616e2babd1203649b
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **16.3 MB (16306064 bytes)**  
+-	Total Size: **16.3 MB (16310523 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b601e7c533b9d9d8d17e2a2b95747b324f51c5d8d420cfaabb42e7f6501d9421`
+-	Image ID: `sha256:56fb8bc20d950332c99f873558aae3b35306dc76e670af2d69f7963a8017add7`
 -	Default Command: `["python3"]`
 
 ```dockerfile
@@ -172,21 +172,21 @@ ENV LANG=C.UTF-8
 RUN set -eux; 	apk add --no-cache 		ca-certificates 		tzdata 	;
 # Thu, 24 Jun 2021 02:40:33 GMT
 ENV GPG_KEY=E3FF2839C048B25C084DEBE9B26995E310250568
-# Thu, 24 Jun 2021 02:40:34 GMT
-ENV PYTHON_VERSION=3.9.5
-# Thu, 24 Jun 2021 02:51:14 GMT
+# Tue, 29 Jun 2021 22:01:56 GMT
+ENV PYTHON_VERSION=3.9.6
+# Tue, 29 Jun 2021 22:12:50 GMT
 RUN set -ex 	&& apk add --no-cache --virtual .fetch-deps 		gnupg 		tar 		xz 		&& wget -O python.tar.xz "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz" 	&& wget -O python.tar.xz.asc "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz.asc" 	&& export GNUPGHOME="$(mktemp -d)" 	&& gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys "$GPG_KEY" 	&& gpg --batch --verify python.tar.xz.asc python.tar.xz 	&& { command -v gpgconf > /dev/null && gpgconf --kill all || :; } 	&& rm -rf "$GNUPGHOME" python.tar.xz.asc 	&& mkdir -p /usr/src/python 	&& tar -xJC /usr/src/python --strip-components=1 -f python.tar.xz 	&& rm python.tar.xz 		&& apk add --no-cache --virtual .build-deps  		bluez-dev 		bzip2-dev 		coreutils 		dpkg-dev dpkg 		expat-dev 		findutils 		gcc 		gdbm-dev 		libc-dev 		libffi-dev 		libnsl-dev 		libtirpc-dev 		linux-headers 		make 		ncurses-dev 		openssl-dev 		pax-utils 		readline-dev 		sqlite-dev 		tcl-dev 		tk 		tk-dev 		util-linux-dev 		xz-dev 		zlib-dev 	&& apk del --no-network .fetch-deps 		&& cd /usr/src/python 	&& gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)" 	&& ./configure 		--build="$gnuArch" 		--enable-loadable-sqlite-extensions 		--enable-optimizations 		--enable-option-checking=fatal 		--enable-shared 		--with-system-expat 		--with-system-ffi 		--without-ensurepip 	&& make -j "$(nproc)" 		EXTRA_CFLAGS="-DTHREAD_STACK_SIZE=0x100000" 		LDFLAGS="-Wl,--strip-all" 	&& make install 	&& rm -rf /usr/src/python 		&& find /usr/local -depth 		\( 			\( -type d -a \( -name test -o -name tests -o -name idle_test \) \) 			-o \( -type f -a \( -name '*.pyc' -o -name '*.pyo' -o -name '*.a' \) \) 		\) -exec rm -rf '{}' + 		&& find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec scanelf --needed --nobanner --format '%n#p' '{}' ';' 		| tr ',' '\n' 		| sort -u 		| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 		| xargs -rt apk add --no-cache --virtual .python-rundeps 	&& apk del --no-network .build-deps 		&& python3 --version
-# Thu, 24 Jun 2021 02:51:16 GMT
+# Tue, 29 Jun 2021 22:12:52 GMT
 RUN cd /usr/local/bin 	&& ln -s idle3 idle 	&& ln -s pydoc3 pydoc 	&& ln -s python3 python 	&& ln -s python3-config python-config
-# Tue, 29 Jun 2021 01:12:26 GMT
+# Tue, 29 Jun 2021 22:12:53 GMT
 ENV PYTHON_PIP_VERSION=21.1.3
-# Tue, 29 Jun 2021 01:12:27 GMT
+# Tue, 29 Jun 2021 22:12:53 GMT
 ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/a1675ab6c2bd898ed82b1f58c486097f763c74a9/public/get-pip.py
-# Tue, 29 Jun 2021 01:12:27 GMT
+# Tue, 29 Jun 2021 22:12:54 GMT
 ENV PYTHON_GET_PIP_SHA256=6665659241292b2147b58922b9ffe11dda66b39d52d8a6f3aa310bc1d60ea6f7
-# Tue, 29 Jun 2021 01:12:43 GMT
+# Tue, 29 Jun 2021 22:13:12 GMT
 RUN set -ex; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		"pip==$PYTHON_PIP_VERSION" 	; 	pip --version; 		find /usr/local -depth 		\( 			\( -type d -a \( -name test -o -name tests -o -name idle_test \) \) 			-o 			\( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) 		\) -exec rm -rf '{}' +; 	rm -f get-pip.py
-# Tue, 29 Jun 2021 01:12:44 GMT
+# Tue, 29 Jun 2021 22:13:12 GMT
 CMD ["python3"]
 ```
 
@@ -199,17 +199,17 @@ CMD ["python3"]
 		Last Modified: Thu, 24 Jun 2021 06:57:28 GMT  
 		Size: 655.0 KB (655035 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1e8442c7ff17609beb4a622164bcdd0bcd01bdab1777ae12d2d4fd9d2de8e18c`  
-		Last Modified: Thu, 24 Jun 2021 06:59:50 GMT  
-		Size: 10.9 MB (10878009 bytes)  
+	-	`sha256:6cd8da0af922cf889eed6984b9e69e368e4c4a6e3e78fa4910167b6d9f204402`  
+		Last Modified: Wed, 30 Jun 2021 02:26:46 GMT  
+		Size: 10.9 MB (10882507 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bd860985c5f30bcb06c99927ce3c5601231c1c92f6d54a7fb15f96233dd54089`  
-		Last Modified: Thu, 24 Jun 2021 06:59:43 GMT  
+	-	`sha256:3ba58458936aaee702b131b37b16495204a4ddfab15588584e6ab2e92f693f8d`  
+		Last Modified: Wed, 30 Jun 2021 02:26:38 GMT  
 		Size: 231.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ac472e92cc0fe9f7c5db9fdfb59dffd6ccdbc48cf0ec3250c0ceef21316003ad`  
-		Last Modified: Tue, 29 Jun 2021 02:09:54 GMT  
-		Size: 2.3 MB (2348644 bytes)  
+	-	`sha256:b4c4f6fbcadcce0ef03a159af869e479bb08fadf6826e6d855d08657fb7b3660`  
+		Last Modified: Wed, 30 Jun 2021 02:26:41 GMT  
+		Size: 2.3 MB (2348605 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `python:alpine3.13` - linux; arm64 variant v8
