@@ -1,9 +1,9 @@
-# `swift:5.4.1-centos7-slim`
+# `swift:5.4.2-centos7-slim`
 
 ## Docker Metadata
 
-- Image ID: `sha256:2e58b86521fff45822a114bae1cd159b7453501dce4de53362fa062869b97a9e`
-- Created: `2021-05-26T17:57:21.163268349Z`
+- Image ID: `sha256:249f33e512955a121bff8c51458c5e00b9c0247f217bb0761b03a82e612c6c5e`
+- Created: `2021-06-29T23:01:28.711223727Z`
 - Virtual Size: ~ 320.42 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -12,8 +12,8 @@
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561`
   - `SWIFT_PLATFORM=centos7`
-  - `SWIFT_BRANCH=swift-5.4.1-release`
-  - `SWIFT_VERSION=swift-5.4.1-RELEASE`
+  - `SWIFT_BRANCH=swift-5.4.2-release`
+  - `SWIFT_VERSION=swift-5.4.2-RELEASE`
   - `SWIFT_WEBROOT=https://swift.org/builds/`
 - Labels:
   - `description=Docker Container for the Swift programming language`

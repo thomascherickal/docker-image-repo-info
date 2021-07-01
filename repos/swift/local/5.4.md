@@ -1,9 +1,9 @@
-# `swift:5.4.1`
+# `swift:5.4.2`
 
 ## Docker Metadata
 
-- Image ID: `sha256:0429f54ebfd77465d71a1885b47f4357b7b47b0c91cb9f12631d5ee2541cde83`
-- Created: `2021-06-18T03:21:54.540277501Z`
+- Image ID: `sha256:6ffea00eca3e8407f30859dad14f7214b6c55df46f122bddbcecddd5afeada4d`
+- Created: `2021-06-29T22:42:14.169530908Z`
 - Virtual Size: ~ 2.10 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -12,8 +12,8 @@
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561`
   - `SWIFT_PLATFORM=ubuntu18.04`
-  - `SWIFT_BRANCH=swift-5.4.1-release`
-  - `SWIFT_VERSION=swift-5.4.1-RELEASE`
+  - `SWIFT_BRANCH=swift-5.4.2-release`
+  - `SWIFT_VERSION=swift-5.4.2-RELEASE`
   - `SWIFT_WEBROOT=https://swift.org/builds/`
 - Labels:
   - `Description=Docker Container for the Swift programming language`
