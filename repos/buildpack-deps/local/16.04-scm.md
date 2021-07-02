@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:ae8cd24ecb911b3fad9e8009ac40abe960e45284015d157090131c764ab926fa`
-- Created: `2021-05-19T20:27:31.86530582Z`
-- Virtual Size: ~ 276.56 Mb  
+- Image ID: `sha256:d19b9e5ac076fc24a3c202ded649fbc93a6de904da2a85eb0b4be31db54dd330`
+- Created: `2021-06-18T01:02:43.894522337Z`
+- Virtual Size: ~ 276.64 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -112,33 +112,15 @@ $ apt-get source -qq --print-uris apr=1.5.2-3
 'http://archive.ubuntu.com/ubuntu/pool/main/a/apr/apr_1.5.2-3.debian.tar.xz' apr_1.5.2-3.debian.tar.xz 18572 SHA256:442ffb9a7225cf405fe7a2b4a4624543fcb93e6f14cccf22acd57916cfa8348d
 ```
 
-### `dpkg` source package: `apt=1.2.32ubuntu0.2`
-
-Binary Packages:
-
-- `apt=1.2.32ubuntu0.2`
-- `libapt-pkg5.0:amd64=1.2.32ubuntu0.2`
-
-Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-pkg5.0/copyright`)
-
-- `GPL-2`
-- `GPLv2+`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris apt=1.2.32ubuntu0.2
-'http://security.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.2.32ubuntu0.2.dsc' apt_1.2.32ubuntu0.2.dsc 2526 SHA512:c91eba6c9405512c3e53dc1808c9ea17627a077354d2bd571ee37f4ae6ded08a4ee4f28ea75d2e64d76d84197f5479f4fd9522f98e61774679e904d144c9b429
-'http://security.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.2.32ubuntu0.2.tar.xz' apt_1.2.32ubuntu0.2.tar.xz 2099548 SHA512:7145c708f5c42b09b06d208ef352f157040548cfc4228d22148078d55beac06556198fede666ef6753feea1c6fa6a21ebf960510f4773900ba95edcfa83f62e6
-```
-
 ### `dpkg` source package: `apt=1.2.35`
 
 Binary Packages:
 
+- `apt=1.2.35`
 - `apt-transport-https=1.2.35`
+- `libapt-pkg5.0:amd64=1.2.35`
 
-Licenses: (parsed from: `/usr/share/doc/apt-transport-https/copyright`)
+Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/apt-transport-https/copyright`, `/usr/share/doc/libapt-pkg5.0/copyright`)
 
 - `GPL-2`
 - `GPLv2+`
@@ -735,22 +717,27 @@ $ apt-get source -qq --print-uris git=1:2.7.4-0ubuntu1.10
 'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.7.4-0ubuntu1.10.debian.tar.xz' git_2.7.4-0ubuntu1.10.debian.tar.xz 574868 SHA512:0d4ea9e95e1f4673dfe1d4e1f71737f6481f4a5354f1bfdc497958ec644506d7e8d66ea78b5b1cbea09a8185c86222084eb7c79df9eaa998ff20d0beabc2ee4a
 ```
 
-### `dpkg` source package: `glibc=2.23-0ubuntu11.2`
+### `dpkg` source package: `glibc=2.23-0ubuntu11.3`
 
 Binary Packages:
 
-- `libc-bin=2.23-0ubuntu11.2`
-- `libc6:amd64=2.23-0ubuntu11.2`
-- `multiarch-support=2.23-0ubuntu11.2`
+- `libc-bin=2.23-0ubuntu11.3`
+- `libc6:amd64=2.23-0ubuntu11.3`
+- `multiarch-support=2.23-0ubuntu11.3`
 
 Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/libc6/copyright`, `/usr/share/doc/multiarch-support/copyright`)
 
 - `GPL-2`
 - `LGPL-2.1`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris glibc=2.23-0ubuntu11.3
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.23-0ubuntu11.3.dsc' glibc_2.23-0ubuntu11.3.dsc 8547 SHA512:73ec4bcd6e9fd35ec2f7b4a0c646e0974ae302915a525cf3ff5a4aa7a21c04104aa201718d1f18ab792518c64cf803b3d46a560347784e3c96432da140719d49
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.23.orig.tar.xz' glibc_2.23.orig.tar.xz 13849968 SHA512:f2c3460d04226cbb5ff54755efb6f337356d9c063d71f736d8e5f631aaa85bfa89c4e2da1cd29f93383310994a18b21327512efd145d4c8dffd6c1412a002191
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.23-0ubuntu11.3.debian.tar.xz' glibc_2.23-0ubuntu11.3.debian.tar.xz 1253716 SHA512:41c5c9dc2ff20a1c0b781d700a94daeda087f3b58cbccc68f36695d6d3ee83c06eed2083bfaf3220ab7ebbbd35c0cca15f63b087ca981a39ed29a71430ba216c
+```
 
 ### `dpkg` source package: `gmp=2:6.1.0+dfsg-2`
 

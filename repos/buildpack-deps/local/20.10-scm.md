@@ -2,12 +2,12 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:4505997a96b727697becf968bf0ee48cb4fad2e50d8fe78f958287127853ee8a`
-- Created: `2021-05-26T00:50:40.431602555Z`
-- Virtual Size: ~ 261.85 Mb  
+- Image ID: `sha256:a2194dc3c5085df666a4416a49f433b89642f878205f17faf37ffc8d6a7c2896`
+- Created: `2021-06-18T00:57:54.593129226Z`
+- Virtual Size: ~ 261.86 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Command: `["/bin/bash"]`
+- Command: `["bash"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
 
@@ -1626,11 +1626,11 @@ $ apt-get source -qq --print-uris lsb=11.1.0ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/l/lsb/lsb_11.1.0ubuntu2.tar.xz' lsb_11.1.0ubuntu2.tar.xz 46024 SHA512:b4a2c35ef8a21e3e6e1978687f54f485f0a3c8ee09082f8ae0d7a3dc0f65381062e1df962190164c3539f3f86c073961eb9f3c37b2aa4d3d8d6907a99ce04161
 ```
 
-### `dpkg` source package: `lz4=1.9.2-2`
+### `dpkg` source package: `lz4=1.9.2-2ubuntu0.20.10.1`
 
 Binary Packages:
 
-- `liblz4-1:amd64=1.9.2-2`
+- `liblz4-1:amd64=1.9.2-2ubuntu0.20.10.1`
 
 Licenses: (parsed from: `/usr/share/doc/liblz4-1/copyright`)
 
@@ -1641,10 +1641,10 @@ Licenses: (parsed from: `/usr/share/doc/liblz4-1/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris lz4=1.9.2-2
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lz4/lz4_1.9.2-2.dsc' lz4_1.9.2-2.dsc 1956 SHA512:b94ed7d5978d633bfe98f365a51e917f73cc3c88b80ca35890d153f0faa521250d20aa26819aa386a019e1a9942ced9f82f869ef75a1bc1a12556a2a951699b7
+$ apt-get source -qq --print-uris lz4=1.9.2-2ubuntu0.20.10.1
+'http://archive.ubuntu.com/ubuntu/pool/main/l/lz4/lz4_1.9.2-2ubuntu0.20.10.1.dsc' lz4_1.9.2-2ubuntu0.20.10.1.dsc 2095 SHA512:7c9877799db54ad31dc7e326e15179ea33902ae89cc74f0f890fb534e3d9c995bbe02a6368514d58a98a544b7e10086bd689549251d918c1e0803fef715fe76a
 'http://archive.ubuntu.com/ubuntu/pool/main/l/lz4/lz4_1.9.2.orig.tar.gz' lz4_1.9.2.orig.tar.gz 305796 SHA512:ae714c61ec8e33ed91359b63f2896cfa102d66b730dce112b74696ec5850e59d88bd5527173e01e354a70fbe8f036557a47c767ee0766bc5f9c257978116c3c1
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lz4/lz4_1.9.2-2.debian.tar.xz' lz4_1.9.2-2.debian.tar.xz 12712 SHA512:820d345e52dfef161e1f04fb395b9ec34196756b0af04919b471018e4e1736d21473009296052c65e7ed7142b9f7a922a47ac41848278a302e0d74eb1ab6dbe9
+'http://archive.ubuntu.com/ubuntu/pool/main/l/lz4/lz4_1.9.2-2ubuntu0.20.10.1.debian.tar.xz' lz4_1.9.2-2ubuntu0.20.10.1.debian.tar.xz 13228 SHA512:5778b1e87ce6161805172214872d4f8780a0d017063a2cace1796a635dfcf7aabcc9d32fca1950f1eaf3643b6cc2d94cdd16a2d415eb2cc23f837f9dfc432635
 ```
 
 ### `dpkg` source package: `mawk=1.3.4.20200120-2`
@@ -1775,15 +1775,9 @@ Licenses: (parsed from: `/usr/share/doc/libhogweed6/copyright`, `/usr/share/doc/
 - `LGPL-3+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris nettle=3.6-2ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.6-2ubuntu0.1.dsc' nettle_3.6-2ubuntu0.1.dsc 2369 SHA512:30bd2060d940a7602ac30234703a3b8db9513a31721747f79cc44332995337a0ec7baacfb5363354c0b8a8cac520ef2aebc3d83147a761caef0a144879d78d4c
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.6.orig.tar.gz' nettle_3.6.orig.tar.gz 2288173 SHA512:2471af875e51327af61af8bda53cd9c3adc27b6e32592a4b5b10b3ec60999ebf771ab9c54c747b0bade4b3b5a717e77fdbdb53699dd9e8a9ed4eee07f46aed51
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.6.orig.tar.gz.asc' nettle_3.6.orig.tar.gz.asc 573 SHA512:006c821e599d8fb64b3e5b71182909c5e5921b35e5223f749b69a2c5507b41220595c3c2fa46a484ae1254b8eb4f4c7bfccfd808a03ca79e9c1fd7cbb8ed7216
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.6-2ubuntu0.1.debian.tar.xz' nettle_3.6-2ubuntu0.1.debian.tar.xz 25852 SHA512:9f8dddaaf931b808c02fb4bcace74fde416acfe5004b8b86183456a22cf2f732a2fdc75c35209d4e9c4cb5867ac93f2cf5cd73cff83dd7c6f7295aebfa6ed0ec
-```
 
 ### `dpkg` source package: `nghttp2=1.41.0-3`
 
@@ -2073,12 +2067,12 @@ $ apt-get source -qq --print-uris pinentry=1.1.0-4build1
 'http://archive.ubuntu.com/ubuntu/pool/main/p/pinentry/pinentry_1.1.0-4build1.debian.tar.xz' pinentry_1.1.0-4build1.debian.tar.xz 17312 SHA512:6288a034c9c08e4a164c5e2d9c66142638a0da6947031e0199811272e004c107209bb0feb0048ae685176ba3a4d3a98e7520edb16d633721a474810897b8f18d
 ```
 
-### `dpkg` source package: `procps=2:3.3.16-5ubuntu2.1`
+### `dpkg` source package: `procps=2:3.3.16-5ubuntu2.2`
 
 Binary Packages:
 
-- `libprocps8:amd64=2:3.3.16-5ubuntu2.1`
-- `procps=2:3.3.16-5ubuntu2.1`
+- `libprocps8:amd64=2:3.3.16-5ubuntu2.2`
+- `procps=2:3.3.16-5ubuntu2.2`
 
 Licenses: (parsed from: `/usr/share/doc/libprocps8/copyright`, `/usr/share/doc/procps/copyright`)
 
@@ -2092,10 +2086,10 @@ Licenses: (parsed from: `/usr/share/doc/libprocps8/copyright`, `/usr/share/doc/p
 Source:
 
 ```console
-$ apt-get source -qq --print-uris procps=2:3.3.16-5ubuntu2.1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_3.3.16-5ubuntu2.1.dsc' procps_3.3.16-5ubuntu2.1.dsc 2242 SHA512:142758f3901244625c66049d577b0fdeba432502e0345a3c0c8b6c1fda7942b43d504b3b83fefda8213b6c6d79d962d4ab9d32f900db3505394df3665d7f6810
+$ apt-get source -qq --print-uris procps=2:3.3.16-5ubuntu2.2
+'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_3.3.16-5ubuntu2.2.dsc' procps_3.3.16-5ubuntu2.2.dsc 2242 SHA512:2e1b59c39aa525131f5018058d489d5fca2aa368754a487af53a716bd8e0bfbdea368f074c5d30da645f556fa4925abda9a90467bfd37dff4b379e63d5188d37
 'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_3.3.16.orig.tar.xz' procps_3.3.16.orig.tar.xz 621892 SHA512:38db4f72fe40c2f027b23b18bbc8c29cfcdf6bcdb029199fe4bebede153943aa884157f56e792c399f9a4949cc514687500bb99a75a5e7ad7b9e878f52090304
-'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_3.3.16-5ubuntu2.1.debian.tar.xz' procps_3.3.16-5ubuntu2.1.debian.tar.xz 34796 SHA512:9a5a15b21ca8385ab1c0b346f39289b39b07eb4c3af090d3f10b17ee4d9ffdc5c634b1e1270bf94690f776c22186fdc292a49b448c17cf6edb7a64eb81e979b1
+'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_3.3.16-5ubuntu2.2.debian.tar.xz' procps_3.3.16-5ubuntu2.2.debian.tar.xz 34880 SHA512:fde568fceb355f4722748fa344af5300d379f5389711258c9e76d3618b154cb7bb0a72556b7d0cdb7b73d2c7a61ec42bcabf3e86d5b2e4e742fd8ee7d44d77d7
 ```
 
 ### `dpkg` source package: `python-certifi=2020.4.5.1-1`
@@ -2178,14 +2172,14 @@ $ apt-get source -qq --print-uris python3-defaults=3.8.6-0ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-defaults/python3-defaults_3.8.6-0ubuntu1.tar.gz' python3-defaults_3.8.6-0ubuntu1.tar.gz 138275 SHA512:bec826e55e648b11d2bbbd9321492ac0e24e416ed0885faf86d012e9a30aa32bc676e0732ef732d2b388fb6500c209ed9424f6e625674865eb6f3c64f6687b33
 ```
 
-### `dpkg` source package: `python3.8=3.8.6-1ubuntu0.2`
+### `dpkg` source package: `python3.8=3.8.6-1ubuntu0.3`
 
 Binary Packages:
 
-- `libpython3.8-minimal:amd64=3.8.6-1ubuntu0.2`
-- `libpython3.8-stdlib:amd64=3.8.6-1ubuntu0.2`
-- `python3.8=3.8.6-1ubuntu0.2`
-- `python3.8-minimal=3.8.6-1ubuntu0.2`
+- `libpython3.8-minimal:amd64=3.8.6-1ubuntu0.3`
+- `libpython3.8-stdlib:amd64=3.8.6-1ubuntu0.3`
+- `python3.8=3.8.6-1ubuntu0.3`
+- `python3.8-minimal=3.8.6-1ubuntu0.3`
 
 Licenses: (parsed from: `/usr/share/doc/libpython3.8-minimal/copyright`, `/usr/share/doc/libpython3.8-stdlib/copyright`, `/usr/share/doc/python3.8/copyright`, `/usr/share/doc/python3.8-minimal/copyright`)
 
@@ -2207,14 +2201,9 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.8-minimal/copyright`, `/usr/s
 - `use in source`
 - `without`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3.8=3.8.6-1ubuntu0.2
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.6-1ubuntu0.2.dsc' python3.8_3.8.6-1ubuntu0.2.dsc 3388 SHA512:2a2ecb3c3971a43948fbb9b3b6f57e0ce57f09139959fe694435179db7ea0ec2e2499c8f08fe0c9063b42fc170cded472381541d0128a7aa39c4e6039e93159b
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.6.orig.tar.xz' python3.8_3.8.6.orig.tar.xz 18233864 SHA512:22faec84f6e172e1ac7c6bd6fd37e9b6ae4afc91cf5136aa8cac8ebbed8d18793f9196e8749b8ccc43447cb6c41cb450f65ea72dd363c06dfaeb14e0455f5560
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.6-1ubuntu0.2.debian.tar.xz' python3.8_3.8.6-1ubuntu0.2.debian.tar.xz 212812 SHA512:b8c6f1b0d8c78713ea6cd989eee92c053335b9475c0adf35c2bb2b6fb3d72e4760ddbdc72d885e040bb1f497f23b95f5cdbbbc9fc58f73d7a917ec39852cb4bc
-```
 
 ### `dpkg` source package: `readline=8.0-4`
 
@@ -2426,14 +2415,9 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=246.6-1ubuntu1.3
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_246.6-1ubuntu1.3.dsc' systemd_246.6-1ubuntu1.3.dsc 5364 SHA512:be1b7427ede890d2744632af30a4e4bdfac906f506093bc4d4c654ff04d4233538bab60acc4552d3f5029db814dbe5deaf84ff0b1784777097ac167db6cd4389
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_246.6.orig.tar.gz' systemd_246.6.orig.tar.gz 9545237 SHA512:1936b291d9831cf61f800fe718a4c2c2fe9b2a11fd817fe32bd48da2087a675dfc91013209a3478ea52e8ada593300ed906e248b8081dcf9141bf1cc17483ea9
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_246.6-1ubuntu1.3.debian.tar.xz' systemd_246.6-1ubuntu1.3.debian.tar.xz 203652 SHA512:940ef66fa174e8b51c6f07e934ce5c3a5b3b16fef867b0cb79ec46483fb069233f2ba914263375a96290a96b5f2c748f89df3de849563c9c2ed48583eee2af38
-```
 
 ### `dpkg` source package: `sysvinit=2.96-3ubuntu1`
 
