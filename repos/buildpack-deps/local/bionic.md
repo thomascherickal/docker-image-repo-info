@@ -622,14 +622,9 @@ Licenses: (parsed from: `/usr/share/doc/libdjvulibre-dev/copyright`, `/usr/share
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris djvulibre=3.5.27.1-8ubuntu0.3
-'http://archive.ubuntu.com/ubuntu/pool/main/d/djvulibre/djvulibre_3.5.27.1-8ubuntu0.3.dsc' djvulibre_3.5.27.1-8ubuntu0.3.dsc 2524 SHA512:3a0c7a5b91eb0438c4e92d219184cfba8d040643f5c1dc9d3adbe5b87e9d45bca86ae2b66e7cb975a1d04e84fe6ea7178ba0633d49d83f82e82c37a9f7792e5a
-'http://archive.ubuntu.com/ubuntu/pool/main/d/djvulibre/djvulibre_3.5.27.1.orig.tar.gz' djvulibre_3.5.27.1.orig.tar.gz 3231662 SHA512:2ed11daa05995db7bf52113e2f75456c3c804988d2c17d0183b24ab379e52a4ef1871189e8bb132fec6cbc9d629b4d67a4d89ef7df7a995044cb25ff3dcc5de8
-'http://archive.ubuntu.com/ubuntu/pool/main/d/djvulibre/djvulibre_3.5.27.1-8ubuntu0.3.debian.tar.xz' djvulibre_3.5.27.1-8ubuntu0.3.debian.tar.xz 61132 SHA512:2cb764d2d014a2ecb15b8ff15f9f970eeb911f7b53329db61ea597a6a2478226ba1440f7190f13dc248bdf6e3243510b6da9116e649d32dfa7ad28d2f4201f08
-```
 
 ### `dpkg` source package: `dpkg=1.19.0.5ubuntu2.3`
 

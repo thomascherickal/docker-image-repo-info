@@ -689,13 +689,9 @@ Licenses: (parsed from: `/usr/share/doc/dpkg/copyright`, `/usr/share/doc/dpkg-de
 - `public-domain-md5`
 - `public-domain-s-s-d`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris dpkg=1.20.9ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/d/dpkg/dpkg_1.20.9ubuntu1.dsc' dpkg_1.20.9ubuntu1.dsc 2271 SHA512:6366127d5426c70ec6fe0024f7e5ac60b4bf403d330dc3600c436bff55105cd989f9164f90007b0bc76b7b063d4a8832f30616f6d8c9f694abc6083a8c8528d4
-'http://archive.ubuntu.com/ubuntu/pool/main/d/dpkg/dpkg_1.20.9ubuntu1.tar.xz' dpkg_1.20.9ubuntu1.tar.xz 4983900 SHA512:952987ca20858056632f0f9777f82e6f0032ad836540236160409f5990f77835326435c65c97d3f4e02800ea78ec867f92ecda68aae02f79d9717f022f6ea4d8
-```
 
 ### `dpkg` source package: `e2fsprogs=1.46.2-1ubuntu2`
 
@@ -2419,14 +2415,13 @@ Licenses: (parsed from: `/usr/share/doc/gir1.2-rsvg-2.0/copyright`, `/usr/share/
 - `Unlicense,`
 - `zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris librsvg=2.50.3+dfsg-1
-'http://archive.ubuntu.com/ubuntu/pool/main/libr/librsvg/librsvg_2.50.3+dfsg-1.dsc' librsvg_2.50.3+dfsg-1.dsc 3120 SHA512:2b873bb65ca4caa0e21cd8e0b08b2752582f6e4dc84db4017970282f73bbb039903f3d9af9b364e764d1f64394cc1047d73df05f26f9e135c0716bc42443bbd3
-'http://archive.ubuntu.com/ubuntu/pool/main/libr/librsvg/librsvg_2.50.3+dfsg.orig.tar.xz' librsvg_2.50.3+dfsg.orig.tar.xz 16290880 SHA512:7341726b7d146d10c378389f08463471f5a0c1dcf49ef98d0a46cc097c20a578f4ec32c37d289027ea1386307faf2b072c4e689b4034d584bb0229adf54b6e0e
-'http://archive.ubuntu.com/ubuntu/pool/main/libr/librsvg/librsvg_2.50.3+dfsg-1.debian.tar.xz' librsvg_2.50.3+dfsg-1.debian.tar.xz 30140 SHA512:6cbcb20d9b0997cba85f37d282c5ae08d8131ffe93ff58f164218b674c4ce10abd7b423aea2ec324035b0f67170e961aaae7586576e70c629d54e0f1441a0f66
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/librsvg/2.50.3+dfsg-1/
+
 
 ### `dpkg` source package: `libseccomp=2.5.1-1ubuntu1`
 

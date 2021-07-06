@@ -610,20 +610,13 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.74.0-1.2
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.74.0-1.2.dsc' curl_7.74.0-1.2.dsc 2822 SHA256:ea8253d4d649bef182b50a079aed7f2feb0e4e3530b65be08c904569d322e3e1
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.74.0.orig.tar.gz' curl_7.74.0.orig.tar.gz 4043409 SHA256:e56b3921eeb7a2951959c02db0912b5fcd5fdba5aca071da819e1accf338bbd7
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.74.0-1.2.debian.tar.xz' curl_7.74.0-1.2.debian.tar.xz 36160 SHA256:deec4d2367597962e6ca679082775580add6aa92e0735f5cb7aa438196bda7fb
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/curl/7.74.0-1.2/
 
-- https://sources.debian.net/src/curl/7.74.0-1.2/ (for browsing the source)
-- https://sources.debian.net/src/curl/7.74.0-1.2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/curl/7.74.0-1.2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2.1`
 
@@ -935,21 +928,13 @@ Licenses: (parsed from: `/usr/share/doc/comerr-dev/copyright`, `/usr/share/doc/e
 - `GPL-2`
 - `LGPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris e2fsprogs=1.46.2-1
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.46.2-1.dsc' e2fsprogs_1.46.2-1.dsc 2842 SHA256:8e505e7dc67d9a4eb4c307a7279225fb33fe41836fdcc5699c2407fa22a65c04
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.46.2.orig.tar.gz' e2fsprogs_1.46.2.orig.tar.gz 9496954 SHA256:f79f26b4f65bdc059fca12e1ec6a3040c3ce1a503fb70eb915bee71903815cd5
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.46.2.orig.tar.gz.asc' e2fsprogs_1.46.2.orig.tar.gz.asc 488 SHA256:948552550f23a9e0223cecb51b5b85258c9d94895a20bce1180fce770628a55f
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.46.2-1.debian.tar.xz' e2fsprogs_1.46.2-1.debian.tar.xz 82200 SHA256:64b9cd178243cde5fe9350a43447d0f0447b42e355d73add30beb77345f3d77f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/e2fsprogs/1.46.2-1/
 
-- https://sources.debian.net/src/e2fsprogs/1.46.2-1/ (for browsing the source)
-- https://sources.debian.net/src/e2fsprogs/1.46.2-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/e2fsprogs/1.46.2-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `elfutils=0.183-1`
 
@@ -1808,21 +1793,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris icu=67.1-6
-'http://deb.debian.org/debian/pool/main/i/icu/icu_67.1-6.dsc' icu_67.1-6.dsc 2236 SHA256:873616004303ae242c9881fb777e132f819440ee83409ebd132ca5f606ff6bb7
-'http://deb.debian.org/debian/pool/main/i/icu/icu_67.1.orig.tar.gz' icu_67.1.orig.tar.gz 24518055 SHA256:94a80cd6f251a53bd2a997f6f1b5ac6653fe791dfab66e1eb0227740fb86d5dc
-'http://deb.debian.org/debian/pool/main/i/icu/icu_67.1.orig.tar.gz.asc' icu_67.1.orig.tar.gz.asc 833 SHA256:0044119f3df92ff3055dc3609f527fa1290177f6ef1b6650ea136698b245e537
-'http://deb.debian.org/debian/pool/main/i/icu/icu_67.1-6.debian.tar.xz' icu_67.1-6.debian.tar.xz 29760 SHA256:9476daddae264b995009524b269555b6efcaaa679d651bb70869655929508d51
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/icu/67.1-6/
 
-- https://sources.debian.net/src/icu/67.1-6/ (for browsing the source)
-- https://sources.debian.net/src/icu/67.1-6/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/icu/67.1-6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ilmbase=2.5.4-1`
 

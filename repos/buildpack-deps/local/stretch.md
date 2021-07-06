@@ -963,20 +963,13 @@ Licenses: (parsed from: `/usr/share/doc/libdjvulibre-dev/copyright`, `/usr/share
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris djvulibre=3.5.27.1-7+deb9u1
-'http://security.debian.org/debian-security/pool/updates/main/d/djvulibre/djvulibre_3.5.27.1-7+deb9u1.dsc' djvulibre_3.5.27.1-7+deb9u1.dsc 2501 SHA256:73b81f6a1f4cd960783d7830bd670defdb87172321f594a53857831077792db6
-'http://security.debian.org/debian-security/pool/updates/main/d/djvulibre/djvulibre_3.5.27.1.orig.tar.gz' djvulibre_3.5.27.1.orig.tar.gz 3231662 SHA256:77f07de3f1039aa19eba2eb3170d9ce9a0918ba7b704a59cfaf08f42fcc52144
-'http://security.debian.org/debian-security/pool/updates/main/d/djvulibre/djvulibre_3.5.27.1-7+deb9u1.debian.tar.xz' djvulibre_3.5.27.1-7+deb9u1.debian.tar.xz 57992 SHA256:6362b83776e1fc56e13baeb3b2a864460f02c3e670c830a6fd84844fb17b3870
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/djvulibre/3.5.27.1-7+deb9u1/
 
-- https://sources.debian.net/src/djvulibre/3.5.27.1-7+deb9u1/ (for browsing the source)
-- https://sources.debian.net/src/djvulibre/3.5.27.1-7+deb9u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/djvulibre/3.5.27.1-7+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `dpkg=1.18.25`
 
@@ -4409,20 +4402,13 @@ Licenses: (parsed from: `/usr/share/doc/libopenexr-dev/copyright`, `/usr/share/d
 
 - `openexr`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openexr=2.2.0-11+deb9u2
-'http://security.debian.org/debian-security/pool/updates/main/o/openexr/openexr_2.2.0-11+deb9u2.dsc' openexr_2.2.0-11+deb9u2.dsc 2308 SHA256:928aa0719a3c9a43e4efc648164bf77bb708d5672e95e8ba6a90593ae5cc082d
-'http://security.debian.org/debian-security/pool/updates/main/o/openexr/openexr_2.2.0.orig.tar.gz' openexr_2.2.0.orig.tar.gz 14489661 SHA256:36a012f6c43213f840ce29a8b182700f6cf6b214bea0d5735594136b44914231
-'http://security.debian.org/debian-security/pool/updates/main/o/openexr/openexr_2.2.0-11+deb9u2.debian.tar.xz' openexr_2.2.0-11+deb9u2.debian.tar.xz 28344 SHA256:01e7b232fc8280951fad4bc20172d95219d7f69b71893dc60fa612474d2594a8
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/openexr/2.2.0-11+deb9u2/
 
-- https://sources.debian.net/src/openexr/2.2.0-11+deb9u2/ (for browsing the source)
-- https://sources.debian.net/src/openexr/2.2.0-11+deb9u2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openexr/2.2.0-11+deb9u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openjpeg2=2.1.2-1.1+deb9u6`
 
