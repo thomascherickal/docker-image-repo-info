@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:77374cb35e39bb67e15f4720c6b171ade49826746f0cb3806ff134d848bd3756`
-- Created: `2021-07-02T20:12:02.634155482Z`
-- Virtual Size: ~ 496.04 Mb  
+- Image ID: `sha256:7ccdb25bc7fd465d4af26fda6017061a49bb59fe395b900fa7529e4d662d2948`
+- Created: `2021-07-06T20:34:13.937373711Z`
+- Virtual Size: ~ 499.22 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["catalina.sh","run"]`
@@ -974,6 +974,30 @@ Source:
 $ yumdownloader --quiet --source --urls openssl-libs-1.0.2k-19.amzn2.0.6
 Enabling amzn2-core-source repository
 https://cdn.amazonlinux.com/2/core/2.0/SRPMS/55c72deea15e41652b8d9b2d484a3b10cb083c95e769f8e4bce66c53dc9b9e76//../../../../../blobstore/96e65fc5c3448c0d5786e4c6c293c14a4bd168ce9a524eb8439c1b8c721c8ded/openssl-1.0.2k-19.amzn2.0.6.src.rpm
+```
+
+### `rpm` package: `openssl11-libs-1.1.1g-12.amzn2.0.3.x86_64`
+
+Licenses (from `rpm --query`): OpenSSL and ASL 2.0
+
+Source:
+
+```console
+$ yumdownloader --quiet --source --urls openssl11-libs-1.1.1g-12.amzn2.0.3
+Enabling amzn2-core-source repository
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/55c72deea15e41652b8d9b2d484a3b10cb083c95e769f8e4bce66c53dc9b9e76//../../../../../blobstore/ebee4a38a8917b656f3f4f140ec40bff1670b1bb6bae2a36199f791652e9b8ba/openssl11-1.1.1g-12.amzn2.0.3.src.rpm
+```
+
+### `rpm` package: `openssl11-pkcs11-0.4.10-6.amzn2.0.1.x86_64`
+
+Licenses (from `rpm --query`): LGPLv2+ and BSD
+
+Source:
+
+```console
+$ yumdownloader --quiet --source --urls openssl11-pkcs11-0.4.10-6.amzn2.0.1
+Enabling amzn2-core-source repository
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/55c72deea15e41652b8d9b2d484a3b10cb083c95e769f8e4bce66c53dc9b9e76//../../../../../blobstore/e60220ca64a1ef332a31c8a532b963190d204c626929b8761a2ff1ee868edf36/openssl11-pkcs11-0.4.10-6.amzn2.0.1.src.rpm
 ```
 
 ### `rpm` package: `p11-kit-0.23.22-1.amzn2.0.1.x86_64`
