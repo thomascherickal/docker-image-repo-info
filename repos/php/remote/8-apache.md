@@ -1,7 +1,7 @@
 ## `php:8-apache`
 
 ```console
-$ docker pull php@sha256:dc59ef7a42364a59069026726d671395671345ae84e55adab438328e559d1d37
+$ docker pull php@sha256:17993b234de8314f262f436a5cc372dac4eb69a80dabaafd92f565fc89534068
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -963,81 +963,81 @@ CMD ["apache2-foreground"]
 ### `php:8-apache` - linux; s390x
 
 ```console
-$ docker pull php@sha256:5a3d4d00a160a974f1250c99082816898839f1b09ad1dd671a7a9ee8e93fa04f
+$ docker pull php@sha256:d40bb3809da9001d2bf896831ca874f42049e3c448fb8f4516f5e71eaf15ccc9
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **133.4 MB (133374882 bytes)**  
+-	Total Size: **133.4 MB (133375790 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0a4a3c56ab9be96227d308ea02182a42549bf0f78aaeb58da0b047d187aef674`
+-	Image ID: `sha256:b6642ae45fccede2dc4dd3a383c263c95b117029dc7104476f414e75ccdb5d4b`
 -	Entrypoint: `["docker-php-entrypoint"]`
 -	Default Command: `["apache2-foreground"]`
 
 ```dockerfile
-# Tue, 22 Jun 2021 23:42:28 GMT
+# Fri, 09 Jul 2021 02:50:32 GMT
 ADD file:a53e5772eefa4592eeff989f279dcc870986db7207b419dc3ae61cae85fce41f in / 
-# Tue, 22 Jun 2021 23:42:29 GMT
+# Fri, 09 Jul 2021 02:50:33 GMT
 CMD ["bash"]
-# Sat, 26 Jun 2021 00:09:50 GMT
+# Fri, 09 Jul 2021 10:27:44 GMT
 RUN set -eux; 	{ 		echo 'Package: php*'; 		echo 'Pin: release *'; 		echo 'Pin-Priority: -1'; 	} > /etc/apt/preferences.d/no-debian-php
-# Sat, 26 Jun 2021 00:09:50 GMT
+# Fri, 09 Jul 2021 10:27:45 GMT
 ENV PHPIZE_DEPS=autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c
-# Sat, 26 Jun 2021 00:10:11 GMT
+# Fri, 09 Jul 2021 10:28:47 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		$PHPIZE_DEPS 		ca-certificates 		curl 		xz-utils 	; 	rm -rf /var/lib/apt/lists/*
-# Sat, 26 Jun 2021 00:10:15 GMT
+# Fri, 09 Jul 2021 10:28:56 GMT
 ENV PHP_INI_DIR=/usr/local/etc/php
-# Sat, 26 Jun 2021 00:10:16 GMT
+# Fri, 09 Jul 2021 10:28:58 GMT
 RUN set -eux; 	mkdir -p "$PHP_INI_DIR/conf.d"; 	[ ! -d /var/www/html ]; 	mkdir -p /var/www/html; 	chown www-data:www-data /var/www/html; 	chmod 777 /var/www/html
-# Sat, 26 Jun 2021 00:13:55 GMT
+# Fri, 09 Jul 2021 10:33:56 GMT
 ENV APACHE_CONFDIR=/etc/apache2
-# Sat, 26 Jun 2021 00:13:55 GMT
+# Fri, 09 Jul 2021 10:33:57 GMT
 ENV APACHE_ENVVARS=/etc/apache2/envvars
-# Sat, 26 Jun 2021 00:14:06 GMT
+# Fri, 09 Jul 2021 10:34:19 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends apache2; 	rm -rf /var/lib/apt/lists/*; 		sed -ri 's/^export ([^=]+)=(.*)$/: ${\1:=\2}\nexport \1/' "$APACHE_ENVVARS"; 		. "$APACHE_ENVVARS"; 	for dir in 		"$APACHE_LOCK_DIR" 		"$APACHE_RUN_DIR" 		"$APACHE_LOG_DIR" 	; do 		rm -rvf "$dir"; 		mkdir -p "$dir"; 		chown "$APACHE_RUN_USER:$APACHE_RUN_GROUP" "$dir"; 		chmod 777 "$dir"; 	done; 		rm -rvf /var/www/html/*; 		ln -sfT /dev/stderr "$APACHE_LOG_DIR/error.log"; 	ln -sfT /dev/stdout "$APACHE_LOG_DIR/access.log"; 	ln -sfT /dev/stdout "$APACHE_LOG_DIR/other_vhosts_access.log"; 	chown -R --no-dereference "$APACHE_RUN_USER:$APACHE_RUN_GROUP" "$APACHE_LOG_DIR"
-# Sat, 26 Jun 2021 00:14:08 GMT
+# Fri, 09 Jul 2021 10:34:22 GMT
 RUN a2dismod mpm_event && a2enmod mpm_prefork
-# Sat, 26 Jun 2021 00:14:09 GMT
+# Fri, 09 Jul 2021 10:34:24 GMT
 RUN { 		echo '<FilesMatch \.php$>'; 		echo '\tSetHandler application/x-httpd-php'; 		echo '</FilesMatch>'; 		echo; 		echo 'DirectoryIndex disabled'; 		echo 'DirectoryIndex index.php index.html'; 		echo; 		echo '<Directory /var/www/>'; 		echo '\tOptions -Indexes'; 		echo '\tAllowOverride All'; 		echo '</Directory>'; 	} | tee "$APACHE_CONFDIR/conf-available/docker-php.conf" 	&& a2enconf docker-php
-# Sat, 26 Jun 2021 00:14:09 GMT
+# Fri, 09 Jul 2021 10:34:25 GMT
 ENV PHP_EXTRA_BUILD_DEPS=apache2-dev
-# Sat, 26 Jun 2021 00:14:10 GMT
+# Fri, 09 Jul 2021 10:34:25 GMT
 ENV PHP_EXTRA_CONFIGURE_ARGS=--with-apxs2 --disable-cgi
-# Sat, 26 Jun 2021 00:14:10 GMT
+# Fri, 09 Jul 2021 10:34:25 GMT
 ENV PHP_CFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
-# Sat, 26 Jun 2021 00:14:10 GMT
+# Fri, 09 Jul 2021 10:34:26 GMT
 ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
-# Sat, 26 Jun 2021 00:14:10 GMT
+# Fri, 09 Jul 2021 10:34:26 GMT
 ENV PHP_LDFLAGS=-Wl,-O1 -pie
-# Sat, 26 Jun 2021 00:40:37 GMT
+# Fri, 09 Jul 2021 11:04:58 GMT
 ENV GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F
-# Thu, 01 Jul 2021 23:51:14 GMT
+# Fri, 09 Jul 2021 11:04:59 GMT
 ENV PHP_VERSION=8.0.8
-# Thu, 01 Jul 2021 23:51:14 GMT
+# Fri, 09 Jul 2021 11:05:00 GMT
 ENV PHP_URL=https://www.php.net/distributions/php-8.0.8.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-8.0.8.tar.xz.asc
-# Thu, 01 Jul 2021 23:51:15 GMT
+# Fri, 09 Jul 2021 11:05:00 GMT
 ENV PHP_SHA256=dc1668d324232dec1d05175ec752dade92d29bb3004275118bc3f7fc7cbfbb1c
-# Thu, 01 Jul 2021 23:52:43 GMT
+# Fri, 09 Jul 2021 11:05:20 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends gnupg dirmngr; 	rm -rf /var/lib/apt/lists/*; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Thu, 01 Jul 2021 23:52:44 GMT
+# Fri, 09 Jul 2021 11:05:22 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 01 Jul 2021 23:57:48 GMT
+# Fri, 09 Jul 2021 11:11:26 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		libargon2-dev 		libcurl4-openssl-dev 		libedit-dev 		libonig-dev 		libsodium-dev 		libsqlite3-dev 		libssl-dev 		libxml2-dev 		zlib1g-dev 		${PHP_EXTRA_BUILD_DEPS:-} 	; 	rm -rf /var/lib/apt/lists/*; 		export 		CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)"; 	if [ ! -d /usr/include/curl ]; then 		ln -sT "/usr/include/$debMultiarch/curl" /usr/local/include/curl; 	fi; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--with-pic 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-gnu' && echo '--without-pcre-jit') 		--with-libdir="lib/$debMultiarch" 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -executable -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 		php --version
-# Thu, 01 Jul 2021 23:57:51 GMT
+# Fri, 09 Jul 2021 11:11:29 GMT
 COPY multi:e4407f0002276f00cc93b01e48696c1f677a5f7d3d194b3a84bec1cc5e733bcb in /usr/local/bin/ 
-# Thu, 01 Jul 2021 23:57:52 GMT
+# Fri, 09 Jul 2021 11:11:31 GMT
 RUN docker-php-ext-enable sodium
-# Thu, 01 Jul 2021 23:57:53 GMT
+# Fri, 09 Jul 2021 11:11:32 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Thu, 01 Jul 2021 23:57:54 GMT
+# Fri, 09 Jul 2021 11:11:32 GMT
 STOPSIGNAL SIGWINCH
-# Thu, 01 Jul 2021 23:57:54 GMT
+# Fri, 09 Jul 2021 11:11:33 GMT
 COPY file:e3123fcb6566efa979f945bfac1c94c854a559d7b82723e42118882a8ac4de66 in /usr/local/bin/ 
-# Thu, 01 Jul 2021 23:57:55 GMT
+# Fri, 09 Jul 2021 11:11:34 GMT
 WORKDIR /var/www/html
-# Thu, 01 Jul 2021 23:57:55 GMT
+# Fri, 09 Jul 2021 11:11:34 GMT
 EXPOSE 80
-# Thu, 01 Jul 2021 23:57:56 GMT
+# Fri, 09 Jul 2021 11:11:35 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -1046,51 +1046,51 @@ CMD ["apache2-foreground"]
 		Last Modified: Tue, 22 Jun 2021 23:45:45 GMT  
 		Size: 25.8 MB (25760716 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:61297595675dd5f94c60485ec6670e0d45420c73a569aebae232822f3805f5f4`  
-		Last Modified: Sat, 26 Jun 2021 02:18:36 GMT  
-		Size: 226.0 B  
+	-	`sha256:4f10bc49597acb5fc5ad360e095d1ff816ed10b65059f5fd0538623e449907c8`  
+		Last Modified: Fri, 09 Jul 2021 13:02:05 GMT  
+		Size: 228.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:80ab5f68c432394e6815ad9808418b4300224b46b5898a0f90a1fedbfdf9ca7f`  
-		Last Modified: Sat, 26 Jun 2021 02:18:46 GMT  
-		Size: 64.7 MB (64710315 bytes)  
+	-	`sha256:12d7cbc38249bf6d4c2da79bb0622210012f07b686fabf38e26b9297f7485490`  
+		Last Modified: Fri, 09 Jul 2021 13:02:18 GMT  
+		Size: 64.7 MB (64711243 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6def165c1dbb7cd43c8e70e00b2ec5aa53eae70056635c2ff93bdaf25ec061ef`  
-		Last Modified: Sat, 26 Jun 2021 02:18:36 GMT  
-		Size: 270.0 B  
+	-	`sha256:76294fc42d21d7db046be64894996b4b22bdf36bd1d9ab6e34318fe3a4396b38`  
+		Last Modified: Fri, 09 Jul 2021 13:02:05 GMT  
+		Size: 269.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c0b3e7236868c26c00547364caef50791abcea8d5a62d4fac4ff00f1acf28308`  
-		Last Modified: Sat, 26 Jun 2021 02:19:14 GMT  
-		Size: 18.5 MB (18525085 bytes)  
+	-	`sha256:6535cb351b7ac57bd9b26465de5ca6b3632af56b35527877d96d1faf84498a89`  
+		Last Modified: Fri, 09 Jul 2021 13:02:49 GMT  
+		Size: 18.5 MB (18524840 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8ae502a4e5daabc91e5f674004c64396c939ee72f05af0b913531fd51c79a37e`  
-		Last Modified: Sat, 26 Jun 2021 02:19:11 GMT  
-		Size: 472.0 B  
+	-	`sha256:833bcfda3a6b4d0ed50c450c26a73d562a3e83bfda771ad2766453979b5590db`  
+		Last Modified: Fri, 09 Jul 2021 13:02:46 GMT  
+		Size: 485.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:10c27e0c3d22fb08edda2488324e9cbcd02f8ff31f5bad766bdd1470e2ea7048`  
-		Last Modified: Sat, 26 Jun 2021 02:19:11 GMT  
-		Size: 512.0 B  
+	-	`sha256:3d4a59370b5f499c6f7cab2473ad953ecc43850511e8a347187a93c22c1331ca`  
+		Last Modified: Fri, 09 Jul 2021 13:02:46 GMT  
+		Size: 518.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:771cff9dbb87665b7991a8687f0a57051d6344a696a99b2a46a03da9cdc076f4`  
-		Last Modified: Fri, 02 Jul 2021 01:15:32 GMT  
-		Size: 11.0 MB (11011392 bytes)  
+	-	`sha256:e8ae2012ff50a95f8898771e45be0bf31970c3610f1f3e08b81f191ca3918d7d`  
+		Last Modified: Fri, 09 Jul 2021 13:04:53 GMT  
+		Size: 11.0 MB (11011443 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a168beeba80eca90b5acdbd0560bb8996b287ea402640894e3048062f3c14955`  
-		Last Modified: Fri, 02 Jul 2021 01:15:20 GMT  
+	-	`sha256:8a4671c0b4592fc0535b95634a3111e181533df13ca6fed20be3dd7e73093daa`  
+		Last Modified: Fri, 09 Jul 2021 13:04:51 GMT  
 		Size: 494.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9fbcefbef5bba54401f4bfa1311e5448113a2adf2667eabdb04f716e2b15868f`  
-		Last Modified: Fri, 02 Jul 2021 01:15:20 GMT  
-		Size: 13.4 MB (13361980 bytes)  
+	-	`sha256:9afbd678f699d4162093a859f1614a3a73dc486371e829e4343db2a5b1423266`  
+		Last Modified: Fri, 09 Jul 2021 13:04:54 GMT  
+		Size: 13.4 MB (13362130 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:780b0dbc32ca5304feef35aa8e81886ba42fb79b9c939e4abb65188ba0cc05f1`  
-		Last Modified: Fri, 02 Jul 2021 01:15:16 GMT  
-		Size: 2.3 KB (2278 bytes)  
+	-	`sha256:f83f7d979524fea31e45d22fce6d80669b9f346da517a7e4a0dbaa9ae7ad8c80`  
+		Last Modified: Fri, 09 Jul 2021 13:04:51 GMT  
+		Size: 2.3 KB (2279 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:68dc45940630855229af4a807a42cfc7adf18a769274faad981bf937f08f0435`  
-		Last Modified: Fri, 02 Jul 2021 01:15:15 GMT  
-		Size: 247.0 B  
+	-	`sha256:7f354c87ec5d1fee87e59e144771d2e3af5e7d697a3ee343b9ecdef0e03d3686`  
+		Last Modified: Fri, 09 Jul 2021 13:04:51 GMT  
+		Size: 249.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:acb1724e28adaa2b106f824a7bda83e5782c6797e8f80c781a4c9ed2c0692544`  
-		Last Modified: Fri, 02 Jul 2021 01:15:16 GMT  
-		Size: 895.0 B  
+	-	`sha256:83db94ef406d8ad0e6a2be5bd5c6d51a3e2e98d33d1029914cf6f52f02bf5591`  
+		Last Modified: Fri, 09 Jul 2021 13:04:51 GMT  
+		Size: 896.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
