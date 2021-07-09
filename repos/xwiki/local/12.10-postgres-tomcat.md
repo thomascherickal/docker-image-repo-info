@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:3ad1634308c9f2ace73759c7eee6fdf3d6598f9918206d93a361aa793c8c1879`
-- Created: `2021-07-02T21:26:28.781461409Z`
+- Image ID: `sha256:4308bca86738d79b465bba2aeb5302d864f012025b7b505e6bdb70f792877f9a`
+- Created: `2021-07-08T20:06:12.375048103Z`
 - Virtual Size: ~ 1.30 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -21,8 +21,8 @@
   - `LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib`
   - `GPG_KEYS=05AB33110949707C93A279E3D3EFE6B686867BA6 07E48665A34DCAFAE522E5E6266191C37C037D42 47309207D818FFD8DCD3F83F1931D684307A10A5 541FBE7D8F78B25E055DDEE13C370389288584E7 5C3C5F3E314C866292F359A8F3AD5C94A67F707E 61B832AC2F1C5A90F0F9B00A1C506407564C17A3 765908099ACF92702C7D949BFA0C35EA8AA299F1 79F7026C690BAA50B92CD8B66A3AD3F4F22C4FED 8B46CA49EF4837B8C7F292DAA54AD08EA7A0233C 9BA44C2621385CB966EBA586F72C284D731FABEE A27677289986DB50844682F8ACB77FC2E86E29AC A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243 F3A04C595DB5B6A5F1ECA43E3B7BBB100D811BBE F7DA48BB64BCB84ECBA7EE6935CD23C10D498E23`
   - `TOMCAT_MAJOR=8`
-  - `TOMCAT_VERSION=8.5.68`
-  - `TOMCAT_SHA512=673f8d295d6f6b8e53b30c9c81989a3586341f9660f00e61a131153f54f0ce9d41bf8f49960ef477d3ec81610e1c75c1684c8676e9ebe5015486334c443d82e5`
+  - `TOMCAT_VERSION=8.5.69`
+  - `TOMCAT_SHA512=3ce092c7b89a12904681f23c9c8a2517c13305b4beb783f7b1e85e947aaba4d2bfe8f954f9cefbe009f678557eeb552995f214d9e98c3f1be395822eb2582a1c`
   - `XWIKI_VERSION=12.10.8`
   - `XWIKI_URL_PREFIX=https://maven.xwiki.org/releases/org/xwiki/platform/xwiki-platform-distribution-war/12.10.8`
   - `XWIKI_DOWNLOAD_SHA256=739471e78f8b2550849d1a869c27313c4c71b12bb9b6c9c26f77c81a993dff2e`
@@ -151,13 +151,13 @@ $ apt-get source -qq --print-uris audit=1:2.8.5-2ubuntu6
 'http://archive.ubuntu.com/ubuntu/pool/main/a/audit/audit_2.8.5-2ubuntu6.debian.tar.xz' audit_2.8.5-2ubuntu6.debian.tar.xz 18712 SHA256:d85ecf206bfe256a86e6d39602cd2744beda264a28e413f31c4da227e6542ea7
 ```
 
-### `dpkg` source package: `avahi=0.7-4ubuntu7`
+### `dpkg` source package: `avahi=0.7-4ubuntu7.1`
 
 Binary Packages:
 
-- `libavahi-client3:amd64=0.7-4ubuntu7`
-- `libavahi-common-data:amd64=0.7-4ubuntu7`
-- `libavahi-common3:amd64=0.7-4ubuntu7`
+- `libavahi-client3:amd64=0.7-4ubuntu7.1`
+- `libavahi-common-data:amd64=0.7-4ubuntu7.1`
+- `libavahi-common3:amd64=0.7-4ubuntu7.1`
 
 Licenses: (parsed from: `/usr/share/doc/libavahi-client3/copyright`, `/usr/share/doc/libavahi-common-data/copyright`, `/usr/share/doc/libavahi-common3/copyright`)
 
@@ -168,10 +168,10 @@ Licenses: (parsed from: `/usr/share/doc/libavahi-client3/copyright`, `/usr/share
 Source:
 
 ```console
-$ apt-get source -qq --print-uris avahi=0.7-4ubuntu7
-'http://archive.ubuntu.com/ubuntu/pool/main/a/avahi/avahi_0.7-4ubuntu7.dsc' avahi_0.7-4ubuntu7.dsc 3509 SHA256:9d5f8678c629f56f422a5158554478e41957061a291b4b71b707b44d68187e37
-'http://archive.ubuntu.com/ubuntu/pool/main/a/avahi/avahi_0.7.orig.tar.gz' avahi_0.7.orig.tar.gz 1333400 SHA256:57a99b5dfe7fdae794e3d1ee7a62973a368e91e414bd0dfa5d84434de5b14804
-'http://archive.ubuntu.com/ubuntu/pool/main/a/avahi/avahi_0.7-4ubuntu7.debian.tar.xz' avahi_0.7-4ubuntu7.debian.tar.xz 36532 SHA256:71bdf3036b6a004b66e1398b0998e101aad5d50e0a395b4620b4450dd2873306
+$ apt-get source -qq --print-uris avahi=0.7-4ubuntu7.1
+'http://archive.ubuntu.com/ubuntu/pool/main/a/avahi/avahi_0.7-4ubuntu7.1.dsc' avahi_0.7-4ubuntu7.1.dsc 4171 SHA512:073a4f11bf28de71ff5d013d3ad6c7e9b86282b1f0067d97360c3d36776c3e21720ba08a636fcfe172692fded74a1a66a13f667839727f202cfc298f24cc3054
+'http://archive.ubuntu.com/ubuntu/pool/main/a/avahi/avahi_0.7.orig.tar.gz' avahi_0.7.orig.tar.gz 1333400 SHA512:bae5a1e9204aca90b90e7fd223d19e809e3514d03ba5fa2da1e55bf1d72d3d3b98567f357900c36393613dc17dc98e15ff3ebf0f226f2f6b9766e592452a6ce7
+'http://archive.ubuntu.com/ubuntu/pool/main/a/avahi/avahi_0.7-4ubuntu7.1.debian.tar.xz' avahi_0.7-4ubuntu7.1.debian.tar.xz 36940 SHA512:b6bff1f8e7ea7f9fc7ef228036091d9529e9a8f8960cf2f1ac8b21f8f2cd77e327538aed9477ba823ede215ef8a8767db2339d55c70e6b267e3bbdbc4e14a78e
 ```
 
 ### `dpkg` source package: `base-files=11ubuntu5.3`
