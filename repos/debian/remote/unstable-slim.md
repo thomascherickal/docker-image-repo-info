@@ -1,7 +1,7 @@
 ## `debian:unstable-slim`
 
 ```console
-$ docker pull debian@sha256:cf53632ec71dc6b29128b49f58593c118a00f1b5a784cbb78eaeec38646c5a22
+$ docker pull debian@sha256:9c1d95532fa19e5fe1c45f1c84d0b47082c093e8d177773b1f1296c7be45e7be
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -13,7 +13,7 @@ $ docker pull debian@sha256:cf53632ec71dc6b29128b49f58593c118a00f1b5a784cbb78eae
 	-	linux; 386
 	-	linux; mips64le
 	-	linux; ppc64le
-	-	linux; risc variant v64
+	-	linux; riscv64
 	-	linux; s390x
 
 ### `debian:unstable-slim` - linux; amd64
@@ -198,7 +198,7 @@ CMD ["bash"]
 		Size: 35.3 MB (35257612 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `debian:unstable-slim` - linux; risc variant v64
+### `debian:unstable-slim` - linux; riscv64
 
 ```console
 $ docker pull debian@sha256:b6e859105071b4518e1411a0d5265f1812c1f07501fb1edfd84af2f52301318a

@@ -1,7 +1,7 @@
 ## `debian:experimental`
 
 ```console
-$ docker pull debian@sha256:c8a215a44ae130e641851230e2c7d2ffee5e6990867d28187c9583857e5a5edd
+$ docker pull debian@sha256:b7f93024be2919438764a919348668d691d998ff01ed7f2dfaf2071223c29e12
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -13,7 +13,7 @@ $ docker pull debian@sha256:c8a215a44ae130e641851230e2c7d2ffee5e6990867d28187c95
 	-	linux; 386
 	-	linux; mips64le
 	-	linux; ppc64le
-	-	linux; risc variant v64
+	-	linux; riscv64
 	-	linux; s390x
 
 ### `debian:experimental` - linux; amd64
@@ -240,7 +240,7 @@ RUN echo 'deb http://deb.debian.org/debian experimental main' > /etc/apt/sources
 		Size: 224.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `debian:experimental` - linux; risc variant v64
+### `debian:experimental` - linux; riscv64
 
 ```console
 $ docker pull debian@sha256:23d6c10618149c7dc94b0bb028b307e138421da10b48e1b7457c0e8b3de4386e

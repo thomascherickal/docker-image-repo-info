@@ -1,7 +1,7 @@
 ## `debian:sid`
 
 ```console
-$ docker pull debian@sha256:c2b6dce64c8de60c7b012e112df492def6c49a27ae7fc436d2ac49385bab9329
+$ docker pull debian@sha256:4f922374a9bc8fc3e9b8820a340b3c6b4b7d9100b909405ae63939d865c388c7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -13,7 +13,7 @@ $ docker pull debian@sha256:c2b6dce64c8de60c7b012e112df492def6c49a27ae7fc436d2ac
 	-	linux; 386
 	-	linux; mips64le
 	-	linux; ppc64le
-	-	linux; risc variant v64
+	-	linux; riscv64
 	-	linux; s390x
 
 ### `debian:sid` - linux; amd64
@@ -198,7 +198,7 @@ CMD ["bash"]
 		Size: 58.8 MB (58812906 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `debian:sid` - linux; risc variant v64
+### `debian:sid` - linux; riscv64
 
 ```console
 $ docker pull debian@sha256:d3b8d656daf82360a037fe3d33489fe5f79ec506fc0668950370bab1faec364b

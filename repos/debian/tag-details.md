@@ -3879,7 +3879,7 @@ CMD ["bash"]
 ## `debian:experimental`
 
 ```console
-$ docker pull debian@sha256:c8a215a44ae130e641851230e2c7d2ffee5e6990867d28187c9583857e5a5edd
+$ docker pull debian@sha256:b7f93024be2919438764a919348668d691d998ff01ed7f2dfaf2071223c29e12
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3891,7 +3891,7 @@ $ docker pull debian@sha256:c8a215a44ae130e641851230e2c7d2ffee5e6990867d28187c95
 	-	linux; 386
 	-	linux; mips64le
 	-	linux; ppc64le
-	-	linux; risc variant v64
+	-	linux; riscv64
 	-	linux; s390x
 
 ### `debian:experimental` - linux; amd64
@@ -4118,7 +4118,7 @@ RUN echo 'deb http://deb.debian.org/debian experimental main' > /etc/apt/sources
 		Size: 224.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `debian:experimental` - linux; risc variant v64
+### `debian:experimental` - linux; riscv64
 
 ```console
 $ docker pull debian@sha256:23d6c10618149c7dc94b0bb028b307e138421da10b48e1b7457c0e8b3de4386e
@@ -4185,7 +4185,7 @@ RUN echo 'deb http://deb.debian.org/debian experimental main' > /etc/apt/sources
 ## `debian:experimental-20210621`
 
 ```console
-$ docker pull debian@sha256:c8a215a44ae130e641851230e2c7d2ffee5e6990867d28187c9583857e5a5edd
+$ docker pull debian@sha256:b7f93024be2919438764a919348668d691d998ff01ed7f2dfaf2071223c29e12
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4197,7 +4197,7 @@ $ docker pull debian@sha256:c8a215a44ae130e641851230e2c7d2ffee5e6990867d28187c95
 	-	linux; 386
 	-	linux; mips64le
 	-	linux; ppc64le
-	-	linux; risc variant v64
+	-	linux; riscv64
 	-	linux; s390x
 
 ### `debian:experimental-20210621` - linux; amd64
@@ -4424,7 +4424,7 @@ RUN echo 'deb http://deb.debian.org/debian experimental main' > /etc/apt/sources
 		Size: 224.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `debian:experimental-20210621` - linux; risc variant v64
+### `debian:experimental-20210621` - linux; riscv64
 
 ```console
 $ docker pull debian@sha256:23d6c10618149c7dc94b0bb028b307e138421da10b48e1b7457c0e8b3de4386e
@@ -6012,7 +6012,7 @@ RUN echo 'deb http://deb.debian.org/debian rc-buggy main' > /etc/apt/sources.lis
 ## `debian:sid`
 
 ```console
-$ docker pull debian@sha256:c2b6dce64c8de60c7b012e112df492def6c49a27ae7fc436d2ac49385bab9329
+$ docker pull debian@sha256:4f922374a9bc8fc3e9b8820a340b3c6b4b7d9100b909405ae63939d865c388c7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6024,7 +6024,7 @@ $ docker pull debian@sha256:c2b6dce64c8de60c7b012e112df492def6c49a27ae7fc436d2ac
 	-	linux; 386
 	-	linux; mips64le
 	-	linux; ppc64le
-	-	linux; risc variant v64
+	-	linux; riscv64
 	-	linux; s390x
 
 ### `debian:sid` - linux; amd64
@@ -6209,7 +6209,7 @@ CMD ["bash"]
 		Size: 58.8 MB (58812906 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `debian:sid` - linux; risc variant v64
+### `debian:sid` - linux; riscv64
 
 ```console
 $ docker pull debian@sha256:d3b8d656daf82360a037fe3d33489fe5f79ec506fc0668950370bab1faec364b
@@ -6264,7 +6264,7 @@ CMD ["bash"]
 ## `debian:sid-20210621`
 
 ```console
-$ docker pull debian@sha256:c2b6dce64c8de60c7b012e112df492def6c49a27ae7fc436d2ac49385bab9329
+$ docker pull debian@sha256:4f922374a9bc8fc3e9b8820a340b3c6b4b7d9100b909405ae63939d865c388c7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6276,7 +6276,7 @@ $ docker pull debian@sha256:c2b6dce64c8de60c7b012e112df492def6c49a27ae7fc436d2ac
 	-	linux; 386
 	-	linux; mips64le
 	-	linux; ppc64le
-	-	linux; risc variant v64
+	-	linux; riscv64
 	-	linux; s390x
 
 ### `debian:sid-20210621` - linux; amd64
@@ -6461,7 +6461,7 @@ CMD ["bash"]
 		Size: 58.8 MB (58812906 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `debian:sid-20210621` - linux; risc variant v64
+### `debian:sid-20210621` - linux; riscv64
 
 ```console
 $ docker pull debian@sha256:d3b8d656daf82360a037fe3d33489fe5f79ec506fc0668950370bab1faec364b
@@ -6516,7 +6516,7 @@ CMD ["bash"]
 ## `debian:sid-20210621-slim`
 
 ```console
-$ docker pull debian@sha256:2d0919d6d9991dcca99eaea387d482f8c97a3dec424d75cfec902aadbf047755
+$ docker pull debian@sha256:21b0c82035c31b85f7d9b3d234bbddad3b082ef6a36a07532e92071bd4e9d107
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6528,7 +6528,7 @@ $ docker pull debian@sha256:2d0919d6d9991dcca99eaea387d482f8c97a3dec424d75cfec90
 	-	linux; 386
 	-	linux; mips64le
 	-	linux; ppc64le
-	-	linux; risc variant v64
+	-	linux; riscv64
 	-	linux; s390x
 
 ### `debian:sid-20210621-slim` - linux; amd64
@@ -6713,7 +6713,7 @@ CMD ["bash"]
 		Size: 35.3 MB (35257633 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `debian:sid-20210621-slim` - linux; risc variant v64
+### `debian:sid-20210621-slim` - linux; riscv64
 
 ```console
 $ docker pull debian@sha256:714336d0c6c4cea59d4689ed101d55b850b3aa2f664c1c17aedcbd8a5f20aa43
@@ -6768,7 +6768,7 @@ CMD ["bash"]
 ## `debian:sid-slim`
 
 ```console
-$ docker pull debian@sha256:2d0919d6d9991dcca99eaea387d482f8c97a3dec424d75cfec902aadbf047755
+$ docker pull debian@sha256:21b0c82035c31b85f7d9b3d234bbddad3b082ef6a36a07532e92071bd4e9d107
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6780,7 +6780,7 @@ $ docker pull debian@sha256:2d0919d6d9991dcca99eaea387d482f8c97a3dec424d75cfec90
 	-	linux; 386
 	-	linux; mips64le
 	-	linux; ppc64le
-	-	linux; risc variant v64
+	-	linux; riscv64
 	-	linux; s390x
 
 ### `debian:sid-slim` - linux; amd64
@@ -6965,7 +6965,7 @@ CMD ["bash"]
 		Size: 35.3 MB (35257633 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `debian:sid-slim` - linux; risc variant v64
+### `debian:sid-slim` - linux; riscv64
 
 ```console
 $ docker pull debian@sha256:714336d0c6c4cea59d4689ed101d55b850b3aa2f664c1c17aedcbd8a5f20aa43
@@ -10116,7 +10116,7 @@ CMD ["bash"]
 ## `debian:unstable`
 
 ```console
-$ docker pull debian@sha256:cdf3ea69aa778869a4ab7045f99e2fa563f137279d8f659e0fe542b4b6d05079
+$ docker pull debian@sha256:a9dd8d1ad2a0550db4a2e597b8c66003fcf60a3a7c3a138dc0fda4af91ca746d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -10128,7 +10128,7 @@ $ docker pull debian@sha256:cdf3ea69aa778869a4ab7045f99e2fa563f137279d8f659e0fe5
 	-	linux; 386
 	-	linux; mips64le
 	-	linux; ppc64le
-	-	linux; risc variant v64
+	-	linux; riscv64
 	-	linux; s390x
 
 ### `debian:unstable` - linux; amd64
@@ -10313,7 +10313,7 @@ CMD ["bash"]
 		Size: 58.8 MB (58812854 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `debian:unstable` - linux; risc variant v64
+### `debian:unstable` - linux; riscv64
 
 ```console
 $ docker pull debian@sha256:663b88ab8820a113dd4feba3505b696ff698b55e5e50ed5aade2ec8321167877
@@ -10368,7 +10368,7 @@ CMD ["bash"]
 ## `debian:unstable-20210621`
 
 ```console
-$ docker pull debian@sha256:cdf3ea69aa778869a4ab7045f99e2fa563f137279d8f659e0fe542b4b6d05079
+$ docker pull debian@sha256:a9dd8d1ad2a0550db4a2e597b8c66003fcf60a3a7c3a138dc0fda4af91ca746d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -10380,7 +10380,7 @@ $ docker pull debian@sha256:cdf3ea69aa778869a4ab7045f99e2fa563f137279d8f659e0fe5
 	-	linux; 386
 	-	linux; mips64le
 	-	linux; ppc64le
-	-	linux; risc variant v64
+	-	linux; riscv64
 	-	linux; s390x
 
 ### `debian:unstable-20210621` - linux; amd64
@@ -10565,7 +10565,7 @@ CMD ["bash"]
 		Size: 58.8 MB (58812854 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `debian:unstable-20210621` - linux; risc variant v64
+### `debian:unstable-20210621` - linux; riscv64
 
 ```console
 $ docker pull debian@sha256:663b88ab8820a113dd4feba3505b696ff698b55e5e50ed5aade2ec8321167877
@@ -10620,7 +10620,7 @@ CMD ["bash"]
 ## `debian:unstable-20210621-slim`
 
 ```console
-$ docker pull debian@sha256:cf53632ec71dc6b29128b49f58593c118a00f1b5a784cbb78eaeec38646c5a22
+$ docker pull debian@sha256:9c1d95532fa19e5fe1c45f1c84d0b47082c093e8d177773b1f1296c7be45e7be
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -10632,7 +10632,7 @@ $ docker pull debian@sha256:cf53632ec71dc6b29128b49f58593c118a00f1b5a784cbb78eae
 	-	linux; 386
 	-	linux; mips64le
 	-	linux; ppc64le
-	-	linux; risc variant v64
+	-	linux; riscv64
 	-	linux; s390x
 
 ### `debian:unstable-20210621-slim` - linux; amd64
@@ -10817,7 +10817,7 @@ CMD ["bash"]
 		Size: 35.3 MB (35257612 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `debian:unstable-20210621-slim` - linux; risc variant v64
+### `debian:unstable-20210621-slim` - linux; riscv64
 
 ```console
 $ docker pull debian@sha256:b6e859105071b4518e1411a0d5265f1812c1f07501fb1edfd84af2f52301318a
@@ -10872,7 +10872,7 @@ CMD ["bash"]
 ## `debian:unstable-slim`
 
 ```console
-$ docker pull debian@sha256:cf53632ec71dc6b29128b49f58593c118a00f1b5a784cbb78eaeec38646c5a22
+$ docker pull debian@sha256:9c1d95532fa19e5fe1c45f1c84d0b47082c093e8d177773b1f1296c7be45e7be
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -10884,7 +10884,7 @@ $ docker pull debian@sha256:cf53632ec71dc6b29128b49f58593c118a00f1b5a784cbb78eae
 	-	linux; 386
 	-	linux; mips64le
 	-	linux; ppc64le
-	-	linux; risc variant v64
+	-	linux; riscv64
 	-	linux; s390x
 
 ### `debian:unstable-slim` - linux; amd64
@@ -11069,7 +11069,7 @@ CMD ["bash"]
 		Size: 35.3 MB (35257612 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `debian:unstable-slim` - linux; risc variant v64
+### `debian:unstable-slim` - linux; riscv64
 
 ```console
 $ docker pull debian@sha256:b6e859105071b4518e1411a0d5265f1812c1f07501fb1edfd84af2f52301318a
