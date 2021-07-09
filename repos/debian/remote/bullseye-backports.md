@@ -1,7 +1,7 @@
 ## `debian:bullseye-backports`
 
 ```console
-$ docker pull debian@sha256:c50d9e3e3da1e44ea936105a51ad9afee161b7825e0f559e08e62a9cee8bdee4
+$ docker pull debian@sha256:44e4d00fe245bc2304b24722937dd3b6a9a8abf7695a52661128c6fac92e58da
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -242,22 +242,22 @@ RUN echo 'deb http://deb.debian.org/debian bullseye-backports main' > /etc/apt/s
 ### `debian:bullseye-backports` - linux; s390x
 
 ```console
-$ docker pull debian@sha256:fff49f7ba97e7978224cf1a68891a4338b2f8b504425d1bc3a46294d13daee51
+$ docker pull debian@sha256:f44e3f195495c130d1828b2c6ce93c64422ddff3950d4978d235d6c233a630df
 ```
 
--	Docker Version: 19.03.12
+-	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **53.2 MB (53183449 bytes)**  
+-	Total Size: **53.2 MB (53183452 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4bef5a327bcb0f52fd1dbf69a5989d12c4ea2c8bdbb278db7ce9bcbf163979a5`
+-	Image ID: `sha256:59ae9682a1426f5677e812258cb3ea9eff9589f2673cc9f6570048264474df2b`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Tue, 22 Jun 2021 23:41:45 GMT
+# Fri, 09 Jul 2021 02:49:41 GMT
 ADD file:c4e658e7b0a2f1bcd1adbc3f8d4b90c39d22edd3817e41078cce53daa39778f0 in / 
-# Tue, 22 Jun 2021 23:41:48 GMT
+# Fri, 09 Jul 2021 02:49:42 GMT
 CMD ["bash"]
-# Tue, 22 Jun 2021 23:41:53 GMT
+# Fri, 09 Jul 2021 02:49:50 GMT
 RUN echo 'deb http://deb.debian.org/debian bullseye-backports main' > /etc/apt/sources.list.d/backports.list
 ```
 
@@ -266,7 +266,7 @@ RUN echo 'deb http://deb.debian.org/debian bullseye-backports main' > /etc/apt/s
 		Last Modified: Tue, 22 Jun 2021 23:45:00 GMT  
 		Size: 53.2 MB (53183223 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:42e75cae36309b6348602a728cfcd5782ed8439f3d31068c1d0793c2b1d9f397`  
-		Last Modified: Tue, 22 Jun 2021 23:45:07 GMT  
-		Size: 226.0 B  
+	-	`sha256:d2acd3f0e0fd7e4cef3eba2c743a83c0f629115b84176a612f8669fac73b8623`  
+		Last Modified: Fri, 09 Jul 2021 02:54:26 GMT  
+		Size: 229.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
