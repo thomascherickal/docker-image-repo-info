@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:4ac11acf50efc2a84a391af8823963f4df01ffaae101bc51af151a92e5a426d6`
-- Created: `2019-08-20T21:53:22.702636315Z`
-- Virtual Size: ~ 26.69 Mb  
+- Image ID: `sha256:162689747d5ac7859de78f9aae1f4ffd15e68bac113e35a855e350a05886234f`
+- Created: `2021-06-28T18:58:54.787496036Z`
+- Virtual Size: ~ 21.28 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["entrypoint.sh"]`
@@ -20,16 +20,16 @@
 ### `apk` package: `alpine-baselayout`
 
 ```console
-alpine-baselayout-3.1.2-r0 description:
+alpine-baselayout-3.2.0-r8 description:
 Alpine base dir structure and init scripts
 
-alpine-baselayout-3.1.2-r0 webpage:
+alpine-baselayout-3.2.0-r8 webpage:
 https://git.alpinelinux.org/cgit/aports/tree/main/alpine-baselayout
 
-alpine-baselayout-3.1.2-r0 installed size:
-396 KiB
+alpine-baselayout-3.2.0-r8 installed size:
+400 KiB
 
-alpine-baselayout-3.1.2-r0 license:
+alpine-baselayout-3.2.0-r8 license:
 GPL-2.0-only
 
 ```
@@ -37,16 +37,16 @@ GPL-2.0-only
 ### `apk` package: `alpine-keys`
 
 ```console
-alpine-keys-2.1-r2 description:
+alpine-keys-2.2-r0 description:
 Public keys for Alpine Linux packages
 
-alpine-keys-2.1-r2 webpage:
+alpine-keys-2.2-r0 webpage:
 https://alpinelinux.org
 
-alpine-keys-2.1-r2 installed size:
-96 KiB
+alpine-keys-2.2-r0 installed size:
+104 KiB
 
-alpine-keys-2.1-r2 license:
+alpine-keys-2.2-r0 license:
 MIT
 
 ```
@@ -54,84 +54,84 @@ MIT
 ### `apk` package: `apk-tools`
 
 ```console
-apk-tools-2.10.4-r2 description:
+apk-tools-2.12.5-r0 description:
 Alpine Package Keeper - package manager for alpine
 
-apk-tools-2.10.4-r2 webpage:
-https://git.alpinelinux.org/cgit/apk-tools/
+apk-tools-2.12.5-r0 webpage:
+https://gitlab.alpinelinux.org/alpine/apk-tools
 
-apk-tools-2.10.4-r2 installed size:
-256 KiB
+apk-tools-2.12.5-r0 installed size:
+304 KiB
 
-apk-tools-2.10.4-r2 license:
-GPL2
+apk-tools-2.12.5-r0 license:
+GPL-2.0-only
 
 ```
 
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.30.1-r2 description:
+busybox-1.32.1-r6 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.30.1-r2 webpage:
+busybox-1.32.1-r6 webpage:
 https://busybox.net/
 
-busybox-1.30.1-r2 installed size:
-920 KiB
+busybox-1.32.1-r6 installed size:
+924 KiB
 
-busybox-1.30.1-r2 license:
-GPL-2.0
+busybox-1.32.1-r6 license:
+GPL-2.0-only
 
 ```
 
-### `apk` package: `ca-certificates-cacert`
+### `apk` package: `ca-certificates-bundle`
 
 ```console
-ca-certificates-cacert-20190108-r0 description:
-Mozilla bundled certificates
+ca-certificates-bundle-20191127-r5 description:
+Pre generated bundle of Mozilla certificates
 
-ca-certificates-cacert-20190108-r0 webpage:
+ca-certificates-bundle-20191127-r5 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-cacert-20190108-r0 installed size:
-240 KiB
+ca-certificates-bundle-20191127-r5 installed size:
+228 KiB
 
-ca-certificates-cacert-20190108-r0 license:
-MPL-2.0 GPL-2.0-or-later
+ca-certificates-bundle-20191127-r5 license:
+MPL-2.0 AND MIT
 
 ```
 
 ### `apk` package: `libc-utils`
 
 ```console
-libc-utils-0.7.1-r0 description:
+libc-utils-0.7.2-r3 description:
 Meta package to pull in correct libc
 
-libc-utils-0.7.1-r0 webpage:
-http://alpinelinux.org
+libc-utils-0.7.2-r3 webpage:
+https://alpinelinux.org
 
-libc-utils-0.7.1-r0 installed size:
+libc-utils-0.7.2-r3 installed size:
 4096 B
 
-libc-utils-0.7.1-r0 license:
-BSD
+libc-utils-0.7.2-r3 license:
+BSD-2-Clause AND BSD-3-Clause
 
 ```
 
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1c-r0 description:
+libcrypto1.1-1.1.1k-r0 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1c-r0 webpage:
-https://www.openssl.org
+libcrypto1.1-1.1.1k-r0 webpage:
+https://www.openssl.org/
 
-libcrypto1.1-1.1.1c-r0 installed size:
-2696 KiB
+libcrypto1.1-1.1.1k-r0 installed size:
+2704 KiB
 
-libcrypto1.1-1.1.1c-r0 license:
+libcrypto1.1-1.1.1k-r0 license:
 OpenSSL
 
 ```
@@ -139,16 +139,16 @@ OpenSSL
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1c-r0 description:
+libssl1.1-1.1.1k-r0 description:
 SSL shared libraries
 
-libssl1.1-1.1.1c-r0 webpage:
-https://www.openssl.org
+libssl1.1-1.1.1k-r0 webpage:
+https://www.openssl.org/
 
-libssl1.1-1.1.1c-r0 installed size:
-524 KiB
+libssl1.1-1.1.1k-r0 installed size:
+528 KiB
 
-libssl1.1-1.1.1c-r0 license:
+libssl1.1-1.1.1k-r0 license:
 OpenSSL
 
 ```
@@ -156,16 +156,16 @@ OpenSSL
 ### `apk` package: `libtls-standalone`
 
 ```console
-libtls-standalone-2.9.1-r0 description:
+libtls-standalone-2.9.1-r1 description:
 libtls extricated from libressl sources
 
-libtls-standalone-2.9.1-r0 webpage:
+libtls-standalone-2.9.1-r1 webpage:
 https://www.libressl.org/
 
-libtls-standalone-2.9.1-r0 installed size:
+libtls-standalone-2.9.1-r1 installed size:
 108 KiB
 
-libtls-standalone-2.9.1-r0 license:
+libtls-standalone-2.9.1-r1 license:
 ISC
 
 ```
@@ -173,16 +173,16 @@ ISC
 ### `apk` package: `musl`
 
 ```console
-musl-1.1.22-r3 description:
+musl-1.2.2-r1 description:
 the musl c library (libc) implementation
 
-musl-1.1.22-r3 webpage:
-http://www.musl-libc.org/
+musl-1.2.2-r1 webpage:
+https://musl.libc.org/
 
-musl-1.1.22-r3 installed size:
-584 KiB
+musl-1.2.2-r1 installed size:
+608 KiB
 
-musl-1.1.22-r3 license:
+musl-1.2.2-r1 license:
 MIT
 
 ```
@@ -190,16 +190,16 @@ MIT
 ### `apk` package: `musl-utils`
 
 ```console
-musl-utils-1.1.22-r3 description:
+musl-utils-1.2.2-r0 description:
 the musl c library (libc) implementation
 
-musl-utils-1.1.22-r3 webpage:
-http://www.musl-libc.org/
+musl-utils-1.2.2-r0 webpage:
+https://musl.libc.org/
 
-musl-utils-1.1.22-r3 installed size:
-144 KiB
+musl-utils-1.2.2-r0 installed size:
+140 KiB
 
-musl-utils-1.1.22-r3 license:
+musl-utils-1.2.2-r0 license:
 MIT BSD GPL2+
 
 ```
@@ -207,50 +207,50 @@ MIT BSD GPL2+
 ### `apk` package: `scanelf`
 
 ```console
-scanelf-1.2.3-r0 description:
+scanelf-1.2.8-r0 description:
 Scan ELF binaries for stuff
 
-scanelf-1.2.3-r0 webpage:
+scanelf-1.2.8-r0 webpage:
 https://wiki.gentoo.org/wiki/Hardened/PaX_Utilities
 
-scanelf-1.2.3-r0 installed size:
-96 KiB
+scanelf-1.2.8-r0 installed size:
+92 KiB
 
-scanelf-1.2.3-r0 license:
-GPL-2.0
+scanelf-1.2.8-r0 license:
+GPL-2.0-only
 
 ```
 
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.30.1-r2 description:
+ssl_client-1.32.1-r6 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.30.1-r2 webpage:
+ssl_client-1.32.1-r6 webpage:
 https://busybox.net/
 
-ssl_client-1.30.1-r2 installed size:
+ssl_client-1.32.1-r6 installed size:
 28 KiB
 
-ssl_client-1.30.1-r2 license:
-GPL-2.0
+ssl_client-1.32.1-r6 license:
+GPL-2.0-only
 
 ```
 
 ### `apk` package: `zlib`
 
 ```console
-zlib-1.2.11-r1 description:
+zlib-1.2.11-r3 description:
 A compression/decompression Library
 
-zlib-1.2.11-r1 webpage:
-http://zlib.net
+zlib-1.2.11-r3 webpage:
+https://zlib.net/
 
-zlib-1.2.11-r1 installed size:
+zlib-1.2.11-r3 installed size:
 108 KiB
 
-zlib-1.2.11-r1 license:
-zlib
+zlib-1.2.11-r3 license:
+Zlib
 
 ```
