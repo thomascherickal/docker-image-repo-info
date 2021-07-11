@@ -1,7 +1,7 @@
 ## `gcc:latest`
 
 ```console
-$ docker pull gcc@sha256:b3d14c145afab69282cb699e44ed8813fa0de932759a0a71f20fd9f4cb362e51
+$ docker pull gcc@sha256:550014fb5a5edab0a2ed4cf1c83cf27706ff1d23aa87dc08036aab34abb451be
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -344,44 +344,44 @@ RUN set -ex; 	dpkg-divert --divert /usr/bin/gcc.orig --rename /usr/bin/gcc; 	dpk
 ### `gcc:latest` - linux; ppc64le
 
 ```console
-$ docker pull gcc@sha256:84e3c56708b7bf58eafcb9fd298f7663a38323a435c4df318775a36105a00668
+$ docker pull gcc@sha256:544f36b64e90bee12dcc9a8ed5b841d526f3f0936db1cf6e92b0fc8a9733bd5c
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **458.6 MB (458566742 bytes)**  
+-	Total Size: **458.6 MB (458630435 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f09c6faabe36e91b425115c9371059f5ce72cfa681403e621e6d3071597e257a`
+-	Image ID: `sha256:5511e54e2f5cd732b1fdd71f20bdb209893a103dfbce9c148de218a7eb2aecb5`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Wed, 23 Jun 2021 00:28:56 GMT
+# Fri, 09 Jul 2021 15:56:25 GMT
 ADD file:902a353e8fdec64f149d504baaf70654faec8f23749856644d0edeaf32da0fba in / 
-# Wed, 23 Jun 2021 00:29:08 GMT
+# Fri, 09 Jul 2021 15:56:29 GMT
 CMD ["bash"]
-# Fri, 25 Jun 2021 21:40:22 GMT
+# Sat, 10 Jul 2021 06:07:13 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
-# Fri, 25 Jun 2021 21:44:03 GMT
+# Sat, 10 Jul 2021 06:08:29 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Fri, 25 Jun 2021 21:50:30 GMT
+# Sat, 10 Jul 2021 06:10:24 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
-# Fri, 25 Jun 2021 22:22:02 GMT
+# Sat, 10 Jul 2021 06:20:28 GMT
 RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		automake 		bzip2 		dpkg-dev 		file 		g++ 		gcc 		imagemagick 		libbz2-dev 		libc6-dev 		libcurl4-openssl-dev 		libdb-dev 		libevent-dev 		libffi-dev 		libgdbm-dev 		libglib2.0-dev 		libgmp-dev 		libjpeg-dev 		libkrb5-dev 		liblzma-dev 		libmagickcore-dev 		libmagickwand-dev 		libmaxminddb-dev 		libncurses5-dev 		libncursesw5-dev 		libpng-dev 		libpq-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		libtool 		libwebp-dev 		libxml2-dev 		libxslt-dev 		libyaml-dev 		make 		patch 		unzip 		xz-utils 		zlib1g-dev 				$( 			if apt-cache show 'default-libmysqlclient-dev' 2>/dev/null | grep -q '^Version:'; then 				echo 'default-libmysqlclient-dev'; 			else 				echo 'libmysqlclient-dev'; 			fi 		) 	; 	rm -rf /var/lib/apt/lists/*
-# Sat, 26 Jun 2021 17:21:10 GMT
+# Sat, 10 Jul 2021 23:41:28 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Sat, 26 Jun 2021 17:21:19 GMT
+# Sat, 10 Jul 2021 23:41:32 GMT
 ENV GPG_KEYS=B215C1633BCA0477615F1B35A5B3A004745C015A 	B3C42148A44E6983B3E4CC0793FA9B1AB75C61B8 	90AA470469D3965A87A5DCB494D03953902C9419 	80F98B2E0DAB6C8281BDF541A7C8C3B2F71EDF1C 	7F74F97C103468EE5D750B583AB00996FC26A641 	33C235A34C46AA3FFB293709A328C3A2C3C45C06 	D3A93CAD751C2AF4F8C7AD516C35B99309B5FA62
-# Sat, 26 Jun 2021 17:21:43 GMT
+# Sat, 10 Jul 2021 23:41:56 GMT
 RUN set -ex; 	for key in $GPG_KEYS; do 		gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 	done
-# Sat, 26 Jun 2021 17:21:53 GMT
+# Sat, 10 Jul 2021 23:41:59 GMT
 ENV GCC_MIRRORS=https://ftpmirror.gnu.org/gcc 		https://mirrors.kernel.org/gnu/gcc 		https://bigsearcher.com/mirrors/gcc/releases 		http://www.netgull.com/gcc/releases 		https://ftpmirror.gnu.org/gcc 		ftp://ftp.gnu.org/gnu/gcc
-# Sat, 26 Jun 2021 17:21:55 GMT
+# Sat, 10 Jul 2021 23:42:03 GMT
 ENV GCC_VERSION=11.1.0
-# Sat, 26 Jun 2021 18:44:33 GMT
+# Sun, 11 Jul 2021 01:03:38 GMT
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dpkg-dev 		flex 	; 	rm -r /var/lib/apt/lists/*; 		_fetch() { 		local fetch="$1"; shift; 		local file="$1"; shift; 		for mirror in $GCC_MIRRORS; do 			if curl -fL "$mirror/$fetch" -o "$file"; then 				return 0; 			fi; 		done; 		echo >&2 "error: failed to download '$fetch' from several mirrors"; 		return 1; 	}; 		_fetch "gcc-$GCC_VERSION/gcc-$GCC_VERSION.tar.xz.sig" 'gcc.tar.xz.sig'; 	_fetch "gcc-$GCC_VERSION/gcc-$GCC_VERSION.tar.xz" 'gcc.tar.xz'; 	gpg --batch --verify gcc.tar.xz.sig gcc.tar.xz; 	mkdir -p /usr/src/gcc; 	tar -xf gcc.tar.xz -C /usr/src/gcc --strip-components=1; 	rm gcc.tar.xz*; 		cd /usr/src/gcc; 		./contrib/download_prerequisites; 	{ rm *.tar.* || true; }; 		for f in config.guess config.sub; do 		wget -O "$f" "https://git.savannah.gnu.org/cgit/config.git/plain/$f?id=7d3d27baf8107b630586c962c057e22149653deb"; 		find -mindepth 2 -name "$f" -exec cp -v "$f" '{}' ';'; 	done; 		dir="$(mktemp -d)"; 	cd "$dir"; 		extraConfigureArgs=''; 	dpkgArch="$(dpkg --print-architecture)"; 	case "$dpkgArch" in 		armel) 			extraConfigureArgs="$extraConfigureArgs --with-arch=armv4t --with-float=soft" 			;; 		armhf) 			extraConfigureArgs="$extraConfigureArgs --with-arch=armv7-a --with-float=hard --with-fpu=vfpv3-d16 --with-mode=thumb" 			;; 				i386) 			osVersionID="$(set -e; . /etc/os-release; echo "$VERSION_ID")"; 			case "$osVersionID" in 				8) extraConfigureArgs="$extraConfigureArgs --with-arch-32=i586" ;; 				*) extraConfigureArgs="$extraConfigureArgs --with-arch-32=i686" ;; 			esac; 			;; 	esac; 		gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	/usr/src/gcc/configure 		--build="$gnuArch" 		--disable-multilib 		--enable-languages=c,c++,fortran,go 		$extraConfigureArgs 	; 	make -j "$(nproc)"; 	make install-strip; 		cd ..; 		rm -rf "$dir" /usr/src/gcc; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Sat, 26 Jun 2021 18:44:56 GMT
+# Sun, 11 Jul 2021 01:03:59 GMT
 RUN set -ex; 	{ echo '/usr/local/lib64'; echo '/usr/local/lib'; } > /etc/ld.so.conf.d/000-local-lib.conf; 	ldconfig -v
-# Sat, 26 Jun 2021 18:45:10 GMT
+# Sun, 11 Jul 2021 01:04:16 GMT
 RUN set -ex; 	dpkg-divert --divert /usr/bin/gcc.orig --rename /usr/bin/gcc; 	dpkg-divert --divert /usr/bin/g++.orig --rename /usr/bin/g++; 	dpkg-divert --divert /usr/bin/gfortran.orig --rename /usr/bin/gfortran; 	update-alternatives --install /usr/bin/cc cc /usr/local/bin/gcc 999
 ```
 
@@ -390,37 +390,37 @@ RUN set -ex; 	dpkg-divert --divert /usr/bin/gcc.orig --rename /usr/bin/gcc; 	dpk
 		Last Modified: Wed, 23 Jun 2021 00:35:48 GMT  
 		Size: 58.8 MB (58810873 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1297d76c9d3d445b22475bba78c4ac30f3629ad1899a68d6a75c7ccc4267b14f`  
-		Last Modified: Sat, 26 Jun 2021 01:46:42 GMT  
-		Size: 5.4 MB (5399544 bytes)  
+	-	`sha256:3a421b0d6d9b6902a218e70de32058d29eb3078735e0c5952457b9c374d3fabf`  
+		Last Modified: Sat, 10 Jul 2021 07:04:16 GMT  
+		Size: 5.4 MB (5400638 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d174c8408f9bfeebc04d4a1c81dbd9be6c5df13bcef6e1236309896b614bcbac`  
-		Last Modified: Sat, 26 Jun 2021 01:46:43 GMT  
-		Size: 11.6 MB (11625372 bytes)  
+	-	`sha256:06931f6d94bfc8b50c98dbdd3744053f9cafab50a00461e1990c3af3f5d8158e`  
+		Last Modified: Sat, 10 Jul 2021 07:04:21 GMT  
+		Size: 11.6 MB (11625404 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6598ea31ba49c582c2e6748c84b78d94681c8f9503bfcd9e1c555b9b7486104a`  
-		Last Modified: Sat, 26 Jun 2021 01:48:20 GMT  
-		Size: 58.8 MB (58849494 bytes)  
+	-	`sha256:8ad2b91ac3e7f764cf135b13868ee0508f6f6429f1da7c0ba00aee2fcbcc6469`  
+		Last Modified: Sat, 10 Jul 2021 07:05:08 GMT  
+		Size: 58.8 MB (58848838 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6ed3d1bb3324c04c7cea57c3e83e5cd7c36610eed31ebae541bcf5c7914907c5`  
-		Last Modified: Sat, 26 Jun 2021 01:52:24 GMT  
-		Size: 195.8 MB (195784402 bytes)  
+	-	`sha256:8c7d2f6280401ace693fdcc722113e7867536861502863e9d2b1493e03485220`  
+		Last Modified: Sat, 10 Jul 2021 07:05:59 GMT  
+		Size: 195.9 MB (195850387 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6324cfbd2a53a5b2bf143e1d4998b9bf844cc1bd39c7de9e92d5a52b46db4fb4`  
-		Last Modified: Sat, 26 Jun 2021 22:02:06 GMT  
-		Size: 15.4 KB (15416 bytes)  
+	-	`sha256:999c294a6d812c665c40234afcb03a39376e69a4c92b8ff4cfec997e5e4bed35`  
+		Last Modified: Sun, 11 Jul 2021 04:26:29 GMT  
+		Size: 15.4 KB (15430 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c26dac077c502806b01cb6913c3ed11923d1b009700995d9a6f5aff68b43470a`  
-		Last Modified: Sat, 26 Jun 2021 22:03:18 GMT  
-		Size: 128.1 MB (128069593 bytes)  
+	-	`sha256:d6d0e9881b07977b347439e5240568ba5521004ee3ecf1e731433359ddda189b`  
+		Last Modified: Sun, 11 Jul 2021 04:27:49 GMT  
+		Size: 128.1 MB (128066859 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:af785b17e497d14cbbd0251822f1ea4a83c3ac5a6731c480ce0f153e9f8216b5`  
-		Last Modified: Sat, 26 Jun 2021 22:02:07 GMT  
-		Size: 10.1 KB (10055 bytes)  
+	-	`sha256:6ca8d8759d1d155b9a084fd70f46744a9f368cb7e7cfd2c4ad4fba7832df78fc`  
+		Last Modified: Sun, 11 Jul 2021 04:26:29 GMT  
+		Size: 10.1 KB (10057 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b4dc6edfab35257b4b4e16b8bc528608bdbbcccd32df7e4e185d68b75e0ffe88`  
-		Last Modified: Sat, 26 Jun 2021 22:02:07 GMT  
-		Size: 2.0 KB (1993 bytes)  
+	-	`sha256:e98619845c10eaf5fa36aea7604fce337308fd9e499cc469788fd59cb5dd41ce`  
+		Last Modified: Sun, 11 Jul 2021 04:26:33 GMT  
+		Size: 1.9 KB (1949 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `gcc:latest` - linux; s390x
