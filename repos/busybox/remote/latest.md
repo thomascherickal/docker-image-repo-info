@@ -1,7 +1,7 @@
 ## `busybox:latest`
 
 ```console
-$ docker pull busybox@sha256:930490f97e5b921535c153e0e7110d251134cc4b72bbb8133c6a5065cc68580d
+$ docker pull busybox@sha256:0f354ec1728d9ff32edcd7d1b8bbdfc798277ad36120dc3dc683be44524c8b60
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -14,6 +14,7 @@ $ docker pull busybox@sha256:930490f97e5b921535c153e0e7110d251134cc4b72bbb8133c6
 	-	linux; 386
 	-	linux; mips64le
 	-	linux; ppc64le
+	-	linux; riscv64
 	-	linux; s390x
 
 ### `busybox:latest` - linux; amd64
@@ -45,20 +46,20 @@ CMD ["sh"]
 ### `busybox:latest` - linux; arm variant v5
 
 ```console
-$ docker pull busybox@sha256:9cd47e9327430990c932b19596f8760e7d1a0be0311bb31bab3170bec5f27358
+$ docker pull busybox@sha256:09242dfdcdd10df740a93ebc9662507b4f23777c6ddc81f8ceacfc9a48a31322
 ```
 
--	Docker Version: 19.03.12
+-	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
 -	Total Size: **750.1 KB (750093 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:eab472412e259cd5b122eacc26e79acbca34a43204c2e0e2030f3b478340435f`
+-	Image ID: `sha256:68bb6d826ec5a8d3c9511e087a39eef42c804d8e499cbf0e8d8b1a5fa2494e4b`
 -	Default Command: `["sh"]`
 
 ```dockerfile
-# Mon, 07 Jun 2021 19:48:17 GMT
+# Mon, 12 Jul 2021 17:48:28 GMT
 ADD file:e1dda8adb2d43e1a99d98282650e8d9b0054031c87398a27fee727278f5f21b7 in / 
-# Mon, 07 Jun 2021 19:48:18 GMT
+# Mon, 12 Jul 2021 17:48:29 GMT
 CMD ["sh"]
 ```
 
@@ -71,20 +72,20 @@ CMD ["sh"]
 ### `busybox:latest` - linux; arm variant v6
 
 ```console
-$ docker pull busybox@sha256:842295d11871c16bbce4d30cabc9b0f1e0cc40e49975f538179529d7798f77d8
+$ docker pull busybox@sha256:44a1490f5da02cd6d8b2efdb9e0851b2c360349bdc4640b600c90311c0c9d812
 ```
 
--	Docker Version: 19.03.12
+-	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
 -	Total Size: **946.0 KB (946027 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:9e931b9e6a24648a2d70abec537d2b750397e958546cdab388de63fdabae27ce`
+-	Image ID: `sha256:0fac15a2149edb548085141aeb82953d8bdc6e107484beada2f0b0c5277aea94`
 -	Default Command: `["sh"]`
 
 ```dockerfile
-# Mon, 07 Jun 2021 19:49:21 GMT
+# Mon, 12 Jul 2021 17:49:25 GMT
 ADD file:9746a3f2456bbb079ccecaba2a4d262b6e678bc5a05df3e8dc7d926dbeba4570 in / 
-# Mon, 07 Jun 2021 19:49:21 GMT
+# Mon, 12 Jul 2021 17:49:26 GMT
 CMD ["sh"]
 ```
 
@@ -97,20 +98,20 @@ CMD ["sh"]
 ### `busybox:latest` - linux; arm variant v7
 
 ```console
-$ docker pull busybox@sha256:0dd359f0ea0f644cbc1aa467681654c6b4332015ae37af2916b0dfb73b83fd52
+$ docker pull busybox@sha256:49fe19ce9b78d2f7b8dbcbca928c73652dba2fe797fb078453f5601a4f49e499
 ```
 
--	Docker Version: 19.03.12
+-	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
 -	Total Size: **719.8 KB (719772 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f079b166847380edb64cc97d6a85743bfb37991ae041898a8938fb6fa5bc2d55`
+-	Image ID: `sha256:d5b715f5cf92e6cb5e0d62622a3ec218a382db2804909ef2384fa270d7c3596d`
 -	Default Command: `["sh"]`
 
 ```dockerfile
-# Mon, 07 Jun 2021 19:57:21 GMT
+# Mon, 12 Jul 2021 18:34:21 GMT
 ADD file:027d175a7700e8f986a26ededeb4d5f9e6e974fb4d0fe39db47a531170ec8509 in / 
-# Mon, 07 Jun 2021 19:57:21 GMT
+# Mon, 12 Jul 2021 18:34:21 GMT
 CMD ["sh"]
 ```
 
@@ -201,20 +202,20 @@ CMD ["sh"]
 ### `busybox:latest` - linux; ppc64le
 
 ```console
-$ docker pull busybox@sha256:04ebe37e000dcd9b1386af0e2d9aad726cbd1581f82067bea5cd2532b1f06310
+$ docker pull busybox@sha256:002265f553555c92ddc51aa292e458a44615af64e22b8b35192ff4ca1801e8cd
 ```
 
--	Docker Version: 19.03.12
+-	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
 -	Total Size: **2.6 MB (2628186 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1f0464bb6199d8f6be474d8a16a4a7c61593ce20b27f7a7e0dec09e29ac665a0`
+-	Image ID: `sha256:09b9e732ef89627f2ac2788fc7a0041468a86c5c6b628194d7d803ef5047e056`
 -	Default Command: `["sh"]`
 
 ```dockerfile
-# Mon, 07 Jun 2021 20:16:55 GMT
+# Mon, 12 Jul 2021 17:32:41 GMT
 ADD file:53a0415b4361e641adaa12ecabfcd760e4e6251de714010e546a8f2efa8e60eb in / 
-# Mon, 07 Jun 2021 20:16:59 GMT
+# Mon, 12 Jul 2021 17:32:43 GMT
 CMD ["sh"]
 ```
 
@@ -224,23 +225,49 @@ CMD ["sh"]
 		Size: 2.6 MB (2628186 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `busybox:latest` - linux; s390x
+### `busybox:latest` - linux; riscv64
 
 ```console
-$ docker pull busybox@sha256:c10e75f6e5442f446b7c053ff2f360a4052f759c59be9a4c7d144f60207c6eda
+$ docker pull busybox@sha256:5a43a82d5e4a8f1a827c0bb63648460af4e6a9f3c95a039c446614045a695b84
 ```
 
--	Docker Version: 19.03.12
+-	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **2.1 MB (2141779 bytes)**  
+-	Total Size: **904.7 KB (904687 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:48cf940c178796014aaf9f9524f2506dd09ac2324dfe697bd9684818971c75fb`
+-	Image ID: `sha256:d37ef19bc9b2a68b672ca166af9b25edd960559c0d9e8da18e6d31cd6248bef8`
 -	Default Command: `["sh"]`
 
 ```dockerfile
-# Mon, 07 Jun 2021 20:41:25 GMT
+# Mon, 12 Jul 2021 17:06:13 GMT
+ADD file:ef9a283b094875c45b1c657bf7561bfefd16d75323a90190d96819ff12374a85 in / 
+# Mon, 12 Jul 2021 17:06:13 GMT
+CMD ["sh"]
+```
+
+-	Layers:
+	-	`sha256:68a7b17dc57cb1012cba93ff1bc9a475e6673ab45d68ed2899f839f61042d9a2`  
+		Last Modified: Mon, 12 Jul 2021 17:19:08 GMT  
+		Size: 904.7 KB (904687 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `busybox:latest` - linux; s390x
+
+```console
+$ docker pull busybox@sha256:4600ef29aff996daeadbc9b9f5c6e3ef83027704f9d75e07fc927911dd000a87
+```
+
+-	Docker Version: 20.10.7
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **2.1 MB (2141779 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:1c58d8ab5ec7f297d368cda73593c8254027a0ceac4afb0d651672cb173b020e`
+-	Default Command: `["sh"]`
+
+```dockerfile
+# Mon, 12 Jul 2021 17:46:17 GMT
 ADD file:6b6e498eb209bae7a59324fec359d66ed0f1e864f7f470dd4645c83528a27516 in / 
-# Mon, 07 Jun 2021 20:41:25 GMT
+# Mon, 12 Jul 2021 17:46:17 GMT
 CMD ["sh"]
 ```
 

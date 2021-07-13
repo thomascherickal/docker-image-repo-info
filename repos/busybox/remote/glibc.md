@@ -1,7 +1,7 @@
 ## `busybox:glibc`
 
 ```console
-$ docker pull busybox@sha256:71ea9b62a9719497b804a19d674ee3d1e90bf6f81bc159ebf2b158cdd36955ed
+$ docker pull busybox@sha256:ec254da8ed8bf758edf8a347e9dc2486b8afa52deb3e06b05c6e61bdb20ca78f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -44,20 +44,20 @@ CMD ["sh"]
 ### `busybox:glibc` - linux; arm variant v5
 
 ```console
-$ docker pull busybox@sha256:b6cce92b1df1193c2da6be5baefaa1db3c728da9cac2fe4da7517983fc7c7c8c
+$ docker pull busybox@sha256:4990ce63f0cb97a637ba026a467373777e949795c23ead71cc30d3dfe967e6b0
 ```
 
--	Docker Version: 19.03.12
+-	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
 -	Total Size: **2.1 MB (2058153 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4d76c6437eabf26c50693e5177bba89278fc0ea8a2094142f38c9ae1d0a9193d`
+-	Image ID: `sha256:cadc2f63a5c1ce2f8b1a48accb7db344f4681d7c4dce49060d3079cb4143b416`
 -	Default Command: `["sh"]`
 
 ```dockerfile
-# Mon, 07 Jun 2021 19:48:27 GMT
+# Mon, 12 Jul 2021 17:48:45 GMT
 ADD file:7396fd794446af7ce706bc6d6a755bfd62fceeb3620a19edb0549b6f8783b819 in / 
-# Mon, 07 Jun 2021 19:48:27 GMT
+# Mon, 12 Jul 2021 17:48:45 GMT
 CMD ["sh"]
 ```
 
@@ -70,20 +70,20 @@ CMD ["sh"]
 ### `busybox:glibc` - linux; arm variant v7
 
 ```console
-$ docker pull busybox@sha256:40b119202758be5f3983b193c092118fe6793b949e780ac200b508af6236a47c
+$ docker pull busybox@sha256:50bbc298beea6123483987057193eb36ac9e3631da9f5a8f5edbb51ba44d3355
 ```
 
--	Docker Version: 19.03.12
+-	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
 -	Total Size: **1.8 MB (1790965 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:08475acff4102126af74cf4129e569770fd21260dd4c743092ab0e1ac3e1b754`
+-	Image ID: `sha256:69769e9bdfea95716342db553ff9f4e8fc83cffcf2a8326c1b33b142e5a90faa`
 -	Default Command: `["sh"]`
 
 ```dockerfile
-# Mon, 07 Jun 2021 19:57:32 GMT
+# Mon, 12 Jul 2021 18:34:41 GMT
 ADD file:1db6c6177728027c41779beb55e672ba34be8dd93cb9924fa033b8a7238ea7e5 in / 
-# Mon, 07 Jun 2021 19:57:32 GMT
+# Mon, 12 Jul 2021 18:34:42 GMT
 CMD ["sh"]
 ```
 
@@ -174,20 +174,20 @@ CMD ["sh"]
 ### `busybox:glibc` - linux; ppc64le
 
 ```console
-$ docker pull busybox@sha256:04ebe37e000dcd9b1386af0e2d9aad726cbd1581f82067bea5cd2532b1f06310
+$ docker pull busybox@sha256:002265f553555c92ddc51aa292e458a44615af64e22b8b35192ff4ca1801e8cd
 ```
 
--	Docker Version: 19.03.12
+-	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
 -	Total Size: **2.6 MB (2628186 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1f0464bb6199d8f6be474d8a16a4a7c61593ce20b27f7a7e0dec09e29ac665a0`
+-	Image ID: `sha256:09b9e732ef89627f2ac2788fc7a0041468a86c5c6b628194d7d803ef5047e056`
 -	Default Command: `["sh"]`
 
 ```dockerfile
-# Mon, 07 Jun 2021 20:16:55 GMT
+# Mon, 12 Jul 2021 17:32:41 GMT
 ADD file:53a0415b4361e641adaa12ecabfcd760e4e6251de714010e546a8f2efa8e60eb in / 
-# Mon, 07 Jun 2021 20:16:59 GMT
+# Mon, 12 Jul 2021 17:32:43 GMT
 CMD ["sh"]
 ```
 
@@ -200,20 +200,20 @@ CMD ["sh"]
 ### `busybox:glibc` - linux; s390x
 
 ```console
-$ docker pull busybox@sha256:c10e75f6e5442f446b7c053ff2f360a4052f759c59be9a4c7d144f60207c6eda
+$ docker pull busybox@sha256:4600ef29aff996daeadbc9b9f5c6e3ef83027704f9d75e07fc927911dd000a87
 ```
 
--	Docker Version: 19.03.12
+-	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
 -	Total Size: **2.1 MB (2141779 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:48cf940c178796014aaf9f9524f2506dd09ac2324dfe697bd9684818971c75fb`
+-	Image ID: `sha256:1c58d8ab5ec7f297d368cda73593c8254027a0ceac4afb0d651672cb173b020e`
 -	Default Command: `["sh"]`
 
 ```dockerfile
-# Mon, 07 Jun 2021 20:41:25 GMT
+# Mon, 12 Jul 2021 17:46:17 GMT
 ADD file:6b6e498eb209bae7a59324fec359d66ed0f1e864f7f470dd4645c83528a27516 in / 
-# Mon, 07 Jun 2021 20:41:25 GMT
+# Mon, 12 Jul 2021 17:46:17 GMT
 CMD ["sh"]
 ```
 
