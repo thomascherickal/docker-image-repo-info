@@ -184,19 +184,13 @@ Licenses: (parsed from: `/usr/share/doc/base-passwd/copyright`)
 - `GPL-2`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris base-passwd=3.5.50
-'http://deb.debian.org/debian/pool/main/b/base-passwd/base-passwd_3.5.50.dsc' base-passwd_3.5.50.dsc 1757 SHA256:158aebdafda7c19603ccb34e360fbcbfa5ef4711b69b01d06e1b72856ca2fa08
-'http://deb.debian.org/debian/pool/main/b/base-passwd/base-passwd_3.5.50.tar.xz' base-passwd_3.5.50.tar.xz 53836 SHA256:5094dcd8d99216c6ead2c8d1167a543864b5c80db81ab266dd23814753295c75
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/base-passwd/3.5.50/
 
-- https://sources.debian.net/src/base-passwd/3.5.50/ (for browsing the source)
-- https://sources.debian.net/src/base-passwd/3.5.50/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/base-passwd/3.5.50/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `bash=5.1-3`
 
@@ -1544,20 +1538,13 @@ Licenses: (parsed from: `/usr/share/doc/libpam-modules/copyright`, `/usr/share/d
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pam=1.4.0-7
-'http://deb.debian.org/debian/pool/main/p/pam/pam_1.4.0-7.dsc' pam_1.4.0-7.dsc 1909 SHA256:6608ca39e9da67a59e7096e1badb2336737224d8d791ee15e05c94554485e3a2
-'http://deb.debian.org/debian/pool/main/p/pam/pam_1.4.0.orig.tar.xz' pam_1.4.0.orig.tar.xz 988908 SHA256:cd6d928c51e64139be3bdb38692c68183a509b83d4f2c221024ccd4bcddfd034
-'http://deb.debian.org/debian/pool/main/p/pam/pam_1.4.0-7.debian.tar.xz' pam_1.4.0-7.debian.tar.xz 119620 SHA256:4104b41ea90c86fb6ab50c7ca6e7735dda0139b6898350206f2e09d542a39783
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/pam/1.4.0-7/
 
-- https://sources.debian.net/src/pam/1.4.0-7/ (for browsing the source)
-- https://sources.debian.net/src/pam/1.4.0-7/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/pam/1.4.0-7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pcre2=10.36-2`
 
