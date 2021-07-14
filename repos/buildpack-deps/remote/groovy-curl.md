@@ -1,7 +1,7 @@
 ## `buildpack-deps:groovy-curl`
 
 ```console
-$ docker pull buildpack-deps@sha256:6b6f7f35b2aa14a7db52c814ccdeb49d19cc682f075d45bd3f346791aad79703
+$ docker pull buildpack-deps@sha256:616b272ded42c7208911081efed5edd9c30941fbcf6f149d58d9c151f69f312e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -129,39 +129,39 @@ RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get 
 ### `buildpack-deps:groovy-curl` - linux; ppc64le
 
 ```console
-$ docker pull buildpack-deps@sha256:044846c1992c3a9281b9718a08153d979904610d9c31e4d2df06f62169ca2086
+$ docker pull buildpack-deps@sha256:d783add69d2804fe48bd463685ef867ddf1092dae7a72b456fbf651c912f286c
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **47.1 MB (47124007 bytes)**  
+-	Total Size: **47.1 MB (47125494 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b66b6aaae2f85f814c698d318b0dac6de1a08b3c82c7c1fc43f347f8f7cbcf1a`
+-	Image ID: `sha256:1786ea2c6d7caab11adaf79a4e4339f0da55a88538c8237b8838f61a885d8d85`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Thu, 17 Jun 2021 23:25:32 GMT
-ADD file:5b3e0dae91824102eb438ea2d8c1f1190ffcaa623f93c4e0e96004e1098cacb7 in / 
-# Thu, 17 Jun 2021 23:25:40 GMT
+# Tue, 13 Jul 2021 23:22:45 GMT
+ADD file:d810eebdcea73da6a0b9c4546fc356b13b60da24827c29923375b8e08f2195b4 in / 
+# Tue, 13 Jul 2021 23:22:53 GMT
 CMD ["bash"]
-# Sat, 26 Jun 2021 00:54:22 GMT
+# Wed, 14 Jul 2021 02:27:14 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 		tzdata 	; 	rm -rf /var/lib/apt/lists/*
-# Sat, 26 Jun 2021 00:55:49 GMT
+# Wed, 14 Jul 2021 02:30:49 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
 ```
 
 -	Layers:
-	-	`sha256:2f3c6e346cb79378eaa11a81268da2aa9fb480ab376c060d5cb48380f3754b37`  
-		Last Modified: Thu, 17 Jun 2021 23:29:02 GMT  
-		Size: 36.6 MB (36561549 bytes)  
+	-	`sha256:97b0da8da7b9eb227e28852cb467ba3f76ac379708648200f035c072d3bbf4eb`  
+		Last Modified: Tue, 13 Jul 2021 23:28:00 GMT  
+		Size: 36.6 MB (36562496 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fdf3088338753aedc77d485ca99aac63dc4bc2bb88f766d066e9a92385a5ce31`  
-		Last Modified: Sat, 26 Jun 2021 02:18:29 GMT  
-		Size: 6.0 MB (6040721 bytes)  
+	-	`sha256:19019a66a1c7600fb2159a63b0e68f36b9d9f55e9e56ae7b70139ac7565616c1`  
+		Last Modified: Wed, 14 Jul 2021 03:24:17 GMT  
+		Size: 6.0 MB (6040945 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:432b10ec98757d1b5f49aeaf3288c25955f16a32ac6a74b66cd627510ceb29c6`  
-		Last Modified: Sat, 26 Jun 2021 02:18:24 GMT  
-		Size: 4.5 MB (4521737 bytes)  
+	-	`sha256:8b7e113d40008d7a4f01ffb65b6bee553ec1af6ea5935387bfc2677d6a9888ba`  
+		Last Modified: Wed, 14 Jul 2021 03:24:01 GMT  
+		Size: 4.5 MB (4522053 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `buildpack-deps:groovy-curl` - linux; s390x

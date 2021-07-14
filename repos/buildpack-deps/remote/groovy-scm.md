@@ -1,7 +1,7 @@
 ## `buildpack-deps:groovy-scm`
 
 ```console
-$ docker pull buildpack-deps@sha256:61892ea350994f807083c75321a15c1bdde4335e7b0cc58de81e684f633bfa80
+$ docker pull buildpack-deps@sha256:d23e9bded04da9370909c0d2f48c168ef8e46736ec4ba8d0394e85fd4bb43e33
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -147,45 +147,45 @@ RUN apt-get update && apt-get install -y --no-install-recommends 		bzr 		git 		m
 ### `buildpack-deps:groovy-scm` - linux; ppc64le
 
 ```console
-$ docker pull buildpack-deps@sha256:f0fe9add7985d92c6808484c0efde2028bb6d2cd5ba709fcc78782419790e4c1
+$ docker pull buildpack-deps@sha256:bbe6ad4f8fd8f43dd50545a1348aa43910938be03a4f4698713566ca9e058474
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **110.9 MB (110865638 bytes)**  
+-	Total Size: **110.9 MB (110868939 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a99fe74ca30bda86d174201abfcea257f1b7eb65bc2052b87edbc744789da97a`
+-	Image ID: `sha256:913ec8562330786224cf40283e34dd89c7684e6d1d7a0f1b4f1e95fde3e7513f`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Thu, 17 Jun 2021 23:25:32 GMT
-ADD file:5b3e0dae91824102eb438ea2d8c1f1190ffcaa623f93c4e0e96004e1098cacb7 in / 
-# Thu, 17 Jun 2021 23:25:40 GMT
+# Tue, 13 Jul 2021 23:22:45 GMT
+ADD file:d810eebdcea73da6a0b9c4546fc356b13b60da24827c29923375b8e08f2195b4 in / 
+# Tue, 13 Jul 2021 23:22:53 GMT
 CMD ["bash"]
-# Sat, 26 Jun 2021 00:54:22 GMT
+# Wed, 14 Jul 2021 02:27:14 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 		tzdata 	; 	rm -rf /var/lib/apt/lists/*
-# Sat, 26 Jun 2021 00:55:49 GMT
+# Wed, 14 Jul 2021 02:30:49 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Sat, 26 Jun 2021 01:01:34 GMT
+# Wed, 14 Jul 2021 02:35:11 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		bzr 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
 ```
 
 -	Layers:
-	-	`sha256:2f3c6e346cb79378eaa11a81268da2aa9fb480ab376c060d5cb48380f3754b37`  
-		Last Modified: Thu, 17 Jun 2021 23:29:02 GMT  
-		Size: 36.6 MB (36561549 bytes)  
+	-	`sha256:97b0da8da7b9eb227e28852cb467ba3f76ac379708648200f035c072d3bbf4eb`  
+		Last Modified: Tue, 13 Jul 2021 23:28:00 GMT  
+		Size: 36.6 MB (36562496 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fdf3088338753aedc77d485ca99aac63dc4bc2bb88f766d066e9a92385a5ce31`  
-		Last Modified: Sat, 26 Jun 2021 02:18:29 GMT  
-		Size: 6.0 MB (6040721 bytes)  
+	-	`sha256:19019a66a1c7600fb2159a63b0e68f36b9d9f55e9e56ae7b70139ac7565616c1`  
+		Last Modified: Wed, 14 Jul 2021 03:24:17 GMT  
+		Size: 6.0 MB (6040945 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:432b10ec98757d1b5f49aeaf3288c25955f16a32ac6a74b66cd627510ceb29c6`  
-		Last Modified: Sat, 26 Jun 2021 02:18:24 GMT  
-		Size: 4.5 MB (4521737 bytes)  
+	-	`sha256:8b7e113d40008d7a4f01ffb65b6bee553ec1af6ea5935387bfc2677d6a9888ba`  
+		Last Modified: Wed, 14 Jul 2021 03:24:01 GMT  
+		Size: 4.5 MB (4522053 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:32e5cbe30721952aa4eba97d67389e491f056e856cefb4754ddb778c7d02cd3b`  
-		Last Modified: Sat, 26 Jun 2021 02:20:04 GMT  
-		Size: 63.7 MB (63741631 bytes)  
+	-	`sha256:f499186162dbbd18ecdc41e48723d94384601a434160e441c62890afc5a08b62`  
+		Last Modified: Wed, 14 Jul 2021 03:25:24 GMT  
+		Size: 63.7 MB (63743445 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `buildpack-deps:groovy-scm` - linux; s390x
