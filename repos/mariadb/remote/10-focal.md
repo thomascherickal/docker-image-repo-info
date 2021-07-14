@@ -1,7 +1,7 @@
 ## `mariadb:10-focal`
 
 ```console
-$ docker pull mariadb@sha256:bc3892fe4aa5574c5cd553913a8661f265b2916cdde9cef81e46597963b12c19
+$ docker pull mariadb@sha256:d91a1a362a01a4f26c5ed3b34a861f6c1f22a20176ff4a464902adfe8382bafd
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -119,107 +119,107 @@ CMD ["mysqld"]
 ### `mariadb:10-focal` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:7c1e04abd1a1706a2517016c7a97ab0624b4ed8f5bbdf3448a1559f4920350d5
+$ docker pull mariadb@sha256:239e4679d65d9a44c983072b52312f8cbfaf505a805090aa97d1a65266c82669
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **124.3 MB (124295057 bytes)**  
+-	Total Size: **124.3 MB (124305174 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:8971bc2f64926d748bcf356b064f443a995d2beee6cd50644b4a1fc4ed219993`
+-	Image ID: `sha256:5769943918c67f6492a009979e758470c83b2de2a83d1716402f1d4009b78479`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mysqld"]`
 
 ```dockerfile
-# Thu, 17 Jun 2021 23:53:58 GMT
-ADD file:9e94a579f0495fce8fac6889d0b9b2cd576d5b3ce9f18ff913ad99a503756769 in / 
-# Thu, 17 Jun 2021 23:53:59 GMT
+# Tue, 13 Jul 2021 23:01:23 GMT
+ADD file:4a34ac318ec122d2262279f4f06fd87cdf0383df4b0919cd46f3455b4fcb20a2 in / 
+# Tue, 13 Jul 2021 23:01:23 GMT
 CMD ["bash"]
-# Fri, 18 Jun 2021 00:46:09 GMT
+# Tue, 13 Jul 2021 23:40:19 GMT
 RUN groupadd -r mysql && useradd -r -g mysql mysql
-# Fri, 18 Jun 2021 00:46:18 GMT
+# Tue, 13 Jul 2021 23:40:28 GMT
 RUN set -ex; 	apt-get update; 	if ! which gpg; then 		apt-get install -y --no-install-recommends gnupg; 	fi; 	if ! gpg --version | grep -q '^gpg (GnuPG) 1\.'; then 		apt-get install -y --no-install-recommends dirmngr; 	fi; 	rm -rf /var/lib/apt/lists/*
-# Tue, 13 Jul 2021 17:40:03 GMT
+# Tue, 13 Jul 2021 23:40:29 GMT
 ENV GOSU_VERSION=1.13
-# Tue, 13 Jul 2021 17:40:16 GMT
+# Tue, 13 Jul 2021 23:40:44 GMT
 RUN set -eux; 	apt-get update; 	DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends ca-certificates; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get install -y --no-install-recommends wget; 	rm -rf /var/lib/apt/lists/*; 	dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
-# Tue, 13 Jul 2021 17:40:17 GMT
+# Tue, 13 Jul 2021 23:40:44 GMT
 RUN mkdir /docker-entrypoint-initdb.d
-# Tue, 13 Jul 2021 17:40:24 GMT
+# Tue, 13 Jul 2021 23:40:51 GMT
 RUN set -ex; 	apt-get update; 	DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends 		libjemalloc2 		pwgen 		tzdata 		xz-utils 		zstd 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 13 Jul 2021 17:40:24 GMT
+# Tue, 13 Jul 2021 23:40:52 GMT
 ARG GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8
-# Tue, 13 Jul 2021 17:40:27 GMT
+# Tue, 13 Jul 2021 23:40:54 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8
 RUN set -ex; 	export GNUPGHOME="$(mktemp -d)"; 	for key in $GPG_KEYS; do 		gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	done; 	gpg --batch --export $GPG_KEYS > /etc/apt/trusted.gpg.d/mariadb.gpg; 	command -v gpgconf > /dev/null && gpgconf --kill all || :; 	rm -fr "$GNUPGHOME"; 	apt-key list
-# Tue, 13 Jul 2021 17:40:27 GMT
+# Tue, 13 Jul 2021 23:40:54 GMT
 ARG MARIADB_MAJOR=10.6
-# Tue, 13 Jul 2021 17:40:27 GMT
+# Tue, 13 Jul 2021 23:40:55 GMT
 ENV MARIADB_MAJOR=10.6
-# Tue, 13 Jul 2021 17:40:27 GMT
+# Tue, 13 Jul 2021 23:40:55 GMT
 ARG MARIADB_VERSION=1:10.6.3+maria~focal
-# Tue, 13 Jul 2021 17:40:27 GMT
+# Tue, 13 Jul 2021 23:40:55 GMT
 ENV MARIADB_VERSION=1:10.6.3+maria~focal
-# Tue, 13 Jul 2021 17:40:27 GMT
+# Tue, 13 Jul 2021 23:40:55 GMT
 ARG REPOSITORY=http://archive.mariadb.org/mariadb-10.6.3/repo/ubuntu/ focal main
-# Tue, 13 Jul 2021 17:40:28 GMT
+# Tue, 13 Jul 2021 23:40:56 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.6.3/repo/ubuntu/ focal main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Tue, 13 Jul 2021 17:40:49 GMT
+# Tue, 13 Jul 2021 23:41:16 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.6.3/repo/ubuntu/ focal main
 RUN set -ex; 	{ 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password password 'unused'; 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y 		"mariadb-server=$MARIADB_VERSION" 		mariadb-backup 		socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	if [ ! -L /etc/mysql/my.cnf ]; then sed -i -e '/includedir/i[mariadb]\nskip-host-cache\nskip-name-resolve\n' /etc/mysql/my.cnf; 	else sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/[mariadbd]\nskip-host-cache\nskip-name-resolve\n\n\2\n\1/}'                 /etc/mysql/mariadb.cnf; fi
-# Tue, 13 Jul 2021 17:40:49 GMT
+# Tue, 13 Jul 2021 23:41:17 GMT
 VOLUME [/var/lib/mysql]
-# Tue, 13 Jul 2021 17:40:49 GMT
+# Tue, 13 Jul 2021 23:41:17 GMT
 COPY file:b3c92236ffa4530a3affc90901b4ff364200997f53728db206774632c54ed4bb in /usr/local/bin/ 
-# Tue, 13 Jul 2021 17:40:50 GMT
+# Tue, 13 Jul 2021 23:41:18 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Tue, 13 Jul 2021 17:40:50 GMT
+# Tue, 13 Jul 2021 23:41:18 GMT
 EXPOSE 3306
-# Tue, 13 Jul 2021 17:40:50 GMT
+# Tue, 13 Jul 2021 23:41:18 GMT
 CMD ["mysqld"]
 ```
 
 -	Layers:
-	-	`sha256:6f86eded34a1950318569803a7e0c689175ebd9d76faf08798f88ac133b98a11`  
-		Last Modified: Thu, 17 Jun 2021 23:56:04 GMT  
-		Size: 27.2 MB (27158803 bytes)  
+	-	`sha256:99006dae3b24cf096633c9f0234ddeefee9042d4bede6ebc607d63a52bb79fb0`  
+		Last Modified: Tue, 13 Jul 2021 23:03:36 GMT  
+		Size: 27.2 MB (27169081 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9fe2fb22009549c382a13f19944b1f677fbd86342fb82606d2d32e270f103554`  
-		Last Modified: Fri, 18 Jun 2021 00:51:08 GMT  
-		Size: 1.8 KB (1755 bytes)  
+	-	`sha256:1866247a8c244dc65add23238c2be8aa4860fb8463050c215ed786bb4a39b29c`  
+		Last Modified: Tue, 13 Jul 2021 23:45:20 GMT  
+		Size: 1.7 KB (1746 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bd425bf20e5a7b2f63ecc734c73ed6a0c78454e5db14f76a86cd5c725df84f42`  
-		Last Modified: Fri, 18 Jun 2021 00:51:08 GMT  
-		Size: 5.5 MB (5455206 bytes)  
+	-	`sha256:f61d83b1c8ef82d33928af5183a83be2534a72522727ed2de9041c24b82b3c16`  
+		Last Modified: Tue, 13 Jul 2021 23:45:20 GMT  
+		Size: 5.5 MB (5455146 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:95476f985f66141602bee4af58fda3497c5f3dc40621e7be934e9cfa12bc11f2`  
-		Last Modified: Tue, 13 Jul 2021 17:44:33 GMT  
-		Size: 3.4 MB (3367339 bytes)  
+	-	`sha256:a7a77417ecdb153ca7a104f3a35e99fe0c9ffbc8fb2ce8ce543cc95c108db6ee`  
+		Last Modified: Tue, 13 Jul 2021 23:45:20 GMT  
+		Size: 3.4 MB (3367280 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:744eb23454db53a8cbb45412a3242113844d873810f2e01573118fc7f6ade5bf`  
-		Last Modified: Tue, 13 Jul 2021 17:44:32 GMT  
+	-	`sha256:451fd044ee319a728a9c2e769b5a430ae91313fe520417d7a885d86f8b8a435f`  
+		Last Modified: Tue, 13 Jul 2021 23:45:19 GMT  
 		Size: 149.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:17fe90c710c438a29ad2e937f84629fff6bd58a87689563577752736deac0e2a`  
-		Last Modified: Tue, 13 Jul 2021 17:44:31 GMT  
-		Size: 2.2 MB (2203594 bytes)  
+	-	`sha256:ab9cb10aa0678e7db1d957917646d80aa856048258f79128ad45b59741de94b0`  
+		Last Modified: Tue, 13 Jul 2021 23:45:17 GMT  
+		Size: 2.2 MB (2203601 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:adb33b7768bc0426c690b16b1f771c89e3f32dfd4c539a61f0dd68b9a1df9cf1`  
-		Last Modified: Tue, 13 Jul 2021 17:44:30 GMT  
+	-	`sha256:e2b43a94638739874436239325e26cbdf7cbbe69cc50ca4f1b3e25066281b23f`  
+		Last Modified: Tue, 13 Jul 2021 23:45:17 GMT  
 		Size: 2.5 KB (2491 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e2474725dd2782cddedb8bdbf870631db77a0a7a1aecd0c7210d2a2f0b4c79aa`  
-		Last Modified: Tue, 13 Jul 2021 17:44:30 GMT  
-		Size: 324.0 B  
+	-	`sha256:9a44c338f719da6a7548fc4e647b9bd52225c5df3e2302badd4a3636d4ada6ee`  
+		Last Modified: Tue, 13 Jul 2021 23:45:17 GMT  
+		Size: 328.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0fdd897017870149a2cb70be9683b95df7c1b47e7090f7756f449afc754ecd42`  
-		Last Modified: Tue, 13 Jul 2021 17:44:46 GMT  
-		Size: 86.1 MB (86099802 bytes)  
+	-	`sha256:0477462ca83c7a80d659335ac0c0d7eadd33db5bf3497027907f7c417dd036c5`  
+		Last Modified: Tue, 13 Jul 2021 23:45:32 GMT  
+		Size: 86.1 MB (86099760 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:74552281fa0a295ec5678e27c35315da147aa6d571fb5a4a40e151f15b0c063d`  
-		Last Modified: Tue, 13 Jul 2021 17:44:30 GMT  
-		Size: 5.6 KB (5594 bytes)  
+	-	`sha256:85af6cce3f74250abc9bdff500887dc7967e9af3afde38f6d863fde77572ed62`  
+		Last Modified: Tue, 13 Jul 2021 23:45:17 GMT  
+		Size: 5.6 KB (5592 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:10-focal` - linux; ppc64le
