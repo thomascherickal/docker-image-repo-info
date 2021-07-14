@@ -30,7 +30,7 @@
 ## `redmine:4`
 
 ```console
-$ docker pull redmine@sha256:908057bf3dac6fc94ee52a786ce5e7a57f49d7df7d9ff76f836194802a7f2275
+$ docker pull redmine@sha256:cae6a4d4227606764c6a75b180a5b675e4d7415888b5a1261069761a7cd84eac
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -46,14 +46,14 @@ $ docker pull redmine@sha256:908057bf3dac6fc94ee52a786ce5e7a57f49d7df7d9ff76f836
 ### `redmine:4` - linux; amd64
 
 ```console
-$ docker pull redmine@sha256:9892a7bec09254dbb1601176db7f8d4452a08a4e158c78e735ba2498a9566a5d
+$ docker pull redmine@sha256:c303bc0f5596613dabea4516d47172296178fa21f6db17497624805f778cb357
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **195.5 MB (195474533 bytes)**  
+-	Total Size: **195.5 MB (195475758 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c45d6d2ff9872cfb76c5a2c368aa5047e15b65f55f8163d7d4e624f9bdd4c3f4`
+-	Image ID: `sha256:338c47d4bca896733efe021ec38c0d595cf043de470eba5e45d6e3dde1a485c3`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["rails","server","-b","0.0.0.0"]`
 
@@ -74,47 +74,47 @@ ENV RUBY_MAJOR=2.7
 ENV RUBY_VERSION=2.7.4
 # Wed, 07 Jul 2021 19:43:10 GMT
 ENV RUBY_DOWNLOAD_SHA256=2a80824e0ad6100826b69b9890bf55cfc4cf2b61a1e1330fccbcb30c46cef8d7
-# Wed, 07 Jul 2021 19:45:41 GMT
-RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		bison 		dpkg-dev 		gcc 		libbz2-dev 		libgdbm-compat-dev 		libgdbm-dev 		libglib2.0-dev 		libncurses-dev 		libreadline-dev 		libxml2-dev 		libxslt-dev 		make 		ruby 		wget 		xz-utils 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		cd /; 	rm -r /usr/src/ruby; 	! dpkg -l | grep -i ruby; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Wed, 07 Jul 2021 19:45:41 GMT
+# Thu, 08 Jul 2021 22:11:02 GMT
+RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		bison 		dpkg-dev 		libgdbm-dev 		ruby 		autoconf 		g++ 		gcc 		libbz2-dev 		libglib2.0-dev 		libncurses-dev 		libreadline-dev 		libxml2-dev 		libxslt-dev 		make 		wget 		xz-utils 		libgdbm-compat-dev 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -vE '^/usr/local/lib/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		cd /; 	rm -r /usr/src/ruby; 	if dpkg -l | grep -i ruby; then exit 1; fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
+# Thu, 08 Jul 2021 22:11:02 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 07 Jul 2021 19:45:41 GMT
+# Thu, 08 Jul 2021 22:11:03 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 07 Jul 2021 19:45:41 GMT
+# Thu, 08 Jul 2021 22:11:03 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 07 Jul 2021 19:45:43 GMT
+# Thu, 08 Jul 2021 22:11:05 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 07 Jul 2021 19:45:43 GMT
+# Thu, 08 Jul 2021 22:11:05 GMT
 CMD ["irb"]
-# Wed, 07 Jul 2021 20:39:46 GMT
+# Wed, 14 Jul 2021 20:20:37 GMT
 RUN groupadd -r -g 999 redmine && useradd -r -g redmine -u 999 redmine
-# Wed, 07 Jul 2021 20:40:34 GMT
+# Wed, 14 Jul 2021 20:21:05 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		wget 				bzr 		git 		mercurial 		openssh-client 		subversion 				ghostscript 		gsfonts 		imagemagick 		gosu 		tini 	; 	sed -ri 's/(rights)="none" (pattern="PDF")/\1="read" \2/' /etc/ImageMagick-6/policy.xml; 	rm -rf /var/lib/apt/lists/*
-# Wed, 07 Jul 2021 20:40:35 GMT
+# Wed, 14 Jul 2021 20:21:06 GMT
 ENV RAILS_ENV=production
-# Wed, 07 Jul 2021 20:40:35 GMT
+# Wed, 14 Jul 2021 20:21:06 GMT
 WORKDIR /usr/src/redmine
-# Wed, 07 Jul 2021 20:40:36 GMT
+# Wed, 14 Jul 2021 20:21:06 GMT
 ENV HOME=/home/redmine
-# Wed, 07 Jul 2021 20:40:38 GMT
+# Wed, 14 Jul 2021 20:21:07 GMT
 RUN set -eux; 	[ ! -d "$HOME" ]; 	mkdir -p "$HOME"; 	chown redmine:redmine "$HOME"; 	chmod 1777 "$HOME"
-# Wed, 07 Jul 2021 20:40:39 GMT
+# Wed, 14 Jul 2021 20:21:08 GMT
 ENV REDMINE_VERSION=4.2.1
-# Wed, 07 Jul 2021 20:40:39 GMT
+# Wed, 14 Jul 2021 20:21:08 GMT
 ENV REDMINE_DOWNLOAD_SHA256=ad4109c3425f1cfe4c8961f6ae6494c76e20d81ed946caa1e297d9eda13b41b4
-# Wed, 07 Jul 2021 20:40:44 GMT
+# Wed, 14 Jul 2021 20:21:12 GMT
 RUN set -eux; 	wget -O redmine.tar.gz "https://www.redmine.org/releases/redmine-${REDMINE_VERSION}.tar.gz"; 	echo "$REDMINE_DOWNLOAD_SHA256 *redmine.tar.gz" | sha256sum -c -; 	tar -xf redmine.tar.gz --strip-components=1; 	rm redmine.tar.gz files/delete.me log/delete.me; 	mkdir -p log public/plugin_assets sqlite tmp/pdf tmp/pids; 	chown -R redmine:redmine ./; 	echo 'config.logger = Logger.new(STDOUT)' > config/additional_environment.rb; 	chmod -R ugo=rwX config db sqlite; 	find log tmp -type d -exec chmod 1777 '{}' +
-# Wed, 07 Jul 2021 20:41:44 GMT
+# Wed, 14 Jul 2021 20:21:54 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		freetds-dev 		gcc 		libmariadbclient-dev 		libpq-dev 		libsqlite3-dev 		make 		patch 	; 	rm -rf /var/lib/apt/lists/*; 		gosu redmine bundle config --local without 'development test'; 	echo '# the following entries only exist to force `bundle install` to pre-install all database adapter dependencies -- they can be safely removed/ignored' > ./config/database.yml; 	for adapter in mysql2 postgresql sqlserver sqlite3; do 		echo "$adapter:" >> ./config/database.yml; 		echo "  adapter: $adapter" >> ./config/database.yml; 	done; 	gosu redmine bundle install --jobs "$(nproc)"; 	rm ./config/database.yml; 	chmod -R ugo=rwX Gemfile.lock "$GEM_HOME"; 	rm -rf ~redmine/.bundle; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -v '^/usr/local/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Wed, 07 Jul 2021 20:41:45 GMT
+# Wed, 14 Jul 2021 20:21:54 GMT
 VOLUME [/usr/src/redmine/files]
-# Wed, 07 Jul 2021 20:41:45 GMT
+# Wed, 14 Jul 2021 20:21:54 GMT
 COPY file:2c807aca5f34a9ab8acfef3c517816547300ed2b18590f703a1c783bdc707ba8 in / 
-# Wed, 07 Jul 2021 20:41:45 GMT
+# Wed, 14 Jul 2021 20:21:55 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 07 Jul 2021 20:41:46 GMT
+# Wed, 14 Jul 2021 20:21:55 GMT
 EXPOSE 3000
-# Wed, 07 Jul 2021 20:41:46 GMT
+# Wed, 14 Jul 2021 20:21:55 GMT
 CMD ["rails" "server" "-b" "0.0.0.0"]
 ```
 
@@ -131,40 +131,40 @@ CMD ["rails" "server" "-b" "0.0.0.0"]
 		Last Modified: Wed, 23 Jun 2021 17:42:36 GMT  
 		Size: 198.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:733ec198d0e9805569798ab4a23e68f73a18a3ffd651015186eba5dd9a2ca610`  
-		Last Modified: Wed, 07 Jul 2021 20:19:35 GMT  
-		Size: 14.5 MB (14508799 bytes)  
+	-	`sha256:de7400f1f9b6e5d55a83e8b37dd13cf72bdbe0d05934f5c98c4ba06bf4cbf118`  
+		Last Modified: Thu, 08 Jul 2021 22:39:29 GMT  
+		Size: 14.5 MB (14509548 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6e12699933c31f935ddd2fa045f7d982334012d6ad88dd44c3fbadf7a73f5a26`  
-		Last Modified: Wed, 07 Jul 2021 20:19:32 GMT  
-		Size: 176.0 B  
+	-	`sha256:9cb40617deac0692ea97ddae53d285e362d757e8808ea3d0242f0f467fbdc83b`  
+		Last Modified: Thu, 08 Jul 2021 22:39:27 GMT  
+		Size: 175.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8339bad2aba6e43a929afc7d8b21af91944756bb66ef66a16e5d828ceb796d51`  
-		Last Modified: Wed, 07 Jul 2021 20:59:08 GMT  
-		Size: 1.7 KB (1747 bytes)  
+	-	`sha256:1b5e207773ba291762558574c95425f761b6392afd6e47e33a2ef03ba607a20b`  
+		Last Modified: Wed, 14 Jul 2021 20:34:47 GMT  
+		Size: 1.7 KB (1744 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3220f49d0d115b00cb264590dadd864df879aa3258ee8d5f0144a5d6033dacc2`  
-		Last Modified: Wed, 07 Jul 2021 20:59:24 GMT  
-		Size: 94.1 MB (94088061 bytes)  
+	-	`sha256:eb2a0707c83bf4fc7c6a74d7536a44f0769ac86b1f962c1af56accd5e6cd3ba2`  
+		Last Modified: Wed, 14 Jul 2021 20:35:01 GMT  
+		Size: 94.1 MB (94088231 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:34a290764a5ae2660fa1cc94e5aa69717c302b3bcb35daab61321ba461f281b0`  
-		Last Modified: Wed, 07 Jul 2021 20:59:06 GMT  
-		Size: 172.0 B  
+	-	`sha256:fac5644dd9c4b1b57fc0facc0fef989ab8a63d78d5674817336139f4dbaccb6f`  
+		Last Modified: Wed, 14 Jul 2021 20:34:44 GMT  
+		Size: 170.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a3920d04b60ae243eed09f0e406abf35b0c554feba46e0d06d50f7ee4d50dd04`  
-		Last Modified: Wed, 07 Jul 2021 20:59:06 GMT  
-		Size: 158.0 B  
+	-	`sha256:1a8cba4fc03f4f8b3bb011488d95ba8548ebf98c7c911213769e19fff09ca870`  
+		Last Modified: Wed, 14 Jul 2021 20:34:44 GMT  
+		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:04b529c84f2b0c85f9568545c17f99282048191e9439079e1218f4feb0326d82`  
-		Last Modified: Wed, 07 Jul 2021 20:59:07 GMT  
-		Size: 3.1 MB (3058680 bytes)  
+	-	`sha256:353cee6d422cb4bc36abb65fd6c55a508990ed2f2bf4abfc1ce1535b475d6df3`  
+		Last Modified: Wed, 14 Jul 2021 20:34:45 GMT  
+		Size: 3.1 MB (3058676 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:81464e83abe2839f8f7dd0aeadc2876201f9769f84c800c495de9add0af0891a`  
-		Last Modified: Wed, 07 Jul 2021 20:59:11 GMT  
-		Size: 44.1 MB (44106209 bytes)  
+	-	`sha256:2b939da848c07b0f5edcd234d2437605bf205006fdb97858805234a356aee26c`  
+		Last Modified: Wed, 14 Jul 2021 20:34:50 GMT  
+		Size: 44.1 MB (44106524 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:be192e9efc951e43743b5d7b6eef8c89f90d2e19f0791fc1d5f04eaf8e6fa2c9`  
-		Last Modified: Wed, 07 Jul 2021 20:59:06 GMT  
+	-	`sha256:e500e65c849556d24a3d032e6d73d10c2c207727e62435e93883100e925cce45`  
+		Last Modified: Wed, 14 Jul 2021 20:34:45 GMT  
 		Size: 1.8 KB (1797 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -921,7 +921,7 @@ CMD ["rails" "server" "-b" "0.0.0.0"]
 ## `redmine:4-alpine`
 
 ```console
-$ docker pull redmine@sha256:ca0b18a629a5e414e76848f03ea611afb70fcea36a6e952480a8b20f33ccb0bb
+$ docker pull redmine@sha256:7de4015773da4d105b5f43705556003eb3071d781612fa6e7f6010981e4e56e5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -931,14 +931,14 @@ $ docker pull redmine@sha256:ca0b18a629a5e414e76848f03ea611afb70fcea36a6e952480a
 ### `redmine:4-alpine` - linux; amd64
 
 ```console
-$ docker pull redmine@sha256:077c21637afe6f40bc01e53144e4d29b1ab559347fce7534c68f67e69ca64300
+$ docker pull redmine@sha256:7fb14bb9edbf56cf78406c149b3015cfd560d8ab4b036edebde5aa5e4b83f5af
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **150.1 MB (150053498 bytes)**  
+-	Total Size: **150.1 MB (150068908 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:313842d3e7f7deacfdfb873ef360b7bee175c2f72c64049ca5a88b81134fd3e7`
+-	Image ID: `sha256:74c717ce35a7872383b67fe6276f951c39395fcba0eda36625d7e2eaa9a32932`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["rails","server","-b","0.0.0.0"]`
 
@@ -947,61 +947,61 @@ $ docker pull redmine@sha256:077c21637afe6f40bc01e53144e4d29b1ab559347fce7534c68
 ADD file:8ec69d882e7f29f0652d537557160e638168550f738d0d49f90a7ef96bf31787 in / 
 # Wed, 14 Apr 2021 19:19:39 GMT
 CMD ["/bin/sh"]
-# Thu, 15 Apr 2021 03:07:29 GMT
-RUN apk add --no-cache 		gmp-dev
-# Thu, 15 Apr 2021 03:07:31 GMT
+# Thu, 08 Jul 2021 21:57:27 GMT
+RUN set -eux; 	apk add --no-cache 		bzip2 		ca-certificates 		gmp-dev 		libffi-dev 		procps 		yaml-dev 		zlib-dev 	;
+# Thu, 08 Jul 2021 21:57:30 GMT
 RUN set -eux; 	mkdir -p /usr/local/etc; 	{ 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /usr/local/etc/gemrc
-# Thu, 15 Apr 2021 03:07:31 GMT
+# Thu, 08 Jul 2021 21:57:30 GMT
 ENV LANG=C.UTF-8
-# Thu, 15 Apr 2021 03:16:27 GMT
+# Thu, 08 Jul 2021 22:15:57 GMT
 ENV RUBY_MAJOR=2.7
-# Wed, 07 Jul 2021 19:45:51 GMT
+# Thu, 08 Jul 2021 22:15:57 GMT
 ENV RUBY_VERSION=2.7.4
-# Wed, 07 Jul 2021 19:45:51 GMT
+# Thu, 08 Jul 2021 22:15:57 GMT
 ENV RUBY_DOWNLOAD_SHA256=2a80824e0ad6100826b69b9890bf55cfc4cf2b61a1e1330fccbcb30c46cef8d7
-# Wed, 07 Jul 2021 19:48:38 GMT
-RUN set -eux; 		apk add --no-cache --virtual .ruby-builddeps 		autoconf 		bison 		bzip2 		bzip2-dev 		ca-certificates 		coreutils 		dpkg-dev dpkg 		gcc 		gdbm-dev 		glib-dev 		libc-dev 		libffi-dev 		libxml2-dev 		libxslt-dev 		linux-headers 		make 		ncurses-dev 		openssl 		openssl-dev 		patch 		procps 		readline-dev 		ruby 		tar 		xz 		yaml-dev 		zlib-dev 	; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		wget -O 'thread-stack-fix.patch' 'https://bugs.ruby-lang.org/attachments/download/7081/0001-thread_pthread.c-make-get_main_stack-portable-on-lin.patch'; 	echo '3ab628a51d92fdf0d2b5835e93564857aea73e0c1de00313864a94a6255cb645 *thread-stack-fix.patch' | sha256sum --check --strict; 	patch -p1 -i thread-stack-fix.patch; 	rm thread-stack-fix.patch; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	export ac_cv_func_isnan=yes ac_cv_func_isinf=yes; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .ruby-rundeps 		$runDeps 		bzip2 		ca-certificates 		libffi-dev 		procps 		yaml-dev 		zlib-dev 	; 	apk del --no-network .ruby-builddeps; 		cd /; 	rm -r /usr/src/ruby; 	! apk --no-network list --installed 		| grep -v '^[.]ruby-rundeps' 		| grep -i ruby 	; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Wed, 07 Jul 2021 19:48:38 GMT
+# Thu, 08 Jul 2021 22:18:49 GMT
+RUN set -eux; 		apk add --no-cache --virtual .ruby-builddeps 		autoconf 		bison 		bzip2 		bzip2-dev 		ca-certificates 		coreutils 		dpkg-dev dpkg 		g++ 		gcc 		gdbm-dev 		glib-dev 		libc-dev 		libffi-dev 		libxml2-dev 		libxslt-dev 		linux-headers 		make 		ncurses-dev 		openssl 		openssl-dev 		patch 		procps 		readline-dev 		ruby 		tar 		xz 		yaml-dev 		zlib-dev 	; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		wget -O 'thread-stack-fix.patch' 'https://bugs.ruby-lang.org/attachments/download/7081/0001-thread_pthread.c-make-get_main_stack-portable-on-lin.patch'; 	echo '3ab628a51d92fdf0d2b5835e93564857aea73e0c1de00313864a94a6255cb645 *thread-stack-fix.patch' | sha256sum --check --strict; 	patch -p1 -i thread-stack-fix.patch; 	rm thread-stack-fix.patch; 		export ac_cv_func_isnan=yes ac_cv_func_isinf=yes; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .ruby-rundeps $runDeps; 	apk del --no-network .ruby-builddeps; 		cd /; 	rm -r /usr/src/ruby; 	if 		apk --no-network list --installed 			| grep -v '^[.]ruby-rundeps' 			| grep -i ruby 	; then 		exit 1; 	fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
+# Thu, 08 Jul 2021 22:18:49 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 07 Jul 2021 19:48:39 GMT
+# Thu, 08 Jul 2021 22:18:49 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 07 Jul 2021 19:48:39 GMT
+# Thu, 08 Jul 2021 22:18:49 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 07 Jul 2021 19:48:40 GMT
+# Thu, 08 Jul 2021 22:18:50 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 07 Jul 2021 19:48:40 GMT
+# Thu, 08 Jul 2021 22:18:51 GMT
 CMD ["irb"]
-# Wed, 07 Jul 2021 20:42:35 GMT
+# Wed, 14 Jul 2021 20:22:24 GMT
 RUN addgroup -S -g 1000 redmine && adduser -S -H -G redmine -u 999 redmine
-# Wed, 07 Jul 2021 20:42:49 GMT
+# Wed, 14 Jul 2021 20:22:32 GMT
 RUN set -eux; 	apk add --no-cache 		bash 		ca-certificates 		su-exec 		tini 		tzdata 		wget 				git 		mercurial 		openssh-client 		subversion 				ghostscript 		ghostscript-fonts 		imagemagick 	;
-# Wed, 07 Jul 2021 20:42:50 GMT
+# Wed, 14 Jul 2021 20:22:33 GMT
 ENV RAILS_ENV=production
-# Wed, 07 Jul 2021 20:42:51 GMT
+# Wed, 14 Jul 2021 20:22:33 GMT
 WORKDIR /usr/src/redmine
-# Wed, 07 Jul 2021 20:42:51 GMT
+# Wed, 14 Jul 2021 20:22:33 GMT
 ENV HOME=/home/redmine
-# Wed, 07 Jul 2021 20:42:53 GMT
+# Wed, 14 Jul 2021 20:22:34 GMT
 RUN set -eux; 	[ ! -d "$HOME" ]; 	mkdir -p "$HOME"; 	chown redmine:redmine "$HOME"; 	chmod 1777 "$HOME"
-# Wed, 07 Jul 2021 20:42:54 GMT
+# Wed, 14 Jul 2021 20:22:35 GMT
 ENV REDMINE_VERSION=4.2.1
-# Wed, 07 Jul 2021 20:42:54 GMT
+# Wed, 14 Jul 2021 20:22:35 GMT
 ENV REDMINE_DOWNLOAD_SHA256=ad4109c3425f1cfe4c8961f6ae6494c76e20d81ed946caa1e297d9eda13b41b4
-# Wed, 07 Jul 2021 20:43:00 GMT
+# Wed, 14 Jul 2021 20:22:38 GMT
 RUN set -eux; 	wget -O redmine.tar.gz "https://www.redmine.org/releases/redmine-${REDMINE_VERSION}.tar.gz"; 	echo "$REDMINE_DOWNLOAD_SHA256 *redmine.tar.gz" | sha256sum -c -; 	tar -xf redmine.tar.gz --strip-components=1; 	rm redmine.tar.gz files/delete.me log/delete.me; 	mkdir -p log public/plugin_assets sqlite tmp/pdf tmp/pids; 	chown -R redmine:redmine ./; 	echo 'config.logger = Logger.new(STDOUT)' > config/additional_environment.rb; 	chmod -R ugo=rwX config db sqlite; 	find log tmp -type d -exec chmod 1777 '{}' +
-# Wed, 07 Jul 2021 20:43:00 GMT
+# Wed, 14 Jul 2021 20:22:39 GMT
 ENV BUNDLE_FORCE_RUBY_PLATFORM=1
-# Wed, 07 Jul 2021 20:46:18 GMT
+# Wed, 14 Jul 2021 20:24:41 GMT
 RUN set -eux; 		apk add --no-cache --virtual .build-deps 		coreutils 		freetds-dev 		gcc 		make 		mariadb-dev 		musl-dev 		patch 		postgresql-dev 		sqlite-dev 		ttf2ufm 		zlib-dev 	; 		su-exec redmine bundle config --local without 'development test'; 	echo '# the following entries only exist to force `bundle install` to pre-install all database adapter dependencies -- they can be safely removed/ignored' > ./config/database.yml; 	for adapter in mysql2 postgresql sqlserver sqlite3; do 		echo "$adapter:" >> ./config/database.yml; 		echo "  adapter: $adapter" >> ./config/database.yml; 	done; 	su-exec redmine bundle install --jobs "$(nproc)"; 	rm ./config/database.yml; 	chmod -R ugo=rwX Gemfile.lock "$GEM_HOME"; 	rm -rf ~redmine/.bundle; 		rm /usr/local/bundle/gems/rbpdf-font-1.19.*/lib/fonts/ttf2ufm/ttf2ufm; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local/bundle/gems 		| tr ',' '\n' 		| sort -u 		| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .redmine-rundeps $runDeps; 	apk del --no-network .build-deps
-# Wed, 07 Jul 2021 20:46:18 GMT
+# Wed, 14 Jul 2021 20:24:42 GMT
 VOLUME [/usr/src/redmine/files]
-# Wed, 07 Jul 2021 20:46:18 GMT
+# Wed, 14 Jul 2021 20:24:42 GMT
 COPY file:d7d49d1509d97205d05405670ad206509bb871741a17d5270a1b8842b05afc0f in / 
-# Wed, 07 Jul 2021 20:46:19 GMT
+# Wed, 14 Jul 2021 20:24:42 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 07 Jul 2021 20:46:19 GMT
+# Wed, 14 Jul 2021 20:24:42 GMT
 EXPOSE 3000
-# Wed, 07 Jul 2021 20:46:19 GMT
+# Wed, 14 Jul 2021 20:24:42 GMT
 CMD ["rails" "server" "-b" "0.0.0.0"]
 ```
 
@@ -1010,55 +1010,55 @@ CMD ["rails" "server" "-b" "0.0.0.0"]
 		Last Modified: Wed, 14 Apr 2021 17:59:29 GMT  
 		Size: 2.8 MB (2811969 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:98a867505730167ce0636f0811cb765ebbde11bf979c1a9839f6915f2fc3b85b`  
-		Last Modified: Thu, 15 Apr 2021 03:39:41 GMT  
-		Size: 1.2 MB (1218679 bytes)  
+	-	`sha256:ae5b0ea69e9ed42c49b5af449b703a12a4d2f2e28d87905af6fcd903fdae5689`  
+		Last Modified: Thu, 08 Jul 2021 22:38:46 GMT  
+		Size: 3.6 MB (3581658 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:69c77620f6108dc0610cba72f77d68c271fb1b14cb0800a7a8b6aaeb8950fec9`  
-		Last Modified: Thu, 15 Apr 2021 03:39:40 GMT  
-		Size: 222.0 B  
+	-	`sha256:3ad656ed833315b61ea674706f32c2d18d7412c7120926442af57b9131ee72ee`  
+		Last Modified: Thu, 08 Jul 2021 22:38:45 GMT  
+		Size: 223.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7ea934b6bf2094b677c0efcea21d8dd83f7d08a693dc70f6225655637126c426`  
-		Last Modified: Wed, 07 Jul 2021 20:19:57 GMT  
-		Size: 16.7 MB (16721809 bytes)  
+	-	`sha256:626f6830afc6fb7a05a8f18f2b98e4ea4db3d2dd50803e5cd2c627fe25150dc8`  
+		Last Modified: Thu, 08 Jul 2021 22:40:13 GMT  
+		Size: 14.4 MB (14373123 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:686808441e8cf9ef056302eb927f0082e5b1982f069e2c30b2b19d6a61c2a2ba`  
-		Last Modified: Wed, 07 Jul 2021 20:19:55 GMT  
-		Size: 172.0 B  
+	-	`sha256:5375389679c9573d241b22905aee17b20981e2628989561698087f107fcfed4a`  
+		Last Modified: Thu, 08 Jul 2021 22:40:11 GMT  
+		Size: 173.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d8976df4a5a54a897431b41d52944416dd3f8f810bd6657691c18453f8487742`  
-		Last Modified: Wed, 07 Jul 2021 21:00:05 GMT  
-		Size: 1.2 KB (1206 bytes)  
+	-	`sha256:c76a82132aeb154f32b80803eecedc3e27e062a35ae1e05284dc2d7e6c7f4f59`  
+		Last Modified: Wed, 14 Jul 2021 20:35:42 GMT  
+		Size: 1.2 KB (1209 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:47efa0102f6e6e0ece259209ca18d6e3d4e11169b4d4f46aba1eba740a613150`  
-		Last Modified: Wed, 07 Jul 2021 21:00:15 GMT  
-		Size: 69.5 MB (69525641 bytes)  
+	-	`sha256:99cb4af997128346f54fa569d3a04180c718e02a90e90eff7161241d54deef92`  
+		Last Modified: Wed, 14 Jul 2021 20:35:52 GMT  
+		Size: 69.5 MB (69526214 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:31feb1eca5d1e845e9715e85cd7a862fd44f1760b6e75121aa5683d8292ae651`  
-		Last Modified: Wed, 07 Jul 2021 21:00:01 GMT  
-		Size: 167.0 B  
+	-	`sha256:14da2816c58ef08b826f823d7b6a4126bb63594ed1109880b795c28cc4d3f032`  
+		Last Modified: Wed, 14 Jul 2021 20:35:39 GMT  
+		Size: 166.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ad06f01400240338ee40ad58bfca6b7cc4a9a01936123ffe0b9915471107c362`  
-		Last Modified: Wed, 07 Jul 2021 21:00:01 GMT  
-		Size: 158.0 B  
+	-	`sha256:13f34be07349b94807cc58a0e31cecec279d0591b9a6f1f65f1dbe94a4713462`  
+		Last Modified: Wed, 14 Jul 2021 20:35:39 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:773f42416bef575288101a1df9d6a5fa2148c53ad0ab570bfbe4f59df70a3de5`  
-		Last Modified: Wed, 07 Jul 2021 21:00:03 GMT  
-		Size: 3.1 MB (3059999 bytes)  
+	-	`sha256:b98b05ead31106734fcef5216d256a8536461fa7935f729e67262c90f55e683b`  
+		Last Modified: Wed, 14 Jul 2021 20:35:40 GMT  
+		Size: 3.1 MB (3060004 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e9dc43767f453dd8f05fceda480269b93353a0571cdbcda70dd10ef97bbc6f8a`  
-		Last Modified: Wed, 07 Jul 2021 21:00:08 GMT  
-		Size: 56.7 MB (56711679 bytes)  
+	-	`sha256:a6c586852175065725ae48c5682f1ecea003599fbc0028c3387f5de00cc28f34`  
+		Last Modified: Wed, 14 Jul 2021 20:36:03 GMT  
+		Size: 56.7 MB (56712212 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:26cd8e62dc154735785f51beaabe48d17609389a1a6c0754d076fb36884292b6`  
-		Last Modified: Wed, 07 Jul 2021 21:00:01 GMT  
+	-	`sha256:e4d1559a239e3bf1260f693961d40d28b32673907100b077a797e55d543f072c`  
+		Last Modified: Wed, 14 Jul 2021 20:35:39 GMT  
 		Size: 1.8 KB (1797 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `redmine:4-passenger`
 
 ```console
-$ docker pull redmine@sha256:f4cb2ae19c38cc46fff7e55b7637e43ff3d520f55f9761af93bd61f35f0868f8
+$ docker pull redmine@sha256:9b780f98151823e0e84e1e41974c548143cae7090cd367eb711d44d3bc8a966b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1068,14 +1068,14 @@ $ docker pull redmine@sha256:f4cb2ae19c38cc46fff7e55b7637e43ff3d520f55f9761af93b
 ### `redmine:4-passenger` - linux; amd64
 
 ```console
-$ docker pull redmine@sha256:18864e55c008f0ef499790c64ae0c35326403e72700265430a74abe6167b63b4
+$ docker pull redmine@sha256:a320947c8461cd8bafad0bcfda90b4f5ac840389345003324df81de7b46ad296
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **221.5 MB (221521668 bytes)**  
+-	Total Size: **221.5 MB (221526742 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:fc0c50bd977fa6369b41f342f74e4cbb08de72fd5ba09391a2b5c5e395a1d4d2`
+-	Image ID: `sha256:f3049f679e04c98a7643e800733c59f85c960a686a186192d9b12a222bed1592`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["passenger","start"]`
 
@@ -1096,57 +1096,57 @@ ENV RUBY_MAJOR=2.7
 ENV RUBY_VERSION=2.7.4
 # Wed, 07 Jul 2021 19:43:10 GMT
 ENV RUBY_DOWNLOAD_SHA256=2a80824e0ad6100826b69b9890bf55cfc4cf2b61a1e1330fccbcb30c46cef8d7
-# Wed, 07 Jul 2021 19:45:41 GMT
-RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		bison 		dpkg-dev 		gcc 		libbz2-dev 		libgdbm-compat-dev 		libgdbm-dev 		libglib2.0-dev 		libncurses-dev 		libreadline-dev 		libxml2-dev 		libxslt-dev 		make 		ruby 		wget 		xz-utils 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		cd /; 	rm -r /usr/src/ruby; 	! dpkg -l | grep -i ruby; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Wed, 07 Jul 2021 19:45:41 GMT
+# Thu, 08 Jul 2021 22:11:02 GMT
+RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		bison 		dpkg-dev 		libgdbm-dev 		ruby 		autoconf 		g++ 		gcc 		libbz2-dev 		libglib2.0-dev 		libncurses-dev 		libreadline-dev 		libxml2-dev 		libxslt-dev 		make 		wget 		xz-utils 		libgdbm-compat-dev 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -vE '^/usr/local/lib/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		cd /; 	rm -r /usr/src/ruby; 	if dpkg -l | grep -i ruby; then exit 1; fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
+# Thu, 08 Jul 2021 22:11:02 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 07 Jul 2021 19:45:41 GMT
+# Thu, 08 Jul 2021 22:11:03 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 07 Jul 2021 19:45:41 GMT
+# Thu, 08 Jul 2021 22:11:03 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 07 Jul 2021 19:45:43 GMT
+# Thu, 08 Jul 2021 22:11:05 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 07 Jul 2021 19:45:43 GMT
+# Thu, 08 Jul 2021 22:11:05 GMT
 CMD ["irb"]
-# Wed, 07 Jul 2021 20:39:46 GMT
+# Wed, 14 Jul 2021 20:20:37 GMT
 RUN groupadd -r -g 999 redmine && useradd -r -g redmine -u 999 redmine
-# Wed, 07 Jul 2021 20:40:34 GMT
+# Wed, 14 Jul 2021 20:21:05 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		wget 				bzr 		git 		mercurial 		openssh-client 		subversion 				ghostscript 		gsfonts 		imagemagick 		gosu 		tini 	; 	sed -ri 's/(rights)="none" (pattern="PDF")/\1="read" \2/' /etc/ImageMagick-6/policy.xml; 	rm -rf /var/lib/apt/lists/*
-# Wed, 07 Jul 2021 20:40:35 GMT
+# Wed, 14 Jul 2021 20:21:06 GMT
 ENV RAILS_ENV=production
-# Wed, 07 Jul 2021 20:40:35 GMT
+# Wed, 14 Jul 2021 20:21:06 GMT
 WORKDIR /usr/src/redmine
-# Wed, 07 Jul 2021 20:40:36 GMT
+# Wed, 14 Jul 2021 20:21:06 GMT
 ENV HOME=/home/redmine
-# Wed, 07 Jul 2021 20:40:38 GMT
+# Wed, 14 Jul 2021 20:21:07 GMT
 RUN set -eux; 	[ ! -d "$HOME" ]; 	mkdir -p "$HOME"; 	chown redmine:redmine "$HOME"; 	chmod 1777 "$HOME"
-# Wed, 07 Jul 2021 20:40:39 GMT
+# Wed, 14 Jul 2021 20:21:08 GMT
 ENV REDMINE_VERSION=4.2.1
-# Wed, 07 Jul 2021 20:40:39 GMT
+# Wed, 14 Jul 2021 20:21:08 GMT
 ENV REDMINE_DOWNLOAD_SHA256=ad4109c3425f1cfe4c8961f6ae6494c76e20d81ed946caa1e297d9eda13b41b4
-# Wed, 07 Jul 2021 20:40:44 GMT
+# Wed, 14 Jul 2021 20:21:12 GMT
 RUN set -eux; 	wget -O redmine.tar.gz "https://www.redmine.org/releases/redmine-${REDMINE_VERSION}.tar.gz"; 	echo "$REDMINE_DOWNLOAD_SHA256 *redmine.tar.gz" | sha256sum -c -; 	tar -xf redmine.tar.gz --strip-components=1; 	rm redmine.tar.gz files/delete.me log/delete.me; 	mkdir -p log public/plugin_assets sqlite tmp/pdf tmp/pids; 	chown -R redmine:redmine ./; 	echo 'config.logger = Logger.new(STDOUT)' > config/additional_environment.rb; 	chmod -R ugo=rwX config db sqlite; 	find log tmp -type d -exec chmod 1777 '{}' +
-# Wed, 07 Jul 2021 20:41:44 GMT
+# Wed, 14 Jul 2021 20:21:54 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		freetds-dev 		gcc 		libmariadbclient-dev 		libpq-dev 		libsqlite3-dev 		make 		patch 	; 	rm -rf /var/lib/apt/lists/*; 		gosu redmine bundle config --local without 'development test'; 	echo '# the following entries only exist to force `bundle install` to pre-install all database adapter dependencies -- they can be safely removed/ignored' > ./config/database.yml; 	for adapter in mysql2 postgresql sqlserver sqlite3; do 		echo "$adapter:" >> ./config/database.yml; 		echo "  adapter: $adapter" >> ./config/database.yml; 	done; 	gosu redmine bundle install --jobs "$(nproc)"; 	rm ./config/database.yml; 	chmod -R ugo=rwX Gemfile.lock "$GEM_HOME"; 	rm -rf ~redmine/.bundle; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -v '^/usr/local/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Wed, 07 Jul 2021 20:41:45 GMT
+# Wed, 14 Jul 2021 20:21:54 GMT
 VOLUME [/usr/src/redmine/files]
-# Wed, 07 Jul 2021 20:41:45 GMT
+# Wed, 14 Jul 2021 20:21:54 GMT
 COPY file:2c807aca5f34a9ab8acfef3c517816547300ed2b18590f703a1c783bdc707ba8 in / 
-# Wed, 07 Jul 2021 20:41:45 GMT
+# Wed, 14 Jul 2021 20:21:55 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 07 Jul 2021 20:41:46 GMT
+# Wed, 14 Jul 2021 20:21:55 GMT
 EXPOSE 3000
-# Wed, 07 Jul 2021 20:41:46 GMT
+# Wed, 14 Jul 2021 20:21:55 GMT
 CMD ["rails" "server" "-b" "0.0.0.0"]
-# Wed, 07 Jul 2021 20:41:55 GMT
-ENV PASSENGER_VERSION=6.0.9
-# Wed, 07 Jul 2021 20:42:22 GMT
+# Wed, 14 Jul 2021 20:22:01 GMT
+ENV PASSENGER_VERSION=6.0.10
+# Wed, 14 Jul 2021 20:22:18 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		gcc 		make 	; 	rm -rf /var/lib/apt/lists/*; 		gem install passenger --version "$PASSENGER_VERSION"; 	passenger-config build-native-support; 	if [ -n "$(passenger-config build-native-support 2>&1)" ]; then cat /tmp/passenger_native_support-*.log; false; fi; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Wed, 07 Jul 2021 20:42:26 GMT
+# Wed, 14 Jul 2021 20:22:20 GMT
 RUN set -eux; 	passenger-config install-agent; 	passenger-config download-nginx-engine
-# Wed, 07 Jul 2021 20:42:26 GMT
+# Wed, 14 Jul 2021 20:22:20 GMT
 ENV PASSENGER_PID_FILE=tmp/pids/server.pid
-# Wed, 07 Jul 2021 20:42:27 GMT
+# Wed, 14 Jul 2021 20:22:20 GMT
 CMD ["passenger" "start"]
 ```
 
@@ -1163,55 +1163,55 @@ CMD ["passenger" "start"]
 		Last Modified: Wed, 23 Jun 2021 17:42:36 GMT  
 		Size: 198.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:733ec198d0e9805569798ab4a23e68f73a18a3ffd651015186eba5dd9a2ca610`  
-		Last Modified: Wed, 07 Jul 2021 20:19:35 GMT  
-		Size: 14.5 MB (14508799 bytes)  
+	-	`sha256:de7400f1f9b6e5d55a83e8b37dd13cf72bdbe0d05934f5c98c4ba06bf4cbf118`  
+		Last Modified: Thu, 08 Jul 2021 22:39:29 GMT  
+		Size: 14.5 MB (14509548 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6e12699933c31f935ddd2fa045f7d982334012d6ad88dd44c3fbadf7a73f5a26`  
-		Last Modified: Wed, 07 Jul 2021 20:19:32 GMT  
-		Size: 176.0 B  
+	-	`sha256:9cb40617deac0692ea97ddae53d285e362d757e8808ea3d0242f0f467fbdc83b`  
+		Last Modified: Thu, 08 Jul 2021 22:39:27 GMT  
+		Size: 175.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8339bad2aba6e43a929afc7d8b21af91944756bb66ef66a16e5d828ceb796d51`  
-		Last Modified: Wed, 07 Jul 2021 20:59:08 GMT  
-		Size: 1.7 KB (1747 bytes)  
+	-	`sha256:1b5e207773ba291762558574c95425f761b6392afd6e47e33a2ef03ba607a20b`  
+		Last Modified: Wed, 14 Jul 2021 20:34:47 GMT  
+		Size: 1.7 KB (1744 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3220f49d0d115b00cb264590dadd864df879aa3258ee8d5f0144a5d6033dacc2`  
-		Last Modified: Wed, 07 Jul 2021 20:59:24 GMT  
-		Size: 94.1 MB (94088061 bytes)  
+	-	`sha256:eb2a0707c83bf4fc7c6a74d7536a44f0769ac86b1f962c1af56accd5e6cd3ba2`  
+		Last Modified: Wed, 14 Jul 2021 20:35:01 GMT  
+		Size: 94.1 MB (94088231 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:34a290764a5ae2660fa1cc94e5aa69717c302b3bcb35daab61321ba461f281b0`  
-		Last Modified: Wed, 07 Jul 2021 20:59:06 GMT  
-		Size: 172.0 B  
+	-	`sha256:fac5644dd9c4b1b57fc0facc0fef989ab8a63d78d5674817336139f4dbaccb6f`  
+		Last Modified: Wed, 14 Jul 2021 20:34:44 GMT  
+		Size: 170.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a3920d04b60ae243eed09f0e406abf35b0c554feba46e0d06d50f7ee4d50dd04`  
-		Last Modified: Wed, 07 Jul 2021 20:59:06 GMT  
-		Size: 158.0 B  
+	-	`sha256:1a8cba4fc03f4f8b3bb011488d95ba8548ebf98c7c911213769e19fff09ca870`  
+		Last Modified: Wed, 14 Jul 2021 20:34:44 GMT  
+		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:04b529c84f2b0c85f9568545c17f99282048191e9439079e1218f4feb0326d82`  
-		Last Modified: Wed, 07 Jul 2021 20:59:07 GMT  
-		Size: 3.1 MB (3058680 bytes)  
+	-	`sha256:353cee6d422cb4bc36abb65fd6c55a508990ed2f2bf4abfc1ce1535b475d6df3`  
+		Last Modified: Wed, 14 Jul 2021 20:34:45 GMT  
+		Size: 3.1 MB (3058676 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:81464e83abe2839f8f7dd0aeadc2876201f9769f84c800c495de9add0af0891a`  
-		Last Modified: Wed, 07 Jul 2021 20:59:11 GMT  
-		Size: 44.1 MB (44106209 bytes)  
+	-	`sha256:2b939da848c07b0f5edcd234d2437605bf205006fdb97858805234a356aee26c`  
+		Last Modified: Wed, 14 Jul 2021 20:34:50 GMT  
+		Size: 44.1 MB (44106524 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:be192e9efc951e43743b5d7b6eef8c89f90d2e19f0791fc1d5f04eaf8e6fa2c9`  
-		Last Modified: Wed, 07 Jul 2021 20:59:06 GMT  
+	-	`sha256:e500e65c849556d24a3d032e6d73d10c2c207727e62435e93883100e925cce45`  
+		Last Modified: Wed, 14 Jul 2021 20:34:45 GMT  
 		Size: 1.8 KB (1797 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f71a11320b67138cd2a0a1334bfd1756db2e441c02756b81375d40ef6b5662be`  
-		Last Modified: Wed, 07 Jul 2021 20:59:44 GMT  
-		Size: 21.1 MB (21127786 bytes)  
+	-	`sha256:ca41f4f9e9b7629be3e6e9666279b940b489648484da4e41725e7b22c1c94b1b`  
+		Last Modified: Wed, 14 Jul 2021 20:35:22 GMT  
+		Size: 21.1 MB (21131700 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:395d6858c59e57067f4887b7870aa71c24d60c5749d50d10bcc25771eef5eb2d`  
-		Last Modified: Wed, 07 Jul 2021 20:59:42 GMT  
-		Size: 4.9 MB (4919349 bytes)  
+	-	`sha256:c9436698f0e4aec6d6e7c991fd623ae0d4eab48e62193c564b2fa25de8f4a52e`  
+		Last Modified: Wed, 14 Jul 2021 20:35:20 GMT  
+		Size: 4.9 MB (4919284 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `redmine:4.0`
 
 ```console
-$ docker pull redmine@sha256:740f54080382e58be95a236f66d4e528a4b1a961210ebd437845eadfd0c04d0c
+$ docker pull redmine@sha256:5fe2bfa25e09380eb390b7cca4ad0af896d83a3224478b8ff0855871a724fe9a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1227,14 +1227,14 @@ $ docker pull redmine@sha256:740f54080382e58be95a236f66d4e528a4b1a961210ebd43784
 ### `redmine:4.0` - linux; amd64
 
 ```console
-$ docker pull redmine@sha256:5437a642fa204428bfd19747c269515f08c3fd7e960c4cc531b3b12fb031a697
+$ docker pull redmine@sha256:120d31ad80c1785e72a46398a061a612987797e4607a61e60010181de0caac33
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **205.1 MB (205070799 bytes)**  
+-	Total Size: **205.1 MB (205071171 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4139862a638f10ef6044bef5ebfc694924c2f42a09f1e0e7f6434bcbe62441fe`
+-	Image ID: `sha256:bf0b146af85cd11c523db51af33d174d5049495a32f1df271250cf823400a93e`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["rails","server","-b","0.0.0.0"]`
 
@@ -1255,47 +1255,47 @@ ENV RUBY_MAJOR=2.6
 ENV RUBY_VERSION=2.6.8
 # Wed, 07 Jul 2021 19:55:25 GMT
 ENV RUBY_DOWNLOAD_SHA256=8262e4663169c85787fdc9bfbd04d9eb86eb2a4b56d7f98373a8fcaa18e593eb
-# Wed, 07 Jul 2021 19:59:28 GMT
-RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		bison 		dpkg-dev 		gcc 		libbz2-dev 		libgdbm-compat-dev 		libgdbm-dev 		libglib2.0-dev 		libncurses-dev 		libreadline-dev 		libxml2-dev 		libxslt-dev 		make 		ruby 		wget 		xz-utils 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		cd /; 	rm -r /usr/src/ruby; 	! dpkg -l | grep -i ruby; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Wed, 07 Jul 2021 19:59:28 GMT
+# Thu, 08 Jul 2021 22:24:34 GMT
+RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		bison 		dpkg-dev 		libgdbm-dev 		ruby 		autoconf 		g++ 		gcc 		libbz2-dev 		libglib2.0-dev 		libncurses-dev 		libreadline-dev 		libxml2-dev 		libxslt-dev 		make 		wget 		xz-utils 		libgdbm-compat-dev 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -vE '^/usr/local/lib/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		cd /; 	rm -r /usr/src/ruby; 	if dpkg -l | grep -i ruby; then exit 1; fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
+# Thu, 08 Jul 2021 22:24:34 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 07 Jul 2021 19:59:28 GMT
+# Thu, 08 Jul 2021 22:24:34 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 07 Jul 2021 19:59:28 GMT
+# Thu, 08 Jul 2021 22:24:34 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 07 Jul 2021 19:59:30 GMT
+# Thu, 08 Jul 2021 22:24:35 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 07 Jul 2021 19:59:30 GMT
+# Thu, 08 Jul 2021 22:24:36 GMT
 CMD ["irb"]
-# Wed, 07 Jul 2021 20:46:29 GMT
+# Wed, 14 Jul 2021 20:24:50 GMT
 RUN groupadd -r -g 999 redmine && useradd -r -g redmine -u 999 redmine
-# Wed, 07 Jul 2021 20:53:49 GMT
+# Wed, 14 Jul 2021 20:29:27 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		wget 				bzr 		git 		mercurial 		openssh-client 		subversion 				gsfonts 		imagemagick 		gosu 		tini 	; 	rm -rf /var/lib/apt/lists/*
-# Wed, 07 Jul 2021 20:53:50 GMT
+# Wed, 14 Jul 2021 20:29:28 GMT
 ENV RAILS_ENV=production
-# Wed, 07 Jul 2021 20:53:51 GMT
+# Wed, 14 Jul 2021 20:29:28 GMT
 WORKDIR /usr/src/redmine
-# Wed, 07 Jul 2021 20:53:51 GMT
+# Wed, 14 Jul 2021 20:29:31 GMT
 ENV HOME=/home/redmine
-# Wed, 07 Jul 2021 20:53:53 GMT
+# Wed, 14 Jul 2021 20:29:36 GMT
 RUN set -eux; 	[ ! -d "$HOME" ]; 	mkdir -p "$HOME"; 	chown redmine:redmine "$HOME"; 	chmod 1777 "$HOME"
-# Wed, 07 Jul 2021 20:53:54 GMT
+# Wed, 14 Jul 2021 20:29:40 GMT
 ENV REDMINE_VERSION=4.0.9
-# Wed, 07 Jul 2021 20:53:54 GMT
+# Wed, 14 Jul 2021 20:29:40 GMT
 ENV REDMINE_DOWNLOAD_SHA256=04a772b0b8f8ce6493614a7cb22ed82cb9b43c75dcdbeb5c2f925bae98e0d5df
-# Wed, 07 Jul 2021 20:53:59 GMT
+# Wed, 14 Jul 2021 20:29:44 GMT
 RUN set -eux; 	wget -O redmine.tar.gz "https://www.redmine.org/releases/redmine-${REDMINE_VERSION}.tar.gz"; 	echo "$REDMINE_DOWNLOAD_SHA256 *redmine.tar.gz" | sha256sum -c -; 	tar -xf redmine.tar.gz --strip-components=1; 	rm redmine.tar.gz files/delete.me log/delete.me; 	mkdir -p log public/plugin_assets sqlite tmp/pdf tmp/pids; 	chown -R redmine:redmine ./; 	echo 'config.logger = Logger.new(STDOUT)' > config/additional_environment.rb; 	chmod -R ugo=rwX config db sqlite; 	find log tmp -type d -exec chmod 1777 '{}' +
-# Wed, 07 Jul 2021 20:56:10 GMT
+# Wed, 14 Jul 2021 20:31:46 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		freetds-dev 		gcc 		libmariadbclient-dev 		libpq-dev 		libsqlite3-dev 		make 		patch 		libmagickcore-dev libmagickwand-dev 	; 	rm -rf /var/lib/apt/lists/*; 		gosu redmine bundle config --local without 'development test'; 	echo '# the following entries only exist to force `bundle install` to pre-install all database adapter dependencies -- they can be safely removed/ignored' > ./config/database.yml; 	for adapter in mysql2 postgresql sqlserver sqlite3; do 		echo "$adapter:" >> ./config/database.yml; 		echo "  adapter: $adapter" >> ./config/database.yml; 	done; 	gosu redmine bundle install --jobs "$(nproc)"; 	rm ./config/database.yml; 	chmod -R ugo=rwX Gemfile.lock "$GEM_HOME"; 	rm -rf ~redmine/.bundle; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -v '^/usr/local/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Wed, 07 Jul 2021 20:56:11 GMT
+# Wed, 14 Jul 2021 20:31:47 GMT
 VOLUME [/usr/src/redmine/files]
-# Wed, 07 Jul 2021 20:56:11 GMT
+# Wed, 14 Jul 2021 20:31:47 GMT
 COPY file:2c807aca5f34a9ab8acfef3c517816547300ed2b18590f703a1c783bdc707ba8 in / 
-# Wed, 07 Jul 2021 20:56:11 GMT
+# Wed, 14 Jul 2021 20:31:47 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 07 Jul 2021 20:56:12 GMT
+# Wed, 14 Jul 2021 20:31:47 GMT
 EXPOSE 3000
-# Wed, 07 Jul 2021 20:56:12 GMT
+# Wed, 14 Jul 2021 20:31:47 GMT
 CMD ["rails" "server" "-b" "0.0.0.0"]
 ```
 
@@ -1312,40 +1312,40 @@ CMD ["rails" "server" "-b" "0.0.0.0"]
 		Last Modified: Wed, 23 Jun 2021 17:42:36 GMT  
 		Size: 198.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:71bd4dd650c8621dab8128db8ca0e3f89acd9839366648234c17d3016f1bc8da`  
-		Last Modified: Wed, 07 Jul 2021 20:20:53 GMT  
-		Size: 21.5 MB (21467547 bytes)  
+	-	`sha256:ca6b95c16c5624058c7516ccc9aff7fcb6ab05fd66e5e47c1228f4d1e8fec58b`  
+		Last Modified: Thu, 08 Jul 2021 22:40:47 GMT  
+		Size: 21.5 MB (21468025 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:20f8ad4efca5cc78409013778f13741b076a4217a9a2ff39f594ab9ac6bbe2a8`  
-		Last Modified: Wed, 07 Jul 2021 20:20:50 GMT  
+	-	`sha256:0596bd4a64fddd48add80e9f5ee6459a223843aacedfe89c777ed62847e9b45e`  
+		Last Modified: Thu, 08 Jul 2021 22:40:44 GMT  
 		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6a4a13931a73866011c94cfd2b514ede2ebbe9a084ab7a0f99a7ee716f57baa8`  
-		Last Modified: Wed, 07 Jul 2021 21:00:38 GMT  
+	-	`sha256:4b7eae1b0e301a4bb2e1dc9e8faf695f6a25c25fa76af391234a420401b27365`  
+		Last Modified: Wed, 14 Jul 2021 20:36:24 GMT  
 		Size: 1.7 KB (1748 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eda50b46cea0904d5fa9fbfdca39d963c9bada58d643e972a84baade16534d70`  
-		Last Modified: Wed, 07 Jul 2021 21:02:05 GMT  
-		Size: 81.2 MB (81200197 bytes)  
+	-	`sha256:f78eac6959ab00aa4aa16a8572577047e837cde31b8059a7c473709c1c5fd95a`  
+		Last Modified: Wed, 14 Jul 2021 20:37:43 GMT  
+		Size: 81.2 MB (81199589 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a83ce27520ab42f3b2ecea3b4503827e9dc667b7e7433fdf196dad7b1f0e988c`  
-		Last Modified: Wed, 07 Jul 2021 21:01:49 GMT  
+	-	`sha256:770efe9534a041a263a97329ebea752bf15837faebf99a49e25457e40096ab17`  
+		Last Modified: Wed, 14 Jul 2021 20:37:28 GMT  
 		Size: 172.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6829d382ab9bc3cd11d7959c69210dc6277055886dab1772ac587379096de906`  
-		Last Modified: Wed, 07 Jul 2021 21:01:49 GMT  
+	-	`sha256:7b58267e8ed59b94a5001480fd1362e24ec0054ae01393052c4782b412399d79`  
+		Last Modified: Wed, 14 Jul 2021 20:37:28 GMT  
 		Size: 158.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f2e3686a3e05ba7b7e4f9e573aa5972c62af9ca2b344a87c0c1ec193fb1caa7b`  
-		Last Modified: Wed, 07 Jul 2021 21:01:50 GMT  
-		Size: 2.5 MB (2542549 bytes)  
+	-	`sha256:3dedb8a1056b6d5f7546123709ccb9fbd52ff2e4f560bff5926c130bb0237afe`  
+		Last Modified: Wed, 14 Jul 2021 20:37:29 GMT  
+		Size: 2.5 MB (2542552 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:14cfdcd138cf9b1ea1f2e35e05b4c2f9af5642ac4ec3bbe71ff1f076e8e8a535`  
-		Last Modified: Wed, 07 Jul 2021 21:01:57 GMT  
-		Size: 60.1 MB (60147721 bytes)  
+	-	`sha256:8e80e9679392005f7d3a99eba067dbd5717479b70d7e761d843367213982dd2d`  
+		Last Modified: Wed, 14 Jul 2021 20:37:36 GMT  
+		Size: 60.1 MB (60148220 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:49d8946f2be8279feb23a41816c4b7461fba9213263eea9902810cf263d3471e`  
-		Last Modified: Wed, 07 Jul 2021 21:01:49 GMT  
+	-	`sha256:44914decf48cf9c7f0dce9ec00797c7f2f371ce9caf3d32730543bde7a11d036`  
+		Last Modified: Wed, 14 Jul 2021 20:37:28 GMT  
 		Size: 1.8 KB (1797 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -2102,7 +2102,7 @@ CMD ["rails" "server" "-b" "0.0.0.0"]
 ## `redmine:4.0-alpine`
 
 ```console
-$ docker pull redmine@sha256:6b0217cbc040191ad58f8fe2a03f6f8bb677485166c09b2ea39c37c23055a506
+$ docker pull redmine@sha256:9b8ec4df56622e6060cfc701a5059050c3b734da828cc8f154367d016ac22227
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2112,14 +2112,14 @@ $ docker pull redmine@sha256:6b0217cbc040191ad58f8fe2a03f6f8bb677485166c09b2ea39
 ### `redmine:4.0-alpine` - linux; amd64
 
 ```console
-$ docker pull redmine@sha256:6a49ffa5628e3c21dc2053158dab35da4ae10b0410b2a99daa5e94e65bf646f5
+$ docker pull redmine@sha256:baed7be679b02ee2f252035dbc06e0fed257f026688a9fe3da3832b0bf54ae51
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **153.9 MB (153871180 bytes)**  
+-	Total Size: **153.9 MB (153900570 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f1dede1eeefc75c02c7ecb51496e2bb203739b176d2b835be486fe754122549d`
+-	Image ID: `sha256:c69f8d92df2e7210bf95dfe2b409c178cacd6767792bbca288c47ff774f5e817`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["rails","server","-b","0.0.0.0"]`
 
@@ -2128,61 +2128,61 @@ $ docker pull redmine@sha256:6a49ffa5628e3c21dc2053158dab35da4ae10b0410b2a99daa5
 ADD file:8ec69d882e7f29f0652d537557160e638168550f738d0d49f90a7ef96bf31787 in / 
 # Wed, 14 Apr 2021 19:19:39 GMT
 CMD ["/bin/sh"]
-# Thu, 15 Apr 2021 03:07:29 GMT
-RUN apk add --no-cache 		gmp-dev
-# Thu, 15 Apr 2021 03:07:31 GMT
+# Thu, 08 Jul 2021 21:57:27 GMT
+RUN set -eux; 	apk add --no-cache 		bzip2 		ca-certificates 		gmp-dev 		libffi-dev 		procps 		yaml-dev 		zlib-dev 	;
+# Thu, 08 Jul 2021 21:57:30 GMT
 RUN set -eux; 	mkdir -p /usr/local/etc; 	{ 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /usr/local/etc/gemrc
-# Thu, 15 Apr 2021 03:07:31 GMT
+# Thu, 08 Jul 2021 21:57:30 GMT
 ENV LANG=C.UTF-8
-# Thu, 15 Apr 2021 03:24:31 GMT
+# Thu, 08 Jul 2021 22:33:03 GMT
 ENV RUBY_MAJOR=2.6
-# Wed, 07 Jul 2021 20:08:01 GMT
+# Thu, 08 Jul 2021 22:33:03 GMT
 ENV RUBY_VERSION=2.6.8
-# Wed, 07 Jul 2021 20:08:01 GMT
+# Thu, 08 Jul 2021 22:33:03 GMT
 ENV RUBY_DOWNLOAD_SHA256=8262e4663169c85787fdc9bfbd04d9eb86eb2a4b56d7f98373a8fcaa18e593eb
-# Wed, 07 Jul 2021 20:12:38 GMT
-RUN set -eux; 		apk add --no-cache --virtual .ruby-builddeps 		autoconf 		bison 		bzip2 		bzip2-dev 		ca-certificates 		coreutils 		dpkg-dev dpkg 		gcc 		gdbm-dev 		glib-dev 		libc-dev 		libffi-dev 		libxml2-dev 		libxslt-dev 		linux-headers 		make 		ncurses-dev 		openssl 		openssl-dev 		patch 		procps 		readline-dev 		ruby 		tar 		xz 		yaml-dev 		zlib-dev 	; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		wget -O 'thread-stack-fix.patch' 'https://bugs.ruby-lang.org/attachments/download/7081/0001-thread_pthread.c-make-get_main_stack-portable-on-lin.patch'; 	echo '3ab628a51d92fdf0d2b5835e93564857aea73e0c1de00313864a94a6255cb645 *thread-stack-fix.patch' | sha256sum --check --strict; 	patch -p1 -i thread-stack-fix.patch; 	rm thread-stack-fix.patch; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	export ac_cv_func_isnan=yes ac_cv_func_isinf=yes; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .ruby-rundeps 		$runDeps 		bzip2 		ca-certificates 		libffi-dev 		procps 		yaml-dev 		zlib-dev 	; 	apk del --no-network .ruby-builddeps; 		cd /; 	rm -r /usr/src/ruby; 	! apk --no-network list --installed 		| grep -v '^[.]ruby-rundeps' 		| grep -i ruby 	; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Wed, 07 Jul 2021 20:12:38 GMT
+# Thu, 08 Jul 2021 22:35:57 GMT
+RUN set -eux; 		apk add --no-cache --virtual .ruby-builddeps 		autoconf 		bison 		bzip2 		bzip2-dev 		ca-certificates 		coreutils 		dpkg-dev dpkg 		g++ 		gcc 		gdbm-dev 		glib-dev 		libc-dev 		libffi-dev 		libxml2-dev 		libxslt-dev 		linux-headers 		make 		ncurses-dev 		openssl 		openssl-dev 		patch 		procps 		readline-dev 		ruby 		tar 		xz 		yaml-dev 		zlib-dev 	; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		wget -O 'thread-stack-fix.patch' 'https://bugs.ruby-lang.org/attachments/download/7081/0001-thread_pthread.c-make-get_main_stack-portable-on-lin.patch'; 	echo '3ab628a51d92fdf0d2b5835e93564857aea73e0c1de00313864a94a6255cb645 *thread-stack-fix.patch' | sha256sum --check --strict; 	patch -p1 -i thread-stack-fix.patch; 	rm thread-stack-fix.patch; 		export ac_cv_func_isnan=yes ac_cv_func_isinf=yes; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .ruby-rundeps $runDeps; 	apk del --no-network .ruby-builddeps; 		cd /; 	rm -r /usr/src/ruby; 	if 		apk --no-network list --installed 			| grep -v '^[.]ruby-rundeps' 			| grep -i ruby 	; then 		exit 1; 	fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
+# Thu, 08 Jul 2021 22:35:57 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 07 Jul 2021 20:12:38 GMT
+# Thu, 08 Jul 2021 22:35:58 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 07 Jul 2021 20:12:38 GMT
+# Thu, 08 Jul 2021 22:35:58 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 07 Jul 2021 20:12:40 GMT
+# Thu, 08 Jul 2021 22:35:59 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 07 Jul 2021 20:12:40 GMT
+# Thu, 08 Jul 2021 22:35:59 GMT
 CMD ["irb"]
-# Wed, 07 Jul 2021 20:49:10 GMT
+# Wed, 14 Jul 2021 20:26:37 GMT
 RUN addgroup -S -g 1000 redmine && adduser -S -H -G redmine -u 999 redmine
-# Wed, 07 Jul 2021 20:56:52 GMT
+# Wed, 14 Jul 2021 20:32:28 GMT
 RUN set -eux; 	apk add --no-cache 		bash 		ca-certificates 		su-exec 		tini 		tzdata 		wget 				git 		mercurial 		openssh-client 		subversion 				ghostscript-fonts 		imagemagick6 	;
-# Wed, 07 Jul 2021 20:56:52 GMT
+# Wed, 14 Jul 2021 20:32:28 GMT
 ENV RAILS_ENV=production
-# Wed, 07 Jul 2021 20:56:53 GMT
+# Wed, 14 Jul 2021 20:32:28 GMT
 WORKDIR /usr/src/redmine
-# Wed, 07 Jul 2021 20:56:53 GMT
+# Wed, 14 Jul 2021 20:32:29 GMT
 ENV HOME=/home/redmine
-# Wed, 07 Jul 2021 20:56:54 GMT
+# Wed, 14 Jul 2021 20:32:30 GMT
 RUN set -eux; 	[ ! -d "$HOME" ]; 	mkdir -p "$HOME"; 	chown redmine:redmine "$HOME"; 	chmod 1777 "$HOME"
-# Wed, 07 Jul 2021 20:56:54 GMT
+# Wed, 14 Jul 2021 20:32:30 GMT
 ENV REDMINE_VERSION=4.0.9
-# Wed, 07 Jul 2021 20:56:54 GMT
+# Wed, 14 Jul 2021 20:32:30 GMT
 ENV REDMINE_DOWNLOAD_SHA256=04a772b0b8f8ce6493614a7cb22ed82cb9b43c75dcdbeb5c2f925bae98e0d5df
-# Wed, 07 Jul 2021 20:56:58 GMT
+# Wed, 14 Jul 2021 20:32:34 GMT
 RUN set -eux; 	wget -O redmine.tar.gz "https://www.redmine.org/releases/redmine-${REDMINE_VERSION}.tar.gz"; 	echo "$REDMINE_DOWNLOAD_SHA256 *redmine.tar.gz" | sha256sum -c -; 	tar -xf redmine.tar.gz --strip-components=1; 	rm redmine.tar.gz files/delete.me log/delete.me; 	mkdir -p log public/plugin_assets sqlite tmp/pdf tmp/pids; 	chown -R redmine:redmine ./; 	echo 'config.logger = Logger.new(STDOUT)' > config/additional_environment.rb; 	chmod -R ugo=rwX config db sqlite; 	find log tmp -type d -exec chmod 1777 '{}' +
-# Wed, 07 Jul 2021 20:56:59 GMT
+# Wed, 14 Jul 2021 20:32:34 GMT
 ENV BUNDLE_FORCE_RUBY_PLATFORM=1
-# Wed, 07 Jul 2021 20:58:34 GMT
+# Wed, 14 Jul 2021 20:34:03 GMT
 RUN set -eux; 		apk add --no-cache --virtual .build-deps 		coreutils 		freetds-dev 		gcc 		make 		mariadb-dev 		musl-dev 		patch 		postgresql-dev 		sqlite-dev 		ttf2ufm 		zlib-dev 		imagemagick6-dev 	; 		su-exec redmine bundle config --local without 'development test'; 	echo '# the following entries only exist to force `bundle install` to pre-install all database adapter dependencies -- they can be safely removed/ignored' > ./config/database.yml; 	for adapter in mysql2 postgresql sqlserver sqlite3; do 		echo "$adapter:" >> ./config/database.yml; 		echo "  adapter: $adapter" >> ./config/database.yml; 	done; 	su-exec redmine bundle install --jobs "$(nproc)"; 	rm ./config/database.yml; 	chmod -R ugo=rwX Gemfile.lock "$GEM_HOME"; 	rm -rf ~redmine/.bundle; 		rm /usr/local/bundle/gems/rbpdf-font-1.19.*/lib/fonts/ttf2ufm/ttf2ufm; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local/bundle/gems 		| tr ',' '\n' 		| sort -u 		| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .redmine-rundeps $runDeps; 	apk del --no-network .build-deps
-# Wed, 07 Jul 2021 20:58:35 GMT
+# Wed, 14 Jul 2021 20:34:03 GMT
 VOLUME [/usr/src/redmine/files]
-# Wed, 07 Jul 2021 20:58:35 GMT
+# Wed, 14 Jul 2021 20:34:04 GMT
 COPY file:d7d49d1509d97205d05405670ad206509bb871741a17d5270a1b8842b05afc0f in / 
-# Wed, 07 Jul 2021 20:58:35 GMT
+# Wed, 14 Jul 2021 20:34:04 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 07 Jul 2021 20:58:35 GMT
+# Wed, 14 Jul 2021 20:34:04 GMT
 EXPOSE 3000
-# Wed, 07 Jul 2021 20:58:35 GMT
+# Wed, 14 Jul 2021 20:34:04 GMT
 CMD ["rails" "server" "-b" "0.0.0.0"]
 ```
 
@@ -2191,55 +2191,55 @@ CMD ["rails" "server" "-b" "0.0.0.0"]
 		Last Modified: Wed, 14 Apr 2021 17:59:29 GMT  
 		Size: 2.8 MB (2811969 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:98a867505730167ce0636f0811cb765ebbde11bf979c1a9839f6915f2fc3b85b`  
-		Last Modified: Thu, 15 Apr 2021 03:39:41 GMT  
-		Size: 1.2 MB (1218679 bytes)  
+	-	`sha256:ae5b0ea69e9ed42c49b5af449b703a12a4d2f2e28d87905af6fcd903fdae5689`  
+		Last Modified: Thu, 08 Jul 2021 22:38:46 GMT  
+		Size: 3.6 MB (3581658 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:69c77620f6108dc0610cba72f77d68c271fb1b14cb0800a7a8b6aaeb8950fec9`  
-		Last Modified: Thu, 15 Apr 2021 03:39:40 GMT  
-		Size: 222.0 B  
+	-	`sha256:3ad656ed833315b61ea674706f32c2d18d7412c7120926442af57b9131ee72ee`  
+		Last Modified: Thu, 08 Jul 2021 22:38:45 GMT  
+		Size: 223.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:31a13390cfeb23a5dd47d6b95c12990c44c1ffba24bb030d3ac10f869559dbf4`  
-		Last Modified: Wed, 07 Jul 2021 20:21:37 GMT  
-		Size: 22.2 MB (22223054 bytes)  
+	-	`sha256:b2a9d07bc1851494b8935d8593efecfea98e2c4a4ff1c3eaf2e5319eb31cb3a2`  
+		Last Modified: Thu, 08 Jul 2021 22:41:47 GMT  
+		Size: 19.9 MB (19889336 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3401ac322a4ec3ae5e0ad9900be9781dc25e255154f8e0bd481272f772bbd852`  
-		Last Modified: Wed, 07 Jul 2021 20:21:34 GMT  
-		Size: 172.0 B  
+	-	`sha256:34d50c8fd3318db7f0dbb1d50a8aa4e571ae4926440e66c07be861dd4685211d`  
+		Last Modified: Thu, 08 Jul 2021 22:41:44 GMT  
+		Size: 173.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8a68c5f8f755665933870117b083d8976a4e8d53825958e96d454c2a165b464e`  
-		Last Modified: Wed, 07 Jul 2021 21:01:26 GMT  
-		Size: 1.2 KB (1205 bytes)  
+	-	`sha256:97e030b8560a875bcd9c87e7dd1c8faf94a9d48cf039ee0bf125017750cc802b`  
+		Last Modified: Wed, 14 Jul 2021 20:37:07 GMT  
+		Size: 1.2 KB (1211 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:03749ceb6e995993dccf4cfc07e4490382891da608d38c0ec2afa6ae43483321`  
-		Last Modified: Wed, 07 Jul 2021 21:02:45 GMT  
-		Size: 66.2 MB (66172729 bytes)  
+	-	`sha256:77f9541899ba9d0a6bde1aaa23a83e1e1cd6a17fc0adecb390591f66b0ccb93b`  
+		Last Modified: Wed, 14 Jul 2021 20:38:23 GMT  
+		Size: 66.2 MB (66172712 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e5f5ea56feb8bcf216bdc0ad9ab0d71ebab19889d2dd5a1bd8ddddd57d38a3b2`  
-		Last Modified: Wed, 07 Jul 2021 21:02:31 GMT  
-		Size: 166.0 B  
+	-	`sha256:26bc115e3ba6c2cb414f0bb5c4df5c0dad6b57442cf9044bbe1fc33e266821b4`  
+		Last Modified: Wed, 14 Jul 2021 20:38:08 GMT  
+		Size: 167.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b6c3e961cbaa8ad36231a40bf1fedefc5ed50203d1481cc21ef66dedc4e155d2`  
-		Last Modified: Wed, 07 Jul 2021 21:02:31 GMT  
+	-	`sha256:7a0bf51497625cb7774642f214c3424e7a0e97dff3e9c1c7e96c279d965e3981`  
+		Last Modified: Wed, 14 Jul 2021 20:38:08 GMT  
 		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3140fd0070a1668a9c2314447de53f1d06400d2c92c1b10fa393bbe863f63444`  
-		Last Modified: Wed, 07 Jul 2021 21:02:32 GMT  
-		Size: 2.5 MB (2543723 bytes)  
+	-	`sha256:7d58772bc79f2753b31d538e035d07bd09bb2731fc4843259e09b0c4be77e2f9`  
+		Last Modified: Wed, 14 Jul 2021 20:38:10 GMT  
+		Size: 2.5 MB (2543757 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b7c1c9bbb13a43e750a0ccf62fb3df3649c61c6934145f4bb5c9e81c1e4f448e`  
-		Last Modified: Wed, 07 Jul 2021 21:02:38 GMT  
-		Size: 58.9 MB (58897305 bytes)  
+	-	`sha256:57f9be46406ca851c437e457fa10b35fea3c15bda96b4f315f9514efea879beb`  
+		Last Modified: Wed, 14 Jul 2021 20:38:15 GMT  
+		Size: 58.9 MB (58897408 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:96df69c3e1b39ce672dfed8dabf1d3cbbf86c60fc02a4b9734d016607cf0d655`  
-		Last Modified: Wed, 07 Jul 2021 21:02:31 GMT  
+	-	`sha256:bad779a0b33ba3ea1e31e4a1ee1c8bab4546aadacd48d0fb32d05adc26c02906`  
+		Last Modified: Wed, 14 Jul 2021 20:38:08 GMT  
 		Size: 1.8 KB (1797 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `redmine:4.0-passenger`
 
 ```console
-$ docker pull redmine@sha256:e9f434974c92eda5d0336658b78ddaefde5f2c9b8d0f01368f54e66f7595f42a
+$ docker pull redmine@sha256:5c4cd06fe1b29aa7167a46cc260fc067c63cf4d674b5e23dffb8d6d5f994da00
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2249,14 +2249,14 @@ $ docker pull redmine@sha256:e9f434974c92eda5d0336658b78ddaefde5f2c9b8d0f01368f5
 ### `redmine:4.0-passenger` - linux; amd64
 
 ```console
-$ docker pull redmine@sha256:d39d7707d25c731690905259e86b8c255c35883db65f1458d352105ff2b0a88b
+$ docker pull redmine@sha256:da0b13e09beb165bb6b56a75ebbe1539903673281754de99f5c64d8c9938dd4e
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **231.3 MB (231315564 bytes)**  
+-	Total Size: **231.3 MB (231317751 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:85b73b2144e7cfe76713d680d27e279af4b1987828970a747102dbc1ecd9cc8c`
+-	Image ID: `sha256:b4a599ab4d7664421a016eba87a6a6596a9a32e5e583ae00aec3d5ab86eb6e12`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["passenger","start"]`
 
@@ -2277,57 +2277,57 @@ ENV RUBY_MAJOR=2.6
 ENV RUBY_VERSION=2.6.8
 # Wed, 07 Jul 2021 19:55:25 GMT
 ENV RUBY_DOWNLOAD_SHA256=8262e4663169c85787fdc9bfbd04d9eb86eb2a4b56d7f98373a8fcaa18e593eb
-# Wed, 07 Jul 2021 19:59:28 GMT
-RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		bison 		dpkg-dev 		gcc 		libbz2-dev 		libgdbm-compat-dev 		libgdbm-dev 		libglib2.0-dev 		libncurses-dev 		libreadline-dev 		libxml2-dev 		libxslt-dev 		make 		ruby 		wget 		xz-utils 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		cd /; 	rm -r /usr/src/ruby; 	! dpkg -l | grep -i ruby; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Wed, 07 Jul 2021 19:59:28 GMT
+# Thu, 08 Jul 2021 22:24:34 GMT
+RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		bison 		dpkg-dev 		libgdbm-dev 		ruby 		autoconf 		g++ 		gcc 		libbz2-dev 		libglib2.0-dev 		libncurses-dev 		libreadline-dev 		libxml2-dev 		libxslt-dev 		make 		wget 		xz-utils 		libgdbm-compat-dev 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -vE '^/usr/local/lib/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		cd /; 	rm -r /usr/src/ruby; 	if dpkg -l | grep -i ruby; then exit 1; fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
+# Thu, 08 Jul 2021 22:24:34 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 07 Jul 2021 19:59:28 GMT
+# Thu, 08 Jul 2021 22:24:34 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 07 Jul 2021 19:59:28 GMT
+# Thu, 08 Jul 2021 22:24:34 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 07 Jul 2021 19:59:30 GMT
+# Thu, 08 Jul 2021 22:24:35 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 07 Jul 2021 19:59:30 GMT
+# Thu, 08 Jul 2021 22:24:36 GMT
 CMD ["irb"]
-# Wed, 07 Jul 2021 20:46:29 GMT
+# Wed, 14 Jul 2021 20:24:50 GMT
 RUN groupadd -r -g 999 redmine && useradd -r -g redmine -u 999 redmine
-# Wed, 07 Jul 2021 20:53:49 GMT
+# Wed, 14 Jul 2021 20:29:27 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		wget 				bzr 		git 		mercurial 		openssh-client 		subversion 				gsfonts 		imagemagick 		gosu 		tini 	; 	rm -rf /var/lib/apt/lists/*
-# Wed, 07 Jul 2021 20:53:50 GMT
+# Wed, 14 Jul 2021 20:29:28 GMT
 ENV RAILS_ENV=production
-# Wed, 07 Jul 2021 20:53:51 GMT
+# Wed, 14 Jul 2021 20:29:28 GMT
 WORKDIR /usr/src/redmine
-# Wed, 07 Jul 2021 20:53:51 GMT
+# Wed, 14 Jul 2021 20:29:31 GMT
 ENV HOME=/home/redmine
-# Wed, 07 Jul 2021 20:53:53 GMT
+# Wed, 14 Jul 2021 20:29:36 GMT
 RUN set -eux; 	[ ! -d "$HOME" ]; 	mkdir -p "$HOME"; 	chown redmine:redmine "$HOME"; 	chmod 1777 "$HOME"
-# Wed, 07 Jul 2021 20:53:54 GMT
+# Wed, 14 Jul 2021 20:29:40 GMT
 ENV REDMINE_VERSION=4.0.9
-# Wed, 07 Jul 2021 20:53:54 GMT
+# Wed, 14 Jul 2021 20:29:40 GMT
 ENV REDMINE_DOWNLOAD_SHA256=04a772b0b8f8ce6493614a7cb22ed82cb9b43c75dcdbeb5c2f925bae98e0d5df
-# Wed, 07 Jul 2021 20:53:59 GMT
+# Wed, 14 Jul 2021 20:29:44 GMT
 RUN set -eux; 	wget -O redmine.tar.gz "https://www.redmine.org/releases/redmine-${REDMINE_VERSION}.tar.gz"; 	echo "$REDMINE_DOWNLOAD_SHA256 *redmine.tar.gz" | sha256sum -c -; 	tar -xf redmine.tar.gz --strip-components=1; 	rm redmine.tar.gz files/delete.me log/delete.me; 	mkdir -p log public/plugin_assets sqlite tmp/pdf tmp/pids; 	chown -R redmine:redmine ./; 	echo 'config.logger = Logger.new(STDOUT)' > config/additional_environment.rb; 	chmod -R ugo=rwX config db sqlite; 	find log tmp -type d -exec chmod 1777 '{}' +
-# Wed, 07 Jul 2021 20:56:10 GMT
+# Wed, 14 Jul 2021 20:31:46 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		freetds-dev 		gcc 		libmariadbclient-dev 		libpq-dev 		libsqlite3-dev 		make 		patch 		libmagickcore-dev libmagickwand-dev 	; 	rm -rf /var/lib/apt/lists/*; 		gosu redmine bundle config --local without 'development test'; 	echo '# the following entries only exist to force `bundle install` to pre-install all database adapter dependencies -- they can be safely removed/ignored' > ./config/database.yml; 	for adapter in mysql2 postgresql sqlserver sqlite3; do 		echo "$adapter:" >> ./config/database.yml; 		echo "  adapter: $adapter" >> ./config/database.yml; 	done; 	gosu redmine bundle install --jobs "$(nproc)"; 	rm ./config/database.yml; 	chmod -R ugo=rwX Gemfile.lock "$GEM_HOME"; 	rm -rf ~redmine/.bundle; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -v '^/usr/local/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Wed, 07 Jul 2021 20:56:11 GMT
+# Wed, 14 Jul 2021 20:31:47 GMT
 VOLUME [/usr/src/redmine/files]
-# Wed, 07 Jul 2021 20:56:11 GMT
+# Wed, 14 Jul 2021 20:31:47 GMT
 COPY file:2c807aca5f34a9ab8acfef3c517816547300ed2b18590f703a1c783bdc707ba8 in / 
-# Wed, 07 Jul 2021 20:56:11 GMT
+# Wed, 14 Jul 2021 20:31:47 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 07 Jul 2021 20:56:12 GMT
+# Wed, 14 Jul 2021 20:31:47 GMT
 EXPOSE 3000
-# Wed, 07 Jul 2021 20:56:12 GMT
+# Wed, 14 Jul 2021 20:31:47 GMT
 CMD ["rails" "server" "-b" "0.0.0.0"]
-# Wed, 07 Jul 2021 20:56:18 GMT
-ENV PASSENGER_VERSION=6.0.9
-# Wed, 07 Jul 2021 20:56:36 GMT
+# Wed, 14 Jul 2021 20:31:58 GMT
+ENV PASSENGER_VERSION=6.0.10
+# Wed, 14 Jul 2021 20:32:15 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		gcc 		make 	; 	rm -rf /var/lib/apt/lists/*; 		gem install passenger --version "$PASSENGER_VERSION"; 	passenger-config build-native-support; 	if [ -n "$(passenger-config build-native-support 2>&1)" ]; then cat /tmp/passenger_native_support-*.log; false; fi; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Wed, 07 Jul 2021 20:56:38 GMT
+# Wed, 14 Jul 2021 20:32:17 GMT
 RUN set -eux; 	passenger-config install-agent; 	passenger-config download-nginx-engine
-# Wed, 07 Jul 2021 20:56:38 GMT
+# Wed, 14 Jul 2021 20:32:17 GMT
 ENV PASSENGER_PID_FILE=tmp/pids/server.pid
-# Wed, 07 Jul 2021 20:56:38 GMT
+# Wed, 14 Jul 2021 20:32:17 GMT
 CMD ["passenger" "start"]
 ```
 
@@ -2344,55 +2344,55 @@ CMD ["passenger" "start"]
 		Last Modified: Wed, 23 Jun 2021 17:42:36 GMT  
 		Size: 198.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:71bd4dd650c8621dab8128db8ca0e3f89acd9839366648234c17d3016f1bc8da`  
-		Last Modified: Wed, 07 Jul 2021 20:20:53 GMT  
-		Size: 21.5 MB (21467547 bytes)  
+	-	`sha256:ca6b95c16c5624058c7516ccc9aff7fcb6ab05fd66e5e47c1228f4d1e8fec58b`  
+		Last Modified: Thu, 08 Jul 2021 22:40:47 GMT  
+		Size: 21.5 MB (21468025 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:20f8ad4efca5cc78409013778f13741b076a4217a9a2ff39f594ab9ac6bbe2a8`  
-		Last Modified: Wed, 07 Jul 2021 20:20:50 GMT  
+	-	`sha256:0596bd4a64fddd48add80e9f5ee6459a223843aacedfe89c777ed62847e9b45e`  
+		Last Modified: Thu, 08 Jul 2021 22:40:44 GMT  
 		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6a4a13931a73866011c94cfd2b514ede2ebbe9a084ab7a0f99a7ee716f57baa8`  
-		Last Modified: Wed, 07 Jul 2021 21:00:38 GMT  
+	-	`sha256:4b7eae1b0e301a4bb2e1dc9e8faf695f6a25c25fa76af391234a420401b27365`  
+		Last Modified: Wed, 14 Jul 2021 20:36:24 GMT  
 		Size: 1.7 KB (1748 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eda50b46cea0904d5fa9fbfdca39d963c9bada58d643e972a84baade16534d70`  
-		Last Modified: Wed, 07 Jul 2021 21:02:05 GMT  
-		Size: 81.2 MB (81200197 bytes)  
+	-	`sha256:f78eac6959ab00aa4aa16a8572577047e837cde31b8059a7c473709c1c5fd95a`  
+		Last Modified: Wed, 14 Jul 2021 20:37:43 GMT  
+		Size: 81.2 MB (81199589 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a83ce27520ab42f3b2ecea3b4503827e9dc667b7e7433fdf196dad7b1f0e988c`  
-		Last Modified: Wed, 07 Jul 2021 21:01:49 GMT  
+	-	`sha256:770efe9534a041a263a97329ebea752bf15837faebf99a49e25457e40096ab17`  
+		Last Modified: Wed, 14 Jul 2021 20:37:28 GMT  
 		Size: 172.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6829d382ab9bc3cd11d7959c69210dc6277055886dab1772ac587379096de906`  
-		Last Modified: Wed, 07 Jul 2021 21:01:49 GMT  
+	-	`sha256:7b58267e8ed59b94a5001480fd1362e24ec0054ae01393052c4782b412399d79`  
+		Last Modified: Wed, 14 Jul 2021 20:37:28 GMT  
 		Size: 158.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f2e3686a3e05ba7b7e4f9e573aa5972c62af9ca2b344a87c0c1ec193fb1caa7b`  
-		Last Modified: Wed, 07 Jul 2021 21:01:50 GMT  
-		Size: 2.5 MB (2542549 bytes)  
+	-	`sha256:3dedb8a1056b6d5f7546123709ccb9fbd52ff2e4f560bff5926c130bb0237afe`  
+		Last Modified: Wed, 14 Jul 2021 20:37:29 GMT  
+		Size: 2.5 MB (2542552 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:14cfdcd138cf9b1ea1f2e35e05b4c2f9af5642ac4ec3bbe71ff1f076e8e8a535`  
-		Last Modified: Wed, 07 Jul 2021 21:01:57 GMT  
-		Size: 60.1 MB (60147721 bytes)  
+	-	`sha256:8e80e9679392005f7d3a99eba067dbd5717479b70d7e761d843367213982dd2d`  
+		Last Modified: Wed, 14 Jul 2021 20:37:36 GMT  
+		Size: 60.1 MB (60148220 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:49d8946f2be8279feb23a41816c4b7461fba9213263eea9902810cf263d3471e`  
-		Last Modified: Wed, 07 Jul 2021 21:01:49 GMT  
+	-	`sha256:44914decf48cf9c7f0dce9ec00797c7f2f371ce9caf3d32730543bde7a11d036`  
+		Last Modified: Wed, 14 Jul 2021 20:37:28 GMT  
 		Size: 1.8 KB (1797 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bf78b2bcd2a4801910af601c4164d27657dfc9170ac3e9982272912043e3c7ca`  
-		Last Modified: Wed, 07 Jul 2021 21:02:19 GMT  
-		Size: 21.3 MB (21325422 bytes)  
+	-	`sha256:500a6ed36b2fa5886fdddf1c3900306c8cac410d018296ccc1e2de3220e92249`  
+		Last Modified: Wed, 14 Jul 2021 20:37:58 GMT  
+		Size: 21.3 MB (21327295 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3aa897b0fad70afc54075d0f1dcc4d698ea27f66e809a60ea44dacd579b10fcd`  
-		Last Modified: Wed, 07 Jul 2021 21:02:17 GMT  
-		Size: 4.9 MB (4919343 bytes)  
+	-	`sha256:7c9ed997038310a9ec1bb536c1ba7fd7ce6674584b693e3d48b3badf23ee62ed`  
+		Last Modified: Wed, 14 Jul 2021 20:37:56 GMT  
+		Size: 4.9 MB (4919285 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `redmine:4.0.9`
 
 ```console
-$ docker pull redmine@sha256:740f54080382e58be95a236f66d4e528a4b1a961210ebd437845eadfd0c04d0c
+$ docker pull redmine@sha256:5fe2bfa25e09380eb390b7cca4ad0af896d83a3224478b8ff0855871a724fe9a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2408,14 +2408,14 @@ $ docker pull redmine@sha256:740f54080382e58be95a236f66d4e528a4b1a961210ebd43784
 ### `redmine:4.0.9` - linux; amd64
 
 ```console
-$ docker pull redmine@sha256:5437a642fa204428bfd19747c269515f08c3fd7e960c4cc531b3b12fb031a697
+$ docker pull redmine@sha256:120d31ad80c1785e72a46398a061a612987797e4607a61e60010181de0caac33
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **205.1 MB (205070799 bytes)**  
+-	Total Size: **205.1 MB (205071171 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4139862a638f10ef6044bef5ebfc694924c2f42a09f1e0e7f6434bcbe62441fe`
+-	Image ID: `sha256:bf0b146af85cd11c523db51af33d174d5049495a32f1df271250cf823400a93e`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["rails","server","-b","0.0.0.0"]`
 
@@ -2436,47 +2436,47 @@ ENV RUBY_MAJOR=2.6
 ENV RUBY_VERSION=2.6.8
 # Wed, 07 Jul 2021 19:55:25 GMT
 ENV RUBY_DOWNLOAD_SHA256=8262e4663169c85787fdc9bfbd04d9eb86eb2a4b56d7f98373a8fcaa18e593eb
-# Wed, 07 Jul 2021 19:59:28 GMT
-RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		bison 		dpkg-dev 		gcc 		libbz2-dev 		libgdbm-compat-dev 		libgdbm-dev 		libglib2.0-dev 		libncurses-dev 		libreadline-dev 		libxml2-dev 		libxslt-dev 		make 		ruby 		wget 		xz-utils 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		cd /; 	rm -r /usr/src/ruby; 	! dpkg -l | grep -i ruby; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Wed, 07 Jul 2021 19:59:28 GMT
+# Thu, 08 Jul 2021 22:24:34 GMT
+RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		bison 		dpkg-dev 		libgdbm-dev 		ruby 		autoconf 		g++ 		gcc 		libbz2-dev 		libglib2.0-dev 		libncurses-dev 		libreadline-dev 		libxml2-dev 		libxslt-dev 		make 		wget 		xz-utils 		libgdbm-compat-dev 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -vE '^/usr/local/lib/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		cd /; 	rm -r /usr/src/ruby; 	if dpkg -l | grep -i ruby; then exit 1; fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
+# Thu, 08 Jul 2021 22:24:34 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 07 Jul 2021 19:59:28 GMT
+# Thu, 08 Jul 2021 22:24:34 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 07 Jul 2021 19:59:28 GMT
+# Thu, 08 Jul 2021 22:24:34 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 07 Jul 2021 19:59:30 GMT
+# Thu, 08 Jul 2021 22:24:35 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 07 Jul 2021 19:59:30 GMT
+# Thu, 08 Jul 2021 22:24:36 GMT
 CMD ["irb"]
-# Wed, 07 Jul 2021 20:46:29 GMT
+# Wed, 14 Jul 2021 20:24:50 GMT
 RUN groupadd -r -g 999 redmine && useradd -r -g redmine -u 999 redmine
-# Wed, 07 Jul 2021 20:53:49 GMT
+# Wed, 14 Jul 2021 20:29:27 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		wget 				bzr 		git 		mercurial 		openssh-client 		subversion 				gsfonts 		imagemagick 		gosu 		tini 	; 	rm -rf /var/lib/apt/lists/*
-# Wed, 07 Jul 2021 20:53:50 GMT
+# Wed, 14 Jul 2021 20:29:28 GMT
 ENV RAILS_ENV=production
-# Wed, 07 Jul 2021 20:53:51 GMT
+# Wed, 14 Jul 2021 20:29:28 GMT
 WORKDIR /usr/src/redmine
-# Wed, 07 Jul 2021 20:53:51 GMT
+# Wed, 14 Jul 2021 20:29:31 GMT
 ENV HOME=/home/redmine
-# Wed, 07 Jul 2021 20:53:53 GMT
+# Wed, 14 Jul 2021 20:29:36 GMT
 RUN set -eux; 	[ ! -d "$HOME" ]; 	mkdir -p "$HOME"; 	chown redmine:redmine "$HOME"; 	chmod 1777 "$HOME"
-# Wed, 07 Jul 2021 20:53:54 GMT
+# Wed, 14 Jul 2021 20:29:40 GMT
 ENV REDMINE_VERSION=4.0.9
-# Wed, 07 Jul 2021 20:53:54 GMT
+# Wed, 14 Jul 2021 20:29:40 GMT
 ENV REDMINE_DOWNLOAD_SHA256=04a772b0b8f8ce6493614a7cb22ed82cb9b43c75dcdbeb5c2f925bae98e0d5df
-# Wed, 07 Jul 2021 20:53:59 GMT
+# Wed, 14 Jul 2021 20:29:44 GMT
 RUN set -eux; 	wget -O redmine.tar.gz "https://www.redmine.org/releases/redmine-${REDMINE_VERSION}.tar.gz"; 	echo "$REDMINE_DOWNLOAD_SHA256 *redmine.tar.gz" | sha256sum -c -; 	tar -xf redmine.tar.gz --strip-components=1; 	rm redmine.tar.gz files/delete.me log/delete.me; 	mkdir -p log public/plugin_assets sqlite tmp/pdf tmp/pids; 	chown -R redmine:redmine ./; 	echo 'config.logger = Logger.new(STDOUT)' > config/additional_environment.rb; 	chmod -R ugo=rwX config db sqlite; 	find log tmp -type d -exec chmod 1777 '{}' +
-# Wed, 07 Jul 2021 20:56:10 GMT
+# Wed, 14 Jul 2021 20:31:46 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		freetds-dev 		gcc 		libmariadbclient-dev 		libpq-dev 		libsqlite3-dev 		make 		patch 		libmagickcore-dev libmagickwand-dev 	; 	rm -rf /var/lib/apt/lists/*; 		gosu redmine bundle config --local without 'development test'; 	echo '# the following entries only exist to force `bundle install` to pre-install all database adapter dependencies -- they can be safely removed/ignored' > ./config/database.yml; 	for adapter in mysql2 postgresql sqlserver sqlite3; do 		echo "$adapter:" >> ./config/database.yml; 		echo "  adapter: $adapter" >> ./config/database.yml; 	done; 	gosu redmine bundle install --jobs "$(nproc)"; 	rm ./config/database.yml; 	chmod -R ugo=rwX Gemfile.lock "$GEM_HOME"; 	rm -rf ~redmine/.bundle; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -v '^/usr/local/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Wed, 07 Jul 2021 20:56:11 GMT
+# Wed, 14 Jul 2021 20:31:47 GMT
 VOLUME [/usr/src/redmine/files]
-# Wed, 07 Jul 2021 20:56:11 GMT
+# Wed, 14 Jul 2021 20:31:47 GMT
 COPY file:2c807aca5f34a9ab8acfef3c517816547300ed2b18590f703a1c783bdc707ba8 in / 
-# Wed, 07 Jul 2021 20:56:11 GMT
+# Wed, 14 Jul 2021 20:31:47 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 07 Jul 2021 20:56:12 GMT
+# Wed, 14 Jul 2021 20:31:47 GMT
 EXPOSE 3000
-# Wed, 07 Jul 2021 20:56:12 GMT
+# Wed, 14 Jul 2021 20:31:47 GMT
 CMD ["rails" "server" "-b" "0.0.0.0"]
 ```
 
@@ -2493,40 +2493,40 @@ CMD ["rails" "server" "-b" "0.0.0.0"]
 		Last Modified: Wed, 23 Jun 2021 17:42:36 GMT  
 		Size: 198.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:71bd4dd650c8621dab8128db8ca0e3f89acd9839366648234c17d3016f1bc8da`  
-		Last Modified: Wed, 07 Jul 2021 20:20:53 GMT  
-		Size: 21.5 MB (21467547 bytes)  
+	-	`sha256:ca6b95c16c5624058c7516ccc9aff7fcb6ab05fd66e5e47c1228f4d1e8fec58b`  
+		Last Modified: Thu, 08 Jul 2021 22:40:47 GMT  
+		Size: 21.5 MB (21468025 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:20f8ad4efca5cc78409013778f13741b076a4217a9a2ff39f594ab9ac6bbe2a8`  
-		Last Modified: Wed, 07 Jul 2021 20:20:50 GMT  
+	-	`sha256:0596bd4a64fddd48add80e9f5ee6459a223843aacedfe89c777ed62847e9b45e`  
+		Last Modified: Thu, 08 Jul 2021 22:40:44 GMT  
 		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6a4a13931a73866011c94cfd2b514ede2ebbe9a084ab7a0f99a7ee716f57baa8`  
-		Last Modified: Wed, 07 Jul 2021 21:00:38 GMT  
+	-	`sha256:4b7eae1b0e301a4bb2e1dc9e8faf695f6a25c25fa76af391234a420401b27365`  
+		Last Modified: Wed, 14 Jul 2021 20:36:24 GMT  
 		Size: 1.7 KB (1748 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eda50b46cea0904d5fa9fbfdca39d963c9bada58d643e972a84baade16534d70`  
-		Last Modified: Wed, 07 Jul 2021 21:02:05 GMT  
-		Size: 81.2 MB (81200197 bytes)  
+	-	`sha256:f78eac6959ab00aa4aa16a8572577047e837cde31b8059a7c473709c1c5fd95a`  
+		Last Modified: Wed, 14 Jul 2021 20:37:43 GMT  
+		Size: 81.2 MB (81199589 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a83ce27520ab42f3b2ecea3b4503827e9dc667b7e7433fdf196dad7b1f0e988c`  
-		Last Modified: Wed, 07 Jul 2021 21:01:49 GMT  
+	-	`sha256:770efe9534a041a263a97329ebea752bf15837faebf99a49e25457e40096ab17`  
+		Last Modified: Wed, 14 Jul 2021 20:37:28 GMT  
 		Size: 172.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6829d382ab9bc3cd11d7959c69210dc6277055886dab1772ac587379096de906`  
-		Last Modified: Wed, 07 Jul 2021 21:01:49 GMT  
+	-	`sha256:7b58267e8ed59b94a5001480fd1362e24ec0054ae01393052c4782b412399d79`  
+		Last Modified: Wed, 14 Jul 2021 20:37:28 GMT  
 		Size: 158.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f2e3686a3e05ba7b7e4f9e573aa5972c62af9ca2b344a87c0c1ec193fb1caa7b`  
-		Last Modified: Wed, 07 Jul 2021 21:01:50 GMT  
-		Size: 2.5 MB (2542549 bytes)  
+	-	`sha256:3dedb8a1056b6d5f7546123709ccb9fbd52ff2e4f560bff5926c130bb0237afe`  
+		Last Modified: Wed, 14 Jul 2021 20:37:29 GMT  
+		Size: 2.5 MB (2542552 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:14cfdcd138cf9b1ea1f2e35e05b4c2f9af5642ac4ec3bbe71ff1f076e8e8a535`  
-		Last Modified: Wed, 07 Jul 2021 21:01:57 GMT  
-		Size: 60.1 MB (60147721 bytes)  
+	-	`sha256:8e80e9679392005f7d3a99eba067dbd5717479b70d7e761d843367213982dd2d`  
+		Last Modified: Wed, 14 Jul 2021 20:37:36 GMT  
+		Size: 60.1 MB (60148220 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:49d8946f2be8279feb23a41816c4b7461fba9213263eea9902810cf263d3471e`  
-		Last Modified: Wed, 07 Jul 2021 21:01:49 GMT  
+	-	`sha256:44914decf48cf9c7f0dce9ec00797c7f2f371ce9caf3d32730543bde7a11d036`  
+		Last Modified: Wed, 14 Jul 2021 20:37:28 GMT  
 		Size: 1.8 KB (1797 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -3283,7 +3283,7 @@ CMD ["rails" "server" "-b" "0.0.0.0"]
 ## `redmine:4.0.9-alpine`
 
 ```console
-$ docker pull redmine@sha256:6b0217cbc040191ad58f8fe2a03f6f8bb677485166c09b2ea39c37c23055a506
+$ docker pull redmine@sha256:9b8ec4df56622e6060cfc701a5059050c3b734da828cc8f154367d016ac22227
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3293,14 +3293,14 @@ $ docker pull redmine@sha256:6b0217cbc040191ad58f8fe2a03f6f8bb677485166c09b2ea39
 ### `redmine:4.0.9-alpine` - linux; amd64
 
 ```console
-$ docker pull redmine@sha256:6a49ffa5628e3c21dc2053158dab35da4ae10b0410b2a99daa5e94e65bf646f5
+$ docker pull redmine@sha256:baed7be679b02ee2f252035dbc06e0fed257f026688a9fe3da3832b0bf54ae51
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **153.9 MB (153871180 bytes)**  
+-	Total Size: **153.9 MB (153900570 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f1dede1eeefc75c02c7ecb51496e2bb203739b176d2b835be486fe754122549d`
+-	Image ID: `sha256:c69f8d92df2e7210bf95dfe2b409c178cacd6767792bbca288c47ff774f5e817`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["rails","server","-b","0.0.0.0"]`
 
@@ -3309,61 +3309,61 @@ $ docker pull redmine@sha256:6a49ffa5628e3c21dc2053158dab35da4ae10b0410b2a99daa5
 ADD file:8ec69d882e7f29f0652d537557160e638168550f738d0d49f90a7ef96bf31787 in / 
 # Wed, 14 Apr 2021 19:19:39 GMT
 CMD ["/bin/sh"]
-# Thu, 15 Apr 2021 03:07:29 GMT
-RUN apk add --no-cache 		gmp-dev
-# Thu, 15 Apr 2021 03:07:31 GMT
+# Thu, 08 Jul 2021 21:57:27 GMT
+RUN set -eux; 	apk add --no-cache 		bzip2 		ca-certificates 		gmp-dev 		libffi-dev 		procps 		yaml-dev 		zlib-dev 	;
+# Thu, 08 Jul 2021 21:57:30 GMT
 RUN set -eux; 	mkdir -p /usr/local/etc; 	{ 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /usr/local/etc/gemrc
-# Thu, 15 Apr 2021 03:07:31 GMT
+# Thu, 08 Jul 2021 21:57:30 GMT
 ENV LANG=C.UTF-8
-# Thu, 15 Apr 2021 03:24:31 GMT
+# Thu, 08 Jul 2021 22:33:03 GMT
 ENV RUBY_MAJOR=2.6
-# Wed, 07 Jul 2021 20:08:01 GMT
+# Thu, 08 Jul 2021 22:33:03 GMT
 ENV RUBY_VERSION=2.6.8
-# Wed, 07 Jul 2021 20:08:01 GMT
+# Thu, 08 Jul 2021 22:33:03 GMT
 ENV RUBY_DOWNLOAD_SHA256=8262e4663169c85787fdc9bfbd04d9eb86eb2a4b56d7f98373a8fcaa18e593eb
-# Wed, 07 Jul 2021 20:12:38 GMT
-RUN set -eux; 		apk add --no-cache --virtual .ruby-builddeps 		autoconf 		bison 		bzip2 		bzip2-dev 		ca-certificates 		coreutils 		dpkg-dev dpkg 		gcc 		gdbm-dev 		glib-dev 		libc-dev 		libffi-dev 		libxml2-dev 		libxslt-dev 		linux-headers 		make 		ncurses-dev 		openssl 		openssl-dev 		patch 		procps 		readline-dev 		ruby 		tar 		xz 		yaml-dev 		zlib-dev 	; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		wget -O 'thread-stack-fix.patch' 'https://bugs.ruby-lang.org/attachments/download/7081/0001-thread_pthread.c-make-get_main_stack-portable-on-lin.patch'; 	echo '3ab628a51d92fdf0d2b5835e93564857aea73e0c1de00313864a94a6255cb645 *thread-stack-fix.patch' | sha256sum --check --strict; 	patch -p1 -i thread-stack-fix.patch; 	rm thread-stack-fix.patch; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	export ac_cv_func_isnan=yes ac_cv_func_isinf=yes; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .ruby-rundeps 		$runDeps 		bzip2 		ca-certificates 		libffi-dev 		procps 		yaml-dev 		zlib-dev 	; 	apk del --no-network .ruby-builddeps; 		cd /; 	rm -r /usr/src/ruby; 	! apk --no-network list --installed 		| grep -v '^[.]ruby-rundeps' 		| grep -i ruby 	; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Wed, 07 Jul 2021 20:12:38 GMT
+# Thu, 08 Jul 2021 22:35:57 GMT
+RUN set -eux; 		apk add --no-cache --virtual .ruby-builddeps 		autoconf 		bison 		bzip2 		bzip2-dev 		ca-certificates 		coreutils 		dpkg-dev dpkg 		g++ 		gcc 		gdbm-dev 		glib-dev 		libc-dev 		libffi-dev 		libxml2-dev 		libxslt-dev 		linux-headers 		make 		ncurses-dev 		openssl 		openssl-dev 		patch 		procps 		readline-dev 		ruby 		tar 		xz 		yaml-dev 		zlib-dev 	; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		wget -O 'thread-stack-fix.patch' 'https://bugs.ruby-lang.org/attachments/download/7081/0001-thread_pthread.c-make-get_main_stack-portable-on-lin.patch'; 	echo '3ab628a51d92fdf0d2b5835e93564857aea73e0c1de00313864a94a6255cb645 *thread-stack-fix.patch' | sha256sum --check --strict; 	patch -p1 -i thread-stack-fix.patch; 	rm thread-stack-fix.patch; 		export ac_cv_func_isnan=yes ac_cv_func_isinf=yes; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .ruby-rundeps $runDeps; 	apk del --no-network .ruby-builddeps; 		cd /; 	rm -r /usr/src/ruby; 	if 		apk --no-network list --installed 			| grep -v '^[.]ruby-rundeps' 			| grep -i ruby 	; then 		exit 1; 	fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
+# Thu, 08 Jul 2021 22:35:57 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 07 Jul 2021 20:12:38 GMT
+# Thu, 08 Jul 2021 22:35:58 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 07 Jul 2021 20:12:38 GMT
+# Thu, 08 Jul 2021 22:35:58 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 07 Jul 2021 20:12:40 GMT
+# Thu, 08 Jul 2021 22:35:59 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 07 Jul 2021 20:12:40 GMT
+# Thu, 08 Jul 2021 22:35:59 GMT
 CMD ["irb"]
-# Wed, 07 Jul 2021 20:49:10 GMT
+# Wed, 14 Jul 2021 20:26:37 GMT
 RUN addgroup -S -g 1000 redmine && adduser -S -H -G redmine -u 999 redmine
-# Wed, 07 Jul 2021 20:56:52 GMT
+# Wed, 14 Jul 2021 20:32:28 GMT
 RUN set -eux; 	apk add --no-cache 		bash 		ca-certificates 		su-exec 		tini 		tzdata 		wget 				git 		mercurial 		openssh-client 		subversion 				ghostscript-fonts 		imagemagick6 	;
-# Wed, 07 Jul 2021 20:56:52 GMT
+# Wed, 14 Jul 2021 20:32:28 GMT
 ENV RAILS_ENV=production
-# Wed, 07 Jul 2021 20:56:53 GMT
+# Wed, 14 Jul 2021 20:32:28 GMT
 WORKDIR /usr/src/redmine
-# Wed, 07 Jul 2021 20:56:53 GMT
+# Wed, 14 Jul 2021 20:32:29 GMT
 ENV HOME=/home/redmine
-# Wed, 07 Jul 2021 20:56:54 GMT
+# Wed, 14 Jul 2021 20:32:30 GMT
 RUN set -eux; 	[ ! -d "$HOME" ]; 	mkdir -p "$HOME"; 	chown redmine:redmine "$HOME"; 	chmod 1777 "$HOME"
-# Wed, 07 Jul 2021 20:56:54 GMT
+# Wed, 14 Jul 2021 20:32:30 GMT
 ENV REDMINE_VERSION=4.0.9
-# Wed, 07 Jul 2021 20:56:54 GMT
+# Wed, 14 Jul 2021 20:32:30 GMT
 ENV REDMINE_DOWNLOAD_SHA256=04a772b0b8f8ce6493614a7cb22ed82cb9b43c75dcdbeb5c2f925bae98e0d5df
-# Wed, 07 Jul 2021 20:56:58 GMT
+# Wed, 14 Jul 2021 20:32:34 GMT
 RUN set -eux; 	wget -O redmine.tar.gz "https://www.redmine.org/releases/redmine-${REDMINE_VERSION}.tar.gz"; 	echo "$REDMINE_DOWNLOAD_SHA256 *redmine.tar.gz" | sha256sum -c -; 	tar -xf redmine.tar.gz --strip-components=1; 	rm redmine.tar.gz files/delete.me log/delete.me; 	mkdir -p log public/plugin_assets sqlite tmp/pdf tmp/pids; 	chown -R redmine:redmine ./; 	echo 'config.logger = Logger.new(STDOUT)' > config/additional_environment.rb; 	chmod -R ugo=rwX config db sqlite; 	find log tmp -type d -exec chmod 1777 '{}' +
-# Wed, 07 Jul 2021 20:56:59 GMT
+# Wed, 14 Jul 2021 20:32:34 GMT
 ENV BUNDLE_FORCE_RUBY_PLATFORM=1
-# Wed, 07 Jul 2021 20:58:34 GMT
+# Wed, 14 Jul 2021 20:34:03 GMT
 RUN set -eux; 		apk add --no-cache --virtual .build-deps 		coreutils 		freetds-dev 		gcc 		make 		mariadb-dev 		musl-dev 		patch 		postgresql-dev 		sqlite-dev 		ttf2ufm 		zlib-dev 		imagemagick6-dev 	; 		su-exec redmine bundle config --local without 'development test'; 	echo '# the following entries only exist to force `bundle install` to pre-install all database adapter dependencies -- they can be safely removed/ignored' > ./config/database.yml; 	for adapter in mysql2 postgresql sqlserver sqlite3; do 		echo "$adapter:" >> ./config/database.yml; 		echo "  adapter: $adapter" >> ./config/database.yml; 	done; 	su-exec redmine bundle install --jobs "$(nproc)"; 	rm ./config/database.yml; 	chmod -R ugo=rwX Gemfile.lock "$GEM_HOME"; 	rm -rf ~redmine/.bundle; 		rm /usr/local/bundle/gems/rbpdf-font-1.19.*/lib/fonts/ttf2ufm/ttf2ufm; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local/bundle/gems 		| tr ',' '\n' 		| sort -u 		| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .redmine-rundeps $runDeps; 	apk del --no-network .build-deps
-# Wed, 07 Jul 2021 20:58:35 GMT
+# Wed, 14 Jul 2021 20:34:03 GMT
 VOLUME [/usr/src/redmine/files]
-# Wed, 07 Jul 2021 20:58:35 GMT
+# Wed, 14 Jul 2021 20:34:04 GMT
 COPY file:d7d49d1509d97205d05405670ad206509bb871741a17d5270a1b8842b05afc0f in / 
-# Wed, 07 Jul 2021 20:58:35 GMT
+# Wed, 14 Jul 2021 20:34:04 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 07 Jul 2021 20:58:35 GMT
+# Wed, 14 Jul 2021 20:34:04 GMT
 EXPOSE 3000
-# Wed, 07 Jul 2021 20:58:35 GMT
+# Wed, 14 Jul 2021 20:34:04 GMT
 CMD ["rails" "server" "-b" "0.0.0.0"]
 ```
 
@@ -3372,55 +3372,55 @@ CMD ["rails" "server" "-b" "0.0.0.0"]
 		Last Modified: Wed, 14 Apr 2021 17:59:29 GMT  
 		Size: 2.8 MB (2811969 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:98a867505730167ce0636f0811cb765ebbde11bf979c1a9839f6915f2fc3b85b`  
-		Last Modified: Thu, 15 Apr 2021 03:39:41 GMT  
-		Size: 1.2 MB (1218679 bytes)  
+	-	`sha256:ae5b0ea69e9ed42c49b5af449b703a12a4d2f2e28d87905af6fcd903fdae5689`  
+		Last Modified: Thu, 08 Jul 2021 22:38:46 GMT  
+		Size: 3.6 MB (3581658 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:69c77620f6108dc0610cba72f77d68c271fb1b14cb0800a7a8b6aaeb8950fec9`  
-		Last Modified: Thu, 15 Apr 2021 03:39:40 GMT  
-		Size: 222.0 B  
+	-	`sha256:3ad656ed833315b61ea674706f32c2d18d7412c7120926442af57b9131ee72ee`  
+		Last Modified: Thu, 08 Jul 2021 22:38:45 GMT  
+		Size: 223.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:31a13390cfeb23a5dd47d6b95c12990c44c1ffba24bb030d3ac10f869559dbf4`  
-		Last Modified: Wed, 07 Jul 2021 20:21:37 GMT  
-		Size: 22.2 MB (22223054 bytes)  
+	-	`sha256:b2a9d07bc1851494b8935d8593efecfea98e2c4a4ff1c3eaf2e5319eb31cb3a2`  
+		Last Modified: Thu, 08 Jul 2021 22:41:47 GMT  
+		Size: 19.9 MB (19889336 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3401ac322a4ec3ae5e0ad9900be9781dc25e255154f8e0bd481272f772bbd852`  
-		Last Modified: Wed, 07 Jul 2021 20:21:34 GMT  
-		Size: 172.0 B  
+	-	`sha256:34d50c8fd3318db7f0dbb1d50a8aa4e571ae4926440e66c07be861dd4685211d`  
+		Last Modified: Thu, 08 Jul 2021 22:41:44 GMT  
+		Size: 173.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8a68c5f8f755665933870117b083d8976a4e8d53825958e96d454c2a165b464e`  
-		Last Modified: Wed, 07 Jul 2021 21:01:26 GMT  
-		Size: 1.2 KB (1205 bytes)  
+	-	`sha256:97e030b8560a875bcd9c87e7dd1c8faf94a9d48cf039ee0bf125017750cc802b`  
+		Last Modified: Wed, 14 Jul 2021 20:37:07 GMT  
+		Size: 1.2 KB (1211 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:03749ceb6e995993dccf4cfc07e4490382891da608d38c0ec2afa6ae43483321`  
-		Last Modified: Wed, 07 Jul 2021 21:02:45 GMT  
-		Size: 66.2 MB (66172729 bytes)  
+	-	`sha256:77f9541899ba9d0a6bde1aaa23a83e1e1cd6a17fc0adecb390591f66b0ccb93b`  
+		Last Modified: Wed, 14 Jul 2021 20:38:23 GMT  
+		Size: 66.2 MB (66172712 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e5f5ea56feb8bcf216bdc0ad9ab0d71ebab19889d2dd5a1bd8ddddd57d38a3b2`  
-		Last Modified: Wed, 07 Jul 2021 21:02:31 GMT  
-		Size: 166.0 B  
+	-	`sha256:26bc115e3ba6c2cb414f0bb5c4df5c0dad6b57442cf9044bbe1fc33e266821b4`  
+		Last Modified: Wed, 14 Jul 2021 20:38:08 GMT  
+		Size: 167.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b6c3e961cbaa8ad36231a40bf1fedefc5ed50203d1481cc21ef66dedc4e155d2`  
-		Last Modified: Wed, 07 Jul 2021 21:02:31 GMT  
+	-	`sha256:7a0bf51497625cb7774642f214c3424e7a0e97dff3e9c1c7e96c279d965e3981`  
+		Last Modified: Wed, 14 Jul 2021 20:38:08 GMT  
 		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3140fd0070a1668a9c2314447de53f1d06400d2c92c1b10fa393bbe863f63444`  
-		Last Modified: Wed, 07 Jul 2021 21:02:32 GMT  
-		Size: 2.5 MB (2543723 bytes)  
+	-	`sha256:7d58772bc79f2753b31d538e035d07bd09bb2731fc4843259e09b0c4be77e2f9`  
+		Last Modified: Wed, 14 Jul 2021 20:38:10 GMT  
+		Size: 2.5 MB (2543757 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b7c1c9bbb13a43e750a0ccf62fb3df3649c61c6934145f4bb5c9e81c1e4f448e`  
-		Last Modified: Wed, 07 Jul 2021 21:02:38 GMT  
-		Size: 58.9 MB (58897305 bytes)  
+	-	`sha256:57f9be46406ca851c437e457fa10b35fea3c15bda96b4f315f9514efea879beb`  
+		Last Modified: Wed, 14 Jul 2021 20:38:15 GMT  
+		Size: 58.9 MB (58897408 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:96df69c3e1b39ce672dfed8dabf1d3cbbf86c60fc02a4b9734d016607cf0d655`  
-		Last Modified: Wed, 07 Jul 2021 21:02:31 GMT  
+	-	`sha256:bad779a0b33ba3ea1e31e4a1ee1c8bab4546aadacd48d0fb32d05adc26c02906`  
+		Last Modified: Wed, 14 Jul 2021 20:38:08 GMT  
 		Size: 1.8 KB (1797 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `redmine:4.0.9-passenger`
 
 ```console
-$ docker pull redmine@sha256:e9f434974c92eda5d0336658b78ddaefde5f2c9b8d0f01368f54e66f7595f42a
+$ docker pull redmine@sha256:5c4cd06fe1b29aa7167a46cc260fc067c63cf4d674b5e23dffb8d6d5f994da00
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3430,14 +3430,14 @@ $ docker pull redmine@sha256:e9f434974c92eda5d0336658b78ddaefde5f2c9b8d0f01368f5
 ### `redmine:4.0.9-passenger` - linux; amd64
 
 ```console
-$ docker pull redmine@sha256:d39d7707d25c731690905259e86b8c255c35883db65f1458d352105ff2b0a88b
+$ docker pull redmine@sha256:da0b13e09beb165bb6b56a75ebbe1539903673281754de99f5c64d8c9938dd4e
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **231.3 MB (231315564 bytes)**  
+-	Total Size: **231.3 MB (231317751 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:85b73b2144e7cfe76713d680d27e279af4b1987828970a747102dbc1ecd9cc8c`
+-	Image ID: `sha256:b4a599ab4d7664421a016eba87a6a6596a9a32e5e583ae00aec3d5ab86eb6e12`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["passenger","start"]`
 
@@ -3458,57 +3458,57 @@ ENV RUBY_MAJOR=2.6
 ENV RUBY_VERSION=2.6.8
 # Wed, 07 Jul 2021 19:55:25 GMT
 ENV RUBY_DOWNLOAD_SHA256=8262e4663169c85787fdc9bfbd04d9eb86eb2a4b56d7f98373a8fcaa18e593eb
-# Wed, 07 Jul 2021 19:59:28 GMT
-RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		bison 		dpkg-dev 		gcc 		libbz2-dev 		libgdbm-compat-dev 		libgdbm-dev 		libglib2.0-dev 		libncurses-dev 		libreadline-dev 		libxml2-dev 		libxslt-dev 		make 		ruby 		wget 		xz-utils 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		cd /; 	rm -r /usr/src/ruby; 	! dpkg -l | grep -i ruby; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Wed, 07 Jul 2021 19:59:28 GMT
+# Thu, 08 Jul 2021 22:24:34 GMT
+RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		bison 		dpkg-dev 		libgdbm-dev 		ruby 		autoconf 		g++ 		gcc 		libbz2-dev 		libglib2.0-dev 		libncurses-dev 		libreadline-dev 		libxml2-dev 		libxslt-dev 		make 		wget 		xz-utils 		libgdbm-compat-dev 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -vE '^/usr/local/lib/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		cd /; 	rm -r /usr/src/ruby; 	if dpkg -l | grep -i ruby; then exit 1; fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
+# Thu, 08 Jul 2021 22:24:34 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 07 Jul 2021 19:59:28 GMT
+# Thu, 08 Jul 2021 22:24:34 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 07 Jul 2021 19:59:28 GMT
+# Thu, 08 Jul 2021 22:24:34 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 07 Jul 2021 19:59:30 GMT
+# Thu, 08 Jul 2021 22:24:35 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 07 Jul 2021 19:59:30 GMT
+# Thu, 08 Jul 2021 22:24:36 GMT
 CMD ["irb"]
-# Wed, 07 Jul 2021 20:46:29 GMT
+# Wed, 14 Jul 2021 20:24:50 GMT
 RUN groupadd -r -g 999 redmine && useradd -r -g redmine -u 999 redmine
-# Wed, 07 Jul 2021 20:53:49 GMT
+# Wed, 14 Jul 2021 20:29:27 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		wget 				bzr 		git 		mercurial 		openssh-client 		subversion 				gsfonts 		imagemagick 		gosu 		tini 	; 	rm -rf /var/lib/apt/lists/*
-# Wed, 07 Jul 2021 20:53:50 GMT
+# Wed, 14 Jul 2021 20:29:28 GMT
 ENV RAILS_ENV=production
-# Wed, 07 Jul 2021 20:53:51 GMT
+# Wed, 14 Jul 2021 20:29:28 GMT
 WORKDIR /usr/src/redmine
-# Wed, 07 Jul 2021 20:53:51 GMT
+# Wed, 14 Jul 2021 20:29:31 GMT
 ENV HOME=/home/redmine
-# Wed, 07 Jul 2021 20:53:53 GMT
+# Wed, 14 Jul 2021 20:29:36 GMT
 RUN set -eux; 	[ ! -d "$HOME" ]; 	mkdir -p "$HOME"; 	chown redmine:redmine "$HOME"; 	chmod 1777 "$HOME"
-# Wed, 07 Jul 2021 20:53:54 GMT
+# Wed, 14 Jul 2021 20:29:40 GMT
 ENV REDMINE_VERSION=4.0.9
-# Wed, 07 Jul 2021 20:53:54 GMT
+# Wed, 14 Jul 2021 20:29:40 GMT
 ENV REDMINE_DOWNLOAD_SHA256=04a772b0b8f8ce6493614a7cb22ed82cb9b43c75dcdbeb5c2f925bae98e0d5df
-# Wed, 07 Jul 2021 20:53:59 GMT
+# Wed, 14 Jul 2021 20:29:44 GMT
 RUN set -eux; 	wget -O redmine.tar.gz "https://www.redmine.org/releases/redmine-${REDMINE_VERSION}.tar.gz"; 	echo "$REDMINE_DOWNLOAD_SHA256 *redmine.tar.gz" | sha256sum -c -; 	tar -xf redmine.tar.gz --strip-components=1; 	rm redmine.tar.gz files/delete.me log/delete.me; 	mkdir -p log public/plugin_assets sqlite tmp/pdf tmp/pids; 	chown -R redmine:redmine ./; 	echo 'config.logger = Logger.new(STDOUT)' > config/additional_environment.rb; 	chmod -R ugo=rwX config db sqlite; 	find log tmp -type d -exec chmod 1777 '{}' +
-# Wed, 07 Jul 2021 20:56:10 GMT
+# Wed, 14 Jul 2021 20:31:46 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		freetds-dev 		gcc 		libmariadbclient-dev 		libpq-dev 		libsqlite3-dev 		make 		patch 		libmagickcore-dev libmagickwand-dev 	; 	rm -rf /var/lib/apt/lists/*; 		gosu redmine bundle config --local without 'development test'; 	echo '# the following entries only exist to force `bundle install` to pre-install all database adapter dependencies -- they can be safely removed/ignored' > ./config/database.yml; 	for adapter in mysql2 postgresql sqlserver sqlite3; do 		echo "$adapter:" >> ./config/database.yml; 		echo "  adapter: $adapter" >> ./config/database.yml; 	done; 	gosu redmine bundle install --jobs "$(nproc)"; 	rm ./config/database.yml; 	chmod -R ugo=rwX Gemfile.lock "$GEM_HOME"; 	rm -rf ~redmine/.bundle; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -v '^/usr/local/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Wed, 07 Jul 2021 20:56:11 GMT
+# Wed, 14 Jul 2021 20:31:47 GMT
 VOLUME [/usr/src/redmine/files]
-# Wed, 07 Jul 2021 20:56:11 GMT
+# Wed, 14 Jul 2021 20:31:47 GMT
 COPY file:2c807aca5f34a9ab8acfef3c517816547300ed2b18590f703a1c783bdc707ba8 in / 
-# Wed, 07 Jul 2021 20:56:11 GMT
+# Wed, 14 Jul 2021 20:31:47 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 07 Jul 2021 20:56:12 GMT
+# Wed, 14 Jul 2021 20:31:47 GMT
 EXPOSE 3000
-# Wed, 07 Jul 2021 20:56:12 GMT
+# Wed, 14 Jul 2021 20:31:47 GMT
 CMD ["rails" "server" "-b" "0.0.0.0"]
-# Wed, 07 Jul 2021 20:56:18 GMT
-ENV PASSENGER_VERSION=6.0.9
-# Wed, 07 Jul 2021 20:56:36 GMT
+# Wed, 14 Jul 2021 20:31:58 GMT
+ENV PASSENGER_VERSION=6.0.10
+# Wed, 14 Jul 2021 20:32:15 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		gcc 		make 	; 	rm -rf /var/lib/apt/lists/*; 		gem install passenger --version "$PASSENGER_VERSION"; 	passenger-config build-native-support; 	if [ -n "$(passenger-config build-native-support 2>&1)" ]; then cat /tmp/passenger_native_support-*.log; false; fi; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Wed, 07 Jul 2021 20:56:38 GMT
+# Wed, 14 Jul 2021 20:32:17 GMT
 RUN set -eux; 	passenger-config install-agent; 	passenger-config download-nginx-engine
-# Wed, 07 Jul 2021 20:56:38 GMT
+# Wed, 14 Jul 2021 20:32:17 GMT
 ENV PASSENGER_PID_FILE=tmp/pids/server.pid
-# Wed, 07 Jul 2021 20:56:38 GMT
+# Wed, 14 Jul 2021 20:32:17 GMT
 CMD ["passenger" "start"]
 ```
 
@@ -3525,55 +3525,55 @@ CMD ["passenger" "start"]
 		Last Modified: Wed, 23 Jun 2021 17:42:36 GMT  
 		Size: 198.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:71bd4dd650c8621dab8128db8ca0e3f89acd9839366648234c17d3016f1bc8da`  
-		Last Modified: Wed, 07 Jul 2021 20:20:53 GMT  
-		Size: 21.5 MB (21467547 bytes)  
+	-	`sha256:ca6b95c16c5624058c7516ccc9aff7fcb6ab05fd66e5e47c1228f4d1e8fec58b`  
+		Last Modified: Thu, 08 Jul 2021 22:40:47 GMT  
+		Size: 21.5 MB (21468025 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:20f8ad4efca5cc78409013778f13741b076a4217a9a2ff39f594ab9ac6bbe2a8`  
-		Last Modified: Wed, 07 Jul 2021 20:20:50 GMT  
+	-	`sha256:0596bd4a64fddd48add80e9f5ee6459a223843aacedfe89c777ed62847e9b45e`  
+		Last Modified: Thu, 08 Jul 2021 22:40:44 GMT  
 		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6a4a13931a73866011c94cfd2b514ede2ebbe9a084ab7a0f99a7ee716f57baa8`  
-		Last Modified: Wed, 07 Jul 2021 21:00:38 GMT  
+	-	`sha256:4b7eae1b0e301a4bb2e1dc9e8faf695f6a25c25fa76af391234a420401b27365`  
+		Last Modified: Wed, 14 Jul 2021 20:36:24 GMT  
 		Size: 1.7 KB (1748 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eda50b46cea0904d5fa9fbfdca39d963c9bada58d643e972a84baade16534d70`  
-		Last Modified: Wed, 07 Jul 2021 21:02:05 GMT  
-		Size: 81.2 MB (81200197 bytes)  
+	-	`sha256:f78eac6959ab00aa4aa16a8572577047e837cde31b8059a7c473709c1c5fd95a`  
+		Last Modified: Wed, 14 Jul 2021 20:37:43 GMT  
+		Size: 81.2 MB (81199589 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a83ce27520ab42f3b2ecea3b4503827e9dc667b7e7433fdf196dad7b1f0e988c`  
-		Last Modified: Wed, 07 Jul 2021 21:01:49 GMT  
+	-	`sha256:770efe9534a041a263a97329ebea752bf15837faebf99a49e25457e40096ab17`  
+		Last Modified: Wed, 14 Jul 2021 20:37:28 GMT  
 		Size: 172.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6829d382ab9bc3cd11d7959c69210dc6277055886dab1772ac587379096de906`  
-		Last Modified: Wed, 07 Jul 2021 21:01:49 GMT  
+	-	`sha256:7b58267e8ed59b94a5001480fd1362e24ec0054ae01393052c4782b412399d79`  
+		Last Modified: Wed, 14 Jul 2021 20:37:28 GMT  
 		Size: 158.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f2e3686a3e05ba7b7e4f9e573aa5972c62af9ca2b344a87c0c1ec193fb1caa7b`  
-		Last Modified: Wed, 07 Jul 2021 21:01:50 GMT  
-		Size: 2.5 MB (2542549 bytes)  
+	-	`sha256:3dedb8a1056b6d5f7546123709ccb9fbd52ff2e4f560bff5926c130bb0237afe`  
+		Last Modified: Wed, 14 Jul 2021 20:37:29 GMT  
+		Size: 2.5 MB (2542552 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:14cfdcd138cf9b1ea1f2e35e05b4c2f9af5642ac4ec3bbe71ff1f076e8e8a535`  
-		Last Modified: Wed, 07 Jul 2021 21:01:57 GMT  
-		Size: 60.1 MB (60147721 bytes)  
+	-	`sha256:8e80e9679392005f7d3a99eba067dbd5717479b70d7e761d843367213982dd2d`  
+		Last Modified: Wed, 14 Jul 2021 20:37:36 GMT  
+		Size: 60.1 MB (60148220 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:49d8946f2be8279feb23a41816c4b7461fba9213263eea9902810cf263d3471e`  
-		Last Modified: Wed, 07 Jul 2021 21:01:49 GMT  
+	-	`sha256:44914decf48cf9c7f0dce9ec00797c7f2f371ce9caf3d32730543bde7a11d036`  
+		Last Modified: Wed, 14 Jul 2021 20:37:28 GMT  
 		Size: 1.8 KB (1797 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bf78b2bcd2a4801910af601c4164d27657dfc9170ac3e9982272912043e3c7ca`  
-		Last Modified: Wed, 07 Jul 2021 21:02:19 GMT  
-		Size: 21.3 MB (21325422 bytes)  
+	-	`sha256:500a6ed36b2fa5886fdddf1c3900306c8cac410d018296ccc1e2de3220e92249`  
+		Last Modified: Wed, 14 Jul 2021 20:37:58 GMT  
+		Size: 21.3 MB (21327295 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3aa897b0fad70afc54075d0f1dcc4d698ea27f66e809a60ea44dacd579b10fcd`  
-		Last Modified: Wed, 07 Jul 2021 21:02:17 GMT  
-		Size: 4.9 MB (4919343 bytes)  
+	-	`sha256:7c9ed997038310a9ec1bb536c1ba7fd7ce6674584b693e3d48b3badf23ee62ed`  
+		Last Modified: Wed, 14 Jul 2021 20:37:56 GMT  
+		Size: 4.9 MB (4919285 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `redmine:4.1`
 
 ```console
-$ docker pull redmine@sha256:5f2e38861571c976ab0c513d484577dd5dd62f82ffc61ab0f5aa4d26d92a50d7
+$ docker pull redmine@sha256:3842f8b458e034ecec57ede811de2c27a56157afbcfd04dfa171f53c98bbabcb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3589,14 +3589,14 @@ $ docker pull redmine@sha256:5f2e38861571c976ab0c513d484577dd5dd62f82ffc61ab0f5a
 ### `redmine:4.1` - linux; amd64
 
 ```console
-$ docker pull redmine@sha256:dbf5085f7d0d8af46426ae923a8f03899777116a09b48cb55cff309462b7fda9
+$ docker pull redmine@sha256:8cb4cab2bed4c965b285663a240d5bb2fc566e08b20eafa760751342009052ec
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **206.6 MB (206645938 bytes)**  
+-	Total Size: **206.6 MB (206647502 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:758dce80400e61c98e723c4abd58601d52b09324019a6eb9010c55c25de61c04`
+-	Image ID: `sha256:8deeaf98c6f43b867d4af4456933ea02db08ba0623f0f2deeb5e921ec9f90b87`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["rails","server","-b","0.0.0.0"]`
 
@@ -3617,47 +3617,47 @@ ENV RUBY_MAJOR=2.6
 ENV RUBY_VERSION=2.6.8
 # Wed, 07 Jul 2021 19:55:25 GMT
 ENV RUBY_DOWNLOAD_SHA256=8262e4663169c85787fdc9bfbd04d9eb86eb2a4b56d7f98373a8fcaa18e593eb
-# Wed, 07 Jul 2021 19:59:28 GMT
-RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		bison 		dpkg-dev 		gcc 		libbz2-dev 		libgdbm-compat-dev 		libgdbm-dev 		libglib2.0-dev 		libncurses-dev 		libreadline-dev 		libxml2-dev 		libxslt-dev 		make 		ruby 		wget 		xz-utils 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		cd /; 	rm -r /usr/src/ruby; 	! dpkg -l | grep -i ruby; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Wed, 07 Jul 2021 19:59:28 GMT
+# Thu, 08 Jul 2021 22:24:34 GMT
+RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		bison 		dpkg-dev 		libgdbm-dev 		ruby 		autoconf 		g++ 		gcc 		libbz2-dev 		libglib2.0-dev 		libncurses-dev 		libreadline-dev 		libxml2-dev 		libxslt-dev 		make 		wget 		xz-utils 		libgdbm-compat-dev 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -vE '^/usr/local/lib/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		cd /; 	rm -r /usr/src/ruby; 	if dpkg -l | grep -i ruby; then exit 1; fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
+# Thu, 08 Jul 2021 22:24:34 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 07 Jul 2021 19:59:28 GMT
+# Thu, 08 Jul 2021 22:24:34 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 07 Jul 2021 19:59:28 GMT
+# Thu, 08 Jul 2021 22:24:34 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 07 Jul 2021 19:59:30 GMT
+# Thu, 08 Jul 2021 22:24:35 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 07 Jul 2021 19:59:30 GMT
+# Thu, 08 Jul 2021 22:24:36 GMT
 CMD ["irb"]
-# Wed, 07 Jul 2021 20:46:29 GMT
+# Wed, 14 Jul 2021 20:24:50 GMT
 RUN groupadd -r -g 999 redmine && useradd -r -g redmine -u 999 redmine
-# Wed, 07 Jul 2021 20:47:01 GMT
+# Wed, 14 Jul 2021 20:25:15 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		wget 				bzr 		git 		mercurial 		openssh-client 		subversion 				ghostscript 		gsfonts 		imagemagick 		gosu 		tini 	; 	sed -ri 's/(rights)="none" (pattern="PDF")/\1="read" \2/' /etc/ImageMagick-6/policy.xml; 	rm -rf /var/lib/apt/lists/*
-# Wed, 07 Jul 2021 20:47:02 GMT
+# Wed, 14 Jul 2021 20:25:16 GMT
 ENV RAILS_ENV=production
-# Wed, 07 Jul 2021 20:47:03 GMT
+# Wed, 14 Jul 2021 20:25:16 GMT
 WORKDIR /usr/src/redmine
-# Wed, 07 Jul 2021 20:47:03 GMT
+# Wed, 14 Jul 2021 20:25:16 GMT
 ENV HOME=/home/redmine
-# Wed, 07 Jul 2021 20:47:05 GMT
+# Wed, 14 Jul 2021 20:25:17 GMT
 RUN set -eux; 	[ ! -d "$HOME" ]; 	mkdir -p "$HOME"; 	chown redmine:redmine "$HOME"; 	chmod 1777 "$HOME"
-# Wed, 07 Jul 2021 20:47:06 GMT
+# Wed, 14 Jul 2021 20:25:17 GMT
 ENV REDMINE_VERSION=4.1.3
-# Wed, 07 Jul 2021 20:47:06 GMT
+# Wed, 14 Jul 2021 20:25:18 GMT
 ENV REDMINE_DOWNLOAD_SHA256=b5a11a750fa7eeafdf513b352fa2375987b6ebad4264a929ad4db0421870c154
-# Wed, 07 Jul 2021 20:47:11 GMT
+# Wed, 14 Jul 2021 20:25:21 GMT
 RUN set -eux; 	wget -O redmine.tar.gz "https://www.redmine.org/releases/redmine-${REDMINE_VERSION}.tar.gz"; 	echo "$REDMINE_DOWNLOAD_SHA256 *redmine.tar.gz" | sha256sum -c -; 	tar -xf redmine.tar.gz --strip-components=1; 	rm redmine.tar.gz files/delete.me log/delete.me; 	mkdir -p log public/plugin_assets sqlite tmp/pdf tmp/pids; 	chown -R redmine:redmine ./; 	echo 'config.logger = Logger.new(STDOUT)' > config/additional_environment.rb; 	chmod -R ugo=rwX config db sqlite; 	find log tmp -type d -exec chmod 1777 '{}' +
-# Wed, 07 Jul 2021 20:48:27 GMT
+# Wed, 14 Jul 2021 20:26:00 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		freetds-dev 		gcc 		libmariadbclient-dev 		libpq-dev 		libsqlite3-dev 		make 		patch 	; 	rm -rf /var/lib/apt/lists/*; 		gosu redmine bundle config --local without 'development test'; 	echo '# the following entries only exist to force `bundle install` to pre-install all database adapter dependencies -- they can be safely removed/ignored' > ./config/database.yml; 	for adapter in mysql2 postgresql sqlserver sqlite3; do 		echo "$adapter:" >> ./config/database.yml; 		echo "  adapter: $adapter" >> ./config/database.yml; 	done; 	gosu redmine bundle install --jobs "$(nproc)"; 	rm ./config/database.yml; 	chmod -R ugo=rwX Gemfile.lock "$GEM_HOME"; 	rm -rf ~redmine/.bundle; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -v '^/usr/local/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Wed, 07 Jul 2021 20:48:28 GMT
+# Wed, 14 Jul 2021 20:26:01 GMT
 VOLUME [/usr/src/redmine/files]
-# Wed, 07 Jul 2021 20:48:28 GMT
+# Wed, 14 Jul 2021 20:26:01 GMT
 COPY file:2c807aca5f34a9ab8acfef3c517816547300ed2b18590f703a1c783bdc707ba8 in / 
-# Wed, 07 Jul 2021 20:48:29 GMT
+# Wed, 14 Jul 2021 20:26:01 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 07 Jul 2021 20:48:29 GMT
+# Wed, 14 Jul 2021 20:26:02 GMT
 EXPOSE 3000
-# Wed, 07 Jul 2021 20:48:29 GMT
+# Wed, 14 Jul 2021 20:26:02 GMT
 CMD ["rails" "server" "-b" "0.0.0.0"]
 ```
 
@@ -3674,40 +3674,40 @@ CMD ["rails" "server" "-b" "0.0.0.0"]
 		Last Modified: Wed, 23 Jun 2021 17:42:36 GMT  
 		Size: 198.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:71bd4dd650c8621dab8128db8ca0e3f89acd9839366648234c17d3016f1bc8da`  
-		Last Modified: Wed, 07 Jul 2021 20:20:53 GMT  
-		Size: 21.5 MB (21467547 bytes)  
+	-	`sha256:ca6b95c16c5624058c7516ccc9aff7fcb6ab05fd66e5e47c1228f4d1e8fec58b`  
+		Last Modified: Thu, 08 Jul 2021 22:40:47 GMT  
+		Size: 21.5 MB (21468025 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:20f8ad4efca5cc78409013778f13741b076a4217a9a2ff39f594ab9ac6bbe2a8`  
-		Last Modified: Wed, 07 Jul 2021 20:20:50 GMT  
+	-	`sha256:0596bd4a64fddd48add80e9f5ee6459a223843aacedfe89c777ed62847e9b45e`  
+		Last Modified: Thu, 08 Jul 2021 22:40:44 GMT  
 		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6a4a13931a73866011c94cfd2b514ede2ebbe9a084ab7a0f99a7ee716f57baa8`  
-		Last Modified: Wed, 07 Jul 2021 21:00:38 GMT  
+	-	`sha256:4b7eae1b0e301a4bb2e1dc9e8faf695f6a25c25fa76af391234a420401b27365`  
+		Last Modified: Wed, 14 Jul 2021 20:36:24 GMT  
 		Size: 1.7 KB (1748 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d72a8b1564ac6a066695b258fecefa74b763e6c4aa970bb567b376f8074013dd`  
-		Last Modified: Wed, 07 Jul 2021 21:00:53 GMT  
-		Size: 94.1 MB (94087369 bytes)  
+	-	`sha256:c267137a65ba8a2d9e353059d3da16877f506fa5ff13446e0445c0c4c3bcd784`  
+		Last Modified: Wed, 14 Jul 2021 20:36:39 GMT  
+		Size: 94.1 MB (94088312 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e6062af73e956cb28fd0013852bff59a91b28f447abb748ee69e3a4ac3dbafff`  
-		Last Modified: Wed, 07 Jul 2021 21:00:35 GMT  
+	-	`sha256:443f532876e21e028bcb587e538fc650ce86a658794ac88dc47a19307ea98e3c`  
+		Last Modified: Wed, 14 Jul 2021 20:36:21 GMT  
 		Size: 171.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bdf251fcfd9cd250484b7e985d4fd25e124891d4b3bd5dfdf5e187453c197642`  
-		Last Modified: Wed, 07 Jul 2021 21:00:35 GMT  
-		Size: 157.0 B  
+	-	`sha256:5d2e5bbb56b3693c8317028271070258892c483ef1b2d9c0029cbd6d9788595d`  
+		Last Modified: Wed, 14 Jul 2021 20:36:21 GMT  
+		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0fd377d156e791bb9cbdbad7b36792b052c6c7d28b48c0ec1f8884c6a26e5c31`  
-		Last Modified: Wed, 07 Jul 2021 21:00:36 GMT  
-		Size: 2.7 MB (2747689 bytes)  
+	-	`sha256:77d9073f85635b6e855482f3fb205876b8d7623e0e0b2d0477f00f3f8a93e121`  
+		Last Modified: Wed, 14 Jul 2021 20:36:22 GMT  
+		Size: 2.7 MB (2747699 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:407f74f29208233529040bc8f53b371b6c38fbbd1851dc8ddd4a290856d81b80`  
-		Last Modified: Wed, 07 Jul 2021 21:00:41 GMT  
-		Size: 48.6 MB (48630550 bytes)  
+	-	`sha256:56c2f3d2afd7b0a0978553d8a765d905c04663f3a050c334496ae656c755c4af`  
+		Last Modified: Wed, 14 Jul 2021 20:36:27 GMT  
+		Size: 48.6 MB (48630681 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4c66dbaad4f612d770153095e1cefa8bd553584e6e4d45aab87d099eb350cd4b`  
-		Last Modified: Wed, 07 Jul 2021 21:00:35 GMT  
+	-	`sha256:a1cf6faa89c3fe5437d036e3116d55e5185e803f18d486ae7510374d0c6a081d`  
+		Last Modified: Wed, 14 Jul 2021 20:36:21 GMT  
 		Size: 1.8 KB (1797 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -4464,7 +4464,7 @@ CMD ["rails" "server" "-b" "0.0.0.0"]
 ## `redmine:4.1-alpine`
 
 ```console
-$ docker pull redmine@sha256:f919cd3dd5613fa6ec847fe7e67fc7791adc96dc86ba0c55a1aa1894de9eb532
+$ docker pull redmine@sha256:ab4e088a86875b1b538344cd8bffecef2ae743209af62856f076991270196c4f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4474,14 +4474,14 @@ $ docker pull redmine@sha256:f919cd3dd5613fa6ec847fe7e67fc7791adc96dc86ba0c55a1a
 ### `redmine:4.1-alpine` - linux; amd64
 
 ```console
-$ docker pull redmine@sha256:a71da7ec791b3c2bf8c7289a73f71bd9ab5d58a8c17665f95774baee06096faa
+$ docker pull redmine@sha256:6fc987ac3687a985a641ecc4ffeb66fae30dfe751d67d0b96c3d7b3a0dea4939
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **161.0 MB (161041255 bytes)**  
+-	Total Size: **161.1 MB (161071838 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3b54fcd33c129acbfd0efcb67cff95a3db9e4b8e2bcd5114be61a3c5cf501d21`
+-	Image ID: `sha256:6c092b6a7e727cff2c4ca5d85fea3f0833a29b70489519ff6fa71c81e678f27c`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["rails","server","-b","0.0.0.0"]`
 
@@ -4490,61 +4490,61 @@ $ docker pull redmine@sha256:a71da7ec791b3c2bf8c7289a73f71bd9ab5d58a8c17665f9577
 ADD file:8ec69d882e7f29f0652d537557160e638168550f738d0d49f90a7ef96bf31787 in / 
 # Wed, 14 Apr 2021 19:19:39 GMT
 CMD ["/bin/sh"]
-# Thu, 15 Apr 2021 03:07:29 GMT
-RUN apk add --no-cache 		gmp-dev
-# Thu, 15 Apr 2021 03:07:31 GMT
+# Thu, 08 Jul 2021 21:57:27 GMT
+RUN set -eux; 	apk add --no-cache 		bzip2 		ca-certificates 		gmp-dev 		libffi-dev 		procps 		yaml-dev 		zlib-dev 	;
+# Thu, 08 Jul 2021 21:57:30 GMT
 RUN set -eux; 	mkdir -p /usr/local/etc; 	{ 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /usr/local/etc/gemrc
-# Thu, 15 Apr 2021 03:07:31 GMT
+# Thu, 08 Jul 2021 21:57:30 GMT
 ENV LANG=C.UTF-8
-# Thu, 15 Apr 2021 03:24:31 GMT
+# Thu, 08 Jul 2021 22:33:03 GMT
 ENV RUBY_MAJOR=2.6
-# Wed, 07 Jul 2021 20:08:01 GMT
+# Thu, 08 Jul 2021 22:33:03 GMT
 ENV RUBY_VERSION=2.6.8
-# Wed, 07 Jul 2021 20:08:01 GMT
+# Thu, 08 Jul 2021 22:33:03 GMT
 ENV RUBY_DOWNLOAD_SHA256=8262e4663169c85787fdc9bfbd04d9eb86eb2a4b56d7f98373a8fcaa18e593eb
-# Wed, 07 Jul 2021 20:12:38 GMT
-RUN set -eux; 		apk add --no-cache --virtual .ruby-builddeps 		autoconf 		bison 		bzip2 		bzip2-dev 		ca-certificates 		coreutils 		dpkg-dev dpkg 		gcc 		gdbm-dev 		glib-dev 		libc-dev 		libffi-dev 		libxml2-dev 		libxslt-dev 		linux-headers 		make 		ncurses-dev 		openssl 		openssl-dev 		patch 		procps 		readline-dev 		ruby 		tar 		xz 		yaml-dev 		zlib-dev 	; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		wget -O 'thread-stack-fix.patch' 'https://bugs.ruby-lang.org/attachments/download/7081/0001-thread_pthread.c-make-get_main_stack-portable-on-lin.patch'; 	echo '3ab628a51d92fdf0d2b5835e93564857aea73e0c1de00313864a94a6255cb645 *thread-stack-fix.patch' | sha256sum --check --strict; 	patch -p1 -i thread-stack-fix.patch; 	rm thread-stack-fix.patch; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	export ac_cv_func_isnan=yes ac_cv_func_isinf=yes; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .ruby-rundeps 		$runDeps 		bzip2 		ca-certificates 		libffi-dev 		procps 		yaml-dev 		zlib-dev 	; 	apk del --no-network .ruby-builddeps; 		cd /; 	rm -r /usr/src/ruby; 	! apk --no-network list --installed 		| grep -v '^[.]ruby-rundeps' 		| grep -i ruby 	; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Wed, 07 Jul 2021 20:12:38 GMT
+# Thu, 08 Jul 2021 22:35:57 GMT
+RUN set -eux; 		apk add --no-cache --virtual .ruby-builddeps 		autoconf 		bison 		bzip2 		bzip2-dev 		ca-certificates 		coreutils 		dpkg-dev dpkg 		g++ 		gcc 		gdbm-dev 		glib-dev 		libc-dev 		libffi-dev 		libxml2-dev 		libxslt-dev 		linux-headers 		make 		ncurses-dev 		openssl 		openssl-dev 		patch 		procps 		readline-dev 		ruby 		tar 		xz 		yaml-dev 		zlib-dev 	; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		wget -O 'thread-stack-fix.patch' 'https://bugs.ruby-lang.org/attachments/download/7081/0001-thread_pthread.c-make-get_main_stack-portable-on-lin.patch'; 	echo '3ab628a51d92fdf0d2b5835e93564857aea73e0c1de00313864a94a6255cb645 *thread-stack-fix.patch' | sha256sum --check --strict; 	patch -p1 -i thread-stack-fix.patch; 	rm thread-stack-fix.patch; 		export ac_cv_func_isnan=yes ac_cv_func_isinf=yes; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .ruby-rundeps $runDeps; 	apk del --no-network .ruby-builddeps; 		cd /; 	rm -r /usr/src/ruby; 	if 		apk --no-network list --installed 			| grep -v '^[.]ruby-rundeps' 			| grep -i ruby 	; then 		exit 1; 	fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
+# Thu, 08 Jul 2021 22:35:57 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 07 Jul 2021 20:12:38 GMT
+# Thu, 08 Jul 2021 22:35:58 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 07 Jul 2021 20:12:38 GMT
+# Thu, 08 Jul 2021 22:35:58 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 07 Jul 2021 20:12:40 GMT
+# Thu, 08 Jul 2021 22:35:59 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 07 Jul 2021 20:12:40 GMT
+# Thu, 08 Jul 2021 22:35:59 GMT
 CMD ["irb"]
-# Wed, 07 Jul 2021 20:49:10 GMT
+# Wed, 14 Jul 2021 20:26:37 GMT
 RUN addgroup -S -g 1000 redmine && adduser -S -H -G redmine -u 999 redmine
-# Wed, 07 Jul 2021 20:49:19 GMT
+# Wed, 14 Jul 2021 20:26:45 GMT
 RUN set -eux; 	apk add --no-cache 		bash 		ca-certificates 		su-exec 		tini 		tzdata 		wget 				git 		mercurial 		openssh-client 		subversion 				ghostscript 		ghostscript-fonts 		imagemagick 	;
-# Wed, 07 Jul 2021 20:49:20 GMT
+# Wed, 14 Jul 2021 20:26:46 GMT
 ENV RAILS_ENV=production
-# Wed, 07 Jul 2021 20:49:20 GMT
+# Wed, 14 Jul 2021 20:26:46 GMT
 WORKDIR /usr/src/redmine
-# Wed, 07 Jul 2021 20:49:20 GMT
+# Wed, 14 Jul 2021 20:26:46 GMT
 ENV HOME=/home/redmine
-# Wed, 07 Jul 2021 20:49:21 GMT
+# Wed, 14 Jul 2021 20:26:48 GMT
 RUN set -eux; 	[ ! -d "$HOME" ]; 	mkdir -p "$HOME"; 	chown redmine:redmine "$HOME"; 	chmod 1777 "$HOME"
-# Wed, 07 Jul 2021 20:49:22 GMT
+# Wed, 14 Jul 2021 20:26:48 GMT
 ENV REDMINE_VERSION=4.1.3
-# Wed, 07 Jul 2021 20:49:22 GMT
+# Wed, 14 Jul 2021 20:26:48 GMT
 ENV REDMINE_DOWNLOAD_SHA256=b5a11a750fa7eeafdf513b352fa2375987b6ebad4264a929ad4db0421870c154
-# Wed, 07 Jul 2021 20:49:26 GMT
+# Wed, 14 Jul 2021 20:26:51 GMT
 RUN set -eux; 	wget -O redmine.tar.gz "https://www.redmine.org/releases/redmine-${REDMINE_VERSION}.tar.gz"; 	echo "$REDMINE_DOWNLOAD_SHA256 *redmine.tar.gz" | sha256sum -c -; 	tar -xf redmine.tar.gz --strip-components=1; 	rm redmine.tar.gz files/delete.me log/delete.me; 	mkdir -p log public/plugin_assets sqlite tmp/pdf tmp/pids; 	chown -R redmine:redmine ./; 	echo 'config.logger = Logger.new(STDOUT)' > config/additional_environment.rb; 	chmod -R ugo=rwX config db sqlite; 	find log tmp -type d -exec chmod 1777 '{}' +
-# Wed, 07 Jul 2021 20:49:26 GMT
+# Wed, 14 Jul 2021 20:26:52 GMT
 ENV BUNDLE_FORCE_RUBY_PLATFORM=1
-# Wed, 07 Jul 2021 20:52:51 GMT
+# Wed, 14 Jul 2021 20:28:53 GMT
 RUN set -eux; 		apk add --no-cache --virtual .build-deps 		coreutils 		freetds-dev 		gcc 		make 		mariadb-dev 		musl-dev 		patch 		postgresql-dev 		sqlite-dev 		ttf2ufm 		zlib-dev 	; 		su-exec redmine bundle config --local without 'development test'; 	echo '# the following entries only exist to force `bundle install` to pre-install all database adapter dependencies -- they can be safely removed/ignored' > ./config/database.yml; 	for adapter in mysql2 postgresql sqlserver sqlite3; do 		echo "$adapter:" >> ./config/database.yml; 		echo "  adapter: $adapter" >> ./config/database.yml; 	done; 	su-exec redmine bundle install --jobs "$(nproc)"; 	rm ./config/database.yml; 	chmod -R ugo=rwX Gemfile.lock "$GEM_HOME"; 	rm -rf ~redmine/.bundle; 		rm /usr/local/bundle/gems/rbpdf-font-1.19.*/lib/fonts/ttf2ufm/ttf2ufm; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local/bundle/gems 		| tr ',' '\n' 		| sort -u 		| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .redmine-rundeps $runDeps; 	apk del --no-network .build-deps
-# Wed, 07 Jul 2021 20:52:52 GMT
+# Wed, 14 Jul 2021 20:28:54 GMT
 VOLUME [/usr/src/redmine/files]
-# Wed, 07 Jul 2021 20:52:52 GMT
+# Wed, 14 Jul 2021 20:28:54 GMT
 COPY file:d7d49d1509d97205d05405670ad206509bb871741a17d5270a1b8842b05afc0f in / 
-# Wed, 07 Jul 2021 20:52:52 GMT
+# Wed, 14 Jul 2021 20:28:54 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 07 Jul 2021 20:52:53 GMT
+# Wed, 14 Jul 2021 20:28:55 GMT
 EXPOSE 3000
-# Wed, 07 Jul 2021 20:52:53 GMT
+# Wed, 14 Jul 2021 20:28:55 GMT
 CMD ["rails" "server" "-b" "0.0.0.0"]
 ```
 
@@ -4553,55 +4553,55 @@ CMD ["rails" "server" "-b" "0.0.0.0"]
 		Last Modified: Wed, 14 Apr 2021 17:59:29 GMT  
 		Size: 2.8 MB (2811969 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:98a867505730167ce0636f0811cb765ebbde11bf979c1a9839f6915f2fc3b85b`  
-		Last Modified: Thu, 15 Apr 2021 03:39:41 GMT  
-		Size: 1.2 MB (1218679 bytes)  
+	-	`sha256:ae5b0ea69e9ed42c49b5af449b703a12a4d2f2e28d87905af6fcd903fdae5689`  
+		Last Modified: Thu, 08 Jul 2021 22:38:46 GMT  
+		Size: 3.6 MB (3581658 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:69c77620f6108dc0610cba72f77d68c271fb1b14cb0800a7a8b6aaeb8950fec9`  
-		Last Modified: Thu, 15 Apr 2021 03:39:40 GMT  
-		Size: 222.0 B  
+	-	`sha256:3ad656ed833315b61ea674706f32c2d18d7412c7120926442af57b9131ee72ee`  
+		Last Modified: Thu, 08 Jul 2021 22:38:45 GMT  
+		Size: 223.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:31a13390cfeb23a5dd47d6b95c12990c44c1ffba24bb030d3ac10f869559dbf4`  
-		Last Modified: Wed, 07 Jul 2021 20:21:37 GMT  
-		Size: 22.2 MB (22223054 bytes)  
+	-	`sha256:b2a9d07bc1851494b8935d8593efecfea98e2c4a4ff1c3eaf2e5319eb31cb3a2`  
+		Last Modified: Thu, 08 Jul 2021 22:41:47 GMT  
+		Size: 19.9 MB (19889336 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3401ac322a4ec3ae5e0ad9900be9781dc25e255154f8e0bd481272f772bbd852`  
-		Last Modified: Wed, 07 Jul 2021 20:21:34 GMT  
-		Size: 172.0 B  
+	-	`sha256:34d50c8fd3318db7f0dbb1d50a8aa4e571ae4926440e66c07be861dd4685211d`  
+		Last Modified: Thu, 08 Jul 2021 22:41:44 GMT  
+		Size: 173.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8a68c5f8f755665933870117b083d8976a4e8d53825958e96d454c2a165b464e`  
-		Last Modified: Wed, 07 Jul 2021 21:01:26 GMT  
-		Size: 1.2 KB (1205 bytes)  
+	-	`sha256:97e030b8560a875bcd9c87e7dd1c8faf94a9d48cf039ee0bf125017750cc802b`  
+		Last Modified: Wed, 14 Jul 2021 20:37:07 GMT  
+		Size: 1.2 KB (1211 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c3bbba699ad39f970f5284c36b7e3af82c3b84d2b5ebaa69c63796823ea5bb9c`  
-		Last Modified: Wed, 07 Jul 2021 21:01:37 GMT  
-		Size: 69.5 MB (69525241 bytes)  
+	-	`sha256:70c0006aa2ad99f9ffc9d729323dc4d6fe56017cf11735d341570e65864f6425`  
+		Last Modified: Wed, 14 Jul 2021 20:37:17 GMT  
+		Size: 69.5 MB (69526405 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:684ad08e13ed877cca01afca5a7fc0ea082fd573bb280bbb0970c62c78f72b77`  
-		Last Modified: Wed, 07 Jul 2021 21:01:23 GMT  
-		Size: 166.0 B  
+	-	`sha256:dde1c41e26debfed4512ebfbeb0a14368410a36df9e8a30216966c830eee17ad`  
+		Last Modified: Wed, 14 Jul 2021 20:37:04 GMT  
+		Size: 168.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5ff97800126fb3ae549491e407c5382991effbeccc02d0ae103ff3a1f59ac03f`  
-		Last Modified: Wed, 07 Jul 2021 21:01:23 GMT  
-		Size: 159.0 B  
+	-	`sha256:968695fc5116055ee483a173dbd08fdd5e9aba5dea28a955cdc730ae9f0bba52`  
+		Last Modified: Wed, 14 Jul 2021 20:37:04 GMT  
+		Size: 158.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0753e21e917fe6ffdea5c9a4ebab491742eb22be63163788c4c553269f5a6335`  
-		Last Modified: Wed, 07 Jul 2021 21:01:24 GMT  
-		Size: 2.7 MB (2748549 bytes)  
+	-	`sha256:53f9412f7e58bd4742f678cd456ad14d8788771c9f2bd64676be5ef15102d32c`  
+		Last Modified: Wed, 14 Jul 2021 20:37:05 GMT  
+		Size: 2.7 MB (2748565 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ecc44771aaf5e900c2f71130bca3f33b391ab28d3f41e2767296bcae1eb6ff94`  
-		Last Modified: Wed, 07 Jul 2021 21:01:30 GMT  
-		Size: 62.5 MB (62510044 bytes)  
+	-	`sha256:c4ce5851323b28845c755def36a5d70eb4eb98b968fb1d0bf274beba4b0ee408`  
+		Last Modified: Wed, 14 Jul 2021 20:37:10 GMT  
+		Size: 62.5 MB (62510175 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:63a8e01fcf88e97cd60c9b1ff3c055551f20b380ea3177e5542c33e2732a30e4`  
-		Last Modified: Wed, 07 Jul 2021 21:01:23 GMT  
-		Size: 1.8 KB (1795 bytes)  
+	-	`sha256:553a89009171bdde8e1ac3c30cb9283a86cc357db925559833d12fd7c7b7d93d`  
+		Last Modified: Wed, 14 Jul 2021 20:37:04 GMT  
+		Size: 1.8 KB (1797 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `redmine:4.1-passenger`
 
 ```console
-$ docker pull redmine@sha256:662d77e9d38838ae7aa9336b143200d8bd8b73310d163423590b3d931767f869
+$ docker pull redmine@sha256:4334cb7c8b95d9668f01fc9f8c8ffdd56b40964b7a4a82b0cb4eb6a3f9c74e72
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4611,14 +4611,14 @@ $ docker pull redmine@sha256:662d77e9d38838ae7aa9336b143200d8bd8b73310d163423590
 ### `redmine:4.1-passenger` - linux; amd64
 
 ```console
-$ docker pull redmine@sha256:cf4f6d3a4b8f6c72203ac454636cfbe3c3b9322c552478250f40c4fa4de60244
+$ docker pull redmine@sha256:c1430615177875a68f1379e64e7c5bd75a780909650fb68487080cac12f38df2
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **232.9 MB (232888354 bytes)**  
+-	Total Size: **232.9 MB (232889438 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:cc0936429a30fe984c6e4326e742c763481deb44ef254494e474d02182651732`
+-	Image ID: `sha256:2326128b089e53f55073cb580d592df8870f42e043d8f35b9c44a1fc630a160f`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["passenger","start"]`
 
@@ -4639,57 +4639,57 @@ ENV RUBY_MAJOR=2.6
 ENV RUBY_VERSION=2.6.8
 # Wed, 07 Jul 2021 19:55:25 GMT
 ENV RUBY_DOWNLOAD_SHA256=8262e4663169c85787fdc9bfbd04d9eb86eb2a4b56d7f98373a8fcaa18e593eb
-# Wed, 07 Jul 2021 19:59:28 GMT
-RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		bison 		dpkg-dev 		gcc 		libbz2-dev 		libgdbm-compat-dev 		libgdbm-dev 		libglib2.0-dev 		libncurses-dev 		libreadline-dev 		libxml2-dev 		libxslt-dev 		make 		ruby 		wget 		xz-utils 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		cd /; 	rm -r /usr/src/ruby; 	! dpkg -l | grep -i ruby; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Wed, 07 Jul 2021 19:59:28 GMT
+# Thu, 08 Jul 2021 22:24:34 GMT
+RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		bison 		dpkg-dev 		libgdbm-dev 		ruby 		autoconf 		g++ 		gcc 		libbz2-dev 		libglib2.0-dev 		libncurses-dev 		libreadline-dev 		libxml2-dev 		libxslt-dev 		make 		wget 		xz-utils 		libgdbm-compat-dev 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -vE '^/usr/local/lib/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		cd /; 	rm -r /usr/src/ruby; 	if dpkg -l | grep -i ruby; then exit 1; fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
+# Thu, 08 Jul 2021 22:24:34 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 07 Jul 2021 19:59:28 GMT
+# Thu, 08 Jul 2021 22:24:34 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 07 Jul 2021 19:59:28 GMT
+# Thu, 08 Jul 2021 22:24:34 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 07 Jul 2021 19:59:30 GMT
+# Thu, 08 Jul 2021 22:24:35 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 07 Jul 2021 19:59:30 GMT
+# Thu, 08 Jul 2021 22:24:36 GMT
 CMD ["irb"]
-# Wed, 07 Jul 2021 20:46:29 GMT
+# Wed, 14 Jul 2021 20:24:50 GMT
 RUN groupadd -r -g 999 redmine && useradd -r -g redmine -u 999 redmine
-# Wed, 07 Jul 2021 20:47:01 GMT
+# Wed, 14 Jul 2021 20:25:15 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		wget 				bzr 		git 		mercurial 		openssh-client 		subversion 				ghostscript 		gsfonts 		imagemagick 		gosu 		tini 	; 	sed -ri 's/(rights)="none" (pattern="PDF")/\1="read" \2/' /etc/ImageMagick-6/policy.xml; 	rm -rf /var/lib/apt/lists/*
-# Wed, 07 Jul 2021 20:47:02 GMT
+# Wed, 14 Jul 2021 20:25:16 GMT
 ENV RAILS_ENV=production
-# Wed, 07 Jul 2021 20:47:03 GMT
+# Wed, 14 Jul 2021 20:25:16 GMT
 WORKDIR /usr/src/redmine
-# Wed, 07 Jul 2021 20:47:03 GMT
+# Wed, 14 Jul 2021 20:25:16 GMT
 ENV HOME=/home/redmine
-# Wed, 07 Jul 2021 20:47:05 GMT
+# Wed, 14 Jul 2021 20:25:17 GMT
 RUN set -eux; 	[ ! -d "$HOME" ]; 	mkdir -p "$HOME"; 	chown redmine:redmine "$HOME"; 	chmod 1777 "$HOME"
-# Wed, 07 Jul 2021 20:47:06 GMT
+# Wed, 14 Jul 2021 20:25:17 GMT
 ENV REDMINE_VERSION=4.1.3
-# Wed, 07 Jul 2021 20:47:06 GMT
+# Wed, 14 Jul 2021 20:25:18 GMT
 ENV REDMINE_DOWNLOAD_SHA256=b5a11a750fa7eeafdf513b352fa2375987b6ebad4264a929ad4db0421870c154
-# Wed, 07 Jul 2021 20:47:11 GMT
+# Wed, 14 Jul 2021 20:25:21 GMT
 RUN set -eux; 	wget -O redmine.tar.gz "https://www.redmine.org/releases/redmine-${REDMINE_VERSION}.tar.gz"; 	echo "$REDMINE_DOWNLOAD_SHA256 *redmine.tar.gz" | sha256sum -c -; 	tar -xf redmine.tar.gz --strip-components=1; 	rm redmine.tar.gz files/delete.me log/delete.me; 	mkdir -p log public/plugin_assets sqlite tmp/pdf tmp/pids; 	chown -R redmine:redmine ./; 	echo 'config.logger = Logger.new(STDOUT)' > config/additional_environment.rb; 	chmod -R ugo=rwX config db sqlite; 	find log tmp -type d -exec chmod 1777 '{}' +
-# Wed, 07 Jul 2021 20:48:27 GMT
+# Wed, 14 Jul 2021 20:26:00 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		freetds-dev 		gcc 		libmariadbclient-dev 		libpq-dev 		libsqlite3-dev 		make 		patch 	; 	rm -rf /var/lib/apt/lists/*; 		gosu redmine bundle config --local without 'development test'; 	echo '# the following entries only exist to force `bundle install` to pre-install all database adapter dependencies -- they can be safely removed/ignored' > ./config/database.yml; 	for adapter in mysql2 postgresql sqlserver sqlite3; do 		echo "$adapter:" >> ./config/database.yml; 		echo "  adapter: $adapter" >> ./config/database.yml; 	done; 	gosu redmine bundle install --jobs "$(nproc)"; 	rm ./config/database.yml; 	chmod -R ugo=rwX Gemfile.lock "$GEM_HOME"; 	rm -rf ~redmine/.bundle; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -v '^/usr/local/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Wed, 07 Jul 2021 20:48:28 GMT
+# Wed, 14 Jul 2021 20:26:01 GMT
 VOLUME [/usr/src/redmine/files]
-# Wed, 07 Jul 2021 20:48:28 GMT
+# Wed, 14 Jul 2021 20:26:01 GMT
 COPY file:2c807aca5f34a9ab8acfef3c517816547300ed2b18590f703a1c783bdc707ba8 in / 
-# Wed, 07 Jul 2021 20:48:29 GMT
+# Wed, 14 Jul 2021 20:26:01 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 07 Jul 2021 20:48:29 GMT
+# Wed, 14 Jul 2021 20:26:02 GMT
 EXPOSE 3000
-# Wed, 07 Jul 2021 20:48:29 GMT
+# Wed, 14 Jul 2021 20:26:02 GMT
 CMD ["rails" "server" "-b" "0.0.0.0"]
-# Wed, 07 Jul 2021 20:48:39 GMT
-ENV PASSENGER_VERSION=6.0.9
-# Wed, 07 Jul 2021 20:49:01 GMT
+# Wed, 14 Jul 2021 20:26:14 GMT
+ENV PASSENGER_VERSION=6.0.10
+# Wed, 14 Jul 2021 20:26:31 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		gcc 		make 	; 	rm -rf /var/lib/apt/lists/*; 		gem install passenger --version "$PASSENGER_VERSION"; 	passenger-config build-native-support; 	if [ -n "$(passenger-config build-native-support 2>&1)" ]; then cat /tmp/passenger_native_support-*.log; false; fi; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Wed, 07 Jul 2021 20:49:03 GMT
+# Wed, 14 Jul 2021 20:26:33 GMT
 RUN set -eux; 	passenger-config install-agent; 	passenger-config download-nginx-engine
-# Wed, 07 Jul 2021 20:49:03 GMT
+# Wed, 14 Jul 2021 20:26:33 GMT
 ENV PASSENGER_PID_FILE=tmp/pids/server.pid
-# Wed, 07 Jul 2021 20:49:03 GMT
+# Wed, 14 Jul 2021 20:26:33 GMT
 CMD ["passenger" "start"]
 ```
 
@@ -4706,55 +4706,55 @@ CMD ["passenger" "start"]
 		Last Modified: Wed, 23 Jun 2021 17:42:36 GMT  
 		Size: 198.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:71bd4dd650c8621dab8128db8ca0e3f89acd9839366648234c17d3016f1bc8da`  
-		Last Modified: Wed, 07 Jul 2021 20:20:53 GMT  
-		Size: 21.5 MB (21467547 bytes)  
+	-	`sha256:ca6b95c16c5624058c7516ccc9aff7fcb6ab05fd66e5e47c1228f4d1e8fec58b`  
+		Last Modified: Thu, 08 Jul 2021 22:40:47 GMT  
+		Size: 21.5 MB (21468025 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:20f8ad4efca5cc78409013778f13741b076a4217a9a2ff39f594ab9ac6bbe2a8`  
-		Last Modified: Wed, 07 Jul 2021 20:20:50 GMT  
+	-	`sha256:0596bd4a64fddd48add80e9f5ee6459a223843aacedfe89c777ed62847e9b45e`  
+		Last Modified: Thu, 08 Jul 2021 22:40:44 GMT  
 		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6a4a13931a73866011c94cfd2b514ede2ebbe9a084ab7a0f99a7ee716f57baa8`  
-		Last Modified: Wed, 07 Jul 2021 21:00:38 GMT  
+	-	`sha256:4b7eae1b0e301a4bb2e1dc9e8faf695f6a25c25fa76af391234a420401b27365`  
+		Last Modified: Wed, 14 Jul 2021 20:36:24 GMT  
 		Size: 1.7 KB (1748 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d72a8b1564ac6a066695b258fecefa74b763e6c4aa970bb567b376f8074013dd`  
-		Last Modified: Wed, 07 Jul 2021 21:00:53 GMT  
-		Size: 94.1 MB (94087369 bytes)  
+	-	`sha256:c267137a65ba8a2d9e353059d3da16877f506fa5ff13446e0445c0c4c3bcd784`  
+		Last Modified: Wed, 14 Jul 2021 20:36:39 GMT  
+		Size: 94.1 MB (94088312 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e6062af73e956cb28fd0013852bff59a91b28f447abb748ee69e3a4ac3dbafff`  
-		Last Modified: Wed, 07 Jul 2021 21:00:35 GMT  
+	-	`sha256:443f532876e21e028bcb587e538fc650ce86a658794ac88dc47a19307ea98e3c`  
+		Last Modified: Wed, 14 Jul 2021 20:36:21 GMT  
 		Size: 171.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bdf251fcfd9cd250484b7e985d4fd25e124891d4b3bd5dfdf5e187453c197642`  
-		Last Modified: Wed, 07 Jul 2021 21:00:35 GMT  
-		Size: 157.0 B  
+	-	`sha256:5d2e5bbb56b3693c8317028271070258892c483ef1b2d9c0029cbd6d9788595d`  
+		Last Modified: Wed, 14 Jul 2021 20:36:21 GMT  
+		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0fd377d156e791bb9cbdbad7b36792b052c6c7d28b48c0ec1f8884c6a26e5c31`  
-		Last Modified: Wed, 07 Jul 2021 21:00:36 GMT  
-		Size: 2.7 MB (2747689 bytes)  
+	-	`sha256:77d9073f85635b6e855482f3fb205876b8d7623e0e0b2d0477f00f3f8a93e121`  
+		Last Modified: Wed, 14 Jul 2021 20:36:22 GMT  
+		Size: 2.7 MB (2747699 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:407f74f29208233529040bc8f53b371b6c38fbbd1851dc8ddd4a290856d81b80`  
-		Last Modified: Wed, 07 Jul 2021 21:00:41 GMT  
-		Size: 48.6 MB (48630550 bytes)  
+	-	`sha256:56c2f3d2afd7b0a0978553d8a765d905c04663f3a050c334496ae656c755c4af`  
+		Last Modified: Wed, 14 Jul 2021 20:36:27 GMT  
+		Size: 48.6 MB (48630681 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4c66dbaad4f612d770153095e1cefa8bd553584e6e4d45aab87d099eb350cd4b`  
-		Last Modified: Wed, 07 Jul 2021 21:00:35 GMT  
+	-	`sha256:a1cf6faa89c3fe5437d036e3116d55e5185e803f18d486ae7510374d0c6a081d`  
+		Last Modified: Wed, 14 Jul 2021 20:36:21 GMT  
 		Size: 1.8 KB (1797 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:88c4f49e89fffae773223e0fec6fb5de35bc264ce60635a969b53fedcafc46ec`  
-		Last Modified: Wed, 07 Jul 2021 21:01:12 GMT  
-		Size: 21.3 MB (21323080 bytes)  
+	-	`sha256:bf013518a02ee1e21f728797726c8cd338e36dc5f93a2ca79d2e219176ab2cdf`  
+		Last Modified: Wed, 14 Jul 2021 20:36:53 GMT  
+		Size: 21.3 MB (21322651 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:24684218c8d07d85cf7b7525fbca3cd8d4b5a2001c533628399ea0c73fee4256`  
-		Last Modified: Wed, 07 Jul 2021 21:01:10 GMT  
-		Size: 4.9 MB (4919336 bytes)  
+	-	`sha256:e39d8dc1a16c759aa15798aa8cbca04ff8c4532a0be26e406f4f4db28aa7d4bd`  
+		Last Modified: Wed, 14 Jul 2021 20:36:50 GMT  
+		Size: 4.9 MB (4919285 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `redmine:4.1.3`
 
 ```console
-$ docker pull redmine@sha256:5f2e38861571c976ab0c513d484577dd5dd62f82ffc61ab0f5aa4d26d92a50d7
+$ docker pull redmine@sha256:3842f8b458e034ecec57ede811de2c27a56157afbcfd04dfa171f53c98bbabcb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4770,14 +4770,14 @@ $ docker pull redmine@sha256:5f2e38861571c976ab0c513d484577dd5dd62f82ffc61ab0f5a
 ### `redmine:4.1.3` - linux; amd64
 
 ```console
-$ docker pull redmine@sha256:dbf5085f7d0d8af46426ae923a8f03899777116a09b48cb55cff309462b7fda9
+$ docker pull redmine@sha256:8cb4cab2bed4c965b285663a240d5bb2fc566e08b20eafa760751342009052ec
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **206.6 MB (206645938 bytes)**  
+-	Total Size: **206.6 MB (206647502 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:758dce80400e61c98e723c4abd58601d52b09324019a6eb9010c55c25de61c04`
+-	Image ID: `sha256:8deeaf98c6f43b867d4af4456933ea02db08ba0623f0f2deeb5e921ec9f90b87`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["rails","server","-b","0.0.0.0"]`
 
@@ -4798,47 +4798,47 @@ ENV RUBY_MAJOR=2.6
 ENV RUBY_VERSION=2.6.8
 # Wed, 07 Jul 2021 19:55:25 GMT
 ENV RUBY_DOWNLOAD_SHA256=8262e4663169c85787fdc9bfbd04d9eb86eb2a4b56d7f98373a8fcaa18e593eb
-# Wed, 07 Jul 2021 19:59:28 GMT
-RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		bison 		dpkg-dev 		gcc 		libbz2-dev 		libgdbm-compat-dev 		libgdbm-dev 		libglib2.0-dev 		libncurses-dev 		libreadline-dev 		libxml2-dev 		libxslt-dev 		make 		ruby 		wget 		xz-utils 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		cd /; 	rm -r /usr/src/ruby; 	! dpkg -l | grep -i ruby; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Wed, 07 Jul 2021 19:59:28 GMT
+# Thu, 08 Jul 2021 22:24:34 GMT
+RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		bison 		dpkg-dev 		libgdbm-dev 		ruby 		autoconf 		g++ 		gcc 		libbz2-dev 		libglib2.0-dev 		libncurses-dev 		libreadline-dev 		libxml2-dev 		libxslt-dev 		make 		wget 		xz-utils 		libgdbm-compat-dev 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -vE '^/usr/local/lib/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		cd /; 	rm -r /usr/src/ruby; 	if dpkg -l | grep -i ruby; then exit 1; fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
+# Thu, 08 Jul 2021 22:24:34 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 07 Jul 2021 19:59:28 GMT
+# Thu, 08 Jul 2021 22:24:34 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 07 Jul 2021 19:59:28 GMT
+# Thu, 08 Jul 2021 22:24:34 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 07 Jul 2021 19:59:30 GMT
+# Thu, 08 Jul 2021 22:24:35 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 07 Jul 2021 19:59:30 GMT
+# Thu, 08 Jul 2021 22:24:36 GMT
 CMD ["irb"]
-# Wed, 07 Jul 2021 20:46:29 GMT
+# Wed, 14 Jul 2021 20:24:50 GMT
 RUN groupadd -r -g 999 redmine && useradd -r -g redmine -u 999 redmine
-# Wed, 07 Jul 2021 20:47:01 GMT
+# Wed, 14 Jul 2021 20:25:15 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		wget 				bzr 		git 		mercurial 		openssh-client 		subversion 				ghostscript 		gsfonts 		imagemagick 		gosu 		tini 	; 	sed -ri 's/(rights)="none" (pattern="PDF")/\1="read" \2/' /etc/ImageMagick-6/policy.xml; 	rm -rf /var/lib/apt/lists/*
-# Wed, 07 Jul 2021 20:47:02 GMT
+# Wed, 14 Jul 2021 20:25:16 GMT
 ENV RAILS_ENV=production
-# Wed, 07 Jul 2021 20:47:03 GMT
+# Wed, 14 Jul 2021 20:25:16 GMT
 WORKDIR /usr/src/redmine
-# Wed, 07 Jul 2021 20:47:03 GMT
+# Wed, 14 Jul 2021 20:25:16 GMT
 ENV HOME=/home/redmine
-# Wed, 07 Jul 2021 20:47:05 GMT
+# Wed, 14 Jul 2021 20:25:17 GMT
 RUN set -eux; 	[ ! -d "$HOME" ]; 	mkdir -p "$HOME"; 	chown redmine:redmine "$HOME"; 	chmod 1777 "$HOME"
-# Wed, 07 Jul 2021 20:47:06 GMT
+# Wed, 14 Jul 2021 20:25:17 GMT
 ENV REDMINE_VERSION=4.1.3
-# Wed, 07 Jul 2021 20:47:06 GMT
+# Wed, 14 Jul 2021 20:25:18 GMT
 ENV REDMINE_DOWNLOAD_SHA256=b5a11a750fa7eeafdf513b352fa2375987b6ebad4264a929ad4db0421870c154
-# Wed, 07 Jul 2021 20:47:11 GMT
+# Wed, 14 Jul 2021 20:25:21 GMT
 RUN set -eux; 	wget -O redmine.tar.gz "https://www.redmine.org/releases/redmine-${REDMINE_VERSION}.tar.gz"; 	echo "$REDMINE_DOWNLOAD_SHA256 *redmine.tar.gz" | sha256sum -c -; 	tar -xf redmine.tar.gz --strip-components=1; 	rm redmine.tar.gz files/delete.me log/delete.me; 	mkdir -p log public/plugin_assets sqlite tmp/pdf tmp/pids; 	chown -R redmine:redmine ./; 	echo 'config.logger = Logger.new(STDOUT)' > config/additional_environment.rb; 	chmod -R ugo=rwX config db sqlite; 	find log tmp -type d -exec chmod 1777 '{}' +
-# Wed, 07 Jul 2021 20:48:27 GMT
+# Wed, 14 Jul 2021 20:26:00 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		freetds-dev 		gcc 		libmariadbclient-dev 		libpq-dev 		libsqlite3-dev 		make 		patch 	; 	rm -rf /var/lib/apt/lists/*; 		gosu redmine bundle config --local without 'development test'; 	echo '# the following entries only exist to force `bundle install` to pre-install all database adapter dependencies -- they can be safely removed/ignored' > ./config/database.yml; 	for adapter in mysql2 postgresql sqlserver sqlite3; do 		echo "$adapter:" >> ./config/database.yml; 		echo "  adapter: $adapter" >> ./config/database.yml; 	done; 	gosu redmine bundle install --jobs "$(nproc)"; 	rm ./config/database.yml; 	chmod -R ugo=rwX Gemfile.lock "$GEM_HOME"; 	rm -rf ~redmine/.bundle; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -v '^/usr/local/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Wed, 07 Jul 2021 20:48:28 GMT
+# Wed, 14 Jul 2021 20:26:01 GMT
 VOLUME [/usr/src/redmine/files]
-# Wed, 07 Jul 2021 20:48:28 GMT
+# Wed, 14 Jul 2021 20:26:01 GMT
 COPY file:2c807aca5f34a9ab8acfef3c517816547300ed2b18590f703a1c783bdc707ba8 in / 
-# Wed, 07 Jul 2021 20:48:29 GMT
+# Wed, 14 Jul 2021 20:26:01 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 07 Jul 2021 20:48:29 GMT
+# Wed, 14 Jul 2021 20:26:02 GMT
 EXPOSE 3000
-# Wed, 07 Jul 2021 20:48:29 GMT
+# Wed, 14 Jul 2021 20:26:02 GMT
 CMD ["rails" "server" "-b" "0.0.0.0"]
 ```
 
@@ -4855,40 +4855,40 @@ CMD ["rails" "server" "-b" "0.0.0.0"]
 		Last Modified: Wed, 23 Jun 2021 17:42:36 GMT  
 		Size: 198.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:71bd4dd650c8621dab8128db8ca0e3f89acd9839366648234c17d3016f1bc8da`  
-		Last Modified: Wed, 07 Jul 2021 20:20:53 GMT  
-		Size: 21.5 MB (21467547 bytes)  
+	-	`sha256:ca6b95c16c5624058c7516ccc9aff7fcb6ab05fd66e5e47c1228f4d1e8fec58b`  
+		Last Modified: Thu, 08 Jul 2021 22:40:47 GMT  
+		Size: 21.5 MB (21468025 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:20f8ad4efca5cc78409013778f13741b076a4217a9a2ff39f594ab9ac6bbe2a8`  
-		Last Modified: Wed, 07 Jul 2021 20:20:50 GMT  
+	-	`sha256:0596bd4a64fddd48add80e9f5ee6459a223843aacedfe89c777ed62847e9b45e`  
+		Last Modified: Thu, 08 Jul 2021 22:40:44 GMT  
 		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6a4a13931a73866011c94cfd2b514ede2ebbe9a084ab7a0f99a7ee716f57baa8`  
-		Last Modified: Wed, 07 Jul 2021 21:00:38 GMT  
+	-	`sha256:4b7eae1b0e301a4bb2e1dc9e8faf695f6a25c25fa76af391234a420401b27365`  
+		Last Modified: Wed, 14 Jul 2021 20:36:24 GMT  
 		Size: 1.7 KB (1748 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d72a8b1564ac6a066695b258fecefa74b763e6c4aa970bb567b376f8074013dd`  
-		Last Modified: Wed, 07 Jul 2021 21:00:53 GMT  
-		Size: 94.1 MB (94087369 bytes)  
+	-	`sha256:c267137a65ba8a2d9e353059d3da16877f506fa5ff13446e0445c0c4c3bcd784`  
+		Last Modified: Wed, 14 Jul 2021 20:36:39 GMT  
+		Size: 94.1 MB (94088312 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e6062af73e956cb28fd0013852bff59a91b28f447abb748ee69e3a4ac3dbafff`  
-		Last Modified: Wed, 07 Jul 2021 21:00:35 GMT  
+	-	`sha256:443f532876e21e028bcb587e538fc650ce86a658794ac88dc47a19307ea98e3c`  
+		Last Modified: Wed, 14 Jul 2021 20:36:21 GMT  
 		Size: 171.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bdf251fcfd9cd250484b7e985d4fd25e124891d4b3bd5dfdf5e187453c197642`  
-		Last Modified: Wed, 07 Jul 2021 21:00:35 GMT  
-		Size: 157.0 B  
+	-	`sha256:5d2e5bbb56b3693c8317028271070258892c483ef1b2d9c0029cbd6d9788595d`  
+		Last Modified: Wed, 14 Jul 2021 20:36:21 GMT  
+		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0fd377d156e791bb9cbdbad7b36792b052c6c7d28b48c0ec1f8884c6a26e5c31`  
-		Last Modified: Wed, 07 Jul 2021 21:00:36 GMT  
-		Size: 2.7 MB (2747689 bytes)  
+	-	`sha256:77d9073f85635b6e855482f3fb205876b8d7623e0e0b2d0477f00f3f8a93e121`  
+		Last Modified: Wed, 14 Jul 2021 20:36:22 GMT  
+		Size: 2.7 MB (2747699 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:407f74f29208233529040bc8f53b371b6c38fbbd1851dc8ddd4a290856d81b80`  
-		Last Modified: Wed, 07 Jul 2021 21:00:41 GMT  
-		Size: 48.6 MB (48630550 bytes)  
+	-	`sha256:56c2f3d2afd7b0a0978553d8a765d905c04663f3a050c334496ae656c755c4af`  
+		Last Modified: Wed, 14 Jul 2021 20:36:27 GMT  
+		Size: 48.6 MB (48630681 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4c66dbaad4f612d770153095e1cefa8bd553584e6e4d45aab87d099eb350cd4b`  
-		Last Modified: Wed, 07 Jul 2021 21:00:35 GMT  
+	-	`sha256:a1cf6faa89c3fe5437d036e3116d55e5185e803f18d486ae7510374d0c6a081d`  
+		Last Modified: Wed, 14 Jul 2021 20:36:21 GMT  
 		Size: 1.8 KB (1797 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -5645,7 +5645,7 @@ CMD ["rails" "server" "-b" "0.0.0.0"]
 ## `redmine:4.1.3-alpine`
 
 ```console
-$ docker pull redmine@sha256:f919cd3dd5613fa6ec847fe7e67fc7791adc96dc86ba0c55a1aa1894de9eb532
+$ docker pull redmine@sha256:ab4e088a86875b1b538344cd8bffecef2ae743209af62856f076991270196c4f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -5655,14 +5655,14 @@ $ docker pull redmine@sha256:f919cd3dd5613fa6ec847fe7e67fc7791adc96dc86ba0c55a1a
 ### `redmine:4.1.3-alpine` - linux; amd64
 
 ```console
-$ docker pull redmine@sha256:a71da7ec791b3c2bf8c7289a73f71bd9ab5d58a8c17665f95774baee06096faa
+$ docker pull redmine@sha256:6fc987ac3687a985a641ecc4ffeb66fae30dfe751d67d0b96c3d7b3a0dea4939
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **161.0 MB (161041255 bytes)**  
+-	Total Size: **161.1 MB (161071838 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3b54fcd33c129acbfd0efcb67cff95a3db9e4b8e2bcd5114be61a3c5cf501d21`
+-	Image ID: `sha256:6c092b6a7e727cff2c4ca5d85fea3f0833a29b70489519ff6fa71c81e678f27c`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["rails","server","-b","0.0.0.0"]`
 
@@ -5671,61 +5671,61 @@ $ docker pull redmine@sha256:a71da7ec791b3c2bf8c7289a73f71bd9ab5d58a8c17665f9577
 ADD file:8ec69d882e7f29f0652d537557160e638168550f738d0d49f90a7ef96bf31787 in / 
 # Wed, 14 Apr 2021 19:19:39 GMT
 CMD ["/bin/sh"]
-# Thu, 15 Apr 2021 03:07:29 GMT
-RUN apk add --no-cache 		gmp-dev
-# Thu, 15 Apr 2021 03:07:31 GMT
+# Thu, 08 Jul 2021 21:57:27 GMT
+RUN set -eux; 	apk add --no-cache 		bzip2 		ca-certificates 		gmp-dev 		libffi-dev 		procps 		yaml-dev 		zlib-dev 	;
+# Thu, 08 Jul 2021 21:57:30 GMT
 RUN set -eux; 	mkdir -p /usr/local/etc; 	{ 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /usr/local/etc/gemrc
-# Thu, 15 Apr 2021 03:07:31 GMT
+# Thu, 08 Jul 2021 21:57:30 GMT
 ENV LANG=C.UTF-8
-# Thu, 15 Apr 2021 03:24:31 GMT
+# Thu, 08 Jul 2021 22:33:03 GMT
 ENV RUBY_MAJOR=2.6
-# Wed, 07 Jul 2021 20:08:01 GMT
+# Thu, 08 Jul 2021 22:33:03 GMT
 ENV RUBY_VERSION=2.6.8
-# Wed, 07 Jul 2021 20:08:01 GMT
+# Thu, 08 Jul 2021 22:33:03 GMT
 ENV RUBY_DOWNLOAD_SHA256=8262e4663169c85787fdc9bfbd04d9eb86eb2a4b56d7f98373a8fcaa18e593eb
-# Wed, 07 Jul 2021 20:12:38 GMT
-RUN set -eux; 		apk add --no-cache --virtual .ruby-builddeps 		autoconf 		bison 		bzip2 		bzip2-dev 		ca-certificates 		coreutils 		dpkg-dev dpkg 		gcc 		gdbm-dev 		glib-dev 		libc-dev 		libffi-dev 		libxml2-dev 		libxslt-dev 		linux-headers 		make 		ncurses-dev 		openssl 		openssl-dev 		patch 		procps 		readline-dev 		ruby 		tar 		xz 		yaml-dev 		zlib-dev 	; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		wget -O 'thread-stack-fix.patch' 'https://bugs.ruby-lang.org/attachments/download/7081/0001-thread_pthread.c-make-get_main_stack-portable-on-lin.patch'; 	echo '3ab628a51d92fdf0d2b5835e93564857aea73e0c1de00313864a94a6255cb645 *thread-stack-fix.patch' | sha256sum --check --strict; 	patch -p1 -i thread-stack-fix.patch; 	rm thread-stack-fix.patch; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	export ac_cv_func_isnan=yes ac_cv_func_isinf=yes; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .ruby-rundeps 		$runDeps 		bzip2 		ca-certificates 		libffi-dev 		procps 		yaml-dev 		zlib-dev 	; 	apk del --no-network .ruby-builddeps; 		cd /; 	rm -r /usr/src/ruby; 	! apk --no-network list --installed 		| grep -v '^[.]ruby-rundeps' 		| grep -i ruby 	; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Wed, 07 Jul 2021 20:12:38 GMT
+# Thu, 08 Jul 2021 22:35:57 GMT
+RUN set -eux; 		apk add --no-cache --virtual .ruby-builddeps 		autoconf 		bison 		bzip2 		bzip2-dev 		ca-certificates 		coreutils 		dpkg-dev dpkg 		g++ 		gcc 		gdbm-dev 		glib-dev 		libc-dev 		libffi-dev 		libxml2-dev 		libxslt-dev 		linux-headers 		make 		ncurses-dev 		openssl 		openssl-dev 		patch 		procps 		readline-dev 		ruby 		tar 		xz 		yaml-dev 		zlib-dev 	; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		wget -O 'thread-stack-fix.patch' 'https://bugs.ruby-lang.org/attachments/download/7081/0001-thread_pthread.c-make-get_main_stack-portable-on-lin.patch'; 	echo '3ab628a51d92fdf0d2b5835e93564857aea73e0c1de00313864a94a6255cb645 *thread-stack-fix.patch' | sha256sum --check --strict; 	patch -p1 -i thread-stack-fix.patch; 	rm thread-stack-fix.patch; 		export ac_cv_func_isnan=yes ac_cv_func_isinf=yes; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .ruby-rundeps $runDeps; 	apk del --no-network .ruby-builddeps; 		cd /; 	rm -r /usr/src/ruby; 	if 		apk --no-network list --installed 			| grep -v '^[.]ruby-rundeps' 			| grep -i ruby 	; then 		exit 1; 	fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
+# Thu, 08 Jul 2021 22:35:57 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 07 Jul 2021 20:12:38 GMT
+# Thu, 08 Jul 2021 22:35:58 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 07 Jul 2021 20:12:38 GMT
+# Thu, 08 Jul 2021 22:35:58 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 07 Jul 2021 20:12:40 GMT
+# Thu, 08 Jul 2021 22:35:59 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 07 Jul 2021 20:12:40 GMT
+# Thu, 08 Jul 2021 22:35:59 GMT
 CMD ["irb"]
-# Wed, 07 Jul 2021 20:49:10 GMT
+# Wed, 14 Jul 2021 20:26:37 GMT
 RUN addgroup -S -g 1000 redmine && adduser -S -H -G redmine -u 999 redmine
-# Wed, 07 Jul 2021 20:49:19 GMT
+# Wed, 14 Jul 2021 20:26:45 GMT
 RUN set -eux; 	apk add --no-cache 		bash 		ca-certificates 		su-exec 		tini 		tzdata 		wget 				git 		mercurial 		openssh-client 		subversion 				ghostscript 		ghostscript-fonts 		imagemagick 	;
-# Wed, 07 Jul 2021 20:49:20 GMT
+# Wed, 14 Jul 2021 20:26:46 GMT
 ENV RAILS_ENV=production
-# Wed, 07 Jul 2021 20:49:20 GMT
+# Wed, 14 Jul 2021 20:26:46 GMT
 WORKDIR /usr/src/redmine
-# Wed, 07 Jul 2021 20:49:20 GMT
+# Wed, 14 Jul 2021 20:26:46 GMT
 ENV HOME=/home/redmine
-# Wed, 07 Jul 2021 20:49:21 GMT
+# Wed, 14 Jul 2021 20:26:48 GMT
 RUN set -eux; 	[ ! -d "$HOME" ]; 	mkdir -p "$HOME"; 	chown redmine:redmine "$HOME"; 	chmod 1777 "$HOME"
-# Wed, 07 Jul 2021 20:49:22 GMT
+# Wed, 14 Jul 2021 20:26:48 GMT
 ENV REDMINE_VERSION=4.1.3
-# Wed, 07 Jul 2021 20:49:22 GMT
+# Wed, 14 Jul 2021 20:26:48 GMT
 ENV REDMINE_DOWNLOAD_SHA256=b5a11a750fa7eeafdf513b352fa2375987b6ebad4264a929ad4db0421870c154
-# Wed, 07 Jul 2021 20:49:26 GMT
+# Wed, 14 Jul 2021 20:26:51 GMT
 RUN set -eux; 	wget -O redmine.tar.gz "https://www.redmine.org/releases/redmine-${REDMINE_VERSION}.tar.gz"; 	echo "$REDMINE_DOWNLOAD_SHA256 *redmine.tar.gz" | sha256sum -c -; 	tar -xf redmine.tar.gz --strip-components=1; 	rm redmine.tar.gz files/delete.me log/delete.me; 	mkdir -p log public/plugin_assets sqlite tmp/pdf tmp/pids; 	chown -R redmine:redmine ./; 	echo 'config.logger = Logger.new(STDOUT)' > config/additional_environment.rb; 	chmod -R ugo=rwX config db sqlite; 	find log tmp -type d -exec chmod 1777 '{}' +
-# Wed, 07 Jul 2021 20:49:26 GMT
+# Wed, 14 Jul 2021 20:26:52 GMT
 ENV BUNDLE_FORCE_RUBY_PLATFORM=1
-# Wed, 07 Jul 2021 20:52:51 GMT
+# Wed, 14 Jul 2021 20:28:53 GMT
 RUN set -eux; 		apk add --no-cache --virtual .build-deps 		coreutils 		freetds-dev 		gcc 		make 		mariadb-dev 		musl-dev 		patch 		postgresql-dev 		sqlite-dev 		ttf2ufm 		zlib-dev 	; 		su-exec redmine bundle config --local without 'development test'; 	echo '# the following entries only exist to force `bundle install` to pre-install all database adapter dependencies -- they can be safely removed/ignored' > ./config/database.yml; 	for adapter in mysql2 postgresql sqlserver sqlite3; do 		echo "$adapter:" >> ./config/database.yml; 		echo "  adapter: $adapter" >> ./config/database.yml; 	done; 	su-exec redmine bundle install --jobs "$(nproc)"; 	rm ./config/database.yml; 	chmod -R ugo=rwX Gemfile.lock "$GEM_HOME"; 	rm -rf ~redmine/.bundle; 		rm /usr/local/bundle/gems/rbpdf-font-1.19.*/lib/fonts/ttf2ufm/ttf2ufm; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local/bundle/gems 		| tr ',' '\n' 		| sort -u 		| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .redmine-rundeps $runDeps; 	apk del --no-network .build-deps
-# Wed, 07 Jul 2021 20:52:52 GMT
+# Wed, 14 Jul 2021 20:28:54 GMT
 VOLUME [/usr/src/redmine/files]
-# Wed, 07 Jul 2021 20:52:52 GMT
+# Wed, 14 Jul 2021 20:28:54 GMT
 COPY file:d7d49d1509d97205d05405670ad206509bb871741a17d5270a1b8842b05afc0f in / 
-# Wed, 07 Jul 2021 20:52:52 GMT
+# Wed, 14 Jul 2021 20:28:54 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 07 Jul 2021 20:52:53 GMT
+# Wed, 14 Jul 2021 20:28:55 GMT
 EXPOSE 3000
-# Wed, 07 Jul 2021 20:52:53 GMT
+# Wed, 14 Jul 2021 20:28:55 GMT
 CMD ["rails" "server" "-b" "0.0.0.0"]
 ```
 
@@ -5734,55 +5734,55 @@ CMD ["rails" "server" "-b" "0.0.0.0"]
 		Last Modified: Wed, 14 Apr 2021 17:59:29 GMT  
 		Size: 2.8 MB (2811969 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:98a867505730167ce0636f0811cb765ebbde11bf979c1a9839f6915f2fc3b85b`  
-		Last Modified: Thu, 15 Apr 2021 03:39:41 GMT  
-		Size: 1.2 MB (1218679 bytes)  
+	-	`sha256:ae5b0ea69e9ed42c49b5af449b703a12a4d2f2e28d87905af6fcd903fdae5689`  
+		Last Modified: Thu, 08 Jul 2021 22:38:46 GMT  
+		Size: 3.6 MB (3581658 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:69c77620f6108dc0610cba72f77d68c271fb1b14cb0800a7a8b6aaeb8950fec9`  
-		Last Modified: Thu, 15 Apr 2021 03:39:40 GMT  
-		Size: 222.0 B  
+	-	`sha256:3ad656ed833315b61ea674706f32c2d18d7412c7120926442af57b9131ee72ee`  
+		Last Modified: Thu, 08 Jul 2021 22:38:45 GMT  
+		Size: 223.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:31a13390cfeb23a5dd47d6b95c12990c44c1ffba24bb030d3ac10f869559dbf4`  
-		Last Modified: Wed, 07 Jul 2021 20:21:37 GMT  
-		Size: 22.2 MB (22223054 bytes)  
+	-	`sha256:b2a9d07bc1851494b8935d8593efecfea98e2c4a4ff1c3eaf2e5319eb31cb3a2`  
+		Last Modified: Thu, 08 Jul 2021 22:41:47 GMT  
+		Size: 19.9 MB (19889336 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3401ac322a4ec3ae5e0ad9900be9781dc25e255154f8e0bd481272f772bbd852`  
-		Last Modified: Wed, 07 Jul 2021 20:21:34 GMT  
-		Size: 172.0 B  
+	-	`sha256:34d50c8fd3318db7f0dbb1d50a8aa4e571ae4926440e66c07be861dd4685211d`  
+		Last Modified: Thu, 08 Jul 2021 22:41:44 GMT  
+		Size: 173.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8a68c5f8f755665933870117b083d8976a4e8d53825958e96d454c2a165b464e`  
-		Last Modified: Wed, 07 Jul 2021 21:01:26 GMT  
-		Size: 1.2 KB (1205 bytes)  
+	-	`sha256:97e030b8560a875bcd9c87e7dd1c8faf94a9d48cf039ee0bf125017750cc802b`  
+		Last Modified: Wed, 14 Jul 2021 20:37:07 GMT  
+		Size: 1.2 KB (1211 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c3bbba699ad39f970f5284c36b7e3af82c3b84d2b5ebaa69c63796823ea5bb9c`  
-		Last Modified: Wed, 07 Jul 2021 21:01:37 GMT  
-		Size: 69.5 MB (69525241 bytes)  
+	-	`sha256:70c0006aa2ad99f9ffc9d729323dc4d6fe56017cf11735d341570e65864f6425`  
+		Last Modified: Wed, 14 Jul 2021 20:37:17 GMT  
+		Size: 69.5 MB (69526405 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:684ad08e13ed877cca01afca5a7fc0ea082fd573bb280bbb0970c62c78f72b77`  
-		Last Modified: Wed, 07 Jul 2021 21:01:23 GMT  
-		Size: 166.0 B  
+	-	`sha256:dde1c41e26debfed4512ebfbeb0a14368410a36df9e8a30216966c830eee17ad`  
+		Last Modified: Wed, 14 Jul 2021 20:37:04 GMT  
+		Size: 168.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5ff97800126fb3ae549491e407c5382991effbeccc02d0ae103ff3a1f59ac03f`  
-		Last Modified: Wed, 07 Jul 2021 21:01:23 GMT  
-		Size: 159.0 B  
+	-	`sha256:968695fc5116055ee483a173dbd08fdd5e9aba5dea28a955cdc730ae9f0bba52`  
+		Last Modified: Wed, 14 Jul 2021 20:37:04 GMT  
+		Size: 158.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0753e21e917fe6ffdea5c9a4ebab491742eb22be63163788c4c553269f5a6335`  
-		Last Modified: Wed, 07 Jul 2021 21:01:24 GMT  
-		Size: 2.7 MB (2748549 bytes)  
+	-	`sha256:53f9412f7e58bd4742f678cd456ad14d8788771c9f2bd64676be5ef15102d32c`  
+		Last Modified: Wed, 14 Jul 2021 20:37:05 GMT  
+		Size: 2.7 MB (2748565 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ecc44771aaf5e900c2f71130bca3f33b391ab28d3f41e2767296bcae1eb6ff94`  
-		Last Modified: Wed, 07 Jul 2021 21:01:30 GMT  
-		Size: 62.5 MB (62510044 bytes)  
+	-	`sha256:c4ce5851323b28845c755def36a5d70eb4eb98b968fb1d0bf274beba4b0ee408`  
+		Last Modified: Wed, 14 Jul 2021 20:37:10 GMT  
+		Size: 62.5 MB (62510175 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:63a8e01fcf88e97cd60c9b1ff3c055551f20b380ea3177e5542c33e2732a30e4`  
-		Last Modified: Wed, 07 Jul 2021 21:01:23 GMT  
-		Size: 1.8 KB (1795 bytes)  
+	-	`sha256:553a89009171bdde8e1ac3c30cb9283a86cc357db925559833d12fd7c7b7d93d`  
+		Last Modified: Wed, 14 Jul 2021 20:37:04 GMT  
+		Size: 1.8 KB (1797 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `redmine:4.1.3-passenger`
 
 ```console
-$ docker pull redmine@sha256:662d77e9d38838ae7aa9336b143200d8bd8b73310d163423590b3d931767f869
+$ docker pull redmine@sha256:4334cb7c8b95d9668f01fc9f8c8ffdd56b40964b7a4a82b0cb4eb6a3f9c74e72
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -5792,14 +5792,14 @@ $ docker pull redmine@sha256:662d77e9d38838ae7aa9336b143200d8bd8b73310d163423590
 ### `redmine:4.1.3-passenger` - linux; amd64
 
 ```console
-$ docker pull redmine@sha256:cf4f6d3a4b8f6c72203ac454636cfbe3c3b9322c552478250f40c4fa4de60244
+$ docker pull redmine@sha256:c1430615177875a68f1379e64e7c5bd75a780909650fb68487080cac12f38df2
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **232.9 MB (232888354 bytes)**  
+-	Total Size: **232.9 MB (232889438 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:cc0936429a30fe984c6e4326e742c763481deb44ef254494e474d02182651732`
+-	Image ID: `sha256:2326128b089e53f55073cb580d592df8870f42e043d8f35b9c44a1fc630a160f`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["passenger","start"]`
 
@@ -5820,57 +5820,57 @@ ENV RUBY_MAJOR=2.6
 ENV RUBY_VERSION=2.6.8
 # Wed, 07 Jul 2021 19:55:25 GMT
 ENV RUBY_DOWNLOAD_SHA256=8262e4663169c85787fdc9bfbd04d9eb86eb2a4b56d7f98373a8fcaa18e593eb
-# Wed, 07 Jul 2021 19:59:28 GMT
-RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		bison 		dpkg-dev 		gcc 		libbz2-dev 		libgdbm-compat-dev 		libgdbm-dev 		libglib2.0-dev 		libncurses-dev 		libreadline-dev 		libxml2-dev 		libxslt-dev 		make 		ruby 		wget 		xz-utils 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		cd /; 	rm -r /usr/src/ruby; 	! dpkg -l | grep -i ruby; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Wed, 07 Jul 2021 19:59:28 GMT
+# Thu, 08 Jul 2021 22:24:34 GMT
+RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		bison 		dpkg-dev 		libgdbm-dev 		ruby 		autoconf 		g++ 		gcc 		libbz2-dev 		libglib2.0-dev 		libncurses-dev 		libreadline-dev 		libxml2-dev 		libxslt-dev 		make 		wget 		xz-utils 		libgdbm-compat-dev 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -vE '^/usr/local/lib/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		cd /; 	rm -r /usr/src/ruby; 	if dpkg -l | grep -i ruby; then exit 1; fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
+# Thu, 08 Jul 2021 22:24:34 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 07 Jul 2021 19:59:28 GMT
+# Thu, 08 Jul 2021 22:24:34 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 07 Jul 2021 19:59:28 GMT
+# Thu, 08 Jul 2021 22:24:34 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 07 Jul 2021 19:59:30 GMT
+# Thu, 08 Jul 2021 22:24:35 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 07 Jul 2021 19:59:30 GMT
+# Thu, 08 Jul 2021 22:24:36 GMT
 CMD ["irb"]
-# Wed, 07 Jul 2021 20:46:29 GMT
+# Wed, 14 Jul 2021 20:24:50 GMT
 RUN groupadd -r -g 999 redmine && useradd -r -g redmine -u 999 redmine
-# Wed, 07 Jul 2021 20:47:01 GMT
+# Wed, 14 Jul 2021 20:25:15 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		wget 				bzr 		git 		mercurial 		openssh-client 		subversion 				ghostscript 		gsfonts 		imagemagick 		gosu 		tini 	; 	sed -ri 's/(rights)="none" (pattern="PDF")/\1="read" \2/' /etc/ImageMagick-6/policy.xml; 	rm -rf /var/lib/apt/lists/*
-# Wed, 07 Jul 2021 20:47:02 GMT
+# Wed, 14 Jul 2021 20:25:16 GMT
 ENV RAILS_ENV=production
-# Wed, 07 Jul 2021 20:47:03 GMT
+# Wed, 14 Jul 2021 20:25:16 GMT
 WORKDIR /usr/src/redmine
-# Wed, 07 Jul 2021 20:47:03 GMT
+# Wed, 14 Jul 2021 20:25:16 GMT
 ENV HOME=/home/redmine
-# Wed, 07 Jul 2021 20:47:05 GMT
+# Wed, 14 Jul 2021 20:25:17 GMT
 RUN set -eux; 	[ ! -d "$HOME" ]; 	mkdir -p "$HOME"; 	chown redmine:redmine "$HOME"; 	chmod 1777 "$HOME"
-# Wed, 07 Jul 2021 20:47:06 GMT
+# Wed, 14 Jul 2021 20:25:17 GMT
 ENV REDMINE_VERSION=4.1.3
-# Wed, 07 Jul 2021 20:47:06 GMT
+# Wed, 14 Jul 2021 20:25:18 GMT
 ENV REDMINE_DOWNLOAD_SHA256=b5a11a750fa7eeafdf513b352fa2375987b6ebad4264a929ad4db0421870c154
-# Wed, 07 Jul 2021 20:47:11 GMT
+# Wed, 14 Jul 2021 20:25:21 GMT
 RUN set -eux; 	wget -O redmine.tar.gz "https://www.redmine.org/releases/redmine-${REDMINE_VERSION}.tar.gz"; 	echo "$REDMINE_DOWNLOAD_SHA256 *redmine.tar.gz" | sha256sum -c -; 	tar -xf redmine.tar.gz --strip-components=1; 	rm redmine.tar.gz files/delete.me log/delete.me; 	mkdir -p log public/plugin_assets sqlite tmp/pdf tmp/pids; 	chown -R redmine:redmine ./; 	echo 'config.logger = Logger.new(STDOUT)' > config/additional_environment.rb; 	chmod -R ugo=rwX config db sqlite; 	find log tmp -type d -exec chmod 1777 '{}' +
-# Wed, 07 Jul 2021 20:48:27 GMT
+# Wed, 14 Jul 2021 20:26:00 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		freetds-dev 		gcc 		libmariadbclient-dev 		libpq-dev 		libsqlite3-dev 		make 		patch 	; 	rm -rf /var/lib/apt/lists/*; 		gosu redmine bundle config --local without 'development test'; 	echo '# the following entries only exist to force `bundle install` to pre-install all database adapter dependencies -- they can be safely removed/ignored' > ./config/database.yml; 	for adapter in mysql2 postgresql sqlserver sqlite3; do 		echo "$adapter:" >> ./config/database.yml; 		echo "  adapter: $adapter" >> ./config/database.yml; 	done; 	gosu redmine bundle install --jobs "$(nproc)"; 	rm ./config/database.yml; 	chmod -R ugo=rwX Gemfile.lock "$GEM_HOME"; 	rm -rf ~redmine/.bundle; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -v '^/usr/local/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Wed, 07 Jul 2021 20:48:28 GMT
+# Wed, 14 Jul 2021 20:26:01 GMT
 VOLUME [/usr/src/redmine/files]
-# Wed, 07 Jul 2021 20:48:28 GMT
+# Wed, 14 Jul 2021 20:26:01 GMT
 COPY file:2c807aca5f34a9ab8acfef3c517816547300ed2b18590f703a1c783bdc707ba8 in / 
-# Wed, 07 Jul 2021 20:48:29 GMT
+# Wed, 14 Jul 2021 20:26:01 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 07 Jul 2021 20:48:29 GMT
+# Wed, 14 Jul 2021 20:26:02 GMT
 EXPOSE 3000
-# Wed, 07 Jul 2021 20:48:29 GMT
+# Wed, 14 Jul 2021 20:26:02 GMT
 CMD ["rails" "server" "-b" "0.0.0.0"]
-# Wed, 07 Jul 2021 20:48:39 GMT
-ENV PASSENGER_VERSION=6.0.9
-# Wed, 07 Jul 2021 20:49:01 GMT
+# Wed, 14 Jul 2021 20:26:14 GMT
+ENV PASSENGER_VERSION=6.0.10
+# Wed, 14 Jul 2021 20:26:31 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		gcc 		make 	; 	rm -rf /var/lib/apt/lists/*; 		gem install passenger --version "$PASSENGER_VERSION"; 	passenger-config build-native-support; 	if [ -n "$(passenger-config build-native-support 2>&1)" ]; then cat /tmp/passenger_native_support-*.log; false; fi; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Wed, 07 Jul 2021 20:49:03 GMT
+# Wed, 14 Jul 2021 20:26:33 GMT
 RUN set -eux; 	passenger-config install-agent; 	passenger-config download-nginx-engine
-# Wed, 07 Jul 2021 20:49:03 GMT
+# Wed, 14 Jul 2021 20:26:33 GMT
 ENV PASSENGER_PID_FILE=tmp/pids/server.pid
-# Wed, 07 Jul 2021 20:49:03 GMT
+# Wed, 14 Jul 2021 20:26:33 GMT
 CMD ["passenger" "start"]
 ```
 
@@ -5887,55 +5887,55 @@ CMD ["passenger" "start"]
 		Last Modified: Wed, 23 Jun 2021 17:42:36 GMT  
 		Size: 198.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:71bd4dd650c8621dab8128db8ca0e3f89acd9839366648234c17d3016f1bc8da`  
-		Last Modified: Wed, 07 Jul 2021 20:20:53 GMT  
-		Size: 21.5 MB (21467547 bytes)  
+	-	`sha256:ca6b95c16c5624058c7516ccc9aff7fcb6ab05fd66e5e47c1228f4d1e8fec58b`  
+		Last Modified: Thu, 08 Jul 2021 22:40:47 GMT  
+		Size: 21.5 MB (21468025 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:20f8ad4efca5cc78409013778f13741b076a4217a9a2ff39f594ab9ac6bbe2a8`  
-		Last Modified: Wed, 07 Jul 2021 20:20:50 GMT  
+	-	`sha256:0596bd4a64fddd48add80e9f5ee6459a223843aacedfe89c777ed62847e9b45e`  
+		Last Modified: Thu, 08 Jul 2021 22:40:44 GMT  
 		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6a4a13931a73866011c94cfd2b514ede2ebbe9a084ab7a0f99a7ee716f57baa8`  
-		Last Modified: Wed, 07 Jul 2021 21:00:38 GMT  
+	-	`sha256:4b7eae1b0e301a4bb2e1dc9e8faf695f6a25c25fa76af391234a420401b27365`  
+		Last Modified: Wed, 14 Jul 2021 20:36:24 GMT  
 		Size: 1.7 KB (1748 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d72a8b1564ac6a066695b258fecefa74b763e6c4aa970bb567b376f8074013dd`  
-		Last Modified: Wed, 07 Jul 2021 21:00:53 GMT  
-		Size: 94.1 MB (94087369 bytes)  
+	-	`sha256:c267137a65ba8a2d9e353059d3da16877f506fa5ff13446e0445c0c4c3bcd784`  
+		Last Modified: Wed, 14 Jul 2021 20:36:39 GMT  
+		Size: 94.1 MB (94088312 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e6062af73e956cb28fd0013852bff59a91b28f447abb748ee69e3a4ac3dbafff`  
-		Last Modified: Wed, 07 Jul 2021 21:00:35 GMT  
+	-	`sha256:443f532876e21e028bcb587e538fc650ce86a658794ac88dc47a19307ea98e3c`  
+		Last Modified: Wed, 14 Jul 2021 20:36:21 GMT  
 		Size: 171.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bdf251fcfd9cd250484b7e985d4fd25e124891d4b3bd5dfdf5e187453c197642`  
-		Last Modified: Wed, 07 Jul 2021 21:00:35 GMT  
-		Size: 157.0 B  
+	-	`sha256:5d2e5bbb56b3693c8317028271070258892c483ef1b2d9c0029cbd6d9788595d`  
+		Last Modified: Wed, 14 Jul 2021 20:36:21 GMT  
+		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0fd377d156e791bb9cbdbad7b36792b052c6c7d28b48c0ec1f8884c6a26e5c31`  
-		Last Modified: Wed, 07 Jul 2021 21:00:36 GMT  
-		Size: 2.7 MB (2747689 bytes)  
+	-	`sha256:77d9073f85635b6e855482f3fb205876b8d7623e0e0b2d0477f00f3f8a93e121`  
+		Last Modified: Wed, 14 Jul 2021 20:36:22 GMT  
+		Size: 2.7 MB (2747699 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:407f74f29208233529040bc8f53b371b6c38fbbd1851dc8ddd4a290856d81b80`  
-		Last Modified: Wed, 07 Jul 2021 21:00:41 GMT  
-		Size: 48.6 MB (48630550 bytes)  
+	-	`sha256:56c2f3d2afd7b0a0978553d8a765d905c04663f3a050c334496ae656c755c4af`  
+		Last Modified: Wed, 14 Jul 2021 20:36:27 GMT  
+		Size: 48.6 MB (48630681 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4c66dbaad4f612d770153095e1cefa8bd553584e6e4d45aab87d099eb350cd4b`  
-		Last Modified: Wed, 07 Jul 2021 21:00:35 GMT  
+	-	`sha256:a1cf6faa89c3fe5437d036e3116d55e5185e803f18d486ae7510374d0c6a081d`  
+		Last Modified: Wed, 14 Jul 2021 20:36:21 GMT  
 		Size: 1.8 KB (1797 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:88c4f49e89fffae773223e0fec6fb5de35bc264ce60635a969b53fedcafc46ec`  
-		Last Modified: Wed, 07 Jul 2021 21:01:12 GMT  
-		Size: 21.3 MB (21323080 bytes)  
+	-	`sha256:bf013518a02ee1e21f728797726c8cd338e36dc5f93a2ca79d2e219176ab2cdf`  
+		Last Modified: Wed, 14 Jul 2021 20:36:53 GMT  
+		Size: 21.3 MB (21322651 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:24684218c8d07d85cf7b7525fbca3cd8d4b5a2001c533628399ea0c73fee4256`  
-		Last Modified: Wed, 07 Jul 2021 21:01:10 GMT  
-		Size: 4.9 MB (4919336 bytes)  
+	-	`sha256:e39d8dc1a16c759aa15798aa8cbca04ff8c4532a0be26e406f4f4db28aa7d4bd`  
+		Last Modified: Wed, 14 Jul 2021 20:36:50 GMT  
+		Size: 4.9 MB (4919285 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `redmine:4.2`
 
 ```console
-$ docker pull redmine@sha256:908057bf3dac6fc94ee52a786ce5e7a57f49d7df7d9ff76f836194802a7f2275
+$ docker pull redmine@sha256:cae6a4d4227606764c6a75b180a5b675e4d7415888b5a1261069761a7cd84eac
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -5951,14 +5951,14 @@ $ docker pull redmine@sha256:908057bf3dac6fc94ee52a786ce5e7a57f49d7df7d9ff76f836
 ### `redmine:4.2` - linux; amd64
 
 ```console
-$ docker pull redmine@sha256:9892a7bec09254dbb1601176db7f8d4452a08a4e158c78e735ba2498a9566a5d
+$ docker pull redmine@sha256:c303bc0f5596613dabea4516d47172296178fa21f6db17497624805f778cb357
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **195.5 MB (195474533 bytes)**  
+-	Total Size: **195.5 MB (195475758 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c45d6d2ff9872cfb76c5a2c368aa5047e15b65f55f8163d7d4e624f9bdd4c3f4`
+-	Image ID: `sha256:338c47d4bca896733efe021ec38c0d595cf043de470eba5e45d6e3dde1a485c3`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["rails","server","-b","0.0.0.0"]`
 
@@ -5979,47 +5979,47 @@ ENV RUBY_MAJOR=2.7
 ENV RUBY_VERSION=2.7.4
 # Wed, 07 Jul 2021 19:43:10 GMT
 ENV RUBY_DOWNLOAD_SHA256=2a80824e0ad6100826b69b9890bf55cfc4cf2b61a1e1330fccbcb30c46cef8d7
-# Wed, 07 Jul 2021 19:45:41 GMT
-RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		bison 		dpkg-dev 		gcc 		libbz2-dev 		libgdbm-compat-dev 		libgdbm-dev 		libglib2.0-dev 		libncurses-dev 		libreadline-dev 		libxml2-dev 		libxslt-dev 		make 		ruby 		wget 		xz-utils 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		cd /; 	rm -r /usr/src/ruby; 	! dpkg -l | grep -i ruby; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Wed, 07 Jul 2021 19:45:41 GMT
+# Thu, 08 Jul 2021 22:11:02 GMT
+RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		bison 		dpkg-dev 		libgdbm-dev 		ruby 		autoconf 		g++ 		gcc 		libbz2-dev 		libglib2.0-dev 		libncurses-dev 		libreadline-dev 		libxml2-dev 		libxslt-dev 		make 		wget 		xz-utils 		libgdbm-compat-dev 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -vE '^/usr/local/lib/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		cd /; 	rm -r /usr/src/ruby; 	if dpkg -l | grep -i ruby; then exit 1; fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
+# Thu, 08 Jul 2021 22:11:02 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 07 Jul 2021 19:45:41 GMT
+# Thu, 08 Jul 2021 22:11:03 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 07 Jul 2021 19:45:41 GMT
+# Thu, 08 Jul 2021 22:11:03 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 07 Jul 2021 19:45:43 GMT
+# Thu, 08 Jul 2021 22:11:05 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 07 Jul 2021 19:45:43 GMT
+# Thu, 08 Jul 2021 22:11:05 GMT
 CMD ["irb"]
-# Wed, 07 Jul 2021 20:39:46 GMT
+# Wed, 14 Jul 2021 20:20:37 GMT
 RUN groupadd -r -g 999 redmine && useradd -r -g redmine -u 999 redmine
-# Wed, 07 Jul 2021 20:40:34 GMT
+# Wed, 14 Jul 2021 20:21:05 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		wget 				bzr 		git 		mercurial 		openssh-client 		subversion 				ghostscript 		gsfonts 		imagemagick 		gosu 		tini 	; 	sed -ri 's/(rights)="none" (pattern="PDF")/\1="read" \2/' /etc/ImageMagick-6/policy.xml; 	rm -rf /var/lib/apt/lists/*
-# Wed, 07 Jul 2021 20:40:35 GMT
+# Wed, 14 Jul 2021 20:21:06 GMT
 ENV RAILS_ENV=production
-# Wed, 07 Jul 2021 20:40:35 GMT
+# Wed, 14 Jul 2021 20:21:06 GMT
 WORKDIR /usr/src/redmine
-# Wed, 07 Jul 2021 20:40:36 GMT
+# Wed, 14 Jul 2021 20:21:06 GMT
 ENV HOME=/home/redmine
-# Wed, 07 Jul 2021 20:40:38 GMT
+# Wed, 14 Jul 2021 20:21:07 GMT
 RUN set -eux; 	[ ! -d "$HOME" ]; 	mkdir -p "$HOME"; 	chown redmine:redmine "$HOME"; 	chmod 1777 "$HOME"
-# Wed, 07 Jul 2021 20:40:39 GMT
+# Wed, 14 Jul 2021 20:21:08 GMT
 ENV REDMINE_VERSION=4.2.1
-# Wed, 07 Jul 2021 20:40:39 GMT
+# Wed, 14 Jul 2021 20:21:08 GMT
 ENV REDMINE_DOWNLOAD_SHA256=ad4109c3425f1cfe4c8961f6ae6494c76e20d81ed946caa1e297d9eda13b41b4
-# Wed, 07 Jul 2021 20:40:44 GMT
+# Wed, 14 Jul 2021 20:21:12 GMT
 RUN set -eux; 	wget -O redmine.tar.gz "https://www.redmine.org/releases/redmine-${REDMINE_VERSION}.tar.gz"; 	echo "$REDMINE_DOWNLOAD_SHA256 *redmine.tar.gz" | sha256sum -c -; 	tar -xf redmine.tar.gz --strip-components=1; 	rm redmine.tar.gz files/delete.me log/delete.me; 	mkdir -p log public/plugin_assets sqlite tmp/pdf tmp/pids; 	chown -R redmine:redmine ./; 	echo 'config.logger = Logger.new(STDOUT)' > config/additional_environment.rb; 	chmod -R ugo=rwX config db sqlite; 	find log tmp -type d -exec chmod 1777 '{}' +
-# Wed, 07 Jul 2021 20:41:44 GMT
+# Wed, 14 Jul 2021 20:21:54 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		freetds-dev 		gcc 		libmariadbclient-dev 		libpq-dev 		libsqlite3-dev 		make 		patch 	; 	rm -rf /var/lib/apt/lists/*; 		gosu redmine bundle config --local without 'development test'; 	echo '# the following entries only exist to force `bundle install` to pre-install all database adapter dependencies -- they can be safely removed/ignored' > ./config/database.yml; 	for adapter in mysql2 postgresql sqlserver sqlite3; do 		echo "$adapter:" >> ./config/database.yml; 		echo "  adapter: $adapter" >> ./config/database.yml; 	done; 	gosu redmine bundle install --jobs "$(nproc)"; 	rm ./config/database.yml; 	chmod -R ugo=rwX Gemfile.lock "$GEM_HOME"; 	rm -rf ~redmine/.bundle; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -v '^/usr/local/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Wed, 07 Jul 2021 20:41:45 GMT
+# Wed, 14 Jul 2021 20:21:54 GMT
 VOLUME [/usr/src/redmine/files]
-# Wed, 07 Jul 2021 20:41:45 GMT
+# Wed, 14 Jul 2021 20:21:54 GMT
 COPY file:2c807aca5f34a9ab8acfef3c517816547300ed2b18590f703a1c783bdc707ba8 in / 
-# Wed, 07 Jul 2021 20:41:45 GMT
+# Wed, 14 Jul 2021 20:21:55 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 07 Jul 2021 20:41:46 GMT
+# Wed, 14 Jul 2021 20:21:55 GMT
 EXPOSE 3000
-# Wed, 07 Jul 2021 20:41:46 GMT
+# Wed, 14 Jul 2021 20:21:55 GMT
 CMD ["rails" "server" "-b" "0.0.0.0"]
 ```
 
@@ -6036,40 +6036,40 @@ CMD ["rails" "server" "-b" "0.0.0.0"]
 		Last Modified: Wed, 23 Jun 2021 17:42:36 GMT  
 		Size: 198.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:733ec198d0e9805569798ab4a23e68f73a18a3ffd651015186eba5dd9a2ca610`  
-		Last Modified: Wed, 07 Jul 2021 20:19:35 GMT  
-		Size: 14.5 MB (14508799 bytes)  
+	-	`sha256:de7400f1f9b6e5d55a83e8b37dd13cf72bdbe0d05934f5c98c4ba06bf4cbf118`  
+		Last Modified: Thu, 08 Jul 2021 22:39:29 GMT  
+		Size: 14.5 MB (14509548 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6e12699933c31f935ddd2fa045f7d982334012d6ad88dd44c3fbadf7a73f5a26`  
-		Last Modified: Wed, 07 Jul 2021 20:19:32 GMT  
-		Size: 176.0 B  
+	-	`sha256:9cb40617deac0692ea97ddae53d285e362d757e8808ea3d0242f0f467fbdc83b`  
+		Last Modified: Thu, 08 Jul 2021 22:39:27 GMT  
+		Size: 175.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8339bad2aba6e43a929afc7d8b21af91944756bb66ef66a16e5d828ceb796d51`  
-		Last Modified: Wed, 07 Jul 2021 20:59:08 GMT  
-		Size: 1.7 KB (1747 bytes)  
+	-	`sha256:1b5e207773ba291762558574c95425f761b6392afd6e47e33a2ef03ba607a20b`  
+		Last Modified: Wed, 14 Jul 2021 20:34:47 GMT  
+		Size: 1.7 KB (1744 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3220f49d0d115b00cb264590dadd864df879aa3258ee8d5f0144a5d6033dacc2`  
-		Last Modified: Wed, 07 Jul 2021 20:59:24 GMT  
-		Size: 94.1 MB (94088061 bytes)  
+	-	`sha256:eb2a0707c83bf4fc7c6a74d7536a44f0769ac86b1f962c1af56accd5e6cd3ba2`  
+		Last Modified: Wed, 14 Jul 2021 20:35:01 GMT  
+		Size: 94.1 MB (94088231 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:34a290764a5ae2660fa1cc94e5aa69717c302b3bcb35daab61321ba461f281b0`  
-		Last Modified: Wed, 07 Jul 2021 20:59:06 GMT  
-		Size: 172.0 B  
+	-	`sha256:fac5644dd9c4b1b57fc0facc0fef989ab8a63d78d5674817336139f4dbaccb6f`  
+		Last Modified: Wed, 14 Jul 2021 20:34:44 GMT  
+		Size: 170.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a3920d04b60ae243eed09f0e406abf35b0c554feba46e0d06d50f7ee4d50dd04`  
-		Last Modified: Wed, 07 Jul 2021 20:59:06 GMT  
-		Size: 158.0 B  
+	-	`sha256:1a8cba4fc03f4f8b3bb011488d95ba8548ebf98c7c911213769e19fff09ca870`  
+		Last Modified: Wed, 14 Jul 2021 20:34:44 GMT  
+		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:04b529c84f2b0c85f9568545c17f99282048191e9439079e1218f4feb0326d82`  
-		Last Modified: Wed, 07 Jul 2021 20:59:07 GMT  
-		Size: 3.1 MB (3058680 bytes)  
+	-	`sha256:353cee6d422cb4bc36abb65fd6c55a508990ed2f2bf4abfc1ce1535b475d6df3`  
+		Last Modified: Wed, 14 Jul 2021 20:34:45 GMT  
+		Size: 3.1 MB (3058676 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:81464e83abe2839f8f7dd0aeadc2876201f9769f84c800c495de9add0af0891a`  
-		Last Modified: Wed, 07 Jul 2021 20:59:11 GMT  
-		Size: 44.1 MB (44106209 bytes)  
+	-	`sha256:2b939da848c07b0f5edcd234d2437605bf205006fdb97858805234a356aee26c`  
+		Last Modified: Wed, 14 Jul 2021 20:34:50 GMT  
+		Size: 44.1 MB (44106524 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:be192e9efc951e43743b5d7b6eef8c89f90d2e19f0791fc1d5f04eaf8e6fa2c9`  
-		Last Modified: Wed, 07 Jul 2021 20:59:06 GMT  
+	-	`sha256:e500e65c849556d24a3d032e6d73d10c2c207727e62435e93883100e925cce45`  
+		Last Modified: Wed, 14 Jul 2021 20:34:45 GMT  
 		Size: 1.8 KB (1797 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -6826,7 +6826,7 @@ CMD ["rails" "server" "-b" "0.0.0.0"]
 ## `redmine:4.2-alpine`
 
 ```console
-$ docker pull redmine@sha256:ca0b18a629a5e414e76848f03ea611afb70fcea36a6e952480a8b20f33ccb0bb
+$ docker pull redmine@sha256:7de4015773da4d105b5f43705556003eb3071d781612fa6e7f6010981e4e56e5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6836,14 +6836,14 @@ $ docker pull redmine@sha256:ca0b18a629a5e414e76848f03ea611afb70fcea36a6e952480a
 ### `redmine:4.2-alpine` - linux; amd64
 
 ```console
-$ docker pull redmine@sha256:077c21637afe6f40bc01e53144e4d29b1ab559347fce7534c68f67e69ca64300
+$ docker pull redmine@sha256:7fb14bb9edbf56cf78406c149b3015cfd560d8ab4b036edebde5aa5e4b83f5af
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **150.1 MB (150053498 bytes)**  
+-	Total Size: **150.1 MB (150068908 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:313842d3e7f7deacfdfb873ef360b7bee175c2f72c64049ca5a88b81134fd3e7`
+-	Image ID: `sha256:74c717ce35a7872383b67fe6276f951c39395fcba0eda36625d7e2eaa9a32932`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["rails","server","-b","0.0.0.0"]`
 
@@ -6852,61 +6852,61 @@ $ docker pull redmine@sha256:077c21637afe6f40bc01e53144e4d29b1ab559347fce7534c68
 ADD file:8ec69d882e7f29f0652d537557160e638168550f738d0d49f90a7ef96bf31787 in / 
 # Wed, 14 Apr 2021 19:19:39 GMT
 CMD ["/bin/sh"]
-# Thu, 15 Apr 2021 03:07:29 GMT
-RUN apk add --no-cache 		gmp-dev
-# Thu, 15 Apr 2021 03:07:31 GMT
+# Thu, 08 Jul 2021 21:57:27 GMT
+RUN set -eux; 	apk add --no-cache 		bzip2 		ca-certificates 		gmp-dev 		libffi-dev 		procps 		yaml-dev 		zlib-dev 	;
+# Thu, 08 Jul 2021 21:57:30 GMT
 RUN set -eux; 	mkdir -p /usr/local/etc; 	{ 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /usr/local/etc/gemrc
-# Thu, 15 Apr 2021 03:07:31 GMT
+# Thu, 08 Jul 2021 21:57:30 GMT
 ENV LANG=C.UTF-8
-# Thu, 15 Apr 2021 03:16:27 GMT
+# Thu, 08 Jul 2021 22:15:57 GMT
 ENV RUBY_MAJOR=2.7
-# Wed, 07 Jul 2021 19:45:51 GMT
+# Thu, 08 Jul 2021 22:15:57 GMT
 ENV RUBY_VERSION=2.7.4
-# Wed, 07 Jul 2021 19:45:51 GMT
+# Thu, 08 Jul 2021 22:15:57 GMT
 ENV RUBY_DOWNLOAD_SHA256=2a80824e0ad6100826b69b9890bf55cfc4cf2b61a1e1330fccbcb30c46cef8d7
-# Wed, 07 Jul 2021 19:48:38 GMT
-RUN set -eux; 		apk add --no-cache --virtual .ruby-builddeps 		autoconf 		bison 		bzip2 		bzip2-dev 		ca-certificates 		coreutils 		dpkg-dev dpkg 		gcc 		gdbm-dev 		glib-dev 		libc-dev 		libffi-dev 		libxml2-dev 		libxslt-dev 		linux-headers 		make 		ncurses-dev 		openssl 		openssl-dev 		patch 		procps 		readline-dev 		ruby 		tar 		xz 		yaml-dev 		zlib-dev 	; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		wget -O 'thread-stack-fix.patch' 'https://bugs.ruby-lang.org/attachments/download/7081/0001-thread_pthread.c-make-get_main_stack-portable-on-lin.patch'; 	echo '3ab628a51d92fdf0d2b5835e93564857aea73e0c1de00313864a94a6255cb645 *thread-stack-fix.patch' | sha256sum --check --strict; 	patch -p1 -i thread-stack-fix.patch; 	rm thread-stack-fix.patch; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	export ac_cv_func_isnan=yes ac_cv_func_isinf=yes; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .ruby-rundeps 		$runDeps 		bzip2 		ca-certificates 		libffi-dev 		procps 		yaml-dev 		zlib-dev 	; 	apk del --no-network .ruby-builddeps; 		cd /; 	rm -r /usr/src/ruby; 	! apk --no-network list --installed 		| grep -v '^[.]ruby-rundeps' 		| grep -i ruby 	; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Wed, 07 Jul 2021 19:48:38 GMT
+# Thu, 08 Jul 2021 22:18:49 GMT
+RUN set -eux; 		apk add --no-cache --virtual .ruby-builddeps 		autoconf 		bison 		bzip2 		bzip2-dev 		ca-certificates 		coreutils 		dpkg-dev dpkg 		g++ 		gcc 		gdbm-dev 		glib-dev 		libc-dev 		libffi-dev 		libxml2-dev 		libxslt-dev 		linux-headers 		make 		ncurses-dev 		openssl 		openssl-dev 		patch 		procps 		readline-dev 		ruby 		tar 		xz 		yaml-dev 		zlib-dev 	; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		wget -O 'thread-stack-fix.patch' 'https://bugs.ruby-lang.org/attachments/download/7081/0001-thread_pthread.c-make-get_main_stack-portable-on-lin.patch'; 	echo '3ab628a51d92fdf0d2b5835e93564857aea73e0c1de00313864a94a6255cb645 *thread-stack-fix.patch' | sha256sum --check --strict; 	patch -p1 -i thread-stack-fix.patch; 	rm thread-stack-fix.patch; 		export ac_cv_func_isnan=yes ac_cv_func_isinf=yes; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .ruby-rundeps $runDeps; 	apk del --no-network .ruby-builddeps; 		cd /; 	rm -r /usr/src/ruby; 	if 		apk --no-network list --installed 			| grep -v '^[.]ruby-rundeps' 			| grep -i ruby 	; then 		exit 1; 	fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
+# Thu, 08 Jul 2021 22:18:49 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 07 Jul 2021 19:48:39 GMT
+# Thu, 08 Jul 2021 22:18:49 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 07 Jul 2021 19:48:39 GMT
+# Thu, 08 Jul 2021 22:18:49 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 07 Jul 2021 19:48:40 GMT
+# Thu, 08 Jul 2021 22:18:50 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 07 Jul 2021 19:48:40 GMT
+# Thu, 08 Jul 2021 22:18:51 GMT
 CMD ["irb"]
-# Wed, 07 Jul 2021 20:42:35 GMT
+# Wed, 14 Jul 2021 20:22:24 GMT
 RUN addgroup -S -g 1000 redmine && adduser -S -H -G redmine -u 999 redmine
-# Wed, 07 Jul 2021 20:42:49 GMT
+# Wed, 14 Jul 2021 20:22:32 GMT
 RUN set -eux; 	apk add --no-cache 		bash 		ca-certificates 		su-exec 		tini 		tzdata 		wget 				git 		mercurial 		openssh-client 		subversion 				ghostscript 		ghostscript-fonts 		imagemagick 	;
-# Wed, 07 Jul 2021 20:42:50 GMT
+# Wed, 14 Jul 2021 20:22:33 GMT
 ENV RAILS_ENV=production
-# Wed, 07 Jul 2021 20:42:51 GMT
+# Wed, 14 Jul 2021 20:22:33 GMT
 WORKDIR /usr/src/redmine
-# Wed, 07 Jul 2021 20:42:51 GMT
+# Wed, 14 Jul 2021 20:22:33 GMT
 ENV HOME=/home/redmine
-# Wed, 07 Jul 2021 20:42:53 GMT
+# Wed, 14 Jul 2021 20:22:34 GMT
 RUN set -eux; 	[ ! -d "$HOME" ]; 	mkdir -p "$HOME"; 	chown redmine:redmine "$HOME"; 	chmod 1777 "$HOME"
-# Wed, 07 Jul 2021 20:42:54 GMT
+# Wed, 14 Jul 2021 20:22:35 GMT
 ENV REDMINE_VERSION=4.2.1
-# Wed, 07 Jul 2021 20:42:54 GMT
+# Wed, 14 Jul 2021 20:22:35 GMT
 ENV REDMINE_DOWNLOAD_SHA256=ad4109c3425f1cfe4c8961f6ae6494c76e20d81ed946caa1e297d9eda13b41b4
-# Wed, 07 Jul 2021 20:43:00 GMT
+# Wed, 14 Jul 2021 20:22:38 GMT
 RUN set -eux; 	wget -O redmine.tar.gz "https://www.redmine.org/releases/redmine-${REDMINE_VERSION}.tar.gz"; 	echo "$REDMINE_DOWNLOAD_SHA256 *redmine.tar.gz" | sha256sum -c -; 	tar -xf redmine.tar.gz --strip-components=1; 	rm redmine.tar.gz files/delete.me log/delete.me; 	mkdir -p log public/plugin_assets sqlite tmp/pdf tmp/pids; 	chown -R redmine:redmine ./; 	echo 'config.logger = Logger.new(STDOUT)' > config/additional_environment.rb; 	chmod -R ugo=rwX config db sqlite; 	find log tmp -type d -exec chmod 1777 '{}' +
-# Wed, 07 Jul 2021 20:43:00 GMT
+# Wed, 14 Jul 2021 20:22:39 GMT
 ENV BUNDLE_FORCE_RUBY_PLATFORM=1
-# Wed, 07 Jul 2021 20:46:18 GMT
+# Wed, 14 Jul 2021 20:24:41 GMT
 RUN set -eux; 		apk add --no-cache --virtual .build-deps 		coreutils 		freetds-dev 		gcc 		make 		mariadb-dev 		musl-dev 		patch 		postgresql-dev 		sqlite-dev 		ttf2ufm 		zlib-dev 	; 		su-exec redmine bundle config --local without 'development test'; 	echo '# the following entries only exist to force `bundle install` to pre-install all database adapter dependencies -- they can be safely removed/ignored' > ./config/database.yml; 	for adapter in mysql2 postgresql sqlserver sqlite3; do 		echo "$adapter:" >> ./config/database.yml; 		echo "  adapter: $adapter" >> ./config/database.yml; 	done; 	su-exec redmine bundle install --jobs "$(nproc)"; 	rm ./config/database.yml; 	chmod -R ugo=rwX Gemfile.lock "$GEM_HOME"; 	rm -rf ~redmine/.bundle; 		rm /usr/local/bundle/gems/rbpdf-font-1.19.*/lib/fonts/ttf2ufm/ttf2ufm; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local/bundle/gems 		| tr ',' '\n' 		| sort -u 		| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .redmine-rundeps $runDeps; 	apk del --no-network .build-deps
-# Wed, 07 Jul 2021 20:46:18 GMT
+# Wed, 14 Jul 2021 20:24:42 GMT
 VOLUME [/usr/src/redmine/files]
-# Wed, 07 Jul 2021 20:46:18 GMT
+# Wed, 14 Jul 2021 20:24:42 GMT
 COPY file:d7d49d1509d97205d05405670ad206509bb871741a17d5270a1b8842b05afc0f in / 
-# Wed, 07 Jul 2021 20:46:19 GMT
+# Wed, 14 Jul 2021 20:24:42 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 07 Jul 2021 20:46:19 GMT
+# Wed, 14 Jul 2021 20:24:42 GMT
 EXPOSE 3000
-# Wed, 07 Jul 2021 20:46:19 GMT
+# Wed, 14 Jul 2021 20:24:42 GMT
 CMD ["rails" "server" "-b" "0.0.0.0"]
 ```
 
@@ -6915,55 +6915,55 @@ CMD ["rails" "server" "-b" "0.0.0.0"]
 		Last Modified: Wed, 14 Apr 2021 17:59:29 GMT  
 		Size: 2.8 MB (2811969 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:98a867505730167ce0636f0811cb765ebbde11bf979c1a9839f6915f2fc3b85b`  
-		Last Modified: Thu, 15 Apr 2021 03:39:41 GMT  
-		Size: 1.2 MB (1218679 bytes)  
+	-	`sha256:ae5b0ea69e9ed42c49b5af449b703a12a4d2f2e28d87905af6fcd903fdae5689`  
+		Last Modified: Thu, 08 Jul 2021 22:38:46 GMT  
+		Size: 3.6 MB (3581658 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:69c77620f6108dc0610cba72f77d68c271fb1b14cb0800a7a8b6aaeb8950fec9`  
-		Last Modified: Thu, 15 Apr 2021 03:39:40 GMT  
-		Size: 222.0 B  
+	-	`sha256:3ad656ed833315b61ea674706f32c2d18d7412c7120926442af57b9131ee72ee`  
+		Last Modified: Thu, 08 Jul 2021 22:38:45 GMT  
+		Size: 223.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7ea934b6bf2094b677c0efcea21d8dd83f7d08a693dc70f6225655637126c426`  
-		Last Modified: Wed, 07 Jul 2021 20:19:57 GMT  
-		Size: 16.7 MB (16721809 bytes)  
+	-	`sha256:626f6830afc6fb7a05a8f18f2b98e4ea4db3d2dd50803e5cd2c627fe25150dc8`  
+		Last Modified: Thu, 08 Jul 2021 22:40:13 GMT  
+		Size: 14.4 MB (14373123 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:686808441e8cf9ef056302eb927f0082e5b1982f069e2c30b2b19d6a61c2a2ba`  
-		Last Modified: Wed, 07 Jul 2021 20:19:55 GMT  
-		Size: 172.0 B  
+	-	`sha256:5375389679c9573d241b22905aee17b20981e2628989561698087f107fcfed4a`  
+		Last Modified: Thu, 08 Jul 2021 22:40:11 GMT  
+		Size: 173.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d8976df4a5a54a897431b41d52944416dd3f8f810bd6657691c18453f8487742`  
-		Last Modified: Wed, 07 Jul 2021 21:00:05 GMT  
-		Size: 1.2 KB (1206 bytes)  
+	-	`sha256:c76a82132aeb154f32b80803eecedc3e27e062a35ae1e05284dc2d7e6c7f4f59`  
+		Last Modified: Wed, 14 Jul 2021 20:35:42 GMT  
+		Size: 1.2 KB (1209 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:47efa0102f6e6e0ece259209ca18d6e3d4e11169b4d4f46aba1eba740a613150`  
-		Last Modified: Wed, 07 Jul 2021 21:00:15 GMT  
-		Size: 69.5 MB (69525641 bytes)  
+	-	`sha256:99cb4af997128346f54fa569d3a04180c718e02a90e90eff7161241d54deef92`  
+		Last Modified: Wed, 14 Jul 2021 20:35:52 GMT  
+		Size: 69.5 MB (69526214 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:31feb1eca5d1e845e9715e85cd7a862fd44f1760b6e75121aa5683d8292ae651`  
-		Last Modified: Wed, 07 Jul 2021 21:00:01 GMT  
-		Size: 167.0 B  
+	-	`sha256:14da2816c58ef08b826f823d7b6a4126bb63594ed1109880b795c28cc4d3f032`  
+		Last Modified: Wed, 14 Jul 2021 20:35:39 GMT  
+		Size: 166.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ad06f01400240338ee40ad58bfca6b7cc4a9a01936123ffe0b9915471107c362`  
-		Last Modified: Wed, 07 Jul 2021 21:00:01 GMT  
-		Size: 158.0 B  
+	-	`sha256:13f34be07349b94807cc58a0e31cecec279d0591b9a6f1f65f1dbe94a4713462`  
+		Last Modified: Wed, 14 Jul 2021 20:35:39 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:773f42416bef575288101a1df9d6a5fa2148c53ad0ab570bfbe4f59df70a3de5`  
-		Last Modified: Wed, 07 Jul 2021 21:00:03 GMT  
-		Size: 3.1 MB (3059999 bytes)  
+	-	`sha256:b98b05ead31106734fcef5216d256a8536461fa7935f729e67262c90f55e683b`  
+		Last Modified: Wed, 14 Jul 2021 20:35:40 GMT  
+		Size: 3.1 MB (3060004 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e9dc43767f453dd8f05fceda480269b93353a0571cdbcda70dd10ef97bbc6f8a`  
-		Last Modified: Wed, 07 Jul 2021 21:00:08 GMT  
-		Size: 56.7 MB (56711679 bytes)  
+	-	`sha256:a6c586852175065725ae48c5682f1ecea003599fbc0028c3387f5de00cc28f34`  
+		Last Modified: Wed, 14 Jul 2021 20:36:03 GMT  
+		Size: 56.7 MB (56712212 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:26cd8e62dc154735785f51beaabe48d17609389a1a6c0754d076fb36884292b6`  
-		Last Modified: Wed, 07 Jul 2021 21:00:01 GMT  
+	-	`sha256:e4d1559a239e3bf1260f693961d40d28b32673907100b077a797e55d543f072c`  
+		Last Modified: Wed, 14 Jul 2021 20:35:39 GMT  
 		Size: 1.8 KB (1797 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `redmine:4.2-passenger`
 
 ```console
-$ docker pull redmine@sha256:f4cb2ae19c38cc46fff7e55b7637e43ff3d520f55f9761af93bd61f35f0868f8
+$ docker pull redmine@sha256:9b780f98151823e0e84e1e41974c548143cae7090cd367eb711d44d3bc8a966b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6973,14 +6973,14 @@ $ docker pull redmine@sha256:f4cb2ae19c38cc46fff7e55b7637e43ff3d520f55f9761af93b
 ### `redmine:4.2-passenger` - linux; amd64
 
 ```console
-$ docker pull redmine@sha256:18864e55c008f0ef499790c64ae0c35326403e72700265430a74abe6167b63b4
+$ docker pull redmine@sha256:a320947c8461cd8bafad0bcfda90b4f5ac840389345003324df81de7b46ad296
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **221.5 MB (221521668 bytes)**  
+-	Total Size: **221.5 MB (221526742 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:fc0c50bd977fa6369b41f342f74e4cbb08de72fd5ba09391a2b5c5e395a1d4d2`
+-	Image ID: `sha256:f3049f679e04c98a7643e800733c59f85c960a686a186192d9b12a222bed1592`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["passenger","start"]`
 
@@ -7001,57 +7001,57 @@ ENV RUBY_MAJOR=2.7
 ENV RUBY_VERSION=2.7.4
 # Wed, 07 Jul 2021 19:43:10 GMT
 ENV RUBY_DOWNLOAD_SHA256=2a80824e0ad6100826b69b9890bf55cfc4cf2b61a1e1330fccbcb30c46cef8d7
-# Wed, 07 Jul 2021 19:45:41 GMT
-RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		bison 		dpkg-dev 		gcc 		libbz2-dev 		libgdbm-compat-dev 		libgdbm-dev 		libglib2.0-dev 		libncurses-dev 		libreadline-dev 		libxml2-dev 		libxslt-dev 		make 		ruby 		wget 		xz-utils 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		cd /; 	rm -r /usr/src/ruby; 	! dpkg -l | grep -i ruby; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Wed, 07 Jul 2021 19:45:41 GMT
+# Thu, 08 Jul 2021 22:11:02 GMT
+RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		bison 		dpkg-dev 		libgdbm-dev 		ruby 		autoconf 		g++ 		gcc 		libbz2-dev 		libglib2.0-dev 		libncurses-dev 		libreadline-dev 		libxml2-dev 		libxslt-dev 		make 		wget 		xz-utils 		libgdbm-compat-dev 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -vE '^/usr/local/lib/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		cd /; 	rm -r /usr/src/ruby; 	if dpkg -l | grep -i ruby; then exit 1; fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
+# Thu, 08 Jul 2021 22:11:02 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 07 Jul 2021 19:45:41 GMT
+# Thu, 08 Jul 2021 22:11:03 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 07 Jul 2021 19:45:41 GMT
+# Thu, 08 Jul 2021 22:11:03 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 07 Jul 2021 19:45:43 GMT
+# Thu, 08 Jul 2021 22:11:05 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 07 Jul 2021 19:45:43 GMT
+# Thu, 08 Jul 2021 22:11:05 GMT
 CMD ["irb"]
-# Wed, 07 Jul 2021 20:39:46 GMT
+# Wed, 14 Jul 2021 20:20:37 GMT
 RUN groupadd -r -g 999 redmine && useradd -r -g redmine -u 999 redmine
-# Wed, 07 Jul 2021 20:40:34 GMT
+# Wed, 14 Jul 2021 20:21:05 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		wget 				bzr 		git 		mercurial 		openssh-client 		subversion 				ghostscript 		gsfonts 		imagemagick 		gosu 		tini 	; 	sed -ri 's/(rights)="none" (pattern="PDF")/\1="read" \2/' /etc/ImageMagick-6/policy.xml; 	rm -rf /var/lib/apt/lists/*
-# Wed, 07 Jul 2021 20:40:35 GMT
+# Wed, 14 Jul 2021 20:21:06 GMT
 ENV RAILS_ENV=production
-# Wed, 07 Jul 2021 20:40:35 GMT
+# Wed, 14 Jul 2021 20:21:06 GMT
 WORKDIR /usr/src/redmine
-# Wed, 07 Jul 2021 20:40:36 GMT
+# Wed, 14 Jul 2021 20:21:06 GMT
 ENV HOME=/home/redmine
-# Wed, 07 Jul 2021 20:40:38 GMT
+# Wed, 14 Jul 2021 20:21:07 GMT
 RUN set -eux; 	[ ! -d "$HOME" ]; 	mkdir -p "$HOME"; 	chown redmine:redmine "$HOME"; 	chmod 1777 "$HOME"
-# Wed, 07 Jul 2021 20:40:39 GMT
+# Wed, 14 Jul 2021 20:21:08 GMT
 ENV REDMINE_VERSION=4.2.1
-# Wed, 07 Jul 2021 20:40:39 GMT
+# Wed, 14 Jul 2021 20:21:08 GMT
 ENV REDMINE_DOWNLOAD_SHA256=ad4109c3425f1cfe4c8961f6ae6494c76e20d81ed946caa1e297d9eda13b41b4
-# Wed, 07 Jul 2021 20:40:44 GMT
+# Wed, 14 Jul 2021 20:21:12 GMT
 RUN set -eux; 	wget -O redmine.tar.gz "https://www.redmine.org/releases/redmine-${REDMINE_VERSION}.tar.gz"; 	echo "$REDMINE_DOWNLOAD_SHA256 *redmine.tar.gz" | sha256sum -c -; 	tar -xf redmine.tar.gz --strip-components=1; 	rm redmine.tar.gz files/delete.me log/delete.me; 	mkdir -p log public/plugin_assets sqlite tmp/pdf tmp/pids; 	chown -R redmine:redmine ./; 	echo 'config.logger = Logger.new(STDOUT)' > config/additional_environment.rb; 	chmod -R ugo=rwX config db sqlite; 	find log tmp -type d -exec chmod 1777 '{}' +
-# Wed, 07 Jul 2021 20:41:44 GMT
+# Wed, 14 Jul 2021 20:21:54 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		freetds-dev 		gcc 		libmariadbclient-dev 		libpq-dev 		libsqlite3-dev 		make 		patch 	; 	rm -rf /var/lib/apt/lists/*; 		gosu redmine bundle config --local without 'development test'; 	echo '# the following entries only exist to force `bundle install` to pre-install all database adapter dependencies -- they can be safely removed/ignored' > ./config/database.yml; 	for adapter in mysql2 postgresql sqlserver sqlite3; do 		echo "$adapter:" >> ./config/database.yml; 		echo "  adapter: $adapter" >> ./config/database.yml; 	done; 	gosu redmine bundle install --jobs "$(nproc)"; 	rm ./config/database.yml; 	chmod -R ugo=rwX Gemfile.lock "$GEM_HOME"; 	rm -rf ~redmine/.bundle; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -v '^/usr/local/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Wed, 07 Jul 2021 20:41:45 GMT
+# Wed, 14 Jul 2021 20:21:54 GMT
 VOLUME [/usr/src/redmine/files]
-# Wed, 07 Jul 2021 20:41:45 GMT
+# Wed, 14 Jul 2021 20:21:54 GMT
 COPY file:2c807aca5f34a9ab8acfef3c517816547300ed2b18590f703a1c783bdc707ba8 in / 
-# Wed, 07 Jul 2021 20:41:45 GMT
+# Wed, 14 Jul 2021 20:21:55 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 07 Jul 2021 20:41:46 GMT
+# Wed, 14 Jul 2021 20:21:55 GMT
 EXPOSE 3000
-# Wed, 07 Jul 2021 20:41:46 GMT
+# Wed, 14 Jul 2021 20:21:55 GMT
 CMD ["rails" "server" "-b" "0.0.0.0"]
-# Wed, 07 Jul 2021 20:41:55 GMT
-ENV PASSENGER_VERSION=6.0.9
-# Wed, 07 Jul 2021 20:42:22 GMT
+# Wed, 14 Jul 2021 20:22:01 GMT
+ENV PASSENGER_VERSION=6.0.10
+# Wed, 14 Jul 2021 20:22:18 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		gcc 		make 	; 	rm -rf /var/lib/apt/lists/*; 		gem install passenger --version "$PASSENGER_VERSION"; 	passenger-config build-native-support; 	if [ -n "$(passenger-config build-native-support 2>&1)" ]; then cat /tmp/passenger_native_support-*.log; false; fi; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Wed, 07 Jul 2021 20:42:26 GMT
+# Wed, 14 Jul 2021 20:22:20 GMT
 RUN set -eux; 	passenger-config install-agent; 	passenger-config download-nginx-engine
-# Wed, 07 Jul 2021 20:42:26 GMT
+# Wed, 14 Jul 2021 20:22:20 GMT
 ENV PASSENGER_PID_FILE=tmp/pids/server.pid
-# Wed, 07 Jul 2021 20:42:27 GMT
+# Wed, 14 Jul 2021 20:22:20 GMT
 CMD ["passenger" "start"]
 ```
 
@@ -7068,55 +7068,55 @@ CMD ["passenger" "start"]
 		Last Modified: Wed, 23 Jun 2021 17:42:36 GMT  
 		Size: 198.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:733ec198d0e9805569798ab4a23e68f73a18a3ffd651015186eba5dd9a2ca610`  
-		Last Modified: Wed, 07 Jul 2021 20:19:35 GMT  
-		Size: 14.5 MB (14508799 bytes)  
+	-	`sha256:de7400f1f9b6e5d55a83e8b37dd13cf72bdbe0d05934f5c98c4ba06bf4cbf118`  
+		Last Modified: Thu, 08 Jul 2021 22:39:29 GMT  
+		Size: 14.5 MB (14509548 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6e12699933c31f935ddd2fa045f7d982334012d6ad88dd44c3fbadf7a73f5a26`  
-		Last Modified: Wed, 07 Jul 2021 20:19:32 GMT  
-		Size: 176.0 B  
+	-	`sha256:9cb40617deac0692ea97ddae53d285e362d757e8808ea3d0242f0f467fbdc83b`  
+		Last Modified: Thu, 08 Jul 2021 22:39:27 GMT  
+		Size: 175.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8339bad2aba6e43a929afc7d8b21af91944756bb66ef66a16e5d828ceb796d51`  
-		Last Modified: Wed, 07 Jul 2021 20:59:08 GMT  
-		Size: 1.7 KB (1747 bytes)  
+	-	`sha256:1b5e207773ba291762558574c95425f761b6392afd6e47e33a2ef03ba607a20b`  
+		Last Modified: Wed, 14 Jul 2021 20:34:47 GMT  
+		Size: 1.7 KB (1744 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3220f49d0d115b00cb264590dadd864df879aa3258ee8d5f0144a5d6033dacc2`  
-		Last Modified: Wed, 07 Jul 2021 20:59:24 GMT  
-		Size: 94.1 MB (94088061 bytes)  
+	-	`sha256:eb2a0707c83bf4fc7c6a74d7536a44f0769ac86b1f962c1af56accd5e6cd3ba2`  
+		Last Modified: Wed, 14 Jul 2021 20:35:01 GMT  
+		Size: 94.1 MB (94088231 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:34a290764a5ae2660fa1cc94e5aa69717c302b3bcb35daab61321ba461f281b0`  
-		Last Modified: Wed, 07 Jul 2021 20:59:06 GMT  
-		Size: 172.0 B  
+	-	`sha256:fac5644dd9c4b1b57fc0facc0fef989ab8a63d78d5674817336139f4dbaccb6f`  
+		Last Modified: Wed, 14 Jul 2021 20:34:44 GMT  
+		Size: 170.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a3920d04b60ae243eed09f0e406abf35b0c554feba46e0d06d50f7ee4d50dd04`  
-		Last Modified: Wed, 07 Jul 2021 20:59:06 GMT  
-		Size: 158.0 B  
+	-	`sha256:1a8cba4fc03f4f8b3bb011488d95ba8548ebf98c7c911213769e19fff09ca870`  
+		Last Modified: Wed, 14 Jul 2021 20:34:44 GMT  
+		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:04b529c84f2b0c85f9568545c17f99282048191e9439079e1218f4feb0326d82`  
-		Last Modified: Wed, 07 Jul 2021 20:59:07 GMT  
-		Size: 3.1 MB (3058680 bytes)  
+	-	`sha256:353cee6d422cb4bc36abb65fd6c55a508990ed2f2bf4abfc1ce1535b475d6df3`  
+		Last Modified: Wed, 14 Jul 2021 20:34:45 GMT  
+		Size: 3.1 MB (3058676 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:81464e83abe2839f8f7dd0aeadc2876201f9769f84c800c495de9add0af0891a`  
-		Last Modified: Wed, 07 Jul 2021 20:59:11 GMT  
-		Size: 44.1 MB (44106209 bytes)  
+	-	`sha256:2b939da848c07b0f5edcd234d2437605bf205006fdb97858805234a356aee26c`  
+		Last Modified: Wed, 14 Jul 2021 20:34:50 GMT  
+		Size: 44.1 MB (44106524 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:be192e9efc951e43743b5d7b6eef8c89f90d2e19f0791fc1d5f04eaf8e6fa2c9`  
-		Last Modified: Wed, 07 Jul 2021 20:59:06 GMT  
+	-	`sha256:e500e65c849556d24a3d032e6d73d10c2c207727e62435e93883100e925cce45`  
+		Last Modified: Wed, 14 Jul 2021 20:34:45 GMT  
 		Size: 1.8 KB (1797 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f71a11320b67138cd2a0a1334bfd1756db2e441c02756b81375d40ef6b5662be`  
-		Last Modified: Wed, 07 Jul 2021 20:59:44 GMT  
-		Size: 21.1 MB (21127786 bytes)  
+	-	`sha256:ca41f4f9e9b7629be3e6e9666279b940b489648484da4e41725e7b22c1c94b1b`  
+		Last Modified: Wed, 14 Jul 2021 20:35:22 GMT  
+		Size: 21.1 MB (21131700 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:395d6858c59e57067f4887b7870aa71c24d60c5749d50d10bcc25771eef5eb2d`  
-		Last Modified: Wed, 07 Jul 2021 20:59:42 GMT  
-		Size: 4.9 MB (4919349 bytes)  
+	-	`sha256:c9436698f0e4aec6d6e7c991fd623ae0d4eab48e62193c564b2fa25de8f4a52e`  
+		Last Modified: Wed, 14 Jul 2021 20:35:20 GMT  
+		Size: 4.9 MB (4919284 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `redmine:4.2.1`
 
 ```console
-$ docker pull redmine@sha256:908057bf3dac6fc94ee52a786ce5e7a57f49d7df7d9ff76f836194802a7f2275
+$ docker pull redmine@sha256:cae6a4d4227606764c6a75b180a5b675e4d7415888b5a1261069761a7cd84eac
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -7132,14 +7132,14 @@ $ docker pull redmine@sha256:908057bf3dac6fc94ee52a786ce5e7a57f49d7df7d9ff76f836
 ### `redmine:4.2.1` - linux; amd64
 
 ```console
-$ docker pull redmine@sha256:9892a7bec09254dbb1601176db7f8d4452a08a4e158c78e735ba2498a9566a5d
+$ docker pull redmine@sha256:c303bc0f5596613dabea4516d47172296178fa21f6db17497624805f778cb357
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **195.5 MB (195474533 bytes)**  
+-	Total Size: **195.5 MB (195475758 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c45d6d2ff9872cfb76c5a2c368aa5047e15b65f55f8163d7d4e624f9bdd4c3f4`
+-	Image ID: `sha256:338c47d4bca896733efe021ec38c0d595cf043de470eba5e45d6e3dde1a485c3`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["rails","server","-b","0.0.0.0"]`
 
@@ -7160,47 +7160,47 @@ ENV RUBY_MAJOR=2.7
 ENV RUBY_VERSION=2.7.4
 # Wed, 07 Jul 2021 19:43:10 GMT
 ENV RUBY_DOWNLOAD_SHA256=2a80824e0ad6100826b69b9890bf55cfc4cf2b61a1e1330fccbcb30c46cef8d7
-# Wed, 07 Jul 2021 19:45:41 GMT
-RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		bison 		dpkg-dev 		gcc 		libbz2-dev 		libgdbm-compat-dev 		libgdbm-dev 		libglib2.0-dev 		libncurses-dev 		libreadline-dev 		libxml2-dev 		libxslt-dev 		make 		ruby 		wget 		xz-utils 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		cd /; 	rm -r /usr/src/ruby; 	! dpkg -l | grep -i ruby; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Wed, 07 Jul 2021 19:45:41 GMT
+# Thu, 08 Jul 2021 22:11:02 GMT
+RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		bison 		dpkg-dev 		libgdbm-dev 		ruby 		autoconf 		g++ 		gcc 		libbz2-dev 		libglib2.0-dev 		libncurses-dev 		libreadline-dev 		libxml2-dev 		libxslt-dev 		make 		wget 		xz-utils 		libgdbm-compat-dev 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -vE '^/usr/local/lib/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		cd /; 	rm -r /usr/src/ruby; 	if dpkg -l | grep -i ruby; then exit 1; fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
+# Thu, 08 Jul 2021 22:11:02 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 07 Jul 2021 19:45:41 GMT
+# Thu, 08 Jul 2021 22:11:03 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 07 Jul 2021 19:45:41 GMT
+# Thu, 08 Jul 2021 22:11:03 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 07 Jul 2021 19:45:43 GMT
+# Thu, 08 Jul 2021 22:11:05 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 07 Jul 2021 19:45:43 GMT
+# Thu, 08 Jul 2021 22:11:05 GMT
 CMD ["irb"]
-# Wed, 07 Jul 2021 20:39:46 GMT
+# Wed, 14 Jul 2021 20:20:37 GMT
 RUN groupadd -r -g 999 redmine && useradd -r -g redmine -u 999 redmine
-# Wed, 07 Jul 2021 20:40:34 GMT
+# Wed, 14 Jul 2021 20:21:05 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		wget 				bzr 		git 		mercurial 		openssh-client 		subversion 				ghostscript 		gsfonts 		imagemagick 		gosu 		tini 	; 	sed -ri 's/(rights)="none" (pattern="PDF")/\1="read" \2/' /etc/ImageMagick-6/policy.xml; 	rm -rf /var/lib/apt/lists/*
-# Wed, 07 Jul 2021 20:40:35 GMT
+# Wed, 14 Jul 2021 20:21:06 GMT
 ENV RAILS_ENV=production
-# Wed, 07 Jul 2021 20:40:35 GMT
+# Wed, 14 Jul 2021 20:21:06 GMT
 WORKDIR /usr/src/redmine
-# Wed, 07 Jul 2021 20:40:36 GMT
+# Wed, 14 Jul 2021 20:21:06 GMT
 ENV HOME=/home/redmine
-# Wed, 07 Jul 2021 20:40:38 GMT
+# Wed, 14 Jul 2021 20:21:07 GMT
 RUN set -eux; 	[ ! -d "$HOME" ]; 	mkdir -p "$HOME"; 	chown redmine:redmine "$HOME"; 	chmod 1777 "$HOME"
-# Wed, 07 Jul 2021 20:40:39 GMT
+# Wed, 14 Jul 2021 20:21:08 GMT
 ENV REDMINE_VERSION=4.2.1
-# Wed, 07 Jul 2021 20:40:39 GMT
+# Wed, 14 Jul 2021 20:21:08 GMT
 ENV REDMINE_DOWNLOAD_SHA256=ad4109c3425f1cfe4c8961f6ae6494c76e20d81ed946caa1e297d9eda13b41b4
-# Wed, 07 Jul 2021 20:40:44 GMT
+# Wed, 14 Jul 2021 20:21:12 GMT
 RUN set -eux; 	wget -O redmine.tar.gz "https://www.redmine.org/releases/redmine-${REDMINE_VERSION}.tar.gz"; 	echo "$REDMINE_DOWNLOAD_SHA256 *redmine.tar.gz" | sha256sum -c -; 	tar -xf redmine.tar.gz --strip-components=1; 	rm redmine.tar.gz files/delete.me log/delete.me; 	mkdir -p log public/plugin_assets sqlite tmp/pdf tmp/pids; 	chown -R redmine:redmine ./; 	echo 'config.logger = Logger.new(STDOUT)' > config/additional_environment.rb; 	chmod -R ugo=rwX config db sqlite; 	find log tmp -type d -exec chmod 1777 '{}' +
-# Wed, 07 Jul 2021 20:41:44 GMT
+# Wed, 14 Jul 2021 20:21:54 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		freetds-dev 		gcc 		libmariadbclient-dev 		libpq-dev 		libsqlite3-dev 		make 		patch 	; 	rm -rf /var/lib/apt/lists/*; 		gosu redmine bundle config --local without 'development test'; 	echo '# the following entries only exist to force `bundle install` to pre-install all database adapter dependencies -- they can be safely removed/ignored' > ./config/database.yml; 	for adapter in mysql2 postgresql sqlserver sqlite3; do 		echo "$adapter:" >> ./config/database.yml; 		echo "  adapter: $adapter" >> ./config/database.yml; 	done; 	gosu redmine bundle install --jobs "$(nproc)"; 	rm ./config/database.yml; 	chmod -R ugo=rwX Gemfile.lock "$GEM_HOME"; 	rm -rf ~redmine/.bundle; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -v '^/usr/local/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Wed, 07 Jul 2021 20:41:45 GMT
+# Wed, 14 Jul 2021 20:21:54 GMT
 VOLUME [/usr/src/redmine/files]
-# Wed, 07 Jul 2021 20:41:45 GMT
+# Wed, 14 Jul 2021 20:21:54 GMT
 COPY file:2c807aca5f34a9ab8acfef3c517816547300ed2b18590f703a1c783bdc707ba8 in / 
-# Wed, 07 Jul 2021 20:41:45 GMT
+# Wed, 14 Jul 2021 20:21:55 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 07 Jul 2021 20:41:46 GMT
+# Wed, 14 Jul 2021 20:21:55 GMT
 EXPOSE 3000
-# Wed, 07 Jul 2021 20:41:46 GMT
+# Wed, 14 Jul 2021 20:21:55 GMT
 CMD ["rails" "server" "-b" "0.0.0.0"]
 ```
 
@@ -7217,40 +7217,40 @@ CMD ["rails" "server" "-b" "0.0.0.0"]
 		Last Modified: Wed, 23 Jun 2021 17:42:36 GMT  
 		Size: 198.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:733ec198d0e9805569798ab4a23e68f73a18a3ffd651015186eba5dd9a2ca610`  
-		Last Modified: Wed, 07 Jul 2021 20:19:35 GMT  
-		Size: 14.5 MB (14508799 bytes)  
+	-	`sha256:de7400f1f9b6e5d55a83e8b37dd13cf72bdbe0d05934f5c98c4ba06bf4cbf118`  
+		Last Modified: Thu, 08 Jul 2021 22:39:29 GMT  
+		Size: 14.5 MB (14509548 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6e12699933c31f935ddd2fa045f7d982334012d6ad88dd44c3fbadf7a73f5a26`  
-		Last Modified: Wed, 07 Jul 2021 20:19:32 GMT  
-		Size: 176.0 B  
+	-	`sha256:9cb40617deac0692ea97ddae53d285e362d757e8808ea3d0242f0f467fbdc83b`  
+		Last Modified: Thu, 08 Jul 2021 22:39:27 GMT  
+		Size: 175.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8339bad2aba6e43a929afc7d8b21af91944756bb66ef66a16e5d828ceb796d51`  
-		Last Modified: Wed, 07 Jul 2021 20:59:08 GMT  
-		Size: 1.7 KB (1747 bytes)  
+	-	`sha256:1b5e207773ba291762558574c95425f761b6392afd6e47e33a2ef03ba607a20b`  
+		Last Modified: Wed, 14 Jul 2021 20:34:47 GMT  
+		Size: 1.7 KB (1744 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3220f49d0d115b00cb264590dadd864df879aa3258ee8d5f0144a5d6033dacc2`  
-		Last Modified: Wed, 07 Jul 2021 20:59:24 GMT  
-		Size: 94.1 MB (94088061 bytes)  
+	-	`sha256:eb2a0707c83bf4fc7c6a74d7536a44f0769ac86b1f962c1af56accd5e6cd3ba2`  
+		Last Modified: Wed, 14 Jul 2021 20:35:01 GMT  
+		Size: 94.1 MB (94088231 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:34a290764a5ae2660fa1cc94e5aa69717c302b3bcb35daab61321ba461f281b0`  
-		Last Modified: Wed, 07 Jul 2021 20:59:06 GMT  
-		Size: 172.0 B  
+	-	`sha256:fac5644dd9c4b1b57fc0facc0fef989ab8a63d78d5674817336139f4dbaccb6f`  
+		Last Modified: Wed, 14 Jul 2021 20:34:44 GMT  
+		Size: 170.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a3920d04b60ae243eed09f0e406abf35b0c554feba46e0d06d50f7ee4d50dd04`  
-		Last Modified: Wed, 07 Jul 2021 20:59:06 GMT  
-		Size: 158.0 B  
+	-	`sha256:1a8cba4fc03f4f8b3bb011488d95ba8548ebf98c7c911213769e19fff09ca870`  
+		Last Modified: Wed, 14 Jul 2021 20:34:44 GMT  
+		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:04b529c84f2b0c85f9568545c17f99282048191e9439079e1218f4feb0326d82`  
-		Last Modified: Wed, 07 Jul 2021 20:59:07 GMT  
-		Size: 3.1 MB (3058680 bytes)  
+	-	`sha256:353cee6d422cb4bc36abb65fd6c55a508990ed2f2bf4abfc1ce1535b475d6df3`  
+		Last Modified: Wed, 14 Jul 2021 20:34:45 GMT  
+		Size: 3.1 MB (3058676 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:81464e83abe2839f8f7dd0aeadc2876201f9769f84c800c495de9add0af0891a`  
-		Last Modified: Wed, 07 Jul 2021 20:59:11 GMT  
-		Size: 44.1 MB (44106209 bytes)  
+	-	`sha256:2b939da848c07b0f5edcd234d2437605bf205006fdb97858805234a356aee26c`  
+		Last Modified: Wed, 14 Jul 2021 20:34:50 GMT  
+		Size: 44.1 MB (44106524 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:be192e9efc951e43743b5d7b6eef8c89f90d2e19f0791fc1d5f04eaf8e6fa2c9`  
-		Last Modified: Wed, 07 Jul 2021 20:59:06 GMT  
+	-	`sha256:e500e65c849556d24a3d032e6d73d10c2c207727e62435e93883100e925cce45`  
+		Last Modified: Wed, 14 Jul 2021 20:34:45 GMT  
 		Size: 1.8 KB (1797 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -8007,7 +8007,7 @@ CMD ["rails" "server" "-b" "0.0.0.0"]
 ## `redmine:4.2.1-alpine`
 
 ```console
-$ docker pull redmine@sha256:ca0b18a629a5e414e76848f03ea611afb70fcea36a6e952480a8b20f33ccb0bb
+$ docker pull redmine@sha256:7de4015773da4d105b5f43705556003eb3071d781612fa6e7f6010981e4e56e5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -8017,14 +8017,14 @@ $ docker pull redmine@sha256:ca0b18a629a5e414e76848f03ea611afb70fcea36a6e952480a
 ### `redmine:4.2.1-alpine` - linux; amd64
 
 ```console
-$ docker pull redmine@sha256:077c21637afe6f40bc01e53144e4d29b1ab559347fce7534c68f67e69ca64300
+$ docker pull redmine@sha256:7fb14bb9edbf56cf78406c149b3015cfd560d8ab4b036edebde5aa5e4b83f5af
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **150.1 MB (150053498 bytes)**  
+-	Total Size: **150.1 MB (150068908 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:313842d3e7f7deacfdfb873ef360b7bee175c2f72c64049ca5a88b81134fd3e7`
+-	Image ID: `sha256:74c717ce35a7872383b67fe6276f951c39395fcba0eda36625d7e2eaa9a32932`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["rails","server","-b","0.0.0.0"]`
 
@@ -8033,61 +8033,61 @@ $ docker pull redmine@sha256:077c21637afe6f40bc01e53144e4d29b1ab559347fce7534c68
 ADD file:8ec69d882e7f29f0652d537557160e638168550f738d0d49f90a7ef96bf31787 in / 
 # Wed, 14 Apr 2021 19:19:39 GMT
 CMD ["/bin/sh"]
-# Thu, 15 Apr 2021 03:07:29 GMT
-RUN apk add --no-cache 		gmp-dev
-# Thu, 15 Apr 2021 03:07:31 GMT
+# Thu, 08 Jul 2021 21:57:27 GMT
+RUN set -eux; 	apk add --no-cache 		bzip2 		ca-certificates 		gmp-dev 		libffi-dev 		procps 		yaml-dev 		zlib-dev 	;
+# Thu, 08 Jul 2021 21:57:30 GMT
 RUN set -eux; 	mkdir -p /usr/local/etc; 	{ 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /usr/local/etc/gemrc
-# Thu, 15 Apr 2021 03:07:31 GMT
+# Thu, 08 Jul 2021 21:57:30 GMT
 ENV LANG=C.UTF-8
-# Thu, 15 Apr 2021 03:16:27 GMT
+# Thu, 08 Jul 2021 22:15:57 GMT
 ENV RUBY_MAJOR=2.7
-# Wed, 07 Jul 2021 19:45:51 GMT
+# Thu, 08 Jul 2021 22:15:57 GMT
 ENV RUBY_VERSION=2.7.4
-# Wed, 07 Jul 2021 19:45:51 GMT
+# Thu, 08 Jul 2021 22:15:57 GMT
 ENV RUBY_DOWNLOAD_SHA256=2a80824e0ad6100826b69b9890bf55cfc4cf2b61a1e1330fccbcb30c46cef8d7
-# Wed, 07 Jul 2021 19:48:38 GMT
-RUN set -eux; 		apk add --no-cache --virtual .ruby-builddeps 		autoconf 		bison 		bzip2 		bzip2-dev 		ca-certificates 		coreutils 		dpkg-dev dpkg 		gcc 		gdbm-dev 		glib-dev 		libc-dev 		libffi-dev 		libxml2-dev 		libxslt-dev 		linux-headers 		make 		ncurses-dev 		openssl 		openssl-dev 		patch 		procps 		readline-dev 		ruby 		tar 		xz 		yaml-dev 		zlib-dev 	; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		wget -O 'thread-stack-fix.patch' 'https://bugs.ruby-lang.org/attachments/download/7081/0001-thread_pthread.c-make-get_main_stack-portable-on-lin.patch'; 	echo '3ab628a51d92fdf0d2b5835e93564857aea73e0c1de00313864a94a6255cb645 *thread-stack-fix.patch' | sha256sum --check --strict; 	patch -p1 -i thread-stack-fix.patch; 	rm thread-stack-fix.patch; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	export ac_cv_func_isnan=yes ac_cv_func_isinf=yes; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .ruby-rundeps 		$runDeps 		bzip2 		ca-certificates 		libffi-dev 		procps 		yaml-dev 		zlib-dev 	; 	apk del --no-network .ruby-builddeps; 		cd /; 	rm -r /usr/src/ruby; 	! apk --no-network list --installed 		| grep -v '^[.]ruby-rundeps' 		| grep -i ruby 	; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Wed, 07 Jul 2021 19:48:38 GMT
+# Thu, 08 Jul 2021 22:18:49 GMT
+RUN set -eux; 		apk add --no-cache --virtual .ruby-builddeps 		autoconf 		bison 		bzip2 		bzip2-dev 		ca-certificates 		coreutils 		dpkg-dev dpkg 		g++ 		gcc 		gdbm-dev 		glib-dev 		libc-dev 		libffi-dev 		libxml2-dev 		libxslt-dev 		linux-headers 		make 		ncurses-dev 		openssl 		openssl-dev 		patch 		procps 		readline-dev 		ruby 		tar 		xz 		yaml-dev 		zlib-dev 	; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		wget -O 'thread-stack-fix.patch' 'https://bugs.ruby-lang.org/attachments/download/7081/0001-thread_pthread.c-make-get_main_stack-portable-on-lin.patch'; 	echo '3ab628a51d92fdf0d2b5835e93564857aea73e0c1de00313864a94a6255cb645 *thread-stack-fix.patch' | sha256sum --check --strict; 	patch -p1 -i thread-stack-fix.patch; 	rm thread-stack-fix.patch; 		export ac_cv_func_isnan=yes ac_cv_func_isinf=yes; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .ruby-rundeps $runDeps; 	apk del --no-network .ruby-builddeps; 		cd /; 	rm -r /usr/src/ruby; 	if 		apk --no-network list --installed 			| grep -v '^[.]ruby-rundeps' 			| grep -i ruby 	; then 		exit 1; 	fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
+# Thu, 08 Jul 2021 22:18:49 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 07 Jul 2021 19:48:39 GMT
+# Thu, 08 Jul 2021 22:18:49 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 07 Jul 2021 19:48:39 GMT
+# Thu, 08 Jul 2021 22:18:49 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 07 Jul 2021 19:48:40 GMT
+# Thu, 08 Jul 2021 22:18:50 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 07 Jul 2021 19:48:40 GMT
+# Thu, 08 Jul 2021 22:18:51 GMT
 CMD ["irb"]
-# Wed, 07 Jul 2021 20:42:35 GMT
+# Wed, 14 Jul 2021 20:22:24 GMT
 RUN addgroup -S -g 1000 redmine && adduser -S -H -G redmine -u 999 redmine
-# Wed, 07 Jul 2021 20:42:49 GMT
+# Wed, 14 Jul 2021 20:22:32 GMT
 RUN set -eux; 	apk add --no-cache 		bash 		ca-certificates 		su-exec 		tini 		tzdata 		wget 				git 		mercurial 		openssh-client 		subversion 				ghostscript 		ghostscript-fonts 		imagemagick 	;
-# Wed, 07 Jul 2021 20:42:50 GMT
+# Wed, 14 Jul 2021 20:22:33 GMT
 ENV RAILS_ENV=production
-# Wed, 07 Jul 2021 20:42:51 GMT
+# Wed, 14 Jul 2021 20:22:33 GMT
 WORKDIR /usr/src/redmine
-# Wed, 07 Jul 2021 20:42:51 GMT
+# Wed, 14 Jul 2021 20:22:33 GMT
 ENV HOME=/home/redmine
-# Wed, 07 Jul 2021 20:42:53 GMT
+# Wed, 14 Jul 2021 20:22:34 GMT
 RUN set -eux; 	[ ! -d "$HOME" ]; 	mkdir -p "$HOME"; 	chown redmine:redmine "$HOME"; 	chmod 1777 "$HOME"
-# Wed, 07 Jul 2021 20:42:54 GMT
+# Wed, 14 Jul 2021 20:22:35 GMT
 ENV REDMINE_VERSION=4.2.1
-# Wed, 07 Jul 2021 20:42:54 GMT
+# Wed, 14 Jul 2021 20:22:35 GMT
 ENV REDMINE_DOWNLOAD_SHA256=ad4109c3425f1cfe4c8961f6ae6494c76e20d81ed946caa1e297d9eda13b41b4
-# Wed, 07 Jul 2021 20:43:00 GMT
+# Wed, 14 Jul 2021 20:22:38 GMT
 RUN set -eux; 	wget -O redmine.tar.gz "https://www.redmine.org/releases/redmine-${REDMINE_VERSION}.tar.gz"; 	echo "$REDMINE_DOWNLOAD_SHA256 *redmine.tar.gz" | sha256sum -c -; 	tar -xf redmine.tar.gz --strip-components=1; 	rm redmine.tar.gz files/delete.me log/delete.me; 	mkdir -p log public/plugin_assets sqlite tmp/pdf tmp/pids; 	chown -R redmine:redmine ./; 	echo 'config.logger = Logger.new(STDOUT)' > config/additional_environment.rb; 	chmod -R ugo=rwX config db sqlite; 	find log tmp -type d -exec chmod 1777 '{}' +
-# Wed, 07 Jul 2021 20:43:00 GMT
+# Wed, 14 Jul 2021 20:22:39 GMT
 ENV BUNDLE_FORCE_RUBY_PLATFORM=1
-# Wed, 07 Jul 2021 20:46:18 GMT
+# Wed, 14 Jul 2021 20:24:41 GMT
 RUN set -eux; 		apk add --no-cache --virtual .build-deps 		coreutils 		freetds-dev 		gcc 		make 		mariadb-dev 		musl-dev 		patch 		postgresql-dev 		sqlite-dev 		ttf2ufm 		zlib-dev 	; 		su-exec redmine bundle config --local without 'development test'; 	echo '# the following entries only exist to force `bundle install` to pre-install all database adapter dependencies -- they can be safely removed/ignored' > ./config/database.yml; 	for adapter in mysql2 postgresql sqlserver sqlite3; do 		echo "$adapter:" >> ./config/database.yml; 		echo "  adapter: $adapter" >> ./config/database.yml; 	done; 	su-exec redmine bundle install --jobs "$(nproc)"; 	rm ./config/database.yml; 	chmod -R ugo=rwX Gemfile.lock "$GEM_HOME"; 	rm -rf ~redmine/.bundle; 		rm /usr/local/bundle/gems/rbpdf-font-1.19.*/lib/fonts/ttf2ufm/ttf2ufm; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local/bundle/gems 		| tr ',' '\n' 		| sort -u 		| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .redmine-rundeps $runDeps; 	apk del --no-network .build-deps
-# Wed, 07 Jul 2021 20:46:18 GMT
+# Wed, 14 Jul 2021 20:24:42 GMT
 VOLUME [/usr/src/redmine/files]
-# Wed, 07 Jul 2021 20:46:18 GMT
+# Wed, 14 Jul 2021 20:24:42 GMT
 COPY file:d7d49d1509d97205d05405670ad206509bb871741a17d5270a1b8842b05afc0f in / 
-# Wed, 07 Jul 2021 20:46:19 GMT
+# Wed, 14 Jul 2021 20:24:42 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 07 Jul 2021 20:46:19 GMT
+# Wed, 14 Jul 2021 20:24:42 GMT
 EXPOSE 3000
-# Wed, 07 Jul 2021 20:46:19 GMT
+# Wed, 14 Jul 2021 20:24:42 GMT
 CMD ["rails" "server" "-b" "0.0.0.0"]
 ```
 
@@ -8096,55 +8096,55 @@ CMD ["rails" "server" "-b" "0.0.0.0"]
 		Last Modified: Wed, 14 Apr 2021 17:59:29 GMT  
 		Size: 2.8 MB (2811969 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:98a867505730167ce0636f0811cb765ebbde11bf979c1a9839f6915f2fc3b85b`  
-		Last Modified: Thu, 15 Apr 2021 03:39:41 GMT  
-		Size: 1.2 MB (1218679 bytes)  
+	-	`sha256:ae5b0ea69e9ed42c49b5af449b703a12a4d2f2e28d87905af6fcd903fdae5689`  
+		Last Modified: Thu, 08 Jul 2021 22:38:46 GMT  
+		Size: 3.6 MB (3581658 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:69c77620f6108dc0610cba72f77d68c271fb1b14cb0800a7a8b6aaeb8950fec9`  
-		Last Modified: Thu, 15 Apr 2021 03:39:40 GMT  
-		Size: 222.0 B  
+	-	`sha256:3ad656ed833315b61ea674706f32c2d18d7412c7120926442af57b9131ee72ee`  
+		Last Modified: Thu, 08 Jul 2021 22:38:45 GMT  
+		Size: 223.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7ea934b6bf2094b677c0efcea21d8dd83f7d08a693dc70f6225655637126c426`  
-		Last Modified: Wed, 07 Jul 2021 20:19:57 GMT  
-		Size: 16.7 MB (16721809 bytes)  
+	-	`sha256:626f6830afc6fb7a05a8f18f2b98e4ea4db3d2dd50803e5cd2c627fe25150dc8`  
+		Last Modified: Thu, 08 Jul 2021 22:40:13 GMT  
+		Size: 14.4 MB (14373123 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:686808441e8cf9ef056302eb927f0082e5b1982f069e2c30b2b19d6a61c2a2ba`  
-		Last Modified: Wed, 07 Jul 2021 20:19:55 GMT  
-		Size: 172.0 B  
+	-	`sha256:5375389679c9573d241b22905aee17b20981e2628989561698087f107fcfed4a`  
+		Last Modified: Thu, 08 Jul 2021 22:40:11 GMT  
+		Size: 173.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d8976df4a5a54a897431b41d52944416dd3f8f810bd6657691c18453f8487742`  
-		Last Modified: Wed, 07 Jul 2021 21:00:05 GMT  
-		Size: 1.2 KB (1206 bytes)  
+	-	`sha256:c76a82132aeb154f32b80803eecedc3e27e062a35ae1e05284dc2d7e6c7f4f59`  
+		Last Modified: Wed, 14 Jul 2021 20:35:42 GMT  
+		Size: 1.2 KB (1209 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:47efa0102f6e6e0ece259209ca18d6e3d4e11169b4d4f46aba1eba740a613150`  
-		Last Modified: Wed, 07 Jul 2021 21:00:15 GMT  
-		Size: 69.5 MB (69525641 bytes)  
+	-	`sha256:99cb4af997128346f54fa569d3a04180c718e02a90e90eff7161241d54deef92`  
+		Last Modified: Wed, 14 Jul 2021 20:35:52 GMT  
+		Size: 69.5 MB (69526214 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:31feb1eca5d1e845e9715e85cd7a862fd44f1760b6e75121aa5683d8292ae651`  
-		Last Modified: Wed, 07 Jul 2021 21:00:01 GMT  
-		Size: 167.0 B  
+	-	`sha256:14da2816c58ef08b826f823d7b6a4126bb63594ed1109880b795c28cc4d3f032`  
+		Last Modified: Wed, 14 Jul 2021 20:35:39 GMT  
+		Size: 166.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ad06f01400240338ee40ad58bfca6b7cc4a9a01936123ffe0b9915471107c362`  
-		Last Modified: Wed, 07 Jul 2021 21:00:01 GMT  
-		Size: 158.0 B  
+	-	`sha256:13f34be07349b94807cc58a0e31cecec279d0591b9a6f1f65f1dbe94a4713462`  
+		Last Modified: Wed, 14 Jul 2021 20:35:39 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:773f42416bef575288101a1df9d6a5fa2148c53ad0ab570bfbe4f59df70a3de5`  
-		Last Modified: Wed, 07 Jul 2021 21:00:03 GMT  
-		Size: 3.1 MB (3059999 bytes)  
+	-	`sha256:b98b05ead31106734fcef5216d256a8536461fa7935f729e67262c90f55e683b`  
+		Last Modified: Wed, 14 Jul 2021 20:35:40 GMT  
+		Size: 3.1 MB (3060004 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e9dc43767f453dd8f05fceda480269b93353a0571cdbcda70dd10ef97bbc6f8a`  
-		Last Modified: Wed, 07 Jul 2021 21:00:08 GMT  
-		Size: 56.7 MB (56711679 bytes)  
+	-	`sha256:a6c586852175065725ae48c5682f1ecea003599fbc0028c3387f5de00cc28f34`  
+		Last Modified: Wed, 14 Jul 2021 20:36:03 GMT  
+		Size: 56.7 MB (56712212 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:26cd8e62dc154735785f51beaabe48d17609389a1a6c0754d076fb36884292b6`  
-		Last Modified: Wed, 07 Jul 2021 21:00:01 GMT  
+	-	`sha256:e4d1559a239e3bf1260f693961d40d28b32673907100b077a797e55d543f072c`  
+		Last Modified: Wed, 14 Jul 2021 20:35:39 GMT  
 		Size: 1.8 KB (1797 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `redmine:4.2.1-passenger`
 
 ```console
-$ docker pull redmine@sha256:f4cb2ae19c38cc46fff7e55b7637e43ff3d520f55f9761af93bd61f35f0868f8
+$ docker pull redmine@sha256:9b780f98151823e0e84e1e41974c548143cae7090cd367eb711d44d3bc8a966b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -8154,14 +8154,14 @@ $ docker pull redmine@sha256:f4cb2ae19c38cc46fff7e55b7637e43ff3d520f55f9761af93b
 ### `redmine:4.2.1-passenger` - linux; amd64
 
 ```console
-$ docker pull redmine@sha256:18864e55c008f0ef499790c64ae0c35326403e72700265430a74abe6167b63b4
+$ docker pull redmine@sha256:a320947c8461cd8bafad0bcfda90b4f5ac840389345003324df81de7b46ad296
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **221.5 MB (221521668 bytes)**  
+-	Total Size: **221.5 MB (221526742 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:fc0c50bd977fa6369b41f342f74e4cbb08de72fd5ba09391a2b5c5e395a1d4d2`
+-	Image ID: `sha256:f3049f679e04c98a7643e800733c59f85c960a686a186192d9b12a222bed1592`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["passenger","start"]`
 
@@ -8182,57 +8182,57 @@ ENV RUBY_MAJOR=2.7
 ENV RUBY_VERSION=2.7.4
 # Wed, 07 Jul 2021 19:43:10 GMT
 ENV RUBY_DOWNLOAD_SHA256=2a80824e0ad6100826b69b9890bf55cfc4cf2b61a1e1330fccbcb30c46cef8d7
-# Wed, 07 Jul 2021 19:45:41 GMT
-RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		bison 		dpkg-dev 		gcc 		libbz2-dev 		libgdbm-compat-dev 		libgdbm-dev 		libglib2.0-dev 		libncurses-dev 		libreadline-dev 		libxml2-dev 		libxslt-dev 		make 		ruby 		wget 		xz-utils 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		cd /; 	rm -r /usr/src/ruby; 	! dpkg -l | grep -i ruby; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Wed, 07 Jul 2021 19:45:41 GMT
+# Thu, 08 Jul 2021 22:11:02 GMT
+RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		bison 		dpkg-dev 		libgdbm-dev 		ruby 		autoconf 		g++ 		gcc 		libbz2-dev 		libglib2.0-dev 		libncurses-dev 		libreadline-dev 		libxml2-dev 		libxslt-dev 		make 		wget 		xz-utils 		libgdbm-compat-dev 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -vE '^/usr/local/lib/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		cd /; 	rm -r /usr/src/ruby; 	if dpkg -l | grep -i ruby; then exit 1; fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
+# Thu, 08 Jul 2021 22:11:02 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 07 Jul 2021 19:45:41 GMT
+# Thu, 08 Jul 2021 22:11:03 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 07 Jul 2021 19:45:41 GMT
+# Thu, 08 Jul 2021 22:11:03 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 07 Jul 2021 19:45:43 GMT
+# Thu, 08 Jul 2021 22:11:05 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 07 Jul 2021 19:45:43 GMT
+# Thu, 08 Jul 2021 22:11:05 GMT
 CMD ["irb"]
-# Wed, 07 Jul 2021 20:39:46 GMT
+# Wed, 14 Jul 2021 20:20:37 GMT
 RUN groupadd -r -g 999 redmine && useradd -r -g redmine -u 999 redmine
-# Wed, 07 Jul 2021 20:40:34 GMT
+# Wed, 14 Jul 2021 20:21:05 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		wget 				bzr 		git 		mercurial 		openssh-client 		subversion 				ghostscript 		gsfonts 		imagemagick 		gosu 		tini 	; 	sed -ri 's/(rights)="none" (pattern="PDF")/\1="read" \2/' /etc/ImageMagick-6/policy.xml; 	rm -rf /var/lib/apt/lists/*
-# Wed, 07 Jul 2021 20:40:35 GMT
+# Wed, 14 Jul 2021 20:21:06 GMT
 ENV RAILS_ENV=production
-# Wed, 07 Jul 2021 20:40:35 GMT
+# Wed, 14 Jul 2021 20:21:06 GMT
 WORKDIR /usr/src/redmine
-# Wed, 07 Jul 2021 20:40:36 GMT
+# Wed, 14 Jul 2021 20:21:06 GMT
 ENV HOME=/home/redmine
-# Wed, 07 Jul 2021 20:40:38 GMT
+# Wed, 14 Jul 2021 20:21:07 GMT
 RUN set -eux; 	[ ! -d "$HOME" ]; 	mkdir -p "$HOME"; 	chown redmine:redmine "$HOME"; 	chmod 1777 "$HOME"
-# Wed, 07 Jul 2021 20:40:39 GMT
+# Wed, 14 Jul 2021 20:21:08 GMT
 ENV REDMINE_VERSION=4.2.1
-# Wed, 07 Jul 2021 20:40:39 GMT
+# Wed, 14 Jul 2021 20:21:08 GMT
 ENV REDMINE_DOWNLOAD_SHA256=ad4109c3425f1cfe4c8961f6ae6494c76e20d81ed946caa1e297d9eda13b41b4
-# Wed, 07 Jul 2021 20:40:44 GMT
+# Wed, 14 Jul 2021 20:21:12 GMT
 RUN set -eux; 	wget -O redmine.tar.gz "https://www.redmine.org/releases/redmine-${REDMINE_VERSION}.tar.gz"; 	echo "$REDMINE_DOWNLOAD_SHA256 *redmine.tar.gz" | sha256sum -c -; 	tar -xf redmine.tar.gz --strip-components=1; 	rm redmine.tar.gz files/delete.me log/delete.me; 	mkdir -p log public/plugin_assets sqlite tmp/pdf tmp/pids; 	chown -R redmine:redmine ./; 	echo 'config.logger = Logger.new(STDOUT)' > config/additional_environment.rb; 	chmod -R ugo=rwX config db sqlite; 	find log tmp -type d -exec chmod 1777 '{}' +
-# Wed, 07 Jul 2021 20:41:44 GMT
+# Wed, 14 Jul 2021 20:21:54 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		freetds-dev 		gcc 		libmariadbclient-dev 		libpq-dev 		libsqlite3-dev 		make 		patch 	; 	rm -rf /var/lib/apt/lists/*; 		gosu redmine bundle config --local without 'development test'; 	echo '# the following entries only exist to force `bundle install` to pre-install all database adapter dependencies -- they can be safely removed/ignored' > ./config/database.yml; 	for adapter in mysql2 postgresql sqlserver sqlite3; do 		echo "$adapter:" >> ./config/database.yml; 		echo "  adapter: $adapter" >> ./config/database.yml; 	done; 	gosu redmine bundle install --jobs "$(nproc)"; 	rm ./config/database.yml; 	chmod -R ugo=rwX Gemfile.lock "$GEM_HOME"; 	rm -rf ~redmine/.bundle; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -v '^/usr/local/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Wed, 07 Jul 2021 20:41:45 GMT
+# Wed, 14 Jul 2021 20:21:54 GMT
 VOLUME [/usr/src/redmine/files]
-# Wed, 07 Jul 2021 20:41:45 GMT
+# Wed, 14 Jul 2021 20:21:54 GMT
 COPY file:2c807aca5f34a9ab8acfef3c517816547300ed2b18590f703a1c783bdc707ba8 in / 
-# Wed, 07 Jul 2021 20:41:45 GMT
+# Wed, 14 Jul 2021 20:21:55 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 07 Jul 2021 20:41:46 GMT
+# Wed, 14 Jul 2021 20:21:55 GMT
 EXPOSE 3000
-# Wed, 07 Jul 2021 20:41:46 GMT
+# Wed, 14 Jul 2021 20:21:55 GMT
 CMD ["rails" "server" "-b" "0.0.0.0"]
-# Wed, 07 Jul 2021 20:41:55 GMT
-ENV PASSENGER_VERSION=6.0.9
-# Wed, 07 Jul 2021 20:42:22 GMT
+# Wed, 14 Jul 2021 20:22:01 GMT
+ENV PASSENGER_VERSION=6.0.10
+# Wed, 14 Jul 2021 20:22:18 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		gcc 		make 	; 	rm -rf /var/lib/apt/lists/*; 		gem install passenger --version "$PASSENGER_VERSION"; 	passenger-config build-native-support; 	if [ -n "$(passenger-config build-native-support 2>&1)" ]; then cat /tmp/passenger_native_support-*.log; false; fi; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Wed, 07 Jul 2021 20:42:26 GMT
+# Wed, 14 Jul 2021 20:22:20 GMT
 RUN set -eux; 	passenger-config install-agent; 	passenger-config download-nginx-engine
-# Wed, 07 Jul 2021 20:42:26 GMT
+# Wed, 14 Jul 2021 20:22:20 GMT
 ENV PASSENGER_PID_FILE=tmp/pids/server.pid
-# Wed, 07 Jul 2021 20:42:27 GMT
+# Wed, 14 Jul 2021 20:22:20 GMT
 CMD ["passenger" "start"]
 ```
 
@@ -8249,55 +8249,55 @@ CMD ["passenger" "start"]
 		Last Modified: Wed, 23 Jun 2021 17:42:36 GMT  
 		Size: 198.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:733ec198d0e9805569798ab4a23e68f73a18a3ffd651015186eba5dd9a2ca610`  
-		Last Modified: Wed, 07 Jul 2021 20:19:35 GMT  
-		Size: 14.5 MB (14508799 bytes)  
+	-	`sha256:de7400f1f9b6e5d55a83e8b37dd13cf72bdbe0d05934f5c98c4ba06bf4cbf118`  
+		Last Modified: Thu, 08 Jul 2021 22:39:29 GMT  
+		Size: 14.5 MB (14509548 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6e12699933c31f935ddd2fa045f7d982334012d6ad88dd44c3fbadf7a73f5a26`  
-		Last Modified: Wed, 07 Jul 2021 20:19:32 GMT  
-		Size: 176.0 B  
+	-	`sha256:9cb40617deac0692ea97ddae53d285e362d757e8808ea3d0242f0f467fbdc83b`  
+		Last Modified: Thu, 08 Jul 2021 22:39:27 GMT  
+		Size: 175.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8339bad2aba6e43a929afc7d8b21af91944756bb66ef66a16e5d828ceb796d51`  
-		Last Modified: Wed, 07 Jul 2021 20:59:08 GMT  
-		Size: 1.7 KB (1747 bytes)  
+	-	`sha256:1b5e207773ba291762558574c95425f761b6392afd6e47e33a2ef03ba607a20b`  
+		Last Modified: Wed, 14 Jul 2021 20:34:47 GMT  
+		Size: 1.7 KB (1744 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3220f49d0d115b00cb264590dadd864df879aa3258ee8d5f0144a5d6033dacc2`  
-		Last Modified: Wed, 07 Jul 2021 20:59:24 GMT  
-		Size: 94.1 MB (94088061 bytes)  
+	-	`sha256:eb2a0707c83bf4fc7c6a74d7536a44f0769ac86b1f962c1af56accd5e6cd3ba2`  
+		Last Modified: Wed, 14 Jul 2021 20:35:01 GMT  
+		Size: 94.1 MB (94088231 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:34a290764a5ae2660fa1cc94e5aa69717c302b3bcb35daab61321ba461f281b0`  
-		Last Modified: Wed, 07 Jul 2021 20:59:06 GMT  
-		Size: 172.0 B  
+	-	`sha256:fac5644dd9c4b1b57fc0facc0fef989ab8a63d78d5674817336139f4dbaccb6f`  
+		Last Modified: Wed, 14 Jul 2021 20:34:44 GMT  
+		Size: 170.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a3920d04b60ae243eed09f0e406abf35b0c554feba46e0d06d50f7ee4d50dd04`  
-		Last Modified: Wed, 07 Jul 2021 20:59:06 GMT  
-		Size: 158.0 B  
+	-	`sha256:1a8cba4fc03f4f8b3bb011488d95ba8548ebf98c7c911213769e19fff09ca870`  
+		Last Modified: Wed, 14 Jul 2021 20:34:44 GMT  
+		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:04b529c84f2b0c85f9568545c17f99282048191e9439079e1218f4feb0326d82`  
-		Last Modified: Wed, 07 Jul 2021 20:59:07 GMT  
-		Size: 3.1 MB (3058680 bytes)  
+	-	`sha256:353cee6d422cb4bc36abb65fd6c55a508990ed2f2bf4abfc1ce1535b475d6df3`  
+		Last Modified: Wed, 14 Jul 2021 20:34:45 GMT  
+		Size: 3.1 MB (3058676 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:81464e83abe2839f8f7dd0aeadc2876201f9769f84c800c495de9add0af0891a`  
-		Last Modified: Wed, 07 Jul 2021 20:59:11 GMT  
-		Size: 44.1 MB (44106209 bytes)  
+	-	`sha256:2b939da848c07b0f5edcd234d2437605bf205006fdb97858805234a356aee26c`  
+		Last Modified: Wed, 14 Jul 2021 20:34:50 GMT  
+		Size: 44.1 MB (44106524 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:be192e9efc951e43743b5d7b6eef8c89f90d2e19f0791fc1d5f04eaf8e6fa2c9`  
-		Last Modified: Wed, 07 Jul 2021 20:59:06 GMT  
+	-	`sha256:e500e65c849556d24a3d032e6d73d10c2c207727e62435e93883100e925cce45`  
+		Last Modified: Wed, 14 Jul 2021 20:34:45 GMT  
 		Size: 1.8 KB (1797 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f71a11320b67138cd2a0a1334bfd1756db2e441c02756b81375d40ef6b5662be`  
-		Last Modified: Wed, 07 Jul 2021 20:59:44 GMT  
-		Size: 21.1 MB (21127786 bytes)  
+	-	`sha256:ca41f4f9e9b7629be3e6e9666279b940b489648484da4e41725e7b22c1c94b1b`  
+		Last Modified: Wed, 14 Jul 2021 20:35:22 GMT  
+		Size: 21.1 MB (21131700 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:395d6858c59e57067f4887b7870aa71c24d60c5749d50d10bcc25771eef5eb2d`  
-		Last Modified: Wed, 07 Jul 2021 20:59:42 GMT  
-		Size: 4.9 MB (4919349 bytes)  
+	-	`sha256:c9436698f0e4aec6d6e7c991fd623ae0d4eab48e62193c564b2fa25de8f4a52e`  
+		Last Modified: Wed, 14 Jul 2021 20:35:20 GMT  
+		Size: 4.9 MB (4919284 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `redmine:alpine`
 
 ```console
-$ docker pull redmine@sha256:ca0b18a629a5e414e76848f03ea611afb70fcea36a6e952480a8b20f33ccb0bb
+$ docker pull redmine@sha256:7de4015773da4d105b5f43705556003eb3071d781612fa6e7f6010981e4e56e5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -8307,14 +8307,14 @@ $ docker pull redmine@sha256:ca0b18a629a5e414e76848f03ea611afb70fcea36a6e952480a
 ### `redmine:alpine` - linux; amd64
 
 ```console
-$ docker pull redmine@sha256:077c21637afe6f40bc01e53144e4d29b1ab559347fce7534c68f67e69ca64300
+$ docker pull redmine@sha256:7fb14bb9edbf56cf78406c149b3015cfd560d8ab4b036edebde5aa5e4b83f5af
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **150.1 MB (150053498 bytes)**  
+-	Total Size: **150.1 MB (150068908 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:313842d3e7f7deacfdfb873ef360b7bee175c2f72c64049ca5a88b81134fd3e7`
+-	Image ID: `sha256:74c717ce35a7872383b67fe6276f951c39395fcba0eda36625d7e2eaa9a32932`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["rails","server","-b","0.0.0.0"]`
 
@@ -8323,61 +8323,61 @@ $ docker pull redmine@sha256:077c21637afe6f40bc01e53144e4d29b1ab559347fce7534c68
 ADD file:8ec69d882e7f29f0652d537557160e638168550f738d0d49f90a7ef96bf31787 in / 
 # Wed, 14 Apr 2021 19:19:39 GMT
 CMD ["/bin/sh"]
-# Thu, 15 Apr 2021 03:07:29 GMT
-RUN apk add --no-cache 		gmp-dev
-# Thu, 15 Apr 2021 03:07:31 GMT
+# Thu, 08 Jul 2021 21:57:27 GMT
+RUN set -eux; 	apk add --no-cache 		bzip2 		ca-certificates 		gmp-dev 		libffi-dev 		procps 		yaml-dev 		zlib-dev 	;
+# Thu, 08 Jul 2021 21:57:30 GMT
 RUN set -eux; 	mkdir -p /usr/local/etc; 	{ 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /usr/local/etc/gemrc
-# Thu, 15 Apr 2021 03:07:31 GMT
+# Thu, 08 Jul 2021 21:57:30 GMT
 ENV LANG=C.UTF-8
-# Thu, 15 Apr 2021 03:16:27 GMT
+# Thu, 08 Jul 2021 22:15:57 GMT
 ENV RUBY_MAJOR=2.7
-# Wed, 07 Jul 2021 19:45:51 GMT
+# Thu, 08 Jul 2021 22:15:57 GMT
 ENV RUBY_VERSION=2.7.4
-# Wed, 07 Jul 2021 19:45:51 GMT
+# Thu, 08 Jul 2021 22:15:57 GMT
 ENV RUBY_DOWNLOAD_SHA256=2a80824e0ad6100826b69b9890bf55cfc4cf2b61a1e1330fccbcb30c46cef8d7
-# Wed, 07 Jul 2021 19:48:38 GMT
-RUN set -eux; 		apk add --no-cache --virtual .ruby-builddeps 		autoconf 		bison 		bzip2 		bzip2-dev 		ca-certificates 		coreutils 		dpkg-dev dpkg 		gcc 		gdbm-dev 		glib-dev 		libc-dev 		libffi-dev 		libxml2-dev 		libxslt-dev 		linux-headers 		make 		ncurses-dev 		openssl 		openssl-dev 		patch 		procps 		readline-dev 		ruby 		tar 		xz 		yaml-dev 		zlib-dev 	; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		wget -O 'thread-stack-fix.patch' 'https://bugs.ruby-lang.org/attachments/download/7081/0001-thread_pthread.c-make-get_main_stack-portable-on-lin.patch'; 	echo '3ab628a51d92fdf0d2b5835e93564857aea73e0c1de00313864a94a6255cb645 *thread-stack-fix.patch' | sha256sum --check --strict; 	patch -p1 -i thread-stack-fix.patch; 	rm thread-stack-fix.patch; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	export ac_cv_func_isnan=yes ac_cv_func_isinf=yes; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .ruby-rundeps 		$runDeps 		bzip2 		ca-certificates 		libffi-dev 		procps 		yaml-dev 		zlib-dev 	; 	apk del --no-network .ruby-builddeps; 		cd /; 	rm -r /usr/src/ruby; 	! apk --no-network list --installed 		| grep -v '^[.]ruby-rundeps' 		| grep -i ruby 	; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Wed, 07 Jul 2021 19:48:38 GMT
+# Thu, 08 Jul 2021 22:18:49 GMT
+RUN set -eux; 		apk add --no-cache --virtual .ruby-builddeps 		autoconf 		bison 		bzip2 		bzip2-dev 		ca-certificates 		coreutils 		dpkg-dev dpkg 		g++ 		gcc 		gdbm-dev 		glib-dev 		libc-dev 		libffi-dev 		libxml2-dev 		libxslt-dev 		linux-headers 		make 		ncurses-dev 		openssl 		openssl-dev 		patch 		procps 		readline-dev 		ruby 		tar 		xz 		yaml-dev 		zlib-dev 	; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		wget -O 'thread-stack-fix.patch' 'https://bugs.ruby-lang.org/attachments/download/7081/0001-thread_pthread.c-make-get_main_stack-portable-on-lin.patch'; 	echo '3ab628a51d92fdf0d2b5835e93564857aea73e0c1de00313864a94a6255cb645 *thread-stack-fix.patch' | sha256sum --check --strict; 	patch -p1 -i thread-stack-fix.patch; 	rm thread-stack-fix.patch; 		export ac_cv_func_isnan=yes ac_cv_func_isinf=yes; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .ruby-rundeps $runDeps; 	apk del --no-network .ruby-builddeps; 		cd /; 	rm -r /usr/src/ruby; 	if 		apk --no-network list --installed 			| grep -v '^[.]ruby-rundeps' 			| grep -i ruby 	; then 		exit 1; 	fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
+# Thu, 08 Jul 2021 22:18:49 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 07 Jul 2021 19:48:39 GMT
+# Thu, 08 Jul 2021 22:18:49 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 07 Jul 2021 19:48:39 GMT
+# Thu, 08 Jul 2021 22:18:49 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 07 Jul 2021 19:48:40 GMT
+# Thu, 08 Jul 2021 22:18:50 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 07 Jul 2021 19:48:40 GMT
+# Thu, 08 Jul 2021 22:18:51 GMT
 CMD ["irb"]
-# Wed, 07 Jul 2021 20:42:35 GMT
+# Wed, 14 Jul 2021 20:22:24 GMT
 RUN addgroup -S -g 1000 redmine && adduser -S -H -G redmine -u 999 redmine
-# Wed, 07 Jul 2021 20:42:49 GMT
+# Wed, 14 Jul 2021 20:22:32 GMT
 RUN set -eux; 	apk add --no-cache 		bash 		ca-certificates 		su-exec 		tini 		tzdata 		wget 				git 		mercurial 		openssh-client 		subversion 				ghostscript 		ghostscript-fonts 		imagemagick 	;
-# Wed, 07 Jul 2021 20:42:50 GMT
+# Wed, 14 Jul 2021 20:22:33 GMT
 ENV RAILS_ENV=production
-# Wed, 07 Jul 2021 20:42:51 GMT
+# Wed, 14 Jul 2021 20:22:33 GMT
 WORKDIR /usr/src/redmine
-# Wed, 07 Jul 2021 20:42:51 GMT
+# Wed, 14 Jul 2021 20:22:33 GMT
 ENV HOME=/home/redmine
-# Wed, 07 Jul 2021 20:42:53 GMT
+# Wed, 14 Jul 2021 20:22:34 GMT
 RUN set -eux; 	[ ! -d "$HOME" ]; 	mkdir -p "$HOME"; 	chown redmine:redmine "$HOME"; 	chmod 1777 "$HOME"
-# Wed, 07 Jul 2021 20:42:54 GMT
+# Wed, 14 Jul 2021 20:22:35 GMT
 ENV REDMINE_VERSION=4.2.1
-# Wed, 07 Jul 2021 20:42:54 GMT
+# Wed, 14 Jul 2021 20:22:35 GMT
 ENV REDMINE_DOWNLOAD_SHA256=ad4109c3425f1cfe4c8961f6ae6494c76e20d81ed946caa1e297d9eda13b41b4
-# Wed, 07 Jul 2021 20:43:00 GMT
+# Wed, 14 Jul 2021 20:22:38 GMT
 RUN set -eux; 	wget -O redmine.tar.gz "https://www.redmine.org/releases/redmine-${REDMINE_VERSION}.tar.gz"; 	echo "$REDMINE_DOWNLOAD_SHA256 *redmine.tar.gz" | sha256sum -c -; 	tar -xf redmine.tar.gz --strip-components=1; 	rm redmine.tar.gz files/delete.me log/delete.me; 	mkdir -p log public/plugin_assets sqlite tmp/pdf tmp/pids; 	chown -R redmine:redmine ./; 	echo 'config.logger = Logger.new(STDOUT)' > config/additional_environment.rb; 	chmod -R ugo=rwX config db sqlite; 	find log tmp -type d -exec chmod 1777 '{}' +
-# Wed, 07 Jul 2021 20:43:00 GMT
+# Wed, 14 Jul 2021 20:22:39 GMT
 ENV BUNDLE_FORCE_RUBY_PLATFORM=1
-# Wed, 07 Jul 2021 20:46:18 GMT
+# Wed, 14 Jul 2021 20:24:41 GMT
 RUN set -eux; 		apk add --no-cache --virtual .build-deps 		coreutils 		freetds-dev 		gcc 		make 		mariadb-dev 		musl-dev 		patch 		postgresql-dev 		sqlite-dev 		ttf2ufm 		zlib-dev 	; 		su-exec redmine bundle config --local without 'development test'; 	echo '# the following entries only exist to force `bundle install` to pre-install all database adapter dependencies -- they can be safely removed/ignored' > ./config/database.yml; 	for adapter in mysql2 postgresql sqlserver sqlite3; do 		echo "$adapter:" >> ./config/database.yml; 		echo "  adapter: $adapter" >> ./config/database.yml; 	done; 	su-exec redmine bundle install --jobs "$(nproc)"; 	rm ./config/database.yml; 	chmod -R ugo=rwX Gemfile.lock "$GEM_HOME"; 	rm -rf ~redmine/.bundle; 		rm /usr/local/bundle/gems/rbpdf-font-1.19.*/lib/fonts/ttf2ufm/ttf2ufm; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local/bundle/gems 		| tr ',' '\n' 		| sort -u 		| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .redmine-rundeps $runDeps; 	apk del --no-network .build-deps
-# Wed, 07 Jul 2021 20:46:18 GMT
+# Wed, 14 Jul 2021 20:24:42 GMT
 VOLUME [/usr/src/redmine/files]
-# Wed, 07 Jul 2021 20:46:18 GMT
+# Wed, 14 Jul 2021 20:24:42 GMT
 COPY file:d7d49d1509d97205d05405670ad206509bb871741a17d5270a1b8842b05afc0f in / 
-# Wed, 07 Jul 2021 20:46:19 GMT
+# Wed, 14 Jul 2021 20:24:42 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 07 Jul 2021 20:46:19 GMT
+# Wed, 14 Jul 2021 20:24:42 GMT
 EXPOSE 3000
-# Wed, 07 Jul 2021 20:46:19 GMT
+# Wed, 14 Jul 2021 20:24:42 GMT
 CMD ["rails" "server" "-b" "0.0.0.0"]
 ```
 
@@ -8386,55 +8386,55 @@ CMD ["rails" "server" "-b" "0.0.0.0"]
 		Last Modified: Wed, 14 Apr 2021 17:59:29 GMT  
 		Size: 2.8 MB (2811969 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:98a867505730167ce0636f0811cb765ebbde11bf979c1a9839f6915f2fc3b85b`  
-		Last Modified: Thu, 15 Apr 2021 03:39:41 GMT  
-		Size: 1.2 MB (1218679 bytes)  
+	-	`sha256:ae5b0ea69e9ed42c49b5af449b703a12a4d2f2e28d87905af6fcd903fdae5689`  
+		Last Modified: Thu, 08 Jul 2021 22:38:46 GMT  
+		Size: 3.6 MB (3581658 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:69c77620f6108dc0610cba72f77d68c271fb1b14cb0800a7a8b6aaeb8950fec9`  
-		Last Modified: Thu, 15 Apr 2021 03:39:40 GMT  
-		Size: 222.0 B  
+	-	`sha256:3ad656ed833315b61ea674706f32c2d18d7412c7120926442af57b9131ee72ee`  
+		Last Modified: Thu, 08 Jul 2021 22:38:45 GMT  
+		Size: 223.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7ea934b6bf2094b677c0efcea21d8dd83f7d08a693dc70f6225655637126c426`  
-		Last Modified: Wed, 07 Jul 2021 20:19:57 GMT  
-		Size: 16.7 MB (16721809 bytes)  
+	-	`sha256:626f6830afc6fb7a05a8f18f2b98e4ea4db3d2dd50803e5cd2c627fe25150dc8`  
+		Last Modified: Thu, 08 Jul 2021 22:40:13 GMT  
+		Size: 14.4 MB (14373123 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:686808441e8cf9ef056302eb927f0082e5b1982f069e2c30b2b19d6a61c2a2ba`  
-		Last Modified: Wed, 07 Jul 2021 20:19:55 GMT  
-		Size: 172.0 B  
+	-	`sha256:5375389679c9573d241b22905aee17b20981e2628989561698087f107fcfed4a`  
+		Last Modified: Thu, 08 Jul 2021 22:40:11 GMT  
+		Size: 173.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d8976df4a5a54a897431b41d52944416dd3f8f810bd6657691c18453f8487742`  
-		Last Modified: Wed, 07 Jul 2021 21:00:05 GMT  
-		Size: 1.2 KB (1206 bytes)  
+	-	`sha256:c76a82132aeb154f32b80803eecedc3e27e062a35ae1e05284dc2d7e6c7f4f59`  
+		Last Modified: Wed, 14 Jul 2021 20:35:42 GMT  
+		Size: 1.2 KB (1209 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:47efa0102f6e6e0ece259209ca18d6e3d4e11169b4d4f46aba1eba740a613150`  
-		Last Modified: Wed, 07 Jul 2021 21:00:15 GMT  
-		Size: 69.5 MB (69525641 bytes)  
+	-	`sha256:99cb4af997128346f54fa569d3a04180c718e02a90e90eff7161241d54deef92`  
+		Last Modified: Wed, 14 Jul 2021 20:35:52 GMT  
+		Size: 69.5 MB (69526214 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:31feb1eca5d1e845e9715e85cd7a862fd44f1760b6e75121aa5683d8292ae651`  
-		Last Modified: Wed, 07 Jul 2021 21:00:01 GMT  
-		Size: 167.0 B  
+	-	`sha256:14da2816c58ef08b826f823d7b6a4126bb63594ed1109880b795c28cc4d3f032`  
+		Last Modified: Wed, 14 Jul 2021 20:35:39 GMT  
+		Size: 166.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ad06f01400240338ee40ad58bfca6b7cc4a9a01936123ffe0b9915471107c362`  
-		Last Modified: Wed, 07 Jul 2021 21:00:01 GMT  
-		Size: 158.0 B  
+	-	`sha256:13f34be07349b94807cc58a0e31cecec279d0591b9a6f1f65f1dbe94a4713462`  
+		Last Modified: Wed, 14 Jul 2021 20:35:39 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:773f42416bef575288101a1df9d6a5fa2148c53ad0ab570bfbe4f59df70a3de5`  
-		Last Modified: Wed, 07 Jul 2021 21:00:03 GMT  
-		Size: 3.1 MB (3059999 bytes)  
+	-	`sha256:b98b05ead31106734fcef5216d256a8536461fa7935f729e67262c90f55e683b`  
+		Last Modified: Wed, 14 Jul 2021 20:35:40 GMT  
+		Size: 3.1 MB (3060004 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e9dc43767f453dd8f05fceda480269b93353a0571cdbcda70dd10ef97bbc6f8a`  
-		Last Modified: Wed, 07 Jul 2021 21:00:08 GMT  
-		Size: 56.7 MB (56711679 bytes)  
+	-	`sha256:a6c586852175065725ae48c5682f1ecea003599fbc0028c3387f5de00cc28f34`  
+		Last Modified: Wed, 14 Jul 2021 20:36:03 GMT  
+		Size: 56.7 MB (56712212 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:26cd8e62dc154735785f51beaabe48d17609389a1a6c0754d076fb36884292b6`  
-		Last Modified: Wed, 07 Jul 2021 21:00:01 GMT  
+	-	`sha256:e4d1559a239e3bf1260f693961d40d28b32673907100b077a797e55d543f072c`  
+		Last Modified: Wed, 14 Jul 2021 20:35:39 GMT  
 		Size: 1.8 KB (1797 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `redmine:latest`
 
 ```console
-$ docker pull redmine@sha256:908057bf3dac6fc94ee52a786ce5e7a57f49d7df7d9ff76f836194802a7f2275
+$ docker pull redmine@sha256:cae6a4d4227606764c6a75b180a5b675e4d7415888b5a1261069761a7cd84eac
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -8450,14 +8450,14 @@ $ docker pull redmine@sha256:908057bf3dac6fc94ee52a786ce5e7a57f49d7df7d9ff76f836
 ### `redmine:latest` - linux; amd64
 
 ```console
-$ docker pull redmine@sha256:9892a7bec09254dbb1601176db7f8d4452a08a4e158c78e735ba2498a9566a5d
+$ docker pull redmine@sha256:c303bc0f5596613dabea4516d47172296178fa21f6db17497624805f778cb357
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **195.5 MB (195474533 bytes)**  
+-	Total Size: **195.5 MB (195475758 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c45d6d2ff9872cfb76c5a2c368aa5047e15b65f55f8163d7d4e624f9bdd4c3f4`
+-	Image ID: `sha256:338c47d4bca896733efe021ec38c0d595cf043de470eba5e45d6e3dde1a485c3`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["rails","server","-b","0.0.0.0"]`
 
@@ -8478,47 +8478,47 @@ ENV RUBY_MAJOR=2.7
 ENV RUBY_VERSION=2.7.4
 # Wed, 07 Jul 2021 19:43:10 GMT
 ENV RUBY_DOWNLOAD_SHA256=2a80824e0ad6100826b69b9890bf55cfc4cf2b61a1e1330fccbcb30c46cef8d7
-# Wed, 07 Jul 2021 19:45:41 GMT
-RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		bison 		dpkg-dev 		gcc 		libbz2-dev 		libgdbm-compat-dev 		libgdbm-dev 		libglib2.0-dev 		libncurses-dev 		libreadline-dev 		libxml2-dev 		libxslt-dev 		make 		ruby 		wget 		xz-utils 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		cd /; 	rm -r /usr/src/ruby; 	! dpkg -l | grep -i ruby; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Wed, 07 Jul 2021 19:45:41 GMT
+# Thu, 08 Jul 2021 22:11:02 GMT
+RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		bison 		dpkg-dev 		libgdbm-dev 		ruby 		autoconf 		g++ 		gcc 		libbz2-dev 		libglib2.0-dev 		libncurses-dev 		libreadline-dev 		libxml2-dev 		libxslt-dev 		make 		wget 		xz-utils 		libgdbm-compat-dev 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -vE '^/usr/local/lib/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		cd /; 	rm -r /usr/src/ruby; 	if dpkg -l | grep -i ruby; then exit 1; fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
+# Thu, 08 Jul 2021 22:11:02 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 07 Jul 2021 19:45:41 GMT
+# Thu, 08 Jul 2021 22:11:03 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 07 Jul 2021 19:45:41 GMT
+# Thu, 08 Jul 2021 22:11:03 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 07 Jul 2021 19:45:43 GMT
+# Thu, 08 Jul 2021 22:11:05 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 07 Jul 2021 19:45:43 GMT
+# Thu, 08 Jul 2021 22:11:05 GMT
 CMD ["irb"]
-# Wed, 07 Jul 2021 20:39:46 GMT
+# Wed, 14 Jul 2021 20:20:37 GMT
 RUN groupadd -r -g 999 redmine && useradd -r -g redmine -u 999 redmine
-# Wed, 07 Jul 2021 20:40:34 GMT
+# Wed, 14 Jul 2021 20:21:05 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		wget 				bzr 		git 		mercurial 		openssh-client 		subversion 				ghostscript 		gsfonts 		imagemagick 		gosu 		tini 	; 	sed -ri 's/(rights)="none" (pattern="PDF")/\1="read" \2/' /etc/ImageMagick-6/policy.xml; 	rm -rf /var/lib/apt/lists/*
-# Wed, 07 Jul 2021 20:40:35 GMT
+# Wed, 14 Jul 2021 20:21:06 GMT
 ENV RAILS_ENV=production
-# Wed, 07 Jul 2021 20:40:35 GMT
+# Wed, 14 Jul 2021 20:21:06 GMT
 WORKDIR /usr/src/redmine
-# Wed, 07 Jul 2021 20:40:36 GMT
+# Wed, 14 Jul 2021 20:21:06 GMT
 ENV HOME=/home/redmine
-# Wed, 07 Jul 2021 20:40:38 GMT
+# Wed, 14 Jul 2021 20:21:07 GMT
 RUN set -eux; 	[ ! -d "$HOME" ]; 	mkdir -p "$HOME"; 	chown redmine:redmine "$HOME"; 	chmod 1777 "$HOME"
-# Wed, 07 Jul 2021 20:40:39 GMT
+# Wed, 14 Jul 2021 20:21:08 GMT
 ENV REDMINE_VERSION=4.2.1
-# Wed, 07 Jul 2021 20:40:39 GMT
+# Wed, 14 Jul 2021 20:21:08 GMT
 ENV REDMINE_DOWNLOAD_SHA256=ad4109c3425f1cfe4c8961f6ae6494c76e20d81ed946caa1e297d9eda13b41b4
-# Wed, 07 Jul 2021 20:40:44 GMT
+# Wed, 14 Jul 2021 20:21:12 GMT
 RUN set -eux; 	wget -O redmine.tar.gz "https://www.redmine.org/releases/redmine-${REDMINE_VERSION}.tar.gz"; 	echo "$REDMINE_DOWNLOAD_SHA256 *redmine.tar.gz" | sha256sum -c -; 	tar -xf redmine.tar.gz --strip-components=1; 	rm redmine.tar.gz files/delete.me log/delete.me; 	mkdir -p log public/plugin_assets sqlite tmp/pdf tmp/pids; 	chown -R redmine:redmine ./; 	echo 'config.logger = Logger.new(STDOUT)' > config/additional_environment.rb; 	chmod -R ugo=rwX config db sqlite; 	find log tmp -type d -exec chmod 1777 '{}' +
-# Wed, 07 Jul 2021 20:41:44 GMT
+# Wed, 14 Jul 2021 20:21:54 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		freetds-dev 		gcc 		libmariadbclient-dev 		libpq-dev 		libsqlite3-dev 		make 		patch 	; 	rm -rf /var/lib/apt/lists/*; 		gosu redmine bundle config --local without 'development test'; 	echo '# the following entries only exist to force `bundle install` to pre-install all database adapter dependencies -- they can be safely removed/ignored' > ./config/database.yml; 	for adapter in mysql2 postgresql sqlserver sqlite3; do 		echo "$adapter:" >> ./config/database.yml; 		echo "  adapter: $adapter" >> ./config/database.yml; 	done; 	gosu redmine bundle install --jobs "$(nproc)"; 	rm ./config/database.yml; 	chmod -R ugo=rwX Gemfile.lock "$GEM_HOME"; 	rm -rf ~redmine/.bundle; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -v '^/usr/local/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Wed, 07 Jul 2021 20:41:45 GMT
+# Wed, 14 Jul 2021 20:21:54 GMT
 VOLUME [/usr/src/redmine/files]
-# Wed, 07 Jul 2021 20:41:45 GMT
+# Wed, 14 Jul 2021 20:21:54 GMT
 COPY file:2c807aca5f34a9ab8acfef3c517816547300ed2b18590f703a1c783bdc707ba8 in / 
-# Wed, 07 Jul 2021 20:41:45 GMT
+# Wed, 14 Jul 2021 20:21:55 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 07 Jul 2021 20:41:46 GMT
+# Wed, 14 Jul 2021 20:21:55 GMT
 EXPOSE 3000
-# Wed, 07 Jul 2021 20:41:46 GMT
+# Wed, 14 Jul 2021 20:21:55 GMT
 CMD ["rails" "server" "-b" "0.0.0.0"]
 ```
 
@@ -8535,40 +8535,40 @@ CMD ["rails" "server" "-b" "0.0.0.0"]
 		Last Modified: Wed, 23 Jun 2021 17:42:36 GMT  
 		Size: 198.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:733ec198d0e9805569798ab4a23e68f73a18a3ffd651015186eba5dd9a2ca610`  
-		Last Modified: Wed, 07 Jul 2021 20:19:35 GMT  
-		Size: 14.5 MB (14508799 bytes)  
+	-	`sha256:de7400f1f9b6e5d55a83e8b37dd13cf72bdbe0d05934f5c98c4ba06bf4cbf118`  
+		Last Modified: Thu, 08 Jul 2021 22:39:29 GMT  
+		Size: 14.5 MB (14509548 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6e12699933c31f935ddd2fa045f7d982334012d6ad88dd44c3fbadf7a73f5a26`  
-		Last Modified: Wed, 07 Jul 2021 20:19:32 GMT  
-		Size: 176.0 B  
+	-	`sha256:9cb40617deac0692ea97ddae53d285e362d757e8808ea3d0242f0f467fbdc83b`  
+		Last Modified: Thu, 08 Jul 2021 22:39:27 GMT  
+		Size: 175.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8339bad2aba6e43a929afc7d8b21af91944756bb66ef66a16e5d828ceb796d51`  
-		Last Modified: Wed, 07 Jul 2021 20:59:08 GMT  
-		Size: 1.7 KB (1747 bytes)  
+	-	`sha256:1b5e207773ba291762558574c95425f761b6392afd6e47e33a2ef03ba607a20b`  
+		Last Modified: Wed, 14 Jul 2021 20:34:47 GMT  
+		Size: 1.7 KB (1744 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3220f49d0d115b00cb264590dadd864df879aa3258ee8d5f0144a5d6033dacc2`  
-		Last Modified: Wed, 07 Jul 2021 20:59:24 GMT  
-		Size: 94.1 MB (94088061 bytes)  
+	-	`sha256:eb2a0707c83bf4fc7c6a74d7536a44f0769ac86b1f962c1af56accd5e6cd3ba2`  
+		Last Modified: Wed, 14 Jul 2021 20:35:01 GMT  
+		Size: 94.1 MB (94088231 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:34a290764a5ae2660fa1cc94e5aa69717c302b3bcb35daab61321ba461f281b0`  
-		Last Modified: Wed, 07 Jul 2021 20:59:06 GMT  
-		Size: 172.0 B  
+	-	`sha256:fac5644dd9c4b1b57fc0facc0fef989ab8a63d78d5674817336139f4dbaccb6f`  
+		Last Modified: Wed, 14 Jul 2021 20:34:44 GMT  
+		Size: 170.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a3920d04b60ae243eed09f0e406abf35b0c554feba46e0d06d50f7ee4d50dd04`  
-		Last Modified: Wed, 07 Jul 2021 20:59:06 GMT  
-		Size: 158.0 B  
+	-	`sha256:1a8cba4fc03f4f8b3bb011488d95ba8548ebf98c7c911213769e19fff09ca870`  
+		Last Modified: Wed, 14 Jul 2021 20:34:44 GMT  
+		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:04b529c84f2b0c85f9568545c17f99282048191e9439079e1218f4feb0326d82`  
-		Last Modified: Wed, 07 Jul 2021 20:59:07 GMT  
-		Size: 3.1 MB (3058680 bytes)  
+	-	`sha256:353cee6d422cb4bc36abb65fd6c55a508990ed2f2bf4abfc1ce1535b475d6df3`  
+		Last Modified: Wed, 14 Jul 2021 20:34:45 GMT  
+		Size: 3.1 MB (3058676 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:81464e83abe2839f8f7dd0aeadc2876201f9769f84c800c495de9add0af0891a`  
-		Last Modified: Wed, 07 Jul 2021 20:59:11 GMT  
-		Size: 44.1 MB (44106209 bytes)  
+	-	`sha256:2b939da848c07b0f5edcd234d2437605bf205006fdb97858805234a356aee26c`  
+		Last Modified: Wed, 14 Jul 2021 20:34:50 GMT  
+		Size: 44.1 MB (44106524 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:be192e9efc951e43743b5d7b6eef8c89f90d2e19f0791fc1d5f04eaf8e6fa2c9`  
-		Last Modified: Wed, 07 Jul 2021 20:59:06 GMT  
+	-	`sha256:e500e65c849556d24a3d032e6d73d10c2c207727e62435e93883100e925cce45`  
+		Last Modified: Wed, 14 Jul 2021 20:34:45 GMT  
 		Size: 1.8 KB (1797 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -9325,7 +9325,7 @@ CMD ["rails" "server" "-b" "0.0.0.0"]
 ## `redmine:passenger`
 
 ```console
-$ docker pull redmine@sha256:f4cb2ae19c38cc46fff7e55b7637e43ff3d520f55f9761af93bd61f35f0868f8
+$ docker pull redmine@sha256:9b780f98151823e0e84e1e41974c548143cae7090cd367eb711d44d3bc8a966b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -9335,14 +9335,14 @@ $ docker pull redmine@sha256:f4cb2ae19c38cc46fff7e55b7637e43ff3d520f55f9761af93b
 ### `redmine:passenger` - linux; amd64
 
 ```console
-$ docker pull redmine@sha256:18864e55c008f0ef499790c64ae0c35326403e72700265430a74abe6167b63b4
+$ docker pull redmine@sha256:a320947c8461cd8bafad0bcfda90b4f5ac840389345003324df81de7b46ad296
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **221.5 MB (221521668 bytes)**  
+-	Total Size: **221.5 MB (221526742 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:fc0c50bd977fa6369b41f342f74e4cbb08de72fd5ba09391a2b5c5e395a1d4d2`
+-	Image ID: `sha256:f3049f679e04c98a7643e800733c59f85c960a686a186192d9b12a222bed1592`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["passenger","start"]`
 
@@ -9363,57 +9363,57 @@ ENV RUBY_MAJOR=2.7
 ENV RUBY_VERSION=2.7.4
 # Wed, 07 Jul 2021 19:43:10 GMT
 ENV RUBY_DOWNLOAD_SHA256=2a80824e0ad6100826b69b9890bf55cfc4cf2b61a1e1330fccbcb30c46cef8d7
-# Wed, 07 Jul 2021 19:45:41 GMT
-RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		bison 		dpkg-dev 		gcc 		libbz2-dev 		libgdbm-compat-dev 		libgdbm-dev 		libglib2.0-dev 		libncurses-dev 		libreadline-dev 		libxml2-dev 		libxslt-dev 		make 		ruby 		wget 		xz-utils 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		cd /; 	rm -r /usr/src/ruby; 	! dpkg -l | grep -i ruby; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Wed, 07 Jul 2021 19:45:41 GMT
+# Thu, 08 Jul 2021 22:11:02 GMT
+RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		bison 		dpkg-dev 		libgdbm-dev 		ruby 		autoconf 		g++ 		gcc 		libbz2-dev 		libglib2.0-dev 		libncurses-dev 		libreadline-dev 		libxml2-dev 		libxslt-dev 		make 		wget 		xz-utils 		libgdbm-compat-dev 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -vE '^/usr/local/lib/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		cd /; 	rm -r /usr/src/ruby; 	if dpkg -l | grep -i ruby; then exit 1; fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
+# Thu, 08 Jul 2021 22:11:02 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 07 Jul 2021 19:45:41 GMT
+# Thu, 08 Jul 2021 22:11:03 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 07 Jul 2021 19:45:41 GMT
+# Thu, 08 Jul 2021 22:11:03 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 07 Jul 2021 19:45:43 GMT
+# Thu, 08 Jul 2021 22:11:05 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 07 Jul 2021 19:45:43 GMT
+# Thu, 08 Jul 2021 22:11:05 GMT
 CMD ["irb"]
-# Wed, 07 Jul 2021 20:39:46 GMT
+# Wed, 14 Jul 2021 20:20:37 GMT
 RUN groupadd -r -g 999 redmine && useradd -r -g redmine -u 999 redmine
-# Wed, 07 Jul 2021 20:40:34 GMT
+# Wed, 14 Jul 2021 20:21:05 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		wget 				bzr 		git 		mercurial 		openssh-client 		subversion 				ghostscript 		gsfonts 		imagemagick 		gosu 		tini 	; 	sed -ri 's/(rights)="none" (pattern="PDF")/\1="read" \2/' /etc/ImageMagick-6/policy.xml; 	rm -rf /var/lib/apt/lists/*
-# Wed, 07 Jul 2021 20:40:35 GMT
+# Wed, 14 Jul 2021 20:21:06 GMT
 ENV RAILS_ENV=production
-# Wed, 07 Jul 2021 20:40:35 GMT
+# Wed, 14 Jul 2021 20:21:06 GMT
 WORKDIR /usr/src/redmine
-# Wed, 07 Jul 2021 20:40:36 GMT
+# Wed, 14 Jul 2021 20:21:06 GMT
 ENV HOME=/home/redmine
-# Wed, 07 Jul 2021 20:40:38 GMT
+# Wed, 14 Jul 2021 20:21:07 GMT
 RUN set -eux; 	[ ! -d "$HOME" ]; 	mkdir -p "$HOME"; 	chown redmine:redmine "$HOME"; 	chmod 1777 "$HOME"
-# Wed, 07 Jul 2021 20:40:39 GMT
+# Wed, 14 Jul 2021 20:21:08 GMT
 ENV REDMINE_VERSION=4.2.1
-# Wed, 07 Jul 2021 20:40:39 GMT
+# Wed, 14 Jul 2021 20:21:08 GMT
 ENV REDMINE_DOWNLOAD_SHA256=ad4109c3425f1cfe4c8961f6ae6494c76e20d81ed946caa1e297d9eda13b41b4
-# Wed, 07 Jul 2021 20:40:44 GMT
+# Wed, 14 Jul 2021 20:21:12 GMT
 RUN set -eux; 	wget -O redmine.tar.gz "https://www.redmine.org/releases/redmine-${REDMINE_VERSION}.tar.gz"; 	echo "$REDMINE_DOWNLOAD_SHA256 *redmine.tar.gz" | sha256sum -c -; 	tar -xf redmine.tar.gz --strip-components=1; 	rm redmine.tar.gz files/delete.me log/delete.me; 	mkdir -p log public/plugin_assets sqlite tmp/pdf tmp/pids; 	chown -R redmine:redmine ./; 	echo 'config.logger = Logger.new(STDOUT)' > config/additional_environment.rb; 	chmod -R ugo=rwX config db sqlite; 	find log tmp -type d -exec chmod 1777 '{}' +
-# Wed, 07 Jul 2021 20:41:44 GMT
+# Wed, 14 Jul 2021 20:21:54 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		freetds-dev 		gcc 		libmariadbclient-dev 		libpq-dev 		libsqlite3-dev 		make 		patch 	; 	rm -rf /var/lib/apt/lists/*; 		gosu redmine bundle config --local without 'development test'; 	echo '# the following entries only exist to force `bundle install` to pre-install all database adapter dependencies -- they can be safely removed/ignored' > ./config/database.yml; 	for adapter in mysql2 postgresql sqlserver sqlite3; do 		echo "$adapter:" >> ./config/database.yml; 		echo "  adapter: $adapter" >> ./config/database.yml; 	done; 	gosu redmine bundle install --jobs "$(nproc)"; 	rm ./config/database.yml; 	chmod -R ugo=rwX Gemfile.lock "$GEM_HOME"; 	rm -rf ~redmine/.bundle; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -v '^/usr/local/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Wed, 07 Jul 2021 20:41:45 GMT
+# Wed, 14 Jul 2021 20:21:54 GMT
 VOLUME [/usr/src/redmine/files]
-# Wed, 07 Jul 2021 20:41:45 GMT
+# Wed, 14 Jul 2021 20:21:54 GMT
 COPY file:2c807aca5f34a9ab8acfef3c517816547300ed2b18590f703a1c783bdc707ba8 in / 
-# Wed, 07 Jul 2021 20:41:45 GMT
+# Wed, 14 Jul 2021 20:21:55 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 07 Jul 2021 20:41:46 GMT
+# Wed, 14 Jul 2021 20:21:55 GMT
 EXPOSE 3000
-# Wed, 07 Jul 2021 20:41:46 GMT
+# Wed, 14 Jul 2021 20:21:55 GMT
 CMD ["rails" "server" "-b" "0.0.0.0"]
-# Wed, 07 Jul 2021 20:41:55 GMT
-ENV PASSENGER_VERSION=6.0.9
-# Wed, 07 Jul 2021 20:42:22 GMT
+# Wed, 14 Jul 2021 20:22:01 GMT
+ENV PASSENGER_VERSION=6.0.10
+# Wed, 14 Jul 2021 20:22:18 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		gcc 		make 	; 	rm -rf /var/lib/apt/lists/*; 		gem install passenger --version "$PASSENGER_VERSION"; 	passenger-config build-native-support; 	if [ -n "$(passenger-config build-native-support 2>&1)" ]; then cat /tmp/passenger_native_support-*.log; false; fi; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Wed, 07 Jul 2021 20:42:26 GMT
+# Wed, 14 Jul 2021 20:22:20 GMT
 RUN set -eux; 	passenger-config install-agent; 	passenger-config download-nginx-engine
-# Wed, 07 Jul 2021 20:42:26 GMT
+# Wed, 14 Jul 2021 20:22:20 GMT
 ENV PASSENGER_PID_FILE=tmp/pids/server.pid
-# Wed, 07 Jul 2021 20:42:27 GMT
+# Wed, 14 Jul 2021 20:22:20 GMT
 CMD ["passenger" "start"]
 ```
 
@@ -9430,47 +9430,47 @@ CMD ["passenger" "start"]
 		Last Modified: Wed, 23 Jun 2021 17:42:36 GMT  
 		Size: 198.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:733ec198d0e9805569798ab4a23e68f73a18a3ffd651015186eba5dd9a2ca610`  
-		Last Modified: Wed, 07 Jul 2021 20:19:35 GMT  
-		Size: 14.5 MB (14508799 bytes)  
+	-	`sha256:de7400f1f9b6e5d55a83e8b37dd13cf72bdbe0d05934f5c98c4ba06bf4cbf118`  
+		Last Modified: Thu, 08 Jul 2021 22:39:29 GMT  
+		Size: 14.5 MB (14509548 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6e12699933c31f935ddd2fa045f7d982334012d6ad88dd44c3fbadf7a73f5a26`  
-		Last Modified: Wed, 07 Jul 2021 20:19:32 GMT  
-		Size: 176.0 B  
+	-	`sha256:9cb40617deac0692ea97ddae53d285e362d757e8808ea3d0242f0f467fbdc83b`  
+		Last Modified: Thu, 08 Jul 2021 22:39:27 GMT  
+		Size: 175.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8339bad2aba6e43a929afc7d8b21af91944756bb66ef66a16e5d828ceb796d51`  
-		Last Modified: Wed, 07 Jul 2021 20:59:08 GMT  
-		Size: 1.7 KB (1747 bytes)  
+	-	`sha256:1b5e207773ba291762558574c95425f761b6392afd6e47e33a2ef03ba607a20b`  
+		Last Modified: Wed, 14 Jul 2021 20:34:47 GMT  
+		Size: 1.7 KB (1744 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3220f49d0d115b00cb264590dadd864df879aa3258ee8d5f0144a5d6033dacc2`  
-		Last Modified: Wed, 07 Jul 2021 20:59:24 GMT  
-		Size: 94.1 MB (94088061 bytes)  
+	-	`sha256:eb2a0707c83bf4fc7c6a74d7536a44f0769ac86b1f962c1af56accd5e6cd3ba2`  
+		Last Modified: Wed, 14 Jul 2021 20:35:01 GMT  
+		Size: 94.1 MB (94088231 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:34a290764a5ae2660fa1cc94e5aa69717c302b3bcb35daab61321ba461f281b0`  
-		Last Modified: Wed, 07 Jul 2021 20:59:06 GMT  
-		Size: 172.0 B  
+	-	`sha256:fac5644dd9c4b1b57fc0facc0fef989ab8a63d78d5674817336139f4dbaccb6f`  
+		Last Modified: Wed, 14 Jul 2021 20:34:44 GMT  
+		Size: 170.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a3920d04b60ae243eed09f0e406abf35b0c554feba46e0d06d50f7ee4d50dd04`  
-		Last Modified: Wed, 07 Jul 2021 20:59:06 GMT  
-		Size: 158.0 B  
+	-	`sha256:1a8cba4fc03f4f8b3bb011488d95ba8548ebf98c7c911213769e19fff09ca870`  
+		Last Modified: Wed, 14 Jul 2021 20:34:44 GMT  
+		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:04b529c84f2b0c85f9568545c17f99282048191e9439079e1218f4feb0326d82`  
-		Last Modified: Wed, 07 Jul 2021 20:59:07 GMT  
-		Size: 3.1 MB (3058680 bytes)  
+	-	`sha256:353cee6d422cb4bc36abb65fd6c55a508990ed2f2bf4abfc1ce1535b475d6df3`  
+		Last Modified: Wed, 14 Jul 2021 20:34:45 GMT  
+		Size: 3.1 MB (3058676 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:81464e83abe2839f8f7dd0aeadc2876201f9769f84c800c495de9add0af0891a`  
-		Last Modified: Wed, 07 Jul 2021 20:59:11 GMT  
-		Size: 44.1 MB (44106209 bytes)  
+	-	`sha256:2b939da848c07b0f5edcd234d2437605bf205006fdb97858805234a356aee26c`  
+		Last Modified: Wed, 14 Jul 2021 20:34:50 GMT  
+		Size: 44.1 MB (44106524 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:be192e9efc951e43743b5d7b6eef8c89f90d2e19f0791fc1d5f04eaf8e6fa2c9`  
-		Last Modified: Wed, 07 Jul 2021 20:59:06 GMT  
+	-	`sha256:e500e65c849556d24a3d032e6d73d10c2c207727e62435e93883100e925cce45`  
+		Last Modified: Wed, 14 Jul 2021 20:34:45 GMT  
 		Size: 1.8 KB (1797 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f71a11320b67138cd2a0a1334bfd1756db2e441c02756b81375d40ef6b5662be`  
-		Last Modified: Wed, 07 Jul 2021 20:59:44 GMT  
-		Size: 21.1 MB (21127786 bytes)  
+	-	`sha256:ca41f4f9e9b7629be3e6e9666279b940b489648484da4e41725e7b22c1c94b1b`  
+		Last Modified: Wed, 14 Jul 2021 20:35:22 GMT  
+		Size: 21.1 MB (21131700 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:395d6858c59e57067f4887b7870aa71c24d60c5749d50d10bcc25771eef5eb2d`  
-		Last Modified: Wed, 07 Jul 2021 20:59:42 GMT  
-		Size: 4.9 MB (4919349 bytes)  
+	-	`sha256:c9436698f0e4aec6d6e7c991fd623ae0d4eab48e62193c564b2fa25de8f4a52e`  
+		Last Modified: Wed, 14 Jul 2021 20:35:20 GMT  
+		Size: 4.9 MB (4919284 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
