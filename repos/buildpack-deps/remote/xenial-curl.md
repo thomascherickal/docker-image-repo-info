@@ -1,7 +1,7 @@
 ## `buildpack-deps:xenial-curl`
 
 ```console
-$ docker pull buildpack-deps@sha256:fffe1dead2ac03373f194e25951258182e8d6695d13b6c70778f789aa4ae3d53
+$ docker pull buildpack-deps@sha256:f265819163f7ff88f3917ebdf91d495c5fa01fa306826e36fff247fba29ed7a9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -68,30 +68,30 @@ RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get 
 ### `buildpack-deps:xenial-curl` - linux; arm variant v7
 
 ```console
-$ docker pull buildpack-deps@sha256:f5840c89511be476df9160b6a465a8521010a60432a3c424496ebec82ff4a1d2
+$ docker pull buildpack-deps@sha256:ff6844f0c642d37aa647e431c72d8e811091f0ca74409e442c9bdd19670315e8
 ```
 
--	Docker Version: 19.03.12
+-	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **46.9 MB (46945548 bytes)**  
+-	Total Size: **46.9 MB (46945623 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:32f19047134f232f1b5d98e57c22934b9cd809d751d716c4ad639626c6a0d86b`
+-	Image ID: `sha256:281ae402a809354dde745ffd81c6082690cc2bd2834ff70da4be41c6e1756c48`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Thu, 17 Jun 2021 23:33:04 GMT
+# Tue, 13 Jul 2021 23:23:36 GMT
 ADD file:ef24ce1c15acdd071b2d61cd27d2840f1fa5eda4937dfe8746997eb677b1451b in / 
-# Thu, 17 Jun 2021 23:33:05 GMT
+# Tue, 13 Jul 2021 23:23:39 GMT
 RUN set -xe 		&& echo '#!/bin/sh' > /usr/sbin/policy-rc.d 	&& echo 'exit 101' >> /usr/sbin/policy-rc.d 	&& chmod +x /usr/sbin/policy-rc.d 		&& dpkg-divert --local --rename --add /sbin/initctl 	&& cp -a /usr/sbin/policy-rc.d /sbin/initctl 	&& sed -i 's/^exit.*/exit 0/' /sbin/initctl 		&& echo 'force-unsafe-io' > /etc/dpkg/dpkg.cfg.d/docker-apt-speedup 		&& echo 'DPkg::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' > /etc/apt/apt.conf.d/docker-clean 	&& echo 'APT::Update::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' >> /etc/apt/apt.conf.d/docker-clean 	&& echo 'Dir::Cache::pkgcache ""; Dir::Cache::srcpkgcache "";' >> /etc/apt/apt.conf.d/docker-clean 		&& echo 'Acquire::Languages "none";' > /etc/apt/apt.conf.d/docker-no-languages 		&& echo 'Acquire::GzipIndexes "true"; Acquire::CompressionTypes::Order:: "gz";' > /etc/apt/apt.conf.d/docker-gzip-indexes 		&& echo 'Apt::AutoRemove::SuggestsImportant "false";' > /etc/apt/apt.conf.d/docker-autoremove-suggests
-# Thu, 17 Jun 2021 23:33:06 GMT
+# Tue, 13 Jul 2021 23:23:41 GMT
 RUN rm -rf /var/lib/apt/lists/*
-# Thu, 17 Jun 2021 23:33:07 GMT
+# Tue, 13 Jul 2021 23:23:43 GMT
 RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
-# Thu, 17 Jun 2021 23:33:07 GMT
+# Tue, 13 Jul 2021 23:23:44 GMT
 CMD ["/bin/bash"]
-# Wed, 23 Jun 2021 06:08:55 GMT
+# Wed, 14 Jul 2021 02:05:49 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		apt-transport-https 		ca-certificates 		curl 		netbase 		wget 		tzdata 	; 	rm -rf /var/lib/apt/lists/*
-# Wed, 23 Jun 2021 06:08:58 GMT
+# Wed, 14 Jul 2021 02:05:51 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
 ```
 
@@ -100,21 +100,21 @@ RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get 
 		Last Modified: Thu, 17 Jun 2021 23:36:42 GMT  
 		Size: 40.3 MB (40312433 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:54f4e7436b523284825c35db6cb48a7c20c8d5388815695277126f528b2b4537`  
-		Last Modified: Thu, 17 Jun 2021 23:36:34 GMT  
-		Size: 850.0 B  
+	-	`sha256:82fe22c8ad83979c361a3c4d3e782f4a311856511042ff7a107356ea1e21e694`  
+		Last Modified: Tue, 13 Jul 2021 23:29:28 GMT  
+		Size: 852.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ad5c9e5711d0203aa41ec7750be25bd3bdd00b90388fde5a0d603523354eff4e`  
-		Last Modified: Thu, 17 Jun 2021 23:36:34 GMT  
+	-	`sha256:7a6b9c580e9f54a056423dc1ea3c0923d41d6f18b5abd11a5364db40a8f79fc7`  
+		Last Modified: Tue, 13 Jul 2021 23:29:28 GMT  
 		Size: 511.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c0d1eba314dc97cbd3e70e1b857a42881405eefe61a235d56722dbf0df809d73`  
-		Last Modified: Thu, 17 Jun 2021 23:36:34 GMT  
-		Size: 169.0 B  
+	-	`sha256:f964743b5fd175c6240d9e2a4d592ff013029f4edea14efaec9813e6c65607e5`  
+		Last Modified: Tue, 13 Jul 2021 23:29:28 GMT  
+		Size: 168.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b668df8eb46980de72020e1e28c878ce9a0c138c5a786ce2824d3db349523807`  
-		Last Modified: Wed, 23 Jun 2021 06:35:46 GMT  
-		Size: 6.6 MB (6631585 bytes)  
+	-	`sha256:8185dbb38ebe165f6bc0b1ed706280d0ff8e905cdf2514f1d1e7655d4ca4c599`  
+		Last Modified: Wed, 14 Jul 2021 02:26:54 GMT  
+		Size: 6.6 MB (6631659 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `buildpack-deps:xenial-curl` - linux; arm64 variant v8
@@ -224,30 +224,30 @@ RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get 
 ### `buildpack-deps:xenial-curl` - linux; ppc64le
 
 ```console
-$ docker pull buildpack-deps@sha256:9556c8797b2bb7ebb55195fca41b91aa7a46117cb5966929e50085ea97c4a8cb
+$ docker pull buildpack-deps@sha256:433bda0a6762019d76c3554655022d1b187028f42f0082cf53551becad952a3e
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **55.2 MB (55216784 bytes)**  
+-	Total Size: **55.2 MB (55216895 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:adc72d82a13b6b0cf21cbc2735436cf2bf4981aa11674fe2275a9cf66812bfe1`
+-	Image ID: `sha256:6e8073ca78266697d912ba20397128d1d4f75f71abe49e47d9a319ecb2085e5a`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Thu, 17 Jun 2021 23:26:49 GMT
+# Tue, 13 Jul 2021 23:25:11 GMT
 ADD file:02f85c6f12364eaad4f80464effd781403b4c13c7732005ee3731d0d19a353c2 in / 
-# Thu, 17 Jun 2021 23:27:11 GMT
+# Tue, 13 Jul 2021 23:25:25 GMT
 RUN set -xe 		&& echo '#!/bin/sh' > /usr/sbin/policy-rc.d 	&& echo 'exit 101' >> /usr/sbin/policy-rc.d 	&& chmod +x /usr/sbin/policy-rc.d 		&& dpkg-divert --local --rename --add /sbin/initctl 	&& cp -a /usr/sbin/policy-rc.d /sbin/initctl 	&& sed -i 's/^exit.*/exit 0/' /sbin/initctl 		&& echo 'force-unsafe-io' > /etc/dpkg/dpkg.cfg.d/docker-apt-speedup 		&& echo 'DPkg::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' > /etc/apt/apt.conf.d/docker-clean 	&& echo 'APT::Update::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' >> /etc/apt/apt.conf.d/docker-clean 	&& echo 'Dir::Cache::pkgcache ""; Dir::Cache::srcpkgcache "";' >> /etc/apt/apt.conf.d/docker-clean 		&& echo 'Acquire::Languages "none";' > /etc/apt/apt.conf.d/docker-no-languages 		&& echo 'Acquire::GzipIndexes "true"; Acquire::CompressionTypes::Order:: "gz";' > /etc/apt/apt.conf.d/docker-gzip-indexes 		&& echo 'Apt::AutoRemove::SuggestsImportant "false";' > /etc/apt/apt.conf.d/docker-autoremove-suggests
-# Thu, 17 Jun 2021 23:27:31 GMT
+# Tue, 13 Jul 2021 23:25:39 GMT
 RUN rm -rf /var/lib/apt/lists/*
-# Thu, 17 Jun 2021 23:27:47 GMT
+# Tue, 13 Jul 2021 23:25:53 GMT
 RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
-# Thu, 17 Jun 2021 23:27:49 GMT
+# Tue, 13 Jul 2021 23:25:59 GMT
 CMD ["/bin/bash"]
-# Sat, 26 Jun 2021 01:27:46 GMT
+# Wed, 14 Jul 2021 02:55:53 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		apt-transport-https 		ca-certificates 		curl 		netbase 		wget 		tzdata 	; 	rm -rf /var/lib/apt/lists/*
-# Sat, 26 Jun 2021 01:28:09 GMT
+# Wed, 14 Jul 2021 02:56:22 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
 ```
 
@@ -256,50 +256,50 @@ RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get 
 		Last Modified: Thu, 17 Jun 2021 23:30:08 GMT  
 		Size: 47.5 MB (47522284 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8b3e62a76c7df4225d785b72a0deb7e3d48b56ea76d21e2a5d9805dfb7c4b4cf`  
-		Last Modified: Thu, 17 Jun 2021 23:29:59 GMT  
-		Size: 857.0 B  
+	-	`sha256:a0babf75a176b58db3a5df6096af29a306bf0ab34aed69816ecea017482b6ba6`  
+		Last Modified: Tue, 13 Jul 2021 23:29:36 GMT  
+		Size: 859.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fda0cd747cc1b9a20ae510fbca83b289fb66e705989ce35ada529d3c5e3c881d`  
-		Last Modified: Thu, 17 Jun 2021 23:29:59 GMT  
-		Size: 475.0 B  
+	-	`sha256:3aeb0805a3ad55f25fa2e52d341de43543d44705d05021e2d6a3ed9944915319`  
+		Last Modified: Tue, 13 Jul 2021 23:29:36 GMT  
+		Size: 476.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:07241a2539cb6d51cc4b8dc2b23b8c7f9c08f2a9e71a54cc86eb5472ebf63a46`  
-		Last Modified: Thu, 17 Jun 2021 23:29:59 GMT  
-		Size: 169.0 B  
+	-	`sha256:f4421ae6a1a8096772ab2b5bb7d32cf300fbe5ffbe18cb6c742591febaf3bd7f`  
+		Last Modified: Tue, 13 Jul 2021 23:29:36 GMT  
+		Size: 171.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9a4f70edf8833becd2d8e7e40e049b21d80bf376c1ec5f6e1f4c77a1908c175c`  
-		Last Modified: Sat, 26 Jun 2021 02:24:28 GMT  
-		Size: 7.7 MB (7692999 bytes)  
+	-	`sha256:aaa538407c039fa89484c0b7633543d422d242bb02e9f813952284af6da6916a`  
+		Last Modified: Wed, 14 Jul 2021 03:28:32 GMT  
+		Size: 7.7 MB (7693105 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `buildpack-deps:xenial-curl` - linux; s390x
 
 ```console
-$ docker pull buildpack-deps@sha256:19153ff8cc71e2f7d1a2ef49ba86f6878f7bb283b685e4b8bae2e7f152e8b7e4
+$ docker pull buildpack-deps@sha256:4f0b407d6d8e712be0af0ff0f5d9896a24dc35d5a268b832f7d8103549330599
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **51.6 MB (51611506 bytes)**  
+-	Total Size: **51.6 MB (51611731 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:88db98b53fa59ae5dd1168bc40bd94f275afbb93ffd9fb9870a23d31601ed1f9`
+-	Image ID: `sha256:10faa756c85145ecc993c2b1e0dd35b007b4b1a0d15654f44ca19ef1f8a2b08c`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Thu, 17 Jun 2021 23:44:43 GMT
+# Tue, 13 Jul 2021 22:54:28 GMT
 ADD file:fe2f2172ef6c28729fe2906a3edd50a39e2ff612da510584327898429dd0b2c8 in / 
-# Thu, 17 Jun 2021 23:44:48 GMT
+# Tue, 13 Jul 2021 22:54:32 GMT
 RUN set -xe 		&& echo '#!/bin/sh' > /usr/sbin/policy-rc.d 	&& echo 'exit 101' >> /usr/sbin/policy-rc.d 	&& chmod +x /usr/sbin/policy-rc.d 		&& dpkg-divert --local --rename --add /sbin/initctl 	&& cp -a /usr/sbin/policy-rc.d /sbin/initctl 	&& sed -i 's/^exit.*/exit 0/' /sbin/initctl 		&& echo 'force-unsafe-io' > /etc/dpkg/dpkg.cfg.d/docker-apt-speedup 		&& echo 'DPkg::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' > /etc/apt/apt.conf.d/docker-clean 	&& echo 'APT::Update::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' >> /etc/apt/apt.conf.d/docker-clean 	&& echo 'Dir::Cache::pkgcache ""; Dir::Cache::srcpkgcache "";' >> /etc/apt/apt.conf.d/docker-clean 		&& echo 'Acquire::Languages "none";' > /etc/apt/apt.conf.d/docker-no-languages 		&& echo 'Acquire::GzipIndexes "true"; Acquire::CompressionTypes::Order:: "gz";' > /etc/apt/apt.conf.d/docker-gzip-indexes 		&& echo 'Apt::AutoRemove::SuggestsImportant "false";' > /etc/apt/apt.conf.d/docker-autoremove-suggests
-# Thu, 17 Jun 2021 23:44:49 GMT
+# Tue, 13 Jul 2021 22:54:34 GMT
 RUN rm -rf /var/lib/apt/lists/*
-# Thu, 17 Jun 2021 23:44:50 GMT
+# Tue, 13 Jul 2021 22:54:36 GMT
 RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
-# Thu, 17 Jun 2021 23:44:50 GMT
+# Tue, 13 Jul 2021 22:54:36 GMT
 CMD ["/bin/bash"]
-# Fri, 25 Jun 2021 21:36:53 GMT
+# Tue, 13 Jul 2021 23:46:51 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		apt-transport-https 		ca-certificates 		curl 		netbase 		wget 		tzdata 	; 	rm -rf /var/lib/apt/lists/*
-# Fri, 25 Jun 2021 21:36:54 GMT
+# Tue, 13 Jul 2021 23:46:53 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
 ```
 
@@ -308,19 +308,19 @@ RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get 
 		Last Modified: Thu, 17 Jun 2021 23:46:23 GMT  
 		Size: 44.1 MB (44088123 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:db9a9f17c451a02c59f0e1ec710ac0079843308b573783d00e7e413a9d096a72`  
-		Last Modified: Thu, 17 Jun 2021 23:46:18 GMT  
-		Size: 848.0 B  
+	-	`sha256:dabfb1a7eacd3ce7cebc95a8e4a2552e56450e2ec1b036516b1bb09c4d22df48`  
+		Last Modified: Tue, 13 Jul 2021 22:56:42 GMT  
+		Size: 855.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:86ee96f5f84896ebe7779ce0607f206d3915813133e1b056f150806d2eaa4916`  
-		Last Modified: Thu, 17 Jun 2021 23:46:18 GMT  
-		Size: 467.0 B  
+	-	`sha256:8c115486bffc8ae23d8bc9beb85e9cbd574b177de6a231bb437729902809aaf2`  
+		Last Modified: Tue, 13 Jul 2021 22:56:42 GMT  
+		Size: 470.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c9a4dd89a4cd9868ef0a3f60f34092b4433ac103dbf1cfb6745e462f025dd8a0`  
-		Last Modified: Thu, 17 Jun 2021 23:46:18 GMT  
-		Size: 168.0 B  
+	-	`sha256:6ddfacfd07c012e416dfec6566c58456afbfad6dd84efd5d26b0339376edb6f1`  
+		Last Modified: Tue, 13 Jul 2021 22:56:42 GMT  
+		Size: 169.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a914455cb77fa49f2173b8e6a491d27e6f83f93006e9ca101a85fc0fa8f41595`  
-		Last Modified: Fri, 25 Jun 2021 21:45:20 GMT  
-		Size: 7.5 MB (7521900 bytes)  
+	-	`sha256:37cad89fa876f64f8213e6203320233397d4ff4d511e425bd17d65f3156a6c34`  
+		Last Modified: Tue, 13 Jul 2021 23:53:12 GMT  
+		Size: 7.5 MB (7522114 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
