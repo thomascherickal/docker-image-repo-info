@@ -5,7 +5,7 @@ $ docker pull jobber@sha256:10e354645c84f98fcb5b3a49b578e47d3ad16406e94d763e6e17
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jobber:1-alpine3.11` - linux; amd64
