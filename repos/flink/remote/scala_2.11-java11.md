@@ -5,7 +5,7 @@ $ docker pull flink@sha256:ceb1e965e2bf7af75e4ae12ad4f17fb1212e80624517750b58d6c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:scala_2.11-java11` - linux; amd64

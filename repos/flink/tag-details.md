@@ -55,7 +55,7 @@ $ docker pull flink@sha256:8bed67835d2e6b3bd62831476c3ddb48c9702d2c0615c2c67b247
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.12` - linux; amd64
@@ -180,7 +180,7 @@ $ docker pull flink@sha256:349eb56ce67aecc372225bac81e6b7a1200e0e004b611b49afb1e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.12-java11` - linux; amd64
@@ -305,7 +305,7 @@ $ docker pull flink@sha256:8bed67835d2e6b3bd62831476c3ddb48c9702d2c0615c2c67b247
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.12-java8` - linux; amd64
@@ -430,7 +430,7 @@ $ docker pull flink@sha256:796b571b5090316d0b67509a19fdd2b7b684270f9cb86ee6bd2b2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.12-scala_2.11` - linux; amd64
@@ -555,7 +555,7 @@ $ docker pull flink@sha256:5bc0abcd1775aa9d36ecc80b423ef86e9e14e2ad768b34dd64895
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.12-scala_2.11-java11` - linux; amd64
@@ -680,7 +680,7 @@ $ docker pull flink@sha256:796b571b5090316d0b67509a19fdd2b7b684270f9cb86ee6bd2b2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.12-scala_2.11-java8` - linux; amd64
@@ -805,7 +805,7 @@ $ docker pull flink@sha256:8bed67835d2e6b3bd62831476c3ddb48c9702d2c0615c2c67b247
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.12-scala_2.12` - linux; amd64
@@ -930,7 +930,7 @@ $ docker pull flink@sha256:349eb56ce67aecc372225bac81e6b7a1200e0e004b611b49afb1e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.12-scala_2.12-java11` - linux; amd64
@@ -1055,7 +1055,7 @@ $ docker pull flink@sha256:8bed67835d2e6b3bd62831476c3ddb48c9702d2c0615c2c67b247
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.12-scala_2.12-java8` - linux; amd64
@@ -1180,7 +1180,7 @@ $ docker pull flink@sha256:8bed67835d2e6b3bd62831476c3ddb48c9702d2c0615c2c67b247
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.12.4` - linux; amd64
@@ -1305,7 +1305,7 @@ $ docker pull flink@sha256:349eb56ce67aecc372225bac81e6b7a1200e0e004b611b49afb1e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.12.4-java11` - linux; amd64
@@ -1430,7 +1430,7 @@ $ docker pull flink@sha256:8bed67835d2e6b3bd62831476c3ddb48c9702d2c0615c2c67b247
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.12.4-java8` - linux; amd64
@@ -1555,7 +1555,7 @@ $ docker pull flink@sha256:796b571b5090316d0b67509a19fdd2b7b684270f9cb86ee6bd2b2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.12.4-scala_2.11` - linux; amd64
@@ -1680,7 +1680,7 @@ $ docker pull flink@sha256:5bc0abcd1775aa9d36ecc80b423ef86e9e14e2ad768b34dd64895
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.12.4-scala_2.11-java11` - linux; amd64
@@ -1805,7 +1805,7 @@ $ docker pull flink@sha256:796b571b5090316d0b67509a19fdd2b7b684270f9cb86ee6bd2b2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.12.4-scala_2.11-java8` - linux; amd64
@@ -1930,7 +1930,7 @@ $ docker pull flink@sha256:8bed67835d2e6b3bd62831476c3ddb48c9702d2c0615c2c67b247
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.12.4-scala_2.12` - linux; amd64
@@ -2055,7 +2055,7 @@ $ docker pull flink@sha256:349eb56ce67aecc372225bac81e6b7a1200e0e004b611b49afb1e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.12.4-scala_2.12-java11` - linux; amd64
@@ -2180,7 +2180,7 @@ $ docker pull flink@sha256:8bed67835d2e6b3bd62831476c3ddb48c9702d2c0615c2c67b247
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.12.4-scala_2.12-java8` - linux; amd64
@@ -2305,7 +2305,7 @@ $ docker pull flink@sha256:9efd47d965e61165b808353ea4656b5d19b5879fb7636cc990183
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.13` - linux; amd64
@@ -2430,7 +2430,7 @@ $ docker pull flink@sha256:c7b976b79045ee8372f1e4d92db283ea23562a7b8a3962942ca32
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.13-java11` - linux; amd64
@@ -2555,7 +2555,7 @@ $ docker pull flink@sha256:9efd47d965e61165b808353ea4656b5d19b5879fb7636cc990183
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.13-java8` - linux; amd64
@@ -2680,7 +2680,7 @@ $ docker pull flink@sha256:42acf339ed56755c31b2b66800f85a2651a227e6a4382799c3c2b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.13-scala_2.11` - linux; amd64
@@ -2805,7 +2805,7 @@ $ docker pull flink@sha256:ceb1e965e2bf7af75e4ae12ad4f17fb1212e80624517750b58d6c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.13-scala_2.11-java11` - linux; amd64
@@ -2930,7 +2930,7 @@ $ docker pull flink@sha256:42acf339ed56755c31b2b66800f85a2651a227e6a4382799c3c2b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.13-scala_2.11-java8` - linux; amd64
@@ -3055,7 +3055,7 @@ $ docker pull flink@sha256:9efd47d965e61165b808353ea4656b5d19b5879fb7636cc990183
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.13-scala_2.12` - linux; amd64
@@ -3180,7 +3180,7 @@ $ docker pull flink@sha256:c7b976b79045ee8372f1e4d92db283ea23562a7b8a3962942ca32
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.13-scala_2.12-java11` - linux; amd64
@@ -3305,7 +3305,7 @@ $ docker pull flink@sha256:9efd47d965e61165b808353ea4656b5d19b5879fb7636cc990183
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.13-scala_2.12-java8` - linux; amd64
@@ -3430,7 +3430,7 @@ $ docker pull flink@sha256:9efd47d965e61165b808353ea4656b5d19b5879fb7636cc990183
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.13.1` - linux; amd64
@@ -3555,7 +3555,7 @@ $ docker pull flink@sha256:c7b976b79045ee8372f1e4d92db283ea23562a7b8a3962942ca32
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.13.1-java11` - linux; amd64
@@ -3680,7 +3680,7 @@ $ docker pull flink@sha256:9efd47d965e61165b808353ea4656b5d19b5879fb7636cc990183
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.13.1-java8` - linux; amd64
@@ -3805,7 +3805,7 @@ $ docker pull flink@sha256:42acf339ed56755c31b2b66800f85a2651a227e6a4382799c3c2b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.13.1-scala_2.11` - linux; amd64
@@ -3930,7 +3930,7 @@ $ docker pull flink@sha256:ceb1e965e2bf7af75e4ae12ad4f17fb1212e80624517750b58d6c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.13.1-scala_2.11-java11` - linux; amd64
@@ -4055,7 +4055,7 @@ $ docker pull flink@sha256:42acf339ed56755c31b2b66800f85a2651a227e6a4382799c3c2b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.13.1-scala_2.11-java8` - linux; amd64
@@ -4180,7 +4180,7 @@ $ docker pull flink@sha256:9efd47d965e61165b808353ea4656b5d19b5879fb7636cc990183
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.13.1-scala_2.12` - linux; amd64
@@ -4305,7 +4305,7 @@ $ docker pull flink@sha256:c7b976b79045ee8372f1e4d92db283ea23562a7b8a3962942ca32
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.13.1-scala_2.12-java11` - linux; amd64
@@ -4430,7 +4430,7 @@ $ docker pull flink@sha256:9efd47d965e61165b808353ea4656b5d19b5879fb7636cc990183
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:1.13.1-scala_2.12-java8` - linux; amd64
@@ -4555,7 +4555,7 @@ $ docker pull flink@sha256:c7b976b79045ee8372f1e4d92db283ea23562a7b8a3962942ca32
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:java11` - linux; amd64
@@ -4680,7 +4680,7 @@ $ docker pull flink@sha256:9efd47d965e61165b808353ea4656b5d19b5879fb7636cc990183
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:java8` - linux; amd64
@@ -4805,7 +4805,7 @@ $ docker pull flink@sha256:9efd47d965e61165b808353ea4656b5d19b5879fb7636cc990183
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:latest` - linux; amd64
@@ -4930,7 +4930,7 @@ $ docker pull flink@sha256:42acf339ed56755c31b2b66800f85a2651a227e6a4382799c3c2b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:scala_2.11` - linux; amd64
@@ -5055,7 +5055,7 @@ $ docker pull flink@sha256:ceb1e965e2bf7af75e4ae12ad4f17fb1212e80624517750b58d6c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:scala_2.11-java11` - linux; amd64
@@ -5180,7 +5180,7 @@ $ docker pull flink@sha256:42acf339ed56755c31b2b66800f85a2651a227e6a4382799c3c2b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:scala_2.11-java8` - linux; amd64
@@ -5305,7 +5305,7 @@ $ docker pull flink@sha256:9efd47d965e61165b808353ea4656b5d19b5879fb7636cc990183
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:scala_2.12` - linux; amd64
@@ -5430,7 +5430,7 @@ $ docker pull flink@sha256:c7b976b79045ee8372f1e4d92db283ea23562a7b8a3962942ca32
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:scala_2.12-java11` - linux; amd64
@@ -5555,7 +5555,7 @@ $ docker pull flink@sha256:9efd47d965e61165b808353ea4656b5d19b5879fb7636cc990183
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `flink:scala_2.12-java8` - linux; amd64
