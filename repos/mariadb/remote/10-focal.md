@@ -5,7 +5,7 @@ $ docker pull mariadb@sha256:6e177005751b9055a5af897a57f8433a54b1c219c08a8433efa
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le

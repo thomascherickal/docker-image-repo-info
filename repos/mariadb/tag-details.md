@@ -34,7 +34,7 @@ $ docker pull mariadb@sha256:6e177005751b9055a5af897a57f8433a54b1c219c08a8433efa
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
@@ -364,7 +364,7 @@ $ docker pull mariadb@sha256:6e177005751b9055a5af897a57f8433a54b1c219c08a8433efa
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
@@ -694,7 +694,7 @@ $ docker pull mariadb@sha256:c41286e9084e1793f22884742c4c771c03259662ee299949c8c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
@@ -1045,7 +1045,7 @@ $ docker pull mariadb@sha256:c41286e9084e1793f22884742c4c771c03259662ee299949c8c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
@@ -1396,7 +1396,7 @@ $ docker pull mariadb@sha256:c41286e9084e1793f22884742c4c771c03259662ee299949c8c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
@@ -1747,7 +1747,7 @@ $ docker pull mariadb@sha256:c41286e9084e1793f22884742c4c771c03259662ee299949c8c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
@@ -2098,7 +2098,7 @@ $ docker pull mariadb@sha256:217f71fa6d73f4f0f9b58e27f29129df4726423f0e86aa11689
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
@@ -2449,7 +2449,7 @@ $ docker pull mariadb@sha256:217f71fa6d73f4f0f9b58e27f29129df4726423f0e86aa11689
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
@@ -2800,7 +2800,7 @@ $ docker pull mariadb@sha256:217f71fa6d73f4f0f9b58e27f29129df4726423f0e86aa11689
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
@@ -3151,7 +3151,7 @@ $ docker pull mariadb@sha256:217f71fa6d73f4f0f9b58e27f29129df4726423f0e86aa11689
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
@@ -3502,7 +3502,7 @@ $ docker pull mariadb@sha256:077a32c36a9119378cdbf34eda33a80b8ec87282ea5e9291b33
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
@@ -3853,7 +3853,7 @@ $ docker pull mariadb@sha256:077a32c36a9119378cdbf34eda33a80b8ec87282ea5e9291b33
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
@@ -4204,7 +4204,7 @@ $ docker pull mariadb@sha256:077a32c36a9119378cdbf34eda33a80b8ec87282ea5e9291b33
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
@@ -4555,7 +4555,7 @@ $ docker pull mariadb@sha256:077a32c36a9119378cdbf34eda33a80b8ec87282ea5e9291b33
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
@@ -4906,7 +4906,7 @@ $ docker pull mariadb@sha256:18c72c67cac65114b43df4b924ea5c22044126016dc206a00d7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
@@ -5236,7 +5236,7 @@ $ docker pull mariadb@sha256:18c72c67cac65114b43df4b924ea5c22044126016dc206a00d7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
@@ -5566,7 +5566,7 @@ $ docker pull mariadb@sha256:18c72c67cac65114b43df4b924ea5c22044126016dc206a00d7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
@@ -5896,7 +5896,7 @@ $ docker pull mariadb@sha256:18c72c67cac65114b43df4b924ea5c22044126016dc206a00d7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
@@ -6226,7 +6226,7 @@ $ docker pull mariadb@sha256:6e177005751b9055a5af897a57f8433a54b1c219c08a8433efa
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
@@ -6556,7 +6556,7 @@ $ docker pull mariadb@sha256:6e177005751b9055a5af897a57f8433a54b1c219c08a8433efa
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
@@ -6886,7 +6886,7 @@ $ docker pull mariadb@sha256:6e177005751b9055a5af897a57f8433a54b1c219c08a8433efa
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
@@ -7216,7 +7216,7 @@ $ docker pull mariadb@sha256:6e177005751b9055a5af897a57f8433a54b1c219c08a8433efa
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
@@ -7546,7 +7546,7 @@ $ docker pull mariadb@sha256:6e177005751b9055a5af897a57f8433a54b1c219c08a8433efa
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
@@ -7876,7 +7876,7 @@ $ docker pull mariadb@sha256:6e177005751b9055a5af897a57f8433a54b1c219c08a8433efa
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
