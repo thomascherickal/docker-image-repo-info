@@ -13,7 +13,7 @@ $ docker pull crux@sha256:3bd4862a03976718c1b831f18977a0a67153f473f3ecdf202b54e4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -80,7 +80,7 @@ $ docker pull crux@sha256:afcc4566ea59c522f471da72dcf236ae9d483e21fdc21cb5e02180
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -147,7 +147,7 @@ $ docker pull crux@sha256:afcc4566ea59c522f471da72dcf236ae9d483e21fdc21cb5e02180
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 

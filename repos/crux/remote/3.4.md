@@ -5,7 +5,7 @@ $ docker pull crux@sha256:afcc4566ea59c522f471da72dcf236ae9d483e21fdc21cb5e02180
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
