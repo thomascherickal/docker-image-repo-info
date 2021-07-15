@@ -5,7 +5,7 @@ $ docker pull golang@sha256:cb61052963ace24697d60b1730f91887a1b3cca192c25a491c6a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.14393.4530; amd64
 
 ### `golang:rc-windowsservercore-ltsc2016` - windows version 10.0.14393.4530; amd64

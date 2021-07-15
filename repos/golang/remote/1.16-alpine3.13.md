@@ -5,7 +5,7 @@ $ docker pull golang@sha256:a952dd9efdff3f243612b8c7e555bf3859fbbce875d2a56b78b2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7

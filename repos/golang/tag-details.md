@@ -109,7 +109,7 @@ $ docker pull golang@sha256:773f15a2f2368be3ef88bfc29cc602bac5bd918f1f6cd14b2450
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 10
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -895,7 +895,7 @@ $ docker pull golang@sha256:3b11fcdf0d8436e1a5ba3a8bf5206c7f28f5a652ac899f2107eb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -1331,7 +1331,7 @@ $ docker pull golang@sha256:a952dd9efdff3f243612b8c7e555bf3859fbbce875d2a56b78b2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -1767,7 +1767,7 @@ $ docker pull golang@sha256:7700a5e57723ea9e9d0bfbfe66e69ae365d7eec53063ba4a1dd9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -2081,7 +2081,7 @@ $ docker pull golang@sha256:777d13e40bc15456dceac9b37f926bd7b4c237645da9ff8e3c94
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -2674,7 +2674,7 @@ $ docker pull golang@sha256:c1dd52f65c17f53cbf02f826732d6c283f50c47675b3393ae9a7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `golang:1-nanoserver` - windows version 10.0.17763.2061; amd64
@@ -2762,7 +2762,7 @@ $ docker pull golang@sha256:c1dd52f65c17f53cbf02f826732d6c283f50c47675b3393ae9a7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `golang:1-nanoserver-1809` - windows version 10.0.17763.2061; amd64
@@ -2850,7 +2850,7 @@ $ docker pull golang@sha256:f5a98edf4e233fb0b6f69fa85f322fe558e385731952a6cebb0a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 4
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -3151,7 +3151,7 @@ $ docker pull golang@sha256:4bd36aa5431535833c0d3eff621cd43b763d57072b92c8830286
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	windows version 10.0.17763.2061; amd64
 	-	windows version 10.0.14393.4530; amd64
 
@@ -3353,7 +3353,7 @@ $ docker pull golang@sha256:dd0e51d6beb70ccf8ffba78aae42a8180c3f35909727234b1fc5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `golang:1-windowsservercore-1809` - windows version 10.0.17763.2061; amd64
@@ -3458,7 +3458,7 @@ $ docker pull golang@sha256:f3407c06f38d73dc4eb56a99a52f23f6e242b63a56766730e868
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.14393.4530; amd64
 
 ### `golang:1-windowsservercore-ltsc2016` - windows version 10.0.14393.4530; amd64
@@ -3564,7 +3564,7 @@ $ docker pull golang@sha256:4ef759c0b12dd0207131f4272a1a76d6f649f8d79bad0606874d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 10
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -4350,7 +4350,7 @@ $ docker pull golang@sha256:83bc732f33bf802af3f738ab5b19e0f77a1edabaf7e79a8e0131
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -4786,7 +4786,7 @@ $ docker pull golang@sha256:a1f7f41d98601d41dc6cc647288d77eb9e732d838abf0d5d1c79
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -5222,7 +5222,7 @@ $ docker pull golang@sha256:69ff86182be13c37a9023b77f466b442c585c78831edebab9ad1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -5536,7 +5536,7 @@ $ docker pull golang@sha256:943266b185daf5a96ce5cdda06529ad88ffb8fbfaefaf49b3bb4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -6129,7 +6129,7 @@ $ docker pull golang@sha256:63e5a296eddbadad3c642c1cdeb69464134e6b16fdcc1345800b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `golang:1.15-nanoserver` - windows version 10.0.17763.2061; amd64
@@ -6217,7 +6217,7 @@ $ docker pull golang@sha256:63e5a296eddbadad3c642c1cdeb69464134e6b16fdcc1345800b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `golang:1.15-nanoserver-1809` - windows version 10.0.17763.2061; amd64
@@ -6305,7 +6305,7 @@ $ docker pull golang@sha256:2291443064c9bbcfd374880ffec9c253c5c474948f69d368b763
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 4
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -6606,7 +6606,7 @@ $ docker pull golang@sha256:30ca1a510b0d23cceead9e980279a40fcb6b9e1d1b602a0a85b7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	windows version 10.0.17763.2061; amd64
 	-	windows version 10.0.14393.4530; amd64
 
@@ -6808,7 +6808,7 @@ $ docker pull golang@sha256:67b5f87c22abd86963bff26a450ce8444943229819e5a67c330c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `golang:1.15-windowsservercore-1809` - windows version 10.0.17763.2061; amd64
@@ -6913,7 +6913,7 @@ $ docker pull golang@sha256:9c7977b75ddc458c2265b9f8c71522b26d6815708091f523ce0c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.14393.4530; amd64
 
 ### `golang:1.15-windowsservercore-ltsc2016` - windows version 10.0.14393.4530; amd64
@@ -7019,7 +7019,7 @@ $ docker pull golang@sha256:4ef759c0b12dd0207131f4272a1a76d6f649f8d79bad0606874d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 10
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -7805,7 +7805,7 @@ $ docker pull golang@sha256:69ff86182be13c37a9023b77f466b442c585c78831edebab9ad1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -8119,7 +8119,7 @@ $ docker pull golang@sha256:a1f7f41d98601d41dc6cc647288d77eb9e732d838abf0d5d1c79
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -8555,7 +8555,7 @@ $ docker pull golang@sha256:69ff86182be13c37a9023b77f466b442c585c78831edebab9ad1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -8869,7 +8869,7 @@ $ docker pull golang@sha256:943266b185daf5a96ce5cdda06529ad88ffb8fbfaefaf49b3bb4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -9462,7 +9462,7 @@ $ docker pull golang@sha256:63e5a296eddbadad3c642c1cdeb69464134e6b16fdcc1345800b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `golang:1.15.14-nanoserver` - windows version 10.0.17763.2061; amd64
@@ -9550,7 +9550,7 @@ $ docker pull golang@sha256:63e5a296eddbadad3c642c1cdeb69464134e6b16fdcc1345800b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `golang:1.15.14-nanoserver-1809` - windows version 10.0.17763.2061; amd64
@@ -9638,7 +9638,7 @@ $ docker pull golang@sha256:2291443064c9bbcfd374880ffec9c253c5c474948f69d368b763
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 4
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -9939,7 +9939,7 @@ $ docker pull golang@sha256:30ca1a510b0d23cceead9e980279a40fcb6b9e1d1b602a0a85b7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	windows version 10.0.17763.2061; amd64
 	-	windows version 10.0.14393.4530; amd64
 
@@ -10141,7 +10141,7 @@ $ docker pull golang@sha256:67b5f87c22abd86963bff26a450ce8444943229819e5a67c330c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `golang:1.15.14-windowsservercore-1809` - windows version 10.0.17763.2061; amd64
@@ -10246,7 +10246,7 @@ $ docker pull golang@sha256:9c7977b75ddc458c2265b9f8c71522b26d6815708091f523ce0c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.14393.4530; amd64
 
 ### `golang:1.15.14-windowsservercore-ltsc2016` - windows version 10.0.14393.4530; amd64
@@ -10352,7 +10352,7 @@ $ docker pull golang@sha256:773f15a2f2368be3ef88bfc29cc602bac5bd918f1f6cd14b2450
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 10
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -11138,7 +11138,7 @@ $ docker pull golang@sha256:3b11fcdf0d8436e1a5ba3a8bf5206c7f28f5a652ac899f2107eb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -11574,7 +11574,7 @@ $ docker pull golang@sha256:a952dd9efdff3f243612b8c7e555bf3859fbbce875d2a56b78b2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -12010,7 +12010,7 @@ $ docker pull golang@sha256:7700a5e57723ea9e9d0bfbfe66e69ae365d7eec53063ba4a1dd9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -12324,7 +12324,7 @@ $ docker pull golang@sha256:777d13e40bc15456dceac9b37f926bd7b4c237645da9ff8e3c94
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -12917,7 +12917,7 @@ $ docker pull golang@sha256:c1dd52f65c17f53cbf02f826732d6c283f50c47675b3393ae9a7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `golang:1.16-nanoserver` - windows version 10.0.17763.2061; amd64
@@ -13005,7 +13005,7 @@ $ docker pull golang@sha256:c1dd52f65c17f53cbf02f826732d6c283f50c47675b3393ae9a7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `golang:1.16-nanoserver-1809` - windows version 10.0.17763.2061; amd64
@@ -13093,7 +13093,7 @@ $ docker pull golang@sha256:f5a98edf4e233fb0b6f69fa85f322fe558e385731952a6cebb0a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 4
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -13394,7 +13394,7 @@ $ docker pull golang@sha256:4bd36aa5431535833c0d3eff621cd43b763d57072b92c8830286
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	windows version 10.0.17763.2061; amd64
 	-	windows version 10.0.14393.4530; amd64
 
@@ -13596,7 +13596,7 @@ $ docker pull golang@sha256:dd0e51d6beb70ccf8ffba78aae42a8180c3f35909727234b1fc5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `golang:1.16-windowsservercore-1809` - windows version 10.0.17763.2061; amd64
@@ -13701,7 +13701,7 @@ $ docker pull golang@sha256:f3407c06f38d73dc4eb56a99a52f23f6e242b63a56766730e868
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.14393.4530; amd64
 
 ### `golang:1.16-windowsservercore-ltsc2016` - windows version 10.0.14393.4530; amd64
@@ -13807,7 +13807,7 @@ $ docker pull golang@sha256:773f15a2f2368be3ef88bfc29cc602bac5bd918f1f6cd14b2450
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 10
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -14593,7 +14593,7 @@ $ docker pull golang@sha256:7700a5e57723ea9e9d0bfbfe66e69ae365d7eec53063ba4a1dd9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -14907,7 +14907,7 @@ $ docker pull golang@sha256:a952dd9efdff3f243612b8c7e555bf3859fbbce875d2a56b78b2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -15343,7 +15343,7 @@ $ docker pull golang@sha256:7700a5e57723ea9e9d0bfbfe66e69ae365d7eec53063ba4a1dd9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -15657,7 +15657,7 @@ $ docker pull golang@sha256:777d13e40bc15456dceac9b37f926bd7b4c237645da9ff8e3c94
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -16250,7 +16250,7 @@ $ docker pull golang@sha256:c1dd52f65c17f53cbf02f826732d6c283f50c47675b3393ae9a7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `golang:1.16.6-nanoserver` - windows version 10.0.17763.2061; amd64
@@ -16338,7 +16338,7 @@ $ docker pull golang@sha256:c1dd52f65c17f53cbf02f826732d6c283f50c47675b3393ae9a7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `golang:1.16.6-nanoserver-1809` - windows version 10.0.17763.2061; amd64
@@ -16426,7 +16426,7 @@ $ docker pull golang@sha256:f5a98edf4e233fb0b6f69fa85f322fe558e385731952a6cebb0a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 4
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -16727,7 +16727,7 @@ $ docker pull golang@sha256:4bd36aa5431535833c0d3eff621cd43b763d57072b92c8830286
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	windows version 10.0.17763.2061; amd64
 	-	windows version 10.0.14393.4530; amd64
 
@@ -16929,7 +16929,7 @@ $ docker pull golang@sha256:dd0e51d6beb70ccf8ffba78aae42a8180c3f35909727234b1fc5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `golang:1.16.6-windowsservercore-1809` - windows version 10.0.17763.2061; amd64
@@ -17034,7 +17034,7 @@ $ docker pull golang@sha256:f3407c06f38d73dc4eb56a99a52f23f6e242b63a56766730e868
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.14393.4530; amd64
 
 ### `golang:1.16.6-windowsservercore-ltsc2016` - windows version 10.0.14393.4530; amd64
@@ -17140,7 +17140,7 @@ $ docker pull golang@sha256:d9d995471741570e336046440693e4388ec4d432a2d488d509bf
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 10
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -17926,7 +17926,7 @@ $ docker pull golang@sha256:80e74bfbf94f13d20d0f7f70d90393978042b78fcf3334e6a6b1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -18362,7 +18362,7 @@ $ docker pull golang@sha256:1c2742bbd875caec4b790b927d6541e80df7e9d134e9e713a2f3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -18798,7 +18798,7 @@ $ docker pull golang@sha256:b0c11c245d36468b7c5a4a0c1a057082b4f8a63ba7a7b828eecb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -19112,7 +19112,7 @@ $ docker pull golang@sha256:6cd80214758521df1c61b5eb2a21008dac05ada5dd443fa7f6f0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -19705,7 +19705,7 @@ $ docker pull golang@sha256:2d083970f10dad11ef8846aacbc83681553627f84a3441c8de3e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `golang:1.17-rc-nanoserver` - windows version 10.0.17763.2061; amd64
@@ -19793,7 +19793,7 @@ $ docker pull golang@sha256:2d083970f10dad11ef8846aacbc83681553627f84a3441c8de3e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `golang:1.17-rc-nanoserver-1809` - windows version 10.0.17763.2061; amd64
@@ -19881,7 +19881,7 @@ $ docker pull golang@sha256:8d5b03d9e907aa8fcb654ccd62f6cc5536c14a73bc34dc616988
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 4
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -20182,7 +20182,7 @@ $ docker pull golang@sha256:bcf58be1b55da5c450867ef3ef22a02f50a085afa1fc58b22143
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	windows version 10.0.17763.2061; amd64
 	-	windows version 10.0.14393.4530; amd64
 
@@ -20384,7 +20384,7 @@ $ docker pull golang@sha256:a48356407d5cad393ad5ae92c658d37c03ac2392d6de558c9641
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `golang:1.17-rc-windowsservercore-1809` - windows version 10.0.17763.2061; amd64
@@ -20489,7 +20489,7 @@ $ docker pull golang@sha256:cb61052963ace24697d60b1730f91887a1b3cca192c25a491c6a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.14393.4530; amd64
 
 ### `golang:1.17-rc-windowsservercore-ltsc2016` - windows version 10.0.14393.4530; amd64
@@ -20595,7 +20595,7 @@ $ docker pull golang@sha256:d9d995471741570e336046440693e4388ec4d432a2d488d509bf
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 10
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -21381,7 +21381,7 @@ $ docker pull golang@sha256:b0c11c245d36468b7c5a4a0c1a057082b4f8a63ba7a7b828eecb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -21695,7 +21695,7 @@ $ docker pull golang@sha256:1c2742bbd875caec4b790b927d6541e80df7e9d134e9e713a2f3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -22131,7 +22131,7 @@ $ docker pull golang@sha256:b0c11c245d36468b7c5a4a0c1a057082b4f8a63ba7a7b828eecb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -22445,7 +22445,7 @@ $ docker pull golang@sha256:6cd80214758521df1c61b5eb2a21008dac05ada5dd443fa7f6f0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -23038,7 +23038,7 @@ $ docker pull golang@sha256:2d083970f10dad11ef8846aacbc83681553627f84a3441c8de3e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `golang:1.17rc1-nanoserver` - windows version 10.0.17763.2061; amd64
@@ -23126,7 +23126,7 @@ $ docker pull golang@sha256:2d083970f10dad11ef8846aacbc83681553627f84a3441c8de3e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `golang:1.17rc1-nanoserver-1809` - windows version 10.0.17763.2061; amd64
@@ -23214,7 +23214,7 @@ $ docker pull golang@sha256:8d5b03d9e907aa8fcb654ccd62f6cc5536c14a73bc34dc616988
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 4
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -23515,7 +23515,7 @@ $ docker pull golang@sha256:bcf58be1b55da5c450867ef3ef22a02f50a085afa1fc58b22143
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	windows version 10.0.17763.2061; amd64
 	-	windows version 10.0.14393.4530; amd64
 
@@ -23717,7 +23717,7 @@ $ docker pull golang@sha256:a48356407d5cad393ad5ae92c658d37c03ac2392d6de558c9641
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `golang:1.17rc1-windowsservercore-1809` - windows version 10.0.17763.2061; amd64
@@ -23822,7 +23822,7 @@ $ docker pull golang@sha256:cb61052963ace24697d60b1730f91887a1b3cca192c25a491c6a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.14393.4530; amd64
 
 ### `golang:1.17rc1-windowsservercore-ltsc2016` - windows version 10.0.14393.4530; amd64
@@ -23928,7 +23928,7 @@ $ docker pull golang@sha256:3b11fcdf0d8436e1a5ba3a8bf5206c7f28f5a652ac899f2107eb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -24364,7 +24364,7 @@ $ docker pull golang@sha256:a952dd9efdff3f243612b8c7e555bf3859fbbce875d2a56b78b2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -24800,7 +24800,7 @@ $ docker pull golang@sha256:7700a5e57723ea9e9d0bfbfe66e69ae365d7eec53063ba4a1dd9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -25114,7 +25114,7 @@ $ docker pull golang@sha256:777d13e40bc15456dceac9b37f926bd7b4c237645da9ff8e3c94
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -25707,7 +25707,7 @@ $ docker pull golang@sha256:773f15a2f2368be3ef88bfc29cc602bac5bd918f1f6cd14b2450
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 10
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -26493,7 +26493,7 @@ $ docker pull golang@sha256:c1dd52f65c17f53cbf02f826732d6c283f50c47675b3393ae9a7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `golang:nanoserver` - windows version 10.0.17763.2061; amd64
@@ -26581,7 +26581,7 @@ $ docker pull golang@sha256:c1dd52f65c17f53cbf02f826732d6c283f50c47675b3393ae9a7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `golang:nanoserver-1809` - windows version 10.0.17763.2061; amd64
@@ -26669,7 +26669,7 @@ $ docker pull golang@sha256:d9d995471741570e336046440693e4388ec4d432a2d488d509bf
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 10
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -27455,7 +27455,7 @@ $ docker pull golang@sha256:80e74bfbf94f13d20d0f7f70d90393978042b78fcf3334e6a6b1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -27891,7 +27891,7 @@ $ docker pull golang@sha256:1c2742bbd875caec4b790b927d6541e80df7e9d134e9e713a2f3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -28327,7 +28327,7 @@ $ docker pull golang@sha256:b0c11c245d36468b7c5a4a0c1a057082b4f8a63ba7a7b828eecb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -28641,7 +28641,7 @@ $ docker pull golang@sha256:6cd80214758521df1c61b5eb2a21008dac05ada5dd443fa7f6f0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -29234,7 +29234,7 @@ $ docker pull golang@sha256:2d083970f10dad11ef8846aacbc83681553627f84a3441c8de3e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `golang:rc-nanoserver` - windows version 10.0.17763.2061; amd64
@@ -29322,7 +29322,7 @@ $ docker pull golang@sha256:2d083970f10dad11ef8846aacbc83681553627f84a3441c8de3e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `golang:rc-nanoserver-1809` - windows version 10.0.17763.2061; amd64
@@ -29410,7 +29410,7 @@ $ docker pull golang@sha256:8d5b03d9e907aa8fcb654ccd62f6cc5536c14a73bc34dc616988
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 4
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -29711,7 +29711,7 @@ $ docker pull golang@sha256:bcf58be1b55da5c450867ef3ef22a02f50a085afa1fc58b22143
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	windows version 10.0.17763.2061; amd64
 	-	windows version 10.0.14393.4530; amd64
 
@@ -29913,7 +29913,7 @@ $ docker pull golang@sha256:a48356407d5cad393ad5ae92c658d37c03ac2392d6de558c9641
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `golang:rc-windowsservercore-1809` - windows version 10.0.17763.2061; amd64
@@ -30018,7 +30018,7 @@ $ docker pull golang@sha256:cb61052963ace24697d60b1730f91887a1b3cca192c25a491c6a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.14393.4530; amd64
 
 ### `golang:rc-windowsservercore-ltsc2016` - windows version 10.0.14393.4530; amd64
@@ -30124,7 +30124,7 @@ $ docker pull golang@sha256:f5a98edf4e233fb0b6f69fa85f322fe558e385731952a6cebb0a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 4
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -30425,7 +30425,7 @@ $ docker pull golang@sha256:4bd36aa5431535833c0d3eff621cd43b763d57072b92c8830286
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	windows version 10.0.17763.2061; amd64
 	-	windows version 10.0.14393.4530; amd64
 
@@ -30627,7 +30627,7 @@ $ docker pull golang@sha256:dd0e51d6beb70ccf8ffba78aae42a8180c3f35909727234b1fc5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `golang:windowsservercore-1809` - windows version 10.0.17763.2061; amd64
@@ -30732,7 +30732,7 @@ $ docker pull golang@sha256:f3407c06f38d73dc4eb56a99a52f23f6e242b63a56766730e868
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.14393.4530; amd64
 
 ### `golang:windowsservercore-ltsc2016` - windows version 10.0.14393.4530; amd64
