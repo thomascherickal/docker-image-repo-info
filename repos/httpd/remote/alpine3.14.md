@@ -5,7 +5,7 @@ $ docker pull httpd@sha256:1b6a3983be4b6547b182cc167acecf7d7ff2cb8ab1a52225d60ff
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
