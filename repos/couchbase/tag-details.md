@@ -39,7 +39,7 @@ $ docker pull couchbase@sha256:8a8ff02997140ad599d86bdda34d3850b70e8ae4c5bbd16ad
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `couchbase:6.0.1` - linux; amd64
@@ -168,7 +168,7 @@ $ docker pull couchbase@sha256:de9b5c24c995523a83b7dac6f8bfd73ff9a076f9a2f8722eb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `couchbase:6.0.2` - linux; amd64
@@ -297,7 +297,7 @@ $ docker pull couchbase@sha256:2ca33951fcd428a03147f116657c80f76dc896bf5a50d9053
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `couchbase:6.0.3` - linux; amd64
@@ -426,7 +426,7 @@ $ docker pull couchbase@sha256:b9898e94785b49ddba89e600193dde03e616a41e01676a743
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `couchbase:6.0.4` - linux; amd64
@@ -555,7 +555,7 @@ $ docker pull couchbase@sha256:c2794e735530e77e4001b1743f4de9249140987d29aa27bd3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `couchbase:6.0.5` - linux; amd64
@@ -684,7 +684,7 @@ $ docker pull couchbase@sha256:1c2654f480ef8427c0362829bdb0e6bda8645489ae87ddf0c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `couchbase:6.5.0` - linux; amd64
@@ -813,7 +813,7 @@ $ docker pull couchbase@sha256:4d349e3b91534085e4b13c9b4e0ed589f522d756ee4d59d76
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `couchbase:6.5.1` - linux; amd64
@@ -942,7 +942,7 @@ $ docker pull couchbase@sha256:c63523e408d7fd3afc9471400ac47f738a895ca592daf5432
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `couchbase:6.6.0` - linux; amd64
@@ -1071,7 +1071,7 @@ $ docker pull couchbase@sha256:af6148a17dfdbfb30c187e7247fa5bff41f6a3dfe00b21e4f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `couchbase:6.6.1` - linux; amd64
@@ -1200,7 +1200,7 @@ $ docker pull couchbase@sha256:f81f332a99b86514042eaf1194603d65c37404c2686d1ae3e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `couchbase:6.6.2` - linux; amd64
@@ -1329,7 +1329,7 @@ $ docker pull couchbase@sha256:d1688941d858881861c60fb674f37ec439f098035f00d6827
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `couchbase:7.0.0-beta` - linux; amd64
@@ -1458,7 +1458,7 @@ $ docker pull couchbase@sha256:a3b49c114e2c940ee412c4039120168389e52f4e351c81d29
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `couchbase:community` - linux; amd64
@@ -1587,7 +1587,7 @@ $ docker pull couchbase@sha256:780920ed1462df52fe74af43df7c69ff91f20354802c2c135
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `couchbase:community-6.5.0` - linux; amd64
@@ -1716,7 +1716,7 @@ $ docker pull couchbase@sha256:780920ed1462df52fe74af43df7c69ff91f20354802c2c135
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `couchbase:community-6.5.1` - linux; amd64
@@ -1845,7 +1845,7 @@ $ docker pull couchbase@sha256:a3b49c114e2c940ee412c4039120168389e52f4e351c81d29
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `couchbase:community-6.6.0` - linux; amd64
@@ -1974,7 +1974,7 @@ $ docker pull couchbase@sha256:5d0008523237a9302b6484725bdf8e14857a9ce15545317d8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `couchbase:community-7.0.0-beta` - linux; amd64
@@ -2103,7 +2103,7 @@ $ docker pull couchbase@sha256:f81f332a99b86514042eaf1194603d65c37404c2686d1ae3e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `couchbase:enterprise` - linux; amd64
@@ -2232,7 +2232,7 @@ $ docker pull couchbase@sha256:8a8ff02997140ad599d86bdda34d3850b70e8ae4c5bbd16ad
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `couchbase:enterprise-6.0.1` - linux; amd64
@@ -2361,7 +2361,7 @@ $ docker pull couchbase@sha256:de9b5c24c995523a83b7dac6f8bfd73ff9a076f9a2f8722eb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `couchbase:enterprise-6.0.2` - linux; amd64
@@ -2490,7 +2490,7 @@ $ docker pull couchbase@sha256:2ca33951fcd428a03147f116657c80f76dc896bf5a50d9053
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `couchbase:enterprise-6.0.3` - linux; amd64
@@ -2619,7 +2619,7 @@ $ docker pull couchbase@sha256:b9898e94785b49ddba89e600193dde03e616a41e01676a743
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `couchbase:enterprise-6.0.4` - linux; amd64
@@ -2748,7 +2748,7 @@ $ docker pull couchbase@sha256:c2794e735530e77e4001b1743f4de9249140987d29aa27bd3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `couchbase:enterprise-6.0.5` - linux; amd64
@@ -2877,7 +2877,7 @@ $ docker pull couchbase@sha256:1c2654f480ef8427c0362829bdb0e6bda8645489ae87ddf0c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `couchbase:enterprise-6.5.0` - linux; amd64
@@ -3006,7 +3006,7 @@ $ docker pull couchbase@sha256:4d349e3b91534085e4b13c9b4e0ed589f522d756ee4d59d76
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `couchbase:enterprise-6.5.1` - linux; amd64
@@ -3135,7 +3135,7 @@ $ docker pull couchbase@sha256:c63523e408d7fd3afc9471400ac47f738a895ca592daf5432
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `couchbase:enterprise-6.6.0` - linux; amd64
@@ -3264,7 +3264,7 @@ $ docker pull couchbase@sha256:af6148a17dfdbfb30c187e7247fa5bff41f6a3dfe00b21e4f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `couchbase:enterprise-6.6.1` - linux; amd64
@@ -3393,7 +3393,7 @@ $ docker pull couchbase@sha256:f81f332a99b86514042eaf1194603d65c37404c2686d1ae3e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `couchbase:enterprise-6.6.2` - linux; amd64
@@ -3522,7 +3522,7 @@ $ docker pull couchbase@sha256:d1688941d858881861c60fb674f37ec439f098035f00d6827
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `couchbase:enterprise-7.0.0-beta` - linux; amd64
@@ -3651,7 +3651,7 @@ $ docker pull couchbase@sha256:f81f332a99b86514042eaf1194603d65c37404c2686d1ae3e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `couchbase:latest` - linux; amd64

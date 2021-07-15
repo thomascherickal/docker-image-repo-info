@@ -5,7 +5,7 @@ $ docker pull couchbase@sha256:2ca33951fcd428a03147f116657c80f76dc896bf5a50d9053
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `couchbase:enterprise-6.0.3` - linux; amd64
