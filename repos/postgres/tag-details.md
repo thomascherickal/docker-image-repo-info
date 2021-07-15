@@ -69,7 +69,7 @@ $ docker pull postgres@sha256:b11325ae578ac26137018051803aad93acf67576b9349e97ec
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -718,7 +718,7 @@ $ docker pull postgres@sha256:0eef1c94e0c4b0c4b84437785d0c5926f62b7f537627d97cf9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -1399,7 +1399,7 @@ $ docker pull postgres@sha256:a7d129c84bda3c950d7ba0bde43e7862f2347e6befc7b84545
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -1888,7 +1888,7 @@ $ docker pull postgres@sha256:6f6ac30f389ee0ac5d43e5902e5e22ca0132cb521209a12ecd
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -2921,7 +2921,7 @@ $ docker pull postgres@sha256:b11325ae578ac26137018051803aad93acf67576b9349e97ec
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -3570,7 +3570,7 @@ $ docker pull postgres@sha256:b11325ae578ac26137018051803aad93acf67576b9349e97ec
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -4219,7 +4219,7 @@ $ docker pull postgres@sha256:0eef1c94e0c4b0c4b84437785d0c5926f62b7f537627d97cf9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -4900,7 +4900,7 @@ $ docker pull postgres@sha256:a7d129c84bda3c950d7ba0bde43e7862f2347e6befc7b84545
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -5389,7 +5389,7 @@ $ docker pull postgres@sha256:6f6ac30f389ee0ac5d43e5902e5e22ca0132cb521209a12ecd
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -6422,7 +6422,7 @@ $ docker pull postgres@sha256:b11325ae578ac26137018051803aad93acf67576b9349e97ec
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -7071,7 +7071,7 @@ $ docker pull postgres@sha256:944f2e7c91c48e41153e5a20a27baaf251da425931e7e5e43d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -7690,7 +7690,7 @@ $ docker pull postgres@sha256:09c7c402c6814c0f0f71bc33001f84c486975d32fca2f00a5f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -8341,7 +8341,7 @@ $ docker pull postgres@sha256:4479ef7738c9faedb445d936f9f16aed730c969fd0d94897ff
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -8800,7 +8800,7 @@ $ docker pull postgres@sha256:bf645e00247f4f93e626e1da45212dd7ae04812c75261196b3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -9785,7 +9785,7 @@ $ docker pull postgres@sha256:944f2e7c91c48e41153e5a20a27baaf251da425931e7e5e43d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -10404,7 +10404,7 @@ $ docker pull postgres@sha256:944f2e7c91c48e41153e5a20a27baaf251da425931e7e5e43d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -11023,7 +11023,7 @@ $ docker pull postgres@sha256:09c7c402c6814c0f0f71bc33001f84c486975d32fca2f00a5f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -11674,7 +11674,7 @@ $ docker pull postgres@sha256:4479ef7738c9faedb445d936f9f16aed730c969fd0d94897ff
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -12133,7 +12133,7 @@ $ docker pull postgres@sha256:bf645e00247f4f93e626e1da45212dd7ae04812c75261196b3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -13118,7 +13118,7 @@ $ docker pull postgres@sha256:944f2e7c91c48e41153e5a20a27baaf251da425931e7e5e43d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -13737,7 +13737,7 @@ $ docker pull postgres@sha256:65e488c552d36b6482a7d5e044925962024fe816a7d797f7c0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -14722,7 +14722,7 @@ $ docker pull postgres@sha256:946fe5a1739d8c49cf62f5d4198025468b04ebaf8c507413a5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -15361,7 +15361,7 @@ $ docker pull postgres@sha256:278a82bdd7e9ca0969f5c0ceb2e407b2a9ea55484798a2ef9c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -15820,7 +15820,7 @@ $ docker pull postgres@sha256:65e488c552d36b6482a7d5e044925962024fe816a7d797f7c0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -16805,7 +16805,7 @@ $ docker pull postgres@sha256:65e488c552d36b6482a7d5e044925962024fe816a7d797f7c0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -17790,7 +17790,7 @@ $ docker pull postgres@sha256:946fe5a1739d8c49cf62f5d4198025468b04ebaf8c507413a5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -18429,7 +18429,7 @@ $ docker pull postgres@sha256:278a82bdd7e9ca0969f5c0ceb2e407b2a9ea55484798a2ef9c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -18888,7 +18888,7 @@ $ docker pull postgres@sha256:65e488c552d36b6482a7d5e044925962024fe816a7d797f7c0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -19873,7 +19873,7 @@ $ docker pull postgres@sha256:2b87b5bb55589540f598df6ec5855e5c15dd13628230a689d4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -20858,7 +20858,7 @@ $ docker pull postgres@sha256:ff384947eb9f5939b7fc5ef2ce620fad088999590973f05e68
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -21497,7 +21497,7 @@ $ docker pull postgres@sha256:425552e40e063cb0b821d7a9fb42b52f2b905905eae1655098
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -21956,7 +21956,7 @@ $ docker pull postgres@sha256:2b87b5bb55589540f598df6ec5855e5c15dd13628230a689d4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -22941,7 +22941,7 @@ $ docker pull postgres@sha256:2b87b5bb55589540f598df6ec5855e5c15dd13628230a689d4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -23926,7 +23926,7 @@ $ docker pull postgres@sha256:ff384947eb9f5939b7fc5ef2ce620fad088999590973f05e68
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -24565,7 +24565,7 @@ $ docker pull postgres@sha256:425552e40e063cb0b821d7a9fb42b52f2b905905eae1655098
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -25024,7 +25024,7 @@ $ docker pull postgres@sha256:2b87b5bb55589540f598df6ec5855e5c15dd13628230a689d4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -26009,7 +26009,7 @@ $ docker pull postgres@sha256:1109778dc8704aed7e9e7f502bb887283ab10e26b7c5cabd20
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -26994,7 +26994,7 @@ $ docker pull postgres@sha256:65d709c4032154dc0df17ebc77eaa0f924137d4a5f4989595e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -27453,7 +27453,7 @@ $ docker pull postgres@sha256:65d709c4032154dc0df17ebc77eaa0f924137d4a5f4989595e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -27912,7 +27912,7 @@ $ docker pull postgres@sha256:1109778dc8704aed7e9e7f502bb887283ab10e26b7c5cabd20
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -28897,7 +28897,7 @@ $ docker pull postgres@sha256:7159df74c41d47988d711b3fc0e1d7750325a1943b4248c0b2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -29546,7 +29546,7 @@ $ docker pull postgres@sha256:183f938cd1d47a7c8cc2b393e75605e44ae423f8fabcdc2243
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -30227,7 +30227,7 @@ $ docker pull postgres@sha256:b4ea5eb95dcbb8a21b2914657c3e508d7d157e31457acc7317
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -30716,7 +30716,7 @@ $ docker pull postgres@sha256:3f7437c7108a1526b794e129def06ec86aa2b2050c349b14f8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -31749,7 +31749,7 @@ $ docker pull postgres@sha256:7159df74c41d47988d711b3fc0e1d7750325a1943b4248c0b2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -32398,7 +32398,7 @@ $ docker pull postgres@sha256:7159df74c41d47988d711b3fc0e1d7750325a1943b4248c0b2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -33047,7 +33047,7 @@ $ docker pull postgres@sha256:183f938cd1d47a7c8cc2b393e75605e44ae423f8fabcdc2243
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -33728,7 +33728,7 @@ $ docker pull postgres@sha256:b4ea5eb95dcbb8a21b2914657c3e508d7d157e31457acc7317
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -34217,7 +34217,7 @@ $ docker pull postgres@sha256:3f7437c7108a1526b794e129def06ec86aa2b2050c349b14f8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -35250,7 +35250,7 @@ $ docker pull postgres@sha256:7159df74c41d47988d711b3fc0e1d7750325a1943b4248c0b2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -35899,7 +35899,7 @@ $ docker pull postgres@sha256:7159df74c41d47988d711b3fc0e1d7750325a1943b4248c0b2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -36548,7 +36548,7 @@ $ docker pull postgres@sha256:183f938cd1d47a7c8cc2b393e75605e44ae423f8fabcdc2243
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -37229,7 +37229,7 @@ $ docker pull postgres@sha256:b4ea5eb95dcbb8a21b2914657c3e508d7d157e31457acc7317
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -37718,7 +37718,7 @@ $ docker pull postgres@sha256:3f7437c7108a1526b794e129def06ec86aa2b2050c349b14f8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -38751,7 +38751,7 @@ $ docker pull postgres@sha256:7159df74c41d47988d711b3fc0e1d7750325a1943b4248c0b2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -39400,7 +39400,7 @@ $ docker pull postgres@sha256:ff384947eb9f5939b7fc5ef2ce620fad088999590973f05e68
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -40039,7 +40039,7 @@ $ docker pull postgres@sha256:425552e40e063cb0b821d7a9fb42b52f2b905905eae1655098
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -40498,7 +40498,7 @@ $ docker pull postgres@sha256:2b87b5bb55589540f598df6ec5855e5c15dd13628230a689d4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -41483,7 +41483,7 @@ $ docker pull postgres@sha256:2b87b5bb55589540f598df6ec5855e5c15dd13628230a689d4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7

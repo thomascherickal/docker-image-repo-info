@@ -5,7 +5,7 @@ $ docker pull postgres@sha256:09c7c402c6814c0f0f71bc33001f84c486975d32fca2f00a5f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
