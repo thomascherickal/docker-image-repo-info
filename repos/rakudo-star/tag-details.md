@@ -14,7 +14,7 @@ $ docker pull rakudo-star@sha256:d3469a36a09975cc268a864fd0fbd40e531a5662675a14f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -157,7 +157,7 @@ $ docker pull rakudo-star@sha256:e33a8d4e3603446d88bf774a3dca9c49b8fd77476b00855
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -260,7 +260,7 @@ $ docker pull rakudo-star@sha256:e33a8d4e3603446d88bf774a3dca9c49b8fd77476b00855
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -363,7 +363,7 @@ $ docker pull rakudo-star@sha256:d3469a36a09975cc268a864fd0fbd40e531a5662675a14f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
