@@ -5,7 +5,7 @@ $ docker pull photon@sha256:c4f9c258857733580b1704c5687b382426a1613a72e08fc9788c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 

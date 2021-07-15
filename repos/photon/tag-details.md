@@ -19,7 +19,7 @@ $ docker pull photon@sha256:fbc9c065f35d4c4abae1e6cf9f2ede13ba8d22a261175599e6dc
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `photon:1.0` - linux; amd64
@@ -57,7 +57,7 @@ $ docker pull photon@sha256:fbc9c065f35d4c4abae1e6cf9f2ede13ba8d22a261175599e6dc
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `photon:1.0-20210709` - linux; amd64
@@ -95,7 +95,7 @@ $ docker pull photon@sha256:a50676293f75bd0c585936619fd1d5d5ba231f08e00b90f74956
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `photon:2.0` - linux; amd64
@@ -133,7 +133,7 @@ $ docker pull photon@sha256:a50676293f75bd0c585936619fd1d5d5ba231f08e00b90f74956
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `photon:2.0-20210702` - linux; amd64
@@ -171,7 +171,7 @@ $ docker pull photon@sha256:806ccf41010e7ffb7a427d7f027361587d68d0892a23e546f351
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -238,7 +238,7 @@ $ docker pull photon@sha256:806ccf41010e7ffb7a427d7f027361587d68d0892a23e546f351
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -305,7 +305,7 @@ $ docker pull photon@sha256:c4f9c258857733580b1704c5687b382426a1613a72e08fc9788c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -372,7 +372,7 @@ $ docker pull photon@sha256:c4f9c258857733580b1704c5687b382426a1613a72e08fc9788c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -439,7 +439,7 @@ $ docker pull photon@sha256:c4f9c258857733580b1704c5687b382426a1613a72e08fc9788c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
