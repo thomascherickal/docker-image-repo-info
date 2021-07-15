@@ -17,7 +17,7 @@ $ docker pull storm@sha256:17bdc734dca84c8cf1f9a45a29f383699da8cc987bf089cf1692c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `storm:1.1` - linux; amd64
@@ -116,7 +116,7 @@ $ docker pull storm@sha256:17bdc734dca84c8cf1f9a45a29f383699da8cc987bf089cf1692c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `storm:1.1.3` - linux; amd64
@@ -215,7 +215,7 @@ $ docker pull storm@sha256:d846359359ac18353ea645de5e52486e83f34caeda069efb1fa71
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `storm:1.2` - linux; amd64
@@ -314,7 +314,7 @@ $ docker pull storm@sha256:d846359359ac18353ea645de5e52486e83f34caeda069efb1fa71
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `storm:1.2.3` - linux; amd64
@@ -413,7 +413,7 @@ $ docker pull storm@sha256:f62fdb76d7c79479827d36c78224b27a2b9ad279387b0c175a3d7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `storm:2.2` - linux; amd64
@@ -512,7 +512,7 @@ $ docker pull storm@sha256:f62fdb76d7c79479827d36c78224b27a2b9ad279387b0c175a3d7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `storm:2.2.0` - linux; amd64
@@ -611,7 +611,7 @@ $ docker pull storm@sha256:f62fdb76d7c79479827d36c78224b27a2b9ad279387b0c175a3d7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `storm:latest` - linux; amd64

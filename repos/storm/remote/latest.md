@@ -5,7 +5,7 @@ $ docker pull storm@sha256:f62fdb76d7c79479827d36c78224b27a2b9ad279387b0c175a3d7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `storm:latest` - linux; amd64
