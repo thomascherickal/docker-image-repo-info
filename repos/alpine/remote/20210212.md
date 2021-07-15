@@ -5,7 +5,7 @@ $ docker pull alpine@sha256:a81f67aca260e41b2260a4cf91ac4435dcad62ccc108ab19ae30
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
