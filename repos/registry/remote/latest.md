@@ -5,7 +5,7 @@ $ docker pull registry@sha256:aba2bfe9f0cff1ac0618ec4a54bfefb2e685bbac67c8ebaf3b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm64 variant v8
