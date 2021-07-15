@@ -24,7 +24,7 @@ $ docker pull chronograf@sha256:3c19429c7fcd24b55b98761b46a6e5115d7ba9348fbe48f8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -237,7 +237,7 @@ $ docker pull chronograf@sha256:96255563a0f40d99b020410ebe817af3bfd5d8cf6bdde976
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `chronograf:1.6-alpine` - linux; amd64
@@ -320,7 +320,7 @@ $ docker pull chronograf@sha256:3c19429c7fcd24b55b98761b46a6e5115d7ba9348fbe48f8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -533,7 +533,7 @@ $ docker pull chronograf@sha256:96255563a0f40d99b020410ebe817af3bfd5d8cf6bdde976
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `chronograf:1.6.2-alpine` - linux; amd64
@@ -616,7 +616,7 @@ $ docker pull chronograf@sha256:d99e6350737fa7a4ef92e8fe153e11a8e55f113851c76325
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -829,7 +829,7 @@ $ docker pull chronograf@sha256:2a506b16f05ed98563f442490f072e41c2c728b3bc2b22af
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `chronograf:1.7-alpine` - linux; amd64
@@ -912,7 +912,7 @@ $ docker pull chronograf@sha256:d99e6350737fa7a4ef92e8fe153e11a8e55f113851c76325
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -1125,7 +1125,7 @@ $ docker pull chronograf@sha256:2a506b16f05ed98563f442490f072e41c2c728b3bc2b22af
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `chronograf:1.7.17-alpine` - linux; amd64
@@ -1208,7 +1208,7 @@ $ docker pull chronograf@sha256:5fcaa81ff0c52dfd8d025d6ba7a25bc9b0623a40d7178598
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -1421,7 +1421,7 @@ $ docker pull chronograf@sha256:a5cbcfd2bfc1c933986ccca221a0d540377ce3c034476353
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `chronograf:1.8-alpine` - linux; amd64
@@ -1504,7 +1504,7 @@ $ docker pull chronograf@sha256:5fcaa81ff0c52dfd8d025d6ba7a25bc9b0623a40d7178598
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -1717,7 +1717,7 @@ $ docker pull chronograf@sha256:a5cbcfd2bfc1c933986ccca221a0d540377ce3c034476353
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `chronograf:1.8.8-alpine` - linux; amd64
@@ -1800,7 +1800,7 @@ $ docker pull chronograf@sha256:a5cbcfd2bfc1c933986ccca221a0d540377ce3c034476353
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `chronograf:alpine` - linux; amd64
@@ -1883,7 +1883,7 @@ $ docker pull chronograf@sha256:5fcaa81ff0c52dfd8d025d6ba7a25bc9b0623a40d7178598
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8

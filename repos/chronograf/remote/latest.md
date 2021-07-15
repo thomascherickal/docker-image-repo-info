@@ -5,7 +5,7 @@ $ docker pull chronograf@sha256:5fcaa81ff0c52dfd8d025d6ba7a25bc9b0623a40d7178598
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
