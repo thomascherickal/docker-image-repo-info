@@ -5,7 +5,7 @@ $ docker pull clojure@sha256:8503a73ad24f6bc1bac18128eac06b51ef271dbd7ee0cb73c56
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `clojure:openjdk-17-tools-deps-alpine` - linux; amd64

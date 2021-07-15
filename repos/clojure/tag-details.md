@@ -121,7 +121,7 @@ $ docker pull clojure@sha256:e45faa028c8243abe957cc3dd4fefab55565383b086b3b4bdd9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -324,7 +324,7 @@ $ docker pull clojure@sha256:e45faa028c8243abe957cc3dd4fefab55565383b086b3b4bdd9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -527,7 +527,7 @@ $ docker pull clojure@sha256:e45faa028c8243abe957cc3dd4fefab55565383b086b3b4bdd9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -730,7 +730,7 @@ $ docker pull clojure@sha256:811aa0490bea4906ea6f8a67ad9fe88a12ba237a5bfcea414f3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -897,7 +897,7 @@ $ docker pull clojure@sha256:e45faa028c8243abe957cc3dd4fefab55565383b086b3b4bdd9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -1100,7 +1100,7 @@ $ docker pull clojure@sha256:811aa0490bea4906ea6f8a67ad9fe88a12ba237a5bfcea414f3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -1267,7 +1267,7 @@ $ docker pull clojure@sha256:1ff29275ccfe83f86b3907073a359d47f72177b7e9946b5356c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -1498,7 +1498,7 @@ $ docker pull clojure@sha256:4545e63d7773e3ade3700646c590ca1c82b4ffcda609e3c5661
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -1701,7 +1701,7 @@ $ docker pull clojure@sha256:4545e63d7773e3ade3700646c590ca1c82b4ffcda609e3c5661
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -1904,7 +1904,7 @@ $ docker pull clojure@sha256:4545e63d7773e3ade3700646c590ca1c82b4ffcda609e3c5661
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -2107,7 +2107,7 @@ $ docker pull clojure@sha256:9e9d844125881521881d1c2593d508a8a841177cd1987003cc8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -2274,7 +2274,7 @@ $ docker pull clojure@sha256:4545e63d7773e3ade3700646c590ca1c82b4ffcda609e3c5661
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -2477,7 +2477,7 @@ $ docker pull clojure@sha256:9e9d844125881521881d1c2593d508a8a841177cd1987003cc8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -2644,7 +2644,7 @@ $ docker pull clojure@sha256:4545e63d7773e3ade3700646c590ca1c82b4ffcda609e3c5661
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -2847,7 +2847,7 @@ $ docker pull clojure@sha256:e45faa028c8243abe957cc3dd4fefab55565383b086b3b4bdd9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -3050,7 +3050,7 @@ $ docker pull clojure@sha256:e45faa028c8243abe957cc3dd4fefab55565383b086b3b4bdd9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -3253,7 +3253,7 @@ $ docker pull clojure@sha256:e45faa028c8243abe957cc3dd4fefab55565383b086b3b4bdd9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -3456,7 +3456,7 @@ $ docker pull clojure@sha256:811aa0490bea4906ea6f8a67ad9fe88a12ba237a5bfcea414f3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -3623,7 +3623,7 @@ $ docker pull clojure@sha256:e45faa028c8243abe957cc3dd4fefab55565383b086b3b4bdd9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -3826,7 +3826,7 @@ $ docker pull clojure@sha256:811aa0490bea4906ea6f8a67ad9fe88a12ba237a5bfcea414f3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -3993,7 +3993,7 @@ $ docker pull clojure@sha256:4545e63d7773e3ade3700646c590ca1c82b4ffcda609e3c5661
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -4196,7 +4196,7 @@ $ docker pull clojure@sha256:4545e63d7773e3ade3700646c590ca1c82b4ffcda609e3c5661
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -4399,7 +4399,7 @@ $ docker pull clojure@sha256:4545e63d7773e3ade3700646c590ca1c82b4ffcda609e3c5661
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -4602,7 +4602,7 @@ $ docker pull clojure@sha256:4545e63d7773e3ade3700646c590ca1c82b4ffcda609e3c5661
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -4805,7 +4805,7 @@ $ docker pull clojure@sha256:9e9d844125881521881d1c2593d508a8a841177cd1987003cc8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -4972,7 +4972,7 @@ $ docker pull clojure@sha256:4545e63d7773e3ade3700646c590ca1c82b4ffcda609e3c5661
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -5175,7 +5175,7 @@ $ docker pull clojure@sha256:9e9d844125881521881d1c2593d508a8a841177cd1987003cc8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -5342,7 +5342,7 @@ $ docker pull clojure@sha256:9e9d844125881521881d1c2593d508a8a841177cd1987003cc8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -5509,7 +5509,7 @@ $ docker pull clojure@sha256:062c1d2e9b5e607e555fc37302c1d572bbbe7ec0b12fe46b74a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -5688,7 +5688,7 @@ $ docker pull clojure@sha256:062c1d2e9b5e607e555fc37302c1d572bbbe7ec0b12fe46b74a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -5867,7 +5867,7 @@ $ docker pull clojure@sha256:062c1d2e9b5e607e555fc37302c1d572bbbe7ec0b12fe46b74a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -6046,7 +6046,7 @@ $ docker pull clojure@sha256:ca6a16049459fafb2d944884e71912d5326092e3ae94fb71d3e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -6189,7 +6189,7 @@ $ docker pull clojure@sha256:062c1d2e9b5e607e555fc37302c1d572bbbe7ec0b12fe46b74a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -6368,7 +6368,7 @@ $ docker pull clojure@sha256:ca6a16049459fafb2d944884e71912d5326092e3ae94fb71d3e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -6511,7 +6511,7 @@ $ docker pull clojure@sha256:3691fb94e2e1a566abba48807da59d6f4618212358aef0dc657
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -6666,7 +6666,7 @@ $ docker pull clojure@sha256:3ae69f6b0ab573f0fdb3b3a9f82cc8b7466b80b59a7a61bbe89
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -6821,7 +6821,7 @@ $ docker pull clojure@sha256:3ae69f6b0ab573f0fdb3b3a9f82cc8b7466b80b59a7a61bbe89
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -6976,7 +6976,7 @@ $ docker pull clojure@sha256:49bcce9c141c780562b11c466ffa087c847ad5f38bf4b188c1c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -7167,7 +7167,7 @@ $ docker pull clojure@sha256:3ae69f6b0ab573f0fdb3b3a9f82cc8b7466b80b59a7a61bbe89
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -7322,7 +7322,7 @@ $ docker pull clojure@sha256:49bcce9c141c780562b11c466ffa087c847ad5f38bf4b188c1c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -7513,7 +7513,7 @@ $ docker pull clojure@sha256:3ae69f6b0ab573f0fdb3b3a9f82cc8b7466b80b59a7a61bbe89
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -7668,7 +7668,7 @@ $ docker pull clojure@sha256:4f0708967c78c5fd188487c29421ca64fa69b2ca1733b212bd3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -7859,7 +7859,7 @@ $ docker pull clojure@sha256:3691fb94e2e1a566abba48807da59d6f4618212358aef0dc657
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -8014,7 +8014,7 @@ $ docker pull clojure@sha256:3691fb94e2e1a566abba48807da59d6f4618212358aef0dc657
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -8169,7 +8169,7 @@ $ docker pull clojure@sha256:4f0708967c78c5fd188487c29421ca64fa69b2ca1733b212bd3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -8360,7 +8360,7 @@ $ docker pull clojure@sha256:3691fb94e2e1a566abba48807da59d6f4618212358aef0dc657
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -8515,7 +8515,7 @@ $ docker pull clojure@sha256:4f0708967c78c5fd188487c29421ca64fa69b2ca1733b212bd3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -8706,7 +8706,7 @@ $ docker pull clojure@sha256:3691fb94e2e1a566abba48807da59d6f4618212358aef0dc657
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -8861,7 +8861,7 @@ $ docker pull clojure@sha256:3691fb94e2e1a566abba48807da59d6f4618212358aef0dc657
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -9016,7 +9016,7 @@ $ docker pull clojure@sha256:766d548ddaf0cf2a5ba61cf15bea90011331ac6dd19f55e07e8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -9147,7 +9147,7 @@ $ docker pull clojure@sha256:766d548ddaf0cf2a5ba61cf15bea90011331ac6dd19f55e07e8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -9278,7 +9278,7 @@ $ docker pull clojure@sha256:93d5d378ebe5f6196d2cf7e31b9e6411cf7616c21fdef0da767
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -9445,7 +9445,7 @@ $ docker pull clojure@sha256:766d548ddaf0cf2a5ba61cf15bea90011331ac6dd19f55e07e8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -9576,7 +9576,7 @@ $ docker pull clojure@sha256:93d5d378ebe5f6196d2cf7e31b9e6411cf7616c21fdef0da767
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -9743,7 +9743,7 @@ $ docker pull clojure@sha256:766d548ddaf0cf2a5ba61cf15bea90011331ac6dd19f55e07e8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -9874,7 +9874,7 @@ $ docker pull clojure@sha256:43d35b06c28e229c3dfc3429e16b37b835f250e0b0d679f1b51
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -10029,7 +10029,7 @@ $ docker pull clojure@sha256:e6f4b3bbebee85272c8b431ccedd1f8e7781a388d0d524a5d7a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `clojure:openjdk-17-alpine` - linux; amd64
@@ -10109,7 +10109,7 @@ $ docker pull clojure@sha256:d5ab541cc839eac02ba52544a8944dd0b6d0cfb43d36c75a5a2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -10264,7 +10264,7 @@ $ docker pull clojure@sha256:d5ab541cc839eac02ba52544a8944dd0b6d0cfb43d36c75a5a2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -10419,7 +10419,7 @@ $ docker pull clojure@sha256:e1531c1b8b7933fb377c92fe83cde710eea60f6a96312826189
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `clojure:openjdk-17-boot-2.8.3-alpine` - linux; amd64
@@ -10499,7 +10499,7 @@ $ docker pull clojure@sha256:7aff9e47cd45dbd86ea3bc9c309641bab798b02b46b46521daf
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -10690,7 +10690,7 @@ $ docker pull clojure@sha256:d5ab541cc839eac02ba52544a8944dd0b6d0cfb43d36c75a5a2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -10845,7 +10845,7 @@ $ docker pull clojure@sha256:e1531c1b8b7933fb377c92fe83cde710eea60f6a96312826189
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `clojure:openjdk-17-boot-alpine` - linux; amd64
@@ -10925,7 +10925,7 @@ $ docker pull clojure@sha256:7aff9e47cd45dbd86ea3bc9c309641bab798b02b46b46521daf
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -11116,7 +11116,7 @@ $ docker pull clojure@sha256:d5ab541cc839eac02ba52544a8944dd0b6d0cfb43d36c75a5a2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -11271,7 +11271,7 @@ $ docker pull clojure@sha256:ee7fb227594e289df81452d3677103eb889f9dd3aac18e7e862
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -11462,7 +11462,7 @@ $ docker pull clojure@sha256:43d35b06c28e229c3dfc3429e16b37b835f250e0b0d679f1b51
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -11617,7 +11617,7 @@ $ docker pull clojure@sha256:43d35b06c28e229c3dfc3429e16b37b835f250e0b0d679f1b51
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -11772,7 +11772,7 @@ $ docker pull clojure@sha256:e6f4b3bbebee85272c8b431ccedd1f8e7781a388d0d524a5d7a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `clojure:openjdk-17-lein-2.9.6-alpine` - linux; amd64
@@ -11852,7 +11852,7 @@ $ docker pull clojure@sha256:ee7fb227594e289df81452d3677103eb889f9dd3aac18e7e862
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -12043,7 +12043,7 @@ $ docker pull clojure@sha256:43d35b06c28e229c3dfc3429e16b37b835f250e0b0d679f1b51
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -12198,7 +12198,7 @@ $ docker pull clojure@sha256:e6f4b3bbebee85272c8b431ccedd1f8e7781a388d0d524a5d7a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `clojure:openjdk-17-lein-alpine` - linux; amd64
@@ -12278,7 +12278,7 @@ $ docker pull clojure@sha256:ee7fb227594e289df81452d3677103eb889f9dd3aac18e7e862
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -12469,7 +12469,7 @@ $ docker pull clojure@sha256:43d35b06c28e229c3dfc3429e16b37b835f250e0b0d679f1b51
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -12624,7 +12624,7 @@ $ docker pull clojure@sha256:43d35b06c28e229c3dfc3429e16b37b835f250e0b0d679f1b51
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -12779,7 +12779,7 @@ $ docker pull clojure@sha256:8f5b7d19dd0cfff9fc6d8725b3ff6001c3405371b86fd312cbf
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -12910,7 +12910,7 @@ $ docker pull clojure@sha256:8f5b7d19dd0cfff9fc6d8725b3ff6001c3405371b86fd312cbf
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -13041,7 +13041,7 @@ $ docker pull clojure@sha256:8503a73ad24f6bc1bac18128eac06b51ef271dbd7ee0cb73c56
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `clojure:openjdk-17-tools-deps-1.10.3.855-alpine` - linux; amd64
@@ -13109,7 +13109,7 @@ $ docker pull clojure@sha256:c9c7f0301c56aec01ef057f27f916843d0cbda9692954bda22a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -13276,7 +13276,7 @@ $ docker pull clojure@sha256:8f5b7d19dd0cfff9fc6d8725b3ff6001c3405371b86fd312cbf
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -13407,7 +13407,7 @@ $ docker pull clojure@sha256:8503a73ad24f6bc1bac18128eac06b51ef271dbd7ee0cb73c56
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `clojure:openjdk-17-tools-deps-alpine` - linux; amd64
@@ -13475,7 +13475,7 @@ $ docker pull clojure@sha256:c9c7f0301c56aec01ef057f27f916843d0cbda9692954bda22a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -13642,7 +13642,7 @@ $ docker pull clojure@sha256:8f5b7d19dd0cfff9fc6d8725b3ff6001c3405371b86fd312cbf
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -13773,7 +13773,7 @@ $ docker pull clojure@sha256:4e4f440f3a99a5dd81f4f92133016990a0eba0832c3712caa38
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `clojure:openjdk-8` - linux; amd64
@@ -13877,7 +13877,7 @@ $ docker pull clojure@sha256:7fbb58f4ce1e094bc45701f869d9162ff7c3d7d034aed0f98df
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `clojure:openjdk-8-boot` - linux; amd64
@@ -13981,7 +13981,7 @@ $ docker pull clojure@sha256:7fbb58f4ce1e094bc45701f869d9162ff7c3d7d034aed0f98df
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `clojure:openjdk-8-boot-2.8.3` - linux; amd64
@@ -14085,7 +14085,7 @@ $ docker pull clojure@sha256:7fbb58f4ce1e094bc45701f869d9162ff7c3d7d034aed0f98df
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `clojure:openjdk-8-boot-2.8.3-buster` - linux; amd64
@@ -14189,7 +14189,7 @@ $ docker pull clojure@sha256:3d28462874d52d43963bd7819f63430c150bde3be45c1fca4f3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `clojure:openjdk-8-boot-2.8.3-slim-buster` - linux; amd64
@@ -14275,7 +14275,7 @@ $ docker pull clojure@sha256:7fbb58f4ce1e094bc45701f869d9162ff7c3d7d034aed0f98df
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `clojure:openjdk-8-boot-buster` - linux; amd64
@@ -14379,7 +14379,7 @@ $ docker pull clojure@sha256:3d28462874d52d43963bd7819f63430c150bde3be45c1fca4f3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `clojure:openjdk-8-boot-slim-buster` - linux; amd64
@@ -14465,7 +14465,7 @@ $ docker pull clojure@sha256:4e4f440f3a99a5dd81f4f92133016990a0eba0832c3712caa38
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `clojure:openjdk-8-buster` - linux; amd64
@@ -14569,7 +14569,7 @@ $ docker pull clojure@sha256:4e4f440f3a99a5dd81f4f92133016990a0eba0832c3712caa38
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `clojure:openjdk-8-lein` - linux; amd64
@@ -14673,7 +14673,7 @@ $ docker pull clojure@sha256:4e4f440f3a99a5dd81f4f92133016990a0eba0832c3712caa38
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `clojure:openjdk-8-lein-2.9.6` - linux; amd64
@@ -14777,7 +14777,7 @@ $ docker pull clojure@sha256:4e4f440f3a99a5dd81f4f92133016990a0eba0832c3712caa38
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `clojure:openjdk-8-lein-2.9.6-buster` - linux; amd64
@@ -14881,7 +14881,7 @@ $ docker pull clojure@sha256:16979a7f841486323ef8a854c75a4d6414387e4e7e3114cae1d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `clojure:openjdk-8-lein-2.9.6-slim-buster` - linux; amd64
@@ -14967,7 +14967,7 @@ $ docker pull clojure@sha256:4e4f440f3a99a5dd81f4f92133016990a0eba0832c3712caa38
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `clojure:openjdk-8-lein-buster` - linux; amd64
@@ -15071,7 +15071,7 @@ $ docker pull clojure@sha256:16979a7f841486323ef8a854c75a4d6414387e4e7e3114cae1d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `clojure:openjdk-8-lein-slim-buster` - linux; amd64
@@ -15157,7 +15157,7 @@ $ docker pull clojure@sha256:16979a7f841486323ef8a854c75a4d6414387e4e7e3114cae1d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `clojure:openjdk-8-slim-buster` - linux; amd64
@@ -15243,7 +15243,7 @@ $ docker pull clojure@sha256:308f6611c58460692cd750e626fd6de1f82028f9b77859d5e62
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `clojure:openjdk-8-tools-deps` - linux; amd64
@@ -15335,7 +15335,7 @@ $ docker pull clojure@sha256:308f6611c58460692cd750e626fd6de1f82028f9b77859d5e62
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `clojure:openjdk-8-tools-deps-1.10.3.855` - linux; amd64
@@ -15427,7 +15427,7 @@ $ docker pull clojure@sha256:308f6611c58460692cd750e626fd6de1f82028f9b77859d5e62
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `clojure:openjdk-8-tools-deps-1.10.3.855-buster` - linux; amd64
@@ -15519,7 +15519,7 @@ $ docker pull clojure@sha256:8ed9d3557542a834a4b1896af016530d617409c5c2de15b3b90
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `clojure:openjdk-8-tools-deps-1.10.3.855-slim-buster` - linux; amd64
@@ -15593,7 +15593,7 @@ $ docker pull clojure@sha256:308f6611c58460692cd750e626fd6de1f82028f9b77859d5e62
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `clojure:openjdk-8-tools-deps-buster` - linux; amd64
@@ -15685,7 +15685,7 @@ $ docker pull clojure@sha256:8ed9d3557542a834a4b1896af016530d617409c5c2de15b3b90
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `clojure:openjdk-8-tools-deps-slim-buster` - linux; amd64
@@ -15759,7 +15759,7 @@ $ docker pull clojure@sha256:9e9d844125881521881d1c2593d508a8a841177cd1987003cc8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -15926,7 +15926,7 @@ $ docker pull clojure@sha256:062c1d2e9b5e607e555fc37302c1d572bbbe7ec0b12fe46b74a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -16105,7 +16105,7 @@ $ docker pull clojure@sha256:062c1d2e9b5e607e555fc37302c1d572bbbe7ec0b12fe46b74a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -16284,7 +16284,7 @@ $ docker pull clojure@sha256:062c1d2e9b5e607e555fc37302c1d572bbbe7ec0b12fe46b74a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -16463,7 +16463,7 @@ $ docker pull clojure@sha256:ca6a16049459fafb2d944884e71912d5326092e3ae94fb71d3e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -16606,7 +16606,7 @@ $ docker pull clojure@sha256:062c1d2e9b5e607e555fc37302c1d572bbbe7ec0b12fe46b74a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -16785,7 +16785,7 @@ $ docker pull clojure@sha256:ca6a16049459fafb2d944884e71912d5326092e3ae94fb71d3e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 

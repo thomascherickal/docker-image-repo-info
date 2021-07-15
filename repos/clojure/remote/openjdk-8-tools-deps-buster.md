@@ -5,7 +5,7 @@ $ docker pull clojure@sha256:308f6611c58460692cd750e626fd6de1f82028f9b77859d5e62
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `clojure:openjdk-8-tools-deps-buster` - linux; amd64

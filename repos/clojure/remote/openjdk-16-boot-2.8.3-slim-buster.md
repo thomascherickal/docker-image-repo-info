@@ -5,7 +5,7 @@ $ docker pull clojure@sha256:3ae69f6b0ab573f0fdb3b3a9f82cc8b7466b80b59a7a61bbe89
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
