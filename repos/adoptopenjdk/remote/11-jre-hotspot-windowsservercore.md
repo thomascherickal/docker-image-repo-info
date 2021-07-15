@@ -5,7 +5,7 @@ $ docker pull adoptopenjdk@sha256:6437f1e2a68ffed0b0e9a0dac9192e609018e30606ef98
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	windows version 10.0.17763.2061; amd64
 	-	windows version 10.0.14393.4530; amd64
 

@@ -5,7 +5,7 @@ $ docker pull adoptopenjdk@sha256:901d150d09eb78dade305884c1f760c5659f58db31c1c2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `adoptopenjdk:15-jre-openj9-windowsservercore-1809` - windows version 10.0.17763.2061; amd64

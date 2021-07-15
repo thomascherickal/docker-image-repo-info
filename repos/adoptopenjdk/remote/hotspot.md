@@ -5,7 +5,7 @@ $ docker pull adoptopenjdk@sha256:b5bfa13565c82d7a7c9ac5485a19ea6a11d227e5c36fc4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8

@@ -5,7 +5,7 @@ $ docker pull adoptopenjdk@sha256:77ce3f4522bb81ffbe40b83d9dbe190eba9a9a1c0dd8b1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `adoptopenjdk:8-jdk-hotspot-windowsservercore-1809` - windows version 10.0.17763.2061; amd64
