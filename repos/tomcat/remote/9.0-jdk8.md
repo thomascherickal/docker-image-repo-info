@@ -5,7 +5,7 @@ $ docker pull tomcat@sha256:7fd15f93c10fed0e1ee4a9a948b6eb28bd1f46e4391041f34598
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
