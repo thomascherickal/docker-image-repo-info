@@ -5,7 +5,7 @@ $ docker pull friendica@sha256:0a126f56db2477f19d3b657e061bd4a4e1876964df9e0b272
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7

@@ -42,7 +42,7 @@ $ docker pull friendica@sha256:e0cf97769f0db06e6d90cb463e7a66e2591ad936efeec33a9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -1667,7 +1667,7 @@ $ docker pull friendica@sha256:e0cf97769f0db06e6d90cb463e7a66e2591ad936efeec33a9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -3292,7 +3292,7 @@ $ docker pull friendica@sha256:6c442f4ff6cd064516085d096d2b6352087d5adaf5c636466
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -4677,7 +4677,7 @@ $ docker pull friendica@sha256:67c5f20e271e4bb9f9216362191e357c79b7a063bb4f9ee28
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -5634,7 +5634,7 @@ $ docker pull friendica@sha256:fcba187095e6049916aac62c50bdb2d678f3b7a9c15abc2a8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -7259,7 +7259,7 @@ $ docker pull friendica@sha256:fcba187095e6049916aac62c50bdb2d678f3b7a9c15abc2a8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -8884,7 +8884,7 @@ $ docker pull friendica@sha256:eb53b85a96cf6bf1a029fc64099da68bf702db7fbf229528c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -10269,7 +10269,7 @@ $ docker pull friendica@sha256:1d26591c5165d00c5e5d633a1dc7150eb2b1cfe6b87954000
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -11226,7 +11226,7 @@ $ docker pull friendica@sha256:f5eb154548e3d8dccdac12d48d19a5da0dd2c2573e93241b6
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -12851,7 +12851,7 @@ $ docker pull friendica@sha256:f5eb154548e3d8dccdac12d48d19a5da0dd2c2573e93241b6
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -14476,7 +14476,7 @@ $ docker pull friendica@sha256:821c99bef2ce0990137d305688c42e588b9adfeb671476281
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -15861,7 +15861,7 @@ $ docker pull friendica@sha256:b3561f93f1bcb15710279b263a4161dd9603d30eed4bdd20a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -16818,7 +16818,7 @@ $ docker pull friendica@sha256:7a715f268f963c99e7b2fc7641d3f53c0a42dd8094727d502
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -18443,7 +18443,7 @@ $ docker pull friendica@sha256:7a715f268f963c99e7b2fc7641d3f53c0a42dd8094727d502
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -20068,7 +20068,7 @@ $ docker pull friendica@sha256:0a126f56db2477f19d3b657e061bd4a4e1876964df9e0b272
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -21453,7 +21453,7 @@ $ docker pull friendica@sha256:7f2e0a2a136a66efe136c159b8781c9867a50cc693a310700
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -22410,7 +22410,7 @@ $ docker pull friendica@sha256:96ba572cd2537467b70033a36f9b9c84a60778d5f148aab92
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -23987,7 +23987,7 @@ $ docker pull friendica@sha256:96ba572cd2537467b70033a36f9b9c84a60778d5f148aab92
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -25564,7 +25564,7 @@ $ docker pull friendica@sha256:8caeb11f68f45906ae270491c4020b8f39c51b86418f40cbb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -26901,7 +26901,7 @@ $ docker pull friendica@sha256:9db4c626c95d674cc366c9aa6229437ae2e734682b88f20cc
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -27822,7 +27822,7 @@ $ docker pull friendica@sha256:7a715f268f963c99e7b2fc7641d3f53c0a42dd8094727d502
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -29447,7 +29447,7 @@ $ docker pull friendica@sha256:96ba572cd2537467b70033a36f9b9c84a60778d5f148aab92
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -31024,7 +31024,7 @@ $ docker pull friendica@sha256:96ba572cd2537467b70033a36f9b9c84a60778d5f148aab92
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -32601,7 +32601,7 @@ $ docker pull friendica@sha256:8caeb11f68f45906ae270491c4020b8f39c51b86418f40cbb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -33938,7 +33938,7 @@ $ docker pull friendica@sha256:9db4c626c95d674cc366c9aa6229437ae2e734682b88f20cc
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -34859,7 +34859,7 @@ $ docker pull friendica@sha256:0a126f56db2477f19d3b657e061bd4a4e1876964df9e0b272
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -36244,7 +36244,7 @@ $ docker pull friendica@sha256:7f2e0a2a136a66efe136c159b8781c9867a50cc693a310700
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -37201,7 +37201,7 @@ $ docker pull friendica@sha256:7a715f268f963c99e7b2fc7641d3f53c0a42dd8094727d502
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -38826,7 +38826,7 @@ $ docker pull friendica@sha256:7a715f268f963c99e7b2fc7641d3f53c0a42dd8094727d502
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -40451,7 +40451,7 @@ $ docker pull friendica@sha256:7a715f268f963c99e7b2fc7641d3f53c0a42dd8094727d502
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -42076,7 +42076,7 @@ $ docker pull friendica@sha256:0a126f56db2477f19d3b657e061bd4a4e1876964df9e0b272
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -43461,7 +43461,7 @@ $ docker pull friendica@sha256:7f2e0a2a136a66efe136c159b8781c9867a50cc693a310700
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
