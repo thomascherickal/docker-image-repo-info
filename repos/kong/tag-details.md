@@ -29,7 +29,7 @@ $ docker pull kong@sha256:c9872460e6c9cb05d5ac1f125fff571c00541d4da7438f5eb821e0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -190,7 +190,7 @@ $ docker pull kong@sha256:c9872460e6c9cb05d5ac1f125fff571c00541d4da7438f5eb821e0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -351,7 +351,7 @@ $ docker pull kong@sha256:af3b555aafa9057bf0cb66f7257fa5748e328a92cc8324ad5b9de0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `kong:2.4-centos` - linux; amd64
@@ -433,7 +433,7 @@ $ docker pull kong@sha256:84d82fdb8c6c70d4f42e429e44c229ceca18de6f687bdf3773fc2c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -610,7 +610,7 @@ $ docker pull kong@sha256:c9872460e6c9cb05d5ac1f125fff571c00541d4da7438f5eb821e0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -771,7 +771,7 @@ $ docker pull kong@sha256:c9872460e6c9cb05d5ac1f125fff571c00541d4da7438f5eb821e0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -932,7 +932,7 @@ $ docker pull kong@sha256:af3b555aafa9057bf0cb66f7257fa5748e328a92cc8324ad5b9de0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `kong:2.4.1-centos` - linux; amd64
@@ -1014,7 +1014,7 @@ $ docker pull kong@sha256:84d82fdb8c6c70d4f42e429e44c229ceca18de6f687bdf3773fc2c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -1191,7 +1191,7 @@ $ docker pull kong@sha256:7a33695e8c817dbc8776d5c8d0167457893d151b6c66f10ef52650
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `kong:2.5` - linux; amd64
@@ -1278,7 +1278,7 @@ $ docker pull kong@sha256:372f94e60ab235c10d72924ac7fdbee522f142235d9db4077c8737
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `kong:2.5-centos` - linux; amd64
@@ -1362,7 +1362,7 @@ $ docker pull kong@sha256:70c2e29713139f3a4fc04cb8f8f439bd4420035b78fc0622c7a467
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -1543,7 +1543,7 @@ $ docker pull kong@sha256:7a33695e8c817dbc8776d5c8d0167457893d151b6c66f10ef52650
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `kong:2.5.0` - linux; amd64
@@ -1630,7 +1630,7 @@ $ docker pull kong@sha256:7a33695e8c817dbc8776d5c8d0167457893d151b6c66f10ef52650
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `kong:2.5.0-alpine` - linux; amd64
@@ -1717,7 +1717,7 @@ $ docker pull kong@sha256:372f94e60ab235c10d72924ac7fdbee522f142235d9db4077c8737
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `kong:2.5.0-centos` - linux; amd64
@@ -1801,7 +1801,7 @@ $ docker pull kong@sha256:70c2e29713139f3a4fc04cb8f8f439bd4420035b78fc0622c7a467
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -1982,7 +1982,7 @@ $ docker pull kong@sha256:7a33695e8c817dbc8776d5c8d0167457893d151b6c66f10ef52650
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `kong:alpine` - linux; amd64
@@ -2069,7 +2069,7 @@ $ docker pull kong@sha256:372f94e60ab235c10d72924ac7fdbee522f142235d9db4077c8737
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `kong:centos` - linux; amd64
@@ -2153,7 +2153,7 @@ $ docker pull kong@sha256:7a33695e8c817dbc8776d5c8d0167457893d151b6c66f10ef52650
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `kong:latest` - linux; amd64
@@ -2240,7 +2240,7 @@ $ docker pull kong@sha256:70c2e29713139f3a4fc04cb8f8f439bd4420035b78fc0622c7a467
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 

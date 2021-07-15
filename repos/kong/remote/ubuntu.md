@@ -5,7 +5,7 @@ $ docker pull kong@sha256:70c2e29713139f3a4fc04cb8f8f439bd4420035b78fc0622c7a467
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
