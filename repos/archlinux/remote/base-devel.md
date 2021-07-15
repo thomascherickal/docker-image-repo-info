@@ -5,7 +5,7 @@ $ docker pull archlinux@sha256:0a5889239369ee41510f389c2c222a6bda369484bafdad68d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `archlinux:base-devel` - linux; amd64

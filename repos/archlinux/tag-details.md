@@ -15,7 +15,7 @@ $ docker pull archlinux@sha256:f89922ba60f7f19fc82ed1b23f6d701a9c8fccf38e077623f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `archlinux:base` - linux; amd64
@@ -59,7 +59,7 @@ $ docker pull archlinux@sha256:f89922ba60f7f19fc82ed1b23f6d701a9c8fccf38e077623f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `archlinux:base-20210711.0.28748` - linux; amd64
@@ -103,7 +103,7 @@ $ docker pull archlinux@sha256:0a5889239369ee41510f389c2c222a6bda369484bafdad68d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `archlinux:base-devel` - linux; amd64
@@ -147,7 +147,7 @@ $ docker pull archlinux@sha256:0a5889239369ee41510f389c2c222a6bda369484bafdad68d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `archlinux:base-devel-20210711.0.28748` - linux; amd64
@@ -191,7 +191,7 @@ $ docker pull archlinux@sha256:f89922ba60f7f19fc82ed1b23f6d701a9c8fccf38e077623f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `archlinux:latest` - linux; amd64
