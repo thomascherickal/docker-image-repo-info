@@ -160,7 +160,7 @@ $ docker pull haxe@sha256:b106f0590276d05e01ebdfe6b713664c4a041e1246e0d805a325ee
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	windows version 10.0.17763.2061; amd64
 	-	windows version 10.0.14393.4530; amd64
 
@@ -458,7 +458,7 @@ $ docker pull haxe@sha256:d4fe4ce972fa11ed9101ebca179d64b5f76c8dd6c5b26733d26154
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -686,7 +686,7 @@ $ docker pull haxe@sha256:b106f0590276d05e01ebdfe6b713664c4a041e1246e0d805a325ee
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	windows version 10.0.17763.2061; amd64
 	-	windows version 10.0.14393.4530; amd64
 
@@ -984,7 +984,7 @@ $ docker pull haxe@sha256:0f1f894e083a2312d445712f1b0c3a4f01012e0ce854941847f9e5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `haxe:3.1-windowsservercore-1809` - windows version 10.0.17763.2061; amd64
@@ -1137,7 +1137,7 @@ $ docker pull haxe@sha256:dccdaba0414cd78b9d8413391f15e0e15267d9630f3fcd2c9daeaf
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.14393.4530; amd64
 
 ### `haxe:3.1-windowsservercore-ltsc2016` - windows version 10.0.14393.4530; amd64
@@ -1291,7 +1291,7 @@ $ docker pull haxe@sha256:b106f0590276d05e01ebdfe6b713664c4a041e1246e0d805a325ee
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	windows version 10.0.17763.2061; amd64
 	-	windows version 10.0.14393.4530; amd64
 
@@ -1589,7 +1589,7 @@ $ docker pull haxe@sha256:d4fe4ce972fa11ed9101ebca179d64b5f76c8dd6c5b26733d26154
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -1817,7 +1817,7 @@ $ docker pull haxe@sha256:b106f0590276d05e01ebdfe6b713664c4a041e1246e0d805a325ee
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	windows version 10.0.17763.2061; amd64
 	-	windows version 10.0.14393.4530; amd64
 
@@ -2115,7 +2115,7 @@ $ docker pull haxe@sha256:0f1f894e083a2312d445712f1b0c3a4f01012e0ce854941847f9e5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `haxe:3.1.3-windowsservercore-1809` - windows version 10.0.17763.2061; amd64
@@ -2268,7 +2268,7 @@ $ docker pull haxe@sha256:dccdaba0414cd78b9d8413391f15e0e15267d9630f3fcd2c9daeaf
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.14393.4530; amd64
 
 ### `haxe:3.1.3-windowsservercore-ltsc2016` - windows version 10.0.14393.4530; amd64
@@ -2422,7 +2422,7 @@ $ docker pull haxe@sha256:f3b8e654c089d4097613a5a0f31000e49087939dab62fe878225c6
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -2939,7 +2939,7 @@ $ docker pull haxe@sha256:bf13422833ff521224287406fdf32134ee1086aa3724b2f4015262
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -3046,7 +3046,7 @@ $ docker pull haxe@sha256:f5f06ca49b7fbe3ae4c6587a307f75be8202c64bf358a16af97609
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -3153,7 +3153,7 @@ $ docker pull haxe@sha256:6e1d6e99257e47107b90b8b06f66018fa8a1e6becbf6b3113a3621
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -3260,7 +3260,7 @@ $ docker pull haxe@sha256:423d284eabfa9030c46aa4203947cde38bc4ed1100f8d252ea705c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -3367,7 +3367,7 @@ $ docker pull haxe@sha256:bf13422833ff521224287406fdf32134ee1086aa3724b2f4015262
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -3474,7 +3474,7 @@ $ docker pull haxe@sha256:3b343aad398147061a067b9752b95f4df473062224cb36493e6847
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -3702,7 +3702,7 @@ $ docker pull haxe@sha256:95c4d47a96de5e2c2aba61b0bb272841a9c44dda6f2498488b136a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -3930,7 +3930,7 @@ $ docker pull haxe@sha256:9216548e7c56b3f1f885933488f3d7d80e05a5ac11fda9c69f87c3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	windows version 10.0.17763.2061; amd64
 	-	windows version 10.0.14393.4530; amd64
 
@@ -4228,7 +4228,7 @@ $ docker pull haxe@sha256:b8048e4fd7a54e21a62f4fc4b4978154a567b070dc334fa449df66
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `haxe:3.2-windowsservercore-1809` - windows version 10.0.17763.2061; amd64
@@ -4381,7 +4381,7 @@ $ docker pull haxe@sha256:96cba2fe1b569ee14b6910d65364736ad22dd37cd70800687f3ef4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.14393.4530; amd64
 
 ### `haxe:3.2-windowsservercore-ltsc2016` - windows version 10.0.14393.4530; amd64
@@ -4535,7 +4535,7 @@ $ docker pull haxe@sha256:f3b8e654c089d4097613a5a0f31000e49087939dab62fe878225c6
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -5052,7 +5052,7 @@ $ docker pull haxe@sha256:bf13422833ff521224287406fdf32134ee1086aa3724b2f4015262
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -5159,7 +5159,7 @@ $ docker pull haxe@sha256:f5f06ca49b7fbe3ae4c6587a307f75be8202c64bf358a16af97609
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -5266,7 +5266,7 @@ $ docker pull haxe@sha256:6e1d6e99257e47107b90b8b06f66018fa8a1e6becbf6b3113a3621
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -5373,7 +5373,7 @@ $ docker pull haxe@sha256:423d284eabfa9030c46aa4203947cde38bc4ed1100f8d252ea705c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -5480,7 +5480,7 @@ $ docker pull haxe@sha256:bf13422833ff521224287406fdf32134ee1086aa3724b2f4015262
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -5587,7 +5587,7 @@ $ docker pull haxe@sha256:3b343aad398147061a067b9752b95f4df473062224cb36493e6847
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -5815,7 +5815,7 @@ $ docker pull haxe@sha256:95c4d47a96de5e2c2aba61b0bb272841a9c44dda6f2498488b136a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -6043,7 +6043,7 @@ $ docker pull haxe@sha256:9216548e7c56b3f1f885933488f3d7d80e05a5ac11fda9c69f87c3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	windows version 10.0.17763.2061; amd64
 	-	windows version 10.0.14393.4530; amd64
 
@@ -6341,7 +6341,7 @@ $ docker pull haxe@sha256:b8048e4fd7a54e21a62f4fc4b4978154a567b070dc334fa449df66
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `haxe:3.2.1-windowsservercore-1809` - windows version 10.0.17763.2061; amd64
@@ -6494,7 +6494,7 @@ $ docker pull haxe@sha256:96cba2fe1b569ee14b6910d65364736ad22dd37cd70800687f3ef4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.14393.4530; amd64
 
 ### `haxe:3.2.1-windowsservercore-ltsc2016` - windows version 10.0.14393.4530; amd64
@@ -6648,7 +6648,7 @@ $ docker pull haxe@sha256:e85359f8fa86bd0c21abc5bd9f6b3ed7c79c5e3b788637f1817a76
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -7165,7 +7165,7 @@ $ docker pull haxe@sha256:2d9930738adf5a9bbdbb5efa72538e3b0203b303d210b2174407b0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -7272,7 +7272,7 @@ $ docker pull haxe@sha256:a9f8077ecf40294861f6dbb2e22fb9d08b1d14a8b182bc36a0d359
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -7379,7 +7379,7 @@ $ docker pull haxe@sha256:84f832fc8a4cbfe299f02ae76da575b7b0ce567f2fc4f623d7390b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -7486,7 +7486,7 @@ $ docker pull haxe@sha256:128f8666f2ced6a9598d79b1b6b795ec3561d7b37fad69d5cdbb81
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -7593,7 +7593,7 @@ $ docker pull haxe@sha256:2d9930738adf5a9bbdbb5efa72538e3b0203b303d210b2174407b0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -7700,7 +7700,7 @@ $ docker pull haxe@sha256:06d2a3ee02816ec1a06cb77a03c85a95fe2a4a7c0ecd1b07bf9cdf
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -7928,7 +7928,7 @@ $ docker pull haxe@sha256:5e639bf7bb20663ae98b7451adfba3033a4984872cbe2e8cb9d07f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -8156,7 +8156,7 @@ $ docker pull haxe@sha256:cf23bb79c3b4fc70abb761a8a6297291e97b56a72824d3de3ac0f2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	windows version 10.0.17763.2061; amd64
 	-	windows version 10.0.14393.4530; amd64
 
@@ -8454,7 +8454,7 @@ $ docker pull haxe@sha256:75278add7070af5e9709ba883ea6c7204989d2cea09ae5f80f2eb5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `haxe:3.3-windowsservercore-1809` - windows version 10.0.17763.2061; amd64
@@ -8607,7 +8607,7 @@ $ docker pull haxe@sha256:a3acd7ed1ccce3ccfb042afaeedeef5240cd9f0e03dd20a866a242
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.14393.4530; amd64
 
 ### `haxe:3.3-windowsservercore-ltsc2016` - windows version 10.0.14393.4530; amd64
@@ -8761,7 +8761,7 @@ $ docker pull haxe@sha256:e85359f8fa86bd0c21abc5bd9f6b3ed7c79c5e3b788637f1817a76
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -9278,7 +9278,7 @@ $ docker pull haxe@sha256:2d9930738adf5a9bbdbb5efa72538e3b0203b303d210b2174407b0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -9385,7 +9385,7 @@ $ docker pull haxe@sha256:a9f8077ecf40294861f6dbb2e22fb9d08b1d14a8b182bc36a0d359
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -9492,7 +9492,7 @@ $ docker pull haxe@sha256:84f832fc8a4cbfe299f02ae76da575b7b0ce567f2fc4f623d7390b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -9599,7 +9599,7 @@ $ docker pull haxe@sha256:128f8666f2ced6a9598d79b1b6b795ec3561d7b37fad69d5cdbb81
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -9706,7 +9706,7 @@ $ docker pull haxe@sha256:2d9930738adf5a9bbdbb5efa72538e3b0203b303d210b2174407b0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -9813,7 +9813,7 @@ $ docker pull haxe@sha256:06d2a3ee02816ec1a06cb77a03c85a95fe2a4a7c0ecd1b07bf9cdf
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -10041,7 +10041,7 @@ $ docker pull haxe@sha256:e85359f8fa86bd0c21abc5bd9f6b3ed7c79c5e3b788637f1817a76
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -10558,7 +10558,7 @@ $ docker pull haxe@sha256:2d9930738adf5a9bbdbb5efa72538e3b0203b303d210b2174407b0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -10665,7 +10665,7 @@ $ docker pull haxe@sha256:a9f8077ecf40294861f6dbb2e22fb9d08b1d14a8b182bc36a0d359
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -10772,7 +10772,7 @@ $ docker pull haxe@sha256:84f832fc8a4cbfe299f02ae76da575b7b0ce567f2fc4f623d7390b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -10879,7 +10879,7 @@ $ docker pull haxe@sha256:128f8666f2ced6a9598d79b1b6b795ec3561d7b37fad69d5cdbb81
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -10986,7 +10986,7 @@ $ docker pull haxe@sha256:2d9930738adf5a9bbdbb5efa72538e3b0203b303d210b2174407b0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -11093,7 +11093,7 @@ $ docker pull haxe@sha256:06d2a3ee02816ec1a06cb77a03c85a95fe2a4a7c0ecd1b07bf9cdf
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -11321,7 +11321,7 @@ $ docker pull haxe@sha256:5e639bf7bb20663ae98b7451adfba3033a4984872cbe2e8cb9d07f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -11549,7 +11549,7 @@ $ docker pull haxe@sha256:cf23bb79c3b4fc70abb761a8a6297291e97b56a72824d3de3ac0f2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	windows version 10.0.17763.2061; amd64
 	-	windows version 10.0.14393.4530; amd64
 
@@ -11847,7 +11847,7 @@ $ docker pull haxe@sha256:75278add7070af5e9709ba883ea6c7204989d2cea09ae5f80f2eb5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `haxe:3.3.0-rc.1-windowsservercore-1809` - windows version 10.0.17763.2061; amd64
@@ -12000,7 +12000,7 @@ $ docker pull haxe@sha256:a3acd7ed1ccce3ccfb042afaeedeef5240cd9f0e03dd20a866a242
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.14393.4530; amd64
 
 ### `haxe:3.3.0-rc.1-windowsservercore-ltsc2016` - windows version 10.0.14393.4530; amd64
@@ -12154,7 +12154,7 @@ $ docker pull haxe@sha256:5e639bf7bb20663ae98b7451adfba3033a4984872cbe2e8cb9d07f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -12382,7 +12382,7 @@ $ docker pull haxe@sha256:cf23bb79c3b4fc70abb761a8a6297291e97b56a72824d3de3ac0f2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	windows version 10.0.17763.2061; amd64
 	-	windows version 10.0.14393.4530; amd64
 
@@ -12680,7 +12680,7 @@ $ docker pull haxe@sha256:75278add7070af5e9709ba883ea6c7204989d2cea09ae5f80f2eb5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `haxe:3.3.0-windowsservercore-1809` - windows version 10.0.17763.2061; amd64
@@ -12833,7 +12833,7 @@ $ docker pull haxe@sha256:a3acd7ed1ccce3ccfb042afaeedeef5240cd9f0e03dd20a866a242
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.14393.4530; amd64
 
 ### `haxe:3.3.0-windowsservercore-ltsc2016` - windows version 10.0.14393.4530; amd64
@@ -12987,7 +12987,7 @@ $ docker pull haxe@sha256:f1023c6034ec2135f7ad48ed2628a432072fb764074f89dbf5cd8f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -13504,7 +13504,7 @@ $ docker pull haxe@sha256:fd64b02cbdeaa1099cbdbd39170f7bbda2b2788226f311af577880
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -13611,7 +13611,7 @@ $ docker pull haxe@sha256:6c997173571e7e825d9e71c123b07f3378fbd280b4e8080628fcfa
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -13718,7 +13718,7 @@ $ docker pull haxe@sha256:e39de43f45fb129679a1bb5cbec89876851c1bf46c18c9b12d18e7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -13825,7 +13825,7 @@ $ docker pull haxe@sha256:a647e35b7a44dffa5a705daaa15e39b3be2b3ca13b58111f3f50c7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -13932,7 +13932,7 @@ $ docker pull haxe@sha256:fd64b02cbdeaa1099cbdbd39170f7bbda2b2788226f311af577880
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -14039,7 +14039,7 @@ $ docker pull haxe@sha256:46afeba03187799024972ca4afc4d4b5ecfc766c357a083b88b17f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -14267,7 +14267,7 @@ $ docker pull haxe@sha256:c1207ed61b5e63de9b1b1cb9c641b43122231fbb06d9bb0995dd66
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -14495,7 +14495,7 @@ $ docker pull haxe@sha256:dec653daf8ae62752380db4f0c7c6ac4694ef6b2503b2e4de1ad67
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	windows version 10.0.17763.2061; amd64
 	-	windows version 10.0.14393.4530; amd64
 
@@ -14793,7 +14793,7 @@ $ docker pull haxe@sha256:72b7862b67fde65715ae21390a682aedcba44e000fbbd642599f8c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `haxe:3.4-windowsservercore-1809` - windows version 10.0.17763.2061; amd64
@@ -14946,7 +14946,7 @@ $ docker pull haxe@sha256:94d5c08a2a7f7741a645d0d0187381481a8e246245ebd14409a22e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.14393.4530; amd64
 
 ### `haxe:3.4-windowsservercore-ltsc2016` - windows version 10.0.14393.4530; amd64
@@ -15100,7 +15100,7 @@ $ docker pull haxe@sha256:f1023c6034ec2135f7ad48ed2628a432072fb764074f89dbf5cd8f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -15617,7 +15617,7 @@ $ docker pull haxe@sha256:fd64b02cbdeaa1099cbdbd39170f7bbda2b2788226f311af577880
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -15724,7 +15724,7 @@ $ docker pull haxe@sha256:6c997173571e7e825d9e71c123b07f3378fbd280b4e8080628fcfa
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -15831,7 +15831,7 @@ $ docker pull haxe@sha256:e39de43f45fb129679a1bb5cbec89876851c1bf46c18c9b12d18e7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -15938,7 +15938,7 @@ $ docker pull haxe@sha256:a647e35b7a44dffa5a705daaa15e39b3be2b3ca13b58111f3f50c7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -16045,7 +16045,7 @@ $ docker pull haxe@sha256:fd64b02cbdeaa1099cbdbd39170f7bbda2b2788226f311af577880
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -16152,7 +16152,7 @@ $ docker pull haxe@sha256:46afeba03187799024972ca4afc4d4b5ecfc766c357a083b88b17f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -16380,7 +16380,7 @@ $ docker pull haxe@sha256:c1207ed61b5e63de9b1b1cb9c641b43122231fbb06d9bb0995dd66
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -16608,7 +16608,7 @@ $ docker pull haxe@sha256:dec653daf8ae62752380db4f0c7c6ac4694ef6b2503b2e4de1ad67
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	windows version 10.0.17763.2061; amd64
 	-	windows version 10.0.14393.4530; amd64
 
@@ -16906,7 +16906,7 @@ $ docker pull haxe@sha256:72b7862b67fde65715ae21390a682aedcba44e000fbbd642599f8c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `haxe:3.4.7-windowsservercore-1809` - windows version 10.0.17763.2061; amd64
@@ -17059,7 +17059,7 @@ $ docker pull haxe@sha256:94d5c08a2a7f7741a645d0d0187381481a8e246245ebd14409a22e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.14393.4530; amd64
 
 ### `haxe:3.4.7-windowsservercore-ltsc2016` - windows version 10.0.14393.4530; amd64
@@ -17213,7 +17213,7 @@ $ docker pull haxe@sha256:3393b887afe2688c0a2ec5f1f1bda4b63b557daa4acd1ecab53848
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -17730,7 +17730,7 @@ $ docker pull haxe@sha256:4e6cdbe60cd152eb2a8c97c23ef302064e57e35bd387648f074837
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -17837,7 +17837,7 @@ $ docker pull haxe@sha256:7f7f70428e117b1a6fba0225caae6b444f7661ebcc9a219cc315f3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -17944,7 +17944,7 @@ $ docker pull haxe@sha256:f48a8133905216419239eb4cce323a03bf05204814433477b54ed5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -18051,7 +18051,7 @@ $ docker pull haxe@sha256:64ba3be38ce28b295849707fe3d2ccca1aec7039f2cd80532c79b1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -18158,7 +18158,7 @@ $ docker pull haxe@sha256:4e6cdbe60cd152eb2a8c97c23ef302064e57e35bd387648f074837
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -18265,7 +18265,7 @@ $ docker pull haxe@sha256:4ed79fd39fc0f1b4d87b0d21b66f91efb668f0d78f3f5dbad7ad20
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -18493,7 +18493,7 @@ $ docker pull haxe@sha256:937c53f7b9561e2355409a9824679d3c0d15eab6b6deee1974a349
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -18721,7 +18721,7 @@ $ docker pull haxe@sha256:8afe2dba995319ce37ab9307ba4333251deadd17fd1f776056443c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	windows version 10.0.17763.2061; amd64
 	-	windows version 10.0.14393.4530; amd64
 
@@ -19019,7 +19019,7 @@ $ docker pull haxe@sha256:edbe9f49ebfd3dec3479eb2d63d20dccc3011d7dd68f8d4eb83cb6
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `haxe:4.0-windowsservercore-1809` - windows version 10.0.17763.2061; amd64
@@ -19172,7 +19172,7 @@ $ docker pull haxe@sha256:7ccf664abd62dd006fd5f59a4dfd9ad6350e58ce3ce894fd083bb6
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.14393.4530; amd64
 
 ### `haxe:4.0-windowsservercore-ltsc2016` - windows version 10.0.14393.4530; amd64
@@ -19326,7 +19326,7 @@ $ docker pull haxe@sha256:3393b887afe2688c0a2ec5f1f1bda4b63b557daa4acd1ecab53848
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -19843,7 +19843,7 @@ $ docker pull haxe@sha256:4e6cdbe60cd152eb2a8c97c23ef302064e57e35bd387648f074837
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -19950,7 +19950,7 @@ $ docker pull haxe@sha256:7f7f70428e117b1a6fba0225caae6b444f7661ebcc9a219cc315f3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -20057,7 +20057,7 @@ $ docker pull haxe@sha256:f48a8133905216419239eb4cce323a03bf05204814433477b54ed5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -20164,7 +20164,7 @@ $ docker pull haxe@sha256:64ba3be38ce28b295849707fe3d2ccca1aec7039f2cd80532c79b1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -20271,7 +20271,7 @@ $ docker pull haxe@sha256:4e6cdbe60cd152eb2a8c97c23ef302064e57e35bd387648f074837
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -20378,7 +20378,7 @@ $ docker pull haxe@sha256:4ed79fd39fc0f1b4d87b0d21b66f91efb668f0d78f3f5dbad7ad20
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -20606,7 +20606,7 @@ $ docker pull haxe@sha256:937c53f7b9561e2355409a9824679d3c0d15eab6b6deee1974a349
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -20834,7 +20834,7 @@ $ docker pull haxe@sha256:8afe2dba995319ce37ab9307ba4333251deadd17fd1f776056443c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	windows version 10.0.17763.2061; amd64
 	-	windows version 10.0.14393.4530; amd64
 
@@ -21132,7 +21132,7 @@ $ docker pull haxe@sha256:edbe9f49ebfd3dec3479eb2d63d20dccc3011d7dd68f8d4eb83cb6
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `haxe:4.0.5-windowsservercore-1809` - windows version 10.0.17763.2061; amd64
@@ -21285,7 +21285,7 @@ $ docker pull haxe@sha256:7ccf664abd62dd006fd5f59a4dfd9ad6350e58ce3ce894fd083bb6
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.14393.4530; amd64
 
 ### `haxe:4.0.5-windowsservercore-ltsc2016` - windows version 10.0.14393.4530; amd64
@@ -21439,7 +21439,7 @@ $ docker pull haxe@sha256:e47cf8069cf3af29361601e1659314087fcffb85c9d69949417fd0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -21956,7 +21956,7 @@ $ docker pull haxe@sha256:fab9bc9e32b0ac90a24f7b9c030ad2294e6c98bfd0e490d64c2e62
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -22063,7 +22063,7 @@ $ docker pull haxe@sha256:57bf16eabfe6db6d5e9f037a69eecf7618022923f5b8b746b30e80
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -22170,7 +22170,7 @@ $ docker pull haxe@sha256:345003de6eb058715623287dd15f93da5f7f3395e10378935c7169
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -22277,7 +22277,7 @@ $ docker pull haxe@sha256:75d72b69faa8db0aa7263769913edb2042af7876a94e1de7d50939
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -22384,7 +22384,7 @@ $ docker pull haxe@sha256:fab9bc9e32b0ac90a24f7b9c030ad2294e6c98bfd0e490d64c2e62
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -22491,7 +22491,7 @@ $ docker pull haxe@sha256:29973ae461587ccc97a57bc50ea96b4130f89815c25e900fcb0c45
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -22719,7 +22719,7 @@ $ docker pull haxe@sha256:24ebff578d5e66118693aef453ce6d6e5c41be87b45dd27e3ce58a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	windows version 10.0.17763.2061; amd64
 	-	windows version 10.0.14393.4530; amd64
 
@@ -23017,7 +23017,7 @@ $ docker pull haxe@sha256:a9511fd198ac7b078428df0c0b77ac8d7ae2f5e22a6c22d855ccae
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `haxe:4.1-windowsservercore-1809` - windows version 10.0.17763.2061; amd64
@@ -23170,7 +23170,7 @@ $ docker pull haxe@sha256:3bea3950e985df1d6b9fc9de016a5cdccb08b9fbee127f82c9eaed
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.14393.4530; amd64
 
 ### `haxe:4.1-windowsservercore-ltsc2016` - windows version 10.0.14393.4530; amd64
@@ -23324,7 +23324,7 @@ $ docker pull haxe@sha256:e47cf8069cf3af29361601e1659314087fcffb85c9d69949417fd0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -23841,7 +23841,7 @@ $ docker pull haxe@sha256:fab9bc9e32b0ac90a24f7b9c030ad2294e6c98bfd0e490d64c2e62
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -23948,7 +23948,7 @@ $ docker pull haxe@sha256:57bf16eabfe6db6d5e9f037a69eecf7618022923f5b8b746b30e80
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -24055,7 +24055,7 @@ $ docker pull haxe@sha256:345003de6eb058715623287dd15f93da5f7f3395e10378935c7169
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -24162,7 +24162,7 @@ $ docker pull haxe@sha256:75d72b69faa8db0aa7263769913edb2042af7876a94e1de7d50939
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -24269,7 +24269,7 @@ $ docker pull haxe@sha256:fab9bc9e32b0ac90a24f7b9c030ad2294e6c98bfd0e490d64c2e62
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -24376,7 +24376,7 @@ $ docker pull haxe@sha256:29973ae461587ccc97a57bc50ea96b4130f89815c25e900fcb0c45
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -24604,7 +24604,7 @@ $ docker pull haxe@sha256:24ebff578d5e66118693aef453ce6d6e5c41be87b45dd27e3ce58a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	windows version 10.0.17763.2061; amd64
 	-	windows version 10.0.14393.4530; amd64
 
@@ -24902,7 +24902,7 @@ $ docker pull haxe@sha256:a9511fd198ac7b078428df0c0b77ac8d7ae2f5e22a6c22d855ccae
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `haxe:4.1.5-windowsservercore-1809` - windows version 10.0.17763.2061; amd64
@@ -25055,7 +25055,7 @@ $ docker pull haxe@sha256:3bea3950e985df1d6b9fc9de016a5cdccb08b9fbee127f82c9eaed
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.14393.4530; amd64
 
 ### `haxe:4.1.5-windowsservercore-ltsc2016` - windows version 10.0.14393.4530; amd64
@@ -25209,7 +25209,7 @@ $ docker pull haxe@sha256:94720b87cf251452e7453c94139518d9d072ded8cd729ada3c7051
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -25726,7 +25726,7 @@ $ docker pull haxe@sha256:3251cd39fe88d92f3f076069de7a6767032365b74db5a58f938d91
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -25833,7 +25833,7 @@ $ docker pull haxe@sha256:b9a234bb99dcc2d24b9fcc4de7bb5d6503b11815ff2f8b60fccb5f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -25940,7 +25940,7 @@ $ docker pull haxe@sha256:fff6b7554dc9a07a92abb1b90636b2f2b2cffc2862b36d0da084d4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -26047,7 +26047,7 @@ $ docker pull haxe@sha256:f703f834773a762553616a93293b113368089061b330ffdb44e73d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -26154,7 +26154,7 @@ $ docker pull haxe@sha256:3251cd39fe88d92f3f076069de7a6767032365b74db5a58f938d91
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -26261,7 +26261,7 @@ $ docker pull haxe@sha256:f2e8eefb0d31c434dc457979bea05560e0cc2e84a1a85163a18115
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -26489,7 +26489,7 @@ $ docker pull haxe@sha256:e557b4b2ee54ca5b88dc551d2aca0220ff3a377c16067f02eae132
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	windows version 10.0.17763.2061; amd64
 	-	windows version 10.0.14393.4530; amd64
 
@@ -26787,7 +26787,7 @@ $ docker pull haxe@sha256:ddc219abf4128f15358a37dff746ccf4611256dd153e0f072ebe1c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `haxe:4.2-windowsservercore-1809` - windows version 10.0.17763.2061; amd64
@@ -26940,7 +26940,7 @@ $ docker pull haxe@sha256:60b1b743b8690e122c7e602b5f6e6abc4d14561b2f9f790b4db474
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.14393.4530; amd64
 
 ### `haxe:4.2-windowsservercore-ltsc2016` - windows version 10.0.14393.4530; amd64
@@ -27094,7 +27094,7 @@ $ docker pull haxe@sha256:94720b87cf251452e7453c94139518d9d072ded8cd729ada3c7051
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -27611,7 +27611,7 @@ $ docker pull haxe@sha256:3251cd39fe88d92f3f076069de7a6767032365b74db5a58f938d91
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -27718,7 +27718,7 @@ $ docker pull haxe@sha256:b9a234bb99dcc2d24b9fcc4de7bb5d6503b11815ff2f8b60fccb5f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -27825,7 +27825,7 @@ $ docker pull haxe@sha256:fff6b7554dc9a07a92abb1b90636b2f2b2cffc2862b36d0da084d4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -27932,7 +27932,7 @@ $ docker pull haxe@sha256:f703f834773a762553616a93293b113368089061b330ffdb44e73d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -28039,7 +28039,7 @@ $ docker pull haxe@sha256:3251cd39fe88d92f3f076069de7a6767032365b74db5a58f938d91
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -28146,7 +28146,7 @@ $ docker pull haxe@sha256:f2e8eefb0d31c434dc457979bea05560e0cc2e84a1a85163a18115
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -28374,7 +28374,7 @@ $ docker pull haxe@sha256:e557b4b2ee54ca5b88dc551d2aca0220ff3a377c16067f02eae132
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	windows version 10.0.17763.2061; amd64
 	-	windows version 10.0.14393.4530; amd64
 
@@ -28672,7 +28672,7 @@ $ docker pull haxe@sha256:ddc219abf4128f15358a37dff746ccf4611256dd153e0f072ebe1c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.17763.2061; amd64
 
 ### `haxe:4.2.3-windowsservercore-1809` - windows version 10.0.17763.2061; amd64
@@ -28825,7 +28825,7 @@ $ docker pull haxe@sha256:60b1b743b8690e122c7e602b5f6e6abc4d14561b2f9f790b4db474
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	windows version 10.0.14393.4530; amd64
 
 ### `haxe:4.2.3-windowsservercore-ltsc2016` - windows version 10.0.14393.4530; amd64
@@ -28979,7 +28979,7 @@ $ docker pull haxe@sha256:94720b87cf251452e7453c94139518d9d072ded8cd729ada3c7051
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
