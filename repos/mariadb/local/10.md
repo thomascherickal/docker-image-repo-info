@@ -1,20 +1,19 @@
-# `mariadb:10.5.11-focal`
+# `mariadb:10.6.3-focal`
 
 ## Docker Metadata
 
-- Image ID: `sha256:6d5c5ed114adac216fb8d7268ded8ae498b804ee04ac9b29b59d2abc6027d650`
-- Created: `2021-06-24T08:44:58.732280192Z`
-- Virtual Size: ~ 407.64 Mb  
+- Image ID: `sha256:f55fb7cb2f36d945c3bcb38d86768a3cd7415352889132ebcc5b59137442f7b6`
+- Created: `2021-07-14T00:56:50.57640473Z`
+- Virtual Size: ~ 409.06 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
 - Command: `["mysqld"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `GOSU_VERSION=1.12`
-  - `GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8`
-  - `MARIADB_MAJOR=10.5`
-  - `MARIADB_VERSION=1:10.5.11+maria~focal`
+  - `GOSU_VERSION=1.13`
+  - `MARIADB_MAJOR=10.6`
+  - `MARIADB_VERSION=1:10.6.3+maria~focal`
 
 ## `dpkg` (`.deb`-based packages)
 
