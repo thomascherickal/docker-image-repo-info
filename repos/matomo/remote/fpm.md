@@ -5,7 +5,7 @@ $ docker pull matomo@sha256:6a84bfac35ac682a6082c23792dbff405496772533d934f6cc2d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
