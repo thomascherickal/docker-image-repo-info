@@ -40,7 +40,7 @@ $ docker pull tomee@sha256:cf7ed3958c3761c093b717f3112c3c61f5421e69fa30a57e40aa4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `tomee:11-jre-8.0.6-microprofile` - linux; amd64
@@ -146,7 +146,7 @@ $ docker pull tomee@sha256:4d10d3f82781998582ae7448ecbb7f6df160836759078dec4fab3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `tomee:11-jre-8.0.6-plume` - linux; amd64
@@ -252,7 +252,7 @@ $ docker pull tomee@sha256:b81b828e600f02482e564e1d8706e2bcf31b46e464ed0de39e9e1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `tomee:11-jre-8.0.6-plus` - linux; amd64
@@ -358,7 +358,7 @@ $ docker pull tomee@sha256:567efb294217a19711dc6a91b9e399bb323c920abfc9f94825603
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `tomee:11-jre-8.0.6-webprofile` - linux; amd64
@@ -464,7 +464,7 @@ $ docker pull tomee@sha256:d518c8aa353f318a7025d9dbdce4ef39ed91cff3fcc9bef41bea9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `tomee:7` - linux; amd64
@@ -570,7 +570,7 @@ $ docker pull tomee@sha256:a8afef2de876dc31c6f95273348a6ae79a61d0bafe47dde0d4c03
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `tomee:7.0` - linux; amd64
@@ -676,7 +676,7 @@ $ docker pull tomee@sha256:73285f195abfb8dd99c7ed4aff6c23803c3eba81319a7cd76e9e5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `tomee:7.0.9-plume` - linux; amd64
@@ -782,7 +782,7 @@ $ docker pull tomee@sha256:8d535d8f50ecd34defd876021a97b94897bdba6619880c0eb4105
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `tomee:7.0.9-plus` - linux; amd64
@@ -888,7 +888,7 @@ $ docker pull tomee@sha256:d518c8aa353f318a7025d9dbdce4ef39ed91cff3fcc9bef41bea9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `tomee:7.1` - linux; amd64
@@ -994,7 +994,7 @@ $ docker pull tomee@sha256:5e81315c91371d45436ae413bb7b8a71c712ab3da594e663eefc5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `tomee:7.1.4-microprofile` - linux; amd64
@@ -1100,7 +1100,7 @@ $ docker pull tomee@sha256:8394dab66e36e64c1d1396dd4e09fdba4fbd94dede123e4555858
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `tomee:7.1.4-plume` - linux; amd64
@@ -1206,7 +1206,7 @@ $ docker pull tomee@sha256:3f5193c71d77b4914457c53e808ca76cf17a112463d41b28114fb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `tomee:7.1.4-plus` - linux; amd64
@@ -1312,7 +1312,7 @@ $ docker pull tomee@sha256:d518c8aa353f318a7025d9dbdce4ef39ed91cff3fcc9bef41bea9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `tomee:7.1.4-webprofile` - linux; amd64
@@ -1418,7 +1418,7 @@ $ docker pull tomee@sha256:567efb294217a19711dc6a91b9e399bb323c920abfc9f94825603
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `tomee:8` - linux; amd64
@@ -1524,7 +1524,7 @@ $ docker pull tomee@sha256:73285f195abfb8dd99c7ed4aff6c23803c3eba81319a7cd76e9e5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `tomee:8-jre-7.0.9-plume` - linux; amd64
@@ -1630,7 +1630,7 @@ $ docker pull tomee@sha256:8d535d8f50ecd34defd876021a97b94897bdba6619880c0eb4105
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `tomee:8-jre-7.0.9-plus` - linux; amd64
@@ -1736,7 +1736,7 @@ $ docker pull tomee@sha256:a8afef2de876dc31c6f95273348a6ae79a61d0bafe47dde0d4c03
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `tomee:8-jre-7.0.9-webprofile` - linux; amd64
@@ -1842,7 +1842,7 @@ $ docker pull tomee@sha256:5e81315c91371d45436ae413bb7b8a71c712ab3da594e663eefc5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `tomee:8-jre-7.1.4-microprofile` - linux; amd64
@@ -1948,7 +1948,7 @@ $ docker pull tomee@sha256:8394dab66e36e64c1d1396dd4e09fdba4fbd94dede123e4555858
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `tomee:8-jre-7.1.4-plume` - linux; amd64
@@ -2054,7 +2054,7 @@ $ docker pull tomee@sha256:3f5193c71d77b4914457c53e808ca76cf17a112463d41b28114fb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `tomee:8-jre-7.1.4-plus` - linux; amd64
@@ -2160,7 +2160,7 @@ $ docker pull tomee@sha256:d518c8aa353f318a7025d9dbdce4ef39ed91cff3fcc9bef41bea9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `tomee:8-jre-7.1.4-webprofile` - linux; amd64
@@ -2266,7 +2266,7 @@ $ docker pull tomee@sha256:a49956e58c3691cb93ed30c1f73c17be89e382218d12bb681916e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `tomee:8-jre-8.0.6-microprofile` - linux; amd64
@@ -2372,7 +2372,7 @@ $ docker pull tomee@sha256:f37b6013556d051d02b0e04211df999b212fe1d1d6c79bc7f3a30
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `tomee:8-jre-8.0.6-plume` - linux; amd64
@@ -2478,7 +2478,7 @@ $ docker pull tomee@sha256:ed81c0454e4aa7acc97150e9f0293a63499f106500a2e9bce874a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `tomee:8-jre-8.0.6-plus` - linux; amd64
@@ -2584,7 +2584,7 @@ $ docker pull tomee@sha256:d3af1ca534c917b444b3247309651cce7e24ddf031cb9c04fcafc
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `tomee:8-jre-8.0.6-webprofile` - linux; amd64
@@ -2690,7 +2690,7 @@ $ docker pull tomee@sha256:cf7ed3958c3761c093b717f3112c3c61f5421e69fa30a57e40aa4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `tomee:8.0.6-microprofile` - linux; amd64
@@ -2796,7 +2796,7 @@ $ docker pull tomee@sha256:4d10d3f82781998582ae7448ecbb7f6df160836759078dec4fab3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `tomee:8.0.6-plume` - linux; amd64
@@ -2902,7 +2902,7 @@ $ docker pull tomee@sha256:b81b828e600f02482e564e1d8706e2bcf31b46e464ed0de39e9e1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `tomee:8.0.6-plus` - linux; amd64
@@ -3008,7 +3008,7 @@ $ docker pull tomee@sha256:567efb294217a19711dc6a91b9e399bb323c920abfc9f94825603
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `tomee:8.0.6-webprofile` - linux; amd64
@@ -3114,7 +3114,7 @@ $ docker pull tomee@sha256:567efb294217a19711dc6a91b9e399bb323c920abfc9f94825603
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `tomee:latest` - linux; amd64

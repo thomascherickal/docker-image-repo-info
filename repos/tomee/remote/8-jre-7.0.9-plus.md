@@ -5,7 +5,7 @@ $ docker pull tomee@sha256:8d535d8f50ecd34defd876021a97b94897bdba6619880c0eb4105
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `tomee:8-jre-7.0.9-plus` - linux; amd64
