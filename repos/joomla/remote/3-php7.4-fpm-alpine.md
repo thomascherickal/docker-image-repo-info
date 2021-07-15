@@ -5,7 +5,7 @@ $ docker pull joomla@sha256:c1f50f349964f8facb3bad0d5de80daa7890c858969aa31d410c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
