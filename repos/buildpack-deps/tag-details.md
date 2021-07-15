@@ -73,7 +73,7 @@ $ docker pull buildpack-deps@sha256:b2de04f0e2cdb8f81853b1e1f5177f108ffb184b214a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -472,7 +472,7 @@ $ docker pull buildpack-deps@sha256:f265819163f7ff88f3917ebdf91d495c5fa01fa30682
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -799,7 +799,7 @@ $ docker pull buildpack-deps@sha256:702babfd524e6524bd440f56dd7c9592a3cbcfc675ea
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -1162,7 +1162,7 @@ $ docker pull buildpack-deps@sha256:ae53523694df5edcf40f5a7a2b68b102305a882b5ab3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -1477,7 +1477,7 @@ $ docker pull buildpack-deps@sha256:63d8f7e9e251c57e3609cd605bbd7342926aafe50d70
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -1720,7 +1720,7 @@ $ docker pull buildpack-deps@sha256:4a4e7d884c7fa77285fe6b683fc6e36da85474474ca4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -1999,7 +1999,7 @@ $ docker pull buildpack-deps@sha256:0be8978e4ad4e403e677f39927a7bc589a0e19cf3259
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -2263,7 +2263,7 @@ $ docker pull buildpack-deps@sha256:5d0ebb760a40d211805bb357e2076b120a0853198a0e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -2467,7 +2467,7 @@ $ docker pull buildpack-deps@sha256:517a5cd8009de8c96841540fbc3900d3726e44499072
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -2701,7 +2701,7 @@ $ docker pull buildpack-deps@sha256:135a3fbf8309905f065d95ef212412f5aa68bfea8b82
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -2965,7 +2965,7 @@ $ docker pull buildpack-deps@sha256:616b272ded42c7208911081efed5edd9c30941fbcf6f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -3169,7 +3169,7 @@ $ docker pull buildpack-deps@sha256:d23e9bded04da9370909c0d2f48c168ef8e46736ec4b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -3403,7 +3403,7 @@ $ docker pull buildpack-deps@sha256:09e533aa9c95bb4200168f7feb27d2617ec143418039
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -3695,7 +3695,7 @@ $ docker pull buildpack-deps@sha256:92569781f0c67055f64896713ba86777e83492e52a5b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -3927,7 +3927,7 @@ $ docker pull buildpack-deps@sha256:365c63f7c66d9b95be8e6fc70b609109b3970e37fd02
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -4189,7 +4189,7 @@ $ docker pull buildpack-deps@sha256:2cb5ce08ac2887e472f14c84cb6b8e7192890415c08c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -4351,7 +4351,7 @@ $ docker pull buildpack-deps@sha256:3479d2813ef60d37df31685b05ddeeadbc843cef0c4d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -4477,7 +4477,7 @@ $ docker pull buildpack-deps@sha256:f967a20e890a52e751021d4621bd604f399c96096267
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -4621,7 +4621,7 @@ $ docker pull buildpack-deps@sha256:ae53523694df5edcf40f5a7a2b68b102305a882b5ab3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -4936,7 +4936,7 @@ $ docker pull buildpack-deps@sha256:63d8f7e9e251c57e3609cd605bbd7342926aafe50d70
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -5179,7 +5179,7 @@ $ docker pull buildpack-deps@sha256:4a4e7d884c7fa77285fe6b683fc6e36da85474474ca4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -5458,7 +5458,7 @@ $ docker pull buildpack-deps@sha256:7cf1d89eca777b9719818431ea1690e1392b8f64d174
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -5875,7 +5875,7 @@ $ docker pull buildpack-deps@sha256:446d5ae8a88bd08b83aad5b73bdc72cbefe63e2b4a76
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -6196,7 +6196,7 @@ $ docker pull buildpack-deps@sha256:ece9dbafa8d4a7e4fa55ee46f22f3e63d41786c0321b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -6565,7 +6565,7 @@ $ docker pull buildpack-deps@sha256:128203abc1feabf1e0b2bef26a23860a7283770d25fc
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -6982,7 +6982,7 @@ $ docker pull buildpack-deps@sha256:0db82fd3e508b20a887ed972fb446ad17928ec4a7dc2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -7303,7 +7303,7 @@ $ docker pull buildpack-deps@sha256:0e6bd075c518382169e1ec912f50ca4c84e00e28d31c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -7672,7 +7672,7 @@ $ docker pull buildpack-deps@sha256:0db82fd3e508b20a887ed972fb446ad17928ec4a7dc2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -7993,7 +7993,7 @@ $ docker pull buildpack-deps@sha256:0be8978e4ad4e403e677f39927a7bc589a0e19cf3259
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -8257,7 +8257,7 @@ $ docker pull buildpack-deps@sha256:5d0ebb760a40d211805bb357e2076b120a0853198a0e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -8461,7 +8461,7 @@ $ docker pull buildpack-deps@sha256:517a5cd8009de8c96841540fbc3900d3726e44499072
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -8695,7 +8695,7 @@ $ docker pull buildpack-deps@sha256:135a3fbf8309905f065d95ef212412f5aa68bfea8b82
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -8959,7 +8959,7 @@ $ docker pull buildpack-deps@sha256:616b272ded42c7208911081efed5edd9c30941fbcf6f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -9163,7 +9163,7 @@ $ docker pull buildpack-deps@sha256:d23e9bded04da9370909c0d2f48c168ef8e46736ec4b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -9397,7 +9397,7 @@ $ docker pull buildpack-deps@sha256:09e533aa9c95bb4200168f7feb27d2617ec143418039
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -9689,7 +9689,7 @@ $ docker pull buildpack-deps@sha256:92569781f0c67055f64896713ba86777e83492e52a5b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -9921,7 +9921,7 @@ $ docker pull buildpack-deps@sha256:365c63f7c66d9b95be8e6fc70b609109b3970e37fd02
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -10183,7 +10183,7 @@ $ docker pull buildpack-deps@sha256:2cb5ce08ac2887e472f14c84cb6b8e7192890415c08c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -10345,7 +10345,7 @@ $ docker pull buildpack-deps@sha256:3479d2813ef60d37df31685b05ddeeadbc843cef0c4d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -10471,7 +10471,7 @@ $ docker pull buildpack-deps@sha256:f967a20e890a52e751021d4621bd604f399c96096267
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -10615,7 +10615,7 @@ $ docker pull buildpack-deps@sha256:128203abc1feabf1e0b2bef26a23860a7283770d25fc
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -11032,7 +11032,7 @@ $ docker pull buildpack-deps@sha256:04f933352c6a3e46933907f5a7fb6f37134e027207f5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -11296,7 +11296,7 @@ $ docker pull buildpack-deps@sha256:3d399c84813960993bd63eed9322b419dd57b07cd328
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -11500,7 +11500,7 @@ $ docker pull buildpack-deps@sha256:8dabe4df1318a2cc7d615d7ba3fb9d06b128843d1dcd
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -11734,7 +11734,7 @@ $ docker pull buildpack-deps@sha256:0e6bd075c518382169e1ec912f50ca4c84e00e28d31c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -12103,7 +12103,7 @@ $ docker pull buildpack-deps@sha256:96d46ae215d6de8e791db6b277ebfc1165dcce666966
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -12520,7 +12520,7 @@ $ docker pull buildpack-deps@sha256:37524856676b2d2a83dccd6d6fcda3984ee27a990f1e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 9
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -12880,7 +12880,7 @@ $ docker pull buildpack-deps@sha256:a25cb49c046cb28e094aedf9dd0bb5915a923d843d18
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -13249,7 +13249,7 @@ $ docker pull buildpack-deps@sha256:128203abc1feabf1e0b2bef26a23860a7283770d25fc
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -13666,7 +13666,7 @@ $ docker pull buildpack-deps@sha256:0db82fd3e508b20a887ed972fb446ad17928ec4a7dc2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -13987,7 +13987,7 @@ $ docker pull buildpack-deps@sha256:0e6bd075c518382169e1ec912f50ca4c84e00e28d31c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -14356,7 +14356,7 @@ $ docker pull buildpack-deps@sha256:04f933352c6a3e46933907f5a7fb6f37134e027207f5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -14620,7 +14620,7 @@ $ docker pull buildpack-deps@sha256:3d399c84813960993bd63eed9322b419dd57b07cd328
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -14824,7 +14824,7 @@ $ docker pull buildpack-deps@sha256:8dabe4df1318a2cc7d615d7ba3fb9d06b128843d1dcd
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -15058,7 +15058,7 @@ $ docker pull buildpack-deps@sha256:7cf1d89eca777b9719818431ea1690e1392b8f64d174
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -15475,7 +15475,7 @@ $ docker pull buildpack-deps@sha256:446d5ae8a88bd08b83aad5b73bdc72cbefe63e2b4a76
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -15796,7 +15796,7 @@ $ docker pull buildpack-deps@sha256:ece9dbafa8d4a7e4fa55ee46f22f3e63d41786c0321b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -16165,7 +16165,7 @@ $ docker pull buildpack-deps@sha256:96d46ae215d6de8e791db6b277ebfc1165dcce666966
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -16582,7 +16582,7 @@ $ docker pull buildpack-deps@sha256:37524856676b2d2a83dccd6d6fcda3984ee27a990f1e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 9
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -16942,7 +16942,7 @@ $ docker pull buildpack-deps@sha256:a25cb49c046cb28e094aedf9dd0bb5915a923d843d18
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -17311,7 +17311,7 @@ $ docker pull buildpack-deps@sha256:b2de04f0e2cdb8f81853b1e1f5177f108ffb184b214a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -17710,7 +17710,7 @@ $ docker pull buildpack-deps@sha256:f265819163f7ff88f3917ebdf91d495c5fa01fa30682
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -18037,7 +18037,7 @@ $ docker pull buildpack-deps@sha256:702babfd524e6524bd440f56dd7c9592a3cbcfc675ea
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8

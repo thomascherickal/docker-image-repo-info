@@ -5,7 +5,7 @@ $ docker pull buildpack-deps@sha256:96d46ae215d6de8e791db6b277ebfc1165dcce666966
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
