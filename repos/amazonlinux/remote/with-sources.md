@@ -5,7 +5,7 @@ $ docker pull amazonlinux@sha256:6492874e3eb5c5f17a672f13302e4750829dd47a769c724
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 

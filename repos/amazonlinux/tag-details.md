@@ -22,7 +22,7 @@ $ docker pull amazonlinux@sha256:d8db8960d84895fb10e491080d4069ac542aa06205a9ccf
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `amazonlinux:1` - linux; amd64
@@ -58,7 +58,7 @@ $ docker pull amazonlinux@sha256:bd7aca583738a44ccabf6582caa32ea1b3dbd5ffff26e06
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `amazonlinux:1-with-sources` - linux; amd64
@@ -100,7 +100,7 @@ $ docker pull amazonlinux@sha256:2e42b5d170dbb6d54d35b3b64627480de9687b52cfbab20
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -163,7 +163,7 @@ $ docker pull amazonlinux@sha256:6492874e3eb5c5f17a672f13302e4750829dd47a769c724
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -238,7 +238,7 @@ $ docker pull amazonlinux@sha256:2e42b5d170dbb6d54d35b3b64627480de9687b52cfbab20
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -301,7 +301,7 @@ $ docker pull amazonlinux@sha256:6492874e3eb5c5f17a672f13302e4750829dd47a769c724
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -376,7 +376,7 @@ $ docker pull amazonlinux@sha256:d8db8960d84895fb10e491080d4069ac542aa06205a9ccf
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `amazonlinux:2018.03` - linux; amd64
@@ -412,7 +412,7 @@ $ docker pull amazonlinux@sha256:bd7aca583738a44ccabf6582caa32ea1b3dbd5ffff26e06
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `amazonlinux:2018.03-with-sources` - linux; amd64
@@ -454,7 +454,7 @@ $ docker pull amazonlinux@sha256:d8db8960d84895fb10e491080d4069ac542aa06205a9ccf
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `amazonlinux:2018.03.0.20210521.1` - linux; amd64
@@ -490,7 +490,7 @@ $ docker pull amazonlinux@sha256:bd7aca583738a44ccabf6582caa32ea1b3dbd5ffff26e06
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `amazonlinux:2018.03.0.20210521.1-with-sources` - linux; amd64
@@ -532,7 +532,7 @@ $ docker pull amazonlinux@sha256:2e42b5d170dbb6d54d35b3b64627480de9687b52cfbab20
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -595,7 +595,7 @@ $ docker pull amazonlinux@sha256:6492874e3eb5c5f17a672f13302e4750829dd47a769c724
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
