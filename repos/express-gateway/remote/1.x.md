@@ -5,7 +5,7 @@ $ docker pull express-gateway@sha256:283a924807e5cb43cbef374816fe82ab7f602217fd0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 4
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
