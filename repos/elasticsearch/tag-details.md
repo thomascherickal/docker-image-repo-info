@@ -12,7 +12,7 @@ $ docker pull elasticsearch@sha256:355e30123bc37a1c407beaecffddc27006f4dc1304ae9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `elasticsearch:6.8.17` - linux; amd64
@@ -103,7 +103,7 @@ $ docker pull elasticsearch@sha256:759533051d0d5c67f7b09c8655ea00af3a8f15f98e2df
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
