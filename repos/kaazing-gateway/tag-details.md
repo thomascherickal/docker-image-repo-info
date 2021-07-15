@@ -14,7 +14,7 @@ $ docker pull kaazing-gateway@sha256:24a5c6d7ce8d77f9aae8ef6d9eeb0b60aab3c7b06d9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -223,7 +223,7 @@ $ docker pull kaazing-gateway@sha256:24a5c6d7ce8d77f9aae8ef6d9eeb0b60aab3c7b06d9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -432,7 +432,7 @@ $ docker pull kaazing-gateway@sha256:24a5c6d7ce8d77f9aae8ef6d9eeb0b60aab3c7b06d9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -641,7 +641,7 @@ $ docker pull kaazing-gateway@sha256:24a5c6d7ce8d77f9aae8ef6d9eeb0b60aab3c7b06d9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
