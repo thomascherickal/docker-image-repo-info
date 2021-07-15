@@ -15,7 +15,7 @@ $ docker pull arangodb@sha256:aa32cc1ff50a9241960a5cd565db634c32aec67523399534cb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `arangodb:3.6` - linux; amd64
@@ -92,7 +92,7 @@ $ docker pull arangodb@sha256:aa32cc1ff50a9241960a5cd565db634c32aec67523399534cb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `arangodb:3.6.14` - linux; amd64
@@ -169,7 +169,7 @@ $ docker pull arangodb@sha256:975d21be96c8bdf1e5d118562ef1464588d01bceab6146e17c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `arangodb:3.7` - linux; amd64
@@ -246,7 +246,7 @@ $ docker pull arangodb@sha256:975d21be96c8bdf1e5d118562ef1464588d01bceab6146e17c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `arangodb:3.7.12` - linux; amd64
@@ -323,7 +323,7 @@ $ docker pull arangodb@sha256:975d21be96c8bdf1e5d118562ef1464588d01bceab6146e17c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `arangodb:latest` - linux; amd64
