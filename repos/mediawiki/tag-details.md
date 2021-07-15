@@ -41,7 +41,7 @@ $ docker pull mediawiki@sha256:b9620680d261fa367f91b413b49c90d8189d91823fe61c2c4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -1118,7 +1118,7 @@ $ docker pull mediawiki@sha256:38c873741de23bc9135d57ca9de4bbdeaf5fad58c36c14ecd
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -2051,7 +2051,7 @@ $ docker pull mediawiki@sha256:6a26a6f12b05b7046c48c3e4982a6b88a3442dd5133c939cf
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -2948,7 +2948,7 @@ $ docker pull mediawiki@sha256:b9620680d261fa367f91b413b49c90d8189d91823fe61c2c4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -4025,7 +4025,7 @@ $ docker pull mediawiki@sha256:38c873741de23bc9135d57ca9de4bbdeaf5fad58c36c14ecd
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -4958,7 +4958,7 @@ $ docker pull mediawiki@sha256:6a26a6f12b05b7046c48c3e4982a6b88a3442dd5133c939cf
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -5855,7 +5855,7 @@ $ docker pull mediawiki@sha256:935848ebddd2aab77cc1aecce8b9b3363ccf8dbe258f9fe71
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -6968,7 +6968,7 @@ $ docker pull mediawiki@sha256:f64f08aba1e9986b0d1f1c13b854c3cb20bf28f41d97afd65
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -7865,7 +7865,7 @@ $ docker pull mediawiki@sha256:25e28f7b43168104fd0e3753b4331c1e470ddd35435f68e80
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -8762,7 +8762,7 @@ $ docker pull mediawiki@sha256:935848ebddd2aab77cc1aecce8b9b3363ccf8dbe258f9fe71
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -9875,7 +9875,7 @@ $ docker pull mediawiki@sha256:f64f08aba1e9986b0d1f1c13b854c3cb20bf28f41d97afd65
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -10772,7 +10772,7 @@ $ docker pull mediawiki@sha256:25e28f7b43168104fd0e3753b4331c1e470ddd35435f68e80
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -11669,7 +11669,7 @@ $ docker pull mediawiki@sha256:8461f84dd11d2434be4cfcd92bd9dbca3a1d69c88ec2c61a5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -12782,7 +12782,7 @@ $ docker pull mediawiki@sha256:855fad9b167873aed13fcb951f4743da1625396703745ba97
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -13679,7 +13679,7 @@ $ docker pull mediawiki@sha256:ca234f4aa20a87e0acb4b1502c24969dc0a273632f8750704
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -14576,7 +14576,7 @@ $ docker pull mediawiki@sha256:8461f84dd11d2434be4cfcd92bd9dbca3a1d69c88ec2c61a5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -15689,7 +15689,7 @@ $ docker pull mediawiki@sha256:855fad9b167873aed13fcb951f4743da1625396703745ba97
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -16586,7 +16586,7 @@ $ docker pull mediawiki@sha256:ca234f4aa20a87e0acb4b1502c24969dc0a273632f8750704
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -17483,7 +17483,7 @@ $ docker pull mediawiki@sha256:8461f84dd11d2434be4cfcd92bd9dbca3a1d69c88ec2c61a5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -18596,7 +18596,7 @@ $ docker pull mediawiki@sha256:935848ebddd2aab77cc1aecce8b9b3363ccf8dbe258f9fe71
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -19709,7 +19709,7 @@ $ docker pull mediawiki@sha256:f64f08aba1e9986b0d1f1c13b854c3cb20bf28f41d97afd65
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -20606,7 +20606,7 @@ $ docker pull mediawiki@sha256:25e28f7b43168104fd0e3753b4331c1e470ddd35435f68e80
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -21503,7 +21503,7 @@ $ docker pull mediawiki@sha256:b9620680d261fa367f91b413b49c90d8189d91823fe61c2c4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -22580,7 +22580,7 @@ $ docker pull mediawiki@sha256:38c873741de23bc9135d57ca9de4bbdeaf5fad58c36c14ecd
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -23513,7 +23513,7 @@ $ docker pull mediawiki@sha256:6a26a6f12b05b7046c48c3e4982a6b88a3442dd5133c939cf
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -24410,7 +24410,7 @@ $ docker pull mediawiki@sha256:935848ebddd2aab77cc1aecce8b9b3363ccf8dbe258f9fe71
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -25523,7 +25523,7 @@ $ docker pull mediawiki@sha256:f64f08aba1e9986b0d1f1c13b854c3cb20bf28f41d97afd65
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -26420,7 +26420,7 @@ $ docker pull mediawiki@sha256:25e28f7b43168104fd0e3753b4331c1e470ddd35435f68e80
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -27317,7 +27317,7 @@ $ docker pull mediawiki@sha256:8461f84dd11d2434be4cfcd92bd9dbca3a1d69c88ec2c61a5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -28430,7 +28430,7 @@ $ docker pull mediawiki@sha256:855fad9b167873aed13fcb951f4743da1625396703745ba97
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -29327,7 +29327,7 @@ $ docker pull mediawiki@sha256:ca234f4aa20a87e0acb4b1502c24969dc0a273632f8750704
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7

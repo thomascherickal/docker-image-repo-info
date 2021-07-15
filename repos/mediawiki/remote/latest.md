@@ -5,7 +5,7 @@ $ docker pull mediawiki@sha256:8461f84dd11d2434be4cfcd92bd9dbca3a1d69c88ec2c61a5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
