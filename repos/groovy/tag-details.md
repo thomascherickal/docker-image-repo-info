@@ -55,7 +55,7 @@ $ docker pull groovy@sha256:defa072ddaff6f74d0b9d296738adecaeab75a15aa4bc375572f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -539,7 +539,7 @@ $ docker pull groovy@sha256:b2cf94ebba8ba478a1d2efb9fdaa42c53ed3252dd6013d134d24
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -1023,7 +1023,7 @@ $ docker pull groovy@sha256:9f05abceb27aa4c6d1d8e83d40594fb053d2bfd2add0f4a4c529
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -1503,7 +1503,7 @@ $ docker pull groovy@sha256:75feb72a3a14adcca9158af76b6a7b43df8b5d29fbf5652f4abc
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -1983,7 +1983,7 @@ $ docker pull groovy@sha256:b2cf94ebba8ba478a1d2efb9fdaa42c53ed3252dd6013d134d24
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -2467,7 +2467,7 @@ $ docker pull groovy@sha256:defa072ddaff6f74d0b9d296738adecaeab75a15aa4bc375572f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -2951,7 +2951,7 @@ $ docker pull groovy@sha256:e72fc71f809dc5ddccd3eeb249188d5863d1b75c2c91064c83ff
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -3421,7 +3421,7 @@ $ docker pull groovy@sha256:aca37a0f1699a85ac36d3254d6370db72bf2224c9b39f39e37f9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -3891,7 +3891,7 @@ $ docker pull groovy@sha256:defa072ddaff6f74d0b9d296738adecaeab75a15aa4bc375572f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -4375,7 +4375,7 @@ $ docker pull groovy@sha256:24bff79b139b6b9c3f15ca5b1291e8a23cea84e519724fe65d5a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 4
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
@@ -4764,7 +4764,7 @@ $ docker pull groovy@sha256:76b6bca3116b760cf888f6e71c9393e5fb6d25096f3d3865b8ba
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 4
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
@@ -5153,7 +5153,7 @@ $ docker pull groovy@sha256:9f05abceb27aa4c6d1d8e83d40594fb053d2bfd2add0f4a4c529
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -5633,7 +5633,7 @@ $ docker pull groovy@sha256:75feb72a3a14adcca9158af76b6a7b43df8b5d29fbf5652f4abc
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -6113,7 +6113,7 @@ $ docker pull groovy@sha256:76b6bca3116b760cf888f6e71c9393e5fb6d25096f3d3865b8ba
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 4
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
@@ -6502,7 +6502,7 @@ $ docker pull groovy@sha256:24bff79b139b6b9c3f15ca5b1291e8a23cea84e519724fe65d5a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 4
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
@@ -6891,7 +6891,7 @@ $ docker pull groovy@sha256:e72fc71f809dc5ddccd3eeb249188d5863d1b75c2c91064c83ff
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -7361,7 +7361,7 @@ $ docker pull groovy@sha256:aca37a0f1699a85ac36d3254d6370db72bf2224c9b39f39e37f9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -7831,7 +7831,7 @@ $ docker pull groovy@sha256:24bff79b139b6b9c3f15ca5b1291e8a23cea84e519724fe65d5a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 4
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
@@ -8220,7 +8220,7 @@ $ docker pull groovy@sha256:c3262bd18175ea51a36ce30e717f993da800b319edaab1ad623d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -8704,7 +8704,7 @@ $ docker pull groovy@sha256:52cc955cd08bfba8098f86a40c9c3b490c9c49484f12d8a17d7b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -9188,7 +9188,7 @@ $ docker pull groovy@sha256:2f3356ca5dd70c3a63539f4760dd89e21f7b377df54187617302
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -9668,7 +9668,7 @@ $ docker pull groovy@sha256:63b92de49ff100f5004f13cc788c9ca53f0b9a72d72faa343c4d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -10148,7 +10148,7 @@ $ docker pull groovy@sha256:52cc955cd08bfba8098f86a40c9c3b490c9c49484f12d8a17d7b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -10632,7 +10632,7 @@ $ docker pull groovy@sha256:c3262bd18175ea51a36ce30e717f993da800b319edaab1ad623d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -11116,7 +11116,7 @@ $ docker pull groovy@sha256:fbbd9bef3b31a105b2b3443ba2a46a027927460672dcdb1fce7d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -11586,7 +11586,7 @@ $ docker pull groovy@sha256:1addf1ec9930e41ec97556d6f608f8d1892ab123f3aac8165f8f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -12056,7 +12056,7 @@ $ docker pull groovy@sha256:c3262bd18175ea51a36ce30e717f993da800b319edaab1ad623d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -12540,7 +12540,7 @@ $ docker pull groovy@sha256:5be5563f6c6d42b7f33868019dc615965f003e3fabbb001b3fbe
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 4
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
@@ -12929,7 +12929,7 @@ $ docker pull groovy@sha256:1b77f6f2f8580f8510f319576218bc5ac0d804cb413945c8ac0a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 4
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
@@ -13318,7 +13318,7 @@ $ docker pull groovy@sha256:2f3356ca5dd70c3a63539f4760dd89e21f7b377df54187617302
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -13798,7 +13798,7 @@ $ docker pull groovy@sha256:63b92de49ff100f5004f13cc788c9ca53f0b9a72d72faa343c4d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -14278,7 +14278,7 @@ $ docker pull groovy@sha256:1b77f6f2f8580f8510f319576218bc5ac0d804cb413945c8ac0a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 4
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
@@ -14667,7 +14667,7 @@ $ docker pull groovy@sha256:5be5563f6c6d42b7f33868019dc615965f003e3fabbb001b3fbe
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 4
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
@@ -15056,7 +15056,7 @@ $ docker pull groovy@sha256:fbbd9bef3b31a105b2b3443ba2a46a027927460672dcdb1fce7d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -15526,7 +15526,7 @@ $ docker pull groovy@sha256:1addf1ec9930e41ec97556d6f608f8d1892ab123f3aac8165f8f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -15996,7 +15996,7 @@ $ docker pull groovy@sha256:5be5563f6c6d42b7f33868019dc615965f003e3fabbb001b3fbe
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 4
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
@@ -16385,7 +16385,7 @@ $ docker pull groovy@sha256:b2cf94ebba8ba478a1d2efb9fdaa42c53ed3252dd6013d134d24
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -16869,7 +16869,7 @@ $ docker pull groovy@sha256:9f05abceb27aa4c6d1d8e83d40594fb053d2bfd2add0f4a4c529
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -17349,7 +17349,7 @@ $ docker pull groovy@sha256:75feb72a3a14adcca9158af76b6a7b43df8b5d29fbf5652f4abc
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -17829,7 +17829,7 @@ $ docker pull groovy@sha256:b2cf94ebba8ba478a1d2efb9fdaa42c53ed3252dd6013d134d24
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -18313,7 +18313,7 @@ $ docker pull groovy@sha256:defa072ddaff6f74d0b9d296738adecaeab75a15aa4bc375572f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -18797,7 +18797,7 @@ $ docker pull groovy@sha256:e72fc71f809dc5ddccd3eeb249188d5863d1b75c2c91064c83ff
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -19267,7 +19267,7 @@ $ docker pull groovy@sha256:aca37a0f1699a85ac36d3254d6370db72bf2224c9b39f39e37f9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -19737,7 +19737,7 @@ $ docker pull groovy@sha256:defa072ddaff6f74d0b9d296738adecaeab75a15aa4bc375572f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -20221,7 +20221,7 @@ $ docker pull groovy@sha256:defa072ddaff6f74d0b9d296738adecaeab75a15aa4bc375572f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8

@@ -5,7 +5,7 @@ $ docker pull groovy@sha256:75feb72a3a14adcca9158af76b6a7b43df8b5d29fbf5652f4abc
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
