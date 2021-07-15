@@ -24,7 +24,7 @@ $ docker pull eclipse-mosquitto@sha256:63b1534f696db3fe2baca3bfa374182c0e4b35a5b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm64 variant v8
@@ -345,7 +345,7 @@ $ docker pull eclipse-mosquitto@sha256:63b1534f696db3fe2baca3bfa374182c0e4b35a5b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm64 variant v8
@@ -666,7 +666,7 @@ $ docker pull eclipse-mosquitto@sha256:c5d17d67a185fe2a0db0e674fe14b90fb3106f653
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm64 variant v8
@@ -987,7 +987,7 @@ $ docker pull eclipse-mosquitto@sha256:192d4048fddb0bcbbd1f4dc9f13686e543fbf5bd4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm64 variant v8
@@ -1308,7 +1308,7 @@ $ docker pull eclipse-mosquitto@sha256:c5d17d67a185fe2a0db0e674fe14b90fb3106f653
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm64 variant v8
@@ -1629,7 +1629,7 @@ $ docker pull eclipse-mosquitto@sha256:192d4048fddb0bcbbd1f4dc9f13686e543fbf5bd4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm64 variant v8
@@ -1950,7 +1950,7 @@ $ docker pull eclipse-mosquitto@sha256:117b5e492421408e0adf19af42963bbabbe39bf2f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm64 variant v8
@@ -2271,7 +2271,7 @@ $ docker pull eclipse-mosquitto@sha256:19017db24589e97a3467412ccc6aded525d4bf2f1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm64 variant v8
@@ -2592,7 +2592,7 @@ $ docker pull eclipse-mosquitto@sha256:117b5e492421408e0adf19af42963bbabbe39bf2f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm64 variant v8
@@ -2913,7 +2913,7 @@ $ docker pull eclipse-mosquitto@sha256:19017db24589e97a3467412ccc6aded525d4bf2f1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm64 variant v8
@@ -3234,7 +3234,7 @@ $ docker pull eclipse-mosquitto@sha256:117b5e492421408e0adf19af42963bbabbe39bf2f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm64 variant v8
@@ -3555,7 +3555,7 @@ $ docker pull eclipse-mosquitto@sha256:19017db24589e97a3467412ccc6aded525d4bf2f1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm64 variant v8
@@ -3876,7 +3876,7 @@ $ docker pull eclipse-mosquitto@sha256:117b5e492421408e0adf19af42963bbabbe39bf2f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm64 variant v8
@@ -4197,7 +4197,7 @@ $ docker pull eclipse-mosquitto@sha256:19017db24589e97a3467412ccc6aded525d4bf2f1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm64 variant v8

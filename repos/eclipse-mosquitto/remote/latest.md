@@ -5,7 +5,7 @@ $ docker pull eclipse-mosquitto@sha256:117b5e492421408e0adf19af42963bbabbe39bf2f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm64 variant v8
