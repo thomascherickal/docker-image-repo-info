@@ -5,7 +5,7 @@ $ docker pull drupal@sha256:4e3ea9266daca4af0f4335842322e601054caee45027d8dc455f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
