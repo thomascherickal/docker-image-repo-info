@@ -19,7 +19,7 @@ $ docker pull adminer@sha256:4b0399051b2411cc55d73e163e363e8000e816dfb5fcfb833de
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -1092,7 +1092,7 @@ $ docker pull adminer@sha256:bdef08250db3349593f8b73a70b722679f3df6c5da719d4ddf2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -2221,7 +2221,7 @@ $ docker pull adminer@sha256:4b0399051b2411cc55d73e163e363e8000e816dfb5fcfb833de
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -3294,7 +3294,7 @@ $ docker pull adminer@sha256:4b0399051b2411cc55d73e163e363e8000e816dfb5fcfb833de
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -4367,7 +4367,7 @@ $ docker pull adminer@sha256:bdef08250db3349593f8b73a70b722679f3df6c5da719d4ddf2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -5496,7 +5496,7 @@ $ docker pull adminer@sha256:4b0399051b2411cc55d73e163e363e8000e816dfb5fcfb833de
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -6569,7 +6569,7 @@ $ docker pull adminer@sha256:bdef08250db3349593f8b73a70b722679f3df6c5da719d4ddf2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -7698,7 +7698,7 @@ $ docker pull adminer@sha256:4b0399051b2411cc55d73e163e363e8000e816dfb5fcfb833de
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -8771,7 +8771,7 @@ $ docker pull adminer@sha256:4b0399051b2411cc55d73e163e363e8000e816dfb5fcfb833de
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
