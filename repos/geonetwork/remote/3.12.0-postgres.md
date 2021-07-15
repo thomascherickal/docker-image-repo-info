@@ -5,7 +5,7 @@ $ docker pull geonetwork@sha256:da70f86d0dc6016ab83e8b7b505d52e8580c4f2a90f6a2e5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
