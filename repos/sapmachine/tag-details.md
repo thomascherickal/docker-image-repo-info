@@ -16,7 +16,7 @@ $ docker pull sapmachine@sha256:8b33cc435bb5adec51f75bb04b222e45137300533e2f084e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `sapmachine:11` - linux; amd64
@@ -68,7 +68,7 @@ $ docker pull sapmachine@sha256:8b33cc435bb5adec51f75bb04b222e45137300533e2f084e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `sapmachine:11.0.11` - linux; amd64
@@ -120,7 +120,7 @@ $ docker pull sapmachine@sha256:860eb3ea290b4eb929ad2ca34c2cc60541bd101012978dac
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `sapmachine:16` - linux; amd64
@@ -172,7 +172,7 @@ $ docker pull sapmachine@sha256:860eb3ea290b4eb929ad2ca34c2cc60541bd101012978dac
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `sapmachine:16.0.1` - linux; amd64
@@ -224,7 +224,7 @@ $ docker pull sapmachine@sha256:860eb3ea290b4eb929ad2ca34c2cc60541bd101012978dac
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `sapmachine:latest` - linux; amd64
@@ -276,7 +276,7 @@ $ docker pull sapmachine@sha256:8b33cc435bb5adec51f75bb04b222e45137300533e2f084e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `sapmachine:lts` - linux; amd64
