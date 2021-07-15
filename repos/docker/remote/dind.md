@@ -5,7 +5,7 @@ $ docker pull docker@sha256:c979de0f48d11f806ca8b26c64c13f96a598433e9d3ba9923198
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 4
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
