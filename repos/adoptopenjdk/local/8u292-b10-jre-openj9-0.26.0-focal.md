@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:0c0116570191fbbf6c112df2c3b2ae7f1a64cbc7e03b8b881d22751d4a139b96`
-- Created: `2021-06-18T00:32:31.580743499Z`
-- Virtual Size: ~ 259.08 Mb  
+- Image ID: `sha256:f3db2cbe4236dde440f72c17a1761e3c3bb7966ccde02fd6813364013fd6e213`
+- Created: `2021-07-14T00:33:51.823027545Z`
+- Virtual Size: ~ 259.11 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["bash"]`
@@ -60,21 +60,25 @@ $ apt-get source -qq --print-uris adduser=3.118ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/a/adduser/adduser_3.118ubuntu2.tar.xz' adduser_3.118ubuntu2.tar.xz 222364 SHA256:9429124c39c381b541005da6f0ae29831bd6533dd65c923e06ca2a7c310db382
 ```
 
-### `dpkg` source package: `apt=2.0.5`
+### `dpkg` source package: `apt=2.0.6`
 
 Binary Packages:
 
-- `apt=2.0.5`
-- `libapt-pkg6.0:amd64=2.0.5`
+- `apt=2.0.6`
+- `libapt-pkg6.0:amd64=2.0.6`
 
 Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-pkg6.0/copyright`)
 
 - `GPL-2`
 - `GPLv2+`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris apt=2.0.6
+'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.0.6.dsc' apt_2.0.6.dsc 2835 SHA512:71a27905e35c3c53ed7e7cb255c203ff24b49a53e81d802425eca2ec6b3b587b54d54046f8970e79b51d2d23034b15509dda517d54cfd3699ab0f22111763a23
+'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.0.6.tar.xz' apt_2.0.6.tar.xz 2176328 SHA512:a62ca7245039791384137cc5a417a876346e570e1a6c3d9856242003ee393e91c013fe7df2154792ba0b222a95cfda31847a654c444061587353d9020d69a167
+```
 
 ### `dpkg` source package: `attr=1:2.4.48-5`
 
@@ -583,13 +587,13 @@ $ apt-get source -qq --print-uris freetype=2.10.1-2ubuntu0.1
 'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.10.1-2ubuntu0.1.debian.tar.xz' freetype_2.10.1-2ubuntu0.1.debian.tar.xz 115576 SHA512:c24138956061abdb0c22ade45eb5ef4daa24f798310691701525face08fe372d3e32d5000cc1f078acc733da40623cc061a7ab84dab64c649f484c840b110593
 ```
 
-### `dpkg` source package: `gcc-10=10.2.0-5ubuntu1~20.04`
+### `dpkg` source package: `gcc-10=10.3.0-1ubuntu1~20.04`
 
 Binary Packages:
 
-- `gcc-10-base:amd64=10.2.0-5ubuntu1~20.04`
-- `libgcc-s1:amd64=10.2.0-5ubuntu1~20.04`
-- `libstdc++6:amd64=10.2.0-5ubuntu1~20.04`
+- `gcc-10-base:amd64=10.3.0-1ubuntu1~20.04`
+- `libgcc-s1:amd64=10.3.0-1ubuntu1~20.04`
+- `libstdc++6:amd64=10.3.0-1ubuntu1~20.04`
 
 Licenses: (parsed from: `/usr/share/doc/gcc-10-base/copyright`, `/usr/share/doc/libgcc-s1/copyright`, `/usr/share/doc/libstdc++6/copyright`)
 
@@ -600,9 +604,14 @@ Licenses: (parsed from: `/usr/share/doc/gcc-10-base/copyright`, `/usr/share/doc/
 - `GPL-3`
 - `LGPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris gcc-10=10.3.0-1ubuntu1~20.04
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.3.0-1ubuntu1~20.04.dsc' gcc-10_10.3.0-1ubuntu1~20.04.dsc 31155 SHA512:c67d612edfbf2a97d4c3f436b1fdbc08b7387907a3e0cc49a9ba2a360db054b3d07082097c4b98abc9ace7b8902637f8d7126de229c164cab743eff4fd5d7520
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.3.0.orig.tar.gz' gcc-10_10.3.0.orig.tar.gz 83679201 SHA512:c7f0fb09c79bc8c372171df7f23af6970a389dcc1237ebc0821c0a754d93c6e4065433f7ad63aed9f9b8fce2da7fce3caa61ae2e2afab494d06bf33b06a10775
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.3.0-1ubuntu1~20.04.debian.tar.xz' gcc-10_10.3.0-1ubuntu1~20.04.debian.tar.xz 580864 SHA512:3ae060b517a67ae2410b48c83a7836ec25e83422cb3db5dbe55cce9e97609aff82062aa55a84c64ca9c52f405a41d2da20c1d016b15521102cac3b82895f3975
+```
 
 ### `dpkg` source package: `glibc=2.31-0ubuntu9.2`
 
@@ -1301,12 +1310,12 @@ $ apt-get source -qq --print-uris ncurses=6.2-0ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.2-0ubuntu2.debian.tar.xz' ncurses_6.2-0ubuntu2.debian.tar.xz 61192 SHA256:3377d203f2ab08b119ed22ac420152f3c28872201e35b25e62dfe07641ed750a
 ```
 
-### `dpkg` source package: `nettle=3.5.1+really3.5.1-2ubuntu0.1`
+### `dpkg` source package: `nettle=3.5.1+really3.5.1-2ubuntu0.2`
 
 Binary Packages:
 
-- `libhogweed5:amd64=3.5.1+really3.5.1-2ubuntu0.1`
-- `libnettle7:amd64=3.5.1+really3.5.1-2ubuntu0.1`
+- `libhogweed5:amd64=3.5.1+really3.5.1-2ubuntu0.2`
+- `libnettle7:amd64=3.5.1+really3.5.1-2ubuntu0.2`
 
 Licenses: (parsed from: `/usr/share/doc/libhogweed5/copyright`, `/usr/share/doc/libnettle7/copyright`)
 
@@ -1322,9 +1331,15 @@ Licenses: (parsed from: `/usr/share/doc/libhogweed5/copyright`, `/usr/share/doc/
 - `other`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris nettle=3.5.1+really3.5.1-2ubuntu0.2
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.5.1+really3.5.1-2ubuntu0.2.dsc' nettle_3.5.1+really3.5.1-2ubuntu0.2.dsc 2490 SHA512:a5b45f1154e48fd7d6c48c57ae17cdcb7cd4a352d6b97bb408a49f5f4f3b40388d23bc12b09602fc9d0d6e91e8bc5525b12f98568ec64c18c4d6ca9fe5048c36
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.5.1+really3.5.1.orig.tar.gz' nettle_3.5.1+really3.5.1.orig.tar.gz 1989593 SHA512:f738121b9091cbe79435fb5d46b45cf6f10912320c233829356908127bab1cac6946ca56e022a832380c44f2c10f21d2feef64cb0f4f41e3da4a681dc0131784
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.5.1+really3.5.1.orig.tar.gz.asc' nettle_3.5.1+really3.5.1.orig.tar.gz.asc 573 SHA512:d8921622f2165fb4a05e7e75f75d82c0eabb816f265bae3f3267def20d81386b1da1a29ebfc52bbe26875b94b2050dd5493119d0efcb5143bc21e2f69b8449dd
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.5.1+really3.5.1-2ubuntu0.2.debian.tar.xz' nettle_3.5.1+really3.5.1-2ubuntu0.2.debian.tar.xz 27228 SHA512:389c303e679b6b6714f824f22bc8675c1ea4bdab0108b69e9514613109573d01592e3f80bf9a144866a159a9a09fa0f3218d62b9f6978bdfe5e95a18bcfe3a88
+```
 
 ### `dpkg` source package: `nghttp2=1.40.0-1build1`
 
@@ -1522,12 +1537,12 @@ $ apt-get source -qq --print-uris perl=5.30.0-9ubuntu0.2
 'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.30.0-9ubuntu0.2.debian.tar.xz' perl_5.30.0-9ubuntu0.2.debian.tar.xz 167248 SHA512:841504df745d755603b6a592484ff91a44e4346adc96b01a0c0bce09205f46d4250a6aafbb7462510a150d1d2904ef6889f014bd5d33efc5f18bafd71cef8bce
 ```
 
-### `dpkg` source package: `procps=2:3.3.16-1ubuntu2.1`
+### `dpkg` source package: `procps=2:3.3.16-1ubuntu2.2`
 
 Binary Packages:
 
-- `libprocps8:amd64=2:3.3.16-1ubuntu2.1`
-- `procps=2:3.3.16-1ubuntu2.1`
+- `libprocps8:amd64=2:3.3.16-1ubuntu2.2`
+- `procps=2:3.3.16-1ubuntu2.2`
 
 Licenses: (parsed from: `/usr/share/doc/libprocps8/copyright`, `/usr/share/doc/procps/copyright`)
 
@@ -1538,9 +1553,14 @@ Licenses: (parsed from: `/usr/share/doc/libprocps8/copyright`, `/usr/share/doc/p
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris procps=2:3.3.16-1ubuntu2.2
+'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_3.3.16-1ubuntu2.2.dsc' procps_3.3.16-1ubuntu2.2.dsc 2242 SHA512:657223e718cd906db51163974224c04539fdc4a9980901448a11758ddcc7585988dfb55a93b33252920db358d7aa71b113b65a14b6c89c51de824eee60d02458
+'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_3.3.16.orig.tar.xz' procps_3.3.16.orig.tar.xz 621892 SHA512:38db4f72fe40c2f027b23b18bbc8c29cfcdf6bcdb029199fe4bebede153943aa884157f56e792c399f9a4949cc514687500bb99a75a5e7ad7b9e878f52090304
+'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_3.3.16-1ubuntu2.2.debian.tar.xz' procps_3.3.16-1ubuntu2.2.debian.tar.xz 33748 SHA512:1f6cb098dca2a6d58b9dc23e627bc421639fcf42e101295a868ba87600dacecdf4c87fe9694446f2d74a4be9017321c239a6dd88f6098b4954bf72b43b6ecff6
+```
 
 ### `dpkg` source package: `rtmpdump=2.4+20151223.gitfa8646d.1-2build1`
 
@@ -1645,12 +1665,12 @@ $ apt-get source -qq --print-uris sqlite3=3.31.1-4ubuntu0.2
 'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.31.1-4ubuntu0.2.debian.tar.xz' sqlite3_3.31.1-4ubuntu0.2.debian.tar.xz 33492 SHA512:87cc51bce108d6306d815683a1825b43a6e7a7d8dc2bade8ce34d3850b8a4437034b1383f5e60b8d9c4569e8ab5bb3eb28febda7745f4a9db01b5e1b0b11d5ae
 ```
 
-### `dpkg` source package: `systemd=245.4-4ubuntu3.6`
+### `dpkg` source package: `systemd=245.4-4ubuntu3.7`
 
 Binary Packages:
 
-- `libsystemd0:amd64=245.4-4ubuntu3.6`
-- `libudev1:amd64=245.4-4ubuntu3.6`
+- `libsystemd0:amd64=245.4-4ubuntu3.7`
+- `libudev1:amd64=245.4-4ubuntu3.7`
 
 Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/libudev1/copyright`)
 
@@ -1663,9 +1683,14 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris systemd=245.4-4ubuntu3.7
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.7.dsc' systemd_245.4-4ubuntu3.7.dsc 5291 SHA512:4af3abd8d317d2d352f196a16a1f8c71556dbab34d11f8504e3f321de14e1be104cb9a19648634259939b752fd92371cd38a25288030b4bc5a0aa21146c15fff
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4.orig.tar.gz' systemd_245.4.orig.tar.gz 9000780 SHA512:02036bb1ab05301a9d0dfdd4b9c9376e90134474482531e6e292122380be2f24f99177493dd3af6f8af1a8ed2599ee0996da91a3b1b7872bbfaf26a1c3e61b4c
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.7.debian.tar.xz' systemd_245.4-4ubuntu3.7.debian.tar.xz 247648 SHA512:ca9d4e0b1c4bab971d51ce640eb591a6e0fe076b6465bfc620c9962c16f64c248bcd7ed8d0eb4051ccf33c48d228d2af21291b9ca1b010d4f66958b3950499ab
+```
 
 ### `dpkg` source package: `sysvinit=2.96-2.1ubuntu1`
 
