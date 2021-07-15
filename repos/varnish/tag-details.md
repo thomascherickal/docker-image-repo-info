@@ -20,7 +20,7 @@ $ docker pull varnish@sha256:5b41623edd338ef6bb3b456fdfb79a1b60aba64d6d07b9ca5da
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `varnish:6` - linux; amd64
@@ -81,7 +81,7 @@ $ docker pull varnish@sha256:9308b1705476a5fe67b659e8d3250a66fc9fc6c868e7ed13268
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `varnish:6.0` - linux; amd64
@@ -142,7 +142,7 @@ $ docker pull varnish@sha256:9308b1705476a5fe67b659e8d3250a66fc9fc6c868e7ed13268
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `varnish:6.0.7` - linux; amd64
@@ -203,7 +203,7 @@ $ docker pull varnish@sha256:9308b1705476a5fe67b659e8d3250a66fc9fc6c868e7ed13268
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `varnish:6.0.7-1` - linux; amd64
@@ -264,7 +264,7 @@ $ docker pull varnish@sha256:5b41623edd338ef6bb3b456fdfb79a1b60aba64d6d07b9ca5da
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `varnish:6.6` - linux; amd64
@@ -325,7 +325,7 @@ $ docker pull varnish@sha256:5b41623edd338ef6bb3b456fdfb79a1b60aba64d6d07b9ca5da
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `varnish:6.6.0` - linux; amd64
@@ -386,7 +386,7 @@ $ docker pull varnish@sha256:5b41623edd338ef6bb3b456fdfb79a1b60aba64d6d07b9ca5da
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `varnish:6.6.0-1` - linux; amd64
@@ -447,7 +447,7 @@ $ docker pull varnish@sha256:5b41623edd338ef6bb3b456fdfb79a1b60aba64d6d07b9ca5da
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `varnish:fresh` - linux; amd64
@@ -508,7 +508,7 @@ $ docker pull varnish@sha256:5b41623edd338ef6bb3b456fdfb79a1b60aba64d6d07b9ca5da
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `varnish:latest` - linux; amd64
@@ -569,7 +569,7 @@ $ docker pull varnish@sha256:9308b1705476a5fe67b659e8d3250a66fc9fc6c868e7ed13268
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `varnish:stable` - linux; amd64
