@@ -5,7 +5,7 @@ $ docker pull couchdb@sha256:be1c514761299cfc4e6afd19c637318a52741eb034fca69f5ba
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
