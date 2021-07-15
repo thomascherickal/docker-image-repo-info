@@ -16,7 +16,7 @@ $ docker pull fedora@sha256:ec872dfb306c7094374574edcb7daf0b7f7413847cad7b35bee3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -180,7 +180,7 @@ $ docker pull fedora@sha256:8e4df089f222622795e52152911db4c931cc4c74274feb250aa4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -344,7 +344,7 @@ $ docker pull fedora@sha256:f534c437436eb44b7ac73646e642732fc055a75d84f900f07c3b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -508,7 +508,7 @@ $ docker pull fedora@sha256:cee477106e31dec61a6c9c7b78ef38ce8e3e68d4ecdc296e17a0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -610,7 +610,7 @@ $ docker pull fedora@sha256:f534c437436eb44b7ac73646e642732fc055a75d84f900f07c3b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -774,7 +774,7 @@ $ docker pull fedora@sha256:cee477106e31dec61a6c9c7b78ef38ce8e3e68d4ecdc296e17a0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8

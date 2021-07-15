@@ -5,7 +5,7 @@ $ docker pull fedora@sha256:cee477106e31dec61a6c9c7b78ef38ce8e3e68d4ecdc296e17a0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
