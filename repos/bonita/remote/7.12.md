@@ -5,7 +5,7 @@ $ docker pull bonita@sha256:e7b3f12dd62820806337d92a2abb053c8ac4893ec44a8b17c808
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
