@@ -47,7 +47,7 @@ $ docker pull xwiki@sha256:2ee554ee4402f1023a8dc38abedac09365c848b3a7ad8950682d4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `xwiki:12` - linux; amd64
@@ -210,7 +210,7 @@ $ docker pull xwiki@sha256:2ee554ee4402f1023a8dc38abedac09365c848b3a7ad8950682d4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `xwiki:12-mysql-tomcat` - linux; amd64
@@ -373,7 +373,7 @@ $ docker pull xwiki@sha256:a13f86171c8651d1bbdfba236090cbb5462aeec208879ac505f46
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -670,7 +670,7 @@ $ docker pull xwiki@sha256:2ee554ee4402f1023a8dc38abedac09365c848b3a7ad8950682d4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `xwiki:12.10` - linux; amd64
@@ -833,7 +833,7 @@ $ docker pull xwiki@sha256:2ee554ee4402f1023a8dc38abedac09365c848b3a7ad8950682d4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `xwiki:12.10-mysql-tomcat` - linux; amd64
@@ -996,7 +996,7 @@ $ docker pull xwiki@sha256:a13f86171c8651d1bbdfba236090cbb5462aeec208879ac505f46
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -1293,7 +1293,7 @@ $ docker pull xwiki@sha256:2ee554ee4402f1023a8dc38abedac09365c848b3a7ad8950682d4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `xwiki:12.10.8` - linux; amd64
@@ -1456,7 +1456,7 @@ $ docker pull xwiki@sha256:2ee554ee4402f1023a8dc38abedac09365c848b3a7ad8950682d4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `xwiki:12.10.8-mysql-tomcat` - linux; amd64
@@ -1619,7 +1619,7 @@ $ docker pull xwiki@sha256:a13f86171c8651d1bbdfba236090cbb5462aeec208879ac505f46
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -1916,7 +1916,7 @@ $ docker pull xwiki@sha256:139a33e04f81349ecd831061ceb2b8a9814b114524ffbf5592ec8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `xwiki:13` - linux; amd64
@@ -2079,7 +2079,7 @@ $ docker pull xwiki@sha256:139a33e04f81349ecd831061ceb2b8a9814b114524ffbf5592ec8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `xwiki:13-mysql-tomcat` - linux; amd64
@@ -2242,7 +2242,7 @@ $ docker pull xwiki@sha256:4b8f1955666add5305734e0a1c74635da96d399570a3fe254dfd8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -2539,7 +2539,7 @@ $ docker pull xwiki@sha256:8b0fcf4cfa322da1c8c7dee1816175d926ae0b1bd85320903e44a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `xwiki:13.4` - linux; amd64
@@ -2702,7 +2702,7 @@ $ docker pull xwiki@sha256:8b0fcf4cfa322da1c8c7dee1816175d926ae0b1bd85320903e44a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `xwiki:13.4-mysql-tomcat` - linux; amd64
@@ -2865,7 +2865,7 @@ $ docker pull xwiki@sha256:42a7765eac17f744ad67a7acf9f6a42caf9309c9bc83f936d4002
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -3162,7 +3162,7 @@ $ docker pull xwiki@sha256:8b0fcf4cfa322da1c8c7dee1816175d926ae0b1bd85320903e44a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `xwiki:13.4.1` - linux; amd64
@@ -3325,7 +3325,7 @@ $ docker pull xwiki@sha256:8b0fcf4cfa322da1c8c7dee1816175d926ae0b1bd85320903e44a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `xwiki:13.4.1-mysql-tomcat` - linux; amd64
@@ -3488,7 +3488,7 @@ $ docker pull xwiki@sha256:42a7765eac17f744ad67a7acf9f6a42caf9309c9bc83f936d4002
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -3785,7 +3785,7 @@ $ docker pull xwiki@sha256:139a33e04f81349ecd831061ceb2b8a9814b114524ffbf5592ec8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `xwiki:13.5` - linux; amd64
@@ -3948,7 +3948,7 @@ $ docker pull xwiki@sha256:139a33e04f81349ecd831061ceb2b8a9814b114524ffbf5592ec8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `xwiki:13.5-mysql-tomcat` - linux; amd64
@@ -4111,7 +4111,7 @@ $ docker pull xwiki@sha256:4b8f1955666add5305734e0a1c74635da96d399570a3fe254dfd8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -4408,7 +4408,7 @@ $ docker pull xwiki@sha256:139a33e04f81349ecd831061ceb2b8a9814b114524ffbf5592ec8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `xwiki:13.5.0` - linux; amd64
@@ -4571,7 +4571,7 @@ $ docker pull xwiki@sha256:139a33e04f81349ecd831061ceb2b8a9814b114524ffbf5592ec8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `xwiki:13.5.0-mysql-tomcat` - linux; amd64
@@ -4734,7 +4734,7 @@ $ docker pull xwiki@sha256:4b8f1955666add5305734e0a1c74635da96d399570a3fe254dfd8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -5031,7 +5031,7 @@ $ docker pull xwiki@sha256:139a33e04f81349ecd831061ceb2b8a9814b114524ffbf5592ec8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `xwiki:latest` - linux; amd64
@@ -5194,7 +5194,7 @@ $ docker pull xwiki@sha256:2ee554ee4402f1023a8dc38abedac09365c848b3a7ad8950682d4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `xwiki:lts` - linux; amd64
@@ -5357,7 +5357,7 @@ $ docker pull xwiki@sha256:2ee554ee4402f1023a8dc38abedac09365c848b3a7ad8950682d4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `xwiki:lts-mysql` - linux; amd64
@@ -5520,7 +5520,7 @@ $ docker pull xwiki@sha256:2ee554ee4402f1023a8dc38abedac09365c848b3a7ad8950682d4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `xwiki:lts-mysql-tomcat` - linux; amd64
@@ -5683,7 +5683,7 @@ $ docker pull xwiki@sha256:a13f86171c8651d1bbdfba236090cbb5462aeec208879ac505f46
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -5980,7 +5980,7 @@ $ docker pull xwiki@sha256:a13f86171c8651d1bbdfba236090cbb5462aeec208879ac505f46
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -6277,7 +6277,7 @@ $ docker pull xwiki@sha256:139a33e04f81349ecd831061ceb2b8a9814b114524ffbf5592ec8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `xwiki:mysql-tomcat` - linux; amd64
@@ -6440,7 +6440,7 @@ $ docker pull xwiki@sha256:4b8f1955666add5305734e0a1c74635da96d399570a3fe254dfd8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -6737,7 +6737,7 @@ $ docker pull xwiki@sha256:139a33e04f81349ecd831061ceb2b8a9814b114524ffbf5592ec8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `xwiki:stable` - linux; amd64
@@ -6900,7 +6900,7 @@ $ docker pull xwiki@sha256:139a33e04f81349ecd831061ceb2b8a9814b114524ffbf5592ec8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `xwiki:stable-mysql` - linux; amd64
@@ -7063,7 +7063,7 @@ $ docker pull xwiki@sha256:139a33e04f81349ecd831061ceb2b8a9814b114524ffbf5592ec8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `xwiki:stable-mysql-tomcat` - linux; amd64
@@ -7226,7 +7226,7 @@ $ docker pull xwiki@sha256:4b8f1955666add5305734e0a1c74635da96d399570a3fe254dfd8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -7523,7 +7523,7 @@ $ docker pull xwiki@sha256:4b8f1955666add5305734e0a1c74635da96d399570a3fe254dfd8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 

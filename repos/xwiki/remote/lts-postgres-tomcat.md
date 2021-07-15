@@ -5,7 +5,7 @@ $ docker pull xwiki@sha256:a13f86171c8651d1bbdfba236090cbb5462aeec208879ac505f46
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
