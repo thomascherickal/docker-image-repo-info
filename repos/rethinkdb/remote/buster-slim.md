@@ -5,7 +5,7 @@ $ docker pull rethinkdb@sha256:2fd3b70663c04a742cb05a38cd006f838dd03f598b53e0905
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `rethinkdb:buster-slim` - linux; amd64

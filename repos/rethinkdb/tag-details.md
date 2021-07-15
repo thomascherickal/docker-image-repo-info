@@ -25,7 +25,7 @@ $ docker pull rethinkdb@sha256:2fd3b70663c04a742cb05a38cd006f838dd03f598b53e0905
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `rethinkdb:2` - linux; amd64
@@ -93,7 +93,7 @@ $ docker pull rethinkdb@sha256:2fd3b70663c04a742cb05a38cd006f838dd03f598b53e0905
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `rethinkdb:2-buster-slim` - linux; amd64
@@ -161,7 +161,7 @@ $ docker pull rethinkdb@sha256:b64ea5554c79140250dcb1b9890a403d81dda0562b8b747a9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `rethinkdb:2-centos` - linux; amd64
@@ -225,7 +225,7 @@ $ docker pull rethinkdb@sha256:2fd3b70663c04a742cb05a38cd006f838dd03f598b53e0905
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `rethinkdb:2.4` - linux; amd64
@@ -293,7 +293,7 @@ $ docker pull rethinkdb@sha256:2fd3b70663c04a742cb05a38cd006f838dd03f598b53e0905
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `rethinkdb:2.4-buster-slim` - linux; amd64
@@ -361,7 +361,7 @@ $ docker pull rethinkdb@sha256:b64ea5554c79140250dcb1b9890a403d81dda0562b8b747a9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `rethinkdb:2.4-centos` - linux; amd64
@@ -425,7 +425,7 @@ $ docker pull rethinkdb@sha256:b7f991833ac2e42126c6f8524068fed49437d24c44a1f0f56
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `rethinkdb:2.4.0` - linux; amd64
@@ -493,7 +493,7 @@ $ docker pull rethinkdb@sha256:b7f991833ac2e42126c6f8524068fed49437d24c44a1f0f56
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `rethinkdb:2.4.0-buster-slim` - linux; amd64
@@ -561,7 +561,7 @@ $ docker pull rethinkdb@sha256:11d9649e49b7e3b68d5d28e3e3959b055a6f7639bab3bc810
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `rethinkdb:2.4.0-centos` - linux; amd64
@@ -625,7 +625,7 @@ $ docker pull rethinkdb@sha256:2fd3b70663c04a742cb05a38cd006f838dd03f598b53e0905
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `rethinkdb:2.4.1` - linux; amd64
@@ -693,7 +693,7 @@ $ docker pull rethinkdb@sha256:2fd3b70663c04a742cb05a38cd006f838dd03f598b53e0905
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `rethinkdb:2.4.1-buster-slim` - linux; amd64
@@ -761,7 +761,7 @@ $ docker pull rethinkdb@sha256:b64ea5554c79140250dcb1b9890a403d81dda0562b8b747a9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `rethinkdb:2.4.1-centos` - linux; amd64
@@ -825,7 +825,7 @@ $ docker pull rethinkdb@sha256:2fd3b70663c04a742cb05a38cd006f838dd03f598b53e0905
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `rethinkdb:buster-slim` - linux; amd64
@@ -893,7 +893,7 @@ $ docker pull rethinkdb@sha256:b64ea5554c79140250dcb1b9890a403d81dda0562b8b747a9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `rethinkdb:centos` - linux; amd64
@@ -957,7 +957,7 @@ $ docker pull rethinkdb@sha256:2fd3b70663c04a742cb05a38cd006f838dd03f598b53e0905
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `rethinkdb:latest` - linux; amd64
