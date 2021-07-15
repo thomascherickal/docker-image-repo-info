@@ -26,7 +26,7 @@ $ docker pull postfixadmin@sha256:913bed901b96f07e260f539ae88782da4e74c802642545
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -1491,7 +1491,7 @@ $ docker pull postfixadmin@sha256:913bed901b96f07e260f539ae88782da4e74c802642545
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -2956,7 +2956,7 @@ $ docker pull postfixadmin@sha256:82e398914899f2fe1ab1cc808d505a2f0e8ce091742a5a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -4165,7 +4165,7 @@ $ docker pull postfixadmin@sha256:9b91aecfac86491dc9b8d5e1b7163203cbbcf1f74ea933
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -5224,7 +5224,7 @@ $ docker pull postfixadmin@sha256:7d8905518e3b6b58c7729d36fa11e96554fe9351af3095
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -6507,7 +6507,7 @@ $ docker pull postfixadmin@sha256:7d8905518e3b6b58c7729d36fa11e96554fe9351af3095
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -7790,7 +7790,7 @@ $ docker pull postfixadmin@sha256:2bf1888c170291730bb1f5951e44e3029083a9831c2d19
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -8849,7 +8849,7 @@ $ docker pull postfixadmin@sha256:9b91aecfac86491dc9b8d5e1b7163203cbbcf1f74ea933
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -9908,7 +9908,7 @@ $ docker pull postfixadmin@sha256:7d8905518e3b6b58c7729d36fa11e96554fe9351af3095
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -11191,7 +11191,7 @@ $ docker pull postfixadmin@sha256:7d8905518e3b6b58c7729d36fa11e96554fe9351af3095
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -12474,7 +12474,7 @@ $ docker pull postfixadmin@sha256:2bf1888c170291730bb1f5951e44e3029083a9831c2d19
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -13533,7 +13533,7 @@ $ docker pull postfixadmin@sha256:9b91aecfac86491dc9b8d5e1b7163203cbbcf1f74ea933
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -14592,7 +14592,7 @@ $ docker pull postfixadmin@sha256:913bed901b96f07e260f539ae88782da4e74c802642545
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -16057,7 +16057,7 @@ $ docker pull postfixadmin@sha256:82e398914899f2fe1ab1cc808d505a2f0e8ce091742a5a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7
@@ -17266,7 +17266,7 @@ $ docker pull postfixadmin@sha256:9b91aecfac86491dc9b8d5e1b7163203cbbcf1f74ea933
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
@@ -18325,7 +18325,7 @@ $ docker pull postfixadmin@sha256:913bed901b96f07e260f539ae88782da4e74c802642545
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v5
 	-	linux; arm variant v7

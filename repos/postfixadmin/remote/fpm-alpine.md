@@ -5,7 +5,7 @@ $ docker pull postfixadmin@sha256:9b91aecfac86491dc9b8d5e1b7163203cbbcf1f74ea933
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
