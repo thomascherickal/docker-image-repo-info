@@ -5,7 +5,7 @@ $ docker pull influxdb@sha256:81b0672b04d307d8d82d5d129dd6beaf90041bb024e9cb4e0c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `influxdb:meta` - linux; amd64

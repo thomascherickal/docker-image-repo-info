@@ -52,7 +52,7 @@ $ docker pull influxdb@sha256:64dbc18f8621c8a969ce90b465a84ae68e8e263ebbdbbd0e4e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -301,7 +301,7 @@ $ docker pull influxdb@sha256:8bac42efda822b46efd622e24904910b38d754ecfcd64010c7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `influxdb:1.7-alpine` - linux; amd64
@@ -384,7 +384,7 @@ $ docker pull influxdb@sha256:805150f4349b5f177e7cfd65bb3ab25bbac13cccd7fb7f790d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `influxdb:1.7-data` - linux; amd64
@@ -473,7 +473,7 @@ $ docker pull influxdb@sha256:656c0b783d69f899d250797d79d2d6972b37ea2339be8394bd
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `influxdb:1.7-data-alpine` - linux; amd64
@@ -556,7 +556,7 @@ $ docker pull influxdb@sha256:d186c27511e8c04ed0e5e3aee01922c5c2e597b71100aad04b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `influxdb:1.7-meta` - linux; amd64
@@ -639,7 +639,7 @@ $ docker pull influxdb@sha256:4ba4d614939eebb65c47141be3e9d585f0dcc62f1ad54dd13e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `influxdb:1.7-meta-alpine` - linux; amd64
@@ -716,7 +716,7 @@ $ docker pull influxdb@sha256:64dbc18f8621c8a969ce90b465a84ae68e8e263ebbdbbd0e4e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -965,7 +965,7 @@ $ docker pull influxdb@sha256:8bac42efda822b46efd622e24904910b38d754ecfcd64010c7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `influxdb:1.7.11-alpine` - linux; amd64
@@ -1048,7 +1048,7 @@ $ docker pull influxdb@sha256:805150f4349b5f177e7cfd65bb3ab25bbac13cccd7fb7f790d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `influxdb:1.7.11-data` - linux; amd64
@@ -1137,7 +1137,7 @@ $ docker pull influxdb@sha256:656c0b783d69f899d250797d79d2d6972b37ea2339be8394bd
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `influxdb:1.7.11-data-alpine` - linux; amd64
@@ -1220,7 +1220,7 @@ $ docker pull influxdb@sha256:d186c27511e8c04ed0e5e3aee01922c5c2e597b71100aad04b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `influxdb:1.7.11-meta` - linux; amd64
@@ -1303,7 +1303,7 @@ $ docker pull influxdb@sha256:4ba4d614939eebb65c47141be3e9d585f0dcc62f1ad54dd13e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `influxdb:1.7.11-meta-alpine` - linux; amd64
@@ -1380,7 +1380,7 @@ $ docker pull influxdb@sha256:6dd578a74616d4194782c07402dbdca5fe91d8aaf8388da397
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -1629,7 +1629,7 @@ $ docker pull influxdb@sha256:af9d06269631fbba543216de88ebdb028b0e8e27e26f66233b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `influxdb:1.8-alpine` - linux; amd64
@@ -1712,7 +1712,7 @@ $ docker pull influxdb@sha256:4fb0dfef21ec768d604daa11c79353813af0f6bd7cc9c0f8d8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `influxdb:1.8-data` - linux; amd64
@@ -1801,7 +1801,7 @@ $ docker pull influxdb@sha256:5d7984b19ebeae696e3a72d0d3be4d8f8ae98a26a059c30cd5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `influxdb:1.8-data-alpine` - linux; amd64
@@ -1884,7 +1884,7 @@ $ docker pull influxdb@sha256:81b0672b04d307d8d82d5d129dd6beaf90041bb024e9cb4e0c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `influxdb:1.8-meta` - linux; amd64
@@ -1967,7 +1967,7 @@ $ docker pull influxdb@sha256:ca1e61a34022562abfd681504f9c15299de25f62d568a3a6ce
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `influxdb:1.8-meta-alpine` - linux; amd64
@@ -2044,7 +2044,7 @@ $ docker pull influxdb@sha256:6dd578a74616d4194782c07402dbdca5fe91d8aaf8388da397
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
@@ -2293,7 +2293,7 @@ $ docker pull influxdb@sha256:af9d06269631fbba543216de88ebdb028b0e8e27e26f66233b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `influxdb:1.8.6-alpine` - linux; amd64
@@ -2376,7 +2376,7 @@ $ docker pull influxdb@sha256:4fb0dfef21ec768d604daa11c79353813af0f6bd7cc9c0f8d8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `influxdb:1.8.6-data` - linux; amd64
@@ -2465,7 +2465,7 @@ $ docker pull influxdb@sha256:5d7984b19ebeae696e3a72d0d3be4d8f8ae98a26a059c30cd5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `influxdb:1.8.6-data-alpine` - linux; amd64
@@ -2548,7 +2548,7 @@ $ docker pull influxdb@sha256:81b0672b04d307d8d82d5d129dd6beaf90041bb024e9cb4e0c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `influxdb:1.8.6-meta` - linux; amd64
@@ -2631,7 +2631,7 @@ $ docker pull influxdb@sha256:ca1e61a34022562abfd681504f9c15299de25f62d568a3a6ce
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `influxdb:1.8.6-meta-alpine` - linux; amd64
@@ -2708,7 +2708,7 @@ $ docker pull influxdb@sha256:828e1637d867e9b13cd86e5634547890ad79e89c1efb3e0f07
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `influxdb:1.9-data` - linux; amd64
@@ -2797,7 +2797,7 @@ $ docker pull influxdb@sha256:f16ef7db372634e3ac3c8b60a49384b111d919ba173496b709
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `influxdb:1.9-data-alpine` - linux; amd64
@@ -2880,7 +2880,7 @@ $ docker pull influxdb@sha256:fa31842985b38ee8e45bd20dcdf1165769dc2c37f8001ddf64
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `influxdb:1.9-meta` - linux; amd64
@@ -2963,7 +2963,7 @@ $ docker pull influxdb@sha256:83f4f88775034a52b472daffee6b9bcfdba7303112927cb902
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `influxdb:1.9-meta-alpine` - linux; amd64
@@ -3040,7 +3040,7 @@ $ docker pull influxdb@sha256:828e1637d867e9b13cd86e5634547890ad79e89c1efb3e0f07
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `influxdb:1.9.2-data` - linux; amd64
@@ -3129,7 +3129,7 @@ $ docker pull influxdb@sha256:f16ef7db372634e3ac3c8b60a49384b111d919ba173496b709
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `influxdb:1.9.2-data-alpine` - linux; amd64
@@ -3212,7 +3212,7 @@ $ docker pull influxdb@sha256:fa31842985b38ee8e45bd20dcdf1165769dc2c37f8001ddf64
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `influxdb:1.9.2-meta` - linux; amd64
@@ -3295,7 +3295,7 @@ $ docker pull influxdb@sha256:83f4f88775034a52b472daffee6b9bcfdba7303112927cb902
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `influxdb:1.9.2-meta-alpine` - linux; amd64
@@ -3372,7 +3372,7 @@ $ docker pull influxdb@sha256:7d6dcce155a3a09d2c29e0d03c8f26514081b730938aab560d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -3569,7 +3569,7 @@ $ docker pull influxdb@sha256:7630ad8caae177fe5442cce81068b944c13e2daa7ec289d6d3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -3766,7 +3766,7 @@ $ docker pull influxdb@sha256:7d6dcce155a3a09d2c29e0d03c8f26514081b730938aab560d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -3963,7 +3963,7 @@ $ docker pull influxdb@sha256:7630ad8caae177fe5442cce81068b944c13e2daa7ec289d6d3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -4160,7 +4160,7 @@ $ docker pull influxdb@sha256:7630ad8caae177fe5442cce81068b944c13e2daa7ec289d6d3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -4357,7 +4357,7 @@ $ docker pull influxdb@sha256:4fb0dfef21ec768d604daa11c79353813af0f6bd7cc9c0f8d8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `influxdb:data` - linux; amd64
@@ -4446,7 +4446,7 @@ $ docker pull influxdb@sha256:5d7984b19ebeae696e3a72d0d3be4d8f8ae98a26a059c30cd5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `influxdb:data-alpine` - linux; amd64
@@ -4529,7 +4529,7 @@ $ docker pull influxdb@sha256:7d6dcce155a3a09d2c29e0d03c8f26514081b730938aab560d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 2
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
@@ -4726,7 +4726,7 @@ $ docker pull influxdb@sha256:81b0672b04d307d8d82d5d129dd6beaf90041bb024e9cb4e0c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `influxdb:meta` - linux; amd64
@@ -4809,7 +4809,7 @@ $ docker pull influxdb@sha256:ca1e61a34022562abfd681504f9c15299de25f62d568a3a6ce
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `influxdb:meta-alpine` - linux; amd64
