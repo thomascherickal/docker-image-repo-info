@@ -1,7 +1,7 @@
 ## `julia:alpine3.14`
 
 ```console
-$ docker pull julia@sha256:02c916ffeb84c1455d3196c39ea23c47bbb1b3e70b1db3df3b684e512b6045fd
+$ docker pull julia@sha256:10901b8f230bdd13978eee823768a516a39e805da4a3c583188e0bdab07b83ac
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull julia@sha256:02c916ffeb84c1455d3196c39ea23c47bbb1b3e70b1db3df3b684
 ### `julia:alpine3.14` - linux; amd64
 
 ```console
-$ docker pull julia@sha256:ba9ae9ec0ae5f2b4c343cd21f6015c03718e52e7435ad93cfac2183bd95c4d11
+$ docker pull julia@sha256:13a6425bfc3047dc8abd051bd17631bc8aa302155e3a81f10894bd376243397e
 ```
 
--	Docker Version: 19.03.12
+-	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **123.1 MB (123109393 bytes)**  
+-	Total Size: **123.2 MB (123228377 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c1476e70095ecedc42106f53168e3628068d2ca4890d7c844f8579fb5b6a71f3`
+-	Image ID: `sha256:e7e4fde8ec670ca0ffd61281a18a42cbed0670dd853962f3d2ee9923f97326dd`
 -	Default Command: `["julia"]`
 
 ```dockerfile
@@ -32,11 +32,11 @@ ENV JULIA_PATH=/usr/local/julia
 ENV PATH=/usr/local/julia/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 16 Jun 2021 22:21:33 GMT
 ENV JULIA_GPG=3673DF529D9049477F76B37566E3C7DC03D6E495
-# Wed, 16 Jun 2021 22:21:33 GMT
-ENV JULIA_VERSION=1.6.1
-# Wed, 16 Jun 2021 22:21:48 GMT
-RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		x86_64) tarArch='x86_64'; dirArch='x64'; sha256='492514c93c97e7012b8124a959a9f5569231e52b14f992e74a977fffd7b8961b' ;; 		*) echo >&2 "error: current architecture ($apkArch) does not have a corresponding Julia binary release"; exit 1 ;; 	esac; 		folder="$(echo "$JULIA_VERSION" | cut -d. -f1-2)"; 	wget -O julia.tar.gz.asc "https://julialang-s3.julialang.org/bin/musl/${dirArch}/${folder}/julia-${JULIA_VERSION}-musl-${tarArch}.tar.gz.asc"; 	wget -O julia.tar.gz     "https://julialang-s3.julialang.org/bin/musl/${dirArch}/${folder}/julia-${JULIA_VERSION}-musl-${tarArch}.tar.gz"; 		echo "${sha256} *julia.tar.gz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$JULIA_GPG"; 	gpg --batch --verify julia.tar.gz.asc julia.tar.gz; 	command -v gpgconf > /dev/null && gpgconf --kill all; 	rm -rf "$GNUPGHOME" julia.tar.gz.asc; 		mkdir "$JULIA_PATH"; 	tar -xzf julia.tar.gz -C "$JULIA_PATH" --strip-components 1; 	rm julia.tar.gz; 		apk del --no-network .fetch-deps; 		julia --version
-# Wed, 16 Jun 2021 22:21:49 GMT
+# Thu, 15 Jul 2021 17:20:27 GMT
+ENV JULIA_VERSION=1.6.2
+# Thu, 15 Jul 2021 17:20:41 GMT
+RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		x86_64) tarArch='x86_64'; dirArch='x64'; sha256='5ff279bc733a99a9582fd9b39eb3d18a3fa77b9d3d2733039279a250c8c5d49c' ;; 		*) echo >&2 "error: current architecture ($apkArch) does not have a corresponding Julia binary release"; exit 1 ;; 	esac; 		folder="$(echo "$JULIA_VERSION" | cut -d. -f1-2)"; 	wget -O julia.tar.gz.asc "https://julialang-s3.julialang.org/bin/musl/${dirArch}/${folder}/julia-${JULIA_VERSION}-musl-${tarArch}.tar.gz.asc"; 	wget -O julia.tar.gz     "https://julialang-s3.julialang.org/bin/musl/${dirArch}/${folder}/julia-${JULIA_VERSION}-musl-${tarArch}.tar.gz"; 		echo "${sha256} *julia.tar.gz" | sha256sum -c -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$JULIA_GPG"; 	gpg --batch --verify julia.tar.gz.asc julia.tar.gz; 	command -v gpgconf > /dev/null && gpgconf --kill all; 	rm -rf "$GNUPGHOME" julia.tar.gz.asc; 		mkdir "$JULIA_PATH"; 	tar -xzf julia.tar.gz -C "$JULIA_PATH" --strip-components 1; 	rm julia.tar.gz; 		apk del --no-network .fetch-deps; 		julia --version
+# Thu, 15 Jul 2021 17:20:42 GMT
 CMD ["julia"]
 ```
 
@@ -45,7 +45,7 @@ CMD ["julia"]
 		Last Modified: Tue, 15 Jun 2021 22:20:04 GMT  
 		Size: 2.8 MB (2811478 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cc6e8856584fc5ff98474636e7855290b90784dce765e5caf3c9a901bd6968e8`  
-		Last Modified: Wed, 16 Jun 2021 22:22:48 GMT  
-		Size: 120.3 MB (120297915 bytes)  
+	-	`sha256:36ffe510a88c951b92a501090c9f2e13438eabd0702cc580f0cb19d8bcef1fa7`  
+		Last Modified: Thu, 15 Jul 2021 17:23:03 GMT  
+		Size: 120.4 MB (120416899 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
