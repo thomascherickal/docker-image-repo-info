@@ -51,7 +51,7 @@ $ docker pull jruby@sha256:bc76aba5d83b59c445d7412329a678fc01ccabda1e6f71d7bc2d4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9` - linux; amd64
@@ -169,7 +169,7 @@ $ docker pull jruby@sha256:a8b2dc52d87b0e73ec767245dd23e97c7581dbde36ff57de32a63
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9-jdk` - linux; amd64
@@ -293,7 +293,7 @@ $ docker pull jruby@sha256:a8b2dc52d87b0e73ec767245dd23e97c7581dbde36ff57de32a63
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9-jdk8` - linux; amd64
@@ -417,7 +417,7 @@ $ docker pull jruby@sha256:3edcee0a4b2f8ce77863234490fe41d80fcd29315b0bd597390a0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9-onbuild` - linux; amd64
@@ -557,7 +557,7 @@ $ docker pull jruby@sha256:6aa827515f571f542bea34fdee197433f97a389a24fd0702001ce
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.1` - linux; amd64
@@ -675,7 +675,7 @@ $ docker pull jruby@sha256:4c5199d3864c2309357e3d01075d98f59b09bde2b65db59c5dde7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.1-jdk` - linux; amd64
@@ -799,7 +799,7 @@ $ docker pull jruby@sha256:6aa827515f571f542bea34fdee197433f97a389a24fd0702001ce
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.1-jre` - linux; amd64
@@ -917,7 +917,7 @@ $ docker pull jruby@sha256:6aa827515f571f542bea34fdee197433f97a389a24fd0702001ce
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.1.17` - linux; amd64
@@ -1035,7 +1035,7 @@ $ docker pull jruby@sha256:4c5199d3864c2309357e3d01075d98f59b09bde2b65db59c5dde7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.1.17-jdk` - linux; amd64
@@ -1159,7 +1159,7 @@ $ docker pull jruby@sha256:6aa827515f571f542bea34fdee197433f97a389a24fd0702001ce
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.1.17-jre` - linux; amd64
@@ -1277,7 +1277,7 @@ $ docker pull jruby@sha256:6aa827515f571f542bea34fdee197433f97a389a24fd0702001ce
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.1.17.0` - linux; amd64
@@ -1395,7 +1395,7 @@ $ docker pull jruby@sha256:4c5199d3864c2309357e3d01075d98f59b09bde2b65db59c5dde7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.1.17.0-jdk` - linux; amd64
@@ -1519,7 +1519,7 @@ $ docker pull jruby@sha256:6aa827515f571f542bea34fdee197433f97a389a24fd0702001ce
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.1.17.0-jre` - linux; amd64
@@ -1637,7 +1637,7 @@ $ docker pull jruby@sha256:bc76aba5d83b59c445d7412329a678fc01ccabda1e6f71d7bc2d4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.2` - linux; amd64
@@ -1755,7 +1755,7 @@ $ docker pull jruby@sha256:a8b2dc52d87b0e73ec767245dd23e97c7581dbde36ff57de32a63
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.2-jdk` - linux; amd64
@@ -1879,7 +1879,7 @@ $ docker pull jruby@sha256:9f18b92e223dfba36e71c7af6da43a05f11fdf882f1e50032c68a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.2-jdk11` - linux; amd64
@@ -2005,7 +2005,7 @@ $ docker pull jruby@sha256:df1a2f1a2d8a882061f160f9b539e271b25b143776b1b69af090c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.2-jdk16` - linux; amd64
@@ -2125,7 +2125,7 @@ $ docker pull jruby@sha256:a8b2dc52d87b0e73ec767245dd23e97c7581dbde36ff57de32a63
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.2-jdk8` - linux; amd64
@@ -2249,7 +2249,7 @@ $ docker pull jruby@sha256:bc76aba5d83b59c445d7412329a678fc01ccabda1e6f71d7bc2d4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.2-jre` - linux; amd64
@@ -2367,7 +2367,7 @@ $ docker pull jruby@sha256:2b71892185bf1e718b07fb50d416934ede723b3e5db0698d0eb2b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.2-jre11` - linux; amd64
@@ -2485,7 +2485,7 @@ $ docker pull jruby@sha256:bc76aba5d83b59c445d7412329a678fc01ccabda1e6f71d7bc2d4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.2-jre8` - linux; amd64
@@ -2603,7 +2603,7 @@ $ docker pull jruby@sha256:3edcee0a4b2f8ce77863234490fe41d80fcd29315b0bd597390a0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.2-onbuild` - linux; amd64
@@ -2743,7 +2743,7 @@ $ docker pull jruby@sha256:bc76aba5d83b59c445d7412329a678fc01ccabda1e6f71d7bc2d4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.2.19` - linux; amd64
@@ -2861,7 +2861,7 @@ $ docker pull jruby@sha256:a8b2dc52d87b0e73ec767245dd23e97c7581dbde36ff57de32a63
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.2.19-jdk` - linux; amd64
@@ -2985,7 +2985,7 @@ $ docker pull jruby@sha256:9f18b92e223dfba36e71c7af6da43a05f11fdf882f1e50032c68a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.2.19-jdk11` - linux; amd64
@@ -3111,7 +3111,7 @@ $ docker pull jruby@sha256:df1a2f1a2d8a882061f160f9b539e271b25b143776b1b69af090c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.2.19-jdk16` - linux; amd64
@@ -3231,7 +3231,7 @@ $ docker pull jruby@sha256:a8b2dc52d87b0e73ec767245dd23e97c7581dbde36ff57de32a63
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.2.19-jdk8` - linux; amd64
@@ -3355,7 +3355,7 @@ $ docker pull jruby@sha256:bc76aba5d83b59c445d7412329a678fc01ccabda1e6f71d7bc2d4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.2.19-jre` - linux; amd64
@@ -3473,7 +3473,7 @@ $ docker pull jruby@sha256:2b71892185bf1e718b07fb50d416934ede723b3e5db0698d0eb2b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.2.19-jre11` - linux; amd64
@@ -3591,7 +3591,7 @@ $ docker pull jruby@sha256:bc76aba5d83b59c445d7412329a678fc01ccabda1e6f71d7bc2d4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.2.19-jre8` - linux; amd64
@@ -3709,7 +3709,7 @@ $ docker pull jruby@sha256:3edcee0a4b2f8ce77863234490fe41d80fcd29315b0bd597390a0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.2.19-onbuild` - linux; amd64
@@ -3849,7 +3849,7 @@ $ docker pull jruby@sha256:bc76aba5d83b59c445d7412329a678fc01ccabda1e6f71d7bc2d4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.2.19.0` - linux; amd64
@@ -3967,7 +3967,7 @@ $ docker pull jruby@sha256:a8b2dc52d87b0e73ec767245dd23e97c7581dbde36ff57de32a63
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.2.19.0-jdk` - linux; amd64
@@ -4091,7 +4091,7 @@ $ docker pull jruby@sha256:9f18b92e223dfba36e71c7af6da43a05f11fdf882f1e50032c68a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.2.19.0-jdk11` - linux; amd64
@@ -4217,7 +4217,7 @@ $ docker pull jruby@sha256:df1a2f1a2d8a882061f160f9b539e271b25b143776b1b69af090c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.2.19.0-jdk16` - linux; amd64
@@ -4337,7 +4337,7 @@ $ docker pull jruby@sha256:a8b2dc52d87b0e73ec767245dd23e97c7581dbde36ff57de32a63
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.2.19.0-jdk8` - linux; amd64
@@ -4461,7 +4461,7 @@ $ docker pull jruby@sha256:bc76aba5d83b59c445d7412329a678fc01ccabda1e6f71d7bc2d4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.2.19.0-jre` - linux; amd64
@@ -4579,7 +4579,7 @@ $ docker pull jruby@sha256:2b71892185bf1e718b07fb50d416934ede723b3e5db0698d0eb2b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.2.19.0-jre11` - linux; amd64
@@ -4697,7 +4697,7 @@ $ docker pull jruby@sha256:bc76aba5d83b59c445d7412329a678fc01ccabda1e6f71d7bc2d4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.2.19.0-jre8` - linux; amd64
@@ -4815,7 +4815,7 @@ $ docker pull jruby@sha256:3edcee0a4b2f8ce77863234490fe41d80fcd29315b0bd597390a0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:9.2.19.0-onbuild` - linux; amd64
@@ -4955,7 +4955,7 @@ $ docker pull jruby@sha256:bc76aba5d83b59c445d7412329a678fc01ccabda1e6f71d7bc2d4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms:
+-	Platforms: 1
 	-	linux; amd64
 
 ### `jruby:latest` - linux; amd64
