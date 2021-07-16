@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:bdad461500c46e77a393a47315b9d1888744177480c47a6e844e7659cf1b9507`
-- Created: `2021-06-17T23:31:52.374895301Z`
-- Virtual Size: ~ 80.13 Mb  
+- Image ID: `sha256:722ec3d5541dcd1b429dcf41da7cd2eb58da388da6e656f07d8257d5e8e36c64`
+- Created: `2021-07-13T22:30:09.74849731Z`
+- Virtual Size: ~ 80.12 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["bash"]`
@@ -54,25 +54,25 @@ $ apt-get source -qq --print-uris adduser=3.118ubuntu5
 'http://archive.ubuntu.com/ubuntu/pool/main/a/adduser/adduser_3.118ubuntu5.tar.xz' adduser_3.118ubuntu5.tar.xz 222904 SHA512:ded568a5a3f5a5ac1acc2098e37160194f8c4622e90c7044d599286a321fe8fd701c8554a4517e4d72a6089b8e3b5592b92d46668032bda81de64cc736bf0a75
 ```
 
-### `dpkg` source package: `apt=2.3.5`
+### `dpkg` source package: `apt=2.3.6`
 
 Binary Packages:
 
-- `apt=2.3.5`
-- `libapt-pkg6.0:amd64=2.3.5`
+- `apt=2.3.6`
+- `libapt-pkg6.0:amd64=2.3.6`
 
 Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-pkg6.0/copyright`)
 
 - `GPL-2`
 - `GPLv2+`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
-
-- http://snapshot.debian.org/package/apt/2.3.5/
-
+```console
+$ apt-get source -qq --print-uris apt=2.3.6
+'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.3.6.dsc' apt_2.3.6.dsc 2779 SHA512:946304d409fe9e15b78791f1bf1c78a8a973c47fd699d2ad395cd468232f54ea5685a1bb24ba902422051accda1268ae0e20f07c03ca5ea8a3e8e1055f863057
+'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.3.6.tar.xz' apt_2.3.6.tar.xz 2200940 SHA512:86b89ddedcb768eba1699272cc1fbbc17d6fc1b080920d54548213e809200cfe04eb128f2c6d2bf04502c3b1f0441a6a63713d816e656e4a593b82dfd823b369
+```
 
 ### `dpkg` source package: `attr=1:2.4.48-6build1`
 
@@ -137,24 +137,24 @@ $ apt-get source -qq --print-uris base-files=11.1ubuntu3
 'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_11.1ubuntu3.tar.xz' base-files_11.1ubuntu3.tar.xz 81536 SHA512:503d09daa68d0426236b9a201227c1e56085d847a356c676e6f35ee5451195aa954263fe6fa414c30de8b23f87a7da1e49ff041ff7543a151037d8ac940b864b
 ```
 
-### `dpkg` source package: `base-passwd=3.5.50`
+### `dpkg` source package: `base-passwd=3.5.51`
 
 Binary Packages:
 
-- `base-passwd=3.5.50`
+- `base-passwd=3.5.51`
 
 Licenses: (parsed from: `/usr/share/doc/base-passwd/copyright`)
 
 - `GPL-2`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
-
-- http://snapshot.debian.org/package/base-passwd/3.5.50/
-
+```console
+$ apt-get source -qq --print-uris base-passwd=3.5.51
+'http://archive.ubuntu.com/ubuntu/pool/main/b/base-passwd/base-passwd_3.5.51.dsc' base-passwd_3.5.51.dsc 1757 SHA512:8d022ae0addef596f99a6314d2447f8cf2e474fa55876a403c8a8758024b081c90150e193bc5ab3811a1e94e73bafd190624b8f52d85edbdcb6dbfd9edd61c89
+'http://archive.ubuntu.com/ubuntu/pool/main/b/base-passwd/base-passwd_3.5.51.tar.xz' base-passwd_3.5.51.tar.xz 53980 SHA512:e00e117f7ad25647a8683b8cdb8930371a8d2d670f810808cdcb509e41737f918bc95198912145f654757bd8198d8d31b06dd6cb974b4a4378ebd1cd7954804d
+```
 
 ### `dpkg` source package: `bash=5.1-3ubuntu1`
 
@@ -278,23 +278,23 @@ $ apt-get source -qq --print-uris db5.3=5.3.28+dfsg1-0.8ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/d/db5.3/db5.3_5.3.28+dfsg1-0.8ubuntu1.debian.tar.xz' db5.3_5.3.28+dfsg1-0.8ubuntu1.debian.tar.xz 31912 SHA512:83e8592b218688627248d7a41f4432834f1ba7f76605d71bcc550bf63886789fad2ff31bd9a8734afe353a267cc91129933628d160bacb6451e72fde253c787d
 ```
 
-### `dpkg` source package: `debconf=1.5.76`
+### `dpkg` source package: `debconf=1.5.77`
 
 Binary Packages:
 
-- `debconf=1.5.76`
+- `debconf=1.5.77`
 
 Licenses: (parsed from: `/usr/share/doc/debconf/copyright`)
 
 - `BSD-2-clause`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
-
-- http://snapshot.debian.org/package/debconf/1.5.76/
-
+```console
+$ apt-get source -qq --print-uris debconf=1.5.77
+'http://archive.ubuntu.com/ubuntu/pool/main/d/debconf/debconf_1.5.77.dsc' debconf_1.5.77.dsc 2082 SHA512:238830b883a94448afee10b208be8554a649eab373590d6959f8a9e807503e8f554e6250c537451ba77b57374d555b45e426014732e26c066b94e506bca86b02
+'http://archive.ubuntu.com/ubuntu/pool/main/d/debconf/debconf_1.5.77.tar.xz' debconf_1.5.77.tar.xz 571412 SHA512:c3cc799ac325c23798db7c424cc35aa2fb223e4bcc7515af1b298e2df4e878c8b4853836f5facf1617aa26b2d46a29fe3ac3653f9bf4cbe9c7c88e30abec1221
+```
 
 ### `dpkg` source package: `debianutils=4.11.2`
 
@@ -335,11 +335,11 @@ $ apt-get source -qq --print-uris diffutils=1:3.7-5ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/d/diffutils/diffutils_3.7-5ubuntu1.debian.tar.xz' diffutils_3.7-5ubuntu1.debian.tar.xz 89736 SHA512:7fc0502d8eca59ac2905c1dd56411efd00f29c33941a299bdcb3d96f5b743b8a11575305686dc06287b522b755c2f2a105186c9580524815a016bbdb39381f1b
 ```
 
-### `dpkg` source package: `dpkg=1.20.9ubuntu1`
+### `dpkg` source package: `dpkg=1.20.9ubuntu2`
 
 Binary Packages:
 
-- `dpkg=1.20.9ubuntu1`
+- `dpkg=1.20.9ubuntu2`
 
 Licenses: (parsed from: `/usr/share/doc/dpkg/copyright`)
 
@@ -349,9 +349,13 @@ Licenses: (parsed from: `/usr/share/doc/dpkg/copyright`)
 - `public-domain-md5`
 - `public-domain-s-s-d`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris dpkg=1.20.9ubuntu2
+'http://archive.ubuntu.com/ubuntu/pool/main/d/dpkg/dpkg_1.20.9ubuntu2.dsc' dpkg_1.20.9ubuntu2.dsc 2246 SHA512:b7ab9e1e15d0806748131008e7c19f9d0db3ad74a51cbe064eda2bf16c23dffc4a87884c70c0ae1150b074a016ac50d3719b056103cf7a7eb39ecde994b2805e
+'http://archive.ubuntu.com/ubuntu/pool/main/d/dpkg/dpkg_1.20.9ubuntu2.tar.xz' dpkg_1.20.9ubuntu2.tar.xz 4983396 SHA512:a4204ad7ba67e1be9af1478bc543ad5597d77a72edfdcdad03fbe7ed8a4a6ceb3e410603bc93ef4cd4a08c5054daccef0b22047c32572c880ff896e3fdfce570
+```
 
 ### `dpkg` source package: `e2fsprogs=1.46.2-1ubuntu2`
 
@@ -399,13 +403,13 @@ $ apt-get source -qq --print-uris findutils=4.8.0-1ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/f/findutils/findutils_4.8.0-1ubuntu1.debian.tar.xz' findutils_4.8.0-1ubuntu1.debian.tar.xz 27588 SHA512:5a30569ce48d1bdb5215c765b15d5cca96f026db2841c883e2275a9429d21be909d1ed7da8a104de5db6b9555b8acd8d82d64e85cb17d76090fa3409240a20f0
 ```
 
-### `dpkg` source package: `gcc-11=11.1.0-2ubuntu1`
+### `dpkg` source package: `gcc-11=11.1.0-3ubuntu1`
 
 Binary Packages:
 
-- `gcc-11-base:amd64=11.1.0-2ubuntu1`
-- `libgcc-s1:amd64=11.1.0-2ubuntu1`
-- `libstdc++6:amd64=11.1.0-2ubuntu1`
+- `gcc-11-base:amd64=11.1.0-3ubuntu1`
+- `libgcc-s1:amd64=11.1.0-3ubuntu1`
+- `libstdc++6:amd64=11.1.0-3ubuntu1`
 
 Licenses: (parsed from: `/usr/share/doc/gcc-11-base/copyright`, `/usr/share/doc/libgcc-s1/copyright`, `/usr/share/doc/libstdc++6/copyright`)
 
@@ -416,9 +420,14 @@ Licenses: (parsed from: `/usr/share/doc/gcc-11-base/copyright`, `/usr/share/doc/
 - `GPL-3`
 - `LGPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris gcc-11=11.1.0-3ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-11/gcc-11_11.1.0-3ubuntu1.dsc' gcc-11_11.1.0-3ubuntu1.dsc 27835 SHA512:655391cc7a7bcf221be5042f7e2e1906e715e435d618bcce794518b3d66fb68d7cdda3bb202529e4268496bc8da4f82623133c633e3950b3e1ef51dd7f2f5f59
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-11/gcc-11_11.1.0.orig.tar.gz' gcc-11_11.1.0.orig.tar.gz 85847016 SHA512:1335086a43f8ff09d7ec8868b43743e1219627d87527cca14aa186f63cd8a88057e782b370d282e363dbf30da995ef3a33677d4e02313bee87c658ee4fdbe755
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-11/gcc-11_11.1.0-3ubuntu1.debian.tar.xz' gcc-11_11.1.0-3ubuntu1.debian.tar.xz 2091284 SHA512:1e224e426513b4621bad335195d692b220de1ceb38f2ceb6282dfc32ad3676ccb0c9af9da8a29aa90e80f1bc472167fafa968c991841ee9a4662a00e33baea86
+```
 
 ### `dpkg` source package: `glibc=2.33-0ubuntu7`
 
@@ -1107,12 +1116,12 @@ $ apt-get source -qq --print-uris ncurses=6.2+20201114-2build1
 'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.2+20201114-2build1.debian.tar.xz' ncurses_6.2+20201114-2build1.debian.tar.xz 51936 SHA512:ba116c897b83cc0acfdc9ef0065067363d862a67e77d8f26533859ec8bd20c5d5b3ae76b573a52456dc084f206b58033f0dfc8484c3bd14da49d9c38112ab1f1
 ```
 
-### `dpkg` source package: `nettle=3.7.2-3`
+### `dpkg` source package: `nettle=3.7.3-1`
 
 Binary Packages:
 
-- `libhogweed6:amd64=3.7.2-3`
-- `libnettle8:amd64=3.7.2-3`
+- `libhogweed6:amd64=3.7.3-1`
+- `libnettle8:amd64=3.7.3-1`
 
 Licenses: (parsed from: `/usr/share/doc/libhogweed6/copyright`, `/usr/share/doc/libnettle8/copyright`)
 
@@ -1129,13 +1138,14 @@ Licenses: (parsed from: `/usr/share/doc/libhogweed6/copyright`, `/usr/share/doc/
 - `LGPL-3+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
-
-- http://snapshot.debian.org/package/nettle/3.7.2-3/
-
+```console
+$ apt-get source -qq --print-uris nettle=3.7.3-1
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.7.3-1.dsc' nettle_3.7.3-1.dsc 2033 SHA512:7fb83ee8ced13fe7b9a0f64dda67801eeb0d277b24780259e9195a7541ee8684eb8abd669c42ce1d64ac2b726274e784a37d5a7d693c6f37bc3d4c54e59e0aed
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.7.3.orig.tar.gz' nettle_3.7.3.orig.tar.gz 2383985 SHA512:9901eba305421adff6d551ac7f478dff3f68a339d444c776724ab0b977fe6be792b1d2950c8705acbe76bd924fd6d898a65eded546777884be3b436d0e052437
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.7.3-1.debian.tar.xz' nettle_3.7.3-1.debian.tar.xz 21956 SHA512:0170992b41041da149b1747bd106f8ef773a4643118e5483296d9e5afbff621d4afe7d087acd2cc320b5a5f418c2a44f67c79cdd32f131be5216434350850707
+```
 
 ### `dpkg` source package: `openssl=1.1.1j-1ubuntu4`
 
@@ -1373,12 +1383,12 @@ $ apt-get source -qq --print-uris shadow=1:4.8.1-1ubuntu8
 'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1-1ubuntu8.debian.tar.xz' shadow_4.8.1-1ubuntu8.debian.tar.xz 86200 SHA512:01824fe4238614df35b199e1b3f3851719a71f2c76a77cc90883a3cca0b56082309e2aee8825603d01651d06442a4ef30de83139629cef585285b59182eaa97a
 ```
 
-### `dpkg` source package: `systemd=248.3-1ubuntu1`
+### `dpkg` source package: `systemd=248.3-1ubuntu2`
 
 Binary Packages:
 
-- `libsystemd0:amd64=248.3-1ubuntu1`
-- `libudev1:amd64=248.3-1ubuntu1`
+- `libsystemd0:amd64=248.3-1ubuntu2`
+- `libudev1:amd64=248.3-1ubuntu2`
 
 Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/libudev1/copyright`)
 
@@ -1391,9 +1401,14 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris systemd=248.3-1ubuntu2
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_248.3-1ubuntu2.dsc' systemd_248.3-1ubuntu2.dsc 5399 SHA512:0ab7dae4a4a7ee365ba7251a316650ad73e5c5b7b9cb137508b4577810a5697cf755d61cfbb191b44511721bea3494c6271e3c9f49779b473ce911b9209bfda2
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_248.3.orig.tar.gz' systemd_248.3.orig.tar.gz 10320940 SHA512:8e7ff0d5e63cc933e4dc23f7e0bef9707fde90396605eb8822d34de90d7abe8fd37e5739e33b657868218aa7281147cc944c096c007324c3e6fb54d833a83485
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_248.3-1ubuntu2.debian.tar.xz' systemd_248.3-1ubuntu2.debian.tar.xz 203016 SHA512:1aa46d05cef910461a735559e8e69bc5913143f085383d10e3638e1a4e28db90758281273efd018f2056ceba44d1441c4345031380701e1e46242351d64f0c96
+```
 
 ### `dpkg` source package: `sysvinit=2.96-7ubuntu1`
 

@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:42dd4fdfd349feb9a8d4bc41b90708d0a34f32dbbdff70936b03e2693f9a7468`
-- Created: `2021-06-17T23:31:37.392057758Z`
-- Virtual Size: ~ 79.36 Mb  
+- Image ID: `sha256:9c7ae8e51e29fa6c2bc0bb507f66bffa5f7ea4f470990fa0aeed907020fa75bd`
+- Created: `2021-07-13T22:29:46.353369962Z`
+- Virtual Size: ~ 79.37 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["bash"]`
@@ -401,13 +401,13 @@ $ apt-get source -qq --print-uris findutils=4.7.0-1ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/f/findutils/findutils_4.7.0-1ubuntu2.debian.tar.xz' findutils_4.7.0-1ubuntu2.debian.tar.xz 28212 SHA512:9f6eb5bb161ec7b224ce0d6edecc19a425779fc539627e9c053a46e53d3b232336adb5a75a56a5e60b2e4507be87d335c802d49e63f63d8727fd20b8c8025665
 ```
 
-### `dpkg` source package: `gcc-10=10.2.0-13ubuntu1`
+### `dpkg` source package: `gcc-10=10.3.0-1ubuntu1~20.10`
 
 Binary Packages:
 
-- `gcc-10-base:amd64=10.2.0-13ubuntu1`
-- `libgcc-s1:amd64=10.2.0-13ubuntu1`
-- `libstdc++6:amd64=10.2.0-13ubuntu1`
+- `gcc-10-base:amd64=10.3.0-1ubuntu1~20.10`
+- `libgcc-s1:amd64=10.3.0-1ubuntu1~20.10`
+- `libstdc++6:amd64=10.3.0-1ubuntu1~20.10`
 
 Licenses: (parsed from: `/usr/share/doc/gcc-10-base/copyright`, `/usr/share/doc/libgcc-s1/copyright`, `/usr/share/doc/libstdc++6/copyright`)
 
@@ -421,10 +421,10 @@ Licenses: (parsed from: `/usr/share/doc/gcc-10-base/copyright`, `/usr/share/doc/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris gcc-10=10.2.0-13ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.2.0-13ubuntu1.dsc' gcc-10_10.2.0-13ubuntu1.dsc 30408 SHA512:2567ed73ac30cb7c4d340f2bd26a8441ee674fc48d9538c85568254fc9f6c2abdab5efa6213619e8d75de6a07fa5d81cc705659980d4cf1fd408b57adffc991c
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.2.0.orig.tar.gz' gcc-10_10.2.0.orig.tar.gz 94773960 SHA512:70911f9489225ddb10527f122be77d20cbaf2e4f2bfe92f756d33ec35c0aba352f342a7ee296310a149ea112f97e835f0d3d61f9bc9d416cfc43ccacb325e7ca
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.2.0-13ubuntu1.debian.tar.xz' gcc-10_10.2.0-13ubuntu1.debian.tar.xz 2149440 SHA512:f4bcf32f8d7c65fe2e5a35e0689b42cdd951a39f294e1acf4e51e213b59a7eb20601cea5d7f5aed2fe2102d4288502c7f664e47cde3f206dfc8b4823a23e593f
+$ apt-get source -qq --print-uris gcc-10=10.3.0-1ubuntu1~20.10
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.3.0-1ubuntu1~20.10.dsc' gcc-10_10.3.0-1ubuntu1~20.10.dsc 31155 SHA512:c3efd21fb7a09850802559483fbe04aa7e1b8c939c5854235c24203047167142db096f151f4b310b5f707de0e0fed27b7d9bc312864f382e38e2773720a9e032
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.3.0.orig.tar.gz' gcc-10_10.3.0.orig.tar.gz 83679201 SHA512:c7f0fb09c79bc8c372171df7f23af6970a389dcc1237ebc0821c0a754d93c6e4065433f7ad63aed9f9b8fce2da7fce3caa61ae2e2afab494d06bf33b06a10775
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.3.0-1ubuntu1~20.10.debian.tar.xz' gcc-10_10.3.0-1ubuntu1~20.10.debian.tar.xz 580812 SHA512:7d9d42627a97237734a1ce15b1fed94743e037050a91bf1b45bb8212e1b17ce938a475741bdddaeea771c48651d7fb31464d280fd8c400bc7af2d56c19e9cd48
 ```
 
 ### `dpkg` source package: `glibc=2.32-0ubuntu3`
@@ -1147,12 +1147,12 @@ $ apt-get source -qq --print-uris ncurses=6.2-1
 'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.2-1.debian.tar.xz' ncurses_6.2-1.debian.tar.xz 51276 SHA512:7601abc7989ac947645f13096e0c6655e81303c8826ae855b9203e1c1dc33a3930b72f31f56c6751aaa2fb45f87aadd57b26361021c2754d93451158f0e17809
 ```
 
-### `dpkg` source package: `nettle=3.6-2ubuntu0.1`
+### `dpkg` source package: `nettle=3.6-2ubuntu0.2`
 
 Binary Packages:
 
-- `libhogweed6:amd64=3.6-2ubuntu0.1`
-- `libnettle8:amd64=3.6-2ubuntu0.1`
+- `libhogweed6:amd64=3.6-2ubuntu0.2`
+- `libnettle8:amd64=3.6-2ubuntu0.2`
 
 Licenses: (parsed from: `/usr/share/doc/libhogweed6/copyright`, `/usr/share/doc/libnettle8/copyright`)
 
@@ -1169,9 +1169,15 @@ Licenses: (parsed from: `/usr/share/doc/libhogweed6/copyright`, `/usr/share/doc/
 - `LGPL-3+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris nettle=3.6-2ubuntu0.2
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.6-2ubuntu0.2.dsc' nettle_3.6-2ubuntu0.2.dsc 2369 SHA512:9961864a950d35350efb94c5cb8f8d8ff7f7ca96f006304169ca3cbeff5a9b485acfc2a5a0b1661151b46ac689207add2f7e8be690d09a61a626619fbc7d971e
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.6.orig.tar.gz' nettle_3.6.orig.tar.gz 2288173 SHA512:2471af875e51327af61af8bda53cd9c3adc27b6e32592a4b5b10b3ec60999ebf771ab9c54c747b0bade4b3b5a717e77fdbdb53699dd9e8a9ed4eee07f46aed51
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.6.orig.tar.gz.asc' nettle_3.6.orig.tar.gz.asc 573 SHA512:006c821e599d8fb64b3e5b71182909c5e5921b35e5223f749b69a2c5507b41220595c3c2fa46a484ae1254b8eb4f4c7bfccfd808a03ca79e9c1fd7cbb8ed7216
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.6-2ubuntu0.2.debian.tar.xz' nettle_3.6-2ubuntu0.2.debian.tar.xz 29044 SHA512:0811d3ee1610fa924ab17608267e08ccdf7412c5febe31da9875b1168c543bb079efa5044af51fb93c7c16739583465ee6d2898d5405760f639504bc37d68494
+```
 
 ### `dpkg` source package: `openssl=1.1.1f-1ubuntu4.4`
 
@@ -1409,12 +1415,12 @@ $ apt-get source -qq --print-uris shadow=1:4.8.1-1ubuntu6
 'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1-1ubuntu6.debian.tar.xz' shadow_4.8.1-1ubuntu6.debian.tar.xz 85620 SHA512:a2bd0a0845a860dfbb5fceafa3f7a8cb088960271889e0681e0a15c4bd1c12aacf7388507db96a3320e5303c22e120c1f3c00bf3c9e0ebab41b32528b58a2e22
 ```
 
-### `dpkg` source package: `systemd=246.6-1ubuntu1.3`
+### `dpkg` source package: `systemd=246.6-1ubuntu1.4`
 
 Binary Packages:
 
-- `libsystemd0:amd64=246.6-1ubuntu1.3`
-- `libudev1:amd64=246.6-1ubuntu1.3`
+- `libsystemd0:amd64=246.6-1ubuntu1.4`
+- `libudev1:amd64=246.6-1ubuntu1.4`
 
 Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/libudev1/copyright`)
 
@@ -1427,9 +1433,14 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris systemd=246.6-1ubuntu1.4
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_246.6-1ubuntu1.4.dsc' systemd_246.6-1ubuntu1.4.dsc 5364 SHA512:ef65133274230f962e8347e014f195816e11ded99788f041d317565b04167be7bad2082ff15d44129d768b11373d04f1b03e8dc5033c9ef684ac78eb82f6f542
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_246.6.orig.tar.gz' systemd_246.6.orig.tar.gz 9545237 SHA512:1936b291d9831cf61f800fe718a4c2c2fe9b2a11fd817fe32bd48da2087a675dfc91013209a3478ea52e8ada593300ed906e248b8081dcf9141bf1cc17483ea9
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_246.6-1ubuntu1.4.debian.tar.xz' systemd_246.6-1ubuntu1.4.debian.tar.xz 213316 SHA512:a4dacbc1cc9510264ae732236b2500c161e43f64f4bf323ae193409e2eb8894c06cff256431fb379af7cb55f87bf3680ccd8c02b554cebc9ac1f359961fd1c4c
+```
 
 ### `dpkg` source package: `sysvinit=2.96-3ubuntu1`
 
