@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:5ffeaf2928082b000b900ce5bb5d7e6ae122d8bb9a3fb779c856d0ee4a759aca`
-- Created: `2021-05-03T22:32:51.251858723Z`
-- Virtual Size: ~ 372.55 Mb  
+- Image ID: `sha256:74c717ce35a7872383b67fe6276f951c39395fcba0eda36625d7e2eaa9a32932`
+- Created: `2021-07-14T20:24:42.879415791Z`
+- Virtual Size: ~ 350.77 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -13,8 +13,8 @@
   - `PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=C.UTF-8`
   - `RUBY_MAJOR=2.7`
-  - `RUBY_VERSION=2.7.3`
-  - `RUBY_DOWNLOAD_SHA256=5e91d1650857d43cd6852e05ac54683351e9c301811ee0bef43a67c4605e7db1`
+  - `RUBY_VERSION=2.7.4`
+  - `RUBY_DOWNLOAD_SHA256=2a80824e0ad6100826b69b9890bf55cfc4cf2b61a1e1330fccbcb30c46cef8d7`
   - `GEM_HOME=/usr/local/bundle`
   - `BUNDLE_SILENCE_ROOT_WARNING=1`
   - `BUNDLE_APP_CONFIG=/usr/local/bundle`
@@ -131,16 +131,16 @@ Apache-2.0
 ### `apk` package: `avahi-libs`
 
 ```console
-avahi-libs-0.8-r2 description:
+avahi-libs-0.8-r3 description:
 Libraries for avahi run-time use
 
-avahi-libs-0.8-r2 webpage:
+avahi-libs-0.8-r3 webpage:
 https://www.avahi.org/
 
-avahi-libs-0.8-r2 installed size:
+avahi-libs-0.8-r3 installed size:
 128 KiB
 
-avahi-libs-0.8-r2 license:
+avahi-libs-0.8-r3 license:
 LGPL-2.0-or-later
 
 ```
@@ -488,16 +488,16 @@ GPL-2.0-or-later
 ### `apk` package: `glib`
 
 ```console
-glib-2.66.7-r1 description:
+glib-2.66.8-r0 description:
 Common C routines used by Gtk+ and other libs
 
-glib-2.66.7-r1 webpage:
+glib-2.66.8-r0 webpage:
 https://developer.gnome.org/glib/
 
-glib-2.66.7-r1 installed size:
+glib-2.66.8-r0 installed size:
 3324 KiB
 
-glib-2.66.7-r1 license:
+glib-2.66.8-r0 license:
 LGPL-2.1-or-later
 
 ```
@@ -590,16 +590,16 @@ MIT
 ### `apk` package: `imagemagick`
 
 ```console
-imagemagick-7.0.10.57-r0 description:
+imagemagick-7.0.11.13-r0 description:
 Collection of tools and libraries for many image formats
 
-imagemagick-7.0.10.57-r0 webpage:
+imagemagick-7.0.11.13-r0 webpage:
 https://www.imagemagick.org/
 
-imagemagick-7.0.10.57-r0 installed size:
+imagemagick-7.0.11.13-r0 installed size:
 4560 KiB
 
-imagemagick-7.0.10.57-r0 license:
+imagemagick-7.0.11.13-r0 license:
 ImageMagick
 
 ```
@@ -607,16 +607,16 @@ ImageMagick
 ### `apk` package: `imagemagick-libs`
 
 ```console
-imagemagick-libs-7.0.10.57-r0 description:
+imagemagick-libs-7.0.11.13-r0 description:
 Collection of tools and libraries for many image formats (libraries)
 
-imagemagick-libs-7.0.10.57-r0 webpage:
+imagemagick-libs-7.0.11.13-r0 webpage:
 https://www.imagemagick.org/
 
-imagemagick-libs-7.0.10.57-r0 installed size:
-3244 KiB
+imagemagick-libs-7.0.11.13-r0 installed size:
+3252 KiB
 
-imagemagick-libs-7.0.10.57-r0 license:
+imagemagick-libs-7.0.11.13-r0 license:
 ImageMagick
 
 ```
@@ -743,16 +743,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.76.1-r0 description:
+libcurl-7.77.0-r1 description:
 The multiprotocol file transfer library
 
-libcurl-7.76.1-r0 webpage:
+libcurl-7.77.0-r1 webpage:
 https://curl.se/
 
-libcurl-7.76.1-r0 installed size:
-488 KiB
+libcurl-7.77.0-r1 installed size:
+500 KiB
 
-libcurl-7.76.1-r0 license:
+libcurl-7.77.0-r1 license:
 MIT
 
 ```
@@ -913,16 +913,16 @@ LGPL-2.1-or-later
 ### `apk` package: `libjpeg-turbo`
 
 ```console
-libjpeg-turbo-2.0.6-r0 description:
+libjpeg-turbo-2.1.0-r0 description:
 Accelerated baseline JPEG compression and decompression library
 
-libjpeg-turbo-2.0.6-r0 webpage:
+libjpeg-turbo-2.1.0-r0 webpage:
 https://libjpeg-turbo.org/
 
-libjpeg-turbo-2.0.6-r0 installed size:
-1032 KiB
+libjpeg-turbo-2.1.0-r0 installed size:
+1076 KiB
 
-libjpeg-turbo-2.0.6-r0 license:
+libjpeg-turbo-2.1.0-r0 license:
 BSD-3-Clause IJG Zlib
 
 ```
@@ -998,16 +998,16 @@ Libpng
 ### `apk` package: `libpq`
 
 ```console
-libpq-13.2-r0 description:
+libpq-13.3-r0 description:
 PostgreSQL libraries
 
-libpq-13.2-r0 webpage:
+libpq-13.3-r0 webpage:
 https://www.postgresql.org/
 
-libpq-13.2-r0 installed size:
+libpq-13.3-r0 installed size:
 328 KiB
 
-libpq-13.2-r0 license:
+libpq-13.3-r0 license:
 PostgreSQL
 
 ```
@@ -1185,16 +1185,16 @@ BSD-3-Clause
 ### `apk` package: `libx11`
 
 ```console
-libx11-1.7.0-r0 description:
+libx11-1.7.1-r0 description:
 X11 client-side library
 
-libx11-1.7.0-r0 webpage:
+libx11-1.7.1-r0 webpage:
 http://xorg.freedesktop.org/
 
-libx11-1.7.0-r0 installed size:
+libx11-1.7.1-r0 installed size:
 3240 KiB
 
-libx11-1.7.0-r0 license:
+libx11-1.7.1-r0 license:
 custom:XFREE86
 
 ```
@@ -1287,16 +1287,16 @@ MIT
 ### `apk` package: `libxml2`
 
 ```console
-libxml2-2.9.10-r6 description:
+libxml2-2.9.10-r7 description:
 XML parsing library, version 2
 
-libxml2-2.9.10-r6 webpage:
+libxml2-2.9.10-r7 webpage:
 http://www.xmlsoft.org/
 
-libxml2-2.9.10-r6 installed size:
+libxml2-2.9.10-r7 installed size:
 1196 KiB
 
-libxml2-2.9.10-r6 license:
+libxml2-2.9.10-r7 license:
 MIT
 
 ```
@@ -1389,16 +1389,16 @@ GPL-2.0-or-later
 ### `apk` package: `musl`
 
 ```console
-musl-1.2.2-r0 description:
+musl-1.2.2-r1 description:
 the musl c library (libc) implementation
 
-musl-1.2.2-r0 webpage:
+musl-1.2.2-r1 webpage:
 https://musl.libc.org/
 
-musl-1.2.2-r0 installed size:
+musl-1.2.2-r1 installed size:
 608 KiB
 
-musl-1.2.2-r0 license:
+musl-1.2.2-r1 license:
 MIT
 
 ```
@@ -1457,16 +1457,16 @@ MIT
 ### `apk` package: `nettle`
 
 ```console
-nettle-3.7-r0 description:
+nettle-3.7.2-r0 description:
 A low-level cryptographic library
 
-nettle-3.7-r0 webpage:
+nettle-3.7.2-r0 webpage:
 https://www.lysator.liu.se/~nisse/nettle/
 
-nettle-3.7-r0 installed size:
-560 KiB
+nettle-3.7.2-r0 installed size:
+564 KiB
 
-nettle-3.7-r0 license:
+nettle-3.7.2-r0 license:
 LGPL-2.0-or-later
 
 ```
@@ -1644,16 +1644,16 @@ GPL-2.0 LGPL-2.1+
 ### `apk` package: `python3`
 
 ```console
-python3-3.8.8-r0 description:
+python3-3.8.10-r0 description:
 A high-level scripting language
 
-python3-3.8.8-r0 webpage:
+python3-3.8.10-r0 webpage:
 https://www.python.org/
 
-python3-3.8.8-r0 installed size:
+python3-3.8.10-r0 installed size:
 44 MiB
 
-python3-3.8.8-r0 license:
+python3-3.8.10-r0 license:
 PSF-2.0
 
 ```

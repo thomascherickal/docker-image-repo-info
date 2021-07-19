@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:14d0937033348c39c03a15f742a5b4681cba97cddcc2b06dd3fe1c731ff86059`
-- Created: `2021-06-24T08:25:19.772076332Z`
-- Virtual Size: ~ 611.14 Mb  
+- Image ID: `sha256:f3049f679e04c98a7643e800733c59f85c960a686a186192d9b12a222bed1592`
+- Created: `2021-07-14T20:22:20.456697828Z`
+- Virtual Size: ~ 583.95 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -13,8 +13,8 @@
   - `PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=C.UTF-8`
   - `RUBY_MAJOR=2.7`
-  - `RUBY_VERSION=2.7.3`
-  - `RUBY_DOWNLOAD_SHA256=5e91d1650857d43cd6852e05ac54683351e9c301811ee0bef43a67c4605e7db1`
+  - `RUBY_VERSION=2.7.4`
+  - `RUBY_DOWNLOAD_SHA256=2a80824e0ad6100826b69b9890bf55cfc4cf2b61a1e1330fccbcb30c46cef8d7`
   - `GEM_HOME=/usr/local/bundle`
   - `BUNDLE_SILENCE_ROOT_WARNING=1`
   - `BUNDLE_APP_CONFIG=/usr/local/bundle`
@@ -22,7 +22,7 @@
   - `HOME=/home/redmine`
   - `REDMINE_VERSION=4.2.1`
   - `REDMINE_DOWNLOAD_SHA256=ad4109c3425f1cfe4c8961f6ae6494c76e20d81ed946caa1e297d9eda13b41b4`
-  - `PASSENGER_VERSION=6.0.9`
+  - `PASSENGER_VERSION=6.0.10`
   - `PASSENGER_PID_FILE=tmp/pids/server.pid`
 
 ## `dpkg` (`.deb`-based packages)
