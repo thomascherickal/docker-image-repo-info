@@ -1,7 +1,7 @@
 ## `clearlinux:latest`
 
 ```console
-$ docker pull clearlinux@sha256:6d9898e07daeb5b71a3a01177c57bf9d55552ae5d028f8e8e2baaae3a99d7a47
+$ docker pull clearlinux@sha256:58de2647bf5466d2c27ddf212a834fe088fb403d88122dc796d122c20bc1339a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,27 +11,27 @@ $ docker pull clearlinux@sha256:6d9898e07daeb5b71a3a01177c57bf9d55552ae5d028f8e8
 ### `clearlinux:latest` - linux; amd64
 
 ```console
-$ docker pull clearlinux@sha256:f46d0630a3df747c22a362cfc25b59ffe876ca58ae474578ff66211a794db35b
+$ docker pull clearlinux@sha256:550d6fb84165d912905680dd6e8bf7181d4fd30b9c4450719a631ce4254e0df3
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **71.3 MB (71260290 bytes)**  
+-	Total Size: **71.2 MB (71212114 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:10b287ab7284f094309965ecbc054612b12c1b64df87c78a6a210b0cca1adb5f`
+-	Image ID: `sha256:9382c218a69cb4eedfd27484c5f56ffa3efb33eabce0ac8e4482c0b818310864`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
 # Tue, 09 Mar 2021 00:22:54 GMT
 MAINTAINER William Douglas <william.douglas@intel.com>
-# Mon, 12 Jul 2021 20:19:43 GMT
-ADD file:8d575540c53ed3dfaf733dfc2dbea3615341b20b27feeb8bad3cdbd60b1016d5 in / 
-# Mon, 12 Jul 2021 20:19:44 GMT
+# Mon, 19 Jul 2021 18:02:28 GMT
+ADD file:60cb4317abd4fe7e8761631c9d49de015b188d5c9d2462e10a989e62f80c8e12 in / 
+# Mon, 19 Jul 2021 18:02:28 GMT
 CMD ["/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:775545ae659c7329d0f1c119798a59d69e7d9492cad83ea408fe1dff65c0c6b6`  
-		Last Modified: Mon, 12 Jul 2021 20:20:06 GMT  
-		Size: 71.3 MB (71260290 bytes)  
+	-	`sha256:f2c1af9299998c340f589a48eee2500384a9068f62243b6696f12542f8325710`  
+		Last Modified: Mon, 19 Jul 2021 18:02:48 GMT  
+		Size: 71.2 MB (71212114 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
