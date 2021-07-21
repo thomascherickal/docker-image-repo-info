@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:efb2e76583d5980aa3c15f82ebfed2c7b782d75388c7271818c7e3b7df3b7902`
-- Created: `2021-06-26T04:50:41.008117426Z`
-- Virtual Size: ~ 390.08 Mb  
+- Image ID: `sha256:75c9cb82e1bf572a446bb91fef99a31d7bd22537d43d1b96c25177f9cf882300`
+- Created: `2021-07-21T19:31:02.535545623Z`
+- Virtual Size: ~ 390.13 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["server.sh"]`
@@ -12,7 +12,7 @@
   - `PATH=/orientdb/bin:/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `JAVA_HOME=/usr/local/openjdk-8`
   - `LANG=C.UTF-8`
-  - `JAVA_VERSION=8u292`
+  - `JAVA_VERSION=8u302`
   - `ORIENTDB_VERSION=3.2.0`
   - `ORIENTDB_DOWNLOAD_MD5=7bff911bea6b02d2f1d9ddff5e4ba8ea`
   - `ORIENTDB_DOWNLOAD_SHA1=f424731e3d078de692fab97d6aa3b3e8395d7d01`
