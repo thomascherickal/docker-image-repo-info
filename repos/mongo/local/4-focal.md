@@ -1,9 +1,9 @@
-# `mongo:4.4.7-rc1-focal`
+# `mongo:4.4.7-focal`
 
 ## Docker Metadata
 
-- Image ID: `sha256:4b2dbaed6e4b84527ac13834c67c470e2d0a0ca60f3cdcfe902246ad5b4d0e8a`
-- Created: `2021-07-14T01:07:27.949166569Z`
+- Image ID: `sha256:c05f4129539e0ae60e4f0fc60f5cd5ddde69e02e2bc42050898574db0d70f935`
+- Created: `2021-07-19T16:49:53.934855265Z`
 - Virtual Size: ~ 436.54 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -15,8 +15,8 @@
   - `JSYAML_VERSION=3.13.1`
   - `MONGO_PACKAGE=mongodb-org`
   - `MONGO_REPO=repo.mongodb.org`
-  - `MONGO_MAJOR=testing`
-  - `MONGO_VERSION=4.4.7~rc1`
+  - `MONGO_MAJOR=4.4`
+  - `MONGO_VERSION=4.4.7`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -1280,29 +1280,16 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `mongodb-org=4.4.7~rc1`
+### `dpkg` source package: `mongodb-org=4.4.7`
 
 Binary Packages:
 
-- `mongodb-org=4.4.7~rc1`
-- `mongodb-org-mongos=4.4.7~rc1`
-- `mongodb-org-server=4.4.7~rc1`
-- `mongodb-org-shell=4.4.7~rc1`
-- `mongodb-org-tools=4.4.7~rc1`
-
-**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
-If source is available (seen below), check the contents of `debian/copyright` within it.
-
-
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
-
-
-### `dpkg` source package: `mongodb-org=5.0.0~rc8`
-
-Binary Packages:
-
-- `mongodb-org-database-tools-extra=5.0.0~rc8`
+- `mongodb-org=4.4.7`
+- `mongodb-org-database-tools-extra=4.4.7`
+- `mongodb-org-mongos=4.4.7`
+- `mongodb-org-server=4.4.7`
+- `mongodb-org-shell=4.4.7`
+- `mongodb-org-tools=4.4.7`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1813,14 +1800,9 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=245.4-4ubuntu3.7
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.7.dsc' systemd_245.4-4ubuntu3.7.dsc 5291 SHA512:4af3abd8d317d2d352f196a16a1f8c71556dbab34d11f8504e3f321de14e1be104cb9a19648634259939b752fd92371cd38a25288030b4bc5a0aa21146c15fff
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4.orig.tar.gz' systemd_245.4.orig.tar.gz 9000780 SHA512:02036bb1ab05301a9d0dfdd4b9c9376e90134474482531e6e292122380be2f24f99177493dd3af6f8af1a8ed2599ee0996da91a3b1b7872bbfaf26a1c3e61b4c
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.7.debian.tar.xz' systemd_245.4-4ubuntu3.7.debian.tar.xz 247648 SHA512:ca9d4e0b1c4bab971d51ce640eb591a6e0fe076b6465bfc620c9962c16f64c248bcd7ed8d0eb4051ccf33c48d228d2af21291b9ca1b010d4f66958b3950499ab
-```
 
 ### `dpkg` source package: `sysvinit=2.96-2.1ubuntu1`
 
