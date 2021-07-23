@@ -7,7 +7,7 @@
 -	[`composer:1.10.22`](#composer11022)
 -	[`composer:2`](#composer2)
 -	[`composer:2.1`](#composer21)
--	[`composer:2.1.3`](#composer213)
+-	[`composer:2.1.4`](#composer214)
 -	[`composer:latest`](#composerlatest)
 
 ## `composer:1`
@@ -3064,7 +3064,7 @@ CMD ["composer"]
 ## `composer:2`
 
 ```console
-$ docker pull composer@sha256:e9f3f3d5ade248dc094b971e3d25381b8986b636662234019c5b0048d2000bd3
+$ docker pull composer@sha256:597ea2064218e90e0ce0c9d35e5005c1a391bccf5a532dec2667ee1c98b3df25
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3223,14 +3223,14 @@ CMD ["composer"]
 ### `composer:2` - linux; arm variant v6
 
 ```console
-$ docker pull composer@sha256:e6754889781b6f025a41666111d3e35b4cd6b72e9db9588426417ebd4efd6bac
+$ docker pull composer@sha256:d99efd45d895b4729154373f318574628a6c72f9b8f0c3915b42696f311c47fc
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **59.3 MB (59327574 bytes)**  
+-	Total Size: **59.3 MB (59328117 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1dd4fe892409f4e8d96c0f736c6d2f48bb4193e2d663d9d5882ae26672178dac`
+-	Image ID: `sha256:24c05e094673443a41e9325b86f2983f586cef1d353a9198f88ddc9948930a7f`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["composer"]`
 
@@ -3287,17 +3287,17 @@ RUN printf "# composer php cli ini settings\ndate.timezone=UTC\nmemory_limit=-1\
 ENV COMPOSER_ALLOW_SUPERUSER=1
 # Thu, 01 Jul 2021 21:32:06 GMT
 ENV COMPOSER_HOME=/tmp
-# Thu, 01 Jul 2021 21:32:07 GMT
-ENV COMPOSER_VERSION=2.1.3
-# Thu, 01 Jul 2021 21:32:11 GMT
+# Thu, 22 Jul 2021 20:49:30 GMT
+ENV COMPOSER_VERSION=2.1.4
+# Thu, 22 Jul 2021 20:49:34 GMT
 RUN set -eux;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.dev.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/snapshots.pub   ;   php -r "     \$signature = '4ac45767e5ec22652f0c1167cbbb8a2b0c708369153e328cad90147dafe50952';     \$hash = hash('sha256', preg_replace('{\s}', '', file_get_contents('/tmp/keys.dev.pub')));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, dev public key is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.tags.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/releases.pub   ;   php -r "     \$signature = '57815ba27e54dc317ecc7cc5573090d087719ba68f3bb7234e5d42d084a14642';     \$hash = hash('sha256', preg_replace('{\s}', '', file_get_contents('/tmp/keys.tags.pub')));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, tags public key is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/installer.php     --url https://raw.githubusercontent.com/composer/getcomposer.org/cb19f2aa3aeaa2006c0cd69a7ef011eb31463067/web/installer   ;   php -r "     \$signature = '48e3236262b34d30969dca3c37281b3b4bbe3221bda826ac6a9a62d6444cdb0dcd0615698a5cbe587c3f0fe57a54d8f5';     \$hash = hash('sha384', file_get_contents('/tmp/installer.php'));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, installer is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   php /tmp/installer.php --no-ansi --install-dir=/usr/bin --filename=composer --version=${COMPOSER_VERSION};   composer --ansi --version --no-interaction;   composer diagnose;   rm -f /tmp/installer.php;   find /tmp -type d -exec chmod -v 1777 {} +
-# Thu, 01 Jul 2021 21:32:11 GMT
+# Thu, 22 Jul 2021 20:49:35 GMT
 COPY file:fec7a37c0f859c3b5da390e40fa6f3ea8445ed26f54be61f4bce40efcaad57ee in /docker-entrypoint.sh 
-# Thu, 01 Jul 2021 21:32:12 GMT
+# Thu, 22 Jul 2021 20:49:35 GMT
 WORKDIR /app
-# Thu, 01 Jul 2021 21:32:12 GMT
+# Thu, 22 Jul 2021 20:49:36 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Thu, 01 Jul 2021 21:32:13 GMT
+# Thu, 22 Jul 2021 20:49:36 GMT
 CMD ["composer"]
 ```
 
@@ -3350,16 +3350,16 @@ CMD ["composer"]
 		Last Modified: Thu, 01 Jul 2021 21:33:16 GMT  
 		Size: 258.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7bd5d1bef328a96c8f58bfc16d8ea5918cc6fc027fac8d0abec8862b328f6cdd`  
-		Last Modified: Thu, 01 Jul 2021 21:33:17 GMT  
-		Size: 554.5 KB (554514 bytes)  
+	-	`sha256:5a78eb275bbf3f02742d73bf13abbf65975fa534e9799bdedc21a3403b49aaf0`  
+		Last Modified: Thu, 22 Jul 2021 20:50:29 GMT  
+		Size: 555.1 KB (555058 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6c4d06c55cf78ec0cd0c2f5728c71b89a4b3803c3851d037ab01184de13d83c0`  
-		Last Modified: Thu, 01 Jul 2021 21:33:16 GMT  
-		Size: 408.0 B  
+	-	`sha256:51e003d4ceb21d6e807770ceb18bc73bcf60f6086abd2ddb660a54837270160d`  
+		Last Modified: Thu, 22 Jul 2021 20:50:28 GMT  
+		Size: 407.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:65a8ecd177bc2f249d8e5e24a1aa8f9e67d2f040c301b2798eebb1aff69c5f0e`  
-		Last Modified: Thu, 01 Jul 2021 21:33:16 GMT  
+	-	`sha256:497867ff403bad8fffc15d3e09d0c9448e30f3ef2cbacdb0c7398d503d7052f7`  
+		Last Modified: Thu, 22 Jul 2021 20:50:28 GMT  
 		Size: 126.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -3509,14 +3509,14 @@ CMD ["composer"]
 ### `composer:2` - linux; arm64 variant v8
 
 ```console
-$ docker pull composer@sha256:5f8d0ba3f4dca077bd35c75622d5b75d6ec05e71c472e045fba1e0e338e7c14d
+$ docker pull composer@sha256:567196a1d06961cfa2485a3100ad6f2a6788efb19dcaef2757c91ca72a07e625
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **60.9 MB (60933282 bytes)**  
+-	Total Size: **60.9 MB (60933821 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4576a4d7454e58dc0fffad570aa9ec8a819acd8d324b6c5f5e364c86eb959652`
+-	Image ID: `sha256:d856d98721cd37f244c5e85d39b305ef460e58b52cbdee77d0a6bc343ff2be92`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["composer"]`
 
@@ -3573,17 +3573,17 @@ RUN printf "# composer php cli ini settings\ndate.timezone=UTC\nmemory_limit=-1\
 ENV COMPOSER_ALLOW_SUPERUSER=1
 # Fri, 02 Jul 2021 00:00:57 GMT
 ENV COMPOSER_HOME=/tmp
-# Fri, 02 Jul 2021 00:00:57 GMT
-ENV COMPOSER_VERSION=2.1.3
-# Fri, 02 Jul 2021 00:01:01 GMT
+# Thu, 22 Jul 2021 22:29:54 GMT
+ENV COMPOSER_VERSION=2.1.4
+# Thu, 22 Jul 2021 22:29:57 GMT
 RUN set -eux;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.dev.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/snapshots.pub   ;   php -r "     \$signature = '4ac45767e5ec22652f0c1167cbbb8a2b0c708369153e328cad90147dafe50952';     \$hash = hash('sha256', preg_replace('{\s}', '', file_get_contents('/tmp/keys.dev.pub')));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, dev public key is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.tags.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/releases.pub   ;   php -r "     \$signature = '57815ba27e54dc317ecc7cc5573090d087719ba68f3bb7234e5d42d084a14642';     \$hash = hash('sha256', preg_replace('{\s}', '', file_get_contents('/tmp/keys.tags.pub')));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, tags public key is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/installer.php     --url https://raw.githubusercontent.com/composer/getcomposer.org/cb19f2aa3aeaa2006c0cd69a7ef011eb31463067/web/installer   ;   php -r "     \$signature = '48e3236262b34d30969dca3c37281b3b4bbe3221bda826ac6a9a62d6444cdb0dcd0615698a5cbe587c3f0fe57a54d8f5';     \$hash = hash('sha384', file_get_contents('/tmp/installer.php'));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, installer is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   php /tmp/installer.php --no-ansi --install-dir=/usr/bin --filename=composer --version=${COMPOSER_VERSION};   composer --ansi --version --no-interaction;   composer diagnose;   rm -f /tmp/installer.php;   find /tmp -type d -exec chmod -v 1777 {} +
-# Fri, 02 Jul 2021 00:01:01 GMT
+# Thu, 22 Jul 2021 22:29:57 GMT
 COPY file:fec7a37c0f859c3b5da390e40fa6f3ea8445ed26f54be61f4bce40efcaad57ee in /docker-entrypoint.sh 
-# Fri, 02 Jul 2021 00:01:01 GMT
+# Thu, 22 Jul 2021 22:29:57 GMT
 WORKDIR /app
-# Fri, 02 Jul 2021 00:01:01 GMT
+# Thu, 22 Jul 2021 22:29:58 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Fri, 02 Jul 2021 00:01:02 GMT
+# Thu, 22 Jul 2021 22:29:58 GMT
 CMD ["composer"]
 ```
 
@@ -3636,16 +3636,16 @@ CMD ["composer"]
 		Last Modified: Fri, 02 Jul 2021 00:01:37 GMT  
 		Size: 257.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6970df64230369e584f11f13d06686e54768a66a93ebceabbcbd6d7c587c9a90`  
-		Last Modified: Fri, 02 Jul 2021 00:01:37 GMT  
-		Size: 554.5 KB (554516 bytes)  
+	-	`sha256:a26f792b0bc2dfa18452331233de43564326565cd5c4ee66a205c863b61d04b1`  
+		Last Modified: Thu, 22 Jul 2021 22:30:27 GMT  
+		Size: 555.1 KB (555054 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fe53313a7deeebd9b2ac9d83b45fb01d9cd9a9e7c57836a4175c8c5ba47d3cce`  
-		Last Modified: Fri, 02 Jul 2021 00:01:37 GMT  
-		Size: 408.0 B  
+	-	`sha256:0fdb1b8f2967e30a782f6c7da79ed59c688888f5cc7dde6d9da9aea9270e06ac`  
+		Last Modified: Thu, 22 Jul 2021 22:30:27 GMT  
+		Size: 409.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:317b9e7c4b00aeff4ab14e91e927cec0e7c4113ae40ad3c6e663a9e76aee5f09`  
-		Last Modified: Fri, 02 Jul 2021 00:01:37 GMT  
+	-	`sha256:caa49d5e7af27b0b5428f217ab764b9f85b4241c1d71fcbef3fa95fca481452f`  
+		Last Modified: Thu, 22 Jul 2021 22:30:26 GMT  
 		Size: 126.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -3938,14 +3938,14 @@ CMD ["composer"]
 ### `composer:2` - linux; s390x
 
 ```console
-$ docker pull composer@sha256:601a2eb4c847d729af5221f5afe8e27f65c8461b6a66e4eae8441c4cbf34a003
+$ docker pull composer@sha256:f06b4ec2b1cc2aaa363fab700628a592722a2cd7f2aa31af0527217e7e13b2e7
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **62.0 MB (61999266 bytes)**  
+-	Total Size: **62.0 MB (61999809 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d145c4e5d7d842baecbaaac2a6c65c4911894a104e27bdd35cd4ac23125d60a3`
+-	Image ID: `sha256:880cbc7008ee4bc8c34da1136f5658d40af14817b6eb957978b7ffd48bccde1c`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["composer"]`
 
@@ -4002,17 +4002,17 @@ RUN printf "# composer php cli ini settings\ndate.timezone=UTC\nmemory_limit=-1\
 ENV COMPOSER_ALLOW_SUPERUSER=1
 # Sun, 27 Jun 2021 13:10:22 GMT
 ENV COMPOSER_HOME=/tmp
-# Sun, 27 Jun 2021 13:10:22 GMT
-ENV COMPOSER_VERSION=2.1.3
-# Sun, 27 Jun 2021 13:10:24 GMT
+# Thu, 22 Jul 2021 23:50:20 GMT
+ENV COMPOSER_VERSION=2.1.4
+# Thu, 22 Jul 2021 23:50:22 GMT
 RUN set -eux;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.dev.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/snapshots.pub   ;   php -r "     \$signature = '4ac45767e5ec22652f0c1167cbbb8a2b0c708369153e328cad90147dafe50952';     \$hash = hash('sha256', preg_replace('{\s}', '', file_get_contents('/tmp/keys.dev.pub')));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, dev public key is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.tags.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/releases.pub   ;   php -r "     \$signature = '57815ba27e54dc317ecc7cc5573090d087719ba68f3bb7234e5d42d084a14642';     \$hash = hash('sha256', preg_replace('{\s}', '', file_get_contents('/tmp/keys.tags.pub')));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, tags public key is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/installer.php     --url https://raw.githubusercontent.com/composer/getcomposer.org/cb19f2aa3aeaa2006c0cd69a7ef011eb31463067/web/installer   ;   php -r "     \$signature = '48e3236262b34d30969dca3c37281b3b4bbe3221bda826ac6a9a62d6444cdb0dcd0615698a5cbe587c3f0fe57a54d8f5';     \$hash = hash('sha384', file_get_contents('/tmp/installer.php'));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, installer is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   php /tmp/installer.php --no-ansi --install-dir=/usr/bin --filename=composer --version=${COMPOSER_VERSION};   composer --ansi --version --no-interaction;   composer diagnose;   rm -f /tmp/installer.php;   find /tmp -type d -exec chmod -v 1777 {} +
-# Sun, 27 Jun 2021 13:10:24 GMT
+# Thu, 22 Jul 2021 23:50:22 GMT
 COPY file:fec7a37c0f859c3b5da390e40fa6f3ea8445ed26f54be61f4bce40efcaad57ee in /docker-entrypoint.sh 
-# Sun, 27 Jun 2021 13:10:25 GMT
+# Thu, 22 Jul 2021 23:50:23 GMT
 WORKDIR /app
-# Sun, 27 Jun 2021 13:10:25 GMT
+# Thu, 22 Jul 2021 23:50:23 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Sun, 27 Jun 2021 13:10:25 GMT
+# Thu, 22 Jul 2021 23:50:23 GMT
 CMD ["composer"]
 ```
 
@@ -4065,23 +4065,23 @@ CMD ["composer"]
 		Last Modified: Sun, 27 Jun 2021 13:11:02 GMT  
 		Size: 259.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6e8fa9c58a007225c49162943c93d73a00c77218d84b47b8308fcee681a283b3`  
-		Last Modified: Sun, 27 Jun 2021 13:11:03 GMT  
-		Size: 554.5 KB (554512 bytes)  
+	-	`sha256:c1fc077fa543b708c477aa3d51be3689771a6cfc0bfda7975ff385571cfce903`  
+		Last Modified: Thu, 22 Jul 2021 23:50:53 GMT  
+		Size: 555.1 KB (555053 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bc86302054c3e5310c3784fb2537bf2462d3bf0590471ad88e27df7e54421aca`  
-		Last Modified: Sun, 27 Jun 2021 13:11:02 GMT  
+	-	`sha256:5eb6cdd34af8a46f9249175c9e3587e6163a38512f65f8a9642ad491cc848dda`  
+		Last Modified: Thu, 22 Jul 2021 23:50:53 GMT  
 		Size: 408.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3fd8e38b7197c6705d28a4e909a8508b53f499281dd0a28f45797a6d3429dd26`  
-		Last Modified: Sun, 27 Jun 2021 13:11:02 GMT  
-		Size: 124.0 B  
+	-	`sha256:0be5faa7c25a3c2936dccb3c8d4fa27f8e69097a2ef84160e931dbac87cd6abe`  
+		Last Modified: Thu, 22 Jul 2021 23:50:53 GMT  
+		Size: 126.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `composer:2.1`
 
 ```console
-$ docker pull composer@sha256:e9f3f3d5ade248dc094b971e3d25381b8986b636662234019c5b0048d2000bd3
+$ docker pull composer@sha256:597ea2064218e90e0ce0c9d35e5005c1a391bccf5a532dec2667ee1c98b3df25
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4240,14 +4240,14 @@ CMD ["composer"]
 ### `composer:2.1` - linux; arm variant v6
 
 ```console
-$ docker pull composer@sha256:e6754889781b6f025a41666111d3e35b4cd6b72e9db9588426417ebd4efd6bac
+$ docker pull composer@sha256:d99efd45d895b4729154373f318574628a6c72f9b8f0c3915b42696f311c47fc
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **59.3 MB (59327574 bytes)**  
+-	Total Size: **59.3 MB (59328117 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1dd4fe892409f4e8d96c0f736c6d2f48bb4193e2d663d9d5882ae26672178dac`
+-	Image ID: `sha256:24c05e094673443a41e9325b86f2983f586cef1d353a9198f88ddc9948930a7f`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["composer"]`
 
@@ -4304,17 +4304,17 @@ RUN printf "# composer php cli ini settings\ndate.timezone=UTC\nmemory_limit=-1\
 ENV COMPOSER_ALLOW_SUPERUSER=1
 # Thu, 01 Jul 2021 21:32:06 GMT
 ENV COMPOSER_HOME=/tmp
-# Thu, 01 Jul 2021 21:32:07 GMT
-ENV COMPOSER_VERSION=2.1.3
-# Thu, 01 Jul 2021 21:32:11 GMT
+# Thu, 22 Jul 2021 20:49:30 GMT
+ENV COMPOSER_VERSION=2.1.4
+# Thu, 22 Jul 2021 20:49:34 GMT
 RUN set -eux;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.dev.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/snapshots.pub   ;   php -r "     \$signature = '4ac45767e5ec22652f0c1167cbbb8a2b0c708369153e328cad90147dafe50952';     \$hash = hash('sha256', preg_replace('{\s}', '', file_get_contents('/tmp/keys.dev.pub')));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, dev public key is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.tags.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/releases.pub   ;   php -r "     \$signature = '57815ba27e54dc317ecc7cc5573090d087719ba68f3bb7234e5d42d084a14642';     \$hash = hash('sha256', preg_replace('{\s}', '', file_get_contents('/tmp/keys.tags.pub')));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, tags public key is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/installer.php     --url https://raw.githubusercontent.com/composer/getcomposer.org/cb19f2aa3aeaa2006c0cd69a7ef011eb31463067/web/installer   ;   php -r "     \$signature = '48e3236262b34d30969dca3c37281b3b4bbe3221bda826ac6a9a62d6444cdb0dcd0615698a5cbe587c3f0fe57a54d8f5';     \$hash = hash('sha384', file_get_contents('/tmp/installer.php'));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, installer is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   php /tmp/installer.php --no-ansi --install-dir=/usr/bin --filename=composer --version=${COMPOSER_VERSION};   composer --ansi --version --no-interaction;   composer diagnose;   rm -f /tmp/installer.php;   find /tmp -type d -exec chmod -v 1777 {} +
-# Thu, 01 Jul 2021 21:32:11 GMT
+# Thu, 22 Jul 2021 20:49:35 GMT
 COPY file:fec7a37c0f859c3b5da390e40fa6f3ea8445ed26f54be61f4bce40efcaad57ee in /docker-entrypoint.sh 
-# Thu, 01 Jul 2021 21:32:12 GMT
+# Thu, 22 Jul 2021 20:49:35 GMT
 WORKDIR /app
-# Thu, 01 Jul 2021 21:32:12 GMT
+# Thu, 22 Jul 2021 20:49:36 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Thu, 01 Jul 2021 21:32:13 GMT
+# Thu, 22 Jul 2021 20:49:36 GMT
 CMD ["composer"]
 ```
 
@@ -4367,16 +4367,16 @@ CMD ["composer"]
 		Last Modified: Thu, 01 Jul 2021 21:33:16 GMT  
 		Size: 258.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7bd5d1bef328a96c8f58bfc16d8ea5918cc6fc027fac8d0abec8862b328f6cdd`  
-		Last Modified: Thu, 01 Jul 2021 21:33:17 GMT  
-		Size: 554.5 KB (554514 bytes)  
+	-	`sha256:5a78eb275bbf3f02742d73bf13abbf65975fa534e9799bdedc21a3403b49aaf0`  
+		Last Modified: Thu, 22 Jul 2021 20:50:29 GMT  
+		Size: 555.1 KB (555058 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6c4d06c55cf78ec0cd0c2f5728c71b89a4b3803c3851d037ab01184de13d83c0`  
-		Last Modified: Thu, 01 Jul 2021 21:33:16 GMT  
-		Size: 408.0 B  
+	-	`sha256:51e003d4ceb21d6e807770ceb18bc73bcf60f6086abd2ddb660a54837270160d`  
+		Last Modified: Thu, 22 Jul 2021 20:50:28 GMT  
+		Size: 407.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:65a8ecd177bc2f249d8e5e24a1aa8f9e67d2f040c301b2798eebb1aff69c5f0e`  
-		Last Modified: Thu, 01 Jul 2021 21:33:16 GMT  
+	-	`sha256:497867ff403bad8fffc15d3e09d0c9448e30f3ef2cbacdb0c7398d503d7052f7`  
+		Last Modified: Thu, 22 Jul 2021 20:50:28 GMT  
 		Size: 126.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -4526,14 +4526,14 @@ CMD ["composer"]
 ### `composer:2.1` - linux; arm64 variant v8
 
 ```console
-$ docker pull composer@sha256:5f8d0ba3f4dca077bd35c75622d5b75d6ec05e71c472e045fba1e0e338e7c14d
+$ docker pull composer@sha256:567196a1d06961cfa2485a3100ad6f2a6788efb19dcaef2757c91ca72a07e625
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **60.9 MB (60933282 bytes)**  
+-	Total Size: **60.9 MB (60933821 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4576a4d7454e58dc0fffad570aa9ec8a819acd8d324b6c5f5e364c86eb959652`
+-	Image ID: `sha256:d856d98721cd37f244c5e85d39b305ef460e58b52cbdee77d0a6bc343ff2be92`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["composer"]`
 
@@ -4590,17 +4590,17 @@ RUN printf "# composer php cli ini settings\ndate.timezone=UTC\nmemory_limit=-1\
 ENV COMPOSER_ALLOW_SUPERUSER=1
 # Fri, 02 Jul 2021 00:00:57 GMT
 ENV COMPOSER_HOME=/tmp
-# Fri, 02 Jul 2021 00:00:57 GMT
-ENV COMPOSER_VERSION=2.1.3
-# Fri, 02 Jul 2021 00:01:01 GMT
+# Thu, 22 Jul 2021 22:29:54 GMT
+ENV COMPOSER_VERSION=2.1.4
+# Thu, 22 Jul 2021 22:29:57 GMT
 RUN set -eux;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.dev.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/snapshots.pub   ;   php -r "     \$signature = '4ac45767e5ec22652f0c1167cbbb8a2b0c708369153e328cad90147dafe50952';     \$hash = hash('sha256', preg_replace('{\s}', '', file_get_contents('/tmp/keys.dev.pub')));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, dev public key is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.tags.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/releases.pub   ;   php -r "     \$signature = '57815ba27e54dc317ecc7cc5573090d087719ba68f3bb7234e5d42d084a14642';     \$hash = hash('sha256', preg_replace('{\s}', '', file_get_contents('/tmp/keys.tags.pub')));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, tags public key is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/installer.php     --url https://raw.githubusercontent.com/composer/getcomposer.org/cb19f2aa3aeaa2006c0cd69a7ef011eb31463067/web/installer   ;   php -r "     \$signature = '48e3236262b34d30969dca3c37281b3b4bbe3221bda826ac6a9a62d6444cdb0dcd0615698a5cbe587c3f0fe57a54d8f5';     \$hash = hash('sha384', file_get_contents('/tmp/installer.php'));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, installer is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   php /tmp/installer.php --no-ansi --install-dir=/usr/bin --filename=composer --version=${COMPOSER_VERSION};   composer --ansi --version --no-interaction;   composer diagnose;   rm -f /tmp/installer.php;   find /tmp -type d -exec chmod -v 1777 {} +
-# Fri, 02 Jul 2021 00:01:01 GMT
+# Thu, 22 Jul 2021 22:29:57 GMT
 COPY file:fec7a37c0f859c3b5da390e40fa6f3ea8445ed26f54be61f4bce40efcaad57ee in /docker-entrypoint.sh 
-# Fri, 02 Jul 2021 00:01:01 GMT
+# Thu, 22 Jul 2021 22:29:57 GMT
 WORKDIR /app
-# Fri, 02 Jul 2021 00:01:01 GMT
+# Thu, 22 Jul 2021 22:29:58 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Fri, 02 Jul 2021 00:01:02 GMT
+# Thu, 22 Jul 2021 22:29:58 GMT
 CMD ["composer"]
 ```
 
@@ -4653,16 +4653,16 @@ CMD ["composer"]
 		Last Modified: Fri, 02 Jul 2021 00:01:37 GMT  
 		Size: 257.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6970df64230369e584f11f13d06686e54768a66a93ebceabbcbd6d7c587c9a90`  
-		Last Modified: Fri, 02 Jul 2021 00:01:37 GMT  
-		Size: 554.5 KB (554516 bytes)  
+	-	`sha256:a26f792b0bc2dfa18452331233de43564326565cd5c4ee66a205c863b61d04b1`  
+		Last Modified: Thu, 22 Jul 2021 22:30:27 GMT  
+		Size: 555.1 KB (555054 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fe53313a7deeebd9b2ac9d83b45fb01d9cd9a9e7c57836a4175c8c5ba47d3cce`  
-		Last Modified: Fri, 02 Jul 2021 00:01:37 GMT  
-		Size: 408.0 B  
+	-	`sha256:0fdb1b8f2967e30a782f6c7da79ed59c688888f5cc7dde6d9da9aea9270e06ac`  
+		Last Modified: Thu, 22 Jul 2021 22:30:27 GMT  
+		Size: 409.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:317b9e7c4b00aeff4ab14e91e927cec0e7c4113ae40ad3c6e663a9e76aee5f09`  
-		Last Modified: Fri, 02 Jul 2021 00:01:37 GMT  
+	-	`sha256:caa49d5e7af27b0b5428f217ab764b9f85b4241c1d71fcbef3fa95fca481452f`  
+		Last Modified: Thu, 22 Jul 2021 22:30:26 GMT  
 		Size: 126.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -4955,14 +4955,14 @@ CMD ["composer"]
 ### `composer:2.1` - linux; s390x
 
 ```console
-$ docker pull composer@sha256:601a2eb4c847d729af5221f5afe8e27f65c8461b6a66e4eae8441c4cbf34a003
+$ docker pull composer@sha256:f06b4ec2b1cc2aaa363fab700628a592722a2cd7f2aa31af0527217e7e13b2e7
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **62.0 MB (61999266 bytes)**  
+-	Total Size: **62.0 MB (61999809 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d145c4e5d7d842baecbaaac2a6c65c4911894a104e27bdd35cd4ac23125d60a3`
+-	Image ID: `sha256:880cbc7008ee4bc8c34da1136f5658d40af14817b6eb957978b7ffd48bccde1c`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["composer"]`
 
@@ -5019,17 +5019,17 @@ RUN printf "# composer php cli ini settings\ndate.timezone=UTC\nmemory_limit=-1\
 ENV COMPOSER_ALLOW_SUPERUSER=1
 # Sun, 27 Jun 2021 13:10:22 GMT
 ENV COMPOSER_HOME=/tmp
-# Sun, 27 Jun 2021 13:10:22 GMT
-ENV COMPOSER_VERSION=2.1.3
-# Sun, 27 Jun 2021 13:10:24 GMT
+# Thu, 22 Jul 2021 23:50:20 GMT
+ENV COMPOSER_VERSION=2.1.4
+# Thu, 22 Jul 2021 23:50:22 GMT
 RUN set -eux;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.dev.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/snapshots.pub   ;   php -r "     \$signature = '4ac45767e5ec22652f0c1167cbbb8a2b0c708369153e328cad90147dafe50952';     \$hash = hash('sha256', preg_replace('{\s}', '', file_get_contents('/tmp/keys.dev.pub')));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, dev public key is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.tags.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/releases.pub   ;   php -r "     \$signature = '57815ba27e54dc317ecc7cc5573090d087719ba68f3bb7234e5d42d084a14642';     \$hash = hash('sha256', preg_replace('{\s}', '', file_get_contents('/tmp/keys.tags.pub')));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, tags public key is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/installer.php     --url https://raw.githubusercontent.com/composer/getcomposer.org/cb19f2aa3aeaa2006c0cd69a7ef011eb31463067/web/installer   ;   php -r "     \$signature = '48e3236262b34d30969dca3c37281b3b4bbe3221bda826ac6a9a62d6444cdb0dcd0615698a5cbe587c3f0fe57a54d8f5';     \$hash = hash('sha384', file_get_contents('/tmp/installer.php'));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, installer is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   php /tmp/installer.php --no-ansi --install-dir=/usr/bin --filename=composer --version=${COMPOSER_VERSION};   composer --ansi --version --no-interaction;   composer diagnose;   rm -f /tmp/installer.php;   find /tmp -type d -exec chmod -v 1777 {} +
-# Sun, 27 Jun 2021 13:10:24 GMT
+# Thu, 22 Jul 2021 23:50:22 GMT
 COPY file:fec7a37c0f859c3b5da390e40fa6f3ea8445ed26f54be61f4bce40efcaad57ee in /docker-entrypoint.sh 
-# Sun, 27 Jun 2021 13:10:25 GMT
+# Thu, 22 Jul 2021 23:50:23 GMT
 WORKDIR /app
-# Sun, 27 Jun 2021 13:10:25 GMT
+# Thu, 22 Jul 2021 23:50:23 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Sun, 27 Jun 2021 13:10:25 GMT
+# Thu, 22 Jul 2021 23:50:23 GMT
 CMD ["composer"]
 ```
 
@@ -5082,189 +5082,42 @@ CMD ["composer"]
 		Last Modified: Sun, 27 Jun 2021 13:11:02 GMT  
 		Size: 259.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6e8fa9c58a007225c49162943c93d73a00c77218d84b47b8308fcee681a283b3`  
-		Last Modified: Sun, 27 Jun 2021 13:11:03 GMT  
-		Size: 554.5 KB (554512 bytes)  
+	-	`sha256:c1fc077fa543b708c477aa3d51be3689771a6cfc0bfda7975ff385571cfce903`  
+		Last Modified: Thu, 22 Jul 2021 23:50:53 GMT  
+		Size: 555.1 KB (555053 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bc86302054c3e5310c3784fb2537bf2462d3bf0590471ad88e27df7e54421aca`  
-		Last Modified: Sun, 27 Jun 2021 13:11:02 GMT  
+	-	`sha256:5eb6cdd34af8a46f9249175c9e3587e6163a38512f65f8a9642ad491cc848dda`  
+		Last Modified: Thu, 22 Jul 2021 23:50:53 GMT  
 		Size: 408.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3fd8e38b7197c6705d28a4e909a8508b53f499281dd0a28f45797a6d3429dd26`  
-		Last Modified: Sun, 27 Jun 2021 13:11:02 GMT  
-		Size: 124.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-
-## `composer:2.1.3`
-
-```console
-$ docker pull composer@sha256:e9f3f3d5ade248dc094b971e3d25381b8986b636662234019c5b0048d2000bd3
-```
-
--	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 7
-	-	linux; amd64
-	-	linux; arm variant v6
-	-	linux; arm variant v7
-	-	linux; arm64 variant v8
-	-	linux; 386
-	-	linux; ppc64le
-	-	linux; s390x
-
-### `composer:2.1.3` - linux; amd64
-
-```console
-$ docker pull composer@sha256:d0b7feaff0e6c62cf280b5bc92927d645f5ada3e1d6dca6f9aa5e8b1d8b15649
-```
-
--	Docker Version: 20.10.7
--	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **63.1 MB (63148651 bytes)**  
-	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:84d313cd1a8011e2782282e7f938ff769b6dff58236ceec6f6c8ba19a883d193`
--	Entrypoint: `["\/docker-entrypoint.sh"]`
--	Default Command: `["composer"]`
-
-```dockerfile
-# Tue, 15 Jun 2021 22:19:37 GMT
-ADD file:f278386b0cef68136129f5f58c52445590a417b624d62bca158d4dc926c340df in / 
-# Tue, 15 Jun 2021 22:19:37 GMT
-CMD ["/bin/sh"]
-# Wed, 16 Jun 2021 23:32:45 GMT
-ENV PHPIZE_DEPS=autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c
-# Wed, 16 Jun 2021 23:32:47 GMT
-RUN apk add --no-cache 		ca-certificates 		curl 		tar 		xz 		openssl
-# Wed, 16 Jun 2021 23:32:48 GMT
-RUN set -eux; 	adduser -u 82 -D -S -G www-data www-data
-# Wed, 16 Jun 2021 23:32:48 GMT
-ENV PHP_INI_DIR=/usr/local/etc/php
-# Wed, 16 Jun 2021 23:32:49 GMT
-RUN set -eux; 	mkdir -p "$PHP_INI_DIR/conf.d"; 	[ ! -d /var/www/html ]; 	mkdir -p /var/www/html; 	chown www-data:www-data /var/www/html; 	chmod 777 /var/www/html
-# Wed, 16 Jun 2021 23:32:49 GMT
-ENV PHP_CFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
-# Wed, 16 Jun 2021 23:32:50 GMT
-ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
-# Wed, 16 Jun 2021 23:32:50 GMT
-ENV PHP_LDFLAGS=-Wl,-O1 -pie
-# Wed, 16 Jun 2021 23:35:57 GMT
-ENV GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F
-# Thu, 01 Jul 2021 22:47:15 GMT
-ENV PHP_VERSION=8.0.8
-# Thu, 01 Jul 2021 22:47:15 GMT
-ENV PHP_URL=https://www.php.net/distributions/php-8.0.8.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-8.0.8.tar.xz.asc
-# Thu, 01 Jul 2021 22:47:16 GMT
-ENV PHP_SHA256=dc1668d324232dec1d05175ec752dade92d29bb3004275118bc3f7fc7cbfbb1c
-# Thu, 01 Jul 2021 22:47:22 GMT
-RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 01 Jul 2021 22:47:22 GMT
-COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 01 Jul 2021 22:53:33 GMT
-RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--with-pic 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 		php --version
-# Thu, 01 Jul 2021 22:53:34 GMT
-COPY multi:efd917b98407edb5d558edb0edbd8e63c9318f701892aaa449794d019a092f37 in /usr/local/bin/ 
-# Thu, 01 Jul 2021 22:53:36 GMT
-RUN docker-php-ext-enable sodium
-# Thu, 01 Jul 2021 22:53:36 GMT
-ENTRYPOINT ["docker-php-entrypoint"]
-# Thu, 01 Jul 2021 22:53:36 GMT
-CMD ["php" "-a"]
-# Fri, 02 Jul 2021 00:14:05 GMT
-RUN set -eux;   apk add --no-cache --virtual .composer-rundeps     bash     coreutils     git     make     mercurial     openssh-client     patch     subversion     tini     unzip     zip
-# Fri, 02 Jul 2021 00:14:16 GMT
-RUN set -eux;   apk add --no-cache --virtual .build-deps     libzip-dev     zlib-dev   ;   docker-php-ext-install -j "$(nproc)"     zip   ;   runDeps="$(     scanelf --needed --nobanner --format '%n#p' --recursive /usr/local/lib/php/extensions       | tr ',' '\n'       | sort -u       | awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }'     )";   apk add --no-cache --virtual .composer-phpext-rundeps $runDeps;   apk del .build-deps
-# Fri, 02 Jul 2021 00:14:17 GMT
-RUN printf "# composer php cli ini settings\ndate.timezone=UTC\nmemory_limit=-1\n" > $PHP_INI_DIR/php-cli.ini
-# Fri, 02 Jul 2021 00:14:17 GMT
-ENV COMPOSER_ALLOW_SUPERUSER=1
-# Fri, 02 Jul 2021 00:14:17 GMT
-ENV COMPOSER_HOME=/tmp
-# Fri, 02 Jul 2021 00:14:17 GMT
-ENV COMPOSER_VERSION=2.1.3
-# Fri, 02 Jul 2021 00:14:21 GMT
-RUN set -eux;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.dev.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/snapshots.pub   ;   php -r "     \$signature = '4ac45767e5ec22652f0c1167cbbb8a2b0c708369153e328cad90147dafe50952';     \$hash = hash('sha256', preg_replace('{\s}', '', file_get_contents('/tmp/keys.dev.pub')));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, dev public key is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.tags.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/releases.pub   ;   php -r "     \$signature = '57815ba27e54dc317ecc7cc5573090d087719ba68f3bb7234e5d42d084a14642';     \$hash = hash('sha256', preg_replace('{\s}', '', file_get_contents('/tmp/keys.tags.pub')));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, tags public key is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/installer.php     --url https://raw.githubusercontent.com/composer/getcomposer.org/cb19f2aa3aeaa2006c0cd69a7ef011eb31463067/web/installer   ;   php -r "     \$signature = '48e3236262b34d30969dca3c37281b3b4bbe3221bda826ac6a9a62d6444cdb0dcd0615698a5cbe587c3f0fe57a54d8f5';     \$hash = hash('sha384', file_get_contents('/tmp/installer.php'));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, installer is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   php /tmp/installer.php --no-ansi --install-dir=/usr/bin --filename=composer --version=${COMPOSER_VERSION};   composer --ansi --version --no-interaction;   composer diagnose;   rm -f /tmp/installer.php;   find /tmp -type d -exec chmod -v 1777 {} +
-# Fri, 02 Jul 2021 00:14:21 GMT
-COPY file:fec7a37c0f859c3b5da390e40fa6f3ea8445ed26f54be61f4bce40efcaad57ee in /docker-entrypoint.sh 
-# Fri, 02 Jul 2021 00:14:21 GMT
-WORKDIR /app
-# Fri, 02 Jul 2021 00:14:22 GMT
-ENTRYPOINT ["/docker-entrypoint.sh"]
-# Fri, 02 Jul 2021 00:14:22 GMT
-CMD ["composer"]
-```
-
--	Layers:
-	-	`sha256:5843afab387455b37944e709ee8c78d7520df80f8d01cf7f861aae63beeddb6b`  
-		Last Modified: Tue, 15 Jun 2021 22:20:04 GMT  
-		Size: 2.8 MB (2811478 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cfcf566573f3f708d78b43786614663e55d9a9d02621f3dab2127292efbbacab`  
-		Last Modified: Fri, 25 Jun 2021 21:36:24 GMT  
-		Size: 1.7 MB (1707289 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f4ff9828d9544109bb07a2fa8308b1ed77b75738fa50300d61284755c126426a`  
-		Last Modified: Fri, 25 Jun 2021 21:36:24 GMT  
-		Size: 1.3 KB (1259 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:165b10189b0ff16bb4ac114562bc55a25c753c9fc11999774fc42e9979feef99`  
-		Last Modified: Fri, 25 Jun 2021 21:36:23 GMT  
-		Size: 268.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:976f981c135b78dc406b20049952215e897d71def8985711a7902df4c340051b`  
-		Last Modified: Thu, 01 Jul 2021 23:25:06 GMT  
-		Size: 10.7 MB (10694169 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:97c4d5ba66296b9652dd5316c9c39a85ca408d25347f77131da3fa02819b661e`  
-		Last Modified: Thu, 01 Jul 2021 23:25:05 GMT  
-		Size: 496.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ef82788fcc85b6635728d3ab1aa702d8b7b3f412433374acab0c112c756395e1`  
-		Last Modified: Thu, 01 Jul 2021 23:25:08 GMT  
-		Size: 15.0 MB (14956743 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6eb1cd221ec52371d9d406388184d0f02b7b74304fd483cbd61f7528f1e41e21`  
-		Last Modified: Thu, 01 Jul 2021 23:25:05 GMT  
-		Size: 2.3 KB (2264 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:187f17dd0b52bb518fee64d18c3a885b6e7c6bca66c7d12b94220b87fed8d594`  
-		Last Modified: Thu, 01 Jul 2021 23:25:05 GMT  
-		Size: 17.8 KB (17782 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8c2f12856d783ad6e154918cd18c6eef4fdfdd2a44fe435ef197687c4dbc667f`  
-		Last Modified: Fri, 02 Jul 2021 00:14:54 GMT  
-		Size: 32.2 MB (32200630 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:664fe5ea4675a3aa227ac22b5977ff50afed9fd816ca514f26b50da9570b1542`  
-		Last Modified: Fri, 02 Jul 2021 00:14:46 GMT  
-		Size: 201.0 KB (200968 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8661e83e60cda71c8d76881aebf10154855a4b13acc6d4398a9d136680f251ac`  
-		Last Modified: Fri, 02 Jul 2021 00:14:45 GMT  
-		Size: 258.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4379449a3ce60145deb7eb73a86e9f79a770aa8497d886fcd913d4469b9f41b3`  
-		Last Modified: Fri, 02 Jul 2021 00:14:46 GMT  
-		Size: 554.5 KB (554513 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e6a019d97d66598d645a7206e8f81ab2d3e91e37b61723c47d4f003b863f14a2`  
-		Last Modified: Fri, 02 Jul 2021 00:14:45 GMT  
-		Size: 408.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bd2103f3fa0fe3f0d0bd869924b703fc13ea28e4011804d385bdaa9657e365e3`  
-		Last Modified: Fri, 02 Jul 2021 00:14:46 GMT  
+	-	`sha256:0be5faa7c25a3c2936dccb3c8d4fa27f8e69097a2ef84160e931dbac87cd6abe`  
+		Last Modified: Thu, 22 Jul 2021 23:50:53 GMT  
 		Size: 126.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `composer:2.1.3` - linux; arm variant v6
+## `composer:2.1.4`
 
 ```console
-$ docker pull composer@sha256:e6754889781b6f025a41666111d3e35b4cd6b72e9db9588426417ebd4efd6bac
+$ docker pull composer@sha256:c52ea0d3d64eb56271ed338c41723eb43aae574e0bb6e638eb77fb95a390169b
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 3
+	-	linux; arm variant v6
+	-	linux; arm64 variant v8
+	-	linux; s390x
+
+### `composer:2.1.4` - linux; arm variant v6
+
+```console
+$ docker pull composer@sha256:d99efd45d895b4729154373f318574628a6c72f9b8f0c3915b42696f311c47fc
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **59.3 MB (59327574 bytes)**  
+-	Total Size: **59.3 MB (59328117 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1dd4fe892409f4e8d96c0f736c6d2f48bb4193e2d663d9d5882ae26672178dac`
+-	Image ID: `sha256:24c05e094673443a41e9325b86f2983f586cef1d353a9198f88ddc9948930a7f`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["composer"]`
 
@@ -5321,17 +5174,17 @@ RUN printf "# composer php cli ini settings\ndate.timezone=UTC\nmemory_limit=-1\
 ENV COMPOSER_ALLOW_SUPERUSER=1
 # Thu, 01 Jul 2021 21:32:06 GMT
 ENV COMPOSER_HOME=/tmp
-# Thu, 01 Jul 2021 21:32:07 GMT
-ENV COMPOSER_VERSION=2.1.3
-# Thu, 01 Jul 2021 21:32:11 GMT
+# Thu, 22 Jul 2021 20:49:30 GMT
+ENV COMPOSER_VERSION=2.1.4
+# Thu, 22 Jul 2021 20:49:34 GMT
 RUN set -eux;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.dev.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/snapshots.pub   ;   php -r "     \$signature = '4ac45767e5ec22652f0c1167cbbb8a2b0c708369153e328cad90147dafe50952';     \$hash = hash('sha256', preg_replace('{\s}', '', file_get_contents('/tmp/keys.dev.pub')));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, dev public key is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.tags.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/releases.pub   ;   php -r "     \$signature = '57815ba27e54dc317ecc7cc5573090d087719ba68f3bb7234e5d42d084a14642';     \$hash = hash('sha256', preg_replace('{\s}', '', file_get_contents('/tmp/keys.tags.pub')));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, tags public key is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/installer.php     --url https://raw.githubusercontent.com/composer/getcomposer.org/cb19f2aa3aeaa2006c0cd69a7ef011eb31463067/web/installer   ;   php -r "     \$signature = '48e3236262b34d30969dca3c37281b3b4bbe3221bda826ac6a9a62d6444cdb0dcd0615698a5cbe587c3f0fe57a54d8f5';     \$hash = hash('sha384', file_get_contents('/tmp/installer.php'));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, installer is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   php /tmp/installer.php --no-ansi --install-dir=/usr/bin --filename=composer --version=${COMPOSER_VERSION};   composer --ansi --version --no-interaction;   composer diagnose;   rm -f /tmp/installer.php;   find /tmp -type d -exec chmod -v 1777 {} +
-# Thu, 01 Jul 2021 21:32:11 GMT
+# Thu, 22 Jul 2021 20:49:35 GMT
 COPY file:fec7a37c0f859c3b5da390e40fa6f3ea8445ed26f54be61f4bce40efcaad57ee in /docker-entrypoint.sh 
-# Thu, 01 Jul 2021 21:32:12 GMT
+# Thu, 22 Jul 2021 20:49:35 GMT
 WORKDIR /app
-# Thu, 01 Jul 2021 21:32:12 GMT
+# Thu, 22 Jul 2021 20:49:36 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Thu, 01 Jul 2021 21:32:13 GMT
+# Thu, 22 Jul 2021 20:49:36 GMT
 CMD ["composer"]
 ```
 
@@ -5384,173 +5237,30 @@ CMD ["composer"]
 		Last Modified: Thu, 01 Jul 2021 21:33:16 GMT  
 		Size: 258.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7bd5d1bef328a96c8f58bfc16d8ea5918cc6fc027fac8d0abec8862b328f6cdd`  
-		Last Modified: Thu, 01 Jul 2021 21:33:17 GMT  
-		Size: 554.5 KB (554514 bytes)  
+	-	`sha256:5a78eb275bbf3f02742d73bf13abbf65975fa534e9799bdedc21a3403b49aaf0`  
+		Last Modified: Thu, 22 Jul 2021 20:50:29 GMT  
+		Size: 555.1 KB (555058 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6c4d06c55cf78ec0cd0c2f5728c71b89a4b3803c3851d037ab01184de13d83c0`  
-		Last Modified: Thu, 01 Jul 2021 21:33:16 GMT  
-		Size: 408.0 B  
+	-	`sha256:51e003d4ceb21d6e807770ceb18bc73bcf60f6086abd2ddb660a54837270160d`  
+		Last Modified: Thu, 22 Jul 2021 20:50:28 GMT  
+		Size: 407.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:65a8ecd177bc2f249d8e5e24a1aa8f9e67d2f040c301b2798eebb1aff69c5f0e`  
-		Last Modified: Thu, 01 Jul 2021 21:33:16 GMT  
+	-	`sha256:497867ff403bad8fffc15d3e09d0c9448e30f3ef2cbacdb0c7398d503d7052f7`  
+		Last Modified: Thu, 22 Jul 2021 20:50:28 GMT  
 		Size: 126.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `composer:2.1.3` - linux; arm variant v7
+### `composer:2.1.4` - linux; arm64 variant v8
 
 ```console
-$ docker pull composer@sha256:c4a6062df1c84bdd3f25b7ed6a066201e3f59b0f7d39cb8926c6c24a7f79d0e7
+$ docker pull composer@sha256:567196a1d06961cfa2485a3100ad6f2a6788efb19dcaef2757c91ca72a07e625
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **56.7 MB (56695938 bytes)**  
+-	Total Size: **60.9 MB (60933821 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6c88ddf0547a0592dc55296014ab7a47cbf3953bbecb3bf8307856c5835c6036`
--	Entrypoint: `["\/docker-entrypoint.sh"]`
--	Default Command: `["composer"]`
-
-```dockerfile
-# Tue, 15 Jun 2021 23:15:05 GMT
-ADD file:416a8b507abdc6bdcb22997a4be0a4170796c3f9f77e315b2dbff2b0a212bc68 in / 
-# Tue, 15 Jun 2021 23:15:06 GMT
-CMD ["/bin/sh"]
-# Wed, 23 Jun 2021 08:42:51 GMT
-ENV PHPIZE_DEPS=autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c
-# Wed, 23 Jun 2021 08:42:54 GMT
-RUN apk add --no-cache 		ca-certificates 		curl 		tar 		xz 		openssl
-# Wed, 23 Jun 2021 08:42:55 GMT
-RUN set -eux; 	adduser -u 82 -D -S -G www-data www-data
-# Wed, 23 Jun 2021 08:42:56 GMT
-ENV PHP_INI_DIR=/usr/local/etc/php
-# Wed, 23 Jun 2021 08:42:57 GMT
-RUN set -eux; 	mkdir -p "$PHP_INI_DIR/conf.d"; 	[ ! -d /var/www/html ]; 	mkdir -p /var/www/html; 	chown www-data:www-data /var/www/html; 	chmod 777 /var/www/html
-# Wed, 23 Jun 2021 08:42:57 GMT
-ENV PHP_CFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
-# Wed, 23 Jun 2021 08:42:58 GMT
-ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
-# Wed, 23 Jun 2021 08:42:58 GMT
-ENV PHP_LDFLAGS=-Wl,-O1 -pie
-# Wed, 23 Jun 2021 09:22:06 GMT
-ENV GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F
-# Thu, 01 Jul 2021 23:01:19 GMT
-ENV PHP_VERSION=8.0.8
-# Thu, 01 Jul 2021 23:01:19 GMT
-ENV PHP_URL=https://www.php.net/distributions/php-8.0.8.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-8.0.8.tar.xz.asc
-# Thu, 01 Jul 2021 23:01:20 GMT
-ENV PHP_SHA256=dc1668d324232dec1d05175ec752dade92d29bb3004275118bc3f7fc7cbfbb1c
-# Thu, 01 Jul 2021 23:01:27 GMT
-RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 01 Jul 2021 23:01:27 GMT
-COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 01 Jul 2021 23:05:41 GMT
-RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--with-pic 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 		php --version
-# Thu, 01 Jul 2021 23:05:42 GMT
-COPY multi:efd917b98407edb5d558edb0edbd8e63c9318f701892aaa449794d019a092f37 in /usr/local/bin/ 
-# Thu, 01 Jul 2021 23:05:44 GMT
-RUN docker-php-ext-enable sodium
-# Thu, 01 Jul 2021 23:05:45 GMT
-ENTRYPOINT ["docker-php-entrypoint"]
-# Thu, 01 Jul 2021 23:05:45 GMT
-CMD ["php" "-a"]
-# Fri, 02 Jul 2021 00:32:27 GMT
-RUN set -eux;   apk add --no-cache --virtual .composer-rundeps     bash     coreutils     git     make     mercurial     openssh-client     patch     subversion     tini     unzip     zip
-# Fri, 02 Jul 2021 00:32:52 GMT
-RUN set -eux;   apk add --no-cache --virtual .build-deps     libzip-dev     zlib-dev   ;   docker-php-ext-install -j "$(nproc)"     zip   ;   runDeps="$(     scanelf --needed --nobanner --format '%n#p' --recursive /usr/local/lib/php/extensions       | tr ',' '\n'       | sort -u       | awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }'     )";   apk add --no-cache --virtual .composer-phpext-rundeps $runDeps;   apk del .build-deps
-# Fri, 02 Jul 2021 00:32:54 GMT
-RUN printf "# composer php cli ini settings\ndate.timezone=UTC\nmemory_limit=-1\n" > $PHP_INI_DIR/php-cli.ini
-# Fri, 02 Jul 2021 00:32:54 GMT
-ENV COMPOSER_ALLOW_SUPERUSER=1
-# Fri, 02 Jul 2021 00:32:55 GMT
-ENV COMPOSER_HOME=/tmp
-# Fri, 02 Jul 2021 00:32:55 GMT
-ENV COMPOSER_VERSION=2.1.3
-# Fri, 02 Jul 2021 00:32:59 GMT
-RUN set -eux;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.dev.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/snapshots.pub   ;   php -r "     \$signature = '4ac45767e5ec22652f0c1167cbbb8a2b0c708369153e328cad90147dafe50952';     \$hash = hash('sha256', preg_replace('{\s}', '', file_get_contents('/tmp/keys.dev.pub')));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, dev public key is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.tags.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/releases.pub   ;   php -r "     \$signature = '57815ba27e54dc317ecc7cc5573090d087719ba68f3bb7234e5d42d084a14642';     \$hash = hash('sha256', preg_replace('{\s}', '', file_get_contents('/tmp/keys.tags.pub')));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, tags public key is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/installer.php     --url https://raw.githubusercontent.com/composer/getcomposer.org/cb19f2aa3aeaa2006c0cd69a7ef011eb31463067/web/installer   ;   php -r "     \$signature = '48e3236262b34d30969dca3c37281b3b4bbe3221bda826ac6a9a62d6444cdb0dcd0615698a5cbe587c3f0fe57a54d8f5';     \$hash = hash('sha384', file_get_contents('/tmp/installer.php'));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, installer is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   php /tmp/installer.php --no-ansi --install-dir=/usr/bin --filename=composer --version=${COMPOSER_VERSION};   composer --ansi --version --no-interaction;   composer diagnose;   rm -f /tmp/installer.php;   find /tmp -type d -exec chmod -v 1777 {} +
-# Fri, 02 Jul 2021 00:33:00 GMT
-COPY file:fec7a37c0f859c3b5da390e40fa6f3ea8445ed26f54be61f4bce40efcaad57ee in /docker-entrypoint.sh 
-# Fri, 02 Jul 2021 00:33:00 GMT
-WORKDIR /app
-# Fri, 02 Jul 2021 00:33:00 GMT
-ENTRYPOINT ["/docker-entrypoint.sh"]
-# Fri, 02 Jul 2021 00:33:01 GMT
-CMD ["composer"]
-```
-
--	Layers:
-	-	`sha256:136482bf81d1fa351b424ebb8c7e34d15f2c5ed3fc0b66b544b8312bda3d52d9`  
-		Last Modified: Tue, 15 Jun 2021 23:16:40 GMT  
-		Size: 2.4 MB (2427917 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1185f00838acc4bd6c4bfdbfdd1b3b8b68fc8500c1d8393fdcc5bd8846c452da`  
-		Last Modified: Fri, 25 Jun 2021 21:25:06 GMT  
-		Size: 1.6 MB (1564529 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f5362957231a188851bc9f0b7a86718fd0561376062ac2198e3d325660d73168`  
-		Last Modified: Fri, 25 Jun 2021 21:25:05 GMT  
-		Size: 1.3 KB (1258 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b284c21ad15282e61562b8098064c462bfe0395c2e3de85a1b7f5fa6394e9474`  
-		Last Modified: Fri, 25 Jun 2021 21:25:05 GMT  
-		Size: 268.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0db3f843fcbae637472ae10a2cd70e2918992f90ce186622b59cc55c1ce72f12`  
-		Last Modified: Thu, 01 Jul 2021 23:45:37 GMT  
-		Size: 10.7 MB (10694172 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b9ed54ecfc24bdd78bc5b45fd3d4cadd9d53f207c1448e1e0f2638122932101b`  
-		Last Modified: Thu, 01 Jul 2021 23:45:34 GMT  
-		Size: 497.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0bc90239047d22f8254f14c679074b828f2fab67aea414e6098c95c138537411`  
-		Last Modified: Thu, 01 Jul 2021 23:45:43 GMT  
-		Size: 12.7 MB (12738110 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0cb63be4cc6debb808d9afd939c9366d69e26c339a0a1d023bbe1356bcf0f0c0`  
-		Last Modified: Thu, 01 Jul 2021 23:45:34 GMT  
-		Size: 2.3 KB (2266 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0d8b1a31e980929343f1225395667359c37a31d741c227adddcc3ae34ba883a1`  
-		Last Modified: Thu, 01 Jul 2021 23:45:34 GMT  
-		Size: 17.8 KB (17787 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2006c23c4464afc2f0298a82aa38773bd2a8bfb1979a7d092119b3657672af75`  
-		Last Modified: Fri, 02 Jul 2021 00:34:27 GMT  
-		Size: 28.5 MB (28505078 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4bf16000e565b05222437c45b755b091542608b6dc9d397b93fab42a86d9ac70`  
-		Last Modified: Fri, 02 Jul 2021 00:34:04 GMT  
-		Size: 188.8 KB (188754 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:badca3b7c7aec24287ebc14f53c2298044a12810dac75121c3f9ae6a5a67c730`  
-		Last Modified: Fri, 02 Jul 2021 00:34:03 GMT  
-		Size: 256.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:09267d45a8c8db293974ceeea46624ff41d153ed5c4b3a6b64ed93edc439521d`  
-		Last Modified: Fri, 02 Jul 2021 00:34:04 GMT  
-		Size: 554.5 KB (554512 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1fc399735ebefc00faebd847606780b2d0048964316e76869562b846b87db694`  
-		Last Modified: Fri, 02 Jul 2021 00:34:04 GMT  
-		Size: 408.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:727e72f0d4cb1cea169ceaf8541ed7acdd95c7e0b6f11bff8d492ba114bf8e3e`  
-		Last Modified: Fri, 02 Jul 2021 00:34:03 GMT  
-		Size: 126.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-
-### `composer:2.1.3` - linux; arm64 variant v8
-
-```console
-$ docker pull composer@sha256:5f8d0ba3f4dca077bd35c75622d5b75d6ec05e71c472e045fba1e0e338e7c14d
-```
-
--	Docker Version: 20.10.7
--	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **60.9 MB (60933282 bytes)**  
-	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4576a4d7454e58dc0fffad570aa9ec8a819acd8d324b6c5f5e364c86eb959652`
+-	Image ID: `sha256:d856d98721cd37f244c5e85d39b305ef460e58b52cbdee77d0a6bc343ff2be92`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["composer"]`
 
@@ -5607,17 +5317,17 @@ RUN printf "# composer php cli ini settings\ndate.timezone=UTC\nmemory_limit=-1\
 ENV COMPOSER_ALLOW_SUPERUSER=1
 # Fri, 02 Jul 2021 00:00:57 GMT
 ENV COMPOSER_HOME=/tmp
-# Fri, 02 Jul 2021 00:00:57 GMT
-ENV COMPOSER_VERSION=2.1.3
-# Fri, 02 Jul 2021 00:01:01 GMT
+# Thu, 22 Jul 2021 22:29:54 GMT
+ENV COMPOSER_VERSION=2.1.4
+# Thu, 22 Jul 2021 22:29:57 GMT
 RUN set -eux;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.dev.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/snapshots.pub   ;   php -r "     \$signature = '4ac45767e5ec22652f0c1167cbbb8a2b0c708369153e328cad90147dafe50952';     \$hash = hash('sha256', preg_replace('{\s}', '', file_get_contents('/tmp/keys.dev.pub')));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, dev public key is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.tags.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/releases.pub   ;   php -r "     \$signature = '57815ba27e54dc317ecc7cc5573090d087719ba68f3bb7234e5d42d084a14642';     \$hash = hash('sha256', preg_replace('{\s}', '', file_get_contents('/tmp/keys.tags.pub')));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, tags public key is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/installer.php     --url https://raw.githubusercontent.com/composer/getcomposer.org/cb19f2aa3aeaa2006c0cd69a7ef011eb31463067/web/installer   ;   php -r "     \$signature = '48e3236262b34d30969dca3c37281b3b4bbe3221bda826ac6a9a62d6444cdb0dcd0615698a5cbe587c3f0fe57a54d8f5';     \$hash = hash('sha384', file_get_contents('/tmp/installer.php'));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, installer is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   php /tmp/installer.php --no-ansi --install-dir=/usr/bin --filename=composer --version=${COMPOSER_VERSION};   composer --ansi --version --no-interaction;   composer diagnose;   rm -f /tmp/installer.php;   find /tmp -type d -exec chmod -v 1777 {} +
-# Fri, 02 Jul 2021 00:01:01 GMT
+# Thu, 22 Jul 2021 22:29:57 GMT
 COPY file:fec7a37c0f859c3b5da390e40fa6f3ea8445ed26f54be61f4bce40efcaad57ee in /docker-entrypoint.sh 
-# Fri, 02 Jul 2021 00:01:01 GMT
+# Thu, 22 Jul 2021 22:29:57 GMT
 WORKDIR /app
-# Fri, 02 Jul 2021 00:01:01 GMT
+# Thu, 22 Jul 2021 22:29:58 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Fri, 02 Jul 2021 00:01:02 GMT
+# Thu, 22 Jul 2021 22:29:58 GMT
 CMD ["composer"]
 ```
 
@@ -5670,316 +5380,30 @@ CMD ["composer"]
 		Last Modified: Fri, 02 Jul 2021 00:01:37 GMT  
 		Size: 257.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6970df64230369e584f11f13d06686e54768a66a93ebceabbcbd6d7c587c9a90`  
-		Last Modified: Fri, 02 Jul 2021 00:01:37 GMT  
-		Size: 554.5 KB (554516 bytes)  
+	-	`sha256:a26f792b0bc2dfa18452331233de43564326565cd5c4ee66a205c863b61d04b1`  
+		Last Modified: Thu, 22 Jul 2021 22:30:27 GMT  
+		Size: 555.1 KB (555054 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fe53313a7deeebd9b2ac9d83b45fb01d9cd9a9e7c57836a4175c8c5ba47d3cce`  
-		Last Modified: Fri, 02 Jul 2021 00:01:37 GMT  
-		Size: 408.0 B  
+	-	`sha256:0fdb1b8f2967e30a782f6c7da79ed59c688888f5cc7dde6d9da9aea9270e06ac`  
+		Last Modified: Thu, 22 Jul 2021 22:30:27 GMT  
+		Size: 409.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:317b9e7c4b00aeff4ab14e91e927cec0e7c4113ae40ad3c6e663a9e76aee5f09`  
-		Last Modified: Fri, 02 Jul 2021 00:01:37 GMT  
+	-	`sha256:caa49d5e7af27b0b5428f217ab764b9f85b4241c1d71fcbef3fa95fca481452f`  
+		Last Modified: Thu, 22 Jul 2021 22:30:26 GMT  
 		Size: 126.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `composer:2.1.3` - linux; 386
+### `composer:2.1.4` - linux; s390x
 
 ```console
-$ docker pull composer@sha256:4e02e46ed491da94fe6208449f23bbe2e2c1e2a1b9133b66d659313ac2ec6735
-```
-
--	Docker Version: 19.03.12
--	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **64.1 MB (64112372 bytes)**  
-	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:99b774738d9ed1e3b862eb23e484734c85512fb40e0f82e8b7e8640d514edaca`
--	Entrypoint: `["\/docker-entrypoint.sh"]`
--	Default Command: `["composer"]`
-
-```dockerfile
-# Wed, 14 Apr 2021 18:38:29 GMT
-ADD file:36634145ad6ec95a6b1a4f8d875f48719357c7a90f9b4906f8ce74f71b28c19d in / 
-# Wed, 14 Apr 2021 18:38:29 GMT
-CMD ["/bin/sh"]
-# Thu, 15 Apr 2021 03:38:44 GMT
-ENV PHPIZE_DEPS=autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c
-# Thu, 15 Apr 2021 03:38:46 GMT
-RUN apk add --no-cache 		ca-certificates 		curl 		tar 		xz 		openssl
-# Thu, 15 Apr 2021 03:38:47 GMT
-RUN set -eux; 	addgroup -g 82 -S www-data; 	adduser -u 82 -D -S -G www-data www-data
-# Thu, 15 Apr 2021 03:38:47 GMT
-ENV PHP_INI_DIR=/usr/local/etc/php
-# Thu, 15 Apr 2021 03:38:48 GMT
-RUN set -eux; 	mkdir -p "$PHP_INI_DIR/conf.d"; 	[ ! -d /var/www/html ]; 	mkdir -p /var/www/html; 	chown www-data:www-data /var/www/html; 	chmod 777 /var/www/html
-# Thu, 15 Apr 2021 03:38:48 GMT
-ENV PHP_CFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
-# Thu, 15 Apr 2021 03:38:48 GMT
-ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
-# Thu, 15 Apr 2021 03:38:48 GMT
-ENV PHP_LDFLAGS=-Wl,-O1 -pie
-# Thu, 15 Apr 2021 03:38:49 GMT
-ENV GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F
-# Fri, 04 Jun 2021 19:14:53 GMT
-ENV PHP_VERSION=8.0.7
-# Fri, 04 Jun 2021 19:14:53 GMT
-ENV PHP_URL=https://www.php.net/distributions/php-8.0.7.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-8.0.7.tar.xz.asc
-# Fri, 04 Jun 2021 19:14:53 GMT
-ENV PHP_SHA256=d5fc2e4fc780a32404d88c360e3e0009bc725d936459668e9c2ac992f2d83654
-# Fri, 04 Jun 2021 19:15:01 GMT
-RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Fri, 04 Jun 2021 19:15:02 GMT
-COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Fri, 04 Jun 2021 19:25:18 GMT
-RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--with-pic 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 		php --version
-# Fri, 04 Jun 2021 19:25:19 GMT
-COPY multi:efd917b98407edb5d558edb0edbd8e63c9318f701892aaa449794d019a092f37 in /usr/local/bin/ 
-# Fri, 04 Jun 2021 19:25:21 GMT
-RUN docker-php-ext-enable sodium
-# Fri, 04 Jun 2021 19:25:21 GMT
-ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 04 Jun 2021 19:25:22 GMT
-CMD ["php" "-a"]
-# Fri, 04 Jun 2021 20:42:45 GMT
-RUN set -eux;   apk add --no-cache --virtual .composer-rundeps     bash     coreutils     git     make     mercurial     openssh-client     patch     subversion     tini     unzip     zip
-# Fri, 04 Jun 2021 20:42:56 GMT
-RUN set -eux;   apk add --no-cache --virtual .build-deps     libzip-dev     zlib-dev   ;   docker-php-ext-install -j "$(nproc)"     zip   ;   runDeps="$(     scanelf --needed --nobanner --format '%n#p' --recursive /usr/local/lib/php/extensions       | tr ',' '\n'       | sort -u       | awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }'     )";   apk add --no-cache --virtual .composer-phpext-rundeps $runDeps;   apk del .build-deps
-# Fri, 04 Jun 2021 20:42:57 GMT
-RUN printf "# composer php cli ini settings\ndate.timezone=UTC\nmemory_limit=-1\n" > $PHP_INI_DIR/php-cli.ini
-# Fri, 04 Jun 2021 20:42:57 GMT
-ENV COMPOSER_ALLOW_SUPERUSER=1
-# Fri, 04 Jun 2021 20:42:57 GMT
-ENV COMPOSER_HOME=/tmp
-# Thu, 10 Jun 2021 17:38:29 GMT
-ENV COMPOSER_VERSION=2.1.3
-# Thu, 10 Jun 2021 17:38:32 GMT
-RUN set -eux;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.dev.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/snapshots.pub   ;   php -r "     \$signature = '4ac45767e5ec22652f0c1167cbbb8a2b0c708369153e328cad90147dafe50952';     \$hash = hash('sha256', preg_replace('{\s}', '', file_get_contents('/tmp/keys.dev.pub')));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, dev public key is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.tags.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/releases.pub   ;   php -r "     \$signature = '57815ba27e54dc317ecc7cc5573090d087719ba68f3bb7234e5d42d084a14642';     \$hash = hash('sha256', preg_replace('{\s}', '', file_get_contents('/tmp/keys.tags.pub')));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, tags public key is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/installer.php     --url https://raw.githubusercontent.com/composer/getcomposer.org/cb19f2aa3aeaa2006c0cd69a7ef011eb31463067/web/installer   ;   php -r "     \$signature = '48e3236262b34d30969dca3c37281b3b4bbe3221bda826ac6a9a62d6444cdb0dcd0615698a5cbe587c3f0fe57a54d8f5';     \$hash = hash('sha384', file_get_contents('/tmp/installer.php'));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, installer is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   php /tmp/installer.php --no-ansi --install-dir=/usr/bin --filename=composer --version=${COMPOSER_VERSION};   composer --ansi --version --no-interaction;   composer diagnose;   rm -f /tmp/installer.php;   find /tmp -type d -exec chmod -v 1777 {} +
-# Thu, 10 Jun 2021 17:38:32 GMT
-COPY file:fec7a37c0f859c3b5da390e40fa6f3ea8445ed26f54be61f4bce40efcaad57ee in /docker-entrypoint.sh 
-# Thu, 10 Jun 2021 17:38:33 GMT
-WORKDIR /app
-# Thu, 10 Jun 2021 17:38:33 GMT
-ENTRYPOINT ["/docker-entrypoint.sh"]
-# Thu, 10 Jun 2021 17:38:33 GMT
-CMD ["composer"]
-```
-
--	Layers:
-	-	`sha256:31b7e7ccca9e17fd08b39c9a4ffd3ded380b62816c489d6c3758c9bb5a632430`  
-		Last Modified: Wed, 14 Apr 2021 18:39:24 GMT  
-		Size: 2.8 MB (2818900 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b3818e7e8eb8d9c0ab0e377e89ed7df3037ec2c0d4c4c89bd3a2abedc459366c`  
-		Last Modified: Thu, 15 Apr 2021 05:57:45 GMT  
-		Size: 1.8 MB (1799274 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:274cbc3732aca6ca32c0ba51f7504eb2d19d4fd52d0f89f9ff2597a673484be8`  
-		Last Modified: Thu, 15 Apr 2021 05:57:43 GMT  
-		Size: 1.3 KB (1260 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:32aa0b7923dc47bd54c1e8cc895686f0638c3a28a9a40f8ed831545df00ce891`  
-		Last Modified: Thu, 15 Apr 2021 05:57:46 GMT  
-		Size: 268.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0c11bf4cbd32494a063621f918fa784556315a314c6d78e5d19dbfc8bd942ab0`  
-		Last Modified: Fri, 04 Jun 2021 19:58:41 GMT  
-		Size: 10.8 MB (10788550 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7825c7bdb9d266701c9228b54056b249ead9c87bb7c598cc697b4e9129cacaae`  
-		Last Modified: Fri, 04 Jun 2021 19:58:39 GMT  
-		Size: 498.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b1fc4bd5e9a72405e0b9d3bcdbe0b7262e762c791870713d50bef19042426075`  
-		Last Modified: Fri, 04 Jun 2021 19:58:44 GMT  
-		Size: 15.6 MB (15569700 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:909ee12d174e4a1b14451096ba719a4ee697691d0d87bca3bbc007780ac8b9d1`  
-		Last Modified: Fri, 04 Jun 2021 19:58:39 GMT  
-		Size: 2.3 KB (2264 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c0db7581e2c6a9e29181306bc72b568bcd37d34d86e82848ab39e9339e1402e8`  
-		Last Modified: Fri, 04 Jun 2021 19:58:40 GMT  
-		Size: 17.6 KB (17588 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c6a68082e643a7fc161f84cc28dc2bf16a7887e2d4308bd28ecc6fe8b8629886`  
-		Last Modified: Fri, 04 Jun 2021 20:43:48 GMT  
-		Size: 32.3 MB (32344854 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:10a803220d3be252a04d891ac0da77a9f2ea0f49316dcace07e32952ece50fa6`  
-		Last Modified: Fri, 04 Jun 2021 20:43:38 GMT  
-		Size: 213.9 KB (213906 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c03742a6d31e0579e49ad310eef763db9a43325091247f01681d12fb81eccc71`  
-		Last Modified: Fri, 04 Jun 2021 20:43:38 GMT  
-		Size: 257.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bd3b7f2db5bc1d340325eeb496287221d43e4ca8251f3bb179744bf7d8cf603a`  
-		Last Modified: Thu, 10 Jun 2021 17:39:01 GMT  
-		Size: 554.5 KB (554520 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:63498ecde104628b29fe215bb8920fba90808cbcbe53ae3509376ba3f7319ba3`  
-		Last Modified: Thu, 10 Jun 2021 17:39:01 GMT  
-		Size: 407.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c476d4a236204c45b6b1aad0808d984df1ec4a7410c75ae462adfc04487296eb`  
-		Last Modified: Thu, 10 Jun 2021 17:39:01 GMT  
-		Size: 126.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-
-### `composer:2.1.3` - linux; ppc64le
-
-```console
-$ docker pull composer@sha256:d6b54ebb2e8fa6bb533ec411f0d83331940ff6c2abec1618f11b5b41d6977aea
+$ docker pull composer@sha256:f06b4ec2b1cc2aaa363fab700628a592722a2cd7f2aa31af0527217e7e13b2e7
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **64.5 MB (64517569 bytes)**  
+-	Total Size: **62.0 MB (61999809 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f1fd25998deb6c63fcb1615dbdd87eee42b799ad52c82adaf8246f2acc20091e`
--	Entrypoint: `["\/docker-entrypoint.sh"]`
--	Default Command: `["composer"]`
-
-```dockerfile
-# Wed, 14 Apr 2021 19:30:57 GMT
-ADD file:52162c4413e3597dad4ccb790c379b67ef40d50c0d0659e8b6c65d833886b3af in / 
-# Wed, 14 Apr 2021 19:31:02 GMT
-CMD ["/bin/sh"]
-# Wed, 14 Apr 2021 20:15:47 GMT
-ENV PHPIZE_DEPS=autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c
-# Wed, 14 Apr 2021 20:15:58 GMT
-RUN apk add --no-cache 		ca-certificates 		curl 		tar 		xz 		openssl
-# Wed, 14 Apr 2021 20:16:09 GMT
-RUN set -eux; 	addgroup -g 82 -S www-data; 	adduser -u 82 -D -S -G www-data www-data
-# Wed, 14 Apr 2021 20:16:18 GMT
-ENV PHP_INI_DIR=/usr/local/etc/php
-# Wed, 14 Apr 2021 20:16:26 GMT
-RUN set -eux; 	mkdir -p "$PHP_INI_DIR/conf.d"; 	[ ! -d /var/www/html ]; 	mkdir -p /var/www/html; 	chown www-data:www-data /var/www/html; 	chmod 777 /var/www/html
-# Wed, 14 Apr 2021 20:16:29 GMT
-ENV PHP_CFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
-# Wed, 14 Apr 2021 20:16:35 GMT
-ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
-# Wed, 14 Apr 2021 20:16:45 GMT
-ENV PHP_LDFLAGS=-Wl,-O1 -pie
-# Wed, 14 Apr 2021 20:16:53 GMT
-ENV GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F
-# Fri, 04 Jun 2021 18:51:21 GMT
-ENV PHP_VERSION=8.0.7
-# Fri, 04 Jun 2021 18:51:31 GMT
-ENV PHP_URL=https://www.php.net/distributions/php-8.0.7.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-8.0.7.tar.xz.asc
-# Fri, 04 Jun 2021 18:51:35 GMT
-ENV PHP_SHA256=d5fc2e4fc780a32404d88c360e3e0009bc725d936459668e9c2ac992f2d83654
-# Fri, 04 Jun 2021 18:52:05 GMT
-RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Fri, 04 Jun 2021 18:52:09 GMT
-COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Fri, 04 Jun 2021 18:57:10 GMT
-RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		libedit-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		sqlite-dev 	; 		export CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--with-pic 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 		php --version
-# Fri, 04 Jun 2021 18:57:15 GMT
-COPY multi:efd917b98407edb5d558edb0edbd8e63c9318f701892aaa449794d019a092f37 in /usr/local/bin/ 
-# Fri, 04 Jun 2021 18:57:27 GMT
-RUN docker-php-ext-enable sodium
-# Fri, 04 Jun 2021 18:57:31 GMT
-ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 04 Jun 2021 18:57:34 GMT
-CMD ["php" "-a"]
-# Sun, 27 Jun 2021 10:23:12 GMT
-RUN set -eux;   apk add --no-cache --virtual .composer-rundeps     bash     coreutils     git     make     mercurial     openssh-client     patch     subversion     tini     unzip     zip
-# Sun, 27 Jun 2021 10:23:48 GMT
-RUN set -eux;   apk add --no-cache --virtual .build-deps     libzip-dev     zlib-dev   ;   docker-php-ext-install -j "$(nproc)"     zip   ;   runDeps="$(     scanelf --needed --nobanner --format '%n#p' --recursive /usr/local/lib/php/extensions       | tr ',' '\n'       | sort -u       | awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }'     )";   apk add --no-cache --virtual .composer-phpext-rundeps $runDeps;   apk del .build-deps
-# Sun, 27 Jun 2021 10:23:57 GMT
-RUN printf "# composer php cli ini settings\ndate.timezone=UTC\nmemory_limit=-1\n" > $PHP_INI_DIR/php-cli.ini
-# Sun, 27 Jun 2021 10:24:00 GMT
-ENV COMPOSER_ALLOW_SUPERUSER=1
-# Sun, 27 Jun 2021 10:24:03 GMT
-ENV COMPOSER_HOME=/tmp
-# Sun, 27 Jun 2021 10:24:05 GMT
-ENV COMPOSER_VERSION=2.1.3
-# Sun, 27 Jun 2021 10:24:18 GMT
-RUN set -eux;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.dev.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/snapshots.pub   ;   php -r "     \$signature = '4ac45767e5ec22652f0c1167cbbb8a2b0c708369153e328cad90147dafe50952';     \$hash = hash('sha256', preg_replace('{\s}', '', file_get_contents('/tmp/keys.dev.pub')));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, dev public key is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.tags.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/releases.pub   ;   php -r "     \$signature = '57815ba27e54dc317ecc7cc5573090d087719ba68f3bb7234e5d42d084a14642';     \$hash = hash('sha256', preg_replace('{\s}', '', file_get_contents('/tmp/keys.tags.pub')));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, tags public key is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/installer.php     --url https://raw.githubusercontent.com/composer/getcomposer.org/cb19f2aa3aeaa2006c0cd69a7ef011eb31463067/web/installer   ;   php -r "     \$signature = '48e3236262b34d30969dca3c37281b3b4bbe3221bda826ac6a9a62d6444cdb0dcd0615698a5cbe587c3f0fe57a54d8f5';     \$hash = hash('sha384', file_get_contents('/tmp/installer.php'));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, installer is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   php /tmp/installer.php --no-ansi --install-dir=/usr/bin --filename=composer --version=${COMPOSER_VERSION};   composer --ansi --version --no-interaction;   composer diagnose;   rm -f /tmp/installer.php;   find /tmp -type d -exec chmod -v 1777 {} +
-# Sun, 27 Jun 2021 10:24:20 GMT
-COPY file:fec7a37c0f859c3b5da390e40fa6f3ea8445ed26f54be61f4bce40efcaad57ee in /docker-entrypoint.sh 
-# Sun, 27 Jun 2021 10:24:22 GMT
-WORKDIR /app
-# Sun, 27 Jun 2021 10:24:27 GMT
-ENTRYPOINT ["/docker-entrypoint.sh"]
-# Sun, 27 Jun 2021 10:24:31 GMT
-CMD ["composer"]
-```
-
--	Layers:
-	-	`sha256:771d2590aa602a0d4a922e322f02b22cc9d193f8cd159d9d1a140cadf1f8b4d4`  
-		Last Modified: Wed, 14 Apr 2021 19:32:33 GMT  
-		Size: 2.8 MB (2813141 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b18b4999d98214ab55ea75ff5caca694bebb5bb07f5c23e9a6f4ce900ce4c2c6`  
-		Last Modified: Wed, 14 Apr 2021 22:01:00 GMT  
-		Size: 1.7 MB (1748637 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8118faf424e03fa2a7d0df76aa1813928f5598c3bdd1b390629452fd95766a66`  
-		Last Modified: Wed, 14 Apr 2021 22:00:59 GMT  
-		Size: 1.3 KB (1259 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fc86fc5a1b429a1fd2c88a0a1f7506b2543ae32ff0ba83f0ba697a84dafa2ded`  
-		Last Modified: Wed, 14 Apr 2021 22:00:59 GMT  
-		Size: 269.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:47dd0c0035f66b942fab95a9bff27bbaa9ccf2143e86a55115a98567409c0158`  
-		Last Modified: Fri, 04 Jun 2021 19:23:19 GMT  
-		Size: 10.8 MB (10788562 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6047a06cd7e51c04e58caeaf149ac3a88ef059b697207aae09c60572d1f10ebd`  
-		Last Modified: Fri, 04 Jun 2021 19:23:17 GMT  
-		Size: 500.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c8668b02c0671faa2d1441782a8bc0bd19680d34260439004c5f9d7d46a03e4f`  
-		Last Modified: Fri, 04 Jun 2021 19:23:22 GMT  
-		Size: 15.9 MB (15937483 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9ea043a8677f6d6d714cd12528a1799539ea77b319d9bbe41f7155afd182d41d`  
-		Last Modified: Fri, 04 Jun 2021 19:23:17 GMT  
-		Size: 2.3 KB (2267 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:52406ae5896026414e86ec12df77e36d4c86dabe2cd7b4f851bffa64c9d28f27`  
-		Last Modified: Fri, 04 Jun 2021 19:23:17 GMT  
-		Size: 17.6 KB (17608 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:134e7ac0974cc16fde6ea96b8d246c22107c38c1045515bdd2a65648e7238c2c`  
-		Last Modified: Sun, 27 Jun 2021 10:25:46 GMT  
-		Size: 32.1 MB (32055069 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9904504c24d0ef48bd22dd0c862649d4740545ed23eec549f60992536c8af1af`  
-		Last Modified: Sun, 27 Jun 2021 10:25:37 GMT  
-		Size: 597.5 KB (597467 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d71ac70e50f639b82efba1975e35c23c8bdb5aaf6eafe77b4bb1b530b9fc5263`  
-		Last Modified: Sun, 27 Jun 2021 10:25:36 GMT  
-		Size: 259.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:55efb487c49510be7dbed642cf8617f3314be1dafa44d58748993941e9ca441a`  
-		Last Modified: Sun, 27 Jun 2021 10:25:37 GMT  
-		Size: 554.5 KB (554515 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fb2f24f2cddd751030a0310cea305da2a2f09f2b6f4d569d45014d900ccee95e`  
-		Last Modified: Sun, 27 Jun 2021 10:25:36 GMT  
-		Size: 407.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c32091b86632617172bb5971051aab18fd573b1c5dfd6705285271f1b4bef7eb`  
-		Last Modified: Sun, 27 Jun 2021 10:25:37 GMT  
-		Size: 126.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-
-### `composer:2.1.3` - linux; s390x
-
-```console
-$ docker pull composer@sha256:601a2eb4c847d729af5221f5afe8e27f65c8461b6a66e4eae8441c4cbf34a003
-```
-
--	Docker Version: 20.10.7
--	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **62.0 MB (61999266 bytes)**  
-	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d145c4e5d7d842baecbaaac2a6c65c4911894a104e27bdd35cd4ac23125d60a3`
+-	Image ID: `sha256:880cbc7008ee4bc8c34da1136f5658d40af14817b6eb957978b7ffd48bccde1c`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["composer"]`
 
@@ -6036,17 +5460,17 @@ RUN printf "# composer php cli ini settings\ndate.timezone=UTC\nmemory_limit=-1\
 ENV COMPOSER_ALLOW_SUPERUSER=1
 # Sun, 27 Jun 2021 13:10:22 GMT
 ENV COMPOSER_HOME=/tmp
-# Sun, 27 Jun 2021 13:10:22 GMT
-ENV COMPOSER_VERSION=2.1.3
-# Sun, 27 Jun 2021 13:10:24 GMT
+# Thu, 22 Jul 2021 23:50:20 GMT
+ENV COMPOSER_VERSION=2.1.4
+# Thu, 22 Jul 2021 23:50:22 GMT
 RUN set -eux;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.dev.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/snapshots.pub   ;   php -r "     \$signature = '4ac45767e5ec22652f0c1167cbbb8a2b0c708369153e328cad90147dafe50952';     \$hash = hash('sha256', preg_replace('{\s}', '', file_get_contents('/tmp/keys.dev.pub')));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, dev public key is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.tags.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/releases.pub   ;   php -r "     \$signature = '57815ba27e54dc317ecc7cc5573090d087719ba68f3bb7234e5d42d084a14642';     \$hash = hash('sha256', preg_replace('{\s}', '', file_get_contents('/tmp/keys.tags.pub')));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, tags public key is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/installer.php     --url https://raw.githubusercontent.com/composer/getcomposer.org/cb19f2aa3aeaa2006c0cd69a7ef011eb31463067/web/installer   ;   php -r "     \$signature = '48e3236262b34d30969dca3c37281b3b4bbe3221bda826ac6a9a62d6444cdb0dcd0615698a5cbe587c3f0fe57a54d8f5';     \$hash = hash('sha384', file_get_contents('/tmp/installer.php'));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, installer is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   php /tmp/installer.php --no-ansi --install-dir=/usr/bin --filename=composer --version=${COMPOSER_VERSION};   composer --ansi --version --no-interaction;   composer diagnose;   rm -f /tmp/installer.php;   find /tmp -type d -exec chmod -v 1777 {} +
-# Sun, 27 Jun 2021 13:10:24 GMT
+# Thu, 22 Jul 2021 23:50:22 GMT
 COPY file:fec7a37c0f859c3b5da390e40fa6f3ea8445ed26f54be61f4bce40efcaad57ee in /docker-entrypoint.sh 
-# Sun, 27 Jun 2021 13:10:25 GMT
+# Thu, 22 Jul 2021 23:50:23 GMT
 WORKDIR /app
-# Sun, 27 Jun 2021 13:10:25 GMT
+# Thu, 22 Jul 2021 23:50:23 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Sun, 27 Jun 2021 13:10:25 GMT
+# Thu, 22 Jul 2021 23:50:23 GMT
 CMD ["composer"]
 ```
 
@@ -6099,23 +5523,23 @@ CMD ["composer"]
 		Last Modified: Sun, 27 Jun 2021 13:11:02 GMT  
 		Size: 259.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6e8fa9c58a007225c49162943c93d73a00c77218d84b47b8308fcee681a283b3`  
-		Last Modified: Sun, 27 Jun 2021 13:11:03 GMT  
-		Size: 554.5 KB (554512 bytes)  
+	-	`sha256:c1fc077fa543b708c477aa3d51be3689771a6cfc0bfda7975ff385571cfce903`  
+		Last Modified: Thu, 22 Jul 2021 23:50:53 GMT  
+		Size: 555.1 KB (555053 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bc86302054c3e5310c3784fb2537bf2462d3bf0590471ad88e27df7e54421aca`  
-		Last Modified: Sun, 27 Jun 2021 13:11:02 GMT  
+	-	`sha256:5eb6cdd34af8a46f9249175c9e3587e6163a38512f65f8a9642ad491cc848dda`  
+		Last Modified: Thu, 22 Jul 2021 23:50:53 GMT  
 		Size: 408.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3fd8e38b7197c6705d28a4e909a8508b53f499281dd0a28f45797a6d3429dd26`  
-		Last Modified: Sun, 27 Jun 2021 13:11:02 GMT  
-		Size: 124.0 B  
+	-	`sha256:0be5faa7c25a3c2936dccb3c8d4fa27f8e69097a2ef84160e931dbac87cd6abe`  
+		Last Modified: Thu, 22 Jul 2021 23:50:53 GMT  
+		Size: 126.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `composer:latest`
 
 ```console
-$ docker pull composer@sha256:e9f3f3d5ade248dc094b971e3d25381b8986b636662234019c5b0048d2000bd3
+$ docker pull composer@sha256:597ea2064218e90e0ce0c9d35e5005c1a391bccf5a532dec2667ee1c98b3df25
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6274,14 +5698,14 @@ CMD ["composer"]
 ### `composer:latest` - linux; arm variant v6
 
 ```console
-$ docker pull composer@sha256:e6754889781b6f025a41666111d3e35b4cd6b72e9db9588426417ebd4efd6bac
+$ docker pull composer@sha256:d99efd45d895b4729154373f318574628a6c72f9b8f0c3915b42696f311c47fc
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **59.3 MB (59327574 bytes)**  
+-	Total Size: **59.3 MB (59328117 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1dd4fe892409f4e8d96c0f736c6d2f48bb4193e2d663d9d5882ae26672178dac`
+-	Image ID: `sha256:24c05e094673443a41e9325b86f2983f586cef1d353a9198f88ddc9948930a7f`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["composer"]`
 
@@ -6338,17 +5762,17 @@ RUN printf "# composer php cli ini settings\ndate.timezone=UTC\nmemory_limit=-1\
 ENV COMPOSER_ALLOW_SUPERUSER=1
 # Thu, 01 Jul 2021 21:32:06 GMT
 ENV COMPOSER_HOME=/tmp
-# Thu, 01 Jul 2021 21:32:07 GMT
-ENV COMPOSER_VERSION=2.1.3
-# Thu, 01 Jul 2021 21:32:11 GMT
+# Thu, 22 Jul 2021 20:49:30 GMT
+ENV COMPOSER_VERSION=2.1.4
+# Thu, 22 Jul 2021 20:49:34 GMT
 RUN set -eux;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.dev.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/snapshots.pub   ;   php -r "     \$signature = '4ac45767e5ec22652f0c1167cbbb8a2b0c708369153e328cad90147dafe50952';     \$hash = hash('sha256', preg_replace('{\s}', '', file_get_contents('/tmp/keys.dev.pub')));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, dev public key is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.tags.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/releases.pub   ;   php -r "     \$signature = '57815ba27e54dc317ecc7cc5573090d087719ba68f3bb7234e5d42d084a14642';     \$hash = hash('sha256', preg_replace('{\s}', '', file_get_contents('/tmp/keys.tags.pub')));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, tags public key is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/installer.php     --url https://raw.githubusercontent.com/composer/getcomposer.org/cb19f2aa3aeaa2006c0cd69a7ef011eb31463067/web/installer   ;   php -r "     \$signature = '48e3236262b34d30969dca3c37281b3b4bbe3221bda826ac6a9a62d6444cdb0dcd0615698a5cbe587c3f0fe57a54d8f5';     \$hash = hash('sha384', file_get_contents('/tmp/installer.php'));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, installer is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   php /tmp/installer.php --no-ansi --install-dir=/usr/bin --filename=composer --version=${COMPOSER_VERSION};   composer --ansi --version --no-interaction;   composer diagnose;   rm -f /tmp/installer.php;   find /tmp -type d -exec chmod -v 1777 {} +
-# Thu, 01 Jul 2021 21:32:11 GMT
+# Thu, 22 Jul 2021 20:49:35 GMT
 COPY file:fec7a37c0f859c3b5da390e40fa6f3ea8445ed26f54be61f4bce40efcaad57ee in /docker-entrypoint.sh 
-# Thu, 01 Jul 2021 21:32:12 GMT
+# Thu, 22 Jul 2021 20:49:35 GMT
 WORKDIR /app
-# Thu, 01 Jul 2021 21:32:12 GMT
+# Thu, 22 Jul 2021 20:49:36 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Thu, 01 Jul 2021 21:32:13 GMT
+# Thu, 22 Jul 2021 20:49:36 GMT
 CMD ["composer"]
 ```
 
@@ -6401,16 +5825,16 @@ CMD ["composer"]
 		Last Modified: Thu, 01 Jul 2021 21:33:16 GMT  
 		Size: 258.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7bd5d1bef328a96c8f58bfc16d8ea5918cc6fc027fac8d0abec8862b328f6cdd`  
-		Last Modified: Thu, 01 Jul 2021 21:33:17 GMT  
-		Size: 554.5 KB (554514 bytes)  
+	-	`sha256:5a78eb275bbf3f02742d73bf13abbf65975fa534e9799bdedc21a3403b49aaf0`  
+		Last Modified: Thu, 22 Jul 2021 20:50:29 GMT  
+		Size: 555.1 KB (555058 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6c4d06c55cf78ec0cd0c2f5728c71b89a4b3803c3851d037ab01184de13d83c0`  
-		Last Modified: Thu, 01 Jul 2021 21:33:16 GMT  
-		Size: 408.0 B  
+	-	`sha256:51e003d4ceb21d6e807770ceb18bc73bcf60f6086abd2ddb660a54837270160d`  
+		Last Modified: Thu, 22 Jul 2021 20:50:28 GMT  
+		Size: 407.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:65a8ecd177bc2f249d8e5e24a1aa8f9e67d2f040c301b2798eebb1aff69c5f0e`  
-		Last Modified: Thu, 01 Jul 2021 21:33:16 GMT  
+	-	`sha256:497867ff403bad8fffc15d3e09d0c9448e30f3ef2cbacdb0c7398d503d7052f7`  
+		Last Modified: Thu, 22 Jul 2021 20:50:28 GMT  
 		Size: 126.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -6560,14 +5984,14 @@ CMD ["composer"]
 ### `composer:latest` - linux; arm64 variant v8
 
 ```console
-$ docker pull composer@sha256:5f8d0ba3f4dca077bd35c75622d5b75d6ec05e71c472e045fba1e0e338e7c14d
+$ docker pull composer@sha256:567196a1d06961cfa2485a3100ad6f2a6788efb19dcaef2757c91ca72a07e625
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **60.9 MB (60933282 bytes)**  
+-	Total Size: **60.9 MB (60933821 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4576a4d7454e58dc0fffad570aa9ec8a819acd8d324b6c5f5e364c86eb959652`
+-	Image ID: `sha256:d856d98721cd37f244c5e85d39b305ef460e58b52cbdee77d0a6bc343ff2be92`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["composer"]`
 
@@ -6624,17 +6048,17 @@ RUN printf "# composer php cli ini settings\ndate.timezone=UTC\nmemory_limit=-1\
 ENV COMPOSER_ALLOW_SUPERUSER=1
 # Fri, 02 Jul 2021 00:00:57 GMT
 ENV COMPOSER_HOME=/tmp
-# Fri, 02 Jul 2021 00:00:57 GMT
-ENV COMPOSER_VERSION=2.1.3
-# Fri, 02 Jul 2021 00:01:01 GMT
+# Thu, 22 Jul 2021 22:29:54 GMT
+ENV COMPOSER_VERSION=2.1.4
+# Thu, 22 Jul 2021 22:29:57 GMT
 RUN set -eux;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.dev.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/snapshots.pub   ;   php -r "     \$signature = '4ac45767e5ec22652f0c1167cbbb8a2b0c708369153e328cad90147dafe50952';     \$hash = hash('sha256', preg_replace('{\s}', '', file_get_contents('/tmp/keys.dev.pub')));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, dev public key is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.tags.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/releases.pub   ;   php -r "     \$signature = '57815ba27e54dc317ecc7cc5573090d087719ba68f3bb7234e5d42d084a14642';     \$hash = hash('sha256', preg_replace('{\s}', '', file_get_contents('/tmp/keys.tags.pub')));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, tags public key is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/installer.php     --url https://raw.githubusercontent.com/composer/getcomposer.org/cb19f2aa3aeaa2006c0cd69a7ef011eb31463067/web/installer   ;   php -r "     \$signature = '48e3236262b34d30969dca3c37281b3b4bbe3221bda826ac6a9a62d6444cdb0dcd0615698a5cbe587c3f0fe57a54d8f5';     \$hash = hash('sha384', file_get_contents('/tmp/installer.php'));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, installer is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   php /tmp/installer.php --no-ansi --install-dir=/usr/bin --filename=composer --version=${COMPOSER_VERSION};   composer --ansi --version --no-interaction;   composer diagnose;   rm -f /tmp/installer.php;   find /tmp -type d -exec chmod -v 1777 {} +
-# Fri, 02 Jul 2021 00:01:01 GMT
+# Thu, 22 Jul 2021 22:29:57 GMT
 COPY file:fec7a37c0f859c3b5da390e40fa6f3ea8445ed26f54be61f4bce40efcaad57ee in /docker-entrypoint.sh 
-# Fri, 02 Jul 2021 00:01:01 GMT
+# Thu, 22 Jul 2021 22:29:57 GMT
 WORKDIR /app
-# Fri, 02 Jul 2021 00:01:01 GMT
+# Thu, 22 Jul 2021 22:29:58 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Fri, 02 Jul 2021 00:01:02 GMT
+# Thu, 22 Jul 2021 22:29:58 GMT
 CMD ["composer"]
 ```
 
@@ -6687,16 +6111,16 @@ CMD ["composer"]
 		Last Modified: Fri, 02 Jul 2021 00:01:37 GMT  
 		Size: 257.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6970df64230369e584f11f13d06686e54768a66a93ebceabbcbd6d7c587c9a90`  
-		Last Modified: Fri, 02 Jul 2021 00:01:37 GMT  
-		Size: 554.5 KB (554516 bytes)  
+	-	`sha256:a26f792b0bc2dfa18452331233de43564326565cd5c4ee66a205c863b61d04b1`  
+		Last Modified: Thu, 22 Jul 2021 22:30:27 GMT  
+		Size: 555.1 KB (555054 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fe53313a7deeebd9b2ac9d83b45fb01d9cd9a9e7c57836a4175c8c5ba47d3cce`  
-		Last Modified: Fri, 02 Jul 2021 00:01:37 GMT  
-		Size: 408.0 B  
+	-	`sha256:0fdb1b8f2967e30a782f6c7da79ed59c688888f5cc7dde6d9da9aea9270e06ac`  
+		Last Modified: Thu, 22 Jul 2021 22:30:27 GMT  
+		Size: 409.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:317b9e7c4b00aeff4ab14e91e927cec0e7c4113ae40ad3c6e663a9e76aee5f09`  
-		Last Modified: Fri, 02 Jul 2021 00:01:37 GMT  
+	-	`sha256:caa49d5e7af27b0b5428f217ab764b9f85b4241c1d71fcbef3fa95fca481452f`  
+		Last Modified: Thu, 22 Jul 2021 22:30:26 GMT  
 		Size: 126.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -6989,14 +6413,14 @@ CMD ["composer"]
 ### `composer:latest` - linux; s390x
 
 ```console
-$ docker pull composer@sha256:601a2eb4c847d729af5221f5afe8e27f65c8461b6a66e4eae8441c4cbf34a003
+$ docker pull composer@sha256:f06b4ec2b1cc2aaa363fab700628a592722a2cd7f2aa31af0527217e7e13b2e7
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **62.0 MB (61999266 bytes)**  
+-	Total Size: **62.0 MB (61999809 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d145c4e5d7d842baecbaaac2a6c65c4911894a104e27bdd35cd4ac23125d60a3`
+-	Image ID: `sha256:880cbc7008ee4bc8c34da1136f5658d40af14817b6eb957978b7ffd48bccde1c`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["composer"]`
 
@@ -7053,17 +6477,17 @@ RUN printf "# composer php cli ini settings\ndate.timezone=UTC\nmemory_limit=-1\
 ENV COMPOSER_ALLOW_SUPERUSER=1
 # Sun, 27 Jun 2021 13:10:22 GMT
 ENV COMPOSER_HOME=/tmp
-# Sun, 27 Jun 2021 13:10:22 GMT
-ENV COMPOSER_VERSION=2.1.3
-# Sun, 27 Jun 2021 13:10:24 GMT
+# Thu, 22 Jul 2021 23:50:20 GMT
+ENV COMPOSER_VERSION=2.1.4
+# Thu, 22 Jul 2021 23:50:22 GMT
 RUN set -eux;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.dev.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/snapshots.pub   ;   php -r "     \$signature = '4ac45767e5ec22652f0c1167cbbb8a2b0c708369153e328cad90147dafe50952';     \$hash = hash('sha256', preg_replace('{\s}', '', file_get_contents('/tmp/keys.dev.pub')));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, dev public key is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.tags.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/releases.pub   ;   php -r "     \$signature = '57815ba27e54dc317ecc7cc5573090d087719ba68f3bb7234e5d42d084a14642';     \$hash = hash('sha256', preg_replace('{\s}', '', file_get_contents('/tmp/keys.tags.pub')));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, tags public key is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/installer.php     --url https://raw.githubusercontent.com/composer/getcomposer.org/cb19f2aa3aeaa2006c0cd69a7ef011eb31463067/web/installer   ;   php -r "     \$signature = '48e3236262b34d30969dca3c37281b3b4bbe3221bda826ac6a9a62d6444cdb0dcd0615698a5cbe587c3f0fe57a54d8f5';     \$hash = hash('sha384', file_get_contents('/tmp/installer.php'));     if (!hash_equals(\$signature, \$hash)) {       echo 'Integrity check failed, installer is either corrupt or worse.' . PHP_EOL;       exit(1);     }"   ;   php /tmp/installer.php --no-ansi --install-dir=/usr/bin --filename=composer --version=${COMPOSER_VERSION};   composer --ansi --version --no-interaction;   composer diagnose;   rm -f /tmp/installer.php;   find /tmp -type d -exec chmod -v 1777 {} +
-# Sun, 27 Jun 2021 13:10:24 GMT
+# Thu, 22 Jul 2021 23:50:22 GMT
 COPY file:fec7a37c0f859c3b5da390e40fa6f3ea8445ed26f54be61f4bce40efcaad57ee in /docker-entrypoint.sh 
-# Sun, 27 Jun 2021 13:10:25 GMT
+# Thu, 22 Jul 2021 23:50:23 GMT
 WORKDIR /app
-# Sun, 27 Jun 2021 13:10:25 GMT
+# Thu, 22 Jul 2021 23:50:23 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Sun, 27 Jun 2021 13:10:25 GMT
+# Thu, 22 Jul 2021 23:50:23 GMT
 CMD ["composer"]
 ```
 
@@ -7116,15 +6540,15 @@ CMD ["composer"]
 		Last Modified: Sun, 27 Jun 2021 13:11:02 GMT  
 		Size: 259.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6e8fa9c58a007225c49162943c93d73a00c77218d84b47b8308fcee681a283b3`  
-		Last Modified: Sun, 27 Jun 2021 13:11:03 GMT  
-		Size: 554.5 KB (554512 bytes)  
+	-	`sha256:c1fc077fa543b708c477aa3d51be3689771a6cfc0bfda7975ff385571cfce903`  
+		Last Modified: Thu, 22 Jul 2021 23:50:53 GMT  
+		Size: 555.1 KB (555053 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bc86302054c3e5310c3784fb2537bf2462d3bf0590471ad88e27df7e54421aca`  
-		Last Modified: Sun, 27 Jun 2021 13:11:02 GMT  
+	-	`sha256:5eb6cdd34af8a46f9249175c9e3587e6163a38512f65f8a9642ad491cc848dda`  
+		Last Modified: Thu, 22 Jul 2021 23:50:53 GMT  
 		Size: 408.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3fd8e38b7197c6705d28a4e909a8508b53f499281dd0a28f45797a6d3429dd26`  
-		Last Modified: Sun, 27 Jun 2021 13:11:02 GMT  
-		Size: 124.0 B  
+	-	`sha256:0be5faa7c25a3c2936dccb3c8d4fa27f8e69097a2ef84160e931dbac87cd6abe`  
+		Last Modified: Thu, 22 Jul 2021 23:50:53 GMT  
+		Size: 126.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
