@@ -674,14 +674,9 @@ Licenses: (parsed from: `/usr/share/doc/cmake/copyright`, `/usr/share/doc/cmake-
 - `MIT-like`
 - `zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris cmake=3.10.2-1ubuntu2.18.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cmake/cmake_3.10.2-1ubuntu2.18.04.1.dsc' cmake_3.10.2-1ubuntu2.18.04.1.dsc 3128 SHA512:b491fc2c01cc1298b49ad847f6290ae2b7566b71d00deac8af7de29c70713afd3a7c135198d02ba0836b13a06008a28f17a99053c52b556f78f5fbe140419b5b
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cmake/cmake_3.10.2.orig.tar.gz' cmake_3.10.2.orig.tar.gz 7824452 SHA512:f58fdd025285c9ff5396c0bd0d9573fc8a498fcbe5c11b336cb8ad6154ca6bc875c1a5e22d6654ba98596791ecf89ae8adffb83450839fa1275756b0af5bf82b
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cmake/cmake_3.10.2-1ubuntu2.18.04.1.debian.tar.xz' cmake_3.10.2-1ubuntu2.18.04.1.debian.tar.xz 30048 SHA512:13a171cd07026e7f8e24f2af540193563e4d14aeb999406e2e1ae4a0b3819c1c790d8cad66ba3e95a3f4225db815ddfd6bdff501453ad4fc6d7a629194629e78
-```
 
 ### `dpkg` source package: `colord=1.3.3-2build1`
 
@@ -806,14 +801,9 @@ Licenses: (parsed from: `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.58.0-2ubuntu3.13
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.58.0-2ubuntu3.13.dsc' curl_7.58.0-2ubuntu3.13.dsc 2781 SHA512:ab0ef97922435e5be9f8d3ea678ca68d3e4ad18c01b0065458cc71f5fc29e2ba337309686028a67aef3b335905f6b47cb5f4defabab15c8b1f719edbcb24be91
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.58.0.orig.tar.gz' curl_7.58.0.orig.tar.gz 3879728 SHA512:7b12b79107558bb266672d6e128615fe5a8149c37f4ae540197e3298f5d312beb2d78fbb23e3ea84ea7afc41549898a1e5cd38509f0388b11707b48d5efb8ca3
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.58.0-2ubuntu3.13.debian.tar.xz' curl_7.58.0-2ubuntu3.13.debian.tar.xz 58620 SHA512:91f19e1a10a8b4585b4c8dd235305476b4300555b9055855cfe04a043e3f2e04d468d9c64311875da61668420156b15bb571539e247c114046b2c069f28f2c35
-```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27~101-g0780600+dfsg-3ubuntu2.3`
 
@@ -3651,14 +3641,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=4.15.0-147.151
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-147.151.dsc' linux_4.15.0-147.151.dsc 7060 SHA512:639809ec48ede697256392dd3c3180eaf0490196553af62d1173504a893c98ecdad923167ee34cb5fcbed2da46cfb07dbc416862b3693cdec7d9279408dd3b4a
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0.orig.tar.gz' linux_4.15.0.orig.tar.gz 157656459 SHA512:0fab606a295e0857f774f8adaa9d56bf2cb227fbab2daed374415da216391b156f49e606ba37ac402987c5796d408807da5d1a42c0d85a8552f109a3e279443d
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-147.151.diff.gz' linux_4.15.0-147.151.diff.gz 12306637 SHA512:311144ee734c4d3d8c48f622240a90b134565651ffee9f19e9c5666a3205247a03c4628c4900a5955d82594559f0744ca4ed4010d27a8708d71bbf26f5cac7a2
-```
 
 ### `dpkg` source package: `lksctp-tools=1.0.17+dfsg-2`
 
@@ -7205,14 +7190,9 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=237-3ubuntu10.48
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.48.dsc' systemd_237-3ubuntu10.48.dsc 5220 SHA512:c185bab18222e1d15f4c63e2e7c10679a10116851817a68d531abe7bfd089576b3cc44ca4d0e8f426c7bc13b804ff45c7e9d67a8704260c75a21c190190232f0
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237.orig.tar.gz' systemd_237.orig.tar.gz 6871350 SHA512:15ef4b92815a6dd9a6c51672dbc00fd7cd0f08068ef0cbeaca574f68d330b28bc67ba1946f24f75ef3d9e7b63843a73eea700db54688061dbf5c9f8470394c3b
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.48.debian.tar.xz' systemd_237-3ubuntu10.48.debian.tar.xz 293920 SHA512:b583f105567543222eb4a7851eb26151fe5f88d9b1c3c98c1d9fe45a5363df9cd5d5ea902c0c9e3e382617de34b44801dc9a318e7c3173ff49ee05179b435d95
-```
 
 ### `dpkg` source package: `sysvinit=2.88dsf-59.10ubuntu1`
 
