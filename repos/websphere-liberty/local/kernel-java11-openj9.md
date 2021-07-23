@@ -314,14 +314,9 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.68.0-1ubuntu2.5
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.5.dsc' curl_7.68.0-1ubuntu2.5.dsc 2733 SHA512:9a263b8d663872613288c21f5af9985fc1fa71b4ac07c7ee5b4bd39db1e868c8bedf120e6f557fe92fb0ca5e4c3a05cff7fab16889d4014b069e383758f727b5
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0.orig.tar.gz' curl_7.68.0.orig.tar.gz 4096350 SHA512:58b42c08b1cf4cb6e68f8e469d5b5f6298eebe286ba2677ad29e1a7eefd15b8609af54544f4c5a7dadebbd3b23bd77700830f2f60fbea7ae3f2f306e640010b0
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.5.debian.tar.xz' curl_7.68.0-1ubuntu2.5.debian.tar.xz 42240 SHA512:5b33a667f486f5aa81edb050be60d97aaad02f74114e7ea7cb3964a01fd9d85e5e1a1bf9a3d72f23307b8abaa7bea64008259f0d851ac351b57254b2bfd7bafb
-```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2`
 
@@ -1703,14 +1698,9 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=245.4-4ubuntu3.7
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.7.dsc' systemd_245.4-4ubuntu3.7.dsc 5291 SHA512:4af3abd8d317d2d352f196a16a1f8c71556dbab34d11f8504e3f321de14e1be104cb9a19648634259939b752fd92371cd38a25288030b4bc5a0aa21146c15fff
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4.orig.tar.gz' systemd_245.4.orig.tar.gz 9000780 SHA512:02036bb1ab05301a9d0dfdd4b9c9376e90134474482531e6e292122380be2f24f99177493dd3af6f8af1a8ed2599ee0996da91a3b1b7872bbfaf26a1c3e61b4c
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.7.debian.tar.xz' systemd_245.4-4ubuntu3.7.debian.tar.xz 247648 SHA512:ca9d4e0b1c4bab971d51ce640eb591a6e0fe076b6465bfc620c9962c16f64c248bcd7ed8d0eb4051ccf33c48d228d2af21291b9ca1b010d4f66958b3950499ab
-```
 
 ### `dpkg` source package: `sysvinit=2.96-2.1ubuntu1`
 
