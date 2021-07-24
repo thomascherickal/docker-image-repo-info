@@ -1,10 +1,10 @@
-# `redis:6.2.4`
+# `redis:6.2.5`
 
 ## Docker Metadata
 
-- Image ID: `sha256:08502081bff61084d64fc76f0f90ea39b89935cd071d9e12c5374ae191ff53c0`
-- Created: `2021-06-23T16:36:30.182210591Z`
-- Virtual Size: ~ 105.39 Mb  
+- Image ID: `sha256:aa4d65e670d6518e5da96ca9d1a76370a942970a8802e6d5cc6bcf058ab12ca7`
+- Created: `2021-07-23T12:26:43.68160355Z`
+- Virtual Size: ~ 105.41 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -12,9 +12,9 @@
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `GOSU_VERSION=1.12`
-  - `REDIS_VERSION=6.2.4`
-  - `REDIS_DOWNLOAD_URL=http://download.redis.io/releases/redis-6.2.4.tar.gz`
-  - `REDIS_DOWNLOAD_SHA=ba32c406a10fc2c09426e2be2787d74ff204eb3a2e496d87cff76a476b6ae16e`
+  - `REDIS_VERSION=6.2.5`
+  - `REDIS_DOWNLOAD_URL=http://download.redis.io/releases/redis-6.2.5.tar.gz`
+  - `REDIS_DOWNLOAD_SHA=4b9a75709a1b74b3785e20a6c158cab94cf52298aa381eea947a678a60d551ae`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -1491,12 +1491,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/shadow/1:4.5-1.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/shadow/1:4.5-1.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `systemd=241-7~deb10u7`
+### `dpkg` source package: `systemd=241-7~deb10u8`
 
 Binary Packages:
 
-- `libsystemd0:amd64=241-7~deb10u7`
-- `libudev1:amd64=241-7~deb10u7`
+- `libsystemd0:amd64=241-7~deb10u8`
+- `libudev1:amd64=241-7~deb10u8`
 
 Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/libudev1/copyright`)
 
@@ -1511,17 +1511,17 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris systemd=241-7~deb10u7
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_241-7~deb10u7.dsc' systemd_241-7~deb10u7.dsc 4946 SHA256:1abfa0f64d2ff59ab43b67dca133c8852cfdfd018ceaf5b661b6a2e4eda9954c
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_241.orig.tar.gz' systemd_241.orig.tar.gz 7640538 SHA256:b2561a8e1d10a2c248253f0dda31a85dd6d69f2b54177de55e02cd1d2778316e
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_241-7~deb10u7.debian.tar.xz' systemd_241-7~deb10u7.debian.tar.xz 181896 SHA256:b46079f75db2a5e496a2e6e14893e11477a58b8634e0fccbb3f09f9191907806
+$ apt-get source -qq --print-uris systemd=241-7~deb10u8
+'http://security.debian.org/debian-security/pool/updates/main/s/systemd/systemd_241-7~deb10u8.dsc' systemd_241-7~deb10u8.dsc 5101 SHA256:925ac30011dee81ab0e418f27515db2ddead0fa609b34eb7815cee7861c5a561
+'http://security.debian.org/debian-security/pool/updates/main/s/systemd/systemd_241.orig.tar.gz' systemd_241.orig.tar.gz 7640538 SHA256:b2561a8e1d10a2c248253f0dda31a85dd6d69f2b54177de55e02cd1d2778316e
+'http://security.debian.org/debian-security/pool/updates/main/s/systemd/systemd_241-7~deb10u8.debian.tar.xz' systemd_241-7~deb10u8.debian.tar.xz 182616 SHA256:6f5419d06f917a0565a55b9c9e7b9b55c094623a32b722f24431c20f7b48491b
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/systemd/241-7~deb10u7/ (for browsing the source)
-- https://sources.debian.net/src/systemd/241-7~deb10u7/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/systemd/241-7~deb10u7/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/systemd/241-7~deb10u8/ (for browsing the source)
+- https://sources.debian.net/src/systemd/241-7~deb10u8/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/systemd/241-7~deb10u8/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sysvinit=2.93-8`
 
