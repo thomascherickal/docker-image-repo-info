@@ -1,10 +1,10 @@
-# `mongo:5.0.0-focal`
+# `mongo:5.0.1-focal`
 
 ## Docker Metadata
 
-- Image ID: `sha256:2d38962b1e5e53c2d00efc0f2d45f7508034895b14586363307f4181a42360d4`
-- Created: `2021-07-19T16:49:25.083630356Z`
-- Virtual Size: ~ 671.46 Mb  
+- Image ID: `sha256:0c1d254ad187e6e53f69f81101de5abc9e817e1bcd1edd108e5043901de377b0`
+- Created: `2021-07-23T12:23:53.076407883Z`
+- Virtual Size: ~ 681.76 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -16,7 +16,7 @@
   - `MONGO_PACKAGE=mongodb-org`
   - `MONGO_REPO=repo.mongodb.org`
   - `MONGO_MAJOR=5.0`
-  - `MONGO_VERSION=5.0.0`
+  - `MONGO_VERSION=5.0.1`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -279,11 +279,11 @@ $ apt-get source -qq --print-uris coreutils=8.30-3ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/c/coreutils/coreutils_8.30-3ubuntu2.debian.tar.xz' coreutils_8.30-3ubuntu2.debian.tar.xz 39636 SHA256:98204ef9d94e5c567880cd0245fdb7940eaf7592d6c6830c300ad117628b351f
 ```
 
-### `dpkg` source package: `curl=7.68.0-1ubuntu2.5`
+### `dpkg` source package: `curl=7.68.0-1ubuntu2.6`
 
 Binary Packages:
 
-- `libcurl4:amd64=7.68.0-1ubuntu2.5`
+- `libcurl4:amd64=7.68.0-1ubuntu2.6`
 
 Licenses: (parsed from: `/usr/share/doc/libcurl4/copyright`)
 
@@ -297,10 +297,10 @@ Licenses: (parsed from: `/usr/share/doc/libcurl4/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris curl=7.68.0-1ubuntu2.5
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.5.dsc' curl_7.68.0-1ubuntu2.5.dsc 2733 SHA512:9a263b8d663872613288c21f5af9985fc1fa71b4ac07c7ee5b4bd39db1e868c8bedf120e6f557fe92fb0ca5e4c3a05cff7fab16889d4014b069e383758f727b5
+$ apt-get source -qq --print-uris curl=7.68.0-1ubuntu2.6
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.6.dsc' curl_7.68.0-1ubuntu2.6.dsc 2733 SHA512:6c45a3696e658333e0af0b211db8c2b789b6019af28c19499f73cf3fb5c3b4c8d0914be750c33a77607709886bc3202786fda05f16351ab5cfdb52ccce3d3309
 'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0.orig.tar.gz' curl_7.68.0.orig.tar.gz 4096350 SHA512:58b42c08b1cf4cb6e68f8e469d5b5f6298eebe286ba2677ad29e1a7eefd15b8609af54544f4c5a7dadebbd3b23bd77700830f2f60fbea7ae3f2f306e640010b0
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.5.debian.tar.xz' curl_7.68.0-1ubuntu2.5.debian.tar.xz 42240 SHA512:5b33a667f486f5aa81edb050be60d97aaad02f74114e7ea7cb3964a01fd9d85e5e1a1bf9a3d72f23307b8abaa7bea64008259f0d851ac351b57254b2bfd7bafb
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.6.debian.tar.xz' curl_7.68.0-1ubuntu2.6.debian.tar.xz 44604 SHA512:83002bd567b8c0a54d7a8bdac4ebd16ab742c7f727a45a0a7a2a920c071b1dea2ea7ffc3a32a7ef692aa01a41288b8bee785649510219b600e1a935edb82fdfa
 ```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2`
@@ -1280,11 +1280,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `mongodb-mongosh=1.0.0`
+### `dpkg` source package: `mongodb-mongosh=1.0.1`
 
 Binary Packages:
 
-- `mongodb-mongosh=1.0.0`
+- `mongodb-mongosh=1.0.1`
 
 Licenses: (parsed from: `/usr/share/doc/mongodb-mongosh/copyright`)
 
@@ -1295,17 +1295,17 @@ Licenses: (parsed from: `/usr/share/doc/mongodb-mongosh/copyright`)
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `mongodb-org=5.0.0`
+### `dpkg` source package: `mongodb-org=5.0.1`
 
 Binary Packages:
 
-- `mongodb-org=5.0.0`
-- `mongodb-org-database=5.0.0`
-- `mongodb-org-database-tools-extra=5.0.0`
-- `mongodb-org-mongos=5.0.0`
-- `mongodb-org-server=5.0.0`
-- `mongodb-org-shell=5.0.0`
-- `mongodb-org-tools=5.0.0`
+- `mongodb-org=5.0.1`
+- `mongodb-org-database=5.0.1`
+- `mongodb-org-database-tools-extra=5.0.1`
+- `mongodb-org-mongos=5.0.1`
+- `mongodb-org-server=5.0.1`
+- `mongodb-org-shell=5.0.1`
+- `mongodb-org-tools=5.0.1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
