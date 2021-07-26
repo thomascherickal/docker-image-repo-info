@@ -913,14 +913,9 @@ Licenses: (parsed from: `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.68.0-1ubuntu2.5
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.5.dsc' curl_7.68.0-1ubuntu2.5.dsc 2733 SHA512:9a263b8d663872613288c21f5af9985fc1fa71b4ac07c7ee5b4bd39db1e868c8bedf120e6f557fe92fb0ca5e4c3a05cff7fab16889d4014b069e383758f727b5
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0.orig.tar.gz' curl_7.68.0.orig.tar.gz 4096350 SHA512:58b42c08b1cf4cb6e68f8e469d5b5f6298eebe286ba2677ad29e1a7eefd15b8609af54544f4c5a7dadebbd3b23bd77700830f2f60fbea7ae3f2f306e640010b0
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.5.debian.tar.xz' curl_7.68.0-1ubuntu2.5.debian.tar.xz 42240 SHA512:5b33a667f486f5aa81edb050be60d97aaad02f74114e7ea7cb3964a01fd9d85e5e1a1bf9a3d72f23307b8abaa7bea64008259f0d851ac351b57254b2bfd7bafb
-```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2`
 
@@ -1975,9 +1970,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris glib2.0=2.64.6-1~ubuntu20.04.3
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.64.6-1~ubuntu20.04.3.dsc' glib2.0_2.64.6-1~ubuntu20.04.3.dsc 3338 SHA512:3f4c09f9881e9bea0e73115b55a45fb2e33746b9aea1c02a522aa0c3217d3ecd8f265419a327cd9ab520edb2d51150e7a2cd8ef9a37e4c46564602f5a0877e52
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.64.6.orig.tar.xz' glib2.0_2.64.6.orig.tar.xz 4781576 SHA512:5cd82c4d9b143e7aa130c24e25fb9def06dd915ef8ad8ed3883931bf5cddecf69c2e669ef6aa1d910484ede75b671e7c48a4f3fe50aa78955bff57b04f0cf958
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.64.6-1~ubuntu20.04.3.debian.tar.xz' glib2.0_2.64.6-1~ubuntu20.04.3.debian.tar.xz 111484 SHA512:d53b99dfdfcaec808de14fd46ee367980df3390e3fe646cd7ccb86875071eeec924a1a142b6ad3843b3b48e03a109781d8a6ff90e939754531f0f2aa358b19c8
+'http://security.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.64.6-1~ubuntu20.04.3.dsc' glib2.0_2.64.6-1~ubuntu20.04.3.dsc 3338 SHA512:3f4c09f9881e9bea0e73115b55a45fb2e33746b9aea1c02a522aa0c3217d3ecd8f265419a327cd9ab520edb2d51150e7a2cd8ef9a37e4c46564602f5a0877e52
+'http://security.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.64.6.orig.tar.xz' glib2.0_2.64.6.orig.tar.xz 4781576 SHA512:5cd82c4d9b143e7aa130c24e25fb9def06dd915ef8ad8ed3883931bf5cddecf69c2e669ef6aa1d910484ede75b671e7c48a4f3fe50aa78955bff57b04f0cf958
+'http://security.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.64.6-1~ubuntu20.04.3.debian.tar.xz' glib2.0_2.64.6-1~ubuntu20.04.3.debian.tar.xz 111484 SHA512:d53b99dfdfcaec808de14fd46ee367980df3390e3fe646cd7ccb86875071eeec924a1a142b6ad3843b3b48e03a109781d8a6ff90e939754531f0f2aa358b19c8
 ```
 
 ### `dpkg` source package: `glibc=2.31-0ubuntu9.2`
