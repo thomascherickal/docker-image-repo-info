@@ -1,7 +1,7 @@
 ## `maven:ibmjava`
 
 ```console
-$ docker pull maven@sha256:e1bf9b75eab3c6554a2622e697ae331d8a9d00a93c9679be0ee9b9f2996977e8
+$ docker pull maven@sha256:7fcacc17742175a14b7bafff584946b9d7f4db606b9f1bdc54ea12a74b468bd8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -14,80 +14,80 @@ $ docker pull maven@sha256:e1bf9b75eab3c6554a2622e697ae331d8a9d00a93c9679be0ee9b
 ### `maven:ibmjava` - linux; amd64
 
 ```console
-$ docker pull maven@sha256:3027a479d3b036a2802a594f63fc7d39eac1b40259c7f34aaf560db58664ab30
+$ docker pull maven@sha256:91c70e6e87e4dc6d3a8bbce464408504aa75fec6c0e122aeec83dfd0cb286c46
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **235.7 MB (235725608 bytes)**  
+-	Total Size: **235.9 MB (235885108 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:612877a370271145bbab59101cd76746817d17f54a6ca969c2664fddef1ada08`
+-	Image ID: `sha256:139467d6567699bebd1851a1eb15d76cea0f4b5ef2a9f34a8af626fcf2d44845`
 -	Entrypoint: `["\/usr\/local\/bin\/mvn-entrypoint.sh"]`
 -	Default Command: `["mvn"]`
 
 ```dockerfile
-# Tue, 13 Jul 2021 22:29:15 GMT
-ADD file:7274ece1917848683250bbeda9eacf6eb7510481cbaa177880e3a60b4133e35b in / 
-# Tue, 13 Jul 2021 22:29:15 GMT
+# Mon, 26 Jul 2021 21:21:30 GMT
+ADD file:e729fb032bd2f7cde20fb343da0cd358447e8b23028422c123944e8d0be660fa in / 
+# Mon, 26 Jul 2021 21:21:31 GMT
 CMD ["bash"]
-# Tue, 13 Jul 2021 23:19:05 GMT
+# Mon, 26 Jul 2021 23:22:54 GMT
 MAINTAINER Jayashree Gopi <jayasg12@in.ibm.com> (@jayasg12)
-# Tue, 13 Jul 2021 23:19:13 GMT
+# Mon, 26 Jul 2021 23:23:02 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends wget ca-certificates     && rm -rf /var/lib/apt/lists/*
-# Tue, 13 Jul 2021 23:19:14 GMT
+# Mon, 26 Jul 2021 23:23:02 GMT
 ENV JAVA_VERSION=1.8.0_sr6fp31
-# Tue, 13 Jul 2021 23:21:22 GMT
+# Mon, 26 Jul 2021 23:25:10 GMT
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        amd64|x86_64)          ESUM='ebb0fd9e7e49b541663ea152a4c28b4d85c458fb00a35e407bfd922fea418fae';          YML_FILE='sdk/linux/x86_64/index.yml';          ;;        i386)          ESUM='dcf59f47f74e6ab9b9b1b36f17f31ce9ae800a54d3f8911ee4380a5f128071d7';          YML_FILE='sdk/linux/i386/index.yml';          ;;        ppc64el|ppc64le)          ESUM='124006e81d5fb148face2142ff7b6155c62876c6f819844d2d34d8d174a0efe7';          YML_FILE='sdk/linux/ppc64le/index.yml';          ;;        s390)          ESUM='46e8263da8b7cd80b780f5a9dbdab4f0000c32907af1ecbfe58edfc3068810e7';          YML_FILE='sdk/linux/s390/index.yml';          ;;        s390x)          ESUM='73fb5069d838eeeecbb801c4a8a03180a96e724dad79ef1b441be36ee8d53195';          YML_FILE='sdk/linux/s390x/index.yml';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     BASE_URL="https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/java/meta/";     wget -q -U UA_IBM_JAVA_Docker -O /tmp/index.yml ${BASE_URL}/${YML_FILE};     JAVA_URL=$(sed -n '/^'${JAVA_VERSION}:'/{n;s/\s*uri:\s//p}'< /tmp/index.yml);     wget -q -U UA_IBM_JAVA_Docker -O /tmp/ibm-java.bin ${JAVA_URL};     echo "${ESUM}  /tmp/ibm-java.bin" | sha256sum -c -;     echo "INSTALLER_UI=silent" > /tmp/response.properties;     echo "USER_INSTALL_DIR=/opt/ibm/java" >> /tmp/response.properties;     echo "LICENSE_ACCEPTED=TRUE" >> /tmp/response.properties;     mkdir -p /opt/ibm;     chmod +x /tmp/ibm-java.bin;     /tmp/ibm-java.bin -i silent -f /tmp/response.properties;     rm -f /tmp/response.properties;     rm -f /tmp/index.yml;     rm -f /tmp/ibm-java.bin;
-# Tue, 13 Jul 2021 23:21:22 GMT
+# Mon, 26 Jul 2021 23:25:10 GMT
 ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin IBM_JAVA_OPTIONS=-XX:+UseContainerSupport
-# Wed, 14 Jul 2021 03:48:28 GMT
+# Tue, 27 Jul 2021 04:16:33 GMT
 ARG MAVEN_VERSION=3.8.1
-# Wed, 14 Jul 2021 03:48:28 GMT
+# Tue, 27 Jul 2021 04:16:33 GMT
 ARG USER_HOME_DIR=/root
-# Wed, 14 Jul 2021 03:48:29 GMT
+# Tue, 27 Jul 2021 04:16:33 GMT
 ARG SHA=0ec48eb515d93f8515d4abe465570dfded6fa13a3ceb9aab8031428442d9912ec20f066b2afbf56964ffe1ceb56f80321b50db73cf77a0e2445ad0211fb8e38d
-# Wed, 14 Jul 2021 03:48:29 GMT
+# Tue, 27 Jul 2021 04:16:33 GMT
 ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/3.8.1/binaries
-# Wed, 14 Jul 2021 03:48:48 GMT
+# Tue, 27 Jul 2021 04:16:57 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.8.1/binaries MAVEN_VERSION=3.8.1 SHA=0ec48eb515d93f8515d4abe465570dfded6fa13a3ceb9aab8031428442d9912ec20f066b2afbf56964ffe1ceb56f80321b50db73cf77a0e2445ad0211fb8e38d USER_HOME_DIR=/root
 RUN apt-get update && apt-get install -y curl   && mkdir -p /usr/share/maven /usr/share/maven/ref   && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz   && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha512sum -c -   && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1   && rm -f /tmp/apache-maven.tar.gz   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
-# Wed, 14 Jul 2021 03:48:48 GMT
+# Tue, 27 Jul 2021 04:16:57 GMT
 ENV MAVEN_HOME=/usr/share/maven
-# Wed, 14 Jul 2021 03:48:49 GMT
+# Tue, 27 Jul 2021 04:16:57 GMT
 ENV MAVEN_CONFIG=/root/.m2
-# Wed, 14 Jul 2021 03:48:49 GMT
+# Tue, 27 Jul 2021 04:16:58 GMT
 COPY file:1b3da5c58894f705e7387946301c0c52edb6271761ea3cd80b86a848847a64cd in /usr/local/bin/mvn-entrypoint.sh 
-# Wed, 14 Jul 2021 03:48:50 GMT
+# Tue, 27 Jul 2021 04:16:58 GMT
 COPY file:2bbb488dd73c55d658b91943cfdf9c26975a320ceafc45dda94c95b03e518ad3 in /usr/share/maven/ref/ 
-# Wed, 14 Jul 2021 03:48:50 GMT
+# Tue, 27 Jul 2021 04:16:58 GMT
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
-# Wed, 14 Jul 2021 03:48:50 GMT
+# Tue, 27 Jul 2021 04:16:58 GMT
 CMD ["mvn"]
 ```
 
 -	Layers:
-	-	`sha256:e7ae86ffe2df0787131a4c49ace1b018fd38d62929b007d86bdd1f825e56a852`  
-		Last Modified: Tue, 13 Jul 2021 22:31:03 GMT  
-		Size: 26.7 MB (26706145 bytes)  
+	-	`sha256:feac5306138255e28a9862d3f3d29025d0a4d0648855afe1acd6131af07138ac`  
+		Last Modified: Mon, 26 Jul 2021 21:22:52 GMT  
+		Size: 26.7 MB (26709039 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:22821a14390caaab5b1f7ca9feb8e54ce64d3d81ca1fa64c6f1eee32ae92da5b`  
-		Last Modified: Tue, 13 Jul 2021 23:23:03 GMT  
-		Size: 3.0 MB (2959004 bytes)  
+	-	`sha256:7dcc8b59a59a15868e1ba8f0176e149949b7fa1f2c69f90ad72eb7270fdc65f7`  
+		Last Modified: Mon, 26 Jul 2021 23:26:50 GMT  
+		Size: 3.0 MB (2958819 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b90295c40970bbb17ff1570addc7017c9b85451a44f5e27176685bcda6cf7bf5`  
-		Last Modified: Tue, 13 Jul 2021 23:23:59 GMT  
-		Size: 166.7 MB (166681009 bytes)  
+	-	`sha256:dbd1fc51fdf8d30a78d109ea4d7efc22af4156c7475bd50bc013ac6dbc66d216`  
+		Last Modified: Mon, 26 Jul 2021 23:27:49 GMT  
+		Size: 166.7 MB (166681249 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:022c81c5d21a4b381e3cb68f9ce41abeeff3cf210e8217622041f5b01de1fb3b`  
-		Last Modified: Wed, 14 Jul 2021 03:56:28 GMT  
-		Size: 39.4 MB (39378236 bytes)  
+	-	`sha256:0c488ae6f082495b8d633d09f422fd6acf5b20b2c3ad2249605ea7e4d94a14f7`  
+		Last Modified: Tue, 27 Jul 2021 04:22:17 GMT  
+		Size: 39.5 MB (39534788 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:afec7311d4fffbb39aec5774f1dd30ee8a248856016ee8b649d065ceb3c66901`  
-		Last Modified: Wed, 14 Jul 2021 03:56:24 GMT  
-		Size: 853.0 B  
+	-	`sha256:bc1bb04ce178f44d3e531515c633b73a97b15bb2d7d0024c5ffa7c112b818608`  
+		Last Modified: Tue, 27 Jul 2021 04:22:14 GMT  
+		Size: 852.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b9f5388611d8bb1fd1653f2c1c21802da889be7e2daf7b3f2a8092fd18692f8b`  
-		Last Modified: Wed, 14 Jul 2021 03:56:24 GMT  
+	-	`sha256:8fb4f9c7c5c0fc866d8bde7ba4f12db4a9d37ffb8f8dfae6d54098159746136c`  
+		Last Modified: Tue, 27 Jul 2021 04:22:13 GMT  
 		Size: 361.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
