@@ -1,4 +1,4 @@
-## `couchbase:latest`
+## `couchbase:enterprise-7.0.0`
 
 ```console
 $ docker pull couchbase@sha256:005fb3ba97c2362b9ccc9d96f0d94bf09c2fe784d889fe71c5a2ba475e4645a4
@@ -8,7 +8,7 @@ $ docker pull couchbase@sha256:005fb3ba97c2362b9ccc9d96f0d94bf09c2fe784d889fe71c
 -	Platforms: 1
 	-	linux; amd64
 
-### `couchbase:latest` - linux; amd64
+### `couchbase:enterprise-7.0.0` - linux; amd64
 
 ```console
 $ docker pull couchbase@sha256:f2a81b4271f0bdec4d2e5f8f2b9e9febced79048b4cd9c144ff3b832272ba76e
