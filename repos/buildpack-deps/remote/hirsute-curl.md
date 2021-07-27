@@ -1,15 +1,16 @@
 ## `buildpack-deps:hirsute-curl`
 
 ```console
-$ docker pull buildpack-deps@sha256:ef06568fadbfe3d26fa857c1cd7cfebfdcfbd5abd4de6b591e85fa84c88250e1
+$ docker pull buildpack-deps@sha256:481c2187568d6b62610c1b941b5a9ca5daa6e53c8202b6525dd8bbf8d2ebe16c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 5
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
+	-	linux; riscv64
 	-	linux; s390x
 
 ### `buildpack-deps:hirsute-curl` - linux; amd64
@@ -162,6 +163,44 @@ RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get 
 	-	`sha256:9375a3d4e03a069ebacb822be250889976e19ca796cf3cb46a35c232e7b684bb`  
 		Last Modified: Thu, 22 Jul 2021 05:22:43 GMT  
 		Size: 4.5 MB (4523285 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `buildpack-deps:hirsute-curl` - linux; riscv64
+
+```console
+$ docker pull buildpack-deps@sha256:f64270239f7ac0f7a88fc85071cc7ee7b1440fa9a787378876da5e55fa661c31
+```
+
+-	Docker Version: 20.10.7
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **35.3 MB (35262978 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:28cf35c9844a75e651c604eb2b1036c492a66bcf27d6e04ab96214ab07a144a9`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Mon, 26 Jul 2021 23:24:43 GMT
+ADD file:399cdf15e2e703457111e0585186fa94182dcefce41f795abd41eddd1b10cefd in / 
+# Mon, 26 Jul 2021 23:24:44 GMT
+CMD ["bash"]
+# Tue, 27 Jul 2021 00:16:45 GMT
+RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 		tzdata 	; 	rm -rf /var/lib/apt/lists/*
+# Tue, 27 Jul 2021 00:17:26 GMT
+RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
+```
+
+-	Layers:
+	-	`sha256:8f03e05f8f3a48ff7994fd656018adf1f6bd707a2827d3bce0fa7435fafe04db`  
+		Last Modified: Mon, 26 Jul 2021 23:44:22 GMT  
+		Size: 27.1 MB (27140041 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:6b18328c2ee0bb5276608140b8a8467b6a2ee03da83bc425802e0b076060fc29`  
+		Last Modified: Tue, 27 Jul 2021 01:10:03 GMT  
+		Size: 4.9 MB (4945324 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:3afb0382af3d5aa29a9736f3967604d202347f0fa55cf43d804d2b204bf6d3f1`  
+		Last Modified: Tue, 27 Jul 2021 01:09:59 GMT  
+		Size: 3.2 MB (3177613 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `buildpack-deps:hirsute-curl` - linux; s390x

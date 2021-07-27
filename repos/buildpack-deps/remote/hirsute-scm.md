@@ -1,15 +1,16 @@
 ## `buildpack-deps:hirsute-scm`
 
 ```console
-$ docker pull buildpack-deps@sha256:4166e6b22158cd3c9c07bbc915f2f7ad74687654199f94e497be394162d2bf38
+$ docker pull buildpack-deps@sha256:e03a0154c04ce601f22cbeb97f1213a8e524a5531889f08183f76bac6633f8fa
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 5
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
+	-	linux; riscv64
 	-	linux; s390x
 
 ### `buildpack-deps:hirsute-scm` - linux; amd64
@@ -186,6 +187,50 @@ RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercuri
 	-	`sha256:bf67f7cc14051aa9f2a70c724250b91f8118dc7b56fa2d68f567c91d594e4954`  
 		Last Modified: Thu, 22 Jul 2021 05:23:47 GMT  
 		Size: 49.5 MB (49479458 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `buildpack-deps:hirsute-scm` - linux; riscv64
+
+```console
+$ docker pull buildpack-deps@sha256:c7feb8b2814ea8ded0a17260a7a7ac99bad50629756985a26a74b390710e1d1c
+```
+
+-	Docker Version: 20.10.7
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **75.6 MB (75595229 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:50a0dfbd696fcfe90ca2bb0e5b1f657720ce568c85d30575fb93c6565517296c`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Mon, 26 Jul 2021 23:24:43 GMT
+ADD file:399cdf15e2e703457111e0585186fa94182dcefce41f795abd41eddd1b10cefd in / 
+# Mon, 26 Jul 2021 23:24:44 GMT
+CMD ["bash"]
+# Tue, 27 Jul 2021 00:16:45 GMT
+RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 		tzdata 	; 	rm -rf /var/lib/apt/lists/*
+# Tue, 27 Jul 2021 00:17:26 GMT
+RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
+# Tue, 27 Jul 2021 00:20:45 GMT
+RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
+```
+
+-	Layers:
+	-	`sha256:8f03e05f8f3a48ff7994fd656018adf1f6bd707a2827d3bce0fa7435fafe04db`  
+		Last Modified: Mon, 26 Jul 2021 23:44:22 GMT  
+		Size: 27.1 MB (27140041 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:6b18328c2ee0bb5276608140b8a8467b6a2ee03da83bc425802e0b076060fc29`  
+		Last Modified: Tue, 27 Jul 2021 01:10:03 GMT  
+		Size: 4.9 MB (4945324 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:3afb0382af3d5aa29a9736f3967604d202347f0fa55cf43d804d2b204bf6d3f1`  
+		Last Modified: Tue, 27 Jul 2021 01:09:59 GMT  
+		Size: 3.2 MB (3177613 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:039d531e9f9a40c9a15969b59f3504018fbb8782d1dc9c079e15a99c5f1b4349`  
+		Last Modified: Tue, 27 Jul 2021 01:12:00 GMT  
+		Size: 40.3 MB (40332251 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `buildpack-deps:hirsute-scm` - linux; s390x

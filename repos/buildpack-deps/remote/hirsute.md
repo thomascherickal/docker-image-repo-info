@@ -1,15 +1,16 @@
 ## `buildpack-deps:hirsute`
 
 ```console
-$ docker pull buildpack-deps@sha256:5e9909f66827944efdc83930545cc214d28ca30a079310bfc403f477899d5c21
+$ docker pull buildpack-deps@sha256:353f97e2091ac49aa6dbf1a93eace56c80c412e8357e3e84658842402fcbb159
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 5
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
+	-	linux; riscv64
 	-	linux; s390x
 
 ### `buildpack-deps:hirsute` - linux; amd64
@@ -210,6 +211,56 @@ RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		auto
 	-	`sha256:00572471f69fb94f3d8270ae7ef27474c557a40953867b1a9bf03393009bfba3`  
 		Last Modified: Thu, 22 Jul 2021 05:25:41 GMT  
 		Size: 170.7 MB (170696833 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `buildpack-deps:hirsute` - linux; riscv64
+
+```console
+$ docker pull buildpack-deps@sha256:3a1bc9df7e2327ab9f215bf9b250cc64bcf17024f1cb4426e6c46e6a6e79ef5d
+```
+
+-	Docker Version: 20.10.7
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **257.9 MB (257903260 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:01d4f49ef98f63bf978a764d3edeeccb6be7ff847f4c70d8ee75f48cd500ed77`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Mon, 26 Jul 2021 23:24:43 GMT
+ADD file:399cdf15e2e703457111e0585186fa94182dcefce41f795abd41eddd1b10cefd in / 
+# Mon, 26 Jul 2021 23:24:44 GMT
+CMD ["bash"]
+# Tue, 27 Jul 2021 00:16:45 GMT
+RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 		tzdata 	; 	rm -rf /var/lib/apt/lists/*
+# Tue, 27 Jul 2021 00:17:26 GMT
+RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
+# Tue, 27 Jul 2021 00:20:45 GMT
+RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
+# Tue, 27 Jul 2021 00:26:47 GMT
+RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		automake 		bzip2 		dpkg-dev 		file 		g++ 		gcc 		imagemagick 		libbz2-dev 		libc6-dev 		libcurl4-openssl-dev 		libdb-dev 		libevent-dev 		libffi-dev 		libgdbm-dev 		libglib2.0-dev 		libgmp-dev 		libjpeg-dev 		libkrb5-dev 		liblzma-dev 		libmagickcore-dev 		libmagickwand-dev 		libmaxminddb-dev 		libncurses5-dev 		libncursesw5-dev 		libpng-dev 		libpq-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		libtool 		libwebp-dev 		libxml2-dev 		libxslt-dev 		libyaml-dev 		make 		patch 		unzip 		xz-utils 		zlib1g-dev 				$( 			if apt-cache show 'default-libmysqlclient-dev' 2>/dev/null | grep -q '^Version:'; then 				echo 'default-libmysqlclient-dev'; 			else 				echo 'libmysqlclient-dev'; 			fi 		) 	; 	rm -rf /var/lib/apt/lists/*
+```
+
+-	Layers:
+	-	`sha256:8f03e05f8f3a48ff7994fd656018adf1f6bd707a2827d3bce0fa7435fafe04db`  
+		Last Modified: Mon, 26 Jul 2021 23:44:22 GMT  
+		Size: 27.1 MB (27140041 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:6b18328c2ee0bb5276608140b8a8467b6a2ee03da83bc425802e0b076060fc29`  
+		Last Modified: Tue, 27 Jul 2021 01:10:03 GMT  
+		Size: 4.9 MB (4945324 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:3afb0382af3d5aa29a9736f3967604d202347f0fa55cf43d804d2b204bf6d3f1`  
+		Last Modified: Tue, 27 Jul 2021 01:09:59 GMT  
+		Size: 3.2 MB (3177613 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:039d531e9f9a40c9a15969b59f3504018fbb8782d1dc9c079e15a99c5f1b4349`  
+		Last Modified: Tue, 27 Jul 2021 01:12:00 GMT  
+		Size: 40.3 MB (40332251 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:8fb6057ec3c921873e69113395fd5514db610084839a94c252c20831d314fbb3`  
+		Last Modified: Tue, 27 Jul 2021 01:17:35 GMT  
+		Size: 182.3 MB (182308031 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `buildpack-deps:hirsute` - linux; s390x
