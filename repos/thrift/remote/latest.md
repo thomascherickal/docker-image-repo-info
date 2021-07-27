@@ -1,7 +1,7 @@
 ## `thrift:latest`
 
 ```console
-$ docker pull thrift@sha256:7cb2f20b73e2459e4ddb29261d2ac7d4919b57ce7af6bc9070391ac467de8177
+$ docker pull thrift@sha256:b9b2f55220d44ee6813708cf57d24f007c74956a57f4b004b9f5d17da6780d00
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,35 +11,35 @@ $ docker pull thrift@sha256:7cb2f20b73e2459e4ddb29261d2ac7d4919b57ce7af6bc907039
 ### `thrift:latest` - linux; amd64
 
 ```console
-$ docker pull thrift@sha256:3c5976c992de963f421ec5e3b914a6e68ec7ae3fa5df942f9abf2bd7b32a5ad8
+$ docker pull thrift@sha256:d0931966138d8f27ffa48eaa76825ce6b5f3c962de0a222bd24adef49ba0b5e3
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **43.7 MB (43743109 bytes)**  
+-	Total Size: **43.7 MB (43745804 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3aafa2d18f771f1554a69470b8075be1ddb2c767f65c6315869e463548a4dd24`
+-	Image ID: `sha256:f9151063bc7cf4fa652bfe5c00aea5528949b87fcce675eb8c092fde7aa400d2`
 -	Default Command: `["thrift"]`
 
 ```dockerfile
-# Tue, 13 Jul 2021 22:29:15 GMT
-ADD file:7274ece1917848683250bbeda9eacf6eb7510481cbaa177880e3a60b4133e35b in / 
-# Tue, 13 Jul 2021 22:29:15 GMT
+# Mon, 26 Jul 2021 21:21:30 GMT
+ADD file:e729fb032bd2f7cde20fb343da0cd358447e8b23028422c123944e8d0be660fa in / 
+# Mon, 26 Jul 2021 21:21:31 GMT
 CMD ["bash"]
-# Wed, 14 Jul 2021 03:28:55 GMT
+# Mon, 26 Jul 2021 23:17:43 GMT
 ENV THRIFT_VERSION=v0.12.0
-# Wed, 14 Jul 2021 03:32:56 GMT
+# Mon, 26 Jul 2021 23:22:20 GMT
 RUN buildDeps=" 		automake 		bison 		curl 		flex 		g++ 		libboost-dev 		libboost-filesystem-dev 		libboost-program-options-dev 		libboost-system-dev 		libboost-test-dev 		libevent-dev 		libssl-dev 		libtool 		make 		pkg-config 	"; 	apt-get update && apt-get install -y --no-install-recommends $buildDeps && rm -rf /var/lib/apt/lists/* 	&& curl -k -sSL "https://github.com/apache/thrift/archive/${THRIFT_VERSION}.tar.gz" -o thrift.tar.gz 	&& mkdir -p /usr/src/thrift 	&& tar zxf thrift.tar.gz -C /usr/src/thrift --strip-components=1 	&& rm thrift.tar.gz 	&& cd /usr/src/thrift 	&& ./bootstrap.sh 	&& ./configure --disable-libs 	&& make 	&& make install 	&& cd / 	&& rm -rf /usr/src/thrift 	&& apt-get purge -y --auto-remove $buildDeps 	&& rm -rf /var/cache/apt/* 	&& rm -rf /var/lib/apt/lists/* 	&& rm -rf /tmp/* 	&& rm -rf /var/tmp/*
-# Wed, 14 Jul 2021 03:32:56 GMT
+# Mon, 26 Jul 2021 23:22:21 GMT
 CMD ["thrift"]
 ```
 
 -	Layers:
-	-	`sha256:e7ae86ffe2df0787131a4c49ace1b018fd38d62929b007d86bdd1f825e56a852`  
-		Last Modified: Tue, 13 Jul 2021 22:31:03 GMT  
-		Size: 26.7 MB (26706145 bytes)  
+	-	`sha256:feac5306138255e28a9862d3f3d29025d0a4d0648855afe1acd6131af07138ac`  
+		Last Modified: Mon, 26 Jul 2021 21:22:52 GMT  
+		Size: 26.7 MB (26709039 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a5ad653376105cd82823d8bce467c8af3844d4f7204bc6ec2b451eddeafa523c`  
-		Last Modified: Wed, 14 Jul 2021 03:33:18 GMT  
-		Size: 17.0 MB (17036964 bytes)  
+	-	`sha256:49bbf4c9540c4b9721cae68c5bfabaca91b9f3691b888c0598f175999f5f405f`  
+		Last Modified: Mon, 26 Jul 2021 23:22:35 GMT  
+		Size: 17.0 MB (17036765 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
