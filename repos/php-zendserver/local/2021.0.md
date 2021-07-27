@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:a801ad603282e150468e7f1c5ce93b595cfa1ff8f54125fcaf18cb71f5b4d24b`
-- Created: `2021-07-14T01:16:21.979751419Z`
+- Image ID: `sha256:469f26bf9e3a6a671c115ba7e9da7457c9463c98bee3fe0dc4c0bbf9a1c6eb1a`
+- Created: `2021-07-27T02:11:21.190499361Z`
 - Virtual Size: ~ 1.02 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -249,13 +249,13 @@ $ apt-get source -qq --print-uris coreutils=8.28-1ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/c/coreutils/coreutils_8.28-1ubuntu1.debian.tar.xz' coreutils_8.28-1ubuntu1.debian.tar.xz 37940 SHA256:71ba2e83edc675a79e1e0556aff326ab2ae812332692e3db29615e8ed1b427f4
 ```
 
-### `dpkg` source package: `curl=7.58.0-2ubuntu3.13`
+### `dpkg` source package: `curl=7.58.0-2ubuntu3.14`
 
 Binary Packages:
 
-- `curl=7.58.0-2ubuntu3.13`
-- `libcurl3-gnutls:amd64=7.58.0-2ubuntu3.13`
-- `libcurl4:amd64=7.58.0-2ubuntu3.13`
+- `curl=7.58.0-2ubuntu3.14`
+- `libcurl3-gnutls:amd64=7.58.0-2ubuntu3.14`
+- `libcurl4:amd64=7.58.0-2ubuntu3.14`
 
 Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/doc/libcurl4/copyright`)
 
@@ -269,10 +269,10 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 Source:
 
 ```console
-$ apt-get source -qq --print-uris curl=7.58.0-2ubuntu3.13
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.58.0-2ubuntu3.13.dsc' curl_7.58.0-2ubuntu3.13.dsc 2781 SHA512:ab0ef97922435e5be9f8d3ea678ca68d3e4ad18c01b0065458cc71f5fc29e2ba337309686028a67aef3b335905f6b47cb5f4defabab15c8b1f719edbcb24be91
+$ apt-get source -qq --print-uris curl=7.58.0-2ubuntu3.14
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.58.0-2ubuntu3.14.dsc' curl_7.58.0-2ubuntu3.14.dsc 2781 SHA512:e6ba797e6943d127049f16bfbc67cefa0e587e47a5ea06bc55a822d12554a19b24f608c5bb659d4a7e305e0df3c0a055b93f1a6091538cf33aabce7286e684f5
 'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.58.0.orig.tar.gz' curl_7.58.0.orig.tar.gz 3879728 SHA512:7b12b79107558bb266672d6e128615fe5a8149c37f4ae540197e3298f5d312beb2d78fbb23e3ea84ea7afc41549898a1e5cd38509f0388b11707b48d5efb8ca3
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.58.0-2ubuntu3.13.debian.tar.xz' curl_7.58.0-2ubuntu3.13.debian.tar.xz 58620 SHA512:91f19e1a10a8b4585b4c8dd235305476b4300555b9055855cfe04a043e3f2e04d468d9c64311875da61668420156b15bb571539e247c114046b2c069f28f2c35
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.58.0-2ubuntu3.14.debian.tar.xz' curl_7.58.0-2ubuntu3.14.debian.tar.xz 61016 SHA512:fcb7201c7bd8bdeedd5d07991149ef430aff9d6209c8ad8b1f7f3733c1bba7e5e60a2e514c1274e7afddffa76ece6b567c786daddfe451b8943e198040a641c5
 ```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27~101-g0780600+dfsg-3ubuntu2.3`
@@ -846,11 +846,11 @@ $ apt-get source -qq --print-uris grep=3.1-2build1
 'http://archive.ubuntu.com/ubuntu/pool/main/g/grep/grep_3.1-2build1.debian.tar.bz2' grep_3.1-2build1.debian.tar.bz2 110087 SHA512:ca29a8001c406a2914a9edc1859f2615abc08dc1c8c8a42e48036844ee6249436dba7a43f5e5c078cb44605d620cd0d93904c92178acf73b42cb6faf416be310
 ```
 
-### `dpkg` source package: `gzip=1.6-5ubuntu1`
+### `dpkg` source package: `gzip=1.6-5ubuntu1.1`
 
 Binary Packages:
 
-- `gzip=1.6-5ubuntu1`
+- `gzip=1.6-5ubuntu1.1`
 
 Licenses: (parsed from: `/usr/share/doc/gzip/copyright`)
 
@@ -859,10 +859,10 @@ Licenses: (parsed from: `/usr/share/doc/gzip/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris gzip=1.6-5ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gzip/gzip_1.6-5ubuntu1.dsc' gzip_1.6-5ubuntu1.dsc 2023 SHA256:439e340fce084b9b30e22a5537712f9b4727a20e77952addeea7633a4e9ef073
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gzip/gzip_1.6.orig.tar.gz' gzip_1.6.orig.tar.gz 1074924 SHA256:97eb83b763d9e5ad35f351fe5517e6b71521d7aac7acf3e3cacdb6b1496d8f7e
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gzip/gzip_1.6-5ubuntu1.debian.tar.xz' gzip_1.6-5ubuntu1.debian.tar.xz 15516 SHA256:db01e3f2195cf0ebcf43ad38d07a70059b6b5b292706f2412de34928b9146db5
+$ apt-get source -qq --print-uris gzip=1.6-5ubuntu1.1
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gzip/gzip_1.6-5ubuntu1.1.dsc' gzip_1.6-5ubuntu1.1.dsc 2060 SHA512:7c6e0879b304e4dec2c1ac364e74608ac9f2592c81694b79673fdf8d61241b3fd7f1c9783490adaffa8c68ae4292458d3a5f686b2373f7c9e0879125799fc6ca
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gzip/gzip_1.6.orig.tar.gz' gzip_1.6.orig.tar.gz 1074924 SHA512:7fe04ddc101f8a6a8c91ca9cc3502ba80e08011ba27005ddde6bc5926b44066c2f943108c78ac66596cb5ea61f1f7e845a90899a11623638c15088d76e95f04a
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gzip/gzip_1.6-5ubuntu1.1.debian.tar.xz' gzip_1.6-5ubuntu1.1.debian.tar.xz 15604 SHA512:0f8c74be3506e87d8b5ff6f5c3a92076d017af69d9a10c03cc5b3b3325eeb554e65821eb2b8697b68bae12b922d1299c7563e41052306ef2681ce0c6b5c8c0a9
 ```
 
 ### `dpkg` source package: `heimdal=7.5.0+dfsg-1`
@@ -2033,11 +2033,11 @@ $ apt-get source -qq --print-uris mawk=1.3.3-17ubuntu3
 'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.3-17ubuntu3.diff.gz' mawk_1.3.3-17ubuntu3.diff.gz 64052 SHA256:d1be148525885cb1869e35514f55005b5043f3310b08c444625005a3e14c81fc
 ```
 
-### `dpkg` source package: `mysql-5.7=5.7.34-0ubuntu0.18.04.1`
+### `dpkg` source package: `mysql-5.7=5.7.35-0ubuntu0.18.04.1`
 
 Binary Packages:
 
-- `libmysqlclient20:amd64=5.7.34-0ubuntu0.18.04.1`
+- `libmysqlclient20:amd64=5.7.35-0ubuntu0.18.04.1`
 
 Licenses: (parsed from: `/usr/share/doc/libmysqlclient20/copyright`)
 
@@ -2058,10 +2058,10 @@ Licenses: (parsed from: `/usr/share/doc/libmysqlclient20/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris mysql-5.7=5.7.34-0ubuntu0.18.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-5.7_5.7.34-0ubuntu0.18.04.1.dsc' mysql-5.7_5.7.34-0ubuntu0.18.04.1.dsc 3446 SHA512:4f7acd6cfc99a11f9d9c63e792afbd99bd53e631f03370ca45c969b9e5cd750eabf131f77817d33af373a996bd8eac6ec10ecfa5b378fb08372f6b8a789d495d
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-5.7_5.7.34.orig.tar.gz' mysql-5.7_5.7.34.orig.tar.gz 52891142 SHA512:4eab7e90477b75643df743d806d5abcfb56572a2aa003a354980287c9148209f4fb7f0158ba969fb0462c32e49fcb4cf2a79f0330ab1bd2b243725dbf6f31d6d
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-5.7_5.7.34-0ubuntu0.18.04.1.debian.tar.xz' mysql-5.7_5.7.34-0ubuntu0.18.04.1.debian.tar.xz 156504 SHA512:517fa41a1eeb88f0ac5f5b495da35e21d31423ebe4869bb8848efbcdc68744c5ab5c1e0b74129c9493730b5b84b705d4e96f93082d736ab8b1cbb620b76b12a8
+$ apt-get source -qq --print-uris mysql-5.7=5.7.35-0ubuntu0.18.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-5.7_5.7.35-0ubuntu0.18.04.1.dsc' mysql-5.7_5.7.35-0ubuntu0.18.04.1.dsc 3446 SHA512:19ebd36e53199400b04cb44e19aa97ea3a4095c26a8104537d5cf674d6767135453771fa33a421c501472538eab7c22b9898b35cddec897cc5d3abacfbe63bf5
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-5.7_5.7.35.orig.tar.gz' mysql-5.7_5.7.35.orig.tar.gz 52959014 SHA512:2469c8e13a236aee327bc0828804ba189e3abf78b6e0b3ef65b2343210f9c0cd5313d18b57ae3b76ca1487dc1d70854c8a12e6da61a6fffbce95854dcc792482
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-5.7_5.7.35-0ubuntu0.18.04.1.debian.tar.xz' mysql-5.7_5.7.35-0ubuntu0.18.04.1.debian.tar.xz 156724 SHA512:689e179432c4bb0b71c16ed73adb518d6e60394eecac4e744d9ce8e9541935a1096e644d31f82cdbf723e12622a58650a0099fad6dbad4ab367d8b5be5f5db8c
 ```
 
 ### `dpkg` source package: `mysql-defaults=1.0.4`
@@ -3372,12 +3372,12 @@ $ apt-get source -qq --print-uris sqlite3=3.22.0-1ubuntu0.4
 'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.22.0-1ubuntu0.4.debian.tar.xz' sqlite3_3.22.0-1ubuntu0.4.debian.tar.xz 47632 SHA512:1b280b6c301b2f3c15ebdfe6085584cef34257edae14c94d7d6e8d06a7b884a96029d354cb3f09df6b6427f671a24cc25ee1ebc178c7168cd0a52bce8c8b5cf0
 ```
 
-### `dpkg` source package: `systemd=237-3ubuntu10.48`
+### `dpkg` source package: `systemd=237-3ubuntu10.50`
 
 Binary Packages:
 
-- `libsystemd0:amd64=237-3ubuntu10.48`
-- `libudev1:amd64=237-3ubuntu10.48`
+- `libsystemd0:amd64=237-3ubuntu10.50`
+- `libudev1:amd64=237-3ubuntu10.50`
 
 Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/libudev1/copyright`)
 
@@ -3392,10 +3392,10 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris systemd=237-3ubuntu10.48
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.48.dsc' systemd_237-3ubuntu10.48.dsc 5220 SHA512:c185bab18222e1d15f4c63e2e7c10679a10116851817a68d531abe7bfd089576b3cc44ca4d0e8f426c7bc13b804ff45c7e9d67a8704260c75a21c190190232f0
+$ apt-get source -qq --print-uris systemd=237-3ubuntu10.50
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.50.dsc' systemd_237-3ubuntu10.50.dsc 5187 SHA512:79be5b7150d97f5ab5e8cde9fc40917da27e20e478ff8675fe2dd2f2cf925f3a4c5ada3d52faef23142c698b4e46615c726c21d12c5d8d68a1a6f7d98f80fd89
 'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237.orig.tar.gz' systemd_237.orig.tar.gz 6871350 SHA512:15ef4b92815a6dd9a6c51672dbc00fd7cd0f08068ef0cbeaca574f68d330b28bc67ba1946f24f75ef3d9e7b63843a73eea700db54688061dbf5c9f8470394c3b
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.48.debian.tar.xz' systemd_237-3ubuntu10.48.debian.tar.xz 293920 SHA512:b583f105567543222eb4a7851eb26151fe5f88d9b1c3c98c1d9fe45a5363df9cd5d5ea902c0c9e3e382617de34b44801dc9a318e7c3173ff49ee05179b435d95
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.50.debian.tar.xz' systemd_237-3ubuntu10.50.debian.tar.xz 295228 SHA512:6d3c1e595c36dc035c54a623a7a7a505cc6a678490cc038c8c16fbde7b63c557c77a12e788030308527717b83b548391e769f3b0d3ba207d2c6b7259367332f7
 ```
 
 ### `dpkg` source package: `sysvinit=2.88dsf-59.10ubuntu1`
