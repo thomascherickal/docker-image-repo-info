@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:3aafa2d18f771f1554a69470b8075be1ddb2c767f65c6315869e463548a4dd24`
-- Created: `2021-07-14T03:32:56.943062451Z`
+- Image ID: `sha256:f9151063bc7cf4fa652bfe5c00aea5528949b87fcce675eb8c092fde7aa400d2`
+- Created: `2021-07-26T23:22:21.157100146Z`
 - Virtual Size: ~ 124.17 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -559,11 +559,11 @@ $ apt-get source -qq --print-uris grep=3.1-2build1
 'http://archive.ubuntu.com/ubuntu/pool/main/g/grep/grep_3.1-2build1.debian.tar.bz2' grep_3.1-2build1.debian.tar.bz2 110087 SHA512:ca29a8001c406a2914a9edc1859f2615abc08dc1c8c8a42e48036844ee6249436dba7a43f5e5c078cb44605d620cd0d93904c92178acf73b42cb6faf416be310
 ```
 
-### `dpkg` source package: `gzip=1.6-5ubuntu1`
+### `dpkg` source package: `gzip=1.6-5ubuntu1.1`
 
 Binary Packages:
 
-- `gzip=1.6-5ubuntu1`
+- `gzip=1.6-5ubuntu1.1`
 
 Licenses: (parsed from: `/usr/share/doc/gzip/copyright`)
 
@@ -572,10 +572,10 @@ Licenses: (parsed from: `/usr/share/doc/gzip/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris gzip=1.6-5ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gzip/gzip_1.6-5ubuntu1.dsc' gzip_1.6-5ubuntu1.dsc 2023 SHA256:439e340fce084b9b30e22a5537712f9b4727a20e77952addeea7633a4e9ef073
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gzip/gzip_1.6.orig.tar.gz' gzip_1.6.orig.tar.gz 1074924 SHA256:97eb83b763d9e5ad35f351fe5517e6b71521d7aac7acf3e3cacdb6b1496d8f7e
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gzip/gzip_1.6-5ubuntu1.debian.tar.xz' gzip_1.6-5ubuntu1.debian.tar.xz 15516 SHA256:db01e3f2195cf0ebcf43ad38d07a70059b6b5b292706f2412de34928b9146db5
+$ apt-get source -qq --print-uris gzip=1.6-5ubuntu1.1
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gzip/gzip_1.6-5ubuntu1.1.dsc' gzip_1.6-5ubuntu1.1.dsc 2060 SHA512:7c6e0879b304e4dec2c1ac364e74608ac9f2592c81694b79673fdf8d61241b3fd7f1c9783490adaffa8c68ae4292458d3a5f686b2373f7c9e0879125799fc6ca
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gzip/gzip_1.6.orig.tar.gz' gzip_1.6.orig.tar.gz 1074924 SHA512:7fe04ddc101f8a6a8c91ca9cc3502ba80e08011ba27005ddde6bc5926b44066c2f943108c78ac66596cb5ea61f1f7e845a90899a11623638c15088d76e95f04a
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gzip/gzip_1.6-5ubuntu1.1.debian.tar.xz' gzip_1.6-5ubuntu1.1.debian.tar.xz 15604 SHA512:0f8c74be3506e87d8b5ff6f5c3a92076d017af69d9a10c03cc5b3b3325eeb554e65821eb2b8697b68bae12b922d1299c7563e41052306ef2681ce0c6b5c8c0a9
 ```
 
 ### `dpkg` source package: `hostname=3.20`
@@ -1192,12 +1192,12 @@ $ apt-get source -qq --print-uris shadow=1:4.5-1ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.5-1ubuntu2.debian.tar.xz' shadow_4.5-1ubuntu2.debian.tar.xz 471472 SHA512:d4017784bfc5118b86533da52909459adf4e79ffa049d8029437860bfaeac91eabd40e6510f67bba6f8b2d74fde62c24eb8e37a7b4637d14eeb63aecaf2294cc
 ```
 
-### `dpkg` source package: `systemd=237-3ubuntu10.48`
+### `dpkg` source package: `systemd=237-3ubuntu10.50`
 
 Binary Packages:
 
-- `libsystemd0:amd64=237-3ubuntu10.48`
-- `libudev1:amd64=237-3ubuntu10.48`
+- `libsystemd0:amd64=237-3ubuntu10.50`
+- `libudev1:amd64=237-3ubuntu10.50`
 
 Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/libudev1/copyright`)
 
@@ -1209,9 +1209,14 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris systemd=237-3ubuntu10.50
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.50.dsc' systemd_237-3ubuntu10.50.dsc 5187 SHA512:79be5b7150d97f5ab5e8cde9fc40917da27e20e478ff8675fe2dd2f2cf925f3a4c5ada3d52faef23142c698b4e46615c726c21d12c5d8d68a1a6f7d98f80fd89
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237.orig.tar.gz' systemd_237.orig.tar.gz 6871350 SHA512:15ef4b92815a6dd9a6c51672dbc00fd7cd0f08068ef0cbeaca574f68d330b28bc67ba1946f24f75ef3d9e7b63843a73eea700db54688061dbf5c9f8470394c3b
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.50.debian.tar.xz' systemd_237-3ubuntu10.50.debian.tar.xz 295228 SHA512:6d3c1e595c36dc035c54a623a7a7a505cc6a678490cc038c8c16fbde7b63c557c77a12e788030308527717b83b548391e769f3b0d3ba207d2c6b7259367332f7
+```
 
 ### `dpkg` source package: `sysvinit=2.88dsf-59.10ubuntu1`
 
