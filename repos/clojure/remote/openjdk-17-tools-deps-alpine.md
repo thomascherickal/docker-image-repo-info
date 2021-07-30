@@ -1,7 +1,7 @@
 ## `clojure:openjdk-17-tools-deps-alpine`
 
 ```console
-$ docker pull clojure@sha256:8503a73ad24f6bc1bac18128eac06b51ef271dbd7ee0cb73c56399cf695d7471
+$ docker pull clojure@sha256:9488077c0477c673c1462bb2e62b9ac56f13b802e99844bae69dc708ddabf8cf
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull clojure@sha256:8503a73ad24f6bc1bac18128eac06b51ef271dbd7ee0cb73c56
 ### `clojure:openjdk-17-tools-deps-alpine` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:47e7158acb41a69428d84f246de66d776d2fd86e73957855b3a5fca39735e946
+$ docker pull clojure@sha256:9290908170754c3ee3e54a60a3ac5dc409fdc9e4d9deb6f1bb120d262e6e6931
 ```
 
--	Docker Version: 19.03.12
+-	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **209.0 MB (208985772 bytes)**  
+-	Total Size: **209.0 MB (208996506 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2b63539e243a0ac835ab6a29796ce970a5bd81f275e698069748950ac3466911`
+-	Image ID: `sha256:a98886e2fdc4c4be5f6ef6d2543a7b1a66a412f692f8357cc59fd77b5750622b`
 -	Default Command: `["sh","-c","sleep 1 && exec clj"]`
 
 ```dockerfile
@@ -38,13 +38,13 @@ ENV JAVA_VERSION=17-ea+14
 RUN set -eux; 		arch="$(apk --print-arch)"; 	case "$arch" in 		'x86_64') 			downloadUrl='https://download.java.net/java/early_access/alpine/14/binaries/openjdk-17-ea+14_linux-x64-musl_bin.tar.gz'; 			downloadSha256='f07a1ac921333dafac1cd886ad49600ce143be7efebd32e1a02599a8a0829dd4'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget -O openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum -c -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/ssl/certs/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
 # Tue, 22 Jun 2021 21:41:09 GMT
 CMD ["jshell"]
-# Tue, 22 Jun 2021 22:21:08 GMT
-ENV CLOJURE_VERSION=1.10.3.855
-# Tue, 22 Jun 2021 22:21:08 GMT
+# Fri, 30 Jul 2021 20:23:07 GMT
+ENV CLOJURE_VERSION=1.10.3.933
+# Fri, 30 Jul 2021 20:23:07 GMT
 WORKDIR /tmp
-# Tue, 22 Jun 2021 22:21:15 GMT
-RUN apk add --update --no-cache curl bash make && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "4bafe3c7343b7d4ef44bd0145bf4203be1c144a30d99a1db53ab67abb2568e2b *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apk del curl
-# Tue, 22 Jun 2021 22:21:15 GMT
+# Fri, 30 Jul 2021 20:23:14 GMT
+RUN apk add --update --no-cache curl bash make && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "0559cc25d08c3c25c3c0b734aba3a6c80f9b5d2760fdbddf08a4df886873528e *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apk del curl
+# Fri, 30 Jul 2021 20:23:14 GMT
 CMD ["sh" "-c" "sleep 1 && exec clj"]
 ```
 
@@ -61,7 +61,7 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 		Last Modified: Tue, 22 Jun 2021 21:52:05 GMT  
 		Size: 186.8 MB (186798299 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:200242abc3e7677ee7511d829560a03d8a6685c0ec89d693e34bcbdb732bf2f9`  
-		Last Modified: Tue, 22 Jun 2021 22:25:42 GMT  
-		Size: 18.4 MB (18447559 bytes)  
+	-	`sha256:166989fec23501b364e4612412ff3e3fe444d01c8ff020b6d0043c5aadabf4f1`  
+		Last Modified: Fri, 30 Jul 2021 20:29:05 GMT  
+		Size: 18.5 MB (18458293 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
