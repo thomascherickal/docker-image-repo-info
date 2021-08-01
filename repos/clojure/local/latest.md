@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:613ae8d575aea6c79c63b25dd3b8d2d4898d9d097fcde99b3ed70cc43dc8db14`
-- Created: `2021-07-23T07:09:12.003566824Z`
-- Virtual Size: ~ 598.67 Mb  
+- Image ID: `sha256:1ab28539150b76522cbce06a5c6b807875f07ce55eddb911c5e1e96b04416aa3`
+- Created: `2021-07-30T20:18:14.878418746Z`
+- Virtual Size: ~ 598.68 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["lein","repl"]`
@@ -19,7 +19,7 @@
   - `LEIN_VERSION=2.9.6`
   - `LEIN_INSTALL=/usr/local/bin/`
   - `LEIN_ROOT=1`
-  - `CLOJURE_VERSION=1.10.3.855`
+  - `CLOJURE_VERSION=1.10.3.933`
 
 ## `dpkg` (`.deb`-based packages)
 
