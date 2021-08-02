@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:7ea43ea1e31dbcd572cd6858b38d112003d2766c3805be1069969207c0f1a67c`
-- Created: `2021-07-22T00:25:38.076467155Z`
+- Image ID: `sha256:1bc4880a7a97d735ab880e43cd329ab122bdeda169927b3009a915af35400255`
+- Created: `2021-07-30T03:01:43.044310953Z`
 - Virtual Size: ~ 172.89 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -18,10 +18,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
-  - `PHP_VERSION=7.4.21`
-  - `PHP_URL=https://www.php.net/distributions/php-7.4.21.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.21.tar.xz.asc`
-  - `PHP_SHA256=cf43384a7806241bc2ff22022619baa4abb9710f12ec1656d0173de992e32a90`
+  - `PHP_VERSION=7.4.22`
+  - `PHP_URL=https://www.php.net/distributions/php-7.4.22.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.22.tar.xz.asc`
+  - `PHP_SHA256=8e078cd7d2f49ac3fcff902490a5bb1addc885e7e3b0d8dd068f42c68297bde8`
   - `DRUPAL_VERSION=8.9.17`
 
 ## `apk` (`.apk`-based packages)
@@ -284,16 +284,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.77.0-r1 description:
+libcurl-7.78.0-r0 description:
 The multiprotocol file transfer library
 
-libcurl-7.77.0-r1 webpage:
+libcurl-7.78.0-r0 webpage:
 https://curl.se/
 
-libcurl-7.77.0-r1 installed size:
+libcurl-7.78.0-r0 installed size:
 500 KiB
 
-libcurl-7.77.0-r1 license:
+libcurl-7.78.0-r0 license:
 MIT
 
 ```
@@ -454,16 +454,16 @@ ISC
 ### `apk` package: `libxml2`
 
 ```console
-libxml2-2.9.10-r7 description:
+libxml2-2.9.12-r0 description:
 XML parsing library, version 2
 
-libxml2-2.9.10-r7 webpage:
+libxml2-2.9.12-r0 webpage:
 http://www.xmlsoft.org/
 
-libxml2-2.9.10-r7 installed size:
-1196 KiB
+libxml2-2.9.12-r0 installed size:
+1200 KiB
 
-libxml2-2.9.10-r7 license:
+libxml2-2.9.12-r0 license:
 MIT
 
 ```
