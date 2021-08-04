@@ -3,6 +3,7 @@
 # Tags of `alt`
 
 -	[`alt:latest`](#altlatest)
+-	[`alt:p10`](#altp10)
 -	[`alt:p8`](#altp8)
 -	[`alt:p9`](#altp9)
 -	[`alt:sisyphus`](#altsisyphus)
@@ -155,6 +156,15 @@ CMD ["/bin/bash"]
 		Last Modified: Mon, 01 Feb 2021 20:23:35 GMT  
 		Size: 191.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `alt:p10`
+
+```console
+$ docker pull alt@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `alt:p8`
 
