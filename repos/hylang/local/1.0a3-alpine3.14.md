@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:b9330d754e8ba5a8a5889beefd55e7d985a9c6ec3bb7b06cec153085aa068725`
-- Created: `2021-07-26T20:01:05.803356624Z`
-- Virtual Size: ~ 53.06 Mb  
+- Image ID: `sha256:18651cff5b7257a09cc1aebaf442bc80d8cfbcc8c3a46b9135bb9566cb4e0ff5`
+- Created: `2021-08-02T20:37:41.642605197Z`
+- Virtual Size: ~ 53.22 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["hy"]`
@@ -13,7 +13,7 @@
   - `LANG=C.UTF-8`
   - `GPG_KEY=E3FF2839C048B25C084DEBE9B26995E310250568`
   - `PYTHON_VERSION=3.9.6`
-  - `PYTHON_PIP_VERSION=21.2.1`
+  - `PYTHON_PIP_VERSION=21.2.2`
   - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/a1675ab6c2bd898ed82b1f58c486097f763c74a9/public/get-pip.py`
   - `PYTHON_GET_PIP_SHA256=6665659241292b2147b58922b9ffe11dda66b39d52d8a6f3aa310bc1d60ea6f7`
   - `HY_VERSION=1.0a3`

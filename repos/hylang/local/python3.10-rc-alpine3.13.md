@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:48131c2829b1a4c439deef676623831dec32d5c17363731e60e748bb3e0241f0`
-- Created: `2021-07-26T20:03:11.964479763Z`
-- Virtual Size: ~ 54.39 Mb  
+- Image ID: `sha256:28b4d7b8b5dfa8b0377c6f74f278cf315ff65cd06c945079a59d1305f2ba3a51`
+- Created: `2021-08-03T20:15:26.927803065Z`
+- Virtual Size: ~ 54.58 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["hy"]`
@@ -12,8 +12,8 @@
   - `PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=C.UTF-8`
   - `GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D`
-  - `PYTHON_VERSION=3.10.0b4`
-  - `PYTHON_PIP_VERSION=21.2.1`
+  - `PYTHON_VERSION=3.10.0rc1`
+  - `PYTHON_PIP_VERSION=21.2.2`
   - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/a1675ab6c2bd898ed82b1f58c486097f763c74a9/public/get-pip.py`
   - `PYTHON_GET_PIP_SHA256=6665659241292b2147b58922b9ffe11dda66b39d52d8a6f3aa310bc1d60ea6f7`
   - `HY_VERSION=1.0a3`
@@ -193,16 +193,16 @@ MIT
 ### `apk` package: `krb5-libs`
 
 ```console
-krb5-libs-1.18.3-r1 description:
+krb5-libs-1.18.4-r0 description:
 The shared libraries used by Kerberos 5
 
-krb5-libs-1.18.3-r1 webpage:
+krb5-libs-1.18.4-r0 webpage:
 https://web.mit.edu/kerberos/www/
 
-krb5-libs-1.18.3-r1 installed size:
+krb5-libs-1.18.4-r0 installed size:
 1960 KiB
 
-krb5-libs-1.18.3-r1 license:
+krb5-libs-1.18.4-r0 license:
 MIT
 
 ```
