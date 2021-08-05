@@ -4,7 +4,7 @@
 
 - Image ID: `sha256:2c64b1fd4d8d7be12e58683646b567a9b21e435a629175801f20ace09eed40b0`
 - Created: `2021-03-12T22:06:24.918763628Z`
-- Virtual Size: ~ 272.56 Mb  
+- Virtual Size: ~ 272.51 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["rethinkdb","--bind","all"]`
