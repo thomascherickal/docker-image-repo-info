@@ -1555,15 +1555,9 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 - `LGPLv3+_or_GPLv2+`
 - `The main library is licensed under GNU Lesser`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gnutls28=3.6.13-2ubuntu1.3
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.13-2ubuntu1.3.dsc' gnutls28_3.6.13-2ubuntu1.3.dsc 3594 SHA512:9a773f3bdf9048448a0ba8fbd9ab3d2883621df20f7bc62f7e298331d32be9c361ce4e9c3cfb702be543cb15c6743ada1a70dc28533beb736305a8e9f0d514c8
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.13.orig.tar.xz' gnutls28_3.6.13.orig.tar.xz 5958956 SHA512:23581952cb72c9a34f378c002bb62413d5a1243b74b48ad8dc49eaea4020d33c550f8dc1dd374cf7fbfa4187b0ca1c5698c8a0430398268a8b8a863f8633305c
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.13.orig.tar.xz.asc' gnutls28_3.6.13.orig.tar.xz.asc 667 SHA512:b343a8ace6a5c81c0c44b2cb65d8e83dfe5963c9bab04d9131fa8fd03cdf0c6f990d720af8767084e01bf5f7a7dbd0f048aefe68c3b6f1dc1ea1899d567a72f7
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.13-2ubuntu1.3.debian.tar.xz' gnutls28_3.6.13-2ubuntu1.3.debian.tar.xz 64836 SHA512:b28fe3c01879a57fe15e39dd8bd23b236c0b7b2addfec1fbc2808034ea6e4d3feb0c365c46f7872fb604feb082116be6313fce008d7c3f4c4574e235404c6f1c
-```
 
 ### `dpkg` source package: `graphite2=1.3.13-11build1`
 
@@ -2490,15 +2484,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libdrm=2.4.102-1ubuntu1~20.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/libd/libdrm/libdrm_2.4.102-1ubuntu1~20.04.1.dsc' libdrm_2.4.102-1ubuntu1~20.04.1.dsc 3331 SHA512:831921ae62665c7f50568d953cd25ad3e98b7351f053781f3bd47721b32eb297684ea7d6dbf53a91c4e92fb1a0d5077b7fbe8d2ba944a3d913796cd2bfdeec13
-'http://archive.ubuntu.com/ubuntu/pool/main/libd/libdrm/libdrm_2.4.102.orig.tar.xz' libdrm_2.4.102.orig.tar.xz 408844 SHA512:386afd228efd809fe32776a6ff5d9dd95d1409a6a6a89b3806a3b42ed27e84f1e090f3b7834973f834d6b0d1342b7034447fe8690d072f85f03292d7795c3e0c
-'http://archive.ubuntu.com/ubuntu/pool/main/libd/libdrm/libdrm_2.4.102.orig.tar.xz.asc' libdrm_2.4.102.orig.tar.xz.asc 833 SHA512:0f051767d30d5d400ead731e2de73c523de49520ac60269ff1515dbbf516f39a5da8e7d53a6b67cfe0e2e1f1247829555c120e474f573c7a82017de3da32a9ee
-'http://archive.ubuntu.com/ubuntu/pool/main/libd/libdrm/libdrm_2.4.102-1ubuntu1~20.04.1.debian.tar.xz' libdrm_2.4.102-1ubuntu1~20.04.1.debian.tar.xz 54532 SHA512:eca81c3a8cc59431b2a92830126dcd1627e437f70aa6c0dc45a98e4557e9189ff97a95e08703942888e37e75d2f9fc918e8ec645254e9d5f78ec1390f5415e5d
-```
 
 ### `dpkg` source package: `libedit=3.1-20191231-1`
 
@@ -4437,14 +4425,9 @@ Licenses: (parsed from: `/usr/share/doc/libegl-mesa0/copyright`, `/usr/share/doc
 - `MLAA`
 - `SGI`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mesa=20.2.6-0ubuntu0.20.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_20.2.6-0ubuntu0.20.04.1.dsc' mesa_20.2.6-0ubuntu0.20.04.1.dsc 5549 SHA512:5698abbf779521e37e57c1af50252de2e47acca3e07b3cd0173503c24c7880c41b200aa449ffe1a2168a5f264e44f8e5e8a92f83e24395250b509a9ddb83adef
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_20.2.6.orig.tar.gz' mesa_20.2.6.orig.tar.gz 21293356 SHA512:7435c5440a3f59ca753ba82c5221e5ef86f0f071ed24964e9fc8ec0fcff1d38d2dfbae9c95a6611a6dd4eed1d3cce9a6481e914ca529d8f83924114e50247234
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_20.2.6-0ubuntu0.20.04.1.diff.gz' mesa_20.2.6-0ubuntu0.20.04.1.diff.gz 107663 SHA512:794c24d76ada7e6629ce6045140199a076b5dae889670df0a5889b24785df5fe5105f801730b0802062de63c2860b9ca1c2d34f3eb371544189c5b23697ac014
-```
 
 ### `dpkg` source package: `mime-support=3.64ubuntu1`
 
@@ -5765,14 +5748,9 @@ Licenses: (parsed from: `/usr/share/doc/login/copyright`, `/usr/share/doc/passwd
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris shadow=1:4.8.1-1ubuntu5.20.04
-'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1-1ubuntu5.20.04.dsc' shadow_4.8.1-1ubuntu5.20.04.dsc 1729 SHA512:fc557d6572f8732cc21f8bb69df08f6a289b3615e19f0374a4e4812b89e793e3f071c552a69c43cbb82e659ac735b3ad6d62d3205f3a12591037e3669430ea5d
-'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1.orig.tar.xz' shadow_4.8.1.orig.tar.xz 1611196 SHA512:780a983483d847ed3c91c82064a0fa902b6f4185225978241bc3bc03fcc3aa143975b46aee43151c6ba43efcfdb1819516b76ba7ad3d1d3c34fcc38ea42e917b
-'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1-1ubuntu5.20.04.debian.tar.xz' shadow_4.8.1-1ubuntu5.20.04.debian.tar.xz 85640 SHA512:237d007329c915889766807ad85c8954fe8cf81b8aa074cdc8eba46e6157cd9386dc53cd5054f13618af30af30033074e0881c2f3f43d5f7e86224b2a261791c
-```
 
 ### `dpkg` source package: `shared-mime-info=1.15-1`
 
