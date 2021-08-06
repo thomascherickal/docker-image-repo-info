@@ -1,7 +1,7 @@
 ## `nextcloud:stable-fpm-alpine`
 
 ```console
-$ docker pull nextcloud@sha256:44c8779ca063786f9ae1455f9a737830572de04ad110b87c5b9eba340cf04ed2
+$ docker pull nextcloud@sha256:5ac7b62d9c997332ce5e7cd01ab281581f7098ac856177393e617a31e91a5f3f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -335,14 +335,14 @@ CMD ["php-fpm"]
 ### `nextcloud:stable-fpm-alpine` - linux; arm variant v7
 
 ```console
-$ docker pull nextcloud@sha256:2c81372a29232e84a8ca3855e74532d58d93b6d7c37080db32291fb6b24002c0
+$ docker pull nextcloud@sha256:8b248264e8171f3285589be563bd34fe4d86cb0fdb72a1db221e9f58935e882d
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **191.3 MB (191262280 bytes)**  
+-	Total Size: **201.9 MB (201859108 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:9591949a64c8104309a6319be98f9f14a1fd0eac7511b90df79335cca231da58`
+-	Image ID: `sha256:64fc82882be836d416136f6fd2fbc668906ce0e63797334cd11b4ba177583ef1`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -401,27 +401,27 @@ EXPOSE 9000
 CMD ["php-fpm"]
 # Sat, 31 Jul 2021 15:28:35 GMT
 RUN set -ex;         apk add --no-cache         rsync     ;         rm /var/spool/cron/crontabs/root;     echo '*/5 * * * * php -f /var/www/html/cron.php' > /var/spool/cron/crontabs/www-data
-# Sat, 31 Jul 2021 15:33:39 GMT
-RUN set -ex;         apk add --no-cache --virtual .build-deps         $PHPIZE_DEPS         autoconf         freetype-dev         icu-dev         libevent-dev         libjpeg-turbo-dev         libmcrypt-dev         libpng-dev         libmemcached-dev         libxml2-dev         libzip-dev         openldap-dev         pcre-dev         postgresql-dev         imagemagick-dev         libwebp-dev         gmp-dev     ;         docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp;     docker-php-ext-configure ldap;     docker-php-ext-install -j "$(nproc)"         bcmath         exif         gd         intl         ldap         opcache         pcntl         pdo_mysql         pdo_pgsql         zip         gmp     ;         pecl install APCu-5.1.20;     pecl install memcached-3.1.5;     pecl install redis-5.3.4;     pecl install imagick-3.5.0;         docker-php-ext-enable         apcu         memcached         redis         imagick     ;     rm -r /tmp/pear;         runDeps="$(         scanelf --needed --nobanner --format '%n#p' --recursive /usr/local/lib/php/extensions             | tr ',' '\n'             | sort -u             | awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }'     )";     apk add --virtual .nextcloud-phpext-rundeps $runDeps;     apk del .build-deps
-# Sat, 31 Jul 2021 15:33:40 GMT
+# Fri, 06 Aug 2021 01:19:38 GMT
+RUN set -ex;         apk add --no-cache --virtual .build-deps         $PHPIZE_DEPS         autoconf         freetype-dev         icu-dev         libevent-dev         libjpeg-turbo-dev         libmcrypt-dev         libpng-dev         libmemcached-dev         libxml2-dev         libzip-dev         openldap-dev         pcre-dev         postgresql-dev         imagemagick-dev         libwebp-dev         gmp-dev     ;         docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp;     docker-php-ext-configure ldap;     docker-php-ext-install -j "$(nproc)"         bcmath         exif         gd         intl         ldap         opcache         pcntl         pdo_mysql         pdo_pgsql         zip         gmp     ;         pecl install APCu-5.1.20;     pecl install memcached-3.1.5;     pecl install redis-5.3.4;     pecl install imagick-3.5.1;         docker-php-ext-enable         apcu         memcached         redis         imagick     ;     rm -r /tmp/pear;         runDeps="$(         scanelf --needed --nobanner --format '%n#p' --recursive /usr/local/lib/php/extensions             | tr ',' '\n'             | sort -u             | awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }'     )";     apk add --virtual .nextcloud-phpext-rundeps $runDeps;     apk del .build-deps
+# Fri, 06 Aug 2021 01:19:38 GMT
 ENV PHP_MEMORY_LIMIT=512M
-# Sat, 31 Jul 2021 15:33:41 GMT
+# Fri, 06 Aug 2021 01:19:39 GMT
 ENV PHP_UPLOAD_LIMIT=512M
-# Sat, 31 Jul 2021 15:33:42 GMT
+# Fri, 06 Aug 2021 01:19:40 GMT
 RUN {         echo 'opcache.enable=1';         echo 'opcache.interned_strings_buffer=8';         echo 'opcache.max_accelerated_files=10000';         echo 'opcache.memory_consumption=128';         echo 'opcache.save_comments=1';         echo 'opcache.revalidate_freq=1';     } > /usr/local/etc/php/conf.d/opcache-recommended.ini;         echo 'apc.enable_cli=1' >> /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini;         {         echo 'memory_limit=${PHP_MEMORY_LIMIT}';         echo 'upload_max_filesize=${PHP_UPLOAD_LIMIT}';         echo 'post_max_size=${PHP_UPLOAD_LIMIT}';     } > /usr/local/etc/php/conf.d/nextcloud.ini;         mkdir /var/www/data;     chown -R www-data:root /var/www;     chmod -R g=u /var/www
-# Sat, 31 Jul 2021 15:33:43 GMT
+# Fri, 06 Aug 2021 01:19:41 GMT
 VOLUME [/var/www/html]
-# Sat, 31 Jul 2021 15:35:40 GMT
-ENV NEXTCLOUD_VERSION=21.0.3
-# Sat, 31 Jul 2021 15:36:56 GMT
+# Fri, 06 Aug 2021 01:24:52 GMT
+ENV NEXTCLOUD_VERSION=21.0.4
+# Fri, 06 Aug 2021 01:26:11 GMT
 RUN set -ex;     apk add --no-cache --virtual .fetch-deps         bzip2         gnupg     ;         curl -fsSL -o nextcloud.tar.bz2         "https://download.nextcloud.com/server/releases/nextcloud-${NEXTCLOUD_VERSION}.tar.bz2";     curl -fsSL -o nextcloud.tar.bz2.asc         "https://download.nextcloud.com/server/releases/nextcloud-${NEXTCLOUD_VERSION}.tar.bz2.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --batch --keyserver keyserver.ubuntu.com  --recv-keys 28806A878AE423A28372792ED75899B9A724937A;     gpg --batch --verify nextcloud.tar.bz2.asc nextcloud.tar.bz2;     tar -xjf nextcloud.tar.bz2 -C /usr/src/;     gpgconf --kill all;     rm nextcloud.tar.bz2.asc nextcloud.tar.bz2;     rm -rf "$GNUPGHOME" /usr/src/nextcloud/updater;     mkdir -p /usr/src/nextcloud/data;     mkdir -p /usr/src/nextcloud/custom_apps;     chmod +x /usr/src/nextcloud/occ;     apk del .fetch-deps
-# Sat, 31 Jul 2021 15:36:59 GMT
+# Fri, 06 Aug 2021 01:26:15 GMT
 COPY multi:5c7d3e21c40c6f3326b9c24bb148355014771883d3bc821f8ada4fed6795cbb4 in / 
-# Sat, 31 Jul 2021 15:37:01 GMT
-COPY multi:cdcd3c6679f774b6e9ec83ab3d5fca01b5ebe1961c10a136e3683d4c475000f0 in /usr/src/nextcloud/config/ 
-# Sat, 31 Jul 2021 15:37:01 GMT
+# Fri, 06 Aug 2021 01:26:17 GMT
+COPY multi:d1870de3d4b4de5680360a8bcad7129a7c7615ba76daad773ab1eee24d4a949f in /usr/src/nextcloud/config/ 
+# Fri, 06 Aug 2021 01:26:17 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Sat, 31 Jul 2021 15:37:02 GMT
+# Fri, 06 Aug 2021 01:26:18 GMT
 CMD ["php-fpm"]
 ```
 
@@ -470,25 +470,25 @@ CMD ["php-fpm"]
 		Last Modified: Sat, 31 Jul 2021 15:43:00 GMT  
 		Size: 562.0 KB (561974 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:78bc836226cc1d7d254111d356cd0fd5a847864196102eb2528b1bf9d5f12ea6`  
-		Last Modified: Sat, 31 Jul 2021 15:43:11 GMT  
-		Size: 23.7 MB (23652970 bytes)  
+	-	`sha256:45c85540c0ab8c11ab2da62d90bf728ab5976709c5bf0ca405e6e39d0a4bf841`  
+		Last Modified: Fri, 06 Aug 2021 01:39:29 GMT  
+		Size: 23.7 MB (23653394 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a547457c357c05169f735e3e95637fa1eedbed5e48a4f4df9b0c81f87405042c`  
-		Last Modified: Sat, 31 Jul 2021 15:42:58 GMT  
-		Size: 588.0 B  
+	-	`sha256:503d1262af6e2e957d29be934aea84ed6cc49b0755c0086dba79beec4f0fe1a1`  
+		Last Modified: Fri, 06 Aug 2021 01:39:16 GMT  
+		Size: 591.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5f823bf513c3672d529d2e19ae0f4561bc3fbf6bb2512ecafb805a14ed943414`  
-		Last Modified: Sat, 31 Jul 2021 15:46:38 GMT  
-		Size: 140.2 MB (140181746 bytes)  
+	-	`sha256:40b271d7c698a9f5554f04ce06341c69f281612f39e79349f0cb1e2228dfbf75`  
+		Last Modified: Fri, 06 Aug 2021 01:47:09 GMT  
+		Size: 150.8 MB (150778092 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f2b642ea4f29c278eb05d08d228179c32476efbbc8731c5025a67829b9114973`  
-		Last Modified: Sat, 31 Jul 2021 15:45:03 GMT  
+	-	`sha256:07c16b0cd8fbd3867b7dc645928b8c4427206cf2f33072be4983ec706c70abef`  
+		Last Modified: Fri, 06 Aug 2021 01:45:34 GMT  
 		Size: 2.6 KB (2630 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:81a3339f3ece992821a7cab795bc5ae79b9c8744812d83bb0b404b3679d709c1`  
-		Last Modified: Sat, 31 Jul 2021 15:45:04 GMT  
-		Size: 2.0 KB (1996 bytes)  
+	-	`sha256:e673b7f587851793481f4bfa6fc1f347a46aee52bf94ea7c75e6c04011a7d04e`  
+		Last Modified: Fri, 06 Aug 2021 01:45:34 GMT  
+		Size: 2.1 KB (2051 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `nextcloud:stable-fpm-alpine` - linux; arm64 variant v8
@@ -812,14 +812,14 @@ CMD ["php-fpm"]
 ### `nextcloud:stable-fpm-alpine` - linux; ppc64le
 
 ```console
-$ docker pull nextcloud@sha256:5a8786e85a4f5498d1662fb1dc18f8269dad65a670e127a366ece86514f790ae
+$ docker pull nextcloud@sha256:ed1a1276c3a88ebf94e30d3e39fa93f25ce513435b5bc9461dd5a829606eb35d
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **196.6 MB (196580234 bytes)**  
+-	Total Size: **207.2 MB (207170595 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b2153f063928fcebc6188358ed227d6a32817aec7d70925daf28bfbc5e220982`
+-	Image ID: `sha256:7968180f7e51ffedef91f48bb48d89d75b409068a8532c057266075159392b9f`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -878,27 +878,27 @@ EXPOSE 9000
 CMD ["php-fpm"]
 # Sat, 31 Jul 2021 12:30:38 GMT
 RUN set -ex;         apk add --no-cache         rsync     ;         rm /var/spool/cron/crontabs/root;     echo '*/5 * * * * php -f /var/www/html/cron.php' > /var/spool/cron/crontabs/www-data
-# Sat, 31 Jul 2021 12:33:58 GMT
-RUN set -ex;         apk add --no-cache --virtual .build-deps         $PHPIZE_DEPS         autoconf         freetype-dev         icu-dev         libevent-dev         libjpeg-turbo-dev         libmcrypt-dev         libpng-dev         libmemcached-dev         libxml2-dev         libzip-dev         openldap-dev         pcre-dev         postgresql-dev         imagemagick-dev         libwebp-dev         gmp-dev     ;         docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp;     docker-php-ext-configure ldap;     docker-php-ext-install -j "$(nproc)"         bcmath         exif         gd         intl         ldap         opcache         pcntl         pdo_mysql         pdo_pgsql         zip         gmp     ;         pecl install APCu-5.1.20;     pecl install memcached-3.1.5;     pecl install redis-5.3.4;     pecl install imagick-3.5.0;         docker-php-ext-enable         apcu         memcached         redis         imagick     ;     rm -r /tmp/pear;         runDeps="$(         scanelf --needed --nobanner --format '%n#p' --recursive /usr/local/lib/php/extensions             | tr ',' '\n'             | sort -u             | awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }'     )";     apk add --virtual .nextcloud-phpext-rundeps $runDeps;     apk del .build-deps
-# Sat, 31 Jul 2021 12:34:03 GMT
+# Fri, 06 Aug 2021 00:55:45 GMT
+RUN set -ex;         apk add --no-cache --virtual .build-deps         $PHPIZE_DEPS         autoconf         freetype-dev         icu-dev         libevent-dev         libjpeg-turbo-dev         libmcrypt-dev         libpng-dev         libmemcached-dev         libxml2-dev         libzip-dev         openldap-dev         pcre-dev         postgresql-dev         imagemagick-dev         libwebp-dev         gmp-dev     ;         docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp;     docker-php-ext-configure ldap;     docker-php-ext-install -j "$(nproc)"         bcmath         exif         gd         intl         ldap         opcache         pcntl         pdo_mysql         pdo_pgsql         zip         gmp     ;         pecl install APCu-5.1.20;     pecl install memcached-3.1.5;     pecl install redis-5.3.4;     pecl install imagick-3.5.1;         docker-php-ext-enable         apcu         memcached         redis         imagick     ;     rm -r /tmp/pear;         runDeps="$(         scanelf --needed --nobanner --format '%n#p' --recursive /usr/local/lib/php/extensions             | tr ',' '\n'             | sort -u             | awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }'     )";     apk add --virtual .nextcloud-phpext-rundeps $runDeps;     apk del .build-deps
+# Fri, 06 Aug 2021 00:55:48 GMT
 ENV PHP_MEMORY_LIMIT=512M
-# Sat, 31 Jul 2021 12:34:07 GMT
+# Fri, 06 Aug 2021 00:55:57 GMT
 ENV PHP_UPLOAD_LIMIT=512M
-# Sat, 31 Jul 2021 12:34:20 GMT
+# Fri, 06 Aug 2021 00:56:10 GMT
 RUN {         echo 'opcache.enable=1';         echo 'opcache.interned_strings_buffer=8';         echo 'opcache.max_accelerated_files=10000';         echo 'opcache.memory_consumption=128';         echo 'opcache.save_comments=1';         echo 'opcache.revalidate_freq=1';     } > /usr/local/etc/php/conf.d/opcache-recommended.ini;         echo 'apc.enable_cli=1' >> /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini;         {         echo 'memory_limit=${PHP_MEMORY_LIMIT}';         echo 'upload_max_filesize=${PHP_UPLOAD_LIMIT}';         echo 'post_max_size=${PHP_UPLOAD_LIMIT}';     } > /usr/local/etc/php/conf.d/nextcloud.ini;         mkdir /var/www/data;     chown -R www-data:root /var/www;     chmod -R g=u /var/www
-# Sat, 31 Jul 2021 12:34:27 GMT
+# Fri, 06 Aug 2021 00:56:16 GMT
 VOLUME [/var/www/html]
-# Sat, 31 Jul 2021 12:36:43 GMT
-ENV NEXTCLOUD_VERSION=21.0.3
-# Sat, 31 Jul 2021 12:38:55 GMT
+# Fri, 06 Aug 2021 01:04:50 GMT
+ENV NEXTCLOUD_VERSION=21.0.4
+# Fri, 06 Aug 2021 01:06:25 GMT
 RUN set -ex;     apk add --no-cache --virtual .fetch-deps         bzip2         gnupg     ;         curl -fsSL -o nextcloud.tar.bz2         "https://download.nextcloud.com/server/releases/nextcloud-${NEXTCLOUD_VERSION}.tar.bz2";     curl -fsSL -o nextcloud.tar.bz2.asc         "https://download.nextcloud.com/server/releases/nextcloud-${NEXTCLOUD_VERSION}.tar.bz2.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --batch --keyserver keyserver.ubuntu.com  --recv-keys 28806A878AE423A28372792ED75899B9A724937A;     gpg --batch --verify nextcloud.tar.bz2.asc nextcloud.tar.bz2;     tar -xjf nextcloud.tar.bz2 -C /usr/src/;     gpgconf --kill all;     rm nextcloud.tar.bz2.asc nextcloud.tar.bz2;     rm -rf "$GNUPGHOME" /usr/src/nextcloud/updater;     mkdir -p /usr/src/nextcloud/data;     mkdir -p /usr/src/nextcloud/custom_apps;     chmod +x /usr/src/nextcloud/occ;     apk del .fetch-deps
-# Sat, 31 Jul 2021 12:39:01 GMT
+# Fri, 06 Aug 2021 01:06:28 GMT
 COPY multi:5c7d3e21c40c6f3326b9c24bb148355014771883d3bc821f8ada4fed6795cbb4 in / 
-# Sat, 31 Jul 2021 12:39:04 GMT
-COPY multi:cdcd3c6679f774b6e9ec83ab3d5fca01b5ebe1961c10a136e3683d4c475000f0 in /usr/src/nextcloud/config/ 
-# Sat, 31 Jul 2021 12:39:08 GMT
+# Fri, 06 Aug 2021 01:06:30 GMT
+COPY multi:d1870de3d4b4de5680360a8bcad7129a7c7615ba76daad773ab1eee24d4a949f in /usr/src/nextcloud/config/ 
+# Fri, 06 Aug 2021 01:06:36 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Sat, 31 Jul 2021 12:39:12 GMT
+# Fri, 06 Aug 2021 01:06:41 GMT
 CMD ["php-fpm"]
 ```
 
@@ -947,25 +947,25 @@ CMD ["php-fpm"]
 		Last Modified: Sat, 31 Jul 2021 12:44:12 GMT  
 		Size: 760.6 KB (760571 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:811af72889e219fa6f20c62c2d0b96c10854af2ff60cb876f487c48c1c6a715e`  
-		Last Modified: Sat, 31 Jul 2021 12:44:15 GMT  
-		Size: 25.3 MB (25306429 bytes)  
+	-	`sha256:d441a4d8f2f36faf9a8f9326dc016a52b02039a82803504db2abe951685832d9`  
+		Last Modified: Fri, 06 Aug 2021 01:20:30 GMT  
+		Size: 25.3 MB (25300058 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4be7bf317bef6df92474d8c54d83ab0363f9ecec4761c60f0a541efb488ea871`  
-		Last Modified: Sat, 31 Jul 2021 12:44:09 GMT  
-		Size: 595.0 B  
+	-	`sha256:784595860f5ec9a2e9b4692fa08f027b19ef83d3b9120c1dc2193c53a31507d2`  
+		Last Modified: Fri, 06 Aug 2021 01:20:16 GMT  
+		Size: 590.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f215767744a4df0280bbe8f9b2b879586134ea0dbc38e117b3bb7f33f7836875`  
-		Last Modified: Sat, 31 Jul 2021 12:45:23 GMT  
-		Size: 140.2 MB (140181428 bytes)  
+	-	`sha256:c9a5abc397d0dbe3fe1fcd762cac125cde2b5956d1f5b2aa15e840696370dc89`  
+		Last Modified: Fri, 06 Aug 2021 01:30:32 GMT  
+		Size: 150.8 MB (150778114 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ef1faa56bea18dac56fe8a284c7a4c71db5bb69fbcfa55c7b29daae747a63afd`  
-		Last Modified: Sat, 31 Jul 2021 12:44:59 GMT  
-		Size: 2.6 KB (2630 bytes)  
+	-	`sha256:b24ca59ce94d54af6a71c890a7774ff294fe5fa075864222cb76115de943d096`  
+		Last Modified: Fri, 06 Aug 2021 01:27:53 GMT  
+		Size: 2.6 KB (2631 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f3f81ba70076a58ae19a9546b5a4b20522fd0d3d05ec7e61e123322d49cb3433`  
-		Last Modified: Sat, 31 Jul 2021 12:44:58 GMT  
-		Size: 2.0 KB (2000 bytes)  
+	-	`sha256:53e38cb36c2808f3bb932af15608a5bb358a39a920012daf6675b2f20e2fa6a2`  
+		Last Modified: Fri, 06 Aug 2021 01:27:53 GMT  
+		Size: 2.0 KB (2050 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `nextcloud:stable-fpm-alpine` - linux; s390x
