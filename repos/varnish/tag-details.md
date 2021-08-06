@@ -199,7 +199,12 @@ CMD []
 
 ## `varnish:6.6-alpine`
 
-**does not exist** (yet?)
+```console
+$ docker pull varnish@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `varnish:6.6.1`
 
@@ -264,11 +269,21 @@ CMD []
 
 ## `varnish:6.6.1-alpine`
 
-**does not exist** (yet?)
+```console
+$ docker pull varnish@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `varnish:alpine`
 
-**does not exist** (yet?)
+```console
+$ docker pull varnish@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `varnish:fresh`
 
@@ -333,7 +348,12 @@ CMD []
 
 ## `varnish:fresh-alpine`
 
-**does not exist** (yet?)
+```console
+$ docker pull varnish@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `varnish:latest`
 
