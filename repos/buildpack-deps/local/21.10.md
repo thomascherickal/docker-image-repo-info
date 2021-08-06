@@ -1005,13 +1005,9 @@ Licenses: (parsed from: `/usr/share/doc/cpp/copyright`, `/usr/share/doc/g++/copy
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-defaults=1.190ubuntu3
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-defaults/gcc-defaults_1.190ubuntu3.dsc' gcc-defaults_1.190ubuntu3.dsc 14750 SHA512:460a4c799de7685aeb025e8d01b9f9aaac0f5fcbdf1bcef6286c4b7b9fbc709041a6c1e33364f4f1b7cf3b95d039c707ae3e5e213c1099d194059f974578b6c1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-defaults/gcc-defaults_1.190ubuntu3.tar.xz' gcc-defaults_1.190ubuntu3.tar.xz 48408 SHA512:481ee1d65ce05b6ad49ef0fc03b007261f78fe707e4e4c2524a217095338efd0f0556ea848f013d0fc4052bc07ca8cf5d52297cf709b70933bddbd972c7e8589
-```
 
 ### `dpkg` source package: `gdbm=1.19-2`
 
