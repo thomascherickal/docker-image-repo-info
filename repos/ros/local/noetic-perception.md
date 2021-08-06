@@ -3491,15 +3491,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libdrm=2.4.102-1ubuntu1~20.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/libd/libdrm/libdrm_2.4.102-1ubuntu1~20.04.1.dsc' libdrm_2.4.102-1ubuntu1~20.04.1.dsc 3331 SHA512:831921ae62665c7f50568d953cd25ad3e98b7351f053781f3bd47721b32eb297684ea7d6dbf53a91c4e92fb1a0d5077b7fbe8d2ba944a3d913796cd2bfdeec13
-'http://archive.ubuntu.com/ubuntu/pool/main/libd/libdrm/libdrm_2.4.102.orig.tar.xz' libdrm_2.4.102.orig.tar.xz 408844 SHA512:386afd228efd809fe32776a6ff5d9dd95d1409a6a6a89b3806a3b42ed27e84f1e090f3b7834973f834d6b0d1342b7034447fe8690d072f85f03292d7795c3e0c
-'http://archive.ubuntu.com/ubuntu/pool/main/libd/libdrm/libdrm_2.4.102.orig.tar.xz.asc' libdrm_2.4.102.orig.tar.xz.asc 833 SHA512:0f051767d30d5d400ead731e2de73c523de49520ac60269ff1515dbbf516f39a5da8e7d53a6b67cfe0e2e1f1247829555c120e474f573c7a82017de3da32a9ee
-'http://archive.ubuntu.com/ubuntu/pool/main/libd/libdrm/libdrm_2.4.102-1ubuntu1~20.04.1.debian.tar.xz' libdrm_2.4.102-1ubuntu1~20.04.1.debian.tar.xz 54532 SHA512:eca81c3a8cc59431b2a92830126dcd1627e437f70aa6c0dc45a98e4557e9189ff97a95e08703942888e37e75d2f9fc918e8ec645254e9d5f78ec1390f5415e5d
-```
 
 ### `dpkg` source package: `libedit=3.1-20191231-1`
 
@@ -5832,14 +5826,9 @@ Licenses: (parsed from: `/usr/share/doc/libegl-mesa0/copyright`, `/usr/share/doc
 - `MLAA`
 - `SGI`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mesa=20.2.6-0ubuntu0.20.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_20.2.6-0ubuntu0.20.04.1.dsc' mesa_20.2.6-0ubuntu0.20.04.1.dsc 5549 SHA512:5698abbf779521e37e57c1af50252de2e47acca3e07b3cd0173503c24c7880c41b200aa449ffe1a2168a5f264e44f8e5e8a92f83e24395250b509a9ddb83adef
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_20.2.6.orig.tar.gz' mesa_20.2.6.orig.tar.gz 21293356 SHA512:7435c5440a3f59ca753ba82c5221e5ef86f0f071ed24964e9fc8ec0fcff1d38d2dfbae9c95a6611a6dd4eed1d3cce9a6481e914ca529d8f83924114e50247234
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_20.2.6-0ubuntu0.20.04.1.diff.gz' mesa_20.2.6-0ubuntu0.20.04.1.diff.gz 107663 SHA512:794c24d76ada7e6629ce6045140199a076b5dae889670df0a5889b24785df5fe5105f801730b0802062de63c2860b9ca1c2d34f3eb371544189c5b23697ac014
-```
 
 ### `dpkg` source package: `mime-support=3.64ubuntu1`
 
