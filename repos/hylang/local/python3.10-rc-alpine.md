@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:3bacbd289b6d4314ce1558dcff649032a8f801a1331dec6c5a6be9cbb74779d2`
-- Created: `2021-08-03T20:15:12.079751487Z`
-- Virtual Size: ~ 53.98 Mb  
+- Image ID: `sha256:47f02817d98d49afc775c6562c3acc0467b0073125de8fd876bed3cb3130799a`
+- Created: `2021-08-07T02:33:38.418657034Z`
+- Virtual Size: ~ 53.99 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["hy"]`
@@ -13,9 +13,9 @@
   - `LANG=C.UTF-8`
   - `GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D`
   - `PYTHON_VERSION=3.10.0rc1`
-  - `PYTHON_PIP_VERSION=21.2.2`
-  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/a1675ab6c2bd898ed82b1f58c486097f763c74a9/public/get-pip.py`
-  - `PYTHON_GET_PIP_SHA256=6665659241292b2147b58922b9ffe11dda66b39d52d8a6f3aa310bc1d60ea6f7`
+  - `PYTHON_PIP_VERSION=21.2.3`
+  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/c20b0cfd643cd4a19246ccf204e2997af70f6b21/public/get-pip.py`
+  - `PYTHON_GET_PIP_SHA256=fa6f3fb93cce234cd4e8dd2beb54a51ab9c247653b52855a48dd44e6b21ff28b`
   - `HY_VERSION=1.0a3`
 
 ## `apk` (`.apk`-based packages)
@@ -23,16 +23,16 @@
 ### `apk` package: `alpine-baselayout`
 
 ```console
-alpine-baselayout-3.2.0-r15 description:
+alpine-baselayout-3.2.0-r16 description:
 Alpine base dir structure and init scripts
 
-alpine-baselayout-3.2.0-r15 webpage:
+alpine-baselayout-3.2.0-r16 webpage:
 https://git.alpinelinux.org/cgit/aports/tree/main/alpine-baselayout
 
-alpine-baselayout-3.2.0-r15 installed size:
+alpine-baselayout-3.2.0-r16 installed size:
 404 KiB
 
-alpine-baselayout-3.2.0-r15 license:
+alpine-baselayout-3.2.0-r16 license:
 GPL-2.0-only
 
 ```
@@ -57,16 +57,16 @@ MIT
 ### `apk` package: `apk-tools`
 
 ```console
-apk-tools-2.12.5-r1 description:
+apk-tools-2.12.7-r0 description:
 Alpine Package Keeper - package manager for alpine
 
-apk-tools-2.12.5-r1 webpage:
+apk-tools-2.12.7-r0 webpage:
 https://gitlab.alpinelinux.org/alpine/apk-tools
 
-apk-tools-2.12.5-r1 installed size:
+apk-tools-2.12.7-r0 installed size:
 304 KiB
 
-apk-tools-2.12.5-r1 license:
+apk-tools-2.12.7-r0 license:
 GPL-2.0-only
 
 ```
@@ -74,16 +74,16 @@ GPL-2.0-only
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.33.1-r2 description:
+busybox-1.33.1-r3 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.33.1-r2 webpage:
+busybox-1.33.1-r3 webpage:
 https://busybox.net/
 
-busybox-1.33.1-r2 installed size:
+busybox-1.33.1-r3 installed size:
 928 KiB
 
-busybox-1.33.1-r2 license:
+busybox-1.33.1-r3 license:
 GPL-2.0-only
 
 ```
@@ -329,16 +329,16 @@ LGPL-2.0-or-later
 ### `apk` package: `libretls`
 
 ```console
-libretls-3.3.3-r0 description:
+libretls-3.3.3p1-r2 description:
 port of libtls from libressl to openssl
 
-libretls-3.3.3-r0 webpage:
+libretls-3.3.3p1-r2 webpage:
 https://git.causal.agency/libretls/
 
-libretls-3.3.3-r0 installed size:
+libretls-3.3.3p1-r2 installed size:
 84 KiB
 
-libretls-3.3.3-r0 license:
+libretls-3.3.3p1-r2 license:
 ISC AND (BSD-3-Clause OR MIT)
 
 ```
@@ -550,16 +550,16 @@ Public-Domain
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.33.1-r2 description:
+ssl_client-1.33.1-r3 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.33.1-r2 webpage:
+ssl_client-1.33.1-r3 webpage:
 https://busybox.net/
 
-ssl_client-1.33.1-r2 installed size:
+ssl_client-1.33.1-r3 installed size:
 28 KiB
 
-ssl_client-1.33.1-r2 license:
+ssl_client-1.33.1-r3 license:
 GPL-2.0-only
 
 ```
