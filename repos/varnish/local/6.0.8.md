@@ -1,16 +1,15 @@
-# `varnish:6.0`
+# `varnish:stable`
 
 ## Docker Metadata
 
-- Image ID: `sha256:f6085ae335c1359f698a4d3ce17c2ff3a25b4f408b20eb765e81d36ecd8cc3f3`
-- Created: `2021-07-22T14:39:59.822540267Z`
-- Virtual Size: ~ 200.23 Mb  
+- Image ID: `sha256:0f9fff93ccd91d37c6c489b49d8b4a633f7f307188a111a5862a6c50397e0be7`
+- Created: `2021-08-06T00:46:50.950198673Z`
+- Virtual Size: ~ 201.57 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/docker-varnish-entrypoint"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `VARNISH_VERSION=6.0.8-1~buster`
   - `VARNISH_SIZE=100M`
 
 ## `dpkg` (`.deb`-based packages)
@@ -73,10 +72,9 @@ Other potentially useful URLs:
 Binary Packages:
 
 - `apt=1.8.2.3`
-- `apt-transport-https=1.8.2.3`
 - `libapt-pkg5.0:amd64=1.8.2.3`
 
-Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/apt-transport-https/copyright`, `/usr/share/doc/libapt-pkg5.0/copyright`)
+Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-pkg5.0/copyright`)
 
 - `GPL-2`
 - `GPLv2+`
@@ -255,6 +253,30 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/binutils/2.31.1-16/ (for browsing the source)
 - https://sources.debian.net/src/binutils/2.31.1-16/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/binutils/2.31.1-16/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `bsdmainutils=11.1.2`
+
+Binary Packages:
+
+- `bsdmainutils=11.1.2+b1`
+
+**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
+If source is available (seen below), check the contents of `debian/copyright` within it.
+
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris bsdmainutils=11.1.2
+'http://deb.debian.org/debian/pool/main/b/bsdmainutils/bsdmainutils_11.1.2.dsc' bsdmainutils_11.1.2.dsc 1747 SHA256:6734e27f001c1293a6426266f4cf28c8ed229690f8c40d2539cae6151cb29156
+'http://deb.debian.org/debian/pool/main/b/bsdmainutils/bsdmainutils_11.1.2.tar.gz' bsdmainutils_11.1.2.tar.gz 286478 SHA256:101c0dede5f599921533da08a46b53a60936445e54aa5df1b31608f1407fee60
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/bsdmainutils/11.1.2/ (for browsing the source)
+- https://sources.debian.net/src/bsdmainutils/11.1.2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/bsdmainutils/11.1.2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `bzip2=1.0.6-9.2~deb10u1`
 
@@ -788,6 +810,34 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/gnutls28/3.6.7-4+deb10u7/ (for browsing the source)
 - https://sources.debian.net/src/gnutls28/3.6.7-4+deb10u7/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/gnutls28/3.6.7-4+deb10u7/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `gpm=1.20.7-5`
+
+Binary Packages:
+
+- `libgpm2:amd64=1.20.7-5`
+
+Licenses: (parsed from: `/usr/share/doc/libgpm2/copyright`)
+
+- `GPL-2`
+- `GPL-2.0+`
+- `GPL-3`
+- `GPL-3.0+`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris gpm=1.20.7-5
+'http://deb.debian.org/debian/pool/main/g/gpm/gpm_1.20.7-5.dsc' gpm_1.20.7-5.dsc 1986 SHA256:d5925ddcecd217ece2790c1c81993c6e32d86914865d90cb9bfabbe1bb6595a8
+'http://deb.debian.org/debian/pool/main/g/gpm/gpm_1.20.7.orig.tar.gz' gpm_1.20.7.orig.tar.gz 855027 SHA256:c7e4661c24e05ae13547176b649bac8e3a0db2575f7dd57559f9e0b509f90f49
+'http://deb.debian.org/debian/pool/main/g/gpm/gpm_1.20.7-5.debian.tar.xz' gpm_1.20.7-5.debian.tar.xz 82740 SHA256:4adbf1434c4975cffe8ce7b180a1bf7047d79b0e4f0e1a8bf68297170df6fdf0
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/gpm/1.20.7-5/ (for browsing the source)
+- https://sources.debian.net/src/gpm/1.20.7-5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/gpm/1.20.7-5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `grep=3.3-1`
 
@@ -1412,6 +1462,41 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/lz4/1.8.3-1+deb10u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/lz4/1.8.3-1+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
+### `dpkg` source package: `manpages=4.16-2`
+
+Binary Packages:
+
+- `manpages=4.16-2`
+- `manpages-dev=4.16-2`
+
+Licenses: (parsed from: `/usr/share/doc/manpages/copyright`, `/usr/share/doc/manpages-dev/copyright`)
+
+- `BSD-3-clause`
+- `BSD-4-clause`
+- `Expat`
+- `GPL-2`
+- `GPL-2+`
+- `LDPv1`
+- `freely-redistributable`
+- `henry-spencer-regex`
+- `public-domain`
+- `verbatim`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris manpages=4.16-2
+'http://deb.debian.org/debian/pool/main/m/manpages/manpages_4.16-2.dsc' manpages_4.16-2.dsc 1920 SHA256:6a0767c18ba54fa1c49fc2f22c3a771a62ac0d4ce5c6b61b740613c2bbc1a233
+'http://deb.debian.org/debian/pool/main/m/manpages/manpages_4.16.orig.tar.gz' manpages_4.16.orig.tar.gz 2584233 SHA256:d38b0460bf3f35c95faf7f8cf52dac1216d86a47866f5e5f2fda88c61da04960
+'http://deb.debian.org/debian/pool/main/m/manpages/manpages_4.16-2.debian.tar.xz' manpages_4.16-2.debian.tar.xz 75920 SHA256:a64ec349ee2a0a81afb0a22a94aba1c06d1301d8fc9cf5fcfcb8f991a29f70cc
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/manpages/4.16-2/ (for browsing the source)
+- https://sources.debian.net/src/manpages/4.16-2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/manpages/4.16-2/ (for access to the source package after it no longer exists in the archive)
+
 ### `dpkg` source package: `mawk=1.3.3-17`
 
 Binary Packages:
@@ -1927,11 +2012,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/util-linux/2.33.1-0.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/util-linux/2.33.1-0.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `varnish=6.0.8-1~buster`
+### `dpkg` source package: `varnish=6.0.8`
 
 Binary Packages:
 
-- `varnish=6.0.8-1~buster`
+- `varnish=6.0.8`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
