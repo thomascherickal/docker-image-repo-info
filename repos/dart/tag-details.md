@@ -379,11 +379,21 @@ RUN set -eux;     ARCH=$(case "$(dpkg --print-architecture)" in amd64) echo "x64
 
 ## `dart:2.14.0-377.4.beta`
 
-**does not exist** (yet?)
+```console
+$ docker pull dart@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `dart:2.14.0-377.4.beta-sdk`
 
-**does not exist** (yet?)
+```console
+$ docker pull dart@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `dart:beta`
 
