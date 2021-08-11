@@ -1,10 +1,10 @@
-# `r-base:4.1.0`
+# `r-base:4.1.1`
 
 ## Docker Metadata
 
-- Image ID: `sha256:062d8418ba77d109875505c295d28600ade9642f3d3828eb5240a3d4dc0af380`
-- Created: `2021-07-22T14:26:09.422836766Z`
-- Virtual Size: ~ 763.32 Mb  
+- Image ID: `sha256:e83ee6a20d40957a08ebe836619d888259b4897c9e0e800ad952f5633a8cdb92`
+- Created: `2021-08-10T20:33:29.037542142Z`
+- Virtual Size: ~ 776.25 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["R"]`
@@ -12,7 +12,7 @@
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LC_ALL=en_US.UTF-8`
   - `LANG=en_US.UTF-8`
-  - `R_BASE_VERSION=4.1.0`
+  - `R_BASE_VERSION=4.1.1`
 - Labels:
   - `org.opencontainers.image.authors=Dirk Eddelbuettel <edd@debian.org>`
   - `org.opencontainers.image.licenses=GPL-2.0-or-later`
