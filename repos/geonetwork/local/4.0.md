@@ -4,7 +4,7 @@
 
 - Image ID: `sha256:ac618346c8caef770ab2bdef07c34d79e0303578dec53d788abf9e44efdd8b46`
 - Created: `2021-07-23T13:14:03.17189001Z`
-- Virtual Size: ~ 671.44 Mb  
+- Virtual Size: ~ 671.48 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/geonetwork-entrypoint.sh"]`
