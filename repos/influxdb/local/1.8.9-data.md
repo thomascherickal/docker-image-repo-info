@@ -2,16 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:15694902c79f69b8fa3ec49fd9a7054cc04bdf9bbe154e5c34949ac64a90d202`
-- Created: `2021-08-09T22:20:35.465654715Z`
-- Virtual Size: ~ 286.45 Mb  
+- Image ID: `sha256:7a76494001aebc777858eadd59aeeb98b4c7a62bc1009b2b71c8d9bf5c07f150`
+- Created: `2021-08-10T21:23:59.494443808Z`
+- Virtual Size: ~ 286.47 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
 - Command: `["influxd"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `INFLUXDB_VERSION=1.8.7-c1.8.7`
+  - `INFLUXDB_VERSION=1.8.9-c1.8.9`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -337,20 +337,13 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.52.1-5+deb9u14
-'http://security.debian.org/debian-security/pool/updates/main/c/curl/curl_7.52.1-5+deb9u14.dsc' curl_7.52.1-5+deb9u14.dsc 2797 SHA256:eeddbe48282f5ce93ad24d3dd5a431ee294617e104d35ea274b38a0f09c2f568
-'http://security.debian.org/debian-security/pool/updates/main/c/curl/curl_7.52.1.orig.tar.gz' curl_7.52.1.orig.tar.gz 3504621 SHA256:a8984e8b20880b621f61a62d95ff3c0763a3152093a9f9ce4287cfd614add6ae
-'http://security.debian.org/debian-security/pool/updates/main/c/curl/curl_7.52.1-5+deb9u14.debian.tar.xz' curl_7.52.1-5+deb9u14.debian.tar.xz 62860 SHA256:1294a6c5f5411b05d4972b97b51b3a72cdc06f250f5d0ccdcf418c5cf3fab615
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/curl/7.52.1-5+deb9u14/
 
-- https://sources.debian.net/src/curl/7.52.1-5+deb9u14/ (for browsing the source)
-- https://sources.debian.net/src/curl/7.52.1-5+deb9u14/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/curl/7.52.1-5+deb9u14/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27~101-g0780600+dfsg-3+deb9u1`
 
@@ -873,11 +866,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/hostname/3.18/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/hostname/3.18/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `influxdb-data=1.8.7-c1.8.7-1`
+### `dpkg` source package: `influxdb-data=1.8.9-c1.8.9-1`
 
 Binary Packages:
 
-- `influxdb-data=1.8.7-c1.8.7-1`
+- `influxdb-data=1.8.9-c1.8.9-1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
