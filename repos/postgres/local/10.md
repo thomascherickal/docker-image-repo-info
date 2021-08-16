@@ -1,9 +1,9 @@
-# `postgres:10.17`
+# `postgres:10.18`
 
 ## Docker Metadata
 
-- Image ID: `sha256:07d80b49d8bc0501fcaf885bbf1108ecc9b232431b7215ee5a48d70b668ad1a3`
-- Created: `2021-07-22T14:33:19.547034911Z`
+- Image ID: `sha256:00b3684d8af20ad3274cef12538a7dcaf624653f00ae79e1110a6b4d7b9c51ce`
+- Created: `2021-08-12T21:08:43.667917751Z`
 - Virtual Size: ~ 199.89 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -14,7 +14,7 @@
   - `GOSU_VERSION=1.12`
   - `LANG=en_US.utf8`
   - `PG_MAJOR=10`
-  - `PG_VERSION=10.17-1.pgdg90+1`
+  - `PG_VERSION=10.18-1.pgdg90+1`
   - `PGDATA=/var/lib/postgresql/data`
 
 ## `dpkg` (`.deb`-based packages)
@@ -1831,12 +1831,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/pinentry/1.0.0-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/pinentry/1.0.0-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `postgresql-10=10.17-1.pgdg90+1`
+### `dpkg` source package: `postgresql-10=10.18-1.pgdg90+1`
 
 Binary Packages:
 
-- `postgresql-10=10.17-1.pgdg90+1`
-- `postgresql-client-10=10.17-1.pgdg90+1`
+- `postgresql-10=10.18-1.pgdg90+1`
+- `postgresql-client-10=10.18-1.pgdg90+1`
 
 Licenses: (parsed from: `/usr/share/doc/postgresql-10/copyright`, `/usr/share/doc/postgresql-client-10/copyright`)
 
@@ -1859,17 +1859,17 @@ Licenses: (parsed from: `/usr/share/doc/postgresql-10/copyright`, `/usr/share/do
 Source:
 
 ```console
-$ apt-get source -qq --print-uris postgresql-10=10.17-1.pgdg90+1
-'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-10/postgresql-10_10.17-1.pgdg90+1.dsc' postgresql-10_10.17-1.pgdg90+1.dsc 2665 SHA256:c08e9d02478f4c9f5c185249ec04917703e54a0d192d3f7cba86dba79286e21b
-'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-10/postgresql-10_10.17.orig.tar.bz2' postgresql-10_10.17.orig.tar.bz2 19153278 SHA256:5af28071606c9cd82212c19ba584657a9d240e1c4c2da28fc1f3998a2754b26c
-'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-10/postgresql-10_10.17-1.pgdg90+1.debian.tar.xz' postgresql-10_10.17-1.pgdg90+1.debian.tar.xz 34616 SHA256:ce960418e828d74260c9d7afaea35f86dc35f9661a5510cdf340fa76499b9a0b
+$ apt-get source -qq --print-uris postgresql-10=10.18-1.pgdg90+1
+'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-10/postgresql-10_10.18-1.pgdg90+1.dsc' postgresql-10_10.18-1.pgdg90+1.dsc 2665 SHA256:7e2d17a0a8ad65040718f85d56ff61a82830406cebd9cf428de15755834042d5
+'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-10/postgresql-10_10.18.orig.tar.bz2' postgresql-10_10.18.orig.tar.bz2 19197042 SHA256:57477c2edc82c3f86a74747707b3babc1f301f389315ae14e819e025c0ba3801
+'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-10/postgresql-10_10.18-1.pgdg90+1.debian.tar.xz' postgresql-10_10.18-1.pgdg90+1.debian.tar.xz 33920 SHA256:e4233be390d041867158ab89b0da028feada834b4110f0458c2619aa6a8d0a73
 ```
 
-### `dpkg` source package: `postgresql-13=13.3-1.pgdg90+1`
+### `dpkg` source package: `postgresql-13=13.4-1.pgdg90+1`
 
 Binary Packages:
 
-- `libpq5:amd64=13.3-1.pgdg90+1`
+- `libpq5:amd64=13.4-1.pgdg90+1`
 
 Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`)
 
@@ -1892,10 +1892,10 @@ Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris postgresql-13=13.3-1.pgdg90+1
-'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-13/postgresql-13_13.3-1.pgdg90+1.dsc' postgresql-13_13.3-1.pgdg90+1.dsc 2618 SHA256:73e870a4d834016bda70d945367847c6e2ec42950133dfd277b1539e94d83f5d
-'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-13/postgresql-13_13.3.orig.tar.bz2' postgresql-13_13.3.orig.tar.bz2 21119109 SHA256:3cd9454fa8c7a6255b6743b767700925ead1b9ab0d7a0f9dcb1151010f8eb4a1
-'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-13/postgresql-13_13.3-1.pgdg90+1.debian.tar.xz' postgresql-13_13.3-1.pgdg90+1.debian.tar.xz 28052 SHA256:1a676603dd5c7982535ed5ec0e20caf44792a58dc246f9792791dc64efd01fea
+$ apt-get source -qq --print-uris postgresql-13=13.4-1.pgdg90+1
+'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-13/postgresql-13_13.4-1.pgdg90+1.dsc' postgresql-13_13.4-1.pgdg90+1.dsc 2618 SHA256:2b95e8b0f3af21ab006138fe10fffeb6ed9ad952b88bd759a49f2fe0b9aae955
+'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-13/postgresql-13_13.4.orig.tar.bz2' postgresql-13_13.4.orig.tar.bz2 21157443 SHA256:ea93e10390245f1ce461a54eb5f99a48d8cabd3a08ce4d652ec2169a357bc0cd
+'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-13/postgresql-13_13.4-1.pgdg90+1.debian.tar.xz' postgresql-13_13.4-1.pgdg90+1.debian.tar.xz 28052 SHA256:f06a94d7024a9495a4257087d55384be24a9b21bffa4096732fbd940bc9b07c1
 ```
 
 ### `dpkg` source package: `postgresql-common=226.pgdg90+1`

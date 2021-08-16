@@ -1,10 +1,10 @@
-# `postgres:11.12-buster`
+# `postgres:11.13-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:a6a8d79823953f8f0b62f9082aefc16154e077d04fa12ee677659240272e94fa`
-- Created: `2021-07-22T14:31:02.450704251Z`
-- Virtual Size: ~ 312.73 Mb  
+- Image ID: `sha256:f7b65d25ffebb1639c31bb2012b0a86715df4a0d130614510039019356b49057`
+- Created: `2021-08-12T20:59:19.493603823Z`
+- Virtual Size: ~ 312.75 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -14,7 +14,7 @@
   - `GOSU_VERSION=1.12`
   - `LANG=en_US.utf8`
   - `PG_MAJOR=11`
-  - `PG_VERSION=11.12-1.pgdg100+1`
+  - `PG_VERSION=11.13-1.pgdg100+1`
   - `PGDATA=/var/lib/postgresql/data`
 
 ## `dpkg` (`.deb`-based packages)
@@ -921,14 +921,14 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/keyutils/1.6-6/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/keyutils/1.6-6/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `krb5=1.17-3+deb10u1`
+### `dpkg` source package: `krb5=1.17-3+deb10u2`
 
 Binary Packages:
 
-- `libgssapi-krb5-2:amd64=1.17-3+deb10u1`
-- `libk5crypto3:amd64=1.17-3+deb10u1`
-- `libkrb5-3:amd64=1.17-3+deb10u1`
-- `libkrb5support0:amd64=1.17-3+deb10u1`
+- `libgssapi-krb5-2:amd64=1.17-3+deb10u2`
+- `libk5crypto3:amd64=1.17-3+deb10u2`
+- `libkrb5-3:amd64=1.17-3+deb10u2`
+- `libkrb5support0:amd64=1.17-3+deb10u2`
 
 Licenses: (parsed from: `/usr/share/doc/libgssapi-krb5-2/copyright`, `/usr/share/doc/libk5crypto3/copyright`, `/usr/share/doc/libkrb5-3/copyright`, `/usr/share/doc/libkrb5support0/copyright`)
 
@@ -937,17 +937,17 @@ Licenses: (parsed from: `/usr/share/doc/libgssapi-krb5-2/copyright`, `/usr/share
 Source:
 
 ```console
-$ apt-get source -qq --print-uris krb5=1.17-3+deb10u1
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17-3+deb10u1.dsc' krb5_1.17-3+deb10u1.dsc 3573 SHA256:e9edb5d47d4f7dc345e01adc45f1d302f5f19012f8c38d234ef9b2c08bbef7cc
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17.orig.tar.gz' krb5_1.17.orig.tar.gz 8761763 SHA256:5a6e2284a53de5702d3dc2be3b9339c963f9b5397d3fbbc53beb249380a781f5
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17-3+deb10u1.debian.tar.xz' krb5_1.17-3+deb10u1.debian.tar.xz 100584 SHA256:396ecf9ec5b4ac91d2ce8527d7f6b2309e70fc5b14ea1158eb7e367c48e9c5ca
+$ apt-get source -qq --print-uris krb5=1.17-3+deb10u2
+'http://security.debian.org/debian-security/pool/updates/main/k/krb5/krb5_1.17-3+deb10u2.dsc' krb5_1.17-3+deb10u2.dsc 3728 SHA256:a901f59b3c3ddfa56bf34188f644ecdabcf58ea8bd24734ea028a33c91d58f44
+'http://security.debian.org/debian-security/pool/updates/main/k/krb5/krb5_1.17.orig.tar.gz' krb5_1.17.orig.tar.gz 8761763 SHA256:5a6e2284a53de5702d3dc2be3b9339c963f9b5397d3fbbc53beb249380a781f5
+'http://security.debian.org/debian-security/pool/updates/main/k/krb5/krb5_1.17-3+deb10u2.debian.tar.xz' krb5_1.17-3+deb10u2.debian.tar.xz 102064 SHA256:8a943f0b23f68e74809f8e23b55e1b8af638242b464cf04770aa0324b5ba117c
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/krb5/1.17-3+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/krb5/1.17-3+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/krb5/1.17-3+deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/krb5/1.17-3+deb10u2/ (for browsing the source)
+- https://sources.debian.net/src/krb5/1.17-3+deb10u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/krb5/1.17-3+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libassuan=2.5.2-1`
 
@@ -1999,12 +1999,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/pinentry/1.1.0-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/pinentry/1.1.0-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `postgresql-11=11.12-1.pgdg100+1`
+### `dpkg` source package: `postgresql-11=11.13-1.pgdg100+1`
 
 Binary Packages:
 
-- `postgresql-11=11.12-1.pgdg100+1`
-- `postgresql-client-11=11.12-1.pgdg100+1`
+- `postgresql-11=11.13-1.pgdg100+1`
+- `postgresql-client-11=11.13-1.pgdg100+1`
 
 Licenses: (parsed from: `/usr/share/doc/postgresql-11/copyright`, `/usr/share/doc/postgresql-client-11/copyright`)
 
@@ -2027,17 +2027,17 @@ Licenses: (parsed from: `/usr/share/doc/postgresql-11/copyright`, `/usr/share/do
 Source:
 
 ```console
-$ apt-get source -qq --print-uris postgresql-11=11.12-1.pgdg100+1
-'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-11/postgresql-11_11.12-1.pgdg100+1.dsc' postgresql-11_11.12-1.pgdg100+1.dsc 2885 SHA256:04f6bb15430179139e70e3ebf0f99e57111a6e2d0a318ed178a58704a9e192ae
-'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-11/postgresql-11_11.12.orig.tar.bz2' postgresql-11_11.12.orig.tar.bz2 20075485 SHA256:87f9d8b16b2b8ef71586f2ec76beac844819f64734b07fa33986755c2f53cb04
-'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-11/postgresql-11_11.12-1.pgdg100+1.debian.tar.xz' postgresql-11_11.12-1.pgdg100+1.debian.tar.xz 31004 SHA256:cbd7da46c816a76d663b23f17a2b98fbeb01607e7070f1d9b87992ce0be79bb5
+$ apt-get source -qq --print-uris postgresql-11=11.13-1.pgdg100+1
+'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-11/postgresql-11_11.13-1.pgdg100+1.dsc' postgresql-11_11.13-1.pgdg100+1.dsc 2885 SHA256:b280409f313079c936c9f1b12ffa69fc3b559628e47a7c9fb84762de88411e3c
+'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-11/postgresql-11_11.13.orig.tar.bz2' postgresql-11_11.13.orig.tar.bz2 20123787 SHA256:a0c3689ff7f565288002cbc138779d5121d74831a5e8341aea7aa86e99b6bc48
+'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-11/postgresql-11_11.13-1.pgdg100+1.debian.tar.xz' postgresql-11_11.13-1.pgdg100+1.debian.tar.xz 30964 SHA256:c80b05343c28bf43b5f597e10bd4164dd9f5c72543f78ea49066fe7332797567
 ```
 
-### `dpkg` source package: `postgresql-13=13.3-1.pgdg100+1`
+### `dpkg` source package: `postgresql-13=13.4-1.pgdg100+1`
 
 Binary Packages:
 
-- `libpq5:amd64=13.3-1.pgdg100+1`
+- `libpq5:amd64=13.4-1.pgdg100+1`
 
 Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`)
 
@@ -2060,10 +2060,10 @@ Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris postgresql-13=13.3-1.pgdg100+1
-'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-13/postgresql-13_13.3-1.pgdg100+1.dsc' postgresql-13_13.3-1.pgdg100+1.dsc 2804 SHA256:25c6945bab046533eac6e9d1567b6a17e07497d5f7599da869ee7418ffcc9e6f
-'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-13/postgresql-13_13.3.orig.tar.bz2' postgresql-13_13.3.orig.tar.bz2 21119109 SHA256:3cd9454fa8c7a6255b6743b767700925ead1b9ab0d7a0f9dcb1151010f8eb4a1
-'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-13/postgresql-13_13.3-1.pgdg100+1.debian.tar.xz' postgresql-13_13.3-1.pgdg100+1.debian.tar.xz 28092 SHA256:bd5ebeb108694db277e19cdbae09f619c95c57cb0d8ded5cbc419f69088de376
+$ apt-get source -qq --print-uris postgresql-13=13.4-1.pgdg100+1
+'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-13/postgresql-13_13.4-1.pgdg100+1.dsc' postgresql-13_13.4-1.pgdg100+1.dsc 2804 SHA256:6d330514a724123abfad284f26fbedd41b2e89630269a23f2b50606e28a59a47
+'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-13/postgresql-13_13.4.orig.tar.bz2' postgresql-13_13.4.orig.tar.bz2 21157443 SHA256:ea93e10390245f1ce461a54eb5f99a48d8cabd3a08ce4d652ec2169a357bc0cd
+'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-13/postgresql-13_13.4-1.pgdg100+1.debian.tar.xz' postgresql-13_13.4-1.pgdg100+1.debian.tar.xz 28080 SHA256:2afb2d4d40095e94202a264ff190df9f46c11282ce5e2cc5854266e394a49d2f
 ```
 
 ### `dpkg` source package: `postgresql-common=226.pgdg100+1`

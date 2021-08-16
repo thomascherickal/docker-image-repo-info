@@ -1,10 +1,10 @@
-# `postgres:12.7-alpine`
+# `postgres:12.8-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:16537462de4a3e706758d4d631444605f9f4cb9364d5bb591d66a7330fd2925d`
-- Created: `2021-08-06T20:32:24.094804669Z`
-- Virtual Size: ~ 190.15 Mb  
+- Image ID: `sha256:e66662e6ad5f3bcc73566f6186815ee3c4fbd840de19ad4c243027f45bb12f05`
+- Created: `2021-08-12T20:58:36.794491827Z`
+- Virtual Size: ~ 190.17 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -13,8 +13,8 @@
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=en_US.utf8`
   - `PG_MAJOR=12`
-  - `PG_VERSION=12.7`
-  - `PG_SHA256=8490741f47c88edc8b6624af009ce19fda4dc9b31c4469ce2551d84075d5d995`
+  - `PG_VERSION=12.8`
+  - `PG_SHA256=e26401e090c34ccb15ffb33a111f340833833535a7b7c5cd11cd88ab57d9c62a`
   - `PGDATA=/var/lib/postgresql/data`
 
 ## `apk` (`.apk`-based packages)
