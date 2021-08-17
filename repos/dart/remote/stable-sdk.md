@@ -1,7 +1,7 @@
 ## `dart:stable-sdk`
 
 ```console
-$ docker pull dart@sha256:8db1f439a736cff8651f7be9963fc2449fb52d53c1cb17b00db41414fded6c0b
+$ docker pull dart@sha256:42af1a47a170bb9a5f7a569eca8e65dcee7dda2db0ac19fe989e7e2c3136431a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,49 +11,49 @@ $ docker pull dart@sha256:8db1f439a736cff8651f7be9963fc2449fb52d53c1cb17b00db414
 ### `dart:stable-sdk` - linux; amd64
 
 ```console
-$ docker pull dart@sha256:79214ba7cfc42d99e826bdeee39ad9cb1767b47ed0464126af55c96eeb552a22
+$ docker pull dart@sha256:8852bd6dd29501a374f81818698ee98919bf5dd18f69c2b52882df903162bc2e
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **274.8 MB (274814139 bytes)**  
+-	Total Size: **274.8 MB (274814405 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:247d156397d09364096742c403bbf71ec9fd725917dbf8eaa1f0b046d0810aaa`
+-	Image ID: `sha256:26f409d7eda3093895c419579cb8a6bc7c3038c8b4c99ac377d72287450a98e2`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Thu, 22 Jul 2021 00:45:43 GMT
-ADD file:45f5dfa135c848a348382413cb8b66a3b1dac3276814fbbe4684b39101d1b148 in / 
-# Thu, 22 Jul 2021 00:45:44 GMT
+# Tue, 17 Aug 2021 01:24:06 GMT
+ADD file:87b4e60fe3af680c6815448374365a44e9ea461bc8ade2960b4639c25aed3ba9 in / 
+# Tue, 17 Aug 2021 01:24:06 GMT
 CMD ["bash"]
-# Thu, 22 Jul 2021 01:26:37 GMT
+# Tue, 17 Aug 2021 10:29:22 GMT
 RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends         ca-certificates         curl         dnsutils         git         openssh-client         unzip     ;     rm -rf /var/lib/apt/lists/*
-# Thu, 22 Jul 2021 01:26:39 GMT
+# Tue, 17 Aug 2021 10:29:23 GMT
 RUN set -eux;     for f in         /etc/nsswitch.conf         /etc/ssl/certs         /lib/x86_64-linux-gnu/libc.so.6         /lib/x86_64-linux-gnu/libdl.so.2         /lib/x86_64-linux-gnu/libm.so.6         /lib/x86_64-linux-gnu/libnss_dns.so.2         /lib/x86_64-linux-gnu/libpthread.so.0         /lib/x86_64-linux-gnu/libresolv.so.2         /lib/x86_64-linux-gnu/librt.so.1         /lib64/ld-linux-x86-64.so.2         /usr/share/ca-certificates     ; do         dir="$(dirname "$f")";         mkdir -p "/runtime$dir";         cp --archive --link --dereference --no-target-directory "$f" "/runtime$f";     done
-# Thu, 22 Jul 2021 01:26:39 GMT
+# Tue, 17 Aug 2021 10:29:24 GMT
 ENV DART_SDK=/usr/lib/dart
-# Thu, 22 Jul 2021 01:26:39 GMT
+# Tue, 17 Aug 2021 10:29:24 GMT
 ENV PATH=/usr/lib/dart/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 22 Jul 2021 01:26:39 GMT
+# Tue, 17 Aug 2021 10:29:24 GMT
 WORKDIR /root
-# Thu, 22 Jul 2021 01:26:50 GMT
+# Tue, 17 Aug 2021 10:29:36 GMT
 RUN set -eux;     ARCH=$(case "$(dpkg --print-architecture)" in amd64) echo "x64";; esac;);     SDK="dartsdk-linux-$ARCH-release.zip";     BASEURL="https://storage.googleapis.com/dart-archive/channels";     URL="$BASEURL/stable/release/2.13.4/sdk/$SDK";     echo "SDK: $URL" >> dart_setup.log ;     curl -fLO "$URL";     echo "633a9aa4812b725ff587e2bbf16cd5839224cfe05dcd536e1a74804e80fdb4cd *$SDK"     | sha256sum --check --status --strict -;     unzip "$SDK" && mv dart-sdk "$DART_SDK" && rm "$SDK";
 ```
 
 -	Layers:
-	-	`sha256:33847f680f63fb1b343a9fc782e267b5abdbdb50d65d4b9bd2a136291d67cf75`  
-		Last Modified: Thu, 22 Jul 2021 00:50:35 GMT  
-		Size: 27.1 MB (27145795 bytes)  
+	-	`sha256:e1acddbe380c63f0de4b77d3f287b7c81cd9d89563a230692378126b46ea6546`  
+		Last Modified: Tue, 17 Aug 2021 01:30:21 GMT  
+		Size: 27.1 MB (27145985 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e70abda323f089ac700867be815ab89be053cbdc74a0823b9a44fafcd0363153`  
-		Last Modified: Thu, 22 Jul 2021 01:27:41 GMT  
-		Size: 49.6 MB (49581247 bytes)  
+	-	`sha256:bf70384699785586e7ce2387dcc48a39b1fa8b9837b6ec033441a3dd93ce4818`  
+		Last Modified: Tue, 17 Aug 2021 10:30:35 GMT  
+		Size: 49.6 MB (49581314 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5af578853d94f554b9fd289dc844a19b103b09b0ffb62f0b872c763dcfd6ec40`  
-		Last Modified: Thu, 22 Jul 2021 01:27:33 GMT  
-		Size: 2.4 MB (2359137 bytes)  
+	-	`sha256:db4c0190f1231c9d6c5fbfffaca9ee1baff80d891a3c91988c9bd7de914f9fd6`  
+		Last Modified: Tue, 17 Aug 2021 10:30:21 GMT  
+		Size: 2.4 MB (2359146 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2c9eaf2e41c0873f5d25960a497dccb4246b6148309c5e253ec844c406a9f8e3`  
-		Last Modified: Thu, 22 Jul 2021 01:28:09 GMT  
+	-	`sha256:dba67f3672479ac113591af7f34f12de75f4d398f8c687c595aa02824c30fde8`  
+		Last Modified: Tue, 17 Aug 2021 10:31:00 GMT  
 		Size: 195.7 MB (195727960 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
