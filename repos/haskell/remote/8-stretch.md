@@ -1,7 +1,7 @@
 ## `haskell:8-stretch`
 
 ```console
-$ docker pull haskell@sha256:8538f53cf0c3af5757c823cd855d67519703c0a412f78e8ef26b2e3daea71598
+$ docker pull haskell@sha256:adc2121eb4adb44f5ac334210a03626b96269d91465636a9929e8c2f08ec3862
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,63 +11,63 @@ $ docker pull haskell@sha256:8538f53cf0c3af5757c823cd855d67519703c0a412f78e8ef26
 ### `haskell:8-stretch` - linux; amd64
 
 ```console
-$ docker pull haskell@sha256:bae91f5b7ebb2534b2d10a72336bd8d268671ea255bea7eb8fa97a47e2106241
+$ docker pull haskell@sha256:3ed10bbe54f8e55196d71bdc90c34b3fd35cdb3d227182f4c3db7df51db1a034
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **340.5 MB (340524848 bytes)**  
+-	Total Size: **340.5 MB (340525264 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1b5bf740d7f4de8ebcbbed624a5d26b8ec17786d1ec957c937d8ca976d05e112`
+-	Image ID: `sha256:9d7daff3ab1d4099397b95e7aef36c2b77f6ec890e38ea469aa3367417ec8ad0`
 -	Default Command: `["ghci"]`
 
 ```dockerfile
-# Thu, 22 Jul 2021 00:47:05 GMT
-ADD file:fc9409352ad67880b83ccf1ccd1587eb2666715eae04e4dd98fca919f1bb98d7 in / 
-# Thu, 22 Jul 2021 00:47:05 GMT
+# Tue, 17 Aug 2021 01:25:56 GMT
+ADD file:0d0aa1ebd07b0f301aaf1077d1e9f2e9be1859510dd8535e143571b347a2a379 in / 
+# Tue, 17 Aug 2021 01:25:56 GMT
 CMD ["bash"]
-# Thu, 22 Jul 2021 09:19:34 GMT
+# Tue, 17 Aug 2021 10:34:20 GMT
 ENV LANG=C.UTF-8
-# Mon, 26 Jul 2021 18:30:52 GMT
+# Tue, 17 Aug 2021 10:34:54 GMT
 RUN apt-get update &&     apt-get install -y --no-install-recommends         ca-certificates         curl         dirmngr         g++         git         gnupg         libsqlite3-dev         libtinfo-dev         make         netbase         openssh-client         xz-utils         zlib1g-dev &&     rm -rf /var/lib/apt/lists/*
-# Mon, 26 Jul 2021 18:32:18 GMT
+# Tue, 17 Aug 2021 10:37:00 GMT
 ARG GHC=8.10.4
-# Mon, 26 Jul 2021 18:32:18 GMT
+# Tue, 17 Aug 2021 10:37:01 GMT
 ARG DEBIAN_KEY=427CB69AAC9D00F2A43CAF1CBA3CBA3FFE22B574
-# Mon, 26 Jul 2021 18:32:18 GMT
+# Tue, 17 Aug 2021 10:37:01 GMT
 ARG CABAL_INSTALL=3.4
-# Mon, 26 Jul 2021 18:32:43 GMT
+# Tue, 17 Aug 2021 10:37:44 GMT
 # ARGS: CABAL_INSTALL=3.4 DEBIAN_KEY=427CB69AAC9D00F2A43CAF1CBA3CBA3FFE22B574 GHC=8.10.4
 RUN export GNUPGHOME="$(mktemp -d)" &&     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys ${DEBIAN_KEY} &&     gpg --batch --armor --export ${DEBIAN_KEY} > /etc/apt/trusted.gpg.d/haskell.org.gpg.asc &&     gpgconf --kill all &&     echo 'deb http://downloads.haskell.org/debian stretch main' > /etc/apt/sources.list.d/ghc.list &&     apt-get update &&     apt-get install -y --no-install-recommends         cabal-install-${CABAL_INSTALL}         ghc-${GHC} &&     rm -rf "$GNUPGHOME" /var/lib/apt/lists/*
-# Mon, 26 Jul 2021 18:32:45 GMT
+# Tue, 17 Aug 2021 10:37:44 GMT
 ARG STACK=2.7.3
-# Mon, 26 Jul 2021 18:32:46 GMT
+# Tue, 17 Aug 2021 10:37:45 GMT
 ARG STACK_KEY=C5705533DA4F78D8664B5DC0575159689BEFB442
-# Mon, 26 Jul 2021 18:32:46 GMT
+# Tue, 17 Aug 2021 10:37:45 GMT
 ARG STACK_RELEASE_KEY=2C6A674E85EE3FB896AFC9B965101FF31C5C154D
-# Mon, 26 Jul 2021 18:32:52 GMT
+# Tue, 17 Aug 2021 10:37:54 GMT
 # ARGS: CABAL_INSTALL=3.4 DEBIAN_KEY=427CB69AAC9D00F2A43CAF1CBA3CBA3FFE22B574 GHC=8.10.4 STACK=2.7.3 STACK_KEY=C5705533DA4F78D8664B5DC0575159689BEFB442 STACK_RELEASE_KEY=2C6A674E85EE3FB896AFC9B965101FF31C5C154D
 RUN export GNUPGHOME="$(mktemp -d)" &&     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys ${STACK_KEY} &&     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys ${STACK_RELEASE_KEY} &&     curl -fSL https://github.com/commercialhaskell/stack/releases/download/v${STACK}/stack-${STACK}-linux-x86_64.tar.gz -o stack.tar.gz &&     curl -fSL https://github.com/commercialhaskell/stack/releases/download/v${STACK}/stack-${STACK}-linux-x86_64.tar.gz.asc -o stack.tar.gz.asc &&     gpg --batch --trusted-key 0x575159689BEFB442 --verify stack.tar.gz.asc stack.tar.gz &&     tar -xf stack.tar.gz -C /usr/local/bin --strip-components=1 &&     /usr/local/bin/stack config set system-ghc --global true &&     /usr/local/bin/stack config set install-ghc --global false &&     rm -rf "$GNUPGHOME" /var/lib/apt/lists/* /stack.tar.gz.asc /stack.tar.gz
-# Mon, 26 Jul 2021 18:32:53 GMT
+# Tue, 17 Aug 2021 10:37:54 GMT
 ENV PATH=/root/.cabal/bin:/root/.local/bin:/opt/cabal/3.4/bin:/opt/ghc/8.10.4/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Mon, 26 Jul 2021 18:32:53 GMT
+# Tue, 17 Aug 2021 10:37:54 GMT
 CMD ["ghci"]
 ```
 
 -	Layers:
-	-	`sha256:08224db8ce18b31a78a0a26d1b344d173528e50a7067797c9df4de5d8df353e2`  
-		Last Modified: Thu, 22 Jul 2021 00:52:52 GMT  
-		Size: 45.4 MB (45379781 bytes)  
+	-	`sha256:eb18d230e067c240479c6a3f842e7f9d4ff1088e3072d0a3245829c4e356623f`  
+		Last Modified: Tue, 17 Aug 2021 01:33:03 GMT  
+		Size: 45.4 MB (45379966 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6851a104476919e0aac26e73c56cb601a956dd3145679a7ca00eb71c6e8ac5f6`  
-		Last Modified: Mon, 26 Jul 2021 18:34:55 GMT  
-		Size: 96.5 MB (96502459 bytes)  
+	-	`sha256:f59ace8e6c6176e27fb0819e2c4f9a2158bec65645a61020e2ed4fa15725d021`  
+		Last Modified: Tue, 17 Aug 2021 10:40:09 GMT  
+		Size: 96.5 MB (96502265 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7e38023b5214caa723512b2a52f27eb8619214cb9d4d9c619a05d883ae5a7430`  
-		Last Modified: Mon, 26 Jul 2021 18:37:06 GMT  
-		Size: 180.5 MB (180539104 bytes)  
+	-	`sha256:9dff399374363b01c1a4eb69826045249fd6cc923e1e6abe79aea11ba3cd37e7`  
+		Last Modified: Tue, 17 Aug 2021 10:42:58 GMT  
+		Size: 180.5 MB (180539553 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1ca8952223e9f0ef518038ba48d8816a2f272f7dca242cd655142fe8e3a6a5fe`  
-		Last Modified: Mon, 26 Jul 2021 18:36:35 GMT  
-		Size: 18.1 MB (18103504 bytes)  
+	-	`sha256:9663d5cae10a1ca2c76362319ca31b23eac9259c3940bdb69bdc9d56e6d6a5e6`  
+		Last Modified: Tue, 17 Aug 2021 10:42:13 GMT  
+		Size: 18.1 MB (18103480 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
