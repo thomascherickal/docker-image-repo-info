@@ -1,7 +1,7 @@
 ## `wordpress:php8.0-fpm`
 
 ```console
-$ docker pull wordpress@sha256:b2e90d4519e232399d12791c2bc6ae58e66316213ca630d2e31ac72a7fdf3d5c
+$ docker pull wordpress@sha256:f23ab577c5494c06a8850bc6b9791df682ff227db867d1649226914eabd4ce60
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -18,160 +18,160 @@ $ docker pull wordpress@sha256:b2e90d4519e232399d12791c2bc6ae58e66316213ca630d2e
 ### `wordpress:php8.0-fpm` - linux; amd64
 
 ```console
-$ docker pull wordpress@sha256:196ad2508e635410f7a9ade6f9f981790f2f301b41ccf70d531e5fba6448492f
+$ docker pull wordpress@sha256:c9cbb85f5c5f3f09cab8469a22eab8991a6bcd81deeedc045fd7291d855ff910
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **184.8 MB (184841181 bytes)**  
+-	Total Size: **184.8 MB (184841234 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3f1b99875b6b1c4e55f397f70e5ff48d93caa0c52878247125943a7ae1a1e75b`
+-	Image ID: `sha256:fb067150b0044cb834e7f53d63bf22c05a3fdab44a757814c0ff232462060c95`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
 ```dockerfile
-# Thu, 22 Jul 2021 00:45:43 GMT
-ADD file:45f5dfa135c848a348382413cb8b66a3b1dac3276814fbbe4684b39101d1b148 in / 
-# Thu, 22 Jul 2021 00:45:44 GMT
+# Tue, 17 Aug 2021 01:24:06 GMT
+ADD file:87b4e60fe3af680c6815448374365a44e9ea461bc8ade2960b4639c25aed3ba9 in / 
+# Tue, 17 Aug 2021 01:24:06 GMT
 CMD ["bash"]
-# Thu, 22 Jul 2021 01:35:33 GMT
+# Tue, 17 Aug 2021 12:15:20 GMT
 RUN set -eux; 	{ 		echo 'Package: php*'; 		echo 'Pin: release *'; 		echo 'Pin-Priority: -1'; 	} > /etc/apt/preferences.d/no-debian-php
-# Thu, 22 Jul 2021 01:35:33 GMT
+# Tue, 17 Aug 2021 12:15:21 GMT
 ENV PHPIZE_DEPS=autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c
-# Thu, 22 Jul 2021 01:36:08 GMT
+# Tue, 17 Aug 2021 12:15:56 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		$PHPIZE_DEPS 		ca-certificates 		curl 		xz-utils 	; 	rm -rf /var/lib/apt/lists/*
-# Thu, 22 Jul 2021 01:36:09 GMT
+# Tue, 17 Aug 2021 12:15:57 GMT
 ENV PHP_INI_DIR=/usr/local/etc/php
-# Thu, 22 Jul 2021 01:36:11 GMT
+# Tue, 17 Aug 2021 12:15:58 GMT
 RUN set -eux; 	mkdir -p "$PHP_INI_DIR/conf.d"; 	[ ! -d /var/www/html ]; 	mkdir -p /var/www/html; 	chown www-data:www-data /var/www/html; 	chmod 777 /var/www/html
-# Thu, 22 Jul 2021 01:53:43 GMT
+# Tue, 17 Aug 2021 12:28:58 GMT
 ENV PHP_EXTRA_CONFIGURE_ARGS=--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi
-# Thu, 22 Jul 2021 01:53:43 GMT
+# Tue, 17 Aug 2021 12:28:58 GMT
 ENV PHP_CFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
-# Thu, 22 Jul 2021 01:53:43 GMT
+# Tue, 17 Aug 2021 12:28:58 GMT
 ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
-# Thu, 22 Jul 2021 01:53:44 GMT
+# Tue, 17 Aug 2021 12:28:59 GMT
 ENV PHP_LDFLAGS=-Wl,-O1 -pie
-# Thu, 22 Jul 2021 02:29:37 GMT
+# Tue, 17 Aug 2021 12:52:44 GMT
 ENV GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F
-# Fri, 30 Jul 2021 00:39:28 GMT
+# Tue, 17 Aug 2021 12:52:44 GMT
 ENV PHP_VERSION=8.0.9
-# Fri, 30 Jul 2021 00:39:28 GMT
+# Tue, 17 Aug 2021 12:52:44 GMT
 ENV PHP_URL=https://www.php.net/distributions/php-8.0.9.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-8.0.9.tar.xz.asc
-# Fri, 30 Jul 2021 00:39:28 GMT
+# Tue, 17 Aug 2021 12:52:44 GMT
 ENV PHP_SHA256=71a01b2b56544e20e28696ad5b366e431a0984eaa39aa5e35426a4843e172010
-# Fri, 30 Jul 2021 00:39:41 GMT
+# Tue, 17 Aug 2021 12:52:58 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends gnupg dirmngr; 	rm -rf /var/lib/apt/lists/*; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Fri, 30 Jul 2021 00:39:42 GMT
+# Tue, 17 Aug 2021 12:52:58 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Fri, 30 Jul 2021 00:45:49 GMT
+# Tue, 17 Aug 2021 12:57:50 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		libargon2-dev 		libcurl4-openssl-dev 		libedit-dev 		libonig-dev 		libsodium-dev 		libsqlite3-dev 		libssl-dev 		libxml2-dev 		zlib1g-dev 		${PHP_EXTRA_BUILD_DEPS:-} 	; 	rm -rf /var/lib/apt/lists/*; 		export 		CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)"; 	if [ ! -d /usr/include/curl ]; then 		ln -sT "/usr/include/$debMultiarch/curl" /usr/local/include/curl; 	fi; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--with-pic 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-libedit 		--with-openssl 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-gnu' && echo '--without-pcre-jit') 		--with-libdir="lib/$debMultiarch" 				${PHP_EXTRA_CONFIGURE_ARGS:-} 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find /usr/local/bin /usr/local/sbin -type f -executable -exec strip --strip-all '{}' + || true; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 		php --version
-# Fri, 30 Jul 2021 00:45:50 GMT
+# Tue, 17 Aug 2021 12:57:50 GMT
 COPY multi:6dfba8f7e64bd54e4d9aa0855ff6ce7a53059e0a733752b4537fd3fdfd32d837 in /usr/local/bin/ 
-# Fri, 30 Jul 2021 00:45:51 GMT
+# Tue, 17 Aug 2021 12:57:51 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 30 Jul 2021 00:45:51 GMT
+# Tue, 17 Aug 2021 12:57:51 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 30 Jul 2021 00:45:51 GMT
+# Tue, 17 Aug 2021 12:57:52 GMT
 WORKDIR /var/www/html
-# Fri, 30 Jul 2021 00:45:52 GMT
+# Tue, 17 Aug 2021 12:57:52 GMT
 RUN set -eux; 	cd /usr/local/etc; 	if [ -d php-fpm.d ]; then 		sed 's!=NONE/!=!g' php-fpm.conf.default | tee php-fpm.conf > /dev/null; 		cp php-fpm.d/www.conf.default php-fpm.d/www.conf; 	else 		mkdir php-fpm.d; 		cp php-fpm.conf.default php-fpm.d/www.conf; 		{ 			echo '[global]'; 			echo 'include=etc/php-fpm.d/*.conf'; 		} | tee php-fpm.conf; 	fi; 	{ 		echo '[global]'; 		echo 'error_log = /proc/self/fd/2'; 		echo; echo '; https://github.com/docker-library/php/pull/725#issuecomment-443540114'; echo 'log_limit = 8192'; 		echo; 		echo '[www]'; 		echo '; if we send this to /proc/self/fd/1, it never appears'; 		echo 'access.log = /proc/self/fd/2'; 		echo; 		echo 'clear_env = no'; 		echo; 		echo '; Ensure worker stdout and stderr are sent to the main error log.'; 		echo 'catch_workers_output = yes'; 		echo 'decorate_workers_output = no'; 	} | tee php-fpm.d/docker.conf; 	{ 		echo '[global]'; 		echo 'daemonize = no'; 		echo; 		echo '[www]'; 		echo 'listen = 9000'; 	} | tee php-fpm.d/zz-docker.conf
-# Fri, 30 Jul 2021 00:45:52 GMT
+# Tue, 17 Aug 2021 12:57:53 GMT
 STOPSIGNAL SIGQUIT
-# Fri, 30 Jul 2021 00:45:53 GMT
+# Tue, 17 Aug 2021 12:57:53 GMT
 EXPOSE 9000
-# Fri, 30 Jul 2021 00:45:53 GMT
+# Tue, 17 Aug 2021 12:57:53 GMT
 CMD ["php-fpm"]
-# Fri, 30 Jul 2021 04:46:45 GMT
+# Wed, 18 Aug 2021 11:41:54 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ghostscript 	; 	rm -rf /var/lib/apt/lists/*
-# Fri, 30 Jul 2021 04:48:43 GMT
+# Wed, 18 Aug 2021 11:43:01 GMT
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 	apt-get install -y --no-install-recommends 		libfreetype6-dev 		libjpeg-dev 		libmagickwand-dev 		libpng-dev 		libzip-dev 	; 		docker-php-ext-configure gd 		--with-freetype 		--with-jpeg 	; 	docker-php-ext-install -j "$(nproc)" 		bcmath 		exif 		gd 		mysqli 		zip 	; 	pecl install imagick-3.5.0; 	docker-php-ext-enable imagick; 	rm -r /tmp/pear; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark; 	ldd "$(php -r 'echo ini_get("extension_dir");')"/*.so 		| awk '/=>/ { print $3 }' 		| sort -u 		| xargs -r dpkg-query -S 		| cut -d: -f1 		| sort -u 		| xargs -rt apt-mark manual; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*
-# Fri, 30 Jul 2021 04:48:44 GMT
+# Wed, 18 Aug 2021 11:43:02 GMT
 RUN set -eux; 	docker-php-ext-enable opcache; 	{ 		echo 'opcache.memory_consumption=128'; 		echo 'opcache.interned_strings_buffer=8'; 		echo 'opcache.max_accelerated_files=4000'; 		echo 'opcache.revalidate_freq=2'; 		echo 'opcache.fast_shutdown=1'; 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
-# Fri, 30 Jul 2021 04:48:45 GMT
+# Wed, 18 Aug 2021 11:43:03 GMT
 RUN { 		echo 'error_reporting = E_ERROR | E_WARNING | E_PARSE | E_CORE_ERROR | E_CORE_WARNING | E_COMPILE_ERROR | E_COMPILE_WARNING | E_RECOVERABLE_ERROR'; 		echo 'display_errors = Off'; 		echo 'display_startup_errors = Off'; 		echo 'log_errors = On'; 		echo 'error_log = /dev/stderr'; 		echo 'log_errors_max_len = 1024'; 		echo 'ignore_repeated_errors = On'; 		echo 'ignore_repeated_source = Off'; 		echo 'html_errors = Off'; 	} > /usr/local/etc/php/conf.d/error-logging.ini
-# Fri, 30 Jul 2021 04:48:48 GMT
+# Wed, 18 Aug 2021 11:43:06 GMT
 RUN set -eux; 	version='5.8'; 	sha1='6476e69305ba557694424b04b9dea7352d988110'; 		curl -o wordpress.tar.gz -fL "https://wordpress.org/wordpress-$version.tar.gz"; 	echo "$sha1 *wordpress.tar.gz" | sha1sum -c -; 		tar -xzf wordpress.tar.gz -C /usr/src/; 	rm wordpress.tar.gz; 		[ ! -e /usr/src/wordpress/.htaccess ]; 	{ 		echo '# BEGIN WordPress'; 		echo ''; 		echo 'RewriteEngine On'; 		echo 'RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]'; 		echo 'RewriteBase /'; 		echo 'RewriteRule ^index\.php$ - [L]'; 		echo 'RewriteCond %{REQUEST_FILENAME} !-f'; 		echo 'RewriteCond %{REQUEST_FILENAME} !-d'; 		echo 'RewriteRule . /index.php [L]'; 		echo ''; 		echo '# END WordPress'; 	} > /usr/src/wordpress/.htaccess; 		chown -R www-data:www-data /usr/src/wordpress; 	mkdir wp-content; 	for dir in /usr/src/wordpress/wp-content/*/ cache; do 		dir="$(basename "${dir%/}")"; 		mkdir "wp-content/$dir"; 	done; 	chown -R www-data:www-data wp-content; 	chmod -R 777 wp-content
-# Fri, 30 Jul 2021 04:48:49 GMT
+# Wed, 18 Aug 2021 11:43:06 GMT
 VOLUME [/var/www/html]
-# Fri, 30 Jul 2021 04:48:49 GMT
+# Wed, 18 Aug 2021 11:43:06 GMT
 COPY --chown=www-data:www-datafile:2708a2c2ddd7102be41b667427e2ff8a8f87e2fe99f16c5d6508102164a04563 in /usr/src/wordpress/ 
-# Fri, 30 Jul 2021 04:48:49 GMT
+# Wed, 18 Aug 2021 11:43:07 GMT
 COPY file:5be6bcc31206cb827f037769d89fd092037ed61a1e10d6cae7939a37055beb4c in /usr/local/bin/ 
-# Fri, 30 Jul 2021 04:48:50 GMT
+# Wed, 18 Aug 2021 11:43:07 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 30 Jul 2021 04:48:50 GMT
+# Wed, 18 Aug 2021 11:43:07 GMT
 CMD ["php-fpm"]
 ```
 
 -	Layers:
-	-	`sha256:33847f680f63fb1b343a9fc782e267b5abdbdb50d65d4b9bd2a136291d67cf75`  
-		Last Modified: Thu, 22 Jul 2021 00:50:35 GMT  
-		Size: 27.1 MB (27145795 bytes)  
+	-	`sha256:e1acddbe380c63f0de4b77d3f287b7c81cd9d89563a230692378126b46ea6546`  
+		Last Modified: Tue, 17 Aug 2021 01:30:21 GMT  
+		Size: 27.1 MB (27145985 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ba03c99d34ed5eef03bd9b50e93e7c4ef428d351bc473dbc5af6b35e3b38ca23`  
-		Last Modified: Thu, 22 Jul 2021 04:14:30 GMT  
-		Size: 229.0 B  
+	-	`sha256:c4909824c2d9e8528562a0eeab6573b4553f598555dd0a29f6f3fb2c28f6e4f2`  
+		Last Modified: Tue, 17 Aug 2021 14:14:31 GMT  
+		Size: 227.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5f637ed06e1a5cbebe59f7e1102e78d40b788c8ff3143b1c6e6e2d1fda3b8554`  
-		Last Modified: Thu, 22 Jul 2021 04:14:43 GMT  
-		Size: 76.7 MB (76681016 bytes)  
+	-	`sha256:e3d250e5f539524d16c1024cbbc0ba50cbde53f2ffce91a99088af37712f9e89`  
+		Last Modified: Tue, 17 Aug 2021 14:14:48 GMT  
+		Size: 76.7 MB (76680781 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ecfd84713df3e0b309ebfe29910fd6efc5803314e93a7866d1e5e31b458f719d`  
-		Last Modified: Thu, 22 Jul 2021 04:14:30 GMT  
+	-	`sha256:bb8ea4156ce7c000260f63ef26989a499cb20b8aea4f2d8a4cd0da0e79903b07`  
+		Last Modified: Tue, 17 Aug 2021 14:14:30 GMT  
 		Size: 269.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:433a69861e85a0ab0cdf4432721e337dcf08c5e3bb5895117dc04f62d00e993f`  
-		Last Modified: Fri, 30 Jul 2021 02:20:47 GMT  
-		Size: 11.0 MB (11000212 bytes)  
+	-	`sha256:470ab3fc545f2f54c24d37b9bc0db52615aaaa022df6a7c2dd2c939b496bd17b`  
+		Last Modified: Tue, 17 Aug 2021 14:18:20 GMT  
+		Size: 11.0 MB (11000164 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:54a936b7cd1c7c33af75f6250fe246227f880feefb929df85328eac710fc1eae`  
-		Last Modified: Fri, 30 Jul 2021 02:20:44 GMT  
-		Size: 492.0 B  
+	-	`sha256:24a71961cb2f0da3272dcb82b3a4cd131f7be67be277256381c87239a330b174`  
+		Last Modified: Tue, 17 Aug 2021 14:18:16 GMT  
+		Size: 491.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:92804f1310e20f5789770a570ebb69f4e9618038329960299e79fd0a3b4cf145`  
-		Last Modified: Fri, 30 Jul 2021 02:20:48 GMT  
-		Size: 29.2 MB (29221079 bytes)  
+	-	`sha256:632e537a1fb86e180005cc2e609f55e81daa25d46e07721cbd6f7a502580699b`  
+		Last Modified: Tue, 17 Aug 2021 14:18:21 GMT  
+		Size: 29.2 MB (29221363 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:10147aecdd5c59671823ac2709b97a20c05246957d72581ea9a2eb74b950af98`  
-		Last Modified: Fri, 30 Jul 2021 02:20:44 GMT  
+	-	`sha256:bd239c5d12fe9fac68dbf53440f3d1e8c49318714c6c14467c3fa3b03b287184`  
+		Last Modified: Tue, 17 Aug 2021 14:18:16 GMT  
 		Size: 2.3 KB (2267 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1525d88eed9489ff47f60b5163bf06e441d80f452e3cb43c203631f812302f4c`  
-		Last Modified: Fri, 30 Jul 2021 02:20:44 GMT  
-		Size: 247.0 B  
+	-	`sha256:ccd71c2fcdae7011006fef955a5f2c4ae9afcb7c6e6b95895afa9a14c43325b7`  
+		Last Modified: Tue, 17 Aug 2021 14:18:16 GMT  
+		Size: 244.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cae1786a42c053e85ae96072360110dbb698acc02bc6c607dddd34fd356a4684`  
-		Last Modified: Fri, 30 Jul 2021 02:20:44 GMT  
-		Size: 8.6 KB (8572 bytes)  
+	-	`sha256:421112602fc518e69484ff3ac9b05308cead7e246697fa38646a73e8ab75b779`  
+		Last Modified: Tue, 17 Aug 2021 14:18:16 GMT  
+		Size: 8.6 KB (8573 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:deeda54321a29d7c0d68e82025a7d95682f82a50918b7957ceb9f40889548349`  
-		Last Modified: Fri, 30 Jul 2021 04:58:32 GMT  
-		Size: 16.8 MB (16847779 bytes)  
+	-	`sha256:11d0df2260e20218a51a769ce8b063e322d0172a529e8b91a5807e5ddf4dc37c`  
+		Last Modified: Wed, 18 Aug 2021 11:48:44 GMT  
+		Size: 16.8 MB (16847793 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6ff44c44312fc16408deb8e677166c9456e01090ce76f78b0797fd80877d4a42`  
-		Last Modified: Fri, 30 Jul 2021 04:58:31 GMT  
-		Size: 9.0 MB (9025903 bytes)  
+	-	`sha256:81921198048fd0680e76a5b969ac23e28b3f46985056b4bdcc4eb4a92440a599`  
+		Last Modified: Wed, 18 Aug 2021 11:48:43 GMT  
+		Size: 9.0 MB (9025743 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4256e27682bb803e1d696b87ca7f03fd17b7408918a6378f979ba7a61091c197`  
-		Last Modified: Fri, 30 Jul 2021 04:58:27 GMT  
-		Size: 374.0 B  
+	-	`sha256:14378efc648e004a15e2fb2928118c63dc3f2cfb247baea221dd2308333ae252`  
+		Last Modified: Wed, 18 Aug 2021 11:48:39 GMT  
+		Size: 375.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:25d9ff0048cea2adb4d70f7077c9a41d52bed7222230dbe104bd38c1472ca666`  
-		Last Modified: Fri, 30 Jul 2021 04:58:27 GMT  
-		Size: 393.0 B  
+	-	`sha256:4c9028d9f1f1c17ab3a47f71ef239c82f96be6f493f6806a50e581d842d766a3`  
+		Last Modified: Wed, 18 Aug 2021 11:48:39 GMT  
+		Size: 395.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:85042d28b78e0a1166651c7c5c4e06a5f7e0dd42654133cee65b2e72df71a493`  
-		Last Modified: Fri, 30 Jul 2021 04:58:30 GMT  
-		Size: 14.9 MB (14902472 bytes)  
+	-	`sha256:b38763bdaf7ddf468d78a5a69f8056fa05cdc93446831b12ee68a1e97d242eb5`  
+		Last Modified: Wed, 18 Aug 2021 11:48:41 GMT  
+		Size: 14.9 MB (14902475 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bbf0d125411bd5dd6071678b76eb604059388599060925b5a76e3d05747b93c5`  
-		Last Modified: Fri, 30 Jul 2021 04:58:27 GMT  
-		Size: 2.4 KB (2353 bytes)  
+	-	`sha256:466490fdb577a6dce2b8c10963396f476983b8b4dc88058b8b1f992026045847`  
+		Last Modified: Wed, 18 Aug 2021 11:48:39 GMT  
+		Size: 2.4 KB (2355 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6538ecdf9f62cc5ea2fe872f051f36b4dfa233c75038b0ec8830c6e294a6f2f1`  
-		Last Modified: Fri, 30 Jul 2021 04:58:27 GMT  
-		Size: 1.7 KB (1729 bytes)  
+	-	`sha256:1cc394b1177393fd0db8cf57e2479e177e9ac2a50f8a06da354c26a41254e70f`  
+		Last Modified: Wed, 18 Aug 2021 11:48:39 GMT  
+		Size: 1.7 KB (1734 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `wordpress:php8.0-fpm` - linux; arm variant v5
