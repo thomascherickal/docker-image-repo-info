@@ -11,7 +11,9 @@
 -	[`docker:19.03-dind-rootless`](#docker1903-dind-rootless)
 -	[`docker:19.03-git`](#docker1903-git)
 -	[`docker:19.03.15`](#docker190315)
+-	[`docker:19.03.15-alpine3.13`](#docker190315-alpine313)
 -	[`docker:19.03.15-dind`](#docker190315-dind)
+-	[`docker:19.03.15-dind-alpine3.13`](#docker190315-dind-alpine313)
 -	[`docker:19.03.15-dind-rootless`](#docker190315-dind-rootless)
 -	[`docker:19.03.15-git`](#docker190315-git)
 -	[`docker:20`](#docker20)
@@ -27,7 +29,9 @@
 -	[`docker:20.10-windowsservercore`](#docker2010-windowsservercore)
 -	[`docker:20.10-windowsservercore-1809`](#docker2010-windowsservercore-1809)
 -	[`docker:20.10.8`](#docker20108)
+-	[`docker:20.10.8-alpine3.13`](#docker20108-alpine313)
 -	[`docker:20.10.8-dind`](#docker20108-dind)
+-	[`docker:20.10.8-dind-alpine3.13`](#docker20108-dind-alpine313)
 -	[`docker:20.10.8-dind-rootless`](#docker20108-dind-rootless)
 -	[`docker:20.10.8-git`](#docker20108-git)
 -	[`docker:20.10.8-windowsservercore`](#docker20108-windowsservercore)
@@ -1568,6 +1572,10 @@ CMD ["sh"]
 		Size: 150.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `docker:19.03.15-alpine3.13`
+
+**does not exist** (yet?)
+
 ## `docker:19.03.15-dind`
 
 ```console
@@ -1788,6 +1796,10 @@ CMD []
 		Last Modified: Wed, 21 Jul 2021 18:42:24 GMT  
 		Size: 2.6 KB (2619 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `docker:19.03.15-dind-alpine3.13`
+
+**does not exist** (yet?)
 
 ## `docker:19.03.15-dind-rootless`
 
@@ -4188,6 +4200,10 @@ CMD ["sh"]
 		Size: 150.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `docker:20.10.8-alpine3.13`
+
+**does not exist** (yet?)
+
 ## `docker:20.10.8-dind`
 
 ```console
@@ -4408,6 +4424,10 @@ CMD []
 		Last Modified: Wed, 04 Aug 2021 21:42:58 GMT  
 		Size: 2.6 KB (2615 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `docker:20.10.8-dind-alpine3.13`
+
+**does not exist** (yet?)
 
 ## `docker:20.10.8-dind-rootless`
 
