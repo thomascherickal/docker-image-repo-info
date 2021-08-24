@@ -6,6 +6,7 @@
 -	[`hello-world:linux`](#hello-worldlinux)
 -	[`hello-world:nanoserver`](#hello-worldnanoserver)
 -	[`hello-world:nanoserver-1809`](#hello-worldnanoserver-1809)
+-	[`hello-world:nanoserver-ltsc2022`](#hello-worldnanoserver-ltsc2022)
 
 ## `hello-world:latest`
 
@@ -636,3 +637,7 @@ RUN cmd /S /C #(nop)  CMD ["cmd" "/C" "type C:\\hello.txt"]
 		Last Modified: Tue, 24 Aug 2021 21:25:27 GMT  
 		Size: 1.1 KB (1065 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `hello-world:nanoserver-ltsc2022`
+
+**does not exist** (yet?)
