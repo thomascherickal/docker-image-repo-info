@@ -1,7 +1,7 @@
 ## `eclipse-temurin:8-windowsservercore-1809`
 
 ```console
-$ docker pull eclipse-temurin@sha256:86b779d87686dc0d2e5e1101ada1198497d882907506be67c3501e5e10411804
+$ docker pull eclipse-temurin@sha256:65a9fb65cd896e28521bc1a37406fd10f0e70dd50f8c8d466b8a60e4b5a28795
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull eclipse-temurin@sha256:86b779d87686dc0d2e5e1101ada1198497d88290750
 ### `eclipse-temurin:8-windowsservercore-1809` - windows version 10.0.17763.2114; amd64
 
 ```console
-$ docker pull eclipse-temurin@sha256:ece940a2d37f2fa799122e118c19491d104b58900609e75d93632453321fffc0
+$ docker pull eclipse-temurin@sha256:357230868d8e3e94fd19bf2c18fbb1702e108cdc3b3db9bda2149d935c9d885d
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.8
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **2.9 GB (2875670234 bytes)**  
+-	Total Size: **2.9 GB (2875669785 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:41f8e2f968caae87291f85b06b9c89d0c80989b49a92675475e7953f11b4b1fb`
+-	Image ID: `sha256:198fbd7c6ce77ea4f1b05f72c15ec9bcbf343c72a9749e73f2de3a5e4c582cea`
 -	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
 -	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
 
@@ -27,13 +27,13 @@ $ docker pull eclipse-temurin@sha256:ece940a2d37f2fa799122e118c19491d104b5890060
 RUN Apply image 1809-RTM-amd64
 # Thu, 05 Aug 2021 19:44:34 GMT
 RUN Install update 1809-amd64
-# Wed, 11 Aug 2021 12:16:25 GMT
+# Tue, 24 Aug 2021 23:22:36 GMT
 SHELL [powershell -Command $ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';]
-# Fri, 13 Aug 2021 21:32:38 GMT
+# Wed, 25 Aug 2021 16:29:13 GMT
 ENV JAVA_VERSION=jdk8u302-b08
-# Fri, 13 Aug 2021 21:34:11 GMT
+# Wed, 25 Aug 2021 16:30:41 GMT
 RUN Write-Host ('Downloading https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u302-b08.1/OpenJDK8U-jdk_x64_windows_hotspot_8u302b08.msi ...');     curl.exe -LfsSo openjdk.msi https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u302-b08.1/OpenJDK8U-jdk_x64_windows_hotspot_8u302b08.msi ;     Write-Host ('Verifying sha256 (fe3546a8e8dd7d4e929028ef3794431748caddf7fc1cf481618e8d6f8aa15427) ...');     if ((Get-FileHash openjdk.msi -Algorithm sha256).Hash -ne 'fe3546a8e8dd7d4e929028ef3794431748caddf7fc1cf481618e8d6f8aa15427') {             Write-Host 'FAILED!';             exit 1;     };         New-Item -ItemType Directory -Path C:\temp | Out-Null;         Write-Host 'Installing using MSI ...';     $proc = Start-Process -FilePath "msiexec.exe" -ArgumentList '/i', 'openjdk.msi', '/L*V', 'C:\temp\OpenJDK.log',     '/quiet', 'ADDLOCAL=FeatureEnvironment,FeatureJarFileRunWith,FeatureJavaHome', 'INSTALLDIR=C:\openjdk-8' -Wait -Passthru;     $proc.WaitForExit() ;     if ($proc.ExitCode -ne 0) {             Write-Host 'FAILED installing MSI!' ;             exit 1;     };         Remove-Item -Path C:\temp -Recurse | Out-Null;     Write-Host 'Removing openjdk.msi ...';     Remove-Item openjdk.msi -Force
-# Fri, 13 Aug 2021 21:35:43 GMT
+# Wed, 25 Aug 2021 16:31:34 GMT
 RUN Write-Host 'Verifying install ...';     Write-Host '  javac -version'; javac -version;     Write-Host '  java -version'; java -version;         Write-Host 'Complete.'
 ```
 
@@ -44,19 +44,19 @@ RUN Write-Host 'Verifying install ...';     Write-Host '  javac -version'; javac
 	-	`sha256:c67ded6868b61d392a0c096f911563fd6bc0bc3ed4fe401d077b3718a1b0cdaf`  
 		Size: 967.7 MB (967665054 bytes)  
 		MIME: application/vnd.docker.image.rootfs.foreign.diff.tar.gzip
-	-	`sha256:f5be68d5dab08a1dcc52a6ee52dd4901e4d6a384f0df3a12cba3d53649f7c602`  
-		Last Modified: Wed, 11 Aug 2021 13:29:37 GMT  
-		Size: 1.4 KB (1425 bytes)  
+	-	`sha256:547a42a22856b8c453f88ea7796b08c15b248d73f09976ca0044162fb9d12390`  
+		Last Modified: Tue, 24 Aug 2021 23:25:12 GMT  
+		Size: 1.4 KB (1418 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f4366f6dcb586d60ea7d0031a2dcac52b65aff56b1029ade45a73aa1df80b279`  
-		Last Modified: Fri, 13 Aug 2021 22:00:10 GMT  
+	-	`sha256:faf5ffaf540fdab4c73913780b326ca2cb2c5a0f61040fdb1c0e6aeaf9d2f768`  
+		Last Modified: Wed, 25 Aug 2021 23:17:07 GMT  
 		Size: 1.4 KB (1437 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b953260129476c244ec0fa7b2ea9f4be8ca9062b6b043a8befa553244226601b`  
-		Last Modified: Fri, 13 Aug 2021 22:00:26 GMT  
-		Size: 189.3 MB (189325741 bytes)  
+	-	`sha256:201dfd2f046f9af8644f4fd45edc8f280752d3fb74555fa7fe6b911becc46bea`  
+		Last Modified: Wed, 25 Aug 2021 23:17:24 GMT  
+		Size: 189.3 MB (189325569 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2fb33fe4eead0f43c6748cf515864fbdd33559b00d75a47b43680764f6659ff6`  
-		Last Modified: Fri, 13 Aug 2021 22:00:10 GMT  
-		Size: 343.7 KB (343698 bytes)  
+	-	`sha256:aa46360c43c2222e39e513b2d3c321dea7a1d18aba01a023702b0d3db946bf13`  
+		Last Modified: Wed, 25 Aug 2021 23:17:07 GMT  
+		Size: 343.4 KB (343428 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
