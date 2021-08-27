@@ -2200,14 +2200,9 @@ Licenses: (parsed from: `/usr/share/doc/libssh-4/copyright`)
 - `LGPL-2.1+~OpenSSL`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libssh=0.9.3-2ubuntu2.1
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.9.3-2ubuntu2.1.dsc' libssh_0.9.3-2ubuntu2.1.dsc 2538 SHA512:a0b51fd53355d282334d2ab1124de8c5995788160646d2a70a6d7027e0e2d49a82889ea9aa4a6d3ee0a7aaa7389370b49507bb24a6144578928417fafb47b29c
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.9.3.orig.tar.xz' libssh_0.9.3.orig.tar.xz 500068 SHA512:6e59718565daeca6d224426cc1095a112deff9af8e0b021917e04f08bb7409263c35724de95f591f38e26f0fb3bbbbc69b679b6775edc21dec158d241b076c6f
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.9.3-2ubuntu2.1.debian.tar.xz' libssh_0.9.3-2ubuntu2.1.debian.tar.xz 28488 SHA512:cecd6d2f385fa4c440aa03a7d864387bb1d5ca2f2e252103c295b1596b8b1336bfdefa2dd38ffaf7396423c9b7dafe005896177ded669a5790fd7320643d01b4
-```
 
 ### `dpkg` source package: `libtasn1-6=4.16.0-2`
 
@@ -3010,14 +3005,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssl=1.1.1f-1ubuntu2.5
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.5.dsc' openssl_1.1.1f-1ubuntu2.5.dsc 2121 SHA512:e7c87002c1201f472137c746cebf0d11cc038af4743a5ba8c80a00d1c2d9764edd94a93a0c9054602332511cb027eff48bed13d1df047dd3a0060b71d7c69e9c
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f.orig.tar.gz' openssl_1.1.1f.orig.tar.gz 9792828 SHA512:b00bd9b5ad5298fbceeec6bb19c1ab0c106ca5cfb31178497c58bf7e0e0cf30fcc19c20f84e23af31cc126bf2447d3e4f8461db97bafa7bd78f69561932f000c
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.5.debian.tar.xz' openssl_1.1.1f-1ubuntu2.5.debian.tar.xz 156860 SHA512:0362b6abd1b5c456cc6d4ebde41f4d1b4b2c84ebbefa62e438397ff3f6e93cadfffc9e452d2b697137140d2aa3c0599412d419a926b0d2fb088a52edb6c35ffc
-```
 
 ### `dpkg` source package: `orc=1:0.4.31-1`
 

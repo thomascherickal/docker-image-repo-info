@@ -3010,14 +3010,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssl=1.1.1f-1ubuntu2.5
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.5.dsc' openssl_1.1.1f-1ubuntu2.5.dsc 2121 SHA512:e7c87002c1201f472137c746cebf0d11cc038af4743a5ba8c80a00d1c2d9764edd94a93a0c9054602332511cb027eff48bed13d1df047dd3a0060b71d7c69e9c
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f.orig.tar.gz' openssl_1.1.1f.orig.tar.gz 9792828 SHA512:b00bd9b5ad5298fbceeec6bb19c1ab0c106ca5cfb31178497c58bf7e0e0cf30fcc19c20f84e23af31cc126bf2447d3e4f8461db97bafa7bd78f69561932f000c
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.5.debian.tar.xz' openssl_1.1.1f-1ubuntu2.5.debian.tar.xz 156860 SHA512:0362b6abd1b5c456cc6d4ebde41f4d1b4b2c84ebbefa62e438397ff3f6e93cadfffc9e452d2b697137140d2aa3c0599412d419a926b0d2fb088a52edb6c35ffc
-```
 
 ### `dpkg` source package: `orc=1:0.4.31-1`
 
