@@ -1,7 +1,7 @@
 ## `kong:ubuntu`
 
 ```console
-$ docker pull kong@sha256:a1786c5e1fc02cd1a888e72ffc2e4d2cd20cead15f7b35b19af0b0c22477a9ab
+$ docker pull kong@sha256:4f1b4ceceeb572651241f05b2e7b3f3555eb26dda5a8e826e22d970184614e99
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -97,84 +97,84 @@ CMD ["kong" "docker-start"]
 ### `kong:ubuntu` - linux; arm64 variant v8
 
 ```console
-$ docker pull kong@sha256:e0f716da0869cc0f2cd1aee90ad0799df2cdd5e0510eb0b74ce9318abe41de92
+$ docker pull kong@sha256:7fb163125ba0769471c7adccc2609abcd37c3e58afcfb159ab99aa30f5ba58f2
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **125.9 MB (125879129 bytes)**  
+-	Total Size: **125.9 MB (125879708 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4eca5e3fd794bc47bad86149231be8968f415bdd1a769e54ae2864963b6fd8ec`
+-	Image ID: `sha256:8100ea3c312d55c4a34fcf3706f2584737cc61f1662715a6dd709d77d3f79138`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["kong","docker-start"]`
 
 ```dockerfile
-# Mon, 26 Jul 2021 21:49:35 GMT
-ADD file:8d25df96ee02448d932dfa08341eceeb82da056f3ad8cbd1d8b24f44903e1891 in / 
-# Mon, 26 Jul 2021 21:49:36 GMT
+# Tue, 31 Aug 2021 01:41:19 GMT
+ADD file:3c6dc937cb7b4c81b42126f377d23320ec1d0a8ca34d38e7c45871f1d08dac43 in / 
+# Tue, 31 Aug 2021 01:41:20 GMT
 RUN set -xe 		&& echo '#!/bin/sh' > /usr/sbin/policy-rc.d 	&& echo 'exit 101' >> /usr/sbin/policy-rc.d 	&& chmod +x /usr/sbin/policy-rc.d 		&& dpkg-divert --local --rename --add /sbin/initctl 	&& cp -a /usr/sbin/policy-rc.d /sbin/initctl 	&& sed -i 's/^exit.*/exit 0/' /sbin/initctl 		&& echo 'force-unsafe-io' > /etc/dpkg/dpkg.cfg.d/docker-apt-speedup 		&& echo 'DPkg::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' > /etc/apt/apt.conf.d/docker-clean 	&& echo 'APT::Update::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' >> /etc/apt/apt.conf.d/docker-clean 	&& echo 'Dir::Cache::pkgcache ""; Dir::Cache::srcpkgcache "";' >> /etc/apt/apt.conf.d/docker-clean 		&& echo 'Acquire::Languages "none";' > /etc/apt/apt.conf.d/docker-no-languages 		&& echo 'Acquire::GzipIndexes "true"; Acquire::CompressionTypes::Order:: "gz";' > /etc/apt/apt.conf.d/docker-gzip-indexes 		&& echo 'Apt::AutoRemove::SuggestsImportant "false";' > /etc/apt/apt.conf.d/docker-autoremove-suggests
-# Mon, 26 Jul 2021 21:49:37 GMT
+# Tue, 31 Aug 2021 01:41:20 GMT
 RUN rm -rf /var/lib/apt/lists/*
-# Mon, 26 Jul 2021 21:49:38 GMT
+# Tue, 31 Aug 2021 01:41:21 GMT
 RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
-# Mon, 26 Jul 2021 21:49:38 GMT
+# Tue, 31 Aug 2021 01:41:21 GMT
 CMD ["/bin/bash"]
-# Mon, 26 Jul 2021 22:23:32 GMT
+# Tue, 31 Aug 2021 03:13:00 GMT
 ARG ASSET=ce
-# Mon, 26 Jul 2021 22:23:32 GMT
+# Tue, 31 Aug 2021 03:13:00 GMT
 ENV ASSET=ce
-# Mon, 26 Jul 2021 22:23:32 GMT
+# Tue, 31 Aug 2021 03:13:00 GMT
 ARG EE_PORTS
-# Mon, 26 Jul 2021 22:23:33 GMT
+# Tue, 31 Aug 2021 03:13:00 GMT
 COPY file:5da22ad111df95d5c0f9c17c60cd4123a51ad46a41d3f442fca7b2bcc8d7d11b in /tmp/kong.deb 
-# Mon, 26 Jul 2021 22:23:33 GMT
+# Tue, 31 Aug 2021 03:13:01 GMT
 ARG KONG_VERSION=2.5.0
-# Mon, 26 Jul 2021 22:23:33 GMT
+# Tue, 31 Aug 2021 03:13:01 GMT
 ENV KONG_VERSION=2.5.0
-# Mon, 26 Jul 2021 22:23:57 GMT
+# Tue, 31 Aug 2021 03:13:24 GMT
 RUN set -ex     && apt-get update     && if [ "$ASSET" = "ce" ] ; then       apt-get install -y curl       && curl -fL https://download.konghq.com/gateway-${KONG_VERSION%%.*}.x-ubuntu-$(cat /etc/os-release | grep UBUNTU_CODENAME | cut -d = -f 2)/pool/all/k/kong/kong_${KONG_VERSION}_$(dpkg --print-architecture).deb -o /tmp/kong.deb       && apt-get purge -y curl;     fi;     apt-get install -y --no-install-recommends unzip git     && apt install --yes /tmp/kong.deb     && rm -rf /var/lib/apt/lists/*     && rm -rf /tmp/kong.deb     && chown kong:0 /usr/local/bin/kong     && chown -R kong:0 /usr/local/kong     && ln -s /usr/local/openresty/bin/resty /usr/local/bin/resty     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/luajit     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/lua     && ln -s /usr/local/openresty/nginx/sbin/nginx /usr/local/bin/nginx     && if [ "$ASSET" = "ce" ] ; then       kong version ;     fi
-# Mon, 26 Jul 2021 22:23:57 GMT
+# Tue, 31 Aug 2021 03:13:25 GMT
 COPY file:ae813ec19d3fef1de3793f6717c2aed3a9daa94e583e9e55448084541de3c5ff in /docker-entrypoint.sh 
-# Mon, 26 Jul 2021 22:23:58 GMT
+# Tue, 31 Aug 2021 03:13:25 GMT
 USER kong
-# Mon, 26 Jul 2021 22:23:58 GMT
+# Tue, 31 Aug 2021 03:13:25 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Mon, 26 Jul 2021 22:23:58 GMT
+# Tue, 31 Aug 2021 03:13:25 GMT
 EXPOSE 8000 8001 8443 8444
-# Mon, 26 Jul 2021 22:23:58 GMT
+# Tue, 31 Aug 2021 03:13:26 GMT
 STOPSIGNAL SIGQUIT
-# Mon, 26 Jul 2021 22:23:58 GMT
+# Tue, 31 Aug 2021 03:13:26 GMT
 HEALTHCHECK &{["CMD-SHELL" "kong health"] "10s" "10s" "0s" '\n'}
-# Mon, 26 Jul 2021 22:23:58 GMT
+# Tue, 31 Aug 2021 03:13:26 GMT
 CMD ["kong" "docker-start"]
 ```
 
 -	Layers:
-	-	`sha256:2db5b739cd2a2fa296004e534a3fc4e7242f69130e59e1ff05a9e4ad4f7cd065`  
-		Last Modified: Thu, 22 Jul 2021 16:25:06 GMT  
-		Size: 41.2 MB (41238757 bytes)  
+	-	`sha256:828b35a09f0b2f3d1dead43aa2468ff5eba6c463423b3fff7ee6d150f6fd1b6b`  
+		Last Modified: Thu, 05 Aug 2021 00:25:09 GMT  
+		Size: 41.2 MB (41239253 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f93da29956c4eb74ce61ad792d432dfe58787feb50bab77ef54679401df1ea22`  
-		Last Modified: Mon, 26 Jul 2021 21:52:29 GMT  
-		Size: 855.0 B  
+	-	`sha256:85569e0c17003d9cf46a8b94076418863e0abfc5474bb830403acf246947fea7`  
+		Last Modified: Tue, 31 Aug 2021 01:43:39 GMT  
+		Size: 857.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e3db33f994681db66c25858a525daaf3fde2cab655a638ab5f8e9adefcff34ff`  
-		Last Modified: Mon, 26 Jul 2021 21:52:28 GMT  
-		Size: 468.0 B  
+	-	`sha256:a32ca509d28808ab7c61361835292ee8eddecd0c0949d658bde0ab1a77ecbf6e`  
+		Last Modified: Tue, 31 Aug 2021 01:43:39 GMT  
+		Size: 469.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8ee9f14ba300ddf2ab6c21beb83fd70be989d93c2cb9de39ef70c61e3756041`  
-		Last Modified: Mon, 26 Jul 2021 21:52:28 GMT  
-		Size: 169.0 B  
+	-	`sha256:8168af71f81f1ffa234c301e9cc2ee87b560ad8b74ef4100f8ab4a6abf3a8ad3`  
+		Last Modified: Tue, 31 Aug 2021 01:43:39 GMT  
+		Size: 171.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f61b4ca03353a137c0eec8e5b8c05271c9201300cff3bf309aa55ada3355fb8f`  
-		Last Modified: Mon, 26 Jul 2021 22:25:07 GMT  
-		Size: 25.1 MB (25081965 bytes)  
+	-	`sha256:9eee59a359925630cd377c9610b18f7d7797349cdbabeda7b8c8685852a5ff83`  
+		Last Modified: Tue, 31 Aug 2021 03:14:48 GMT  
+		Size: 25.1 MB (25081954 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6a4995f0b641f476c15fd20b4341dcc732c3794e2cd189a22c89aca2db82bbdc`  
-		Last Modified: Mon, 26 Jul 2021 22:25:16 GMT  
-		Size: 59.6 MB (59556224 bytes)  
+	-	`sha256:cbbe71eb414d43ff3fbf75c0de9133ebafceaf672848c6e2c17e4ab47780e97b`  
+		Last Modified: Tue, 31 Aug 2021 03:15:00 GMT  
+		Size: 59.6 MB (59556314 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:91b6533825bd8e2f9382796991a91ae08108f2b0d33cd2798ee732b5e926c7e8`  
-		Last Modified: Mon, 26 Jul 2021 22:25:04 GMT  
-		Size: 691.0 B  
+	-	`sha256:d4a45ed64e5c35d56c7aafb050d22218142de8f6d3142eba9294d41638844747`  
+		Last Modified: Tue, 31 Aug 2021 03:14:46 GMT  
+		Size: 690.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
