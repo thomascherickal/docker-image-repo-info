@@ -1248,7 +1248,7 @@ CMD ["irb"]
 ## `ruby:2-alpine3.13`
 
 ```console
-$ docker pull ruby@sha256:6fa6a97b89f72fd62dac3c3c5997984ae0c4c01e363190d7cc5f96c4766b9eb5
+$ docker pull ruby@sha256:6d9401bb2bbcf49decb40dd14fe810c709f6965b50b63f447db342bbcba57a98
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1327,66 +1327,66 @@ CMD ["irb"]
 ### `ruby:2-alpine3.13` - linux; arm64 variant v8
 
 ```console
-$ docker pull ruby@sha256:43a7f75024f5d4afb17ab8e83c0695f1376df06d1b7797edfad4fbfd9b7c0e38
+$ docker pull ruby@sha256:735d9111fa60e38c856dca768862070986095b94af7902cce67ab20392bdb470
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **20.5 MB (20508145 bytes)**  
+-	Total Size: **20.1 MB (20100362 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:94a6c844f0d9120f4174ea03b7447744679d56320025db7d2a2d8aa9bc123d33`
+-	Image ID: `sha256:c061123aca4bfa67abb59bcfd590c6afb48a9411bcb29373862651ca37c85ac0`
 -	Default Command: `["irb"]`
 
 ```dockerfile
-# Tue, 15 Jun 2021 21:45:03 GMT
-ADD file:ca9d8b5d1cc2f2186983fc6b9507da6ada5eb92f2b518c06af1128d5396c6f34 in / 
-# Tue, 15 Jun 2021 21:45:04 GMT
+# Wed, 01 Sep 2021 02:50:45 GMT
+ADD file:924de68748d5d710724ceb45b3bff9d38eedcad50d5744be4ce74f8f731a791f in / 
+# Wed, 01 Sep 2021 02:50:45 GMT
 CMD ["/bin/sh"]
-# Thu, 08 Jul 2021 20:38:23 GMT
+# Wed, 01 Sep 2021 14:56:42 GMT
 RUN set -eux; 	apk add --no-cache 		bzip2 		ca-certificates 		gmp-dev 		libffi-dev 		procps 		yaml-dev 		zlib-dev 	;
-# Thu, 08 Jul 2021 20:38:24 GMT
+# Wed, 01 Sep 2021 14:56:43 GMT
 RUN set -eux; 	mkdir -p /usr/local/etc; 	{ 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /usr/local/etc/gemrc
-# Thu, 08 Jul 2021 20:38:24 GMT
+# Wed, 01 Sep 2021 14:56:43 GMT
 ENV LANG=C.UTF-8
-# Thu, 08 Jul 2021 20:48:24 GMT
+# Wed, 01 Sep 2021 15:00:21 GMT
 ENV RUBY_MAJOR=2.7
-# Thu, 08 Jul 2021 20:48:24 GMT
+# Wed, 01 Sep 2021 15:00:21 GMT
 ENV RUBY_VERSION=2.7.4
-# Thu, 08 Jul 2021 20:48:24 GMT
+# Wed, 01 Sep 2021 15:00:22 GMT
 ENV RUBY_DOWNLOAD_SHA256=2a80824e0ad6100826b69b9890bf55cfc4cf2b61a1e1330fccbcb30c46cef8d7
-# Thu, 08 Jul 2021 20:50:48 GMT
+# Wed, 01 Sep 2021 15:02:37 GMT
 RUN set -eux; 		apk add --no-cache --virtual .ruby-builddeps 		autoconf 		bison 		bzip2 		bzip2-dev 		ca-certificates 		coreutils 		dpkg-dev dpkg 		g++ 		gcc 		gdbm-dev 		glib-dev 		libc-dev 		libffi-dev 		libxml2-dev 		libxslt-dev 		linux-headers 		make 		ncurses-dev 		openssl 		openssl-dev 		patch 		procps 		readline-dev 		ruby 		tar 		xz 		yaml-dev 		zlib-dev 	; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		wget -O 'thread-stack-fix.patch' 'https://bugs.ruby-lang.org/attachments/download/7081/0001-thread_pthread.c-make-get_main_stack-portable-on-lin.patch'; 	echo '3ab628a51d92fdf0d2b5835e93564857aea73e0c1de00313864a94a6255cb645 *thread-stack-fix.patch' | sha256sum --check --strict; 	patch -p1 -i thread-stack-fix.patch; 	rm thread-stack-fix.patch; 		export ac_cv_func_isnan=yes ac_cv_func_isinf=yes; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .ruby-rundeps $runDeps; 	apk del --no-network .ruby-builddeps; 		cd /; 	rm -r /usr/src/ruby; 	if 		apk --no-network list --installed 			| grep -v '^[.]ruby-rundeps' 			| grep -i ruby 	; then 		exit 1; 	fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Thu, 08 Jul 2021 20:50:48 GMT
+# Wed, 01 Sep 2021 15:02:37 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Thu, 08 Jul 2021 20:50:48 GMT
+# Wed, 01 Sep 2021 15:02:38 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Thu, 08 Jul 2021 20:50:48 GMT
+# Wed, 01 Sep 2021 15:02:38 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 08 Jul 2021 20:50:49 GMT
+# Wed, 01 Sep 2021 15:02:38 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Thu, 08 Jul 2021 20:50:49 GMT
+# Wed, 01 Sep 2021 15:02:39 GMT
 CMD ["irb"]
 ```
 
 -	Layers:
-	-	`sha256:595b0fe564bb9444ebfe78288079a01ee6d7f666544028d5e96ba610f909ee43`  
-		Last Modified: Wed, 14 Apr 2021 18:43:41 GMT  
-		Size: 2.7 MB (2712026 bytes)  
+	-	`sha256:bbf911997326f5b56d515142e8dbdbe01d2f308276938ddbce3ab347584ed8ce`  
+		Last Modified: Wed, 01 Sep 2021 02:51:37 GMT  
+		Size: 2.7 MB (2713008 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fae389540fbfffc29f2ee608b9c77aa63679e657b9225ebe36da9c5c658154b1`  
-		Last Modified: Thu, 08 Jul 2021 21:08:55 GMT  
-		Size: 3.6 MB (3567526 bytes)  
+	-	`sha256:fb5eb46886b44d5877840240664b5e53b371e8b9be313dd15ff6af47650f26e5`  
+		Last Modified: Wed, 01 Sep 2021 15:09:00 GMT  
+		Size: 3.6 MB (3567519 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:96f1c94fc30766c7f725a4e03dcf8b6032aece9e68e8cc1538f69fdf699fea76`  
-		Last Modified: Thu, 08 Jul 2021 21:08:55 GMT  
-		Size: 223.0 B  
+	-	`sha256:b1775b8c4d8708ec11bb8142290e2811bafe9fbdcdbec4bd15e071c2743d4404`  
+		Last Modified: Wed, 01 Sep 2021 15:09:00 GMT  
+		Size: 222.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c9d74c74e5ac84487867ee30f04628c6679524886ce09c72e790c491154cf0ae`  
-		Last Modified: Thu, 08 Jul 2021 21:10:43 GMT  
-		Size: 14.2 MB (14228197 bytes)  
+	-	`sha256:0aa45cacedd9d25610e1a339d257bfb47491038c740fe3d3e8ef1be6f7831d26`  
+		Last Modified: Wed, 01 Sep 2021 15:09:40 GMT  
+		Size: 13.8 MB (13819440 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c3eee21e9938c36dff9d6190f7e259d3a67b11e9a62265e583098259ec7d43cd`  
-		Last Modified: Thu, 08 Jul 2021 21:10:41 GMT  
+	-	`sha256:fce84c4b904b9e2f2bf1e1fd9eba6d2480daf953f7637fcb34e66d7b76a510b2`  
+		Last Modified: Wed, 01 Sep 2021 15:09:38 GMT  
 		Size: 173.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -5982,7 +5982,7 @@ CMD ["irb"]
 ## `ruby:2.6-alpine3.13`
 
 ```console
-$ docker pull ruby@sha256:73bb287fe01a1e418156a8f0be83477e52c94646dbab846b7aadcc8c03b7e054
+$ docker pull ruby@sha256:7980d9e5b741d49eb0ad1ae307ab9aa6f6f5bacdf71ae7f67ad3e060a1f9c44f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6196,67 +6196,67 @@ CMD ["irb"]
 ### `ruby:2.6-alpine3.13` - linux; arm64 variant v8
 
 ```console
-$ docker pull ruby@sha256:688573b4462ec21479fb14fd03b4cf1c9da3f739d1bdf722109d96c9511ac76c
+$ docker pull ruby@sha256:cb98e2a29221eac42a71b3dc8137f7ed9cfebd9d54cb98af53c67c1a2799afd5
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **26.0 MB (26034440 bytes)**  
+-	Total Size: **25.6 MB (25632504 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e8036e4f82cbe86675af9ee7a18c059c178013e3dfb9c7834995bf9b607a11e3`
+-	Image ID: `sha256:c079dad00fa7f8fd133ef4e6ed869d4496d4aff007a551f88a104e1553ffa7e1`
 -	Default Command: `["irb"]`
 
 ```dockerfile
-# Tue, 15 Jun 2021 21:45:03 GMT
-ADD file:ca9d8b5d1cc2f2186983fc6b9507da6ada5eb92f2b518c06af1128d5396c6f34 in / 
-# Tue, 15 Jun 2021 21:45:04 GMT
+# Wed, 01 Sep 2021 02:50:45 GMT
+ADD file:924de68748d5d710724ceb45b3bff9d38eedcad50d5744be4ce74f8f731a791f in / 
+# Wed, 01 Sep 2021 02:50:45 GMT
 CMD ["/bin/sh"]
-# Thu, 08 Jul 2021 20:38:23 GMT
+# Wed, 01 Sep 2021 14:56:42 GMT
 RUN set -eux; 	apk add --no-cache 		bzip2 		ca-certificates 		gmp-dev 		libffi-dev 		procps 		yaml-dev 		zlib-dev 	;
-# Thu, 08 Jul 2021 20:38:24 GMT
+# Wed, 01 Sep 2021 14:56:43 GMT
 RUN set -eux; 	mkdir -p /usr/local/etc; 	{ 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /usr/local/etc/gemrc
-# Thu, 08 Jul 2021 20:38:24 GMT
+# Wed, 01 Sep 2021 14:56:43 GMT
 ENV LANG=C.UTF-8
-# Thu, 08 Jul 2021 21:02:11 GMT
+# Wed, 01 Sep 2021 15:03:12 GMT
 ENV RUBY_MAJOR=2.6
-# Thu, 08 Jul 2021 21:02:11 GMT
+# Wed, 01 Sep 2021 15:03:12 GMT
 ENV RUBY_VERSION=2.6.8
-# Thu, 08 Jul 2021 21:02:11 GMT
+# Wed, 01 Sep 2021 15:03:12 GMT
 ENV RUBY_DOWNLOAD_SHA256=8262e4663169c85787fdc9bfbd04d9eb86eb2a4b56d7f98373a8fcaa18e593eb
-# Thu, 08 Jul 2021 21:04:44 GMT
+# Wed, 01 Sep 2021 15:05:37 GMT
 RUN set -eux; 		apk add --no-cache --virtual .ruby-builddeps 		autoconf 		bison 		bzip2 		bzip2-dev 		ca-certificates 		coreutils 		dpkg-dev dpkg 		g++ 		gcc 		gdbm-dev 		glib-dev 		libc-dev 		libffi-dev 		libxml2-dev 		libxslt-dev 		linux-headers 		make 		ncurses-dev 		openssl 		openssl-dev 		patch 		procps 		readline-dev 		ruby 		tar 		xz 		yaml-dev 		zlib-dev 	; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		wget -O 'thread-stack-fix.patch' 'https://bugs.ruby-lang.org/attachments/download/7081/0001-thread_pthread.c-make-get_main_stack-portable-on-lin.patch'; 	echo '3ab628a51d92fdf0d2b5835e93564857aea73e0c1de00313864a94a6255cb645 *thread-stack-fix.patch' | sha256sum --check --strict; 	patch -p1 -i thread-stack-fix.patch; 	rm thread-stack-fix.patch; 		export ac_cv_func_isnan=yes ac_cv_func_isinf=yes; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .ruby-rundeps $runDeps; 	apk del --no-network .ruby-builddeps; 		cd /; 	rm -r /usr/src/ruby; 	if 		apk --no-network list --installed 			| grep -v '^[.]ruby-rundeps' 			| grep -i ruby 	; then 		exit 1; 	fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Thu, 08 Jul 2021 21:04:45 GMT
+# Wed, 01 Sep 2021 15:05:37 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Thu, 08 Jul 2021 21:04:45 GMT
+# Wed, 01 Sep 2021 15:05:37 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Thu, 08 Jul 2021 21:04:45 GMT
+# Wed, 01 Sep 2021 15:05:38 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 08 Jul 2021 21:04:46 GMT
+# Wed, 01 Sep 2021 15:05:38 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Thu, 08 Jul 2021 21:04:46 GMT
+# Wed, 01 Sep 2021 15:05:38 GMT
 CMD ["irb"]
 ```
 
 -	Layers:
-	-	`sha256:595b0fe564bb9444ebfe78288079a01ee6d7f666544028d5e96ba610f909ee43`  
-		Last Modified: Wed, 14 Apr 2021 18:43:41 GMT  
-		Size: 2.7 MB (2712026 bytes)  
+	-	`sha256:bbf911997326f5b56d515142e8dbdbe01d2f308276938ddbce3ab347584ed8ce`  
+		Last Modified: Wed, 01 Sep 2021 02:51:37 GMT  
+		Size: 2.7 MB (2713008 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fae389540fbfffc29f2ee608b9c77aa63679e657b9225ebe36da9c5c658154b1`  
-		Last Modified: Thu, 08 Jul 2021 21:08:55 GMT  
-		Size: 3.6 MB (3567526 bytes)  
+	-	`sha256:fb5eb46886b44d5877840240664b5e53b371e8b9be313dd15ff6af47650f26e5`  
+		Last Modified: Wed, 01 Sep 2021 15:09:00 GMT  
+		Size: 3.6 MB (3567519 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:96f1c94fc30766c7f725a4e03dcf8b6032aece9e68e8cc1538f69fdf699fea76`  
-		Last Modified: Thu, 08 Jul 2021 21:08:55 GMT  
-		Size: 223.0 B  
+	-	`sha256:b1775b8c4d8708ec11bb8142290e2811bafe9fbdcdbec4bd15e071c2743d4404`  
+		Last Modified: Wed, 01 Sep 2021 15:09:00 GMT  
+		Size: 222.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:adbe7589b620fb95c73ceb834fcf855373326867caa29d1293c3f2e34d0320a2`  
-		Last Modified: Thu, 08 Jul 2021 21:12:32 GMT  
-		Size: 19.8 MB (19754493 bytes)  
+	-	`sha256:bd58da725ad9dc5438cb4fc851602fb8d60f7fe8bb46d7aa74079c496755d864`  
+		Last Modified: Wed, 01 Sep 2021 15:10:10 GMT  
+		Size: 19.4 MB (19351582 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:833831d7e5e6f814a8c9aa8d016ee23c0ae2a29b17cbf3232dc7f25d7f85567f`  
-		Last Modified: Thu, 08 Jul 2021 21:12:30 GMT  
-		Size: 172.0 B  
+	-	`sha256:0df39103aa31338f1c4d91f91a06567c4829ab1a74c3d724ca1aa4bd09c2af3b`  
+		Last Modified: Wed, 01 Sep 2021 15:10:08 GMT  
+		Size: 173.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ruby:2.6-alpine3.13` - linux; 386
@@ -6394,67 +6394,67 @@ CMD ["irb"]
 ### `ruby:2.6-alpine3.13` - linux; s390x
 
 ```console
-$ docker pull ruby@sha256:191856c3bc393c442b39427cedd0b0292db88c6f77efeaa6ea7446b4aa73cbf3
+$ docker pull ruby@sha256:2aaf64f0fd4fd84881cefe4fc8238f881bc1e0b6d6255d5e77fe02de42c0bd94
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **26.3 MB (26340807 bytes)**  
+-	Total Size: **25.9 MB (25939289 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0e8f9877e81be0adcd2f0ed50bb6fb14f13808f8786e10a63b6a0b3b14ffb95d`
+-	Image ID: `sha256:aed606b0e9dfd21824f7a57e6efd9c72500ae4a90b69a777a28307535180aa63`
 -	Default Command: `["irb"]`
 
 ```dockerfile
-# Fri, 30 Jul 2021 17:41:41 GMT
-ADD file:c715fef757fe2b022ae1bbff71dbc58bddf5a858deb0aac5a6fbcf10d5f3111c in / 
-# Fri, 30 Jul 2021 17:41:42 GMT
+# Wed, 01 Sep 2021 01:15:21 GMT
+ADD file:def74c9e73d87d3c8b94cc0200f2723aea3a7462f8d2e0852db9da25c19855ac in / 
+# Wed, 01 Sep 2021 01:15:22 GMT
 CMD ["/bin/sh"]
-# Sat, 31 Jul 2021 05:15:42 GMT
+# Wed, 01 Sep 2021 15:12:16 GMT
 RUN set -eux; 	apk add --no-cache 		bzip2 		ca-certificates 		gmp-dev 		libffi-dev 		procps 		yaml-dev 		zlib-dev 	;
-# Sat, 31 Jul 2021 05:15:43 GMT
+# Wed, 01 Sep 2021 15:12:17 GMT
 RUN set -eux; 	mkdir -p /usr/local/etc; 	{ 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /usr/local/etc/gemrc
-# Sat, 31 Jul 2021 05:15:43 GMT
+# Wed, 01 Sep 2021 15:12:17 GMT
 ENV LANG=C.UTF-8
-# Sat, 31 Jul 2021 05:27:58 GMT
+# Wed, 01 Sep 2021 15:27:50 GMT
 ENV RUBY_MAJOR=2.6
-# Sat, 31 Jul 2021 05:27:58 GMT
+# Wed, 01 Sep 2021 15:27:50 GMT
 ENV RUBY_VERSION=2.6.8
-# Sat, 31 Jul 2021 05:27:59 GMT
+# Wed, 01 Sep 2021 15:27:50 GMT
 ENV RUBY_DOWNLOAD_SHA256=8262e4663169c85787fdc9bfbd04d9eb86eb2a4b56d7f98373a8fcaa18e593eb
-# Sat, 31 Jul 2021 05:29:57 GMT
+# Wed, 01 Sep 2021 15:30:19 GMT
 RUN set -eux; 		apk add --no-cache --virtual .ruby-builddeps 		autoconf 		bison 		bzip2 		bzip2-dev 		ca-certificates 		coreutils 		dpkg-dev dpkg 		g++ 		gcc 		gdbm-dev 		glib-dev 		libc-dev 		libffi-dev 		libxml2-dev 		libxslt-dev 		linux-headers 		make 		ncurses-dev 		openssl 		openssl-dev 		patch 		procps 		readline-dev 		ruby 		tar 		xz 		yaml-dev 		zlib-dev 	; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		wget -O 'thread-stack-fix.patch' 'https://bugs.ruby-lang.org/attachments/download/7081/0001-thread_pthread.c-make-get_main_stack-portable-on-lin.patch'; 	echo '3ab628a51d92fdf0d2b5835e93564857aea73e0c1de00313864a94a6255cb645 *thread-stack-fix.patch' | sha256sum --check --strict; 	patch -p1 -i thread-stack-fix.patch; 	rm thread-stack-fix.patch; 		export ac_cv_func_isnan=yes ac_cv_func_isinf=yes; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .ruby-rundeps $runDeps; 	apk del --no-network .ruby-builddeps; 		cd /; 	rm -r /usr/src/ruby; 	if 		apk --no-network list --installed 			| grep -v '^[.]ruby-rundeps' 			| grep -i ruby 	; then 		exit 1; 	fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Sat, 31 Jul 2021 05:29:58 GMT
+# Wed, 01 Sep 2021 15:30:21 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Sat, 31 Jul 2021 05:29:58 GMT
+# Wed, 01 Sep 2021 15:30:22 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Sat, 31 Jul 2021 05:29:58 GMT
+# Wed, 01 Sep 2021 15:30:22 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sat, 31 Jul 2021 05:29:59 GMT
+# Wed, 01 Sep 2021 15:30:23 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Sat, 31 Jul 2021 05:29:59 GMT
+# Wed, 01 Sep 2021 15:30:23 GMT
 CMD ["irb"]
 ```
 
 -	Layers:
-	-	`sha256:afadee6ad6a38d3172beeeca818219604c782efbe93201ef4d39512f289b05ae`  
-		Last Modified: Wed, 14 Apr 2021 18:42:16 GMT  
-		Size: 2.6 MB (2602650 bytes)  
+	-	`sha256:c1d78e8a87395f597d24b8eb78423ccdcfd404846906154e15aea8be9541c3ae`  
+		Last Modified: Wed, 01 Sep 2021 01:16:19 GMT  
+		Size: 2.6 MB (2604390 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ffb70ae738f00ff7e7b229836f34471fe6cfebc08cfa500b1c425cc9d1f4e5cc`  
-		Last Modified: Sat, 31 Jul 2021 05:31:58 GMT  
-		Size: 3.7 MB (3675365 bytes)  
+	-	`sha256:f2ee95f506ad0c3bdbffa7f9c55165d50ce360a478cc139c66ecad1cfa2329bb`  
+		Last Modified: Wed, 01 Sep 2021 15:33:22 GMT  
+		Size: 3.7 MB (3675272 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e5e4b26fe512b6f64be7ebee4fc51ec347f697363c41a4a2b2646343e79626b4`  
-		Last Modified: Sat, 31 Jul 2021 05:31:57 GMT  
-		Size: 222.0 B  
+	-	`sha256:1191fde9ab356b9710d44d102febf6ed4763bc6ba8dc75c09cdea52179c589bb`  
+		Last Modified: Wed, 01 Sep 2021 15:33:21 GMT  
+		Size: 223.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:28088c890ea8fbe2c081153f402f6c8737afa9f0023955fa8219289d27d034bf`  
-		Last Modified: Sat, 31 Jul 2021 05:31:59 GMT  
-		Size: 20.1 MB (20062399 bytes)  
+	-	`sha256:b2d94909f1cb244a32bcf5538bf19fad145ee7251e40d79f89e6f93bf114292e`  
+		Last Modified: Wed, 01 Sep 2021 15:33:23 GMT  
+		Size: 19.7 MB (19659232 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:958a077bdc455c2ab873a05e26ca4fd3454544a8a4652a7cc7183eb25a6675d9`  
-		Last Modified: Sat, 31 Jul 2021 05:31:57 GMT  
-		Size: 171.0 B  
+	-	`sha256:bce0d6a68fd217e48f126cd0f9da47952befc9f7ed21f97d1558af7689180eac`  
+		Last Modified: Wed, 01 Sep 2021 15:33:21 GMT  
+		Size: 172.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `ruby:2.6-alpine3.14`
@@ -11118,7 +11118,7 @@ CMD ["irb"]
 ## `ruby:2.6.8-alpine3.13`
 
 ```console
-$ docker pull ruby@sha256:73bb287fe01a1e418156a8f0be83477e52c94646dbab846b7aadcc8c03b7e054
+$ docker pull ruby@sha256:7980d9e5b741d49eb0ad1ae307ab9aa6f6f5bacdf71ae7f67ad3e060a1f9c44f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11332,67 +11332,67 @@ CMD ["irb"]
 ### `ruby:2.6.8-alpine3.13` - linux; arm64 variant v8
 
 ```console
-$ docker pull ruby@sha256:688573b4462ec21479fb14fd03b4cf1c9da3f739d1bdf722109d96c9511ac76c
+$ docker pull ruby@sha256:cb98e2a29221eac42a71b3dc8137f7ed9cfebd9d54cb98af53c67c1a2799afd5
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **26.0 MB (26034440 bytes)**  
+-	Total Size: **25.6 MB (25632504 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e8036e4f82cbe86675af9ee7a18c059c178013e3dfb9c7834995bf9b607a11e3`
+-	Image ID: `sha256:c079dad00fa7f8fd133ef4e6ed869d4496d4aff007a551f88a104e1553ffa7e1`
 -	Default Command: `["irb"]`
 
 ```dockerfile
-# Tue, 15 Jun 2021 21:45:03 GMT
-ADD file:ca9d8b5d1cc2f2186983fc6b9507da6ada5eb92f2b518c06af1128d5396c6f34 in / 
-# Tue, 15 Jun 2021 21:45:04 GMT
+# Wed, 01 Sep 2021 02:50:45 GMT
+ADD file:924de68748d5d710724ceb45b3bff9d38eedcad50d5744be4ce74f8f731a791f in / 
+# Wed, 01 Sep 2021 02:50:45 GMT
 CMD ["/bin/sh"]
-# Thu, 08 Jul 2021 20:38:23 GMT
+# Wed, 01 Sep 2021 14:56:42 GMT
 RUN set -eux; 	apk add --no-cache 		bzip2 		ca-certificates 		gmp-dev 		libffi-dev 		procps 		yaml-dev 		zlib-dev 	;
-# Thu, 08 Jul 2021 20:38:24 GMT
+# Wed, 01 Sep 2021 14:56:43 GMT
 RUN set -eux; 	mkdir -p /usr/local/etc; 	{ 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /usr/local/etc/gemrc
-# Thu, 08 Jul 2021 20:38:24 GMT
+# Wed, 01 Sep 2021 14:56:43 GMT
 ENV LANG=C.UTF-8
-# Thu, 08 Jul 2021 21:02:11 GMT
+# Wed, 01 Sep 2021 15:03:12 GMT
 ENV RUBY_MAJOR=2.6
-# Thu, 08 Jul 2021 21:02:11 GMT
+# Wed, 01 Sep 2021 15:03:12 GMT
 ENV RUBY_VERSION=2.6.8
-# Thu, 08 Jul 2021 21:02:11 GMT
+# Wed, 01 Sep 2021 15:03:12 GMT
 ENV RUBY_DOWNLOAD_SHA256=8262e4663169c85787fdc9bfbd04d9eb86eb2a4b56d7f98373a8fcaa18e593eb
-# Thu, 08 Jul 2021 21:04:44 GMT
+# Wed, 01 Sep 2021 15:05:37 GMT
 RUN set -eux; 		apk add --no-cache --virtual .ruby-builddeps 		autoconf 		bison 		bzip2 		bzip2-dev 		ca-certificates 		coreutils 		dpkg-dev dpkg 		g++ 		gcc 		gdbm-dev 		glib-dev 		libc-dev 		libffi-dev 		libxml2-dev 		libxslt-dev 		linux-headers 		make 		ncurses-dev 		openssl 		openssl-dev 		patch 		procps 		readline-dev 		ruby 		tar 		xz 		yaml-dev 		zlib-dev 	; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		wget -O 'thread-stack-fix.patch' 'https://bugs.ruby-lang.org/attachments/download/7081/0001-thread_pthread.c-make-get_main_stack-portable-on-lin.patch'; 	echo '3ab628a51d92fdf0d2b5835e93564857aea73e0c1de00313864a94a6255cb645 *thread-stack-fix.patch' | sha256sum --check --strict; 	patch -p1 -i thread-stack-fix.patch; 	rm thread-stack-fix.patch; 		export ac_cv_func_isnan=yes ac_cv_func_isinf=yes; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .ruby-rundeps $runDeps; 	apk del --no-network .ruby-builddeps; 		cd /; 	rm -r /usr/src/ruby; 	if 		apk --no-network list --installed 			| grep -v '^[.]ruby-rundeps' 			| grep -i ruby 	; then 		exit 1; 	fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Thu, 08 Jul 2021 21:04:45 GMT
+# Wed, 01 Sep 2021 15:05:37 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Thu, 08 Jul 2021 21:04:45 GMT
+# Wed, 01 Sep 2021 15:05:37 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Thu, 08 Jul 2021 21:04:45 GMT
+# Wed, 01 Sep 2021 15:05:38 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 08 Jul 2021 21:04:46 GMT
+# Wed, 01 Sep 2021 15:05:38 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Thu, 08 Jul 2021 21:04:46 GMT
+# Wed, 01 Sep 2021 15:05:38 GMT
 CMD ["irb"]
 ```
 
 -	Layers:
-	-	`sha256:595b0fe564bb9444ebfe78288079a01ee6d7f666544028d5e96ba610f909ee43`  
-		Last Modified: Wed, 14 Apr 2021 18:43:41 GMT  
-		Size: 2.7 MB (2712026 bytes)  
+	-	`sha256:bbf911997326f5b56d515142e8dbdbe01d2f308276938ddbce3ab347584ed8ce`  
+		Last Modified: Wed, 01 Sep 2021 02:51:37 GMT  
+		Size: 2.7 MB (2713008 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fae389540fbfffc29f2ee608b9c77aa63679e657b9225ebe36da9c5c658154b1`  
-		Last Modified: Thu, 08 Jul 2021 21:08:55 GMT  
-		Size: 3.6 MB (3567526 bytes)  
+	-	`sha256:fb5eb46886b44d5877840240664b5e53b371e8b9be313dd15ff6af47650f26e5`  
+		Last Modified: Wed, 01 Sep 2021 15:09:00 GMT  
+		Size: 3.6 MB (3567519 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:96f1c94fc30766c7f725a4e03dcf8b6032aece9e68e8cc1538f69fdf699fea76`  
-		Last Modified: Thu, 08 Jul 2021 21:08:55 GMT  
-		Size: 223.0 B  
+	-	`sha256:b1775b8c4d8708ec11bb8142290e2811bafe9fbdcdbec4bd15e071c2743d4404`  
+		Last Modified: Wed, 01 Sep 2021 15:09:00 GMT  
+		Size: 222.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:adbe7589b620fb95c73ceb834fcf855373326867caa29d1293c3f2e34d0320a2`  
-		Last Modified: Thu, 08 Jul 2021 21:12:32 GMT  
-		Size: 19.8 MB (19754493 bytes)  
+	-	`sha256:bd58da725ad9dc5438cb4fc851602fb8d60f7fe8bb46d7aa74079c496755d864`  
+		Last Modified: Wed, 01 Sep 2021 15:10:10 GMT  
+		Size: 19.4 MB (19351582 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:833831d7e5e6f814a8c9aa8d016ee23c0ae2a29b17cbf3232dc7f25d7f85567f`  
-		Last Modified: Thu, 08 Jul 2021 21:12:30 GMT  
-		Size: 172.0 B  
+	-	`sha256:0df39103aa31338f1c4d91f91a06567c4829ab1a74c3d724ca1aa4bd09c2af3b`  
+		Last Modified: Wed, 01 Sep 2021 15:10:08 GMT  
+		Size: 173.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ruby:2.6.8-alpine3.13` - linux; 386
@@ -11530,67 +11530,67 @@ CMD ["irb"]
 ### `ruby:2.6.8-alpine3.13` - linux; s390x
 
 ```console
-$ docker pull ruby@sha256:191856c3bc393c442b39427cedd0b0292db88c6f77efeaa6ea7446b4aa73cbf3
+$ docker pull ruby@sha256:2aaf64f0fd4fd84881cefe4fc8238f881bc1e0b6d6255d5e77fe02de42c0bd94
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **26.3 MB (26340807 bytes)**  
+-	Total Size: **25.9 MB (25939289 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0e8f9877e81be0adcd2f0ed50bb6fb14f13808f8786e10a63b6a0b3b14ffb95d`
+-	Image ID: `sha256:aed606b0e9dfd21824f7a57e6efd9c72500ae4a90b69a777a28307535180aa63`
 -	Default Command: `["irb"]`
 
 ```dockerfile
-# Fri, 30 Jul 2021 17:41:41 GMT
-ADD file:c715fef757fe2b022ae1bbff71dbc58bddf5a858deb0aac5a6fbcf10d5f3111c in / 
-# Fri, 30 Jul 2021 17:41:42 GMT
+# Wed, 01 Sep 2021 01:15:21 GMT
+ADD file:def74c9e73d87d3c8b94cc0200f2723aea3a7462f8d2e0852db9da25c19855ac in / 
+# Wed, 01 Sep 2021 01:15:22 GMT
 CMD ["/bin/sh"]
-# Sat, 31 Jul 2021 05:15:42 GMT
+# Wed, 01 Sep 2021 15:12:16 GMT
 RUN set -eux; 	apk add --no-cache 		bzip2 		ca-certificates 		gmp-dev 		libffi-dev 		procps 		yaml-dev 		zlib-dev 	;
-# Sat, 31 Jul 2021 05:15:43 GMT
+# Wed, 01 Sep 2021 15:12:17 GMT
 RUN set -eux; 	mkdir -p /usr/local/etc; 	{ 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /usr/local/etc/gemrc
-# Sat, 31 Jul 2021 05:15:43 GMT
+# Wed, 01 Sep 2021 15:12:17 GMT
 ENV LANG=C.UTF-8
-# Sat, 31 Jul 2021 05:27:58 GMT
+# Wed, 01 Sep 2021 15:27:50 GMT
 ENV RUBY_MAJOR=2.6
-# Sat, 31 Jul 2021 05:27:58 GMT
+# Wed, 01 Sep 2021 15:27:50 GMT
 ENV RUBY_VERSION=2.6.8
-# Sat, 31 Jul 2021 05:27:59 GMT
+# Wed, 01 Sep 2021 15:27:50 GMT
 ENV RUBY_DOWNLOAD_SHA256=8262e4663169c85787fdc9bfbd04d9eb86eb2a4b56d7f98373a8fcaa18e593eb
-# Sat, 31 Jul 2021 05:29:57 GMT
+# Wed, 01 Sep 2021 15:30:19 GMT
 RUN set -eux; 		apk add --no-cache --virtual .ruby-builddeps 		autoconf 		bison 		bzip2 		bzip2-dev 		ca-certificates 		coreutils 		dpkg-dev dpkg 		g++ 		gcc 		gdbm-dev 		glib-dev 		libc-dev 		libffi-dev 		libxml2-dev 		libxslt-dev 		linux-headers 		make 		ncurses-dev 		openssl 		openssl-dev 		patch 		procps 		readline-dev 		ruby 		tar 		xz 		yaml-dev 		zlib-dev 	; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		wget -O 'thread-stack-fix.patch' 'https://bugs.ruby-lang.org/attachments/download/7081/0001-thread_pthread.c-make-get_main_stack-portable-on-lin.patch'; 	echo '3ab628a51d92fdf0d2b5835e93564857aea73e0c1de00313864a94a6255cb645 *thread-stack-fix.patch' | sha256sum --check --strict; 	patch -p1 -i thread-stack-fix.patch; 	rm thread-stack-fix.patch; 		export ac_cv_func_isnan=yes ac_cv_func_isinf=yes; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .ruby-rundeps $runDeps; 	apk del --no-network .ruby-builddeps; 		cd /; 	rm -r /usr/src/ruby; 	if 		apk --no-network list --installed 			| grep -v '^[.]ruby-rundeps' 			| grep -i ruby 	; then 		exit 1; 	fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Sat, 31 Jul 2021 05:29:58 GMT
+# Wed, 01 Sep 2021 15:30:21 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Sat, 31 Jul 2021 05:29:58 GMT
+# Wed, 01 Sep 2021 15:30:22 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Sat, 31 Jul 2021 05:29:58 GMT
+# Wed, 01 Sep 2021 15:30:22 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sat, 31 Jul 2021 05:29:59 GMT
+# Wed, 01 Sep 2021 15:30:23 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Sat, 31 Jul 2021 05:29:59 GMT
+# Wed, 01 Sep 2021 15:30:23 GMT
 CMD ["irb"]
 ```
 
 -	Layers:
-	-	`sha256:afadee6ad6a38d3172beeeca818219604c782efbe93201ef4d39512f289b05ae`  
-		Last Modified: Wed, 14 Apr 2021 18:42:16 GMT  
-		Size: 2.6 MB (2602650 bytes)  
+	-	`sha256:c1d78e8a87395f597d24b8eb78423ccdcfd404846906154e15aea8be9541c3ae`  
+		Last Modified: Wed, 01 Sep 2021 01:16:19 GMT  
+		Size: 2.6 MB (2604390 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ffb70ae738f00ff7e7b229836f34471fe6cfebc08cfa500b1c425cc9d1f4e5cc`  
-		Last Modified: Sat, 31 Jul 2021 05:31:58 GMT  
-		Size: 3.7 MB (3675365 bytes)  
+	-	`sha256:f2ee95f506ad0c3bdbffa7f9c55165d50ce360a478cc139c66ecad1cfa2329bb`  
+		Last Modified: Wed, 01 Sep 2021 15:33:22 GMT  
+		Size: 3.7 MB (3675272 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e5e4b26fe512b6f64be7ebee4fc51ec347f697363c41a4a2b2646343e79626b4`  
-		Last Modified: Sat, 31 Jul 2021 05:31:57 GMT  
-		Size: 222.0 B  
+	-	`sha256:1191fde9ab356b9710d44d102febf6ed4763bc6ba8dc75c09cdea52179c589bb`  
+		Last Modified: Wed, 01 Sep 2021 15:33:21 GMT  
+		Size: 223.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:28088c890ea8fbe2c081153f402f6c8737afa9f0023955fa8219289d27d034bf`  
-		Last Modified: Sat, 31 Jul 2021 05:31:59 GMT  
-		Size: 20.1 MB (20062399 bytes)  
+	-	`sha256:b2d94909f1cb244a32bcf5538bf19fad145ee7251e40d79f89e6f93bf114292e`  
+		Last Modified: Wed, 01 Sep 2021 15:33:23 GMT  
+		Size: 19.7 MB (19659232 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:958a077bdc455c2ab873a05e26ca4fd3454544a8a4652a7cc7183eb25a6675d9`  
-		Last Modified: Sat, 31 Jul 2021 05:31:57 GMT  
-		Size: 171.0 B  
+	-	`sha256:bce0d6a68fd217e48f126cd0f9da47952befc9f7ed21f97d1558af7689180eac`  
+		Last Modified: Wed, 01 Sep 2021 15:33:21 GMT  
+		Size: 172.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `ruby:2.6.8-alpine3.14`
@@ -16053,7 +16053,7 @@ CMD ["irb"]
 ## `ruby:2.7-alpine3.13`
 
 ```console
-$ docker pull ruby@sha256:6fa6a97b89f72fd62dac3c3c5997984ae0c4c01e363190d7cc5f96c4766b9eb5
+$ docker pull ruby@sha256:6d9401bb2bbcf49decb40dd14fe810c709f6965b50b63f447db342bbcba57a98
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -16132,66 +16132,66 @@ CMD ["irb"]
 ### `ruby:2.7-alpine3.13` - linux; arm64 variant v8
 
 ```console
-$ docker pull ruby@sha256:43a7f75024f5d4afb17ab8e83c0695f1376df06d1b7797edfad4fbfd9b7c0e38
+$ docker pull ruby@sha256:735d9111fa60e38c856dca768862070986095b94af7902cce67ab20392bdb470
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **20.5 MB (20508145 bytes)**  
+-	Total Size: **20.1 MB (20100362 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:94a6c844f0d9120f4174ea03b7447744679d56320025db7d2a2d8aa9bc123d33`
+-	Image ID: `sha256:c061123aca4bfa67abb59bcfd590c6afb48a9411bcb29373862651ca37c85ac0`
 -	Default Command: `["irb"]`
 
 ```dockerfile
-# Tue, 15 Jun 2021 21:45:03 GMT
-ADD file:ca9d8b5d1cc2f2186983fc6b9507da6ada5eb92f2b518c06af1128d5396c6f34 in / 
-# Tue, 15 Jun 2021 21:45:04 GMT
+# Wed, 01 Sep 2021 02:50:45 GMT
+ADD file:924de68748d5d710724ceb45b3bff9d38eedcad50d5744be4ce74f8f731a791f in / 
+# Wed, 01 Sep 2021 02:50:45 GMT
 CMD ["/bin/sh"]
-# Thu, 08 Jul 2021 20:38:23 GMT
+# Wed, 01 Sep 2021 14:56:42 GMT
 RUN set -eux; 	apk add --no-cache 		bzip2 		ca-certificates 		gmp-dev 		libffi-dev 		procps 		yaml-dev 		zlib-dev 	;
-# Thu, 08 Jul 2021 20:38:24 GMT
+# Wed, 01 Sep 2021 14:56:43 GMT
 RUN set -eux; 	mkdir -p /usr/local/etc; 	{ 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /usr/local/etc/gemrc
-# Thu, 08 Jul 2021 20:38:24 GMT
+# Wed, 01 Sep 2021 14:56:43 GMT
 ENV LANG=C.UTF-8
-# Thu, 08 Jul 2021 20:48:24 GMT
+# Wed, 01 Sep 2021 15:00:21 GMT
 ENV RUBY_MAJOR=2.7
-# Thu, 08 Jul 2021 20:48:24 GMT
+# Wed, 01 Sep 2021 15:00:21 GMT
 ENV RUBY_VERSION=2.7.4
-# Thu, 08 Jul 2021 20:48:24 GMT
+# Wed, 01 Sep 2021 15:00:22 GMT
 ENV RUBY_DOWNLOAD_SHA256=2a80824e0ad6100826b69b9890bf55cfc4cf2b61a1e1330fccbcb30c46cef8d7
-# Thu, 08 Jul 2021 20:50:48 GMT
+# Wed, 01 Sep 2021 15:02:37 GMT
 RUN set -eux; 		apk add --no-cache --virtual .ruby-builddeps 		autoconf 		bison 		bzip2 		bzip2-dev 		ca-certificates 		coreutils 		dpkg-dev dpkg 		g++ 		gcc 		gdbm-dev 		glib-dev 		libc-dev 		libffi-dev 		libxml2-dev 		libxslt-dev 		linux-headers 		make 		ncurses-dev 		openssl 		openssl-dev 		patch 		procps 		readline-dev 		ruby 		tar 		xz 		yaml-dev 		zlib-dev 	; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		wget -O 'thread-stack-fix.patch' 'https://bugs.ruby-lang.org/attachments/download/7081/0001-thread_pthread.c-make-get_main_stack-portable-on-lin.patch'; 	echo '3ab628a51d92fdf0d2b5835e93564857aea73e0c1de00313864a94a6255cb645 *thread-stack-fix.patch' | sha256sum --check --strict; 	patch -p1 -i thread-stack-fix.patch; 	rm thread-stack-fix.patch; 		export ac_cv_func_isnan=yes ac_cv_func_isinf=yes; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .ruby-rundeps $runDeps; 	apk del --no-network .ruby-builddeps; 		cd /; 	rm -r /usr/src/ruby; 	if 		apk --no-network list --installed 			| grep -v '^[.]ruby-rundeps' 			| grep -i ruby 	; then 		exit 1; 	fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Thu, 08 Jul 2021 20:50:48 GMT
+# Wed, 01 Sep 2021 15:02:37 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Thu, 08 Jul 2021 20:50:48 GMT
+# Wed, 01 Sep 2021 15:02:38 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Thu, 08 Jul 2021 20:50:48 GMT
+# Wed, 01 Sep 2021 15:02:38 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 08 Jul 2021 20:50:49 GMT
+# Wed, 01 Sep 2021 15:02:38 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Thu, 08 Jul 2021 20:50:49 GMT
+# Wed, 01 Sep 2021 15:02:39 GMT
 CMD ["irb"]
 ```
 
 -	Layers:
-	-	`sha256:595b0fe564bb9444ebfe78288079a01ee6d7f666544028d5e96ba610f909ee43`  
-		Last Modified: Wed, 14 Apr 2021 18:43:41 GMT  
-		Size: 2.7 MB (2712026 bytes)  
+	-	`sha256:bbf911997326f5b56d515142e8dbdbe01d2f308276938ddbce3ab347584ed8ce`  
+		Last Modified: Wed, 01 Sep 2021 02:51:37 GMT  
+		Size: 2.7 MB (2713008 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fae389540fbfffc29f2ee608b9c77aa63679e657b9225ebe36da9c5c658154b1`  
-		Last Modified: Thu, 08 Jul 2021 21:08:55 GMT  
-		Size: 3.6 MB (3567526 bytes)  
+	-	`sha256:fb5eb46886b44d5877840240664b5e53b371e8b9be313dd15ff6af47650f26e5`  
+		Last Modified: Wed, 01 Sep 2021 15:09:00 GMT  
+		Size: 3.6 MB (3567519 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:96f1c94fc30766c7f725a4e03dcf8b6032aece9e68e8cc1538f69fdf699fea76`  
-		Last Modified: Thu, 08 Jul 2021 21:08:55 GMT  
-		Size: 223.0 B  
+	-	`sha256:b1775b8c4d8708ec11bb8142290e2811bafe9fbdcdbec4bd15e071c2743d4404`  
+		Last Modified: Wed, 01 Sep 2021 15:09:00 GMT  
+		Size: 222.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c9d74c74e5ac84487867ee30f04628c6679524886ce09c72e790c491154cf0ae`  
-		Last Modified: Thu, 08 Jul 2021 21:10:43 GMT  
-		Size: 14.2 MB (14228197 bytes)  
+	-	`sha256:0aa45cacedd9d25610e1a339d257bfb47491038c740fe3d3e8ef1be6f7831d26`  
+		Last Modified: Wed, 01 Sep 2021 15:09:40 GMT  
+		Size: 13.8 MB (13819440 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c3eee21e9938c36dff9d6190f7e259d3a67b11e9a62265e583098259ec7d43cd`  
-		Last Modified: Thu, 08 Jul 2021 21:10:41 GMT  
+	-	`sha256:fce84c4b904b9e2f2bf1e1fd9eba6d2480daf953f7637fcb34e66d7b76a510b2`  
+		Last Modified: Wed, 01 Sep 2021 15:09:38 GMT  
 		Size: 173.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -20586,7 +20586,7 @@ CMD ["irb"]
 ## `ruby:2.7.4-alpine3.13`
 
 ```console
-$ docker pull ruby@sha256:6fa6a97b89f72fd62dac3c3c5997984ae0c4c01e363190d7cc5f96c4766b9eb5
+$ docker pull ruby@sha256:6d9401bb2bbcf49decb40dd14fe810c709f6965b50b63f447db342bbcba57a98
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -20665,66 +20665,66 @@ CMD ["irb"]
 ### `ruby:2.7.4-alpine3.13` - linux; arm64 variant v8
 
 ```console
-$ docker pull ruby@sha256:43a7f75024f5d4afb17ab8e83c0695f1376df06d1b7797edfad4fbfd9b7c0e38
+$ docker pull ruby@sha256:735d9111fa60e38c856dca768862070986095b94af7902cce67ab20392bdb470
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **20.5 MB (20508145 bytes)**  
+-	Total Size: **20.1 MB (20100362 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:94a6c844f0d9120f4174ea03b7447744679d56320025db7d2a2d8aa9bc123d33`
+-	Image ID: `sha256:c061123aca4bfa67abb59bcfd590c6afb48a9411bcb29373862651ca37c85ac0`
 -	Default Command: `["irb"]`
 
 ```dockerfile
-# Tue, 15 Jun 2021 21:45:03 GMT
-ADD file:ca9d8b5d1cc2f2186983fc6b9507da6ada5eb92f2b518c06af1128d5396c6f34 in / 
-# Tue, 15 Jun 2021 21:45:04 GMT
+# Wed, 01 Sep 2021 02:50:45 GMT
+ADD file:924de68748d5d710724ceb45b3bff9d38eedcad50d5744be4ce74f8f731a791f in / 
+# Wed, 01 Sep 2021 02:50:45 GMT
 CMD ["/bin/sh"]
-# Thu, 08 Jul 2021 20:38:23 GMT
+# Wed, 01 Sep 2021 14:56:42 GMT
 RUN set -eux; 	apk add --no-cache 		bzip2 		ca-certificates 		gmp-dev 		libffi-dev 		procps 		yaml-dev 		zlib-dev 	;
-# Thu, 08 Jul 2021 20:38:24 GMT
+# Wed, 01 Sep 2021 14:56:43 GMT
 RUN set -eux; 	mkdir -p /usr/local/etc; 	{ 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /usr/local/etc/gemrc
-# Thu, 08 Jul 2021 20:38:24 GMT
+# Wed, 01 Sep 2021 14:56:43 GMT
 ENV LANG=C.UTF-8
-# Thu, 08 Jul 2021 20:48:24 GMT
+# Wed, 01 Sep 2021 15:00:21 GMT
 ENV RUBY_MAJOR=2.7
-# Thu, 08 Jul 2021 20:48:24 GMT
+# Wed, 01 Sep 2021 15:00:21 GMT
 ENV RUBY_VERSION=2.7.4
-# Thu, 08 Jul 2021 20:48:24 GMT
+# Wed, 01 Sep 2021 15:00:22 GMT
 ENV RUBY_DOWNLOAD_SHA256=2a80824e0ad6100826b69b9890bf55cfc4cf2b61a1e1330fccbcb30c46cef8d7
-# Thu, 08 Jul 2021 20:50:48 GMT
+# Wed, 01 Sep 2021 15:02:37 GMT
 RUN set -eux; 		apk add --no-cache --virtual .ruby-builddeps 		autoconf 		bison 		bzip2 		bzip2-dev 		ca-certificates 		coreutils 		dpkg-dev dpkg 		g++ 		gcc 		gdbm-dev 		glib-dev 		libc-dev 		libffi-dev 		libxml2-dev 		libxslt-dev 		linux-headers 		make 		ncurses-dev 		openssl 		openssl-dev 		patch 		procps 		readline-dev 		ruby 		tar 		xz 		yaml-dev 		zlib-dev 	; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		wget -O 'thread-stack-fix.patch' 'https://bugs.ruby-lang.org/attachments/download/7081/0001-thread_pthread.c-make-get_main_stack-portable-on-lin.patch'; 	echo '3ab628a51d92fdf0d2b5835e93564857aea73e0c1de00313864a94a6255cb645 *thread-stack-fix.patch' | sha256sum --check --strict; 	patch -p1 -i thread-stack-fix.patch; 	rm thread-stack-fix.patch; 		export ac_cv_func_isnan=yes ac_cv_func_isinf=yes; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .ruby-rundeps $runDeps; 	apk del --no-network .ruby-builddeps; 		cd /; 	rm -r /usr/src/ruby; 	if 		apk --no-network list --installed 			| grep -v '^[.]ruby-rundeps' 			| grep -i ruby 	; then 		exit 1; 	fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Thu, 08 Jul 2021 20:50:48 GMT
+# Wed, 01 Sep 2021 15:02:37 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Thu, 08 Jul 2021 20:50:48 GMT
+# Wed, 01 Sep 2021 15:02:38 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Thu, 08 Jul 2021 20:50:48 GMT
+# Wed, 01 Sep 2021 15:02:38 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 08 Jul 2021 20:50:49 GMT
+# Wed, 01 Sep 2021 15:02:38 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Thu, 08 Jul 2021 20:50:49 GMT
+# Wed, 01 Sep 2021 15:02:39 GMT
 CMD ["irb"]
 ```
 
 -	Layers:
-	-	`sha256:595b0fe564bb9444ebfe78288079a01ee6d7f666544028d5e96ba610f909ee43`  
-		Last Modified: Wed, 14 Apr 2021 18:43:41 GMT  
-		Size: 2.7 MB (2712026 bytes)  
+	-	`sha256:bbf911997326f5b56d515142e8dbdbe01d2f308276938ddbce3ab347584ed8ce`  
+		Last Modified: Wed, 01 Sep 2021 02:51:37 GMT  
+		Size: 2.7 MB (2713008 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fae389540fbfffc29f2ee608b9c77aa63679e657b9225ebe36da9c5c658154b1`  
-		Last Modified: Thu, 08 Jul 2021 21:08:55 GMT  
-		Size: 3.6 MB (3567526 bytes)  
+	-	`sha256:fb5eb46886b44d5877840240664b5e53b371e8b9be313dd15ff6af47650f26e5`  
+		Last Modified: Wed, 01 Sep 2021 15:09:00 GMT  
+		Size: 3.6 MB (3567519 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:96f1c94fc30766c7f725a4e03dcf8b6032aece9e68e8cc1538f69fdf699fea76`  
-		Last Modified: Thu, 08 Jul 2021 21:08:55 GMT  
-		Size: 223.0 B  
+	-	`sha256:b1775b8c4d8708ec11bb8142290e2811bafe9fbdcdbec4bd15e071c2743d4404`  
+		Last Modified: Wed, 01 Sep 2021 15:09:00 GMT  
+		Size: 222.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c9d74c74e5ac84487867ee30f04628c6679524886ce09c72e790c491154cf0ae`  
-		Last Modified: Thu, 08 Jul 2021 21:10:43 GMT  
-		Size: 14.2 MB (14228197 bytes)  
+	-	`sha256:0aa45cacedd9d25610e1a339d257bfb47491038c740fe3d3e8ef1be6f7831d26`  
+		Last Modified: Wed, 01 Sep 2021 15:09:40 GMT  
+		Size: 13.8 MB (13819440 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c3eee21e9938c36dff9d6190f7e259d3a67b11e9a62265e583098259ec7d43cd`  
-		Last Modified: Thu, 08 Jul 2021 21:10:41 GMT  
+	-	`sha256:fce84c4b904b9e2f2bf1e1fd9eba6d2480daf953f7637fcb34e66d7b76a510b2`  
+		Last Modified: Wed, 01 Sep 2021 15:09:38 GMT  
 		Size: 173.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -25253,7 +25253,7 @@ CMD ["irb"]
 ## `ruby:3-alpine3.13`
 
 ```console
-$ docker pull ruby@sha256:0dac429fad3390aa70944515a5cadb9da5838c69182760d0e976e33676dd8ac1
+$ docker pull ruby@sha256:713722b441f0aecc2425b50b4b2fb9923125c3e42e2a1c68618247d021a4fac2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -25466,66 +25466,66 @@ CMD ["irb"]
 ### `ruby:3-alpine3.13` - linux; arm64 variant v8
 
 ```console
-$ docker pull ruby@sha256:834d55c072b5a4b4beaab0a4576a52f9b8ee382356a22860da2d8a9baa3b6fa0
+$ docker pull ruby@sha256:c2b9b890c89c2ea4d5fd8a0ad0c9d430df5bd924d9ebff6b4d7dc13edfe05589
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **32.7 MB (32699904 bytes)**  
+-	Total Size: **32.3 MB (32294200 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:bf3f0b0d3c2785fa8df60beb07d3995ccfddeb316d79b2f85b5d90fee47c9edc`
+-	Image ID: `sha256:5e77f4d455e0d444fe1d3b484f9ee6ca0fb21d06597670b6c75eb843af56ddfe`
 -	Default Command: `["irb"]`
 
 ```dockerfile
-# Tue, 15 Jun 2021 21:45:03 GMT
-ADD file:ca9d8b5d1cc2f2186983fc6b9507da6ada5eb92f2b518c06af1128d5396c6f34 in / 
-# Tue, 15 Jun 2021 21:45:04 GMT
+# Wed, 01 Sep 2021 02:50:45 GMT
+ADD file:924de68748d5d710724ceb45b3bff9d38eedcad50d5744be4ce74f8f731a791f in / 
+# Wed, 01 Sep 2021 02:50:45 GMT
 CMD ["/bin/sh"]
-# Thu, 08 Jul 2021 20:38:23 GMT
+# Wed, 01 Sep 2021 14:56:42 GMT
 RUN set -eux; 	apk add --no-cache 		bzip2 		ca-certificates 		gmp-dev 		libffi-dev 		procps 		yaml-dev 		zlib-dev 	;
-# Thu, 08 Jul 2021 20:38:24 GMT
+# Wed, 01 Sep 2021 14:56:43 GMT
 RUN set -eux; 	mkdir -p /usr/local/etc; 	{ 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /usr/local/etc/gemrc
-# Thu, 08 Jul 2021 20:38:24 GMT
+# Wed, 01 Sep 2021 14:56:43 GMT
 ENV LANG=C.UTF-8
-# Thu, 08 Jul 2021 20:38:24 GMT
+# Wed, 01 Sep 2021 14:56:44 GMT
 ENV RUBY_MAJOR=3.0
-# Thu, 08 Jul 2021 20:38:24 GMT
+# Wed, 01 Sep 2021 14:56:44 GMT
 ENV RUBY_VERSION=3.0.2
-# Thu, 08 Jul 2021 20:38:25 GMT
+# Wed, 01 Sep 2021 14:56:44 GMT
 ENV RUBY_DOWNLOAD_SHA256=570e7773100f625599575f363831166d91d49a1ab97d3ab6495af44774155c40
-# Thu, 08 Jul 2021 20:41:22 GMT
+# Wed, 01 Sep 2021 14:59:34 GMT
 RUN set -eux; 		apk add --no-cache --virtual .ruby-builddeps 		autoconf 		bison 		bzip2 		bzip2-dev 		ca-certificates 		coreutils 		dpkg-dev dpkg 		g++ 		gcc 		gdbm-dev 		glib-dev 		libc-dev 		libffi-dev 		libxml2-dev 		libxslt-dev 		linux-headers 		make 		ncurses-dev 		openssl 		openssl-dev 		patch 		procps 		readline-dev 		ruby 		tar 		xz 		yaml-dev 		zlib-dev 	; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		wget -O 'thread-stack-fix.patch' 'https://bugs.ruby-lang.org/attachments/download/7081/0001-thread_pthread.c-make-get_main_stack-portable-on-lin.patch'; 	echo '3ab628a51d92fdf0d2b5835e93564857aea73e0c1de00313864a94a6255cb645 *thread-stack-fix.patch' | sha256sum --check --strict; 	patch -p1 -i thread-stack-fix.patch; 	rm thread-stack-fix.patch; 		export ac_cv_func_isnan=yes ac_cv_func_isinf=yes; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .ruby-rundeps $runDeps; 	apk del --no-network .ruby-builddeps; 		cd /; 	rm -r /usr/src/ruby; 	if 		apk --no-network list --installed 			| grep -v '^[.]ruby-rundeps' 			| grep -i ruby 	; then 		exit 1; 	fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Thu, 08 Jul 2021 20:41:22 GMT
+# Wed, 01 Sep 2021 14:59:34 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Thu, 08 Jul 2021 20:41:22 GMT
+# Wed, 01 Sep 2021 14:59:34 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Thu, 08 Jul 2021 20:41:23 GMT
+# Wed, 01 Sep 2021 14:59:34 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 08 Jul 2021 20:41:23 GMT
+# Wed, 01 Sep 2021 14:59:35 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Thu, 08 Jul 2021 20:41:24 GMT
+# Wed, 01 Sep 2021 14:59:35 GMT
 CMD ["irb"]
 ```
 
 -	Layers:
-	-	`sha256:595b0fe564bb9444ebfe78288079a01ee6d7f666544028d5e96ba610f909ee43`  
-		Last Modified: Wed, 14 Apr 2021 18:43:41 GMT  
-		Size: 2.7 MB (2712026 bytes)  
+	-	`sha256:bbf911997326f5b56d515142e8dbdbe01d2f308276938ddbce3ab347584ed8ce`  
+		Last Modified: Wed, 01 Sep 2021 02:51:37 GMT  
+		Size: 2.7 MB (2713008 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fae389540fbfffc29f2ee608b9c77aa63679e657b9225ebe36da9c5c658154b1`  
-		Last Modified: Thu, 08 Jul 2021 21:08:55 GMT  
-		Size: 3.6 MB (3567526 bytes)  
+	-	`sha256:fb5eb46886b44d5877840240664b5e53b371e8b9be313dd15ff6af47650f26e5`  
+		Last Modified: Wed, 01 Sep 2021 15:09:00 GMT  
+		Size: 3.6 MB (3567519 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:96f1c94fc30766c7f725a4e03dcf8b6032aece9e68e8cc1538f69fdf699fea76`  
-		Last Modified: Thu, 08 Jul 2021 21:08:55 GMT  
-		Size: 223.0 B  
+	-	`sha256:b1775b8c4d8708ec11bb8142290e2811bafe9fbdcdbec4bd15e071c2743d4404`  
+		Last Modified: Wed, 01 Sep 2021 15:09:00 GMT  
+		Size: 222.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0644f8bac618f393c87f9514755aae6092776038729382bb0fc907ddce7573da`  
-		Last Modified: Thu, 08 Jul 2021 21:08:58 GMT  
-		Size: 26.4 MB (26419957 bytes)  
+	-	`sha256:fc890655ed87f057ee804c1257d2cd7058bb211c2ffaec2b76a3e18065dbb1e5`  
+		Last Modified: Wed, 01 Sep 2021 15:09:03 GMT  
+		Size: 26.0 MB (26013279 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b72c23259d6d897ea5821181a0eab67286b59199ff7e48f416e92b5ced06b7f0`  
-		Last Modified: Thu, 08 Jul 2021 21:08:55 GMT  
+	-	`sha256:eaf4fa6485aeb5636c21019dc86ab1fb534d1ad0d1c4b814fca6807644240588`  
+		Last Modified: Wed, 01 Sep 2021 15:09:00 GMT  
 		Size: 172.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -30188,7 +30188,7 @@ CMD ["irb"]
 ## `ruby:3.0-alpine3.13`
 
 ```console
-$ docker pull ruby@sha256:0dac429fad3390aa70944515a5cadb9da5838c69182760d0e976e33676dd8ac1
+$ docker pull ruby@sha256:713722b441f0aecc2425b50b4b2fb9923125c3e42e2a1c68618247d021a4fac2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -30401,66 +30401,66 @@ CMD ["irb"]
 ### `ruby:3.0-alpine3.13` - linux; arm64 variant v8
 
 ```console
-$ docker pull ruby@sha256:834d55c072b5a4b4beaab0a4576a52f9b8ee382356a22860da2d8a9baa3b6fa0
+$ docker pull ruby@sha256:c2b9b890c89c2ea4d5fd8a0ad0c9d430df5bd924d9ebff6b4d7dc13edfe05589
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **32.7 MB (32699904 bytes)**  
+-	Total Size: **32.3 MB (32294200 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:bf3f0b0d3c2785fa8df60beb07d3995ccfddeb316d79b2f85b5d90fee47c9edc`
+-	Image ID: `sha256:5e77f4d455e0d444fe1d3b484f9ee6ca0fb21d06597670b6c75eb843af56ddfe`
 -	Default Command: `["irb"]`
 
 ```dockerfile
-# Tue, 15 Jun 2021 21:45:03 GMT
-ADD file:ca9d8b5d1cc2f2186983fc6b9507da6ada5eb92f2b518c06af1128d5396c6f34 in / 
-# Tue, 15 Jun 2021 21:45:04 GMT
+# Wed, 01 Sep 2021 02:50:45 GMT
+ADD file:924de68748d5d710724ceb45b3bff9d38eedcad50d5744be4ce74f8f731a791f in / 
+# Wed, 01 Sep 2021 02:50:45 GMT
 CMD ["/bin/sh"]
-# Thu, 08 Jul 2021 20:38:23 GMT
+# Wed, 01 Sep 2021 14:56:42 GMT
 RUN set -eux; 	apk add --no-cache 		bzip2 		ca-certificates 		gmp-dev 		libffi-dev 		procps 		yaml-dev 		zlib-dev 	;
-# Thu, 08 Jul 2021 20:38:24 GMT
+# Wed, 01 Sep 2021 14:56:43 GMT
 RUN set -eux; 	mkdir -p /usr/local/etc; 	{ 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /usr/local/etc/gemrc
-# Thu, 08 Jul 2021 20:38:24 GMT
+# Wed, 01 Sep 2021 14:56:43 GMT
 ENV LANG=C.UTF-8
-# Thu, 08 Jul 2021 20:38:24 GMT
+# Wed, 01 Sep 2021 14:56:44 GMT
 ENV RUBY_MAJOR=3.0
-# Thu, 08 Jul 2021 20:38:24 GMT
+# Wed, 01 Sep 2021 14:56:44 GMT
 ENV RUBY_VERSION=3.0.2
-# Thu, 08 Jul 2021 20:38:25 GMT
+# Wed, 01 Sep 2021 14:56:44 GMT
 ENV RUBY_DOWNLOAD_SHA256=570e7773100f625599575f363831166d91d49a1ab97d3ab6495af44774155c40
-# Thu, 08 Jul 2021 20:41:22 GMT
+# Wed, 01 Sep 2021 14:59:34 GMT
 RUN set -eux; 		apk add --no-cache --virtual .ruby-builddeps 		autoconf 		bison 		bzip2 		bzip2-dev 		ca-certificates 		coreutils 		dpkg-dev dpkg 		g++ 		gcc 		gdbm-dev 		glib-dev 		libc-dev 		libffi-dev 		libxml2-dev 		libxslt-dev 		linux-headers 		make 		ncurses-dev 		openssl 		openssl-dev 		patch 		procps 		readline-dev 		ruby 		tar 		xz 		yaml-dev 		zlib-dev 	; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		wget -O 'thread-stack-fix.patch' 'https://bugs.ruby-lang.org/attachments/download/7081/0001-thread_pthread.c-make-get_main_stack-portable-on-lin.patch'; 	echo '3ab628a51d92fdf0d2b5835e93564857aea73e0c1de00313864a94a6255cb645 *thread-stack-fix.patch' | sha256sum --check --strict; 	patch -p1 -i thread-stack-fix.patch; 	rm thread-stack-fix.patch; 		export ac_cv_func_isnan=yes ac_cv_func_isinf=yes; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .ruby-rundeps $runDeps; 	apk del --no-network .ruby-builddeps; 		cd /; 	rm -r /usr/src/ruby; 	if 		apk --no-network list --installed 			| grep -v '^[.]ruby-rundeps' 			| grep -i ruby 	; then 		exit 1; 	fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Thu, 08 Jul 2021 20:41:22 GMT
+# Wed, 01 Sep 2021 14:59:34 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Thu, 08 Jul 2021 20:41:22 GMT
+# Wed, 01 Sep 2021 14:59:34 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Thu, 08 Jul 2021 20:41:23 GMT
+# Wed, 01 Sep 2021 14:59:34 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 08 Jul 2021 20:41:23 GMT
+# Wed, 01 Sep 2021 14:59:35 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Thu, 08 Jul 2021 20:41:24 GMT
+# Wed, 01 Sep 2021 14:59:35 GMT
 CMD ["irb"]
 ```
 
 -	Layers:
-	-	`sha256:595b0fe564bb9444ebfe78288079a01ee6d7f666544028d5e96ba610f909ee43`  
-		Last Modified: Wed, 14 Apr 2021 18:43:41 GMT  
-		Size: 2.7 MB (2712026 bytes)  
+	-	`sha256:bbf911997326f5b56d515142e8dbdbe01d2f308276938ddbce3ab347584ed8ce`  
+		Last Modified: Wed, 01 Sep 2021 02:51:37 GMT  
+		Size: 2.7 MB (2713008 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fae389540fbfffc29f2ee608b9c77aa63679e657b9225ebe36da9c5c658154b1`  
-		Last Modified: Thu, 08 Jul 2021 21:08:55 GMT  
-		Size: 3.6 MB (3567526 bytes)  
+	-	`sha256:fb5eb46886b44d5877840240664b5e53b371e8b9be313dd15ff6af47650f26e5`  
+		Last Modified: Wed, 01 Sep 2021 15:09:00 GMT  
+		Size: 3.6 MB (3567519 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:96f1c94fc30766c7f725a4e03dcf8b6032aece9e68e8cc1538f69fdf699fea76`  
-		Last Modified: Thu, 08 Jul 2021 21:08:55 GMT  
-		Size: 223.0 B  
+	-	`sha256:b1775b8c4d8708ec11bb8142290e2811bafe9fbdcdbec4bd15e071c2743d4404`  
+		Last Modified: Wed, 01 Sep 2021 15:09:00 GMT  
+		Size: 222.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0644f8bac618f393c87f9514755aae6092776038729382bb0fc907ddce7573da`  
-		Last Modified: Thu, 08 Jul 2021 21:08:58 GMT  
-		Size: 26.4 MB (26419957 bytes)  
+	-	`sha256:fc890655ed87f057ee804c1257d2cd7058bb211c2ffaec2b76a3e18065dbb1e5`  
+		Last Modified: Wed, 01 Sep 2021 15:09:03 GMT  
+		Size: 26.0 MB (26013279 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b72c23259d6d897ea5821181a0eab67286b59199ff7e48f416e92b5ced06b7f0`  
-		Last Modified: Thu, 08 Jul 2021 21:08:55 GMT  
+	-	`sha256:eaf4fa6485aeb5636c21019dc86ab1fb534d1ad0d1c4b814fca6807644240588`  
+		Last Modified: Wed, 01 Sep 2021 15:09:00 GMT  
 		Size: 172.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -35123,7 +35123,7 @@ CMD ["irb"]
 ## `ruby:3.0.2-alpine3.13`
 
 ```console
-$ docker pull ruby@sha256:0dac429fad3390aa70944515a5cadb9da5838c69182760d0e976e33676dd8ac1
+$ docker pull ruby@sha256:713722b441f0aecc2425b50b4b2fb9923125c3e42e2a1c68618247d021a4fac2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -35336,66 +35336,66 @@ CMD ["irb"]
 ### `ruby:3.0.2-alpine3.13` - linux; arm64 variant v8
 
 ```console
-$ docker pull ruby@sha256:834d55c072b5a4b4beaab0a4576a52f9b8ee382356a22860da2d8a9baa3b6fa0
+$ docker pull ruby@sha256:c2b9b890c89c2ea4d5fd8a0ad0c9d430df5bd924d9ebff6b4d7dc13edfe05589
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **32.7 MB (32699904 bytes)**  
+-	Total Size: **32.3 MB (32294200 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:bf3f0b0d3c2785fa8df60beb07d3995ccfddeb316d79b2f85b5d90fee47c9edc`
+-	Image ID: `sha256:5e77f4d455e0d444fe1d3b484f9ee6ca0fb21d06597670b6c75eb843af56ddfe`
 -	Default Command: `["irb"]`
 
 ```dockerfile
-# Tue, 15 Jun 2021 21:45:03 GMT
-ADD file:ca9d8b5d1cc2f2186983fc6b9507da6ada5eb92f2b518c06af1128d5396c6f34 in / 
-# Tue, 15 Jun 2021 21:45:04 GMT
+# Wed, 01 Sep 2021 02:50:45 GMT
+ADD file:924de68748d5d710724ceb45b3bff9d38eedcad50d5744be4ce74f8f731a791f in / 
+# Wed, 01 Sep 2021 02:50:45 GMT
 CMD ["/bin/sh"]
-# Thu, 08 Jul 2021 20:38:23 GMT
+# Wed, 01 Sep 2021 14:56:42 GMT
 RUN set -eux; 	apk add --no-cache 		bzip2 		ca-certificates 		gmp-dev 		libffi-dev 		procps 		yaml-dev 		zlib-dev 	;
-# Thu, 08 Jul 2021 20:38:24 GMT
+# Wed, 01 Sep 2021 14:56:43 GMT
 RUN set -eux; 	mkdir -p /usr/local/etc; 	{ 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /usr/local/etc/gemrc
-# Thu, 08 Jul 2021 20:38:24 GMT
+# Wed, 01 Sep 2021 14:56:43 GMT
 ENV LANG=C.UTF-8
-# Thu, 08 Jul 2021 20:38:24 GMT
+# Wed, 01 Sep 2021 14:56:44 GMT
 ENV RUBY_MAJOR=3.0
-# Thu, 08 Jul 2021 20:38:24 GMT
+# Wed, 01 Sep 2021 14:56:44 GMT
 ENV RUBY_VERSION=3.0.2
-# Thu, 08 Jul 2021 20:38:25 GMT
+# Wed, 01 Sep 2021 14:56:44 GMT
 ENV RUBY_DOWNLOAD_SHA256=570e7773100f625599575f363831166d91d49a1ab97d3ab6495af44774155c40
-# Thu, 08 Jul 2021 20:41:22 GMT
+# Wed, 01 Sep 2021 14:59:34 GMT
 RUN set -eux; 		apk add --no-cache --virtual .ruby-builddeps 		autoconf 		bison 		bzip2 		bzip2-dev 		ca-certificates 		coreutils 		dpkg-dev dpkg 		g++ 		gcc 		gdbm-dev 		glib-dev 		libc-dev 		libffi-dev 		libxml2-dev 		libxslt-dev 		linux-headers 		make 		ncurses-dev 		openssl 		openssl-dev 		patch 		procps 		readline-dev 		ruby 		tar 		xz 		yaml-dev 		zlib-dev 	; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		wget -O 'thread-stack-fix.patch' 'https://bugs.ruby-lang.org/attachments/download/7081/0001-thread_pthread.c-make-get_main_stack-portable-on-lin.patch'; 	echo '3ab628a51d92fdf0d2b5835e93564857aea73e0c1de00313864a94a6255cb645 *thread-stack-fix.patch' | sha256sum --check --strict; 	patch -p1 -i thread-stack-fix.patch; 	rm thread-stack-fix.patch; 		export ac_cv_func_isnan=yes ac_cv_func_isinf=yes; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .ruby-rundeps $runDeps; 	apk del --no-network .ruby-builddeps; 		cd /; 	rm -r /usr/src/ruby; 	if 		apk --no-network list --installed 			| grep -v '^[.]ruby-rundeps' 			| grep -i ruby 	; then 		exit 1; 	fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Thu, 08 Jul 2021 20:41:22 GMT
+# Wed, 01 Sep 2021 14:59:34 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Thu, 08 Jul 2021 20:41:22 GMT
+# Wed, 01 Sep 2021 14:59:34 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Thu, 08 Jul 2021 20:41:23 GMT
+# Wed, 01 Sep 2021 14:59:34 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 08 Jul 2021 20:41:23 GMT
+# Wed, 01 Sep 2021 14:59:35 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Thu, 08 Jul 2021 20:41:24 GMT
+# Wed, 01 Sep 2021 14:59:35 GMT
 CMD ["irb"]
 ```
 
 -	Layers:
-	-	`sha256:595b0fe564bb9444ebfe78288079a01ee6d7f666544028d5e96ba610f909ee43`  
-		Last Modified: Wed, 14 Apr 2021 18:43:41 GMT  
-		Size: 2.7 MB (2712026 bytes)  
+	-	`sha256:bbf911997326f5b56d515142e8dbdbe01d2f308276938ddbce3ab347584ed8ce`  
+		Last Modified: Wed, 01 Sep 2021 02:51:37 GMT  
+		Size: 2.7 MB (2713008 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fae389540fbfffc29f2ee608b9c77aa63679e657b9225ebe36da9c5c658154b1`  
-		Last Modified: Thu, 08 Jul 2021 21:08:55 GMT  
-		Size: 3.6 MB (3567526 bytes)  
+	-	`sha256:fb5eb46886b44d5877840240664b5e53b371e8b9be313dd15ff6af47650f26e5`  
+		Last Modified: Wed, 01 Sep 2021 15:09:00 GMT  
+		Size: 3.6 MB (3567519 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:96f1c94fc30766c7f725a4e03dcf8b6032aece9e68e8cc1538f69fdf699fea76`  
-		Last Modified: Thu, 08 Jul 2021 21:08:55 GMT  
-		Size: 223.0 B  
+	-	`sha256:b1775b8c4d8708ec11bb8142290e2811bafe9fbdcdbec4bd15e071c2743d4404`  
+		Last Modified: Wed, 01 Sep 2021 15:09:00 GMT  
+		Size: 222.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0644f8bac618f393c87f9514755aae6092776038729382bb0fc907ddce7573da`  
-		Last Modified: Thu, 08 Jul 2021 21:08:58 GMT  
-		Size: 26.4 MB (26419957 bytes)  
+	-	`sha256:fc890655ed87f057ee804c1257d2cd7058bb211c2ffaec2b76a3e18065dbb1e5`  
+		Last Modified: Wed, 01 Sep 2021 15:09:03 GMT  
+		Size: 26.0 MB (26013279 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b72c23259d6d897ea5821181a0eab67286b59199ff7e48f416e92b5ced06b7f0`  
-		Last Modified: Thu, 08 Jul 2021 21:08:55 GMT  
+	-	`sha256:eaf4fa6485aeb5636c21019dc86ab1fb534d1ad0d1c4b814fca6807644240588`  
+		Last Modified: Wed, 01 Sep 2021 15:09:00 GMT  
 		Size: 172.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -39434,7 +39434,7 @@ CMD ["irb"]
 ## `ruby:alpine3.13`
 
 ```console
-$ docker pull ruby@sha256:0dac429fad3390aa70944515a5cadb9da5838c69182760d0e976e33676dd8ac1
+$ docker pull ruby@sha256:713722b441f0aecc2425b50b4b2fb9923125c3e42e2a1c68618247d021a4fac2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -39647,66 +39647,66 @@ CMD ["irb"]
 ### `ruby:alpine3.13` - linux; arm64 variant v8
 
 ```console
-$ docker pull ruby@sha256:834d55c072b5a4b4beaab0a4576a52f9b8ee382356a22860da2d8a9baa3b6fa0
+$ docker pull ruby@sha256:c2b9b890c89c2ea4d5fd8a0ad0c9d430df5bd924d9ebff6b4d7dc13edfe05589
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **32.7 MB (32699904 bytes)**  
+-	Total Size: **32.3 MB (32294200 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:bf3f0b0d3c2785fa8df60beb07d3995ccfddeb316d79b2f85b5d90fee47c9edc`
+-	Image ID: `sha256:5e77f4d455e0d444fe1d3b484f9ee6ca0fb21d06597670b6c75eb843af56ddfe`
 -	Default Command: `["irb"]`
 
 ```dockerfile
-# Tue, 15 Jun 2021 21:45:03 GMT
-ADD file:ca9d8b5d1cc2f2186983fc6b9507da6ada5eb92f2b518c06af1128d5396c6f34 in / 
-# Tue, 15 Jun 2021 21:45:04 GMT
+# Wed, 01 Sep 2021 02:50:45 GMT
+ADD file:924de68748d5d710724ceb45b3bff9d38eedcad50d5744be4ce74f8f731a791f in / 
+# Wed, 01 Sep 2021 02:50:45 GMT
 CMD ["/bin/sh"]
-# Thu, 08 Jul 2021 20:38:23 GMT
+# Wed, 01 Sep 2021 14:56:42 GMT
 RUN set -eux; 	apk add --no-cache 		bzip2 		ca-certificates 		gmp-dev 		libffi-dev 		procps 		yaml-dev 		zlib-dev 	;
-# Thu, 08 Jul 2021 20:38:24 GMT
+# Wed, 01 Sep 2021 14:56:43 GMT
 RUN set -eux; 	mkdir -p /usr/local/etc; 	{ 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /usr/local/etc/gemrc
-# Thu, 08 Jul 2021 20:38:24 GMT
+# Wed, 01 Sep 2021 14:56:43 GMT
 ENV LANG=C.UTF-8
-# Thu, 08 Jul 2021 20:38:24 GMT
+# Wed, 01 Sep 2021 14:56:44 GMT
 ENV RUBY_MAJOR=3.0
-# Thu, 08 Jul 2021 20:38:24 GMT
+# Wed, 01 Sep 2021 14:56:44 GMT
 ENV RUBY_VERSION=3.0.2
-# Thu, 08 Jul 2021 20:38:25 GMT
+# Wed, 01 Sep 2021 14:56:44 GMT
 ENV RUBY_DOWNLOAD_SHA256=570e7773100f625599575f363831166d91d49a1ab97d3ab6495af44774155c40
-# Thu, 08 Jul 2021 20:41:22 GMT
+# Wed, 01 Sep 2021 14:59:34 GMT
 RUN set -eux; 		apk add --no-cache --virtual .ruby-builddeps 		autoconf 		bison 		bzip2 		bzip2-dev 		ca-certificates 		coreutils 		dpkg-dev dpkg 		g++ 		gcc 		gdbm-dev 		glib-dev 		libc-dev 		libffi-dev 		libxml2-dev 		libxslt-dev 		linux-headers 		make 		ncurses-dev 		openssl 		openssl-dev 		patch 		procps 		readline-dev 		ruby 		tar 		xz 		yaml-dev 		zlib-dev 	; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		wget -O 'thread-stack-fix.patch' 'https://bugs.ruby-lang.org/attachments/download/7081/0001-thread_pthread.c-make-get_main_stack-portable-on-lin.patch'; 	echo '3ab628a51d92fdf0d2b5835e93564857aea73e0c1de00313864a94a6255cb645 *thread-stack-fix.patch' | sha256sum --check --strict; 	patch -p1 -i thread-stack-fix.patch; 	rm thread-stack-fix.patch; 		export ac_cv_func_isnan=yes ac_cv_func_isinf=yes; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .ruby-rundeps $runDeps; 	apk del --no-network .ruby-builddeps; 		cd /; 	rm -r /usr/src/ruby; 	if 		apk --no-network list --installed 			| grep -v '^[.]ruby-rundeps' 			| grep -i ruby 	; then 		exit 1; 	fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Thu, 08 Jul 2021 20:41:22 GMT
+# Wed, 01 Sep 2021 14:59:34 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Thu, 08 Jul 2021 20:41:22 GMT
+# Wed, 01 Sep 2021 14:59:34 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Thu, 08 Jul 2021 20:41:23 GMT
+# Wed, 01 Sep 2021 14:59:34 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 08 Jul 2021 20:41:23 GMT
+# Wed, 01 Sep 2021 14:59:35 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Thu, 08 Jul 2021 20:41:24 GMT
+# Wed, 01 Sep 2021 14:59:35 GMT
 CMD ["irb"]
 ```
 
 -	Layers:
-	-	`sha256:595b0fe564bb9444ebfe78288079a01ee6d7f666544028d5e96ba610f909ee43`  
-		Last Modified: Wed, 14 Apr 2021 18:43:41 GMT  
-		Size: 2.7 MB (2712026 bytes)  
+	-	`sha256:bbf911997326f5b56d515142e8dbdbe01d2f308276938ddbce3ab347584ed8ce`  
+		Last Modified: Wed, 01 Sep 2021 02:51:37 GMT  
+		Size: 2.7 MB (2713008 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fae389540fbfffc29f2ee608b9c77aa63679e657b9225ebe36da9c5c658154b1`  
-		Last Modified: Thu, 08 Jul 2021 21:08:55 GMT  
-		Size: 3.6 MB (3567526 bytes)  
+	-	`sha256:fb5eb46886b44d5877840240664b5e53b371e8b9be313dd15ff6af47650f26e5`  
+		Last Modified: Wed, 01 Sep 2021 15:09:00 GMT  
+		Size: 3.6 MB (3567519 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:96f1c94fc30766c7f725a4e03dcf8b6032aece9e68e8cc1538f69fdf699fea76`  
-		Last Modified: Thu, 08 Jul 2021 21:08:55 GMT  
-		Size: 223.0 B  
+	-	`sha256:b1775b8c4d8708ec11bb8142290e2811bafe9fbdcdbec4bd15e071c2743d4404`  
+		Last Modified: Wed, 01 Sep 2021 15:09:00 GMT  
+		Size: 222.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0644f8bac618f393c87f9514755aae6092776038729382bb0fc907ddce7573da`  
-		Last Modified: Thu, 08 Jul 2021 21:08:58 GMT  
-		Size: 26.4 MB (26419957 bytes)  
+	-	`sha256:fc890655ed87f057ee804c1257d2cd7058bb211c2ffaec2b76a3e18065dbb1e5`  
+		Last Modified: Wed, 01 Sep 2021 15:09:03 GMT  
+		Size: 26.0 MB (26013279 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b72c23259d6d897ea5821181a0eab67286b59199ff7e48f416e92b5ced06b7f0`  
-		Last Modified: Thu, 08 Jul 2021 21:08:55 GMT  
+	-	`sha256:eaf4fa6485aeb5636c21019dc86ab1fb534d1ad0d1c4b814fca6807644240588`  
+		Last Modified: Wed, 01 Sep 2021 15:09:00 GMT  
 		Size: 172.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
