@@ -17,7 +17,7 @@ RUN set -eux; \
 RUN set -eux; \
 # https://pkgs.alpinelinux.org/package/v3.14/main/x86_64/apk-tools-static
 	apkStaticDist='v3.14'; \
-	apkStaticVersion='2.12.6-r0'; \
+	apkStaticVersion='2.12.7-r0'; \
 # TODO convert "dpkg --print-architecture" to Alpine architecture for downloading the correct architecture binary
 	apkStaticArch='x86_64'; \
 	apkStaticUrl="http://dl-cdn.alpinelinux.org/alpine/$apkStaticDist/main/$apkStaticArch/apk-tools-static-$apkStaticVersion.apk"; \
