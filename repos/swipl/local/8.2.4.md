@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:0834c1c6d03017d70aad2ee742b34bdb62c07f5d47de46176e67179c5f659612`
-- Created: `2021-07-22T18:35:17.495845549Z`
+- Image ID: `sha256:07027c2f51117bfdaccbc7be87ddd4b02fe8bb5a972ae2589a5019141cb7fb8b`
+- Created: `2021-09-03T15:51:43.121840037Z`
 - Virtual Size: ~ 147.27 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -320,11 +320,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/coreutils/8.26-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/coreutils/8.26-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `curl=7.52.1-5+deb9u14`
+### `dpkg` source package: `curl=7.52.1-5+deb9u15`
 
 Binary Packages:
 
-- `libcurl3-gnutls:amd64=7.52.1-5+deb9u14`
+- `libcurl3-gnutls:amd64=7.52.1-5+deb9u15`
 
 Licenses: (parsed from: `/usr/share/doc/libcurl3-gnutls/copyright`)
 
@@ -335,13 +335,20 @@ Licenses: (parsed from: `/usr/share/doc/libcurl3-gnutls/copyright`)
 - `other`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris curl=7.52.1-5+deb9u15
+'http://security.debian.org/debian-security/pool/updates/main/c/curl/curl_7.52.1-5+deb9u15.dsc' curl_7.52.1-5+deb9u15.dsc 2797 SHA256:f1c9f7dcf78e359aeae4b1c293a1b40dae77d86bd05cf693864861caddfe7e7c
+'http://security.debian.org/debian-security/pool/updates/main/c/curl/curl_7.52.1.orig.tar.gz' curl_7.52.1.orig.tar.gz 3504621 SHA256:a8984e8b20880b621f61a62d95ff3c0763a3152093a9f9ce4287cfd614add6ae
+'http://security.debian.org/debian-security/pool/updates/main/c/curl/curl_7.52.1-5+deb9u15.debian.tar.xz' curl_7.52.1-5+deb9u15.debian.tar.xz 65336 SHA256:09a8a9d9aab7e63470bc6e97f59ed9edfdcda0ab30e205347d0beddbf9addc5b
+```
 
-- http://snapshot.debian.org/package/curl/7.52.1-5+deb9u14/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/curl/7.52.1-5+deb9u15/ (for browsing the source)
+- https://sources.debian.net/src/curl/7.52.1-5+deb9u15/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/curl/7.52.1-5+deb9u15/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27~101-g0780600+dfsg-3+deb9u1`
 
@@ -2069,11 +2076,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/perl/5.24.1-3+deb9u7/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/perl/5.24.1-3+deb9u7/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `postgresql-9.6=9.6.22-0+deb9u1`
+### `dpkg` source package: `postgresql-9.6=9.6.23-0+deb9u1`
 
 Binary Packages:
 
-- `libpq5:amd64=9.6.22-0+deb9u1`
+- `libpq5:amd64=9.6.23-0+deb9u1`
 
 Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`)
 
@@ -2095,17 +2102,17 @@ Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris postgresql-9.6=9.6.22-0+deb9u1
-'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-9.6/postgresql-9.6_9.6.22-0+deb9u1.dsc' postgresql-9.6_9.6.22-0+deb9u1.dsc 3698 SHA256:c69b4176119c6c0007fd9a03c984c306650c0e4068c5d873112c53e6984e56df
-'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-9.6/postgresql-9.6_9.6.22.orig.tar.bz2' postgresql-9.6_9.6.22.orig.tar.bz2 19003741 SHA256:3d32cd101025a0556813397c69feff3df3d63736adb8adeaf365c522f39f2930
-'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-9.6/postgresql-9.6_9.6.22-0+deb9u1.debian.tar.xz' postgresql-9.6_9.6.22-0+deb9u1.debian.tar.xz 31704 SHA256:2ec62b227070c70fadeb47f1ff4309c9fb888960fff182de2cf85057063e24f3
+$ apt-get source -qq --print-uris postgresql-9.6=9.6.23-0+deb9u1
+'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-9.6/postgresql-9.6_9.6.23-0+deb9u1.dsc' postgresql-9.6_9.6.23-0+deb9u1.dsc 3698 SHA256:9c7cd869d355539f705239a55e40d6bb04fcad19686ed481deed824ae386f3a8
+'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-9.6/postgresql-9.6_9.6.23.orig.tar.bz2' postgresql-9.6_9.6.23.orig.tar.bz2 19013235 SHA256:a849f798401ab8c6dfa653ebbcd853b43f2200b4e3bc1ea3cb5bec9a691947b9
+'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-9.6/postgresql-9.6_9.6.23-0+deb9u1.debian.tar.xz' postgresql-9.6_9.6.23-0+deb9u1.debian.tar.xz 31876 SHA256:5f362c3dd8305d779da8bdec168a5b1af874a5088e330b16980182c934d71c60
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/postgresql-9.6/9.6.22-0+deb9u1/ (for browsing the source)
-- https://sources.debian.net/src/postgresql-9.6/9.6.22-0+deb9u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/postgresql-9.6/9.6.22-0+deb9u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/postgresql-9.6/9.6.23-0+deb9u1/ (for browsing the source)
+- https://sources.debian.net/src/postgresql-9.6/9.6.23-0+deb9u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/postgresql-9.6/9.6.23-0+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `psqlodbc=1:09.05.0400-2`
 
