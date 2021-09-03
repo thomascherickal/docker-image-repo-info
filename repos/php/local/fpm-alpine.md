@@ -1,10 +1,10 @@
-# `php:8.0.9-fpm-alpine3.14`
+# `php:8.0.10-fpm-alpine3.14`
 
 ## Docker Metadata
 
-- Image ID: `sha256:1daa2d1ff198070724b493fdd46d655f6f820a40b7d8c13d9773649b406554b2`
-- Created: `2021-08-06T23:24:21.285906566Z`
-- Virtual Size: ~ 83.80 Mb  
+- Image ID: `sha256:99d2fa73da92d16370f222cf4dbfed0ecb5b84452a2a5bde7047c3e60ba0db1c`
+- Created: `2021-08-27T21:41:20.046825964Z`
+- Virtual Size: ~ 83.92 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -18,10 +18,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F`
-  - `PHP_VERSION=8.0.9`
-  - `PHP_URL=https://www.php.net/distributions/php-8.0.9.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.9.tar.xz.asc`
-  - `PHP_SHA256=71a01b2b56544e20e28696ad5b366e431a0984eaa39aa5e35426a4843e172010`
+  - `PHP_VERSION=8.0.10`
+  - `PHP_URL=https://www.php.net/distributions/php-8.0.10.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.10.tar.xz.asc`
+  - `PHP_SHA256=66dc4d1bc86d9c1bc255b51b79d337ed1a7a035cf71230daabbf9a4ca35795eb`
 
 ## `apk` (`.apk`-based packages)
 
@@ -215,16 +215,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1k-r0 description:
+libcrypto1.1-1.1.1l-r0 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1k-r0 webpage:
+libcrypto1.1-1.1.1l-r0 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1k-r0 installed size:
+libcrypto1.1-1.1.1l-r0 installed size:
 2704 KiB
 
-libcrypto1.1-1.1.1k-r0 license:
+libcrypto1.1-1.1.1l-r0 license:
 OpenSSL
 
 ```
@@ -243,23 +243,6 @@ libcurl-7.78.0-r0 installed size:
 
 libcurl-7.78.0-r0 license:
 MIT
-
-```
-
-### `apk` package: `libedit`
-
-```console
-libedit-20210216.3.1-r0 description:
-BSD line editing library
-
-libedit-20210216.3.1-r0 webpage:
-https://www.thrysoee.dk/editline
-
-libedit-20210216.3.1-r0 installed size:
-196 KiB
-
-libedit-20210216.3.1-r0 license:
-BSD-3-Clause
 
 ```
 
@@ -300,16 +283,16 @@ ISC
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1k-r0 description:
+libssl1.1-1.1.1l-r0 description:
 SSL shared libraries
 
-libssl1.1-1.1.1k-r0 webpage:
+libssl1.1-1.1.1l-r0 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1k-r0 installed size:
+libssl1.1-1.1.1l-r0 installed size:
 528 KiB
 
-libssl1.1-1.1.1k-r0 license:
+libssl1.1-1.1.1l-r0 license:
 OpenSSL
 
 ```
@@ -436,17 +419,34 @@ BSD-2-Clause
 ### `apk` package: `openssl`
 
 ```console
-openssl-1.1.1k-r0 description:
+openssl-1.1.1l-r0 description:
 Toolkit for Transport Layer Security (TLS)
 
-openssl-1.1.1k-r0 webpage:
+openssl-1.1.1l-r0 webpage:
 https://www.openssl.org/
 
-openssl-1.1.1k-r0 installed size:
+openssl-1.1.1l-r0 installed size:
 660 KiB
 
-openssl-1.1.1k-r0 license:
+openssl-1.1.1l-r0 license:
 OpenSSL
+
+```
+
+### `apk` package: `readline`
+
+```console
+readline-8.1.0-r0 description:
+GNU readline library
+
+readline-8.1.0-r0 webpage:
+https://tiswww.cwru.edu/php/chet/readline/rltop.html
+
+readline-8.1.0-r0 installed size:
+308 KiB
+
+readline-8.1.0-r0 license:
+GPL-2.0-or-later
 
 ```
 

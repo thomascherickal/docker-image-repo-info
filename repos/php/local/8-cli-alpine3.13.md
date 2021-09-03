@@ -1,10 +1,10 @@
-# `php:8.0.9-cli-alpine3.13`
+# `php:8.0.10-cli-alpine3.13`
 
 ## Docker Metadata
 
-- Image ID: `sha256:bfc8635baa3b5620ae32790de735d54ac04bbd896722edf803f5a5c96a6d7a61`
-- Created: `2021-07-30T01:12:37.538965928Z`
-- Virtual Size: ~ 84.79 Mb  
+- Image ID: `sha256:6f5ab4d53cd8308c0a55fb4496012ed28591cb8fa3c72cada86967eebd837c74`
+- Created: `2021-09-01T04:24:54.641687017Z`
+- Virtual Size: ~ 83.83 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F`
-  - `PHP_VERSION=8.0.9`
-  - `PHP_URL=https://www.php.net/distributions/php-8.0.9.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.9.tar.xz.asc`
-  - `PHP_SHA256=71a01b2b56544e20e28696ad5b366e431a0984eaa39aa5e35426a4843e172010`
+  - `PHP_VERSION=8.0.10`
+  - `PHP_URL=https://www.php.net/distributions/php-8.0.10.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.10.tar.xz.asc`
+  - `PHP_SHA256=66dc4d1bc86d9c1bc255b51b79d337ed1a7a035cf71230daabbf9a4ca35795eb`
 
 ## `apk` (`.apk`-based packages)
 
@@ -61,16 +61,16 @@ MIT
 ### `apk` package: `apk-tools`
 
 ```console
-apk-tools-2.12.5-r0 description:
+apk-tools-2.12.7-r0 description:
 Alpine Package Keeper - package manager for alpine
 
-apk-tools-2.12.5-r0 webpage:
+apk-tools-2.12.7-r0 webpage:
 https://gitlab.alpinelinux.org/alpine/apk-tools
 
-apk-tools-2.12.5-r0 installed size:
+apk-tools-2.12.7-r0 installed size:
 304 KiB
 
-apk-tools-2.12.5-r0 license:
+apk-tools-2.12.7-r0 license:
 GPL-2.0-only
 
 ```
@@ -163,16 +163,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `curl`
 
 ```console
-curl-7.76.1-r0 description:
+curl-7.78.0-r0 description:
 URL retrival utility and library
 
-curl-7.76.1-r0 webpage:
+curl-7.78.0-r0 webpage:
 https://curl.se/
 
-curl-7.76.1-r0 installed size:
+curl-7.78.0-r0 installed size:
 244 KiB
 
-curl-7.76.1-r0 license:
+curl-7.78.0-r0 license:
 MIT
 
 ```
@@ -214,16 +214,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1k-r0 description:
+libcrypto1.1-1.1.1l-r0 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1k-r0 webpage:
+libcrypto1.1-1.1.1l-r0 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1k-r0 installed size:
+libcrypto1.1-1.1.1l-r0 installed size:
 2704 KiB
 
-libcrypto1.1-1.1.1k-r0 license:
+libcrypto1.1-1.1.1l-r0 license:
 OpenSSL
 
 ```
@@ -242,23 +242,6 @@ libcurl-7.78.0-r0 installed size:
 
 libcurl-7.78.0-r0 license:
 MIT
-
-```
-
-### `apk` package: `libedit`
-
-```console
-libedit-20191231.3.1-r1 description:
-BSD line editing library
-
-libedit-20191231.3.1-r1 webpage:
-https://www.thrysoee.dk/editline
-
-libedit-20191231.3.1-r1 installed size:
-196 KiB
-
-libedit-20191231.3.1-r1 license:
-BSD-3-Clause
 
 ```
 
@@ -282,16 +265,16 @@ ISC
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1k-r0 description:
+libssl1.1-1.1.1l-r0 description:
 SSL shared libraries
 
-libssl1.1-1.1.1k-r0 webpage:
+libssl1.1-1.1.1l-r0 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1k-r0 installed size:
+libssl1.1-1.1.1l-r0 installed size:
 528 KiB
 
-libssl1.1-1.1.1k-r0 license:
+libssl1.1-1.1.1l-r0 license:
 OpenSSL
 
 ```
@@ -350,16 +333,16 @@ MIT
 ### `apk` package: `musl-utils`
 
 ```console
-musl-utils-1.2.2-r0 description:
+musl-utils-1.2.2-r1 description:
 the musl c library (libc) implementation
 
-musl-utils-1.2.2-r0 webpage:
+musl-utils-1.2.2-r1 webpage:
 https://musl.libc.org/
 
-musl-utils-1.2.2-r0 installed size:
+musl-utils-1.2.2-r1 installed size:
 140 KiB
 
-musl-utils-1.2.2-r0 license:
+musl-utils-1.2.2-r1 license:
 MIT BSD GPL2+
 
 ```
@@ -435,17 +418,34 @@ BSD-2-Clause
 ### `apk` package: `openssl`
 
 ```console
-openssl-1.1.1k-r0 description:
+openssl-1.1.1l-r0 description:
 Toolkit for Transport Layer Security (TLS)
 
-openssl-1.1.1k-r0 webpage:
+openssl-1.1.1l-r0 webpage:
 https://www.openssl.org/
 
-openssl-1.1.1k-r0 installed size:
+openssl-1.1.1l-r0 installed size:
 660 KiB
 
-openssl-1.1.1k-r0 license:
+openssl-1.1.1l-r0 license:
 OpenSSL
+
+```
+
+### `apk` package: `readline`
+
+```console
+readline-8.1.0-r0 description:
+GNU readline library
+
+readline-8.1.0-r0 webpage:
+https://tiswww.cwru.edu/php/chet/readline/rltop.html
+
+readline-8.1.0-r0 installed size:
+308 KiB
+
+readline-8.1.0-r0 license:
+GPL-2.0-or-later
 
 ```
 
