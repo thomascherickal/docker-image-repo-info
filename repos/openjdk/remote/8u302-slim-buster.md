@@ -1,7 +1,7 @@
 ## `openjdk:8u302-slim-buster`
 
 ```console
-$ docker pull openjdk@sha256:4a81391f07542a02d6de8ba13f03813bd72351c6bc57aa1c1a8bce0cc6221a33
+$ docker pull openjdk@sha256:a668fb4c8e7133ab5d8b6d3a5021666372c5c05387a9a58c7da2d094831586c1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,53 +12,53 @@ $ docker pull openjdk@sha256:4a81391f07542a02d6de8ba13f03813bd72351c6bc57aa1c1a8
 ### `openjdk:8u302-slim-buster` - linux; amd64
 
 ```console
-$ docker pull openjdk@sha256:0ca772a884f508163ff8fa0c8a536000eec0f2294d14c23cf5f829cf14355f2c
+$ docker pull openjdk@sha256:fd512646728bc947f4d12db1a92e468d390629f9e62596126794b1d207924e3d
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **136.7 MB (136685476 bytes)**  
+-	Total Size: **136.7 MB (136686200 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c46cda5d55b066712ea27743a8f24b4de267ae5f3cbb0795864ca871455d0b51`
+-	Image ID: `sha256:a6b775e642438559e5fd8fee3d6e8ebe59473f2bc334ea54905a487e26fec94c`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Tue, 17 Aug 2021 01:24:06 GMT
-ADD file:87b4e60fe3af680c6815448374365a44e9ea461bc8ade2960b4639c25aed3ba9 in / 
-# Tue, 17 Aug 2021 01:24:06 GMT
+# Fri, 03 Sep 2021 01:21:46 GMT
+ADD file:4ff85d9f6aa246746912db62dea02eb71750474bb29611e770516a1fcd217add in / 
+# Fri, 03 Sep 2021 01:21:46 GMT
 CMD ["bash"]
-# Tue, 17 Aug 2021 06:53:10 GMT
+# Fri, 03 Sep 2021 08:32:41 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates p11-kit 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 17 Aug 2021 06:55:46 GMT
+# Fri, 03 Sep 2021 08:42:03 GMT
 ENV JAVA_HOME=/usr/local/openjdk-8
-# Tue, 17 Aug 2021 06:55:46 GMT
+# Fri, 03 Sep 2021 08:42:04 GMT
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ] # backwards compatibility
-# Tue, 17 Aug 2021 06:55:47 GMT
+# Fri, 03 Sep 2021 08:42:04 GMT
 ENV PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 17 Aug 2021 06:55:47 GMT
+# Fri, 03 Sep 2021 08:42:04 GMT
 ENV LANG=C.UTF-8
-# Tue, 17 Aug 2021 06:55:47 GMT
+# Fri, 03 Sep 2021 08:42:05 GMT
 ENV JAVA_VERSION=8u302
-# Tue, 17 Aug 2021 06:56:01 GMT
+# Fri, 03 Sep 2021 08:42:18 GMT
 RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u302-b08/OpenJDK8U-jdk_x64_linux_8u302b08.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u302-b08/OpenJDK8U-jdk_aarch64_linux_8u302b08.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
 ```
 
 -	Layers:
-	-	`sha256:e1acddbe380c63f0de4b77d3f287b7c81cd9d89563a230692378126b46ea6546`  
-		Last Modified: Tue, 17 Aug 2021 01:30:21 GMT  
-		Size: 27.1 MB (27145985 bytes)  
+	-	`sha256:a330b6cecb98cd2425fd25fce36669073f593b3176b4ee14731e48c05d678cdd`  
+		Last Modified: Fri, 03 Sep 2021 01:28:19 GMT  
+		Size: 27.1 MB (27145844 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:427b7134c0c7b2e1d9cc703e20a84b850cbbf34ef654cfa0db710678a99da78b`  
-		Last Modified: Tue, 17 Aug 2021 07:00:00 GMT  
-		Size: 3.3 MB (3268768 bytes)  
+	-	`sha256:eb538b78785f115f86e312f41ac522a9b30e0cb77d061dd273f331e57ae2e471`  
+		Last Modified: Fri, 03 Sep 2021 08:50:36 GMT  
+		Size: 3.3 MB (3269611 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:78d3ca35fb9a4f8f161dc8b1007db271091ce462aa5a6c8aada7e7096f9857b5`  
-		Last Modified: Tue, 17 Aug 2021 07:04:10 GMT  
-		Size: 211.0 B  
+	-	`sha256:74a225619855df59e52e87e081d77a14536dc94910d797dd74642629825e78a4`  
+		Last Modified: Fri, 03 Sep 2021 09:06:54 GMT  
+		Size: 208.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:63fdd77aee065a3593352d4910487a661d9f1cc12555573e767f55ba3e1c10e0`  
-		Last Modified: Tue, 17 Aug 2021 07:04:19 GMT  
-		Size: 106.3 MB (106270512 bytes)  
+	-	`sha256:7e9bb6196e6a80911374894a97f29c26d9f7853cafa5c1db3085a17394271c6c`  
+		Last Modified: Fri, 03 Sep 2021 09:07:07 GMT  
+		Size: 106.3 MB (106270537 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `openjdk:8u302-slim-buster` - linux; arm64 variant v8
