@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:1be9864bb31d8495f86139ebf6f36a073c16c4a67a340025b9767592de77cc4b`
-- Created: `2021-07-22T11:57:23.344881581Z`
+- Image ID: `sha256:5bba7d1e18233aae1b63a8f8b9e3af85f49d668eb74394cc20b5f7818808dd7b`
+- Created: `2021-08-18T08:37:01.118024657Z`
 - Virtual Size: ~ 890.44 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -661,14 +661,14 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/cups/2.2.1-8+deb9u6/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/cups/2.2.1-8+deb9u6/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `curl=7.52.1-5+deb9u14`
+### `dpkg` source package: `curl=7.52.1-5+deb9u15`
 
 Binary Packages:
 
-- `curl=7.52.1-5+deb9u14`
-- `libcurl3:amd64=7.52.1-5+deb9u14`
-- `libcurl3-gnutls:amd64=7.52.1-5+deb9u14`
-- `libcurl4-openssl-dev:amd64=7.52.1-5+deb9u14`
+- `curl=7.52.1-5+deb9u15`
+- `libcurl3:amd64=7.52.1-5+deb9u15`
+- `libcurl3-gnutls:amd64=7.52.1-5+deb9u15`
+- `libcurl4-openssl-dev:amd64=7.52.1-5+deb9u15`
 
 Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl3/copyright`, `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/doc/libcurl4-openssl-dev/copyright`)
 
@@ -679,13 +679,20 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris curl=7.52.1-5+deb9u15
+'http://security.debian.org/debian-security/pool/updates/main/c/curl/curl_7.52.1-5+deb9u15.dsc' curl_7.52.1-5+deb9u15.dsc 2797 SHA256:f1c9f7dcf78e359aeae4b1c293a1b40dae77d86bd05cf693864861caddfe7e7c
+'http://security.debian.org/debian-security/pool/updates/main/c/curl/curl_7.52.1.orig.tar.gz' curl_7.52.1.orig.tar.gz 3504621 SHA256:a8984e8b20880b621f61a62d95ff3c0763a3152093a9f9ce4287cfd614add6ae
+'http://security.debian.org/debian-security/pool/updates/main/c/curl/curl_7.52.1-5+deb9u15.debian.tar.xz' curl_7.52.1-5+deb9u15.debian.tar.xz 65336 SHA256:09a8a9d9aab7e63470bc6e97f59ed9edfdcda0ab30e205347d0beddbf9addc5b
+```
 
-- http://snapshot.debian.org/package/curl/7.52.1-5+deb9u14/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/curl/7.52.1-5+deb9u15/ (for browsing the source)
+- https://sources.debian.net/src/curl/7.52.1-5+deb9u15/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/curl/7.52.1-5+deb9u15/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27~101-g0780600+dfsg-3+deb9u1`
 
@@ -4393,24 +4400,31 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/npth/1.3-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/npth/1.3-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openexr=2.2.0-11+deb9u3`
+### `dpkg` source package: `openexr=2.2.0-11+deb9u4`
 
 Binary Packages:
 
-- `libopenexr-dev=2.2.0-11+deb9u3`
-- `libopenexr22:amd64=2.2.0-11+deb9u3`
+- `libopenexr-dev=2.2.0-11+deb9u4`
+- `libopenexr22:amd64=2.2.0-11+deb9u4`
 
 Licenses: (parsed from: `/usr/share/doc/libopenexr-dev/copyright`, `/usr/share/doc/libopenexr22/copyright`)
 
 - `openexr`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris openexr=2.2.0-11+deb9u4
+'http://security.debian.org/debian-security/pool/updates/main/o/openexr/openexr_2.2.0-11+deb9u4.dsc' openexr_2.2.0-11+deb9u4.dsc 2308 SHA256:7130e6cc84de8f3d4f8fb1a32583162df133615654a9b0aa5f6f5c02eab0d1b5
+'http://security.debian.org/debian-security/pool/updates/main/o/openexr/openexr_2.2.0.orig.tar.gz' openexr_2.2.0.orig.tar.gz 14489661 SHA256:36a012f6c43213f840ce29a8b182700f6cf6b214bea0d5735594136b44914231
+'http://security.debian.org/debian-security/pool/updates/main/o/openexr/openexr_2.2.0-11+deb9u4.debian.tar.xz' openexr_2.2.0-11+deb9u4.debian.tar.xz 36628 SHA256:98e32884bf15a95774d3f752b9c8de3e8ff1998b3473b5bb15490a71729fe58c
+```
 
-- http://snapshot.debian.org/package/openexr/2.2.0-11+deb9u3/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/openexr/2.2.0-11+deb9u4/ (for browsing the source)
+- https://sources.debian.net/src/openexr/2.2.0-11+deb9u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openexr/2.2.0-11+deb9u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openjpeg2=2.1.2-1.1+deb9u6`
 
@@ -4856,20 +4870,13 @@ Licenses: (parsed from: `/usr/share/doc/libpq-dev/copyright`, `/usr/share/doc/li
 - `nagaysau-ishii`
 - `rijndael`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris postgresql-9.6=9.6.22-0+deb9u1
-'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-9.6/postgresql-9.6_9.6.22-0+deb9u1.dsc' postgresql-9.6_9.6.22-0+deb9u1.dsc 3698 SHA256:c69b4176119c6c0007fd9a03c984c306650c0e4068c5d873112c53e6984e56df
-'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-9.6/postgresql-9.6_9.6.22.orig.tar.bz2' postgresql-9.6_9.6.22.orig.tar.bz2 19003741 SHA256:3d32cd101025a0556813397c69feff3df3d63736adb8adeaf365c522f39f2930
-'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-9.6/postgresql-9.6_9.6.22-0+deb9u1.debian.tar.xz' postgresql-9.6_9.6.22-0+deb9u1.debian.tar.xz 31704 SHA256:2ec62b227070c70fadeb47f1ff4309c9fb888960fff182de2cf85057063e24f3
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/postgresql-9.6/9.6.22-0+deb9u1/
 
-- https://sources.debian.net/src/postgresql-9.6/9.6.22-0+deb9u1/ (for browsing the source)
-- https://sources.debian.net/src/postgresql-9.6/9.6.22-0+deb9u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/postgresql-9.6/9.6.22-0+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `procps=2:3.3.12-3+deb9u1`
 
