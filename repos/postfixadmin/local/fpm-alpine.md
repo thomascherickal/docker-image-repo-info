@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:30235a11aa05471a670ca667aa52fe06d5775700e61cde5a56838d36c8544c4f`
-- Created: `2021-08-13T17:36:01.766862989Z`
-- Virtual Size: ~ 95.29 Mb  
+- Image ID: `sha256:598215c6405d0b8ffd11ee3781d79e964301c9bd7a636f79faa1fbe539b94c25`
+- Created: `2021-08-30T21:05:55.751877109Z`
+- Virtual Size: ~ 95.12 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/docker-entrypoint.sh"]`
@@ -18,12 +18,12 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
-  - `PHP_VERSION=7.4.22`
-  - `PHP_URL=https://www.php.net/distributions/php-7.4.22.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.22.tar.xz.asc`
-  - `PHP_SHA256=8e078cd7d2f49ac3fcff902490a5bb1addc885e7e3b0d8dd068f42c68297bde8`
+  - `PHP_VERSION=7.4.23`
+  - `PHP_URL=https://www.php.net/distributions/php-7.4.23.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.23.tar.xz.asc`
+  - `PHP_SHA256=cea52313fcffe56343bcd3c66dbb23cd5507dc559cc2e3547cf8f5452e88a05d`
   - `POSTFIXADMIN_VERSION=3.3.10`
-  - `POSTFIXADMIN_SHA512=b922ef08cbb3338e7581a78abb3077e92401019bea584710816615ab019a8cf678b22dbb068d0321550e2298f6a235b8a245c44c9f7eef02bb6b49b696225a2f`
+  - `POSTFIXADMIN_SHA512=e00fc9ea343a928976d191adfa01020ee0c6ddbe80a39e01ca2ee414a18247958f033970f378fe4a9974636172a5e094e57117ee9ac7b930c592f433097a7aca`
 - Labels:
   - `maintainer=David Goodwin <david@codepoets.co.uk> (@DavidGoodwin)`
 
@@ -270,16 +270,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1k-r0 description:
+libcrypto1.1-1.1.1l-r0 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1k-r0 webpage:
+libcrypto1.1-1.1.1l-r0 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1k-r0 installed size:
+libcrypto1.1-1.1.1l-r0 installed size:
 2704 KiB
 
-libcrypto1.1-1.1.1k-r0 license:
+libcrypto1.1-1.1.1l-r0 license:
 OpenSSL
 
 ```
@@ -298,23 +298,6 @@ libcurl-7.78.0-r0 installed size:
 
 libcurl-7.78.0-r0 license:
 MIT
-
-```
-
-### `apk` package: `libedit`
-
-```console
-libedit-20210216.3.1-r0 description:
-BSD line editing library
-
-libedit-20210216.3.1-r0 webpage:
-https://www.thrysoee.dk/editline
-
-libedit-20210216.3.1-r0 installed size:
-196 KiB
-
-libedit-20210216.3.1-r0 license:
-BSD-3-Clause
 
 ```
 
@@ -338,16 +321,16 @@ OLDAP-2.8
 ### `apk` package: `libpq`
 
 ```console
-libpq-13.3-r0 description:
+libpq-13.4-r0 description:
 PostgreSQL libraries
 
-libpq-13.3-r0 webpage:
+libpq-13.4-r0 webpage:
 https://www.postgresql.org/
 
-libpq-13.3-r0 installed size:
+libpq-13.4-r0 installed size:
 328 KiB
 
-libpq-13.3-r0 license:
+libpq-13.4-r0 license:
 PostgreSQL
 
 ```
@@ -406,16 +389,16 @@ ISC
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1k-r0 description:
+libssl1.1-1.1.1l-r0 description:
 SSL shared libraries
 
-libssl1.1-1.1.1k-r0 webpage:
+libssl1.1-1.1.1l-r0 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1k-r0 installed size:
+libssl1.1-1.1.1l-r0 installed size:
 528 KiB
 
-libssl1.1-1.1.1k-r0 license:
+libssl1.1-1.1.1l-r0 license:
 OpenSSL
 
 ```
@@ -542,16 +525,16 @@ BSD-2-Clause
 ### `apk` package: `openssl`
 
 ```console
-openssl-1.1.1k-r0 description:
+openssl-1.1.1l-r0 description:
 Toolkit for Transport Layer Security (TLS)
 
-openssl-1.1.1k-r0 webpage:
+openssl-1.1.1l-r0 webpage:
 https://www.openssl.org/
 
-openssl-1.1.1k-r0 installed size:
+openssl-1.1.1l-r0 installed size:
 660 KiB
 
-openssl-1.1.1k-r0 license:
+openssl-1.1.1l-r0 license:
 OpenSSL
 
 ```
