@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:d636ad7ee210123228a7815b07cac9bfa682fba8e2baa59ceefbcf36cae7a0b7`
-- Created: `2021-07-26T18:38:19.839501715Z`
-- Virtual Size: ~ 351.29 Mb  
+- Image ID: `sha256:7365e67c7441c8c764c31f6c19ead620a98fdb2e8f1f7ea7d832750a321e2b96`
+- Created: `2021-08-18T06:50:25.258315771Z`
+- Virtual Size: ~ 344.65 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -12,7 +12,7 @@
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `GOSU_VER=1.12`
-  - `INFLUXDB_VERSION=2.0.7`
+  - `INFLUXDB_VERSION=2.0.8`
   - `INFLUX_CONFIGS_PATH=/etc/influxdb2/influx-configs`
   - `INFLUXD_INIT_PORT=9999`
   - `INFLUXD_INIT_PING_ATTEMPTS=600`
@@ -1027,14 +1027,14 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/keyutils/1.6-6/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/keyutils/1.6-6/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `krb5=1.17-3+deb10u1`
+### `dpkg` source package: `krb5=1.17-3+deb10u2`
 
 Binary Packages:
 
-- `libgssapi-krb5-2:amd64=1.17-3+deb10u1`
-- `libk5crypto3:amd64=1.17-3+deb10u1`
-- `libkrb5-3:amd64=1.17-3+deb10u1`
-- `libkrb5support0:amd64=1.17-3+deb10u1`
+- `libgssapi-krb5-2:amd64=1.17-3+deb10u2`
+- `libk5crypto3:amd64=1.17-3+deb10u2`
+- `libkrb5-3:amd64=1.17-3+deb10u2`
+- `libkrb5support0:amd64=1.17-3+deb10u2`
 
 Licenses: (parsed from: `/usr/share/doc/libgssapi-krb5-2/copyright`, `/usr/share/doc/libk5crypto3/copyright`, `/usr/share/doc/libkrb5-3/copyright`, `/usr/share/doc/libkrb5support0/copyright`)
 
@@ -1043,17 +1043,17 @@ Licenses: (parsed from: `/usr/share/doc/libgssapi-krb5-2/copyright`, `/usr/share
 Source:
 
 ```console
-$ apt-get source -qq --print-uris krb5=1.17-3+deb10u1
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17-3+deb10u1.dsc' krb5_1.17-3+deb10u1.dsc 3573 SHA256:e9edb5d47d4f7dc345e01adc45f1d302f5f19012f8c38d234ef9b2c08bbef7cc
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17.orig.tar.gz' krb5_1.17.orig.tar.gz 8761763 SHA256:5a6e2284a53de5702d3dc2be3b9339c963f9b5397d3fbbc53beb249380a781f5
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17-3+deb10u1.debian.tar.xz' krb5_1.17-3+deb10u1.debian.tar.xz 100584 SHA256:396ecf9ec5b4ac91d2ce8527d7f6b2309e70fc5b14ea1158eb7e367c48e9c5ca
+$ apt-get source -qq --print-uris krb5=1.17-3+deb10u2
+'http://security.debian.org/debian-security/pool/updates/main/k/krb5/krb5_1.17-3+deb10u2.dsc' krb5_1.17-3+deb10u2.dsc 3728 SHA256:a901f59b3c3ddfa56bf34188f644ecdabcf58ea8bd24734ea028a33c91d58f44
+'http://security.debian.org/debian-security/pool/updates/main/k/krb5/krb5_1.17.orig.tar.gz' krb5_1.17.orig.tar.gz 8761763 SHA256:5a6e2284a53de5702d3dc2be3b9339c963f9b5397d3fbbc53beb249380a781f5
+'http://security.debian.org/debian-security/pool/updates/main/k/krb5/krb5_1.17-3+deb10u2.debian.tar.xz' krb5_1.17-3+deb10u2.debian.tar.xz 102064 SHA256:8a943f0b23f68e74809f8e23b55e1b8af638242b464cf04770aa0324b5ba117c
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/krb5/1.17-3+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/krb5/1.17-3+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/krb5/1.17-3+deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/krb5/1.17-3+deb10u2/ (for browsing the source)
+- https://sources.debian.net/src/krb5/1.17-3+deb10u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/krb5/1.17-3+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libassuan=2.5.2-1`
 
