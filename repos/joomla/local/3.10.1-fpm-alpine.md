@@ -1,10 +1,10 @@
-# `joomla:3.9.28-fpm-alpine`
+# `joomla:3.10.1-fpm-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:a8fd84971e1ade341ce43ed3c19c9206c9686cdc28ee934e89dcba997bb5c726`
-- Created: `2021-08-07T03:38:13.534747872Z`
-- Virtual Size: ~ 129.48 Mb  
+- Image ID: `sha256:2946a3ee2b20f57d44696b34df80fc4b3da9711062d0955abf593baa119a475d`
+- Created: `2021-08-28T02:42:15.268103334Z`
+- Virtual Size: ~ 129.38 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -18,13 +18,13 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=CBAF69F173A0FEA4B537F470D66C9593118BCCB6 F38252826ACD957EF380D39F2F7956BC5DA04B5D`
-  - `PHP_VERSION=7.3.29`
-  - `PHP_URL=https://www.php.net/distributions/php-7.3.29.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.3.29.tar.xz.asc`
-  - `PHP_SHA256=7db2834511f3d86272dca3daee3f395a5a4afce359b8342aa6edad80e12eb4d0`
+  - `PHP_VERSION=7.3.30`
+  - `PHP_URL=https://www.php.net/distributions/php-7.3.30.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.3.30.tar.xz.asc`
+  - `PHP_SHA256=0ebfd656df0f3b1ea37ff2887f8f2d1a71cd160fb0292547c0ee0a99e58ffd1b`
   - `JOOMLA_INSTALLATION_DISABLE_LOCALHOST_CHECK=1`
-  - `JOOMLA_VERSION=3.9.28`
-  - `JOOMLA_SHA512=0751036475d9b527bd6da5f5a0c67e0c728449bf02ba9d508f206b4b2f35697093c938a4350b6e9412b16f5eabb8700575268b564fd8db451308ae4cfe4d882e`
+  - `JOOMLA_VERSION=3.10.1`
+  - `JOOMLA_SHA512=a397ecfc0c5f8a86ce871d691c8dd721ae2b40f2d05a5eb4f86a3a1598a486b332305de556a547b2e7d6613fa0f4daf4c2bb30a24ce4a50cb1369007302048fa`
 - Labels:
   - `maintainer=Harald Leithner <harald.leithner@community.joomla.org> (@HLeithner)`
 
@@ -288,16 +288,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1k-r0 description:
+libcrypto1.1-1.1.1l-r0 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1k-r0 webpage:
+libcrypto1.1-1.1.1l-r0 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1k-r0 installed size:
+libcrypto1.1-1.1.1l-r0 installed size:
 2704 KiB
 
-libcrypto1.1-1.1.1k-r0 license:
+libcrypto1.1-1.1.1l-r0 license:
 OpenSSL
 
 ```
@@ -316,23 +316,6 @@ libcurl-7.78.0-r0 installed size:
 
 libcurl-7.78.0-r0 license:
 MIT
-
-```
-
-### `apk` package: `libedit`
-
-```console
-libedit-20210216.3.1-r0 description:
-BSD line editing library
-
-libedit-20210216.3.1-r0 webpage:
-https://www.thrysoee.dk/editline
-
-libedit-20210216.3.1-r0 installed size:
-196 KiB
-
-libedit-20210216.3.1-r0 license:
-BSD-3-Clause
 
 ```
 
@@ -441,16 +424,16 @@ Libpng
 ### `apk` package: `libpq`
 
 ```console
-libpq-13.3-r0 description:
+libpq-13.4-r0 description:
 PostgreSQL libraries
 
-libpq-13.3-r0 webpage:
+libpq-13.4-r0 webpage:
 https://www.postgresql.org/
 
-libpq-13.3-r0 installed size:
+libpq-13.4-r0 installed size:
 328 KiB
 
-libpq-13.3-r0 license:
+libpq-13.4-r0 license:
 PostgreSQL
 
 ```
@@ -509,16 +492,16 @@ ISC
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1k-r0 description:
+libssl1.1-1.1.1l-r0 description:
 SSL shared libraries
 
-libssl1.1-1.1.1k-r0 webpage:
+libssl1.1-1.1.1l-r0 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1k-r0 installed size:
+libssl1.1-1.1.1l-r0 installed size:
 528 KiB
 
-libssl1.1-1.1.1k-r0 license:
+libssl1.1-1.1.1l-r0 license:
 OpenSSL
 
 ```
@@ -662,16 +645,16 @@ MIT
 ### `apk` package: `openssl`
 
 ```console
-openssl-1.1.1k-r0 description:
+openssl-1.1.1l-r0 description:
 Toolkit for Transport Layer Security (TLS)
 
-openssl-1.1.1k-r0 webpage:
+openssl-1.1.1l-r0 webpage:
 https://www.openssl.org/
 
-openssl-1.1.1k-r0 installed size:
+openssl-1.1.1l-r0 installed size:
 660 KiB
 
-openssl-1.1.1k-r0 license:
+openssl-1.1.1l-r0 license:
 OpenSSL
 
 ```
