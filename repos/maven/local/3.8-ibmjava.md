@@ -1,10 +1,10 @@
-# `maven:3.8.1-ibmjava-8`
+# `maven:3.8.2-ibmjava-8`
 
 ## Docker Metadata
 
-- Image ID: `sha256:fd4b89269ff36b46fb6735deba4ad589806b0e0aa2ad907c0ccdac3b29b8ad0f`
-- Created: `2021-08-13T17:59:02.374642967Z`
-- Virtual Size: ~ 367.05 Mb  
+- Image ID: `sha256:851331fa4b970161507b80e792fb0f29228f522bb6e6adcb53ea2495f8422c7d`
+- Created: `2021-08-31T08:01:08.266014565Z`
+- Virtual Size: ~ 366.72 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/mvn-entrypoint.sh"]`
@@ -1185,12 +1185,12 @@ $ apt-get source -qq --print-uris openldap=2.4.45+dfsg-1ubuntu1.10
 'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.45+dfsg-1ubuntu1.10.debian.tar.xz' openldap_2.4.45+dfsg-1ubuntu1.10.debian.tar.xz 183732 SHA512:41b401e4a4d42653dcf016c685402e8866262c050131bf5aa5436643ed14d6979a9bbacca40a3d8be9115e0aa0b0839156c490f3b1f50ca64ecebde25cb84375
 ```
 
-### `dpkg` source package: `openssl=1.1.1-1ubuntu2.1~18.04.9`
+### `dpkg` source package: `openssl=1.1.1-1ubuntu2.1~18.04.13`
 
 Binary Packages:
 
-- `libssl1.1:amd64=1.1.1-1ubuntu2.1~18.04.9`
-- `openssl=1.1.1-1ubuntu2.1~18.04.9`
+- `libssl1.1:amd64=1.1.1-1ubuntu2.1~18.04.13`
+- `openssl=1.1.1-1ubuntu2.1~18.04.13`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1199,11 +1199,10 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openssl=1.1.1-1ubuntu2.1~18.04.9
-'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1-1ubuntu2.1~18.04.9.dsc' openssl_1.1.1-1ubuntu2.1~18.04.9.dsc 2754 SHA512:b1c55200f1e749a6336fb20edd783c9ce6ad3e86516cc0b37600bf6fe285954f1553eb96eeb0a5836cfadc603e35721b74eecb85e8f8d2bbe6e6f4bb6be7e5a1
-'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1.orig.tar.gz' openssl_1.1.1.orig.tar.gz 8337920 SHA512:c0284a4fe84bdf765ca5bc5148da4441ffc36392cfecaf9d372af00cf93b6de5681cab1248b6f8246474532155dc205da5ad49549ad7c61c07c917145e7c9c71
-'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1.orig.tar.gz.asc' openssl_1.1.1.orig.tar.gz.asc 488 SHA512:cc69ad07a2edc17b579018bac4683f7d48deb8cde4a0f53eb777d2546eec9be6d13a610299705f3b87a7e4e8492432260cd7efc89d124c7fe1def309bbee461f
-'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1-1ubuntu2.1~18.04.9.debian.tar.xz' openssl_1.1.1-1ubuntu2.1~18.04.9.debian.tar.xz 115252 SHA512:93ba43f39b24b1be90e06c7e016ad6ae69bc2f25642956ae6acd4a6f7a64e8a08236aead50c55598738ca958152a58bea908b77b391b8c77a285fe7af184e8df
+$ apt-get source -qq --print-uris openssl=1.1.1-1ubuntu2.1~18.04.13
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1-1ubuntu2.1~18.04.13.dsc' openssl_1.1.1-1ubuntu2.1~18.04.13.dsc 2514 SHA512:c4aaa5d1cdd986d46a9ff9fa1762694981e54b9f85d95507155f03b6d801fb769471e215ea9296c9b13621d50d5137a37570e87b207d9cf32a77014ab12c0293
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1.orig.tar.gz' openssl_1.1.1.orig.tar.gz 8337920 SHA512:c0284a4fe84bdf765ca5bc5148da4441ffc36392cfecaf9d372af00cf93b6de5681cab1248b6f8246474532155dc205da5ad49549ad7c61c07c917145e7c9c71
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1-1ubuntu2.1~18.04.13.debian.tar.xz' openssl_1.1.1-1ubuntu2.1~18.04.13.debian.tar.xz 126864 SHA512:bc0a5b48ccc278c19f6afd07980dd4248dcd7a987a832d857ac475feef0d7c3443513f1e00efd6e0294c09138f7b0f8fed44516ee1e5c0e4faba2cd8216fec15
 ```
 
 ### `dpkg` source package: `p11-kit=0.23.9-2ubuntu0.1`
@@ -1445,12 +1444,12 @@ $ apt-get source -qq --print-uris sqlite3=3.22.0-1ubuntu0.4
 'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.22.0-1ubuntu0.4.debian.tar.xz' sqlite3_3.22.0-1ubuntu0.4.debian.tar.xz 47632 SHA512:1b280b6c301b2f3c15ebdfe6085584cef34257edae14c94d7d6e8d06a7b884a96029d354cb3f09df6b6427f671a24cc25ee1ebc178c7168cd0a52bce8c8b5cf0
 ```
 
-### `dpkg` source package: `systemd=237-3ubuntu10.50`
+### `dpkg` source package: `systemd=237-3ubuntu10.51`
 
 Binary Packages:
 
-- `libsystemd0:amd64=237-3ubuntu10.50`
-- `libudev1:amd64=237-3ubuntu10.50`
+- `libsystemd0:amd64=237-3ubuntu10.51`
+- `libudev1:amd64=237-3ubuntu10.51`
 
 Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/libudev1/copyright`)
 
@@ -1465,10 +1464,10 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris systemd=237-3ubuntu10.50
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.50.dsc' systemd_237-3ubuntu10.50.dsc 5187 SHA512:79be5b7150d97f5ab5e8cde9fc40917da27e20e478ff8675fe2dd2f2cf925f3a4c5ada3d52faef23142c698b4e46615c726c21d12c5d8d68a1a6f7d98f80fd89
+$ apt-get source -qq --print-uris systemd=237-3ubuntu10.51
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.51.dsc' systemd_237-3ubuntu10.51.dsc 4842 SHA512:5826415d989a708c1e3d97d180cfd5191cbf2f1abe8d9e3e10d967b0b69c39f48247dc765ca1c7691524943b7f6a9f61f0c5d462969847ec8e80ff2981760dd3
 'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237.orig.tar.gz' systemd_237.orig.tar.gz 6871350 SHA512:15ef4b92815a6dd9a6c51672dbc00fd7cd0f08068ef0cbeaca574f68d330b28bc67ba1946f24f75ef3d9e7b63843a73eea700db54688061dbf5c9f8470394c3b
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.50.debian.tar.xz' systemd_237-3ubuntu10.50.debian.tar.xz 295228 SHA512:6d3c1e595c36dc035c54a623a7a7a505cc6a678490cc038c8c16fbde7b63c557c77a12e788030308527717b83b548391e769f3b0d3ba207d2c6b7259367332f7
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.51.debian.tar.xz' systemd_237-3ubuntu10.51.debian.tar.xz 298912 SHA512:1b8629128928178bb809e13b86d539b9c51338f0295bd14324aca914d2646065e48d59ef0029c8b666e7bcab093a0329c053e07860a77882b35e835db84521c6
 ```
 
 ### `dpkg` source package: `sysvinit=2.88dsf-59.10ubuntu1`
