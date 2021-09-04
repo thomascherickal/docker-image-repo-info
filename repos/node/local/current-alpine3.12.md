@@ -2,16 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:e69ab0e2c504fa934bb9389e23f0c713747d017ba7d1c4f6cf4b6765a7dbed9c`
-- Created: `2021-08-12T18:20:57.0547399Z`
-- Virtual Size: ~ 112.00 Mb  
+- Image ID: `sha256:e566542ff24946fc02a3e0b8cc58758675530eda0a13789a7406451f7d80a416`
+- Created: `2021-08-31T23:41:18.251321036Z`
+- Virtual Size: ~ 112.29 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
 - Command: `["node"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `NODE_VERSION=16.6.2`
+  - `NODE_VERSION=16.8.0`
   - `YARN_VERSION=1.22.5`
 
 ## `apk` (`.apk`-based packages)
@@ -53,16 +53,16 @@ MIT
 ### `apk` package: `apk-tools`
 
 ```console
-apk-tools-2.10.6-r0 description:
+apk-tools-2.10.8-r0 description:
 Alpine Package Keeper - package manager for alpine
 
-apk-tools-2.10.6-r0 webpage:
+apk-tools-2.10.8-r0 webpage:
 https://gitlab.alpinelinux.org/alpine/apk-tools
 
-apk-tools-2.10.6-r0 installed size:
+apk-tools-2.10.8-r0 installed size:
 260 KiB
 
-apk-tools-2.10.6-r0 license:
+apk-tools-2.10.8-r0 license:
 GPL-2.0-only
 
 ```
@@ -121,16 +121,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1k-r0 description:
+libcrypto1.1-1.1.1l-r0 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1k-r0 webpage:
+libcrypto1.1-1.1.1l-r0 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1k-r0 installed size:
+libcrypto1.1-1.1.1l-r0 installed size:
 2700 KiB
 
-libcrypto1.1-1.1.1k-r0 license:
+libcrypto1.1-1.1.1l-r0 license:
 OpenSSL
 
 ```
@@ -155,16 +155,16 @@ GPL-2.0-or-later LGPL-2.1-or-later
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1k-r0 description:
+libssl1.1-1.1.1l-r0 description:
 SSL shared libraries
 
-libssl1.1-1.1.1k-r0 webpage:
+libssl1.1-1.1.1l-r0 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1k-r0 installed size:
+libssl1.1-1.1.1l-r0 installed size:
 528 KiB
 
-libssl1.1-1.1.1k-r0 license:
+libssl1.1-1.1.1l-r0 license:
 OpenSSL
 
 ```

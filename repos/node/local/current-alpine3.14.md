@@ -2,16 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:2c9249cea5e4e9ed289cb2ad2c4e27c53cdcc8a9ebd2441215b9ade6ca1901b9`
-- Created: `2021-08-12T18:21:30.791940337Z`
-- Virtual Size: ~ 112.08 Mb  
+- Image ID: `sha256:8e54fa4ec7daa6dc337e9eeb50a63a4a23f99e59e3e83f7ef2db5e3b24681e57`
+- Created: `2021-08-27T20:51:35.674789353Z`
+- Virtual Size: ~ 112.36 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
 - Command: `["node"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `NODE_VERSION=16.6.2`
+  - `NODE_VERSION=16.8.0`
   - `YARN_VERSION=1.22.5`
 
 ## `apk` (`.apk`-based packages)
@@ -121,16 +121,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1k-r0 description:
+libcrypto1.1-1.1.1l-r0 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1k-r0 webpage:
+libcrypto1.1-1.1.1l-r0 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1k-r0 installed size:
+libcrypto1.1-1.1.1l-r0 installed size:
 2704 KiB
 
-libcrypto1.1-1.1.1k-r0 license:
+libcrypto1.1-1.1.1l-r0 license:
 OpenSSL
 
 ```
@@ -172,16 +172,16 @@ ISC AND (BSD-3-Clause OR MIT)
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1k-r0 description:
+libssl1.1-1.1.1l-r0 description:
 SSL shared libraries
 
-libssl1.1-1.1.1k-r0 webpage:
+libssl1.1-1.1.1l-r0 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1k-r0 installed size:
+libssl1.1-1.1.1l-r0 installed size:
 528 KiB
 
-libssl1.1-1.1.1k-r0 license:
+libssl1.1-1.1.1l-r0 license:
 OpenSSL
 
 ```
