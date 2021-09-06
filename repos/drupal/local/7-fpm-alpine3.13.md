@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:9ad1c611867282d8a8407bc3c25411d7432adda4c83ed3e6ad4b08cc394c0d27`
-- Created: `2021-07-30T03:02:15.203599369Z`
-- Virtual Size: ~ 101.27 Mb  
+- Image ID: `sha256:868a2515538ecc8fcd90bbb1314fd39cb4bd4c15a55ca56fee33d355d67287ce`
+- Created: `2021-09-01T07:19:22.253808021Z`
+- Virtual Size: ~ 100.31 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -18,10 +18,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
-  - `PHP_VERSION=7.4.22`
-  - `PHP_URL=https://www.php.net/distributions/php-7.4.22.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.22.tar.xz.asc`
-  - `PHP_SHA256=8e078cd7d2f49ac3fcff902490a5bb1addc885e7e3b0d8dd068f42c68297bde8`
+  - `PHP_VERSION=7.4.23`
+  - `PHP_URL=https://www.php.net/distributions/php-7.4.23.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.23.tar.xz.asc`
+  - `PHP_SHA256=cea52313fcffe56343bcd3c66dbb23cd5507dc559cc2e3547cf8f5452e88a05d`
   - `DRUPAL_VERSION=7.82`
   - `DRUPAL_MD5=51f8515161087935662b9835194a779b`
 
@@ -64,16 +64,16 @@ MIT
 ### `apk` package: `apk-tools`
 
 ```console
-apk-tools-2.12.5-r0 description:
+apk-tools-2.12.7-r0 description:
 Alpine Package Keeper - package manager for alpine
 
-apk-tools-2.12.5-r0 webpage:
+apk-tools-2.12.7-r0 webpage:
 https://gitlab.alpinelinux.org/alpine/apk-tools
 
-apk-tools-2.12.5-r0 installed size:
+apk-tools-2.12.7-r0 installed size:
 304 KiB
 
-apk-tools-2.12.5-r0 license:
+apk-tools-2.12.7-r0 license:
 GPL-2.0-only
 
 ```
@@ -166,16 +166,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `curl`
 
 ```console
-curl-7.76.1-r0 description:
+curl-7.78.0-r0 description:
 URL retrival utility and library
 
-curl-7.76.1-r0 webpage:
+curl-7.78.0-r0 webpage:
 https://curl.se/
 
-curl-7.76.1-r0 installed size:
+curl-7.78.0-r0 installed size:
 244 KiB
 
-curl-7.76.1-r0 license:
+curl-7.78.0-r0 license:
 MIT
 
 ```
@@ -268,16 +268,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1k-r0 description:
+libcrypto1.1-1.1.1l-r0 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1k-r0 webpage:
+libcrypto1.1-1.1.1l-r0 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1k-r0 installed size:
+libcrypto1.1-1.1.1l-r0 installed size:
 2704 KiB
 
-libcrypto1.1-1.1.1k-r0 license:
+libcrypto1.1-1.1.1l-r0 license:
 OpenSSL
 
 ```
@@ -296,23 +296,6 @@ libcurl-7.78.0-r0 installed size:
 
 libcurl-7.78.0-r0 license:
 MIT
-
-```
-
-### `apk` package: `libedit`
-
-```console
-libedit-20191231.3.1-r1 description:
-BSD line editing library
-
-libedit-20191231.3.1-r1 webpage:
-https://www.thrysoee.dk/editline
-
-libedit-20191231.3.1-r1 installed size:
-196 KiB
-
-libedit-20191231.3.1-r1 license:
-BSD-3-Clause
 
 ```
 
@@ -370,16 +353,16 @@ Libpng
 ### `apk` package: `libpq`
 
 ```console
-libpq-13.3-r0 description:
+libpq-13.4-r0 description:
 PostgreSQL libraries
 
-libpq-13.3-r0 webpage:
+libpq-13.4-r0 webpage:
 https://www.postgresql.org/
 
-libpq-13.3-r0 installed size:
+libpq-13.4-r0 installed size:
 328 KiB
 
-libpq-13.3-r0 license:
+libpq-13.4-r0 license:
 PostgreSQL
 
 ```
@@ -421,16 +404,16 @@ ISC
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1k-r0 description:
+libssl1.1-1.1.1l-r0 description:
 SSL shared libraries
 
-libssl1.1-1.1.1k-r0 webpage:
+libssl1.1-1.1.1l-r0 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1k-r0 installed size:
+libssl1.1-1.1.1l-r0 installed size:
 528 KiB
 
-libssl1.1-1.1.1k-r0 license:
+libssl1.1-1.1.1l-r0 license:
 OpenSSL
 
 ```
@@ -506,16 +489,16 @@ MIT
 ### `apk` package: `musl-utils`
 
 ```console
-musl-utils-1.2.2-r0 description:
+musl-utils-1.2.2-r1 description:
 the musl c library (libc) implementation
 
-musl-utils-1.2.2-r0 webpage:
+musl-utils-1.2.2-r1 webpage:
 https://musl.libc.org/
 
-musl-utils-1.2.2-r0 installed size:
+musl-utils-1.2.2-r1 installed size:
 140 KiB
 
-musl-utils-1.2.2-r0 license:
+musl-utils-1.2.2-r1 license:
 MIT BSD GPL2+
 
 ```
@@ -591,17 +574,34 @@ BSD-2-Clause
 ### `apk` package: `openssl`
 
 ```console
-openssl-1.1.1k-r0 description:
+openssl-1.1.1l-r0 description:
 Toolkit for Transport Layer Security (TLS)
 
-openssl-1.1.1k-r0 webpage:
+openssl-1.1.1l-r0 webpage:
 https://www.openssl.org/
 
-openssl-1.1.1k-r0 installed size:
+openssl-1.1.1l-r0 installed size:
 660 KiB
 
-openssl-1.1.1k-r0 license:
+openssl-1.1.1l-r0 license:
 OpenSSL
+
+```
+
+### `apk` package: `readline`
+
+```console
+readline-8.1.0-r0 description:
+GNU readline library
+
+readline-8.1.0-r0 webpage:
+https://tiswww.cwru.edu/php/chet/readline/rltop.html
+
+readline-8.1.0-r0 installed size:
+308 KiB
+
+readline-8.1.0-r0 license:
+GPL-2.0-or-later
 
 ```
 

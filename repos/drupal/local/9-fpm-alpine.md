@@ -1,10 +1,10 @@
-# `drupal:9.2.4-php8.0-fpm-alpine3.14`
+# `drupal:9.2.5-php8.0-fpm-alpine3.14`
 
 ## Docker Metadata
 
-- Image ID: `sha256:1a81bed7cb0a4f0f13c9f2fd003a763b1e23bd6bc6bdab31e6e79c401a154561`
-- Created: `2021-08-13T00:20:37.598709306Z`
-- Virtual Size: ~ 170.14 Mb  
+- Image ID: `sha256:fdb7040a059293d8a3ee27fdd64d9af2d6f8fb6d3cd96510c2639609d59857f5`
+- Created: `2021-09-02T18:20:33.510996304Z`
+- Virtual Size: ~ 170.29 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -18,11 +18,11 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F`
-  - `PHP_VERSION=8.0.9`
-  - `PHP_URL=https://www.php.net/distributions/php-8.0.9.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.9.tar.xz.asc`
-  - `PHP_SHA256=71a01b2b56544e20e28696ad5b366e431a0984eaa39aa5e35426a4843e172010`
-  - `DRUPAL_VERSION=9.2.4`
+  - `PHP_VERSION=8.0.10`
+  - `PHP_URL=https://www.php.net/distributions/php-8.0.10.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.10.tar.xz.asc`
+  - `PHP_SHA256=66dc4d1bc86d9c1bc255b51b79d337ed1a7a035cf71230daabbf9a4ca35795eb`
+  - `DRUPAL_VERSION=9.2.5`
 
 ## `apk` (`.apk`-based packages)
 
@@ -267,16 +267,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1k-r0 description:
+libcrypto1.1-1.1.1l-r0 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1k-r0 webpage:
+libcrypto1.1-1.1.1l-r0 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1k-r0 installed size:
+libcrypto1.1-1.1.1l-r0 installed size:
 2704 KiB
 
-libcrypto1.1-1.1.1k-r0 license:
+libcrypto1.1-1.1.1l-r0 license:
 OpenSSL
 
 ```
@@ -295,23 +295,6 @@ libcurl-7.78.0-r0 installed size:
 
 libcurl-7.78.0-r0 license:
 MIT
-
-```
-
-### `apk` package: `libedit`
-
-```console
-libedit-20210216.3.1-r0 description:
-BSD line editing library
-
-libedit-20210216.3.1-r0 webpage:
-https://www.thrysoee.dk/editline
-
-libedit-20210216.3.1-r0 installed size:
-196 KiB
-
-libedit-20210216.3.1-r0 license:
-BSD-3-Clause
 
 ```
 
@@ -369,16 +352,16 @@ Libpng
 ### `apk` package: `libpq`
 
 ```console
-libpq-13.3-r0 description:
+libpq-13.4-r0 description:
 PostgreSQL libraries
 
-libpq-13.3-r0 webpage:
+libpq-13.4-r0 webpage:
 https://www.postgresql.org/
 
-libpq-13.3-r0 installed size:
+libpq-13.4-r0 installed size:
 328 KiB
 
-libpq-13.3-r0 license:
+libpq-13.4-r0 license:
 PostgreSQL
 
 ```
@@ -437,16 +420,16 @@ ISC
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1k-r0 description:
+libssl1.1-1.1.1l-r0 description:
 SSL shared libraries
 
-libssl1.1-1.1.1k-r0 webpage:
+libssl1.1-1.1.1l-r0 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1k-r0 installed size:
+libssl1.1-1.1.1l-r0 installed size:
 528 KiB
 
-libssl1.1-1.1.1k-r0 license:
+libssl1.1-1.1.1l-r0 license:
 OpenSSL
 
 ```
@@ -590,17 +573,34 @@ BSD-2-Clause
 ### `apk` package: `openssl`
 
 ```console
-openssl-1.1.1k-r0 description:
+openssl-1.1.1l-r0 description:
 Toolkit for Transport Layer Security (TLS)
 
-openssl-1.1.1k-r0 webpage:
+openssl-1.1.1l-r0 webpage:
 https://www.openssl.org/
 
-openssl-1.1.1k-r0 installed size:
+openssl-1.1.1l-r0 installed size:
 660 KiB
 
-openssl-1.1.1k-r0 license:
+openssl-1.1.1l-r0 license:
 OpenSSL
+
+```
+
+### `apk` package: `readline`
+
+```console
+readline-8.1.0-r0 description:
+GNU readline library
+
+readline-8.1.0-r0 webpage:
+https://tiswww.cwru.edu/php/chet/readline/rltop.html
+
+readline-8.1.0-r0 installed size:
+308 KiB
+
+readline-8.1.0-r0 license:
+GPL-2.0-or-later
 
 ```
 
