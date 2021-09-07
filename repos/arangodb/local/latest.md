@@ -2,20 +2,20 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:f4d505e91be9ab549fedccbeef081c87475b77a524a8dcaa810cf0cf10535db5`
-- Created: `2021-09-01T00:43:09.310595167Z`
-- Virtual Size: ~ 427.69 Mb  
+- Image ID: `sha256:c79321f8e2e7c2d10b0aa3b310b3fe4bb0601fa308006a92d2b416a8182a9dd3`
+- Created: `2021-09-04T14:59:04.986468949Z`
+- Virtual Size: ~ 427.19 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
 - Command: `["arangod"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `ARANGO_VERSION=3.8.0`
+  - `ARANGO_VERSION=3.8.1`
   - `ARANGO_URL=https://download.arangodb.com/arangodb38/DEBIAN/amd64`
-  - `ARANGO_PACKAGE=arangodb3_3.8.0-1_amd64.deb`
-  - `ARANGO_PACKAGE_URL=https://download.arangodb.com/arangodb38/DEBIAN/amd64/arangodb3_3.8.0-1_amd64.deb`
-  - `ARANGO_SIGNATURE_URL=https://download.arangodb.com/arangodb38/DEBIAN/amd64/arangodb3_3.8.0-1_amd64.deb.asc`
+  - `ARANGO_PACKAGE=arangodb3_3.8.1-1_amd64.deb`
+  - `ARANGO_PACKAGE_URL=https://download.arangodb.com/arangodb38/DEBIAN/amd64/arangodb3_3.8.1-1_amd64.deb`
+  - `ARANGO_SIGNATURE_URL=https://download.arangodb.com/arangodb38/DEBIAN/amd64/arangodb3_3.8.1-1_amd64.deb.asc`
   - `GLIBCXX_FORCE_NEW=1`
 
 ## `apk` (`.apk`-based packages)
@@ -329,16 +329,16 @@ MIT
 ### `apk` package: `nodejs`
 
 ```console
-nodejs-12.22.5-r0 description:
+nodejs-12.22.6-r0 description:
 JavaScript runtime built on V8 engine - LTS version
 
-nodejs-12.22.5-r0 webpage:
+nodejs-12.22.6-r0 webpage:
 https://nodejs.org/
 
-nodejs-12.22.5-r0 installed size:
+nodejs-12.22.6-r0 installed size:
 28 MiB
 
-nodejs-12.22.5-r0 license:
+nodejs-12.22.6-r0 license:
 MIT
 
 ```
