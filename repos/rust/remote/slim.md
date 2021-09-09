@@ -1,7 +1,7 @@
 ## `rust:slim`
 
 ```console
-$ docker pull rust@sha256:dca8a909a2e1689a9ef2973300fc0100b0c3bb3522bc1081bbe8f6cfc6266361
+$ docker pull rust@sha256:732760ddc268bc422a9e8cd8fdb3c199dfed215988ed2d1a0e1f3904a66bee6c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -82,35 +82,35 @@ RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends
 ### `rust:slim` - linux; arm64 variant v8
 
 ```console
-$ docker pull rust@sha256:877619abd4d45acffea5303a263449d322fdec10bc48455c7845b88797de7666
+$ docker pull rust@sha256:f72933a0a1b0115bc0d3e36af679810aac73ad4410a85be5199988a9fc56647a
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **292.1 MB (292119230 bytes)**  
+-	Total Size: **313.5 MB (313466899 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6b7b331b5060bd8dc69c10b0eb94492096899a28fbd6c2d5943c76ccc64a3e89`
+-	Image ID: `sha256:62e6c77b425e5d96788b938a6fe2105f49d084db3ce79411df2617f2d5b2f110`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Fri, 03 Sep 2021 00:40:58 GMT
-ADD file:4a1d7f2d989aee6bd83da076b6e9dd3da2da97cf5654bd37568e9baec30ac4b1 in / 
-# Fri, 03 Sep 2021 00:40:58 GMT
+# Fri, 03 Sep 2021 00:40:33 GMT
+ADD file:9600a4686ae105acffa54787a7c81f5252e90023cbcfbe37519150b954110c5c in / 
+# Fri, 03 Sep 2021 00:40:34 GMT
 CMD ["bash"]
-# Fri, 03 Sep 2021 11:45:39 GMT
-ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.54.0
-# Fri, 03 Sep 2021 11:46:05 GMT
+# Thu, 09 Sep 2021 22:00:03 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.55.0
+# Thu, 09 Sep 2021 22:00:29 GMT
 RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends         ca-certificates         gcc         libc6-dev         wget         ;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch##*-}" in         amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='3dc5ef50861ee18657f9db2eeb7392f9c2a6c95c90ab41e45ab4ca71476b4338' ;;         armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='67777ac3bc17277102f2ed73fd5f14c51f4ca5963adadf7f174adf4ebc38747b' ;;         arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='32a1532f7cef072a667bac53f1a5542c99666c4071af0c9549795bbdb2069ec1' ;;         i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='e50d1deb99048bc5782a0200aa33e4eea70747d49dffdc9d06812fd22a372515' ;;         *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;;     esac;     url="https://static.rust-lang.org/rustup/archive/1.24.3/${rustArch}/rustup-init";     wget "$url";     echo "${rustupSha256} *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;     apt-get remove -y --auto-remove         wget         ;     rm -rf /var/lib/apt/lists/*;
 ```
 
 -	Layers:
-	-	`sha256:d10c227306ce3db344a8399cbc02bbf0dcb36519318efbde3c6027c00be8b40e`  
-		Last Modified: Fri, 03 Sep 2021 00:49:47 GMT  
-		Size: 25.9 MB (25914860 bytes)  
+	-	`sha256:1901ca797b5ea06f6a4facc81ad772177fdd833ed4329dc86ef126078633b949`  
+		Last Modified: Fri, 03 Sep 2021 00:48:51 GMT  
+		Size: 30.1 MB (30055483 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c2b169ad7b4ef543fc39c3531e75c6d9f8ff0249967743221ee498775d3d014c`  
-		Last Modified: Fri, 03 Sep 2021 11:50:36 GMT  
-		Size: 266.2 MB (266204370 bytes)  
+	-	`sha256:a8f95a8e5acdd3f89a880da8b160aac6467d95dfa8c245de54bf2f0027cb1210`  
+		Last Modified: Thu, 09 Sep 2021 22:06:42 GMT  
+		Size: 283.4 MB (283411416 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `rust:slim` - linux; 386
