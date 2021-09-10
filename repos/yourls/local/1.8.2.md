@@ -1,10 +1,10 @@
-# `yourls:1.8.1-apache`
+# `yourls:1.8.2-apache`
 
 ## Docker Metadata
 
-- Image ID: `sha256:46036a25929e28104a07fd650a406b2e73c8303beb45d89458f84acd59eb6eec`
-- Created: `2021-09-04T16:50:55.493961487Z`
-- Virtual Size: ~ 480.86 Mb  
+- Image ID: `sha256:d1ab78096861bc33ea6db70bbeb60b299278b4ad7f32d936b4eff1bfe94c3209`
+- Created: `2021-09-08T18:01:20.678946532Z`
+- Virtual Size: ~ 480.87 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -25,8 +25,14 @@
   - `PHP_URL=https://www.php.net/distributions/php-8.0.10.tar.xz`
   - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.10.tar.xz.asc`
   - `PHP_SHA256=66dc4d1bc86d9c1bc255b51b79d337ed1a7a035cf71230daabbf9a4ca35795eb`
-  - `YOURLS_VERSION=1.8.1`
-  - `YOURLS_SHA256=92b0666af3e3ad4a783e78cba93687e9a24acf216606a6d457819c5d36d2cfe4`
+- Labels:
+  - `org.opencontainers.image.authors=YOURLS`
+  - `org.opencontainers.image.description=Your Own URL Shortener`
+  - `org.opencontainers.image.documentation=https://yourls.org/`
+  - `org.opencontainers.image.title=YOURLS`
+  - `org.opencontainers.image.url=https://yourls.org/`
+  - `org.opencontainers.image.vendor=YOURLS Org`
+  - `org.opencontainers.image.version=1.8.2`
 
 ## `dpkg` (`.deb`-based packages)
 
