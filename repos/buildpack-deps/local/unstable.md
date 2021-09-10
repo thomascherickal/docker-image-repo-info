@@ -160,19 +160,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.3.8
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.3.8.dsc' apt_2.3.8.dsc 2779 SHA256:f82c9c71383368f601a9136541b5be384d156689bd92183a836ea9e769356a7f
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.3.8.tar.xz' apt_2.3.8.tar.xz 2202796 SHA256:485af1430c75e3158b715e4424dbf96d1b5641dc4dccc50f571b2c779a837f2c
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/apt/2.3.8/
 
-- https://sources.debian.net/src/apt/2.3.8/ (for browsing the source)
-- https://sources.debian.net/src/apt/2.3.8/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apt/2.3.8/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `attr=1:2.5.1-1`
 
@@ -288,21 +282,13 @@ Licenses: (parsed from: `/usr/share/doc/automake/copyright`)
 - `GPL-3+`
 - `permissive`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris automake-1.16=1:1.16.4-1
-'http://deb.debian.org/debian/pool/main/a/automake-1.16/automake-1.16_1.16.4-1.dsc' automake-1.16_1.16.4-1.dsc 2561 SHA256:4d95dc7af27ca21294e3b68a302476d809787e74da88b0e4fd6e326fedf72b78
-'http://deb.debian.org/debian/pool/main/a/automake-1.16/automake-1.16_1.16.4.orig.tar.xz' automake-1.16_1.16.4.orig.tar.xz 1599336 SHA256:80facc09885a57e6d49d06972c0ae1089c5fa8f4d4c7cfe5baea58e5085f136d
-'http://deb.debian.org/debian/pool/main/a/automake-1.16/automake-1.16_1.16.4.orig.tar.xz.asc' automake-1.16_1.16.4.orig.tar.xz.asc 833 SHA256:9be4f893faacaf94dc81d70acf00fac59ea2035f075175177c3d16dfd88f5860
-'http://deb.debian.org/debian/pool/main/a/automake-1.16/automake-1.16_1.16.4-1.debian.tar.xz' automake-1.16_1.16.4-1.debian.tar.xz 12520 SHA256:58dd5f563dc4d32b94bf1ab45a95eb640edca1d740235be19eb55c9b0ee55af5
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/automake-1.16/1:1.16.4-1/
 
-- https://sources.debian.net/src/automake-1.16/1:1.16.4-1/ (for browsing the source)
-- https://sources.debian.net/src/automake-1.16/1:1.16.4-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/automake-1.16/1:1.16.4-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `autotools-dev=20180224.1+nmu1`
 
@@ -697,21 +683,13 @@ Licenses: (parsed from: `/usr/share/doc/libdav1d4/copyright`)
 - `ISC`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris dav1d=0.7.1-3
-'http://deb.debian.org/debian/pool/main/d/dav1d/dav1d_0.7.1-3.dsc' dav1d_0.7.1-3.dsc 2307 SHA256:dede4e6ef61d5f04ebdd1a0a7b8fefd9a722925059c45a005e55310df92970b5
-'http://deb.debian.org/debian/pool/main/d/dav1d/dav1d_0.7.1.orig.tar.xz' dav1d_0.7.1.orig.tar.xz 549068 SHA256:3334b5d05ec00b0745f94e2c57e23f1874197c4b435a6656cc65af531e73d3c2
-'http://deb.debian.org/debian/pool/main/d/dav1d/dav1d_0.7.1.orig.tar.xz.asc' dav1d_0.7.1.orig.tar.xz.asc 195 SHA256:f31a28a99c5c0d8018b8ec46f7c01481d2c8d87a752d257a154860892a8c5f3b
-'http://deb.debian.org/debian/pool/main/d/dav1d/dav1d_0.7.1-3.debian.tar.xz' dav1d_0.7.1-3.debian.tar.xz 7768 SHA256:f174d389a0029c2f71e4de97a433efa3636de376c47456fb584da4c8c498002a
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/dav1d/0.7.1-3/
 
-- https://sources.debian.net/src/dav1d/0.7.1-3/ (for browsing the source)
-- https://sources.debian.net/src/dav1d/0.7.1-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/dav1d/0.7.1-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `db-defaults=5.3.1+nmu1`
 
@@ -821,20 +799,13 @@ Licenses: (parsed from: `/usr/share/doc/debianutils/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris debianutils=5.4-3
-'http://deb.debian.org/debian/pool/main/d/debianutils/debianutils_5.4-3.dsc' debianutils_5.4-3.dsc 1904 SHA256:a045aad80c8f1e574e318a3601ff2b3c6deb0f7eca7032c6c76aee14ebe8f309
-'http://deb.debian.org/debian/pool/main/d/debianutils/debianutils_5.4.orig.tar.xz' debianutils_5.4.orig.tar.xz 103640 SHA256:611b1268bee9d183886c94e5f34920e4b5b67ff45202aef3f6f2ba8f4a205163
-'http://deb.debian.org/debian/pool/main/d/debianutils/debianutils_5.4-3.debian.tar.xz' debianutils_5.4-3.debian.tar.xz 21400 SHA256:6f54b09bc14e881fe989542a9d17e79fad8e28743259656918ebeb76859d1c04
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/debianutils/5.4-3/
 
-- https://sources.debian.net/src/debianutils/5.4-3/ (for browsing the source)
-- https://sources.debian.net/src/debianutils/5.4-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/debianutils/5.4-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `diffutils=1:3.7-5`
 
