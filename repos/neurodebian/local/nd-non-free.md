@@ -78,19 +78,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.3.8
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.3.8.dsc' apt_2.3.8.dsc 2779 SHA256:f82c9c71383368f601a9136541b5be384d156689bd92183a836ea9e769356a7f
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.3.8.tar.xz' apt_2.3.8.tar.xz 2202796 SHA256:485af1430c75e3158b715e4424dbf96d1b5641dc4dccc50f571b2c779a837f2c
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/apt/2.3.8/
 
-- https://sources.debian.net/src/apt/2.3.8/ (for browsing the source)
-- https://sources.debian.net/src/apt/2.3.8/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apt/2.3.8/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `attr=1:2.5.1-1`
 
@@ -442,20 +436,13 @@ Licenses: (parsed from: `/usr/share/doc/debianutils/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris debianutils=5.4-3
-'http://deb.debian.org/debian/pool/main/d/debianutils/debianutils_5.4-3.dsc' debianutils_5.4-3.dsc 1904 SHA256:a045aad80c8f1e574e318a3601ff2b3c6deb0f7eca7032c6c76aee14ebe8f309
-'http://deb.debian.org/debian/pool/main/d/debianutils/debianutils_5.4.orig.tar.xz' debianutils_5.4.orig.tar.xz 103640 SHA256:611b1268bee9d183886c94e5f34920e4b5b67ff45202aef3f6f2ba8f4a205163
-'http://deb.debian.org/debian/pool/main/d/debianutils/debianutils_5.4-3.debian.tar.xz' debianutils_5.4-3.debian.tar.xz 21400 SHA256:6f54b09bc14e881fe989542a9d17e79fad8e28743259656918ebeb76859d1c04
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/debianutils/5.4-3/
 
-- https://sources.debian.net/src/debianutils/5.4-3/ (for browsing the source)
-- https://sources.debian.net/src/debianutils/5.4-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/debianutils/5.4-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `diffutils=1:3.7-5`
 
