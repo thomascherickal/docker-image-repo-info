@@ -3541,14 +3541,9 @@ Licenses: (parsed from: `/usr/share/doc/libgd3/copyright`)
 - `WEBP`
 - `XFIG`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libgd2=2.2.5-4ubuntu0.4
-'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgd2/libgd2_2.2.5-4ubuntu0.4.dsc' libgd2_2.2.5-4ubuntu0.4.dsc 2175 SHA512:aea76d7c13a8f211f5cfb9f62c74fb51647301dde19d19ee31ab869f39ee0a3bcc5dc03f1e74e2b5c7745d11894a3abf30aa2ea579e8c6aa6d37d79d1113651b
-'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgd2/libgd2_2.2.5.orig.tar.gz' libgd2_2.2.5.orig.tar.gz 3326856 SHA512:e0556ec0d749ef988ee6b906c15f73d0871599b1cfacfc0965ea105b7f89e2ff6b0c6789ca98ef083449ce42831131220683581e007bf1b93140391624d0721c
-'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgd2/libgd2_2.2.5-4ubuntu0.4.debian.tar.xz' libgd2_2.2.5-4ubuntu0.4.debian.tar.xz 37464 SHA512:76b2c784d4e562d31d8122728021f72ea00cbcdce4b6dd3ea79d1abb9d6198d57ea451c9ccca0bcda34faf0e2e94f40ad53ba2ef5382fe55ed80d8a0af516bff
-```
 
 ### `dpkg` source package: `libgeotiff-dfsg=1.4.2-2build1`
 
@@ -5220,14 +5215,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=4.15.0-154.161
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-154.161.dsc' linux_4.15.0-154.161.dsc 7028 SHA512:40840ca0616a30b8279168f8649f772792f7b64681fabc7119f60b31cc2678726c8c631d3563add03b6c829155bbb151b82b456e1bfecb1a336092ee602d2f19
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0.orig.tar.gz' linux_4.15.0.orig.tar.gz 157656459 SHA512:0fab606a295e0857f774f8adaa9d56bf2cb227fbab2daed374415da216391b156f49e606ba37ac402987c5796d408807da5d1a42c0d85a8552f109a3e279443d
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-154.161.diff.gz' linux_4.15.0-154.161.diff.gz 12432150 SHA512:6f0cc5778687974ef2d9199743c7563735748c6bd8faaec19fd9b0b739d2caa49aec6668a29a97d2255cd51d1be76e759258d03ab9b886743a9d972e7d21a23d
-```
 
 ### `dpkg` source package: `lksctp-tools=1.0.17+dfsg-2`
 
