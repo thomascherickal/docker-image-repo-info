@@ -1,18 +1,18 @@
-# `nginx:1.21.1-alpine`
+# `nginx:1.21.3-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:1318bf5f63b46fc1a7bb1d06ab1a5b4b309b6ed7ecb8ba105ace1c3dd00933a8`
-- Created: `2021-08-27T20:48:20.021935314Z`
-- Virtual Size: ~ 22.85 Mb  
+- Image ID: `sha256:513f9a9d8748b25cdb0ec6f16b4523af7bba216a6bf0f43f70af75b4cf7cb780`
+- Created: `2021-09-09T18:26:54.808352606Z`
+- Virtual Size: ~ 22.94 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
 - Command: `["nginx","-g","daemon off;"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `NGINX_VERSION=1.21.1`
-  - `NJS_VERSION=0.6.1`
+  - `NGINX_VERSION=1.21.3`
+  - `NJS_VERSION=0.6.2`
   - `PKG_RELEASE=1`
 - Labels:
   - `maintainer=NGINX Docker Maintainers <docker-maint@nginx.com>`
@@ -277,16 +277,16 @@ BSD-3-Clause
 ### `apk` package: `libgcrypt`
 
 ```console
-libgcrypt-1.9.3-r0 description:
+libgcrypt-1.9.4-r0 description:
 General purpose crypto library based on the code used in GnuPG
 
-libgcrypt-1.9.3-r0 webpage:
+libgcrypt-1.9.4-r0 webpage:
 https://www.gnupg.org/
 
-libgcrypt-1.9.3-r0 installed size:
+libgcrypt-1.9.4-r0 installed size:
 1220 KiB
 
-libgcrypt-1.9.3-r0 license:
+libgcrypt-1.9.4-r0 license:
 LGPL-2.1-or-later
 
 ```
@@ -294,16 +294,16 @@ LGPL-2.1-or-later
 ### `apk` package: `libgd`
 
 ```console
-libgd-2.3.2-r0 description:
+libgd-2.3.2-r1 description:
 Library for the dynamic creation of images by programmers (libraries)
 
-libgd-2.3.2-r0 webpage:
+libgd-2.3.2-r1 webpage:
 https://libgd.github.io/
 
-libgd-2.3.2-r0 installed size:
+libgd-2.3.2-r1 installed size:
 372 KiB
 
-libgd-2.3.2-r0 license:
+libgd-2.3.2-r1 license:
 custom
 
 ```
@@ -549,16 +549,16 @@ MIT
 ### `apk` package: `nginx`
 
 ```console
-nginx-1.21.1-r1 description:
+nginx-1.21.3-r1 description:
 High performance web server
 
-nginx-1.21.1-r1 webpage:
+nginx-1.21.3-r1 webpage:
 https://nginx.org/
 
-nginx-1.21.1-r1 installed size:
-2576 KiB
+nginx-1.21.3-r1 installed size:
+2584 KiB
 
-nginx-1.21.1-r1 license:
+nginx-1.21.3-r1 license:
 2-clause BSD-like license
 
 ```
@@ -566,16 +566,16 @@ nginx-1.21.1-r1 license:
 ### `apk` package: `nginx-module-geoip`
 
 ```console
-nginx-module-geoip-1.21.1-r1 description:
+nginx-module-geoip-1.21.3-r1 description:
 nginx GeoIP dynamic modules
 
-nginx-module-geoip-1.21.1-r1 webpage:
+nginx-module-geoip-1.21.3-r1 webpage:
 https://nginx.org/
 
-nginx-module-geoip-1.21.1-r1 installed size:
+nginx-module-geoip-1.21.3-r1 installed size:
 116 KiB
 
-nginx-module-geoip-1.21.1-r1 license:
+nginx-module-geoip-1.21.3-r1 license:
 2-clause BSD-like license
 
 ```
@@ -583,16 +583,16 @@ nginx-module-geoip-1.21.1-r1 license:
 ### `apk` package: `nginx-module-image-filter`
 
 ```console
-nginx-module-image-filter-1.21.1-r1 description:
+nginx-module-image-filter-1.21.3-r1 description:
 nginx image filter dynamic module
 
-nginx-module-image-filter-1.21.1-r1 webpage:
+nginx-module-image-filter-1.21.3-r1 webpage:
 https://nginx.org/
 
-nginx-module-image-filter-1.21.1-r1 installed size:
+nginx-module-image-filter-1.21.3-r1 installed size:
 88 KiB
 
-nginx-module-image-filter-1.21.1-r1 license:
+nginx-module-image-filter-1.21.3-r1 license:
 2-clause BSD-like license
 
 ```
@@ -600,16 +600,16 @@ nginx-module-image-filter-1.21.1-r1 license:
 ### `apk` package: `nginx-module-njs`
 
 ```console
-nginx-module-njs-1.21.1.0.6.1-r1 description:
+nginx-module-njs-1.21.3.0.6.2-r1 description:
 nginx njs dynamic modules
 
-nginx-module-njs-1.21.1.0.6.1-r1 webpage:
+nginx-module-njs-1.21.3.0.6.2-r1 webpage:
 https://nginx.org/
 
-nginx-module-njs-1.21.1.0.6.1-r1 installed size:
-3540 KiB
+nginx-module-njs-1.21.3.0.6.2-r1 installed size:
+3624 KiB
 
-nginx-module-njs-1.21.1.0.6.1-r1 license:
+nginx-module-njs-1.21.3.0.6.2-r1 license:
 2-clause BSD-like license
 
 ```
@@ -617,16 +617,16 @@ nginx-module-njs-1.21.1.0.6.1-r1 license:
 ### `apk` package: `nginx-module-xslt`
 
 ```console
-nginx-module-xslt-1.21.1-r1 description:
+nginx-module-xslt-1.21.3-r1 description:
 nginx xslt dynamic module
 
-nginx-module-xslt-1.21.1-r1 webpage:
+nginx-module-xslt-1.21.3-r1 webpage:
 https://nginx.org/
 
-nginx-module-xslt-1.21.1-r1 installed size:
+nginx-module-xslt-1.21.3-r1 installed size:
 84 KiB
 
-nginx-module-xslt-1.21.1-r1 license:
+nginx-module-xslt-1.21.3-r1 license:
 2-clause BSD-like license
 
 ```
