@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:829400c352a5865445eba9763ea75971603f2638f49ec554f2b91df5c60c4489`
-- Created: `2021-08-31T20:50:52.826708235Z`
-- Virtual Size: ~ 514.03 Mb  
+- Image ID: `sha256:0d971bc9e4e17212bbf2f72d0bab0186022f0676a58bf60f686f5400462c05ed`
+- Created: `2021-09-09T01:36:43.646198442Z`
+- Virtual Size: ~ 514.11 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["catalina.sh","run"]`
@@ -130,16 +130,16 @@ Enabling amzn2-core-source repository
 https://cdn.amazonlinux.com/2/core/2.0/SRPMS/f915d0987d73328ab3992d03ddbce189bca8804de19d89f09b847dfcaa6bc1af//../../../../../blobstore/b567960170c409a145333888e05daa9569564d37bd31df920c75c09ef5b710df/cpio-2.11-28.amzn2.src.rpm
 ```
 
-### `rpm` package: `curl-7.61.1-12.amzn2.0.4.x86_64`
+### `rpm` package: `curl-7.76.1-4.amzn2.0.1.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls curl-7.61.1-12.amzn2.0.4
+$ yumdownloader --quiet --source --urls curl-7.76.1-4.amzn2.0.1
 Enabling amzn2-core-source repository
-https://cdn.amazonlinux.com/2/core/2.0/SRPMS/f915d0987d73328ab3992d03ddbce189bca8804de19d89f09b847dfcaa6bc1af//../../../../../blobstore/681c07993ae6517b313132d23b8d0a81770bb9cbd8313cd840e3bf5ad9eeaa04/curl-7.61.1-12.amzn2.0.4.src.rpm
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/f915d0987d73328ab3992d03ddbce189bca8804de19d89f09b847dfcaa6bc1af//../../../../../blobstore/8d8d3c595f0de7d934e910aa9dbe43567fb6f0f850fe09e58834687083b9ecef/curl-7.76.1-4.amzn2.0.1.src.rpm
 ```
 
 ### `rpm` package: `cyrus-sasl-lib-2.1.26-23.amzn2.x86_64`
@@ -556,16 +556,16 @@ Enabling amzn2-core-source repository
 https://cdn.amazonlinux.com/2/core/2.0/SRPMS/f915d0987d73328ab3992d03ddbce189bca8804de19d89f09b847dfcaa6bc1af//../../../../../blobstore/bfdf8a04d88aff41cacdb519bccfc3830d71fecb83fc522da55ac7e004280b63/glibc-2.26-48.amzn2.src.rpm
 ```
 
-### `rpm` package: `libcurl-7.61.1-12.amzn2.0.4.x86_64`
+### `rpm` package: `libcurl-7.76.1-4.amzn2.0.1.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls libcurl-7.61.1-12.amzn2.0.4
+$ yumdownloader --quiet --source --urls libcurl-7.76.1-4.amzn2.0.1
 Enabling amzn2-core-source repository
-https://cdn.amazonlinux.com/2/core/2.0/SRPMS/f915d0987d73328ab3992d03ddbce189bca8804de19d89f09b847dfcaa6bc1af//../../../../../blobstore/681c07993ae6517b313132d23b8d0a81770bb9cbd8313cd840e3bf5ad9eeaa04/curl-7.61.1-12.amzn2.0.4.src.rpm
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/f915d0987d73328ab3992d03ddbce189bca8804de19d89f09b847dfcaa6bc1af//../../../../../blobstore/8d8d3c595f0de7d934e910aa9dbe43567fb6f0f850fe09e58834687083b9ecef/curl-7.76.1-4.amzn2.0.1.src.rpm
 ```
 
 ### `rpm` package: `libdb-5.3.21-24.amzn2.0.3.x86_64`
