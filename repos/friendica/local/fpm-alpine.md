@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:cea4a2a7f7f56c899a7ebfadf35ad5762f80fc46d1438870b2a0e103369cc50d`
-- Created: `2021-08-30T20:27:46.25796458Z`
-- Virtual Size: ~ 226.32 Mb  
+- Image ID: `sha256:ec416e7d90d0fcc30ecc097db852bad73d5ca8b69738245d49ca22ab70d75bb5`
+- Created: `2021-09-09T18:22:38.878819959Z`
+- Virtual Size: ~ 228.80 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -22,8 +22,11 @@
   - `PHP_URL=https://www.php.net/distributions/php-7.3.30.tar.xz`
   - `PHP_ASC_URL=https://www.php.net/distributions/php-7.3.30.tar.xz.asc`
   - `PHP_SHA256=0ebfd656df0f3b1ea37ff2887f8f2d1a71cd160fb0292547c0ee0a99e58ffd1b`
+  - `GOSU_VERSION=1.14`
   - `FRIENDICA_VERSION=2021.07`
   - `FRIENDICA_ADDONS=2021.07`
+  - `FRIENDICA_DOWNLOAD_SHA256=d57ebb33ff733f0ad023ad63e8992d8f61cec06363b951d00f1452760eeeda12`
+  - `FRIENDICA_DOWNLOAD_ADDONS_SHA256=9752046c5af1003338a668683b24476cfb3f8dfeaef466703492a0883581c790`
 
 ## `apk` (`.apk`-based packages)
 

@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:daff5a2b1149570234b2be3ac50499e85ccb249d38440dd40de89211cc149f82`
-- Created: `2021-08-30T20:28:15.068570503Z`
-- Virtual Size: ~ 120.67 Mb  
+- Image ID: `sha256:4ca987b7a7333ef7f5ae26dae4043089cf6e726cfcbc81e3b887093bd789037d`
+- Created: `2021-09-08T19:28:11.539897331Z`
+- Virtual Size: ~ 123.04 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint-dev.sh"]`
@@ -22,6 +22,7 @@
   - `PHP_URL=https://www.php.net/distributions/php-7.3.30.tar.xz`
   - `PHP_ASC_URL=https://www.php.net/distributions/php-7.3.30.tar.xz.asc`
   - `PHP_SHA256=0ebfd656df0f3b1ea37ff2887f8f2d1a71cd160fb0292547c0ee0a99e58ffd1b`
+  - `GOSU_VERSION=1.14`
   - `FRIENDICA_VERSION=2021.09-rc`
   - `FRIENDICA_ADDONS=2021.09-rc`
 
