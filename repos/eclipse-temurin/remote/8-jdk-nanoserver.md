@@ -1,7 +1,7 @@
 ## `eclipse-temurin:8-jdk-nanoserver`
 
 ```console
-$ docker pull eclipse-temurin@sha256:fc5246682ab0695c8bad69f910289cb894a1076b8bf7f47fedc4b4712ae1eb75
+$ docker pull eclipse-temurin@sha256:14834061694c69306aac2c41be7a36657621fd59bde8cefb1c2847f540301b5d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull eclipse-temurin@sha256:fc5246682ab0695c8bad69f910289cb894a1076b8bf
 ### `eclipse-temurin:8-jdk-nanoserver` - windows version 10.0.17763.2114; amd64
 
 ```console
-$ docker pull eclipse-temurin@sha256:ded1952642431a1d3ffd4b133733de0449268eee450a7a0369c5ed6a5760e183
+$ docker pull eclipse-temurin@sha256:f5b4b0bd31ddcea2bbeda777786dc4384466e958b74a01e7ae6974cbb2cc23f5
 ```
 
 -	Docker Version: 20.10.8
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **203.1 MB (203065449 bytes)**  
+-	Total Size: **203.1 MB (203070294 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:8c15a93b2bb46b6171a4963a9d95acd8ec97f598dd77519cd7af30c244980574`
+-	Image ID: `sha256:ff9d22c48aa42b788c02cc39828d451e1ffbdfbd1890487c9e1edf991af46689`
 -	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
 -	`SHELL`: `["cmd","\/s","\/c"]`
 
@@ -33,14 +33,14 @@ ENV JAVA_VERSION=jdk8u302-b08
 ENV JAVA_HOME=C:\openjdk-8
 # Wed, 25 Aug 2021 16:34:10 GMT
 USER ContainerAdministrator
-# Wed, 25 Aug 2021 16:34:24 GMT
-RUN echo Updating PATH: %JAVA_HOME%\bin;%PATH%         && setx /M PATH %JAVA_HOME%\bin;%PATH%         && echo Complete.
-# Wed, 25 Aug 2021 16:34:25 GMT
+# Mon, 13 Sep 2021 18:19:11 GMT
+RUN echo Updating PATH: %JAVA_HOME%\bin;%PATH%     && setx /M PATH %JAVA_HOME%\bin;%PATH%     && echo Complete.
+# Mon, 13 Sep 2021 18:19:11 GMT
 USER ContainerUser
-# Wed, 25 Aug 2021 16:34:36 GMT
+# Mon, 13 Sep 2021 18:19:21 GMT
 COPY dir:6622177b1379d4d7267ebc9bc4d0bb013ea883bae36028c72b4045f7fa088598 in C:\openjdk-8 
-# Wed, 25 Aug 2021 16:34:50 GMT
-RUN echo Verifying install ...     && echo   javac -version && javac -version     && echo   java -version && java -version     && echo Complete.
+# Mon, 13 Sep 2021 18:19:38 GMT
+RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
 ```
 
 -	Layers:
@@ -63,19 +63,19 @@ RUN echo Verifying install ...     && echo   javac -version && javac -version   
 		Last Modified: Wed, 25 Aug 2021 23:21:11 GMT  
 		Size: 1.0 KB (1027 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7ae5244bf4f583093a25d20693bd5e9041c538db73a9e1ddd118fb7f3553d198`  
-		Last Modified: Wed, 25 Aug 2021 23:21:12 GMT  
-		Size: 69.8 KB (69803 bytes)  
+	-	`sha256:157ce3ea050d2a275c206be8e1c13112a5dfc8c9e966189d63ce0aba80055340`  
+		Last Modified: Mon, 13 Sep 2021 18:41:48 GMT  
+		Size: 68.3 KB (68251 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:aa7948b5ba02199260c73e70bb471b3a443ccf0406a189981c41e3a732a1741f`  
-		Last Modified: Wed, 25 Aug 2021 23:21:11 GMT  
-		Size: 1.0 KB (1025 bytes)  
+	-	`sha256:9adc073dbdca97ec186ebfa597ad843e737d0e5ce32901f4ce12ad769c43968c`  
+		Last Modified: Mon, 13 Sep 2021 18:41:48 GMT  
+		Size: 1.2 KB (1170 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7d5932d5d4ce162aa5027cf5459c722437263db5c63f0a3141aa17a36dc19968`  
-		Last Modified: Wed, 25 Aug 2021 23:22:55 GMT  
-		Size: 100.2 MB (100158395 bytes)  
+	-	`sha256:e4926858dd57408abaaf1a222db025d750fd6a00cbd338d225fea391ddb5b10f`  
+		Last Modified: Mon, 13 Sep 2021 18:42:00 GMT  
+		Size: 100.2 MB (100166173 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:01a28c7b58cc61ca17d6b131106d7aeb315a6fd91d18d2f54af526e5e8acc647`  
-		Last Modified: Wed, 25 Aug 2021 23:21:11 GMT  
-		Size: 90.8 KB (90837 bytes)  
+	-	`sha256:b901fb7372db014775aac6e428b4d573a382b67511c17140651316a81460c071`  
+		Last Modified: Mon, 13 Sep 2021 18:41:48 GMT  
+		Size: 89.3 KB (89311 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
