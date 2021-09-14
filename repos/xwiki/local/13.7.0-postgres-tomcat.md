@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:2c69b1379701753f24f27e57c0287d1fcba74f319f6bc269852ec94bf1f0125e`
-- Created: `2021-09-02T23:25:20.23123902Z`
-- Virtual Size: ~ 1.30 Gb  
+- Image ID: `sha256:77bbec4af24ebcf789e1acd4ddf525e5fc33f432e99b4e6f38031e5bb614f7c4`
+- Created: `2021-09-13T20:16:25.034256393Z`
+- Virtual Size: ~ 1.28 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -232,32 +232,6 @@ $ apt-get source -qq --print-uris bash=5.0-6ubuntu1.1
 'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.0-6ubuntu1.1.dsc' bash_5.0-6ubuntu1.1.dsc 2418 SHA512:283e6fa78ac1a13e6e3a70efa6f67817871b12c1fe099475dfe6b87fd9f2926406446fabb72a66d8546ad320976761ffe68867a1e90bd6a5f97c07e851df9933
 'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.0.orig.tar.xz' bash_5.0.orig.tar.xz 5554808 SHA512:f3a719997a8515bae7e84701afafc9b2cdd23c95d29533adb678000b08eba968450b93d5576c3cffbeccbdcd95b713db830e8efeda689258dcfe6f15f0c5dec4
 'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.0-6ubuntu1.1.debian.tar.xz' bash_5.0-6ubuntu1.1.debian.tar.xz 74356 SHA512:450eacea5316075107da9951356021091dfc96889057769590ae8505fa851a99d2f48ce300281b8a448c87e9573cfa2f68a04369ee97955be204e73fa2fd6385
-```
-
-### `dpkg` source package: `binutils=2.34-6ubuntu1.1`
-
-Binary Packages:
-
-- `binutils=2.34-6ubuntu1.1`
-- `binutils-common:amd64=2.34-6ubuntu1.1`
-- `binutils-x86-64-linux-gnu=2.34-6ubuntu1.1`
-- `libbinutils:amd64=2.34-6ubuntu1.1`
-- `libctf-nobfd0:amd64=2.34-6ubuntu1.1`
-- `libctf0:amd64=2.34-6ubuntu1.1`
-
-Licenses: (parsed from: `/usr/share/doc/binutils/copyright`, `/usr/share/doc/binutils-common/copyright`, `/usr/share/doc/binutils-x86-64-linux-gnu/copyright`, `/usr/share/doc/libbinutils/copyright`, `/usr/share/doc/libctf-nobfd0/copyright`, `/usr/share/doc/libctf0/copyright`)
-
-- `GFDL`
-- `GPL`
-- `LGPL`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris binutils=2.34-6ubuntu1.1
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.34-6ubuntu1.1.dsc' binutils_2.34-6ubuntu1.1.dsc 8484 SHA512:9924c20bceaa25297b9048fd25631fe13cd445c6933c979fdae612682a0c8242f38b19b348bfa21f44435f6d1051d20299019cb505ff9b294f09874b16548ef9
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.34.orig.tar.xz' binutils_2.34.orig.tar.xz 21637796 SHA512:2c7976939dcf5e8c5b7374cccd39bfe803b1bec73c6abfa0eb17c24e1942574c6bdb874c66a092a82adc443182eacd8a5a8001c19a76101f0c7ba40c27de0bbd
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.34-6ubuntu1.1.debian.tar.xz' binutils_2.34-6ubuntu1.1.debian.tar.xz 156708 SHA512:5681e1af774cc10c958e297d5afde0c1374db99a4959c77d3d0b5f186f879065e95b9d80eaf8aee1be5b6e825a3bc1a930c19f921db6db87902028a2b2a4c9ef
 ```
 
 ### `dpkg` source package: `boost1.71=1.71.0-6ubuntu6`
