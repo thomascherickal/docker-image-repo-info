@@ -1,7 +1,7 @@
 ## `percona:psmdb-4.0`
 
 ```console
-$ docker pull percona@sha256:0e9e1cea59a06dce5be65ec40b1484624aced5c6036c4e33621b764ca9c81eba
+$ docker pull percona@sha256:37b8b33058129879af82fd1b61fceb0a61acb2e77314d731e8b8bbbe341db303
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,98 +11,98 @@ $ docker pull percona@sha256:0e9e1cea59a06dce5be65ec40b1484624aced5c6036c4e33621
 ### `percona:psmdb-4.0` - linux; amd64
 
 ```console
-$ docker pull percona@sha256:6288529634ac1f9ffc7adcb4c96d784b9fe5ce9d27dca7630f5e1d59a540abd2
+$ docker pull percona@sha256:cfc5a09b55f50ca0ec812e39b65911a07616c5019d59fc3d47971b89f3ba985b
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **178.9 MB (178916929 bytes)**  
+-	Total Size: **187.1 MB (187078883 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:bc13d8cff3cb38ef3ace32620b5d07b002e4c2641cdc987b6f8a0c148d612876`
+-	Image ID: `sha256:d4fb8469051ca6f50be84d690824d6c4a6d18e8d0aba6078d66acab602b14b8b`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["mongod"]`
 
 ```dockerfile
-# Tue, 08 Dec 2020 00:22:52 GMT
-ADD file:bd7a2aed6ede423b719ceb2f723e4ecdfa662b28639c8429731c878e86fb138b in / 
-# Tue, 08 Dec 2020 00:22:52 GMT
-LABEL org.label-schema.schema-version=1.0 org.label-schema.name=CentOS Base Image org.label-schema.vendor=CentOS org.label-schema.license=GPLv2 org.label-schema.build-date=20201204
-# Tue, 08 Dec 2020 00:22:53 GMT
+# Wed, 15 Sep 2021 18:20:04 GMT
+ADD file:805cb5e15fb6e0bb0326ca33fd2942e068863ce2a8491bb71522c652f31fb466 in / 
+# Wed, 15 Sep 2021 18:20:04 GMT
+LABEL org.label-schema.schema-version=1.0 org.label-schema.name=CentOS Base Image org.label-schema.vendor=CentOS org.label-schema.license=GPLv2 org.label-schema.build-date=20210915
+# Wed, 15 Sep 2021 18:20:05 GMT
 CMD ["/bin/bash"]
-# Sat, 06 Mar 2021 01:08:18 GMT
+# Wed, 15 Sep 2021 18:56:15 GMT
 LABEL org.opencontainers.image.authors=info@percona.com
-# Thu, 12 Aug 2021 21:29:38 GMT
+# Wed, 15 Sep 2021 19:02:05 GMT
 RUN set -ex;     export GNUPGHOME="$(mktemp -d)";     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 430BDF5C56E7C94E848EE60C1C4CBDCDCD2EFD2A 99DB70FAE1D7CE227FB6488205B555B38483C65D;     gpg --batch --export --armor 430BDF5C56E7C94E848EE60C1C4CBDCDCD2EFD2A > ${GNUPGHOME}/RPM-GPG-KEY-Percona;     gpg --batch --export --armor 99DB70FAE1D7CE227FB6488205B555B38483C65D > ${GNUPGHOME}/RPM-GPG-KEY-centosofficial;     rpmkeys --import ${GNUPGHOME}/RPM-GPG-KEY-Percona ${GNUPGHOME}/RPM-GPG-KEY-centosofficial;     curl -Lf -o /tmp/percona-release.rpm https://repo.percona.com/yum/percona-release-latest.noarch.rpm;     rpmkeys --checksig /tmp/percona-release.rpm;     dnf install -y /tmp/percona-release.rpm;     rm -rf "$GNUPGHOME" /tmp/percona-release.rpm;     rpm --import /etc/pki/rpm-gpg/PERCONA-PACKAGING-KEY;     percona-release enable psmdb-40 release
-# Thu, 12 Aug 2021 21:29:38 GMT
+# Wed, 15 Sep 2021 19:02:05 GMT
 ENV PSMDB_VERSION=4.0.26-21
-# Thu, 12 Aug 2021 21:29:39 GMT
+# Wed, 15 Sep 2021 19:02:06 GMT
 ENV OS_VER=el8
-# Thu, 12 Aug 2021 21:29:39 GMT
+# Wed, 15 Sep 2021 19:02:06 GMT
 ENV FULL_PERCONA_VERSION=4.0.26-21.el8
-# Thu, 12 Aug 2021 21:29:39 GMT
+# Wed, 15 Sep 2021 19:02:06 GMT
 ENV K8S_TOOLS_VERSION=0.5.0
-# Thu, 12 Aug 2021 21:29:59 GMT
+# Wed, 15 Sep 2021 19:02:26 GMT
 RUN set -ex;     dnf install -y         percona-server-mongodb-mongos-${FULL_PERCONA_VERSION}         percona-server-mongodb-shell-${FULL_PERCONA_VERSION}         shadow-utils         curl         procps-ng         oniguruma         jq         dnf-utils;         repoquery -a --location         policycoreutils             | xargs curl -Lf -o /tmp/policycoreutils.rpm;     repoquery -a --location         percona-server-mongodb-server-${FULL_PERCONA_VERSION}             | xargs curl -Lf -o /tmp/percona-server-mongodb-server-${FULL_PERCONA_VERSION}.rpm;     rpm -iv /tmp/policycoreutils.rpm /tmp/percona-server-mongodb-server-${FULL_PERCONA_VERSION}.rpm --nodeps;         rm -rf /tmp/policycoreutils.rpm /tmp/percona-server-mongodb-server-${FULL_PERCONA_VERSION}.rpm;     dnf clean all;     dnf -y remove dnf-utils;     rm -rf /var/cache/dnf /data/db && mkdir -p /data/db;     chown -R 1001:0 /data/db
-# Thu, 12 Aug 2021 21:30:00 GMT
+# Wed, 15 Sep 2021 19:02:27 GMT
 RUN useradd -u 1001 -r -g 0 -s /sbin/nologin             -c "Default Application User" mongodb
-# Thu, 12 Aug 2021 21:30:00 GMT
+# Wed, 15 Sep 2021 19:02:28 GMT
 COPY file:b7c621ae843e72f20dd7ef20e8c42b89234688ceed5018592c3e5bfa61048aad in /licenses/LICENSE.Dockerfile 
-# Thu, 12 Aug 2021 21:30:01 GMT
+# Wed, 15 Sep 2021 19:02:28 GMT
 RUN cp /usr/share/doc/percona-server-mongodb-server/LICENSE-Community.txt /licenses/LICENSE.Percona-Server-for-MongoDB
-# Thu, 12 Aug 2021 21:30:01 GMT
+# Wed, 15 Sep 2021 19:02:29 GMT
 ENV GOSU_VERSION=1.11
-# Thu, 12 Aug 2021 21:30:06 GMT
+# Wed, 15 Sep 2021 19:02:31 GMT
 RUN set -eux;     curl -Lf -o /usr/bin/gosu https://github.com/tianon/gosu/releases/download/${GOSU_VERSION}/gosu-amd64;     curl -Lf -o /usr/bin/gosu.asc https://github.com/tianon/gosu/releases/download/${GOSU_VERSION}/gosu-amd64.asc;         export GNUPGHOME="$(mktemp -d)";     gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4;     gpg --batch --verify /usr/bin/gosu.asc /usr/bin/gosu;     rm -rf "$GNUPGHOME" /usr/bin/gosu.asc;         chmod +x /usr/bin/gosu;     curl -f -o /licenses/LICENSE.gosu https://raw.githubusercontent.com/tianon/gosu/${GOSU_VERSION}/LICENSE
-# Thu, 12 Aug 2021 21:30:11 GMT
+# Wed, 15 Sep 2021 19:02:34 GMT
 RUN set -ex;     curl -fSL https://github.com/percona/mongodb-orchestration-tools/releases/download/${K8S_TOOLS_VERSION}/k8s-mongodb-initiator -o /usr/local/bin/k8s-mongodb-initiator;     curl -fSL  https://github.com/percona/mongodb-orchestration-tools/releases/download/${K8S_TOOLS_VERSION}/mongodb-healthcheck -o /usr/local/bin/mongodb-healthcheck;     curl -fSL  https://github.com/percona/mongodb-orchestration-tools/releases/download/${K8S_TOOLS_VERSION}/SHA256SUMS -o /tmp/SHA256SUMS;     echo "$(grep 'k8s-mongodb-initiator' /tmp/SHA256SUMS | awk '{print $1}')" /usr/local/bin/k8s-mongodb-initiator | sha256sum -c -;     echo "$(grep 'mongodb-healthcheck' /tmp/SHA256SUMS   | awk '{print $1}')" /usr/local/bin/mongodb-healthcheck   | sha256sum -c -;     rm -f /tmp/SHA256SUMS;         chmod 0755 /usr/local/bin/k8s-mongodb-initiator /usr/local/bin/mongodb-healthcheck
-# Thu, 12 Aug 2021 21:30:11 GMT
+# Wed, 15 Sep 2021 19:02:34 GMT
 VOLUME [/data/db]
-# Thu, 12 Aug 2021 21:30:11 GMT
+# Wed, 15 Sep 2021 19:02:35 GMT
 COPY file:36bd7798a7bd236f79a692385b6877519fd05ff40f92de87cb1d5c527c35d799 in /entrypoint.sh 
-# Thu, 12 Aug 2021 21:30:11 GMT
+# Wed, 15 Sep 2021 19:02:35 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Thu, 12 Aug 2021 21:30:11 GMT
+# Wed, 15 Sep 2021 19:02:35 GMT
 EXPOSE 27017
-# Thu, 12 Aug 2021 21:30:12 GMT
+# Wed, 15 Sep 2021 19:02:35 GMT
 USER 1001
-# Thu, 12 Aug 2021 21:30:12 GMT
+# Wed, 15 Sep 2021 19:02:35 GMT
 CMD ["mongod"]
 ```
 
 -	Layers:
-	-	`sha256:7a0437f04f83f084b7ed68ad9c4a4947e12fc4e1b006b38129bac89114ec3621`  
-		Last Modified: Tue, 08 Dec 2020 00:23:32 GMT  
-		Size: 75.2 MB (75181999 bytes)  
+	-	`sha256:a1d0c75327776413fa0db9ed3adcdbadedc95a662eb1d360dad82bb913f8a1d1`  
+		Last Modified: Wed, 15 Sep 2021 18:21:25 GMT  
+		Size: 83.5 MB (83518086 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:210f669fb9e2906c7f74ee664b10666da914a61f2f7f1f5d45f757651528c8da`  
-		Last Modified: Thu, 12 Aug 2021 21:31:22 GMT  
-		Size: 27.4 MB (27429034 bytes)  
+	-	`sha256:bcea4297eb0b78b4a514f468ef3a470f61002376ffc320c6839af51e4eb9b1d6`  
+		Last Modified: Wed, 15 Sep 2021 19:08:04 GMT  
+		Size: 29.0 MB (28996827 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:db1c91160b0a79f7ae8c0962e9b9d51900613835f4a34b0fb294a3620e55cf63`  
-		Last Modified: Thu, 12 Aug 2021 21:31:29 GMT  
-		Size: 67.2 MB (67232686 bytes)  
+	-	`sha256:2ce40161289bc2674f1f0540134d8c3ba6d6a91922291d0576d6428937b70563`  
+		Last Modified: Wed, 15 Sep 2021 19:08:11 GMT  
+		Size: 65.5 MB (65490775 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:38f9eb0c4d62453d68740a4fe6c6ff6efab89a7febc59aee23adcc7a6b952b9f`  
-		Last Modified: Thu, 12 Aug 2021 21:31:18 GMT  
-		Size: 1.5 KB (1547 bytes)  
+	-	`sha256:f8245c28226ba0532be73abe7648bcbba47a0eb81c87b1a17e29f318ca20cf0b`  
+		Last Modified: Wed, 15 Sep 2021 19:08:02 GMT  
+		Size: 1.5 KB (1538 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4d13d6f337cf297b74a3337164e6cc05cb7e9084daacaf9d6c1d2a6cdedac241`  
-		Last Modified: Thu, 12 Aug 2021 21:31:16 GMT  
+	-	`sha256:1188e87a1f7540639a90541999d93d54a83455859c6427094567a5c7b521b6ee`  
+		Last Modified: Wed, 15 Sep 2021 19:07:58 GMT  
 		Size: 4.1 KB (4103 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:da12db3514a5e76ef32e390960993f091e6d7d451f7b13c0673e2c0b72ed09bc`  
-		Last Modified: Thu, 12 Aug 2021 21:31:16 GMT  
-		Size: 10.6 KB (10577 bytes)  
+	-	`sha256:90761fc5346df66d92a246a34d3a80e2edd0e6368f15060ca4a230417c67e318`  
+		Last Modified: Wed, 15 Sep 2021 19:07:59 GMT  
+		Size: 10.6 KB (10578 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6a252e80c7b47b1ab4a1a66895987c6b481a5275636102e3732d6086fe2244fb`  
-		Last Modified: Thu, 12 Aug 2021 21:31:17 GMT  
-		Size: 914.5 KB (914550 bytes)  
+	-	`sha256:a93504330b7cd89ee48e353499e4ab8ddd71f494cf60c18c66ed62c3e54388b4`  
+		Last Modified: Wed, 15 Sep 2021 19:07:59 GMT  
+		Size: 914.5 KB (914544 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:10edd097274813d46422c6b4744350ea42413f574e8392dbf2d82f32c9de5d39`  
-		Last Modified: Thu, 12 Aug 2021 21:31:18 GMT  
-		Size: 8.1 MB (8137891 bytes)  
+	-	`sha256:a358a8eefb5b0b00c64d1ab98fba0e96b9a6f840bade20c4aa172d7072b65d7f`  
+		Last Modified: Wed, 15 Sep 2021 19:08:00 GMT  
+		Size: 8.1 MB (8137890 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:70584e88eeee94b8e7d0b5ca7ed9e63ae23d39ea7070e15d5b1d2b16cb5ad1ff`  
-		Last Modified: Thu, 12 Aug 2021 21:31:16 GMT  
+	-	`sha256:5a92b38a2d4efed390d661b5fa3e8ca40c629b8a109536d678ed3b7f3a98ca9d`  
+		Last Modified: Wed, 15 Sep 2021 19:07:59 GMT  
 		Size: 4.5 KB (4542 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
