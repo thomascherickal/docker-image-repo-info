@@ -1,10 +1,10 @@
-# `tomcat:9.0.52-jdk8-openjdk-bullseye`
+# `tomcat:9.0.53-jdk8-openjdk-bullseye`
 
 ## Docker Metadata
 
-- Image ID: `sha256:bd0034c34c0d25a3ffe358133facec8b39fa25e7e5a31e4415d2a2ed888b0984`
-- Created: `2021-09-04T13:33:02.694722382Z`
-- Virtual Size: ~ 546.05 Mb  
+- Image ID: `sha256:07ef5b007c6c918541e41f6724a081dfeac45cad543d17a1190fc978f7be4012`
+- Created: `2021-09-14T17:53:33.407249461Z`
+- Virtual Size: ~ 546.13 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["catalina.sh","run"]`
@@ -18,8 +18,8 @@
   - `LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib`
   - `GPG_KEYS=48F8E69F6390C9F25CFEDCD268248959359E722B A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243`
   - `TOMCAT_MAJOR=9`
-  - `TOMCAT_VERSION=9.0.52`
-  - `TOMCAT_SHA512=35e007e8e30e12889da27f9c71a6f4997b9cb5023b703d99add5de9271828e7d8d4956bf34dd2f48c7c71b4f8480f318c9067a4cd2a6d76eaae466286db4897b`
+  - `TOMCAT_VERSION=9.0.53`
+  - `TOMCAT_SHA512=ee731b2d0c3ab7e14fa924dcb8d598707cedf714c9ce1f2c2d907a1fd51e26f7eec1343c3dc39e240ff64dac2e0213f154d23e5f94a430f429165b5df51f786f`
 
 ## `dpkg` (`.deb`-based packages)
 
