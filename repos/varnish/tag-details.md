@@ -8,10 +8,16 @@
 -	[`varnish:6.6-alpine`](#varnish66-alpine)
 -	[`varnish:6.6.1`](#varnish661)
 -	[`varnish:6.6.1-alpine`](#varnish661-alpine)
+-	[`varnish:7.0`](#varnish70)
+-	[`varnish:7.0-alpine`](#varnish70-alpine)
+-	[`varnish:7.0.0`](#varnish700)
+-	[`varnish:7.0.0-alpine`](#varnish700-alpine)
 -	[`varnish:alpine`](#varnishalpine)
 -	[`varnish:fresh`](#varnishfresh)
 -	[`varnish:fresh-alpine`](#varnishfresh-alpine)
 -	[`varnish:latest`](#varnishlatest)
+-	[`varnish:old`](#varnishold)
+-	[`varnish:old-alpine`](#varnishold-alpine)
 -	[`varnish:stable`](#varnishstable)
 
 ## `varnish:6.0`
@@ -1868,6 +1874,42 @@ CMD []
 		Size: 705.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `varnish:7.0`
+
+```console
+$ docker pull varnish@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `varnish:7.0-alpine`
+
+```console
+$ docker pull varnish@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `varnish:7.0.0`
+
+```console
+$ docker pull varnish@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `varnish:7.0.0-alpine`
+
+```console
+$ docker pull varnish@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `varnish:alpine`
 
 ```console
@@ -3103,6 +3145,24 @@ CMD []
 		Last Modified: Fri, 03 Sep 2021 05:10:16 GMT  
 		Size: 698.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `varnish:old`
+
+```console
+$ docker pull varnish@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `varnish:old-alpine`
+
+```console
+$ docker pull varnish@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `varnish:stable`
 
