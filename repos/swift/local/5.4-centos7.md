@@ -1,10 +1,10 @@
-# `swift:5.4.2-centos7`
+# `swift:5.4.3-centos7`
 
 ## Docker Metadata
 
-- Image ID: `sha256:4875e1989be02aa0ea938c7d1d4fc5965f6c3ce8f924a3e12d87bea73a707f6c`
-- Created: `2021-06-29T23:00:05.146018907Z`
-- Virtual Size: ~ 2.21 Gb  
+- Image ID: `sha256:8dcefb290efcda976689045af8481b3e1d9e3733dd756c8493d05f7f3d441b88`
+- Created: `2021-09-15T19:16:24.363413439Z`
+- Virtual Size: ~ 2.23 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -12,8 +12,8 @@
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561`
   - `SWIFT_PLATFORM=centos7`
-  - `SWIFT_BRANCH=swift-5.4.2-release`
-  - `SWIFT_VERSION=swift-5.4.2-RELEASE`
+  - `SWIFT_BRANCH=swift-5.4.3-release`
+  - `SWIFT_VERSION=swift-5.4.3-RELEASE`
   - `SWIFT_WEBROOT=https://swift.org/builds/`
 - Labels:
   - `description=Docker Container for the Swift programming language`
@@ -618,74 +618,74 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/glib2-2.56.1-7.el7.src.rpm
 ```
 
-### `rpm` package: `glibc-2.17-323.el7_9.x86_64`
+### `rpm` package: `glibc-2.17-324.el7_9.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+ and LGPLv2+ with exceptions and GPLv2+
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls glibc-2.17-323.el7_9
+$ yumdownloader --quiet --source --urls glibc-2.17-324.el7_9
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
-http://vault.centos.org/centos/7/updates/Source//SPackages/glibc-2.17-323.el7_9.src.rpm
+http://vault.centos.org/centos/7/updates/Source//SPackages/glibc-2.17-324.el7_9.src.rpm
 ```
 
-### `rpm` package: `glibc-common-2.17-323.el7_9.x86_64`
+### `rpm` package: `glibc-common-2.17-324.el7_9.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+ and LGPLv2+ with exceptions and GPLv2+
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls glibc-common-2.17-323.el7_9
+$ yumdownloader --quiet --source --urls glibc-common-2.17-324.el7_9
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
-http://vault.centos.org/centos/7/updates/Source//SPackages/glibc-2.17-323.el7_9.src.rpm
+http://vault.centos.org/centos/7/updates/Source//SPackages/glibc-2.17-324.el7_9.src.rpm
 ```
 
-### `rpm` package: `glibc-devel-2.17-323.el7_9.x86_64`
+### `rpm` package: `glibc-devel-2.17-324.el7_9.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+ and LGPLv2+ with exceptions and GPLv2+
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls glibc-devel-2.17-323.el7_9
+$ yumdownloader --quiet --source --urls glibc-devel-2.17-324.el7_9
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
-http://vault.centos.org/centos/7/updates/Source//SPackages/glibc-2.17-323.el7_9.src.rpm
+http://vault.centos.org/centos/7/updates/Source//SPackages/glibc-2.17-324.el7_9.src.rpm
 ```
 
-### `rpm` package: `glibc-headers-2.17-323.el7_9.x86_64`
+### `rpm` package: `glibc-headers-2.17-324.el7_9.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+ and LGPLv2+ with exceptions and GPLv2+
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls glibc-headers-2.17-323.el7_9
+$ yumdownloader --quiet --source --urls glibc-headers-2.17-324.el7_9
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
-http://vault.centos.org/centos/7/updates/Source//SPackages/glibc-2.17-323.el7_9.src.rpm
+http://vault.centos.org/centos/7/updates/Source//SPackages/glibc-2.17-324.el7_9.src.rpm
 ```
 
-### `rpm` package: `glibc-static-2.17-323.el7_9.x86_64`
+### `rpm` package: `glibc-static-2.17-324.el7_9.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+ and LGPLv2+ with exceptions and GPLv2+
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls glibc-static-2.17-323.el7_9
+$ yumdownloader --quiet --source --urls glibc-static-2.17-324.el7_9
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
-http://vault.centos.org/centos/7/updates/Source//SPackages/glibc-2.17-323.el7_9.src.rpm
+http://vault.centos.org/centos/7/updates/Source//SPackages/glibc-2.17-324.el7_9.src.rpm
 ```
 
 ### `rpm` package: `gmp-6.0.0-15.el7.x86_64`
@@ -862,18 +862,18 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/json-c-0.11-4.el7_0.src.rpm
 ```
 
-### `rpm` package: `kernel-headers-3.10.0-1160.24.1.el7.x86_64`
+### `rpm` package: `kernel-headers-3.10.0-1160.42.2.el7.x86_64`
 
 Licenses (from `rpm --query`): GPLv2
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls kernel-headers-3.10.0-1160.24.1.el7
+$ yumdownloader --quiet --source --urls kernel-headers-3.10.0-1160.42.2.el7
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
-http://vault.centos.org/centos/7/updates/Source//SPackages/kernel-3.10.0-1160.24.1.el7.src.rpm
+http://vault.centos.org/centos/7/updates/Source//SPackages/kernel-3.10.0-1160.42.2.el7.src.rpm
 ```
 
 ### `rpm` package: `keyutils-libs-1.5.8-3.el7.x86_64`
