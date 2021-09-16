@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:db066218b030ecfca2097fd1651977b744e03a3fc0c593821c946ff647a6a758`
-- Created: `2021-08-18T12:03:46.882796157Z`
-- Virtual Size: ~ 513.76 Mb  
+- Image ID: `sha256:cd330cfc97431bca1f21ffb341c37d47a9e0886ac545d0471c39722297164463`
+- Created: `2021-09-15T19:01:02.727254463Z`
+- Virtual Size: ~ 533.48 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -17,7 +17,7 @@
   - `K8S_TOOLS_VERSION=0.5.0`
   - `GOSU_VERSION=1.11`
 - Labels:
-  - `org.label-schema.build-date=20201204`
+  - `org.label-schema.build-date=20210915`
   - `org.label-schema.license=GPLv2`
   - `org.label-schema.name=CentOS Base Image`
   - `org.label-schema.schema-version=1.0`
