@@ -66,13 +66,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.3.7
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.3.7.dsc' apt_2.3.7.dsc 2779 SHA512:96fce97c77daf52ca902f3a00ce5685575ccf807e6b3859836ab2639c4b1abfb136edab23a1bd8b5ae5c049e3304298f194f0c4c1ed6c32a7029f6eb170df0e1
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.3.7.tar.xz' apt_2.3.7.tar.xz 2202688 SHA512:0fc0476ab1b4d6691e562f307d4152afd07eff28555174762cbd6b9bac93e008af5f19a3f8f858b76410a338ef6d728330f6690aa6d434c7f83490f3e0589a6e
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/apt/2.3.7/
+
 
 ### `dpkg` source package: `attr=1:2.4.48-6build1`
 

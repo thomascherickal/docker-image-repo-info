@@ -1020,14 +1020,9 @@ Licenses: (parsed from: `/usr/share/doc/libffi8ubuntu1/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libffi=3.4~20200819gead65ca871-0ubuntu5
-'http://archive.ubuntu.com/ubuntu/pool/main/libf/libffi/libffi_3.4~20200819gead65ca871-0ubuntu5.dsc' libffi_3.4~20200819gead65ca871-0ubuntu5.dsc 2220 SHA512:b1e16e20dfbaa91706a3b24356456bc8d9e5c862796b56f66f5395e0b4056307eccb01fbeabec5a1d5e89ae948b332d91282c38e504ce18981e1334be2fadc09
-'http://archive.ubuntu.com/ubuntu/pool/main/libf/libffi/libffi_3.4~20200819gead65ca871.orig.tar.gz' libffi_3.4~20200819gead65ca871.orig.tar.gz 527371 SHA512:c349b1630db80c042f3c11efe58d4eb849e87f2cca0cc1748c99d32cc34ce4c1262825dc070c8a84263e0adcd8a7af3bd33c705ba28b6cc16974552b12bf0c65
-'http://archive.ubuntu.com/ubuntu/pool/main/libf/libffi/libffi_3.4~20200819gead65ca871-0ubuntu5.debian.tar.xz' libffi_3.4~20200819gead65ca871-0ubuntu5.debian.tar.xz 7980 SHA512:cf453efd9b01dd63f237c023530597188471423e266fcf7716ece957abdfd11ed9244c5913db78965f5bca1e63c51eafcbd3299195058bee0214fb7d210faf74
-```
 
 ### `dpkg` source package: `libfido2=1.6.0-2`
 
@@ -1062,15 +1057,9 @@ Licenses: (parsed from: `/usr/share/doc/libgcrypt20/copyright`)
 - `GPL-2`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libgcrypt20=1.8.7-5ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgcrypt20/libgcrypt20_1.8.7-5ubuntu1.dsc' libgcrypt20_1.8.7-5ubuntu1.dsc 2562 SHA512:fc4161f417f974a3a88b3f9f3b1ea0095550a08af0b4d809426d97cd9057c20d06380b7f60edab0ed20438ea318b26f6a2a6fed97c666fb968781afd4d2388aa
-'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgcrypt20/libgcrypt20_1.8.7.orig.tar.bz2' libgcrypt20_1.8.7.orig.tar.bz2 2985660 SHA512:6309d17624d8029848990d225d5924886c951cef691266c8e010fbbb7f678972cee70cbb91d370ad0bcdc8c8761402a090c2c853c9427ec79293624a59da5060
-'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgcrypt20/libgcrypt20_1.8.7.orig.tar.bz2.asc' libgcrypt20_1.8.7.orig.tar.bz2.asc 228 SHA512:4ba6875dfddbc9bece0c4d25d1c3b0e6183045288ca876b84c24d487ee72f751ecda6eaec71e70ba00fd2434c77127283af1a957ac9e6f40352ef67add672c72
-'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgcrypt20/libgcrypt20_1.8.7-5ubuntu1.debian.tar.xz' libgcrypt20_1.8.7-5ubuntu1.debian.tar.xz 39848 SHA512:35ec4913d4988d9897da3ac3d45a727836ad90a5bf4d742925f46086d576faab410573371a11f496801e78c537c302111d89c86f8d022d4462b0d0741f86298a
-```
 
 ### `dpkg` source package: `libgpg-error=1.38-2build1`
 
@@ -1756,10 +1745,10 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris p11-kit=0.23.22-1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.22-1.dsc' p11-kit_0.23.22-1.dsc 2417 SHA512:09d764f710260a71041b5714397af68b0aaf20bd419b9aac7997709d80ac3bddf4fe2c132ca9510bb662986b4e3576627628237cd9c95ed7d1ff1ffcca04cee7
+'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.22-1build1.dsc' p11-kit_0.23.22-1build1.dsc 2466 SHA512:2bf5e3f017bd3c5bc31a1e2f85186e637f66c14832101ceee2964a35019ae5e321696b6ed11fd1108846dba3a032b6f2fce968a9f0b019eb803c990891025284
 'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.22.orig.tar.xz' p11-kit_0.23.22.orig.tar.xz 830016 SHA512:098819e6ca4ad9cc2a0bc2e478aea67354d051a4f03e6c7d75d13d2469b6dc7654f26b15530052f6ed51acb35531c2539e0f971b31e29e6673e857c903afb080
 'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.22.orig.tar.xz.asc' p11-kit_0.23.22.orig.tar.xz.asc 854 SHA512:1ebb730b9c29908773de12aca89df2434576b8d9ec5da6d33db772b1e1aa4b0e8aa86ddc3e0de1abcd98a7012b5a25e3097e3a2dda2401cc37f79fd76b4f9467
-'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.22-1.debian.tar.xz' p11-kit_0.23.22-1.debian.tar.xz 22256 SHA512:5d10918372cf7b6ae5ee6aa03e653b2ba55e61a691c9e9e7d8673a2e4a632941ccda38e213691ca5b05ce422d1af71ced902cf9c7b8d3be7e45662e96e6dce69
+'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.22-1build1.debian.tar.xz' p11-kit_0.23.22-1build1.debian.tar.xz 22356 SHA512:66e291cf87c29305562679391af331217cf93e227a708bdbc4ed0490c2802f0219d30a5ce47c194ed3d6b835e029a118d2cbcdb07cfa3b935b321038750ffc98
 ```
 
 ### `dpkg` source package: `pam=1.3.1-5ubuntu8`
@@ -1775,14 +1764,9 @@ Licenses: (parsed from: `/usr/share/doc/libpam-modules/copyright`, `/usr/share/d
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pam=1.3.1-5ubuntu8
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.3.1-5ubuntu8.dsc' pam_1.3.1-5ubuntu8.dsc 2699 SHA512:bfaa312fdb0b8627c16b87c30cb6e3e87785412c241a5913a22fcf31f0723ae57304da2b3a9258a4cd169cc59261ac484b733628995c4358e9e847c829e0ec96
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.3.1.orig.tar.xz' pam_1.3.1.orig.tar.xz 912332 SHA512:6bc8e2a5b64686f0a23846221c5228c88418ba485b17c53b3a12f91262b5bb73566d6b6a5daa1f63bbae54310aee918b987e44a72ce809b4e7c668f0fadfe08e
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.3.1-5ubuntu8.debian.tar.xz' pam_1.3.1-5ubuntu8.debian.tar.xz 172992 SHA512:53b503676a83e22732e6dab7eb408fe266aaab2a749fa981199a2195215c7a4d3a6473f85f5c25ee975b1cfd8a743adfc428081a29faad22164725f4381d215a
-```
 
 ### `dpkg` source package: `pcre2=10.36-2ubuntu5`
 

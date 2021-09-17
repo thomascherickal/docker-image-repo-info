@@ -3346,21 +3346,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libx11=2:1.7.2-1
-'http://deb.debian.org/debian/pool/main/libx/libx11/libx11_1.7.2-1.dsc' libx11_1.7.2-1.dsc 2539 SHA256:8db8a34ebf9782d4ef47cb28cfeae0b1bc737864a315a182871eeb29f7de7d90
-'http://deb.debian.org/debian/pool/main/libx/libx11/libx11_1.7.2.orig.tar.gz' libx11_1.7.2.orig.tar.gz 3181228 SHA256:2c26ccd08f43a6214de89110554fbe97c71692eeb7e7d4829f3004ae6fafd2c0
-'http://deb.debian.org/debian/pool/main/libx/libx11/libx11_1.7.2.orig.tar.gz.asc' libx11_1.7.2.orig.tar.gz.asc 833 SHA256:509d0ed983ff3aed0dbfb070dabfce82b5787e626f2fd0bfb2a5887918fcd967
-'http://deb.debian.org/debian/pool/main/libx/libx11/libx11_1.7.2-1.diff.gz' libx11_1.7.2-1.diff.gz 76026 SHA256:7babff68e071a9e3f7bc6241a1a135e3a19c74314240764722a41b31f1e213c8
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libx11/2:1.7.2-1/
 
-- https://sources.debian.net/src/libx11/2:1.7.2-1/ (for browsing the source)
-- https://sources.debian.net/src/libx11/2:1.7.2-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libx11/2:1.7.2-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libxau=1:1.0.9-1`
 
@@ -4058,21 +4050,13 @@ Licenses: (parsed from: `/usr/share/doc/libncurses-dev/copyright`, `/usr/share/d
 - `MIT/X11`
 - `X11`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ncurses=6.2+20201114-4
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.2+20201114-4.dsc' ncurses_6.2+20201114-4.dsc 4200 SHA256:08282aeef8d25d9979e0760455ee5814e3a16622aa5a6ec06c247f1467ebdacb
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.2+20201114.orig.tar.gz' ncurses_6.2+20201114.orig.tar.gz 3539796 SHA256:aa3f8cfaff2a2b78f184274ec43d9da910c864e4b4d80fc47b5b48cba9154cd2
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.2+20201114.orig.tar.gz.asc' ncurses_6.2+20201114.orig.tar.gz.asc 265 SHA256:91615d9d5575f9e974e78c6aca55e1885f42d1b2600cebec407be4471bb7a27d
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.2+20201114-4.debian.tar.xz' ncurses_6.2+20201114-4.debian.tar.xz 54112 SHA256:c0a1272f55a5e12af542496bf9915b3109ec10d71aa62aca19c2a33c9e027d7f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/ncurses/6.2+20201114-4/
 
-- https://sources.debian.net/src/ncurses/6.2+20201114-4/ (for browsing the source)
-- https://sources.debian.net/src/ncurses/6.2+20201114-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/ncurses/6.2+20201114-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `netbase=6.3`
 
@@ -5484,21 +5468,13 @@ Licenses: (parsed from: `/usr/share/doc/x11proto-dev/copyright`, `/usr/share/doc
 - `MIT`
 - `SGI`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris xorgproto=2020.1-1
-'http://deb.debian.org/debian/pool/main/x/xorgproto/xorgproto_2020.1-1.dsc' xorgproto_2020.1-1.dsc 3410 SHA256:227dba0e174e781c68502d33af10527d5d19d692ad969442a75c422a3cbaae6a
-'http://deb.debian.org/debian/pool/main/x/xorgproto/xorgproto_2020.1.orig.tar.gz' xorgproto_2020.1.orig.tar.gz 1081369 SHA256:6265b11b125df2f4853eec4895b14067d5621f813553fa077bebef20d7542418
-'http://deb.debian.org/debian/pool/main/x/xorgproto/xorgproto_2020.1.orig.tar.gz.asc' xorgproto_2020.1.orig.tar.gz.asc 659 SHA256:00af3777b1b00b5553d0838356202c920f94b3088502aca9c4c37abd704bf39d
-'http://deb.debian.org/debian/pool/main/x/xorgproto/xorgproto_2020.1-1.diff.gz' xorgproto_2020.1-1.diff.gz 20627 SHA256:b96eb973c1effc4fb5a8545f81983d1acf7a6f01231da230b5911daa4eca35be
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/xorgproto/2020.1-1/
 
-- https://sources.debian.net/src/xorgproto/2020.1-1/ (for browsing the source)
-- https://sources.debian.net/src/xorgproto/2020.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/xorgproto/2020.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `xtrans=1.4.0-1`
 
