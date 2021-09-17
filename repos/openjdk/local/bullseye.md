@@ -1,18 +1,18 @@
-# `openjdk:16.0.2-jdk-bullseye`
+# `openjdk:17-jdk-bullseye`
 
 ## Docker Metadata
 
-- Image ID: `sha256:94fcd206422594b4e2a61aee0de56f70138f4a3e2135321dda085d749ad4efc9`
-- Created: `2021-09-03T08:35:23.703477915Z`
-- Virtual Size: ~ 659.93 Mb  
+- Image ID: `sha256:77d899e4e24c29e394a3335a98ab0bab4a7df36cc2b804da14e2bb72a93da982`
+- Created: `2021-09-03T08:33:48.96818816Z`
+- Virtual Size: ~ 663.74 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["jshell"]`
 - Environment:
-  - `PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `JAVA_HOME=/usr/local/openjdk-16`
+  - `PATH=/usr/local/openjdk-17/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
+  - `JAVA_HOME=/usr/local/openjdk-17`
   - `LANG=C.UTF-8`
-  - `JAVA_VERSION=16.0.2`
+  - `JAVA_VERSION=17`
 
 ## `dpkg` (`.deb`-based packages)
 
