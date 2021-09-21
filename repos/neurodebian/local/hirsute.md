@@ -1666,9 +1666,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris systemd=247.3-3ubuntu3.4
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_247.3-3ubuntu3.4.dsc' systemd_247.3-3ubuntu3.4.dsc 5349 SHA512:8d7746f387d65865c360ffadf798dcd9f141555ec0cf73f6baf8fda4d76e91a0446448079cde6fb5ce86d75e5029108cb529ccd5f1a063be7e3a4c3c45cc631c
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_247.3.orig.tar.gz' systemd_247.3.orig.tar.gz 9895385 SHA512:0b12f6b9b02d86ee2f4198dd5f96a6267652fdc4867517e10a214a59b63c996fd14aeb2f47a97806718cdda52d1705a3b2359e4ae5e5d8d52d61ad05e7941d1e
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_247.3-3ubuntu3.4.debian.tar.xz' systemd_247.3-3ubuntu3.4.debian.tar.xz 237984 SHA512:2e1631bc1f11bc7e6e22c1a4b5d2de49c60123c56e0276eef4acd800991afefc93ceae604eb89db177f790cf042004806d11739feac482cc0b527c50dec93e59
+'http://security.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_247.3-3ubuntu3.4.dsc' systemd_247.3-3ubuntu3.4.dsc 5349 SHA512:8d7746f387d65865c360ffadf798dcd9f141555ec0cf73f6baf8fda4d76e91a0446448079cde6fb5ce86d75e5029108cb529ccd5f1a063be7e3a4c3c45cc631c
+'http://security.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_247.3.orig.tar.gz' systemd_247.3.orig.tar.gz 9895385 SHA512:0b12f6b9b02d86ee2f4198dd5f96a6267652fdc4867517e10a214a59b63c996fd14aeb2f47a97806718cdda52d1705a3b2359e4ae5e5d8d52d61ad05e7941d1e
+'http://security.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_247.3-3ubuntu3.4.debian.tar.xz' systemd_247.3-3ubuntu3.4.debian.tar.xz 237984 SHA512:2e1631bc1f11bc7e6e22c1a4b5d2de49c60123c56e0276eef4acd800991afefc93ceae604eb89db177f790cf042004806d11739feac482cc0b527c50dec93e59
 ```
 
 ### `dpkg` source package: `sysvinit=2.96-6ubuntu1`
