@@ -6508,14 +6508,9 @@ Licenses: (parsed from: `/usr/share/doc/libprocps8/copyright`, `/usr/share/doc/p
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris procps=2:3.3.16-1ubuntu2.2
-'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_3.3.16-1ubuntu2.2.dsc' procps_3.3.16-1ubuntu2.2.dsc 2242 SHA512:657223e718cd906db51163974224c04539fdc4a9980901448a11758ddcc7585988dfb55a93b33252920db358d7aa71b113b65a14b6c89c51de824eee60d02458
-'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_3.3.16.orig.tar.xz' procps_3.3.16.orig.tar.xz 621892 SHA512:38db4f72fe40c2f027b23b18bbc8c29cfcdf6bcdb029199fe4bebede153943aa884157f56e792c399f9a4949cc514687500bb99a75a5e7ad7b9e878f52090304
-'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_3.3.16-1ubuntu2.2.debian.tar.xz' procps_3.3.16-1ubuntu2.2.debian.tar.xz 33748 SHA512:1f6cb098dca2a6d58b9dc23e627bc421639fcf42e101295a868ba87600dacecdf4c87fe9694446f2d74a4be9017321c239a6dd88f6098b4954bf72b43b6ecff6
-```
 
 ### `dpkg` source package: `proj=6.3.1-1`
 
@@ -7647,14 +7642,9 @@ Licenses: (parsed from: `/usr/share/doc/libtiff-dev/copyright`, `/usr/share/doc/
 
 - `Hylafax`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tiff=4.1.0+git191117-2ubuntu0.20.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.1.0+git191117-2ubuntu0.20.04.1.dsc' tiff_4.1.0+git191117-2ubuntu0.20.04.1.dsc 2381 SHA512:710f18f4704f9db4ac07e6cf1e7a8e15e5b0aabccd7f2eb7c108b460b6ac692abd8ebeacab7a0e0f2833c6bdbebad5fcaeeb51e840318deea9b12db5293b8721
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.1.0+git191117.orig.tar.xz' tiff_4.1.0+git191117.orig.tar.xz 1533524 SHA512:25b4bc4522fc2e7f3ca6857b87acd4481d8643566b1120c755020afc8b48949238ee2078bc43dd3ba7407eaa4e36b1b712d7056f101ddaf60f94dab8607870b8
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.1.0+git191117-2ubuntu0.20.04.1.debian.tar.xz' tiff_4.1.0+git191117-2ubuntu0.20.04.1.debian.tar.xz 20508 SHA512:67289b5c150b2aeadd48d58977190bb8bd397da7ca00a19257fed67404ba4b76256a941319421d6e8ca511763f5bd7cce616bdd9edf846e9793d48324e9b3b81
-```
 
 ### `dpkg` source package: `tinyxml2=7.0.0+dfsg-1build1`
 
