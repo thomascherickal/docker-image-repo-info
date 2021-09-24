@@ -1,16 +1,17 @@
 ## `bash:devel-20210920-alpine3.14`
 
 ```console
-$ docker pull bash@sha256:191946bb12c26a803046d30304bfa6da65e91d455a174e0208f7c16a4fece28f
+$ docker pull bash@sha256:64d83554e2bfc6e9843be025f82ac259ec2f28fe52bed8f91e701d9443fc8d5f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 6
+-	Platforms: 7
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
 	-	linux; 386
+	-	linux; ppc64le
 	-	linux; s390x
 
 ### `bash:devel-20210920-alpine3.14` - linux; amd64
@@ -246,6 +247,53 @@ CMD ["bash"]
 	-	`sha256:d2d298ba1db7531e19937e51caf8786043a6a72c5c8db6b49e78e0784c1fceff`  
 		Last Modified: Thu, 23 Sep 2021 22:54:24 GMT  
 		Size: 340.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `bash:devel-20210920-alpine3.14` - linux; ppc64le
+
+```console
+$ docker pull bash@sha256:10d586d491c9088d09da94e76aa0ef84b303d5ea5be7c0fe1250ae0775d5ae05
+```
+
+-	Docker Version: 20.10.7
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **5.8 MB (5758020 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:aab93349a275cb8c3d321a5660dd164fdde7fbea565fa4e6e165811a1c9d2f76`
+-	Entrypoint: `["docker-entrypoint.sh"]`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Fri, 27 Aug 2021 19:39:54 GMT
+ADD file:d213c56ffc24a5051e8060fd0fec1a0520367c10d88ab16321c36336b6c66098 in / 
+# Fri, 27 Aug 2021 19:39:59 GMT
+CMD ["/bin/sh"]
+# Fri, 24 Sep 2021 06:14:13 GMT
+ENV _BASH_COMMIT=232f5919645d0a02004a94a3ee8e28a550165df9
+# Fri, 24 Sep 2021 06:14:28 GMT
+ENV _BASH_VERSION=devel-20210920
+# Fri, 24 Sep 2021 06:15:48 GMT
+RUN set -eux; 		apk add --no-cache --virtual .build-deps 		bison 		coreutils 		dpkg-dev dpkg 		gcc 		libc-dev 		make 		ncurses-dev 		tar 	; 		wget -O bash.tar.gz "https://git.savannah.gnu.org/cgit/bash.git/snapshot/bash-$_BASH_COMMIT.tar.gz"; 		mkdir -p /usr/src/bash; 	tar 		--extract 		--file=bash.tar.gz 		--strip-components=1 		--directory=/usr/src/bash 	; 	rm bash.tar.gz; 		if [ -d bash-patches ]; then 		apk add --no-cache --virtual .patch-deps patch; 		for p in bash-patches/*; do 			patch 				--directory=/usr/src/bash 				--input="$(readlink -f "$p")" 				--strip=0 			; 			rm "$p"; 		done; 		rmdir bash-patches; 		apk del --no-network .patch-deps; 	fi; 		cd /usr/src/bash; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--enable-readline 		--with-curses 		--without-bash-malloc 	|| { 		cat >&2 config.log; 		false; 	}; 	make -j "$(nproc)"; 	make install; 	cd /; 	rm -r /usr/src/bash; 		rm -rf 		/usr/local/share/doc/bash/*.html 		/usr/local/share/info 		/usr/local/share/locale 		/usr/local/share/man 	; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .bash-rundeps $runDeps; 	apk del --no-network .build-deps; 		[ "$(which bash)" = '/usr/local/bin/bash' ]; 	bash --version; 	bash -c 'help' > /dev/null
+# Fri, 24 Sep 2021 06:15:51 GMT
+COPY file:651b3bebeba8be9162c56b3eb561199905235f3e1c7811232b6c9f48ac333651 in /usr/local/bin/ 
+# Fri, 24 Sep 2021 06:16:02 GMT
+ENTRYPOINT ["docker-entrypoint.sh"]
+# Fri, 24 Sep 2021 06:16:13 GMT
+CMD ["bash"]
+```
+
+-	Layers:
+	-	`sha256:63da8ca98f7b4b94381aed56862a60aecf355d9428b9aeb7c61d5bd017100c18`  
+		Last Modified: Fri, 27 Aug 2021 19:41:06 GMT  
+		Size: 2.8 MB (2812284 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:93e9d49866a881a6268addb9ab59e6b2dd5b74ea98e3af4a69cdf2a0cf423de8`  
+		Last Modified: Fri, 24 Sep 2021 06:20:15 GMT  
+		Size: 2.9 MB (2945391 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:cb6356864349f11bd80e75bc78e3e40cce79c0588dfd4559c9d41ad57da07269`  
+		Last Modified: Fri, 24 Sep 2021 06:20:14 GMT  
+		Size: 345.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `bash:devel-20210920-alpine3.14` - linux; s390x
