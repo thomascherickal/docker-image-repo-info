@@ -1020,21 +1020,13 @@ Licenses: (parsed from: `/usr/share/doc/eatmydata/copyright`, `/usr/share/doc/li
 - `GPL-3`
 - `GPL-3+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libeatmydata=129-3
-'http://deb.debian.org/debian/pool/main/libe/libeatmydata/libeatmydata_129-3.dsc' libeatmydata_129-3.dsc 2439 SHA256:7462a37bca5b0754b1c2c6b1d7ae6ecab8bafbe50442e8724452936b906bf489
-'http://deb.debian.org/debian/pool/main/libe/libeatmydata/libeatmydata_129.orig.tar.gz' libeatmydata_129.orig.tar.gz 358437 SHA256:0e5b8944d7d236d1c3803447c5285ece734a3bd696c69ecb1ed919bf59d8cce3
-'http://deb.debian.org/debian/pool/main/libe/libeatmydata/libeatmydata_129.orig.tar.gz.asc' libeatmydata_129.orig.tar.gz.asc 833 SHA256:90859b98df39705d2acc03fe6960cc79f034519793c8263b578fbb3abe514bb1
-'http://deb.debian.org/debian/pool/main/libe/libeatmydata/libeatmydata_129-3.debian.tar.xz' libeatmydata_129-3.debian.tar.xz 15428 SHA256:46ea9b8a611870685f7747304d3c7669eaa065ba610788c6ef7254501fb0026d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libeatmydata/129-3/
 
-- https://sources.debian.net/src/libeatmydata/129-3/ (for browsing the source)
-- https://sources.debian.net/src/libeatmydata/129-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libeatmydata/129-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libffi=3.3-6`
 
@@ -2005,20 +1997,13 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=247.9-1
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_247.9-1.dsc' systemd_247.9-1.dsc 5167 SHA256:f07d99148951e380550feae1e2c8d5f6143699376a6dec270bdc6ac02c3ac3ee
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_247.9.orig.tar.gz' systemd_247.9.orig.tar.gz 9915803 SHA256:629b8c895efa000b921092c7a565680c66dcd0ec74ed11cb2dd2b6701492675d
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_247.9-1.debian.tar.xz' systemd_247.9-1.debian.tar.xz 163168 SHA256:2f9192bdc5a9a2b5c6b5cf38111b9e7b7f4cac16cae965dfff851f5165b9c2f9
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/systemd/247.9-1/
 
-- https://sources.debian.net/src/systemd/247.9-1/ (for browsing the source)
-- https://sources.debian.net/src/systemd/247.9-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/systemd/247.9-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sysvinit=2.96-7`
 
@@ -2031,21 +2016,13 @@ Licenses: (parsed from: `/usr/share/doc/sysvinit-utils/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sysvinit=2.96-7
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96-7.dsc' sysvinit_2.96-7.dsc 2586 SHA256:f8e7afbf2f6a5d1e31bbe75ebebdf6a14917494c32868ead3769f5555cbab62c
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96.orig.tar.xz' sysvinit_2.96.orig.tar.xz 122164 SHA256:2a2e26b72aa235a23ab1c8471005f890309ce1196c83fbc9413c57b9ab62b587
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96.orig.tar.xz.asc' sysvinit_2.96.orig.tar.xz.asc 313 SHA256:dfc184b95da12c8c888c8ae6b0f26fe8a23b07fbcdd240f6600a8a78b9439fa0
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_2.96-7.debian.tar.xz' sysvinit_2.96-7.debian.tar.xz 129040 SHA256:c56a9576fccfd85b4463d4a1bce2f8b006cc4228136c34222734738a4880758f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/sysvinit/2.96-7/
 
-- https://sources.debian.net/src/sysvinit/2.96-7/ (for browsing the source)
-- https://sources.debian.net/src/sysvinit/2.96-7/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sysvinit/2.96-7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tar=1.34+dfsg-1`
 
