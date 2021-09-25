@@ -4,7 +4,7 @@
 
 - Image ID: `sha256:3e6ab737b47694a506ff96af14d73e5c197cea9d2de661ca8158fb4e80977c58`
 - Created: `2021-08-27T20:36:50.008806017Z`
-- Virtual Size: ~ 409.31 Mb  
+- Virtual Size: ~ 409.32 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["julia"]`
