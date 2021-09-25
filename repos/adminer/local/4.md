@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:357d5daa8a92ec206e1cd86f32aba8fa5e5394e48a34270873a4bc42031b057a`
-- Created: `2021-09-02T17:19:52.087398434Z`
-- Virtual Size: ~ 91.24 Mb  
+- Image ID: `sha256:41b9d1ec631e60d889b20fa8e16cb75e6016b3a27ae6400116b8626bedc1705e`
+- Created: `2021-09-24T02:31:53.304107429Z`
+- Virtual Size: ~ 91.84 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["entrypoint.sh","docker-php-entrypoint"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F`
-  - `PHP_VERSION=8.0.10`
-  - `PHP_URL=https://www.php.net/distributions/php-8.0.10.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.10.tar.xz.asc`
-  - `PHP_SHA256=66dc4d1bc86d9c1bc255b51b79d337ed1a7a035cf71230daabbf9a4ca35795eb`
+  - `PHP_VERSION=8.0.11`
+  - `PHP_URL=https://www.php.net/distributions/php-8.0.11.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.11.tar.xz.asc`
+  - `PHP_SHA256=e3e5f764ae57b31eb65244a45512f0b22d7bef05f2052b23989c053901552e16`
   - `ADMINER_VERSION=4.8.1`
   - `ADMINER_DOWNLOAD_SHA256=2fd7e6d8f987b243ab1839249551f62adce19704c47d3d0c8dd9e57ea5b9c6b3`
   - `ADMINER_SRC_DOWNLOAD_SHA256=ef832414296d11eed33e9d85fff3fb316c63f13f05fceb4a961cbe4cb2ae8712`
@@ -268,16 +268,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.78.0-r0 description:
+libcurl-7.79.1-r0 description:
 The multiprotocol file transfer library
 
-libcurl-7.78.0-r0 webpage:
+libcurl-7.79.1-r0 webpage:
 https://curl.se/
 
-libcurl-7.78.0-r0 installed size:
+libcurl-7.79.1-r0 installed size:
 500 KiB
 
-libcurl-7.78.0-r0 license:
+libcurl-7.79.1-r0 license:
 MIT
 
 ```
