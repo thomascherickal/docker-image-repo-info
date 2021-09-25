@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:b587dc58ed20a505126715a7cc9b78a260b2adaf0c2c531b7c7798d53dc7a26b`
-- Created: `2021-09-15T01:56:56.248519025Z`
-- Virtual Size: ~ 217.30 Mb  
+- Image ID: `sha256:a697057e5099f8e297c00a8f301cc8e29f6bf9a700315b114bd2cdf7dffa52e5`
+- Created: `2021-09-24T02:43:58.194520721Z`
+- Virtual Size: ~ 217.79 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -18,10 +18,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=CBAF69F173A0FEA4B537F470D66C9593118BCCB6 F38252826ACD957EF380D39F2F7956BC5DA04B5D`
-  - `PHP_VERSION=7.3.30`
-  - `PHP_URL=https://www.php.net/distributions/php-7.3.30.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.3.30.tar.xz.asc`
-  - `PHP_SHA256=0ebfd656df0f3b1ea37ff2887f8f2d1a71cd160fb0292547c0ee0a99e58ffd1b`
+  - `PHP_VERSION=7.3.31`
+  - `PHP_URL=https://www.php.net/distributions/php-7.3.31.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.3.31.tar.xz.asc`
+  - `PHP_SHA256=d1aa8f44595d01ac061ff340354d95e146d6152f70e799b44d6b8654fb45cbcc`
   - `GOSU_VERSION=1.14`
   - `FRIENDICA_VERSION=2021.07`
   - `FRIENDICA_ADDONS=2021.07`
@@ -407,16 +407,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.78.0-r0 description:
+libcurl-7.79.1-r0 description:
 The multiprotocol file transfer library
 
-libcurl-7.78.0-r0 webpage:
+libcurl-7.79.1-r0 webpage:
 https://curl.se/
 
-libcurl-7.78.0-r0 installed size:
+libcurl-7.79.1-r0 installed size:
 500 KiB
 
-libcurl-7.78.0-r0 license:
+libcurl-7.79.1-r0 license:
 MIT
 
 ```
@@ -951,16 +951,16 @@ MIT
 ### `apk` package: `nettle`
 
 ```console
-nettle-3.7.2-r0 description:
+nettle-3.7.3-r0 description:
 A low-level cryptographic library
 
-nettle-3.7.2-r0 webpage:
+nettle-3.7.3-r0 webpage:
 https://www.lysator.liu.se/~nisse/nettle/
 
-nettle-3.7.2-r0 installed size:
+nettle-3.7.3-r0 installed size:
 564 KiB
 
-nettle-3.7.2-r0 license:
+nettle-3.7.3-r0 license:
 LGPL-2.0-or-later
 
 ```
