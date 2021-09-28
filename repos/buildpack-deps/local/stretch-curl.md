@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:053f9e3c6f00bd19f58db38a7f8aed5f0bc0ffcdf5903dd56611ea3c392e52af`
-- Created: `2021-09-03T06:36:16.034215631Z`
-- Virtual Size: ~ 132.52 Mb  
+- Image ID: `sha256:026f5a52486111dfd84569e20d902d7cb134f2239af648ee071cef3502b4a2f2`
+- Created: `2021-09-28T01:54:46.847751699Z`
+- Virtual Size: ~ 132.53 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["bash"]`
@@ -762,11 +762,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/gnupg2/2.1.18-8~deb9u4/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/gnupg2/2.1.18-8~deb9u4/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `gnutls28=3.5.8-5+deb9u5`
+### `dpkg` source package: `gnutls28=3.5.8-5+deb9u6`
 
 Binary Packages:
 
-- `libgnutls30:amd64=3.5.8-5+deb9u5`
+- `libgnutls30:amd64=3.5.8-5+deb9u6`
 
 Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 
@@ -783,18 +783,18 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris gnutls28=3.5.8-5+deb9u5
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.5.8-5+deb9u5.dsc' gnutls28_3.5.8-5+deb9u5.dsc 3286 SHA256:2645e4bf3186f864048d876cd944ef0eb15222f648994b4028497aa03a98328e
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.5.8.orig.tar.xz' gnutls28_3.5.8.orig.tar.xz 7264448 SHA256:0e97f243ae72b70307d684b84c7fe679385aa7a7a0e37e5be810193dcc17d4ff
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.5.8.orig.tar.xz.asc' gnutls28_3.5.8.orig.tar.xz.asc 287 SHA256:417da9db564a841128edb2dc2c98465a5749541f7d71492cb7c4905a0bfeac82
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.5.8-5+deb9u5.debian.tar.xz' gnutls28_3.5.8-5+deb9u5.debian.tar.xz 116684 SHA256:3b26b1c9eb7010e05a3293dd61db8788d5c7e2c206062e427cdcf14ccf29dc71
+$ apt-get source -qq --print-uris gnutls28=3.5.8-5+deb9u6
+'http://security.debian.org/debian-security/pool/updates/main/g/gnutls28/gnutls28_3.5.8-5+deb9u6.dsc' gnutls28_3.5.8-5+deb9u6.dsc 3286 SHA256:f75ec723596104d44040a8247c6a63d24074ca744a72d691b3e8070bc3552ce1
+'http://security.debian.org/debian-security/pool/updates/main/g/gnutls28/gnutls28_3.5.8.orig.tar.xz' gnutls28_3.5.8.orig.tar.xz 7264448 SHA256:0e97f243ae72b70307d684b84c7fe679385aa7a7a0e37e5be810193dcc17d4ff
+'http://security.debian.org/debian-security/pool/updates/main/g/gnutls28/gnutls28_3.5.8.orig.tar.xz.asc' gnutls28_3.5.8.orig.tar.xz.asc 287 SHA256:417da9db564a841128edb2dc2c98465a5749541f7d71492cb7c4905a0bfeac82
+'http://security.debian.org/debian-security/pool/updates/main/g/gnutls28/gnutls28_3.5.8-5+deb9u6.debian.tar.xz' gnutls28_3.5.8-5+deb9u6.debian.tar.xz 123548 SHA256:32f32ad65ea1516e0c6ddfc1241f5a49853284b943cb6fea11b1df85d7958127
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/gnutls28/3.5.8-5+deb9u5/ (for browsing the source)
-- https://sources.debian.net/src/gnutls28/3.5.8-5+deb9u5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gnutls28/3.5.8-5+deb9u5/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/gnutls28/3.5.8-5+deb9u6/ (for browsing the source)
+- https://sources.debian.net/src/gnutls28/3.5.8-5+deb9u6/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/gnutls28/3.5.8-5+deb9u6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `grep=2.27-2`
 
@@ -1608,12 +1608,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/netbase/5.4/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/netbase/5.4/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `nettle=3.3-1`
+### `dpkg` source package: `nettle=3.3-1+deb9u1`
 
 Binary Packages:
 
-- `libhogweed4:amd64=3.3-1+b2`
-- `libnettle6:amd64=3.3-1+b2`
+- `libhogweed4:amd64=3.3-1+deb9u1`
+- `libnettle6:amd64=3.3-1+deb9u1`
 
 Licenses: (parsed from: `/usr/share/doc/libhogweed4/copyright`, `/usr/share/doc/libnettle6/copyright`)
 
@@ -1632,17 +1632,17 @@ Licenses: (parsed from: `/usr/share/doc/libhogweed4/copyright`, `/usr/share/doc/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris nettle=3.3-1
-'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.3-1.dsc' nettle_3.3-1.dsc 2043 SHA256:3336bc6e8e5b1acad66afa97a05f934e4d758c614fd468d5650b5a38049f1161
-'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.3.orig.tar.gz' nettle_3.3.orig.tar.gz 1887927 SHA256:46942627d5d0ca11720fec18d81fc38f7ef837ea4197c1f630e71ce0d470b11e
-'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.3-1.debian.tar.xz' nettle_3.3-1.debian.tar.xz 19428 SHA256:42fef549318af6cfdf76336eb348501d09454a1d873a84f66440b9a791a0ff1b
+$ apt-get source -qq --print-uris nettle=3.3-1+deb9u1
+'http://security.debian.org/debian-security/pool/updates/main/n/nettle/nettle_3.3-1+deb9u1.dsc' nettle_3.3-1+deb9u1.dsc 2254 SHA256:9c261941a40543298849fb053aa8090a88127716b49f4977a0b6a4dbca64840f
+'http://security.debian.org/debian-security/pool/updates/main/n/nettle/nettle_3.3.orig.tar.gz' nettle_3.3.orig.tar.gz 1887927 SHA256:46942627d5d0ca11720fec18d81fc38f7ef837ea4197c1f630e71ce0d470b11e
+'http://security.debian.org/debian-security/pool/updates/main/n/nettle/nettle_3.3-1+deb9u1.debian.tar.xz' nettle_3.3-1+deb9u1.debian.tar.xz 22800 SHA256:0db3cb4a3b0a525f6048158672ed1a72a9c85a05ccad37eb3a7f3b8b113f06d4
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/nettle/3.3-1/ (for browsing the source)
-- https://sources.debian.net/src/nettle/3.3-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/nettle/3.3-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/nettle/3.3-1+deb9u1/ (for browsing the source)
+- https://sources.debian.net/src/nettle/3.3-1+deb9u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/nettle/3.3-1+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `nghttp2=1.18.1-1+deb9u1`
 
@@ -1729,30 +1729,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/openldap/2.4.44+dfsg-5+deb9u8/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/openldap/2.4.44+dfsg-5+deb9u8/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openssl1.0=1.0.2u-1~deb9u4`
+### `dpkg` source package: `openssl1.0=1.0.2u-1~deb9u5`
 
 Binary Packages:
 
-- `libssl1.0.2:amd64=1.0.2u-1~deb9u4`
-
-**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
-If source is available (seen below), check the contents of `debian/copyright` within it.
-
-
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
-
-The source package *may* still be available for download from:
-
-- http://snapshot.debian.org/package/openssl1.0/1.0.2u-1~deb9u4/
-
-
-### `dpkg` source package: `openssl=1.1.0l-1~deb9u3`
-
-Binary Packages:
-
-- `libssl1.1:amd64=1.1.0l-1~deb9u3`
-- `openssl=1.1.0l-1~deb9u3`
+- `libssl1.0.2:amd64=1.0.2u-1~deb9u5`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1761,18 +1742,44 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openssl=1.1.0l-1~deb9u3
-'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.0l-1~deb9u3.dsc' openssl_1.1.0l-1~deb9u3.dsc 2611 SHA256:c1669406f898cf604fd36a0e15142e80326c12206585527be20150e04b323e8a
-'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.0l.orig.tar.gz' openssl_1.1.0l.orig.tar.gz 5294857 SHA256:74a2f756c64fd7386a29184dc0344f4831192d61dc2481a93a4c5dd727f41148
-'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.0l.orig.tar.gz.asc' openssl_1.1.0l.orig.tar.gz.asc 488 SHA256:afc83de9f9f1ef5f79ab8a31bbdeb26f9ac9a07cfdab7628a773267d31f85e42
-'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.0l-1~deb9u3.debian.tar.xz' openssl_1.1.0l-1~deb9u3.debian.tar.xz 77112 SHA256:aa9f7f6b3bd71c70f72321ee421e3d69f1eaa2ef4d4cf7b9ea2d49d9908f7606
+$ apt-get source -qq --print-uris openssl1.0=1.0.2u-1~deb9u5
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl1.0/openssl1.0_1.0.2u-1~deb9u5.dsc' openssl1.0_1.0.2u-1~deb9u5.dsc 2304 SHA256:ab164c78087d0c10f08b84505e730f7373cb173189284f5ff43cb07dcdb01dac
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl1.0/openssl1.0_1.0.2u.orig.tar.gz' openssl1.0_1.0.2u.orig.tar.gz 5355412 SHA256:ecd0c6ffb493dd06707d38b14bb4d8c2288bb7033735606569d8f90f89669d16
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl1.0/openssl1.0_1.0.2u-1~deb9u5.debian.tar.xz' openssl1.0_1.0.2u-1~deb9u5.debian.tar.xz 100780 SHA256:5061bf13305a7bf9cf25d0abed7ed5062364acd4400a93706ef82a91c5dfc65f
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/openssl/1.1.0l-1~deb9u3/ (for browsing the source)
-- https://sources.debian.net/src/openssl/1.1.0l-1~deb9u3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openssl/1.1.0l-1~deb9u3/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/openssl1.0/1.0.2u-1~deb9u5/ (for browsing the source)
+- https://sources.debian.net/src/openssl1.0/1.0.2u-1~deb9u5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openssl1.0/1.0.2u-1~deb9u5/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `openssl=1.1.0l-1~deb9u4`
+
+Binary Packages:
+
+- `libssl1.1:amd64=1.1.0l-1~deb9u4`
+- `openssl=1.1.0l-1~deb9u4`
+
+**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
+If source is available (seen below), check the contents of `debian/copyright` within it.
+
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris openssl=1.1.0l-1~deb9u4
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.0l-1~deb9u4.dsc' openssl_1.1.0l-1~deb9u4.dsc 2770 SHA256:6f667abd5f63017eea44c0d9d97d944836f194033b65bcbeddca3846873f1122
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.0l.orig.tar.gz' openssl_1.1.0l.orig.tar.gz 5294857 SHA256:74a2f756c64fd7386a29184dc0344f4831192d61dc2481a93a4c5dd727f41148
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.0l.orig.tar.gz.asc' openssl_1.1.0l.orig.tar.gz.asc 488 SHA256:afc83de9f9f1ef5f79ab8a31bbdeb26f9ac9a07cfdab7628a773267d31f85e42
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.0l-1~deb9u4.debian.tar.xz' openssl_1.1.0l-1~deb9u4.debian.tar.xz 84092 SHA256:af0b4ee520d49f927fe0cde6f30775910b4a43e63e053720a58384840c62422c
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/openssl/1.1.0l-1~deb9u4/ (for browsing the source)
+- https://sources.debian.net/src/openssl/1.1.0l-1~deb9u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openssl/1.1.0l-1~deb9u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `p11-kit=0.23.3-2+deb9u1`
 
