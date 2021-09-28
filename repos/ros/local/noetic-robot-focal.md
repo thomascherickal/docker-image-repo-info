@@ -3529,9 +3529,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris nvidia-settings=470.57.01-0ubuntu0.20.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nvidia-settings/nvidia-settings_470.57.01-0ubuntu0.20.04.1.dsc' nvidia-settings_470.57.01-0ubuntu0.20.04.1.dsc 2502 SHA512:e933745a3900853d561807b119e35a9989bb73d71e15d81fa935b69965d2b67c26cc9cd7ed07da67a6b876895b0fd1c7cf9d2b3e0a067a9e7c597d29d21c969c
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nvidia-settings/nvidia-settings_470.57.01.orig.tar.bz2' nvidia-settings_470.57.01.orig.tar.bz2 1062269 SHA512:8c6c7b69e4c435318e409f274602f85ba746c90cf06ed261473e2de8b3a6da56e323b813546da31856075ef9dfa056d1f42cdb823a65d171b6500ee7d4cf5a56
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nvidia-settings/nvidia-settings_470.57.01-0ubuntu0.20.04.1.debian.tar.xz' nvidia-settings_470.57.01-0ubuntu0.20.04.1.debian.tar.xz 24528 SHA512:4079ee6f4faba178914f0433f949ce6d266120e5b95ced5950d8c4cac3ea948cbda0058f740d4ef58c64bc18276bab0413458579f527b18ee110bb63a5817ae4
+'http://security.ubuntu.com/ubuntu/pool/main/n/nvidia-settings/nvidia-settings_470.57.01-0ubuntu0.20.04.1.dsc' nvidia-settings_470.57.01-0ubuntu0.20.04.1.dsc 2502 SHA512:e933745a3900853d561807b119e35a9989bb73d71e15d81fa935b69965d2b67c26cc9cd7ed07da67a6b876895b0fd1c7cf9d2b3e0a067a9e7c597d29d21c969c
+'http://security.ubuntu.com/ubuntu/pool/main/n/nvidia-settings/nvidia-settings_470.57.01.orig.tar.bz2' nvidia-settings_470.57.01.orig.tar.bz2 1062269 SHA512:8c6c7b69e4c435318e409f274602f85ba746c90cf06ed261473e2de8b3a6da56e323b813546da31856075ef9dfa056d1f42cdb823a65d171b6500ee7d4cf5a56
+'http://security.ubuntu.com/ubuntu/pool/main/n/nvidia-settings/nvidia-settings_470.57.01-0ubuntu0.20.04.1.debian.tar.xz' nvidia-settings_470.57.01-0ubuntu0.20.04.1.debian.tar.xz 24528 SHA512:4079ee6f4faba178914f0433f949ce6d266120e5b95ced5950d8c4cac3ea948cbda0058f740d4ef58c64bc18276bab0413458579f527b18ee110bb63a5817ae4
 ```
 
 ### `dpkg` source package: `ocl-icd=2.2.11-1ubuntu1`
