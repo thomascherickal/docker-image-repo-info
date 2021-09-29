@@ -1,7 +1,7 @@
 ## `clojure:openjdk-18-tools-deps-1.10.3.967-alpine`
 
 ```console
-$ docker pull clojure@sha256:5e281e33da4c8249f8159c10f0f02fec01f79498f23e52f04c159f697949829c
+$ docker pull clojure@sha256:d0b755831da44e77205b830fd656da38c999991ec2c1fd8df176532370d5e474
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull clojure@sha256:5e281e33da4c8249f8159c10f0f02fec01f79498f23e52f04c1
 ### `clojure:openjdk-18-tools-deps-1.10.3.967-alpine` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:5dbf1b276f4a5818f9b215e45702ebfdab0f5ed44ae24f3d51fe0687bd955ff7
+$ docker pull clojure@sha256:5cb6a9849383b616bf93ef60d74e7f491fcd7fd82195d6285e2975113cbbbf54
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **218.4 MB (218395821 bytes)**  
+-	Total Size: **218.4 MB (218394842 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:76c8dff96edb782f60a449c506025c837158280656785368d395d50dc26eef60`
+-	Image ID: `sha256:2eeec8b96ebba02cd8c927bfe7658b54ade8d1c8472beac7306c41ebc640c0d6`
 -	Default Command: `["sh","-c","sleep 1 && exec clj"]`
 
 ```dockerfile
@@ -42,9 +42,9 @@ CMD ["jshell"]
 ENV CLOJURE_VERSION=1.10.3.967
 # Thu, 09 Sep 2021 19:35:46 GMT
 WORKDIR /tmp
-# Thu, 09 Sep 2021 19:35:50 GMT
-RUN apk add --update --no-cache curl bash make git && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "d1fba0cd0733b7cb66e47620845ecedfd757a9bf84e8b276fdb37ed9c272d3ae *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apk del curl
-# Thu, 09 Sep 2021 19:35:51 GMT
+# Wed, 29 Sep 2021 08:21:48 GMT
+RUN apk add --no-cache curl bash make git && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "d1fba0cd0733b7cb66e47620845ecedfd757a9bf84e8b276fdb37ed9c272d3ae *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && rm linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apk del curl
+# Wed, 29 Sep 2021 08:21:48 GMT
 CMD ["sh" "-c" "sleep 1 && exec clj"]
 ```
 
@@ -61,7 +61,7 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 		Last Modified: Fri, 27 Aug 2021 17:43:11 GMT  
 		Size: 188.7 MB (188699656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1a6cf05634f6ea527e0cb0619c9cc73689d0a2b3cf8c2f80d439aaee7d0488fb`  
-		Last Modified: Thu, 09 Sep 2021 19:52:02 GMT  
-		Size: 26.0 MB (25953302 bytes)  
+	-	`sha256:1b36b8654b5f8b2564e20073856e764ee1fd51196a75c9b66de8ff731675586a`  
+		Last Modified: Wed, 29 Sep 2021 08:42:51 GMT  
+		Size: 26.0 MB (25952323 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
