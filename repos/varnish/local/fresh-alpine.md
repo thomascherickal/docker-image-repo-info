@@ -4,7 +4,7 @@
 
 - Image ID: `sha256:e06069ce8403c82220fe4428f3f3fe113b6dd15e22b87f75f10ce86ee69d6db7`
 - Created: `2021-09-20T22:35:02.348795279Z`
-- Virtual Size: ~ 146.92 Mb  
+- Virtual Size: ~ 146.91 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/docker-varnish-entrypoint"]`
