@@ -1,19 +1,19 @@
-# `clojure:openjdk-11-lein-slim-buster`
+# `clojure:openjdk-18-slim-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:cdb268ab129e9a0afef1c4620da255cc473108cd17dda3d64ff305665e62f593`
-- Created: `2021-09-04T09:58:23.722635951Z`
-- Virtual Size: ~ 440.34 Mb  
+- Image ID: `sha256:31a4fb8a96f23efaf6d0027ad896f5fb4ce7c4af27b1f71acb95e5ab8f9c9659`
+- Created: `2021-09-29T08:09:23.639668043Z`
+- Virtual Size: ~ 419.39 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["lein","repl"]`
 - Environment:
-  - `PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/`
-  - `JAVA_HOME=/usr/local/openjdk-11`
+  - `PATH=/usr/local/openjdk-18/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/`
+  - `JAVA_HOME=/usr/local/openjdk-18`
   - `LANG=C.UTF-8`
-  - `JAVA_VERSION=11.0.12`
-  - `LEIN_VERSION=2.9.6`
+  - `JAVA_VERSION=18-ea+16`
+  - `LEIN_VERSION=2.9.7`
   - `LEIN_INSTALL=/usr/local/bin/`
   - `LEIN_ROOT=1`
 

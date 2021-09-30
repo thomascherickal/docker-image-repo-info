@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:74ee2d46280e1aca8d4e57e81d15e9217460b21a70134441e78703124f5baef3`
-- Created: `2021-09-09T19:22:45.111029277Z`
-- Virtual Size: ~ 561.64 Mb  
+- Image ID: `sha256:1522199e027e2af82dcefa7cbfa0eb325c79366a964c5d605b579cebe965a8a1`
+- Created: `2021-09-29T08:04:54.266844135Z`
+- Virtual Size: ~ 561.63 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["sh","-c","sleep 1 && exec clj"]`

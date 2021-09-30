@@ -1,19 +1,19 @@
-# `clojure:openjdk-17`
+# `clojure:openjdk-16`
 
 ## Docker Metadata
 
-- Image ID: `sha256:9a685364f153ad299ec663e1ed49e7f236d28756b8e50119ac465a6bf786e7dd`
-- Created: `2021-09-09T19:31:19.770102858Z`
-- Virtual Size: ~ 425.52 Mb  
+- Image ID: `sha256:806a50219ec893adff8f5d0aa4d644c148a5036221287b45250dd0d112b66d34`
+- Created: `2021-09-29T08:15:13.407616596Z`
+- Virtual Size: ~ 421.78 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["lein","repl"]`
 - Environment:
-  - `PATH=/usr/local/openjdk-17/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/`
-  - `JAVA_HOME=/usr/local/openjdk-17`
+  - `PATH=/usr/local/openjdk-16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/`
+  - `JAVA_HOME=/usr/local/openjdk-16`
   - `LANG=C.UTF-8`
-  - `JAVA_VERSION=17`
-  - `LEIN_VERSION=2.9.6`
+  - `JAVA_VERSION=16.0.2`
+  - `LEIN_VERSION=2.9.7`
   - `LEIN_INSTALL=/usr/local/bin/`
   - `LEIN_ROOT=1`
 

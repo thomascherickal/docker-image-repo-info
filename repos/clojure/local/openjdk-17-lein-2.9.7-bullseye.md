@@ -1,19 +1,19 @@
-# `clojure:openjdk-8`
+# `clojure:openjdk-17-bullseye`
 
 ## Docker Metadata
 
-- Image ID: `sha256:aa1d6df63e227b0ce9b94beba2a321448a87c583c87569edc8eb99f49d45c163`
-- Created: `2021-09-09T19:25:30.546075738Z`
-- Virtual Size: ~ 544.68 Mb  
+- Image ID: `sha256:de616962fa3c2cf32fc35f9d9d8e8c7b34651df679f32b40de049ccb6bc4b7a0`
+- Created: `2021-09-29T08:17:30.060359757Z`
+- Virtual Size: ~ 682.54 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["lein","repl"]`
 - Environment:
-  - `PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/`
-  - `JAVA_HOME=/usr/local/openjdk-8`
+  - `PATH=/usr/local/openjdk-17/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/`
+  - `JAVA_HOME=/usr/local/openjdk-17`
   - `LANG=C.UTF-8`
-  - `JAVA_VERSION=8u302`
-  - `LEIN_VERSION=2.9.6`
+  - `JAVA_VERSION=17`
+  - `LEIN_VERSION=2.9.7`
   - `LEIN_INSTALL=/usr/local/bin/`
   - `LEIN_ROOT=1`
 
@@ -280,6 +280,38 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/bash/5.1-2/ (for browsing the source)
 - https://sources.debian.net/src/bash/5.1-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/bash/5.1-2/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `binutils=2.35.2-2`
+
+Binary Packages:
+
+- `binutils=2.35.2-2`
+- `binutils-common:amd64=2.35.2-2`
+- `binutils-x86-64-linux-gnu=2.35.2-2`
+- `libbinutils:amd64=2.35.2-2`
+- `libctf-nobfd0:amd64=2.35.2-2`
+- `libctf0:amd64=2.35.2-2`
+
+Licenses: (parsed from: `/usr/share/doc/binutils/copyright`, `/usr/share/doc/binutils-common/copyright`, `/usr/share/doc/binutils-x86-64-linux-gnu/copyright`, `/usr/share/doc/libbinutils/copyright`, `/usr/share/doc/libctf-nobfd0/copyright`, `/usr/share/doc/libctf0/copyright`)
+
+- `GFDL`
+- `GPL`
+- `LGPL`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris binutils=2.35.2-2
+'http://deb.debian.org/debian/pool/main/b/binutils/binutils_2.35.2-2.dsc' binutils_2.35.2-2.dsc 11303 SHA256:6643177e54ce708b0aa347624018c2b9cf725aca6731142a48a655b12013a9d9
+'http://deb.debian.org/debian/pool/main/b/binutils/binutils_2.35.2.orig.tar.xz' binutils_2.35.2.orig.tar.xz 23514376 SHA256:2643d99d7aba8557319a4b018f6bcae58677fc9bc853d4c2cd2eb571867b75e7
+'http://deb.debian.org/debian/pool/main/b/binutils/binutils_2.35.2-2.debian.tar.xz' binutils_2.35.2-2.debian.tar.xz 101124 SHA256:96f56b4d5259be49ce4a2f27057892356f7b0aed499742cb8a07f9f62b10dcb5
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/binutils/2.35.2-2/ (for browsing the source)
+- https://sources.debian.net/src/binutils/2.35.2-2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/binutils/2.35.2-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `brotli=1.0.9-2`
 
