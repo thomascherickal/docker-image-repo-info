@@ -1,7 +1,7 @@
 ## `debian:stretch-backports`
 
 ```console
-$ docker pull debian@sha256:eb5f00585dd4082e107b2326c671ac0807eca84b9a5b40c8fabde0a20a8d7533
+$ docker pull debian@sha256:ef989162ab801d1c417549ed9ca33afbb33ec659adfb2d66653e748fb4ecb58d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -79,33 +79,33 @@ RUN echo 'deb http://deb.debian.org/debian stretch-backports main' > /etc/apt/so
 ### `debian:stretch-backports` - linux; arm variant v7
 
 ```console
-$ docker pull debian@sha256:c693f13cc7c44241e6d89a125af1ce7a6c685733080e5a633e4dc2cc9f76a717
+$ docker pull debian@sha256:09aaa236c72dab26b357ed6d0e409fec560f300b7480bd7dd83865ca5ddebb06
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **42.1 MB (42119808 bytes)**  
+-	Total Size: **42.1 MB (42119735 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:314d1dd4593a18da8c14d5d032a958c0560b705b1fd2ba11ab5e4f68fabd1cff`
+-	Image ID: `sha256:f69b0f6a2bf37c0d385bc03c78a2cd5b5473d510b1ba1283c387c81266d497b1`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Fri, 03 Sep 2021 01:04:44 GMT
-ADD file:f3526ca980237b2ca5289ca7a6c67760fc5726ce3c325de10f3f3111c1d4bdcd in / 
-# Fri, 03 Sep 2021 01:04:45 GMT
+# Thu, 30 Sep 2021 18:08:56 GMT
+ADD file:effbc465353f5199d8051d1de4db57a4630b13cee7af167ffe8bb92d6f21adf2 in / 
+# Thu, 30 Sep 2021 18:08:57 GMT
 CMD ["bash"]
-# Fri, 03 Sep 2021 01:05:00 GMT
+# Thu, 30 Sep 2021 18:09:11 GMT
 RUN echo 'deb http://deb.debian.org/debian stretch-backports main' > /etc/apt/sources.list.d/backports.list
 ```
 
 -	Layers:
-	-	`sha256:aba3565275cf0ab544dbd3d27fb468b4682c0273b64b5f3d8c8fe06ca3467237`  
-		Last Modified: Fri, 03 Sep 2021 01:21:57 GMT  
-		Size: 42.1 MB (42119584 bytes)  
+	-	`sha256:b3fe5664b6df9f22a16cf7e44f293e1a45ff5f90d666a258058705f3abe8f585`  
+		Last Modified: Thu, 30 Sep 2021 18:26:14 GMT  
+		Size: 42.1 MB (42119512 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a048ae64b06f482c94d265f6ec16563baa598e83c56ae233f3a9db1f1f1dd2db`  
-		Last Modified: Fri, 03 Sep 2021 01:22:17 GMT  
-		Size: 224.0 B  
+	-	`sha256:bbca02aae33d72371b14f7fa585dfb9039bfada2bf08d5ce89b196520fbc2d11`  
+		Last Modified: Thu, 30 Sep 2021 18:26:35 GMT  
+		Size: 223.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `debian:stretch-backports` - linux; arm64 variant v8
