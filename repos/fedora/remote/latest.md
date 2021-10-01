@@ -1,7 +1,7 @@
 ## `fedora:latest`
 
 ```console
-$ docker pull fedora@sha256:d18bc88f640bc3e88bbfacaff698c3e1e83cae649019657a3880881f2549a1d0
+$ docker pull fedora@sha256:6e6cab70e90475d15e376bb15a7596fb650ca853b89f8bb647c679658dfe1020
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -15,14 +15,14 @@ $ docker pull fedora@sha256:d18bc88f640bc3e88bbfacaff698c3e1e83cae649019657a3880
 ### `fedora:latest` - linux; amd64
 
 ```console
-$ docker pull fedora@sha256:22e172e14b1300ce473ca15a80c273676305ad6c7a57f0f8cb25816bfce8d196
+$ docker pull fedora@sha256:b1f95b4bf817417973513dff2fc70974f5f7792eb56506c8b992e49a98fe5c6d
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **65.0 MB (64977007 bytes)**  
+-	Total Size: **65.0 MB (64999360 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:dce66322d6472e195c624cd3bd0c6c13918c00d1022c653a95341491a1597f52`
+-	Image ID: `sha256:0e58495b280f3ace00dd8da68d5553753237b081f3ca4d894459c4924b279416`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
@@ -30,16 +30,16 @@ $ docker pull fedora@sha256:22e172e14b1300ce473ca15a80c273676305ad6c7a57f0f8cb25
 LABEL maintainer=Clement Verna <cverna@fedoraproject.org>
 # Thu, 01 Apr 2021 18:00:19 GMT
 ENV DISTTAG=f34container FGC=f34 FBR=f34
-# Fri, 23 Jul 2021 11:16:05 GMT
-ADD file:85d7f2d8e4f31d81b27b8e18dfc5687b5dabfaafdb2408a3059e120e4c15307b in / 
-# Fri, 23 Jul 2021 11:16:05 GMT
+# Fri, 01 Oct 2021 23:02:22 GMT
+ADD file:bb7421925b61afcef18e92afc61e098e418d857d13757d09f785ee426e2d1888 in / 
+# Fri, 01 Oct 2021 23:02:23 GMT
 CMD ["/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:b9705287bb9f570f26b64f7093ca441da3ef1922910775b9a9bfbf63205661cf`  
-		Last Modified: Fri, 23 Jul 2021 11:16:58 GMT  
-		Size: 65.0 MB (64977007 bytes)  
+	-	`sha256:70fb9965a23f2226fef622992fdf507b8333c61d68259766d4721cc4ba1e5dae`  
+		Last Modified: Fri, 01 Oct 2021 23:03:40 GMT  
+		Size: 65.0 MB (64999360 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `fedora:latest` - linux; arm variant v7
@@ -135,14 +135,14 @@ CMD ["/bin/bash"]
 ### `fedora:latest` - linux; s390x
 
 ```console
-$ docker pull fedora@sha256:856655f3bd7f2f8d9c73107f49de99f1752b3ad7e008b37657c54627972c8936
+$ docker pull fedora@sha256:8b4776425f4d3069aab2dcdb53809ef66b185e4f1613ed7e62e51c8fdfff781b
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **62.5 MB (62536233 bytes)**  
+-	Total Size: **62.5 MB (62548577 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e5f5b4acd0d225dfe7376e57d98f1fb2697129d01c23b78a2b9dff613e652609`
+-	Image ID: `sha256:2b0348488b0185dda161d41d3085f5224664534b298fa6cc513e69e0586710cd`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
@@ -150,14 +150,14 @@ $ docker pull fedora@sha256:856655f3bd7f2f8d9c73107f49de99f1752b3ad7e008b37657c5
 LABEL maintainer=Clement Verna <cverna@fedoraproject.org>
 # Fri, 23 Jul 2021 02:30:59 GMT
 ENV DISTTAG=f34container FGC=f34 FBR=f34
-# Fri, 23 Jul 2021 02:31:05 GMT
-ADD file:5011bdb3059844fb9754e811955a1924e9b0310bcaa3d47dcb079b3842f46ffd in / 
-# Fri, 23 Jul 2021 02:31:09 GMT
+# Fri, 01 Oct 2021 22:42:12 GMT
+ADD file:e84d9ebd7d1e95617829df96803ed9c13addf0d97ff92aa2e4e6d774b7c5b528 in / 
+# Fri, 01 Oct 2021 22:42:15 GMT
 CMD ["/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:abfd88677ea830c879e2b85ebf13935b6e06ffd4ee9870da8e7f25bc12250faf`  
-		Last Modified: Fri, 23 Jul 2021 02:32:07 GMT  
-		Size: 62.5 MB (62536233 bytes)  
+	-	`sha256:8c06e697a614d97c184fac440ab0114000c656af19e5052a13db1a80d54814bf`  
+		Last Modified: Fri, 01 Oct 2021 22:43:28 GMT  
+		Size: 62.5 MB (62548577 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
