@@ -1,7 +1,7 @@
 ## `friendica:fpm-alpine`
 
 ```console
-$ docker pull friendica@sha256:43dc6d244804478003fb55d856254e1fa6055dd91c98efbdeeed789dec50f81f
+$ docker pull friendica@sha256:2fe8542d6847db69b91a5274b7599dfa71a96df80401b5704f03b6a6bbadf613
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -185,14 +185,14 @@ CMD ["php-fpm"]
 ### `friendica:fpm-alpine` - linux; arm variant v6
 
 ```console
-$ docker pull friendica@sha256:0503d11554288b532d04d103f6b0034f376e25a26ba9bd8ce3cd6dbbe05d75c2
+$ docker pull friendica@sha256:aa8bc4413bba698b03a3636cb672c7da732e65f19195fcfded35c3006d2ef887
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **89.3 MB (89250176 bytes)**  
+-	Total Size: **92.7 MB (92693869 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b617c210d44bdc0d8046bfd763ad9d66e2924cd2b49b6eb0e9826a2aca1cfb12`
+-	Image ID: `sha256:5d00d999de03edda599e61977d12fa66eb9414e9b996d572853e251933090d66`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -261,23 +261,23 @@ RUN set -ex;         apk add --no-cache --virtual .build-deps         mariadb-cl
 RUN set -ex;     {         echo 'opcache.enable=1' ;         echo 'opcache.interned_strings_buffer=8';         echo 'opcache.max_accelerated_files=10000';         echo 'opcache.memory_consumption=128';         echo 'opcache.save_comments=1';         echo 'opcache.revalidte_freq=1';     } > /usr/local/etc/php/conf.d/opcache-recommended.ini;         {         echo sendmail_path = "/usr/bin/msmtp -t";     } > /usr/local/etc/php/conf.d/sendmail.ini;         echo 'apc.enable_cli=1' >> /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini;         echo 'memory_limit=512M' > /usr/local/etc/php/conf.d/memory-limit.ini;         mkdir /var/www/data;     chown -R www-data:root /var/www;     chmod -R g=u /var/www
 # Thu, 23 Sep 2021 23:58:50 GMT
 VOLUME [/var/www/html]
-# Thu, 23 Sep 2021 23:59:33 GMT
-ENV FRIENDICA_VERSION=2021.07
-# Thu, 23 Sep 2021 23:59:33 GMT
-ENV FRIENDICA_ADDONS=2021.07
-# Thu, 23 Sep 2021 23:59:33 GMT
-ENV FRIENDICA_DOWNLOAD_SHA256=d57ebb33ff733f0ad023ad63e8992d8f61cec06363b951d00f1452760eeeda12
-# Thu, 23 Sep 2021 23:59:34 GMT
-ENV FRIENDICA_DOWNLOAD_ADDONS_SHA256=9752046c5af1003338a668683b24476cfb3f8dfeaef466703492a0883581c790
-# Fri, 24 Sep 2021 00:00:00 GMT
+# Mon, 27 Sep 2021 19:49:32 GMT
+ENV FRIENDICA_VERSION=2021.09
+# Mon, 27 Sep 2021 19:49:32 GMT
+ENV FRIENDICA_ADDONS=2021.09
+# Mon, 04 Oct 2021 17:49:31 GMT
+ENV FRIENDICA_DOWNLOAD_SHA256=49cad34edf1b500b4623d0b92ba32265fe322aac9a3efb08fa234f600bfd817a
+# Mon, 04 Oct 2021 17:49:31 GMT
+ENV FRIENDICA_DOWNLOAD_ADDONS_SHA256=1910e732b3ca3fc35e57835f217746d6e1fbed1f76d8da1c989742ac2237090d
+# Mon, 04 Oct 2021 17:50:01 GMT
 RUN set -ex;      apk add --no-cache --virtual .fetch-deps             gnupg         ;             export GNUPGHOME="$(mktemp -d)";     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 08656443618E6567A39524083EE197EF3F9E4287;         curl -fsSL -o friendica-full-${FRIENDICA_VERSION}.tar.gz         "https://files.friendi.ca/friendica-full-${FRIENDICA_VERSION}.tar.gz";     curl -fsSL -o friendica-full-${FRIENDICA_VERSION}.tar.gz.asc         "https://files.friendi.ca/friendica-full-${FRIENDICA_VERSION}.tar.gz.asc";     gpg --batch --verify friendica-full-${FRIENDICA_VERSION}.tar.gz.asc friendica-full-${FRIENDICA_VERSION}.tar.gz;     echo "${FRIENDICA_DOWNLOAD_SHA256} *friendica-full-${FRIENDICA_VERSION}.tar.gz" | sha256sum -c;     tar -xzf friendica-full-${FRIENDICA_VERSION}.tar.gz -C /usr/src/;     rm friendica-full-${FRIENDICA_VERSION}.tar.gz friendica-full-${FRIENDICA_VERSION}.tar.gz.asc;     mv -f /usr/src/friendica-full-${FRIENDICA_VERSION}/ /usr/src/friendica;     chmod 777 /usr/src/friendica/view/smarty3;         curl -fsSL -o friendica-addons-${FRIENDICA_ADDONS}.tar.gz             "https://files.friendi.ca/friendica-addons-${FRIENDICA_ADDONS}.tar.gz";     curl -fsSL -o friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc             "https://files.friendi.ca/friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc";     gpg --batch --verify friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc friendica-addons-${FRIENDICA_ADDONS}.tar.gz;     echo "${FRIENDICA_DOWNLOAD_ADDONS_SHA256} *friendica-addons-${FRIENDICA_ADDONS}.tar.gz" | sha256sum -c;     mkdir -p /usr/src/friendica/proxy;     mkdir -p /usr/src/friendica/addon;     tar -xzf friendica-addons-${FRIENDICA_ADDONS}.tar.gz -C /usr/src/friendica/addon --strip-components=1;     rm friendica-addons-${FRIENDICA_ADDONS}.tar.gz friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc;         gpgconf --kill all;     rm -rf "$GNUPGHOME";         apk del .fetch-deps
-# Fri, 24 Sep 2021 00:00:03 GMT
+# Mon, 04 Oct 2021 17:50:03 GMT
 COPY multi:cbfaa339ea6c4ed31e965c80bb4049c4a72d30f14b76e709e7cc4820ce4ec776 in / 
-# Fri, 24 Sep 2021 00:00:04 GMT
+# Mon, 04 Oct 2021 17:50:04 GMT
 COPY multi:33c6df8ca48b360ac89b7ca8e8b370fe30a626687aacfad3b3c3d5c1924a5777 in /usr/src/friendica/config/ 
-# Fri, 24 Sep 2021 00:00:04 GMT
+# Mon, 04 Oct 2021 17:50:05 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Fri, 24 Sep 2021 00:00:05 GMT
+# Mon, 04 Oct 2021 17:50:05 GMT
 CMD ["php-fpm"]
 ```
 
@@ -338,30 +338,30 @@ CMD ["php-fpm"]
 		Last Modified: Fri, 24 Sep 2021 00:01:25 GMT  
 		Size: 576.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:269d29facf4eb5ba7b315365d8805ff9e297023071a09b8f6936b9f49bbff3a0`  
-		Last Modified: Fri, 24 Sep 2021 00:02:35 GMT  
-		Size: 46.2 MB (46158674 bytes)  
+	-	`sha256:e23cd4584cbb64da3e967d0c7a5fa47109517318274f9bc46b47a73874478fe6`  
+		Last Modified: Mon, 04 Oct 2021 17:51:25 GMT  
+		Size: 49.6 MB (49602364 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ac270b6a267aad9f06d58925abc307a2894d8392f2959208e9ec80249d2e4729`  
-		Last Modified: Fri, 24 Sep 2021 00:02:04 GMT  
+	-	`sha256:a450d1f40f880f66c2060e1bded04f6075ff58fc24b5854eaff562668951d354`  
+		Last Modified: Mon, 04 Oct 2021 17:50:51 GMT  
 		Size: 2.6 KB (2625 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c4a60b81d7670b90176791d7665a7563444b416b962277eca268f7d6114aa725`  
-		Last Modified: Fri, 24 Sep 2021 00:02:04 GMT  
-		Size: 1.1 KB (1141 bytes)  
+	-	`sha256:85e9540031532fa1841cd008e99536b1bab93ac2624dcf12c964ad6c1cc5fc9f`  
+		Last Modified: Mon, 04 Oct 2021 17:50:51 GMT  
+		Size: 1.1 KB (1144 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `friendica:fpm-alpine` - linux; arm variant v7
 
 ```console
-$ docker pull friendica@sha256:20bb447b60caf58e3a622e9761eb6940e17d7d6fa9ec68ebc905f1f09325f28c
+$ docker pull friendica@sha256:8ab58a9c84445d71a0c7fa242736bbf7f3880ba2aedc6675aec56f8022322dc6
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **87.3 MB (87297029 bytes)**  
+-	Total Size: **90.7 MB (90740749 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:42df672bbd40b61683b1b61bff2286c844eed53ab55a8093418306216c5b1777`
+-	Image ID: `sha256:96c8c5cb4399e3422018e58c4dabca8f4d384ca27c477741801a3e3602236140`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -430,23 +430,23 @@ RUN set -ex;         apk add --no-cache --virtual .build-deps         mariadb-cl
 RUN set -ex;     {         echo 'opcache.enable=1' ;         echo 'opcache.interned_strings_buffer=8';         echo 'opcache.max_accelerated_files=10000';         echo 'opcache.memory_consumption=128';         echo 'opcache.save_comments=1';         echo 'opcache.revalidte_freq=1';     } > /usr/local/etc/php/conf.d/opcache-recommended.ini;         {         echo sendmail_path = "/usr/bin/msmtp -t";     } > /usr/local/etc/php/conf.d/sendmail.ini;         echo 'apc.enable_cli=1' >> /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini;         echo 'memory_limit=512M' > /usr/local/etc/php/conf.d/memory-limit.ini;         mkdir /var/www/data;     chown -R www-data:root /var/www;     chmod -R g=u /var/www
 # Fri, 24 Sep 2021 05:59:46 GMT
 VOLUME [/var/www/html]
-# Fri, 24 Sep 2021 06:03:00 GMT
-ENV FRIENDICA_VERSION=2021.07
-# Fri, 24 Sep 2021 06:03:01 GMT
-ENV FRIENDICA_ADDONS=2021.07
-# Fri, 24 Sep 2021 06:03:01 GMT
-ENV FRIENDICA_DOWNLOAD_SHA256=d57ebb33ff733f0ad023ad63e8992d8f61cec06363b951d00f1452760eeeda12
-# Fri, 24 Sep 2021 06:03:02 GMT
-ENV FRIENDICA_DOWNLOAD_ADDONS_SHA256=9752046c5af1003338a668683b24476cfb3f8dfeaef466703492a0883581c790
-# Fri, 24 Sep 2021 06:03:33 GMT
+# Thu, 30 Sep 2021 18:40:11 GMT
+ENV FRIENDICA_VERSION=2021.09
+# Thu, 30 Sep 2021 18:40:12 GMT
+ENV FRIENDICA_ADDONS=2021.09
+# Mon, 04 Oct 2021 18:00:00 GMT
+ENV FRIENDICA_DOWNLOAD_SHA256=49cad34edf1b500b4623d0b92ba32265fe322aac9a3efb08fa234f600bfd817a
+# Mon, 04 Oct 2021 18:00:00 GMT
+ENV FRIENDICA_DOWNLOAD_ADDONS_SHA256=1910e732b3ca3fc35e57835f217746d6e1fbed1f76d8da1c989742ac2237090d
+# Mon, 04 Oct 2021 18:00:30 GMT
 RUN set -ex;      apk add --no-cache --virtual .fetch-deps             gnupg         ;             export GNUPGHOME="$(mktemp -d)";     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 08656443618E6567A39524083EE197EF3F9E4287;         curl -fsSL -o friendica-full-${FRIENDICA_VERSION}.tar.gz         "https://files.friendi.ca/friendica-full-${FRIENDICA_VERSION}.tar.gz";     curl -fsSL -o friendica-full-${FRIENDICA_VERSION}.tar.gz.asc         "https://files.friendi.ca/friendica-full-${FRIENDICA_VERSION}.tar.gz.asc";     gpg --batch --verify friendica-full-${FRIENDICA_VERSION}.tar.gz.asc friendica-full-${FRIENDICA_VERSION}.tar.gz;     echo "${FRIENDICA_DOWNLOAD_SHA256} *friendica-full-${FRIENDICA_VERSION}.tar.gz" | sha256sum -c;     tar -xzf friendica-full-${FRIENDICA_VERSION}.tar.gz -C /usr/src/;     rm friendica-full-${FRIENDICA_VERSION}.tar.gz friendica-full-${FRIENDICA_VERSION}.tar.gz.asc;     mv -f /usr/src/friendica-full-${FRIENDICA_VERSION}/ /usr/src/friendica;     chmod 777 /usr/src/friendica/view/smarty3;         curl -fsSL -o friendica-addons-${FRIENDICA_ADDONS}.tar.gz             "https://files.friendi.ca/friendica-addons-${FRIENDICA_ADDONS}.tar.gz";     curl -fsSL -o friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc             "https://files.friendi.ca/friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc";     gpg --batch --verify friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc friendica-addons-${FRIENDICA_ADDONS}.tar.gz;     echo "${FRIENDICA_DOWNLOAD_ADDONS_SHA256} *friendica-addons-${FRIENDICA_ADDONS}.tar.gz" | sha256sum -c;     mkdir -p /usr/src/friendica/proxy;     mkdir -p /usr/src/friendica/addon;     tar -xzf friendica-addons-${FRIENDICA_ADDONS}.tar.gz -C /usr/src/friendica/addon --strip-components=1;     rm friendica-addons-${FRIENDICA_ADDONS}.tar.gz friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc;         gpgconf --kill all;     rm -rf "$GNUPGHOME";         apk del .fetch-deps
-# Fri, 24 Sep 2021 06:03:35 GMT
+# Mon, 04 Oct 2021 18:00:33 GMT
 COPY multi:cbfaa339ea6c4ed31e965c80bb4049c4a72d30f14b76e709e7cc4820ce4ec776 in / 
-# Fri, 24 Sep 2021 06:03:36 GMT
+# Mon, 04 Oct 2021 18:00:34 GMT
 COPY multi:33c6df8ca48b360ac89b7ca8e8b370fe30a626687aacfad3b3c3d5c1924a5777 in /usr/src/friendica/config/ 
-# Fri, 24 Sep 2021 06:03:36 GMT
+# Mon, 04 Oct 2021 18:00:35 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Fri, 24 Sep 2021 06:03:37 GMT
+# Mon, 04 Oct 2021 18:00:35 GMT
 CMD ["php-fpm"]
 ```
 
@@ -507,30 +507,30 @@ CMD ["php-fpm"]
 		Last Modified: Fri, 24 Sep 2021 06:10:15 GMT  
 		Size: 575.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4e9e6002f75eec6c981cba6e30e335b3ccbf1c7f0a104601c483827db707f57c`  
-		Last Modified: Fri, 24 Sep 2021 06:13:15 GMT  
-		Size: 46.2 MB (46158664 bytes)  
+	-	`sha256:f9ff79a306ac0dba4e4d7ba9d26b2a7634c5db1ed32f8eba07e451d43c43efdd`  
+		Last Modified: Mon, 04 Oct 2021 18:05:08 GMT  
+		Size: 49.6 MB (49602381 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a43b9c42ed95d223156de924b9f73e6fccc3a290e7aba8e28a0a76e2645d88d2`  
-		Last Modified: Fri, 24 Sep 2021 06:12:45 GMT  
+	-	`sha256:7e85de6d7c64b5b58657119bc692c8305573a6986f6febd21a86e90fc1554cb7`  
+		Last Modified: Mon, 04 Oct 2021 18:04:35 GMT  
 		Size: 2.6 KB (2625 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ff10d6c0e1544492f1ec30361e5da58c56abb89c47c528724bc803a55f00fedd`  
-		Last Modified: Fri, 24 Sep 2021 06:12:45 GMT  
-		Size: 1.1 KB (1143 bytes)  
+	-	`sha256:9944df894af9c293978bf8f3fe968923d1e8a6f58806096c42345ddd02a93506`  
+		Last Modified: Mon, 04 Oct 2021 18:04:35 GMT  
+		Size: 1.1 KB (1146 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `friendica:fpm-alpine` - linux; arm64 variant v8
 
 ```console
-$ docker pull friendica@sha256:802d0d8221b43446b24db8ff48d5c4eab35bf7085a4045aea4429a8d8d138479
+$ docker pull friendica@sha256:673f38ac2d3b74e9662efa9c3590bd0063702ae9566a986fcf6ac637b45ea6ef
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **90.3 MB (90313432 bytes)**  
+-	Total Size: **93.8 MB (93757216 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:12a6740d4d47166aa6ac070d6473866a4f7bde369e76e989bcfdce2e2ac304bd`
+-	Image ID: `sha256:22c067315a40eaa81b0098bfa2a5c369179fc16659c30369e35da1b1b85b212f`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -599,23 +599,23 @@ RUN set -ex;         apk add --no-cache --virtual .build-deps         mariadb-cl
 RUN set -ex;     {         echo 'opcache.enable=1' ;         echo 'opcache.interned_strings_buffer=8';         echo 'opcache.max_accelerated_files=10000';         echo 'opcache.memory_consumption=128';         echo 'opcache.save_comments=1';         echo 'opcache.revalidte_freq=1';     } > /usr/local/etc/php/conf.d/opcache-recommended.ini;         {         echo sendmail_path = "/usr/bin/msmtp -t";     } > /usr/local/etc/php/conf.d/sendmail.ini;         echo 'apc.enable_cli=1' >> /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini;         echo 'memory_limit=512M' > /usr/local/etc/php/conf.d/memory-limit.ini;         mkdir /var/www/data;     chown -R www-data:root /var/www;     chmod -R g=u /var/www
 # Fri, 24 Sep 2021 04:29:41 GMT
 VOLUME [/var/www/html]
-# Fri, 24 Sep 2021 04:31:22 GMT
-ENV FRIENDICA_VERSION=2021.07
-# Fri, 24 Sep 2021 04:31:22 GMT
-ENV FRIENDICA_ADDONS=2021.07
-# Fri, 24 Sep 2021 04:31:23 GMT
-ENV FRIENDICA_DOWNLOAD_SHA256=d57ebb33ff733f0ad023ad63e8992d8f61cec06363b951d00f1452760eeeda12
-# Fri, 24 Sep 2021 04:31:23 GMT
-ENV FRIENDICA_DOWNLOAD_ADDONS_SHA256=9752046c5af1003338a668683b24476cfb3f8dfeaef466703492a0883581c790
-# Fri, 24 Sep 2021 04:31:39 GMT
+# Mon, 27 Sep 2021 19:41:40 GMT
+ENV FRIENDICA_VERSION=2021.09
+# Mon, 27 Sep 2021 19:41:40 GMT
+ENV FRIENDICA_ADDONS=2021.09
+# Mon, 04 Oct 2021 17:41:08 GMT
+ENV FRIENDICA_DOWNLOAD_SHA256=49cad34edf1b500b4623d0b92ba32265fe322aac9a3efb08fa234f600bfd817a
+# Mon, 04 Oct 2021 17:41:09 GMT
+ENV FRIENDICA_DOWNLOAD_ADDONS_SHA256=1910e732b3ca3fc35e57835f217746d6e1fbed1f76d8da1c989742ac2237090d
+# Mon, 04 Oct 2021 17:41:26 GMT
 RUN set -ex;      apk add --no-cache --virtual .fetch-deps             gnupg         ;             export GNUPGHOME="$(mktemp -d)";     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 08656443618E6567A39524083EE197EF3F9E4287;         curl -fsSL -o friendica-full-${FRIENDICA_VERSION}.tar.gz         "https://files.friendi.ca/friendica-full-${FRIENDICA_VERSION}.tar.gz";     curl -fsSL -o friendica-full-${FRIENDICA_VERSION}.tar.gz.asc         "https://files.friendi.ca/friendica-full-${FRIENDICA_VERSION}.tar.gz.asc";     gpg --batch --verify friendica-full-${FRIENDICA_VERSION}.tar.gz.asc friendica-full-${FRIENDICA_VERSION}.tar.gz;     echo "${FRIENDICA_DOWNLOAD_SHA256} *friendica-full-${FRIENDICA_VERSION}.tar.gz" | sha256sum -c;     tar -xzf friendica-full-${FRIENDICA_VERSION}.tar.gz -C /usr/src/;     rm friendica-full-${FRIENDICA_VERSION}.tar.gz friendica-full-${FRIENDICA_VERSION}.tar.gz.asc;     mv -f /usr/src/friendica-full-${FRIENDICA_VERSION}/ /usr/src/friendica;     chmod 777 /usr/src/friendica/view/smarty3;         curl -fsSL -o friendica-addons-${FRIENDICA_ADDONS}.tar.gz             "https://files.friendi.ca/friendica-addons-${FRIENDICA_ADDONS}.tar.gz";     curl -fsSL -o friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc             "https://files.friendi.ca/friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc";     gpg --batch --verify friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc friendica-addons-${FRIENDICA_ADDONS}.tar.gz;     echo "${FRIENDICA_DOWNLOAD_ADDONS_SHA256} *friendica-addons-${FRIENDICA_ADDONS}.tar.gz" | sha256sum -c;     mkdir -p /usr/src/friendica/proxy;     mkdir -p /usr/src/friendica/addon;     tar -xzf friendica-addons-${FRIENDICA_ADDONS}.tar.gz -C /usr/src/friendica/addon --strip-components=1;     rm friendica-addons-${FRIENDICA_ADDONS}.tar.gz friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc;         gpgconf --kill all;     rm -rf "$GNUPGHOME";         apk del .fetch-deps
-# Fri, 24 Sep 2021 04:31:41 GMT
+# Mon, 04 Oct 2021 17:41:27 GMT
 COPY multi:cbfaa339ea6c4ed31e965c80bb4049c4a72d30f14b76e709e7cc4820ce4ec776 in / 
-# Fri, 24 Sep 2021 04:31:41 GMT
+# Mon, 04 Oct 2021 17:41:27 GMT
 COPY multi:33c6df8ca48b360ac89b7ca8e8b370fe30a626687aacfad3b3c3d5c1924a5777 in /usr/src/friendica/config/ 
-# Fri, 24 Sep 2021 04:31:41 GMT
+# Mon, 04 Oct 2021 17:41:27 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Fri, 24 Sep 2021 04:31:42 GMT
+# Mon, 04 Oct 2021 17:41:28 GMT
 CMD ["php-fpm"]
 ```
 
@@ -676,17 +676,17 @@ CMD ["php-fpm"]
 		Last Modified: Fri, 24 Sep 2021 04:34:42 GMT  
 		Size: 570.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7b32957f758df690bd0434f026e953d1f3d1852f42d47d815023fded3357bb65`  
-		Last Modified: Fri, 24 Sep 2021 04:36:04 GMT  
-		Size: 46.2 MB (46158641 bytes)  
+	-	`sha256:78edd3bddbcb75fdfaa4cbd40883fccb7326f7ef36db00145fd379d8a5c8d3de`  
+		Last Modified: Mon, 04 Oct 2021 17:43:40 GMT  
+		Size: 49.6 MB (49602417 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7dd749cf9d8f214ef858ab08d7f170b89906091e0d219c924d5cfd4d72b3daa6`  
-		Last Modified: Fri, 24 Sep 2021 04:35:57 GMT  
-		Size: 2.6 KB (2625 bytes)  
+	-	`sha256:69db4e06459d3a58546dcba85243ca63766924d9aed7be69dbef642a9f1e3007`  
+		Last Modified: Mon, 04 Oct 2021 17:43:32 GMT  
+		Size: 2.6 KB (2626 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b952d341d9d128b739eaacb67e7deb0b00994563bcc9f4b1a038ae052370cf72`  
-		Last Modified: Fri, 24 Sep 2021 04:35:57 GMT  
-		Size: 1.1 KB (1140 bytes)  
+	-	`sha256:4662367f4307a5e3638d76090bab3ce49bd75e86156c5befca76a7038c42a61e`  
+		Last Modified: Mon, 04 Oct 2021 17:43:32 GMT  
+		Size: 1.1 KB (1147 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `friendica:fpm-alpine` - linux; 386
