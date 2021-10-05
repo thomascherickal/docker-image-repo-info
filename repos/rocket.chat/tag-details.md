@@ -164,7 +164,12 @@ CMD ["node" "main.js"]
 
 ## `rocket.chat:3.16.5`
 
-**does not exist** (yet?)
+```console
+$ docker pull rocket.chat@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `rocket.chat:3.17`
 
@@ -242,7 +247,12 @@ CMD ["node" "main.js"]
 
 ## `rocket.chat:3.17.3`
 
-**does not exist** (yet?)
+```console
+$ docker pull rocket.chat@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `rocket.chat:3.18`
 
@@ -320,19 +330,39 @@ CMD ["node" "main.js"]
 
 ## `rocket.chat:3.18.2`
 
-**does not exist** (yet?)
+```console
+$ docker pull rocket.chat@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `rocket.chat:4`
 
-**does not exist** (yet?)
+```console
+$ docker pull rocket.chat@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `rocket.chat:4.0`
 
-**does not exist** (yet?)
+```console
+$ docker pull rocket.chat@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `rocket.chat:4.0.0`
 
-**does not exist** (yet?)
+```console
+$ docker pull rocket.chat@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `rocket.chat:latest`
 
