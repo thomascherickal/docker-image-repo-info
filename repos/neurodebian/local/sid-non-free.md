@@ -1273,21 +1273,13 @@ Licenses: (parsed from: `/usr/share/doc/libseccomp2/copyright`)
 
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libseccomp=2.5.2-1
-'http://deb.debian.org/debian/pool/main/libs/libseccomp/libseccomp_2.5.2-1.dsc' libseccomp_2.5.2-1.dsc 2676 SHA256:c5499a530517a753eec838285d6812b46140ad05b2cc7c7522fe2d89069ab5be
-'http://deb.debian.org/debian/pool/main/libs/libseccomp/libseccomp_2.5.2.orig.tar.gz' libseccomp_2.5.2.orig.tar.gz 640305 SHA256:17a652dfb491d96be893960e9b791914936ee16c13b777a3caf562fe48cb87df
-'http://deb.debian.org/debian/pool/main/libs/libseccomp/libseccomp_2.5.2.orig.tar.gz.asc' libseccomp_2.5.2.orig.tar.gz.asc 833 SHA256:fad8440f5670296259288842d64c94d611dcdfc7707d52d4c249f4e810c6775d
-'http://deb.debian.org/debian/pool/main/libs/libseccomp/libseccomp_2.5.2-1.debian.tar.xz' libseccomp_2.5.2-1.debian.tar.xz 16084 SHA256:b953fdf7e11c2afa3efe1a34878724d8f10b0bd3904267a13720156a981366d0
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libseccomp/2.5.2-1/
 
-- https://sources.debian.net/src/libseccomp/2.5.2-1/ (for browsing the source)
-- https://sources.debian.net/src/libseccomp/2.5.2-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libseccomp/2.5.2-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libselinux=3.1-3`
 
@@ -2086,20 +2078,13 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=247.9-3
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_247.9-3.dsc' systemd_247.9-3.dsc 5167 SHA256:396695f0a3098f0c413d89a3a891c0946caed98962b1d967031e925a94c4d390
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_247.9.orig.tar.gz' systemd_247.9.orig.tar.gz 9915803 SHA256:629b8c895efa000b921092c7a565680c66dcd0ec74ed11cb2dd2b6701492675d
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_247.9-3.debian.tar.xz' systemd_247.9-3.debian.tar.xz 165288 SHA256:8964af42b2b1b1188ef4cd9572a9041a7aea234021770c2decb6ce27a36da6fe
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/systemd/247.9-3/
 
-- https://sources.debian.net/src/systemd/247.9-3/ (for browsing the source)
-- https://sources.debian.net/src/systemd/247.9-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/systemd/247.9-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sysvinit=3.00-1`
 
