@@ -1,4 +1,4 @@
-# `amazoncorretto:8-alpine-jre`
+# `amazoncorretto:8-alpine3.12-jre`
 
 ## Docker Metadata
 

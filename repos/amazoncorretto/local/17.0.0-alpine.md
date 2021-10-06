@@ -1,4 +1,4 @@
-# `amazoncorretto:17-alpine`
+# `amazoncorretto:17-alpine3.14`
 
 ## Docker Metadata
 
