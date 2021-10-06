@@ -1,7 +1,7 @@
 ## `python:3-slim-bullseye`
 
 ```console
-$ docker pull python@sha256:9741095abd64605407b8e0d9f53fdd0b8ca65affc5439708a092cf223926168e
+$ docker pull python@sha256:8b1597de572e7952a1efa163e6d809c4833cd47ee90769b36d4b990f530b6950
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -358,69 +358,69 @@ CMD ["python3"]
 ### `python:3-slim-bullseye` - linux; mips64le
 
 ```console
-$ docker pull python@sha256:7b0e17acfb045ecc47587a69ba686231cf688382905f2571093a20f8ffa306a3
+$ docker pull python@sha256:0a4225a3d6f6ba12c503a2bc2aef5d1bcb9eec5c6d38db2db25d7982099414e1
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **44.2 MB (44198847 bytes)**  
+-	Total Size: **44.9 MB (44928205 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ccb87919ba4f2630efaa08e3a0624c613cb395d240c60b0608c3e8329516ccc7`
+-	Image ID: `sha256:cf4f0960dc722ed3003127d2edc53de78b9cb62fc8a36577937075cac5225482`
 -	Default Command: `["python3"]`
 
 ```dockerfile
-# Fri, 03 Sep 2021 01:10:01 GMT
-ADD file:e842559443fb9351f1a9ac9ce03dfe0b069d8b9c3409f8d9b21abcbdc2a437c5 in / 
-# Fri, 03 Sep 2021 01:10:02 GMT
+# Tue, 28 Sep 2021 02:10:40 GMT
+ADD file:43593ef3d79c9b74a92e318d44aacb578f6f8d835dd72665e057bbfe73df1a93 in / 
+# Tue, 28 Sep 2021 02:10:41 GMT
 CMD ["bash"]
-# Fri, 03 Sep 2021 16:23:46 GMT
+# Wed, 06 Oct 2021 08:40:27 GMT
 ENV PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 03 Sep 2021 16:23:46 GMT
+# Wed, 06 Oct 2021 08:40:28 GMT
 ENV LANG=C.UTF-8
-# Fri, 03 Sep 2021 16:24:02 GMT
+# Wed, 06 Oct 2021 08:40:50 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		netbase 		tzdata 	; 	rm -rf /var/lib/apt/lists/*
-# Fri, 03 Sep 2021 19:26:20 GMT
-ENV GPG_KEY=E3FF2839C048B25C084DEBE9B26995E310250568
-# Fri, 03 Sep 2021 19:26:20 GMT
-ENV PYTHON_VERSION=3.9.7
-# Fri, 03 Sep 2021 20:13:45 GMT
+# Wed, 06 Oct 2021 08:40:50 GMT
+ENV GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D
+# Wed, 06 Oct 2021 08:40:51 GMT
+ENV PYTHON_VERSION=3.10.0
+# Wed, 06 Oct 2021 09:29:04 GMT
 RUN set -ex 		&& savedAptMark="$(apt-mark showmanual)" 	&& apt-get update && apt-get install -y --no-install-recommends 		dpkg-dev 		gcc 		libbluetooth-dev 		libbz2-dev 		libc6-dev 		libexpat1-dev 		libffi-dev 		libgdbm-dev 		liblzma-dev 		libncursesw5-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		make 		tk-dev 		uuid-dev 		wget 		xz-utils 		zlib1g-dev 		$(command -v gpg > /dev/null || echo 'gnupg dirmngr') 		&& wget -O python.tar.xz "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz" 	&& wget -O python.tar.xz.asc "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz.asc" 	&& export GNUPGHOME="$(mktemp -d)" 	&& gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys "$GPG_KEY" 	&& gpg --batch --verify python.tar.xz.asc python.tar.xz 	&& { command -v gpgconf > /dev/null && gpgconf --kill all || :; } 	&& rm -rf "$GNUPGHOME" python.tar.xz.asc 	&& mkdir -p /usr/src/python 	&& tar -xJC /usr/src/python --strip-components=1 -f python.tar.xz 	&& rm python.tar.xz 		&& cd /usr/src/python 	&& gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)" 	&& ./configure 		--build="$gnuArch" 		--enable-loadable-sqlite-extensions 		--enable-optimizations 		--enable-option-checking=fatal 		--enable-shared 		--with-system-expat 		--with-system-ffi 		--without-ensurepip 	&& make -j "$(nproc)" 		LDFLAGS="-Wl,--strip-all" 	&& make install 	&& rm -rf /usr/src/python 		&& find /usr/local -depth 		\( 			\( -type d -a \( -name test -o -name tests -o -name idle_test \) \) 			-o \( -type f -a \( -name '*.pyc' -o -name '*.pyo' -o -name '*.a' \) \) 		\) -exec rm -rf '{}' + 		&& ldconfig 		&& apt-mark auto '.*' > /dev/null 	&& apt-mark manual $savedAptMark 	&& find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	&& apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false 	&& rm -rf /var/lib/apt/lists/* 		&& python3 --version
-# Fri, 03 Sep 2021 20:13:47 GMT
+# Wed, 06 Oct 2021 09:29:06 GMT
 RUN cd /usr/local/bin 	&& ln -s idle3 idle 	&& ln -s pydoc3 pydoc 	&& ln -s python3 python 	&& ln -s python3-config python-config
-# Fri, 03 Sep 2021 20:13:47 GMT
+# Wed, 06 Oct 2021 09:29:06 GMT
 ENV PYTHON_PIP_VERSION=21.2.4
-# Wed, 08 Sep 2021 04:12:17 GMT
+# Wed, 06 Oct 2021 09:29:06 GMT
 ENV PYTHON_SETUPTOOLS_VERSION=57.5.0
-# Wed, 08 Sep 2021 04:12:18 GMT
-ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/c20b0cfd643cd4a19246ccf204e2997af70f6b21/public/get-pip.py
-# Wed, 08 Sep 2021 04:12:18 GMT
-ENV PYTHON_GET_PIP_SHA256=fa6f3fb93cce234cd4e8dd2beb54a51ab9c247653b52855a48dd44e6b21ff28b
-# Wed, 08 Sep 2021 04:13:03 GMT
+# Wed, 06 Oct 2021 09:29:07 GMT
+ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/d781367b97acf0ece7e9e304bf281e99b618bf10/public/get-pip.py
+# Wed, 06 Oct 2021 09:29:07 GMT
+ENV PYTHON_GET_PIP_SHA256=01249aa3e58ffb3e1686b7141b4e9aac4d398ef4ac3012ed9dff8dd9f685ffe0
+# Wed, 06 Oct 2021 09:29:52 GMT
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends wget; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum --check --strict -; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	pip --version; 		find /usr/local -depth 		\( 			\( -type d -a \( -name test -o -name tests -o -name idle_test \) \) 			-o 			\( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) 		\) -exec rm -rf '{}' +; 	rm -f get-pip.py
-# Wed, 08 Sep 2021 04:13:03 GMT
+# Wed, 06 Oct 2021 09:29:53 GMT
 CMD ["python3"]
 ```
 
 -	Layers:
-	-	`sha256:2320664dc3760d5d905a15eef2bf52da0cbab097fb4fc626c1f96722a2e2188c`  
-		Last Modified: Fri, 03 Sep 2021 01:18:25 GMT  
-		Size: 29.6 MB (29627416 bytes)  
+	-	`sha256:1f46ea49e27fccc580c8910db39ba7f51ae208a8d24d46a33140afa92ea3d955`  
+		Last Modified: Tue, 28 Sep 2021 02:20:45 GMT  
+		Size: 29.6 MB (29627871 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3df4768cadae5f31f2f4d8a5cd8defbf279d9a747a3c12082d600d00c6271f2a`  
-		Last Modified: Sat, 04 Sep 2021 05:25:27 GMT  
-		Size: 1.0 MB (1049225 bytes)  
+	-	`sha256:a5d8f546b21184b4143fc39a3e249336358bcbaa783dafde260e629e0792b3e8`  
+		Last Modified: Wed, 06 Oct 2021 16:30:37 GMT  
+		Size: 1.7 MB (1653092 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:707ef6dd9e177ceaf0cdccb2eaacb186dc71883d8acdf45353b240d7ad67ec58`  
-		Last Modified: Sat, 04 Sep 2021 05:27:19 GMT  
-		Size: 10.9 MB (10882021 bytes)  
+	-	`sha256:99ff3141bdc488988da52dfdb73a2a1e63fa7f8391270ab2f49ae8e459b260bb`  
+		Last Modified: Wed, 06 Oct 2021 16:30:43 GMT  
+		Size: 11.0 MB (11006751 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8d086af66217d01c1af283b72368101f32a73bc6448f83ccaf87a0a3dcf5fcf2`  
-		Last Modified: Sat, 04 Sep 2021 05:27:12 GMT  
-		Size: 232.0 B  
+	-	`sha256:5c54295e0ffd546f46258d942d2e613b05533058181cafa65be5f47643321826`  
+		Last Modified: Wed, 06 Oct 2021 16:30:35 GMT  
+		Size: 233.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:06a04ee7ef7ce3870b3d8f849e3b4f0e415b03d14f30b1d4caff6c5eb96b94ba`  
-		Last Modified: Wed, 08 Sep 2021 09:12:19 GMT  
-		Size: 2.6 MB (2639953 bytes)  
+	-	`sha256:3f9f88c74e8a3ca6a20f92dd7217dfce18c393e10be598d107fae4bfb29d228e`  
+		Last Modified: Wed, 06 Oct 2021 16:30:37 GMT  
+		Size: 2.6 MB (2640258 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `python:3-slim-bullseye` - linux; ppc64le
