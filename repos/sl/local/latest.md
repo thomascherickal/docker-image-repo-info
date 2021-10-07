@@ -2,16 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:50ae7e3f4545960ef6cc32ad7e9ee4b5f25e0531b502c6ee740dafad01425806`
-- Created: `2021-09-01T21:21:06.775401333Z`
-- Virtual Size: ~ 186.54 Mb  
+- Image ID: `sha256:5237b847a4d0762c437e744de80e30d1957583aae069b2e989307d8675710693`
+- Created: `2021-10-05T17:57:36.14026723Z`
+- Virtual Size: ~ 186.47 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
 - Labels:
-  - `build-date=20210901`
+  - `build-date=20211004`
   - `name=SL7 Base Image`
   - `vendor=Scientific Linux`
 
@@ -147,17 +147,17 @@ Enabling repos-source repository
 http://ftp.scientificlinux.org/linux/scientific/7/SRPMS//vendor/bzip2-1.0.6-13.el7.src.rpm
 ```
 
-### `rpm` package: `ca-certificates-2020.2.41-70.0.el7_8.noarch`
+### `rpm` package: `ca-certificates-2021.2.50-72.el7_9.noarch`
 
 Licenses (from `rpm --query`): Public Domain
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls ca-certificates-2020.2.41-70.0.el7_8.noarch
+$ yumdownloader --quiet --source --urls ca-certificates-2021.2.50-72.el7_9.noarch
 Enabling sl-source repository
 Enabling repos-source repository
-http://ftp.scientificlinux.org/linux/scientific/7/SRPMS//vendor/ca-certificates-2020.2.41-70.0.el7_8.src.rpm
+http://ftp.scientificlinux.org/linux/scientific/7/SRPMS//vendor/ca-certificates-2021.2.50-72.el7_9.src.rpm
 ```
 
 ### `rpm` package: `chkconfig-1.7.6-1.el7.x86_64`
