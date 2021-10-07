@@ -1919,14 +1919,9 @@ Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`)
 - `nagaysau-ishii`
 - `rijndael`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris postgresql-13=13.4-1.pgdg90+1
-'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-13/postgresql-13_13.4-1.pgdg90+1.dsc' postgresql-13_13.4-1.pgdg90+1.dsc 2618 SHA256:2b95e8b0f3af21ab006138fe10fffeb6ed9ad952b88bd759a49f2fe0b9aae955
-'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-13/postgresql-13_13.4.orig.tar.bz2' postgresql-13_13.4.orig.tar.bz2 21157443 SHA256:ea93e10390245f1ce461a54eb5f99a48d8cabd3a08ce4d652ec2169a357bc0cd
-'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-13/postgresql-13_13.4-1.pgdg90+1.debian.tar.xz' postgresql-13_13.4-1.pgdg90+1.debian.tar.xz 28052 SHA256:f06a94d7024a9495a4257087d55384be24a9b21bffa4096732fbd940bc9b07c1
-```
 
 ### `dpkg` source package: `postgresql-common=226.pgdg90+1`
 
@@ -1940,13 +1935,9 @@ Licenses: (parsed from: `/usr/share/doc/postgresql-client-common/copyright`, `/u
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris postgresql-common=226.pgdg90+1
-'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-common_226.pgdg90+1.dsc' postgresql-common_226.pgdg90+1.dsc 1583 SHA256:86a5cb0bff644fd8e03e6d37aac04fade5d0b553918bb57bc623089e2fa5ada8
-'http://apt.postgresql.org/pub/repos/apt/pool/main/p/postgresql-common/postgresql-common_226.pgdg90+1.tar.xz' postgresql-common_226.pgdg90+1.tar.xz 229024 SHA256:e0b779f90d05ca312db6f2a17ed57a1ca9c7dc82afa2a57a7ab76320c87eaa62
-```
 
 ### `dpkg` source package: `readline=7.0-3`
 
