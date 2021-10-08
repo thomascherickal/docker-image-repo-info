@@ -1,22 +1,22 @@
-# `python:3.9.7-slim-buster`
+# `python:3.10.0-slim-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:44f1963e8b48b336ec8da7c327c54af17133d7507c71dfc37bbe765e886d4007`
-- Created: `2021-09-28T18:59:40.000606865Z`
-- Virtual Size: ~ 116.50 Mb  
+- Image ID: `sha256:4095cf1f225bf46271518f0096cb561d506f65b58cfc02cbc44cf7c4388592f0`
+- Created: `2021-10-06T00:09:59.415463174Z`
+- Virtual Size: ~ 116.82 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["python3"]`
 - Environment:
   - `PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=C.UTF-8`
-  - `GPG_KEY=E3FF2839C048B25C084DEBE9B26995E310250568`
-  - `PYTHON_VERSION=3.9.7`
+  - `GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D`
+  - `PYTHON_VERSION=3.10.0`
   - `PYTHON_PIP_VERSION=21.2.4`
   - `PYTHON_SETUPTOOLS_VERSION=57.5.0`
-  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/c20b0cfd643cd4a19246ccf204e2997af70f6b21/public/get-pip.py`
-  - `PYTHON_GET_PIP_SHA256=fa6f3fb93cce234cd4e8dd2beb54a51ab9c247653b52855a48dd44e6b21ff28b`
+  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/d781367b97acf0ece7e9e304bf281e99b618bf10/public/get-pip.py`
+  - `PYTHON_GET_PIP_SHA256=01249aa3e58ffb3e1686b7141b4e9aac4d398ef4ac3012ed9dff8dd9f685ffe0`
 
 ## `dpkg` (`.deb`-based packages)
 
