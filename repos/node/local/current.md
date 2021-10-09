@@ -310,19 +310,13 @@ Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris base-files=10.3+deb10u10
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3+deb10u10.dsc' base-files_10.3+deb10u10.dsc 1107 SHA256:ebb4c3a480daeb828df9ad7785e7983759834b4afd56f948a6963f0716a1f4d7
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3+deb10u10.tar.xz' base-files_10.3+deb10u10.tar.xz 65428 SHA256:4184366300f9909f07935b668cef02c70f8856bd375eeb7d5eac149c6fb6a674
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/base-files/10.3+deb10u10/
 
-- https://sources.debian.net/src/base-files/10.3+deb10u10/ (for browsing the source)
-- https://sources.debian.net/src/base-files/10.3+deb10u10/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/base-files/10.3+deb10u10/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-passwd=3.5.46`
 
@@ -681,19 +675,13 @@ Licenses: (parsed from: `/usr/share/doc/debconf/copyright`)
 
 - `BSD-2-clause`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris debconf=1.5.71
-'http://deb.debian.org/debian/pool/main/d/debconf/debconf_1.5.71.dsc' debconf_1.5.71.dsc 2047 SHA256:18580a7817060c492048fac9fe0c859b1f5ca07538decfb32b182948a15cab79
-'http://deb.debian.org/debian/pool/main/d/debconf/debconf_1.5.71.tar.xz' debconf_1.5.71.tar.xz 571272 SHA256:dc23f44775be0d2f52f18eaff4d2d47ef62ae50333df1b737248c8a2635ce433
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/debconf/1.5.71/
 
-- https://sources.debian.net/src/debconf/1.5.71/ (for browsing the source)
-- https://sources.debian.net/src/debconf/1.5.71/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/debconf/1.5.71/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `debian-archive-keyring=2019.1+deb10u1`
 
@@ -3485,9 +3473,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris linux=4.19.194-3
-'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.194-3.dsc' linux_4.19.194-3.dsc 191615 SHA256:ab90d3cb8e28efac3cd5d847097e17c8062cbe949d6e5b1945954900fe2d6b40
-'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.194.orig.tar.xz' linux_4.19.194.orig.tar.xz 107577844 SHA256:a7c75fc0aed1077e0bc7acfb0a1d3f90898f5bebd9d7699943ba0bda8dcb586a
-'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.194-3.debian.tar.xz' linux_4.19.194-3.debian.tar.xz 3381624 SHA256:0cfb6d71d24881f1ef67ddc79a86dd2f5770019e5fa19220b7b399b2e26ac2ff
+'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.194-3.dsc' linux_4.19.194-3.dsc 191615 SHA256:ab90d3cb8e28efac3cd5d847097e17c8062cbe949d6e5b1945954900fe2d6b40
+'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.194.orig.tar.xz' linux_4.19.194.orig.tar.xz 107577844 SHA256:a7c75fc0aed1077e0bc7acfb0a1d3f90898f5bebd9d7699943ba0bda8dcb586a
+'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.194-3.debian.tar.xz' linux_4.19.194-3.debian.tar.xz 3381624 SHA256:0cfb6d71d24881f1ef67ddc79a86dd2f5770019e5fa19220b7b399b2e26ac2ff
 ```
 
 Other potentially useful URLs:
@@ -3656,21 +3644,13 @@ Licenses: (parsed from: `/usr/share/doc/libmariadb-dev/copyright`, `/usr/share/d
 - `unlimited-free-doc`
 - `zlib/libpng`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mariadb-10.3=1:10.3.29-0+deb10u1
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.29-0+deb10u1.dsc' mariadb-10.3_10.3.29-0+deb10u1.dsc 4812 SHA256:35bdde3bfa68570d85a4f0ecde276f885e5af5ab1c9877611f0b6fcc4fe776d6
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.29.orig.tar.gz' mariadb-10.3_10.3.29.orig.tar.gz 73261682 SHA256:304a9e94c50636b591ac7cbfe459cb341d345c4bd0ef5e45fb9a692268e6db38
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.29.orig.tar.gz.asc' mariadb-10.3_10.3.29.orig.tar.gz.asc 195 SHA256:a8589036d5099e1395d25d21545088f51c4f6ee54f2e930e36114dc0c6c74ec7
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-10.3_10.3.29-0+deb10u1.debian.tar.xz' mariadb-10.3_10.3.29-0+deb10u1.debian.tar.xz 221320 SHA256:2356baf372d5c1c8ca32735ee6e87af4512305b2fa016a42b811859e59bd08e7
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mariadb-10.3/1:10.3.29-0+deb10u1/
 
-- https://sources.debian.net/src/mariadb-10.3/1:10.3.29-0+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/mariadb-10.3/1:10.3.29-0+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mariadb-10.3/1:10.3.29-0+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mawk=1.3.3-17`
 
@@ -3939,10 +3919,10 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris nettle=3.4.1-1+deb10u1
-'http://security.debian.org/debian-security/pool/updates/main/n/nettle/nettle_3.4.1-1+deb10u1.dsc' nettle_3.4.1-1+deb10u1.dsc 2290 SHA256:b38c9a78ae0732a94d06dbc811479f6ee8357bd47604dfa92f0d0801b148eebc
-'http://security.debian.org/debian-security/pool/updates/main/n/nettle/nettle_3.4.1.orig.tar.gz' nettle_3.4.1.orig.tar.gz 1947053 SHA256:f941cf1535cd5d1819be5ccae5babef01f6db611f9b5a777bae9c7604b8a92ad
-'http://security.debian.org/debian-security/pool/updates/main/n/nettle/nettle_3.4.1.orig.tar.gz.asc' nettle_3.4.1.orig.tar.gz.asc 2476 SHA256:07b265366b46bc67950da3f34687235eaa85c45b326e42bb7c9b58830b651d28
-'http://security.debian.org/debian-security/pool/updates/main/n/nettle/nettle_3.4.1-1+deb10u1.debian.tar.xz' nettle_3.4.1-1+deb10u1.debian.tar.xz 26508 SHA256:b847de5ccd50b9bc0aa56dd7fe750c224683174676dde69c86f62bece52ff4ba
+'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.4.1-1+deb10u1.dsc' nettle_3.4.1-1+deb10u1.dsc 2290 SHA256:b38c9a78ae0732a94d06dbc811479f6ee8357bd47604dfa92f0d0801b148eebc
+'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.4.1.orig.tar.gz' nettle_3.4.1.orig.tar.gz 1947053 SHA256:f941cf1535cd5d1819be5ccae5babef01f6db611f9b5a777bae9c7604b8a92ad
+'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.4.1.orig.tar.gz.asc' nettle_3.4.1.orig.tar.gz.asc 2476 SHA256:07b265366b46bc67950da3f34687235eaa85c45b326e42bb7c9b58830b651d28
+'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.4.1-1+deb10u1.debian.tar.xz' nettle_3.4.1-1+deb10u1.debian.tar.xz 26508 SHA256:b847de5ccd50b9bc0aa56dd7fe750c224683174676dde69c86f62bece52ff4ba
 ```
 
 Other potentially useful URLs:
@@ -4169,10 +4149,10 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris openssl=1.1.1d-0+deb10u7
-'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1d-0+deb10u7.dsc' openssl_1.1.1d-0+deb10u7.dsc 2649 SHA256:1cb63c67aedf26f139124e4a9ec5d51fa036948df3964805070da7b816b14581
-'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1d.orig.tar.gz' openssl_1.1.1d.orig.tar.gz 8845861 SHA256:1e3a91bc1f9dfce01af26026f856e064eab4c8ee0a8f457b5ae30b40b8b711f2
-'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1d.orig.tar.gz.asc' openssl_1.1.1d.orig.tar.gz.asc 488 SHA256:f3fd3299a79421fffd51d35f62636b8e987dab1d3033d93a19d7685868e15395
-'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1d-0+deb10u7.debian.tar.xz' openssl_1.1.1d-0+deb10u7.debian.tar.xz 109236 SHA256:8a84cb76bf14a6725ee6b56d76335adadc639513d7c15b24b041fbb5f80cf053
+'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1d-0+deb10u7.dsc' openssl_1.1.1d-0+deb10u7.dsc 2649 SHA256:1cb63c67aedf26f139124e4a9ec5d51fa036948df3964805070da7b816b14581
+'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1d.orig.tar.gz' openssl_1.1.1d.orig.tar.gz 8845861 SHA256:1e3a91bc1f9dfce01af26026f856e064eab4c8ee0a8f457b5ae30b40b8b711f2
+'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1d.orig.tar.gz.asc' openssl_1.1.1d.orig.tar.gz.asc 488 SHA256:f3fd3299a79421fffd51d35f62636b8e987dab1d3033d93a19d7685868e15395
+'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1d-0+deb10u7.debian.tar.xz' openssl_1.1.1d-0+deb10u7.debian.tar.xz 109236 SHA256:8a84cb76bf14a6725ee6b56d76335adadc639513d7c15b24b041fbb5f80cf053
 ```
 
 Other potentially useful URLs:
@@ -4516,9 +4496,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris postgresql-11=11.12-0+deb10u1
-'http://deb.debian.org/debian/pool/main/p/postgresql-11/postgresql-11_11.12-0+deb10u1.dsc' postgresql-11_11.12-0+deb10u1.dsc 3745 SHA256:7c33b4631e3724ba947ae15bd63c995c12fc401fdd05645a33c4cd46bccb2c41
-'http://deb.debian.org/debian/pool/main/p/postgresql-11/postgresql-11_11.12.orig.tar.bz2' postgresql-11_11.12.orig.tar.bz2 20075485 SHA256:87f9d8b16b2b8ef71586f2ec76beac844819f64734b07fa33986755c2f53cb04
-'http://deb.debian.org/debian/pool/main/p/postgresql-11/postgresql-11_11.12-0+deb10u1.debian.tar.xz' postgresql-11_11.12-0+deb10u1.debian.tar.xz 27380 SHA256:14b775753a19adae79bf383b7feb06f0cb1e844ebbea295287f33e4d881b478d
+'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-11/postgresql-11_11.12-0+deb10u1.dsc' postgresql-11_11.12-0+deb10u1.dsc 3745 SHA256:7c33b4631e3724ba947ae15bd63c995c12fc401fdd05645a33c4cd46bccb2c41
+'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-11/postgresql-11_11.12.orig.tar.bz2' postgresql-11_11.12.orig.tar.bz2 20075485 SHA256:87f9d8b16b2b8ef71586f2ec76beac844819f64734b07fa33986755c2f53cb04
+'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-11/postgresql-11_11.12-0+deb10u1.debian.tar.xz' postgresql-11_11.12-0+deb10u1.debian.tar.xz 27380 SHA256:14b775753a19adae79bf383b7feb06f0cb1e844ebbea295287f33e4d881b478d
 ```
 
 Other potentially useful URLs:
@@ -4992,9 +4972,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris systemd=241-7~deb10u8
-'http://security.debian.org/debian-security/pool/updates/main/s/systemd/systemd_241-7~deb10u8.dsc' systemd_241-7~deb10u8.dsc 5101 SHA256:925ac30011dee81ab0e418f27515db2ddead0fa609b34eb7815cee7861c5a561
-'http://security.debian.org/debian-security/pool/updates/main/s/systemd/systemd_241.orig.tar.gz' systemd_241.orig.tar.gz 7640538 SHA256:b2561a8e1d10a2c248253f0dda31a85dd6d69f2b54177de55e02cd1d2778316e
-'http://security.debian.org/debian-security/pool/updates/main/s/systemd/systemd_241-7~deb10u8.debian.tar.xz' systemd_241-7~deb10u8.debian.tar.xz 182616 SHA256:6f5419d06f917a0565a55b9c9e7b9b55c094623a32b722f24431c20f7b48491b
+'http://deb.debian.org/debian/pool/main/s/systemd/systemd_241-7~deb10u8.dsc' systemd_241-7~deb10u8.dsc 5101 SHA256:925ac30011dee81ab0e418f27515db2ddead0fa609b34eb7815cee7861c5a561
+'http://deb.debian.org/debian/pool/main/s/systemd/systemd_241.orig.tar.gz' systemd_241.orig.tar.gz 7640538 SHA256:b2561a8e1d10a2c248253f0dda31a85dd6d69f2b54177de55e02cd1d2778316e
+'http://deb.debian.org/debian/pool/main/s/systemd/systemd_241-7~deb10u8.debian.tar.xz' systemd_241-7~deb10u8.debian.tar.xz 182616 SHA256:6f5419d06f917a0565a55b9c9e7b9b55c094623a32b722f24431c20f7b48491b
 ```
 
 Other potentially useful URLs:
@@ -5093,21 +5073,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2021a-0+deb10u1
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-0+deb10u1.dsc' tzdata_2021a-0+deb10u1.dsc 2264 SHA256:20a6a75635deee4fe082181054bf05ece20e5012991d84f74cfbb35719837e3e
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA256:39e7d2ba08c68cbaefc8de3227aab0dec2521be8042cf56855f7dc3a9fb14e08
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz.asc' tzdata_2021a.orig.tar.gz.asc 833 SHA256:9dc5f54674166f4ffbc2d4485e656227430ab5f39c9006e6ed9986281117f058
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-0+deb10u1.debian.tar.xz' tzdata_2021a-0+deb10u1.debian.tar.xz 106256 SHA256:92d3e7ae1d50f603f171cb87a5c91961c200e0c335c76527069ec95550fb0764
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2021a-0+deb10u1/
 
-- https://sources.debian.net/src/tzdata/2021a-0+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2021a-0+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2021a-0+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0038+nmu1`
 
