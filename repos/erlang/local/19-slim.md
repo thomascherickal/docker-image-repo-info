@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:07747caf85598dd185025a966cafa9cc04fa1845b8b700be178d1feaf637c9ca`
-- Created: `2021-09-28T06:41:50.884451126Z`
-- Virtual Size: ~ 896.16 Mb  
+- Image ID: `sha256:049d59ce94869ece070d524537714b237c194fede137729a931214f9eafc68e3`
+- Created: `2021-10-12T11:45:55.47167019Z`
+- Virtual Size: ~ 896.06 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["erl"]`
@@ -1414,26 +1414,33 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/keyutils/1.5.9-9/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/keyutils/1.5.9-9/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `krb5=1.15-1+deb9u2`
+### `dpkg` source package: `krb5=1.15-1+deb9u3`
 
 Binary Packages:
 
-- `libgssapi-krb5-2:amd64=1.15-1+deb9u2`
-- `libk5crypto3:amd64=1.15-1+deb9u2`
-- `libkrb5-3:amd64=1.15-1+deb9u2`
-- `libkrb5support0:amd64=1.15-1+deb9u2`
+- `libgssapi-krb5-2:amd64=1.15-1+deb9u3`
+- `libk5crypto3:amd64=1.15-1+deb9u3`
+- `libkrb5-3:amd64=1.15-1+deb9u3`
+- `libkrb5support0:amd64=1.15-1+deb9u3`
 
 Licenses: (parsed from: `/usr/share/doc/libgssapi-krb5-2/copyright`, `/usr/share/doc/libk5crypto3/copyright`, `/usr/share/doc/libkrb5-3/copyright`, `/usr/share/doc/libkrb5support0/copyright`)
 
 - `GPL-2`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris krb5=1.15-1+deb9u3
+'http://security.debian.org/debian-security/pool/updates/main/k/krb5/krb5_1.15-1+deb9u3.dsc' krb5_1.15-1+deb9u3.dsc 3456 SHA256:85a66bbb32f36fa4aa8a192b16c8106ed975dca87bcd4bd08bdd160d858309ef
+'http://security.debian.org/debian-security/pool/updates/main/k/krb5/krb5_1.15.orig.tar.gz' krb5_1.15.orig.tar.gz 9327157 SHA256:fd34752774c808ab4f6f864f935c49945f5a56b62240b1ad4ab1af7b4ded127c
+'http://security.debian.org/debian-security/pool/updates/main/k/krb5/krb5_1.15-1+deb9u3.debian.tar.xz' krb5_1.15-1+deb9u3.debian.tar.xz 150040 SHA256:7f36ff9d174926ce6b5ed0cc0370fc3d091d3170ffba6d5d9dfa6d6c0c239177
+```
 
-- http://snapshot.debian.org/package/krb5/1.15-1+deb9u2/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/krb5/1.15-1+deb9u3/ (for browsing the source)
+- https://sources.debian.net/src/krb5/1.15-1+deb9u3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/krb5/1.15-1+deb9u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libbsd=0.8.3-1+deb9u1`
 
@@ -2817,23 +2824,30 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/nettle/3.3-1+deb9u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/nettle/3.3-1+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openssl1.0=1.0.2u-1~deb9u5`
+### `dpkg` source package: `openssl1.0=1.0.2u-1~deb9u6`
 
 Binary Packages:
 
-- `libssl1.0.2:amd64=1.0.2u-1~deb9u5`
+- `libssl1.0.2:amd64=1.0.2u-1~deb9u6`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris openssl1.0=1.0.2u-1~deb9u6
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl1.0/openssl1.0_1.0.2u-1~deb9u6.dsc' openssl1.0_1.0.2u-1~deb9u6.dsc 2463 SHA256:123441fb6f023579eea7340f3888f3d3a117cba241c9c3e6aee61a314b3f231b
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl1.0/openssl1.0_1.0.2u.orig.tar.gz' openssl1.0_1.0.2u.orig.tar.gz 5355412 SHA256:ecd0c6ffb493dd06707d38b14bb4d8c2288bb7033735606569d8f90f89669d16
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl1.0/openssl1.0_1.0.2u-1~deb9u6.debian.tar.xz' openssl1.0_1.0.2u-1~deb9u6.debian.tar.xz 106552 SHA256:33e684cdc9ff398bc5cd46bb3a5afd2d8416fb70b672038f0135a15d63438255
+```
 
-- http://snapshot.debian.org/package/openssl1.0/1.0.2u-1~deb9u5/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/openssl1.0/1.0.2u-1~deb9u6/ (for browsing the source)
+- https://sources.debian.net/src/openssl1.0/1.0.2u-1~deb9u6/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openssl1.0/1.0.2u-1~deb9u6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `p11-kit=0.23.3-2+deb9u1`
 
@@ -3205,23 +3219,30 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tar/1.29b-1.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tar/1.29b-1.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tiff=4.0.8-2+deb9u6`
+### `dpkg` source package: `tiff=4.0.8-2+deb9u7`
 
 Binary Packages:
 
-- `libtiff5:amd64=4.0.8-2+deb9u6`
+- `libtiff5:amd64=4.0.8-2+deb9u7`
 
 Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`)
 
 - `Hylafax`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris tiff=4.0.8-2+deb9u7
+'http://security.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.0.8-2+deb9u7.dsc' tiff_4.0.8-2+deb9u7.dsc 2214 SHA256:b5be558cde48e31e02f020ee857c4c186f14ea6704bf51de05a58ca862e50023
+'http://security.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.0.8.orig.tar.gz' tiff_4.0.8.orig.tar.gz 2065574 SHA256:59d7a5a8ccd92059913f246877db95a2918e6c04fb9d43fd74e5c3390dac2910
+'http://security.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.0.8-2+deb9u7.debian.tar.xz' tiff_4.0.8-2+deb9u7.debian.tar.xz 38912 SHA256:792512a24e434bd349813bccf7443ef7da1e780bde2f6920eb789fb06825e166
+```
 
-- http://snapshot.debian.org/package/tiff/4.0.8-2+deb9u6/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/tiff/4.0.8-2+deb9u7/ (for browsing the source)
+- https://sources.debian.net/src/tiff/4.0.8-2+deb9u7/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tiff/4.0.8-2+deb9u7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tzdata=2021a-0+deb9u1`
 

@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:ec1cd43cba1c15afa9204bedb7cda1a2e31bbe72e6731a7a138cc35cacd14d0c`
-- Created: `2021-09-28T07:12:23.35955021Z`
-- Virtual Size: ~ 269.87 Mb  
+- Image ID: `sha256:3d6192cd9c50e00ed1d257406cc4829ce7683fd781a00b1bbdb79dc6f42044db`
+- Created: `2021-10-12T11:56:07.715563739Z`
+- Virtual Size: ~ 269.86 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["erl"]`
@@ -1274,23 +1274,30 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/nettle/3.3-1+deb9u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/nettle/3.3-1+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openssl1.0=1.0.2u-1~deb9u5`
+### `dpkg` source package: `openssl1.0=1.0.2u-1~deb9u6`
 
 Binary Packages:
 
-- `libssl1.0.2:amd64=1.0.2u-1~deb9u5`
+- `libssl1.0.2:amd64=1.0.2u-1~deb9u6`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris openssl1.0=1.0.2u-1~deb9u6
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl1.0/openssl1.0_1.0.2u-1~deb9u6.dsc' openssl1.0_1.0.2u-1~deb9u6.dsc 2463 SHA256:123441fb6f023579eea7340f3888f3d3a117cba241c9c3e6aee61a314b3f231b
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl1.0/openssl1.0_1.0.2u.orig.tar.gz' openssl1.0_1.0.2u.orig.tar.gz 5355412 SHA256:ecd0c6ffb493dd06707d38b14bb4d8c2288bb7033735606569d8f90f89669d16
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl1.0/openssl1.0_1.0.2u-1~deb9u6.debian.tar.xz' openssl1.0_1.0.2u-1~deb9u6.debian.tar.xz 106552 SHA256:33e684cdc9ff398bc5cd46bb3a5afd2d8416fb70b672038f0135a15d63438255
+```
 
-- http://snapshot.debian.org/package/openssl1.0/1.0.2u-1~deb9u5/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/openssl1.0/1.0.2u-1~deb9u6/ (for browsing the source)
+- https://sources.debian.net/src/openssl1.0/1.0.2u-1~deb9u6/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openssl1.0/1.0.2u-1~deb9u6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pam=1.1.8-3.6`
 
