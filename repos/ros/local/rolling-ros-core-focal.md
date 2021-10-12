@@ -4,7 +4,7 @@
 
 - Image ID: `sha256:1d61328b6b001f58935a0edf95acaf280caf479fc2d0374f5981e5ed5c6222d6`
 - Created: `2021-10-01T06:20:20.7029956Z`
-- Virtual Size: ~ 434.67 Mb  
+- Virtual Size: ~ 434.70 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/ros_entrypoint.sh"]`
