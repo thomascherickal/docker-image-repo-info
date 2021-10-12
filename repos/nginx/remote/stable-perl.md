@@ -1,7 +1,7 @@
 ## `nginx:stable-perl`
 
 ```console
-$ docker pull nginx@sha256:990be491200b18950ef33d35ecdefcf7191c97b20f76563defdb2df82f6b987f
+$ docker pull nginx@sha256:fef95f196f63aec025af3219d04d31e3801ab10a9ae7f6022327696851ca0770
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -164,73 +164,73 @@ CMD ["nginx" "-g" "daemon off;"]
 ### `nginx:stable-perl` - linux; arm variant v7
 
 ```console
-$ docker pull nginx@sha256:5eb9c4584a33240230f72ef2b9b1a32b35ea95dd78e4244c0fd28f7de038e9e2
+$ docker pull nginx@sha256:ee2b1f56cd65e6407716b7573ad3d032114ac6834028e4033765db290bc69aac
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **57.4 MB (57361247 bytes)**  
+-	Total Size: **57.4 MB (57354904 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c569481c37231a5de9819a83786e80607465644a6cadcd09b38698a3ddecadcf`
+-	Image ID: `sha256:32a9eaa92842ba084da5863c3c2dbe14edd60c0e234a6c316ffba96e3b1eac7a`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["nginx","-g","daemon off;"]`
 
 ```dockerfile
-# Thu, 30 Sep 2021 18:04:11 GMT
-ADD file:e71f315aa894d483f75b32109fff32974c43ce2e684cd28eb6492bc6fc450931 in / 
-# Thu, 30 Sep 2021 18:04:12 GMT
+# Tue, 12 Oct 2021 01:29:42 GMT
+ADD file:fe1eaa1b1d760b3d250cb4ac331d26a261fc569f1694bd34e146f00874dc87e5 in / 
+# Tue, 12 Oct 2021 01:29:43 GMT
 CMD ["bash"]
-# Fri, 01 Oct 2021 06:27:25 GMT
+# Tue, 12 Oct 2021 06:10:41 GMT
 LABEL maintainer=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Fri, 01 Oct 2021 06:46:06 GMT
+# Tue, 12 Oct 2021 06:29:29 GMT
 ENV NGINX_VERSION=1.20.1
-# Fri, 01 Oct 2021 06:46:06 GMT
+# Tue, 12 Oct 2021 06:29:29 GMT
 ENV NJS_VERSION=0.5.3
-# Fri, 01 Oct 2021 06:46:07 GMT
+# Tue, 12 Oct 2021 06:29:30 GMT
 ENV PKG_RELEASE=1~buster
-# Fri, 01 Oct 2021 07:03:48 GMT
+# Tue, 12 Oct 2021 06:47:01 GMT
 RUN set -x     && addgroup --system --gid 101 nginx     && adduser --system --disabled-login --ingroup nginx --no-create-home --home /nonexistent --gecos "nginx user" --shell /bin/false --uid 101 nginx     && apt-get update     && apt-get install --no-install-recommends --no-install-suggests -y gnupg1 ca-certificates     &&     NGINX_GPGKEY=573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62;     found='';     for server in         ha.pool.sks-keyservers.net         hkp://keyserver.ubuntu.com:80         hkp://p80.pool.sks-keyservers.net:80         pgp.mit.edu     ; do         echo "Fetching GPG key $NGINX_GPGKEY from $server";         apt-key adv --keyserver "$server" --keyserver-options timeout=10 --recv-keys "$NGINX_GPGKEY" && found=yes && break;     done;     test -z "$found" && echo >&2 "error: failed to fetch GPG key $NGINX_GPGKEY" && exit 1;     apt-get remove --purge --auto-remove -y gnupg1 && rm -rf /var/lib/apt/lists/*     && dpkgArch="$(dpkg --print-architecture)"     && nginxPackages="         nginx=${NGINX_VERSION}-${PKG_RELEASE}         nginx-module-xslt=${NGINX_VERSION}-${PKG_RELEASE}         nginx-module-geoip=${NGINX_VERSION}-${PKG_RELEASE}         nginx-module-image-filter=${NGINX_VERSION}-${PKG_RELEASE}         nginx-module-perl=${NGINX_VERSION}-${PKG_RELEASE}         nginx-module-njs=${NGINX_VERSION}+${NJS_VERSION}-${PKG_RELEASE}     "     && case "$dpkgArch" in         amd64|i386|arm64)             echo "deb https://nginx.org/packages/debian/ buster nginx" >> /etc/apt/sources.list.d/nginx.list             && apt-get update             ;;         *)             echo "deb-src https://nginx.org/packages/debian/ buster nginx" >> /etc/apt/sources.list.d/nginx.list                         && tempDir="$(mktemp -d)"             && chmod 777 "$tempDir"                         && savedAptMark="$(apt-mark showmanual)"                         && apt-get update             && apt-get build-dep -y $nginxPackages             && (                 cd "$tempDir"                 && DEB_BUILD_OPTIONS="nocheck parallel=$(nproc)"                     apt-get source --compile $nginxPackages             )                         && apt-mark showmanual | xargs apt-mark auto > /dev/null             && { [ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; }                         && ls -lAFh "$tempDir"             && ( cd "$tempDir" && dpkg-scanpackages . > Packages )             && grep '^Package: ' "$tempDir/Packages"             && echo "deb [ trusted=yes ] file://$tempDir ./" > /etc/apt/sources.list.d/temp.list             && apt-get -o Acquire::GzipIndexes=false update             ;;     esac         && apt-get install --no-install-recommends --no-install-suggests -y                         $nginxPackages                         gettext-base                         curl     && apt-get remove --purge --auto-remove -y && rm -rf /var/lib/apt/lists/* /etc/apt/sources.list.d/nginx.list         && if [ -n "$tempDir" ]; then         apt-get purge -y --auto-remove         && rm -rf "$tempDir" /etc/apt/sources.list.d/temp.list;     fi     && ln -sf /dev/stdout /var/log/nginx/access.log     && ln -sf /dev/stderr /var/log/nginx/error.log     && mkdir /docker-entrypoint.d
-# Fri, 01 Oct 2021 07:03:49 GMT
+# Tue, 12 Oct 2021 06:47:02 GMT
 COPY file:65504f71f5855ca017fb64d502ce873a31b2e0decd75297a8fb0a287f97acf92 in / 
-# Fri, 01 Oct 2021 07:03:49 GMT
+# Tue, 12 Oct 2021 06:47:03 GMT
 COPY file:0b866ff3fc1ef5b03c4e6c8c513ae014f691fb05d530257dfffd07035c1b75da in /docker-entrypoint.d 
-# Fri, 01 Oct 2021 07:03:50 GMT
+# Tue, 12 Oct 2021 06:47:04 GMT
 COPY file:0fd5fca330dcd6a7de297435e32af634f29f7132ed0550d342cad9fd20158258 in /docker-entrypoint.d 
-# Fri, 01 Oct 2021 07:03:50 GMT
+# Tue, 12 Oct 2021 06:47:04 GMT
 COPY file:09a214a3e07c919af2fb2d7c749ccbc446b8c10eb217366e5a65640ee9edcc25 in /docker-entrypoint.d 
-# Fri, 01 Oct 2021 07:03:51 GMT
+# Tue, 12 Oct 2021 06:47:05 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Fri, 01 Oct 2021 07:03:51 GMT
+# Tue, 12 Oct 2021 06:47:05 GMT
 EXPOSE 80
-# Fri, 01 Oct 2021 07:03:52 GMT
+# Tue, 12 Oct 2021 06:47:06 GMT
 STOPSIGNAL SIGQUIT
-# Fri, 01 Oct 2021 07:03:52 GMT
+# Tue, 12 Oct 2021 06:47:06 GMT
 CMD ["nginx" "-g" "daemon off;"]
 ```
 
 -	Layers:
-	-	`sha256:421f17c521234da0c5b07d4f6e44314149dc3790ef12134e85e61741452c9f96`  
-		Last Modified: Thu, 30 Sep 2021 18:20:50 GMT  
-		Size: 22.7 MB (22746246 bytes)  
+	-	`sha256:c0b5ba470cac8cfdae4633f5cddb3ba9350fe1d1b1507c4965a8224eb40e52c5`  
+		Last Modified: Tue, 12 Oct 2021 01:45:52 GMT  
+		Size: 22.7 MB (22739698 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fce5ce4aced8fb2342043e015d9c0ead3b885bc2b92a42d35f68409529f676ff`  
-		Last Modified: Fri, 01 Oct 2021 07:09:12 GMT  
-		Size: 34.6 MB (34611439 bytes)  
+	-	`sha256:e9cdb8168892949fde35cc30a5b84ac896304c629d76c346da17475a9f1c598e`  
+		Last Modified: Tue, 12 Oct 2021 06:52:24 GMT  
+		Size: 34.6 MB (34611648 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:98b727db8ab5c034a81b52034e9c5e1e20741db9aa84bcc8d42faabad46c128d`  
-		Last Modified: Fri, 01 Oct 2021 07:08:49 GMT  
-		Size: 603.0 B  
+	-	`sha256:95f40383a8b5b629a437f7ca1fc45bdec63fb6a55c66cba5397ba118ac4ac0b8`  
+		Last Modified: Tue, 12 Oct 2021 06:52:05 GMT  
+		Size: 601.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4ab7d0513bcce302ef60ff665db66d80c28103eb5c6cd42c718d6c4b6bfb3339`  
-		Last Modified: Fri, 01 Oct 2021 07:08:49 GMT  
+	-	`sha256:b9be0d1a57f4aa4c1d30c4a90f690ae49a00c5aa3687037b219a533a70a95b2a`  
+		Last Modified: Tue, 12 Oct 2021 06:52:05 GMT  
 		Size: 896.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a63634658a91ce410d438c672199e7abb050c8ff4f1a37eb49d867997ffe8795`  
-		Last Modified: Fri, 01 Oct 2021 07:08:49 GMT  
-		Size: 668.0 B  
+	-	`sha256:7894f34350596ff99c55893b46683249fc763beced4a5cf2af7e46aae28c6b3e`  
+		Last Modified: Tue, 12 Oct 2021 06:52:05 GMT  
+		Size: 666.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:16c2ebfb6710e4c2ca51880c9e9ae92bfd2168e6aed63ce055f7b18d58a29ca7`  
-		Last Modified: Fri, 01 Oct 2021 07:08:49 GMT  
+	-	`sha256:bea035d225970886657569827a4b8caf4813a6a24a00cccbdfa9d3cebd04fe53`  
+		Last Modified: Tue, 12 Oct 2021 06:52:05 GMT  
 		Size: 1.4 KB (1395 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -529,72 +529,72 @@ CMD ["nginx" "-g" "daemon off;"]
 ### `nginx:stable-perl` - linux; s390x
 
 ```console
-$ docker pull nginx@sha256:b6c1c9a773484f2f49cc8c95d09910605c2715869302596d474a13594113f0ed
+$ docker pull nginx@sha256:414ebc2499cf9228f014f3e958d7b6054ec737894466baa1280c8911c092d385
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **63.2 MB (63151407 bytes)**  
+-	Total Size: **63.1 MB (63144475 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:afbfb33aac4bfdc7781ba98bc488dcc1d1c43455bedd54ff29572fd004e5364a`
+-	Image ID: `sha256:a701973c97024c4611a3ad90a3fd305f86053f306e35ff608973c1e9867e73dc`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["nginx","-g","daemon off;"]`
 
 ```dockerfile
-# Tue, 28 Sep 2021 01:43:29 GMT
-ADD file:118e7a596407435b5e2ff0aae6bb9bff3b66000c91ca37bfe1eeb98c23d99d49 in / 
-# Tue, 28 Sep 2021 01:43:30 GMT
+# Tue, 12 Oct 2021 00:42:56 GMT
+ADD file:39da9acd4d06d69f3ca8d25ef5c097ae741972d6b15a6a057bc7487380157b61 in / 
+# Tue, 12 Oct 2021 00:42:57 GMT
 CMD ["bash"]
-# Tue, 28 Sep 2021 05:29:56 GMT
+# Tue, 12 Oct 2021 06:58:34 GMT
 LABEL maintainer=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Tue, 28 Sep 2021 05:35:32 GMT
+# Tue, 12 Oct 2021 07:04:38 GMT
 ENV NGINX_VERSION=1.20.1
-# Tue, 28 Sep 2021 05:35:32 GMT
+# Tue, 12 Oct 2021 07:04:38 GMT
 ENV NJS_VERSION=0.5.3
-# Tue, 28 Sep 2021 05:35:32 GMT
+# Tue, 12 Oct 2021 07:04:38 GMT
 ENV PKG_RELEASE=1~buster
-# Tue, 28 Sep 2021 05:40:16 GMT
+# Tue, 12 Oct 2021 07:09:44 GMT
 RUN set -x     && addgroup --system --gid 101 nginx     && adduser --system --disabled-login --ingroup nginx --no-create-home --home /nonexistent --gecos "nginx user" --shell /bin/false --uid 101 nginx     && apt-get update     && apt-get install --no-install-recommends --no-install-suggests -y gnupg1 ca-certificates     &&     NGINX_GPGKEY=573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62;     found='';     for server in         ha.pool.sks-keyservers.net         hkp://keyserver.ubuntu.com:80         hkp://p80.pool.sks-keyservers.net:80         pgp.mit.edu     ; do         echo "Fetching GPG key $NGINX_GPGKEY from $server";         apt-key adv --keyserver "$server" --keyserver-options timeout=10 --recv-keys "$NGINX_GPGKEY" && found=yes && break;     done;     test -z "$found" && echo >&2 "error: failed to fetch GPG key $NGINX_GPGKEY" && exit 1;     apt-get remove --purge --auto-remove -y gnupg1 && rm -rf /var/lib/apt/lists/*     && dpkgArch="$(dpkg --print-architecture)"     && nginxPackages="         nginx=${NGINX_VERSION}-${PKG_RELEASE}         nginx-module-xslt=${NGINX_VERSION}-${PKG_RELEASE}         nginx-module-geoip=${NGINX_VERSION}-${PKG_RELEASE}         nginx-module-image-filter=${NGINX_VERSION}-${PKG_RELEASE}         nginx-module-perl=${NGINX_VERSION}-${PKG_RELEASE}         nginx-module-njs=${NGINX_VERSION}+${NJS_VERSION}-${PKG_RELEASE}     "     && case "$dpkgArch" in         amd64|i386|arm64)             echo "deb https://nginx.org/packages/debian/ buster nginx" >> /etc/apt/sources.list.d/nginx.list             && apt-get update             ;;         *)             echo "deb-src https://nginx.org/packages/debian/ buster nginx" >> /etc/apt/sources.list.d/nginx.list                         && tempDir="$(mktemp -d)"             && chmod 777 "$tempDir"                         && savedAptMark="$(apt-mark showmanual)"                         && apt-get update             && apt-get build-dep -y $nginxPackages             && (                 cd "$tempDir"                 && DEB_BUILD_OPTIONS="nocheck parallel=$(nproc)"                     apt-get source --compile $nginxPackages             )                         && apt-mark showmanual | xargs apt-mark auto > /dev/null             && { [ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; }                         && ls -lAFh "$tempDir"             && ( cd "$tempDir" && dpkg-scanpackages . > Packages )             && grep '^Package: ' "$tempDir/Packages"             && echo "deb [ trusted=yes ] file://$tempDir ./" > /etc/apt/sources.list.d/temp.list             && apt-get -o Acquire::GzipIndexes=false update             ;;     esac         && apt-get install --no-install-recommends --no-install-suggests -y                         $nginxPackages                         gettext-base                         curl     && apt-get remove --purge --auto-remove -y && rm -rf /var/lib/apt/lists/* /etc/apt/sources.list.d/nginx.list         && if [ -n "$tempDir" ]; then         apt-get purge -y --auto-remove         && rm -rf "$tempDir" /etc/apt/sources.list.d/temp.list;     fi     && ln -sf /dev/stdout /var/log/nginx/access.log     && ln -sf /dev/stderr /var/log/nginx/error.log     && mkdir /docker-entrypoint.d
-# Tue, 28 Sep 2021 05:40:18 GMT
+# Tue, 12 Oct 2021 07:09:46 GMT
 COPY file:65504f71f5855ca017fb64d502ce873a31b2e0decd75297a8fb0a287f97acf92 in / 
-# Tue, 28 Sep 2021 05:40:18 GMT
+# Tue, 12 Oct 2021 07:09:46 GMT
 COPY file:0b866ff3fc1ef5b03c4e6c8c513ae014f691fb05d530257dfffd07035c1b75da in /docker-entrypoint.d 
-# Tue, 28 Sep 2021 05:40:18 GMT
+# Tue, 12 Oct 2021 07:09:46 GMT
 COPY file:0fd5fca330dcd6a7de297435e32af634f29f7132ed0550d342cad9fd20158258 in /docker-entrypoint.d 
-# Tue, 28 Sep 2021 05:40:18 GMT
+# Tue, 12 Oct 2021 07:09:46 GMT
 COPY file:09a214a3e07c919af2fb2d7c749ccbc446b8c10eb217366e5a65640ee9edcc25 in /docker-entrypoint.d 
-# Tue, 28 Sep 2021 05:40:19 GMT
+# Tue, 12 Oct 2021 07:09:47 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Tue, 28 Sep 2021 05:40:19 GMT
+# Tue, 12 Oct 2021 07:09:47 GMT
 EXPOSE 80
-# Tue, 28 Sep 2021 05:40:19 GMT
+# Tue, 12 Oct 2021 07:09:47 GMT
 STOPSIGNAL SIGQUIT
-# Tue, 28 Sep 2021 05:40:19 GMT
+# Tue, 12 Oct 2021 07:09:47 GMT
 CMD ["nginx" "-g" "daemon off;"]
 ```
 
 -	Layers:
-	-	`sha256:7cfe208f95c1b63305981b069795676fa149e7115b9044c241ee45ef4aaf0bb3`  
-		Last Modified: Tue, 28 Sep 2021 01:49:36 GMT  
-		Size: 25.8 MB (25760871 bytes)  
+	-	`sha256:78a640c6bb4733e5156ce97c5ec773cf97b357c3a07244348384da5060788a61`  
+		Last Modified: Tue, 12 Oct 2021 00:48:41 GMT  
+		Size: 25.8 MB (25754252 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0525414e2a4393bed9edfd9972f46da2816fbf644e40c1032ed4c076643e956f`  
-		Last Modified: Tue, 28 Sep 2021 05:42:36 GMT  
-		Size: 37.4 MB (37386977 bytes)  
+	-	`sha256:2d492abe775ddb43cb9433b060abbe81fbc55de3ad003aab1aad9a2cd4b8fc91`  
+		Last Modified: Tue, 12 Oct 2021 07:12:13 GMT  
+		Size: 37.4 MB (37386669 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:82c9f7d70dad3f4b0f89d06bd77e0156c4f3660aaa99c3f883b5635bfd848c7a`  
-		Last Modified: Tue, 28 Sep 2021 05:42:31 GMT  
-		Size: 603.0 B  
+	-	`sha256:3fbdb2ded7afde13a79748dea44872ec7e762c792d8de522bef6163a51c063a0`  
+		Last Modified: Tue, 12 Oct 2021 07:12:03 GMT  
+		Size: 599.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6d88e405ccf93c0307f31c8d905f7578c55313c30eaa24abb6d731d3b30fd0ce`  
-		Last Modified: Tue, 28 Sep 2021 05:42:31 GMT  
-		Size: 895.0 B  
+	-	`sha256:98af02ef3569f5aad8df2c0e3ac4b07f5d98c4b23225c4986211388de0ce1360`  
+		Last Modified: Tue, 12 Oct 2021 07:12:03 GMT  
+		Size: 896.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5d660d706ee2d84c08749a14e59f254b80891e079f81b95099d8c71d57e9ad22`  
-		Last Modified: Tue, 28 Sep 2021 05:42:31 GMT  
+	-	`sha256:362bf7c6a3923a81562965ee020442c2f12ab216c2cd822364f8a11c9dc96028`  
+		Last Modified: Tue, 12 Oct 2021 07:12:03 GMT  
 		Size: 666.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:820bef0474bf44266fea886237382ad362d4c1bc4d78e78defb97179c2924957`  
-		Last Modified: Tue, 28 Sep 2021 05:42:31 GMT  
-		Size: 1.4 KB (1395 bytes)  
+	-	`sha256:fb938982eb41b38f4b321d73dc4a9d30ea2e9892867f978a2239b1b205937292`  
+		Last Modified: Tue, 12 Oct 2021 07:12:03 GMT  
+		Size: 1.4 KB (1393 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
