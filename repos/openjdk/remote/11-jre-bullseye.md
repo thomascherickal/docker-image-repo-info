@@ -1,7 +1,7 @@
 ## `openjdk:11-jre-bullseye`
 
 ```console
-$ docker pull openjdk@sha256:9cc3fe26f8b9d4108d685534530e502e5b6f9e4a0210d1fec07ea3149ea19a82
+$ docker pull openjdk@sha256:93115360d184ec1d90a1c93ca0855fe584fe7ce3490c58f33c40cbe0f1ac722c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -76,14 +76,14 @@ RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64')
 ### `openjdk:11-jre-bullseye` - linux; arm64 variant v8
 
 ```console
-$ docker pull openjdk@sha256:dbe48ca73f41fe98d7bcc27347afb7cb4fed227170d26992af6c8b5721cfb849
+$ docker pull openjdk@sha256:4df7726a686ef97ea3d8991bdc9f07561af22185de3a022c7485e7084e61376d
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **121.2 MB (121191747 bytes)**  
+-	Total Size: **121.2 MB (121191201 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:cd381a83a28bbbeaa63883d74186f0ca3e258ddf5974a6660c5defc1327f7c49`
+-	Image ID: `sha256:525e9e368f218c01b36b40d50ee1497fa5acf1583062f4d66572ea7be8e122be`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -95,19 +95,19 @@ CMD ["bash"]
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
 # Tue, 12 Oct 2021 02:10:12 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Tue, 12 Oct 2021 05:21:13 GMT
+# Wed, 13 Oct 2021 06:11:29 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		bzip2 		unzip 		xz-utils 				fontconfig libfreetype6 				ca-certificates p11-kit 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 12 Oct 2021 05:21:13 GMT
+# Wed, 13 Oct 2021 06:11:30 GMT
 ENV JAVA_HOME=/usr/local/openjdk-11
-# Tue, 12 Oct 2021 05:21:14 GMT
+# Wed, 13 Oct 2021 06:11:31 GMT
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ] # backwards compatibility
-# Tue, 12 Oct 2021 05:21:14 GMT
+# Wed, 13 Oct 2021 06:11:32 GMT
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 12 Oct 2021 05:21:14 GMT
+# Wed, 13 Oct 2021 06:11:33 GMT
 ENV LANG=C.UTF-8
-# Tue, 12 Oct 2021 05:21:14 GMT
+# Wed, 13 Oct 2021 06:11:34 GMT
 ENV JAVA_VERSION=11.0.12
-# Tue, 12 Oct 2021 05:21:21 GMT
+# Wed, 13 Oct 2021 06:11:41 GMT
 RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.12%2B7/OpenJDK11U-jre_x64_linux_11.0.12_7.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.12%2B7/OpenJDK11U-jre_aarch64_linux_11.0.12_7.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		java --version
 ```
 
@@ -124,15 +124,15 @@ RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64')
 		Last Modified: Tue, 12 Oct 2021 02:18:53 GMT  
 		Size: 10.9 MB (10872848 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f2f91c910f7c35a9f3ce31a887046c607592a872bc50e6b86f8599bf4caee36a`  
-		Last Modified: Tue, 12 Oct 2021 05:46:03 GMT  
-		Size: 5.6 MB (5647404 bytes)  
+	-	`sha256:685e801adad0b6a144db48e53949b8f0c2e7eb8cd8e802e8e667ccfe21d8df8d`  
+		Last Modified: Wed, 13 Oct 2021 06:41:02 GMT  
+		Size: 5.6 MB (5647116 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:236fe75554c533f8a4da59120976a79c34a31a1ccaa197456ef570241a3856e9`  
-		Last Modified: Tue, 12 Oct 2021 05:46:02 GMT  
-		Size: 211.0 B  
+	-	`sha256:afcb5c4bb6a744f5bc0b0da7fe0a235b50bf7a358ebba0d09048976f8552b68f`  
+		Last Modified: Wed, 13 Oct 2021 06:41:01 GMT  
+		Size: 213.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:41431f6a96bca3fe631883fcb07b2f907dc5e83e5a5a3dbc540d8463e3bcd9a7`  
-		Last Modified: Tue, 12 Oct 2021 05:46:09 GMT  
-		Size: 45.9 MB (45925538 bytes)  
+	-	`sha256:33f420e94ad080c512407bfa2bde2c8362b24753c4274421a27aed3cb8f1ed7d`  
+		Last Modified: Wed, 13 Oct 2021 06:41:08 GMT  
+		Size: 45.9 MB (45925278 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
