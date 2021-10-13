@@ -1,7 +1,7 @@
 ## `hylang:alpine3.13`
 
 ```console
-$ docker pull hylang@sha256:3123799b7e609274cc9d1cce1eb8aecba42f57b0a221086c88fa1d9c378f50b5
+$ docker pull hylang@sha256:df001fdf30629fee18f2b1218318bc8253da68488cabcfc1ea3e921e2b348247
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -251,14 +251,14 @@ CMD ["hy"]
 ### `hylang:alpine3.13` - linux; arm64 variant v8
 
 ```console
-$ docker pull hylang@sha256:b50c6bf1c20029134da62624b5fec56e78ae6a55546f146ba6ed0b02292a46e5
+$ docker pull hylang@sha256:a4eb1ec4e25400ca58b838df34bef696c0a4d67fda0063cd49dba2ad4389a3da
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **20.7 MB (20670814 bytes)**  
+-	Total Size: **20.7 MB (20669758 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:04d6d3c700a049b04d953aca5bedcb30810db3708cc72337859f529a3c92d425`
+-	Image ID: `sha256:6437793cfb5ebac4349c28edd16e1dc5f5c07c09e8f33bfb559358b9a830561d`
 -	Default Command: `["hy"]`
 
 ```dockerfile
@@ -292,11 +292,11 @@ ENV PYTHON_GET_PIP_SHA256=01249aa3e58ffb3e1686b7141b4e9aac4d398ef4ac3012ed9dff8d
 RUN set -ex; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	pip --version; 		find /usr/local -depth 		\( 			\( -type d -a \( -name test -o -name tests -o -name idle_test \) \) 			-o 			\( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) 		\) -exec rm -rf '{}' +; 	rm -f get-pip.py
 # Wed, 06 Oct 2021 00:38:38 GMT
 CMD ["python3"]
-# Wed, 06 Oct 2021 21:08:09 GMT
+# Wed, 13 Oct 2021 16:55:53 GMT
 ENV HY_VERSION=1.0a3
-# Wed, 06 Oct 2021 21:08:14 GMT
+# Wed, 13 Oct 2021 16:55:58 GMT
 RUN pip install --no-cache-dir "hy == $HY_VERSION"
-# Wed, 06 Oct 2021 21:08:15 GMT
+# Wed, 13 Oct 2021 16:55:59 GMT
 CMD ["hy"]
 ```
 
@@ -321,9 +321,9 @@ CMD ["hy"]
 		Last Modified: Wed, 06 Oct 2021 00:50:31 GMT  
 		Size: 2.3 MB (2348984 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6fcf5cc8fad280b302141e1ae739488f9a5e3b4358a7b2d72ec5f27c9d2ffd3c`  
-		Last Modified: Wed, 06 Oct 2021 21:13:53 GMT  
-		Size: 3.3 MB (3264694 bytes)  
+	-	`sha256:417c18e29617230b424f8854c7a52255df5c763e0da0652a7658e1560bd2288b`  
+		Last Modified: Wed, 13 Oct 2021 17:02:58 GMT  
+		Size: 3.3 MB (3263638 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `hylang:alpine3.13` - linux; 386
