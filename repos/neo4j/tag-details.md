@@ -173,6 +173,9 @@
 -	[`neo4j:4.3.5`](#neo4j435)
 -	[`neo4j:4.3.5-community`](#neo4j435-community)
 -	[`neo4j:4.3.5-enterprise`](#neo4j435-enterprise)
+-	[`neo4j:4.3.6`](#neo4j436)
+-	[`neo4j:4.3.6-community`](#neo4j436-community)
+-	[`neo4j:4.3.6-enterprise`](#neo4j436-enterprise)
 -	[`neo4j:community`](#neo4jcommunity)
 -	[`neo4j:enterprise`](#neo4jenterprise)
 -	[`neo4j:latest`](#neo4jlatest)
@@ -18863,6 +18866,18 @@ CMD ["neo4j"]
 		Last Modified: Wed, 13 Oct 2021 11:38:32 GMT  
 		Size: 6.4 KB (6428 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `neo4j:4.3.6`
+
+**does not exist** (yet?)
+
+## `neo4j:4.3.6-community`
+
+**does not exist** (yet?)
+
+## `neo4j:4.3.6-enterprise`
+
+**does not exist** (yet?)
 
 ## `neo4j:community`
 
