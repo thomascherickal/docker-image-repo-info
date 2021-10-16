@@ -1,7 +1,7 @@
 ## `mongo:4-focal`
 
 ```console
-$ docker pull mongo@sha256:c5d9deed03026bb0dc896bbd7944a39ca8731d320ef7a52b323df215b94545b4
+$ docker pull mongo@sha256:4fae9594e7b5ddf106176d55912bada8013f8ec410d06a79c4209381643c7095
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,14 +12,14 @@ $ docker pull mongo@sha256:c5d9deed03026bb0dc896bbd7944a39ca8731d320ef7a52b323df
 ### `mongo:4-focal` - linux; amd64
 
 ```console
-$ docker pull mongo@sha256:3b239fc0230572e422b71be44034c758ca09334b5c7e84228635610051ba169d
+$ docker pull mongo@sha256:26addac97d7ca4a01e42529969c705c5426241ecb3550b2094020bf5aece013a
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **171.3 MB (171258648 bytes)**  
+-	Total Size: **171.3 MB (171347820 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b6e8852ad84e91dd9c6d2aec0fb7e9397311c10e7fe146b252aa13fe49901d82`
+-	Image ID: `sha256:1d25296d3a0a075b49881d2d2f699cda23869acec91c14b43f19a0faaf6af281`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mongod"]`
 
@@ -52,21 +52,21 @@ ENV MONGO_PACKAGE=mongodb-org MONGO_REPO=repo.mongodb.org
 ENV MONGO_MAJOR=4.4
 # Fri, 01 Oct 2021 05:28:10 GMT
 RUN echo "deb http://$MONGO_REPO/apt/ubuntu focal/${MONGO_PACKAGE%-unstable}/$MONGO_MAJOR multiverse" | tee "/etc/apt/sources.list.d/${MONGO_PACKAGE%-unstable}.list"
-# Fri, 01 Oct 2021 05:28:10 GMT
-ENV MONGO_VERSION=4.4.9
-# Fri, 01 Oct 2021 05:28:27 GMT
+# Sat, 16 Oct 2021 00:23:13 GMT
+ENV MONGO_VERSION=4.4.10
+# Sat, 16 Oct 2021 00:23:40 GMT
 RUN set -x 	&& export DEBIAN_FRONTEND=noninteractive 	&& apt-get update 	&& ln -s /bin/true /usr/local/bin/systemctl 	&& apt-get install -y 		${MONGO_PACKAGE}=$MONGO_VERSION 		${MONGO_PACKAGE}-server=$MONGO_VERSION 		${MONGO_PACKAGE}-shell=$MONGO_VERSION 		${MONGO_PACKAGE}-mongos=$MONGO_VERSION 		${MONGO_PACKAGE}-tools=$MONGO_VERSION 	&& rm -f /usr/local/bin/systemctl 	&& rm -rf /var/lib/apt/lists/* 	&& rm -rf /var/lib/mongodb 	&& mv /etc/mongod.conf /etc/mongod.conf.orig
-# Fri, 01 Oct 2021 05:28:28 GMT
+# Sat, 16 Oct 2021 00:23:41 GMT
 RUN mkdir -p /data/db /data/configdb 	&& chown -R mongodb:mongodb /data/db /data/configdb
-# Fri, 01 Oct 2021 05:28:28 GMT
+# Sat, 16 Oct 2021 00:23:41 GMT
 VOLUME [/data/db /data/configdb]
-# Fri, 01 Oct 2021 05:28:28 GMT
+# Sat, 16 Oct 2021 00:23:41 GMT
 COPY file:df3353d9b2c25ef83b499ecae7fd5d611adb4a9462a577435178acaad3c8c695 in /usr/local/bin/ 
-# Fri, 01 Oct 2021 05:28:29 GMT
+# Sat, 16 Oct 2021 00:23:42 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 01 Oct 2021 05:28:29 GMT
+# Sat, 16 Oct 2021 00:23:42 GMT
 EXPOSE 27017
-# Fri, 01 Oct 2021 05:28:29 GMT
+# Sat, 16 Oct 2021 00:23:42 GMT
 CMD ["mongod"]
 ```
 
@@ -99,17 +99,17 @@ CMD ["mongod"]
 		Last Modified: Fri, 01 Oct 2021 05:30:35 GMT  
 		Size: 235.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7d67abd2e683847db2655f3723a9d5836981b48f91dcb22c652a35a5fe4e4d29`  
-		Last Modified: Fri, 01 Oct 2021 05:30:52 GMT  
-		Size: 133.1 MB (133110491 bytes)  
+	-	`sha256:b691bbebe05ebdc4365d9014000573a620b6b3af787316c27a32c1c9f0fec56c`  
+		Last Modified: Sat, 16 Oct 2021 00:24:32 GMT  
+		Size: 133.2 MB (133199662 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0930c7be04e9e8029b1e211775a4e5d0c8afeb74ccb4f95f7a668da4a3b15ba4`  
-		Last Modified: Fri, 01 Oct 2021 05:30:35 GMT  
+	-	`sha256:7a0dc3a91da5c41e1ad03e3cc60c08facf24784482bdc861ea58be14526c5ec3`  
+		Last Modified: Sat, 16 Oct 2021 00:24:14 GMT  
 		Size: 170.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c583d7bc3a628836cdfffd1ba89e89e8de0c336acdd29cdeaa6ddb919262dafa`  
-		Last Modified: Fri, 01 Oct 2021 05:30:35 GMT  
-		Size: 4.7 KB (4699 bytes)  
+	-	`sha256:f70db9fcb0caebaf44e4c58ee6b9e647342edc00e4ab80129c9f611a78472fac`  
+		Last Modified: Sat, 16 Oct 2021 00:24:14 GMT  
+		Size: 4.7 KB (4700 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mongo:4-focal` - linux; arm64 variant v8
