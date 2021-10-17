@@ -4,7 +4,7 @@
 
 - Image ID: `sha256:2e6e61880a92c46aef226a7174cdad304a4f3336986b8d2b42c51bf001b0c040`
 - Created: `2021-09-22T19:57:16.192180827Z`
-- Virtual Size: ~ 597.78 Mb  
+- Virtual Size: ~ 597.76 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["jshell"]`
@@ -36,6 +36,8 @@ Source:
 
 ```console
 $ yumdownloader --quiet --source --urls acl-2.2.51-15.el7
+http://mirrors.cmich.edu/centos/7.9.2009/os/x86_64/repodata/repomd.xml: [Errno 12] Timeout on http://mirrors.cmich.edu/centos/7.9.2009/os/x86_64/repodata/repomd.xml: (28, 'Operation too slow. Less than 1000 bytes/sec transferred the last 30 seconds')
+Trying other mirror.
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository

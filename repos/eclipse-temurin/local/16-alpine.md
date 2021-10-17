@@ -4,7 +4,7 @@
 
 - Image ID: `sha256:ef6cff39622f79ff428ba36a792e28fea35296cd93008de6f77a1d004f9c8330`
 - Created: `2021-09-30T17:20:22.696048497Z`
-- Virtual Size: ~ 360.96 Mb  
+- Virtual Size: ~ 360.95 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["jshell"]`
