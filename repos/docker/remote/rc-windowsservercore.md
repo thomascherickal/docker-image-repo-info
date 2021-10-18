@@ -1,7 +1,7 @@
 ## `docker:rc-windowsservercore`
 
 ```console
-$ docker pull docker@sha256:9d8a8d97c2c15e56f7d60f2dd0dd4e39081dbd83fa68c123763ab767c755f293
+$ docker pull docker@sha256:b93c815cb85b0b33bda3995458689c458b48600f7bebf504ae7819c5f2bb0d81
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
