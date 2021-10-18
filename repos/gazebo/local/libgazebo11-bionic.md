@@ -2213,14 +2213,9 @@ Licenses: (parsed from: `/usr/share/doc/libignition-math6/copyright`, `/usr/shar
 - `Apache-2.0`
 - `BSD-3-clause`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ignition-math6=6.9.1-1~bionic
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.9.1-1~bionic.dsc' ignition-math6_6.9.1-1~bionic.dsc 1580 SHA256:bb846aae87083422aba988bcf3bd918a67a29c9554b7e6280af504f3ee789b2e
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.9.1.orig.tar.bz2' ignition-math6_6.9.1.orig.tar.bz2 427650 SHA256:1fd56c5f17727d3e5c8a96285df9c126f96784929eb182c3e8bfdaddb77baf49
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.9.1-1~bionic.debian.tar.xz' ignition-math6_6.9.1-1~bionic.debian.tar.xz 4280 SHA256:d5b673be7cef7eebad89f113657135e5528e990b66c20f07fd107019e2d89a40
-```
 
 ### `dpkg` source package: `ignition-msgs5=5.8.0-1~bionic`
 
