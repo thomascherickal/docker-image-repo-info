@@ -1067,21 +1067,13 @@ Licenses: (parsed from: `/usr/share/doc/eatmydata/copyright`, `/usr/share/doc/li
 - `GPL-3`
 - `GPL-3+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libeatmydata=129-4
-'http://deb.debian.org/debian/pool/main/libe/libeatmydata/libeatmydata_129-4.dsc' libeatmydata_129-4.dsc 2439 SHA256:15caadf39fd9e8b8fa7deec7ad3fd2be94ca58cfcc5a79a89d04fc3019535e81
-'http://deb.debian.org/debian/pool/main/libe/libeatmydata/libeatmydata_129.orig.tar.gz' libeatmydata_129.orig.tar.gz 358437 SHA256:0e5b8944d7d236d1c3803447c5285ece734a3bd696c69ecb1ed919bf59d8cce3
-'http://deb.debian.org/debian/pool/main/libe/libeatmydata/libeatmydata_129.orig.tar.gz.asc' libeatmydata_129.orig.tar.gz.asc 833 SHA256:90859b98df39705d2acc03fe6960cc79f034519793c8263b578fbb3abe514bb1
-'http://deb.debian.org/debian/pool/main/libe/libeatmydata/libeatmydata_129-4.debian.tar.xz' libeatmydata_129-4.debian.tar.xz 15480 SHA256:dd6c72bd952b08c5fb2fe2eb30f5beb556000e6dda3c2efddbc3d0e8a9fbb660
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libeatmydata/129-4/
 
-- https://sources.debian.net/src/libeatmydata/129-4/ (for browsing the source)
-- https://sources.debian.net/src/libeatmydata/129-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libeatmydata/129-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libffi=3.4.2-2`
 
@@ -2079,20 +2071,13 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=247.9-4
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_247.9-4.dsc' systemd_247.9-4.dsc 5167 SHA256:f7e853537b710188829d2cc0f6478735296f122e8902b3c26e370f96754691aa
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_247.9.orig.tar.gz' systemd_247.9.orig.tar.gz 9915803 SHA256:629b8c895efa000b921092c7a565680c66dcd0ec74ed11cb2dd2b6701492675d
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_247.9-4.debian.tar.xz' systemd_247.9-4.debian.tar.xz 166140 SHA256:a3c7c2bf0a2a4391086f4569a56e2dab7ac359ccfb4cd630052b2bcb7044ce9f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/systemd/247.9-4/
 
-- https://sources.debian.net/src/systemd/247.9-4/ (for browsing the source)
-- https://sources.debian.net/src/systemd/247.9-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/systemd/247.9-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sysvinit=3.00-1`
 
