@@ -78,19 +78,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.3.9
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.3.9.dsc' apt_2.3.9.dsc 2797 SHA256:d7bbed1070148c8dd5b3d3d6f65a1ec6c1acb8ec136d85ebdb011411f3b41b98
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.3.9.tar.xz' apt_2.3.9.tar.xz 2204328 SHA256:28597fe803a652f55f618dd7a44bd2fb2712dbd91c258dfa5981cb75356291e3
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/apt/2.3.9/
 
-- https://sources.debian.net/src/apt/2.3.9/ (for browsing the source)
-- https://sources.debian.net/src/apt/2.3.9/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apt/2.3.9/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `attr=1:2.5.1-1`
 
@@ -1855,21 +1849,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2021c-2
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021c-2.dsc' tzdata_2021c-2.dsc 2205 SHA256:49567fde17c5438a00232c3ec9d87d765f9b51909555f54d8baefa8551575d4f
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021c.orig.tar.gz' tzdata_2021c.orig.tar.gz 421791 SHA256:b4f1d1c8cb11c3500276dac862d8c7e6f88c69b1e8ee4c5e9d1daad17fbe3542
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021c.orig.tar.gz.asc' tzdata_2021c.orig.tar.gz.asc 833 SHA256:1bcfa0f79ef685cdb5049d80eac6c7afd60768f6169a580ad2d48f6bd7838b7f
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021c-2.debian.tar.xz' tzdata_2021c-2.debian.tar.xz 106292 SHA256:7b9e23696471397ccf1da2e58869a85be7bf0d32cf46e6ebe6dcfcd2dc2e5a3b
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2021c-2/
 
-- https://sources.debian.net/src/tzdata/2021c-2/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2021c-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2021c-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `util-linux=2.37.2-3`
 

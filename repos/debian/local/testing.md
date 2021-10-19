@@ -959,20 +959,13 @@ Licenses: (parsed from: `/usr/share/doc/libffi8/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libffi=3.4.2-2
-'http://deb.debian.org/debian/pool/main/libf/libffi/libffi_3.4.2-2.dsc' libffi_3.4.2-2.dsc 1948 SHA256:bac75f8938ac21b3a5fea1ccc4372a1af55f6a33e80b33e992e740874e610b62
-'http://deb.debian.org/debian/pool/main/libf/libffi/libffi_3.4.2.orig.tar.gz' libffi_3.4.2.orig.tar.gz 1351355 SHA256:540fb721619a6aba3bdeef7d940d8e9e0e6d2c193595bc243241b77ff9e93620
-'http://deb.debian.org/debian/pool/main/libf/libffi/libffi_3.4.2-2.debian.tar.xz' libffi_3.4.2-2.debian.tar.xz 8072 SHA256:a61421bff24b281e26e22b97f6883492f0319b28bd72f3040b798e36ce849270
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libffi/3.4.2-2/
 
-- https://sources.debian.net/src/libffi/3.4.2-2/ (for browsing the source)
-- https://sources.debian.net/src/libffi/3.4.2-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libffi/3.4.2-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libgcrypt20=1.9.4-3`
 
@@ -1544,21 +1537,13 @@ Licenses: (parsed from: `/usr/share/doc/libp11-kit0/copyright`)
 - `permissive-like-automake-output`
 - `same-as-rest-of-p11kit`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris p11-kit=0.24.0-3
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.24.0-3.dsc' p11-kit_0.24.0-3.dsc 2407 SHA256:82f156dfdedcac782f2180b5a26cfcb9a36e444272e6c9fe78322abaa90d105b
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.24.0.orig.tar.xz' p11-kit_0.24.0.orig.tar.xz 834392 SHA256:81e6140584f635e4e956a1b93a32239acf3811ff5b2d3a5c6094e94e99d2c685
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.24.0.orig.tar.xz.asc' p11-kit_0.24.0.orig.tar.xz.asc 833 SHA256:f9996976ae08e48ac652d2aad3f0528a75f87eaa6c17cf076ec00e7ce2fbaeed
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.24.0-3.debian.tar.xz' p11-kit_0.24.0-3.debian.tar.xz 22760 SHA256:741252a3dbc96956c91b2679f08a955e9752f11108aa2804f414b8a403807370
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/p11-kit/0.24.0-3/
 
-- https://sources.debian.net/src/p11-kit/0.24.0-3/ (for browsing the source)
-- https://sources.debian.net/src/p11-kit/0.24.0-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/p11-kit/0.24.0-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pam=1.4.0-10`
 
@@ -1760,20 +1745,13 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=247.9-4
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_247.9-4.dsc' systemd_247.9-4.dsc 5167 SHA256:f7e853537b710188829d2cc0f6478735296f122e8902b3c26e370f96754691aa
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_247.9.orig.tar.gz' systemd_247.9.orig.tar.gz 9915803 SHA256:629b8c895efa000b921092c7a565680c66dcd0ec74ed11cb2dd2b6701492675d
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_247.9-4.debian.tar.xz' systemd_247.9-4.debian.tar.xz 166140 SHA256:a3c7c2bf0a2a4391086f4569a56e2dab7ac359ccfb4cd630052b2bcb7044ce9f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/systemd/247.9-4/
 
-- https://sources.debian.net/src/systemd/247.9-4/ (for browsing the source)
-- https://sources.debian.net/src/systemd/247.9-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/systemd/247.9-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sysvinit=3.00-1`
 
