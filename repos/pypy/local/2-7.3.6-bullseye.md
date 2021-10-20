@@ -1,17 +1,17 @@
-# `pypy:2.7-7.3.5-bullseye`
+# `pypy:2.7-7.3.6-bullseye`
 
 ## Docker Metadata
 
-- Image ID: `sha256:f937d32e3d5912e34e8744baf495aa94601f8b0de395149e0a89aca19c93cab3`
-- Created: `2021-10-12T16:11:33.22952447Z`
-- Virtual Size: ~ 974.84 Mb  
+- Image ID: `sha256:d9dedab7e5c8d273527fe2f6d004c790bc1478c077f87d1c785f0f67fb02765d`
+- Created: `2021-10-18T21:41:41.804197283Z`
+- Virtual Size: ~ 974.92 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["pypy"]`
 - Environment:
   - `PATH=/opt/pypy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=C.UTF-8`
-  - `PYPY_VERSION=7.3.5`
+  - `PYPY_VERSION=7.3.6`
   - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/3843bff3a0a61da5b63ea0b7d34794c5c51a2f11/get-pip.py`
   - `PYTHON_GET_PIP_SHA256=95c5ee602b2f3cc50ae053d716c3c89bea62c58568f64d7d25924d399b2d5218`
 

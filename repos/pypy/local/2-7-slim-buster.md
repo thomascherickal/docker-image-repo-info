@@ -1,17 +1,17 @@
-# `pypy:2.7-7.3.5-slim-buster`
+# `pypy:2.7-7.3.6-slim-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:9cc80738f233441be2129107271ac23a444a764fefef16d3963615c4a2882e3c`
-- Created: `2021-10-12T16:13:54.071771227Z`
-- Virtual Size: ~ 208.49 Mb  
+- Image ID: `sha256:e82e3c76fc864d4d1bc62555df00f59bf4fba1d2d25b8d7ea1ee0a7cab19674f`
+- Created: `2021-10-18T21:43:13.335714788Z`
+- Virtual Size: ~ 208.57 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["pypy"]`
 - Environment:
   - `PATH=/opt/pypy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=C.UTF-8`
-  - `PYPY_VERSION=7.3.5`
+  - `PYPY_VERSION=7.3.6`
   - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/3843bff3a0a61da5b63ea0b7d34794c5c51a2f11/get-pip.py`
   - `PYTHON_GET_PIP_SHA256=95c5ee602b2f3cc50ae053d716c3c89bea62c58568f64d7d25924d399b2d5218`
 
