@@ -2174,20 +2174,13 @@ Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/lib
 - `MIT`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris util-linux=2.37.2-3
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.37.2-3.dsc' util-linux_2.37.2-3.dsc 4453 SHA256:ce3d6fc1d2fa2329c4dfbb69b87454a450834554032905eb776acf6a5c6e8273
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.37.2.orig.tar.xz' util-linux_2.37.2.orig.tar.xz 5621624 SHA256:6a0764c1aae7fb607ef8a6dd2c0f6c47d5e5fd27aa08820abaad9ec14e28e9d9
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.37.2-3.debian.tar.xz' util-linux_2.37.2-3.debian.tar.xz 96948 SHA256:b6ba987cdf3177963fe3e256b872e13165af8d70131334042cdc003e19cb609e
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/util-linux/2.37.2-3/
 
-- https://sources.debian.net/src/util-linux/2.37.2-3/ (for browsing the source)
-- https://sources.debian.net/src/util-linux/2.37.2-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/util-linux/2.37.2-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `xxhash=0.8.0-2`
 
