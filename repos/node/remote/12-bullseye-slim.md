@@ -1,7 +1,7 @@
 ## `node:12-bullseye-slim`
 
 ```console
-$ docker pull node@sha256:0a51d11695ba38ddcab139df3374043b7ffda495021c9551799ad3f6ea443eb5
+$ docker pull node@sha256:0d3f38a64314b99317024e802faab22f7b88c646c863df490a180be1adeb5300
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -15,14 +15,14 @@ $ docker pull node@sha256:0a51d11695ba38ddcab139df3374043b7ffda495021c9551799ad3
 ### `node:12-bullseye-slim` - linux; amd64
 
 ```console
-$ docker pull node@sha256:d534df98fbe3f711f5f65652be071a0bb50d51ae216b51eb9d77129e65c2b882
+$ docker pull node@sha256:2f3fb5008db74675b4fa078c3460eb448554cf20354f89856d725c0fb12139d5
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **58.3 MB (58262181 bytes)**  
+-	Total Size: **58.3 MB (58262354 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:952c2e853c0f94a8a1ceb66acfeec1641ca90dd2a3fbe47d4a3336b677ea7b30`
+-	Image ID: `sha256:10f969fabb5a448aa2f6ec4e57dec5011eac62241fe2fa49401e47a9c1112692`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node"]`
 
@@ -41,11 +41,11 @@ RUN ARCH= && dpkgArch="$(dpkg --print-architecture)"     && case "${dpkgArch##*-
 ENV YARN_VERSION=1.22.15
 # Wed, 13 Oct 2021 05:55:06 GMT
 RUN set -ex   && savedAptMark="$(apt-mark showmanual)"   && apt-get update && apt-get install -y ca-certificates curl wget gnupg dirmngr --no-install-recommends   && rm -rf /var/lib/apt/lists/*   && for key in     6A010C5166006599AA17F08146C2130DFD2497F5   ; do     gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys "$key" ||     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key" ;   done   && curl -fsSLO --compressed "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz"   && curl -fsSLO --compressed "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz.asc"   && gpg --batch --verify yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz   && mkdir -p /opt   && tar -xzf yarn-v$YARN_VERSION.tar.gz -C /opt/   && ln -s /opt/yarn-v$YARN_VERSION/bin/yarn /usr/local/bin/yarn   && ln -s /opt/yarn-v$YARN_VERSION/bin/yarnpkg /usr/local/bin/yarnpkg   && rm yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz   && apt-mark auto '.*' > /dev/null   && { [ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; }   && find /usr/local -type f -executable -exec ldd '{}' ';'     | awk '/=>/ { print $(NF-1) }'     | sort -u     | xargs -r dpkg-query --search     | cut -d: -f1     | sort -u     | xargs -r apt-mark manual   && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false   && yarn --version
-# Wed, 13 Oct 2021 05:55:06 GMT
-COPY file:238737301d47304174e4d24f4def935b29b3069c03c72ae8de97d94624382fce in /usr/local/bin/ 
-# Wed, 13 Oct 2021 05:55:07 GMT
+# Fri, 22 Oct 2021 18:56:24 GMT
+COPY file:4d192565a7220e135cab6c77fbc1c73211b69f3d9fb37e62857b2c6eb9363d51 in /usr/local/bin/ 
+# Fri, 22 Oct 2021 18:56:24 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Wed, 13 Oct 2021 05:55:07 GMT
+# Fri, 22 Oct 2021 18:56:24 GMT
 CMD ["node"]
 ```
 
@@ -66,22 +66,22 @@ CMD ["node"]
 		Last Modified: Wed, 13 Oct 2021 06:12:29 GMT  
 		Size: 2.8 MB (2769252 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:afb0efb0f58caf3b73fd476574ff963597473a6bffeb323af086c2bca2cd409c`  
-		Last Modified: Wed, 13 Oct 2021 06:12:28 GMT  
-		Size: 282.0 B  
+	-	`sha256:aedaccaf979e8761c2dfc56e6f210c7d2eb7a130481ca34a105a9c2ab3a4184a`  
+		Last Modified: Fri, 22 Oct 2021 19:11:45 GMT  
+		Size: 455.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `node:12-bullseye-slim` - linux; arm variant v7
 
 ```console
-$ docker pull node@sha256:e5d55c8b175f49dabbeee8c8db1e89a3fac468eb5ae8c38df69f7975b9b0a4f8
+$ docker pull node@sha256:a1b0a3546879af6bf7b46a268fe1d30b7389656e4bc7ccd7830237d726f78c70
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **51.5 MB (51473209 bytes)**  
+-	Total Size: **51.5 MB (51473380 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:199586458f5ba2514a2e179cb2c22f15f9a11a65836a70767083e268194f1dc5`
+-	Image ID: `sha256:e85b56e6b1d8a4e925e9a6031d7511a4a3dbccf93e6d4b6188b34cd7521d8021`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node"]`
 
@@ -100,11 +100,11 @@ RUN ARCH= && dpkgArch="$(dpkg --print-architecture)"     && case "${dpkgArch##*-
 ENV YARN_VERSION=1.22.15
 # Wed, 13 Oct 2021 05:47:23 GMT
 RUN set -ex   && savedAptMark="$(apt-mark showmanual)"   && apt-get update && apt-get install -y ca-certificates curl wget gnupg dirmngr --no-install-recommends   && rm -rf /var/lib/apt/lists/*   && for key in     6A010C5166006599AA17F08146C2130DFD2497F5   ; do     gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys "$key" ||     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key" ;   done   && curl -fsSLO --compressed "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz"   && curl -fsSLO --compressed "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz.asc"   && gpg --batch --verify yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz   && mkdir -p /opt   && tar -xzf yarn-v$YARN_VERSION.tar.gz -C /opt/   && ln -s /opt/yarn-v$YARN_VERSION/bin/yarn /usr/local/bin/yarn   && ln -s /opt/yarn-v$YARN_VERSION/bin/yarnpkg /usr/local/bin/yarnpkg   && rm yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz   && apt-mark auto '.*' > /dev/null   && { [ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; }   && find /usr/local -type f -executable -exec ldd '{}' ';'     | awk '/=>/ { print $(NF-1) }'     | sort -u     | xargs -r dpkg-query --search     | cut -d: -f1     | sort -u     | xargs -r apt-mark manual   && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false   && yarn --version
-# Wed, 13 Oct 2021 05:47:24 GMT
-COPY file:238737301d47304174e4d24f4def935b29b3069c03c72ae8de97d94624382fce in /usr/local/bin/ 
-# Wed, 13 Oct 2021 05:47:24 GMT
+# Fri, 22 Oct 2021 18:15:37 GMT
+COPY file:4d192565a7220e135cab6c77fbc1c73211b69f3d9fb37e62857b2c6eb9363d51 in /usr/local/bin/ 
+# Fri, 22 Oct 2021 18:15:37 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Wed, 13 Oct 2021 05:47:25 GMT
+# Fri, 22 Oct 2021 18:15:38 GMT
 CMD ["node"]
 ```
 
@@ -125,22 +125,22 @@ CMD ["node"]
 		Last Modified: Wed, 13 Oct 2021 06:26:03 GMT  
 		Size: 2.8 MB (2762718 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8df85996254adf000374e4d6e94fbe3176ba0808d1cc92f7b976c81f376a7ca4`  
-		Last Modified: Wed, 13 Oct 2021 06:26:01 GMT  
-		Size: 284.0 B  
+	-	`sha256:ec037df9c37ea17624b2e47af4f56f3801fa290a5f1b90b010ab82875738f724`  
+		Last Modified: Fri, 22 Oct 2021 18:46:48 GMT  
+		Size: 455.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `node:12-bullseye-slim` - linux; arm64 variant v8
 
 ```console
-$ docker pull node@sha256:1f688302086bbd155a4a423da7c4b0423ce55155809d78f30d94dd9a5705dc7b
+$ docker pull node@sha256:9bf79cd7b5077d7cd434d4e7bf7ebd1002958a8fdab47e88d2a6c60a9fa705da
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **56.9 MB (56912880 bytes)**  
+-	Total Size: **56.9 MB (56913051 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:349fc43d7886044fd22938e7db24e6315dc09f7953046bb47c0bc74a3811bf97`
+-	Image ID: `sha256:cf80912160532db86979baae82a093a1baf4e7699e585d4edf9ea870232dc5e0`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node"]`
 
@@ -159,11 +159,11 @@ RUN ARCH= && dpkgArch="$(dpkg --print-architecture)"     && case "${dpkgArch##*-
 ENV YARN_VERSION=1.22.15
 # Wed, 13 Oct 2021 05:11:14 GMT
 RUN set -ex   && savedAptMark="$(apt-mark showmanual)"   && apt-get update && apt-get install -y ca-certificates curl wget gnupg dirmngr --no-install-recommends   && rm -rf /var/lib/apt/lists/*   && for key in     6A010C5166006599AA17F08146C2130DFD2497F5   ; do     gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys "$key" ||     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key" ;   done   && curl -fsSLO --compressed "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz"   && curl -fsSLO --compressed "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz.asc"   && gpg --batch --verify yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz   && mkdir -p /opt   && tar -xzf yarn-v$YARN_VERSION.tar.gz -C /opt/   && ln -s /opt/yarn-v$YARN_VERSION/bin/yarn /usr/local/bin/yarn   && ln -s /opt/yarn-v$YARN_VERSION/bin/yarnpkg /usr/local/bin/yarnpkg   && rm yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz   && apt-mark auto '.*' > /dev/null   && { [ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; }   && find /usr/local -type f -executable -exec ldd '{}' ';'     | awk '/=>/ { print $(NF-1) }'     | sort -u     | xargs -r dpkg-query --search     | cut -d: -f1     | sort -u     | xargs -r apt-mark manual   && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false   && yarn --version
-# Wed, 13 Oct 2021 05:11:16 GMT
-COPY file:238737301d47304174e4d24f4def935b29b3069c03c72ae8de97d94624382fce in /usr/local/bin/ 
-# Wed, 13 Oct 2021 05:11:16 GMT
+# Fri, 22 Oct 2021 17:49:12 GMT
+COPY file:4d192565a7220e135cab6c77fbc1c73211b69f3d9fb37e62857b2c6eb9363d51 in /usr/local/bin/ 
+# Fri, 22 Oct 2021 17:49:12 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Wed, 13 Oct 2021 05:11:17 GMT
+# Fri, 22 Oct 2021 17:49:13 GMT
 CMD ["node"]
 ```
 
@@ -184,9 +184,9 @@ CMD ["node"]
 		Last Modified: Wed, 13 Oct 2021 05:31:29 GMT  
 		Size: 2.8 MB (2768291 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4540a87a967f6d7399ef55da83d8a40eba9e07f83a8249d90602861c575f0bbe`  
-		Last Modified: Wed, 13 Oct 2021 05:31:28 GMT  
-		Size: 283.0 B  
+	-	`sha256:19f69ed45b148fc97c4f5c877c067ef9b3cb15a2efa7abcfc23d10237925cb2d`  
+		Last Modified: Fri, 22 Oct 2021 18:08:17 GMT  
+		Size: 454.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `node:12-bullseye-slim` - linux; ppc64le
@@ -251,14 +251,14 @@ CMD ["node"]
 ### `node:12-bullseye-slim` - linux; s390x
 
 ```console
-$ docker pull node@sha256:c15fc48b2c2ad5a969095aa9d85ad86ae51498ab59ec959be1d236563a0593f0
+$ docker pull node@sha256:c3b7e033554cc086e803606ea433c7cb2d2dc898570fc9888e6696ff36e76130
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **56.6 MB (56635989 bytes)**  
+-	Total Size: **56.6 MB (56636161 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:98af104a67103362c070413911c7c28e8adb076d1feeae9652de9c9856946666`
+-	Image ID: `sha256:af15df3215b2d637c641f27c27b6eb3ff0b8690e371710a4dba112eba3226c6c`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node"]`
 
@@ -277,11 +277,11 @@ RUN ARCH= && dpkgArch="$(dpkg --print-architecture)"     && case "${dpkgArch##*-
 ENV YARN_VERSION=1.22.15
 # Wed, 13 Oct 2021 06:16:38 GMT
 RUN set -ex   && savedAptMark="$(apt-mark showmanual)"   && apt-get update && apt-get install -y ca-certificates curl wget gnupg dirmngr --no-install-recommends   && rm -rf /var/lib/apt/lists/*   && for key in     6A010C5166006599AA17F08146C2130DFD2497F5   ; do     gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys "$key" ||     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key" ;   done   && curl -fsSLO --compressed "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz"   && curl -fsSLO --compressed "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz.asc"   && gpg --batch --verify yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz   && mkdir -p /opt   && tar -xzf yarn-v$YARN_VERSION.tar.gz -C /opt/   && ln -s /opt/yarn-v$YARN_VERSION/bin/yarn /usr/local/bin/yarn   && ln -s /opt/yarn-v$YARN_VERSION/bin/yarnpkg /usr/local/bin/yarnpkg   && rm yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz   && apt-mark auto '.*' > /dev/null   && { [ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; }   && find /usr/local -type f -executable -exec ldd '{}' ';'     | awk '/=>/ { print $(NF-1) }'     | sort -u     | xargs -r dpkg-query --search     | cut -d: -f1     | sort -u     | xargs -r apt-mark manual   && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false   && yarn --version
-# Wed, 13 Oct 2021 06:16:38 GMT
-COPY file:238737301d47304174e4d24f4def935b29b3069c03c72ae8de97d94624382fce in /usr/local/bin/ 
-# Wed, 13 Oct 2021 06:16:38 GMT
+# Fri, 22 Oct 2021 17:47:07 GMT
+COPY file:4d192565a7220e135cab6c77fbc1c73211b69f3d9fb37e62857b2c6eb9363d51 in /usr/local/bin/ 
+# Fri, 22 Oct 2021 17:47:07 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Wed, 13 Oct 2021 06:16:38 GMT
+# Fri, 22 Oct 2021 17:47:07 GMT
 CMD ["node"]
 ```
 
@@ -302,7 +302,7 @@ CMD ["node"]
 		Last Modified: Wed, 13 Oct 2021 06:28:30 GMT  
 		Size: 2.8 MB (2772032 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2ded586ae726a33b650ef21704d38272b4350c6bb534dd02d084aa07bfbb3cbf`  
-		Last Modified: Wed, 13 Oct 2021 06:28:29 GMT  
-		Size: 284.0 B  
+	-	`sha256:40b32b75f14d4f3b9777f69a32294f4322935a6b7ed8e5bca31293a251bdae84`  
+		Last Modified: Fri, 22 Oct 2021 17:58:57 GMT  
+		Size: 456.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
