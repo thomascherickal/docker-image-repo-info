@@ -4,7 +4,7 @@
 
 - Image ID: `sha256:f386a91bb9e27507a1eae684d0b9666bd5537c8e4dd5c6ab14b97ee6ba543993`
 - Created: `2021-10-16T04:32:07.491855282Z`
-- Virtual Size: ~ 556.95 Mb  
+- Virtual Size: ~ 556.92 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/mvn-entrypoint.sh"]`
