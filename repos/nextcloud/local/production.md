@@ -1,10 +1,10 @@
-# `nextcloud:21.0.5-apache`
+# `nextcloud:22.2.0-apache`
 
 ## Docker Metadata
 
-- Image ID: `sha256:eccb2a178eb75edc461694ba97cb99a34970948d14407f5292292d1c20d2d403`
-- Created: `2021-10-15T02:59:20.442870115Z`
-- Virtual Size: ~ 921.22 Mb  
+- Image ID: `sha256:cc60e970a19d27d25525713db5e56f53d30d1031df998630089dfaa7807f639a`
+- Created: `2021-10-21T19:39:09.836241844Z`
+- Virtual Size: ~ 936.53 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -18,14 +18,14 @@
   - `PHP_CFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
-  - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
-  - `PHP_VERSION=7.4.24`
-  - `PHP_URL=https://www.php.net/distributions/php-7.4.24.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.24.tar.xz.asc`
-  - `PHP_SHA256=ff7658ee2f6d8af05b48c21146af5f502e121def4e76e862df5ec9fa06e98734`
+  - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F`
+  - `PHP_VERSION=8.0.12`
+  - `PHP_URL=https://www.php.net/distributions/php-8.0.12.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.12.tar.xz.asc`
+  - `PHP_SHA256=a501017b3b0fd3023223ea25d98e87369b782f8a82310c4033d7ea6a989fea0a`
   - `PHP_MEMORY_LIMIT=512M`
   - `PHP_UPLOAD_LIMIT=512M`
-  - `NEXTCLOUD_VERSION=21.0.5`
+  - `NEXTCLOUD_VERSION=22.2.0`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -3337,6 +3337,7 @@ Other potentially useful URLs:
 Binary Packages:
 
 - `libldap-2.4-2:amd64=2.4.57+dfsg-3`
+- `libldap-common=2.4.57+dfsg-3`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.

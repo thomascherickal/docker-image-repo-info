@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:949037a82a3145f2fc8bc2fc8dfeb40a58f529c4fede6d2591a9c81a4f3da401`
-- Created: `2021-10-15T03:09:35.871550177Z`
-- Virtual Size: ~ 926.04 Mb  
+- Image ID: `sha256:c6c5f4df9863046bee2bdea8e679c4d0f929c0c0367a3e7f5b9c2a45a41955a2`
+- Created: `2021-10-21T19:43:44.599377798Z`
+- Virtual Size: ~ 925.98 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F`
-  - `PHP_VERSION=8.0.11`
-  - `PHP_URL=https://www.php.net/distributions/php-8.0.11.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.11.tar.xz.asc`
-  - `PHP_SHA256=e3e5f764ae57b31eb65244a45512f0b22d7bef05f2052b23989c053901552e16`
+  - `PHP_VERSION=8.0.12`
+  - `PHP_URL=https://www.php.net/distributions/php-8.0.12.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.12.tar.xz.asc`
+  - `PHP_SHA256=a501017b3b0fd3023223ea25d98e87369b782f8a82310c4033d7ea6a989fea0a`
   - `PHP_MEMORY_LIMIT=512M`
   - `PHP_UPLOAD_LIMIT=512M`
   - `NEXTCLOUD_VERSION=22.2.0`
@@ -3113,6 +3113,7 @@ Other potentially useful URLs:
 Binary Packages:
 
 - `libldap-2.4-2:amd64=2.4.57+dfsg-3`
+- `libldap-common=2.4.57+dfsg-3`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
