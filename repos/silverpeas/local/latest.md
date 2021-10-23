@@ -148,14 +148,9 @@ Licenses: (parsed from: `/usr/share/doc/alsa-ucm-conf/copyright`)
 
 - `BSD-3-clause`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris alsa-ucm-conf=1.2.2-1ubuntu0.10
-'http://archive.ubuntu.com/ubuntu/pool/main/a/alsa-ucm-conf/alsa-ucm-conf_1.2.2-1ubuntu0.10.dsc' alsa-ucm-conf_1.2.2-1ubuntu0.10.dsc 1431 SHA512:e404b66d48ee75a03b026d4282c68efe4eef7cd18474e45dd6d5c862bbc50961f34ecfb353e2d4ad57136dfbd9573c21ba36930905b4cb95633c94828b8a6dd9
-'http://archive.ubuntu.com/ubuntu/pool/main/a/alsa-ucm-conf/alsa-ucm-conf_1.2.2.orig.tar.bz2' alsa-ucm-conf_1.2.2.orig.tar.bz2 14608 SHA512:25e3f341c110772c7cffc8c7745b320f2ddd12fe6460380c088939b5dc67b99ae4ad92e69375179574e0e1c40d14ff49961e86494e223fde009e51590f00ca8f
-'http://archive.ubuntu.com/ubuntu/pool/main/a/alsa-ucm-conf/alsa-ucm-conf_1.2.2-1ubuntu0.10.debian.tar.xz' alsa-ucm-conf_1.2.2-1ubuntu0.10.debian.tar.xz 18252 SHA512:349f0fa51a924aaa92c5396e56b9baf4c6e19d4088c1573a4feec083224b0889677c081db8076891b60f9bb755ebc69cf65e8a56b59bb06a89bf9be3b21fa9e0
-```
 
 ### `dpkg` source package: `aom=1.0.0.errata1-3build1`
 
@@ -3527,14 +3522,9 @@ Licenses: (parsed from: `/usr/share/doc/libcaca0/copyright`)
 
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libcaca=0.99.beta19-2.1ubuntu1.20.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcaca/libcaca_0.99.beta19-2.1ubuntu1.20.04.1.dsc' libcaca_0.99.beta19-2.1ubuntu1.20.04.1.dsc 2363 SHA512:027984b062cf432b3cf71d7bd28bb1a447439b43ca3a3bb3d5328c1761f815e9a8c0ecf921109bf88f44ba9a6cccc1d4959136b4381920fd87e250abf5969efe
-'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcaca/libcaca_0.99.beta19.orig.tar.gz' libcaca_0.99.beta19.orig.tar.gz 1203495 SHA512:780fc7684d40207cc10df3f87d6d8f1d47ddfffa0e76e41a5ce671b82d5c7f090facb054c3d49ca7c4ea1a619625bb9085ce52f837f50792b4a2d776a4c68e15
-'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcaca/libcaca_0.99.beta19-2.1ubuntu1.20.04.1.debian.tar.xz' libcaca_0.99.beta19-2.1ubuntu1.20.04.1.debian.tar.xz 15176 SHA512:0a9e3b8d20142af3c6ca0eefda9ba983387c3fbae6d4864b94e4f9e73864feb30b563b248cae6d223a644aaa630d8c2a6ac7a8e60febfe72f842cec7b1b8af30
-```
 
 ### `dpkg` source package: `libcanberra=0.30-7ubuntu1`
 
@@ -8086,14 +8076,9 @@ Licenses: (parsed from: `/usr/share/doc/libpulse0/copyright`)
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pulseaudio=1:13.99.1-1ubuntu3.11
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pulseaudio/pulseaudio_13.99.1-1ubuntu3.11.dsc' pulseaudio_13.99.1-1ubuntu3.11.dsc 3223 SHA512:88a201290ce486c3b24d7a7e33f6646740bfa58b5bd980fbb62f5498233f7910ebb6f99570e7833e1e4aede3bb562ebf0f229ee4d317894635651d2b925ac63f
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pulseaudio/pulseaudio_13.99.1.orig.tar.xz' pulseaudio_13.99.1.orig.tar.xz 1955840 SHA512:426530b6b9dd94dcc848067376857faae42e86878a82784c5bafa615a68dcc7e22702e0cb5835f91160f19fc9934fe3d53b7d387e3f42b6595fa934b172fe2aa
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pulseaudio/pulseaudio_13.99.1-1ubuntu3.11.debian.tar.xz' pulseaudio_13.99.1-1ubuntu3.11.debian.tar.xz 157332 SHA512:151f0d2d20e402865d8b9b1e9bf10315e54b42d95412f14425e4c23724d8e89e0e9e8dfd73ff03702221adce01a0b224e6a755b64d74e125bf960bc2886813f4
-```
 
 ### `dpkg` source package: `pygobject=3.36.0-1`
 
