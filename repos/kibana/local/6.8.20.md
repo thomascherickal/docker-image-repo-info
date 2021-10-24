@@ -36,6 +36,8 @@ Source:
 
 ```console
 $ yumdownloader --quiet --source --urls acl-2.2.51-15.el7
+http://mirrors.cmich.edu/centos/7.9.2009/updates/x86_64/repodata/repomd.xml: [Errno 12] Timeout on http://mirrors.cmich.edu/centos/7.9.2009/updates/x86_64/repodata/repomd.xml: (28, 'Operation too slow. Less than 1000 bytes/sec transferred the last 30 seconds')
+Trying other mirror.
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
