@@ -19,6 +19,7 @@
 -	[`openjdk:11-jdk-windowsservercore`](#openjdk11-jdk-windowsservercore)
 -	[`openjdk:11-jdk-windowsservercore-1809`](#openjdk11-jdk-windowsservercore-1809)
 -	[`openjdk:11-jdk-windowsservercore-ltsc2016`](#openjdk11-jdk-windowsservercore-ltsc2016)
+-	[`openjdk:11-jdk-windowsservercore-ltsc2022`](#openjdk11-jdk-windowsservercore-ltsc2022)
 -	[`openjdk:11-jre`](#openjdk11-jre)
 -	[`openjdk:11-jre-bullseye`](#openjdk11-jre-bullseye)
 -	[`openjdk:11-jre-buster`](#openjdk11-jre-buster)
@@ -30,6 +31,7 @@
 -	[`openjdk:11-jre-windowsservercore`](#openjdk11-jre-windowsservercore)
 -	[`openjdk:11-jre-windowsservercore-1809`](#openjdk11-jre-windowsservercore-1809)
 -	[`openjdk:11-jre-windowsservercore-ltsc2016`](#openjdk11-jre-windowsservercore-ltsc2016)
+-	[`openjdk:11-jre-windowsservercore-ltsc2022`](#openjdk11-jre-windowsservercore-ltsc2022)
 -	[`openjdk:11-nanoserver`](#openjdk11-nanoserver)
 -	[`openjdk:11-nanoserver-1809`](#openjdk11-nanoserver-1809)
 -	[`openjdk:11-oracle`](#openjdk11-oracle)
@@ -41,6 +43,7 @@
 -	[`openjdk:11-windowsservercore`](#openjdk11-windowsservercore)
 -	[`openjdk:11-windowsservercore-1809`](#openjdk11-windowsservercore-1809)
 -	[`openjdk:11-windowsservercore-ltsc2016`](#openjdk11-windowsservercore-ltsc2016)
+-	[`openjdk:11-windowsservercore-ltsc2022`](#openjdk11-windowsservercore-ltsc2022)
 -	[`openjdk:11.0`](#openjdk110)
 -	[`openjdk:11.0-bullseye`](#openjdk110-bullseye)
 -	[`openjdk:11.0-buster`](#openjdk110-buster)
@@ -58,6 +61,7 @@
 -	[`openjdk:11.0-jdk-windowsservercore`](#openjdk110-jdk-windowsservercore)
 -	[`openjdk:11.0-jdk-windowsservercore-1809`](#openjdk110-jdk-windowsservercore-1809)
 -	[`openjdk:11.0-jdk-windowsservercore-ltsc2016`](#openjdk110-jdk-windowsservercore-ltsc2016)
+-	[`openjdk:11.0-jdk-windowsservercore-ltsc2022`](#openjdk110-jdk-windowsservercore-ltsc2022)
 -	[`openjdk:11.0-jre`](#openjdk110-jre)
 -	[`openjdk:11.0-jre-bullseye`](#openjdk110-jre-bullseye)
 -	[`openjdk:11.0-jre-buster`](#openjdk110-jre-buster)
@@ -69,6 +73,7 @@
 -	[`openjdk:11.0-jre-windowsservercore`](#openjdk110-jre-windowsservercore)
 -	[`openjdk:11.0-jre-windowsservercore-1809`](#openjdk110-jre-windowsservercore-1809)
 -	[`openjdk:11.0-jre-windowsservercore-ltsc2016`](#openjdk110-jre-windowsservercore-ltsc2016)
+-	[`openjdk:11.0-jre-windowsservercore-ltsc2022`](#openjdk110-jre-windowsservercore-ltsc2022)
 -	[`openjdk:11.0-nanoserver`](#openjdk110-nanoserver)
 -	[`openjdk:11.0-nanoserver-1809`](#openjdk110-nanoserver-1809)
 -	[`openjdk:11.0-oracle`](#openjdk110-oracle)
@@ -80,6 +85,7 @@
 -	[`openjdk:11.0-windowsservercore`](#openjdk110-windowsservercore)
 -	[`openjdk:11.0-windowsservercore-1809`](#openjdk110-windowsservercore-1809)
 -	[`openjdk:11.0-windowsservercore-ltsc2016`](#openjdk110-windowsservercore-ltsc2016)
+-	[`openjdk:11.0-windowsservercore-ltsc2022`](#openjdk110-windowsservercore-ltsc2022)
 -	[`openjdk:11.0.13`](#openjdk11013)
 -	[`openjdk:11.0.13-bullseye`](#openjdk11013-bullseye)
 -	[`openjdk:11.0.13-buster`](#openjdk11013-buster)
@@ -97,6 +103,7 @@
 -	[`openjdk:11.0.13-jdk-windowsservercore`](#openjdk11013-jdk-windowsservercore)
 -	[`openjdk:11.0.13-jdk-windowsservercore-1809`](#openjdk11013-jdk-windowsservercore-1809)
 -	[`openjdk:11.0.13-jdk-windowsservercore-ltsc2016`](#openjdk11013-jdk-windowsservercore-ltsc2016)
+-	[`openjdk:11.0.13-jdk-windowsservercore-ltsc2022`](#openjdk11013-jdk-windowsservercore-ltsc2022)
 -	[`openjdk:11.0.13-jre`](#openjdk11013-jre)
 -	[`openjdk:11.0.13-jre-bullseye`](#openjdk11013-jre-bullseye)
 -	[`openjdk:11.0.13-jre-buster`](#openjdk11013-jre-buster)
@@ -108,6 +115,7 @@
 -	[`openjdk:11.0.13-jre-windowsservercore`](#openjdk11013-jre-windowsservercore)
 -	[`openjdk:11.0.13-jre-windowsservercore-1809`](#openjdk11013-jre-windowsservercore-1809)
 -	[`openjdk:11.0.13-jre-windowsservercore-ltsc2016`](#openjdk11013-jre-windowsservercore-ltsc2016)
+-	[`openjdk:11.0.13-jre-windowsservercore-ltsc2022`](#openjdk11013-jre-windowsservercore-ltsc2022)
 -	[`openjdk:11.0.13-nanoserver`](#openjdk11013-nanoserver)
 -	[`openjdk:11.0.13-nanoserver-1809`](#openjdk11013-nanoserver-1809)
 -	[`openjdk:11.0.13-oracle`](#openjdk11013-oracle)
@@ -119,6 +127,7 @@
 -	[`openjdk:11.0.13-windowsservercore`](#openjdk11013-windowsservercore)
 -	[`openjdk:11.0.13-windowsservercore-1809`](#openjdk11013-windowsservercore-1809)
 -	[`openjdk:11.0.13-windowsservercore-ltsc2016`](#openjdk11013-windowsservercore-ltsc2016)
+-	[`openjdk:11.0.13-windowsservercore-ltsc2022`](#openjdk11013-windowsservercore-ltsc2022)
 -	[`openjdk:17`](#openjdk17)
 -	[`openjdk:17-bullseye`](#openjdk17-bullseye)
 -	[`openjdk:17-buster`](#openjdk17-buster)
@@ -136,6 +145,7 @@
 -	[`openjdk:17-jdk-windowsservercore`](#openjdk17-jdk-windowsservercore)
 -	[`openjdk:17-jdk-windowsservercore-1809`](#openjdk17-jdk-windowsservercore-1809)
 -	[`openjdk:17-jdk-windowsservercore-ltsc2016`](#openjdk17-jdk-windowsservercore-ltsc2016)
+-	[`openjdk:17-jdk-windowsservercore-ltsc2022`](#openjdk17-jdk-windowsservercore-ltsc2022)
 -	[`openjdk:17-nanoserver`](#openjdk17-nanoserver)
 -	[`openjdk:17-nanoserver-1809`](#openjdk17-nanoserver-1809)
 -	[`openjdk:17-oracle`](#openjdk17-oracle)
@@ -147,6 +157,7 @@
 -	[`openjdk:17-windowsservercore`](#openjdk17-windowsservercore)
 -	[`openjdk:17-windowsservercore-1809`](#openjdk17-windowsservercore-1809)
 -	[`openjdk:17-windowsservercore-ltsc2016`](#openjdk17-windowsservercore-ltsc2016)
+-	[`openjdk:17-windowsservercore-ltsc2022`](#openjdk17-windowsservercore-ltsc2022)
 -	[`openjdk:17.0`](#openjdk170)
 -	[`openjdk:17.0-bullseye`](#openjdk170-bullseye)
 -	[`openjdk:17.0-buster`](#openjdk170-buster)
@@ -164,6 +175,7 @@
 -	[`openjdk:17.0-jdk-windowsservercore`](#openjdk170-jdk-windowsservercore)
 -	[`openjdk:17.0-jdk-windowsservercore-1809`](#openjdk170-jdk-windowsservercore-1809)
 -	[`openjdk:17.0-jdk-windowsservercore-ltsc2016`](#openjdk170-jdk-windowsservercore-ltsc2016)
+-	[`openjdk:17.0-jdk-windowsservercore-ltsc2022`](#openjdk170-jdk-windowsservercore-ltsc2022)
 -	[`openjdk:17.0-nanoserver`](#openjdk170-nanoserver)
 -	[`openjdk:17.0-nanoserver-1809`](#openjdk170-nanoserver-1809)
 -	[`openjdk:17.0-oracle`](#openjdk170-oracle)
@@ -175,6 +187,7 @@
 -	[`openjdk:17.0-windowsservercore`](#openjdk170-windowsservercore)
 -	[`openjdk:17.0-windowsservercore-1809`](#openjdk170-windowsservercore-1809)
 -	[`openjdk:17.0-windowsservercore-ltsc2016`](#openjdk170-windowsservercore-ltsc2016)
+-	[`openjdk:17.0-windowsservercore-ltsc2022`](#openjdk170-windowsservercore-ltsc2022)
 -	[`openjdk:17.0.1`](#openjdk1701)
 -	[`openjdk:17.0.1-bullseye`](#openjdk1701-bullseye)
 -	[`openjdk:17.0.1-buster`](#openjdk1701-buster)
@@ -192,6 +205,7 @@
 -	[`openjdk:17.0.1-jdk-windowsservercore`](#openjdk1701-jdk-windowsservercore)
 -	[`openjdk:17.0.1-jdk-windowsservercore-1809`](#openjdk1701-jdk-windowsservercore-1809)
 -	[`openjdk:17.0.1-jdk-windowsservercore-ltsc2016`](#openjdk1701-jdk-windowsservercore-ltsc2016)
+-	[`openjdk:17.0.1-jdk-windowsservercore-ltsc2022`](#openjdk1701-jdk-windowsservercore-ltsc2022)
 -	[`openjdk:17.0.1-nanoserver`](#openjdk1701-nanoserver)
 -	[`openjdk:17.0.1-nanoserver-1809`](#openjdk1701-nanoserver-1809)
 -	[`openjdk:17.0.1-oracle`](#openjdk1701-oracle)
@@ -203,6 +217,7 @@
 -	[`openjdk:17.0.1-windowsservercore`](#openjdk1701-windowsservercore)
 -	[`openjdk:17.0.1-windowsservercore-1809`](#openjdk1701-windowsservercore-1809)
 -	[`openjdk:17.0.1-windowsservercore-ltsc2016`](#openjdk1701-windowsservercore-ltsc2016)
+-	[`openjdk:17.0.1-windowsservercore-ltsc2022`](#openjdk1701-windowsservercore-ltsc2022)
 -	[`openjdk:18`](#openjdk18)
 -	[`openjdk:18-alpine`](#openjdk18-alpine)
 -	[`openjdk:18-alpine3.13`](#openjdk18-alpine313)
@@ -233,6 +248,7 @@
 -	[`openjdk:18-ea-20-jdk-windowsservercore`](#openjdk18-ea-20-jdk-windowsservercore)
 -	[`openjdk:18-ea-20-jdk-windowsservercore-1809`](#openjdk18-ea-20-jdk-windowsservercore-1809)
 -	[`openjdk:18-ea-20-jdk-windowsservercore-ltsc2016`](#openjdk18-ea-20-jdk-windowsservercore-ltsc2016)
+-	[`openjdk:18-ea-20-jdk-windowsservercore-ltsc2022`](#openjdk18-ea-20-jdk-windowsservercore-ltsc2022)
 -	[`openjdk:18-ea-20-nanoserver`](#openjdk18-ea-20-nanoserver)
 -	[`openjdk:18-ea-20-nanoserver-1809`](#openjdk18-ea-20-nanoserver-1809)
 -	[`openjdk:18-ea-20-oracle`](#openjdk18-ea-20-oracle)
@@ -244,6 +260,7 @@
 -	[`openjdk:18-ea-20-windowsservercore`](#openjdk18-ea-20-windowsservercore)
 -	[`openjdk:18-ea-20-windowsservercore-1809`](#openjdk18-ea-20-windowsservercore-1809)
 -	[`openjdk:18-ea-20-windowsservercore-ltsc2016`](#openjdk18-ea-20-windowsservercore-ltsc2016)
+-	[`openjdk:18-ea-20-windowsservercore-ltsc2022`](#openjdk18-ea-20-windowsservercore-ltsc2022)
 -	[`openjdk:18-ea-alpine`](#openjdk18-ea-alpine)
 -	[`openjdk:18-ea-alpine3.13`](#openjdk18-ea-alpine313)
 -	[`openjdk:18-ea-alpine3.14`](#openjdk18-ea-alpine314)
@@ -266,6 +283,7 @@
 -	[`openjdk:18-ea-jdk-windowsservercore`](#openjdk18-ea-jdk-windowsservercore)
 -	[`openjdk:18-ea-jdk-windowsservercore-1809`](#openjdk18-ea-jdk-windowsservercore-1809)
 -	[`openjdk:18-ea-jdk-windowsservercore-ltsc2016`](#openjdk18-ea-jdk-windowsservercore-ltsc2016)
+-	[`openjdk:18-ea-jdk-windowsservercore-ltsc2022`](#openjdk18-ea-jdk-windowsservercore-ltsc2022)
 -	[`openjdk:18-ea-nanoserver`](#openjdk18-ea-nanoserver)
 -	[`openjdk:18-ea-nanoserver-1809`](#openjdk18-ea-nanoserver-1809)
 -	[`openjdk:18-ea-oracle`](#openjdk18-ea-oracle)
@@ -277,6 +295,7 @@
 -	[`openjdk:18-ea-windowsservercore`](#openjdk18-ea-windowsservercore)
 -	[`openjdk:18-ea-windowsservercore-1809`](#openjdk18-ea-windowsservercore-1809)
 -	[`openjdk:18-ea-windowsservercore-ltsc2016`](#openjdk18-ea-windowsservercore-ltsc2016)
+-	[`openjdk:18-ea-windowsservercore-ltsc2022`](#openjdk18-ea-windowsservercore-ltsc2022)
 -	[`openjdk:18-jdk`](#openjdk18-jdk)
 -	[`openjdk:18-jdk-alpine`](#openjdk18-jdk-alpine)
 -	[`openjdk:18-jdk-alpine3.13`](#openjdk18-jdk-alpine313)
@@ -294,6 +313,7 @@
 -	[`openjdk:18-jdk-windowsservercore`](#openjdk18-jdk-windowsservercore)
 -	[`openjdk:18-jdk-windowsservercore-1809`](#openjdk18-jdk-windowsservercore-1809)
 -	[`openjdk:18-jdk-windowsservercore-ltsc2016`](#openjdk18-jdk-windowsservercore-ltsc2016)
+-	[`openjdk:18-jdk-windowsservercore-ltsc2022`](#openjdk18-jdk-windowsservercore-ltsc2022)
 -	[`openjdk:18-nanoserver`](#openjdk18-nanoserver)
 -	[`openjdk:18-nanoserver-1809`](#openjdk18-nanoserver-1809)
 -	[`openjdk:18-oracle`](#openjdk18-oracle)
@@ -305,6 +325,7 @@
 -	[`openjdk:18-windowsservercore`](#openjdk18-windowsservercore)
 -	[`openjdk:18-windowsservercore-1809`](#openjdk18-windowsservercore-1809)
 -	[`openjdk:18-windowsservercore-ltsc2016`](#openjdk18-windowsservercore-ltsc2016)
+-	[`openjdk:18-windowsservercore-ltsc2022`](#openjdk18-windowsservercore-ltsc2022)
 -	[`openjdk:8`](#openjdk8)
 -	[`openjdk:8-bullseye`](#openjdk8-bullseye)
 -	[`openjdk:8-buster`](#openjdk8-buster)
@@ -322,6 +343,7 @@
 -	[`openjdk:8-jdk-windowsservercore`](#openjdk8-jdk-windowsservercore)
 -	[`openjdk:8-jdk-windowsservercore-1809`](#openjdk8-jdk-windowsservercore-1809)
 -	[`openjdk:8-jdk-windowsservercore-ltsc2016`](#openjdk8-jdk-windowsservercore-ltsc2016)
+-	[`openjdk:8-jdk-windowsservercore-ltsc2022`](#openjdk8-jdk-windowsservercore-ltsc2022)
 -	[`openjdk:8-jre`](#openjdk8-jre)
 -	[`openjdk:8-jre-bullseye`](#openjdk8-jre-bullseye)
 -	[`openjdk:8-jre-buster`](#openjdk8-jre-buster)
@@ -333,6 +355,7 @@
 -	[`openjdk:8-jre-windowsservercore`](#openjdk8-jre-windowsservercore)
 -	[`openjdk:8-jre-windowsservercore-1809`](#openjdk8-jre-windowsservercore-1809)
 -	[`openjdk:8-jre-windowsservercore-ltsc2016`](#openjdk8-jre-windowsservercore-ltsc2016)
+-	[`openjdk:8-jre-windowsservercore-ltsc2022`](#openjdk8-jre-windowsservercore-ltsc2022)
 -	[`openjdk:8-nanoserver`](#openjdk8-nanoserver)
 -	[`openjdk:8-nanoserver-1809`](#openjdk8-nanoserver-1809)
 -	[`openjdk:8-oracle`](#openjdk8-oracle)
@@ -344,6 +367,7 @@
 -	[`openjdk:8-windowsservercore`](#openjdk8-windowsservercore)
 -	[`openjdk:8-windowsservercore-1809`](#openjdk8-windowsservercore-1809)
 -	[`openjdk:8-windowsservercore-ltsc2016`](#openjdk8-windowsservercore-ltsc2016)
+-	[`openjdk:8-windowsservercore-ltsc2022`](#openjdk8-windowsservercore-ltsc2022)
 -	[`openjdk:8u312`](#openjdk8u312)
 -	[`openjdk:8u312-bullseye`](#openjdk8u312-bullseye)
 -	[`openjdk:8u312-buster`](#openjdk8u312-buster)
@@ -361,6 +385,7 @@
 -	[`openjdk:8u312-jdk-windowsservercore`](#openjdk8u312-jdk-windowsservercore)
 -	[`openjdk:8u312-jdk-windowsservercore-1809`](#openjdk8u312-jdk-windowsservercore-1809)
 -	[`openjdk:8u312-jdk-windowsservercore-ltsc2016`](#openjdk8u312-jdk-windowsservercore-ltsc2016)
+-	[`openjdk:8u312-jdk-windowsservercore-ltsc2022`](#openjdk8u312-jdk-windowsservercore-ltsc2022)
 -	[`openjdk:8u312-jre`](#openjdk8u312-jre)
 -	[`openjdk:8u312-jre-bullseye`](#openjdk8u312-jre-bullseye)
 -	[`openjdk:8u312-jre-buster`](#openjdk8u312-jre-buster)
@@ -372,6 +397,7 @@
 -	[`openjdk:8u312-jre-windowsservercore`](#openjdk8u312-jre-windowsservercore)
 -	[`openjdk:8u312-jre-windowsservercore-1809`](#openjdk8u312-jre-windowsservercore-1809)
 -	[`openjdk:8u312-jre-windowsservercore-ltsc2016`](#openjdk8u312-jre-windowsservercore-ltsc2016)
+-	[`openjdk:8u312-jre-windowsservercore-ltsc2022`](#openjdk8u312-jre-windowsservercore-ltsc2022)
 -	[`openjdk:8u312-nanoserver`](#openjdk8u312-nanoserver)
 -	[`openjdk:8u312-nanoserver-1809`](#openjdk8u312-nanoserver-1809)
 -	[`openjdk:8u312-oracle`](#openjdk8u312-oracle)
@@ -383,6 +409,7 @@
 -	[`openjdk:8u312-windowsservercore`](#openjdk8u312-windowsservercore)
 -	[`openjdk:8u312-windowsservercore-1809`](#openjdk8u312-windowsservercore-1809)
 -	[`openjdk:8u312-windowsservercore-ltsc2016`](#openjdk8u312-windowsservercore-ltsc2016)
+-	[`openjdk:8u312-windowsservercore-ltsc2022`](#openjdk8u312-windowsservercore-ltsc2022)
 -	[`openjdk:bullseye`](#openjdkbullseye)
 -	[`openjdk:buster`](#openjdkbuster)
 -	[`openjdk:jdk`](#openjdkjdk)
@@ -399,6 +426,7 @@
 -	[`openjdk:jdk-windowsservercore`](#openjdkjdk-windowsservercore)
 -	[`openjdk:jdk-windowsservercore-1809`](#openjdkjdk-windowsservercore-1809)
 -	[`openjdk:jdk-windowsservercore-ltsc2016`](#openjdkjdk-windowsservercore-ltsc2016)
+-	[`openjdk:jdk-windowsservercore-ltsc2022`](#openjdkjdk-windowsservercore-ltsc2022)
 -	[`openjdk:latest`](#openjdklatest)
 -	[`openjdk:nanoserver`](#openjdknanoserver)
 -	[`openjdk:nanoserver-1809`](#openjdknanoserver-1809)
@@ -411,6 +439,7 @@
 -	[`openjdk:windowsservercore`](#openjdkwindowsservercore)
 -	[`openjdk:windowsservercore-1809`](#openjdkwindowsservercore-1809)
 -	[`openjdk:windowsservercore-ltsc2016`](#openjdkwindowsservercore-ltsc2016)
+-	[`openjdk:windowsservercore-ltsc2022`](#openjdkwindowsservercore-ltsc2022)
 
 ## `openjdk:11`
 
@@ -2847,6 +2876,10 @@ CMD ["jshell"]
 		Size: 1.4 KB (1428 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `openjdk:11-jdk-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
+
 ## `openjdk:11-jre`
 
 ```console
@@ -4232,6 +4265,10 @@ RUN Write-Host ('Downloading {0} ...' -f $env:JAVA_URL); 	[Net.ServicePointManag
 		Size: 39.8 MB (39758552 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `openjdk:11-jre-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
+
 ## `openjdk:11-nanoserver`
 
 ```console
@@ -5424,6 +5461,10 @@ CMD ["jshell"]
 		Last Modified: Thu, 21 Oct 2021 23:45:05 GMT  
 		Size: 1.4 KB (1428 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `openjdk:11-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
 
 ## `openjdk:11.0`
 
@@ -7860,6 +7901,10 @@ CMD ["jshell"]
 		Size: 1.4 KB (1428 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `openjdk:11.0-jdk-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
+
 ## `openjdk:11.0-jre`
 
 ```console
@@ -9245,6 +9290,10 @@ RUN Write-Host ('Downloading {0} ...' -f $env:JAVA_URL); 	[Net.ServicePointManag
 		Size: 39.8 MB (39758552 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `openjdk:11.0-jre-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
+
 ## `openjdk:11.0-nanoserver`
 
 ```console
@@ -10437,6 +10486,10 @@ CMD ["jshell"]
 		Last Modified: Thu, 21 Oct 2021 23:45:05 GMT  
 		Size: 1.4 KB (1428 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `openjdk:11.0-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
 
 ## `openjdk:11.0.13`
 
@@ -12873,6 +12926,10 @@ CMD ["jshell"]
 		Size: 1.4 KB (1428 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `openjdk:11.0.13-jdk-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
+
 ## `openjdk:11.0.13-jre`
 
 ```console
@@ -14258,6 +14315,10 @@ RUN Write-Host ('Downloading {0} ...' -f $env:JAVA_URL); 	[Net.ServicePointManag
 		Size: 39.8 MB (39758552 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `openjdk:11.0.13-jre-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
+
 ## `openjdk:11.0.13-nanoserver`
 
 ```console
@@ -15450,6 +15511,10 @@ CMD ["jshell"]
 		Last Modified: Thu, 21 Oct 2021 23:45:05 GMT  
 		Size: 1.4 KB (1428 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `openjdk:11.0.13-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
 
 ## `openjdk:17`
 
@@ -17754,6 +17819,10 @@ CMD ["jshell"]
 		Size: 1.4 KB (1433 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `openjdk:17-jdk-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
+
 ## `openjdk:17-nanoserver`
 
 ```console
@@ -18934,6 +19003,10 @@ CMD ["jshell"]
 		Last Modified: Tue, 19 Oct 2021 23:21:11 GMT  
 		Size: 1.4 KB (1433 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `openjdk:17-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
 
 ## `openjdk:17.0`
 
@@ -21238,6 +21311,10 @@ CMD ["jshell"]
 		Size: 1.4 KB (1433 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `openjdk:17.0-jdk-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
+
 ## `openjdk:17.0-nanoserver`
 
 ```console
@@ -22418,6 +22495,10 @@ CMD ["jshell"]
 		Last Modified: Tue, 19 Oct 2021 23:21:11 GMT  
 		Size: 1.4 KB (1433 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `openjdk:17.0-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
 
 ## `openjdk:17.0.1`
 
@@ -24722,6 +24803,10 @@ CMD ["jshell"]
 		Size: 1.4 KB (1433 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `openjdk:17.0.1-jdk-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
+
 ## `openjdk:17.0.1-nanoserver`
 
 ```console
@@ -25902,6 +25987,10 @@ CMD ["jshell"]
 		Last Modified: Tue, 19 Oct 2021 23:21:11 GMT  
 		Size: 1.4 KB (1433 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `openjdk:17.0.1-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
 
 ## `openjdk:18`
 
@@ -29546,6 +29635,10 @@ CMD ["jshell"]
 		Size: 1.4 KB (1421 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `openjdk:18-ea-20-jdk-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
+
 ## `openjdk:18-ea-20-nanoserver`
 
 ```console
@@ -30726,6 +30819,10 @@ CMD ["jshell"]
 		Last Modified: Thu, 21 Oct 2021 23:42:57 GMT  
 		Size: 1.4 KB (1421 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `openjdk:18-ea-20-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
 
 ## `openjdk:18-ea-alpine`
 
@@ -33091,6 +33188,10 @@ CMD ["jshell"]
 		Size: 1.4 KB (1421 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `openjdk:18-ea-jdk-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
+
 ## `openjdk:18-ea-nanoserver`
 
 ```console
@@ -34271,6 +34372,10 @@ CMD ["jshell"]
 		Last Modified: Thu, 21 Oct 2021 23:42:57 GMT  
 		Size: 1.4 KB (1421 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `openjdk:18-ea-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
 
 ## `openjdk:18-jdk`
 
@@ -36182,6 +36287,10 @@ CMD ["jshell"]
 		Size: 1.4 KB (1421 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `openjdk:18-jdk-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
+
 ## `openjdk:18-nanoserver`
 
 ```console
@@ -37362,6 +37471,10 @@ CMD ["jshell"]
 		Last Modified: Thu, 21 Oct 2021 23:42:57 GMT  
 		Size: 1.4 KB (1421 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `openjdk:18-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
 
 ## `openjdk:8`
 
@@ -39690,6 +39803,10 @@ RUN Write-Host ('Downloading {0} ...' -f $env:JAVA_URL); 	[Net.ServicePointManag
 		Size: 101.4 MB (101422531 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `openjdk:8-jdk-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
+
 ## `openjdk:8-jre`
 
 ```console
@@ -41075,6 +41192,10 @@ RUN Write-Host ('Downloading {0} ...' -f $env:JAVA_URL); 	[Net.ServicePointManag
 		Size: 38.6 MB (38577604 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `openjdk:8-jre-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
+
 ## `openjdk:8-nanoserver`
 
 ```console
@@ -42207,6 +42328,10 @@ RUN Write-Host ('Downloading {0} ...' -f $env:JAVA_URL); 	[Net.ServicePointManag
 		Last Modified: Thu, 21 Oct 2021 23:55:02 GMT  
 		Size: 101.4 MB (101422531 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `openjdk:8-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
 
 ## `openjdk:8u312`
 
@@ -44535,6 +44660,10 @@ RUN Write-Host ('Downloading {0} ...' -f $env:JAVA_URL); 	[Net.ServicePointManag
 		Size: 101.4 MB (101422531 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `openjdk:8u312-jdk-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
+
 ## `openjdk:8u312-jre`
 
 ```console
@@ -45920,6 +46049,10 @@ RUN Write-Host ('Downloading {0} ...' -f $env:JAVA_URL); 	[Net.ServicePointManag
 		Size: 38.6 MB (38577604 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `openjdk:8u312-jre-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
+
 ## `openjdk:8u312-nanoserver`
 
 ```console
@@ -47052,6 +47185,10 @@ RUN Write-Host ('Downloading {0} ...' -f $env:JAVA_URL); 	[Net.ServicePointManag
 		Last Modified: Thu, 21 Oct 2021 23:55:02 GMT  
 		Size: 101.4 MB (101422531 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `openjdk:8u312-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
 
 ## `openjdk:bullseye`
 
@@ -49081,6 +49218,10 @@ CMD ["jshell"]
 		Size: 1.4 KB (1433 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `openjdk:jdk-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
+
 ## `openjdk:latest`
 
 ```console
@@ -50536,3 +50677,7 @@ CMD ["jshell"]
 		Last Modified: Tue, 19 Oct 2021 23:21:11 GMT  
 		Size: 1.4 KB (1433 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `openjdk:windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
