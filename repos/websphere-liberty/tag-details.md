@@ -2,6 +2,10 @@
 
 # Tags of `websphere-liberty`
 
+-	[`websphere-liberty:21.0.0.10-full-java11-openj9`](#websphere-liberty210010-full-java11-openj9)
+-	[`websphere-liberty:21.0.0.10-full-java8-ibmjava`](#websphere-liberty210010-full-java8-ibmjava)
+-	[`websphere-liberty:21.0.0.10-kernel-java11-openj9`](#websphere-liberty210010-kernel-java11-openj9)
+-	[`websphere-liberty:21.0.0.10-kernel-java8-ibmjava`](#websphere-liberty210010-kernel-java8-ibmjava)
 -	[`websphere-liberty:21.0.0.6-full-java11-openj9`](#websphere-liberty21006-full-java11-openj9)
 -	[`websphere-liberty:21.0.0.6-full-java8-ibmjava`](#websphere-liberty21006-full-java8-ibmjava)
 -	[`websphere-liberty:21.0.0.6-kernel-java11-openj9`](#websphere-liberty21006-kernel-java11-openj9)
@@ -15,6 +19,42 @@
 -	[`websphere-liberty:kernel`](#websphere-libertykernel)
 -	[`websphere-liberty:kernel-java11-openj9`](#websphere-libertykernel-java11-openj9)
 -	[`websphere-liberty:latest`](#websphere-libertylatest)
+
+## `websphere-liberty:21.0.0.10-full-java11-openj9`
+
+```console
+$ docker pull websphere-liberty@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `websphere-liberty:21.0.0.10-full-java8-ibmjava`
+
+```console
+$ docker pull websphere-liberty@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `websphere-liberty:21.0.0.10-kernel-java11-openj9`
+
+```console
+$ docker pull websphere-liberty@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `websphere-liberty:21.0.0.10-kernel-java8-ibmjava`
+
+```console
+$ docker pull websphere-liberty@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `websphere-liberty:21.0.0.6-full-java11-openj9`
 
