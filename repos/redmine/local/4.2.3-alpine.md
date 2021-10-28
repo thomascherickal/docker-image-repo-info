@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:45c9f7b7805ed2c9a0a9609e8faedd74ce84f10c48dec0360e1bbf0189276d06`
-- Created: `2021-10-11T22:23:29.795567294Z`
-- Virtual Size: ~ 350.21 Mb  
+- Image ID: `sha256:36f336c8992dbd63a4e68eeded9e6543628da2062113548e88876643b50ef10b`
+- Created: `2021-10-28T02:01:54.033870141Z`
+- Virtual Size: ~ 347.60 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -437,16 +437,16 @@ LGPL-2.0-or-later
 ### `apk` package: `ghostscript`
 
 ```console
-ghostscript-9.53.3-r0 description:
+ghostscript-9.53.3-r1 description:
 An interpreter for the PostScript language and for PDF
 
-ghostscript-9.53.3-r0 webpage:
+ghostscript-9.53.3-r1 webpage:
 https://ghostscript.com/
 
-ghostscript-9.53.3-r0 installed size:
+ghostscript-9.53.3-r1 installed size:
 48 MiB
 
-ghostscript-9.53.3-r0 license:
+ghostscript-9.53.3-r1 license:
 AGPL-3.0-or-later
 
 ```
@@ -743,16 +743,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.78.0-r0 description:
+libcurl-7.79.1-r0 description:
 The multiprotocol file transfer library
 
-libcurl-7.78.0-r0 webpage:
+libcurl-7.79.1-r0 webpage:
 https://curl.se/
 
-libcurl-7.78.0-r0 installed size:
+libcurl-7.79.1-r0 installed size:
 500 KiB
 
-libcurl-7.78.0-r0 license:
+libcurl-7.79.1-r0 license:
 MIT
 
 ```
@@ -1457,16 +1457,16 @@ MIT
 ### `apk` package: `nettle`
 
 ```console
-nettle-3.7.2-r0 description:
+nettle-3.7.3-r0 description:
 A low-level cryptographic library
 
-nettle-3.7.2-r0 webpage:
+nettle-3.7.3-r0 webpage:
 https://www.lysator.liu.se/~nisse/nettle/
 
-nettle-3.7.2-r0 installed size:
+nettle-3.7.3-r0 installed size:
 564 KiB
 
-nettle-3.7.2-r0 license:
+nettle-3.7.3-r0 license:
 LGPL-2.0-or-later
 
 ```
@@ -1491,16 +1491,16 @@ MIT
 ### `apk` package: `openssh-client`
 
 ```console
-openssh-client-8.4_p1-r3 description:
+openssh-client-8.4_p1-r4 description:
 OpenBSD's SSH client
 
-openssh-client-8.4_p1-r3 webpage:
+openssh-client-8.4_p1-r4 webpage:
 https://www.openssh.com/portable.html
 
-openssh-client-8.4_p1-r3 installed size:
+openssh-client-8.4_p1-r4 installed size:
 3556 KiB
 
-openssh-client-8.4_p1-r3 license:
+openssh-client-8.4_p1-r4 license:
 BSD
 
 ```
@@ -1508,16 +1508,16 @@ BSD
 ### `apk` package: `openssh-keygen`
 
 ```console
-openssh-keygen-8.4_p1-r3 description:
+openssh-keygen-8.4_p1-r4 description:
 ssh helper program for generating keys
 
-openssh-keygen-8.4_p1-r3 webpage:
+openssh-keygen-8.4_p1-r4 webpage:
 https://www.openssh.com/portable.html
 
-openssh-keygen-8.4_p1-r3 installed size:
+openssh-keygen-8.4_p1-r4 installed size:
 424 KiB
 
-openssh-keygen-8.4_p1-r3 license:
+openssh-keygen-8.4_p1-r4 license:
 BSD
 
 ```
@@ -1848,16 +1848,16 @@ MIT
 ### `apk` package: `tzdata`
 
 ```console
-tzdata-2021a-r0 description:
+tzdata-2021e-r0 description:
 Timezone data
 
-tzdata-2021a-r0 webpage:
+tzdata-2021e-r0 webpage:
 https://www.iana.org/time-zones
 
-tzdata-2021a-r0 installed size:
-3436 KiB
+tzdata-2021e-r0 installed size:
+3376 KiB
 
-tzdata-2021a-r0 license:
+tzdata-2021e-r0 license:
 Public-Domain
 
 ```
