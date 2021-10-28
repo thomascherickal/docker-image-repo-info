@@ -1,10 +1,10 @@
-# `eclipse-temurin:16.0.2_7-jdk-alpine`
+# `eclipse-temurin:11.0.13_8-jdk-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:ef6cff39622f79ff428ba36a792e28fea35296cd93008de6f77a1d004f9c8330`
-- Created: `2021-09-30T17:20:22.696048497Z`
-- Virtual Size: ~ 360.96 Mb  
+- Image ID: `sha256:70f0247041868c48857034eb586d02ec9aa47e1f0ccb446c36fee549cb857a81`
+- Created: `2021-10-27T00:21:25.293103439Z`
+- Virtual Size: ~ 326.33 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["jshell"]`
@@ -13,7 +13,7 @@
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk-16.0.2+7`
+  - `JAVA_VERSION=jdk-11.0.13+8`
   - `JAVA_HOME=/opt/java/openjdk`
 
 ## `apk` (`.apk`-based packages)
