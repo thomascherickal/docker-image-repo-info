@@ -323,14 +323,9 @@ Licenses: (parsed from: `/usr/share/doc/binutils/copyright`, `/usr/share/doc/bin
 - `GPL`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris binutils=2.30-21ubuntu1~18.04.5
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.30-21ubuntu1~18.04.5.dsc' binutils_2.30-21ubuntu1~18.04.5.dsc 11670 SHA512:8c2ee7c75f4463383378c0aad0227be26ca2639086c45a93e8f029f66b57c40ee40c8a77a3f9d0900525c490b669f8c2c9c2356efaa6022a42f912d6ad7e5adb
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.30.orig.tar.xz' binutils_2.30.orig.tar.xz 20286700 SHA512:e747ea20d8d79fcd21b9d9f6695059caa7189d60f19256da398e34b789fea9a133c32b192e9693b5828d27683739b0198431bf8b3e39fb3b04884cf89d9aa839
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.30-21ubuntu1~18.04.5.debian.tar.xz' binutils_2.30-21ubuntu1~18.04.5.debian.tar.xz 623680 SHA512:52ae502ffd7a8353b3bb7d547a43d74648f1c9b3f0fa460418f246b7bebd50f7ca40cebc59335dfa02233fbb7cf648ed1e9e145fc4976aec495cdc00979ab29b
-```
 
 ### `dpkg` source package: `boost-defaults=1.65.1.0ubuntu1`
 
@@ -2250,13 +2245,9 @@ Licenses: (parsed from: `/usr/share/doc/ignition-tools/copyright`, `/usr/share/d
 - `Apache`
 - `Apache-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ignition-tools=1.3.0-1~bionic
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-tools/ignition-tools_1.3.0-1~bionic.dsc' ignition-tools_1.3.0-1~bionic.dsc 891 SHA256:64b310b78fd14f389e06426275dc8872c48e703bbe1b8439e5d0ce6060169dd7
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-tools/ignition-tools_1.3.0-1~bionic.tar.xz' ignition-tools_1.3.0-1~bionic.tar.xz 50196 SHA256:542415d6c6f68eb2b63006353bdc82c0eb77bf69b2890e07e92eb7a056235ca7
-```
 
 ### `dpkg` source package: `ignition-transport8=8.2.0-1~bionic`
 
@@ -2274,14 +2265,9 @@ Licenses: (parsed from: `/usr/share/doc/libignition-transport8/copyright`, `/usr
 - `Apache-2.0`
 - `BSD-3-clause`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ignition-transport8=8.2.0-1~bionic
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-transport8/ignition-transport8_8.2.0-1~bionic.dsc' ignition-transport8_8.2.0-1~bionic.dsc 1772 SHA256:e509d1212415ac79dcd7dd54b9bd77650e0738b6f3b5905fb0acb9306bc908fd
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-transport8/ignition-transport8_8.2.0.orig.tar.bz2' ignition-transport8_8.2.0.orig.tar.bz2 561895 SHA256:cff732a797ea08fdb4834331bea14ae50d1cbdd63efae613a475bc42f32e29b3
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-transport8/ignition-transport8_8.2.0-1~bionic.debian.tar.xz' ignition-transport8_8.2.0-1~bionic.debian.tar.xz 3112 SHA256:e341261f171b4d2b390e36637249bacff3efbc0e120faacb09dbe249b82c8899
-```
 
 ### `dpkg` source package: `ilmbase=2.2.0-11ubuntu2`
 
@@ -5201,14 +5187,9 @@ Licenses: (parsed from: `/usr/share/doc/libmysqlclient-dev/copyright`, `/usr/sha
 - `public-domain`
 - `zlib/libpng`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mysql-5.7=5.7.35-0ubuntu0.18.04.2
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-5.7_5.7.35-0ubuntu0.18.04.2.dsc' mysql-5.7_5.7.35-0ubuntu0.18.04.2.dsc 3446 SHA512:95b2d13ca04bc276da01312a8b5bede5733fda267fbf4ff7c07f1a03ea455b23903b8dc33405ec11305c09f8c9d5c6828ae65d388e6b0b7f471bdb26592bbe30
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-5.7_5.7.35.orig.tar.gz' mysql-5.7_5.7.35.orig.tar.gz 52959014 SHA512:2469c8e13a236aee327bc0828804ba189e3abf78b6e0b3ef65b2343210f9c0cd5313d18b57ae3b76ca1487dc1d70854c8a12e6da61a6fffbce95854dcc792482
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-5.7_5.7.35-0ubuntu0.18.04.2.debian.tar.xz' mysql-5.7_5.7.35-0ubuntu0.18.04.2.debian.tar.xz 156764 SHA512:e6cdcd7748e48b64c133d10273acba793c5dbdbe3cad88fb6c3662e357d6a8b1707429594d1693dde9422657b829794a1a5809907d53a7743846f94bd5ba9ac1
-```
 
 ### `dpkg` source package: `mysql-defaults=1.0.4`
 

@@ -1854,14 +1854,9 @@ Licenses: (parsed from: `/usr/share/doc/libignition-transport8/copyright`)
 - `Apache-2.0`
 - `BSD-3-clause`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ignition-transport8=8.2.0-2~focal
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-transport8/ignition-transport8_8.2.0-2~focal.dsc' ignition-transport8_8.2.0-2~focal.dsc 1769 SHA256:94e9800871c1a1a9ad8364bffe69dc0af1c038c0ed702f8828f2c1fb49f62a91
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-transport8/ignition-transport8_8.2.0.orig.tar.bz2' ignition-transport8_8.2.0.orig.tar.bz2 561895 SHA256:cff732a797ea08fdb4834331bea14ae50d1cbdd63efae613a475bc42f32e29b3
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-transport8/ignition-transport8_8.2.0-2~focal.debian.tar.xz' ignition-transport8_8.2.0-2~focal.debian.tar.xz 3092 SHA256:a9430c35d83565e513d60d832d2f1694ac812ae0bc5da92fcaf9212dde04f5a7
-```
 
 ### `dpkg` source package: `ilmbase=2.3.0-6build1`
 
@@ -4540,14 +4535,9 @@ Licenses: (parsed from: `/usr/share/doc/libmysqlclient21/copyright`)
 - `public-domain`
 - `zlib/libpng`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mysql-8.0=8.0.26-0ubuntu0.20.04.3
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.26-0ubuntu0.20.04.3.dsc' mysql-8.0_8.0.26-0ubuntu0.20.04.3.dsc 3434 SHA512:b06054d7648378bd0bb16bad1d2d242e21770e1b95399239d722041ea35c271189bec9f603b5ee0904ea6a84580308ac7d0eeaa82b824646fd3894c0d6634bbf
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.26.orig.tar.gz' mysql-8.0_8.0.26.orig.tar.gz 291285918 SHA512:63d47cb52407a816dc9f4330b99924624dfee46e57e7fdce19eff32909dd9e23251e2439d1807b002a1661b547173222c77465a3ca4dbb312414a84927809cfc
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.26-0ubuntu0.20.04.3.debian.tar.xz' mysql-8.0_8.0.26-0ubuntu0.20.04.3.debian.tar.xz 160828 SHA512:44a2b92c6847719bf4172f0721f92379dfcb636e74cc5673e60b606f8807aa419a3dccfd6b7d92af8cc7c80172882413e0e0dfedaa29bd4aba4d43d6177c3c02
-```
 
 ### `dpkg` source package: `mysql-defaults=1.0.5ubuntu2`
 
