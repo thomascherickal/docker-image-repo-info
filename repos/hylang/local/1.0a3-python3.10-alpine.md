@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:a99224dc4f095dc6d686562ff2cedfe55c11c69e0b5f9bcbddd2eb8488e963ac`
-- Created: `2021-10-06T21:55:52.03158176Z`
-- Virtual Size: ~ 53.92 Mb  
+- Image ID: `sha256:bb524d778475d67332fc46536d7a62ef3219e2a0a29a6771f9777ad1f0273f21`
+- Created: `2021-10-27T00:40:07.244856496Z`
+- Virtual Size: ~ 53.90 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["hy"]`
@@ -15,8 +15,8 @@
   - `PYTHON_VERSION=3.10.0`
   - `PYTHON_PIP_VERSION=21.2.4`
   - `PYTHON_SETUPTOOLS_VERSION=57.5.0`
-  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/d781367b97acf0ece7e9e304bf281e99b618bf10/public/get-pip.py`
-  - `PYTHON_GET_PIP_SHA256=01249aa3e58ffb3e1686b7141b4e9aac4d398ef4ac3012ed9dff8dd9f685ffe0`
+  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/3cb8888cc2869620f57d5d2da64da38f516078c7/public/get-pip.py`
+  - `PYTHON_GET_PIP_SHA256=c518250e91a70d7b20cceb15272209a4ded2a0c263ae5776f129e0d9b5674309`
   - `HY_VERSION=1.0a3`
 
 ## `apk` (`.apk`-based packages)
