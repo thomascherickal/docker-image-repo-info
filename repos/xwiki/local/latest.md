@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:21927c7266774a4742f3ee3d14e0241587ed0d2513e711cfb3f34176d32484f4`
-- Created: `2021-10-25T18:34:08.888456273Z`
+- Image ID: `sha256:8786d9c85fbb7e91349cc07d90f03f3a1b2de830f1eb28b4f89e6542a0734fc4`
+- Created: `2021-10-27T01:53:19.080759596Z`
 - Virtual Size: ~ 1.28 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -14,7 +14,7 @@
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk-11.0.12+7`
+  - `JAVA_VERSION=jdk-11.0.13+8`
   - `JAVA_HOME=/opt/java/openjdk`
   - `CATALINA_HOME=/usr/local/tomcat`
   - `TOMCAT_NATIVE_LIBDIR=/usr/local/tomcat/native-jni-lib`
