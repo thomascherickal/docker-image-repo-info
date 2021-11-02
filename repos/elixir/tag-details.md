@@ -20,6 +20,15 @@
 -	[`elixir:1.12.3`](#elixir1123)
 -	[`elixir:1.12.3-alpine`](#elixir1123-alpine)
 -	[`elixir:1.12.3-slim`](#elixir1123-slim)
+-	[`elixir:1.13`](#elixir113)
+-	[`elixir:1.13-alpine`](#elixir113-alpine)
+-	[`elixir:1.13-slim`](#elixir113-slim)
+-	[`elixir:1.13.0-rc`](#elixir1130-rc)
+-	[`elixir:1.13.0-rc-alpine`](#elixir1130-rc-alpine)
+-	[`elixir:1.13.0-rc-slim`](#elixir1130-rc-slim)
+-	[`elixir:1.13.0-rc.0`](#elixir1130-rc0)
+-	[`elixir:1.13.0-rc.0-alpine`](#elixir1130-rc0-alpine)
+-	[`elixir:1.13.0-rc.0-slim`](#elixir1130-rc0-slim)
 -	[`elixir:1.6`](#elixir16)
 -	[`elixir:1.6-alpine`](#elixir16-alpine)
 -	[`elixir:1.6-otp-21`](#elixir16-otp-21)
@@ -6877,6 +6886,42 @@ CMD ["iex"]
 		Last Modified: Wed, 27 Oct 2021 22:47:41 GMT  
 		Size: 6.2 MB (6247776 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `elixir:1.13`
+
+**does not exist** (yet?)
+
+## `elixir:1.13-alpine`
+
+**does not exist** (yet?)
+
+## `elixir:1.13-slim`
+
+**does not exist** (yet?)
+
+## `elixir:1.13.0-rc`
+
+**does not exist** (yet?)
+
+## `elixir:1.13.0-rc-alpine`
+
+**does not exist** (yet?)
+
+## `elixir:1.13.0-rc-slim`
+
+**does not exist** (yet?)
+
+## `elixir:1.13.0-rc.0`
+
+**does not exist** (yet?)
+
+## `elixir:1.13.0-rc.0-alpine`
+
+**does not exist** (yet?)
+
+## `elixir:1.13.0-rc.0-slim`
+
+**does not exist** (yet?)
 
 ## `elixir:1.6`
 
