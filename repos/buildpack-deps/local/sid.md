@@ -370,9 +370,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris bash=5.1-3
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.1-3.dsc' bash_5.1-3.dsc 2296 SHA256:bf92eeca4955f1e9432ca10db63cbff699172cea4ab7bdd6e378f7e2b904f3e0
+'http://deb.debian.org/debian/pool/main/b/bash/bash_5.1-3.1.dsc' bash_5.1-3.1.dsc 2304 SHA256:f4dccc92d9afa8d73eecb727e1b40881c64b9c0f405cca6f323d7c52fe4abe74
 'http://deb.debian.org/debian/pool/main/b/bash/bash_5.1.orig.tar.xz' bash_5.1.orig.tar.xz 5802740 SHA256:d5eeee4f953c09826409d572e2e8996a2140d67eb8f382ce1f3a9d23883ad696
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.1-3.debian.tar.xz' bash_5.1-3.debian.tar.xz 92188 SHA256:9a2fba0e8391759bb432b6632adbd70b577da2bc5437961c291e13e5ba610b5b
+'http://deb.debian.org/debian/pool/main/b/bash/bash_5.1-3.1.debian.tar.xz' bash_5.1-3.1.debian.tar.xz 91012 SHA256:e287087297570be5a4abf4697f5c7bedd051148a18b2a0626f6ed5365b3c33e2
 ```
 
 Other potentially useful URLs:
@@ -611,20 +611,13 @@ Licenses: (parsed from: `/usr/share/doc/libsasl2-2/copyright`, `/usr/share/doc/l
 - `GPL-3`
 - `GPL-3+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris cyrus-sasl2=2.1.27+dfsg-2.1
-'http://deb.debian.org/debian/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.27+dfsg-2.1.dsc' cyrus-sasl2_2.1.27+dfsg-2.1.dsc 3433 SHA256:714b4f59fdf5e3c436b0f10d15535f0048f5164a9a40763f2537fadbd2175da8
-'http://deb.debian.org/debian/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.27+dfsg.orig.tar.xz' cyrus-sasl2_2.1.27+dfsg.orig.tar.xz 2058596 SHA256:108b0c691c423837264f05abb559ea76c3dfdd91246555e8abe87c129a6e37cd
-'http://deb.debian.org/debian/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.27+dfsg-2.1.debian.tar.xz' cyrus-sasl2_2.1.27+dfsg-2.1.debian.tar.xz 101356 SHA256:0b2cf5e3118a8d99fc39a8133e5508de298b90507fb8c0846d4dae840bf4ec60
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/cyrus-sasl2/2.1.27+dfsg-2.1/
 
-- https://sources.debian.net/src/cyrus-sasl2/2.1.27+dfsg-2.1/ (for browsing the source)
-- https://sources.debian.net/src/cyrus-sasl2/2.1.27+dfsg-2.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/cyrus-sasl2/2.1.27+dfsg-2.1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `dash=0.5.11+git20210120+802ebd4-1`
 
@@ -2471,21 +2464,13 @@ Licenses: (parsed from: `/usr/share/doc/libfido2-1/copyright`)
 - `ISC`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libfido2=1.8.0-1
-'http://deb.debian.org/debian/pool/main/libf/libfido2/libfido2_1.8.0-1.dsc' libfido2_1.8.0-1.dsc 2577 SHA256:68a0967f2d50cbb1a59a3d23e4c646634b2da1d557f886431f3d01c09ce2742f
-'http://deb.debian.org/debian/pool/main/libf/libfido2/libfido2_1.8.0.orig.tar.gz' libfido2_1.8.0.orig.tar.gz 535947 SHA256:554291188f24ab595cb947f9d2b6ec40ce5afe39d9257c1e2cd0bdef8bf7fd1d
-'http://deb.debian.org/debian/pool/main/libf/libfido2/libfido2_1.8.0.orig.tar.gz.asc' libfido2_1.8.0.orig.tar.gz.asc 833 SHA256:9f7b2f3e133050a5da22399a5908c489123b99e4f359a2010bd2b14a7c2ba52d
-'http://deb.debian.org/debian/pool/main/libf/libfido2/libfido2_1.8.0-1.debian.tar.xz' libfido2_1.8.0-1.debian.tar.xz 52224 SHA256:1ba2d4496eb344abd965df4cdcdc3cdb03dd1248297e8442dde85ef9911565e9
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libfido2/1.8.0-1/
 
-- https://sources.debian.net/src/libfido2/1.8.0-1/ (for browsing the source)
-- https://sources.debian.net/src/libfido2/1.8.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libfido2/1.8.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libgcrypt20=1.9.4-3`
 
@@ -3959,21 +3944,13 @@ Licenses: (parsed from: `/usr/share/doc/mercurial/copyright`, `/usr/share/doc/me
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mercurial=5.9-3
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.9-3.dsc' mercurial_5.9-3.dsc 2744 SHA256:a20c2c7ff21bdd5082c31139766ebe76e976a470c1263d111693ac47bca5b910
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.9.orig.tar.gz' mercurial_5.9.orig.tar.gz 8118681 SHA256:70d53f72d495e97f1bac6e6bf65b9c760dc1d52e166c0b9754d1e54371c1307a
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.9.orig.tar.gz.asc' mercurial_5.9.orig.tar.gz.asc 833 SHA256:e15157a0e65811cd12c8311fbbfbb398cc10b36c91f13b7b88a26d3a43290a4d
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.9-3.debian.tar.xz' mercurial_5.9-3.debian.tar.xz 70424 SHA256:3244cc58529fa578f5ffbc68f84b3a67cb74a69ec6aa25fa5dc34d07cb4af1ed
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mercurial/5.9-3/
 
-- https://sources.debian.net/src/mercurial/5.9-3/ (for browsing the source)
-- https://sources.debian.net/src/mercurial/5.9-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mercurial/5.9-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mpclib3=1.2.0-1`
 
