@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:264c2fd030327ca513a8782e1ffd6ec49cbb4c0821b84f60db16ecd2d55a8d11`
-- Created: `2021-10-16T03:01:44.12258693Z`
-- Virtual Size: ~ 1.93 Gb  
+- Image ID: `sha256:c718c8045650962e902b165dd4db98af588e3bfcd89b6d6c1882b2fb97202c62`
+- Created: `2021-11-01T23:03:38.613876668Z`
+- Virtual Size: ~ 1.94 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/gzserver_entrypoint.sh"]`
@@ -414,16 +414,16 @@ $ apt-get source -qq --print-uris bash=5.0-6ubuntu1.1
 'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.0-6ubuntu1.1.debian.tar.xz' bash_5.0-6ubuntu1.1.debian.tar.xz 74356 SHA512:450eacea5316075107da9951356021091dfc96889057769590ae8505fa851a99d2f48ce300281b8a448c87e9573cfa2f68a04369ee97955be204e73fa2fd6385
 ```
 
-### `dpkg` source package: `binutils=2.34-6ubuntu1.1`
+### `dpkg` source package: `binutils=2.34-6ubuntu1.3`
 
 Binary Packages:
 
-- `binutils=2.34-6ubuntu1.1`
-- `binutils-common:amd64=2.34-6ubuntu1.1`
-- `binutils-x86-64-linux-gnu=2.34-6ubuntu1.1`
-- `libbinutils:amd64=2.34-6ubuntu1.1`
-- `libctf-nobfd0:amd64=2.34-6ubuntu1.1`
-- `libctf0:amd64=2.34-6ubuntu1.1`
+- `binutils=2.34-6ubuntu1.3`
+- `binutils-common:amd64=2.34-6ubuntu1.3`
+- `binutils-x86-64-linux-gnu=2.34-6ubuntu1.3`
+- `libbinutils:amd64=2.34-6ubuntu1.3`
+- `libctf-nobfd0:amd64=2.34-6ubuntu1.3`
+- `libctf0:amd64=2.34-6ubuntu1.3`
 
 Licenses: (parsed from: `/usr/share/doc/binutils/copyright`, `/usr/share/doc/binutils-common/copyright`, `/usr/share/doc/binutils-x86-64-linux-gnu/copyright`, `/usr/share/doc/libbinutils/copyright`, `/usr/share/doc/libctf-nobfd0/copyright`, `/usr/share/doc/libctf0/copyright`)
 
@@ -431,9 +431,14 @@ Licenses: (parsed from: `/usr/share/doc/binutils/copyright`, `/usr/share/doc/bin
 - `GPL`
 - `LGPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris binutils=2.34-6ubuntu1.3
+'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.34-6ubuntu1.3.dsc' binutils_2.34-6ubuntu1.3.dsc 8829 SHA512:4bc4408053e8a0b1a4f97dba2ef1ff20f4c44a34a068e48e0e3e7414d36b968b09d9db50a8430e2527f979216c4e326a6548d75d0baed1b886adb743c5046f25
+'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.34.orig.tar.xz' binutils_2.34.orig.tar.xz 21637796 SHA512:2c7976939dcf5e8c5b7374cccd39bfe803b1bec73c6abfa0eb17c24e1942574c6bdb874c66a092a82adc443182eacd8a5a8001c19a76101f0c7ba40c27de0bbd
+'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.34-6ubuntu1.3.debian.tar.xz' binutils_2.34-6ubuntu1.3.debian.tar.xz 158192 SHA512:9d182ac514e5383892a2a9bbc2267c5439c699557a7392003bdfd43e2fc5c66fb10b793a25c8f17c763d377c1628d070c5a29bf7213513da3e769305517683e2
+```
 
 ### `dpkg` source package: `boost-defaults=1.71.0.0ubuntu2`
 
@@ -1655,15 +1660,15 @@ $ apt-get source -qq --print-uris game-music-emu=0.6.2-1build1
 'http://archive.ubuntu.com/ubuntu/pool/universe/g/game-music-emu/game-music-emu_0.6.2-1build1.debian.tar.xz' game-music-emu_0.6.2-1build1.debian.tar.xz 4496 SHA256:e338369a1656f0ade5b014f714fd5bac196489ac937cf8c5276a005953b92aa8
 ```
 
-### `dpkg` source package: `gazebo11=11.8.1-1~focal`
+### `dpkg` source package: `gazebo11=11.9.0-1~focal`
 
 Binary Packages:
 
-- `gazebo11=11.8.1-1~focal`
-- `gazebo11-common=11.8.1-1~focal`
-- `gazebo11-plugin-base=11.8.1-1~focal`
-- `libgazebo11:amd64=11.8.1-1~focal`
-- `libgazebo11-dev:amd64=11.8.1-1~focal`
+- `gazebo11=11.9.0-1~focal`
+- `gazebo11-common=11.9.0-1~focal`
+- `gazebo11-plugin-base=11.9.0-1~focal`
+- `libgazebo11:amd64=11.9.0-1~focal`
+- `libgazebo11-dev:amd64=11.9.0-1~focal`
 
 Licenses: (parsed from: `/usr/share/doc/gazebo11/copyright`, `/usr/share/doc/gazebo11-common/copyright`, `/usr/share/doc/gazebo11-plugin-base/copyright`, `/usr/share/doc/libgazebo11/copyright`, `/usr/share/doc/libgazebo11-dev/copyright`)
 
@@ -1679,9 +1684,14 @@ Licenses: (parsed from: `/usr/share/doc/gazebo11/copyright`, `/usr/share/doc/gaz
 - `LGPL-3+`
 - `ZLIB`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris gazebo11=11.9.0-1~focal
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo11/gazebo11_11.9.0-1~focal.dsc' gazebo11_11.9.0-1~focal.dsc 2664 SHA256:a8d0cc653c8ace10dde16255d71ce482d4d0657a7cbfb4b9a6e75576472a736d
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo11/gazebo11_11.9.0.orig.tar.bz2' gazebo11_11.9.0.orig.tar.bz2 56472051 SHA256:57dfc5e778a820a435baa050b4888f95cd968fdcb071d417c4c5453691b81f2e
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo11/gazebo11_11.9.0-1~focal.debian.tar.xz' gazebo11_11.9.0-1~focal.debian.tar.xz 6856 SHA256:2a6821597977d4b368fdb1ee0474dd273743b78deeac95366a2d0d13689a74a0
+```
 
 ### `dpkg` source package: `gcc-10=10.3.0-1ubuntu1~20.04`
 
@@ -2408,47 +2418,56 @@ $ apt-get source -qq --print-uris ignition-math6=6.9.2-1~focal
 'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.9.2-1~focal.debian.tar.xz' ignition-math6_6.9.2-1~focal.debian.tar.xz 4116 SHA256:6c0505b3f775972df47828b6c530657f7302ee783a9461c48ef83fb33b2d331e
 ```
 
-### `dpkg` source package: `ignition-msgs5=5.8.0-1~focal`
+### `dpkg` source package: `ignition-msgs5=5.8.1-1~focal`
 
 Binary Packages:
 
-- `libignition-msgs5:amd64=5.8.0-1~focal`
-- `libignition-msgs5-dev:amd64=5.8.0-1~focal`
+- `libignition-msgs5:amd64=5.8.1-1~focal`
+- `libignition-msgs5-dev:amd64=5.8.1-1~focal`
 
 Licenses: (parsed from: `/usr/share/doc/libignition-msgs5/copyright`, `/usr/share/doc/libignition-msgs5-dev/copyright`)
 
 - `Apache`
 - `Apache-2.0`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris ignition-msgs5=5.8.1-1~focal
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-msgs5/ignition-msgs5_5.8.1-1~focal.dsc' ignition-msgs5_5.8.1-1~focal.dsc 1305 SHA256:09c26c46b4a3013dd839934d02e0980c12415c7e9e6dd4db7bb9a42792099c66
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-msgs5/ignition-msgs5_5.8.1.orig.tar.bz2' ignition-msgs5_5.8.1.orig.tar.bz2 260106 SHA256:4d984d9f5b28629c8e8d7f764e8ea84d755dfbcf9492f1775ef1fa3a85c9add0
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-msgs5/ignition-msgs5_5.8.1-1~focal.debian.tar.xz' ignition-msgs5_5.8.1-1~focal.debian.tar.xz 2040 SHA256:a698addcd9ab159094b4b86bf6ac2f36ffba6342469b0645d7b5df18f1f3a7d1
+```
 
-### `dpkg` source package: `ignition-tools=1.3.0-1~focal`
+### `dpkg` source package: `ignition-tools=1.4.1-1~focal`
 
 Binary Packages:
 
-- `ignition-tools:amd64=1.3.0-1~focal`
-- `libignition-tools-dev:amd64=1.3.0-1~focal`
+- `ignition-tools:amd64=1.4.1-1~focal`
+- `libignition-tools-dev:amd64=1.4.1-1~focal`
 
 Licenses: (parsed from: `/usr/share/doc/ignition-tools/copyright`, `/usr/share/doc/libignition-tools-dev/copyright`)
 
 - `Apache`
 - `Apache-2.0`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris ignition-tools=1.4.1-1~focal
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-tools/ignition-tools_1.4.1-1~focal.dsc' ignition-tools_1.4.1-1~focal.dsc 908 SHA256:13999785fd1f7a86eb920b7e6a8e61b49d68b93133a0ba77b2f555e75a37dabf
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-tools/ignition-tools_1.4.1-1~focal.tar.xz' ignition-tools_1.4.1-1~focal.tar.xz 86768 SHA256:15d20c8d88c47f55f11b111b72020de7c92c127a2dbd25f360585d95040357e4
+```
 
-### `dpkg` source package: `ignition-transport8=8.2.0-2~focal`
+### `dpkg` source package: `ignition-transport8=8.2.1-1~focal`
 
 Binary Packages:
 
-- `libignition-transport8:amd64=8.2.0-2~focal`
-- `libignition-transport8-core-dev:amd64=8.2.0-2~focal`
-- `libignition-transport8-dev:amd64=8.2.0-2~focal`
-- `libignition-transport8-log:amd64=8.2.0-2~focal`
-- `libignition-transport8-log-dev:amd64=8.2.0-2~focal`
+- `libignition-transport8:amd64=8.2.1-1~focal`
+- `libignition-transport8-core-dev:amd64=8.2.1-1~focal`
+- `libignition-transport8-dev:amd64=8.2.1-1~focal`
+- `libignition-transport8-log:amd64=8.2.1-1~focal`
+- `libignition-transport8-log-dev:amd64=8.2.1-1~focal`
 
 Licenses: (parsed from: `/usr/share/doc/libignition-transport8/copyright`, `/usr/share/doc/libignition-transport8-core-dev/copyright`, `/usr/share/doc/libignition-transport8-dev/copyright`, `/usr/share/doc/libignition-transport8-log/copyright`, `/usr/share/doc/libignition-transport8-log-dev/copyright`)
 
@@ -2456,9 +2475,14 @@ Licenses: (parsed from: `/usr/share/doc/libignition-transport8/copyright`, `/usr
 - `Apache-2.0`
 - `BSD-3-clause`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris ignition-transport8=8.2.1-1~focal
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-transport8/ignition-transport8_8.2.1-1~focal.dsc' ignition-transport8_8.2.1-1~focal.dsc 1769 SHA256:a39601387151ae7224b4ab867a0bed64c9d11cc36ec8508033c08fe1e4b01ca8
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-transport8/ignition-transport8_8.2.1.orig.tar.bz2' ignition-transport8_8.2.1.orig.tar.bz2 511984 SHA256:bf7e1a06034f180d4e8f97a72219f8bfb73693685cc61ee788821e47612dcab9
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-transport8/ignition-transport8_8.2.1-1~focal.debian.tar.xz' ignition-transport8_8.2.1-1~focal.debian.tar.xz 3112 SHA256:14f4a7bc3d1bca2068b5341f1ae4088a86703d7671b736b4a697b7fb4c013dec
+```
 
 ### `dpkg` source package: `ilmbase=2.3.0-6build1`
 
@@ -2987,19 +3011,24 @@ $ apt-get source -qq --print-uris libbsd=0.10.0-1
 'http://archive.ubuntu.com/ubuntu/pool/main/libb/libbsd/libbsd_0.10.0-1.debian.tar.xz' libbsd_0.10.0-1.debian.tar.xz 16660 SHA256:4cf37d6d5b72702b31b07384612e07173e94e081feef71fec206f86ab38f2411
 ```
 
-### `dpkg` source package: `libcaca=0.99.beta19-2.1ubuntu1.20.04.1`
+### `dpkg` source package: `libcaca=0.99.beta19-2.1ubuntu1.20.04.2`
 
 Binary Packages:
 
-- `libcaca0:amd64=0.99.beta19-2.1ubuntu1.20.04.1`
+- `libcaca0:amd64=0.99.beta19-2.1ubuntu1.20.04.2`
 
 Licenses: (parsed from: `/usr/share/doc/libcaca0/copyright`)
 
 - `LGPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris libcaca=0.99.beta19-2.1ubuntu1.20.04.2
+'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcaca/libcaca_0.99.beta19-2.1ubuntu1.20.04.2.dsc' libcaca_0.99.beta19-2.1ubuntu1.20.04.2.dsc 2363 SHA512:844c7f18d2e731c2c1a78bdb7461fa5bd4abde7476264a7767f67fedce6cac36a53027166e56da9518a51ffea0637d86f7da6ba406558a4b897d33742922ca20
+'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcaca/libcaca_0.99.beta19.orig.tar.gz' libcaca_0.99.beta19.orig.tar.gz 1203495 SHA512:780fc7684d40207cc10df3f87d6d8f1d47ddfffa0e76e41a5ce671b82d5c7f090facb054c3d49ca7c4ea1a619625bb9085ce52f837f50792b4a2d776a4c68e15
+'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcaca/libcaca_0.99.beta19-2.1ubuntu1.20.04.2.debian.tar.xz' libcaca_0.99.beta19-2.1ubuntu1.20.04.2.debian.tar.xz 16176 SHA512:423c5e26004c64f3ae3840e890ef46560638ae83d61af7ec42732d692f4d9b6e397bb2ad60d6bfa7da0f613767e9ec5b2d287eb35bf0f029a38905639e52cce8
+```
 
 ### `dpkg` source package: `libcap-ng=0.7.9-2.1build1`
 
@@ -5224,19 +5253,24 @@ $ apt-get source -qq --print-uris lilv=0.24.6-1ubuntu0.1
 'http://archive.ubuntu.com/ubuntu/pool/universe/l/lilv/lilv_0.24.6-1ubuntu0.1.debian.tar.xz' lilv_0.24.6-1ubuntu0.1.debian.tar.xz 18808 SHA512:c7145aebd247bc912107aed05ea5ae4a660cc02971272d3177bdfe7ff98e079ea35fd60c6d88f1e9c95ebb8ecf41fe463112a5c703db0bf6b23fadc279f43bff
 ```
 
-### `dpkg` source package: `linux=5.4.0-88.99`
+### `dpkg` source package: `linux=5.4.0-89.100`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=5.4.0-88.99`
+- `linux-libc-dev:amd64=5.4.0-89.100`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris linux=5.4.0-89.100
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-89.100.dsc' linux_5.4.0-89.100.dsc 7224 SHA512:a52b6d8b7f4f6e525005888b82f47060c9b83956a1dbaf7db021659ad9c4fba7e1f5182fbd03ebc4052e5b1ec7a98ee556dd5d61a8ab55f5d2abdbc0356d6f5c
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0.orig.tar.gz' linux_5.4.0.orig.tar.gz 170244619 SHA512:62b09a7231fd793973c5f59b16c4f6ffce621188b02a71915874b05e8e3f956fb6146d4a4fb1a4475bebe463949ca5a18da12842c3ce7c52e996e6bc4012a074
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-89.100.diff.gz' linux_5.4.0-89.100.diff.gz 8582799 SHA512:3a84c6511eee90ea94a2f824a6d2fdb06442f80fbecf03d5a7a183c9eb731b82c83ccc27329fc438e9993920762f46d6e8bddbe5922d39a1ac972244bd62f317
+```
 
 ### `dpkg` source package: `llvm-toolchain-12=1:12.0.0-3ubuntu1~20.04.4`
 
@@ -5555,12 +5589,12 @@ $ apt-get source -qq --print-uris mtdev=1.1.5-1.1
 'http://archive.ubuntu.com/ubuntu/pool/main/m/mtdev/mtdev_1.1.5-1.1.debian.tar.xz' mtdev_1.1.5-1.1.debian.tar.xz 6116 SHA256:901dd65663385df88dafb08f1a71ccca80261bf2e34ee53f0a167953b37e8fc8
 ```
 
-### `dpkg` source package: `mysql-8.0=8.0.26-0ubuntu0.20.04.3`
+### `dpkg` source package: `mysql-8.0=8.0.27-0ubuntu0.20.04.1`
 
 Binary Packages:
 
-- `libmysqlclient-dev=8.0.26-0ubuntu0.20.04.3`
-- `libmysqlclient21:amd64=8.0.26-0ubuntu0.20.04.3`
+- `libmysqlclient-dev=8.0.27-0ubuntu0.20.04.1`
+- `libmysqlclient21:amd64=8.0.27-0ubuntu0.20.04.1`
 
 Licenses: (parsed from: `/usr/share/doc/libmysqlclient-dev/copyright`, `/usr/share/doc/libmysqlclient21/copyright`)
 
@@ -5577,9 +5611,14 @@ Licenses: (parsed from: `/usr/share/doc/libmysqlclient-dev/copyright`, `/usr/sha
 - `public-domain`
 - `zlib/libpng`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris mysql-8.0=8.0.27-0ubuntu0.20.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.27-0ubuntu0.20.04.1.dsc' mysql-8.0_8.0.27-0ubuntu0.20.04.1.dsc 3434 SHA512:33b864fb2b4a434214132079cddf417b02c22a9e95d8e85561f2ae0ba668c612f37f52b93f8a50611b7690d8e9bbace3008b3120d6af5ea56659ffd7f5a2942d
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.27.orig.tar.gz' mysql-8.0_8.0.27.orig.tar.gz 292184025 SHA512:6ef2426c0bee46bdf8e2fa5cb159d5ae19f0bed4f7c9bea9b33e0dd922b568c3c68ca063dcbcd7ea6904aaea31877c10064ea10b4bc63fb40d9f31778e3a7891
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.27-0ubuntu0.20.04.1.debian.tar.xz' mysql-8.0_8.0.27-0ubuntu0.20.04.1.debian.tar.xz 160804 SHA512:1cd62f1a1607a0d58da43e1bf183a176c273fd88a723236d993514e6ffbfafe3c294ccdbeed6acdcd295c6f8e4140bb99483820a4e8307814fc45b80d75fccb8
+```
 
 ### `dpkg` source package: `mysql-defaults=1.0.5ubuntu2`
 
@@ -6559,11 +6598,11 @@ $ apt-get source -qq --print-uris protobuf=3.6.1.3-2ubuntu5
 'http://archive.ubuntu.com/ubuntu/pool/main/p/protobuf/protobuf_3.6.1.3-2ubuntu5.debian.tar.xz' protobuf_3.6.1.3-2ubuntu5.debian.tar.xz 24060 SHA256:63db3e1965639a0ac0820d558ad49a0af23ecb647df986790d51adda76a52d73
 ```
 
-### `dpkg` source package: `pulseaudio=1:13.99.1-1ubuntu3.11`
+### `dpkg` source package: `pulseaudio=1:13.99.1-1ubuntu3.12`
 
 Binary Packages:
 
-- `libpulse0:amd64=1:13.99.1-1ubuntu3.11`
+- `libpulse0:amd64=1:13.99.1-1ubuntu3.12`
 
 Licenses: (parsed from: `/usr/share/doc/libpulse0/copyright`)
 
@@ -6574,9 +6613,14 @@ Licenses: (parsed from: `/usr/share/doc/libpulse0/copyright`)
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris pulseaudio=1:13.99.1-1ubuntu3.12
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pulseaudio/pulseaudio_13.99.1-1ubuntu3.12.dsc' pulseaudio_13.99.1-1ubuntu3.12.dsc 3223 SHA512:27f7b1ce4355fb6b01af95acb70a1cb7101982c62921ca62f7df8f8b55585e64752c1495ce1227caf456e3faf6b6dac50d5dbcf11f0710c30197c72e157229e1
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pulseaudio/pulseaudio_13.99.1.orig.tar.xz' pulseaudio_13.99.1.orig.tar.xz 1955840 SHA512:426530b6b9dd94dcc848067376857faae42e86878a82784c5bafa615a68dcc7e22702e0cb5835f91160f19fc9934fe3d53b7d387e3f42b6595fa934b172fe2aa
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pulseaudio/pulseaudio_13.99.1-1ubuntu3.12.debian.tar.xz' pulseaudio_13.99.1-1ubuntu3.12.debian.tar.xz 158620 SHA512:ce495dfa59c46d760f0e78725f2dccf0bebe92958d436efa7fb6dc5019fc0e0a1aa2f5f6706bb9be9692726703eff5fe1da59691a27b3b5df0cfffaab7ebc001
+```
 
 ### `dpkg` source package: `python3-defaults=3.8.2-0ubuntu2`
 
@@ -7159,14 +7203,9 @@ Licenses: (parsed from: `/usr/share/doc/libsdformat9/copyright`, `/usr/share/doc
 - `Apache-2.0`
 - `BSD-3-clause`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sdformat9=9.6.1-1~focal
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/s/sdformat9/sdformat9_9.6.1-1~focal.dsc' sdformat9_9.6.1-1~focal.dsc 1376 SHA256:10bbbd752a8572500e6874cd7c93abebc27e612fb23406cbfc524e50b823046c
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/s/sdformat9/sdformat9_9.6.1.orig.tar.bz2' sdformat9_9.6.1.orig.tar.bz2 673181 SHA256:b13cacbeac8f8eb7e7330f813a01683e3aee29bf896406367cf226ba10b35971
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/s/sdformat9/sdformat9_9.6.1-1~focal.debian.tar.xz' sdformat9_9.6.1-1~focal.debian.tar.xz 3444 SHA256:7ff8e4ea14981af37781fa5f4900d66096e0ff71c25ca1a86d22fe28d01d9292
-```
 
 ### `dpkg` source package: `sed=4.7-1`
 

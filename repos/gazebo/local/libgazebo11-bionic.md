@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:e0faf33fd9a11f7196a76cba7ef291edcefa7eebedf52e6241415507586bf57d`
-- Created: `2021-10-01T05:02:53.57704193Z`
+- Image ID: `sha256:24412ac68187d5c28b9de33e83732caf7393ecfb93070f57e87024bc12d428b1`
+- Created: `2021-11-01T22:54:22.200229804Z`
 - Virtual Size: ~ 1.56 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -308,14 +308,14 @@ $ apt-get source -qq --print-uris bash=4.4.18-2ubuntu1.2
 'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_4.4.18-2ubuntu1.2.debian.tar.xz' bash_4.4.18-2ubuntu1.2.debian.tar.xz 65236 SHA512:84ef4350f9069601a8bfe9c444400e268b927c286970270c2c635dac8946f5f499658fe822404ae662d922655a5158b019f8a4c3dcec1ffd72b1aa40b85830e4
 ```
 
-### `dpkg` source package: `binutils=2.30-21ubuntu1~18.04.5`
+### `dpkg` source package: `binutils=2.30-21ubuntu1~18.04.7`
 
 Binary Packages:
 
-- `binutils=2.30-21ubuntu1~18.04.5`
-- `binutils-common:amd64=2.30-21ubuntu1~18.04.5`
-- `binutils-x86-64-linux-gnu=2.30-21ubuntu1~18.04.5`
-- `libbinutils:amd64=2.30-21ubuntu1~18.04.5`
+- `binutils=2.30-21ubuntu1~18.04.7`
+- `binutils-common:amd64=2.30-21ubuntu1~18.04.7`
+- `binutils-x86-64-linux-gnu=2.30-21ubuntu1~18.04.7`
+- `libbinutils:amd64=2.30-21ubuntu1~18.04.7`
 
 Licenses: (parsed from: `/usr/share/doc/binutils/copyright`, `/usr/share/doc/binutils-common/copyright`, `/usr/share/doc/binutils-x86-64-linux-gnu/copyright`, `/usr/share/doc/libbinutils/copyright`)
 
@@ -323,9 +323,14 @@ Licenses: (parsed from: `/usr/share/doc/binutils/copyright`, `/usr/share/doc/bin
 - `GPL`
 - `LGPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris binutils=2.30-21ubuntu1~18.04.7
+'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.30-21ubuntu1~18.04.7.dsc' binutils_2.30-21ubuntu1~18.04.7.dsc 11670 SHA512:33866f71fa39e9d5b85fb0060f33325148616b2d3c7cd43de593178b72fe7df4818c3a27c2d064e66c2cbbca6a899da7ae8a09e46f9efc1244a07adf8cfe84f8
+'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.30.orig.tar.xz' binutils_2.30.orig.tar.xz 20286700 SHA512:e747ea20d8d79fcd21b9d9f6695059caa7189d60f19256da398e34b789fea9a133c32b192e9693b5828d27683739b0198431bf8b3e39fb3b04884cf89d9aa839
+'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.30-21ubuntu1~18.04.7.debian.tar.xz' binutils_2.30-21ubuntu1~18.04.7.debian.tar.xz 624916 SHA512:b5cd722de3d57b566e8b29fa124516aa94a4c868a2e202bf2656e525f6aaba5f25d48a8a1c7bdc799f604aec9e7bb7dbf8d5b8183af546da0cbd0dd332f6c3d0
+```
 
 ### `dpkg` source package: `boost-defaults=1.65.1.0ubuntu1`
 
@@ -752,31 +757,35 @@ $ apt-get source -qq --print-uris cyrus-sasl2=2.1.27~101-g0780600+dfsg-3ubuntu2.
 'http://archive.ubuntu.com/ubuntu/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.27~101-g0780600+dfsg-3ubuntu2.3.debian.tar.xz' cyrus-sasl2_2.1.27~101-g0780600+dfsg-3ubuntu2.3.debian.tar.xz 97164 SHA512:96ebeac028396c12a7b3b876c8cb7305234c3c9dc0e4e882eab4f5996739cb7d7d32cb3fecfebd2637d58835fd50c1ebefd30949480745c69a16212caae1f2c4
 ```
 
-### `dpkg` source package: `dart6=6.10.0~osrf19~20210610~bionic~175596b511adb55d831c0c3401ef50e2cb96a6f3`
+### `dpkg` source package: `dart6=6.10.0~osrf20~20211005~bionic~d2b6ee08a60d0dbf71b0f008cd8fed1f611f6e24`
 
 Binary Packages:
 
-- `libdart6=6.10.0~osrf19~20210610~bionic~175596b511adb55d831c0c3401ef50e2cb96a6f3`
-- `libdart6-collision-bullet=6.10.0~osrf19~20210610~bionic~175596b511adb55d831c0c3401ef50e2cb96a6f3`
-- `libdart6-collision-bullet-dev=6.10.0~osrf19~20210610~bionic~175596b511adb55d831c0c3401ef50e2cb96a6f3`
-- `libdart6-collision-ode=6.10.0~osrf19~20210610~bionic~175596b511adb55d831c0c3401ef50e2cb96a6f3`
-- `libdart6-collision-ode-dev=6.10.0~osrf19~20210610~bionic~175596b511adb55d831c0c3401ef50e2cb96a6f3`
-- `libdart6-dev=6.10.0~osrf19~20210610~bionic~175596b511adb55d831c0c3401ef50e2cb96a6f3`
-- `libdart6-external-ikfast-dev=6.10.0~osrf19~20210610~bionic~175596b511adb55d831c0c3401ef50e2cb96a6f3`
-- `libdart6-external-odelcpsolver=6.10.0~osrf19~20210610~bionic~175596b511adb55d831c0c3401ef50e2cb96a6f3`
-- `libdart6-external-odelcpsolver-dev=6.10.0~osrf19~20210610~bionic~175596b511adb55d831c0c3401ef50e2cb96a6f3`
-- `libdart6-utils=6.10.0~osrf19~20210610~bionic~175596b511adb55d831c0c3401ef50e2cb96a6f3`
-- `libdart6-utils-dev=6.10.0~osrf19~20210610~bionic~175596b511adb55d831c0c3401ef50e2cb96a6f3`
-- `libdart6-utils-urdf=6.10.0~osrf19~20210610~bionic~175596b511adb55d831c0c3401ef50e2cb96a6f3`
-- `libdart6-utils-urdf-dev=6.10.0~osrf19~20210610~bionic~175596b511adb55d831c0c3401ef50e2cb96a6f3`
+- `libdart6=6.10.0~osrf20~20211005~bionic~d2b6ee08a60d0dbf71b0f008cd8fed1f611f6e24`
+- `libdart6-collision-bullet=6.10.0~osrf20~20211005~bionic~d2b6ee08a60d0dbf71b0f008cd8fed1f611f6e24`
+- `libdart6-collision-bullet-dev=6.10.0~osrf20~20211005~bionic~d2b6ee08a60d0dbf71b0f008cd8fed1f611f6e24`
+- `libdart6-collision-ode=6.10.0~osrf20~20211005~bionic~d2b6ee08a60d0dbf71b0f008cd8fed1f611f6e24`
+- `libdart6-collision-ode-dev=6.10.0~osrf20~20211005~bionic~d2b6ee08a60d0dbf71b0f008cd8fed1f611f6e24`
+- `libdart6-dev=6.10.0~osrf20~20211005~bionic~d2b6ee08a60d0dbf71b0f008cd8fed1f611f6e24`
+- `libdart6-external-ikfast-dev=6.10.0~osrf20~20211005~bionic~d2b6ee08a60d0dbf71b0f008cd8fed1f611f6e24`
+- `libdart6-external-odelcpsolver=6.10.0~osrf20~20211005~bionic~d2b6ee08a60d0dbf71b0f008cd8fed1f611f6e24`
+- `libdart6-external-odelcpsolver-dev=6.10.0~osrf20~20211005~bionic~d2b6ee08a60d0dbf71b0f008cd8fed1f611f6e24`
+- `libdart6-utils=6.10.0~osrf20~20211005~bionic~d2b6ee08a60d0dbf71b0f008cd8fed1f611f6e24`
+- `libdart6-utils-dev=6.10.0~osrf20~20211005~bionic~d2b6ee08a60d0dbf71b0f008cd8fed1f611f6e24`
+- `libdart6-utils-urdf=6.10.0~osrf20~20211005~bionic~d2b6ee08a60d0dbf71b0f008cd8fed1f611f6e24`
+- `libdart6-utils-urdf-dev=6.10.0~osrf20~20211005~bionic~d2b6ee08a60d0dbf71b0f008cd8fed1f611f6e24`
 
 Licenses: (parsed from: `/usr/share/doc/libdart6/copyright`, `/usr/share/doc/libdart6-collision-bullet/copyright`, `/usr/share/doc/libdart6-collision-bullet-dev/copyright`, `/usr/share/doc/libdart6-collision-ode/copyright`, `/usr/share/doc/libdart6-collision-ode-dev/copyright`, `/usr/share/doc/libdart6-dev/copyright`, `/usr/share/doc/libdart6-external-ikfast-dev/copyright`, `/usr/share/doc/libdart6-external-odelcpsolver/copyright`, `/usr/share/doc/libdart6-external-odelcpsolver-dev/copyright`, `/usr/share/doc/libdart6-utils/copyright`, `/usr/share/doc/libdart6-utils-dev/copyright`, `/usr/share/doc/libdart6-utils-urdf/copyright`, `/usr/share/doc/libdart6-utils-urdf-dev/copyright`)
 
 - `BSD-2-clause`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris dart6=6.10.0~osrf20~20211005~bionic~d2b6ee08a60d0dbf71b0f008cd8fed1f611f6e24
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/d/dart6/dart6_6.10.0~osrf20~20211005~bionic~d2b6ee08a60d0dbf71b0f008cd8fed1f611f6e24.tar.xz' dart6_6.10.0~osrf20~20211005~bionic~d2b6ee08a60d0dbf71b0f008cd8fed1f611f6e24.tar.xz 10764304 SHA256:407978e5dfcb68f30921069106bd629d0726eeff816757500891ddc465c6c1bc
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/d/dart6/dart6_6.10.0~osrf20~20211005~bionic~d2b6ee08a60d0dbf71b0f008cd8fed1f611f6e24.dsc' dart6_6.10.0~osrf20~20211005~bionic~d2b6ee08a60d0dbf71b0f008cd8fed1f611f6e24.dsc 4096 SHA256:1604110070733c1f7ca08e8167032f9f248615ef8a2cb0d2cf7db28e2d91559e
+```
 
 ### `dpkg` source package: `dash=0.5.8-2.10`
 
@@ -1455,15 +1464,15 @@ $ apt-get source -qq --print-uris game-music-emu=0.6.2-1
 'http://archive.ubuntu.com/ubuntu/pool/universe/g/game-music-emu/game-music-emu_0.6.2-1.debian.tar.xz' game-music-emu_0.6.2-1.debian.tar.xz 4412 SHA256:8ea69035bd72261ec85e5f0486707d448f7491733ae055040a9995cebb0ea820
 ```
 
-### `dpkg` source package: `gazebo11=11.8.1-1~bionic`
+### `dpkg` source package: `gazebo11=11.9.0-1~bionic`
 
 Binary Packages:
 
-- `gazebo11=11.8.1-1~bionic`
-- `gazebo11-common=11.8.1-1~bionic`
-- `gazebo11-plugin-base=11.8.1-1~bionic`
-- `libgazebo11:amd64=11.8.1-1~bionic`
-- `libgazebo11-dev:amd64=11.8.1-1~bionic`
+- `gazebo11=11.9.0-1~bionic`
+- `gazebo11-common=11.9.0-1~bionic`
+- `gazebo11-plugin-base=11.9.0-1~bionic`
+- `libgazebo11:amd64=11.9.0-1~bionic`
+- `libgazebo11-dev:amd64=11.9.0-1~bionic`
 
 Licenses: (parsed from: `/usr/share/doc/gazebo11/copyright`, `/usr/share/doc/gazebo11-common/copyright`, `/usr/share/doc/gazebo11-plugin-base/copyright`, `/usr/share/doc/libgazebo11/copyright`, `/usr/share/doc/libgazebo11-dev/copyright`)
 
@@ -1479,9 +1488,14 @@ Licenses: (parsed from: `/usr/share/doc/gazebo11/copyright`, `/usr/share/doc/gaz
 - `LGPL-3+`
 - `ZLIB`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris gazebo11=11.9.0-1~bionic
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo11/gazebo11_11.9.0-1~bionic.dsc' gazebo11_11.9.0-1~bionic.dsc 2354 SHA256:341bdab850805b38ee864cefa9e4769532e25a8d065225205616d2ec31272b1c
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo11/gazebo11_11.9.0.orig.tar.bz2' gazebo11_11.9.0.orig.tar.bz2 56472051 SHA256:57dfc5e778a820a435baa050b4888f95cd968fdcb071d417c4c5453691b81f2e
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo11/gazebo11_11.9.0-1~bionic.debian.tar.xz' gazebo11_11.9.0-1~bionic.debian.tar.xz 6804 SHA256:459abf78628a1e9f941b10d90652d91723fd154ad723dac1f751a4c6999e5cb2
+```
 
 ### `dpkg` source package: `gcc-6=6.5.0-2ubuntu1~18.04`
 
@@ -2144,30 +2158,34 @@ $ apt-get source -qq --print-uris ignition-cmake2=2.9.0-1~bionic
 'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-cmake2/ignition-cmake2_2.9.0-1~bionic.debian.tar.xz' ignition-cmake2_2.9.0-1~bionic.debian.tar.xz 1692 SHA256:0f53a74d24c2e1f7d59f586dcaeba956f8e97075b054fda34dae99ae1b5f2dd7
 ```
 
-### `dpkg` source package: `ignition-common3=3.13.2-1~bionic`
+### `dpkg` source package: `ignition-common3=3.14.0-1~bionic`
 
 Binary Packages:
 
-- `libignition-common3:amd64=3.13.2-1~bionic`
-- `libignition-common3-av:amd64=3.13.2-1~bionic`
-- `libignition-common3-av-dev:amd64=3.13.2-1~bionic`
-- `libignition-common3-core-dev:amd64=3.13.2-1~bionic`
-- `libignition-common3-dev:amd64=3.13.2-1~bionic`
-- `libignition-common3-events:amd64=3.13.2-1~bionic`
-- `libignition-common3-events-dev:amd64=3.13.2-1~bionic`
-- `libignition-common3-graphics:amd64=3.13.2-1~bionic`
-- `libignition-common3-graphics-dev:amd64=3.13.2-1~bionic`
-- `libignition-common3-profiler:amd64=3.13.2-1~bionic`
-- `libignition-common3-profiler-dev:amd64=3.13.2-1~bionic`
+- `libignition-common3:amd64=3.14.0-1~bionic`
+- `libignition-common3-av:amd64=3.14.0-1~bionic`
+- `libignition-common3-av-dev:amd64=3.14.0-1~bionic`
+- `libignition-common3-core-dev:amd64=3.14.0-1~bionic`
+- `libignition-common3-dev:amd64=3.14.0-1~bionic`
+- `libignition-common3-events:amd64=3.14.0-1~bionic`
+- `libignition-common3-events-dev:amd64=3.14.0-1~bionic`
+- `libignition-common3-graphics:amd64=3.14.0-1~bionic`
+- `libignition-common3-graphics-dev:amd64=3.14.0-1~bionic`
+- `libignition-common3-profiler:amd64=3.14.0-1~bionic`
+- `libignition-common3-profiler-dev:amd64=3.14.0-1~bionic`
 
 Licenses: (parsed from: `/usr/share/doc/libignition-common3/copyright`, `/usr/share/doc/libignition-common3-av/copyright`, `/usr/share/doc/libignition-common3-av-dev/copyright`, `/usr/share/doc/libignition-common3-core-dev/copyright`, `/usr/share/doc/libignition-common3-dev/copyright`, `/usr/share/doc/libignition-common3-events/copyright`, `/usr/share/doc/libignition-common3-events-dev/copyright`, `/usr/share/doc/libignition-common3-graphics/copyright`, `/usr/share/doc/libignition-common3-graphics-dev/copyright`, `/usr/share/doc/libignition-common3-profiler/copyright`, `/usr/share/doc/libignition-common3-profiler-dev/copyright`)
 
 - `Apache`
 - `Apache-2.0`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris ignition-common3=3.14.0-1~bionic
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-common3/ignition-common3_3.14.0-1~bionic.dsc' ignition-common3_3.14.0-1~bionic.dsc 1895 SHA256:d503f1d74f8f11283e6788018a33e36bb16ced6d77488039407dc137bfee8e96
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-common3/ignition-common3_3.14.0-1~bionic.tar.xz' ignition-common3_3.14.0-1~bionic.tar.xz 6730268 SHA256:44b6d56fc723fd58da5f5ba78ec2e81b49b73a7d86db31148b790c1e42f72601
+```
 
 ### `dpkg` source package: `ignition-fuel-tools4=4.4.0-1~bionic`
 
@@ -2190,12 +2208,12 @@ $ apt-get source -qq --print-uris ignition-fuel-tools4=4.4.0-1~bionic
 'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-fuel-tools4/ignition-fuel-tools4_4.4.0-1~bionic.debian.tar.xz' ignition-fuel-tools4_4.4.0-1~bionic.debian.tar.xz 1752 SHA256:cd6f9ddebf0b86b6df620d754139990aa94587297db9f2cddf01cf70befb5784
 ```
 
-### `dpkg` source package: `ignition-math6=6.9.1-1~bionic`
+### `dpkg` source package: `ignition-math6=6.9.2-1~bionic`
 
 Binary Packages:
 
-- `libignition-math6:amd64=6.9.1-1~bionic`
-- `libignition-math6-dev:amd64=6.9.1-1~bionic`
+- `libignition-math6:amd64=6.9.2-1~bionic`
+- `libignition-math6-dev:amd64=6.9.2-1~bionic`
 
 Licenses: (parsed from: `/usr/share/doc/libignition-math6/copyright`, `/usr/share/doc/libignition-math6-dev/copyright`)
 
@@ -2203,51 +2221,65 @@ Licenses: (parsed from: `/usr/share/doc/libignition-math6/copyright`, `/usr/shar
 - `Apache-2.0`
 - `BSD-3-clause`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris ignition-math6=6.9.2-1~bionic
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.9.2-1~bionic.dsc' ignition-math6_6.9.2-1~bionic.dsc 1580 SHA256:7ef7a51fb6c1b55fc8248314d6739457801359a403669820a724cf8059556092
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.9.2.orig.tar.bz2' ignition-math6_6.9.2.orig.tar.bz2 438866 SHA256:948e5ab613925eb85cac46d8733fb361e69841cfa0ea4e36c90fbde8e425c226
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.9.2-1~bionic.debian.tar.xz' ignition-math6_6.9.2-1~bionic.debian.tar.xz 4292 SHA256:5cd532f8d17031a0a03a1528d3d4a10a4a74067dfe12c0124958d51cd8954f74
+```
 
-### `dpkg` source package: `ignition-msgs5=5.8.0-1~bionic`
+### `dpkg` source package: `ignition-msgs5=5.8.1-1~bionic`
 
 Binary Packages:
 
-- `libignition-msgs5:amd64=5.8.0-1~bionic`
-- `libignition-msgs5-dev:amd64=5.8.0-1~bionic`
+- `libignition-msgs5:amd64=5.8.1-1~bionic`
+- `libignition-msgs5-dev:amd64=5.8.1-1~bionic`
 
 Licenses: (parsed from: `/usr/share/doc/libignition-msgs5/copyright`, `/usr/share/doc/libignition-msgs5-dev/copyright`)
 
 - `Apache`
 - `Apache-2.0`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris ignition-msgs5=5.8.1-1~bionic
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-msgs5/ignition-msgs5_5.8.1-1~bionic.dsc' ignition-msgs5_5.8.1-1~bionic.dsc 1309 SHA256:be8d41f3b5179b2e860896a0e0b873be9598b358c7d265c9732b4e3d186dad60
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-msgs5/ignition-msgs5_5.8.1.orig.tar.bz2' ignition-msgs5_5.8.1.orig.tar.bz2 260106 SHA256:4d984d9f5b28629c8e8d7f764e8ea84d755dfbcf9492f1775ef1fa3a85c9add0
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-msgs5/ignition-msgs5_5.8.1-1~bionic.debian.tar.xz' ignition-msgs5_5.8.1-1~bionic.debian.tar.xz 2140 SHA256:14701e0bc3d14f8d16db1513303a4eb365156eeccac5879f2600109dd6f28c64
+```
 
-### `dpkg` source package: `ignition-tools=1.3.0-1~bionic`
+### `dpkg` source package: `ignition-tools=1.4.1-1~bionic`
 
 Binary Packages:
 
-- `ignition-tools:amd64=1.3.0-1~bionic`
-- `libignition-tools-dev:amd64=1.3.0-1~bionic`
+- `ignition-tools:amd64=1.4.1-1~bionic`
+- `libignition-tools-dev:amd64=1.4.1-1~bionic`
 
 Licenses: (parsed from: `/usr/share/doc/ignition-tools/copyright`, `/usr/share/doc/libignition-tools-dev/copyright`)
 
 - `Apache`
 - `Apache-2.0`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris ignition-tools=1.4.1-1~bionic
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-tools/ignition-tools_1.4.1-1~bionic.dsc' ignition-tools_1.4.1-1~bionic.dsc 891 SHA256:560edd71bed3b6853d906d2d52d98a27449fb91f63cb41e23d1a0fda66ff6157
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-tools/ignition-tools_1.4.1-1~bionic.tar.xz' ignition-tools_1.4.1-1~bionic.tar.xz 86972 SHA256:fe1a8abdf47e0ef192335864a9b93ea628c0126c008553adfbd437b8f900e5d2
+```
 
-### `dpkg` source package: `ignition-transport8=8.2.0-1~bionic`
+### `dpkg` source package: `ignition-transport8=8.2.1-1~bionic`
 
 Binary Packages:
 
-- `libignition-transport8:amd64=8.2.0-1~bionic`
-- `libignition-transport8-core-dev:amd64=8.2.0-1~bionic`
-- `libignition-transport8-dev:amd64=8.2.0-1~bionic`
-- `libignition-transport8-log:amd64=8.2.0-1~bionic`
-- `libignition-transport8-log-dev:amd64=8.2.0-1~bionic`
+- `libignition-transport8:amd64=8.2.1-1~bionic`
+- `libignition-transport8-core-dev:amd64=8.2.1-1~bionic`
+- `libignition-transport8-dev:amd64=8.2.1-1~bionic`
+- `libignition-transport8-log:amd64=8.2.1-1~bionic`
+- `libignition-transport8-log-dev:amd64=8.2.1-1~bionic`
 
 Licenses: (parsed from: `/usr/share/doc/libignition-transport8/copyright`, `/usr/share/doc/libignition-transport8-core-dev/copyright`, `/usr/share/doc/libignition-transport8-dev/copyright`, `/usr/share/doc/libignition-transport8-log/copyright`, `/usr/share/doc/libignition-transport8-log-dev/copyright`)
 
@@ -2255,9 +2287,14 @@ Licenses: (parsed from: `/usr/share/doc/libignition-transport8/copyright`, `/usr
 - `Apache-2.0`
 - `BSD-3-clause`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris ignition-transport8=8.2.1-1~bionic
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-transport8/ignition-transport8_8.2.1-1~bionic.dsc' ignition-transport8_8.2.1-1~bionic.dsc 1772 SHA256:7f4fc4f353c917924a34be65cfad85a0ea39c123fbd128ceb854b1686e08a477
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-transport8/ignition-transport8_8.2.1.orig.tar.bz2' ignition-transport8_8.2.1.orig.tar.bz2 511984 SHA256:bf7e1a06034f180d4e8f97a72219f8bfb73693685cc61ee788821e47612dcab9
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-transport8/ignition-transport8_8.2.1-1~bionic.debian.tar.xz' ignition-transport8_8.2.1-1~bionic.debian.tar.xz 3168 SHA256:8bafea2c28ddd87579dea53a8e220f3920b5499eaa5a89ef1be786bcc337a87b
+```
 
 ### `dpkg` source package: `ilmbase=2.2.0-11ubuntu2`
 
@@ -2755,19 +2792,24 @@ $ apt-get source -qq --print-uris libbsd=0.8.7-1ubuntu0.1
 'http://archive.ubuntu.com/ubuntu/pool/main/libb/libbsd/libbsd_0.8.7-1ubuntu0.1.debian.tar.xz' libbsd_0.8.7-1ubuntu0.1.debian.tar.xz 16608 SHA512:ac2c3278effcba412e732a60258c011b1e6bd0ae9ab28e434fb852df35950905293bba9e2d37466dd29b943763e7e186d3145e81c22f3879b5706f2890e62a17
 ```
 
-### `dpkg` source package: `libcaca=0.99.beta19-2ubuntu0.18.04.2`
+### `dpkg` source package: `libcaca=0.99.beta19-2ubuntu0.18.04.3`
 
 Binary Packages:
 
-- `libcaca0:amd64=0.99.beta19-2ubuntu0.18.04.2`
+- `libcaca0:amd64=0.99.beta19-2ubuntu0.18.04.3`
 
 Licenses: (parsed from: `/usr/share/doc/libcaca0/copyright`)
 
 - `LGPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris libcaca=0.99.beta19-2ubuntu0.18.04.3
+'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcaca/libcaca_0.99.beta19-2ubuntu0.18.04.3.dsc' libcaca_0.99.beta19-2ubuntu0.18.04.3.dsc 2355 SHA512:0e669ac3e8c9291577853cc03252c33a39496ce22e2d4a9a2a804a80a2db82b3e883ad0e20814b971e2f0c1e6cdc3895e15a6830270aa85cf378b57873967148
+'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcaca/libcaca_0.99.beta19.orig.tar.gz' libcaca_0.99.beta19.orig.tar.gz 1203495 SHA512:780fc7684d40207cc10df3f87d6d8f1d47ddfffa0e76e41a5ce671b82d5c7f090facb054c3d49ca7c4ea1a619625bb9085ce52f837f50792b4a2d776a4c68e15
+'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcaca/libcaca_0.99.beta19-2ubuntu0.18.04.3.debian.tar.xz' libcaca_0.99.beta19-2ubuntu0.18.04.3.debian.tar.xz 15964 SHA512:911a5ed3e0fb72f9be999723b54ec8b130a7ac50009b4bd7fbf786488ff4fec3f862f08b718e2fd0fee7c771b1a5a607a6d555baf108ef65dc4688dbe9a1ddcd
+```
 
 ### `dpkg` source package: `libcap-ng=0.7.7-3.1`
 
@@ -4839,19 +4881,24 @@ $ apt-get source -qq --print-uris libzstd=1.3.3+dfsg-2ubuntu1.2
 'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.3.3+dfsg-2ubuntu1.2.debian.tar.xz' libzstd_1.3.3+dfsg-2ubuntu1.2.debian.tar.xz 13764 SHA512:f14aa9e453c7041a79dd90a52b5955b86fa86886b89ef26d4d257aa017a50d97410e8b875593992ad7d4b7e8e8d55743b8c66706be62cd4234f81e49c8bfc05d
 ```
 
-### `dpkg` source package: `linux=4.15.0-159.167`
+### `dpkg` source package: `linux=4.15.0-161.169`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=4.15.0-159.167`
+- `linux-libc-dev:amd64=4.15.0-161.169`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris linux=4.15.0-161.169
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-161.169.dsc' linux_4.15.0-161.169.dsc 7373 SHA512:08acf1a91097531902dd86d2fcb46a0a9a7b76d392675a62e5d867442b99dd279ab5e17e798829cd0ec6264f0175bac896f621772cd45d39662e30f4282bdace
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0.orig.tar.gz' linux_4.15.0.orig.tar.gz 157656459 SHA512:0fab606a295e0857f774f8adaa9d56bf2cb227fbab2daed374415da216391b156f49e606ba37ac402987c5796d408807da5d1a42c0d85a8552f109a3e279443d
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-161.169.diff.gz' linux_4.15.0-161.169.diff.gz 12622065 SHA512:ae07e351afa08fca6dcaf23b62947ab62860ceb474eb9410bbb855fae33f34b5b9024a39e901e03fb3f9a1ffa9b35e1621957ca173174b9b504e5a78a1d25088
+```
 
 ### `dpkg` source package: `llvm-toolchain-10=1:10.0.0-4ubuntu1~18.04.2`
 
@@ -5154,12 +5201,12 @@ $ apt-get source -qq --print-uris mtdev=1.1.5-1ubuntu3
 'http://archive.ubuntu.com/ubuntu/pool/main/m/mtdev/mtdev_1.1.5-1ubuntu3.debian.tar.xz' mtdev_1.1.5-1ubuntu3.debian.tar.xz 6268 SHA256:60d8d42d71828abc8ef728c1a52f8c5e407be1d0c24871580a744e2b12a7a8a6
 ```
 
-### `dpkg` source package: `mysql-5.7=5.7.35-0ubuntu0.18.04.2`
+### `dpkg` source package: `mysql-5.7=5.7.36-0ubuntu0.18.04.1`
 
 Binary Packages:
 
-- `libmysqlclient-dev=5.7.35-0ubuntu0.18.04.2`
-- `libmysqlclient20:amd64=5.7.35-0ubuntu0.18.04.2`
+- `libmysqlclient-dev=5.7.36-0ubuntu0.18.04.1`
+- `libmysqlclient20:amd64=5.7.36-0ubuntu0.18.04.1`
 
 Licenses: (parsed from: `/usr/share/doc/libmysqlclient-dev/copyright`, `/usr/share/doc/libmysqlclient20/copyright`)
 
@@ -5177,9 +5224,14 @@ Licenses: (parsed from: `/usr/share/doc/libmysqlclient-dev/copyright`, `/usr/sha
 - `public-domain`
 - `zlib/libpng`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris mysql-5.7=5.7.36-0ubuntu0.18.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-5.7_5.7.36-0ubuntu0.18.04.1.dsc' mysql-5.7_5.7.36-0ubuntu0.18.04.1.dsc 3446 SHA512:e72985958afa7333dda2963a40d3e31a2a30266539ec545f2dab0511bed4ab588af54b43abb4545f232545035fd0819a710bb685ab24abafc63d22dc2192df53
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-5.7_5.7.36.orig.tar.gz' mysql-5.7_5.7.36.orig.tar.gz 52968383 SHA512:a95580efd5b87776ee7f1aae9b50d50d88c70a48c16e7a2d8c6ada0b1cadc5ec6074a859291a65caa1b50a00e08a9e350df342bb0c6ef74edaf21055331c081b
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-5.7_5.7.36-0ubuntu0.18.04.1.debian.tar.xz' mysql-5.7_5.7.36-0ubuntu0.18.04.1.debian.tar.xz 156780 SHA512:a3dc8be7a27e2a4bb33298d55242014448d595e1701a48cb667fa3220aefd9741ec02643e491e122b73e8e4b04fbdd23c18e2d6e91182aa49d5fa47b293e4778
+```
 
 ### `dpkg` source package: `mysql-defaults=1.0.4`
 
@@ -6732,14 +6784,9 @@ Licenses: (parsed from: `/usr/share/doc/libsdformat9/copyright`, `/usr/share/doc
 - `Apache-2.0`
 - `BSD-3-clause`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sdformat9=9.6.1-1~bionic
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/s/sdformat9/sdformat9_9.6.1-1~bionic.dsc' sdformat9_9.6.1-1~bionic.dsc 1379 SHA256:f47010d28437e41ebda5c3eababc19b8c7a82bab5725724f1ea9c234d93a5200
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/s/sdformat9/sdformat9_9.6.1.orig.tar.bz2' sdformat9_9.6.1.orig.tar.bz2 673181 SHA256:b13cacbeac8f8eb7e7330f813a01683e3aee29bf896406367cf226ba10b35971
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/s/sdformat9/sdformat9_9.6.1-1~bionic.debian.tar.xz' sdformat9_9.6.1-1~bionic.debian.tar.xz 3444 SHA256:a1fdf77181a6affa376d2b3318c32f5074c9b34fbf1ea251024fa2d7219ea79f
-```
 
 ### `dpkg` source package: `sed=4.4-2`
 
