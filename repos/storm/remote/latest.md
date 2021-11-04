@@ -1,7 +1,7 @@
 ## `storm:latest`
 
 ```console
-$ docker pull storm@sha256:0b68bb70c5e21c0b7b7d54e3237f15d65c4e0df63d169f82b88c1d7e8e826643
+$ docker pull storm@sha256:7e8c7a3098395123163305ac79f11e3d422838c83403a4167c4190d5e4043ccf
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull storm@sha256:0b68bb70c5e21c0b7b7d54e3237f15d65c4e0df63d169f82b88c1
 ### `storm:latest` - linux; amd64
 
 ```console
-$ docker pull storm@sha256:6fa56c55950ec7847f4c1758e9428d26228a47ec64b8aec30fe335fa0904e0ae
+$ docker pull storm@sha256:a1b28fe9a929bc73b83b73ea6f08473f2e7791861f6d4a5807e239191e868010
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **421.8 MB (421802862 bytes)**  
+-	Total Size: **424.0 MB (423997706 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4ed24faacdef2964714e5b85f47cfaceaf47936dce1cad18635a403ecc35e17d`
+-	Image ID: `sha256:f881a08a44f584cd2577a3112330f7df80f99e93de85b7d99b8de795dd48314e`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 
 ```dockerfile
@@ -46,20 +46,20 @@ ENV STORM_CONF_DIR=/conf STORM_DATA_DIR=/data STORM_LOG_DIR=/logs
 RUN set -eux;     groupadd -r storm --gid=1000;     useradd -r -g storm --uid=1000 storm;     mkdir -p "$STORM_CONF_DIR" "$STORM_DATA_DIR" "$STORM_LOG_DIR";     chown -R storm:storm "$STORM_CONF_DIR" "$STORM_DATA_DIR" "$STORM_LOG_DIR"``
 # Fri, 22 Oct 2021 04:11:13 GMT
 RUN set -eux;     apt-get update;     DEBIAN_FRONTEND=noninteractive     apt-get install -y --no-install-recommends         bash         ca-certificates         dirmngr         gosu         gnupg         python         procps         wget;     rm -rf /var/lib/apt/lists/*;     gosu nobody true
-# Fri, 22 Oct 2021 04:11:14 GMT
-ARG GPG_KEY=79B03D059E628478FC9F1D8B152CAD0C46E87B61
-# Fri, 22 Oct 2021 04:11:14 GMT
-ARG DISTRO_NAME=apache-storm-2.2.0
-# Fri, 22 Oct 2021 04:11:46 GMT
-# ARGS: DISTRO_NAME=apache-storm-2.2.0 GPG_KEY=79B03D059E628478FC9F1D8B152CAD0C46E87B61
-RUN set -eux;     ddist() {         local f="$1"; shift;         local distFile="$1"; shift;         local success=;         local distUrl=;         for distUrl in             'https://www.apache.org/dyn/closer.cgi?action=download&filename='             https://www-us.apache.org/dist/             https://www.apache.org/dist/             https://archive.apache.org/dist/         ; do             if wget -q -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then                 success=1;                 break;             fi;         done;         [ -n "$success" ];     };     ddist "$DISTRO_NAME.tar.gz" "storm/$DISTRO_NAME/$DISTRO_NAME.tar.gz";     ddist "$DISTRO_NAME.tar.gz.asc" "storm/$DISTRO_NAME/$DISTRO_NAME.tar.gz.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --keyserver ha.pool.sks-keyservers.net --recv-key "$GPG_KEY" ||     gpg --keyserver pgp.mit.edu --recv-keys "$GPG_KEY" ||     gpg --keyserver keyserver.pgp.com --recv-keys "$GPG_KEY";     gpg --batch --verify "$DISTRO_NAME.tar.gz.asc" "$DISTRO_NAME.tar.gz";     tar -xzf "$DISTRO_NAME.tar.gz";     rm -rf "$GNUPGHOME" "$DISTRO_NAME.tar.gz" "$DISTRO_NAME.tar.gz.asc";     chown -R storm:storm "$DISTRO_NAME"
-# Fri, 22 Oct 2021 04:11:47 GMT
-WORKDIR /apache-storm-2.2.0
-# Fri, 22 Oct 2021 04:11:47 GMT
-ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-storm-2.2.0/bin
-# Fri, 22 Oct 2021 04:11:47 GMT
+# Thu, 04 Nov 2021 19:20:28 GMT
+ARG GPG_KEY=5167DE337E7370373499FC1DA4A672F11B5050C8
+# Thu, 04 Nov 2021 19:20:28 GMT
+ARG DISTRO_NAME=apache-storm-2.3.0
+# Thu, 04 Nov 2021 19:20:48 GMT
+# ARGS: DISTRO_NAME=apache-storm-2.3.0 GPG_KEY=5167DE337E7370373499FC1DA4A672F11B5050C8
+RUN set -eux;     ddist() {         local f="$1"; shift;         local distFile="$1"; shift;         local success=;         local distUrl=;         for distUrl in             'https://www.apache.org/dyn/closer.cgi?action=download&filename='             https://www-us.apache.org/dist/             https://www.apache.org/dist/             https://archive.apache.org/dist/         ; do             if wget -q -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then                 success=1;                 break;             fi;         done;         [ -n "$success" ];     };     ddist "$DISTRO_NAME.tar.gz" "storm/$DISTRO_NAME/$DISTRO_NAME.tar.gz";     ddist "$DISTRO_NAME.tar.gz.asc" "storm/$DISTRO_NAME/$DISTRO_NAME.tar.gz.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --keyserver keyserver.ubuntu.com --recv-key "$GPG_KEY" ||     gpg --keyserver ha.pool.sks-keyservers.net --recv-key "$GPG_KEY" ||     gpg --keyserver pgp.mit.edu --recv-keys "$GPG_KEY" ||     gpg --keyserver keyserver.pgp.com --recv-keys "$GPG_KEY";     gpg --batch --verify "$DISTRO_NAME.tar.gz.asc" "$DISTRO_NAME.tar.gz";     tar -xzf "$DISTRO_NAME.tar.gz";     rm -rf "$GNUPGHOME" "$DISTRO_NAME.tar.gz" "$DISTRO_NAME.tar.gz.asc";     chown -R storm:storm "$DISTRO_NAME"
+# Thu, 04 Nov 2021 19:20:48 GMT
+WORKDIR /apache-storm-2.3.0
+# Thu, 04 Nov 2021 19:20:49 GMT
+ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-storm-2.3.0/bin
+# Thu, 04 Nov 2021 19:20:49 GMT
 COPY file:c74c732450146abc9cc672380c7829a8d892099ec5aa1f81e3fe02c4e8f97f32 in / 
-# Fri, 22 Oct 2021 04:11:47 GMT
+# Thu, 04 Nov 2021 19:20:49 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
 ```
 
@@ -88,11 +88,11 @@ ENTRYPOINT ["/docker-entrypoint.sh"]
 		Last Modified: Fri, 22 Oct 2021 04:12:42 GMT  
 		Size: 24.5 MB (24488062 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:37c15e36499c4b7f5906a671f1f144e5d8b28ae15c56188973f2b9ed370f2f6f`  
-		Last Modified: Fri, 22 Oct 2021 04:12:52 GMT  
-		Size: 317.3 MB (317268964 bytes)  
+	-	`sha256:b238bb4604b7844f21587984575d0caca62cad351ee8e0ba07ef1a0acab1d0fc`  
+		Last Modified: Thu, 04 Nov 2021 19:21:35 GMT  
+		Size: 319.5 MB (319463810 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6044c4565319b9881b9f56bc9550ee431531c8e55424470b7cfbf122ee0d23f8`  
-		Last Modified: Fri, 22 Oct 2021 04:12:37 GMT  
-		Size: 414.0 B  
+	-	`sha256:87d52400be585f1c24cb24c92f8f058ef890385bd34694dea5a61931a7b6f150`  
+		Last Modified: Thu, 04 Nov 2021 19:21:20 GMT  
+		Size: 412.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
