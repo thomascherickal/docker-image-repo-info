@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:da978f23d2060c7acec11c9fc8cb30ee2295be906d709a251c55f34d83328b74`
-- Created: `2021-10-16T03:45:54.372916525Z`
-- Virtual Size: ~ 1.14 Gb  
+- Image ID: `sha256:c9f8ebeb07a93dcd1df45cf05457b81dcc130e9b3a2f7be9c5fca06e9880ca2a`
+- Created: `2021-11-12T01:41:34.566423753Z`
+- Virtual Size: ~ 1.16 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/ros_entrypoint.sh"]`
@@ -6953,11 +6953,11 @@ Licenses: (parsed from: `/usr/share/doc/ros-rolling-cyclonedds/copyright`)
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `ros-rolling-demo-nodes-cpp=0.16.0-1focal.20210921.191802`
+### `dpkg` source package: `ros-rolling-demo-nodes-cpp=0.17.0-1focal.20211106.000517`
 
 Binary Packages:
 
-- `ros-rolling-demo-nodes-cpp=0.16.0-1focal.20210921.191802`
+- `ros-rolling-demo-nodes-cpp=0.17.0-1focal.20211106.000517`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -6967,11 +6967,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `ros-rolling-demo-nodes-py=0.16.0-1focal.20210921.181224`
+### `dpkg` source package: `ros-rolling-demo-nodes-py=0.17.0-1focal.20211105.221454`
 
 Binary Packages:
 
-- `ros-rolling-demo-nodes-py=0.16.0-1focal.20210921.181224`
+- `ros-rolling-demo-nodes-py=0.17.0-1focal.20211105.221454`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -7023,11 +7023,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `ros-rolling-example-interfaces=0.9.2-1focal.20210920.051423`
+### `dpkg` source package: `ros-rolling-example-interfaces=0.9.2-1focal.20211105.211435`
 
 Binary Packages:
 
-- `ros-rolling-example-interfaces=0.9.2-1focal.20210920.051423`
+- `ros-rolling-example-interfaces=0.9.2-1focal.20211105.211435`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -7042,6 +7042,20 @@ This is *usually* due to a new package version being released and the old versio
 Binary Packages:
 
 - `ros-rolling-fastcdr=1.0.20-2focal.20210506.150101`
+
+**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
+If source is available (seen below), check the contents of `debian/copyright` within it.
+
+
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
+
+
+### `dpkg` source package: `ros-rolling-gazebo-msgs=3.5.2-4focal.20211105.212651`
+
+Binary Packages:
+
+- `ros-rolling-gazebo-msgs=3.5.2-4focal.20211105.212651`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -7737,11 +7751,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `ros-rolling-ros1-bridge=0.10.1-1focal.20210921.193009`
+### `dpkg` source package: `ros-rolling-ros1-bridge=0.10.2-1focal.20211106.005640`
 
 Binary Packages:
 
-- `ros-rolling-ros1-bridge=0.10.1-1focal.20210921.193009`
+- `ros-rolling-ros1-bridge=0.10.2-1focal.20211106.005640`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
