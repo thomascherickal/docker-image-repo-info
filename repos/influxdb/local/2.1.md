@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:2cb899076eb5998cab921a38a6d912c6596fe95e1a5a87863ace390e2029284c`
-- Created: `2021-11-05T19:27:31.17617067Z`
+- Image ID: `sha256:2d73c2625c70a1fa038f94f56dbe38725259ded80a853869ac5552980a875948`
+- Created: `2021-11-10T00:20:38.475465521Z`
 - Virtual Size: ~ 345.90 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -12,8 +12,8 @@
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `GOSU_VER=1.12`
-  - `INFLUXDB_VERSION=2.1.0`
-  - `INFLUX_CLI_VERSION=2.2.0`
+  - `INFLUXDB_VERSION=2.1.1`
+  - `INFLUX_CLI_VERSION=2.2.1`
   - `INFLUX_CONFIGS_PATH=/etc/influxdb2/influx-configs`
   - `INFLUXD_INIT_PORT=9999`
   - `INFLUXD_INIT_PING_ATTEMPTS=600`
