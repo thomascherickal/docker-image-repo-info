@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:10ad50d417216421b1bb3c16989d1faa16e90184a6d43fed7c92b053f0c9f3e8`
-- Created: `2021-10-21T21:28:03.191634412Z`
+- Image ID: `sha256:eae3955acfa24e4d150dda7fa3cb2d2a86841ff82db942e70ea12cb2a6a59762`
+- Created: `2021-11-10T04:51:02.864142589Z`
 - Virtual Size: ~ 760.21 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -16,8 +16,8 @@
   - `PYTHON_VERSION=3.8.12`
   - `PYTHON_PIP_VERSION=21.2.4`
   - `PYTHON_SETUPTOOLS_VERSION=57.5.0`
-  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/d781367b97acf0ece7e9e304bf281e99b618bf10/public/get-pip.py`
-  - `PYTHON_GET_PIP_SHA256=01249aa3e58ffb3e1686b7141b4e9aac4d398ef4ac3012ed9dff8dd9f685ffe0`
+  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/3cb8888cc2869620f57d5d2da64da38f516078c7/public/get-pip.py`
+  - `PYTHON_GET_PIP_SHA256=c518250e91a70d7b20cceb15272209a4ded2a0c263ae5776f129e0d9b5674309`
   - `PIP=21.0.1`
   - `ZC_BUILDOUT=2.13.5`
   - `SETUPTOOLS=51.3.3`
@@ -3226,11 +3226,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tar/1.30+dfsg-6/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tar/1.30+dfsg-6/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tiff=4.1.0+git191117-2~deb10u2`
+### `dpkg` source package: `tiff=4.1.0+git191117-2~deb10u3`
 
 Binary Packages:
 
-- `libtiff5:amd64=4.1.0+git191117-2~deb10u2`
+- `libtiff5:amd64=4.1.0+git191117-2~deb10u3`
 
 Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`)
 
@@ -3239,17 +3239,17 @@ Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris tiff=4.1.0+git191117-2~deb10u2
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.1.0+git191117-2~deb10u2.dsc' tiff_4.1.0+git191117-2~deb10u2.dsc 2274 SHA256:5cb0e00ee767c39a2b398942fd20291403a3e6b41ac296e99b158b5cefb1cdab
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.1.0+git191117.orig.tar.xz' tiff_4.1.0+git191117.orig.tar.xz 1533524 SHA256:67e1d045e994adb7144b0cca228d70dd6d520aaf8c75c342064bc0fd601e6e42
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.1.0+git191117-2~deb10u2.debian.tar.xz' tiff_4.1.0+git191117-2~deb10u2.debian.tar.xz 20396 SHA256:0d7c74f2ecd6423af258148822b74a6d1f537f6cb931daf17998db5ff5cb7a44
+$ apt-get source -qq --print-uris tiff=4.1.0+git191117-2~deb10u3
+'http://security.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.1.0+git191117-2~deb10u3.dsc' tiff_4.1.0+git191117-2~deb10u3.dsc 2429 SHA256:78683a8ee5bfd5f3561e8e3d70c914c420d4cc590c9bbe9222832c2e9e8f3ec6
+'http://security.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.1.0+git191117.orig.tar.xz' tiff_4.1.0+git191117.orig.tar.xz 1533524 SHA256:67e1d045e994adb7144b0cca228d70dd6d520aaf8c75c342064bc0fd601e6e42
+'http://security.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.1.0+git191117-2~deb10u3.debian.tar.xz' tiff_4.1.0+git191117-2~deb10u3.debian.tar.xz 20896 SHA256:b58a9a797fc5526a0134bfd88081670b075a4b1bfa9a8aaf2607430e06bb63ca
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/tiff/4.1.0+git191117-2~deb10u2/ (for browsing the source)
-- https://sources.debian.net/src/tiff/4.1.0+git191117-2~deb10u2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tiff/4.1.0+git191117-2~deb10u2/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/tiff/4.1.0+git191117-2~deb10u3/ (for browsing the source)
+- https://sources.debian.net/src/tiff/4.1.0+git191117-2~deb10u3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tiff/4.1.0+git191117-2~deb10u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tzdata=2021a-0+deb10u2`
 
