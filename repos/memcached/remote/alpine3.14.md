@@ -1,7 +1,7 @@
 ## `memcached:alpine3.14`
 
 ```console
-$ docker pull memcached@sha256:484670897294e4653fb318e80d09ec7a2b1155d28a8eef7e391e4cc3d170e07e
+$ docker pull memcached@sha256:e0dde2afeadf73f566efd5638ba7e95de160359cd1ef4129276786174b786ecf
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -84,69 +84,69 @@ CMD ["memcached"]
 ### `memcached:alpine3.14` - linux; arm64 variant v8
 
 ```console
-$ docker pull memcached@sha256:305a37dbf8b591ded251d682830fc0ca061670d181c3508096e6ca4a7bf0d833
+$ docker pull memcached@sha256:2320b287d196d58506ce8a59f669406737816c2340166cbcc0f2ab2a0ff08f9a
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **3.8 MB (3802511 bytes)**  
+-	Total Size: **3.8 MB (3809291 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:8a4f180688e14cb61802b9faaad7126e163b46a9bc6d92496edf44360384b3d4`
+-	Image ID: `sha256:e8eafc3982c8814a8ebc74b54435bc52f2561a3f9b651845b6304a3f1ed04b1c`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["memcached"]`
 
 ```dockerfile
-# Fri, 27 Aug 2021 17:39:33 GMT
-ADD file:dc8af9c7bfe9f9541e1db38dea01c4201609f3075b31e108f2073ffed8c5e4b9 in / 
-# Fri, 27 Aug 2021 17:39:33 GMT
+# Fri, 12 Nov 2021 16:39:58 GMT
+ADD file:400c0466b29ccad54e0f6c0acef22542992828678c96693ef1f9f4d0551935d8 in / 
+# Fri, 12 Nov 2021 16:39:58 GMT
 CMD ["/bin/sh"]
-# Thu, 14 Oct 2021 01:03:47 GMT
+# Sat, 13 Nov 2021 06:18:29 GMT
 RUN addgroup -g 11211 memcache && adduser -D -u 11211 -G memcache memcache
-# Thu, 14 Oct 2021 01:03:48 GMT
+# Sat, 13 Nov 2021 06:18:31 GMT
 RUN apk add --no-cache libsasl
-# Thu, 14 Oct 2021 01:03:49 GMT
+# Sat, 13 Nov 2021 06:18:31 GMT
 ENV MEMCACHED_VERSION=1.6.12
-# Thu, 14 Oct 2021 01:03:50 GMT
+# Sat, 13 Nov 2021 06:18:32 GMT
 ENV MEMCACHED_SHA1=40d43e98f149e13e6c81eee813e6734f23413a01
-# Thu, 14 Oct 2021 01:06:33 GMT
+# Sat, 13 Nov 2021 06:21:19 GMT
 RUN set -x 		&& apk add --no-cache --virtual .build-deps 		ca-certificates 		coreutils 		cyrus-sasl-dev 		gcc 		libc-dev 		libevent-dev 		linux-headers 		make 		openssl 		openssl-dev 		patch 		perl 		perl-io-socket-ssl 		perl-utils 		&& wget -O memcached.tar.gz "https://memcached.org/files/memcached-$MEMCACHED_VERSION.tar.gz" 	&& echo "$MEMCACHED_SHA1  memcached.tar.gz" | sha1sum -c - 	&& mkdir -p /usr/src/memcached 	&& tar -xzf memcached.tar.gz -C /usr/src/memcached --strip-components=1 	&& rm memcached.tar.gz 		&& cd /usr/src/memcached 		&& wget -O cdefs.patch 'https://github.com/memcached/memcached/commit/7e570c789f4473354461e6eeb8bb7a283df613bf.patch' 	&& patch -p1 --input=cdefs.patch 	&& rm cdefs.patch 		&& ./configure 		--build="$gnuArch" 		--enable-extstore 		--enable-sasl 		--enable-sasl-pwdb 		--enable-tls 	&& nproc="$(nproc)" 	&& make -j "$nproc" 		&& make test PARALLEL="$nproc" 		&& make install 		&& cd / && rm -rf /usr/src/memcached 		&& runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)" 	&& apk add --no-network --virtual .memcached-rundeps $runDeps 	&& apk del --no-network .build-deps 		&& memcached -V
-# Thu, 14 Oct 2021 01:06:35 GMT
+# Sat, 13 Nov 2021 06:21:21 GMT
 COPY file:bf641b13ea5b37f5830b299ebe9d72f194ee5d897db14faf8b133dc7a66a48ad in /usr/local/bin/ 
-# Thu, 14 Oct 2021 01:06:35 GMT
+# Sat, 13 Nov 2021 06:21:21 GMT
 RUN ln -s usr/local/bin/docker-entrypoint.sh /entrypoint.sh # backwards compat
-# Thu, 14 Oct 2021 01:06:36 GMT
+# Sat, 13 Nov 2021 06:21:22 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 14 Oct 2021 01:06:37 GMT
+# Sat, 13 Nov 2021 06:21:23 GMT
 USER memcache
-# Thu, 14 Oct 2021 01:06:38 GMT
+# Sat, 13 Nov 2021 06:21:24 GMT
 EXPOSE 11211
-# Thu, 14 Oct 2021 01:06:39 GMT
+# Sat, 13 Nov 2021 06:21:25 GMT
 CMD ["memcached"]
 ```
 
 -	Layers:
-	-	`sha256:552d1f2373af9bfe12033568ebbfb0ccbb0de11279f9a415a29207e264d7f4d9`  
-		Last Modified: Fri, 27 Aug 2021 17:40:18 GMT  
-		Size: 2.7 MB (2711827 bytes)  
+	-	`sha256:be307f383ecc62b27a29b599c3fc9d3129693a798e7fcce614f09174cfe2d354`  
+		Last Modified: Fri, 12 Nov 2021 16:40:59 GMT  
+		Size: 2.7 MB (2717700 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:22b7a01337d63d1f0faf476b7868ba56221eff60e1d0143ee59e99cf17021aa6`  
-		Last Modified: Thu, 14 Oct 2021 01:07:47 GMT  
+	-	`sha256:257dd229206b68e4da8ccb3fd9f080ac07136eb990155a9b3d05e89f8b402d0d`  
+		Last Modified: Sat, 13 Nov 2021 06:22:16 GMT  
 		Size: 1.2 KB (1239 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f7821292e5c190644b1276d2ba9614cf5989e5143b3aea9e9b5d78887d3a82b9`  
-		Last Modified: Thu, 14 Oct 2021 01:07:47 GMT  
-		Size: 157.0 KB (157037 bytes)  
+	-	`sha256:925f34344a0c1c207e49d31bc1a8627e891f91cd0b28c2739d072e4f10a93ce2`  
+		Last Modified: Sat, 13 Nov 2021 06:22:16 GMT  
+		Size: 157.5 KB (157520 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:11485fb7fc4c5e4fb44f0b5a71d1d1df5ad0263789c11bcf99e1898baafc0ce2`  
-		Last Modified: Thu, 14 Oct 2021 01:07:48 GMT  
-		Size: 932.0 KB (932003 bytes)  
+	-	`sha256:a52a38736b9393d4a44db737a88cf6c1831f7d8c74b35c86ff7f9eaf2855cc09`  
+		Last Modified: Sat, 13 Nov 2021 06:22:16 GMT  
+		Size: 932.4 KB (932428 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e9887451eec9a474a05c4b3c70acab0faec0a5c4a84737707f9719c089b7f31c`  
-		Last Modified: Thu, 14 Oct 2021 01:07:47 GMT  
-		Size: 284.0 B  
+	-	`sha256:5243596d29ace43a3a137acf96b48d967faef5ac393b2c223a5174d9c5e0df19`  
+		Last Modified: Sat, 13 Nov 2021 06:22:16 GMT  
+		Size: 283.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:514446a6eed337b8ed93cab127b0efd9368dad935bf41e1d57d9d1b8c005a247`  
-		Last Modified: Thu, 14 Oct 2021 01:07:47 GMT  
+	-	`sha256:9075017e39dfddff545e122699b6d76464c96c7364b4b9b992baa4b326e1f6ed`  
+		Last Modified: Sat, 13 Nov 2021 06:22:16 GMT  
 		Size: 121.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
