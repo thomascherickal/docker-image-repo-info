@@ -228,7 +228,7 @@ RUN cmd /S /C #(nop)  CMD ["-m" "8222"]
 ## `nats-streaming:0.23-alpine`
 
 ```console
-$ docker pull nats-streaming@sha256:c33011e27cd41d096ca03defddda7c04f8dbd19117cbb6b239197837f05eac77
+$ docker pull nats-streaming@sha256:6f406f025b45bb6b1e36540cbcead75615b8c7999a5e7d0e960d64623c08c602
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -241,48 +241,48 @@ $ docker pull nats-streaming@sha256:c33011e27cd41d096ca03defddda7c04f8dbd19117cb
 ### `nats-streaming:0.23-alpine` - linux; amd64
 
 ```console
-$ docker pull nats-streaming@sha256:6ba368573d98b4b0898b38f0f6a66978c9d2a1913747ab28ae683942c9e68493
+$ docker pull nats-streaming@sha256:ccbdee1001f1217f8427450b395e6978f27a60caea09ed3a21105b2926dd2239
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **10.4 MB (10392673 bytes)**  
+-	Total Size: **10.4 MB (10401143 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:abf7ca18fe0750634146c03f6e83080d0d8aae0fc695752133df686bf627f567`
+-	Image ID: `sha256:78ea744d3652f9f6deb6f9efb270a386770cc5cb8a9aed8a42b140639b89c8ca`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["nats-streaming-server","-m","8222"]`
 
 ```dockerfile
-# Fri, 27 Aug 2021 17:19:45 GMT
-ADD file:aad4290d27580cc1a094ffaf98c3ca2fc5d699fe695dfb8e6e9fac20f1129450 in / 
-# Fri, 27 Aug 2021 17:19:45 GMT
+# Fri, 12 Nov 2021 17:19:44 GMT
+ADD file:762c899ec0505d1a32930ee804c5b008825f41611161be104076cba33b7e5b2b in / 
+# Fri, 12 Nov 2021 17:19:45 GMT
 CMD ["/bin/sh"]
-# Thu, 11 Nov 2021 02:25:53 GMT
+# Sat, 13 Nov 2021 05:46:20 GMT
 ENV NATS_STREAMING_SERVER=0.23.1
-# Thu, 11 Nov 2021 02:25:56 GMT
+# Sat, 13 Nov 2021 05:46:23 GMT
 RUN set -eux; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		aarch64) natsArch='arm64'; sha256='1ae3356d830c22a1367ea4ba45f1d2868307c4c8deae13f9e89f0d1731a8fec7' ;; 		armhf) natsArch='arm6'; sha256='961f7f622ef790f909ce7e0521054a7ff1ffa7faaea0e0ca784855b0276fba93' ;; 		armv7) natsArch='arm7'; sha256='61992a8fae5617b14152bdb7d03e2379b8b7cd12b22c46fb7b37ffbe29cb75e7' ;; 		x86_64) natsArch='amd64'; sha256='34cc0d6ed58c8917aa432832afd25bb89ba9ea62ea595cec1846b014a659e4af' ;; 		x86) natsArch='386'; sha256='38fe4b22245a840279967520f9340a741ee0eea7a0fbe99a907a6a36041d323d' ;; 		*) echo >&2 "error: $apkArch is not supported!"; exit 1 ;; 	esac; 		wget -O nats-streaming-server.tar.gz "https://github.com/nats-io/nats-streaming-server/releases/download/v${NATS_STREAMING_SERVER}/nats-streaming-server-v${NATS_STREAMING_SERVER}-linux-${natsArch}.tar.gz"; 	echo "${sha256} *nats-streaming-server.tar.gz" | sha256sum -c -; 		apk add --no-cache ca-certificates; 	apk add --no-cache --virtual buildtmp; 		tar -xf nats-streaming-server.tar.gz; 	rm nats-streaming-server.tar.gz; 	mv "nats-streaming-server-v${NATS_STREAMING_SERVER}-linux-${natsArch}/nats-streaming-server" /usr/local/bin; 	rm -rf "nats-streaming-server-v${NATS_STREAMING_SERVER}-linux-${natsArch}"; 		apk del --no-cache --no-network buildtmp
-# Thu, 11 Nov 2021 02:25:57 GMT
+# Sat, 13 Nov 2021 05:46:23 GMT
 COPY file:528000310df8681fb95f43d3bcf7c8086cd514c78673b1aadb984b1db3331559 in /usr/local/bin 
-# Thu, 11 Nov 2021 02:25:57 GMT
+# Sat, 13 Nov 2021 05:46:23 GMT
 EXPOSE 4222 8222
-# Thu, 11 Nov 2021 02:25:57 GMT
+# Sat, 13 Nov 2021 05:46:24 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 11 Nov 2021 02:25:57 GMT
+# Sat, 13 Nov 2021 05:46:24 GMT
 CMD ["nats-streaming-server" "-m" "8222"]
 ```
 
 -	Layers:
-	-	`sha256:a0d0a0d46f8b52473982a3c466318f479767577551a53ffc9074c9fa7035982e`  
-		Last Modified: Fri, 27 Aug 2021 17:20:13 GMT  
-		Size: 2.8 MB (2814446 bytes)  
+	-	`sha256:97518928ae5f3d52d4164b314a7e73654eb686ecd8aafa0b79acd980773a740d`  
+		Last Modified: Fri, 12 Nov 2021 17:20:39 GMT  
+		Size: 2.8 MB (2822981 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eb6ad0849d761c25f08d32acdbc7ab9a7cea82140e761d1410d866e5f0467ca5`  
-		Last Modified: Thu, 11 Nov 2021 02:26:47 GMT  
-		Size: 7.6 MB (7577806 bytes)  
+	-	`sha256:ff955a4cc71f9aa0f7c6d03ac6e3294eb0b5079277c7eb563670a9bb95a8e43d`  
+		Last Modified: Sat, 13 Nov 2021 05:47:21 GMT  
+		Size: 7.6 MB (7577742 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f536585ec818899ef789e998f021327147a03d261d093e75449729694efe0659`  
-		Last Modified: Thu, 11 Nov 2021 02:26:46 GMT  
-		Size: 421.0 B  
+	-	`sha256:1d6a7277c9a41b94b8667f7699d18910036b0b4d3161dcfe43e01f10a893f5df`  
+		Last Modified: Sat, 13 Nov 2021 05:47:19 GMT  
+		Size: 420.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `nats-streaming:0.23-alpine` - linux; arm variant v6
@@ -429,7 +429,7 @@ CMD ["nats-streaming-server" "-m" "8222"]
 ## `nats-streaming:0.23-alpine3.14`
 
 ```console
-$ docker pull nats-streaming@sha256:c33011e27cd41d096ca03defddda7c04f8dbd19117cbb6b239197837f05eac77
+$ docker pull nats-streaming@sha256:6f406f025b45bb6b1e36540cbcead75615b8c7999a5e7d0e960d64623c08c602
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -442,48 +442,48 @@ $ docker pull nats-streaming@sha256:c33011e27cd41d096ca03defddda7c04f8dbd19117cb
 ### `nats-streaming:0.23-alpine3.14` - linux; amd64
 
 ```console
-$ docker pull nats-streaming@sha256:6ba368573d98b4b0898b38f0f6a66978c9d2a1913747ab28ae683942c9e68493
+$ docker pull nats-streaming@sha256:ccbdee1001f1217f8427450b395e6978f27a60caea09ed3a21105b2926dd2239
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **10.4 MB (10392673 bytes)**  
+-	Total Size: **10.4 MB (10401143 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:abf7ca18fe0750634146c03f6e83080d0d8aae0fc695752133df686bf627f567`
+-	Image ID: `sha256:78ea744d3652f9f6deb6f9efb270a386770cc5cb8a9aed8a42b140639b89c8ca`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["nats-streaming-server","-m","8222"]`
 
 ```dockerfile
-# Fri, 27 Aug 2021 17:19:45 GMT
-ADD file:aad4290d27580cc1a094ffaf98c3ca2fc5d699fe695dfb8e6e9fac20f1129450 in / 
-# Fri, 27 Aug 2021 17:19:45 GMT
+# Fri, 12 Nov 2021 17:19:44 GMT
+ADD file:762c899ec0505d1a32930ee804c5b008825f41611161be104076cba33b7e5b2b in / 
+# Fri, 12 Nov 2021 17:19:45 GMT
 CMD ["/bin/sh"]
-# Thu, 11 Nov 2021 02:25:53 GMT
+# Sat, 13 Nov 2021 05:46:20 GMT
 ENV NATS_STREAMING_SERVER=0.23.1
-# Thu, 11 Nov 2021 02:25:56 GMT
+# Sat, 13 Nov 2021 05:46:23 GMT
 RUN set -eux; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		aarch64) natsArch='arm64'; sha256='1ae3356d830c22a1367ea4ba45f1d2868307c4c8deae13f9e89f0d1731a8fec7' ;; 		armhf) natsArch='arm6'; sha256='961f7f622ef790f909ce7e0521054a7ff1ffa7faaea0e0ca784855b0276fba93' ;; 		armv7) natsArch='arm7'; sha256='61992a8fae5617b14152bdb7d03e2379b8b7cd12b22c46fb7b37ffbe29cb75e7' ;; 		x86_64) natsArch='amd64'; sha256='34cc0d6ed58c8917aa432832afd25bb89ba9ea62ea595cec1846b014a659e4af' ;; 		x86) natsArch='386'; sha256='38fe4b22245a840279967520f9340a741ee0eea7a0fbe99a907a6a36041d323d' ;; 		*) echo >&2 "error: $apkArch is not supported!"; exit 1 ;; 	esac; 		wget -O nats-streaming-server.tar.gz "https://github.com/nats-io/nats-streaming-server/releases/download/v${NATS_STREAMING_SERVER}/nats-streaming-server-v${NATS_STREAMING_SERVER}-linux-${natsArch}.tar.gz"; 	echo "${sha256} *nats-streaming-server.tar.gz" | sha256sum -c -; 		apk add --no-cache ca-certificates; 	apk add --no-cache --virtual buildtmp; 		tar -xf nats-streaming-server.tar.gz; 	rm nats-streaming-server.tar.gz; 	mv "nats-streaming-server-v${NATS_STREAMING_SERVER}-linux-${natsArch}/nats-streaming-server" /usr/local/bin; 	rm -rf "nats-streaming-server-v${NATS_STREAMING_SERVER}-linux-${natsArch}"; 		apk del --no-cache --no-network buildtmp
-# Thu, 11 Nov 2021 02:25:57 GMT
+# Sat, 13 Nov 2021 05:46:23 GMT
 COPY file:528000310df8681fb95f43d3bcf7c8086cd514c78673b1aadb984b1db3331559 in /usr/local/bin 
-# Thu, 11 Nov 2021 02:25:57 GMT
+# Sat, 13 Nov 2021 05:46:23 GMT
 EXPOSE 4222 8222
-# Thu, 11 Nov 2021 02:25:57 GMT
+# Sat, 13 Nov 2021 05:46:24 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 11 Nov 2021 02:25:57 GMT
+# Sat, 13 Nov 2021 05:46:24 GMT
 CMD ["nats-streaming-server" "-m" "8222"]
 ```
 
 -	Layers:
-	-	`sha256:a0d0a0d46f8b52473982a3c466318f479767577551a53ffc9074c9fa7035982e`  
-		Last Modified: Fri, 27 Aug 2021 17:20:13 GMT  
-		Size: 2.8 MB (2814446 bytes)  
+	-	`sha256:97518928ae5f3d52d4164b314a7e73654eb686ecd8aafa0b79acd980773a740d`  
+		Last Modified: Fri, 12 Nov 2021 17:20:39 GMT  
+		Size: 2.8 MB (2822981 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eb6ad0849d761c25f08d32acdbc7ab9a7cea82140e761d1410d866e5f0467ca5`  
-		Last Modified: Thu, 11 Nov 2021 02:26:47 GMT  
-		Size: 7.6 MB (7577806 bytes)  
+	-	`sha256:ff955a4cc71f9aa0f7c6d03ac6e3294eb0b5079277c7eb563670a9bb95a8e43d`  
+		Last Modified: Sat, 13 Nov 2021 05:47:21 GMT  
+		Size: 7.6 MB (7577742 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f536585ec818899ef789e998f021327147a03d261d093e75449729694efe0659`  
-		Last Modified: Thu, 11 Nov 2021 02:26:46 GMT  
-		Size: 421.0 B  
+	-	`sha256:1d6a7277c9a41b94b8667f7699d18910036b0b4d3161dcfe43e01f10a893f5df`  
+		Last Modified: Sat, 13 Nov 2021 05:47:19 GMT  
+		Size: 420.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `nats-streaming:0.23-alpine3.14` - linux; arm variant v6
@@ -1615,7 +1615,7 @@ RUN cmd /S /C #(nop)  CMD ["-m" "8222"]
 ## `nats-streaming:0.23.1-alpine`
 
 ```console
-$ docker pull nats-streaming@sha256:c33011e27cd41d096ca03defddda7c04f8dbd19117cbb6b239197837f05eac77
+$ docker pull nats-streaming@sha256:6f406f025b45bb6b1e36540cbcead75615b8c7999a5e7d0e960d64623c08c602
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1628,48 +1628,48 @@ $ docker pull nats-streaming@sha256:c33011e27cd41d096ca03defddda7c04f8dbd19117cb
 ### `nats-streaming:0.23.1-alpine` - linux; amd64
 
 ```console
-$ docker pull nats-streaming@sha256:6ba368573d98b4b0898b38f0f6a66978c9d2a1913747ab28ae683942c9e68493
+$ docker pull nats-streaming@sha256:ccbdee1001f1217f8427450b395e6978f27a60caea09ed3a21105b2926dd2239
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **10.4 MB (10392673 bytes)**  
+-	Total Size: **10.4 MB (10401143 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:abf7ca18fe0750634146c03f6e83080d0d8aae0fc695752133df686bf627f567`
+-	Image ID: `sha256:78ea744d3652f9f6deb6f9efb270a386770cc5cb8a9aed8a42b140639b89c8ca`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["nats-streaming-server","-m","8222"]`
 
 ```dockerfile
-# Fri, 27 Aug 2021 17:19:45 GMT
-ADD file:aad4290d27580cc1a094ffaf98c3ca2fc5d699fe695dfb8e6e9fac20f1129450 in / 
-# Fri, 27 Aug 2021 17:19:45 GMT
+# Fri, 12 Nov 2021 17:19:44 GMT
+ADD file:762c899ec0505d1a32930ee804c5b008825f41611161be104076cba33b7e5b2b in / 
+# Fri, 12 Nov 2021 17:19:45 GMT
 CMD ["/bin/sh"]
-# Thu, 11 Nov 2021 02:25:53 GMT
+# Sat, 13 Nov 2021 05:46:20 GMT
 ENV NATS_STREAMING_SERVER=0.23.1
-# Thu, 11 Nov 2021 02:25:56 GMT
+# Sat, 13 Nov 2021 05:46:23 GMT
 RUN set -eux; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		aarch64) natsArch='arm64'; sha256='1ae3356d830c22a1367ea4ba45f1d2868307c4c8deae13f9e89f0d1731a8fec7' ;; 		armhf) natsArch='arm6'; sha256='961f7f622ef790f909ce7e0521054a7ff1ffa7faaea0e0ca784855b0276fba93' ;; 		armv7) natsArch='arm7'; sha256='61992a8fae5617b14152bdb7d03e2379b8b7cd12b22c46fb7b37ffbe29cb75e7' ;; 		x86_64) natsArch='amd64'; sha256='34cc0d6ed58c8917aa432832afd25bb89ba9ea62ea595cec1846b014a659e4af' ;; 		x86) natsArch='386'; sha256='38fe4b22245a840279967520f9340a741ee0eea7a0fbe99a907a6a36041d323d' ;; 		*) echo >&2 "error: $apkArch is not supported!"; exit 1 ;; 	esac; 		wget -O nats-streaming-server.tar.gz "https://github.com/nats-io/nats-streaming-server/releases/download/v${NATS_STREAMING_SERVER}/nats-streaming-server-v${NATS_STREAMING_SERVER}-linux-${natsArch}.tar.gz"; 	echo "${sha256} *nats-streaming-server.tar.gz" | sha256sum -c -; 		apk add --no-cache ca-certificates; 	apk add --no-cache --virtual buildtmp; 		tar -xf nats-streaming-server.tar.gz; 	rm nats-streaming-server.tar.gz; 	mv "nats-streaming-server-v${NATS_STREAMING_SERVER}-linux-${natsArch}/nats-streaming-server" /usr/local/bin; 	rm -rf "nats-streaming-server-v${NATS_STREAMING_SERVER}-linux-${natsArch}"; 		apk del --no-cache --no-network buildtmp
-# Thu, 11 Nov 2021 02:25:57 GMT
+# Sat, 13 Nov 2021 05:46:23 GMT
 COPY file:528000310df8681fb95f43d3bcf7c8086cd514c78673b1aadb984b1db3331559 in /usr/local/bin 
-# Thu, 11 Nov 2021 02:25:57 GMT
+# Sat, 13 Nov 2021 05:46:23 GMT
 EXPOSE 4222 8222
-# Thu, 11 Nov 2021 02:25:57 GMT
+# Sat, 13 Nov 2021 05:46:24 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 11 Nov 2021 02:25:57 GMT
+# Sat, 13 Nov 2021 05:46:24 GMT
 CMD ["nats-streaming-server" "-m" "8222"]
 ```
 
 -	Layers:
-	-	`sha256:a0d0a0d46f8b52473982a3c466318f479767577551a53ffc9074c9fa7035982e`  
-		Last Modified: Fri, 27 Aug 2021 17:20:13 GMT  
-		Size: 2.8 MB (2814446 bytes)  
+	-	`sha256:97518928ae5f3d52d4164b314a7e73654eb686ecd8aafa0b79acd980773a740d`  
+		Last Modified: Fri, 12 Nov 2021 17:20:39 GMT  
+		Size: 2.8 MB (2822981 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eb6ad0849d761c25f08d32acdbc7ab9a7cea82140e761d1410d866e5f0467ca5`  
-		Last Modified: Thu, 11 Nov 2021 02:26:47 GMT  
-		Size: 7.6 MB (7577806 bytes)  
+	-	`sha256:ff955a4cc71f9aa0f7c6d03ac6e3294eb0b5079277c7eb563670a9bb95a8e43d`  
+		Last Modified: Sat, 13 Nov 2021 05:47:21 GMT  
+		Size: 7.6 MB (7577742 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f536585ec818899ef789e998f021327147a03d261d093e75449729694efe0659`  
-		Last Modified: Thu, 11 Nov 2021 02:26:46 GMT  
-		Size: 421.0 B  
+	-	`sha256:1d6a7277c9a41b94b8667f7699d18910036b0b4d3161dcfe43e01f10a893f5df`  
+		Last Modified: Sat, 13 Nov 2021 05:47:19 GMT  
+		Size: 420.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `nats-streaming:0.23.1-alpine` - linux; arm variant v6
@@ -1816,7 +1816,7 @@ CMD ["nats-streaming-server" "-m" "8222"]
 ## `nats-streaming:0.23.1-alpine3.14`
 
 ```console
-$ docker pull nats-streaming@sha256:c33011e27cd41d096ca03defddda7c04f8dbd19117cbb6b239197837f05eac77
+$ docker pull nats-streaming@sha256:6f406f025b45bb6b1e36540cbcead75615b8c7999a5e7d0e960d64623c08c602
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1829,48 +1829,48 @@ $ docker pull nats-streaming@sha256:c33011e27cd41d096ca03defddda7c04f8dbd19117cb
 ### `nats-streaming:0.23.1-alpine3.14` - linux; amd64
 
 ```console
-$ docker pull nats-streaming@sha256:6ba368573d98b4b0898b38f0f6a66978c9d2a1913747ab28ae683942c9e68493
+$ docker pull nats-streaming@sha256:ccbdee1001f1217f8427450b395e6978f27a60caea09ed3a21105b2926dd2239
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **10.4 MB (10392673 bytes)**  
+-	Total Size: **10.4 MB (10401143 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:abf7ca18fe0750634146c03f6e83080d0d8aae0fc695752133df686bf627f567`
+-	Image ID: `sha256:78ea744d3652f9f6deb6f9efb270a386770cc5cb8a9aed8a42b140639b89c8ca`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["nats-streaming-server","-m","8222"]`
 
 ```dockerfile
-# Fri, 27 Aug 2021 17:19:45 GMT
-ADD file:aad4290d27580cc1a094ffaf98c3ca2fc5d699fe695dfb8e6e9fac20f1129450 in / 
-# Fri, 27 Aug 2021 17:19:45 GMT
+# Fri, 12 Nov 2021 17:19:44 GMT
+ADD file:762c899ec0505d1a32930ee804c5b008825f41611161be104076cba33b7e5b2b in / 
+# Fri, 12 Nov 2021 17:19:45 GMT
 CMD ["/bin/sh"]
-# Thu, 11 Nov 2021 02:25:53 GMT
+# Sat, 13 Nov 2021 05:46:20 GMT
 ENV NATS_STREAMING_SERVER=0.23.1
-# Thu, 11 Nov 2021 02:25:56 GMT
+# Sat, 13 Nov 2021 05:46:23 GMT
 RUN set -eux; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		aarch64) natsArch='arm64'; sha256='1ae3356d830c22a1367ea4ba45f1d2868307c4c8deae13f9e89f0d1731a8fec7' ;; 		armhf) natsArch='arm6'; sha256='961f7f622ef790f909ce7e0521054a7ff1ffa7faaea0e0ca784855b0276fba93' ;; 		armv7) natsArch='arm7'; sha256='61992a8fae5617b14152bdb7d03e2379b8b7cd12b22c46fb7b37ffbe29cb75e7' ;; 		x86_64) natsArch='amd64'; sha256='34cc0d6ed58c8917aa432832afd25bb89ba9ea62ea595cec1846b014a659e4af' ;; 		x86) natsArch='386'; sha256='38fe4b22245a840279967520f9340a741ee0eea7a0fbe99a907a6a36041d323d' ;; 		*) echo >&2 "error: $apkArch is not supported!"; exit 1 ;; 	esac; 		wget -O nats-streaming-server.tar.gz "https://github.com/nats-io/nats-streaming-server/releases/download/v${NATS_STREAMING_SERVER}/nats-streaming-server-v${NATS_STREAMING_SERVER}-linux-${natsArch}.tar.gz"; 	echo "${sha256} *nats-streaming-server.tar.gz" | sha256sum -c -; 		apk add --no-cache ca-certificates; 	apk add --no-cache --virtual buildtmp; 		tar -xf nats-streaming-server.tar.gz; 	rm nats-streaming-server.tar.gz; 	mv "nats-streaming-server-v${NATS_STREAMING_SERVER}-linux-${natsArch}/nats-streaming-server" /usr/local/bin; 	rm -rf "nats-streaming-server-v${NATS_STREAMING_SERVER}-linux-${natsArch}"; 		apk del --no-cache --no-network buildtmp
-# Thu, 11 Nov 2021 02:25:57 GMT
+# Sat, 13 Nov 2021 05:46:23 GMT
 COPY file:528000310df8681fb95f43d3bcf7c8086cd514c78673b1aadb984b1db3331559 in /usr/local/bin 
-# Thu, 11 Nov 2021 02:25:57 GMT
+# Sat, 13 Nov 2021 05:46:23 GMT
 EXPOSE 4222 8222
-# Thu, 11 Nov 2021 02:25:57 GMT
+# Sat, 13 Nov 2021 05:46:24 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 11 Nov 2021 02:25:57 GMT
+# Sat, 13 Nov 2021 05:46:24 GMT
 CMD ["nats-streaming-server" "-m" "8222"]
 ```
 
 -	Layers:
-	-	`sha256:a0d0a0d46f8b52473982a3c466318f479767577551a53ffc9074c9fa7035982e`  
-		Last Modified: Fri, 27 Aug 2021 17:20:13 GMT  
-		Size: 2.8 MB (2814446 bytes)  
+	-	`sha256:97518928ae5f3d52d4164b314a7e73654eb686ecd8aafa0b79acd980773a740d`  
+		Last Modified: Fri, 12 Nov 2021 17:20:39 GMT  
+		Size: 2.8 MB (2822981 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eb6ad0849d761c25f08d32acdbc7ab9a7cea82140e761d1410d866e5f0467ca5`  
-		Last Modified: Thu, 11 Nov 2021 02:26:47 GMT  
-		Size: 7.6 MB (7577806 bytes)  
+	-	`sha256:ff955a4cc71f9aa0f7c6d03ac6e3294eb0b5079277c7eb563670a9bb95a8e43d`  
+		Last Modified: Sat, 13 Nov 2021 05:47:21 GMT  
+		Size: 7.6 MB (7577742 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f536585ec818899ef789e998f021327147a03d261d093e75449729694efe0659`  
-		Last Modified: Thu, 11 Nov 2021 02:26:46 GMT  
-		Size: 421.0 B  
+	-	`sha256:1d6a7277c9a41b94b8667f7699d18910036b0b4d3161dcfe43e01f10a893f5df`  
+		Last Modified: Sat, 13 Nov 2021 05:47:19 GMT  
+		Size: 420.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `nats-streaming:0.23.1-alpine3.14` - linux; arm variant v6
@@ -2810,7 +2810,7 @@ CMD ["-m" "8222"]
 ## `nats-streaming:alpine`
 
 ```console
-$ docker pull nats-streaming@sha256:c33011e27cd41d096ca03defddda7c04f8dbd19117cbb6b239197837f05eac77
+$ docker pull nats-streaming@sha256:6f406f025b45bb6b1e36540cbcead75615b8c7999a5e7d0e960d64623c08c602
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2823,48 +2823,48 @@ $ docker pull nats-streaming@sha256:c33011e27cd41d096ca03defddda7c04f8dbd19117cb
 ### `nats-streaming:alpine` - linux; amd64
 
 ```console
-$ docker pull nats-streaming@sha256:6ba368573d98b4b0898b38f0f6a66978c9d2a1913747ab28ae683942c9e68493
+$ docker pull nats-streaming@sha256:ccbdee1001f1217f8427450b395e6978f27a60caea09ed3a21105b2926dd2239
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **10.4 MB (10392673 bytes)**  
+-	Total Size: **10.4 MB (10401143 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:abf7ca18fe0750634146c03f6e83080d0d8aae0fc695752133df686bf627f567`
+-	Image ID: `sha256:78ea744d3652f9f6deb6f9efb270a386770cc5cb8a9aed8a42b140639b89c8ca`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["nats-streaming-server","-m","8222"]`
 
 ```dockerfile
-# Fri, 27 Aug 2021 17:19:45 GMT
-ADD file:aad4290d27580cc1a094ffaf98c3ca2fc5d699fe695dfb8e6e9fac20f1129450 in / 
-# Fri, 27 Aug 2021 17:19:45 GMT
+# Fri, 12 Nov 2021 17:19:44 GMT
+ADD file:762c899ec0505d1a32930ee804c5b008825f41611161be104076cba33b7e5b2b in / 
+# Fri, 12 Nov 2021 17:19:45 GMT
 CMD ["/bin/sh"]
-# Thu, 11 Nov 2021 02:25:53 GMT
+# Sat, 13 Nov 2021 05:46:20 GMT
 ENV NATS_STREAMING_SERVER=0.23.1
-# Thu, 11 Nov 2021 02:25:56 GMT
+# Sat, 13 Nov 2021 05:46:23 GMT
 RUN set -eux; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		aarch64) natsArch='arm64'; sha256='1ae3356d830c22a1367ea4ba45f1d2868307c4c8deae13f9e89f0d1731a8fec7' ;; 		armhf) natsArch='arm6'; sha256='961f7f622ef790f909ce7e0521054a7ff1ffa7faaea0e0ca784855b0276fba93' ;; 		armv7) natsArch='arm7'; sha256='61992a8fae5617b14152bdb7d03e2379b8b7cd12b22c46fb7b37ffbe29cb75e7' ;; 		x86_64) natsArch='amd64'; sha256='34cc0d6ed58c8917aa432832afd25bb89ba9ea62ea595cec1846b014a659e4af' ;; 		x86) natsArch='386'; sha256='38fe4b22245a840279967520f9340a741ee0eea7a0fbe99a907a6a36041d323d' ;; 		*) echo >&2 "error: $apkArch is not supported!"; exit 1 ;; 	esac; 		wget -O nats-streaming-server.tar.gz "https://github.com/nats-io/nats-streaming-server/releases/download/v${NATS_STREAMING_SERVER}/nats-streaming-server-v${NATS_STREAMING_SERVER}-linux-${natsArch}.tar.gz"; 	echo "${sha256} *nats-streaming-server.tar.gz" | sha256sum -c -; 		apk add --no-cache ca-certificates; 	apk add --no-cache --virtual buildtmp; 		tar -xf nats-streaming-server.tar.gz; 	rm nats-streaming-server.tar.gz; 	mv "nats-streaming-server-v${NATS_STREAMING_SERVER}-linux-${natsArch}/nats-streaming-server" /usr/local/bin; 	rm -rf "nats-streaming-server-v${NATS_STREAMING_SERVER}-linux-${natsArch}"; 		apk del --no-cache --no-network buildtmp
-# Thu, 11 Nov 2021 02:25:57 GMT
+# Sat, 13 Nov 2021 05:46:23 GMT
 COPY file:528000310df8681fb95f43d3bcf7c8086cd514c78673b1aadb984b1db3331559 in /usr/local/bin 
-# Thu, 11 Nov 2021 02:25:57 GMT
+# Sat, 13 Nov 2021 05:46:23 GMT
 EXPOSE 4222 8222
-# Thu, 11 Nov 2021 02:25:57 GMT
+# Sat, 13 Nov 2021 05:46:24 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 11 Nov 2021 02:25:57 GMT
+# Sat, 13 Nov 2021 05:46:24 GMT
 CMD ["nats-streaming-server" "-m" "8222"]
 ```
 
 -	Layers:
-	-	`sha256:a0d0a0d46f8b52473982a3c466318f479767577551a53ffc9074c9fa7035982e`  
-		Last Modified: Fri, 27 Aug 2021 17:20:13 GMT  
-		Size: 2.8 MB (2814446 bytes)  
+	-	`sha256:97518928ae5f3d52d4164b314a7e73654eb686ecd8aafa0b79acd980773a740d`  
+		Last Modified: Fri, 12 Nov 2021 17:20:39 GMT  
+		Size: 2.8 MB (2822981 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eb6ad0849d761c25f08d32acdbc7ab9a7cea82140e761d1410d866e5f0467ca5`  
-		Last Modified: Thu, 11 Nov 2021 02:26:47 GMT  
-		Size: 7.6 MB (7577806 bytes)  
+	-	`sha256:ff955a4cc71f9aa0f7c6d03ac6e3294eb0b5079277c7eb563670a9bb95a8e43d`  
+		Last Modified: Sat, 13 Nov 2021 05:47:21 GMT  
+		Size: 7.6 MB (7577742 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f536585ec818899ef789e998f021327147a03d261d093e75449729694efe0659`  
-		Last Modified: Thu, 11 Nov 2021 02:26:46 GMT  
-		Size: 421.0 B  
+	-	`sha256:1d6a7277c9a41b94b8667f7699d18910036b0b4d3161dcfe43e01f10a893f5df`  
+		Last Modified: Sat, 13 Nov 2021 05:47:19 GMT  
+		Size: 420.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `nats-streaming:alpine` - linux; arm variant v6
@@ -3011,7 +3011,7 @@ CMD ["nats-streaming-server" "-m" "8222"]
 ## `nats-streaming:alpine3.14`
 
 ```console
-$ docker pull nats-streaming@sha256:c33011e27cd41d096ca03defddda7c04f8dbd19117cbb6b239197837f05eac77
+$ docker pull nats-streaming@sha256:6f406f025b45bb6b1e36540cbcead75615b8c7999a5e7d0e960d64623c08c602
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3024,48 +3024,48 @@ $ docker pull nats-streaming@sha256:c33011e27cd41d096ca03defddda7c04f8dbd19117cb
 ### `nats-streaming:alpine3.14` - linux; amd64
 
 ```console
-$ docker pull nats-streaming@sha256:6ba368573d98b4b0898b38f0f6a66978c9d2a1913747ab28ae683942c9e68493
+$ docker pull nats-streaming@sha256:ccbdee1001f1217f8427450b395e6978f27a60caea09ed3a21105b2926dd2239
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **10.4 MB (10392673 bytes)**  
+-	Total Size: **10.4 MB (10401143 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:abf7ca18fe0750634146c03f6e83080d0d8aae0fc695752133df686bf627f567`
+-	Image ID: `sha256:78ea744d3652f9f6deb6f9efb270a386770cc5cb8a9aed8a42b140639b89c8ca`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["nats-streaming-server","-m","8222"]`
 
 ```dockerfile
-# Fri, 27 Aug 2021 17:19:45 GMT
-ADD file:aad4290d27580cc1a094ffaf98c3ca2fc5d699fe695dfb8e6e9fac20f1129450 in / 
-# Fri, 27 Aug 2021 17:19:45 GMT
+# Fri, 12 Nov 2021 17:19:44 GMT
+ADD file:762c899ec0505d1a32930ee804c5b008825f41611161be104076cba33b7e5b2b in / 
+# Fri, 12 Nov 2021 17:19:45 GMT
 CMD ["/bin/sh"]
-# Thu, 11 Nov 2021 02:25:53 GMT
+# Sat, 13 Nov 2021 05:46:20 GMT
 ENV NATS_STREAMING_SERVER=0.23.1
-# Thu, 11 Nov 2021 02:25:56 GMT
+# Sat, 13 Nov 2021 05:46:23 GMT
 RUN set -eux; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		aarch64) natsArch='arm64'; sha256='1ae3356d830c22a1367ea4ba45f1d2868307c4c8deae13f9e89f0d1731a8fec7' ;; 		armhf) natsArch='arm6'; sha256='961f7f622ef790f909ce7e0521054a7ff1ffa7faaea0e0ca784855b0276fba93' ;; 		armv7) natsArch='arm7'; sha256='61992a8fae5617b14152bdb7d03e2379b8b7cd12b22c46fb7b37ffbe29cb75e7' ;; 		x86_64) natsArch='amd64'; sha256='34cc0d6ed58c8917aa432832afd25bb89ba9ea62ea595cec1846b014a659e4af' ;; 		x86) natsArch='386'; sha256='38fe4b22245a840279967520f9340a741ee0eea7a0fbe99a907a6a36041d323d' ;; 		*) echo >&2 "error: $apkArch is not supported!"; exit 1 ;; 	esac; 		wget -O nats-streaming-server.tar.gz "https://github.com/nats-io/nats-streaming-server/releases/download/v${NATS_STREAMING_SERVER}/nats-streaming-server-v${NATS_STREAMING_SERVER}-linux-${natsArch}.tar.gz"; 	echo "${sha256} *nats-streaming-server.tar.gz" | sha256sum -c -; 		apk add --no-cache ca-certificates; 	apk add --no-cache --virtual buildtmp; 		tar -xf nats-streaming-server.tar.gz; 	rm nats-streaming-server.tar.gz; 	mv "nats-streaming-server-v${NATS_STREAMING_SERVER}-linux-${natsArch}/nats-streaming-server" /usr/local/bin; 	rm -rf "nats-streaming-server-v${NATS_STREAMING_SERVER}-linux-${natsArch}"; 		apk del --no-cache --no-network buildtmp
-# Thu, 11 Nov 2021 02:25:57 GMT
+# Sat, 13 Nov 2021 05:46:23 GMT
 COPY file:528000310df8681fb95f43d3bcf7c8086cd514c78673b1aadb984b1db3331559 in /usr/local/bin 
-# Thu, 11 Nov 2021 02:25:57 GMT
+# Sat, 13 Nov 2021 05:46:23 GMT
 EXPOSE 4222 8222
-# Thu, 11 Nov 2021 02:25:57 GMT
+# Sat, 13 Nov 2021 05:46:24 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 11 Nov 2021 02:25:57 GMT
+# Sat, 13 Nov 2021 05:46:24 GMT
 CMD ["nats-streaming-server" "-m" "8222"]
 ```
 
 -	Layers:
-	-	`sha256:a0d0a0d46f8b52473982a3c466318f479767577551a53ffc9074c9fa7035982e`  
-		Last Modified: Fri, 27 Aug 2021 17:20:13 GMT  
-		Size: 2.8 MB (2814446 bytes)  
+	-	`sha256:97518928ae5f3d52d4164b314a7e73654eb686ecd8aafa0b79acd980773a740d`  
+		Last Modified: Fri, 12 Nov 2021 17:20:39 GMT  
+		Size: 2.8 MB (2822981 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eb6ad0849d761c25f08d32acdbc7ab9a7cea82140e761d1410d866e5f0467ca5`  
-		Last Modified: Thu, 11 Nov 2021 02:26:47 GMT  
-		Size: 7.6 MB (7577806 bytes)  
+	-	`sha256:ff955a4cc71f9aa0f7c6d03ac6e3294eb0b5079277c7eb563670a9bb95a8e43d`  
+		Last Modified: Sat, 13 Nov 2021 05:47:21 GMT  
+		Size: 7.6 MB (7577742 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f536585ec818899ef789e998f021327147a03d261d093e75449729694efe0659`  
-		Last Modified: Thu, 11 Nov 2021 02:26:46 GMT  
-		Size: 421.0 B  
+	-	`sha256:1d6a7277c9a41b94b8667f7699d18910036b0b4d3161dcfe43e01f10a893f5df`  
+		Last Modified: Sat, 13 Nov 2021 05:47:19 GMT  
+		Size: 420.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `nats-streaming:alpine3.14` - linux; arm variant v6
