@@ -3919,20 +3919,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tcl8.6=8.6.11+dfsg-1
-'http://deb.debian.org/debian/pool/main/t/tcl8.6/tcl8.6_8.6.11+dfsg-1.dsc' tcl8.6_8.6.11+dfsg-1.dsc 2118 SHA256:a1f144a7d92dd13cf78b1001993bc3096f2f5d66072a6c9e7e800a5239491f5b
-'http://deb.debian.org/debian/pool/main/t/tcl8.6/tcl8.6_8.6.11+dfsg.orig.tar.gz' tcl8.6_8.6.11+dfsg.orig.tar.gz 6054310 SHA256:10bb25d492f19acb5d00bb24069b0fadd78abad1d5294e5dde141af9fc0693ce
-'http://deb.debian.org/debian/pool/main/t/tcl8.6/tcl8.6_8.6.11+dfsg-1.debian.tar.xz' tcl8.6_8.6.11+dfsg-1.debian.tar.xz 14356 SHA256:3cc78ffb13cead08aabe2afc4c86f90599cde37a68dc6f64460e597ea272e959
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tcl8.6/8.6.11+dfsg-1/
 
-- https://sources.debian.net/src/tcl8.6/8.6.11+dfsg-1/ (for browsing the source)
-- https://sources.debian.net/src/tcl8.6/8.6.11+dfsg-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tcl8.6/8.6.11+dfsg-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tex-gyre=20180621-3.1`
 
@@ -3995,20 +3988,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tk8.6=8.6.11.1-1
-'http://deb.debian.org/debian/pool/main/t/tk8.6/tk8.6_8.6.11.1-1.dsc' tk8.6_8.6.11.1-1.dsc 2167 SHA256:94e3d7cdb22246b5e7521f59f0e809093e43c942acb42b76b3e9f4ef499e3017
-'http://deb.debian.org/debian/pool/main/t/tk8.6/tk8.6_8.6.11.1.orig.tar.gz' tk8.6_8.6.11.1.orig.tar.gz 4496008 SHA256:006cab171beeca6a968b6d617588538176f27be232a2b334a0e96173e89909be
-'http://deb.debian.org/debian/pool/main/t/tk8.6/tk8.6_8.6.11.1-1.debian.tar.xz' tk8.6_8.6.11.1-1.debian.tar.xz 10720 SHA256:0bc99493428b6d25b3c62dcdaf495e47a081a1cbadb232b7cbb9cc1d81a99e34
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tk8.6/8.6.11.1-1/
 
-- https://sources.debian.net/src/tk8.6/8.6.11.1-1/ (for browsing the source)
-- https://sources.debian.net/src/tk8.6/8.6.11.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tk8.6/8.6.11.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tzdata=2021c-1`
 
