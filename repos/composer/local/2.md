@@ -1,10 +1,10 @@
-# `composer:2.1.11`
+# `composer:2.1.12`
 
 ## Docker Metadata
 
-- Image ID: `sha256:be92812690566863616c3065015ef57f4d710b354ffcb4d64d4460df4fe0a2cd`
-- Created: `2021-11-02T20:21:58.525021765Z`
-- Virtual Size: ~ 181.09 Mb  
+- Image ID: `sha256:7b832dc11964cddb554417fb2e40972fe40fef8f43a44c0e8c968e02d025743c`
+- Created: `2021-11-10T20:21:14.642474283Z`
+- Virtual Size: ~ 181.12 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -23,7 +23,7 @@
   - `PHP_SHA256=a501017b3b0fd3023223ea25d98e87369b782f8a82310c4033d7ea6a989fea0a`
   - `COMPOSER_ALLOW_SUPERUSER=1`
   - `COMPOSER_HOME=/tmp`
-  - `COMPOSER_VERSION=2.1.11`
+  - `COMPOSER_VERSION=2.1.12`
 
 ## `apk` (`.apk`-based packages)
 
@@ -540,16 +540,16 @@ GPL-2.0-or-later LGPL-2.1-or-later
 ### `apk` package: `libuuid`
 
 ```console
-libuuid-2.37-r0 description:
+libuuid-2.37.2-r0 description:
 DCE compatible Universally Unique Identifier library
 
-libuuid-2.37-r0 webpage:
+libuuid-2.37.2-r0 webpage:
 https://git.kernel.org/cgit/utils/util-linux/util-linux.git
 
-libuuid-2.37-r0 installed size:
+libuuid-2.37.2-r0 installed size:
 40 KiB
 
-libuuid-2.37-r0 license:
+libuuid-2.37.2-r0 license:
 GPL-3.0-or-later AND GPL-2.0-or-later AND GPL-2.0-only AND
 
 ```
