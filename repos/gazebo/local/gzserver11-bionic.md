@@ -4811,14 +4811,9 @@ Licenses: (parsed from: `/usr/share/doc/libopenexr22/copyright`)
 
 - `openexr`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openexr=2.2.0-11.1ubuntu1.7
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openexr/openexr_2.2.0-11.1ubuntu1.7.dsc' openexr_2.2.0-11.1ubuntu1.7.dsc 2403 SHA512:84c8c0e85dd5e84dbbe0f3681a4cfd7a28323d05f703f70b52b438d5315e5d2cc157d92b118c0edf652e3c27be6f57ca55fbd148c0e343321117cd972e6e8764
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openexr/openexr_2.2.0.orig.tar.gz' openexr_2.2.0.orig.tar.gz 14489661 SHA512:017abbeeb6b814508180721bc8e8940094965c4c55b135a198c6bcb109a04bf7f72e4aee81ee72cb2185fe818a41d892b383e8d2d59f40c673198948cb79279a
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openexr/openexr_2.2.0-11.1ubuntu1.7.debian.tar.xz' openexr_2.2.0-11.1ubuntu1.7.debian.tar.xz 39368 SHA512:69f27dbe180cbb7fd1921587bbf75f8f2c109e8ccdbbf19b05b390bcc8afa805ea1ff9abf3071e5802b75becab8ab9c0a3553922955bd0cea35d8564f2c500ef
-```
 
 ### `dpkg` source package: `openjpeg2=2.3.0-2build0.18.04.1`
 
@@ -5123,14 +5118,9 @@ Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`)
 - `nagaysau-ishii`
 - `rijndael`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris postgresql-10=10.18-0ubuntu0.18.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-10/postgresql-10_10.18-0ubuntu0.18.04.1.dsc' postgresql-10_10.18-0ubuntu0.18.04.1.dsc 3620 SHA512:323dd70201e5a00a6828d75617fa713106531b9b0dbc796ab335ef0b95e551a01f5e95bab5b1645df91db503b0ec77a1dd73d8e2c3d7e06b0a1891ba3872c31c
-'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-10/postgresql-10_10.18.orig.tar.bz2' postgresql-10_10.18.orig.tar.bz2 19197042 SHA512:8a564256b0a5f6375a817cc5db14e56f7f7ee831881a2dc78759e7f2cf708d95fb61ad75a01f13fb05517ab165c991794d837bbb93f60d54f4fb33ca0ac45729
-'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-10/postgresql-10_10.18-0ubuntu0.18.04.1.debian.tar.xz' postgresql-10_10.18-0ubuntu0.18.04.1.debian.tar.xz 35656 SHA512:98f3ae88e9fd0599893a43d536b4be87e402a16bc3b655d83f142769598d34759c42d44889fdbf85f57de1e3a83fb1dd885de03d3a287077461c11a6d451ef7c
-```
 
 ### `dpkg` source package: `procps=2:3.3.12-3ubuntu1.2`
 
