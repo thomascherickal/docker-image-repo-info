@@ -1,4 +1,4 @@
-# `perl:5.34.0-slim-threaded`
+# `perl:5.34.0-slim-threaded-buster`
 
 ## Docker Metadata
 

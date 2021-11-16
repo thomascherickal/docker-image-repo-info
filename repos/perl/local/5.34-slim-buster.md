@@ -1,4 +1,4 @@
-# `perl:5.34.0-slim`
+# `perl:5.34.0-slim-buster`
 
 ## Docker Metadata
 
