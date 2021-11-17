@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:99ea8906ba9c17ed811c859f92bc9a02ad2b3018e81f98e10676e470883bff8e`
-- Created: `2021-10-22T18:56:21.179746648Z`
-- Virtual Size: ~ 916.20 Mb  
+- Image ID: `sha256:4ff1eeabe0a7f2e8cfc986b41399c96a230bbe64d8a5946c66f0de608c5a0db2`
+- Created: `2021-11-17T10:10:45.582601919Z`
+- Virtual Size: ~ 916.23 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -4717,12 +4717,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/pkg-config/0.29.2-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/pkg-config/0.29.2-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `postgresql-13=13.4-0+deb11u1`
+### `dpkg` source package: `postgresql-13=13.5-0+deb11u1`
 
 Binary Packages:
 
-- `libpq-dev=13.4-0+deb11u1`
-- `libpq5:amd64=13.4-0+deb11u1`
+- `libpq-dev=13.5-0+deb11u1`
+- `libpq5:amd64=13.5-0+deb11u1`
 
 Licenses: (parsed from: `/usr/share/doc/libpq-dev/copyright`, `/usr/share/doc/libpq5/copyright`)
 
@@ -4745,17 +4745,17 @@ Licenses: (parsed from: `/usr/share/doc/libpq-dev/copyright`, `/usr/share/doc/li
 Source:
 
 ```console
-$ apt-get source -qq --print-uris postgresql-13=13.4-0+deb11u1
-'http://deb.debian.org/debian/pool/main/p/postgresql-13/postgresql-13_13.4-0+deb11u1.dsc' postgresql-13_13.4-0+deb11u1.dsc 3696 SHA256:440cc5263f7f062584dc758a58363dd7c2c1211df094c8ba2f37de371e04a6c4
-'http://deb.debian.org/debian/pool/main/p/postgresql-13/postgresql-13_13.4.orig.tar.bz2' postgresql-13_13.4.orig.tar.bz2 21157443 SHA256:ea93e10390245f1ce461a54eb5f99a48d8cabd3a08ce4d652ec2169a357bc0cd
-'http://deb.debian.org/debian/pool/main/p/postgresql-13/postgresql-13_13.4-0+deb11u1.debian.tar.xz' postgresql-13_13.4-0+deb11u1.debian.tar.xz 28456 SHA256:518be156f909221ac92ca04b527675d39621a88472a51ad7462f66ae43f688ff
+$ apt-get source -qq --print-uris postgresql-13=13.5-0+deb11u1
+'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-13/postgresql-13_13.5-0+deb11u1.dsc' postgresql-13_13.5-0+deb11u1.dsc 3696 SHA256:70481ab99d82417bef296378c69720657347c03b188d276e9b82f6587936d3be
+'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-13/postgresql-13_13.5.orig.tar.bz2' postgresql-13_13.5.orig.tar.bz2 21186674 SHA256:9b81067a55edbaabc418aacef457dd8477642827499560b00615a6ea6c13f6b3
+'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-13/postgresql-13_13.5-0+deb11u1.debian.tar.xz' postgresql-13_13.5-0+deb11u1.debian.tar.xz 28796 SHA256:36f225fda1f0759d8892d42a99acf565e1693ad2572714aad91b807f03cb4c95
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/postgresql-13/13.4-0+deb11u1/ (for browsing the source)
-- https://sources.debian.net/src/postgresql-13/13.4-0+deb11u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/postgresql-13/13.4-0+deb11u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/postgresql-13/13.5-0+deb11u1/ (for browsing the source)
+- https://sources.debian.net/src/postgresql-13/13.5-0+deb11u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/postgresql-13/13.5-0+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `procps=2:3.3.17-5`
 
@@ -5244,11 +5244,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tiff/4.2.0-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tiff/4.2.0-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tzdata=2021a-1+deb11u1`
+### `dpkg` source package: `tzdata=2021a-1+deb11u2`
 
 Binary Packages:
 
-- `tzdata=2021a-1+deb11u1`
+- `tzdata=2021a-1+deb11u2`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -5257,18 +5257,18 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris tzdata=2021a-1+deb11u1
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-1+deb11u1.dsc' tzdata_2021a-1+deb11u1.dsc 2269 SHA256:b522afdfe43198299934667b4571484a0af3228bae7ec5d000eb82dfa0de5afe
+$ apt-get source -qq --print-uris tzdata=2021a-1+deb11u2
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-1+deb11u2.dsc' tzdata_2021a-1+deb11u2.dsc 2269 SHA256:2893ddffaf6cdad7b672c3c21449c32bd3febef0af53a944dcf6845af999f334
 'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA256:39e7d2ba08c68cbaefc8de3227aab0dec2521be8042cf56855f7dc3a9fb14e08
 'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz.asc' tzdata_2021a.orig.tar.gz.asc 833 SHA256:9dc5f54674166f4ffbc2d4485e656227430ab5f39c9006e6ed9986281117f058
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-1+deb11u1.debian.tar.xz' tzdata_2021a-1+deb11u1.debian.tar.xz 107096 SHA256:74a1e2ed73a28ba32f2ee0058e62c76d3f3e29a75cdf9bdc9e991974704270e9
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-1+deb11u2.debian.tar.xz' tzdata_2021a-1+deb11u2.debian.tar.xz 109132 SHA256:ede987eed945f744dea5866d77663f7d01589c3f97eb68a0dd484f24efbec9e2
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/tzdata/2021a-1+deb11u1/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2021a-1+deb11u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2021a-1+deb11u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/tzdata/2021a-1+deb11u2/ (for browsing the source)
+- https://sources.debian.net/src/tzdata/2021a-1+deb11u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tzdata/2021a-1+deb11u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0043`
 
