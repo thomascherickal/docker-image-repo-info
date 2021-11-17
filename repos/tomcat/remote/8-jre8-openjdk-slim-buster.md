@@ -1,7 +1,7 @@
 ## `tomcat:8-jre8-openjdk-slim-buster`
 
 ```console
-$ docker pull tomcat@sha256:22f4a10950522928302d8a8148319bdf8f1aba08266d35a8f6708a7e964553ee
+$ docker pull tomcat@sha256:7aaf5e1a8031715a1bc72f8a1ce2152295ed693098ec5f3b9cb07a06d4831f2b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -110,93 +110,93 @@ CMD ["catalina.sh" "run"]
 ### `tomcat:8-jre8-openjdk-slim-buster` - linux; arm64 variant v8
 
 ```console
-$ docker pull tomcat@sha256:43babc133b5131341f2c72e86506457a8bd53d96e719f2602114d706d7cfec77
+$ docker pull tomcat@sha256:57d6de260cc757d90ca2b43b1c631231f9dcfe4f8b76c0419245d245397684f3
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **81.1 MB (81127844 bytes)**  
+-	Total Size: **81.1 MB (81142448 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5680b4355bef5824912e42f2c37b2f33f91f5646e1d6654937be1689db140d10`
+-	Image ID: `sha256:d2575dbb2743cc30eb24a99787c633842a30d64f1fa7c4b182be3be42d1296e2`
 -	Default Command: `["catalina.sh","run"]`
 
 ```dockerfile
-# Tue, 12 Oct 2021 01:41:42 GMT
-ADD file:f0d53027a7ba594477674127971aa477af3a2bc6bcddef6c0aa174953a5f2db0 in / 
-# Tue, 12 Oct 2021 01:41:42 GMT
+# Wed, 17 Nov 2021 02:40:44 GMT
+ADD file:b7921dd77c7620d46a18a4b5952557620210bf7ad9de20fe8e695a371188122a in / 
+# Wed, 17 Nov 2021 02:40:44 GMT
 CMD ["bash"]
-# Wed, 13 Oct 2021 06:01:57 GMT
+# Wed, 17 Nov 2021 06:20:10 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates p11-kit 	; 	rm -rf /var/lib/apt/lists/*
-# Wed, 13 Oct 2021 06:14:44 GMT
+# Wed, 17 Nov 2021 06:26:25 GMT
 ENV JAVA_HOME=/usr/local/openjdk-8
-# Wed, 13 Oct 2021 06:14:45 GMT
+# Wed, 17 Nov 2021 06:26:25 GMT
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ] # backwards compatibility
-# Wed, 13 Oct 2021 06:14:46 GMT
+# Wed, 17 Nov 2021 06:26:26 GMT
 ENV PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 13 Oct 2021 06:14:47 GMT
+# Wed, 17 Nov 2021 06:26:27 GMT
 ENV LANG=C.UTF-8
-# Fri, 22 Oct 2021 02:25:20 GMT
+# Wed, 17 Nov 2021 06:26:28 GMT
 ENV JAVA_VERSION=8u312
-# Fri, 22 Oct 2021 02:26:31 GMT
+# Wed, 17 Nov 2021 06:27:44 GMT
 RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u312-b07/OpenJDK8U-jre_x64_linux_8u312b07.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u312-b07/OpenJDK8U-jre_aarch64_linux_8u312b07.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -version
-# Fri, 22 Oct 2021 03:45:44 GMT
+# Wed, 17 Nov 2021 15:24:17 GMT
 ENV CATALINA_HOME=/usr/local/tomcat
-# Fri, 22 Oct 2021 03:45:45 GMT
+# Wed, 17 Nov 2021 15:24:17 GMT
 ENV PATH=/usr/local/tomcat/bin:/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 22 Oct 2021 03:45:46 GMT
+# Wed, 17 Nov 2021 15:24:18 GMT
 RUN mkdir -p "$CATALINA_HOME"
-# Fri, 22 Oct 2021 03:45:47 GMT
+# Wed, 17 Nov 2021 15:24:19 GMT
 WORKDIR /usr/local/tomcat
-# Fri, 22 Oct 2021 03:45:48 GMT
+# Wed, 17 Nov 2021 15:24:20 GMT
 ENV TOMCAT_NATIVE_LIBDIR=/usr/local/tomcat/native-jni-lib
-# Fri, 22 Oct 2021 03:45:49 GMT
+# Wed, 17 Nov 2021 15:24:21 GMT
 ENV LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib
-# Fri, 22 Oct 2021 04:09:28 GMT
+# Wed, 17 Nov 2021 15:40:23 GMT
 ENV GPG_KEYS=05AB33110949707C93A279E3D3EFE6B686867BA6 07E48665A34DCAFAE522E5E6266191C37C037D42 47309207D818FFD8DCD3F83F1931D684307A10A5 541FBE7D8F78B25E055DDEE13C370389288584E7 5C3C5F3E314C866292F359A8F3AD5C94A67F707E 765908099ACF92702C7D949BFA0C35EA8AA299F1 79F7026C690BAA50B92CD8B66A3AD3F4F22C4FED 9BA44C2621385CB966EBA586F72C284D731FABEE A27677289986DB50844682F8ACB77FC2E86E29AC A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243 F3A04C595DB5B6A5F1ECA43E3B7BBB100D811BBE F7DA48BB64BCB84ECBA7EE6935CD23C10D498E23
-# Fri, 22 Oct 2021 04:09:29 GMT
+# Wed, 17 Nov 2021 15:40:24 GMT
 ENV TOMCAT_MAJOR=8
-# Fri, 22 Oct 2021 04:09:30 GMT
+# Wed, 17 Nov 2021 15:40:25 GMT
 ENV TOMCAT_VERSION=8.5.72
-# Fri, 22 Oct 2021 04:09:31 GMT
+# Wed, 17 Nov 2021 15:40:26 GMT
 ENV TOMCAT_SHA512=41d7eb83120f210d238d8653d729bfb2be32f3666e6c04e73607c05f066c4136b0719f8107cf66673333548c82dc5b9c0357e91fc0ac845e64f055b598f27049
-# Fri, 22 Oct 2021 04:09:33 GMT
-COPY dir:76776c272e8d0d5a7f1b3093ea02068650ca790e0f2915e1823c61942eb1e988 in /usr/local/tomcat 
-# Fri, 22 Oct 2021 04:09:36 GMT
+# Wed, 17 Nov 2021 15:40:28 GMT
+COPY dir:c5b84f77746bd69b4c1a94ea5c640149fce96b938c7312619a32d39df59621c5 in /usr/local/tomcat 
+# Wed, 17 Nov 2021 15:40:32 GMT
 RUN set -eux; 	apt-get update; 	xargs -rt apt-get install -y --no-install-recommends < "$TOMCAT_NATIVE_LIBDIR/.dependencies.txt"; 	rm -rf /var/lib/apt/lists/*
-# Fri, 22 Oct 2021 04:09:38 GMT
+# Wed, 17 Nov 2021 15:40:33 GMT
 RUN set -eux; 	nativeLines="$(catalina.sh configtest 2>&1)"; 	nativeLines="$(echo "$nativeLines" | grep 'Apache Tomcat Native')"; 	nativeLines="$(echo "$nativeLines" | sort -u)"; 	if ! echo "$nativeLines" | grep -E 'INFO: Loaded( APR based)? Apache Tomcat Native library' >&2; then 		echo >&2 "$nativeLines"; 		exit 1; 	fi
-# Fri, 22 Oct 2021 04:09:39 GMT
+# Wed, 17 Nov 2021 15:40:34 GMT
 EXPOSE 8080
-# Fri, 22 Oct 2021 04:09:40 GMT
+# Wed, 17 Nov 2021 15:40:35 GMT
 CMD ["catalina.sh" "run"]
 ```
 
 -	Layers:
-	-	`sha256:02b45931a436a68cadb742684148ed6aacbbf9aa21447b467c11bac97f92eb46`  
-		Last Modified: Tue, 12 Oct 2021 01:49:07 GMT  
-		Size: 25.9 MB (25908479 bytes)  
+	-	`sha256:8ccb9871ed7bebcea8889b08e06fe5bd0116711ca7b110429b987475bf4d40e8`  
+		Last Modified: Wed, 17 Nov 2021 02:48:07 GMT  
+		Size: 25.9 MB (25923117 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d42a628bf864e5fbc07330c3cb3cbd4f73d7b9f624a52fbb7162c07185b972a4`  
-		Last Modified: Wed, 13 Oct 2021 06:27:07 GMT  
-		Size: 3.1 MB (3118848 bytes)  
+	-	`sha256:32d2ce082a636f2575ff560dfc074aeb5d202b4d77cbac92b6582223f6afded4`  
+		Last Modified: Wed, 17 Nov 2021 06:35:58 GMT  
+		Size: 3.1 MB (3118835 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5522d1db51532802697ad4f9283da84ad05847cb774e945d53c9a52df6adc873`  
-		Last Modified: Wed, 13 Oct 2021 06:45:08 GMT  
-		Size: 212.0 B  
+	-	`sha256:224bf81a1628651d565105ff889655cf17476c82077270d75531f97458f73ae3`  
+		Last Modified: Wed, 17 Nov 2021 06:43:02 GMT  
+		Size: 209.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6d7a46f04bb821b7dbe9c4fdf354ab33747f39858eab317ce397c720d8234c6a`  
-		Last Modified: Fri, 22 Oct 2021 02:48:21 GMT  
-		Size: 40.7 MB (40692362 bytes)  
+	-	`sha256:9b6d0561c09d9849f65502aa24981e7daadfe273fb1ae84453dbc9431f9a4978`  
+		Last Modified: Wed, 17 Nov 2021 06:44:01 GMT  
+		Size: 40.7 MB (40692372 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:32c1cd437325121e7f1bd201d2455281a010150d1f29b53748a7beaf82db2834`  
-		Last Modified: Fri, 22 Oct 2021 04:45:10 GMT  
-		Size: 139.0 B  
+	-	`sha256:40be071cad031ba8eb057c1b59243b664672c90de0cf5526e781ce1951602352`  
+		Last Modified: Wed, 17 Nov 2021 16:07:51 GMT  
+		Size: 138.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f603c4ac19cfa0f9eac3969ec6e729d84d0a03edb11528aba3e4b62c72794fc2`  
-		Last Modified: Fri, 22 Oct 2021 05:02:41 GMT  
-		Size: 11.2 MB (11234222 bytes)  
+	-	`sha256:00bb77062c65944dec2163d7eb061635576bf0bd207324a9fcbb7a1e1d1eb533`  
+		Last Modified: Wed, 17 Nov 2021 16:17:45 GMT  
+		Size: 11.2 MB (11234184 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6123c2c5576b09dcc7bcd13727d3c05acabbe5c1c2eeaad33b4170c14e1a2d9c`  
-		Last Modified: Fri, 22 Oct 2021 05:02:39 GMT  
-		Size: 173.6 KB (173582 bytes)  
+	-	`sha256:a3471e8a846b87c0d70f33e0c619fd7158922882711d490ee82cc946e43f27cd`  
+		Last Modified: Wed, 17 Nov 2021 16:17:44 GMT  
+		Size: 173.6 KB (173593 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
