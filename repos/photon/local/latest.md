@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:a8b67089cb9bae2d46ea03a2d70447d6829360095cb4e712900462e42db7d9d8`
-- Created: `2021-11-06T01:20:11.198340088Z`
+- Image ID: `sha256:7448a40f380db5884994cae3256ee4c94bf9c5a19ea9406c60bb35caee657ffd`
+- Created: `2021-11-15T18:20:25.947967349Z`
 - Virtual Size: ~ 36.59 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -11,7 +11,7 @@
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
 - Labels:
-  - `build-date=20211105`
+  - `build-date=20211112`
   - `name=Photon OS x86_64/4.0 Base Image`
   - `vendor=VMware`
 
@@ -179,7 +179,7 @@ Licenses (from `rpm --query`): OpenSSL
 
 **WARNING:** unable to find source (`yumdownloader` failed or returned no results)!
 
-### `rpm` package: `photon-release-4.0-1.ph4.noarch`
+### `rpm` package: `photon-release-4.0-2.ph4.noarch`
 
 Licenses (from `rpm --query`): Apache License
 
