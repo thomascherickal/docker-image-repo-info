@@ -1,10 +1,10 @@
-# `nextcloud:22.2.0-fpm-alpine`
+# `nextcloud:22.2.3-fpm-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:7c297dca28914de7d176eb2201fa849c274624c833d8584ede8accfa990526ca`
-- Created: `2021-10-21T19:47:46.710264087Z`
-- Virtual Size: ~ 548.04 Mb  
+- Image ID: `sha256:ec737e91e717342a5db6929680775d49b74798fc4e0018017eda1d358c631547`
+- Created: `2021-11-17T00:26:34.360114946Z`
+- Virtual Size: ~ 548.07 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -23,7 +23,7 @@
   - `PHP_SHA256=a501017b3b0fd3023223ea25d98e87369b782f8a82310c4033d7ea6a989fea0a`
   - `PHP_MEMORY_LIMIT=512M`
   - `PHP_UPLOAD_LIMIT=512M`
-  - `NEXTCLOUD_VERSION=22.2.0`
+  - `NEXTCLOUD_VERSION=22.2.3`
 
 ## `apk` (`.apk`-based packages)
 
@@ -47,16 +47,16 @@ GPL-2.0-only
 ### `apk` package: `alpine-keys`
 
 ```console
-alpine-keys-2.3-r1 description:
+alpine-keys-2.4-r0 description:
 Public keys for Alpine Linux packages
 
-alpine-keys-2.3-r1 webpage:
+alpine-keys-2.4-r0 webpage:
 https://alpinelinux.org
 
-alpine-keys-2.3-r1 installed size:
-116 KiB
+alpine-keys-2.4-r0 installed size:
+156 KiB
 
-alpine-keys-2.3-r1 license:
+alpine-keys-2.4-r0 license:
 MIT
 
 ```
@@ -115,16 +115,16 @@ MIT
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.33.1-r3 description:
+busybox-1.33.1-r6 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.33.1-r3 webpage:
+busybox-1.33.1-r6 webpage:
 https://busybox.net/
 
-busybox-1.33.1-r3 installed size:
+busybox-1.33.1-r6 installed size:
 928 KiB
 
-busybox-1.33.1-r3 license:
+busybox-1.33.1-r6 license:
 GPL-2.0-only
 
 ```
@@ -166,16 +166,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `curl`
 
 ```console
-curl-7.78.0-r0 description:
+curl-7.79.1-r0 description:
 URL retrival utility and library
 
-curl-7.78.0-r0 webpage:
+curl-7.79.1-r0 webpage:
 https://curl.se/
 
-curl-7.78.0-r0 installed size:
-244 KiB
+curl-7.79.1-r0 installed size:
+248 KiB
 
-curl-7.78.0-r0 license:
+curl-7.79.1-r0 license:
 MIT
 
 ```
@@ -659,16 +659,16 @@ GPL-2.0-or-later LGPL-2.1-or-later
 ### `apk` package: `libuuid`
 
 ```console
-libuuid-2.37-r0 description:
+libuuid-2.37.2-r0 description:
 DCE compatible Universally Unique Identifier library
 
-libuuid-2.37-r0 webpage:
+libuuid-2.37.2-r0 webpage:
 https://git.kernel.org/cgit/utils/util-linux/util-linux.git
 
-libuuid-2.37-r0 installed size:
+libuuid-2.37.2-r0 installed size:
 40 KiB
 
-libuuid-2.37-r0 license:
+libuuid-2.37.2-r0 license:
 GPL-3.0-or-later AND GPL-2.0-or-later AND GPL-2.0-only AND
 
 ```
@@ -1016,16 +1016,16 @@ Public-Domain
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.33.1-r3 description:
+ssl_client-1.33.1-r6 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.33.1-r3 webpage:
+ssl_client-1.33.1-r6 webpage:
 https://busybox.net/
 
-ssl_client-1.33.1-r3 installed size:
+ssl_client-1.33.1-r6 installed size:
 28 KiB
 
-ssl_client-1.33.1-r3 license:
+ssl_client-1.33.1-r6 license:
 GPL-2.0-only
 
 ```
