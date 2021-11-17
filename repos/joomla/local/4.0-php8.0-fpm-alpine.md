@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:285526bc54dbf1f45bcedccf51068eb08ec4be3f962f7b2926cd2b0d09a9d21c`
-- Created: `2021-11-01T23:17:28.512161992Z`
-- Virtual Size: ~ 200.12 Mb  
+- Image ID: `sha256:0b33fff21af6c9ec767f57908082853785df9844b34e0107998cd491710873c4`
+- Created: `2021-11-13T15:03:55.310850035Z`
+- Virtual Size: ~ 199.65 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -49,16 +49,16 @@ GPL-2.0-only
 ### `apk` package: `alpine-keys`
 
 ```console
-alpine-keys-2.3-r1 description:
+alpine-keys-2.4-r0 description:
 Public keys for Alpine Linux packages
 
-alpine-keys-2.3-r1 webpage:
+alpine-keys-2.4-r0 webpage:
 https://alpinelinux.org
 
-alpine-keys-2.3-r1 installed size:
-116 KiB
+alpine-keys-2.4-r0 installed size:
+156 KiB
 
-alpine-keys-2.3-r1 license:
+alpine-keys-2.4-r0 license:
 MIT
 
 ```
@@ -134,16 +134,16 @@ MIT
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.33.1-r3 description:
+busybox-1.33.1-r6 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.33.1-r3 webpage:
+busybox-1.33.1-r6 webpage:
 https://busybox.net/
 
-busybox-1.33.1-r3 installed size:
+busybox-1.33.1-r6 installed size:
 928 KiB
 
-busybox-1.33.1-r3 license:
+busybox-1.33.1-r6 license:
 GPL-2.0-only
 
 ```
@@ -185,16 +185,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `curl`
 
 ```console
-curl-7.78.0-r0 description:
+curl-7.79.1-r0 description:
 URL retrival utility and library
 
-curl-7.78.0-r0 webpage:
+curl-7.79.1-r0 webpage:
 https://curl.se/
 
-curl-7.78.0-r0 installed size:
-244 KiB
+curl-7.79.1-r0 installed size:
+248 KiB
 
-curl-7.78.0-r0 license:
+curl-7.79.1-r0 license:
 MIT
 
 ```
@@ -746,16 +746,16 @@ Public-Domain
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.33.1-r3 description:
+ssl_client-1.33.1-r6 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.33.1-r3 webpage:
+ssl_client-1.33.1-r6 webpage:
 https://busybox.net/
 
-ssl_client-1.33.1-r3 installed size:
+ssl_client-1.33.1-r6 installed size:
 28 KiB
 
-ssl_client-1.33.1-r3 license:
+ssl_client-1.33.1-r6 license:
 GPL-2.0-only
 
 ```
