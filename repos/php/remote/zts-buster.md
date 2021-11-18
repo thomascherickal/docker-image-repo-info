@@ -1,7 +1,7 @@
 ## `php:zts-buster`
 
 ```console
-$ docker pull php@sha256:186415d79b1d039894e9dba56b16c9c8f193be23b9575d1c8afaa3922ba41ac8
+$ docker pull php@sha256:442c36e4839b476a08291f6643b82c1e841d7ffae5729c40d87a72a42e424384
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -600,98 +600,98 @@ CMD ["php" "-a"]
 ### `php:zts-buster` - linux; ppc64le
 
 ```console
-$ docker pull php@sha256:02d6fa94f3f6391266976682c8f9eca9916aaef03bc54249e64d451e97e4f474
+$ docker pull php@sha256:74e68e52069b1d13b48bffa970b348a30463a7cc97fa74d936d7cd11644c7345
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **154.6 MB (154566252 bytes)**  
+-	Total Size: **154.6 MB (154581399 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:14d6e044c08d973ae9fc926b5e816fa59b31158d6ba542bf0f4aaf2e04c0e0fc`
+-	Image ID: `sha256:678a1e9352b9cfa9b123368e12f9bf28f3d2f1d59cd7d545ee0f20e51b4e0fec`
 -	Entrypoint: `["docker-php-entrypoint"]`
 -	Default Command: `["php","-a"]`
 
 ```dockerfile
-# Tue, 12 Oct 2021 01:26:46 GMT
-ADD file:5526880c6f19a4b4231a8b2bd7cfc625d116764c4918eff6f0b55f8c1eb38e1a in / 
-# Tue, 12 Oct 2021 01:26:50 GMT
+# Wed, 17 Nov 2021 03:30:22 GMT
+ADD file:c0f8b5d4d419bef7a494df5330ecf7bbea3cbb6462308ca0b2f26771f125dea0 in / 
+# Wed, 17 Nov 2021 03:30:29 GMT
 CMD ["bash"]
-# Tue, 12 Oct 2021 10:58:16 GMT
+# Thu, 18 Nov 2021 02:03:43 GMT
 RUN set -eux; 	{ 		echo 'Package: php*'; 		echo 'Pin: release *'; 		echo 'Pin-Priority: -1'; 	} > /etc/apt/preferences.d/no-debian-php
-# Tue, 12 Oct 2021 10:58:29 GMT
+# Thu, 18 Nov 2021 02:03:51 GMT
 ENV PHPIZE_DEPS=autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c
-# Tue, 12 Oct 2021 11:02:08 GMT
+# Thu, 18 Nov 2021 02:06:06 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		$PHPIZE_DEPS 		ca-certificates 		curl 		xz-utils 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 12 Oct 2021 11:02:19 GMT
+# Thu, 18 Nov 2021 02:06:13 GMT
 ENV PHP_INI_DIR=/usr/local/etc/php
-# Tue, 12 Oct 2021 11:02:33 GMT
+# Thu, 18 Nov 2021 02:06:19 GMT
 RUN set -eux; 	mkdir -p "$PHP_INI_DIR/conf.d"; 	[ ! -d /var/www/html ]; 	mkdir -p /var/www/html; 	chown www-data:www-data /var/www/html; 	chmod 777 /var/www/html
-# Thu, 14 Oct 2021 19:47:09 GMT
+# Thu, 18 Nov 2021 02:06:21 GMT
 ENV PHP_CFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
-# Thu, 14 Oct 2021 19:47:11 GMT
+# Thu, 18 Nov 2021 02:06:24 GMT
 ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
-# Thu, 14 Oct 2021 19:47:13 GMT
+# Thu, 18 Nov 2021 02:06:32 GMT
 ENV PHP_LDFLAGS=-Wl,-O1 -pie
-# Thu, 14 Oct 2021 21:02:25 GMT
+# Thu, 18 Nov 2021 02:54:58 GMT
 ENV GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F
-# Thu, 21 Oct 2021 15:43:15 GMT
+# Thu, 18 Nov 2021 02:55:00 GMT
 ENV PHP_VERSION=8.0.12
-# Thu, 21 Oct 2021 15:43:18 GMT
+# Thu, 18 Nov 2021 02:55:02 GMT
 ENV PHP_URL=https://www.php.net/distributions/php-8.0.12.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-8.0.12.tar.xz.asc
-# Thu, 21 Oct 2021 15:43:20 GMT
+# Thu, 18 Nov 2021 02:55:03 GMT
 ENV PHP_SHA256=a501017b3b0fd3023223ea25d98e87369b782f8a82310c4033d7ea6a989fea0a
-# Thu, 21 Oct 2021 15:44:33 GMT
+# Thu, 18 Nov 2021 02:56:10 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends gnupg dirmngr; 	rm -rf /var/lib/apt/lists/*; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Thu, 21 Oct 2021 15:44:35 GMT
+# Thu, 18 Nov 2021 02:56:12 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 21 Oct 2021 16:04:28 GMT
+# Thu, 18 Nov 2021 03:15:41 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		libargon2-dev 		libcurl4-openssl-dev 		libonig-dev 		libreadline-dev 		libsodium-dev 		libsqlite3-dev 		libssl-dev 		libxml2-dev 		zlib1g-dev 	; 		export 		CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)"; 	if [ ! -d /usr/include/curl ]; then 		ln -sT "/usr/include/$debMultiarch/curl" /usr/local/include/curl; 	fi; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--with-pic 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-openssl 		--with-readline 		--with-zlib 				--with-pear 				$(test "$gnuArch" = 's390x-linux-gnu' && echo '--without-pcre-jit') 		--with-libdir="lib/$debMultiarch" 				--disable-cgi 				--enable-embed 				--enable-zts 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find 		/usr/local 		-type f 		-perm '/0111' 		-exec sh -euxc ' 			strip --strip-all "$@" || : 		' -- '{}' + 	; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 		php --version
-# Thu, 21 Oct 2021 16:04:32 GMT
+# Thu, 18 Nov 2021 03:15:44 GMT
 COPY multi:a00980ff863125d6071b93844e0a51dc89719405d95217aba6860be950a05740 in /usr/local/bin/ 
-# Thu, 21 Oct 2021 16:04:42 GMT
+# Thu, 18 Nov 2021 03:15:51 GMT
 RUN docker-php-ext-enable sodium
-# Thu, 21 Oct 2021 16:04:44 GMT
+# Thu, 18 Nov 2021 03:15:55 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Thu, 21 Oct 2021 16:04:46 GMT
+# Thu, 18 Nov 2021 03:15:58 GMT
 CMD ["php" "-a"]
 ```
 
 -	Layers:
-	-	`sha256:d69973af32573c07c8789c0f9c144a5c0b822a1e85b59db3ce9f8ebc489ce85d`  
-		Last Modified: Tue, 12 Oct 2021 01:38:40 GMT  
-		Size: 30.5 MB (30547197 bytes)  
+	-	`sha256:459de0a111d5c931674a5150ef4ae6bb1ffb1685380f4aafdba04a37d556c5de`  
+		Last Modified: Wed, 17 Nov 2021 03:58:14 GMT  
+		Size: 30.6 MB (30562278 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:afd042da7d75885e406d64d067e43acc3d39becde54839c7d0a70123204cf181`  
-		Last Modified: Tue, 12 Oct 2021 14:35:50 GMT  
+	-	`sha256:a82957ad9e6ceba1c17833f843c8069978c9ca8a96b2eb0d16c8503fc97c6463`  
+		Last Modified: Thu, 18 Nov 2021 04:53:24 GMT  
 		Size: 229.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a9be09be5fb6534ff8ee45fd25f7316c7e6c71c62c56f895baf913a5c7b1a70a`  
-		Last Modified: Tue, 12 Oct 2021 14:36:44 GMT  
-		Size: 82.3 MB (82291841 bytes)  
+	-	`sha256:71f91d0deefc2a574ca16b9ffcab734dd5cc41275363d2d03e4c1c07f940bd22`  
+		Last Modified: Thu, 18 Nov 2021 04:54:05 GMT  
+		Size: 82.3 MB (82291931 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8e52fc03db302222d62cb5045c03a27de98f3917133e0ac0b078c286e0a81195`  
-		Last Modified: Tue, 12 Oct 2021 14:35:50 GMT  
-		Size: 270.0 B  
+	-	`sha256:f6ae7141da3e9e1f0780122e2eb65bb775317b8a0394345dcb0294efc78f212d`  
+		Last Modified: Thu, 18 Nov 2021 04:53:24 GMT  
+		Size: 269.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a3990cadebc912919b35ae8dd2ba47fdd9c0e23aebaed11f6290ec0d89e1a9c5`  
-		Last Modified: Thu, 21 Oct 2021 16:42:09 GMT  
-		Size: 11.0 MB (11035158 bytes)  
+	-	`sha256:00255ecd8297656c87863bbf50cbc724e924044c7ced68116748ab44a8af2c74`  
+		Last Modified: Thu, 18 Nov 2021 04:59:41 GMT  
+		Size: 11.0 MB (11035099 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bea4b74c8f10b9c8ab4e5d649f0a89b38781b21e3aa07b2645ba4f83e5c4eae2`  
-		Last Modified: Thu, 21 Oct 2021 16:42:08 GMT  
-		Size: 494.0 B  
+	-	`sha256:de6f24903f4fcf93d5311520925e87050fd3ce6c60fdf3b3db5247d9021b4e4e`  
+		Last Modified: Thu, 18 Nov 2021 04:59:39 GMT  
+		Size: 491.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dc0c52e93eb563f9eb26416eb0066cd039070b716477e41de2674ed374866bb1`  
-		Last Modified: Thu, 21 Oct 2021 16:43:36 GMT  
-		Size: 30.7 MB (30688513 bytes)  
+	-	`sha256:9e5e56e574820fcacac8237c4e07a51935d67d8d86fd60d45ede1bbd7c5158b9`  
+		Last Modified: Thu, 18 Nov 2021 05:02:03 GMT  
+		Size: 30.7 MB (30688550 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa7e357c18ef7b19cb92d237f9b1fd66b2470c2fcff0b5e96864ce76194d66a1`  
-		Last Modified: Thu, 21 Oct 2021 16:43:30 GMT  
-		Size: 2.3 KB (2304 bytes)  
+	-	`sha256:1333483a14cfc4d65a5f97d80af2eef495746623579d0e12bdaf116b59224128`  
+		Last Modified: Thu, 18 Nov 2021 05:01:45 GMT  
+		Size: 2.3 KB (2305 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:70778854fc722b5d4655d93265da7ed1db4a8891e188d131f7a9fa3e9955d7ce`  
-		Last Modified: Thu, 21 Oct 2021 16:43:30 GMT  
-		Size: 246.0 B  
+	-	`sha256:7ae6f49e0f1b92f90243bbf58f78f1137247393fe99b5c48e137c4f314be6432`  
+		Last Modified: Thu, 18 Nov 2021 05:01:45 GMT  
+		Size: 247.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `php:zts-buster` - linux; s390x
