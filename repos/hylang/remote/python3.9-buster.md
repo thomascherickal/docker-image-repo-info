@@ -1,7 +1,7 @@
 ## `hylang:python3.9-buster`
 
 ```console
-$ docker pull hylang@sha256:6c6c7e713c60a78171efb308185391a771a716329e5717eaf584c992210e1392
+$ docker pull hylang@sha256:28b6c54151e3df1ad3de57972cc616d8b803721898f366520e28603012fbe83c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -18,79 +18,79 @@ $ docker pull hylang@sha256:6c6c7e713c60a78171efb308185391a771a716329e5717eaf584
 ### `hylang:python3.9-buster` - linux; amd64
 
 ```console
-$ docker pull hylang@sha256:fcc3c75dfb19596a29167bdc99cb79ec8bec4ebe2f76e662e9d74811ee3c8d3e
+$ docker pull hylang@sha256:f9688e0ffdc838fe3704c824fb472320862106f162110508d25488da778c6ca0
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **46.6 MB (46639818 bytes)**  
+-	Total Size: **46.6 MB (46643707 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a3c613f281b0ae8982224e5b8e5473e7b180db2ae9923871072c2fa378610455`
+-	Image ID: `sha256:4938a2e69982625b1da6458977d3399bf8b2a001fa997b72e136eabde0d5dd13`
 -	Default Command: `["hy"]`
 
 ```dockerfile
-# Tue, 12 Oct 2021 01:21:05 GMT
-ADD file:910392427fdf089bc26b64d6dc450ff3d020c7c1a474d85b2f9298134d0007bd in / 
-# Tue, 12 Oct 2021 01:21:05 GMT
+# Wed, 17 Nov 2021 02:21:02 GMT
+ADD file:3c54ad257f2e04f7294ce879b884820cf4726c8e93ec548172825963e40c79ad in / 
+# Wed, 17 Nov 2021 02:21:02 GMT
 CMD ["bash"]
-# Tue, 12 Oct 2021 02:27:09 GMT
+# Wed, 17 Nov 2021 15:58:11 GMT
 ENV PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 12 Oct 2021 02:27:09 GMT
+# Wed, 17 Nov 2021 15:58:11 GMT
 ENV LANG=C.UTF-8
-# Tue, 12 Oct 2021 02:27:16 GMT
+# Wed, 17 Nov 2021 15:58:18 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		netbase 		tzdata 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 12 Oct 2021 02:45:07 GMT
+# Wed, 17 Nov 2021 16:41:40 GMT
 ENV GPG_KEY=E3FF2839C048B25C084DEBE9B26995E310250568
-# Tue, 16 Nov 2021 18:54:55 GMT
+# Wed, 17 Nov 2021 16:41:40 GMT
 ENV PYTHON_VERSION=3.9.9
-# Tue, 16 Nov 2021 19:03:52 GMT
+# Wed, 17 Nov 2021 16:50:34 GMT
 RUN set -ex 		&& savedAptMark="$(apt-mark showmanual)" 	&& apt-get update && apt-get install -y --no-install-recommends 		dpkg-dev 		gcc 		libbluetooth-dev 		libbz2-dev 		libc6-dev 		libexpat1-dev 		libffi-dev 		libgdbm-dev 		liblzma-dev 		libncursesw5-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		make 		tk-dev 		uuid-dev 		wget 		xz-utils 		zlib1g-dev 		$(command -v gpg > /dev/null || echo 'gnupg dirmngr') 		&& wget -O python.tar.xz "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz" 	&& wget -O python.tar.xz.asc "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz.asc" 	&& export GNUPGHOME="$(mktemp -d)" 	&& gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys "$GPG_KEY" 	&& gpg --batch --verify python.tar.xz.asc python.tar.xz 	&& { command -v gpgconf > /dev/null && gpgconf --kill all || :; } 	&& rm -rf "$GNUPGHOME" python.tar.xz.asc 	&& mkdir -p /usr/src/python 	&& tar -xJC /usr/src/python --strip-components=1 -f python.tar.xz 	&& rm python.tar.xz 		&& cd /usr/src/python 	&& gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)" 	&& ./configure 		--build="$gnuArch" 		--enable-loadable-sqlite-extensions 		--enable-optimizations 		--enable-option-checking=fatal 		--enable-shared 		--with-system-expat 		--with-system-ffi 		--without-ensurepip 	&& make -j "$(nproc)" 		LDFLAGS="-Wl,--strip-all" 	&& make install 	&& rm -rf /usr/src/python 		&& find /usr/local -depth 		\( 			\( -type d -a \( -name test -o -name tests -o -name idle_test \) \) 			-o \( -type f -a \( -name '*.pyc' -o -name '*.pyo' -o -name '*.a' \) \) 		\) -exec rm -rf '{}' + 		&& ldconfig 		&& apt-mark auto '.*' > /dev/null 	&& apt-mark manual $savedAptMark 	&& find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	&& apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false 	&& rm -rf /var/lib/apt/lists/* 		&& python3 --version
-# Tue, 16 Nov 2021 19:03:53 GMT
+# Wed, 17 Nov 2021 16:50:35 GMT
 RUN cd /usr/local/bin 	&& ln -s idle3 idle 	&& ln -s pydoc3 pydoc 	&& ln -s python3 python 	&& ln -s python3-config python-config
-# Tue, 16 Nov 2021 19:03:53 GMT
+# Wed, 17 Nov 2021 16:50:35 GMT
 ENV PYTHON_PIP_VERSION=21.2.4
-# Tue, 16 Nov 2021 19:03:53 GMT
+# Wed, 17 Nov 2021 16:50:36 GMT
 ENV PYTHON_SETUPTOOLS_VERSION=57.5.0
-# Tue, 16 Nov 2021 19:03:53 GMT
+# Wed, 17 Nov 2021 16:50:36 GMT
 ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/3cb8888cc2869620f57d5d2da64da38f516078c7/public/get-pip.py
-# Tue, 16 Nov 2021 19:03:53 GMT
+# Wed, 17 Nov 2021 16:50:36 GMT
 ENV PYTHON_GET_PIP_SHA256=c518250e91a70d7b20cceb15272209a4ded2a0c263ae5776f129e0d9b5674309
-# Tue, 16 Nov 2021 19:04:07 GMT
+# Wed, 17 Nov 2021 16:50:49 GMT
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends wget; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum --check --strict -; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	pip --version; 		find /usr/local -depth 		\( 			\( -type d -a \( -name test -o -name tests -o -name idle_test \) \) 			-o 			\( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) 		\) -exec rm -rf '{}' +; 	rm -f get-pip.py
-# Tue, 16 Nov 2021 19:04:07 GMT
+# Wed, 17 Nov 2021 16:50:49 GMT
 CMD ["python3"]
-# Tue, 16 Nov 2021 19:51:21 GMT
+# Thu, 18 Nov 2021 23:40:08 GMT
 ENV HY_VERSION=1.0a3
-# Tue, 16 Nov 2021 19:51:25 GMT
+# Thu, 18 Nov 2021 23:40:13 GMT
 RUN pip install --no-cache-dir "hy == $HY_VERSION"
-# Tue, 16 Nov 2021 19:51:25 GMT
+# Thu, 18 Nov 2021 23:40:13 GMT
 CMD ["hy"]
 ```
 
 -	Layers:
-	-	`sha256:b380bbd43752f83945df8b5d1074fef8dd044820e7d3aef33b655a2483e030c7`  
-		Last Modified: Tue, 12 Oct 2021 01:26:51 GMT  
-		Size: 27.1 MB (27139510 bytes)  
+	-	`sha256:a10c77af261312e7c92bcc184f2d1726175ff7f142e44b01c5779cd79348b9fd`  
+		Last Modified: Wed, 17 Nov 2021 02:26:31 GMT  
+		Size: 27.2 MB (27153675 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:14063a2781d6ddd50c6afb4a9e22cccf2205cb04a72caff066c71cf3e4d19c76`  
-		Last Modified: Tue, 12 Oct 2021 03:59:20 GMT  
-		Size: 2.8 MB (2770128 bytes)  
+	-	`sha256:eab08a61c249c061bc9ec8cea8361ac18d35b4c6f4f8f83a6980df64cf80c1fc`  
+		Last Modified: Wed, 17 Nov 2021 18:33:56 GMT  
+		Size: 2.8 MB (2770122 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6a46522dc4dd21e97469ce96b25f968304a74251e03ee8145191030d84d226da`  
-		Last Modified: Tue, 16 Nov 2021 19:28:00 GMT  
-		Size: 11.0 MB (10994827 bytes)  
+	-	`sha256:93533675153b01df3aeeb9e2c5eaf9f543f3b368b3dbf0ceb416e77c9edf6df3`  
+		Last Modified: Wed, 17 Nov 2021 18:35:05 GMT  
+		Size: 11.0 MB (10984367 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d8674c7c29d84ddda98d1c7750be1a476d775f53c591e1c624dcae88b213fd86`  
-		Last Modified: Tue, 16 Nov 2021 19:27:58 GMT  
+	-	`sha256:bfa1edacf5708c85ed5654113fca99439711c9546aea06f72f1564a5f36119cf`  
+		Last Modified: Wed, 17 Nov 2021 18:35:03 GMT  
 		Size: 233.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b4d0c7b0c4934426c287f23cbdd0152e6213b73e7ee7951473a36a09c92ae5e2`  
-		Last Modified: Tue, 16 Nov 2021 19:27:59 GMT  
-		Size: 2.6 MB (2637161 bytes)  
+	-	`sha256:88cf10da884ffa22ffffb9c9dd9655ea92e7ad34f0cf9b23a733c722e6390d8f`  
+		Last Modified: Wed, 17 Nov 2021 18:35:04 GMT  
+		Size: 2.6 MB (2637119 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:12237912459b5470434660d6697e06bc4f89b54f4e91b9c7cacc39083a94dadf`  
-		Last Modified: Tue, 16 Nov 2021 19:54:00 GMT  
-		Size: 3.1 MB (3097959 bytes)  
+	-	`sha256:aacb03c2b79b60565d1c6c348d2a3db3b5a57470a03c86471c82df635cb91a8b`  
+		Last Modified: Thu, 18 Nov 2021 23:44:22 GMT  
+		Size: 3.1 MB (3098191 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `hylang:python3.9-buster` - linux; arm variant v5
