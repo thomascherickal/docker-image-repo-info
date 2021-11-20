@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:525301d94142a54d3a16c0d5ba8cb82900806d7c40dc78da21c75a52d4545fb9`
-- Created: `2021-10-28T17:58:26.21348197Z`
-- Virtual Size: ~ 562.64 Mb  
+- Image ID: `sha256:c75c2c7f29a78bd75b0b2496ea1d40bd7430270d1edac4f908d1ba8b5fba6203`
+- Created: `2021-11-18T21:25:19.580049884Z`
+- Virtual Size: ~ 562.67 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=CBAF69F173A0FEA4B537F470D66C9593118BCCB6 F38252826ACD957EF380D39F2F7956BC5DA04B5D`
-  - `PHP_VERSION=7.3.32`
-  - `PHP_URL=https://www.php.net/distributions/php-7.3.32.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.3.32.tar.xz.asc`
-  - `PHP_SHA256=94effa250b80f031e77fbd98b6950c441157a2a8f9e076ee68e02f5b0b7a3fd9`
+  - `PHP_VERSION=7.3.33`
+  - `PHP_URL=https://www.php.net/distributions/php-7.3.33.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.3.33.tar.xz.asc`
+  - `PHP_SHA256=166eaccde933381da9516a2b70ad0f447d7cec4b603d07b9a916032b215b90cc`
   - `FRIENDICA_VERSION=2021.09`
   - `FRIENDICA_ADDONS=2021.09`
   - `FRIENDICA_DOWNLOAD_SHA256=3f33f5a63c4e9d8ea55b21a33d46663f4b1d636a6546fa3603a244583d3b6faf`
@@ -3470,11 +3470,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tar/1.30+dfsg-6/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tar/1.30+dfsg-6/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tiff=4.1.0+git191117-2~deb10u2`
+### `dpkg` source package: `tiff=4.1.0+git191117-2~deb10u3`
 
 Binary Packages:
 
-- `libtiff5:amd64=4.1.0+git191117-2~deb10u2`
+- `libtiff5:amd64=4.1.0+git191117-2~deb10u3`
 
 Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`)
 
@@ -3483,17 +3483,17 @@ Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris tiff=4.1.0+git191117-2~deb10u2
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.1.0+git191117-2~deb10u2.dsc' tiff_4.1.0+git191117-2~deb10u2.dsc 2274 SHA256:5cb0e00ee767c39a2b398942fd20291403a3e6b41ac296e99b158b5cefb1cdab
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.1.0+git191117.orig.tar.xz' tiff_4.1.0+git191117.orig.tar.xz 1533524 SHA256:67e1d045e994adb7144b0cca228d70dd6d520aaf8c75c342064bc0fd601e6e42
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.1.0+git191117-2~deb10u2.debian.tar.xz' tiff_4.1.0+git191117-2~deb10u2.debian.tar.xz 20396 SHA256:0d7c74f2ecd6423af258148822b74a6d1f537f6cb931daf17998db5ff5cb7a44
+$ apt-get source -qq --print-uris tiff=4.1.0+git191117-2~deb10u3
+'http://security.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.1.0+git191117-2~deb10u3.dsc' tiff_4.1.0+git191117-2~deb10u3.dsc 2429 SHA256:78683a8ee5bfd5f3561e8e3d70c914c420d4cc590c9bbe9222832c2e9e8f3ec6
+'http://security.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.1.0+git191117.orig.tar.xz' tiff_4.1.0+git191117.orig.tar.xz 1533524 SHA256:67e1d045e994adb7144b0cca228d70dd6d520aaf8c75c342064bc0fd601e6e42
+'http://security.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.1.0+git191117-2~deb10u3.debian.tar.xz' tiff_4.1.0+git191117-2~deb10u3.debian.tar.xz 20896 SHA256:b58a9a797fc5526a0134bfd88081670b075a4b1bfa9a8aaf2607430e06bb63ca
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/tiff/4.1.0+git191117-2~deb10u2/ (for browsing the source)
-- https://sources.debian.net/src/tiff/4.1.0+git191117-2~deb10u2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tiff/4.1.0+git191117-2~deb10u2/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/tiff/4.1.0+git191117-2~deb10u3/ (for browsing the source)
+- https://sources.debian.net/src/tiff/4.1.0+git191117-2~deb10u3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tiff/4.1.0+git191117-2~deb10u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tini=0.18.0-1`
 
@@ -3520,11 +3520,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tini/0.18.0-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tini/0.18.0-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tzdata=2021a-0+deb10u2`
+### `dpkg` source package: `tzdata=2021a-0+deb10u3`
 
 Binary Packages:
 
-- `tzdata=2021a-0+deb10u2`
+- `tzdata=2021a-0+deb10u3`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -3533,18 +3533,18 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris tzdata=2021a-0+deb10u2
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-0+deb10u2.dsc' tzdata_2021a-0+deb10u2.dsc 2264 SHA256:75349115b974f0194f59dac2488f18edcc460abdeebe549051356a201e87bc58
+$ apt-get source -qq --print-uris tzdata=2021a-0+deb10u3
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-0+deb10u3.dsc' tzdata_2021a-0+deb10u3.dsc 2264 SHA256:1730f7a8a2ac3ac3c9db9dc7ddd3074343a7846988c515d55f046be527a00834
 'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA256:39e7d2ba08c68cbaefc8de3227aab0dec2521be8042cf56855f7dc3a9fb14e08
 'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz.asc' tzdata_2021a.orig.tar.gz.asc 833 SHA256:9dc5f54674166f4ffbc2d4485e656227430ab5f39c9006e6ed9986281117f058
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-0+deb10u2.debian.tar.xz' tzdata_2021a-0+deb10u2.debian.tar.xz 107944 SHA256:721ed11128d69ce090ee1566e197a7c724b0ed4422321f50abf3b7538c360178
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-0+deb10u3.debian.tar.xz' tzdata_2021a-0+deb10u3.debian.tar.xz 109800 SHA256:aa09186f2ceb3d4b7ec9e7575ba51a3c1b4894e0669e1125c4cae1eafec73808
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/tzdata/2021a-0+deb10u2/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2021a-0+deb10u2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2021a-0+deb10u2/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/tzdata/2021a-0+deb10u3/ (for browsing the source)
+- https://sources.debian.net/src/tzdata/2021a-0+deb10u3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tzdata/2021a-0+deb10u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0038+nmu1`
 
