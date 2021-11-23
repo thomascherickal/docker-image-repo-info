@@ -1,10 +1,10 @@
-# `monica:3.4.0-apache`
+# `monica:3.5.0-apache`
 
 ## Docker Metadata
 
-- Image ID: `sha256:6d1e5686cf8103e2e89dfacc63827bb19b89da88187247f3b1fb1d6c9b310675`
-- Created: `2021-11-18T21:59:26.920507705Z`
-- Virtual Size: ~ 702.48 Mb  
+- Image ID: `sha256:824bbe974b66d1b3b46c3777f7ce75a87d94e4398e8e2879e53f6713396fe2ef`
+- Created: `2021-11-22T23:28:44.212384393Z`
+- Virtual Size: ~ 702.68 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/entrypoint.sh"]`
@@ -19,24 +19,24 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F`
-  - `PHP_VERSION=8.0.12`
-  - `PHP_URL=https://www.php.net/distributions/php-8.0.12.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.12.tar.xz.asc`
-  - `PHP_SHA256=a501017b3b0fd3023223ea25d98e87369b782f8a82310c4033d7ea6a989fea0a`
+  - `PHP_VERSION=8.0.13`
+  - `PHP_URL=https://www.php.net/distributions/php-8.0.13.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.13.tar.xz.asc`
+  - `PHP_SHA256=cd976805ec2e9198417651027dfe16854ba2c2c388151ab9d4d268513d52ed52`
   - `PHP_OPCACHE_VALIDATE_TIMESTAMPS=0`
   - `PHP_OPCACHE_MAX_ACCELERATED_FILES=20000`
   - `PHP_OPCACHE_MEMORY_CONSUMPTION=192`
   - `PHP_OPCACHE_MAX_WASTED_PERCENTAGE=10`
-  - `MONICA_VERSION=v3.4.0`
+  - `MONICA_VERSION=v3.5.0`
 - Labels:
   - `org.opencontainers.image.authors=Alexis Saettler <alexis@saettler.org>`
   - `org.opencontainers.image.description=This is MonicaHQ, your personal memory! MonicaHQ is like a CRM but for the friends, family, and acquaintances around you.`
-  - `org.opencontainers.image.revision=2e4b685604ce87169b29d3bba49ef80e405a5a5a`
+  - `org.opencontainers.image.revision=ccd1a4c7624a99f1af2d0d79bfd29137a2feda27`
   - `org.opencontainers.image.source=https://github.com/monicahq/docker`
   - `org.opencontainers.image.title=MonicaHQ, the Personal Relationship Manager`
   - `org.opencontainers.image.url=https://monicahq.com`
   - `org.opencontainers.image.vendor=Monica`
-  - `org.opencontainers.image.version=v3.4.0`
+  - `org.opencontainers.image.version=v3.5.0`
 
 ## `dpkg` (`.deb`-based packages)
 
