@@ -78,19 +78,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.3.11
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.3.11.dsc' apt_2.3.11.dsc 2801 SHA256:540b1bbc9c4fb8f60f2f74fb0f58bb61b15580c99a655bbbf656ec2cf8c991a7
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.3.11.tar.xz' apt_2.3.11.tar.xz 2211324 SHA256:cc0c5b24240176e333b11bce1a7ac528ae263317d137ceeebad3ec2d8682cb91
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/apt/2.3.11/
 
-- https://sources.debian.net/src/apt/2.3.11/ (for browsing the source)
-- https://sources.debian.net/src/apt/2.3.11/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apt/2.3.11/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `attr=1:2.5.1-1`
 
@@ -313,20 +307,13 @@ Licenses: (parsed from: `/usr/share/doc/libsasl2-2/copyright`, `/usr/share/doc/l
 - `GPL-3`
 - `GPL-3+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris cyrus-sasl2=2.1.27+dfsg-2.3
-'http://deb.debian.org/debian/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.27+dfsg-2.3.dsc' cyrus-sasl2_2.1.27+dfsg-2.3.dsc 3227 SHA256:ac81af7047f7b87b34fd30a612b0cf815084c76e1d5f9498222af31933ea3d0a
-'http://deb.debian.org/debian/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.27+dfsg.orig.tar.xz' cyrus-sasl2_2.1.27+dfsg.orig.tar.xz 2058596 SHA256:108b0c691c423837264f05abb559ea76c3dfdd91246555e8abe87c129a6e37cd
-'http://deb.debian.org/debian/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.27+dfsg-2.3.debian.tar.xz' cyrus-sasl2_2.1.27+dfsg-2.3.debian.tar.xz 95964 SHA256:718b9666a7f469da6a9ffe2967a52417170831ffdff953148610d800903ce30b
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/cyrus-sasl2/2.1.27+dfsg-2.3/
 
-- https://sources.debian.net/src/cyrus-sasl2/2.1.27+dfsg-2.3/ (for browsing the source)
-- https://sources.debian.net/src/cyrus-sasl2/2.1.27+dfsg-2.3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/cyrus-sasl2/2.1.27+dfsg-2.3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `dash=0.5.11+git20210903+057cd650a4ed-3`
 
@@ -1860,20 +1847,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pcre2=10.39-2
-'http://deb.debian.org/debian/pool/main/p/pcre2/pcre2_10.39-2.dsc' pcre2_10.39-2.dsc 2286 SHA256:1b8d8683b5768651a0e09aad2d064ee63cd4fde2b852794f55c2a5942fbbf066
-'http://deb.debian.org/debian/pool/main/p/pcre2/pcre2_10.39.orig.tar.gz' pcre2_10.39.orig.tar.gz 2309964 SHA256:0781bd2536ef5279b1943471fdcdbd9961a2845e1d2c9ad849b9bd98ba1a9bd4
-'http://deb.debian.org/debian/pool/main/p/pcre2/pcre2_10.39-2.diff.gz' pcre2_10.39-2.diff.gz 7017 SHA256:2e5837bc565a5d6d1bafef9dc9db41974e04d5d26d34822666e26d2a0105ba72
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/pcre2/10.39-2/
 
-- https://sources.debian.net/src/pcre2/10.39-2/ (for browsing the source)
-- https://sources.debian.net/src/pcre2/10.39-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/pcre2/10.39-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pcre3=2:8.39-13`
 
