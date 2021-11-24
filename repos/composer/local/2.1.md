@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:2043b5fadf6106a07dac1133a584b4cdbb567fa2b083224d72f1e767cacde391`
-- Created: `2021-11-13T15:50:41.318741765Z`
-- Virtual Size: ~ 180.37 Mb  
+- Image ID: `sha256:a0735fa25502563f79de31eca8c73839d8423e5283374676063cca5531da844d`
+- Created: `2021-11-20T00:02:25.158337058Z`
+- Virtual Size: ~ 180.52 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F`
-  - `PHP_VERSION=8.0.12`
-  - `PHP_URL=https://www.php.net/distributions/php-8.0.12.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.12.tar.xz.asc`
-  - `PHP_SHA256=a501017b3b0fd3023223ea25d98e87369b782f8a82310c4033d7ea6a989fea0a`
+  - `PHP_VERSION=8.0.13`
+  - `PHP_URL=https://www.php.net/distributions/php-8.0.13.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.13.tar.xz.asc`
+  - `PHP_SHA256=cd976805ec2e9198417651027dfe16854ba2c2c388151ab9d4d268513d52ed52`
   - `COMPOSER_ALLOW_SUPERUSER=1`
   - `COMPOSER_HOME=/tmp`
   - `COMPOSER_VERSION=2.1.12`
@@ -1016,16 +1016,16 @@ GPL-2.0-only
 ### `apk` package: `subversion`
 
 ```console
-subversion-1.14.1-r3 description:
+subversion-1.14.1-r4 description:
 Replacement for CVS, another versioning system (svn)
 
-subversion-1.14.1-r3 webpage:
+subversion-1.14.1-r4 webpage:
 https://subversion.apache.org/
 
-subversion-1.14.1-r3 installed size:
+subversion-1.14.1-r4 installed size:
 1040 KiB
 
-subversion-1.14.1-r3 license:
+subversion-1.14.1-r4 license:
 Apache-2.0 BSD
 
 ```
@@ -1033,16 +1033,16 @@ Apache-2.0 BSD
 ### `apk` package: `subversion-libs`
 
 ```console
-subversion-libs-1.14.1-r3 description:
+subversion-libs-1.14.1-r4 description:
 Replacement for CVS, another versioning system (svn) (libraries)
 
-subversion-libs-1.14.1-r3 webpage:
+subversion-libs-1.14.1-r4 webpage:
 https://subversion.apache.org/
 
-subversion-libs-1.14.1-r3 installed size:
+subversion-libs-1.14.1-r4 installed size:
 3624 KiB
 
-subversion-libs-1.14.1-r3 license:
+subversion-libs-1.14.1-r4 license:
 Apache-2.0 BSD
 
 ```
