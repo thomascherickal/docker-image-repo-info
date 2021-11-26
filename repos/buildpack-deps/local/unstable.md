@@ -2225,20 +2225,13 @@ Licenses: (parsed from: `/usr/share/doc/libcbor0.8/copyright`)
 
 - `Expat`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libcbor=0.8.0-1
-'http://deb.debian.org/debian/pool/main/libc/libcbor/libcbor_0.8.0-1.dsc' libcbor_0.8.0-1.dsc 2114 SHA256:ac9c9fc4f485846b085ad547a5fb4be4e0d9b9201759db3f07f5d181a5df2882
-'http://deb.debian.org/debian/pool/main/libc/libcbor/libcbor_0.8.0.orig.tar.gz' libcbor_0.8.0.orig.tar.gz 267044 SHA256:618097166ea4a54499646998ccaa949a5816e6a665cf1d6df383690895217c8b
-'http://deb.debian.org/debian/pool/main/libc/libcbor/libcbor_0.8.0-1.debian.tar.xz' libcbor_0.8.0-1.debian.tar.xz 4000 SHA256:fffb790f3c366c851fed63b204a436f916d0efe09050424902c9b2a00cf367fb
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libcbor/0.8.0-1/
 
-- https://sources.debian.net/src/libcbor/0.8.0-1/ (for browsing the source)
-- https://sources.debian.net/src/libcbor/0.8.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libcbor/0.8.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libdatrie=0.2.13-2`
 
