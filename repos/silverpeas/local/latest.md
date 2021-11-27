@@ -1901,9 +1901,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris ghostscript=9.50~dfsg-5ubuntu4.3
-'http://archive.ubuntu.com/ubuntu/pool/main/g/ghostscript/ghostscript_9.50~dfsg-5ubuntu4.3.dsc' ghostscript_9.50~dfsg-5ubuntu4.3.dsc 2914 SHA512:41d4217a8f180ec6563e113ee6be9f97d30ccffa3765c8cb4737f7673563308b756356ee5ffd51731e9311d2d81c79cd204bd940b6c4d3104eb8fe986ea94e82
-'http://archive.ubuntu.com/ubuntu/pool/main/g/ghostscript/ghostscript_9.50~dfsg.orig.tar.xz' ghostscript_9.50~dfsg.orig.tar.xz 19139148 SHA512:75730872b02fe7341bf6c84fc4b53002f88d2c4c538dee62f749816a4963740f2a369e3a3760175e0f5b73547d5df805a152f5f0120db79ffecc871f5f14be86
-'http://archive.ubuntu.com/ubuntu/pool/main/g/ghostscript/ghostscript_9.50~dfsg-5ubuntu4.3.debian.tar.xz' ghostscript_9.50~dfsg-5ubuntu4.3.debian.tar.xz 131000 SHA512:e76cbba83c5591617920c44bf1b662a696d38427dae5755902bf32e6006ba51a171a82d46c4b289cb0c93290279407e91e8d06f16ec5b8e37dfcbbf3a681ff4c
+'http://security.ubuntu.com/ubuntu/pool/main/g/ghostscript/ghostscript_9.50~dfsg-5ubuntu4.3.dsc' ghostscript_9.50~dfsg-5ubuntu4.3.dsc 2914 SHA512:41d4217a8f180ec6563e113ee6be9f97d30ccffa3765c8cb4737f7673563308b756356ee5ffd51731e9311d2d81c79cd204bd940b6c4d3104eb8fe986ea94e82
+'http://security.ubuntu.com/ubuntu/pool/main/g/ghostscript/ghostscript_9.50~dfsg.orig.tar.xz' ghostscript_9.50~dfsg.orig.tar.xz 19139148 SHA512:75730872b02fe7341bf6c84fc4b53002f88d2c4c538dee62f749816a4963740f2a369e3a3760175e0f5b73547d5df805a152f5f0120db79ffecc871f5f14be86
+'http://security.ubuntu.com/ubuntu/pool/main/g/ghostscript/ghostscript_9.50~dfsg-5ubuntu4.3.debian.tar.xz' ghostscript_9.50~dfsg-5ubuntu4.3.debian.tar.xz 131000 SHA512:e76cbba83c5591617920c44bf1b662a696d38427dae5755902bf32e6006ba51a171a82d46c4b289cb0c93290279407e91e8d06f16ec5b8e37dfcbbf3a681ff4c
 ```
 
 ### `dpkg` source package: `giflib=5.1.9-1`
