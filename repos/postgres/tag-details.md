@@ -1398,7 +1398,12 @@ CMD ["postgres"]
 
 ## `postgres:10-alpine3.15`
 
-**does not exist** (yet?)
+```console
+$ docker pull postgres@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `postgres:10-bullseye`
 
@@ -4414,7 +4419,12 @@ CMD ["postgres"]
 
 ## `postgres:10.19-alpine3.15`
 
-**does not exist** (yet?)
+```console
+$ docker pull postgres@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `postgres:10.19-bullseye`
 
@@ -7358,7 +7368,12 @@ CMD ["postgres"]
 
 ## `postgres:11-alpine3.15`
 
-**does not exist** (yet?)
+```console
+$ docker pull postgres@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `postgres:11-bullseye`
 
@@ -10224,7 +10239,12 @@ CMD ["postgres"]
 
 ## `postgres:11.14-alpine3.15`
 
-**does not exist** (yet?)
+```console
+$ docker pull postgres@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `postgres:11.14-bullseye`
 
@@ -13456,7 +13476,12 @@ CMD ["postgres"]
 
 ## `postgres:12-alpine3.15`
 
-**does not exist** (yet?)
+```console
+$ docker pull postgres@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `postgres:12-bullseye`
 
@@ -16069,7 +16094,12 @@ CMD ["postgres"]
 
 ## `postgres:12.9-alpine3.15`
 
-**does not exist** (yet?)
+```console
+$ docker pull postgres@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `postgres:12.9-bullseye`
 
@@ -18682,7 +18712,12 @@ CMD ["postgres"]
 
 ## `postgres:13-alpine3.15`
 
-**does not exist** (yet?)
+```console
+$ docker pull postgres@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `postgres:13-bullseye`
 
@@ -21295,7 +21330,12 @@ CMD ["postgres"]
 
 ## `postgres:13.5-alpine3.15`
 
-**does not exist** (yet?)
+```console
+$ docker pull postgres@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `postgres:13.5-bullseye`
 
@@ -23908,7 +23948,12 @@ CMD ["postgres"]
 
 ## `postgres:14-alpine3.15`
 
-**does not exist** (yet?)
+```console
+$ docker pull postgres@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `postgres:14-bullseye`
 
@@ -26521,7 +26566,12 @@ CMD ["postgres"]
 
 ## `postgres:14.1-alpine3.15`
 
-**does not exist** (yet?)
+```console
+$ docker pull postgres@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `postgres:14.1-bullseye`
 
@@ -28840,7 +28890,12 @@ CMD ["postgres"]
 
 ## `postgres:9-alpine3.15`
 
-**does not exist** (yet?)
+```console
+$ docker pull postgres@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `postgres:9-bullseye`
 
@@ -31856,7 +31911,12 @@ CMD ["postgres"]
 
 ## `postgres:9.6-alpine3.15`
 
-**does not exist** (yet?)
+```console
+$ docker pull postgres@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `postgres:9.6-bullseye`
 
@@ -34872,7 +34932,12 @@ CMD ["postgres"]
 
 ## `postgres:9.6.24-alpine3.15`
 
-**does not exist** (yet?)
+```console
+$ docker pull postgres@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `postgres:9.6.24-bullseye`
 
@@ -37197,7 +37262,12 @@ CMD ["postgres"]
 
 ## `postgres:alpine3.15`
 
-**does not exist** (yet?)
+```console
+$ docker pull postgres@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `postgres:bullseye`
 
