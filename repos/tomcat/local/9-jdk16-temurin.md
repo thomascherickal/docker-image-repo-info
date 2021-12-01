@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:95546024400a52111d94e3f3088799cbea57f32166f7c0178f5f3817a7f016d3`
-- Created: `2021-11-16T00:27:43.103313677Z`
-- Virtual Size: ~ 510.55 Mb  
+- Image ID: `sha256:81cfa0156b3ff60103d82b5eb2c9a4b9df17fdbfd29041518479b93f37def94c`
+- Created: `2021-11-30T01:34:40.189871915Z`
+- Virtual Size: ~ 531.76 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["catalina.sh","run"]`
@@ -207,16 +207,16 @@ $ apt-get source -qq --print-uris bash=5.0-6ubuntu1.1
 'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.0-6ubuntu1.1.debian.tar.xz' bash_5.0-6ubuntu1.1.debian.tar.xz 74356 SHA512:450eacea5316075107da9951356021091dfc96889057769590ae8505fa851a99d2f48ce300281b8a448c87e9573cfa2f68a04369ee97955be204e73fa2fd6385
 ```
 
-### `dpkg` source package: `binutils=2.34-6ubuntu1.1`
+### `dpkg` source package: `binutils=2.34-6ubuntu1.3`
 
 Binary Packages:
 
-- `binutils=2.34-6ubuntu1.1`
-- `binutils-common:amd64=2.34-6ubuntu1.1`
-- `binutils-x86-64-linux-gnu=2.34-6ubuntu1.1`
-- `libbinutils:amd64=2.34-6ubuntu1.1`
-- `libctf-nobfd0:amd64=2.34-6ubuntu1.1`
-- `libctf0:amd64=2.34-6ubuntu1.1`
+- `binutils=2.34-6ubuntu1.3`
+- `binutils-common:amd64=2.34-6ubuntu1.3`
+- `binutils-x86-64-linux-gnu=2.34-6ubuntu1.3`
+- `libbinutils:amd64=2.34-6ubuntu1.3`
+- `libctf-nobfd0:amd64=2.34-6ubuntu1.3`
+- `libctf0:amd64=2.34-6ubuntu1.3`
 
 Licenses: (parsed from: `/usr/share/doc/binutils/copyright`, `/usr/share/doc/binutils-common/copyright`, `/usr/share/doc/binutils-x86-64-linux-gnu/copyright`, `/usr/share/doc/libbinutils/copyright`, `/usr/share/doc/libctf-nobfd0/copyright`, `/usr/share/doc/libctf0/copyright`)
 
@@ -224,9 +224,14 @@ Licenses: (parsed from: `/usr/share/doc/binutils/copyright`, `/usr/share/doc/bin
 - `GPL`
 - `LGPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris binutils=2.34-6ubuntu1.3
+'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.34-6ubuntu1.3.dsc' binutils_2.34-6ubuntu1.3.dsc 8829 SHA512:4bc4408053e8a0b1a4f97dba2ef1ff20f4c44a34a068e48e0e3e7414d36b968b09d9db50a8430e2527f979216c4e326a6548d75d0baed1b886adb743c5046f25
+'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.34.orig.tar.xz' binutils_2.34.orig.tar.xz 21637796 SHA512:2c7976939dcf5e8c5b7374cccd39bfe803b1bec73c6abfa0eb17c24e1942574c6bdb874c66a092a82adc443182eacd8a5a8001c19a76101f0c7ba40c27de0bbd
+'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.34-6ubuntu1.3.debian.tar.xz' binutils_2.34-6ubuntu1.3.debian.tar.xz 158192 SHA512:9d182ac514e5383892a2a9bbc2267c5439c699557a7392003bdfd43e2fc5c66fb10b793a25c8f17c763d377c1628d070c5a29bf7213513da3e769305517683e2
+```
 
 ### `dpkg` source package: `brotli=1.0.7-6ubuntu0.1`
 
@@ -1334,6 +1339,46 @@ $ apt-get source -qq --print-uris mawk=1.3.4.20200120-2
 'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.4.20200120-2.debian.tar.xz' mawk_1.3.4.20200120-2.debian.tar.xz 7504 SHA256:b772ed2f016b0286980c46cbc1f1f4ae62887ef2aa3dff6ef10cae638f923f26
 ```
 
+### `dpkg` source package: `mime-support=3.64ubuntu1`
+
+Binary Packages:
+
+- `mime-support=3.64ubuntu1`
+
+Licenses: (parsed from: `/usr/share/doc/mime-support/copyright`)
+
+- `Bellcore`
+- `ad-hoc`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris mime-support=3.64ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mime-support/mime-support_3.64ubuntu1.dsc' mime-support_3.64ubuntu1.dsc 1729 SHA256:669ba4f3fd7594f1c32731b5636b499f44f21c7667148f6f0d16043708743fdc
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mime-support/mime-support_3.64ubuntu1.tar.xz' mime-support_3.64ubuntu1.tar.xz 33980 SHA256:5007d2ebc25935bfca6d4bdac0efdfc089a38c1be49d19f0422559f666e4f2c4
+```
+
+### `dpkg` source package: `mpdecimal=2.4.2-3`
+
+Binary Packages:
+
+- `libmpdec2:amd64=2.4.2-3`
+
+Licenses: (parsed from: `/usr/share/doc/libmpdec2/copyright`)
+
+- `BSD`
+- `GPL-2`
+- `GPL-2+`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris mpdecimal=2.4.2-3
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mpdecimal/mpdecimal_2.4.2-3.dsc' mpdecimal_2.4.2-3.dsc 1932 SHA256:4cdd04de9915af3c9d787f4922affc1993d76c25cd0715ffdd2658da37c86753
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mpdecimal/mpdecimal_2.4.2.orig.tar.gz' mpdecimal_2.4.2.orig.tar.gz 2271529 SHA256:83c628b90f009470981cf084c5418329c88b19835d8af3691b930afccb7d79c7
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mpdecimal/mpdecimal_2.4.2-3.debian.tar.xz' mpdecimal_2.4.2-3.debian.tar.xz 6352 SHA256:1baf12776a911bc77f76e16aa7600d4ace21a27817f4a56373093065205a9292
+```
+
 ### `dpkg` source package: `ncurses=6.2-0ubuntu2`
 
 Binary Packages:
@@ -1433,30 +1478,12 @@ $ apt-get source -qq --print-uris openldap=2.4.49+dfsg-2ubuntu1.8
 'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.49+dfsg-2ubuntu1.8.debian.tar.xz' openldap_2.4.49+dfsg-2ubuntu1.8.debian.tar.xz 187956 SHA512:918483e21af3233daa5a8b04da0c87fc010049ad5e66230d36a3737f511cd395f5f1f6753139f13520266f9fe86c07ae9c06c90128ca800680ecd3d23bc4b9a4
 ```
 
-### `dpkg` source package: `openssl=1.1.1f-1ubuntu2.8`
-
-Binary Packages:
-
-- `openssl=1.1.1f-1ubuntu2.8`
-
-**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
-If source is available (seen below), check the contents of `debian/copyright` within it.
-
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris openssl=1.1.1f-1ubuntu2.8
-'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.8.dsc' openssl_1.1.1f-1ubuntu2.8.dsc 2466 SHA512:79514668a1c50eb32665786dae9b2e60ec4c908c173a7c66feb97ce3bf87d46e5c5dd8786a3c8d20aab20a9c4705821fa833ff4f54e92a1c033215a1c3749c07
-'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f.orig.tar.gz' openssl_1.1.1f.orig.tar.gz 9792828 SHA512:b00bd9b5ad5298fbceeec6bb19c1ab0c106ca5cfb31178497c58bf7e0e0cf30fcc19c20f84e23af31cc126bf2447d3e4f8461db97bafa7bd78f69561932f000c
-'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.8.debian.tar.xz' openssl_1.1.1f-1ubuntu2.8.debian.tar.xz 166152 SHA512:97fc740bd4fe474019878dd90d7130200644aec105fc6cf926791dada9a2bb8f330091b7e91fa6410e516dfbfb656120520b86190b3e417fcb9d461069b604d1
-```
-
 ### `dpkg` source package: `openssl=1.1.1f-1ubuntu2.9`
 
 Binary Packages:
 
 - `libssl1.1:amd64=1.1.1f-1ubuntu2.9`
+- `openssl=1.1.1f-1ubuntu2.9`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1624,6 +1651,85 @@ $ apt-get source -qq --print-uris procps=2:3.3.16-1ubuntu2.3
 'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_3.3.16-1ubuntu2.3.dsc' procps_3.3.16-1ubuntu2.3.dsc 1897 SHA512:48d20e1d3d1b097f060b3d2d0eba35dc255498f9890e912cfde1a04434959f9af6ee794e5690a026cc19171dbff509e2814fceed6fbfa542971beed529cf685d
 'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_3.3.16.orig.tar.xz' procps_3.3.16.orig.tar.xz 621892 SHA512:38db4f72fe40c2f027b23b18bbc8c29cfcdf6bcdb029199fe4bebede153943aa884157f56e792c399f9a4949cc514687500bb99a75a5e7ad7b9e878f52090304
 'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_3.3.16-1ubuntu2.3.debian.tar.xz' procps_3.3.16-1ubuntu2.3.debian.tar.xz 33972 SHA512:cbeb9513f4932d159eed653fbc568b4b26e61e92184f8d8e6fd4122cfdda62ff04a7e9dbba1914efff0fe7addfbd380a0def4b8cf1c61f4e91107b02b3b61064
+```
+
+### `dpkg` source package: `python3-defaults=3.8.2-0ubuntu2`
+
+Binary Packages:
+
+- `libpython3-stdlib:amd64=3.8.2-0ubuntu2`
+- `python3=3.8.2-0ubuntu2`
+- `python3-minimal=3.8.2-0ubuntu2`
+
+**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
+If source is available (seen below), check the contents of `debian/copyright` within it.
+
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris python3-defaults=3.8.2-0ubuntu2
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-defaults/python3-defaults_3.8.2-0ubuntu2.dsc' python3-defaults_3.8.2-0ubuntu2.dsc 2879 SHA256:3fa296ea2cd52738ebc44a1b83a8df500bf654356336d9bf057144171fe9ee7d
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-defaults/python3-defaults_3.8.2-0ubuntu2.tar.gz' python3-defaults_3.8.2-0ubuntu2.tar.gz 138226 SHA256:e4969a54306421ebfd195d0c064935db7c53f9f152d8abaae63da33819235e9a
+```
+
+### `dpkg` source package: `python3.8=3.8.10-0ubuntu1~20.04.1`
+
+Binary Packages:
+
+- `libpython3.8-minimal:amd64=3.8.10-0ubuntu1~20.04.1`
+- `libpython3.8-stdlib:amd64=3.8.10-0ubuntu1~20.04.1`
+- `python3.8=3.8.10-0ubuntu1~20.04.1`
+- `python3.8-minimal=3.8.10-0ubuntu1~20.04.1`
+
+Licenses: (parsed from: `/usr/share/doc/libpython3.8-minimal/copyright`, `/usr/share/doc/libpython3.8-stdlib/copyright`, `/usr/share/doc/python3.8/copyright`, `/usr/share/doc/python3.8-minimal/copyright`)
+
+- `* Permission to use this software in any way is granted without`
+- `By obtaining, using, and/or copying this software and/or its`
+- `GPL-2`
+- `Permission  is  hereby granted,  free  of charge,  to  any person`
+- `Permission is hereby granted, free of charge, to any person obtaining`
+- `Permission to use, copy, modify,`
+- `Redistribution`
+- `This software is provided 'as-is', without any express`
+- `This software is provided as-is, without express`
+- `binary forms, with`
+- `distribute this software`
+- `distribute this software and`
+- `distribute this software for any`
+- `implied`
+- `its`
+- `use in source`
+- `without`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris python3.8=3.8.10-0ubuntu1~20.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.10-0ubuntu1~20.04.1.dsc' python3.8_3.8.10-0ubuntu1~20.04.1.dsc 3504 SHA512:6fa58a364a94a0fa92feef12e9237726a3ee5e03c479524a85c87d505819b1c8cb75ecac74ba37dc3ff3471e5e380da84db8a583b25a3eb2d4d9f123ee2c034b
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.10.orig.tar.xz' python3.8_3.8.10.orig.tar.xz 18433456 SHA512:0be69705483ff9692e12048a96180e586f9d84c8d53066629f7fb2389585eb75c0f3506bb8182936e322508f58b71f4d8c6dfebbab9049b31b49da11d3b98e80
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.10-0ubuntu1~20.04.1.debian.tar.xz' python3.8_3.8.10-0ubuntu1~20.04.1.debian.tar.xz 212920 SHA512:0ddc7a9f161e328f2f7d7686e3736c6f2a0fd248c78472a57a35026c069a08b5d1c56ae8e4d929d5029fa86e2bb2750572ccfd40de656620f117876c2c2a60ec
+```
+
+### `dpkg` source package: `readline=8.0-4`
+
+Binary Packages:
+
+- `libreadline8:amd64=8.0-4`
+- `readline-common=8.0-4`
+
+Licenses: (parsed from: `/usr/share/doc/libreadline8/copyright`, `/usr/share/doc/readline-common/copyright`)
+
+- `GFDL`
+- `GPL-3`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris readline=8.0-4
+'http://archive.ubuntu.com/ubuntu/pool/main/r/readline/readline_8.0-4.dsc' readline_8.0-4.dsc 2434 SHA256:ac9c7bb7380fe740aef09f54becf482eb81032a33dc11f1a8f00e933c5f168f4
+'http://archive.ubuntu.com/ubuntu/pool/main/r/readline/readline_8.0.orig.tar.gz' readline_8.0.orig.tar.gz 2975937 SHA256:e339f51971478d369f8a053a330a190781acb9864cf4c541060f12078948e461
+'http://archive.ubuntu.com/ubuntu/pool/main/r/readline/readline_8.0-4.debian.tar.xz' readline_8.0-4.debian.tar.xz 30408 SHA256:60ed18dab6d6b7fc998a263d917f06d9cce6e1ccd19cd8bf4a9d33c5350cf8d6
 ```
 
 ### `dpkg` source package: `rtmpdump=2.4+20151223.gitfa8646d.1-2build1`
@@ -1797,19 +1903,24 @@ $ apt-get source -qq --print-uris tar=1.30+dfsg-7ubuntu0.20.04.1
 'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.30+dfsg-7ubuntu0.20.04.1.debian.tar.xz' tar_1.30+dfsg-7ubuntu0.20.04.1.debian.tar.xz 22616 SHA512:015cf0e3eadb05e07b1c555afadf2f8d6af21f82a375ad0f87682af5e2c4b10e38e0f7ee6ac72fa5ecea5bc40cd4600cd0f2aed06c3c8051a6191d51d124003e
 ```
 
-### `dpkg` source package: `tzdata=2021a-2ubuntu0.20.04`
+### `dpkg` source package: `tzdata=2021e-0ubuntu0.20.04`
 
 Binary Packages:
 
-- `tzdata=2021a-2ubuntu0.20.04`
+- `tzdata=2021e-0ubuntu0.20.04`
 
 Licenses: (parsed from: `/usr/share/doc/tzdata/copyright`)
 
 - `ICU`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris tzdata=2021e-0ubuntu0.20.04
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2021e-0ubuntu0.20.04.dsc' tzdata_2021e-0ubuntu0.20.04.dsc 2109 SHA512:64469ce6306e76adfd323ed421295f91c963dfa563496dd55d227f69cdff44e1873a3e8471892bd2b46613557e22bb1d2e3b5677338a1b3023e17e9eb9b7f36e
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2021e.orig.tar.gz' tzdata_2021e.orig.tar.gz 422509 SHA512:c1e8d04e049157ed5d4af0868855bbd75517e3d7e1db9c41d5283ff260109de46b6fac6be94828201d093e163d868044ac2a9db2bf0aeab800e264d0c73a9119
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2021e-0ubuntu0.20.04.debian.tar.xz' tzdata_2021e-0ubuntu0.20.04.debian.tar.xz 168032 SHA512:f8a84f5372339dcd695f9265ae6fad2dc9b2495928824e81a76d4f88c64226e3135edb0c082d0f0ebca9cf9eef94eef06c9c4f34d5d8f01d5733655714b29916
+```
 
 ### `dpkg` source package: `ubuntu-keyring=2020.02.11.4`
 
@@ -1887,6 +1998,25 @@ $ apt-get source -qq --print-uris util-linux=2.34-0.1ubuntu9.1
 'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.34-0.1ubuntu9.1.dsc' util-linux_2.34-0.1ubuntu9.1.dsc 4067 SHA512:cd98079e1a347852d84c0ebbfac643e7d7d66d7524a060a8bbb8df45153728dae957793b0cefacd4744fbbe4396efcd45e32beeaf8ab3afe347124373554ddbe
 'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.34.orig.tar.xz' util-linux_2.34.orig.tar.xz 4974812 SHA512:2d0b76f63d32e7afb7acf61a83fabbfd58baa34ab78b3a331ce87f9c676a5fd71c56a493ded95039540d2c46b6048caaa38d7fb4491eb3d52d7b09dc54655cd7
 'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.34-0.1ubuntu9.1.debian.tar.xz' util-linux_2.34-0.1ubuntu9.1.debian.tar.xz 91620 SHA512:b0ed129f1e7febe6a7370ef2becaca376b7bea478af084769f61c0b78cf4d3f5a0b5d8fe7c75017e74a8c4c6d22a37a2a9d7221c60822677220fa719d7f3b609
+```
+
+### `dpkg` source package: `what-is-python=4`
+
+Binary Packages:
+
+- `python-is-python3=3.8.2-4`
+
+Licenses: (parsed from: `/usr/share/doc/python-is-python3/copyright`)
+
+- `GPL-3`
+- `GPL-3.0`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris what-is-python=4
+'http://archive.ubuntu.com/ubuntu/pool/main/w/what-is-python/what-is-python_4.dsc' what-is-python_4.dsc 1646 SHA256:8f479d2031ad703135f32c32b2894949b3d9d6eadd71c7bec50cbc3d3ca85fa5
+'http://archive.ubuntu.com/ubuntu/pool/main/w/what-is-python/what-is-python_4.tar.xz' what-is-python_4.tar.xz 2264 SHA256:e5b80356cd258077b27d5045e2fbc44c890ad94a304407be6f6fa776afe62a05
 ```
 
 ### `dpkg` source package: `xz-utils=5.2.4-1ubuntu1`
