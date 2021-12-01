@@ -17,12 +17,16 @@
 -	[`amazoncorretto:11-alpine3.14`](#amazoncorretto11-alpine314)
 -	[`amazoncorretto:11-alpine3.14-full`](#amazoncorretto11-alpine314-full)
 -	[`amazoncorretto:11-alpine3.14-jdk`](#amazoncorretto11-alpine314-jdk)
+-	[`amazoncorretto:11-alpine3.15`](#amazoncorretto11-alpine315)
+-	[`amazoncorretto:11-alpine3.15-full`](#amazoncorretto11-alpine315-full)
+-	[`amazoncorretto:11-alpine3.15-jdk`](#amazoncorretto11-alpine315-jdk)
 -	[`amazoncorretto:11.0.13`](#amazoncorretto11013)
 -	[`amazoncorretto:11.0.13-al2`](#amazoncorretto11013-al2)
 -	[`amazoncorretto:11.0.13-alpine`](#amazoncorretto11013-alpine)
 -	[`amazoncorretto:11.0.13-alpine3.12`](#amazoncorretto11013-alpine312)
 -	[`amazoncorretto:11.0.13-alpine3.13`](#amazoncorretto11013-alpine313)
 -	[`amazoncorretto:11.0.13-alpine3.14`](#amazoncorretto11013-alpine314)
+-	[`amazoncorretto:11.0.13-alpine3.15`](#amazoncorretto11013-alpine315)
 -	[`amazoncorretto:17`](#amazoncorretto17)
 -	[`amazoncorretto:17-al2-full`](#amazoncorretto17-al2-full)
 -	[`amazoncorretto:17-al2-jdk`](#amazoncorretto17-al2-jdk)
@@ -38,12 +42,16 @@
 -	[`amazoncorretto:17-alpine3.14`](#amazoncorretto17-alpine314)
 -	[`amazoncorretto:17-alpine3.14-full`](#amazoncorretto17-alpine314-full)
 -	[`amazoncorretto:17-alpine3.14-jdk`](#amazoncorretto17-alpine314-jdk)
+-	[`amazoncorretto:17-alpine3.15`](#amazoncorretto17-alpine315)
+-	[`amazoncorretto:17-alpine3.15-full`](#amazoncorretto17-alpine315-full)
+-	[`amazoncorretto:17-alpine3.15-jdk`](#amazoncorretto17-alpine315-jdk)
 -	[`amazoncorretto:17.0.1`](#amazoncorretto1701)
 -	[`amazoncorretto:17.0.1-al2`](#amazoncorretto1701-al2)
 -	[`amazoncorretto:17.0.1-alpine`](#amazoncorretto1701-alpine)
 -	[`amazoncorretto:17.0.1-alpine3.12`](#amazoncorretto1701-alpine312)
 -	[`amazoncorretto:17.0.1-alpine3.13`](#amazoncorretto1701-alpine313)
 -	[`amazoncorretto:17.0.1-alpine3.14`](#amazoncorretto1701-alpine314)
+-	[`amazoncorretto:17.0.1-alpine3.15`](#amazoncorretto1701-alpine315)
 -	[`amazoncorretto:8`](#amazoncorretto8)
 -	[`amazoncorretto:8-al2-full`](#amazoncorretto8-al2-full)
 -	[`amazoncorretto:8-al2-jdk`](#amazoncorretto8-al2-jdk)
@@ -63,6 +71,10 @@
 -	[`amazoncorretto:8-alpine3.14-full`](#amazoncorretto8-alpine314-full)
 -	[`amazoncorretto:8-alpine3.14-jdk`](#amazoncorretto8-alpine314-jdk)
 -	[`amazoncorretto:8-alpine3.14-jre`](#amazoncorretto8-alpine314-jre)
+-	[`amazoncorretto:8-alpine3.15`](#amazoncorretto8-alpine315)
+-	[`amazoncorretto:8-alpine3.15-full`](#amazoncorretto8-alpine315-full)
+-	[`amazoncorretto:8-alpine3.15-jdk`](#amazoncorretto8-alpine315-jdk)
+-	[`amazoncorretto:8-alpine3.15-jre`](#amazoncorretto8-alpine315-jre)
 -	[`amazoncorretto:8u312`](#amazoncorretto8u312)
 -	[`amazoncorretto:8u312-al2`](#amazoncorretto8u312-al2)
 -	[`amazoncorretto:8u312-alpine`](#amazoncorretto8u312-alpine)
@@ -73,6 +85,8 @@
 -	[`amazoncorretto:8u312-alpine3.13-jre`](#amazoncorretto8u312-alpine313-jre)
 -	[`amazoncorretto:8u312-alpine3.14`](#amazoncorretto8u312-alpine314)
 -	[`amazoncorretto:8u312-alpine3.14-jre`](#amazoncorretto8u312-alpine314-jre)
+-	[`amazoncorretto:8u312-alpine3.15`](#amazoncorretto8u312-alpine315)
+-	[`amazoncorretto:8u312-alpine3.15-jre`](#amazoncorretto8u312-alpine315-jre)
 -	[`amazoncorretto:latest`](#amazoncorrettolatest)
 
 ## `amazoncorretto:11`
@@ -954,6 +968,18 @@ ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/j
 		Size: 193.3 MB (193326798 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `amazoncorretto:11-alpine3.15`
+
+**does not exist** (yet?)
+
+## `amazoncorretto:11-alpine3.15-full`
+
+**does not exist** (yet?)
+
+## `amazoncorretto:11-alpine3.15-jdk`
+
+**does not exist** (yet?)
+
 ## `amazoncorretto:11.0.13`
 
 ```console
@@ -1335,6 +1361,10 @@ ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/j
 		Last Modified: Fri, 12 Nov 2021 21:26:31 GMT  
 		Size: 193.3 MB (193326798 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `amazoncorretto:11.0.13-alpine3.15`
+
+**does not exist** (yet?)
 
 ## `amazoncorretto:17`
 
@@ -2215,6 +2245,18 @@ ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/j
 		Size: 191.8 MB (191766503 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `amazoncorretto:17-alpine3.15`
+
+**does not exist** (yet?)
+
+## `amazoncorretto:17-alpine3.15-full`
+
+**does not exist** (yet?)
+
+## `amazoncorretto:17-alpine3.15-jdk`
+
+**does not exist** (yet?)
+
 ## `amazoncorretto:17.0.1`
 
 ```console
@@ -2596,6 +2638,10 @@ ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/j
 		Last Modified: Fri, 12 Nov 2021 21:28:06 GMT  
 		Size: 191.8 MB (191766503 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `amazoncorretto:17.0.1-alpine3.15`
+
+**does not exist** (yet?)
 
 ## `amazoncorretto:8`
 
@@ -3672,6 +3718,22 @@ ENV JAVA_HOME=/usr/lib/jvm/default-jvm/jre
 		Size: 40.4 MB (40361164 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `amazoncorretto:8-alpine3.15`
+
+**does not exist** (yet?)
+
+## `amazoncorretto:8-alpine3.15-full`
+
+**does not exist** (yet?)
+
+## `amazoncorretto:8-alpine3.15-jdk`
+
+**does not exist** (yet?)
+
+## `amazoncorretto:8-alpine3.15-jre`
+
+**does not exist** (yet?)
+
 ## `amazoncorretto:8u312`
 
 ```console
@@ -4249,6 +4311,14 @@ ENV JAVA_HOME=/usr/lib/jvm/default-jvm/jre
 		Last Modified: Fri, 12 Nov 2021 21:24:37 GMT  
 		Size: 40.4 MB (40361164 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `amazoncorretto:8u312-alpine3.15`
+
+**does not exist** (yet?)
+
+## `amazoncorretto:8u312-alpine3.15-jre`
+
+**does not exist** (yet?)
 
 ## `amazoncorretto:latest`
 
