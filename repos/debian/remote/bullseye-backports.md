@@ -1,7 +1,7 @@
 ## `debian:bullseye-backports`
 
 ```console
-$ docker pull debian@sha256:549d13b3bc6609c4a60bfa1fcf0b4fef8feb95dc7d3ae55887ad42dc70799bce
+$ docker pull debian@sha256:ebce13afc5daccc7c124c1f6158f77431f5e0b8fa19f4a6092a5a65932b43e6e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -82,32 +82,32 @@ RUN echo 'deb http://deb.debian.org/debian bullseye-backports main' > /etc/apt/s
 ### `debian:bullseye-backports` - linux; arm variant v7
 
 ```console
-$ docker pull debian@sha256:e957db4d555fdc3eb86f8e8b749b895a1b1e2643e198bd4731ea63535b14b90b
+$ docker pull debian@sha256:b4335a7ff40b2b4b0e6b580926e25c657735475f57490aa5cc99987392e9a856
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **50.1 MB (50134378 bytes)**  
+-	Total Size: **50.1 MB (50134541 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:18e13e5a51bfa3cb0ea7f1f5da62f8dff94648e23e5ffcbe32e8f76771d7c544`
+-	Image ID: `sha256:ce5c5d5f867b4df3c995144c7a86da528f3bd25b535b4efee21f9bfdfe25643e`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Wed, 17 Nov 2021 01:59:07 GMT
-ADD file:43b45f65ff4ba720f6f9a107b5f80818d5ea6ebc4835840b11e9a506351da32f in / 
-# Wed, 17 Nov 2021 01:59:08 GMT
+# Thu, 02 Dec 2021 09:04:39 GMT
+ADD file:f0d0256a657fcc82cba38ec9fe377ae4d30125de11e0003de81177370592b440 in / 
+# Thu, 02 Dec 2021 09:04:40 GMT
 CMD ["bash"]
-# Wed, 17 Nov 2021 01:59:24 GMT
+# Thu, 02 Dec 2021 09:04:57 GMT
 RUN echo 'deb http://deb.debian.org/debian bullseye-backports main' > /etc/apt/sources.list.d/backports.list
 ```
 
 -	Layers:
-	-	`sha256:dbbf55137aab3c7acd1e012a70f1ea1adeaef8d39b474829965d3480a02bf572`  
-		Last Modified: Wed, 17 Nov 2021 02:14:27 GMT  
-		Size: 50.1 MB (50134152 bytes)  
+	-	`sha256:e704987a22630df63d8518dd22b13ec2a4f460fd492ab42b97cdc6f971e7be31`  
+		Last Modified: Thu, 02 Dec 2021 09:20:17 GMT  
+		Size: 50.1 MB (50134315 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7d9e428fdd0c08de2640f62c0f97e2c0e6b0ca158776b1827dd6d8027dbed114`  
-		Last Modified: Wed, 17 Nov 2021 02:14:51 GMT  
+	-	`sha256:fe719d1b6db7d10afce634e574e4939d0b3c87b1b89277ef91880ba585c29e80`  
+		Last Modified: Thu, 02 Dec 2021 09:20:40 GMT  
 		Size: 226.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
