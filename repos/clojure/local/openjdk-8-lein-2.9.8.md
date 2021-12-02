@@ -1,4 +1,4 @@
-# `clojure:openjdk-8`
+# `clojure:openjdk-8-lein`
 
 ## Docker Metadata
 

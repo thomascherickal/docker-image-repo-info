@@ -1,18 +1,19 @@
-# `clojure:openjdk-11-lein-slim-bullseye`
+# `clojure:openjdk-17-lein`
 
 ## Docker Metadata
 
-- Image ID: `sha256:6eedb613d453a78421e37ce035f5b6c9ef46c331f25b7093c3e05ecd03e3e618`
-- Created: `2021-11-18T13:07:19.732814804Z`
-- Virtual Size: ~ 447.61 Mb  
+- Image ID: `sha256:ff8a8d1ed91f4a02fe57d9a67998aa1de9172ff0e752201e22f4122807613474`
+- Created: `2021-12-02T02:34:09.665475051Z`
+- Virtual Size: ~ 425.62 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Command: `["lein","repl"]`
+- Entrypoint: `["entrypoint"]`
+- Command: `["repl"]`
 - Environment:
-  - `PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/`
-  - `JAVA_HOME=/usr/local/openjdk-11`
+  - `PATH=/usr/local/openjdk-17/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/`
+  - `JAVA_HOME=/usr/local/openjdk-17`
   - `LANG=C.UTF-8`
-  - `JAVA_VERSION=11.0.13`
+  - `JAVA_VERSION=17.0.1`
   - `LEIN_VERSION=2.9.8`
   - `LEIN_INSTALL=/usr/local/bin/`
   - `LEIN_ROOT=1`

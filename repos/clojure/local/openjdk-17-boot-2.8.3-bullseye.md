@@ -2,12 +2,13 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:c6bf064c199d7ff4848ecd1cff98de5deb4034a81050cfe6b1634e1253a7c290`
-- Created: `2021-11-18T13:09:44.016446777Z`
+- Image ID: `sha256:2f6caab1837f1d5e05d766bd73e99225fd4ef2bf7d5f7a3015dfed3211308e4c`
+- Created: `2021-12-02T02:34:20.917375039Z`
 - Virtual Size: ~ 727.05 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Command: `["boot","repl"]`
+- Entrypoint: `["entrypoint"]`
+- Command: `["repl"]`
 - Environment:
   - `PATH=/usr/local/openjdk-17/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/`
   - `JAVA_HOME=/usr/local/openjdk-17`

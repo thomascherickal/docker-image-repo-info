@@ -1,18 +1,19 @@
-# `clojure:openjdk-18`
+# `clojure:openjdk-18-lein`
 
 ## Docker Metadata
 
-- Image ID: `sha256:295641cfb942172a51bfa5fdd80b6d06cdf5500cc4b079924b2817d10cfc0256`
-- Created: `2021-11-20T01:34:53.9172741Z`
-- Virtual Size: ~ 428.29 Mb  
+- Image ID: `sha256:8767f2e15ead5541ebec85a662e4f48cca1f592fd784751f825b8265e6d3613d`
+- Created: `2021-12-02T02:34:31.899540712Z`
+- Virtual Size: ~ 428.30 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Command: `["lein","repl"]`
+- Entrypoint: `["entrypoint"]`
+- Command: `["repl"]`
 - Environment:
   - `PATH=/usr/local/openjdk-18/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/`
   - `JAVA_HOME=/usr/local/openjdk-18`
   - `LANG=C.UTF-8`
-  - `JAVA_VERSION=18-ea+24`
+  - `JAVA_VERSION=18-ea+25`
   - `LEIN_VERSION=2.9.8`
   - `LEIN_INSTALL=/usr/local/bin/`
   - `LEIN_ROOT=1`

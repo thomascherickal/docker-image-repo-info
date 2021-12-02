@@ -1,4 +1,4 @@
-# `clojure:openjdk-11-boot`
+# `clojure:openjdk-11-boot-bullseye`
 
 ## Docker Metadata
 

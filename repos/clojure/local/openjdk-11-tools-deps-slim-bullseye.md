@@ -1,13 +1,13 @@
-# `clojure:openjdk-11-tools-deps-slim-bullseye`
+# `clojure:openjdk-11`
 
 ## Docker Metadata
 
-- Image ID: `sha256:83f37ad68f38ac26d48c714fe5aa2400daeedad4dbe2da95177468bbfe1a6d52`
-- Created: `2021-11-18T13:08:20.208759578Z`
-- Virtual Size: ~ 561.26 Mb  
+- Image ID: `sha256:cf6e660e7bcca90285587a5754269b967509a95e4af1bde95dc0b188da134f66`
+- Created: `2021-12-02T02:34:06.118470011Z`
+- Virtual Size: ~ 561.27 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Command: `["sh","-c","sleep 1 && exec clj"]`
+- Command: `["clj"]`
 - Environment:
   - `PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `JAVA_HOME=/usr/local/openjdk-11`

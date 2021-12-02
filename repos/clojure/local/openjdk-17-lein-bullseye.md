@@ -1,13 +1,14 @@
-# `clojure:openjdk-17-bullseye`
+# `clojure:openjdk-17-lein-bullseye`
 
 ## Docker Metadata
 
-- Image ID: `sha256:ecd7e82045c324e65f469cbb2e89d10170adf7d20dae23f7b346a3355eda1d58`
-- Created: `2021-11-18T13:08:53.043875595Z`
+- Image ID: `sha256:ac19f79092013dc31bbf96a997d2cf8f35b454df3b03e9f220e781dacb02fbf0`
+- Created: `2021-12-02T02:34:13.732775366Z`
 - Virtual Size: ~ 682.57 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Command: `["lein","repl"]`
+- Entrypoint: `["entrypoint"]`
+- Command: `["repl"]`
 - Environment:
   - `PATH=/usr/local/openjdk-17/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/`
   - `JAVA_HOME=/usr/local/openjdk-17`

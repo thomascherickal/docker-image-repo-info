@@ -1,13 +1,14 @@
-# `clojure:openjdk-17`
+# `clojure:openjdk-17-lein`
 
 ## Docker Metadata
 
-- Image ID: `sha256:45cb3c813eb7bf836acf0385b069c075b0a778c9fb0377d1e0b040182cc347d4`
-- Created: `2021-11-18T13:08:37.371918149Z`
+- Image ID: `sha256:ff8a8d1ed91f4a02fe57d9a67998aa1de9172ff0e752201e22f4122807613474`
+- Created: `2021-12-02T02:34:09.665475051Z`
 - Virtual Size: ~ 425.62 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Command: `["lein","repl"]`
+- Entrypoint: `["entrypoint"]`
+- Command: `["repl"]`
 - Environment:
   - `PATH=/usr/local/openjdk-17/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/`
   - `JAVA_HOME=/usr/local/openjdk-17`

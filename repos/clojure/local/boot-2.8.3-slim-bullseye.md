@@ -1,18 +1,19 @@
-# `clojure:openjdk-11-boot-slim-bullseye`
+# `clojure:openjdk-17-boot`
 
 ## Docker Metadata
 
-- Image ID: `sha256:85883189d352940d02ff17eb755099f0b921b14124e5787e5f4e6c12cbb68636`
-- Created: `2021-11-18T13:07:47.547999127Z`
-- Virtual Size: ~ 493.38 Mb  
+- Image ID: `sha256:b1f96a75e20f6f15201811d3733ebbb3387a31de2023e81c8d0b5dd78a212542`
+- Created: `2021-12-02T02:34:16.886587224Z`
+- Virtual Size: ~ 471.38 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Command: `["boot","repl"]`
+- Entrypoint: `["entrypoint"]`
+- Command: `["repl"]`
 - Environment:
-  - `PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/`
-  - `JAVA_HOME=/usr/local/openjdk-11`
+  - `PATH=/usr/local/openjdk-17/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/`
+  - `JAVA_HOME=/usr/local/openjdk-17`
   - `LANG=C.UTF-8`
-  - `JAVA_VERSION=11.0.13`
+  - `JAVA_VERSION=17.0.1`
   - `BOOT_VERSION=2.8.3`
   - `BOOT_INSTALL=/usr/local/bin/`
   - `BOOT_AS_ROOT=yes`

@@ -1,13 +1,14 @@
-# `clojure:openjdk-17-tools-deps-bullseye`
+# `clojure:openjdk-17-bullseye`
 
 ## Docker Metadata
 
-- Image ID: `sha256:26cd0b4ad3c8afb32ed1882bee6ce3da02c0e57001004298c7753ee35b734132`
-- Created: `2021-11-18T13:10:14.964403686Z`
+- Image ID: `sha256:1226946b369a7aa5b950f88de6d08a208abd3085bdb469f551f7f94fb7f5fa7b`
+- Created: `2021-12-02T02:34:28.665448128Z`
 - Virtual Size: ~ 687.67 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Command: `["sh","-c","sleep 1 && exec clj"]`
+- Entrypoint: `["entrypoint"]`
+- Command: `["-M","--repl"]`
 - Environment:
   - `PATH=/usr/local/openjdk-17/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `JAVA_HOME=/usr/local/openjdk-17`

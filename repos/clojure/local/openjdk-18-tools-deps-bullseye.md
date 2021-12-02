@@ -1,18 +1,19 @@
-# `clojure:openjdk-18-tools-deps-bullseye`
+# `clojure:openjdk-18-bullseye`
 
 ## Docker Metadata
 
-- Image ID: `sha256:a87ffc1fac1fb44db6d064761782e7df9a6575ebe46c00931f141c3e5ac5c7a1`
-- Created: `2021-11-20T01:36:47.196682488Z`
-- Virtual Size: ~ 690.34 Mb  
+- Image ID: `sha256:47c96430088b58976075f8d214aec911dd1f9f73328773ee79ac93361148a83b`
+- Created: `2021-12-02T02:34:47.602814343Z`
+- Virtual Size: ~ 690.35 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Command: `["sh","-c","sleep 1 && exec clj"]`
+- Entrypoint: `["entrypoint"]`
+- Command: `["-M","--repl"]`
 - Environment:
   - `PATH=/usr/local/openjdk-18/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `JAVA_HOME=/usr/local/openjdk-18`
   - `LANG=C.UTF-8`
-  - `JAVA_VERSION=18-ea+24`
+  - `JAVA_VERSION=18-ea+25`
   - `CLOJURE_VERSION=1.10.3.1020`
 
 ## `dpkg` (`.deb`-based packages)

@@ -1,13 +1,14 @@
-# `clojure:openjdk-17-tools-deps`
+# `clojure:openjdk-17`
 
 ## Docker Metadata
 
-- Image ID: `sha256:5269631e340c142d53d3251780a5e880684a1bc1448665bf36575be726b25018`
-- Created: `2021-11-18T13:10:04.028800628Z`
+- Image ID: `sha256:0e7838e4ac3bf51bf675d63461234b8757a7f9379ea25b5f04933b9a755f3150`
+- Created: `2021-12-02T02:34:24.406767475Z`
 - Virtual Size: ~ 539.27 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Command: `["sh","-c","sleep 1 && exec clj"]`
+- Entrypoint: `["entrypoint"]`
+- Command: `["-M","--repl"]`
 - Environment:
   - `PATH=/usr/local/openjdk-17/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `JAVA_HOME=/usr/local/openjdk-17`
