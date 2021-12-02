@@ -1,7 +1,7 @@
 ## `buildpack-deps:sid`
 
 ```console
-$ docker pull buildpack-deps@sha256:fa0630b746ffa5a0d5ac287b9ceaf73a2e501060d3ae95b0f47687272f6f4388
+$ docker pull buildpack-deps@sha256:477e829331652fae98690f65dec5abda77e92f94172fefefd3be5f918fe425b7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -19,101 +19,101 @@ $ docker pull buildpack-deps@sha256:fa0630b746ffa5a0d5ac287b9ceaf73a2e501060d3ae
 ### `buildpack-deps:sid` - linux; amd64
 
 ```console
-$ docker pull buildpack-deps@sha256:de2c4024f4b15d8d4c980231c950776d5a75d15255ac95ebf4d7fc164fd26cc5
+$ docker pull buildpack-deps@sha256:932d10004817582e5f12276f08ef80e227b8612b2cd7b5f8a82f4d66f5228ee2
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **492.2 MB (492225831 bytes)**  
+-	Total Size: **331.2 MB (331161903 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:54138805f9191923bd18fae65421f211dad9ebf7d18c4e55fc9f640874f0b585`
+-	Image ID: `sha256:5fc1051378fd1477164031d74f61888aa56f17074f0a80c1f5657035c8586e46`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Wed, 17 Nov 2021 02:21:50 GMT
-ADD file:1f62518cec36eb3320e38344c0d36779557214cfce8bc32eda000183a34a0ffa in / 
-# Wed, 17 Nov 2021 02:21:51 GMT
+# Thu, 02 Dec 2021 02:49:37 GMT
+ADD file:aa0a8871e20fb4e68758bdebe7ee1e99e982c5e9d2e97b73575b8dcc2ab4adf8 in / 
+# Thu, 02 Dec 2021 02:49:37 GMT
 CMD ["bash"]
-# Wed, 17 Nov 2021 03:17:35 GMT
+# Thu, 02 Dec 2021 03:43:15 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
-# Wed, 17 Nov 2021 03:17:41 GMT
+# Thu, 02 Dec 2021 03:43:22 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Wed, 17 Nov 2021 03:18:00 GMT
+# Thu, 02 Dec 2021 03:43:44 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
-# Wed, 17 Nov 2021 03:19:08 GMT
+# Thu, 02 Dec 2021 03:45:04 GMT
 RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		automake 		bzip2 		dpkg-dev 		file 		g++ 		gcc 		imagemagick 		libbz2-dev 		libc6-dev 		libcurl4-openssl-dev 		libdb-dev 		libevent-dev 		libffi-dev 		libgdbm-dev 		libglib2.0-dev 		libgmp-dev 		libjpeg-dev 		libkrb5-dev 		liblzma-dev 		libmagickcore-dev 		libmagickwand-dev 		libmaxminddb-dev 		libncurses5-dev 		libncursesw5-dev 		libpng-dev 		libpq-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		libtool 		libwebp-dev 		libxml2-dev 		libxslt-dev 		libyaml-dev 		make 		patch 		unzip 		xz-utils 		zlib1g-dev 				$( 			if apt-cache show 'default-libmysqlclient-dev' 2>/dev/null | grep -q '^Version:'; then 				echo 'default-libmysqlclient-dev'; 			else 				echo 'libmysqlclient-dev'; 			fi 		) 	; 	rm -rf /var/lib/apt/lists/*
 ```
 
 -	Layers:
-	-	`sha256:0fef5443775fe054990b02e8f72c4c5bc7792c6a5bf6ef8df110873a81676a87`  
-		Last Modified: Wed, 17 Nov 2021 02:28:03 GMT  
-		Size: 55.8 MB (55758091 bytes)  
+	-	`sha256:af46a953975205f2d7320842b5338767ad3d4aa084267279fc21cdc807374c52`  
+		Last Modified: Thu, 02 Dec 2021 02:56:05 GMT  
+		Size: 55.7 MB (55746868 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6b63aa91be04004e56a4d31d70c789eadabfebe392e2f76a862eaa2fdd70dcfd`  
-		Last Modified: Wed, 17 Nov 2021 03:25:48 GMT  
-		Size: 5.3 MB (5269763 bytes)  
+	-	`sha256:923af8c82d6eb6585aa625d753ea67606bccd40758565b49eb6e0636c4281a9a`  
+		Last Modified: Thu, 02 Dec 2021 03:51:55 GMT  
+		Size: 5.3 MB (5276824 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f4f625d605a0450d800b57ca6e2e0662fba5094348ccbf581c053a485802ebe1`  
-		Last Modified: Wed, 17 Nov 2021 03:25:49 GMT  
-		Size: 11.8 MB (11756478 bytes)  
+	-	`sha256:5c97b84d4ef8d40d6b16c75023fa3aa650861e59f1151d2ab44e9643bfa121be`  
+		Last Modified: Thu, 02 Dec 2021 03:51:55 GMT  
+		Size: 10.9 MB (10904313 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:58f0dd71d7f2f690f062de61d743dd487108ccd38089c95218a295206a6c68c3`  
-		Last Modified: Wed, 17 Nov 2021 03:26:09 GMT  
-		Size: 55.9 MB (55936130 bytes)  
+	-	`sha256:b80321460c0114c02492753431792e6c46ac3fe9b80600356543e3068ed7a067`  
+		Last Modified: Thu, 02 Dec 2021 03:52:14 GMT  
+		Size: 56.7 MB (56722501 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3929219b522d034efb90c4bdfcc3dc832476eea68565e8fdd758c5302b0766c2`  
-		Last Modified: Wed, 17 Nov 2021 03:27:15 GMT  
-		Size: 363.5 MB (363505369 bytes)  
+	-	`sha256:6166346ca25cffccddd770a09ba4d40da3e4ea06460e7d5c28f02459b76d0325`  
+		Last Modified: Thu, 02 Dec 2021 03:52:54 GMT  
+		Size: 202.5 MB (202511397 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `buildpack-deps:sid` - linux; arm variant v5
 
 ```console
-$ docker pull buildpack-deps@sha256:6a4b5e14be57b68f624c1191e910ceaf136abde738a8b13169b010ef7d07fc74
+$ docker pull buildpack-deps@sha256:f86e2e49303e0f69fbdddedbc4977786956734c5a61f502a2b15e0dd0beb4fb2
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **476.0 MB (475984182 bytes)**  
+-	Total Size: **302.4 MB (302449524 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f6a1673685b8fc0243fc420f438d1347ca78519243982f26e2b91b2b3f3d818e`
+-	Image ID: `sha256:bf13b62a9828247b7ea9451b1bdcfbfd0df15ea312838c036c4abd213728944d`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Wed, 17 Nov 2021 02:54:00 GMT
-ADD file:38a4488625c2978d1b1b906a50ef44be1d10f998ff616015c53a2da2cfb92f35 in / 
-# Wed, 17 Nov 2021 02:54:01 GMT
+# Thu, 02 Dec 2021 02:54:44 GMT
+ADD file:358278336204ee1e51bf00f8c88d281c73e7e5d5b537fca1ddea89c9e69da90e in / 
+# Thu, 02 Dec 2021 02:54:45 GMT
 CMD ["bash"]
-# Wed, 17 Nov 2021 19:31:49 GMT
+# Thu, 02 Dec 2021 03:47:10 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
-# Wed, 17 Nov 2021 19:32:07 GMT
+# Thu, 02 Dec 2021 03:47:34 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Wed, 17 Nov 2021 19:33:08 GMT
+# Thu, 02 Dec 2021 03:48:44 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
-# Wed, 17 Nov 2021 19:36:03 GMT
+# Thu, 02 Dec 2021 03:52:07 GMT
 RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		automake 		bzip2 		dpkg-dev 		file 		g++ 		gcc 		imagemagick 		libbz2-dev 		libc6-dev 		libcurl4-openssl-dev 		libdb-dev 		libevent-dev 		libffi-dev 		libgdbm-dev 		libglib2.0-dev 		libgmp-dev 		libjpeg-dev 		libkrb5-dev 		liblzma-dev 		libmagickcore-dev 		libmagickwand-dev 		libmaxminddb-dev 		libncurses5-dev 		libncursesw5-dev 		libpng-dev 		libpq-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		libtool 		libwebp-dev 		libxml2-dev 		libxslt-dev 		libyaml-dev 		make 		patch 		unzip 		xz-utils 		zlib1g-dev 				$( 			if apt-cache show 'default-libmysqlclient-dev' 2>/dev/null | grep -q '^Version:'; then 				echo 'default-libmysqlclient-dev'; 			else 				echo 'libmysqlclient-dev'; 			fi 		) 	; 	rm -rf /var/lib/apt/lists/*
 ```
 
 -	Layers:
-	-	`sha256:586f1470620e32dd1fa4fe0da1865c1bfc9ac3f49aa5cc629609b8f3a6139cb3`  
-		Last Modified: Wed, 17 Nov 2021 03:11:02 GMT  
-		Size: 53.2 MB (53238757 bytes)  
+	-	`sha256:92d580f40fe8bf02becf360f6a4dc76454bfd66964c4acc0ddcd113fa0e9c2d1`  
+		Last Modified: Thu, 02 Dec 2021 03:13:27 GMT  
+		Size: 53.2 MB (53226256 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1cc7c8c0ffd93a2477972dd4a82dfd685646ca53ea73f134d16c2f2e89fa1c4b`  
-		Last Modified: Wed, 17 Nov 2021 19:50:47 GMT  
-		Size: 5.2 MB (5170610 bytes)  
+	-	`sha256:638194516b96610900042221009a8c126b7644c26fe612397f2b2622bdfd03ac`  
+		Last Modified: Thu, 02 Dec 2021 04:04:39 GMT  
+		Size: 5.2 MB (5180320 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1d9e84a5f9c5b66ea92b139b8e8c4e5a556bf183ed681adcb5ffb27790412bb8`  
-		Last Modified: Wed, 17 Nov 2021 19:50:49 GMT  
-		Size: 11.4 MB (11440096 bytes)  
+	-	`sha256:23b2f3d24644f1e0eec33ec3662f820a19dc6b8cfa47e1f1551776f80f739780`  
+		Last Modified: Thu, 02 Dec 2021 04:04:41 GMT  
+		Size: 10.6 MB (10611050 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0cc2ad3dc8f65df778ac1ff62e2083310e59fd70c32406d02e1fe8290a16a8f2`  
-		Last Modified: Wed, 17 Nov 2021 19:51:40 GMT  
-		Size: 53.6 MB (53649113 bytes)  
+	-	`sha256:ced16911b039c1097a2b138cf1e729c67a19c941b575a03dee7c08a1c42d3e6f`  
+		Last Modified: Thu, 02 Dec 2021 04:05:17 GMT  
+		Size: 54.4 MB (54384666 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a4c5cac10c9271498f2816df31e893ee4cf0f75a5460bc5f5003bbefcdb09939`  
-		Last Modified: Wed, 17 Nov 2021 19:55:20 GMT  
-		Size: 352.5 MB (352485606 bytes)  
+	-	`sha256:1d843a861ebdda9236e2509fd0e0edf6d32361323b1dce82cde777563e328269`  
+		Last Modified: Thu, 02 Dec 2021 04:06:34 GMT  
+		Size: 179.0 MB (179047232 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `buildpack-deps:sid` - linux; arm variant v7
@@ -219,51 +219,51 @@ RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		auto
 ### `buildpack-deps:sid` - linux; 386
 
 ```console
-$ docker pull buildpack-deps@sha256:55a51ea5f49671f87e0e1e0abc44cfdc4690707133d9b41639b8cbb48c84dfda
+$ docker pull buildpack-deps@sha256:10b5d04f0946ff13f346e3c5a8e1cfc2edc9500f928f28e161d337c64019acf4
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **334.1 MB (334051561 bytes)**  
+-	Total Size: **334.3 MB (334271615 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:8590db74940edfdd57c05e66225cf8ee7898b4f479de89c290d760ede152b008`
+-	Image ID: `sha256:b584f58958a3ad972722a86f669c9e4f6105362f799e529c7881e61e30772d10`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Wed, 17 Nov 2021 02:41:30 GMT
-ADD file:f85ffaee07ae67dcd7f97765e4cbdd725ebb7e06d7b05a80fc7ccddb5fda6b20 in / 
-# Wed, 17 Nov 2021 02:41:31 GMT
+# Thu, 02 Dec 2021 02:41:35 GMT
+ADD file:166234c060754022c10737b949088caccb46aa6315aa91f9ff63dd1f60704729 in / 
+# Thu, 02 Dec 2021 02:41:35 GMT
 CMD ["bash"]
-# Wed, 17 Nov 2021 19:29:07 GMT
+# Thu, 02 Dec 2021 03:14:30 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
-# Wed, 17 Nov 2021 19:29:19 GMT
+# Thu, 02 Dec 2021 03:14:37 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Wed, 17 Nov 2021 19:29:49 GMT
+# Thu, 02 Dec 2021 03:15:02 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
-# Wed, 17 Nov 2021 19:30:50 GMT
+# Thu, 02 Dec 2021 03:16:05 GMT
 RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		automake 		bzip2 		dpkg-dev 		file 		g++ 		gcc 		imagemagick 		libbz2-dev 		libc6-dev 		libcurl4-openssl-dev 		libdb-dev 		libevent-dev 		libffi-dev 		libgdbm-dev 		libglib2.0-dev 		libgmp-dev 		libjpeg-dev 		libkrb5-dev 		liblzma-dev 		libmagickcore-dev 		libmagickwand-dev 		libmaxminddb-dev 		libncurses5-dev 		libncursesw5-dev 		libpng-dev 		libpq-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		libtool 		libwebp-dev 		libxml2-dev 		libxslt-dev 		libyaml-dev 		make 		patch 		unzip 		xz-utils 		zlib1g-dev 				$( 			if apt-cache show 'default-libmysqlclient-dev' 2>/dev/null | grep -q '^Version:'; then 				echo 'default-libmysqlclient-dev'; 			else 				echo 'libmysqlclient-dev'; 			fi 		) 	; 	rm -rf /var/lib/apt/lists/*
 ```
 
 -	Layers:
-	-	`sha256:ec289c525481d0b14d52b85fde04accd67398f9603586e8bbdf75ee7b931219b`  
-		Last Modified: Wed, 17 Nov 2021 02:50:49 GMT  
-		Size: 56.8 MB (56816813 bytes)  
+	-	`sha256:158718d3425b2eb9ceb4c5321a7633c30d7b948b7dfe2a98608b354788b1c2ab`  
+		Last Modified: Thu, 02 Dec 2021 02:51:07 GMT  
+		Size: 56.8 MB (56808054 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7a0787753990e38e71b7feba2437868456865eec2cd4ac4fbdaff5ab4ce73f06`  
-		Last Modified: Wed, 17 Nov 2021 19:39:47 GMT  
-		Size: 5.4 MB (5399956 bytes)  
+	-	`sha256:19fe1b108338e18a41ef0392f3153179fc4c7809ae0d46bd4c0ad04d928fa2ca`  
+		Last Modified: Thu, 02 Dec 2021 03:23:43 GMT  
+		Size: 5.4 MB (5408797 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0b4730cd70d9eb020375ad03b1f4e57a3d43e860581c451868fcb852c84ffe7f`  
-		Last Modified: Wed, 17 Nov 2021 19:39:49 GMT  
-		Size: 12.1 MB (12140237 bytes)  
+	-	`sha256:360266616da2d6b21d216fa2104faaa2528b4c353538e2fc67ab8b0942e7f3fc`  
+		Last Modified: Thu, 02 Dec 2021 03:23:44 GMT  
+		Size: 11.3 MB (11285984 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4d41e108302ec606a92b6f33767570b5f198001378947c5c938354305faa09d1`  
-		Last Modified: Wed, 17 Nov 2021 19:40:21 GMT  
-		Size: 57.3 MB (57274744 bytes)  
+	-	`sha256:a99c83bcfec09f5a8285a2c904ff5ebadbe779a1888d98acbc22ff42f814c916`  
+		Last Modified: Thu, 02 Dec 2021 03:24:10 GMT  
+		Size: 58.1 MB (58139010 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f5eececd0a6e179ae2aeaec24b1907793ea8a59c5e5665c503e4a92c5b7e0e5e`  
-		Last Modified: Wed, 17 Nov 2021 19:41:30 GMT  
-		Size: 202.4 MB (202419811 bytes)  
+	-	`sha256:20b39faab74dce51fb1e893a5612cb36b32738dc4dd28317a18a31ba5b1bac1e`  
+		Last Modified: Thu, 02 Dec 2021 03:24:59 GMT  
+		Size: 202.6 MB (202629770 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `buildpack-deps:sid` - linux; mips64le
