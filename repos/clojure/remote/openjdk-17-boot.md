@@ -1,7 +1,7 @@
 ## `clojure:openjdk-17-boot`
 
 ```console
-$ docker pull clojure@sha256:9d6e08780e702c50c1c2bd5dcf1cb30a70280b19101ee657b6673ecfc75fd621
+$ docker pull clojure@sha256:f20e5ff14f0fc33c96baea627ca2413469174a0db128acec2fb8eee4adec7bf5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -84,15 +84,16 @@ CMD ["boot" "repl"]
 ### `clojure:openjdk-17-boot` - linux; arm64 variant v8
 
 ```console
-$ docker pull clojure@sha256:b34f0e74948c05da3f6c56d68a265943b52e4a87b3fe5a6f35d2bd9705ce5417
+$ docker pull clojure@sha256:f37807a63613772574ec34759b8bba177ea5cedce307b6324ab57ff73847b4f2
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **276.4 MB (276439470 bytes)**  
+-	Total Size: **276.4 MB (276439874 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:79716451ba0ee9c72995a4a06c65d71db38220e6349ff6c214612372be970376`
--	Default Command: `["boot","repl"]`
+-	Image ID: `sha256:4c35c1fa19c42db8697c5552a8b23eec40f38b22045b4402342b797886fc197c`
+-	Entrypoint: `["entrypoint"]`
+-	Default Command: `["repl"]`
 
 ```dockerfile
 # Wed, 17 Nov 2021 02:40:15 GMT
@@ -127,8 +128,12 @@ ENV PATH=/usr/local/openjdk-17/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 ENV BOOT_AS_ROOT=yes
 # Wed, 17 Nov 2021 16:31:56 GMT
 RUN boot
-# Wed, 17 Nov 2021 16:31:56 GMT
-CMD ["boot" "repl"]
+# Thu, 02 Dec 2021 01:46:57 GMT
+COPY file:0282db266eb050a3ad3609149efe2188243cb9f95c0b3e48a312ddef6c6bea02 in /usr/local/bin/entrypoint 
+# Thu, 02 Dec 2021 01:46:57 GMT
+ENTRYPOINT ["entrypoint"]
+# Thu, 02 Dec 2021 01:46:58 GMT
+CMD ["repl"]
 ```
 
 -	Layers:
@@ -151,4 +156,8 @@ CMD ["boot" "repl"]
 	-	`sha256:149411dbc826cded1f8c1dad9858d9c8d246e00aba94c6a8e9820a60dd3299ee`  
 		Last Modified: Wed, 17 Nov 2021 16:45:29 GMT  
 		Size: 58.8 MB (58815747 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c12b7f692568261fff21c5120ab0921aaa2a69f57765e1c630320e31bb23c011`  
+		Last Modified: Thu, 02 Dec 2021 02:01:28 GMT  
+		Size: 404.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip

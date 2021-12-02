@@ -1,7 +1,7 @@
 ## `clojure:openjdk-18-lein-buster`
 
 ```console
-$ docker pull clojure@sha256:feecebe3306e6de08d3a38289f07879ec4d7805f3977968961632c2e290785ca
+$ docker pull clojure@sha256:3c2824d43dd0330cb05b1eab38373dfc7b3d150f83761527eee95c7864c3445a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -102,15 +102,16 @@ CMD ["lein" "repl"]
 ### `clojure:openjdk-18-lein-buster` - linux; arm64 variant v8
 
 ```console
-$ docker pull clojure@sha256:d304e830419c18dc88e029b8d5f90a40ffbfd77bc1da885d258ac34697c58e97
+$ docker pull clojure@sha256:94c01cfff96735a8b9ed75767cb24a088b028b9ebb57fe3778cfacf4d08eb241
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **337.0 MB (337042906 bytes)**  
+-	Total Size: **337.0 MB (337043314 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1f91869e03f828b6ef6154fb4cfcdcf7e316dbdca10d28b35b31ae374d3c54a0`
--	Default Command: `["lein","repl"]`
+-	Image ID: `sha256:572bee02f97995c6c18611842eec9351fd8bfdcc307d0887ce06a36afbc96da6`
+-	Entrypoint: `["entrypoint"]`
+-	Default Command: `["repl"]`
 
 ```dockerfile
 # Wed, 17 Nov 2021 02:40:27 GMT
@@ -151,8 +152,12 @@ ENV PATH=/usr/local/openjdk-18/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 ENV LEIN_ROOT=1
 # Tue, 30 Nov 2021 07:48:17 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.3"]])' > project.clj   && lein deps && rm project.clj
-# Tue, 30 Nov 2021 07:48:18 GMT
-CMD ["lein" "repl"]
+# Thu, 02 Dec 2021 01:42:53 GMT
+COPY file:cf90f595e38d932dff3bdcd4221efe7c65fb3432787490053b55b6917f06e4cd in /usr/local/bin/entrypoint 
+# Thu, 02 Dec 2021 01:42:53 GMT
+ENTRYPOINT ["entrypoint"]
+# Thu, 02 Dec 2021 01:42:54 GMT
+CMD ["repl"]
 ```
 
 -	Layers:
@@ -187,4 +192,8 @@ CMD ["lein" "repl"]
 	-	`sha256:3620ace33c13612648cca548f8d3fe87883876d808af3c02a5c29aad02256091`  
 		Last Modified: Tue, 30 Nov 2021 07:59:13 GMT  
 		Size: 4.2 MB (4207064 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ed4a57cf73a5b200cce807ae98233a07a927a3d488516c2dbdc9df442d265d60`  
+		Last Modified: Thu, 02 Dec 2021 01:56:43 GMT  
+		Size: 408.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip

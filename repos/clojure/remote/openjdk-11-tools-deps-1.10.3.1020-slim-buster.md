@@ -1,7 +1,7 @@
 ## `clojure:openjdk-11-tools-deps-1.10.3.1020-slim-buster`
 
 ```console
-$ docker pull clojure@sha256:ab98a3d63653bf6e82a62508cda3a2e7a06c918813661c93cb183895ce90cc86
+$ docker pull clojure@sha256:da9c25a37fe085dd4d84db43a693789a0c68d8abd9faa2ba8072507badfc7c99
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -78,15 +78,15 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 ### `clojure:openjdk-11-tools-deps-1.10.3.1020-slim-buster` - linux; arm64 variant v8
 
 ```console
-$ docker pull clojure@sha256:aba07cf836ce1d68f91c6fe320c65c7796691cbbc8aa5de3e2649f5816fd2171
+$ docker pull clojure@sha256:0581e5d4f278e331b25642d2ea1fd331c919948dcca4a584cea9d447152de10a
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **287.9 MB (287898439 bytes)**  
+-	Total Size: **287.9 MB (287899062 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:965913b311bcc891758379e18527e7b5de3b428aedcad018c71fbf933eced095`
--	Default Command: `["sh","-c","sleep 1 && exec clj"]`
+-	Image ID: `sha256:39b1dbf8f462763b23a60b6fc5a01222a134257f4502db485fbacfdec92fc9ab`
+-	Default Command: `["clj"]`
 
 ```dockerfile
 # Wed, 17 Nov 2021 02:40:44 GMT
@@ -115,8 +115,10 @@ ENV CLOJURE_VERSION=1.10.3.1020
 WORKDIR /tmp
 # Wed, 17 Nov 2021 16:26:14 GMT
 RUN apt-get update && apt-get install -y curl make git rlwrap wget && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "afc87e2c8cfbf87e43553439c69a4c8e36bc2094405d08f39ca542b4cca0920a *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && rm linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apt-get purge -y --auto-remove curl wget
-# Wed, 17 Nov 2021 16:26:14 GMT
-CMD ["sh" "-c" "sleep 1 && exec clj"]
+# Thu, 02 Dec 2021 01:41:47 GMT
+COPY file:b0aef3ea203de7b5c2ea645debf58c8231445a2e3070b72749b54614f4a89b82 in /usr/local/bin/rlwrap 
+# Thu, 02 Dec 2021 01:41:47 GMT
+CMD ["clj"]
 ```
 
 -	Layers:
@@ -139,4 +141,8 @@ CMD ["sh" "-c" "sleep 1 && exec clj"]
 	-	`sha256:d123c4d6dc8eb16f058ac08ce13b4c64b2c39c2562a5c307e2c07d0e8cc6edca`  
 		Last Modified: Wed, 17 Nov 2021 16:41:10 GMT  
 		Size: 58.1 MB (58073050 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:5625fd3d272bce42acc7c349fcc2e65dc290e9c5a453d7c538e283fee251d469`  
+		Last Modified: Thu, 02 Dec 2021 01:54:28 GMT  
+		Size: 623.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
