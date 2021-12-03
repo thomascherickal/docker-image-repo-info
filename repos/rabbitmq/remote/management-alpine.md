@@ -1,7 +1,7 @@
 ## `rabbitmq:management-alpine`
 
 ```console
-$ docker pull rabbitmq@sha256:c21a0dca0a033f917cc6a3f3cc830c739e98276918d46b02efb33cdb68bfcbfb
+$ docker pull rabbitmq@sha256:29c1cf7073a7f20473b8e01f0f29b0666696a23f2296b6e227fe3a13a2703a90
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -627,14 +627,14 @@ EXPOSE 15671 15672
 ### `rabbitmq:management-alpine` - linux; ppc64le
 
 ```console
-$ docker pull rabbitmq@sha256:5a36c93599bbde80b4b3a70e08aa375b91e58ea99458d5d99f61b8d625e27004
+$ docker pull rabbitmq@sha256:cdf0285bbd7d66d8d1b758acc6aad7363c61b756c56d0252f3c76d1ad7af3e03
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **75.6 MB (75587660 bytes)**  
+-	Total Size: **75.6 MB (75598629 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:fda3d0bdb6323256e09461523a022cab169fde4381587e824c09bca20a92933a`
+-	Image ID: `sha256:b149433016a4af96e79f23378fe708ea3683ecc6db88bcbdd269ed0054e5a92b`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["rabbitmq-server"]`
 
@@ -665,42 +665,42 @@ ENV RABBITMQ_DATA_DIR=/var/lib/rabbitmq
 # Tue, 30 Nov 2021 07:38:30 GMT
 # ARGS: PGP_KEYSERVER=keyserver.ubuntu.com
 RUN set -eux; 	addgroup -g 101 -S rabbitmq; 	adduser -u 100 -S -h "$RABBITMQ_DATA_DIR" -G rabbitmq rabbitmq; 	mkdir -p "$RABBITMQ_DATA_DIR" /etc/rabbitmq /etc/rabbitmq/conf.d /tmp/rabbitmq-ssl /var/log/rabbitmq; 	chown -fR rabbitmq:rabbitmq "$RABBITMQ_DATA_DIR" /etc/rabbitmq /etc/rabbitmq/conf.d /tmp/rabbitmq-ssl /var/log/rabbitmq; 	chmod 777 "$RABBITMQ_DATA_DIR" /etc/rabbitmq /etc/rabbitmq/conf.d /tmp/rabbitmq-ssl /var/log/rabbitmq; 	ln -sf "$RABBITMQ_DATA_DIR/.erlang.cookie" /root/.erlang.cookie
-# Tue, 30 Nov 2021 07:38:33 GMT
-ENV RABBITMQ_VERSION=3.9.10
-# Tue, 30 Nov 2021 07:38:36 GMT
+# Fri, 03 Dec 2021 18:13:17 GMT
+ENV RABBITMQ_VERSION=3.9.11
+# Fri, 03 Dec 2021 18:13:21 GMT
 ENV RABBITMQ_PGP_KEY_ID=0x0A9AF2115F4687BD29803A206B73A36E6026DFCA
-# Tue, 30 Nov 2021 07:38:37 GMT
+# Fri, 03 Dec 2021 18:13:23 GMT
 ENV RABBITMQ_HOME=/opt/rabbitmq
-# Tue, 30 Nov 2021 07:38:38 GMT
+# Fri, 03 Dec 2021 18:13:26 GMT
 ENV PATH=/opt/rabbitmq/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RABBITMQ_LOGS=-
-# Tue, 30 Nov 2021 07:38:53 GMT
+# Fri, 03 Dec 2021 18:13:51 GMT
 # ARGS: PGP_KEYSERVER=keyserver.ubuntu.com
 RUN set -eux; 		apk add --no-cache --virtual .build-deps 		gnupg 		xz 	; 		RABBITMQ_SOURCE_URL="https://github.com/rabbitmq/rabbitmq-server/releases/download/v$RABBITMQ_VERSION/rabbitmq-server-generic-unix-latest-toolchain-$RABBITMQ_VERSION.tar.xz"; 	RABBITMQ_PATH="/usr/local/src/rabbitmq-$RABBITMQ_VERSION"; 		wget --output-document "$RABBITMQ_PATH.tar.xz.asc" "$RABBITMQ_SOURCE_URL.asc"; 	wget --output-document "$RABBITMQ_PATH.tar.xz" "$RABBITMQ_SOURCE_URL"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys "$RABBITMQ_PGP_KEY_ID"; 	gpg --batch --verify "$RABBITMQ_PATH.tar.xz.asc" "$RABBITMQ_PATH.tar.xz"; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$RABBITMQ_HOME"; 	tar --extract --file "$RABBITMQ_PATH.tar.xz" --directory "$RABBITMQ_HOME" --strip-components 1; 	rm -rf "$RABBITMQ_PATH"*; 	grep -qE '^SYS_PREFIX=\$\{RABBITMQ_HOME\}$' "$RABBITMQ_HOME/sbin/rabbitmq-defaults"; 	sed -i 's/^SYS_PREFIX=.*$/SYS_PREFIX=/' "$RABBITMQ_HOME/sbin/rabbitmq-defaults"; 	grep -qE '^SYS_PREFIX=$' "$RABBITMQ_HOME/sbin/rabbitmq-defaults"; 	chown -R rabbitmq:rabbitmq "$RABBITMQ_HOME"; 		apk del .build-deps; 		[ ! -e "$RABBITMQ_DATA_DIR/.erlang.cookie" ]; 	su-exec rabbitmq rabbitmqctl help; 	su-exec rabbitmq rabbitmqctl list_ciphers; 	su-exec rabbitmq rabbitmq-plugins list; 	rm "$RABBITMQ_DATA_DIR/.erlang.cookie"
-# Tue, 30 Nov 2021 07:39:00 GMT
+# Fri, 03 Dec 2021 18:14:01 GMT
 # ARGS: PGP_KEYSERVER=keyserver.ubuntu.com
 RUN set -eux; 	su-exec rabbitmq rabbitmq-plugins enable --offline rabbitmq_prometheus; 	echo 'management_agent.disable_metrics_collector = true' > /etc/rabbitmq/conf.d/management_agent.disable_metrics_collector.conf; 	chown rabbitmq:rabbitmq /etc/rabbitmq/conf.d/management_agent.disable_metrics_collector.conf
-# Tue, 30 Nov 2021 07:39:06 GMT
+# Fri, 03 Dec 2021 18:14:11 GMT
 # ARGS: PGP_KEYSERVER=keyserver.ubuntu.com
 RUN ln -sf /opt/rabbitmq/plugins /plugins
-# Tue, 30 Nov 2021 07:39:08 GMT
+# Fri, 03 Dec 2021 18:14:15 GMT
 ENV HOME=/var/lib/rabbitmq
-# Tue, 30 Nov 2021 07:39:10 GMT
+# Fri, 03 Dec 2021 18:14:21 GMT
 VOLUME [/var/lib/rabbitmq]
-# Tue, 30 Nov 2021 07:39:13 GMT
+# Fri, 03 Dec 2021 18:14:24 GMT
 ENV LANG=C.UTF-8 LANGUAGE=C.UTF-8 LC_ALL=C.UTF-8
-# Tue, 30 Nov 2021 07:39:14 GMT
+# Fri, 03 Dec 2021 18:14:27 GMT
 COPY --chown=rabbitmq:rabbitmqfile:2b942f4756de24f6094cd4bd8e85adc37054221a296429e1c867c9e0f4b5dba8 in /etc/rabbitmq/conf.d/ 
-# Tue, 30 Nov 2021 07:39:15 GMT
+# Fri, 03 Dec 2021 18:14:29 GMT
 COPY file:0667537cb067f2e42e0e1d5c1def14391eaf4bfe791bc7f23fd95a83eff81025 in /usr/local/bin/ 
-# Tue, 30 Nov 2021 07:39:17 GMT
+# Fri, 03 Dec 2021 18:14:33 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Tue, 30 Nov 2021 07:39:19 GMT
+# Fri, 03 Dec 2021 18:14:37 GMT
 EXPOSE 15691 15692 25672 4369 5671 5672
-# Tue, 30 Nov 2021 07:39:20 GMT
+# Fri, 03 Dec 2021 18:14:41 GMT
 CMD ["rabbitmq-server"]
-# Tue, 30 Nov 2021 07:39:35 GMT
+# Fri, 03 Dec 2021 18:15:14 GMT
 RUN set eux; 	rabbitmq-plugins enable --offline rabbitmq_management; 	rm -f /etc/rabbitmq/conf.d/management_agent.disable_metrics_collector.conf; 	cp /plugins/rabbitmq_management-*/priv/www/cli/rabbitmqadmin /usr/local/bin/rabbitmqadmin; 	[ -s /usr/local/bin/rabbitmqadmin ]; 	chmod +x /usr/local/bin/rabbitmqadmin; 	apk add --no-cache python3; 	rabbitmqadmin --version
-# Tue, 30 Nov 2021 07:39:39 GMT
+# Fri, 03 Dec 2021 18:15:21 GMT
 EXPOSE 15671 15672
 ```
 
@@ -721,29 +721,29 @@ EXPOSE 15671 15672
 		Last Modified: Tue, 30 Nov 2021 07:42:07 GMT  
 		Size: 1.5 KB (1491 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:92276fc19949ffbec11224fdd82cbd87b13b1d70672a02a6156832d30ef70488`  
-		Last Modified: Tue, 30 Nov 2021 07:42:06 GMT  
-		Size: 16.4 MB (16408585 bytes)  
+	-	`sha256:4ddef467161ff35a26d81874560bb432c7570571521b65f908508c6a5ec960db`  
+		Last Modified: Fri, 03 Dec 2021 18:17:24 GMT  
+		Size: 16.4 MB (16419522 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fdab62b73ccb2a54a32c5dc2110366449062e1d08ccb66de091f803b2b53e8a1`  
-		Last Modified: Tue, 30 Nov 2021 07:42:04 GMT  
+	-	`sha256:468fd952bf142bb0141d9c17ee726ce8ab0cc1ba4314aa079ef6dd95fcc96105`  
+		Last Modified: Fri, 03 Dec 2021 18:17:22 GMT  
 		Size: 276.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f4ab41c7063b9a82a8df92d0db475466edcd6be58a3a59e87338a7a0c08c6fc7`  
-		Last Modified: Tue, 30 Nov 2021 07:42:04 GMT  
+	-	`sha256:348421fbd11c8d523100e4ef8cdecaa76e36dc6119625dd26b07bb72ddaa569f`  
+		Last Modified: Fri, 03 Dec 2021 18:17:22 GMT  
 		Size: 107.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c00cb2ce5a4a3051c129559e440e285fd306a17503099e54cf52ea84279b7d1e`  
-		Last Modified: Tue, 30 Nov 2021 07:42:04 GMT  
+	-	`sha256:a3eb34caabd35aabcf63c887e7ee1f3dc09031c3bc611ad049619a7291437dcf`  
+		Last Modified: Fri, 03 Dec 2021 18:17:22 GMT  
 		Size: 443.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d1681e080ea8efeabfee66cb8a8919a59cffa822ea393f1e86d5a0e969eeb208`  
-		Last Modified: Tue, 30 Nov 2021 07:42:04 GMT  
-		Size: 834.0 B  
+	-	`sha256:c1095e0dcd3961c0b9bb0198346f18e2274bc99b1d62d3a85cfc7b7a82825e50`  
+		Last Modified: Fri, 03 Dec 2021 18:17:22 GMT  
+		Size: 837.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0940ce10499ecd475ace747a463d7515c4ba226657de323b77e3de2dae1bb33a`  
-		Last Modified: Tue, 30 Nov 2021 07:42:35 GMT  
-		Size: 15.2 MB (15156303 bytes)  
+	-	`sha256:c7c97032416426b1782b59be45e13dbfee8f41716dc682ce96189ae2307638d5`  
+		Last Modified: Fri, 03 Dec 2021 18:17:44 GMT  
+		Size: 15.2 MB (15156332 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `rabbitmq:management-alpine` - linux; s390x
