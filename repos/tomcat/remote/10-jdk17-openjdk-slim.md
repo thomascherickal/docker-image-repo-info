@@ -1,7 +1,7 @@
 ## `tomcat:10-jdk17-openjdk-slim`
 
 ```console
-$ docker pull tomcat@sha256:08e92298b5994f1afd2490c32c1a793c43f7abe9786daa3005b9092d1dd70070
+$ docker pull tomcat@sha256:562ef76420cc6febd5decb9d44ddd4f8d95586d26f251d4fabf5ef764044cadd
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -100,83 +100,83 @@ CMD ["catalina.sh" "run"]
 ### `tomcat:10-jdk17-openjdk-slim` - linux; arm64 variant v8
 
 ```console
-$ docker pull tomcat@sha256:cbfade4ecffe1de5cded01adbca0158c0be6bb6e35b87c41f112857b35960f07
+$ docker pull tomcat@sha256:51ce7f03e5c96292bca60341b3ceedfe530f252a3245eeb797682f04280c70c8
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **230.3 MB (230268135 bytes)**  
+-	Total Size: **230.3 MB (230267776 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:df890d914967900a1f443c7b41f0f00128bff513ff797380154d08c1ab7ec64c`
+-	Image ID: `sha256:c8a88e1deea4c0fcdf52dbdfe16229f95c58d6ccb9d14545e6e054bd14e91d79`
 -	Default Command: `["catalina.sh","run"]`
 
 ```dockerfile
-# Wed, 17 Nov 2021 02:40:15 GMT
-ADD file:4203242b2b09a65239092c4780b59181da7b861b3c0be40810b3588aa200f72c in / 
-# Wed, 17 Nov 2021 02:40:16 GMT
+# Thu, 02 Dec 2021 08:08:09 GMT
+ADD file:002f2f7c6dc806b24b6c365882acd59d2b3d3fcec46d8fd99130b07a4575c88c in / 
+# Thu, 02 Dec 2021 08:08:10 GMT
 CMD ["bash"]
-# Wed, 17 Nov 2021 06:19:26 GMT
+# Thu, 02 Dec 2021 11:02:13 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates p11-kit 	; 	rm -rf /var/lib/apt/lists/*
-# Wed, 17 Nov 2021 06:21:07 GMT
+# Thu, 02 Dec 2021 11:04:53 GMT
 ENV JAVA_HOME=/usr/local/openjdk-17
-# Wed, 17 Nov 2021 06:21:08 GMT
+# Thu, 02 Dec 2021 11:04:54 GMT
 ENV PATH=/usr/local/openjdk-17/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 17 Nov 2021 06:21:09 GMT
+# Thu, 02 Dec 2021 11:04:55 GMT
 ENV LANG=C.UTF-8
-# Wed, 17 Nov 2021 06:21:10 GMT
+# Thu, 02 Dec 2021 11:04:56 GMT
 ENV JAVA_VERSION=17.0.1
-# Wed, 17 Nov 2021 06:21:26 GMT
+# Thu, 02 Dec 2021 11:05:11 GMT
 RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://download.java.net/java/GA/jdk17.0.1/2a2082e5a09d4267845be086888add4f/12/GPL/openjdk-17.0.1_linux-x64_bin.tar.gz'; 			downloadSha256='1c0a73cbb863aad579b967316bf17673b8f98a9bb938602a140ba2e5c38f880a'; 			;; 		'arm64') 			downloadUrl='https://download.java.net/java/GA/jdk17.0.1/2a2082e5a09d4267845be086888add4f/12/GPL/openjdk-17.0.1_linux-aarch64_bin.tar.gz'; 			downloadSha256='86653d48787e5a1c029df10da7808194fe8bd931ddd72ff3d42850bf1afb317e'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
-# Wed, 17 Nov 2021 06:21:27 GMT
+# Thu, 02 Dec 2021 11:05:12 GMT
 CMD ["jshell"]
-# Wed, 17 Nov 2021 15:11:18 GMT
+# Fri, 03 Dec 2021 10:31:27 GMT
 ENV CATALINA_HOME=/usr/local/tomcat
-# Wed, 17 Nov 2021 15:11:19 GMT
+# Fri, 03 Dec 2021 10:31:28 GMT
 ENV PATH=/usr/local/tomcat/bin:/usr/local/openjdk-17/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 17 Nov 2021 15:11:20 GMT
+# Fri, 03 Dec 2021 10:31:29 GMT
 RUN mkdir -p "$CATALINA_HOME"
-# Wed, 17 Nov 2021 15:11:21 GMT
+# Fri, 03 Dec 2021 10:31:30 GMT
 WORKDIR /usr/local/tomcat
-# Wed, 17 Nov 2021 15:11:22 GMT
+# Fri, 03 Dec 2021 10:31:31 GMT
 ENV TOMCAT_NATIVE_LIBDIR=/usr/local/tomcat/native-jni-lib
-# Wed, 17 Nov 2021 15:11:23 GMT
+# Fri, 03 Dec 2021 10:31:32 GMT
 ENV LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib
-# Wed, 17 Nov 2021 15:11:24 GMT
+# Fri, 03 Dec 2021 10:31:33 GMT
 ENV GPG_KEYS=A9C5DF4D22E99998D9875A5110C01C5A2F6059E7
-# Wed, 17 Nov 2021 15:11:25 GMT
+# Fri, 03 Dec 2021 10:31:34 GMT
 ENV TOMCAT_MAJOR=10
-# Wed, 17 Nov 2021 15:16:51 GMT
+# Fri, 03 Dec 2021 10:40:05 GMT
 ENV TOMCAT_VERSION=10.0.13
-# Wed, 17 Nov 2021 15:16:52 GMT
+# Fri, 03 Dec 2021 10:40:06 GMT
 ENV TOMCAT_SHA512=fecfe06f38ff31e31fa43c15f2566f6fcd26bb874a9b7c0533087be81d1decd97f81eefeaca7ecb5ab2b79a3ea69ed0459adff5f9d55c05f5af45f69b0725608
-# Wed, 17 Nov 2021 15:17:26 GMT
+# Fri, 03 Dec 2021 10:40:33 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		dirmngr 		gnupg 	; 		ddist() { 		local f="$1"; shift; 		local distFile="$1"; shift; 		local mvnFile="${1:-}"; 		local success=; 		local distUrl=; 		for distUrl in 			"https://www.apache.org/dyn/closer.cgi?action=download&filename=$distFile" 			"https://downloads.apache.org/$distFile" 			"https://www-us.apache.org/dist/$distFile" 			"https://www.apache.org/dist/$distFile" 			"https://archive.apache.org/dist/$distFile" 			${mvnFile:+"https://repo1.maven.org/maven2/org/apache/tomcat/tomcat/$mvnFile"} 		; do 			if curl -fL -o "$f" "$distUrl" && [ -s "$f" ]; then 				success=1; 				break; 			fi; 		done; 		[ -n "$success" ]; 	}; 		ddist 'tomcat.tar.gz' "tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz" "$TOMCAT_VERSION/tomcat-$TOMCAT_VERSION.tar.gz"; 	echo "$TOMCAT_SHA512 *tomcat.tar.gz" | sha512sum --strict --check -; 	ddist 'tomcat.tar.gz.asc' "tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz.asc" "$TOMCAT_VERSION/tomcat-$TOMCAT_VERSION.tar.gz.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	for key in $GPG_KEYS; do 		gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	done; 	gpg --batch --verify tomcat.tar.gz.asc tomcat.tar.gz; 	tar -xf tomcat.tar.gz --strip-components=1; 	rm bin/*.bat; 	rm tomcat.tar.gz*; 	command -v gpgconf && gpgconf --kill all || :; 	rm -rf "$GNUPGHOME"; 		mv webapps webapps.dist; 	mkdir webapps; 		nativeBuildDir="$(mktemp -d)"; 	tar -xf bin/tomcat-native.tar.gz -C "$nativeBuildDir" --strip-components=1; 	apt-get install -y --no-install-recommends 		dpkg-dev 		gcc 		libapr1-dev 		libssl-dev 		make 	; 	( 		export CATALINA_HOME="$PWD"; 		cd "$nativeBuildDir/native"; 		gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 		aprConfig="$(command -v apr-1-config)"; 		./configure 			--build="$gnuArch" 			--libdir="$TOMCAT_NATIVE_LIBDIR" 			--prefix="$CATALINA_HOME" 			--with-apr="$aprConfig" 			--with-java-home="$JAVA_HOME" 			--with-ssl=yes 		; 		nproc="$(nproc)"; 		make -j "$nproc"; 		make install; 	); 	rm -rf "$nativeBuildDir"; 	rm bin/tomcat-native.tar.gz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	find "$TOMCAT_NATIVE_LIBDIR" -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| xargs -rt readlink -e 		| sort -u 		| xargs -rt dpkg-query --search 		| cut -d: -f1 		| sort -u 		| tee "$TOMCAT_NATIVE_LIBDIR/.dependencies.txt" 		| xargs -r apt-mark manual 	; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		find ./bin/ -name '*.sh' -exec sed -ri 's|^#!/bin/sh$|#!/usr/bin/env bash|' '{}' +; 		chmod -R +rX .; 	chmod 777 logs temp work; 		catalina.sh version
-# Wed, 17 Nov 2021 15:17:27 GMT
+# Fri, 03 Dec 2021 10:40:34 GMT
 RUN set -eux; 	nativeLines="$(catalina.sh configtest 2>&1)"; 	nativeLines="$(echo "$nativeLines" | grep 'Apache Tomcat Native')"; 	nativeLines="$(echo "$nativeLines" | sort -u)"; 	if ! echo "$nativeLines" | grep -E 'INFO: Loaded( APR based)? Apache Tomcat Native library' >&2; then 		echo >&2 "$nativeLines"; 		exit 1; 	fi
-# Wed, 17 Nov 2021 15:17:28 GMT
+# Fri, 03 Dec 2021 10:40:35 GMT
 EXPOSE 8080
-# Wed, 17 Nov 2021 15:17:29 GMT
+# Fri, 03 Dec 2021 10:40:36 GMT
 CMD ["catalina.sh" "run"]
 ```
 
 -	Layers:
-	-	`sha256:eb9a2845ed124d072b117aba4f0508e00c1ecd0d147dc324d14b00d24092046c`  
-		Last Modified: Wed, 17 Nov 2021 02:47:17 GMT  
-		Size: 30.1 MB (30056521 bytes)  
+	-	`sha256:968621624b326084ed82349252b333e649eaab39f71866edb2b9a4f847283680`  
+		Last Modified: Thu, 02 Dec 2021 08:40:45 GMT  
+		Size: 30.1 MB (30056536 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:56148104a70127abacd50cd70c5a74c0bdf67f5861e668f44a97a9a22f02a5c7`  
-		Last Modified: Wed, 17 Nov 2021 06:34:51 GMT  
-		Size: 1.4 MB (1361241 bytes)  
+	-	`sha256:595058421fcb005f80f2faa2434369885cb20645caed265e7b4912808701d893`  
+		Last Modified: Thu, 02 Dec 2021 11:23:15 GMT  
+		Size: 1.4 MB (1361242 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:51e61103b926686a5b5043bf98085d0205e01afb2fdfbdae4d937cd08fd58078`  
-		Last Modified: Wed, 17 Nov 2021 06:37:19 GMT  
-		Size: 186.1 MB (186138713 bytes)  
+	-	`sha256:a388006762f08a902b0436853d8a8f7f6db9ddc9e78a4bda233791b291a5d202`  
+		Last Modified: Thu, 02 Dec 2021 11:27:43 GMT  
+		Size: 186.1 MB (186138397 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c930087ef312eea10b6729ae372b3b83b65fc337cb0ee4dca11a6df088688e6d`  
-		Last Modified: Wed, 17 Nov 2021 15:58:30 GMT  
+	-	`sha256:491b348ad4689e9aa0812aeb65f9e060c04b31178267953cfe84220006f11f9e`  
+		Last Modified: Fri, 03 Dec 2021 11:32:53 GMT  
 		Size: 138.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d51cee9ae6d4ea6f27ebd122c70b182141523d552741038fb06285c41b771e69`  
-		Last Modified: Wed, 17 Nov 2021 16:01:42 GMT  
-		Size: 12.7 MB (12711522 bytes)  
+	-	`sha256:051213f362828c9ce6e13d2979226daaefc1dfc11ce45858988f72bf28f3cb04`  
+		Last Modified: Fri, 03 Dec 2021 11:38:15 GMT  
+		Size: 12.7 MB (12711463 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
