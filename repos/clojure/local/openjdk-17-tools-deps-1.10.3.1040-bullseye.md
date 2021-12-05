@@ -1,21 +1,20 @@
-# `clojure:openjdk-8`
+# `clojure:openjdk-17-bullseye`
 
 ## Docker Metadata
 
-- Image ID: `sha256:f87d9e6b8fd8b4f9311cd334afa2ddc29496ac058287530895fb51423d252be3`
-- Created: `2021-11-18T13:04:56.735311814Z`
-- Virtual Size: ~ 544.80 Mb  
+- Image ID: `sha256:ed3c024594e2b5235e06d7cfe8e8d70273cd5b577b6e977a4055a69008ee579d`
+- Created: `2021-12-03T13:12:46.716314347Z`
+- Virtual Size: ~ 687.69 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Command: `["lein","repl"]`
+- Entrypoint: `["entrypoint"]`
+- Command: `["-M","--repl"]`
 - Environment:
-  - `PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/`
-  - `JAVA_HOME=/usr/local/openjdk-8`
+  - `PATH=/usr/local/openjdk-17/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
+  - `JAVA_HOME=/usr/local/openjdk-17`
   - `LANG=C.UTF-8`
-  - `JAVA_VERSION=8u312`
-  - `LEIN_VERSION=2.9.8`
-  - `LEIN_INSTALL=/usr/local/bin/`
-  - `LEIN_ROOT=1`
+  - `JAVA_VERSION=17.0.1`
+  - `CLOJURE_VERSION=1.10.3.1040`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -280,6 +279,38 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/bash/5.1-2/ (for browsing the source)
 - https://sources.debian.net/src/bash/5.1-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/bash/5.1-2/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `binutils=2.35.2-2`
+
+Binary Packages:
+
+- `binutils=2.35.2-2`
+- `binutils-common:amd64=2.35.2-2`
+- `binutils-x86-64-linux-gnu=2.35.2-2`
+- `libbinutils:amd64=2.35.2-2`
+- `libctf-nobfd0:amd64=2.35.2-2`
+- `libctf0:amd64=2.35.2-2`
+
+Licenses: (parsed from: `/usr/share/doc/binutils/copyright`, `/usr/share/doc/binutils-common/copyright`, `/usr/share/doc/binutils-x86-64-linux-gnu/copyright`, `/usr/share/doc/libbinutils/copyright`, `/usr/share/doc/libctf-nobfd0/copyright`, `/usr/share/doc/libctf0/copyright`)
+
+- `GFDL`
+- `GPL`
+- `LGPL`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris binutils=2.35.2-2
+'http://deb.debian.org/debian/pool/main/b/binutils/binutils_2.35.2-2.dsc' binutils_2.35.2-2.dsc 11303 SHA256:6643177e54ce708b0aa347624018c2b9cf725aca6731142a48a655b12013a9d9
+'http://deb.debian.org/debian/pool/main/b/binutils/binutils_2.35.2.orig.tar.xz' binutils_2.35.2.orig.tar.xz 23514376 SHA256:2643d99d7aba8557319a4b018f6bcae58677fc9bc853d4c2cd2eb571867b75e7
+'http://deb.debian.org/debian/pool/main/b/binutils/binutils_2.35.2-2.debian.tar.xz' binutils_2.35.2-2.debian.tar.xz 101124 SHA256:96f56b4d5259be49ce4a2f27057892356f7b0aed499742cb8a07f9f62b10dcb5
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/binutils/2.35.2-2/ (for browsing the source)
+- https://sources.debian.net/src/binutils/2.35.2-2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/binutils/2.35.2-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `brotli=1.0.9-2`
 
@@ -1030,10 +1061,18 @@ Other potentially useful URLs:
 Binary Packages:
 
 - `dirmngr=2.2.27-2`
+- `gnupg=2.2.27-2`
+- `gnupg-l10n=2.2.27-2`
+- `gnupg-utils=2.2.27-2`
+- `gpg=2.2.27-2`
+- `gpg-agent=2.2.27-2`
+- `gpg-wks-client=2.2.27-2`
+- `gpg-wks-server=2.2.27-2`
 - `gpgconf=2.2.27-2`
+- `gpgsm=2.2.27-2`
 - `gpgv=2.2.27-2`
 
-Licenses: (parsed from: `/usr/share/doc/dirmngr/copyright`, `/usr/share/doc/gpgconf/copyright`, `/usr/share/doc/gpgv/copyright`)
+Licenses: (parsed from: `/usr/share/doc/dirmngr/copyright`, `/usr/share/doc/gnupg/copyright`, `/usr/share/doc/gnupg-l10n/copyright`, `/usr/share/doc/gnupg-utils/copyright`, `/usr/share/doc/gpg/copyright`, `/usr/share/doc/gpg-agent/copyright`, `/usr/share/doc/gpg-wks-client/copyright`, `/usr/share/doc/gpg-wks-server/copyright`, `/usr/share/doc/gpgconf/copyright`, `/usr/share/doc/gpgsm/copyright`, `/usr/share/doc/gpgv/copyright`)
 
 - `BSD-3-clause`
 - `CC0-1.0`
@@ -2079,6 +2118,32 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/lz4/1.9.3-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/lz4/1.9.3-2/ (for access to the source package after it no longer exists in the archive)
 
+### `dpkg` source package: `make-dfsg=4.3-4.1`
+
+Binary Packages:
+
+- `make=4.3-4.1`
+
+Licenses: (parsed from: `/usr/share/doc/make/copyright`)
+
+- `GPL-3`
+- `GPL-3+`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris make-dfsg=4.3-4.1
+'http://deb.debian.org/debian/pool/main/m/make-dfsg/make-dfsg_4.3-4.1.dsc' make-dfsg_4.3-4.1.dsc 2019 SHA256:d2523d94f4d4198df6801f238d36cf0dea2ab5521f1d19ee76b2e8ee1f1918bb
+'http://deb.debian.org/debian/pool/main/m/make-dfsg/make-dfsg_4.3.orig.tar.gz' make-dfsg_4.3.orig.tar.gz 1845906 SHA256:be4c17542578824e745f83bcd2a9ba264206187247cb6a5f5df99b0a9d1f9047
+'http://deb.debian.org/debian/pool/main/m/make-dfsg/make-dfsg_4.3-4.1.diff.gz' make-dfsg_4.3-4.1.diff.gz 50940 SHA256:753c254ecaba425ebe2e0a0fb4d299847701e1c3eeb43df563e39975cae56b4c
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/make-dfsg/4.3-4.1/ (for browsing the source)
+- https://sources.debian.net/src/make-dfsg/4.3-4.1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/make-dfsg/4.3-4.1/ (for access to the source package after it no longer exists in the archive)
+
 ### `dpkg` source package: `mawk=1.3.4.20200120-2`
 
 Binary Packages:
@@ -2585,6 +2650,36 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/perl/5.32.1-4+deb11u2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/perl/5.32.1-4+deb11u2/ (for access to the source package after it no longer exists in the archive)
 
+### `dpkg` source package: `pinentry=1.1.0-4`
+
+Binary Packages:
+
+- `pinentry-curses=1.1.0-4`
+
+Licenses: (parsed from: `/usr/share/doc/pinentry-curses/copyright`)
+
+- `GPL-2`
+- `GPL-2+`
+- `LGPL-3`
+- `LGPL-3+`
+- `X11`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris pinentry=1.1.0-4
+'http://deb.debian.org/debian/pool/main/p/pinentry/pinentry_1.1.0-4.dsc' pinentry_1.1.0-4.dsc 2216 SHA256:81af8caf54fb2ddc6ac27d768999b3aa5d3bbeec7f2edac839b2c6792a3cf787
+'http://deb.debian.org/debian/pool/main/p/pinentry/pinentry_1.1.0.orig.tar.bz2' pinentry_1.1.0.orig.tar.bz2 467702 SHA256:68076686fa724a290ea49cdf0d1c0c1500907d1b759a3bcbfbec0293e8f56570
+'http://deb.debian.org/debian/pool/main/p/pinentry/pinentry_1.1.0.orig.tar.bz2.asc' pinentry_1.1.0.orig.tar.bz2.asc 488 SHA256:2e9ee3454f9e0be2f6cbc0e289fa5e0620d765e537286ff2c5c28b382f96106a
+'http://deb.debian.org/debian/pool/main/p/pinentry/pinentry_1.1.0-4.debian.tar.xz' pinentry_1.1.0-4.debian.tar.xz 17240 SHA256:b3e36d239219ab35f824c5f9b3dd0c335a4394c59b7628e845831794335b8a8e
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/pinentry/1.1.0-4/ (for browsing the source)
+- https://sources.debian.net/src/pinentry/1.1.0-4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/pinentry/1.1.0-4/ (for access to the source package after it no longer exists in the archive)
+
 ### `dpkg` source package: `procps=2:3.3.17-5`
 
 Binary Packages:
@@ -2712,6 +2807,34 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/readline/8.1-1/ (for browsing the source)
 - https://sources.debian.net/src/readline/8.1-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/readline/8.1-1/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `rlwrap=0.43-1`
+
+Binary Packages:
+
+- `rlwrap=0.43-1+b2`
+
+Licenses: (parsed from: `/usr/share/doc/rlwrap/copyright`)
+
+- `GPL-2`
+- `GPL-2+`
+- `LGPL-2.1`
+- `LGPL-2.1+`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris rlwrap=0.43-1
+'http://deb.debian.org/debian/pool/main/r/rlwrap/rlwrap_0.43-1.dsc' rlwrap_0.43-1.dsc 1846 SHA256:8503097ebacc9c566e30c3ec6cfafae332c62ca76334b0f811ab85e9ab17ea8f
+'http://deb.debian.org/debian/pool/main/r/rlwrap/rlwrap_0.43.orig.tar.gz' rlwrap_0.43.orig.tar.gz 162478 SHA256:29e5a850fbe4753f353b0734e46ec0da043621bdcf7b52a89b77517f3941aade
+'http://deb.debian.org/debian/pool/main/r/rlwrap/rlwrap_0.43-1.debian.tar.xz' rlwrap_0.43-1.debian.tar.xz 5652 SHA256:e544c7b3894a8589145f6a06686deb2177015723282f848d3cc3daaac54e62d3
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/rlwrap/0.43-1/ (for browsing the source)
+- https://sources.debian.net/src/rlwrap/0.43-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/rlwrap/0.43-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `rtmpdump=2.4+20151223.gitfa8646d.1-2`
 

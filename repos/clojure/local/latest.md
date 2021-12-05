@@ -2,24 +2,25 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:7de85db98d923ff8876aa4cec98abc50fce23c0ef3b68b6fd06aa4076a593860`
-- Created: `2021-11-18T12:56:13.110738707Z`
-- Virtual Size: ~ 639.68 Mb  
+- Image ID: `sha256:963763542e9d692f37bd767980fd973a0e375af1e75e8aa9fedd6413c24a1ffe`
+- Created: `2021-12-03T12:56:44.938056217Z`
+- Virtual Size: ~ 617.66 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Command: `["lein","repl"]`
+- Entrypoint: `["entrypoint"]`
+- Command: `["repl"]`
 - Environment:
-  - `PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/:/usr/local/bin/`
-  - `JAVA_HOME=/usr/local/openjdk-11`
+  - `PATH=/usr/local/openjdk-17/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/:/usr/local/bin/`
+  - `JAVA_HOME=/usr/local/openjdk-17`
   - `LANG=C.UTF-8`
-  - `JAVA_VERSION=11.0.13`
+  - `JAVA_VERSION=17.0.1`
   - `BOOT_VERSION=2.8.3`
   - `BOOT_INSTALL=/usr/local/bin/`
   - `BOOT_AS_ROOT=yes`
   - `LEIN_VERSION=2.9.8`
   - `LEIN_INSTALL=/usr/local/bin/`
   - `LEIN_ROOT=1`
-  - `CLOJURE_VERSION=1.10.3.1020`
+  - `CLOJURE_VERSION=1.10.3.1040`
 
 ## `dpkg` (`.deb`-based packages)
 

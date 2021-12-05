@@ -1,21 +1,20 @@
-# `clojure:openjdk-8-buster`
+# `clojure:openjdk-18-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:21e1d1518d10575d9c11ae86b182624dbf0623a2d2168aed9dc69c8b786a317f`
-- Created: `2021-11-18T12:56:32.264214025Z`
-- Virtual Size: ~ 532.88 Mb  
+- Image ID: `sha256:1537802391015c89e32976d07d9844a47ea509370115a27fc87f4f1b9106941c`
+- Created: `2021-12-04T00:16:50.948246857Z`
+- Virtual Size: ~ 704.43 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Command: `["lein","repl"]`
+- Entrypoint: `["entrypoint"]`
+- Command: `["-M","--repl"]`
 - Environment:
-  - `PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/`
-  - `JAVA_HOME=/usr/local/openjdk-8`
+  - `PATH=/usr/local/openjdk-18/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
+  - `JAVA_HOME=/usr/local/openjdk-18`
   - `LANG=C.UTF-8`
-  - `JAVA_VERSION=8u312`
-  - `LEIN_VERSION=2.9.8`
-  - `LEIN_INSTALL=/usr/local/bin/`
-  - `LEIN_ROOT=1`
+  - `JAVA_VERSION=18-ea+26`
+  - `CLOJURE_VERSION=1.10.3.1040`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -280,6 +279,36 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/bash/5.0-4/ (for browsing the source)
 - https://sources.debian.net/src/bash/5.0-4/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/bash/5.0-4/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `binutils=2.31.1-16`
+
+Binary Packages:
+
+- `binutils=2.31.1-16`
+- `binutils-common:amd64=2.31.1-16`
+- `binutils-x86-64-linux-gnu=2.31.1-16`
+- `libbinutils:amd64=2.31.1-16`
+
+Licenses: (parsed from: `/usr/share/doc/binutils/copyright`, `/usr/share/doc/binutils-common/copyright`, `/usr/share/doc/binutils-x86-64-linux-gnu/copyright`, `/usr/share/doc/libbinutils/copyright`)
+
+- `GFDL`
+- `GPL`
+- `LGPL`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris binutils=2.31.1-16
+'http://deb.debian.org/debian/pool/main/b/binutils/binutils_2.31.1-16.dsc' binutils_2.31.1-16.dsc 11421 SHA256:ec76c13684d922a3619d7ec982db191714927bde6de6a3ff89e95d1ce7a61f33
+'http://deb.debian.org/debian/pool/main/b/binutils/binutils_2.31.1.orig.tar.xz' binutils_2.31.1.orig.tar.xz 21649228 SHA256:e398a2d579faa0f2b5a988add5f7481af8e21a21f63b6ea5702e6f517960c5eb
+'http://deb.debian.org/debian/pool/main/b/binutils/binutils_2.31.1-16.debian.tar.xz' binutils_2.31.1-16.debian.tar.xz 127464 SHA256:15fc82a7c682da6bcbf56caf57da8f059655369cbfeb58b8312040e53e4fa11d
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/binutils/2.31.1-16/ (for browsing the source)
+- https://sources.debian.net/src/binutils/2.31.1-16/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/binutils/2.31.1-16/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `bzip2=1.0.6-9.2~deb10u1`
 
@@ -991,10 +1020,18 @@ Other potentially useful URLs:
 Binary Packages:
 
 - `dirmngr=2.2.12-1+deb10u1`
+- `gnupg=2.2.12-1+deb10u1`
+- `gnupg-l10n=2.2.12-1+deb10u1`
+- `gnupg-utils=2.2.12-1+deb10u1`
+- `gpg=2.2.12-1+deb10u1`
+- `gpg-agent=2.2.12-1+deb10u1`
+- `gpg-wks-client=2.2.12-1+deb10u1`
+- `gpg-wks-server=2.2.12-1+deb10u1`
 - `gpgconf=2.2.12-1+deb10u1`
+- `gpgsm=2.2.12-1+deb10u1`
 - `gpgv=2.2.12-1+deb10u1`
 
-Licenses: (parsed from: `/usr/share/doc/dirmngr/copyright`, `/usr/share/doc/gpgconf/copyright`, `/usr/share/doc/gpgv/copyright`)
+Licenses: (parsed from: `/usr/share/doc/dirmngr/copyright`, `/usr/share/doc/gnupg/copyright`, `/usr/share/doc/gnupg-l10n/copyright`, `/usr/share/doc/gnupg-utils/copyright`, `/usr/share/doc/gpg/copyright`, `/usr/share/doc/gpg-agent/copyright`, `/usr/share/doc/gpg-wks-client/copyright`, `/usr/share/doc/gpg-wks-server/copyright`, `/usr/share/doc/gpgconf/copyright`, `/usr/share/doc/gpgsm/copyright`, `/usr/share/doc/gpgv/copyright`)
 
 - `BSD-3-clause`
 - `CC0-1.0`
@@ -1982,6 +2019,32 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/lz4/1.8.3-1+deb10u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/lz4/1.8.3-1+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
+### `dpkg` source package: `make-dfsg=4.2.1-1.2`
+
+Binary Packages:
+
+- `make=4.2.1-1.2`
+
+Licenses: (parsed from: `/usr/share/doc/make/copyright`)
+
+- `GPL-3`
+- `GPL-3+`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris make-dfsg=4.2.1-1.2
+'http://deb.debian.org/debian/pool/main/m/make-dfsg/make-dfsg_4.2.1-1.2.dsc' make-dfsg_4.2.1-1.2.dsc 2019 SHA256:0c8a2da5d51e03bf43e2929322d5a8406f08e5ee2d81a71ed6e5a8734f1b05cb
+'http://deb.debian.org/debian/pool/main/m/make-dfsg/make-dfsg_4.2.1.orig.tar.gz' make-dfsg_4.2.1.orig.tar.gz 1485018 SHA256:480405e8995796ea47cc54b281b7855280f0d815d296a1af1993eeeb72074e39
+'http://deb.debian.org/debian/pool/main/m/make-dfsg/make-dfsg_4.2.1-1.2.diff.gz' make-dfsg_4.2.1-1.2.diff.gz 53108 SHA256:80e0b96cee381391a5d3322317075e23d8474c92c5fa4fecd334bc2e0920887b
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/make-dfsg/4.2.1-1.2/ (for browsing the source)
+- https://sources.debian.net/src/make-dfsg/4.2.1-1.2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/make-dfsg/4.2.1-1.2/ (for access to the source package after it no longer exists in the archive)
+
 ### `dpkg` source package: `mawk=1.3.3-17`
 
 Binary Packages:
@@ -2061,6 +2124,33 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/mime-support/3.62/ (for browsing the source)
 - https://sources.debian.net/src/mime-support/3.62/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/mime-support/3.62/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `mpdecimal=2.4.2-2`
+
+Binary Packages:
+
+- `libmpdec2:amd64=2.4.2-2`
+
+Licenses: (parsed from: `/usr/share/doc/libmpdec2/copyright`)
+
+- `BSD`
+- `GPL-2`
+- `GPL-2+`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris mpdecimal=2.4.2-2
+'http://deb.debian.org/debian/pool/main/m/mpdecimal/mpdecimal_2.4.2-2.dsc' mpdecimal_2.4.2-2.dsc 1932 SHA256:716e61fc8315a22804adf8403e4d332c1883235b5c3801b6769e6040dc962fe3
+'http://deb.debian.org/debian/pool/main/m/mpdecimal/mpdecimal_2.4.2.orig.tar.gz' mpdecimal_2.4.2.orig.tar.gz 2271529 SHA256:83c628b90f009470981cf084c5418329c88b19835d8af3691b930afccb7d79c7
+'http://deb.debian.org/debian/pool/main/m/mpdecimal/mpdecimal_2.4.2-2.debian.tar.xz' mpdecimal_2.4.2-2.debian.tar.xz 5256 SHA256:159113f11169afc675a431840792e1ed8c2d00438bf3e1c5a3eb2c17d9e8da3d
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/mpdecimal/2.4.2-2/ (for browsing the source)
+- https://sources.debian.net/src/mpdecimal/2.4.2-2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/mpdecimal/2.4.2-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ncurses=6.1+20181013-2+deb10u2`
 
@@ -2462,6 +2552,35 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/perl/5.28.1-6+deb10u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/perl/5.28.1-6+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
+### `dpkg` source package: `pinentry=1.1.0-2`
+
+Binary Packages:
+
+- `pinentry-curses=1.1.0-2`
+
+Licenses: (parsed from: `/usr/share/doc/pinentry-curses/copyright`)
+
+- `GPL-2`
+- `GPL-2+`
+- `LGPL-3`
+- `LGPL-3+`
+- `X11`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris pinentry=1.1.0-2
+'http://deb.debian.org/debian/pool/main/p/pinentry/pinentry_1.1.0-2.dsc' pinentry_1.1.0-2.dsc 2055 SHA256:a3f157d367217eb91581d9fc53f23205794c7572894497a04d4d91eb6d5aff06
+'http://deb.debian.org/debian/pool/main/p/pinentry/pinentry_1.1.0.orig.tar.bz2' pinentry_1.1.0.orig.tar.bz2 467702 SHA256:68076686fa724a290ea49cdf0d1c0c1500907d1b759a3bcbfbec0293e8f56570
+'http://deb.debian.org/debian/pool/main/p/pinentry/pinentry_1.1.0-2.debian.tar.xz' pinentry_1.1.0-2.debian.tar.xz 16480 SHA256:b09437607c63c620bb581fe14080e897b5fb8210d08611b18b751efead7776da
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/pinentry/1.1.0-2/ (for browsing the source)
+- https://sources.debian.net/src/pinentry/1.1.0-2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/pinentry/1.1.0-2/ (for access to the source package after it no longer exists in the archive)
+
 ### `dpkg` source package: `procps=2:3.3.15-2`
 
 Binary Packages:
@@ -2565,6 +2684,76 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/python2.7/2.7.16-2+deb10u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/python2.7/2.7.16-2+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
+### `dpkg` source package: `python3-defaults=3.7.3-1`
+
+Binary Packages:
+
+- `libpython3-stdlib:amd64=3.7.3-1`
+- `python3=3.7.3-1`
+- `python3-minimal=3.7.3-1`
+
+**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
+If source is available (seen below), check the contents of `debian/copyright` within it.
+
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris python3-defaults=3.7.3-1
+'http://deb.debian.org/debian/pool/main/p/python3-defaults/python3-defaults_3.7.3-1.dsc' python3-defaults_3.7.3-1.dsc 2797 SHA256:00fc9d88fab413659b27886833b4f20c15400cb335de94a3f2dbb01f7adf9058
+'http://deb.debian.org/debian/pool/main/p/python3-defaults/python3-defaults_3.7.3-1.tar.gz' python3-defaults_3.7.3-1.tar.gz 137436 SHA256:ed0fe03fc72b766bc4449088ff82764ac7486431efca38de89841a139f3362ad
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/python3-defaults/3.7.3-1/ (for browsing the source)
+- https://sources.debian.net/src/python3-defaults/3.7.3-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/python3-defaults/3.7.3-1/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `python3.7=3.7.3-2+deb10u3`
+
+Binary Packages:
+
+- `libpython3.7-minimal:amd64=3.7.3-2+deb10u3`
+- `libpython3.7-stdlib:amd64=3.7.3-2+deb10u3`
+- `python3.7=3.7.3-2+deb10u3`
+- `python3.7-minimal=3.7.3-2+deb10u3`
+
+Licenses: (parsed from: `/usr/share/doc/libpython3.7-minimal/copyright`, `/usr/share/doc/libpython3.7-stdlib/copyright`, `/usr/share/doc/python3.7/copyright`, `/usr/share/doc/python3.7-minimal/copyright`)
+
+- `* Permission to use this software in any way is granted without`
+- `By obtaining, using, and/or copying this software and/or its`
+- `GPL-2`
+- `Permission  is  hereby granted,  free  of charge,  to  any person`
+- `Permission is hereby granted, free of charge, to any person obtaining`
+- `Permission to use, copy, modify,`
+- `Redistribution`
+- `This software is provided 'as-is', without any express`
+- `This software is provided as-is, without express`
+- `binary forms, with`
+- `distribute this software`
+- `distribute this software and`
+- `distribute this software for any`
+- `implied`
+- `its`
+- `use in source`
+- `without`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris python3.7=3.7.3-2+deb10u3
+'http://deb.debian.org/debian/pool/main/p/python3.7/python3.7_3.7.3-2+deb10u3.dsc' python3.7_3.7.3-2+deb10u3.dsc 3404 SHA256:b52c229041c77927dc0d9afb9cc55b3b70d5f844d2b73453ce64bf19e016575f
+'http://deb.debian.org/debian/pool/main/p/python3.7/python3.7_3.7.3.orig.tar.xz' python3.7_3.7.3.orig.tar.xz 17108364 SHA256:da60b54064d4cfcd9c26576f6df2690e62085123826cff2e667e72a91952d318
+'http://deb.debian.org/debian/pool/main/p/python3.7/python3.7_3.7.3-2+deb10u3.debian.tar.xz' python3.7_3.7.3-2+deb10u3.debian.tar.xz 219604 SHA256:ffce2cea2ec969626e2fada82daab737ef57675c5ac193e916f146f1b0cc0747
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/python3.7/3.7.3-2+deb10u3/ (for browsing the source)
+- https://sources.debian.net/src/python3.7/3.7.3-2+deb10u3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/python3.7/3.7.3-2+deb10u3/ (for access to the source package after it no longer exists in the archive)
+
 ### `dpkg` source package: `readline=7.0-5`
 
 Binary Packages:
@@ -2591,6 +2780,34 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/readline/7.0-5/ (for browsing the source)
 - https://sources.debian.net/src/readline/7.0-5/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/readline/7.0-5/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `rlwrap=0.43-1`
+
+Binary Packages:
+
+- `rlwrap=0.43-1+b1`
+
+Licenses: (parsed from: `/usr/share/doc/rlwrap/copyright`)
+
+- `GPL-2`
+- `GPL-2+`
+- `LGPL-2.1`
+- `LGPL-2.1+`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris rlwrap=0.43-1
+'http://deb.debian.org/debian/pool/main/r/rlwrap/rlwrap_0.43-1.dsc' rlwrap_0.43-1.dsc 1846 SHA256:8503097ebacc9c566e30c3ec6cfafae332c62ca76334b0f811ab85e9ab17ea8f
+'http://deb.debian.org/debian/pool/main/r/rlwrap/rlwrap_0.43.orig.tar.gz' rlwrap_0.43.orig.tar.gz 162478 SHA256:29e5a850fbe4753f353b0734e46ec0da043621bdcf7b52a89b77517f3941aade
+'http://deb.debian.org/debian/pool/main/r/rlwrap/rlwrap_0.43-1.debian.tar.xz' rlwrap_0.43-1.debian.tar.xz 5652 SHA256:e544c7b3894a8589145f6a06686deb2177015723282f848d3cc3daaac54e62d3
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/rlwrap/0.43-1/ (for browsing the source)
+- https://sources.debian.net/src/rlwrap/0.43-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/rlwrap/0.43-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `rtmpdump=2.4+20151223.gitfa8646d.1-2`
 
