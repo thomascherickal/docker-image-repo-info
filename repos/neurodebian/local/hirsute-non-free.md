@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:8e9a0b56c0459fe893f76446dfd433b993f409aaa7cfb513a12004293a6d4fc7`
-- Created: `2021-10-01T05:33:57.344689224Z`
+- Image ID: `sha256:6985a21285ae6da663e43d4eecbc753e01432b501ca9fa3b3a7fcdac1c45e4f8`
+- Created: `2021-12-04T02:59:38.907222684Z`
 - Virtual Size: ~ 93.75 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -1357,9 +1357,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris openssl=1.1.1j-1ubuntu3.5
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1j-1ubuntu3.5.dsc' openssl_1.1.1j-1ubuntu3.5.dsc 2498 SHA512:2629d3145a3728a9e6bf66f6ebf4fc9de117e536ae057c0dc4d953c6f22cf8299b7589c86d8d41fa5e08a78b84c0148b4e63b37750c10fb194b98a4583380ef2
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1j.orig.tar.gz' openssl_1.1.1j.orig.tar.gz 9823161 SHA512:51e44995663b5258b0018bdc1e2b0e7e8e0cce111138ca1f80514456af920fce4e409a411ce117c0f3eb9190ac3e47c53a43f39b06acd35b7494e2bec4a607d5
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1j-1ubuntu3.5.debian.tar.xz' openssl_1.1.1j-1ubuntu3.5.debian.tar.xz 161132 SHA512:6f04df87f88a8ae8991a24e781c085fde70b29e908e5d7a8d10fdf675126d2d2a1305d87909b345f8d607a8298ddaa83391403f78785e4d4918f08f6cb4bb13e
+'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1j-1ubuntu3.5.dsc' openssl_1.1.1j-1ubuntu3.5.dsc 2498 SHA512:2629d3145a3728a9e6bf66f6ebf4fc9de117e536ae057c0dc4d953c6f22cf8299b7589c86d8d41fa5e08a78b84c0148b4e63b37750c10fb194b98a4583380ef2
+'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1j.orig.tar.gz' openssl_1.1.1j.orig.tar.gz 9823161 SHA512:51e44995663b5258b0018bdc1e2b0e7e8e0cce111138ca1f80514456af920fce4e409a411ce117c0f3eb9190ac3e47c53a43f39b06acd35b7494e2bec4a607d5
+'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1j-1ubuntu3.5.debian.tar.xz' openssl_1.1.1j-1ubuntu3.5.debian.tar.xz 161132 SHA512:6f04df87f88a8ae8991a24e781c085fde70b29e908e5d7a8d10fdf675126d2d2a1305d87909b345f8d607a8298ddaa83391403f78785e4d4918f08f6cb4bb13e
 ```
 
 ### `dpkg` source package: `p11-kit=0.23.22-1`
@@ -1730,11 +1730,11 @@ $ apt-get source -qq --print-uris ubuntu-keyring=2021.03.26
 'http://archive.ubuntu.com/ubuntu/pool/main/u/ubuntu-keyring/ubuntu-keyring_2021.03.26.tar.gz' ubuntu-keyring_2021.03.26.tar.gz 34529 SHA512:04a76e2bfa88fb428face9e01976ff98a3a26fe2b555340c14200fc6099ee3b474a6733486cedfe933933c0a6826ee3550660499d7b26bda8a27a620b1d6a35f
 ```
 
-### `dpkg` source package: `usrmerge=24ubuntu3`
+### `dpkg` source package: `usrmerge=24ubuntu3.1`
 
 Binary Packages:
 
-- `usrmerge=24ubuntu3`
+- `usrmerge=24ubuntu3.1`
 
 Licenses: (parsed from: `/usr/share/doc/usrmerge/copyright`)
 
@@ -1745,9 +1745,9 @@ Licenses: (parsed from: `/usr/share/doc/usrmerge/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris usrmerge=24ubuntu3
-'http://archive.ubuntu.com/ubuntu/pool/main/u/usrmerge/usrmerge_24ubuntu3.dsc' usrmerge_24ubuntu3.dsc 1614 SHA512:3f6982a2bf3af0d98af24ba5263286f7e63851487faac80e226ff13d68084bc08083d6943cc83164a61b6f171d7675a95623d3fabc6f518aa9a30f1466169e0c
-'http://archive.ubuntu.com/ubuntu/pool/main/u/usrmerge/usrmerge_24ubuntu3.tar.xz' usrmerge_24ubuntu3.tar.xz 11732 SHA512:ca8ef7f4b8c1f4e146a25149a5cd804c17e2bd0bcaf705ee84872a281cf33791df86b52e10498cef1685c6a3022a9e6cdbcb56962ad6c2e2402b40df325bda36
+$ apt-get source -qq --print-uris usrmerge=24ubuntu3.1
+'http://archive.ubuntu.com/ubuntu/pool/main/u/usrmerge/usrmerge_24ubuntu3.1.dsc' usrmerge_24ubuntu3.1.dsc 1622 SHA512:707a45c5874a52cc89c8d93673885c2e33523969bf9aab04cb1dfc8554e7bebae34cd1af5289f3b7e48b6d376cb601a94838f4fb3e9b89b35ae2c26eb41d006b
+'http://archive.ubuntu.com/ubuntu/pool/main/u/usrmerge/usrmerge_24ubuntu3.1.tar.xz' usrmerge_24ubuntu3.1.tar.xz 11928 SHA512:93f22b7ef11e07031d3a42641d6f5158469370b3f6895bb23704a9de8b60eedf72b92d3efcf417c0cca04170fb059987dd3e0501aa8ee90968fa43b9e87bb3b8
 ```
 
 ### `dpkg` source package: `util-linux=2.36.1-7ubuntu2`
