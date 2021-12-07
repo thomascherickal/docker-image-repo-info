@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:37333a74cc7b4921a2eacedafb8a67f3b239c5be97d6bddffa66bb7ab30d54db`
-- Created: `2021-11-10T01:47:00.178601741Z`
-- Virtual Size: ~ 518.36 Mb  
+- Image ID: `sha256:6038da73f04e465f6cfd439ddb1c5b0488e7c49988a7d81138aaebaaa1cf5558`
+- Created: `2021-12-03T20:45:36.615948489Z`
+- Virtual Size: ~ 632.04 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/opt/ol/helpers/runtime/docker-server.sh"]`
@@ -26,12 +26,12 @@
 - Labels:
   - `org.opencontainers.image.authors=Arthur De Magalhaes, Chris Potter, Leo Christy Jesuraj`
   - `org.opencontainers.image.description=This image contains the Open Liberty runtime with IBM Semeru Runtime Open Edition OpenJDK with OpenJ9 and Ubuntu as the base OS.  For more information on this image please see https://github.com/OpenLiberty/ci.docker#building-an-application-image`
-  - `org.opencontainers.image.revision=cl21.0.0.11920-1900`
+  - `org.opencontainers.image.revision=cl21.0.0.12920-1900`
   - `org.opencontainers.image.source=https://github.com/OpenLiberty/ci.docker`
   - `org.opencontainers.image.title=Open Liberty`
   - `org.opencontainers.image.url=https://openliberty.io/`
   - `org.opencontainers.image.vendor=Open Liberty`
-  - `org.opencontainers.image.version=21.0.0.11`
+  - `org.opencontainers.image.version=21.0.0.12`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -1407,7 +1407,6 @@ $ apt-get source -qq --print-uris openldap=2.4.49+dfsg-2ubuntu1.8
 Binary Packages:
 
 - `libssl1.1:amd64=1.1.1f-1ubuntu2.8`
-- `openssl=1.1.1f-1ubuntu2.8`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1420,6 +1419,25 @@ $ apt-get source -qq --print-uris openssl=1.1.1f-1ubuntu2.8
 'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.8.dsc' openssl_1.1.1f-1ubuntu2.8.dsc 2466 SHA512:79514668a1c50eb32665786dae9b2e60ec4c908c173a7c66feb97ce3bf87d46e5c5dd8786a3c8d20aab20a9c4705821fa833ff4f54e92a1c033215a1c3749c07
 'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f.orig.tar.gz' openssl_1.1.1f.orig.tar.gz 9792828 SHA512:b00bd9b5ad5298fbceeec6bb19c1ab0c106ca5cfb31178497c58bf7e0e0cf30fcc19c20f84e23af31cc126bf2447d3e4f8461db97bafa7bd78f69561932f000c
 'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.8.debian.tar.xz' openssl_1.1.1f-1ubuntu2.8.debian.tar.xz 166152 SHA512:97fc740bd4fe474019878dd90d7130200644aec105fc6cf926791dada9a2bb8f330091b7e91fa6410e516dfbfb656120520b86190b3e417fcb9d461069b604d1
+```
+
+### `dpkg` source package: `openssl=1.1.1f-1ubuntu2.9`
+
+Binary Packages:
+
+- `openssl=1.1.1f-1ubuntu2.9`
+
+**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
+If source is available (seen below), check the contents of `debian/copyright` within it.
+
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris openssl=1.1.1f-1ubuntu2.9
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.9.dsc' openssl_1.1.1f-1ubuntu2.9.dsc 2466 SHA512:1d784f346fdd8b5d43124ddb1f2377aa453772b8f8dd869a18459fdefb856aba4bfdc2e75ebd7f57bcac102f3d3a18fe8d4a3e27915e80e571692c2ef90a86a3
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f.orig.tar.gz' openssl_1.1.1f.orig.tar.gz 9792828 SHA512:b00bd9b5ad5298fbceeec6bb19c1ab0c106ca5cfb31178497c58bf7e0e0cf30fcc19c20f84e23af31cc126bf2447d3e4f8461db97bafa7bd78f69561932f000c
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.9.debian.tar.xz' openssl_1.1.1f-1ubuntu2.9.debian.tar.xz 167856 SHA512:9e660fc967029fee8378cf4c8054978bc759742b9c106b76e590a71b8417b305bce59c96cc4df564264af6e3aa352d7ee8a8cadebe5f8614cc3adf1272dfb22e
 ```
 
 ### `dpkg` source package: `p11-kit=0.23.20-1ubuntu0.1`
