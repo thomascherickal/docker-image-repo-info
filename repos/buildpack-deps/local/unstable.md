@@ -81,20 +81,13 @@ Licenses: (parsed from: `/usr/share/doc/libaom3/copyright`)
 - `ISC`
 - `public-domain-md5`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris aom=3.2.0-1
-'http://deb.debian.org/debian/pool/main/a/aom/aom_3.2.0-1.dsc' aom_3.2.0-1.dsc 2178 SHA256:ae7cbb1d1ba1227f4c43e8cc31a21c0269e6451a1a08b4c784aaa0d863418b4e
-'http://deb.debian.org/debian/pool/main/a/aom/aom_3.2.0.orig.tar.gz' aom_3.2.0.orig.tar.gz 4728473 SHA256:ef49182f99f73c231e650211584a80fdedd6ab319be06b3fad4ffcb56dbc3627
-'http://deb.debian.org/debian/pool/main/a/aom/aom_3.2.0-1.debian.tar.xz' aom_3.2.0-1.debian.tar.xz 10836 SHA256:dbcbca1999bfa2dd21ae7994c17558195573b6d689c8f9f1d217cb779e25de26
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/aom/3.2.0-1/
 
-- https://sources.debian.net/src/aom/3.2.0-1/ (for browsing the source)
-- https://sources.debian.net/src/aom/3.2.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/aom/3.2.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `apr-util=1.6.1-5`
 
@@ -2498,20 +2491,13 @@ Licenses: (parsed from: `/usr/share/doc/libexif-dev/copyright`, `/usr/share/doc/
 - `MIT`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libexif=0.6.23-1
-'http://deb.debian.org/debian/pool/main/libe/libexif/libexif_0.6.23-1.dsc' libexif_0.6.23-1.dsc 2079 SHA256:7c17350b3049527e762ec4689c596f680ce6efbf925de0d9494348eaef0fbe29
-'http://deb.debian.org/debian/pool/main/libe/libexif/libexif_0.6.23.orig.tar.gz' libexif_0.6.23.orig.tar.gz 1120548 SHA256:7701ec4b7071b1ac4f253c6d2478851c3baa5287302c336f68dd1810e8902bae
-'http://deb.debian.org/debian/pool/main/libe/libexif/libexif_0.6.23-1.debian.tar.xz' libexif_0.6.23-1.debian.tar.xz 11672 SHA256:0f9d67618496755515d82463e9c743ed4f566c760e6091edcc93170076c9c879
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libexif/0.6.23-1/
 
-- https://sources.debian.net/src/libexif/0.6.23-1/ (for browsing the source)
-- https://sources.debian.net/src/libexif/0.6.23-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libexif/0.6.23-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libffi=3.4.2-3`
 
@@ -4543,21 +4529,13 @@ Licenses: (parsed from: `/usr/share/doc/libp11-kit0/copyright`)
 - `permissive-like-automake-output`
 - `same-as-rest-of-p11kit`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris p11-kit=0.24.0-5
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.24.0-5.dsc' p11-kit_0.24.0-5.dsc 2499 SHA256:8aa9718d4ae9555631391da499605d3b5db29e07282639496bdc77892939f962
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.24.0.orig.tar.xz' p11-kit_0.24.0.orig.tar.xz 834392 SHA256:81e6140584f635e4e956a1b93a32239acf3811ff5b2d3a5c6094e94e99d2c685
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.24.0.orig.tar.xz.asc' p11-kit_0.24.0.orig.tar.xz.asc 833 SHA256:f9996976ae08e48ac652d2aad3f0528a75f87eaa6c17cf076ec00e7ce2fbaeed
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.24.0-5.debian.tar.xz' p11-kit_0.24.0-5.debian.tar.xz 23124 SHA256:2cc526247f78037cd93e2735cdd1d6b43aae73eb9c76f1c02b4a56acae0d5169
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/p11-kit/0.24.0-5/
 
-- https://sources.debian.net/src/p11-kit/0.24.0-5/ (for browsing the source)
-- https://sources.debian.net/src/p11-kit/0.24.0-5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/p11-kit/0.24.0-5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pam=1.4.0-10`
 
@@ -4572,20 +4550,13 @@ Licenses: (parsed from: `/usr/share/doc/libpam-modules/copyright`, `/usr/share/d
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pam=1.4.0-10
-'http://deb.debian.org/debian/pool/main/p/pam/pam_1.4.0-10.dsc' pam_1.4.0-10.dsc 1913 SHA256:66f226023a80a4524e5c0a8a9f280fa7292ecb8dd4bdeacb2a4e6255f87949b8
-'http://deb.debian.org/debian/pool/main/p/pam/pam_1.4.0.orig.tar.xz' pam_1.4.0.orig.tar.xz 988908 SHA256:cd6d928c51e64139be3bdb38692c68183a509b83d4f2c221024ccd4bcddfd034
-'http://deb.debian.org/debian/pool/main/p/pam/pam_1.4.0-10.debian.tar.xz' pam_1.4.0-10.debian.tar.xz 120896 SHA256:67bc2fba683b98059968b280a3d8f94829fcb625cbc57fdd6ba792c77131d56d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/pam/1.4.0-10/
 
-- https://sources.debian.net/src/pam/1.4.0-10/ (for browsing the source)
-- https://sources.debian.net/src/pam/1.4.0-10/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/pam/1.4.0-10/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pango1.0=1.48.10+ds1-1`
 

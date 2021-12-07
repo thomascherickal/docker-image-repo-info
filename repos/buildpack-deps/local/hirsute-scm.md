@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:89a3cb2eb560e049b85cb7c014a687b3aae9ce86dadd0640b986879a2d7f70cf`
-- Created: `2021-10-01T03:12:48.704661235Z`
-- Virtual Size: ~ 231.94 Mb  
+- Image ID: `sha256:61b86faf85314b0faa79c8de08d2e863503b3644532877ffacd0bb3476c283a2`
+- Created: `2021-12-04T02:40:02.676177268Z`
+- Virtual Size: ~ 231.92 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["bash"]`
@@ -1821,9 +1821,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris openssl=1.1.1j-1ubuntu3.5
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1j-1ubuntu3.5.dsc' openssl_1.1.1j-1ubuntu3.5.dsc 2498 SHA512:2629d3145a3728a9e6bf66f6ebf4fc9de117e536ae057c0dc4d953c6f22cf8299b7589c86d8d41fa5e08a78b84c0148b4e63b37750c10fb194b98a4583380ef2
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1j.orig.tar.gz' openssl_1.1.1j.orig.tar.gz 9823161 SHA512:51e44995663b5258b0018bdc1e2b0e7e8e0cce111138ca1f80514456af920fce4e409a411ce117c0f3eb9190ac3e47c53a43f39b06acd35b7494e2bec4a607d5
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1j-1ubuntu3.5.debian.tar.xz' openssl_1.1.1j-1ubuntu3.5.debian.tar.xz 161132 SHA512:6f04df87f88a8ae8991a24e781c085fde70b29e908e5d7a8d10fdf675126d2d2a1305d87909b345f8d607a8298ddaa83391403f78785e4d4918f08f6cb4bb13e
+'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1j-1ubuntu3.5.dsc' openssl_1.1.1j-1ubuntu3.5.dsc 2498 SHA512:2629d3145a3728a9e6bf66f6ebf4fc9de117e536ae057c0dc4d953c6f22cf8299b7589c86d8d41fa5e08a78b84c0148b4e63b37750c10fb194b98a4583380ef2
+'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1j.orig.tar.gz' openssl_1.1.1j.orig.tar.gz 9823161 SHA512:51e44995663b5258b0018bdc1e2b0e7e8e0cce111138ca1f80514456af920fce4e409a411ce117c0f3eb9190ac3e47c53a43f39b06acd35b7494e2bec4a607d5
+'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1j-1ubuntu3.5.debian.tar.xz' openssl_1.1.1j-1ubuntu3.5.debian.tar.xz 161132 SHA512:6f04df87f88a8ae8991a24e781c085fde70b29e908e5d7a8d10fdf675126d2d2a1305d87909b345f8d607a8298ddaa83391403f78785e4d4918f08f6cb4bb13e
 ```
 
 ### `dpkg` source package: `p11-kit=0.23.22-1`
@@ -2310,11 +2310,11 @@ $ apt-get source -qq --print-uris tar=1.34+dfsg-1build1
 'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.34+dfsg-1build1.debian.tar.xz' tar_1.34+dfsg-1build1.debian.tar.xz 19296 SHA512:50378351a260ca81aa2e68994bd37fbfbd35e3b8c9d8c07cfe2b8424edb0da64c40283cca625af95a8a4abe4483bf5c205727fc35dda13773d2ddaead4f9fb24
 ```
 
-### `dpkg` source package: `tzdata=2021a-1ubuntu1`
+### `dpkg` source package: `tzdata=2021e-0ubuntu0.21.04`
 
 Binary Packages:
 
-- `tzdata=2021a-1ubuntu1`
+- `tzdata=2021e-0ubuntu0.21.04`
 
 Licenses: (parsed from: `/usr/share/doc/tzdata/copyright`)
 
@@ -2323,11 +2323,10 @@ Licenses: (parsed from: `/usr/share/doc/tzdata/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris tzdata=2021a-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2021a-1ubuntu1.dsc' tzdata_2021a-1ubuntu1.dsc 2358 SHA512:d0de8ec0c949a976b6d657f1e2e4045296737b28a1e49de0bad6acd0af4027c7e10676b968ffc3d6ef0c8b62e2a5a6676cd95cbdcbfca2730ecac30e0837bfe4
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA512:7cdd762ec90ce12a30fa36b1d66d1ea82d9fa21e514e2b9c7fcbe2541514ee0fadf30843ff352c65512fb270857b51d1517b45e1232b89c6f954ba9ff1833bb3
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz.asc' tzdata_2021a.orig.tar.gz.asc 833 SHA512:41532174622222fc5e8d733c4af2decfcd0ab3f56db946763d1731ae96873e31abcb31f9a7a442428c78ea21612318b05c99bcf4b9bf37d59f11d1dc914814e6
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2021a-1ubuntu1.debian.tar.xz' tzdata_2021a-1ubuntu1.debian.tar.xz 165180 SHA512:1e73ceed23d16f8a54a8ddcc0cb72eb675f585bfb0aecffdf03ae74ee95bff50da28bbcf9cbb40a42072d41937ebfa3b35b4ff4daf689e09ef3eecb55818b924
+$ apt-get source -qq --print-uris tzdata=2021e-0ubuntu0.21.04
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2021e-0ubuntu0.21.04.dsc' tzdata_2021e-0ubuntu0.21.04.dsc 2109 SHA512:2bdb8b759bf4800f568a8dc1efe810a38d0888f679ff01dc662396600bf86c68590b76f1a53e0ca2c903988050484130d94f1fd58f7acac4a823a845ae55bef6
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2021e.orig.tar.gz' tzdata_2021e.orig.tar.gz 422509 SHA512:c1e8d04e049157ed5d4af0868855bbd75517e3d7e1db9c41d5283ff260109de46b6fac6be94828201d093e163d868044ac2a9db2bf0aeab800e264d0c73a9119
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2021e-0ubuntu0.21.04.debian.tar.xz' tzdata_2021e-0ubuntu0.21.04.debian.tar.xz 166740 SHA512:cd5965313ea708f9f1725a38554373d94560da83b2d6b323a39923d978fbfba5c54e516e184a460ba744ace94f0a72a004dd92c2b330a436263f06068f98b59e
 ```
 
 ### `dpkg` source package: `ubuntu-keyring=2021.03.26`
@@ -2366,11 +2365,11 @@ $ apt-get source -qq --print-uris ucf=3.0043
 'http://archive.ubuntu.com/ubuntu/pool/main/u/ucf/ucf_3.0043.tar.xz' ucf_3.0043.tar.xz 70560 SHA512:693209ea06a63279278ac8f63e70fe151880f7c51d54c91ad5e846449f883d5893658d8c6932553d70da4e56ebae3ef67c0eda8593b0768f5979849c79f89f27
 ```
 
-### `dpkg` source package: `usrmerge=24ubuntu3`
+### `dpkg` source package: `usrmerge=24ubuntu3.1`
 
 Binary Packages:
 
-- `usrmerge=24ubuntu3`
+- `usrmerge=24ubuntu3.1`
 
 Licenses: (parsed from: `/usr/share/doc/usrmerge/copyright`)
 
@@ -2381,9 +2380,9 @@ Licenses: (parsed from: `/usr/share/doc/usrmerge/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris usrmerge=24ubuntu3
-'http://archive.ubuntu.com/ubuntu/pool/main/u/usrmerge/usrmerge_24ubuntu3.dsc' usrmerge_24ubuntu3.dsc 1614 SHA512:3f6982a2bf3af0d98af24ba5263286f7e63851487faac80e226ff13d68084bc08083d6943cc83164a61b6f171d7675a95623d3fabc6f518aa9a30f1466169e0c
-'http://archive.ubuntu.com/ubuntu/pool/main/u/usrmerge/usrmerge_24ubuntu3.tar.xz' usrmerge_24ubuntu3.tar.xz 11732 SHA512:ca8ef7f4b8c1f4e146a25149a5cd804c17e2bd0bcaf705ee84872a281cf33791df86b52e10498cef1685c6a3022a9e6cdbcb56962ad6c2e2402b40df325bda36
+$ apt-get source -qq --print-uris usrmerge=24ubuntu3.1
+'http://archive.ubuntu.com/ubuntu/pool/main/u/usrmerge/usrmerge_24ubuntu3.1.dsc' usrmerge_24ubuntu3.1.dsc 1622 SHA512:707a45c5874a52cc89c8d93673885c2e33523969bf9aab04cb1dfc8554e7bebae34cd1af5289f3b7e48b6d376cb601a94838f4fb3e9b89b35ae2c26eb41d006b
+'http://archive.ubuntu.com/ubuntu/pool/main/u/usrmerge/usrmerge_24ubuntu3.1.tar.xz' usrmerge_24ubuntu3.1.tar.xz 11928 SHA512:93f22b7ef11e07031d3a42641d6f5158469370b3f6895bb23704a9de8b60eedf72b92d3efcf417c0cca04170fb059987dd3e0501aa8ee90968fa43b9e87bb3b8
 ```
 
 ### `dpkg` source package: `utf8proc=2.5.0-1`

@@ -3107,9 +3107,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris openssl=1.1.1-1ubuntu2.1~18.04.13
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1-1ubuntu2.1~18.04.13.dsc' openssl_1.1.1-1ubuntu2.1~18.04.13.dsc 2514 SHA512:c4aaa5d1cdd986d46a9ff9fa1762694981e54b9f85d95507155f03b6d801fb769471e215ea9296c9b13621d50d5137a37570e87b207d9cf32a77014ab12c0293
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1.orig.tar.gz' openssl_1.1.1.orig.tar.gz 8337920 SHA512:c0284a4fe84bdf765ca5bc5148da4441ffc36392cfecaf9d372af00cf93b6de5681cab1248b6f8246474532155dc205da5ad49549ad7c61c07c917145e7c9c71
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1-1ubuntu2.1~18.04.13.debian.tar.xz' openssl_1.1.1-1ubuntu2.1~18.04.13.debian.tar.xz 126864 SHA512:bc0a5b48ccc278c19f6afd07980dd4248dcd7a987a832d857ac475feef0d7c3443513f1e00efd6e0294c09138f7b0f8fed44516ee1e5c0e4faba2cd8216fec15
+'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1-1ubuntu2.1~18.04.13.dsc' openssl_1.1.1-1ubuntu2.1~18.04.13.dsc 2514 SHA512:c4aaa5d1cdd986d46a9ff9fa1762694981e54b9f85d95507155f03b6d801fb769471e215ea9296c9b13621d50d5137a37570e87b207d9cf32a77014ab12c0293
+'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1.orig.tar.gz' openssl_1.1.1.orig.tar.gz 8337920 SHA512:c0284a4fe84bdf765ca5bc5148da4441ffc36392cfecaf9d372af00cf93b6de5681cab1248b6f8246474532155dc205da5ad49549ad7c61c07c917145e7c9c71
+'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1-1ubuntu2.1~18.04.13.debian.tar.xz' openssl_1.1.1-1ubuntu2.1~18.04.13.debian.tar.xz 126864 SHA512:bc0a5b48ccc278c19f6afd07980dd4248dcd7a987a832d857ac475feef0d7c3443513f1e00efd6e0294c09138f7b0f8fed44516ee1e5c0e4faba2cd8216fec15
 ```
 
 ### `dpkg` source package: `p11-kit=0.23.9-2ubuntu0.1`
