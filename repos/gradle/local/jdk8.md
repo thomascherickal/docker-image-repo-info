@@ -1,9 +1,9 @@
-# `gradle:7.3.0-jdk8`
+# `gradle:7.3.1-jdk8`
 
 ## Docker Metadata
 
-- Image ID: `sha256:2759b9ccd6843b344f4c105b9e7ec7b312a9397ea223fbca045caacb3ee09444`
-- Created: `2021-11-30T00:56:58.110816658Z`
+- Image ID: `sha256:a88d70841b2fb90d1e73516df37965bb4f6d33f9a28d55ec3c7b53af0d87dbc3`
+- Created: `2021-12-03T20:25:58.942937751Z`
 - Virtual Size: ~ 641.32 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -16,7 +16,7 @@
   - `JAVA_VERSION=jdk8u312-b07`
   - `JAVA_HOME=/opt/java/openjdk`
   - `GRADLE_HOME=/opt/gradle`
-  - `GRADLE_VERSION=7.3`
+  - `GRADLE_VERSION=7.3.1`
 
 ## `dpkg` (`.deb`-based packages)
 

@@ -1,9 +1,9 @@
-# `gradle:7.3.0-jdk11-alpine`
+# `gradle:7.3.1-jdk11-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:16817029dbe479164b795802c915a8351f40aa4858d23bf388049432263789f9`
-- Created: `2021-11-13T13:58:57.068162082Z`
+- Image ID: `sha256:b1fc48cf9b73d8c2f9ad8167180eba27f7bb7c9ba0e2a28c401a25044dfb9305`
+- Created: `2021-12-03T20:26:23.423867631Z`
 - Virtual Size: ~ 553.28 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -16,7 +16,7 @@
   - `JAVA_VERSION=jdk-11.0.13+8`
   - `JAVA_HOME=/opt/java/openjdk`
   - `GRADLE_HOME=/opt/gradle`
-  - `GRADLE_VERSION=7.3`
+  - `GRADLE_VERSION=7.3.1`
 
 ## `apk` (`.apk`-based packages)
 
@@ -618,16 +618,16 @@ BSD-3-Clause
 ### `apk` package: `python3`
 
 ```console
-python3-3.9.5-r1 description:
+python3-3.9.5-r2 description:
 A high-level scripting language
 
-python3-3.9.5-r1 webpage:
+python3-3.9.5-r2 webpage:
 https://www.python.org/
 
-python3-3.9.5-r1 installed size:
+python3-3.9.5-r2 installed size:
 45 MiB
 
-python3-3.9.5-r1 license:
+python3-3.9.5-r2 license:
 PSF-2.0
 
 ```
@@ -720,16 +720,16 @@ GPL-2.0-only
 ### `apk` package: `subversion`
 
 ```console
-subversion-1.14.1-r3 description:
+subversion-1.14.1-r4 description:
 Replacement for CVS, another versioning system (svn)
 
-subversion-1.14.1-r3 webpage:
+subversion-1.14.1-r4 webpage:
 https://subversion.apache.org/
 
-subversion-1.14.1-r3 installed size:
+subversion-1.14.1-r4 installed size:
 1040 KiB
 
-subversion-1.14.1-r3 license:
+subversion-1.14.1-r4 license:
 Apache-2.0 BSD
 
 ```
@@ -737,16 +737,16 @@ Apache-2.0 BSD
 ### `apk` package: `subversion-libs`
 
 ```console
-subversion-libs-1.14.1-r3 description:
+subversion-libs-1.14.1-r4 description:
 Replacement for CVS, another versioning system (svn) (libraries)
 
-subversion-libs-1.14.1-r3 webpage:
+subversion-libs-1.14.1-r4 webpage:
 https://subversion.apache.org/
 
-subversion-libs-1.14.1-r3 installed size:
+subversion-libs-1.14.1-r4 installed size:
 3624 KiB
 
-subversion-libs-1.14.1-r3 license:
+subversion-libs-1.14.1-r4 license:
 Apache-2.0 BSD
 
 ```
