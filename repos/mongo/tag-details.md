@@ -912,7 +912,12 @@ CMD ["mongod" "--bind_ip_all"]
 
 ## `mongo:4-nanoserver-ltsc2022`
 
-**does not exist** (yet?)
+```console
+$ docker pull mongo@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `mongo:4-windowsservercore`
 
@@ -1255,7 +1260,12 @@ CMD ["mongod" "--bind_ip_all"]
 
 ## `mongo:4-windowsservercore-ltsc2022`
 
-**does not exist** (yet?)
+```console
+$ docker pull mongo@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `mongo:4.0`
 
@@ -1868,7 +1878,12 @@ CMD ["mongod" "--bind_ip_all"]
 
 ## `mongo:4.0-nanoserver-ltsc2022`
 
-**does not exist** (yet?)
+```console
+$ docker pull mongo@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `mongo:4.0-windowsservercore`
 
@@ -2211,7 +2226,12 @@ CMD ["mongod" "--bind_ip_all"]
 
 ## `mongo:4.0-windowsservercore-ltsc2022`
 
-**does not exist** (yet?)
+```console
+$ docker pull mongo@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `mongo:4.0-xenial`
 
@@ -3077,7 +3097,12 @@ CMD ["mongod" "--bind_ip_all"]
 
 ## `mongo:4.0.27-nanoserver-ltsc2022`
 
-**does not exist** (yet?)
+```console
+$ docker pull mongo@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `mongo:4.0.27-windowsservercore`
 
@@ -3420,7 +3445,12 @@ CMD ["mongod" "--bind_ip_all"]
 
 ## `mongo:4.0.27-windowsservercore-ltsc2022`
 
-**does not exist** (yet?)
+```console
+$ docker pull mongo@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `mongo:4.0.27-xenial`
 
@@ -4467,7 +4497,12 @@ CMD ["mongod" "--bind_ip_all"]
 
 ## `mongo:4.2-nanoserver-ltsc2022`
 
-**does not exist** (yet?)
+```console
+$ docker pull mongo@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `mongo:4.2-windowsservercore`
 
@@ -4810,7 +4845,12 @@ CMD ["mongod" "--bind_ip_all"]
 
 ## `mongo:4.2-windowsservercore-ltsc2022`
 
-**does not exist** (yet?)
+```console
+$ docker pull mongo@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `mongo:4.2.17`
 
@@ -5604,7 +5644,12 @@ CMD ["mongod" "--bind_ip_all"]
 
 ## `mongo:4.2.17-nanoserver-ltsc2022`
 
-**does not exist** (yet?)
+```console
+$ docker pull mongo@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `mongo:4.2.17-windowsservercore`
 
@@ -5947,7 +5992,12 @@ CMD ["mongod" "--bind_ip_all"]
 
 ## `mongo:4.2.17-windowsservercore-ltsc2022`
 
-**does not exist** (yet?)
+```console
+$ docker pull mongo@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `mongo:4.4`
 
@@ -6741,7 +6791,12 @@ CMD ["mongod" "--bind_ip_all"]
 
 ## `mongo:4.4-nanoserver-ltsc2022`
 
-**does not exist** (yet?)
+```console
+$ docker pull mongo@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `mongo:4.4-rc`
 
@@ -7535,7 +7590,12 @@ CMD ["mongod" "--bind_ip_all"]
 
 ## `mongo:4.4-rc-nanoserver-ltsc2022`
 
-**does not exist** (yet?)
+```console
+$ docker pull mongo@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `mongo:4.4-rc-windowsservercore`
 
@@ -7878,7 +7938,12 @@ CMD ["mongod" "--bind_ip_all"]
 
 ## `mongo:4.4-rc-windowsservercore-ltsc2022`
 
-**does not exist** (yet?)
+```console
+$ docker pull mongo@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `mongo:4.4-windowsservercore`
 
@@ -8221,7 +8286,12 @@ CMD ["mongod" "--bind_ip_all"]
 
 ## `mongo:4.4-windowsservercore-ltsc2022`
 
-**does not exist** (yet?)
+```console
+$ docker pull mongo@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `mongo:4.4.10`
 
@@ -9015,7 +9085,12 @@ CMD ["mongod" "--bind_ip_all"]
 
 ## `mongo:4.4.10-nanoserver-ltsc2022`
 
-**does not exist** (yet?)
+```console
+$ docker pull mongo@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `mongo:4.4.10-windowsservercore`
 
@@ -9358,7 +9433,12 @@ CMD ["mongod" "--bind_ip_all"]
 
 ## `mongo:4.4.10-windowsservercore-ltsc2022`
 
-**does not exist** (yet?)
+```console
+$ docker pull mongo@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `mongo:4.4.11-rc0`
 
@@ -10152,7 +10232,12 @@ CMD ["mongod" "--bind_ip_all"]
 
 ## `mongo:4.4.11-rc0-nanoserver-ltsc2022`
 
-**does not exist** (yet?)
+```console
+$ docker pull mongo@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `mongo:4.4.11-rc0-windowsservercore`
 
@@ -10495,7 +10580,12 @@ CMD ["mongod" "--bind_ip_all"]
 
 ## `mongo:4.4.11-rc0-windowsservercore-ltsc2022`
 
-**does not exist** (yet?)
+```console
+$ docker pull mongo@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `mongo:5`
 
@@ -11289,7 +11379,12 @@ CMD ["mongod" "--bind_ip_all"]
 
 ## `mongo:5-nanoserver-ltsc2022`
 
-**does not exist** (yet?)
+```console
+$ docker pull mongo@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `mongo:5-windowsservercore`
 
@@ -11632,7 +11727,12 @@ CMD ["mongod" "--bind_ip_all"]
 
 ## `mongo:5-windowsservercore-ltsc2022`
 
-**does not exist** (yet?)
+```console
+$ docker pull mongo@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `mongo:5.0`
 
@@ -12426,7 +12526,12 @@ CMD ["mongod" "--bind_ip_all"]
 
 ## `mongo:5.0-nanoserver-ltsc2022`
 
-**does not exist** (yet?)
+```console
+$ docker pull mongo@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `mongo:5.0-windowsservercore`
 
@@ -12769,7 +12874,12 @@ CMD ["mongod" "--bind_ip_all"]
 
 ## `mongo:5.0-windowsservercore-ltsc2022`
 
-**does not exist** (yet?)
+```console
+$ docker pull mongo@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `mongo:5.0.5`
 
@@ -13563,7 +13673,12 @@ CMD ["mongod" "--bind_ip_all"]
 
 ## `mongo:5.0.5-nanoserver-ltsc2022`
 
-**does not exist** (yet?)
+```console
+$ docker pull mongo@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `mongo:5.0.5-windowsservercore`
 
@@ -13906,7 +14021,12 @@ CMD ["mongod" "--bind_ip_all"]
 
 ## `mongo:5.0.5-windowsservercore-ltsc2022`
 
-**does not exist** (yet?)
+```console
+$ docker pull mongo@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `mongo:focal`
 
@@ -14700,7 +14820,12 @@ CMD ["mongod" "--bind_ip_all"]
 
 ## `mongo:nanoserver-ltsc2022`
 
-**does not exist** (yet?)
+```console
+$ docker pull mongo@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `mongo:windowsservercore`
 
@@ -15043,4 +15168,9 @@ CMD ["mongod" "--bind_ip_all"]
 
 ## `mongo:windowsservercore-ltsc2022`
 
-**does not exist** (yet?)
+```console
+$ docker pull mongo@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
