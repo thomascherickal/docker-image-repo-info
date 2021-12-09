@@ -8,6 +8,8 @@
 -	[`composer:2`](#composer2)
 -	[`composer:2.1`](#composer21)
 -	[`composer:2.1.14`](#composer2114)
+-	[`composer:2.2`](#composer22)
+-	[`composer:2.2.0-RC1`](#composer220-rc1)
 -	[`composer:latest`](#composerlatest)
 
 ## `composer:1`
@@ -5859,6 +5861,14 @@ CMD ["composer"]
 		Last Modified: Thu, 02 Dec 2021 01:42:41 GMT  
 		Size: 126.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `composer:2.2`
+
+**does not exist** (yet?)
+
+## `composer:2.2.0-RC1`
+
+**does not exist** (yet?)
 
 ## `composer:latest`
 
