@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:1979234c187cee790661b5512f3f5c2d87768f4bed0680cc0c422c5f1ceb62bc`
-- Created: `2021-12-02T01:19:52.587120521Z`
-- Virtual Size: ~ 189.55 Mb  
+- Image ID: `sha256:17b996f72d084992245591794772ce69d13ea7ee4b75a611f09adbe982550314`
+- Created: `2021-12-09T23:20:12.045022709Z`
+- Virtual Size: ~ 189.75 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -591,16 +591,16 @@ BSD-3-Clause
 ### `apk` package: `lz4-libs`
 
 ```console
-lz4-libs-1.9.3-r0 description:
+lz4-libs-1.9.3-r1 description:
 LZ4 is lossless compression algorithm with fast decoder @ multiple GB/s per core. (libraries)
 
-lz4-libs-1.9.3-r0 webpage:
+lz4-libs-1.9.3-r1 webpage:
 https://github.com/lz4/lz4
 
-lz4-libs-1.9.3-r0 installed size:
+lz4-libs-1.9.3-r1 installed size:
 216 KiB
 
-lz4-libs-1.9.3-r0 license:
+lz4-libs-1.9.3-r1 license:
 BSD-2-Clause GPL-2.0-only
 
 ```
