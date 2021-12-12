@@ -1,10 +1,10 @@
-# `ghost:4.27.1`
+# `ghost:4.27.2`
 
 ## Docker Metadata
 
-- Image ID: `sha256:a13849cff311abcfeacacc3d67b8f946bfb971d4b8bdec31936de291d6542fb4`
-- Created: `2021-12-09T02:20:45.010425055Z`
-- Virtual Size: ~ 461.50 Mb  
+- Image ID: `sha256:f403a7d8fb30688a1bdab4ec849355d373137526d0ebf0d730f2536495f30d4f`
+- Created: `2021-12-11T01:20:47.092328829Z`
+- Virtual Size: ~ 463.42 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -18,7 +18,7 @@
   - `GHOST_CLI_VERSION=1.18.1`
   - `GHOST_INSTALL=/var/lib/ghost`
   - `GHOST_CONTENT=/var/lib/ghost/content`
-  - `GHOST_VERSION=4.27.1`
+  - `GHOST_VERSION=4.27.2`
 
 ## `dpkg` (`.deb`-based packages)
 
