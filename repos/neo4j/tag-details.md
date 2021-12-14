@@ -12876,7 +12876,7 @@ CMD ["neo4j"]
 ## `neo4j:4.2`
 
 ```console
-$ docker pull neo4j@sha256:d12159e7a022dab735126168a3a201f3ea00b06fa72c33dc07a3c415f93ad552
+$ docker pull neo4j@sha256:092cedf5e2c02ae394a0faed410c7bc2ab4139683d51e6874c47c4d3df088b88
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12886,14 +12886,14 @@ $ docker pull neo4j@sha256:d12159e7a022dab735126168a3a201f3ea00b06fa72c33dc07a3c
 ### `neo4j:4.2` - linux; amd64
 
 ```console
-$ docker pull neo4j@sha256:4174364be1aec47ad2b4dd1bcbf1bfa8e852808900c3cb9955d15fbd8d3a6905
+$ docker pull neo4j@sha256:3c459f4486a270b6db1a76c4facb7c4d54bd7e58e093ece3ebe9ad7afa6fe8b6
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **360.5 MB (360507371 bytes)**  
+-	Total Size: **359.9 MB (359918910 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0ce13c07b96f92f9e0bba8d35f543183a4f6de5b812bdb6fd3508c7457efbea1`
+-	Image ID: `sha256:d51c3a04571ce4d65776f414b012dcaee373390d5b7f0f181775a45f1696e4b9`
 -	Entrypoint: `["\/sbin\/tini","-g","--","\/docker-entrypoint.sh"]`
 -	Default Command: `["neo4j"]`
 
@@ -12918,35 +12918,35 @@ ENV JAVA_VERSION=11.0.13
 RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.13%2B8/OpenJDK11U-jdk_x64_linux_11.0.13_8.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.13%2B8/OpenJDK11U-jdk_aarch64_linux_11.0.13_8.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
 # Thu, 02 Dec 2021 11:35:38 GMT
 CMD ["jshell"]
-# Fri, 03 Dec 2021 16:19:08 GMT
-ENV NEO4J_SHA256=5e8e1f8fbf892e9ae68b9b0adc29c2b8504ab84fbb8b3bdb16fd71a532fbdb84 NEO4J_TARBALL=neo4j-community-4.2.11-unix.tar.gz NEO4J_EDITION=community NEO4J_HOME=/var/lib/neo4j
-# Fri, 03 Dec 2021 16:19:08 GMT
-ARG NEO4J_URI=https://dist.neo4j.org/neo4j-community-4.2.11-unix.tar.gz
-# Fri, 03 Dec 2021 16:19:08 GMT
+# Tue, 14 Dec 2021 18:29:05 GMT
+ENV NEO4J_SHA256=e144004369dda7713985da8402da22203ada08172be6bd7428f646f3dff9954c NEO4J_TARBALL=neo4j-community-4.2.12-unix.tar.gz NEO4J_EDITION=community NEO4J_HOME=/var/lib/neo4j
+# Tue, 14 Dec 2021 18:29:05 GMT
+ARG NEO4J_URI=https://dist.neo4j.org/neo4j-community-4.2.12-unix.tar.gz
+# Tue, 14 Dec 2021 18:29:05 GMT
 ARG TINI_SHA256=12d20136605531b09a2c2dac02ccee85e1b874eb322ef6baf7561cd93f93c855
-# Fri, 03 Dec 2021 16:19:08 GMT
+# Tue, 14 Dec 2021 18:29:05 GMT
 ARG TINI_URI=https://github.com/krallin/tini/releases/download/v0.18.0/tini
-# Fri, 03 Dec 2021 16:19:09 GMT
-# ARGS: NEO4J_URI=https://dist.neo4j.org/neo4j-community-4.2.11-unix.tar.gz TINI_SHA256=12d20136605531b09a2c2dac02ccee85e1b874eb322ef6baf7561cd93f93c855 TINI_URI=https://github.com/krallin/tini/releases/download/v0.18.0/tini
+# Tue, 14 Dec 2021 18:29:06 GMT
+# ARGS: NEO4J_URI=https://dist.neo4j.org/neo4j-community-4.2.12-unix.tar.gz TINI_SHA256=12d20136605531b09a2c2dac02ccee85e1b874eb322ef6baf7561cd93f93c855 TINI_URI=https://github.com/krallin/tini/releases/download/v0.18.0/tini
 RUN addgroup --gid 7474 --system neo4j && adduser --uid 7474 --system --no-create-home --home "${NEO4J_HOME}" --ingroup neo4j neo4j
-# Fri, 03 Dec 2021 16:19:09 GMT
-COPY multi:9b3432166175480d05b6b050c00077143e0e0a58e4fe02ba29c4873350562cfe in /tmp/ 
-# Fri, 03 Dec 2021 16:19:24 GMT
-# ARGS: NEO4J_URI=https://dist.neo4j.org/neo4j-community-4.2.11-unix.tar.gz TINI_SHA256=12d20136605531b09a2c2dac02ccee85e1b874eb322ef6baf7561cd93f93c855 TINI_URI=https://github.com/krallin/tini/releases/download/v0.18.0/tini
+# Tue, 14 Dec 2021 18:29:07 GMT
+COPY multi:220c2663e29181f5cd4d1cc8ff4ea55bca5bd66e60ecec0890d11b2c206bdb54 in /tmp/ 
+# Tue, 14 Dec 2021 18:29:23 GMT
+# ARGS: NEO4J_URI=https://dist.neo4j.org/neo4j-community-4.2.12-unix.tar.gz TINI_SHA256=12d20136605531b09a2c2dac02ccee85e1b874eb322ef6baf7561cd93f93c855 TINI_URI=https://github.com/krallin/tini/releases/download/v0.18.0/tini
 RUN apt update     && apt install -y curl wget gosu jq     && curl -L --fail --silent --show-error ${TINI_URI} > /sbin/tini     && echo "${TINI_SHA256}  /sbin/tini" | sha256sum -c --strict --quiet     && chmod +x /sbin/tini     && curl --fail --silent --show-error --location --remote-name ${NEO4J_URI}     && echo "${NEO4J_SHA256}  ${NEO4J_TARBALL}" | sha256sum -c --strict --quiet     && tar --extract --file ${NEO4J_TARBALL} --directory /var/lib     && mv /var/lib/neo4j-* "${NEO4J_HOME}"     && rm ${NEO4J_TARBALL}     && mv "${NEO4J_HOME}"/data /data     && mv "${NEO4J_HOME}"/logs /logs     && chown -R neo4j:neo4j /data     && chmod -R 777 /data     && chown -R neo4j:neo4j /logs     && chmod -R 777 /logs     && chown -R neo4j:neo4j "${NEO4J_HOME}"     && chmod -R 777 "${NEO4J_HOME}"     && ln -s /data "${NEO4J_HOME}"/data     && ln -s /logs "${NEO4J_HOME}"/logs     && mv /tmp/neo4jlabs-plugins.json /neo4jlabs-plugins.json     && rm -rf /tmp/*     && rm -rf /var/lib/apt/lists/*     && apt-get -y purge --auto-remove curl
-# Fri, 03 Dec 2021 16:19:24 GMT
+# Tue, 14 Dec 2021 18:29:23 GMT
 ENV PATH=/var/lib/neo4j/bin:/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 03 Dec 2021 16:19:24 GMT
+# Tue, 14 Dec 2021 18:29:23 GMT
 WORKDIR /var/lib/neo4j
-# Fri, 03 Dec 2021 16:19:24 GMT
+# Tue, 14 Dec 2021 18:29:23 GMT
 VOLUME [/data /logs]
-# Fri, 03 Dec 2021 16:19:25 GMT
+# Tue, 14 Dec 2021 18:29:24 GMT
 COPY file:7e51b3cf2dcd1964b86d448c1b173ab9670d9d0c9930111cdd9ccd660855ecd7 in /docker-entrypoint.sh 
-# Fri, 03 Dec 2021 16:19:25 GMT
+# Tue, 14 Dec 2021 18:29:24 GMT
 EXPOSE 7473 7474 7687
-# Fri, 03 Dec 2021 16:19:25 GMT
+# Tue, 14 Dec 2021 18:29:24 GMT
 ENTRYPOINT ["/sbin/tini" "-g" "--" "/docker-entrypoint.sh"]
-# Fri, 03 Dec 2021 16:19:25 GMT
+# Tue, 14 Dec 2021 18:29:24 GMT
 CMD ["neo4j"]
 ```
 
@@ -12967,27 +12967,27 @@ CMD ["neo4j"]
 		Last Modified: Thu, 02 Dec 2021 11:55:44 GMT  
 		Size: 203.4 MB (203392008 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e1aaddb35d0b0f59e94f94fd3ceb7bcc87a0864437bf30368974bcee6edb2555`  
-		Last Modified: Fri, 03 Dec 2021 17:01:17 GMT  
-		Size: 3.9 KB (3862 bytes)  
+	-	`sha256:fc6d29ebf5905862013aab3dc61fc63b1b1a3dbcf951d99a4f986086d3d06b96`  
+		Last Modified: Tue, 14 Dec 2021 18:36:03 GMT  
+		Size: 3.9 KB (3865 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7aa0f9a3a15ecc44e75d1f6eccfc35426047535dbb1353ce01f8b852d8cbb542`  
-		Last Modified: Fri, 03 Dec 2021 17:01:16 GMT  
-		Size: 598.0 B  
+	-	`sha256:bdd08ef0e8b01f14dbadb91e29be0e212c58ac316c6cfb2003f6df3ffe6a318e`  
+		Last Modified: Tue, 14 Dec 2021 18:36:03 GMT  
+		Size: 602.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3cd671458073d87eac2f8ac7fc2668c688758db659c0f17722c8a5e4d81701c9`  
-		Last Modified: Fri, 03 Dec 2021 17:01:23 GMT  
-		Size: 124.2 MB (124152220 bytes)  
+	-	`sha256:29165396fb6f7e1fa9fccddfd3d30bdee4767c84c689eff245ee3c790568d7fb`  
+		Last Modified: Tue, 14 Dec 2021 18:36:10 GMT  
+		Size: 123.6 MB (123563752 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d05393f9742a790be65d4a4bec4a6dd347203dedc2a4c200b850fe9096d8a318`  
-		Last Modified: Fri, 03 Dec 2021 17:01:16 GMT  
+	-	`sha256:7960eff14c06111858b317a1bc39c116ed57866079a38db4834789a9769623a9`  
+		Last Modified: Tue, 14 Dec 2021 18:36:03 GMT  
 		Size: 6.2 KB (6208 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `neo4j:4.2-community`
 
 ```console
-$ docker pull neo4j@sha256:d12159e7a022dab735126168a3a201f3ea00b06fa72c33dc07a3c415f93ad552
+$ docker pull neo4j@sha256:092cedf5e2c02ae394a0faed410c7bc2ab4139683d51e6874c47c4d3df088b88
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12997,14 +12997,14 @@ $ docker pull neo4j@sha256:d12159e7a022dab735126168a3a201f3ea00b06fa72c33dc07a3c
 ### `neo4j:4.2-community` - linux; amd64
 
 ```console
-$ docker pull neo4j@sha256:4174364be1aec47ad2b4dd1bcbf1bfa8e852808900c3cb9955d15fbd8d3a6905
+$ docker pull neo4j@sha256:3c459f4486a270b6db1a76c4facb7c4d54bd7e58e093ece3ebe9ad7afa6fe8b6
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **360.5 MB (360507371 bytes)**  
+-	Total Size: **359.9 MB (359918910 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0ce13c07b96f92f9e0bba8d35f543183a4f6de5b812bdb6fd3508c7457efbea1`
+-	Image ID: `sha256:d51c3a04571ce4d65776f414b012dcaee373390d5b7f0f181775a45f1696e4b9`
 -	Entrypoint: `["\/sbin\/tini","-g","--","\/docker-entrypoint.sh"]`
 -	Default Command: `["neo4j"]`
 
@@ -13029,35 +13029,35 @@ ENV JAVA_VERSION=11.0.13
 RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.13%2B8/OpenJDK11U-jdk_x64_linux_11.0.13_8.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.13%2B8/OpenJDK11U-jdk_aarch64_linux_11.0.13_8.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
 # Thu, 02 Dec 2021 11:35:38 GMT
 CMD ["jshell"]
-# Fri, 03 Dec 2021 16:19:08 GMT
-ENV NEO4J_SHA256=5e8e1f8fbf892e9ae68b9b0adc29c2b8504ab84fbb8b3bdb16fd71a532fbdb84 NEO4J_TARBALL=neo4j-community-4.2.11-unix.tar.gz NEO4J_EDITION=community NEO4J_HOME=/var/lib/neo4j
-# Fri, 03 Dec 2021 16:19:08 GMT
-ARG NEO4J_URI=https://dist.neo4j.org/neo4j-community-4.2.11-unix.tar.gz
-# Fri, 03 Dec 2021 16:19:08 GMT
+# Tue, 14 Dec 2021 18:29:05 GMT
+ENV NEO4J_SHA256=e144004369dda7713985da8402da22203ada08172be6bd7428f646f3dff9954c NEO4J_TARBALL=neo4j-community-4.2.12-unix.tar.gz NEO4J_EDITION=community NEO4J_HOME=/var/lib/neo4j
+# Tue, 14 Dec 2021 18:29:05 GMT
+ARG NEO4J_URI=https://dist.neo4j.org/neo4j-community-4.2.12-unix.tar.gz
+# Tue, 14 Dec 2021 18:29:05 GMT
 ARG TINI_SHA256=12d20136605531b09a2c2dac02ccee85e1b874eb322ef6baf7561cd93f93c855
-# Fri, 03 Dec 2021 16:19:08 GMT
+# Tue, 14 Dec 2021 18:29:05 GMT
 ARG TINI_URI=https://github.com/krallin/tini/releases/download/v0.18.0/tini
-# Fri, 03 Dec 2021 16:19:09 GMT
-# ARGS: NEO4J_URI=https://dist.neo4j.org/neo4j-community-4.2.11-unix.tar.gz TINI_SHA256=12d20136605531b09a2c2dac02ccee85e1b874eb322ef6baf7561cd93f93c855 TINI_URI=https://github.com/krallin/tini/releases/download/v0.18.0/tini
+# Tue, 14 Dec 2021 18:29:06 GMT
+# ARGS: NEO4J_URI=https://dist.neo4j.org/neo4j-community-4.2.12-unix.tar.gz TINI_SHA256=12d20136605531b09a2c2dac02ccee85e1b874eb322ef6baf7561cd93f93c855 TINI_URI=https://github.com/krallin/tini/releases/download/v0.18.0/tini
 RUN addgroup --gid 7474 --system neo4j && adduser --uid 7474 --system --no-create-home --home "${NEO4J_HOME}" --ingroup neo4j neo4j
-# Fri, 03 Dec 2021 16:19:09 GMT
-COPY multi:9b3432166175480d05b6b050c00077143e0e0a58e4fe02ba29c4873350562cfe in /tmp/ 
-# Fri, 03 Dec 2021 16:19:24 GMT
-# ARGS: NEO4J_URI=https://dist.neo4j.org/neo4j-community-4.2.11-unix.tar.gz TINI_SHA256=12d20136605531b09a2c2dac02ccee85e1b874eb322ef6baf7561cd93f93c855 TINI_URI=https://github.com/krallin/tini/releases/download/v0.18.0/tini
+# Tue, 14 Dec 2021 18:29:07 GMT
+COPY multi:220c2663e29181f5cd4d1cc8ff4ea55bca5bd66e60ecec0890d11b2c206bdb54 in /tmp/ 
+# Tue, 14 Dec 2021 18:29:23 GMT
+# ARGS: NEO4J_URI=https://dist.neo4j.org/neo4j-community-4.2.12-unix.tar.gz TINI_SHA256=12d20136605531b09a2c2dac02ccee85e1b874eb322ef6baf7561cd93f93c855 TINI_URI=https://github.com/krallin/tini/releases/download/v0.18.0/tini
 RUN apt update     && apt install -y curl wget gosu jq     && curl -L --fail --silent --show-error ${TINI_URI} > /sbin/tini     && echo "${TINI_SHA256}  /sbin/tini" | sha256sum -c --strict --quiet     && chmod +x /sbin/tini     && curl --fail --silent --show-error --location --remote-name ${NEO4J_URI}     && echo "${NEO4J_SHA256}  ${NEO4J_TARBALL}" | sha256sum -c --strict --quiet     && tar --extract --file ${NEO4J_TARBALL} --directory /var/lib     && mv /var/lib/neo4j-* "${NEO4J_HOME}"     && rm ${NEO4J_TARBALL}     && mv "${NEO4J_HOME}"/data /data     && mv "${NEO4J_HOME}"/logs /logs     && chown -R neo4j:neo4j /data     && chmod -R 777 /data     && chown -R neo4j:neo4j /logs     && chmod -R 777 /logs     && chown -R neo4j:neo4j "${NEO4J_HOME}"     && chmod -R 777 "${NEO4J_HOME}"     && ln -s /data "${NEO4J_HOME}"/data     && ln -s /logs "${NEO4J_HOME}"/logs     && mv /tmp/neo4jlabs-plugins.json /neo4jlabs-plugins.json     && rm -rf /tmp/*     && rm -rf /var/lib/apt/lists/*     && apt-get -y purge --auto-remove curl
-# Fri, 03 Dec 2021 16:19:24 GMT
+# Tue, 14 Dec 2021 18:29:23 GMT
 ENV PATH=/var/lib/neo4j/bin:/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 03 Dec 2021 16:19:24 GMT
+# Tue, 14 Dec 2021 18:29:23 GMT
 WORKDIR /var/lib/neo4j
-# Fri, 03 Dec 2021 16:19:24 GMT
+# Tue, 14 Dec 2021 18:29:23 GMT
 VOLUME [/data /logs]
-# Fri, 03 Dec 2021 16:19:25 GMT
+# Tue, 14 Dec 2021 18:29:24 GMT
 COPY file:7e51b3cf2dcd1964b86d448c1b173ab9670d9d0c9930111cdd9ccd660855ecd7 in /docker-entrypoint.sh 
-# Fri, 03 Dec 2021 16:19:25 GMT
+# Tue, 14 Dec 2021 18:29:24 GMT
 EXPOSE 7473 7474 7687
-# Fri, 03 Dec 2021 16:19:25 GMT
+# Tue, 14 Dec 2021 18:29:24 GMT
 ENTRYPOINT ["/sbin/tini" "-g" "--" "/docker-entrypoint.sh"]
-# Fri, 03 Dec 2021 16:19:25 GMT
+# Tue, 14 Dec 2021 18:29:24 GMT
 CMD ["neo4j"]
 ```
 
@@ -13078,27 +13078,27 @@ CMD ["neo4j"]
 		Last Modified: Thu, 02 Dec 2021 11:55:44 GMT  
 		Size: 203.4 MB (203392008 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e1aaddb35d0b0f59e94f94fd3ceb7bcc87a0864437bf30368974bcee6edb2555`  
-		Last Modified: Fri, 03 Dec 2021 17:01:17 GMT  
-		Size: 3.9 KB (3862 bytes)  
+	-	`sha256:fc6d29ebf5905862013aab3dc61fc63b1b1a3dbcf951d99a4f986086d3d06b96`  
+		Last Modified: Tue, 14 Dec 2021 18:36:03 GMT  
+		Size: 3.9 KB (3865 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7aa0f9a3a15ecc44e75d1f6eccfc35426047535dbb1353ce01f8b852d8cbb542`  
-		Last Modified: Fri, 03 Dec 2021 17:01:16 GMT  
-		Size: 598.0 B  
+	-	`sha256:bdd08ef0e8b01f14dbadb91e29be0e212c58ac316c6cfb2003f6df3ffe6a318e`  
+		Last Modified: Tue, 14 Dec 2021 18:36:03 GMT  
+		Size: 602.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3cd671458073d87eac2f8ac7fc2668c688758db659c0f17722c8a5e4d81701c9`  
-		Last Modified: Fri, 03 Dec 2021 17:01:23 GMT  
-		Size: 124.2 MB (124152220 bytes)  
+	-	`sha256:29165396fb6f7e1fa9fccddfd3d30bdee4767c84c689eff245ee3c790568d7fb`  
+		Last Modified: Tue, 14 Dec 2021 18:36:10 GMT  
+		Size: 123.6 MB (123563752 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d05393f9742a790be65d4a4bec4a6dd347203dedc2a4c200b850fe9096d8a318`  
-		Last Modified: Fri, 03 Dec 2021 17:01:16 GMT  
+	-	`sha256:7960eff14c06111858b317a1bc39c116ed57866079a38db4834789a9769623a9`  
+		Last Modified: Tue, 14 Dec 2021 18:36:03 GMT  
 		Size: 6.2 KB (6208 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `neo4j:4.2-enterprise`
 
 ```console
-$ docker pull neo4j@sha256:95e1e27c43772e8b54d8c9ebc4e76ff07b02fa6427f99ec95bdd0646ed0d66a0
+$ docker pull neo4j@sha256:276766aafb9a7d10bdab6d2cbd6b28fe53501aa082ced145d8fb6b72178b3b3a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -13108,14 +13108,14 @@ $ docker pull neo4j@sha256:95e1e27c43772e8b54d8c9ebc4e76ff07b02fa6427f99ec95bdd0
 ### `neo4j:4.2-enterprise` - linux; amd64
 
 ```console
-$ docker pull neo4j@sha256:4cd8d06a890b08657fcfd5bdf049b3b583fb5ae2563df2ebbdb17d1b4ef9f806
+$ docker pull neo4j@sha256:344a6c6acad04a6a15df8128a4d753f2e3ddd43a859139b4fcf970d00c31cbe4
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **389.3 MB (389332517 bytes)**  
+-	Total Size: **389.1 MB (389139633 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ea73d051d5f5c864c341b1f93960cba3750cf8389f87ac68ea9ad9a2c7b77155`
+-	Image ID: `sha256:e1bae0f96d9ff4e8a0de76601cc24e269f80293b2e345fbd76713de33efcbc07`
 -	Entrypoint: `["\/sbin\/tini","-g","--","\/docker-entrypoint.sh"]`
 -	Default Command: `["neo4j"]`
 
@@ -13140,35 +13140,35 @@ ENV JAVA_VERSION=11.0.13
 RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.13%2B8/OpenJDK11U-jdk_x64_linux_11.0.13_8.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.13%2B8/OpenJDK11U-jdk_aarch64_linux_11.0.13_8.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
 # Thu, 02 Dec 2021 11:35:38 GMT
 CMD ["jshell"]
-# Fri, 03 Dec 2021 16:19:31 GMT
-ENV NEO4J_SHA256=468b7035dc0d673806bfec1b50834ec107faa3a9137cecef77b97e6240aaad3d NEO4J_TARBALL=neo4j-enterprise-4.2.11-unix.tar.gz NEO4J_EDITION=enterprise NEO4J_HOME=/var/lib/neo4j
-# Fri, 03 Dec 2021 16:19:31 GMT
-ARG NEO4J_URI=https://dist.neo4j.org/neo4j-enterprise-4.2.11-unix.tar.gz
-# Fri, 03 Dec 2021 16:19:31 GMT
+# Tue, 14 Dec 2021 18:29:28 GMT
+ENV NEO4J_SHA256=77a1cce12c8e984fb63dd9fc69d97c21eba84e6daad4116f35d629058b4864e2 NEO4J_TARBALL=neo4j-enterprise-4.2.12-unix.tar.gz NEO4J_EDITION=enterprise NEO4J_HOME=/var/lib/neo4j
+# Tue, 14 Dec 2021 18:29:28 GMT
+ARG NEO4J_URI=https://dist.neo4j.org/neo4j-enterprise-4.2.12-unix.tar.gz
+# Tue, 14 Dec 2021 18:29:28 GMT
 ARG TINI_SHA256=12d20136605531b09a2c2dac02ccee85e1b874eb322ef6baf7561cd93f93c855
-# Fri, 03 Dec 2021 16:19:31 GMT
+# Tue, 14 Dec 2021 18:29:28 GMT
 ARG TINI_URI=https://github.com/krallin/tini/releases/download/v0.18.0/tini
-# Fri, 03 Dec 2021 16:19:32 GMT
-# ARGS: NEO4J_URI=https://dist.neo4j.org/neo4j-enterprise-4.2.11-unix.tar.gz TINI_SHA256=12d20136605531b09a2c2dac02ccee85e1b874eb322ef6baf7561cd93f93c855 TINI_URI=https://github.com/krallin/tini/releases/download/v0.18.0/tini
+# Tue, 14 Dec 2021 18:29:29 GMT
+# ARGS: NEO4J_URI=https://dist.neo4j.org/neo4j-enterprise-4.2.12-unix.tar.gz TINI_SHA256=12d20136605531b09a2c2dac02ccee85e1b874eb322ef6baf7561cd93f93c855 TINI_URI=https://github.com/krallin/tini/releases/download/v0.18.0/tini
 RUN addgroup --gid 7474 --system neo4j && adduser --uid 7474 --system --no-create-home --home "${NEO4J_HOME}" --ingroup neo4j neo4j
-# Fri, 03 Dec 2021 16:19:33 GMT
-COPY multi:9b3432166175480d05b6b050c00077143e0e0a58e4fe02ba29c4873350562cfe in /tmp/ 
-# Fri, 03 Dec 2021 16:19:44 GMT
-# ARGS: NEO4J_URI=https://dist.neo4j.org/neo4j-enterprise-4.2.11-unix.tar.gz TINI_SHA256=12d20136605531b09a2c2dac02ccee85e1b874eb322ef6baf7561cd93f93c855 TINI_URI=https://github.com/krallin/tini/releases/download/v0.18.0/tini
+# Tue, 14 Dec 2021 18:29:30 GMT
+COPY multi:220c2663e29181f5cd4d1cc8ff4ea55bca5bd66e60ecec0890d11b2c206bdb54 in /tmp/ 
+# Tue, 14 Dec 2021 18:29:45 GMT
+# ARGS: NEO4J_URI=https://dist.neo4j.org/neo4j-enterprise-4.2.12-unix.tar.gz TINI_SHA256=12d20136605531b09a2c2dac02ccee85e1b874eb322ef6baf7561cd93f93c855 TINI_URI=https://github.com/krallin/tini/releases/download/v0.18.0/tini
 RUN apt update     && apt install -y curl wget gosu jq     && curl -L --fail --silent --show-error ${TINI_URI} > /sbin/tini     && echo "${TINI_SHA256}  /sbin/tini" | sha256sum -c --strict --quiet     && chmod +x /sbin/tini     && curl --fail --silent --show-error --location --remote-name ${NEO4J_URI}     && echo "${NEO4J_SHA256}  ${NEO4J_TARBALL}" | sha256sum -c --strict --quiet     && tar --extract --file ${NEO4J_TARBALL} --directory /var/lib     && mv /var/lib/neo4j-* "${NEO4J_HOME}"     && rm ${NEO4J_TARBALL}     && mv "${NEO4J_HOME}"/data /data     && mv "${NEO4J_HOME}"/logs /logs     && chown -R neo4j:neo4j /data     && chmod -R 777 /data     && chown -R neo4j:neo4j /logs     && chmod -R 777 /logs     && chown -R neo4j:neo4j "${NEO4J_HOME}"     && chmod -R 777 "${NEO4J_HOME}"     && ln -s /data "${NEO4J_HOME}"/data     && ln -s /logs "${NEO4J_HOME}"/logs     && mv /tmp/neo4jlabs-plugins.json /neo4jlabs-plugins.json     && rm -rf /tmp/*     && rm -rf /var/lib/apt/lists/*     && apt-get -y purge --auto-remove curl
-# Fri, 03 Dec 2021 16:19:44 GMT
+# Tue, 14 Dec 2021 18:29:46 GMT
 ENV PATH=/var/lib/neo4j/bin:/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 03 Dec 2021 16:19:44 GMT
+# Tue, 14 Dec 2021 18:29:46 GMT
 WORKDIR /var/lib/neo4j
-# Fri, 03 Dec 2021 16:19:45 GMT
+# Tue, 14 Dec 2021 18:29:46 GMT
 VOLUME [/data /logs]
-# Fri, 03 Dec 2021 16:19:45 GMT
+# Tue, 14 Dec 2021 18:29:47 GMT
 COPY file:7e51b3cf2dcd1964b86d448c1b173ab9670d9d0c9930111cdd9ccd660855ecd7 in /docker-entrypoint.sh 
-# Fri, 03 Dec 2021 16:19:45 GMT
+# Tue, 14 Dec 2021 18:29:47 GMT
 EXPOSE 7473 7474 7687
-# Fri, 03 Dec 2021 16:19:45 GMT
+# Tue, 14 Dec 2021 18:29:47 GMT
 ENTRYPOINT ["/sbin/tini" "-g" "--" "/docker-entrypoint.sh"]
-# Fri, 03 Dec 2021 16:19:45 GMT
+# Tue, 14 Dec 2021 18:29:47 GMT
 CMD ["neo4j"]
 ```
 
@@ -13189,20 +13189,20 @@ CMD ["neo4j"]
 		Last Modified: Thu, 02 Dec 2021 11:55:44 GMT  
 		Size: 203.4 MB (203392008 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fb6e9dab18cee6ab8e8b2830a30d18be785440bc67bd20d5fff6c20ac0f9cd10`  
-		Last Modified: Fri, 03 Dec 2021 17:01:39 GMT  
+	-	`sha256:084243cf99dbf9200b0121a460a5e1127d5601f38ba8d1524ab48a992d1d9ef4`  
+		Last Modified: Tue, 14 Dec 2021 18:36:25 GMT  
 		Size: 3.9 KB (3864 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3f421c39c94f4f6d75c76d44a4ded5af60eb2513140ee7e609eccad47d3fd9f1`  
-		Last Modified: Fri, 03 Dec 2021 17:01:39 GMT  
-		Size: 598.0 B  
+	-	`sha256:9885fcfb42112c8a59943059f6594f54660199bac4a2cedbec595d9526901e6b`  
+		Last Modified: Tue, 14 Dec 2021 18:36:25 GMT  
+		Size: 605.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c8a52f03b8b2d0c1018370b992608fd51a5594d5536782a37d428f9cd83526f9`  
-		Last Modified: Fri, 03 Dec 2021 17:01:47 GMT  
-		Size: 153.0 MB (152977366 bytes)  
+	-	`sha256:44bd355a252c476cf4e231a3ce1f726b7cb7ec338182434d72807825bbc84e77`  
+		Last Modified: Tue, 14 Dec 2021 18:36:32 GMT  
+		Size: 152.8 MB (152784475 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b02f99165597f7d21769c90806eaf0c368a2a06f3b584a508d00154f4d9c4755`  
-		Last Modified: Fri, 03 Dec 2021 17:01:39 GMT  
+	-	`sha256:7173062f31799d5528d04dfeaeb43ae9b32930d3f539a267be20b944c8bec17e`  
+		Last Modified: Tue, 14 Dec 2021 18:36:25 GMT  
 		Size: 6.2 KB (6206 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -14540,15 +14540,336 @@ CMD ["neo4j"]
 
 ## `neo4j:4.2.12`
 
-**does not exist** (yet?)
+```console
+$ docker pull neo4j@sha256:092cedf5e2c02ae394a0faed410c7bc2ab4139683d51e6874c47c4d3df088b88
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 1
+	-	linux; amd64
+
+### `neo4j:4.2.12` - linux; amd64
+
+```console
+$ docker pull neo4j@sha256:3c459f4486a270b6db1a76c4facb7c4d54bd7e58e093ece3ebe9ad7afa6fe8b6
+```
+
+-	Docker Version: 20.10.7
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **359.9 MB (359918910 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:d51c3a04571ce4d65776f414b012dcaee373390d5b7f0f181775a45f1696e4b9`
+-	Entrypoint: `["\/sbin\/tini","-g","--","\/docker-entrypoint.sh"]`
+-	Default Command: `["neo4j"]`
+
+```dockerfile
+# Thu, 02 Dec 2021 02:48:20 GMT
+ADD file:ece5ff85ca549f0b1e9139d29dcb43a52af672d0591c423e28180f6d8d700ad7 in / 
+# Thu, 02 Dec 2021 02:48:21 GMT
+CMD ["bash"]
+# Thu, 02 Dec 2021 11:29:26 GMT
+RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates p11-kit 	; 	rm -rf /var/lib/apt/lists/*
+# Thu, 02 Dec 2021 11:34:56 GMT
+ENV JAVA_HOME=/usr/local/openjdk-11
+# Thu, 02 Dec 2021 11:34:58 GMT
+RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ] # backwards compatibility
+# Thu, 02 Dec 2021 11:34:58 GMT
+ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Thu, 02 Dec 2021 11:34:59 GMT
+ENV LANG=C.UTF-8
+# Thu, 02 Dec 2021 11:34:59 GMT
+ENV JAVA_VERSION=11.0.13
+# Thu, 02 Dec 2021 11:35:37 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.13%2B8/OpenJDK11U-jdk_x64_linux_11.0.13_8.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.13%2B8/OpenJDK11U-jdk_aarch64_linux_11.0.13_8.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Thu, 02 Dec 2021 11:35:38 GMT
+CMD ["jshell"]
+# Tue, 14 Dec 2021 18:29:05 GMT
+ENV NEO4J_SHA256=e144004369dda7713985da8402da22203ada08172be6bd7428f646f3dff9954c NEO4J_TARBALL=neo4j-community-4.2.12-unix.tar.gz NEO4J_EDITION=community NEO4J_HOME=/var/lib/neo4j
+# Tue, 14 Dec 2021 18:29:05 GMT
+ARG NEO4J_URI=https://dist.neo4j.org/neo4j-community-4.2.12-unix.tar.gz
+# Tue, 14 Dec 2021 18:29:05 GMT
+ARG TINI_SHA256=12d20136605531b09a2c2dac02ccee85e1b874eb322ef6baf7561cd93f93c855
+# Tue, 14 Dec 2021 18:29:05 GMT
+ARG TINI_URI=https://github.com/krallin/tini/releases/download/v0.18.0/tini
+# Tue, 14 Dec 2021 18:29:06 GMT
+# ARGS: NEO4J_URI=https://dist.neo4j.org/neo4j-community-4.2.12-unix.tar.gz TINI_SHA256=12d20136605531b09a2c2dac02ccee85e1b874eb322ef6baf7561cd93f93c855 TINI_URI=https://github.com/krallin/tini/releases/download/v0.18.0/tini
+RUN addgroup --gid 7474 --system neo4j && adduser --uid 7474 --system --no-create-home --home "${NEO4J_HOME}" --ingroup neo4j neo4j
+# Tue, 14 Dec 2021 18:29:07 GMT
+COPY multi:220c2663e29181f5cd4d1cc8ff4ea55bca5bd66e60ecec0890d11b2c206bdb54 in /tmp/ 
+# Tue, 14 Dec 2021 18:29:23 GMT
+# ARGS: NEO4J_URI=https://dist.neo4j.org/neo4j-community-4.2.12-unix.tar.gz TINI_SHA256=12d20136605531b09a2c2dac02ccee85e1b874eb322ef6baf7561cd93f93c855 TINI_URI=https://github.com/krallin/tini/releases/download/v0.18.0/tini
+RUN apt update     && apt install -y curl wget gosu jq     && curl -L --fail --silent --show-error ${TINI_URI} > /sbin/tini     && echo "${TINI_SHA256}  /sbin/tini" | sha256sum -c --strict --quiet     && chmod +x /sbin/tini     && curl --fail --silent --show-error --location --remote-name ${NEO4J_URI}     && echo "${NEO4J_SHA256}  ${NEO4J_TARBALL}" | sha256sum -c --strict --quiet     && tar --extract --file ${NEO4J_TARBALL} --directory /var/lib     && mv /var/lib/neo4j-* "${NEO4J_HOME}"     && rm ${NEO4J_TARBALL}     && mv "${NEO4J_HOME}"/data /data     && mv "${NEO4J_HOME}"/logs /logs     && chown -R neo4j:neo4j /data     && chmod -R 777 /data     && chown -R neo4j:neo4j /logs     && chmod -R 777 /logs     && chown -R neo4j:neo4j "${NEO4J_HOME}"     && chmod -R 777 "${NEO4J_HOME}"     && ln -s /data "${NEO4J_HOME}"/data     && ln -s /logs "${NEO4J_HOME}"/logs     && mv /tmp/neo4jlabs-plugins.json /neo4jlabs-plugins.json     && rm -rf /tmp/*     && rm -rf /var/lib/apt/lists/*     && apt-get -y purge --auto-remove curl
+# Tue, 14 Dec 2021 18:29:23 GMT
+ENV PATH=/var/lib/neo4j/bin:/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Tue, 14 Dec 2021 18:29:23 GMT
+WORKDIR /var/lib/neo4j
+# Tue, 14 Dec 2021 18:29:23 GMT
+VOLUME [/data /logs]
+# Tue, 14 Dec 2021 18:29:24 GMT
+COPY file:7e51b3cf2dcd1964b86d448c1b173ab9670d9d0c9930111cdd9ccd660855ecd7 in /docker-entrypoint.sh 
+# Tue, 14 Dec 2021 18:29:24 GMT
+EXPOSE 7473 7474 7687
+# Tue, 14 Dec 2021 18:29:24 GMT
+ENTRYPOINT ["/sbin/tini" "-g" "--" "/docker-entrypoint.sh"]
+# Tue, 14 Dec 2021 18:29:24 GMT
+CMD ["neo4j"]
+```
+
+-	Layers:
+	-	`sha256:e5ae68f740265288a4888db98d2999a638fdcb6d725f427678814538d253aa4d`  
+		Last Modified: Thu, 02 Dec 2021 02:53:46 GMT  
+		Size: 31.4 MB (31370221 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:9e9f5b9b70c2f137dc70e816256e7a568a084d066e7c34c028d30a6a45438685`  
+		Last Modified: Thu, 02 Dec 2021 11:47:20 GMT  
+		Size: 1.6 MB (1582045 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:487fc3d77b36e6ef6949adfd74769b0d393dec1d06fa2657f03911fcba2b0323`  
+		Last Modified: Thu, 02 Dec 2021 11:55:25 GMT  
+		Size: 209.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c014467dc653d97b26e3de00786518336609811ef354ef313e790741abc0522a`  
+		Last Modified: Thu, 02 Dec 2021 11:55:44 GMT  
+		Size: 203.4 MB (203392008 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:fc6d29ebf5905862013aab3dc61fc63b1b1a3dbcf951d99a4f986086d3d06b96`  
+		Last Modified: Tue, 14 Dec 2021 18:36:03 GMT  
+		Size: 3.9 KB (3865 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:bdd08ef0e8b01f14dbadb91e29be0e212c58ac316c6cfb2003f6df3ffe6a318e`  
+		Last Modified: Tue, 14 Dec 2021 18:36:03 GMT  
+		Size: 602.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:29165396fb6f7e1fa9fccddfd3d30bdee4767c84c689eff245ee3c790568d7fb`  
+		Last Modified: Tue, 14 Dec 2021 18:36:10 GMT  
+		Size: 123.6 MB (123563752 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:7960eff14c06111858b317a1bc39c116ed57866079a38db4834789a9769623a9`  
+		Last Modified: Tue, 14 Dec 2021 18:36:03 GMT  
+		Size: 6.2 KB (6208 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `neo4j:4.2.12-community`
 
-**does not exist** (yet?)
+```console
+$ docker pull neo4j@sha256:092cedf5e2c02ae394a0faed410c7bc2ab4139683d51e6874c47c4d3df088b88
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 1
+	-	linux; amd64
+
+### `neo4j:4.2.12-community` - linux; amd64
+
+```console
+$ docker pull neo4j@sha256:3c459f4486a270b6db1a76c4facb7c4d54bd7e58e093ece3ebe9ad7afa6fe8b6
+```
+
+-	Docker Version: 20.10.7
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **359.9 MB (359918910 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:d51c3a04571ce4d65776f414b012dcaee373390d5b7f0f181775a45f1696e4b9`
+-	Entrypoint: `["\/sbin\/tini","-g","--","\/docker-entrypoint.sh"]`
+-	Default Command: `["neo4j"]`
+
+```dockerfile
+# Thu, 02 Dec 2021 02:48:20 GMT
+ADD file:ece5ff85ca549f0b1e9139d29dcb43a52af672d0591c423e28180f6d8d700ad7 in / 
+# Thu, 02 Dec 2021 02:48:21 GMT
+CMD ["bash"]
+# Thu, 02 Dec 2021 11:29:26 GMT
+RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates p11-kit 	; 	rm -rf /var/lib/apt/lists/*
+# Thu, 02 Dec 2021 11:34:56 GMT
+ENV JAVA_HOME=/usr/local/openjdk-11
+# Thu, 02 Dec 2021 11:34:58 GMT
+RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ] # backwards compatibility
+# Thu, 02 Dec 2021 11:34:58 GMT
+ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Thu, 02 Dec 2021 11:34:59 GMT
+ENV LANG=C.UTF-8
+# Thu, 02 Dec 2021 11:34:59 GMT
+ENV JAVA_VERSION=11.0.13
+# Thu, 02 Dec 2021 11:35:37 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.13%2B8/OpenJDK11U-jdk_x64_linux_11.0.13_8.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.13%2B8/OpenJDK11U-jdk_aarch64_linux_11.0.13_8.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Thu, 02 Dec 2021 11:35:38 GMT
+CMD ["jshell"]
+# Tue, 14 Dec 2021 18:29:05 GMT
+ENV NEO4J_SHA256=e144004369dda7713985da8402da22203ada08172be6bd7428f646f3dff9954c NEO4J_TARBALL=neo4j-community-4.2.12-unix.tar.gz NEO4J_EDITION=community NEO4J_HOME=/var/lib/neo4j
+# Tue, 14 Dec 2021 18:29:05 GMT
+ARG NEO4J_URI=https://dist.neo4j.org/neo4j-community-4.2.12-unix.tar.gz
+# Tue, 14 Dec 2021 18:29:05 GMT
+ARG TINI_SHA256=12d20136605531b09a2c2dac02ccee85e1b874eb322ef6baf7561cd93f93c855
+# Tue, 14 Dec 2021 18:29:05 GMT
+ARG TINI_URI=https://github.com/krallin/tini/releases/download/v0.18.0/tini
+# Tue, 14 Dec 2021 18:29:06 GMT
+# ARGS: NEO4J_URI=https://dist.neo4j.org/neo4j-community-4.2.12-unix.tar.gz TINI_SHA256=12d20136605531b09a2c2dac02ccee85e1b874eb322ef6baf7561cd93f93c855 TINI_URI=https://github.com/krallin/tini/releases/download/v0.18.0/tini
+RUN addgroup --gid 7474 --system neo4j && adduser --uid 7474 --system --no-create-home --home "${NEO4J_HOME}" --ingroup neo4j neo4j
+# Tue, 14 Dec 2021 18:29:07 GMT
+COPY multi:220c2663e29181f5cd4d1cc8ff4ea55bca5bd66e60ecec0890d11b2c206bdb54 in /tmp/ 
+# Tue, 14 Dec 2021 18:29:23 GMT
+# ARGS: NEO4J_URI=https://dist.neo4j.org/neo4j-community-4.2.12-unix.tar.gz TINI_SHA256=12d20136605531b09a2c2dac02ccee85e1b874eb322ef6baf7561cd93f93c855 TINI_URI=https://github.com/krallin/tini/releases/download/v0.18.0/tini
+RUN apt update     && apt install -y curl wget gosu jq     && curl -L --fail --silent --show-error ${TINI_URI} > /sbin/tini     && echo "${TINI_SHA256}  /sbin/tini" | sha256sum -c --strict --quiet     && chmod +x /sbin/tini     && curl --fail --silent --show-error --location --remote-name ${NEO4J_URI}     && echo "${NEO4J_SHA256}  ${NEO4J_TARBALL}" | sha256sum -c --strict --quiet     && tar --extract --file ${NEO4J_TARBALL} --directory /var/lib     && mv /var/lib/neo4j-* "${NEO4J_HOME}"     && rm ${NEO4J_TARBALL}     && mv "${NEO4J_HOME}"/data /data     && mv "${NEO4J_HOME}"/logs /logs     && chown -R neo4j:neo4j /data     && chmod -R 777 /data     && chown -R neo4j:neo4j /logs     && chmod -R 777 /logs     && chown -R neo4j:neo4j "${NEO4J_HOME}"     && chmod -R 777 "${NEO4J_HOME}"     && ln -s /data "${NEO4J_HOME}"/data     && ln -s /logs "${NEO4J_HOME}"/logs     && mv /tmp/neo4jlabs-plugins.json /neo4jlabs-plugins.json     && rm -rf /tmp/*     && rm -rf /var/lib/apt/lists/*     && apt-get -y purge --auto-remove curl
+# Tue, 14 Dec 2021 18:29:23 GMT
+ENV PATH=/var/lib/neo4j/bin:/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Tue, 14 Dec 2021 18:29:23 GMT
+WORKDIR /var/lib/neo4j
+# Tue, 14 Dec 2021 18:29:23 GMT
+VOLUME [/data /logs]
+# Tue, 14 Dec 2021 18:29:24 GMT
+COPY file:7e51b3cf2dcd1964b86d448c1b173ab9670d9d0c9930111cdd9ccd660855ecd7 in /docker-entrypoint.sh 
+# Tue, 14 Dec 2021 18:29:24 GMT
+EXPOSE 7473 7474 7687
+# Tue, 14 Dec 2021 18:29:24 GMT
+ENTRYPOINT ["/sbin/tini" "-g" "--" "/docker-entrypoint.sh"]
+# Tue, 14 Dec 2021 18:29:24 GMT
+CMD ["neo4j"]
+```
+
+-	Layers:
+	-	`sha256:e5ae68f740265288a4888db98d2999a638fdcb6d725f427678814538d253aa4d`  
+		Last Modified: Thu, 02 Dec 2021 02:53:46 GMT  
+		Size: 31.4 MB (31370221 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:9e9f5b9b70c2f137dc70e816256e7a568a084d066e7c34c028d30a6a45438685`  
+		Last Modified: Thu, 02 Dec 2021 11:47:20 GMT  
+		Size: 1.6 MB (1582045 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:487fc3d77b36e6ef6949adfd74769b0d393dec1d06fa2657f03911fcba2b0323`  
+		Last Modified: Thu, 02 Dec 2021 11:55:25 GMT  
+		Size: 209.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c014467dc653d97b26e3de00786518336609811ef354ef313e790741abc0522a`  
+		Last Modified: Thu, 02 Dec 2021 11:55:44 GMT  
+		Size: 203.4 MB (203392008 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:fc6d29ebf5905862013aab3dc61fc63b1b1a3dbcf951d99a4f986086d3d06b96`  
+		Last Modified: Tue, 14 Dec 2021 18:36:03 GMT  
+		Size: 3.9 KB (3865 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:bdd08ef0e8b01f14dbadb91e29be0e212c58ac316c6cfb2003f6df3ffe6a318e`  
+		Last Modified: Tue, 14 Dec 2021 18:36:03 GMT  
+		Size: 602.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:29165396fb6f7e1fa9fccddfd3d30bdee4767c84c689eff245ee3c790568d7fb`  
+		Last Modified: Tue, 14 Dec 2021 18:36:10 GMT  
+		Size: 123.6 MB (123563752 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:7960eff14c06111858b317a1bc39c116ed57866079a38db4834789a9769623a9`  
+		Last Modified: Tue, 14 Dec 2021 18:36:03 GMT  
+		Size: 6.2 KB (6208 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `neo4j:4.2.12-enterprise`
 
-**does not exist** (yet?)
+```console
+$ docker pull neo4j@sha256:276766aafb9a7d10bdab6d2cbd6b28fe53501aa082ced145d8fb6b72178b3b3a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 1
+	-	linux; amd64
+
+### `neo4j:4.2.12-enterprise` - linux; amd64
+
+```console
+$ docker pull neo4j@sha256:344a6c6acad04a6a15df8128a4d753f2e3ddd43a859139b4fcf970d00c31cbe4
+```
+
+-	Docker Version: 20.10.7
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **389.1 MB (389139633 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:e1bae0f96d9ff4e8a0de76601cc24e269f80293b2e345fbd76713de33efcbc07`
+-	Entrypoint: `["\/sbin\/tini","-g","--","\/docker-entrypoint.sh"]`
+-	Default Command: `["neo4j"]`
+
+```dockerfile
+# Thu, 02 Dec 2021 02:48:20 GMT
+ADD file:ece5ff85ca549f0b1e9139d29dcb43a52af672d0591c423e28180f6d8d700ad7 in / 
+# Thu, 02 Dec 2021 02:48:21 GMT
+CMD ["bash"]
+# Thu, 02 Dec 2021 11:29:26 GMT
+RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates p11-kit 	; 	rm -rf /var/lib/apt/lists/*
+# Thu, 02 Dec 2021 11:34:56 GMT
+ENV JAVA_HOME=/usr/local/openjdk-11
+# Thu, 02 Dec 2021 11:34:58 GMT
+RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ] # backwards compatibility
+# Thu, 02 Dec 2021 11:34:58 GMT
+ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Thu, 02 Dec 2021 11:34:59 GMT
+ENV LANG=C.UTF-8
+# Thu, 02 Dec 2021 11:34:59 GMT
+ENV JAVA_VERSION=11.0.13
+# Thu, 02 Dec 2021 11:35:37 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.13%2B8/OpenJDK11U-jdk_x64_linux_11.0.13_8.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.13%2B8/OpenJDK11U-jdk_aarch64_linux_11.0.13_8.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Thu, 02 Dec 2021 11:35:38 GMT
+CMD ["jshell"]
+# Tue, 14 Dec 2021 18:29:28 GMT
+ENV NEO4J_SHA256=77a1cce12c8e984fb63dd9fc69d97c21eba84e6daad4116f35d629058b4864e2 NEO4J_TARBALL=neo4j-enterprise-4.2.12-unix.tar.gz NEO4J_EDITION=enterprise NEO4J_HOME=/var/lib/neo4j
+# Tue, 14 Dec 2021 18:29:28 GMT
+ARG NEO4J_URI=https://dist.neo4j.org/neo4j-enterprise-4.2.12-unix.tar.gz
+# Tue, 14 Dec 2021 18:29:28 GMT
+ARG TINI_SHA256=12d20136605531b09a2c2dac02ccee85e1b874eb322ef6baf7561cd93f93c855
+# Tue, 14 Dec 2021 18:29:28 GMT
+ARG TINI_URI=https://github.com/krallin/tini/releases/download/v0.18.0/tini
+# Tue, 14 Dec 2021 18:29:29 GMT
+# ARGS: NEO4J_URI=https://dist.neo4j.org/neo4j-enterprise-4.2.12-unix.tar.gz TINI_SHA256=12d20136605531b09a2c2dac02ccee85e1b874eb322ef6baf7561cd93f93c855 TINI_URI=https://github.com/krallin/tini/releases/download/v0.18.0/tini
+RUN addgroup --gid 7474 --system neo4j && adduser --uid 7474 --system --no-create-home --home "${NEO4J_HOME}" --ingroup neo4j neo4j
+# Tue, 14 Dec 2021 18:29:30 GMT
+COPY multi:220c2663e29181f5cd4d1cc8ff4ea55bca5bd66e60ecec0890d11b2c206bdb54 in /tmp/ 
+# Tue, 14 Dec 2021 18:29:45 GMT
+# ARGS: NEO4J_URI=https://dist.neo4j.org/neo4j-enterprise-4.2.12-unix.tar.gz TINI_SHA256=12d20136605531b09a2c2dac02ccee85e1b874eb322ef6baf7561cd93f93c855 TINI_URI=https://github.com/krallin/tini/releases/download/v0.18.0/tini
+RUN apt update     && apt install -y curl wget gosu jq     && curl -L --fail --silent --show-error ${TINI_URI} > /sbin/tini     && echo "${TINI_SHA256}  /sbin/tini" | sha256sum -c --strict --quiet     && chmod +x /sbin/tini     && curl --fail --silent --show-error --location --remote-name ${NEO4J_URI}     && echo "${NEO4J_SHA256}  ${NEO4J_TARBALL}" | sha256sum -c --strict --quiet     && tar --extract --file ${NEO4J_TARBALL} --directory /var/lib     && mv /var/lib/neo4j-* "${NEO4J_HOME}"     && rm ${NEO4J_TARBALL}     && mv "${NEO4J_HOME}"/data /data     && mv "${NEO4J_HOME}"/logs /logs     && chown -R neo4j:neo4j /data     && chmod -R 777 /data     && chown -R neo4j:neo4j /logs     && chmod -R 777 /logs     && chown -R neo4j:neo4j "${NEO4J_HOME}"     && chmod -R 777 "${NEO4J_HOME}"     && ln -s /data "${NEO4J_HOME}"/data     && ln -s /logs "${NEO4J_HOME}"/logs     && mv /tmp/neo4jlabs-plugins.json /neo4jlabs-plugins.json     && rm -rf /tmp/*     && rm -rf /var/lib/apt/lists/*     && apt-get -y purge --auto-remove curl
+# Tue, 14 Dec 2021 18:29:46 GMT
+ENV PATH=/var/lib/neo4j/bin:/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Tue, 14 Dec 2021 18:29:46 GMT
+WORKDIR /var/lib/neo4j
+# Tue, 14 Dec 2021 18:29:46 GMT
+VOLUME [/data /logs]
+# Tue, 14 Dec 2021 18:29:47 GMT
+COPY file:7e51b3cf2dcd1964b86d448c1b173ab9670d9d0c9930111cdd9ccd660855ecd7 in /docker-entrypoint.sh 
+# Tue, 14 Dec 2021 18:29:47 GMT
+EXPOSE 7473 7474 7687
+# Tue, 14 Dec 2021 18:29:47 GMT
+ENTRYPOINT ["/sbin/tini" "-g" "--" "/docker-entrypoint.sh"]
+# Tue, 14 Dec 2021 18:29:47 GMT
+CMD ["neo4j"]
+```
+
+-	Layers:
+	-	`sha256:e5ae68f740265288a4888db98d2999a638fdcb6d725f427678814538d253aa4d`  
+		Last Modified: Thu, 02 Dec 2021 02:53:46 GMT  
+		Size: 31.4 MB (31370221 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:9e9f5b9b70c2f137dc70e816256e7a568a084d066e7c34c028d30a6a45438685`  
+		Last Modified: Thu, 02 Dec 2021 11:47:20 GMT  
+		Size: 1.6 MB (1582045 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:487fc3d77b36e6ef6949adfd74769b0d393dec1d06fa2657f03911fcba2b0323`  
+		Last Modified: Thu, 02 Dec 2021 11:55:25 GMT  
+		Size: 209.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c014467dc653d97b26e3de00786518336609811ef354ef313e790741abc0522a`  
+		Last Modified: Thu, 02 Dec 2021 11:55:44 GMT  
+		Size: 203.4 MB (203392008 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:084243cf99dbf9200b0121a460a5e1127d5601f38ba8d1524ab48a992d1d9ef4`  
+		Last Modified: Tue, 14 Dec 2021 18:36:25 GMT  
+		Size: 3.9 KB (3864 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:9885fcfb42112c8a59943059f6594f54660199bac4a2cedbec595d9526901e6b`  
+		Last Modified: Tue, 14 Dec 2021 18:36:25 GMT  
+		Size: 605.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:44bd355a252c476cf4e231a3ce1f726b7cb7ec338182434d72807825bbc84e77`  
+		Last Modified: Tue, 14 Dec 2021 18:36:32 GMT  
+		Size: 152.8 MB (152784475 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:7173062f31799d5528d04dfeaeb43ae9b32930d3f539a267be20b944c8bec17e`  
+		Last Modified: Tue, 14 Dec 2021 18:36:25 GMT  
+		Size: 6.2 KB (6206 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `neo4j:4.2.2`
 
