@@ -1,7 +1,7 @@
 ## `sonarqube:community`
 
 ```console
-$ docker pull sonarqube@sha256:86233a1f65917c2875261bb49bae594943b0315e63bd2e2573a3b3fc944e041b
+$ docker pull sonarqube@sha256:d5128e042b63b96ab3a580e51ae68d8f3c215ecd345f9c1d4cc65651126572fb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull sonarqube@sha256:86233a1f65917c2875261bb49bae594943b0315e63bd2e257
 ### `sonarqube:community` - linux; amd64
 
 ```console
-$ docker pull sonarqube@sha256:c6c987ce46b15c09dbb0593817df29bdb1d1df9097849d3fbe4f50d8851b9b02
+$ docker pull sonarqube@sha256:008a16bd504ee7d28721c78aaff85daf7d34ca00bb4817cfc81cd7aaa83ba68c
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **380.9 MB (380942118 bytes)**  
+-	Total Size: **381.1 MB (381070042 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:cb35e2de836c315b16eb358a136e1d65e9994f039be35f78664c37df33a81d8d`
+-	Image ID: `sha256:1b803e84214bf90e78c80395dc829ed846fdbf59c1ea772290aea7e9235588fb`
 -	Entrypoint: `["\/opt\/sonarqube\/bin\/run.sh"]`
 -	Default Command: `["\/opt\/sonarqube\/bin\/sonar.sh"]`
 
@@ -29,26 +29,26 @@ ADD file:762c899ec0505d1a32930ee804c5b008825f41611161be104076cba33b7e5b2b in /
 CMD ["/bin/sh"]
 # Fri, 12 Nov 2021 22:10:12 GMT
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Mon, 29 Nov 2021 21:30:44 GMT
-ARG SONARQUBE_VERSION=9.2.1.49989
-# Mon, 29 Nov 2021 21:30:45 GMT
-ARG SONARQUBE_ZIP_URL=https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.2.1.49989.zip
-# Mon, 29 Nov 2021 21:30:45 GMT
-ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin SONARQUBE_HOME=/opt/sonarqube SONAR_VERSION=9.2.1.49989 SQ_DATA_DIR=/opt/sonarqube/data SQ_EXTENSIONS_DIR=/opt/sonarqube/extensions SQ_LOGS_DIR=/opt/sonarqube/logs SQ_TEMP_DIR=/opt/sonarqube/temp
-# Mon, 29 Nov 2021 21:55:22 GMT
-# ARGS: SONARQUBE_VERSION=9.2.1.49989 SONARQUBE_ZIP_URL=https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.2.1.49989.zip
+# Tue, 14 Dec 2021 18:43:27 GMT
+ARG SONARQUBE_VERSION=9.2.2.50622
+# Tue, 14 Dec 2021 18:43:27 GMT
+ARG SONARQUBE_ZIP_URL=https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.2.2.50622.zip
+# Tue, 14 Dec 2021 18:43:27 GMT
+ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin SONARQUBE_HOME=/opt/sonarqube SONAR_VERSION=9.2.2.50622 SQ_DATA_DIR=/opt/sonarqube/data SQ_EXTENSIONS_DIR=/opt/sonarqube/extensions SQ_LOGS_DIR=/opt/sonarqube/logs SQ_TEMP_DIR=/opt/sonarqube/temp
+# Tue, 14 Dec 2021 18:45:10 GMT
+# ARGS: SONARQUBE_VERSION=9.2.2.50622 SONARQUBE_ZIP_URL=https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.2.2.50622.zip
 RUN set -eux;     addgroup -S -g 1000 sonarqube;     adduser -S -D -u 1000 -G sonarqube sonarqube;     apk add --no-cache --virtual build-dependencies gnupg unzip curl;     apk add --no-cache bash su-exec ttf-dejavu openjdk11-jre;     echo "networkaddress.cache.ttl=5" >> "${JAVA_HOME}/conf/security/java.security";     sed --in-place --expression="s?securerandom.source=file:/dev/random?securerandom.source=file:/dev/urandom?g" "${JAVA_HOME}/conf/security/java.security";     for server in $(shuf -e ha.pool.sks-keyservers.net                             hkp://p80.pool.sks-keyservers.net:80                             keyserver.ubuntu.com                             hkp://keyserver.ubuntu.com:80                             pgp.mit.edu) ; do         gpg --batch --keyserver "${server}" --recv-keys 679F1EE92B19609DE816FDE81DB198F93525EC1A && break || : ;     done;     mkdir --parents /opt;     cd /opt;     curl --fail --location --output sonarqube.zip --silent --show-error "${SONARQUBE_ZIP_URL}";     curl --fail --location --output sonarqube.zip.asc --silent --show-error "${SONARQUBE_ZIP_URL}.asc";     gpg --batch --verify sonarqube.zip.asc sonarqube.zip;     unzip -q sonarqube.zip;     mv "sonarqube-${SONARQUBE_VERSION}" sonarqube;     rm sonarqube.zip*;     rm -rf ${SONARQUBE_HOME}/bin/*;     chown -R sonarqube:sonarqube ${SONARQUBE_HOME};     chmod -R 777 "${SQ_DATA_DIR}" "${SQ_EXTENSIONS_DIR}" "${SQ_LOGS_DIR}" "${SQ_TEMP_DIR}";     apk del --purge build-dependencies;
-# Mon, 29 Nov 2021 21:55:23 GMT
+# Tue, 14 Dec 2021 18:45:11 GMT
 COPY --chown=sonarqube:sonarqubemulti:66701f646ad2f21287c063721ad66eabe0c3f39a3371b70504abf154fe36a694 in /opt/sonarqube/bin/ 
-# Mon, 29 Nov 2021 21:55:23 GMT
+# Tue, 14 Dec 2021 18:45:11 GMT
 WORKDIR /opt/sonarqube
-# Mon, 29 Nov 2021 21:55:24 GMT
+# Tue, 14 Dec 2021 18:45:12 GMT
 EXPOSE 9000
-# Mon, 29 Nov 2021 21:55:24 GMT
+# Tue, 14 Dec 2021 18:45:12 GMT
 STOPSIGNAL SIGINT
-# Mon, 29 Nov 2021 21:55:24 GMT
+# Tue, 14 Dec 2021 18:45:12 GMT
 ENTRYPOINT ["/opt/sonarqube/bin/run.sh"]
-# Mon, 29 Nov 2021 21:55:24 GMT
+# Tue, 14 Dec 2021 18:45:12 GMT
 CMD ["/opt/sonarqube/bin/sonar.sh"]
 ```
 
@@ -57,11 +57,11 @@ CMD ["/opt/sonarqube/bin/sonar.sh"]
 		Last Modified: Fri, 12 Nov 2021 17:20:39 GMT  
 		Size: 2.8 MB (2822981 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:221c02f5a6ddea0feddcc4dbfc937d7b4cc78a24e33afdd85fb6c0021226353d`  
-		Last Modified: Tue, 30 Nov 2021 00:51:30 GMT  
-		Size: 378.1 MB (378118024 bytes)  
+	-	`sha256:58a3cf5aea16084e053198aff94b6373b48ae6f2696250edcbac994914c76c81`  
+		Last Modified: Tue, 14 Dec 2021 18:54:33 GMT  
+		Size: 378.2 MB (378245948 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:91b8153c2dc84ac9f3f3af6b70a4b5686bbe02ab34a89bc8661dc7622e6d0ecd`  
-		Last Modified: Tue, 30 Nov 2021 00:51:05 GMT  
+	-	`sha256:e1b5b509293c8e7c635e52a2ce1466d2344711249f255529591140eee53f2703`  
+		Last Modified: Tue, 14 Dec 2021 18:54:11 GMT  
 		Size: 1.1 KB (1113 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
