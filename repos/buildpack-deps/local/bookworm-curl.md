@@ -1,10 +1,10 @@
-# `buildpack-deps:sid-curl`
+# `buildpack-deps:bookworm-curl`
 
 ## Docker Metadata
 
-- Image ID: `sha256:4b124b746c0c0275093fe4501e9c67464a413dcc951fc499fe7808faeb7a4f99`
-- Created: `2021-12-02T03:43:22.68781216Z`
-- Virtual Size: ~ 155.12 Mb  
+- Image ID: `sha256:c9280100df47eafd64482effddb771c45b65b2a6e8f8e67311bee6ef5afbae87`
+- Created: `2021-12-10T22:35:56.657819629Z`
+- Virtual Size: ~ 154.89 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["bash"]`
@@ -198,30 +198,23 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/base-passwd/3.5.52/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/base-passwd/3.5.52/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `bash=5.1-5`
+### `dpkg` source package: `bash=5.1-3.1`
 
 Binary Packages:
 
-- `bash=5.1-5`
+- `bash=5.1-3.1`
 
 Licenses: (parsed from: `/usr/share/doc/bash/copyright`)
 
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris bash=5.1-5
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.1-5.dsc' bash_5.1-5.dsc 2296 SHA256:1d9728c7b74bdd15c933cab55eaa1bff5e98afe000e9deac474df1f723f99e5c
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.1.orig.tar.xz' bash_5.1.orig.tar.xz 5802740 SHA256:d5eeee4f953c09826409d572e2e8996a2140d67eb8f382ce1f3a9d23883ad696
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.1-5.debian.tar.xz' bash_5.1-5.debian.tar.xz 92536 SHA256:58a466088e364c1e8c2a0fb9bd144e86ddcae19d87fbb48b79a4bb5314eaadea
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/bash/5.1-3.1/
 
-- https://sources.debian.net/src/bash/5.1-5/ (for browsing the source)
-- https://sources.debian.net/src/bash/5.1-5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/bash/5.1-5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `brotli=1.0.9-2`
 
@@ -274,11 +267,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/bzip2/1.0.8-4/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/bzip2/1.0.8-4/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `ca-certificates=20211016`
+### `dpkg` source package: `ca-certificates=20210119`
 
 Binary Packages:
 
-- `ca-certificates=20211016`
+- `ca-certificates=20210119`
 
 Licenses: (parsed from: `/usr/share/doc/ca-certificates/copyright`)
 
@@ -289,16 +282,16 @@ Licenses: (parsed from: `/usr/share/doc/ca-certificates/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris ca-certificates=20211016
-'http://deb.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_20211016.dsc' ca-certificates_20211016.dsc 1890 SHA256:3d665bb54fa36529dc62fab8cf02a9d54c3a8530b17d9f3f93d170a97727b98c
-'http://deb.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_20211016.tar.xz' ca-certificates_20211016.tar.xz 239608 SHA256:2ae9b6dc5f40c25d6d7fe55e07b54f12a8967d1955d3b7b2f42ee46266eeef88
+$ apt-get source -qq --print-uris ca-certificates=20210119
+'http://deb.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_20210119.dsc' ca-certificates_20210119.dsc 1868 SHA256:51e5c099ab976f50f4d2f3c5ea0ad49853024cdb3e630322cbd7e02b05a034f4
+'http://deb.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_20210119.tar.xz' ca-certificates_20210119.tar.xz 232964 SHA256:daa3afae563711c30a0586ddae4336e8e3974c2b627faaca404c4e0141b64665
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/ca-certificates/20211016/ (for browsing the source)
-- https://sources.debian.net/src/ca-certificates/20211016/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/ca-certificates/20211016/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/ca-certificates/20210119/ (for browsing the source)
+- https://sources.debian.net/src/ca-certificates/20210119/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/ca-certificates/20210119/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cdebconf=0.261`
 
@@ -529,11 +522,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/debian-archive-keyring/2021.1.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/debian-archive-keyring/2021.1.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `debianutils=5.5-1`
+### `dpkg` source package: `debianutils=4.11.2`
 
 Binary Packages:
 
-- `debianutils=5.5-1`
+- `debianutils=4.11.2`
 
 Licenses: (parsed from: `/usr/share/doc/debianutils/copyright`)
 
@@ -542,17 +535,16 @@ Licenses: (parsed from: `/usr/share/doc/debianutils/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris debianutils=5.5-1
-'http://deb.debian.org/debian/pool/main/d/debianutils/debianutils_5.5-1.dsc' debianutils_5.5-1.dsc 1879 SHA256:db5048cb0425d07dc61ac336c950d587a7b7cdf94a734a3c58f39909b1916986
-'http://deb.debian.org/debian/pool/main/d/debianutils/debianutils_5.5.orig.tar.xz' debianutils_5.5.orig.tar.xz 104448 SHA256:2b0fad5c00eb2b8461523b2950e6f06e6ddbb0ac3384c5a3377867d51098d102
-'http://deb.debian.org/debian/pool/main/d/debianutils/debianutils_5.5-1.debian.tar.xz' debianutils_5.5-1.debian.tar.xz 21672 SHA256:0be92076584828f98008492bd1f0eda7983c343eda47d7f53c660a3a54bdbe46
+$ apt-get source -qq --print-uris debianutils=4.11.2
+'http://deb.debian.org/debian/pool/main/d/debianutils/debianutils_4.11.2.dsc' debianutils_4.11.2.dsc 1644 SHA256:b11164a7aa3ca07ae1d758d15d707928defb64f2c35bf96f2e4fd983ee17b310
+'http://deb.debian.org/debian/pool/main/d/debianutils/debianutils_4.11.2.tar.xz' debianutils_4.11.2.tar.xz 158132 SHA256:3b680e81709b740387335fac8f8806d71611dcf60874e1a792e862e48a1650de
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/debianutils/5.5-1/ (for browsing the source)
-- https://sources.debian.net/src/debianutils/5.5-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/debianutils/5.5-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/debianutils/4.11.2/ (for browsing the source)
+- https://sources.debian.net/src/debianutils/4.11.2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/debianutils/4.11.2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `diffutils=1:3.7-5`
 
@@ -667,11 +659,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/findutils/4.8.0-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/findutils/4.8.0-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `gcc-10=10.3.0-13`
+### `dpkg` source package: `gcc-10=10.3.0-12`
 
 Binary Packages:
 
-- `gcc-10-base:amd64=10.3.0-13`
+- `gcc-10-base:amd64=10.3.0-12`
 
 Licenses: (parsed from: `/usr/share/doc/gcc-10-base/copyright`)
 
@@ -685,25 +677,25 @@ Licenses: (parsed from: `/usr/share/doc/gcc-10-base/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris gcc-10=10.3.0-13
-'http://deb.debian.org/debian/pool/main/g/gcc-10/gcc-10_10.3.0-13.dsc' gcc-10_10.3.0-13.dsc 21839 SHA256:539b07768d7cd0b82eae00122ab9e03c7cab3dc70e978100c0ab23dbddb05b6f
+$ apt-get source -qq --print-uris gcc-10=10.3.0-12
+'http://deb.debian.org/debian/pool/main/g/gcc-10/gcc-10_10.3.0-12.dsc' gcc-10_10.3.0-12.dsc 21839 SHA256:07395f48f47fc06b9df76b080fd8826d06d37bf7b66939f7358e70083dacd877
 'http://deb.debian.org/debian/pool/main/g/gcc-10/gcc-10_10.3.0.orig.tar.gz' gcc-10_10.3.0.orig.tar.gz 79796443 SHA256:9ace579357cc2e976e4d2576fc1d519b6856495d98ccf11d1a67c5a9b4f79b8c
-'http://deb.debian.org/debian/pool/main/g/gcc-10/gcc-10_10.3.0-13.debian.tar.xz' gcc-10_10.3.0-13.debian.tar.xz 821900 SHA256:a604606543c51d03a90dc20ce20971de187faca3369a6235a61376cd20e7fc16
+'http://deb.debian.org/debian/pool/main/g/gcc-10/gcc-10_10.3.0-12.debian.tar.xz' gcc-10_10.3.0-12.debian.tar.xz 813316 SHA256:f3c84f363a92e5d98460aafad7d2fd62a563d53ee1ba9f26c6ca9e0e7665daac
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/gcc-10/10.3.0-13/ (for browsing the source)
-- https://sources.debian.net/src/gcc-10/10.3.0-13/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gcc-10/10.3.0-13/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/gcc-10/10.3.0-12/ (for browsing the source)
+- https://sources.debian.net/src/gcc-10/10.3.0-12/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/gcc-10/10.3.0-12/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `gcc-11=11.2.0-12`
+### `dpkg` source package: `gcc-11=11.2.0-10`
 
 Binary Packages:
 
-- `gcc-11-base:amd64=11.2.0-12`
-- `libgcc-s1:amd64=11.2.0-12`
-- `libstdc++6:amd64=11.2.0-12`
+- `gcc-11-base:amd64=11.2.0-10`
+- `libgcc-s1:amd64=11.2.0-10`
+- `libstdc++6:amd64=11.2.0-10`
 
 Licenses: (parsed from: `/usr/share/doc/gcc-11-base/copyright`, `/usr/share/doc/libgcc-s1/copyright`, `/usr/share/doc/libstdc++6/copyright`)
 
@@ -717,48 +709,17 @@ Licenses: (parsed from: `/usr/share/doc/gcc-11-base/copyright`, `/usr/share/doc/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris gcc-11=11.2.0-12
-'http://deb.debian.org/debian/pool/main/g/gcc-11/gcc-11_11.2.0-12.dsc' gcc-11_11.2.0-12.dsc 27493 SHA256:45e8971359e96cd32ea6336ed1183896f7e61f146e0c76400426abfec1649ee6
+$ apt-get source -qq --print-uris gcc-11=11.2.0-10
+'http://deb.debian.org/debian/pool/main/g/gcc-11/gcc-11_11.2.0-10.dsc' gcc-11_11.2.0-10.dsc 27453 SHA256:957e5ea9fcacc0f93b35f390790e2d0488f89ccdca20eb955b9724e4cf4e644a
 'http://deb.debian.org/debian/pool/main/g/gcc-11/gcc-11_11.2.0.orig.tar.gz' gcc-11_11.2.0.orig.tar.gz 83874319 SHA256:61bbc68194e52a9149a91571b5e1eb4db520017ed4bcdc021c175a1845605e47
-'http://deb.debian.org/debian/pool/main/g/gcc-11/gcc-11_11.2.0-12.debian.tar.xz' gcc-11_11.2.0-12.debian.tar.xz 1926616 SHA256:36c1af1574436ef14f7d2a8ef5e661ff14f6e36e27c22994cb7cb07c14f28ecb
+'http://deb.debian.org/debian/pool/main/g/gcc-11/gcc-11_11.2.0-10.debian.tar.xz' gcc-11_11.2.0-10.debian.tar.xz 1897060 SHA256:0a240e65ce23f7a7a1f0b00a63a2ecfc3496244dd877364de3acbd956f063a0a
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/gcc-11/11.2.0-12/ (for browsing the source)
-- https://sources.debian.net/src/gcc-11/11.2.0-12/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gcc-11/11.2.0-12/ (for access to the source package after it no longer exists in the archive)
-
-### `dpkg` source package: `gcc-9=9.4.0-4`
-
-Binary Packages:
-
-- `gcc-9-base:amd64=9.4.0-4`
-
-Licenses: (parsed from: `/usr/share/doc/gcc-9-base/copyright`)
-
-- `Artistic`
-- `GFDL-1.2`
-- `GPL`
-- `GPL-2`
-- `GPL-3`
-- `LGPL`
-- `LGPL-2.1+`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris gcc-9=9.4.0-4
-'http://deb.debian.org/debian/pool/main/g/gcc-9/gcc-9_9.4.0-4.dsc' gcc-9_9.4.0-4.dsc 21922 SHA256:32ff746d02b7aac1b8d3a8de314834da40887b28aa6226bd0aa67d204e996da4
-'http://deb.debian.org/debian/pool/main/g/gcc-9/gcc-9_9.4.0.orig.tar.gz' gcc-9_9.4.0.orig.tar.gz 88736226 SHA256:7ef28e618cecddbb538359d03998a61648edb10b570b995aa4f4016c4a0d823e
-'http://deb.debian.org/debian/pool/main/g/gcc-9/gcc-9_9.4.0-4.debian.tar.xz' gcc-9_9.4.0-4.debian.tar.xz 636140 SHA256:0bb8e276345e253dd15fcee4eb9ca89998b0980768207c82f80bf66265821a79
-```
-
-Other potentially useful URLs:
-
-- https://sources.debian.net/src/gcc-9/9.4.0-4/ (for browsing the source)
-- https://sources.debian.net/src/gcc-9/9.4.0-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gcc-9/9.4.0-4/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/gcc-11/11.2.0-10/ (for browsing the source)
+- https://sources.debian.net/src/gcc-11/11.2.0-10/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/gcc-11/11.2.0-10/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `glibc=2.32-4`
 
@@ -1171,11 +1132,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libffi/3.4.2-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libffi/3.4.2-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libgcrypt20=1.9.4-4`
+### `dpkg` source package: `libgcrypt20=1.9.4-3`
 
 Binary Packages:
 
-- `libgcrypt20:amd64=1.9.4-4`
+- `libgcrypt20:amd64=1.9.4-3+b1`
 
 Licenses: (parsed from: `/usr/share/doc/libgcrypt20/copyright`)
 
@@ -1185,18 +1146,18 @@ Licenses: (parsed from: `/usr/share/doc/libgcrypt20/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libgcrypt20=1.9.4-4
-'http://deb.debian.org/debian/pool/main/libg/libgcrypt20/libgcrypt20_1.9.4-4.dsc' libgcrypt20_1.9.4-4.dsc 2800 SHA256:ba094596f303289b7cf7dfb879391eb8ac34a2acaed198132ac97106e9700fb7
+$ apt-get source -qq --print-uris libgcrypt20=1.9.4-3
+'http://deb.debian.org/debian/pool/main/libg/libgcrypt20/libgcrypt20_1.9.4-3.dsc' libgcrypt20_1.9.4-3.dsc 2800 SHA256:394c4e0742c70fe3c5582846b2874bd15d7b64128d9d7344a5a5167c4fddcf5e
 'http://deb.debian.org/debian/pool/main/libg/libgcrypt20/libgcrypt20_1.9.4.orig.tar.bz2' libgcrypt20_1.9.4.orig.tar.bz2 3239704 SHA256:ea849c83a72454e3ed4267697e8ca03390aee972ab421e7df69dfe42b65caaf7
 'http://deb.debian.org/debian/pool/main/libg/libgcrypt20/libgcrypt20_1.9.4.orig.tar.bz2.asc' libgcrypt20_1.9.4.orig.tar.bz2.asc 228 SHA256:aa44cb00b779b4e75f3e63abeedd4112b10b4b92914dad8f23438fd0217a9fec
-'http://deb.debian.org/debian/pool/main/libg/libgcrypt20/libgcrypt20_1.9.4-4.debian.tar.xz' libgcrypt20_1.9.4-4.debian.tar.xz 34896 SHA256:bc6936cffbe3db7ddab53c068ffb17416fa31ea5712d5468e49e8e9a4272a12d
+'http://deb.debian.org/debian/pool/main/libg/libgcrypt20/libgcrypt20_1.9.4-3.debian.tar.xz' libgcrypt20_1.9.4-3.debian.tar.xz 32624 SHA256:8fb19e3255ff6b3511f25f810c16de2f8ecb7fcabda218f1b091470c1d89598b
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/libgcrypt20/1.9.4-4/ (for browsing the source)
-- https://sources.debian.net/src/libgcrypt20/1.9.4-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libgcrypt20/1.9.4-4/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/libgcrypt20/1.9.4-3/ (for browsing the source)
+- https://sources.debian.net/src/libgcrypt20/1.9.4-3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libgcrypt20/1.9.4-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libgpg-error=1.42-3`
 
