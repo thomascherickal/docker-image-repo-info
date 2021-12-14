@@ -1,7 +1,7 @@
 ## `swift:centos7-slim`
 
 ```console
-$ docker pull swift@sha256:778b5b8eab4323a1833cb5ffabcb7f8ed80e52401be2939f8bb3b3df198fe9b5
+$ docker pull swift@sha256:a6e37bf0184903e8f69198ada8932ffd9700bdf2a1a5e88ab32050f9e0c0e06a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull swift@sha256:778b5b8eab4323a1833cb5ffabcb7f8ed80e52401be2939f8bb3b
 ### `swift:centos7-slim` - linux; amd64
 
 ```console
-$ docker pull swift@sha256:bc3428ea768bc92bc05f61e5e40117db0306ee5e97a0d3b54c3b2b75914cb896
+$ docker pull swift@sha256:fd47c0fb0da762a5488519960adfb188cbcc5f9c2ead97d8a017c1c24160daa2
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **167.9 MB (167857672 bytes)**  
+-	Total Size: **168.0 MB (168036281 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:99f12f1c4f392cdce53b8220d16f2eb7842cd17bb9eb6ada45758ffe987fbd70`
+-	Image ID: `sha256:d58d43de585fb23cbaf0d3195aacfba361edabf7919ec7ffd55a3d7944e7e49d`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
@@ -36,15 +36,15 @@ LABEL description=Docker Container for the Swift programming language
 ARG SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561
 # Thu, 28 Oct 2021 23:58:58 GMT
 ARG SWIFT_PLATFORM=centos7
-# Thu, 28 Oct 2021 23:58:58 GMT
-ARG SWIFT_BRANCH=swift-5.5.1-release
-# Thu, 28 Oct 2021 23:58:59 GMT
-ARG SWIFT_VERSION=swift-5.5.1-RELEASE
-# Thu, 28 Oct 2021 23:58:59 GMT
+# Tue, 14 Dec 2021 20:36:57 GMT
+ARG SWIFT_BRANCH=swift-5.5.2-release
+# Tue, 14 Dec 2021 20:36:57 GMT
+ARG SWIFT_VERSION=swift-5.5.2-RELEASE
+# Tue, 14 Dec 2021 20:36:58 GMT
 ARG SWIFT_WEBROOT=https://download.swift.org
-# Thu, 28 Oct 2021 23:58:59 GMT
-ENV SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561 SWIFT_PLATFORM=centos7 SWIFT_BRANCH=swift-5.5.1-release SWIFT_VERSION=swift-5.5.1-RELEASE SWIFT_WEBROOT=https://download.swift.org
-# Thu, 28 Oct 2021 23:59:33 GMT
+# Tue, 14 Dec 2021 20:36:58 GMT
+ENV SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561 SWIFT_PLATFORM=centos7 SWIFT_BRANCH=swift-5.5.2-release SWIFT_VERSION=swift-5.5.2-RELEASE SWIFT_WEBROOT=https://download.swift.org
+# Tue, 14 Dec 2021 20:37:33 GMT
 RUN set -e;     SWIFT_WEBDIR="$SWIFT_WEBROOT/$SWIFT_BRANCH/$(echo $SWIFT_PLATFORM | tr -d .)"     && SWIFT_BIN_URL="$SWIFT_WEBDIR/$SWIFT_VERSION/$SWIFT_VERSION-$SWIFT_PLATFORM.tar.gz"     && SWIFT_SIG_URL="$SWIFT_BIN_URL.sig"     && export GNUPGHOME="$(mktemp -d)"     && curl -fsSL "$SWIFT_BIN_URL" -o swift.tar.gz "$SWIFT_SIG_URL" -o swift.tar.gz.sig     && gpg --batch --quiet --keyserver keyserver.ubuntu.com --recv-keys "$SWIFT_SIGNING_KEY"     && gpg --batch --verify swift.tar.gz.sig swift.tar.gz     && tar -xzf swift.tar.gz --directory / --strip-components=1 $SWIFT_VERSION-$SWIFT_PLATFORM/usr/lib/swift/linux     && chmod -R o+r /usr/lib/swift     && rm -rf "$GNUPGHOME" swift.tar.gz.sig swift.tar.gz
 ```
 
@@ -53,7 +53,7 @@ RUN set -e;     SWIFT_WEBDIR="$SWIFT_WEBROOT/$SWIFT_BRANCH/$(echo $SWIFT_PLATFOR
 		Last Modified: Sat, 14 Nov 2020 00:21:39 GMT  
 		Size: 76.1 MB (76097157 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5de277946fbea1687f08e613401a8a744731503a49ad822a4ec28dde125f12ec`  
-		Last Modified: Fri, 29 Oct 2021 00:53:56 GMT  
-		Size: 91.8 MB (91760515 bytes)  
+	-	`sha256:a828f9d2a5c100ece6fe71e1eed6f7374a3478608a95097353c0acc3fe4dcfa5`  
+		Last Modified: Tue, 14 Dec 2021 20:57:35 GMT  
+		Size: 91.9 MB (91939124 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
