@@ -1,7 +1,7 @@
 ## `wordpress:cli-2.5.0-php8.1`
 
 ```console
-$ docker pull wordpress@sha256:6e66a775508c17938e1fa1714108b12e7139cf55daa80adc28e136528e48bcbc
+$ docker pull wordpress@sha256:20051cc30552ad6226e4ad794c5d7b29c2eb76956b3e2755914428002156e72b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -17,14 +17,14 @@ $ docker pull wordpress@sha256:6e66a775508c17938e1fa1714108b12e7139cf55daa80adc2
 ### `wordpress:cli-2.5.0-php8.1` - linux; amd64
 
 ```console
-$ docker pull wordpress@sha256:c703952060ac22f82bf6f51fc06b1085f4e718b5cd3d8ebb6341478db7e3e34c
+$ docker pull wordpress@sha256:b5405abe7695e93fffa93eb5742049a087c9853603e8a1167432695e713589bc
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **48.1 MB (48126363 bytes)**  
+-	Total Size: **48.2 MB (48198840 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4daae770ed096f254f196591624f1f29a86de65a7662ca9cf3fa6c5583b0f01d`
+-	Image ID: `sha256:cea958e15cf95ab06e275067409bfe9d32c766b55db4d84f0d69db4a49fd7d3a`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["wp","shell"]`
 
@@ -77,27 +77,27 @@ RUN apk add --no-cache 		bash 		less 		mysql-client
 RUN set -ex; 	mkdir -p /var/www/html; 	chown -R www-data:www-data /var/www/html
 # Fri, 03 Dec 2021 18:55:57 GMT
 WORKDIR /var/www/html
-# Fri, 03 Dec 2021 18:56:43 GMT
-RUN set -ex; 		apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		freetype-dev 		imagemagick-dev 		libjpeg-turbo-dev 		libpng-dev 		libwebp-dev 		libzip-dev 	; 		docker-php-ext-configure gd 		--with-freetype 		--with-jpeg 		--with-webp 	; 	docker-php-ext-install -j "$(nproc)" 		bcmath 		exif 		gd 		mysqli 		zip 	; 	pecl install imagick-3.5.0; 	docker-php-ext-enable imagick; 	rm -r /tmp/pear; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local/lib/php/extensions 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .wordpress-phpexts-rundeps $runDeps; 	apk del --no-network .build-deps
-# Fri, 03 Dec 2021 18:56:43 GMT
+# Wed, 15 Dec 2021 00:53:55 GMT
+RUN set -ex; 		apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		freetype-dev 		imagemagick-dev 		libjpeg-turbo-dev 		libpng-dev 		libwebp-dev 		libzip-dev 	; 		docker-php-ext-configure gd 		--with-freetype 		--with-jpeg 		--with-webp 	; 	docker-php-ext-install -j "$(nproc)" 		bcmath 		exif 		gd 		mysqli 		zip 	; 	pecl install imagick-3.6.0; 	docker-php-ext-enable imagick; 	rm -r /tmp/pear; 		out="$(php -r 'exit(0);')"; 	[ -z "$out" ]; 	err="$(php -r 'exit(0);' 3>&1 1>&2 2>&3)"; 	[ -z "$err" ]; 		extDir="$(php -r 'echo ini_get("extension_dir");')"; 	[ -d "$extDir" ]; 	runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive "$extDir" 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .wordpress-phpexts-rundeps $runDeps; 	apk del --no-network .build-deps; 		! { ldd "$extDir"/*.so | grep 'not found'; }; 	err="$(php --version 3>&1 1>&2 2>&3)"; 	[ -z "$err" ]
+# Wed, 15 Dec 2021 00:53:56 GMT
 RUN { 		echo 'error_reporting = E_ERROR | E_WARNING | E_PARSE | E_CORE_ERROR | E_CORE_WARNING | E_COMPILE_ERROR | E_COMPILE_WARNING | E_RECOVERABLE_ERROR'; 		echo 'display_errors = Off'; 		echo 'display_startup_errors = Off'; 		echo 'log_errors = On'; 		echo 'error_log = /dev/stderr'; 		echo 'log_errors_max_len = 1024'; 		echo 'ignore_repeated_errors = On'; 		echo 'ignore_repeated_source = Off'; 		echo 'html_errors = Off'; 	} > /usr/local/etc/php/conf.d/error-logging.ini
-# Fri, 03 Dec 2021 18:56:44 GMT
+# Wed, 15 Dec 2021 00:53:56 GMT
 ENV WORDPRESS_CLI_GPG_KEY=63AF7AA15067C05616FDDD88A3A2E8F226F0BC06
-# Fri, 03 Dec 2021 18:56:44 GMT
+# Wed, 15 Dec 2021 00:53:56 GMT
 ENV WORDPRESS_CLI_VERSION=2.5.0
-# Fri, 03 Dec 2021 18:56:44 GMT
+# Wed, 15 Dec 2021 00:53:57 GMT
 ENV WORDPRESS_CLI_SHA512=08dd9035fda1d529807380d5b757839e2809e289eb1a698fe33e7e21a1431d3f77c551c2b2db5adc55083d5075ea4137407994111890f765e790a97e6d9ca7af
-# Fri, 03 Dec 2021 18:56:55 GMT
+# Wed, 15 Dec 2021 00:54:00 GMT
 RUN set -ex; 		apk add --no-cache --virtual .fetch-deps 		gnupg 	; 		curl -o /usr/local/bin/wp.gpg -fL "https://github.com/wp-cli/wp-cli/releases/download/v${WORDPRESS_CLI_VERSION}/wp-cli-${WORDPRESS_CLI_VERSION}.phar.gpg"; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$WORDPRESS_CLI_GPG_KEY"; 	gpg --batch --decrypt --output /usr/local/bin/wp /usr/local/bin/wp.gpg; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/wp.gpg; unset GNUPGHOME; 		echo "$WORDPRESS_CLI_SHA512 */usr/local/bin/wp" | sha512sum -c -; 	chmod +x /usr/local/bin/wp; 		apk del --no-network .fetch-deps; 		wp --allow-root --version
-# Fri, 03 Dec 2021 18:56:56 GMT
+# Wed, 15 Dec 2021 00:54:00 GMT
 VOLUME [/var/www/html]
-# Fri, 03 Dec 2021 18:56:56 GMT
+# Wed, 15 Dec 2021 00:54:00 GMT
 COPY file:b6efa5ff0423d61c2df0c8941b896844a8272d8516cdda0fcae8daaf56baac18 in /usr/local/bin/ 
-# Fri, 03 Dec 2021 18:56:56 GMT
+# Wed, 15 Dec 2021 00:54:00 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 03 Dec 2021 18:56:56 GMT
+# Wed, 15 Dec 2021 00:54:01 GMT
 USER www-data
-# Fri, 03 Dec 2021 18:56:57 GMT
+# Wed, 15 Dec 2021 00:54:01 GMT
 CMD ["wp" "shell"]
 ```
 
@@ -146,34 +146,34 @@ CMD ["wp" "shell"]
 		Last Modified: Fri, 03 Dec 2021 19:06:46 GMT  
 		Size: 143.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e83fe96db7c58536a8768c87ee26b0d236f913be2a0fae883ef2fec9f801cd9c`  
-		Last Modified: Fri, 03 Dec 2021 19:06:47 GMT  
-		Size: 5.6 MB (5576602 bytes)  
+	-	`sha256:8bfbc952106a556407cf9b1d0c5241c4dde972ce9d667ef6bcd8524b88e9b2e3`  
+		Last Modified: Wed, 15 Dec 2021 01:06:48 GMT  
+		Size: 5.6 MB (5649077 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:18903757c51d47dc1d75a8016d3173d88c05999ec01825811aee835c8b320d7a`  
-		Last Modified: Fri, 03 Dec 2021 19:06:46 GMT  
+	-	`sha256:61910ce07768415b662cb8ed8732b2403390d59435c3ffda89a86171c69fdbc9`  
+		Last Modified: Wed, 15 Dec 2021 01:06:47 GMT  
 		Size: 391.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ed66d331ceb2ef827d518e59c074070813dec55136563116931a6395b09eaa7e`  
-		Last Modified: Fri, 03 Dec 2021 19:06:47 GMT  
+	-	`sha256:7fb1152318aaedba22e0b677d5550dda3ee1a2a58e2ab8ab257c2e8c2dd51eaa`  
+		Last Modified: Wed, 15 Dec 2021 01:06:48 GMT  
 		Size: 1.3 MB (1316523 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d2913af3df1d07a55012d83a4df00a6191c3a3558ed3aceea76e675f5fb13f26`  
-		Last Modified: Fri, 03 Dec 2021 19:06:46 GMT  
-		Size: 410.0 B  
+	-	`sha256:ea95327fb50e8f576243691c55c30ec3972fb3fdde63bcd71f54aedb0e77f77f`  
+		Last Modified: Wed, 15 Dec 2021 01:06:47 GMT  
+		Size: 412.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `wordpress:cli-2.5.0-php8.1` - linux; arm variant v6
 
 ```console
-$ docker pull wordpress@sha256:2235af6e677d0440b7b6ef3409631c3ded4460129d3d5260630f5b927c3a4a04
+$ docker pull wordpress@sha256:d9df4b6461f8ebe9fbb566ac7515dfc34ce5f1ec6be876ab71bd697d1d77944e
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **45.9 MB (45901649 bytes)**  
+-	Total Size: **46.0 MB (45974596 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d75fc6d9547f691b803cd51be752a900a706d15cef625520d60b360814ecc975`
+-	Image ID: `sha256:707a54b13d8a98b28f1e893422dc22e2e1f68083205853841591b85b54dccc31`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["wp","shell"]`
 
@@ -226,27 +226,27 @@ RUN apk add --no-cache 		bash 		less 		mysql-client
 RUN set -ex; 	mkdir -p /var/www/html; 	chown -R www-data:www-data /var/www/html
 # Thu, 02 Dec 2021 20:41:21 GMT
 WORKDIR /var/www/html
-# Thu, 02 Dec 2021 20:43:15 GMT
-RUN set -ex; 		apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		freetype-dev 		imagemagick-dev 		libjpeg-turbo-dev 		libpng-dev 		libwebp-dev 		libzip-dev 	; 		docker-php-ext-configure gd 		--with-freetype 		--with-jpeg 		--with-webp 	; 	docker-php-ext-install -j "$(nproc)" 		bcmath 		exif 		gd 		mysqli 		zip 	; 	pecl install imagick-3.5.0; 	docker-php-ext-enable imagick; 	rm -r /tmp/pear; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local/lib/php/extensions 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .wordpress-phpexts-rundeps $runDeps; 	apk del --no-network .build-deps
-# Thu, 02 Dec 2021 20:43:17 GMT
+# Wed, 15 Dec 2021 01:23:51 GMT
+RUN set -ex; 		apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		freetype-dev 		imagemagick-dev 		libjpeg-turbo-dev 		libpng-dev 		libwebp-dev 		libzip-dev 	; 		docker-php-ext-configure gd 		--with-freetype 		--with-jpeg 		--with-webp 	; 	docker-php-ext-install -j "$(nproc)" 		bcmath 		exif 		gd 		mysqli 		zip 	; 	pecl install imagick-3.6.0; 	docker-php-ext-enable imagick; 	rm -r /tmp/pear; 		out="$(php -r 'exit(0);')"; 	[ -z "$out" ]; 	err="$(php -r 'exit(0);' 3>&1 1>&2 2>&3)"; 	[ -z "$err" ]; 		extDir="$(php -r 'echo ini_get("extension_dir");')"; 	[ -d "$extDir" ]; 	runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive "$extDir" 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .wordpress-phpexts-rundeps $runDeps; 	apk del --no-network .build-deps; 		! { ldd "$extDir"/*.so | grep 'not found'; }; 	err="$(php --version 3>&1 1>&2 2>&3)"; 	[ -z "$err" ]
+# Wed, 15 Dec 2021 01:23:53 GMT
 RUN { 		echo 'error_reporting = E_ERROR | E_WARNING | E_PARSE | E_CORE_ERROR | E_CORE_WARNING | E_COMPILE_ERROR | E_COMPILE_WARNING | E_RECOVERABLE_ERROR'; 		echo 'display_errors = Off'; 		echo 'display_startup_errors = Off'; 		echo 'log_errors = On'; 		echo 'error_log = /dev/stderr'; 		echo 'log_errors_max_len = 1024'; 		echo 'ignore_repeated_errors = On'; 		echo 'ignore_repeated_source = Off'; 		echo 'html_errors = Off'; 	} > /usr/local/etc/php/conf.d/error-logging.ini
-# Thu, 02 Dec 2021 20:43:17 GMT
+# Wed, 15 Dec 2021 01:23:53 GMT
 ENV WORDPRESS_CLI_GPG_KEY=63AF7AA15067C05616FDDD88A3A2E8F226F0BC06
-# Thu, 02 Dec 2021 20:43:17 GMT
+# Wed, 15 Dec 2021 01:23:54 GMT
 ENV WORDPRESS_CLI_VERSION=2.5.0
-# Thu, 02 Dec 2021 20:43:18 GMT
+# Wed, 15 Dec 2021 01:23:54 GMT
 ENV WORDPRESS_CLI_SHA512=08dd9035fda1d529807380d5b757839e2809e289eb1a698fe33e7e21a1431d3f77c551c2b2db5adc55083d5075ea4137407994111890f765e790a97e6d9ca7af
-# Thu, 02 Dec 2021 20:43:24 GMT
+# Wed, 15 Dec 2021 01:24:04 GMT
 RUN set -ex; 		apk add --no-cache --virtual .fetch-deps 		gnupg 	; 		curl -o /usr/local/bin/wp.gpg -fL "https://github.com/wp-cli/wp-cli/releases/download/v${WORDPRESS_CLI_VERSION}/wp-cli-${WORDPRESS_CLI_VERSION}.phar.gpg"; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$WORDPRESS_CLI_GPG_KEY"; 	gpg --batch --decrypt --output /usr/local/bin/wp /usr/local/bin/wp.gpg; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/wp.gpg; unset GNUPGHOME; 		echo "$WORDPRESS_CLI_SHA512 */usr/local/bin/wp" | sha512sum -c -; 	chmod +x /usr/local/bin/wp; 		apk del --no-network .fetch-deps; 		wp --allow-root --version
-# Thu, 02 Dec 2021 20:43:24 GMT
+# Wed, 15 Dec 2021 01:24:05 GMT
 VOLUME [/var/www/html]
-# Thu, 02 Dec 2021 20:43:25 GMT
+# Wed, 15 Dec 2021 01:24:05 GMT
 COPY file:b6efa5ff0423d61c2df0c8941b896844a8272d8516cdda0fcae8daaf56baac18 in /usr/local/bin/ 
-# Thu, 02 Dec 2021 20:43:25 GMT
+# Wed, 15 Dec 2021 01:24:06 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 02 Dec 2021 20:43:26 GMT
+# Wed, 15 Dec 2021 01:24:06 GMT
 USER www-data
-# Thu, 02 Dec 2021 20:43:26 GMT
+# Wed, 15 Dec 2021 01:24:07 GMT
 CMD ["wp" "shell"]
 ```
 
@@ -295,21 +295,21 @@ CMD ["wp" "shell"]
 		Last Modified: Thu, 02 Dec 2021 20:51:08 GMT  
 		Size: 142.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3e90c6ec8ffb0bed6ced5790fe638f74d26eca92100b137895f3dab62cb35900`  
-		Last Modified: Thu, 02 Dec 2021 20:51:12 GMT  
-		Size: 5.3 MB (5276281 bytes)  
+	-	`sha256:9d8b6e392f0eb09adcbac5f2a9f59f018c289848b40394ff4f7ba96ca37b5305`  
+		Last Modified: Wed, 15 Dec 2021 01:34:30 GMT  
+		Size: 5.3 MB (5349233 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2ce940889f22fbcf9f0279634ef144c2a5be51f4054407a78171f064df62f726`  
-		Last Modified: Thu, 02 Dec 2021 20:51:08 GMT  
-		Size: 393.0 B  
+	-	`sha256:bd950733b82bc4951956c4e8735cbd89a52462d5a39f381fb38d42f4e12126b7`  
+		Last Modified: Wed, 15 Dec 2021 01:34:26 GMT  
+		Size: 394.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:27c2d1e0a822af61c89f77896818eaaf92489deb7c92b784a579cf9137389d06`  
-		Last Modified: Thu, 02 Dec 2021 20:51:10 GMT  
-		Size: 1.3 MB (1316531 bytes)  
+	-	`sha256:24ff26d5fb270f02ba60854ea30beee954a28c6880bc8e0ddee8303b69ffb918`  
+		Last Modified: Wed, 15 Dec 2021 01:34:28 GMT  
+		Size: 1.3 MB (1316528 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d9594b5cc630b776386745c172bc4a743cdafe94225da61ad4f6a9b8de7f7193`  
-		Last Modified: Thu, 02 Dec 2021 20:51:08 GMT  
-		Size: 412.0 B  
+	-	`sha256:0f923d214ed825938ea684c55c3696b235b62183eb18d9425bf29678a0b08189`  
+		Last Modified: Wed, 15 Dec 2021 01:34:26 GMT  
+		Size: 409.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `wordpress:cli-2.5.0-php8.1` - linux; arm variant v7
@@ -464,14 +464,14 @@ CMD ["wp" "shell"]
 ### `wordpress:cli-2.5.0-php8.1` - linux; arm64 variant v8
 
 ```console
-$ docker pull wordpress@sha256:2a32552e285750af5822c1fc6856578a4ecf0e1e0b0129ef8a71fae0780180c1
+$ docker pull wordpress@sha256:415be6f7add20dc4918770bcb4f6b96da97c623a8a4cf288b23c0591e228b0b5
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **47.9 MB (47862115 bytes)**  
+-	Total Size: **47.9 MB (47932665 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:9de34a0f548d0a106037628521731298743b7f72725dbed8566e03102de0bced`
+-	Image ID: `sha256:454d8896aeaab72c5be7892d9d9877b5abfabfdb74592500ed0971bff610125e`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["wp","shell"]`
 
@@ -524,27 +524,27 @@ RUN apk add --no-cache 		bash 		less 		mysql-client
 RUN set -ex; 	mkdir -p /var/www/html; 	chown -R www-data:www-data /var/www/html
 # Fri, 03 Dec 2021 14:52:02 GMT
 WORKDIR /var/www/html
-# Fri, 03 Dec 2021 14:52:50 GMT
-RUN set -ex; 		apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		freetype-dev 		imagemagick-dev 		libjpeg-turbo-dev 		libpng-dev 		libwebp-dev 		libzip-dev 	; 		docker-php-ext-configure gd 		--with-freetype 		--with-jpeg 		--with-webp 	; 	docker-php-ext-install -j "$(nproc)" 		bcmath 		exif 		gd 		mysqli 		zip 	; 	pecl install imagick-3.5.0; 	docker-php-ext-enable imagick; 	rm -r /tmp/pear; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local/lib/php/extensions 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .wordpress-phpexts-rundeps $runDeps; 	apk del --no-network .build-deps
-# Fri, 03 Dec 2021 14:52:50 GMT
+# Wed, 15 Dec 2021 01:14:44 GMT
+RUN set -ex; 		apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		freetype-dev 		imagemagick-dev 		libjpeg-turbo-dev 		libpng-dev 		libwebp-dev 		libzip-dev 	; 		docker-php-ext-configure gd 		--with-freetype 		--with-jpeg 		--with-webp 	; 	docker-php-ext-install -j "$(nproc)" 		bcmath 		exif 		gd 		mysqli 		zip 	; 	pecl install imagick-3.6.0; 	docker-php-ext-enable imagick; 	rm -r /tmp/pear; 		out="$(php -r 'exit(0);')"; 	[ -z "$out" ]; 	err="$(php -r 'exit(0);' 3>&1 1>&2 2>&3)"; 	[ -z "$err" ]; 		extDir="$(php -r 'echo ini_get("extension_dir");')"; 	[ -d "$extDir" ]; 	runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive "$extDir" 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .wordpress-phpexts-rundeps $runDeps; 	apk del --no-network .build-deps; 		! { ldd "$extDir"/*.so | grep 'not found'; }; 	err="$(php --version 3>&1 1>&2 2>&3)"; 	[ -z "$err" ]
+# Wed, 15 Dec 2021 01:14:45 GMT
 RUN { 		echo 'error_reporting = E_ERROR | E_WARNING | E_PARSE | E_CORE_ERROR | E_CORE_WARNING | E_COMPILE_ERROR | E_COMPILE_WARNING | E_RECOVERABLE_ERROR'; 		echo 'display_errors = Off'; 		echo 'display_startup_errors = Off'; 		echo 'log_errors = On'; 		echo 'error_log = /dev/stderr'; 		echo 'log_errors_max_len = 1024'; 		echo 'ignore_repeated_errors = On'; 		echo 'ignore_repeated_source = Off'; 		echo 'html_errors = Off'; 	} > /usr/local/etc/php/conf.d/error-logging.ini
-# Fri, 03 Dec 2021 14:52:51 GMT
+# Wed, 15 Dec 2021 01:14:46 GMT
 ENV WORDPRESS_CLI_GPG_KEY=63AF7AA15067C05616FDDD88A3A2E8F226F0BC06
-# Fri, 03 Dec 2021 14:52:52 GMT
+# Wed, 15 Dec 2021 01:14:47 GMT
 ENV WORDPRESS_CLI_VERSION=2.5.0
-# Fri, 03 Dec 2021 14:52:53 GMT
+# Wed, 15 Dec 2021 01:14:48 GMT
 ENV WORDPRESS_CLI_SHA512=08dd9035fda1d529807380d5b757839e2809e289eb1a698fe33e7e21a1431d3f77c551c2b2db5adc55083d5075ea4137407994111890f765e790a97e6d9ca7af
-# Fri, 03 Dec 2021 14:53:12 GMT
+# Wed, 15 Dec 2021 01:14:51 GMT
 RUN set -ex; 		apk add --no-cache --virtual .fetch-deps 		gnupg 	; 		curl -o /usr/local/bin/wp.gpg -fL "https://github.com/wp-cli/wp-cli/releases/download/v${WORDPRESS_CLI_VERSION}/wp-cli-${WORDPRESS_CLI_VERSION}.phar.gpg"; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$WORDPRESS_CLI_GPG_KEY"; 	gpg --batch --decrypt --output /usr/local/bin/wp /usr/local/bin/wp.gpg; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/wp.gpg; unset GNUPGHOME; 		echo "$WORDPRESS_CLI_SHA512 */usr/local/bin/wp" | sha512sum -c -; 	chmod +x /usr/local/bin/wp; 		apk del --no-network .fetch-deps; 		wp --allow-root --version
-# Fri, 03 Dec 2021 14:53:13 GMT
+# Wed, 15 Dec 2021 01:14:52 GMT
 VOLUME [/var/www/html]
-# Fri, 03 Dec 2021 14:53:15 GMT
+# Wed, 15 Dec 2021 01:14:54 GMT
 COPY file:b6efa5ff0423d61c2df0c8941b896844a8272d8516cdda0fcae8daaf56baac18 in /usr/local/bin/ 
-# Fri, 03 Dec 2021 14:53:15 GMT
+# Wed, 15 Dec 2021 01:14:54 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 03 Dec 2021 14:53:16 GMT
+# Wed, 15 Dec 2021 01:14:55 GMT
 USER www-data
-# Fri, 03 Dec 2021 14:53:17 GMT
+# Wed, 15 Dec 2021 01:14:56 GMT
 CMD ["wp" "shell"]
 ```
 
@@ -589,34 +589,34 @@ CMD ["wp" "shell"]
 		Last Modified: Fri, 03 Dec 2021 15:11:34 GMT  
 		Size: 9.5 MB (9525935 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c39c829c8242a1e9daedb34323ef9a3397393f50dad4863af1adea29ea02f1a3`  
-		Last Modified: Fri, 03 Dec 2021 15:11:32 GMT  
-		Size: 5.4 MB (5376133 bytes)  
+	-	`sha256:83d9c6dac9a34d526c5259f9ce7b70100af11660cc017795424570911d7120e4`  
+		Last Modified: Wed, 15 Dec 2021 01:34:04 GMT  
+		Size: 5.4 MB (5446686 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2ea7640a6f51055d95eb655c356d46cbf5d0808f48873c69a37cfc0405708947`  
-		Last Modified: Fri, 03 Dec 2021 15:11:31 GMT  
-		Size: 390.0 B  
+	-	`sha256:fcef1ce334a99d14af70c57d2fdac3e94f91fd46caf7180a0ecb0d14a4412a44`  
+		Last Modified: Wed, 15 Dec 2021 01:34:03 GMT  
+		Size: 391.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6b627bf6071abf711ffa24ec94e4eb1933fe979a8cd2ce7bfb2e4a2642445665`  
-		Last Modified: Fri, 03 Dec 2021 15:11:32 GMT  
-		Size: 1.3 MB (1316278 bytes)  
+	-	`sha256:fe78e0fab90595e3499d63ec489e9982cad08af2c914d03c7c012de5b3444e50`  
+		Last Modified: Wed, 15 Dec 2021 01:34:03 GMT  
+		Size: 1.3 MB (1316274 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1ebbbfb36c272b8799b0fe06a2ee3e2ae72f972ace78c5ab22f35200fe391d6d`  
-		Last Modified: Fri, 03 Dec 2021 15:11:31 GMT  
+	-	`sha256:aafe0a0a4276abd6e22fa2941633e3554f6026d5cb82030efc28c680b2c55802`  
+		Last Modified: Wed, 15 Dec 2021 01:34:03 GMT  
 		Size: 411.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `wordpress:cli-2.5.0-php8.1` - linux; 386
 
 ```console
-$ docker pull wordpress@sha256:5bc51522b20a34b4ff7dcf0a85356eda04ddf6e6d93e41c6b0f0903b3b893aeb
+$ docker pull wordpress@sha256:c2cfa140ab8c6d7153073f1ecc57eb2edbae2c9a13948af7f3bcf9fee7b6f043
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **48.9 MB (48901158 bytes)**  
+-	Total Size: **49.0 MB (48972654 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:64a9005d6d24074f4f5fc597953725f25bcf0b176cc130c7fef813183d01a3a8`
+-	Image ID: `sha256:08edb9bc38a0011b259523611923936003880a3670da3306ac2064c51549c844`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["wp","shell"]`
 
@@ -669,27 +669,27 @@ RUN apk add --no-cache 		bash 		less 		mysql-client
 RUN set -ex; 	mkdir -p /var/www/html; 	chown -R www-data:www-data /var/www/html
 # Fri, 03 Dec 2021 11:25:44 GMT
 WORKDIR /var/www/html
-# Fri, 03 Dec 2021 11:26:46 GMT
-RUN set -ex; 		apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		freetype-dev 		imagemagick-dev 		libjpeg-turbo-dev 		libpng-dev 		libwebp-dev 		libzip-dev 	; 		docker-php-ext-configure gd 		--with-freetype 		--with-jpeg 		--with-webp 	; 	docker-php-ext-install -j "$(nproc)" 		bcmath 		exif 		gd 		mysqli 		zip 	; 	pecl install imagick-3.5.0; 	docker-php-ext-enable imagick; 	rm -r /tmp/pear; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local/lib/php/extensions 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .wordpress-phpexts-rundeps $runDeps; 	apk del --no-network .build-deps
-# Fri, 03 Dec 2021 11:26:48 GMT
+# Wed, 15 Dec 2021 01:18:47 GMT
+RUN set -ex; 		apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		freetype-dev 		imagemagick-dev 		libjpeg-turbo-dev 		libpng-dev 		libwebp-dev 		libzip-dev 	; 		docker-php-ext-configure gd 		--with-freetype 		--with-jpeg 		--with-webp 	; 	docker-php-ext-install -j "$(nproc)" 		bcmath 		exif 		gd 		mysqli 		zip 	; 	pecl install imagick-3.6.0; 	docker-php-ext-enable imagick; 	rm -r /tmp/pear; 		out="$(php -r 'exit(0);')"; 	[ -z "$out" ]; 	err="$(php -r 'exit(0);' 3>&1 1>&2 2>&3)"; 	[ -z "$err" ]; 		extDir="$(php -r 'echo ini_get("extension_dir");')"; 	[ -d "$extDir" ]; 	runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive "$extDir" 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .wordpress-phpexts-rundeps $runDeps; 	apk del --no-network .build-deps; 		! { ldd "$extDir"/*.so | grep 'not found'; }; 	err="$(php --version 3>&1 1>&2 2>&3)"; 	[ -z "$err" ]
+# Wed, 15 Dec 2021 01:18:48 GMT
 RUN { 		echo 'error_reporting = E_ERROR | E_WARNING | E_PARSE | E_CORE_ERROR | E_CORE_WARNING | E_COMPILE_ERROR | E_COMPILE_WARNING | E_RECOVERABLE_ERROR'; 		echo 'display_errors = Off'; 		echo 'display_startup_errors = Off'; 		echo 'log_errors = On'; 		echo 'error_log = /dev/stderr'; 		echo 'log_errors_max_len = 1024'; 		echo 'ignore_repeated_errors = On'; 		echo 'ignore_repeated_source = Off'; 		echo 'html_errors = Off'; 	} > /usr/local/etc/php/conf.d/error-logging.ini
-# Fri, 03 Dec 2021 11:26:48 GMT
+# Wed, 15 Dec 2021 01:18:48 GMT
 ENV WORDPRESS_CLI_GPG_KEY=63AF7AA15067C05616FDDD88A3A2E8F226F0BC06
-# Fri, 03 Dec 2021 11:26:48 GMT
+# Wed, 15 Dec 2021 01:18:48 GMT
 ENV WORDPRESS_CLI_VERSION=2.5.0
-# Fri, 03 Dec 2021 11:26:49 GMT
+# Wed, 15 Dec 2021 01:18:48 GMT
 ENV WORDPRESS_CLI_SHA512=08dd9035fda1d529807380d5b757839e2809e289eb1a698fe33e7e21a1431d3f77c551c2b2db5adc55083d5075ea4137407994111890f765e790a97e6d9ca7af
-# Fri, 03 Dec 2021 11:26:59 GMT
+# Wed, 15 Dec 2021 01:18:57 GMT
 RUN set -ex; 		apk add --no-cache --virtual .fetch-deps 		gnupg 	; 		curl -o /usr/local/bin/wp.gpg -fL "https://github.com/wp-cli/wp-cli/releases/download/v${WORDPRESS_CLI_VERSION}/wp-cli-${WORDPRESS_CLI_VERSION}.phar.gpg"; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$WORDPRESS_CLI_GPG_KEY"; 	gpg --batch --decrypt --output /usr/local/bin/wp /usr/local/bin/wp.gpg; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/wp.gpg; unset GNUPGHOME; 		echo "$WORDPRESS_CLI_SHA512 */usr/local/bin/wp" | sha512sum -c -; 	chmod +x /usr/local/bin/wp; 		apk del --no-network .fetch-deps; 		wp --allow-root --version
-# Fri, 03 Dec 2021 11:27:00 GMT
+# Wed, 15 Dec 2021 01:18:57 GMT
 VOLUME [/var/www/html]
-# Fri, 03 Dec 2021 11:27:00 GMT
+# Wed, 15 Dec 2021 01:18:57 GMT
 COPY file:b6efa5ff0423d61c2df0c8941b896844a8272d8516cdda0fcae8daaf56baac18 in /usr/local/bin/ 
-# Fri, 03 Dec 2021 11:27:01 GMT
+# Wed, 15 Dec 2021 01:18:57 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 03 Dec 2021 11:27:01 GMT
+# Wed, 15 Dec 2021 01:18:57 GMT
 USER www-data
-# Fri, 03 Dec 2021 11:27:01 GMT
+# Wed, 15 Dec 2021 01:18:58 GMT
 CMD ["wp" "shell"]
 ```
 
@@ -738,21 +738,21 @@ CMD ["wp" "shell"]
 		Last Modified: Fri, 03 Dec 2021 11:47:38 GMT  
 		Size: 145.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1f20b8318f6727e2340a313d675b9b5ddbfa6737128d4ac9966be1e69274833a`  
-		Last Modified: Fri, 03 Dec 2021 11:47:41 GMT  
-		Size: 5.7 MB (5733968 bytes)  
+	-	`sha256:bb815f77d0efbc26609039834b88ddad4ed4c8ef34be1737ebe0d8259f6edb74`  
+		Last Modified: Wed, 15 Dec 2021 01:36:59 GMT  
+		Size: 5.8 MB (5805479 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:11e9d3200629893b1fd3e714fc828a3f5729a1ffa43a3d2ed64714f6adb2141f`  
-		Last Modified: Fri, 03 Dec 2021 11:47:38 GMT  
-		Size: 396.0 B  
+	-	`sha256:82a9a719437891febbdef02d87bc4b2fba33b0065aa7f1a8d162fac93b933543`  
+		Last Modified: Wed, 15 Dec 2021 01:36:57 GMT  
+		Size: 391.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:66d0db35ff0059f2d91f4ccf5ae60afcde98b4355cbd58c506a5cdf932b50934`  
-		Last Modified: Fri, 03 Dec 2021 11:47:39 GMT  
-		Size: 1.3 MB (1316546 bytes)  
+	-	`sha256:e1cbad206d540473bae83c72e567a107c83980dbe0901a1d3fc65663ce0201d6`  
+		Last Modified: Wed, 15 Dec 2021 01:36:58 GMT  
+		Size: 1.3 MB (1316539 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4ceea512a80edd6cd0bedbd59fcf838008ad3571099bbb57e92f14b82239a411`  
-		Last Modified: Fri, 03 Dec 2021 11:47:38 GMT  
-		Size: 413.0 B  
+	-	`sha256:1b8b833d5e3ee52e24f6f8375b0f8017a02f8f17fc0b406488224eaf741db4d2`  
+		Last Modified: Wed, 15 Dec 2021 01:36:57 GMT  
+		Size: 410.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `wordpress:cli-2.5.0-php8.1` - linux; ppc64le
@@ -907,14 +907,14 @@ CMD ["wp" "shell"]
 ### `wordpress:cli-2.5.0-php8.1` - linux; s390x
 
 ```console
-$ docker pull wordpress@sha256:9fcfccbfb8202e77ce9df6b112e13fa202f9a8079972d2d16a339c3c4d85351d
+$ docker pull wordpress@sha256:2dfeb0b994a39bbc7c59083cc6dc532b78ca10831b589e81774ce9c7519e6009
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **47.4 MB (47412466 bytes)**  
+-	Total Size: **47.5 MB (47485039 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:8f79cb9a5484d03dd17b09c4d10a9ce81e934c8e6515450449788fb202f6abd1`
+-	Image ID: `sha256:0769775165666f9a09f83726e8ba107e10cf22533d5545be59bb6db6e04defb5`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["wp","shell"]`
 
@@ -967,27 +967,27 @@ RUN apk add --no-cache 		bash 		less 		mysql-client
 RUN set -ex; 	mkdir -p /var/www/html; 	chown -R www-data:www-data /var/www/html
 # Fri, 03 Dec 2021 00:25:38 GMT
 WORKDIR /var/www/html
-# Fri, 03 Dec 2021 00:26:12 GMT
-RUN set -ex; 		apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		freetype-dev 		imagemagick-dev 		libjpeg-turbo-dev 		libpng-dev 		libwebp-dev 		libzip-dev 	; 		docker-php-ext-configure gd 		--with-freetype 		--with-jpeg 		--with-webp 	; 	docker-php-ext-install -j "$(nproc)" 		bcmath 		exif 		gd 		mysqli 		zip 	; 	pecl install imagick-3.5.0; 	docker-php-ext-enable imagick; 	rm -r /tmp/pear; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local/lib/php/extensions 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .wordpress-phpexts-rundeps $runDeps; 	apk del --no-network .build-deps
-# Fri, 03 Dec 2021 00:26:13 GMT
+# Wed, 15 Dec 2021 01:07:14 GMT
+RUN set -ex; 		apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		freetype-dev 		imagemagick-dev 		libjpeg-turbo-dev 		libpng-dev 		libwebp-dev 		libzip-dev 	; 		docker-php-ext-configure gd 		--with-freetype 		--with-jpeg 		--with-webp 	; 	docker-php-ext-install -j "$(nproc)" 		bcmath 		exif 		gd 		mysqli 		zip 	; 	pecl install imagick-3.6.0; 	docker-php-ext-enable imagick; 	rm -r /tmp/pear; 		out="$(php -r 'exit(0);')"; 	[ -z "$out" ]; 	err="$(php -r 'exit(0);' 3>&1 1>&2 2>&3)"; 	[ -z "$err" ]; 		extDir="$(php -r 'echo ini_get("extension_dir");')"; 	[ -d "$extDir" ]; 	runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive "$extDir" 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .wordpress-phpexts-rundeps $runDeps; 	apk del --no-network .build-deps; 		! { ldd "$extDir"/*.so | grep 'not found'; }; 	err="$(php --version 3>&1 1>&2 2>&3)"; 	[ -z "$err" ]
+# Wed, 15 Dec 2021 01:07:15 GMT
 RUN { 		echo 'error_reporting = E_ERROR | E_WARNING | E_PARSE | E_CORE_ERROR | E_CORE_WARNING | E_COMPILE_ERROR | E_COMPILE_WARNING | E_RECOVERABLE_ERROR'; 		echo 'display_errors = Off'; 		echo 'display_startup_errors = Off'; 		echo 'log_errors = On'; 		echo 'error_log = /dev/stderr'; 		echo 'log_errors_max_len = 1024'; 		echo 'ignore_repeated_errors = On'; 		echo 'ignore_repeated_source = Off'; 		echo 'html_errors = Off'; 	} > /usr/local/etc/php/conf.d/error-logging.ini
-# Fri, 03 Dec 2021 00:26:13 GMT
+# Wed, 15 Dec 2021 01:07:15 GMT
 ENV WORDPRESS_CLI_GPG_KEY=63AF7AA15067C05616FDDD88A3A2E8F226F0BC06
-# Fri, 03 Dec 2021 00:26:13 GMT
+# Wed, 15 Dec 2021 01:07:16 GMT
 ENV WORDPRESS_CLI_VERSION=2.5.0
-# Fri, 03 Dec 2021 00:26:13 GMT
+# Wed, 15 Dec 2021 01:07:16 GMT
 ENV WORDPRESS_CLI_SHA512=08dd9035fda1d529807380d5b757839e2809e289eb1a698fe33e7e21a1431d3f77c551c2b2db5adc55083d5075ea4137407994111890f765e790a97e6d9ca7af
-# Fri, 03 Dec 2021 00:26:20 GMT
+# Wed, 15 Dec 2021 01:07:20 GMT
 RUN set -ex; 		apk add --no-cache --virtual .fetch-deps 		gnupg 	; 		curl -o /usr/local/bin/wp.gpg -fL "https://github.com/wp-cli/wp-cli/releases/download/v${WORDPRESS_CLI_VERSION}/wp-cli-${WORDPRESS_CLI_VERSION}.phar.gpg"; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$WORDPRESS_CLI_GPG_KEY"; 	gpg --batch --decrypt --output /usr/local/bin/wp /usr/local/bin/wp.gpg; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/wp.gpg; unset GNUPGHOME; 		echo "$WORDPRESS_CLI_SHA512 */usr/local/bin/wp" | sha512sum -c -; 	chmod +x /usr/local/bin/wp; 		apk del --no-network .fetch-deps; 		wp --allow-root --version
-# Fri, 03 Dec 2021 00:26:20 GMT
+# Wed, 15 Dec 2021 01:07:21 GMT
 VOLUME [/var/www/html]
-# Fri, 03 Dec 2021 00:26:21 GMT
+# Wed, 15 Dec 2021 01:07:21 GMT
 COPY file:b6efa5ff0423d61c2df0c8941b896844a8272d8516cdda0fcae8daaf56baac18 in /usr/local/bin/ 
-# Fri, 03 Dec 2021 00:26:21 GMT
+# Wed, 15 Dec 2021 01:07:21 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 03 Dec 2021 00:26:21 GMT
+# Wed, 15 Dec 2021 01:07:21 GMT
 USER www-data
-# Fri, 03 Dec 2021 00:26:21 GMT
+# Wed, 15 Dec 2021 01:07:21 GMT
 CMD ["wp" "shell"]
 ```
 
@@ -1036,19 +1036,19 @@ CMD ["wp" "shell"]
 		Last Modified: Fri, 03 Dec 2021 00:39:08 GMT  
 		Size: 143.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1167250f63078f9d738d4ecf3a5245f01d77bbf1bc1d51470ce45eab9f870e34`  
-		Last Modified: Fri, 03 Dec 2021 00:39:09 GMT  
-		Size: 5.5 MB (5539745 bytes)  
+	-	`sha256:fa42fa660b0b28242c6542dcca8c2d4554efebbfd2a43144e64f46c1c28dc96a`  
+		Last Modified: Wed, 15 Dec 2021 01:20:58 GMT  
+		Size: 5.6 MB (5612312 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3a4998bae9cfb6cd8134c540674adec82ab203eb2085daad8ba14af5ace3258e`  
-		Last Modified: Fri, 03 Dec 2021 00:39:08 GMT  
-		Size: 392.0 B  
+	-	`sha256:dd90cf4a6d13ce29dc4aa76e2ed5b181c4f2d7ddcd675ecb0aef7dcf7fd87d6a`  
+		Last Modified: Wed, 15 Dec 2021 01:20:57 GMT  
+		Size: 393.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:996627b1eaa6e32a2b6d1c6764de4c5526d74d9df591787b7fdb18243862d014`  
-		Last Modified: Fri, 03 Dec 2021 00:39:08 GMT  
-		Size: 1.3 MB (1316525 bytes)  
+	-	`sha256:90cad661da40f68d38fabe013d96b0a875a8e08019094bbff9784f1808dec30b`  
+		Last Modified: Wed, 15 Dec 2021 01:20:58 GMT  
+		Size: 1.3 MB (1316531 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5928f2b09f7c77042a7cf3dd7d122357a9072a7f1e392efb14cb4be88cd885bc`  
-		Last Modified: Fri, 03 Dec 2021 00:39:08 GMT  
-		Size: 410.0 B  
+	-	`sha256:52a30ff46bcbe3f6328fd7a346c440193f417d8de58d2d8b44469d5f4d775c9d`  
+		Last Modified: Wed, 15 Dec 2021 01:20:57 GMT  
+		Size: 409.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
