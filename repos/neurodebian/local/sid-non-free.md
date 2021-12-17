@@ -234,20 +234,13 @@ Licenses: (parsed from: `/usr/share/doc/libbz2-1.0/copyright`)
 - `BSD-variant`
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris bzip2=1.0.8-4
-'http://deb.debian.org/debian/pool/main/b/bzip2/bzip2_1.0.8-4.dsc' bzip2_1.0.8-4.dsc 1603 SHA256:662c5e656a87db884fdc070239f5112cba1e616f20ff260de602876f70415c7b
-'http://deb.debian.org/debian/pool/main/b/bzip2/bzip2_1.0.8.orig.tar.gz' bzip2_1.0.8.orig.tar.gz 810029 SHA256:ab5a03176ee106d3f0fa90e381da478ddae405918153cca248e682cd0c4a2269
-'http://deb.debian.org/debian/pool/main/b/bzip2/bzip2_1.0.8-4.debian.tar.bz2' bzip2_1.0.8-4.debian.tar.bz2 26515 SHA256:3f3b26d83120260c7b2e69a5c89649bb818a79955b960fb34a5fae106f008a5d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/bzip2/1.0.8-4/
 
-- https://sources.debian.net/src/bzip2/1.0.8-4/ (for browsing the source)
-- https://sources.debian.net/src/bzip2/1.0.8-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/bzip2/1.0.8-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cdebconf=0.261`
 
@@ -690,20 +683,13 @@ Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/lib
 - `GPL-2`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glibc=2.32-4
-'http://deb.debian.org/debian/pool/main/g/glibc/glibc_2.32-4.dsc' glibc_2.32-4.dsc 9617 SHA256:bb861648fe09205bc9ad561f203f633163939ca431189893a68d0241bdb36e90
-'http://deb.debian.org/debian/pool/main/g/glibc/glibc_2.32.orig.tar.xz' glibc_2.32.orig.tar.xz 17339504 SHA256:98367884c13188ae59a90b59a1628bb109f67fa14fceba42f0cbeb08412bb69c
-'http://deb.debian.org/debian/pool/main/g/glibc/glibc_2.32-4.debian.tar.xz' glibc_2.32-4.debian.tar.xz 842152 SHA256:2abfe70d32eb9ad2dad60a110da69c42f9d62e9653548a849dee3aef7a32a006
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/glibc/2.32-4/
 
-- https://sources.debian.net/src/glibc/2.32-4/ (for browsing the source)
-- https://sources.debian.net/src/glibc/2.32-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/glibc/2.32-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gmp=2:6.2.1+dfsg-3`
 
@@ -1128,21 +1114,13 @@ Licenses: (parsed from: `/usr/share/doc/libgcrypt20/copyright`)
 - `GPL-2`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libgcrypt20=1.9.4-4
-'http://deb.debian.org/debian/pool/main/libg/libgcrypt20/libgcrypt20_1.9.4-4.dsc' libgcrypt20_1.9.4-4.dsc 2800 SHA256:ba094596f303289b7cf7dfb879391eb8ac34a2acaed198132ac97106e9700fb7
-'http://deb.debian.org/debian/pool/main/libg/libgcrypt20/libgcrypt20_1.9.4.orig.tar.bz2' libgcrypt20_1.9.4.orig.tar.bz2 3239704 SHA256:ea849c83a72454e3ed4267697e8ca03390aee972ab421e7df69dfe42b65caaf7
-'http://deb.debian.org/debian/pool/main/libg/libgcrypt20/libgcrypt20_1.9.4.orig.tar.bz2.asc' libgcrypt20_1.9.4.orig.tar.bz2.asc 228 SHA256:aa44cb00b779b4e75f3e63abeedd4112b10b4b92914dad8f23438fd0217a9fec
-'http://deb.debian.org/debian/pool/main/libg/libgcrypt20/libgcrypt20_1.9.4-4.debian.tar.xz' libgcrypt20_1.9.4-4.debian.tar.xz 34896 SHA256:bc6936cffbe3db7ddab53c068ffb17416fa31ea5712d5468e49e8e9a4272a12d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libgcrypt20/1.9.4-4/
 
-- https://sources.debian.net/src/libgcrypt20/1.9.4-4/ (for browsing the source)
-- https://sources.debian.net/src/libgcrypt20/1.9.4-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libgcrypt20/1.9.4-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libgpg-error=1.42-3`
 
@@ -2106,20 +2084,13 @@ Licenses: (parsed from: `/usr/share/doc/sysvinit-utils/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sysvinit=3.00-1
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_3.00-1.dsc' sysvinit_3.00-1.dsc 2376 SHA256:599b9ee804c3ec3db40be1be6d65cc50b98bdaf2f94bda92557bb346058e68f7
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_3.00.orig.tar.xz' sysvinit_3.00.orig.tar.xz 126544 SHA256:d575f34e91736f019f6e4327f74fadd7cf6f464cdfc8c16a796860b504bd9fd4
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_3.00-1.debian.tar.xz' sysvinit_3.00-1.debian.tar.xz 129592 SHA256:e79c7d0f7ea0f122f36c4fe2b3726187bfc5a2e9f5f68132fc764790e28cce49
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/sysvinit/3.00-1/
 
-- https://sources.debian.net/src/sysvinit/3.00-1/ (for browsing the source)
-- https://sources.debian.net/src/sysvinit/3.00-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sysvinit/3.00-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tar=1.34+dfsg-1`
 
