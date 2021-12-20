@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:c718c8045650962e902b165dd4db98af588e3bfcd89b6d6c1882b2fb97202c62`
-- Created: `2021-11-01T23:03:38.613876668Z`
-- Virtual Size: ~ 1.94 Gb  
+- Image ID: `sha256:8f7fd6616b1ca70921ad61b562bd64b340ffd377d5d7fb35332c6aeadee4ca2a`
+- Created: `2021-12-17T19:20:14.988150809Z`
+- Virtual Size: ~ 1.96 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/gzserver_entrypoint.sh"]`
@@ -55,21 +55,26 @@ $ apt-get source -qq --print-uris adduser=3.118ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/a/adduser/adduser_3.118ubuntu2.tar.xz' adduser_3.118ubuntu2.tar.xz 222364 SHA256:9429124c39c381b541005da6f0ae29831bd6533dd65c923e06ca2a7c310db382
 ```
 
-### `dpkg` source package: `alsa-lib=1.2.2-2.1ubuntu2.4`
+### `dpkg` source package: `alsa-lib=1.2.2-2.1ubuntu2.5`
 
 Binary Packages:
 
-- `libasound2:amd64=1.2.2-2.1ubuntu2.4`
-- `libasound2-data=1.2.2-2.1ubuntu2.4`
+- `libasound2:amd64=1.2.2-2.1ubuntu2.5`
+- `libasound2-data=1.2.2-2.1ubuntu2.5`
 
 Licenses: (parsed from: `/usr/share/doc/libasound2/copyright`, `/usr/share/doc/libasound2-data/copyright`)
 
 - `LGPL-2.1`
 - `LPGL-2.1+`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris alsa-lib=1.2.2-2.1ubuntu2.5
+'http://archive.ubuntu.com/ubuntu/pool/main/a/alsa-lib/alsa-lib_1.2.2-2.1ubuntu2.5.dsc' alsa-lib_1.2.2-2.1ubuntu2.5.dsc 2029 SHA512:f8fae60a22600c57d7129b9f7e2cf6368b075a611f63330fcfd4e4eac2c9b6b2f1e75679d3258ad4cc090cd6b92dd31e25f32d467360fe821940b5135bfa2eae
+'http://archive.ubuntu.com/ubuntu/pool/main/a/alsa-lib/alsa-lib_1.2.2.orig.tar.bz2' alsa-lib_1.2.2.orig.tar.bz2 1030747 SHA512:d21adb3ff998918c7d1820f9ce2aaf4202dd45ccb87cb092d49da8b2402b6ddaad06325be0fd59f17393a5d9958e3743bfccb4b14bdb947a42e7d791d73c7033
+'http://archive.ubuntu.com/ubuntu/pool/main/a/alsa-lib/alsa-lib_1.2.2-2.1ubuntu2.5.debian.tar.xz' alsa-lib_1.2.2-2.1ubuntu2.5.debian.tar.xz 59256 SHA512:96f74ee7aa3198267ee228d76088b5f8b9ee5b5a1519ec35e11bf608b5bfaa389857c79fc78800ad21ee09b3709678928f0134de2647102200895aaefd8b0cf6
+```
 
 ### `dpkg` source package: `aom=1.0.0.errata1-3build1`
 
@@ -1655,15 +1660,15 @@ $ apt-get source -qq --print-uris game-music-emu=0.6.2-1build1
 'http://archive.ubuntu.com/ubuntu/pool/universe/g/game-music-emu/game-music-emu_0.6.2-1build1.debian.tar.xz' game-music-emu_0.6.2-1build1.debian.tar.xz 4496 SHA256:e338369a1656f0ade5b014f714fd5bac196489ac937cf8c5276a005953b92aa8
 ```
 
-### `dpkg` source package: `gazebo11=11.9.0-1~focal`
+### `dpkg` source package: `gazebo11=11.9.1-1~focal`
 
 Binary Packages:
 
-- `gazebo11=11.9.0-1~focal`
-- `gazebo11-common=11.9.0-1~focal`
-- `gazebo11-plugin-base=11.9.0-1~focal`
-- `libgazebo11:amd64=11.9.0-1~focal`
-- `libgazebo11-dev:amd64=11.9.0-1~focal`
+- `gazebo11=11.9.1-1~focal`
+- `gazebo11-common=11.9.1-1~focal`
+- `gazebo11-plugin-base=11.9.1-1~focal`
+- `libgazebo11:amd64=11.9.1-1~focal`
+- `libgazebo11-dev:amd64=11.9.1-1~focal`
 
 Licenses: (parsed from: `/usr/share/doc/gazebo11/copyright`, `/usr/share/doc/gazebo11-common/copyright`, `/usr/share/doc/gazebo11-plugin-base/copyright`, `/usr/share/doc/libgazebo11/copyright`, `/usr/share/doc/libgazebo11-dev/copyright`)
 
@@ -1679,9 +1684,14 @@ Licenses: (parsed from: `/usr/share/doc/gazebo11/copyright`, `/usr/share/doc/gaz
 - `LGPL-3+`
 - `ZLIB`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris gazebo11=11.9.1-1~focal
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo11/gazebo11_11.9.1-1~focal.dsc' gazebo11_11.9.1-1~focal.dsc 2664 SHA256:8dc92ba9615d5e15d71acf89e0f860cb9d723194822b3c00754a6510475a9b1c
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo11/gazebo11_11.9.1.orig.tar.bz2' gazebo11_11.9.1.orig.tar.bz2 56472954 SHA256:2959f4bed5fa8b5aa7f86bcd518e74a65402fe21b91a8d125807117827731be6
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo11/gazebo11_11.9.1-1~focal.debian.tar.xz' gazebo11_11.9.1-1~focal.debian.tar.xz 6860 SHA256:eb2bb0c545894f06330a5e83be38fefad85a329e2628caa4fd64d1c5a7bba070
+```
 
 ### `dpkg` source package: `gcc-10=10.3.0-1ubuntu1~20.04`
 
@@ -2294,13 +2304,13 @@ $ apt-get source -qq --print-uris hwloc=2.1.0+dfsg-4
 'http://archive.ubuntu.com/ubuntu/pool/universe/h/hwloc/hwloc_2.1.0+dfsg-4.debian.tar.xz' hwloc_2.1.0+dfsg-4.debian.tar.xz 12904 SHA256:5ce3ee7ab32628585261f8eb58840f23f55310f3e08819ed073a6b53816f9b78
 ```
 
-### `dpkg` source package: `icu=66.1-2ubuntu2`
+### `dpkg` source package: `icu=66.1-2ubuntu2.1`
 
 Binary Packages:
 
-- `icu-devtools=66.1-2ubuntu2`
-- `libicu-dev:amd64=66.1-2ubuntu2`
-- `libicu66:amd64=66.1-2ubuntu2`
+- `icu-devtools=66.1-2ubuntu2.1`
+- `libicu-dev:amd64=66.1-2ubuntu2.1`
+- `libicu66:amd64=66.1-2ubuntu2.1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -2309,11 +2319,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris icu=66.1-2ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/i/icu/icu_66.1-2ubuntu2.dsc' icu_66.1-2ubuntu2.dsc 2351 SHA256:a19b1f586160efd41dc7f9eec7babf5ce9d03b578aa59cd302f11c385e86d893
-'http://archive.ubuntu.com/ubuntu/pool/main/i/icu/icu_66.1.orig.tar.gz' icu_66.1.orig.tar.gz 24361305 SHA256:52a3f2209ab95559c1cf0a14f24338001f389615bf00e2585ef3dbc43ecf0a2e
-'http://archive.ubuntu.com/ubuntu/pool/main/i/icu/icu_66.1.orig.tar.gz.asc' icu_66.1.orig.tar.gz.asc 833 SHA256:08c81d86fb4ed07ce87434afdfdc39a4114ac494908cd4eebc734ba454a80f06
-'http://archive.ubuntu.com/ubuntu/pool/main/i/icu/icu_66.1-2ubuntu2.debian.tar.xz' icu_66.1-2ubuntu2.debian.tar.xz 25500 SHA256:480775da69cad60a4dc1aa20097db1d87f5435406bafa3394394c8a546a514df
+$ apt-get source -qq --print-uris icu=66.1-2ubuntu2.1
+'http://archive.ubuntu.com/ubuntu/pool/main/i/icu/icu_66.1-2ubuntu2.1.dsc' icu_66.1-2ubuntu2.1.dsc 2047 SHA512:202bb201876d0167afede5fcf4abc3cb55faf75059edac64d50e3560064fe2482608e2b2476669767fa7f80aaf845a3d1c6b619e737358eb726c5de03059a8c6
+'http://archive.ubuntu.com/ubuntu/pool/main/i/icu/icu_66.1.orig.tar.gz' icu_66.1.orig.tar.gz 24361305 SHA512:78d87bce65a7bdf7e9a19bda13e353c60846816ff34025f829d1ff15f9ac49aa6061eb192173742be0eca105684ce0e39e95656147afe848520bf60274c8d246
+'http://archive.ubuntu.com/ubuntu/pool/main/i/icu/icu_66.1.orig.tar.gz.asc' icu_66.1.orig.tar.gz.asc 833 SHA512:5e624e8a1f210e8671f683efa203b96eebb9a311ca9945705d77e05fc182291c064157660b094ec5a073088a70892fd74e977b57fdd0abddc48ac73a4ab8781c
+'http://archive.ubuntu.com/ubuntu/pool/main/i/icu/icu_66.1-2ubuntu2.1.debian.tar.xz' icu_66.1-2ubuntu2.1.debian.tar.xz 29700 SHA512:f7a9e5f49e157ede3e5dbc1a03b1521fed15dedfbdd6d8e98672f36e9b643c93e0e6407a26b66d2677bc38a5fe0ee090d9e5931d106ee1cbac4eb969db451ace
 ```
 
 ### `dpkg` source package: `ignition-cmake2=2.9.0-1~focal`
@@ -5238,19 +5248,24 @@ $ apt-get source -qq --print-uris lilv=0.24.6-1ubuntu0.1
 'http://archive.ubuntu.com/ubuntu/pool/universe/l/lilv/lilv_0.24.6-1ubuntu0.1.debian.tar.xz' lilv_0.24.6-1ubuntu0.1.debian.tar.xz 18808 SHA512:c7145aebd247bc912107aed05ea5ae4a660cc02971272d3177bdfe7ff98e079ea35fd60c6d88f1e9c95ebb8ecf41fe463112a5c703db0bf6b23fadc279f43bff
 ```
 
-### `dpkg` source package: `linux=5.4.0-89.100`
+### `dpkg` source package: `linux=5.4.0-91.102`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=5.4.0-89.100`
+- `linux-libc-dev:amd64=5.4.0-91.102`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris linux=5.4.0-91.102
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-91.102.dsc' linux_5.4.0-91.102.dsc 6879 SHA512:79b0aa26a4546127a97dc390b038a72318e121938bbb8aa96874d767dce6d9732325c97f32232177de297fdd0384fa4ba5769a74f874145616f74e4512e80a1c
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0.orig.tar.gz' linux_5.4.0.orig.tar.gz 170244619 SHA512:62b09a7231fd793973c5f59b16c4f6ffce621188b02a71915874b05e8e3f956fb6146d4a4fb1a4475bebe463949ca5a18da12842c3ce7c52e996e6bc4012a074
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-91.102.diff.gz' linux_5.4.0-91.102.diff.gz 8785582 SHA512:ed7a28380d9f01d770f8c02678600231e329830ace586072dd4fa56209678cbe6e35fc2be8a7b45abe06318a44235c65faead3523d7e3e78f914eaff98906655
+```
 
 ### `dpkg` source package: `llvm-toolchain-12=1:12.0.0-3ubuntu1~20.04.4`
 
@@ -5380,15 +5395,15 @@ $ apt-get source -qq --print-uris mawk=1.3.4.20200120-2
 'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.4.20200120-2.debian.tar.xz' mawk_1.3.4.20200120-2.debian.tar.xz 7504 SHA256:b772ed2f016b0286980c46cbc1f1f4ae62887ef2aa3dff6ef10cae638f923f26
 ```
 
-### `dpkg` source package: `mesa=21.0.3-0ubuntu0.3~20.04.3`
+### `dpkg` source package: `mesa=21.0.3-0ubuntu0.3~20.04.5`
 
 Binary Packages:
 
-- `libegl-mesa0:amd64=21.0.3-0ubuntu0.3~20.04.3`
-- `libgbm1:amd64=21.0.3-0ubuntu0.3~20.04.3`
-- `libgl1-mesa-dri:amd64=21.0.3-0ubuntu0.3~20.04.3`
-- `libglapi-mesa:amd64=21.0.3-0ubuntu0.3~20.04.3`
-- `libglx-mesa0:amd64=21.0.3-0ubuntu0.3~20.04.3`
+- `libegl-mesa0:amd64=21.0.3-0ubuntu0.3~20.04.5`
+- `libgbm1:amd64=21.0.3-0ubuntu0.3~20.04.5`
+- `libgl1-mesa-dri:amd64=21.0.3-0ubuntu0.3~20.04.5`
+- `libglapi-mesa:amd64=21.0.3-0ubuntu0.3~20.04.5`
+- `libglx-mesa0:amd64=21.0.3-0ubuntu0.3~20.04.5`
 
 Licenses: (parsed from: `/usr/share/doc/libegl-mesa0/copyright`, `/usr/share/doc/libgbm1/copyright`, `/usr/share/doc/libgl1-mesa-dri/copyright`, `/usr/share/doc/libglapi-mesa/copyright`, `/usr/share/doc/libglx-mesa0/copyright`)
 
@@ -5402,9 +5417,14 @@ Licenses: (parsed from: `/usr/share/doc/libegl-mesa0/copyright`, `/usr/share/doc
 - `MLAA`
 - `SGI`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris mesa=21.0.3-0ubuntu0.3~20.04.5
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_21.0.3-0ubuntu0.3~20.04.5.dsc' mesa_21.0.3-0ubuntu0.3~20.04.5.dsc 5523 SHA512:bfc9a8fb14dc0bd9a6f0ae1b04259f1cc805a40883f01d1e19461601428de8f31d1618dce3168f4c35882ca5c47587923749ad586255a14b96db33256d47f4b9
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_21.0.3.orig.tar.gz' mesa_21.0.3.orig.tar.gz 22634551 SHA512:bcd4cfdc624f2e8adedaaa71b0bbc506ef96e7b9122dbc4ef94bdd544ca13de5b02d2497ad9a646f46d5b290f689b927eb87272d36327f1a1f336c0bd67bb5af
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_21.0.3-0ubuntu0.3~20.04.5.diff.gz' mesa_21.0.3-0ubuntu0.3~20.04.5.diff.gz 123244 SHA512:bac0fd3e45034350ccf98785265a70d28935b6da60e1a3d6886b11f477a45678ac37acfd1790b7bfbc86cc1d7dee5212cbcf06028855100d3ee218018fc804de
+```
 
 ### `dpkg` source package: `mime-support=3.64ubuntu1`
 
@@ -5787,11 +5807,11 @@ $ apt-get source -qq --print-uris nspr=2:4.25-1
 'http://archive.ubuntu.com/ubuntu/pool/main/n/nspr/nspr_4.25-1.debian.tar.xz' nspr_4.25-1.debian.tar.xz 10684 SHA256:c0d680968c3bb80f3c66e658a29c27608f22923bfcabccbac11fc5ff40f96d08
 ```
 
-### `dpkg` source package: `nss=2:3.49.1-1ubuntu1.5`
+### `dpkg` source package: `nss=2:3.49.1-1ubuntu1.6`
 
 Binary Packages:
 
-- `libnss3:amd64=2:3.49.1-1ubuntu1.5`
+- `libnss3:amd64=2:3.49.1-1ubuntu1.6`
 
 Licenses: (parsed from: `/usr/share/doc/libnss3/copyright`)
 
@@ -5801,9 +5821,14 @@ Licenses: (parsed from: `/usr/share/doc/libnss3/copyright`)
 - `Zlib`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris nss=2:3.49.1-1ubuntu1.6
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nss/nss_3.49.1-1ubuntu1.6.dsc' nss_3.49.1-1ubuntu1.6.dsc 2287 SHA512:d443346e0b800fd49cd94b6f4b40fab9f7204ca61872dad32723ef332c77b2106b797625efbfdba4abc93aae8f4663c3baf824672656b79d41d96526aef30d9c
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nss/nss_3.49.1.orig.tar.gz' nss_3.49.1.orig.tar.gz 76489134 SHA512:e463c9d71537ac30dbd2998cbdbc0cadc734768a6f3a316c57b6a6d01ad6d26ca732dff65e9c88555a834ae7d71fc857e4cbc1799438069f544a1e27f75985e8
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nss/nss_3.49.1-1ubuntu1.6.debian.tar.xz' nss_3.49.1-1ubuntu1.6.debian.tar.xz 199832 SHA512:5bd39d2fb81acae597586f5229c364a8e2c3ae6cacd938e877fff844695563d7637850c0b62ffaf90733e956517a75e3d1c111756ceb421205894c2412d4175a
+```
 
 ### `dpkg` source package: `numactl=2.0.12-1`
 
@@ -6136,13 +6161,13 @@ $ apt-get source -qq --print-uris openssh=1:8.2p1-4ubuntu0.3
 'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.2p1-4ubuntu0.3.debian.tar.xz' openssh_8.2p1-4ubuntu0.3.debian.tar.xz 175180 SHA512:3a400240b0d051b0ac6b8888276935d07a379f683d829945a11c4cfd4b454460b8d226943700010a986e57c598251e2517fc2b60cd548c9f670e54f9d2df3d76
 ```
 
-### `dpkg` source package: `openssl=1.1.1f-1ubuntu2.8`
+### `dpkg` source package: `openssl=1.1.1f-1ubuntu2.10`
 
 Binary Packages:
 
-- `libssl-dev:amd64=1.1.1f-1ubuntu2.8`
-- `libssl1.1:amd64=1.1.1f-1ubuntu2.8`
-- `openssl=1.1.1f-1ubuntu2.8`
+- `libssl-dev:amd64=1.1.1f-1ubuntu2.10`
+- `libssl1.1:amd64=1.1.1f-1ubuntu2.10`
+- `openssl=1.1.1f-1ubuntu2.10`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -6151,10 +6176,10 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openssl=1.1.1f-1ubuntu2.8
-'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.8.dsc' openssl_1.1.1f-1ubuntu2.8.dsc 2466 SHA512:79514668a1c50eb32665786dae9b2e60ec4c908c173a7c66feb97ce3bf87d46e5c5dd8786a3c8d20aab20a9c4705821fa833ff4f54e92a1c033215a1c3749c07
-'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f.orig.tar.gz' openssl_1.1.1f.orig.tar.gz 9792828 SHA512:b00bd9b5ad5298fbceeec6bb19c1ab0c106ca5cfb31178497c58bf7e0e0cf30fcc19c20f84e23af31cc126bf2447d3e4f8461db97bafa7bd78f69561932f000c
-'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.8.debian.tar.xz' openssl_1.1.1f-1ubuntu2.8.debian.tar.xz 166152 SHA512:97fc740bd4fe474019878dd90d7130200644aec105fc6cf926791dada9a2bb8f330091b7e91fa6410e516dfbfb656120520b86190b3e417fcb9d461069b604d1
+$ apt-get source -qq --print-uris openssl=1.1.1f-1ubuntu2.10
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.10.dsc' openssl_1.1.1f-1ubuntu2.10.dsc 2499 SHA512:388d30358cd111bac756318b259f76eedd77e8f131b1537f63b0b3e7a4c8860f9d39b8a3662931c37993c75579cd95640244e96382e841a3477abb34a26bde73
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f.orig.tar.gz' openssl_1.1.1f.orig.tar.gz 9792828 SHA512:b00bd9b5ad5298fbceeec6bb19c1ab0c106ca5cfb31178497c58bf7e0e0cf30fcc19c20f84e23af31cc126bf2447d3e4f8461db97bafa7bd78f69561932f000c
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.10.debian.tar.xz' openssl_1.1.1f-1ubuntu2.10.debian.tar.xz 170668 SHA512:e95371b58d36b3b7184c0b7b6a459ed121fb57baa4bc694bc0c1f004be98ef7b672b6c8ec2e1207998bf35aafb3dd2c3e8a0e018c13930dbb072f8d911b2b9ed
 ```
 
 ### `dpkg` source package: `opus=1.3.1-0ubuntu1`
@@ -6448,12 +6473,12 @@ $ apt-get source -qq --print-uris poppler=0.86.1-0ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/p/poppler/poppler_0.86.1-0ubuntu1.debian.tar.xz' poppler_0.86.1-0ubuntu1.debian.tar.xz 34832 SHA256:fe88ed5df596c68ecf5ffa7e2ff6dc4cdedea4ae3ba8c79b7fefc9689a9b6db9
 ```
 
-### `dpkg` source package: `postgresql-12=12.8-0ubuntu0.20.04.1`
+### `dpkg` source package: `postgresql-12=12.9-0ubuntu0.20.04.1`
 
 Binary Packages:
 
-- `libpq-dev=12.8-0ubuntu0.20.04.1`
-- `libpq5:amd64=12.8-0ubuntu0.20.04.1`
+- `libpq-dev=12.9-0ubuntu0.20.04.1`
+- `libpq5:amd64=12.9-0ubuntu0.20.04.1`
 
 Licenses: (parsed from: `/usr/share/doc/libpq-dev/copyright`, `/usr/share/doc/libpq5/copyright`)
 
@@ -6473,9 +6498,14 @@ Licenses: (parsed from: `/usr/share/doc/libpq-dev/copyright`, `/usr/share/doc/li
 - `nagaysau-ishii`
 - `rijndael`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris postgresql-12=12.9-0ubuntu0.20.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-12/postgresql-12_12.9-0ubuntu0.20.04.1.dsc' postgresql-12_12.9-0ubuntu0.20.04.1.dsc 3760 SHA512:5a1459865a1bbea0d4db041ee86706ca3904ca2131560228987da95bbba8ab8b3ef52c7275aa26de5a4c47db3fed9d87668e68ab7f1686c4ea99aa0d5d409c59
+'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-12/postgresql-12_12.9.orig.tar.bz2' postgresql-12_12.9.orig.tar.bz2 20904260 SHA512:11697d8283f5df5a9c74c2406e94d1b6da6df8358ad48f3b773825aab98e8395f9fd4e3fc8b1e6ebad3743c3dadbda8b795d4fe84a447d7913223e136cf2b88f
+'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-12/postgresql-12_12.9-0ubuntu0.20.04.1.debian.tar.xz' postgresql-12_12.9-0ubuntu0.20.04.1.debian.tar.xz 26256 SHA512:27a0e204900c6cdeb4ba50f32512b2d1591acb460489bec67d1535a7fe775fc981371052a44d3dcf6b0227835b53d801ba6ae091464e3babd10f4ae36f9cd769
+```
 
 ### `dpkg` source package: `procps=2:3.3.16-1ubuntu2.3`
 
@@ -6563,11 +6593,11 @@ $ apt-get source -qq --print-uris protobuf=3.6.1.3-2ubuntu5
 'http://archive.ubuntu.com/ubuntu/pool/main/p/protobuf/protobuf_3.6.1.3-2ubuntu5.debian.tar.xz' protobuf_3.6.1.3-2ubuntu5.debian.tar.xz 24060 SHA256:63db3e1965639a0ac0820d558ad49a0af23ecb647df986790d51adda76a52d73
 ```
 
-### `dpkg` source package: `pulseaudio=1:13.99.1-1ubuntu3.12`
+### `dpkg` source package: `pulseaudio=1:13.99.1-1ubuntu3.13`
 
 Binary Packages:
 
-- `libpulse0:amd64=1:13.99.1-1ubuntu3.12`
+- `libpulse0:amd64=1:13.99.1-1ubuntu3.13`
 
 Licenses: (parsed from: `/usr/share/doc/libpulse0/copyright`)
 
@@ -6578,9 +6608,14 @@ Licenses: (parsed from: `/usr/share/doc/libpulse0/copyright`)
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris pulseaudio=1:13.99.1-1ubuntu3.13
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pulseaudio/pulseaudio_13.99.1-1ubuntu3.13.dsc' pulseaudio_13.99.1-1ubuntu3.13.dsc 3223 SHA512:8f6e4e45d65051c402d0c2ac44fd21db752ec5301568d0a8cd6c238b33abe09486f9b89e5459f1652f5e673ab7b6bab9014aece2104384a737e1b5a5ad8b05ad
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pulseaudio/pulseaudio_13.99.1.orig.tar.xz' pulseaudio_13.99.1.orig.tar.xz 1955840 SHA512:426530b6b9dd94dcc848067376857faae42e86878a82784c5bafa615a68dcc7e22702e0cb5835f91160f19fc9934fe3d53b7d387e3f42b6595fa934b172fe2aa
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pulseaudio/pulseaudio_13.99.1-1ubuntu3.13.debian.tar.xz' pulseaudio_13.99.1-1ubuntu3.13.debian.tar.xz 159176 SHA512:94d1e774f4dfbbbe5c9b44fc8e7135e9a3dbcf367194d41e65438d175269120b7ba45d0c9bf970b8e1dc280f3c8bb71875af4a1b18e472e280335968dc17fd64
+```
 
 ### `dpkg` source package: `python3-defaults=3.8.2-0ubuntu2`
 
@@ -6624,17 +6659,17 @@ $ apt-get source -qq --print-uris python3-stdlib-extensions=3.8.10-0ubuntu1~20.0
 'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.8.10-0ubuntu1~20.04.debian.tar.xz' python3-stdlib-extensions_3.8.10-0ubuntu1~20.04.debian.tar.xz 24508 SHA512:ca4894ddf04e5f89c46183271e65978c4dadd90faac196e13600797b9b451356cea2a0ee2c1d25e82a11b4e192fc11c2125b533035cf75e8e28ff7fdc792c695
 ```
 
-### `dpkg` source package: `python3.8=3.8.10-0ubuntu1~20.04.1`
+### `dpkg` source package: `python3.8=3.8.10-0ubuntu1~20.04.2`
 
 Binary Packages:
 
-- `libpython3.8:amd64=3.8.10-0ubuntu1~20.04.1`
-- `libpython3.8-dev:amd64=3.8.10-0ubuntu1~20.04.1`
-- `libpython3.8-minimal:amd64=3.8.10-0ubuntu1~20.04.1`
-- `libpython3.8-stdlib:amd64=3.8.10-0ubuntu1~20.04.1`
-- `python3.8=3.8.10-0ubuntu1~20.04.1`
-- `python3.8-dev=3.8.10-0ubuntu1~20.04.1`
-- `python3.8-minimal=3.8.10-0ubuntu1~20.04.1`
+- `libpython3.8:amd64=3.8.10-0ubuntu1~20.04.2`
+- `libpython3.8-dev:amd64=3.8.10-0ubuntu1~20.04.2`
+- `libpython3.8-minimal:amd64=3.8.10-0ubuntu1~20.04.2`
+- `libpython3.8-stdlib:amd64=3.8.10-0ubuntu1~20.04.2`
+- `python3.8=3.8.10-0ubuntu1~20.04.2`
+- `python3.8-dev=3.8.10-0ubuntu1~20.04.2`
+- `python3.8-minimal=3.8.10-0ubuntu1~20.04.2`
 
 Licenses: (parsed from: `/usr/share/doc/libpython3.8/copyright`, `/usr/share/doc/libpython3.8-dev/copyright`, `/usr/share/doc/libpython3.8-minimal/copyright`, `/usr/share/doc/libpython3.8-stdlib/copyright`, `/usr/share/doc/python3.8/copyright`, `/usr/share/doc/python3.8-dev/copyright`, `/usr/share/doc/python3.8-minimal/copyright`)
 
@@ -6656,9 +6691,14 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.8/copyright`, `/usr/share/doc
 - `use in source`
 - `without`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris python3.8=3.8.10-0ubuntu1~20.04.2
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.10-0ubuntu1~20.04.2.dsc' python3.8_3.8.10-0ubuntu1~20.04.2.dsc 3370 SHA512:29054162745490a8f275ef065276d6ac4d6d9a3dfa2dc8c740a6038c8a9eeee909e0f0d02b07c8ce56324a4e8a55d970886a5d9465953d03ffea245ffc943571
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.10.orig.tar.xz' python3.8_3.8.10.orig.tar.xz 18433456 SHA512:0be69705483ff9692e12048a96180e586f9d84c8d53066629f7fb2389585eb75c0f3506bb8182936e322508f58b71f4d8c6dfebbab9049b31b49da11d3b98e80
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.10-0ubuntu1~20.04.2.debian.tar.xz' python3.8_3.8.10-0ubuntu1~20.04.2.debian.tar.xz 214612 SHA512:9b149f8cf1ede3fbf4aaebd9ecba147dad0c5507d9b7aa3c51e3d4e330a76c863a6749aec59578a66f9175bdb2f625f36c9a42c00b417d79d63c1d9a61e5cb51
+```
 
 ### `dpkg` source package: `qhull=2015.2-4`
 
@@ -7144,13 +7184,13 @@ $ apt-get source -qq --print-uris rubygems-integration=1.16
 'http://archive.ubuntu.com/ubuntu/pool/main/r/rubygems-integration/rubygems-integration_1.16.tar.xz' rubygems-integration_1.16.tar.xz 5404 SHA256:c0de4ed5f4530168fb21bd40c092e734a432ef5a7273fde2e6208d6ce3f11150
 ```
 
-### `dpkg` source package: `sdformat9=9.6.1-1~focal`
+### `dpkg` source package: `sdformat9=9.7.0-1~focal`
 
 Binary Packages:
 
-- `libsdformat9:amd64=9.6.1-1~focal`
-- `libsdformat9-dev:amd64=9.6.1-1~focal`
-- `sdformat9-sdf=9.6.1-1~focal`
+- `libsdformat9:amd64=9.7.0-1~focal`
+- `libsdformat9-dev:amd64=9.7.0-1~focal`
+- `sdformat9-sdf=9.7.0-1~focal`
 
 Licenses: (parsed from: `/usr/share/doc/libsdformat9/copyright`, `/usr/share/doc/libsdformat9-dev/copyright`, `/usr/share/doc/sdformat9-sdf/copyright`)
 
@@ -7158,9 +7198,14 @@ Licenses: (parsed from: `/usr/share/doc/libsdformat9/copyright`, `/usr/share/doc
 - `Apache-2.0`
 - `BSD-3-clause`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris sdformat9=9.7.0-1~focal
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/s/sdformat9/sdformat9_9.7.0-1~focal.dsc' sdformat9_9.7.0-1~focal.dsc 1376 SHA256:4d2394d20b8c6eb21bfbec8dab8ac616fee8799aea12315c356b3258e5ed5d43
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/s/sdformat9/sdformat9_9.7.0.orig.tar.bz2' sdformat9_9.7.0.orig.tar.bz2 699483 SHA256:dcfa6faa2a12a6814e8cf020539c351d69c3a1b82092645d0dee3ec7c968b8f0
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/s/sdformat9/sdformat9_9.7.0-1~focal.debian.tar.xz' sdformat9_9.7.0-1~focal.debian.tar.xz 3480 SHA256:5c896eb3095b1150270ebed90539d9d9d547d034ea0f0a645a382fc89ecf12c4
+```
 
 ### `dpkg` source package: `sed=4.7-1`
 

@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:fd6cd3b9f0487cde0a019d32b5ec17a0127e98baf0caceacf78dad4894df78b2`
-- Created: `2021-11-01T22:49:28.21066241Z`
-- Virtual Size: ~ 681.13 Mb  
+- Image ID: `sha256:fce70b05f1747bb80e58a7d0137aa9e1a037903402fda1a076f813e0bc623602`
+- Created: `2021-12-17T19:03:42.793276821Z`
+- Virtual Size: ~ 681.15 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/gzserver_entrypoint.sh"]`
@@ -1145,13 +1145,13 @@ $ apt-get source -qq --print-uris game-music-emu=0.6.2-1
 'http://archive.ubuntu.com/ubuntu/pool/universe/g/game-music-emu/game-music-emu_0.6.2-1.debian.tar.xz' game-music-emu_0.6.2-1.debian.tar.xz 4412 SHA256:8ea69035bd72261ec85e5f0486707d448f7491733ae055040a9995cebb0ea820
 ```
 
-### `dpkg` source package: `gazebo11=11.9.0-1~bionic`
+### `dpkg` source package: `gazebo11=11.9.1-1~bionic`
 
 Binary Packages:
 
-- `gazebo11=11.9.0-1~bionic`
-- `gazebo11-common=11.9.0-1~bionic`
-- `libgazebo11:amd64=11.9.0-1~bionic`
+- `gazebo11=11.9.1-1~bionic`
+- `gazebo11-common=11.9.1-1~bionic`
+- `libgazebo11:amd64=11.9.1-1~bionic`
 
 Licenses: (parsed from: `/usr/share/doc/gazebo11/copyright`, `/usr/share/doc/gazebo11-common/copyright`, `/usr/share/doc/libgazebo11/copyright`)
 
@@ -1167,9 +1167,14 @@ Licenses: (parsed from: `/usr/share/doc/gazebo11/copyright`, `/usr/share/doc/gaz
 - `LGPL-3+`
 - `ZLIB`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris gazebo11=11.9.1-1~bionic
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo11/gazebo11_11.9.1-1~bionic.dsc' gazebo11_11.9.1-1~bionic.dsc 2354 SHA256:e8da3998399a2ad7f97333bed197ef18883452667adddfec7671d5c529be2542
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo11/gazebo11_11.9.1.orig.tar.bz2' gazebo11_11.9.1.orig.tar.bz2 56472954 SHA256:2959f4bed5fa8b5aa7f86bcd518e74a65402fe21b91a8d125807117827731be6
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo11/gazebo11_11.9.1-1~bionic.debian.tar.xz' gazebo11_11.9.1-1~bionic.debian.tar.xz 6812 SHA256:f824c6b01f693d56b5df65773b5b612bbb203d1ccd09889305c7bc00317e296b
+```
 
 ### `dpkg` source package: `gcc-7=7.5.0-3ubuntu1~18.04`
 
@@ -1343,19 +1348,24 @@ $ apt-get source -qq --print-uris giflib=5.1.4-2ubuntu0.1
 'http://archive.ubuntu.com/ubuntu/pool/main/g/giflib/giflib_5.1.4-2ubuntu0.1.debian.tar.xz' giflib_5.1.4-2ubuntu0.1.debian.tar.xz 8768 SHA512:e1dc47d73443a9d436482b8945e9f35012f6de278976bdee125d7fd4baa54dcd3c5ee3643e9a1052cfa871917ee5047b22610f4336d8643958ba1e849dfe7b9e
 ```
 
-### `dpkg` source package: `glib2.0=2.56.4-0ubuntu0.18.04.8`
+### `dpkg` source package: `glib2.0=2.56.4-0ubuntu0.18.04.9`
 
 Binary Packages:
 
-- `libglib2.0-0:amd64=2.56.4-0ubuntu0.18.04.8`
+- `libglib2.0-0:amd64=2.56.4-0ubuntu0.18.04.9`
 
 Licenses: (parsed from: `/usr/share/doc/libglib2.0-0/copyright`)
 
 - `LGPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris glib2.0=2.56.4-0ubuntu0.18.04.9
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.56.4-0ubuntu0.18.04.9.dsc' glib2.0_2.56.4-0ubuntu0.18.04.9.dsc 3308 SHA512:1209ada47df60c25f02e82371e8ebcdde130ebbf8642639a8a67867ca57dd2f5741937d36e645ccbc15be35e92664d60b5b7d3ff1342fe365bbe512b5b3e3cb9
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.56.4.orig.tar.xz' glib2.0_2.56.4.orig.tar.xz 7029768 SHA512:280a46c2af13283a08c15ff0b4f5492659c2884521930600ad45310ed181c44a878ad8f9b36bae68ed6e7d92db6f1630f7bf015148c513dc317d25807f13abb0
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.56.4-0ubuntu0.18.04.9.debian.tar.xz' glib2.0_2.56.4-0ubuntu0.18.04.9.debian.tar.xz 107488 SHA512:9cbf02335e216eb2d74914de67411d89b76ff4a18d4194e19801326eb31be8d9300a4416588d7ad1c6fe384e57c4d986f64f05a93ae69fa137d68e0c80c174be
+```
 
 ### `dpkg` source package: `glibc=2.27-3ubuntu1.4`
 
@@ -1645,19 +1655,24 @@ $ apt-get source -qq --print-uris hostname=3.20
 'http://archive.ubuntu.com/ubuntu/pool/main/h/hostname/hostname_3.20.tar.gz' hostname_3.20.tar.gz 13336 SHA256:e7ed56f8c532573ff34d9bd6e7a10d04fbbb2c7fae187898805868e5fed24ab0
 ```
 
-### `dpkg` source package: `icu=60.2-3ubuntu3.1`
+### `dpkg` source package: `icu=60.2-3ubuntu3.2`
 
 Binary Packages:
 
-- `libicu60:amd64=60.2-3ubuntu3.1`
+- `libicu60:amd64=60.2-3ubuntu3.2`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris icu=60.2-3ubuntu3.2
+'http://archive.ubuntu.com/ubuntu/pool/main/i/icu/icu_60.2-3ubuntu3.2.dsc' icu_60.2-3ubuntu3.2.dsc 1845 SHA512:7a31aeb82e3d5456296665d77efb93c58f93fc49eef10030de32a2811f24592c2ec1f16d9f734ea8a8613bf5ac1bc5ecdb85b08698bdaa51fbf0954722eefa7e
+'http://archive.ubuntu.com/ubuntu/pool/main/i/icu/icu_60.2.orig.tar.gz' icu_60.2.orig.tar.gz 23315541 SHA512:ecbd9eea199d261d5f2b262abab6b1f3ee4e993081faca1426046b4ed2eadbb082fca3ebdeff82f6b431eafa7ddbe764fe64f9d96bf96486d1aa51cdc4c3d8b2
+'http://archive.ubuntu.com/ubuntu/pool/main/i/icu/icu_60.2-3ubuntu3.2.debian.tar.xz' icu_60.2-3ubuntu3.2.debian.tar.xz 29840 SHA512:85fc052c31cb78043a3d4029d0024e2871443aa6f31fce677aec398bb2f73d51ff1ba82d19c9e182d8d2bba2e08dd71e2ec8e8edde8ec1455c79eb63ee205a12
+```
 
 ### `dpkg` source package: `ignition-common3=3.14.0-1~bionic`
 
@@ -4605,19 +4620,24 @@ $ apt-get source -qq --print-uris nspr=2:4.18-1ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/n/nspr/nspr_4.18-1ubuntu1.debian.tar.xz' nspr_4.18-1ubuntu1.debian.tar.xz 19520 SHA256:712cd17e174defbae082724ba3278164218cd77f4fa322d5f376c0bec111b70c
 ```
 
-### `dpkg` source package: `nss=2:3.35-2ubuntu2.12`
+### `dpkg` source package: `nss=2:3.35-2ubuntu2.13`
 
 Binary Packages:
 
-- `libnss3:amd64=2:3.35-2ubuntu2.12`
+- `libnss3:amd64=2:3.35-2ubuntu2.13`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris nss=2:3.35-2ubuntu2.13
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nss/nss_3.35-2ubuntu2.13.dsc' nss_3.35-2ubuntu2.13.dsc 2354 SHA512:65e0716cbdc78a2b7ee3de6e3c7cfd7e34a9496b9a06f65e23a62c6f5017d8a4e5dca6ea56cec8d23915a1e0a075d6ed9973602344198f0d1de2280cc37fbfb0
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nss/nss_3.35.orig.tar.gz' nss_3.35.orig.tar.gz 9620041 SHA512:8d466f4602427d278b6aa28af0e6bdb99326fc40c94ac6d517d1cbe7ce6b9332dadba52ea092762fac2fd6e72f17cb880cf81e1cf86bf6b4f7913a755419626d
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nss/nss_3.35-2ubuntu2.13.debian.tar.xz' nss_3.35-2ubuntu2.13.debian.tar.xz 220588 SHA512:d5752347a026b611ebd7baa7e489e3bdf3468556dc6c366f1248ae4c048bc8e9fa4701c245aac689b450be64991e7bb7e3a4cf06ff5bb7ee94a5f642a94165d2
+```
 
 ### `dpkg` source package: `numactl=2.0.11-2.1ubuntu0.1`
 
@@ -4781,19 +4801,24 @@ $ apt-get source -qq --print-uris openal-soft=1:1.18.2-2
 'http://archive.ubuntu.com/ubuntu/pool/universe/o/openal-soft/openal-soft_1.18.2-2.debian.tar.xz' openal-soft_1.18.2-2.debian.tar.xz 12568 SHA256:c000c6a95f16e7307748c40c2c34cdf8484887a56d8bafd8071b716976799059
 ```
 
-### `dpkg` source package: `openexr=2.2.0-11.1ubuntu1.7`
+### `dpkg` source package: `openexr=2.2.0-11.1ubuntu1.9`
 
 Binary Packages:
 
-- `libopenexr22:amd64=2.2.0-11.1ubuntu1.7`
+- `libopenexr22:amd64=2.2.0-11.1ubuntu1.9`
 
 Licenses: (parsed from: `/usr/share/doc/libopenexr22/copyright`)
 
 - `openexr`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris openexr=2.2.0-11.1ubuntu1.9
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openexr/openexr_2.2.0-11.1ubuntu1.9.dsc' openexr_2.2.0-11.1ubuntu1.9.dsc 2403 SHA512:946115a443dbc601337d8327be9307bbbe4f75c7441a663a0e66f9c7c008e06e9da9a65f1a01634f7f4791f9c98020277d6e3bfd116cbd8502ba0208b04cc794
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openexr/openexr_2.2.0.orig.tar.gz' openexr_2.2.0.orig.tar.gz 14489661 SHA512:017abbeeb6b814508180721bc8e8940094965c4c55b135a198c6bcb109a04bf7f72e4aee81ee72cb2185fe818a41d892b383e8d2d59f40c673198948cb79279a
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openexr/openexr_2.2.0-11.1ubuntu1.9.debian.tar.xz' openexr_2.2.0-11.1ubuntu1.9.debian.tar.xz 40924 SHA512:07cecb0a817953c070391f6d93b0a9cf3c940916c6203c8f87449e5647bc34336dbf5b55555d57d0a6ba7b44e9dd164887c15df82e85197bf869314e1be5551a
+```
 
 ### `dpkg` source package: `openjpeg2=2.3.0-2build0.18.04.1`
 
@@ -5075,11 +5100,11 @@ $ apt-get source -qq --print-uris poppler=0.62.0-2ubuntu2.12
 'http://archive.ubuntu.com/ubuntu/pool/main/p/poppler/poppler_0.62.0-2ubuntu2.12.debian.tar.xz' poppler_0.62.0-2ubuntu2.12.debian.tar.xz 45412 SHA512:7fc4e1e17c6e2239521f9e70e3b0fa0c84595e396ce96a0e2b95185bf09f77a88f0e72e641f42410c480665a9d922867244a57edaeb148f3d3d31958729c09bc
 ```
 
-### `dpkg` source package: `postgresql-10=10.18-0ubuntu0.18.04.1`
+### `dpkg` source package: `postgresql-10=10.19-0ubuntu0.18.04.1`
 
 Binary Packages:
 
-- `libpq5:amd64=10.18-0ubuntu0.18.04.1`
+- `libpq5:amd64=10.19-0ubuntu0.18.04.1`
 
 Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`)
 
@@ -5098,9 +5123,14 @@ Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`)
 - `nagaysau-ishii`
 - `rijndael`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris postgresql-10=10.19-0ubuntu0.18.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-10/postgresql-10_10.19-0ubuntu0.18.04.1.dsc' postgresql-10_10.19-0ubuntu0.18.04.1.dsc 3620 SHA512:590a30c676d82b39016e03f2bf54b5b7db7623abd336eaf8af163bcdd912243967e6925c98cf8729a0a32784eae7a5b62af3fdba2dc2df7eaa99e21bf7cb2d50
+'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-10/postgresql-10_10.19.orig.tar.bz2' postgresql-10_10.19.orig.tar.bz2 19261478 SHA512:41b0f5026be7d563e41b54e9ea7199dd466a132d355be0b71a91d41f533d97fbf550eccf2a2ece3d60c5dab5921ebeea3ac4780c18c54b924df52d7423305a22
+'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-10/postgresql-10_10.19-0ubuntu0.18.04.1.debian.tar.xz' postgresql-10_10.19-0ubuntu0.18.04.1.debian.tar.xz 35932 SHA512:7daf904ea64672a45a7ec1d11990574be202bbb114392d1ab303c4ffec48d98cb0a75df37a388076a414ade2a52955112f100579abbfad921ae0b896191228b5
+```
 
 ### `dpkg` source package: `procps=2:3.3.12-3ubuntu1.2`
 
@@ -5437,12 +5467,12 @@ $ apt-get source -qq --print-uris rubberband=1.8.1-7ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/universe/r/rubberband/rubberband_1.8.1-7ubuntu2.debian.tar.xz' rubberband_1.8.1-7ubuntu2.debian.tar.xz 9424 SHA256:2e1af1831dc0223fc5df26d131e633fc5f9ccbb68c705cfa95823db9584df15f
 ```
 
-### `dpkg` source package: `sdformat9=9.6.1-1~bionic`
+### `dpkg` source package: `sdformat9=9.7.0-1~bionic`
 
 Binary Packages:
 
-- `libsdformat9:amd64=9.6.1-1~bionic`
-- `sdformat9-sdf=9.6.1-1~bionic`
+- `libsdformat9:amd64=9.7.0-1~bionic`
+- `sdformat9-sdf=9.7.0-1~bionic`
 
 Licenses: (parsed from: `/usr/share/doc/libsdformat9/copyright`, `/usr/share/doc/sdformat9-sdf/copyright`)
 
@@ -5450,9 +5480,14 @@ Licenses: (parsed from: `/usr/share/doc/libsdformat9/copyright`, `/usr/share/doc
 - `Apache-2.0`
 - `BSD-3-clause`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris sdformat9=9.7.0-1~bionic
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/s/sdformat9/sdformat9_9.7.0-1~bionic.dsc' sdformat9_9.7.0-1~bionic.dsc 1379 SHA256:92d8336d1fe3d44c49f20a3e8b1a52b9140d7c420af52aa9ad2a6a75c862a31c
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/s/sdformat9/sdformat9_9.7.0.orig.tar.bz2' sdformat9_9.7.0.orig.tar.bz2 699483 SHA256:dcfa6faa2a12a6814e8cf020539c351d69c3a1b82092645d0dee3ec7c968b8f0
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/s/sdformat9/sdformat9_9.7.0-1~bionic.debian.tar.xz' sdformat9_9.7.0-1~bionic.debian.tar.xz 3480 SHA256:19a443397b3bb65f3d3a7c11e095fecc5e56cbd3bbc06535f48004b2160fd89d
+```
 
 ### `dpkg` source package: `sed=4.4-2`
 
@@ -5987,11 +6022,11 @@ $ apt-get source -qq --print-uris unixodbc=2.3.4-1.1ubuntu3
 'http://archive.ubuntu.com/ubuntu/pool/main/u/unixodbc/unixodbc_2.3.4-1.1ubuntu3.diff.gz' unixodbc_2.3.4-1.1ubuntu3.diff.gz 19700 SHA256:7b533e947f1a0c49541668924b3679e8fe7dac75a3759081a6ac82f0c55f9184
 ```
 
-### `dpkg` source package: `uriparser=0.8.4-1`
+### `dpkg` source package: `uriparser=0.8.4-1+deb9u2build0.18.04.1`
 
 Binary Packages:
 
-- `liburiparser1:amd64=0.8.4-1`
+- `liburiparser1:amd64=0.8.4-1+deb9u2build0.18.04.1`
 
 Licenses: (parsed from: `/usr/share/doc/liburiparser1/copyright`)
 
@@ -6004,10 +6039,10 @@ Licenses: (parsed from: `/usr/share/doc/liburiparser1/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris uriparser=0.8.4-1
-'http://archive.ubuntu.com/ubuntu/pool/universe/u/uriparser/uriparser_0.8.4-1.dsc' uriparser_0.8.4-1.dsc 2111 SHA256:82ee69e5c8e21489de91979248eda96b5b114d935fa73104dd161d9f64cfbe7e
-'http://archive.ubuntu.com/ubuntu/pool/universe/u/uriparser/uriparser_0.8.4.orig.tar.bz2' uriparser_0.8.4.orig.tar.bz2 358408 SHA256:ce7ccda4136974889231e8426a785e7578e66a6283009cfd13f1b24a5e657b23
-'http://archive.ubuntu.com/ubuntu/pool/universe/u/uriparser/uriparser_0.8.4-1.debian.tar.xz' uriparser_0.8.4-1.debian.tar.xz 6096 SHA256:fdff8accbb61b3befed0f9da70975fec473051a0f1f9b2020fead23471eed43f
+$ apt-get source -qq --print-uris uriparser=0.8.4-1+deb9u2build0.18.04.1
+'http://archive.ubuntu.com/ubuntu/pool/universe/u/uriparser/uriparser_0.8.4-1+deb9u2build0.18.04.1.dsc' uriparser_0.8.4-1+deb9u2build0.18.04.1.dsc 2167 SHA512:5b4853dc2ee0fe7dd65b9a2ab00657f09a03f15def05a102b2a9e439e2b54c5bde2a74779cc109e6643ea9de388a10eae2be2362a56425a4b73b3c047196518c
+'http://archive.ubuntu.com/ubuntu/pool/universe/u/uriparser/uriparser_0.8.4.orig.tar.bz2' uriparser_0.8.4.orig.tar.bz2 358408 SHA512:b6238c6495eaa9f7178269d66dbea05a39c51c27137d8ebf39cd02d1c3fa96aa0d1608f5ccb36bf7b454f3238830dd46d7de8299b608f185b2520fc2c955aa1a
+'http://archive.ubuntu.com/ubuntu/pool/universe/u/uriparser/uriparser_0.8.4-1+deb9u2build0.18.04.1.debian.tar.xz' uriparser_0.8.4-1+deb9u2build0.18.04.1.debian.tar.xz 8424 SHA512:760492bb434a620a18fe4c5ef573e327152a21dddd84eb773e4963ba405f33ea3a47570f2b1689e2dbb913e93701a915db6214b29a2c383e99a6c7fb80b71303
 ```
 
 ### `dpkg` source package: `util-linux=2.31.1-0.4ubuntu3.7`
