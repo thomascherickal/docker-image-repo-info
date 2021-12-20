@@ -2382,14 +2382,9 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.6/copyright`, `/usr/share/doc
 - `use in source`
 - `without`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3.6=3.6.9-1~18.04ubuntu1.4
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.6/python3.6_3.6.9-1~18.04ubuntu1.4.dsc' python3.6_3.6.9-1~18.04ubuntu1.4.dsc 3470 SHA512:8ab848889b39f5de01e334a957883ea6cb0e67e380c7db28fe386dd3b7e3f5f2882de0147a89661d68c8a13c75220060d096bee8146d4971c2edd415cc205a5c
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.6/python3.6_3.6.9.orig.tar.xz' python3.6_3.6.9.orig.tar.xz 17212164 SHA512:05de9c6f44d96a52bfce10ede4312de892573edaf8bece65926d19973a3a800d65eed7a857af945f69efcfb25efa3788e7a54016b03d80b611eb51c3ea074819
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.6/python3.6_3.6.9-1~18.04ubuntu1.4.debian.tar.xz' python3.6_3.6.9-1~18.04ubuntu1.4.debian.tar.xz 222276 SHA512:f9e9b411953ab8bfb35f8f02a8c8474d4add3e3871a9bb2603f99f6bb085563465088e73e3964ffe98376df16072724ef698af3b76490be61047cb2b5dc76895
-```
 
 ### `dpkg` source package: `readline=7.0-3`
 
