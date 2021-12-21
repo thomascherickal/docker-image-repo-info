@@ -1,7 +1,7 @@
 ## `chronograf:latest`
 
 ```console
-$ docker pull chronograf@sha256:b08e19787a8de5c920f45a3cd22188e63522a7bb41d96cac9327dbca4a1cc865
+$ docker pull chronograf@sha256:95849acfbc06b74a91533919dba3a1bb834be22977072a870e3c249df8241fdd
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -80,67 +80,67 @@ CMD ["chronograf"]
 ### `chronograf:latest` - linux; arm variant v7
 
 ```console
-$ docker pull chronograf@sha256:efb6a47c13add28ffa5004d3acb847b52d8f07f477ce7e6ef6ceb9fb9d9d34ab
+$ docker pull chronograf@sha256:3789bc1dd421aed199b169fd6d150c493e4e8c7f77091dc6f0a7b2cf895d6ae1
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **60.4 MB (60402915 bytes)**  
+-	Total Size: **60.4 MB (60402989 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:eb43430b777974db16f3a2722b76683b81aaea3f3abe8c87af45745a78446fc7`
+-	Image ID: `sha256:e404133019b5ea58a0a426cb7a67f491f58338b2cb2b3bce01aac2c004c54476`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["chronograf"]`
 
 ```dockerfile
-# Thu, 02 Dec 2021 09:11:13 GMT
-ADD file:07a27489332bd5ff2b73df3ba5210164fa947c12b65e248d0449d7fd69c6b760 in / 
-# Thu, 02 Dec 2021 09:11:14 GMT
+# Tue, 21 Dec 2021 02:05:40 GMT
+ADD file:924a2e95e52f87fd6e79e8b0865e63f19432a71f823114b8b4d729ecd420d7fb in / 
+# Tue, 21 Dec 2021 02:05:41 GMT
 CMD ["bash"]
-# Fri, 03 Dec 2021 17:09:03 GMT
+# Tue, 21 Dec 2021 03:25:11 GMT
 RUN set -ex &&     mkdir ~/.gnupg;     echo "disable-ipv6" >> ~/.gnupg/dirmngr.conf;     apt-get update && apt-get install -y gnupg ca-certificates dirmngr --no-install-recommends &&     rm -rf /var/lib/apt/lists/* &&     for key in         05CE15085FC09D18E99EFB22684A14CF2582E0C5 ;     do         gpg --keyserver hkp://keyserver.ubuntu.com --recv-keys "$key" ;     done
-# Fri, 03 Dec 2021 17:11:20 GMT
+# Tue, 21 Dec 2021 03:27:28 GMT
 ENV CHRONOGRAF_VERSION=1.9.1
-# Fri, 03 Dec 2021 17:11:39 GMT
+# Tue, 21 Dec 2021 03:27:50 GMT
 RUN ARCH= && dpkgArch="$(dpkg --print-architecture)" &&     case "${dpkgArch##*-}" in       amd64) ARCH='amd64';;       arm64) ARCH='arm64';;       armhf) ARCH='armhf';;       armel) ARCH='armel';;       *)     echo "Unsupported architecture: ${dpkgArch}"; exit 1;;     esac &&     set -x &&     apt-get update && apt-get install -y ca-certificates curl --no-install-recommends &&     rm -rf /var/lib/apt/lists/* &&     curl -SLO "https://dl.influxdata.com/chronograf/releases/chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb.asc" &&     curl -SLO "https://dl.influxdata.com/chronograf/releases/chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb" &&     gpg --batch --verify chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb.asc chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb &&     dpkg -i chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb &&     rm -f chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb* &&     apt-get purge -y --auto-remove $buildDeps
-# Fri, 03 Dec 2021 17:11:40 GMT
+# Tue, 21 Dec 2021 03:27:50 GMT
 COPY file:6403df1bf15a98453f66ca6b38ee538c184409065ea1d3c321788dec9eaa5c77 in /usr/share/chronograf/LICENSE 
-# Fri, 03 Dec 2021 17:11:40 GMT
+# Tue, 21 Dec 2021 03:27:51 GMT
 COPY file:6a5854b87d89e3055231dd56f8f199c325f44eeed8faed4cf32833126a5b9cd9 in /usr/share/chronograf/agpl-3.0.md 
-# Fri, 03 Dec 2021 17:11:41 GMT
+# Tue, 21 Dec 2021 03:27:51 GMT
 EXPOSE 8888
-# Fri, 03 Dec 2021 17:11:41 GMT
+# Tue, 21 Dec 2021 03:27:52 GMT
 VOLUME [/var/lib/chronograf]
-# Fri, 03 Dec 2021 17:11:42 GMT
+# Tue, 21 Dec 2021 03:27:52 GMT
 COPY file:7ce45912f7e80a04754c20ff31c757dd5de5eb9a5845af3b183b4a5227dd1c1e in /entrypoint.sh 
-# Fri, 03 Dec 2021 17:11:42 GMT
+# Tue, 21 Dec 2021 03:27:53 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Fri, 03 Dec 2021 17:11:42 GMT
+# Tue, 21 Dec 2021 03:27:53 GMT
 CMD ["chronograf"]
 ```
 
 -	Layers:
-	-	`sha256:d264feab9f2b883bc5096deb677e485d44e353381c2e9c571053bf54514ca9a6`  
-		Last Modified: Thu, 02 Dec 2021 09:28:31 GMT  
-		Size: 19.3 MB (19318707 bytes)  
+	-	`sha256:12790d92cf90440e36a3292fe34a336c54030e049074eb36386502daa81decea`  
+		Last Modified: Tue, 21 Dec 2021 02:22:43 GMT  
+		Size: 19.3 MB (19318715 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:85ef3409b253375b66ef6bbd8a1731da1f8f803b2cd035477ab54909cb9cff9d`  
-		Last Modified: Fri, 03 Dec 2021 17:12:38 GMT  
-		Size: 5.8 MB (5780631 bytes)  
+	-	`sha256:a8d896bc18835bd9e95e55d9744358d7ff742c715935b1ccc5f0793ac8c739b6`  
+		Last Modified: Tue, 21 Dec 2021 03:28:51 GMT  
+		Size: 5.8 MB (5780617 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:152fc1789800ed0f2d614a3f2adb7e34e6d2f0cdb276b8f0d9ac777fd5632f07`  
-		Last Modified: Fri, 03 Dec 2021 17:14:19 GMT  
-		Size: 35.3 MB (35279173 bytes)  
+	-	`sha256:14aaafced9d5f74e8c450525883a6cfdc6ea827509c355c74a4cdccdf6d39347`  
+		Last Modified: Tue, 21 Dec 2021 03:30:34 GMT  
+		Size: 35.3 MB (35279257 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e15286f24b95a205211ecb41cb3bac005e55f87addae5ab7c2f6ee7475c7f30a`  
-		Last Modified: Fri, 03 Dec 2021 17:14:00 GMT  
-		Size: 12.3 KB (12253 bytes)  
+	-	`sha256:c4e6a7edd1e5846f1b7d7c958e6dc9da2bc8e16d0b3c5f68e27ef140b96e7481`  
+		Last Modified: Tue, 21 Dec 2021 03:30:15 GMT  
+		Size: 12.3 KB (12251 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b99f4603d4f081f6cb77cd2226c11cbd12d82df27703ea1f97027f6ae48bd276`  
-		Last Modified: Fri, 03 Dec 2021 17:14:01 GMT  
-		Size: 11.9 KB (11911 bytes)  
+	-	`sha256:ee3ccd9d48657d5d6b4286411e1cdf6165c4bf2fac47816a96cf4c52c86c22d3`  
+		Last Modified: Tue, 21 Dec 2021 03:30:15 GMT  
+		Size: 11.9 KB (11909 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a93bb8dd9a5b41ff772413a3bc78303f4798de906f7a1f50588874fbeeba09c6`  
-		Last Modified: Fri, 03 Dec 2021 17:14:01 GMT  
+	-	`sha256:34990d2306fc460b4a73ac46ef64b68c97528a5e4a8260e38b1cb74326209681`  
+		Last Modified: Tue, 21 Dec 2021 03:30:15 GMT  
 		Size: 240.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
