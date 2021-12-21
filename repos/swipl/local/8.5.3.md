@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:0e677c87bb7c2da2f169cb6fc4f1b0b70b2ff443e9d8772c99f19ee06c16932d`
-- Created: `2021-12-02T18:43:19.994919625Z`
-- Virtual Size: ~ 193.70 Mb  
+- Image ID: `sha256:72b2ac61c5422a412f8dca20c0d75d3f36bde122fa140cdc5ff9ae821a91d949`
+- Created: `2021-12-21T13:19:25.555108578Z`
+- Virtual Size: ~ 193.68 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["swipl"]`
@@ -152,11 +152,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/audit/1:3.0-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/audit/1:3.0-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `base-files=11.1+deb11u1`
+### `dpkg` source package: `base-files=11.1+deb11u2`
 
 Binary Packages:
 
-- `base-files=11.1+deb11u1`
+- `base-files=11.1+deb11u2`
 
 Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
@@ -165,16 +165,16 @@ Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris base-files=11.1+deb11u1
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_11.1+deb11u1.dsc' base-files_11.1+deb11u1.dsc 1110 SHA256:b844932b221a7f61d529657d928055749e70645e34bbfafa041615d8154e5a95
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_11.1+deb11u1.tar.xz' base-files_11.1+deb11u1.tar.xz 65544 SHA256:4ff1eddfa0593d5c71b2b8bbfe2a42d8ba1e8356b1a46a056231147717f8d126
+$ apt-get source -qq --print-uris base-files=11.1+deb11u2
+'http://deb.debian.org/debian/pool/main/b/base-files/base-files_11.1+deb11u2.dsc' base-files_11.1+deb11u2.dsc 1110 SHA256:5468729fe6f6971890303bacd8d8b6b32c12cfa1f8b00be6d06254e3e318246d
+'http://deb.debian.org/debian/pool/main/b/base-files/base-files_11.1+deb11u2.tar.xz' base-files_11.1+deb11u2.tar.xz 65556 SHA256:a0338008933fcc8260c91e526dab8f0ae38811cc5a0b8f64057101b2f27aeb32
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/base-files/11.1+deb11u1/ (for browsing the source)
-- https://sources.debian.net/src/base-files/11.1+deb11u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/base-files/11.1+deb11u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/base-files/11.1+deb11u2/ (for browsing the source)
+- https://sources.debian.net/src/base-files/11.1+deb11u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/base-files/11.1+deb11u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-passwd=3.5.51`
 
@@ -353,11 +353,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/coreutils/8.32-4/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/coreutils/8.32-4/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `curl=7.74.0-1.3`
+### `dpkg` source package: `curl=7.74.0-1.3+deb11u1`
 
 Binary Packages:
 
-- `libcurl3-gnutls:amd64=7.74.0-1.3+b1`
+- `libcurl3-gnutls:amd64=7.74.0-1.3+deb11u1`
 
 Licenses: (parsed from: `/usr/share/doc/libcurl3-gnutls/copyright`)
 
@@ -371,17 +371,17 @@ Licenses: (parsed from: `/usr/share/doc/libcurl3-gnutls/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris curl=7.74.0-1.3
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.74.0-1.3.dsc' curl_7.74.0-1.3.dsc 2435 SHA256:5b2743bad178f7d682ec8067e292ae2e6fb3039d5c6fe94dc1ecbae23fbed9df
+$ apt-get source -qq --print-uris curl=7.74.0-1.3+deb11u1
+'http://deb.debian.org/debian/pool/main/c/curl/curl_7.74.0-1.3+deb11u1.dsc' curl_7.74.0-1.3+deb11u1.dsc 2699 SHA256:7983845054585d56348bc262cee1f4fff96866fe23ca864db3c9d43e829139fc
 'http://deb.debian.org/debian/pool/main/c/curl/curl_7.74.0.orig.tar.gz' curl_7.74.0.orig.tar.gz 4043409 SHA256:e56b3921eeb7a2951959c02db0912b5fcd5fdba5aca071da819e1accf338bbd7
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.74.0-1.3.debian.tar.xz' curl_7.74.0-1.3.debian.tar.xz 36944 SHA256:9013432cb208df97d20c0dfb05c4ba0b93807c17744891a6528d1173eb58d95d
+'http://deb.debian.org/debian/pool/main/c/curl/curl_7.74.0-1.3+deb11u1.debian.tar.xz' curl_7.74.0-1.3+deb11u1.debian.tar.xz 37024 SHA256:eac5deff2b2511443ba4995daa8afe8985aaa5f62a24d672e9715fcabe0069b2
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/curl/7.74.0-1.3/ (for browsing the source)
-- https://sources.debian.net/src/curl/7.74.0-1.3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/curl/7.74.0-1.3/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/curl/7.74.0-1.3+deb11u1/ (for browsing the source)
+- https://sources.debian.net/src/curl/7.74.0-1.3+deb11u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/curl/7.74.0-1.3+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2.1`
 
@@ -800,11 +800,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/glibc/2.31-13+deb11u2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/glibc/2.31-13+deb11u2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `gmp=2:6.2.1+dfsg-1`
+### `dpkg` source package: `gmp=2:6.2.1+dfsg-1+deb11u1`
 
 Binary Packages:
 
-- `libgmp10:amd64=2:6.2.1+dfsg-1`
+- `libgmp10:amd64=2:6.2.1+dfsg-1+deb11u1`
 
 Licenses: (parsed from: `/usr/share/doc/libgmp10/copyright`)
 
@@ -816,17 +816,17 @@ Licenses: (parsed from: `/usr/share/doc/libgmp10/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris gmp=2:6.2.1+dfsg-1
-'http://deb.debian.org/debian/pool/main/g/gmp/gmp_6.2.1+dfsg-1.dsc' gmp_6.2.1+dfsg-1.dsc 2145 SHA256:2644a10ca1e7d2ebbfb74d16449e485cd79d985a73ddffd258a138222178cb91
+$ apt-get source -qq --print-uris gmp=2:6.2.1+dfsg-1+deb11u1
+'http://deb.debian.org/debian/pool/main/g/gmp/gmp_6.2.1+dfsg-1+deb11u1.dsc' gmp_6.2.1+dfsg-1+deb11u1.dsc 2181 SHA256:4c09eb0a1c333fc5e67184a18f050af0f46f7f0fdeb533557bebd89df07c137b
 'http://deb.debian.org/debian/pool/main/g/gmp/gmp_6.2.1+dfsg.orig.tar.xz' gmp_6.2.1+dfsg.orig.tar.xz 1853476 SHA256:c6ba08e3f079260ab90ff44ab8801eae134cd62cd78f4aa56317c0e70daa40cb
-'http://deb.debian.org/debian/pool/main/g/gmp/gmp_6.2.1+dfsg-1.debian.tar.xz' gmp_6.2.1+dfsg-1.debian.tar.xz 21248 SHA256:5b9fa90b68ca3323bb7a31b60fbd2b495609e39d7b1f21f0f6f1955ca5916163
+'http://deb.debian.org/debian/pool/main/g/gmp/gmp_6.2.1+dfsg-1+deb11u1.debian.tar.xz' gmp_6.2.1+dfsg-1+deb11u1.debian.tar.xz 21920 SHA256:3cde187d542f5c095c6db8b76ec5252353e0413b492c57eb2e67ed3c43f40172
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/gmp/2:6.2.1+dfsg-1/ (for browsing the source)
-- https://sources.debian.net/src/gmp/2:6.2.1+dfsg-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gmp/2:6.2.1+dfsg-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/gmp/2:6.2.1+dfsg-1+deb11u1/ (for browsing the source)
+- https://sources.debian.net/src/gmp/2:6.2.1+dfsg-1+deb11u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/gmp/2:6.2.1+dfsg-1+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gnupg2=2.2.27-2`
 
@@ -1455,11 +1455,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libpsl/0.21.0-1.2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libpsl/0.21.0-1.2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libseccomp=2.5.1-1`
+### `dpkg` source package: `libseccomp=2.5.1-1+deb11u1`
 
 Binary Packages:
 
-- `libseccomp2:amd64=2.5.1-1`
+- `libseccomp2:amd64=2.5.1-1+deb11u1`
 
 Licenses: (parsed from: `/usr/share/doc/libseccomp2/copyright`)
 
@@ -1468,18 +1468,18 @@ Licenses: (parsed from: `/usr/share/doc/libseccomp2/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libseccomp=2.5.1-1
-'http://deb.debian.org/debian/pool/main/libs/libseccomp/libseccomp_2.5.1-1.dsc' libseccomp_2.5.1-1.dsc 2676 SHA256:dca165a5c3308ce0b2e030afa709892fba27f62fe9bc30c984bafe0d5f8e10ee
+$ apt-get source -qq --print-uris libseccomp=2.5.1-1+deb11u1
+'http://deb.debian.org/debian/pool/main/libs/libseccomp/libseccomp_2.5.1-1+deb11u1.dsc' libseccomp_2.5.1-1+deb11u1.dsc 2708 SHA256:6a2a00eb5f45e794a2203805348a3990d46f4ded63f8708d3382994ece729436
 'http://deb.debian.org/debian/pool/main/libs/libseccomp/libseccomp_2.5.1.orig.tar.gz' libseccomp_2.5.1.orig.tar.gz 638811 SHA256:ee307e383c77aa7995abc5ada544d51c9723ae399768a97667d4cdb3c3a30d55
 'http://deb.debian.org/debian/pool/main/libs/libseccomp/libseccomp_2.5.1.orig.tar.gz.asc' libseccomp_2.5.1.orig.tar.gz.asc 833 SHA256:14d45c86e5ceed5ac5511c3ebf70a4dca128b7584b314dc8a551c779ea225d2e
-'http://deb.debian.org/debian/pool/main/libs/libseccomp/libseccomp_2.5.1-1.debian.tar.xz' libseccomp_2.5.1-1.debian.tar.xz 16088 SHA256:09a67e85111bafdda96efe64b7c0c3135a6875ab2d8936f3650e229ba82a2eb1
+'http://deb.debian.org/debian/pool/main/libs/libseccomp/libseccomp_2.5.1-1+deb11u1.debian.tar.xz' libseccomp_2.5.1-1+deb11u1.debian.tar.xz 19524 SHA256:a09ef7c0b9b6464f426b78a7b978d8566da53667c1a234234ffd2cc600543200
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/libseccomp/2.5.1-1/ (for browsing the source)
-- https://sources.debian.net/src/libseccomp/2.5.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libseccomp/2.5.1-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/libseccomp/2.5.1-1+deb11u1/ (for browsing the source)
+- https://sources.debian.net/src/libseccomp/2.5.1-1+deb11u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libseccomp/2.5.1-1+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libselinux=3.1-3`
 
@@ -2282,9 +2282,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris postgresql-13=13.5-0+deb11u1
-'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-13/postgresql-13_13.5-0+deb11u1.dsc' postgresql-13_13.5-0+deb11u1.dsc 3696 SHA256:70481ab99d82417bef296378c69720657347c03b188d276e9b82f6587936d3be
-'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-13/postgresql-13_13.5.orig.tar.bz2' postgresql-13_13.5.orig.tar.bz2 21186674 SHA256:9b81067a55edbaabc418aacef457dd8477642827499560b00615a6ea6c13f6b3
-'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-13/postgresql-13_13.5-0+deb11u1.debian.tar.xz' postgresql-13_13.5-0+deb11u1.debian.tar.xz 28796 SHA256:36f225fda1f0759d8892d42a99acf565e1693ad2572714aad91b807f03cb4c95
+'http://deb.debian.org/debian/pool/main/p/postgresql-13/postgresql-13_13.5-0+deb11u1.dsc' postgresql-13_13.5-0+deb11u1.dsc 3696 SHA256:70481ab99d82417bef296378c69720657347c03b188d276e9b82f6587936d3be
+'http://deb.debian.org/debian/pool/main/p/postgresql-13/postgresql-13_13.5.orig.tar.bz2' postgresql-13_13.5.orig.tar.bz2 21186674 SHA256:9b81067a55edbaabc418aacef457dd8477642827499560b00615a6ea6c13f6b3
+'http://deb.debian.org/debian/pool/main/p/postgresql-13/postgresql-13_13.5-0+deb11u1.debian.tar.xz' postgresql-13_13.5-0+deb11u1.debian.tar.xz 28796 SHA256:36f225fda1f0759d8892d42a99acf565e1693ad2572714aad91b807f03cb4c95
 ```
 
 Other potentially useful URLs:
