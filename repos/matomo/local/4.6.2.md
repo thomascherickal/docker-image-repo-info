@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:592daa3009052895cbcfdf87bd3e2bd42ea19cb2d3435e23dbba5d0ff8d91630`
-- Created: `2021-12-10T20:20:43.250427902Z`
-- Virtual Size: ~ 536.49 Mb  
+- Image ID: `sha256:7522dca26993a6b8f52d317a5e7573079292b751e8275dd199df2167d8475da1`
+- Created: `2021-12-18T05:59:00.644836193Z`
+- Virtual Size: ~ 536.51 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -19,10 +19,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F`
-  - `PHP_VERSION=8.0.13`
-  - `PHP_URL=https://www.php.net/distributions/php-8.0.13.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.13.tar.xz.asc`
-  - `PHP_SHA256=cd976805ec2e9198417651027dfe16854ba2c2c388151ab9d4d268513d52ed52`
+  - `PHP_VERSION=8.0.14`
+  - `PHP_URL=https://www.php.net/distributions/php-8.0.14.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.14.tar.xz.asc`
+  - `PHP_SHA256=fbde8247ac200e4de73449d9fefc8b495d323b5be9c10cdb645fb431c91156e3`
   - `PHP_MEMORY_LIMIT=256M`
   - `MATOMO_VERSION=4.6.2`
 - Labels:
@@ -114,10 +114,10 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris apache2=2.4.51-1~deb11u1
-'http://security.debian.org/debian-security/pool/updates/main/a/apache2/apache2_2.4.51-1~deb11u1.dsc' apache2_2.4.51-1~deb11u1.dsc 3539 SHA256:c5f07544cd10c18aae7d41da7c60c8b993c1d3e7369083beae74ef106805f6aa
-'http://security.debian.org/debian-security/pool/updates/main/a/apache2/apache2_2.4.51.orig.tar.gz' apache2_2.4.51.orig.tar.gz 9873874 SHA256:c2cedb0b47666bea633b44d5b3a2ebf3c466e0506955fbc3012a5a9b078ca8b4
-'http://security.debian.org/debian-security/pool/updates/main/a/apache2/apache2_2.4.51.orig.tar.gz.asc' apache2_2.4.51.orig.tar.gz.asc 874 SHA256:ad790409b64071ea32a9c0da704500ed3d68a6552aff7e5e4fe3272d3d644377
-'http://security.debian.org/debian-security/pool/updates/main/a/apache2/apache2_2.4.51-1~deb11u1.debian.tar.xz' apache2_2.4.51-1~deb11u1.debian.tar.xz 886504 SHA256:7ee1351a13d5f72c88d15b3c7b38e4f57c2eb90db1afbafe92524210ef4e218f
+'http://deb.debian.org/debian/pool/main/a/apache2/apache2_2.4.51-1~deb11u1.dsc' apache2_2.4.51-1~deb11u1.dsc 3539 SHA256:c5f07544cd10c18aae7d41da7c60c8b993c1d3e7369083beae74ef106805f6aa
+'http://deb.debian.org/debian/pool/main/a/apache2/apache2_2.4.51.orig.tar.gz' apache2_2.4.51.orig.tar.gz 9873874 SHA256:c2cedb0b47666bea633b44d5b3a2ebf3c466e0506955fbc3012a5a9b078ca8b4
+'http://deb.debian.org/debian/pool/main/a/apache2/apache2_2.4.51.orig.tar.gz.asc' apache2_2.4.51.orig.tar.gz.asc 874 SHA256:ad790409b64071ea32a9c0da704500ed3d68a6552aff7e5e4fe3272d3d644377
+'http://deb.debian.org/debian/pool/main/a/apache2/apache2_2.4.51-1~deb11u1.debian.tar.xz' apache2_2.4.51-1~deb11u1.debian.tar.xz 886504 SHA256:7ee1351a13d5f72c88d15b3c7b38e4f57c2eb90db1afbafe92524210ef4e218f
 ```
 
 Other potentially useful URLs:
@@ -340,19 +340,13 @@ Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris base-files=11.1+deb11u1
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_11.1+deb11u1.dsc' base-files_11.1+deb11u1.dsc 1110 SHA256:b844932b221a7f61d529657d928055749e70645e34bbfafa041615d8154e5a95
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_11.1+deb11u1.tar.xz' base-files_11.1+deb11u1.tar.xz 65544 SHA256:4ff1eddfa0593d5c71b2b8bbfe2a42d8ba1e8356b1a46a056231147717f8d126
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/base-files/11.1+deb11u1/
 
-- https://sources.debian.net/src/base-files/11.1+deb11u1/ (for browsing the source)
-- https://sources.debian.net/src/base-files/11.1+deb11u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/base-files/11.1+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-passwd=3.5.51`
 
@@ -584,9 +578,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris curl=7.74.0-1.3
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.74.0-1.3.dsc' curl_7.74.0-1.3.dsc 2435 SHA256:5b2743bad178f7d682ec8067e292ae2e6fb3039d5c6fe94dc1ecbae23fbed9df
+'http://deb.debian.org/debian/pool/main/c/curl/curl_7.74.0-1.3+deb11u1.dsc' curl_7.74.0-1.3+deb11u1.dsc 2699 SHA256:7983845054585d56348bc262cee1f4fff96866fe23ca864db3c9d43e829139fc
 'http://deb.debian.org/debian/pool/main/c/curl/curl_7.74.0.orig.tar.gz' curl_7.74.0.orig.tar.gz 4043409 SHA256:e56b3921eeb7a2951959c02db0912b5fcd5fdba5aca071da819e1accf338bbd7
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.74.0-1.3.debian.tar.xz' curl_7.74.0-1.3.debian.tar.xz 36944 SHA256:9013432cb208df97d20c0dfb05c4ba0b93807c17744891a6528d1173eb58d95d
+'http://deb.debian.org/debian/pool/main/c/curl/curl_7.74.0-1.3+deb11u1.debian.tar.xz' curl_7.74.0-1.3+deb11u1.debian.tar.xz 37024 SHA256:eac5deff2b2511443ba4995daa8afe8985aaa5f62a24d672e9715fcabe0069b2
 ```
 
 Other potentially useful URLs:
@@ -1171,20 +1165,13 @@ Licenses: (parsed from: `/usr/share/doc/libgmp10/copyright`)
 - `GPL-3`
 - `LGPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gmp=2:6.2.1+dfsg-1
-'http://deb.debian.org/debian/pool/main/g/gmp/gmp_6.2.1+dfsg-1.dsc' gmp_6.2.1+dfsg-1.dsc 2145 SHA256:2644a10ca1e7d2ebbfb74d16449e485cd79d985a73ddffd258a138222178cb91
-'http://deb.debian.org/debian/pool/main/g/gmp/gmp_6.2.1+dfsg.orig.tar.xz' gmp_6.2.1+dfsg.orig.tar.xz 1853476 SHA256:c6ba08e3f079260ab90ff44ab8801eae134cd62cd78f4aa56317c0e70daa40cb
-'http://deb.debian.org/debian/pool/main/g/gmp/gmp_6.2.1+dfsg-1.debian.tar.xz' gmp_6.2.1+dfsg-1.debian.tar.xz 21248 SHA256:5b9fa90b68ca3323bb7a31b60fbd2b495609e39d7b1f21f0f6f1955ca5916163
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gmp/2:6.2.1+dfsg-1/
 
-- https://sources.debian.net/src/gmp/2:6.2.1+dfsg-1/ (for browsing the source)
-- https://sources.debian.net/src/gmp/2:6.2.1+dfsg-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gmp/2:6.2.1+dfsg-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gnupg2=2.2.27-2`
 
@@ -1806,21 +1793,13 @@ Licenses: (parsed from: `/usr/share/doc/libseccomp2/copyright`)
 
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libseccomp=2.5.1-1
-'http://deb.debian.org/debian/pool/main/libs/libseccomp/libseccomp_2.5.1-1.dsc' libseccomp_2.5.1-1.dsc 2676 SHA256:dca165a5c3308ce0b2e030afa709892fba27f62fe9bc30c984bafe0d5f8e10ee
-'http://deb.debian.org/debian/pool/main/libs/libseccomp/libseccomp_2.5.1.orig.tar.gz' libseccomp_2.5.1.orig.tar.gz 638811 SHA256:ee307e383c77aa7995abc5ada544d51c9723ae399768a97667d4cdb3c3a30d55
-'http://deb.debian.org/debian/pool/main/libs/libseccomp/libseccomp_2.5.1.orig.tar.gz.asc' libseccomp_2.5.1.orig.tar.gz.asc 833 SHA256:14d45c86e5ceed5ac5511c3ebf70a4dca128b7584b314dc8a551c779ea225d2e
-'http://deb.debian.org/debian/pool/main/libs/libseccomp/libseccomp_2.5.1-1.debian.tar.xz' libseccomp_2.5.1-1.debian.tar.xz 16088 SHA256:09a67e85111bafdda96efe64b7c0c3135a6875ab2d8936f3650e229ba82a2eb1
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libseccomp/2.5.1-1/
 
-- https://sources.debian.net/src/libseccomp/2.5.1-1/ (for browsing the source)
-- https://sources.debian.net/src/libseccomp/2.5.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libseccomp/2.5.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libselinux=3.1-3`
 
