@@ -869,7 +869,7 @@ CMD ["fluentd"]
 ## `fluentd:v1.14-debian-1`
 
 ```console
-$ docker pull fluentd@sha256:70a5ca7828bfc5473148f4bbaf1dba0f838ee1fa1cda97a52ba0d07cb8afcdbd
+$ docker pull fluentd@sha256:756b708e2816ad70e9d02af4217aad580ee8465a910cd91100b4a520437b7c04
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1430,110 +1430,110 @@ CMD ["fluentd"]
 ### `fluentd:v1.14-debian-1` - linux; ppc64le
 
 ```console
-$ docker pull fluentd@sha256:64194d2506feca34168225d5cb01ba7847c4fc5fc4c79772d7f0a01f428c7192
+$ docker pull fluentd@sha256:30b496150badae3248b2082e167e829388cdb782194d92e06b91b8eabcc69e80
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **87.9 MB (87879267 bytes)**  
+-	Total Size: **87.9 MB (87879519 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2893e3b93f0bbfd84a21a57d5c776b2c64d70a6cbc02b34be3b3cb8c899fe7ba`
+-	Image ID: `sha256:32c3e2c75773bf3b592a7eb6a4fc28e780fb766ee0aeb968eb82a87268899909`
 -	Entrypoint: `["tini","--","\/bin\/entrypoint.sh"]`
 -	Default Command: `["fluentd"]`
 
 ```dockerfile
-# Thu, 02 Dec 2021 07:22:12 GMT
-ADD file:b9b5697bc2dd3ded7a158d973abc939cc5d197f1f0d9ff1fa8b3db3b7906de7a in / 
-# Thu, 02 Dec 2021 07:22:18 GMT
+# Tue, 21 Dec 2021 02:21:09 GMT
+ADD file:85a8af105e3fa794598824266068cbb3c0dc66067e10e3263dab26a230458a82 in / 
+# Tue, 21 Dec 2021 02:21:13 GMT
 CMD ["bash"]
-# Fri, 03 Dec 2021 07:58:30 GMT
+# Tue, 21 Dec 2021 20:19:55 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		bzip2 		ca-certificates 		libffi-dev 		libgmp-dev 		libssl-dev 		libyaml-dev 		procps 		zlib1g-dev 	; 	rm -rf /var/lib/apt/lists/*
-# Fri, 03 Dec 2021 07:58:39 GMT
+# Tue, 21 Dec 2021 20:20:00 GMT
 RUN set -eux; 	mkdir -p /usr/local/etc; 	{ 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /usr/local/etc/gemrc
-# Fri, 03 Dec 2021 07:58:41 GMT
+# Tue, 21 Dec 2021 20:20:03 GMT
 ENV LANG=C.UTF-8
-# Fri, 03 Dec 2021 09:09:13 GMT
+# Tue, 21 Dec 2021 21:39:02 GMT
 ENV RUBY_MAJOR=2.6
-# Fri, 03 Dec 2021 09:09:15 GMT
+# Tue, 21 Dec 2021 21:39:04 GMT
 ENV RUBY_VERSION=2.6.9
-# Fri, 03 Dec 2021 09:09:17 GMT
+# Tue, 21 Dec 2021 21:39:06 GMT
 ENV RUBY_DOWNLOAD_SHA256=6a041d82ae6e0f02ccb1465e620d94a7196489d8a13d6018a160da42ebc1eece
-# Fri, 03 Dec 2021 09:16:18 GMT
+# Tue, 21 Dec 2021 21:49:08 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		bison 		dpkg-dev 		libgdbm-dev 		ruby 		autoconf 		g++ 		gcc 		libbz2-dev 		libgdbm-compat-dev 		libglib2.0-dev 		libncurses-dev 		libreadline-dev 		libxml2-dev 		libxslt-dev 		make 		wget 		xz-utils 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -vE '^/usr/local/lib/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		cd /; 	rm -r /usr/src/ruby; 	if dpkg -l | grep -i ruby; then exit 1; fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Fri, 03 Dec 2021 09:16:23 GMT
+# Tue, 21 Dec 2021 21:49:13 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Fri, 03 Dec 2021 09:16:30 GMT
+# Tue, 21 Dec 2021 21:49:16 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Fri, 03 Dec 2021 09:16:38 GMT
+# Tue, 21 Dec 2021 21:49:19 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 03 Dec 2021 09:16:43 GMT
+# Tue, 21 Dec 2021 21:49:26 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Fri, 03 Dec 2021 09:16:44 GMT
+# Tue, 21 Dec 2021 21:49:32 GMT
 CMD ["irb"]
-# Sat, 04 Dec 2021 02:09:22 GMT
+# Wed, 22 Dec 2021 12:00:57 GMT
 LABEL maintainer=Fluentd developers <fluentd@googlegroups.com>
-# Sat, 04 Dec 2021 02:09:23 GMT
+# Wed, 22 Dec 2021 12:00:59 GMT
 LABEL Description=Fluentd docker image Vendor=Fluent Organization Version=1.14.0
-# Sat, 04 Dec 2021 02:09:25 GMT
+# Wed, 22 Dec 2021 12:01:00 GMT
 ENV TINI_VERSION=0.18.0
-# Sat, 04 Dec 2021 02:13:08 GMT
+# Wed, 22 Dec 2021 12:03:58 GMT
 RUN apt-get update  && apt-get install -y --no-install-recommends             ca-certificates  && buildDeps="       make gcc g++ libc-dev       wget bzip2 gnupg dirmngr     "  && apt-get install -y --no-install-recommends $buildDeps  && echo 'gem: --no-document' >> /etc/gemrc  && gem install oj -v 3.10.18  && gem install json -v 2.4.1  && gem install async-http -v 0.54.0  && gem install ext_monitor -v 0.1.2  && gem install fluentd -v 1.14.0  && dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"  && wget -O /usr/local/bin/tini "https://github.com/krallin/tini/releases/download/v$TINI_VERSION/tini-$dpkgArch"  && wget -O /usr/local/bin/tini.asc "https://github.com/krallin/tini/releases/download/v$TINI_VERSION/tini-$dpkgArch.asc"  && export GNUPGHOME="$(mktemp -d)"  && gpg --batch --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 6380DC428747F6C393FEACA59A84159D7001A4E5  && gpg --batch --verify /usr/local/bin/tini.asc /usr/local/bin/tini  && rm -r /usr/local/bin/tini.asc  && chmod +x /usr/local/bin/tini  && tini -h  && wget -O /tmp/jemalloc-4.5.0.tar.bz2 https://github.com/jemalloc/jemalloc/releases/download/4.5.0/jemalloc-4.5.0.tar.bz2  && cd /tmp && tar -xjf jemalloc-4.5.0.tar.bz2 && cd jemalloc-4.5.0/  && ./configure && make  && mv lib/libjemalloc.so.2 /usr/lib  && apt-get purge -y --auto-remove                   -o APT::AutoRemove::RecommendsImportant=false                   $buildDeps  && rm -rf /var/lib/apt/lists/*  && rm -rf /tmp/* /var/tmp/* /usr/lib/ruby/gems/*/cache/*.gem /usr/lib/ruby/gems/2.*/gems/fluentd-*/test
-# Sat, 04 Dec 2021 02:13:15 GMT
+# Wed, 22 Dec 2021 12:04:05 GMT
 RUN groupadd -r fluent && useradd -r -g fluent fluent     && mkdir -p /fluentd/log     && mkdir -p /fluentd/etc /fluentd/plugins     && chown -R fluent /fluentd && chgrp -R fluent /fluentd
-# Sat, 04 Dec 2021 02:13:16 GMT
+# Wed, 22 Dec 2021 12:04:06 GMT
 COPY file:06d9a84b9b428b4e0ef5a9e3699798758dc9716908d82091239fb9f85dd30d70 in /fluentd/etc/ 
-# Sat, 04 Dec 2021 02:13:17 GMT
+# Wed, 22 Dec 2021 12:04:07 GMT
 COPY file:977670d9d298d60208db6e5110a5919bfde19ee7da9c19df693163ecd07caea6 in /bin/ 
-# Sat, 04 Dec 2021 02:13:18 GMT
+# Wed, 22 Dec 2021 12:04:08 GMT
 ENV FLUENTD_CONF=fluent.conf
-# Sat, 04 Dec 2021 02:13:20 GMT
+# Wed, 22 Dec 2021 12:04:10 GMT
 ENV LD_PRELOAD=/usr/lib/libjemalloc.so.2
-# Sat, 04 Dec 2021 02:13:22 GMT
+# Wed, 22 Dec 2021 12:04:11 GMT
 EXPOSE 24224 5140
-# Sat, 04 Dec 2021 02:13:23 GMT
+# Wed, 22 Dec 2021 12:04:14 GMT
 USER fluent
-# Sat, 04 Dec 2021 02:13:25 GMT
+# Wed, 22 Dec 2021 12:04:15 GMT
 ENTRYPOINT ["tini" "--" "/bin/entrypoint.sh"]
-# Sat, 04 Dec 2021 02:13:27 GMT
+# Wed, 22 Dec 2021 12:04:16 GMT
 CMD ["fluentd"]
 ```
 
 -	Layers:
-	-	`sha256:da5263f5d65ecaf2dcd9400908302b4c477c13afa707110e4d85b4b946e9a3ae`  
-		Last Modified: Thu, 02 Dec 2021 07:32:41 GMT  
-		Size: 30.6 MB (30562306 bytes)  
+	-	`sha256:e2c79f8e0929abda2022fed71e090d3c34c8c3fdfb2a513ede1d117020a46821`  
+		Last Modified: Tue, 21 Dec 2021 02:30:19 GMT  
+		Size: 30.6 MB (30562311 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b5617a28440e343caa8dd30cc324bdd708ebe1f964ec11fd26f132068879ed4e`  
-		Last Modified: Fri, 03 Dec 2021 09:21:11 GMT  
-		Size: 12.7 MB (12705552 bytes)  
+	-	`sha256:2631c00b3c311045cc73612901f9f9c688c51a4fddcf564b71e07e86d63a947c`  
+		Last Modified: Tue, 21 Dec 2021 21:54:28 GMT  
+		Size: 12.7 MB (12705564 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:96de5a56dc2e1824f750d121f9d5244c505b423f1f8a35f736ff60ef67908f0b`  
-		Last Modified: Fri, 03 Dec 2021 09:21:08 GMT  
-		Size: 198.0 B  
+	-	`sha256:0fac6323fc58a5c06a4515158cc75b1af10e0f49be49230d25dc2c26ffacd771`  
+		Last Modified: Tue, 21 Dec 2021 21:54:25 GMT  
+		Size: 200.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d842a33f7d39fa300527a467e6bba3ff5e53e4d9d6f4df2996576cf1642efa14`  
-		Last Modified: Fri, 03 Dec 2021 09:26:06 GMT  
-		Size: 22.0 MB (22023323 bytes)  
+	-	`sha256:4325670a53628a5faddc22c047d07a33d54bbd91b6b40a88decdb9c98796d4d2`  
+		Last Modified: Tue, 21 Dec 2021 21:59:23 GMT  
+		Size: 22.0 MB (22023556 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:03648056dfafebc33cc627e0af6017e5566f34b428ed9e1c303f4c5c82b1ca41`  
-		Last Modified: Fri, 03 Dec 2021 09:26:03 GMT  
-		Size: 175.0 B  
+	-	`sha256:dc77ae87e95463eef918d5232283eb183b437175c4f88b7ee4aa548eb0d7a1cd`  
+		Last Modified: Tue, 21 Dec 2021 21:59:20 GMT  
+		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a6c3c72a12d41f318d5779e85bbbf449bad44ed9e5a7ad69e5146310522f6acc`  
-		Last Modified: Sat, 04 Dec 2021 02:13:53 GMT  
-		Size: 22.6 MB (22584998 bytes)  
+	-	`sha256:a60f09910054d2e5b7e34df6cde9679d6d3568a349bf9a1eaeab09a5914e7ae8`  
+		Last Modified: Wed, 22 Dec 2021 12:04:41 GMT  
+		Size: 22.6 MB (22584996 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e837d43a9b725089dff53fdf8c2afb40d3fe5ff825574a7afc89628e83c09006`  
-		Last Modified: Sat, 04 Dec 2021 02:13:49 GMT  
-		Size: 1.8 KB (1847 bytes)  
+	-	`sha256:00666a9e0501f820e950da19bbd55c96c8bfc50efd37f8a721976c39eb573152`  
+		Last Modified: Wed, 22 Dec 2021 12:04:36 GMT  
+		Size: 1.8 KB (1846 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b4b7940e8b758c81281c247c3832bf8ab53cebeb5ad5c55be6ccac845b8f7318`  
-		Last Modified: Sat, 04 Dec 2021 02:13:49 GMT  
-		Size: 408.0 B  
+	-	`sha256:31bb8a88f4157c1954cc1ac6ab48c72681dcc3c02d43fe57a48c6259a5e4648c`  
+		Last Modified: Wed, 22 Dec 2021 12:04:36 GMT  
+		Size: 410.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3ffc6e91fb84cbe49fc5de0107eb8c2a5a266f6949abff341300e65c07c8725d`  
-		Last Modified: Sat, 04 Dec 2021 02:13:49 GMT  
-		Size: 460.0 B  
+	-	`sha256:3404bfe33961c6e699212b8d6c4f1ca1635fc391fd3527a4e94258652e13ee5f`  
+		Last Modified: Wed, 22 Dec 2021 12:04:36 GMT  
+		Size: 459.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `fluentd:v1.14-debian-1` - linux; s390x
@@ -2077,7 +2077,7 @@ CMD ["fluentd"]
 ## `fluentd:v1.14.0-debian-1.0`
 
 ```console
-$ docker pull fluentd@sha256:70a5ca7828bfc5473148f4bbaf1dba0f838ee1fa1cda97a52ba0d07cb8afcdbd
+$ docker pull fluentd@sha256:756b708e2816ad70e9d02af4217aad580ee8465a910cd91100b4a520437b7c04
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2638,110 +2638,110 @@ CMD ["fluentd"]
 ### `fluentd:v1.14.0-debian-1.0` - linux; ppc64le
 
 ```console
-$ docker pull fluentd@sha256:64194d2506feca34168225d5cb01ba7847c4fc5fc4c79772d7f0a01f428c7192
+$ docker pull fluentd@sha256:30b496150badae3248b2082e167e829388cdb782194d92e06b91b8eabcc69e80
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **87.9 MB (87879267 bytes)**  
+-	Total Size: **87.9 MB (87879519 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2893e3b93f0bbfd84a21a57d5c776b2c64d70a6cbc02b34be3b3cb8c899fe7ba`
+-	Image ID: `sha256:32c3e2c75773bf3b592a7eb6a4fc28e780fb766ee0aeb968eb82a87268899909`
 -	Entrypoint: `["tini","--","\/bin\/entrypoint.sh"]`
 -	Default Command: `["fluentd"]`
 
 ```dockerfile
-# Thu, 02 Dec 2021 07:22:12 GMT
-ADD file:b9b5697bc2dd3ded7a158d973abc939cc5d197f1f0d9ff1fa8b3db3b7906de7a in / 
-# Thu, 02 Dec 2021 07:22:18 GMT
+# Tue, 21 Dec 2021 02:21:09 GMT
+ADD file:85a8af105e3fa794598824266068cbb3c0dc66067e10e3263dab26a230458a82 in / 
+# Tue, 21 Dec 2021 02:21:13 GMT
 CMD ["bash"]
-# Fri, 03 Dec 2021 07:58:30 GMT
+# Tue, 21 Dec 2021 20:19:55 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		bzip2 		ca-certificates 		libffi-dev 		libgmp-dev 		libssl-dev 		libyaml-dev 		procps 		zlib1g-dev 	; 	rm -rf /var/lib/apt/lists/*
-# Fri, 03 Dec 2021 07:58:39 GMT
+# Tue, 21 Dec 2021 20:20:00 GMT
 RUN set -eux; 	mkdir -p /usr/local/etc; 	{ 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /usr/local/etc/gemrc
-# Fri, 03 Dec 2021 07:58:41 GMT
+# Tue, 21 Dec 2021 20:20:03 GMT
 ENV LANG=C.UTF-8
-# Fri, 03 Dec 2021 09:09:13 GMT
+# Tue, 21 Dec 2021 21:39:02 GMT
 ENV RUBY_MAJOR=2.6
-# Fri, 03 Dec 2021 09:09:15 GMT
+# Tue, 21 Dec 2021 21:39:04 GMT
 ENV RUBY_VERSION=2.6.9
-# Fri, 03 Dec 2021 09:09:17 GMT
+# Tue, 21 Dec 2021 21:39:06 GMT
 ENV RUBY_DOWNLOAD_SHA256=6a041d82ae6e0f02ccb1465e620d94a7196489d8a13d6018a160da42ebc1eece
-# Fri, 03 Dec 2021 09:16:18 GMT
+# Tue, 21 Dec 2021 21:49:08 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		bison 		dpkg-dev 		libgdbm-dev 		ruby 		autoconf 		g++ 		gcc 		libbz2-dev 		libgdbm-compat-dev 		libglib2.0-dev 		libncurses-dev 		libreadline-dev 		libxml2-dev 		libxslt-dev 		make 		wget 		xz-utils 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -vE '^/usr/local/lib/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		cd /; 	rm -r /usr/src/ruby; 	if dpkg -l | grep -i ruby; then exit 1; fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Fri, 03 Dec 2021 09:16:23 GMT
+# Tue, 21 Dec 2021 21:49:13 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Fri, 03 Dec 2021 09:16:30 GMT
+# Tue, 21 Dec 2021 21:49:16 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Fri, 03 Dec 2021 09:16:38 GMT
+# Tue, 21 Dec 2021 21:49:19 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 03 Dec 2021 09:16:43 GMT
+# Tue, 21 Dec 2021 21:49:26 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Fri, 03 Dec 2021 09:16:44 GMT
+# Tue, 21 Dec 2021 21:49:32 GMT
 CMD ["irb"]
-# Sat, 04 Dec 2021 02:09:22 GMT
+# Wed, 22 Dec 2021 12:00:57 GMT
 LABEL maintainer=Fluentd developers <fluentd@googlegroups.com>
-# Sat, 04 Dec 2021 02:09:23 GMT
+# Wed, 22 Dec 2021 12:00:59 GMT
 LABEL Description=Fluentd docker image Vendor=Fluent Organization Version=1.14.0
-# Sat, 04 Dec 2021 02:09:25 GMT
+# Wed, 22 Dec 2021 12:01:00 GMT
 ENV TINI_VERSION=0.18.0
-# Sat, 04 Dec 2021 02:13:08 GMT
+# Wed, 22 Dec 2021 12:03:58 GMT
 RUN apt-get update  && apt-get install -y --no-install-recommends             ca-certificates  && buildDeps="       make gcc g++ libc-dev       wget bzip2 gnupg dirmngr     "  && apt-get install -y --no-install-recommends $buildDeps  && echo 'gem: --no-document' >> /etc/gemrc  && gem install oj -v 3.10.18  && gem install json -v 2.4.1  && gem install async-http -v 0.54.0  && gem install ext_monitor -v 0.1.2  && gem install fluentd -v 1.14.0  && dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"  && wget -O /usr/local/bin/tini "https://github.com/krallin/tini/releases/download/v$TINI_VERSION/tini-$dpkgArch"  && wget -O /usr/local/bin/tini.asc "https://github.com/krallin/tini/releases/download/v$TINI_VERSION/tini-$dpkgArch.asc"  && export GNUPGHOME="$(mktemp -d)"  && gpg --batch --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 6380DC428747F6C393FEACA59A84159D7001A4E5  && gpg --batch --verify /usr/local/bin/tini.asc /usr/local/bin/tini  && rm -r /usr/local/bin/tini.asc  && chmod +x /usr/local/bin/tini  && tini -h  && wget -O /tmp/jemalloc-4.5.0.tar.bz2 https://github.com/jemalloc/jemalloc/releases/download/4.5.0/jemalloc-4.5.0.tar.bz2  && cd /tmp && tar -xjf jemalloc-4.5.0.tar.bz2 && cd jemalloc-4.5.0/  && ./configure && make  && mv lib/libjemalloc.so.2 /usr/lib  && apt-get purge -y --auto-remove                   -o APT::AutoRemove::RecommendsImportant=false                   $buildDeps  && rm -rf /var/lib/apt/lists/*  && rm -rf /tmp/* /var/tmp/* /usr/lib/ruby/gems/*/cache/*.gem /usr/lib/ruby/gems/2.*/gems/fluentd-*/test
-# Sat, 04 Dec 2021 02:13:15 GMT
+# Wed, 22 Dec 2021 12:04:05 GMT
 RUN groupadd -r fluent && useradd -r -g fluent fluent     && mkdir -p /fluentd/log     && mkdir -p /fluentd/etc /fluentd/plugins     && chown -R fluent /fluentd && chgrp -R fluent /fluentd
-# Sat, 04 Dec 2021 02:13:16 GMT
+# Wed, 22 Dec 2021 12:04:06 GMT
 COPY file:06d9a84b9b428b4e0ef5a9e3699798758dc9716908d82091239fb9f85dd30d70 in /fluentd/etc/ 
-# Sat, 04 Dec 2021 02:13:17 GMT
+# Wed, 22 Dec 2021 12:04:07 GMT
 COPY file:977670d9d298d60208db6e5110a5919bfde19ee7da9c19df693163ecd07caea6 in /bin/ 
-# Sat, 04 Dec 2021 02:13:18 GMT
+# Wed, 22 Dec 2021 12:04:08 GMT
 ENV FLUENTD_CONF=fluent.conf
-# Sat, 04 Dec 2021 02:13:20 GMT
+# Wed, 22 Dec 2021 12:04:10 GMT
 ENV LD_PRELOAD=/usr/lib/libjemalloc.so.2
-# Sat, 04 Dec 2021 02:13:22 GMT
+# Wed, 22 Dec 2021 12:04:11 GMT
 EXPOSE 24224 5140
-# Sat, 04 Dec 2021 02:13:23 GMT
+# Wed, 22 Dec 2021 12:04:14 GMT
 USER fluent
-# Sat, 04 Dec 2021 02:13:25 GMT
+# Wed, 22 Dec 2021 12:04:15 GMT
 ENTRYPOINT ["tini" "--" "/bin/entrypoint.sh"]
-# Sat, 04 Dec 2021 02:13:27 GMT
+# Wed, 22 Dec 2021 12:04:16 GMT
 CMD ["fluentd"]
 ```
 
 -	Layers:
-	-	`sha256:da5263f5d65ecaf2dcd9400908302b4c477c13afa707110e4d85b4b946e9a3ae`  
-		Last Modified: Thu, 02 Dec 2021 07:32:41 GMT  
-		Size: 30.6 MB (30562306 bytes)  
+	-	`sha256:e2c79f8e0929abda2022fed71e090d3c34c8c3fdfb2a513ede1d117020a46821`  
+		Last Modified: Tue, 21 Dec 2021 02:30:19 GMT  
+		Size: 30.6 MB (30562311 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b5617a28440e343caa8dd30cc324bdd708ebe1f964ec11fd26f132068879ed4e`  
-		Last Modified: Fri, 03 Dec 2021 09:21:11 GMT  
-		Size: 12.7 MB (12705552 bytes)  
+	-	`sha256:2631c00b3c311045cc73612901f9f9c688c51a4fddcf564b71e07e86d63a947c`  
+		Last Modified: Tue, 21 Dec 2021 21:54:28 GMT  
+		Size: 12.7 MB (12705564 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:96de5a56dc2e1824f750d121f9d5244c505b423f1f8a35f736ff60ef67908f0b`  
-		Last Modified: Fri, 03 Dec 2021 09:21:08 GMT  
-		Size: 198.0 B  
+	-	`sha256:0fac6323fc58a5c06a4515158cc75b1af10e0f49be49230d25dc2c26ffacd771`  
+		Last Modified: Tue, 21 Dec 2021 21:54:25 GMT  
+		Size: 200.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d842a33f7d39fa300527a467e6bba3ff5e53e4d9d6f4df2996576cf1642efa14`  
-		Last Modified: Fri, 03 Dec 2021 09:26:06 GMT  
-		Size: 22.0 MB (22023323 bytes)  
+	-	`sha256:4325670a53628a5faddc22c047d07a33d54bbd91b6b40a88decdb9c98796d4d2`  
+		Last Modified: Tue, 21 Dec 2021 21:59:23 GMT  
+		Size: 22.0 MB (22023556 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:03648056dfafebc33cc627e0af6017e5566f34b428ed9e1c303f4c5c82b1ca41`  
-		Last Modified: Fri, 03 Dec 2021 09:26:03 GMT  
-		Size: 175.0 B  
+	-	`sha256:dc77ae87e95463eef918d5232283eb183b437175c4f88b7ee4aa548eb0d7a1cd`  
+		Last Modified: Tue, 21 Dec 2021 21:59:20 GMT  
+		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a6c3c72a12d41f318d5779e85bbbf449bad44ed9e5a7ad69e5146310522f6acc`  
-		Last Modified: Sat, 04 Dec 2021 02:13:53 GMT  
-		Size: 22.6 MB (22584998 bytes)  
+	-	`sha256:a60f09910054d2e5b7e34df6cde9679d6d3568a349bf9a1eaeab09a5914e7ae8`  
+		Last Modified: Wed, 22 Dec 2021 12:04:41 GMT  
+		Size: 22.6 MB (22584996 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e837d43a9b725089dff53fdf8c2afb40d3fe5ff825574a7afc89628e83c09006`  
-		Last Modified: Sat, 04 Dec 2021 02:13:49 GMT  
-		Size: 1.8 KB (1847 bytes)  
+	-	`sha256:00666a9e0501f820e950da19bbd55c96c8bfc50efd37f8a721976c39eb573152`  
+		Last Modified: Wed, 22 Dec 2021 12:04:36 GMT  
+		Size: 1.8 KB (1846 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b4b7940e8b758c81281c247c3832bf8ab53cebeb5ad5c55be6ccac845b8f7318`  
-		Last Modified: Sat, 04 Dec 2021 02:13:49 GMT  
-		Size: 408.0 B  
+	-	`sha256:31bb8a88f4157c1954cc1ac6ab48c72681dcc3c02d43fe57a48c6259a5e4648c`  
+		Last Modified: Wed, 22 Dec 2021 12:04:36 GMT  
+		Size: 410.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3ffc6e91fb84cbe49fc5de0107eb8c2a5a266f6949abff341300e65c07c8725d`  
-		Last Modified: Sat, 04 Dec 2021 02:13:49 GMT  
-		Size: 460.0 B  
+	-	`sha256:3404bfe33961c6e699212b8d6c4f1ca1635fc391fd3527a4e94258652e13ee5f`  
+		Last Modified: Wed, 22 Dec 2021 12:04:36 GMT  
+		Size: 459.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `fluentd:v1.14.0-debian-1.0` - linux; s390x
