@@ -1,18 +1,18 @@
-# `httpd:2.4.51-alpine`
+# `httpd:2.4.52-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:da799a8c8856863037ba46d9fe21812bfde0881b8fc2cdf4c98118e70b883d8a`
-- Created: `2021-11-30T04:42:18.884002311Z`
-- Virtual Size: ~ 54.92 Mb  
+- Image ID: `sha256:294cecd6c7790aa95e88ffa1880d91077ae169f4deab4fe666faa01dfa228319`
+- Created: `2021-12-21T01:38:02.329916636Z`
+- Virtual Size: ~ 58.15 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["httpd-foreground"]`
 - Environment:
   - `PATH=/usr/local/apache2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `HTTPD_PREFIX=/usr/local/apache2`
-  - `HTTPD_VERSION=2.4.51`
-  - `HTTPD_SHA256=20e01d81fecf077690a4439e3969a9b22a09a8d43c525356e863407741b838f4`
+  - `HTTPD_VERSION=2.4.52`
+  - `HTTPD_SHA256=0127f7dc497e9983e9c51474bed75e45607f2f870a7675a86dc90af6d572f5c9`
   - `HTTPD_PATCHES=`
 
 ## `apk` (`.apk`-based packages)
@@ -275,16 +275,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1l-r7 description:
+libcrypto1.1-1.1.1l-r8 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1l-r7 webpage:
+libcrypto1.1-1.1.1l-r8 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1l-r7 installed size:
+libcrypto1.1-1.1.1l-r8 installed size:
 2676 KiB
 
-libcrypto1.1-1.1.1l-r7 license:
+libcrypto1.1-1.1.1l-r8 license:
 OpenSSL
 
 ```
@@ -360,16 +360,16 @@ custom
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1l-r7 description:
+libssl1.1-1.1.1l-r8 description:
 SSL shared libraries
 
-libssl1.1-1.1.1l-r7 webpage:
+libssl1.1-1.1.1l-r8 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1l-r7 installed size:
+libssl1.1-1.1.1l-r8 installed size:
 528 KiB
 
-libssl1.1-1.1.1l-r7 license:
+libssl1.1-1.1.1l-r8 license:
 OpenSSL
 
 ```
