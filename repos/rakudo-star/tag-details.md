@@ -10,7 +10,7 @@
 ## `rakudo-star:2021.04`
 
 ```console
-$ docker pull rakudo-star@sha256:c928cd3ea3b5975ff581e8e3034a12e8c713854933a48b2c85d7b7a48bc7cc2e
+$ docker pull rakudo-star@sha256:03921a4abbfa3246e813e1047901b9f70687ddbd011365d75ce145d8f58149e9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -21,67 +21,67 @@ $ docker pull rakudo-star@sha256:c928cd3ea3b5975ff581e8e3034a12e8c713854933a48b2
 ### `rakudo-star:2021.04` - linux; amd64
 
 ```console
-$ docker pull rakudo-star@sha256:f0e1702997366b85729a1f6f38c6cd9740797e47ba3f904c15af363e9565b624
+$ docker pull rakudo-star@sha256:de4a6c172cb2ec91a76c62c3a66488e62bd48725faacf0c14265f72b4dceb1d0
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **161.9 MB (161874659 bytes)**  
+-	Total Size: **161.9 MB (161875184 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:386702f68ff6658b99a0b178a7c188a2feb33195074e612925863c29acd0e7df`
+-	Image ID: `sha256:7941e1936ac30bfaf37388f11bfefa2a3295cb59cf29e3552554a2002acd2ff1`
 -	Default Command: `["raku"]`
 
 ```dockerfile
-# Thu, 02 Dec 2021 02:48:31 GMT
-ADD file:f077e1a42fb919be2af67820782ceee3b46ffd13d7ab6949bea9921217d12813 in / 
-# Thu, 02 Dec 2021 02:48:32 GMT
+# Tue, 21 Dec 2021 01:22:53 GMT
+ADD file:be998d04a8927e9c4b105995e3b9d6800ea798807389f7c5921c0f4774328e21 in / 
+# Tue, 21 Dec 2021 01:22:53 GMT
 CMD ["bash"]
-# Thu, 02 Dec 2021 03:41:39 GMT
+# Tue, 21 Dec 2021 01:53:26 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
-# Thu, 02 Dec 2021 03:41:45 GMT
+# Tue, 21 Dec 2021 01:53:32 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Thu, 02 Dec 2021 03:42:05 GMT
+# Tue, 21 Dec 2021 01:53:50 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
-# Fri, 03 Dec 2021 04:20:50 GMT
+# Wed, 22 Dec 2021 09:16:27 GMT
 MAINTAINER Rob Hoelz
-# Fri, 03 Dec 2021 04:20:51 GMT
+# Wed, 22 Dec 2021 09:16:28 GMT
 RUN groupadd -r raku && useradd -m -r -g raku raku
-# Fri, 03 Dec 2021 04:20:51 GMT
+# Wed, 22 Dec 2021 09:16:28 GMT
 ARG rakudo_version=2021.04
-# Fri, 03 Dec 2021 04:20:51 GMT
+# Wed, 22 Dec 2021 09:16:29 GMT
 ENV rakudo_version=2021.04
-# Fri, 03 Dec 2021 04:31:25 GMT
+# Wed, 22 Dec 2021 09:26:01 GMT
 RUN buildDeps='         gcc         libc6-dev         make     '         url="https://rakudo.org/dl/star/rakudo-star-${rakudo_version}.tar.gz"     keyserver='ha.pool.sks-keyservers.net'     keyfp='B6F697742EFCAF5F23CE51D5031D65902E840821'     tmpdir="$(mktemp -d)"     && set -eux     && export GNUPGHOME="$tmpdir"     && apt-get update     && apt-get install -y --no-install-recommends $buildDeps     && rm -rf /var/lib/apt/lists/*     && mkdir ${tmpdir}/rakudo         && curl -fsSL ${url}.asc -o ${tmpdir}/rakudo.tar.gz.asc     && curl -fsSL $url -o ${tmpdir}/rakudo.tar.gz     && gpg --batch --keyserver $keyserver --recv-keys $keyfp     && gpg --batch --verify ${tmpdir}/rakudo.tar.gz.asc ${tmpdir}/rakudo.tar.gz         && tar xzf ${tmpdir}/rakudo.tar.gz --strip-components=1 -C ${tmpdir}/rakudo     && (         cd ${tmpdir}/rakudo         && bash bin/rstar install -p /usr     )     && rm -rf $tmpdir     && apt-get purge -y --auto-remove $buildDeps
-# Fri, 03 Dec 2021 04:31:25 GMT
+# Wed, 22 Dec 2021 09:26:02 GMT
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/perl6/core/bin:/usr/share/perl6/site/bin:/usr/share/perl6/vendor/bin
-# Fri, 03 Dec 2021 04:31:25 GMT
+# Wed, 22 Dec 2021 09:26:02 GMT
 CMD ["raku"]
 ```
 
 -	Layers:
-	-	`sha256:c4cc477c22ba7abce860198107408434dd7bd73ddbaf82f1e69ab941b9979405`  
-		Last Modified: Thu, 02 Dec 2021 02:54:07 GMT  
-		Size: 50.4 MB (50437113 bytes)  
+	-	`sha256:9b99af5931b39ce167150ad668cfa57ddf7664697be9996cb7e0e6aebbf05843`  
+		Last Modified: Tue, 21 Dec 2021 01:28:07 GMT  
+		Size: 50.4 MB (50437136 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:077c54d048f1f1a1f28079caa54bf5d99803f937ffe5c1dc6e207698f70b4e74`  
-		Last Modified: Thu, 02 Dec 2021 03:50:46 GMT  
-		Size: 7.8 MB (7833819 bytes)  
+	-	`sha256:b6013b3e77fe6fd3dcf46a05f8e5b3afa9fbca7ba0161c62e56beb4058334dec`  
+		Last Modified: Tue, 21 Dec 2021 02:02:46 GMT  
+		Size: 7.8 MB (7833863 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0368544993b2deeeffdd19463cdf92ec4e39f83073de5de316f9f5c725ab403f`  
-		Last Modified: Thu, 02 Dec 2021 03:50:46 GMT  
-		Size: 10.0 MB (9997240 bytes)  
+	-	`sha256:bbced17b6899896c8e4016d62c885d737fe667acace2733e17c64bb974232887`  
+		Last Modified: Tue, 21 Dec 2021 02:02:46 GMT  
+		Size: 10.0 MB (9997172 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dd9d1af719764344a5a57ac06d5f23a36bdca0aeec69294d60ab5c898ca87b38`  
-		Last Modified: Thu, 02 Dec 2021 03:51:05 GMT  
-		Size: 51.8 MB (51841246 bytes)  
+	-	`sha256:8b609dabefa83fae157bcd42123a8ed45199bb6c301e09a11260c1cad9babfef`  
+		Last Modified: Tue, 21 Dec 2021 02:03:05 GMT  
+		Size: 51.8 MB (51841352 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:934f3437fd6d6c8b4848c0528df1cf260280a94c9e49ed1850fb5dbdeea5f237`  
-		Last Modified: Fri, 03 Dec 2021 04:31:39 GMT  
-		Size: 4.1 KB (4131 bytes)  
+	-	`sha256:6b3b2bdd16b3cb447d87fd29a0b6115c017f92a8179c1935058a07e6826b5591`  
+		Last Modified: Wed, 22 Dec 2021 09:26:16 GMT  
+		Size: 4.1 KB (4129 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b00bb01980ecbfdb3e73778bc2be79de89aa8824737abb01e8fea3f2fb420d6b`  
-		Last Modified: Fri, 03 Dec 2021 04:31:47 GMT  
-		Size: 41.8 MB (41761110 bytes)  
+	-	`sha256:3c739929643172ee3aa8c02e2ee817ebf67bfaf11ffa962b75c68fcd04c428f8`  
+		Last Modified: Wed, 22 Dec 2021 09:26:24 GMT  
+		Size: 41.8 MB (41761532 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `rakudo-star:2021.04` - linux; arm64 variant v8
@@ -359,7 +359,7 @@ CMD ["raku"]
 ## `rakudo-star:latest`
 
 ```console
-$ docker pull rakudo-star@sha256:c928cd3ea3b5975ff581e8e3034a12e8c713854933a48b2c85d7b7a48bc7cc2e
+$ docker pull rakudo-star@sha256:03921a4abbfa3246e813e1047901b9f70687ddbd011365d75ce145d8f58149e9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -370,67 +370,67 @@ $ docker pull rakudo-star@sha256:c928cd3ea3b5975ff581e8e3034a12e8c713854933a48b2
 ### `rakudo-star:latest` - linux; amd64
 
 ```console
-$ docker pull rakudo-star@sha256:f0e1702997366b85729a1f6f38c6cd9740797e47ba3f904c15af363e9565b624
+$ docker pull rakudo-star@sha256:de4a6c172cb2ec91a76c62c3a66488e62bd48725faacf0c14265f72b4dceb1d0
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **161.9 MB (161874659 bytes)**  
+-	Total Size: **161.9 MB (161875184 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:386702f68ff6658b99a0b178a7c188a2feb33195074e612925863c29acd0e7df`
+-	Image ID: `sha256:7941e1936ac30bfaf37388f11bfefa2a3295cb59cf29e3552554a2002acd2ff1`
 -	Default Command: `["raku"]`
 
 ```dockerfile
-# Thu, 02 Dec 2021 02:48:31 GMT
-ADD file:f077e1a42fb919be2af67820782ceee3b46ffd13d7ab6949bea9921217d12813 in / 
-# Thu, 02 Dec 2021 02:48:32 GMT
+# Tue, 21 Dec 2021 01:22:53 GMT
+ADD file:be998d04a8927e9c4b105995e3b9d6800ea798807389f7c5921c0f4774328e21 in / 
+# Tue, 21 Dec 2021 01:22:53 GMT
 CMD ["bash"]
-# Thu, 02 Dec 2021 03:41:39 GMT
+# Tue, 21 Dec 2021 01:53:26 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
-# Thu, 02 Dec 2021 03:41:45 GMT
+# Tue, 21 Dec 2021 01:53:32 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Thu, 02 Dec 2021 03:42:05 GMT
+# Tue, 21 Dec 2021 01:53:50 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
-# Fri, 03 Dec 2021 04:20:50 GMT
+# Wed, 22 Dec 2021 09:16:27 GMT
 MAINTAINER Rob Hoelz
-# Fri, 03 Dec 2021 04:20:51 GMT
+# Wed, 22 Dec 2021 09:16:28 GMT
 RUN groupadd -r raku && useradd -m -r -g raku raku
-# Fri, 03 Dec 2021 04:20:51 GMT
+# Wed, 22 Dec 2021 09:16:28 GMT
 ARG rakudo_version=2021.04
-# Fri, 03 Dec 2021 04:20:51 GMT
+# Wed, 22 Dec 2021 09:16:29 GMT
 ENV rakudo_version=2021.04
-# Fri, 03 Dec 2021 04:31:25 GMT
+# Wed, 22 Dec 2021 09:26:01 GMT
 RUN buildDeps='         gcc         libc6-dev         make     '         url="https://rakudo.org/dl/star/rakudo-star-${rakudo_version}.tar.gz"     keyserver='ha.pool.sks-keyservers.net'     keyfp='B6F697742EFCAF5F23CE51D5031D65902E840821'     tmpdir="$(mktemp -d)"     && set -eux     && export GNUPGHOME="$tmpdir"     && apt-get update     && apt-get install -y --no-install-recommends $buildDeps     && rm -rf /var/lib/apt/lists/*     && mkdir ${tmpdir}/rakudo         && curl -fsSL ${url}.asc -o ${tmpdir}/rakudo.tar.gz.asc     && curl -fsSL $url -o ${tmpdir}/rakudo.tar.gz     && gpg --batch --keyserver $keyserver --recv-keys $keyfp     && gpg --batch --verify ${tmpdir}/rakudo.tar.gz.asc ${tmpdir}/rakudo.tar.gz         && tar xzf ${tmpdir}/rakudo.tar.gz --strip-components=1 -C ${tmpdir}/rakudo     && (         cd ${tmpdir}/rakudo         && bash bin/rstar install -p /usr     )     && rm -rf $tmpdir     && apt-get purge -y --auto-remove $buildDeps
-# Fri, 03 Dec 2021 04:31:25 GMT
+# Wed, 22 Dec 2021 09:26:02 GMT
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/perl6/core/bin:/usr/share/perl6/site/bin:/usr/share/perl6/vendor/bin
-# Fri, 03 Dec 2021 04:31:25 GMT
+# Wed, 22 Dec 2021 09:26:02 GMT
 CMD ["raku"]
 ```
 
 -	Layers:
-	-	`sha256:c4cc477c22ba7abce860198107408434dd7bd73ddbaf82f1e69ab941b9979405`  
-		Last Modified: Thu, 02 Dec 2021 02:54:07 GMT  
-		Size: 50.4 MB (50437113 bytes)  
+	-	`sha256:9b99af5931b39ce167150ad668cfa57ddf7664697be9996cb7e0e6aebbf05843`  
+		Last Modified: Tue, 21 Dec 2021 01:28:07 GMT  
+		Size: 50.4 MB (50437136 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:077c54d048f1f1a1f28079caa54bf5d99803f937ffe5c1dc6e207698f70b4e74`  
-		Last Modified: Thu, 02 Dec 2021 03:50:46 GMT  
-		Size: 7.8 MB (7833819 bytes)  
+	-	`sha256:b6013b3e77fe6fd3dcf46a05f8e5b3afa9fbca7ba0161c62e56beb4058334dec`  
+		Last Modified: Tue, 21 Dec 2021 02:02:46 GMT  
+		Size: 7.8 MB (7833863 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0368544993b2deeeffdd19463cdf92ec4e39f83073de5de316f9f5c725ab403f`  
-		Last Modified: Thu, 02 Dec 2021 03:50:46 GMT  
-		Size: 10.0 MB (9997240 bytes)  
+	-	`sha256:bbced17b6899896c8e4016d62c885d737fe667acace2733e17c64bb974232887`  
+		Last Modified: Tue, 21 Dec 2021 02:02:46 GMT  
+		Size: 10.0 MB (9997172 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dd9d1af719764344a5a57ac06d5f23a36bdca0aeec69294d60ab5c898ca87b38`  
-		Last Modified: Thu, 02 Dec 2021 03:51:05 GMT  
-		Size: 51.8 MB (51841246 bytes)  
+	-	`sha256:8b609dabefa83fae157bcd42123a8ed45199bb6c301e09a11260c1cad9babfef`  
+		Last Modified: Tue, 21 Dec 2021 02:03:05 GMT  
+		Size: 51.8 MB (51841352 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:934f3437fd6d6c8b4848c0528df1cf260280a94c9e49ed1850fb5dbdeea5f237`  
-		Last Modified: Fri, 03 Dec 2021 04:31:39 GMT  
-		Size: 4.1 KB (4131 bytes)  
+	-	`sha256:6b3b2bdd16b3cb447d87fd29a0b6115c017f92a8179c1935058a07e6826b5591`  
+		Last Modified: Wed, 22 Dec 2021 09:26:16 GMT  
+		Size: 4.1 KB (4129 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b00bb01980ecbfdb3e73778bc2be79de89aa8824737abb01e8fea3f2fb420d6b`  
-		Last Modified: Fri, 03 Dec 2021 04:31:47 GMT  
-		Size: 41.8 MB (41761110 bytes)  
+	-	`sha256:3c739929643172ee3aa8c02e2ee817ebf67bfaf11ffa962b75c68fcd04c428f8`  
+		Last Modified: Wed, 22 Dec 2021 09:26:24 GMT  
+		Size: 41.8 MB (41761532 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `rakudo-star:latest` - linux; arm64 variant v8
