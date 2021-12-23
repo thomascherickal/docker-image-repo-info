@@ -1,7 +1,7 @@
 ## `gradle:6-jdk8`
 
 ```console
-$ docker pull gradle@sha256:5ec8e64cd7c7d5d521b989bfc851ea2553e441e2ee5cead527bba1f165ba41f3
+$ docker pull gradle@sha256:cbdb80c70ae8f2394293a1ed2b3f94653ef371c2abcfc6e1e2899a5431e7ab3e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -95,14 +95,14 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 ### `gradle:6-jdk8` - linux; arm variant v7
 
 ```console
-$ docker pull gradle@sha256:95cd447c4a60c6c476f81af74141761e8c89244e8f5defdf6e03b627dcf0a5d6
+$ docker pull gradle@sha256:16d79a341a189cc60f1f94358244cb366169afe69056477ff6dafce822521955
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **306.0 MB (305996108 bytes)**  
+-	Total Size: **306.0 MB (305996588 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:34378e8d1d448ab599646aa13edb44c5c6efbade844dd62a44ddb7e65510bbc5`
+-	Image ID: `sha256:070553e9edf32c4e0a60e331d25b3736ecf3ee26986c89311cc64af4ff87f723`
 -	Default Command: `["gradle"]`
 
 ```dockerfile
@@ -134,12 +134,12 @@ VOLUME [/home/gradle/.gradle]
 WORKDIR /home/gradle
 # Mon, 29 Nov 2021 22:52:23 GMT
 RUN set -o errexit -o nounset     && apt-get update     && apt-get install --yes --no-install-recommends         unzip         wget                 bzr         git         git-lfs         mercurial         openssh-client         subversion     && rm --recursive --force /var/lib/apt/lists/*         && echo "Testing VCSes"     && which bzr     && which git     && which git-lfs     && which hg     && which svn
-# Mon, 29 Nov 2021 22:55:42 GMT
-ENV GRADLE_VERSION=6.9.1
-# Mon, 29 Nov 2021 22:55:42 GMT
-ARG GRADLE_DOWNLOAD_SHA256=8c12154228a502b784f451179846e518733cf856efc7d45b2e6691012977b2fe
-# Mon, 29 Nov 2021 22:55:54 GMT
-# ARGS: GRADLE_DOWNLOAD_SHA256=8c12154228a502b784f451179846e518733cf856efc7d45b2e6691012977b2fe
+# Thu, 23 Dec 2021 04:14:17 GMT
+ENV GRADLE_VERSION=6.9.2
+# Thu, 23 Dec 2021 04:14:18 GMT
+ARG GRADLE_DOWNLOAD_SHA256=8b356fd8702d5ffa2e066ed0be45a023a779bba4dd1a68fd11bc2a6bdc981e8f
+# Thu, 23 Dec 2021 04:14:29 GMT
+# ARGS: GRADLE_DOWNLOAD_SHA256=8b356fd8702d5ffa2e066ed0be45a023a779bba4dd1a68fd11bc2a6bdc981e8f
 RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-verbose --output-document=gradle.zip "https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip"         && echo "Checking download hash"     && echo "${GRADLE_DOWNLOAD_SHA256} *gradle.zip" | sha256sum --check -         && echo "Installing Gradle"     && unzip gradle.zip     && rm gradle.zip     && mv "gradle-${GRADLE_VERSION}" "${GRADLE_HOME}/"     && ln --symbolic "${GRADLE_HOME}/bin/gradle" /usr/bin/gradle         && echo "Testing Gradle installation"     && gradle --version
 ```
 
@@ -168,9 +168,9 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Last Modified: Mon, 29 Nov 2021 23:00:11 GMT  
 		Size: 51.9 MB (51893650 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:437534b4a62bb4590e5fb5c3fd9cc7f238ded742080f2c5e1e754df89a0b78ba`  
-		Last Modified: Mon, 29 Nov 2021 23:03:37 GMT  
-		Size: 107.7 MB (107689907 bytes)  
+	-	`sha256:c65793e4c8603edf7dc09a0505d0742fa9ac02c3cc0fcd2e7d07bdbde526ebc3`  
+		Last Modified: Thu, 23 Dec 2021 04:21:54 GMT  
+		Size: 107.7 MB (107690387 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `gradle:6-jdk8` - linux; arm64 variant v8
