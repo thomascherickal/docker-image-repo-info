@@ -1,19 +1,19 @@
-# `haproxy:2.4.9-alpine`
+# `haproxy:2.4.10-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:44ec98c476ab4117a702f0f1e295b37adef2a4b6ec249aeba15cd73088bb5ce3`
-- Created: `2021-11-30T02:25:54.477763875Z`
-- Virtual Size: ~ 24.41 Mb  
+- Image ID: `sha256:ff2eeac8ff86f3cebbea112806607f0b826ec87b92f35dfb654e9d32655c311a`
+- Created: `2021-12-23T23:21:46.186403788Z`
+- Virtual Size: ~ 27.62 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
 - Command: `["haproxy","-f","/usr/local/etc/haproxy/haproxy.cfg"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `HAPROXY_VERSION=2.4.9`
-  - `HAPROXY_URL=https://www.haproxy.org/download/2.4/src/haproxy-2.4.9.tar.gz`
-  - `HAPROXY_SHA256=d56c7fe3c5afedd1b9a19e1b7f8f954feaf50a9c2f205f99891043858b72a763`
+  - `HAPROXY_VERSION=2.4.10`
+  - `HAPROXY_URL=https://www.haproxy.org/download/2.4/src/haproxy-2.4.10.tar.gz`
+  - `HAPROXY_SHA256=4838dcc961a4544ef2d1e1aa7a7624cffdc4dda731d9cb66e46114819a3b1c5c`
 
 ## `apk` (`.apk`-based packages)
 
@@ -122,16 +122,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1l-r7 description:
+libcrypto1.1-1.1.1l-r8 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1l-r7 webpage:
+libcrypto1.1-1.1.1l-r8 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1l-r7 installed size:
+libcrypto1.1-1.1.1l-r8 installed size:
 2676 KiB
 
-libcrypto1.1-1.1.1l-r7 license:
+libcrypto1.1-1.1.1l-r8 license:
 OpenSSL
 
 ```
@@ -156,16 +156,16 @@ ISC AND (BSD-3-Clause OR MIT)
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1l-r7 description:
+libssl1.1-1.1.1l-r8 description:
 SSL shared libraries
 
-libssl1.1-1.1.1l-r7 webpage:
+libssl1.1-1.1.1l-r8 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1l-r7 installed size:
+libssl1.1-1.1.1l-r8 installed size:
 528 KiB
 
-libssl1.1-1.1.1l-r7 license:
+libssl1.1-1.1.1l-r8 license:
 OpenSSL
 
 ```
