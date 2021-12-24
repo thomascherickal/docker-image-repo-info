@@ -4,7 +4,7 @@
 
 - Image ID: `sha256:4edbdd2bf7a5cda19c794add7572218c5d0ac4543cdbeaa3164d3e314d0c9038`
 - Created: `2021-12-20T19:33:11.026900891Z`
-- Virtual Size: ~ 623.95 Mb  
+- Virtual Size: ~ 623.98 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/opt/sonarqube/bin/run.sh"]`
