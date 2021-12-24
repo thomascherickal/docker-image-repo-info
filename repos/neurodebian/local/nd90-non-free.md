@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:d2d94cb36f6922033ec4eaab304f10d8b60fb22564d4b0da5b563c5ea34b93cd`
-- Created: `2021-12-02T09:56:25.342580116Z`
+- Image ID: `sha256:ec793815c2982bb6a2926d5b8ec08991189d175b557494ff7a0ffdbed3b4471c`
+- Created: `2021-12-21T18:40:37.709764627Z`
 - Virtual Size: ~ 114.03 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -637,11 +637,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/glibc/2.24-11+deb9u4/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/glibc/2.24-11+deb9u4/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `gmp=2:6.1.2+dfsg-1`
+### `dpkg` source package: `gmp=2:6.1.2+dfsg-1+deb9u1`
 
 Binary Packages:
 
-- `libgmp10:amd64=2:6.1.2+dfsg-1`
+- `libgmp10:amd64=2:6.1.2+dfsg-1+deb9u1`
 
 Licenses: (parsed from: `/usr/share/doc/libgmp10/copyright`)
 
@@ -653,17 +653,17 @@ Licenses: (parsed from: `/usr/share/doc/libgmp10/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris gmp=2:6.1.2+dfsg-1
-'http://deb.debian.org/debian/pool/main/g/gmp/gmp_6.1.2+dfsg-1.dsc' gmp_6.1.2+dfsg-1.dsc 2183 SHA256:3a53f6c74c9b2465c1c61446aa9bdc6182fdec8b04075849d4cbf224a73b6fbe
-'http://deb.debian.org/debian/pool/main/g/gmp/gmp_6.1.2+dfsg.orig.tar.xz' gmp_6.1.2+dfsg.orig.tar.xz 1804424 SHA256:18016f718f621e7641ddd4e57f8e140391c5183252e5998263ffff59198a65b7
-'http://deb.debian.org/debian/pool/main/g/gmp/gmp_6.1.2+dfsg-1.debian.tar.xz' gmp_6.1.2+dfsg-1.debian.tar.xz 20652 SHA256:79e73f74197e7628b2f0c02edf01b6eea3716c13152044ed8e0e0ee4178394df
+$ apt-get source -qq --print-uris gmp=2:6.1.2+dfsg-1+deb9u1
+'http://security.debian.org/debian-security/pool/updates/main/g/gmp/gmp_6.1.2+dfsg-1+deb9u1.dsc' gmp_6.1.2+dfsg-1+deb9u1.dsc 2211 SHA256:0ce57232e517fc70ead63b515f26d4a492acd9041cd373b09db62f42326a7055
+'http://security.debian.org/debian-security/pool/updates/main/g/gmp/gmp_6.1.2+dfsg.orig.tar.xz' gmp_6.1.2+dfsg.orig.tar.xz 1804424 SHA256:18016f718f621e7641ddd4e57f8e140391c5183252e5998263ffff59198a65b7
+'http://security.debian.org/debian-security/pool/updates/main/g/gmp/gmp_6.1.2+dfsg-1+deb9u1.debian.tar.xz' gmp_6.1.2+dfsg-1+deb9u1.debian.tar.xz 21268 SHA256:afc4192a4749edfc5effed23993d419d2e9b499c85b8fd5c9f47145caca1c056
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/gmp/2:6.1.2+dfsg-1/ (for browsing the source)
-- https://sources.debian.net/src/gmp/2:6.1.2+dfsg-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gmp/2:6.1.2+dfsg-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/gmp/2:6.1.2+dfsg-1+deb9u1/ (for browsing the source)
+- https://sources.debian.net/src/gmp/2:6.1.2+dfsg-1+deb9u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/gmp/2:6.1.2+dfsg-1+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gnupg2=2.1.18-8~deb9u4`
 
