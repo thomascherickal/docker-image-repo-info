@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:5ea6df2ead6ba388fa613c502b6008f2c9e27dbe1f3ee78a32869c6facdc65ba`
-- Created: `2021-12-02T17:43:08.421814695Z`
-- Virtual Size: ~ 2.95 Gb  
+- Image ID: `sha256:6bdde8d2d8755a07c3c5da3e93fc5ea727ef066ad786848c2d224e4826b107c4`
+- Created: `2021-12-22T00:01:43.814250464Z`
+- Virtual Size: ~ 2.89 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/ros_entrypoint.sh"]`
@@ -355,9 +355,8 @@ Other potentially useful URLs:
 Binary Packages:
 
 - `libatk-bridge2.0-0:amd64=2.30.0-5`
-- `libatk-bridge2.0-dev:amd64=2.30.0-5`
 
-Licenses: (parsed from: `/usr/share/doc/libatk-bridge2.0-0/copyright`, `/usr/share/doc/libatk-bridge2.0-dev/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libatk-bridge2.0-0/copyright`)
 
 - `GPL-2`
 - `GPL-2+`
@@ -383,11 +382,9 @@ Other potentially useful URLs:
 
 Binary Packages:
 
-- `gir1.2-atspi-2.0:amd64=2.30.0-7`
 - `libatspi2.0-0:amd64=2.30.0-7`
-- `libatspi2.0-dev:amd64=2.30.0-7`
 
-Licenses: (parsed from: `/usr/share/doc/gir1.2-atspi-2.0/copyright`, `/usr/share/doc/libatspi2.0-0/copyright`, `/usr/share/doc/libatspi2.0-dev/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libatspi2.0-0/copyright`)
 
 - `AFL-2.1`
 - `GPL-2`
@@ -415,12 +412,10 @@ Other potentially useful URLs:
 
 Binary Packages:
 
-- `gir1.2-atk-1.0:amd64=2.30.0-2`
 - `libatk1.0-0:amd64=2.30.0-2`
 - `libatk1.0-data=2.30.0-2`
-- `libatk1.0-dev:amd64=2.30.0-2`
 
-Licenses: (parsed from: `/usr/share/doc/gir1.2-atk-1.0/copyright`, `/usr/share/doc/libatk1.0-0/copyright`, `/usr/share/doc/libatk1.0-data/copyright`, `/usr/share/doc/libatk1.0-dev/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libatk1.0-0/copyright`, `/usr/share/doc/libatk1.0-data/copyright`)
 
 - `LGPL-2`
 
@@ -1039,11 +1034,9 @@ Other potentially useful URLs:
 Binary Packages:
 
 - `libcairo-gobject2:amd64=1.16.0-4+deb10u1`
-- `libcairo-script-interpreter2:amd64=1.16.0-4+deb10u1`
 - `libcairo2:amd64=1.16.0-4+deb10u1`
-- `libcairo2-dev:amd64=1.16.0-4+deb10u1`
 
-Licenses: (parsed from: `/usr/share/doc/libcairo-gobject2/copyright`, `/usr/share/doc/libcairo-script-interpreter2/copyright`, `/usr/share/doc/libcairo2/copyright`, `/usr/share/doc/libcairo2-dev/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libcairo-gobject2/copyright`, `/usr/share/doc/libcairo2/copyright`)
 
 - `LGPL-2.1`
 
@@ -1569,9 +1562,8 @@ Binary Packages:
 - `dbus=1.12.20-0+deb10u1`
 - `dbus-user-session=1.12.20-0+deb10u1`
 - `libdbus-1-3:amd64=1.12.20-0+deb10u1`
-- `libdbus-1-dev:amd64=1.12.20-0+deb10u1`
 
-Licenses: (parsed from: `/usr/share/doc/dbus/copyright`, `/usr/share/doc/dbus-user-session/copyright`, `/usr/share/doc/libdbus-1-3/copyright`, `/usr/share/doc/libdbus-1-dev/copyright`)
+Licenses: (parsed from: `/usr/share/doc/dbus/copyright`, `/usr/share/doc/dbus-user-session/copyright`, `/usr/share/doc/libdbus-1-3/copyright`)
 
 - `AFL-2.1`
 - `AFL-2.1,`
@@ -2243,10 +2235,9 @@ Other potentially useful URLs:
 
 Binary Packages:
 
-- `libfribidi-dev:amd64=1.0.5-3.1+deb10u1`
 - `libfribidi0:amd64=1.0.5-3.1+deb10u1`
 
-Licenses: (parsed from: `/usr/share/doc/libfribidi-dev/copyright`, `/usr/share/doc/libfribidi0/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libfribidi0/copyright`)
 
 - `LGPL-2.1`
 - `LGPL-2.1+`
@@ -2523,13 +2514,10 @@ Other potentially useful URLs:
 
 Binary Packages:
 
-- `gir1.2-gdkpixbuf-2.0:amd64=2.38.1+dfsg-1`
 - `libgdk-pixbuf2.0-0:amd64=2.38.1+dfsg-1`
-- `libgdk-pixbuf2.0-bin=2.38.1+dfsg-1`
 - `libgdk-pixbuf2.0-common=2.38.1+dfsg-1`
-- `libgdk-pixbuf2.0-dev:amd64=2.38.1+dfsg-1`
 
-Licenses: (parsed from: `/usr/share/doc/gir1.2-gdkpixbuf-2.0/copyright`, `/usr/share/doc/libgdk-pixbuf2.0-0/copyright`, `/usr/share/doc/libgdk-pixbuf2.0-bin/copyright`, `/usr/share/doc/libgdk-pixbuf2.0-common/copyright`, `/usr/share/doc/libgdk-pixbuf2.0-dev/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libgdk-pixbuf2.0-0/copyright`, `/usr/share/doc/libgdk-pixbuf2.0-common/copyright`)
 
 - `GPL-2`
 - `GPL-2+`
@@ -2744,12 +2732,8 @@ Other potentially useful URLs:
 Binary Packages:
 
 - `libglib2.0-0:amd64=2.58.3-2+deb10u3`
-- `libglib2.0-bin=2.58.3-2+deb10u3`
-- `libglib2.0-data=2.58.3-2+deb10u3`
-- `libglib2.0-dev:amd64=2.58.3-2+deb10u3`
-- `libglib2.0-dev-bin=2.58.3-2+deb10u3`
 
-Licenses: (parsed from: `/usr/share/doc/libglib2.0-0/copyright`, `/usr/share/doc/libglib2.0-bin/copyright`, `/usr/share/doc/libglib2.0-data/copyright`, `/usr/share/doc/libglib2.0-dev/copyright`, `/usr/share/doc/libglib2.0-dev-bin/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libglib2.0-0/copyright`)
 
 - `Apache-2.0`
 - `Expat`
@@ -2918,38 +2902,6 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/gnutls28/3.6.7-4+deb10u7/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/gnutls28/3.6.7-4+deb10u7/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `gobject-introspection=1.58.3-2`
-
-Binary Packages:
-
-- `gir1.2-freedesktop:amd64=1.58.3-2`
-- `gir1.2-glib-2.0:amd64=1.58.3-2`
-- `libgirepository-1.0-1:amd64=1.58.3-2`
-
-Licenses: (parsed from: `/usr/share/doc/gir1.2-freedesktop/copyright`, `/usr/share/doc/gir1.2-glib-2.0/copyright`, `/usr/share/doc/libgirepository-1.0-1/copyright`)
-
-- `BSD-2-clause`
-- `GPL-2`
-- `GPL-2+`
-- `LGPL-2`
-- `LGPL-2+`
-- `MIT`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris gobject-introspection=1.58.3-2
-'http://deb.debian.org/debian/pool/main/g/gobject-introspection/gobject-introspection_1.58.3-2.dsc' gobject-introspection_1.58.3-2.dsc 2814 SHA256:595a618019f9d16709f9278e0ec86e6cd03ea8854f19eb0de3f41f616c54c152
-'http://deb.debian.org/debian/pool/main/g/gobject-introspection/gobject-introspection_1.58.3.orig.tar.xz' gobject-introspection_1.58.3.orig.tar.xz 1378068 SHA256:025b632bbd944dcf11fc50d19a0ca086b83baf92b3e34936d008180d28cdc3c8
-'http://deb.debian.org/debian/pool/main/g/gobject-introspection/gobject-introspection_1.58.3-2.debian.tar.xz' gobject-introspection_1.58.3-2.debian.tar.xz 21160 SHA256:1ce1df69f0ca71b61478e6569b2bf19ac3c915cfdcf617a5888deb851b4ea804
-```
-
-Other potentially useful URLs:
-
-- https://sources.debian.net/src/gobject-introspection/1.58.3-2/ (for browsing the source)
-- https://sources.debian.net/src/gobject-introspection/1.58.3-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gobject-introspection/1.58.3-2/ (for access to the source package after it no longer exists in the archive)
-
 ### `dpkg` source package: `googletest=1.8.1-3`
 
 Binary Packages:
@@ -3019,9 +2971,8 @@ Other potentially useful URLs:
 Binary Packages:
 
 - `libgraphite2-3:amd64=1.3.13-7`
-- `libgraphite2-dev:amd64=1.3.13-7`
 
-Licenses: (parsed from: `/usr/share/doc/libgraphite2-3/copyright`, `/usr/share/doc/libgraphite2-dev/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libgraphite2-3/copyright`)
 
 - `Artistic`
 - `GPL-1`
@@ -3200,13 +3151,11 @@ Other potentially useful URLs:
 
 Binary Packages:
 
-- `gir1.2-gtk-3.0:amd64=3.24.5-1`
 - `gtk-update-icon-cache=3.24.5-1`
 - `libgtk-3-0:amd64=3.24.5-1`
 - `libgtk-3-common=3.24.5-1`
-- `libgtk-3-dev:amd64=3.24.5-1`
 
-Licenses: (parsed from: `/usr/share/doc/gir1.2-gtk-3.0/copyright`, `/usr/share/doc/gtk-update-icon-cache/copyright`, `/usr/share/doc/libgtk-3-0/copyright`, `/usr/share/doc/libgtk-3-common/copyright`, `/usr/share/doc/libgtk-3-dev/copyright`)
+Licenses: (parsed from: `/usr/share/doc/gtk-update-icon-cache/copyright`, `/usr/share/doc/libgtk-3-0/copyright`, `/usr/share/doc/libgtk-3-common/copyright`)
 
 - `Apache-2.0`
 - `Expat`
@@ -3287,13 +3236,9 @@ Other potentially useful URLs:
 
 Binary Packages:
 
-- `gir1.2-harfbuzz-0.0:amd64=2.3.1-1`
-- `libharfbuzz-dev:amd64=2.3.1-1`
-- `libharfbuzz-gobject0:amd64=2.3.1-1`
-- `libharfbuzz-icu0:amd64=2.3.1-1`
 - `libharfbuzz0b:amd64=2.3.1-1`
 
-Licenses: (parsed from: `/usr/share/doc/gir1.2-harfbuzz-0.0/copyright`, `/usr/share/doc/libharfbuzz-dev/copyright`, `/usr/share/doc/libharfbuzz-gobject0/copyright`, `/usr/share/doc/libharfbuzz-icu0/copyright`, `/usr/share/doc/libharfbuzz0b/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libharfbuzz0b/copyright`)
 
 - `MIT`
 
@@ -4412,10 +4357,9 @@ Other potentially useful URLs:
 
 Binary Packages:
 
-- `libepoxy-dev:amd64=1.5.3-0.1`
 - `libepoxy0:amd64=1.5.3-0.1`
 
-Licenses: (parsed from: `/usr/share/doc/libepoxy-dev/copyright`, `/usr/share/doc/libepoxy0/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libepoxy0/copyright`)
 
 - `Expat`
 
@@ -4609,10 +4553,9 @@ Other potentially useful URLs:
 
 Binary Packages:
 
-- `libffi-dev:amd64=3.2.1-9`
 - `libffi6:amd64=3.2.1-9`
 
-Licenses: (parsed from: `/usr/share/doc/libffi-dev/copyright`, `/usr/share/doc/libffi6/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libffi6/copyright`)
 
 - `GPL`
 
@@ -5624,9 +5567,8 @@ Other potentially useful URLs:
 Binary Packages:
 
 - `libselinux1:amd64=2.8-1+b1`
-- `libselinux1-dev:amd64=2.8-1+b1`
 
-Licenses: (parsed from: `/usr/share/doc/libselinux1/copyright`, `/usr/share/doc/libselinux1-dev/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libselinux1/copyright`)
 
 - `GPL-2`
 - `LGPL-2.1`
@@ -5678,9 +5620,8 @@ Other potentially useful URLs:
 Binary Packages:
 
 - `libsepol1:amd64=2.8-1`
-- `libsepol1-dev:amd64=2.8-1`
 
-Licenses: (parsed from: `/usr/share/doc/libsepol1/copyright`, `/usr/share/doc/libsepol1-dev/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libsepol1/copyright`)
 
 - `GPL`
 - `LGPL`
@@ -6371,7 +6312,6 @@ Binary Packages:
 - `libxcb-shape0:amd64=1.13.1-2`
 - `libxcb-shape0-dev:amd64=1.13.1-2`
 - `libxcb-shm0:amd64=1.13.1-2`
-- `libxcb-shm0-dev:amd64=1.13.1-2`
 - `libxcb-sync-dev:amd64=1.13.1-2`
 - `libxcb-sync1:amd64=1.13.1-2`
 - `libxcb-xfixes0:amd64=1.13.1-2`
@@ -6404,7 +6344,6 @@ Other potentially useful URLs:
 
 Binary Packages:
 
-- `libxcomposite-dev:amd64=1:0.4.4-2`
 - `libxcomposite1:amd64=1:0.4.4-2`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
@@ -6430,7 +6369,6 @@ Other potentially useful URLs:
 
 Binary Packages:
 
-- `libxcursor-dev:amd64=1:1.1.15-2`
 - `libxcursor1:amd64=1:1.1.15-2`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
@@ -6560,7 +6498,6 @@ Other potentially useful URLs:
 
 Binary Packages:
 
-- `libxi-dev:amd64=2:1.7.9-1`
 - `libxi6:amd64=2:1.7.9-1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
@@ -6586,7 +6523,6 @@ Other potentially useful URLs:
 
 Binary Packages:
 
-- `libxinerama-dev:amd64=2:1.1.4-2`
 - `libxinerama1:amd64=2:1.1.4-2`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
@@ -6612,7 +6548,6 @@ Other potentially useful URLs:
 
 Binary Packages:
 
-- `libxkbcommon-dev:amd64=0.8.2-1`
 - `libxkbcommon-x11-0:amd64=0.8.2-1`
 - `libxkbcommon0:amd64=0.8.2-1`
 
@@ -6715,7 +6650,6 @@ Other potentially useful URLs:
 
 Binary Packages:
 
-- `libxrandr-dev:amd64=2:1.5.1-1`
 - `libxrandr2:amd64=2:1.5.1-1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
@@ -6867,32 +6801,6 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libxt/1:1.1.5-1/ (for browsing the source)
 - https://sources.debian.net/src/libxt/1:1.1.5-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libxt/1:1.1.5-1/ (for access to the source package after it no longer exists in the archive)
-
-### `dpkg` source package: `libxtst=2:1.2.3-1`
-
-Binary Packages:
-
-- `libxtst-dev:amd64=2:1.2.3-1`
-- `libxtst6:amd64=2:1.2.3-1`
-
-**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
-If source is available (seen below), check the contents of `debian/copyright` within it.
-
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris libxtst=2:1.2.3-1
-'http://deb.debian.org/debian/pool/main/libx/libxtst/libxtst_1.2.3-1.dsc' libxtst_1.2.3-1.dsc 2243 SHA256:979f05e505ea319c3f75955e10345338f77a512f5a6a0a887d6f4633d6bd4633
-'http://deb.debian.org/debian/pool/main/libx/libxtst/libxtst_1.2.3.orig.tar.gz' libxtst_1.2.3.orig.tar.gz 400197 SHA256:a0c83acce02d4923018c744662cb28eb0dbbc33b4adc027726879ccf68fbc2c2
-'http://deb.debian.org/debian/pool/main/libx/libxtst/libxtst_1.2.3-1.diff.gz' libxtst_1.2.3-1.diff.gz 10177 SHA256:c4739fc7ccda7caaffcf36f934b7c33463390e71d567c7d62f635db1946b74ed
-```
-
-Other potentially useful URLs:
-
-- https://sources.debian.net/src/libxtst/2:1.2.3-1/ (for browsing the source)
-- https://sources.debian.net/src/libxtst/2:1.2.3-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libxtst/2:1.2.3-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libxxf86vm=1:1.1.4-1`
 
@@ -7223,31 +7131,6 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/lz4/1.8.3-1+deb10u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/lz4/1.8.3-1+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `lzo2=2.10-0.1`
-
-Binary Packages:
-
-- `liblzo2-2:amd64=2.10-0.1`
-
-Licenses: (parsed from: `/usr/share/doc/liblzo2-2/copyright`)
-
-- `GPL-2`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris lzo2=2.10-0.1
-'http://deb.debian.org/debian/pool/main/l/lzo2/lzo2_2.10-0.1.dsc' lzo2_2.10-0.1.dsc 1869 SHA256:49cdf2efab29d7dd8a907730a37c2c5ca312d9c2150f8e37663838b122856aff
-'http://deb.debian.org/debian/pool/main/l/lzo2/lzo2_2.10.orig.tar.gz' lzo2_2.10.orig.tar.gz 600622 SHA256:c0f892943208266f9b6543b3ae308fab6284c5c90e627931446fb49b4221a072
-'http://deb.debian.org/debian/pool/main/l/lzo2/lzo2_2.10-0.1.debian.tar.xz' lzo2_2.10-0.1.debian.tar.xz 6032 SHA256:0d57d800afc09a44180cb323f4c5d77e9a5f29c1ba53a3ebdd5ec225b2d44723
-```
-
-Other potentially useful URLs:
-
-- https://sources.debian.net/src/lzo2/2.10-0.1/ (for browsing the source)
-- https://sources.debian.net/src/lzo2/2.10-0.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/lzo2/2.10-0.1/ (for access to the source package after it no longer exists in the archive)
-
 ### `dpkg` source package: `m4=1.4.18-2`
 
 Binary Packages:
@@ -7407,7 +7290,6 @@ Other potentially useful URLs:
 Binary Packages:
 
 - `libegl-mesa0:amd64=18.3.6-2+deb10u1`
-- `libegl1-mesa-dev:amd64=18.3.6-2+deb10u1`
 - `libgbm1:amd64=18.3.6-2+deb10u1`
 - `libgl1-mesa-dev:amd64=18.3.6-2+deb10u1`
 - `libgl1-mesa-dri:amd64=18.3.6-2+deb10u1`
@@ -7415,7 +7297,7 @@ Binary Packages:
 - `libglx-mesa0:amd64=18.3.6-2+deb10u1`
 - `mesa-common-dev:amd64=18.3.6-2+deb10u1`
 
-Licenses: (parsed from: `/usr/share/doc/libegl-mesa0/copyright`, `/usr/share/doc/libegl1-mesa-dev/copyright`, `/usr/share/doc/libgbm1/copyright`, `/usr/share/doc/libgl1-mesa-dev/copyright`, `/usr/share/doc/libgl1-mesa-dri/copyright`, `/usr/share/doc/libglapi-mesa/copyright`, `/usr/share/doc/libglx-mesa0/copyright`, `/usr/share/doc/mesa-common-dev/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libegl-mesa0/copyright`, `/usr/share/doc/libgbm1/copyright`, `/usr/share/doc/libgl1-mesa-dev/copyright`, `/usr/share/doc/libgl1-mesa-dri/copyright`, `/usr/share/doc/libglapi-mesa/copyright`, `/usr/share/doc/libglx-mesa0/copyright`, `/usr/share/doc/mesa-common-dev/copyright`)
 
 - `Apache-2.0`
 - `BSD`
@@ -8539,15 +8421,11 @@ Other potentially useful URLs:
 
 Binary Packages:
 
-- `gir1.2-pango-1.0:amd64=1.42.4-8~deb10u1`
 - `libpango-1.0-0:amd64=1.42.4-8~deb10u1`
-- `libpango1.0-dev:amd64=1.42.4-8~deb10u1`
 - `libpangocairo-1.0-0:amd64=1.42.4-8~deb10u1`
 - `libpangoft2-1.0-0:amd64=1.42.4-8~deb10u1`
-- `libpangoxft-1.0-0:amd64=1.42.4-8~deb10u1`
-- `pango1.0-tools=1.42.4-8~deb10u1`
 
-Licenses: (parsed from: `/usr/share/doc/gir1.2-pango-1.0/copyright`, `/usr/share/doc/libpango-1.0-0/copyright`, `/usr/share/doc/libpango1.0-dev/copyright`, `/usr/share/doc/libpangocairo-1.0-0/copyright`, `/usr/share/doc/libpangoft2-1.0-0/copyright`, `/usr/share/doc/libpangoxft-1.0-0/copyright`, `/usr/share/doc/pango1.0-tools/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libpango-1.0-0/copyright`, `/usr/share/doc/libpangocairo-1.0-0/copyright`, `/usr/share/doc/libpangoft2-1.0-0/copyright`)
 
 - `Example`
 - `ICU`
@@ -8819,7 +8697,6 @@ Other potentially useful URLs:
 Binary Packages:
 
 - `libpixman-1-0:amd64=0.36.0-1`
-- `libpixman-1-dev:amd64=0.36.0-1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -10736,11 +10613,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `ros-noetic-camera-calibration=1.15.3-1buster.20210922.192835`
+### `dpkg` source package: `ros-noetic-camera-calibration=1.16.0-1buster.20211124.025850`
 
 Binary Packages:
 
-- `ros-noetic-camera-calibration=1.15.3-1buster.20210922.192835`
+- `ros-noetic-camera-calibration=1.16.0-1buster.20211124.025850`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -10820,11 +10697,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `ros-noetic-compressed-depth-image-transport=1.14.0-1buster.20210922.191548`
+### `dpkg` source package: `ros-noetic-compressed-depth-image-transport=1.14.0-1buster.20211124.030510`
 
 Binary Packages:
 
-- `ros-noetic-compressed-depth-image-transport=1.14.0-1buster.20210922.191548`
+- `ros-noetic-compressed-depth-image-transport=1.14.0-1buster.20211124.030510`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -10834,11 +10711,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `ros-noetic-compressed-image-transport=1.14.0-1buster.20210922.191551`
+### `dpkg` source package: `ros-noetic-compressed-image-transport=1.14.0-1buster.20211124.030533`
 
 Binary Packages:
 
-- `ros-noetic-compressed-image-transport=1.14.0-1buster.20210922.191551`
+- `ros-noetic-compressed-image-transport=1.14.0-1buster.20211124.030533`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -10862,11 +10739,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `ros-noetic-cv-bridge=1.15.0-1buster.20210922.183347`
+### `dpkg` source package: `ros-noetic-cv-bridge=1.16.0-1buster.20211124.025418`
 
 Binary Packages:
 
-- `ros-noetic-cv-bridge=1.15.0-1buster.20210922.183347`
+- `ros-noetic-cv-bridge=1.16.0-1buster.20211124.025418`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -10876,11 +10753,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `ros-noetic-depth-image-proc=1.15.3-1buster.20211007.210928`
+### `dpkg` source package: `ros-noetic-depth-image-proc=1.16.0-1buster.20211124.030035`
 
 Binary Packages:
 
-- `ros-noetic-depth-image-proc=1.15.3-1buster.20211007.210928`
+- `ros-noetic-depth-image-proc=1.16.0-1buster.20211124.030035`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -11058,11 +10935,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `ros-noetic-image-geometry=1.15.0-1buster.20210922.191428`
+### `dpkg` source package: `ros-noetic-image-geometry=1.16.0-1buster.20211124.025432`
 
 Binary Packages:
 
-- `ros-noetic-image-geometry=1.15.0-1buster.20210922.191428`
+- `ros-noetic-image-geometry=1.16.0-1buster.20211124.025432`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -11072,11 +10949,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `ros-noetic-image-pipeline=1.15.3-1buster.20211007.213528`
+### `dpkg` source package: `ros-noetic-image-pipeline=1.16.0-1buster.20211124.033526`
 
 Binary Packages:
 
-- `ros-noetic-image-pipeline=1.15.3-1buster.20211007.213528`
+- `ros-noetic-image-pipeline=1.16.0-1buster.20211124.033526`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -11086,11 +10963,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `ros-noetic-image-proc=1.15.3-1buster.20211007.210712`
+### `dpkg` source package: `ros-noetic-image-proc=1.16.0-1buster.20211124.030746`
 
 Binary Packages:
 
-- `ros-noetic-image-proc=1.15.3-1buster.20211007.210712`
+- `ros-noetic-image-proc=1.16.0-1buster.20211124.030746`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -11100,11 +10977,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `ros-noetic-image-publisher=1.15.3-1buster.20211007.205816`
+### `dpkg` source package: `ros-noetic-image-publisher=1.16.0-1buster.20211124.030334`
 
 Binary Packages:
 
-- `ros-noetic-image-publisher=1.15.3-1buster.20211007.205816`
+- `ros-noetic-image-publisher=1.16.0-1buster.20211124.030334`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -11114,11 +10991,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `ros-noetic-image-rotate=1.15.3-1buster.20211007.210236`
+### `dpkg` source package: `ros-noetic-image-rotate=1.16.0-1buster.20211124.030844`
 
 Binary Packages:
 
-- `ros-noetic-image-rotate=1.15.3-1buster.20211007.210236`
+- `ros-noetic-image-rotate=1.16.0-1buster.20211124.030844`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -11128,11 +11005,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `ros-noetic-image-transport-plugins=1.14.0-1buster.20210922.200809`
+### `dpkg` source package: `ros-noetic-image-transport-plugins=1.14.0-1buster.20211124.034159`
 
 Binary Packages:
 
-- `ros-noetic-image-transport-plugins=1.14.0-1buster.20210922.200809`
+- `ros-noetic-image-transport-plugins=1.14.0-1buster.20211124.034159`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -11156,11 +11033,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `ros-noetic-image-view=1.15.3-1buster.20211007.210402`
+### `dpkg` source package: `ros-noetic-image-view=1.16.0-1buster.20211124.030647`
 
 Binary Packages:
 
-- `ros-noetic-image-view=1.15.3-1buster.20211007.210402`
+- `ros-noetic-image-view=1.16.0-1buster.20211124.030647`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -11184,11 +11061,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `ros-noetic-laser-filters=1.8.11-1buster.20210922.185921`
+### `dpkg` source package: `ros-noetic-laser-filters=1.9.0-1buster.20211107.195441`
 
 Binary Packages:
 
-- `ros-noetic-laser-filters=1.8.11-1buster.20210922.185921`
+- `ros-noetic-laser-filters=1.9.0-1buster.20211107.195441`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -11212,11 +11089,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `ros-noetic-laser-pipeline=1.6.4-1buster.20210922.201322`
+### `dpkg` source package: `ros-noetic-laser-pipeline=1.6.4-1buster.20211107.200111`
 
 Binary Packages:
 
-- `ros-noetic-laser-pipeline=1.6.4-1buster.20210922.201322`
+- `ros-noetic-laser-pipeline=1.6.4-1buster.20211107.200111`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -11394,11 +11271,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `ros-noetic-perception=1.5.0-1buster.20211007.215340`
+### `dpkg` source package: `ros-noetic-perception=1.5.0-1buster.20211124.034345`
 
 Binary Packages:
 
-- `ros-noetic-perception=1.5.0-1buster.20211007.215340`
+- `ros-noetic-perception=1.5.0-1buster.20211124.034345`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -12066,11 +11943,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `ros-noetic-stereo-image-proc=1.15.3-1buster.20211007.211533`
+### `dpkg` source package: `ros-noetic-stereo-image-proc=1.16.0-1buster.20211124.031310`
 
 Binary Packages:
 
-- `ros-noetic-stereo-image-proc=1.15.3-1buster.20211007.211533`
+- `ros-noetic-stereo-image-proc=1.16.0-1buster.20211124.031310`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -12192,11 +12069,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `ros-noetic-theora-image-transport=1.14.0-1buster.20210922.184731`
+### `dpkg` source package: `ros-noetic-theora-image-transport=1.14.0-1buster.20211124.030957`
 
 Binary Packages:
 
-- `ros-noetic-theora-image-transport=1.14.0-1buster.20210922.184731`
+- `ros-noetic-theora-image-transport=1.14.0-1buster.20211124.030957`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -12234,11 +12111,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `ros-noetic-vision-opencv=1.15.0-1buster.20210922.200204`
+### `dpkg` source package: `ros-noetic-vision-opencv=1.16.0-1buster.20211124.032039`
 
 Binary Packages:
 
-- `ros-noetic-vision-opencv=1.15.0-1buster.20210922.200204`
+- `ros-noetic-vision-opencv=1.16.0-1buster.20211124.032039`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -13410,10 +13287,8 @@ Binary Packages:
 
 - `bsdutils=1:2.33.1-0.1`
 - `fdisk=2.33.1-0.1`
-- `libblkid-dev:amd64=2.33.1-0.1`
 - `libblkid1:amd64=2.33.1-0.1`
 - `libfdisk1:amd64=2.33.1-0.1`
-- `libmount-dev:amd64=2.33.1-0.1`
 - `libmount1:amd64=2.33.1-0.1`
 - `libsmartcols1:amd64=2.33.1-0.1`
 - `libuuid1:amd64=2.33.1-0.1`
@@ -13421,7 +13296,7 @@ Binary Packages:
 - `util-linux=2.33.1-0.1`
 - `uuid-dev:amd64=2.33.1-0.1`
 
-Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/fdisk/copyright`, `/usr/share/doc/libblkid-dev/copyright`, `/usr/share/doc/libblkid1/copyright`, `/usr/share/doc/libfdisk1/copyright`, `/usr/share/doc/libmount-dev/copyright`, `/usr/share/doc/libmount1/copyright`, `/usr/share/doc/libsmartcols1/copyright`, `/usr/share/doc/libuuid1/copyright`, `/usr/share/doc/mount/copyright`, `/usr/share/doc/util-linux/copyright`, `/usr/share/doc/uuid-dev/copyright`)
+Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/fdisk/copyright`, `/usr/share/doc/libblkid1/copyright`, `/usr/share/doc/libfdisk1/copyright`, `/usr/share/doc/libmount1/copyright`, `/usr/share/doc/libsmartcols1/copyright`, `/usr/share/doc/libuuid1/copyright`, `/usr/share/doc/mount/copyright`, `/usr/share/doc/util-linux/copyright`, `/usr/share/doc/uuid-dev/copyright`)
 
 - `BSD-2-clause`
 - `BSD-3-clause`
@@ -13594,44 +13469,16 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/wavpack/5.1.0-6/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/wavpack/5.1.0-6/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `wayland-protocols=1.17-1`
-
-Binary Packages:
-
-- `wayland-protocols=1.17-1`
-
-Licenses: (parsed from: `/usr/share/doc/wayland-protocols/copyright`)
-
-- `Expat`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris wayland-protocols=1.17-1
-'http://deb.debian.org/debian/pool/main/w/wayland-protocols/wayland-protocols_1.17-1.dsc' wayland-protocols_1.17-1.dsc 2342 SHA256:0b012a2078bc71b3cd54d649c74cc093435955fed172f5c1950d3f1bfdaffbc0
-'http://deb.debian.org/debian/pool/main/w/wayland-protocols/wayland-protocols_1.17.orig.tar.xz' wayland-protocols_1.17.orig.tar.xz 107680 SHA256:df1319cf9705643aea9fd16f9056f4e5b2471bd10c0cc3713d4a4cdc23d6812f
-'http://deb.debian.org/debian/pool/main/w/wayland-protocols/wayland-protocols_1.17.orig.tar.xz.asc' wayland-protocols_1.17.orig.tar.xz.asc 847 SHA256:47cd5922de9eecc9788a357c4e5ef4ce077f3bf3ffd2725d72d394de0f3a8e2a
-'http://deb.debian.org/debian/pool/main/w/wayland-protocols/wayland-protocols_1.17-1.debian.tar.xz' wayland-protocols_1.17-1.debian.tar.xz 8676 SHA256:7c3673e276079553999abda9f157ee28d9c467eb6e0f760969fcb31f94d41412
-```
-
-Other potentially useful URLs:
-
-- https://sources.debian.net/src/wayland-protocols/1.17-1/ (for browsing the source)
-- https://sources.debian.net/src/wayland-protocols/1.17-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/wayland-protocols/1.17-1/ (for access to the source package after it no longer exists in the archive)
-
 ### `dpkg` source package: `wayland=1.16.0-1`
 
 Binary Packages:
 
-- `libwayland-bin=1.16.0-1`
 - `libwayland-client0:amd64=1.16.0-1`
 - `libwayland-cursor0:amd64=1.16.0-1`
-- `libwayland-dev:amd64=1.16.0-1`
 - `libwayland-egl1:amd64=1.16.0-1`
 - `libwayland-server0:amd64=1.16.0-1`
 
-Licenses: (parsed from: `/usr/share/doc/libwayland-bin/copyright`, `/usr/share/doc/libwayland-client0/copyright`, `/usr/share/doc/libwayland-cursor0/copyright`, `/usr/share/doc/libwayland-dev/copyright`, `/usr/share/doc/libwayland-egl1/copyright`, `/usr/share/doc/libwayland-server0/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libwayland-client0/copyright`, `/usr/share/doc/libwayland-cursor0/copyright`, `/usr/share/doc/libwayland-egl1/copyright`, `/usr/share/doc/libwayland-server0/copyright`)
 
 - `X11`
 
@@ -14035,20 +13882,15 @@ Other potentially useful URLs:
 
 Binary Packages:
 
-- `x11proto-composite-dev=1:2018.4-4`
 - `x11proto-core-dev=2018.4-4`
 - `x11proto-damage-dev=1:2018.4-4`
 - `x11proto-dev=2018.4-4`
 - `x11proto-fixes-dev=1:2018.4-4`
-- `x11proto-input-dev=2018.4-4`
-- `x11proto-randr-dev=2018.4-4`
-- `x11proto-record-dev=2018.4-4`
 - `x11proto-scrnsaver-dev=2018.4-4`
 - `x11proto-xext-dev=2018.4-4`
 - `x11proto-xf86vidmode-dev=2018.4-4`
-- `x11proto-xinerama-dev=2018.4-4`
 
-Licenses: (parsed from: `/usr/share/doc/x11proto-composite-dev/copyright`, `/usr/share/doc/x11proto-core-dev/copyright`, `/usr/share/doc/x11proto-damage-dev/copyright`, `/usr/share/doc/x11proto-dev/copyright`, `/usr/share/doc/x11proto-fixes-dev/copyright`, `/usr/share/doc/x11proto-input-dev/copyright`, `/usr/share/doc/x11proto-randr-dev/copyright`, `/usr/share/doc/x11proto-record-dev/copyright`, `/usr/share/doc/x11proto-scrnsaver-dev/copyright`, `/usr/share/doc/x11proto-xext-dev/copyright`, `/usr/share/doc/x11proto-xf86vidmode-dev/copyright`, `/usr/share/doc/x11proto-xinerama-dev/copyright`)
+Licenses: (parsed from: `/usr/share/doc/x11proto-core-dev/copyright`, `/usr/share/doc/x11proto-damage-dev/copyright`, `/usr/share/doc/x11proto-dev/copyright`, `/usr/share/doc/x11proto-fixes-dev/copyright`, `/usr/share/doc/x11proto-scrnsaver-dev/copyright`, `/usr/share/doc/x11proto-xext-dev/copyright`, `/usr/share/doc/x11proto-xf86vidmode-dev/copyright`)
 
 - `MIT`
 - `SGI`
