@@ -406,14 +406,9 @@ Licenses: (parsed from: `/usr/share/doc/gcc-11-base/copyright`, `/usr/share/doc/
 - `GPL-3`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-11=11.2.0-12ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-11/gcc-11_11.2.0-12ubuntu1.dsc' gcc-11_11.2.0-12ubuntu1.dsc 27889 SHA512:d7fa4123e26c00f4cdb334ebe4b9f197206250ceeac21ecc79aee829f777c6983f7e2eb9b0ed149e8cc55ee4c869d888ee546c5e610672753da1feff26e4331e
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-11/gcc-11_11.2.0.orig.tar.gz' gcc-11_11.2.0.orig.tar.gz 87861992 SHA512:64e4634769a62faa0adbfe99e5e590dd9efc1facac20a7dd71ab9f1d675e7df80678cbdc75c966e08ccf91dbc1e1a681d8e3227d0026ffcb5f46bdc96acaace8
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-11/gcc-11_11.2.0-12ubuntu1.debian.tar.xz' gcc-11_11.2.0-12ubuntu1.debian.tar.xz 1927988 SHA512:a9b3751ce036556caccb1c9412b871f133251f8d161dff5fb6e3ee527437b2d17ca7dbda66dbef28ead7cd7aad01e742df8e4ed68ad450963fd77666f180b9ca
-```
 
 ### `dpkg` source package: `glibc=2.34-0ubuntu3`
 
@@ -512,15 +507,9 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 - `LGPLv3+_or_GPLv2+`
 - `The main library is licensed under GNU Lesser`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gnutls28=3.7.2-2ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.7.2-2ubuntu1.dsc' gnutls28_3.7.2-2ubuntu1.dsc 3594 SHA512:d56dff8749c12ef98e109126550b6b37bf01cc396f55d9716323564c676250ae231e3b4c346db8cfc2b659bb3ee2328d53b1675bc47623b7e299fc66469bccba
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.7.2.orig.tar.xz' gnutls28_3.7.2.orig.tar.xz 6091508 SHA512:5d01d561a05379da71e4847e30ba13c2abe09f7a5c4359fd539d8bd19abad0ce87120f82ee7b6264e787bd3edbc5ae16beffa892983cbc3d59f11a1811c10329
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.7.2.orig.tar.xz.asc' gnutls28_3.7.2.orig.tar.xz.asc 833 SHA512:9e6064ffd8c4bfb28c39a477bfe3e09ed459584ac258cbd580c87979df79fd09c8102804f297cece38bcbfa0e845245af5b82fd3fef0662a80099c28e1408d35
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.7.2-2ubuntu1.debian.tar.xz' gnutls28_3.7.2-2ubuntu1.debian.tar.xz 67256 SHA512:57a6dc4d523c36397fe1aba2ebf2ecd9de1cae47f9f8d9e6998f631f0daf9d5ed940f4aae1d29d7646449a5d247911b9bc7e0fbfdc3203a8376800d139098445
-```
 
 ### `dpkg` source package: `grep=3.7-1`
 
@@ -741,14 +730,13 @@ Licenses: (parsed from: `/usr/share/doc/libgpg-error0/copyright`)
 - `LGPL-2.1+`
 - `g10-permissive`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libgpg-error=1.42-3
-'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgpg-error/libgpg-error_1.42-3.dsc' libgpg-error_1.42-3.dsc 2616 SHA512:338752bd7819bca87f5e3c24dc8483bd58fd345f82ca6de9d4592e22d3118bfb5bddbd40ee2bc9902db5fe9adab705572efa198f68802429c4c066ab00c5a883
-'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgpg-error/libgpg-error_1.42.orig.tar.bz2' libgpg-error_1.42.orig.tar.bz2 973996 SHA512:f6d95712a874edefc39a7746062c8037a62801a550560c5b2eab08b5b86987c1de5be60eba5fcb56d35a37db109aa32d07b7eff2bb99800c1c47d2227421a8f4
-'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgpg-error/libgpg-error_1.42-3.debian.tar.xz' libgpg-error_1.42-3.debian.tar.xz 19020 SHA512:d427f1053897b05348288743d4092f802d2917bfbcf5cc42b027ad0e66b2f8f056e39f660e3c82e65a672b4604ed2ceb05c06a6ac26b9a0ed2871da36dafa6ff
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/libgpg-error/1.42-3/
+
 
 ### `dpkg` source package: `libidn2=2.3.2-2`
 
