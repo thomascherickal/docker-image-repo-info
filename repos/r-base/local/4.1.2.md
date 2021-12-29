@@ -1924,20 +1924,13 @@ Licenses: (parsed from: `/usr/share/doc/libgpg-error0/copyright`)
 - `LGPL-2.1+`
 - `g10-permissive`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libgpg-error=1.42-3
-'http://deb.debian.org/debian/pool/main/libg/libgpg-error/libgpg-error_1.42-3.dsc' libgpg-error_1.42-3.dsc 2616 SHA256:fd2cf41359714da2ec9513b653264091e554c2adb97487b0f8f218a06165c29e
-'http://deb.debian.org/debian/pool/main/libg/libgpg-error/libgpg-error_1.42.orig.tar.bz2' libgpg-error_1.42.orig.tar.bz2 973996 SHA256:fc07e70f6c615f8c4f590a8e37a9b8dd2e2ca1e9408f8e60459c67452b925e23
-'http://deb.debian.org/debian/pool/main/libg/libgpg-error/libgpg-error_1.42-3.debian.tar.xz' libgpg-error_1.42-3.debian.tar.xz 19020 SHA256:067b323d85cf1f26adb128ffaf69f287f5c6e0ec8c398cffc8350de16e4c1d67
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libgpg-error/1.42-3/
 
-- https://sources.debian.net/src/libgpg-error/1.42-3/ (for browsing the source)
-- https://sources.debian.net/src/libgpg-error/1.42-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libgpg-error/1.42-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libice=2:1.0.10-1`
 
@@ -2794,16 +2787,10 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris linux=5.15.5-1
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.15.5-1.dsc' linux_5.15.5-1.dsc 194397 SHA256:7dade7c49630b7c359ecba53e8960fdb9a12b60ed71c3060b12ff2c3d9111ca7
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.15.5.orig.tar.xz' linux_5.15.5.orig.tar.xz 127743680 SHA256:3b7f86b527b146f011563fdf4459e424b7a7ceda98576dcdbbcdc2a518ed87f5
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.15.5-1.debian.tar.xz' linux_5.15.5-1.debian.tar.xz 1288316 SHA256:997f202556bd781c18b3ce549c247c3365906adafdf6abb687fd180eeb87c93b
+'http://http.debian.net/debian/pool/main/l/linux/linux_5.15.5-1.dsc' linux_5.15.5-1.dsc 194397 SHA256:7dade7c49630b7c359ecba53e8960fdb9a12b60ed71c3060b12ff2c3d9111ca7
+'http://http.debian.net/debian/pool/main/l/linux/linux_5.15.5.orig.tar.xz' linux_5.15.5.orig.tar.xz 127743680 SHA256:3b7f86b527b146f011563fdf4459e424b7a7ceda98576dcdbbcdc2a518ed87f5
+'http://http.debian.net/debian/pool/main/l/linux/linux_5.15.5-1.debian.tar.xz' linux_5.15.5-1.debian.tar.xz 1288316 SHA256:997f202556bd781c18b3ce549c247c3365906adafdf6abb687fd180eeb87c93b
 ```
-
-Other potentially useful URLs:
-
-- https://sources.debian.net/src/linux/5.15.5-1/ (for browsing the source)
-- https://sources.debian.net/src/linux/5.15.5-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/5.15.5-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `littler=0.3.15-1`
 
@@ -3203,21 +3190,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssl=1.1.1l-1
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1l-1.dsc' openssl_1.1.1l-1.dsc 2620 SHA256:ad1ba49cef4a57ddd134368b79d9fc170122f00c9b6956e177ddf06a6dc86ad9
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1l.orig.tar.gz' openssl_1.1.1l.orig.tar.gz 9834044 SHA256:0b7a3e5e59c34827fe0c3a74b7ec8baef302b98fa80088d7f9153aa16fa76bd1
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1l.orig.tar.gz.asc' openssl_1.1.1l.orig.tar.gz.asc 488 SHA256:e2ae0ea526223843245dd80224b19a55283f4910dd56b7ee7b23187164f69fda
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1l-1.debian.tar.xz' openssl_1.1.1l-1.debian.tar.xz 84676 SHA256:0738932c86bcca51a17d6a0a840839db192bb8a0e036470fcf6fa4119fb20cd4
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/openssl/1.1.1l-1/
 
-- https://sources.debian.net/src/openssl/1.1.1l-1/ (for browsing the source)
-- https://sources.debian.net/src/openssl/1.1.1l-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openssl/1.1.1l-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `p11-kit=0.24.0-6`
 
@@ -3685,20 +3664,13 @@ Licenses: (parsed from: `/usr/share/doc/r-cran-matrix/copyright`)
 - `GPL-2+`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris rmatrix=1.3-4-2
-'http://deb.debian.org/debian/pool/main/r/rmatrix/rmatrix_1.3-4-2.dsc' rmatrix_1.3-4-2.dsc 1860 SHA256:63139a26325681d62f6ac2a3dcc15b2dcad7d90bf52889c0f7944a0e41a8596b
-'http://deb.debian.org/debian/pool/main/r/rmatrix/rmatrix_1.3-4.orig.tar.gz' rmatrix_1.3-4.orig.tar.gz 2050384 SHA256:ab42179d44545e99bbdf44bb6d04cab051dd2aba552b1f6edd51ed71b55f6c39
-'http://deb.debian.org/debian/pool/main/r/rmatrix/rmatrix_1.3-4-2.debian.tar.xz' rmatrix_1.3-4-2.debian.tar.xz 5652 SHA256:ba789435aff84551506bb567ddba3cf5c6b7afa1cfbe7a773086d022a5f21b0e
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/rmatrix/1.3-4-2/
 
-- https://sources.debian.net/src/rmatrix/1.3-4-2/ (for browsing the source)
-- https://sources.debian.net/src/rmatrix/1.3-4-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/rmatrix/1.3-4-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `rpart=4.1-15-2`
 
