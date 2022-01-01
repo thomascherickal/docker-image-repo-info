@@ -851,20 +851,13 @@ Licenses: (parsed from: `/usr/share/doc/libexpat1/copyright`)
 
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris expat=2.4.1-3
-'http://deb.debian.org/debian/pool/main/e/expat/expat_2.4.1-3.dsc' expat_2.4.1-3.dsc 1981 SHA256:b3a1c62a87c55eaf53b49c90076aa0f7a5ab7d163ed04384990a579aba46dd17
-'http://deb.debian.org/debian/pool/main/e/expat/expat_2.4.1.orig.tar.gz' expat_2.4.1.orig.tar.gz 8307804 SHA256:660e5852b26125f4508183dfa134e18eb33a892dbd8e06786ea38d92dbbb5b07
-'http://deb.debian.org/debian/pool/main/e/expat/expat_2.4.1-3.debian.tar.xz' expat_2.4.1-3.debian.tar.xz 11940 SHA256:94a50cba92c8f01f52f3c68a20c4f1163bc528b88df1abb01fa7931bfc84f334
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/expat/2.4.1-3/
 
-- https://sources.debian.net/src/expat/2.4.1-3/ (for browsing the source)
-- https://sources.debian.net/src/expat/2.4.1-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/expat/2.4.1-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `findutils=4.8.0-1`
 
@@ -4149,20 +4142,13 @@ Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/lib
 - `MIT`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris util-linux=2.37.2-4
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.37.2-4.dsc' util-linux_2.37.2-4.dsc 4454 SHA256:a312bd385e6730207c6a96808367714af6bd0b318c09b8b87dd5f02f4ba9e91c
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.37.2.orig.tar.xz' util-linux_2.37.2.orig.tar.xz 5621624 SHA256:6a0764c1aae7fb607ef8a6dd2c0f6c47d5e5fd27aa08820abaad9ec14e28e9d9
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.37.2-4.debian.tar.xz' util-linux_2.37.2-4.debian.tar.xz 97648 SHA256:2639bef2d22c57f6e5394e51f892f7d2df39050d663df4864361fbaac3fd5897
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/util-linux/2.37.2-4/
 
-- https://sources.debian.net/src/util-linux/2.37.2-4/ (for browsing the source)
-- https://sources.debian.net/src/util-linux/2.37.2-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/util-linux/2.37.2-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `vim=2:8.2.3565-1`
 
