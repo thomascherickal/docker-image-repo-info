@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:56fbe762d758e606ce8e704b60b927b929c6a462b7af7595d9a2d04bb0dc4ade`
-- Created: `2021-12-04T02:43:30.810457432Z`
+- Image ID: `sha256:c0cdf7d5f588a70607002bdbe0a1468ec9af9ad1389f54432ada01a59ca8be8b`
+- Created: `2022-01-07T03:15:59.381347861Z`
 - Virtual Size: ~ 716.35 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -2995,11 +2995,11 @@ $ apt-get source -qq --print-uris libzstd=1.4.8+dfsg-2build2
 'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.4.8+dfsg-2build2.debian.tar.xz' libzstd_1.4.8+dfsg-2build2.debian.tar.xz 14724 SHA512:05255383db44a97903c15374a6759eb4b12590be44ac9e55e64c15844cf385dbe7a7e6753bc7d2c62d077c852a68480b6cdf3f651609eb1d18e71c63335b36a2
 ```
 
-### `dpkg` source package: `linux=5.11.0-41.45`
+### `dpkg` source package: `linux=5.11.0-44.48`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=5.11.0-41.45`
+- `linux-libc-dev:amd64=5.11.0-44.48`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -3008,10 +3008,10 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris linux=5.11.0-41.45
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.11.0-41.45.dsc' linux_5.11.0-41.45.dsc 8810 SHA512:89d7787ec60f34f59d0f90516c8ac4cd5824811eddfb55f0ccef275b71c766d00300a845639b8400e784a21442ee0ed4a03b943d802d9ed5f70d7adf8e307c7b
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.11.0.orig.tar.gz' linux_5.11.0.orig.tar.gz 186354621 SHA512:ac33b4298fad179962b6b3017d442b9f180c7c1363320393edd7d7a68a9303aa0eeae9ad106d00290f688abdbd78421e4e4f8566399a6da550096e913688771d
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.11.0-41.45.diff.gz' linux_5.11.0-41.45.diff.gz 6647384 SHA512:31f62dd9cdca6a0efbda7baaacad25fc19e8644ff78dc8b37e1fbc30577ba50204cc9414e411e6ca92095bbb0e7f2189ed3441e5b80073b2d1ad463500d59a78
+$ apt-get source -qq --print-uris linux=5.11.0-44.48
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.11.0-44.48.dsc' linux_5.11.0-44.48.dsc 8810 SHA512:c683472b9caa2e6893b9683f342714e36a7341679f48975b12fbdcc3a829c88dbbfab2ae8ef0a93204f937db3d8f93fb83ae0b09a306b91b6138c64065a6ecfe
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.11.0.orig.tar.gz' linux_5.11.0.orig.tar.gz 186354621 SHA512:ac33b4298fad179962b6b3017d442b9f180c7c1363320393edd7d7a68a9303aa0eeae9ad106d00290f688abdbd78421e4e4f8566399a6da550096e913688771d
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.11.0-44.48.diff.gz' linux_5.11.0-44.48.diff.gz 6803757 SHA512:09c4fc8abec7f7f6a7027bb5f412ab67211f262313506ad57fd29e165d8d74dde199cdfe2710e7326505889365f99e492750ced4b2c5dd771f8ffc0f2c1a9efe
 ```
 
 ### `dpkg` source package: `lsb=11.1.0ubuntu2`
@@ -3519,11 +3519,11 @@ $ apt-get source -qq --print-uris openldap=2.4.57+dfsg-2ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.57+dfsg-2ubuntu1.debian.tar.xz' openldap_2.4.57+dfsg-2ubuntu1.debian.tar.xz 182804 SHA512:c91c2961f5bf88b94a49803adca066d3b3f3b600c737f462dfdbc691260953508c6869f52feb6cf95a9d094283f5e03b9cb50adea321ad5a9c0bc2ca836a883d
 ```
 
-### `dpkg` source package: `openssh=1:8.4p1-5ubuntu1.1`
+### `dpkg` source package: `openssh=1:8.4p1-5ubuntu1.2`
 
 Binary Packages:
 
-- `openssh-client=1:8.4p1-5ubuntu1.1`
+- `openssh-client=1:8.4p1-5ubuntu1.2`
 
 Licenses: (parsed from: `/usr/share/doc/openssh-client/copyright`)
 
@@ -3539,19 +3539,19 @@ Licenses: (parsed from: `/usr/share/doc/openssh-client/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openssh=1:8.4p1-5ubuntu1.1
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.4p1-5ubuntu1.1.dsc' openssh_8.4p1-5ubuntu1.1.dsc 3109 SHA512:ba0dcfd07911a51723436978a39c952970892cb3e60b55563b84e56c7c160a8671668f99eb9515800619d0461284ef70e4220019de5f91c82ea24078bfd439a9
+$ apt-get source -qq --print-uris openssh=1:8.4p1-5ubuntu1.2
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.4p1-5ubuntu1.2.dsc' openssh_8.4p1-5ubuntu1.2.dsc 3109 SHA512:e8e47e77453a732ea7400f67b3f33a634977ea5115a4b9480bcdaf54125be54f889f9634891e91ad4514bea13d3546c0bb59aa2a630a71c2befeb1363882536e
 'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.4p1.orig.tar.gz' openssh_8.4p1.orig.tar.gz 1742201 SHA512:d65275b082c46c5efe7cf3264fa6794d6e99a36d4a54b50554fc56979d6c0837381587fd5399195e1db680d2a5ad1ef0b99a180eac2b4de5637906cb7a89e9ce
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.4p1-5ubuntu1.1.debian.tar.xz' openssh_8.4p1-5ubuntu1.1.debian.tar.xz 180168 SHA512:f73f21db7f0de8220d4a1c2c7aedaa7900aa8c277e430ef42de9d1f0f5ef6669fd534a06d670c294a8cdd53a37d164a5e097110b242dd5397750bb0ad0f8c298
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.4p1-5ubuntu1.2.debian.tar.xz' openssh_8.4p1-5ubuntu1.2.debian.tar.xz 180584 SHA512:38f2e72e0f5ee194f5c0e39662861601115a1c319d3392e7f302f2ec67bca958bf2629de28cb481695e54963516ec3f2476f76aa6daeb93ac0367480f6eccb89
 ```
 
-### `dpkg` source package: `openssl=1.1.1j-1ubuntu3.5`
+### `dpkg` source package: `openssl=1.1.1j-1ubuntu3.6`
 
 Binary Packages:
 
-- `libssl-dev:amd64=1.1.1j-1ubuntu3.5`
-- `libssl1.1:amd64=1.1.1j-1ubuntu3.5`
-- `openssl=1.1.1j-1ubuntu3.5`
+- `libssl-dev:amd64=1.1.1j-1ubuntu3.6`
+- `libssl1.1:amd64=1.1.1j-1ubuntu3.6`
+- `openssl=1.1.1j-1ubuntu3.6`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -3560,10 +3560,10 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openssl=1.1.1j-1ubuntu3.5
-'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1j-1ubuntu3.5.dsc' openssl_1.1.1j-1ubuntu3.5.dsc 2498 SHA512:2629d3145a3728a9e6bf66f6ebf4fc9de117e536ae057c0dc4d953c6f22cf8299b7589c86d8d41fa5e08a78b84c0148b4e63b37750c10fb194b98a4583380ef2
-'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1j.orig.tar.gz' openssl_1.1.1j.orig.tar.gz 9823161 SHA512:51e44995663b5258b0018bdc1e2b0e7e8e0cce111138ca1f80514456af920fce4e409a411ce117c0f3eb9190ac3e47c53a43f39b06acd35b7494e2bec4a607d5
-'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1j-1ubuntu3.5.debian.tar.xz' openssl_1.1.1j-1ubuntu3.5.debian.tar.xz 161132 SHA512:6f04df87f88a8ae8991a24e781c085fde70b29e908e5d7a8d10fdf675126d2d2a1305d87909b345f8d607a8298ddaa83391403f78785e4d4918f08f6cb4bb13e
+$ apt-get source -qq --print-uris openssl=1.1.1j-1ubuntu3.6
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1j-1ubuntu3.6.dsc' openssl_1.1.1j-1ubuntu3.6.dsc 2527 SHA512:13bccd2db0a3d5464493bd9c6b7b61f6fae6736c066fb295ddfb74328961677d444d9ae0d495b1209c4c53ed91595f141f1ecf9441e743cdd3305047de6ce1a4
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1j.orig.tar.gz' openssl_1.1.1j.orig.tar.gz 9823161 SHA512:51e44995663b5258b0018bdc1e2b0e7e8e0cce111138ca1f80514456af920fce4e409a411ce117c0f3eb9190ac3e47c53a43f39b06acd35b7494e2bec4a607d5
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1j-1ubuntu3.6.debian.tar.xz' openssl_1.1.1j-1ubuntu3.6.debian.tar.xz 163376 SHA512:76b22e71909968cecc3849448f52d3575bf9beedb209733c938e359f993738b3a35b4fc99362561d381a84638337e03a3ca8217335358684f40767c9f1020588
 ```
 
 ### `dpkg` source package: `p11-kit=0.23.22-1`
@@ -3914,14 +3914,14 @@ $ apt-get source -qq --print-uris python3-stdlib-extensions=3.9.5-0ubuntu3~21.04
 'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.9.5-0ubuntu3~21.04.debian.tar.xz' python3-stdlib-extensions_3.9.5-0ubuntu3~21.04.debian.tar.xz 24496 SHA512:02c490f31f1f357b1947ac288c24cea0ef9e128238258f4f2d01b18dc956adae4b953807b12fe872413b422275552f65926fb31ba0e71c0f78015cc5cf69af47
 ```
 
-### `dpkg` source package: `python3.9=3.9.5-3~21.04`
+### `dpkg` source package: `python3.9=3.9.5-3ubuntu0~21.04.1`
 
 Binary Packages:
 
-- `libpython3.9-minimal:amd64=3.9.5-3~21.04`
-- `libpython3.9-stdlib:amd64=3.9.5-3~21.04`
-- `python3.9=3.9.5-3~21.04`
-- `python3.9-minimal=3.9.5-3~21.04`
+- `libpython3.9-minimal:amd64=3.9.5-3ubuntu0~21.04.1`
+- `libpython3.9-stdlib:amd64=3.9.5-3ubuntu0~21.04.1`
+- `python3.9=3.9.5-3ubuntu0~21.04.1`
+- `python3.9-minimal=3.9.5-3ubuntu0~21.04.1`
 
 Licenses: (parsed from: `/usr/share/doc/libpython3.9-minimal/copyright`, `/usr/share/doc/libpython3.9-stdlib/copyright`, `/usr/share/doc/python3.9/copyright`, `/usr/share/doc/python3.9-minimal/copyright`)
 
@@ -3943,9 +3943,14 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.9-minimal/copyright`, `/usr/s
 - `use in source`
 - `without`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris python3.9=3.9.5-3ubuntu0~21.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.9/python3.9_3.9.5-3ubuntu0~21.04.1.dsc' python3.9_3.9.5-3ubuntu0~21.04.1.dsc 3478 SHA512:e3ebe47aa30127fcb7aee02aacb093d4addc0e1cdfef1d98d0ec5f28de611e07858f01d92d2b5c05bac7bd657bdb10428d6fd6d899b6d4b09a849633e7144638
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.9/python3.9_3.9.5.orig.tar.xz' python3.9_3.9.5.orig.tar.xz 19058600 SHA512:7b581af1b3e73695f124ff6a3a960e22104153a5d920ca930c046f42ea313b1e7ec77e39876db2bf5d5da6d7412cb072ff8ae7814dda12c14f9da6c570fb0995
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.9/python3.9_3.9.5-3ubuntu0~21.04.1.debian.tar.xz' python3.9_3.9.5-3ubuntu0~21.04.1.debian.tar.xz 213868 SHA512:fccbdda03d420078415925e0b742fce39934b655d54b1663b8237fec6bc7fd77a4fd4a3e423b046e5c598d77f64e6e77f91524cd542ed5b939ce239c223b4b2c
+```
 
 ### `dpkg` source package: `readline=8.1-1`
 

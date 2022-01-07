@@ -160,19 +160,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.3.13
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.3.13.dsc' apt_2.3.13.dsc 2801 SHA256:5f23eb09860647baeeb4f7fafe5267df24afe1fe277cbf5b125872ebb3436bda
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.3.13.tar.xz' apt_2.3.13.tar.xz 2212300 SHA256:e519e55f1015d656425e68f8c7c7bebd1908df3ac87836eb6e7b6b58ce3f965d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/apt/2.3.13/
 
-- https://sources.debian.net/src/apt/2.3.13/ (for browsing the source)
-- https://sources.debian.net/src/apt/2.3.13/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apt/2.3.13/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `attr=1:2.5.1-1`
 
@@ -387,20 +381,13 @@ Licenses: (parsed from: `/usr/share/doc/bash/copyright`)
 
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris bash=5.1-5
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.1-5.dsc' bash_5.1-5.dsc 2296 SHA256:1d9728c7b74bdd15c933cab55eaa1bff5e98afe000e9deac474df1f723f99e5c
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.1.orig.tar.xz' bash_5.1.orig.tar.xz 5802740 SHA256:d5eeee4f953c09826409d572e2e8996a2140d67eb8f382ce1f3a9d23883ad696
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.1-5.debian.tar.xz' bash_5.1-5.debian.tar.xz 92536 SHA256:58a466088e364c1e8c2a0fb9bd144e86ddcae19d87fbb48b79a4bb5314eaadea
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/bash/5.1-5/
 
-- https://sources.debian.net/src/bash/5.1-5/ (for browsing the source)
-- https://sources.debian.net/src/bash/5.1-5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/bash/5.1-5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `binutils=2.37-10`
 
@@ -1602,21 +1589,13 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 - `LGPLv3+_or_GPLv2+`
 - `The main library is licensed under GNU Lesser`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gnutls28=3.7.2-4
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.7.2-4.dsc' gnutls28_3.7.2-4.dsc 3467 SHA256:5c19c91e6dc8b0fe6e9226937f4df38e1021a4cdb221cef96738993c016878f3
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.7.2.orig.tar.xz' gnutls28_3.7.2.orig.tar.xz 6091508 SHA256:646e6c5a9a185faa4cea796d378a1ba8e1148dbb197ca6605f95986a25af2752
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.7.2.orig.tar.xz.asc' gnutls28_3.7.2.orig.tar.xz.asc 833 SHA256:015e4f3390469126a94014e4aa1182ed4b238f940ff09093884cc04f8fefedf0
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.7.2-4.debian.tar.xz' gnutls28_3.7.2-4.debian.tar.xz 65124 SHA256:18403ea7add4885d6ad77efd84f77d04be373a54bddc09dc36f3120d86086d10
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gnutls28/3.7.2-4/
 
-- https://sources.debian.net/src/gnutls28/3.7.2-4/ (for browsing the source)
-- https://sources.debian.net/src/gnutls28/3.7.2-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gnutls28/3.7.2-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gobject-introspection=1.70.0-2`
 
@@ -3995,21 +3974,13 @@ Licenses: (parsed from: `/usr/share/doc/mercurial/copyright`, `/usr/share/doc/me
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mercurial=5.9.3-1
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.9.3-1.dsc' mercurial_5.9.3-1.dsc 2764 SHA256:22ebb3a426e13886a4082905c72e7a138f72f6fc1467f9ecf41a7e5772b31cd4
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.9.3.orig.tar.gz' mercurial_5.9.3.orig.tar.gz 8126023 SHA256:3b43f68977ad0fa75aa7f1e5c8f0a83ba935621ab2396129abb498e56d1be08e
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.9.3.orig.tar.gz.asc' mercurial_5.9.3.orig.tar.gz.asc 833 SHA256:2a6aa63ecf7216f18819a86be13f085e3391b91c315f274f03610f82e5c2bbe8
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_5.9.3-1.debian.tar.xz' mercurial_5.9.3-1.debian.tar.xz 69492 SHA256:0746fe2c9ee8cf7fb439564b81a96d62228e52e1e7cbb4daada50f617710812d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mercurial/5.9.3-1/
 
-- https://sources.debian.net/src/mercurial/5.9.3-1/ (for browsing the source)
-- https://sources.debian.net/src/mercurial/5.9.3-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mercurial/5.9.3-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mpclib3=1.2.1-1`
 
@@ -4771,20 +4742,13 @@ Licenses: (parsed from: `/usr/share/doc/libpq-dev/copyright`, `/usr/share/doc/li
 - `nagaysau-ishii`
 - `rijndael`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris postgresql-14=14.1-4
-'http://deb.debian.org/debian/pool/main/p/postgresql-14/postgresql-14_14.1-4.dsc' postgresql-14_14.1-4.dsc 3721 SHA256:0daa16030b2364010eff307acf3a2cddedf374586aa0ebd809d0a9495131b3bf
-'http://deb.debian.org/debian/pool/main/p/postgresql-14/postgresql-14_14.1.orig.tar.bz2' postgresql-14_14.1.orig.tar.bz2 21887101 SHA256:4d3c101ea7ae38982f06bdc73758b53727fb6402ecd9382006fa5ecc7c2ca41f
-'http://deb.debian.org/debian/pool/main/p/postgresql-14/postgresql-14_14.1-4.debian.tar.xz' postgresql-14_14.1-4.debian.tar.xz 23548 SHA256:d7169e46dca41390f35ae4468c5297dacf4fae34e3282c74ec3ff28286019028
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/postgresql-14/14.1-4/
 
-- https://sources.debian.net/src/postgresql-14/14.1-4/ (for browsing the source)
-- https://sources.debian.net/src/postgresql-14/14.1-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/postgresql-14/14.1-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `procps=2:3.3.17-5`
 
@@ -4926,20 +4890,13 @@ Licenses: (parsed from: `/usr/share/doc/libreadline-dev/copyright`, `/usr/share/
 - `GFDL`
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris readline=8.1-2
-'http://deb.debian.org/debian/pool/main/r/readline/readline_8.1-2.dsc' readline_8.1-2.dsc 2418 SHA256:cefa72ab21f0fccab401c49ce559b7e7e4ae45cd1e20c92cba807de64f6169eb
-'http://deb.debian.org/debian/pool/main/r/readline/readline_8.1.orig.tar.gz' readline_8.1.orig.tar.gz 2993288 SHA256:f8ceb4ee131e3232226a17f51b164afc46cd0b9e6cef344be87c65962cb82b02
-'http://deb.debian.org/debian/pool/main/r/readline/readline_8.1-2.debian.tar.xz' readline_8.1-2.debian.tar.xz 29800 SHA256:7ff7b7e48727bf8e634cd9721dceb2e4f9e9c2c941664be140ec947267cf26d5
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/readline/8.1-2/
 
-- https://sources.debian.net/src/readline/8.1-2/ (for browsing the source)
-- https://sources.debian.net/src/readline/8.1-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/readline/8.1-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `rpcsvc-proto=1.4.2-4`
 

@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:61b86faf85314b0faa79c8de08d2e863503b3644532877ffacd0bb3476c283a2`
-- Created: `2021-12-04T02:40:02.676177268Z`
-- Virtual Size: ~ 231.92 Mb  
+- Image ID: `sha256:af9c8d0198a6a8352b0fd8a85b5869bf53af91c497868670db4b65df2af5ccb3`
+- Created: `2022-01-07T03:12:38.381032959Z`
+- Virtual Size: ~ 231.93 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["bash"]`
@@ -1780,11 +1780,11 @@ $ apt-get source -qq --print-uris openldap=2.4.57+dfsg-2ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.57+dfsg-2ubuntu1.debian.tar.xz' openldap_2.4.57+dfsg-2ubuntu1.debian.tar.xz 182804 SHA512:c91c2961f5bf88b94a49803adca066d3b3f3b600c737f462dfdbc691260953508c6869f52feb6cf95a9d094283f5e03b9cb50adea321ad5a9c0bc2ca836a883d
 ```
 
-### `dpkg` source package: `openssh=1:8.4p1-5ubuntu1.1`
+### `dpkg` source package: `openssh=1:8.4p1-5ubuntu1.2`
 
 Binary Packages:
 
-- `openssh-client=1:8.4p1-5ubuntu1.1`
+- `openssh-client=1:8.4p1-5ubuntu1.2`
 
 Licenses: (parsed from: `/usr/share/doc/openssh-client/copyright`)
 
@@ -1800,18 +1800,18 @@ Licenses: (parsed from: `/usr/share/doc/openssh-client/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openssh=1:8.4p1-5ubuntu1.1
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.4p1-5ubuntu1.1.dsc' openssh_8.4p1-5ubuntu1.1.dsc 3109 SHA512:ba0dcfd07911a51723436978a39c952970892cb3e60b55563b84e56c7c160a8671668f99eb9515800619d0461284ef70e4220019de5f91c82ea24078bfd439a9
+$ apt-get source -qq --print-uris openssh=1:8.4p1-5ubuntu1.2
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.4p1-5ubuntu1.2.dsc' openssh_8.4p1-5ubuntu1.2.dsc 3109 SHA512:e8e47e77453a732ea7400f67b3f33a634977ea5115a4b9480bcdaf54125be54f889f9634891e91ad4514bea13d3546c0bb59aa2a630a71c2befeb1363882536e
 'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.4p1.orig.tar.gz' openssh_8.4p1.orig.tar.gz 1742201 SHA512:d65275b082c46c5efe7cf3264fa6794d6e99a36d4a54b50554fc56979d6c0837381587fd5399195e1db680d2a5ad1ef0b99a180eac2b4de5637906cb7a89e9ce
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.4p1-5ubuntu1.1.debian.tar.xz' openssh_8.4p1-5ubuntu1.1.debian.tar.xz 180168 SHA512:f73f21db7f0de8220d4a1c2c7aedaa7900aa8c277e430ef42de9d1f0f5ef6669fd534a06d670c294a8cdd53a37d164a5e097110b242dd5397750bb0ad0f8c298
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.4p1-5ubuntu1.2.debian.tar.xz' openssh_8.4p1-5ubuntu1.2.debian.tar.xz 180584 SHA512:38f2e72e0f5ee194f5c0e39662861601115a1c319d3392e7f302f2ec67bca958bf2629de28cb481695e54963516ec3f2476f76aa6daeb93ac0367480f6eccb89
 ```
 
-### `dpkg` source package: `openssl=1.1.1j-1ubuntu3.5`
+### `dpkg` source package: `openssl=1.1.1j-1ubuntu3.6`
 
 Binary Packages:
 
-- `libssl1.1:amd64=1.1.1j-1ubuntu3.5`
-- `openssl=1.1.1j-1ubuntu3.5`
+- `libssl1.1:amd64=1.1.1j-1ubuntu3.6`
+- `openssl=1.1.1j-1ubuntu3.6`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1820,10 +1820,10 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openssl=1.1.1j-1ubuntu3.5
-'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1j-1ubuntu3.5.dsc' openssl_1.1.1j-1ubuntu3.5.dsc 2498 SHA512:2629d3145a3728a9e6bf66f6ebf4fc9de117e536ae057c0dc4d953c6f22cf8299b7589c86d8d41fa5e08a78b84c0148b4e63b37750c10fb194b98a4583380ef2
-'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1j.orig.tar.gz' openssl_1.1.1j.orig.tar.gz 9823161 SHA512:51e44995663b5258b0018bdc1e2b0e7e8e0cce111138ca1f80514456af920fce4e409a411ce117c0f3eb9190ac3e47c53a43f39b06acd35b7494e2bec4a607d5
-'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1j-1ubuntu3.5.debian.tar.xz' openssl_1.1.1j-1ubuntu3.5.debian.tar.xz 161132 SHA512:6f04df87f88a8ae8991a24e781c085fde70b29e908e5d7a8d10fdf675126d2d2a1305d87909b345f8d607a8298ddaa83391403f78785e4d4918f08f6cb4bb13e
+$ apt-get source -qq --print-uris openssl=1.1.1j-1ubuntu3.6
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1j-1ubuntu3.6.dsc' openssl_1.1.1j-1ubuntu3.6.dsc 2527 SHA512:13bccd2db0a3d5464493bd9c6b7b61f6fae6736c066fb295ddfb74328961677d444d9ae0d495b1209c4c53ed91595f141f1ecf9441e743cdd3305047de6ce1a4
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1j.orig.tar.gz' openssl_1.1.1j.orig.tar.gz 9823161 SHA512:51e44995663b5258b0018bdc1e2b0e7e8e0cce111138ca1f80514456af920fce4e409a411ce117c0f3eb9190ac3e47c53a43f39b06acd35b7494e2bec4a607d5
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1j-1ubuntu3.6.debian.tar.xz' openssl_1.1.1j-1ubuntu3.6.debian.tar.xz 163376 SHA512:76b22e71909968cecc3849448f52d3575bf9beedb209733c938e359f993738b3a35b4fc99362561d381a84638337e03a3ca8217335358684f40767c9f1020588
 ```
 
 ### `dpkg` source package: `p11-kit=0.23.22-1`
@@ -2027,14 +2027,14 @@ $ apt-get source -qq --print-uris python3-defaults=3.9.4-1
 'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-defaults/python3-defaults_3.9.4-1.tar.gz' python3-defaults_3.9.4-1.tar.gz 140963 SHA512:7a0357ce46a2e0f96d8545f457a69dd10dccb80dd7c569dd4074a3a2a834d1ddf7a0ce21f91d9dc55a942affcb40283ce96cdec80c1be12e669a270f559b52ca
 ```
 
-### `dpkg` source package: `python3.9=3.9.5-3~21.04`
+### `dpkg` source package: `python3.9=3.9.5-3ubuntu0~21.04.1`
 
 Binary Packages:
 
-- `libpython3.9-minimal:amd64=3.9.5-3~21.04`
-- `libpython3.9-stdlib:amd64=3.9.5-3~21.04`
-- `python3.9=3.9.5-3~21.04`
-- `python3.9-minimal=3.9.5-3~21.04`
+- `libpython3.9-minimal:amd64=3.9.5-3ubuntu0~21.04.1`
+- `libpython3.9-stdlib:amd64=3.9.5-3ubuntu0~21.04.1`
+- `python3.9=3.9.5-3ubuntu0~21.04.1`
+- `python3.9-minimal=3.9.5-3ubuntu0~21.04.1`
 
 Licenses: (parsed from: `/usr/share/doc/libpython3.9-minimal/copyright`, `/usr/share/doc/libpython3.9-stdlib/copyright`, `/usr/share/doc/python3.9/copyright`, `/usr/share/doc/python3.9-minimal/copyright`)
 
@@ -2056,9 +2056,14 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.9-minimal/copyright`, `/usr/s
 - `use in source`
 - `without`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris python3.9=3.9.5-3ubuntu0~21.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.9/python3.9_3.9.5-3ubuntu0~21.04.1.dsc' python3.9_3.9.5-3ubuntu0~21.04.1.dsc 3478 SHA512:e3ebe47aa30127fcb7aee02aacb093d4addc0e1cdfef1d98d0ec5f28de611e07858f01d92d2b5c05bac7bd657bdb10428d6fd6d899b6d4b09a849633e7144638
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.9/python3.9_3.9.5.orig.tar.xz' python3.9_3.9.5.orig.tar.xz 19058600 SHA512:7b581af1b3e73695f124ff6a3a960e22104153a5d920ca930c046f42ea313b1e7ec77e39876db2bf5d5da6d7412cb072ff8ae7814dda12c14f9da6c570fb0995
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.9/python3.9_3.9.5-3ubuntu0~21.04.1.debian.tar.xz' python3.9_3.9.5-3ubuntu0~21.04.1.debian.tar.xz 213868 SHA512:fccbdda03d420078415925e0b742fce39934b655d54b1663b8237fec6bc7fd77a4fd4a3e423b046e5c598d77f64e6e77f91524cd542ed5b939ce239c223b4b2c
+```
 
 ### `dpkg` source package: `readline=8.1-1`
 

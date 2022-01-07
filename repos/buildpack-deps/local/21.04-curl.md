@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:b1522d3e4c966bba439294c429a3688eb083e602095e8308b5ec6979ddf0b5ea`
-- Created: `2021-12-04T02:39:15.18694544Z`
-- Virtual Size: ~ 102.23 Mb  
+- Image ID: `sha256:0ccb88fb607ffd914c60cb2910a9e6fc8f3ae2b6047cbd1276bfc67147b9d9f9`
+- Created: `2022-01-07T03:11:53.593257407Z`
+- Virtual Size: ~ 102.24 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["bash"]`
@@ -1451,12 +1451,12 @@ $ apt-get source -qq --print-uris openldap=2.4.57+dfsg-2ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.57+dfsg-2ubuntu1.debian.tar.xz' openldap_2.4.57+dfsg-2ubuntu1.debian.tar.xz 182804 SHA512:c91c2961f5bf88b94a49803adca066d3b3f3b600c737f462dfdbc691260953508c6869f52feb6cf95a9d094283f5e03b9cb50adea321ad5a9c0bc2ca836a883d
 ```
 
-### `dpkg` source package: `openssl=1.1.1j-1ubuntu3.5`
+### `dpkg` source package: `openssl=1.1.1j-1ubuntu3.6`
 
 Binary Packages:
 
-- `libssl1.1:amd64=1.1.1j-1ubuntu3.5`
-- `openssl=1.1.1j-1ubuntu3.5`
+- `libssl1.1:amd64=1.1.1j-1ubuntu3.6`
+- `openssl=1.1.1j-1ubuntu3.6`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1465,10 +1465,10 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openssl=1.1.1j-1ubuntu3.5
-'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1j-1ubuntu3.5.dsc' openssl_1.1.1j-1ubuntu3.5.dsc 2498 SHA512:2629d3145a3728a9e6bf66f6ebf4fc9de117e536ae057c0dc4d953c6f22cf8299b7589c86d8d41fa5e08a78b84c0148b4e63b37750c10fb194b98a4583380ef2
-'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1j.orig.tar.gz' openssl_1.1.1j.orig.tar.gz 9823161 SHA512:51e44995663b5258b0018bdc1e2b0e7e8e0cce111138ca1f80514456af920fce4e409a411ce117c0f3eb9190ac3e47c53a43f39b06acd35b7494e2bec4a607d5
-'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1j-1ubuntu3.5.debian.tar.xz' openssl_1.1.1j-1ubuntu3.5.debian.tar.xz 161132 SHA512:6f04df87f88a8ae8991a24e781c085fde70b29e908e5d7a8d10fdf675126d2d2a1305d87909b345f8d607a8298ddaa83391403f78785e4d4918f08f6cb4bb13e
+$ apt-get source -qq --print-uris openssl=1.1.1j-1ubuntu3.6
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1j-1ubuntu3.6.dsc' openssl_1.1.1j-1ubuntu3.6.dsc 2527 SHA512:13bccd2db0a3d5464493bd9c6b7b61f6fae6736c066fb295ddfb74328961677d444d9ae0d495b1209c4c53ed91595f141f1ecf9441e743cdd3305047de6ce1a4
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1j.orig.tar.gz' openssl_1.1.1j.orig.tar.gz 9823161 SHA512:51e44995663b5258b0018bdc1e2b0e7e8e0cce111138ca1f80514456af920fce4e409a411ce117c0f3eb9190ac3e47c53a43f39b06acd35b7494e2bec4a607d5
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1j-1ubuntu3.6.debian.tar.xz' openssl_1.1.1j-1ubuntu3.6.debian.tar.xz 163376 SHA512:76b22e71909968cecc3849448f52d3575bf9beedb209733c938e359f993738b3a35b4fc99362561d381a84638337e03a3ca8217335358684f40767c9f1020588
 ```
 
 ### `dpkg` source package: `p11-kit=0.23.22-1`
