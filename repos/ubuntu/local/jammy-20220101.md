@@ -358,15 +358,9 @@ Licenses: (parsed from: `/usr/share/doc/e2fsprogs/copyright`, `/usr/share/doc/li
 - `GPL-2`
 - `LGPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris e2fsprogs=1.46.4-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.46.4-1ubuntu1.dsc' e2fsprogs_1.46.4-1ubuntu1.dsc 3103 SHA512:e896fc0334b995323eca7b15d8ed3d695e8ec79ac3c4d3b7cbe24ea9e07fb5d7f6baced471d9217fe9ac19efb0d9ae62ad03cac9d200af4b49d92e6033845158
-'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.46.4.orig.tar.gz' e2fsprogs_1.46.4.orig.tar.gz 9521023 SHA512:3fc4c71b6a951b9701d1943dab092dc8598869e1d4f1fabb236c49e6d5349cda809ba2cfc3957160e334824a2fe18e9000624dc02a35fc794ab09a098db13e81
-'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.46.4.orig.tar.gz.asc' e2fsprogs_1.46.4.orig.tar.gz.asc 488 SHA512:736aa5c2f5e24d633bcdfeb06a23874d0777f3e14c3f289d9eaa42479a9a2641004b7fc5ecf11ae583fc73f2e9fdcd117f80f9260d36908431b0b7cc55d2fd4b
-'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.46.4-1ubuntu1.debian.tar.xz' e2fsprogs_1.46.4-1ubuntu1.debian.tar.xz 84276 SHA512:873c16ef4f3f8f65e91ea2f9a7e329c4b78edced97a177ba360e7380edd7ac4bdb7385c35557dd1af692d331b700f39b668ad5323fde683d4e069506250dc928
-```
 
 ### `dpkg` source package: `findutils=4.8.0-1ubuntu2`
 
@@ -476,14 +470,9 @@ Licenses: (parsed from: `/usr/share/doc/gpgv/copyright`)
 - `TinySCHEME`
 - `permissive`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gnupg2=2.2.27-2ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.27-2ubuntu1.dsc' gnupg2_2.2.27-2ubuntu1.dsc 3769 SHA512:88fef6326a4ea1ffca474be6d6511fe4aaa568558d0a2f1662792a311c547126a6f9fbe61845834be9134e91662415621bb4b86d651035c3c1d4c1aae711f5b2
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.27.orig.tar.bz2' gnupg2_2.2.27.orig.tar.bz2 7191555 SHA512:cf336962116c9c08ac80b1299654b94948033ef51d6d5e7f54c2f07bbf7d92c7b0bddb606ceee2cdd837063f519b8d59af5a82816b840a0fc47d90c07b0e95ab
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.27-2ubuntu1.debian.tar.xz' gnupg2_2.2.27-2ubuntu1.debian.tar.xz 65360 SHA512:5fd47b776db8d94ecd19960b3047107ce88b9df333637e93144d143d67eba010f99f6c3996bef685488302ccd2b6d43b5bb43758c1dfbd9c12c7560af8179672
-```
 
 ### `dpkg` source package: `gnutls28=3.7.2-2ubuntu1`
 
