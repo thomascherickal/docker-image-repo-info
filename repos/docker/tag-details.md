@@ -8,12 +8,14 @@
 -	[`docker:20-git`](#docker20-git)
 -	[`docker:20-windowsservercore`](#docker20-windowsservercore)
 -	[`docker:20-windowsservercore-1809`](#docker20-windowsservercore-1809)
+-	[`docker:20-windowsservercore-ltsc2022`](#docker20-windowsservercore-ltsc2022)
 -	[`docker:20.10`](#docker2010)
 -	[`docker:20.10-dind`](#docker2010-dind)
 -	[`docker:20.10-dind-rootless`](#docker2010-dind-rootless)
 -	[`docker:20.10-git`](#docker2010-git)
 -	[`docker:20.10-windowsservercore`](#docker2010-windowsservercore)
 -	[`docker:20.10-windowsservercore-1809`](#docker2010-windowsservercore-1809)
+-	[`docker:20.10-windowsservercore-ltsc2022`](#docker2010-windowsservercore-ltsc2022)
 -	[`docker:20.10.12`](#docker201012)
 -	[`docker:20.10.12-alpine3.15`](#docker201012-alpine315)
 -	[`docker:20.10.12-dind`](#docker201012-dind)
@@ -22,12 +24,14 @@
 -	[`docker:20.10.12-git`](#docker201012-git)
 -	[`docker:20.10.12-windowsservercore`](#docker201012-windowsservercore)
 -	[`docker:20.10.12-windowsservercore-1809`](#docker201012-windowsservercore-1809)
+-	[`docker:20.10.12-windowsservercore-ltsc2022`](#docker201012-windowsservercore-ltsc2022)
 -	[`docker:dind`](#dockerdind)
 -	[`docker:dind-rootless`](#dockerdind-rootless)
 -	[`docker:git`](#dockergit)
 -	[`docker:latest`](#dockerlatest)
 -	[`docker:windowsservercore`](#dockerwindowsservercore)
 -	[`docker:windowsservercore-1809`](#dockerwindowsservercore-1809)
+-	[`docker:windowsservercore-ltsc2022`](#dockerwindowsservercore-ltsc2022)
 
 ## `docker:20`
 
@@ -995,6 +999,15 @@ RUN Write-Host ('Downloading {0} ...' -f $env:DOCKER_URL); 	Invoke-WebRequest -U
 		Size: 53.2 MB (53215955 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `docker:20-windowsservercore-ltsc2022`
+
+```console
+$ docker pull docker@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `docker:20.10`
 
 ```console
@@ -1960,6 +1973,15 @@ RUN Write-Host ('Downloading {0} ...' -f $env:DOCKER_URL); 	Invoke-WebRequest -U
 		Last Modified: Sat, 18 Dec 2021 10:28:50 GMT  
 		Size: 53.2 MB (53215955 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `docker:20.10-windowsservercore-ltsc2022`
+
+```console
+$ docker pull docker@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `docker:20.10.12`
 
@@ -3301,6 +3323,15 @@ RUN Write-Host ('Downloading {0} ...' -f $env:DOCKER_URL); 	Invoke-WebRequest -U
 		Size: 53.2 MB (53215955 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `docker:20.10.12-windowsservercore-ltsc2022`
+
+```console
+$ docker pull docker@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `docker:dind`
 
 ```console
@@ -4266,3 +4297,12 @@ RUN Write-Host ('Downloading {0} ...' -f $env:DOCKER_URL); 	Invoke-WebRequest -U
 		Last Modified: Sat, 18 Dec 2021 10:28:50 GMT  
 		Size: 53.2 MB (53215955 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `docker:windowsservercore-ltsc2022`
+
+```console
+$ docker pull docker@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
