@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:4b214e49beeda3e3c4fafd1276da133c2a376169bab0e4239c6a5662a812df2c`
-- Created: `2021-11-30T11:25:11.382005861Z`
-- Virtual Size: ~ 117.84 Mb  
+- Image ID: `sha256:66924f486a7295ba24ab002a38e3d8b40f09cef79736ac19c2317918919ce465`
+- Created: `2022-01-06T20:38:29.184517583Z`
+- Virtual Size: ~ 128.61 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint-dev.sh"]`
@@ -16,12 +16,15 @@
   - `PHP_CFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
-  - `GPG_KEYS=CBAF69F173A0FEA4B537F470D66C9593118BCCB6 F38252826ACD957EF380D39F2F7956BC5DA04B5D`
-  - `PHP_VERSION=7.3.33`
-  - `PHP_URL=https://www.php.net/distributions/php-7.3.33.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.3.33.tar.xz.asc`
-  - `PHP_SHA256=166eaccde933381da9516a2b70ad0f447d7cec4b603d07b9a916032b215b90cc`
+  - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
+  - `PHP_VERSION=7.4.27`
+  - `PHP_URL=https://www.php.net/distributions/php-7.4.27.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.27.tar.xz.asc`
+  - `PHP_SHA256=3f8b937310f155822752229c2c2feb8cc2621e25a728e7b94d0d74c128c43d0c`
   - `GOSU_VERSION=1.14`
+  - `PHP_MEMORY_LIMIT=512M`
+  - `PHP_UPLOAD_LIMIT=512M`
+  - `FRIENDICA_SYSLOG_FLAGS=39`
   - `FRIENDICA_VERSION=2021.12-rc`
   - `FRIENDICA_ADDONS=2021.12-rc`
 
@@ -591,16 +594,16 @@ BSD-3-Clause OR GPL-2.0-only
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1l-r7 description:
+libcrypto1.1-1.1.1l-r8 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1l-r7 webpage:
+libcrypto1.1-1.1.1l-r8 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1l-r7 installed size:
+libcrypto1.1-1.1.1l-r8 installed size:
 2676 KiB
 
-libcrypto1.1-1.1.1l-r7 license:
+libcrypto1.1-1.1.1l-r8 license:
 OpenSSL
 
 ```
@@ -914,16 +917,16 @@ ISC
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1l-r7 description:
+libssl1.1-1.1.1l-r8 description:
 SSL shared libraries
 
-libssl1.1-1.1.1l-r7 webpage:
+libssl1.1-1.1.1l-r8 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1l-r7 installed size:
+libssl1.1-1.1.1l-r8 installed size:
 528 KiB
 
-libssl1.1-1.1.1l-r7 license:
+libssl1.1-1.1.1l-r8 license:
 OpenSSL
 
 ```
@@ -993,6 +996,23 @@ libuuid-2.37.2-r1 installed size:
 
 libuuid-2.37.2-r1 license:
 GPL-3.0-or-later AND GPL-2.0-or-later AND GPL-2.0-only AND
+
+```
+
+### `apk` package: `libwebp`
+
+```console
+libwebp-1.2.1-r0 description:
+Libraries for working with WebP images
+
+libwebp-1.2.1-r0 webpage:
+https://developers.google.com/speed/webp
+
+libwebp-1.2.1-r0 installed size:
+580 KiB
+
+libwebp-1.2.1-r0 license:
+BSD-3-Clause
 
 ```
 
@@ -1135,16 +1155,16 @@ BSD-3-Clause
 ### `apk` package: `lz4-libs`
 
 ```console
-lz4-libs-1.9.3-r0 description:
+lz4-libs-1.9.3-r1 description:
 LZ4 is lossless compression algorithm with fast decoder @ multiple GB/s per core. (libraries)
 
-lz4-libs-1.9.3-r0 webpage:
+lz4-libs-1.9.3-r1 webpage:
 https://github.com/lz4/lz4
 
-lz4-libs-1.9.3-r0 installed size:
+lz4-libs-1.9.3-r1 installed size:
 216 KiB
 
-lz4-libs-1.9.3-r0 license:
+lz4-libs-1.9.3-r1 license:
 BSD-2-Clause GPL-2.0-only
 
 ```
@@ -1282,6 +1302,23 @@ npth-1.6-r1 installed size:
 
 npth-1.6-r1 license:
 LGPL-3.0-or-later or GPL-2.0-or-later or (LGPL-3.0-or-later and GPL-2.0-or-later)
+
+```
+
+### `apk` package: `oniguruma`
+
+```console
+oniguruma-6.9.7.1-r0 description:
+a regular expressions library
+
+oniguruma-6.9.7.1-r0 webpage:
+https://github.com/kkos/oniguruma
+
+oniguruma-6.9.7.1-r0 installed size:
+560 KiB
+
+oniguruma-6.9.7.1-r0 license:
+BSD-2-Clause
 
 ```
 
