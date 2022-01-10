@@ -15,6 +15,8 @@
 -	[`maven:3-eclipse-temurin-17`](#maven3-eclipse-temurin-17)
 -	[`maven:3-eclipse-temurin-17-alpine`](#maven3-eclipse-temurin-17-alpine)
 -	[`maven:3-eclipse-temurin-8`](#maven3-eclipse-temurin-8)
+-	[`maven:3-ibm-semeru-11-focal`](#maven3-ibm-semeru-11-focal)
+-	[`maven:3-ibm-semeru-17-focal`](#maven3-ibm-semeru-17-focal)
 -	[`maven:3-ibmjava`](#maven3-ibmjava)
 -	[`maven:3-ibmjava-8`](#maven3-ibmjava-8)
 -	[`maven:3-ibmjava-8-alpine`](#maven3-ibmjava-8-alpine)
@@ -42,6 +44,8 @@
 -	[`maven:3.8-eclipse-temurin-17`](#maven38-eclipse-temurin-17)
 -	[`maven:3.8-eclipse-temurin-17-alpine`](#maven38-eclipse-temurin-17-alpine)
 -	[`maven:3.8-eclipse-temurin-8`](#maven38-eclipse-temurin-8)
+-	[`maven:3.8-ibm-semeru-11-focal`](#maven38-ibm-semeru-11-focal)
+-	[`maven:3.8-ibm-semeru-17-focal`](#maven38-ibm-semeru-17-focal)
 -	[`maven:3.8-ibmjava`](#maven38-ibmjava)
 -	[`maven:3.8-ibmjava-8`](#maven38-ibmjava-8)
 -	[`maven:3.8-ibmjava-8-alpine`](#maven38-ibmjava-8-alpine)
@@ -70,6 +74,8 @@
 -	[`maven:3.8.4-eclipse-temurin-17`](#maven384-eclipse-temurin-17)
 -	[`maven:3.8.4-eclipse-temurin-17-alpine`](#maven384-eclipse-temurin-17-alpine)
 -	[`maven:3.8.4-eclipse-temurin-8`](#maven384-eclipse-temurin-8)
+-	[`maven:3.8.4-ibm-semeru-11-focal`](#maven384-ibm-semeru-11-focal)
+-	[`maven:3.8.4-ibm-semeru-17-focal`](#maven384-ibm-semeru-17-focal)
 -	[`maven:3.8.4-ibmjava`](#maven384-ibmjava)
 -	[`maven:3.8.4-ibmjava-8`](#maven384-ibmjava-8)
 -	[`maven:3.8.4-ibmjava-8-alpine`](#maven384-ibmjava-8-alpine)
@@ -3644,6 +3650,24 @@ CMD ["mvn"]
 		Last Modified: Fri, 07 Jan 2022 06:03:05 GMT  
 		Size: 358.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `maven:3-ibm-semeru-11-focal`
+
+```console
+$ docker pull maven@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `maven:3-ibm-semeru-17-focal`
+
+```console
+$ docker pull maven@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `maven:3-ibmjava`
 
@@ -10256,6 +10280,24 @@ CMD ["mvn"]
 		Last Modified: Fri, 07 Jan 2022 06:03:05 GMT  
 		Size: 358.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `maven:3.8-ibm-semeru-11-focal`
+
+```console
+$ docker pull maven@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `maven:3.8-ibm-semeru-17-focal`
+
+```console
+$ docker pull maven@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `maven:3.8-ibmjava`
 
@@ -16970,6 +17012,24 @@ CMD ["mvn"]
 		Last Modified: Fri, 07 Jan 2022 06:03:05 GMT  
 		Size: 358.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `maven:3.8.4-ibm-semeru-11-focal`
+
+```console
+$ docker pull maven@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `maven:3.8.4-ibm-semeru-17-focal`
+
+```console
+$ docker pull maven@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `maven:3.8.4-ibmjava`
 
