@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:0f841c36393c6b84215bb5ea5915437b3a26fa41e219a114123426882a01596d`
-- Created: `2021-11-29T21:17:44.471639386Z`
+- Image ID: `sha256:1ecd33fc84fe493b42f3dd21bf1ab8c86094431b9b1af8058c70a21bb58520c1`
+- Created: `2022-01-07T03:27:07.26505119Z`
 - Virtual Size: ~ 266.18 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -744,20 +744,25 @@ $ apt-get source -qq --print-uris libpsl=0.19.1-5build1
 'http://archive.ubuntu.com/ubuntu/pool/main/libp/libpsl/libpsl_0.19.1-5build1.debian.tar.xz' libpsl_0.19.1-5build1.debian.tar.xz 9860 SHA256:53285bee66ac22a25dd41f7778cc4e94ae3d61929eb6701a8064a38a964e40e2
 ```
 
-### `dpkg` source package: `libseccomp=2.5.1-1ubuntu1~18.04.1`
+### `dpkg` source package: `libseccomp=2.5.1-1ubuntu1~18.04.2`
 
 Binary Packages:
 
-- `libseccomp2:amd64=2.5.1-1ubuntu1~18.04.1`
+- `libseccomp2:amd64=2.5.1-1ubuntu1~18.04.2`
 
 Licenses: (parsed from: `/usr/share/doc/libseccomp2/copyright`)
 
 - `LGPL-2`
 - `LGPL-2.0+`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris libseccomp=2.5.1-1ubuntu1~18.04.2
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.5.1-1ubuntu1~18.04.2.dsc' libseccomp_2.5.1-1ubuntu1~18.04.2.dsc 2303 SHA512:2e493d3aa3b9a83efc57a88388a4e37b57a10947b36e39e90953e630a7637656bcb41ddc5cec4887d928738bab0e652dc8d3264710c577910244fb7a3ebdf600
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.5.1.orig.tar.gz' libseccomp_2.5.1.orig.tar.gz 638811 SHA512:2be80a6323f9282dbeae8791724e5778b32e2382b2a3d1b0f77366371ec4072ea28128204f675cce101c091c0420d12c497e1a9ccbb7dc5bcbf61bfd777160af
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.5.1-1ubuntu1~18.04.2.debian.tar.xz' libseccomp_2.5.1-1ubuntu1~18.04.2.debian.tar.xz 18840 SHA512:100d1d23c46f7e76c46b21ac8f7be74527ee52b2d1500427eb5d1891eee0f6afba44c3cddcea663110513f623477ce21904d09a9d50f2a017a90cb568048dca6
+```
 
 ### `dpkg` source package: `libselinux=2.7-2build2`
 
@@ -1008,12 +1013,12 @@ $ apt-get source -qq --print-uris nettle=3.4.1-0ubuntu0.18.04.1
 'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.4.1-0ubuntu0.18.04.1.debian.tar.xz' nettle_3.4.1-0ubuntu0.18.04.1.debian.tar.xz 27048 SHA512:424581749cb4e4f30343f788b9a26a2ced0f734b2a8faddc93f27317ff45e071f8f47d845e93d2d3eb5374390f29a868b1020858cc7890107916ec60991c1203
 ```
 
-### `dpkg` source package: `openssl=1.1.1-1ubuntu2.1~18.04.13`
+### `dpkg` source package: `openssl=1.1.1-1ubuntu2.1~18.04.14`
 
 Binary Packages:
 
-- `libssl1.1:amd64=1.1.1-1ubuntu2.1~18.04.13`
-- `openssl=1.1.1-1ubuntu2.1~18.04.13`
+- `libssl1.1:amd64=1.1.1-1ubuntu2.1~18.04.14`
+- `openssl=1.1.1-1ubuntu2.1~18.04.14`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1022,10 +1027,10 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openssl=1.1.1-1ubuntu2.1~18.04.13
-'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1-1ubuntu2.1~18.04.13.dsc' openssl_1.1.1-1ubuntu2.1~18.04.13.dsc 2514 SHA512:c4aaa5d1cdd986d46a9ff9fa1762694981e54b9f85d95507155f03b6d801fb769471e215ea9296c9b13621d50d5137a37570e87b207d9cf32a77014ab12c0293
-'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1.orig.tar.gz' openssl_1.1.1.orig.tar.gz 8337920 SHA512:c0284a4fe84bdf765ca5bc5148da4441ffc36392cfecaf9d372af00cf93b6de5681cab1248b6f8246474532155dc205da5ad49549ad7c61c07c917145e7c9c71
-'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1-1ubuntu2.1~18.04.13.debian.tar.xz' openssl_1.1.1-1ubuntu2.1~18.04.13.debian.tar.xz 126864 SHA512:bc0a5b48ccc278c19f6afd07980dd4248dcd7a987a832d857ac475feef0d7c3443513f1e00efd6e0294c09138f7b0f8fed44516ee1e5c0e4faba2cd8216fec15
+$ apt-get source -qq --print-uris openssl=1.1.1-1ubuntu2.1~18.04.14
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1-1ubuntu2.1~18.04.14.dsc' openssl_1.1.1-1ubuntu2.1~18.04.14.dsc 2543 SHA512:05dc02eecd62fe2905259655e64aecc8baef59260e12da4d1d1ff098569aace424cf8192b525479c802d32961b12cf1835f2ef7482eee57e068cfb48f81ea1e9
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1.orig.tar.gz' openssl_1.1.1.orig.tar.gz 8337920 SHA512:c0284a4fe84bdf765ca5bc5148da4441ffc36392cfecaf9d372af00cf93b6de5681cab1248b6f8246474532155dc205da5ad49549ad7c61c07c917145e7c9c71
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1-1ubuntu2.1~18.04.14.debian.tar.xz' openssl_1.1.1-1ubuntu2.1~18.04.14.debian.tar.xz 129792 SHA512:bbf9ce2d80063a851d95701405681576420c05189a1b5eb87d73b8f373f51db283cc31af36669564a36e5a1408999391701ff05b85c8f9ada62f2520458a1903
 ```
 
 ### `dpkg` source package: `p11-kit=0.23.9-2ubuntu0.1`
@@ -1225,12 +1230,12 @@ $ apt-get source -qq --print-uris shadow=1:4.5-1ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.5-1ubuntu2.debian.tar.xz' shadow_4.5-1ubuntu2.debian.tar.xz 471472 SHA512:d4017784bfc5118b86533da52909459adf4e79ffa049d8029437860bfaeac91eabd40e6510f67bba6f8b2d74fde62c24eb8e37a7b4637d14eeb63aecaf2294cc
 ```
 
-### `dpkg` source package: `systemd=237-3ubuntu10.52`
+### `dpkg` source package: `systemd=237-3ubuntu10.53`
 
 Binary Packages:
 
-- `libsystemd0:amd64=237-3ubuntu10.52`
-- `libudev1:amd64=237-3ubuntu10.52`
+- `libsystemd0:amd64=237-3ubuntu10.53`
+- `libudev1:amd64=237-3ubuntu10.53`
 
 Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/libudev1/copyright`)
 
@@ -1242,9 +1247,14 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris systemd=237-3ubuntu10.53
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.53.dsc' systemd_237-3ubuntu10.53.dsc 5187 SHA512:67bec5ef899046e4dac8d004d456a4320acf2865b66c697040f54f7e04ce1dd31d4abb331b77f5beffdcf4281a4b44eb29746d68b796be4e55c7865afbbf5c9f
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237.orig.tar.gz' systemd_237.orig.tar.gz 6871350 SHA512:15ef4b92815a6dd9a6c51672dbc00fd7cd0f08068ef0cbeaca574f68d330b28bc67ba1946f24f75ef3d9e7b63843a73eea700db54688061dbf5c9f8470394c3b
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.53.debian.tar.xz' systemd_237-3ubuntu10.53.debian.tar.xz 302640 SHA512:5b2fbb5ec3ca3030e64326af2281b42aedad040edc44595d41f7ea2d06c91a1fdee6e2e4c1bc6c513332ddae6d89bbbc2ff4584e6c59c20e43e2ee0ed27d64bd
+```
 
 ### `dpkg` source package: `sysvinit=2.88dsf-59.10ubuntu1`
 
