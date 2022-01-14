@@ -66,13 +66,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.3.13
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.3.13.dsc' apt_2.3.13.dsc 2801 SHA512:e7c469d63488d41041ad0786e1f5f34e3f3aebb0c22d3f2ce283e2a8d93b75f8507fc0772925d5010cf2bf7af79bf05398b2e95279cebd4e7656419917e6706e
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.3.13.tar.xz' apt_2.3.13.tar.xz 2212300 SHA512:d2ca08d10d8439f08b7ebbae9ac23b95e5221c2d4853f3cab9bcacd7b04ffd3e1a07a6525fcd5aa933e3fa392fbc3ab34b839fca31f62f68b20d87e4ae2cc030
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/apt/2.3.13/
+
 
 ### `dpkg` source package: `attr=1:2.5.1-1`
 
@@ -166,14 +166,9 @@ Licenses: (parsed from: `/usr/share/doc/bash/copyright`)
 
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris bash=5.1-5ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.1-5ubuntu1.dsc' bash_5.1-5ubuntu1.dsc 2426 SHA512:3b68e3b016866712d4d3162230fbde1d90737bbce7e270b2df750c45eb2416d684e2e91dc99a2d2106f55eb1e42a37ba71877f852658325fb2e8aae5a3b9e3c1
-'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.1.orig.tar.xz' bash_5.1.orig.tar.xz 5802740 SHA512:95d3acc542231cb893e1347c7d9dd66687f68cd347a0e9e126fde2d14e68c5b5530d1a5866eafa781e88aa013fcf72b4ad56d2e484c2ac7a69bd90bb149a9b86
-'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.1-5ubuntu1.debian.tar.xz' bash_5.1-5ubuntu1.debian.tar.xz 98636 SHA512:1ddd6dbef25bd1ce5ec75984e089640791fdcf3b7ecc9981e3410b38347effa0cd12dc7cd9e5c4375ece66079571c591308e17832188fe3fc53e1f49a7bb607b
-```
 
 ### `dpkg` source package: `bzip2=1.0.8-5`
 
@@ -521,15 +516,9 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 - `LGPLv3+_or_GPLv2+`
 - `The main library is licensed under GNU Lesser`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gnutls28=3.7.2-4ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.7.2-4ubuntu1.dsc' gnutls28_3.7.2-4ubuntu1.dsc 3574 SHA512:f9c51761e10bb74987bad0a46c9fc51e110e91f53a0055837f9cddfbe5482e586ea66df91f5b35ab86bbcd562b332fe17c891d72fe49825ba00de2e7f60d2e78
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.7.2.orig.tar.xz' gnutls28_3.7.2.orig.tar.xz 6091508 SHA512:5d01d561a05379da71e4847e30ba13c2abe09f7a5c4359fd539d8bd19abad0ce87120f82ee7b6264e787bd3edbc5ae16beffa892983cbc3d59f11a1811c10329
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.7.2.orig.tar.xz.asc' gnutls28_3.7.2.orig.tar.xz.asc 833 SHA512:9e6064ffd8c4bfb28c39a477bfe3e09ed459584ac258cbd580c87979df79fd09c8102804f297cece38bcbfa0e845245af5b82fd3fef0662a80099c28e1408d35
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.7.2-4ubuntu1.debian.tar.xz' gnutls28_3.7.2-4ubuntu1.debian.tar.xz 67168 SHA512:86a94b132514460037ccfff07871dc120d32b11e45cf75a302a07e55e673758352e2e12d40276ed288d09232316c2ddd76f0f782a4e606aec5c24ee3e3c4544d
-```
 
 ### `dpkg` source package: `grep=3.7-1`
 
@@ -1154,15 +1143,9 @@ Licenses: (parsed from: `/usr/share/doc/libssl3/copyright`)
 - `GPL-1`
 - `GPL-1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssl=3.0.0-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.0-1ubuntu1.dsc' openssl_3.0.0-1ubuntu1.dsc 2739 SHA512:010a699125944119df89ee882364f9cf175467e6fcf7992aa0974e7651b8dad4e8c1be46354697734e183d552c499204cf8e93359dd838efa40b695e63c8ab52
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.0.orig.tar.gz' openssl_3.0.0.orig.tar.gz 14978663 SHA512:1fdf769ef69631eb802671a9e0bb3a01883d58282f651986212983c2d7c9d3499dabe99a6dee0411e997e6fcfa6f682b121b7698596de0d6c78850c2200241b1
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.0.orig.tar.gz.asc' openssl_3.0.0.orig.tar.gz.asc 833 SHA512:b51d3ec06b5d7bc7ff7297a6530154ff718b288e7daafa28cff1ca8396de229090e8addaf63da2322b0b17f51be8fa114ddc71da2dcd118b7d7d1bdc73b6f46e
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.0-1ubuntu1.debian.tar.xz' openssl_3.0.0-1ubuntu1.debian.tar.xz 100332 SHA512:87398a0d3b4b16793cda4f33b3e3d9bdd39b00dd4941fecdf932411e8fb038848a9732669de4fc0f6c415373b00ad876c291cd9062f0cf9a4d0fcf3881b7663e
-```
 
 ### `dpkg` source package: `p11-kit=0.24.0-6`
 
@@ -1402,14 +1385,9 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=249.5-2ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_249.5-2ubuntu2.dsc' systemd_249.5-2ubuntu2.dsc 5612 SHA512:5a50c5c528073f3eb715db415ca144cc8f76eee225f1c3979c94ee808087751703729817ce36cae21e0d3bcd1dae513fc0c1a57e35dc1d7a6b043ac72695d02c
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_249.5.orig.tar.gz' systemd_249.5.orig.tar.gz 10597897 SHA512:d6f1a5a6f03f0ed05b111aee75da509c5868c523af6209f33e630724dd0c7e0d0abf16920795d587e6c31a5915d247ebc613cf26d4aecf39f82ebb0690fab75f
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_249.5-2ubuntu2.debian.tar.xz' systemd_249.5-2ubuntu2.debian.tar.xz 212356 SHA512:6eff9631f5cccb95522dd6959372772424d01a07405000e3365c5d09485c60c8794018d4e7ebf93d6e62b52c79db375ee0882be53f608469414dd2f77448ba23
-```
 
 ### `dpkg` source package: `sysvinit=2.96-7ubuntu2`
 
