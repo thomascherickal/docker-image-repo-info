@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:1f2d050c70632a7dd30b4160daaec1b99faaa036e06e3b17f2b75cf9d2f95e14`
-- Created: `2022-01-08T00:32:21.116869222Z`
+- Image ID: `sha256:50847aa138563250d858eea4c25bee2877125557af1efa38b356520c1a15d32e`
+- Created: `2022-01-12T22:52:37.540153878Z`
 - Virtual Size: ~ 497.20 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -446,15 +446,15 @@ $ yumdownloader --quiet --source --urls libattr-2.4.46-13.el7
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/attr-2.4.46-13.el7.src.rpm
 ```
 
-### `rpm` package: `libblkid-2.23.2-65.0.1.el7_9.1.x86_64`
+### `rpm` package: `libblkid-2.23.2-65.0.3.el7_9.1.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls libblkid-2.23.2-65.0.1.el7_9.1
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/util-linux-2.23.2-65.0.1.el7_9.1.src.rpm
+$ yumdownloader --quiet --source --urls libblkid-2.23.2-65.0.3.el7_9.1
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/util-linux-2.23.2-65.0.3.el7_9.1.src.rpm
 ```
 
 ### `rpm` package: `libcap-2.22-11.el7.x86_64`
@@ -578,15 +578,15 @@ $ yumdownloader --quiet --source --urls libidn-1.28-4.el7
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/libidn-1.28-4.el7.src.rpm
 ```
 
-### `rpm` package: `libmount-2.23.2-65.0.1.el7_9.1.x86_64`
+### `rpm` package: `libmount-2.23.2-65.0.3.el7_9.1.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls libmount-2.23.2-65.0.1.el7_9.1
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/util-linux-2.23.2-65.0.1.el7_9.1.src.rpm
+$ yumdownloader --quiet --source --urls libmount-2.23.2-65.0.3.el7_9.1
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/util-linux-2.23.2-65.0.3.el7_9.1.src.rpm
 ```
 
 ### `rpm` package: `libpng-1.5.13-8.el7.x86_64`
@@ -666,15 +666,15 @@ $ yumdownloader --quiet --source --urls libtasn1-4.10-1.el7
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/libtasn1-4.10-1.el7.src.rpm
 ```
 
-### `rpm` package: `libuuid-2.23.2-65.0.1.el7_9.1.x86_64`
+### `rpm` package: `libuuid-2.23.2-65.0.3.el7_9.1.x86_64`
 
 Licenses (from `rpm --query`): BSD
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls libuuid-2.23.2-65.0.1.el7_9.1
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/util-linux-2.23.2-65.0.1.el7_9.1.src.rpm
+$ yumdownloader --quiet --source --urls libuuid-2.23.2-65.0.3.el7_9.1
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/util-linux-2.23.2-65.0.3.el7_9.1.src.rpm
 ```
 
 ### `rpm` package: `libverto-0.2.5-4.el7.x86_64`
@@ -853,15 +853,15 @@ $ yumdownloader --quiet --source --urls openldap-2.4.44-24.el7_9
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/openldap-2.4.44-24.el7_9.src.rpm
 ```
 
-### `rpm` package: `openssl-libs-1.0.2k-22.el7_9.x86_64`
+### `rpm` package: `openssl-libs-1.0.2k-23.el7_9.x86_64`
 
 Licenses (from `rpm --query`): OpenSSL
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls openssl-libs-1.0.2k-22.el7_9
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/openssl-1.0.2k-22.el7_9.src.rpm
+$ yumdownloader --quiet --source --urls openssl-libs-1.0.2k-23.el7_9
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64//getPackageSource/openssl-1.0.2k-23.el7_9.src.rpm
 ```
 
 ### `rpm` package: `oraclelinux-release-7.9-1.0.9.el7.x86_64`
