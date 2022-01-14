@@ -2,16 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:d3ba6dbedb6ee737c11bbd84f88649c635817a156f5092ba7c0d773faa893eda`
-- Created: `2021-12-17T19:52:57.206513315Z`
-- Virtual Size: ~ 81.46 Mb  
+- Image ID: `sha256:8ded1e2d946d7c216221228d1823be82310bf8816ed259220515d04b81e147cb`
+- Created: `2022-01-11T21:56:29.860273304Z`
+- Virtual Size: ~ 84.68 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["iex"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `OTP_VERSION=24.2`
-  - `REBAR3_VERSION=3.17.0`
+  - `REBAR3_VERSION=3.18.0`
   - `ELIXIR_VERSION=v1.13.1`
   - `LANG=C.UTF-8`
 - Labels:
@@ -141,16 +141,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1l-r7 description:
+libcrypto1.1-1.1.1l-r8 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1l-r7 webpage:
+libcrypto1.1-1.1.1l-r8 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1l-r7 installed size:
+libcrypto1.1-1.1.1l-r8 installed size:
 2676 KiB
 
-libcrypto1.1-1.1.1l-r7 license:
+libcrypto1.1-1.1.1l-r8 license:
 OpenSSL
 
 ```
@@ -209,16 +209,16 @@ ISC AND (BSD-3-Clause OR MIT)
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1l-r7 description:
+libssl1.1-1.1.1l-r8 description:
 SSL shared libraries
 
-libssl1.1-1.1.1l-r7 webpage:
+libssl1.1-1.1.1l-r8 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1l-r7 installed size:
+libssl1.1-1.1.1l-r8 installed size:
 528 KiB
 
-libssl1.1-1.1.1l-r7 license:
+libssl1.1-1.1.1l-r8 license:
 OpenSSL
 
 ```
