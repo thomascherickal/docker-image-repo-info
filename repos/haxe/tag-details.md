@@ -6,10 +6,12 @@
 -	[`haxe:3.1-stretch`](#haxe31-stretch)
 -	[`haxe:3.1-windowsservercore`](#haxe31-windowsservercore)
 -	[`haxe:3.1-windowsservercore-1809`](#haxe31-windowsservercore-1809)
+-	[`haxe:3.1-windowsservercore-ltsc2022`](#haxe31-windowsservercore-ltsc2022)
 -	[`haxe:3.1.3`](#haxe313)
 -	[`haxe:3.1.3-stretch`](#haxe313-stretch)
 -	[`haxe:3.1.3-windowsservercore`](#haxe313-windowsservercore)
 -	[`haxe:3.1.3-windowsservercore-1809`](#haxe313-windowsservercore-1809)
+-	[`haxe:3.1.3-windowsservercore-ltsc2022`](#haxe313-windowsservercore-ltsc2022)
 -	[`haxe:3.2`](#haxe32)
 -	[`haxe:3.2-alpine`](#haxe32-alpine)
 -	[`haxe:3.2-alpine3.12`](#haxe32-alpine312)
@@ -18,6 +20,7 @@
 -	[`haxe:3.2-stretch`](#haxe32-stretch)
 -	[`haxe:3.2-windowsservercore`](#haxe32-windowsservercore)
 -	[`haxe:3.2-windowsservercore-1809`](#haxe32-windowsservercore-1809)
+-	[`haxe:3.2-windowsservercore-ltsc2022`](#haxe32-windowsservercore-ltsc2022)
 -	[`haxe:3.2.1`](#haxe321)
 -	[`haxe:3.2.1-alpine`](#haxe321-alpine)
 -	[`haxe:3.2.1-alpine3.12`](#haxe321-alpine312)
@@ -26,6 +29,7 @@
 -	[`haxe:3.2.1-stretch`](#haxe321-stretch)
 -	[`haxe:3.2.1-windowsservercore`](#haxe321-windowsservercore)
 -	[`haxe:3.2.1-windowsservercore-1809`](#haxe321-windowsservercore-1809)
+-	[`haxe:3.2.1-windowsservercore-ltsc2022`](#haxe321-windowsservercore-ltsc2022)
 -	[`haxe:3.3`](#haxe33)
 -	[`haxe:3.3-alpine`](#haxe33-alpine)
 -	[`haxe:3.3-alpine3.12`](#haxe33-alpine312)
@@ -34,6 +38,7 @@
 -	[`haxe:3.3-stretch`](#haxe33-stretch)
 -	[`haxe:3.3-windowsservercore`](#haxe33-windowsservercore)
 -	[`haxe:3.3-windowsservercore-1809`](#haxe33-windowsservercore-1809)
+-	[`haxe:3.3-windowsservercore-ltsc2022`](#haxe33-windowsservercore-ltsc2022)
 -	[`haxe:3.3.0`](#haxe330)
 -	[`haxe:3.3.0-alpine`](#haxe330-alpine)
 -	[`haxe:3.3.0-alpine3.12`](#haxe330-alpine312)
@@ -47,9 +52,11 @@
 -	[`haxe:3.3.0-rc.1-stretch`](#haxe330-rc1-stretch)
 -	[`haxe:3.3.0-rc.1-windowsservercore`](#haxe330-rc1-windowsservercore)
 -	[`haxe:3.3.0-rc.1-windowsservercore-1809`](#haxe330-rc1-windowsservercore-1809)
+-	[`haxe:3.3.0-rc.1-windowsservercore-ltsc2022`](#haxe330-rc1-windowsservercore-ltsc2022)
 -	[`haxe:3.3.0-stretch`](#haxe330-stretch)
 -	[`haxe:3.3.0-windowsservercore`](#haxe330-windowsservercore)
 -	[`haxe:3.3.0-windowsservercore-1809`](#haxe330-windowsservercore-1809)
+-	[`haxe:3.3.0-windowsservercore-ltsc2022`](#haxe330-windowsservercore-ltsc2022)
 -	[`haxe:3.4`](#haxe34)
 -	[`haxe:3.4-alpine`](#haxe34-alpine)
 -	[`haxe:3.4-alpine3.12`](#haxe34-alpine312)
@@ -58,6 +65,7 @@
 -	[`haxe:3.4-stretch`](#haxe34-stretch)
 -	[`haxe:3.4-windowsservercore`](#haxe34-windowsservercore)
 -	[`haxe:3.4-windowsservercore-1809`](#haxe34-windowsservercore-1809)
+-	[`haxe:3.4-windowsservercore-ltsc2022`](#haxe34-windowsservercore-ltsc2022)
 -	[`haxe:3.4.7`](#haxe347)
 -	[`haxe:3.4.7-alpine`](#haxe347-alpine)
 -	[`haxe:3.4.7-alpine3.12`](#haxe347-alpine312)
@@ -66,6 +74,7 @@
 -	[`haxe:3.4.7-stretch`](#haxe347-stretch)
 -	[`haxe:3.4.7-windowsservercore`](#haxe347-windowsservercore)
 -	[`haxe:3.4.7-windowsservercore-1809`](#haxe347-windowsservercore-1809)
+-	[`haxe:3.4.7-windowsservercore-ltsc2022`](#haxe347-windowsservercore-ltsc2022)
 -	[`haxe:4.0`](#haxe40)
 -	[`haxe:4.0-alpine`](#haxe40-alpine)
 -	[`haxe:4.0-alpine3.12`](#haxe40-alpine312)
@@ -77,6 +86,7 @@
 -	[`haxe:4.0-stretch`](#haxe40-stretch)
 -	[`haxe:4.0-windowsservercore`](#haxe40-windowsservercore)
 -	[`haxe:4.0-windowsservercore-1809`](#haxe40-windowsservercore-1809)
+-	[`haxe:4.0-windowsservercore-ltsc2022`](#haxe40-windowsservercore-ltsc2022)
 -	[`haxe:4.0.5`](#haxe405)
 -	[`haxe:4.0.5-alpine`](#haxe405-alpine)
 -	[`haxe:4.0.5-alpine3.12`](#haxe405-alpine312)
@@ -88,6 +98,7 @@
 -	[`haxe:4.0.5-stretch`](#haxe405-stretch)
 -	[`haxe:4.0.5-windowsservercore`](#haxe405-windowsservercore)
 -	[`haxe:4.0.5-windowsservercore-1809`](#haxe405-windowsservercore-1809)
+-	[`haxe:4.0.5-windowsservercore-ltsc2022`](#haxe405-windowsservercore-ltsc2022)
 -	[`haxe:4.1`](#haxe41)
 -	[`haxe:4.1-alpine`](#haxe41-alpine)
 -	[`haxe:4.1-alpine3.12`](#haxe41-alpine312)
@@ -98,6 +109,7 @@
 -	[`haxe:4.1-buster`](#haxe41-buster)
 -	[`haxe:4.1-windowsservercore`](#haxe41-windowsservercore)
 -	[`haxe:4.1-windowsservercore-1809`](#haxe41-windowsservercore-1809)
+-	[`haxe:4.1-windowsservercore-ltsc2022`](#haxe41-windowsservercore-ltsc2022)
 -	[`haxe:4.1.5`](#haxe415)
 -	[`haxe:4.1.5-alpine`](#haxe415-alpine)
 -	[`haxe:4.1.5-alpine3.12`](#haxe415-alpine312)
@@ -108,6 +120,7 @@
 -	[`haxe:4.1.5-buster`](#haxe415-buster)
 -	[`haxe:4.1.5-windowsservercore`](#haxe415-windowsservercore)
 -	[`haxe:4.1.5-windowsservercore-1809`](#haxe415-windowsservercore-1809)
+-	[`haxe:4.1.5-windowsservercore-ltsc2022`](#haxe415-windowsservercore-ltsc2022)
 -	[`haxe:4.2`](#haxe42)
 -	[`haxe:4.2-alpine`](#haxe42-alpine)
 -	[`haxe:4.2-alpine3.12`](#haxe42-alpine312)
@@ -118,6 +131,7 @@
 -	[`haxe:4.2-buster`](#haxe42-buster)
 -	[`haxe:4.2-windowsservercore`](#haxe42-windowsservercore)
 -	[`haxe:4.2-windowsservercore-1809`](#haxe42-windowsservercore-1809)
+-	[`haxe:4.2-windowsservercore-ltsc2022`](#haxe42-windowsservercore-ltsc2022)
 -	[`haxe:4.2.4`](#haxe424)
 -	[`haxe:4.2.4-alpine`](#haxe424-alpine)
 -	[`haxe:4.2.4-alpine3.12`](#haxe424-alpine312)
@@ -128,6 +142,7 @@
 -	[`haxe:4.2.4-buster`](#haxe424-buster)
 -	[`haxe:4.2.4-windowsservercore`](#haxe424-windowsservercore)
 -	[`haxe:4.2.4-windowsservercore-1809`](#haxe424-windowsservercore-1809)
+-	[`haxe:4.2.4-windowsservercore-ltsc2022`](#haxe424-windowsservercore-ltsc2022)
 -	[`haxe:latest`](#haxelatest)
 
 ## `haxe:3.1`
@@ -1036,6 +1051,10 @@ CMD ["haxe"]
 		Size: 1.4 KB (1408 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `haxe:3.1-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
+
 ## `haxe:3.1.3`
 
 ```console
@@ -1941,6 +1960,10 @@ CMD ["haxe"]
 		Last Modified: Wed, 12 Jan 2022 19:17:53 GMT  
 		Size: 1.4 KB (1408 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `haxe:3.1.3-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
 
 ## `haxe:3.2`
 
@@ -3397,6 +3420,10 @@ CMD ["haxe"]
 		Size: 1.4 KB (1411 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `haxe:3.2-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
+
 ## `haxe:3.2.1`
 
 ```console
@@ -4852,6 +4879,10 @@ CMD ["haxe"]
 		Size: 1.4 KB (1411 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `haxe:3.2.1-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
+
 ## `haxe:3.3`
 
 ```console
@@ -6306,6 +6337,10 @@ CMD ["haxe"]
 		Last Modified: Wed, 12 Jan 2022 19:17:11 GMT  
 		Size: 1.4 KB (1384 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `haxe:3.3-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
 
 ## `haxe:3.3.0`
 
@@ -8683,6 +8718,10 @@ CMD ["haxe"]
 		Size: 1.4 KB (1384 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `haxe:3.3.0-rc.1-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
+
 ## `haxe:3.3.0-stretch`
 
 ```console
@@ -9216,6 +9255,10 @@ CMD ["haxe"]
 		Last Modified: Wed, 12 Jan 2022 19:17:11 GMT  
 		Size: 1.4 KB (1384 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `haxe:3.3.0-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
 
 ## `haxe:3.4`
 
@@ -10672,6 +10715,10 @@ CMD ["haxe"]
 		Size: 1.4 KB (1399 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `haxe:3.4-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
+
 ## `haxe:3.4.7`
 
 ```console
@@ -12126,6 +12173,10 @@ CMD ["haxe"]
 		Last Modified: Wed, 12 Jan 2022 19:16:51 GMT  
 		Size: 1.4 KB (1399 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `haxe:3.4.7-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
 
 ## `haxe:4.0`
 
@@ -14024,6 +14075,10 @@ CMD ["haxe"]
 		Size: 1.4 KB (1439 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `haxe:4.0-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
+
 ## `haxe:4.0.5`
 
 ```console
@@ -15921,6 +15976,10 @@ CMD ["haxe"]
 		Size: 1.4 KB (1439 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `haxe:4.0.5-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
+
 ## `haxe:4.1`
 
 ```console
@@ -17589,6 +17648,10 @@ CMD ["haxe"]
 		Last Modified: Wed, 12 Jan 2022 19:16:12 GMT  
 		Size: 1.4 KB (1364 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `haxe:4.1-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
 
 ## `haxe:4.1.5`
 
@@ -19259,6 +19322,10 @@ CMD ["haxe"]
 		Size: 1.4 KB (1364 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `haxe:4.1.5-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
+
 ## `haxe:4.2`
 
 ```console
@@ -20928,6 +20995,10 @@ CMD ["haxe"]
 		Size: 1.4 KB (1409 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `haxe:4.2-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
+
 ## `haxe:4.2.4`
 
 ```console
@@ -22596,6 +22667,10 @@ CMD ["haxe"]
 		Last Modified: Wed, 12 Jan 2022 19:15:49 GMT  
 		Size: 1.4 KB (1409 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `haxe:4.2.4-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
 
 ## `haxe:latest`
 
