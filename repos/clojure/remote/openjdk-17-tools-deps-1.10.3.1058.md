@@ -1,7 +1,7 @@
 ## `clojure:openjdk-17-tools-deps-1.10.3.1058`
 
 ```console
-$ docker pull clojure@sha256:945eee2c9a69ba3ec355bb0f77bd097af18b32fb39117675f0f296624acfcf29
+$ docker pull clojure@sha256:f3df8e2c8e7420e2636fc77a1abf2577b9ac72f6cae78feab5ff5ecea29e973d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,14 +12,14 @@ $ docker pull clojure@sha256:945eee2c9a69ba3ec355bb0f77bd097af18b32fb39117675f0f
 ### `clojure:openjdk-17-tools-deps-1.10.3.1058` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:7de8e3cebd54edaec46ac01a8cbceee04fc66534ec2832241ffc16abb7e510d8
+$ docker pull clojure@sha256:119f0f46f092c234239be9cc7271d00682a7f82c56857ca7f4085744df8b1fbd
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **280.1 MB (280057918 bytes)**  
+-	Total Size: **280.4 MB (280408582 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:acbb59152d074abafb605f3de8496e247b67cc58cb1829e7f2d0178e622fb6c9`
+-	Image ID: `sha256:99a577086c0d9a6373d8e53000e153de9892adecb6de8ac07bedb0bb871f977f`
 -	Entrypoint: `["entrypoint"]`
 -	Default Command: `["-M","--repl"]`
 
@@ -36,25 +36,25 @@ ENV JAVA_HOME=/usr/local/openjdk-17
 ENV PATH=/usr/local/openjdk-17/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Tue, 21 Dec 2021 23:00:50 GMT
 ENV LANG=C.UTF-8
-# Tue, 21 Dec 2021 23:00:50 GMT
-ENV JAVA_VERSION=17.0.1
-# Tue, 21 Dec 2021 23:01:06 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://download.java.net/java/GA/jdk17.0.1/2a2082e5a09d4267845be086888add4f/12/GPL/openjdk-17.0.1_linux-x64_bin.tar.gz'; 			downloadSha256='1c0a73cbb863aad579b967316bf17673b8f98a9bb938602a140ba2e5c38f880a'; 			;; 		'arm64') 			downloadUrl='https://download.java.net/java/GA/jdk17.0.1/2a2082e5a09d4267845be086888add4f/12/GPL/openjdk-17.0.1_linux-aarch64_bin.tar.gz'; 			downloadSha256='86653d48787e5a1c029df10da7808194fe8bd931ddd72ff3d42850bf1afb317e'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
-# Tue, 21 Dec 2021 23:01:06 GMT
+# Wed, 19 Jan 2022 20:43:38 GMT
+ENV JAVA_VERSION=17.0.2
+# Wed, 19 Jan 2022 20:43:56 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_linux-x64_bin.tar.gz'; 			downloadSha256='0022753d0cceecacdd3a795dd4cea2bd7ffdf9dc06e22ffd1be98411742fbb44'; 			;; 		'arm64') 			downloadUrl='https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_linux-aarch64_bin.tar.gz'; 			downloadSha256='13bfd976acf8803f862e82c7113fb0e9311ca5458b1decaef8a09ffd91119fa4'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Wed, 19 Jan 2022 20:43:57 GMT
 CMD ["jshell"]
-# Fri, 07 Jan 2022 20:25:16 GMT
+# Wed, 19 Jan 2022 21:46:31 GMT
 ENV CLOJURE_VERSION=1.10.3.1058
-# Fri, 07 Jan 2022 20:25:16 GMT
+# Wed, 19 Jan 2022 21:46:31 GMT
 WORKDIR /tmp
-# Fri, 07 Jan 2022 20:25:33 GMT
+# Wed, 19 Jan 2022 21:46:48 GMT
 RUN apt-get update && apt-get install -y curl make git rlwrap wget && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "980168025a3827bd7ed9d5ab1681ce29808ac8e6cbced3ab6683db8b365b54df *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && rm linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apt-get purge -y --auto-remove curl wget
-# Fri, 07 Jan 2022 20:25:34 GMT
+# Wed, 19 Jan 2022 21:46:48 GMT
 COPY file:b0aef3ea203de7b5c2ea645debf58c8231445a2e3070b72749b54614f4a89b82 in /usr/local/bin/rlwrap 
-# Fri, 07 Jan 2022 20:25:34 GMT
+# Wed, 19 Jan 2022 21:46:49 GMT
 COPY file:137b40904568e30898cd031ef34f77e7f132846ba4eec91d04ae4b93dddfbb8d in /usr/local/bin/entrypoint 
-# Fri, 07 Jan 2022 20:25:34 GMT
+# Wed, 19 Jan 2022 21:46:49 GMT
 ENTRYPOINT ["entrypoint"]
-# Fri, 07 Jan 2022 20:25:34 GMT
+# Wed, 19 Jan 2022 21:46:49 GMT
 CMD ["-M" "--repl"]
 ```
 
@@ -67,21 +67,21 @@ CMD ["-M" "--repl"]
 		Last Modified: Tue, 21 Dec 2021 23:14:38 GMT  
 		Size: 1.6 MB (1582039 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1343f138b677c0b1457cc7cb6310108df5388665281e0962273fb3492e52b86d`  
-		Last Modified: Tue, 21 Dec 2021 23:20:46 GMT  
-		Size: 187.5 MB (187548781 bytes)  
+	-	`sha256:296e496bab50ca3ca0deab29cd7d1b151987569203be501daefac07e9664b4c6`  
+		Last Modified: Wed, 19 Jan 2022 21:00:50 GMT  
+		Size: 187.9 MB (187899587 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c0c740600f8458de05c5d158bdc8d090061a2ca1826bcae5d40dea77f4b4e1b3`  
-		Last Modified: Fri, 07 Jan 2022 20:34:24 GMT  
-		Size: 59.6 MB (59568443 bytes)  
+	-	`sha256:8c54dd8ba511b7b261ae3bed50a98b897142a8131066cf9ca64ba8e3057d34cb`  
+		Last Modified: Wed, 19 Jan 2022 21:58:34 GMT  
+		Size: 59.6 MB (59568299 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fb850952ccdd45de41044c688236156e32d06fdbcfd95f29de9a1f329ee1c65c`  
-		Last Modified: Fri, 07 Jan 2022 20:34:15 GMT  
-		Size: 625.0 B  
+	-	`sha256:1c2694c70bf3ed206eb9fec9fa579be0e6b600c3d5fd6b123b0486f054aea5a4`  
+		Last Modified: Wed, 19 Jan 2022 21:58:26 GMT  
+		Size: 626.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6a347aef5c9180e8b2cbe41a098971c3674c013192780c3e95550ddacc96f032`  
-		Last Modified: Fri, 07 Jan 2022 20:34:15 GMT  
-		Size: 406.0 B  
+	-	`sha256:b9b02af3825a242b06845bba909a3a5c2fd28f4849a61915f5447b9950cbbada`  
+		Last Modified: Wed, 19 Jan 2022 21:58:27 GMT  
+		Size: 407.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:openjdk-17-tools-deps-1.10.3.1058` - linux; arm64 variant v8
