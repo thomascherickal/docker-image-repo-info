@@ -555,20 +555,13 @@ Licenses: (parsed from: `/usr/share/doc/libsasl2-2/copyright`, `/usr/share/doc/l
 - `RSA-MD`
 - `SSLeay`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris cyrus-sasl2=2.1.27+dfsg2-2
-'http://deb.debian.org/debian/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.27+dfsg2-2.dsc' cyrus-sasl2_2.1.27+dfsg2-2.dsc 3236 SHA256:39ffb2d7e752e14148f016c712d95293b3597b3bd08ea5a6ddf60952d41adf7e
-'http://deb.debian.org/debian/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.27+dfsg2.orig.tar.xz' cyrus-sasl2_2.1.27+dfsg2.orig.tar.xz 829892 SHA256:f3d90671718e7dc1d46db7ccbad548d60ffe1edd1e9a620e5d3b779e6a0a9326
-'http://deb.debian.org/debian/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.27+dfsg2-2.debian.tar.xz' cyrus-sasl2_2.1.27+dfsg2-2.debian.tar.xz 91912 SHA256:c2ab5857b9a912cb24d1375b524a53cda35aa7b40f4b44fd2cb47349c93c82e5
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/cyrus-sasl2/2.1.27+dfsg2-2/
 
-- https://sources.debian.net/src/cyrus-sasl2/2.1.27+dfsg2-2/ (for browsing the source)
-- https://sources.debian.net/src/cyrus-sasl2/2.1.27+dfsg2-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/cyrus-sasl2/2.1.27+dfsg2-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `dash=0.5.11+git20210903+057cd650a4ed-3`
 
@@ -896,20 +889,13 @@ Licenses: (parsed from: `/usr/share/doc/r-cran-foreign/copyright`)
 - `GPL`
 - `GPL `
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris foreign=0.8.81-1
-'http://deb.debian.org/debian/pool/main/f/foreign/foreign_0.8.81-1.dsc' foreign_0.8.81-1.dsc 1838 SHA256:d7351f6d4fbf4c51191dac820d8ff8eccbe3283ca7114c836a6d904d31f2fba4
-'http://deb.debian.org/debian/pool/main/f/foreign/foreign_0.8.81.orig.tar.gz' foreign_0.8.81.orig.tar.gz 363284 SHA256:1ae8f9f18f2a037697fa1a9060417ff255c71764f0145080b2bd23ba8262992c
-'http://deb.debian.org/debian/pool/main/f/foreign/foreign_0.8.81-1.debian.tar.xz' foreign_0.8.81-1.debian.tar.xz 4272 SHA256:f178765a6a4476098361d52bd6aef0dc489e2a1e17c2d4876af51f7906636212
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/foreign/0.8.81-1/
 
-- https://sources.debian.net/src/foreign/0.8.81-1/ (for browsing the source)
-- https://sources.debian.net/src/foreign/0.8.81-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/foreign/0.8.81-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `freetype=2.11.0+dfsg-1`
 
@@ -1247,21 +1233,13 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 - `LGPLv3+_or_GPLv2+`
 - `The main library is licensed under GNU Lesser`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gnutls28=3.7.2-2
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.7.2-2.dsc' gnutls28_3.7.2-2.dsc 3487 SHA256:f2c1cfd399a5631133f37590d470929ba0344c94ae30ae89c4673711613409d7
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.7.2.orig.tar.xz' gnutls28_3.7.2.orig.tar.xz 6091508 SHA256:646e6c5a9a185faa4cea796d378a1ba8e1148dbb197ca6605f95986a25af2752
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.7.2.orig.tar.xz.asc' gnutls28_3.7.2.orig.tar.xz.asc 833 SHA256:015e4f3390469126a94014e4aa1182ed4b238f940ff09093884cc04f8fefedf0
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.7.2-2.debian.tar.xz' gnutls28_3.7.2-2.debian.tar.xz 65144 SHA256:900fdef4138494346a4e513a62a7583c8be97c0bbebe475d37ff6b093b19944a
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gnutls28/3.7.2-2/
 
-- https://sources.debian.net/src/gnutls28/3.7.2-2/ (for browsing the source)
-- https://sources.debian.net/src/gnutls28/3.7.2-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gnutls28/3.7.2-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `graphite2=1.3.14-1`
 
@@ -3063,20 +3041,13 @@ Licenses: (parsed from: `/usr/share/doc/r-cran-nlme/copyright`)
 - `GPL`
 - `GPL `
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris nlme=3.1.153-1
-'http://deb.debian.org/debian/pool/main/n/nlme/nlme_3.1.153-1.dsc' nlme_3.1.153-1.dsc 1840 SHA256:dc6216bcaf6d5e7f39553fff12076a951f665feb86541dd1d3e81510f611cd6f
-'http://deb.debian.org/debian/pool/main/n/nlme/nlme_3.1.153.orig.tar.gz' nlme_3.1.153.orig.tar.gz 806128 SHA256:3d27a98edf1b16ee868949e823ac0babbf10c937a7220d648b7ef9480cd680e3
-'http://deb.debian.org/debian/pool/main/n/nlme/nlme_3.1.153-1.debian.tar.xz' nlme_3.1.153-1.debian.tar.xz 7176 SHA256:b4fd6d2df31a90c1e4854552720ed390fb80290e3eb112204fd99a6dd93e2a7e
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/nlme/3.1.153-1/
 
-- https://sources.debian.net/src/nlme/3.1.153-1/ (for browsing the source)
-- https://sources.debian.net/src/nlme/3.1.153-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/nlme/3.1.153-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openblas=0.3.18+ds-2`
 
@@ -3484,20 +3455,13 @@ Licenses: (parsed from: `/usr/share/doc/r-cran-class/copyright`)
 - `GPL-2`
 - `GPL-2 | GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris r-cran-class=7.3-19-2
-'http://deb.debian.org/debian/pool/main/r/r-cran-class/r-cran-class_7.3-19-2.dsc' r-cran-class_7.3-19-2.dsc 1873 SHA256:a6b77db3919c596b76b4734199024c56f83b95a170d345484beea3adaae8f135
-'http://deb.debian.org/debian/pool/main/r/r-cran-class/r-cran-class_7.3-19.orig.tar.gz' r-cran-class_7.3-19.orig.tar.gz 20756 SHA256:7820ae94b22009561a69ed1f8b2ca2a3814be6a656e9884738206997caecbe37
-'http://deb.debian.org/debian/pool/main/r/r-cran-class/r-cran-class_7.3-19-2.debian.tar.xz' r-cran-class_7.3-19-2.debian.tar.xz 3200 SHA256:77edaf6b19bce69fd4ccb55b5289c1f8a7efd54f35ba2b05e1d121e519bf213e
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/r-cran-class/7.3-19-2/
 
-- https://sources.debian.net/src/r-cran-class/7.3-19-2/ (for browsing the source)
-- https://sources.debian.net/src/r-cran-class/7.3-19-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/r-cran-class/7.3-19-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `r-cran-mass=7.3-54-2`
 
@@ -3510,20 +3474,13 @@ Licenses: (parsed from: `/usr/share/doc/r-cran-mass/copyright`)
 - `GPL-2`
 - `GPL-2 | GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris r-cran-mass=7.3-54-2
-'http://deb.debian.org/debian/pool/main/r/r-cran-mass/r-cran-mass_7.3-54-2.dsc' r-cran-mass_7.3-54-2.dsc 1851 SHA256:4b52540dd20952fe02762d3b10cfcd9df06496e2dd6fc04da5895b2e4b2032fc
-'http://deb.debian.org/debian/pool/main/r/r-cran-mass/r-cran-mass_7.3-54.orig.tar.gz' r-cran-mass_7.3-54.orig.tar.gz 506246 SHA256:b800ccd5b5c2709b1559cf5eab126e4935c4f8826cf7891253432bb6a056e821
-'http://deb.debian.org/debian/pool/main/r/r-cran-mass/r-cran-mass_7.3-54-2.debian.tar.xz' r-cran-mass_7.3-54-2.debian.tar.xz 6372 SHA256:4a263e56575660503a0d444e157b1d0d79bf77e54bf09b7d3811f1a0b0c3b138
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/r-cran-mass/7.3-54-2/
 
-- https://sources.debian.net/src/r-cran-mass/7.3-54-2/ (for browsing the source)
-- https://sources.debian.net/src/r-cran-mass/7.3-54-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/r-cran-mass/7.3-54-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `r-cran-nnet=7.3-16-2`
 
@@ -3536,20 +3493,13 @@ Licenses: (parsed from: `/usr/share/doc/r-cran-nnet/copyright`)
 - `GPL-2`
 - `GPL-2 | GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris r-cran-nnet=7.3-16-2
-'http://deb.debian.org/debian/pool/main/r/r-cran-nnet/r-cran-nnet_7.3-16-2.dsc' r-cran-nnet_7.3-16-2.dsc 1848 SHA256:e19cdd5c8ecfe44f42e800a86564971665bd50bdc92e032caf7bd791d720f350
-'http://deb.debian.org/debian/pool/main/r/r-cran-nnet/r-cran-nnet_7.3-16.orig.tar.gz' r-cran-nnet_7.3-16.orig.tar.gz 29097 SHA256:99511969babaf937c3033750b00b41e4e03742f268084efc4ee953b849f7b56a
-'http://deb.debian.org/debian/pool/main/r/r-cran-nnet/r-cran-nnet_7.3-16-2.debian.tar.xz' r-cran-nnet_7.3-16-2.debian.tar.xz 3236 SHA256:6df6ff3f0d297f06774fbc2e8049222e9a30f7a14a77a4e61fe1ef964e116163
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/r-cran-nnet/7.3-16-2/
 
-- https://sources.debian.net/src/r-cran-nnet/7.3-16-2/ (for browsing the source)
-- https://sources.debian.net/src/r-cran-nnet/7.3-16-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/r-cran-nnet/7.3-16-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `r-cran-spatial=7.3-14-2`
 
@@ -3562,20 +3512,13 @@ Licenses: (parsed from: `/usr/share/doc/r-cran-spatial/copyright`)
 - `GPL-2`
 - `GPL-2 | GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris r-cran-spatial=7.3-14-2
-'http://deb.debian.org/debian/pool/main/r/r-cran-spatial/r-cran-spatial_7.3-14-2.dsc' r-cran-spatial_7.3-14-2.dsc 1884 SHA256:8e19ee10d24cfc534618140d273a37ff709cdd39f974b53f1eacde92692ee508
-'http://deb.debian.org/debian/pool/main/r/r-cran-spatial/r-cran-spatial_7.3-14.orig.tar.gz' r-cran-spatial_7.3-14.orig.tar.gz 44601 SHA256:52cc1982732f14544fae7dd9d028e2fc3b525ed695d211d6ed5055420e768a36
-'http://deb.debian.org/debian/pool/main/r/r-cran-spatial/r-cran-spatial_7.3-14-2.debian.tar.xz' r-cran-spatial_7.3-14-2.debian.tar.xz 3160 SHA256:f626e3c36878254428341fa0fc64da8593749df6244ce5679deb9bc17d165ab8
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/r-cran-spatial/7.3-14-2/
 
-- https://sources.debian.net/src/r-cran-spatial/7.3-14-2/ (for browsing the source)
-- https://sources.debian.net/src/r-cran-spatial/7.3-14-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/r-cran-spatial/7.3-14-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `readline=8.1-2`
 
@@ -3828,20 +3771,13 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=249.7-1
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_249.7-1.dsc' systemd_249.7-1.dsc 5438 SHA256:c470934868070567a044c7a0a1a254fec4e1f5e461b426447f24fa87d5423f30
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_249.7.orig.tar.gz' systemd_249.7.orig.tar.gz 10608252 SHA256:5dbf457431bb16e5dfc957200731ad302fe3ae4919470bc34b8224428e1addbb
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_249.7-1.debian.tar.xz' systemd_249.7-1.debian.tar.xz 166796 SHA256:ed663fc63c77896d585ac62d68c35474fe5d8ee27adf255d9ae2376940042a20
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/systemd/249.7-1/
 
-- https://sources.debian.net/src/systemd/249.7-1/ (for browsing the source)
-- https://sources.debian.net/src/systemd/249.7-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/systemd/249.7-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sysvinit=3.00-1`
 
