@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:76834f450894ee5d37ab67d5d0e9a6a10e8166642baf54abcb8b41f403099460`
-- Created: `2022-01-07T05:12:20.093469901Z`
-- Virtual Size: ~ 681.14 Mb  
+- Image ID: `sha256:e727dd30130c42106f273c06581d4cb906639221b00bf9f74c7d323441429da9`
+- Created: `2022-01-20T03:30:03.848643326Z`
+- Virtual Size: ~ 681.16 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/gzserver_entrypoint.sh"]`
@@ -1149,13 +1149,13 @@ $ apt-get source -qq --print-uris game-music-emu=0.6.2-1
 'http://archive.ubuntu.com/ubuntu/pool/universe/g/game-music-emu/game-music-emu_0.6.2-1.debian.tar.xz' game-music-emu_0.6.2-1.debian.tar.xz 4412 SHA256:8ea69035bd72261ec85e5f0486707d448f7491733ae055040a9995cebb0ea820
 ```
 
-### `dpkg` source package: `gazebo11=11.9.1-1~bionic`
+### `dpkg` source package: `gazebo11=11.10.0-1~bionic`
 
 Binary Packages:
 
-- `gazebo11=11.9.1-1~bionic`
-- `gazebo11-common=11.9.1-1~bionic`
-- `libgazebo11:amd64=11.9.1-1~bionic`
+- `gazebo11=11.10.0-1~bionic`
+- `gazebo11-common=11.10.0-1~bionic`
+- `libgazebo11:amd64=11.10.0-1~bionic`
 
 Licenses: (parsed from: `/usr/share/doc/gazebo11/copyright`, `/usr/share/doc/gazebo11-common/copyright`, `/usr/share/doc/libgazebo11/copyright`)
 
@@ -1171,9 +1171,14 @@ Licenses: (parsed from: `/usr/share/doc/gazebo11/copyright`, `/usr/share/doc/gaz
 - `LGPL-3+`
 - `ZLIB`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris gazebo11=11.10.0-1~bionic
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo11/gazebo11_11.10.0-1~bionic.dsc' gazebo11_11.10.0-1~bionic.dsc 2361 SHA256:a2d0c22ec478905d043ae333bff23ee065f69dc9ea7b1ec0089e4ae825530ee5
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo11/gazebo11_11.10.0.orig.tar.bz2' gazebo11_11.10.0.orig.tar.bz2 56486381 SHA256:03acd7c2b8ad96203ba7a974cdf0b148c1ba5f16bca6eca7fd36aa51421d3f86
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo11/gazebo11_11.10.0-1~bionic.debian.tar.xz' gazebo11_11.10.0-1~bionic.debian.tar.xz 6828 SHA256:fa29fb724da249c89aa4a85d6e2b159bd8449913795c42cbe64e6d7b99baf63c
+```
 
 ### `dpkg` source package: `gcc-7=7.5.0-3ubuntu1~18.04`
 

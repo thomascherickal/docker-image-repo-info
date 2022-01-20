@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:560e93010c6899eada375a5794355b7465a18c2c04139476dbee57a48dc82107`
-- Created: `2022-01-07T05:14:46.106166489Z`
+- Image ID: `sha256:1179b0d36453aed41fd0b62d10af773fd2a14fb673f3a6c0ee954ee44f05e778`
+- Created: `2022-01-20T03:35:03.67811625Z`
 - Virtual Size: ~ 1.56 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -1468,15 +1468,15 @@ $ apt-get source -qq --print-uris game-music-emu=0.6.2-1
 'http://archive.ubuntu.com/ubuntu/pool/universe/g/game-music-emu/game-music-emu_0.6.2-1.debian.tar.xz' game-music-emu_0.6.2-1.debian.tar.xz 4412 SHA256:8ea69035bd72261ec85e5f0486707d448f7491733ae055040a9995cebb0ea820
 ```
 
-### `dpkg` source package: `gazebo11=11.9.1-1~bionic`
+### `dpkg` source package: `gazebo11=11.10.0-1~bionic`
 
 Binary Packages:
 
-- `gazebo11=11.9.1-1~bionic`
-- `gazebo11-common=11.9.1-1~bionic`
-- `gazebo11-plugin-base=11.9.1-1~bionic`
-- `libgazebo11:amd64=11.9.1-1~bionic`
-- `libgazebo11-dev:amd64=11.9.1-1~bionic`
+- `gazebo11=11.10.0-1~bionic`
+- `gazebo11-common=11.10.0-1~bionic`
+- `gazebo11-plugin-base=11.10.0-1~bionic`
+- `libgazebo11:amd64=11.10.0-1~bionic`
+- `libgazebo11-dev:amd64=11.10.0-1~bionic`
 
 Licenses: (parsed from: `/usr/share/doc/gazebo11/copyright`, `/usr/share/doc/gazebo11-common/copyright`, `/usr/share/doc/gazebo11-plugin-base/copyright`, `/usr/share/doc/libgazebo11/copyright`, `/usr/share/doc/libgazebo11-dev/copyright`)
 
@@ -1492,9 +1492,14 @@ Licenses: (parsed from: `/usr/share/doc/gazebo11/copyright`, `/usr/share/doc/gaz
 - `LGPL-3+`
 - `ZLIB`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris gazebo11=11.10.0-1~bionic
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo11/gazebo11_11.10.0-1~bionic.dsc' gazebo11_11.10.0-1~bionic.dsc 2361 SHA256:a2d0c22ec478905d043ae333bff23ee065f69dc9ea7b1ec0089e4ae825530ee5
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo11/gazebo11_11.10.0.orig.tar.bz2' gazebo11_11.10.0.orig.tar.bz2 56486381 SHA256:03acd7c2b8ad96203ba7a974cdf0b148c1ba5f16bca6eca7fd36aa51421d3f86
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo11/gazebo11_11.10.0-1~bionic.debian.tar.xz' gazebo11_11.10.0-1~bionic.debian.tar.xz 6828 SHA256:fa29fb724da249c89aa4a85d6e2b159bd8449913795c42cbe64e6d7b99baf63c
+```
 
 ### `dpkg` source package: `gcc-6=6.5.0-2ubuntu1~18.04`
 
@@ -6711,12 +6716,12 @@ $ apt-get source -qq --print-uris ruby-test-unit=3.2.5-1
 'http://archive.ubuntu.com/ubuntu/pool/main/r/ruby-test-unit/ruby-test-unit_3.2.5-1.debian.tar.xz' ruby-test-unit_3.2.5-1.debian.tar.xz 5560 SHA256:6a57c80f43c5c17a527c747e918b03eba3e50bf9fcb1df10c9ec77eee6ca500f
 ```
 
-### `dpkg` source package: `ruby2.5=2.5.1-1ubuntu1.10`
+### `dpkg` source package: `ruby2.5=2.5.1-1ubuntu1.11`
 
 Binary Packages:
 
-- `libruby2.5:amd64=2.5.1-1ubuntu1.10`
-- `ruby2.5=2.5.1-1ubuntu1.10`
+- `libruby2.5:amd64=2.5.1-1ubuntu1.11`
+- `ruby2.5=2.5.1-1ubuntu1.11`
 
 Licenses: (parsed from: `/usr/share/doc/libruby2.5/copyright`, `/usr/share/doc/ruby2.5/copyright`)
 
@@ -6745,10 +6750,10 @@ Licenses: (parsed from: `/usr/share/doc/libruby2.5/copyright`, `/usr/share/doc/r
 Source:
 
 ```console
-$ apt-get source -qq --print-uris ruby2.5=2.5.1-1ubuntu1.10
-'http://archive.ubuntu.com/ubuntu/pool/main/r/ruby2.5/ruby2.5_2.5.1-1ubuntu1.10.dsc' ruby2.5_2.5.1-1ubuntu1.10.dsc 2523 SHA512:0bae9b6af632c66d2f1cbae0355680c8017ebf6efc6f5014f837566ceebae52daa0a444616d0131aa7c93fd277e31ab08e8aecae064acdb2218360a5f62f9c58
+$ apt-get source -qq --print-uris ruby2.5=2.5.1-1ubuntu1.11
+'http://archive.ubuntu.com/ubuntu/pool/main/r/ruby2.5/ruby2.5_2.5.1-1ubuntu1.11.dsc' ruby2.5_2.5.1-1ubuntu1.11.dsc 2523 SHA512:730eaeb54583b0da1b0875dedd51d6c4be658275d12c2180dfafbefd88fc5e1ea96aa94d396e395f1439f2841111aef76275733ab570adb7c222193e06f69bdc
 'http://archive.ubuntu.com/ubuntu/pool/main/r/ruby2.5/ruby2.5_2.5.1.orig.tar.gz' ruby2.5_2.5.1.orig.tar.gz 15669354 SHA512:c6f418653f46efd9980a5f19c8f31b626ab6a0473f59cc4c136a13e4bc5f2cac672341224f0d8c0739bcf9260f20db901b42d6f02e5c91daadb04c67613ed03e
-'http://archive.ubuntu.com/ubuntu/pool/main/r/ruby2.5/ruby2.5_2.5.1-1ubuntu1.10.debian.tar.xz' ruby2.5_2.5.1-1ubuntu1.10.debian.tar.xz 142908 SHA512:ca9300d2b60c30e4a8e0443570344cdea6a6b8fd1503c7b002f0b9b95117275fede76c2b4cf3ffe84ccedea2b4edcc4e30c4f960a49b93a443938ef9cb82ffca
+'http://archive.ubuntu.com/ubuntu/pool/main/r/ruby2.5/ruby2.5_2.5.1-1ubuntu1.11.debian.tar.xz' ruby2.5_2.5.1-1ubuntu1.11.debian.tar.xz 146972 SHA512:f4570a3792bf032aadf5baa52691e6ca1c6ddde4959aea99ffd962bdefcc4b2b49b0fa2b9fb37c759818da866e686c2f01bae55cfde076b3cdfe1c915a31669f
 ```
 
 ### `dpkg` source package: `rubygems-integration=1.11`

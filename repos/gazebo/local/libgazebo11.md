@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:79aba037f5ce6b6eeb70327ffdb3d62ca1138fb1643b7c4ac1c4367bc0a2e4a1`
-- Created: `2022-01-07T05:22:31.807110797Z`
+- Image ID: `sha256:55dc039b64985d6f67458cd0a8cfada98e0b23e97e0b4a0a6da10d709d5a3113`
+- Created: `2022-01-20T03:44:52.284081988Z`
 - Virtual Size: ~ 1.94 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -1660,15 +1660,15 @@ $ apt-get source -qq --print-uris game-music-emu=0.6.2-1build1
 'http://archive.ubuntu.com/ubuntu/pool/universe/g/game-music-emu/game-music-emu_0.6.2-1build1.debian.tar.xz' game-music-emu_0.6.2-1build1.debian.tar.xz 4496 SHA256:e338369a1656f0ade5b014f714fd5bac196489ac937cf8c5276a005953b92aa8
 ```
 
-### `dpkg` source package: `gazebo11=11.9.1-1~focal`
+### `dpkg` source package: `gazebo11=11.10.0-1~focal`
 
 Binary Packages:
 
-- `gazebo11=11.9.1-1~focal`
-- `gazebo11-common=11.9.1-1~focal`
-- `gazebo11-plugin-base=11.9.1-1~focal`
-- `libgazebo11:amd64=11.9.1-1~focal`
-- `libgazebo11-dev:amd64=11.9.1-1~focal`
+- `gazebo11=11.10.0-1~focal`
+- `gazebo11-common=11.10.0-1~focal`
+- `gazebo11-plugin-base=11.10.0-1~focal`
+- `libgazebo11:amd64=11.10.0-1~focal`
+- `libgazebo11-dev:amd64=11.10.0-1~focal`
 
 Licenses: (parsed from: `/usr/share/doc/gazebo11/copyright`, `/usr/share/doc/gazebo11-common/copyright`, `/usr/share/doc/gazebo11-plugin-base/copyright`, `/usr/share/doc/libgazebo11/copyright`, `/usr/share/doc/libgazebo11-dev/copyright`)
 
@@ -1684,9 +1684,14 @@ Licenses: (parsed from: `/usr/share/doc/gazebo11/copyright`, `/usr/share/doc/gaz
 - `LGPL-3+`
 - `ZLIB`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris gazebo11=11.10.0-1~focal
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo11/gazebo11_11.10.0-1~focal.dsc' gazebo11_11.10.0-1~focal.dsc 2671 SHA256:2fc8723d34cd597bc7e6e333e0083656f9d6c95977fd88f82a0e2be8c73913a6
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo11/gazebo11_11.10.0.orig.tar.bz2' gazebo11_11.10.0.orig.tar.bz2 56486381 SHA256:03acd7c2b8ad96203ba7a974cdf0b148c1ba5f16bca6eca7fd36aa51421d3f86
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo11/gazebo11_11.10.0-1~focal.debian.tar.xz' gazebo11_11.10.0-1~focal.debian.tar.xz 6884 SHA256:59e08922848183e75edeec4a5ff6d826456943c37c6316c3146d596c9f2f7def
+```
 
 ### `dpkg` source package: `gcc-10=10.3.0-1ubuntu1~20.04`
 
@@ -5248,19 +5253,24 @@ $ apt-get source -qq --print-uris lilv=0.24.6-1ubuntu0.1
 'http://archive.ubuntu.com/ubuntu/pool/universe/l/lilv/lilv_0.24.6-1ubuntu0.1.debian.tar.xz' lilv_0.24.6-1ubuntu0.1.debian.tar.xz 18808 SHA512:c7145aebd247bc912107aed05ea5ae4a660cc02971272d3177bdfe7ff98e079ea35fd60c6d88f1e9c95ebb8ecf41fe463112a5c703db0bf6b23fadc279f43bff
 ```
 
-### `dpkg` source package: `linux=5.4.0-92.103`
+### `dpkg` source package: `linux=5.4.0-96.109`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=5.4.0-92.103`
+- `linux-libc-dev:amd64=5.4.0-96.109`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris linux=5.4.0-96.109
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-96.109.dsc' linux_5.4.0-96.109.dsc 7277 SHA512:9321a39db5df992e0eb9df52aee008971bf4adf5e259b8d621edd1607fe1587f8c34b924c8d49681dbe5459de41e57a529c62cc014f32db21f49437fc0c9f39c
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0.orig.tar.gz' linux_5.4.0.orig.tar.gz 170244619 SHA512:62b09a7231fd793973c5f59b16c4f6ffce621188b02a71915874b05e8e3f956fb6146d4a4fb1a4475bebe463949ca5a18da12842c3ce7c52e996e6bc4012a074
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-96.109.diff.gz' linux_5.4.0-96.109.diff.gz 8876706 SHA512:c8b6ed9f5718bbd9bab7fef41af476cffd503e3a62d3c5dee3e2c81088adfb8ed106d63447bb3e75e9b29cfa5c563a9712e2b4779f2605f5b56ff54addbc5845
+```
 
 ### `dpkg` source package: `llvm-toolchain-12=1:12.0.0-3ubuntu1~20.04.4`
 
@@ -7123,12 +7133,12 @@ $ apt-get source -qq --print-uris ruby-xmlrpc=0.3.0-2
 'http://archive.ubuntu.com/ubuntu/pool/main/r/ruby-xmlrpc/ruby-xmlrpc_0.3.0-2.debian.tar.xz' ruby-xmlrpc_0.3.0-2.debian.tar.xz 2556 SHA256:e7f6c6c87c16e2089cbb7110c297ac038429d71ca5932818abaf229b8570f380
 ```
 
-### `dpkg` source package: `ruby2.7=2.7.0-5ubuntu1.5`
+### `dpkg` source package: `ruby2.7=2.7.0-5ubuntu1.6`
 
 Binary Packages:
 
-- `libruby2.7:amd64=2.7.0-5ubuntu1.5`
-- `ruby2.7=2.7.0-5ubuntu1.5`
+- `libruby2.7:amd64=2.7.0-5ubuntu1.6`
+- `ruby2.7=2.7.0-5ubuntu1.6`
 
 Licenses: (parsed from: `/usr/share/doc/libruby2.7/copyright`, `/usr/share/doc/ruby2.7/copyright`)
 
@@ -7155,10 +7165,10 @@ Licenses: (parsed from: `/usr/share/doc/libruby2.7/copyright`, `/usr/share/doc/r
 Source:
 
 ```console
-$ apt-get source -qq --print-uris ruby2.7=2.7.0-5ubuntu1.5
-'http://archive.ubuntu.com/ubuntu/pool/main/r/ruby2.7/ruby2.7_2.7.0-5ubuntu1.5.dsc' ruby2.7_2.7.0-5ubuntu1.5.dsc 2578 SHA512:2c42ba925ae6dd782ab7b1ebb42dc1a92b62314bb7b0f54bd10003d66bb6cdea41122f19087d9bd3b101e9c194be6b4b1e65902ee066085c1dd8f07834fdf023
+$ apt-get source -qq --print-uris ruby2.7=2.7.0-5ubuntu1.6
+'http://archive.ubuntu.com/ubuntu/pool/main/r/ruby2.7/ruby2.7_2.7.0-5ubuntu1.6.dsc' ruby2.7_2.7.0-5ubuntu1.6.dsc 2578 SHA512:9a313678cd868d1784cc454bd7e36ea78066be065e0fc9f409de2690d0bc761a34ca3b5c78ace2c7730197b380461abfd8a10f1001267e68ffbfa8db50313bd6
 'http://archive.ubuntu.com/ubuntu/pool/main/r/ruby2.7/ruby2.7_2.7.0.orig.tar.xz' ruby2.7_2.7.0.orig.tar.xz 10734268 SHA512:0d39eeb8da43d9f026465df00b30e0e54e726f584e73825486402c940f634464b6f886b2b7badc7786822b4ef0814d9da6bad4479939676d438301c4cf15c881
-'http://archive.ubuntu.com/ubuntu/pool/main/r/ruby2.7/ruby2.7_2.7.0-5ubuntu1.5.debian.tar.xz' ruby2.7_2.7.0-5ubuntu1.5.debian.tar.xz 122936 SHA512:9346ee65d3963ba71c893509c18ddf6cf9ee4d43f6aff4730436cca2d1895e81e1e74d35515d88086a06ab7d4630a5ba8dd74edacc25d81abc80b5ae520e836f
+'http://archive.ubuntu.com/ubuntu/pool/main/r/ruby2.7/ruby2.7_2.7.0-5ubuntu1.6.debian.tar.xz' ruby2.7_2.7.0-5ubuntu1.6.debian.tar.xz 127624 SHA512:298b6d5252ceac848974916ae62a4cb19352cbdd9dc7836dab432a238c3d6d1c370c306608681f732b4e3b4b98e252e7294e75ccb97c6a25a45c30449e55bd25
 ```
 
 ### `dpkg` source package: `rubygems-integration=1.16`
