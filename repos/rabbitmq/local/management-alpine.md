@@ -1,10 +1,10 @@
-# `rabbitmq:3.9.12-management-alpine`
+# `rabbitmq:3.9.13-management-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:40c52edd5e6bbafbf0275d1e034403954faaafdba2273ecb2227135f1ad4c47c`
-- Created: `2022-01-06T19:21:35.384392359Z`
-- Virtual Size: ~ 177.11 Mb  
+- Image ID: `sha256:d549bb3663ff302744b3613c77297afe65e6eb1def683dbc772300f95d1956c8`
+- Created: `2022-01-20T04:37:17.731752282Z`
+- Virtual Size: ~ 177.46 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -17,7 +17,7 @@
   - `OTP_VERSION=24.2`
   - `OTP_SOURCE_SHA256=af0f1928dcd16cd5746feeca8325811865578bf1a110a443d353ea3e509e6d41`
   - `RABBITMQ_DATA_DIR=/var/lib/rabbitmq`
-  - `RABBITMQ_VERSION=3.9.12`
+  - `RABBITMQ_VERSION=3.9.13`
   - `RABBITMQ_PGP_KEY_ID=0x0A9AF2115F4687BD29803A206B73A36E6026DFCA`
   - `RABBITMQ_HOME=/opt/rabbitmq`
   - `RABBITMQ_LOGS=-`
@@ -133,16 +133,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `expat`
 
 ```console
-expat-2.4.1-r0 description:
+expat-2.4.3-r0 description:
 XML Parser library written in C
 
-expat-2.4.1-r0 webpage:
+expat-2.4.3-r0 webpage:
 http://www.libexpat.org/
 
-expat-2.4.1-r0 installed size:
-188 KiB
+expat-2.4.3-r0 installed size:
+192 KiB
 
-expat-2.4.1-r0 license:
+expat-2.4.3-r0 license:
 MIT
 
 ```
