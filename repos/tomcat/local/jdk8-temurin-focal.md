@@ -1,10 +1,10 @@
-# `tomcat:10.0.14-jdk8-temurin-focal`
+# `tomcat:10.0.16-jdk8-temurin-focal`
 
 ## Docker Metadata
 
-- Image ID: `sha256:31d6dd207a2c3e4e5f207cc9cf38227f20c6bcd0540cf149049b06c966c85996`
-- Created: `2022-01-07T08:00:47.377562551Z`
-- Virtual Size: ~ 366.94 Mb  
+- Image ID: `sha256:1a5d3f5571e50e9239e4b84551b1a5734a5ebe73d69de2d4ec4c87f803155370`
+- Created: `2022-01-21T01:55:21.817224234Z`
+- Virtual Size: ~ 366.96 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["catalina.sh","run"]`
@@ -20,8 +20,8 @@
   - `LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib`
   - `GPG_KEYS=A9C5DF4D22E99998D9875A5110C01C5A2F6059E7`
   - `TOMCAT_MAJOR=10`
-  - `TOMCAT_VERSION=10.0.14`
-  - `TOMCAT_SHA512=c2d2ad5ed17f7284e3aac5415774a8ef35434f14dbd9a87bc7230d8bfdbe9aa1258b97a59fa5c4030e4c973e4d93d29d20e40b6254347dbb66fae269ff4a61a5`
+  - `TOMCAT_VERSION=10.0.16`
+  - `TOMCAT_SHA512=9b70f4db2c7b2efb5453cd581322b1137df7b6443acd6a8e278eaaf97de89c9ad0c7c7996a2d545ef1e4d965aca43c40d2b2c7d5e46b021695f87093143fbba2`
 
 ## `dpkg` (`.deb`-based packages)
 
