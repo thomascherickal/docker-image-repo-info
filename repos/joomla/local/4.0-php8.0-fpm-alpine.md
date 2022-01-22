@@ -1,10 +1,10 @@
-# `joomla:4.0.5-php8.0-fpm-alpine`
+# `joomla:4.0.6-php8.0-fpm-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:1c4d9ffbca6d041cda9f748e8ca6f14f9d4e5a26b0a0dc0ffc53b9317cfe8660`
-- Created: `2021-12-18T04:58:13.014656466Z`
-- Virtual Size: ~ 200.77 Mb  
+- Image ID: `sha256:cca2a0930395d86630efc62dd45851c83362acc902e67a856f5fe8bb9c576b88`
+- Created: `2022-01-22T00:03:09.322441507Z`
+- Virtual Size: ~ 204.35 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -17,13 +17,13 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F`
-  - `PHP_VERSION=8.0.14`
-  - `PHP_URL=https://www.php.net/distributions/php-8.0.14.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.14.tar.xz.asc`
-  - `PHP_SHA256=fbde8247ac200e4de73449d9fefc8b495d323b5be9c10cdb645fb431c91156e3`
+  - `PHP_VERSION=8.0.15`
+  - `PHP_URL=https://www.php.net/distributions/php-8.0.15.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.15.tar.xz.asc`
+  - `PHP_SHA256=5f33544061d37d805a2a9ce791f081ef08a7155bd7ba2362e69bba2d06b0f8b2`
   - `JOOMLA_INSTALLATION_DISABLE_LOCALHOST_CHECK=1`
-  - `JOOMLA_VERSION=4.0.5`
-  - `JOOMLA_SHA512=8c85c444e9183bbe11660202c860b7c8bd5d50ddde6aa5212d183fecb58f04d42a0203f05a996dfc1fd8b037d9130dad89f38f5f4f7889561879df9809253877`
+  - `JOOMLA_VERSION=4.0.6`
+  - `JOOMLA_SHA512=a35f3181c594ef0c30e4f8ec122f32e2ebe1795ccd31f55656be0f214b1f6eed54ef7961aed0be772b2c4a6cc5d0e6454b9213f1ba8833dd52317c6d216d9fd8`
 - Labels:
   - `maintainer=Llewellyn van der Merwe <llewellyn.van-der-merwe@community.joomla.org> (@Llewellynvdm), Harald Leithner <harald.leithner@community.joomla.org> (@HLeithner)`
 
@@ -304,16 +304,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1l-r7 description:
+libcrypto1.1-1.1.1l-r8 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1l-r7 webpage:
+libcrypto1.1-1.1.1l-r8 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1l-r7 installed size:
+libcrypto1.1-1.1.1l-r8 installed size:
 2676 KiB
 
-libcrypto1.1-1.1.1l-r7 license:
+libcrypto1.1-1.1.1l-r8 license:
 OpenSSL
 
 ```
@@ -440,16 +440,16 @@ Libpng
 ### `apk` package: `libpq`
 
 ```console
-libpq-14.1-r4 description:
+libpq-14.1-r5 description:
 PostgreSQL client library
 
-libpq-14.1-r4 webpage:
+libpq-14.1-r5 webpage:
 https://www.postgresql.org/
 
-libpq-14.1-r4 installed size:
+libpq-14.1-r5 installed size:
 328 KiB
 
-libpq-14.1-r4 license:
+libpq-14.1-r5 license:
 PostgreSQL
 
 ```
@@ -508,16 +508,16 @@ ISC
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1l-r7 description:
+libssl1.1-1.1.1l-r8 description:
 SSL shared libraries
 
-libssl1.1-1.1.1l-r7 webpage:
+libssl1.1-1.1.1l-r8 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1l-r7 installed size:
+libssl1.1-1.1.1l-r8 installed size:
 528 KiB
 
-libssl1.1-1.1.1l-r7 license:
+libssl1.1-1.1.1l-r8 license:
 OpenSSL
 
 ```
