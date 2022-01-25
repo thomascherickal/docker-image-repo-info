@@ -1,10 +1,10 @@
-# `php:8.1.1-cli-alpine3.15`
+# `php:8.1.2-cli-alpine3.15`
 
 ## Docker Metadata
 
-- Image ID: `sha256:0a5a12f304beb47dc2564513169ff235ccd478fefcdeed979abe28fc8131cc52`
-- Created: `2021-12-18T01:31:13.93599303Z`
-- Virtual Size: ~ 91.06 Mb  
+- Image ID: `sha256:58a87b7eb622641f6a9f63e1df58da95781e5e2f996ad1f0225769272e44e95c`
+- Created: `2022-01-21T21:41:16.690328799Z`
+- Virtual Size: ~ 94.25 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD`
-  - `PHP_VERSION=8.1.1`
-  - `PHP_URL=https://www.php.net/distributions/php-8.1.1.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.1.tar.xz.asc`
-  - `PHP_SHA256=33c09d76d0a8bbb5dd930d9dd32e6bfd44e9efcf867563759eb5492c3aff8856`
+  - `PHP_VERSION=8.1.2`
+  - `PHP_URL=https://www.php.net/distributions/php-8.1.2.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.2.tar.xz.asc`
+  - `PHP_SHA256=6b448242fd360c1a9f265b7263abf3da25d28f2b2b0f5465533b69be51a391dd`
 
 ## `apk` (`.apk`-based packages)
 
@@ -214,16 +214,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1l-r7 description:
+libcrypto1.1-1.1.1l-r8 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1l-r7 webpage:
+libcrypto1.1-1.1.1l-r8 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1l-r7 installed size:
+libcrypto1.1-1.1.1l-r8 installed size:
 2676 KiB
 
-libcrypto1.1-1.1.1l-r7 license:
+libcrypto1.1-1.1.1l-r8 license:
 OpenSSL
 
 ```
@@ -299,16 +299,16 @@ ISC
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1l-r7 description:
+libssl1.1-1.1.1l-r8 description:
 SSL shared libraries
 
-libssl1.1-1.1.1l-r7 webpage:
+libssl1.1-1.1.1l-r8 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1l-r7 installed size:
+libssl1.1-1.1.1l-r8 installed size:
 528 KiB
 
-libssl1.1-1.1.1l-r7 license:
+libssl1.1-1.1.1l-r8 license:
 OpenSSL
 
 ```
