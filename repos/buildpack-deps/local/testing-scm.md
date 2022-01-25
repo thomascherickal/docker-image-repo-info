@@ -205,19 +205,13 @@ Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris base-files=12
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_12.dsc' base-files_12.dsc 1070 SHA256:e6395fdfd68ae68fcc274496fefc3cacbcb6381563d44d8037ba234f1a1ff138
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_12.tar.xz' base-files_12.tar.xz 65564 SHA256:4daebec9549c4f52c39a869bc811bceb2a0e1ac7fce5f4d6e37ddf1fdad7335d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/base-files/12/
 
-- https://sources.debian.net/src/base-files/12/ (for browsing the source)
-- https://sources.debian.net/src/base-files/12/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/base-files/12/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-passwd=3.5.52`
 
@@ -1350,20 +1344,13 @@ Licenses: (parsed from: `/usr/share/doc/libffi8/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libffi=3.4.2-3
-'http://deb.debian.org/debian/pool/main/libf/libffi/libffi_3.4.2-3.dsc' libffi_3.4.2-3.dsc 1948 SHA256:afe7d32ea3ced400134b86395be11e61ba2ef0f06fa7867a276a71700632c3da
-'http://deb.debian.org/debian/pool/main/libf/libffi/libffi_3.4.2.orig.tar.gz' libffi_3.4.2.orig.tar.gz 1351355 SHA256:540fb721619a6aba3bdeef7d940d8e9e0e6d2c193595bc243241b77ff9e93620
-'http://deb.debian.org/debian/pool/main/libf/libffi/libffi_3.4.2-3.debian.tar.xz' libffi_3.4.2-3.debian.tar.xz 8128 SHA256:2d27d9690c5346b3919f4a8bc73642bfaed45f95e6f32cadb1dbfe9ba92c8370
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libffi/3.4.2-3/
 
-- https://sources.debian.net/src/libffi/3.4.2-3/ (for browsing the source)
-- https://sources.debian.net/src/libffi/3.4.2-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libffi/3.4.2-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libfido2=1.9.0-1`
 
@@ -1377,21 +1364,13 @@ Licenses: (parsed from: `/usr/share/doc/libfido2-1/copyright`)
 - `ISC`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libfido2=1.9.0-1
-'http://deb.debian.org/debian/pool/main/libf/libfido2/libfido2_1.9.0-1.dsc' libfido2_1.9.0-1.dsc 2577 SHA256:7f8f891ce709f3cbf438497677e6e75bf1ad579880182cce73b23bc4d9203ab8
-'http://deb.debian.org/debian/pool/main/libf/libfido2/libfido2_1.9.0.orig.tar.gz' libfido2_1.9.0.orig.tar.gz 576088 SHA256:ba39e3af3736d2dfc8ad3d1cb6e3be7eccc09588610a3b07c865d0ed3e58c2d2
-'http://deb.debian.org/debian/pool/main/libf/libfido2/libfido2_1.9.0.orig.tar.gz.asc' libfido2_1.9.0.orig.tar.gz.asc 833 SHA256:7786065096a18c5fa2124a4f11288e06530432b57804c5b58616f90d1e51219d
-'http://deb.debian.org/debian/pool/main/libf/libfido2/libfido2_1.9.0-1.debian.tar.xz' libfido2_1.9.0-1.debian.tar.xz 52328 SHA256:3cbcd00f6e82a2e867f6f693a28d0537bce679563c0152527a91ef40e78fe03f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libfido2/1.9.0-1/
 
-- https://sources.debian.net/src/libfido2/1.9.0-1/ (for browsing the source)
-- https://sources.debian.net/src/libfido2/1.9.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libfido2/1.9.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libgcrypt20=1.9.4-3`
 
@@ -2678,21 +2657,13 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 - `GPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sqlite3=3.36.0-2
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.36.0-2.dsc' sqlite3_3.36.0-2.dsc 2410 SHA256:3135ab1c5ea4f2835f49ebb9a684a1ac15908581f66020bb11a1b8768a2b1263
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.36.0.orig-www.tar.xz' sqlite3_3.36.0.orig-www.tar.xz 6400672 SHA256:d6d67caf958f89a983aa864d49d267a59c98d48ca1988db336a7eb63dd3ed5ec
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.36.0.orig.tar.xz' sqlite3_3.36.0.orig.tar.xz 7554916 SHA256:aef80343f590cbf5f131db152744bc72945130a795db5f36c25ab107f99fb6fa
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.36.0-2.debian.tar.xz' sqlite3_3.36.0-2.debian.tar.xz 22348 SHA256:51dd2e0364d0a6d7c486f479cada6f316d4ac78699fcb0ccfab6514307e07f7a
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/sqlite3/3.36.0-2/
 
-- https://sources.debian.net/src/sqlite3/3.36.0-2/ (for browsing the source)
-- https://sources.debian.net/src/sqlite3/3.36.0-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sqlite3/3.36.0-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `subversion=1.14.1-3`
 
@@ -2950,20 +2921,13 @@ Licenses: (parsed from: `/usr/share/doc/libxxhash0/copyright`)
 - `BSD-2-clause`
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris xxhash=0.8.0-2
-'http://deb.debian.org/debian/pool/main/x/xxhash/xxhash_0.8.0-2.dsc' xxhash_0.8.0-2.dsc 1601 SHA256:91c696b5371558ebb12c323b0bd4e15eece0a439ef49c6aa5a6d0c1cf6c7762a
-'http://deb.debian.org/debian/pool/main/x/xxhash/xxhash_0.8.0.orig.tar.gz' xxhash_0.8.0.orig.tar.gz 145909 SHA256:7054c3ebd169c97b64a92d7b994ab63c70dd53a06974f1f630ab782c28db0f4f
-'http://deb.debian.org/debian/pool/main/x/xxhash/xxhash_0.8.0-2.debian.tar.xz' xxhash_0.8.0-2.debian.tar.xz 4160 SHA256:5c427c2c08019a945412afac02326a24c72b65a83bff59447009db303233aecd
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/xxhash/0.8.0-2/
 
-- https://sources.debian.net/src/xxhash/0.8.0-2/ (for browsing the source)
-- https://sources.debian.net/src/xxhash/0.8.0-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/xxhash/0.8.0-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `xz-utils=5.2.5-2`
 

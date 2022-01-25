@@ -332,19 +332,13 @@ Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris base-files=12
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_12.dsc' base-files_12.dsc 1070 SHA256:e6395fdfd68ae68fcc274496fefc3cacbcb6381563d44d8037ba234f1a1ff138
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_12.tar.xz' base-files_12.tar.xz 65564 SHA256:4daebec9549c4f52c39a869bc811bceb2a0e1ac7fce5f4d6e37ddf1fdad7335d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/base-files/12/
 
-- https://sources.debian.net/src/base-files/12/ (for browsing the source)
-- https://sources.debian.net/src/base-files/12/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/base-files/12/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-passwd=3.5.52`
 
@@ -2424,20 +2418,13 @@ Licenses: (parsed from: `/usr/share/doc/libffi-dev/copyright`, `/usr/share/doc/l
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libffi=3.4.2-3
-'http://deb.debian.org/debian/pool/main/libf/libffi/libffi_3.4.2-3.dsc' libffi_3.4.2-3.dsc 1948 SHA256:afe7d32ea3ced400134b86395be11e61ba2ef0f06fa7867a276a71700632c3da
-'http://deb.debian.org/debian/pool/main/libf/libffi/libffi_3.4.2.orig.tar.gz' libffi_3.4.2.orig.tar.gz 1351355 SHA256:540fb721619a6aba3bdeef7d940d8e9e0e6d2c193595bc243241b77ff9e93620
-'http://deb.debian.org/debian/pool/main/libf/libffi/libffi_3.4.2-3.debian.tar.xz' libffi_3.4.2-3.debian.tar.xz 8128 SHA256:2d27d9690c5346b3919f4a8bc73642bfaed45f95e6f32cadb1dbfe9ba92c8370
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libffi/3.4.2-3/
 
-- https://sources.debian.net/src/libffi/3.4.2-3/ (for browsing the source)
-- https://sources.debian.net/src/libffi/3.4.2-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libffi/3.4.2-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libfido2=1.9.0-1`
 
@@ -2451,21 +2438,13 @@ Licenses: (parsed from: `/usr/share/doc/libfido2-1/copyright`)
 - `ISC`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libfido2=1.9.0-1
-'http://deb.debian.org/debian/pool/main/libf/libfido2/libfido2_1.9.0-1.dsc' libfido2_1.9.0-1.dsc 2577 SHA256:7f8f891ce709f3cbf438497677e6e75bf1ad579880182cce73b23bc4d9203ab8
-'http://deb.debian.org/debian/pool/main/libf/libfido2/libfido2_1.9.0.orig.tar.gz' libfido2_1.9.0.orig.tar.gz 576088 SHA256:ba39e3af3736d2dfc8ad3d1cb6e3be7eccc09588610a3b07c865d0ed3e58c2d2
-'http://deb.debian.org/debian/pool/main/libf/libfido2/libfido2_1.9.0.orig.tar.gz.asc' libfido2_1.9.0.orig.tar.gz.asc 833 SHA256:7786065096a18c5fa2124a4f11288e06530432b57804c5b58616f90d1e51219d
-'http://deb.debian.org/debian/pool/main/libf/libfido2/libfido2_1.9.0-1.debian.tar.xz' libfido2_1.9.0-1.debian.tar.xz 52328 SHA256:3cbcd00f6e82a2e867f6f693a28d0537bce679563c0152527a91ef40e78fe03f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libfido2/1.9.0-1/
 
-- https://sources.debian.net/src/libfido2/1.9.0-1/ (for browsing the source)
-- https://sources.debian.net/src/libfido2/1.9.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libfido2/1.9.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libgcrypt20=1.9.4-3`
 
@@ -3414,20 +3393,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libxcrypt=1:4.4.27-1
-'http://deb.debian.org/debian/pool/main/libx/libxcrypt/libxcrypt_4.4.27-1.dsc' libxcrypt_4.4.27-1.dsc 1525 SHA256:1ffc1194e44330552a28d42a84c6b638b4939f0172d2bc84f58055406546edf9
-'http://deb.debian.org/debian/pool/main/libx/libxcrypt/libxcrypt_4.4.27.orig.tar.xz' libxcrypt_4.4.27.orig.tar.xz 391772 SHA256:cc0762a751224a5cb45329fb731f25016a8d8292749d8b4010f4b68144db6961
-'http://deb.debian.org/debian/pool/main/libx/libxcrypt/libxcrypt_4.4.27-1.debian.tar.xz' libxcrypt_4.4.27-1.debian.tar.xz 7764 SHA256:92565f123e1e3bd5ebc53bc6b50dda46dc30e952fd02bb5b081bf9c113b733e8
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libxcrypt/1:4.4.27-1/
 
-- https://sources.debian.net/src/libxcrypt/1:4.4.27-1/ (for browsing the source)
-- https://sources.debian.net/src/libxcrypt/1:4.4.27-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libxcrypt/1:4.4.27-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libxdmcp=1:1.1.2-3`
 
@@ -4255,20 +4227,13 @@ Licenses: (parsed from: `/usr/share/doc/libopenjp2-7/copyright`, `/usr/share/doc
 - `ZLIB`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openjpeg2=2.4.0-3
-'http://deb.debian.org/debian/pool/main/o/openjpeg2/openjpeg2_2.4.0-3.dsc' openjpeg2_2.4.0-3.dsc 2768 SHA256:c2de7ec896d9fccad5a9d58761593446a0271564babf218fd4ab200b6fe92a05
-'http://deb.debian.org/debian/pool/main/o/openjpeg2/openjpeg2_2.4.0.orig.tar.xz' openjpeg2_2.4.0.orig.tar.xz 1396964 SHA256:4b89da8abea5ea4e8dd5b214f1633a492554d784b5aebc22cb6495a1e5fe681c
-'http://deb.debian.org/debian/pool/main/o/openjpeg2/openjpeg2_2.4.0-3.debian.tar.xz' openjpeg2_2.4.0-3.debian.tar.xz 19712 SHA256:99b94d26c341babae8b5599ca7f8f0e1bb2021eb282ceff5d3c91086d1a3bcfc
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/openjpeg2/2.4.0-3/
 
-- https://sources.debian.net/src/openjpeg2/2.4.0-3/ (for browsing the source)
-- https://sources.debian.net/src/openjpeg2/2.4.0-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openjpeg2/2.4.0-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openldap=2.4.59+dfsg-1`
 
@@ -4426,20 +4391,13 @@ Licenses: (parsed from: `/usr/share/doc/libpango-1.0-0/copyright`, `/usr/share/d
 - `TCL`
 - `Unicode`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pango1.0=1.48.10+ds1-1
-'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.48.10+ds1-1.dsc' pango1.0_1.48.10+ds1-1.dsc 3765 SHA256:1ac8a65a0b95998e6865a83a1169fbf0984aace60d0fd9e4a1d84730f270cfac
-'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.48.10+ds1.orig.tar.xz' pango1.0_1.48.10+ds1.orig.tar.xz 721676 SHA256:a91eccbeca5350c1eb32b06d0de9389f89ac9ec41345abf3ef1198d1ed22a10d
-'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.48.10+ds1-1.debian.tar.xz' pango1.0_1.48.10+ds1-1.debian.tar.xz 46588 SHA256:541a26b833fdb41f29aa9d2f912f12759eb655534a3d089791e457d26fc33fb2
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/pango1.0/1.48.10+ds1-1/
 
-- https://sources.debian.net/src/pango1.0/1.48.10+ds1-1/ (for browsing the source)
-- https://sources.debian.net/src/pango1.0/1.48.10+ds1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/pango1.0/1.48.10+ds1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `patch=2.7.6-7`
 
@@ -4754,20 +4712,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3-stdlib-extensions=3.9.9-3
-'http://deb.debian.org/debian/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.9.9-3.dsc' python3-stdlib-extensions_3.9.9-3.dsc 2567 SHA256:3a54f31ac8932539723a5ee5f99ba6af247303f5532eaa1d9121304da692318f
-'http://deb.debian.org/debian/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.9.9.orig.tar.xz' python3-stdlib-extensions_3.9.9.orig.tar.xz 1111280 SHA256:b41b59e552d492de6b579325db292f7008e092b2abbdb4c3d01dd14b3705ab19
-'http://deb.debian.org/debian/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.9.9-3.debian.tar.xz' python3-stdlib-extensions_3.9.9-3.debian.tar.xz 35524 SHA256:e2f944a3ad3eae03f7fcaba603698f8e919805db66f696b8eb342e689612c6ed
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/python3-stdlib-extensions/3.9.9-3/
 
-- https://sources.debian.net/src/python3-stdlib-extensions/3.9.9-3/ (for browsing the source)
-- https://sources.debian.net/src/python3-stdlib-extensions/3.9.9-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python3-stdlib-extensions/3.9.9-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `python3.9=3.9.9-2`
 
@@ -4998,20 +4949,13 @@ Licenses: (parsed from: `/usr/share/doc/shared-mime-info/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris shared-mime-info=2.0-1
-'http://deb.debian.org/debian/pool/main/s/shared-mime-info/shared-mime-info_2.0-1.dsc' shared-mime-info_2.0-1.dsc 2223 SHA256:59f5546a13eff9c7bf8986abf0752f463a4e513a078cc442884629799c6997c0
-'http://deb.debian.org/debian/pool/main/s/shared-mime-info/shared-mime-info_2.0.orig.tar.xz' shared-mime-info_2.0.orig.tar.xz 5015272 SHA256:23c1cb7919f31cf97aeb5225548f75705f706aa5cc7d1c4c503364bcc8681e06
-'http://deb.debian.org/debian/pool/main/s/shared-mime-info/shared-mime-info_2.0-1.debian.tar.xz' shared-mime-info_2.0-1.debian.tar.xz 10612 SHA256:3dcdd64cde8d65907230e4f8ae73734775bef987bae0dbcb86c458d551e6c622
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/shared-mime-info/2.0-1/
 
-- https://sources.debian.net/src/shared-mime-info/2.0-1/ (for browsing the source)
-- https://sources.debian.net/src/shared-mime-info/2.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/shared-mime-info/2.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sqlite3=3.36.0-2`
 
@@ -5026,21 +4970,13 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`, `/usr/share/doc
 - `GPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sqlite3=3.36.0-2
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.36.0-2.dsc' sqlite3_3.36.0-2.dsc 2410 SHA256:3135ab1c5ea4f2835f49ebb9a684a1ac15908581f66020bb11a1b8768a2b1263
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.36.0.orig-www.tar.xz' sqlite3_3.36.0.orig-www.tar.xz 6400672 SHA256:d6d67caf958f89a983aa864d49d267a59c98d48ca1988db336a7eb63dd3ed5ec
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.36.0.orig.tar.xz' sqlite3_3.36.0.orig.tar.xz 7554916 SHA256:aef80343f590cbf5f131db152744bc72945130a795db5f36c25ab107f99fb6fa
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.36.0-2.debian.tar.xz' sqlite3_3.36.0-2.debian.tar.xz 22348 SHA256:51dd2e0364d0a6d7c486f479cada6f316d4ac78699fcb0ccfab6514307e07f7a
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/sqlite3/3.36.0-2/
 
-- https://sources.debian.net/src/sqlite3/3.36.0-2/ (for browsing the source)
-- https://sources.debian.net/src/sqlite3/3.36.0-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sqlite3/3.36.0-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `subversion=1.14.1-3`
 
@@ -5484,20 +5420,13 @@ Licenses: (parsed from: `/usr/share/doc/libxxhash0/copyright`)
 - `BSD-2-clause`
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris xxhash=0.8.0-2
-'http://deb.debian.org/debian/pool/main/x/xxhash/xxhash_0.8.0-2.dsc' xxhash_0.8.0-2.dsc 1601 SHA256:91c696b5371558ebb12c323b0bd4e15eece0a439ef49c6aa5a6d0c1cf6c7762a
-'http://deb.debian.org/debian/pool/main/x/xxhash/xxhash_0.8.0.orig.tar.gz' xxhash_0.8.0.orig.tar.gz 145909 SHA256:7054c3ebd169c97b64a92d7b994ab63c70dd53a06974f1f630ab782c28db0f4f
-'http://deb.debian.org/debian/pool/main/x/xxhash/xxhash_0.8.0-2.debian.tar.xz' xxhash_0.8.0-2.debian.tar.xz 4160 SHA256:5c427c2c08019a945412afac02326a24c72b65a83bff59447009db303233aecd
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/xxhash/0.8.0-2/
 
-- https://sources.debian.net/src/xxhash/0.8.0-2/ (for browsing the source)
-- https://sources.debian.net/src/xxhash/0.8.0-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/xxhash/0.8.0-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `xz-utils=5.2.5-2`
 
