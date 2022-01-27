@@ -1,7 +1,7 @@
 ## `eclipse-temurin:17-jdk`
 
 ```console
-$ docker pull eclipse-temurin@sha256:19bf65566dab1a19353df8a412e1b722e97eea69949b81595bd99a538965ddb2
+$ docker pull eclipse-temurin@sha256:3ad6ea71c5a426a38d7cd4ff7fb521c5392d232278b13953b830c0ab0f046ada
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,8 +11,8 @@ $ docker pull eclipse-temurin@sha256:19bf65566dab1a19353df8a412e1b722e97eea69949
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
 	-	linux; s390x
-	-	windows version 10.0.20348.469; amd64
-	-	windows version 10.0.17763.2452; amd64
+	-	windows version 10.0.20348.473; amd64
+	-	windows version 10.0.17763.2458; amd64
 
 ### `eclipse-temurin:17-jdk` - linux; amd64
 
@@ -274,34 +274,34 @@ CMD ["jshell"]
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `eclipse-temurin:17-jdk` - windows version 10.0.20348.469; amd64
+### `eclipse-temurin:17-jdk` - windows version 10.0.20348.473; amd64
 
 ```console
-$ docker pull eclipse-temurin@sha256:c90730854664f17854fb22d66d190614846b88a8931e61734bef1437e80f8fc6
+$ docker pull eclipse-temurin@sha256:a9880e0f24273e855a33c7919304452c5295f2f0e6146fec6754805f2bafd381
 ```
 
 -	Docker Version: 20.10.8
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **2.6 GB (2560705320 bytes)**  
+-	Total Size: **2.6 GB (2560430179 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2cadc3f7d26e0a569f440f98f6851b9df323ba078dfc3654ff000c9c7affc050`
+-	Image ID: `sha256:f5ecc003a0c6d62b033b1ce6892986bfb7d927cc27b01e23602e4453480440cb`
 -	Default Command: `["jshell"]`
 -	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
 
 ```dockerfile
 # Sat, 08 May 2021 09:40:24 GMT
 RUN Apply image 2022-RTM-amd64
-# Thu, 06 Jan 2022 03:56:33 GMT
+# Sun, 16 Jan 2022 05:17:24 GMT
 RUN Install update ltsc2022-amd64
-# Tue, 11 Jan 2022 18:59:17 GMT
+# Wed, 19 Jan 2022 22:21:54 GMT
 SHELL [powershell -Command $ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';]
-# Tue, 11 Jan 2022 22:10:12 GMT
+# Wed, 26 Jan 2022 19:27:09 GMT
 ENV JAVA_VERSION=jdk-17.0.1+12
-# Tue, 11 Jan 2022 22:11:58 GMT
+# Wed, 26 Jan 2022 19:29:01 GMT
 RUN Write-Host ('Downloading https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.1%2B12/OpenJDK17U-jdk_x64_windows_hotspot_17.0.1_12.msi ...');     curl.exe -LfsSo openjdk.msi https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.1%2B12/OpenJDK17U-jdk_x64_windows_hotspot_17.0.1_12.msi ;     Write-Host ('Verifying sha256 (f5241bb43b589e45b6c3133fae6cc8cbffec4cae2504c3b99c3fac0c50cbf11e) ...');     if ((Get-FileHash openjdk.msi -Algorithm sha256).Hash -ne 'f5241bb43b589e45b6c3133fae6cc8cbffec4cae2504c3b99c3fac0c50cbf11e') {         Write-Host 'FAILED!';         exit 1;     };         New-Item -ItemType Directory -Path C:\temp | Out-Null;         Write-Host 'Installing using MSI ...';     $proc = Start-Process -FilePath "msiexec.exe" -ArgumentList '/i', 'openjdk.msi', '/L*V', 'C:\temp\OpenJDK.log',     '/quiet', 'ADDLOCAL=FeatureEnvironment,FeatureJarFileRunWith,FeatureJavaHome', 'INSTALLDIR=C:\openjdk-17' -Wait -Passthru;     $proc.WaitForExit() ;     if ($proc.ExitCode -ne 0) {         Write-Host 'FAILED installing MSI!' ;         exit 1;     };         Remove-Item -Path C:\temp -Recurse | Out-Null;     Write-Host 'Removing openjdk.msi ...';     Remove-Item openjdk.msi -Force
-# Tue, 11 Jan 2022 22:12:22 GMT
+# Wed, 26 Jan 2022 19:29:44 GMT
 RUN Write-Host 'Verifying install ...';     Write-Host 'javac --version'; javac --version;     Write-Host 'java --version'; java --version;         Write-Host 'Complete.'
-# Tue, 11 Jan 2022 22:12:23 GMT
+# Wed, 26 Jan 2022 19:29:45 GMT
 CMD ["jshell"]
 ```
 
@@ -309,58 +309,58 @@ CMD ["jshell"]
 	-	`sha256:8f616e6e9eec767c425fd9346648807d1b658d20ff6097be1d955aac69c26642`  
 		Size: 1.3 GB (1251699055 bytes)  
 		MIME: application/vnd.docker.image.rootfs.foreign.diff.tar.gzip
-	-	`sha256:9b593686e27e7562a5b0696823307ffa822214cee8bd2eec1075eadad4cb9712`  
-		Size: 956.0 MB (956001983 bytes)  
+	-	`sha256:0e02c12b1310e6c76c29fcd6f81905400fdb6a01caac9dc825939ad004baffef`  
+		Size: 955.8 MB (955800778 bytes)  
 		MIME: application/vnd.docker.image.rootfs.foreign.diff.tar.gzip
-	-	`sha256:99e0b71ede60d3b2c5b9053bf27e47c0875590991eede49813d849cc660c7551`  
-		Last Modified: Tue, 11 Jan 2022 19:32:06 GMT  
-		Size: 1.3 KB (1319 bytes)  
+	-	`sha256:2e1f45a873642f0aab3474828d75469362741244e7c714068ac1afe056102cd6`  
+		Last Modified: Thu, 20 Jan 2022 00:40:19 GMT  
+		Size: 1.4 KB (1424 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1498d4d35a3500452bedcca7cc551a1213859501a35f38cf58ea943a02a703dd`  
-		Last Modified: Tue, 11 Jan 2022 23:03:51 GMT  
-		Size: 1.4 KB (1417 bytes)  
+	-	`sha256:fce8ee6eda20a3134c28fce7db9707cf2c5e1ebd481fc963b381708ea407d086`  
+		Last Modified: Wed, 26 Jan 2022 20:09:26 GMT  
+		Size: 1.4 KB (1396 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:787cca7a077163c7cbd20bac5de23f72151a274451913bb407ad783d39bc54d8`  
-		Last Modified: Tue, 11 Jan 2022 23:04:20 GMT  
-		Size: 352.4 MB (352434077 bytes)  
+	-	`sha256:42f0689c3670b7e330f471e6db8291d8673b855c5ec4659298e056c0ca3b1623`  
+		Last Modified: Wed, 26 Jan 2022 20:16:19 GMT  
+		Size: 352.4 MB (352393408 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5593859a12fb25a972c0adf28dccfc265ab725b394cac0492b1db4a221548146`  
-		Last Modified: Tue, 11 Jan 2022 23:03:51 GMT  
-		Size: 566.0 KB (566039 bytes)  
+	-	`sha256:324c2defeafe800a713f85abc50d7adb369aaf4eb988312a3858b7f672ff5734`  
+		Last Modified: Wed, 26 Jan 2022 20:09:27 GMT  
+		Size: 532.7 KB (532672 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ef45550361e9e5722367f3694c3e715a0becf626f9cebb17460536a86743f59e`  
-		Last Modified: Tue, 11 Jan 2022 23:03:51 GMT  
-		Size: 1.4 KB (1430 bytes)  
+	-	`sha256:df0e0d9ed839d591fc6cca2e11594636612daaa1b16ceb10bc9220df9b5f2e27`  
+		Last Modified: Wed, 26 Jan 2022 20:09:26 GMT  
+		Size: 1.4 KB (1446 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `eclipse-temurin:17-jdk` - windows version 10.0.17763.2452; amd64
+### `eclipse-temurin:17-jdk` - windows version 10.0.17763.2458; amd64
 
 ```console
-$ docker pull eclipse-temurin@sha256:886e9da97b5094189b2ce6c2b57bbd3c98abb6bbef920bfac0a0441d654b2e50
+$ docker pull eclipse-temurin@sha256:de9e41d9ea9ec5bc324de57dedea59ca694e98e3cdfcb2513f45a47dbfee28c1
 ```
 
 -	Docker Version: 20.10.8
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **3.1 GB (3068266287 bytes)**  
+-	Total Size: **3.1 GB (3069409458 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:129127afd139a8bd27c3d0e506f350daf9f167fef06b3795548126fa522cd693`
+-	Image ID: `sha256:dc706b1905e06d62a3f566a573e6b3297f7a7229ce3093dd8e1d05507a34601a`
 -	Default Command: `["jshell"]`
 -	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
 
 ```dockerfile
 # Thu, 07 May 2020 05:09:25 GMT
 RUN Apply image 1809-RTM-amd64
-# Fri, 07 Jan 2022 22:48:13 GMT
+# Tue, 18 Jan 2022 01:52:23 GMT
 RUN Install update 1809-amd64
-# Wed, 12 Jan 2022 05:11:27 GMT
+# Wed, 19 Jan 2022 23:21:48 GMT
 SHELL [powershell -Command $ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';]
-# Wed, 12 Jan 2022 15:50:57 GMT
+# Wed, 26 Jan 2022 19:29:54 GMT
 ENV JAVA_VERSION=jdk-17.0.1+12
-# Wed, 12 Jan 2022 15:52:56 GMT
+# Wed, 26 Jan 2022 19:32:17 GMT
 RUN Write-Host ('Downloading https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.1%2B12/OpenJDK17U-jdk_x64_windows_hotspot_17.0.1_12.msi ...');     curl.exe -LfsSo openjdk.msi https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.1%2B12/OpenJDK17U-jdk_x64_windows_hotspot_17.0.1_12.msi ;     Write-Host ('Verifying sha256 (f5241bb43b589e45b6c3133fae6cc8cbffec4cae2504c3b99c3fac0c50cbf11e) ...');     if ((Get-FileHash openjdk.msi -Algorithm sha256).Hash -ne 'f5241bb43b589e45b6c3133fae6cc8cbffec4cae2504c3b99c3fac0c50cbf11e') {         Write-Host 'FAILED!';         exit 1;     };         New-Item -ItemType Directory -Path C:\temp | Out-Null;         Write-Host 'Installing using MSI ...';     $proc = Start-Process -FilePath "msiexec.exe" -ArgumentList '/i', 'openjdk.msi', '/L*V', 'C:\temp\OpenJDK.log',     '/quiet', 'ADDLOCAL=FeatureEnvironment,FeatureJarFileRunWith,FeatureJavaHome', 'INSTALLDIR=C:\openjdk-17' -Wait -Passthru;     $proc.WaitForExit() ;     if ($proc.ExitCode -ne 0) {         Write-Host 'FAILED installing MSI!' ;         exit 1;     };         Remove-Item -Path C:\temp -Recurse | Out-Null;     Write-Host 'Removing openjdk.msi ...';     Remove-Item openjdk.msi -Force
-# Wed, 12 Jan 2022 15:54:07 GMT
+# Wed, 26 Jan 2022 19:33:25 GMT
 RUN Write-Host 'Verifying install ...';     Write-Host 'javac --version'; javac --version;     Write-Host 'java --version'; java --version;         Write-Host 'Complete.'
-# Wed, 12 Jan 2022 15:54:08 GMT
+# Wed, 26 Jan 2022 19:33:26 GMT
 CMD ["jshell"]
 ```
 
@@ -368,26 +368,26 @@ CMD ["jshell"]
 	-	`sha256:4612f6d0b889cad0ed0292fae3a0b0c8a9e49aff6dea8eb049b2386d9b07986f`  
 		Size: 1.7 GB (1718332879 bytes)  
 		MIME: application/vnd.docker.image.rootfs.foreign.diff.tar.gzip
-	-	`sha256:635f15ebd5b486e8a00bf217a0574a29550e5bbf08c1d021e1e308100b2e49b5`  
-		Size: 993.9 MB (993898043 bytes)  
+	-	`sha256:567fd00846e9a9f44eea5925b497356dda00fe89b8335d2a3b2a8b9d84b0bb69`  
+		Size: 995.0 MB (994988595 bytes)  
 		MIME: application/vnd.docker.image.rootfs.foreign.diff.tar.gzip
-	-	`sha256:3a70d5fd54e2005efbf590b48700ed40509210354a0d8f3f18c3b444a5325896`  
-		Last Modified: Wed, 12 Jan 2022 06:20:33 GMT  
-		Size: 1.4 KB (1396 bytes)  
+	-	`sha256:ba7b1090ce9545f6aac90d390785f6c5e3846304cb7596289dfc36c169d7b1da`  
+		Last Modified: Thu, 20 Jan 2022 00:40:41 GMT  
+		Size: 1.4 KB (1428 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:84188f71c0f864d1b3da7ba88819efc8d10d03f0c19352d71e040cf07c5a1786`  
-		Last Modified: Wed, 12 Jan 2022 16:19:00 GMT  
-		Size: 1.4 KB (1427 bytes)  
+	-	`sha256:773f4e699349765fd45db03b2449262203789f6bfaf2feed85f734ba7530b162`  
+		Last Modified: Wed, 26 Jan 2022 20:16:35 GMT  
+		Size: 1.4 KB (1426 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8cd5352d2841c6dfbe42eed69c0050662bd1038c2ca52d5c9f4f6d039b84e45c`  
-		Last Modified: Wed, 12 Jan 2022 16:19:28 GMT  
-		Size: 352.2 MB (352164997 bytes)  
+	-	`sha256:7db04b7b41d9ffef617d337fd2d71bf2e243c4215c2db7201c4f4732b8da642d`  
+		Last Modified: Wed, 26 Jan 2022 20:17:07 GMT  
+		Size: 352.2 MB (352190776 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a109730fd9ed276d44a52e402b97090f7b45cd2cb1e1ca1e2358cc47b0b53dab`  
-		Last Modified: Wed, 12 Jan 2022 16:19:04 GMT  
-		Size: 3.9 MB (3866126 bytes)  
+	-	`sha256:edb26944d48f181f7b7be7f2306d2c22e0ad9751a7c54296beee271cb2e78989`  
+		Last Modified: Wed, 26 Jan 2022 20:16:37 GMT  
+		Size: 3.9 MB (3892918 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d748c5ad73b92b6e3976e41a0a43eff0d47ded73449ea7aeb80f915f35ae5adf`  
-		Last Modified: Wed, 12 Jan 2022 16:19:00 GMT  
-		Size: 1.4 KB (1419 bytes)  
+	-	`sha256:9cd0f71e3d8d8f89e7d5e2f706ee1745364a1bc4e67fab547908a36c02671866`  
+		Last Modified: Wed, 26 Jan 2022 20:16:35 GMT  
+		Size: 1.4 KB (1436 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
