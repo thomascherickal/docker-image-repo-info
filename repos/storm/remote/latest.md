@@ -1,7 +1,7 @@
 ## `storm:latest`
 
 ```console
-$ docker pull storm@sha256:8cb0bf0beb5605a72909d3473cf46165af74793478233b186fb4e1f1b9056bcd
+$ docker pull storm@sha256:6e3210ea36c450ea4cc2793919cff0a25dbe78c58b17b1ff3c60e2906876adbc
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,88 +11,88 @@ $ docker pull storm@sha256:8cb0bf0beb5605a72909d3473cf46165af74793478233b186fb4e
 ### `storm:latest` - linux; amd64
 
 ```console
-$ docker pull storm@sha256:f8a8c754a6a6139381c29989c3f1b6897c13b77124eafecfed72b3a7f45667e9
+$ docker pull storm@sha256:50f3003f464b851fb6af3857917dd13371822bfb089434ada3d96c957d599184
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **424.0 MB (423997903 bytes)**  
+-	Total Size: **424.0 MB (424006738 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:19d37d0a9e9c90865fe402823790530b108fd0f87bdfcd80159cad895b85c81c`
+-	Image ID: `sha256:7e59e35d7ee8e2d875af6f9e757b0588f933a2560574a97917c2f1f7080ba138`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 
 ```dockerfile
-# Tue, 21 Dec 2021 01:22:43 GMT
-ADD file:09675d11695f65c55efdc393ff0cd32f30194cd7d0fbef4631eebfed4414ac97 in / 
-# Tue, 21 Dec 2021 01:22:43 GMT
+# Wed, 26 Jan 2022 01:40:35 GMT
+ADD file:90495c24c897ec47982e200f732f8be3109fcd791691ddffae0756898f91024f in / 
+# Wed, 26 Jan 2022 01:40:36 GMT
 CMD ["bash"]
-# Tue, 21 Dec 2021 22:57:38 GMT
+# Wed, 26 Jan 2022 09:18:16 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates p11-kit 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 21 Dec 2021 23:02:54 GMT
+# Wed, 26 Jan 2022 09:25:46 GMT
 ENV JAVA_HOME=/usr/local/openjdk-11
-# Tue, 21 Dec 2021 23:02:54 GMT
+# Wed, 26 Jan 2022 09:25:47 GMT
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ] # backwards compatibility
-# Tue, 21 Dec 2021 23:02:55 GMT
+# Wed, 26 Jan 2022 09:25:47 GMT
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 21 Dec 2021 23:02:55 GMT
+# Wed, 26 Jan 2022 09:25:48 GMT
 ENV LANG=C.UTF-8
-# Tue, 21 Dec 2021 23:02:55 GMT
+# Wed, 26 Jan 2022 09:25:48 GMT
 ENV JAVA_VERSION=11.0.13
-# Tue, 21 Dec 2021 23:05:10 GMT
+# Wed, 26 Jan 2022 09:29:00 GMT
 RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.13%2B8/OpenJDK11U-jre_x64_linux_11.0.13_8.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.13%2B8/OpenJDK11U-jre_aarch64_linux_11.0.13_8.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		java --version
-# Wed, 22 Dec 2021 16:46:01 GMT
+# Thu, 27 Jan 2022 16:01:24 GMT
 ENV STORM_CONF_DIR=/conf STORM_DATA_DIR=/data STORM_LOG_DIR=/logs
-# Wed, 22 Dec 2021 16:46:02 GMT
+# Thu, 27 Jan 2022 16:01:25 GMT
 RUN set -eux;     groupadd -r storm --gid=1000;     useradd -r -g storm --uid=1000 storm;     mkdir -p "$STORM_CONF_DIR" "$STORM_DATA_DIR" "$STORM_LOG_DIR";     chown -R storm:storm "$STORM_CONF_DIR" "$STORM_DATA_DIR" "$STORM_LOG_DIR"``
-# Wed, 22 Dec 2021 16:46:13 GMT
+# Thu, 27 Jan 2022 16:01:37 GMT
 RUN set -eux;     apt-get update;     DEBIAN_FRONTEND=noninteractive     apt-get install -y --no-install-recommends         bash         ca-certificates         dirmngr         gosu         gnupg         python         procps         wget;     rm -rf /var/lib/apt/lists/*;     gosu nobody true
-# Wed, 22 Dec 2021 16:46:14 GMT
+# Thu, 27 Jan 2022 16:01:37 GMT
 ARG GPG_KEY=5167DE337E7370373499FC1DA4A672F11B5050C8
-# Wed, 22 Dec 2021 16:46:14 GMT
+# Thu, 27 Jan 2022 16:01:38 GMT
 ARG DISTRO_NAME=apache-storm-2.3.0
-# Wed, 22 Dec 2021 16:46:42 GMT
+# Thu, 27 Jan 2022 16:02:33 GMT
 # ARGS: DISTRO_NAME=apache-storm-2.3.0 GPG_KEY=5167DE337E7370373499FC1DA4A672F11B5050C8
 RUN set -eux;     ddist() {         local f="$1"; shift;         local distFile="$1"; shift;         local success=;         local distUrl=;         for distUrl in             'https://www.apache.org/dyn/closer.cgi?action=download&filename='             https://www-us.apache.org/dist/             https://www.apache.org/dist/             https://archive.apache.org/dist/         ; do             if wget -q -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then                 success=1;                 break;             fi;         done;         [ -n "$success" ];     };     ddist "$DISTRO_NAME.tar.gz" "storm/$DISTRO_NAME/$DISTRO_NAME.tar.gz";     ddist "$DISTRO_NAME.tar.gz.asc" "storm/$DISTRO_NAME/$DISTRO_NAME.tar.gz.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --keyserver keyserver.ubuntu.com --recv-key "$GPG_KEY" ||     gpg --keyserver ha.pool.sks-keyservers.net --recv-key "$GPG_KEY" ||     gpg --keyserver pgp.mit.edu --recv-keys "$GPG_KEY" ||     gpg --keyserver keyserver.pgp.com --recv-keys "$GPG_KEY";     gpg --batch --verify "$DISTRO_NAME.tar.gz.asc" "$DISTRO_NAME.tar.gz";     tar -xzf "$DISTRO_NAME.tar.gz";     rm -rf "$GNUPGHOME" "$DISTRO_NAME.tar.gz" "$DISTRO_NAME.tar.gz.asc";     chown -R storm:storm "$DISTRO_NAME"
-# Wed, 22 Dec 2021 16:46:43 GMT
+# Thu, 27 Jan 2022 16:02:34 GMT
 WORKDIR /apache-storm-2.3.0
-# Wed, 22 Dec 2021 16:46:43 GMT
+# Thu, 27 Jan 2022 16:02:34 GMT
 ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-storm-2.3.0/bin
-# Wed, 22 Dec 2021 16:46:44 GMT
+# Thu, 27 Jan 2022 16:02:35 GMT
 COPY file:c74c732450146abc9cc672380c7829a8d892099ec5aa1f81e3fe02c4e8f97f32 in / 
-# Wed, 22 Dec 2021 16:46:44 GMT
+# Thu, 27 Jan 2022 16:02:35 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
 ```
 
 -	Layers:
-	-	`sha256:a2abf6c4d29d43a4bf9fbb769f524d0fb36a2edab49819c1bf3e76f409f953ea`  
-		Last Modified: Tue, 21 Dec 2021 01:27:48 GMT  
-		Size: 31.4 MB (31357624 bytes)  
+	-	`sha256:5eb5b503b37671af16371272f9c5313a3e82f1d0756e14506704489ad9900803`  
+		Last Modified: Wed, 26 Jan 2022 01:46:39 GMT  
+		Size: 31.4 MB (31366257 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2bbde5250315969db657b55bd8b2f5507fb659c0cf7f135edc84b684ffeab44a`  
-		Last Modified: Tue, 21 Dec 2021 23:14:38 GMT  
-		Size: 1.6 MB (1582039 bytes)  
+	-	`sha256:fc79ff7de66b9ef44dc6cd4f500aa92bd1f0b09ccd13eb0ee6441084fbb719cf`  
+		Last Modified: Wed, 26 Jan 2022 09:41:32 GMT  
+		Size: 1.6 MB (1582049 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:202a34e7968ed05e00991c2da849aeaf70fca2714d1f18b942ead99ba30958dd`  
-		Last Modified: Tue, 21 Dec 2021 23:23:49 GMT  
+	-	`sha256:8bd8e4b483dc66fafc6d3f664c2820fae67dcc216b91898060b80ff034a1c73b`  
+		Last Modified: Wed, 26 Jan 2022 09:51:37 GMT  
 		Size: 213.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4e4231e30efc2126ab017a98d2510ff7a2693f257baa2160d17c8618b0d38c08`  
-		Last Modified: Tue, 21 Dec 2021 23:26:39 GMT  
-		Size: 47.1 MB (47104025 bytes)  
+	-	`sha256:07df05ec4c1eb627a680e80881dc86a4f6d6f7b5b768d0c84fbf0f0a4217619b`  
+		Last Modified: Wed, 26 Jan 2022 09:54:35 GMT  
+		Size: 47.1 MB (47104080 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f6ffe1f6ec8c75bb4db8d473ff5fb410c9c9c33bc112429505250c0139f902cb`  
-		Last Modified: Wed, 22 Dec 2021 16:47:20 GMT  
-		Size: 1.8 KB (1838 bytes)  
+	-	`sha256:de831181f01e50185b7a7e6aa14fa1b1dd64605f61e8729f56a3efec17ad7d22`  
+		Last Modified: Thu, 27 Jan 2022 16:03:22 GMT  
+		Size: 1.8 KB (1834 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5cfec2b4d7237acf6266707d33ce8f936e47a68ea4242f32b7ee984ddfd86c18`  
-		Last Modified: Wed, 22 Dec 2021 16:47:24 GMT  
-		Size: 24.5 MB (24487932 bytes)  
+	-	`sha256:b5d142defd73930ac73be0f61d22d75f9ef6bbf17912662571ebe1228e6266fa`  
+		Last Modified: Thu, 27 Jan 2022 16:03:28 GMT  
+		Size: 24.5 MB (24488128 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0e1268d7a8637351d07b05e563adef9daaf6f17ba55c5a606c44b223669bdb6e`  
-		Last Modified: Wed, 22 Dec 2021 16:47:35 GMT  
-		Size: 319.5 MB (319463819 bytes)  
+	-	`sha256:93d1689500abc635e8c6eadf2ca3dd797492b092badae49439328ef80bc3934a`  
+		Last Modified: Thu, 27 Jan 2022 16:03:37 GMT  
+		Size: 319.5 MB (319463764 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:73b967561f7cff442954902c7e17c5371d0165bdf8ead91729f1622232a75ebd`  
-		Last Modified: Wed, 22 Dec 2021 16:47:19 GMT  
+	-	`sha256:d65c13597788fb016cb7091ae3b0a147c830c6da3d22b7851391cde7694dab17`  
+		Last Modified: Thu, 27 Jan 2022 16:03:22 GMT  
 		Size: 413.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
