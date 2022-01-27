@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:a22aa9d9ffd767bf476eb2e024307b5c730c848eec1c151813e9d56f9d93d541`
-- Created: `2022-01-20T03:39:29.348416309Z`
-- Virtual Size: ~ 809.13 Mb  
+- Image ID: `sha256:cdbe20bf6681fcf90b21fc4ef4481d8e679fe76fb54f5f9b6125f53e2616189b`
+- Created: `2022-01-24T19:39:49.431035318Z`
+- Virtual Size: ~ 809.14 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/gzserver_entrypoint.sh"]`
@@ -1253,13 +1253,13 @@ $ apt-get source -qq --print-uris game-music-emu=0.6.2-1build1
 'http://archive.ubuntu.com/ubuntu/pool/universe/g/game-music-emu/game-music-emu_0.6.2-1build1.debian.tar.xz' game-music-emu_0.6.2-1build1.debian.tar.xz 4496 SHA256:e338369a1656f0ade5b014f714fd5bac196489ac937cf8c5276a005953b92aa8
 ```
 
-### `dpkg` source package: `gazebo11=11.10.0-1~focal`
+### `dpkg` source package: `gazebo11=11.10.1-1~focal`
 
 Binary Packages:
 
-- `gazebo11=11.10.0-1~focal`
-- `gazebo11-common=11.10.0-1~focal`
-- `libgazebo11:amd64=11.10.0-1~focal`
+- `gazebo11=11.10.1-1~focal`
+- `gazebo11-common=11.10.1-1~focal`
+- `libgazebo11:amd64=11.10.1-1~focal`
 
 Licenses: (parsed from: `/usr/share/doc/gazebo11/copyright`, `/usr/share/doc/gazebo11-common/copyright`, `/usr/share/doc/libgazebo11/copyright`)
 
@@ -1275,9 +1275,14 @@ Licenses: (parsed from: `/usr/share/doc/gazebo11/copyright`, `/usr/share/doc/gaz
 - `LGPL-3+`
 - `ZLIB`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris gazebo11=11.10.1-1~focal
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo11/gazebo11_11.10.1-1~focal.dsc' gazebo11_11.10.1-1~focal.dsc 2671 SHA256:fcf8b51019fc840d68cef46edcd6e665e79a1c2cb072f811072a7ac4411338e5
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo11/gazebo11_11.10.1.orig.tar.bz2' gazebo11_11.10.1.orig.tar.bz2 56483769 SHA256:349cbd73965f6e71784283f9b9b69f2cd43162c613642fd388d3f648f9caccf2
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo11/gazebo11_11.10.1-1~focal.debian.tar.xz' gazebo11_11.10.1-1~focal.debian.tar.xz 6900 SHA256:d748be07eca16c553fe9ebb060e27363f9ab26d2b07c0e510b268518911bcc55
+```
 
 ### `dpkg` source package: `gcc-10=10.3.0-1ubuntu1~20.04`
 
@@ -1808,14 +1813,9 @@ Licenses: (parsed from: `/usr/share/doc/libignition-math6/copyright`)
 - `Apache-2.0`
 - `BSD-3-clause`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ignition-math6=6.9.2-1~focal
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.9.2-1~focal.dsc' ignition-math6_6.9.2-1~focal.dsc 1576 SHA256:968aee24158db87d9286ae3b9d76adde8da78769dbf96f1582b01c9800e4a70d
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.9.2.orig.tar.bz2' ignition-math6_6.9.2.orig.tar.bz2 438866 SHA256:948e5ab613925eb85cac46d8733fb361e69841cfa0ea4e36c90fbde8e425c226
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.9.2-1~focal.debian.tar.xz' ignition-math6_6.9.2-1~focal.debian.tar.xz 4116 SHA256:6c0505b3f775972df47828b6c530657f7302ee783a9461c48ef83fb33b2d331e
-```
 
 ### `dpkg` source package: `ignition-msgs5=5.8.1-1~focal`
 

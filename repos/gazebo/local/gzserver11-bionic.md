@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:e727dd30130c42106f273c06581d4cb906639221b00bf9f74c7d323441429da9`
-- Created: `2022-01-20T03:30:03.848643326Z`
+- Image ID: `sha256:16e6272532fdec17f615aef908898013cf4fe79e0edfe40a09500673329f6caf`
+- Created: `2022-01-24T19:30:40.505158084Z`
 - Virtual Size: ~ 681.16 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -1149,13 +1149,13 @@ $ apt-get source -qq --print-uris game-music-emu=0.6.2-1
 'http://archive.ubuntu.com/ubuntu/pool/universe/g/game-music-emu/game-music-emu_0.6.2-1.debian.tar.xz' game-music-emu_0.6.2-1.debian.tar.xz 4412 SHA256:8ea69035bd72261ec85e5f0486707d448f7491733ae055040a9995cebb0ea820
 ```
 
-### `dpkg` source package: `gazebo11=11.10.0-1~bionic`
+### `dpkg` source package: `gazebo11=11.10.1-1~bionic`
 
 Binary Packages:
 
-- `gazebo11=11.10.0-1~bionic`
-- `gazebo11-common=11.10.0-1~bionic`
-- `libgazebo11:amd64=11.10.0-1~bionic`
+- `gazebo11=11.10.1-1~bionic`
+- `gazebo11-common=11.10.1-1~bionic`
+- `libgazebo11:amd64=11.10.1-1~bionic`
 
 Licenses: (parsed from: `/usr/share/doc/gazebo11/copyright`, `/usr/share/doc/gazebo11-common/copyright`, `/usr/share/doc/libgazebo11/copyright`)
 
@@ -1171,9 +1171,14 @@ Licenses: (parsed from: `/usr/share/doc/gazebo11/copyright`, `/usr/share/doc/gaz
 - `LGPL-3+`
 - `ZLIB`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris gazebo11=11.10.1-1~bionic
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo11/gazebo11_11.10.1-1~bionic.dsc' gazebo11_11.10.1-1~bionic.dsc 2361 SHA256:f2c2471b1c0b9fbf459ed7acf452c09b7c4630a56a4e7dcc4a58e27118699d26
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo11/gazebo11_11.10.1.orig.tar.bz2' gazebo11_11.10.1.orig.tar.bz2 56483769 SHA256:349cbd73965f6e71784283f9b9b69f2cd43162c613642fd388d3f648f9caccf2
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo11/gazebo11_11.10.1-1~bionic.debian.tar.xz' gazebo11_11.10.1-1~bionic.debian.tar.xz 6840 SHA256:f3d006dc7a7d9369349cd09abef4bafe2e59d3507df4a2c646069415616d66af
+```
 
 ### `dpkg` source package: `gcc-7=7.5.0-3ubuntu1~18.04`
 
@@ -1724,14 +1729,9 @@ Licenses: (parsed from: `/usr/share/doc/libignition-math6/copyright`)
 - `Apache-2.0`
 - `BSD-3-clause`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ignition-math6=6.9.2-1~bionic
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.9.2-1~bionic.dsc' ignition-math6_6.9.2-1~bionic.dsc 1580 SHA256:7ef7a51fb6c1b55fc8248314d6739457801359a403669820a724cf8059556092
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.9.2.orig.tar.bz2' ignition-math6_6.9.2.orig.tar.bz2 438866 SHA256:948e5ab613925eb85cac46d8733fb361e69841cfa0ea4e36c90fbde8e425c226
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.9.2-1~bionic.debian.tar.xz' ignition-math6_6.9.2-1~bionic.debian.tar.xz 4292 SHA256:5cd532f8d17031a0a03a1528d3d4a10a4a74067dfe12c0124958d51cd8954f74
-```
 
 ### `dpkg` source package: `ignition-msgs5=5.8.1-1~bionic`
 
@@ -5363,11 +5363,11 @@ $ apt-get source -qq --print-uris qtbase-opensource-src=5.9.5+dfsg-0ubuntu2.6
 'http://archive.ubuntu.com/ubuntu/pool/main/q/qtbase-opensource-src/qtbase-opensource-src_5.9.5+dfsg-0ubuntu2.6.debian.tar.xz' qtbase-opensource-src_5.9.5+dfsg-0ubuntu2.6.debian.tar.xz 267128 SHA512:5d08f10b6474e0d41c551dbad74288e363cc2838561dfa26fdb79b5ffa698954f30068fa562c97c6f8994eab44873ce98b2b2abb593396ac8405e3afdd45ad5e
 ```
 
-### `dpkg` source package: `qtsvg-opensource-src=5.9.5-0ubuntu1`
+### `dpkg` source package: `qtsvg-opensource-src=5.9.5-0ubuntu1.1`
 
 Binary Packages:
 
-- `libqt5svg5:amd64=5.9.5-0ubuntu1`
+- `libqt5svg5:amd64=5.9.5-0ubuntu1.1`
 
 Licenses: (parsed from: `/usr/share/doc/libqt5svg5/copyright`)
 
@@ -5384,10 +5384,10 @@ Licenses: (parsed from: `/usr/share/doc/libqt5svg5/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris qtsvg-opensource-src=5.9.5-0ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/q/qtsvg-opensource-src/qtsvg-opensource-src_5.9.5-0ubuntu1.dsc' qtsvg-opensource-src_5.9.5-0ubuntu1.dsc 2913 SHA256:f795c2c9154147af3a7114ca2884f32f272bedb664aeddfdd80caacc128b76c4
-'http://archive.ubuntu.com/ubuntu/pool/main/q/qtsvg-opensource-src/qtsvg-opensource-src_5.9.5.orig.tar.xz' qtsvg-opensource-src_5.9.5.orig.tar.xz 1778820 SHA256:62222e435cee458c67c810832aae68b90a11285e486473fe2675cd6ed4f4e3c2
-'http://archive.ubuntu.com/ubuntu/pool/main/q/qtsvg-opensource-src/qtsvg-opensource-src_5.9.5-0ubuntu1.debian.tar.xz' qtsvg-opensource-src_5.9.5-0ubuntu1.debian.tar.xz 10720 SHA256:d1fdc2f17bb7947fba6459b2fc10bf33a132731860238bbadaa9d9feb8fc8c77
+$ apt-get source -qq --print-uris qtsvg-opensource-src=5.9.5-0ubuntu1.1
+'http://archive.ubuntu.com/ubuntu/pool/main/q/qtsvg-opensource-src/qtsvg-opensource-src_5.9.5-0ubuntu1.1.dsc' qtsvg-opensource-src_5.9.5-0ubuntu1.1.dsc 2892 SHA512:8bc447cb954de61afd7739ee6ee0b163ea5c340f9dca6ba36fe9855c551977ce10e5a07122d01fd87835ae96c5e693ffb6161c2e3fed8a1ed107b8404cce19bc
+'http://archive.ubuntu.com/ubuntu/pool/main/q/qtsvg-opensource-src/qtsvg-opensource-src_5.9.5.orig.tar.xz' qtsvg-opensource-src_5.9.5.orig.tar.xz 1778820 SHA512:e087f07d76833a8d215225cc7499e40ec56aac979bdaec2018918bccc89ee9eb2fcf3f41584694e29c73ab4ea531e33cf1652380e8b8f75e4b16547b17a9fd20
+'http://archive.ubuntu.com/ubuntu/pool/main/q/qtsvg-opensource-src/qtsvg-opensource-src_5.9.5-0ubuntu1.1.debian.tar.xz' qtsvg-opensource-src_5.9.5-0ubuntu1.1.debian.tar.xz 14040 SHA512:4c718ab2cd00d5643c110193e2f57326a1d6673241dcb41b89a57baf67fd734232f7dd688bc11ac8b1c067e0bfbec170b9f493361971593ed416c9a2b74e6f4c
 ```
 
 ### `dpkg` source package: `qwt=6.1.3-1`
