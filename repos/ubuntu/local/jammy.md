@@ -26,15 +26,9 @@ Licenses: (parsed from: `/usr/share/doc/libacl1/copyright`)
 - `LGPL-2+`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris acl=2.2.53-10ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/a/acl/acl_2.2.53-10ubuntu2.dsc' acl_2.2.53-10ubuntu2.dsc 2521 SHA512:022f9359028b32768b46366dd85cedd32f724117f0d6b113ff2e653ec7fea868ceb8648cb75c6151a7b6580fa87be2c45c00fa0479f191f776b0cde2fe3ffbbb
-'http://archive.ubuntu.com/ubuntu/pool/main/a/acl/acl_2.2.53.orig.tar.gz' acl_2.2.53.orig.tar.gz 524300 SHA512:176b7957fe0e7618e0b7bf2ac5071f7fa29417df718cce977661a576fa184e4af9d303b591c9d556b6ba8923e799457343afa401f5a9f7ecd9022185a4e06716
-'http://archive.ubuntu.com/ubuntu/pool/main/a/acl/acl_2.2.53.orig.tar.gz.asc' acl_2.2.53.orig.tar.gz.asc 833 SHA512:a76dcc4f9952bb809aed3c8e0d26e9ae1aa8098ec8492c4d95a23ab74ec92d6896f1eb6307a555098277aa1191cc01d75a2f6a35dd8e8ccb46d3155404bc6f22
-'http://archive.ubuntu.com/ubuntu/pool/main/a/acl/acl_2.2.53-10ubuntu2.debian.tar.xz' acl_2.2.53-10ubuntu2.debian.tar.xz 25688 SHA512:4565388ead3d7f12ff2240f46dc2b2e6f9c2f26ab64fcf5838f9c3e61a12f6d29cc50b0a4bee7f47d9d27fc530d81ce4e1ea45ff8a01c8dff9acea73153e03b3
-```
 
 ### `dpkg` source package: `adduser=3.118ubuntu5`
 
@@ -446,14 +440,9 @@ Licenses: (parsed from: `/usr/share/doc/libgmp10/copyright`)
 - `GPL-3`
 - `LGPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gmp=2:6.2.1+dfsg-1ubuntu3
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.2.1+dfsg-1ubuntu3.dsc' gmp_6.2.1+dfsg-1ubuntu3.dsc 2256 SHA512:739325c07bd343655e31986abffb01967d774193a7b2a95e4a4c576185c527d4a3de6782f95f8a59086d60decd6fb21de2e52e38d3bc6f88fc2e84a3a189b67d
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.2.1+dfsg.orig.tar.xz' gmp_6.2.1+dfsg.orig.tar.xz 1853476 SHA512:801948b7dcf592959ea387a86bee34dfb4e02c5e93815a785fc46174899ba22129853a3e34109a6df86048a144765c5f39e65fddfcecba879cc60da62f32fea0
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.2.1+dfsg-1ubuntu3.debian.tar.xz' gmp_6.2.1+dfsg-1ubuntu3.debian.tar.xz 43788 SHA512:a5c5222fe0d2ea17ecbd43432f8e7dfc94b88a477be360072d7a88f2215ef93086e14e8a6af9afe68897105bea8be86d2703cea9136df1d1dbbdc0bf8ef58ae7
-```
 
 ### `dpkg` source package: `gnupg2=2.2.27-3ubuntu1`
 
@@ -1049,14 +1038,9 @@ Licenses: (parsed from: `/usr/share/doc/mawk/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mawk=1.3.4.20200120-2build1
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.4.20200120-2build1.dsc' mawk_1.3.4.20200120-2build1.dsc 1964 SHA512:fabcc7273b4e89a726790da00d02767b76e79874bf268189e16b9b5af7c6dd98a3041762f339b4e6bc3c046c97131a448126ebd1859863d2c363fe9a6dc1dbb3
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.4.20200120.orig.tar.gz' mawk_1.3.4.20200120.orig.tar.gz 468855 SHA512:14d9a6642ce931bf6457d248fc2d6da4f0ea7541976ca282ea708b26df048f86fdf92c27f72d497501ccd43a244d1d1a606f1a2f266a7558306fea35dcc3041b
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.4.20200120-2build1.debian.tar.xz' mawk_1.3.4.20200120-2build1.debian.tar.xz 7572 SHA512:b9522212aa8a1155084836dd127ba12ff27b4df56b275ae1ecc3344cb62b79b7aa47d242e46d05839da0ed46ed18dd16852c120447d944a0667f7e15f0ac5253
-```
 
 ### `dpkg` source package: `ncurses=6.3-1`
 
@@ -1074,15 +1058,13 @@ Licenses: (parsed from: `/usr/share/doc/libncurses6/copyright`, `/usr/share/doc/
 - `MIT/X11`
 - `X11`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ncurses=6.3-1
-'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.3-1.dsc' ncurses_6.3-1.dsc 4110 SHA512:0b604c864152c347dbf21a0b997370a6df65a76bb2df9fa8d6c5c4b114cd88bf01300312da7081739162ffc82802ea48da0a978637cd47bec3a5c1a5a35a0e64
-'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.3.orig.tar.gz' ncurses_6.3.orig.tar.gz 3583550 SHA512:5373f228cba6b7869210384a607a2d7faecfcbfef6dbfcd7c513f4e84fbd8bcad53ac7db2e7e84b95582248c1039dcfc7c4db205a618f7da22a166db482f0105
-'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.3.orig.tar.gz.asc' ncurses_6.3.orig.tar.gz.asc 729 SHA512:5673088e7d6af580e8f1e163687146adb51261cd3c75be9ea61368c7590efc0e5e4bc1c2ae76d717f289ff6609089c5ca1f7e4a572266d7b6c5daba98eabed2e
-'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.3-1.debian.tar.xz' ncurses_6.3-1.debian.tar.xz 54216 SHA512:5fb5a42fd3213ed2b5e8d2cd03eec70291410cff02464e1b65619e6e018855701f69dea3802ae0b5aa1efafd9d39067430a8da23b8ade8aec686f59e15f86c92
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/ncurses/6.3-1/
+
 
 ### `dpkg` source package: `nettle=3.7.3-1build1`
 
@@ -1385,15 +1367,9 @@ Licenses: (parsed from: `/usr/share/doc/sysvinit-utils/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sysvinit=2.96-7ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sysvinit/sysvinit_2.96-7ubuntu2.dsc' sysvinit_2.96-7ubuntu2.dsc 2718 SHA512:6543be6337ed7fdca82f62ec790c8ba7a3936cbe798975a0a38f7d7dad8132e30b3bec6688a3da3e1efb634030996cec48770dfa717178064d2558953d9424de
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sysvinit/sysvinit_2.96.orig.tar.xz' sysvinit_2.96.orig.tar.xz 122164 SHA512:1388398568ebfe53460796f8ab75a3ead6111612888ea36e8f1c0db4d41ef6f45fc217abb7804519ff1143a78d97c95b24e42c8c22c95a47b9436484bfb6f45d
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sysvinit/sysvinit_2.96.orig.tar.xz.asc' sysvinit_2.96.orig.tar.xz.asc 313 SHA512:2b3798e8fc8531cd1a2b2a523159b7f064bfadd8815b930fb70d5a1380775f1b5bac5627d5cd9d95b03ff3737d8d6b2f357c6bc21ac2e21ee089b67f98b4eb6a
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sysvinit/sysvinit_2.96-7ubuntu2.debian.tar.xz' sysvinit_2.96-7ubuntu2.debian.tar.xz 129696 SHA512:6f81ac49fba5e42d77e80cda39263c5b02537f801ae4c784ac1b4e2c8ff9ec523b2465d5cfcf84e00d36098d71ab4a58fd23c608701ef1aa2d4ba1742809f7be
-```
 
 ### `dpkg` source package: `tar=1.34+dfsg-1build2`
 
