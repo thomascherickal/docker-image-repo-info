@@ -1,10 +1,10 @@
-# `convertigo:7.9.7`
+# `convertigo:7.9.8`
 
 ## Docker Metadata
 
-- Image ID: `sha256:ce85182ea4af136e5cbf7cdb8cb355d92df0fc48b248cf71d456352e1ef66b95`
-- Created: `2022-01-21T03:55:01.489939983Z`
-- Virtual Size: ~ 815.52 Mb  
+- Image ID: `sha256:4644b6795276a930e8fad89666bbd3aa535c26e26d8f181d339d1720f2c4e650`
+- Created: `2022-01-28T00:35:47.892506911Z`
+- Virtual Size: ~ 815.69 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["tini","--","/docker-entrypoint.sh"]`
@@ -26,8 +26,8 @@
   - `GOSU_GPG_KEYS=B42F6819007F00F88E364FD4036A9C25BF357DD4`
   - `TINI_VERSION=0.19.0`
   - `TINI_GPG_KEYS=6380DC428747F6C393FEACA59A84159D7001A4E5`
-  - `CONVERTIGO_VERSION=7.9.7`
-  - `CONVERTIGO_WAR_URL=https://github.com/convertigo/convertigo/releases/download/7.9.7/convertigo-7.9.7.war`
+  - `CONVERTIGO_VERSION=7.9.8`
+  - `CONVERTIGO_WAR_URL=https://github.com/convertigo/convertigo/releases/download/7.9.8/convertigo-7.9.8.war`
   - `CONVERTIGO_GPG_KEYS=6A7779BB78FE368DF74B708FD4DA8FBEB64BF75F`
 
 ## `dpkg` (`.deb`-based packages)
@@ -3200,17 +3200,17 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/utf8proc/2.5.0-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/utf8proc/2.5.0-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `util-linux=2.36.1-8`
+### `dpkg` source package: `util-linux=2.36.1-8+deb11u1`
 
 Binary Packages:
 
-- `bsdutils=1:2.36.1-8`
-- `libblkid1:amd64=2.36.1-8`
-- `libmount1:amd64=2.36.1-8`
-- `libsmartcols1:amd64=2.36.1-8`
-- `libuuid1:amd64=2.36.1-8`
-- `mount=2.36.1-8`
-- `util-linux=2.36.1-8`
+- `bsdutils=1:2.36.1-8+deb11u1`
+- `libblkid1:amd64=2.36.1-8+deb11u1`
+- `libmount1:amd64=2.36.1-8+deb11u1`
+- `libsmartcols1:amd64=2.36.1-8+deb11u1`
+- `libuuid1:amd64=2.36.1-8+deb11u1`
+- `mount=2.36.1-8+deb11u1`
+- `util-linux=2.36.1-8+deb11u1`
 
 Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/libblkid1/copyright`, `/usr/share/doc/libmount1/copyright`, `/usr/share/doc/libsmartcols1/copyright`, `/usr/share/doc/libuuid1/copyright`, `/usr/share/doc/mount/copyright`, `/usr/share/doc/util-linux/copyright`)
 
@@ -3234,17 +3234,17 @@ Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/lib
 Source:
 
 ```console
-$ apt-get source -qq --print-uris util-linux=2.36.1-8
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.36.1-8.dsc' util-linux_2.36.1-8.dsc 4271 SHA256:ce431fba2d6d1ac8e46f12cd94fe124e666693c92bcf96783beb0dfafe34dc58
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.36.1.orig.tar.xz' util-linux_2.36.1.orig.tar.xz 5231880 SHA256:09fac242172cd8ec27f0739d8d192402c69417617091d8c6e974841568f37eed
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.36.1-8.debian.tar.xz' util-linux_2.36.1-8.debian.tar.xz 98400 SHA256:876304edc7d9cbfacb5615f6205539d8b18fb254c5143243f9c7850cc58b3243
+$ apt-get source -qq --print-uris util-linux=2.36.1-8+deb11u1
+'http://security.debian.org/debian-security/pool/updates/main/u/util-linux/util-linux_2.36.1-8+deb11u1.dsc' util-linux_2.36.1-8+deb11u1.dsc 4461 SHA256:1f42a8e46c383b6fbfb57ea89dfe5adb5b7e6960bc5e8cdb9589109773be6cac
+'http://security.debian.org/debian-security/pool/updates/main/u/util-linux/util-linux_2.36.1.orig.tar.xz' util-linux_2.36.1.orig.tar.xz 5231880 SHA256:09fac242172cd8ec27f0739d8d192402c69417617091d8c6e974841568f37eed
+'http://security.debian.org/debian-security/pool/updates/main/u/util-linux/util-linux_2.36.1-8+deb11u1.debian.tar.xz' util-linux_2.36.1-8+deb11u1.debian.tar.xz 101448 SHA256:edda1d46e25a40e730c672aac2cd0e44f9eeb0fb64b27be957d6924ed5288a0a
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/util-linux/2.36.1-8/ (for browsing the source)
-- https://sources.debian.net/src/util-linux/2.36.1-8/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/util-linux/2.36.1-8/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/util-linux/2.36.1-8+deb11u1/ (for browsing the source)
+- https://sources.debian.net/src/util-linux/2.36.1-8+deb11u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/util-linux/2.36.1-8+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `wget=1.21-1+deb11u1`
 
