@@ -1,10 +1,10 @@
-# `amazonlinux:2018.03.0.20211201.0-with-sources`
+# `amazonlinux:2018.03.0.20220119.1-with-sources`
 
 ## Docker Metadata
 
-- Image ID: `sha256:fa111552ce92b077f0e226fd14d250252ec4643eead06a1010743c65016ee472`
-- Created: `2021-12-02T23:21:04.715146058Z`
-- Virtual Size: ~ 620.24 Mb  
+- Image ID: `sha256:29dcea5a92f4f38f10147976b572599d1ad45ba854e7970b6900529443342ae4`
+- Created: `2022-01-27T23:41:34.905240875Z`
+- Virtual Size: ~ 620.15 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -52,17 +52,17 @@ Enabling amzn-main-source repository
 http://packages.us-west-1.amazonaws.com/2018.03/main/c31535f74c6e/SRPMS//Packages/bzip2-1.0.6-8.12.amzn1.src.rpm
 ```
 
-### `rpm` package: `ca-certificates-2018.2.22-65.1.24.amzn1.noarch`
+### `rpm` package: `ca-certificates-2018.2.22-65.1.25.amzn1.noarch`
 
 Licenses (from `rpm --query`): Public Domain
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls ca-certificates-2018.2.22-65.1.24.amzn1.noarch
+$ yumdownloader --quiet --source --urls ca-certificates-2018.2.22-65.1.25.amzn1.noarch
 Enabling amzn-updates-source repository
 Enabling amzn-main-source repository
-http://packages.us-east-1.amazonaws.com/2018.03/updates/231b1ead3a8a/SRPMS//Packages/ca-certificates-2018.2.22-65.1.24.amzn1.src.rpm
+http://packages.us-east-1.amazonaws.com/2018.03/updates/231b1ead3a8a/SRPMS//Packages/ca-certificates-2018.2.22-65.1.25.amzn1.src.rpm
 ```
 
 ### `rpm` package: `chkconfig-1.3.49.3-2.14.amzn1.x86_64`
