@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:cf6099f1676ecd0acb5cb8457cb085580775feec7fc75ee8b87d6a7dd00219ca`
-- Created: `2022-01-06T20:38:21.211321446Z`
-- Virtual Size: ~ 577.99 Mb  
+- Image ID: `sha256:f6cef38d301d37c1f0167e8d05646b44bd80341623dbf5902ea4777273e85ff3`
+- Created: `2022-01-27T19:50:25.318443235Z`
+- Virtual Size: ~ 578.07 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint-dev.sh"]`
@@ -115,14 +115,14 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/aom/1.0.0.errata1-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/aom/1.0.0.errata1-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `apache2=2.4.51-1~deb11u1`
+### `dpkg` source package: `apache2=2.4.52-1~deb11u2`
 
 Binary Packages:
 
-- `apache2=2.4.51-1~deb11u1`
-- `apache2-bin=2.4.51-1~deb11u1`
-- `apache2-data=2.4.51-1~deb11u1`
-- `apache2-utils=2.4.51-1~deb11u1`
+- `apache2=2.4.52-1~deb11u2`
+- `apache2-bin=2.4.52-1~deb11u2`
+- `apache2-data=2.4.52-1~deb11u2`
+- `apache2-utils=2.4.52-1~deb11u2`
 
 Licenses: (parsed from: `/usr/share/doc/apache2/copyright`, `/usr/share/doc/apache2-bin/copyright`, `/usr/share/doc/apache2-data/copyright`, `/usr/share/doc/apache2-utils/copyright`)
 
@@ -145,18 +145,18 @@ Licenses: (parsed from: `/usr/share/doc/apache2/copyright`, `/usr/share/doc/apac
 Source:
 
 ```console
-$ apt-get source -qq --print-uris apache2=2.4.51-1~deb11u1
-'http://deb.debian.org/debian/pool/main/a/apache2/apache2_2.4.51-1~deb11u1.dsc' apache2_2.4.51-1~deb11u1.dsc 3539 SHA256:c5f07544cd10c18aae7d41da7c60c8b993c1d3e7369083beae74ef106805f6aa
-'http://deb.debian.org/debian/pool/main/a/apache2/apache2_2.4.51.orig.tar.gz' apache2_2.4.51.orig.tar.gz 9873874 SHA256:c2cedb0b47666bea633b44d5b3a2ebf3c466e0506955fbc3012a5a9b078ca8b4
-'http://deb.debian.org/debian/pool/main/a/apache2/apache2_2.4.51.orig.tar.gz.asc' apache2_2.4.51.orig.tar.gz.asc 874 SHA256:ad790409b64071ea32a9c0da704500ed3d68a6552aff7e5e4fe3272d3d644377
-'http://deb.debian.org/debian/pool/main/a/apache2/apache2_2.4.51-1~deb11u1.debian.tar.xz' apache2_2.4.51-1~deb11u1.debian.tar.xz 886504 SHA256:7ee1351a13d5f72c88d15b3c7b38e4f57c2eb90db1afbafe92524210ef4e218f
+$ apt-get source -qq --print-uris apache2=2.4.52-1~deb11u2
+'http://security.debian.org/debian-security/pool/updates/main/a/apache2/apache2_2.4.52-1~deb11u2.dsc' apache2_2.4.52-1~deb11u2.dsc 3539 SHA256:a8482b83763069c24db896d5cd5c8e46d7eed9d5853f600161ef7b6668e624ed
+'http://security.debian.org/debian-security/pool/updates/main/a/apache2/apache2_2.4.52.orig.tar.gz' apache2_2.4.52.orig.tar.gz 9719976 SHA256:296c74a8adde1a8acd6617b21fc3d19719ff4fa39319b2bdbd898aca4d5df97f
+'http://security.debian.org/debian-security/pool/updates/main/a/apache2/apache2_2.4.52.orig.tar.gz.asc' apache2_2.4.52.orig.tar.gz.asc 874 SHA256:37839294ab44fcbdcb54d64bb0c7f27f7534d8e03947697ee6fc702002678c5f
+'http://security.debian.org/debian-security/pool/updates/main/a/apache2/apache2_2.4.52-1~deb11u2.debian.tar.xz' apache2_2.4.52-1~deb11u2.debian.tar.xz 887432 SHA256:ce9977656ac2a56300a92f1978217232ab152212241c78072bbb754e251c5cfc
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/apache2/2.4.51-1~deb11u1/ (for browsing the source)
-- https://sources.debian.net/src/apache2/2.4.51-1~deb11u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apache2/2.4.51-1~deb11u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/apache2/2.4.52-1~deb11u2/ (for browsing the source)
+- https://sources.debian.net/src/apache2/2.4.52-1~deb11u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/apache2/2.4.52-1~deb11u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `apr-util=1.6.1-5`
 
@@ -3042,11 +3042,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libzstd/1.4.8+dfsg-2.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libzstd/1.4.8+dfsg-2.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `linux=5.10.84-1`
+### `dpkg` source package: `linux=5.10.92-1`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=5.10.84-1`
+- `linux-libc-dev:amd64=5.10.92-1`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -3062,17 +3062,17 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris linux=5.10.84-1
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.84-1.dsc' linux_5.10.84-1.dsc 197231 SHA256:34d981ad209aa0760dedd853686d3a848eedb524e88496319d2492f267b44217
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.84.orig.tar.xz' linux_5.10.84.orig.tar.xz 121660432 SHA256:b1ea38fb68898d01b056841d18e1c3c46c61f93f8d2596337f47648d16df26bd
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.84-1.debian.tar.xz' linux_5.10.84-1.debian.tar.xz 1463404 SHA256:8f24c903fcf9eaaeba7fd71ca8a8e62961d0e3dfb924f525fd0e82c7036259d2
+$ apt-get source -qq --print-uris linux=5.10.92-1
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.92-1.dsc' linux_5.10.92-1.dsc 197231 SHA256:deb5c2eb26755d7954e109757ae410e8c5064dfcc64964e81df26dded3e98095
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.92.orig.tar.xz' linux_5.10.92.orig.tar.xz 121665656 SHA256:19b747100e42a1e4be3437aebd099db03de6fcf08bb19dbf61250adc65978984
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.92-1.debian.tar.xz' linux_5.10.92-1.debian.tar.xz 1471996 SHA256:2273c84a0d4240b89a1fdd432a5d2a1a89f750b8b045e286937a57ea71499412
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/linux/5.10.84-1/ (for browsing the source)
-- https://sources.debian.net/src/linux/5.10.84-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/5.10.84-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/linux/5.10.92-1/ (for browsing the source)
+- https://sources.debian.net/src/linux/5.10.92-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/linux/5.10.92-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lsb=11.1.0`
 
@@ -4321,17 +4321,17 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/ucf/3.0043/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/ucf/3.0043/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `util-linux=2.36.1-8`
+### `dpkg` source package: `util-linux=2.36.1-8+deb11u1`
 
 Binary Packages:
 
-- `bsdutils=1:2.36.1-8`
-- `libblkid1:amd64=2.36.1-8`
-- `libmount1:amd64=2.36.1-8`
-- `libsmartcols1:amd64=2.36.1-8`
-- `libuuid1:amd64=2.36.1-8`
-- `mount=2.36.1-8`
-- `util-linux=2.36.1-8`
+- `bsdutils=1:2.36.1-8+deb11u1`
+- `libblkid1:amd64=2.36.1-8+deb11u1`
+- `libmount1:amd64=2.36.1-8+deb11u1`
+- `libsmartcols1:amd64=2.36.1-8+deb11u1`
+- `libuuid1:amd64=2.36.1-8+deb11u1`
+- `mount=2.36.1-8+deb11u1`
+- `util-linux=2.36.1-8+deb11u1`
 
 Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/libblkid1/copyright`, `/usr/share/doc/libmount1/copyright`, `/usr/share/doc/libsmartcols1/copyright`, `/usr/share/doc/libuuid1/copyright`, `/usr/share/doc/mount/copyright`, `/usr/share/doc/util-linux/copyright`)
 
@@ -4355,17 +4355,17 @@ Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/lib
 Source:
 
 ```console
-$ apt-get source -qq --print-uris util-linux=2.36.1-8
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.36.1-8.dsc' util-linux_2.36.1-8.dsc 4271 SHA256:ce431fba2d6d1ac8e46f12cd94fe124e666693c92bcf96783beb0dfafe34dc58
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.36.1.orig.tar.xz' util-linux_2.36.1.orig.tar.xz 5231880 SHA256:09fac242172cd8ec27f0739d8d192402c69417617091d8c6e974841568f37eed
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.36.1-8.debian.tar.xz' util-linux_2.36.1-8.debian.tar.xz 98400 SHA256:876304edc7d9cbfacb5615f6205539d8b18fb254c5143243f9c7850cc58b3243
+$ apt-get source -qq --print-uris util-linux=2.36.1-8+deb11u1
+'http://security.debian.org/debian-security/pool/updates/main/u/util-linux/util-linux_2.36.1-8+deb11u1.dsc' util-linux_2.36.1-8+deb11u1.dsc 4461 SHA256:1f42a8e46c383b6fbfb57ea89dfe5adb5b7e6960bc5e8cdb9589109773be6cac
+'http://security.debian.org/debian-security/pool/updates/main/u/util-linux/util-linux_2.36.1.orig.tar.xz' util-linux_2.36.1.orig.tar.xz 5231880 SHA256:09fac242172cd8ec27f0739d8d192402c69417617091d8c6e974841568f37eed
+'http://security.debian.org/debian-security/pool/updates/main/u/util-linux/util-linux_2.36.1-8+deb11u1.debian.tar.xz' util-linux_2.36.1-8+deb11u1.debian.tar.xz 101448 SHA256:edda1d46e25a40e730c672aac2cd0e44f9eeb0fb64b27be957d6924ed5288a0a
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/util-linux/2.36.1-8/ (for browsing the source)
-- https://sources.debian.net/src/util-linux/2.36.1-8/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/util-linux/2.36.1-8/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/util-linux/2.36.1-8+deb11u1/ (for browsing the source)
+- https://sources.debian.net/src/util-linux/2.36.1-8+deb11u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/util-linux/2.36.1-8+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `x265=3.4-2`
 
