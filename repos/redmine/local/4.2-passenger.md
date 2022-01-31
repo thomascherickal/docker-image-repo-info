@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:4ce84d2020b640d2b6b5a82984230479f98981e7fa14ab7fd2c4d26a3343b07c`
-- Created: `2021-12-22T18:33:22.029657662Z`
-- Virtual Size: ~ 606.17 Mb  
+- Image ID: `sha256:50c433f23a55bd98b7c2b49f786b17cfd7aa9dbfdad304753bf07b6c8f46c8f6`
+- Created: `2022-01-27T23:13:57.04567074Z`
+- Virtual Size: ~ 606.19 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -1250,13 +1250,13 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/gdbm/1.19-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/gdbm/1.19-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `ghostscript=9.53.3~dfsg-7+deb11u1`
+### `dpkg` source package: `ghostscript=9.53.3~dfsg-7+deb11u2`
 
 Binary Packages:
 
-- `ghostscript=9.53.3~dfsg-7+deb11u1`
-- `libgs9:amd64=9.53.3~dfsg-7+deb11u1`
-- `libgs9-common=9.53.3~dfsg-7+deb11u1`
+- `ghostscript=9.53.3~dfsg-7+deb11u2`
+- `libgs9:amd64=9.53.3~dfsg-7+deb11u2`
+- `libgs9-common=9.53.3~dfsg-7+deb11u2`
 
 Licenses: (parsed from: `/usr/share/doc/ghostscript/copyright`, `/usr/share/doc/libgs9/copyright`, `/usr/share/doc/libgs9-common/copyright`)
 
@@ -1292,17 +1292,17 @@ Licenses: (parsed from: `/usr/share/doc/ghostscript/copyright`, `/usr/share/doc/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris ghostscript=9.53.3~dfsg-7+deb11u1
-'http://deb.debian.org/debian/pool/main/g/ghostscript/ghostscript_9.53.3~dfsg-7+deb11u1.dsc' ghostscript_9.53.3~dfsg-7+deb11u1.dsc 2864 SHA256:701551ac2ffaa9763f4e90d2f0d58719fd59708604f1204506ed258149da09ff
-'http://deb.debian.org/debian/pool/main/g/ghostscript/ghostscript_9.53.3~dfsg.orig.tar.xz' ghostscript_9.53.3~dfsg.orig.tar.xz 23948068 SHA256:678f99fc6cca9a224f49891b8db5d9a325b8b3fbbffa9f29d44bac9f54603f3d
-'http://deb.debian.org/debian/pool/main/g/ghostscript/ghostscript_9.53.3~dfsg-7+deb11u1.debian.tar.xz' ghostscript_9.53.3~dfsg-7+deb11u1.debian.tar.xz 120292 SHA256:b08c4a40ee3731b0d94cf21bcb1bc49bd76818b71ee63c91cab9d34f0b03a021
+$ apt-get source -qq --print-uris ghostscript=9.53.3~dfsg-7+deb11u2
+'http://security.debian.org/debian-security/pool/updates/main/g/ghostscript/ghostscript_9.53.3~dfsg-7+deb11u2.dsc' ghostscript_9.53.3~dfsg-7+deb11u2.dsc 2864 SHA256:dae98d9060d5b5346c6f46dfaf835dd2ab691e8c76f354a007537142117a6cfe
+'http://security.debian.org/debian-security/pool/updates/main/g/ghostscript/ghostscript_9.53.3~dfsg.orig.tar.xz' ghostscript_9.53.3~dfsg.orig.tar.xz 23948068 SHA256:678f99fc6cca9a224f49891b8db5d9a325b8b3fbbffa9f29d44bac9f54603f3d
+'http://security.debian.org/debian-security/pool/updates/main/g/ghostscript/ghostscript_9.53.3~dfsg-7+deb11u2.debian.tar.xz' ghostscript_9.53.3~dfsg-7+deb11u2.debian.tar.xz 121500 SHA256:f3631e24888aefee0d16a8828c6e5c376ce4bdc154c476e5a03a46196d8b3a7b
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/ghostscript/9.53.3~dfsg-7+deb11u1/ (for browsing the source)
-- https://sources.debian.net/src/ghostscript/9.53.3~dfsg-7+deb11u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/ghostscript/9.53.3~dfsg-7+deb11u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/ghostscript/9.53.3~dfsg-7+deb11u2/ (for browsing the source)
+- https://sources.debian.net/src/ghostscript/9.53.3~dfsg-7+deb11u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/ghostscript/9.53.3~dfsg-7+deb11u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `git=1:2.30.2-1`
 
@@ -3090,11 +3090,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libzstd/1.4.8+dfsg-2.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libzstd/1.4.8+dfsg-2.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `linux=5.10.84-1`
+### `dpkg` source package: `linux=5.10.92-1`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=5.10.84-1`
+- `linux-libc-dev:amd64=5.10.92-1`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -3110,17 +3110,17 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris linux=5.10.84-1
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.84-1.dsc' linux_5.10.84-1.dsc 197231 SHA256:34d981ad209aa0760dedd853686d3a848eedb524e88496319d2492f267b44217
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.84.orig.tar.xz' linux_5.10.84.orig.tar.xz 121660432 SHA256:b1ea38fb68898d01b056841d18e1c3c46c61f93f8d2596337f47648d16df26bd
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.84-1.debian.tar.xz' linux_5.10.84-1.debian.tar.xz 1463404 SHA256:8f24c903fcf9eaaeba7fd71ca8a8e62961d0e3dfb924f525fd0e82c7036259d2
+$ apt-get source -qq --print-uris linux=5.10.92-1
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.92-1.dsc' linux_5.10.92-1.dsc 197231 SHA256:deb5c2eb26755d7954e109757ae410e8c5064dfcc64964e81df26dded3e98095
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.92.orig.tar.xz' linux_5.10.92.orig.tar.xz 121665656 SHA256:19b747100e42a1e4be3437aebd099db03de6fcf08bb19dbf61250adc65978984
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.92-1.debian.tar.xz' linux_5.10.92-1.debian.tar.xz 1471996 SHA256:2273c84a0d4240b89a1fdd432a5d2a1a89f750b8b045e286937a57ea71499412
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/linux/5.10.84-1/ (for browsing the source)
-- https://sources.debian.net/src/linux/5.10.84-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/5.10.84-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/linux/5.10.92-1/ (for browsing the source)
+- https://sources.debian.net/src/linux/5.10.92-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/linux/5.10.92-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lsb=11.1.0`
 
@@ -4490,17 +4490,17 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/utf8proc/2.5.0-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/utf8proc/2.5.0-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `util-linux=2.36.1-8`
+### `dpkg` source package: `util-linux=2.36.1-8+deb11u1`
 
 Binary Packages:
 
-- `bsdutils=1:2.36.1-8`
-- `libblkid1:amd64=2.36.1-8`
-- `libmount1:amd64=2.36.1-8`
-- `libsmartcols1:amd64=2.36.1-8`
-- `libuuid1:amd64=2.36.1-8`
-- `mount=2.36.1-8`
-- `util-linux=2.36.1-8`
+- `bsdutils=1:2.36.1-8+deb11u1`
+- `libblkid1:amd64=2.36.1-8+deb11u1`
+- `libmount1:amd64=2.36.1-8+deb11u1`
+- `libsmartcols1:amd64=2.36.1-8+deb11u1`
+- `libuuid1:amd64=2.36.1-8+deb11u1`
+- `mount=2.36.1-8+deb11u1`
+- `util-linux=2.36.1-8+deb11u1`
 
 Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/libblkid1/copyright`, `/usr/share/doc/libmount1/copyright`, `/usr/share/doc/libsmartcols1/copyright`, `/usr/share/doc/libuuid1/copyright`, `/usr/share/doc/mount/copyright`, `/usr/share/doc/util-linux/copyright`)
 
@@ -4524,17 +4524,17 @@ Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/lib
 Source:
 
 ```console
-$ apt-get source -qq --print-uris util-linux=2.36.1-8
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.36.1-8.dsc' util-linux_2.36.1-8.dsc 4271 SHA256:ce431fba2d6d1ac8e46f12cd94fe124e666693c92bcf96783beb0dfafe34dc58
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.36.1.orig.tar.xz' util-linux_2.36.1.orig.tar.xz 5231880 SHA256:09fac242172cd8ec27f0739d8d192402c69417617091d8c6e974841568f37eed
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.36.1-8.debian.tar.xz' util-linux_2.36.1-8.debian.tar.xz 98400 SHA256:876304edc7d9cbfacb5615f6205539d8b18fb254c5143243f9c7850cc58b3243
+$ apt-get source -qq --print-uris util-linux=2.36.1-8+deb11u1
+'http://security.debian.org/debian-security/pool/updates/main/u/util-linux/util-linux_2.36.1-8+deb11u1.dsc' util-linux_2.36.1-8+deb11u1.dsc 4461 SHA256:1f42a8e46c383b6fbfb57ea89dfe5adb5b7e6960bc5e8cdb9589109773be6cac
+'http://security.debian.org/debian-security/pool/updates/main/u/util-linux/util-linux_2.36.1.orig.tar.xz' util-linux_2.36.1.orig.tar.xz 5231880 SHA256:09fac242172cd8ec27f0739d8d192402c69417617091d8c6e974841568f37eed
+'http://security.debian.org/debian-security/pool/updates/main/u/util-linux/util-linux_2.36.1-8+deb11u1.debian.tar.xz' util-linux_2.36.1-8+deb11u1.debian.tar.xz 101448 SHA256:edda1d46e25a40e730c672aac2cd0e44f9eeb0fb64b27be957d6924ed5288a0a
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/util-linux/2.36.1-8/ (for browsing the source)
-- https://sources.debian.net/src/util-linux/2.36.1-8/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/util-linux/2.36.1-8/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/util-linux/2.36.1-8+deb11u1/ (for browsing the source)
+- https://sources.debian.net/src/util-linux/2.36.1-8+deb11u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/util-linux/2.36.1-8+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `wget=1.21-1+deb11u1`
 
