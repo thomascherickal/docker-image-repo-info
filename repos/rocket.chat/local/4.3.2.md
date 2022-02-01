@@ -4,7 +4,7 @@
 
 - Image ID: `sha256:8a15e3c9d25b1a02e9903151bcce6b291e75f4d0eeafa294cdfa06d4e33e6f7d`
 - Created: `2022-01-26T22:54:55.565466551Z`
-- Virtual Size: ~ 828.46 Mb  
+- Virtual Size: ~ 828.48 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["node","main.js"]`
