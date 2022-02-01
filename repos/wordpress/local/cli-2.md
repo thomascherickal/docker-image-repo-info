@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:119c13f6fa2fdf8e5820346844f38dbe81497d64f54908b534903dd922ea9717`
-- Created: `2022-01-27T20:51:16.214544353Z`
-- Virtual Size: ~ 139.74 Mb  
+- Image ID: `sha256:32b75d936c4f9695fe42cff03e27cc2323eaeca9cf56a6544f87ba6a19122f3f`
+- Created: `2022-01-28T23:55:28.854885107Z`
+- Virtual Size: ~ 173.71 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -200,16 +200,16 @@ MIT
 ### `apk` package: `expat`
 
 ```console
-expat-2.4.1-r0 description:
+expat-2.4.3-r0 description:
 XML Parser library written in C
 
-expat-2.4.1-r0 webpage:
+expat-2.4.3-r0 webpage:
 http://www.libexpat.org/
 
-expat-2.4.1-r0 installed size:
-188 KiB
+expat-2.4.3-r0 installed size:
+192 KiB
 
-expat-2.4.1-r0 license:
+expat-2.4.3-r0 license:
 MIT
 
 ```
@@ -245,6 +245,23 @@ freetype-2.11.0-r0 installed size:
 
 freetype-2.11.0-r0 license:
 FTL GPL-2.0-or-later
+
+```
+
+### `apk` package: `icu-libs`
+
+```console
+icu-libs-69.1-r1 description:
+International Components for Unicode library (libraries)
+
+icu-libs-69.1-r1 webpage:
+https://icu.unicode.org/
+
+icu-libs-69.1-r1 installed size:
+31 MiB
+
+icu-libs-69.1-r1 license:
+MIT ICU Unicode-TOU
 
 ```
 
@@ -591,16 +608,16 @@ GPL-3.0-or-later AND GPL-2.0-or-later AND GPL-2.0-only AND
 ### `apk` package: `libwebp`
 
 ```console
-libwebp-1.2.1-r0 description:
+libwebp-1.2.2-r0 description:
 Libraries for working with WebP images
 
-libwebp-1.2.1-r0 webpage:
+libwebp-1.2.2-r0 webpage:
 https://developers.google.com/speed/webp
 
-libwebp-1.2.1-r0 installed size:
+libwebp-1.2.2-r0 installed size:
 580 KiB
 
-libwebp-1.2.1-r0 license:
+libwebp-1.2.2-r0 license:
 BSD-3-Clause
 
 ```

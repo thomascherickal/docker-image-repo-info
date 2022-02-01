@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:0386f1778c254204d64adb540e616894f2179e5349a1913f503a7e9a9fe962d6`
-- Created: `2022-01-27T20:47:08.188513173Z`
-- Virtual Size: ~ 276.92 Mb  
+- Image ID: `sha256:203117f9362661d52171ae907d00a53afbbc1d9bf53a7ae171041e3c872d267f`
+- Created: `2022-01-28T23:47:37.571657105Z`
+- Virtual Size: ~ 311.46 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -480,6 +480,23 @@ harfbuzz-3.0.0-r2 installed size:
 
 harfbuzz-3.0.0-r2 license:
 MIT
+
+```
+
+### `apk` package: `icu-libs`
+
+```console
+icu-libs-69.1-r1 description:
+International Components for Unicode library (libraries)
+
+icu-libs-69.1-r1 webpage:
+https://icu.unicode.org/
+
+icu-libs-69.1-r1 installed size:
+31 MiB
+
+icu-libs-69.1-r1 license:
+MIT ICU Unicode-TOU
 
 ```
 
@@ -996,16 +1013,16 @@ GPL-3.0-or-later AND GPL-2.0-or-later AND GPL-2.0-only AND
 ### `apk` package: `libwebp`
 
 ```console
-libwebp-1.2.1-r0 description:
+libwebp-1.2.2-r0 description:
 Libraries for working with WebP images
 
-libwebp-1.2.1-r0 webpage:
+libwebp-1.2.2-r0 webpage:
 https://developers.google.com/speed/webp
 
-libwebp-1.2.1-r0 installed size:
+libwebp-1.2.2-r0 installed size:
 580 KiB
 
-libwebp-1.2.1-r0 license:
+libwebp-1.2.2-r0 license:
 BSD-3-Clause
 
 ```

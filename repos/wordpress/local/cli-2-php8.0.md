@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:d0fdc95127941fabc10f800cf6f351df3d44c20a61f99d54e255062724fef439`
-- Created: `2022-01-27T20:52:21.500724707Z`
-- Virtual Size: ~ 144.43 Mb  
+- Image ID: `sha256:651cc33463a32481a67942ffbc44fca20452da6a3d33157d9186515a84b13583`
+- Created: `2022-01-28T23:59:41.77650748Z`
+- Virtual Size: ~ 178.40 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -245,6 +245,23 @@ freetype-2.11.0-r0 installed size:
 
 freetype-2.11.0-r0 license:
 FTL GPL-2.0-or-later
+
+```
+
+### `apk` package: `icu-libs`
+
+```console
+icu-libs-69.1-r1 description:
+International Components for Unicode library (libraries)
+
+icu-libs-69.1-r1 webpage:
+https://icu.unicode.org/
+
+icu-libs-69.1-r1 installed size:
+31 MiB
+
+icu-libs-69.1-r1 license:
+MIT ICU Unicode-TOU
 
 ```
 
@@ -591,16 +608,16 @@ GPL-3.0-or-later AND GPL-2.0-or-later AND GPL-2.0-only AND
 ### `apk` package: `libwebp`
 
 ```console
-libwebp-1.2.1-r0 description:
+libwebp-1.2.2-r0 description:
 Libraries for working with WebP images
 
-libwebp-1.2.1-r0 webpage:
+libwebp-1.2.2-r0 webpage:
 https://developers.google.com/speed/webp
 
-libwebp-1.2.1-r0 installed size:
+libwebp-1.2.2-r0 installed size:
 580 KiB
 
-libwebp-1.2.1-r0 license:
+libwebp-1.2.2-r0 license:
 BSD-3-Clause
 
 ```
