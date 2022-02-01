@@ -1,10 +1,10 @@
-# `sonarqube:9.2.4-community`
+# `sonarqube:9.3.0-community`
 
 ## Docker Metadata
 
-- Image ID: `sha256:d3899771462f15396e93390262df446fd3b69e1d3b919786d175ffc79cc25517`
-- Created: `2021-12-20T19:30:30.464436455Z`
-- Virtual Size: ~ 513.91 Mb  
+- Image ID: `sha256:4ac4842c584e2d7f4ab5a773a4611490c31b3e94fdc8243bf40636fcf6d1fac6`
+- Created: `2022-01-28T19:21:43.814022562Z`
+- Virtual Size: ~ 519.67 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/opt/sonarqube/bin/run.sh"]`
@@ -16,7 +16,7 @@
   - `LC_ALL=en_US.UTF-8`
   - `JAVA_HOME=/usr/lib/jvm/java-11-openjdk`
   - `SONARQUBE_HOME=/opt/sonarqube`
-  - `SONAR_VERSION=9.2.4.50792`
+  - `SONAR_VERSION=9.3.0.51899`
   - `SQ_DATA_DIR=/opt/sonarqube/data`
   - `SQ_EXTENSIONS_DIR=/opt/sonarqube/extensions`
   - `SQ_LOGS_DIR=/opt/sonarqube/logs`
@@ -146,16 +146,16 @@ GPL-2.0-only
 ### `apk` package: `ca-certificates`
 
 ```console
-ca-certificates-20191127-r5 description:
+ca-certificates-20211220-r0 description:
 Common CA certificates PEM files from Mozilla
 
-ca-certificates-20191127-r5 webpage:
+ca-certificates-20211220-r0 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-20191127-r5 installed size:
-672 KiB
+ca-certificates-20211220-r0 installed size:
+652 KiB
 
-ca-certificates-20191127-r5 license:
+ca-certificates-20211220-r0 license:
 MPL-2.0 AND MIT
 
 ```
@@ -197,16 +197,16 @@ custom
 ### `apk` package: `expat`
 
 ```console
-expat-2.4.1-r0 description:
+expat-2.4.3-r0 description:
 XML Parser library written in C
 
-expat-2.4.1-r0 webpage:
+expat-2.4.3-r0 webpage:
 http://www.libexpat.org/
 
-expat-2.4.1-r0 installed size:
-188 KiB
+expat-2.4.3-r0 installed size:
+192 KiB
 
-expat-2.4.1-r0 license:
+expat-2.4.3-r0 license:
 MIT
 
 ```
@@ -758,16 +758,16 @@ MIT
 ### `apk` package: `openjdk11-jre`
 
 ```console
-openjdk11-jre-11.0.12_p7-r0 description:
+openjdk11-jre-11.0.14_p9-r0 description:
 Oracle OpenJDK 11 (JRE)
 
-openjdk11-jre-11.0.12_p7-r0 webpage:
+openjdk11-jre-11.0.14_p9-r0 webpage:
 https://github.com/openjdk/jdk11u
 
-openjdk11-jre-11.0.12_p7-r0 installed size:
-696 KiB
+openjdk11-jre-11.0.14_p9-r0 installed size:
+2016 KiB
 
-openjdk11-jre-11.0.12_p7-r0 license:
+openjdk11-jre-11.0.14_p9-r0 license:
 GPL-2.0-with-classpath-exception
 
 ```
@@ -775,16 +775,16 @@ GPL-2.0-with-classpath-exception
 ### `apk` package: `openjdk11-jre-headless`
 
 ```console
-openjdk11-jre-headless-11.0.12_p7-r0 description:
+openjdk11-jre-headless-11.0.14_p9-r0 description:
 Oracle OpenJDK 11 (JRE headless)
 
-openjdk11-jre-headless-11.0.12_p7-r0 webpage:
+openjdk11-jre-headless-11.0.14_p9-r0 webpage:
 https://github.com/openjdk/jdk11u
 
-openjdk11-jre-headless-11.0.12_p7-r0 installed size:
-159 MiB
+openjdk11-jre-headless-11.0.14_p9-r0 installed size:
+158 MiB
 
-openjdk11-jre-headless-11.0.12_p7-r0 license:
+openjdk11-jre-headless-11.0.14_p9-r0 license:
 GPL-2.0-with-classpath-exception
 
 ```
