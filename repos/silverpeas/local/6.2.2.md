@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:af77cb15fd6025fcce4295d50fd7b24f1d020c6ee51e9e22e75461294fea2bb1`
-- Created: `2022-01-07T05:48:05.216183755Z`
+- Image ID: `sha256:91e9f206f9c674d1a7c3a9dd95b94267cfd9e191fbe6be330d88a971e398e899`
+- Created: `2022-02-02T07:20:25.44861698Z`
 - Virtual Size: ~ 3.20 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -1871,13 +1871,13 @@ $ apt-get source -qq --print-uris gdk-pixbuf=2.40.0+dfsg-3ubuntu0.2
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gdk-pixbuf/gdk-pixbuf_2.40.0+dfsg-3ubuntu0.2.debian.tar.xz' gdk-pixbuf_2.40.0+dfsg-3ubuntu0.2.debian.tar.xz 18560 SHA512:64bbaa7879a19745af00cf4c45a800ccbf43362c2ce11d87af519e05129f65110f94587ca1ef0bcbd0d5fe7a42ee9a68720d53ad4a81ade9041608d3d4be9d54
 ```
 
-### `dpkg` source package: `ghostscript=9.50~dfsg-5ubuntu4.4`
+### `dpkg` source package: `ghostscript=9.50~dfsg-5ubuntu4.5`
 
 Binary Packages:
 
-- `ghostscript=9.50~dfsg-5ubuntu4.4`
-- `libgs9:amd64=9.50~dfsg-5ubuntu4.4`
-- `libgs9-common=9.50~dfsg-5ubuntu4.4`
+- `ghostscript=9.50~dfsg-5ubuntu4.5`
+- `libgs9:amd64=9.50~dfsg-5ubuntu4.5`
+- `libgs9-common=9.50~dfsg-5ubuntu4.5`
 
 Licenses: (parsed from: `/usr/share/doc/ghostscript/copyright`, `/usr/share/doc/libgs9/copyright`, `/usr/share/doc/libgs9-common/copyright`)
 
@@ -1907,9 +1907,14 @@ Licenses: (parsed from: `/usr/share/doc/ghostscript/copyright`, `/usr/share/doc/
 - `other`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris ghostscript=9.50~dfsg-5ubuntu4.5
+'http://archive.ubuntu.com/ubuntu/pool/main/g/ghostscript/ghostscript_9.50~dfsg-5ubuntu4.5.dsc' ghostscript_9.50~dfsg-5ubuntu4.5.dsc 2914 SHA512:8be494328aec800786bbfbd4d7fc12a389d05b08a17ff8d6a2f2271ca8fafed025505a14472d9a80f308f6fcab7e0a06d2e865cb4f5622e1439e42565d9bb599
+'http://archive.ubuntu.com/ubuntu/pool/main/g/ghostscript/ghostscript_9.50~dfsg.orig.tar.xz' ghostscript_9.50~dfsg.orig.tar.xz 19139148 SHA512:75730872b02fe7341bf6c84fc4b53002f88d2c4c538dee62f749816a4963740f2a369e3a3760175e0f5b73547d5df805a152f5f0120db79ffecc871f5f14be86
+'http://archive.ubuntu.com/ubuntu/pool/main/g/ghostscript/ghostscript_9.50~dfsg-5ubuntu4.5.debian.tar.xz' ghostscript_9.50~dfsg-5ubuntu4.5.debian.tar.xz 132580 SHA512:f5b8e4b4893735f292c4fd49d884037f657236db0655f1bbf3074952b5a4b7bc4d6ed2e96efa3cbcc0f53c8e3d803117cbb769f369fe3d21900be4d3192e48cf
+```
 
 ### `dpkg` source package: `giflib=5.1.9-1`
 
@@ -8659,17 +8664,17 @@ $ apt-get source -qq --print-uris suitesparse=1:5.7.1+dfsg-2
 'http://archive.ubuntu.com/ubuntu/pool/main/s/suitesparse/suitesparse_5.7.1+dfsg-2.debian.tar.xz' suitesparse_5.7.1+dfsg-2.debian.tar.xz 42744 SHA256:c8c1681fa3a2518795c31f482ebd15160d33f0f9edff81558a09f84c701516f9
 ```
 
-### `dpkg` source package: `systemd=245.4-4ubuntu3.14`
+### `dpkg` source package: `systemd=245.4-4ubuntu3.15`
 
 Binary Packages:
 
-- `libnss-systemd:amd64=245.4-4ubuntu3.14`
-- `libpam-systemd:amd64=245.4-4ubuntu3.14`
-- `libsystemd0:amd64=245.4-4ubuntu3.14`
-- `libudev1:amd64=245.4-4ubuntu3.14`
-- `systemd=245.4-4ubuntu3.14`
-- `systemd-sysv=245.4-4ubuntu3.14`
-- `systemd-timesyncd=245.4-4ubuntu3.14`
+- `libnss-systemd:amd64=245.4-4ubuntu3.15`
+- `libpam-systemd:amd64=245.4-4ubuntu3.15`
+- `libsystemd0:amd64=245.4-4ubuntu3.15`
+- `libudev1:amd64=245.4-4ubuntu3.15`
+- `systemd=245.4-4ubuntu3.15`
+- `systemd-sysv=245.4-4ubuntu3.15`
+- `systemd-timesyncd=245.4-4ubuntu3.15`
 
 Licenses: (parsed from: `/usr/share/doc/libnss-systemd/copyright`, `/usr/share/doc/libpam-systemd/copyright`, `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/libudev1/copyright`, `/usr/share/doc/systemd/copyright`, `/usr/share/doc/systemd-sysv/copyright`, `/usr/share/doc/systemd-timesyncd/copyright`)
 
@@ -8682,9 +8687,14 @@ Licenses: (parsed from: `/usr/share/doc/libnss-systemd/copyright`, `/usr/share/d
 - `LGPL-2.1+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris systemd=245.4-4ubuntu3.15
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.15.dsc' systemd_245.4-4ubuntu3.15.dsc 4954 SHA512:996d262b9ce6febe25690e087bc12c2da957a9a1554dd4d186346187d0af144c3759f14e46cc052601684c9c1c65dd76ffaca0fbaad19d7819ade41d4f045e26
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4.orig.tar.gz' systemd_245.4.orig.tar.gz 9000780 SHA512:02036bb1ab05301a9d0dfdd4b9c9376e90134474482531e6e292122380be2f24f99177493dd3af6f8af1a8ed2599ee0996da91a3b1b7872bbfaf26a1c3e61b4c
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.15.debian.tar.xz' systemd_245.4-4ubuntu3.15.debian.tar.xz 273168 SHA512:775ee33b35d6a9891ded16b381fb788f9d0cb01020720de5102175a9e4024a53a358d8b13928f2a2fb7cc2b05bf20bd80a913b314e69111b9dfa167a1ec89e45
+```
 
 ### `dpkg` source package: `sysvinit=2.96-2.1ubuntu1`
 
@@ -8946,14 +8956,14 @@ $ apt-get source -qq --print-uris util-linux=2.34-0.1ubuntu9.1
 'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.34-0.1ubuntu9.1.debian.tar.xz' util-linux_2.34-0.1ubuntu9.1.debian.tar.xz 91620 SHA512:b0ed129f1e7febe6a7370ef2becaca376b7bea478af084769f61c0b78cf4d3f5a0b5d8fe7c75017e74a8c4c6d22a37a2a9d7221c60822677220fa719d7f3b609
 ```
 
-### `dpkg` source package: `vim=2:8.1.2269-1ubuntu5.4`
+### `dpkg` source package: `vim=2:8.1.2269-1ubuntu5.7`
 
 Binary Packages:
 
-- `vim=2:8.1.2269-1ubuntu5.4`
-- `vim-common=2:8.1.2269-1ubuntu5.4`
-- `vim-runtime=2:8.1.2269-1ubuntu5.4`
-- `xxd=2:8.1.2269-1ubuntu5.4`
+- `vim=2:8.1.2269-1ubuntu5.7`
+- `vim-common=2:8.1.2269-1ubuntu5.7`
+- `vim-runtime=2:8.1.2269-1ubuntu5.7`
+- `xxd=2:8.1.2269-1ubuntu5.7`
 
 Licenses: (parsed from: `/usr/share/doc/vim/copyright`, `/usr/share/doc/vim-common/copyright`, `/usr/share/doc/vim-runtime/copyright`, `/usr/share/doc/xxd/copyright`)
 
@@ -8981,9 +8991,14 @@ Licenses: (parsed from: `/usr/share/doc/vim/copyright`, `/usr/share/doc/vim-comm
 - `XPM`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris vim=2:8.1.2269-1ubuntu5.7
+'http://archive.ubuntu.com/ubuntu/pool/main/v/vim/vim_8.1.2269-1ubuntu5.7.dsc' vim_8.1.2269-1ubuntu5.7.dsc 2936 SHA512:0e9387096287debf34f56d053956487adf1551cc49615b83d568c30ed0fb87f29c8fed56251a998cb9b352d05ca62da610883ab9319b52fb6f8bacb4efc9d87d
+'http://archive.ubuntu.com/ubuntu/pool/main/v/vim/vim_8.1.2269.orig.tar.gz' vim_8.1.2269.orig.tar.gz 14590233 SHA512:5194817a5665e08816e87e3b10219e19510ca87c5c377ddc0a50aa84ffd4d7391badad3e993f83802d6da5e9da8834635c1acbdd4a909e75b4947f99f13c1746
+'http://archive.ubuntu.com/ubuntu/pool/main/v/vim/vim_8.1.2269-1ubuntu5.7.debian.tar.xz' vim_8.1.2269-1ubuntu5.7.debian.tar.xz 214960 SHA512:4d77e9912878df3f5eaf85d00a6a0a201393530b3681b30d43a15812d5aebc0795ff810863f3955b5a2fac499b40965d531c5cce9567918c5dd4a6cb5836e25a
+```
 
 ### `dpkg` source package: `vulkan-loader=1.2.131.2-1`
 
