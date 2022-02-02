@@ -1,7 +1,7 @@
 ## `websphere-liberty:latest`
 
 ```console
-$ docker pull websphere-liberty@sha256:6a82ebbc509a98d8376f581e0c0d7fe136d83cae046976f8c19897342049dca7
+$ docker pull websphere-liberty@sha256:32d04e4d823f6682982326360f3fa4caeeb5b235cd665ba05ef6403a6ef74cc6
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -156,144 +156,144 @@ RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /outpu
 ### `websphere-liberty:latest` - linux; ppc64le
 
 ```console
-$ docker pull websphere-liberty@sha256:e53082942ca99dbb3d0de59c77ea7de01aa084bdd7cf565d13ddab6fc4564af5
+$ docker pull websphere-liberty@sha256:90866fcb374315d224ccd6f53dd26b2166e79bda95726a25dc3373fea2a25279
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **466.0 MB (465979005 bytes)**  
+-	Total Size: **466.1 MB (466059188 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6622d26f3292c95a7626ba6ec9e83d0e89ee87dd77ce686bf3e6dfee9ff80a38`
+-	Image ID: `sha256:8f21f2cb7cf9c1516aa78f39e4414381affc89efb0f819cfbd4f727f0097e35f`
 -	Entrypoint: `["\/opt\/ibm\/helpers\/runtime\/docker-server.sh"]`
 -	Default Command: `["\/opt\/ibm\/wlp\/bin\/server","run","defaultServer"]`
 
 ```dockerfile
-# Fri, 07 Jan 2022 02:19:52 GMT
-ADD file:e29b7078eb9c78ec6f3931c4beea820e4b7fe5d0d02e02e220c083dcd603aad1 in / 
-# Fri, 07 Jan 2022 02:19:55 GMT
+# Wed, 02 Feb 2022 03:49:58 GMT
+ADD file:19b6b516bfde37805273abae0012aaceb45030dcc0c1dbc11828a4dfa6549c29 in / 
+# Wed, 02 Feb 2022 03:50:03 GMT
 CMD ["bash"]
-# Fri, 07 Jan 2022 03:28:44 GMT
+# Wed, 02 Feb 2022 06:01:20 GMT
 MAINTAINER Jayashree Gopi <jayasg12@in.ibm.com> (@jayasg12)
-# Fri, 07 Jan 2022 03:29:15 GMT
+# Wed, 02 Feb 2022 06:01:55 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends wget ca-certificates     && rm -rf /var/lib/apt/lists/*
-# Fri, 07 Jan 2022 03:29:17 GMT
+# Wed, 02 Feb 2022 06:01:57 GMT
 ENV JAVA_VERSION=8.0.7.0
-# Fri, 07 Jan 2022 03:30:08 GMT
+# Wed, 02 Feb 2022 06:02:55 GMT
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        amd64|x86_64)          ESUM='18d56640102a5e6b1326cc762dbf9ae19f00f81574f38ae1857d9f65761123ff';          YML_FILE='8.0/jre/linux/x86_64/index.yml';          ;;        i386)          ESUM='24af7fb9be209a68314dc341e5b62284d3625567872286f484cb296b9c551974';          YML_FILE='8.0/jre/linux/i386/index.yml';          ;;        ppc64el|ppc64le)          ESUM='75ccfbaf6526ab854e193060110a9bef7878d186a95c3e0d57448ab96c09aa1a';          YML_FILE='8.0/jre/linux/ppc64le/index.yml';          ;;        s390)          ESUM='200621b68eb39ae00ee875b31d6455bb2dcc5c8d050a4e4f8aa4fc7525a53d35';          YML_FILE='8.0/jre/linux/s390/index.yml';          ;;        s390x)          ESUM='73f941590d60287d9d480884698120149bf2f9b8da04d2501b450f320a5be181';          YML_FILE='8.0/jre/linux/s390x/index.yml';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     BASE_URL="https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/java/meta/";     wget -q -U UA_IBM_JAVA_Docker -O /tmp/index.yml ${BASE_URL}/${YML_FILE};     JAVA_URL=$(sed -n '/^'${JAVA_VERSION}:'/{n;s/\s*uri:\s//p}'< /tmp/index.yml);     wget -q -U UA_IBM_JAVA_Docker -O /tmp/ibm-java.bin ${JAVA_URL};     echo "${ESUM}  /tmp/ibm-java.bin" | sha256sum -c -;     echo "INSTALLER_UI=silent" > /tmp/response.properties;     echo "USER_INSTALL_DIR=/opt/ibm/java" >> /tmp/response.properties;     echo "LICENSE_ACCEPTED=TRUE" >> /tmp/response.properties;     mkdir -p /opt/ibm;     chmod +x /tmp/ibm-java.bin;     /tmp/ibm-java.bin -i silent -f /tmp/response.properties;     rm -f /tmp/response.properties;     rm -f /tmp/index.yml;     rm -f /tmp/ibm-java.bin;
-# Fri, 07 Jan 2022 03:30:11 GMT
+# Wed, 02 Feb 2022 06:03:02 GMT
 ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/jre/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin IBM_JAVA_OPTIONS=-XX:+UseContainerSupport
-# Fri, 07 Jan 2022 07:14:00 GMT
+# Wed, 02 Feb 2022 12:25:21 GMT
 ARG VERBOSE=false
-# Fri, 07 Jan 2022 07:14:02 GMT
+# Wed, 02 Feb 2022 12:25:23 GMT
 ARG OPENJ9_SCC=true
-# Tue, 25 Jan 2022 23:37:02 GMT
+# Wed, 02 Feb 2022 12:25:26 GMT
 ARG EN_SHA=4889b338a814eb953faba1135d105046ae7d7a62eaf75fb05804214b9fd8ef3a
-# Tue, 25 Jan 2022 23:37:05 GMT
+# Wed, 02 Feb 2022 12:25:29 GMT
 ARG NON_IBM_SHA=8f56725d48ec762b9b270c3bf34fba5b67472f0e1d8d0326a6a25483d363bc9c
-# Tue, 25 Jan 2022 23:37:06 GMT
+# Wed, 02 Feb 2022 12:25:31 GMT
 ARG NOTICES_SHA=73325d908f5c8d24cba975c429c58bf7f631a947ddc206b1081f2c347e30bff1
-# Tue, 25 Jan 2022 23:37:07 GMT
+# Wed, 02 Feb 2022 12:25:32 GMT
 LABEL org.opencontainers.image.authors=Leo Christy Jesuraj, Arthur De Magalhaes, Chris Potter org.opencontainers.image.vendor=IBM org.opencontainers.image.url=http://wasdev.net org.opencontainers.image.documentation=https://www.ibm.com/support/knowledgecenter/SSAW57_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/cwlp_about.html org.opencontainers.image.version=22.0.0.1 org.opencontainers.image.revision=cl22.0.0.1920-1900 org.opencontainers.image.description=This image contains the WebSphere Liberty runtime with IBM's Java and Ubuntu as the base OS.  For more information on this image please see https://github.com/WASdev/ci.docker#building-an-application-image org.opencontainers.image.title=IBM WebSphere Liberty
-# Tue, 25 Jan 2022 23:37:10 GMT
+# Wed, 02 Feb 2022 12:25:36 GMT
 ENV LIBERTY_VERSION=22.0.0_01
-# Tue, 25 Jan 2022 23:37:12 GMT
+# Wed, 02 Feb 2022 12:25:37 GMT
 ARG LIBERTY_URL
-# Tue, 25 Jan 2022 23:37:15 GMT
+# Wed, 02 Feb 2022 12:25:40 GMT
 ARG DOWNLOAD_OPTIONS=
-# Tue, 25 Jan 2022 23:37:53 GMT
+# Wed, 02 Feb 2022 12:28:33 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=4889b338a814eb953faba1135d105046ae7d7a62eaf75fb05804214b9fd8ef3a NON_IBM_SHA=8f56725d48ec762b9b270c3bf34fba5b67472f0e1d8d0326a6a25483d363bc9c NOTICES_SHA=73325d908f5c8d24cba975c429c58bf7f631a947ddc206b1081f2c347e30bff1 OPENJ9_SCC=true VERBOSE=false
 RUN apt-get update     && apt-get install -y --no-install-recommends unzip wget openssl     && rm -rf /var/lib/apt/lists/*     && mkdir -p /licenses/     && useradd -u 1001 -r -g 0 -s /usr/sbin/nologin default     && LIBERTY_URL=${LIBERTY_URL:-$(wget -q -O - https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/index.yml  | grep $LIBERTY_VERSION -A 6 | sed -n 's/\s*kernel:\s//p' | tr -d '\r' )}      && wget $DOWNLOAD_OPTIONS $LIBERTY_URL -U UA-IBM-WebSphere-Liberty-Docker -O /tmp/wlp.zip     && unzip -q /tmp/wlp.zip -d /opt/ibm     && rm /tmp/wlp.zip     && chown -R 1001:0 /opt/ibm/wlp     && chmod -R g+rw /opt/ibm/wlp     && LICENSE_BASE=$(wget -q -O - https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/index.yml  | grep $LIBERTY_VERSION -A 6 | sed -n 's/\s*license:\s//p' | sed 's/\(.*\)\/.*/\1\//' | tr -d '\r')     && wget ${LICENSE_BASE}en.html -U UA-IBM-WebSphere-Liberty-Docker -O /licenses/en.html     && wget ${LICENSE_BASE}non_ibm_license.html -U UA-IBM-WebSphere-Liberty-Docker -O /licenses/non_ibm_license.html     && wget ${LICENSE_BASE}notices.html -U UA-IBM-WebSphere-Liberty-Docker -O /licenses/notices.html     && echo "$EN_SHA /licenses/en.html" | sha256sum -c --strict --check     && echo "$NON_IBM_SHA /licenses/non_ibm_license.html" | sha256sum -c --strict --check     && echo "$NOTICES_SHA /licenses/notices.html" | sha256sum -c --strict --check     && apt-get purge --auto-remove -y unzip     && apt-get purge --auto-remove -y wget     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Jan 2022 23:37:55 GMT
+# Wed, 02 Feb 2022 12:28:35 GMT
 ENV PATH=/opt/ibm/wlp/bin:/opt/ibm/helpers/build:/opt/ibm/java/jre/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 25 Jan 2022 23:37:56 GMT
+# Wed, 02 Feb 2022 12:28:38 GMT
 LABEL ProductID=fbf6a96d49214c0abc6a3bc5da6e48cd ProductName=WebSphere Application Server Liberty ProductVersion=22.0.0.1 BuildLabel=cl22.0.0.1920-1900
-# Tue, 25 Jan 2022 23:37:59 GMT
+# Wed, 02 Feb 2022 12:28:40 GMT
 ENV LOG_DIR=/logs WLP_OUTPUT_DIR=/opt/ibm/wlp/output OPENJ9_SCC=true
-# Tue, 25 Jan 2022 23:38:12 GMT
+# Wed, 02 Feb 2022 12:28:55 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=4889b338a814eb953faba1135d105046ae7d7a62eaf75fb05804214b9fd8ef3a NON_IBM_SHA=8f56725d48ec762b9b270c3bf34fba5b67472f0e1d8d0326a6a25483d363bc9c NOTICES_SHA=73325d908f5c8d24cba975c429c58bf7f631a947ddc206b1081f2c347e30bff1 VERBOSE=false
 RUN /opt/ibm/wlp/bin/server create     && rm -rf $WLP_OUTPUT_DIR/.classCache /output/workarea
-# Tue, 25 Jan 2022 23:38:13 GMT
+# Wed, 02 Feb 2022 12:28:56 GMT
 COPY dir:489212918c9117d43d99cf93a14feddea56ce0482c252c77c33827f9d0160cb8 in /opt/ibm/helpers/ 
-# Tue, 25 Jan 2022 23:38:15 GMT
+# Wed, 02 Feb 2022 12:28:58 GMT
 COPY dir:1cf5cc2663c6235241a5228340a9c566587fe27b3e434a313debbf75dacd7a4b in /opt/ibm/fixes/ 
-# Tue, 25 Jan 2022 23:38:23 GMT
+# Wed, 02 Feb 2022 12:29:07 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=4889b338a814eb953faba1135d105046ae7d7a62eaf75fb05804214b9fd8ef3a NON_IBM_SHA=8f56725d48ec762b9b270c3bf34fba5b67472f0e1d8d0326a6a25483d363bc9c NOTICES_SHA=73325d908f5c8d24cba975c429c58bf7f631a947ddc206b1081f2c347e30bff1 VERBOSE=false
 RUN mkdir /logs     && mkdir /etc/wlp     && mkdir -p /opt/ibm/wlp/usr/shared/resources/lib.index.cache     && mkdir -p /home/default     && mkdir /output     && chmod -t /output     && rm -rf /output     && ln -s $WLP_OUTPUT_DIR/defaultServer /output     && ln -s /opt/ibm/wlp/usr/servers/defaultServer /config     && ln -s /opt/ibm /liberty     && ln -s /opt/ibm/wlp/usr/shared/resources/lib.index.cache /lib.index.cache     && mkdir -p /config/configDropins/defaults     && mkdir -p /config/configDropins/overrides     && chown -R 1001:0 /config     && chmod -R g+rw /config     && chown -R 1001:0 /opt/ibm/helpers     && chmod -R g+rwx /opt/ibm/helpers     && chown -R 1001:0 /opt/ibm/fixes     && chmod -R g+rwx /opt/ibm/fixes     && chown -R 1001:0 /opt/ibm/wlp/usr     && chmod -R g+rw /opt/ibm/wlp/usr     && chown -R 1001:0 /opt/ibm/wlp/output     && chmod -R g+rw /opt/ibm/wlp/output     && chown -R 1001:0 /logs     && chmod -R g+rw /logs     && chown -R 1001:0 /etc/wlp     && chmod -R g+rw /etc/wlp     && chown -R 1001:0 /home/default     && chmod -R g+rw /home/default
-# Tue, 25 Jan 2022 23:38:40 GMT
+# Wed, 02 Feb 2022 12:29:24 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=4889b338a814eb953faba1135d105046ae7d7a62eaf75fb05804214b9fd8ef3a NON_IBM_SHA=8f56725d48ec762b9b270c3bf34fba5b67472f0e1d8d0326a6a25483d363bc9c NOTICES_SHA=73325d908f5c8d24cba975c429c58bf7f631a947ddc206b1081f2c347e30bff1 VERBOSE=false
 RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /output/messaging /output/resources/security /logs/* $WLP_OUTPUT_DIR/.classCache     && chown -R 1001:0 /opt/ibm/wlp/output     && chmod -R g+rwx /opt/ibm/wlp/output
-# Tue, 25 Jan 2022 23:38:42 GMT
+# Wed, 02 Feb 2022 12:29:30 GMT
 ENV RANDFILE=/tmp/.rnd IBM_JAVA_OPTIONS=-Xshareclasses:name=liberty,readonly,nonfatal,cacheDir=/output/.classCache/ -Dosgi.checkConfiguration=false -XX:+UseContainerSupport
-# Tue, 25 Jan 2022 23:38:45 GMT
+# Wed, 02 Feb 2022 12:29:32 GMT
 USER 1001
-# Tue, 25 Jan 2022 23:38:47 GMT
+# Wed, 02 Feb 2022 12:29:35 GMT
 EXPOSE 9080 9443
-# Tue, 25 Jan 2022 23:38:49 GMT
+# Wed, 02 Feb 2022 12:29:38 GMT
 ENTRYPOINT ["/opt/ibm/helpers/runtime/docker-server.sh"]
-# Tue, 25 Jan 2022 23:38:51 GMT
+# Wed, 02 Feb 2022 12:29:43 GMT
 CMD ["/opt/ibm/wlp/bin/server" "run" "defaultServer"]
-# Tue, 25 Jan 2022 23:41:09 GMT
+# Wed, 02 Feb 2022 12:35:15 GMT
 ARG VERBOSE=false
-# Tue, 25 Jan 2022 23:41:11 GMT
+# Wed, 02 Feb 2022 12:35:17 GMT
 ARG REPOSITORIES_PROPERTIES=
-# Tue, 25 Jan 2022 23:46:15 GMT
+# Wed, 02 Feb 2022 12:40:12 GMT
 # ARGS: REPOSITORIES_PROPERTIES= VERBOSE=false
 RUN if [ ! -z $REPOSITORIES_PROPERTIES ]; then mkdir /opt/ibm/wlp/etc/   && echo $REPOSITORIES_PROPERTIES > /opt/ibm/wlp/etc/repositories.properties; fi   && installUtility install --acceptLicense baseBundle   && if [ ! -z $REPOSITORIES_PROPERTIES ]; then rm /opt/ibm/wlp/etc/repositories.properties; fi   && rm -rf /output/workarea /output/logs   && find /opt/ibm/wlp ! -perm -g=rw -print0 | xargs -r -0 chmod g+rw
-# Tue, 25 Jan 2022 23:46:19 GMT
+# Wed, 02 Feb 2022 12:40:17 GMT
 COPY --chown=1001:0file:f212cc38605f508baa0f75a07632700533ad28792dd9761a792209e709b00f23 in /config/ 
-# Tue, 25 Jan 2022 23:47:23 GMT
+# Wed, 02 Feb 2022 12:41:14 GMT
 # ARGS: REPOSITORIES_PROPERTIES= VERBOSE=false
 RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /output/messaging /output/resources/security /logs/* $WLP_OUTPUT_DIR/.classCache     && find /opt/ibm/wlp/output ! -path "*.classCache*" ! -perm -g=rwx -print0 | xargs -0 -r chmod g+rwx
 ```
 
 -	Layers:
-	-	`sha256:f130035f6453da800db2a1c34f617d35285297b1e549cc5fe138db9ecb704f0b`  
-		Last Modified: Fri, 07 Jan 2022 02:22:21 GMT  
-		Size: 30.4 MB (30432347 bytes)  
+	-	`sha256:1dc99fe180768d17487534d27fca7d2aea3e7473c284314a65af7be77144eeaa`  
+		Last Modified: Wed, 02 Feb 2022 03:52:51 GMT  
+		Size: 30.4 MB (30437685 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:89db02523773279c64e3768c4c557e84eb48533e8cd88fa8b305a4631fe1620f`  
-		Last Modified: Fri, 07 Jan 2022 03:32:43 GMT  
-		Size: 3.1 MB (3081902 bytes)  
+	-	`sha256:10e519c40c78b488d71991dd0054bffe8260611286580cb61463ffb1d4b81bb2`  
+		Last Modified: Wed, 02 Feb 2022 06:05:57 GMT  
+		Size: 3.1 MB (3081867 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8372d0c07db9ee4af75625eda00922334eb122c9730ed278ccf2668f02d09f82`  
-		Last Modified: Fri, 07 Jan 2022 03:32:57 GMT  
-		Size: 128.3 MB (128256173 bytes)  
+	-	`sha256:d5bc06ac8fcfae7601e6713eb3490af9d0691a2919c0470e01afd618fff11403`  
+		Last Modified: Wed, 02 Feb 2022 06:06:11 GMT  
+		Size: 128.3 MB (128256175 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:475bb3417bf6ff364123967a770248133ab925eb6395df236943481d7a65b732`  
-		Last Modified: Tue, 25 Jan 2022 23:55:20 GMT  
-		Size: 14.1 MB (14130769 bytes)  
+	-	`sha256:98bdd8addeaf2c0b6bb30d08a19e51130187d8e5e24e046eced8cf481f611bf8`  
+		Last Modified: Wed, 02 Feb 2022 13:30:18 GMT  
+		Size: 14.1 MB (14130794 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:11826c8657c1d52b0fb45e40297c6010a446b3d2ba1a761182812cdc9df6c864`  
-		Last Modified: Tue, 25 Jan 2022 23:55:15 GMT  
-		Size: 701.0 B  
+	-	`sha256:6e4224b13f14b349ab121fc8921d706e872baf263faf40b5569a0be3a90dc641`  
+		Last Modified: Wed, 02 Feb 2022 13:30:06 GMT  
+		Size: 700.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:841ef7af7eccf58dfe3bb7bcbc88dd1bf51463c49fc9e80612695a54f7327fa8`  
-		Last Modified: Tue, 25 Jan 2022 23:55:15 GMT  
-		Size: 9.7 KB (9672 bytes)  
+	-	`sha256:9540b5678c1e636d2cddfa7fb7e893576b7b68d50b52dfa5aace97d09abf9c08`  
+		Last Modified: Wed, 02 Feb 2022 13:30:06 GMT  
+		Size: 9.7 KB (9669 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:14c5019794d1dc8fe1a55f649e87c5902cbfff7f9327b0d0c9456486aa7d5862`  
-		Last Modified: Tue, 25 Jan 2022 23:55:15 GMT  
-		Size: 273.0 B  
+	-	`sha256:426b46c2de6c5cab17c57667b78bc99a62b010696889b3a733865e5fa307038b`  
+		Last Modified: Wed, 02 Feb 2022 13:30:06 GMT  
+		Size: 272.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5ae2e35a92f7b74dd19272d8ab64cf83beba92f2bdfc9531c4d5256d585046df`  
-		Last Modified: Tue, 25 Jan 2022 23:55:15 GMT  
-		Size: 10.7 KB (10666 bytes)  
+	-	`sha256:10c0353910905dbcb8e90ac0424838bad1bc1490244ec658b67125e339bb37e5`  
+		Last Modified: Wed, 02 Feb 2022 13:30:06 GMT  
+		Size: 10.7 KB (10665 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:88c692a5a5f5829c5a72db011cf970f6b45297eb12ddecc2805bb21bf6393ffc`  
-		Last Modified: Tue, 25 Jan 2022 23:55:16 GMT  
-		Size: 5.2 MB (5214016 bytes)  
+	-	`sha256:1b548213c4a4358f74e22dbc35c05cfbf76610870900e8cb282aefe4d318c9b7`  
+		Last Modified: Wed, 02 Feb 2022 13:30:08 GMT  
+		Size: 5.3 MB (5255386 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:097824fed894a925d00c793b105d7d3817497995a7883d18d7f5bbff8ee9e7da`  
-		Last Modified: Tue, 25 Jan 2022 23:56:05 GMT  
-		Size: 271.1 MB (271128413 bytes)  
+	-	`sha256:b12a339184bb89b8167f43d5fc1a94213349bc819c866d54b59432d8d6a7cdc2`  
+		Last Modified: Wed, 02 Feb 2022 13:31:48 GMT  
+		Size: 271.1 MB (271129407 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e03ce43b8ff2c28e974a4f611d301bc15062ebb731cf88f55678f7087228b981`  
-		Last Modified: Tue, 25 Jan 2022 23:55:41 GMT  
-		Size: 949.0 B  
+	-	`sha256:4d05420f0f7365a419a31f6712d794d606bcf351ece8f9a04f38bb297c5496de`  
+		Last Modified: Wed, 02 Feb 2022 13:30:43 GMT  
+		Size: 944.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:345db745ca862919ca086830317f462c563769b2a00ebd9e4e37b079bd77bf3e`  
-		Last Modified: Tue, 25 Jan 2022 23:55:44 GMT  
-		Size: 13.7 MB (13713124 bytes)  
+	-	`sha256:d2acb9725035238f7f7d7fee9a0a0032aac45f265c569375e104f1bf01a6b45a`  
+		Last Modified: Wed, 02 Feb 2022 13:30:46 GMT  
+		Size: 13.7 MB (13745624 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `websphere-liberty:latest` - linux; s390x
