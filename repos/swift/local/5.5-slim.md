@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:9662b4f6ea2b4146e6b16a86c6fce43099ebeb21c9402e9845c0ccba0ed60ea7`
-- Created: `2022-01-07T06:05:22.738771092Z`
-- Virtual Size: ~ 398.01 Mb  
+- Image ID: `sha256:a8e5c298412a625c51bb829c37d1d4ade7d635b997fb558bcb55ba2d9f8f05bf`
+- Created: `2022-02-02T08:12:08.238460739Z`
+- Virtual Size: ~ 398.03 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["bash"]`
@@ -1463,20 +1463,25 @@ $ apt-get source -qq --print-uris sensible-utils=0.0.12
 'http://archive.ubuntu.com/ubuntu/pool/main/s/sensible-utils/sensible-utils_0.0.12.tar.xz' sensible-utils_0.0.12.tar.xz 62152 SHA256:99ba2ebf8c57447c69d426b99b84ff9dc817be0bc4988ec6890a14558c529e2e
 ```
 
-### `dpkg` source package: `shadow=1:4.5-1ubuntu2`
+### `dpkg` source package: `shadow=1:4.5-1ubuntu2.2`
 
 Binary Packages:
 
-- `login=1:4.5-1ubuntu2`
-- `passwd=1:4.5-1ubuntu2`
+- `login=1:4.5-1ubuntu2.2`
+- `passwd=1:4.5-1ubuntu2.2`
 
 Licenses: (parsed from: `/usr/share/doc/login/copyright`, `/usr/share/doc/passwd/copyright`)
 
 - `GPL-2`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris shadow=1:4.5-1ubuntu2.2
+'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.5-1ubuntu2.2.dsc' shadow_4.5-1ubuntu2.2.dsc 2401 SHA512:edc71f8392ffedba675d403d2c54084bbbc4b05be63ec6b77055a7fa82647779f26a427d3c12392567e27da3b831b506b5b34ffa75c92b64162133098dd666f0
+'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.5.orig.tar.xz' shadow_4.5.orig.tar.xz 1344524 SHA512:4278544efdd6d800a3c46cfcb144f209ace14ebe017ba1c0d05425fac7868062a73afa8522036a2bc0a16f6f1e7c16373a204463221012367ce0e8e9ef4c4a4d
+'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.5-1ubuntu2.2.debian.tar.xz' shadow_4.5-1ubuntu2.2.debian.tar.xz 473640 SHA512:2f1b28b796e1157164859d63e129b8e08dc297610580396993e4fae6f491ed5d56581461540e3a020ea44838431e36e828ac15d575f3b1849789415493095d6e
+```
 
 ### `dpkg` source package: `sqlite3=3.22.0-1ubuntu0.4`
 
