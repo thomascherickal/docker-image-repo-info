@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:cdbe20bf6681fcf90b21fc4ef4481d8e679fe76fb54f5f9b6125f53e2616189b`
-- Created: `2022-01-24T19:39:49.431035318Z`
+- Image ID: `sha256:87baf064e031d9efbc2d50e06558842a6fbe30082d964e583ce9df71baefeffc`
+- Created: `2022-02-02T03:26:01.608025013Z`
 - Virtual Size: ~ 809.14 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -1801,11 +1801,11 @@ $ apt-get source -qq --print-uris ignition-fuel-tools4=4.4.0-1~focal
 'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-fuel-tools4/ignition-fuel-tools4_4.4.0-1~focal.debian.tar.xz' ignition-fuel-tools4_4.4.0-1~focal.debian.tar.xz 1732 SHA256:4245c96b9fc508567284c89b549902996e9da24e3dcd3227b4506b597d04bfd2
 ```
 
-### `dpkg` source package: `ignition-math6=6.9.2-1~focal`
+### `dpkg` source package: `ignition-math6=6.10.0-1~focal`
 
 Binary Packages:
 
-- `libignition-math6:amd64=6.9.2-1~focal`
+- `libignition-math6:amd64=6.10.0-1~focal`
 
 Licenses: (parsed from: `/usr/share/doc/libignition-math6/copyright`)
 
@@ -1813,9 +1813,14 @@ Licenses: (parsed from: `/usr/share/doc/libignition-math6/copyright`)
 - `Apache-2.0`
 - `BSD-3-clause`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris ignition-math6=6.10.0-1~focal
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.10.0-1~focal.dsc' ignition-math6_6.10.0-1~focal.dsc 1620 SHA256:9e0cbdd09fbac61ed3385bcf3f06574fd13ba7a017441e21f0b05e08c046fdf9
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.10.0.orig.tar.bz2' ignition-math6_6.10.0.orig.tar.bz2 479660 SHA256:8de0f92a5a2bbce84695ba75ab798c22d32da54be454736af6bbcb6eed404902
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.10.0-1~focal.debian.tar.xz' ignition-math6_6.10.0-1~focal.debian.tar.xz 4264 SHA256:c642b7b7479dca901f473af0e6b2d3e9c2d9505301241a009a9e7412c2cc45a6
+```
 
 ### `dpkg` source package: `ignition-msgs5=5.8.1-1~focal`
 
@@ -6003,12 +6008,12 @@ $ apt-get source -qq --print-uris superlu=5.2.1+dfsg1-4
 'http://archive.ubuntu.com/ubuntu/pool/universe/s/superlu/superlu_5.2.1+dfsg1-4.debian.tar.xz' superlu_5.2.1+dfsg1-4.debian.tar.xz 6436 SHA256:3f4af1a6931b6a2d0e5fad02aa57af8c2d9773bcfbdf2230fd866184242b69f6
 ```
 
-### `dpkg` source package: `systemd=245.4-4ubuntu3.14`
+### `dpkg` source package: `systemd=245.4-4ubuntu3.15`
 
 Binary Packages:
 
-- `libsystemd0:amd64=245.4-4ubuntu3.14`
-- `libudev1:amd64=245.4-4ubuntu3.14`
+- `libsystemd0:amd64=245.4-4ubuntu3.15`
+- `libudev1:amd64=245.4-4ubuntu3.15`
 
 Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/libudev1/copyright`)
 
@@ -6021,9 +6026,14 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris systemd=245.4-4ubuntu3.15
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.15.dsc' systemd_245.4-4ubuntu3.15.dsc 4954 SHA512:996d262b9ce6febe25690e087bc12c2da957a9a1554dd4d186346187d0af144c3759f14e46cc052601684c9c1c65dd76ffaca0fbaad19d7819ade41d4f045e26
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4.orig.tar.gz' systemd_245.4.orig.tar.gz 9000780 SHA512:02036bb1ab05301a9d0dfdd4b9c9376e90134474482531e6e292122380be2f24f99177493dd3af6f8af1a8ed2599ee0996da91a3b1b7872bbfaf26a1c3e61b4c
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.15.debian.tar.xz' systemd_245.4-4ubuntu3.15.debian.tar.xz 273168 SHA512:775ee33b35d6a9891ded16b381fb788f9d0cb01020720de5102175a9e4024a53a358d8b13928f2a2fb7cc2b05bf20bd80a913b314e69111b9dfa167a1ec89e45
+```
 
 ### `dpkg` source package: `sysvinit=2.96-2.1ubuntu1`
 

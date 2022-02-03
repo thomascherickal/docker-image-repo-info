@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:9b5f47a011a580f3b3b5ab86ea6d9fb01b28382c082fc9df7f18ecdecfe39e45`
-- Created: `2022-01-07T05:08:18.64079766Z`
-- Virtual Size: ~ 647.68 Mb  
+- Image ID: `sha256:28c50f255be2c36c7e2f8ee8a112fe6a2668e3cfe3628dbf616e23788f5057a6`
+- Created: `2022-02-02T03:10:28.658190761Z`
+- Virtual Size: ~ 647.70 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/gzserver_entrypoint.sh"]`
@@ -5226,11 +5226,11 @@ $ apt-get source -qq --print-uris qtbase-opensource-src=5.9.5+dfsg-0ubuntu2.6
 'http://archive.ubuntu.com/ubuntu/pool/main/q/qtbase-opensource-src/qtbase-opensource-src_5.9.5+dfsg-0ubuntu2.6.debian.tar.xz' qtbase-opensource-src_5.9.5+dfsg-0ubuntu2.6.debian.tar.xz 267128 SHA512:5d08f10b6474e0d41c551dbad74288e363cc2838561dfa26fdb79b5ffa698954f30068fa562c97c6f8994eab44873ce98b2b2abb593396ac8405e3afdd45ad5e
 ```
 
-### `dpkg` source package: `qtsvg-opensource-src=5.9.5-0ubuntu1`
+### `dpkg` source package: `qtsvg-opensource-src=5.9.5-0ubuntu1.1`
 
 Binary Packages:
 
-- `libqt5svg5:amd64=5.9.5-0ubuntu1`
+- `libqt5svg5:amd64=5.9.5-0ubuntu1.1`
 
 Licenses: (parsed from: `/usr/share/doc/libqt5svg5/copyright`)
 
@@ -5247,10 +5247,10 @@ Licenses: (parsed from: `/usr/share/doc/libqt5svg5/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris qtsvg-opensource-src=5.9.5-0ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/q/qtsvg-opensource-src/qtsvg-opensource-src_5.9.5-0ubuntu1.dsc' qtsvg-opensource-src_5.9.5-0ubuntu1.dsc 2913 SHA256:f795c2c9154147af3a7114ca2884f32f272bedb664aeddfdd80caacc128b76c4
-'http://archive.ubuntu.com/ubuntu/pool/main/q/qtsvg-opensource-src/qtsvg-opensource-src_5.9.5.orig.tar.xz' qtsvg-opensource-src_5.9.5.orig.tar.xz 1778820 SHA256:62222e435cee458c67c810832aae68b90a11285e486473fe2675cd6ed4f4e3c2
-'http://archive.ubuntu.com/ubuntu/pool/main/q/qtsvg-opensource-src/qtsvg-opensource-src_5.9.5-0ubuntu1.debian.tar.xz' qtsvg-opensource-src_5.9.5-0ubuntu1.debian.tar.xz 10720 SHA256:d1fdc2f17bb7947fba6459b2fc10bf33a132731860238bbadaa9d9feb8fc8c77
+$ apt-get source -qq --print-uris qtsvg-opensource-src=5.9.5-0ubuntu1.1
+'http://archive.ubuntu.com/ubuntu/pool/main/q/qtsvg-opensource-src/qtsvg-opensource-src_5.9.5-0ubuntu1.1.dsc' qtsvg-opensource-src_5.9.5-0ubuntu1.1.dsc 2892 SHA512:8bc447cb954de61afd7739ee6ee0b163ea5c340f9dca6ba36fe9855c551977ce10e5a07122d01fd87835ae96c5e693ffb6161c2e3fed8a1ed107b8404cce19bc
+'http://archive.ubuntu.com/ubuntu/pool/main/q/qtsvg-opensource-src/qtsvg-opensource-src_5.9.5.orig.tar.xz' qtsvg-opensource-src_5.9.5.orig.tar.xz 1778820 SHA512:e087f07d76833a8d215225cc7499e40ec56aac979bdaec2018918bccc89ee9eb2fcf3f41584694e29c73ab4ea531e33cf1652380e8b8f75e4b16547b17a9fd20
+'http://archive.ubuntu.com/ubuntu/pool/main/q/qtsvg-opensource-src/qtsvg-opensource-src_5.9.5-0ubuntu1.1.debian.tar.xz' qtsvg-opensource-src_5.9.5-0ubuntu1.1.debian.tar.xz 14040 SHA512:4c718ab2cd00d5643c110193e2f57326a1d6673241dcb41b89a57baf67fd734232f7dd688bc11ac8b1c067e0bfbec170b9f493361971593ed416c9a2b74e6f4c
 ```
 
 ### `dpkg` source package: `qwt=6.1.3-1`
@@ -5402,20 +5402,25 @@ $ apt-get source -qq --print-uris sensible-utils=0.0.12
 'http://archive.ubuntu.com/ubuntu/pool/main/s/sensible-utils/sensible-utils_0.0.12.tar.xz' sensible-utils_0.0.12.tar.xz 62152 SHA256:99ba2ebf8c57447c69d426b99b84ff9dc817be0bc4988ec6890a14558c529e2e
 ```
 
-### `dpkg` source package: `shadow=1:4.5-1ubuntu2`
+### `dpkg` source package: `shadow=1:4.5-1ubuntu2.2`
 
 Binary Packages:
 
-- `login=1:4.5-1ubuntu2`
-- `passwd=1:4.5-1ubuntu2`
+- `login=1:4.5-1ubuntu2.2`
+- `passwd=1:4.5-1ubuntu2.2`
 
 Licenses: (parsed from: `/usr/share/doc/login/copyright`, `/usr/share/doc/passwd/copyright`)
 
 - `GPL-2`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris shadow=1:4.5-1ubuntu2.2
+'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.5-1ubuntu2.2.dsc' shadow_4.5-1ubuntu2.2.dsc 2401 SHA512:edc71f8392ffedba675d403d2c54084bbbc4b05be63ec6b77055a7fa82647779f26a427d3c12392567e27da3b831b506b5b34ffa75c92b64162133098dd666f0
+'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.5.orig.tar.xz' shadow_4.5.orig.tar.xz 1344524 SHA512:4278544efdd6d800a3c46cfcb144f209ace14ebe017ba1c0d05425fac7868062a73afa8522036a2bc0a16f6f1e7c16373a204463221012367ce0e8e9ef4c4a4d
+'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.5-1ubuntu2.2.debian.tar.xz' shadow_4.5-1ubuntu2.2.debian.tar.xz 473640 SHA512:2f1b28b796e1157164859d63e129b8e08dc297610580396993e4fae6f491ed5d56581461540e3a020ea44838431e36e828ac15d575f3b1849789415493095d6e
+```
 
 ### `dpkg` source package: `shared-mime-info=1.9-2`
 

@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:2894d98ea17272f4d98b1aaa0214d7c47f2299f9a267918b9aa1848563773292`
-- Created: `2022-01-24T19:35:39.353426994Z`
+- Image ID: `sha256:683c58e382a40f3ae691913e1fe81d6958f2d2d30e21e02939635eb8508238c4`
+- Created: `2022-02-02T03:18:09.543654255Z`
 - Virtual Size: ~ 1.56 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -2212,12 +2212,12 @@ $ apt-get source -qq --print-uris ignition-fuel-tools4=4.4.0-1~bionic
 'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-fuel-tools4/ignition-fuel-tools4_4.4.0-1~bionic.debian.tar.xz' ignition-fuel-tools4_4.4.0-1~bionic.debian.tar.xz 1752 SHA256:cd6f9ddebf0b86b6df620d754139990aa94587297db9f2cddf01cf70befb5784
 ```
 
-### `dpkg` source package: `ignition-math6=6.9.2-1~bionic`
+### `dpkg` source package: `ignition-math6=6.10.0-1~bionic`
 
 Binary Packages:
 
-- `libignition-math6:amd64=6.9.2-1~bionic`
-- `libignition-math6-dev:amd64=6.9.2-1~bionic`
+- `libignition-math6:amd64=6.10.0-1~bionic`
+- `libignition-math6-dev:amd64=6.10.0-1~bionic`
 
 Licenses: (parsed from: `/usr/share/doc/libignition-math6/copyright`, `/usr/share/doc/libignition-math6-dev/copyright`)
 
@@ -2225,9 +2225,14 @@ Licenses: (parsed from: `/usr/share/doc/libignition-math6/copyright`, `/usr/shar
 - `Apache-2.0`
 - `BSD-3-clause`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris ignition-math6=6.10.0-1~bionic
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.10.0-1~bionic.dsc' ignition-math6_6.10.0-1~bionic.dsc 1488 SHA256:9f1a2f6914133b2db52fccdb1266564775d390d712512f45001cdfdf2f447fc3
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.10.0.orig.tar.bz2' ignition-math6_6.10.0.orig.tar.bz2 479660 SHA256:8de0f92a5a2bbce84695ba75ab798c22d32da54be454736af6bbcb6eed404902
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.10.0-1~bionic.debian.tar.xz' ignition-math6_6.10.0-1~bionic.debian.tar.xz 4216 SHA256:e5b300b7665c55b9a3de5bb30ca5a99adcba731ea5c88f1025e3b0fbdd22cbb4
+```
 
 ### `dpkg` source package: `ignition-msgs5=5.8.1-1~bionic`
 
@@ -4880,11 +4885,11 @@ $ apt-get source -qq --print-uris libzstd=1.3.3+dfsg-2ubuntu1.2
 'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.3.3+dfsg-2ubuntu1.2.debian.tar.xz' libzstd_1.3.3+dfsg-2ubuntu1.2.debian.tar.xz 13764 SHA512:f14aa9e453c7041a79dd90a52b5955b86fa86886b89ef26d4d257aa017a50d97410e8b875593992ad7d4b7e8e8d55743b8c66706be62cd4234f81e49c8bfc05d
 ```
 
-### `dpkg` source package: `linux=4.15.0-166.174`
+### `dpkg` source package: `linux=4.15.0-167.175`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=4.15.0-166.174`
+- `linux-libc-dev:amd64=4.15.0-167.175`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -4893,10 +4898,10 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris linux=4.15.0-166.174
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-166.174.dsc' linux_4.15.0-166.174.dsc 7028 SHA512:696e8b4134e6ed9b35b5247152fd0899e7722add41a0e2bf0293a287ef41ecf774ce115e862e87503b67a8517aa456e5f3fd1aff6d123e6227a205ecdc15ead7
+$ apt-get source -qq --print-uris linux=4.15.0-167.175
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-167.175.dsc' linux_4.15.0-167.175.dsc 7373 SHA512:85ee1b1500778ba9961e6f7aa9d29ede8d48aaa9dad089be408e00baf1bf5423742f3259fd3524a1ad64e13225ae5f53a597ced5f1cc6643ad0ecdff83e29586
 'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0.orig.tar.gz' linux_4.15.0.orig.tar.gz 157656459 SHA512:0fab606a295e0857f774f8adaa9d56bf2cb227fbab2daed374415da216391b156f49e606ba37ac402987c5796d408807da5d1a42c0d85a8552f109a3e279443d
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-166.174.diff.gz' linux_4.15.0-166.174.diff.gz 12765670 SHA512:86d9c1326fbb8983d5e247391193a5914ad987aba0ba67e002ad64b496a44889721988db7fc513e8d3dbe633a6b15ee23ba95b4b27a87d2b71e5ce88fb1c7cb2
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-167.175.diff.gz' linux_4.15.0-167.175.diff.gz 12840229 SHA512:a15161234ce36766b6e8ea2ab2d14fed71d281765191c475f1edefa6acded48375f1f77198e18eedd5a246dee88d64b17eb843ca884cbb90cb1c9faf16313ada
 ```
 
 ### `dpkg` source package: `llvm-toolchain-10=1:10.0.0-4ubuntu1~18.04.2`
@@ -6833,20 +6838,25 @@ $ apt-get source -qq --print-uris sensible-utils=0.0.12
 'http://archive.ubuntu.com/ubuntu/pool/main/s/sensible-utils/sensible-utils_0.0.12.tar.xz' sensible-utils_0.0.12.tar.xz 62152 SHA256:99ba2ebf8c57447c69d426b99b84ff9dc817be0bc4988ec6890a14558c529e2e
 ```
 
-### `dpkg` source package: `shadow=1:4.5-1ubuntu2`
+### `dpkg` source package: `shadow=1:4.5-1ubuntu2.2`
 
 Binary Packages:
 
-- `login=1:4.5-1ubuntu2`
-- `passwd=1:4.5-1ubuntu2`
+- `login=1:4.5-1ubuntu2.2`
+- `passwd=1:4.5-1ubuntu2.2`
 
 Licenses: (parsed from: `/usr/share/doc/login/copyright`, `/usr/share/doc/passwd/copyright`)
 
 - `GPL-2`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris shadow=1:4.5-1ubuntu2.2
+'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.5-1ubuntu2.2.dsc' shadow_4.5-1ubuntu2.2.dsc 2401 SHA512:edc71f8392ffedba675d403d2c54084bbbc4b05be63ec6b77055a7fa82647779f26a427d3c12392567e27da3b831b506b5b34ffa75c92b64162133098dd666f0
+'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.5.orig.tar.xz' shadow_4.5.orig.tar.xz 1344524 SHA512:4278544efdd6d800a3c46cfcb144f209ace14ebe017ba1c0d05425fac7868062a73afa8522036a2bc0a16f6f1e7c16373a204463221012367ce0e8e9ef4c4a4d
+'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.5-1ubuntu2.2.debian.tar.xz' shadow_4.5-1ubuntu2.2.debian.tar.xz 473640 SHA512:2f1b28b796e1157164859d63e129b8e08dc297610580396993e4fae6f491ed5d56581461540e3a020ea44838431e36e828ac15d575f3b1849789415493095d6e
+```
 
 ### `dpkg` source package: `shared-mime-info=1.9-2`
 

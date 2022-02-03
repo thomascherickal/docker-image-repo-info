@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:16e6272532fdec17f615aef908898013cf4fe79e0edfe40a09500673329f6caf`
-- Created: `2022-01-24T19:30:40.505158084Z`
-- Virtual Size: ~ 681.16 Mb  
+- Image ID: `sha256:3cda3a63dc41c4110783afc21122b5db61e7021cfd4d523afb17816c69524782`
+- Created: `2022-02-02T03:15:29.261137114Z`
+- Virtual Size: ~ 681.18 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/gzserver_entrypoint.sh"]`
@@ -1717,11 +1717,11 @@ $ apt-get source -qq --print-uris ignition-fuel-tools4=4.4.0-1~bionic
 'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-fuel-tools4/ignition-fuel-tools4_4.4.0-1~bionic.debian.tar.xz' ignition-fuel-tools4_4.4.0-1~bionic.debian.tar.xz 1752 SHA256:cd6f9ddebf0b86b6df620d754139990aa94587297db9f2cddf01cf70befb5784
 ```
 
-### `dpkg` source package: `ignition-math6=6.9.2-1~bionic`
+### `dpkg` source package: `ignition-math6=6.10.0-1~bionic`
 
 Binary Packages:
 
-- `libignition-math6:amd64=6.9.2-1~bionic`
+- `libignition-math6:amd64=6.10.0-1~bionic`
 
 Licenses: (parsed from: `/usr/share/doc/libignition-math6/copyright`)
 
@@ -1729,9 +1729,14 @@ Licenses: (parsed from: `/usr/share/doc/libignition-math6/copyright`)
 - `Apache-2.0`
 - `BSD-3-clause`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris ignition-math6=6.10.0-1~bionic
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.10.0-1~bionic.dsc' ignition-math6_6.10.0-1~bionic.dsc 1488 SHA256:9f1a2f6914133b2db52fccdb1266564775d390d712512f45001cdfdf2f447fc3
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.10.0.orig.tar.bz2' ignition-math6_6.10.0.orig.tar.bz2 479660 SHA256:8de0f92a5a2bbce84695ba75ab798c22d32da54be454736af6bbcb6eed404902
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.10.0-1~bionic.debian.tar.xz' ignition-math6_6.10.0-1~bionic.debian.tar.xz 4216 SHA256:e5b300b7665c55b9a3de5bb30ca5a99adcba731ea5c88f1025e3b0fbdd22cbb4
+```
 
 ### `dpkg` source package: `ignition-msgs5=5.8.1-1~bionic`
 
@@ -5539,20 +5544,25 @@ $ apt-get source -qq --print-uris sensible-utils=0.0.12
 'http://archive.ubuntu.com/ubuntu/pool/main/s/sensible-utils/sensible-utils_0.0.12.tar.xz' sensible-utils_0.0.12.tar.xz 62152 SHA256:99ba2ebf8c57447c69d426b99b84ff9dc817be0bc4988ec6890a14558c529e2e
 ```
 
-### `dpkg` source package: `shadow=1:4.5-1ubuntu2`
+### `dpkg` source package: `shadow=1:4.5-1ubuntu2.2`
 
 Binary Packages:
 
-- `login=1:4.5-1ubuntu2`
-- `passwd=1:4.5-1ubuntu2`
+- `login=1:4.5-1ubuntu2.2`
+- `passwd=1:4.5-1ubuntu2.2`
 
 Licenses: (parsed from: `/usr/share/doc/login/copyright`, `/usr/share/doc/passwd/copyright`)
 
 - `GPL-2`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris shadow=1:4.5-1ubuntu2.2
+'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.5-1ubuntu2.2.dsc' shadow_4.5-1ubuntu2.2.dsc 2401 SHA512:edc71f8392ffedba675d403d2c54084bbbc4b05be63ec6b77055a7fa82647779f26a427d3c12392567e27da3b831b506b5b34ffa75c92b64162133098dd666f0
+'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.5.orig.tar.xz' shadow_4.5.orig.tar.xz 1344524 SHA512:4278544efdd6d800a3c46cfcb144f209ace14ebe017ba1c0d05425fac7868062a73afa8522036a2bc0a16f6f1e7c16373a204463221012367ce0e8e9ef4c4a4d
+'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.5-1ubuntu2.2.debian.tar.xz' shadow_4.5-1ubuntu2.2.debian.tar.xz 473640 SHA512:2f1b28b796e1157164859d63e129b8e08dc297610580396993e4fae6f491ed5d56581461540e3a020ea44838431e36e828ac15d575f3b1849789415493095d6e
+```
 
 ### `dpkg` source package: `shared-mime-info=1.9-2`
 
