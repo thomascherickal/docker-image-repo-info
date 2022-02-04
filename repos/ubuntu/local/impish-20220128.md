@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:64c59b1065b1ea628a7253ea0e5e87234e764fe3612ced48c495bb0f2de60a85`
-- Created: `2022-01-07T02:25:45.947872219Z`
+- Image ID: `sha256:42b6dc79eba8358bd615e92a335b30d0b89c1cf461fdf8d8e09293bd37f84430`
+- Created: `2022-02-02T02:15:06.60197901Z`
 - Virtual Size: ~ 77.38 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -1383,12 +1383,12 @@ $ apt-get source -qq --print-uris shadow=1:4.8.1-1ubuntu9
 'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1-1ubuntu9.debian.tar.xz' shadow_4.8.1-1ubuntu9.debian.tar.xz 86872 SHA512:89d9d4c33598252e3df47b69e30424edea9743c6033fcf296a6a8ce2b450f9ea67008a3a79a5667a775eedf58320fd25fff83eb9e613e34ac9a88601c2c96930
 ```
 
-### `dpkg` source package: `systemd=248.3-1ubuntu8.1`
+### `dpkg` source package: `systemd=248.3-1ubuntu8.2`
 
 Binary Packages:
 
-- `libsystemd0:amd64=248.3-1ubuntu8.1`
-- `libudev1:amd64=248.3-1ubuntu8.1`
+- `libsystemd0:amd64=248.3-1ubuntu8.2`
+- `libudev1:amd64=248.3-1ubuntu8.2`
 
 Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/libudev1/copyright`)
 
@@ -1401,9 +1401,14 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris systemd=248.3-1ubuntu8.2
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_248.3-1ubuntu8.2.dsc' systemd_248.3-1ubuntu8.2.dsc 5066 SHA512:c948c9eac6c96b6e4360aac6adae7aaef390cee68eee4e9ec361b08546517930a8f0d4429bd5c6250000a4b37ce677ebea15fe4f5c83c95c628c80b1debb47c3
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_248.3.orig.tar.gz' systemd_248.3.orig.tar.gz 10320940 SHA512:8e7ff0d5e63cc933e4dc23f7e0bef9707fde90396605eb8822d34de90d7abe8fd37e5739e33b657868218aa7281147cc944c096c007324c3e6fb54d833a83485
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_248.3-1ubuntu8.2.debian.tar.xz' systemd_248.3-1ubuntu8.2.debian.tar.xz 219532 SHA512:2cad42212692bd36c433b85bf87db23391d7aec0e88d0d0f6dddd6ccd4015ec23f433b367279dd02bf7e87b65fcfc8fd211b4e353e9f88bb973fda97a169b29c
+```
 
 ### `dpkg` source package: `sysvinit=2.96-7ubuntu1`
 
