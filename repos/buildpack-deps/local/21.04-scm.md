@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:af9c8d0198a6a8352b0fd8a85b5869bf53af91c497868670db4b65df2af5ccb3`
-- Created: `2022-01-07T03:12:38.381032959Z`
+- Image ID: `sha256:4429a95c9c09edc210c15dcdc830a7bcb1690b175f47a3f67673eded684a7b6a`
+- Created: `2022-02-02T09:10:46.864716715Z`
 - Virtual Size: ~ 231.93 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -2242,12 +2242,12 @@ $ apt-get source -qq --print-uris subversion=1.14.1-3
 'http://archive.ubuntu.com/ubuntu/pool/universe/s/subversion/subversion_1.14.1-3.debian.tar.xz' subversion_1.14.1-3.debian.tar.xz 430084 SHA512:faf0da8d7291b52b18cb5969f72e74342af1cd98b4d3982cf7cbb7c63842dff627a2368ea2650539cefab1f8a5c2f41e91129feae3697fae0c345defe4ade7a9
 ```
 
-### `dpkg` source package: `systemd=247.3-3ubuntu3.6`
+### `dpkg` source package: `systemd=247.3-3ubuntu3.7`
 
 Binary Packages:
 
-- `libsystemd0:amd64=247.3-3ubuntu3.6`
-- `libudev1:amd64=247.3-3ubuntu3.6`
+- `libsystemd0:amd64=247.3-3ubuntu3.7`
+- `libudev1:amd64=247.3-3ubuntu3.7`
 
 Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/libudev1/copyright`)
 
@@ -2260,9 +2260,14 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris systemd=247.3-3ubuntu3.7
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_247.3-3ubuntu3.7.dsc' systemd_247.3-3ubuntu3.7.dsc 5041 SHA512:dc2f23fc1ee18644bd1460141014ac3d395e6146226aac5f93d1691ed89f28463fbed4d838e430ecf7f94197b143029c3b400e7538197af31b33eff0119d6077
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_247.3.orig.tar.gz' systemd_247.3.orig.tar.gz 9895385 SHA512:0b12f6b9b02d86ee2f4198dd5f96a6267652fdc4867517e10a214a59b63c996fd14aeb2f47a97806718cdda52d1705a3b2359e4ae5e5d8d52d61ad05e7941d1e
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_247.3-3ubuntu3.7.debian.tar.xz' systemd_247.3-3ubuntu3.7.debian.tar.xz 247436 SHA512:25127e4628d89545ecfadfa29160ce544e7ce01a3942ec4dbd08d6005b7db28523f5a4a818e1fa090ed06de3b08a34100b739b1ff12682c756dcf49a727eb34c
+```
 
 ### `dpkg` source package: `sysvinit=2.96-6ubuntu1`
 

@@ -160,19 +160,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.3.14
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.3.14.dsc' apt_2.3.14.dsc 2801 SHA256:03dca05b525687f506172db90c2d39d0f42084e8952dbba010ed91ad7cb5d7c2
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.3.14.tar.xz' apt_2.3.14.tar.xz 2213332 SHA256:b90a3ced152ecd389a55da1115e04565bfcbf5f58a808cdb71f6b52d4d2f0bdf
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/apt/2.3.14/
 
-- https://sources.debian.net/src/apt/2.3.14/ (for browsing the source)
-- https://sources.debian.net/src/apt/2.3.14/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apt/2.3.14/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `attr=1:2.5.1-1`
 
@@ -3095,21 +3089,13 @@ Licenses: (parsed from: `/usr/share/doc/libsigsegv2/copyright`)
 - `permissive-fsf`
 - `permissive-other`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libsigsegv=2.13-1
-'http://deb.debian.org/debian/pool/main/libs/libsigsegv/libsigsegv_2.13-1.dsc' libsigsegv_2.13-1.dsc 2338 SHA256:6e22271eb31721e6b55b401c830aa2459654d3d08bd53688e86037b71fef5170
-'http://deb.debian.org/debian/pool/main/libs/libsigsegv/libsigsegv_2.13.orig.tar.gz' libsigsegv_2.13.orig.tar.gz 460736 SHA256:be78ee4176b05f7c75ff03298d84874db90f4b6c9d5503f0da1226b3a3c48119
-'http://deb.debian.org/debian/pool/main/libs/libsigsegv/libsigsegv_2.13.orig.tar.gz.asc' libsigsegv_2.13.orig.tar.gz.asc 819 SHA256:f63cbbc68da4a53b685dc373b5c11d0b0cdf467be9391efc89c88c440d74df36
-'http://deb.debian.org/debian/pool/main/libs/libsigsegv/libsigsegv_2.13-1.debian.tar.xz' libsigsegv_2.13-1.debian.tar.xz 8572 SHA256:4210f5c3b99fd2521490f52345b4faca591f2fabb09b19a14e5644e8da8ac59a
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libsigsegv/2.13-1/
 
-- https://sources.debian.net/src/libsigsegv/2.13-1/ (for browsing the source)
-- https://sources.debian.net/src/libsigsegv/2.13-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libsigsegv/2.13-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libsm=2:1.2.3-1`
 
@@ -3359,20 +3345,13 @@ Licenses: (parsed from: `/usr/share/doc/libwmf-dev/copyright`, `/usr/share/doc/l
 
 - `LGPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libwmf=0.2.8.4-17
-'http://deb.debian.org/debian/pool/main/libw/libwmf/libwmf_0.2.8.4-17.dsc' libwmf_0.2.8.4-17.dsc 2268 SHA256:1d48da0032093725c16f1c389152cc4041e60323a8453c550310286a0cfafa6a
-'http://deb.debian.org/debian/pool/main/libw/libwmf/libwmf_0.2.8.4.orig.tar.gz' libwmf_0.2.8.4.orig.tar.gz 2169375 SHA256:5b345c69220545d003ad52bfd035d5d6f4f075e65204114a9e875e84895a7cf8
-'http://deb.debian.org/debian/pool/main/libw/libwmf/libwmf_0.2.8.4-17.debian.tar.xz' libwmf_0.2.8.4-17.debian.tar.xz 12900 SHA256:d32d2b4c948abb929911c7b23ef9490863d86e3c6b6302aa3549d25301e0fed1
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libwmf/0.2.8.4-17/
 
-- https://sources.debian.net/src/libwmf/0.2.8.4-17/ (for browsing the source)
-- https://sources.debian.net/src/libwmf/0.2.8.4-17/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libwmf/0.2.8.4-17/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libx11=2:1.7.2-2`
 
@@ -4501,20 +4480,13 @@ Licenses: (parsed from: `/usr/share/doc/libpango-1.0-0/copyright`, `/usr/share/d
 - `TCL`
 - `Unicode`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pango1.0=1.50.3+ds1-4
-'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.50.3+ds1-4.dsc' pango1.0_1.50.3+ds1-4.dsc 3669 SHA256:95daa8c6c6ed547eda28035100d3f7d3f2f03ed0a22c5962062b19b9c79ec343
-'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.50.3+ds1.orig.tar.xz' pango1.0_1.50.3+ds1.orig.tar.xz 2476492 SHA256:d88a24e3f075587070fa45f4b583323a4623ca5574fdf9722ddb1c1790851032
-'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.50.3+ds1-4.debian.tar.xz' pango1.0_1.50.3+ds1-4.debian.tar.xz 50268 SHA256:0d80755df427d50ae4a375df62f0ec2716481f44878f1f9f982e1c4d50c39754
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/pango1.0/1.50.3+ds1-4/
 
-- https://sources.debian.net/src/pango1.0/1.50.3+ds1-4/ (for browsing the source)
-- https://sources.debian.net/src/pango1.0/1.50.3+ds1-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/pango1.0/1.50.3+ds1-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `patch=2.7.6-7`
 
@@ -5076,20 +5048,13 @@ Licenses: (parsed from: `/usr/share/doc/login/copyright`, `/usr/share/doc/passwd
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris shadow=1:4.8.1-2
-'http://deb.debian.org/debian/pool/main/s/shadow/shadow_4.8.1-2.dsc' shadow_4.8.1-2.dsc 2218 SHA256:6cca7aecb3faa89684333cc6ae01931a56fdf435f1181734613fb7bb2bab8ce6
-'http://deb.debian.org/debian/pool/main/s/shadow/shadow_4.8.1.orig.tar.xz' shadow_4.8.1.orig.tar.xz 1611196 SHA256:a3ad4630bdc41372f02a647278a8c3514844295d36eefe68ece6c3a641c1ae62
-'http://deb.debian.org/debian/pool/main/s/shadow/shadow_4.8.1-2.debian.tar.xz' shadow_4.8.1-2.debian.tar.xz 74476 SHA256:e230a5fe3945587140dcec2b42dbd0b6bd371bb5976f1b5fb99f5799a2ec4d89
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/shadow/1:4.8.1-2/
 
-- https://sources.debian.net/src/shadow/1:4.8.1-2/ (for browsing the source)
-- https://sources.debian.net/src/shadow/1:4.8.1-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/shadow/1:4.8.1-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `shared-mime-info=2.1-2`
 

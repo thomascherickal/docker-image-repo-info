@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:ac2ca96c7ac8c796c74634eb1ec1a6ead5274ef986d271c2ed679c6ba77da9f8`
-- Created: `2022-01-07T03:02:59.305843675Z`
-- Virtual Size: ~ 219.63 Mb  
+- Image ID: `sha256:6133721c378e481baeba1a494929723d504263f7566707d1af6628b052688066`
+- Created: `2022-02-02T08:59:49.600571753Z`
+- Virtual Size: ~ 219.65 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["bash"]`
@@ -1940,20 +1940,25 @@ The source package *may* still be available for download from:
 - http://snapshot.debian.org/package/serf/1.3.9-6/
 
 
-### `dpkg` source package: `shadow=1:4.5-1ubuntu2`
+### `dpkg` source package: `shadow=1:4.5-1ubuntu2.2`
 
 Binary Packages:
 
-- `login=1:4.5-1ubuntu2`
-- `passwd=1:4.5-1ubuntu2`
+- `login=1:4.5-1ubuntu2.2`
+- `passwd=1:4.5-1ubuntu2.2`
 
 Licenses: (parsed from: `/usr/share/doc/login/copyright`, `/usr/share/doc/passwd/copyright`)
 
 - `GPL-2`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris shadow=1:4.5-1ubuntu2.2
+'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.5-1ubuntu2.2.dsc' shadow_4.5-1ubuntu2.2.dsc 2401 SHA512:edc71f8392ffedba675d403d2c54084bbbc4b05be63ec6b77055a7fa82647779f26a427d3c12392567e27da3b831b506b5b34ffa75c92b64162133098dd666f0
+'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.5.orig.tar.xz' shadow_4.5.orig.tar.xz 1344524 SHA512:4278544efdd6d800a3c46cfcb144f209ace14ebe017ba1c0d05425fac7868062a73afa8522036a2bc0a16f6f1e7c16373a204463221012367ce0e8e9ef4c4a4d
+'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.5-1ubuntu2.2.debian.tar.xz' shadow_4.5-1ubuntu2.2.debian.tar.xz 473640 SHA512:2f1b28b796e1157164859d63e129b8e08dc297610580396993e4fae6f491ed5d56581461540e3a020ea44838431e36e828ac15d575f3b1849789415493095d6e
+```
 
 ### `dpkg` source package: `six=1.11.0-2`
 
