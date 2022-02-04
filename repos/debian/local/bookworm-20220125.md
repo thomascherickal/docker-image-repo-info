@@ -1414,20 +1414,13 @@ Licenses: (parsed from: `/usr/share/doc/mawk/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mawk=1.3.4.20200120-2
-'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20200120-2.dsc' mawk_1.3.4.20200120-2.dsc 1915 SHA256:5069c46872ac74f5221250dfb88b31b1f2dbb8a2617c1e013f8f80cc34638c6d
-'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20200120.orig.tar.gz' mawk_1.3.4.20200120.orig.tar.gz 468855 SHA256:7fd4cd1e1fae9290fe089171181bbc6291dfd9bca939ca804f0ddb851c8b8237
-'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20200120-2.debian.tar.xz' mawk_1.3.4.20200120-2.debian.tar.xz 7504 SHA256:b772ed2f016b0286980c46cbc1f1f4ae62887ef2aa3dff6ef10cae638f923f26
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mawk/1.3.4.20200120-2/
 
-- https://sources.debian.net/src/mawk/1.3.4.20200120-2/ (for browsing the source)
-- https://sources.debian.net/src/mawk/1.3.4.20200120-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mawk/1.3.4.20200120-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ncurses=6.3-2`
 
@@ -1755,20 +1748,13 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=250.3-1
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_250.3-1.dsc' systemd_250.3-1.dsc 5661 SHA256:0cda17083c40ec35bfb4b3df4de2f793cc0a06044ce98b12746cbc43bceda8cd
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_250.3.orig.tar.gz' systemd_250.3.orig.tar.gz 11125151 SHA256:87b0eee7b6e5aaab2ab56d158f9536daa6bfd5de011f2a5fc6ccdd81ee1e7a24
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_250.3-1.debian.tar.xz' systemd_250.3-1.debian.tar.xz 161916 SHA256:02c64c998208d0f12cd2f536c74fb7680a33ba1127f39f439f7940141c5c92e8
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/systemd/250.3-1/
 
-- https://sources.debian.net/src/systemd/250.3-1/ (for browsing the source)
-- https://sources.debian.net/src/systemd/250.3-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/systemd/250.3-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sysvinit=3.01-1`
 
@@ -1879,20 +1865,13 @@ Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/lib
 - `MIT`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris util-linux=2.37.2-6
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.37.2-6.dsc' util-linux_2.37.2-6.dsc 4454 SHA256:acfe23d512f4e6c47d100322e4184fa1fc4b6015787d5bbecdc595f1c66e4c00
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.37.2.orig.tar.xz' util-linux_2.37.2.orig.tar.xz 5621624 SHA256:6a0764c1aae7fb607ef8a6dd2c0f6c47d5e5fd27aa08820abaad9ec14e28e9d9
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.37.2-6.debian.tar.xz' util-linux_2.37.2-6.debian.tar.xz 99116 SHA256:2427e278f9bb4e67c05bbf46690cb7f856d15f8b0bfc9479acfbba3cffe718a5
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/util-linux/2.37.2-6/
 
-- https://sources.debian.net/src/util-linux/2.37.2-6/ (for browsing the source)
-- https://sources.debian.net/src/util-linux/2.37.2-6/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/util-linux/2.37.2-6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `xxhash=0.8.1-1`
 

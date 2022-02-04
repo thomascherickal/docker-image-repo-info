@@ -1760,20 +1760,13 @@ Licenses: (parsed from: `/usr/share/doc/login/copyright`, `/usr/share/doc/passwd
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris shadow=1:4.8.1-2
-'http://deb.debian.org/debian/pool/main/s/shadow/shadow_4.8.1-2.dsc' shadow_4.8.1-2.dsc 2218 SHA256:6cca7aecb3faa89684333cc6ae01931a56fdf435f1181734613fb7bb2bab8ce6
-'http://deb.debian.org/debian/pool/main/s/shadow/shadow_4.8.1.orig.tar.xz' shadow_4.8.1.orig.tar.xz 1611196 SHA256:a3ad4630bdc41372f02a647278a8c3514844295d36eefe68ece6c3a641c1ae62
-'http://deb.debian.org/debian/pool/main/s/shadow/shadow_4.8.1-2.debian.tar.xz' shadow_4.8.1-2.debian.tar.xz 74476 SHA256:e230a5fe3945587140dcec2b42dbd0b6bd371bb5976f1b5fb99f5799a2ec4d89
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/shadow/1:4.8.1-2/
 
-- https://sources.debian.net/src/shadow/1:4.8.1-2/ (for browsing the source)
-- https://sources.debian.net/src/shadow/1:4.8.1-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/shadow/1:4.8.1-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `systemd=250.3-1`
 
