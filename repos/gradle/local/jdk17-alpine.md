@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:4bda7896e820df5be4a93df82554f65196dd786aeef79a21ecd8d466840f6150`
-- Created: `2022-01-13T18:13:14.051733632Z`
-- Virtual Size: ~ 559.78 Mb  
+- Image ID: `sha256:2f11d69c09f4186b710e27cb662d7c8004af3ebe96cb3f5e3a64c0756a4c0995`
+- Created: `2022-02-01T23:03:54.968258999Z`
+- Virtual Size: ~ 559.80 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["gradle"]`
@@ -13,7 +13,7 @@
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk-17.0.1+12`
+  - `JAVA_VERSION=jdk-17.0.2+8`
   - `JAVA_HOME=/opt/java/openjdk`
   - `GRADLE_HOME=/opt/gradle`
   - `GRADLE_VERSION=7.3.3`
@@ -142,16 +142,16 @@ GPL-2.0-only
 ### `apk` package: `ca-certificates`
 
 ```console
-ca-certificates-20191127-r7 description:
+ca-certificates-20211220-r0 description:
 Common CA certificates PEM files from Mozilla
 
-ca-certificates-20191127-r7 webpage:
+ca-certificates-20211220-r0 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-20191127-r7 installed size:
-676 KiB
+ca-certificates-20211220-r0 installed size:
+656 KiB
 
-ca-certificates-20191127-r7 license:
+ca-certificates-20211220-r0 license:
 MPL-2.0 AND MIT
 
 ```
@@ -176,16 +176,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `expat`
 
 ```console
-expat-2.4.1-r0 description:
+expat-2.4.3-r0 description:
 XML Parser library written in C
 
-expat-2.4.1-r0 webpage:
+expat-2.4.3-r0 webpage:
 http://www.libexpat.org/
 
-expat-2.4.1-r0 installed size:
-188 KiB
+expat-2.4.3-r0 installed size:
+192 KiB
 
-expat-2.4.1-r0 license:
+expat-2.4.3-r0 license:
 MIT
 
 ```
