@@ -1,10 +1,10 @@
-# `amazonlinux:2.0.20211223.0`
+# `amazonlinux:2.0.20220121.0`
 
 ## Docker Metadata
 
-- Image ID: `sha256:30156a0e4f040d255f30a8bf0b28540fce965398fe1c13ab29a7292e411dfde7`
-- Created: `2022-01-12T02:20:04.936885709Z`
-- Virtual Size: ~ 164.09 Mb  
+- Image ID: `sha256:eab2a8d1dc5555599378fc9c5a5661470b0151ed10e3d663a8fbf0b09d6e3d09`
+- Created: `2022-02-04T23:40:29.455382552Z`
+- Virtual Size: ~ 163.80 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -61,16 +61,16 @@ Enabling amzn2-core-source repository
 https://cdn.amazonlinux.com/2/core/2.0/SRPMS/8b618629d7dc5df1d8d584701a7c14d0ab8ddbf11e2c586a9860a7a92072a33f//../../../../../blobstore/5eb7c8b4ed1b326f5e640d655f92f498451c8013b223ad5702abb108358ef0dc/bzip2-1.0.6-13.amzn2.0.3.src.rpm
 ```
 
-### `rpm` package: `ca-certificates-2021.2.50-72.amzn2.0.1.noarch`
+### `rpm` package: `ca-certificates-2021.2.50-72.amzn2.0.2.noarch`
 
 Licenses (from `rpm --query`): Public Domain
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls ca-certificates-2021.2.50-72.amzn2.0.1.noarch
+$ yumdownloader --quiet --source --urls ca-certificates-2021.2.50-72.amzn2.0.2.noarch
 Enabling amzn2-core-source repository
-https://cdn.amazonlinux.com/2/core/2.0/SRPMS/8b618629d7dc5df1d8d584701a7c14d0ab8ddbf11e2c586a9860a7a92072a33f//../../../../../blobstore/c71b7714ec23d96f5e8b5a805ffbd9310ba575e922a294f2cd23541ee8b72492/ca-certificates-2021.2.50-72.amzn2.0.1.src.rpm
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/8b618629d7dc5df1d8d584701a7c14d0ab8ddbf11e2c586a9860a7a92072a33f//../../../../../blobstore/5c404184ea8d4d3c60fe47b7ba4dbfef334d70c1bb3d82391680c377d5ec2d07/ca-certificates-2021.2.50-72.amzn2.0.2.src.rpm
 ```
 
 ### `rpm` package: `chkconfig-1.7.4-1.amzn2.0.2.x86_64`
@@ -241,52 +241,52 @@ Enabling amzn2-core-source repository
 https://cdn.amazonlinux.com/2/core/2.0/SRPMS/8b618629d7dc5df1d8d584701a7c14d0ab8ddbf11e2c586a9860a7a92072a33f//../../../../../blobstore/537aafe4cf68cea22ab5412acfe3a1febc5525de48f0bd82d10ea71e7e916899/glib2-2.56.1-9.amzn2.0.2.src.rpm
 ```
 
-### `rpm` package: `glibc-2.26-56.amzn2.x86_64`
+### `rpm` package: `glibc-2.26-57.amzn2.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+ and LGPLv2+ with exceptions and GPLv2+
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls glibc-2.26-56.amzn2
+$ yumdownloader --quiet --source --urls glibc-2.26-57.amzn2
 Enabling amzn2-core-source repository
-https://cdn.amazonlinux.com/2/core/2.0/SRPMS/8b618629d7dc5df1d8d584701a7c14d0ab8ddbf11e2c586a9860a7a92072a33f//../../../../../blobstore/0a1b9b5d81a1a4361fd54713bd08f70e8e693fa517e4d33c3eac9a9f4329ee32/glibc-2.26-56.amzn2.src.rpm
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/8b618629d7dc5df1d8d584701a7c14d0ab8ddbf11e2c586a9860a7a92072a33f//../../../../../blobstore/d1fffeff1715f84e279aecec2df24c0c12def66e231e8585f1b929a3f76617f0/glibc-2.26-57.amzn2.src.rpm
 ```
 
-### `rpm` package: `glibc-common-2.26-56.amzn2.x86_64`
+### `rpm` package: `glibc-common-2.26-57.amzn2.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+ and LGPLv2+ with exceptions and GPLv2+
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls glibc-common-2.26-56.amzn2
+$ yumdownloader --quiet --source --urls glibc-common-2.26-57.amzn2
 Enabling amzn2-core-source repository
-https://cdn.amazonlinux.com/2/core/2.0/SRPMS/8b618629d7dc5df1d8d584701a7c14d0ab8ddbf11e2c586a9860a7a92072a33f//../../../../../blobstore/0a1b9b5d81a1a4361fd54713bd08f70e8e693fa517e4d33c3eac9a9f4329ee32/glibc-2.26-56.amzn2.src.rpm
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/8b618629d7dc5df1d8d584701a7c14d0ab8ddbf11e2c586a9860a7a92072a33f//../../../../../blobstore/d1fffeff1715f84e279aecec2df24c0c12def66e231e8585f1b929a3f76617f0/glibc-2.26-57.amzn2.src.rpm
 ```
 
-### `rpm` package: `glibc-langpack-en-2.26-56.amzn2.x86_64`
+### `rpm` package: `glibc-langpack-en-2.26-57.amzn2.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+ and LGPLv2+ with exceptions and GPLv2+
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls glibc-langpack-en-2.26-56.amzn2
+$ yumdownloader --quiet --source --urls glibc-langpack-en-2.26-57.amzn2
 Enabling amzn2-core-source repository
-https://cdn.amazonlinux.com/2/core/2.0/SRPMS/8b618629d7dc5df1d8d584701a7c14d0ab8ddbf11e2c586a9860a7a92072a33f//../../../../../blobstore/0a1b9b5d81a1a4361fd54713bd08f70e8e693fa517e4d33c3eac9a9f4329ee32/glibc-2.26-56.amzn2.src.rpm
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/8b618629d7dc5df1d8d584701a7c14d0ab8ddbf11e2c586a9860a7a92072a33f//../../../../../blobstore/d1fffeff1715f84e279aecec2df24c0c12def66e231e8585f1b929a3f76617f0/glibc-2.26-57.amzn2.src.rpm
 ```
 
-### `rpm` package: `glibc-minimal-langpack-2.26-56.amzn2.x86_64`
+### `rpm` package: `glibc-minimal-langpack-2.26-57.amzn2.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+ and LGPLv2+ with exceptions and GPLv2+
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls glibc-minimal-langpack-2.26-56.amzn2
+$ yumdownloader --quiet --source --urls glibc-minimal-langpack-2.26-57.amzn2
 Enabling amzn2-core-source repository
-https://cdn.amazonlinux.com/2/core/2.0/SRPMS/8b618629d7dc5df1d8d584701a7c14d0ab8ddbf11e2c586a9860a7a92072a33f//../../../../../blobstore/0a1b9b5d81a1a4361fd54713bd08f70e8e693fa517e4d33c3eac9a9f4329ee32/glibc-2.26-56.amzn2.src.rpm
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/8b618629d7dc5df1d8d584701a7c14d0ab8ddbf11e2c586a9860a7a92072a33f//../../../../../blobstore/d1fffeff1715f84e279aecec2df24c0c12def66e231e8585f1b929a3f76617f0/glibc-2.26-57.amzn2.src.rpm
 ```
 
 ### `rpm` package: `gmp-6.0.0-15.amzn2.0.2.x86_64`
@@ -367,16 +367,16 @@ Enabling amzn2-core-source repository
 https://cdn.amazonlinux.com/2/core/2.0/SRPMS/8b618629d7dc5df1d8d584701a7c14d0ab8ddbf11e2c586a9860a7a92072a33f//../../../../../blobstore/1579dc52bd90d64e68d663da4dfa4462afa9df1cfbef30d47b64add0dd12210e/keyutils-1.5.8-3.amzn2.0.2.src.rpm
 ```
 
-### `rpm` package: `krb5-libs-1.15.1-37.amzn2.2.2.x86_64`
+### `rpm` package: `krb5-libs-1.15.1-37.amzn2.2.4.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls krb5-libs-1.15.1-37.amzn2.2.2
+$ yumdownloader --quiet --source --urls krb5-libs-1.15.1-37.amzn2.2.4
 Enabling amzn2-core-source repository
-https://cdn.amazonlinux.com/2/core/2.0/SRPMS/8b618629d7dc5df1d8d584701a7c14d0ab8ddbf11e2c586a9860a7a92072a33f//../../../../../blobstore/a4ae5281a860a9566b9d0533461f0a65858cb1cea7cc82eb94f5b0ca59ef8020/krb5-1.15.1-37.amzn2.2.2.src.rpm
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/8b618629d7dc5df1d8d584701a7c14d0ab8ddbf11e2c586a9860a7a92072a33f//../../../../../blobstore/6952b716c976161cbd0bd332d174c32447dc07fbc79e63791eedb500168a2002/krb5-1.15.1-37.amzn2.2.4.src.rpm
 ```
 
 ### `rpm` package: `libacl-2.2.51-14.amzn2.x86_64`
@@ -451,16 +451,16 @@ Enabling amzn2-core-source repository
 https://cdn.amazonlinux.com/2/core/2.0/SRPMS/8b618629d7dc5df1d8d584701a7c14d0ab8ddbf11e2c586a9860a7a92072a33f//../../../../../blobstore/161cbeb604e5866ce40b2be3280195526a37c6675362961dd307be04366b2678/e2fsprogs-1.42.9-19.amzn2.src.rpm
 ```
 
-### `rpm` package: `libcrypt-2.26-56.amzn2.x86_64`
+### `rpm` package: `libcrypt-2.26-57.amzn2.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+ and LGPLv2+ with exceptions and GPLv2+
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls libcrypt-2.26-56.amzn2
+$ yumdownloader --quiet --source --urls libcrypt-2.26-57.amzn2
 Enabling amzn2-core-source repository
-https://cdn.amazonlinux.com/2/core/2.0/SRPMS/8b618629d7dc5df1d8d584701a7c14d0ab8ddbf11e2c586a9860a7a92072a33f//../../../../../blobstore/0a1b9b5d81a1a4361fd54713bd08f70e8e693fa517e4d33c3eac9a9f4329ee32/glibc-2.26-56.amzn2.src.rpm
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/8b618629d7dc5df1d8d584701a7c14d0ab8ddbf11e2c586a9860a7a92072a33f//../../../../../blobstore/d1fffeff1715f84e279aecec2df24c0c12def66e231e8585f1b929a3f76617f0/glibc-2.26-57.amzn2.src.rpm
 ```
 
 ### `rpm` package: `libcurl-7.79.1-1.amzn2.0.1.x86_64`
@@ -1171,16 +1171,28 @@ Enabling amzn2-core-source repository
 https://cdn.amazonlinux.com/2/core/2.0/SRPMS/8b618629d7dc5df1d8d584701a7c14d0ab8ddbf11e2c586a9860a7a92072a33f//../../../../../blobstore/d47583ea05cc858359697e71bf46e46966d5d029507abce69b7bec8a9da265fa/tzdata-2021a-1.amzn2.src.rpm
 ```
 
-### `rpm` package: `vim-minimal-8.2.3642-1.amzn2.0.1.x86_64`
+### `rpm` package: `vim-data-8.2.4006-1.amzn2.0.1.noarch`
 
 Licenses (from `rpm --query`): Vim and MIT
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls vim-minimal-8.2.3642-1.amzn2.0.1
+$ yumdownloader --quiet --source --urls vim-data-8.2.4006-1.amzn2.0.1.noarch
 Enabling amzn2-core-source repository
-https://cdn.amazonlinux.com/2/core/2.0/SRPMS/8b618629d7dc5df1d8d584701a7c14d0ab8ddbf11e2c586a9860a7a92072a33f//../../../../../blobstore/3c33f7b07bbfa25fffe4588747a32f8a56511180a41ff12cb19644f66b762324/vim-8.2.3642-1.amzn2.0.1.src.rpm
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/8b618629d7dc5df1d8d584701a7c14d0ab8ddbf11e2c586a9860a7a92072a33f//../../../../../blobstore/16de1b9adc79a2b493bd2d622c7c36a460bf9677b14b9ae45a492cf47f3a9533/vim-8.2.4006-1.amzn2.0.1.src.rpm
+```
+
+### `rpm` package: `vim-minimal-8.2.4006-1.amzn2.0.1.x86_64`
+
+Licenses (from `rpm --query`): Vim and MIT
+
+Source:
+
+```console
+$ yumdownloader --quiet --source --urls vim-minimal-8.2.4006-1.amzn2.0.1
+Enabling amzn2-core-source repository
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/8b618629d7dc5df1d8d584701a7c14d0ab8ddbf11e2c586a9860a7a92072a33f//../../../../../blobstore/16de1b9adc79a2b493bd2d622c7c36a460bf9677b14b9ae45a492cf47f3a9533/vim-8.2.4006-1.amzn2.0.1.src.rpm
 ```
 
 ### `rpm` package: `xz-libs-5.2.2-1.amzn2.0.2.x86_64`
