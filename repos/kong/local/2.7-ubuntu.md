@@ -1,10 +1,10 @@
-# `kong:2.7.0-ubuntu`
+# `kong:2.7.1-ubuntu`
 
 ## Docker Metadata
 
-- Image ID: `sha256:6405f15bf32e76cb7c66422c22ddc684deb2f7086d37d218542df4e99fa4f9da`
-- Created: `2022-02-02T07:38:41.697152243Z`
-- Virtual Size: ~ 320.29 Mb  
+- Image ID: `sha256:f6cf58201aa5f25a7917e4a7da57a3c5997d993f2b2e8f9f051d548ec5ab1f36`
+- Created: `2022-02-04T20:21:04.527213576Z`
+- Virtual Size: ~ 320.30 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -12,7 +12,7 @@
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `ASSET=ce`
-  - `KONG_VERSION=2.7.0`
+  - `KONG_VERSION=2.7.1`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -831,11 +831,11 @@ $ apt-get source -qq --print-uris keyutils=1.6-6ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/k/keyutils/keyutils_1.6-6ubuntu1.debian.tar.xz' keyutils_1.6-6ubuntu1.debian.tar.xz 13636 SHA256:a4ae24062e9d20a0e2092e4cb342b664c0211ba7efdfeb7bde5f8d209c9ad1db
 ```
 
-### `dpkg` source package: `kong=2.7.0`
+### `dpkg` source package: `kong=2.7.1`
 
 Binary Packages:
 
-- `kong=2.7.0`
+- `kong=2.7.1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.

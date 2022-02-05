@@ -1,10 +1,10 @@
-# `kong:2.7.0-centos`
+# `kong:2.7.1-centos`
 
 ## Docker Metadata
 
-- Image ID: `sha256:af7f82237e6e981dabf88fb7e5f947940bac0edbca09cce784d467e789f2e5cc`
-- Created: `2021-12-17T19:25:49.999542899Z`
-- Virtual Size: ~ 477.60 Mb  
+- Image ID: `sha256:21630d13e8d7e152ff929159c915ffa8aeab5a6d7013c12d2a01021e71e68e18`
+- Created: `2022-02-04T20:21:56.016617093Z`
+- Virtual Size: ~ 477.61 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -12,7 +12,7 @@
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `ASSET=ce`
-  - `KONG_VERSION=2.7.0`
+  - `KONG_VERSION=2.7.1`
 - Labels:
   - `maintainer=Kong <support@konghq.com>`
   - `org.label-schema.build-date=20210915`
