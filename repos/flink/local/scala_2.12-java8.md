@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:8f3e5c2c54ca5b1fc533da7aa22b428c517bb8d25ea3072c9d751697e9fd3146`
-- Created: `2022-01-27T12:59:32.6415912Z`
-- Virtual Size: ~ 657.97 Mb  
+- Image ID: `sha256:f38a4564f51d88d09832c3220d77eb1ce2c1083bf031bb25903e83d27fa9c950`
+- Created: `2022-02-03T21:33:58.145561286Z`
+- Virtual Size: ~ 658.01 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -13,7 +13,7 @@
   - `PATH=/opt/flink/bin:/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `JAVA_HOME=/usr/local/openjdk-8`
   - `LANG=C.UTF-8`
-  - `JAVA_VERSION=8u312`
+  - `JAVA_VERSION=8u322`
   - `GOSU_VERSION=1.11`
   - `FLINK_TGZ_URL=https://www.apache.org/dyn/closer.cgi?action=download&filename=flink/flink-1.14.3/flink-1.14.3-bin-scala_2.12.tgz`
   - `FLINK_ASC_URL=https://www.apache.org/dist/flink/flink-1.14.3/flink-1.14.3-bin-scala_2.12.tgz.asc`
