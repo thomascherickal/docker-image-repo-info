@@ -1,10 +1,10 @@
-# `pypy:3.7-7.3.7-bullseye`
+# `pypy:3.8-7.3.7-bullseye`
 
 ## Docker Metadata
 
-- Image ID: `sha256:55565bc883fbf999829053156356aa4aaf195fb17c0651e2558a2c853b9a23ce`
-- Created: `2022-01-27T02:07:20.873466383Z`
-- Virtual Size: ~ 966.90 Mb  
+- Image ID: `sha256:57668fd2808c5e666325f1bb6280bc98eff49261e76eb923afc86f6ec6a7f86e`
+- Created: `2022-01-27T02:03:39.340679025Z`
+- Virtual Size: ~ 965.01 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["pypy3"]`

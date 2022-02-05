@@ -1,10 +1,10 @@
-# `pypy:3.7-7.3.7-buster`
+# `pypy:3.8-7.3.7-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:1fb9d56301b3dc6837264d1a3bee9006f34c19fbc6dae086a6df6b687f0ed66f`
-- Created: `2022-01-27T02:08:43.121314726Z`
-- Virtual Size: ~ 936.93 Mb  
+- Image ID: `sha256:7760aa92ea2eaea675d346b3619746d49c87773462716f3ee60361b66ec1b0d1`
+- Created: `2022-01-27T02:05:50.828918167Z`
+- Virtual Size: ~ 935.04 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["pypy3"]`
