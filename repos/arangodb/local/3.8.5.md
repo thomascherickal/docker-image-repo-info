@@ -2,20 +2,20 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:26f122b8e5228cd96ffca98393189ec6c109770f49b78bb9c5b2071a1c67d9bb`
-- Created: `2022-01-24T23:20:17.386591002Z`
-- Virtual Size: ~ 435.84 Mb  
+- Image ID: `sha256:581ad62f9ac36fbd74034ea78718a2bceea17d0d62b8f9bbd08643befac43751`
+- Created: `2022-02-04T23:43:27.570681669Z`
+- Virtual Size: ~ 435.38 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
 - Command: `["arangod"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `ARANGO_VERSION=3.8.5`
+  - `ARANGO_VERSION=3.8.5.1`
   - `ARANGO_URL=https://download.arangodb.com/arangodb38/DEBIAN/amd64`
-  - `ARANGO_PACKAGE=arangodb3_3.8.5-1_amd64.deb`
-  - `ARANGO_PACKAGE_URL=https://download.arangodb.com/arangodb38/DEBIAN/amd64/arangodb3_3.8.5-1_amd64.deb`
-  - `ARANGO_SIGNATURE_URL=https://download.arangodb.com/arangodb38/DEBIAN/amd64/arangodb3_3.8.5-1_amd64.deb.asc`
+  - `ARANGO_PACKAGE=arangodb3_3.8.5.1-1_amd64.deb`
+  - `ARANGO_PACKAGE_URL=https://download.arangodb.com/arangodb38/DEBIAN/amd64/arangodb3_3.8.5.1-1_amd64.deb`
+  - `ARANGO_SIGNATURE_URL=https://download.arangodb.com/arangodb38/DEBIAN/amd64/arangodb3_3.8.5.1-1_amd64.deb.asc`
   - `GLIBCXX_FORCE_NEW=1`
 
 ## `apk` (`.apk`-based packages)
