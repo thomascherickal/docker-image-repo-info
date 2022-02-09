@@ -4,7 +4,7 @@
 
 - Image ID: `sha256:4b361dfebd4fbd65e91e96956dcb1954f79b587c6b2a781b2c2cb8cc27bf9eca`
 - Created: `2022-01-26T22:40:13.048249298Z`
-- Virtual Size: ~ 766.85 Mb  
+- Virtual Size: ~ 766.89 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["R"]`
@@ -1115,21 +1115,13 @@ Licenses: (parsed from: `/usr/share/doc/libgdbm-compat4/copyright`, `/usr/share/
 - `GPL-3`
 - `GPL-3+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gdbm=1.22-1
-'http://deb.debian.org/debian/pool/main/g/gdbm/gdbm_1.22-1.dsc' gdbm_1.22-1.dsc 2583 SHA256:d3e8996eea0571e5caefeb7665a705097734278d81f366826cf4a025131f282f
-'http://deb.debian.org/debian/pool/main/g/gdbm/gdbm_1.22.orig.tar.gz' gdbm_1.22.orig.tar.gz 1090100 SHA256:f366c823a6724af313b6bbe975b2809f9a157e5f6a43612a72949138d161d762
-'http://deb.debian.org/debian/pool/main/g/gdbm/gdbm_1.22.orig.tar.gz.asc' gdbm_1.22.orig.tar.gz.asc 181 SHA256:0e66b54bc503377c0e13e001c6807f6c908c1cfb51a892446e69ee9400229c3a
-'http://deb.debian.org/debian/pool/main/g/gdbm/gdbm_1.22-1.debian.tar.xz' gdbm_1.22-1.debian.tar.xz 18484 SHA256:8fa2953bf9801b65293b3a759e065c0a04ba798b0ad3aab2553a1621cab51588
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gdbm/1.22-1/
 
-- https://sources.debian.net/src/gdbm/1.22-1/ (for browsing the source)
-- https://sources.debian.net/src/gdbm/1.22-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gdbm/1.22-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `glib2.0=2.70.2-1`
 
@@ -3514,20 +3506,13 @@ Licenses: (parsed from: `/usr/share/doc/r-base/copyright`, `/usr/share/doc/r-bas
 - `LGPL-2.1`
 - `LGPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris r-base=4.1.2-1
-'http://deb.debian.org/debian/pool/main/r/r-base/r-base_4.1.2-1.dsc' r-base_4.1.2-1.dsc 3014 SHA256:850c1583eb1386d05fd2676728eeb547c58f53d36cd57b2e786d09d2e4bb9f50
-'http://deb.debian.org/debian/pool/main/r/r-base/r-base_4.1.2.orig.tar.gz' r-base_4.1.2.orig.tar.gz 34009074 SHA256:2036225e9f7207d4ce097e54972aecdaa8b40d7d9911cd26491fac5a0fab38af
-'http://deb.debian.org/debian/pool/main/r/r-base/r-base_4.1.2-1.debian.tar.xz' r-base_4.1.2-1.debian.tar.xz 97408 SHA256:0c63db5576bf3c725edbbead5be2a34905360efbc4e549877d08721495c4adf0
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/r-base/4.1.2-1/
 
-- https://sources.debian.net/src/r-base/4.1.2-1/ (for browsing the source)
-- https://sources.debian.net/src/r-base/4.1.2-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/r-base/4.1.2-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `r-cran-class=7.3-20-1`
 
