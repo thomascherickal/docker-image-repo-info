@@ -1,10 +1,10 @@
-# `composer:2.2.5`
+# `composer:2.2.6`
 
 ## Docker Metadata
 
-- Image ID: `sha256:81bdcd5ca0393e1718f1f03b46b5009a0099b9b46e6f03ac5c12563d190241f3`
-- Created: `2022-01-24T19:25:09.124759338Z`
-- Virtual Size: ~ 193.91 Mb  
+- Image ID: `sha256:650e7f6aeb237812f001fdeb659f9e00d9377f8a130876c5652777e91fb89005`
+- Created: `2022-02-07T20:24:10.948140763Z`
+- Virtual Size: ~ 194.97 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -23,7 +23,7 @@
   - `PHP_SHA256=6b448242fd360c1a9f265b7263abf3da25d28f2b2b0f5465533b69be51a391dd`
   - `COMPOSER_ALLOW_SUPERUSER=1`
   - `COMPOSER_HOME=/tmp`
-  - `COMPOSER_VERSION=2.2.5`
+  - `COMPOSER_VERSION=2.2.6`
 
 ## `apk` (`.apk`-based packages)
 
@@ -166,16 +166,16 @@ MIT
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.34.1-r3 description:
+busybox-1.34.1-r4 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.34.1-r3 webpage:
+busybox-1.34.1-r4 webpage:
 https://busybox.net/
 
-busybox-1.34.1-r3 installed size:
+busybox-1.34.1-r4 installed size:
 924 KiB
 
-busybox-1.34.1-r3 license:
+busybox-1.34.1-r4 license:
 GPL-2.0-only
 
 ```
@@ -251,16 +251,16 @@ MIT
 ### `apk` package: `expat`
 
 ```console
-expat-2.4.3-r0 description:
+expat-2.4.4-r0 description:
 XML Parser library written in C
 
-expat-2.4.3-r0 webpage:
+expat-2.4.4-r0 webpage:
 http://www.libexpat.org/
 
-expat-2.4.3-r0 installed size:
+expat-2.4.4-r0 installed size:
 192 KiB
 
-expat-2.4.3-r0 license:
+expat-2.4.4-r0 license:
 MIT
 
 ```
@@ -540,16 +540,16 @@ GPL-2.0-or-later LGPL-2.1-or-later
 ### `apk` package: `libuuid`
 
 ```console
-libuuid-2.37.2-r1 description:
+libuuid-2.37.3-r0 description:
 DCE compatible Universally Unique Identifier library
 
-libuuid-2.37.2-r1 webpage:
+libuuid-2.37.3-r0 webpage:
 https://git.kernel.org/cgit/utils/util-linux/util-linux.git
 
-libuuid-2.37.2-r1 installed size:
+libuuid-2.37.3-r0 installed size:
 40 KiB
 
-libuuid-2.37.2-r1 license:
+libuuid-2.37.3-r0 license:
 GPL-3.0-or-later AND GPL-2.0-or-later AND GPL-2.0-only AND
 
 ```
@@ -999,16 +999,16 @@ blessing
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.34.1-r3 description:
+ssl_client-1.34.1-r4 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.34.1-r3 webpage:
+ssl_client-1.34.1-r4 webpage:
 https://busybox.net/
 
-ssl_client-1.34.1-r3 installed size:
+ssl_client-1.34.1-r4 installed size:
 28 KiB
 
-ssl_client-1.34.1-r3 license:
+ssl_client-1.34.1-r4 license:
 GPL-2.0-only
 
 ```
