@@ -1,10 +1,10 @@
-# `drupal:9.2.11-php7.4-fpm-bullseye`
+# `drupal:9.2.12-php7.4-fpm-bullseye`
 
 ## Docker Metadata
 
-- Image ID: `sha256:31b0a7d0790fb8df8b46281931017854aba6cb3cef9fc3e6292f011ccd6d6d62`
-- Created: `2022-01-27T20:10:17.589955088Z`
-- Virtual Size: ~ 545.07 Mb  
+- Image ID: `sha256:74ae5f4b8b06d11dfcaed82840adf10c870f029ef00c1989e5c04b90069a4e76`
+- Created: `2022-02-08T02:28:51.540670637Z`
+- Virtual Size: ~ 544.77 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -21,7 +21,7 @@
   - `PHP_URL=https://www.php.net/distributions/php-7.4.27.tar.xz`
   - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.27.tar.xz.asc`
   - `PHP_SHA256=3f8b937310f155822752229c2c2feb8cc2621e25a728e7b94d0d74c128c43d0c`
-  - `DRUPAL_VERSION=9.2.11`
+  - `DRUPAL_VERSION=9.2.12`
 
 ## `dpkg` (`.deb`-based packages)
 
