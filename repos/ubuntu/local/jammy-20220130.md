@@ -829,15 +829,9 @@ Licenses: (parsed from: `/usr/share/doc/libseccomp2/copyright`)
 
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libseccomp=2.5.2-2ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.5.2-2ubuntu2.dsc' libseccomp_2.5.2-2ubuntu2.dsc 2491 SHA512:fa56e0e961a4e895c1c306286500f997dffa2e63bf2f87d9360e5cf3c0e93a36bce94e850df24cc060958baf327e63e4dffeb989f8376e7d83c8c90004683988
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.5.2.orig.tar.gz' libseccomp_2.5.2.orig.tar.gz 640305 SHA512:b2a95152cb274d6b35753596fd825406dae20c4a48b2f4076f835f977ecf324de38a3fe02e789dc20b49ecf6b4eb67f03e7733e92d40f5e20f25874307f1c2ac
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.5.2.orig.tar.gz.asc' libseccomp_2.5.2.orig.tar.gz.asc 833 SHA512:cdd93fc69ff1032641a26e3e8573960e336a95c100bc6f09c9b3e281f3e9e34cf5fb68bccfcacd667e30d7f42a062c58c33cbd4ad7ae573971716b5fa290e0f0
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.5.2-2ubuntu2.debian.tar.xz' libseccomp_2.5.2-2ubuntu2.debian.tar.xz 34556 SHA512:abb5bd3f5971f01849f20f7daa866f37605f30bcc8e71db5a948b2ea15a6845af7fc59f84ed76859c72505b6f72c3a76b0d423d2d12a1884642b20d12bec17d2
-```
 
 ### `dpkg` source package: `libselinux=3.3-1`
 
@@ -970,15 +964,13 @@ Licenses: (parsed from: `/usr/share/doc/libunistring2/copyright`)
 - `LGPL-3+`
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libunistring=0.9.10-6
-'http://archive.ubuntu.com/ubuntu/pool/main/libu/libunistring/libunistring_0.9.10-6.dsc' libunistring_0.9.10-6.dsc 2212 SHA512:838b5c4e4fad0b372335afe7bead76cd11a911e6278bc9e829c8c92d24a4599f09c751cb02b02e9a14778b30f0ef9d4e6c9611d199eed43ad290fe8e8c962ba5
-'http://archive.ubuntu.com/ubuntu/pool/main/libu/libunistring/libunistring_0.9.10.orig.tar.xz' libunistring_0.9.10.orig.tar.xz 2051320 SHA512:01dcab6e05ea4c33572bf96cc0558bcffbfc0e62fc86410cef06c1597a0073d5750525fe2dee4fdb39c9bd704557fcbab864f9645958108a2e07950bc539fe54
-'http://archive.ubuntu.com/ubuntu/pool/main/libu/libunistring/libunistring_0.9.10.orig.tar.xz.asc' libunistring_0.9.10.orig.tar.xz.asc 1310 SHA512:94d4316df1407850f34e84064275ae512d1ee1cd519420e2342a3f36c17d1ff7fa4019fea64507a04034ffc356c0c9add94a5abf756dd5995913583f68cfe0bd
-'http://archive.ubuntu.com/ubuntu/pool/main/libu/libunistring/libunistring_0.9.10-6.debian.tar.xz' libunistring_0.9.10-6.debian.tar.xz 41588 SHA512:440a3c65e8b155f11bf823289e1481fb25e4a0b2686de53288fde8695a7947dfa47891445a9ffe3a963b5109fabbfedf76bce48bf5a8441ec70098987c25c6df
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/libunistring/0.9.10-6/
+
 
 ### `dpkg` source package: `libxcrypt=1:4.4.27-1`
 
