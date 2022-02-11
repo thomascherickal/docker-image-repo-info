@@ -600,15 +600,13 @@ Licenses: (parsed from: `/usr/share/doc/libgdbm-compat4/copyright`, `/usr/share/
 - `GPL-3`
 - `GPL-3+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gdbm=1.22-1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gdbm/gdbm_1.22-1.dsc' gdbm_1.22-1.dsc 2583 SHA512:9dd1c9c63efe686e7db27c0912ac1074ab6b546d4e7e53bfce798901ddd25ff4c13511a22b08d5da488462c04b39950c3a96af5196d5f9639cbd4b25eb7de06a
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gdbm/gdbm_1.22.orig.tar.gz' gdbm_1.22.orig.tar.gz 1090100 SHA512:67461fc4f41e825d0134175ff99c913ccb4aa7ea3d0f64f32bdedbc7677b3ecabd2c525ac6b2ee47a9561e002e4224e492b72088d57bb4862a1f8c089521ec51
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gdbm/gdbm_1.22.orig.tar.gz.asc' gdbm_1.22.orig.tar.gz.asc 181 SHA512:5de3d19d38f438622ae4412c7d26863d6ec6a05ba6cd285a8b5a44ada0c86ccd4781b75fa68d9315bfdab4077bb4e92afbbc9588de867f1fd388c8aaf5a644a5
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gdbm/gdbm_1.22-1.debian.tar.xz' gdbm_1.22-1.debian.tar.xz 18484 SHA512:db60c2a3821c8d160d7c4644d2a3926d81da9d5e285a3d99499f3c3446c4db1632b7186bd7d4abad410e83c033f806895e563b15b0849ed137ae1b093bd0f975
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/gdbm/1.22-1/
+
 
 ### `dpkg` source package: `git=1:2.34.1-1ubuntu1`
 
@@ -1278,15 +1276,9 @@ Licenses: (parsed from: `/usr/share/doc/libseccomp2/copyright`)
 
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libseccomp=2.5.2-2ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.5.2-2ubuntu2.dsc' libseccomp_2.5.2-2ubuntu2.dsc 2491 SHA512:fa56e0e961a4e895c1c306286500f997dffa2e63bf2f87d9360e5cf3c0e93a36bce94e850df24cc060958baf327e63e4dffeb989f8376e7d83c8c90004683988
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.5.2.orig.tar.gz' libseccomp_2.5.2.orig.tar.gz 640305 SHA512:b2a95152cb274d6b35753596fd825406dae20c4a48b2f4076f835f977ecf324de38a3fe02e789dc20b49ecf6b4eb67f03e7733e92d40f5e20f25874307f1c2ac
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.5.2.orig.tar.gz.asc' libseccomp_2.5.2.orig.tar.gz.asc 833 SHA512:cdd93fc69ff1032641a26e3e8573960e336a95c100bc6f09c9b3e281f3e9e34cf5fb68bccfcacd667e30d7f42a062c58c33cbd4ad7ae573971716b5fa290e0f0
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.5.2-2ubuntu2.debian.tar.xz' libseccomp_2.5.2-2ubuntu2.debian.tar.xz 34556 SHA512:abb5bd3f5971f01849f20f7daa866f37605f30bcc8e71db5a948b2ea15a6845af7fc59f84ed76859c72505b6f72c3a76b0d423d2d12a1884642b20d12bec17d2
-```
 
 ### `dpkg` source package: `libselinux=3.3-1`
 
@@ -1561,13 +1553,13 @@ Licenses: (parsed from: `/usr/share/doc/media-types/copyright`)
 
 - `ad-hoc`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris media-types=4.0.0
-'http://archive.ubuntu.com/ubuntu/pool/main/m/media-types/media-types_4.0.0.dsc' media-types_4.0.0.dsc 1620 SHA512:ff19b9eecde75e5558aa945438e12a1d964dec3188205ce1c90973c6d0948218823fc0c158a729a2b1efb3ddbd54264746c2c8d5167b14e008e54427672d0b47
-'http://archive.ubuntu.com/ubuntu/pool/main/m/media-types/media-types_4.0.0.tar.xz' media-types_4.0.0.tar.xz 33988 SHA512:6167849bfe24b9ce54221ee6d663d245e7c5db51975b42806797d94680a71dd208906b69ee827d9cea52711d0f676e2492c4d0d818e1d3dac1fa049335ac0f1d
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/media-types/4.0.0/
+
 
 ### `dpkg` source package: `mercurial=6.0.1-1`
 

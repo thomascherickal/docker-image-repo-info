@@ -4378,14 +4378,9 @@ Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/lib
 - `MIT`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris util-linux=2.36.1-8ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.36.1-8ubuntu2.dsc' util-linux_2.36.1-8ubuntu2.dsc 4471 SHA512:9375ca13aca2f4abc2db648ee9658c3795b08279c3bcef3ae44a88fb9aa086816621e59656d1e7c5b4085474ce13dc15ff54c7905996df2a914f140984e5b00a
-'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.36.1.orig.tar.xz' util-linux_2.36.1.orig.tar.xz 5231880 SHA512:9dfd01ae4c16fa35015dafd222d555988b72e4d1d2fbadd140791b9ef78f84fa8254d4d08dc67cabf41e873338867f19e786b989d708ccfe5161c4f7679bba7a
-'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.36.1-8ubuntu2.debian.tar.xz' util-linux_2.36.1-8ubuntu2.debian.tar.xz 103764 SHA512:de267807f28911b2cddeb0ece6b56719c9ceb368fb4756fc959a2781d2ac3b5e61da331180cc0dc55763d3581ab65a613ac23f19939b5046333b3a7df8ad32a3
-```
 
 ### `dpkg` source package: `wget=1.21-1ubuntu3`
 
