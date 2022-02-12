@@ -1,7 +1,7 @@
 ## `openjdk:19-ea-jdk-bullseye`
 
 ```console
-$ docker pull openjdk@sha256:fd18a1c8538fe85303124494e1142bdd037aea1c32e4ccd77c910d5d998efa6f
+$ docker pull openjdk@sha256:36862551a286806cac11a203bddb5433bab04e41d4110f09edf1bdb98c6f76e9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,14 +12,14 @@ $ docker pull openjdk@sha256:fd18a1c8538fe85303124494e1142bdd037aea1c32e4ccd77c9
 ### `openjdk:19-ea-jdk-bullseye` - linux; amd64
 
 ```console
-$ docker pull openjdk@sha256:216c5b66ca62800ca7233c8082b220e7dc36c63402a270c6c6d0e26071351944
+$ docker pull openjdk@sha256:79e17fb8ea74fb8aede4856803754738925acc881fdbaccc76084ac1e05727a0
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **329.8 MB (329827002 bytes)**  
+-	Total Size: **329.8 MB (329847508 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0605dfa3471408c4a46bb1f1218877061d98b52f31d4524b5ebc62c79aced45f`
+-	Image ID: `sha256:a3686c265df7aa8b4a11ee5a2689b5927c608e80f1b2ad0c74990874ef19a2ee`
 -	Default Command: `["jshell"]`
 
 ```dockerfile
@@ -41,11 +41,11 @@ ENV JAVA_HOME=/usr/local/openjdk-19
 ENV PATH=/usr/local/openjdk-19/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 26 Jan 2022 09:17:45 GMT
 ENV LANG=C.UTF-8
-# Tue, 08 Feb 2022 03:43:07 GMT
-ENV JAVA_VERSION=19-ea+8
-# Tue, 08 Feb 2022 03:43:26 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://download.java.net/java/early_access/jdk19/8/GPL/openjdk-19-ea+8_linux-x64_bin.tar.gz'; 			downloadSha256='64f85aad4da5d214002ccbf442b38618b6fae689e66fec2f4a52253d1654683c'; 			;; 		'arm64') 			downloadUrl='https://download.java.net/java/early_access/jdk19/8/GPL/openjdk-19-ea+8_linux-aarch64_bin.tar.gz'; 			downloadSha256='55bc6f3f3db8a59c77e43ee8ee1ea99d3f121b48d3c7d54cf84f2660a008f047'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
-# Tue, 08 Feb 2022 03:43:27 GMT
+# Fri, 11 Feb 2022 23:50:03 GMT
+ENV JAVA_VERSION=19-ea+9
+# Fri, 11 Feb 2022 23:50:14 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://download.java.net/java/early_access/jdk19/9/GPL/openjdk-19-ea+9_linux-x64_bin.tar.gz'; 			downloadSha256='df0cd18dd2885e213244d96e894df4b7f4570eec80a3110f3e50663ba3019c36'; 			;; 		'arm64') 			downloadUrl='https://download.java.net/java/early_access/jdk19/9/GPL/openjdk-19-ea+9_linux-aarch64_bin.tar.gz'; 			downloadSha256='a77a19b7ec6cd8b57ed1d35d893b166b3d2d5e60036d559fd71f37733bf08031'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Fri, 11 Feb 2022 23:50:15 GMT
 CMD ["jshell"]
 ```
 
@@ -70,22 +70,22 @@ CMD ["jshell"]
 		Last Modified: Wed, 26 Jan 2022 09:40:55 GMT  
 		Size: 14.1 MB (14071678 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:41fc10dfd596ab94739a69c1928cd963a7de851948532ac6223ea2ddb1973d76`  
-		Last Modified: Tue, 08 Feb 2022 03:55:01 GMT  
-		Size: 190.2 MB (190246200 bytes)  
+	-	`sha256:32f0e3af0648e54019f0fccc7545fbfbbecba3cd276b9127e3385678134dbbf8`  
+		Last Modified: Sat, 12 Feb 2022 00:12:09 GMT  
+		Size: 190.3 MB (190266706 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `openjdk:19-ea-jdk-bullseye` - linux; arm64 variant v8
 
 ```console
-$ docker pull openjdk@sha256:9eeb074f46b72951ac7ab7dbd76ea5e8d28d267be0e0f040b858863b0a3302fc
+$ docker pull openjdk@sha256:29f46d027c3e9123f1dca5d0c7926614cbafbba26f9e6752cf4804eb253db71d
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **328.9 MB (328883532 bytes)**  
+-	Total Size: **328.9 MB (328916518 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:57be63916c374d07c4329035ea43d08c338b7834a82678b62832828f9e912e68`
+-	Image ID: `sha256:03324d23e1b644e318abb8811936bb914a4091c9a1dbb04bd51808cd6ff14250`
 -	Default Command: `["jshell"]`
 
 ```dockerfile
@@ -107,11 +107,11 @@ ENV JAVA_HOME=/usr/local/openjdk-19
 ENV PATH=/usr/local/openjdk-19/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 26 Jan 2022 05:48:43 GMT
 ENV LANG=C.UTF-8
-# Tue, 08 Feb 2022 06:24:15 GMT
-ENV JAVA_VERSION=19-ea+8
-# Tue, 08 Feb 2022 06:24:28 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://download.java.net/java/early_access/jdk19/8/GPL/openjdk-19-ea+8_linux-x64_bin.tar.gz'; 			downloadSha256='64f85aad4da5d214002ccbf442b38618b6fae689e66fec2f4a52253d1654683c'; 			;; 		'arm64') 			downloadUrl='https://download.java.net/java/early_access/jdk19/8/GPL/openjdk-19-ea+8_linux-aarch64_bin.tar.gz'; 			downloadSha256='55bc6f3f3db8a59c77e43ee8ee1ea99d3f121b48d3c7d54cf84f2660a008f047'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
-# Tue, 08 Feb 2022 06:24:29 GMT
+# Sat, 12 Feb 2022 00:07:23 GMT
+ENV JAVA_VERSION=19-ea+9
+# Sat, 12 Feb 2022 00:07:37 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://download.java.net/java/early_access/jdk19/9/GPL/openjdk-19-ea+9_linux-x64_bin.tar.gz'; 			downloadSha256='df0cd18dd2885e213244d96e894df4b7f4570eec80a3110f3e50663ba3019c36'; 			;; 		'arm64') 			downloadUrl='https://download.java.net/java/early_access/jdk19/9/GPL/openjdk-19-ea+9_linux-aarch64_bin.tar.gz'; 			downloadSha256='a77a19b7ec6cd8b57ed1d35d893b166b3d2d5e60036d559fd71f37733bf08031'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Sat, 12 Feb 2022 00:07:38 GMT
 CMD ["jshell"]
 ```
 
@@ -136,7 +136,7 @@ CMD ["jshell"]
 		Last Modified: Wed, 26 Jan 2022 06:12:21 GMT  
 		Size: 15.5 MB (15524910 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d473775ff48724c9abe57d2d93b96641072f64e2719111d176dc3ca8814b47cf`  
-		Last Modified: Tue, 08 Feb 2022 08:21:17 GMT  
-		Size: 189.3 MB (189282845 bytes)  
+	-	`sha256:02755815bc8cea6ee637868a16cf59164414ac74901236e62a4f6063bbffc219`  
+		Last Modified: Sat, 12 Feb 2022 00:30:03 GMT  
+		Size: 189.3 MB (189315831 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
