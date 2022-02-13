@@ -4971,20 +4971,13 @@ Licenses: (parsed from: `/usr/share/doc/libpython2.7-minimal/copyright`, `/usr/s
 - `implied`
 - `see above, some license as Python`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python2.7=2.7.13-2+deb9u5
-'http://security.debian.org/debian-security/pool/updates/main/p/python2.7/python2.7_2.7.13-2+deb9u5.dsc' python2.7_2.7.13-2+deb9u5.dsc 3354 SHA256:5f2545960641218514c1613d930345b240cee7e09b2a24d4f3afac15cf216488
-'http://security.debian.org/debian-security/pool/updates/main/p/python2.7/python2.7_2.7.13.orig.tar.gz' python2.7_2.7.13.orig.tar.gz 17076672 SHA256:a4f05a0720ce0fd92626f0278b6b433eee9a6173ddf2bced7957dfb599a5ece1
-'http://security.debian.org/debian-security/pool/updates/main/p/python2.7/python2.7_2.7.13-2+deb9u5.diff.gz' python2.7_2.7.13-2+deb9u5.diff.gz 304643 SHA256:31ce7558f655511278b89a6db05f8c5f7025e7173edf3f1792bdd5acf006a65b
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/python2.7/2.7.13-2+deb9u5/
 
-- https://sources.debian.net/src/python2.7/2.7.13-2+deb9u5/ (for browsing the source)
-- https://sources.debian.net/src/python2.7/2.7.13-2+deb9u5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python2.7/2.7.13-2+deb9u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `python3-defaults=3.5.3-1`
 
