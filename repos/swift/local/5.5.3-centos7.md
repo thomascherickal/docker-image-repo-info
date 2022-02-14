@@ -1,10 +1,10 @@
-# `swift:5.5.2-centos7`
+# `swift:5.5.3-centos7`
 
 ## Docker Metadata
 
-- Image ID: `sha256:e284bbc6a460fcef2b07be6c77afbaf4d1eac0baf9a9a23b31af003e1ed77d32`
-- Created: `2021-12-14T20:36:48.230326084Z`
-- Virtual Size: ~ 2.46 Gb  
+- Image ID: `sha256:52c236e15b3b94df81bce5599c2ef3404c6b73adca9e52423ea5e5fc745862f6`
+- Created: `2022-02-11T18:44:18.663684937Z`
+- Virtual Size: ~ 2.62 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -12,8 +12,8 @@
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561`
   - `SWIFT_PLATFORM=centos7`
-  - `SWIFT_BRANCH=swift-5.5.2-release`
-  - `SWIFT_VERSION=swift-5.5.2-RELEASE`
+  - `SWIFT_BRANCH=swift-5.5.3-release`
+  - `SWIFT_VERSION=swift-5.5.3-RELEASE`
   - `SWIFT_WEBROOT=https://download.swift.org`
 - Labels:
   - `description=Docker Container for the Swift programming language`
@@ -114,18 +114,18 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/bind-9.11.4-26.P2.el7.src.rpm
 ```
 
-### `rpm` package: `binutils-2.27-44.base.el7.x86_64`
+### `rpm` package: `binutils-2.27-44.base.el7_9.1.x86_64`
 
 Licenses (from `rpm --query`): GPLv3+
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls binutils-2.27-44.base.el7
+$ yumdownloader --quiet --source --urls binutils-2.27-44.base.el7_9.1
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
-http://vault.centos.org/centos/7/os/Source//SPackages/binutils-2.27-44.base.el7.src.rpm
+http://vault.centos.org/centos/7/updates/Source//SPackages/binutils-2.27-44.base.el7_9.1.src.rpm
 ```
 
 ### `rpm` package: `bzip2-libs-1.0.6-13.el7.x86_64`
@@ -268,18 +268,18 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/cryptsetup-2.0.3-6.el7.src.rpm
 ```
 
-### `rpm` package: `curl-7.29.0-59.el7.x86_64`
+### `rpm` package: `curl-7.29.0-59.el7_9.1.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls curl-7.29.0-59.el7
+$ yumdownloader --quiet --source --urls curl-7.29.0-59.el7_9.1
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
-http://vault.centos.org/centos/7/os/Source//SPackages/curl-7.29.0-59.el7.src.rpm
+http://vault.centos.org/centos/7/updates/Source//SPackages/curl-7.29.0-59.el7_9.1.src.rpm
 ```
 
 ### `rpm` package: `cyrus-sasl-lib-2.1.26-23.el7.x86_64`
@@ -862,18 +862,18 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/json-c-0.11-4.el7_0.src.rpm
 ```
 
-### `rpm` package: `kernel-headers-3.10.0-1160.45.1.el7.x86_64`
+### `rpm` package: `kernel-headers-3.10.0-1160.53.1.el7.x86_64`
 
 Licenses (from `rpm --query`): GPLv2
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls kernel-headers-3.10.0-1160.45.1.el7
+$ yumdownloader --quiet --source --urls kernel-headers-3.10.0-1160.53.1.el7
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
-http://vault.centos.org/centos/7/updates/Source//SPackages/kernel-3.10.0-1160.45.1.el7.src.rpm
+http://vault.centos.org/centos/7/updates/Source//SPackages/kernel-3.10.0-1160.53.1.el7.src.rpm
 ```
 
 ### `rpm` package: `keyutils-libs-1.5.8-3.el7.x86_64`
@@ -1058,18 +1058,32 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/e2fsprogs-1.42.9-19.el7.src.rpm
 ```
 
-### `rpm` package: `libcurl-7.29.0-59.el7.x86_64`
+### `rpm` package: `libcurl-7.29.0-59.el7_9.1.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls libcurl-7.29.0-59.el7
+$ yumdownloader --quiet --source --urls libcurl-7.29.0-59.el7_9.1
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
-http://vault.centos.org/centos/7/os/Source//SPackages/curl-7.29.0-59.el7.src.rpm
+http://vault.centos.org/centos/7/updates/Source//SPackages/curl-7.29.0-59.el7_9.1.src.rpm
+```
+
+### `rpm` package: `libcurl-devel-7.29.0-59.el7_9.1.x86_64`
+
+Licenses (from `rpm --query`): MIT
+
+Source:
+
+```console
+$ yumdownloader --quiet --source --urls libcurl-devel-7.29.0-59.el7_9.1
+Enabling updates-source repository
+Enabling base-source repository
+Enabling extras-source repository
+http://vault.centos.org/centos/7/updates/Source//SPackages/curl-7.29.0-59.el7_9.1.src.rpm
 ```
 
 ### `rpm` package: `libdb-5.3.21-25.el7.x86_64`
@@ -1478,32 +1492,46 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/libverto-0.2.5-4.el7.src.rpm
 ```
 
-### `rpm` package: `libxml2-2.9.1-6.el7.5.x86_64`
+### `rpm` package: `libxml2-2.9.1-6.el7_9.6.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls libxml2-2.9.1-6.el7.5
+$ yumdownloader --quiet --source --urls libxml2-2.9.1-6.el7_9.6
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
-http://vault.centos.org/centos/7/os/Source//SPackages/libxml2-2.9.1-6.el7.5.src.rpm
+http://vault.centos.org/centos/7/updates/Source//SPackages/libxml2-2.9.1-6.el7_9.6.src.rpm
 ```
 
-### `rpm` package: `libxml2-python-2.9.1-6.el7.5.x86_64`
+### `rpm` package: `libxml2-devel-2.9.1-6.el7_9.6.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls libxml2-python-2.9.1-6.el7.5
+$ yumdownloader --quiet --source --urls libxml2-devel-2.9.1-6.el7_9.6
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
-http://vault.centos.org/centos/7/os/Source//SPackages/libxml2-2.9.1-6.el7.5.src.rpm
+http://vault.centos.org/centos/7/updates/Source//SPackages/libxml2-2.9.1-6.el7_9.6.src.rpm
+```
+
+### `rpm` package: `libxml2-python-2.9.1-6.el7_9.6.x86_64`
+
+Licenses (from `rpm --query`): MIT
+
+Source:
+
+```console
+$ yumdownloader --quiet --source --urls libxml2-python-2.9.1-6.el7_9.6
+Enabling updates-source repository
+Enabling base-source repository
+Enabling extras-source repository
+http://vault.centos.org/centos/7/updates/Source//SPackages/libxml2-2.9.1-6.el7_9.6.src.rpm
 ```
 
 ### `rpm` package: `lua-5.1.4-15.el7.x86_64`
@@ -1730,32 +1758,32 @@ Enabling extras-source repository
 http://vault.centos.org/centos/7/os/Source//SPackages/openldap-2.4.44-22.el7.src.rpm
 ```
 
-### `rpm` package: `openssh-7.4p1-21.el7.x86_64`
+### `rpm` package: `openssh-7.4p1-22.el7_9.x86_64`
 
 Licenses (from `rpm --query`): BSD
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls openssh-7.4p1-21.el7
+$ yumdownloader --quiet --source --urls openssh-7.4p1-22.el7_9
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
-http://vault.centos.org/centos/7/os/Source//SPackages/openssh-7.4p1-21.el7.src.rpm
+http://vault.centos.org/centos/7/updates/Source//SPackages/openssh-7.4p1-22.el7_9.src.rpm
 ```
 
-### `rpm` package: `openssh-clients-7.4p1-21.el7.x86_64`
+### `rpm` package: `openssh-clients-7.4p1-22.el7_9.x86_64`
 
 Licenses (from `rpm --query`): BSD
 
 Source:
 
 ```console
-$ yumdownloader --quiet --source --urls openssh-clients-7.4p1-21.el7
+$ yumdownloader --quiet --source --urls openssh-clients-7.4p1-22.el7_9
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository
-http://vault.centos.org/centos/7/os/Source//SPackages/openssh-7.4p1-21.el7.src.rpm
+http://vault.centos.org/centos/7/updates/Source//SPackages/openssh-7.4p1-22.el7_9.src.rpm
 ```
 
 ### `rpm` package: `openssl-libs-1.0.2k-19.el7.x86_64`
@@ -2830,6 +2858,20 @@ Source:
 
 ```console
 $ yumdownloader --quiet --source --urls xz-5.2.2-1.el7
+Enabling updates-source repository
+Enabling base-source repository
+Enabling extras-source repository
+http://vault.centos.org/centos/7/os/Source//SPackages/xz-5.2.2-1.el7.src.rpm
+```
+
+### `rpm` package: `xz-devel-5.2.2-1.el7.x86_64`
+
+Licenses (from `rpm --query`): LGPLv2+
+
+Source:
+
+```console
+$ yumdownloader --quiet --source --urls xz-devel-5.2.2-1.el7
 Enabling updates-source repository
 Enabling base-source repository
 Enabling extras-source repository

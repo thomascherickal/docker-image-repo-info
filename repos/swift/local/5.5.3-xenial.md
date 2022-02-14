@@ -1,10 +1,10 @@
-# `swift:5.5.2-xenial`
+# `swift:5.5.3-xenial`
 
 ## Docker Metadata
 
-- Image ID: `sha256:7cdb3d4906a0c8ee1effb7ab200ee3af549e36c3cdc30a6bd1c0215644100cce`
-- Created: `2021-12-14T20:28:00.945846652Z`
-- Virtual Size: ~ 2.32 Gb  
+- Image ID: `sha256:79ac1cd821192dab18c7772e591a6f4db17f3aaa05724a9aae8c9cae297b0c3b`
+- Created: `2022-02-11T18:30:00.960488534Z`
+- Virtual Size: ~ 2.36 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -12,8 +12,8 @@
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561`
   - `SWIFT_PLATFORM=ubuntu16.04`
-  - `SWIFT_BRANCH=swift-5.5.2-release`
-  - `SWIFT_VERSION=swift-5.5.2-RELEASE`
+  - `SWIFT_BRANCH=swift-5.5.3-release`
+  - `SWIFT_VERSION=swift-5.5.3-RELEASE`
   - `SWIFT_WEBROOT=https://download.swift.org`
 - Labels:
   - `Description=Docker Container for the Swift programming language`
@@ -361,8 +361,9 @@ Binary Packages:
 
 - `libcurl3:amd64=7.47.0-1ubuntu2.19`
 - `libcurl3-gnutls:amd64=7.47.0-1ubuntu2.19`
+- `libcurl4-openssl-dev:amd64=7.47.0-1ubuntu2.19`
 
-Licenses: (parsed from: `/usr/share/doc/libcurl3/copyright`, `/usr/share/doc/libcurl3-gnutls/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libcurl3/copyright`, `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/doc/libcurl4-openssl-dev/copyright`)
 
 - `BSD-3-Clause`
 - `BSD-4-Clause`
@@ -975,6 +976,8 @@ $ apt-get source -qq --print-uris hostname=3.16ubuntu2
 
 Binary Packages:
 
+- `icu-devtools=55.1-7ubuntu0.5`
+- `libicu-dev:amd64=55.1-7ubuntu0.5`
 - `libicu55:amd64=55.1-7ubuntu0.5`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
@@ -1727,6 +1730,7 @@ $ apt-get source -qq --print-uris libxext=2:1.3.3-1
 Binary Packages:
 
 - `libxml2:amd64=2.9.3+dfsg1-1ubuntu0.7`
+- `libxml2-dev:amd64=2.9.3+dfsg1-1ubuntu0.7`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.

@@ -1,10 +1,10 @@
-# `swift:5.5.2-focal`
+# `swift:5.5.3-focal`
 
 ## Docker Metadata
 
-- Image ID: `sha256:de7dadf432bca93aa185de107526cd009b92dffa1362c1702eb9ca1ed3d28b9b`
-- Created: `2022-02-02T08:16:26.215711486Z`
-- Virtual Size: ~ 2.28 Gb  
+- Image ID: `sha256:ced8c05267f21c19e1a00349557db7066f8ca7faecad2a42fc516fababd7c745`
+- Created: `2022-02-11T18:37:30.340038623Z`
+- Virtual Size: ~ 2.33 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["bash"]`
@@ -12,8 +12,8 @@
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561`
   - `SWIFT_PLATFORM=ubuntu20.04`
-  - `SWIFT_BRANCH=swift-5.5.2-release`
-  - `SWIFT_VERSION=swift-5.5.2-RELEASE`
+  - `SWIFT_BRANCH=swift-5.5.3-release`
+  - `SWIFT_VERSION=swift-5.5.3-RELEASE`
   - `SWIFT_WEBROOT=https://download.swift.org`
 - Labels:
   - `description=Docker Container for the Swift programming language`
@@ -312,8 +312,9 @@ Binary Packages:
 
 - `libcurl3-gnutls:amd64=7.68.0-1ubuntu2.7`
 - `libcurl4:amd64=7.68.0-1ubuntu2.7`
+- `libcurl4-openssl-dev:amd64=7.68.0-1ubuntu2.7`
 
-Licenses: (parsed from: `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/doc/libcurl4/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/doc/libcurl4/copyright`, `/usr/share/doc/libcurl4-openssl-dev/copyright`)
 
 - `BSD-3-Clause`
 - `BSD-4-Clause`
@@ -919,6 +920,8 @@ $ apt-get source -qq --print-uris hostname=3.23
 
 Binary Packages:
 
+- `icu-devtools=66.1-2ubuntu2.1`
+- `libicu-dev:amd64=66.1-2ubuntu2.1`
 - `libicu66:amd64=66.1-2ubuntu2.1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
@@ -1638,8 +1641,9 @@ $ apt-get source -qq --print-uris libxext=2:1.3.4-0ubuntu1
 Binary Packages:
 
 - `libxml2:amd64=2.9.10+dfsg-5ubuntu0.20.04.1`
+- `libxml2-dev:amd64=2.9.10+dfsg-5ubuntu0.20.04.1`
 
-Licenses: (parsed from: `/usr/share/doc/libxml2/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libxml2/copyright`, `/usr/share/doc/libxml2-dev/copyright`)
 
 - `ISC`
 - `MIT-1`
@@ -1695,19 +1699,24 @@ $ apt-get source -qq --print-uris libzstd=1.4.4+dfsg-3ubuntu0.1
 'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.4.4+dfsg-3ubuntu0.1.debian.tar.xz' libzstd_1.4.4+dfsg-3ubuntu0.1.debian.tar.xz 17300 SHA512:0484891be5603d00bd57b799c708b9395fccbaa8c6c44f535377f6fa2c7ac22c01c8a3c1b45e1c1f3c30f19dc74d510626bf82067fcbfb53c39f1bcc2249affe
 ```
 
-### `dpkg` source package: `linux=5.4.0-97.110`
+### `dpkg` source package: `linux=5.4.0-99.112`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=5.4.0-97.110`
+- `linux-libc-dev:amd64=5.4.0-99.112`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris linux=5.4.0-99.112
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-99.112.dsc' linux_5.4.0-99.112.dsc 7277 SHA512:257a6e79686fcf82ca1019a09bb72be0ffd07e1376d0847bc6a82a37cab853e2d37b3e34c1fed560427ec0335d13b302b79b48ca05c9d47195dd2f113cb2b9ae
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0.orig.tar.gz' linux_5.4.0.orig.tar.gz 170244619 SHA512:62b09a7231fd793973c5f59b16c4f6ffce621188b02a71915874b05e8e3f956fb6146d4a4fb1a4475bebe463949ca5a18da12842c3ce7c52e996e6bc4012a074
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-99.112.diff.gz' linux_5.4.0-99.112.diff.gz 9012475 SHA512:c0b552d642c75b49ee9e82bcae49086a9cf9e5ea8af4d21216ea3d657a7918645f241660ba5498037a06ce5e862607f0aad5e182a3e34e15c430f3c599ebf894
+```
 
 ### `dpkg` source package: `lsb=11.1.0ubuntu2`
 
