@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:c3ba9ebbd321128e0ebaebe20e42aa0b5f920dd8a6fae33421c32648c96c95ae`
-- Created: `2022-02-04T04:22:06.215422491Z`
+- Image ID: `sha256:3f1e19bd8ecc1f17b47fad3a92af2f5d8b603ee5eb43c7ab9859c4d9dc5bd4a9`
+- Created: `2022-02-12T04:32:23.126759887Z`
 - Virtual Size: ~ 277.90 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -13,7 +13,7 @@
   - `PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.7.0-bin/bin`
   - `JAVA_HOME=/usr/local/openjdk-11`
   - `LANG=C.UTF-8`
-  - `JAVA_VERSION=11.0.14`
+  - `JAVA_VERSION=11.0.14.1`
   - `ZOO_CONF_DIR=/conf`
   - `ZOO_DATA_DIR=/data`
   - `ZOO_DATA_LOG_DIR=/datalog`
