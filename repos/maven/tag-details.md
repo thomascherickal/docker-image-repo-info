@@ -31,6 +31,9 @@
 -	[`maven:3-openjdk-17-slim`](#maven3-openjdk-17-slim)
 -	[`maven:3-openjdk-8`](#maven3-openjdk-8)
 -	[`maven:3-openjdk-8-slim`](#maven3-openjdk-8-slim)
+-	[`maven:3-sapmachine`](#maven3-sapmachine)
+-	[`maven:3-sapmachine-11`](#maven3-sapmachine-11)
+-	[`maven:3-sapmachine-17`](#maven3-sapmachine-17)
 -	[`maven:3.8`](#maven38)
 -	[`maven:3.8-amazoncorretto`](#maven38-amazoncorretto)
 -	[`maven:3.8-amazoncorretto-11`](#maven38-amazoncorretto-11)
@@ -61,6 +64,9 @@
 -	[`maven:3.8-openjdk-17-slim`](#maven38-openjdk-17-slim)
 -	[`maven:3.8-openjdk-8`](#maven38-openjdk-8)
 -	[`maven:3.8-openjdk-8-slim`](#maven38-openjdk-8-slim)
+-	[`maven:3.8-sapmachine`](#maven38-sapmachine)
+-	[`maven:3.8-sapmachine-11`](#maven38-sapmachine-11)
+-	[`maven:3.8-sapmachine-17`](#maven38-sapmachine-17)
 -	[`maven:3.8.4`](#maven384)
 -	[`maven:3.8.4-amazoncorretto`](#maven384-amazoncorretto)
 -	[`maven:3.8.4-amazoncorretto-11`](#maven384-amazoncorretto-11)
@@ -91,12 +97,16 @@
 -	[`maven:3.8.4-openjdk-17-slim`](#maven384-openjdk-17-slim)
 -	[`maven:3.8.4-openjdk-8`](#maven384-openjdk-8)
 -	[`maven:3.8.4-openjdk-8-slim`](#maven384-openjdk-8-slim)
+-	[`maven:3.8.4-sapmachine`](#maven384-sapmachine)
+-	[`maven:3.8.4-sapmachine-11`](#maven384-sapmachine-11)
+-	[`maven:3.8.4-sapmachine-17`](#maven384-sapmachine-17)
 -	[`maven:amazoncorretto`](#mavenamazoncorretto)
 -	[`maven:eclipse-temurin`](#maveneclipse-temurin)
 -	[`maven:ibmjava`](#mavenibmjava)
 -	[`maven:ibmjava-alpine`](#mavenibmjava-alpine)
 -	[`maven:latest`](#mavenlatest)
 -	[`maven:openjdk`](#mavenopenjdk)
+-	[`maven:sapmachine`](#mavensapmachine)
 
 ## `maven:3`
 
@@ -7511,6 +7521,18 @@ CMD ["mvn"]
 		Last Modified: Fri, 04 Feb 2022 00:21:31 GMT  
 		Size: 360.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `maven:3-sapmachine`
+
+**does not exist** (yet?)
+
+## `maven:3-sapmachine-11`
+
+**does not exist** (yet?)
+
+## `maven:3-sapmachine-17`
+
+**does not exist** (yet?)
 
 ## `maven:3.8`
 
@@ -15028,6 +15050,18 @@ CMD ["mvn"]
 		Size: 360.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `maven:3.8-sapmachine`
+
+**does not exist** (yet?)
+
+## `maven:3.8-sapmachine-11`
+
+**does not exist** (yet?)
+
+## `maven:3.8-sapmachine-17`
+
+**does not exist** (yet?)
+
 ## `maven:3.8.4`
 
 ```console
@@ -22544,6 +22578,18 @@ CMD ["mvn"]
 		Size: 360.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `maven:3.8.4-sapmachine`
+
+**does not exist** (yet?)
+
+## `maven:3.8.4-sapmachine-11`
+
+**does not exist** (yet?)
+
+## `maven:3.8.4-sapmachine-17`
+
+**does not exist** (yet?)
+
 ## `maven:amazoncorretto`
 
 ```console
@@ -24028,3 +24074,7 @@ CMD ["mvn"]
 		Last Modified: Fri, 11 Feb 2022 20:14:14 GMT  
 		Size: 360.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `maven:sapmachine`
+
+**does not exist** (yet?)
