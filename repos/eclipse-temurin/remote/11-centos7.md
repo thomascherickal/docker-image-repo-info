@@ -1,7 +1,7 @@
 ## `eclipse-temurin:11-centos7`
 
 ```console
-$ docker pull eclipse-temurin@sha256:e364bfb4dc257062bcf7d14d513a2c6138961a703488fc1b2f17e0014a0e239a
+$ docker pull eclipse-temurin@sha256:2e6f8453642a1a28fdd4c19d6402ff5997615bdea2cf03a14d0ac0af783ab501
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -67,36 +67,36 @@ CMD ["jshell"]
 ### `eclipse-temurin:11-centos7` - linux; arm64 variant v8
 
 ```console
-$ docker pull eclipse-temurin@sha256:82ae68349ea5d100fe28bd8f2e40f15cd00bcb2149b6dbf4743c8f26fca28c3f
+$ docker pull eclipse-temurin@sha256:7bb50821c60ab9d755dbe9832a69ff9fe2e85f1d7afe3bbe530cc81a7e887e11
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **312.1 MB (312126770 bytes)**  
+-	Total Size: **312.1 MB (312120009 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:28c10fb08247a4d4267bee40ebfc2dea18e7ffbefc20a60d2c2a536ee8124dc5`
+-	Image ID: `sha256:f8fa474d11f50b6af14bfbddcbb961684c5e69370182555f7a00c8cb6d102e11`
 -	Default Command: `["jshell"]`
 
 ```dockerfile
-# Wed, 15 Sep 2021 17:39:58 GMT
+# Mon, 14 Feb 2022 19:39:36 GMT
 ADD file:5b1e63a3cb041177b802b501dedcd71a86f1773ea0f69f048f2eb3901097711d in / 
-# Wed, 15 Sep 2021 17:39:58 GMT
+# Mon, 14 Feb 2022 19:39:37 GMT
 LABEL org.label-schema.schema-version=1.0 org.label-schema.name=CentOS Base Image org.label-schema.vendor=CentOS org.label-schema.license=GPLv2 org.label-schema.build-date=20201113 org.opencontainers.image.title=CentOS Base Image org.opencontainers.image.vendor=CentOS org.opencontainers.image.licenses=GPL-2.0-only org.opencontainers.image.created=2020-11-13 00:00:00+00:00
-# Wed, 15 Sep 2021 17:39:59 GMT
+# Mon, 14 Feb 2022 19:39:38 GMT
 CMD ["/bin/bash"]
-# Sat, 16 Oct 2021 03:25:52 GMT
+# Mon, 14 Feb 2022 19:59:10 GMT
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Sat, 16 Oct 2021 03:26:24 GMT
+# Mon, 14 Feb 2022 19:59:30 GMT
 RUN yum install -y tzdata openssl curl ca-certificates fontconfig gzip tar     && yum clean all
-# Thu, 10 Feb 2022 19:40:50 GMT
+# Mon, 14 Feb 2022 20:00:15 GMT
 ENV JAVA_VERSION=jdk-11.0.14.1+1
-# Thu, 10 Feb 2022 19:41:11 GMT
+# Mon, 14 Feb 2022 20:00:32 GMT
 RUN set -eux;     ARCH="$(objdump="$(command -v objdump)" && objdump --file-headers "$objdump" | awk -F '[:,]+[[:space:]]+' '$1 == "architecture" { print $2 }')";     case "${ARCH}" in        aarch64|arm64)          ESUM='79572f5172c6a040591d34632f98a20ed148702bbce2f57649e8ac01c0d2e3db';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.14.1%2B1/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.14.1_1.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='9750e11721282a9afd18a07743f19c699b2b71ce20d02f3f0a906088b9ae6d9a';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.14.1%2B1/OpenJDK11U-jdk_ppc64le_linux_hotspot_11.0.14.1_1.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='43fb84f8063ad9bf6b6d694a67b8f64c8827552b920ec5ce794dfe5602edffe7';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.14.1%2B1/OpenJDK11U-jdk_x64_linux_hotspot_11.0.14.1_1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Thu, 10 Feb 2022 19:41:12 GMT
+# Mon, 14 Feb 2022 20:00:32 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 10 Feb 2022 19:41:13 GMT
+# Mon, 14 Feb 2022 20:00:34 GMT
 RUN echo Verifying install ...     && echo javac --version && javac --version     && echo java --version && java --version     && echo Complete.
-# Thu, 10 Feb 2022 19:41:14 GMT
+# Mon, 14 Feb 2022 20:00:34 GMT
 CMD ["jshell"]
 ```
 
@@ -105,17 +105,17 @@ CMD ["jshell"]
 		Last Modified: Sat, 14 Nov 2020 00:41:36 GMT  
 		Size: 108.4 MB (108374945 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:04ed710eb0a2f63323ad5c292c7cfd48094b0fee69aa1c789341819797baca66`  
-		Last Modified: Sat, 16 Oct 2021 03:32:08 GMT  
-		Size: 13.1 MB (13066395 bytes)  
+	-	`sha256:130170151f9f3710dd5b3e651dfb953b4ced0d33d1b4c77d70c35bd91d07e040`  
+		Last Modified: Mon, 14 Feb 2022 20:04:32 GMT  
+		Size: 13.1 MB (13059526 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a921ec201dd8698f0059d9e24e417abe1cf017184495bacf2ef2388d865db29a`  
-		Last Modified: Thu, 10 Feb 2022 19:45:16 GMT  
-		Size: 190.7 MB (190685301 bytes)  
+	-	`sha256:e3725cea229dac63f8fbcd57a6409adc6242c3ac6db201f2e2815780737b0634`  
+		Last Modified: Mon, 14 Feb 2022 20:05:32 GMT  
+		Size: 190.7 MB (190685411 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b2d82cbda831f42c2ef7063371b8853a18d8f0ad823eb043173964cdf0e52278`  
-		Last Modified: Thu, 10 Feb 2022 19:44:59 GMT  
-		Size: 129.0 B  
+	-	`sha256:b06078b62e534138c246bdb9c8156bc5bf04157722e7e9ecf750c32ae7319c7a`  
+		Last Modified: Mon, 14 Feb 2022 20:05:13 GMT  
+		Size: 127.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `eclipse-temurin:11-centos7` - linux; ppc64le

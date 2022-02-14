@@ -1,7 +1,7 @@
 ## `eclipse-temurin:17-jre-centos7`
 
 ```console
-$ docker pull eclipse-temurin@sha256:8ee899b82aee88b97e18fe7ca9eac97485cbe5ff2ef464c07fa260b70d0b608a
+$ docker pull eclipse-temurin@sha256:3218ac9a386900747fc93d46a99a7fcedaf33e6f763d8ff70f3a3e97a2a45f51
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -65,34 +65,34 @@ RUN echo Verifying install ...     && echo java --version && java --version     
 ### `eclipse-temurin:17-jre-centos7` - linux; arm64 variant v8
 
 ```console
-$ docker pull eclipse-temurin@sha256:e77c5fa65c896054fe8ad850c6fb920b78a166468af6fb10742d0fd8a33fc43b
+$ docker pull eclipse-temurin@sha256:0b6cc4135df6bedcd35eadd0c367cccacdefa87e1f34bece1bf6ed27bc2fec2f
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **166.9 MB (166923478 bytes)**  
+-	Total Size: **171.9 MB (171907284 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:341403631aa7450a225828ca6b0e46285856fcc92515e5b77b6669b607d75ba8`
+-	Image ID: `sha256:2aabdca25a238b8abceaf082eb0046158c4e1f42e6b06d8ff7c49eeb7bc3f1d0`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 15 Sep 2021 17:39:58 GMT
+# Mon, 14 Feb 2022 19:39:36 GMT
 ADD file:5b1e63a3cb041177b802b501dedcd71a86f1773ea0f69f048f2eb3901097711d in / 
-# Wed, 15 Sep 2021 17:39:58 GMT
+# Mon, 14 Feb 2022 19:39:37 GMT
 LABEL org.label-schema.schema-version=1.0 org.label-schema.name=CentOS Base Image org.label-schema.vendor=CentOS org.label-schema.license=GPLv2 org.label-schema.build-date=20201113 org.opencontainers.image.title=CentOS Base Image org.opencontainers.image.vendor=CentOS org.opencontainers.image.licenses=GPL-2.0-only org.opencontainers.image.created=2020-11-13 00:00:00+00:00
-# Wed, 15 Sep 2021 17:39:59 GMT
+# Mon, 14 Feb 2022 19:39:38 GMT
 CMD ["/bin/bash"]
-# Sat, 16 Oct 2021 03:25:52 GMT
+# Mon, 14 Feb 2022 19:59:10 GMT
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Sat, 16 Oct 2021 03:29:22 GMT
+# Mon, 14 Feb 2022 20:01:29 GMT
 RUN yum install -y tzdata openssl curl ca-certificates fontconfig gzip tar binutils     && yum clean all
-# Tue, 01 Feb 2022 22:46:24 GMT
+# Mon, 14 Feb 2022 20:02:11 GMT
 ENV JAVA_VERSION=jdk-17.0.2+8
-# Tue, 01 Feb 2022 22:47:05 GMT
+# Mon, 14 Feb 2022 20:02:48 GMT
 RUN set -eux;     ARCH="$(objdump="$(command -v objdump)" && objdump --file-headers "$objdump" | awk -F '[:,]+[[:space:]]+' '$1 == "architecture" { print $2 }')";     case "${ARCH}" in        aarch64|arm64)          ESUM='6ef7a28d0d844fe347ab18f65a91db744547321fe8a101d883bd80722183ab64';          BINARY_URL='https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.2%2B8/OpenJDK17U-jre_aarch64_linux_hotspot_17.0.2_8.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='089a940d0feb34e8095dede569492a5c4b1f082898ab02c39465fa76fe85a555';          BINARY_URL='https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.2%2B8/OpenJDK17U-jre_ppc64le_linux_hotspot_17.0.2_8.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='292ed702d95f5690e52e171afe9f3050b9d2fb803456b155c831735fad0f17c0';          BINARY_URL='https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.2%2B8/OpenJDK17U-jre_x64_linux_hotspot_17.0.2_8.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Tue, 01 Feb 2022 22:47:06 GMT
+# Mon, 14 Feb 2022 20:02:48 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 01 Feb 2022 22:47:08 GMT
+# Mon, 14 Feb 2022 20:02:50 GMT
 RUN echo Verifying install ...     && echo java --version && java --version     && echo Complete.
 ```
 
@@ -101,17 +101,17 @@ RUN echo Verifying install ...     && echo java --version && java --version     
 		Last Modified: Sat, 14 Nov 2020 00:41:36 GMT  
 		Size: 108.4 MB (108374945 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:57988491616ef55c4d80bbf71ede47b0effd1a2b4eae72c35a938e6121e6ab5b`  
-		Last Modified: Sat, 16 Oct 2021 03:35:10 GMT  
-		Size: 13.1 MB (13063767 bytes)  
+	-	`sha256:e2fd0ac8e8fe7aee16a10c67c8c9c7b02a8102e7dd0f11573c3265a4f6803004`  
+		Last Modified: Mon, 14 Feb 2022 20:06:08 GMT  
+		Size: 18.0 MB (18047588 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:830a61a72d617b94357e8e57c823532d153fd686bb49b06994389ba66ffbfb05`  
-		Last Modified: Wed, 02 Feb 2022 00:33:50 GMT  
-		Size: 45.5 MB (45484638 bytes)  
+	-	`sha256:77460205603ca523b4b727c70b36b749edeab3be15429e878ae5877d5e4abb47`  
+		Last Modified: Mon, 14 Feb 2022 20:07:27 GMT  
+		Size: 45.5 MB (45484624 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3885d80b6d411e14431e0dd85e922c98d6b03cd22ee5e29056bb5dfd322f5f95`  
-		Last Modified: Wed, 02 Feb 2022 00:33:43 GMT  
-		Size: 128.0 B  
+	-	`sha256:bfa7dd6b50c197c8a8683581211c9d9c891f810c52e54fffe058de91df81bed1`  
+		Last Modified: Mon, 14 Feb 2022 20:07:21 GMT  
+		Size: 127.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `eclipse-temurin:17-jre-centos7` - linux; ppc64le
