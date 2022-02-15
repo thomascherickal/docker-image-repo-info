@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:947d9b608ed032aa892c217f95821d84a19c525f07b5bacd8839b381db39d7b0`
-- Created: `2022-02-04T01:29:29.053716621Z`
+- Image ID: `sha256:03ecba987c8c2c6be395218e505db5d40282f4858acbd08a8a6ba5c2f106b2c8`
+- Created: `2022-02-12T03:03:38.820412328Z`
 - Virtual Size: ~ 669.75 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -12,7 +12,7 @@
   - `PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-storm-2.3.0/bin`
   - `JAVA_HOME=/usr/local/openjdk-11`
   - `LANG=C.UTF-8`
-  - `JAVA_VERSION=11.0.14`
+  - `JAVA_VERSION=11.0.14.1`
   - `STORM_CONF_DIR=/conf`
   - `STORM_DATA_DIR=/data`
   - `STORM_LOG_DIR=/logs`
