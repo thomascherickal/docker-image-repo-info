@@ -1,21 +1,21 @@
-# `neo4j:4.4.3-enterprise`
+# `neo4j:4.4.4-enterprise`
 
 ## Docker Metadata
 
-- Image ID: `sha256:b378db397220c748c6046958bb529076bede75a92fab5340196a9896f432646e`
-- Created: `2022-02-03T22:37:45.029849282Z`
-- Virtual Size: ~ 663.95 Mb  
+- Image ID: `sha256:43ef3120c06901993a5f6e6754a301830eb2ca78e94419f991f01a77d67ffc12`
+- Created: `2022-02-12T04:39:19.162721635Z`
+- Virtual Size: ~ 663.20 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Entrypoint: `["/sbin/tini","-g","--","/docker-entrypoint.sh"]`
+- Entrypoint: `["tini","-g","--","/startup/docker-entrypoint.sh"]`
 - Command: `["neo4j"]`
 - Environment:
   - `PATH=/var/lib/neo4j/bin:/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `JAVA_HOME=/usr/local/openjdk-11`
   - `LANG=C.UTF-8`
-  - `JAVA_VERSION=11.0.14`
-  - `NEO4J_SHA256=8f059040b2c88c9045b7d03f83f3cee0c0c0a65fa96f87546765a9267adccec4`
-  - `NEO4J_TARBALL=neo4j-enterprise-4.4.3-unix.tar.gz`
+  - `JAVA_VERSION=11.0.14.1`
+  - `NEO4J_SHA256=f3b815903fd6ac3fc0c997fa0d9af09eda0b3bdbbb239b4b496474d4e61b9da3`
+  - `NEO4J_TARBALL=neo4j-enterprise-4.4.4-unix.tar.gz`
   - `NEO4J_EDITION=enterprise`
   - `NEO4J_HOME=/var/lib/neo4j`
 
@@ -1968,6 +1968,31 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tar/1.34+dfsg-1/ (for browsing the source)
 - https://sources.debian.net/src/tar/1.34+dfsg-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tar/1.34+dfsg-1/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `tini=0.19.0-1`
+
+Binary Packages:
+
+- `tini=0.19.0-1`
+
+Licenses: (parsed from: `/usr/share/doc/tini/copyright`)
+
+- `Expat`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris tini=0.19.0-1
+'http://deb.debian.org/debian/pool/main/t/tini/tini_0.19.0-1.dsc' tini_0.19.0-1.dsc 1810 SHA256:0641749862d510c2fd009413e274d878c39139bf37a4e3669f9fcd745ec9e9ea
+'http://deb.debian.org/debian/pool/main/t/tini/tini_0.19.0.orig.tar.gz' tini_0.19.0.orig.tar.gz 32369 SHA256:0fd35a7030052acd9f58948d1d900fe1e432ee37103c5561554408bdac6bbf0d
+'http://deb.debian.org/debian/pool/main/t/tini/tini_0.19.0-1.debian.tar.xz' tini_0.19.0-1.debian.tar.xz 1832 SHA256:6e3e35148962098ff64f262cc60c7f89085dc1203b2c85574a5324a8f57f5c52
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/tini/0.19.0-1/ (for browsing the source)
+- https://sources.debian.net/src/tini/0.19.0-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tini/0.19.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tzdata=2021a-1+deb11u2`
 
