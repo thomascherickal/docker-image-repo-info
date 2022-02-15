@@ -1,10 +1,10 @@
-# `openjdk:11.0.14-jdk-oraclelinux7`
+# `openjdk:11.0.14.1-jdk-oraclelinux7`
 
 ## Docker Metadata
 
-- Image ID: `sha256:53907dfb31ee0488e64ece46e4526a1a9b66381c544de917f70f75a6b8d259c7`
-- Created: `2022-02-03T20:34:11.248118328Z`
-- Virtual Size: ~ 516.51 Mb  
+- Image ID: `sha256:3687fd9a3f4939efc54c07ab2b4da5660ac42057cfb6810f7b8691c40e7f0bed`
+- Created: `2022-02-11T23:57:13.319951803Z`
+- Virtual Size: ~ 516.50 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["jshell"]`
@@ -12,7 +12,7 @@
   - `PATH=/usr/java/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `JAVA_HOME=/usr/java/openjdk-11`
   - `LANG=en_US.UTF-8`
-  - `JAVA_VERSION=11.0.14`
+  - `JAVA_VERSION=11.0.14.1`
 
 ## `rpm` (`.rpm`-based packages)
 
