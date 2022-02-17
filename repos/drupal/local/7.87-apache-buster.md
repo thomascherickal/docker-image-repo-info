@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:475bddde7bd07c79cdcd129cd6a6bc8d4e0e7ab647c4a30b8995de305d507d81`
-- Created: `2022-01-27T20:11:13.219566191Z`
-- Virtual Size: ~ 431.94 Mb  
+- Image ID: `sha256:cd9c9779af7a225124af6aef95b8c0fe31d66626d99f5dcc141215a9064e64a7`
+- Created: `2022-02-14T21:39:40.807100776Z`
+- Virtual Size: ~ 432.37 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -1954,6 +1954,31 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libunistring/0.9.10-1/ (for browsing the source)
 - https://sources.debian.net/src/libunistring/0.9.10-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libunistring/0.9.10-1/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `libwebp=0.6.1-2+deb10u1`
+
+Binary Packages:
+
+- `libwebp6:amd64=0.6.1-2+deb10u1`
+
+Licenses: (parsed from: `/usr/share/doc/libwebp6/copyright`)
+
+- `Apache-2.0`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris libwebp=0.6.1-2+deb10u1
+'http://deb.debian.org/debian/pool/main/libw/libwebp/libwebp_0.6.1-2+deb10u1.dsc' libwebp_0.6.1-2+deb10u1.dsc 2078 SHA256:8e049c4699d3e1196642782f14052d8558225d1c713fe1718d21f23524b81bd5
+'http://deb.debian.org/debian/pool/main/libw/libwebp/libwebp_0.6.1.orig.tar.gz' libwebp_0.6.1.orig.tar.gz 3554290 SHA256:a86045e3ec24704bddbaa369ca30980d6bf4f2625f4cdca03715e91f9c08bbb4
+'http://deb.debian.org/debian/pool/main/libw/libwebp/libwebp_0.6.1-2+deb10u1.debian.tar.xz' libwebp_0.6.1-2+deb10u1.debian.tar.xz 13612 SHA256:35121925b3a22ee41f4704f0118d30dae58f642e76565ab73d427b3e648d7961
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/libwebp/0.6.1-2+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/libwebp/0.6.1-2+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libwebp/0.6.1-2+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libxml2=2.9.4+dfsg1-7+deb10u2`
 

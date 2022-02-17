@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:4af2adb2dc8dc38cc78087831e67cc419cf714d27795aa5c1200f98cdfc84f34`
-- Created: `2022-02-08T02:28:34.196983687Z`
-- Virtual Size: ~ 554.31 Mb  
+- Image ID: `sha256:fb38fa15a770047b75d89f2a722a3d1fa083d52d07dd3d284bd06809d5b219dc`
+- Created: `2022-02-14T21:38:01.57181175Z`
+- Virtual Size: ~ 554.73 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -2083,6 +2083,31 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libunistring/0.9.10-4/ (for browsing the source)
 - https://sources.debian.net/src/libunistring/0.9.10-4/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libunistring/0.9.10-4/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `libwebp=0.6.1-2.1`
+
+Binary Packages:
+
+- `libwebp6:amd64=0.6.1-2.1`
+
+Licenses: (parsed from: `/usr/share/doc/libwebp6/copyright`)
+
+- `Apache-2.0`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris libwebp=0.6.1-2.1
+'http://deb.debian.org/debian/pool/main/libw/libwebp/libwebp_0.6.1-2.1.dsc' libwebp_0.6.1-2.1.dsc 2054 SHA256:b1045ce17d7f16666347813a6b7da16cba304ec33b28e12bda6e83c40243d46f
+'http://deb.debian.org/debian/pool/main/libw/libwebp/libwebp_0.6.1.orig.tar.gz' libwebp_0.6.1.orig.tar.gz 3554290 SHA256:a86045e3ec24704bddbaa369ca30980d6bf4f2625f4cdca03715e91f9c08bbb4
+'http://deb.debian.org/debian/pool/main/libw/libwebp/libwebp_0.6.1-2.1.debian.tar.xz' libwebp_0.6.1-2.1.debian.tar.xz 13616 SHA256:239203fd35a0b26b9e627a509b91a27efa10d996ebc068779bff024af9570ad8
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/libwebp/0.6.1-2.1/ (for browsing the source)
+- https://sources.debian.net/src/libwebp/0.6.1-2.1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libwebp/0.6.1-2.1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libxcrypt=1:4.4.18-4`
 

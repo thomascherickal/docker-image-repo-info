@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:886706f4d2bdc4af692bd1c6774673365eb25f487c94a042ce39228cb48e021e`
-- Created: `2022-02-08T02:28:17.696554151Z`
-- Virtual Size: ~ 170.07 Mb  
+- Image ID: `sha256:319aa59d1ca4a1c35c3a89d28895e5127fb7dc516e332918aa4795a571e47858`
+- Created: `2022-02-14T21:37:45.887349223Z`
+- Virtual Size: ~ 170.65 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -351,16 +351,16 @@ Libpng
 ### `apk` package: `libpq`
 
 ```console
-libpq-13.5-r0 description:
+libpq-13.6-r0 description:
 PostgreSQL libraries
 
-libpq-13.5-r0 webpage:
+libpq-13.6-r0 webpage:
 https://www.postgresql.org/
 
-libpq-13.5-r0 installed size:
+libpq-13.6-r0 installed size:
 328 KiB
 
-libpq-13.5-r0 license:
+libpq-13.6-r0 license:
 PostgreSQL
 
 ```
@@ -430,6 +430,23 @@ libssl1.1-1.1.1l-r0 installed size:
 
 libssl1.1-1.1.1l-r0 license:
 OpenSSL
+
+```
+
+### `apk` package: `libwebp`
+
+```console
+libwebp-1.2.0-r2 description:
+Libraries for working with WebP images
+
+libwebp-1.2.0-r2 webpage:
+https://developers.google.com/speed/webp
+
+libwebp-1.2.0-r2 installed size:
+580 KiB
+
+libwebp-1.2.0-r2 license:
+BSD-3-Clause
 
 ```
 
