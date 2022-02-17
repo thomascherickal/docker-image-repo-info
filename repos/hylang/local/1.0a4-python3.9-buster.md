@@ -4,7 +4,7 @@
 
 - Image ID: `sha256:b5c062a0e971595d605ac34798557ca87b8da864d0b2610d2cec322939a9c4ae`
 - Created: `2022-02-05T06:25:13.544053304Z`
-- Virtual Size: ~ 121.62 Mb  
+- Virtual Size: ~ 121.65 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["hy"]`
