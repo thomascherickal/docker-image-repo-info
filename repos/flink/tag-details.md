@@ -5711,39 +5711,84 @@ CMD ["help"]
 
 ## `flink:1.13.6`
 
-**does not exist** (yet?)
+```console
+$ docker pull flink@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `flink:1.13.6-java11`
 
-**does not exist** (yet?)
+```console
+$ docker pull flink@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `flink:1.13.6-java8`
 
-**does not exist** (yet?)
+```console
+$ docker pull flink@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `flink:1.13.6-scala_2.11`
 
-**does not exist** (yet?)
+```console
+$ docker pull flink@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `flink:1.13.6-scala_2.11-java11`
 
-**does not exist** (yet?)
+```console
+$ docker pull flink@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `flink:1.13.6-scala_2.11-java8`
 
-**does not exist** (yet?)
+```console
+$ docker pull flink@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `flink:1.13.6-scala_2.12`
 
-**does not exist** (yet?)
+```console
+$ docker pull flink@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `flink:1.13.6-scala_2.12-java11`
 
-**does not exist** (yet?)
+```console
+$ docker pull flink@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `flink:1.13.6-scala_2.12-java8`
 
-**does not exist** (yet?)
+```console
+$ docker pull flink@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `flink:1.14`
 
