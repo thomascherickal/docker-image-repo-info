@@ -1,9 +1,9 @@
-# `elixir:1.13.2-slim`
+# `elixir:1.13.3-slim`
 
 ## Docker Metadata
 
-- Image ID: `sha256:b02a0457be3442686bff4c22c608f88bf95183e9f9b9524350df6fbc3739aff5`
-- Created: `2022-01-27T12:20:56.170280723Z`
+- Image ID: `sha256:36638997fd1d397fa291ffd1ca15bd50604d814652e4f78b838e0c0664db4bfc`
+- Created: `2022-02-16T22:04:54.492656938Z`
 - Virtual Size: ~ 286.60 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -12,7 +12,7 @@
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `OTP_VERSION=24.2.1`
   - `REBAR3_VERSION=3.18.0`
-  - `ELIXIR_VERSION=v1.13.2`
+  - `ELIXIR_VERSION=v1.13.3`
   - `LANG=C.UTF-8`
 - Labels:
   - `org.opencontainers.image.version=24.2.1`
