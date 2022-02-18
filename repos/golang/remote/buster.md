@@ -1,7 +1,7 @@
 ## `golang:buster`
 
 ```console
-$ docker pull golang@sha256:49090f6a1c385f083bebf2b977fe6acdb2734cc8baed7f32b13b317140fc03ed
+$ docker pull golang@sha256:270086796f4fea7905b19889d33a6063e93eb6ad9c6fde11aaf3b2f82a757bef
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -162,14 +162,14 @@ WORKDIR /go
 ### `golang:buster` - linux; arm variant v7
 
 ```console
-$ docker pull golang@sha256:1f4ade331c522446872ba402f077508269a5bac6db9f5d791b2ced0bace6d8a5
+$ docker pull golang@sha256:bb97636dde7fbbecdb6ec385d55ffae6fa4be032e35f2ddfc51e8601a4dbd8a6
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **266.1 MB (266073370 bytes)**  
+-	Total Size: **266.1 MB (266073412 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:76e655b095ccc1296277f8fed55f62b4367ffdc8f1c3f918ceb0e52c63bc8dff`
+-	Image ID: `sha256:5418b19c1d613f992ff5a7406fdfdef566725959f624fdcc3bd8b692c668f4d6`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -189,15 +189,15 @@ RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		g++
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Fri, 11 Feb 2022 01:00:16 GMT
 ENV GOLANG_VERSION=1.17.7
-# Fri, 11 Feb 2022 01:01:16 GMT
-RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.17.7.linux-amd64.tar.gz'; 			sha256='02b111284bedbfa35a7e5b74a06082d18632eff824fd144312f6063943d49259'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.17.7.linux-armv6l.tar.gz'; 			sha256='874774f078b182fa21ffcb3878467eb5cb7e78bbffa6343ea5f0fbe47983433b'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.17.7.linux-arm64.tar.gz'; 			sha256='a5aa1ed17d45ee1d58b4a4099b12f8942acbd1dd09b2e9a6abb1c4898043c5f5'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.17.7.linux-386.tar.gz'; 			sha256='5d5472672a2e0252fe31f4ec30583d9f2b320f9b9296eda430f03cbc848400ce'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.17.7.linux-ppc64le.tar.gz'; 			sha256='2262fdee9147eb61fd1e719cfd19b9c035009c14890de02b5a77071b0a577405'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.17.7.linux-s390x.tar.gz'; 			sha256='24dd117581d592f52b4cf45d75ae68a6a1e42691a8671a2d3c2ddd739894a1e4'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.17.7.src.tar.gz'; 		sha256='c108cd33b73b1911a02b697741df3dea43e01a5c4e08e409e8b3a0e3745d2b4d'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends golang-go; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				go install std; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 		; 	fi; 		go version
-# Fri, 11 Feb 2022 01:01:18 GMT
+# Fri, 18 Feb 2022 04:35:14 GMT
+RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.17.7.linux-amd64.tar.gz'; 			sha256='02b111284bedbfa35a7e5b74a06082d18632eff824fd144312f6063943d49259'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.17.7.linux-armv6l.tar.gz'; 			sha256='874774f078b182fa21ffcb3878467eb5cb7e78bbffa6343ea5f0fbe47983433b'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.17.7.linux-arm64.tar.gz'; 			sha256='a5aa1ed17d45ee1d58b4a4099b12f8942acbd1dd09b2e9a6abb1c4898043c5f5'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.17.7.linux-386.tar.gz'; 			sha256='5d5472672a2e0252fe31f4ec30583d9f2b320f9b9296eda430f03cbc848400ce'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.17.7.linux-ppc64le.tar.gz'; 			sha256='2262fdee9147eb61fd1e719cfd19b9c035009c14890de02b5a77071b0a577405'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.17.7.linux-s390x.tar.gz'; 			sha256='24dd117581d592f52b4cf45d75ae68a6a1e42691a8671a2d3c2ddd739894a1e4'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.17.7.src.tar.gz'; 		sha256='c108cd33b73b1911a02b697741df3dea43e01a5c4e08e409e8b3a0e3745d2b4d'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends golang-go; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 		; 	fi; 		go version
+# Fri, 18 Feb 2022 04:35:16 GMT
 ENV GOPATH=/go
-# Fri, 11 Feb 2022 01:01:19 GMT
+# Fri, 18 Feb 2022 04:35:17 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 11 Feb 2022 01:01:20 GMT
+# Fri, 18 Feb 2022 04:35:18 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Fri, 11 Feb 2022 01:01:21 GMT
+# Fri, 18 Feb 2022 04:35:19 GMT
 WORKDIR /go
 ```
 
@@ -222,13 +222,13 @@ WORKDIR /go
 		Last Modified: Thu, 27 Jan 2022 20:49:44 GMT  
 		Size: 53.2 MB (53240982 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:94fcfcd8323ea65917e3114975fdff4ac1c3fcd5b2c503e45adc3f09e5f0f910`  
-		Last Modified: Fri, 11 Feb 2022 01:28:41 GMT  
-		Size: 103.1 MB (103088489 bytes)  
+	-	`sha256:857f5eaf56877da3b576f68d4f1c81cac4ec7e1c6986f4b06d9b23ddeef72340`  
+		Last Modified: Fri, 18 Feb 2022 05:08:40 GMT  
+		Size: 103.1 MB (103088530 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:718106b94861223a782694989abee26053288c164b1db0808d2879899428ca79`  
-		Last Modified: Fri, 11 Feb 2022 01:27:34 GMT  
-		Size: 156.0 B  
+	-	`sha256:4c83e1b354c5238db631a0691d8c3c67ade04ec8ac489e9732df0250365a27cd`  
+		Last Modified: Fri, 18 Feb 2022 05:07:32 GMT  
+		Size: 157.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:buster` - linux; arm64 variant v8
@@ -450,14 +450,14 @@ WORKDIR /go
 ### `golang:buster` - linux; ppc64le
 
 ```console
-$ docker pull golang@sha256:6dcc2049bf65c4b9f6689f5c8e04e5289d1b2bff4578737c1a4585963efdc138
+$ docker pull golang@sha256:4f7a0961363927c1308b8e3df6b7aaa582e67b39922478f9fce1a9b51a3df4d5
 ```
 
 -	Docker Version: 20.10.7
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **305.4 MB (305381744 bytes)**  
+-	Total Size: **305.4 MB (305381743 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:9511ffe9a20d7061da5a277470500a9080f82cf05f34ac855446d3dc0bb6f999`
+-	Image ID: `sha256:45eb4589ee365ca22e3f9dea904d8768c8f29a33fe7579001fdaf96e8dadbbdc`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -477,15 +477,15 @@ RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		g++
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Fri, 11 Feb 2022 00:40:38 GMT
 ENV GOLANG_VERSION=1.17.7
-# Fri, 11 Feb 2022 00:41:27 GMT
-RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.17.7.linux-amd64.tar.gz'; 			sha256='02b111284bedbfa35a7e5b74a06082d18632eff824fd144312f6063943d49259'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.17.7.linux-armv6l.tar.gz'; 			sha256='874774f078b182fa21ffcb3878467eb5cb7e78bbffa6343ea5f0fbe47983433b'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.17.7.linux-arm64.tar.gz'; 			sha256='a5aa1ed17d45ee1d58b4a4099b12f8942acbd1dd09b2e9a6abb1c4898043c5f5'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.17.7.linux-386.tar.gz'; 			sha256='5d5472672a2e0252fe31f4ec30583d9f2b320f9b9296eda430f03cbc848400ce'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.17.7.linux-ppc64le.tar.gz'; 			sha256='2262fdee9147eb61fd1e719cfd19b9c035009c14890de02b5a77071b0a577405'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.17.7.linux-s390x.tar.gz'; 			sha256='24dd117581d592f52b4cf45d75ae68a6a1e42691a8671a2d3c2ddd739894a1e4'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.17.7.src.tar.gz'; 		sha256='c108cd33b73b1911a02b697741df3dea43e01a5c4e08e409e8b3a0e3745d2b4d'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends golang-go; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				go install std; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 		; 	fi; 		go version
-# Fri, 11 Feb 2022 00:41:36 GMT
+# Fri, 18 Feb 2022 04:29:06 GMT
+RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.17.7.linux-amd64.tar.gz'; 			sha256='02b111284bedbfa35a7e5b74a06082d18632eff824fd144312f6063943d49259'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.17.7.linux-armv6l.tar.gz'; 			sha256='874774f078b182fa21ffcb3878467eb5cb7e78bbffa6343ea5f0fbe47983433b'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.17.7.linux-arm64.tar.gz'; 			sha256='a5aa1ed17d45ee1d58b4a4099b12f8942acbd1dd09b2e9a6abb1c4898043c5f5'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.17.7.linux-386.tar.gz'; 			sha256='5d5472672a2e0252fe31f4ec30583d9f2b320f9b9296eda430f03cbc848400ce'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.17.7.linux-ppc64le.tar.gz'; 			sha256='2262fdee9147eb61fd1e719cfd19b9c035009c14890de02b5a77071b0a577405'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.17.7.linux-s390x.tar.gz'; 			sha256='24dd117581d592f52b4cf45d75ae68a6a1e42691a8671a2d3c2ddd739894a1e4'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.17.7.src.tar.gz'; 		sha256='c108cd33b73b1911a02b697741df3dea43e01a5c4e08e409e8b3a0e3745d2b4d'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends golang-go; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 		; 	fi; 		go version
+# Fri, 18 Feb 2022 04:29:16 GMT
 ENV GOPATH=/go
-# Fri, 11 Feb 2022 00:41:37 GMT
+# Fri, 18 Feb 2022 04:29:17 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 11 Feb 2022 00:41:43 GMT
+# Fri, 18 Feb 2022 04:29:26 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Fri, 11 Feb 2022 00:41:47 GMT
+# Fri, 18 Feb 2022 04:29:29 GMT
 WORKDIR /go
 ```
 
@@ -510,12 +510,12 @@ WORKDIR /go
 		Last Modified: Thu, 27 Jan 2022 00:19:44 GMT  
 		Size: 73.7 MB (73682006 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6714ff17badc0c72be2142428cf207270535fc083992963b211843b35ae103ee`  
-		Last Modified: Fri, 11 Feb 2022 01:02:48 GMT  
-		Size: 101.1 MB (101058109 bytes)  
+	-	`sha256:c768353f4d315cb93ca39abb090195fa4eab49f5ecd919edc1834a9e84643cb8`  
+		Last Modified: Fri, 18 Feb 2022 04:58:08 GMT  
+		Size: 101.1 MB (101058108 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:31bd14353ff0b3a4c58f5f77268e2085b1f4a2474aa27993eb09845896e81e69`  
-		Last Modified: Fri, 11 Feb 2022 01:01:39 GMT  
+	-	`sha256:18d3cdf8edef356bf20d4f7a3531c639091ea81a5fcb338c4c019b2af7929a9b`  
+		Last Modified: Fri, 18 Feb 2022 04:56:09 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
