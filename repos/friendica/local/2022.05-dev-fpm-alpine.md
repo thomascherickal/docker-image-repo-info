@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:4d69bd2b7fcea7d62292f0b4573e47a5f8131efbff63f1c04711dae3796c4d80`
-- Created: `2022-02-11T19:19:59.144260616Z`
-- Virtual Size: ~ 128.91 Mb  
+- Image ID: `sha256:583c4f144cf3f82ba2fb16b8cc7603da99ec869547267f7a843ef494bed713c5`
+- Created: `2022-02-17T22:03:41.188208409Z`
+- Virtual Size: ~ 128.92 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint-dev.sh"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
-  - `PHP_VERSION=7.4.27`
-  - `PHP_URL=https://www.php.net/distributions/php-7.4.27.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.27.tar.xz.asc`
-  - `PHP_SHA256=3f8b937310f155822752229c2c2feb8cc2621e25a728e7b94d0d74c128c43d0c`
+  - `PHP_VERSION=7.4.28`
+  - `PHP_URL=https://www.php.net/distributions/php-7.4.28.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.28.tar.xz.asc`
+  - `PHP_SHA256=9cc3b6f6217b60582f78566b3814532c4b71d517876c25013ae51811e65d8fce`
   - `GOSU_VERSION=1.14`
   - `PHP_MEMORY_LIMIT=512M`
   - `PHP_UPLOAD_LIMIT=512M`
@@ -254,16 +254,16 @@ GPL-3.0-or-later
 ### `apk` package: `gmp`
 
 ```console
-gmp-6.2.1-r0 description:
+gmp-6.2.1-r1 description:
 free library for arbitrary precision arithmetic
 
-gmp-6.2.1-r0 webpage:
+gmp-6.2.1-r1 webpage:
 https://gmplib.org/
 
-gmp-6.2.1-r0 installed size:
+gmp-6.2.1-r1 installed size:
 420 KiB
 
-gmp-6.2.1-r0 license:
+gmp-6.2.1-r1 license:
 LGPL-3.0-or-later OR GPL-2.0-or-later
 
 ```
@@ -985,16 +985,16 @@ GPL-2.0+ OR LGPL-3.0+
 ### `apk` package: `libuuid`
 
 ```console
-libuuid-2.37.3-r0 description:
+libuuid-2.37.4-r0 description:
 DCE compatible Universally Unique Identifier library
 
-libuuid-2.37.3-r0 webpage:
+libuuid-2.37.4-r0 webpage:
 https://git.kernel.org/cgit/utils/util-linux/util-linux.git
 
-libuuid-2.37.3-r0 installed size:
+libuuid-2.37.4-r0 installed size:
 40 KiB
 
-libuuid-2.37.3-r0 license:
+libuuid-2.37.4-r0 license:
 GPL-3.0-or-later AND GPL-2.0-or-later AND GPL-2.0-only AND
 
 ```
