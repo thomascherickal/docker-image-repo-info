@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:5c9e6c3c3e366fd4f9b8bcd65fa274bdfbb6eb2055cbadc2d1cfd023851cf6a3`
-- Created: `2022-02-11T19:42:11.186923011Z`
-- Virtual Size: ~ 524.47 Mb  
+- Image ID: `sha256:b5f8f7558efa8f4f168d0f37c1ed8db9752f18f3cd7cc5b3a8bf3374579e8c7b`
+- Created: `2022-02-19T09:01:36.172700876Z`
+- Virtual Size: ~ 524.96 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -19,10 +19,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F`
-  - `PHP_VERSION=8.0.15`
-  - `PHP_URL=https://www.php.net/distributions/php-8.0.15.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.15.tar.xz.asc`
-  - `PHP_SHA256=5f33544061d37d805a2a9ce791f081ef08a7155bd7ba2362e69bba2d06b0f8b2`
+  - `PHP_VERSION=8.0.16`
+  - `PHP_URL=https://www.php.net/distributions/php-8.0.16.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.16.tar.xz.asc`
+  - `PHP_SHA256=f27a2f25259e8c51e42dfd74e24a546ee521438ad7d9f6c6e794aa91f38bab0a`
   - `MAX_EXECUTION_TIME=600`
   - `MEMORY_LIMIT=512M`
   - `UPLOAD_LIMIT=2048K`
@@ -852,11 +852,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/e2fsprogs/1.46.2-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/e2fsprogs/1.46.2-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `expat=2.2.10-2`
+### `dpkg` source package: `expat=2.2.10-2+deb11u1`
 
 Binary Packages:
 
-- `libexpat1:amd64=2.2.10-2`
+- `libexpat1:amd64=2.2.10-2+deb11u1`
 
 Licenses: (parsed from: `/usr/share/doc/libexpat1/copyright`)
 
@@ -865,17 +865,17 @@ Licenses: (parsed from: `/usr/share/doc/libexpat1/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris expat=2.2.10-2
-'http://deb.debian.org/debian/pool/main/e/expat/expat_2.2.10-2.dsc' expat_2.2.10-2.dsc 1988 SHA256:f6cf4e5df4429e57f9d67d3a5bbcae5796e6744d392f95c4aeb9db9e056dc63c
-'http://deb.debian.org/debian/pool/main/e/expat/expat_2.2.10.orig.tar.gz' expat_2.2.10.orig.tar.gz 8276395 SHA256:62e280f5fd29a5b70973f623e20a7412c3e3912c2684cb0e462e2c881be129e1
-'http://deb.debian.org/debian/pool/main/e/expat/expat_2.2.10-2.debian.tar.xz' expat_2.2.10-2.debian.tar.xz 10956 SHA256:1f618e2e5459fb78f7c9879e1964fa3ec03dd071ff4944005b99dc9600c0e4a8
+$ apt-get source -qq --print-uris expat=2.2.10-2+deb11u1
+'http://security.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.10-2+deb11u1.dsc' expat_2.2.10-2+deb11u1.dsc 2175 SHA256:bf6b9e6736306c24b3e1b3f9b57d7577136caff6973dbbdbb76d9937fe0cd331
+'http://security.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.10.orig.tar.gz' expat_2.2.10.orig.tar.gz 8276395 SHA256:62e280f5fd29a5b70973f623e20a7412c3e3912c2684cb0e462e2c881be129e1
+'http://security.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.10-2+deb11u1.debian.tar.xz' expat_2.2.10-2+deb11u1.debian.tar.xz 15052 SHA256:5c44eb525fdc4843c3b5fb8efc2d9699292100ff5b76ee148f58e9bae72057b9
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/expat/2.2.10-2/ (for browsing the source)
-- https://sources.debian.net/src/expat/2.2.10-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/expat/2.2.10-2/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/expat/2.2.10-2+deb11u1/ (for browsing the source)
+- https://sources.debian.net/src/expat/2.2.10-2+deb11u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/expat/2.2.10-2+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `file=1:5.39-3`
 
