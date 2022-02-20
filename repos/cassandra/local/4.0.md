@@ -1,9 +1,9 @@
-# `cassandra:4.0.2`
+# `cassandra:4.0.3`
 
 ## Docker Metadata
 
-- Image ID: `sha256:1937bf1e70745b5043a0da75f345611597d73221ea2ec9a52943088d008bf668`
-- Created: `2022-02-11T23:25:43.337161881Z`
+- Image ID: `sha256:4325ff26ee26474c26fda30802f9f5d28f752010c47098a51b650a732402aefb`
+- Created: `2022-02-17T23:24:26.431949718Z`
 - Virtual Size: ~ 341.18 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -20,8 +20,8 @@
   - `CASSANDRA_HOME=/opt/cassandra`
   - `CASSANDRA_CONF=/etc/cassandra`
   - `GPG_KEYS=CEC86BB4A0BA9D0F90397CAEF8358FA2F2833C93 	C4965EE9E3015D192CCCF2B6F758CE318D77295D 	5AED1BF378E9A19DADE1BCB34BD736A82B5C1B00 	514A2AD631A57A16DD0047EC749D6EEC0353B12C 	A26E528B271F19B9E5D8E19EA278B781FE4B2BDA 	A4C465FEA0C552561A392A61E91335D77E3E87CB 	9E66CEC6106D578D0B1EB9BFF1000962B7F6840C 	C4009872C59B49561310D966D0062876AF30F054 	B7842CDAF36E6A3214FAE35D5E85B9AE0B84C041 	3E9C876907A560ACA00964F363E9BAD215BBF5F0 	F8B7FD00E05C932991A2CD6150EE103D162C5A55`
-  - `CASSANDRA_VERSION=4.0.2`
-  - `CASSANDRA_SHA512=4653ee99acc6e386e065bb58ef4772420faafcd56b99ff57072dbd969a17abfe2a515cf26fe3de08818f69412159999de5f3b6ef097408599b0304e2d915dd9f`
+  - `CASSANDRA_VERSION=4.0.3`
+  - `CASSANDRA_SHA512=b328a6bed9bf2d92f1e44a540bf1d800e26163257ca8e69d6f43ca792aeefe5bacf61b6e5bf2cf7233e34a168ab19de96a52fb3fe82304b7749fde2d7baa81d9`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -141,13 +141,9 @@ Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris base-files=11ubuntu5.4
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_11ubuntu5.4.dsc' base-files_11ubuntu5.4.dsc 1331 SHA512:e312d34034ef8d471488894159d6eda5f21f8d9255ace701ddbe051c37546f0f4465ad655eaca80375c6f565a95c2e540a54693400c62f982bb67e995d212430
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_11ubuntu5.4.tar.xz' base-files_11ubuntu5.4.tar.xz 80576 SHA512:11e6e0b05c5c3ae9bfcc8568deb1a9ac765b4dd6ce741ae988ad783e4d58d861de2344219422931f5fc775b1bedf456bb98d2e841e00dae5e08686564d841690
-```
 
 ### `dpkg` source package: `base-passwd=3.5.47`
 
