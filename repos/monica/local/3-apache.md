@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:e3438d428af762273cbef40f1a2e63bafa93f2591cbb142d588053053bb6bdfe`
-- Created: `2022-02-08T20:20:03.063911611Z`
-- Virtual Size: ~ 704.92 Mb  
+- Image ID: `sha256:da8b25220b21f0541eb607abf44c8eee9da221af11f58a918dbc0afb39b47c9c`
+- Created: `2022-02-19T07:13:06.507909413Z`
+- Virtual Size: ~ 705.41 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/entrypoint.sh"]`
@@ -19,10 +19,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F`
-  - `PHP_VERSION=8.0.15`
-  - `PHP_URL=https://www.php.net/distributions/php-8.0.15.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.15.tar.xz.asc`
-  - `PHP_SHA256=5f33544061d37d805a2a9ce791f081ef08a7155bd7ba2362e69bba2d06b0f8b2`
+  - `PHP_VERSION=8.0.16`
+  - `PHP_URL=https://www.php.net/distributions/php-8.0.16.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.16.tar.xz.asc`
+  - `PHP_SHA256=f27a2f25259e8c51e42dfd74e24a546ee521438ad7d9f6c6e794aa91f38bab0a`
   - `PHP_OPCACHE_VALIDATE_TIMESTAMPS=0`
   - `PHP_OPCACHE_MAX_ACCELERATED_FILES=20000`
   - `PHP_OPCACHE_MEMORY_CONSUMPTION=192`
@@ -875,30 +875,23 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/e2fsprogs/1.46.2-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/e2fsprogs/1.46.2-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `expat=2.2.10-2`
+### `dpkg` source package: `expat=2.2.10-2+deb11u1`
 
 Binary Packages:
 
-- `libexpat1:amd64=2.2.10-2`
+- `libexpat1:amd64=2.2.10-2+deb11u1`
 
 Licenses: (parsed from: `/usr/share/doc/libexpat1/copyright`)
 
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris expat=2.2.10-2
-'http://deb.debian.org/debian/pool/main/e/expat/expat_2.2.10-2.dsc' expat_2.2.10-2.dsc 1988 SHA256:f6cf4e5df4429e57f9d67d3a5bbcae5796e6744d392f95c4aeb9db9e056dc63c
-'http://deb.debian.org/debian/pool/main/e/expat/expat_2.2.10.orig.tar.gz' expat_2.2.10.orig.tar.gz 8276395 SHA256:62e280f5fd29a5b70973f623e20a7412c3e3912c2684cb0e462e2c881be129e1
-'http://deb.debian.org/debian/pool/main/e/expat/expat_2.2.10-2.debian.tar.xz' expat_2.2.10-2.debian.tar.xz 10956 SHA256:1f618e2e5459fb78f7c9879e1964fa3ec03dd071ff4944005b99dc9600c0e4a8
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/expat/2.2.10-2+deb11u1/
 
-- https://sources.debian.net/src/expat/2.2.10-2/ (for browsing the source)
-- https://sources.debian.net/src/expat/2.2.10-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/expat/2.2.10-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `file=1:5.39-3`
 
