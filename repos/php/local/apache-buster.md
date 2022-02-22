@@ -1,10 +1,10 @@
-# `php:8.1.2-apache-buster`
+# `php:8.1.3-apache-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:0ffb3d00524ae470972d812c218293206bfa7a6213b571e3d1dc0ad3883441f5`
-- Created: `2022-01-26T17:08:06.446249967Z`
-- Virtual Size: ~ 422.59 Mb  
+- Image ID: `sha256:198ca7eae3c4c6859ca2fd7bcfe241d33fd00124f7c81163ad8835ed9f2b9492`
+- Created: `2022-02-18T20:02:19.230119773Z`
+- Virtual Size: ~ 423.17 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -19,10 +19,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD`
-  - `PHP_VERSION=8.1.2`
-  - `PHP_URL=https://www.php.net/distributions/php-8.1.2.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.2.tar.xz.asc`
-  - `PHP_SHA256=6b448242fd360c1a9f265b7263abf3da25d28f2b2b0f5465533b69be51a391dd`
+  - `PHP_VERSION=8.1.3`
+  - `PHP_URL=https://www.php.net/distributions/php-8.1.3.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.3.tar.xz.asc`
+  - `PHP_SHA256=5d65a11071b47669c17452fb336c290b67c101efb745c1dbe7525b5caf546ec6`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -823,11 +823,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/e2fsprogs/1.44.5-1+deb10u3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/e2fsprogs/1.44.5-1+deb10u3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `expat=2.2.6-2+deb10u1`
+### `dpkg` source package: `expat=2.2.6-2+deb10u2`
 
 Binary Packages:
 
-- `libexpat1:amd64=2.2.6-2+deb10u1`
+- `libexpat1:amd64=2.2.6-2+deb10u2`
 
 Licenses: (parsed from: `/usr/share/doc/libexpat1/copyright`)
 
@@ -836,17 +836,17 @@ Licenses: (parsed from: `/usr/share/doc/libexpat1/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris expat=2.2.6-2+deb10u1
-'http://deb.debian.org/debian/pool/main/e/expat/expat_2.2.6-2+deb10u1.dsc' expat_2.2.6-2+deb10u1.dsc 2136 SHA256:a32a035c9883b70ddf739eaacaa5c790ec5bf3027ba61eefdbc0cdf634aa4d96
-'http://deb.debian.org/debian/pool/main/e/expat/expat_2.2.6.orig.tar.gz' expat_2.2.6.orig.tar.gz 8275473 SHA256:574499cba22a599393e28d99ecfa1e7fc85be7d6651d543045244d5b561cb7ff
-'http://deb.debian.org/debian/pool/main/e/expat/expat_2.2.6-2+deb10u1.debian.tar.xz' expat_2.2.6-2+deb10u1.debian.tar.xz 12032 SHA256:15e75199a33c4e902788410f37e784c1082906e703c8619c4cfc715a0191e02b
+$ apt-get source -qq --print-uris expat=2.2.6-2+deb10u2
+'http://security.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.6-2+deb10u2.dsc' expat_2.2.6-2+deb10u2.dsc 2136 SHA256:c15b50bd0c9b75abc53b3c2702da3cec19fc63d32f1858550649e876e3abfd89
+'http://security.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.6.orig.tar.gz' expat_2.2.6.orig.tar.gz 8275473 SHA256:574499cba22a599393e28d99ecfa1e7fc85be7d6651d543045244d5b561cb7ff
+'http://security.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.6-2+deb10u2.debian.tar.xz' expat_2.2.6-2+deb10u2.debian.tar.xz 15204 SHA256:a0cdfd961e0ce50714cd881ae5ed8a0105b52c02916f9d6a7955b6e51e4ffb24
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/expat/2.2.6-2+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/expat/2.2.6-2+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/expat/2.2.6-2+deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/expat/2.2.6-2+deb10u2/ (for browsing the source)
+- https://sources.debian.net/src/expat/2.2.6-2+deb10u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/expat/2.2.6-2+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `file=1:5.35-4+deb10u2`
 
