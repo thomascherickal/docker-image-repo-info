@@ -889,19 +889,13 @@ Licenses: (parsed from: `/usr/share/doc/init-system-helpers/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris init-system-helpers=1.61
-'http://deb.debian.org/debian/pool/main/i/init-system-helpers/init-system-helpers_1.61.dsc' init-system-helpers_1.61.dsc 1927 SHA256:77a7c04257951ad2e8295ede0b935d59e3ac62ea02489cc50e962cb79640df5e
-'http://deb.debian.org/debian/pool/main/i/init-system-helpers/init-system-helpers_1.61.tar.xz' init-system-helpers_1.61.tar.xz 41244 SHA256:9dc5e2f132f5e4efd1746c6492dcfd82d9c24b42980abeafd8089264578a43ae
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/init-system-helpers/1.61/
 
-- https://sources.debian.net/src/init-system-helpers/1.61/ (for browsing the source)
-- https://sources.debian.net/src/init-system-helpers/1.61/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/init-system-helpers/1.61/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `keyutils=1.6.1-2`
 
