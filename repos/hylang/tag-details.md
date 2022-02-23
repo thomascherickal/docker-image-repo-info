@@ -20,6 +20,10 @@
 -	[`hylang:1.0a4-pypy3.8-bullseye`](#hylang10a4-pypy38-bullseye)
 -	[`hylang:1.0a4-pypy3.8-buster`](#hylang10a4-pypy38-buster)
 -	[`hylang:1.0a4-pypy3.8-windowsservercore-1809`](#hylang10a4-pypy38-windowsservercore-1809)
+-	[`hylang:1.0a4-pypy3.9`](#hylang10a4-pypy39)
+-	[`hylang:1.0a4-pypy3.9-bullseye`](#hylang10a4-pypy39-bullseye)
+-	[`hylang:1.0a4-pypy3.9-buster`](#hylang10a4-pypy39-buster)
+-	[`hylang:1.0a4-pypy3.9-windowsservercore-1809`](#hylang10a4-pypy39-windowsservercore-1809)
 -	[`hylang:1.0a4-python3.10`](#hylang10a4-python310)
 -	[`hylang:1.0a4-python3.10-alpine`](#hylang10a4-python310-alpine)
 -	[`hylang:1.0a4-python3.10-alpine3.14`](#hylang10a4-python310-alpine314)
@@ -64,6 +68,10 @@
 -	[`hylang:pypy3.8-bullseye`](#hylangpypy38-bullseye)
 -	[`hylang:pypy3.8-buster`](#hylangpypy38-buster)
 -	[`hylang:pypy3.8-windowsservercore-1809`](#hylangpypy38-windowsservercore-1809)
+-	[`hylang:pypy3.9`](#hylangpypy39)
+-	[`hylang:pypy3.9-bullseye`](#hylangpypy39-bullseye)
+-	[`hylang:pypy3.9-buster`](#hylangpypy39-buster)
+-	[`hylang:pypy3.9-windowsservercore-1809`](#hylangpypy39-windowsservercore-1809)
 -	[`hylang:python3.10`](#hylangpython310)
 -	[`hylang:python3.10-alpine`](#hylangpython310-alpine)
 -	[`hylang:python3.10-alpine3.14`](#hylangpython310-alpine314)
@@ -6372,6 +6380,22 @@ CMD ["hy"]
 		Last Modified: Wed, 23 Feb 2022 02:54:35 GMT  
 		Size: 1.4 KB (1388 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `hylang:1.0a4-pypy3.9`
+
+**does not exist** (yet?)
+
+## `hylang:1.0a4-pypy3.9-bullseye`
+
+**does not exist** (yet?)
+
+## `hylang:1.0a4-pypy3.9-buster`
+
+**does not exist** (yet?)
+
+## `hylang:1.0a4-pypy3.9-windowsservercore-1809`
+
+**does not exist** (yet?)
 
 ## `hylang:1.0a4-python3.10`
 
@@ -27681,6 +27705,22 @@ CMD ["hy"]
 		Last Modified: Wed, 23 Feb 2022 02:54:35 GMT  
 		Size: 1.4 KB (1388 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `hylang:pypy3.9`
+
+**does not exist** (yet?)
+
+## `hylang:pypy3.9-bullseye`
+
+**does not exist** (yet?)
+
+## `hylang:pypy3.9-buster`
+
+**does not exist** (yet?)
+
+## `hylang:pypy3.9-windowsservercore-1809`
+
+**does not exist** (yet?)
 
 ## `hylang:python3.10`
 
