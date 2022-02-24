@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:57d73f928a07b09ef29fb5f3170ec4fcc290f84e115a16815ecd4119d1b29b3a`
-- Created: `2022-02-05T06:26:20.06666334Z`
-- Virtual Size: ~ 49.90 Mb  
+- Image ID: `sha256:41bcfc47743e4a7e11ddbbad23b6fc7b003412a4c02a1f40240f36c31ba0f3a4`
+- Created: `2022-02-24T01:25:12.712197989Z`
+- Virtual Size: ~ 49.84 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["hy"]`
@@ -127,16 +127,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `expat`
 
 ```console
-expat-2.4.3-r0 description:
+expat-2.4.5-r0 description:
 XML Parser library written in C
 
-expat-2.4.3-r0 webpage:
+expat-2.4.5-r0 webpage:
 http://www.libexpat.org/
 
-expat-2.4.3-r0 installed size:
+expat-2.4.5-r0 installed size:
 192 KiB
 
-expat-2.4.3-r0 license:
+expat-2.4.5-r0 license:
 MIT
 
 ```
@@ -399,16 +399,16 @@ BSD-3-Clause
 ### `apk` package: `libuuid`
 
 ```console
-libuuid-2.37.2-r0 description:
+libuuid-2.37.4-r0 description:
 DCE compatible Universally Unique Identifier library
 
-libuuid-2.37.2-r0 webpage:
+libuuid-2.37.4-r0 webpage:
 https://git.kernel.org/cgit/utils/util-linux/util-linux.git
 
-libuuid-2.37.2-r0 installed size:
+libuuid-2.37.4-r0 installed size:
 40 KiB
 
-libuuid-2.37.2-r0 license:
+libuuid-2.37.4-r0 license:
 GPL-3.0-or-later AND GPL-2.0-or-later AND GPL-2.0-only AND
 
 ```
