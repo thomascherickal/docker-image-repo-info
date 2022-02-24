@@ -4,7 +4,7 @@
 
 - Image ID: `sha256:1de32666a9f729f2c2f978bf476079a8f7b1c53a5d5107b3ddde389649aba613`
 - Created: `2022-02-19T04:40:59.526919208Z`
-- Virtual Size: ~ 174.40 Mb  
+- Virtual Size: ~ 174.38 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
