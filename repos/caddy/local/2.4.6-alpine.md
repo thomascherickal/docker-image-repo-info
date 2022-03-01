@@ -4,7 +4,7 @@
 
 - Image ID: `sha256:439af64db48912c0a446444aae0e357183264ff08e1154fa105d5ee082e0bf13`
 - Created: `2021-11-12T21:54:26.867184858Z`
-- Virtual Size: ~ 40.14 Mb  
+- Virtual Size: ~ 40.12 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["caddy","run","--config","/etc/caddy/Caddyfile","--adapter","caddyfile"]`
