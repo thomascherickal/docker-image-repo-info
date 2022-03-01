@@ -1,7 +1,7 @@
 ## `mono:6-slim`
 
 ```console
-$ docker pull mono@sha256:2df741edddd526d9809994b6880004b54353f2a826c88d17f31d8d842fad6580
+$ docker pull mono@sha256:64905a436cf3e3de5b6f7f987510b79c99887049d9017f6fe39c8b7dbe3a2952
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -176,41 +176,41 @@ RUN echo "deb https://download.mono-project.com/repo/debian stable-buster/snapsh
 ### `mono:6-slim` - linux; 386
 
 ```console
-$ docker pull mono@sha256:958d793ec854e24d741c66825656a867b699b6a75d3fd993c62ebc5c1e1879d9
+$ docker pull mono@sha256:d9c23198eec7e2c304b84f004811aa4baba762614a35374bd820ff5d24e3c378
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **99.4 MB (99364306 bytes)**  
+-	Total Size: **99.4 MB (99364681 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:37c4857cc88ec801baaf81e9eeec5d7a42d926f98b49df4533c6f5a3f59c5c06`
+-	Image ID: `sha256:18db94f8442093daf5003e5853ae0b168af2ec80a3ed2a7babfbbd1dc3627d99`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Wed, 26 Jan 2022 01:40:30 GMT
-ADD file:0d3811120feb1258b2cbe48be0a91ae3389643fb759b10b83b6534ebca8cf795 in / 
-# Wed, 26 Jan 2022 01:40:31 GMT
+# Tue, 01 Mar 2022 02:08:04 GMT
+ADD file:d9d384f0402bc696e46e7529f52d64859a66aa7a60bca9c7beee7433a5f7af6e in / 
+# Tue, 01 Mar 2022 02:08:04 GMT
 CMD ["bash"]
-# Wed, 26 Jan 2022 08:51:17 GMT
+# Tue, 01 Mar 2022 10:13:49 GMT
 ENV MONO_VERSION=6.12.0.122
-# Wed, 26 Jan 2022 08:52:03 GMT
+# Tue, 01 Mar 2022 10:14:37 GMT
 RUN apt-get update   && apt-get install -y --no-install-recommends gnupg dirmngr ca-certificates   && rm -rf /var/lib/apt/lists/*   && export GNUPGHOME="$(mktemp -d)"   && gpg --batch --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF   && gpg --batch --export --armor 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF > /etc/apt/trusted.gpg.d/mono.gpg.asc   && gpgconf --kill all   && rm -rf "$GNUPGHOME"   && apt-key list | grep Xamarin   && apt-get purge -y --auto-remove gnupg dirmngr
-# Wed, 26 Jan 2022 08:52:30 GMT
+# Tue, 01 Mar 2022 10:15:09 GMT
 RUN echo "deb https://download.mono-project.com/repo/debian stable-buster/snapshots/$MONO_VERSION main" > /etc/apt/sources.list.d/mono-official-stable.list   && apt-get update   && apt-get install -y mono-runtime   && rm -rf /var/lib/apt/lists/* /tmp/*
 ```
 
 -	Layers:
-	-	`sha256:79e14f2e0ab2370ab81617ee0b4757c6c2e55d326ad5c7b5290a5068e50176df`  
-		Last Modified: Wed, 26 Jan 2022 01:50:05 GMT  
-		Size: 27.8 MB (27804600 bytes)  
+	-	`sha256:c761ce6f2bf0aed07e1198c6f827444969d6e76dda0e55dbb45900920e551d27`  
+		Last Modified: Tue, 01 Mar 2022 02:16:51 GMT  
+		Size: 27.8 MB (27804590 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9efa16d2b14d5f8249f5c2bdb80a81e7072bad670e30cea512692747aa97e6e6`  
-		Last Modified: Wed, 26 Jan 2022 08:56:59 GMT  
-		Size: 2.8 MB (2781500 bytes)  
+	-	`sha256:011b9d654300beab54b280fd3e0b1f7170919be5028f5e31a210af8a83500cfc`  
+		Last Modified: Tue, 01 Mar 2022 10:22:39 GMT  
+		Size: 2.8 MB (2781491 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:33ecc34dc4d9a21c088d8cfdae4c646585e4ae3923c6601bc29422300910e00b`  
-		Last Modified: Wed, 26 Jan 2022 08:57:15 GMT  
-		Size: 68.8 MB (68778206 bytes)  
+	-	`sha256:4e4b91a20a9ead3771e864dc94eb15af13cf873e35ca6bbc27fe1fdd66f0422f`  
+		Last Modified: Tue, 01 Mar 2022 10:23:02 GMT  
+		Size: 68.8 MB (68778600 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mono:6-slim` - linux; ppc64le
