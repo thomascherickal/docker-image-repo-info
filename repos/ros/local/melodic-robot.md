@@ -5016,14 +5016,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python-rospkg-modules=1.3.0-1
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rospkg-modules/python-rospkg-modules_1.3.0-1.debian.tar.xz' python-rospkg-modules_1.3.0-1.debian.tar.xz 1104 SHA512:8ae7890504dd9f5e4f725a044a22d716adcd05f5047429474c0e476f88c5cb48419f8d85a64eab3f2df5251793532ad8afd817b25347a304ad3c2305d450c174
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rospkg-modules/python-rospkg-modules_1.3.0-1.dsc' python-rospkg-modules_1.3.0-1.dsc 953 SHA512:f1d7c570a56ebc7a1bbedd2fa09ff48c09df4570957ce1364d7521539debde1276c82705d126717ef7a543dc629f34cfcc47c0a0fc1a63c36c16fbe11d37b8e7
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rospkg-modules/python-rospkg-modules_1.3.0.orig.tar.gz' python-rospkg-modules_1.3.0.orig.tar.gz 41083 SHA512:f794781b1c54eab5afa1d1aca57bd9176e72d69ad937de38933b4055d6f9cf1eb01567e52324cc9bc20a8a3785046d6870fa8077bd8aa0727344e829c96ffe17
-```
 
 ### `dpkg` source package: `python-rospkg=1.3.0-100`
 
@@ -5035,14 +5030,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python-rospkg=1.3.0-100
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rospkg/python-rospkg_1.3.0-100.debian.tar.xz' python-rospkg_1.3.0-100.debian.tar.xz 1088 SHA512:2ebef0838274e566cf7729210261080e56b6b90197781dc1d65b16a6d8f5f529e311d1c8e3a1ceb83c9586e93145e416e8ead848803367f6a6a31a82d9d27393
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rospkg/python-rospkg_1.3.0-100.dsc' python-rospkg_1.3.0-100.dsc 889 SHA512:8160e10b760fffc3dd78a70aa314ade8ef0d393de56bf6809845b448ce323d39a21934499af45b22db1ad97c7ab603d8228778a58040121f5df481e007b7b77a
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rospkg/python-rospkg_1.3.0.orig.tar.gz' python-rospkg_1.3.0.orig.tar.gz 17690 SHA512:3e4cc71cec471f06c833c01e32b9f2d3e426cfa3b07857118dc1e597af6489ee5cadb7fdf146f656eea8c6e0830a00c9fb6a47084ec3688e954776a78eec61a6
-```
 
 ### `dpkg` source package: `python-setuptools=39.0.1-2`
 
