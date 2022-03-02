@@ -8830,23 +8830,48 @@ CMD ["clj"]
 
 ## `clojure:openjdk-11-tools-deps-1.10.3.1087`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-11-tools-deps-1.10.3.1087-bullseye`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-11-tools-deps-1.10.3.1087-buster`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-11-tools-deps-1.10.3.1087-slim-bullseye`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-11-tools-deps-1.10.3.1087-slim-buster`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-11-tools-deps-bullseye`
 
@@ -14328,23 +14353,48 @@ CMD ["-M" "--repl"]
 
 ## `clojure:openjdk-17-tools-deps-1.10.3.1087`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-17-tools-deps-1.10.3.1087-bullseye`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-17-tools-deps-1.10.3.1087-buster`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-17-tools-deps-1.10.3.1087-slim-bullseye`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-17-tools-deps-1.10.3.1087-slim-buster`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-17-tools-deps-bullseye`
 
@@ -19850,23 +19900,48 @@ CMD ["-M" "--repl"]
 
 ## `clojure:openjdk-18-tools-deps-1.10.3.1087`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-18-tools-deps-1.10.3.1087-bullseye`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-18-tools-deps-1.10.3.1087-buster`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-18-tools-deps-1.10.3.1087-slim-bullseye`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-18-tools-deps-1.10.3.1087-slim-buster`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-18-tools-deps-bullseye`
 
@@ -20586,115 +20661,255 @@ CMD ["-M" "--repl"]
 
 ## `clojure:openjdk-19`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-19-alpine`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-19-boot`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-19-boot-2.8.3`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-19-boot-2.8.3-alpine`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-19-boot-2.8.3-bullseye`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-19-boot-2.8.3-slim-bullseye`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-19-boot-alpine`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-19-boot-bullseye`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-19-boot-slim-bullseye`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-19-bullseye`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-19-lein`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-19-lein-2.9.8`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-19-lein-2.9.8-alpine`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-19-lein-2.9.8-bullseye`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-19-lein-2.9.8-slim-bullseye`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-19-lein-alpine`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-19-lein-bullseye`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-19-lein-slim-bullseye`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-19-slim-bullseye`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-19-tools-deps`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-19-tools-deps-1.10.3.1087`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-19-tools-deps-1.10.3.1087-alpine`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-19-tools-deps-1.10.3.1087-bullseye`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-19-tools-deps-1.10.3.1087-slim-bullseye`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-19-tools-deps-alpine`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-19-tools-deps-bullseye`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-19-tools-deps-slim-bullseye`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-8`
 
@@ -25224,23 +25439,48 @@ CMD ["clj"]
 
 ## `clojure:openjdk-8-tools-deps-1.10.3.1087`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-8-tools-deps-1.10.3.1087-bullseye`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-8-tools-deps-1.10.3.1087-buster`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-8-tools-deps-1.10.3.1087-slim-bullseye`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-8-tools-deps-1.10.3.1087-slim-buster`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:openjdk-8-tools-deps-bullseye`
 
@@ -26081,23 +26321,48 @@ CMD ["-M" "--repl"]
 
 ## `clojure:tools-deps-1.10.3.1087`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:tools-deps-1.10.3.1087-bullseye`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:tools-deps-1.10.3.1087-buster`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:tools-deps-1.10.3.1087-slim-bullseye`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:tools-deps-1.10.3.1087-slim-buster`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `clojure:tools-deps-bullseye`
 
