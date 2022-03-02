@@ -2,16 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:c7ec287fe86db5f371e149888fbce7103a5fbd26e59061d1c0511d53f682580c`
-- Created: `2021-11-30T01:08:09.911925114Z`
-- Virtual Size: ~ 272.37 Mb  
+- Image ID: `sha256:b2f47a27ce1212ab0dd12b619f52d3a79248ba7d8e99860f957f3411ab52dcc7`
+- Created: `2022-02-23T18:57:07.187622142Z`
+- Virtual Size: ~ 272.49 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/mvn-entrypoint.sh"]`
 - Command: `["mvn"]`
 - Environment:
   - `PATH=/opt/ibm/java/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `JAVA_VERSION=8.0.7.0`
+  - `JAVA_VERSION=8.0.7.5`
   - `JAVA_HOME=/opt/ibm/java/jre`
   - `IBM_JAVA_OPTIONS=-XX:+UseContainerSupport`
   - `MAVEN_HOME=/usr/share/maven`
@@ -345,16 +345,16 @@ MIT BSD GPL2+
 ### `apk` package: `ncurses-libs`
 
 ```console
-ncurses-libs-6.2_p20200523-r0 description:
+ncurses-libs-6.2_p20200523-r1 description:
 Ncurses libraries
 
-ncurses-libs-6.2_p20200523-r0 webpage:
+ncurses-libs-6.2_p20200523-r1 webpage:
 https://invisible-island.net/ncurses/
 
-ncurses-libs-6.2_p20200523-r0 installed size:
+ncurses-libs-6.2_p20200523-r1 installed size:
 496 KiB
 
-ncurses-libs-6.2_p20200523-r0 license:
+ncurses-libs-6.2_p20200523-r1 license:
 MIT
 
 ```
@@ -362,16 +362,16 @@ MIT
 ### `apk` package: `ncurses-terminfo-base`
 
 ```console
-ncurses-terminfo-base-6.2_p20200523-r0 description:
+ncurses-terminfo-base-6.2_p20200523-r1 description:
 Descriptions of common terminals
 
-ncurses-terminfo-base-6.2_p20200523-r0 webpage:
+ncurses-terminfo-base-6.2_p20200523-r1 webpage:
 https://invisible-island.net/ncurses/
 
-ncurses-terminfo-base-6.2_p20200523-r0 installed size:
+ncurses-terminfo-base-6.2_p20200523-r1 installed size:
 212 KiB
 
-ncurses-terminfo-base-6.2_p20200523-r0 license:
+ncurses-terminfo-base-6.2_p20200523-r1 license:
 MIT
 
 ```
