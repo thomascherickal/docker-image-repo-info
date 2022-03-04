@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:1ee2d278c6b78609db26e9bb41fa4f58dfce583b8f449e7791bfda1413409deb`
-- Created: `2022-01-28T23:57:37.840328108Z`
-- Virtual Size: ~ 167.30 Mb  
+- Image ID: `sha256:d56157f2764b576774be68cf6a0e16e50cba7f5d355e620a80fb0e437ac7b763`
+- Created: `2022-03-03T18:11:55.613895395Z`
+- Virtual Size: ~ 170.00 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -98,16 +98,16 @@ Apache-2.0 CC0-1.0
 ### `apk` package: `bash`
 
 ```console
-bash-5.1.8-r0 description:
+bash-5.1.16-r0 description:
 The GNU Bourne Again shell
 
-bash-5.1.8-r0 webpage:
+bash-5.1.16-r0 webpage:
 https://www.gnu.org/software/bash/bash.html
 
-bash-5.1.8-r0 installed size:
+bash-5.1.16-r0 installed size:
 1296 KiB
 
-bash-5.1.8-r0 license:
+bash-5.1.16-r0 license:
 GPL-3.0-or-later
 
 ```
@@ -200,16 +200,16 @@ MIT
 ### `apk` package: `expat`
 
 ```console
-expat-2.4.3-r0 description:
+expat-2.4.6-r0 description:
 XML Parser library written in C
 
-expat-2.4.3-r0 webpage:
+expat-2.4.6-r0 webpage:
 http://www.libexpat.org/
 
-expat-2.4.3-r0 installed size:
+expat-2.4.6-r0 installed size:
 192 KiB
 
-expat-2.4.3-r0 license:
+expat-2.4.6-r0 license:
 MIT
 
 ```
@@ -387,16 +387,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1l-r7 description:
+libcrypto1.1-1.1.1l-r8 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1l-r7 webpage:
+libcrypto1.1-1.1.1l-r8 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1l-r7 installed size:
+libcrypto1.1-1.1.1l-r8 installed size:
 2676 KiB
 
-libcrypto1.1-1.1.1l-r7 license:
+libcrypto1.1-1.1.1l-r8 license:
 OpenSSL
 
 ```
@@ -557,16 +557,16 @@ ISC
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1l-r7 description:
+libssl1.1-1.1.1l-r8 description:
 SSL shared libraries
 
-libssl1.1-1.1.1l-r7 webpage:
+libssl1.1-1.1.1l-r8 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1l-r7 installed size:
+libssl1.1-1.1.1l-r8 installed size:
 528 KiB
 
-libssl1.1-1.1.1l-r7 license:
+libssl1.1-1.1.1l-r8 license:
 OpenSSL
 
 ```
@@ -591,16 +591,16 @@ GPL-2.0-or-later LGPL-2.1-or-later
 ### `apk` package: `libuuid`
 
 ```console
-libuuid-2.37.2-r1 description:
+libuuid-2.37.4-r0 description:
 DCE compatible Universally Unique Identifier library
 
-libuuid-2.37.2-r1 webpage:
+libuuid-2.37.4-r0 webpage:
 https://git.kernel.org/cgit/utils/util-linux/util-linux.git
 
-libuuid-2.37.2-r1 installed size:
+libuuid-2.37.4-r0 installed size:
 40 KiB
 
-libuuid-2.37.2-r1 license:
+libuuid-2.37.4-r0 license:
 GPL-3.0-or-later AND GPL-2.0-or-later AND GPL-2.0-only AND
 
 ```
@@ -744,16 +744,16 @@ BSD-3-Clause
 ### `apk` package: `mariadb-client`
 
 ```console
-mariadb-client-10.6.4-r1 description:
+mariadb-client-10.6.4-r2 description:
 Client for the MariaDB database
 
-mariadb-client-10.6.4-r1 webpage:
+mariadb-client-10.6.4-r2 webpage:
 https://www.mariadb.org/
 
-mariadb-client-10.6.4-r1 installed size:
+mariadb-client-10.6.4-r2 installed size:
 28 MiB
 
-mariadb-client-10.6.4-r1 license:
+mariadb-client-10.6.4-r2 license:
 GPL-2.0-or-later
 
 ```
@@ -761,16 +761,16 @@ GPL-2.0-or-later
 ### `apk` package: `mariadb-common`
 
 ```console
-mariadb-common-10.6.4-r1 description:
+mariadb-common-10.6.4-r2 description:
 MariaDB common files for both server and client
 
-mariadb-common-10.6.4-r1 webpage:
+mariadb-common-10.6.4-r2 webpage:
 https://www.mariadb.org/
 
-mariadb-common-10.6.4-r1 installed size:
+mariadb-common-10.6.4-r2 installed size:
 2248 KiB
 
-mariadb-common-10.6.4-r1 license:
+mariadb-common-10.6.4-r2 license:
 GPL-2.0-or-later
 
 ```
@@ -812,16 +812,16 @@ MIT BSD GPL2+
 ### `apk` package: `mysql-client`
 
 ```console
-mysql-client-10.6.4-r1 description:
+mysql-client-10.6.4-r2 description:
 Dummy package for mysql-client migration
 
-mysql-client-10.6.4-r1 webpage:
+mysql-client-10.6.4-r2 webpage:
 https://www.mariadb.org/
 
-mysql-client-10.6.4-r1 installed size:
+mysql-client-10.6.4-r2 installed size:
 4096 B
 
-mysql-client-10.6.4-r1 license:
+mysql-client-10.6.4-r2 license:
 GPL-2.0-or-later
 
 ```
