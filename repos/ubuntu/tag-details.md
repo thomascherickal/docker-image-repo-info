@@ -520,7 +520,7 @@ CMD ["/bin/bash"]
 ## `ubuntu:18.04`
 
 ```console
-$ docker pull ubuntu@sha256:c5f41324465e3365ae936b6b319057ca9b9ddcd495d5a3e15052f4d235979f9c
+$ docker pull ubuntu@sha256:42cd9143b6060261187a72716906187294b8b66653b50d70bc7a90ccade5c984
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -561,27 +561,27 @@ CMD ["bash"]
 ### `ubuntu:18.04` - linux; arm variant v7
 
 ```console
-$ docker pull ubuntu@sha256:08c30c542cb609b58f8b18ce66a05255f9ca82f17e3e3286268d463d7e6458a7
+$ docker pull ubuntu@sha256:83b18c04210c9d28a0480b97c98f8fb9e13fd3564da24b8de3504cd2b4394b8d
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **22.3 MB (22306998 bytes)**  
+-	Total Size: **22.3 MB (22308282 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3084b583abdeee05800679d8718278fb22679a92ee549061d3aaedd570eb2394`
+-	Image ID: `sha256:3e6eda41d43ea288e2879a7a1d735973020f7900174fa40a2ca7cf3819e0ae11`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Wed, 02 Feb 2022 02:24:47 GMT
-ADD file:f5678be7a8216c2848b16665194b944ad8bdf7696d2925a432437feb730cf587 in / 
-# Wed, 02 Feb 2022 02:24:48 GMT
+# Thu, 03 Mar 2022 21:21:10 GMT
+ADD file:c60e89df1905b44d4771a78ca9fa8113b55681f00e5bb55e798028b77ce6c120 in / 
+# Thu, 03 Mar 2022 21:21:11 GMT
 CMD ["bash"]
 ```
 
 -	Layers:
-	-	`sha256:3ddd1f986797e6622f6e3810028291b19248347b52709a52a74e6dea7ccee961`  
-		Last Modified: Wed, 02 Feb 2022 02:29:12 GMT  
-		Size: 22.3 MB (22306998 bytes)  
+	-	`sha256:f04b2e36c59d7fb6bb1129d2ffaff71df9aa51f235875df61b423ebbdfcc1ae3`  
+		Last Modified: Thu, 03 Mar 2022 21:24:40 GMT  
+		Size: 22.3 MB (22308282 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ubuntu:18.04` - linux; arm64 variant v8
@@ -691,7 +691,7 @@ CMD ["bash"]
 ## `ubuntu:20.04`
 
 ```console
-$ docker pull ubuntu@sha256:f454154bd8670e52ab840d7bfe26a8f9e830731c6964760c6c2cee21e8fd57d0
+$ docker pull ubuntu@sha256:8ae9bafbb64f63a50caab98fd3a5e37b3eb837a3e0780b78e5218e63193961f9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -732,27 +732,27 @@ CMD ["bash"]
 ### `ubuntu:20.04` - linux; arm variant v7
 
 ```console
-$ docker pull ubuntu@sha256:b91718ad92d7a79ab1551d260f5df92bcb82c5c0f370a5e716e4bd19f597e0dc
+$ docker pull ubuntu@sha256:5add25cfb79588e101ee59f8f71f0765e19c62cebb4109d7c3190eeb57514815
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **24.1 MB (24062751 bytes)**  
+-	Total Size: **24.1 MB (24073718 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0e749921cacc1af858deda8ffd97332e1be29f4c40484cdf7d82337f6dcddfa3`
+-	Image ID: `sha256:88da2cdc49a3fba797a099dd911d0df269761333e6ca6f834678b8d1871e3236`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Wed, 02 Feb 2022 02:25:11 GMT
-ADD file:0adc3f597b5ba8c31a9a4d67126166cf067749754e269fe2c3ed43f03457b53c in / 
-# Wed, 02 Feb 2022 02:25:12 GMT
+# Thu, 03 Mar 2022 21:21:31 GMT
+ADD file:984d3d8b31abd025bb9be52f42d60245a76b1ee991f286db819ae204da45390c in / 
+# Thu, 03 Mar 2022 21:21:32 GMT
 CMD ["bash"]
 ```
 
 -	Layers:
-	-	`sha256:42bcffb5d2901aadaedc35f036cf725a537494a5869ae378ec427d313ff41fa6`  
-		Last Modified: Wed, 02 Feb 2022 02:29:41 GMT  
-		Size: 24.1 MB (24062751 bytes)  
+	-	`sha256:12a77aaceb8aa1438ebb61cb4904d74fc225cfa20464a060980580674a0a31e9`  
+		Last Modified: Thu, 03 Mar 2022 21:25:09 GMT  
+		Size: 24.1 MB (24073718 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ubuntu:20.04` - linux; arm64 variant v8
@@ -862,7 +862,7 @@ CMD ["bash"]
 ## `ubuntu:21.10`
 
 ```console
-$ docker pull ubuntu@sha256:308963c3d442b73147c7b21c4a2f1f9be14dcc0ca686e369745d40b430da55ad
+$ docker pull ubuntu@sha256:02c0317b899ca5595fa17870cedd9550962dbdb2e0b55def018727527b57e2f4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -903,27 +903,27 @@ CMD ["bash"]
 ### `ubuntu:21.10` - linux; arm variant v7
 
 ```console
-$ docker pull ubuntu@sha256:66547fdd681f494580d7452b5edbeb71017038c17c7c5c75165ddbc7ca2c2e77
+$ docker pull ubuntu@sha256:e0dddcf16c2b2fd1f47b01e0c87128ae37fd86e1fc5b7dfabd4286dd295d4426
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **26.9 MB (26918632 bytes)**  
+-	Total Size: **26.9 MB (26921937 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5c898d5e05129c69220b11714f89182d9647a79b3ce80a5b18ebbcd1a6d7d392`
+-	Image ID: `sha256:41cde6601790b4aee63d9fea66a5da9fe3fcaffbe13e730a99bdc798c406bc5b`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Wed, 02 Feb 2022 02:26:01 GMT
-ADD file:32cc6b42d18aae85f2e55c58db7c21d70958ea4042c5a3b3d02fa68db5507935 in / 
-# Wed, 02 Feb 2022 02:26:02 GMT
+# Thu, 03 Mar 2022 21:21:55 GMT
+ADD file:2147b6b5f5a6085917d41d8d2c1cace254f6f07b78f75973d696c4aadc615c7e in / 
+# Thu, 03 Mar 2022 21:21:55 GMT
 CMD ["bash"]
 ```
 
 -	Layers:
-	-	`sha256:4a304b5b67cb0f88e02dba858b3d63b14bf2910fe10c7ca354d66076202e5a43`  
-		Last Modified: Wed, 02 Feb 2022 02:30:44 GMT  
-		Size: 26.9 MB (26918632 bytes)  
+	-	`sha256:0e5117981c2b00f6b01a0a1aca7c0fc638269b9372a736c2f4e60f0ee26f1c88`  
+		Last Modified: Thu, 03 Mar 2022 21:25:44 GMT  
+		Size: 26.9 MB (26921937 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ubuntu:21.10` - linux; arm64 variant v8
@@ -981,27 +981,27 @@ CMD ["bash"]
 ### `ubuntu:21.10` - linux; riscv64
 
 ```console
-$ docker pull ubuntu@sha256:ef07580ea9c4c2d24dfa5b4c41abc5774c6c8b84f67f3abe03f7fd2af0e1a0a2
+$ docker pull ubuntu@sha256:39ef6139a7226b36530a8d94bf1778dd520b0352573ca6aea0a84b2ce6935b4d
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **27.2 MB (27207633 bytes)**  
+-	Total Size: **27.2 MB (27214379 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:87c5de002e18af94d1fc29dc89e8a500b7a2495f409c33106467375d4309e488`
+-	Image ID: `sha256:a68f7c8a0e8deaf06732f8c50ccdddc0f6059177dd08b787d631f407b1eb4288`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Wed, 02 Feb 2022 02:18:51 GMT
-ADD file:aed98a49144458e8d813bb2fe41d35844f33ec0cd407efbbda660d7c4d563ef5 in / 
-# Wed, 02 Feb 2022 02:18:52 GMT
+# Thu, 03 Mar 2022 20:17:50 GMT
+ADD file:e036bf8d2d9837df0754ed0751c2cfd386039c558c517121d3a048a6a37b7afd in / 
+# Thu, 03 Mar 2022 20:17:51 GMT
 CMD ["bash"]
 ```
 
 -	Layers:
-	-	`sha256:d5ea871c1447312a914987af6fbf45d36b0530a692d2305da1d511d9e26964c1`  
-		Last Modified: Wed, 02 Feb 2022 02:38:00 GMT  
-		Size: 27.2 MB (27207633 bytes)  
+	-	`sha256:9f00725c1dfb59f0dc5edf593a8b3a65a79cb2106fd1dfb0492c29b0d3d04a6a`  
+		Last Modified: Thu, 03 Mar 2022 20:36:05 GMT  
+		Size: 27.2 MB (27214379 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ubuntu:21.10` - linux; s390x
@@ -1033,7 +1033,7 @@ CMD ["bash"]
 ## `ubuntu:22.04`
 
 ```console
-$ docker pull ubuntu@sha256:3770d1085895a8bf6addfc094a0d23f4ce18bf7db976719e3dc551ea317e0659
+$ docker pull ubuntu@sha256:9fd089c601e4ce6b61bfbba987b63ec6b73eb4ef9f568ad38b58cf0bbb019bff
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1074,27 +1074,27 @@ CMD ["bash"]
 ### `ubuntu:22.04` - linux; arm variant v7
 
 ```console
-$ docker pull ubuntu@sha256:40e522b9e4be380d93f74ec1afb77dcbe65a74332a07c0a62f647025f8263165
+$ docker pull ubuntu@sha256:6efa693dcafa7d60a96e23f3dd33614f5dd8e3b70bd990b610466a874bbed2ff
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **27.6 MB (27599998 bytes)**  
+-	Total Size: **27.1 MB (27064067 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e6b8baf3fb54295d4ea8438a5feba09a62359928ef6df0fd9bf95b37421d3364`
+-	Image ID: `sha256:be6240bd39a78a3dc5f7d4215cb4060a39d0fb9627182866d969cb3382c1cf3d`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Wed, 02 Feb 2022 02:26:27 GMT
-ADD file:b3b2c8a5926e6c518af00fe93b63ed2cd402eaef6cea20252e33036970294826 in / 
-# Wed, 02 Feb 2022 02:26:28 GMT
+# Thu, 03 Mar 2022 21:22:18 GMT
+ADD file:0a10344382f1ba734937e8e6730fdbc0f3c70bd476e280a38cdbc3014727d207 in / 
+# Thu, 03 Mar 2022 21:22:19 GMT
 CMD ["bash"]
 ```
 
 -	Layers:
-	-	`sha256:f5a2de327ec5f0d66e0972ba3099491610a0a555eac3b8beb23e150ad81b1e53`  
-		Last Modified: Wed, 02 Feb 2022 02:31:18 GMT  
-		Size: 27.6 MB (27599998 bytes)  
+	-	`sha256:9a1275d98c22bf682d714805936f9472fc5c80dce170f257ff74996a6fce5ab2`  
+		Last Modified: Thu, 03 Mar 2022 21:26:18 GMT  
+		Size: 27.1 MB (27064067 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ubuntu:22.04` - linux; arm64 variant v8
@@ -1126,53 +1126,53 @@ CMD ["bash"]
 ### `ubuntu:22.04` - linux; ppc64le
 
 ```console
-$ docker pull ubuntu@sha256:9c4eeb470e8855518a28a89b9f8b5467390dc1f6ff8e5081b40cbb3865b36c3c
+$ docker pull ubuntu@sha256:041e6aa50974e926248ef12284cac33964f34c6ed1483988422d3f60b89c43bf
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **36.3 MB (36293583 bytes)**  
+-	Total Size: **35.9 MB (35867896 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1765ff49eeaa086626b57443a52611c877d59ec60f8f2cc474b0d7613be38119`
+-	Image ID: `sha256:2097760738cee72f6fe4d7c9d94ae92daa5a2f25498573ce57408f466ed8278e`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Wed, 02 Feb 2022 03:51:27 GMT
-ADD file:9c8f4ac117c9f0413ec77f8626171cc1a0d2a33e198ed2368673aa751e8fd8c4 in / 
-# Wed, 02 Feb 2022 03:51:30 GMT
+# Thu, 03 Mar 2022 20:29:40 GMT
+ADD file:b637a9ace6a4bea63b2e39381847d55a821a1408fdcf9db71fb435315a3881ff in / 
+# Thu, 03 Mar 2022 20:29:47 GMT
 CMD ["bash"]
 ```
 
 -	Layers:
-	-	`sha256:6142acf6cc926f51012b88a8083c6974b2610612766f161d535c25e76cf1b09f`  
-		Last Modified: Wed, 02 Feb 2022 03:54:21 GMT  
-		Size: 36.3 MB (36293583 bytes)  
+	-	`sha256:dccb29e886cb3824b089b771d1a3d96966f126c2c18cf52bf8fb18b22a4f6765`  
+		Last Modified: Thu, 03 Mar 2022 20:36:05 GMT  
+		Size: 35.9 MB (35867896 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ubuntu:22.04` - linux; riscv64
 
 ```console
-$ docker pull ubuntu@sha256:8d782665570481ee33eb16d754161c35a72a595c191268a48a761966a6831abf
+$ docker pull ubuntu@sha256:7b77c96e19502362aec5e002f5da2d76322475cf42738f8b2da51e020d3e3c6c
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **28.2 MB (28217972 bytes)**  
+-	Total Size: **27.8 MB (27823470 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5e4822f402a174afe8b69da3d0353f80bee772d23cb530d11864d6f7d6d90378`
+-	Image ID: `sha256:10e08d0a2bfd68700872dad13e925f131a4d327bf2101c69057f30f2370e362e`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Wed, 02 Feb 2022 02:20:53 GMT
-ADD file:b24b04eb8b8b5c5cc58011f4e63b5596c57fa8b6317f8472712142ad1bf70e0c in / 
-# Wed, 02 Feb 2022 02:20:55 GMT
+# Thu, 03 Mar 2022 20:20:10 GMT
+ADD file:8303dc4d258cee089d6d825b412fafdc9f845b2da377acf871454dcf3458f750 in / 
+# Thu, 03 Mar 2022 20:20:12 GMT
 CMD ["bash"]
 ```
 
 -	Layers:
-	-	`sha256:5c28c21c482bb799d18f7bcf823f1ac5990e89d600522966a3cf5fe82c052779`  
-		Last Modified: Wed, 02 Feb 2022 02:40:32 GMT  
-		Size: 28.2 MB (28217972 bytes)  
+	-	`sha256:0cf48de3c05259fbe9920abb0703325efede6cf45ae32d86365a1a4bc40aa049`  
+		Last Modified: Thu, 03 Mar 2022 20:39:00 GMT  
+		Size: 27.8 MB (27823470 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ubuntu:22.04` - linux; s390x
@@ -1204,7 +1204,7 @@ CMD ["bash"]
 ## `ubuntu:bionic`
 
 ```console
-$ docker pull ubuntu@sha256:c5f41324465e3365ae936b6b319057ca9b9ddcd495d5a3e15052f4d235979f9c
+$ docker pull ubuntu@sha256:42cd9143b6060261187a72716906187294b8b66653b50d70bc7a90ccade5c984
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1245,27 +1245,27 @@ CMD ["bash"]
 ### `ubuntu:bionic` - linux; arm variant v7
 
 ```console
-$ docker pull ubuntu@sha256:08c30c542cb609b58f8b18ce66a05255f9ca82f17e3e3286268d463d7e6458a7
+$ docker pull ubuntu@sha256:83b18c04210c9d28a0480b97c98f8fb9e13fd3564da24b8de3504cd2b4394b8d
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **22.3 MB (22306998 bytes)**  
+-	Total Size: **22.3 MB (22308282 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3084b583abdeee05800679d8718278fb22679a92ee549061d3aaedd570eb2394`
+-	Image ID: `sha256:3e6eda41d43ea288e2879a7a1d735973020f7900174fa40a2ca7cf3819e0ae11`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Wed, 02 Feb 2022 02:24:47 GMT
-ADD file:f5678be7a8216c2848b16665194b944ad8bdf7696d2925a432437feb730cf587 in / 
-# Wed, 02 Feb 2022 02:24:48 GMT
+# Thu, 03 Mar 2022 21:21:10 GMT
+ADD file:c60e89df1905b44d4771a78ca9fa8113b55681f00e5bb55e798028b77ce6c120 in / 
+# Thu, 03 Mar 2022 21:21:11 GMT
 CMD ["bash"]
 ```
 
 -	Layers:
-	-	`sha256:3ddd1f986797e6622f6e3810028291b19248347b52709a52a74e6dea7ccee961`  
-		Last Modified: Wed, 02 Feb 2022 02:29:12 GMT  
-		Size: 22.3 MB (22306998 bytes)  
+	-	`sha256:f04b2e36c59d7fb6bb1129d2ffaff71df9aa51f235875df61b423ebbdfcc1ae3`  
+		Last Modified: Thu, 03 Mar 2022 21:24:40 GMT  
+		Size: 22.3 MB (22308282 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ubuntu:bionic` - linux; arm64 variant v8
@@ -1375,12 +1375,13 @@ CMD ["bash"]
 ## `ubuntu:bionic-20220301`
 
 ```console
-$ docker pull ubuntu@sha256:a239851337cf4fd86ca1374c72b9a2f28ee79f15eaa67123c21e19b0db6b9daa
+$ docker pull ubuntu@sha256:42cd9143b6060261187a72716906187294b8b66653b50d70bc7a90ccade5c984
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 5
+-	Platforms: 6
 	-	linux; amd64
+	-	linux; arm variant v7
 	-	linux; arm64 variant v8
 	-	linux; 386
 	-	linux; ppc64le
@@ -1410,6 +1411,32 @@ CMD ["bash"]
 	-	`sha256:cf06a7c3161117888114e7e91dbd21915efae33c2dbfb086380f7b21946d6e59`  
 		Last Modified: Thu, 03 Mar 2022 20:20:28 GMT  
 		Size: 26.7 MB (26708326 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `ubuntu:bionic-20220301` - linux; arm variant v7
+
+```console
+$ docker pull ubuntu@sha256:83b18c04210c9d28a0480b97c98f8fb9e13fd3564da24b8de3504cd2b4394b8d
+```
+
+-	Docker Version: 20.10.12
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **22.3 MB (22308282 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:3e6eda41d43ea288e2879a7a1d735973020f7900174fa40a2ca7cf3819e0ae11`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Thu, 03 Mar 2022 21:21:10 GMT
+ADD file:c60e89df1905b44d4771a78ca9fa8113b55681f00e5bb55e798028b77ce6c120 in / 
+# Thu, 03 Mar 2022 21:21:11 GMT
+CMD ["bash"]
+```
+
+-	Layers:
+	-	`sha256:f04b2e36c59d7fb6bb1129d2ffaff71df9aa51f235875df61b423ebbdfcc1ae3`  
+		Last Modified: Thu, 03 Mar 2022 21:24:40 GMT  
+		Size: 22.3 MB (22308282 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ubuntu:bionic-20220301` - linux; arm64 variant v8
@@ -1519,7 +1546,7 @@ CMD ["bash"]
 ## `ubuntu:devel`
 
 ```console
-$ docker pull ubuntu@sha256:3770d1085895a8bf6addfc094a0d23f4ce18bf7db976719e3dc551ea317e0659
+$ docker pull ubuntu@sha256:9fd089c601e4ce6b61bfbba987b63ec6b73eb4ef9f568ad38b58cf0bbb019bff
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1560,27 +1587,27 @@ CMD ["bash"]
 ### `ubuntu:devel` - linux; arm variant v7
 
 ```console
-$ docker pull ubuntu@sha256:40e522b9e4be380d93f74ec1afb77dcbe65a74332a07c0a62f647025f8263165
+$ docker pull ubuntu@sha256:6efa693dcafa7d60a96e23f3dd33614f5dd8e3b70bd990b610466a874bbed2ff
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **27.6 MB (27599998 bytes)**  
+-	Total Size: **27.1 MB (27064067 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e6b8baf3fb54295d4ea8438a5feba09a62359928ef6df0fd9bf95b37421d3364`
+-	Image ID: `sha256:be6240bd39a78a3dc5f7d4215cb4060a39d0fb9627182866d969cb3382c1cf3d`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Wed, 02 Feb 2022 02:26:27 GMT
-ADD file:b3b2c8a5926e6c518af00fe93b63ed2cd402eaef6cea20252e33036970294826 in / 
-# Wed, 02 Feb 2022 02:26:28 GMT
+# Thu, 03 Mar 2022 21:22:18 GMT
+ADD file:0a10344382f1ba734937e8e6730fdbc0f3c70bd476e280a38cdbc3014727d207 in / 
+# Thu, 03 Mar 2022 21:22:19 GMT
 CMD ["bash"]
 ```
 
 -	Layers:
-	-	`sha256:f5a2de327ec5f0d66e0972ba3099491610a0a555eac3b8beb23e150ad81b1e53`  
-		Last Modified: Wed, 02 Feb 2022 02:31:18 GMT  
-		Size: 27.6 MB (27599998 bytes)  
+	-	`sha256:9a1275d98c22bf682d714805936f9472fc5c80dce170f257ff74996a6fce5ab2`  
+		Last Modified: Thu, 03 Mar 2022 21:26:18 GMT  
+		Size: 27.1 MB (27064067 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ubuntu:devel` - linux; arm64 variant v8
@@ -1612,53 +1639,53 @@ CMD ["bash"]
 ### `ubuntu:devel` - linux; ppc64le
 
 ```console
-$ docker pull ubuntu@sha256:9c4eeb470e8855518a28a89b9f8b5467390dc1f6ff8e5081b40cbb3865b36c3c
+$ docker pull ubuntu@sha256:041e6aa50974e926248ef12284cac33964f34c6ed1483988422d3f60b89c43bf
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **36.3 MB (36293583 bytes)**  
+-	Total Size: **35.9 MB (35867896 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1765ff49eeaa086626b57443a52611c877d59ec60f8f2cc474b0d7613be38119`
+-	Image ID: `sha256:2097760738cee72f6fe4d7c9d94ae92daa5a2f25498573ce57408f466ed8278e`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Wed, 02 Feb 2022 03:51:27 GMT
-ADD file:9c8f4ac117c9f0413ec77f8626171cc1a0d2a33e198ed2368673aa751e8fd8c4 in / 
-# Wed, 02 Feb 2022 03:51:30 GMT
+# Thu, 03 Mar 2022 20:29:40 GMT
+ADD file:b637a9ace6a4bea63b2e39381847d55a821a1408fdcf9db71fb435315a3881ff in / 
+# Thu, 03 Mar 2022 20:29:47 GMT
 CMD ["bash"]
 ```
 
 -	Layers:
-	-	`sha256:6142acf6cc926f51012b88a8083c6974b2610612766f161d535c25e76cf1b09f`  
-		Last Modified: Wed, 02 Feb 2022 03:54:21 GMT  
-		Size: 36.3 MB (36293583 bytes)  
+	-	`sha256:dccb29e886cb3824b089b771d1a3d96966f126c2c18cf52bf8fb18b22a4f6765`  
+		Last Modified: Thu, 03 Mar 2022 20:36:05 GMT  
+		Size: 35.9 MB (35867896 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ubuntu:devel` - linux; riscv64
 
 ```console
-$ docker pull ubuntu@sha256:8d782665570481ee33eb16d754161c35a72a595c191268a48a761966a6831abf
+$ docker pull ubuntu@sha256:7b77c96e19502362aec5e002f5da2d76322475cf42738f8b2da51e020d3e3c6c
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **28.2 MB (28217972 bytes)**  
+-	Total Size: **27.8 MB (27823470 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5e4822f402a174afe8b69da3d0353f80bee772d23cb530d11864d6f7d6d90378`
+-	Image ID: `sha256:10e08d0a2bfd68700872dad13e925f131a4d327bf2101c69057f30f2370e362e`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Wed, 02 Feb 2022 02:20:53 GMT
-ADD file:b24b04eb8b8b5c5cc58011f4e63b5596c57fa8b6317f8472712142ad1bf70e0c in / 
-# Wed, 02 Feb 2022 02:20:55 GMT
+# Thu, 03 Mar 2022 20:20:10 GMT
+ADD file:8303dc4d258cee089d6d825b412fafdc9f845b2da377acf871454dcf3458f750 in / 
+# Thu, 03 Mar 2022 20:20:12 GMT
 CMD ["bash"]
 ```
 
 -	Layers:
-	-	`sha256:5c28c21c482bb799d18f7bcf823f1ac5990e89d600522966a3cf5fe82c052779`  
-		Last Modified: Wed, 02 Feb 2022 02:40:32 GMT  
-		Size: 28.2 MB (28217972 bytes)  
+	-	`sha256:0cf48de3c05259fbe9920abb0703325efede6cf45ae32d86365a1a4bc40aa049`  
+		Last Modified: Thu, 03 Mar 2022 20:39:00 GMT  
+		Size: 27.8 MB (27823470 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ubuntu:devel` - linux; s390x
@@ -1690,7 +1717,7 @@ CMD ["bash"]
 ## `ubuntu:focal`
 
 ```console
-$ docker pull ubuntu@sha256:f454154bd8670e52ab840d7bfe26a8f9e830731c6964760c6c2cee21e8fd57d0
+$ docker pull ubuntu@sha256:8ae9bafbb64f63a50caab98fd3a5e37b3eb837a3e0780b78e5218e63193961f9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1731,27 +1758,27 @@ CMD ["bash"]
 ### `ubuntu:focal` - linux; arm variant v7
 
 ```console
-$ docker pull ubuntu@sha256:b91718ad92d7a79ab1551d260f5df92bcb82c5c0f370a5e716e4bd19f597e0dc
+$ docker pull ubuntu@sha256:5add25cfb79588e101ee59f8f71f0765e19c62cebb4109d7c3190eeb57514815
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **24.1 MB (24062751 bytes)**  
+-	Total Size: **24.1 MB (24073718 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0e749921cacc1af858deda8ffd97332e1be29f4c40484cdf7d82337f6dcddfa3`
+-	Image ID: `sha256:88da2cdc49a3fba797a099dd911d0df269761333e6ca6f834678b8d1871e3236`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Wed, 02 Feb 2022 02:25:11 GMT
-ADD file:0adc3f597b5ba8c31a9a4d67126166cf067749754e269fe2c3ed43f03457b53c in / 
-# Wed, 02 Feb 2022 02:25:12 GMT
+# Thu, 03 Mar 2022 21:21:31 GMT
+ADD file:984d3d8b31abd025bb9be52f42d60245a76b1ee991f286db819ae204da45390c in / 
+# Thu, 03 Mar 2022 21:21:32 GMT
 CMD ["bash"]
 ```
 
 -	Layers:
-	-	`sha256:42bcffb5d2901aadaedc35f036cf725a537494a5869ae378ec427d313ff41fa6`  
-		Last Modified: Wed, 02 Feb 2022 02:29:41 GMT  
-		Size: 24.1 MB (24062751 bytes)  
+	-	`sha256:12a77aaceb8aa1438ebb61cb4904d74fc225cfa20464a060980580674a0a31e9`  
+		Last Modified: Thu, 03 Mar 2022 21:25:09 GMT  
+		Size: 24.1 MB (24073718 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ubuntu:focal` - linux; arm64 variant v8
@@ -1861,12 +1888,13 @@ CMD ["bash"]
 ## `ubuntu:focal-20220302`
 
 ```console
-$ docker pull ubuntu@sha256:2c1cfaf615a5e8488292aae1b8fcfb6a6ad2704f34c085a340ac72085a6af06c
+$ docker pull ubuntu@sha256:8ae9bafbb64f63a50caab98fd3a5e37b3eb837a3e0780b78e5218e63193961f9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 5
+-	Platforms: 6
 	-	linux; amd64
+	-	linux; arm variant v7
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
 	-	linux; riscv64
@@ -1896,6 +1924,32 @@ CMD ["bash"]
 	-	`sha256:7c3b88808835aa80f1ef7f03083c5ae781d0f44e644537cd72de4ce6c5e62e00`  
 		Last Modified: Thu, 03 Mar 2022 20:20:44 GMT  
 		Size: 28.6 MB (28565751 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `ubuntu:focal-20220302` - linux; arm variant v7
+
+```console
+$ docker pull ubuntu@sha256:5add25cfb79588e101ee59f8f71f0765e19c62cebb4109d7c3190eeb57514815
+```
+
+-	Docker Version: 20.10.12
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **24.1 MB (24073718 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:88da2cdc49a3fba797a099dd911d0df269761333e6ca6f834678b8d1871e3236`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Thu, 03 Mar 2022 21:21:31 GMT
+ADD file:984d3d8b31abd025bb9be52f42d60245a76b1ee991f286db819ae204da45390c in / 
+# Thu, 03 Mar 2022 21:21:32 GMT
+CMD ["bash"]
+```
+
+-	Layers:
+	-	`sha256:12a77aaceb8aa1438ebb61cb4904d74fc225cfa20464a060980580674a0a31e9`  
+		Last Modified: Thu, 03 Mar 2022 21:25:09 GMT  
+		Size: 24.1 MB (24073718 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ubuntu:focal-20220302` - linux; arm64 variant v8
@@ -2005,7 +2059,7 @@ CMD ["bash"]
 ## `ubuntu:impish`
 
 ```console
-$ docker pull ubuntu@sha256:308963c3d442b73147c7b21c4a2f1f9be14dcc0ca686e369745d40b430da55ad
+$ docker pull ubuntu@sha256:02c0317b899ca5595fa17870cedd9550962dbdb2e0b55def018727527b57e2f4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2046,27 +2100,27 @@ CMD ["bash"]
 ### `ubuntu:impish` - linux; arm variant v7
 
 ```console
-$ docker pull ubuntu@sha256:66547fdd681f494580d7452b5edbeb71017038c17c7c5c75165ddbc7ca2c2e77
+$ docker pull ubuntu@sha256:e0dddcf16c2b2fd1f47b01e0c87128ae37fd86e1fc5b7dfabd4286dd295d4426
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **26.9 MB (26918632 bytes)**  
+-	Total Size: **26.9 MB (26921937 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5c898d5e05129c69220b11714f89182d9647a79b3ce80a5b18ebbcd1a6d7d392`
+-	Image ID: `sha256:41cde6601790b4aee63d9fea66a5da9fe3fcaffbe13e730a99bdc798c406bc5b`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Wed, 02 Feb 2022 02:26:01 GMT
-ADD file:32cc6b42d18aae85f2e55c58db7c21d70958ea4042c5a3b3d02fa68db5507935 in / 
-# Wed, 02 Feb 2022 02:26:02 GMT
+# Thu, 03 Mar 2022 21:21:55 GMT
+ADD file:2147b6b5f5a6085917d41d8d2c1cace254f6f07b78f75973d696c4aadc615c7e in / 
+# Thu, 03 Mar 2022 21:21:55 GMT
 CMD ["bash"]
 ```
 
 -	Layers:
-	-	`sha256:4a304b5b67cb0f88e02dba858b3d63b14bf2910fe10c7ca354d66076202e5a43`  
-		Last Modified: Wed, 02 Feb 2022 02:30:44 GMT  
-		Size: 26.9 MB (26918632 bytes)  
+	-	`sha256:0e5117981c2b00f6b01a0a1aca7c0fc638269b9372a736c2f4e60f0ee26f1c88`  
+		Last Modified: Thu, 03 Mar 2022 21:25:44 GMT  
+		Size: 26.9 MB (26921937 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ubuntu:impish` - linux; arm64 variant v8
@@ -2124,27 +2178,27 @@ CMD ["bash"]
 ### `ubuntu:impish` - linux; riscv64
 
 ```console
-$ docker pull ubuntu@sha256:ef07580ea9c4c2d24dfa5b4c41abc5774c6c8b84f67f3abe03f7fd2af0e1a0a2
+$ docker pull ubuntu@sha256:39ef6139a7226b36530a8d94bf1778dd520b0352573ca6aea0a84b2ce6935b4d
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **27.2 MB (27207633 bytes)**  
+-	Total Size: **27.2 MB (27214379 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:87c5de002e18af94d1fc29dc89e8a500b7a2495f409c33106467375d4309e488`
+-	Image ID: `sha256:a68f7c8a0e8deaf06732f8c50ccdddc0f6059177dd08b787d631f407b1eb4288`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Wed, 02 Feb 2022 02:18:51 GMT
-ADD file:aed98a49144458e8d813bb2fe41d35844f33ec0cd407efbbda660d7c4d563ef5 in / 
-# Wed, 02 Feb 2022 02:18:52 GMT
+# Thu, 03 Mar 2022 20:17:50 GMT
+ADD file:e036bf8d2d9837df0754ed0751c2cfd386039c558c517121d3a048a6a37b7afd in / 
+# Thu, 03 Mar 2022 20:17:51 GMT
 CMD ["bash"]
 ```
 
 -	Layers:
-	-	`sha256:d5ea871c1447312a914987af6fbf45d36b0530a692d2305da1d511d9e26964c1`  
-		Last Modified: Wed, 02 Feb 2022 02:38:00 GMT  
-		Size: 27.2 MB (27207633 bytes)  
+	-	`sha256:9f00725c1dfb59f0dc5edf593a8b3a65a79cb2106fd1dfb0492c29b0d3d04a6a`  
+		Last Modified: Thu, 03 Mar 2022 20:36:05 GMT  
+		Size: 27.2 MB (27214379 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ubuntu:impish` - linux; s390x
@@ -2176,14 +2230,16 @@ CMD ["bash"]
 ## `ubuntu:impish-20220301`
 
 ```console
-$ docker pull ubuntu@sha256:a1b2eacf563fbb318cae537d0d10c71cdbe61c650e3e87a221c8ffd66a60f8a1
+$ docker pull ubuntu@sha256:02c0317b899ca5595fa17870cedd9550962dbdb2e0b55def018727527b57e2f4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 4
+-	Platforms: 6
 	-	linux; amd64
+	-	linux; arm variant v7
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
+	-	linux; riscv64
 	-	linux; s390x
 
 ### `ubuntu:impish-20220301` - linux; amd64
@@ -2210,6 +2266,32 @@ CMD ["bash"]
 	-	`sha256:ec78bc49f256d7c26847ea612014b0bfd18cefe448e2b8e327512c6839fdba84`  
 		Last Modified: Thu, 03 Mar 2022 20:21:02 GMT  
 		Size: 30.4 MB (30385738 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `ubuntu:impish-20220301` - linux; arm variant v7
+
+```console
+$ docker pull ubuntu@sha256:e0dddcf16c2b2fd1f47b01e0c87128ae37fd86e1fc5b7dfabd4286dd295d4426
+```
+
+-	Docker Version: 20.10.12
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **26.9 MB (26921937 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:41cde6601790b4aee63d9fea66a5da9fe3fcaffbe13e730a99bdc798c406bc5b`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Thu, 03 Mar 2022 21:21:55 GMT
+ADD file:2147b6b5f5a6085917d41d8d2c1cace254f6f07b78f75973d696c4aadc615c7e in / 
+# Thu, 03 Mar 2022 21:21:55 GMT
+CMD ["bash"]
+```
+
+-	Layers:
+	-	`sha256:0e5117981c2b00f6b01a0a1aca7c0fc638269b9372a736c2f4e60f0ee26f1c88`  
+		Last Modified: Thu, 03 Mar 2022 21:25:44 GMT  
+		Size: 26.9 MB (26921937 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ubuntu:impish-20220301` - linux; arm64 variant v8
@@ -2264,6 +2346,32 @@ CMD ["bash"]
 		Size: 36.2 MB (36175818 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+### `ubuntu:impish-20220301` - linux; riscv64
+
+```console
+$ docker pull ubuntu@sha256:39ef6139a7226b36530a8d94bf1778dd520b0352573ca6aea0a84b2ce6935b4d
+```
+
+-	Docker Version: 20.10.12
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **27.2 MB (27214379 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:a68f7c8a0e8deaf06732f8c50ccdddc0f6059177dd08b787d631f407b1eb4288`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Thu, 03 Mar 2022 20:17:50 GMT
+ADD file:e036bf8d2d9837df0754ed0751c2cfd386039c558c517121d3a048a6a37b7afd in / 
+# Thu, 03 Mar 2022 20:17:51 GMT
+CMD ["bash"]
+```
+
+-	Layers:
+	-	`sha256:9f00725c1dfb59f0dc5edf593a8b3a65a79cb2106fd1dfb0492c29b0d3d04a6a`  
+		Last Modified: Thu, 03 Mar 2022 20:36:05 GMT  
+		Size: 27.2 MB (27214379 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
 ### `ubuntu:impish-20220301` - linux; s390x
 
 ```console
@@ -2293,7 +2401,7 @@ CMD ["bash"]
 ## `ubuntu:jammy`
 
 ```console
-$ docker pull ubuntu@sha256:ac4a438d175b3b83ddd724147065a08e61c48f26d5e850dafd1e475e06e13918
+$ docker pull ubuntu@sha256:9fd089c601e4ce6b61bfbba987b63ec6b73eb4ef9f568ad38b58cf0bbb019bff
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2334,27 +2442,27 @@ CMD ["bash"]
 ### `ubuntu:jammy` - linux; arm variant v7
 
 ```console
-$ docker pull ubuntu@sha256:40e522b9e4be380d93f74ec1afb77dcbe65a74332a07c0a62f647025f8263165
+$ docker pull ubuntu@sha256:6efa693dcafa7d60a96e23f3dd33614f5dd8e3b70bd990b610466a874bbed2ff
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **27.6 MB (27599998 bytes)**  
+-	Total Size: **27.1 MB (27064067 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e6b8baf3fb54295d4ea8438a5feba09a62359928ef6df0fd9bf95b37421d3364`
+-	Image ID: `sha256:be6240bd39a78a3dc5f7d4215cb4060a39d0fb9627182866d969cb3382c1cf3d`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Wed, 02 Feb 2022 02:26:27 GMT
-ADD file:b3b2c8a5926e6c518af00fe93b63ed2cd402eaef6cea20252e33036970294826 in / 
-# Wed, 02 Feb 2022 02:26:28 GMT
+# Thu, 03 Mar 2022 21:22:18 GMT
+ADD file:0a10344382f1ba734937e8e6730fdbc0f3c70bd476e280a38cdbc3014727d207 in / 
+# Thu, 03 Mar 2022 21:22:19 GMT
 CMD ["bash"]
 ```
 
 -	Layers:
-	-	`sha256:f5a2de327ec5f0d66e0972ba3099491610a0a555eac3b8beb23e150ad81b1e53`  
-		Last Modified: Wed, 02 Feb 2022 02:31:18 GMT  
-		Size: 27.6 MB (27599998 bytes)  
+	-	`sha256:9a1275d98c22bf682d714805936f9472fc5c80dce170f257ff74996a6fce5ab2`  
+		Last Modified: Thu, 03 Mar 2022 21:26:18 GMT  
+		Size: 27.1 MB (27064067 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ubuntu:jammy` - linux; arm64 variant v8
@@ -2412,27 +2520,27 @@ CMD ["bash"]
 ### `ubuntu:jammy` - linux; riscv64
 
 ```console
-$ docker pull ubuntu@sha256:8d782665570481ee33eb16d754161c35a72a595c191268a48a761966a6831abf
+$ docker pull ubuntu@sha256:7b77c96e19502362aec5e002f5da2d76322475cf42738f8b2da51e020d3e3c6c
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **28.2 MB (28217972 bytes)**  
+-	Total Size: **27.8 MB (27823470 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5e4822f402a174afe8b69da3d0353f80bee772d23cb530d11864d6f7d6d90378`
+-	Image ID: `sha256:10e08d0a2bfd68700872dad13e925f131a4d327bf2101c69057f30f2370e362e`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Wed, 02 Feb 2022 02:20:53 GMT
-ADD file:b24b04eb8b8b5c5cc58011f4e63b5596c57fa8b6317f8472712142ad1bf70e0c in / 
-# Wed, 02 Feb 2022 02:20:55 GMT
+# Thu, 03 Mar 2022 20:20:10 GMT
+ADD file:8303dc4d258cee089d6d825b412fafdc9f845b2da377acf871454dcf3458f750 in / 
+# Thu, 03 Mar 2022 20:20:12 GMT
 CMD ["bash"]
 ```
 
 -	Layers:
-	-	`sha256:5c28c21c482bb799d18f7bcf823f1ac5990e89d600522966a3cf5fe82c052779`  
-		Last Modified: Wed, 02 Feb 2022 02:40:32 GMT  
-		Size: 28.2 MB (28217972 bytes)  
+	-	`sha256:0cf48de3c05259fbe9920abb0703325efede6cf45ae32d86365a1a4bc40aa049`  
+		Last Modified: Thu, 03 Mar 2022 20:39:00 GMT  
+		Size: 27.8 MB (27823470 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ubuntu:jammy` - linux; s390x
@@ -2464,14 +2572,16 @@ CMD ["bash"]
 ## `ubuntu:jammy-20220301`
 
 ```console
-$ docker pull ubuntu@sha256:55003dd8e932d062eb4473413cfdd2d62a07c0afc62dba81e4c619180020e2bb
+$ docker pull ubuntu@sha256:9fd089c601e4ce6b61bfbba987b63ec6b73eb4ef9f568ad38b58cf0bbb019bff
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 4
+-	Platforms: 6
 	-	linux; amd64
+	-	linux; arm variant v7
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
+	-	linux; riscv64
 	-	linux; s390x
 
 ### `ubuntu:jammy-20220301` - linux; amd64
@@ -2498,6 +2608,32 @@ CMD ["bash"]
 	-	`sha256:b9e826c39a5168edf554e8eafc809c69b421ddb67d281f317701f2e68286572e`  
 		Last Modified: Thu, 03 Mar 2022 20:21:20 GMT  
 		Size: 30.5 MB (30494980 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `ubuntu:jammy-20220301` - linux; arm variant v7
+
+```console
+$ docker pull ubuntu@sha256:6efa693dcafa7d60a96e23f3dd33614f5dd8e3b70bd990b610466a874bbed2ff
+```
+
+-	Docker Version: 20.10.12
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **27.1 MB (27064067 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:be6240bd39a78a3dc5f7d4215cb4060a39d0fb9627182866d969cb3382c1cf3d`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Thu, 03 Mar 2022 21:22:18 GMT
+ADD file:0a10344382f1ba734937e8e6730fdbc0f3c70bd476e280a38cdbc3014727d207 in / 
+# Thu, 03 Mar 2022 21:22:19 GMT
+CMD ["bash"]
+```
+
+-	Layers:
+	-	`sha256:9a1275d98c22bf682d714805936f9472fc5c80dce170f257ff74996a6fce5ab2`  
+		Last Modified: Thu, 03 Mar 2022 21:26:18 GMT  
+		Size: 27.1 MB (27064067 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ubuntu:jammy-20220301` - linux; arm64 variant v8
@@ -2552,6 +2688,32 @@ CMD ["bash"]
 		Size: 35.9 MB (35867896 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+### `ubuntu:jammy-20220301` - linux; riscv64
+
+```console
+$ docker pull ubuntu@sha256:7b77c96e19502362aec5e002f5da2d76322475cf42738f8b2da51e020d3e3c6c
+```
+
+-	Docker Version: 20.10.12
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **27.8 MB (27823470 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:10e08d0a2bfd68700872dad13e925f131a4d327bf2101c69057f30f2370e362e`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Thu, 03 Mar 2022 20:20:10 GMT
+ADD file:8303dc4d258cee089d6d825b412fafdc9f845b2da377acf871454dcf3458f750 in / 
+# Thu, 03 Mar 2022 20:20:12 GMT
+CMD ["bash"]
+```
+
+-	Layers:
+	-	`sha256:0cf48de3c05259fbe9920abb0703325efede6cf45ae32d86365a1a4bc40aa049`  
+		Last Modified: Thu, 03 Mar 2022 20:39:00 GMT  
+		Size: 27.8 MB (27823470 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
 ### `ubuntu:jammy-20220301` - linux; s390x
 
 ```console
@@ -2581,7 +2743,7 @@ CMD ["bash"]
 ## `ubuntu:latest`
 
 ```console
-$ docker pull ubuntu@sha256:f454154bd8670e52ab840d7bfe26a8f9e830731c6964760c6c2cee21e8fd57d0
+$ docker pull ubuntu@sha256:8ae9bafbb64f63a50caab98fd3a5e37b3eb837a3e0780b78e5218e63193961f9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2622,27 +2784,27 @@ CMD ["bash"]
 ### `ubuntu:latest` - linux; arm variant v7
 
 ```console
-$ docker pull ubuntu@sha256:b91718ad92d7a79ab1551d260f5df92bcb82c5c0f370a5e716e4bd19f597e0dc
+$ docker pull ubuntu@sha256:5add25cfb79588e101ee59f8f71f0765e19c62cebb4109d7c3190eeb57514815
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **24.1 MB (24062751 bytes)**  
+-	Total Size: **24.1 MB (24073718 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0e749921cacc1af858deda8ffd97332e1be29f4c40484cdf7d82337f6dcddfa3`
+-	Image ID: `sha256:88da2cdc49a3fba797a099dd911d0df269761333e6ca6f834678b8d1871e3236`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Wed, 02 Feb 2022 02:25:11 GMT
-ADD file:0adc3f597b5ba8c31a9a4d67126166cf067749754e269fe2c3ed43f03457b53c in / 
-# Wed, 02 Feb 2022 02:25:12 GMT
+# Thu, 03 Mar 2022 21:21:31 GMT
+ADD file:984d3d8b31abd025bb9be52f42d60245a76b1ee991f286db819ae204da45390c in / 
+# Thu, 03 Mar 2022 21:21:32 GMT
 CMD ["bash"]
 ```
 
 -	Layers:
-	-	`sha256:42bcffb5d2901aadaedc35f036cf725a537494a5869ae378ec427d313ff41fa6`  
-		Last Modified: Wed, 02 Feb 2022 02:29:41 GMT  
-		Size: 24.1 MB (24062751 bytes)  
+	-	`sha256:12a77aaceb8aa1438ebb61cb4904d74fc225cfa20464a060980580674a0a31e9`  
+		Last Modified: Thu, 03 Mar 2022 21:25:09 GMT  
+		Size: 24.1 MB (24073718 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ubuntu:latest` - linux; arm64 variant v8
@@ -2752,7 +2914,7 @@ CMD ["bash"]
 ## `ubuntu:rolling`
 
 ```console
-$ docker pull ubuntu@sha256:308963c3d442b73147c7b21c4a2f1f9be14dcc0ca686e369745d40b430da55ad
+$ docker pull ubuntu@sha256:02c0317b899ca5595fa17870cedd9550962dbdb2e0b55def018727527b57e2f4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2793,27 +2955,27 @@ CMD ["bash"]
 ### `ubuntu:rolling` - linux; arm variant v7
 
 ```console
-$ docker pull ubuntu@sha256:66547fdd681f494580d7452b5edbeb71017038c17c7c5c75165ddbc7ca2c2e77
+$ docker pull ubuntu@sha256:e0dddcf16c2b2fd1f47b01e0c87128ae37fd86e1fc5b7dfabd4286dd295d4426
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **26.9 MB (26918632 bytes)**  
+-	Total Size: **26.9 MB (26921937 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5c898d5e05129c69220b11714f89182d9647a79b3ce80a5b18ebbcd1a6d7d392`
+-	Image ID: `sha256:41cde6601790b4aee63d9fea66a5da9fe3fcaffbe13e730a99bdc798c406bc5b`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Wed, 02 Feb 2022 02:26:01 GMT
-ADD file:32cc6b42d18aae85f2e55c58db7c21d70958ea4042c5a3b3d02fa68db5507935 in / 
-# Wed, 02 Feb 2022 02:26:02 GMT
+# Thu, 03 Mar 2022 21:21:55 GMT
+ADD file:2147b6b5f5a6085917d41d8d2c1cace254f6f07b78f75973d696c4aadc615c7e in / 
+# Thu, 03 Mar 2022 21:21:55 GMT
 CMD ["bash"]
 ```
 
 -	Layers:
-	-	`sha256:4a304b5b67cb0f88e02dba858b3d63b14bf2910fe10c7ca354d66076202e5a43`  
-		Last Modified: Wed, 02 Feb 2022 02:30:44 GMT  
-		Size: 26.9 MB (26918632 bytes)  
+	-	`sha256:0e5117981c2b00f6b01a0a1aca7c0fc638269b9372a736c2f4e60f0ee26f1c88`  
+		Last Modified: Thu, 03 Mar 2022 21:25:44 GMT  
+		Size: 26.9 MB (26921937 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ubuntu:rolling` - linux; arm64 variant v8
@@ -2871,27 +3033,27 @@ CMD ["bash"]
 ### `ubuntu:rolling` - linux; riscv64
 
 ```console
-$ docker pull ubuntu@sha256:ef07580ea9c4c2d24dfa5b4c41abc5774c6c8b84f67f3abe03f7fd2af0e1a0a2
+$ docker pull ubuntu@sha256:39ef6139a7226b36530a8d94bf1778dd520b0352573ca6aea0a84b2ce6935b4d
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **27.2 MB (27207633 bytes)**  
+-	Total Size: **27.2 MB (27214379 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:87c5de002e18af94d1fc29dc89e8a500b7a2495f409c33106467375d4309e488`
+-	Image ID: `sha256:a68f7c8a0e8deaf06732f8c50ccdddc0f6059177dd08b787d631f407b1eb4288`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Wed, 02 Feb 2022 02:18:51 GMT
-ADD file:aed98a49144458e8d813bb2fe41d35844f33ec0cd407efbbda660d7c4d563ef5 in / 
-# Wed, 02 Feb 2022 02:18:52 GMT
+# Thu, 03 Mar 2022 20:17:50 GMT
+ADD file:e036bf8d2d9837df0754ed0751c2cfd386039c558c517121d3a048a6a37b7afd in / 
+# Thu, 03 Mar 2022 20:17:51 GMT
 CMD ["bash"]
 ```
 
 -	Layers:
-	-	`sha256:d5ea871c1447312a914987af6fbf45d36b0530a692d2305da1d511d9e26964c1`  
-		Last Modified: Wed, 02 Feb 2022 02:38:00 GMT  
-		Size: 27.2 MB (27207633 bytes)  
+	-	`sha256:9f00725c1dfb59f0dc5edf593a8b3a65a79cb2106fd1dfb0492c29b0d3d04a6a`  
+		Last Modified: Thu, 03 Mar 2022 20:36:05 GMT  
+		Size: 27.2 MB (27214379 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ubuntu:rolling` - linux; s390x
