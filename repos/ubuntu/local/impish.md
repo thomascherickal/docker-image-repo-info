@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:42b6dc79eba8358bd615e92a335b30d0b89c1cf461fdf8d8e09293bd37f84430`
-- Created: `2022-02-02T02:15:06.60197901Z`
-- Virtual Size: ~ 77.37 Mb  
+- Image ID: `sha256:305cdd15bb4f6da8779bc9f47c48d0bda1517af99cae5543489181ad1327af5f`
+- Created: `2022-03-03T20:19:41.134337274Z`
+- Virtual Size: ~ 77.38 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["bash"]`
@@ -429,12 +429,12 @@ $ apt-get source -qq --print-uris gcc-11=11.2.0-7ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-11/gcc-11_11.2.0-7ubuntu2.debian.tar.xz' gcc-11_11.2.0-7ubuntu2.debian.tar.xz 1818060 SHA512:d42e106c0f3238ff443d497796e8c1148c80923e32a42d75c40deec8c5a877cc062c58e62fb2a096bb43d67c694d4954486c371f380474dacbd86373b6fe1403
 ```
 
-### `dpkg` source package: `glibc=2.34-0ubuntu3`
+### `dpkg` source package: `glibc=2.34-0ubuntu3.2`
 
 Binary Packages:
 
-- `libc-bin=2.34-0ubuntu3`
-- `libc6:amd64=2.34-0ubuntu3`
+- `libc-bin=2.34-0ubuntu3.2`
+- `libc6:amd64=2.34-0ubuntu3.2`
 
 Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/libc6/copyright`)
 
@@ -445,11 +445,11 @@ Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/lib
 Source:
 
 ```console
-$ apt-get source -qq --print-uris glibc=2.34-0ubuntu3
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.34-0ubuntu3.dsc' glibc_2.34-0ubuntu3.dsc 8957 SHA512:c743d6fc4cce79bdbc8d45c86f5ca058d77eeec8c94b743a7c2d9e1344b0b60d9eb7f8c0bb01110603e3d5a8739d918e63f41a8d3dbfe328828f3683d2f0e921
+$ apt-get source -qq --print-uris glibc=2.34-0ubuntu3.2
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.34-0ubuntu3.2.dsc' glibc_2.34-0ubuntu3.2.dsc 8965 SHA512:029f0b6c9a5b343b6d1dc73a5089fea35ea3d289ee194709904e332f4daaa3433766d1f5f62bfb65ce1d8766f3d505d12900ef641c3df605726a69755b0e20e0
 'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.34.orig.tar.xz' glibc_2.34.orig.tar.xz 17301232 SHA512:15252affd9ef4523a8001db16d497f4fdcb3ddf4cde7fe80e075df0bd3cc6524dc29fbe20229dbf5f97af580556e6b1fac0de321a5fe25322bc3e72f93beb624
 'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.34.orig.tar.xz.asc' glibc_2.34.orig.tar.xz.asc 833 SHA512:5b92e315d81a0a157f15b8ac29acddbf4669b51a72483bba4b1769db78986ec9814b23be3d7ac3779cefb0a38070af7ecb37dc1667e1cb3ede8c34cb1ca5d7f3
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.34-0ubuntu3.debian.tar.xz' glibc_2.34-0ubuntu3.debian.tar.xz 883372 SHA512:4ca38eecd987f49ee36b5855528b92632125953b118fd39a9e8bb0b55bd77cedc1f2a17ee33fb60465714ff2f396a247cc27e954a1179805cb66bcdd9bc0ef0f
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.34-0ubuntu3.2.debian.tar.xz' glibc_2.34-0ubuntu3.2.debian.tar.xz 890968 SHA512:644d47301d331e898de1285aaa9bbb28d710ee1653d9a1037d1e75eba3b42917640947e9e5d169e50307220b27f13eea7edbb69f527f64a08b2bc9d472a7915b
 ```
 
 ### `dpkg` source package: `gmp=2:6.2.1+dfsg-1ubuntu2`
@@ -1489,17 +1489,17 @@ $ apt-get source -qq --print-uris usrmerge=25ubuntu1.1
 'http://archive.ubuntu.com/ubuntu/pool/main/u/usrmerge/usrmerge_25ubuntu1.1.tar.xz' usrmerge_25ubuntu1.1.tar.xz 12820 SHA512:e955c63783536ca5177290b8302a8b21bc3f48d2b66fdcb7090c95e21b8cc8cde22e9885364279b0c0117504c519e07b5aaf8bc8f07dc12b9d6aa708496bb906
 ```
 
-### `dpkg` source package: `util-linux=2.36.1-8ubuntu2`
+### `dpkg` source package: `util-linux=2.36.1-8ubuntu2.2`
 
 Binary Packages:
 
-- `bsdutils=1:2.36.1-8ubuntu2`
-- `libblkid1:amd64=2.36.1-8ubuntu2`
-- `libmount1:amd64=2.36.1-8ubuntu2`
-- `libsmartcols1:amd64=2.36.1-8ubuntu2`
-- `libuuid1:amd64=2.36.1-8ubuntu2`
-- `mount=2.36.1-8ubuntu2`
-- `util-linux=2.36.1-8ubuntu2`
+- `bsdutils=1:2.36.1-8ubuntu2.2`
+- `libblkid1:amd64=2.36.1-8ubuntu2.2`
+- `libmount1:amd64=2.36.1-8ubuntu2.2`
+- `libsmartcols1:amd64=2.36.1-8ubuntu2.2`
+- `libuuid1:amd64=2.36.1-8ubuntu2.2`
+- `mount=2.36.1-8ubuntu2.2`
+- `util-linux=2.36.1-8ubuntu2.2`
 
 Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/libblkid1/copyright`, `/usr/share/doc/libmount1/copyright`, `/usr/share/doc/libsmartcols1/copyright`, `/usr/share/doc/libuuid1/copyright`, `/usr/share/doc/mount/copyright`, `/usr/share/doc/util-linux/copyright`)
 
@@ -1520,9 +1520,14 @@ Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/lib
 - `MIT`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris util-linux=2.36.1-8ubuntu2.2
+'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.36.1-8ubuntu2.2.dsc' util-linux_2.36.1-8ubuntu2.2.dsc 4479 SHA512:0133890a12cf4e7419e11f5fe892a47068ffdef08640caca5bbe6a4f20d1ffb4a29f5cac42385daec82d661cdc7cbf197aee51e94de4f0456c2673fcffc66848
+'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.36.1.orig.tar.xz' util-linux_2.36.1.orig.tar.xz 5231880 SHA512:9dfd01ae4c16fa35015dafd222d555988b72e4d1d2fbadd140791b9ef78f84fa8254d4d08dc67cabf41e873338867f19e786b989d708ccfe5161c4f7679bba7a
+'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.36.1-8ubuntu2.2.debian.tar.xz' util-linux_2.36.1-8ubuntu2.2.debian.tar.xz 107024 SHA512:cb048520cf6745ab704905d83c36c430d4cf46159859558f30e3673b66787f30be143510375a43784c0bc5a1f539ebd71e2c1043108e9b5acaac53f1adfc56cb
+```
 
 ### `dpkg` source package: `xxhash=0.8.0-2build1`
 

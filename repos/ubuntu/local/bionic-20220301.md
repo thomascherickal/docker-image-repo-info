@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:dcf4d4bef137f695d11ed187ba6a135362dca3de36955c4da0905d596ce521bc`
-- Created: `2022-02-02T02:14:36.709506376Z`
+- Image ID: `sha256:eb2556e0f6e4dcf6a2b4820190d0013c83a97851c1444bc86bb09af085254850`
+- Created: `2022-03-03T20:19:25.833978217Z`
 - Virtual Size: ~ 63.15 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -413,12 +413,12 @@ $ apt-get source -qq --print-uris gcc-8=8.4.0-1ubuntu1~18.04
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-8/gcc-8_8.4.0-1ubuntu1%7e18.04.diff.gz' gcc-8_8.4.0-1ubuntu1~18.04.diff.gz 510634 SHA512:7bd97a04eccd35c3483a82b238d8d54c91071c4d1361cb30fb3fbf7b512c84b9d0bc80499373f2da3e17520d112125ebfebae6b93746feede78f9eecc1ccd4ac
 ```
 
-### `dpkg` source package: `glibc=2.27-3ubuntu1.4`
+### `dpkg` source package: `glibc=2.27-3ubuntu1.5`
 
 Binary Packages:
 
-- `libc-bin=2.27-3ubuntu1.4`
-- `libc6:amd64=2.27-3ubuntu1.4`
+- `libc-bin=2.27-3ubuntu1.5`
+- `libc6:amd64=2.27-3ubuntu1.5`
 
 Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/libc6/copyright`)
 
@@ -428,10 +428,10 @@ Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/lib
 Source:
 
 ```console
-$ apt-get source -qq --print-uris glibc=2.27-3ubuntu1.4
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.27-3ubuntu1.4.dsc' glibc_2.27-3ubuntu1.4.dsc 9612 SHA512:2b01f38445584e62aa5e8c796d968ac82d0c4d6cbcb06aadfe769ec19327cd9faa1b5fa97999e9e95c3d8dbd1630d837037e5fe1c5d5ef843cace67cdab5deb3
+$ apt-get source -qq --print-uris glibc=2.27-3ubuntu1.5
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.27-3ubuntu1.5.dsc' glibc_2.27-3ubuntu1.5.dsc 9599 SHA512:0714e1691a9fe30f6e961993f6726c4096ccc4451ba780faef9301a4ada2568292af4223b6d0dc9427fc125dc42a3d894c7eb0a45ea1ee10db54f7154a2ec027
 'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.27.orig.tar.xz' glibc_2.27.orig.tar.xz 15923832 SHA512:a0580fb52bc4ea8bb6e6734086b0dc66bd661060cdd837965880b989866490063c2420f250fb19b54e3547c58a5a7f8e012699e6513ce413746fd236ddd239e8
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.27-3ubuntu1.4.debian.tar.xz' glibc_2.27-3ubuntu1.4.debian.tar.xz 1091320 SHA512:d5023ae92a5a6e40a62944e70a5fe41a2e4f09c0f56d5bef3369d4b22e68177fa441bfdb22ade6ea971ced42fbbc2351defa3a583c87347211a8ec510519ef0b
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.27-3ubuntu1.5.debian.tar.xz' glibc_2.27-3ubuntu1.5.debian.tar.xz 1110832 SHA512:db1249563b20cea5e4b6c733782d0b9617e7e37705f8038098240bb0a742635d8561c06bbdd3aef510342eda09e93c70bebee762c5929f11f8f2c021f5dbfb5c
 ```
 
 ### `dpkg` source package: `gmp=2:6.1.2+dfsg-2`
