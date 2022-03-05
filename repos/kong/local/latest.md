@@ -1,10 +1,10 @@
-# `kong:2.7.1-alpine`
+# `kong:2.8.0-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:8431176d93b6a2783635b718ca928b11090d149c224bbc930e70b16ac1b0d5bd`
-- Created: `2022-02-04T20:20:06.582904253Z`
-- Virtual Size: ~ 142.11 Mb  
+- Image ID: `sha256:d992580f7928a356f5b0480c0bae59db8589b68dfb54613cba61285e9bbca743`
+- Created: `2022-03-03T06:55:33.943741127Z`
+- Virtual Size: ~ 138.83 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -12,7 +12,7 @@
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `ASSET=ce`
-  - `KONG_VERSION=2.7.1`
+  - `KONG_VERSION=2.8.0`
 - Labels:
   - `maintainer=Kong <support@konghq.com>`
 
@@ -72,16 +72,16 @@ GPL-2.0-only
 ### `apk` package: `bash`
 
 ```console
-bash-5.1.8-r0 description:
+bash-5.1.16-r0 description:
 The GNU Bourne Again shell
 
-bash-5.1.8-r0 webpage:
+bash-5.1.16-r0 webpage:
 https://www.gnu.org/software/bash/bash.html
 
-bash-5.1.8-r0 installed size:
+bash-5.1.16-r0 installed size:
 1296 KiB
 
-bash-5.1.8-r0 license:
+bash-5.1.16-r0 license:
 GPL-3.0-or-later
 
 ```
@@ -157,16 +157,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `expat`
 
 ```console
-expat-2.4.4-r0 description:
+expat-2.4.6-r0 description:
 XML Parser library written in C
 
-expat-2.4.4-r0 webpage:
+expat-2.4.6-r0 webpage:
 http://www.libexpat.org/
 
-expat-2.4.4-r0 installed size:
+expat-2.4.6-r0 installed size:
 192 KiB
 
-expat-2.4.4-r0 license:
+expat-2.4.6-r0 license:
 MIT
 
 ```
