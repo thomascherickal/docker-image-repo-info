@@ -743,14 +743,9 @@ Licenses: (parsed from: `/usr/share/doc/gcc-11-base/copyright`)
 - `GPL-3`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-11=11.2.0-16ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-11/gcc-11_11.2.0-16ubuntu1.dsc' gcc-11_11.2.0-16ubuntu1.dsc 27910 SHA512:f6ffb6571af0cae4be08d2f1d06863bb1e29d3a7c935e13460dc170f65c844222bf0d4cd72b714ab9771d82b58131af161a094b439c62d485ee2dede7267d380
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-11/gcc-11_11.2.0.orig.tar.gz' gcc-11_11.2.0.orig.tar.gz 87861992 SHA512:64e4634769a62faa0adbfe99e5e590dd9efc1facac20a7dd71ab9f1d675e7df80678cbdc75c966e08ccf91dbc1e1a681d8e3227d0026ffcb5f46bdc96acaace8
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-11/gcc-11_11.2.0-16ubuntu1.debian.tar.xz' gcc-11_11.2.0-16ubuntu1.debian.tar.xz 2033548 SHA512:e259a01556809730e42ada412a3e0acdb676eae6d934607058a3f0ad310e5eade0f4f7d258f6c5920c96362a12497eb651b4cde03420569b1cc31d2add6d3199
-```
 
 ### `dpkg` source package: `gcc-12=12-20220302-1ubuntu1`
 
@@ -2997,15 +2992,9 @@ Licenses: (parsed from: `/usr/share/doc/librhash0/copyright`)
 
 - `0BSD`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris rhash=1.4.2-1build1
-'http://archive.ubuntu.com/ubuntu/pool/main/r/rhash/rhash_1.4.2-1build1.dsc' rhash_1.4.2-1build1.dsc 2324 SHA512:a62b5a56fa4c3d090c554e5fe6d5b9022ea74da312843faf0f3bd277620177ba3f360797dac02eacaa6e14cd031f861851db56d07d51d2e2317ae706892de1ae
-'http://archive.ubuntu.com/ubuntu/pool/main/r/rhash/rhash_1.4.2.orig.tar.gz' rhash_1.4.2.orig.tar.gz 416853 SHA512:41df57e8b3f32c93d8e6f2ac668b32aaa23eb2eaf90a83f109e61e511404a5036ea88bcf2854e19c1ade0f61960e0d9edf01f3d82e1c645fed36579e9d7a6a25
-'http://archive.ubuntu.com/ubuntu/pool/main/r/rhash/rhash_1.4.2.orig.tar.gz.asc' rhash_1.4.2.orig.tar.gz.asc 833 SHA512:a61a0a10a8b5affd69b8e8b9856137eee6ce922ee369e5b5a673edec921201771646412da083679696e7732e4954f9a4205ecfbe1c09b02871de4930b68f0015
-'http://archive.ubuntu.com/ubuntu/pool/main/r/rhash/rhash_1.4.2-1build1.debian.tar.xz' rhash_1.4.2-1build1.debian.tar.xz 9964 SHA512:db4701e1f3b74923bca66a4f8db2519035480d27eb0e464db28ac1fec541ee1af7c9b7e97b63e36855c144bfe05ccb1c4d4e9451f15675c1a0cf436171ccf943
-```
 
 ### `dpkg` source package: `ros-rolling-action-msgs=1.1.0-2jammy.20220219.164521`
 

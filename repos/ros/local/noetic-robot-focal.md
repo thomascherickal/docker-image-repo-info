@@ -1204,14 +1204,9 @@ Licenses: (parsed from: `/usr/share/doc/cpp-9/copyright`, `/usr/share/doc/g++-9/
 - `LGPL`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-9=9.3.0-17ubuntu1~20.04
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-9/gcc-9_9.3.0-17ubuntu1%7e20.04.dsc' gcc-9_9.3.0-17ubuntu1~20.04.dsc 23746 SHA512:bae6c156516a4988546a4518934f661a70243a89ed17883fe382bd984ae6533aab7d9b459986c2ebdb715b64b11ac76b9283447b26be3dbaec0b00c02afeb7f6
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-9/gcc-9_9.3.0.orig.tar.gz' gcc-9_9.3.0.orig.tar.gz 90490748 SHA512:cebaa27b0ac7485e72f0d7b07e6ef08cd544bf551bc080ee00175cbe319ea8b0592ff54d55633bb189e481f9ba489d513205cf2310e4b5211869a021432ee31f
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-9/gcc-9_9.3.0-17ubuntu1%7e20.04.debian.tar.xz' gcc-9_9.3.0-17ubuntu1~20.04.debian.tar.xz 763792 SHA512:f696a3d92edbadb7cfb29494b68ec00fa9b278ab7657e45933cf2e7564e6a524ac41edde14449114a2e06ad0c1f56473d998687aeb2f98f18c431727d4254d21
-```
 
 ### `dpkg` source package: `gcc-defaults=1.185.1ubuntu2`
 
@@ -3670,14 +3665,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssl=1.1.1f-1ubuntu2.10
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.10.dsc' openssl_1.1.1f-1ubuntu2.10.dsc 2499 SHA512:388d30358cd111bac756318b259f76eedd77e8f131b1537f63b0b3e7a4c8860f9d39b8a3662931c37993c75579cd95640244e96382e841a3477abb34a26bde73
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f.orig.tar.gz' openssl_1.1.1f.orig.tar.gz 9792828 SHA512:b00bd9b5ad5298fbceeec6bb19c1ab0c106ca5cfb31178497c58bf7e0e0cf30fcc19c20f84e23af31cc126bf2447d3e4f8461db97bafa7bd78f69561932f000c
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.10.debian.tar.xz' openssl_1.1.1f-1ubuntu2.10.debian.tar.xz 170668 SHA512:e95371b58d36b3b7184c0b7b6a459ed121fb57baa4bc694bc0c1f004be98ef7b672b6c8ec2e1207998bf35aafb3dd2c3e8a0e018c13930dbb072f8d911b2b9ed
-```
 
 ### `dpkg` source package: `orocos-kdl=1.4.0-7ubuntu1`
 
