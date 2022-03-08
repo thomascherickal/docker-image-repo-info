@@ -1,7 +1,7 @@
 ## `friendica:stable-fpm`
 
 ```console
-$ docker pull friendica@sha256:79b6a96c0dd35ea3a6d45c0a80f8474a805852265d077696ae6bd7afe6ddb43d
+$ docker pull friendica@sha256:3608277f9028c7ea74e3039e6ed9737dae0306aa81c1dc088413bf805ed27014
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -18,14 +18,14 @@ $ docker pull friendica@sha256:79b6a96c0dd35ea3a6d45c0a80f8474a805852265d077696a
 ### `friendica:stable-fpm` - linux; amd64
 
 ```console
-$ docker pull friendica@sha256:0b539e948bdd7f1fd6442fa8541c109d22dfeece53da40e5b77fc0310860ef44
+$ docker pull friendica@sha256:86c9eb0f0a24f01e0dc47e4f5857889a25f884f9280c0beab18a4f4ff9059d46
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **247.3 MB (247269163 bytes)**  
+-	Total Size: **247.4 MB (247418493 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f7ccb3cd6cb6761c25ce7b5be9d47383d22a090ff834cc6519ada7537428d9a0`
+-	Image ID: `sha256:02631b192a396283507eda795f47bc078a4524bbe947525f9088bcb932c32112`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -86,35 +86,35 @@ RUN set -ex;         apt-get update;     apt-get install -y --no-install-recomme
 ENV GOSU_VERSION=1.14
 # Sat, 05 Mar 2022 01:40:36 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates wget; 	if ! command -v gpg; then 		apt-get install -y --no-install-recommends gnupg2 dirmngr; 	elif gpg --version | grep -q '^gpg (GnuPG) 1\.'; then 		apt-get install -y --no-install-recommends gnupg-curl; 	fi; 	rm -rf /var/lib/apt/lists/*; 		dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	command -v gpgconf && gpgconf --kill all || :; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
-# Sat, 05 Mar 2022 01:42:52 GMT
-RUN set -ex;         savedAptMark="$(apt-mark showmanual)";         apt-get update;     apt-get install -y --no-install-recommends         mariadb-client         bash         libpng-dev         libjpeg62-turbo-dev         libtool         libmagick++-dev         libmemcached-dev         libgraphicsmagick1-dev         libfreetype6-dev         libwebp-dev         librsvg2-2         libzip-dev         libldap2-dev     ;             debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)";         docker-php-ext-configure gd         --with-freetype         --with-jpeg         --with-webp     ;     docker-php-ext-configure ldap         --with-libdir=lib/$debMultiarch/     ;    docker-php-ext-install -j "$(nproc)"         pdo_mysql         gd         exif         zip         opcache         ctype         pcntl         ldap     ;         pecl install apcu-5.1.21;     pecl install memcached-3.1.5;     pecl install redis-5.3.7;     pecl install imagick-3.7.0;         docker-php-ext-enable         apcu         memcached         redis         imagick     ;         apt-mark auto '.*' > /dev/null;     apt-mark manual $savedAptMark;     ldd "$(php -r 'echo ini_get("extension_dir");')"/*.so         | awk '/=>/ { print $3 }'         | sort -u         | xargs -r dpkg-query -S         | cut -d: -f1         | sort -u         | xargs -rt apt-mark manual;         apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false;     rm -rf /var/lib/apt/lists/*
-# Sat, 05 Mar 2022 01:42:52 GMT
+# Tue, 08 Mar 2022 01:44:28 GMT
+RUN set -ex;         savedAptMark="$(apt-mark showmanual)";         apt-get update;     apt-get install -y --no-install-recommends         mariadb-client         bash         libpng-dev         libjpeg62-turbo-dev         libtool         libmagick++-dev         libmemcached-dev         libgraphicsmagick1-dev         libfreetype6-dev         libwebp-dev         librsvg2-2         libzip-dev         libldap2-dev     ;             debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)";         docker-php-ext-configure gd         --with-freetype         --with-jpeg         --with-webp     ;     docker-php-ext-configure ldap         --with-libdir=lib/$debMultiarch/     ;    docker-php-ext-install -j "$(nproc)"         pdo_mysql         gd         exif         zip         opcache         ctype         pcntl         ldap     ;         pecl install apcu-5.1.21;     pecl install memcached-3.2.0RC1;     pecl install redis-5.3.7;     pecl install imagick-3.7.0;         docker-php-ext-enable         apcu         memcached         redis         imagick     ;         apt-mark auto '.*' > /dev/null;     apt-mark manual $savedAptMark;     ldd "$(php -r 'echo ini_get("extension_dir");')"/*.so         | awk '/=>/ { print $3 }'         | sort -u         | xargs -r dpkg-query -S         | cut -d: -f1         | sort -u         | xargs -rt apt-mark manual;         apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false;     rm -rf /var/lib/apt/lists/*
+# Tue, 08 Mar 2022 01:44:28 GMT
 ENV PHP_MEMORY_LIMIT=512M
-# Sat, 05 Mar 2022 01:42:52 GMT
+# Tue, 08 Mar 2022 01:44:28 GMT
 ENV PHP_UPLOAD_LIMIT=512M
-# Sat, 05 Mar 2022 01:42:52 GMT
+# Tue, 08 Mar 2022 01:44:28 GMT
 RUN set -ex;     {         echo 'opcache.enable=1' ;         echo 'opcache.interned_strings_buffer=8';         echo 'opcache.max_accelerated_files=10000';         echo 'opcache.memory_consumption=128';         echo 'opcache.save_comments=1';         echo 'opcache.revalidte_freq=1';     } > /usr/local/etc/php/conf.d/opcache-recommended.ini;         {         echo sendmail_path = "/usr/bin/msmtp -t";     } > /usr/local/etc/php/conf.d/sendmail.ini;         echo 'apc.enable_cli=1' >> /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini;         {         echo 'memory_limit=${PHP_MEMORY_LIMIT}';         echo 'upload_max_filesize=${PHP_UPLOAD_LIMIT}';         echo 'post_max_size=${PHP_UPLOAD_LIMIT}';     } > /usr/local/etc/php/conf.d/friendica.ini;         mkdir /var/www/data;     chown -R www-data:root /var/www;     chmod -R g=u /var/www
-# Sat, 05 Mar 2022 01:42:53 GMT
+# Tue, 08 Mar 2022 01:44:29 GMT
 VOLUME [/var/www/html]
-# Sat, 05 Mar 2022 01:42:53 GMT
+# Tue, 08 Mar 2022 01:44:29 GMT
 ENV FRIENDICA_SYSLOG_FLAGS=39
-# Sat, 05 Mar 2022 01:44:17 GMT
-ENV FRIENDICA_VERSION=2022.02
-# Sat, 05 Mar 2022 01:44:17 GMT
-ENV FRIENDICA_ADDONS=2022.02
-# Sat, 05 Mar 2022 01:44:18 GMT
-ENV FRIENDICA_DOWNLOAD_SHA256=032be1a8c7e1a82d34eebc95b5bd2f2564a9114834eff45e6b4daa240eab22e8
-# Sat, 05 Mar 2022 01:44:18 GMT
-ENV FRIENDICA_DOWNLOAD_ADDONS_SHA256=146240e7215d15d743bee4e0d3c084315b5a1778493f400284e80ff84e3cd1ce
-# Sat, 05 Mar 2022 01:45:18 GMT
+# Tue, 08 Mar 2022 01:44:29 GMT
+ENV FRIENDICA_VERSION=2022.03
+# Tue, 08 Mar 2022 01:44:29 GMT
+ENV FRIENDICA_ADDONS=2022.03
+# Tue, 08 Mar 2022 01:44:29 GMT
+ENV FRIENDICA_DOWNLOAD_SHA256=f190dd05bdd2ecff753da108535dbc4e406b0fe291c0764e87f93d9510aae74e
+# Tue, 08 Mar 2022 01:44:29 GMT
+ENV FRIENDICA_DOWNLOAD_ADDONS_SHA256=d6b95835724b9814aa7c1862f985cdaf8754e7527b41ce80ca58ee5378807936
+# Tue, 08 Mar 2022 01:45:26 GMT
 RUN set -ex;     fetchDeps="         gnupg     ";     apt-get update;     apt-get install -y --no-install-recommends $fetchDeps;         export GNUPGHOME="$(mktemp -d)";     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 08656443618E6567A39524083EE197EF3F9E4287;         curl -fsSL -o friendica-full-${FRIENDICA_VERSION}.tar.gz         "https://files.friendi.ca/friendica-full-${FRIENDICA_VERSION}.tar.gz";     curl -fsSL -o friendica-full-${FRIENDICA_VERSION}.tar.gz.asc         "https://files.friendi.ca/friendica-full-${FRIENDICA_VERSION}.tar.gz.asc";     gpg --batch --verify friendica-full-${FRIENDICA_VERSION}.tar.gz.asc friendica-full-${FRIENDICA_VERSION}.tar.gz;     echo "${FRIENDICA_DOWNLOAD_SHA256} *friendica-full-${FRIENDICA_VERSION}.tar.gz" | sha256sum -c;     tar -xzf friendica-full-${FRIENDICA_VERSION}.tar.gz -C /usr/src/;     rm friendica-full-${FRIENDICA_VERSION}.tar.gz friendica-full-${FRIENDICA_VERSION}.tar.gz.asc;     mv -f /usr/src/friendica-full-${FRIENDICA_VERSION}/ /usr/src/friendica;     chmod 777 /usr/src/friendica/view/smarty3;         curl -fsSL -o friendica-addons-${FRIENDICA_ADDONS}.tar.gz             "https://files.friendi.ca/friendica-addons-${FRIENDICA_ADDONS}.tar.gz";     curl -fsSL -o friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc             "https://files.friendi.ca/friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc";     gpg --batch --verify friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc friendica-addons-${FRIENDICA_ADDONS}.tar.gz;     echo "${FRIENDICA_DOWNLOAD_ADDONS_SHA256} *friendica-addons-${FRIENDICA_ADDONS}.tar.gz" | sha256sum -c;     mkdir -p /usr/src/friendica/proxy;     mkdir -p /usr/src/friendica/addon;     tar -xzf friendica-addons-${FRIENDICA_ADDONS}.tar.gz -C /usr/src/friendica/addon --strip-components=1;     rm friendica-addons-${FRIENDICA_ADDONS}.tar.gz friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc;         gpgconf --kill all;     rm -rf "$GNUPGHOME";         apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps;     rm -rf /var/lib/apt/lists/*
-# Sat, 05 Mar 2022 01:45:19 GMT
+# Tue, 08 Mar 2022 01:45:27 GMT
 COPY multi:31b45a7507c100b0a9b3decdeeedd3c1880f5c7c482c8e17c6047c00a1ffcb3d in / 
-# Sat, 05 Mar 2022 01:45:19 GMT
+# Tue, 08 Mar 2022 01:45:27 GMT
 COPY multi:201dba5df7e408009a8882797a28095a47753a2db673a80c99e898e88501c42e in /usr/src/friendica/config/ 
-# Sat, 05 Mar 2022 01:45:19 GMT
+# Tue, 08 Mar 2022 01:45:28 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Sat, 05 Mar 2022 01:45:19 GMT
+# Tue, 08 Mar 2022 01:45:28 GMT
 CMD ["php-fpm"]
 ```
 
@@ -167,25 +167,25 @@ CMD ["php-fpm"]
 		Last Modified: Sat, 05 Mar 2022 01:46:13 GMT  
 		Size: 1.3 MB (1269898 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:61b6555a394d291cb1bbe826c278d7453e090e6d0a721edd4dd543d7461e9907`  
-		Last Modified: Sat, 05 Mar 2022 01:46:14 GMT  
-		Size: 17.7 MB (17663695 bytes)  
+	-	`sha256:8878e6824b35987b42dd875a5f661986c45ddac766b3bf9a37f4114b48477025`  
+		Last Modified: Tue, 08 Mar 2022 05:09:42 GMT  
+		Size: 17.7 MB (17672091 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5deb6494b01a544f930d3d0d597f525b663c94d19ccc80abacbce65e14487e61`  
-		Last Modified: Sat, 05 Mar 2022 01:46:10 GMT  
-		Size: 641.0 B  
+	-	`sha256:69fffde76ec753a736fc84e4d2ee73d01ec041727b41464552ea6aef24d101f5`  
+		Last Modified: Tue, 08 Mar 2022 05:09:39 GMT  
+		Size: 639.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a0f9b6836d7da30d683d8e81d0015e0dd86bc252aa226399a1fa5b02a4a91c3c`  
-		Last Modified: Sat, 05 Mar 2022 01:46:35 GMT  
-		Size: 53.9 MB (53883155 bytes)  
+	-	`sha256:e37df4cb13552d09c4e5ccb7f7ee5182cc1042914001c746c8b37f250ae985d6`  
+		Last Modified: Tue, 08 Mar 2022 05:09:45 GMT  
+		Size: 54.0 MB (54024087 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9de475cf31b9e56ca08215c3326360de00aabfbb247b7dc358b88fd5ceefa20b`  
-		Last Modified: Sat, 05 Mar 2022 01:46:27 GMT  
-		Size: 3.0 KB (2950 bytes)  
+	-	`sha256:3be5fa7ee514ea6db1b468f6486eaed1964fe47ba10f4a42b96a87af2fef7711`  
+		Last Modified: Tue, 08 Mar 2022 05:09:39 GMT  
+		Size: 3.0 KB (2952 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0aee7d7a8d2685c2ca692296eb44d5cef4613be917b4896d3f13fb7a7da82215`  
-		Last Modified: Sat, 05 Mar 2022 01:46:28 GMT  
-		Size: 928.0 B  
+	-	`sha256:74a57fe98afcc6ae8cc97e8db5a17b770c07334d5eea197724c460fe8a693e32`  
+		Last Modified: Tue, 08 Mar 2022 05:09:39 GMT  
+		Size: 930.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `friendica:stable-fpm` - linux; arm variant v5
@@ -1056,14 +1056,14 @@ CMD ["php-fpm"]
 ### `friendica:stable-fpm` - linux; ppc64le
 
 ```console
-$ docker pull friendica@sha256:860af2460c42e16fdf7b53f951a71eb7e43cb6dab149d2e643a986ff11dd8824
+$ docker pull friendica@sha256:a3601fc51a9b88d57fa500094db4c258abb062412d03d3ede14cded94aaf7370
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **247.1 MB (247115887 bytes)**  
+-	Total Size: **247.3 MB (247266427 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2db4afa8d1c728ccaf490797573ff7bb318f9878e4782c5cbaa14d7dcd46986a`
+-	Image ID: `sha256:ee6b8b46046e9939b7819b97ac282390a5803aab6fc62802bc55193096eadad6`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -1124,35 +1124,35 @@ RUN set -ex;         apt-get update;     apt-get install -y --no-install-recomme
 ENV GOSU_VERSION=1.14
 # Thu, 03 Mar 2022 08:30:16 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates wget; 	if ! command -v gpg; then 		apt-get install -y --no-install-recommends gnupg2 dirmngr; 	elif gpg --version | grep -q '^gpg (GnuPG) 1\.'; then 		apt-get install -y --no-install-recommends gnupg-curl; 	fi; 	rm -rf /var/lib/apt/lists/*; 		dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	command -v gpgconf && gpgconf --kill all || :; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
-# Thu, 03 Mar 2022 08:42:22 GMT
-RUN set -ex;         savedAptMark="$(apt-mark showmanual)";         apt-get update;     apt-get install -y --no-install-recommends         mariadb-client         bash         libpng-dev         libjpeg62-turbo-dev         libtool         libmagick++-dev         libmemcached-dev         libgraphicsmagick1-dev         libfreetype6-dev         libwebp-dev         librsvg2-2         libzip-dev         libldap2-dev     ;             debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)";         docker-php-ext-configure gd         --with-freetype         --with-jpeg         --with-webp     ;     docker-php-ext-configure ldap         --with-libdir=lib/$debMultiarch/     ;    docker-php-ext-install -j "$(nproc)"         pdo_mysql         gd         exif         zip         opcache         ctype         pcntl         ldap     ;         pecl install apcu-5.1.21;     pecl install memcached-3.1.5;     pecl install redis-5.3.7;     pecl install imagick-3.7.0;         docker-php-ext-enable         apcu         memcached         redis         imagick     ;         apt-mark auto '.*' > /dev/null;     apt-mark manual $savedAptMark;     ldd "$(php -r 'echo ini_get("extension_dir");')"/*.so         | awk '/=>/ { print $3 }'         | sort -u         | xargs -r dpkg-query -S         | cut -d: -f1         | sort -u         | xargs -rt apt-mark manual;         apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false;     rm -rf /var/lib/apt/lists/*
-# Thu, 03 Mar 2022 08:42:28 GMT
+# Tue, 08 Mar 2022 07:00:23 GMT
+RUN set -ex;         savedAptMark="$(apt-mark showmanual)";         apt-get update;     apt-get install -y --no-install-recommends         mariadb-client         bash         libpng-dev         libjpeg62-turbo-dev         libtool         libmagick++-dev         libmemcached-dev         libgraphicsmagick1-dev         libfreetype6-dev         libwebp-dev         librsvg2-2         libzip-dev         libldap2-dev     ;             debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)";         docker-php-ext-configure gd         --with-freetype         --with-jpeg         --with-webp     ;     docker-php-ext-configure ldap         --with-libdir=lib/$debMultiarch/     ;    docker-php-ext-install -j "$(nproc)"         pdo_mysql         gd         exif         zip         opcache         ctype         pcntl         ldap     ;         pecl install apcu-5.1.21;     pecl install memcached-3.2.0RC1;     pecl install redis-5.3.7;     pecl install imagick-3.7.0;         docker-php-ext-enable         apcu         memcached         redis         imagick     ;         apt-mark auto '.*' > /dev/null;     apt-mark manual $savedAptMark;     ldd "$(php -r 'echo ini_get("extension_dir");')"/*.so         | awk '/=>/ { print $3 }'         | sort -u         | xargs -r dpkg-query -S         | cut -d: -f1         | sort -u         | xargs -rt apt-mark manual;         apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false;     rm -rf /var/lib/apt/lists/*
+# Tue, 08 Mar 2022 07:00:27 GMT
 ENV PHP_MEMORY_LIMIT=512M
-# Thu, 03 Mar 2022 08:42:33 GMT
+# Tue, 08 Mar 2022 07:00:31 GMT
 ENV PHP_UPLOAD_LIMIT=512M
-# Thu, 03 Mar 2022 08:42:41 GMT
+# Tue, 08 Mar 2022 07:00:45 GMT
 RUN set -ex;     {         echo 'opcache.enable=1' ;         echo 'opcache.interned_strings_buffer=8';         echo 'opcache.max_accelerated_files=10000';         echo 'opcache.memory_consumption=128';         echo 'opcache.save_comments=1';         echo 'opcache.revalidte_freq=1';     } > /usr/local/etc/php/conf.d/opcache-recommended.ini;         {         echo sendmail_path = "/usr/bin/msmtp -t";     } > /usr/local/etc/php/conf.d/sendmail.ini;         echo 'apc.enable_cli=1' >> /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini;         {         echo 'memory_limit=${PHP_MEMORY_LIMIT}';         echo 'upload_max_filesize=${PHP_UPLOAD_LIMIT}';         echo 'post_max_size=${PHP_UPLOAD_LIMIT}';     } > /usr/local/etc/php/conf.d/friendica.ini;         mkdir /var/www/data;     chown -R www-data:root /var/www;     chmod -R g=u /var/www
-# Thu, 03 Mar 2022 08:42:43 GMT
+# Tue, 08 Mar 2022 07:00:50 GMT
 VOLUME [/var/www/html]
-# Thu, 03 Mar 2022 08:42:45 GMT
+# Tue, 08 Mar 2022 07:00:55 GMT
 ENV FRIENDICA_SYSLOG_FLAGS=39
-# Thu, 03 Mar 2022 08:55:58 GMT
-ENV FRIENDICA_VERSION=2022.02
-# Thu, 03 Mar 2022 08:56:02 GMT
-ENV FRIENDICA_ADDONS=2022.02
-# Thu, 03 Mar 2022 08:56:06 GMT
-ENV FRIENDICA_DOWNLOAD_SHA256=032be1a8c7e1a82d34eebc95b5bd2f2564a9114834eff45e6b4daa240eab22e8
-# Thu, 03 Mar 2022 08:56:09 GMT
-ENV FRIENDICA_DOWNLOAD_ADDONS_SHA256=146240e7215d15d743bee4e0d3c084315b5a1778493f400284e80ff84e3cd1ce
-# Thu, 03 Mar 2022 08:58:15 GMT
+# Tue, 08 Mar 2022 07:07:08 GMT
+ENV FRIENDICA_VERSION=2022.03
+# Tue, 08 Mar 2022 07:07:11 GMT
+ENV FRIENDICA_ADDONS=2022.03
+# Tue, 08 Mar 2022 07:07:14 GMT
+ENV FRIENDICA_DOWNLOAD_SHA256=f190dd05bdd2ecff753da108535dbc4e406b0fe291c0764e87f93d9510aae74e
+# Tue, 08 Mar 2022 07:07:17 GMT
+ENV FRIENDICA_DOWNLOAD_ADDONS_SHA256=d6b95835724b9814aa7c1862f985cdaf8754e7527b41ce80ca58ee5378807936
+# Tue, 08 Mar 2022 07:08:51 GMT
 RUN set -ex;     fetchDeps="         gnupg     ";     apt-get update;     apt-get install -y --no-install-recommends $fetchDeps;         export GNUPGHOME="$(mktemp -d)";     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 08656443618E6567A39524083EE197EF3F9E4287;         curl -fsSL -o friendica-full-${FRIENDICA_VERSION}.tar.gz         "https://files.friendi.ca/friendica-full-${FRIENDICA_VERSION}.tar.gz";     curl -fsSL -o friendica-full-${FRIENDICA_VERSION}.tar.gz.asc         "https://files.friendi.ca/friendica-full-${FRIENDICA_VERSION}.tar.gz.asc";     gpg --batch --verify friendica-full-${FRIENDICA_VERSION}.tar.gz.asc friendica-full-${FRIENDICA_VERSION}.tar.gz;     echo "${FRIENDICA_DOWNLOAD_SHA256} *friendica-full-${FRIENDICA_VERSION}.tar.gz" | sha256sum -c;     tar -xzf friendica-full-${FRIENDICA_VERSION}.tar.gz -C /usr/src/;     rm friendica-full-${FRIENDICA_VERSION}.tar.gz friendica-full-${FRIENDICA_VERSION}.tar.gz.asc;     mv -f /usr/src/friendica-full-${FRIENDICA_VERSION}/ /usr/src/friendica;     chmod 777 /usr/src/friendica/view/smarty3;         curl -fsSL -o friendica-addons-${FRIENDICA_ADDONS}.tar.gz             "https://files.friendi.ca/friendica-addons-${FRIENDICA_ADDONS}.tar.gz";     curl -fsSL -o friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc             "https://files.friendi.ca/friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc";     gpg --batch --verify friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc friendica-addons-${FRIENDICA_ADDONS}.tar.gz;     echo "${FRIENDICA_DOWNLOAD_ADDONS_SHA256} *friendica-addons-${FRIENDICA_ADDONS}.tar.gz" | sha256sum -c;     mkdir -p /usr/src/friendica/proxy;     mkdir -p /usr/src/friendica/addon;     tar -xzf friendica-addons-${FRIENDICA_ADDONS}.tar.gz -C /usr/src/friendica/addon --strip-components=1;     rm friendica-addons-${FRIENDICA_ADDONS}.tar.gz friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc;         gpgconf --kill all;     rm -rf "$GNUPGHOME";         apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps;     rm -rf /var/lib/apt/lists/*
-# Thu, 03 Mar 2022 08:58:26 GMT
+# Tue, 08 Mar 2022 07:08:58 GMT
 COPY multi:31b45a7507c100b0a9b3decdeeedd3c1880f5c7c482c8e17c6047c00a1ffcb3d in / 
-# Thu, 03 Mar 2022 08:58:30 GMT
+# Tue, 08 Mar 2022 07:08:59 GMT
 COPY multi:201dba5df7e408009a8882797a28095a47753a2db673a80c99e898e88501c42e in /usr/src/friendica/config/ 
-# Thu, 03 Mar 2022 08:58:35 GMT
+# Tue, 08 Mar 2022 07:09:02 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Thu, 03 Mar 2022 08:58:39 GMT
+# Tue, 08 Mar 2022 07:09:04 GMT
 CMD ["php-fpm"]
 ```
 
@@ -1205,25 +1205,25 @@ CMD ["php-fpm"]
 		Last Modified: Thu, 03 Mar 2022 09:05:05 GMT  
 		Size: 1.2 MB (1169623 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:deb514110c7cf1920421d80cf216d0eb1143411d8dcdff88c50894143a6ce88a`  
-		Last Modified: Thu, 03 Mar 2022 09:05:04 GMT  
-		Size: 17.5 MB (17460850 bytes)  
+	-	`sha256:70ca3be237c49b4175b47b07fcf333389bd76fcfe524ef5849a4effa22d5e267`  
+		Last Modified: Tue, 08 Mar 2022 07:11:36 GMT  
+		Size: 17.5 MB (17470544 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4b48c01e8806d4b30d1b170844b35740d6a33b621e46df7efc4e5dbbccd80924`  
-		Last Modified: Thu, 03 Mar 2022 09:05:01 GMT  
-		Size: 640.0 B  
+	-	`sha256:b327e53120008ff4b38ce4b1282853cc9f1dee1511ea86074dface77d12f9018`  
+		Last Modified: Tue, 08 Mar 2022 07:11:33 GMT  
+		Size: 642.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0cc019864ae13ee60a092766a4fb070e495ad25af2223958c814a351f153316e`  
-		Last Modified: Thu, 03 Mar 2022 09:06:25 GMT  
-		Size: 53.9 MB (53885814 bytes)  
+	-	`sha256:539c1dc4b15ea81a82f1a1b30ff946cab23ff7fb417a83450fdcbfd2ac9b80bc`  
+		Last Modified: Tue, 08 Mar 2022 07:12:25 GMT  
+		Size: 54.0 MB (54026662 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a1bf4369f7ac3cc080460ba8b0d70eb930f4eb456d050532cadda45a8bab3759`  
-		Last Modified: Thu, 03 Mar 2022 09:06:17 GMT  
-		Size: 3.0 KB (2951 bytes)  
+	-	`sha256:aa676117f67fcde3b40a3d1bee9833551b5d112f3b24a3f02f443a36d0c906cc`  
+		Last Modified: Tue, 08 Mar 2022 07:12:18 GMT  
+		Size: 3.0 KB (2950 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:65ee0e446dfa6e96471dfc6355ccce129c6cc9bae516da092bb989c90255c8e7`  
-		Last Modified: Thu, 03 Mar 2022 09:06:17 GMT  
-		Size: 931.0 B  
+	-	`sha256:3165ff87888d508ab81c00d94f018aa40a257258d116b37e3f7b5fdbb7073825`  
+		Last Modified: Tue, 08 Mar 2022 07:12:17 GMT  
+		Size: 928.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `friendica:stable-fpm` - linux; s390x
