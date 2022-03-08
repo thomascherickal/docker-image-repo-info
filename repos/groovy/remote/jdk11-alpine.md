@@ -1,7 +1,7 @@
 ## `groovy:jdk11-alpine`
 
 ```console
-$ docker pull groovy@sha256:ab3a44e9cc5e3421e4bd392b4dae39a638d58f0cbb393b908e3e5dffda41a524
+$ docker pull groovy@sha256:74ccf85e563f0275dbcfb9891a6062118d3d23162a3ba5868c7e460863c59f07
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull groovy@sha256:ab3a44e9cc5e3421e4bd392b4dae39a638d58f0cbb393b908e3e
 ### `groovy:jdk11-alpine` - linux; amd64
 
 ```console
-$ docker pull groovy@sha256:a2381b0dc44bdc1419efca98d2bedc579adc514553ed8ed591e4edd2fc02121d
+$ docker pull groovy@sha256:14f4deafe97ff5799d13ef433d422ebf7932d91f350cafc0b67f80ee1e8bbee8
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **240.3 MB (240282888 bytes)**  
+-	Total Size: **240.3 MB (240281671 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5a51508a13dad1567eece599967d9e150fff9c2c04248f616e6efe0e88443201`
+-	Image ID: `sha256:98990bc6fc464b3a2997a19391bfa2fa092608303867faee6f576284a3890ff0`
 -	Default Command: `["groovysh"]`
 
 ```dockerfile
@@ -30,33 +30,33 @@ CMD ["/bin/sh"]
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Thu, 13 Jan 2022 17:19:46 GMT
 RUN apk add --no-cache tzdata musl-locales musl-locales-lang     && rm -rf /var/cache/apk/*
-# Tue, 01 Feb 2022 22:21:40 GMT
-ENV JAVA_VERSION=jdk-11.0.14+9
-# Tue, 01 Feb 2022 22:21:55 GMT
-RUN set -eux;     ARCH="$(apk --print-arch)";     case "${ARCH}" in        amd64|x86_64)          ESUM='f94a01258a5496eda9e3de6807e6ecfe08a5ad4a2d42e4332a77f74174706f5c';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.14%2B9/OpenJDK11U-jdk_x64_alpine-linux_hotspot_11.0.14_9.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p /opt/java/openjdk; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory /opt/java/openjdk 	      --strip-components 1 	      --no-same-owner 	  ;     rm -rf /tmp/openjdk.tar.gz;
-# Tue, 01 Feb 2022 22:21:56 GMT
+# Mon, 07 Mar 2022 19:26:29 GMT
+ENV JAVA_VERSION=jdk-11.0.14.1+1
+# Mon, 07 Mar 2022 19:26:54 GMT
+RUN set -eux;     ARCH="$(apk --print-arch)";     case "${ARCH}" in        amd64|x86_64)          ESUM='99e13a167ac27fac3dbfcc394a024fd9f4d84d24734ad5c250f97215d496ee36';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.14.1%2B1/OpenJDK11U-jdk_x64_alpine-linux_hotspot_11.0.14.1_1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p /opt/java/openjdk; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory /opt/java/openjdk 	      --strip-components 1 	      --no-same-owner 	  ;     rm -rf /tmp/openjdk.tar.gz;
+# Mon, 07 Mar 2022 19:26:55 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 01 Feb 2022 22:21:57 GMT
+# Mon, 07 Mar 2022 19:26:56 GMT
 RUN echo Verifying install ...     && echo javac --version && javac --version     && echo java --version && java --version     && echo Complete.
-# Tue, 01 Feb 2022 22:21:57 GMT
+# Mon, 07 Mar 2022 19:26:56 GMT
 CMD ["jshell"]
-# Tue, 01 Feb 2022 23:13:12 GMT
+# Mon, 07 Mar 2022 21:03:32 GMT
 CMD ["groovysh"]
-# Tue, 01 Feb 2022 23:13:12 GMT
+# Mon, 07 Mar 2022 21:03:32 GMT
 ENV GROOVY_HOME=/opt/groovy
-# Tue, 01 Feb 2022 23:13:13 GMT
+# Mon, 07 Mar 2022 21:03:33 GMT
 RUN set -o errexit -o nounset     && echo "Adding groovy user and group"     && addgroup --system --gid 1000 groovy     && adduser --system --ingroup groovy --uid 1000 --shell /bin/ash groovy     && mkdir --parents /home/groovy/.groovy/grapes     && chown -R groovy:groovy /home/groovy     && chmod -R 1777 /home/groovy         && echo "Symlinking root .groovy to groovy .groovy"     && ln -s /home/groovy/.groovy /root/.groovy
-# Tue, 01 Feb 2022 23:13:13 GMT
+# Mon, 07 Mar 2022 21:03:33 GMT
 VOLUME [/home/groovy/.groovy/grapes]
-# Tue, 01 Feb 2022 23:13:13 GMT
+# Mon, 07 Mar 2022 21:03:33 GMT
 WORKDIR /home/groovy
-# Tue, 01 Feb 2022 23:13:14 GMT
+# Mon, 07 Mar 2022 21:03:33 GMT
 ENV GROOVY_VERSION=3.0.9
-# Tue, 01 Feb 2022 23:13:38 GMT
+# Mon, 07 Mar 2022 21:03:45 GMT
 RUN set -o errexit -o nounset     && echo "Installing build dependencies"     && apk add --no-cache --virtual .build-deps         gnupg         && echo "Downloading Groovy"     && wget --no-verbose --output-document=groovy.zip "https://archive.apache.org/dist/groovy/${GROOVY_VERSION}/distribution/apache-groovy-binary-${GROOVY_VERSION}.zip"         && echo "Importing keys listed in http://www.apache.org/dist/groovy/KEYS from key server"     && export GNUPGHOME="$(mktemp -d)"     && gpg --batch --no-tty --keyserver keyserver.ubuntu.com --recv-keys         7FAA0F2206DE228F0DB01AD741321490758AAD6F         331224E1D7BE883D16E8A685825C06C827AF6B66         34441E504A937F43EB0DAEF96A65176A0FB1CD0B         9A810E3B766E089FFB27C70F11B595CEDC4AEBB5         81CABC23EECA0790E8989B361FF96E10F0E13706         && echo "Checking download signature"     && wget --no-verbose --output-document=groovy.zip.asc "https://archive.apache.org/dist/groovy/${GROOVY_VERSION}/distribution/apache-groovy-binary-${GROOVY_VERSION}.zip.asc"     && gpg --batch --no-tty --verify groovy.zip.asc groovy.zip     && rm -rf "${GNUPGHOME}"     && rm groovy.zip.asc         && echo "Cleaning up build dependencies"     && apk del .build-deps         && echo "Installing Groovy"     && unzip groovy.zip     && rm groovy.zip     && mv "groovy-${GROOVY_VERSION}" "${GROOVY_HOME}/"     && ln -s "${GROOVY_HOME}/bin/grape" /usr/bin/grape     && ln -s "${GROOVY_HOME}/bin/groovy" /usr/bin/groovy     && ln -s "${GROOVY_HOME}/bin/groovyc" /usr/bin/groovyc     && ln -s "${GROOVY_HOME}/bin/groovyConsole" /usr/bin/groovyConsole     && ln -s "${GROOVY_HOME}/bin/groovydoc" /usr/bin/groovydoc     && ln -s "${GROOVY_HOME}/bin/groovysh" /usr/bin/groovysh     && ln -s "${GROOVY_HOME}/bin/java2groovy" /usr/bin/java2groovy         && echo "Editing startGroovy to include java.xml.bind module"     && sed --in-place 's|startGroovy ( ) {|startGroovy ( ) {\n    JAVA_OPTS="$JAVA_OPTS --add-modules=ALL-SYSTEM"|' "${GROOVY_HOME}/bin/startGroovy"
-# Tue, 01 Feb 2022 23:13:38 GMT
+# Mon, 07 Mar 2022 21:03:45 GMT
 USER groovy
-# Tue, 01 Feb 2022 23:13:40 GMT
+# Mon, 07 Mar 2022 21:03:47 GMT
 RUN set -o errexit -o nounset     && echo "Testing Groovy installation"     && groovy --version
 ```
 
@@ -69,23 +69,23 @@ RUN set -o errexit -o nounset     && echo "Testing Groovy installation"     && g
 		Last Modified: Thu, 13 Jan 2022 17:22:44 GMT  
 		Size: 430.3 KB (430278 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1ce0d973b8a34293ba4230b845d4a5f0726a1f2af09f1078b765bf8874db49ca`  
-		Last Modified: Tue, 01 Feb 2022 22:26:54 GMT  
-		Size: 192.9 MB (192892914 bytes)  
+	-	`sha256:eae7b8c461b80a787226dfdd0673e9fe7036388862ea32248d15f6a14916f8be`  
+		Last Modified: Mon, 07 Mar 2022 19:30:49 GMT  
+		Size: 192.9 MB (192891714 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:510eb7edaa97518f5ffadf64ce784eab2e0da839a76d8e140855a446482d6d87`  
-		Last Modified: Tue, 01 Feb 2022 22:26:40 GMT  
+	-	`sha256:7f337ae9f87446e991566625212477c2cb66e4e5e3d653165ea9727e1c66bace`  
+		Last Modified: Mon, 07 Mar 2022 19:30:36 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e2a9c40b1803ccbfc932291009f85ad30552926d5648cecc6f2f7b15496ddbc0`  
-		Last Modified: Tue, 01 Feb 2022 23:20:08 GMT  
-		Size: 1.3 KB (1349 bytes)  
+	-	`sha256:fd5023584b481b5f94712b4e29b886962753c43aed0d4a6b0a9a93c4fa192925`  
+		Last Modified: Mon, 07 Mar 2022 21:06:30 GMT  
+		Size: 1.4 KB (1350 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6de643ce36f1fc9a25d3fc98f2bd5589488f9c78f3e091e7c381dcc22bfcdac6`  
-		Last Modified: Tue, 01 Feb 2022 23:20:11 GMT  
-		Size: 44.1 MB (44139601 bytes)  
+	-	`sha256:3294830b5eea4c58ae204dac55388e4d14b25f6e7d397da15246cf04b2fdd8ee`  
+		Last Modified: Mon, 07 Mar 2022 21:06:33 GMT  
+		Size: 44.1 MB (44139583 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:063ef4cede4d977dc2893c1b9e7745a313d6bf78c3fc989d7ce45619c546c609`  
-		Last Modified: Tue, 01 Feb 2022 23:20:08 GMT  
+	-	`sha256:5cc213a38452fe8d6d1629529e1773fbfa79fb07e2cd7bdca2cb21e6637aca52`  
+		Last Modified: Mon, 07 Mar 2022 21:06:30 GMT  
 		Size: 173.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
