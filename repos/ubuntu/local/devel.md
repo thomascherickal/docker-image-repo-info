@@ -419,14 +419,9 @@ Licenses: (parsed from: `/usr/share/doc/gcc-11-base/copyright`)
 - `GPL-3`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-11=11.2.0-16ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-11/gcc-11_11.2.0-16ubuntu1.dsc' gcc-11_11.2.0-16ubuntu1.dsc 27910 SHA512:f6ffb6571af0cae4be08d2f1d06863bb1e29d3a7c935e13460dc170f65c844222bf0d4cd72b714ab9771d82b58131af161a094b439c62d485ee2dede7267d380
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-11/gcc-11_11.2.0.orig.tar.gz' gcc-11_11.2.0.orig.tar.gz 87861992 SHA512:64e4634769a62faa0adbfe99e5e590dd9efc1facac20a7dd71ab9f1d675e7df80678cbdc75c966e08ccf91dbc1e1a681d8e3227d0026ffcb5f46bdc96acaace8
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-11/gcc-11_11.2.0-16ubuntu1.debian.tar.xz' gcc-11_11.2.0-16ubuntu1.debian.tar.xz 2033548 SHA512:e259a01556809730e42ada412a3e0acdb676eae6d934607058a3f0ad310e5eade0f4f7d258f6c5920c96362a12497eb651b4cde03420569b1cc31d2add6d3199
-```
 
 ### `dpkg` source package: `gcc-12=12-20220222-1ubuntu1`
 
