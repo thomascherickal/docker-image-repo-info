@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:7461e2b092dfa8646021df8ab8d28278810ecb2af370e87f375dc262337fad2c`
-- Created: `2022-02-14T22:09:49.502250913Z`
+- Image ID: `sha256:7df59d7559417b0916d4716d43a3c6035182f28e533d0e35cdd4406b5aaff4b7`
+- Created: `2022-03-08T19:53:11.787152779Z`
 - Virtual Size: ~ 207.40 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -73,16 +73,16 @@ GPL-2.0-only
 ### `apk` package: `bash`
 
 ```console
-bash-5.1.8-r0 description:
+bash-5.1.16-r0 description:
 The GNU Bourne Again shell
 
-bash-5.1.8-r0 webpage:
+bash-5.1.16-r0 webpage:
 https://www.gnu.org/software/bash/bash.html
 
-bash-5.1.8-r0 installed size:
+bash-5.1.16-r0 installed size:
 1296 KiB
 
-bash-5.1.8-r0 license:
+bash-5.1.16-r0 license:
 GPL-3.0-or-later
 
 ```
@@ -430,16 +430,16 @@ GPL-2.0-or-later LGPL-2.1-or-later
 ### `apk` package: `libuuid`
 
 ```console
-libuuid-2.37.3-r0 description:
+libuuid-2.37.4-r0 description:
 DCE compatible Universally Unique Identifier library
 
-libuuid-2.37.3-r0 webpage:
+libuuid-2.37.4-r0 webpage:
 https://git.kernel.org/cgit/utils/util-linux/util-linux.git
 
-libuuid-2.37.3-r0 installed size:
+libuuid-2.37.4-r0 installed size:
 40 KiB
 
-libuuid-2.37.3-r0 license:
+libuuid-2.37.4-r0 license:
 GPL-3.0-or-later AND GPL-2.0-or-later AND GPL-2.0-only AND
 
 ```
