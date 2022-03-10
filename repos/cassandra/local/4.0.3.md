@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:30b2ae12b7ce1fa3ca6713d1e9bb7976a4a97c8fd98d18e03e73bc621c54523a`
-- Created: `2022-03-04T02:11:55.099896319Z`
-- Virtual Size: ~ 341.17 Mb  
+- Image ID: `sha256:b5b39df4de208cc78c3d31ec5ade69f4bd1d0414fa9471d854a8568ae7b13bf4`
+- Created: `2022-03-07T20:05:39.377520075Z`
+- Virtual Size: ~ 341.13 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -1630,14 +1630,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssl=1.1.1f-1ubuntu2.10
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.10.dsc' openssl_1.1.1f-1ubuntu2.10.dsc 2499 SHA512:388d30358cd111bac756318b259f76eedd77e8f131b1537f63b0b3e7a4c8860f9d39b8a3662931c37993c75579cd95640244e96382e841a3477abb34a26bde73
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f.orig.tar.gz' openssl_1.1.1f.orig.tar.gz 9792828 SHA512:b00bd9b5ad5298fbceeec6bb19c1ab0c106ca5cfb31178497c58bf7e0e0cf30fcc19c20f84e23af31cc126bf2447d3e4f8461db97bafa7bd78f69561932f000c
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.10.debian.tar.xz' openssl_1.1.1f-1ubuntu2.10.debian.tar.xz 170668 SHA512:e95371b58d36b3b7184c0b7b6a459ed121fb57baa4bc694bc0c1f004be98ef7b672b6c8ec2e1207998bf35aafb3dd2c3e8a0e018c13930dbb072f8d911b2b9ed
-```
 
 ### `dpkg` source package: `p11-kit=0.23.20-1ubuntu0.1`
 
@@ -2139,25 +2134,6 @@ $ apt-get source -qq --print-uris util-linux=2.34-0.1ubuntu9.3
 'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.34-0.1ubuntu9.3.dsc' util-linux_2.34-0.1ubuntu9.3.dsc 4042 SHA512:e65684c641d175110008f865369c35adb734f8a80626c0eb3b3f3f47e05c1a6277c9f92b4032e30bb69711d67c2a5ad651adb3ec9ac4ef67d45a2858ce48cc6a
 'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.34.orig.tar.xz' util-linux_2.34.orig.tar.xz 4974812 SHA512:2d0b76f63d32e7afb7acf61a83fabbfd58baa34ab78b3a331ce87f9c676a5fd71c56a493ded95039540d2c46b6048caaa38d7fb4491eb3d52d7b09dc54655cd7
 'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.34-0.1ubuntu9.3.debian.tar.xz' util-linux_2.34-0.1ubuntu9.3.debian.tar.xz 94976 SHA512:b6e55588aea32de6481dad01f194e6f71b8a859019e5c8d6d816c65f32c8b31821d1ab73f13ec34c5d3551311c43b7e24ac01c2af5878a85df72326293c3a71a
-```
-
-### `dpkg` source package: `what-is-python=4`
-
-Binary Packages:
-
-- `python-is-python3=3.8.2-4`
-
-Licenses: (parsed from: `/usr/share/doc/python-is-python3/copyright`)
-
-- `GPL-3`
-- `GPL-3.0`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris what-is-python=4
-'http://archive.ubuntu.com/ubuntu/pool/main/w/what-is-python/what-is-python_4.dsc' what-is-python_4.dsc 1646 SHA256:8f479d2031ad703135f32c32b2894949b3d9d6eadd71c7bec50cbc3d3ca85fa5
-'http://archive.ubuntu.com/ubuntu/pool/main/w/what-is-python/what-is-python_4.tar.xz' what-is-python_4.tar.xz 2264 SHA256:e5b80356cd258077b27d5045e2fbc44c890ad94a304407be6f6fa776afe62a05
 ```
 
 ### `dpkg` source package: `xz-utils=5.2.4-1ubuntu1`
