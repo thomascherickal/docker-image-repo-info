@@ -4895,14 +4895,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=4.15.0-169.177
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-169.177.dsc' linux_4.15.0-169.177.dsc 7028 SHA512:f05601acc4aece34c4b5f42378f921f5dd8bb547ebef89526b205d7bd562d8a34e47538d9c6246f13619e7fb007a069b1b070ab7d4dbef83377fb85edab65fa9
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0.orig.tar.gz' linux_4.15.0.orig.tar.gz 157656459 SHA512:0fab606a295e0857f774f8adaa9d56bf2cb227fbab2daed374415da216391b156f49e606ba37ac402987c5796d408807da5d1a42c0d85a8552f109a3e279443d
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-169.177.diff.gz' linux_4.15.0-169.177.diff.gz 12912990 SHA512:053773c6215f78dfc2fcd35836fd030c7c84615ffdb747ebbc2a92f7b78b7bca7543db3be5bf55b564e6a7dbb123c2f2ef4a6cf04ccc11ec78e010aede1aedc1
-```
 
 ### `dpkg` source package: `llvm-toolchain-10=1:10.0.0-4ubuntu1~18.04.2`
 
