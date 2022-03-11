@@ -1176,14 +1176,9 @@ Licenses: (parsed from: `/usr/share/doc/libexpat1/copyright`, `/usr/share/doc/li
 
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris expat=2.2.5-3ubuntu0.4
-'http://archive.ubuntu.com/ubuntu/pool/main/e/expat/expat_2.2.5-3ubuntu0.4.dsc' expat_2.2.5-3ubuntu0.4.dsc 2214 SHA512:8dfda3c542140be68d32ff37af8307992a7dde4f0554abf71a7199615cf82c5b2f3217158ec87274a6640c9e20da086875488c61660c691b23fe0b1e083397e3
-'http://archive.ubuntu.com/ubuntu/pool/main/e/expat/expat_2.2.5.orig.tar.gz' expat_2.2.5.orig.tar.gz 8273003 SHA512:61ce2a479521412e0c56c352106c4adfb61a6bedb883921aba3ebccc29311ddd192646ac2c51b41572728d4de6ab4cb60a1dbc71515d742a80a8b59d89ca74d6
-'http://archive.ubuntu.com/ubuntu/pool/main/e/expat/expat_2.2.5-3ubuntu0.4.debian.tar.xz' expat_2.2.5-3ubuntu0.4.debian.tar.xz 18456 SHA512:373647b424793829c7e161c07bcc135047f358626b7e39c381207711ac2f47023c821122f90285794ce5afc816bd4d921a256d1a55d683821fa74b15694040a9
-```
 
 ### `dpkg` source package: `findutils=4.6.0+git+20170828-2`
 
@@ -3651,14 +3646,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=4.15.0-169.177
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-169.177.dsc' linux_4.15.0-169.177.dsc 7028 SHA512:f05601acc4aece34c4b5f42378f921f5dd8bb547ebef89526b205d7bd562d8a34e47538d9c6246f13619e7fb007a069b1b070ab7d4dbef83377fb85edab65fa9
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0.orig.tar.gz' linux_4.15.0.orig.tar.gz 157656459 SHA512:0fab606a295e0857f774f8adaa9d56bf2cb227fbab2daed374415da216391b156f49e606ba37ac402987c5796d408807da5d1a42c0d85a8552f109a3e279443d
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-169.177.diff.gz' linux_4.15.0-169.177.diff.gz 12912990 SHA512:053773c6215f78dfc2fcd35836fd030c7c84615ffdb747ebbc2a92f7b78b7bca7543db3be5bf55b564e6a7dbb123c2f2ef4a6cf04ccc11ec78e010aede1aedc1
-```
 
 ### `dpkg` source package: `lksctp-tools=1.0.17+dfsg-2`
 

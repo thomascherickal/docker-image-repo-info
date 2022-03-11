@@ -72,13 +72,9 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.3.15build1
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.3.15build1.dsc' apt_2.3.15build1.dsc 2804 SHA512:927b12de89637ff1e60ee60e7f176206e8aa5a1a6de8e19529042e429c2e7f7dc2e285b8f3ca3c25da0792cdf6dba9bee293f96d685665789646fe54b4ce6a50
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.3.15build1.tar.xz' apt_2.3.15build1.tar.xz 2213544 SHA512:95ec89dd7dd86d6d9db752153a71b1d8eb2df7ea9d66c29deef3bfb0410a4f67ad03b28a6af3b95d03a42d6153b66e6a6806feaae7ee1121642e14baa15c9d16
-```
 
 ### `dpkg` source package: `attr=1:2.5.1-1`
 
@@ -791,15 +787,9 @@ Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/lib
 - `GPL-2`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glibc=2.35-0ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.35-0ubuntu1.dsc' glibc_2.35-0ubuntu1.dsc 8876 SHA512:202cdee3da32c0596eff7b84bbdfac55c706becce0ff0776b6d89924165aa21946b5fcf0c95fa505a9f594c9ea657a5e811782b80b98fef6278aac7a6c3c6e2b
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.35.orig.tar.xz' glibc_2.35.orig.tar.xz 18165952 SHA512:e7336ce27561be5d7c217832a1136fb327e057bd8d3f92925b35c97e3e9f9e486948b5a1e03e5e4090772ef06437a074d10b82e68f17f1ad8f22077ee39e1b66
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.35.orig.tar.xz.asc' glibc_2.35.orig.tar.xz.asc 833 SHA512:2a1c152511dac05f9b4e48f7e7a6b59dbf2d8b71fea54f128173113357be26e86216e13c9865f617049e6858396a221a5abc704f65a786b22453945fd80265e9
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.35-0ubuntu1.debian.tar.xz' glibc_2.35-0ubuntu1.debian.tar.xz 875676 SHA512:5db5ee8734867629123786c19d9f395bdc735b24c68a17aa2e238d63a7fa99792dc3c771fd283d56d2d396fca3555bbafb46bc8af70f275b6b4631774889bf52
-```
 
 ### `dpkg` source package: `gmp=2:6.2.1+dfsg-3ubuntu1`
 
@@ -1609,14 +1599,13 @@ Licenses: (parsed from: `/usr/share/doc/libxml2/copyright`, `/usr/share/doc/libx
 - `ISC`
 - `MIT-1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libxml2=2.9.12+dfsg-6
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxml2/libxml2_2.9.12%2bdfsg-6.dsc' libxml2_2.9.12+dfsg-6.dsc 2915 SHA512:6447187968c9c4d29005f9f5bc2e3be37a054e56a962a93906929fa28caf83cd3b16789b8fa4a3d860204a5f1c50c70b2a4d991ecd25880a985be4b1b2c8fdba
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxml2/libxml2_2.9.12%2bdfsg.orig.tar.xz' libxml2_2.9.12+dfsg.orig.tar.xz 2535044 SHA512:08ffb640e5669b52b29817887d62ef698799570ee5757612826e00aa5237ebf16b13bf838c350aff0ac1081547458d6d1aa6473f3499db7bf87e1f6d39f76386
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxml2/libxml2_2.9.12%2bdfsg-6.debian.tar.xz' libxml2_2.9.12+dfsg-6.debian.tar.xz 34004 SHA512:b2529075322a2ad775a95b82deb5ec553052a39e77101a493367b364fd8715d64b5245e223f39908e377ca7b011f93ad16fd4efb31486acf563ea6e267292aea
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/libxml2/2.9.12+dfsg-6/
+
 
 ### `dpkg` source package: `libxslt=1.1.34-4build1`
 
@@ -1691,14 +1680,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=5.15.0-18.18
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0-18.18.dsc' linux_5.15.0-18.18.dsc 7529 SHA512:82a0d705b6cc7ff641fa15a0c0af4d9749c0a04083b3a7a0eb879e6554a062cf3c7132f4cee5a519d7c76724e2331ea272d9057b0f859c66f8356cf7e020c396
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0.orig.tar.gz' linux_5.15.0.orig.tar.gz 194969557 SHA512:ae9a32132d5988441c189157703b0f8fa4e232d8d24f7104f944c06827db740beafae55eb37a51eb99b4ac513927cd372321fa1e84afff4d450b786e44414861
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0-18.18.diff.gz' linux_5.15.0-18.18.diff.gz 5064265 SHA512:b484854cb39f12b5441d09165e090839d3189e53cdc9e57519e14b5d80c5971d247e6e30a45d80981c503dd4c315508d4a7e0cf067bed86564597579c80b933f
-```
 
 ### `dpkg` source package: `lsb=11.1.0ubuntu3`
 
@@ -1791,13 +1775,13 @@ Licenses: (parsed from: `/usr/share/doc/media-types/copyright`)
 
 - `ad-hoc`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris media-types=5.0.0
-'http://archive.ubuntu.com/ubuntu/pool/main/m/media-types/media-types_5.0.0.dsc' media-types_5.0.0.dsc 1620 SHA512:9228fb18ad283c0d65ef5a0d2acc5a95531bd13c12efc0984d04747a4a3103c1a70cabb19044131113d34760ebd58630383162aeb8c241f0f13b6da3c383c3be
-'http://archive.ubuntu.com/ubuntu/pool/main/m/media-types/media-types_5.0.0.tar.xz' media-types_5.0.0.tar.xz 55096 SHA512:2dee1394ce96a367a14b5d1ea0d902619c105a721e6159cc1c398a1cc410196dc4a51f6494ea05adb9f121b52e56b2c48543131cc64f23002cb2fe6b042e76cf
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/media-types/5.0.0/
+
 
 ### `dpkg` source package: `more-itertools=8.10.0-2`
 
@@ -2213,14 +2197,9 @@ Licenses: (parsed from: `/usr/share/doc/libprocps8/copyright`, `/usr/share/doc/p
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris procps=2:3.3.17-6ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_3.3.17-6ubuntu1.dsc' procps_3.3.17-6ubuntu1.dsc 2237 SHA512:ec21eb1695d53b7f236a4e288a1a2ff050764b910d4f0716cbbe4a4b0f41b0530fdef91b86b97bb9306216fee8857fc1df864c0297839acae1680815cb392835
-'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_3.3.17.orig.tar.xz' procps_3.3.17.orig.tar.xz 1008428 SHA512:59e9a5013430fd9da508c4655d58375dc32e025bb502bb28fb9a92a48e4f2838b3355e92b4648f7384b2050064d17079bf4595d889822ebb5030006bc154a1a7
-'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_3.3.17-6ubuntu1.debian.tar.xz' procps_3.3.17-6ubuntu1.debian.tar.xz 34100 SHA512:10d846d34bc753720f92815181836ded4e807410a09ed2f1e4c9c2b5b084aa82d36ad007fe1d5b489c6a88deec47367665b4fd210f4fdc0fd4c21be936059af3
-```
 
 ### `dpkg` source package: `pycodestyle=2.8.0-2`
 
@@ -5285,14 +5264,9 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=249.10-0ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_249.10-0ubuntu1.dsc' systemd_249.10-0ubuntu1.dsc 5681 SHA512:f87bdd20556d8077938b86c318611c55c5e889636898d6b74622e899953fda601c51969689c3fd1c5514f7728c03f98bcdc304f09e9e49d62c3ac5fbcb44143a
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_249.10.orig.tar.gz' systemd_249.10.orig.tar.gz 10615300 SHA512:3baf291cbc4ae86621f89df1a41ca4afa19877b5c0b3e13bea17f02eec7e5b67888325f052d84206363467e3545a62321934d2c695229db83cfdc0b81d7bc46b
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_249.10-0ubuntu1.debian.tar.xz' systemd_249.10-0ubuntu1.debian.tar.xz 224212 SHA512:4b22dca7b6c3bf77bf086f758c05f2a9fdda1c6574b40f7f7f6a6b9d92236d2c097ae69d2afe6355db5b596e123b6f07fe5f00a7298ffaf0c066ec1bba612602
-```
 
 ### `dpkg` source package: `sysvinit=3.01-1ubuntu1`
 
