@@ -760,14 +760,9 @@ Licenses: (parsed from: `/usr/share/doc/libexpat1/copyright`, `/usr/share/doc/li
 
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris expat=2.4.1-2ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/e/expat/expat_2.4.1-2ubuntu0.1.dsc' expat_2.4.1-2ubuntu0.1.dsc 2096 SHA512:0ecc25ad2b0e274cc321f5016348e8cf828c2816e301d3bc98d656feccdc2504e74f82fe3cb581397e5f40b129370ddab0fae665fcac4e3ad18c092efbf78012
-'http://archive.ubuntu.com/ubuntu/pool/main/e/expat/expat_2.4.1.orig.tar.gz' expat_2.4.1.orig.tar.gz 8307804 SHA512:1f08861e9b766fdbbc40159404a3fe1a86451d635ef81874fa3492845eda83ac2dc6a0272525891d396b70c9a9254c2f6c907fe4abb2f8a533ccd3f52dae9d5a
-'http://archive.ubuntu.com/ubuntu/pool/main/e/expat/expat_2.4.1-2ubuntu0.1.debian.tar.xz' expat_2.4.1-2ubuntu0.1.debian.tar.xz 17952 SHA512:b8ed027ae56f417c7d59b1e54b8c7745b527a5b44943c9e8a292ac693fda416ffa7801c5a9064944babb8a4e4a8ee6df0cd14a24c8fe8ddd3581ea54401fce52
-```
 
 ### `dpkg` source package: `fftw3=3.3.8-2ubuntu7`
 
@@ -2962,14 +2957,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=5.13.0-30.33
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.13.0-30.33.dsc' linux_5.13.0-30.33.dsc 8810 SHA512:14f4739a73fe090769639d196d05968f5295a6affd0207ffc62e1767db12bb5bf9b69f66f48e15a74b8e66b926d5d7406ee31456635c137763a1ddf0e7569e01
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.13.0.orig.tar.gz' linux_5.13.0.orig.tar.gz 189652704 SHA512:e7aff485ac9f5752df4a35fbb7668fd0a60597d3cd63c3bc78933f9fbf509ed83f8d2516c8441e6136157c5efe9a4745f97ba74b3b4353c26c1e44ca0eaa0b87
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.13.0-30.33.diff.gz' linux_5.13.0-30.33.diff.gz 6157665 SHA512:e013582cad8e0c2eb8e6f3a7b26b151d901cd34479fe5aa3177b7b420a1d11acee3347a65d495d591d0f008c9341ed32eb309195130fbf4261b595a49ed65100
-```
 
 ### `dpkg` source package: `lsb=11.1.0ubuntu3`
 

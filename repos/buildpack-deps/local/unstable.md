@@ -3389,20 +3389,13 @@ Licenses: (parsed from: `/usr/share/doc/libwebp-dev/copyright`, `/usr/share/doc/
 
 - `Apache-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libwebp=1.2.1-7
-'http://deb.debian.org/debian/pool/main/libw/libwebp/libwebp_1.2.1-7.dsc' libwebp_1.2.1-7.dsc 2065 SHA256:834d5e979085fad1fc2124f6350be780f59fd71210418aa463b4f136f1b0817b
-'http://deb.debian.org/debian/pool/main/libw/libwebp/libwebp_1.2.1.orig.tar.gz' libwebp_1.2.1.orig.tar.gz 4100806 SHA256:808b98d2f5b84e9b27fdef6c5372dac769c3bda4502febbfa5031bd3c4d7d018
-'http://deb.debian.org/debian/pool/main/libw/libwebp/libwebp_1.2.1-7.debian.tar.xz' libwebp_1.2.1-7.debian.tar.xz 4976 SHA256:4c8ffb8a99d00a583ecfa3988dcd6629b7cfa4f0910ddb4775c691a1a918cf7a
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libwebp/1.2.1-7/
 
-- https://sources.debian.net/src/libwebp/1.2.1-7/ (for browsing the source)
-- https://sources.debian.net/src/libwebp/1.2.1-7/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libwebp/1.2.1-7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libwmf=0.2.12-5`
 
