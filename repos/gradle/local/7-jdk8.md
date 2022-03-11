@@ -1,9 +1,9 @@
-# `gradle:7.4.0-jdk8`
+# `gradle:7.4.1-jdk8`
 
 ## Docker Metadata
 
-- Image ID: `sha256:ca37cf079ff69d73cfb78117b454f0a53650e944e43eb32c51701e2a80b674b2`
-- Created: `2022-03-07T19:54:09.507013253Z`
+- Image ID: `sha256:e7a2845011ef86fb5c07fc3b1e3e220dcd7b3bb6a6e647f682402ba895cba88f`
+- Created: `2022-03-10T18:19:43.967736331Z`
 - Virtual Size: ~ 641.50 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -16,7 +16,7 @@
   - `JAVA_VERSION=jdk8u322-b06`
   - `JAVA_HOME=/opt/java/openjdk`
   - `GRADLE_HOME=/opt/gradle`
-  - `GRADLE_VERSION=7.4`
+  - `GRADLE_VERSION=7.4.1`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -599,14 +599,9 @@ Licenses: (parsed from: `/usr/share/doc/libexpat1/copyright`)
 
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris expat=2.2.9-1ubuntu0.2
-'http://archive.ubuntu.com/ubuntu/pool/main/e/expat/expat_2.2.9-1ubuntu0.2.dsc' expat_2.2.9-1ubuntu0.2.dsc 2064 SHA512:2a7d78a718fb0a1c26e05feda88dace03796fd4f0045e468f6ec7ca606b69136d9ad92e912c468501d87778abdd7701567aec6ae23e9209c0f7c04bc00e383c4
-'http://archive.ubuntu.com/ubuntu/pool/main/e/expat/expat_2.2.9.orig.tar.gz' expat_2.2.9.orig.tar.gz 8273174 SHA512:e274fa7f30630450cb3ca681b266d765dbb7f5d00d1275ff9d9b2e2f6e1095893b8af4e3f4172ae6297c7a8a831a0a6becd484fe4bcdca09c37922f630780ef0
-'http://archive.ubuntu.com/ubuntu/pool/main/e/expat/expat_2.2.9-1ubuntu0.2.debian.tar.xz' expat_2.2.9-1ubuntu0.2.debian.tar.xz 17492 SHA512:38f8d8781988df8fd8d7578e8626b1c9f601040487da189b1bafa4c04077de84a2e23f6189c7519e49553b6138e81037445639d8f48448341b4cb8307b97787f
-```
 
 ### `dpkg` source package: `findutils=4.7.0-1ubuntu1`
 
