@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:81693ae0ec9539d061337c8a91d7912bc8c7fd1c76b9289440a1934c13999a11`
-- Created: `2022-03-03T22:37:32.707252608Z`
-- Virtual Size: ~ 220.53 Mb  
+- Image ID: `sha256:ee07f398348eecfb3479509298ba815caa6815a9b389e5400d98ed19f964ecec`
+- Created: `2022-03-11T00:40:38.510821493Z`
+- Virtual Size: ~ 223.47 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -14,8 +14,8 @@
   - `OPENSSL_VERSION=1.1.1m`
   - `OPENSSL_SOURCE_SHA256=f89199be8b23ca45fc7cb9f1d8d3ee67312318286ad030f5316aca6462db6c96`
   - `OPENSSL_PGP_KEY_IDS=0x8657ABB260F056B1E5190839D9C4D26D0E604491 0x5B2545DAB21995F4088CEFAA36CEE4DEB00CFE33 0xED230BEC4D4F2518B9D7DF41F0DB4D21C1D35231 0xC1F33DD8CE1D4CC613AF14DA9195C48241FBF7DD 0x7953AC1FBC3DC8B3B292393ED5E9E43F7DF9EE8C 0xE5E52560DD91C556DDBDA5D02064C53641C25E5D`
-  - `OTP_VERSION=24.2.2`
-  - `OTP_SOURCE_SHA256=a87bcbdcdd1b99de7038030123b2d655d46d6e698a9143608618bdbec6ebbee7`
+  - `OTP_VERSION=24.3`
+  - `OTP_SOURCE_SHA256=ee8dd101af68ba175deec1844059ed287a22f7f46e72915631c965cc8be331f9`
   - `RABBITMQ_DATA_DIR=/var/lib/rabbitmq`
   - `RABBITMQ_VERSION=3.9.13`
   - `RABBITMQ_PGP_KEY_ID=0x0A9AF2115F4687BD29803A206B73A36E6026DFCA`
@@ -436,11 +436,11 @@ $ apt-get source -qq --print-uris gcc-10=10.3.0-1ubuntu1~20.04
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.3.0-1ubuntu1%7e20.04.debian.tar.xz' gcc-10_10.3.0-1ubuntu1~20.04.debian.tar.xz 580864 SHA512:3ae060b517a67ae2410b48c83a7836ec25e83422cb3db5dbe55cce9e97609aff82062aa55a84c64ca9c52f405a41d2da20c1d016b15521102cac3b82895f3975
 ```
 
-### `dpkg` source package: `gcc-9=9.3.0-17ubuntu1~20.04`
+### `dpkg` source package: `gcc-9=9.4.0-1ubuntu1~20.04`
 
 Binary Packages:
 
-- `gcc-9-base:amd64=9.3.0-17ubuntu1~20.04`
+- `gcc-9-base:amd64=9.4.0-1ubuntu1~20.04`
 
 Licenses: (parsed from: `/usr/share/doc/gcc-9-base/copyright`)
 
@@ -452,9 +452,14 @@ Licenses: (parsed from: `/usr/share/doc/gcc-9-base/copyright`)
 - `LGPL`
 - `LGPL-2.1+`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris gcc-9=9.4.0-1ubuntu1~20.04
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-9/gcc-9_9.4.0-1ubuntu1%7e20.04.dsc' gcc-9_9.4.0-1ubuntu1~20.04.dsc 23752 SHA512:19c1a3636fe50646050b7d78f70ba2bc215fa1b4f0867cf9bc5eebffd8fa1bba00464e96883f7b872251d1c0b33904ddfe2b485f76e30aefcf90d5ce9b5ea727
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-9/gcc-9_9.4.0.orig.tar.gz' gcc-9_9.4.0.orig.tar.gz 92368536 SHA512:c10390524e900d3f0afd4516af097f536304fb2946ecf73eaba0472b953609ce8fbb5c7f0c20af9e54fe38fc8f45ec3b6ebd2051fa67225c73efa8362150c1c6
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-9/gcc-9_9.4.0-1ubuntu1%7e20.04.debian.tar.xz' gcc-9_9.4.0-1ubuntu1~20.04.debian.tar.xz 577692 SHA512:8c7a9255aef5c8fb3c8489ecb87059127a1c68321dd5f0d0a54a1d3761f3208e82da6236a7f39c48ba0c2a186ebe9d317eb5945825136bb1ea96f5209e8ea7bc
+```
 
 ### `dpkg` source package: `glibc=2.31-0ubuntu9.7`
 

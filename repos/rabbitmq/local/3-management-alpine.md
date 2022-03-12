@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:85dc1264ca4ac7ad96238839aa4c3f68f9959e499b607bdd46fc07b47f82141e`
-- Created: `2022-02-26T02:17:50.083854309Z`
-- Virtual Size: ~ 177.47 Mb  
+- Image ID: `sha256:07f08189cfa8060367b3a5c17ac112255483afe7d32d742ff522714e7b838504`
+- Created: `2022-03-11T00:41:09.521989864Z`
+- Virtual Size: ~ 180.35 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -14,8 +14,8 @@
   - `OPENSSL_VERSION=1.1.1m`
   - `OPENSSL_SOURCE_SHA256=f89199be8b23ca45fc7cb9f1d8d3ee67312318286ad030f5316aca6462db6c96`
   - `OPENSSL_PGP_KEY_IDS=0x8657ABB260F056B1E5190839D9C4D26D0E604491 0x5B2545DAB21995F4088CEFAA36CEE4DEB00CFE33 0xED230BEC4D4F2518B9D7DF41F0DB4D21C1D35231 0xC1F33DD8CE1D4CC613AF14DA9195C48241FBF7DD 0x7953AC1FBC3DC8B3B292393ED5E9E43F7DF9EE8C 0xE5E52560DD91C556DDBDA5D02064C53641C25E5D`
-  - `OTP_VERSION=24.2.2`
-  - `OTP_SOURCE_SHA256=a87bcbdcdd1b99de7038030123b2d655d46d6e698a9143608618bdbec6ebbee7`
+  - `OTP_VERSION=24.3`
+  - `OTP_SOURCE_SHA256=ee8dd101af68ba175deec1844059ed287a22f7f46e72915631c965cc8be331f9`
   - `RABBITMQ_DATA_DIR=/var/lib/rabbitmq`
   - `RABBITMQ_VERSION=3.9.13`
   - `RABBITMQ_PGP_KEY_ID=0x0A9AF2115F4687BD29803A206B73A36E6026DFCA`
@@ -133,16 +133,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `expat`
 
 ```console
-expat-2.4.5-r0 description:
+expat-2.4.7-r0 description:
 XML Parser library written in C
 
-expat-2.4.5-r0 webpage:
+expat-2.4.7-r0 webpage:
 http://www.libexpat.org/
 
-expat-2.4.5-r0 installed size:
+expat-2.4.7-r0 installed size:
 192 KiB
 
-expat-2.4.5-r0 license:
+expat-2.4.7-r0 license:
 MIT
 
 ```

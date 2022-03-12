@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:c8817e4680796cf6d3872fa75e4f278346468f1b32dedca4a93cf1ac27336e04`
-- Created: `2022-03-03T22:37:47.111317033Z`
-- Virtual Size: ~ 253.52 Mb  
+- Image ID: `sha256:7b806da5f051bef9f41f2fa01ea80cc48c1215e5cd34df2c8a46e7b5ee89969f`
+- Created: `2022-03-11T00:40:50.469630734Z`
+- Virtual Size: ~ 256.45 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -14,8 +14,8 @@
   - `OPENSSL_VERSION=1.1.1m`
   - `OPENSSL_SOURCE_SHA256=f89199be8b23ca45fc7cb9f1d8d3ee67312318286ad030f5316aca6462db6c96`
   - `OPENSSL_PGP_KEY_IDS=0x8657ABB260F056B1E5190839D9C4D26D0E604491 0x5B2545DAB21995F4088CEFAA36CEE4DEB00CFE33 0xED230BEC4D4F2518B9D7DF41F0DB4D21C1D35231 0xC1F33DD8CE1D4CC613AF14DA9195C48241FBF7DD 0x7953AC1FBC3DC8B3B292393ED5E9E43F7DF9EE8C 0xE5E52560DD91C556DDBDA5D02064C53641C25E5D`
-  - `OTP_VERSION=24.2.2`
-  - `OTP_SOURCE_SHA256=a87bcbdcdd1b99de7038030123b2d655d46d6e698a9143608618bdbec6ebbee7`
+  - `OTP_VERSION=24.3`
+  - `OTP_SOURCE_SHA256=ee8dd101af68ba175deec1844059ed287a22f7f46e72915631c965cc8be331f9`
   - `RABBITMQ_DATA_DIR=/var/lib/rabbitmq`
   - `RABBITMQ_VERSION=3.9.13`
   - `RABBITMQ_PGP_KEY_ID=0x0A9AF2115F4687BD29803A206B73A36E6026DFCA`
@@ -389,11 +389,11 @@ $ apt-get source -qq --print-uris e2fsprogs=1.45.5-2ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.45.5-2ubuntu1.debian.tar.xz' e2fsprogs_1.45.5-2ubuntu1.debian.tar.xz 81528 SHA256:bcf259dd0480b50996580a765fded85f89a0a6041f6c81cbbcce94f58944c51b
 ```
 
-### `dpkg` source package: `expat=2.2.9-1ubuntu0.2`
+### `dpkg` source package: `expat=2.2.9-1ubuntu0.4`
 
 Binary Packages:
 
-- `libexpat1:amd64=2.2.9-1ubuntu0.2`
+- `libexpat1:amd64=2.2.9-1ubuntu0.4`
 
 Licenses: (parsed from: `/usr/share/doc/libexpat1/copyright`)
 
@@ -402,10 +402,10 @@ Licenses: (parsed from: `/usr/share/doc/libexpat1/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris expat=2.2.9-1ubuntu0.2
-'http://archive.ubuntu.com/ubuntu/pool/main/e/expat/expat_2.2.9-1ubuntu0.2.dsc' expat_2.2.9-1ubuntu0.2.dsc 2064 SHA512:2a7d78a718fb0a1c26e05feda88dace03796fd4f0045e468f6ec7ca606b69136d9ad92e912c468501d87778abdd7701567aec6ae23e9209c0f7c04bc00e383c4
+$ apt-get source -qq --print-uris expat=2.2.9-1ubuntu0.4
+'http://archive.ubuntu.com/ubuntu/pool/main/e/expat/expat_2.2.9-1ubuntu0.4.dsc' expat_2.2.9-1ubuntu0.4.dsc 2064 SHA512:e8fa4c5bd395f58c262075cc80f94c33c9386898809b3959812a9f01413aadacb1dfc34d1ca3f03045571e6eba125f4d6d18b0a14808862832136af12e4aea3c
 'http://archive.ubuntu.com/ubuntu/pool/main/e/expat/expat_2.2.9.orig.tar.gz' expat_2.2.9.orig.tar.gz 8273174 SHA512:e274fa7f30630450cb3ca681b266d765dbb7f5d00d1275ff9d9b2e2f6e1095893b8af4e3f4172ae6297c7a8a831a0a6becd484fe4bcdca09c37922f630780ef0
-'http://archive.ubuntu.com/ubuntu/pool/main/e/expat/expat_2.2.9-1ubuntu0.2.debian.tar.xz' expat_2.2.9-1ubuntu0.2.debian.tar.xz 17492 SHA512:38f8d8781988df8fd8d7578e8626b1c9f601040487da189b1bafa4c04077de84a2e23f6189c7519e49553b6138e81037445639d8f48448341b4cb8307b97787f
+'http://archive.ubuntu.com/ubuntu/pool/main/e/expat/expat_2.2.9-1ubuntu0.4.debian.tar.xz' expat_2.2.9-1ubuntu0.4.debian.tar.xz 25972 SHA512:e9ee861e786b5811684233a5e5c8c3ba1f0713519e1084f0801088a5d0f29e00483b60e4e3d3024d9400ac78aee7b7a4198c30c6c2ea5c146c9947a71d237864
 ```
 
 ### `dpkg` source package: `findutils=4.7.0-1ubuntu1`
@@ -455,11 +455,11 @@ $ apt-get source -qq --print-uris gcc-10=10.3.0-1ubuntu1~20.04
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.3.0-1ubuntu1%7e20.04.debian.tar.xz' gcc-10_10.3.0-1ubuntu1~20.04.debian.tar.xz 580864 SHA512:3ae060b517a67ae2410b48c83a7836ec25e83422cb3db5dbe55cce9e97609aff82062aa55a84c64ca9c52f405a41d2da20c1d016b15521102cac3b82895f3975
 ```
 
-### `dpkg` source package: `gcc-9=9.3.0-17ubuntu1~20.04`
+### `dpkg` source package: `gcc-9=9.4.0-1ubuntu1~20.04`
 
 Binary Packages:
 
-- `gcc-9-base:amd64=9.3.0-17ubuntu1~20.04`
+- `gcc-9-base:amd64=9.4.0-1ubuntu1~20.04`
 
 Licenses: (parsed from: `/usr/share/doc/gcc-9-base/copyright`)
 
@@ -471,9 +471,14 @@ Licenses: (parsed from: `/usr/share/doc/gcc-9-base/copyright`)
 - `LGPL`
 - `LGPL-2.1+`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris gcc-9=9.4.0-1ubuntu1~20.04
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-9/gcc-9_9.4.0-1ubuntu1%7e20.04.dsc' gcc-9_9.4.0-1ubuntu1~20.04.dsc 23752 SHA512:19c1a3636fe50646050b7d78f70ba2bc215fa1b4f0867cf9bc5eebffd8fa1bba00464e96883f7b872251d1c0b33904ddfe2b485f76e30aefcf90d5ce9b5ea727
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-9/gcc-9_9.4.0.orig.tar.gz' gcc-9_9.4.0.orig.tar.gz 92368536 SHA512:c10390524e900d3f0afd4516af097f536304fb2946ecf73eaba0472b953609ce8fbb5c7f0c20af9e54fe38fc8f45ec3b6ebd2051fa67225c73efa8362150c1c6
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-9/gcc-9_9.4.0-1ubuntu1%7e20.04.debian.tar.xz' gcc-9_9.4.0-1ubuntu1~20.04.debian.tar.xz 577692 SHA512:8c7a9255aef5c8fb3c8489ecb87059127a1c68321dd5f0d0a54a1d3761f3208e82da6236a7f39c48ba0c2a186ebe9d317eb5945825136bb1ea96f5209e8ea7bc
+```
 
 ### `dpkg` source package: `glibc=2.31-0ubuntu9.7`
 
@@ -1118,19 +1123,24 @@ $ apt-get source -qq --print-uris nettle=3.5.1+really3.5.1-2ubuntu0.2
 'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.5.1%2breally3.5.1-2ubuntu0.2.debian.tar.xz' nettle_3.5.1+really3.5.1-2ubuntu0.2.debian.tar.xz 27228 SHA512:389c303e679b6b6714f824f22bc8675c1ea4bdab0108b69e9514613109573d01592e3f80bf9a144866a159a9a09fa0f3218d62b9f6978bdfe5e95a18bcfe3a88
 ```
 
-### `dpkg` source package: `openssl=1.1.1f-1ubuntu2.10`
+### `dpkg` source package: `openssl=1.1.1f-1ubuntu2.11`
 
 Binary Packages:
 
-- `libssl1.1:amd64=1.1.1f-1ubuntu2.10`
+- `libssl1.1:amd64=1.1.1f-1ubuntu2.11`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris openssl=1.1.1f-1ubuntu2.11
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.11.dsc' openssl_1.1.1f-1ubuntu2.11.dsc 2495 SHA512:df41540db065c66bc233a53dc0ef03fbe57af20c809dd8a96e53427c77ff095bbc34a619618b610639d23c68b77ead5d771bbe627eac00f818636b1d56566008
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f.orig.tar.gz' openssl_1.1.1f.orig.tar.gz 9792828 SHA512:b00bd9b5ad5298fbceeec6bb19c1ab0c106ca5cfb31178497c58bf7e0e0cf30fcc19c20f84e23af31cc126bf2447d3e4f8461db97bafa7bd78f69561932f000c
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.11.debian.tar.xz' openssl_1.1.1f-1ubuntu2.11.debian.tar.xz 171284 SHA512:362caff4b491a953d157ab904d69be0b12ce859503d7ffc27e870979306eb224f95319d721ceaaa21c1c7f65720496c26aade09eba5a6818089f0f0ca4eba760
+```
 
 ### `dpkg` source package: `p11-kit=0.23.20-1ubuntu0.1`
 
