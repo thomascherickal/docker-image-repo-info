@@ -26,7 +26,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url alternatives-1.19-1.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/c/chkconfig-1.19-1.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/c/chkconfig-1.19-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `audit-libs-3.0.6-1.fc35.x86_64`
@@ -37,7 +37,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url audit-libs-3.0.6-1.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/a/audit-3.0.6-1.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/a/audit-3.0.6-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `basesystem-11-12.fc35.noarch`
@@ -48,7 +48,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url basesystem-11-12.fc35.noarch
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/b/basesystem-11-12.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/b/basesystem-11-12.fc35.src.rpm
 ```
 
 ### `rpm` package: `bash-5.1.8-2.fc35.x86_64`
@@ -59,7 +59,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url bash-5.1.8-2.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/b/bash-5.1.8-2.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/b/bash-5.1.8-2.fc35.src.rpm
 ```
 
 ### `rpm` package: `bzip2-libs-1.0.8-9.fc35.x86_64`
@@ -70,7 +70,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url bzip2-libs-1.0.8-9.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/b/bzip2-1.0.8-9.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/b/bzip2-1.0.8-9.fc35.src.rpm
 ```
 
 ### `rpm` package: `ca-certificates-2021.2.50-3.fc35.noarch`
@@ -81,7 +81,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url ca-certificates-2021.2.50-3.fc35.noarch
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/c/ca-certificates-2021.2.50-3.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/c/ca-certificates-2021.2.50-3.fc35.src.rpm
 ```
 
 ### `rpm` package: `coreutils-8.32-31.fc35.x86_64`
@@ -92,7 +92,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url coreutils-8.32-31.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/c/coreutils-8.32-31.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/c/coreutils-8.32-31.fc35.src.rpm
 ```
 
 ### `rpm` package: `coreutils-common-8.32-31.fc35.x86_64`
@@ -103,7 +103,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url coreutils-common-8.32-31.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/c/coreutils-8.32-31.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/c/coreutils-8.32-31.fc35.src.rpm
 ```
 
 ### `rpm` package: `cracklib-2.9.6-27.fc35.x86_64`
@@ -114,7 +114,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url cracklib-2.9.6-27.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/c/cracklib-2.9.6-27.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/c/cracklib-2.9.6-27.fc35.src.rpm
 ```
 
 ### `rpm` package: `crypto-policies-20210819-1.gitd0fdcfb.fc35.noarch`
@@ -125,7 +125,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url crypto-policies-20210819-1.gitd0fdcfb.fc35.noarch
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/c/crypto-policies-20210819-1.gitd0fdcfb.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/c/crypto-policies-20210819-1.gitd0fdcfb.fc35.src.rpm
 ```
 
 ### `rpm` package: `curl-7.79.1-1.fc35.x86_64`
@@ -136,7 +136,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url curl-7.79.1-1.fc35
-http://mirror.arizona.edu/fedora/linux/updates/35/Everything/source/tree/Packages/c/curl-7.79.1-1.fc35.src.rpm
+http://mirror.math.princeton.edu/pub/fedora/linux/updates/35/Everything/source/tree/Packages/c/curl-7.79.1-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `cyrus-sasl-lib-2.1.27-13.fc35.x86_64`
@@ -147,7 +147,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url cyrus-sasl-lib-2.1.27-13.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/c/cyrus-sasl-2.1.27-13.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/c/cyrus-sasl-2.1.27-13.fc35.src.rpm
 ```
 
 ### `rpm` package: `dnf-4.9.0-1.fc35.noarch`
@@ -158,7 +158,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url dnf-4.9.0-1.fc35.noarch
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/d/dnf-4.9.0-1.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/d/dnf-4.9.0-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `dnf-data-4.9.0-1.fc35.noarch`
@@ -169,7 +169,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url dnf-data-4.9.0-1.fc35.noarch
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/d/dnf-4.9.0-1.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/d/dnf-4.9.0-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `elfutils-default-yama-scope-0.185-5.fc35.noarch`
@@ -180,7 +180,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url elfutils-default-yama-scope-0.185-5.fc35.noarch
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/e/elfutils-0.185-5.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/e/elfutils-0.185-5.fc35.src.rpm
 ```
 
 ### `rpm` package: `elfutils-libelf-0.185-5.fc35.x86_64`
@@ -191,7 +191,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url elfutils-libelf-0.185-5.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/e/elfutils-0.185-5.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/e/elfutils-0.185-5.fc35.src.rpm
 ```
 
 ### `rpm` package: `elfutils-libs-0.185-5.fc35.x86_64`
@@ -202,7 +202,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url elfutils-libs-0.185-5.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/e/elfutils-0.185-5.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/e/elfutils-0.185-5.fc35.src.rpm
 ```
 
 ### `rpm` package: `expat-2.4.1-2.fc35.x86_64`
@@ -213,7 +213,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url expat-2.4.1-2.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/e/expat-2.4.1-2.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/e/expat-2.4.1-2.fc35.src.rpm
 ```
 
 ### `rpm` package: `fedora-gpg-keys-35-1.noarch`
@@ -224,7 +224,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url fedora-gpg-keys-35-1.noarch
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/f/fedora-repos-35-1.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/f/fedora-repos-35-1.src.rpm
 ```
 
 ### `rpm` package: `fedora-release-common-35-35.noarch`
@@ -253,7 +253,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url fedora-repos-35-1.noarch
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/f/fedora-repos-35-1.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/f/fedora-repos-35-1.src.rpm
 ```
 
 ### `rpm` package: `fedora-repos-modular-35-1.noarch`
@@ -264,7 +264,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url fedora-repos-modular-35-1.noarch
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/f/fedora-repos-35-1.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/f/fedora-repos-35-1.src.rpm
 ```
 
 ### `rpm` package: `file-libs-5.40-9.fc35.x86_64`
@@ -275,7 +275,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url file-libs-5.40-9.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/f/file-5.40-9.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/f/file-5.40-9.fc35.src.rpm
 ```
 
 ### `rpm` package: `filesystem-3.14-7.fc35.x86_64`
@@ -286,7 +286,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url filesystem-3.14-7.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/f/filesystem-3.14-7.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/f/filesystem-3.14-7.fc35.src.rpm
 ```
 
 ### `rpm` package: `gawk-5.1.0-4.fc35.x86_64`
@@ -297,7 +297,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url gawk-5.1.0-4.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/g/gawk-5.1.0-4.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/g/gawk-5.1.0-4.fc35.src.rpm
 ```
 
 ### `rpm` package: `gdbm-libs-1.22-1.fc35.x86_64`
@@ -308,7 +308,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url gdbm-libs-1.22-1.fc35
-http://mirror.arizona.edu/fedora/linux/updates/35/Everything/source/tree/Packages/g/gdbm-1.22-1.fc35.src.rpm
+http://mirror.math.princeton.edu/pub/fedora/linux/updates/35/Everything/source/tree/Packages/g/gdbm-1.22-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `glib2-2.70.1-1.fc35.x86_64`
@@ -343,7 +343,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url gmp-6.2.0-7.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/g/gmp-6.2.0-7.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/g/gmp-6.2.0-7.fc35.src.rpm
 ```
 
 ### `rpm` package: `gnupg2-2.3.3-1.fc35.x86_64`
@@ -360,7 +360,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url gnutls-3.7.2-2.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/g/gnutls-3.7.2-2.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/g/gnutls-3.7.2-2.fc35.src.rpm
 ```
 
 ### `rpm` package: `gpg-pubkey-9867c58f-601c49ca`
@@ -377,7 +377,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url gpgme-1.15.1-6.fc35
-http://mirror.arizona.edu/fedora/linux/updates/35/Everything/source/tree/Packages/g/gpgme-1.15.1-6.fc35.src.rpm
+http://mirror.math.princeton.edu/pub/fedora/linux/updates/35/Everything/source/tree/Packages/g/gpgme-1.15.1-6.fc35.src.rpm
 ```
 
 ### `rpm` package: `grep-3.6-4.fc35.x86_64`
@@ -388,7 +388,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url grep-3.6-4.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/g/grep-3.6-4.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/g/grep-3.6-4.fc35.src.rpm
 ```
 
 ### `rpm` package: `gzip-1.10-5.fc35.x86_64`
@@ -399,7 +399,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url gzip-1.10-5.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/g/gzip-1.10-5.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/g/gzip-1.10-5.fc35.src.rpm
 ```
 
 ### `rpm` package: `ima-evm-utils-1.3.2-3.fc35.x86_64`
@@ -410,7 +410,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url ima-evm-utils-1.3.2-3.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/i/ima-evm-utils-1.3.2-3.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/i/ima-evm-utils-1.3.2-3.fc35.src.rpm
 ```
 
 ### `rpm` package: `json-c-0.15-2.fc35.x86_64`
@@ -421,7 +421,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url json-c-0.15-2.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/j/json-c-0.15-2.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/j/json-c-0.15-2.fc35.src.rpm
 ```
 
 ### `rpm` package: `keyutils-libs-1.6.1-3.fc35.x86_64`
@@ -432,7 +432,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url keyutils-libs-1.6.1-3.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/k/keyutils-1.6.1-3.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/k/keyutils-1.6.1-3.fc35.src.rpm
 ```
 
 ### `rpm` package: `krb5-libs-1.19.2-2.fc35.x86_64`
@@ -443,7 +443,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url krb5-libs-1.19.2-2.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/k/krb5-1.19.2-2.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/k/krb5-1.19.2-2.fc35.src.rpm
 ```
 
 ### `rpm` package: `libacl-2.3.1-2.fc35.x86_64`
@@ -454,7 +454,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libacl-2.3.1-2.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/a/acl-2.3.1-2.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/a/acl-2.3.1-2.fc35.src.rpm
 ```
 
 ### `rpm` package: `libarchive-3.5.2-2.fc35.x86_64`
@@ -465,7 +465,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libarchive-3.5.2-2.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/l/libarchive-3.5.2-2.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/l/libarchive-3.5.2-2.fc35.src.rpm
 ```
 
 ### `rpm` package: `libassuan-2.5.5-3.fc35.x86_64`
@@ -476,7 +476,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libassuan-2.5.5-3.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/l/libassuan-2.5.5-3.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/l/libassuan-2.5.5-3.fc35.src.rpm
 ```
 
 ### `rpm` package: `libattr-2.5.1-3.fc35.x86_64`
@@ -487,7 +487,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libattr-2.5.1-3.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/a/attr-2.5.1-3.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/a/attr-2.5.1-3.fc35.src.rpm
 ```
 
 ### `rpm` package: `libblkid-2.37.2-1.fc35.x86_64`
@@ -498,7 +498,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libblkid-2.37.2-1.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/u/util-linux-2.37.2-1.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/u/util-linux-2.37.2-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `libbrotli-1.0.9-6.fc35.x86_64`
@@ -509,7 +509,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libbrotli-1.0.9-6.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/b/brotli-1.0.9-6.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/b/brotli-1.0.9-6.fc35.src.rpm
 ```
 
 ### `rpm` package: `libcap-2.48-3.fc35.x86_64`
@@ -520,7 +520,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libcap-2.48-3.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/l/libcap-2.48-3.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/l/libcap-2.48-3.fc35.src.rpm
 ```
 
 ### `rpm` package: `libcap-ng-0.8.2-6.fc35.x86_64`
@@ -531,7 +531,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libcap-ng-0.8.2-6.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/l/libcap-ng-0.8.2-6.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/l/libcap-ng-0.8.2-6.fc35.src.rpm
 ```
 
 ### `rpm` package: `libcom_err-1.46.3-1.fc35.x86_64`
@@ -542,7 +542,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libcom_err-1.46.3-1.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/e/e2fsprogs-1.46.3-1.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/e/e2fsprogs-1.46.3-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `libcomps-0.1.18-1.fc35.x86_64`
@@ -553,7 +553,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libcomps-0.1.18-1.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/l/libcomps-0.1.18-1.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/l/libcomps-0.1.18-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `libcurl-7.79.1-1.fc35.x86_64`
@@ -564,7 +564,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libcurl-7.79.1-1.fc35
-http://mirror.arizona.edu/fedora/linux/updates/35/Everything/source/tree/Packages/c/curl-7.79.1-1.fc35.src.rpm
+http://mirror.math.princeton.edu/pub/fedora/linux/updates/35/Everything/source/tree/Packages/c/curl-7.79.1-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `libdb-5.3.28-50.fc35.x86_64`
@@ -575,7 +575,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libdb-5.3.28-50.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/l/libdb-5.3.28-50.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/l/libdb-5.3.28-50.fc35.src.rpm
 ```
 
 ### `rpm` package: `libdnf-0.64.0-1.fc35.x86_64`
@@ -586,7 +586,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libdnf-0.64.0-1.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/l/libdnf-0.64.0-1.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/l/libdnf-0.64.0-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `libeconf-0.4.0-2.fc35.x86_64`
@@ -597,7 +597,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libeconf-0.4.0-2.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/l/libeconf-0.4.0-2.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/l/libeconf-0.4.0-2.fc35.src.rpm
 ```
 
 ### `rpm` package: `libffi-3.1-29.fc35.x86_64`
@@ -608,7 +608,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libffi-3.1-29.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/l/libffi-3.1-29.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/l/libffi-3.1-29.fc35.src.rpm
 ```
 
 ### `rpm` package: `libfsverity-1.4-6.fc35.x86_64`
@@ -619,7 +619,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libfsverity-1.4-6.fc35
-http://mirror.arizona.edu/fedora/linux/updates/35/Everything/source/tree/Packages/f/fsverity-utils-1.4-6.fc35.src.rpm
+http://mirror.math.princeton.edu/pub/fedora/linux/updates/35/Everything/source/tree/Packages/f/fsverity-utils-1.4-6.fc35.src.rpm
 ```
 
 ### `rpm` package: `libgcc-11.2.1-1.fc35.x86_64`
@@ -630,7 +630,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libgcc-11.2.1-1.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/g/gcc-11.2.1-1.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/g/gcc-11.2.1-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `libgcrypt-1.9.4-1.fc35.x86_64`
@@ -641,7 +641,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libgcrypt-1.9.4-1.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/l/libgcrypt-1.9.4-1.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/l/libgcrypt-1.9.4-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `libgomp-11.2.1-1.fc35.x86_64`
@@ -652,7 +652,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libgomp-11.2.1-1.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/g/gcc-11.2.1-1.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/g/gcc-11.2.1-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `libgpg-error-1.43-1.fc35.x86_64`
@@ -663,7 +663,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libgpg-error-1.43-1.fc35
-http://mirror.arizona.edu/fedora/linux/updates/35/Everything/source/tree/Packages/l/libgpg-error-1.43-1.fc35.src.rpm
+http://mirror.math.princeton.edu/pub/fedora/linux/updates/35/Everything/source/tree/Packages/l/libgpg-error-1.43-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `libidn2-2.3.2-3.fc35.x86_64`
@@ -674,7 +674,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libidn2-2.3.2-3.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/l/libidn2-2.3.2-3.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/l/libidn2-2.3.2-3.fc35.src.rpm
 ```
 
 ### `rpm` package: `libksba-1.6.0-2.fc35.x86_64`
@@ -685,7 +685,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libksba-1.6.0-2.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/l/libksba-1.6.0-2.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/l/libksba-1.6.0-2.fc35.src.rpm
 ```
 
 ### `rpm` package: `libmodulemd-2.13.0-3.fc35.x86_64`
@@ -696,7 +696,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libmodulemd-2.13.0-3.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/l/libmodulemd-2.13.0-3.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/l/libmodulemd-2.13.0-3.fc35.src.rpm
 ```
 
 ### `rpm` package: `libmount-2.37.2-1.fc35.x86_64`
@@ -707,7 +707,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libmount-2.37.2-1.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/u/util-linux-2.37.2-1.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/u/util-linux-2.37.2-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `libnghttp2-1.45.1-1.fc35.x86_64`
@@ -718,7 +718,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libnghttp2-1.45.1-1.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/n/nghttp2-1.45.1-1.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/n/nghttp2-1.45.1-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `libnsl2-1.3.0-4.fc35.x86_64`
@@ -729,7 +729,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libnsl2-1.3.0-4.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/l/libnsl2-1.3.0-4.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/l/libnsl2-1.3.0-4.fc35.src.rpm
 ```
 
 ### `rpm` package: `libpsl-0.21.1-4.fc35.x86_64`
@@ -740,7 +740,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libpsl-0.21.1-4.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/l/libpsl-0.21.1-4.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/l/libpsl-0.21.1-4.fc35.src.rpm
 ```
 
 ### `rpm` package: `libpwquality-1.4.4-6.fc35.x86_64`
@@ -751,7 +751,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libpwquality-1.4.4-6.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/l/libpwquality-1.4.4-6.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/l/libpwquality-1.4.4-6.fc35.src.rpm
 ```
 
 ### `rpm` package: `librepo-1.14.2-1.fc35.x86_64`
@@ -762,7 +762,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url librepo-1.14.2-1.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/l/librepo-1.14.2-1.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/l/librepo-1.14.2-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `libreport-filesystem-2.15.2-6.fc35.noarch`
@@ -773,7 +773,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libreport-filesystem-2.15.2-6.fc35.noarch
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/l/libreport-2.15.2-6.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/l/libreport-2.15.2-6.fc35.src.rpm
 ```
 
 ### `rpm` package: `libselinux-3.3-1.fc35.x86_64`
@@ -784,7 +784,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libselinux-3.3-1.fc35
-http://mirror.arizona.edu/fedora/linux/updates/35/Everything/source/tree/Packages/l/libselinux-3.3-1.fc35.src.rpm
+http://mirror.math.princeton.edu/pub/fedora/linux/updates/35/Everything/source/tree/Packages/l/libselinux-3.3-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `libsemanage-3.3-1.fc35.x86_64`
@@ -795,7 +795,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libsemanage-3.3-1.fc35
-http://mirror.arizona.edu/fedora/linux/updates/35/Everything/source/tree/Packages/l/libsemanage-3.3-1.fc35.src.rpm
+http://mirror.math.princeton.edu/pub/fedora/linux/updates/35/Everything/source/tree/Packages/l/libsemanage-3.3-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `libsepol-3.3-2.fc35.x86_64`
@@ -806,7 +806,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libsepol-3.3-2.fc35
-http://mirror.arizona.edu/fedora/linux/updates/35/Everything/source/tree/Packages/l/libsepol-3.3-2.fc35.src.rpm
+http://mirror.math.princeton.edu/pub/fedora/linux/updates/35/Everything/source/tree/Packages/l/libsepol-3.3-2.fc35.src.rpm
 ```
 
 ### `rpm` package: `libsigsegv-2.13-3.fc35.x86_64`
@@ -817,7 +817,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libsigsegv-2.13-3.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/l/libsigsegv-2.13-3.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/l/libsigsegv-2.13-3.fc35.src.rpm
 ```
 
 ### `rpm` package: `libsmartcols-2.37.2-1.fc35.x86_64`
@@ -828,7 +828,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libsmartcols-2.37.2-1.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/u/util-linux-2.37.2-1.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/u/util-linux-2.37.2-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `libsolv-0.7.19-3.fc35.x86_64`
@@ -839,7 +839,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libsolv-0.7.19-3.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/l/libsolv-0.7.19-3.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/l/libsolv-0.7.19-3.fc35.src.rpm
 ```
 
 ### `rpm` package: `libssh-0.9.6-1.fc35.x86_64`
@@ -850,7 +850,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libssh-0.9.6-1.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/l/libssh-0.9.6-1.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/l/libssh-0.9.6-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `libssh-config-0.9.6-1.fc35.noarch`
@@ -861,7 +861,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libssh-config-0.9.6-1.fc35.noarch
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/l/libssh-0.9.6-1.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/l/libssh-0.9.6-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `libstdc++-11.2.1-1.fc35.x86_64`
@@ -872,7 +872,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libstdc++-11.2.1-1.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/g/gcc-11.2.1-1.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/g/gcc-11.2.1-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `libtasn1-4.16.0-6.fc35.x86_64`
@@ -883,7 +883,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libtasn1-4.16.0-6.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/l/libtasn1-4.16.0-6.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/l/libtasn1-4.16.0-6.fc35.src.rpm
 ```
 
 ### `rpm` package: `libtirpc-1.3.2-1.fc35.x86_64`
@@ -894,7 +894,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libtirpc-1.3.2-1.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/l/libtirpc-1.3.2-1.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/l/libtirpc-1.3.2-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `libunistring-0.9.10-14.fc35.x86_64`
@@ -905,7 +905,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libunistring-0.9.10-14.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/l/libunistring-0.9.10-14.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/l/libunistring-0.9.10-14.fc35.src.rpm
 ```
 
 ### `rpm` package: `libuuid-2.37.2-1.fc35.x86_64`
@@ -916,7 +916,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libuuid-2.37.2-1.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/u/util-linux-2.37.2-1.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/u/util-linux-2.37.2-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `libverto-0.3.2-2.fc35.x86_64`
@@ -927,7 +927,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libverto-0.3.2-2.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/l/libverto-0.3.2-2.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/l/libverto-0.3.2-2.fc35.src.rpm
 ```
 
 ### `rpm` package: `libxcrypt-4.4.26-4.fc35.x86_64`
@@ -938,7 +938,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libxcrypt-4.4.26-4.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/l/libxcrypt-4.4.26-4.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/l/libxcrypt-4.4.26-4.fc35.src.rpm
 ```
 
 ### `rpm` package: `libxml2-2.9.12-6.fc35.x86_64`
@@ -949,7 +949,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libxml2-2.9.12-6.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/l/libxml2-2.9.12-6.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/l/libxml2-2.9.12-6.fc35.src.rpm
 ```
 
 ### `rpm` package: `libyaml-0.2.5-6.fc35.x86_64`
@@ -960,7 +960,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libyaml-0.2.5-6.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/l/libyaml-0.2.5-6.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/l/libyaml-0.2.5-6.fc35.src.rpm
 ```
 
 ### `rpm` package: `libzstd-1.5.0-2.fc35.x86_64`
@@ -971,7 +971,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libzstd-1.5.0-2.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/z/zstd-1.5.0-2.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/z/zstd-1.5.0-2.fc35.src.rpm
 ```
 
 ### `rpm` package: `lua-libs-5.4.3-2.fc35.x86_64`
@@ -982,7 +982,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url lua-libs-5.4.3-2.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/l/lua-5.4.3-2.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/l/lua-5.4.3-2.fc35.src.rpm
 ```
 
 ### `rpm` package: `lz4-libs-1.9.3-3.fc35.x86_64`
@@ -993,7 +993,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url lz4-libs-1.9.3-3.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/l/lz4-1.9.3-3.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/l/lz4-1.9.3-3.fc35.src.rpm
 ```
 
 ### `rpm` package: `mpdecimal-2.5.1-2.fc35.x86_64`
@@ -1004,7 +1004,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url mpdecimal-2.5.1-2.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/m/mpdecimal-2.5.1-2.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/m/mpdecimal-2.5.1-2.fc35.src.rpm
 ```
 
 ### `rpm` package: `mpfr-4.1.0-8.fc35.x86_64`
@@ -1015,7 +1015,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url mpfr-4.1.0-8.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/m/mpfr-4.1.0-8.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/m/mpfr-4.1.0-8.fc35.src.rpm
 ```
 
 ### `rpm` package: `ncurses-base-6.2-8.20210508.fc35.noarch`
@@ -1026,7 +1026,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url ncurses-base-6.2-8.20210508.fc35.noarch
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/n/ncurses-6.2-8.20210508.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/n/ncurses-6.2-8.20210508.fc35.src.rpm
 ```
 
 ### `rpm` package: `ncurses-libs-6.2-8.20210508.fc35.x86_64`
@@ -1037,7 +1037,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url ncurses-libs-6.2-8.20210508.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/n/ncurses-6.2-8.20210508.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/n/ncurses-6.2-8.20210508.fc35.src.rpm
 ```
 
 ### `rpm` package: `nettle-3.7.3-2.fc35.x86_64`
@@ -1048,7 +1048,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url nettle-3.7.3-2.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/n/nettle-3.7.3-2.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/n/nettle-3.7.3-2.fc35.src.rpm
 ```
 
 ### `rpm` package: `npth-1.6-7.fc35.x86_64`
@@ -1059,7 +1059,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url npth-1.6-7.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/n/npth-1.6-7.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/n/npth-1.6-7.fc35.src.rpm
 ```
 
 ### `rpm` package: `openldap-2.4.59-3.fc35.x86_64`
@@ -1070,7 +1070,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url openldap-2.4.59-3.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/o/openldap-2.4.59-3.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/o/openldap-2.4.59-3.fc35.src.rpm
 ```
 
 ### `rpm` package: `openssl-libs-1.1.1l-2.fc35.x86_64`
@@ -1081,7 +1081,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url openssl-libs-1.1.1l-2.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/o/openssl-1.1.1l-2.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/o/openssl-1.1.1l-2.fc35.src.rpm
 ```
 
 ### `rpm` package: `p11-kit-0.23.22-4.fc35.x86_64`
@@ -1092,7 +1092,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url p11-kit-0.23.22-4.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/p/p11-kit-0.23.22-4.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/p/p11-kit-0.23.22-4.fc35.src.rpm
 ```
 
 ### `rpm` package: `p11-kit-trust-0.23.22-4.fc35.x86_64`
@@ -1103,7 +1103,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url p11-kit-trust-0.23.22-4.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/p/p11-kit-0.23.22-4.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/p/p11-kit-0.23.22-4.fc35.src.rpm
 ```
 
 ### `rpm` package: `pam-1.5.2-5.fc35.x86_64`
@@ -1114,7 +1114,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url pam-1.5.2-5.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/p/pam-1.5.2-5.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/p/pam-1.5.2-5.fc35.src.rpm
 ```
 
 ### `rpm` package: `pcre-8.45-1.fc35.x86_64`
@@ -1125,7 +1125,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url pcre-8.45-1.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/p/pcre-8.45-1.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/p/pcre-8.45-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `pcre2-10.37-4.fc35.x86_64`
@@ -1136,7 +1136,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url pcre2-10.37-4.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/p/pcre2-10.37-4.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/p/pcre2-10.37-4.fc35.src.rpm
 ```
 
 ### `rpm` package: `pcre2-syntax-10.37-4.fc35.noarch`
@@ -1147,7 +1147,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url pcre2-syntax-10.37-4.fc35.noarch
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/p/pcre2-10.37-4.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/p/pcre2-10.37-4.fc35.src.rpm
 ```
 
 ### `rpm` package: `popt-1.18-6.fc35.x86_64`
@@ -1158,7 +1158,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url popt-1.18-6.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/p/popt-1.18-6.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/p/popt-1.18-6.fc35.src.rpm
 ```
 
 ### `rpm` package: `publicsuffix-list-dafsa-20210518-2.fc35.noarch`
@@ -1169,7 +1169,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url publicsuffix-list-dafsa-20210518-2.fc35.noarch
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/p/publicsuffix-list-20210518-2.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/p/publicsuffix-list-20210518-2.fc35.src.rpm
 ```
 
 ### `rpm` package: `python-pip-wheel-21.2.3-4.fc35.noarch`
@@ -1180,7 +1180,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url python-pip-wheel-21.2.3-4.fc35.noarch
-http://mirror.arizona.edu/fedora/linux/updates/35/Everything/source/tree/Packages/p/python-pip-21.2.3-4.fc35.src.rpm
+http://mirror.math.princeton.edu/pub/fedora/linux/updates/35/Everything/source/tree/Packages/p/python-pip-21.2.3-4.fc35.src.rpm
 ```
 
 ### `rpm` package: `python-setuptools-wheel-57.4.0-1.fc35.noarch`
@@ -1191,7 +1191,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url python-setuptools-wheel-57.4.0-1.fc35.noarch
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/p/python-setuptools-57.4.0-1.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/p/python-setuptools-57.4.0-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `python3-3.10.0-1.fc35.x86_64`
@@ -1202,7 +1202,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url python3-3.10.0-1.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/p/python3.10-3.10.0-1.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/p/python3.10-3.10.0-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `python3-dnf-4.9.0-1.fc35.noarch`
@@ -1213,7 +1213,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url python3-dnf-4.9.0-1.fc35.noarch
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/d/dnf-4.9.0-1.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/d/dnf-4.9.0-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `python3-gpg-1.15.1-6.fc35.x86_64`
@@ -1224,7 +1224,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url python3-gpg-1.15.1-6.fc35
-http://mirror.arizona.edu/fedora/linux/updates/35/Everything/source/tree/Packages/g/gpgme-1.15.1-6.fc35.src.rpm
+http://mirror.math.princeton.edu/pub/fedora/linux/updates/35/Everything/source/tree/Packages/g/gpgme-1.15.1-6.fc35.src.rpm
 ```
 
 ### `rpm` package: `python3-hawkey-0.64.0-1.fc35.x86_64`
@@ -1235,7 +1235,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url python3-hawkey-0.64.0-1.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/l/libdnf-0.64.0-1.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/l/libdnf-0.64.0-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `python3-libcomps-0.1.18-1.fc35.x86_64`
@@ -1246,7 +1246,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url python3-libcomps-0.1.18-1.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/l/libcomps-0.1.18-1.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/l/libcomps-0.1.18-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `python3-libdnf-0.64.0-1.fc35.x86_64`
@@ -1257,7 +1257,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url python3-libdnf-0.64.0-1.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/l/libdnf-0.64.0-1.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/l/libdnf-0.64.0-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `python3-libs-3.10.0-1.fc35.x86_64`
@@ -1268,7 +1268,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url python3-libs-3.10.0-1.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/p/python3.10-3.10.0-1.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/p/python3.10-3.10.0-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `python3-rpm-4.17.0-1.fc35.x86_64`
@@ -1279,7 +1279,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url python3-rpm-4.17.0-1.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/r/rpm-4.17.0-1.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/r/rpm-4.17.0-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `readline-8.1-3.fc35.x86_64`
@@ -1290,7 +1290,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url readline-8.1-3.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/r/readline-8.1-3.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/r/readline-8.1-3.fc35.src.rpm
 ```
 
 ### `rpm` package: `rootfiles-8.1-30.fc35.noarch`
@@ -1301,7 +1301,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url rootfiles-8.1-30.fc35.noarch
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/r/rootfiles-8.1-30.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/r/rootfiles-8.1-30.fc35.src.rpm
 ```
 
 ### `rpm` package: `rpm-4.17.0-1.fc35.x86_64`
@@ -1312,7 +1312,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url rpm-4.17.0-1.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/r/rpm-4.17.0-1.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/r/rpm-4.17.0-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `rpm-build-libs-4.17.0-1.fc35.x86_64`
@@ -1323,7 +1323,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url rpm-build-libs-4.17.0-1.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/r/rpm-4.17.0-1.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/r/rpm-4.17.0-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `rpm-libs-4.17.0-1.fc35.x86_64`
@@ -1334,7 +1334,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url rpm-libs-4.17.0-1.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/r/rpm-4.17.0-1.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/r/rpm-4.17.0-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `rpm-sign-libs-4.17.0-1.fc35.x86_64`
@@ -1345,7 +1345,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url rpm-sign-libs-4.17.0-1.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/r/rpm-4.17.0-1.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/r/rpm-4.17.0-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `sed-4.8-8.fc35.x86_64`
@@ -1356,7 +1356,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url sed-4.8-8.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/s/sed-4.8-8.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/s/sed-4.8-8.fc35.src.rpm
 ```
 
 ### `rpm` package: `setup-2.13.9.1-2.fc35.noarch`
@@ -1367,7 +1367,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url setup-2.13.9.1-2.fc35.noarch
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/s/setup-2.13.9.1-2.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/s/setup-2.13.9.1-2.fc35.src.rpm
 ```
 
 ### `rpm` package: `shadow-utils-4.9-7.fc35.x86_64`
@@ -1384,7 +1384,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url sqlite-libs-3.36.0-3.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/s/sqlite-3.36.0-3.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/s/sqlite-3.36.0-3.fc35.src.rpm
 ```
 
 ### `rpm` package: `sudo-1.9.7p2-2.fc35.x86_64`
@@ -1395,7 +1395,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url sudo-1.9.7p2-2.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/s/sudo-1.9.7p2-2.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/s/sudo-1.9.7p2-2.fc35.src.rpm
 ```
 
 ### `rpm` package: `tar-1.34-2.fc35.x86_64`
@@ -1406,7 +1406,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url tar-1.34-2.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/t/tar-1.34-2.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/t/tar-1.34-2.fc35.src.rpm
 ```
 
 ### `rpm` package: `tpm2-tss-3.1.0-3.fc35.x86_64`
@@ -1417,7 +1417,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url tpm2-tss-3.1.0-3.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/t/tpm2-tss-3.1.0-3.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/t/tpm2-tss-3.1.0-3.fc35.src.rpm
 ```
 
 ### `rpm` package: `tzdata-2021e-1.fc35.noarch`
@@ -1428,7 +1428,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url tzdata-2021e-1.fc35.noarch
-http://mirror.arizona.edu/fedora/linux/updates/35/Everything/source/tree/Packages/t/tzdata-2021e-1.fc35.src.rpm
+http://mirror.math.princeton.edu/pub/fedora/linux/updates/35/Everything/source/tree/Packages/t/tzdata-2021e-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `vim-minimal-8.2.3642-1.fc35.x86_64`
@@ -1445,7 +1445,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url xz-libs-5.2.5-7.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/x/xz-5.2.5-7.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/x/xz-5.2.5-7.fc35.src.rpm
 ```
 
 ### `rpm` package: `yum-4.9.0-1.fc35.noarch`
@@ -1456,7 +1456,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url yum-4.9.0-1.fc35.noarch
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/d/dnf-4.9.0-1.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/d/dnf-4.9.0-1.fc35.src.rpm
 ```
 
 ### `rpm` package: `zchunk-libs-1.1.15-2.fc35.x86_64`
@@ -1467,7 +1467,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url zchunk-libs-1.1.15-2.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/z/zchunk-1.1.15-2.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/z/zchunk-1.1.15-2.fc35.src.rpm
 ```
 
 ### `rpm` package: `zlib-1.2.11-30.fc35.x86_64`
@@ -1478,5 +1478,5 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url zlib-1.2.11-30.fc35
-http://mirror.siena.edu/fedora/linux/releases/35/Everything/source/tree/Packages/z/zlib-1.2.11-30.fc35.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/releases/35/Everything/source/tree/Packages/z/zlib-1.2.11-30.fc35.src.rpm
 ```
