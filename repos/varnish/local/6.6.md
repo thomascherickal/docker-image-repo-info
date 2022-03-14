@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:8b6e5ef12d78fdd6cb2de672248d8f065a107840968496b0a4b8b0519fe54ded`
-- Created: `2022-01-27T00:45:37.642764871Z`
+- Image ID: `sha256:57764de312df7c2976dd74c1fbae3ed09dc82cab68c9e3c4853dd74fd4f8d7af`
+- Created: `2022-03-14T18:42:53.167308788Z`
 - Virtual Size: ~ 264.07 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -598,11 +598,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/e2fsprogs/1.46.2-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/e2fsprogs/1.46.2-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `expat=2.2.10-2`
+### `dpkg` source package: `expat=2.2.10-2+deb11u3`
 
 Binary Packages:
 
-- `libexpat1:amd64=2.2.10-2`
+- `libexpat1:amd64=2.2.10-2+deb11u3`
 
 Licenses: (parsed from: `/usr/share/doc/libexpat1/copyright`)
 
@@ -611,17 +611,17 @@ Licenses: (parsed from: `/usr/share/doc/libexpat1/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris expat=2.2.10-2
-'http://deb.debian.org/debian/pool/main/e/expat/expat_2.2.10-2.dsc' expat_2.2.10-2.dsc 1988 SHA256:f6cf4e5df4429e57f9d67d3a5bbcae5796e6744d392f95c4aeb9db9e056dc63c
-'http://deb.debian.org/debian/pool/main/e/expat/expat_2.2.10.orig.tar.gz' expat_2.2.10.orig.tar.gz 8276395 SHA256:62e280f5fd29a5b70973f623e20a7412c3e3912c2684cb0e462e2c881be129e1
-'http://deb.debian.org/debian/pool/main/e/expat/expat_2.2.10-2.debian.tar.xz' expat_2.2.10-2.debian.tar.xz 10956 SHA256:1f618e2e5459fb78f7c9879e1964fa3ec03dd071ff4944005b99dc9600c0e4a8
+$ apt-get source -qq --print-uris expat=2.2.10-2+deb11u3
+'http://security.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.10-2%2bdeb11u3.dsc' expat_2.2.10-2+deb11u3.dsc 2175 SHA256:bf66d8eca15055af1961c95703204fb71f48c0bfbb9db7b2a7eccce19e444555
+'http://security.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.10.orig.tar.gz' expat_2.2.10.orig.tar.gz 8276395 SHA256:62e280f5fd29a5b70973f623e20a7412c3e3912c2684cb0e462e2c881be129e1
+'http://security.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.10-2%2bdeb11u3.debian.tar.xz' expat_2.2.10-2+deb11u3.debian.tar.xz 27188 SHA256:03a961cdbe42a5ebee68e072090821995730502cb3822fb59f0c642688fb9f51
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/expat/2.2.10-2/ (for browsing the source)
-- https://sources.debian.net/src/expat/2.2.10-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/expat/2.2.10-2/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/expat/2.2.10-2+deb11u3/ (for browsing the source)
+- https://sources.debian.net/src/expat/2.2.10-2+deb11u3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/expat/2.2.10-2+deb11u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `findutils=4.8.0-1`
 
@@ -2066,11 +2066,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libzstd/1.4.8+dfsg-2.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libzstd/1.4.8+dfsg-2.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `linux=5.10.92-1`
+### `dpkg` source package: `linux=5.10.103-1`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=5.10.92-1`
+- `linux-libc-dev:amd64=5.10.103-1`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -2083,13 +2083,20 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 - `X11`
 - `Xen-interface`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris linux=5.10.103-1
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.103-1.dsc' linux_5.10.103-1.dsc 197238 SHA256:2227237f47950731487f8fc98b662863b6f8ea3b455e8ad2a518dca4f5cf8acd
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.103.orig.tar.xz' linux_5.10.103.orig.tar.xz 121685412 SHA256:d0384b92cbe88a4b02c8b0db4159ab491a658b010ff977bbcf5d95b75501c1f1
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.103-1.debian.tar.xz' linux_5.10.103-1.debian.tar.xz 1494304 SHA256:a92a88f37873cdc3550a8473a11af0a46b83a42594fd4ea8d62bcf57d3c62fd3
+```
 
-- http://snapshot.debian.org/package/linux/5.10.92-1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/linux/5.10.103-1/ (for browsing the source)
+- https://sources.debian.net/src/linux/5.10.103-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/linux/5.10.103-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lsb=11.1.0`
 
