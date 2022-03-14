@@ -110,7 +110,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url elfutils-default-yama-scope-0.186-1.fc36.noarch
-rsync://mirrors.mit.edu/fedora/linux/development/rawhide/Everything/source/tree/Packages/e/elfutils-0.186-1.fc36.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/development/rawhide/Everything/source/tree/Packages/e/elfutils-0.186-1.fc36.src.rpm
 ```
 
 ### `rpm` package: `elfutils-libelf-0.186-1.fc36.x86_64`
@@ -121,7 +121,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url elfutils-libelf-0.186-1.fc36
-rsync://mirrors.mit.edu/fedora/linux/development/rawhide/Everything/source/tree/Packages/e/elfutils-0.186-1.fc36.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/development/rawhide/Everything/source/tree/Packages/e/elfutils-0.186-1.fc36.src.rpm
 ```
 
 ### `rpm` package: `elfutils-libs-0.186-1.fc36.x86_64`
@@ -132,7 +132,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url elfutils-libs-0.186-1.fc36
-rsync://mirrors.mit.edu/fedora/linux/development/rawhide/Everything/source/tree/Packages/e/elfutils-0.186-1.fc36.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/development/rawhide/Everything/source/tree/Packages/e/elfutils-0.186-1.fc36.src.rpm
 ```
 
 ### `rpm` package: `expat-2.4.1-2.fc35.x86_64`
@@ -653,7 +653,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url openssl-libs-3.0.0-1.fc36
-rsync://mirrors.mit.edu/fedora/linux/development/rawhide/Everything/source/tree/Packages/o/openssl-3.0.0-1.fc36.src.rpm
+https://mirrors.rit.edu/fedora/fedora/linux/development/rawhide/Everything/source/tree/Packages/o/openssl-3.0.0-1.fc36.src.rpm
 ```
 
 ### `rpm` package: `openssl1.1-1.1.1l-1.fc36.x86_64`
