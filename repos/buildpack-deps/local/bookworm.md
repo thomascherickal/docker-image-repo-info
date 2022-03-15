@@ -2289,20 +2289,13 @@ Licenses: (parsed from: `/usr/share/doc/libdeflate-dev/copyright`, `/usr/share/d
 
 - `Expat`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libdeflate=1.8-1
-'http://deb.debian.org/debian/pool/main/libd/libdeflate/libdeflate_1.8-1.dsc' libdeflate_1.8-1.dsc 2188 SHA256:d88651a173ca65945a9cd6b0d87637a989855a872fff85cd98a48b12d682e81c
-'http://deb.debian.org/debian/pool/main/libd/libdeflate/libdeflate_1.8.orig.tar.gz' libdeflate_1.8.orig.tar.gz 145823 SHA256:50711ad4e9d3862f8dfb11b97eb53631a86ee3ce49c0e68ec2b6d059a9662f61
-'http://deb.debian.org/debian/pool/main/libd/libdeflate/libdeflate_1.8-1.debian.tar.xz' libdeflate_1.8-1.debian.tar.xz 4228 SHA256:300c0e15f1f22bbfca2e6edc6abae2cfe71692ca86c67dcccbb39bf846568add
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libdeflate/1.8-1/
 
-- https://sources.debian.net/src/libdeflate/1.8-1/ (for browsing the source)
-- https://sources.debian.net/src/libdeflate/1.8-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libdeflate/1.8-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libedit=3.1-20210910-1`
 
@@ -3876,20 +3869,13 @@ Licenses: (parsed from: `/usr/share/doc/libmariadb-dev/copyright`, `/usr/share/d
 - `unlimited-free-doc`
 - `zlib/libpng`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mariadb-10.6=1:10.6.5-2
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.6/mariadb-10.6_10.6.5-2.dsc' mariadb-10.6_10.6.5-2.dsc 4573 SHA256:114e04d6916437218fd995deb90af216b20c387c6e22136af16964c96c4e3ee0
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.6/mariadb-10.6_10.6.5.orig.tar.gz' mariadb-10.6_10.6.5.orig.tar.gz 81853489 SHA256:0831debda6ff6f2942d756732a9e5886ef2c5526ad360119502ae3e03b13e013
-'http://deb.debian.org/debian/pool/main/m/mariadb-10.6/mariadb-10.6_10.6.5-2.debian.tar.xz' mariadb-10.6_10.6.5-2.debian.tar.xz 221456 SHA256:6c33c0e43f6e24d07af754b960c8b0e7473bfa7c6bece7488125cd13eb260206
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mariadb-10.6/1:10.6.5-2/
 
-- https://sources.debian.net/src/mariadb-10.6/1:10.6.5-2/ (for browsing the source)
-- https://sources.debian.net/src/mariadb-10.6/1:10.6.5-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mariadb-10.6/1:10.6.5-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mawk=1.3.4.20200120-3`
 
@@ -4351,21 +4337,13 @@ Licenses: (parsed from: `/usr/share/doc/openssh-client/copyright`)
 - `Powell-BSD-style`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssh=1:8.8p1-1
-'http://deb.debian.org/debian/pool/main/o/openssh/openssh_8.8p1-1.dsc' openssh_8.8p1-1.dsc 3347 SHA256:a67428df6bfd167e59793c9572c8a5a9a603adc552fb72b2e5ac4d469c3e6c30
-'http://deb.debian.org/debian/pool/main/o/openssh/openssh_8.8p1.orig.tar.gz' openssh_8.8p1.orig.tar.gz 1815060 SHA256:4590890ea9bb9ace4f71ae331785a3a5823232435161960ed5fc86588f331fe9
-'http://deb.debian.org/debian/pool/main/o/openssh/openssh_8.8p1.orig.tar.gz.asc' openssh_8.8p1.orig.tar.gz.asc 833 SHA256:eb930fe3a4f745021e61168f318ac4913658e0669c3249ab0d731b198660b0df
-'http://deb.debian.org/debian/pool/main/o/openssh/openssh_8.8p1-1.debian.tar.xz' openssh_8.8p1-1.debian.tar.xz 185620 SHA256:59c283f39621ee09fe4caa4d80c6b8bc18bb439c79b9a37556d84569fd115e9d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/openssh/1:8.8p1-1/
 
-- https://sources.debian.net/src/openssh/1:8.8p1-1/ (for browsing the source)
-- https://sources.debian.net/src/openssh/1:8.8p1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openssh/1:8.8p1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssl=1.1.1m-1`
 
@@ -4783,20 +4761,13 @@ Licenses: (parsed from: `/usr/share/doc/libprocps8/copyright`, `/usr/share/doc/p
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris procps=2:3.3.17-6
-'http://deb.debian.org/debian/pool/main/p/procps/procps_3.3.17-6.dsc' procps_3.3.17-6.dsc 2136 SHA256:4bb6b0f37eae3c31938354f8785faa756796a6232619a853af65341bbc080846
-'http://deb.debian.org/debian/pool/main/p/procps/procps_3.3.17.orig.tar.xz' procps_3.3.17.orig.tar.xz 1008428 SHA256:4518b3e7aafd34ec07d0063d250fd474999b20b200218c3ae56f5d2113f141b4
-'http://deb.debian.org/debian/pool/main/p/procps/procps_3.3.17-6.debian.tar.xz' procps_3.3.17-6.debian.tar.xz 28984 SHA256:86577e3f70e388e3e5c4e53d79d9e85fc446a3a79b6b7ba67c216e24855ba9a2
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/procps/2:3.3.17-6/
 
-- https://sources.debian.net/src/procps/2:3.3.17-6/ (for browsing the source)
-- https://sources.debian.net/src/procps/2:3.3.17-6/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/procps/2:3.3.17-6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `python3-defaults=3.9.8-1`
 

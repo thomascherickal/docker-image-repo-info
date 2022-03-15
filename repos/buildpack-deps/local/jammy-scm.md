@@ -531,14 +531,13 @@ Licenses: (parsed from: `/usr/share/doc/libexpat1/copyright`)
 
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris expat=2.4.6-1
-'http://archive.ubuntu.com/ubuntu/pool/main/e/expat/expat_2.4.6-1.dsc' expat_2.4.6-1.dsc 1981 SHA512:424893c386a0274e4b0cfdc25852ac46f6f11354635ebfae64ab12a5531bc677bfb92b76be3a3b86570a182e96aa460812d1ef938197dd51a52fa6610f4fff93
-'http://archive.ubuntu.com/ubuntu/pool/main/e/expat/expat_2.4.6.orig.tar.gz' expat_2.4.6.orig.tar.gz 8313694 SHA512:97c18c684ac7f0327a5fa7b5ae2705b64e44e989b3a05bcda1c4bf85059f26be8752a5512fda7fbc543839e9c2316917997e5033dd9a3da1df40f100a8446bb0
-'http://archive.ubuntu.com/ubuntu/pool/main/e/expat/expat_2.4.6-1.debian.tar.xz' expat_2.4.6-1.debian.tar.xz 12484 SHA512:13056f5fb4d9f33f8a61365ce8e6c6d9b95ad7c6bcb9f6783e0c5594ddf6f0741e306cbc20e06a18461dcfe8d700cff0f996273bc785f7ac81bb6f957da3aff5
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/expat/2.4.6-1/
+
 
 ### `dpkg` source package: `findutils=4.8.0-1ubuntu2`
 
@@ -1778,15 +1777,13 @@ Licenses: (parsed from: `/usr/share/doc/openssh-client/copyright`)
 - `Powell-BSD-style`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssh=1:8.8p1-1
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.8p1-1.dsc' openssh_8.8p1-1.dsc 3347 SHA512:9f64e6156361fe52e587c5517eeff72b167ab6f818d5f815b163cee9400f5af960927c51dbe071b8062ed29c8fbd91ec7398e26ca98a615abe7c40888fdc9d45
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.8p1.orig.tar.gz' openssh_8.8p1.orig.tar.gz 1815060 SHA512:d44cd04445f9c8963513b0d5a7e8348985114ff2471e119a6e344498719ef40f09c61c354888a3be9dabcb5870e5cbe5d3aafbb861dfa1d82a4952f3d233a8df
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.8p1.orig.tar.gz.asc' openssh_8.8p1.orig.tar.gz.asc 833 SHA512:165e025305902f884d04d4444fa3143e4ea1a25a1c65aafe05e113537b3d3e50f7cd5f818bc2ca3404699372ca78f69c46b7452faf2d3998c448a5b80a411ae4
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.8p1-1.debian.tar.xz' openssh_8.8p1-1.debian.tar.xz 185620 SHA512:729d2ffef3783c83ec2ee89e9a5bc6b8259b0a327d96238f0270396c6bfaaef2401f515d5270407e748e271426f5b646725dfb96665619511892109cee32a83f
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/openssh/1:8.8p1-1/
+
 
 ### `dpkg` source package: `openssl=3.0.1-0ubuntu1`
 
@@ -2041,14 +2038,13 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.10-minimal/copyright`, `/usr/
 - `use in source`
 - `without`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3.10=3.10.2-5
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.2-5.dsc' python3.10_3.10.2-5.dsc 3500 SHA512:97b580da07a627afd437b6a987a5fbe261d65d44461a815258c79f074df8ab65424ae4b6d7088e8d89ba2f36f657e13c5f6da1cd8d5723e278baf63af2ea45c1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.2.orig.tar.xz' python3.10_3.10.2.orig.tar.xz 18780936 SHA512:215a7159face84788fe547c1e2689b8d0ae510275157cf01636bef2902d0ff465f844eb0328c9f39fd1cd03a1d1736d4cf258992f2788e492a801a372032c08b
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.2-5.debian.tar.xz' python3.10_3.10.2-5.debian.tar.xz 214388 SHA512:17f2ede1eb92ebdfcf1b26becf643485b7a54b5a9b767191dafbe72439e09d9cdbabe0ae5fc80250d651e3ec95a95ab524fcecf241fd417c93db9387bd599083
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/python3.10/3.10.2-5/
+
 
 ### `dpkg` source package: `readline=8.1.2-1`
 

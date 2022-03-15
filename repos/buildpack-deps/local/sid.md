@@ -895,19 +895,13 @@ Licenses: (parsed from: `/usr/share/doc/dpkg/copyright`, `/usr/share/doc/dpkg-de
 - `public-domain-md5`
 - `public-domain-s-s-d`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris dpkg=1.21.1
-'http://deb.debian.org/debian/pool/main/d/dpkg/dpkg_1.21.1.dsc' dpkg_1.21.1.dsc 2120 SHA256:4a18d3c84a982a5510ee96d490b3ff9c103e1086f165051e7e9d3b1801e1950b
-'http://deb.debian.org/debian/pool/main/d/dpkg/dpkg_1.21.1.tar.xz' dpkg_1.21.1.tar.xz 4986936 SHA256:1eb9fd5228b3199284ea5134904bb45b7a5bc12fb044b8e4964d89d2e5bbb563
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/dpkg/1.21.1/
 
-- https://sources.debian.net/src/dpkg/1.21.1/ (for browsing the source)
-- https://sources.debian.net/src/dpkg/1.21.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/dpkg/1.21.1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `e2fsprogs=1.46.5-2`
 
@@ -2359,20 +2353,13 @@ Licenses: (parsed from: `/usr/share/doc/libdeflate-dev/copyright`, `/usr/share/d
 
 - `Expat`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libdeflate=1.10-1
-'http://deb.debian.org/debian/pool/main/libd/libdeflate/libdeflate_1.10-1.dsc' libdeflate_1.10-1.dsc 2206 SHA256:a8e8b8f2290ba620e313c2d676ef6b41731918c9831b137261c800dec0ad7bf7
-'http://deb.debian.org/debian/pool/main/libd/libdeflate/libdeflate_1.10.orig.tar.gz' libdeflate_1.10.orig.tar.gz 158379 SHA256:5c1f75c285cd87202226f4de49985dcb75732f527eefba2b3ddd70a8865f2533
-'http://deb.debian.org/debian/pool/main/libd/libdeflate/libdeflate_1.10-1.debian.tar.xz' libdeflate_1.10-1.debian.tar.xz 4336 SHA256:730a96c101141448286167d82ac58beaf5b74f061fc3f64215d3509a97e62393
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libdeflate/1.10-1/
 
-- https://sources.debian.net/src/libdeflate/1.10-1/ (for browsing the source)
-- https://sources.debian.net/src/libdeflate/1.10-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libdeflate/1.10-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libedit=3.1-20210910-1`
 
@@ -4890,20 +4877,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3-stdlib-extensions=3.9.10-1
-'http://deb.debian.org/debian/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.9.10-1.dsc' python3-stdlib-extensions_3.9.10-1.dsc 2571 SHA256:ddb8e242cd3c64ac41bb862ccb3b8f5363557d8e2c8ee926cf8a5ecea9d35978
-'http://deb.debian.org/debian/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.9.10.orig.tar.xz' python3-stdlib-extensions_3.9.10.orig.tar.xz 1113008 SHA256:a711449d65958a66a67b8e21bc9436410ca655d5c1926dc44abac11e82dc2adb
-'http://deb.debian.org/debian/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.9.10-1.debian.tar.xz' python3-stdlib-extensions_3.9.10-1.debian.tar.xz 24812 SHA256:db849ed9a68b5f1e3fd144f2967e713e8ea433ec24931c89319474250f793e9a
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/python3-stdlib-extensions/3.9.10-1/
 
-- https://sources.debian.net/src/python3-stdlib-extensions/3.9.10-1/ (for browsing the source)
-- https://sources.debian.net/src/python3-stdlib-extensions/3.9.10-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python3-stdlib-extensions/3.9.10-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `python3.9=3.9.10-2`
 
@@ -5173,21 +5153,13 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`, `/usr/share/doc
 - `GPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sqlite3=3.38.0-1
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.38.0-1.dsc' sqlite3_3.38.0-1.dsc 2487 SHA256:3c7649c258f138132e72bbaf7f59c0c1bbde24da3d3570ed094bebfba5d1e873
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.38.0.orig-www.tar.xz' sqlite3_3.38.0.orig-www.tar.xz 5729552 SHA256:f55e0f35600734b8c99de456ffd331a8a84bb130e0f42cc3e92903c9fd58cddd
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.38.0.orig.tar.xz' sqlite3_3.38.0.orig.tar.xz 7667928 SHA256:7a8d36d45e9342678da105274da29e19be84c36d8cda82a0f2b519c9316afd42
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.38.0-1.debian.tar.xz' sqlite3_3.38.0-1.debian.tar.xz 28692 SHA256:e41caf272735e1aa33cac94115f1f283fb331c2fc907fc87167d3c806c61b28f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/sqlite3/3.38.0-1/
 
-- https://sources.debian.net/src/sqlite3/3.38.0-1/ (for browsing the source)
-- https://sources.debian.net/src/sqlite3/3.38.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sqlite3/3.38.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `subversion=1.14.1-3`
 
