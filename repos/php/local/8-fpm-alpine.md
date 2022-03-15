@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:871816084e78818e8450cc71c4338c401150301a302f46b3e8f27ec1c75296b8`
-- Created: `2022-03-03T08:19:12.109877801Z`
-- Virtual Size: ~ 75.50 Mb  
+- Image ID: `sha256:26b87cf77b2fbc681349091c55ddc9172d5d4a1f5b7a3a89e5dd1500679fc433`
+- Created: `2022-03-11T04:15:37.674973305Z`
+- Virtual Size: ~ 76.56 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -174,6 +174,23 @@ curl-7.80.0-r0 installed size:
 
 curl-7.80.0-r0 license:
 MIT
+
+```
+
+### `apk` package: `gnu-libiconv`
+
+```console
+gnu-libiconv-1.16-r0 description:
+GNU charset conversion library for libc which doesn't implement it
+
+gnu-libiconv-1.16-r0 webpage:
+https://www.gnu.org/software/libiconv
+
+gnu-libiconv-1.16-r0 installed size:
+1056 KiB
+
+gnu-libiconv-1.16-r0 license:
+LGPL-2.1-or-later
 
 ```
 
