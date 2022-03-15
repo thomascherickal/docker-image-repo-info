@@ -1,10 +1,10 @@
-# `openjdk:19-ea-12-jdk-buster`
+# `openjdk:19-ea-13-jdk-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:4b32503475099644fe2d3715f04c073e3969fce74ab2327f9ac2c281cf02b405`
-- Created: `2022-03-05T02:05:13.491993541Z`
-- Virtual Size: ~ 665.16 Mb  
+- Image ID: `sha256:6bb88c92cb7b49d64338b0c4e21dfd2f2680802f73d146472a231c1f080a4efe`
+- Created: `2022-03-14T20:15:20.5657942Z`
+- Virtual Size: ~ 665.14 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["jshell"]`
@@ -12,7 +12,7 @@
   - `PATH=/usr/local/openjdk-19/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `JAVA_HOME=/usr/local/openjdk-19`
   - `LANG=C.UTF-8`
-  - `JAVA_VERSION=19-ea+12`
+  - `JAVA_VERSION=19-ea+13`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -714,20 +714,13 @@ Licenses: (parsed from: `/usr/share/doc/libexpat1/copyright`)
 
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris expat=2.2.6-2+deb10u3
-'http://security.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.6-2%2bdeb10u3.dsc' expat_2.2.6-2+deb10u3.dsc 2136 SHA256:2b58ea166b515d88311e65047aaa81b701a3a4581fbb56e5dd76933a86883a93
-'http://security.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.6.orig.tar.gz' expat_2.2.6.orig.tar.gz 8275473 SHA256:574499cba22a599393e28d99ecfa1e7fc85be7d6651d543045244d5b561cb7ff
-'http://security.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.6-2%2bdeb10u3.debian.tar.xz' expat_2.2.6-2+deb10u3.debian.tar.xz 25028 SHA256:99ccca69578e5bfff55b0fd5d21bf24ca2eda1a9e2f5a10610bc27409ca3f1b0
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/expat/2.2.6-2+deb10u3/
 
-- https://sources.debian.net/src/expat/2.2.6-2+deb10u3/ (for browsing the source)
-- https://sources.debian.net/src/expat/2.2.6-2+deb10u3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/expat/2.2.6-2+deb10u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `findutils=4.6.0+git+20190209-2`
 
