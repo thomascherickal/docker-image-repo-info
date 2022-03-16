@@ -1,10 +1,10 @@
-# `neurodebian:sid`
+# `neurodebian:bookworm`
 
 ## Docker Metadata
 
-- Image ID: `sha256:b0ac783257e7dbcdd33f95f1004ab18db385ab3e91cfd01cef7c90fde25da338`
-- Created: `2022-03-16T17:34:43.962464325Z`
-- Virtual Size: ~ 146.86 Mb  
+- Image ID: `sha256:7022dfc9c519ac6541a73b9ccee86de18ab4b63cdd1a920e971b4ccbe2f8566c`
+- Created: `2022-03-16T17:34:01.944891594Z`
+- Virtual Size: ~ 146.63 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["bash"]`
@@ -494,13 +494,19 @@ Licenses: (parsed from: `/usr/share/doc/dpkg/copyright`)
 - `public-domain-md5`
 - `public-domain-s-s-d`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris dpkg=1.21.1
+'http://deb.debian.org/debian/pool/main/d/dpkg/dpkg_1.21.1.dsc' dpkg_1.21.1.dsc 2120 SHA256:4a18d3c84a982a5510ee96d490b3ff9c103e1086f165051e7e9d3b1801e1950b
+'http://deb.debian.org/debian/pool/main/d/dpkg/dpkg_1.21.1.tar.xz' dpkg_1.21.1.tar.xz 4986936 SHA256:1eb9fd5228b3199284ea5134904bb45b7a5bc12fb044b8e4964d89d2e5bbb563
+```
 
-- http://snapshot.debian.org/package/dpkg/1.21.1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/dpkg/1.21.1/ (for browsing the source)
+- https://sources.debian.net/src/dpkg/1.21.1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/dpkg/1.21.1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `e2fsprogs=1.46.5-2`
 
@@ -533,32 +539,24 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/e2fsprogs/1.46.5-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/e2fsprogs/1.46.5-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `findutils=4.9.0-2`
+### `dpkg` source package: `findutils=4.8.0-1`
 
 Binary Packages:
 
-- `findutils=4.9.0-2`
+- `findutils=4.8.0-1`
 
 Licenses: (parsed from: `/usr/share/doc/findutils/copyright`)
 
 - `GFDL-1.3`
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris findutils=4.9.0-2
-'http://deb.debian.org/debian/pool/main/f/findutils/findutils_4.9.0-2.dsc' findutils_4.9.0-2.dsc 2304 SHA256:85d8c92104d56af1dacf3be544c3aea5d1b71186d170cdd92bdeac9be5f4981a
-'http://deb.debian.org/debian/pool/main/f/findutils/findutils_4.9.0.orig.tar.xz' findutils_4.9.0.orig.tar.xz 2046252 SHA256:a2bfb8c09d436770edc59f50fa483e785b161a3b7b9d547573cb08065fd462fe
-'http://deb.debian.org/debian/pool/main/f/findutils/findutils_4.9.0.orig.tar.xz.asc' findutils_4.9.0.orig.tar.xz.asc 488 SHA256:924c3719d066eda1b3e47175f8b83e90e9a23f0a639ebe7445621917b283c385
-'http://deb.debian.org/debian/pool/main/f/findutils/findutils_4.9.0-2.debian.tar.xz' findutils_4.9.0-2.debian.tar.xz 27584 SHA256:173aa2ac4ee290804f48bb9ea51d23dae38e8d5bd94f24f6af39bd68c170a6e6
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/findutils/4.8.0-1/
 
-- https://sources.debian.net/src/findutils/4.9.0-2/ (for browsing the source)
-- https://sources.debian.net/src/findutils/4.9.0-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/findutils/4.9.0-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gcc-10=10.3.0-14`
 
@@ -590,15 +588,15 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/gcc-10/10.3.0-14/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/gcc-10/10.3.0-14/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `gcc-12=12-20220222-1`
+### `dpkg` source package: `gcc-11=11.2.0-16`
 
 Binary Packages:
 
-- `gcc-12-base:amd64=12-20220222-1`
-- `libgcc-s1:amd64=12-20220222-1`
-- `libstdc++6:amd64=12-20220222-1`
+- `gcc-11-base:amd64=11.2.0-16`
+- `libgcc-s1:amd64=11.2.0-16`
+- `libstdc++6:amd64=11.2.0-16`
 
-Licenses: (parsed from: `/usr/share/doc/gcc-12-base/copyright`, `/usr/share/doc/libgcc-s1/copyright`, `/usr/share/doc/libstdc++6/copyright`)
+Licenses: (parsed from: `/usr/share/doc/gcc-11-base/copyright`, `/usr/share/doc/libgcc-s1/copyright`, `/usr/share/doc/libstdc++6/copyright`)
 
 - `Artistic`
 - `GFDL-1.2`
@@ -610,48 +608,17 @@ Licenses: (parsed from: `/usr/share/doc/gcc-12-base/copyright`, `/usr/share/doc/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris gcc-12=12-20220222-1
-'http://deb.debian.org/debian/pool/main/g/gcc-12/gcc-12_12-20220222-1.dsc' gcc-12_12-20220222-1.dsc 27388 SHA256:96927db4634a80762cb7c92771cb930f0bcdf226a07f639a8a866043b64feecb
-'http://deb.debian.org/debian/pool/main/g/gcc-12/gcc-12_12-20220222.orig.tar.gz' gcc-12_12-20220222.orig.tar.gz 84511385 SHA256:aa55b7635312827f4c42e2dc55bb6f2f002bb98f05e3c55966df42bb317c2815
-'http://deb.debian.org/debian/pool/main/g/gcc-12/gcc-12_12-20220222-1.debian.tar.xz' gcc-12_12-20220222-1.debian.tar.xz 559416 SHA256:a9d63045deef4e5f3824d2b03c827c99209097efbeaa6d407b39630f6be751d5
+$ apt-get source -qq --print-uris gcc-11=11.2.0-16
+'http://deb.debian.org/debian/pool/main/g/gcc-11/gcc-11_11.2.0-16.dsc' gcc-11_11.2.0-16.dsc 27514 SHA256:7d9ac253ff4e5dbcfe409c4d916879a31ee72ee06aa96456065a6bc74bd6ab87
+'http://deb.debian.org/debian/pool/main/g/gcc-11/gcc-11_11.2.0.orig.tar.gz' gcc-11_11.2.0.orig.tar.gz 83874319 SHA256:61bbc68194e52a9149a91571b5e1eb4db520017ed4bcdc021c175a1845605e47
+'http://deb.debian.org/debian/pool/main/g/gcc-11/gcc-11_11.2.0-16.debian.tar.xz' gcc-11_11.2.0-16.debian.tar.xz 2032156 SHA256:e064d8cbc15e9472d4f2005ffe3c8a6b4c7455199a78670c0ffd29874763337c
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/gcc-12/12-20220222-1/ (for browsing the source)
-- https://sources.debian.net/src/gcc-12/12-20220222-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gcc-12/12-20220222-1/ (for access to the source package after it no longer exists in the archive)
-
-### `dpkg` source package: `gcc-9=9.4.0-5`
-
-Binary Packages:
-
-- `gcc-9-base:amd64=9.4.0-5`
-
-Licenses: (parsed from: `/usr/share/doc/gcc-9-base/copyright`)
-
-- `Artistic`
-- `GFDL-1.2`
-- `GPL`
-- `GPL-2`
-- `GPL-3`
-- `LGPL`
-- `LGPL-2.1+`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris gcc-9=9.4.0-5
-'http://deb.debian.org/debian/pool/main/g/gcc-9/gcc-9_9.4.0-5.dsc' gcc-9_9.4.0-5.dsc 21922 SHA256:47e4af49e8604a3f62ad0f52ea1f56a02e7b5429ce539ca9634de222cf4e7313
-'http://deb.debian.org/debian/pool/main/g/gcc-9/gcc-9_9.4.0.orig.tar.gz' gcc-9_9.4.0.orig.tar.gz 88736226 SHA256:7ef28e618cecddbb538359d03998a61648edb10b570b995aa4f4016c4a0d823e
-'http://deb.debian.org/debian/pool/main/g/gcc-9/gcc-9_9.4.0-5.debian.tar.xz' gcc-9_9.4.0-5.debian.tar.xz 646384 SHA256:4c220443cdc21b8cda8c6402e422049ba08be9aaff38a35f6a4cb0d5b97ca19d
-```
-
-Other potentially useful URLs:
-
-- https://sources.debian.net/src/gcc-9/9.4.0-5/ (for browsing the source)
-- https://sources.debian.net/src/gcc-9/9.4.0-5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gcc-9/9.4.0-5/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/gcc-11/11.2.0-16/ (for browsing the source)
+- https://sources.debian.net/src/gcc-11/11.2.0-16/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/gcc-11/11.2.0-16/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `glibc=2.33-7`
 
@@ -2020,11 +1987,11 @@ The source package *may* still be available for download from:
 - http://snapshot.debian.org/package/shadow/1:4.11.1+dfsg1-1/
 
 
-### `dpkg` source package: `sqlite3=3.38.0-1`
+### `dpkg` source package: `sqlite3=3.37.2-2`
 
 Binary Packages:
 
-- `libsqlite3-0:amd64=3.38.0-1`
+- `libsqlite3-0:amd64=3.37.2-2`
 
 Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 
@@ -2032,13 +1999,21 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 - `GPL-2+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris sqlite3=3.37.2-2
+'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.37.2-2.dsc' sqlite3_3.37.2-2.dsc 2487 SHA256:0265888a1b8a6cc2173b1185ce3aae005f59503a95a41ea428a901502118933a
+'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.37.2.orig-www.tar.xz' sqlite3_3.37.2.orig-www.tar.xz 5694016 SHA256:63dbd1c7abab37ec5beed22dae75bac048efead0f19aa5cad49b4bd690335ebd
+'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.37.2.orig.tar.xz' sqlite3_3.37.2.orig.tar.xz 7623768 SHA256:3157723da779963f7887f29de12289a4890f0c18eb17b570aa2c8d2c96d31d6f
+'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.37.2-2.debian.tar.xz' sqlite3_3.37.2-2.debian.tar.xz 28536 SHA256:7779ca533e0593c59fbf0959d71fe285c3f9b06a9fe2b968e149c0c359130559
+```
 
-- http://snapshot.debian.org/package/sqlite3/3.38.0-1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/sqlite3/3.37.2-2/ (for browsing the source)
+- https://sources.debian.net/src/sqlite3/3.37.2-2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/sqlite3/3.37.2-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `systemd=250.3-2`
 
