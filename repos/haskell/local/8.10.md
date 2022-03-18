@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:735ce733e9447b4f0ac2701c235109a3fa379c559b0893a63b23a1555d5ee57c`
-- Created: `2022-03-07T19:41:18.202810137Z`
+- Image ID: `sha256:4fcaf80bf2ce1b7e7b8e26076fa542770fe6da6fa5f8026c4d7c6cb87c8eec5c`
+- Created: `2022-03-18T07:28:02.231752273Z`
 - Virtual Size: ~ 2.44 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -652,23 +652,30 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/elfutils/0.176-1.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/elfutils/0.176-1.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `expat=2.2.6-2+deb10u3`
+### `dpkg` source package: `expat=2.2.6-2+deb10u4`
 
 Binary Packages:
 
-- `libexpat1:amd64=2.2.6-2+deb10u3`
+- `libexpat1:amd64=2.2.6-2+deb10u4`
 
 Licenses: (parsed from: `/usr/share/doc/libexpat1/copyright`)
 
 - `MIT`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris expat=2.2.6-2+deb10u4
+'http://security.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.6-2%2bdeb10u4.dsc' expat_2.2.6-2+deb10u4.dsc 2136 SHA256:1c675fb1b3fcde011eef35e8a96c5ceddcf7d89ccfeffe79b4e3e4ca166732c5
+'http://security.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.6.orig.tar.gz' expat_2.2.6.orig.tar.gz 8275473 SHA256:574499cba22a599393e28d99ecfa1e7fc85be7d6651d543045244d5b561cb7ff
+'http://security.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.6-2%2bdeb10u4.debian.tar.xz' expat_2.2.6-2+deb10u4.debian.tar.xz 27016 SHA256:f24d5eee71174ad5c21620e7f3374ee742be93007f6db68ba898523220405b8f
+```
 
-- http://snapshot.debian.org/package/expat/2.2.6-2+deb10u3/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/expat/2.2.6-2+deb10u4/ (for browsing the source)
+- https://sources.debian.net/src/expat/2.2.6-2+deb10u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/expat/2.2.6-2+deb10u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `findutils=4.6.0+git+20190209-2`
 
@@ -1851,11 +1858,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libzstd/1.3.8+dfsg-3+deb10u2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libzstd/1.3.8+dfsg-3+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `linux=4.19.208-1`
+### `dpkg` source package: `linux=4.19.232-1`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=4.19.208-1`
+- `linux-libc-dev:amd64=4.19.232-1`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -1870,17 +1877,17 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris linux=4.19.208-1
-'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.208-1.dsc' linux_4.19.208-1.dsc 191615 SHA256:abc4bc72ccc5bf6d2c5ee4d60547c58ce8e00246effa0d4ca8d4a4ab36131dde
-'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.208.orig.tar.xz' linux_4.19.208.orig.tar.xz 107598860 SHA256:cabff7d88404362e0ac398f5fed783e00acfb0fcce8669ced3e0de44fc2b03bc
-'http://deb.debian.org/debian/pool/main/l/linux/linux_4.19.208-1.debian.tar.xz' linux_4.19.208-1.debian.tar.xz 1504196 SHA256:f4582cbfc68afe8650596ec591c4ebe4339d938f20b5dd034ae3110e011357cd
+$ apt-get source -qq --print-uris linux=4.19.232-1
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.232-1.dsc' linux_4.19.232-1.dsc 191330 SHA256:44c2356ba2ee59faa8748ae851f3862b4a369732bd2b1485d11c5c5565d3ae31
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.232.orig.tar.xz' linux_4.19.232.orig.tar.xz 107634972 SHA256:efb63eb40947f9c1be7f17c89c61fe803e922a2046fc80c66f68cdc15f0f1be0
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.232-1.debian.tar.xz' linux_4.19.232-1.debian.tar.xz 1528664 SHA256:e24c7e82fb82300269ebf3ec87bacd25f2d5449273487df4b936127bd802f7a6
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/linux/4.19.208-1/ (for browsing the source)
-- https://sources.debian.net/src/linux/4.19.208-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/4.19.208-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/linux/4.19.232-1/ (for browsing the source)
+- https://sources.debian.net/src/linux/4.19.232-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/linux/4.19.232-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lsb=10.2019051400`
 
@@ -2272,12 +2279,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/openssh/1:7.9p1-10+deb10u2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/openssh/1:7.9p1-10+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openssl=1.1.1d-0+deb10u7`
+### `dpkg` source package: `openssl=1.1.1d-0+deb10u8`
 
 Binary Packages:
 
-- `libssl1.1:amd64=1.1.1d-0+deb10u7`
-- `openssl=1.1.1d-0+deb10u7`
+- `libssl1.1:amd64=1.1.1d-0+deb10u8`
+- `openssl=1.1.1d-0+deb10u8`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -2286,18 +2293,18 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openssl=1.1.1d-0+deb10u7
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1d-0%2bdeb10u7.dsc' openssl_1.1.1d-0+deb10u7.dsc 2649 SHA256:1cb63c67aedf26f139124e4a9ec5d51fa036948df3964805070da7b816b14581
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1d.orig.tar.gz' openssl_1.1.1d.orig.tar.gz 8845861 SHA256:1e3a91bc1f9dfce01af26026f856e064eab4c8ee0a8f457b5ae30b40b8b711f2
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1d.orig.tar.gz.asc' openssl_1.1.1d.orig.tar.gz.asc 488 SHA256:f3fd3299a79421fffd51d35f62636b8e987dab1d3033d93a19d7685868e15395
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1d-0%2bdeb10u7.debian.tar.xz' openssl_1.1.1d-0+deb10u7.debian.tar.xz 109236 SHA256:8a84cb76bf14a6725ee6b56d76335adadc639513d7c15b24b041fbb5f80cf053
+$ apt-get source -qq --print-uris openssl=1.1.1d-0+deb10u8
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1d-0%2bdeb10u8.dsc' openssl_1.1.1d-0+deb10u8.dsc 2649 SHA256:4caeca5597aac6b5d889820f9c0f2c5d533aecbe4915da65eec81c399cffa6a8
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1d.orig.tar.gz' openssl_1.1.1d.orig.tar.gz 8845861 SHA256:1e3a91bc1f9dfce01af26026f856e064eab4c8ee0a8f457b5ae30b40b8b711f2
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1d.orig.tar.gz.asc' openssl_1.1.1d.orig.tar.gz.asc 488 SHA256:f3fd3299a79421fffd51d35f62636b8e987dab1d3033d93a19d7685868e15395
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1d-0%2bdeb10u8.debian.tar.xz' openssl_1.1.1d-0+deb10u8.debian.tar.xz 113480 SHA256:8ea7cf4aa35ca3028b04596ee0a8f61fb4712da79ca5bba39278f4f2a545a500
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/openssl/1.1.1d-0+deb10u7/ (for browsing the source)
-- https://sources.debian.net/src/openssl/1.1.1d-0+deb10u7/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openssl/1.1.1d-0+deb10u7/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/openssl/1.1.1d-0+deb10u8/ (for browsing the source)
+- https://sources.debian.net/src/openssl/1.1.1d-0+deb10u8/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openssl/1.1.1d-0+deb10u8/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `p11-kit=0.23.15-2+deb10u1`
 
