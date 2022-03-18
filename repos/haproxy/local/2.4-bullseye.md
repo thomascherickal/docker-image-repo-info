@@ -1,19 +1,19 @@
-# `haproxy:2.4.14`
+# `haproxy:2.4.15`
 
 ## Docker Metadata
 
-- Image ID: `sha256:6b96a5d979723add88eda0f1313bafa1e41f21a8c368040fd7f168c29a8333af`
-- Created: `2022-03-01T02:32:57.199593412Z`
-- Virtual Size: ~ 101.02 Mb  
+- Image ID: `sha256:90d6bc757b85935722f5d2878583ddf4cfc9fd2eef3b9485d26ebd01209d70c4`
+- Created: `2022-03-17T11:37:09.704160508Z`
+- Virtual Size: ~ 101.04 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
 - Command: `["haproxy","-f","/usr/local/etc/haproxy/haproxy.cfg"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `HAPROXY_VERSION=2.4.14`
-  - `HAPROXY_URL=https://www.haproxy.org/download/2.4/src/haproxy-2.4.14.tar.gz`
-  - `HAPROXY_SHA256=e6346b406b911b94c88eb05a5f622d53d49ffc247468fb03c12a4ffe3cc5ff04`
+  - `HAPROXY_VERSION=2.4.15`
+  - `HAPROXY_URL=https://www.haproxy.org/download/2.4/src/haproxy-2.4.15.tar.gz`
+  - `HAPROXY_SHA256=3958b17b7ee80eb79712aaf24f0d83e753683104b36e282a8b3dcd2418e30082`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -1503,11 +1503,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/nettle/3.7.3-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/nettle/3.7.3-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openssl=1.1.1k-1+deb11u1`
+### `dpkg` source package: `openssl=1.1.1k-1+deb11u2`
 
 Binary Packages:
 
-- `libssl1.1:amd64=1.1.1k-1+deb11u1`
+- `libssl1.1:amd64=1.1.1k-1+deb11u2`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1516,18 +1516,18 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openssl=1.1.1k-1+deb11u1
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1k-1%2bdeb11u1.dsc' openssl_1.1.1k-1+deb11u1.dsc 2652 SHA256:6515a9f1250c42bd42d8439820dde65fbd6f4fbb4a9673bff58e37168a7d3228
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1k.orig.tar.gz' openssl_1.1.1k.orig.tar.gz 9823400 SHA256:892a0875b9872acd04a9fde79b1f943075d5ea162415de3047c327df33fbaee5
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1k.orig.tar.gz.asc' openssl_1.1.1k.orig.tar.gz.asc 488 SHA256:addeaa197444a62c6063d7f819512c2c22b42141dec9d8ec3bff7e4518e1d1c9
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1k-1%2bdeb11u1.debian.tar.xz' openssl_1.1.1k-1+deb11u1.debian.tar.xz 94244 SHA256:68e00f47162ecea0273b4ba453503307b8430bb2d163f92cbbec6f51b11061fd
+$ apt-get source -qq --print-uris openssl=1.1.1k-1+deb11u2
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1k-1%2bdeb11u2.dsc' openssl_1.1.1k-1+deb11u2.dsc 2652 SHA256:74ff1b57ceb869f53516bba85fc746f392c4931dcfbe1c8fa0eb5484d723e966
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1k.orig.tar.gz' openssl_1.1.1k.orig.tar.gz 9823400 SHA256:892a0875b9872acd04a9fde79b1f943075d5ea162415de3047c327df33fbaee5
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1k.orig.tar.gz.asc' openssl_1.1.1k.orig.tar.gz.asc 488 SHA256:addeaa197444a62c6063d7f819512c2c22b42141dec9d8ec3bff7e4518e1d1c9
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1k-1%2bdeb11u2.debian.tar.xz' openssl_1.1.1k-1+deb11u2.debian.tar.xz 98172 SHA256:43d986c7cb4e48bbe094d185a58c8fc4de54253cf2783f03fa3c4676cab98926
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/openssl/1.1.1k-1+deb11u1/ (for browsing the source)
-- https://sources.debian.net/src/openssl/1.1.1k-1+deb11u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openssl/1.1.1k-1+deb11u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/openssl/1.1.1k-1+deb11u2/ (for browsing the source)
+- https://sources.debian.net/src/openssl/1.1.1k-1+deb11u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openssl/1.1.1k-1+deb11u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `p11-kit=0.23.22-1`
 
